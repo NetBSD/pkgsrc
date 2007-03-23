@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/12 05:48:30 ben Exp $
-bin/xftp
-lib/X11/app-defaults/XFtp

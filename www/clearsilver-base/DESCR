@@ -1,8 +1,0 @@
-Clearsilver is a fast, powerful, and language-neutral HTML template
-system. In both static content sites and dynamic HTML applications,
-it provides a separation between presentation code and application
-logic which makes working with your project easier.
-
-This package contains the base clearsilver infrastructure.  All
-other clearsilver modules depend on this, but it is all you need
-if you are using clearsilver from C.

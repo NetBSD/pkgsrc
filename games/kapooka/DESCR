@@ -1,5 +1,0 @@
-KaPooka is a logic game, written in SDL.
-
-The object of the game is to guide your red blobby to the exit,
-pushing the green blobbies out of the way. You can only push a
-green blobby if there is an empty space behind it.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/11/10 17:57:51 perry Exp $
-
-SHA1 (gnus-5.10.8.tar.gz) = 58ca5ca174140bc824b5e9533a869ae1d3596dc1
-RMD160 (gnus-5.10.8.tar.gz) = 4a2fdea20961d7a714670b59f4d34864ebcaa930
-Size (gnus-5.10.8.tar.gz) = 2496529 bytes
-SHA1 (patch-aa) = f8e6a69610745e16c2fdf319294cf6931e31fe70

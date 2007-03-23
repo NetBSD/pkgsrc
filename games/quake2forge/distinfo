@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/02/19 19:16:09 joerg Exp $
-
-SHA1 (quake2-0.3.tar.gz) = 9daf646b02799de01aa77824f648ef6c5f66b3ec
-RMD160 (quake2-0.3.tar.gz) = 81b6abdf83782d1bd227df9e4511aa25c673b5bb
-Size (quake2-0.3.tar.gz) = 1757285 bytes
-SHA1 (patch-aa) = c4eb2ebc6fa26701b011ecde54efb4b8f2b4bf8a
-SHA1 (patch-ab) = 1a7629b5dbcf75ab74d635a3c7e0d183e21feec7
-SHA1 (patch-ac) = e59e7556eef754cdba377b6d0274071f30686e08

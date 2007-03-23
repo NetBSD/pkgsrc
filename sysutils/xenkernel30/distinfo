@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/10/19 22:50:25 bouyer Exp $
-
-SHA1 (xen-3.0.3_0-install-x86_32.tgz) = b9adf58a42289032a19b83d92c66616bdef4ab12
-RMD160 (xen-3.0.3_0-install-x86_32.tgz) = 4458bc9d7c43425e3c42712f49102d126e4cdb41
-Size (xen-3.0.3_0-install-x86_32.tgz) = 21401945 bytes

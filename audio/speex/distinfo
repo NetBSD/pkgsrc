@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/03/11 03:14:43 reed Exp $
-
-SHA1 (speex-1.0.5.tar.gz) = a8f34f80e5f84a47aee7e70088632d4958fe75fd
-RMD160 (speex-1.0.5.tar.gz) = 6ceed29438912647ef1d2d7299822fdaaf5509f9
-Size (speex-1.0.5.tar.gz) = 546872 bytes
-SHA1 (patch-aa) = 675bbd2696852002d73fc778a3c1125435eb0fc6
-SHA1 (patch-ab) = b88dfafc1464aed7c5f38f39a270d16338335418

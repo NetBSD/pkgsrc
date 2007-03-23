@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.18 2006/12/15 20:02:34 drochner Exp $
-
-SHA1 (dasher-4.2.2.tar.bz2) = b2258080cc6480c2173148e09013e7efd0307914
-RMD160 (dasher-4.2.2.tar.bz2) = 33fccd70dbe9d977a1c6efd7037e939d28acbdcf
-Size (dasher-4.2.2.tar.bz2) = 5625199 bytes
-SHA1 (patch-aa) = db0a200c22bd8ac44178e4b0f9c6e80ee9967a6e
-SHA1 (patch-ab) = a5dac2d9f8a59ee4ea4370fa5b75e8e0f008fdbd
-SHA1 (patch-ac) = 476ea57fab03159685f3597bc46fb8ee79879c99

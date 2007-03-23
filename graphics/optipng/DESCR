@@ -1,7 +1,0 @@
-OptiPNG is a PNG optimizer that recompresses the image files to a smaller
-size, without losing any information.  The idea has been inspired from
-pngcrush, and is explained in detail in the PNG-Tech article:  "A Guide
-to PNG optimization"
-<http://www.cs.toronto.edu/~cosmin/pngtech/optipng.html>.  The
-implementation is carried forward in OptiPNG, which offers a faster
-execution per trial, and a wider search space.

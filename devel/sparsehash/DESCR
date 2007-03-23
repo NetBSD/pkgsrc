@@ -1,7 +1,0 @@
-The Google SparseHash project contains several hash-map implementations in use
-at Google, with different performance characteristics, including an
-implementation that optimizes for space and one that optimizes for speed.
-
-SparseHash is a template library; there are no binaries to install.
-
-SparseHash is distributed under the terms of the BSD License.

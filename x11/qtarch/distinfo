@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:36:19 wiz Exp $
-
-SHA1 (qtarch-2.2-1.tar.gz) = a8edd71e94a952d0136af286589069f0f39ea883
-RMD160 (qtarch-2.2-1.tar.gz) = 718fe498b2b49be9ca3bfbbe81e94fee1f211a88
-Size (qtarch-2.2-1.tar.gz) = 811809 bytes
-SHA1 (patch-aa) = 2a4ec961e4d525292d808e7d5190357295ed782b
-SHA1 (patch-ab) = b451cc0ef2e081d7ec076b3aa537c9fe2f55f55c
-SHA1 (patch-ac) = e12ba04ff38e58e024669bbf42a24f516679c357
-SHA1 (patch-ad) = 40b414f729477ff193bfc188842becaf58666e9d

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/01/12 22:06:16 joerg Exp $
-
-SHA1 (xquote-2.6.10.tar.gz) = d88abe72b9994375d454ff749c00fffd09fda05a
-RMD160 (xquote-2.6.10.tar.gz) = bde5b7ec201eab96c5ff4b98b6bbc5abc3adb4fc
-Size (xquote-2.6.10.tar.gz) = 106006 bytes
-SHA1 (patch-aa) = 93ff1e31d29673a71bf0cd312b14b6b7334a659c
-SHA1 (patch-ab) = 4897b972e6636e11b01e87fa08a1fe5d77ec8536

@@ -1,9 +1,0 @@
-$NetBSD: patch-ag,v 1.1 2006/04/28 11:09:37 joerg Exp $
-
---- src/TreeSearchWidget.c.orig	2006-04-28 10:38:32.000000000 +0000
-+++ src/TreeSearchWidget.c
-@@ -1,3 +1,4 @@
-+#include <sys/types.h>
- #include <gtk/gtk.h>
- #include <gtk/gtksignal.h>
- #include <gdk/gdkkeysyms.h>

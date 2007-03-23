@@ -1,3 +1,0 @@
-This package provides a perl module to generate checksums from
-strings and from files.  The checksums are the same as those
-calculated by ZMODEM, PKZIP, PICCHECK and many others.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/02 21:05:44 dillo Exp $
-bin/gob2
-man/man1/gob2.1
-share/aclocal/gob2.m4

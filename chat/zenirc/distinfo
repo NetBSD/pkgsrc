@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:14 agc Exp $
-
-SHA1 (zenirc-2.112.tar.gz) = 8f4c2fb59ea2f8d5da2cb0350e5fa948d0fc892e
-RMD160 (zenirc-2.112.tar.gz) = b7300841f4ccc661f202495905b817b35f8ff8fd
-Size (zenirc-2.112.tar.gz) = 270951 bytes
-SHA1 (patch-aa) = f81dd257b30e5f87329645750cf8d9e69a8b1f58

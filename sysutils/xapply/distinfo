@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/25 15:28:43 joerg Exp $
-
-SHA1 (xapply-3.4.tgz) = 3e5a6a01c7fc1c27b1ec68fd607563ba0400f3cb
-RMD160 (xapply-3.4.tgz) = 9f0bd23374dd260118db642a7373607eeda8d2c7
-Size (xapply-3.4.tgz) = 31354 bytes
-SHA1 (patch-aa) = a75dc1b4f44250a1d58b9c60e975ba75b3ccc7d5

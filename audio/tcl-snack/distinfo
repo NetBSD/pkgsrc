@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 20:39:52 agc Exp $
-
-SHA1 (snack2.2.8.tar.gz) = 86394100e155818e9864a0a215c90102f324c825
-RMD160 (snack2.2.8.tar.gz) = dd0fbe841e66a83bc2b0713e34520563c423c7f8
-Size (snack2.2.8.tar.gz) = 1791575 bytes
-SHA1 (patch-aa) = 297f046897c9cba1d0919a69874dceeeb2d56808
-SHA1 (patch-ab) = 060757edac59c5c27443466f0c3b0bc55d50364e
-SHA1 (patch-ac) = ec3bac6a58a8d62c646201518f719ec065e98d72
-SHA1 (patch-ad) = e6868638722219bf18a345563d8ae2e3436bec81

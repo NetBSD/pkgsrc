@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/05 11:10:42 wiz Exp $
-include/memmgr.h
-lib/libmemmgr.a
-share/doc/libmemmgr/memmgr.txt
-@dirrm share/doc/libmemmgr

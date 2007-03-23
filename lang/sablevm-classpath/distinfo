@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/17 12:21:14 tonio Exp $
-
-SHA1 (sablevm-classpath-1.13.tar.gz) = dda68e9e9fb54de1baca2d892446c09ce1cc19e1
-RMD160 (sablevm-classpath-1.13.tar.gz) = e6e7b5f57698c0bb419af6c7080c0c0e66ab0171
-Size (sablevm-classpath-1.13.tar.gz) = 6803379 bytes
-SHA1 (patch-aa) = b8b0a1e8f3a21cb6e26700714f146b44c2bafe71
-SHA1 (patch-ab) = f1ebd89f5f66170d769e678cd55792d806ebbeab
-SHA1 (patch-ac) = 59fd252a65c92a9f318ba4140227da855fb1e3c4
-SHA1 (patch-ad) = 1287035dbc2861e7b9a4ddbda2898cc58363ce75

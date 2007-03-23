@@ -1,3 +1,0 @@
-A plugin for Kwiki that allows you to notify yourself by email when
-some one updates a page. You can specify the To:, From: and
-Subject: headers, but the email message body is not currently configurable.

@@ -1,7 +1,0 @@
-pkglint is for pkgsrc packages what lint(1) is for C files. It checks
-for various things that the used languages cannot detect, for example
-application-specific restrictions on certain variables.
-
-Before importing a new package or making changes to an existing package,
-pkglint should be run in the package's directory to check for common
-errors.

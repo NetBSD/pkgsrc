@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.1 2006/01/09 21:22:57 joerg Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so

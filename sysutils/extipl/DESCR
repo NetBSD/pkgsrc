@@ -1,7 +1,0 @@
-ExtIPL is a boot selector compatible with IBM-IPL. ExtIPL has
-many extended features such as
-
- - boot an OS in a nonactive partition
- - boot an OS in an extended partition
- - boot an OS in the second or later hard disks
- - support LBA access

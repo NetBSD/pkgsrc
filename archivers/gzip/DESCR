@@ -1,5 +1,0 @@
-GZIP (GNU zip) is a popular data compression program written by
-Jean-Loup Gailly <gzip@gnu.org> for the GNU project.
-
-This package provides easy installation of both the actual GZIP
-utility and its associated info documentation.

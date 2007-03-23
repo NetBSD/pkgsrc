@@ -1,4 +1,0 @@
-desktop-file-utils contains a couple of command line utilities for working
-with desktop entries and the applications database.  More specifically,
-it contains the update-desktop-database utility, used to rebuild the database
-that connects MIME types to applications.

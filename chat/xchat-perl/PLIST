@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/12 12:42:48 tron Exp $
-lib/xchat/plugins/perl.la
-share/examples/xchat/alt_completion.pl
-share/doc/xchat/xchat2-perl.html
-share/doc/xchat/xchat2-perldocs.html
-@dirrm share/examples/xchat

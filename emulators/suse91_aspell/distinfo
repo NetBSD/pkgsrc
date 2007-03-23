@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/08 16:53:21 salo Exp $
-
-SHA1 (suse91/i586/aspell-0.50.5-38.4.i586.rpm) = cffd30f8176afb8f3ad51fb50c09fbd34413d74e
-RMD160 (suse91/i586/aspell-0.50.5-38.4.i586.rpm) = 5244e5a391a01373ded4b866a0eb2f8e133dde96
-Size (suse91/i586/aspell-0.50.5-38.4.i586.rpm) = 566009 bytes
-SHA1 (suse91/x86_64/aspell-0.50.5-38.4.x86_64.rpm) = 1547b1d379b1fa8bbeac998004dcfcba99002c2f
-RMD160 (suse91/x86_64/aspell-0.50.5-38.4.x86_64.rpm) = 43ae8d83b0a89261b8ad53ce80671fe7b399bcce
-Size (suse91/x86_64/aspell-0.50.5-38.4.x86_64.rpm) = 575917 bytes

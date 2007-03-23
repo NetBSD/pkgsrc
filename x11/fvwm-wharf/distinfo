@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/18 20:21:17 minskim Exp $
-
-SHA1 (AfterStep-1.0.tar.gz) = 397664c493beb1c0a4aca98e3121774a483d83df
-RMD160 (AfterStep-1.0.tar.gz) = 04aa56f99097ec2a7320700ee739f29bbb80dfbf
-Size (AfterStep-1.0.tar.gz) = 601903 bytes
-SHA1 (patch-aa) = f5040e62ec691e5be7a874b6e8f5a20b611b020a
-SHA1 (patch-ab) = e644b57d966eadee04775f7344b80e0be144d570

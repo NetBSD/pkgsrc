@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 13:36:30 wiz Exp $
-
-SHA1 (fastfs.c) = 6a5c920815d1c54a9143e7aa2544e5b83bfa0a27
-RMD160 (fastfs.c) = d0aed43e37042291570eabc90b72c54a9480086f
-Size (fastfs.c) = 3564 bytes

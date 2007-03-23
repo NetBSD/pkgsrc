@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/02 21:34:28 rillig Exp $
-
-SHA1 (bioperl-0.7.0.tar.gz) = c86abeeb5f2e2b98d1577d9cefd51ce15bbcb6b6
-RMD160 (bioperl-0.7.0.tar.gz) = 41c4162d8d8ec5b406ba34d0d48702700d62108d
-Size (bioperl-0.7.0.tar.gz) = 1329985 bytes
-SHA1 (patch-aa) = 2e1064f4d7c343cf62f53f2a179a3a1841220dc7

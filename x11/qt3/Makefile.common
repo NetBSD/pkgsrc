@@ -1,6 +1,0 @@
-# $NetBSD: Makefile.common,v 1.22 2007/03/18 20:51:59 markd Exp $
-
-QTVERSION=	3.3.8
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.trolltech.com/products/qt/

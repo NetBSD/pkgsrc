@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/29 01:52:11 grant Exp $
-bin/sqsh
-man/man1/sqsh.1
-share/examples/sqsh/sample.sqshrc
-@dirrm share/examples/sqsh

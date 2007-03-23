@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/05/25 13:37:24 wiz Exp $
-
-SHA1 (fix4SA110rev2.c) = c7043743e482087322b4dce346649af5b221ae36
-RMD160 (fix4SA110rev2.c) = 0901e3e3f0cd9fc6f1fc920b7b7aff0addbd2372
-Size (fix4SA110rev2.c) = 8170 bytes
-SHA1 (fix4SA110rev2.README) = 7ffd9c6dc9c311c4cc47d7544fb2e89961108f3a
-RMD160 (fix4SA110rev2.README) = 9a29979ba526296c9929d2c01cafabde308237a3
-Size (fix4SA110rev2.README) = 2724 bytes
-SHA1 (patch-aa) = c07eff77ea24c1f3b0d3b7bc13a8e7825075e4ae

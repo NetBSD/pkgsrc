@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:13 agc Exp $
-
-SHA1 (x11-ssh-askpass-1.0.tar.gz) = 7800ad1c2924f3ce897b781ff1b945ce049d49bf
-RMD160 (x11-ssh-askpass-1.0.tar.gz) = d9cf927b23cec313336e38081757ab89798b0168
-Size (x11-ssh-askpass-1.0.tar.gz) = 17105 bytes
-SHA1 (patch-aa) = 950c953e0f20f113d1b3998acebbd07990132968

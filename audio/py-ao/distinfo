@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 20:39:50 agc Exp $
-
-SHA1 (pyao-0.81.tar.gz) = 56b453fdf6d628ccb283a2c9ffa4fced96afc32c
-RMD160 (pyao-0.81.tar.gz) = f171e3ed06184e79671ef9c3e2736b56c218d5c8
-Size (pyao-0.81.tar.gz) = 15302 bytes

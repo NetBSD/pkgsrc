@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.11 2007/03/21 12:11:05 wiz Exp $
-
-SHA1 (evince-0.6.1.tar.bz2) = bc314761ecc9c29d10d09294ad8e32bab3a5dbc6
-RMD160 (evince-0.6.1.tar.bz2) = ac94e1964f4f46e505fe945daa9de288c2587898
-Size (evince-0.6.1.tar.bz2) = 1212271 bytes
-SHA1 (patch-aa) = 65abdde02e6b72743d47e5c5d6156cbb4a74f0a6
-SHA1 (patch-ab) = 800d96b612b09976f8573b4caab40da1d5d838f6
-SHA1 (patch-ac) = a2f08a7d977b1e51a811c80c6abc8b8480dd3cda
-SHA1 (patch-ad) = 95563457bd1c9b0b46be4f274d645e5d18382fd2

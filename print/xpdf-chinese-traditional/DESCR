@@ -1,6 +1,0 @@
-This package provides support files needed to use the Xpdf tools with
-Chinese (Traditional) PDF files.
-
-Contents:
-- Adobe-CNS1 character collection support
-- Big5 encoding

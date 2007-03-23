@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/29 02:13:47 wiz Exp $
-lib/aspell/uk.multi
-lib/aspell/uk.rws
-lib/aspell/ukrainian.alias
-share/aspell/koi8-u-nl.cmap
-share/aspell/koi8-u-nl.cset
-share/aspell/uk.dat
-share/aspell/uk_affix.dat
-share/aspell/ukrainian.kbd

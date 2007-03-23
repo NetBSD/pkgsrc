@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.19 2007/02/20 18:29:49 minskim Exp $
-
-SHA1 (awstats-6.6nb4/awstats-6.6.tar.gz) = d5ad39ced9787c4b2453719906659f085ac77a34
-RMD160 (awstats-6.6nb4/awstats-6.6.tar.gz) = 5588e667948b6f739ff5f2d61b26a45c2d39e0da
-Size (awstats-6.6nb4/awstats-6.6.tar.gz) = 1084101 bytes
-SHA1 (patch-aa) = 46f1ee8be589cf0ff9d5dad90e9b014ae3954dcc
-SHA1 (patch-ab) = e740af99580d2cb5d68e99ca4f8e08e71a46d9d9

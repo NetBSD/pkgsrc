@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/07/17 20:21:35 wiz Exp $
-
-SHA1 (raines-0.43.3.tar.bz2) = a6c9fa7b63aadca8f5a76ba71532c0502854188b
-RMD160 (raines-0.43.3.tar.bz2) = c245930880cada5f965caf7a9f2d4d9301912b82
-Size (raines-0.43.3.tar.bz2) = 1740971 bytes
-SHA1 (patch-aa) = ee9d56cfc6b157b3b4a8d77547cf093688b6079e
-SHA1 (patch-ab) = 9143d9f43150ec033d7a72d288256d0c759665d6
-SHA1 (patch-ac) = 82f0bc91dc840b250ec45899306c19b56f98a7ed

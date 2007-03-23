@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:44 jschauma Exp $
-bin/unclutter
-${IMAKE_MAN_DIR}/unclutter.${IMAKE_MANNEWSUFFIX}.gz

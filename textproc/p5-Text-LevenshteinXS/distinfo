@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/01 17:54:05 ben Exp $
-
-SHA1 (Text-LevenshteinXS-0.03.tar.gz) = 7e7e6fd4711c8d8bcc064720c289d9181edbc77d
-RMD160 (Text-LevenshteinXS-0.03.tar.gz) = 4339923a7031fa114bd6a48ea2991034b2e3ef5a
-Size (Text-LevenshteinXS-0.03.tar.gz) = 3063 bytes

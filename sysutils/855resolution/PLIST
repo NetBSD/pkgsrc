@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/20 23:09:00 wiz Exp $
-sbin/855resolution
-share/doc/855resolution/README.txt
-@dirrm share/doc/855resolution

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:06 agc Exp $
-
-SHA1 (gimp-warp-sharp-1.4/warp-sharp.scm) = 5f53121fe82f4874c48dbc37a3bcb4aaf1630100
-RMD160 (gimp-warp-sharp-1.4/warp-sharp.scm) = b29378e61a77ca91e03d5203f85a6a112a9f761a
-Size (gimp-warp-sharp-1.4/warp-sharp.scm) = 3875 bytes
-SHA1 (patch-aa) = 94d62a9e72e9bc700345744dcf7dd7e8b1599ab1

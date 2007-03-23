@@ -1,3 +1,0 @@
-MOSS (MP3/OGG Streaming Server) is an HTTP-based streaming server
-written in Python.  It supports the web mode where you browse and
-select songs, and the live mode which supports real-time broadcast.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/25 00:06:19 grant Exp $
-include/vanessa_adt.h
-lib/libvanessa_adt.la

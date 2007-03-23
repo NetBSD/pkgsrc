@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:06 jlam Exp $
-bin/sip${PYVERSSUFFIX}
-${PYINC}/sip.h
-${PYINC}/sipQt.h
-${PYSITELIB}/libsip.la

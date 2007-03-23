@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/13 00:16:23 markd Exp $
-
-SHA1 (Xaw3d-1.5E.tar.gz) = efc5b923feda52866c859c59a5b553cb675a69d1
-RMD160 (Xaw3d-1.5E.tar.gz) = 086cbabaa45ce5c110815aea24eebcbb54613118
-Size (Xaw3d-1.5E.tar.gz) = 309264 bytes
-SHA1 (patch-aa) = 7729cfe83671f482670350ead9ccf1bfe3e932e3
-SHA1 (patch-ab) = 9bbe44041708b2d01b728638ac07e32addc01cff
-SHA1 (patch-ac) = cce339b75bdfe407608f004eaf1f22fca26ecd5e

@@ -1,9 +1,0 @@
-These modules provide the ability to chain PerlHandler routines together,
-so that the output of one handler/filter becomes the input of the next
-handler/filter.  The following Perl modules are known to be "Filter-aware":
-
-     Apache::Registry (using Apache::RegistryFilter)
-     Apache::SSI
-     Apache::ASP
-     HTML::Mason
-     Apache::SimpleReplace

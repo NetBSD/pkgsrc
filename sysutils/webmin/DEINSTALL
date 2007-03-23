@@ -1,7 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.4 2006/05/16 04:01:28 jlam Exp $
-
-case ${STAGE} in
-DEINSTALL)
-	${RM} -f @PKG_SYSCONFDIR@/module.infos.cache
-	;;
-esac

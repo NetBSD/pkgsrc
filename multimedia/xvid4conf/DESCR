@@ -1,4 +1,0 @@
-This tool creates XviD configuration files. The generated configuration
-file is meant to be read by transcode's xvid4 export module. This module
-(and the configuration file) is intended to be used with XviD 1.0
-(dev-api-4).

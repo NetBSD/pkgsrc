@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/05/12 09:30:55 joerg Exp $
-
-SHA1 (pptp-1.7.0.tar.gz) = fc96e8a765bf17eb02ce1584d8e9d024b68ab5a7
-RMD160 (pptp-1.7.0.tar.gz) = 62c947379c44102945a198ddc914d5aa634db13c
-Size (pptp-1.7.0.tar.gz) = 227699 bytes
-SHA1 (patch-ab) = 01d8346064bee226adb11035d98c2f06523b8e4a
-SHA1 (patch-ac) = 8a0dd645ed0a766375a803fecda80d716c441d52
-SHA1 (patch-ad) = a037ba927c181f812ecd5c1ea2d344483d8ad4bf
-SHA1 (patch-ah) = 3a08c64c0cff8ca3d7e78ce445e7b126076c1425

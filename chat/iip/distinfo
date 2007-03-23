@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/13 16:59:37 joerg Exp $
-
-SHA1 (iip-1.1.0.tgz) = 722ce551c3d330aad04729a4c9b729b10a0ca960
-RMD160 (iip-1.1.0.tgz) = 5acc5e33bd060bbdc79e819ade9e5ef07ed7299c
-Size (iip-1.1.0.tgz) = 139021 bytes
-SHA1 (patch-aa) = 1c0c4bc32c84d0a95b2f88302547a218059ef00f

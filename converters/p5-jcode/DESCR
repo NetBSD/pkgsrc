@@ -1,8 +1,0 @@
-jcode.pl is Perl library for Japanese character code conversion.
-It supports translation of each JIS, EUC, Shift JIS texts, and
-automatically recognizes the encode-method of the target text files.
-
-Document is in jcode.pl itself as comment.
-And jcode.pl-history file (in Japanese) might help you:
-	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/jcode.pl-history
-	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/jcode.pl-history

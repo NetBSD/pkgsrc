@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/01 18:59:34 tv Exp $
-
-SHA1 (srm-1.2.8.tar.gz) = 8b7aafc95b3ef67e2c737030567222bf50082188
-RMD160 (srm-1.2.8.tar.gz) = d1ce5fe2ec13e45c5620e6a71c1f2dfcb49ab1bc
-Size (srm-1.2.8.tar.gz) = 88067 bytes
-SHA1 (patch-aa) = a94522473ee72315d3ab38bfa70f336290431b9b

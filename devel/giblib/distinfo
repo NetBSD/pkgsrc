@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:14 agc Exp $
-
-SHA1 (giblib-1.2.4.tar.gz) = 342e6f7882c67d2277e1765299e1be5078329ab0
-RMD160 (giblib-1.2.4.tar.gz) = fb0cd140ff79c6e8ac34d0aa0fcc930ea7610736
-Size (giblib-1.2.4.tar.gz) = 287653 bytes
-SHA1 (patch-aa) = 19e3d89366a6455df891fb843f6682d623023b0d

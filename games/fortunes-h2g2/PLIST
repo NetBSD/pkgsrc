@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/09 23:15:53 jschauma Exp $
-share/games/fortune/h2g2
-share/games/fortune/h2g2.dat
-@dirrm share/games/fortune

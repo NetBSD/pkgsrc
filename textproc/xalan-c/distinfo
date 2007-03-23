@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/05 20:43:20 joerg Exp $
-
-SHA1 (Xalan-C_1_6-src.tar.gz) = a683c328dd266180bff2a182183be29a4596a662
-RMD160 (Xalan-C_1_6-src.tar.gz) = 9d8d5c85b4cf395d710ce7e3638665cbf17804d5
-Size (Xalan-C_1_6-src.tar.gz) = 1274432 bytes
-SHA1 (patch-aa) = 595c294aa1857b817c6a931e6ba16f4adb0040d8
-SHA1 (patch-ab) = e67667ba44e8f5cc9beb45a459f52ae1f3a5be59
-SHA1 (patch-ac) = 56e8697c21d9902b5bb9ed35fb63a756a0765e6a
-SHA1 (patch-ad) = d480090164623222f5f8891423af74c251d12a28

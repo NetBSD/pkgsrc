@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/30 13:04:56 minskim Exp $
-bin/pdbar
-include/prc.h
-lib/libprc.a
-man/man1/pdbar.1

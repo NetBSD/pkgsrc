@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:54 agc Exp $
-
-SHA1 (check_cluster.c) = 341ebf52f01f8465ae0141f9ffb578def42825ae
-RMD160 (check_cluster.c) = 07b06723411d44750a3b821e561c85bd90e0c194
-Size (check_cluster.c) = 9909 bytes

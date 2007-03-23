@@ -1,5 +1,0 @@
-AssetML defines an XML file for multimedia metadata, such as name,
-description, categories, and file type.  Applications using the
-libassetml library can query these XML files to share and reuse
-content like image and audio files. This package also provides the
-assetml-query tool for browsing the AssetML database.

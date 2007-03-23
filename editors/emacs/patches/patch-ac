@@ -1,16 +1,0 @@
-$NetBSD: patch-ac,v 1.14 2005/10/06 11:08:39 markd Exp $
-
---- src/m/hp800.h.orig	1996-01-15 01:15:02.000000000 -0800
-+++ src/m/hp800.h	2005-10-04 10:49:46.000000000 -0700
-@@ -181,3 +181,11 @@
- #define rindex strrchr
- 
- #endif /* __hpux */
-+
-+/* Systems with GCC don't need to lose. */
-+#ifdef __NetBSD__
-+# ifdef __GNUC__
-+#  define alloca __builtin_alloca
-+#  define HAVE_ALLOCA
-+# endif /* __GNUC__ */
-+#endif /* __NetBSD__ */

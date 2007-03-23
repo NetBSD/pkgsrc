@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/12/11 20:46:50 joerg Exp $
-
-SHA1 (xanalyser-1.24.tar.bz2) = 0b261568b8573d81b7e99980c2ffede6be683bdb
-RMD160 (xanalyser-1.24.tar.bz2) = 9fa7c1ae489be127ca8e519168eb7b48bbabab24
-Size (xanalyser-1.24.tar.bz2) = 73451 bytes
-SHA1 (patch-aa) = c0504392de44bcde7235bf6e5617764ae34b1ec4
-SHA1 (patch-ab) = 505f9814afdad9aa558ccf980321805f66d8c9e3
-SHA1 (patch-ad) = 46d15c6ff4ddc236de7d424dee667088dd693062

@@ -1,7 +1,0 @@
-Logitech Quickcam Express USB Utilities for NetBSD
-
-qcamshot ... simple image capture program ( output stdout PPM file )
-qcamview ... sequential image capture program like animation( about 3fps )
-
-Programs are required Linux device driver source, but they are not device
-driver, they are user application programs that use ugen(4).

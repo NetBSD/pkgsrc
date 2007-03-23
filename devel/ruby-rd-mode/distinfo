@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/02/13 15:16:35 taca Exp $
-
-SHA1 (rdtool-0.6.18.tar.gz) = 4c0ae3f25a5bca11b5a4b8d9a01f4683b958d9e0
-RMD160 (rdtool-0.6.18.tar.gz) = 10bd30d26d8264f86b6493a0430d1d1b9e807a9f
-Size (rdtool-0.6.18.tar.gz) = 80445 bytes

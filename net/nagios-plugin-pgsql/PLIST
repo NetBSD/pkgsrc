@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/18 17:22:57 bouyer Exp $
-libexec/nagios/check_pgsql

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2006/04/08 19:02:18 jlam Exp $
-
-SHA1 (wl-2.14.0.tar.gz) = 75b93013444cb27ca540462afbaefdce0e157b3f
-RMD160 (wl-2.14.0.tar.gz) = 1a5aa025fc05cbcf2a7d390b1804cc1b22f5df2b
-Size (wl-2.14.0.tar.gz) = 1101505 bytes
-SHA1 (patch-aa) = ede97cce8b2574737a91941a905e067c940fb50a

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.11 2007/01/09 23:19:26 wiz Exp $
-
-SHA1 (mpd-0.12.1.tar.bz2) = 8b124bfcf4b1b2c23abd40661bd0ad0b33fadbfe
-RMD160 (mpd-0.12.1.tar.bz2) = 3352e60ead352bac0b4776f4b784c9f9505bc9bc
-Size (mpd-0.12.1.tar.bz2) = 397761 bytes
-SHA1 (patch-aa) = 246424791365a3a9a29c2efe36bbbcd40416ae48
-SHA1 (patch-ab) = 3ddd0f23a9d796d4e4c428819657f9a66cf624ba
-SHA1 (patch-ac) = f6876c403c1357e99534878b01044e4a22ed0a97
-SHA1 (patch-ad) = 5ba01e9b2b7f1ecca9565e0809021e47df0c4145

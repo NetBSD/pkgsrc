@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/01/19 23:42:11 joerg Exp $
-
-SHA1 (chkrootkit-0.46a.tar.gz) = 5213b107cda5e5165da463650885efe8c15a14d2
-RMD160 (chkrootkit-0.46a.tar.gz) = 9016abfd7cd3d986aec86722c9a9b88dea7bf49b
-Size (chkrootkit-0.46a.tar.gz) = 37140 bytes
-SHA1 (patch-aa) = c47ecb09d02c710727420a3adfb7d8b62d721f2d
-SHA1 (patch-ab) = 109a43494bda8d0966164b7684f63a6a83f2d829
-SHA1 (patch-ac) = 3e2f5dd9d7f38e0eddc5b43a1a74b880ea296fc5

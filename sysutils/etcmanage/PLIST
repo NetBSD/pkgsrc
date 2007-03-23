@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/12/02 19:04:26 gdt Exp $
-bin/BUILD-NetBSD
-bin/INSTALL-NetBSD
-bin/etcmanage

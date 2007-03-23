@@ -1,7 +1,0 @@
-# $NetBSD: patches.README,v 1.1 2006/05/15 19:46:59 tv Exp $
-
-Context patches ARE NOT ALLOWED due to SCSL license restrictions.
-DO NOT add any patchfiles to this package!
-
-If patches are required, they MUST be placed on the distribution site.
-Contact tv@NetBSD.org if you need assistance with this policy.

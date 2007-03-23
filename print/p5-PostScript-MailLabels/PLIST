@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/03 21:51:32 jlam Exp $
-share/examples/${PKGBASE}/copyright.pl
-share/examples/${PKGBASE}/diskette.pl
-share/examples/${PKGBASE}/portuguese.pl
-share/examples/${PKGBASE}/std_business.pl
-share/examples/${PKGBASE}/test5167.pl
-share/examples/${PKGBASE}/testlabels.pl
-@dirrm share/examples/${PKGBASE}

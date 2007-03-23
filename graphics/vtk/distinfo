@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/02/23 20:21:09 drochner Exp $
-
-SHA1 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 31ab01c16b3d44ce201d8180af431833cf6527d8
-RMD160 (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 71a092cf929cfaeeb8f297334cadb829209b9ad7
-Size (VTK-4.2.6/VTK-4.2-LatestRelease.tar.gz) = 6073644 bytes
-SHA1 (patch-aa) = dbda07f15a60a0e66ce50e50addcf85d4c2b840c
-SHA1 (patch-ab) = 83d063aaf1924daff17a45fb92316743fbb448f3
-SHA1 (patch-ac) = 59977568e92ba01344447c0c0b1c770d26e460bb
-SHA1 (patch-ad) = efc49225d42953bb2fd0e099130e415a78b5b522

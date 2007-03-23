@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/10 17:03:09 cube Exp $
-lib/gkrellm2/plugins/gkrellm-est.so

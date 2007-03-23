@@ -1,6 +1,0 @@
-Provides missing POSIX *_r functions: ttyname_r(),
-getenv_r() and strerror_r(). These are thread safe
-versions of the corresponding functions without
-the "_r".  The package is implemented so that it
-may be used simply by including its buildlink3.mk
-file.

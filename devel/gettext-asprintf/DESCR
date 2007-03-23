@@ -1,3 +1,0 @@
-This package provides libasprintf from GNU gettext.  This library makes
-it easier deal with formated output in C++ by providing a printf(3) like
-interface.

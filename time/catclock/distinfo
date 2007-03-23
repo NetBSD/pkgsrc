@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/02/23 20:17:47 drochner Exp $
-
-SHA1 (catclock.zip) = 0e977f080968067c4232072aa88d919e3f5daf84
-RMD160 (catclock.zip) = 6caf81ec08f5c237902aaf9999e642300e4517c2
-Size (catclock.zip) = 180008 bytes
-SHA1 (patch-aa) = a42cdf9512e90501135ff66b598f580ddc449cdf
-SHA1 (patch-ab) = 7d19c6e72d19505f630ad6d7411ef0c1cc2b20e3
-SHA1 (patch-ac) = 3d115c8b0cf110f40f2322c5bc5cce37ad57089c
-SHA1 (patch-ad) = c2081fb4c6a375b5157dc2f91a29a57ec644ca4a

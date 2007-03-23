@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/22 18:52:00 jlam Exp $
-
-SHA1 (qalculate-units-0.9.4.tar.gz) = 1a6c124e572671973be9d249aba682e745f01f91
-RMD160 (qalculate-units-0.9.4.tar.gz) = 621636ecc487b71a85f7e6f9785e275ed2ac2e17
-Size (qalculate-units-0.9.4.tar.gz) = 375642 bytes
-SHA1 (patch-aa) = b345c2bfdee5c3000ae23f6f77b7ef7e491fa385
-SHA1 (patch-ab) = a5500e60ffd51c40ed266ae7c26faf7b6e441234

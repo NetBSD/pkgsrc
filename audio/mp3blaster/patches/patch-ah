@@ -1,7 +1,0 @@
-$NetBSD: patch-ah,v 1.1 2003/09/30 09:44:00 cube Exp $
-
---- getopt/Makefile.am.orig	2003-09-29 13:47:50.000000000 +0200
-+++ getopt/Makefile.am
-@@ -0,0 +1,2 @@
-+noinst_LIBRARIES=		libgetopt.a
-+libgetopt_a_SOURCES=		gnugetopt.h getopt.c getopt1.c

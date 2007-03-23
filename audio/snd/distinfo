@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/02/23 00:34:53 wiz Exp $
-
-SHA1 (snd-8.8.tar.gz) = 8aa73ec7bbbb84b97c4325b05769f3388e6f0680
-RMD160 (snd-8.8.tar.gz) = 33a2a5f196a501c0cfb0fba623fa6f37c489def2
-Size (snd-8.8.tar.gz) = 8580035 bytes
-SHA1 (patch-aa) = c0940f37c8455e7dcfac64d528c9baf545ba14b7

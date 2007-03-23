@@ -1,3 +1,0 @@
-This package provides a Pyrex wrapper to provide python interfaces to
-PROJ.4 (http://proj.maptools.org) functions for coordinate
-transformation.

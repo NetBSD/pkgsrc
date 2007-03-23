@@ -1,3 +1,0 @@
-Object-Oriented UI framework based on the curses library.
-Curses::UI contains widgets and dialog windows which can be
-used to build a user interface.

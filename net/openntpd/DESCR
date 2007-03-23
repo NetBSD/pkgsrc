@@ -1,8 +1,0 @@
-OpenNTPd is a free implementation of the Network Time Protocol.
-It provides the ability to sync the local clock to remote NTP servers and
-can act as NTP server itself, redistributing the local clock.
-
-OpenNTPd is primarily developed by Henning Brauer and Alexander Guy as part
-of the OpenBSD Project. The portable version is made by Darren Tucker.
-The software and is freely useable and re-useable by everyone under a BSD
-license.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 04:16:32 jlam Exp $
-
-SHA1 (webmin-modules-1.270/postgresql.wbm.gz) = 371e22497ade84594d2b7db7493729879f9ee809
-RMD160 (webmin-modules-1.270/postgresql.wbm.gz) = e47e366dc467c841086c21819056f214d6027b7a
-Size (webmin-modules-1.270/postgresql.wbm.gz) = 154041 bytes

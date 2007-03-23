@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/03/14 02:06:28 joerg Exp $
-
-SHA1 (balance-3.15.tar.gz) = fe9a9999c97faced30b2b23c416f68d69877cea2
-RMD160 (balance-3.15.tar.gz) = 73c8be6273fb14373661b73c6235426fa7c29ed3
-Size (balance-3.15.tar.gz) = 21022 bytes
-SHA1 (patch-aa) = 45aeeeec91c2f4b7beaa1cf9dba45ae87f1896b1
-SHA1 (patch-ab) = f24922148ef2d84b914d832749dbc9959f856fe3

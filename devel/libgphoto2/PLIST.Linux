@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.3 2007/01/02 18:32:47 adam Exp $
-lib/libgphoto2/print-usb-usermap
-share/doc/libgphoto2/linux-hotplug/usbcam.console
-share/doc/libgphoto2/linux-hotplug/usbcam.group
-share/doc/libgphoto2/linux-hotplug/usbcam.user
-share/doc/libgphoto2/linux-hotplug/usbcam.x11-app
-@dirrm share/doc/libgphoto2/linux-hotplug

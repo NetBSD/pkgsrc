@@ -1,5 +1,0 @@
-MailBox is a library for the Perl programming language, designed to handle
-various kinds of e-mail. It can be used to construct messages, send them,
-access various kinds of message folders, filter spam and virussen, and so on.
-
-The MailBox distribution is quite large, with about 140 related modules.

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/05 01:43:59 minskim Exp $
-include/hangul-1.0/hangul.h
-lib/libhangul.la
-lib/pkgconfig/libhangul.pc
-share/libhangul/hanja/hanja.txt
-@dirrm share/libhangul/hanja
-@dirrm share/libhangul
-@dirrm include/hangul-1.0

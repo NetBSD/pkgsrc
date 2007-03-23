@@ -1,8 +1,0 @@
-ikiwiki is a wiki compiler.
-
-It converts wiki pages into html pages suitable for publishing on a
-website. Unlike many wikis, ikiwiki does not have its own ad-hoc means
-of storing page history, and instead uses an revision control system.
-
-This means you can edit wiki sources in your favourite editor, and
-rebuild the website, rather than using an online browser form.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/19 05:27:35 taca Exp $
-bin/byaccr
-share/examples/byaccr/Makefile
-share/examples/byaccr/cal.y
-share/examples/byaccr/calfunc.rb
-share/examples/byaccr/main.rb
-@dirrm share/examples/byaccr

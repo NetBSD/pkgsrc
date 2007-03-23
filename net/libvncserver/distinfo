@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/15 14:03:41 bouyer Exp $
-
-SHA1 (LibVNCServer-0.8.2.tar.gz) = b31c082b79b9e643fc54a9f89852899fcb6f7639
-RMD160 (LibVNCServer-0.8.2.tar.gz) = 9cb5ee889a3118397da8eeaa22d3464d5a904a0b
-Size (LibVNCServer-0.8.2.tar.gz) = 1311845 bytes

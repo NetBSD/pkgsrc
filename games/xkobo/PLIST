@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/26 04:07:49 jschauma Exp $
-bin/xkobo
-${IMAKE_MAN_DIR}/xkobo.${IMAKE_MANNEWSUFFIX}
-@exec ${MKDIR} %D/lib/X11/xkobo-scores && ${CHMOD} 775 %D/lib/X11/xkobo-scores
-@unexec ${RM} -r %D/lib/X11/xkobo-scores

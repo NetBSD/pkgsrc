@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/08/29 15:32:12 schmonz Exp $
-
-To enable qgreylist, set qmailsmtpd_presmtpd="${PREFIX}/bin/qgreylist"
-in /etc/rc.conf, then restart qmail-smtpd.
-
-===========================================================================

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/01 15:38:15 mlelstv Exp $
-mdec/memtestplus.bin
-mdec/memtestplus
-${HAVE_ISO}mdec/memtestplus.iso
-share/doc/memtestplus/README
-share/doc/memtestplus/FAQ
-@unexec ${RMDIR} %D/mdec 2>/dev/null || ${TRUE}
-@dirrm share/doc/memtestplus

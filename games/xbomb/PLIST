@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/08 15:50:14 joerg Exp $
-bin/xbomb
-man/man6/xbomb.6
-lib/X11/app-defaults/XBomb

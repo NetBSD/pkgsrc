@@ -1,2 +1,0 @@
-Imlib2-Ruby is a Ruby interface to Imlib2.  All of Imlib2 (except for
-X11 calls) has been wrapped.

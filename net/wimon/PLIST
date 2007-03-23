@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/23 13:03:56 xtraeme Exp $
-bin/wimon
-man/man8/wimon.8

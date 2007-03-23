@@ -1,7 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2006/09/21 18:06:18 drochner Exp $
-
-case ${STAGE} in
-POST-DEINSTALL)
-	rm -f /usr/lib/nss_mdns.so.0
-	;;
-esac

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/16 15:24:23 drochner Exp $
-
-SHA1 (partysip-2.2.3.tar.gz) = 140e8fc1dc7df52e8f409babebbaf4fcabe213aa
-RMD160 (partysip-2.2.3.tar.gz) = 31f24803488a86b00711c924f4327564e960e3b2
-Size (partysip-2.2.3.tar.gz) = 568193 bytes
-SHA1 (patch-aa) = 2c8bd0c9f782e066d6d4433ade4cb5161a237a4f
-SHA1 (patch-ab) = d661caf4c229ba51ec98439ca089dc26e3cdb6e6

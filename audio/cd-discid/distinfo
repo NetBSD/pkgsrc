@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/03 12:35:39 joerg Exp $
-
-SHA1 (cd-discid_0.9.orig.tar.gz) = 389c3b5bbfb96b113f85a8d206f9d0d7052146a4
-RMD160 (cd-discid_0.9.orig.tar.gz) = 58049ba778243019a96ab7f8d8eaf213e8eca4fa
-Size (cd-discid_0.9.orig.tar.gz) = 11217 bytes
-SHA1 (patch-aa) = 80dc0338faf17f8b8cb556fa08e973cd01759a02

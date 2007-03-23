@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/12 16:25:22 wiz Exp $
-
-SHA1 (SDL_image-1.2.5.tar.gz) = 2cd7d825953de64bf903ad711be5613f79259422
-RMD160 (SDL_image-1.2.5.tar.gz) = 3dabd3de4259519412e6fdc5c83d268dfa0b1ec0
-Size (SDL_image-1.2.5.tar.gz) = 1308637 bytes

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/01/23 11:53:46 martti Exp $
-
-SHA1 (xfce4-mixer-4.2.4.tar.gz) = aa3f12f6ce13774a296566db10c2c90396d0e3b2
-RMD160 (xfce4-mixer-4.2.4.tar.gz) = c545b70960cecc2f9ee5f923b3dd11a56cec05d1
-Size (xfce4-mixer-4.2.4.tar.gz) = 607409 bytes
-SHA1 (patch-aa) = 813b37e41c8a19c8ce2d2b4ed9fc5e53601dd025
-SHA1 (patch-ab) = 52d3d875c335a55e00870385cc114af7265748dc

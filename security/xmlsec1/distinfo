@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/14 02:26:39 rillig Exp $
-
-SHA1 (xmlsec1-1.2.6.tar.gz) = de5b7a70825d96ee9ee7e1aa43194df8412cf72d
-RMD160 (xmlsec1-1.2.6.tar.gz) = bdc7692be5c4f4c27c177fe5271b13382a44d452
-Size (xmlsec1-1.2.6.tar.gz) = 1595648 bytes
-SHA1 (patch-aa) = 1718c051201bf7803057b2a8ad7b004f90e35147
-SHA1 (patch-ab) = c44049b2592b03823dbbebc70ee5cb4a58adb646
-SHA1 (patch-ac) = 550f37db0db36ce5fa88c6c0d0acd6725aa69470

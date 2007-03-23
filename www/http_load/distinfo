@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/06/10 19:47:47 minskim Exp $
-
-SHA1 (http_load-04jan2002.tar.gz) = 7b21fd2cfeb4bf6705ef6bd3f194a6a2f01ff976
-RMD160 (http_load-04jan2002.tar.gz) = dc0986091b1f1819100c24503a58a57978deba38
-Size (http_load-04jan2002.tar.gz) = 16710 bytes
-SHA1 (patch-aa) = ed2d15083bbb5ef09cfef2c2b872dd7e06c915a3
-SHA1 (patch-ab) = b10f08ce3f09d8518415f4735aad2ca8bd53de3b

@@ -1,9 +1,0 @@
-A "NetBSD Device Driver Writing Guide":
-
-It consists of three main sections:
-
-- Introduction to autoconfig(8).
-- Usage of the autoconfig(8) infrastructure, demonstrated on the example
-  of rf(4).
-- Core of the rf(4) driver, that shows how data is transfered from and
-  to a (disk) device.

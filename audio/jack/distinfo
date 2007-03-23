@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/23 14:44:03 jlam Exp $
-
-SHA1 (jack-audio-connection-kit-0.100.0.tar.gz) = 431ab7647f694d57bc697d150742d70cccdcd43b
-RMD160 (jack-audio-connection-kit-0.100.0.tar.gz) = 31548d58e545cb117428ca72e256a395363ff9b6
-Size (jack-audio-connection-kit-0.100.0.tar.gz) = 682799 bytes
-SHA1 (patch-aa) = 537836a22c61534595dacd2afe69488b4b70e6b1
-SHA1 (patch-ab) = 288aed771bad16d068ad7f78435e09aca7e10535

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.21 2005/08/25 10:09:48 grant Exp $
-
-SHA1 (analog-6.0.tar.gz) = 17ad601f84e73c940883fb9b9e805879aac37493
-RMD160 (analog-6.0.tar.gz) = 75c6157d2ac1459ee28a90001787382f5b671dca
-Size (analog-6.0.tar.gz) = 1553316 bytes
-SHA1 (patch-aa) = dc65dc097131572251f6e1490e3336c21ee53ee7
-SHA1 (patch-ab) = e59f91bedf08f4ece6b36ee06bc8d7d7742948c4

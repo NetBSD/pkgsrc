@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/11 15:57:30 obache Exp $
-
-SHA1 (Kwiki-Archive-Cvs-0.102.tar.gz) = cf3701ac684992604572bf5cb3805e4db010026d
-RMD160 (Kwiki-Archive-Cvs-0.102.tar.gz) = 6351bcc9532b5c4a1ae47a983faa81f393251d54
-Size (Kwiki-Archive-Cvs-0.102.tar.gz) = 2670 bytes
-SHA1 (patch-aa) = 3db09127aee658d7c277c3af39257d789d8835ba

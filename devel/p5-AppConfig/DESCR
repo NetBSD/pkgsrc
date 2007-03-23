@@ -1,5 +1,0 @@
-AppConfig is a bundle of perl5 modules for parsing configuration files
-and command line arguments.  It has a very powerful configuration file
-processor and a simple, efficient mechanism for parsing command line
-arguments.  It also will use the Getopt::Long module where available
-to extend its own command line parsing abilities.

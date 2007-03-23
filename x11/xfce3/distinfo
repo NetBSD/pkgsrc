@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/14 15:35:25 joerg Exp $
-
-SHA1 (xfce-3.8.18.tar.gz) = d4ab39c4ddeb68d2cc1ceb03af14b0e95b8f5c61
-RMD160 (xfce-3.8.18.tar.gz) = 5060b285e6f9bc1bfdda54d314d0c92832264268
-Size (xfce-3.8.18.tar.gz) = 5166881 bytes
-SHA1 (patch-aa) = 483963bb078ec5bf15cd7c51f34b4f4184848ceb
-SHA1 (patch-ab) = 58d94c58d30e09b56f3c4744844bc28adab284ba
-SHA1 (patch-ac) = 522fda7357121014b3570ebce1f64aaca3141a54

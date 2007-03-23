@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.2 2006/06/17 17:45:41 rillig Exp $
-
---- bin/tmake.orig	Thu Dec 21 18:38:41 2000
-+++ bin/tmake	Wed Apr 25 10:53:46 2001
-@@ -68,3 +68,3 @@
- 
--$project{"TMAKEPATH"} = $ENV{"TMAKEPATH"} . ";" . $ENV{"HOME"} . "/.tmake/";
-+$project{"TMAKEPATH"} = $ENV{"TMAKEPATH"} . ";" . $ENV{"HOME"} . "/.tmake/;@TMAKEPATH@";
- 

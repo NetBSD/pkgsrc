@@ -1,8 +1,0 @@
-verifypc is a tool that sanity checks the dependencies of a package based on
-the results of a successful build, assuming the package uses pkg-config to
-detect dependencies.
-
-verifypc will warn you if the configuration script requests an uninstalled
-or unavailable package (not specified as a direct dependency) or if the
-requested package does not match the version specification in the packages'
-dependencies.

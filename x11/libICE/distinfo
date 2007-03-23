@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/22 14:47:30 joerg Exp $
-
-SHA1 (libICE-1.0.3.tar.bz2) = be6ca5cc02bd8cd216217a5315a2c9ab9af82fb4
-RMD160 (libICE-1.0.3.tar.bz2) = fc102b6c4c462b81ea45a30c7ab73b84562aa623
-Size (libICE-1.0.3.tar.bz2) = 246976 bytes

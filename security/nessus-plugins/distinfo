@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.23 2006/12/17 21:06:22 salo Exp $
-
-SHA1 (nessus-plugins-GPL-2.2.9.tar.gz) = 39ad84c496f93ee944b60113dbac619a246b3bb2
-RMD160 (nessus-plugins-GPL-2.2.9.tar.gz) = bb2a853f4e7e5041c8d134d12b5a545a9009750e
-Size (nessus-plugins-GPL-2.2.9.tar.gz) = 1064740 bytes
-SHA1 (nmap.nasl) = 18a3eb6c03256e89d596804aa879c0d2b3126140
-RMD160 (nmap.nasl) = d3a0e8227b223e67754b073ca7920e073f8d8172
-Size (nmap.nasl) = 16378 bytes
-SHA1 (patch-aa) = e2f564fff440728373abb49947c714d7002fc9da

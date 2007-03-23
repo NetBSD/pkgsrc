@@ -1,6 +1,0 @@
-wpa_supplicant is a WPA Supplicant for Linux, BSD, and Windows with
-support for WPA and WPA2 (IEEE 802.11i / RSN). It is suitable for both
-desktop/laptop computers and embedded systems. Supplicant is the
-IEEE 802.1X/WPA component that is used in the client stations.
-
-This package only includes the wpa_gui frontent for wpa_supplicant.

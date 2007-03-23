@@ -1,9 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.2 2006/11/08 17:33:26 ghen Exp $
-
-case ${STAGE} in
-DEINSTALL)
-	# Unconditionally remove the virus databases when deinstalling.
-	${RM} -f @CLAMAV_DBDIR@/daily.cvd
-	${RM} -f @CLAMAV_DBDIR@/main.cvd
-	;;
-esac

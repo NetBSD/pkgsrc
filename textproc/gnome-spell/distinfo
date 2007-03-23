@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:48:42 agc Exp $
-
-SHA1 (gnome-spell-1.0.6.tar.bz2) = 7301e5111818da601d2e33bcb60058bee551d4c8
-RMD160 (gnome-spell-1.0.6.tar.bz2) = de4f23a42f98dfce6cf69c3fc1dc288739fe9591
-Size (gnome-spell-1.0.6.tar.bz2) = 315357 bytes
-SHA1 (patch-aa) = d693445c2bce4861e5ca43a102eeea09593771d3

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/25 07:58:26 martti Exp $
-bin/keychain
-man/man1/keychain.1
-share/doc/keychain/README
-@dirrm share/doc/keychain

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/06/19 22:05:14 joerg Exp $
-
-SHA1 (gpsim-0.21.11.tar.gz) = 05337560a6b48a9afb7a3f4be1ba606709f6b30a
-RMD160 (gpsim-0.21.11.tar.gz) = 36001180948fc2394043d8283dc1dd028ee4f922
-Size (gpsim-0.21.11.tar.gz) = 1218332 bytes
-SHA1 (patch-aa) = 0d102952cb8dbe7faaf50416a2d9bec24683c300
-SHA1 (patch-ab) = 199403ee700b145dcb44f42c258903903af20785

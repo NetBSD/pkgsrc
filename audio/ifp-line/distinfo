@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/05/24 13:54:30 rillig Exp $
-
-SHA1 (ifp-line-0.2.4.4.tar.gz) = f801a7a8179ab5430631f1027c25b449998cbc84
-RMD160 (ifp-line-0.2.4.4.tar.gz) = d67b5683b075f7e121585de21d9ebb475fcc3bd6
-Size (ifp-line-0.2.4.4.tar.gz) = 23879 bytes
-SHA1 (patch-aa) = 0524d1a5834f6b0320173c5eafff258e78ec1220

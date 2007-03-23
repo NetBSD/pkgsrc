@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/22 08:24:44 rillig Exp $
-
-SHA1 (jflex-1.4.1.tar.gz) = 274ced17ce5e9709cdc177ea4e5096c697fee1e5
-RMD160 (jflex-1.4.1.tar.gz) = 043a78f092e2c89253e4c53c6cd8c37aafaf05ed
-Size (jflex-1.4.1.tar.gz) = 986546 bytes

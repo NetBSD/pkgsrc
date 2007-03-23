@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/03 17:24:28 jdolecek Exp $
-
-SHA1 (php-PDO_MYSQL/PDO_MYSQL-1.0.1.tgz) = 3c60399aa71b4d065b9f0c597667f16d522eeff1
-RMD160 (php-PDO_MYSQL/PDO_MYSQL-1.0.1.tgz) = b7f09c74696cf293c971186fd1dcc5ab0de5681e
-Size (php-PDO_MYSQL/PDO_MYSQL-1.0.1.tgz) = 13002 bytes

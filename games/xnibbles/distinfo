@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/08/29 20:03:24 rillig Exp $
-
-SHA1 (xnibbles-1.0BETA4.tar.gz) = 2f0ed0ea1184cb3e81fa56a430d3c53e96618452
-RMD160 (xnibbles-1.0BETA4.tar.gz) = a07ae907d72a5b4aac093cfe5a3cf7d02a4024e9
-Size (xnibbles-1.0BETA4.tar.gz) = 134982 bytes
-SHA1 (patch-aa) = 42db457084a9a573b8b823f1dfcd1941a634ce9d
-SHA1 (patch-ab) = a34f7abca19759859509c534cc98aa5be303fb18

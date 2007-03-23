@@ -1,5 +1,0 @@
-LibSylph is an e-mail client library which is derived from Sylpheed.
-LibSylph is a lightweight but featureful library. It has many common e-mail
-related features and other useful functions, and you can utilize them from
-your application. Moreover you can create a new e-mail client by wrapping
-LibSylph with any UI.

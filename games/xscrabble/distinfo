@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:12:05 agc Exp $
-
-SHA1 (xscrabble-1.0.tar.gz) = ba7f1b54b81d74f2159fa57e0415b20acc30ad20
-RMD160 (xscrabble-1.0.tar.gz) = 458f49dd606d744bf4bf1b7d020d20c959f47130
-Size (xscrabble-1.0.tar.gz) = 498741 bytes
-SHA1 (patch-aa) = b40cc79e0a625d6b6c3e30cfa5bd31f306c9c984
-SHA1 (patch-ab) = cbaf1a8d437a1c400bb631fd5efd9dd55e61038e

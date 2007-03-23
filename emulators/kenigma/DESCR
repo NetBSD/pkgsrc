@@ -1,3 +1,0 @@
-KEnigma is a replica of the German enigma code machine used in WW2 written in
-ruby/kde. This is an exact copy of the real machine (You could encode a
-message on a real enigma and decode it using this.)

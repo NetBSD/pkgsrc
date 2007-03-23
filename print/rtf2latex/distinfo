@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/08 00:03:57 joerg Exp $
-
-SHA1 (rtf2LaTeX.1.5.tar.gz) = dcf8c2ce49928bd38ce03aad1f5fda09381fd45e
-RMD160 (rtf2LaTeX.1.5.tar.gz) = d319753192d890937606e77a75097f430e676684
-Size (rtf2LaTeX.1.5.tar.gz) = 52075 bytes
-SHA1 (patch-aa) = 5e12460d669383082fcd625157231fd08607a9b6

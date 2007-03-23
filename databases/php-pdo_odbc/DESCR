@@ -1,5 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-
-This extension provides an ODBC v3 driver for PDO. It supports
-unixODBC and IBM DB2 libraries, and will support more in future
-releases.

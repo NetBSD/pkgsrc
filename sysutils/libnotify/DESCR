@@ -1,3 +1,0 @@
-libnotify is a library that allows applications to raise visual notifications
-in a desktop environment.  An external application, the notification-daemon,
-is then in charge to show them as it wishes.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/03 23:11:03 minskim Exp $
-
-SHA1 (rgl-0.2.3.tgz) = 375197d8961a70081e0e8c833cc60dcfa10ab0e9
-RMD160 (rgl-0.2.3.tgz) = c51cac4f587e3090cbc392ce6b63340da8ecc464
-Size (rgl-0.2.3.tgz) = 66055 bytes
-SHA1 (patch-aa) = e93a19819a9a924da18abe6a100603a852d0c285

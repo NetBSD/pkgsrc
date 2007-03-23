@@ -1,3 +1,0 @@
-Call outside defined subroutines from the Safe compartment using
-share(), or can call methods through the object that is copied into
-the Safe compartment using varglob().

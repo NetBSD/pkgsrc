@@ -1,4 +1,0 @@
-autonet is intended to handle automatic network configuration on a
-machine which connects to a variety of different networks, such as a laptop.
-It includes configuring WEP keys and static vs dynamic IP addresses on a
-per ssid or interface basis.

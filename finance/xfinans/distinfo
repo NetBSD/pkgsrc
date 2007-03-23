@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/14 10:25:01 rillig Exp $
-
-SHA1 (xfinans-5.9.tar.gz) = 3a852e3a7afb0cc6551d41b230c1f035bc7dc804
-RMD160 (xfinans-5.9.tar.gz) = 30a0a4d2656029f389b2ea3a5070feb3399d5586
-Size (xfinans-5.9.tar.gz) = 124696 bytes
-SHA1 (patch-aa) = acd4c14001839dcee68d5365059247b6806112ef
-SHA1 (patch-ab) = be1dd7494466690013ccd588c14bcca1c4d0b70c

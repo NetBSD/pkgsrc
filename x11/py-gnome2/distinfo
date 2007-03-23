@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2006/11/14 16:46:46 drochner Exp $
-
-SHA1 (gnome-python-2.16.2.tar.bz2) = 90a5cd988bb13158004c154d7a9591e18cde0996
-RMD160 (gnome-python-2.16.2.tar.bz2) = ecccd7f502ebab9534d117489dd69c3f56687650
-Size (gnome-python-2.16.2.tar.bz2) = 401954 bytes
-SHA1 (patch-aa) = 7c5623427275d88082bafc4de80dcf4eeffd6f14
-SHA1 (patch-ab) = d547a4ac92364aed1f5d7f8041616760339aefd3
-SHA1 (patch-ac) = 6fc9caab51ee8ce40798f3f6ac9ded7d041f2fe3

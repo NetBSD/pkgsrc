@@ -1,6 +1,0 @@
-  Giblib is a utility library used by many of the applications found on
-www.linuxbrit.co.uk.  It incorporates doubly linked lists, some string
-functions, and a wrapper for imlib2.  The wrapper does two things.  It
-gives you access to fontstyles, which can be loaded from files, saved to
-files, or defined dynamically through the API.  It also, and more
-importantly, wraps imlib2's context API into a more compact form.

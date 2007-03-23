@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 19:53:21 joerg Exp $
-include/X11/extensions/Print.h
-include/X11/extensions/Printstr.h
-lib/pkgconfig/printproto.pc
-@comment @dirrm include/X11/extensions

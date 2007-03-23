@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/04 01:29:57 minskim Exp $
-${RUBY_SITELIBDIR}/generator2stream.rb
-${RUBY_SITELIBDIR}/stream.rb
-${RUBY_DOCDIR}/stream/README
-${RUBY_EXAMPLESDIR}/stream/examples.rb
-${RUBY_EXAMPLESDIR}/stream/streamtester.rb
-@dirrm ${RUBY_EXAMPLESDIR}/stream
-@dirrm ${RUBY_DOCDIR}/stream

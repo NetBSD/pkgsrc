@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/23 14:39:55 hira Exp $
-
-SHA1 (xmascot2.5p2.tar.gz) = b1ea9ef38b3f10fef7a597930568b0e2b9921bf9
-RMD160 (xmascot2.5p2.tar.gz) = 323b47b46da681a2580188bdbcf18183995e2b34
-Size (xmascot2.5p2.tar.gz) = 191672 bytes
-SHA1 (patch-aa) = 5a018514e00aef499c23be20d9717a843dfbaa00

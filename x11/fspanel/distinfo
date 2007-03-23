@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/08/01 17:10:32 reed Exp $
-
-SHA1 (fspanel-0.8beta1.tar.gz) = 80225c1cd6984b458e487db3cbc04d8e3a4173d8
-RMD160 (fspanel-0.8beta1.tar.gz) = e892f182375e8a8541a01e6f3015f7fa4900c009
-Size (fspanel-0.8beta1.tar.gz) = 9703 bytes
-SHA1 (patch-aa) = 8a61200ff8ef1c05b78ed4bb1a9150c52a95b5e5
-SHA1 (patch-ab) = 4b425bf95bef52ca40f63f64ab03bb92799a8359
-SHA1 (patch-ac) = 139dd047f884cc0f1cb37bfae39e682cf4de0fd2

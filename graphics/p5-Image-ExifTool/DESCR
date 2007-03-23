@@ -1,7 +1,0 @@
-ExifTool is a Perl module with an included command-line application
-for reading and writing meta information in image files. It recognizes
-EXIF, GPS, IPTC, XMP, JFIF, GeoTIFF, ICC Profile, Photoshop IRB and
-ID3 meta information as well as the maker notes of many digital
-cameras including Canon, Casio, FujiFilm, Kodak, Leaf,
-Minolta/Konica-Minolta, Nikon, Olympus/Epson, Panasonic/Leica,
-Pentax/Asahi, Ricoh, Sanyo and Sigma/Foveon.

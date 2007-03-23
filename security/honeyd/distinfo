@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/05 11:15:41 rillig Exp $
-
-SHA1 (honeyd-1.5b.tar.gz) = a6cef01ddb0b649442ac60e2a08b226b1634e3f9
-RMD160 (honeyd-1.5b.tar.gz) = 40ebe7d3a2915b5145c5a2eef04b9d1de18fbb09
-Size (honeyd-1.5b.tar.gz) = 881787 bytes
-SHA1 (patch-aa) = b69d986bd1a5c1847f4f5467216730da020c8686
-SHA1 (patch-ab) = 6f789cae31cc9b38ae68c2d9250dcab67e1a0146

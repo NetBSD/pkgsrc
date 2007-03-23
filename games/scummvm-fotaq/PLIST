@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/05 08:25:44 drochner Exp $
-bin/fotaq
-share/games/fotaq/queen.1
-@dirrm share/games/fotaq

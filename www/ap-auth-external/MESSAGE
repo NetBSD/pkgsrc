@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/02/03 04:13:25 obache Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule ${MODULE_NAME} lib/httpd/mod_auth_external.so
-
-===========================================================================

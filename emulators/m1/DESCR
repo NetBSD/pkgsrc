@@ -1,6 +1,0 @@
-M1 is an arcade video and pinball game sound emulator by R. Belmont.
-The emulator is available for both Windows and Linux and features
-full stereo sound at sample rates up to 48000 Hz. Over 1000 games
-are supported.
-
-This package contains the Linux binary.

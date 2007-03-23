@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:29 jschauma Exp $
-bin/xscript
-${IMAKE_MAN_DIR}/xscript.${IMAKE_MANNEWSUFFIX}

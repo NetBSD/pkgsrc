@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:03 agc Exp $
-
-SHA1 (tuxmath-2001.09.07-0102.tar.gz) = bdc146f05a9c0b5785bb14c73da2973af16a2bfc
-RMD160 (tuxmath-2001.09.07-0102.tar.gz) = 86c3adc3b678a3a4f1276e85728201c4837ea6fd
-Size (tuxmath-2001.09.07-0102.tar.gz) = 1339967 bytes
-SHA1 (patch-aa) = f67528fe22e7a13dba902f2940ae91822a8bcb45
-SHA1 (patch-ab) = 236ed4430c410a01196cad5ac118cbde1a48ab4e

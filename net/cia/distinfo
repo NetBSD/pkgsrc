@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/14 02:10:10 joerg Exp $
-
-SHA1 (cia-20030922.tar.bz2) = 9d0b06c99c6943493ff47412bcb36efde67e40ca
-RMD160 (cia-20030922.tar.bz2) = 9f41f8ff057b3f022f5678cca7401ac9e7fe478a
-Size (cia-20030922.tar.bz2) = 7645 bytes
-SHA1 (patch-aa) = 6b56f84481813df9dc0bd8044d51d2f857cbaf5a
-SHA1 (patch-ab) = da697a1a5222bd0241ea43e7ce5d071b7932af89
-SHA1 (patch-ac) = 17e2a2bc343a980149b26340a43994474473f186
-SHA1 (patch-ad) = 166b0b6c8c8167122ccab4c9b14dcb01bb1d7d21

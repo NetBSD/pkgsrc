@@ -1,4 +1,0 @@
-The mkfontdir tool uses mkfontscale to create an index of X font
-files (such as PCF, SNF, or BDF) in a directory.  The X server
-and font server use the generated "fonts.dir" file to find font
-files.

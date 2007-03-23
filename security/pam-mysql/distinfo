@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/03/07 01:22:16 joerg Exp $
-
-SHA1 (pam_mysql-0.7RC1.tar.gz) = a139c4b4bf1a2e591a016069405428eb862f7690
-RMD160 (pam_mysql-0.7RC1.tar.gz) = ffa908bf2f458c48571f0f172f841ef861ad0b47
-Size (pam_mysql-0.7RC1.tar.gz) = 335240 bytes

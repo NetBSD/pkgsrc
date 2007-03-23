@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.17 2007/03/11 21:01:31 adam Exp $
-
-SHA1 (neon-0.26.3.tar.gz) = 8f3191cc6fe0aee5323dac58b03362cddc5d80d0
-RMD160 (neon-0.26.3.tar.gz) = df2410c898341587ca43f52cc0874a18820e72d1
-Size (neon-0.26.3.tar.gz) = 789289 bytes

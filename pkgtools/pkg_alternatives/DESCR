@@ -1,3 +1,0 @@
-pkg_alternatives is a tool to manage the alternatives system provided by
-The NetBSD Packages Collection, also known as pkgsrc.  It creates, configures
-and destroys generic wrappers used to run programs with similar interfaces.

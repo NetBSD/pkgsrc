@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/27 20:51:41 reed Exp $
-bin/ubench
-man/man8/ubench.8
-share/doc/ubench/README
-@dirrm share/doc/ubench

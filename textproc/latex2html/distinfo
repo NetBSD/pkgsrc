@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/04/07 02:23:19 minskim Exp $
-
-SHA1 (latex2html-2002-2-1.tar.gz) = 550830ce17be4d8a0d349db9b95bf15d0e5a7532
-RMD160 (latex2html-2002-2-1.tar.gz) = 89f34463f11628b95f2963d29172825a908ac319
-Size (latex2html-2002-2-1.tar.gz) = 1122706 bytes
-SHA1 (patch-aa) = 146235dbac76107a765b86b28a81329328d8e0db
-SHA1 (patch-ab) = 91028fa0c0aa42eac056ed1ad9ee53c586eb1fb5

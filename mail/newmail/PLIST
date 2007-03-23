@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/21 18:27:18 nra Exp $
-bin/newmail
-man/man1/newmail.1

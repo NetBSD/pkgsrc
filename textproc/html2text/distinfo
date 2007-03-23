@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/03/24 08:53:29 adam Exp $
-
-SHA1 (html2text-1.3.2a.tar.gz) = 91d46e3218d05b0783bebee96a14f0df0eb9773e
-RMD160 (html2text-1.3.2a.tar.gz) = 2771c52ea3ff6c97a13d6171839e61bb19226311
-Size (html2text-1.3.2a.tar.gz) = 130088 bytes
-SHA1 (patch-aa) = dc72dfb31997df0fd0c33aadcb9af6a5df39000f
-SHA1 (patch-ab) = 4282aa51557fcd4e8a322dfe4f1849d5100d6cdc

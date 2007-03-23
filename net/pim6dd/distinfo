@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/03/14 02:38:37 joerg Exp $
-
-SHA1 (pim6dd-20031021a.tar.gz) = 7dac6a611433a4e0b643d3a8b9ff46267abdb6ff
-RMD160 (pim6dd-20031021a.tar.gz) = 27c55cfe054d8942d93e13a1289a6bd29a07a4dd
-Size (pim6dd-20031021a.tar.gz) = 84817 bytes
-SHA1 (patch-aa) = 8b11f1530d6e382ff4a4561e32ff27072c11dfe5
-SHA1 (patch-ab) = 631ff729b8aad01d46b8443a4838d35b59725854
-SHA1 (patch-ac) = e2cf4f7388f0ab8ade9843a42329c37130bf62af

@@ -1,6 +1,0 @@
-$NetBSD: patch-aj,v 1.1 2005/10/06 13:13:28 ben Exp $
-
---- /dev/null	2005-10-05 21:10:17.000000000 -0700
-+++ include/Makefile.am	2005-10-05 21:10:37.000000000 -0700
-@@ -0,0 +1 @@
-+include_HEADERS = faad.h

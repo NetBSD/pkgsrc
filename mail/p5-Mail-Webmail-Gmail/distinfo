@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/09 07:59:11 jmmv Exp $
-
-SHA1 (Mail-Webmail-Gmail-1.08.tar.gz) = 5271fb52204e4e893f8cb2e936609c9de0ae1f1d
-RMD160 (Mail-Webmail-Gmail-1.08.tar.gz) = 1d15d46774ad7d9b5903ac7408f4a7a0f324a53c
-Size (Mail-Webmail-Gmail-1.08.tar.gz) = 23564 bytes
-SHA1 (patch-aa) = 11b0b888cc7897c366d5a91c90c775bf297e0bd3

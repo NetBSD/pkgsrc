@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/18 17:20:43 bouyer Exp $
-libexec/nagios/check_ldap

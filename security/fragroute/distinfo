@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/09 06:31:06 joerg Exp $
-
-SHA1 (fragroute-1.2.tar.gz) = 0e85daf40f4910d56d75e6cdee163305a1cb9004
-RMD160 (fragroute-1.2.tar.gz) = 1d39287a35ea7dca5096ee938727c403a31064c5
-Size (fragroute-1.2.tar.gz) = 85247 bytes
-SHA1 (patch-aa) = f763eb5f9feeff570b2394ed4091b80c6195e173
-SHA1 (patch-ab) = 626aa844a267e6dff0e1d9aaa3e55cd1f2cb0443
-SHA1 (patch-ac) = 644ed8d4652b9e959e96fce47c90c96d77a43134
-SHA1 (patch-ad) = d25c231e4d458ade560ab8df618de340d10b42e9

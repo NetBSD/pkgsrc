@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:55 agc Exp $
-
-SHA1 (kp-0.96.tar.gz) = a7dc3d2cb796b5d4e92d94028e426017d682da4c
-RMD160 (kp-0.96.tar.gz) = 8d2ccdf8debd7cb185f66ef0ae2a25cf69acf381
-Size (kp-0.96.tar.gz) = 16161 bytes
-SHA1 (patch-aa) = 7b32844440da1b7ccf3087f301c60bc5cd83c306

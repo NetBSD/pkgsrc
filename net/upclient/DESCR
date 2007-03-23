@@ -1,6 +1,0 @@
-Upclient is a program that keeps track of your server
-uptime, and lets you compare it with the uptime of other
-(similar) hosts. It consists of two parts, a client- and a
-serverpart. The client runs on your server and sends the
-uptime every few minutes to the server. The server
-collects all data in a table on this site.

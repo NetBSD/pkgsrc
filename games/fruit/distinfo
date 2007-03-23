@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/02 20:05:20 rillig Exp $
-
-SHA1 (fruit_21_linux.zip) = 7bb23a7871ab3d6e152631dab86051dbba615c57
-RMD160 (fruit_21_linux.zip) = 05fb30041ee85540769c1d0ed6a439caac0d8698
-Size (fruit_21_linux.zip) = 716762 bytes
-SHA1 (patch-aa) = b25d8bfa33c5bbb57a6016a255a089acb80f30bc

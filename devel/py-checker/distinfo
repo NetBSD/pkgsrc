@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/22 07:58:33 rillig Exp $
-
-SHA1 (pychecker-0.8.14.tar.gz) = d03965d4799364adf7f48ef31967cf4dc6f978d6
-RMD160 (pychecker-0.8.14.tar.gz) = bc30b946bf30e36d4f3fa0753b570bc10d4ac056
-Size (pychecker-0.8.14.tar.gz) = 121815 bytes
-SHA1 (patch-aa) = ef0328a153878fde74679c9480d60e80ffc3ffa0
-SHA1 (patch-ab) = 8e24ee63f29196591ac32583b79cd7b925b0141c

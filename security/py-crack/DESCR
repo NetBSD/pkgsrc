@@ -1,3 +1,0 @@
-Pycrack is a simple Python extension module for interfacing with cracklib.
-Cracklib is a library which protects against weak passwords by checking, for
-example, that they are not too short or easily guessable by dictionary attacks.

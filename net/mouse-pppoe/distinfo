@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/25 17:45:32 joerg Exp $
-
-SHA1 (pppoe.20000912.tar.gz) = e077e02e42cad1266316cdfa87c31bde191e530e
-RMD160 (pppoe.20000912.tar.gz) = c0034484f2dbc54a3e1ea9648dfb37f6f25f0a2e
-Size (pppoe.20000912.tar.gz) = 9621 bytes
-SHA1 (patch-aa) = 7478d6d155cdec4c9b6d11ccdde467a9fddff0c4

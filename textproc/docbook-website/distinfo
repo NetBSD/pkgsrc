@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/05/05 05:43:05 hrs Exp $
-
-SHA1 (docbook-website-2.6.0.tar.gz) = a4c5155c1cd66712a1584dfbfd8e34bd68aae5f1
-RMD160 (docbook-website-2.6.0.tar.gz) = 31d9f2e6a88e3e46bc8369599f33abb926ada883
-Size (docbook-website-2.6.0.tar.gz) = 243138 bytes
-SHA1 (patch-aa) = 2789db80eacd75ab4c922a168e8ea2979f467b70
-SHA1 (patch-ab) = 32ef65364493b6fb01cf2106c7d0c9d6c66db2af

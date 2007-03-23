@@ -1,9 +1,0 @@
-$NetBSD: patch-az,v 1.1 2004/02/18 23:09:03 kristerw Exp $
-
---- PaintInterface/Picture.cc.orig	Wed Feb 18 23:51:42 2004
-+++ PaintInterface/Picture.cc	Wed Feb 18 23:51:58 2004
-@@ -1,3 +1,4 @@
-+#include <string.h>
- #include "Picture.hh"
- 
- Picture * Picture::CreateCopy()

@@ -1,15 +1,0 @@
-$NetBSD: patch-ai,v 1.1 2006/01/11 21:05:24 joerg Exp $
-
---- ../tcl/unix/tclXunixTest.c.orig	2006-01-11 20:06:24.000000000 +0000
-+++ ../tcl/unix/tclXunixTest.c
-@@ -31,8 +31,10 @@ Tclxtest_Init _ANSI_ARGS_((Tcl_Interp *i
-  * Even if matherr is not used on this system, there is a dummy version
-  * in libtcl.
-  */
-+#if !defined(__DragonFly__)
- extern int matherr ();
- int (*tclDummyMathPtr)() = matherr;
-+#endif
- 
- /*-----------------------------------------------------------------------------
-  * main --

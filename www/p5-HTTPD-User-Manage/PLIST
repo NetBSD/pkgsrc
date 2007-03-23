@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:16 zuntum Exp $
-bin/user_manage
-libexec/cgi-bin/user_manage
-share/doc/user_manage/user_manage.html
-@dirrm share/doc/user_manage

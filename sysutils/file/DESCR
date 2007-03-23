@@ -1,9 +1,0 @@
-File tests each argument in an attempt to classify it.  There are
-three sets of tests, performed in this order: file system tests,
-magic number tests, and language tests.
-
-This package also includes the magic number recognition libraries.
-
-This version is the standard "file" command for Linux, *BSD, and other
-systems. This is Ian Darwin's file(1) command. It is maintained
-by Christos Zoulas.

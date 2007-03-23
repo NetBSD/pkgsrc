@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2005/05/21 23:20:24 augustss Exp $
-
-SHA1 (pymusique-0.5.tar.gz) = 7e6ca4fb4845bf74d44dbc8fa38a20646ae1fdac
-RMD160 (pymusique-0.5.tar.gz) = a152f4bbd196805a6b8022e9f2e822bbe727906f
-Size (pymusique-0.5.tar.gz) = 40386 bytes
-SHA1 (patch-aa) = b5cffe2a490fdc0b673e6ec5af37e46af8bb2043

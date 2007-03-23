@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/07 17:42:12 xtraeme Exp $
-bin/dmassage
-share/doc/dmassage/README
-@dirrm share/doc/dmassage

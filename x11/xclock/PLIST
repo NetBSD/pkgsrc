@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/25 05:54:47 dsainty Exp $
-bin/xclock
-lib/X11/app-defaults/XClock
-lib/X11/app-defaults/XClock-color
-man/man1/xclock.1

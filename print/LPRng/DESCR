@@ -1,8 +1,0 @@
-The LPRng software is an enhanced, extended, and portable implementation
-of the Berkeley LPR print spooler functionality.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on the LPRng-core and LPRng-doc packages.
-Its purpose is to require dependencies so users can install this package
-only and have the complete LPRng software pulled in by the package
-dependency mechanism.

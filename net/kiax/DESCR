@@ -1,9 +1,0 @@
-In the process of the development of Asterisk a new protocol has gathered the
-attention among the VoIP users - the Inter-Asterisk eXchange, or IAX (TM),
-Protocol, used as a the native communication protocol between Asterisk PBX
-Servers. What is particularly good in it is that it requires only one UDP port
-per endpoint to create a successful communication channel for VoIP calls. This
-makes it much friendlier for users behind NAT, which is not the case with SIP
-and H.323 - they required specific router configurations for their channel
-establishment, thus hindering faster spread of VoIP on the home and corporate
-desktop.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/06 03:20:54 jlam Exp $
-info/tinc.info
-man/man5/tinc.conf.5
-man/man8/tincd.8
-sbin/tincd

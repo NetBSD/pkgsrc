@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/30 02:28:35 mjl Exp $
-share/doc/wApua/README
-share/doc/wApua/COPYING
-share/doc/wApua/wApua.rc
-@dirrm share/doc/wApua

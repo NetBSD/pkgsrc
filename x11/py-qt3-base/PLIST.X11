@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.X11,v 1.2 2005/07/01 16:14:31 reed Exp $
-share/sip${PYVERSSUFFIX}/qt/qwindowdefs_qws.sip
-share/sip${PYVERSSUFFIX}/qt/qwindowdefs_x11.sip

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 13:41:11 wiz Exp $
-
-SHA1 (user-20000509.tar.gz) = 7bdd54a7150c20432dd81fde8d086cd52b3f2fe4
-RMD160 (user-20000509.tar.gz) = 76df4d1ed675b7435476b451740c1acb2d25315e
-Size (user-20000509.tar.gz) = 17755 bytes
-SHA1 (patch-aa) = bb47a90980043726052e472f1be21d1a63962b5f

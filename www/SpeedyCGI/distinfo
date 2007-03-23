@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:26 wiz Exp $
-
-SHA1 (CGI-SpeedyCGI-2.22.tar.gz) = 155437a83eedc2cb1ae2b9f93a731a0cfb7ce7f2
-RMD160 (CGI-SpeedyCGI-2.22.tar.gz) = 90bc10281f4380d6d9e3b376ce385567fb3d165d
-Size (CGI-SpeedyCGI-2.22.tar.gz) = 151946 bytes
-SHA1 (patch-aa) = 099bf2fa764488a70cf1b70ef9b7cfb44dc70853

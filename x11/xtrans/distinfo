@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/01/14 12:45:45 joerg Exp $
-
-SHA1 (xtrans-1.0.3.tar.bz2) = 767146fafecf9cf74bea847fb29b57b466782e73
-RMD160 (xtrans-1.0.3.tar.bz2) = 6866155a26e9aecc37cff55505196d81807f4e48
-Size (xtrans-1.0.3.tar.bz2) = 102657 bytes
-SHA1 (patch-aa) = 4d39401f40380fea729ceefabc23d8a422ea146f
-SHA1 (patch-ab) = d2a7af633ab880ec71975b70f521c0e32cd07a5e

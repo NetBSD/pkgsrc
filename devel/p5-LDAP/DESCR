@@ -1,3 +1,0 @@
-Perl5 Module from the Mozilla project to build LDAP clients from
-within perl. This Module is able to use LDAP version 3 connections,
-but not (yet?) SSL even if it outputs a "YES" when configuring it.

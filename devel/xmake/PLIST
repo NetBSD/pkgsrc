@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/28 16:35:38 minskim Exp $
-bin/xmake
-man/man1/xmake.1

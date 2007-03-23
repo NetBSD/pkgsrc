@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/13 08:05:44 adrianp Exp $
-
-SHA1 (Net-IPv6Addr-0.2.tar.gz) = 44607f36dcac8857d9f645ec208f82b5ea5b9c80
-RMD160 (Net-IPv6Addr-0.2.tar.gz) = 4c297f544d643a2852c355de01beaeb0ff65a2dd
-Size (Net-IPv6Addr-0.2.tar.gz) = 28062 bytes

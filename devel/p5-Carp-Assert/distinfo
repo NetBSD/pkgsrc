@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:23 agc Exp $
-
-SHA1 (Carp-Assert-0.18.tar.gz) = 557bc90c3102823e9415d09a89ed35b545cd7913
-RMD160 (Carp-Assert-0.18.tar.gz) = 1a01956a56262207f525ab21b0b63b29c7c3a75a
-Size (Carp-Assert-0.18.tar.gz) = 9540 bytes

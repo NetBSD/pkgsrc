@@ -1,4 +1,0 @@
-CFITSIO is a library of C routines for reading and writing
-FITS format data files.  A set of Fortran-callable wrapper
-routines are also included for the convenience of Fortran
-programmers.

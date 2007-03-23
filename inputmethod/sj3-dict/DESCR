@@ -1,6 +1,0 @@
-SJ3 is a Japanese input method developed by Sony Corporation.  SJ3 is
-composed of a Kana-Kanji conversion server (sj3serv), a Kana-Kanji
-conversion client for terminals (sj3) and Kana-Kanji conversion library
-(sj3lib).
-
-This package contains the Kana-Kanji dictionary file.

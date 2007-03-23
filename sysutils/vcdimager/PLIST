@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/07 19:54:17 jlam Exp $
-bin/vcdimager
-bin/vcdrip
-info/vcdimager.info
-man/man1/vcdimager.1
-man/man1/vcdrip.1

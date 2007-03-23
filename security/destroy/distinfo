@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/11/01 18:52:45 tv Exp $
-
-SHA1 (destroy-20040415.tar.gz) = c2a24155858e9236c8cba2bb5f45687d778b1fde
-RMD160 (destroy-20040415.tar.gz) = b1132ee8c226b6239c1da5591081d9fbccb9c284
-Size (destroy-20040415.tar.gz) = 4261 bytes
-SHA1 (patch-aa) = b7447b4c3abc553594b8dab779037086e1572c03

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/01/06 14:45:24 veego Exp $
-
-SHA1 (x11rec-0.3.tar.gz) = c8f9d5ac9f80424c59adc3eba9fc333d90665e25
-RMD160 (x11rec-0.3.tar.gz) = f942af6462cda842dc96089680f4a1a10ddaa255
-Size (x11rec-0.3.tar.gz) = 3758 bytes
-SHA1 (patch-aa) = 4ac6fbb5613ed346e8bae054c8638fc13f718a1f

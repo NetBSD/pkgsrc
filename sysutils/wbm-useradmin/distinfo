@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:44:30 jlam Exp $
-
-SHA1 (webmin-modules-1.270/useradmin.wbm.gz) = b6cd1e700b49e63d4caeb3d858e008c949b50687
-RMD160 (webmin-modules-1.270/useradmin.wbm.gz) = 445a6fb9c95db236def4b75829da5e4617037ee4
-Size (webmin-modules-1.270/useradmin.wbm.gz) = 237111 bytes

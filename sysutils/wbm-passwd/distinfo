@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:42:00 jlam Exp $
-
-SHA1 (webmin-modules-1.270/passwd.wbm.gz) = 143371104fc5b9180893bd0b5edb6c1124d25263
-RMD160 (webmin-modules-1.270/passwd.wbm.gz) = 8d418783f23a6f4a4aed81e88bcac90e6cbf686e
-Size (webmin-modules-1.270/passwd.wbm.gz) = 23693 bytes

@@ -1,6 +1,0 @@
-This package provides support files needed to use the Xpdf tools with
-Thai PDF files.
-
-Contents:
-- Thai character names
-- TIS-620 encoding

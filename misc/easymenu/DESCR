@@ -1,6 +1,0 @@
-Easymenu is a shell script used to generate menu systems.
-
-It can be used to generate anything from easy one-level menus to
-advanced multi-level menusystems. It has a set of internal commands,
-and can execute external applications and scripts, all to be as flexible
-as possible.
