@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2006/01/03 00:04:42 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2007/03/23 12:51:13 recht Exp $
 
---- config/mh-darwin.orig	2004-05-18 23:54:24.000000000 +0200
+--- config/mh-darwin.orig	2006-02-01 08:52:42.000000000 +0100
 +++ config/mh-darwin
 @@ -25,7 +25,7 @@ SHLIB.c=	$(CC) -dynamiclib -dynamic $(CF
  SHLIB.cc=	$(CXX) -dynamiclib -dynamic $(CXXFLAGS) $(LDFLAGS)
