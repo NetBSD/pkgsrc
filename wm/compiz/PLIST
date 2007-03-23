@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/23 19:42:38 drochner Exp $
+bin/compiz
+bin/gtk-window-decorator
+include/compiz/compiz.h
+include/compiz/decoration.h
+lib/compiz/libannotate.la
+lib/compiz/libclone.la
+lib/compiz/libcube.la
+lib/compiz/libdecoration.la
+lib/compiz/libfade.la
+lib/compiz/libgconf.la
+lib/compiz/libminimize.la
+lib/compiz/libmove.la
+lib/compiz/libplace.la
+lib/compiz/libplane.la
+lib/compiz/libpng.la
+lib/compiz/libresize.la
+lib/compiz/librotate.la
+lib/compiz/libscale.la
+lib/compiz/libscreenshot.la
+lib/compiz/libswitcher.la
+lib/compiz/libwater.la
+lib/compiz/libwobbly.la
+lib/compiz/libzoom.la
+lib/libdecoration.la
+lib/pkgconfig/compiz.pc
+lib/pkgconfig/libdecoration.pc
+share/compiz/freedesktop.png
+share/compiz/icon.png
+share/gconf/schemas/compiz.schemas
+share/gconf/schemas/gwd.schemas
+share/locale/cs/LC_MESSAGES/compiz.mo
+share/locale/de/LC_MESSAGES/compiz.mo
+share/locale/es/LC_MESSAGES/compiz.mo
+share/locale/fi/LC_MESSAGES/compiz.mo
+share/locale/fr/LC_MESSAGES/compiz.mo
+share/locale/hu/LC_MESSAGES/compiz.mo
+share/locale/it/LC_MESSAGES/compiz.mo
+share/locale/ja/LC_MESSAGES/compiz.mo
+share/locale/pl/LC_MESSAGES/compiz.mo
+share/locale/pt_BR/LC_MESSAGES/compiz.mo
+share/locale/sv/LC_MESSAGES/compiz.mo
+share/locale/zh_CN/LC_MESSAGES/compiz.mo
+share/locale/zh_TW/LC_MESSAGES/compiz.mo
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/compiz
+@dirrm lib/compiz
+@dirrm include/compiz
