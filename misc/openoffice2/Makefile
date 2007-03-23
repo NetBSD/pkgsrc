@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/19 16:51:14 hira Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/23 13:57:46 hira Exp $
 #
 
 OO_VER=			2.1.0
@@ -132,6 +132,8 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
