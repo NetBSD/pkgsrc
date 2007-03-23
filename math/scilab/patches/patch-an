@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.7 2004/07/15 04:00:47 dmcmahill Exp $
+$NetBSD: patch-an,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
 
---- examples/interface-multi-so/Makefile.orig	Mon Jul  8 10:06:24 2002
+--- examples/interface-multi-so/Makefile.orig	2005-07-13 08:48:42.000000000 +0000
 +++ examples/interface-multi-so/Makefile
-@@ -20,7 +20,7 @@ tests	: all
+@@ -22,7 +22,7 @@ tests	: all
  clean	::
  	@echo Cleaning 
  	@$(RM) -f -r *.o *.lo *.la *.so *.dll *.sl *.a *.dia so_locations
