@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.660 2007/03/20 13:32:10 tron Exp $
+# $NetBSD: Makefile,v 1.661 2007/03/23 06:26:18 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -403,6 +403,7 @@ SUBDIR+=	scli
 SUBDIR+=	sdig
 SUBDIR+=	sdist
 SUBDIR+=	sendfile
+SUBDIR+=	ser
 SUBDIR+=	sharity-light
 SUBDIR+=	sipcalc
 SUBDIR+=	sipsak
