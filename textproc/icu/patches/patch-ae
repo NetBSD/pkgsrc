@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2006/01/03 00:04:42 wiz Exp $
+$NetBSD: patch-ae,v 1.8 2007/03/23 12:51:13 recht Exp $
 
---- common/unicode/umachine.h.orig	2005-06-25 01:24:54.000000000 +0200
+--- common/unicode/umachine.h.orig	2006-02-07 02:54:16.000000000 +0100
 +++ common/unicode/umachine.h
 @@ -43,7 +43,7 @@
  
