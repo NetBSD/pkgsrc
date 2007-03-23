@@ -1,0 +1,89 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/23 06:24:49 wiz Exp $
+
+--- Makefile.defs.orig	2004-07-27 11:38:33.000000000 +0000
++++ Makefile.defs
+@@ -77,7 +77,7 @@ prefix = $(PREFIX)
+ BASEDIR ?=
+ basedir = $(BASEDIR)
+ # install prefixes for various stuff
+-cfg-prefix = $(basedir)$(prefix)
++cfg-prefix = $(basedir)$(prefix)/share/examples
+ bin-prefix = $(basedir)$(prefix)
+ modules-prefix = $(basedir)$(prefix)
+ doc-prefix = $(basedir)$(prefix)
+@@ -85,7 +85,8 @@ man-prefix = $(basedir)$(prefix)
+ ut-prefix = $(basedir)$(prefix)
+ 
+ # dirs
+-cfg-dir = etc/ser/
++cfg-dir = ser/
++eg-dir  = $(EGDIR)/
+ bin-dir = sbin/
+ modules-dir = lib/ser/modules/
+ ifeq ($(OS), linux)
+@@ -104,6 +105,10 @@ ifeq ($(OS), netbsd)
+ 	doc-dir = share/doc/ser
+ 	man-dir = man/
+ else
++ifeq ($(OS), dragonfly)
++	doc-dir = share/doc/ser
++	man-dir = man/
++else
+ ifeq ($(OS), darwin)
+ 	doc-dir = share/doc/ser/
+ 	man-dir = man/
+@@ -115,9 +120,10 @@ endif
+ endif
+ endif
+ endif
++endif
+ ut-prefix = bin/
+ # target dirs for various stuff
+-cfg-target = $(prefix)/$(cfg-dir)
++cfg-target = $(PKG_SYSCONFDIR)/
+ modules-target = $(prefix)/$(modules-dir)
+ 
+ 
+@@ -133,10 +139,10 @@ endif
+ INSTALL-TOUCH = touch          # used to create the file first (good to 
+                                #  make solaris install work)
+ # INSTALL-CFG = $(INSTALL) -m 644
+-INSTALL-BIN = $(INSTALL) -m 755
+-INSTALL-MODULES = $(INSTALL) -m 755
+-INSTALL-DOC = $(INSTALL) -m 644
+-INSTALL-MAN = $(INSTALL) -m 644
++INSTALL-BIN = $(INSTALL) -c -m 755
++INSTALL-MODULES = $(INSTALL) -c -m 755
++INSTALL-DOC = $(INSTALL) -c -m 644
++INSTALL-MAN = $(INSTALL) -c -m 644
+ 
+ #set some vars from the environment (and not make builtins)
+ CC   := $(shell echo "$${CC}")
+@@ -639,6 +645,7 @@ ifeq	($(CC_NAME), suncc)
+ endif
+ 
+ endif #mode=release
++LDFLAGS+= -L${BUILDLINK_PREFIX.pthread}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.pthread}/lib
+ 
+ 
+ #*FLAGS used for compiling the modules
+@@ -743,6 +750,19 @@ ifeq ($(OS), netbsd)
+ 	LIBS= -lfl 
+ endif
+ 
++ifeq ($(OS), dragonfly)
++	DEFS+=-DHAVE_SOCKADDR_SA_LEN -DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN \
++		-DHAVE_SCHED_YIELD -DHAVE_MSGHDR_MSG_CONTROL
++	ifneq ($(found_lock_method), yes)
++		DEFS+= -DUSE_PTHREAD_MUTEX  # try pthread sems
++		found_lock_method=yes
++		LIBS= -pthread -lfl  #dlopen is in libc
++	else
++		LIBS= -lfl  #dlopen is in libc
++	endif
++	YACC=yacc
++endif
++
+ # OS X support, same as freebsd
+ ifeq ($(OS), darwin)
+ 	DEFS+=-DHAVE_SOCKADDR_SA_LEN -DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN \
