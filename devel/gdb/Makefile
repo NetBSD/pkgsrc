@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:21 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/03/23 15:18:23 joerg Exp $
 #
 
 DISTNAME=	gdb-5.3
@@ -18,7 +18,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
