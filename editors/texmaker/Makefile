@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2007/01/02 11:27:42 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/23 15:07:21 ghen Exp $
 
-DISTNAME=	texmaker-1.4
+DISTNAME=	texmaker-1.5
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
