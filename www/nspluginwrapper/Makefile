@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 22:33:45 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/23 08:24:37 hira Exp $
 #
 
 DISTNAME=       nspluginwrapper-0.9.91.3
@@ -13,7 +13,7 @@ COMMENT=        Use Netscape compatible plugins from other platforms
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ARGS+= --prefix=${PREFIX} --x11=${X11BASE}
 
 RPMFILE=	${DISTNAME:S:-:-i386-:}-1.x86_64.rpm
