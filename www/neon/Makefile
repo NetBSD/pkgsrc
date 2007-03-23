@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2007/03/16 00:29:51 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/03/23 23:52:17 joerg Exp $
 
 DISTNAME=	neon-0.26.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webdav.org/neon/
 
@@ -23,6 +24,7 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
