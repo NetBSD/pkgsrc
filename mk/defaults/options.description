@@ -234,6 +234,7 @@ ncursesw		Enable wide character ncurses support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
+nspluginwrapper		Enable running non native netscape compatible plugins
 ogg			Enable Ogg support.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
