@@ -8,4 +8,4 @@ It implements all the basic features of an HTTP server, including:
   *  index.html.
   *  Directory listings.
 
-All in 150 lines of code.
+All in about 200 lines of code.
