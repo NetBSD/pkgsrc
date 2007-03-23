@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.691 2007/03/23 02:44:39 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.692 2007/03/23 06:27:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added multimedia/libflashsupport version 1.0.2098 [abs 2007-03-22]
 	Added www/nspluginwrapper version 0.9.91.3 [abs 2007-03-22]
 	Updated mail/wl to 2.14.0nb5 [jnemeth 2007-03-22]
+	Moved chat/ser to net/ser [wiz 2007-03-23]
