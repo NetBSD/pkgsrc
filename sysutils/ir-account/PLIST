@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/03 16:44:42 gdt Exp $
-bin/delete-account
-bin/extract-account
-bin/install-account
-bin/sudo-add
-share/doc/ir-account/README
-@dirrm share/doc/ir-account

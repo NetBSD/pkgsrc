@@ -1,9 +1,0 @@
-This is an all-new, modern Gopher server.  It can serve documents
-with Gopher+, standard Gopher (RFC1436), and HTTP -- all on the same
-port.  Pygopherd features a modular extension system as well as
-loadable scripts and much more.  It contains full support for
-UMN gopherd systems -- including .Links, .names, .cap, searches, etc.
-Pygopherd also supports Bucktooth features such as gophermap files
-and executables.  In addition to all this, there are Pygopherd's own
-extra features.  All features are fully customizable and can be enabled
-or disabled by editing /etc/pygopherd/pygopherd.conf.

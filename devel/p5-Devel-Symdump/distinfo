@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/10/21 07:54:47 obache Exp $
-
-SHA1 (Devel-Symdump-2.0604.tar.gz) = ba90b74e035bd2f755f69b7b6c96ddcbee71b0d3
-RMD160 (Devel-Symdump-2.0604.tar.gz) = 5cb10812e1e4410f234c05694dd6e643aff7c451
-Size (Devel-Symdump-2.0604.tar.gz) = 14900 bytes

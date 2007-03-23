@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/07/07 19:01:43 drochner Exp $
-
-SHA1 (ijs-0.35.tar.gz) = 201df12d476dfc2da0ae1fe7710eede9d305be04
-RMD160 (ijs-0.35.tar.gz) = 1949b34d68b6af8c5db823f7265c603b1cada2e0
-Size (ijs-0.35.tar.gz) = 344262 bytes
-SHA1 (patch-aa) = 608e7c51ab684cc3356c58784c098a5f203c4b94

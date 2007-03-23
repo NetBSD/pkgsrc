@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/06/14 20:14:21 adam Exp $
-bin/qalculate-bases
-share/applications/qalculate-bases.desktop
-share/locale/nl/LC_MESSAGES/qalculate-bases.mo
-share/locale/sv/LC_MESSAGES/qalculate-bases.mo

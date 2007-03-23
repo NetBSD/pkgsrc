@@ -1,5 +1,0 @@
-Image viewer based on SDL that can read and display a wide variety
-of formats.
-Features include both fullscreen and windowed mode, rescaling images to fill
-the screen, ability to navigate the images, slideshow, full functionality
-both in X and in console, and the ability to load images from web servers.

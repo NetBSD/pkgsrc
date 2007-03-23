@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 18:49:20 agc Exp $
-
-SHA1 (simhv33-0.zip) = 99a021afe2fd8dfb32bb479e383347e2b883e0f9
-RMD160 (simhv33-0.zip) = 778cc7836b4558b57f1b9ca54427f3d2e8da94a4
-Size (simhv33-0.zip) = 2153444 bytes
-SHA1 (patch-aa) = a1c1e10f81b5883c5388084d1b9f31d3560353fe
-SHA1 (patch-ab) = aff84028d4184b773b2bd4ebf2ee166357f18924
-SHA1 (patch-ac) = 0f1ddee6f69c0337c8ea02cf24ed6fdecc0ca1f4

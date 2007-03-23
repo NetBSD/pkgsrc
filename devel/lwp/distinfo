@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2005/09/22 12:05:39 rillig Exp $
-
-SHA1 (lwp-2.0.tar.gz) = 4188f5df42a9f879f67c9294ebf9bf59056a0e25
-RMD160 (lwp-2.0.tar.gz) = cf42e3324ed94fe67ae817281763eb1f2f475935
-Size (lwp-2.0.tar.gz) = 362141 bytes
-SHA1 (patch-aa) = 02ff9a57c996c67b722987d4dde3899056341df5

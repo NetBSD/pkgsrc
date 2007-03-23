@@ -1,7 +1,0 @@
-Interface between GRASS 5.0 geographical information system
-and R, based on starting R from within the GRASS environment
-using values of environment variables set in the GISRC file.
-Interface examples should be run outside GRASS, others may
-be run within. Wrapper and helper functions are provided for
-a range of R functions to match the interface metadata
-structures.

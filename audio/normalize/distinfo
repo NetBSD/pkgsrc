@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/04/21 09:28:47 adam Exp $
-
-SHA1 (normalize-0.7.7.tar.bz2) = 1d84a9e1cd50b24ebb99428452604dd1fb78be9d
-RMD160 (normalize-0.7.7.tar.bz2) = cfb47808816da4196b7d87033921716bf13f212d
-Size (normalize-0.7.7.tar.bz2) = 388777 bytes
-SHA1 (patch-aa) = 1a19b511ac51b7b052507c795af3273ca688c7b8

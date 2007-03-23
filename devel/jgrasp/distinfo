@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/05/15 19:41:45 joerg Exp $
-
-SHA1 (jgrasp170.zip) = b0826739e1d57ef02137d591b67f4b60b02e1840
-RMD160 (jgrasp170.zip) = e90b47481b0b3c532bd55a8f237777c90fac8305
-Size (jgrasp170.zip) = 2337074 bytes
-SHA1 (patch-aa) = 4c4c869437955dab6de947b7555f13cd3db3c2cc

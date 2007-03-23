@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/19 21:00:18 christos Exp $
-sbin/hddtemp
-man/man8/hddtemp.8
-share/misc/hddtemp.db
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/hddtemp.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/hddtemp.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/hddtemp.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/hddtemp.mo

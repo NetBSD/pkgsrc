@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/08/30 20:47:02 minskim Exp $
-
-SHA1 (abcm2ps-4.12.25.tar.gz) = 454074aa8f54e9a68eb93cb9b1ff15443022114b
-RMD160 (abcm2ps-4.12.25.tar.gz) = 3a27cfb539a94ae07840f74cb7bd3ad386c3be63
-Size (abcm2ps-4.12.25.tar.gz) = 214245 bytes
-SHA1 (patch-aa) = 01d44b33f560834148fa39d0982873bb6d2f695f

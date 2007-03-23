@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/02/19 00:00:22 wiz Exp $
-
-SHA1 (autorespond-2.0.5.tar.gz) = 9bdd160e93e886932b7679e915d72dca90d8de6a
-RMD160 (autorespond-2.0.5.tar.gz) = c86f56d02ac1f609605a4349a59b4293eff2ca15
-Size (autorespond-2.0.5.tar.gz) = 9707 bytes
-SHA1 (patch-aa) = 66fe261b019a44f1a0521a54765a1636860810e6

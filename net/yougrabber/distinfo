@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/29 17:04:57 joerg Exp $
-
-SHA1 (YouGrabber-0.20.tar.gz) = 7f6d27553ef4e6cf59bbae800f2f58ab19bfde7e
-RMD160 (YouGrabber-0.20.tar.gz) = 1b7dea00208e16a264161b4c8bf8b50025507936
-Size (YouGrabber-0.20.tar.gz) = 14309 bytes
-SHA1 (patch-aa) = 7b62a42bce77ea5b1a0473e6df5002edef45d102

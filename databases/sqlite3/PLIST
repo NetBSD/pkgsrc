@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/11 19:08:48 drochner Exp $
-bin/sqlite3
-include/sqlite3.h
-include/sqlite3ext.h
-lib/libsqlite3.la
-lib/pkgconfig/sqlite3.pc
-man/man1/sqlite3.1

@@ -1,5 +1,0 @@
-GNU tar, is a full-featured tar command that can access remote
-and local magnetic tapes, tar files (ustar, POSIX, and V7), and
-even compressed or gzipped versions of these.
-
-This package provides info pages for the GNU tape archiver.

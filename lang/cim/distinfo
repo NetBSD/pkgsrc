@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/04/04 16:53:59 jlam Exp $
-
-SHA1 (cim-3.30.tar.gz) = 8636ac8d1eaee793769051af60140af80b82b22f
-RMD160 (cim-3.30.tar.gz) = d5c07046799dec8840c7c7d9f5c88e552a4c6432
-Size (cim-3.30.tar.gz) = 416809 bytes
-SHA1 (patch-aa) = 6e20870f7bf0c2befdc0a73d00827606958e2931
-SHA1 (patch-ab) = e5d14212cbc4fbf956ade6c8b68f1dcc92a0841a

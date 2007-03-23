@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 04:02:54 jlam Exp $
-
-SHA1 (webmin-modules-1.270/ipfilter.wbm.gz) = e27404097e32d33ba6288f19e60aea829c62f175
-RMD160 (webmin-modules-1.270/ipfilter.wbm.gz) = d6d0ecc74eaea5e4580b98125d25b9d3af5680ec
-Size (webmin-modules-1.270/ipfilter.wbm.gz) = 34633 bytes
-SHA1 (patch-aa) = 7fd8f42669f1937025a51e7c2698d16f11af5963
-SHA1 (patch-ab) = b8a6e1d5f1b4efbebc483dafb528711f19fddc1c

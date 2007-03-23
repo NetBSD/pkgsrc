@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/14 21:26:47 markd Exp $
-
-SHA1 (showimg-0.9.5.tar.bz2) = 59d3a1f1a22761e0576d98e6cc6f430cc3822643
-RMD160 (showimg-0.9.5.tar.bz2) = 150dc74f400b72a22f6a117aa3acd8201a059a39
-Size (showimg-0.9.5.tar.bz2) = 4117897 bytes
-SHA1 (patch-aa) = 8d12f174ef4e1d75b877cafa14a982b8f3126cb0

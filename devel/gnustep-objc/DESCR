@@ -1,6 +1,0 @@
-  This is the GCC/GNUstep objective C runtime.
-
-  The runtime is modeled after the NeXT Objective C runtime.  That is, most
-functions have semantics as it is known from the NeXT.  The names, however,
-have changed.  All runtime API functions have names of lowercase letters
-and underscores as opposed to the `traditional' mixed case names.

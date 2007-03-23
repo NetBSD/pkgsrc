@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:24:02 agc Exp $
-
-SHA1 (gmencoder-0.1.0.tgz) = c262f402b004e2d13fec8f2e81eaf5309f268d83
-RMD160 (gmencoder-0.1.0.tgz) = 2621bbcdb8180a940f29a1501acb65e170c2520a
-Size (gmencoder-0.1.0.tgz) = 120557 bytes
-SHA1 (patch-aa) = 989772ed57ae44eb19f7d8f64a0ee20de5355de4
-SHA1 (patch-ab) = bbb32ad10269338ca727e951e11c7a4fdb00ce5d
-SHA1 (patch-ac) = b36a57a29360042a2ff266d3d6fea8372747c707

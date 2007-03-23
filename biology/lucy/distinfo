@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/13 15:24:09 joerg Exp $
-
-SHA1 (lucy-1.18p.tar.gz) = 93ff9002f7eb69815497633007952ede9ca63e66
-RMD160 (lucy-1.18p.tar.gz) = db6f8dd8d3fdab81bfcc7f1a4f558fd908c6d309
-Size (lucy-1.18p.tar.gz) = 1456857 bytes
-SHA1 (patch-aa) = 2e37aaf7cad62d0183f8555b4f2bd8824b10468b
-SHA1 (patch-ab) = 638e512be7fc526cbd37950f9156ccab46b9f228

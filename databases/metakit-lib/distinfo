@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/03/02 19:19:43 drochner Exp $
-
-SHA1 (metakit-2.4.9.5.tar.gz) = 26f693c857ef530988a927bd3c964a4e9e60ce9b
-RMD160 (metakit-2.4.9.5.tar.gz) = 330cd3e096b7492bd6eda1b1682277dfe06311f0
-Size (metakit-2.4.9.5.tar.gz) = 877426 bytes
-SHA1 (patch-ab) = 920485d14cfac6f10d1cb52332c54b1800d22d97

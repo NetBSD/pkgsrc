@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/26 14:27:22 drochner Exp $
-bin/s10sh
-share/doc/s10sh/README
-@dirrm share/doc/s10sh

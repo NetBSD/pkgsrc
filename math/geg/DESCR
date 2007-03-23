@@ -1,7 +1,0 @@
-Geg is capable of drawing 2-dimensional mathematical functions
-within a nice user interface. e.g., f(x) = 3 + sin(x/2). geg
-allows you to view multiple functions simultaneously, with each
-function drawn in a different color. Functions can be selectively
-erased and are easily identifiable by colour matching. The
-viewport can be zoomed in and out, and can xoom in on selected
-regions. geg is easy to use, good looking, compact and customisable.

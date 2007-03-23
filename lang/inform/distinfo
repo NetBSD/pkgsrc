@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/07/27 06:50:36 wiz Exp $
-
-SHA1 (inform-6.31.1.tar.gz) = 0c6c43536236ea09de689291fb90c1203f342de2
-RMD160 (inform-6.31.1.tar.gz) = e3dc7f8c5d6b41dec42f7c8c0f4a59a5ff448f16
-Size (inform-6.31.1.tar.gz) = 1947301 bytes
-SHA1 (patch-aa) = 2f43e50548c7b2c566593d1fb79d173e189dcfcc

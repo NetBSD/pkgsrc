@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:35 agc Exp $
-
-SHA1 (tpasm1.0r.tgz) = 16b88a548681de2dd8409630a079bdefa84957c4
-RMD160 (tpasm1.0r.tgz) = 19d7400bae54551cedd2d963d09b9cc7dbbc3af6
-Size (tpasm1.0r.tgz) = 137634 bytes
-SHA1 (patch-aa) = 9898d05cab53475622e8350617d2fea1b77e56c4

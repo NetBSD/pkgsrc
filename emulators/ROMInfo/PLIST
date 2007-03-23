@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/26 00:01:18 wiz Exp $
-bin/rominfo
-share/doc/ROMInfo/readme.txt
-@dirrm share/doc/ROMInfo

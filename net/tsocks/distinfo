@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/09/17 11:50:15 jmmv Exp $
-
-SHA1 (tsocks-1.8beta5.tar.gz) = 489f88c5df999ba21b27cdaa7836d9426d062aec
-RMD160 (tsocks-1.8beta5.tar.gz) = 12e3eeeafaf7f3be21dd8901da38d5890659b09e
-Size (tsocks-1.8beta5.tar.gz) = 83928 bytes
-SHA1 (patch-aa) = 46fd0a518e3c9e21c874de1135c5ac427eff539d
-SHA1 (patch-ab) = 01f621f9b59d87b5305ea8b451b1bf1aab590700
-SHA1 (patch-ac) = 2c913fde3564efdb40ed3b946218d3b4f64d584a
-SHA1 (patch-ad) = 1df65aaa8c87f65c58348015361de786aa3073f1

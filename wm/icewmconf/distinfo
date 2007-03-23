@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:43:54 wiz Exp $
-
-SHA1 (icewmconf-2.1.0.tar.gz) = b019c41c73fcad8f2388c016bca2b44fa4d56344
-RMD160 (icewmconf-2.1.0.tar.gz) = e3fddde3bf163bceeae5d9a4bfe928c12e366450
-Size (icewmconf-2.1.0.tar.gz) = 4166 bytes
-SHA1 (patch-aa) = bf1f379778f8cca911e7847c35aae3318850d32a

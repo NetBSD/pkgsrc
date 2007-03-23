@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/10/16 10:48:35 obache Exp $
-
-SHA1 (libmatchbox-1.9.tar.gz) = 9a14f77c7bf0c7ea7177929bbf306bdad7f4a6fe
-RMD160 (libmatchbox-1.9.tar.gz) = 4620db3da81a6acd69694cd6cec8393ec8d91a05
-Size (libmatchbox-1.9.tar.gz) = 418576 bytes

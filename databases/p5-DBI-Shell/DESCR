@@ -1,4 +1,0 @@
-The DBI Shell, or dbish, is a command-line tool that allows you to run
-arbitrary SQL statements and diagnostics against databases without
-needing to write a complete Perl program.
-				-- Programming the Perl DBI, chapter 8

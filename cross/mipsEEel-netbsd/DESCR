@@ -1,5 +1,0 @@
-This is a cross compiler for mipsEEel, R5900 Emotion Engine,
-which is the CPU of PlayStation2.
-
-The cross compiler was tested only for compiling the NetBSD
-kernel.

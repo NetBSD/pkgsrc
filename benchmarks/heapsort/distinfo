@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (heapsort.c) = 78d6ee3715a6250213b948bf7450b53520811e4c
-RMD160 (heapsort.c) = 7ff7fb39b0f774ba2feab1e8e1a9afd6bfaff6c4
-Size (heapsort.c) = 17563 bytes

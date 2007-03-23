@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 14:59:25 agc Exp $
-
-SHA1 (mpac-0.2.2.tar.gz) = fda07774e9ffb2ef6269df1a0655f3298ecdf11a
-RMD160 (mpac-0.2.2.tar.gz) = 5e67c1f8d5fde6b1496b484d3732fb95cd5511dc
-Size (mpac-0.2.2.tar.gz) = 29911 bytes
-SHA1 (patch-aa) = f77fdebb18070cfa852fabeff9091d175fd2f30c

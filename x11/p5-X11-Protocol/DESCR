@@ -1,4 +1,0 @@
-X11::Protocol and the related modules in this distribution are a rough
-equivalent of Xlib (libX11.a, with a bit of Xau and Xext mixed in)
-used for drawing windows on and otherwise manipulating X11 window
-servers.

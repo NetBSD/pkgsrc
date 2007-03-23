@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/05 15:34:59 taca Exp $
-bin/capecho
-bin/hexecho
-bin/smbfnconv
-share/doc/smbchartool/README
-share/doc/smbchartool/dot.profile
-@dirrm share/doc/smbchartool

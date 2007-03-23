@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.opt,v 1.1.1.1 2006/08/11 15:42:30 wiz Exp $
-lib/ocaml/site-lib/equeue/equeue.a
-lib/ocaml/site-lib/equeue/equeue.cmxa
-lib/ocaml/site-lib/equeue/unixqueue_mt.cmx
-lib/ocaml/site-lib/equeue/unixqueue_mt.o
-lib/ocaml/site-lib/shell/shell.a
-lib/ocaml/site-lib/shell/shell.cmxa

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/20 19:00:48 wiz Exp $
-bin/edb-config
-bin/edb_ed
-bin/edb_gtk_ed
-bin/edb_vt_ed
-include/Edb.h
-lib/libedb.la
-lib/pkgconfig/edb.pc

@@ -1,8 +1,0 @@
-Mike's Arbitrary Precision Math Library is a set of functions that
-allow the user to perform math to any level of accuracy that is
-desired.
-This library
-will perform the following functions to any desired precision level :
-SQRT, CBRT, SIN, COS, TAN, ARC-SIN, ARC-COS, ARC-TAN, ARC-TAN2, LOG,
-LOG10, EXP, POW, SINH, COSH, TANH, ARC-SINH, ARC-COSH, ARC-TANH, and
-also FACTORIAL.

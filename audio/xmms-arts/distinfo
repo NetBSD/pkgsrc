@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:54 agc Exp $
-
-SHA1 (arts_output-0.7.1.tar.gz) = 026b7b0be459cfff75557c04e54425c4d21dacaf
-RMD160 (arts_output-0.7.1.tar.gz) = 3784f2ef5f99c61123477ce03ee6bcb1ffdf3214
-Size (arts_output-0.7.1.tar.gz) = 236839 bytes
-SHA1 (patch-ab) = b5205b675f9db35d1035a68d4e01f9473322c39d

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/07 20:21:37 bouyer Exp $
-
-SHA1 (oscilloscope-0.1.2.tar.gz) = 3ab26a7cb7568a25ac4cd22bf925e0f2bb0affbf
-RMD160 (oscilloscope-0.1.2.tar.gz) = a96e429975a566ac4979d9c11596c321456181e2
-Size (oscilloscope-0.1.2.tar.gz) = 623813 bytes

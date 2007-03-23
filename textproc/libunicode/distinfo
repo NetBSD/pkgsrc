@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:48:44 agc Exp $
-
-SHA1 (libunicode-0.4.tar.gz) = fbe0ac01ba9baf007908ef54673876c6f5941093
-RMD160 (libunicode-0.4.tar.gz) = 73b7a9c6ebda87c6bd0b133f98d88fb896235401
-Size (libunicode-0.4.tar.gz) = 215629 bytes
-SHA1 (patch-aa) = 29df09e0206e66ba9fb585db12887c0ff818dea1
-SHA1 (patch-ab) = 9c32b9a47a8c851cc4a874d5328bc4feb353f2d7

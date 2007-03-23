@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/12 11:46:21 jmmv Exp $
-share/pciids/pci.ids
-share/pciids/pci.db
-@dirrm share/pciids

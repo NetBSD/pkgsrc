@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:16 wiz Exp $
-
-Please set the following variable in your shell environment, which
-is required by the xgui application to find its configuration file:
-
-	XGUILOADPATH to ${LOCALBASE}/share/snns
-
-===========================================================================

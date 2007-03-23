@@ -1,2 +1,0 @@
-Sshsh checks for an existing ssh-agent connection.  It runs one
-if necessary, and tries to add your default identity to it.

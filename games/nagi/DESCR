@@ -1,8 +1,0 @@
-NAGI (New Adventure Game Interpreter) is a clone of Sierra's own
-AGI which they created and used through the 80's to produce a whole
-bunch of great adventure games like Space Quest, Leisure Suit Larry
-and Kings Quest. NAGI was created by disassembling the original AGI
-executable and writing equivalent C code that would run under
-SDL which is a free generic library for low-level access
-to graphics and audio. It can read both v2 and v3 game data for the
-PC.

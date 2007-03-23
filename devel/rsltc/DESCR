@@ -1,3 +1,0 @@
-rsltc provides type-checking, pretty-printing, generation of confidence
-conditions, showing module dependencies, translation to Standard ML, to
-C++, and to PVS, and translation to RSL from UML class diagrams.

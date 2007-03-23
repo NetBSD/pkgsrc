@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/03 05:17:48 minskim Exp $
-${RUBY_SITEARCHLIBDIR}/priority_queue/CPriorityQueue.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/priority_queue.rb
-${RUBY_SITELIBDIR}/priority_queue/c_priority_queue.rb
-${RUBY_SITELIBDIR}/priority_queue/poor_priority_queue.rb
-${RUBY_SITELIBDIR}/priority_queue/ruby_priority_queue.rb
-@dirrm ${RUBY_SITELIBDIR}/priority_queue
-@dirrm ${RUBY_SITEARCHLIBDIR}/priority_queue

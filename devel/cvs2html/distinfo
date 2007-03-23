@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:11 agc Exp $
-
-SHA1 (cvs2html-1.82.tar.gz) = 3a50a644dc64206ece9f7f3bf31f8625c28dc164
-RMD160 (cvs2html-1.82.tar.gz) = dd3d68cea80430790dace321a214643b9730d652
-Size (cvs2html-1.82.tar.gz) = 14588 bytes

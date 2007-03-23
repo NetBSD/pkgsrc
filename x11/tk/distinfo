@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.29 2006/11/02 17:42:03 adam Exp $
-
-SHA1 (tk8.4.14-src.tar.gz) = d3a8d1240fe37408a3d39613cb1d845764b7a5b1
-RMD160 (tk8.4.14-src.tar.gz) = 055ea75b91fe0e33ac9d96bd3b9099622008820e
-Size (tk8.4.14-src.tar.gz) = 3268223 bytes
-SHA1 (patch-aa) = 8425d47efc6feab4a19a79b7d857b9da8042aedf
-SHA1 (patch-ab) = 034f05b45dd9ec824c59fbd9182c8a0476d52523
-SHA1 (patch-ac) = 814e990db42a3a4b8dfb86c91d7c00e970372e48
-SHA1 (patch-ad) = a5881628ec98095e5d95429a6de324a681a14535

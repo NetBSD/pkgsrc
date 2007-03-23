@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/04/17 03:04:03 snj Exp $
-
-To use QuakeForge, you must have a set of data files.  One possible source
-is pkgsrc/games/quakedata/.  Once you have obtained a set of data files,
-place the id1 directory in ~/.quakeforge/.
-
-===========================================================================

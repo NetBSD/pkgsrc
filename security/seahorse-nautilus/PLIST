@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/14 15:02:38 drochner Exp $
-lib/nautilus/extensions-1.0/libnautilus-seahorse.la
-@comment in nautilus: @dirrm lib/nautilus/extensions-1.0

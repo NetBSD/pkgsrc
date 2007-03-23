@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/02/12 02:26:08 heinz Exp $
-
-SHA1 (Crypt-DES-2.05.tar.gz) = 4fce77a1f776ede8e7251af1af42f505f0e31515
-RMD160 (Crypt-DES-2.05.tar.gz) = 26fb3c923f236f6d42236cf9c40209767bbf0a35
-Size (Crypt-DES-2.05.tar.gz) = 15369 bytes

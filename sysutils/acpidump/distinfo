@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:50 agc Exp $
-
-SHA1 (pacpidump.tar.gz) = 55cea53b1824f9df3b43c08c749bf584b567cd69
-RMD160 (pacpidump.tar.gz) = bd68bcea754e677c032d40a3f8e0c2fdbfacf476
-Size (pacpidump.tar.gz) = 45281 bytes
-SHA1 (patch-aa) = 79450add2824f292f6c8bd08a3ee55aaa2d363c5
-SHA1 (patch-ab) = a283ba41370a24c452581a78dbc16d6ee7eb30cb
-SHA1 (patch-ac) = f9deae2aa1939aa951cca51e678fd459038bf2d6

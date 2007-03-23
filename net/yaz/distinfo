@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/08/24 14:22:30 jwise Exp $
-
-SHA1 (yaz-2.1.6.tar.gz) = 491e6a2198f6c55ecb31c416fc03c3bc638ed084
-RMD160 (yaz-2.1.6.tar.gz) = dfd22bc45c5e887938daf77ccc2f23ea3c1c5ea0
-Size (yaz-2.1.6.tar.gz) = 1797967 bytes

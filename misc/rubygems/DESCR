@@ -1,8 +1,0 @@
-RubyGems is a way to package Ruby libraries/applications for
-distribution, its a distribution manager, its a package manager.
-RubyGems brings to the world of Ruby a very valuable capability--the
-ability to manage concurrent versions of libraries and dependencies
-between those libraries.  This last aspect of RubyGems is one of the
-most important to the end user, because its value is continuous as you
-use and program Ruby, but to understand its impact an explanation of
-how Ruby manages libraries is in order.

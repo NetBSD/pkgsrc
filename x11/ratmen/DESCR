@@ -1,5 +1,0 @@
-Ratmen is a simple program that allows you to create X menus from the
-shell, where each menu item will run a command.  It is intended for
-use with 9wm, but can be used with any other window manager.
-
-Basically this program does what ratmenu does, only better.

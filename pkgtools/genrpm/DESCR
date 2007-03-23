@@ -1,8 +1,0 @@
-This package installs a script called genrpm, which is used to
-generate a Redhat Package Manager (RPM) package from an installed
-pkgsrc package.  It does this by generating a spec file, and using
-that to identify the components of the RPM and package them.
-
-If a pkgsrc tree is present on the system, a source RPM (or srpm)
-can also be generated. This will include the distfile, any pkgsrc
-patches, and the files used to accomplish the pkgsrc packaging.

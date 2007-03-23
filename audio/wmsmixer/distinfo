@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/12/11 20:51:07 joerg Exp $
-
-SHA1 (wmsmixer-0.5.1.tar.gz) = 32473bf99b7c0dfa4a2b7d0d850288354aebde58
-RMD160 (wmsmixer-0.5.1.tar.gz) = 2f8ab0bf8571b9ea1e111f5e22c3df8ea017dec7
-Size (wmsmixer-0.5.1.tar.gz) = 33350 bytes
-SHA1 (patch-aa) = 0db2abe3d917778545e420fe61e4cefce03ce0c6
-SHA1 (patch-ab) = 78ede51033648a4a79d884ebb3d5c6b0b5e9ba86

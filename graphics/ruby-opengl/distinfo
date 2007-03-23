@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/01/03 14:25:50 taca Exp $
-
-SHA1 (rbogl-0.32g.tar.gz) = 684dfaeda9c2c5c8ee99b6950d0e5d832bea4536
-RMD160 (rbogl-0.32g.tar.gz) = 2c0817d8dcd54dba6414cb3977397f908f4f5f5c
-Size (rbogl-0.32g.tar.gz) = 153727 bytes
-SHA1 (patch-aa) = a1239bd409f4a39075330ab91b4f1e5d3a3e3e7a
-SHA1 (patch-ab) = cb0c3964ebd01b048942cafb91d259007f0e1910

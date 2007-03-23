@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/14 15:03:44 drochner Exp $
-lib/gedit-2/plugins/libseahorse-pgp.la
-lib/gedit-2/plugins/seahorse-pgp.gedit-plugin
-share/gconf/schemas/seahorse-gedit.schemas
-@comment in GConf2: @dirrm share/gconf/schemas

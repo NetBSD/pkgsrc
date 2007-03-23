@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/17 14:21:31 jlam Exp $
-${NEED_MKDIR}bin/mkdir-sh
-${NEED_STRIP}bin/strip
-${NEED_FAKELDD}sbin/fakeldd

@@ -1,6 +1,0 @@
-  The The Papaya Utilities are a collection of utilities for software
-development on UNIX (or UNIX like) systems.  All utilities are written
-using script languages (such as sh, sed, or perl).  The The Papaya
-Utilities are part of Steel Wheels Project and is distributed under GNU
-public license.  This package will be required by other Steel Wheels
-Products (such as the coconut library).

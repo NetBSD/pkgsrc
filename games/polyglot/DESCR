@@ -1,7 +1,0 @@
-PolyGlot is a "UCI adapter".  It connects a UCI chess engine to an
-xboard interface such as WinBoard.  UCI2WB is another such adapter (for
-Windows).
-
-PolyGlot tries to solve known problems with other adapters.  For
-instance, it detects and reports draws by fifty-move rule, repetition,
-etc ...

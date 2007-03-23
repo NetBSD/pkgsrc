@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/07 19:54:17 jlam Exp $
-bin/stow
-info/stow.info
-man/man8/stow.8

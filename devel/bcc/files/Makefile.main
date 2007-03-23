@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.main,v 1.1 2006/10/22 06:31:43 rillig Exp $
-
-SUBDIR=		ld as bcc-cc1 bcc
-
-.include <bsd.subdir.mk>

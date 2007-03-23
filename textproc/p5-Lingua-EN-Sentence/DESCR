@@ -1,3 +1,0 @@
-The "Lingua::EN::Sentence" perl module splits text into its
-constituent sentences, based on a regular expression and a list of
-built-in and provided abbreviations.

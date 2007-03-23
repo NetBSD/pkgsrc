@@ -1,7 +1,0 @@
-FreeTDS is a set of libraries that allows programs to natively talk
-to Microsoft SQL Server and Sybase databases.
-
-Technically speaking, FreeTDS is an open source implementation of the
-TDS (Tabular Data Stream) protocol used by these databases for their
-own clients.  It supports many different flavors of the protocol and
-three APIs -- DB-Lib, CT-Lib, and ODBC -- to access it.

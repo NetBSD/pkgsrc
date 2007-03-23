@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.20 2006/09/15 15:06:57 jmmv Exp $
-
-SHA1 (libbonobo-2.16.0.tar.bz2) = 8cafcd9ef92f7b81e7cc1868814add3b6794af0a
-RMD160 (libbonobo-2.16.0.tar.bz2) = 4bbaf4c58e424f786732ac57ca73d1225b195b73
-Size (libbonobo-2.16.0.tar.bz2) = 1406355 bytes
-SHA1 (patch-aa) = 4f7b7a16f7cba64206b5dccb021972a09efe9f55
-SHA1 (patch-ab) = 320fc0a2be131a0ab6b200643fb733f80899a005

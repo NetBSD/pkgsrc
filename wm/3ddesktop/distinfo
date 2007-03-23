@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/07/19 16:27:07 wiz Exp $
-
-SHA1 (3ddesktop-0.2.8.tar.gz) = 36086002e6491ceef22b23305a1134988fa71bc7
-RMD160 (3ddesktop-0.2.8.tar.gz) = d30c523f3e7ab57553088713093bdf33815e93b4
-Size (3ddesktop-0.2.8.tar.gz) = 175233 bytes
-SHA1 (patch-aa) = e97615b41009ad2442f47326b3202cba754550dc
-SHA1 (patch-ab) = 30a04c83a31de31836038910082cfd13a2e3c2f0
-SHA1 (patch-ac) = a9c748cc6ec6d46c5fec62c164c9e006db659fad
-SHA1 (patch-ad) = 3e24c98b58b27e2e7384bb96ece20cb604dd900f

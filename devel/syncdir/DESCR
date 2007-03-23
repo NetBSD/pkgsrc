@@ -1,4 +1,0 @@
-syncdir is a small library that makes the link() system call
-synchronous. This is necessary when using qmail with the queue on
-a filesystem that doesn't perform link() synchronously, such as
-Linux's ext2fs, Reiserfs, SGI's XFS, and BSD FFS with softupdates.

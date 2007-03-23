@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/10 22:06:08 bad Exp $
-
-SHA1 (YAML-Syck-0.72.tar.gz) = 45adca87eb1df60d24fab15863cb6293bc7f5120
-RMD160 (YAML-Syck-0.72.tar.gz) = 5cfce4e2825e71c5d6d90d9e3c7fbd5589f3cace
-Size (YAML-Syck-0.72.tar.gz) = 130078 bytes

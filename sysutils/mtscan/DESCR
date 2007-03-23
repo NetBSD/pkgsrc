@@ -1,4 +1,0 @@
-mtscan was written by Ed Gould, and scans a magtape, reporting the
-record and file-mark structure it finds.
-
-If the tape has data stored after a double-EOF, run with the -F flag.

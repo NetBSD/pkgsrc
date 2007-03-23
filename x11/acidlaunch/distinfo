@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/05/15 21:56:56 joerg Exp $
-
-SHA1 (acidlaunch-0.5.tar.gz) = fe8892709eec6956e4dcbd088b89efa99c6a6e78
-RMD160 (acidlaunch-0.5.tar.gz) = b2dc44262a5f8e4faf1efdce5490f32aa8d3a9fa
-Size (acidlaunch-0.5.tar.gz) = 61076 bytes
-SHA1 (patch-aa) = 4d2d9e9d93cad51a3493308edc3c3402612c900f

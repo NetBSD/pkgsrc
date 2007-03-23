@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/19 16:22:56 joerg Exp $
-
-SHA1 (xgraph-11.3.2-hack.9.tar.gz) = 6e695d2008094e8aca54795c7c73ed239d0d5404
-RMD160 (xgraph-11.3.2-hack.9.tar.gz) = 3d1344b9e97b72886faaedce92b697dbc9503a1b
-Size (xgraph-11.3.2-hack.9.tar.gz) = 101979 bytes
-SHA1 (patch-aa) = cc5f9a2c5d2ca604459f581b41fd3e6cc82633d5
-SHA1 (patch-ab) = c04e437b082e3f06ba3c88f3bb605882ce5ad297

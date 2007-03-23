@@ -1,8 +1,0 @@
-OpenLDAP is an open source implementation of the Lightweight Directory Access
-Protocol.  This package includes:
-
-* slapd - stand-alone LDAP daemon (server)
-* slurpd - stand-alone LDAP update replication daemon
-* libraries implementing the LDAP protocol
-* utilities, tools, and sample clients
-* administration guide

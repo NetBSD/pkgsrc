@@ -1,6 +1,0 @@
-These are the libraries from Rob Mars' HFS Utilities. These libraries
-provide routines for programs to access HFS (Apple Macintosh) partitions,
-including routines to access and manipulate "resource forks".
-
-The HFS Utilities command line tools and GUI themselves may be found
-in the sysutils/hfsutils and sysutils/xhfs packages, respectively.

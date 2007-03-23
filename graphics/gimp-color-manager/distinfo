@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/06/13 22:42:01 kristerw Exp $
-
-SHA1 (gimp-color-manager-0.1.0.tar.gz) = fd269dea52d534ba2d8db32764a43d18135dccf3
-RMD160 (gimp-color-manager-0.1.0.tar.gz) = f5c0a04bea3a54e0aef584d19f2f87adb3690183
-Size (gimp-color-manager-0.1.0.tar.gz) = 244006 bytes
-SHA1 (patch-aa) = ac4d55318ab2010909c7b7d954b89548ea31a7f8
-SHA1 (patch-ab) = 19012d13470493fea3e2a0d90ca75cf5f43e667a

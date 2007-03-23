@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2007/02/02 19:29:12 wiz Exp $
-
-SHA1 (tin-1.8.3.tar.bz2) = 3822e7281d22433862075270b06bfa6b82226b0e
-RMD160 (tin-1.8.3.tar.bz2) = 7e165eccb099cfc8aae073781a5642266321dd3e
-Size (tin-1.8.3.tar.bz2) = 1437604 bytes
-SHA1 (patch-aa) = a3d40ff4e38230bcf8a3814c92ec2a75f85bf44e

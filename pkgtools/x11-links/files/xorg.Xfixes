@@ -1,8 +1,0 @@
-# $NetBSD: xorg.Xfixes,v 1.1 2005/07/25 20:50:25 reed Exp $
-#
-include/X11/extensions/Xfixes.h
-lib/libXfixes.a
-lib/libXfixes.so
-lib/libXfixes.so.3
-lib/libXfixes.so.3.0
-lib/pkgconfig/xfixes.pc

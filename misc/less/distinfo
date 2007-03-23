@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/09/27 11:28:32 taca Exp $
-
-SHA1 (less-382.tar.gz) = 3c3f1ae0bf18039b047524ff0f573ef514bcc944
-RMD160 (less-382.tar.gz) = 2b851c7038d9a4dea4f369ff5705eafc9093de97
-Size (less-382.tar.gz) = 264414 bytes
-SHA1 (patch-aa) = 582fc623590ef23d4e8836d8a65a8df03c57f799
-SHA1 (patch-ab) = 40f45e9501b79525d5fb801d65e004e533fb8c06

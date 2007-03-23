@@ -1,4 +1,0 @@
-PPMd is a file compressor written mainly for embedding in user programs, and
-it is not intended for direct use.  This program is an effort to make speed
-and performance improvements on the abstract PPM model [1-6] without tuning
-it to particular data types.

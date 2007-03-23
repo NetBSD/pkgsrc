@@ -1,2 +1,0 @@
-ir-account provides scripts to copy accounts among systems, and to
-grant/revoke sudo privileges.  It supports FreeBSD and NetBSD.

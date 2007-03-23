@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:52 jlam Exp $
-bin/libmcrypt-config
-include/mcrypt.h
-lib/libmcrypt.la
-man/man3/mcrypt.3
-share/aclocal/libmcrypt.m4

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/11/03 11:54:00 obache Exp $
-
-SHA1 (prefork-1.01.tar.gz) = e3a7622e677f16b0e0fda1309febc08099fff338
-RMD160 (prefork-1.01.tar.gz) = 25dbe84c3b90032d520ff970e32016c3ed5f48ed
-Size (prefork-1.01.tar.gz) = 25439 bytes

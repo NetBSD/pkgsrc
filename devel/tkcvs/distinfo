@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2005/02/23 22:24:34 agc Exp $
-
-SHA1 (tkcvs_7_2_1.tar.gz) = fd5bc8687748e6b62ff84fd08ded7bf09e653101
-RMD160 (tkcvs_7_2_1.tar.gz) = acca6d1fd328f994f063ef2ec4eebd7b3867318e
-Size (tkcvs_7_2_1.tar.gz) = 1083178 bytes
-SHA1 (patch-aa) = 4a033f1416d9500a166e114cc829741df6152cd6

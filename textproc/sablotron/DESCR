@@ -1,7 +1,0 @@
-Sablotron is a fast, compact and portable XML toolkit implementing XSLT,
-DOM and XPath.  Sablotron is an open project whose goal is to create a
-lightweight, reliable and fast XML library processor conforming to the W3C
-specification, which is available for public and can be used as a base
-for multi-platform XML applications.
-
-The original creator of Sablotron is Ginger Alliance Ltd., Czech Republic.

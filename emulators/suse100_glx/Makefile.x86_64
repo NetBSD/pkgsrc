@@ -1,7 +1,0 @@
-# $NetBSD: Makefile.x86_64,v 1.1.1.1 2006/04/18 15:18:39 salo Exp $
-
-# the -devel version is necessary for libGL.so et.al. symlinks only
-RPMFILES=		xorg-x11-Mesa-6.8.2-100.${SUSE_ARCH}.rpm \
-			xorg-x11-Mesa-devel-6.8.2-100.${SUSE_ARCH}.rpm \
-			xorg-x11-Mesa-32bit-6.8.2-100.${SUSE_ARCH}.rpm \
-			xorg-x11-Mesa-devel-32bit-6.8.2-100.${SUSE_ARCH}.rpm

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:14:00 agc Exp $
-
-SHA1 (pear/Net_URL-1.0.14.tgz) = 769e19ded2ef8ea974a0f66f0a254f2056a31379
-RMD160 (pear/Net_URL-1.0.14.tgz) = b6ee57b4184f78bc92c0805747e6ca348dac40db
-Size (pear/Net_URL-1.0.14.tgz) = 5173 bytes

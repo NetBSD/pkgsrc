@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/06 14:26:02 joerg Exp $
-
-SHA1 (amaterus-0.34.1.tar.gz) = e26381d8c9b4c36148a71d28dcacd48f3590afd5
-RMD160 (amaterus-0.34.1.tar.gz) = abbca6c6c89632342e1f3502942dd206d5c9db0d
-Size (amaterus-0.34.1.tar.gz) = 141802 bytes
-SHA1 (patch-aa) = f0cb7145fea376af2293b56ba05f5aa1be06e6e1

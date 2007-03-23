@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 20:58:35 wiz Exp $
-bin/numlockx
-share/doc/numlockx/README
-@dirrm share/doc/numlockx

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/04/30 17:10:18 joerg Exp $
-
-SHA1 (sablevm-1.13.tar.gz) = 153b403ca8a9d3a96c2a48ac0e25a4e5e7f05cfd
-RMD160 (sablevm-1.13.tar.gz) = b7ea39bf5437d4bd986ce0e3a016f2b6e0e7e173
-Size (sablevm-1.13.tar.gz) = 1336864 bytes
-SHA1 (patch-aa) = 72fad6e996ffe023eee63fff6b4f15b3bbc58ff3

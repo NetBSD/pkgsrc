@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/01/22 09:02:30 xtraeme Exp $
-
-To start a standard Quake3 dedicated server, add this in /etc/rc.conf:
-
-	quake3server="YES"
-	quake3server_flags="+set dedicated 1 +set sv_pure 1 &"
-
-===========================================================================

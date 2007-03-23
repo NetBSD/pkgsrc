@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:41:36 jlam Exp $
-
-SHA1 (webmin-modules-1.270/htaccess-htpasswd.wbm.gz) = 6e666a96857c61a52bbc8166242495a24be3b593
-RMD160 (webmin-modules-1.270/htaccess-htpasswd.wbm.gz) = 03bded6747191da2d1b74ada83400e04c28fba6d
-Size (webmin-modules-1.270/htaccess-htpasswd.wbm.gz) = 23204 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/02/14 23:45:47 heinz Exp $
-
-SHA1 (Crypt-RSA-1.57.tar.gz) = 9040bd093451993856deea8523b45033537a7af8
-RMD160 (Crypt-RSA-1.57.tar.gz) = f4188d9b6ab1a93d2a1016731f6cdc898ea1ef95
-Size (Crypt-RSA-1.57.tar.gz) = 34579 bytes

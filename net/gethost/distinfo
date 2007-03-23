@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:46 agc Exp $
-
-SHA1 (gethost-0.03.tar.gz) = af14f462f3019b5d133d7677e015fa0db2db65b9
-RMD160 (gethost-0.03.tar.gz) = 33d15db6bb2846dbea766c78b628408ebd50db08
-Size (gethost-0.03.tar.gz) = 4226 bytes
-SHA1 (patch-aa) = ea90d5d713088c9dc17df328dbc2e59445c9a502

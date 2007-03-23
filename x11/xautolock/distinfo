@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/12/04 01:17:43 joerg Exp $
-
-SHA1 (xautolock-pl15.tgz) = 5bc632141a4cf76fb6453921f34c2f493a1ff08d
-RMD160 (xautolock-pl15.tgz) = 9b6ffc398593bc8bd1de59616fd8e7e7091bd919
-Size (xautolock-pl15.tgz) = 39240 bytes
-SHA1 (patch-aa) = 1cd1346fb50827bed5c8cac3ff65519180f30444
-SHA1 (patch-ab) = 1299556b89466018de5553febe4bed8df8eab09d

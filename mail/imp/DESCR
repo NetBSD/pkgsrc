@@ -1,4 +1,0 @@
-IMP is a set of PHP scripts that implement an IMAP/POP based webmail system.
-Assuming you have an account on a server that supports IMAP/POP, you can use
-an installation of IMP to check your mail from anywhere that you have web
-access.

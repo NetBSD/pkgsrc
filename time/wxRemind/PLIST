@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/24 23:04:09 wiz Exp $
-bin/wxremalert
-bin/wxremdata
-bin/wxremind
-bin/wxremsetup
-${PYSITELIB}/wxRemind-0.6.18-py2.4.egg

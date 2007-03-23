@@ -1,3 +1,0 @@
-This is the standard "ldap-useradmin" Webmin module to manage users
-and groups stored in an LDAP database, used for Unix, Samba and Cyrus
-IMAP authentication.

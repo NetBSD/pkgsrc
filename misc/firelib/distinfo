@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/08 03:24:00 tv Exp $
-
-SHA1 (firelib-1.0.1.tar.gz) = 8505fb114b0be77df65a6dfa0364a27341ddf676
-RMD160 (firelib-1.0.1.tar.gz) = 304ac8e145e836d3a3cd1f44690c7f84cdd7e42a
-Size (firelib-1.0.1.tar.gz) = 73951 bytes
-SHA1 (patch-aa) = 63d3f8e5a78d9aef4f7ec3c05f811bd17ba73a9c
-SHA1 (patch-ab) = e67c47f0a057160c3655159a11c75285c89ceee9

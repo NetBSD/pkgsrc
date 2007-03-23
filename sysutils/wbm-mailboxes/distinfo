@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:41:41 jlam Exp $
-
-SHA1 (webmin-modules-1.270/mailboxes.wbm.gz) = bde67ad88f8f360ca2947b52935752fb5129ac52
-RMD160 (webmin-modules-1.270/mailboxes.wbm.gz) = a2c6872c984909ed4f58f1ab01fa7f7dffc5d755
-Size (webmin-modules-1.270/mailboxes.wbm.gz) = 155874 bytes

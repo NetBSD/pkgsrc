@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/03/11 13:10:42 wiz Exp $
-
-SHA1 (grep-2.4.2.tar.gz) = 83fbd0fcb6ec4b10edf438a28d12608a4f06d588
-RMD160 (grep-2.4.2.tar.gz) = 768399d130cb517889ccfea952e6bc6798dd27cc
-Size (grep-2.4.2.tar.gz) = 460582 bytes
-SHA1 (grep-2.4.2-mlb2.patch.gz) = d2df678e73efd995db2a41cba110e1d0c1ff5104
-RMD160 (grep-2.4.2-mlb2.patch.gz) = d1d59c8e252d4ef5096843f6ea2fed0277237ecb
-Size (grep-2.4.2-mlb2.patch.gz) = 39453 bytes

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:08:32 agc Exp $
-
-SHA1 (gpsutils-0.4.0.tar.gz) = 1440cab5a5e2dce35d8a6da837e6ee84abf4b465
-RMD160 (gpsutils-0.4.0.tar.gz) = 35b183eb743c0ddafa96ffab8db54b57cb62c98d
-Size (gpsutils-0.4.0.tar.gz) = 2013739 bytes
-SHA1 (patch-aa) = ffd2a160c2da57d3649196aeebdfc3dd4a35e305
-SHA1 (patch-ab) = 7c1cf13030a6e4c86ce118de6683b8e799ffff06
-SHA1 (patch-ac) = 4e6fc9ba16c787109c906529fb2bbd7436b7b217

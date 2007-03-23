@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/11/14 12:31:30 obache Exp $
-
-SHA1 (sma-1.4.tar.gz) = ee4acb57ed7cde85e732e689756d900ed398a2ba
-RMD160 (sma-1.4.tar.gz) = ce643df84f054216c3a6de5e6cea57b30b0b8f0a
-Size (sma-1.4.tar.gz) = 121365 bytes
-SHA1 (patch-aa) = c1f7a646e7b0ebe9b22c8bd91e41d80487703040

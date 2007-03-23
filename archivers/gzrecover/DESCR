@@ -1,7 +1,0 @@
-So you thought you had your files backed up onto that jaz cartridge -
-until it came time to restore. Then you found out that you had bad
-sectors and you've lost almost everything because gzip craps out 10%
-of the way through your archive. The gzip Recovery Toolkit has a program
-- gzrecover - that attempts to skip over bad data in a gzip archive and
-to GNU tar that enables that program to skip over bad data and extract
-whatever files might be there.

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Interix,v 1.1 2005/01/25 13:09:03 tv Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so

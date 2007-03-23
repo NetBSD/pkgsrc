@@ -1,4 +1,0 @@
-vcp ('version copy') copies versions of files from one repository to
-another, translating as much metadata as possible along the way.  This
-allows you to copy and translate files and their histories between
-revision storage systems.

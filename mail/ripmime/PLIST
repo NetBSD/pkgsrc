@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/27 07:41:06 reed Exp $
-bin/ripmime
-man/man1/ripmime.1

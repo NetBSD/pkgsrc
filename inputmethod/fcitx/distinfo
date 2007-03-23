@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/16 13:04:07 rxg Exp $
-
-SHA1 (fcitx-3.1.1.tar.bz2) = 3d23a0786edd6ff6e69d353692849d9041442038
-RMD160 (fcitx-3.1.1.tar.bz2) = 229155ec71deb189ffc52851ee9a242ba9192a5b
-Size (fcitx-3.1.1.tar.bz2) = 2920856 bytes
-SHA1 (patch-aa) = 53bc014f925d326ed76dfd79721b5d49b2fa5222
-SHA1 (patch-ab) = 50cacd5cb281638d3b0e2468a339a21475d536f2

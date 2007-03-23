@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/19 18:34:34 ben Exp $
-bin/helpdeco
-bin/splitmrb
-bin/zapres
-share/doc/helpdeco/NEWS
-share/doc/helpdeco/README
-share/doc/helpdeco/README.de
-share/doc/helpdeco/helpfile.txt
-@dirrm share/doc/helpdeco

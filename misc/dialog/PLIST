@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/03/08 18:21:13 wiz Exp $
-bin/dialog
-man/man1/dialog.1
-man/man3/dialog.3

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:41 jschauma Exp $
-bin/xcb
-lib/X11/app-defaults/Xcb
-${IMAKE_MAN_DIR}/xcb.${IMAKE_MANNEWSUFFIX}

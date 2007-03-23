@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/13 18:21:56 wiz Exp $
-
-SHA1 (po4a-0.23.tar.gz) = 749a7823c976befc6a84d443ef7225bd41477b59
-RMD160 (po4a-0.23.tar.gz) = 79174c0ed576ac793495be7addb407d919f3daf9
-Size (po4a-0.23.tar.gz) = 736399 bytes
-SHA1 (patch-aa) = 501a5fc0265d06285c13f3501793ad2a92c95081

@@ -1,4 +1,0 @@
-Treecc is a aspect-oriented programming tool that we wrote to assist in the
-development of DotGNU Portable.NET's compiler, "cscc". It complements flex
-and bison by providing support for abstract syntax tree creation and
-manipulation.

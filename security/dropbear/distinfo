@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2006/03/14 20:03:43 drochner Exp $
-
-SHA1 (dropbear-0.48.1.tar.gz) = 4dd349b5e3c1aa1b627c52a27f17f5eb7e85c146
-RMD160 (dropbear-0.48.1.tar.gz) = 055740e5978f91ca34d318e6a6f8052d182e8d7c
-Size (dropbear-0.48.1.tar.gz) = 1473114 bytes
-SHA1 (patch-aa) = 3246fce39551e97f0b9ecd3397479ea2f3e22abd
-SHA1 (patch-ab) = bca3abf2505852e4a25505e505afcf2cb52aa823
-SHA1 (patch-ac) = 69b1349bb47ad6a6ae02096f1ebde87a1461dd9b

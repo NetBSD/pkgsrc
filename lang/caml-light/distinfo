@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/15 14:33:56 rillig Exp $
-
-SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
-RMD160 (cl74unix.tar.gz) = a00a8de15e042080041076fcf3ad2592d9deb469
-Size (cl74unix.tar.gz) = 999170 bytes
-SHA1 (patch-aa) = e9a564183d445a61c00e0f6e134dee9029856bea
-SHA1 (patch-ab) = de97223ec671c8b04313c80fe4275c7ade087030

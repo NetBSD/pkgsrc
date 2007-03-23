@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2007/02/22 23:34:42 wiz Exp $
-
-SHA1 (sox-13.0.0.tar.gz) = db0e6a7356b8fcbc72cf0dca1d81782fc3fa48f4
-RMD160 (sox-13.0.0.tar.gz) = 84e7c8dea4f3a9145f9b42f7f03ac2329f3b83f2
-Size (sox-13.0.0.tar.gz) = 725259 bytes
-SHA1 (patch-aa) = c21bd9f1b9ba2440abd47b4aacc9721d0a2a6589
-SHA1 (patch-ab) = 3973227e19b0a1128b8faa4ab88074dcf51e100d
-SHA1 (patch-ac) = 53aee94b525c7856c49c8c948377c88973f2e651
-SHA1 (patch-ad) = efe2df76606544754a2c6d44bd9488e359a8caa8

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/08/07 23:46:23 wiz Exp $
-
-SHA1 (xmms-mad-0.5.7.tar.gz) = b45d8d42069d1a550c85633649edfc59df6312da
-RMD160 (xmms-mad-0.5.7.tar.gz) = 1c51dc570ea3f8bd2c62cf93176673a2307170da
-Size (xmms-mad-0.5.7.tar.gz) = 303044 bytes
-SHA1 (patch-aa) = 425482b7e945e4c2770fd273eb640cbde0b4f705
-SHA1 (patch-ab) = 88f1b7af5e976d92d1a98251f876026d54cb3fc2
-SHA1 (patch-ac) = 01cc47abfbe60ac5718e71cfbd5fa6076ed7f527

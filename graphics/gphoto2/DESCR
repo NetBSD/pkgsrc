@@ -1,7 +1,0 @@
-gphoto2 is a command line client to for the libgphoto2. It allows
-to use gPhoto software from a terminal or from a script shell to
-perform any camera operation that can be done. This is the main
-user interface.
-
-gphoto2 also provide convenient debugging features for camera driver
-developers.

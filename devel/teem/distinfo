@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/09 16:32:11 joerg Exp $
-
-SHA1 (teem-1.8.0-src.tar.gz) = fd57c40136d877d33cb45b2afc54a95564e67225
-RMD160 (teem-1.8.0-src.tar.gz) = 7154b1a7b12a08f7267017e213794673f6192827
-Size (teem-1.8.0-src.tar.gz) = 1127914 bytes
-SHA1 (patch-aa) = ebb0d5be710416276fbc028ee8e635b669eaa378
-SHA1 (patch-ab) = 0dbbe8290711e18d4c1312a452aaee19a13b5a04
-SHA1 (patch-ac) = 5e3f9a3fcf2c3807025fec65f5bb034691ba9457

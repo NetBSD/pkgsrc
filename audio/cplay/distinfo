@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/10 09:04:25 tonio Exp $
-
-SHA1 (cplay-1.49.tar.gz) = 5dc77ad0046419f6657249fa95829b3714beb1d6
-RMD160 (cplay-1.49.tar.gz) = e370ca609f8a17f428cf67ef85d55ee55cd5738b
-Size (cplay-1.49.tar.gz) = 36400 bytes
-SHA1 (patch-aa) = e7a1f3b34a5557e637d34b778b8a8cf796c9c8a9

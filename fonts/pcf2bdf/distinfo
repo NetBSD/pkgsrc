@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:18:29 agc Exp $
-
-SHA1 (pcf2bdf-1.04.tgz) = 6fdcc10132e27d3c26ff7e4be541332ee5d4e927
-RMD160 (pcf2bdf-1.04.tgz) = 6ded73f6610673b136a751c67ec8b8423ad0d87a
-Size (pcf2bdf-1.04.tgz) = 9686 bytes
-SHA1 (patch-aa) = d750333e3ac74db0666a40a6902af02d85d02ba0
-SHA1 (patch-ab) = 570763e32397296c67a88a485171b898b70247ff

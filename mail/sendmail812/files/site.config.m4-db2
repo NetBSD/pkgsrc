@@ -1,5 +1,0 @@
-# $NetBSD: site.config.m4-db2,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
-
-# enable db2
-APPENDDEF(`confENVDEF', `-DNEWDB -I${BUILDLINK_DIR}/include/db2')
-APPENDDEF(`confLIBS', `-ldb2')

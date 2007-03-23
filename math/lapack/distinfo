@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 12:06:55 agc Exp $
-
-SHA1 (lapack-20010201/lapack.tgz) = 47d85508d87d60e32b613ef0c951d0be4bf10e72
-RMD160 (lapack-20010201/lapack.tgz) = 630f9d7b4b37b0d39bccd4816198271b7e9e0cce
-Size (lapack-20010201/lapack.tgz) = 4991992 bytes
-SHA1 (patch-aa) = cad0f70bf4f738ea7c72d87abc8681d78cb55f02
-SHA1 (patch-ab) = 397cd0c42776287040cf258ac5eb526a869790d9

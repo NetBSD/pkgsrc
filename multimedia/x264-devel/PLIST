@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/12 14:11:22 joerg Exp $
-bin/x264
-include/x264.h
-lib/libx264.a
-lib/pkgconfig/x264.pc

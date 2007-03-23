@@ -1,6 +1,0 @@
-DNS administrators  can  use  dlint  to  scan  recursively through
-the  domain  records  of the fully-qualified zone to get a report
-on any errors therein.  You can scan a  zone  you  own,  or anyone
-else's zone on the Internet.  dlint talks directly to a primary or
-secondary  nameserver for  the  zone,  to make sure it's working
-with up-to-date information.

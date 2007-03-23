@@ -1,4 +1,0 @@
-linda is an simple library implementation of Linda parallel
-programming system (http://www.cs.yale.edu/Linda/linda.html).  To
-write a parallel program with linda, you have to know only 6
-functions:  spawn, out, in, inp, rd and rdp with linda.

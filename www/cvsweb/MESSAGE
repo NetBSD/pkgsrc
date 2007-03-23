@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/01/24 17:43:58 reed Exp $
-
-  If you are upgrading from a previous version of cvsweb, please follow
-  the `Upgrading from ...' instructions in:
-	${PREFIX}/share/doc/cvsweb/INSTALL
-
-===========================================================================

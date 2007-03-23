@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 14:45:27 agc Exp $
-
-SHA1 (unlzx.c.gz) = 752dd439a30be79da6780683137554db6d84a8a9
-RMD160 (unlzx.c.gz) = c6a8b895c74700436c712cefd9ed63d9a3db1511
-Size (unlzx.c.gz) = 9680 bytes

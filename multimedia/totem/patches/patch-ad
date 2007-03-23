@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2006/07/02 11:24:24 drochner Exp $
-
---- po/POTFILES.in.orig	2006-06-23 10:16:08.000000000 +0200
-+++ po/POTFILES.in
-@@ -38,4 +38,3 @@ src/backend/bacon-video-widget-xine.c
- src/backend/video-utils.c
- src/plparse/totem-disc.c
- src/plparse/totem-pl-parser.c
--

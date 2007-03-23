@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/13 10:58:28 jmmv Exp $
-bin/xdkcal
-man/man1/xdkcal.1

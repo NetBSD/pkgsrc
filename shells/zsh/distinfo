@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.26 2006/04/07 15:28:49 jlam Exp $
-
-SHA1 (zsh-4.2.6.tar.bz2) = e00c3eda3f52c9514bb625bb56e4480358170d39
-RMD160 (zsh-4.2.6.tar.bz2) = e4400fc6311bf6996128ecf7899592d6d8cdb310
-Size (zsh-4.2.6.tar.bz2) = 2098671 bytes
-SHA1 (patch-ab) = 815de90c379035dbc02b251cee148f6df47f9a65
-SHA1 (patch-ac) = 965b56e5ae39d6523416752c1390f01315c5d758
-SHA1 (patch-ae) = 7d4514d0bad6553d3c0cf115874bf50ed0da3d48

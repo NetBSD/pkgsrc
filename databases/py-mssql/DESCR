@@ -1,6 +1,0 @@
-This module provides access to MS SQL Servers from Python scripts.
-
-Features:
- - Multiple Query/Multiple Result
- - Not using Win32 ODBC (using MSSQL DB-LIB)
- - Supports "almost all" of the DB-API 2.0

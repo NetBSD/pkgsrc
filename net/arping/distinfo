@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/02/22 17:15:21 rillig Exp $
-
-SHA1 (arping-2.05.tar.gz) = 35434c22679284607a49319cf1ff566c0af935e6
-RMD160 (arping-2.05.tar.gz) = de682f2dc4e2dc7a60dd584bbed0a7834b7e85fd
-Size (arping-2.05.tar.gz) = 32287 bytes
-SHA1 (patch-ab) = 17ef8cc62a202589bb9efb276d1bd99772648a22

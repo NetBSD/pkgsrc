@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/01 15:26:36 fredb Exp $
-bin/dap
-share/doc/dap/COPYING
-share/doc/dap/FEATURES
-share/doc/dap/README
-share/doc/dap/TODO
-@dirrm share/doc/dap

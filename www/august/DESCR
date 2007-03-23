@@ -1,8 +1,0 @@
-August is a very simple, free HTML editor for the UNIX platform.
-It is a non-WYSIWYG editor like Aswedit or Hotdog. It has buttons
-to insert standard HTML tags and other common simple text editor
-commands.
-
-August is written with the Tcl/TK scripting language and graphical
-toolkit.  It's distributed as a single script, which means that if
-you know Tcl/Tk you can very easily customize August yourself.

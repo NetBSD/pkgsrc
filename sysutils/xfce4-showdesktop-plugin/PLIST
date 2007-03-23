@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:35 jlam Exp $
-lib/xfce4/panel-plugins/libshowdesktop.la
-share/locale/de/LC_MESSAGES/xfce4-showdesktop.mo
-share/locale/es/LC_MESSAGES/xfce4-showdesktop.mo
-share/locale/ko/LC_MESSAGES/xfce4-showdesktop.mo
-share/locale/pl/LC_MESSAGES/xfce4-showdesktop.mo

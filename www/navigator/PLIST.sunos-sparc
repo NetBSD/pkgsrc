@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.sunos-sparc,v 1.1 2001/11/01 20:42:29 zuntum Exp $
-bin/${BINNAME}-${NS_VERS}_nis
-lib/netscape/${BINNAME}-${NS_VERS}/netscape_nis
-lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
-lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/${BINNAME}-${NS_VERS}/nls/C
-lib/netscape/${BINNAME}-${NS_VERS}/nls/nls.dir
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/dynfonts
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nls

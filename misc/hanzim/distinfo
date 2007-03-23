@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
-
-SHA1 (hanzim-1.3.tgz) = f81cc5a5b382520f4304815f2e59488731cae9a6
-RMD160 (hanzim-1.3.tgz) = 650b65017fdb271554995f886fa79f60586b3de8
-Size (hanzim-1.3.tgz) = 570776 bytes
-SHA1 (patch-aa) = f47a47be817f6e3d4a7a40f3d217de0aa8b30f93
-SHA1 (patch-ab) = cbbf10a46d6c2267074e30bf1684f7332f847d50

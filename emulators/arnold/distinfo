@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/18 23:30:46 wiz Exp $
-
-SHA1 (arnsrc27012002.zip) = de3102b954d79176dce259375dc1824189027f8e
-RMD160 (arnsrc27012002.zip) = 7b43c157cbc4f6171ee9ef14cc282cc1692188c6
-Size (arnsrc27012002.zip) = 916680 bytes
-SHA1 (patch-aa) = aff649f6c37cf7a321c182442d9faac44594b413
-SHA1 (patch-ab) = fde2730f3cf53d539543489a6d691ad7a6bc9d68
-SHA1 (patch-ac) = 0f7681cbf3f6345ce7427591936c607075fa76ac

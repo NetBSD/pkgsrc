@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/24 12:21:35 skrll Exp $
-bin/quake-gl
-bin/quake-x11
-bin/qw-client-gl
-bin/qw-client-x11
-bin/qw-server

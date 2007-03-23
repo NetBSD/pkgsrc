@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:17 agc Exp $
-
-SHA1 (libcfg+-0.6.2.tar.gz) = 856d647bb06e37d3c6e48d356a3e11796ebed35b
-RMD160 (libcfg+-0.6.2.tar.gz) = a4125b16568e1977de3fc4e57a903eaa1638a412
-Size (libcfg+-0.6.2.tar.gz) = 169482 bytes
-SHA1 (patch-aa) = ba63ccc5c031a893b111caac1ba9ddf13c18b4fc
-SHA1 (patch-ab) = 6de1bbf8c5eefcfb07bc6bfa087c3c89d42d3a06

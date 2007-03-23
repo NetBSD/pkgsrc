@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 14:08:29 wiz Exp $
-
-SHA1 (asp2php-0.76.17.tar.gz) = 9fe485f8f738c11a7104b935cbcadf365195bac4
-RMD160 (asp2php-0.76.17.tar.gz) = a1173e3ded769234bcfbf38b3cc11f32346c0072
-Size (asp2php-0.76.17.tar.gz) = 53793 bytes
-SHA1 (patch-aa) = d9dea1ccabce8e79d032c3462cf59d3fb2303a8c
-SHA1 (patch-ab) = a95a8ffcac811b32bb467482c0e208e9f8ab0bdd
-SHA1 (patch-ac) = e833373ae539b142849b9f89755d391532155846

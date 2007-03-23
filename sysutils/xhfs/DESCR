@@ -1,7 +1,0 @@
-This package installs "xhfs", an elegant graphical browser for HFS
-(Apple Macintosh) volumes. Also "hfs", a command line interface, and
-"hfssh", the Tcl program that drives them both. The latter enables
-scripted manipulation of HFS volumes using the powerful Tcl language.
-
-This is the Tcl/Tk portion of Robert Leslie's hfsutils. The traditional
-command line tools may be found in the systutils/hfsutils package.

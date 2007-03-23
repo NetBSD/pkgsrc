@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/08 22:55:40 minskim Exp $
-bin/bbox
-bin/ps2eps
-man/man1/bbox.1
-man/man1/ps2eps.1

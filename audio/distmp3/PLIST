@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/13 11:55:56 grant Exp $
-bin/distmp3
-bin/distmp3host
-man/man1/distmp3.1
-man/man1/distmp3host.1
-share/examples/distmp3/distmp3.conf
-@dirrm share/examples/distmp3

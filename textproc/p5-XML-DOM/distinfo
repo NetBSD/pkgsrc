@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 14:48:46 agc Exp $
-
-SHA1 (XML-DOM-1.43.tar.gz) = 163b78bd66acea7f33a3c58d3710a30ae9bf64a1
-RMD160 (XML-DOM-1.43.tar.gz) = 23661f60eb35a3d309afce209df180331a7b407c
-Size (XML-DOM-1.43.tar.gz) = 116710 bytes

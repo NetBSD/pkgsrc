@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/05/25 12:48:57 wiz Exp $
-
-SHA1 (molden4.2.tar.Z) = 5377c6670b0ddc8317573a749494bac146d97a8b
-RMD160 (molden4.2.tar.Z) = 05b4ebfbe2795a5d9832512a9ffc3004ea6b76cd
-Size (molden4.2.tar.Z) = 3306529 bytes
-SHA1 (patch-aa) = 62168b37335cc74737c2d967234c0e846ab7bfa3

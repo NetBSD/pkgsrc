@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/18 19:56:27 wiz Exp $
-
-SHA1 (applyppf3_src.zip) = d80dd39b322863defdea76a1703565a7ce569b23
-RMD160 (applyppf3_src.zip) = ec06579d49ef81148233f51bbacbd3fd948bb403
-Size (applyppf3_src.zip) = 5618 bytes
-SHA1 (patch-aa) = 2e35e964870ae2843265496c6770e1d2d8733ece

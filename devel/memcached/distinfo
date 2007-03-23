@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/03/02 11:20:09 grant Exp $
-
-SHA1 (memcached-1.2.1.tar.gz) = 07ce5441874c052d28484070438822eedd7cc8ec
-RMD160 (memcached-1.2.1.tar.gz) = 0b275591af74440f3de22946fb7ccc658f6578af
-Size (memcached-1.2.1.tar.gz) = 148755 bytes
-SHA1 (patch-aa) = 0420acd9ba1a90cd32896f3864b53c31528191cf
-SHA1 (patch-ab) = 35db483c34debc3a468b7009ddb093c4cf5532d7

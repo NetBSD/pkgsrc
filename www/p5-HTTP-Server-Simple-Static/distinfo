@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/02 04:41:37 jlam Exp $
-
-SHA1 (HTTP-Server-Simple-Static-0.02.tar.gz) = 84733cf355eb952e31b1b8e4e2e4f0d092a286b7
-RMD160 (HTTP-Server-Simple-Static-0.02.tar.gz) = 915252e85d3c787d8bda389bc5ba1834c8d2e8f6
-Size (HTTP-Server-Simple-Static-0.02.tar.gz) = 2216 bytes

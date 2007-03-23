@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:08 agc Exp $
-
-SHA1 (MLDBM-Sync-0.15.tar.gz) = bbb9d81d2732235c3c10e9de07f07a498078f003
-RMD160 (MLDBM-Sync-0.15.tar.gz) = 55b01d2f66ce00c72f5adf8e7711e20dbf59811f
-Size (MLDBM-Sync-0.15.tar.gz) = 11686 bytes

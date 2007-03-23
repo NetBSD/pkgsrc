@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/10/13 18:25:59 rillig Exp $
-
-SHA1 (gdb-5.3.tar.gz) = 24a6c9da6e89b1b82b7508f27f94098d989ff662
-RMD160 (gdb-5.3.tar.gz) = 3f88dc11115de08708c50c73b10acaf00ed25e96
-Size (gdb-5.3.tar.gz) = 14707600 bytes
-SHA1 (patch-aa) = 3b2c3c8bbacbf87d9756ef282e4a37c930fcb4af
-SHA1 (patch-ab) = 005c0ca2aea16927504e102f85638a65fd610597
-SHA1 (patch-ac) = 3ad9f172b6a860425b713401d8f2ca87c6b140fd

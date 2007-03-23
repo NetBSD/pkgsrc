@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/17 13:26:28 obache Exp $
-
-SHA1 (Apache-Session-Wrapper-0.31.tar.gz) = 0ce988cdd513f60fb1c3ce40bfc29be95c074e80
-RMD160 (Apache-Session-Wrapper-0.31.tar.gz) = 4a7e4fef8cfeb0136eae30cf21f0d075e6fd55b4
-Size (Apache-Session-Wrapper-0.31.tar.gz) = 22679 bytes

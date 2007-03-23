@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.15 2007/02/22 16:15:14 joerg Exp $
-
-SHA1 (libqalculate-0.9.5.tar.gz) = df44162bfb41907851817306b6599d27d74de0ce
-RMD160 (libqalculate-0.9.5.tar.gz) = 7839c56e275979157f6bace072d1fc9f500c8953
-Size (libqalculate-0.9.5.tar.gz) = 1118827 bytes
-SHA1 (patch-aa) = fda2983150bbbdecc1578e747d8a6aa7ef965f3f
-SHA1 (patch-ac) = 98e817d60fc4cd521e7d227ecd330364ec072ecd
-SHA1 (patch-ad) = 0e767ff393ea2d54da8a49527d24842ca0b90d28

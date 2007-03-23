@@ -1,9 +1,0 @@
-Japhar is the Hungry Programmers' Java VM.  It has been built from the
-ground up without consulting Sun's sources.  It is currently at JDK
-1.1.5-level.
-
-Japhar is released under the LGPL, which should make it much more
-attractive for companies interested in embedding an open source JVM in
-their proprietary/commercial products.  For example, the LGPL is
-compatible with Netscape's NPL license, and allows Japhar to be
-included into Mozilla.

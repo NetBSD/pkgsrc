@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/05/12 09:19:54 joerg Exp $
-
-SHA1 (nProbe-source-1.3.1.tgz) = 95e7614999a3db9f1b4c191bc614446da81226d7
-RMD160 (nProbe-source-1.3.1.tgz) = 7d016d06eeb587986240bf77be5252ee51bec360
-Size (nProbe-source-1.3.1.tgz) = 161315 bytes
-SHA1 (patch-aa) = b8d26dae9d0b07a3e941f005a18dfa2b8adb3f6c

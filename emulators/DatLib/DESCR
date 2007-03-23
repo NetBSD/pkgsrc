@@ -1,4 +1,0 @@
-DatLib is a library for emulation data file formats.  It supports
-a variety of data file formats and handles the standard loading,
-cleansing, converting and saving operations that are required by
-tools such as DatUtil, MAMEDiff, ROMBuild, ROMInfo and ZipIdent.

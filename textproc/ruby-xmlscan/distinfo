@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/03 14:25:51 taca Exp $
-
-SHA1 (xmlscan-0.2.3.tar.gz) = 70c989d3782c916179170238a40b1d7defa9dc47
-RMD160 (xmlscan-0.2.3.tar.gz) = d83fb70ed24764e1a036f7af79c2b1f3f4e4fa18
-Size (xmlscan-0.2.3.tar.gz) = 88414 bytes

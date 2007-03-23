@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:33 agc Exp $
-
-SHA1 (sablecc-2.16.2.tar.gz) = 02d58ae982b8704ffb594cf1f4889db9cdb777a3
-RMD160 (sablecc-2.16.2.tar.gz) = 8a11ea30644e4a7c5c1c6f257dbf39f30c7c21c2
-Size (sablecc-2.16.2.tar.gz) = 342386 bytes

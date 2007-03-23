@@ -1,6 +1,0 @@
-GNU Units can convert quantities expressed in one unit to an equivalent in a
-difference scale.  Compared to traditional BSD implementations, it offers more
-units, non-linear conversions (e.g. between degrees Celsius and Fahrenheit), a
-more lenient input parser, and tab completion.  It can also be used to perform
-calculations taking physical units into account, and provide the definitions of
-units (e.g. "joule = N m = 1 kg m^2 / s^2").

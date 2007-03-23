@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/31 19:22:28 wiz Exp $
-lib/httpd/mod_auth_pgsql.so
-share/doc/mod_auth_pgsql/README
-share/doc/mod_auth_pgsql/INSTALL
-share/doc/mod_auth_pgsql/mod_auth_pgsql.html
-@dirrm share/doc/mod_auth_pgsql

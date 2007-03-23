@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/28 15:52:01 ghen Exp $
-
-SHA1 (cripple-0.06b.tar.bz2) = 24a2ad31a056549fa52751937ed6b582e34acb85
-RMD160 (cripple-0.06b.tar.bz2) = 7cdfad53667a2a35e6a4e32505654d2fcd57c856
-Size (cripple-0.06b.tar.bz2) = 56452 bytes
-SHA1 (patch-aa) = 142b9dceb2f2c77f1cb2452f02d0c084ca188a95

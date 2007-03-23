@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/15 23:28:21 abs Exp $
-
-SHA1 (Getopt-Long-2.35.tar.gz) = 68ef2adf585c3d5264df2c53d064dbc5ae2c3b0d
-RMD160 (Getopt-Long-2.35.tar.gz) = 99cd6e28e3e2330369113301e4c5d24df3ebbaec
-Size (Getopt-Long-2.35.tar.gz) = 36689 bytes

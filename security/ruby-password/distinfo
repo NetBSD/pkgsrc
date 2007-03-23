@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/01 21:47:22 minskim Exp $
-
-SHA1 (ruby-password-0.5.3.tar.gz) = a8c006dac804534cec94b9d2585b10b7e105fb3f
-RMD160 (ruby-password-0.5.3.tar.gz) = 2977379b739c54373d70966d72e14e25aaf51c5f
-Size (ruby-password-0.5.3.tar.gz) = 23088 bytes
-SHA1 (patch-aa) = 05c6e46a99771bf1c42db529b1e8daf4dc7d4f97
-SHA1 (patch-ab) = 8e01e8e2950b941d75fa2b3621aec3fc115d143c

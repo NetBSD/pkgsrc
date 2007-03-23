@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/20 17:41:39 minskim Exp $
-bin/exifcom
-bin/exiftags
-bin/exiftime
-man/man1/exifcom.1
-man/man1/exiftags.1
-man/man1/exiftime.1

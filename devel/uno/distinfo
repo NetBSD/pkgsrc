@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/15 22:19:19 joerg Exp $
-
-SHA1 (uno_v28.tar.gz) = a15812a7d7ba72d6d3df283e28265c4ca2761c8f
-RMD160 (uno_v28.tar.gz) = ea12259c130ab61e7147a4f51c73d1c1ad056c55
-Size (uno_v28.tar.gz) = 236562 bytes
-SHA1 (patch-aa) = 111afbf8fbfdbb1d86737ebead7dbbf2d18d7af3

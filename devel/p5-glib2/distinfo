@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/08/24 08:37:47 xtraeme Exp $
-
-SHA1 (Glib-1.120.tar.gz) = fbdd1949a38f6f975768ea2c8c9b13b9b559c6f1
-RMD160 (Glib-1.120.tar.gz) = 6e86cc3db9304000256286fccb4bb9b6b466dcc4
-Size (Glib-1.120.tar.gz) = 233137 bytes

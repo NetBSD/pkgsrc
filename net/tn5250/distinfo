@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 12:14:05 agc Exp $
-
-SHA1 (tn5250-0.12.51.tar.gz) = c4394dd699afa3e38989015100f5837f266a80d9
-RMD160 (tn5250-0.12.51.tar.gz) = 382c5988b1ddf6c7cb9345b79e760160c00c64fb
-Size (tn5250-0.12.51.tar.gz) = 101747 bytes
-SHA1 (patch-aa) = eded51dff90cdab29069b281c991e5d53f393c88
-SHA1 (patch-ab) = 32a611ae4ac1ad19a4063bebf17959bcfa5f5776
-SHA1 (patch-ac) = b2d7ac117722cc225b5d960b966b4a6917b96bed

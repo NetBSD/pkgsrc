@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:14 agc Exp $
-
-SHA1 (TkPasMan-2.2a.tar.gz) = 670e4a05e4cad221261189c8819e851760907921
-RMD160 (TkPasMan-2.2a.tar.gz) = e636ccc1ba649dee22e17577f41f8ff50604a1de
-Size (TkPasMan-2.2a.tar.gz) = 31330 bytes
-SHA1 (patch-aa) = aea9e44b92a66455ce104cdbd3fe45a28c264eac

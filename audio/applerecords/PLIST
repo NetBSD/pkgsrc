@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/06 07:20:12 agc Exp $
-bin/applerecords
-lib/applerecords/applerecords.jar
-@dirrm lib/applerecords

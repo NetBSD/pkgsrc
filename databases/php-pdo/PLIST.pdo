@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.pdo,v 1.1.1.1 2005/10/09 13:11:18 jdolecek Exp $
-include/php/ext/pdo/php_pdo.h
-include/php/ext/pdo/php_pdo_driver.h
-@dirrm include/php/ext/pdo

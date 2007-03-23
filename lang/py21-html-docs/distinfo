@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:03:10 agc Exp $
-
-SHA1 (python/html-2.1.3.tar.bz2) = 028b7945b250b43c8bbc53fa912009ba3b5cd32b
-RMD160 (python/html-2.1.3.tar.bz2) = 10fff0fd08c4485011b850364366bae41034cb74
-Size (python/html-2.1.3.tar.bz2) = 795287 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/01/05 10:49:20 drochner Exp $
-
-SHA1 (gst-plugins-ugly-0.10.5.tar.bz2) = 04dff1194745b1b47845b92c3c45e551d85b3202
-RMD160 (gst-plugins-ugly-0.10.5.tar.bz2) = 8f6766ca38cceb67cad9767d672b1426fd56c4f9
-Size (gst-plugins-ugly-0.10.5.tar.bz2) = 744261 bytes
-SHA1 (patch-aa) = d0899b8827b0106fd64adcf3b4efe8e4ca20fa11

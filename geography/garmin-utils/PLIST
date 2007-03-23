@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/08 20:47:54 gson Exp $
-bin/gardump
-bin/garload
-lib/libgarmin.a
-man/man1/gardump.1
-man/man1/garload.1

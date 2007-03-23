@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/07/22 13:11:28 rillig Exp $
-
-SHA1 (xmlto-0.0.18.tar.bz2) = abee8925a80bfefcdf1543956a804b1facff7bec
-RMD160 (xmlto-0.0.18.tar.bz2) = 4b7232ad673c6b3a0ad015d0061cf5b77165478c
-Size (xmlto-0.0.18.tar.bz2) = 91275 bytes
-SHA1 (patch-aa) = b404a269dea9aeae23ade6a3e7a7476a94b840b2
-SHA1 (patch-ab) = b7f09d5add1a2423690d7f5aa501ad0f1d215592

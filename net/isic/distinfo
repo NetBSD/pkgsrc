@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/02/18 18:49:29 adrianp Exp $
-
-SHA1 (isic-0.06.tgz) = 69433d4c6f351648655991d30e5c64e958a82e6b
-RMD160 (isic-0.06.tgz) = 2f6a336d4a4a59f4e85b51c45bab83ff3f1390b5
-Size (isic-0.06.tgz) = 27611 bytes
-SHA1 (patch-aa) = c72e8c011d295490c8dacdc48c7802fc56d5df39

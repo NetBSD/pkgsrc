@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:41 wiz Exp $
-
-SHA1 (zope/Calendar-1.0.10.tar.gz) = 838760768e507c41b7329f27568c5f56d28cb2cf
-RMD160 (zope/Calendar-1.0.10.tar.gz) = eaff402f0c6ff0403e80e8fe26876449c9f930f4
-Size (zope/Calendar-1.0.10.tar.gz) = 13972 bytes

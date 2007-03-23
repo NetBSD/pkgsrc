@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:50 zuntum Exp $
-bin/photopc
-bin/epinfo
-man/man1/photopc.1
-man/man1/epinfo.1
-lib/libeph_io.a
-include/eph_io.h

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:57 agc Exp $
-
-SHA1 (pari-2.1/galdata.tar.gz) = 8bacbf800a5722085ca6c0b19de230cf729492c2
-RMD160 (pari-2.1/galdata.tar.gz) = 96c29532a32c920776d4864b01a657f79e6c26d8
-Size (pari-2.1/galdata.tar.gz) = 1129916 bytes

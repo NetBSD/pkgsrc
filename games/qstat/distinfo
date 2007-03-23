@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/23 22:44:58 recht Exp $
-
-SHA1 (qstat-2.10.tar.gz) = a138d8d79c0840d4ded5d3d5c343613242e56026
-RMD160 (qstat-2.10.tar.gz) = d5f7c481ac37844f36a0791ef052c924301f0083
-Size (qstat-2.10.tar.gz) = 228886 bytes

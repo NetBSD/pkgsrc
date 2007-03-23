@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/11/05 21:27:53 joerg Exp $
-
-The default location of the NSD database has moved to
-${VARBASE}/db/nsd.db. This location can be overriden by -f for nsd
-and in ${SYSCONFDIR}/nsd/nsdc.conf for nsdc.
-===========================================================================

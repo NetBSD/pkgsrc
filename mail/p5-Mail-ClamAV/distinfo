@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/02/21 22:10:47 wiz Exp $
-
-SHA1 (Mail-ClamAV-0.20.tar.gz) = 474e55ff77a8c1f3b0c996a97c34aa04e56a1113
-RMD160 (Mail-ClamAV-0.20.tar.gz) = 33b0627ccb542eda82f79e625d3f66ffe040bdfd
-Size (Mail-ClamAV-0.20.tar.gz) = 14377 bytes

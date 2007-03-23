@@ -1,4 +1,0 @@
-# $NetBSD: Makefile.i386,v 1.1.1.2 2006/04/18 13:58:47 tron Exp $
-
-RPMFILES=		glib-1.2.10-595.${SUSE_ARCH}.rpm \
-			gtk-1.2.10-888.${SUSE_ARCH}.rpm

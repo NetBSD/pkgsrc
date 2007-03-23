@@ -1,6 +1,0 @@
-Boa Constructor is a cross platform Python IDE and wxPython GUI Builder.
-It offers visual frame creation and manipulation, an object inspector, many
-views on the source like object browsers, inheritance hierarchies, doc string
-generated html documentation, an advanced debugger and integrated help.
-Zope support: Object creation and editing. Cut, copy, paste, import and export.
-Property creation and editing in the Inspector and Python Script debugging.

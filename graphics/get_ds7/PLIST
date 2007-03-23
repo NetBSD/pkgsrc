@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/06 06:19:19 jlam Exp $
-bin/get_ds7
-${PERL5_SUB_INSTALLVENDORLIB}/ds7_lib.pm
-share/doc/get_ds7/README
-share/doc/get_ds7/README.english
-@dirrm share/doc/get_ds7

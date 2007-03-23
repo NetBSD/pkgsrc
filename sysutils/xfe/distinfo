@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/14 02:47:08 rillig Exp $
-
-SHA1 (xfe-0.88.tar.gz) = 85ea89fcb967f4d566ab68cbb80e49c7ea1e4c46
-RMD160 (xfe-0.88.tar.gz) = c208f1dd6e34710e1306394bdae96e9d37f0c739
-Size (xfe-0.88.tar.gz) = 973761 bytes
-SHA1 (patch-aa) = 094df6cbc885332c6364d8cd8a0a8fe6d6fdf281
-SHA1 (patch-ab) = 1c4c62bd9058bd09d6bd79fd4a68d7633022d66e
-SHA1 (patch-ac) = c104348cf4be6f0095357080d2001530afe8b180

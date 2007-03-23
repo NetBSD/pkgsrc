@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: fakeldd,v 1.1.1.1 2006/07/17 14:21:31 jlam Exp $
-#
-/usr/bin/elfdump -Dl "$@" |
-/usr/bin/nawk 'NF == 7 || NF == 8 {printf "x x %s\n",$1}'

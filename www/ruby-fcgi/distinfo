@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/07/09 14:18:04 taca Exp $
-
-SHA1 (ruby-fcgi-0.8.7.tar.gz) = 724d01553d35738268b13a93df1b5bb01f2d2b81
-RMD160 (ruby-fcgi-0.8.7.tar.gz) = c52e55fa75b8ee3371d6bc92130eb056173205ed
-Size (ruby-fcgi-0.8.7.tar.gz) = 19206 bytes
-SHA1 (patch-aa) = 0a4c7e25dcaad0fcc044aef96db89fae837a9067

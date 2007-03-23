@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/08 16:29:02 jmmv Exp $
-libexec/icon-name-mapping
-share/dtds/legacy-icon-mapping.dtd
-share/icon-naming-utils/legacy-icon-mapping.xml
-share/pkgconfig/icon-naming-utils.pc
-@dirrm share/icon-naming-utils
-@comment in xdg-dirs: @dirrm share/dtds

@@ -1,5 +1,0 @@
-antixls is a small Perl wrapper for Kawai Takanori's
-Spreadsheet::ParseExcel module. It prints out an XLS file with
-minimal formatting, or extracts the data into CSV format.
-
-It is to Excel files what antiword is to Word documents.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:41:24 jlam Exp $
-
-SHA1 (webmin-modules-1.270/lpadmin.wbm.gz) = 0e6de3ea0251c37f842cb995e3aaf7111ad9955c
-RMD160 (webmin-modules-1.270/lpadmin.wbm.gz) = c7f73e353b939327dd16060e1bc6856bf952f229
-Size (webmin-modules-1.270/lpadmin.wbm.gz) = 127502 bytes

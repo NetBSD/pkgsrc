@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.18 2007/03/10 20:55:34 wiz Exp $
-
-SHA1 (trac-0.10.3.1.tar.gz) = 4735f453f9bea15d65b71bcbd0e4817ee21f104a
-RMD160 (trac-0.10.3.1.tar.gz) = 02b34dbb41d858c999627ee2201cdbd43e592576
-Size (trac-0.10.3.1.tar.gz) = 443713 bytes
-SHA1 (patch-aa) = 5d8c1c3e5416e73d6cc24a5a45d4ec7afdc4a095

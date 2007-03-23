@@ -1,6 +1,0 @@
-The PropertyObject is intended mainly for use in conjunction with the
-"PropertyFolder":http://www.zope.org/Members/mjablonski/PropertyFolder and
-"AbracadabraObject":http://www.zope.org/Members/mjablonski/AbracadabraObject.
-If you got the logic and power behind AbracadabraObject, you will love the
-PropertyObject. If not, you will have no idea what to do with PropertyObject
-at all... but maybe you can use it for other problems as well.

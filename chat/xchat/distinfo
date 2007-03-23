@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.32 2007/01/25 21:27:49 reed Exp $
-
-SHA1 (xchat-2.8.0.tar.bz2) = 80248b4fcd45261c686557eb243fec6ce459bd60
-RMD160 (xchat-2.8.0.tar.bz2) = a65329728c050c5448b2cbab2ea6c68ba72a0c95
-Size (xchat-2.8.0.tar.bz2) = 1257232 bytes
-SHA1 (patch-aa) = 90af71915ac6373ebc623790f9a90642376fb1f4
-SHA1 (patch-ab) = 99eb42cbe3e6b15fd0930245df2ecd2b00394ab3
-SHA1 (patch-ac) = a523f43c2d70fcf93638204fa22808530801847b

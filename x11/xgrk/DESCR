@@ -1,8 +1,0 @@
-This program is a contribution to the community of greek UNIX users. It makes
-it possible to change keyboard mapping with alt-shift or meta-shift
-combinations or by clicking on the flag image.  You will be able to write
-greek in X programs like netscape or xedit. You must have the greek fonts,
-which are not provided with this package.
-
-Keycodes are auto-loaded on startup so it should work with all unices and
-keyboard layouts.

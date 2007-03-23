@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.24 2007/02/15 06:21:46 martti Exp $
-
-SHA1 (mrtg-2.15.1.tar.gz) = 9ebfe300e916c3e1529fd410d531877608e10131
-RMD160 (mrtg-2.15.1.tar.gz) = 0db71cfa6cd0f0db9ab973b51ce8cca403760505
-Size (mrtg-2.15.1.tar.gz) = 1069188 bytes
-SHA1 (patch-ab) = bf367e6c43030a9cb64a88336b66932d7e05025c
-SHA1 (patch-ac) = e12f74ea083c1e3a7793afc35dcd698611823d81
-SHA1 (patch-ad) = f6d737bad01ffbfdeb40fe08361810881f0257d5
-SHA1 (patch-ae) = b76543d57a4c630adec51f78c1d6005dffee6a3d

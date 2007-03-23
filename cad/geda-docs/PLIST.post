@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.post,v 1.1 2007/02/21 13:23:57 dmcmahill Exp $
-@dirrm share/doc/geda-doc/tutorials/gsch2pcb/images
-@dirrm share/doc/geda-doc/tutorials/gsch2pcb
-@dirrm share/doc/geda-doc/tutorials
-@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}

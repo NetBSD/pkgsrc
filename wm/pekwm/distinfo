@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/05/15 22:13:30 xtraeme Exp $
-
-SHA1 (pekwm-0.1.5.tar.bz2) = e22b6c32efaffa2cc16c7965356db11893ecfab8
-RMD160 (pekwm-0.1.5.tar.bz2) = 1195c7f5452b5e5b9fc6eab245df1d159e12c2f0
-Size (pekwm-0.1.5.tar.bz2) = 241913 bytes
-SHA1 (patch-aa) = ad738c2447e3eb1501f54eef35a0f920f40dcc7e

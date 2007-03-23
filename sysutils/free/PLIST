@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/29 19:16:47 hubertf Exp $
-bin/free
-man/man1/free.1

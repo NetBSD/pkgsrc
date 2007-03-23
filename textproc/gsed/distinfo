@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.12 2007/03/08 18:53:57 wiz Exp $
-
-SHA1 (sed-4.1.5.tar.gz) = 8e575e8a44568392d5b6e089eab5da5cdbd45885
-RMD160 (sed-4.1.5.tar.gz) = 49b12e99a55c6d2e78ad236f0205e63e46444173
-Size (sed-4.1.5.tar.gz) = 799584 bytes
-SHA1 (patch-ad) = e2b22a19f65d2fc3cb676c787479b15db131f896
-SHA1 (patch-ae) = 2091cccb70a8017d8e6fd356874681b51f366890

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/05/11 21:42:43 seb Exp $
-
-SHA1 (conserver-8.1.14.tar.gz) = 3275ba140e5d157ab022f3de083a61a37f058bd6
-RMD160 (conserver-8.1.14.tar.gz) = 9d0961d837f03ddbdaddccf7f45097b6f4e452b8
-Size (conserver-8.1.14.tar.gz) = 308609 bytes
-SHA1 (patch-aa) = d0eebea0d126c611f6f60035730a0c2f97280b01
-SHA1 (patch-ab) = 7a507e428277cc6ccf14b961c44d4e6fd3abcde3

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:17 zuntum Exp $
-lib/libdcdflib_f.a
-share/doc/dcdflib.f/README
-share/doc/dcdflib.f/dcdflib.chs
-share/doc/dcdflib.f/dcdflib.fdoc
-@dirrm share/doc/dcdflib.f

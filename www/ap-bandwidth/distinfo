@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/07 11:49:10 joerg Exp $
-
-SHA1 (ap13-bandwidth-2.0.6/mod_bandwidth.c) = 96d4fb5a68bc56a310979fe68c322445f9f4fe56
-RMD160 (ap13-bandwidth-2.0.6/mod_bandwidth.c) = e093a8a5de89a91d523bb0702e21c43046d5e48c
-Size (ap13-bandwidth-2.0.6/mod_bandwidth.c) = 43653 bytes

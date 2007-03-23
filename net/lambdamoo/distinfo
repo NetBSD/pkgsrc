@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:51 agc Exp $
-
-SHA1 (LambdaMOO-1.8.1.tar.gz) = 6fc053ce6c305b9d5f3d883450c1bdc05b733c7b
-RMD160 (LambdaMOO-1.8.1.tar.gz) = 78f0993bb870cac44f3b80fab46a250b489ebc59
-Size (LambdaMOO-1.8.1.tar.gz) = 363803 bytes
-SHA1 (patch-aa) = f4273667233f6d641354054b4a7f5298b85469de
-SHA1 (patch-ab) = 63c3c2a902dec7796f91e4cb442957f053d4cc7b

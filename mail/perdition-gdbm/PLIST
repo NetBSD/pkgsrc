@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/31 21:07:30 tv Exp $
-bin/makegdbm
-lib/libperditiondb_gdbm.la
-man/man1/makegdbm.1

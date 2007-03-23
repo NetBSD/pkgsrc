@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/02/24 01:56:35 minskim Exp $
-
-SHA1 (gturing-0.1.1.tar.bz2) = a9c25a69f6d6bf2de4c8ac329d3f9d97f55649a0
-RMD160 (gturing-0.1.1.tar.bz2) = b53bd8a565ef964162b445defac9de9d77d1a398
-Size (gturing-0.1.1.tar.bz2) = 376032 bytes
-SHA1 (patch-aa) = 07d404417d8fa4f8bf89212696f60e8ad28d43d4
-SHA1 (patch-ab) = 20df587e36d26119f2c58a178c39c2596d70699f

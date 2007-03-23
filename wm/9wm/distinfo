@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:43:53 wiz Exp $
-
-SHA1 (9wm-1.1.shar.gz) = 43a4e28a0665d54331d81d9691abae65927738ac
-RMD160 (9wm-1.1.shar.gz) = d2daa96d1b8dec45d349e49406156629e4b2c50a
-Size (9wm-1.1.shar.gz) = 19517 bytes
-SHA1 (patch-aa) = 3e0c11e450876ee882694fb653fa8222ee53340a

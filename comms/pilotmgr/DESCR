@@ -1,5 +1,0 @@
-PilotManager is a tool that allows you to synchronize databases on any
-3Com Palm device (PalmPilot, PalmIII, PalmIIIx, PalmV, more?) with
-applications on your Unix platform. It is a full Hotsync daemon that is user
-extensible. Developers can write their own conduits to synchronize Pilot
-databases with the desktop application of their choice!

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:07 agc Exp $
-
-SHA1 (cracklib,2.7.tgz) = 393688e84fbf12b8359f02564211e89ac5be8b68
-RMD160 (cracklib,2.7.tgz) = 3a7b3eb1a7d9dda2d6d0384daa2e4ba233e3c709
-Size (cracklib,2.7.tgz) = 20901 bytes
-SHA1 (patch-aa) = 7994e065579da1b535c0d09871a66f55fd3109f1
-SHA1 (patch-ab) = 0240dd8ca90884aaf46cf3e4451b14b3fa900cb8
-SHA1 (patch-ac) = 49bdc2e1b15486edbcb150d78362c0a748d653da

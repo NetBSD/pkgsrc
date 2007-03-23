@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/21 13:19:33 gdt Exp $
-
-SHA1 (tphdisk.c) = e13233642ac8b1514492097a43ab8529841422bf
-RMD160 (tphdisk.c) = 16e7fe2e42fa0694fa2686129dd977653f706a42
-Size (tphdisk.c) = 2847 bytes
-SHA1 (patch-aa) = 8fc91ceedb8f84828323215056a622d706456f84

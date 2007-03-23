@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:03:08 agc Exp $
-
-SHA1 (jasmin-1.06.tar.gz) = 41b36ad994632c8093d58680c196096c8e53d482
-RMD160 (jasmin-1.06.tar.gz) = 886af26d4d3bdb90271001ee536f73e68fc0fcf1
-Size (jasmin-1.06.tar.gz) = 410897 bytes
-SHA1 (patch-aa) = e1bea3c02199229b64d763e29a1bb7576ce26964

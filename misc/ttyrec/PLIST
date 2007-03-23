@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/09 13:48:02 obache Exp $
-bin/ttyplay
-bin/ttyrec
-bin/ttytime
-man/man1/ttyplay.1
-man/man1/ttyrec.1
-man/man1/ttytime.1

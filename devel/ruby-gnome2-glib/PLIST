@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/29 06:42:34 minskim Exp $
-${RUBY_SITELIBDIR}/glib-mkenums.rb
-${RUBY_SITELIBDIR}/glib2.rb
-${RUBY_SITEARCHLIBDIR}/glib2.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/mkmf-gnome2.rb
-${RUBY_SITELIBDIR}/pkg-config.rb

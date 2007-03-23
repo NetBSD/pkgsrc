@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 23:04:21 joerg Exp $
-bin/efax
-bin/efix
-bin/fax
-man/man1/efax.1
-man/man1/efix.1
-man/man1/fax.1
-share/examples/efax/efax.rc
-@dirrm share/examples/efax

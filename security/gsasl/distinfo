@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/12/09 14:06:13 obache Exp $
-
-SHA1 (gsasl-0.2.15.tar.gz) = b0a043d086423a3eb538cfae15e383fb6f4126d0
-RMD160 (gsasl-0.2.15.tar.gz) = 454d5671ecb1f040f78939c7ac3878a78f4fc8ee
-Size (gsasl-0.2.15.tar.gz) = 2859611 bytes

@@ -1,4 +1,0 @@
-# $NetBSD: xfree.randrproto,v 1.1 2006/04/19 17:03:28 reed Exp $
-#
-include/X11/extensions/randr.h
-include/X11/extensions/randrproto.h

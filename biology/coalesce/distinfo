@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:28:55 agc Exp $
-
-SHA1 (coalesce1.5b.tar.gz) = ec2a13da25474440a0c57b2a2e634c94db30961e
-RMD160 (coalesce1.5b.tar.gz) = 199a0f219413ea67feea98a6864f43373d3955bc
-Size (coalesce1.5b.tar.gz) = 46153 bytes
-SHA1 (patch-aa) = b4c3afcb563c54d4b16f20f8b4b9fc649b49deee

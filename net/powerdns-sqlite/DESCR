@@ -1,9 +1,0 @@
-The PowerDNS nameserver is a modern, advanced and high performance
-authoritative-only nameserver.  It is written from scratch and conforms
-to all the relevant DNS standards documents.  PowerDNS is open source.
-
-The PowerDNS nameserver utilizes a flexible backend architecture that
-can access DNS information from any data source.  This includes file
-formats, BIND zone files, relational databases or LDAP directories.
-
-This packages provides the SQLite backend module.

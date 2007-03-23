@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/31 23:13:51 joerg Exp $
-include/trio.h
-include/triodef.h
-include/trionan.h
-include/triop.h
-include/triostr.h
-lib/libtrio.la

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/11/07 14:53:10 obache Exp $
-
-SHA1 (Text-Glob-0.07.tar.gz) = a74c665f5e01b93d4f652633e52f2790d7f26450
-RMD160 (Text-Glob-0.07.tar.gz) = c6bd70e7e7802c8825e39f2ae28eed501d8ef9db
-Size (Text-Glob-0.07.tar.gz) = 3691 bytes

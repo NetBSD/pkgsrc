@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/13 16:38:26 wulf Exp $
-include/gnuradio/audio_portaudio_sink.h
-include/gnuradio/audio_portaudio_source.h
-lib/python2.4/site-packages/gnuradio/_audio_portaudio.la
-lib/python2.4/site-packages/gnuradio/audio_portaudio.py
-lib/python2.4/site-packages/gnuradio/audio_portaudio.pyc
-lib/python2.4/site-packages/gnuradio/audio_portaudio.pyo
-include/gnuradio/swig/audio_portaudio.i
-share/examples/gnuradio/conf.d/gr-audio-portaudio.conf

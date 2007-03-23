@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/28 02:27:29 snj Exp $
-bin/scponly
-man/man8/scponly.8
-share/examples/scponly/debuglevel
-@dirrm share/examples/scponly

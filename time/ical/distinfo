@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 19:14:54 wiz Exp $
-
-SHA1 (ical-2.3.1.tar.gz) = 98649b7e1fbad9c13356eb5dded693d81b2252f2
-RMD160 (ical-2.3.1.tar.gz) = 98642da1ef330ca3a5cf099508fb09dcdeb208be
-Size (ical-2.3.1.tar.gz) = 264576 bytes
-SHA1 (patch-aa) = 238d2d4ce21cc60ec0eaae854aa722ca0486701d

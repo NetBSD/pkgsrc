@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/02/27 09:14:24 wiz Exp $
-
-SHA1 (ExtUtils-PkgConfig-1.07.tar.gz) = 5bc9a7e9a5e21d3325c693950e2d9ba2aa6147a8
-RMD160 (ExtUtils-PkgConfig-1.07.tar.gz) = b94a077fc3db7248dad3850c8eacea16b333f5b4
-Size (ExtUtils-PkgConfig-1.07.tar.gz) = 6336 bytes

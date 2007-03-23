@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.24 2007/02/21 13:23:53 dmcmahill Exp $
-
-SHA1 (geda/geda-gschem-20070216.tar.gz) = 7aaa669f8e25f89f99259f0bfb39efee2f932a86
-RMD160 (geda/geda-gschem-20070216.tar.gz) = 76924c6970784a02d54ed47c5a72bd0325805dba
-Size (geda/geda-gschem-20070216.tar.gz) = 1053241 bytes
-SHA1 (patch-aa) = 6e1f3926d3f9019ed7032575bd81faeefe2b3d2e

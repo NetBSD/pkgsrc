@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:51 zuntum Exp $
-bin/cscope
-man/man1/cscope.1
-share/cscope/ocs
-@dirrm share/cscope

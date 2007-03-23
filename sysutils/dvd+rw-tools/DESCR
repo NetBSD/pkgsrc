@@ -1,5 +1,0 @@
-This package contains tools to write images (such as iso-9660 produced
-by mkisofs) to DVD+R/RW drives.  It includes "growisofs" as a wrapper
-around mkisofs for appending or modifying contents of existing media.
-
-It is also able to write to some DVD- drives and media.

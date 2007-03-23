@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $
-lib/security/pam_pwauth_suid.so.0
-libexec/pwauth_suid_helper

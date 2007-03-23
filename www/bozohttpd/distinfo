@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.41 2006/05/18 02:48:53 rpaulo Exp $
-
-SHA1 (bozohttpd-20060517.tar.bz2) = 45ed3c268fffc884db93ebc975121b7c79060fa8
-RMD160 (bozohttpd-20060517.tar.bz2) = edf15fe2998ca2fae0035f8380639e8741d0406a
-Size (bozohttpd-20060517.tar.bz2) = 33032 bytes

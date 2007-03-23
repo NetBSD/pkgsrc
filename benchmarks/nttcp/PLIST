@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/17 21:51:35 thorpej Exp $
-bin/nttcp
-man/man1/nttcp.1

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:18:29 agc Exp $
-
-SHA1 (ttf2pt1-3.4.4.tgz) = 936771b11a740c16a8e0adb737b54b22cca18cb2
-RMD160 (ttf2pt1-3.4.4.tgz) = f88d7a26b30fa02055fd12ce1450220bd52d8df2
-Size (ttf2pt1-3.4.4.tgz) = 230547 bytes
-SHA1 (patch-aa) = e8344ed0026c94015771d08102ea4e1858061403
-SHA1 (patch-ab) = 4133a4ded43eec3da256eeea31ff35b9b8167351

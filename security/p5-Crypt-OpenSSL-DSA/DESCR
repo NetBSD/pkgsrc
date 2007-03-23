@@ -1,4 +1,0 @@
-Crypt::OpenSSL::DSA implements the DSA (Digital Signature Algorithm)
-signature verification system.
-It is a thin XS wrapper to the DSA functions contained in the
-OpenSSL crypto library.

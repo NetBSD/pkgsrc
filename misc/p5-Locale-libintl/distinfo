@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/17 20:58:38 adrianp Exp $
-
-SHA1 (libintl-perl-1.16.tar.gz) = 7a496e50ea3c6674202e556c1a7d9f1fc3357eb5
-RMD160 (libintl-perl-1.16.tar.gz) = b72df501fd6744cc78d762f0d7b274211c807d9c
-Size (libintl-perl-1.16.tar.gz) = 465597 bytes

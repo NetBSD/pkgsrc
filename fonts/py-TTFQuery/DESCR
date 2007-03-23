@@ -1,3 +1,0 @@
-Python module using FontTools to query TTF font files for metadata and
-font outlines in a cross-platform manner.  Includes support for
-scanning for installed system TTF files on common platforms.

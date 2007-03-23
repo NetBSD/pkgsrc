@@ -1,9 +1,0 @@
-This program is a Gtk+/Gtk-- front end for the efax program for
-receiving and sending faxes with a fax modem.  To use it you must have
-efax and ghostscript installed, and the executables (efax, efix and
-gs) must be situated in the default system path.
-
-Any files to be faxed must be in postscript format, which is the
-generic printer format for Unix/Linux systems.  The program will use
-ghostscript to convert these into the Group 3 fax format which the fax
-modem will understand.

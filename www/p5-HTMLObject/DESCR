@@ -1,4 +1,0 @@
-The HTML Document Object is a Perl Module that allows you to quickly and
-easily create Dynamic HTML pages without having to specify the framework.
-You specify the content and it does all the work. Supports HTML 4.0, cookies,
-frames, javascript, etc.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 14:25:50 taca Exp $
-
-SHA1 (ruby-bsearch-1.5.tar.gz) = d3af447d03a3e0a78e7f5a8b1965a9f482b8a2c1
-RMD160 (ruby-bsearch-1.5.tar.gz) = 17f4e241050aa6ac0792baf4d005a54b8c1d7ec7
-Size (ruby-bsearch-1.5.tar.gz) = 14836 bytes

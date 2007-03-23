@@ -1,2 +1,0 @@
-This module provides a shared memory cache (in SysV IPC shared
-memory) accessed as a tied hash.

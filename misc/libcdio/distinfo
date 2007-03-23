@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.13 2006/08/27 23:27:05 dbj Exp $
-
-SHA1 (libcdio-0.76.tar.gz) = 55c738eb118e4d0f08b4af965899eb0c79b21906
-RMD160 (libcdio-0.76.tar.gz) = 3ebce21179c04c5a8d721d485a28244de9ac82f3
-Size (libcdio-0.76.tar.gz) = 1821519 bytes
-SHA1 (patch-aa) = 8e70ee2840c19da3efc0c47dfa9f7ea400a1ec2e
-SHA1 (patch-ab) = 730adf8fd064877ec9691193027aa6dc5b7c6cc5
-SHA1 (patch-ac) = 2ed1f677b863c48d724dce6386ae960822a66a16

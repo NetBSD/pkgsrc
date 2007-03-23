@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/04 10:22:21 drochner Exp $
-bin/tsocks
-lib/libtsocks.la
-man/man1/tsocks.1
-man/man5/tsocks.conf.5
-man/man8/tsocks.8
-share/examples/tsocks/tsocks.conf.complex
-share/examples/tsocks/tsocks.conf.simple
-@dirrm share/examples/tsocks

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:14:04 agc Exp $
-
-SHA1 (spread-src-3.17.3.tar.gz) = a3085dd225264a4223eff3346b6b5de64ac2dfc6
-RMD160 (spread-src-3.17.3.tar.gz) = 92def613d602d743d4f7c433f70f0b234bf47feb
-Size (spread-src-3.17.3.tar.gz) = 299975 bytes
-SHA1 (patch-ba) = 795938504e97da34e83e9e66b8b81ff894cbb5b4
-SHA1 (patch-bb) = 6b2e9ef29802c6f60776d7be4046087f96b8ffcb
-SHA1 (patch-bd) = d39aed08e98e81bca572a429c511ffb400b020c3

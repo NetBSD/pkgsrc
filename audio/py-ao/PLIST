@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/15 21:50:47 minskim Exp $
-${PYSITELIB}/aomodule.so

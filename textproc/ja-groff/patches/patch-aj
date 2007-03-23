@@ -1,9 +1,0 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
---- devnippon/DESC.proto.orig	Mon May 31 13:36:29 1999
-+++ devnippon/DESC.proto	Mon May 31 14:39:40 1999
-@@ -6,4 +6,4 @@
- fonts 6 R I B BI M G
- ondemand M G
- tcommand
--postpro grotty
-+postpro jgrotty

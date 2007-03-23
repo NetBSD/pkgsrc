@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/22 18:52:00 jlam Exp $
-
-SHA1 (qalculate-bases-0.9.4.tar.gz) = 71f4071bfd6217eb30788c41e95c531cca55b610
-RMD160 (qalculate-bases-0.9.4.tar.gz) = be0c2e11eaca3dfce064b751903249486264f857
-Size (qalculate-bases-0.9.4.tar.gz) = 368685 bytes
-SHA1 (patch-aa) = 8bafc00b8daa26fe72c88f7415f8dceaf748b3e1
-SHA1 (patch-ab) = f162586746600d18621068ca6af94c9f00f559dd

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/02/02 18:20:59 joerg Exp $
-
-SHA1 (epeg-0.9.0.tar.gz) = 06485f476078624cb847ed0bae0381663fc30301
-RMD160 (epeg-0.9.0.tar.gz) = b4835ddea6c7a64fdd3fa769af4866f53b7ebf17
-Size (epeg-0.9.0.tar.gz) = 2340371 bytes
-SHA1 (patch-aa) = c71d5b423992d4e9fff55123e73760272755bd27

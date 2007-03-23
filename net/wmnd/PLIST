@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 13:02:24 rpaulo Exp $
-bin/wmnd
-man/man1/wmnd.1
-share/wmndrc

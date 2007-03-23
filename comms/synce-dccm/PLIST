@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/13 15:05:16 wiz Exp $
-bin/dccm
-bin/synce-sound
-man/man1/dccm.1
-man/man1/synce-sound.1

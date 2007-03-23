@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:03:10 agc Exp $
-
-SHA1 (pyfunge-0.2-beta1.tar.gz) = 98fa7f2411b0c026adeefb389a4370e8f1786eaa
-RMD160 (pyfunge-0.2-beta1.tar.gz) = c58136f1fc4915e3536cefba228f9c6d3dfb2bf1
-Size (pyfunge-0.2-beta1.tar.gz) = 17442 bytes

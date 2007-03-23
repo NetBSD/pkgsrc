@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/11/28 23:04:54 agc Exp $
-
-SHA1 (xchrono.shar) = 8cc61b949ff4c1972cfa810831d562d058fa9e2f
-RMD160 (xchrono.shar) = 8d599f4e594cc0a43c3425841ac8a6670daeaf7e
-Size (xchrono.shar) = 56292 bytes
-SHA1 (patch-aa) = 59c5946422c0ac76907e1d512dd64b9a1899029d
-SHA1 (patch-ab) = 73c54769d4c915e1d19f0c94e84731d65a5c5ec4
-SHA1 (patch-ac) = af11c1aeb2cd507896082573756f85522e885bd2

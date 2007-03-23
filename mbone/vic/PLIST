@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:35:12 zuntum Exp $
-bin/histtolut
-bin/vic
-man/man1/vic.1

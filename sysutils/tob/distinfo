@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/19 23:56:13 rillig Exp $
-
-SHA1 (tob-0.25.tgz) = 71a5bb9dac7c2d4aa800392213b11e9616370b80
-RMD160 (tob-0.25.tgz) = 31ce5e85a10835909834853f1f95077cd3ad9542
-Size (tob-0.25.tgz) = 107423 bytes
-SHA1 (patch-aa) = b1c758fbe293a25e22a7f4849fe82ed60277a883
-SHA1 (patch-ab) = a4c27f1b93a669f2be0a6f2579e528c583393be8

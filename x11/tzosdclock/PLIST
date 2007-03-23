@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/28 02:46:19 minskim Exp $
-bin/tzosdclock
-man/man1/tzosdclock.1

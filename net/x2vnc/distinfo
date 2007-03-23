@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/01/16 13:22:25 abs Exp $
-
-SHA1 (x2vnc-1.7.2.tar.gz) = aa1ed718e04e6beb3e7db94325198fdf330d8d1e
-RMD160 (x2vnc-1.7.2.tar.gz) = a656365f2b09dd328594d092c1269fcc5c4841c6
-Size (x2vnc-1.7.2.tar.gz) = 82258 bytes
-SHA1 (patch-aa) = 828098e52990d897c49301bf73dbc83258c905da

@@ -1,3 +1,0 @@
-Combine multi-dimensional arrays. This is a generalization of cbind
-and rbind. Takes a sequence of vectors, matrices, or arrays and
-produces a single array of the same or higher dimension.

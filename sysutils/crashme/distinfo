@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (crashme-2.4-shar) = 0648322959634f21e61a5d5e1b308e3c89dc2841
-RMD160 (crashme-2.4-shar) = 0a4252a7b03bddad60cd522565142279d18f91b8
-Size (crashme-2.4-shar) = 57010 bytes
-SHA1 (patch-aa) = 01f981d1ac274bf00ba8d5f9ddcad8aeeaf3dffb
-SHA1 (patch-ab) = 2dc1213fe4621b947a9ce8d589925a9bd83653e0

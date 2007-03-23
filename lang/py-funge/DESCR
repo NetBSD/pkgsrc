@@ -1,4 +1,0 @@
-PyFunge is a Funge-98 interpreter written in Python. It includes almost
-all of features found in the Funge-98 specification and also provides
-some other features like fingerprints. PyFunge is written in object-
-oriented fashion and designed to be extensible from ground up.

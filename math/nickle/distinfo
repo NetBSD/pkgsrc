@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/03/13 10:55:12 drochner Exp $
-
-SHA1 (nickle-2.56.tar.gz) = f8672a60c41d21da2fe40eb12beafb485bf14211
-RMD160 (nickle-2.56.tar.gz) = 29cb2473764d6d5f80466c1638729e30539da124
-Size (nickle-2.56.tar.gz) = 399957 bytes
-SHA1 (patch-aa) = a28227fc17d71fbfc9a588597ee868b0f662bba2

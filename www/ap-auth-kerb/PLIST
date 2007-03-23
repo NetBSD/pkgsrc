@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/15 12:05:43 markd Exp $
-lib/httpd/mod_auth_kerb.so

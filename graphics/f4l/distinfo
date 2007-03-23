@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/04/19 12:46:21 adam Exp $
-
-SHA1 (f4l-0.2.1.tar.bz2) = cae8077e5c6a87a406c78b615fdb69e78a30d330
-RMD160 (f4l-0.2.1.tar.bz2) = 318a6c222466637b6f8d7fe955caacb0d1ee35f5
-Size (f4l-0.2.1.tar.bz2) = 1502767 bytes
-SHA1 (patch-aa) = da7d819893dbbb48ffdb45f14fc72573a59c99bb

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/09/07 05:39:37 adam Exp $
-
-SHA1 (0verkill-0.16.tgz) = 6ce4152f20709175e0bad80cc79ec00e2064a100
-RMD160 (0verkill-0.16.tgz) = fdf7a132dfa0312d8d732b2bf2999e7264685eec
-Size (0verkill-0.16.tgz) = 276579 bytes
-SHA1 (patch-aa) = 76aabb51290a414298dcb4a9c954b0f41467ca3f
-SHA1 (patch-ab) = 01793413fb1f2eafeaed2dc5d7532b2269a8d38a

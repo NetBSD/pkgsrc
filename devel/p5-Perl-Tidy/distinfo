@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:28 agc Exp $
-
-SHA1 (Perl-Tidy-20031021.tar.gz) = c76530bb52fa43dff2827466644b4adc134c9ecf
-RMD160 (Perl-Tidy-20031021.tar.gz) = 1c7a6b231d965933612d2d5b01b1db64e24db366
-Size (Perl-Tidy-20031021.tar.gz) = 327155 bytes

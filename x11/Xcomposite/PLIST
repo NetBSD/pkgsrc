@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 12:42:39 wiz Exp $
-include/X11/extensions/Xcomposite.h
-lib/libXcomposite.la
-lib/pkgconfig/xcomposite.pc

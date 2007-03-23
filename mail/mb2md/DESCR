@@ -1,7 +1,0 @@
-Mb2md.pl is a Perl script that takes one or more Mbox format mailbox
-files in a directory and convert them to Maildir format mailboxes.
-Mb2md.pl does not only convert mailbox files into a Maildir but
-also the /var/spool/mail/$USER mailspool file. It is smart enough
-to not transfer a dummy message such as the UW IMAPD puts at the
-start of Mbox mailboxes - and you could add your own search terms
-into the script to make it ignore other forms of dummy first message.

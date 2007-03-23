@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/07/27 09:03:28 rillig Exp $
-
-SHA1 (libscigraphica-2.1.1.tar.gz) = dcbadae82501f40ef366c7e543c26b289657dc60
-RMD160 (libscigraphica-2.1.1.tar.gz) = 1b04a432052ad3edd8e233349ee47f4f99bb1a4a
-Size (libscigraphica-2.1.1.tar.gz) = 774288 bytes
-SHA1 (patch-aa) = 950a445549cd55e2dbd1e20342b3dfec3e26fff7

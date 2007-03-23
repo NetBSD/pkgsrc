@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/09 22:03:25 xtraeme Exp $
-lib/xorg/modules/drivers/vesa_drv.la
-man/man4/vesa.4

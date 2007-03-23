@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/02/18 01:59:36 wiz Exp $
-
-SHA1 (Apache-DBI-1.05.tar.gz) = 09bc1d30c3ab9f572755d94b5d4694be4d96af6b
-RMD160 (Apache-DBI-1.05.tar.gz) = ff0e9a394ada1ae6af9f2b3c43efa08275171041
-Size (Apache-DBI-1.05.tar.gz) = 33424 bytes

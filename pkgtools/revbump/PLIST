@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/05 23:35:49 wiz Exp $
-bin/blbump
-bin/finddepends
-bin/revbump
-man/man1/blbump.1
-man/man1/finddepends.1
-man/man1/revbump.1

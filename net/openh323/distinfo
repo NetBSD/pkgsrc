@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2006/11/11 22:49:51 rillig Exp $
-
-SHA1 (openh323-v1_15_2-src-tar.gz) = e5839bc7b8ad6f26b03794672802530d72c73878
-RMD160 (openh323-v1_15_2-src-tar.gz) = a048af6d27b79384fd6d0f111bc69da3260d1af8
-Size (openh323-v1_15_2-src-tar.gz) = 3735815 bytes
-SHA1 (patch-aa) = 212a661357da355cc6c600b3de9d431bbd90a66e
-SHA1 (patch-ac) = 7bf0602cbc7f91fc68c92b4740ec178fa79c50f4
-SHA1 (patch-ba) = e54de2d0ae24e9eb51ef5c5d32c4fed7c83710f2

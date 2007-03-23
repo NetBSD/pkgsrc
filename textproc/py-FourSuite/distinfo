@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/06/29 12:47:19 joerg Exp $
-
-SHA1 (4Suite-0.12.0a3.tar.gz) = 55dacc82fe80157d1c1e6b2b1472f8c10c6dde80
-RMD160 (4Suite-0.12.0a3.tar.gz) = aa69393d1144f669861266f09d5ee2a55a10d5e4
-Size (4Suite-0.12.0a3.tar.gz) = 2306831 bytes
-SHA1 (patch-aa) = 38ddce6fa7b0cf88f7ac4a472b32866925b73c59
-SHA1 (patch-ab) = 4883418558edb2be1086a20fa74355d509d6375e
-SHA1 (patch-ac) = 9eff8edfd82a028b84faf2ec91065557b7e3a0ea

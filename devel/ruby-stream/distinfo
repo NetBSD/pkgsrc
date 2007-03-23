@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/04 01:29:57 minskim Exp $
-
-SHA1 (stream-0.5.tgz) = 4c2ec418e978d126ba2556a727b258e3ab55c2ee
-RMD160 (stream-0.5.tgz) = 019d3c671aaf80866bc085aad735f951622c23b0
-Size (stream-0.5.tgz) = 11633 bytes
-SHA1 (patch-aa) = 837d25246c92e5c5e3d16f806ef5de4a9cf9afbf

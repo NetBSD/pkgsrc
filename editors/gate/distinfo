@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/09 14:33:34 joerg Exp $
-
-SHA1 (gate-2.06.tar.gz) = f6935bfc410550e52725db7c1859e6ed9f6ea9e7
-RMD160 (gate-2.06.tar.gz) = 3b1fb285dbeccf7dd09504f4596d8e7387b14c8a
-Size (gate-2.06.tar.gz) = 58677 bytes
-SHA1 (patch-aa) = fb2074f4f3b8bf86ba9c25b46b50d6e259804f45

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/04/07 03:01:36 minskim Exp $
-
-SHA1 (lgrind.tar.bz2) = 152d92ccdcb9bc7342f6aec6c4c009d124f7e812
-RMD160 (lgrind.tar.bz2) = c32b0002d95e3dec58d03ba39e58dd798058e0eb
-Size (lgrind.tar.bz2) = 90624 bytes
-SHA1 (patch-aa) = fe4cfcebbfe2a4fb6f202cbbd9b3bc4c798c343d
-SHA1 (patch-ab) = a843a7bfda99fb073f809b42339c409a13864f70
-SHA1 (patch-ac) = 61ded0486a4f6c135fb26a4cf185a197f9ce1db3
-SHA1 (patch-ad) = a475dd078de2d92ffdd23592fd16ae489cec5dee

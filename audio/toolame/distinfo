@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/07/30 11:30:03 grant Exp $
-
-SHA1 (toolame-02l.tgz) = 9f58345ec5d552f49a9ad598e6eb2dc126cb10b4
-RMD160 (toolame-02l.tgz) = 65ff0757f48080093df9e1932b5952199d03f5c6
-Size (toolame-02l.tgz) = 127493 bytes
-SHA1 (patch-aa) = 44633513f0ad2768ad1531ab41e059659d661630
-SHA1 (patch-ab) = 3dae25436a931eea5fe33aa0dcca16c46e529ed7
-SHA1 (patch-ac) = 6a4df822e31858a52203a62ce8d5d1f20931dbbb
-SHA1 (patch-ad) = 9b3f8fc15012714da8b1c701103b5aa2ed77ac87

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:58 agc Exp $
-
-SHA1 (INET6-2.01.tar.gz) = eca150f728c492d7a6076a2c6698a534ccd1b520
-RMD160 (INET6-2.01.tar.gz) = 5685dfe0402d8d57ed8a0fb3ef43816437e4f374
-Size (INET6-2.01.tar.gz) = 8628 bytes

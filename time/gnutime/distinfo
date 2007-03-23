@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/08 04:22:55 jlam Exp $
-
-SHA1 (time-1.7.tar.gz) = dde0c28c7426960736933f3e763320680356cc6a
-RMD160 (time-1.7.tar.gz) = 547a9bb4bc0b3a34046be8381e9c142977ffd402
-Size (time-1.7.tar.gz) = 103066 bytes
-SHA1 (patch-aa) = 73cf3ec312be4df97340a77f66c29b59c2afbf18
-SHA1 (patch-ab) = 25f61d7e4bbabc3c5f1a99987d059b279e20576a

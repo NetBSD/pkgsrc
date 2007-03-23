@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/08/15 01:51:14 erh Exp $
-
-SHA1 (Date-Business-1.2.tar.gz) = e3798fa59936b77cd6a68e4b1c51fa40732ab121
-RMD160 (Date-Business-1.2.tar.gz) = 4988f75b295b39d276d71cbe08ef14e477df7f65
-Size (Date-Business-1.2.tar.gz) = 8201 bytes
-SHA1 (patch-aa) = 772188d5ac27dffc0b36452ed51267dcc79ed647

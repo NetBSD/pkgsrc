@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:44 zuntum Exp $
-bin/emixer
-share/doc/emixer.readme

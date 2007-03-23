@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/02 19:51:05 mrg Exp $
-
-SHA1 (subtitleripper-0.3-1.tgz) = d34aac07e834fd462c89484db8fcb27bebcb8ef5
-RMD160 (subtitleripper-0.3-1.tgz) = e75c2ea9ab8b5d96c57b860ab15021b9af5a9500
-Size (subtitleripper-0.3-1.tgz) = 42382 bytes
-SHA1 (patch-aa) = b93e8276813bb6bf2a3aee797619bd1bff0f7eca
-SHA1 (patch-ab) = 22335a412899b7cdb552185ff051c7d2f2e1ba59

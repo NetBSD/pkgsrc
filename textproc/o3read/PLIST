@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/07 14:48:04 ghen Exp $
-bin/o3read
-bin/o3tohtml
-bin/o3totxt
-bin/utf8tolatin1
-man/man1/o3read.1
-man/man1/o3tohtml.1
-man/man1/o3totxt.1
-man/man1/utf8tolatin1.1

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/30 03:44:41 jlam Exp $
-bin/libmikmod-config
-include/mikmod.h
-info/mikmod.info
-lib/libmikmod.la
-man/man1/libmikmod-config.1
-share/aclocal/libmikmod.m4

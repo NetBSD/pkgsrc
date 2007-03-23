@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/22 04:08:31 minskim Exp $
-bin/ifp
-man/man1/ifp.1

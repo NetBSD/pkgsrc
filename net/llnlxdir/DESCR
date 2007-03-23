@@ -1,8 +1,0 @@
-LLNL XDIR manages files in a heterogeneous network.
-It provides a graphical user interface for drag-and-drop
-file transfer and for direct manipulation of local and
-remote directories. LLNL XDIR has the ability to view
-information in four different formats, including
-hierarchical and iconic views. Based on UNIX, the C
-programming language, OSF/Motif, and the file transfer
-protocol FTP, LLNL XDIR is highly portable.

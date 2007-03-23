@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:59 agc Exp $
-
-SHA1 (RADIUS-1.0.tar.gz) = 97c9b81dc813109be865fb1335edb446f4b9eb78
-RMD160 (RADIUS-1.0.tar.gz) = 77aad7f5d6f012b8b6eb5f0a467fe089c397a65f
-Size (RADIUS-1.0.tar.gz) = 43413 bytes

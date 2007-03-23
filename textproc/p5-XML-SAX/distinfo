@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/27 14:03:58 wiz Exp $
-
-SHA1 (XML-SAX-0.15.tar.gz) = afd1c30a7f577d6e69f831c4f0e49df68c96eccd
-RMD160 (XML-SAX-0.15.tar.gz) = 7fb288043c8328688a8557313c98e37928cb2f3d
-Size (XML-SAX-0.15.tar.gz) = 59346 bytes
-SHA1 (patch-aa) = 5f421c20185ffc0889b04cc412139ecd44545c0d

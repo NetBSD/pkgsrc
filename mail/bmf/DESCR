@@ -1,3 +1,0 @@
-This is a mail filter which uses the Bayes algorithm as explained in Paul
-Graham's article "A Plan for Spam". It aims to be faster, smaller, and more
-versatile than similar applicatios.

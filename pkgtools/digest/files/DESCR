@@ -1,2 +1,0 @@
-This utility is a wrapper for the md5(3), rmd160(3), and sha1, sha256,
-sha384 and sha512 routines.

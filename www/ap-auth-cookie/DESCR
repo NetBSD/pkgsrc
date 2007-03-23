@@ -1,4 +1,0 @@
-mod_auth_cookie.c allows a Basic authentication string to be encoded into
-a cookie (using "Header set" from mod_headers).  When a request comes in,
-both the standard Basic auth field Authorization: and the specified cookie
-are checked for auth info.

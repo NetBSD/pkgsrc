@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/09/10 04:43:13 obache Exp $
-
-SHA1 (btpd-0.11.tar.gz) = fe9379b567d40afc8341df32baf31b2d6d99938a
-RMD160 (btpd-0.11.tar.gz) = b43bcd6ece668c2f6365a940fdcc49d3275e4abe
-Size (btpd-0.11.tar.gz) = 146794 bytes

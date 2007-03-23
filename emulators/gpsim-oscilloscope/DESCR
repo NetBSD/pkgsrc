@@ -1,4 +1,0 @@
-This is an oscilloscope module for gpsim. The module provide 8 probes, which
-you have to connect to nodes. For now the graphic interface doesn't
-update its display dynamically, it provides 2 input boxes in which have to
-enter the start and end cycles to draw.

@@ -1,15 +1,0 @@
-$NetBSD: patch-az,v 1.1 2006/04/11 15:08:38 joerg Exp $
-
---- uip/ftpsbr.c.orig	2006-04-11 14:28:22.000000000 +0000
-+++ uip/ftpsbr.c
-@@ -66,10 +66,7 @@ struct hostent *gethostbystring ();
- 
- /*  */
- 
--#ifdef __CYGWIN32__
- #include <errno.h>
--#endif
--extern	int	errno;
- #if !defined(BSD44) && !defined(__GNU_LIBRARY__)
- extern	int	sys_nerr;
- extern	char   *sys_errlist[];

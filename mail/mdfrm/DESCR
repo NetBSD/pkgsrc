@@ -1,2 +1,0 @@
-This perl scipt prints a summary of mail in Maildir waiting to be read.
-When no path to Maildir is specified, it defaults to ~/Maildir

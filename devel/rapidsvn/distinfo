@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/01/19 15:04:07 joerg Exp $
-
-SHA1 (rapidsvn-0.9.4.tar.gz) = 0f8eff53964f641253d6a4be82187ab9f30168c7
-RMD160 (rapidsvn-0.9.4.tar.gz) = edbabab261b69acc78a2009f2da175b2b70c8987
-Size (rapidsvn-0.9.4.tar.gz) = 1057482 bytes
-SHA1 (patch-aa) = 05867a8dde1c9c4db512e40e99be20c89b1f3576
-SHA1 (patch-ab) = cf69091c45e089d3128f3f64f0afab28a9253605
-SHA1 (patch-ac) = e27cadc92ae14d58d051e5b6a84e645d888b825b

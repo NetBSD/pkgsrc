@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/12/17 20:09:26 minskim Exp $
-
-SHA1 (rtty-3.2.tar.gz) = 62587ee4eec0b551b2b38341f20fddebde1ee8a1
-RMD160 (rtty-3.2.tar.gz) = 03863b5fbaf27a6f254c620e91c3dcd364df926a
-Size (rtty-3.2.tar.gz) = 23445 bytes
-SHA1 (patch-aa) = 347e1522c9f4a13f821799c17a8950421ec9170a
-SHA1 (patch-ab) = 32644f9383ef43b45421fc100382509e2e6b2e34
-SHA1 (patch-ac) = 8b1b1be9eb471f68d62b4454f9bd74dddb471d75
-SHA1 (patch-ad) = dee546ca499fa4fb534f137d58fcbbb800b244d3

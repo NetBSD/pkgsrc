@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/31 23:56:29 jlam Exp $
-bin/ksba-config
-include/ksba.h
-info/ksba.info
-lib/libksba.la
-share/aclocal/ksba.m4

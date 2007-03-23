@@ -1,9 +1,0 @@
-$NetBSD: patch-ar,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
-
---- vsuite/quick/easy/Make.std.orig	1999-07-28 22:43:18.000000000 +0200
-+++ vsuite/quick/easy/Make.std
-@@ -1,3 +1,3 @@
- echo gries.mpd
--rm -rf ./MPDinter 
-+rm -rf ./MPDinter
- rm -f core a.out

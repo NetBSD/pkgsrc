@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/04 20:57:48 jschauma Exp $
-bin/capture
-bin/gbindiff
-bin/switchmode

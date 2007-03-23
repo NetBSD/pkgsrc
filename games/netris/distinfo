@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:12:01 agc Exp $
-
-SHA1 (netris-0.52.tar.gz) = 5a51f68ccb6c09fbd3a940f57d0ded52c3d3a535
-RMD160 (netris-0.52.tar.gz) = 83184b3076551fdf21b25d6c07d5b8517efd1139
-Size (netris-0.52.tar.gz) = 33135 bytes
-SHA1 (netris-0.5-v6-19991206a.diff.gz) = 554a46cf0a2ff1b37a400dcfc57c155c232a081e
-RMD160 (netris-0.5-v6-19991206a.diff.gz) = ec402813d9c63b656a54b4965fb1cf0414a76b6f
-Size (netris-0.5-v6-19991206a.diff.gz) = 5141 bytes

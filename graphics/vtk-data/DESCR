@@ -1,3 +1,0 @@
-The data files for VTK 4.2 in in a Unix-style gzipped tar file for Unix
-platforms. You will need them to run some of the VTK examples or tests.
-See vtk package for details.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/15 14:02:37 bouyer Exp $
-
-SHA1 (Dev86src-0.16.17.tar.gz) = 0bfe55c7a5e11d72f19f26cb0383178605951c72
-RMD160 (Dev86src-0.16.17.tar.gz) = b603d2cce807cd20b09695d14538cae8ab8cc371
-Size (Dev86src-0.16.17.tar.gz) = 703028 bytes
-SHA1 (patch-aa) = fb72158f52b13b12aed20e36b615e3ef0fde894e

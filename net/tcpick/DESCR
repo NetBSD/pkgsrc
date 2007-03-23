@@ -1,5 +1,0 @@
-tcpick is a textmode sniffer that can track TCP streams and saves the
-data captured in files or displays them in the terminal.  It is useful
-for picking files in a passive way.  It can store all connections in
-different files, or it can display all the stream on the terminal
-(using colors too).

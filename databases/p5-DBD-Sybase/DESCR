@@ -1,3 +1,0 @@
-DBD::Sybase is built upon the DBI, the generic Perl Database
-Interface. The Sybase backend allows access to Sybase and
-Microsoft-SQL servers.

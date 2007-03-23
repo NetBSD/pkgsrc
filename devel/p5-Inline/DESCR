@@ -1,4 +1,0 @@
-Inline lets you write Perl subroutines in other programming languages
-like C, C++, Java, Python, Tcl and even Assembly. You don't need to
-compile anything. All the details are handled transparently so you can
-just run your Perl script like normal.

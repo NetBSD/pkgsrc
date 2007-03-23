@@ -1,3 +1,0 @@
-A simple set of tools to help you author a DVD. The idea is to be able to
-create menus, buttons, chapters, etc, but for now you can just take an MPEG
-stream (as created by mplex -f 8 from mjpegtools 1.6.0) and write it to DVD.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/02/15 21:51:51 rillig Exp $
-
-SHA1 (courier-0.53.2.tar.bz2) = 89c6a9a57467adf8c1ac815a5ffacf47e5e694a3
-RMD160 (courier-0.53.2.tar.bz2) = a6efce3a8d6572923190ea49ed6085906317ebd8
-Size (courier-0.53.2.tar.bz2) = 6942557 bytes
-SHA1 (patch-aa) = 5e3d549c96a0d25f963ecd08f8bf9f077263cd38
-SHA1 (patch-ab) = f0fd449e2784e171ee7ad8c19359d5cb95605e38

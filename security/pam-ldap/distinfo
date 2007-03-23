@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/01/15 03:24:03 taca Exp $
-
-SHA1 (pam_ldap-183.tar.gz) = a41ae31a32f84cc9add59e4ac7502fcc94f0eb04
-RMD160 (pam_ldap-183.tar.gz) = 42c8622677c44b521569b906b1cf53d0e605ed39
-Size (pam_ldap-183.tar.gz) = 127500 bytes
-SHA1 (patch-aa) = 4fb701c85005106c2b3d9cf90590856e16b668ff
-SHA1 (patch-ab) = 1c1a13dccaab43b88565a03abe9b5706a6a2b54d

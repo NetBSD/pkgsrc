@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:29 agc Exp $
-
-SHA1 (oto-0.4.tar.gz) = 9a467e864d4945f8a47125cc41a4723a973d93d3
-RMD160 (oto-0.4.tar.gz) = 5dd93ad47e7a8c8123206de4bf93af1b7c7a7895
-Size (oto-0.4.tar.gz) = 264000 bytes
-SHA1 (patch-aa) = a7ea2508f7d6d57a892c1f8b3f89bfdf464abd6c

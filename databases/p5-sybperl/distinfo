@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:08 agc Exp $
-
-SHA1 (sybperl-2.16.tar.gz) = 1908abd8101e6ecd27bcda0873128fb36f37c81a
-RMD160 (sybperl-2.16.tar.gz) = d26ca6dc0114f6683bf88c5dfb8703fb2415e8fa
-Size (sybperl-2.16.tar.gz) = 214646 bytes
-SHA1 (patch-aa) = c3c07aa96f26d04d687d31349b8fb9ef0bbb204e

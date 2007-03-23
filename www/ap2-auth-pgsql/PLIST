@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/07 21:02:43 reed Exp $
-lib/httpd/mod_auth_pgsql.so
-@unexec echo "===>  If you do not plan on reinstalling mod_auth_pgsql, you must manually remove"; echo "===>  references to it in httpd.conf."

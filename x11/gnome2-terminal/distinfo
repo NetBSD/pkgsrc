@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.22 2007/03/23 16:24:13 drochner Exp $
-
-SHA1 (gnome-terminal-2.16.1.tar.bz2) = a969fe3203a622a68fbde1f377d0e48234a27a72
-RMD160 (gnome-terminal-2.16.1.tar.bz2) = a14799916a97d83e866b0245b4883438a57d94f6
-Size (gnome-terminal-2.16.1.tar.bz2) = 1840537 bytes
-SHA1 (patch-aa) = 852623004e3aa680be4c090bb58fd23ac0055aa1
-SHA1 (patch-ab) = c32fe51f97ec7f244c8a5f46e7a13acf2daa2478
-SHA1 (patch-ac) = 0f7f7f64abd8f614e44c068ac398afe92c5506aa
-SHA1 (patch-ad) = add6a73961a5dd99b5f1ff67d9e0f5ce4e64fe19

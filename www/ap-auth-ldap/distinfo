@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/15 16:25:41 kleink Exp $
-
-SHA1 (auth_ldap-1.6.1.tar.gz) = 37e163ee78c5f25ef1ef951cecd4d603dbf55cf4
-RMD160 (auth_ldap-1.6.1.tar.gz) = 165c00e37552705843381e98db73e458f6d8026c
-Size (auth_ldap-1.6.1.tar.gz) = 82718 bytes
-SHA1 (patch-aa) = 1780795616eb3942f395ebb5ff948fe5ebd6f390

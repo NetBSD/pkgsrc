@@ -1,3 +1,0 @@
-The Perl 5 module Text::RewriteRules uses a simplified syntax for
-regexp-based rules for rewriting text. You define a set of rules,
-and the system applies them until no more rule can be applied

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/27 12:02:16 wiz Exp $
-
-SHA1 (p11-2.10i.tar.bz2) = 7e485e4736f70ae907c22d37d57cfb5e1ae95b51
-RMD160 (p11-2.10i.tar.bz2) = c5038d908fabf37fe122c6616a13551b2a8265df
-Size (p11-2.10i.tar.bz2) = 372597 bytes
-SHA1 (patch-aa) = 6b71f678ec2e8ae3acbcbdbe61af0c4e77684c5f
-SHA1 (patch-ab) = 0c6956dbb47927ac15572ae66509384993a08278
-SHA1 (patch-ac) = 77a747358e0524f07ad86a388737d5c98390dd26

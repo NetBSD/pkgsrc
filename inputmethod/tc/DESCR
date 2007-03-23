@@ -1,8 +1,0 @@
-TC2 provides T-Code and TUT-Code input methods for Emacs users. T-Code
-and TUT-Code are called "Kanji Direct Input Method", and desiged to be
-more efficient Japanese input method than Kana-Kanji translation.
-
-For more infomation, please look into these web sites.
-
-T-Code   -> http://openlab.ring.gr.jp/tcode/index.html
-TUT-Code -> http://www.crew.sfc.keio.ac.jp/~chk/

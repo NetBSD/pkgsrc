@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/10 20:05:09 rillig Exp $
-
-SHA1 (crack-attack-1.1.14.tar.gz) = fbf445f95d77267d23a766a485fd55edbd333bb4
-RMD160 (crack-attack-1.1.14.tar.gz) = 81ff2e601455362e1106cf5ef4b735cbd4497081
-Size (crack-attack-1.1.14.tar.gz) = 975066 bytes
-SHA1 (patch-aa) = 7d5ad43d9312d417dd28fb8903fc544e6f8b9539

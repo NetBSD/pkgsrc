@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/01/07 08:28:05 rillig Exp $
-
-SHA1 (denemo-0.7.6.tar.gz) = 6cb41657052964e69235722cf789f32cd4a29b9b
-RMD160 (denemo-0.7.6.tar.gz) = 2c3805fc9d608a4a9fcdc093f4a712423dd40169
-Size (denemo-0.7.6.tar.gz) = 1947693 bytes
-SHA1 (patch-configure) = e713b0073a24b46838e3e61f06f3a551ac0bf934
-SHA1 (patch-midic) = 71d411805173650c9a4ee533334a246995b74bd0

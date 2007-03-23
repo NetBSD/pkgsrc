@@ -1,5 +1,0 @@
-The Palm database archiver (pdbar) creates and manipulates PalmOS
-database (.pdb) and resource (.prc) files.  Pdbar is designed to be a
-Swiss army knife for managing these files.  It's a command line tool,
-and not for the faint of heart, but it's very handy and replaces a
-bunch of little utilities that you might otherwise use.

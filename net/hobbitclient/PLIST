@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/16 08:51:46 manu Exp $
-etc/hobbitc.conf
-bin/hobbitc
-man/man8/hobbitc.8

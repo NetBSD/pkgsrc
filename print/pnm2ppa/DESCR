@@ -1,6 +1,0 @@
-pnm2ppa, a PPM to PPA converter, creates output using the PPA (printer
-performance architecture) protocol.  This protocol is used by some HP
-"Windows-only" printers, including the HP Deskjet 720C series, the HP
-DeskJet 820 series, and the HP DeskJet 1000 series.  It has been
-tested on all three series, but your personal experience (positive or
-negative) is very much appreciated!

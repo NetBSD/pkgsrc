@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/05/31 17:47:45 bouyer Exp $
-
-SHA1 (vmpsd-1.3.tar.gz) = 39a8f925191690f209d9f1609321f20360810cf1
-RMD160 (vmpsd-1.3.tar.gz) = 1185fbd654d5d0e939fdfa08149d1ebcb3fc0ef2
-Size (vmpsd-1.3.tar.gz) = 95202 bytes
-SHA1 (patch-aa) = 03618ae72addfe881745a0bb94f7943b8c4cb749
-SHA1 (patch-ab) = a30282863432d654669643103de3711da6d53620
-SHA1 (patch-ac) = c5871b991808ca33d9ad0a7ee89ea1f1a4b0e803
-SHA1 (patch-ad) = 7fa3bf093f35264b1b10003fb3747fd736d12c5d

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.21 2007/01/19 12:59:01 uebayasi Exp $
-
-SHA1 (Gauche-0.8.9.tgz) = 5d150708e3363e56b7e99e483d7f8e19937e9916
-RMD160 (Gauche-0.8.9.tgz) = b9b5a78e99c65db31c4fe6e3f6e90083a928f1e6
-Size (Gauche-0.8.9.tgz) = 3080645 bytes
-SHA1 (patch-aa) = 4051468ba1fee56927f0d1bc61b7310432655279
-SHA1 (patch-ae) = ab7aacbfe88450674cf56458c6000bc895b6f91e
-SHA1 (patch-af) = cfa1772da7f0dd90a9f4a53c2d1e0b27a74a24ee
-SHA1 (patch-ag) = ee9946e364d6723b0efe3b260fc5d02ccb04621d

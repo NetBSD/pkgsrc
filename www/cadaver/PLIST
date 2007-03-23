@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:25 zuntum Exp $
-bin/cadaver
-man/man1/cadaver.1

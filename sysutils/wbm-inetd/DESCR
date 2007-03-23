@@ -1,2 +1,0 @@
-This is the standard "inetd" Webmin module to edit services in
-/etc/inetd.conf, /etc/services and /etc/rpc.

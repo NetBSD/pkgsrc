@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/11 20:48:55 xtraeme Exp $
-man/man8/mklivecd.8
-sbin/mklivecd
-share/mklivecd/KERN-LIVECD
-share/mklivecd/livecd
-share/mklivecd/personal_config
-@dirrm share/mklivecd

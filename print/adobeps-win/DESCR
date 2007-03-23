@@ -1,8 +1,0 @@
-Adobe PostScript printer drivers for MS Windows 9x/NT to use CUPS as a
-networked PostScript RIP (raster image processor), handling printfiles
-from all client platforms in a uniform way, and enabling clients to
-consolidate on a single PostScript driver, even for many different target
-printers.
-
-Please see the Samba and CUPS documentation for more information on how
-to set this up.

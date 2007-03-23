@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/31 12:57:48 taca Exp $
-${RUBY_SITEARCHLIBDIR}/quota.${RUBY_DLEXT}
-${RUBY_DOCDIR}/quota/ChangeLog
-${RUBY_DOCDIR}/quota/README
-@dirrm ${RUBY_DOCDIR}/quota

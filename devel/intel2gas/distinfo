@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:16 agc Exp $
-
-SHA1 (intel2gas-1.3.3.tar.gz) = 755e5a4739586944f974a1e39056cd20f150db65
-RMD160 (intel2gas-1.3.3.tar.gz) = 84b1bdf8c448967e72637bcf2082d57a2e433d5a
-Size (intel2gas-1.3.3.tar.gz) = 48460 bytes
-SHA1 (patch-aa) = 379ca4e385ce9b6e706fa5376a6a2e962146cbb0

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/31 15:10:05 obache Exp $
-
-SHA1 (Module-ScanDeps-0.68.tar.gz) = cbe8490c7b601dac8eae073d55206dd20c282ea4
-RMD160 (Module-ScanDeps-0.68.tar.gz) = 9b218669b3e85b99fd73204e5ee19d2ca0d8ade6
-Size (Module-ScanDeps-0.68.tar.gz) = 31023 bytes

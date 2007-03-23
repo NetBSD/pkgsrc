@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:25 agc Exp $
-
-SHA1 (IO-LockedFile-0.23.tar.gz) = 4c285e28abb29e97673faa0f6bee646336dc929d
-RMD160 (IO-LockedFile-0.23.tar.gz) = a6f6851f5a51c5092c29328909c7786eb7740564
-Size (IO-LockedFile-0.23.tar.gz) = 7599 bytes

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/03/11 13:06:22 wiz Exp $
-
-SHA1 (sed-3.02.tar.gz) = 049d525abe926a7eec9d210d49181f5bf046f7b7
-RMD160 (sed-3.02.tar.gz) = 7d0e9900679ff8fa4fd459d4826f131f765baa6c
-Size (sed-3.02.tar.gz) = 264236 bytes
-SHA1 (sedmb109.diff.gz) = 50cd987951246ad1f5423d5e4558b28764a47477
-RMD160 (sedmb109.diff.gz) = f3f671546f65830ab0bde1e8e6fe063aee42f220
-Size (sedmb109.diff.gz) = 61399 bytes

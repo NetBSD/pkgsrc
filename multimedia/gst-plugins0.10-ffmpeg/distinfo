@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/05 11:00:33 drochner Exp $
-
-SHA1 (gst-ffmpeg-0.10.2.tar.gz) = 85aae07974d205a5ae43faa59dbf1682bfe2d279
-RMD160 (gst-ffmpeg-0.10.2.tar.gz) = 56bf6b83d5f3e92cbc950ea74647115b8de199f9
-Size (gst-ffmpeg-0.10.2.tar.gz) = 3178012 bytes
-SHA1 (patch-aa) = fb68f2532357188d1e06bc0933c78ec1ff239806
-SHA1 (patch-ab) = 7bc130cd85cab998e497a473deb9e406ea7cf67f

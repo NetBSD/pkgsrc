@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/05 14:24:38 joerg Exp $
-
-SHA1 (kmp-0.01.tar.bz2) = 7da2b6b71b9c41ca7429479c683cbbfc62d980c1
-RMD160 (kmp-0.01.tar.bz2) = ba880f7483dcb0f4772a7f41cd79ef1309fd5e58
-Size (kmp-0.01.tar.bz2) = 486474 bytes
-SHA1 (patch-aa) = 8ca65b5df3b68b18773ca0b9c34b3e5cde21bdd6
-SHA1 (patch-ab) = 31f7fab9191384b2f16eb87f854fed63f3244f72

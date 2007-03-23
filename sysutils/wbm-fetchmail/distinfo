@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:41:23 jlam Exp $
-
-SHA1 (webmin-modules-1.270/fetchmail.wbm.gz) = 5e323e420838286b8c46c556623e94daceb90d6e
-RMD160 (webmin-modules-1.270/fetchmail.wbm.gz) = 98778c24431bf71d60176b1b5399e26236fe5827
-Size (webmin-modules-1.270/fetchmail.wbm.gz) = 36075 bytes

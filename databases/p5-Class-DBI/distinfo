@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/02/16 11:21:55 abs Exp $
-
-SHA1 (Class-DBI-v3.0.14.tar.gz) = 1935dc1b3e8bcec1f7e53f29d0d1e884d0246bf1
-RMD160 (Class-DBI-v3.0.14.tar.gz) = 2364b48113c5960ebe4fdfbcae5510b265800be9
-Size (Class-DBI-v3.0.14.tar.gz) = 105104 bytes

@@ -1,13 +1,0 @@
-$NetBSD: patch-ab,v 1.4 2006/06/03 01:13:40 joerg Exp $
-
---- src/regex.c.orig	2006-06-03 01:04:53.000000000 +0000
-+++ src/regex.c
-@@ -297,7 +297,7 @@ init_syntax_once ()
- # endif /* emacs */
- 
- /* Integer type for pointers.  */
--# if !defined _LIBC
-+# if !defined _LIBC && !defined(__DragonFly__)
- typedef unsigned long int uintptr_t;
- # endif
- 

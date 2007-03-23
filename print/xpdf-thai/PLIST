@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/25 14:07:02 salo Exp $
-share/xpdf/thai/TIS-620.unicodeMap
-share/xpdf/thai/Thai.nameToUnicode
-@dirrm share/xpdf/thai

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/02/16 18:05:09 wiz Exp $
-
-SHA1 (Blursk-1.3.tar.gz) = b9ee5c50c3810d017cb09eace004610ad739c118
-RMD160 (Blursk-1.3.tar.gz) = 5a0dbaa5f800a998981c79b5a91b827aeecac0ad
-Size (Blursk-1.3.tar.gz) = 345631 bytes
-SHA1 (blursk-presets) = 828924d46de93401bb83b20548040f00e96a85c9
-RMD160 (blursk-presets) = 4d4bc70ee7669232d57c7ee83d2d8b7cbde37155
-Size (blursk-presets) = 16386 bytes
-SHA1 (patch-aa) = d425c1ba61e9171bd9c57972ed20d3eed9caf940

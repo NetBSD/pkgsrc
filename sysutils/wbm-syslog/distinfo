@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:43:38 jlam Exp $
-
-SHA1 (webmin-modules-1.270/syslog.wbm.gz) = a1d4bb92c259b24e4efacad1e5607baf06d9f907
-RMD160 (webmin-modules-1.270/syslog.wbm.gz) = 8aa1be1bcfb772fe085e6159d1fb1b5528634e80
-Size (webmin-modules-1.270/syslog.wbm.gz) = 38536 bytes

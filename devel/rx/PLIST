@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:43 jlam Exp $
-include/rxposix.h
-info/rx.info
-lib/librx.la

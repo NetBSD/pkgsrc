@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/08 11:46:42 wiz Exp $
-
-SHA1 (hlfl-0.60.1.tar.bz2) = 5438a393c0231852e7823591fe7ae24a7270c7c8
-RMD160 (hlfl-0.60.1.tar.bz2) = cfe4ad6903fe21a8dea57a9c991f7aec7bd76304
-SHA1 (patch-aa) = d93814f84c2719a881e1fe469134ed7aebccc7aa
-SHA1 (patch-ab) = e43f3f2cd6c4160a913c025f1ae114391048e81b
-SHA1 (patch-ac) = 2f5cdafb72ad9a62385fca574c52845c9c224e58
-SHA1 (patch-ad) = 1788ce450c83dd508a953d4b1c3d9004c026bedd
-Size (hlfl-0.60.1.tar.bz2) = 86954 bytes

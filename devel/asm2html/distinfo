@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 22:24:09 agc Exp $
-
-SHA1 (asm2html-1.4.tar.gz) = 178ed3f2f7be8d70848f5d6a6162dfd741bc8b88
-RMD160 (asm2html-1.4.tar.gz) = 8f35a7436d1b84fcda6925fcbc88a9623f2a55bd
-Size (asm2html-1.4.tar.gz) = 33975 bytes
-SHA1 (patch-aa) = f5d0660d91ab58a12f894da948751a71196cdd06
-SHA1 (patch-ab) = 1ff0f9c5acecf9d4dabd2626350e84430417aea6

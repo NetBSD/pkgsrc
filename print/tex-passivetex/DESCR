@@ -1,4 +1,0 @@
-PassiveTeX is a library of TeX macros which can be used to process an
-XML document which results from an XSL transformation to formatting
-objects.  PassiveTeX provides a rapid development environment for
-experimenting with XSL FO, using a reliable pre-existing formatter.

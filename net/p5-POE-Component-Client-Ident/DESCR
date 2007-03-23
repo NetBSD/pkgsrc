@@ -1,7 +1,0 @@
-POE::Component::Client::Ident is a POE (Perl Object Environment) component
-which provides a convenient way for POE applications to perform non-blocking
-Ident (auth/tap) protocol remote username lookups.
-
-The component will mainly of use to the authors of server daemons and server
-components which sometimes have a requirement to confirm the username provided
-by the client and, therefore, use the Ident protocol to query the remote host.

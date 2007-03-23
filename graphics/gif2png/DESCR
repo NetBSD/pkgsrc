@@ -1,4 +1,0 @@
-  The gif2png program converts files from the obsolescent Graphic Interchange
-Format to Portable Network Graphics.  The conversion preserves all graphic
-information, including transparency, perfectly.  The gif2png program can even
-recover data from corrupted GIFs.

@@ -1,5 +1,0 @@
-Przemek's info viewer is a neat alternative to the gnu "info" program.
-The lynx-like key bindings are run-time configurable, as is the linux
-console-style color scheme. Embedded URIs become links that open into
-"lynx", and email addresses into "pine" (if either or both are installed).
-It can even give the same treatment to man pages!

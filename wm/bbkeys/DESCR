@@ -1,5 +1,0 @@
-Provide keyboard shortcuts for X11R6, specifically intended for use with the
-Blackbox window manager but usable with any.
-
-Can bind actions such as executing commands, altering the states of windows,
-switching workspaces, etc. to arbitrary keys.

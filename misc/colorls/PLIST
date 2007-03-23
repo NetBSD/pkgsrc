@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:45 zuntum Exp $
-bin/colorls
-man/man1/colorls.1.gz
-man/cat1/colorls.0.gz

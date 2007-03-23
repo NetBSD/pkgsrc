@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/29 10:18:22 rh Exp $
-bin/scanadf
-bin/xcam
-bin/xscanimage
-man/man1/scanadf.1
-man/man1/xcam.1
-man/man1/xscanimage.1
-share/sane/sane-style.rc

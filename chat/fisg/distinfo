@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:11 agc Exp $
-
-SHA1 (fisg-0.2.0.tar.gz) = e145f05a7d1485ef9ac2c3cf77d3ed8ec92aaf59
-RMD160 (fisg-0.2.0.tar.gz) = 75eba29d8bc87bd6c6b02ac9d8ad2b43db9c9908
-Size (fisg-0.2.0.tar.gz) = 76700 bytes
-SHA1 (patch-aa) = 7986cc039df913aed14cafffb143ede3008ca068

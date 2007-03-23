@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:40 agc Exp $
-
-SHA1 (aspell-cy-0.50-3.tar.bz2) = 8a62c649cf99cd239449961a0d5f8942b1c02116
-RMD160 (aspell-cy-0.50-3.tar.bz2) = 981fc9aef481cea7aedd36415fc00d525ac01873
-Size (aspell-cy-0.50-3.tar.bz2) = 117652 bytes
-SHA1 (patch-aa) = e22211d1b77a79d16e2334630dc171245bb15677

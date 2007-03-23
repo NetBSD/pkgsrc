@@ -1,6 +1,0 @@
-This is a Ksi (Ksi Scheme Interpreter), a portable,
-embeddable Scheme implementation written in C.
-
-Ksi provides a machine independent execution platform that
-can be linked in as a library when building extensible programs.
-And what is more important it is not a Guile. :-)

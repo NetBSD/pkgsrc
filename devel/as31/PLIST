@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/01 04:16:58 tv Exp $
-bin/as31
-man/man1/as31.1

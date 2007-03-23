@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/22 02:37:12 joerg Exp $
-bin/xmailwatcher
-${IMAKE_MAN_DIR}/xmailwatcher.${IMAKE_MAN_SUFFIX}

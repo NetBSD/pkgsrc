@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/07/18 12:38:35 wiz Exp $
-
-SHA1 (gxmame-0.35beta1.tar.gz) = f17e6826aabc2334cffb0bcbc20842af092125cb
-RMD160 (gxmame-0.35beta1.tar.gz) = 9ed42bc9c9dacca0ef1c2e48c546fbae148b937a
-Size (gxmame-0.35beta1.tar.gz) = 760894 bytes
-SHA1 (patch-aa) = b2feb640621937f6dceacf3361f39dbdfdc782d8
