@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/02 11:27:42 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/23 15:07:21 ghen Exp $
 bin/texmaker
 share/texmaker/AUTHORS
 share/texmaker/CHANGELOG.txt
@@ -25,7 +25,6 @@ share/texmaker/doc7.png
 share/texmaker/doc8.png
 share/texmaker/doc9.png
 share/texmaker/latexhelp.html
-share/texmaker/license.txt
 share/texmaker/next.gif
 share/texmaker/next_d.gif
 share/texmaker/prev.gif
@@ -33,10 +32,6 @@ share/texmaker/prev_d.gif
 share/texmaker/psheader.txt
 share/texmaker/style.css
 share/texmaker/texmaker.desktop
-share/texmaker/texmaker.icns
-share/texmaker/texmaker.ico
-share/texmaker/texmaker.nsi
-share/texmaker/texmaker.spec
 share/texmaker/texmaker.svg
 share/texmaker/texmaker128x128.png
 share/texmaker/texmaker16x16.png
