@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.12 2007/03/15 22:14:30 rillig Exp $
+# $NetBSD: bsd.depends.mk,v 1.13 2007/03/23 21:21:33 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -7,6 +7,16 @@
 #
 #    depends, bootstrap-depends, install-depends
 #
+# The following variables may be set by the pkgsrc user:
+#
+# SKIP_DEPENDS: YesNo
+#	Whether to run the ``depends'' phase.  This is probably only
+#	useful for pkgsrc developers.
+#
+#	Default value: no
+#
+
+SKIP_DEPENDS?=	no
 
 # DEPENDS_TARGET is the target that is invoked to satisfy missing
 # dependencies.  This variable is user-settable in /etc/mk.conf.
@@ -33,7 +43,17 @@ DEPENDS_TARGET=		reinstall
 ### depends is a public target to install missing dependencies for
 ### the package.
 ###
-.include "${PKGSRCDIR}/mk/depends/depends.mk"
+.PHONY: depends
+.if ${SKIP_DEPENDS:M[Nn][Oo]} != ""
+.  include "${PKGSRCDIR}/mk/depends/depends.mk"
+.elif !target(depends)
+.  if exists(${_COOKIE.depends})
+depends:
+	@${DO_NADA}
+.  else
+depends: depends-cookie
+.  endif
+.endif
 
 ######################################################################
 ### bootstrap-depends (PUBLIC, OVERRIDE)
