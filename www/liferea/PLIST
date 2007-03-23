@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/03/13 09:57:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/03/23 16:51:20 drochner Exp $
 bin/liferea
 bin/liferea-add-feed
 bin/liferea-bin
@@ -117,6 +117,7 @@ share/locale/ja/LC_MESSAGES/liferea.mo
 share/locale/pl/LC_MESSAGES/liferea.mo
 share/locale/pt_BR/LC_MESSAGES/liferea.mo
 share/locale/ru/LC_MESSAGES/liferea.mo
+share/locale/sv/LC_MESSAGES/liferea.mo
 share/locale/tr/LC_MESSAGES/liferea.mo
 @dirrm share/liferea/xslt
 @dirrm share/liferea/pixmaps
