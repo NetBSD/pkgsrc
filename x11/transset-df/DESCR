@@ -1,0 +1,8 @@
+This is a patched version of xorg's transset
+I wanted to integrate transset into my windowmanager and to
+be able to set and unset transparency by just pressing a key.
+To make that possible I added several different 'select methods'.
+The first one was 'select by point' and lets the user run transset
+directly on the window curently under the cursor without bringing
+up the crosshair. Later select by name and id was added after insperation
+from other transset patches.
