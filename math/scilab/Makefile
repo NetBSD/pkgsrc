@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.71 2006/11/10 17:40:12 tv Exp $
+# $NetBSD: Makefile,v 1.72 2007/03/23 22:08:55 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://scilabsoft.inria.fr/download/stable/
+MASTER_SITES=	http://www.scilab.org/download/4.1/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 
-SCIBASE=	scilab-3.1.1
+SCIBASE=	scilab-4.1
 # don't forget to update SCI and SCIVERSION in the buildlink3.mk file when
 # SCIBASE is updated.
 WRKSRC=		${WRKDIR}/${SCIBASE}
@@ -75,6 +74,8 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 #		cd ${WRKSRC}/macros/${f} && ${EXTRACT_CMD}
 #.endfor
 
+# Scilab has runtime support for building shared objects that can be
+# loaded.  It needs to know the right 'make' program.
 post-patch:
 	${MV} ${WRKSRC}/macros/util/ilib_compile.sci ${WRKSRC}/macros/util/ilib_compile.sci.bak
 	${SED} 's|make -f|export PATH ; ${MAKE_PROGRAM} -f|g' \
@@ -86,9 +87,7 @@ post-patch:
 # clean up any possible leftovers from 'make test' so that our PLIST
 # will still be right.  Also clean up a reference to WRKSRC.
 pre-install:
-	cd ${WRKSRC}/tests && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
 	cd ${WRKSRC}/examples && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} distclean
-	${FIND} ${WRKSRC}/tests -name \*.blsav -print | ${XARGS} ${RM} -f
 	${FIND} ${WRKSRC}/examples -name \*.blsav -print | ${XARGS} ${RM} -f
 	${MV} ${WRKSRC}/maple/maple2scilab.mpl ${WRKSRC}/maple/maple2scilab.mpl.bak
 	${SED} 's;${WRKSRC};${PREFIX}/lib/${SCIBASE};g' ${WRKSRC}/maple/maple2scilab.mpl.bak > \
@@ -103,6 +102,8 @@ post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
 	${LN} -s ${LOCALBASE}/bin/libtool ${PREFIX}/lib/${SCIBASE}/libtool
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.guess
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.sub
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -112,9 +113,6 @@ GCC_REQD+=		2.95.3
 # fail if SCI is set to anything.
 MAKE_ENV+=	SCI=${WRKSRC:Q}
 do-test:
-	cd ${WRKSRC}/tests && \
-		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
-		 ${TEE} ${WRKDIR}/tests.log
 	cd ${WRKSRC}/examples && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		${TEE} ${WRKDIR}/examples.log

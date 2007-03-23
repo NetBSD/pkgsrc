@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.7 2004/07/15 04:00:47 dmcmahill Exp $
+$NetBSD: patch-al,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
 
---- examples/interface-tour-so/Makefile.orig	Mon Jul  8 07:49:02 2002
+--- examples/interface-tour-so/Makefile.orig	2006-01-04 14:40:34.000000000 +0000
 +++ examples/interface-tour-so/Makefile
 @@ -15,7 +15,7 @@ tests	: all
  clean	::

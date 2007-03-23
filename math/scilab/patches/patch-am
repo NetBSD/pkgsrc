@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.7 2004/07/15 04:00:47 dmcmahill Exp $
+$NetBSD: patch-am,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
 
---- examples/interface-multi-so/lib/Makefile.orig	Mon Jul  8 10:22:28 2002
+--- examples/interface-multi-so/lib/Makefile.orig	2002-07-08 10:22:28.000000000 +0000
 +++ examples/interface-multi-so/lib/Makefile
 @@ -18,7 +18,7 @@ tests	: all
  clean	::

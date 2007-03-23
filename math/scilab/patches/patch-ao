@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.9 2005/09/07 10:48:47 dmcmahill Exp $
+$NetBSD: patch-ao,v 1.10 2007/03/23 22:08:57 dmcmahill Exp $
 
---- ocaml/Makefile.orig	2005-04-28 06:53:48.000000000 +0000
+--- ocaml/Makefile.orig	2005-09-05 08:55:04.000000000 +0000
 +++ ocaml/Makefile
-@@ -30,7 +30,7 @@ PLATFORM=$(shell uname -s)
+@@ -31,7 +31,7 @@ PLATFORM=$(shell uname -s)
  EXE=../bin/modelicac
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.9 2005/09/07 10:48:47 dmcmahill Exp $
  
  
  
-@@ -64,12 +64,12 @@ EXE=../bin/modelicac
+@@ -65,12 +65,12 @@ EXE=../bin/modelicac
  	@$(OCAMLOPT) $(OCAMLOPTFLAGS) -c $(<)
  
  

@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.7 2003/02/24 03:35:30 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
 
---- tests/pvm.tst.orig	Wed Jul 31 07:34:45 2002
-+++ tests/pvm.tst
-@@ -39,7 +39,7 @@ if size(rest(4),'*')<>n then pause,end
- 
- if type(rest(5))<>10 then pause,end
- if size(rest(5),'*')<>n then pause,end
--if rest(5)(n)<>'scilab' then pause,end
-+if rest(5)(n)<>SCI+'/bin/scilab' then pause,end
- if or(rest(5)(1:n-1)<>"") then pause,end
- 
- if rest(6)<>n then pause,end
+--- routines/os_specific/getmemory.h.orig	2006-10-26 15:52:25.000000000 +0000
++++ routines/os_specific/getmemory.h
+@@ -21,7 +21,7 @@
+         #endif
+       #endif
+    #endif
+-   #if defined(__alpha)	&& !defined(linux)
++   #if defined(__alpha)	&& !defined(linux) && !defined(__NetBSD__)
+      #include <sys/sysinfo.h> 
+      #include <machine/hal_sysinfo.h>
+    #endif
