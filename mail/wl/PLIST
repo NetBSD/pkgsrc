@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/22 20:26:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/03/23 02:43:22 jnemeth Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -55,6 +55,8 @@ ${EMACS_LISPPREFIX}/wl/elmo-pop3.el
 ${EMACS_LISPPREFIX}/wl/elmo-pop3.elc
 ${EMACS_LISPPREFIX}/wl/elmo-sendlog.el
 ${EMACS_LISPPREFIX}/wl/elmo-sendlog.elc
+${EMACS_LISPPREFIX}/wl/elmo-shimbun.el
+${EMACS_LISPPREFIX}/wl/elmo-shimbun.elc
 ${EMACS_LISPPREFIX}/wl/elmo-signal.el
 ${EMACS_LISPPREFIX}/wl/elmo-signal.elc
 ${EMACS_LISPPREFIX}/wl/elmo-spam.el

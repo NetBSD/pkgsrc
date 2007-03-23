@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 20:26:45 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/03/23 02:43:22 jnemeth Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 
@@ -19,6 +19,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 .endif
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim>=1.14.7:../../devel/flim
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}emacs-w3m>=1.19:../../www/emacs-w3m
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214
 
