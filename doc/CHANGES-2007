@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.692 2007/03/23 06:27:39 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.693 2007/03/23 12:53:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/nspluginwrapper version 0.9.91.3 [abs 2007-03-22]
 	Updated mail/wl to 2.14.0nb5 [jnemeth 2007-03-22]
 	Moved chat/ser to net/ser [wiz 2007-03-23]
+	Updated textproc/icu to 3.6 [recht 2007-03-23]
