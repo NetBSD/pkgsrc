@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/02/11 14:11:07 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2007/03/23 20:04:13 drochner Exp $
 
---- gpgme/gpgme-config.in.orig	2004-05-21 21:49:29.000000000 +0200
-+++ gpgme/gpgme-config.in	2004-08-22 17:25:14.000000000 +0200
-@@ -26,8 +26,8 @@ libs_pth="@PTH_LDFLAGS@ @PTH_LIBS@"
+--- gpgme/gpgme-config.in.orig	2007-01-26 06:28:37.000000000 +0100
++++ gpgme/gpgme-config.in
+@@ -29,8 +29,8 @@ libs_pth="@PTH_LDFLAGS@ @PTH_LIBS@"
  cflags_pth="@PTH_CFLAGS@"
  
  @HAVE_PTHREAD_TRUE@thread_modules="$thread_modules pthread"
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.6 2006/02/11 14:11:07 joerg Exp $
 +libs_pthread="@PTHREAD_LIBS@"
 +cflags_pthread="@PTHREAD_CFLAGS@"
  
- output=""
- 
-@@ -98,7 +98,7 @@ while test $# -gt 0; do
+ # Configure glib.
+ libs_glib="@GLIB_LIBS@"
+@@ -114,7 +114,7 @@ while test $# -gt 0; do
  	    ;;
  	--libs)
  	    if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
