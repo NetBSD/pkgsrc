@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/08 05:52:34 minskim Exp $
-lib/${CHESS_ENGINE}/${BOOK_FILE}

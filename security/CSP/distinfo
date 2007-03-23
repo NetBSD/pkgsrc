@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/27 20:56:17 cube Exp $
-
-SHA1 (CSP-0.32.tar.gz) = 4be5535e9a39286bdd967c9d3b5538437d1ca349
-RMD160 (CSP-0.32.tar.gz) = a344e8e94c08109ebc5d98a1a43e511e8ac8c887
-Size (CSP-0.32.tar.gz) = 18241 bytes
-SHA1 (cspguide.pdf) = f527519553d7c64f625210a74435c413cd470838
-RMD160 (cspguide.pdf) = d4727fb6e4e44ad8c45d0749374843b38a340af9
-Size (cspguide.pdf) = 152084 bytes
-SHA1 (patch-aa) = ddfd76ff4c66629828a8126355e38a4bfedd2178

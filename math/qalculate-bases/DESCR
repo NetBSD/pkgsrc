@@ -1,5 +1,0 @@
-Qalculate! Bases is a utility for conversion between number bases using the
-Qalculate! library. It presents the user with a small dialog with entries for
-binary, octal, decimal and hexadecimal numbers. When a number or mathematical
-expression (using the full capabilities of Qalculate!) is typed in any of the
-entries the others are updated as-you-type.

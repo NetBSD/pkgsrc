@@ -1,3 +1,0 @@
-PyQt is a set of Python bindings for the Qt toolkit.  The
-py-qt3-qscintilla package provides the bindings for QScintilla,
-the port to Qt of the Scintilla programmer's editor class.

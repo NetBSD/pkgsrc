@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/04/11 15:32:48 taca Exp $
-
-SHA1 (ftpproxy-1.2.3.tgz) = cf3279b17ed5faa9d1f796305111a6a53559cfdc
-RMD160 (ftpproxy-1.2.3.tgz) = bf9ccceab0259363fa35c76620b163cde414132b
-Size (ftpproxy-1.2.3.tgz) = 81625 bytes
-SHA1 (patch-aa) = 6240a5d4c73a36edcaeb182ee2aa5b69cc9a1d8e

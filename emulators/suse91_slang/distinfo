@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/01/08 16:53:22 salo Exp $
-
-SHA1 (suse91/i586/slang-1.4.9-121.i586.rpm) = 3a8e5e4a0e7177c378b414e879e162833d521a67
-RMD160 (suse91/i586/slang-1.4.9-121.i586.rpm) = 759cdb055ebf67b00cbb78d0e79528a34e58a4d1
-Size (suse91/i586/slang-1.4.9-121.i586.rpm) = 233659 bytes
-SHA1 (suse91/x86_64/slang-1.4.9-112.x86_64.rpm) = ce0601d63196287c1cc471e69fefd5c02fb3e393
-RMD160 (suse91/x86_64/slang-1.4.9-112.x86_64.rpm) = 32f3a4630d1205481e7af187ec4582b88f54cdc4
-Size (suse91/x86_64/slang-1.4.9-112.x86_64.rpm) = 252704 bytes

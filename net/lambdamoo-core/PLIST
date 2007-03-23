@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 13:42:28 rillig Exp $
-share/lambdamoo/LambdaCore-12Apr99.db
-@dirrm share/lambdamoo

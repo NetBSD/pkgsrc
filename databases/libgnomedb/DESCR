@@ -1,5 +1,0 @@
-  Libgnomedb provides a rich set of UI features targeted to the development
-of data access applications.  Using libgnomedb your GTK2/GNOME2 application
-data access needs will be covered.  You'll have available, nicely
-integrated with the rest of the GNOME libraries, a whole set of data-bound
-widgets.

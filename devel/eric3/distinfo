@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/03/02 19:42:39 drochner Exp $
-
-SHA1 (eric-3.8.1.tar.gz) = 6f5679950d34ea9dd0e9228ee268ad6e0cfdb39f
-RMD160 (eric-3.8.1.tar.gz) = 7071a6e08255a49aed3f9c0d0fe8424670b5f61c
-Size (eric-3.8.1.tar.gz) = 1932346 bytes
-SHA1 (patch-aa) = c0cca341501fb55cbd05751768574986b46fbe32

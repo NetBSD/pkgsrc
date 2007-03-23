@@ -1,5 +1,0 @@
-PinePgp is set of display and sending filters which enables pine to send and
-receive signed and/or encrypted e-mails.
-
-Supported are both PGP <http://www.pgp.com/> (version 2.6.x, 5.x and 6.5.x)
-and GnuPG <http://www.gnupg.org/> (version 1.0.0 and later).

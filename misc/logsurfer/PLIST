@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/22 19:01:22 wiz Exp $
-bin/logsurfer
-man/man1/logsurfer.1
-man/man4/logsurfer.conf.4
-share/examples/logsurfer/start-mail
-@dirrm share/examples/logsurfer

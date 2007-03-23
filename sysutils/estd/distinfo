@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/01/02 23:20:06 abs Exp $
-
-SHA1 (estd-r5.tar.gz) = c73037df5ccc038f96924f9cf5c0f2c6692b6307
-RMD160 (estd-r5.tar.gz) = 657fda2908a44edbc9ac0d8714ac13462ce7bc0c
-Size (estd-r5.tar.gz) = 7035 bytes
-SHA1 (patch-aa) = 4f3aead7002525188ea8de263ed967b969905df6
-SHA1 (patch-ab) = e552aafdcfe0d2eeefb77ec1bd9e7d702a1e6711
-SHA1 (patch-ac) = 996650e19e5620a000b5667352b9c3961a78ee84

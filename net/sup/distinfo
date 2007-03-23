@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/11/09 09:34:17 rillig Exp $
-
-SHA1 (sup-0.0.tar.gz) = 7518db485449aef362fc178226249c29bc6de0d7
-RMD160 (sup-0.0.tar.gz) = a7939d2743a3a1de0c502c49db54391c29fd9db0
-Size (sup-0.0.tar.gz) = 92239 bytes
-SHA1 (patch-aa) = 9aa1343a5b3acd8bfc83726113b569471e943e13

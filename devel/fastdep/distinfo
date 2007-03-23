@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/12/20 11:05:54 joerg Exp $
-
-SHA1 (fastdep-0.16.tar.gz) = e249ac93129f81e0aff791a442ef2dfd05edad9f
-RMD160 (fastdep-0.16.tar.gz) = b805d3db264e46de9e68cbf3104c874d9fa73ddc
-Size (fastdep-0.16.tar.gz) = 70374 bytes
-SHA1 (patch-aa) = 6704d991487d570da3cf475d03f1620febabc3aa
-SHA1 (patch-ab) = 60a89863baaee60c25842dd17fb1ba5cbb15652e

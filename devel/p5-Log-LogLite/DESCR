@@ -1,3 +1,0 @@
-Log::LogLite class helps us create simple logs for our application.
-The Lite suffix refers mainly to the ease of use of this class,
-although the class is quite simple anyway.

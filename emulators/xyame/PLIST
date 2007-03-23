@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/16 01:00:43 wiz Exp $
-bin/xyame
-man/man6/xyame.6

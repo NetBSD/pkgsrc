@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.common,v 1.1 2006/10/05 14:55:21 gdt Exp $
-
-FANNVERSION=		2.0.0
-DISTNAME=		fann-${FANNVERSION}
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fann/}
-
-MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://leenissen.dk/fann/

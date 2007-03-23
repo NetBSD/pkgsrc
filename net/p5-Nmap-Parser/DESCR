@@ -1,6 +1,0 @@
-This perl module is here to ease the pain of developing scripts or collecting
-network information from nmap scans. Nmap::Parser does its task by parsing
-the information in the output of an nmap scan by using the xml-formatted
-output. An nmap parser for xml scan data using perl. Nmap Parser is a PERL
-module that makes developing security and audit tools using nmap and perl
-easier.

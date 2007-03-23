@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:14 jlam Exp $
-bin/abook
-man/man1/abook.1
-man/man5/abookrc.5
-share/locale/de/LC_MESSAGES/abook.mo
-share/locale/fr/LC_MESSAGES/abook.mo
-share/locale/ja/LC_MESSAGES/abook.mo
-share/locale/sv/LC_MESSAGES/abook.mo

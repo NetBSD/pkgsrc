@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/05/09 18:12:11 bouyer Exp $
-
-SHA1 (nsca-2.6.tar.gz) = 7fea1336a44e8d7ff59a73494494bb8386cd4512
-RMD160 (nsca-2.6.tar.gz) = a1305b0ea0ceff2725a30ad70b7283125e96e9b6
-Size (nsca-2.6.tar.gz) = 101341 bytes
-SHA1 (patch-aa) = 3a2b538daeb4a4ec84e4ee947355b59284347ce1

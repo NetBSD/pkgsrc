@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/13 16:25:32 wulf Exp $
-include/gnuradio/audio_jack_sink.h
-include/gnuradio/audio_jack_source.h
-${PYSITELIB}/gnuradio/_audio_jack.la
-${PYSITELIB}/gnuradio/audio_jack.py
-${PYSITELIB}/gnuradio/audio_jack.pyc
-${PYSITELIB}/gnuradio/audio_jack.pyo
-include/gnuradio/swig/audio_jack.i
-share/examples/gnuradio/conf.d/gr-audio-jack.conf

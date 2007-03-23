@@ -1,6 +1,0 @@
-$NetBSD: patch-ae,v 1.2 2006/06/08 16:57:59 rillig Exp $
-
---- src/perl/api.pl	2003/07/22 17:24:43	1.1
-+++ src/perl/api.pl	2003/07/22 17:25:04
-@@ -1,0 +1,1 @@
-+#! /usr/bin/perl

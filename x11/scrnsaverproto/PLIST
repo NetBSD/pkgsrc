@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 20:11:57 joerg Exp $
-include/X11/extensions/saver.h
-include/X11/extensions/saverproto.h
-include/X11/extensions/scrnsaver.h
-lib/pkgconfig/scrnsaverproto.pc
-@comment @dirrm include/X11/extensions

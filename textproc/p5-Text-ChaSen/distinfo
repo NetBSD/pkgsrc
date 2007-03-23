@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:45 agc Exp $
-
-SHA1 (Text-ChaSen-1.03.tar.gz) = e9634b0ba5cc6920d84039d0bf12e1608dd1a32f
-RMD160 (Text-ChaSen-1.03.tar.gz) = 7e677108140cc227f9873376f1d4399431327eec
-Size (Text-ChaSen-1.03.tar.gz) = 4836 bytes
-SHA1 (ChaSen.pm-1.03-pod-fix.diff) = f89708e63d73b6b29fb13a3b7f4802233ed175e6
-RMD160 (ChaSen.pm-1.03-pod-fix.diff) = 8023afaa365e9b9de2968c3a1d90283635e41ae6
-Size (ChaSen.pm-1.03-pod-fix.diff) = 239 bytes
-SHA1 (patch-aa) = eda93770c3893cb85b6bf016a78e60adfeceee8c

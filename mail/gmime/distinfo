@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/03/17 14:39:58 joerg Exp $
-
-SHA1 (gmime-2.2.4.tar.gz) = 1cf5de2e9e594b136c37b7627f7676be6a977704
-RMD160 (gmime-2.2.4.tar.gz) = c28793597d33397ff17b2b8f54b0c6a87f00604f
-Size (gmime-2.2.4.tar.gz) = 933842 bytes
-SHA1 (patch-aa) = 03a3a2e91926d3ae24a2f7e93029dcaae8ede453
-SHA1 (patch-ab) = f6b63e3516c941fb044fc42d931a7b4e5d717f86

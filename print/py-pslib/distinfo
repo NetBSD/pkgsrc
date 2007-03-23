@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/19 16:06:03 drochner Exp $
-
-SHA1 (python-pslib_0.2.0.orig.tar.gz) = 3216e4682d5ffae0267c88e349ffb3ec294ced99
-RMD160 (python-pslib_0.2.0.orig.tar.gz) = e5b17e6b29a926044ccd4c05222210037359cf5c
-Size (python-pslib_0.2.0.orig.tar.gz) = 7964 bytes

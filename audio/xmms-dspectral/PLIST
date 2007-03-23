@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:18 jlam Exp $
-lib/xmms/Visualization/libdspectral.la
-share/xmms/dspectral_themes/bg_blue.xpm
-share/xmms/dspectral_themes/bg_gtk.xpm
-share/xmms/dspectral_themes/bg_white.xpm
-share/xmms/dspectral_themes/bg_xmms.xpm
-@dirrm share/xmms/dspectral_themes

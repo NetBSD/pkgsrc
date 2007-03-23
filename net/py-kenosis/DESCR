@@ -1,3 +1,0 @@
-A fully-distributed p2p RPC system built on top of XMLRPC. Nodes are
-automatically connected to each other via a Kademlia-style network and
-can route RPC requests efficiently to any online node.

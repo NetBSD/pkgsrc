@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/01/12 20:26:05 wiz Exp $
-
-SHA1 (moc-2.4.0.tar.bz2) = 4741fd9098af8b1c375b5232ba460da2077a5cb8
-RMD160 (moc-2.4.0.tar.bz2) = 084411d527bbeabd7caaae5acf8a3391a2d07f8f
-Size (moc-2.4.0.tar.bz2) = 419792 bytes
-SHA1 (patch-aa) = a797dc880a550e2acdb3b6f0e362b3a27666bc72

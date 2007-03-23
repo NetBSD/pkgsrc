@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/13 09:34:21 ghen Exp $
-
-SHA1 (pdns-2.9.20.tar.gz) = 45fde296f17d2feaac779c206cf467d1dae2aaa1
-RMD160 (pdns-2.9.20.tar.gz) = 15d433bc29e7d60549d9296fca573724574614fc
-Size (pdns-2.9.20.tar.gz) = 867520 bytes
-SHA1 (patch-aa) = 034845af3a9b66f57e482e3b43e43b61c17f51ab
-SHA1 (patch-ab) = 3718998efc8c9508ff328bb5c3b608e7a495cfe0

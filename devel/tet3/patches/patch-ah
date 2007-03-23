@@ -1,6 +1,0 @@
-$NetBSD: patch-ah,v 1.2 2006/06/08 16:57:59 rillig Exp $
-
---- contrib/tetreport/tetreport.pl	2003/07/22 17:27:03	1.1
-+++ contrib/tetreport/tetreport.pl	2003/07/22 17:27:18
-@@ -1,0 +1,1 @@
-+#! /usr/bin/perl

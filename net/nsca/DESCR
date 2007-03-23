@@ -1,5 +1,0 @@
-  Nsca is an add-on for NetSaint that allows you to send passive service
-check  results from remote hosts to a central monitoring host that runs
-NetSaint.  The client can be used as a standalone program or can be
-integrated with remote NetSaint servers that run an ocsp command to setup
-a distributed monitoring environment.

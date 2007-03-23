@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/10/04 21:59:27 rillig Exp $
-
-SHA1 (glew-1.3.4-src.tgz) = d70fb9fc07b99ec87a192818f73fc31b42c0811b
-RMD160 (glew-1.3.4-src.tgz) = 1f845fddb61c5a679a105aeae9ff21037d9fab6d
-Size (glew-1.3.4-src.tgz) = 362854 bytes
-SHA1 (patch-aa) = 4d29ab40d2a12c433f804f953c0309df52611588
-SHA1 (patch-ab) = 35e46b52e743d2d4e3dcb275c57d91676f64b9b4
-SHA1 (patch-ac) = 426186e47277f63dd7853c84e76b1192a7913b2c

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:41:09 jlam Exp $
-
-SHA1 (webmin-modules-1.270/dovecot.wbm.gz) = 9514c110ef9e561508e432fdef2dec4f314d196a
-RMD160 (webmin-modules-1.270/dovecot.wbm.gz) = 3b3e0948ebdc409e285546ce295a2441ea212c7e
-Size (webmin-modules-1.270/dovecot.wbm.gz) = 18934 bytes

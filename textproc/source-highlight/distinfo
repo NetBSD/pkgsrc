@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.18 2007/03/07 18:52:18 joerg Exp $
-
-SHA1 (source-highlight-2.5.tar.gz) = 4ba76ae656098f54904955cd227e53f18be454f7
-RMD160 (source-highlight-2.5.tar.gz) = f5dd7747960b0534cfb57744c036842c2643423d
-Size (source-highlight-2.5.tar.gz) = 681021 bytes
-SHA1 (patch-aa) = f0ed08af1c585916fd98e23fee7283d7c1cb878f
-SHA1 (patch-ab) = 0c235b51e97cfea58100933c7eb1d668fdbe8a84
-SHA1 (patch-ac) = 0b3056ceb63966bb4d4031ffc8ab0f2c5edcfa3e

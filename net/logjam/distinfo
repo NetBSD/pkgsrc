@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/02 17:33:25 rillig Exp $
-
-SHA1 (logjam-4.5.3.tar.bz2) = 05cfe92b04696fa4b7db6f4bd91e3f5b59757bea
-RMD160 (logjam-4.5.3.tar.bz2) = 2c834178ae37c95621814b81852c528f210baed2
-Size (logjam-4.5.3.tar.bz2) = 748831 bytes

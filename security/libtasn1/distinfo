@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.17 2007/03/08 18:23:42 wiz Exp $
-
-SHA1 (libtasn1-0.3.9.tar.gz) = 952173c518c09438d6a0c975d173977cc651911e
-RMD160 (libtasn1-0.3.9.tar.gz) = 21444279b9e7d9ba5af8177b1e3fc96011fe0d4b
-Size (libtasn1-0.3.9.tar.gz) = 1320811 bytes

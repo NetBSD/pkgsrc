@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/05/04 06:14:51 martti Exp $
-
-SHA1 (xfce4-xkb-plugin-0.3.3.tar.gz) = d326bad6ef61a7519f3b72e585f2b58a97d5bb62
-RMD160 (xfce4-xkb-plugin-0.3.3.tar.gz) = b14dcf6d8b8b30d5dd72c6b7cc41be7beae1659c
-Size (xfce4-xkb-plugin-0.3.3.tar.gz) = 338116 bytes
-SHA1 (patch-aa) = dce92aee6d21db1d4c609a3d67e7b1b17aacbcc8

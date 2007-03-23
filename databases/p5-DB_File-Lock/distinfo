@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/06/03 11:45:56 gavan Exp $
-
-SHA1 (DB_File-Lock-0.05.tar.gz) = 6657f7f0985dc0e35ba5ad6c42b53f063502297f
-RMD160 (DB_File-Lock-0.05.tar.gz) = a03e3a5a1e0a4b5a709a38159f32088713de0492
-Size (DB_File-Lock-0.05.tar.gz) = 7646 bytes

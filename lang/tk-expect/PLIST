@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:19 zuntum Exp $
-bin/expectk
-man/man1/expectk.1

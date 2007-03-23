@@ -1,2 +1,0 @@
-Cairo is a 2D graphics library with support for multiple output
-devices.  rcairo provides ruby bindings to cairo.

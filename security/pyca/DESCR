@@ -1,5 +1,0 @@
-pyCA tries to make it easier for people to set up and run a organizational
-certificate authority which fulfills the need for a fairly secure
-certification processing.  The package also tries to reduce administrative
-tasks and user's frustration by providing a comfortable web interface to
-users contacting the certificate authority.

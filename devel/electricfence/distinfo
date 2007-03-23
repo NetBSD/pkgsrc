@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/01/08 20:25:34 joerg Exp $
-
-SHA1 (ElectricFence-2.1.tar.gz) = 1794db6d446f31045ebf845543cf6759cbab1e4f
-RMD160 (ElectricFence-2.1.tar.gz) = 4513b43b2c9b4212822c2b2d749b6485909d8f67
-Size (ElectricFence-2.1.tar.gz) = 47917 bytes
-SHA1 (patch-aa) = 53c7c23d6d0a5b4f9814125bce8d6280f474fd56
-SHA1 (patch-ab) = 54c2dca3c58f430fd2ffe3a59ddfd6d89fc4bbda
-SHA1 (patch-ac) = 4c56eeea0b8e53cdf260b61aa8fdef16f601b186
-SHA1 (patch-ad) = 28cb084b2cbf6ecb6ec38c9ba11237fd2204aa92

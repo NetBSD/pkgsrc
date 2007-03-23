@@ -1,3 +1,0 @@
-This is a stream editor, like sed(1), but using the command set from
-Rob Pike's sam editor.  Ssam uses the libutf routines, and is UTF-8
-aware.

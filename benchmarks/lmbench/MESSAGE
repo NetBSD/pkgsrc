@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/12 17:07:51 wiz Exp $
-
-Execute "run-lmbench" to run the benchmark.
-There is a Makefile in the ${PREFIX}/share/lmbench/results directory
-that can be used to format your results as well.
-
-===========================================================================

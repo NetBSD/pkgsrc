@@ -1,6 +1,0 @@
-This module implements a bare-bones class specifically for
-the purpose of capturing data from the XML::Writer module.
-XML::Writer expects an IO::Handle object and writes XML
-data to the specified object (or STDOUT) via its print()
-method.  This module simulates such an object for the spe-
-cific purpose of providing the required print() method.

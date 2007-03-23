@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.48 2007/02/02 19:14:24 wiz Exp $
-
-SHA1 (curl-7.16.1.tar.bz2) = 645f87f63d29f71dced74869450d52f84a75c2b6
-RMD160 (curl-7.16.1.tar.bz2) = 8251efba8f4bde512b7cf68ad0acb5efb4302d9b
-Size (curl-7.16.1.tar.bz2) = 1592074 bytes

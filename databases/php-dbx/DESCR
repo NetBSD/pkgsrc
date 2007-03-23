@@ -1,9 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-
-The dbx module is a database abstraction layer (db 'X', where 'X'
-is a supported database). The dbx functions allow you to access
-all supported databases using a single calling convention. The
-dbx-functions themselves do not interface directly to the databases,
-but interface to the modules that are used to support these databases.
-
-Supported databases include MSSQL, MySQL, ODBC, PostgreSQL, and SQLite.

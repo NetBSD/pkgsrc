@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/24 03:11:36 wiz Exp $
-lib/aspell/bokmal.alias
-lib/aspell/bokmål.alias
-lib/aspell/nb.multi
-lib/aspell/nb.rws
-lib/aspell/no.alias
-lib/aspell/norsk.alias
-share/aspell/nb.dat

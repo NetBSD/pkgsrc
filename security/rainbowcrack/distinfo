@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/21 07:47:25 adrianp Exp $
-
-SHA1 (rainbowcrack-1.2-src.zip) = b077a654133cd108a3c619d66482e1796d56b0dc
-RMD160 (rainbowcrack-1.2-src.zip) = 51fdcf84ebfbe8ebb9e5bc6c3d4452f9d158eb79
-Size (rainbowcrack-1.2-src.zip) = 44742 bytes
-SHA1 (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 3ab5c1d293e8b86e5e206ecf859525e89f357acc
-RMD160 (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 709556a31e99aa069062762362f48b3ec24beabb
-Size (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 846 bytes

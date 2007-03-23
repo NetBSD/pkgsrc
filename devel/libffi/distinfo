@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/02/26 19:28:28 joerg Exp $
-
-SHA1 (gcc-3.3.5.tar.bz2) = ab24a8690040de967c25a1fc8560d7ecc25bd460
-RMD160 (gcc-3.3.5.tar.bz2) = 34adf1a6f7ea302e9937c1a06ccf362711e25c58
-Size (gcc-3.3.5.tar.bz2) = 23833856 bytes
-SHA1 (patch-aa) = cef0f1fd24397665aa5120e04e8a539f75f7bf1f

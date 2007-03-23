@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/06/26 19:42:26 salo Exp $
-
-SHA1 (suse91/i586/libtiff-3.6.1-38.26.i586.rpm) = 3d9ff5195a9d0f7193dc467f9b8f63c75073f8f7
-RMD160 (suse91/i586/libtiff-3.6.1-38.26.i586.rpm) = 11b84d6fa22ff6862dd33abf9458ad54fb111cd0
-Size (suse91/i586/libtiff-3.6.1-38.26.i586.rpm) = 189080 bytes
-SHA1 (suse91/x86_64/libtiff-3.6.1-38.26.x86_64.rpm) = ef3bf272bab40a332e328ccac1f861900373cc15
-RMD160 (suse91/x86_64/libtiff-3.6.1-38.26.x86_64.rpm) = f380f35180c36421d55f68ef78b9ce68981b2437
-Size (suse91/x86_64/libtiff-3.6.1-38.26.x86_64.rpm) = 194127 bytes

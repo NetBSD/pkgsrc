@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/12/06 13:27:01 joerg Exp $
-
-SHA1 (skill-4.1.1.tgz) = f208730838abff3b3a824c767a963558fe5ee0ed
-RMD160 (skill-4.1.1.tgz) = a32fff409258227bf7c695c1714fde321d9b51a1
-Size (skill-4.1.1.tgz) = 45614 bytes
-SHA1 (patch-aa) = 99e982b6ca126a3844b9e056336276bdf1a062f1
-SHA1 (patch-ab) = 7953603ec4c8e1f9b0c690acef50d51432db7f1e

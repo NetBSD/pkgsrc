@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:23 zuntum Exp $
-libexec/bozohttpd
-man/cat8/bozohttpd.0
-man/man8/bozohttpd.8

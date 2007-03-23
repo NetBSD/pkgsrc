@@ -1,4 +1,0 @@
-elf is an ELF header (e_header) statistics tool.  It allows you to gather
-various statistics about a binary's ELF header, unlike other releases
-(readelf), elf concentrates on the e_header itself.  This allows for some
-more usability in many instances (be it by an end-user or application).

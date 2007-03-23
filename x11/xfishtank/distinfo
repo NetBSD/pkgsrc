@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:23 wiz Exp $
-
-SHA1 (xfishtank-2.2.tar.gz) = b6e93369ee009cfb70fb97aa85c98853d68884aa
-RMD160 (xfishtank-2.2.tar.gz) = 3e5ce34369360802cfd65140ba80ba005c08a214
-Size (xfishtank-2.2.tar.gz) = 360031 bytes
-SHA1 (patch-aa) = 72495a728ef93895b5eea85f27332f7167a1f5ac
-SHA1 (patch-ab) = 49a66f0ed29e6dc246a80cc6903c13963aa1c787

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2005/10/23 20:26:17 rillig Exp $
-share/sip${PYVERSSUFFIX}/qt/qwindowdefs_mac.sip

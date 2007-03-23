@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.18 2006/01/17 22:48:57 adrianp Exp $
-
-SHA1 (tuxpaint-0.9.14.tar.gz) = d899f15ae348413b85e5d0cacf971db2c604b036
-RMD160 (tuxpaint-0.9.14.tar.gz) = b8bbf53eef48d17f8219ae2380e98570f574a326
-Size (tuxpaint-0.9.14.tar.gz) = 3208894 bytes
-SHA1 (patch-aa) = e2a238e16ab643a407f55e4275a5632b5cb023b2
-SHA1 (patch-ab) = 03c1aa47c90cc598081a0bf39eb0606309371d0b
-SHA1 (patch-ac) = cb75efd7b6eb9c3bb6752b4bf1d56fb5dd0fdc58

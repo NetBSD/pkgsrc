@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:42:12 jlam Exp $
-
-SHA1 (webmin-modules-1.270/mysql.wbm.gz) = 5bc4264e0c255856f0a8be619a6eb99dcb78b789
-RMD160 (webmin-modules-1.270/mysql.wbm.gz) = 6e9c4462a8f2d5fac693982613e130aa6674c368
-Size (webmin-modules-1.270/mysql.wbm.gz) = 181812 bytes

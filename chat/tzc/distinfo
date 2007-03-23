@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/18 19:36:53 joerg Exp $
-
-SHA1 (tzc-2.6.15.tar.gz) = 13385b849f6e5142c94393da253eca70f6ec4bf6
-RMD160 (tzc-2.6.15.tar.gz) = ce5be93fc31b57f41e433446f4ebfe06b9a7eb14
-Size (tzc-2.6.15.tar.gz) = 22726 bytes
-SHA1 (patch-aa) = f876da61bb5da7ce695c3515a2c4c650f2e08e51
-SHA1 (patch-ab) = 8996eb2c93d5605d57dbb32093f62baaa0af1111

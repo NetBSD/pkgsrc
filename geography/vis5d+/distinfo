@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/03/17 16:15:01 rillig Exp $
-
-SHA1 (vis5d+-1.2.1.tar.gz) = d99ec14fd8e6e482ab360abbd00adf36e7fd541b
-RMD160 (vis5d+-1.2.1.tar.gz) = b9eda9ab8a754a968c03ce54622b0c4fe918937d
-Size (vis5d+-1.2.1.tar.gz) = 2278840 bytes
-SHA1 (patch-aa) = 114ed11fbf8368554d1f57562a3423010cd155ba
-SHA1 (patch-ab) = 923d373d343ede9ec621e6514ff3ad6dcbce777b
-SHA1 (patch-ac) = 1389db298fe78372b048899a72f87bb7ffcf4e58
-SHA1 (patch-ad) = ca09cecd68078fb253a8b95a576d9b1210654c08

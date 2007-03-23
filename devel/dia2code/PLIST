@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/19 12:47:47 rillig Exp $
-bin/dia2code
-man/man1/dia2code.1
-share/doc/dia2code/README
-@dirrm share/doc/dia2code

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/03/07 17:56:37 joerg Exp $
-
-SHA1 (tnftpd-20061217.tar.gz) = a81e69c648397c15541683910495037683d87d2f
-RMD160 (tnftpd-20061217.tar.gz) = 9f098e35e549a202a7a392898095ee91f34e8604
-Size (tnftpd-20061217.tar.gz) = 187602 bytes
-SHA1 (patch-aa) = febc5e934b3bc5f83758bb966e30d5d17ca10af7

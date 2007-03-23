@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:41 jlam Exp $
-include/gdbm.h
-info/gdbm.info
-lib/libgdbm.la
-man/man3/gdbm.3

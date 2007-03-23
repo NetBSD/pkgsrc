@@ -1,8 +1,0 @@
-# $NetBSD: INSTALL,v 1.4 2006/06/15 20:40:16 jlam Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	${RM} -f @DOCDIR@/samples
-	${LN} -sf ../../examples/mutt @DOCDIR@/samples
-	;;
-esac

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/01 22:15:18 joerg Exp $
-
-SHA1 (hobbitclient-0.3.tgz) = cc7b31e6e6ba3ae81d5e16c808fbcbf8af98527c
-RMD160 (hobbitclient-0.3.tgz) = 481727fae95ae4ff4979a481a5106b241f53b766
-Size (hobbitclient-0.3.tgz) = 50675 bytes
-SHA1 (patch-aa) = 776d9f25d4c5c164da20bb2a029394d61263cd83

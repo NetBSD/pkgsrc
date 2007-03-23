@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/06 15:41:59 ghen Exp $
-
-SHA1 (openttd-0.4.8-source.tar.bz2) = 8161079003dadbd7153d65cc88f373f16a0c0aab
-RMD160 (openttd-0.4.8-source.tar.bz2) = 9ec9d8ee3531dc5a4f421eae6844a50299c22455
-Size (openttd-0.4.8-source.tar.bz2) = 2212990 bytes
-SHA1 (patch-aa) = 253bed4df9d728c8945b98ba8400a6d57802404e

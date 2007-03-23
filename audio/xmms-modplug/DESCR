@@ -1,8 +1,0 @@
-Modplug Plugin for XMMS v2.0
- Based on the ModPlug sound engine by Olivier Lapicque <olivierl@jps.net>
- XMMS plugin by Kenton Varda <temporal@gauge3d.org>
- Placed in the public domain in October, 2001
-
-Olivier Lapicque, author of Modplug, which is arguably the best quality
-MOD-playing software available, has placed his sound rendering code in the
-public domain.  This plugin is based on that code.

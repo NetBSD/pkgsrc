@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/28 05:37:55 minskim Exp $
-bin/html2pdbtxt
-bin/pdbtxt2html
-bin/txt2pdbdoc
-man/man1/html2pdbtxt.1
-man/man1/pdbtxt2html.1
-man/man1/txt2pdbdoc.1
-man/man4/doc.4

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.v6,v 1.2 2005/03/02 19:15:07 reed Exp $
-sbin/ospf6d
-sbin/ripngd
-share/examples/quagga/ospf6d.conf.sample
-share/examples/quagga/ripngd.conf.sample

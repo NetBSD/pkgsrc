@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/02/02 12:08:14 salo Exp $
-
-SHA1 (Mail-Audit-2.1.tar.gz) = 4fbfc782c8230025b793c2e15eff231acfa55f57
-RMD160 (Mail-Audit-2.1.tar.gz) = c59d006f1f9aa544e854be089f3fe793a8694d4f
-Size (Mail-Audit-2.1.tar.gz) = 21669 bytes
-SHA1 (patch-aa) = 8d1646afb5ac34de60fa19c2aa15c80210c9d6a7
-SHA1 (patch-ab) = e7d95c44d63dc2e78f30774e0c1092e59268376d

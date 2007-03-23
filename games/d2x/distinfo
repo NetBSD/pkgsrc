@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/29 18:58:23 joerg Exp $
-
-SHA1 (d2x-0.2.5.tar.gz) = b68c74fdc1f31a5ae32f6b27d7d3658e7e0dbdca
-RMD160 (d2x-0.2.5.tar.gz) = c27f16f52eaa7a3742cd7b50307bd747ab79c96f
-Size (d2x-0.2.5.tar.gz) = 2015249 bytes
-SHA1 (patch-aa) = c7b5790409851bea1637d0f2fc1a8d86924c4528
-SHA1 (patch-ab) = b59b2de4d60d98bec20117f085be06016ee03047

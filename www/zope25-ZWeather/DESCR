@@ -1,6 +1,0 @@
-This is the ZWeather Product. It consists of a management product, and
-a tag for displaying the weather in a pleasant format.
-
-There is also an External Method (weather.py) which you can use to drag
-down raw weather reports if you desire, but, it's only really there for
-looking how things work.

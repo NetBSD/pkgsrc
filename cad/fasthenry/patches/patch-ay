@@ -1,17 +1,0 @@
-$NetBSD: patch-ay,v 1.1 2006/06/21 14:56:51 minskim Exp $
-
---- src/fasthenry/sparse/spAllocate.c.orig	2004-08-03 22:17:17.000000000 +0000
-+++ src/fasthenry/sparse/spAllocate.c
-@@ -106,9 +106,9 @@ static char RCSid[] =
- #include "spMatrix.h"
- #include "spDefs.h"
- 
--
--
--
-+static InitializeElementBlocks(MatrixPtr, int, int);
-+static RecordAllocation(MatrixPtr, char *);
-+static AllocateBlockOfAllocationList(MatrixPtr);
- 
- 
- /*

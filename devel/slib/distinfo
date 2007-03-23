@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/02/07 19:39:53 drochner Exp $
-
-SHA1 (slib3a4.tar.gz) = 90fda911735648d985b9f5c1a716369272a5ef06
-RMD160 (slib3a4.tar.gz) = e5386c9ce84b818f2b81f4dcb7ebe41ea472814a
-Size (slib3a4.tar.gz) = 877792 bytes
-SHA1 (patch-aa) = 401df5f09f6179934d660b33484a7c5b5daf0132

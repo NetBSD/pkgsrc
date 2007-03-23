@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/06 13:30:41 adam Exp $
-
-SHA1 (pgadmin3-1.4.2.tar.gz) = 03cd7c12a68a89ddba21ceb471cb98513816fda9
-RMD160 (pgadmin3-1.4.2.tar.gz) = ac3797f44f7ec97611e0c0558fd88c364c3a807c
-Size (pgadmin3-1.4.2.tar.gz) = 6706410 bytes
-SHA1 (patch-aa) = 11b6f9e1beb58362152cc3539b6f0b71e26a980b
-SHA1 (patch-ab) = c19f2e8d9d75260edbc3a9faf9d1ca6d9237748f

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/26 20:13:56 gdt Exp $
-${PYSITELIB}/pyproj.so
-share/doc/${PKGNAME}/README

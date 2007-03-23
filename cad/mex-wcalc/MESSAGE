@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/11/01 03:55:38 dmcmahill Exp $
-
-To use, you will need to add something like the following to your
-matlab/startup.m file in your home directory:
-
-  addpath('${PREFIX}/libexec/matlab/${WCALC_DIR}');
-
-===========================================================================

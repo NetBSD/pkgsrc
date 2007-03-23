@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/07 16:00:57 joerg Exp $
-
-SHA1 (mktemp-1.5.tar.gz) = aa001fd61d13bbf128dc58ca4dc6d83311435bae
-RMD160 (mktemp-1.5.tar.gz) = a2fa93592e1d362aa0882a70ea494cc45da48dab
-Size (mktemp-1.5.tar.gz) = 70529 bytes
-SHA1 (patch-aa) = fd6a799fbf14223cb71db35868e90f73cdea2df1

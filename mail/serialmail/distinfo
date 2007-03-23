@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/21 01:00:29 schmonz Exp $
-
-SHA1 (serialmail-0.75.tar.gz) = 76f8d5ae698cff25b3227e51cc99fff1f4a8b137
-RMD160 (serialmail-0.75.tar.gz) = 2d12152b9c7d007f76b4d129c2795cd192ba9f83
-Size (serialmail-0.75.tar.gz) = 55079 bytes
-SHA1 (patch-aa) = 0ccbe27149addddcd839ed71cc07b68d7473100b

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/17 12:31:22 obache Exp $
-bin/fd2
-bin/goto
-bin/if
-bin/osh
-man/man1/fd2.1
-man/man1/goto.1
-man/man1/if.1
-man/man1/osh.1

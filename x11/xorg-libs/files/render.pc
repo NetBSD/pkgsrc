@@ -1,9 +1,0 @@
-prefix=@X11BASE@
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
-
-Name: Render
-Description: Render extension headers
-Version: 0.9
-Cflags: -I${includedir}

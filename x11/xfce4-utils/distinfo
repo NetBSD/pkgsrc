@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.16 2007/01/23 11:53:48 martti Exp $
-
-SHA1 (xfce-utils-4.2.4.tar.gz) = eebc2f5ea2de22d6afab259476feb4f0e5cc54c2
-RMD160 (xfce-utils-4.2.4.tar.gz) = e415bebb909dfcc382e9b261378eb60d7bad6f00
-Size (xfce-utils-4.2.4.tar.gz) = 1295235 bytes
-SHA1 (patch-aa) = deafbcd8b3c367d377aa25416c9d25043f907e60
-SHA1 (patch-ab) = 39c4fd41775cefc4cc2f10bc86060d9bbcc7b795
-SHA1 (patch-ac) = 5eb98ebc693c677dbd1e39efbf6016fb3fbf5f90

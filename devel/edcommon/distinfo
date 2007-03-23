@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/03/28 17:44:08 joerg Exp $
-
-SHA1 (edcommon-32-s.tar.gz) = b189c4ff52ea4ef1cf5bcd65b5f0e7fd7da3e1a0
-RMD160 (edcommon-32-s.tar.gz) = 3a55a14d3ea353fa1802852539535612c48f43db
-Size (edcommon-32-s.tar.gz) = 188718 bytes
-SHA1 (patch-aa) = d6dc8e945e23eaf2c8d67649e611fdff79f56f42
-SHA1 (patch-ab) = 0e140c1e2788f18ff414f2633fd549e84c922eef
-SHA1 (patch-ac) = ffd773035a409768fa20ce698b25295294b0397e

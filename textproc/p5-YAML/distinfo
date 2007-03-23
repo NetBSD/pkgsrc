@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/10/28 08:37:40 obache Exp $
-
-SHA1 (YAML-0.62.tar.gz) = 727ac18ee74c87357e2fce5abbced224a99be6f1
-RMD160 (YAML-0.62.tar.gz) = fd9b350215e41967cd09bea2dbcd7ceb633df18a
-Size (YAML-0.62.tar.gz) = 97878 bytes

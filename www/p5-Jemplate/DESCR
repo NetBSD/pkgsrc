@@ -1,9 +1,0 @@
-Jemplate is a templating framework for Javascript that is built over
-Perl's Template Toolkit (TT2).
-
-Jemplate parses TT2 templates using the TT2 Perl framework, but with a
-twist.  Instead of compiling the templates into Perl code, it compiles
-them into Javascript.  Jemplate then provides a Javascript runtime
-module for processing the template code.  Combined with JSON and
-xmlHttpRequest, Jemplate provides a simple and powerful way to do Ajax
-stuff.

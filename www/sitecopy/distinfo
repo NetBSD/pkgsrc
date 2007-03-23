@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/02/21 05:54:43 hiramatsu Exp $
-
-SHA1 (sitecopy-0.16.2.tar.gz) = 8e7b39e71d6c6cfbd2455b495326070319a41cab
-RMD160 (sitecopy-0.16.2.tar.gz) = f4bd7fdfa1797b4aeb6a9a5a6f8542be06f4c35a
-Size (sitecopy-0.16.2.tar.gz) = 947483 bytes
-SHA1 (patch-aa) = 0a06d1f70b5ceb3e6ba76d55e3720ff76167d488

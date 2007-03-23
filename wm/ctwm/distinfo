@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2007/02/17 08:27:11 obache Exp $
-
-SHA1 (ctwm-3.8a.tar.gz) = c3a31d669bef7dd5ec78d89950c0e575d6c51c77
-RMD160 (ctwm-3.8a.tar.gz) = cc1c3c862c3cfb1d66593d9a95d28ec0bbbbaf3c
-Size (ctwm-3.8a.tar.gz) = 738226 bytes
-SHA1 (patch-ac) = bb4cbcb8e4a68d1f2844aa16e85918aa5368a869

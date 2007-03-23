@@ -1,7 +1,0 @@
-$NetBSD: patch-ad,v 1.6 2002/10/21 20:54:14 jlam Exp $
-
---- ../gcc-2.95.3/config/mh-sparcpic.orig	Thu Feb  5 19:33:03 1998
-+++ ../gcc-2.95.3/config/mh-sparcpic
-@@ -1 +1 @@
--PICFLAG=`case "${LIBCFLAGS} ${LIBCXXFLAGS}" in *-fpic* ) echo -fpic ;; * ) echo -fPIC ;; esac`
-+PICFLAG=`case '${LIBCFLAGS} ${LIBCXXFLAGS}' in *-fpic* ) echo -fpic ;; * ) echo -fPIC ;; esac`

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/26 13:20:34 drochner Exp $
-
-SHA1 (mkcdtoc-1.0.tar.bz2) = dbe3f4830024ab25dfa1c92bc94749241f377828
-RMD160 (mkcdtoc-1.0.tar.bz2) = 98bde617dfcd4a7872c978c4c4b4b1f0acaceb06
-Size (mkcdtoc-1.0.tar.bz2) = 18255 bytes
-SHA1 (patch-aa) = 9d301052ec5c04048c76165183a7dd5748a7ae1b

@@ -1,8 +1,0 @@
-XSH is a fast and powerful command-line XML editor. It may be used to
-query and modify XML documents. XSH may be used either interactivelly or
-for off-line processing (like bash). XPath expressions are used to
-select parts of XML document to be processed.
-
-Both system shell and perl are accessible from XSH in a very natural
-way. XSH itself is written in Perl and uses XML::LibXML bindings of
-gnome-xml2 library in the background level.

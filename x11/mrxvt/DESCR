@@ -1,6 +1,0 @@
-Mrxvt (previously named as materm) is a lightweight and powerful
-multi-tabbed X terminal emulator based on the popular rxvt and aterm.
-It implements many useful features seen in some modern X terminal
-emulators, like gnome-terminal and konsole, but keeps to be
-lightweight and independent from the GNOME and KDE desktop
-environment.

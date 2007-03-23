@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/17 08:21:27 wiz Exp $
-bin/interlogic
-share/doc/InterLOGIC/README
-@dirrm share/doc/InterLOGIC

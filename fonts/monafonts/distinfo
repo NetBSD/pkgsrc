@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/24 15:23:26 joerg Exp $
-
-SHA1 (monafont-2.90.tar.bz2) = 6106097a74afed072b3c49555356c5cb88cec172
-RMD160 (monafont-2.90.tar.bz2) = 1b5dbd521581f05bd26e8339b316e0207be3c7a1
-Size (monafont-2.90.tar.bz2) = 808897 bytes
-SHA1 (patch-aa) = 24d568ec79884eb643e45c5c192d64a308cec3ba

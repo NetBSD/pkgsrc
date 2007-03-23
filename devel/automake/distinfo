@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.28 2006/10/26 14:37:55 wiz Exp $
-
-SHA1 (automake-1.10.tar.bz2) = 966008107cc1fdb099f65de6496147ef05522fec
-RMD160 (automake-1.10.tar.bz2) = ebae948c33dbe4a579cf1fbeba32ed14a9d0f89b
-Size (automake-1.10.tar.bz2) = 893866 bytes
-SHA1 (patch-aa) = 5faa883609df5432dd0516e472587f191bc58ba4

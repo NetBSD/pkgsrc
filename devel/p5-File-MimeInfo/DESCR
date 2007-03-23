@@ -1,5 +1,0 @@
-This module can be used to determine the mime type of a file; it's
-a replacement for File::MMagic trying to implement the freedesktop
-specification for using the shared mime-info database. The package
-comes with a script called 'mimetype' that can be used as a file(1)
-work-alike.

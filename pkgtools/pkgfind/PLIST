@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/18 22:03:55 tv Exp $
-bin/pkgfind
-man/man1/pkgfind.1

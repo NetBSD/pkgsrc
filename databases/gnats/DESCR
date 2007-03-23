@@ -1,6 +1,0 @@
-GNATS was designed as a tool for software maintainers. It consists of several
-utilities which, when used in concert, formulate and administer a database of
-Problem Reports grouped by site-defined problem categories. It allows a
-support organization to keep track of problems (hence the term Problem Report)
-in an organized fashion. Essentially, GNATS acts as an active archive for
-field-separated textual data.

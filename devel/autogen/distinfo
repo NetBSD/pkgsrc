@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/03/09 20:45:20 kristerw Exp $
-
-SHA1 (autogen-5.8.3.tar.bz2) = 267d381134054fe5aac61eebf4a7401eb1f8c5cd
-RMD160 (autogen-5.8.3.tar.bz2) = c55b5486336caaf937f1a05e8afe133ea9fcd140
-Size (autogen-5.8.3.tar.bz2) = 929965 bytes
-SHA1 (patch-aa) = f5477f8e09242d58f840a86447db1f2c6d7ed8db

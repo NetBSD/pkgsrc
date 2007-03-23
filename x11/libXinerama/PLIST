@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/17 17:54:14 joerg Exp $
-lib/libXinerama.la
-lib/pkgconfig/xinerama.pc
-man/man3/Xinerama.3
-man/man3/XineramaIsActive.3
-man/man3/XineramaQueryExtension.3
-man/man3/XineramaQueryScreens.3
-man/man3/XineramaQueryVersion.3

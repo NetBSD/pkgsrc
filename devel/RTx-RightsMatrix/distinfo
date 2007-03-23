@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/01 09:43:11 cube Exp $
-
-SHA1 (RTx-RightsMatrix-0.03.00.tgz) = 95345e935293d90bdd1d08a60290f72e0e5c0b94
-RMD160 (RTx-RightsMatrix-0.03.00.tgz) = f85820289db564eb887e44830e08276db62cff9a
-Size (RTx-RightsMatrix-0.03.00.tgz) = 29898 bytes
-SHA1 (patch-aa) = 5230c031f94d6f3af8f1b7afdd14a96dbd7def1f

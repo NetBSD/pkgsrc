@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/18 03:28:52 wiz Exp $
-
-SHA1 (Cache-Simple-TimedExpiry-0.27.tar.gz) = c9d36521b64749ee52fdb0fd0060302152902cb0
-RMD160 (Cache-Simple-TimedExpiry-0.27.tar.gz) = 1393f81653dc7b016ad52c47c03978d47eddbd81
-Size (Cache-Simple-TimedExpiry-0.27.tar.gz) = 13110 bytes

@@ -1,2 +1,0 @@
-Set::IntSpan manages sets of integers. It is optimized for sets that
-have long runs of consecutive integers.

@@ -1,3 +1,0 @@
-This is a dummy input device for the modular Xorg server. It never
-delivers any events, but can be usedas  pointer and keyboard device to
-run the Xorg server without real core devices.

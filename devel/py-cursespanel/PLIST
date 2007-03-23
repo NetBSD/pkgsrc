@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/04 19:32:13 drochner Exp $
-${PYSITELIB}/_curses_panel.so

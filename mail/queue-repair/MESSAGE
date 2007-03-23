@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/12/29 06:44:00 schmonz Exp $
-
-This package is incompatible with mail/qmail, as it does not follow
-symlinks properly. Use it only with non-pkgsrc qmail installations.
-Otherwise, try mail/queue-fix instead.
-
-===========================================================================

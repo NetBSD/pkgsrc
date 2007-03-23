@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/03 07:03:15 wiz Exp $
-
-SHA1 (openal-0.0.8.tar.gz) = 31aaedc18bd26759bd51f4fa495bc4ccb08acb3e
-RMD160 (openal-0.0.8.tar.gz) = 29368dbceea7cfd8b5c520b9e0f0cfdc7324e265
-Size (openal-0.0.8.tar.gz) = 870671 bytes
-SHA1 (patch-aa) = fbd752704cabc991b634c830c427d69dc29e80a5
-SHA1 (patch-ab) = e0bfe865021fa54fe276e1c5da312f6d3747102b

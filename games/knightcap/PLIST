@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:42 zuntum Exp $
-bin/KnightCap
-share/doc/knightcap/README
-@dirrm share/doc/knightcap

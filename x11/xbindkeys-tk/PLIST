@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 15:10:25 jmmv Exp $
-bin/xbindkeys_show
-man/man1/xbindkeys_show.1

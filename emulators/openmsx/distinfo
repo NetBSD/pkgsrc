@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/28 13:49:15 joerg Exp $
-
-SHA1 (openmsx-0.5.2.tar.gz) = 558e4a10702d55880b3acbe723af3ee7fb24c201
-RMD160 (openmsx-0.5.2.tar.gz) = 6ebc541df38de8e3e414a561447149bc216d2efb
-Size (openmsx-0.5.2.tar.gz) = 1612903 bytes
-SHA1 (patch-aa) = 89639071a2a64b6cd651098f873ab093a16eb588

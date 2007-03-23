@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/03 08:21:14 ghen Exp $
-sbin/wx-console
-share/examples/bacula/wx-console.conf
-@unexec ${RMDIR} %D/share/examples/bacula 2>/dev/null || ${TRUE}

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/31 21:07:30 tv Exp $
-lib/libperditiondb_ldap.la
-man/man8/perditiondb_ldap_makedb.8
-sbin/perditiondb_ldap_makedb

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 17:36:18 wiz Exp $
-
-SHA1 (PyQt-3.1-Qt-2.3.1.tar.gz) = 3cadbd3b4c6d113bc3fb9a0106ca5e7c6642348e
-RMD160 (PyQt-3.1-Qt-2.3.1.tar.gz) = 88c6db51c60e82d8ca88dacbdd8538b2e12bfbf8
-Size (PyQt-3.1-Qt-2.3.1.tar.gz) = 2298356 bytes
-SHA1 (patch-aa) = bd3f4cb232b6f299e82f8c5e642d3b560a7f1b65
-SHA1 (patch-ab) = c5d08b7da76a024896fe135a16410138fa9a5399
-SHA1 (patch-ac) = 436ae469d05c4421bad812bf61842d31e1643cfb

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.23 2007/03/05 15:58:19 obache Exp $
-
-SHA1 (hyperestraier-1.4.10.tar.gz) = d9e200cf237e46315df5a729bc00920e0debfc0d
-RMD160 (hyperestraier-1.4.10.tar.gz) = 56022db14947c00e5f8c01834173ae3bc5daeab8
-Size (hyperestraier-1.4.10.tar.gz) = 1011767 bytes
-SHA1 (patch-aa) = 59d2e81e69a4c86d6226955b82bb17e15236c40d
-SHA1 (patch-ab) = 3e293c9d553555a97ddf42399d1366112f4e832f
-SHA1 (patch-ac) = f36aa67b501fcf614cd537f80bcedd61764056c6
-SHA1 (patch-ad) = 8ac2fdc41f9a2534bc321c262d87a619d485ea01

@@ -1,6 +1,0 @@
-cwm is a window manager for X11.  It was originally inspired by evilwm,
-but was rewritten from scratch due to limitations in the evilwm codebase.
-The from-scratch rewrite borrowed some code from 9wm.  cwm contains many
-new features which all concentrate on the efficiency and transparency of
-window management.  cwm also aims to maintain the most simplest and
-pleasant aesthetic.

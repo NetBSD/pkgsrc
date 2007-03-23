@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/07/17 17:24:34 wiz Exp $
-
-SHA1 (pchar-1.5.tar.gz) = 3e78505b881773d2a726b426c6023ee2519bed75
-RMD160 (pchar-1.5.tar.gz) = b8e600b9c11cf7e584768c87aadeeb9d7b482949
-Size (pchar-1.5.tar.gz) = 117678
-SHA1 (patch-aa) = f570ee77f4f29b84ba77784d5bafacf1ed252ea6
-SHA1 (patch-ab) = 4761fe0cc6380a21e76c2cfcc29970466a001a84

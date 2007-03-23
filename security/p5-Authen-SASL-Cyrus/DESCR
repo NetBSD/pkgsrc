@@ -1,9 +1,0 @@
-SASL is a generic mechanism for authentication used by several
-network protocols. Authen::SASL provides an implementation
-framework that all protocols should be able to share.
-
-The XS framework makes calls into the existing libsasl.so
-shared library to perform SASL client connection functionality,
-including loading existing shared library mechanisms.
-
-Authen::SASL::Cyrus implements XS SASL Authentication.

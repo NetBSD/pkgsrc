@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/05/18 12:04:42 dillo Exp $
-
-SHA1 (libzip-0.7.1.tar.gz) = b8abeeed45fef1c7d76a695535266b4b426f0bf3
-RMD160 (libzip-0.7.1.tar.gz) = 6d0ea874e2ae444934108a788a64df41d31f1a3a
-Size (libzip-0.7.1.tar.gz) = 403037 bytes

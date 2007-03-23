@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.15 2005/08/28 04:25:30 uebayasi Exp $
-
-SHA1 (vm-7.19.tar.gz) = 0fe9012b8988ebdec7641f48aca0ef365549c590
-RMD160 (vm-7.19.tar.gz) = 7a28c0a096f1f8093cffb9fc621cd270dd67b432
-Size (vm-7.19.tar.gz) = 381658 bytes
-SHA1 (patch-aa) = 7b8e9b8bcc1c03604fc0d2a81683754b823dc7a6
-SHA1 (patch-ab) = 51ea93e4b4066fbab7e75d03bea2cffd20c85440

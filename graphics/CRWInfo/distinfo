@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:01 agc Exp $
-
-SHA1 (CRWInfo-0.2.tar.gz) = 6c3df0378cd9eaa74dad19b5c1661e63afe6c264
-RMD160 (CRWInfo-0.2.tar.gz) = d237db829076a281a8140708c2853c158c189920
-Size (CRWInfo-0.2.tar.gz) = 10717 bytes
-SHA1 (patch-aa) = 451336207dd6ada7934e6dd35eff4b206974f287

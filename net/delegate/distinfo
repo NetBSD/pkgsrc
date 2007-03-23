@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/03/14 02:26:46 joerg Exp $
-
-SHA1 (delegate8.9.6.tar.bz2) = 9e4a0133768613f7fe2d0056f99c6942c460e5b1
-RMD160 (delegate8.9.6.tar.bz2) = a0805636f294ba5904a3153347238610b670df2e
-Size (delegate8.9.6.tar.bz2) = 1000992 bytes
-SHA1 (patch-aa) = 61db1418c4f8cc40e1ac76a2c8cf5e32c4c206ed
-SHA1 (patch-ab) = e0e02261cecdef8077447cc6969f0abfd1a989ed

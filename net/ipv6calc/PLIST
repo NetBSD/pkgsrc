@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/23 21:32:11 hubertf Exp $
-bin/ipv6calc
-bin/ipv6logconv
-bin/ipv6logstats
-man/man8/ipv6calc.8
-man/man8/ipv6logconv.8
-man/man8/ipv6logstats.8

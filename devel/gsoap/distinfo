@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/05/16 22:37:27 wiz Exp $
-
-SHA1 (gsoap_2.7.7.tar.gz) = 5808aa51ee12b50683c12a4d20941a2a6cc490b6
-RMD160 (gsoap_2.7.7.tar.gz) = 420cafdbbeede58e191f94f25013fe8387ac51d6
-Size (gsoap_2.7.7.tar.gz) = 5935586 bytes

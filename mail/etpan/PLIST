@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/06 05:32:19 xtraeme Exp $
-bin/etpan
-share/doc/etpan/CONFIG
-share/doc/etpan/INTERNAL
-share/doc/etpan/README
-@dirrm share/doc/etpan

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/03 08:20:54 ghen Exp $
-sbin/gnome-console
-share/examples/bacula/gnome-console.conf
-@unexec ${RMDIR} %D/share/examples/bacula 2>/dev/null || ${TRUE}

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/11/20 07:30:35 cjep Exp $
-
-SHA1 (bsdiff-4.3.tar.gz) = 0c0a89d604fc55ef2b5e69cd18372b2972edd8b8
-RMD160 (bsdiff-4.3.tar.gz) = 27bb255b5dd5aa56d3a076dac9ca76d238a79a04
-Size (bsdiff-4.3.tar.gz) = 5740 bytes

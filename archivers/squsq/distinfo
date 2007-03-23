@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 14:45:26 agc Exp $
-
-SHA1 (t20-squsq-3.3.tar.gz) = f27ab585803e97f17aa778893606c140ca26ed8b
-RMD160 (t20-squsq-3.3.tar.gz) = 0acd9c5329cc8b7b4059d1d30cdc9e9c5ece4727
-Size (t20-squsq-3.3.tar.gz) = 14654 bytes
-SHA1 (patch-aa) = 3939106f89c5b0848f712de9b1768634b5c15285

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 04:02:22 jlam Exp $
-
-SHA1 (webmin-modules-1.270/dhcpd.wbm.gz) = da5ea5c2078909a9805216a08ec7912e9064e908
-RMD160 (webmin-modules-1.270/dhcpd.wbm.gz) = 8be56f88e390c6a6319e2438aed7ff19c0b88b51
-Size (webmin-modules-1.270/dhcpd.wbm.gz) = 128545 bytes

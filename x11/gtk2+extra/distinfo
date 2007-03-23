@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/08 10:21:20 bouyer Exp $
-
-SHA1 (gtk+extra-2.1.1.tar.gz) = 94d7ae9cb3aef05159cfff148265fc9ce0973980
-RMD160 (gtk+extra-2.1.1.tar.gz) = 7134fe4c5aaaa45ee3a7e651f3c477ba7c477214
-Size (gtk+extra-2.1.1.tar.gz) = 893481 bytes
-SHA1 (patch-ad) = e2c45a044ef08c4e01df8f24ef174dc7d62a95f6

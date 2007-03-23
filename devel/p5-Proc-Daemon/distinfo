@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:28 agc Exp $
-
-SHA1 (Proc-Daemon-0.03.tar.gz) = 25df5ee454527772ff95bc44980101a6766edb8a
-RMD160 (Proc-Daemon-0.03.tar.gz) = 5c15112ea2bd3ba250fa6cd4ba7645c8f1dd3fa9
-Size (Proc-Daemon-0.03.tar.gz) = 3784 bytes

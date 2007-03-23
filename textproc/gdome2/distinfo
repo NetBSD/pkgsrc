@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/02/10 12:09:24 adam Exp $
-
-SHA1 (gdome2-0.8.1.tar.gz) = e9a3e4140c873d8232635ad10bb135ef7803c408
-RMD160 (gdome2-0.8.1.tar.gz) = 5cc3ff29e0ed040e3bbd02cba4d95b9b634c4072
-Size (gdome2-0.8.1.tar.gz) = 518965 bytes
-SHA1 (patch-aa) = 7e194447d1b4cf4a0799aef6c211e724e577c33c
-SHA1 (patch-ab) = 642f5e5319bdebf3fab8b346d68558e117cb5d26

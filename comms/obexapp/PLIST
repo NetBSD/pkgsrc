@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/01 21:39:08 plunky Exp $
-bin/obexapp
-man/cat1/obexapp.0
-man/man1/obexapp.1
-share/examples/rc.d/obexapp

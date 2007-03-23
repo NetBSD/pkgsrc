@@ -1,6 +1,0 @@
-GNOME Keyring Manager is an application that manages user keyrings.
-The default window shows 'default' keyrings with its items and allows
-to remove, add and edit them.  It also lets you edit your secrets and
-copy them using drag and drop.  The Manager window allows to lock/unlock,
-create and open other keyrings.  At last, items can be moved between
-different keyrings.

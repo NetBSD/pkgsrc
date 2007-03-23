@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/03/16 12:55:02 rillig Exp $
-
-SHA1 (gnugk-2.2.0.tgz) = 27bf0fe7f2d7952233eb3522d55618269770a6ef
-RMD160 (gnugk-2.2.0.tgz) = 4484786e84bb2af689f7721935951032ab01a5c4
-Size (gnugk-2.2.0.tgz) = 627215 bytes
-SHA1 (patch-aa) = e7f9f1b31bed309224eac1a84db2207c36e3e3f5
-SHA1 (patch-ab) = e6aca39584c895e8e319ce63eeaf30b43cbb688b
-SHA1 (patch-ac) = 8c00f65da52e93bbbcc5f44a9a50a9f0f9272aff

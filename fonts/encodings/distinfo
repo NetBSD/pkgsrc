@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/03/18 20:22:12 wiz Exp $
-
-SHA1 (encodings-1.0.2.tar.bz2) = 63622374470204f6501ffb5f4df84228d859c9cf
-RMD160 (encodings-1.0.2.tar.bz2) = 39e063686a1659f58abd5532f5506891c0f17728
-Size (encodings-1.0.2.tar.bz2) = 571623 bytes
-SHA1 (patch-aa) = c0bc3bc893d14da3bd4d5c172795c5814e949e5f

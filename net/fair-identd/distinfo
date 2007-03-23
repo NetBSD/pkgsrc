@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:46 agc Exp $
-
-SHA1 (identd.c) = 9e1161c6e513571db3b0ecdfa64e2ac674a9f0d3
-RMD160 (identd.c) = 224dc9a515880ddadd1358a9024e5c1a285968dd
-Size (identd.c) = 2535 bytes

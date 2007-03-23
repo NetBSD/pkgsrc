@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/18 06:35:24 schmonz Exp $
-
-SHA1 (qmqtool-current.tgz) = c6fea8ef8324ae0ae241ff126b1da395d9b97e5c
-RMD160 (qmqtool-current.tgz) = d92dd6b9f03cea85f2e4cf69a1dd5b94afef42f2
-Size (qmqtool-current.tgz) = 19098 bytes
-SHA1 (patch-aa) = 4a15464d895afafa112d60af647d4f41f5596a24

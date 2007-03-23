@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 12:06:53 agc Exp $
-
-SHA1 (abs-src-0.8.tar.gz) = 2123f3c80981a9fe7535645ed8b9726d81751157
-RMD160 (abs-src-0.8.tar.gz) = 923e158d317b9495c78320d2df4dd7bb18124fa7
-Size (abs-src-0.8.tar.gz) = 287965 bytes
-SHA1 (patch-aa) = 06f3adca298ebba3ce5ffe801342e870ceaf9a58
-SHA1 (patch-ab) = 89e02f62b116d49a87011ff5a7aac304e8a980f4
-SHA1 (patch-ac) = cb7f9c99a58ac1705e0f7d63e84089a98f810160

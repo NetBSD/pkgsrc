@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 16:05:29 agc Exp $
-
-SHA1 (binkd098.zip) = 8ebb73c822c1c6fbcfaa8ca0506d1d747448de1e
-RMD160 (binkd098.zip) = 490df9c7c615349749b767f5fe959d26ecbaadc3
-Size (binkd098.zip) = 306884 bytes
-SHA1 (patch-aa) = 88356eefd5f2ddad26474f57ce29e533c885b0dd

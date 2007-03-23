@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:58 reed Exp $
-bin/mu-conference
-share/examples/jabberd/muc-jcr.xml
-share/examples/rc.d/muc

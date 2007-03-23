@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:58 agc Exp $
-
-SHA1 (IO-Socket-Multicast-0.25.tar.gz) = 001ac82696e063567b3e85f47ddc8416b499f0a3
-RMD160 (IO-Socket-Multicast-0.25.tar.gz) = e89201a7f44810dfaf58ffcdaa98baae7d07221f
-Size (IO-Socket-Multicast-0.25.tar.gz) = 8477 bytes

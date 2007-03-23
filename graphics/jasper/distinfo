@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/01/21 21:44:35 wiz Exp $
-
-SHA1 (jasper-1.900.1.zip) = 9c5735f773922e580bf98c7c7dfda9bbed4c5191
-RMD160 (jasper-1.900.1.zip) = fb2c188abf5b8c297078ac1f913101734f72db5c
-Size (jasper-1.900.1.zip) = 1415752 bytes
-SHA1 (patch-ad) = 85637e42cdb1245babd5736c2d039558025738a6
-SHA1 (patch-ae) = bfe00f76582a44ad748706c3fc81c4d6b8aede35
-SHA1 (patch-ag) = 63da6dcbdca3f8e4508be8f934ec047abf5cb1f1

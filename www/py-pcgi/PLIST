@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:42 zuntum Exp $
-libexec/pcgi-wrapper
-lib/python2.0/site-packages/pcgi_publisher.py
-lib/python2.0/site-packages/pcgi_publisher.pyc
-lib/python2.0/site-packages/pcgi_publisher.pyo
-bin/pcgifile
-bin/killpcgi

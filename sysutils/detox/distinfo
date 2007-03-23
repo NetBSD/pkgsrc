@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/01 03:32:03 minskim Exp $
-
-SHA1 (detox-1.2.0-rc1.tar.bz2) = d48025bf0e7a427b42c8411f575d1b0479d86017
-RMD160 (detox-1.2.0-rc1.tar.bz2) = 31fa2ef1c58b8710e11590e7a12bd7184d7b96af
-Size (detox-1.2.0-rc1.tar.bz2) = 74289 bytes
-SHA1 (patch-aa) = 31eca361d838b78642873c380ebf497483790cdb

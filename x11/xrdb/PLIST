@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/07 16:27:53 joerg Exp $
-bin/xrdb
-man/man1/xrdb.1

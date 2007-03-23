@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/11/13 04:15:02 obache Exp $
-
-SHA1 (915resolution-0.5.2.tar.gz) = 9f26eb1b728ca0b2d28c948207b034a49b477089
-RMD160 (915resolution-0.5.2.tar.gz) = 722b352a83f41f0e9822ed4e096e8064f239dcc1
-Size (915resolution-0.5.2.tar.gz) = 21183 bytes
-SHA1 (patch-aa) = 8556275046ccc2a9ebabe03b422b2b764bacbc9d
-SHA1 (patch-ab) = b65a38c9c7edd95f295619c9cdedc26449b3f177

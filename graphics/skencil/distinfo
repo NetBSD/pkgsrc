@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/07/06 18:41:42 drochner Exp $
-
-SHA1 (skencil-0.6.17.tar.gz) = e0154f90629d7693d0268d21204a9eb12f2497aa
-RMD160 (skencil-0.6.17.tar.gz) = 9183a16afd8e9d56098821b2a9088a0383a9dc2d
-Size (skencil-0.6.17.tar.gz) = 1148628 bytes
-SHA1 (patch-aa) = 50e4c396e19c85a39866b9ca6834ff347a02cc3c

@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	${LN} -s ${PKG_PREFIX}/share/apsfilter ${PKG_SYSCONFDIR}/basedir
-	;;
-esac

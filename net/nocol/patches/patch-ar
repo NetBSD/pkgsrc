@@ -1,9 +1,0 @@
-$NetBSD: patch-ar,v 1.1 2005/12/27 13:47:11 joerg Exp $
-
---- trapmon/trapmon.c.orig	2005-12-18 20:36:47.000000000 +0000
-+++ trapmon/trapmon.c
-@@ -93,4 +93,2 @@ static char rcsid[] = 
- 
--extern int  errno;
--
- static int Print = 1;

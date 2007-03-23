@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/21 15:44:55 rillig Exp $
-bin/moon-buggy
-info/moon-buggy.info
-man/man6/moon-buggy.6

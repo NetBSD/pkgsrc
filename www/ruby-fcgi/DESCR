@@ -1,3 +1,0 @@
-Ruby bindings for the FastCGI system.
-This is merged version matz's C version(fcgi.so) and
-Eli's pure ruby version(fastcgi.rb).

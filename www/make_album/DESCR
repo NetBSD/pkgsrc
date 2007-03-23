@@ -1,5 +1,0 @@
-make_album organises images into HTML "albums", with thumbnails and
-different sized images.  It supports reading the EXIF data out of the
-original image and presenting that information.  An example
-configuration can be found at:
-	http://www.burren.cx/david/files/example_album.tar.gz

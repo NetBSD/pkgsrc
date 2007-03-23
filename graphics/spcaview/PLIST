@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/17 12:56:01 hamajima Exp $
-bin/spca5shot
-bin/spca5view
-man/cat1/spca5shot.0
-man/cat1/spca5view.0
-man/man1/spca5shot.1
-man/man1/spca5view.1

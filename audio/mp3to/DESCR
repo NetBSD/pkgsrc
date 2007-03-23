@@ -1,3 +1,0 @@
-Converts an MP3 file to another audio format.  If <outfile> is - or
-missing, stdout is used.  <format> may be au, wav, aiff, or any other
-format supported by sox.

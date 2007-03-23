@@ -1,6 +1,0 @@
-The PropertyFolder is intended mainly for use in conjunction with the
-"PropertyObject":http://www.zope.org/Members/mjablonski/PropertyObject and
-"AbracadabraObject":http://www.zope.org/Members/mjablonski/AbracadabraObject.
-If you got the logic and power behind AbracadabraObject, you will love the
-PropertyFolder. If not, you will have no idea what to do with PropertyFolder
-at all... but maybe you can use it for other problems as well.

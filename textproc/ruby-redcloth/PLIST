@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:55:50 taca Exp $
-bin/redcloth
-${RUBY_SITELIBDIR}/redcloth.rb
-${RUBY_DOCDIR}/redcloth/CHANGELOG
-${RUBY_DOCDIR}/redcloth/README
-${RUBY_DOCDIR}/redcloth/REFERENCE
-@dirrm ${RUBY_DOCDIR}/redcloth

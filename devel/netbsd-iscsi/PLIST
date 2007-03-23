@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/17 16:52:27 rillig Exp $
-man/man5/targets.5
-man/man8/iscsi-target.8
-sbin/iscsi-harness
-sbin/iscsi-target
-share/iscsi/FAQ
-@dirrm share/iscsi

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux-i386,v 1.1.1.1 2006/09/26 07:19:41 martti Exp $
-lib/vlc/video_output/libfb_plugin.so

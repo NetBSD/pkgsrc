@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/03/13 09:17:51 taca Exp $
-
-SHA1 (kakasi-2.3.4.tar.gz) = ab95a226f301955d2e8ae0d347afbb567e25fbe7
-RMD160 (kakasi-2.3.4.tar.gz) = 8ed84c5aaa0713484ab070871f555b12ded31802
-Size (kakasi-2.3.4.tar.gz) = 1099258 bytes
-SHA1 (patch-ab) = 06ad60e10c996500242fe038213164ddf3147178
-SHA1 (patch-ac) = c2100302e98e597ba50ea57e294b1053137ba8b3
-SHA1 (patch-ad) = 7b339bd53d801f0bedf047f840ce164e03a653cf

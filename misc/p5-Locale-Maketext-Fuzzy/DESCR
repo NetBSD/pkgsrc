@@ -1,3 +1,0 @@
-Locale::Maketext::Fuzzy is a subclass of Locale::Maketext with
-additional support for localizing messages that already contains
-interpolated variables.

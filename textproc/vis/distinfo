@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/25 14:41:31 joerg Exp $
-
-SHA1 (vis-0.1.tar.gz) = 981dad2960374a83e368c8497e6405781ba65bff
-RMD160 (vis-0.1.tar.gz) = 23e8da2e899be6f78414beaa38a649407499c7ad
-Size (vis-0.1.tar.gz) = 8893 bytes
-SHA1 (patch-aa) = 885c462e6b136b5b87bd32f276fcbc2482c1f04f

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:25 agc Exp $
-
-SHA1 (oe2mbx-1.21.tar.gz) = e3931f0eb8c27c4ba0f1118e6d3bb7342ec172e2
-RMD160 (oe2mbx-1.21.tar.gz) = 147b02fac16d2d5124ee069f2b11c236baf00235
-Size (oe2mbx-1.21.tar.gz) = 22817 bytes
-SHA1 (patch-aa) = 0b1d3ffa42263a21c8449421c3402c146f9e7d7f

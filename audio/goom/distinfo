@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/10/31 15:33:19 tv Exp $
-
-SHA1 (goom-2k4-0-src.tar.gz) = 4856b86aadc67676c473a4664c5281bc05df278d
-RMD160 (goom-2k4-0-src.tar.gz) = 280c0db57f437b072a49ff80f5bf85d57892af8e
-Size (goom-2k4-0-src.tar.gz) = 757058 bytes
-SHA1 (patch-aa) = 44b8332db3e7b6ec15fcc7d94d68bd0b884c6e8a
-SHA1 (patch-ab) = 7a703e75ad8d9895c28f6579ee80240f1c2d0cfb
-SHA1 (patch-ac) = 341a075d8a2b41b522fe313ca13f5ca7c5476f6f

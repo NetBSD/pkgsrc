@@ -1,3 +1,0 @@
-Provide dummy implementations of pthread functions like mutex operations
-to enable libraries to be used in both thread-aware and non-threaded programs.
-This is for NetBSD<=2; newer operating systems don't need it.

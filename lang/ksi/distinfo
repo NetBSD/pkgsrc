@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/04 17:45:08 jlam Exp $
-
-SHA1 (ksi-3.4.1.tar.gz) = 8ebba1e0775f29bce2662716ea8cc7d0ab0fe778
-RMD160 (ksi-3.4.1.tar.gz) = 4469ef6a0273d25c8bc4df66818264e5e791fbaa
-Size (ksi-3.4.1.tar.gz) = 1509920 bytes
-SHA1 (patch-aa) = b361c1dd64726cac15f3c0aea469f45cb433a044
-SHA1 (patch-ab) = fca89ed52700affeb0af65554c88d9b106f6e600
-SHA1 (patch-ac) = 994a15e1bea8ef77e6e07856b4ccfe893b5569c7
-SHA1 (patch-ad) = 246d0c0fe3ff6358e71ca71878d3b4dc45ded36c

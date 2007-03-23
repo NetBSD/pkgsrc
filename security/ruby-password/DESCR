@@ -1,5 +1,0 @@
-Ruby/Password is a suite of password handling methods for Ruby.  It
-supports the manual entry of passwords from the keyboard in both
-buffered and unbuffered modes, password strength checking, random
-password generation, phonemic password generation (for easy
-memorization by human-beings) and the encryption of passwords.

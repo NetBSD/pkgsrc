@@ -1,4 +1,0 @@
-cdbkup performs full or incremental backups of local or remote
-filesystems onto CD-R(W)s. Results are stored as tarballs on
-single- or multi-session ISO CDs. It works either interactively
-for multi-CD backups, or non-interactively for single-CD backups.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/31 03:11:56 smb Exp $
-
-SHA1 (BibTool-2.48.tar.gz) = ed4d20823be38f4b90179613049a3be83dc51ab2
-RMD160 (BibTool-2.48.tar.gz) = 7928faf26316ec1e014a4f8234f9510a32d0e6b9
-Size (BibTool-2.48.tar.gz) = 634267 bytes
-SHA1 (patch-aa) = c145084288db91c4fc32ecc45c4205c9ee0a5ff3
-SHA1 (patch-ab) = a57258c20dea53c924f4ecafcb9881db2ac9ee93

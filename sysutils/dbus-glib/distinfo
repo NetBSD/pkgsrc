@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/03/13 11:11:27 drochner Exp $
-
-SHA1 (dbus-glib-0.73.tar.gz) = 31ad5dc7bed3111c1d21d9e9b53744a25c3e3556
-RMD160 (dbus-glib-0.73.tar.gz) = 34e831d24667c776a3ba1c7ab92ffc1eb9a8b654
-Size (dbus-glib-0.73.tar.gz) = 644223 bytes

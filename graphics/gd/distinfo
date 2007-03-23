@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.26 2007/02/22 17:21:18 drochner Exp $
-
-SHA1 (gd-2.0.34.tar.bz2) = 7d735b2917f987dd71ddbb72e9e100b2f8951de7
-RMD160 (gd-2.0.34.tar.bz2) = 88b1d298e3392c5c05acf2cd01b387d7e0d2bfae
-Size (gd-2.0.34.tar.bz2) = 1135372 bytes
-SHA1 (patch-aa) = 38f0aa7043dba517405312d4eef59347e3c0185a
-SHA1 (patch-ab) = 082f5baa2c147fb62381c21ecb3ce11a1891a2aa

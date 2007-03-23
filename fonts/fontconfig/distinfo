@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.25 2007/01/30 17:03:50 tv Exp $
-
-SHA1 (fontconfig-2.4.2.tar.gz) = cd5e30625680a0435563b586275156eaf8d0d34a
-RMD160 (fontconfig-2.4.2.tar.gz) = c953020a5193500080c9eceef47b76e61c41b188
-Size (fontconfig-2.4.2.tar.gz) = 1278340 bytes
-SHA1 (patch-aa) = 7aa7831ccc818d0f501df941a1d12f3ed610d33b
-SHA1 (patch-ab) = 455e20719e7ad300ebe95748165eeb7e25897dd5
-SHA1 (patch-ac) = 965087ba6e457daf17c55fc3573b51fd6425be93
-SHA1 (patch-ae) = 9bd0bf5cdbdf9e1e075d248fd33a156cd4cde909

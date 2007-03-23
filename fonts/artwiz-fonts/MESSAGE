@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/08/30 14:23:40 xtraeme Exp $
-
-You may wish to add the artwiz directory to your /etc/X11/XF86Config:
-
-	FontPath	"${PREFIX}/lib/X11/fonts/artwiz/"
-
-===========================================================================

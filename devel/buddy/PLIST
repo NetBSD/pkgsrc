@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/14 20:23:07 kristerw Exp $
-include/bdd.h
-include/bvec.h
-include/fdd.h
-lib/libbdd.la

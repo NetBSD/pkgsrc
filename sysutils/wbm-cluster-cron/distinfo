@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 21:39:44 jlam Exp $
-
-SHA1 (webmin-modules-1.270/cluster-cron.wbm.gz) = a87977bdc059ee3d48f44a5af667535336c45587
-RMD160 (webmin-modules-1.270/cluster-cron.wbm.gz) = c9c5c912995c648da93cd36a6556166300167e59
-Size (webmin-modules-1.270/cluster-cron.wbm.gz) = 12080 bytes

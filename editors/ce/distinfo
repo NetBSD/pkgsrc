@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/03/09 14:50:31 ghen Exp $
-
-SHA1 (ce-4.6.tar.gz) = 94d7ef6db3e9baf60205e922038d040380b67879
-RMD160 (ce-4.6.tar.gz) = 9a9f55d639f5bae7a4f9a18b4480333bfe400785
-Size (ce-4.6.tar.gz) = 287489 bytes
-SHA1 (patch-aa) = 50322176da6a8dc2460aadf649a7f4dd2979a047
-SHA1 (patch-ab) = d41e4ece57025fe0c65a7897e55e34b51717f659

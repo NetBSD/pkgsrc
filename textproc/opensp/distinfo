@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/01/23 12:56:41 dmcmahill Exp $
-
-SHA1 (OpenSP-1.5.2.tar.gz) = b4e903e980f8a8b3887396a24e067bef126e97d5
-RMD160 (OpenSP-1.5.2.tar.gz) = 6e671a267562c5b9283e7e6504e8339cb1d86850
-Size (OpenSP-1.5.2.tar.gz) = 1521390 bytes
-SHA1 (patch-aa) = c24326e85a585378088a8c5ed0bd65a2a5022951
-SHA1 (patch-ab) = 35401a5bd63b9b22c3a18d56d3e3af066cd28c82

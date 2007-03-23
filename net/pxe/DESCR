@@ -1,3 +1,0 @@
-  pxe is a multi-platform Preboot eXecution Environment (PXE) daemon that
-allows to serve boot files (together with dhcp, bootp, and tftp daemons)
-for PXE enabled clients.

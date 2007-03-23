@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/17 17:20:14 joerg Exp $
-bin/arc
-bin/marc
-man/man1/arc.1

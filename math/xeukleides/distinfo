@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:58 agc Exp $
-
-SHA1 (xeukleides.1.0.0.tar.gz) = 744bf22f2b10931dfa815fc99791d117455d4c32
-RMD160 (xeukleides.1.0.0.tar.gz) = f5861e64c48769714dce0f9b3433a42d95b0d7e6
-Size (xeukleides.1.0.0.tar.gz) = 55079 bytes
-SHA1 (patch-aa) = 3093874cd631424197b94e507648f987183fd2f7

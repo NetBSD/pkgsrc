@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/04/14 07:28:40 tron Exp $
-
-SHA1 (xaniroc.src.tar.Z) = d1cc542f17ae852d6ff0e936fcf5d2537d107689
-RMD160 (xaniroc.src.tar.Z) = d7fd3eddf4192857e2e669e56b8d31e8a2eed019
-Size (xaniroc.src.tar.Z) = 16747 bytes
-SHA1 (patch-aa) = 26e849c5a0650be740009dfeade422cff80e9708

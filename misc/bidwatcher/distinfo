@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.35 2005/02/27 10:40:04 rillig Exp $
-
-SHA1 (bidwatcher-1.3.17.tar.gz) = 226a181c1af3836820c7f9df5bfe15ef2d869da1
-RMD160 (bidwatcher-1.3.17.tar.gz) = fee1c5a776e1fc79c6a740ef2bc9f94114259b82
-Size (bidwatcher-1.3.17.tar.gz) = 193923 bytes
-SHA1 (patch-aa) = c4fcc87d614761abf4ef846f2f88584191cad0af

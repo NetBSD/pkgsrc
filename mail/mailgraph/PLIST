@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/19 00:39:06 wiz Exp $
-libexec/cgi-bin/mailgraph.cgi
-sbin/mailgraph
-share/doc/mailgraph/CHANGES
-share/doc/mailgraph/COPYING
-share/doc/mailgraph/README
-share/examples/rc.d/mailgraph
-@dirrm share/doc/mailgraph

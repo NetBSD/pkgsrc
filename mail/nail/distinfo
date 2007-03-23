@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.25 2005/12/20 16:12:17 joerg Exp $
-
-SHA1 (nail-11.25.tar.bz2) = dd15a5bdedb74175763ababa8be70989334963e4
-RMD160 (nail-11.25.tar.bz2) = d72a5a4760cc43bcc2e9223e2eca4f0a8de7605f
-Size (nail-11.25.tar.bz2) = 267959 bytes
-SHA1 (patch-aa) = 43690fb1728d14f5c3876978a9002f17245d617e
-SHA1 (patch-ab) = fc028d32fb268e89ade8a5fba09611b3eb73bc29
-SHA1 (patch-ac) = 8115bf791af56fda0a9c134be6767b00f1f5679f
-SHA1 (patch-ad) = 86e2f7b607b4d254aa2286fc38df84062ad76ba4

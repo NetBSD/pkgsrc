@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/19 21:11:25 joerg Exp $
-
-SHA1 (thy-0.9.4.tar.gz) = e3bae4f3667f98fbc5fc39dc3f61571b524e5dfd
-RMD160 (thy-0.9.4.tar.gz) = b64ada0d71d123b0a5300697ae69823ff59e5ee7
-Size (thy-0.9.4.tar.gz) = 357776 bytes
-SHA1 (patch-aa) = d8b98822747e7d76318e591336b981aea6773c96
-SHA1 (patch-ab) = 1caca0c4c2c6051c9feece3feac7e4189425302c

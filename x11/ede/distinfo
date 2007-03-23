@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/02 14:42:52 xtraeme Exp $
-
-SHA1 (ede-1.0.4.tar.bz2) = 22dfcb972ceef00fa4c79b971708b317095c612c
-RMD160 (ede-1.0.4.tar.bz2) = 1165f448a4ee0d385cc0372c9b18d0f18ec669fe
-Size (ede-1.0.4.tar.bz2) = 1372589 bytes
-SHA1 (patch-aa) = 53580cfa4d25730fb7cc8cd417c293978e130c95

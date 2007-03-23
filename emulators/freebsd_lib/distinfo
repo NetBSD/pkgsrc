@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:49:18 agc Exp $
-
-SHA1 (freebsd_lib-2.2.7.tar.gz) = fb62fba4a442303d80df6820fd20592850fc877e
-RMD160 (freebsd_lib-2.2.7.tar.gz) = 32b862c4d6fab0192dbc59dadd382713990283fd
-Size (freebsd_lib-2.2.7.tar.gz) = 1950770 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/11/14 16:58:13 drochner Exp $
-
-SHA1 (gnome-mime-data-2.4.3.tar.bz2) = c2f9045cb6cb417bb4bd66adab30b8ae35dfdb37
-RMD160 (gnome-mime-data-2.4.3.tar.bz2) = 5f526f32ecb3cfd01d2bb817ac66beb63cae6f53
-Size (gnome-mime-data-2.4.3.tar.bz2) = 563654 bytes
-SHA1 (patch-aa) = 9d6e4a46ee59f4029b0cd7654ec1ac9988706209

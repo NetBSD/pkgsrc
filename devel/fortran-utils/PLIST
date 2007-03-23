@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:30 zuntum Exp $
-bin/fpr
-bin/fsplit
-man/cat1/fpr.0
-man/man1/fpr.1
-man/cat1/fsplit.0
-man/man1/fsplit.1

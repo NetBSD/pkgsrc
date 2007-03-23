@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.17 2007/03/18 12:24:14 adrianp Exp $
-
-SHA1 (horde-3.1.4.tar.gz) = 3b008b7976b501f86df3d0d556ba831fe222395d
-RMD160 (horde-3.1.4.tar.gz) = 2b8df7ef0cf9b986b08d4a56414b6ca9219272f0
-Size (horde-3.1.4.tar.gz) = 5262198 bytes
-SHA1 (patch-aa) = 9edb110586805d5efd84541b9d3821889967e785

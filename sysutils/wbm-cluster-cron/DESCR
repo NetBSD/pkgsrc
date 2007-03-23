@@ -1,2 +1,0 @@
-This is the standard "cluster-cron" Webmin module to create scheduled
-Cron jobs that run on multiple servers simultaneously.

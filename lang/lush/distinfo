@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/23 22:01:00 wiz Exp $
-
-SHA1 (lush-1.1.tar.gz) = 89d83c88d968f5216c59ce0d7a249e992f6aea41
-RMD160 (lush-1.1.tar.gz) = 3e32242a8a9391e4077144bbda10a013f4791d48
-Size (lush-1.1.tar.gz) = 4385751 bytes
-SHA1 (patch-aa) = 8e8f3bcbc1afd516931b0d14fce4560ad41bc1d3
-SHA1 (patch-ab) = b5f0161cceaadd532f2d246e4da34b424a61d829

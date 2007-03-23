@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:41:06 jlam Exp $
-
-SHA1 (webmin-modules-1.270/ldap-useradmin.wbm.gz) = 918589fafb260eeb651b494cdeb479910cbd4132
-RMD160 (webmin-modules-1.270/ldap-useradmin.wbm.gz) = bfb54aa7496ebc3e1802896a2f121f053cb7f3b6
-Size (webmin-modules-1.270/ldap-useradmin.wbm.gz) = 48694 bytes

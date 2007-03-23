@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/07 14:48:04 ghen Exp $
-
-SHA1 (o3read-0.0.4.tar.gz) = aa8bcfc82b5327f3d86a35193c0a434e33107d09
-RMD160 (o3read-0.0.4.tar.gz) = c011a283fdc3ee6ff4c340519a4ef7f32c258f38
-Size (o3read-0.0.4.tar.gz) = 21075 bytes
-SHA1 (patch-aa) = aa16d6771f3ad76289318360b8d4725576293c69

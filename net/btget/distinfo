@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/03/01 12:16:04 reinoud Exp $
-
-SHA1 (libbt-1.05.tar.gz) = 909c19c77b15a3d1e6f2a3f5e9bdc5f3fa178525
-RMD160 (libbt-1.05.tar.gz) = 1d8e2fcaf5f2a0c71706be4efb478c3c1ff9bf7a
-Size (libbt-1.05.tar.gz) = 322880 bytes
-SHA1 (patch-aa) = 3f045800da8d372d45fcf59fe2f1f9fb0a288a20
-SHA1 (patch-ab) = 85355a29f326b97ea5f4269eb2b803496fbdd3c3
-SHA1 (patch-ac) = b9e6c75dcb433227dc54047f48b87815ea303d67

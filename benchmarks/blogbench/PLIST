@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/14 22:05:53 xtraeme Exp $
-bin/blogbench
-man/man8/blogbench.8

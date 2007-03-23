@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:48:49 agc Exp $
-
-SHA1 (stardic-1.31/dic.tar.gz) = 89a4edcbac415232627c98680a9817f2a7676f48
-RMD160 (stardic-1.31/dic.tar.gz) = 1bd56627105e8035e14b3afbe2dd6f2af4239b48
-Size (stardic-1.31/dic.tar.gz) = 1800940 bytes
-SHA1 (patch-aa) = af0aede61350b2e77d9df1deaa0d42a0a62cf043
-SHA1 (patch-ab) = ccfe1401645b465785b087fc35eb8fa340bd74d2
-SHA1 (patch-ac) = 91f647c7d3ddfe5bd8cf85533dd9902ec37f39a6
-SHA1 (patch-ad) = 1d3b772b9d1f722cf23311cb3f104e4b44fc375d

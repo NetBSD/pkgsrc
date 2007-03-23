@@ -1,4 +1,0 @@
-Text::Reflow is a Perl module for reflowing paragraphs of text using
-Knuth's paragraphing algorithm.  The program looks for "optimal"
-places to insert line breaks in order to avoid breaking up phrases.
-This results in more ragged, but more readable paragraphs.

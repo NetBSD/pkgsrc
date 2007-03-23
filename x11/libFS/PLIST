@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 17:21:54 joerg Exp $
-include/X11/fonts/FSlib.h
-lib/libFS.la
-lib/pkgconfig/libfs.pc
-@dirrm include/X11/fonts
-@dirrm include/X11

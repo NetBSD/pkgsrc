@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:49 recht Exp $
-${PYSITELIB}/unittest.py
-${PYSITELIB}/unittest.pyc
-${PYSITELIB}/unittest.pyo

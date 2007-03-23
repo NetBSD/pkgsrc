@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.21 2006/04/12 13:16:26 markd Exp $
-
-SHA1 (dcraw-8.13/dcraw.c) = 104c144c793b04af9a50c9f35c3feb7175c6e67e
-RMD160 (dcraw-8.13/dcraw.c) = f6caed87b71a3e814e685dc75eb2150535a0cdee
-Size (dcraw-8.13/dcraw.c) = 190843 bytes
-SHA1 (dcraw-8.13/dcraw.1) = dfd2bc0d865b5cf03144cab1883623f5751dc9de
-RMD160 (dcraw-8.13/dcraw.1) = 93a67dc2ef0ebe118db83f7197594963c2c681b0
-Size (dcraw-8.13/dcraw.1) = 4318 bytes
-SHA1 (patch-aa) = f1a9d3eb800da346918e86aeaed1c1e66932247b

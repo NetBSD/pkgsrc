@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/03 14:25:49 taca Exp $
-
-SHA1 (ruby-termios-0.9.4.tar.gz) = 083bf763e542c59783e003da7df17b2a4d574723
-RMD160 (ruby-termios-0.9.4.tar.gz) = f9e48c0ed4bcd6b9a9a917b41efefcd2ae49e99c
-Size (ruby-termios-0.9.4.tar.gz) = 8402 bytes

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/03 15:06:36 cube Exp $
-bin/beacon
-share/examples/beacon/beacon.conf
-@dirrm share/examples/beacon

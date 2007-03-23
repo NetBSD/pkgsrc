@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/09 19:00:43 joerg Exp $
-
-SHA1 (libjit-0.0.4.tar.gz) = 663055ee5bb600e9dfd28c03456a66bf2b66811b
-RMD160 (libjit-0.0.4.tar.gz) = e8ff27b3f1e0dbff0ed6cc1d5fd2a5cc4a74f1fd
-Size (libjit-0.0.4.tar.gz) = 580278 bytes
-SHA1 (patch-aa) = e5c58111aad14e4ead390fa55630b06cdf2711da

@@ -1,6 +1,0 @@
-Python bindings for GNUTLS.
-
-GnuTLS is a project that aims to develop a library which provides a
-secure layer, over a reliable transport layer.  Currently the GnuTLS
-library implements the proposed standards by the IETF's TLS working
-group.

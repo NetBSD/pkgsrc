@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:42 agc Exp $
-
-SHA1 (ipadic-2.7.0.tar.gz) = 52784d8abb3361eafec83ab543be63cf087f9eb2
-RMD160 (ipadic-2.7.0.tar.gz) = 5e37c750801df63439032be4954c4b63a44012cb
-Size (ipadic-2.7.0.tar.gz) = 4300102 bytes
-SHA1 (patch-aa) = a5d0f0fea5ccd4190d51a37b3c09a91c03979c8f
-SHA1 (patch-ab) = e7b45abf36010febd79dd3e9ee2580dd509716cc
-SHA1 (patch-ad) = c143a17a24cae23ab5ee9372a52c2ce3e59fe3ce
-SHA1 (patch-ae) = b074d3515465260a078e74945dbcc69efbb6aaf9

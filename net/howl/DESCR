@@ -1,8 +1,0 @@
-Howl is a cross-platform implementation of the Zeroconf networking
-standard.  Branded as Rendezvous tm by Apple Computer, Inc., Zeroconf
-standardizes networking protocols for delivering hassle-free ad-hoc
-networking, service discovery, and IP configuration.
-
-Howl version 0.6 contains both runtime components, which deliver
-the Zeroconf/Rendezvous functionality, and an SDK for embedding
-Zeroconf/Rendezvous functionality in your applications.

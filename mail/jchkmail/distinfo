@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/04/11 11:12:21 manu Exp $
-
-SHA1 (jchkmail-1.3.1a.tar.gz) = 6cade163151a2c08d42082b971b55a11c33f47c6
-RMD160 (jchkmail-1.3.1a.tar.gz) = b707514f3a04d871f32db660be8b975577e1dbf3
-Size (jchkmail-1.3.1a.tar.gz) = 420432 bytes
-SHA1 (patch-aa) = b0c8c3483c2b65570547d79c59c0974b685d57bb
-SHA1 (patch-ab) = c629836b5dbab9282104a3c2731e379c56c5ea81
-SHA1 (patch-ac) = 8be29408b4fb665d3374fb6232b596d028d69e28

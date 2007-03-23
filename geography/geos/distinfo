@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/11/10 21:00:23 gdt Exp $
-
-SHA1 (geos-2.2.3.tar.bz2) = c5da21829255e3625f7c2482c9220234cc5d9f90
-RMD160 (geos-2.2.3.tar.bz2) = 968de157f96f41aa71d5ef7c28c7186e8db0939e
-Size (geos-2.2.3.tar.bz2) = 554802 bytes
-SHA1 (patch-ae) = b687857a95931a7f9a0dc5e1c2290db0e76f603e

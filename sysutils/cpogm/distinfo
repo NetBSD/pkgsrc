@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (cpogm-1.0.tar.gz) = 676cc5d6220c29c9a7832500a86b133c474e395a
-RMD160 (cpogm-1.0.tar.gz) = 7c9622a794aead08a5b41bba397335aef3c6fed5
-Size (cpogm-1.0.tar.gz) = 981 bytes
-SHA1 (patch-aa) = 5de67b71c884e5dc0a02806e80bec5cd78765cd0

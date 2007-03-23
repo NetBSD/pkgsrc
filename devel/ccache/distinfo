@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 22:24:11 agc Exp $
-
-SHA1 (ccache-2.4.tar.gz) = 9833ec13de9b90d5409e60d679ac681115ef465e
-RMD160 (ccache-2.4.tar.gz) = 43a0647c7faf659121a53a92ec45d245b8140124
-Size (ccache-2.4.tar.gz) = 86363 bytes
-SHA1 (patch-aa) = f2932ccc9166f94eee56da382f7a51f23088bc69
-SHA1 (patch-ab) = 1c16adfc4d754182dc9c5f682daf01afc4286aaa

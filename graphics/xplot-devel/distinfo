@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/10/16 18:20:29 gdt Exp $
-
-SHA1 (xplot-0.90.8.tar.gz) = d87a382b01c7a48787d2c6fa2d16e0961de9d81c
-RMD160 (xplot-0.90.8.tar.gz) = ac8877ad7fa1c80afa0281236b3a4992482109c2
-Size (xplot-0.90.8.tar.gz) = 243259 bytes
-SHA1 (patch-aa) = 48a475a550a2ea9d2bc50f2782d598830802817e
-SHA1 (patch-ab) = f7eaac7296a830584b2cf02324086101579cc3d5
-SHA1 (patch-ad) = fd19823030badf91734fde92b45fcaecc06cf0f8

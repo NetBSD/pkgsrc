@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/07 01:22:16 joerg Exp $
-lib/security/pam_mysql.la
-share/doc/pam-mysql/CREDITS
-share/doc/pam-mysql/ChangeLog
-share/doc/pam-mysql/README
-@dirrm share/doc/pam-mysql

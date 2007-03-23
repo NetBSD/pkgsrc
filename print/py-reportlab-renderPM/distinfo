@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:51:44 agc Exp $
-
-SHA1 (renderPM-0-9.tgz) = ae604c84c54ae8b40551e80bc7f0fd26c5f3847d
-RMD160 (renderPM-0-9.tgz) = 287fb6bcee1c8b50df72d408a55b8ff31fc5a0ee
-Size (renderPM-0-9.tgz) = 165759 bytes
-SHA1 (patch-aa) = 42e5226fe70260261265096fd719ab674c4d7d42

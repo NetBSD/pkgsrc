@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.15 2006/08/06 07:53:36 jmmv Exp $
-
-SHA1 (drivel-2.0.3.tar.bz2) = 33f684e6fc9ea710f00a74e14c99800bd3217586
-RMD160 (drivel-2.0.3.tar.bz2) = 1f7475472d720ebc80b75345fad5ef0eaa15e6de
-Size (drivel-2.0.3.tar.bz2) = 648882 bytes
-SHA1 (patch-ab) = dbc09dc3b8038570109547bad66b731761da289e

@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/02/16 22:04:07 cube Exp $
-
-This LKM requires attribute ``arc4'' to be compiled in the kernel.  The
-only drivers that get it compiled are the WiFi ones, such as wi(4).  An
-instance of that driver in the kernel configuration file is enough to
-pull the arc4 functions in the resulting kernel.
-
-===========================================================================

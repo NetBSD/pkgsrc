@@ -1,4 +1,0 @@
-# $NetBSD: xorg.compositeproto,v 1.1 2006/04/19 15:56:38 reed Exp $
-include/X11/extensions/composite.h
-include/X11/extensions/compositeproto.h
-lib/pkgconfig/compositeext.pc

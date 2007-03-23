@@ -1,4 +1,0 @@
-archivemail is a tool written in Python for archiving and compressing
-old email in mailboxes. It can move messages older than the specified
-number of days to a separate mbox format mailbox that is compressed
-with gzip, or optionally just delete old email.

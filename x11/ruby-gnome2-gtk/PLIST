@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/29 06:42:34 minskim Exp $
-${RUBY_SITELIBDIR}/gtk2.rb
-${RUBY_SITELIBDIR}/gtk2/base.rb
-${RUBY_SITEARCHLIBDIR}/gtk2.${RUBY_DLEXT}
-@dirrm ${RUBY_SITELIBDIR}/gtk2

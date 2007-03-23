@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/25 23:33:19 wiz Exp $
-
-SHA1 (mutagen-1.10.tar.gz) = 7afacb4aafdbab3e93984727565221fce8ed7036
-RMD160 (mutagen-1.10.tar.gz) = 375044c6173807383ebca197154628b85f0c2203
-Size (mutagen-1.10.tar.gz) = 504463 bytes
-SHA1 (patch-aa) = e1c7c4a562862f0bc7842961cc4c7ff423a5847f

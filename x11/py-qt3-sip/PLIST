@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/22 18:50:30 drochner Exp $
-bin/sip${PYVERSSUFFIX}
-${PYINC}/sip.h
-${PYSITELIB}/sip.so
-${PYSITELIB}/sipconfig.py
-${PYSITELIB}/sipconfig.pyc
-${PYSITELIB}/sipdistutils.py

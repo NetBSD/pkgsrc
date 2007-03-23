@@ -1,3 +1,0 @@
-This Kwiki  plugin helps reduce WikiSpam by requiring that the user have a
-user name before editing. The idea is that SpamBots won't take the trouble
-to do this. Of course this won't prevent spam created manually.

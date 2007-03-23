@@ -1,5 +1,0 @@
-Equeue is a library for OCaml, providing a generic event queue
-module and a specific module for file descriptor events. Furthermore,
-this library has been merged with the Shell library implementing
-the invocation of external commands including pipelines and
-redirections.

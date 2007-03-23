@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:33 agc Exp $
-
-SHA1 (enriched2html.c) = 425dc2cc8a6299d65114f51933702cd9c7436e59
-RMD160 (enriched2html.c) = 1fa9dbf17f80a000c09d339011206d5a18500ad6
-Size (enriched2html.c) = 6921 bytes

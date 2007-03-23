@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/16 09:54:10 heinz Exp $
-
-SHA1 (Parse-Syslog-1.09.tar.gz) = 8779e53a6936e4ba712dc5ce1e1a71ccc83463ac
-RMD160 (Parse-Syslog-1.09.tar.gz) = 2a8ac6adf840e505a5be8f5d7ef3b1bc66fa9f94
-Size (Parse-Syslog-1.09.tar.gz) = 11033 bytes

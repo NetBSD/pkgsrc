@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/25 14:05:31 rillig Exp $
-
-SHA1 (avenger-0.7.7.tar.gz) = 2ba44c82be8b78cf31758a25a79c8366ee6626b8
-RMD160 (avenger-0.7.7.tar.gz) = f01eebb2f41224e8e8ad655ca15afa2d1ee06ce2
-Size (avenger-0.7.7.tar.gz) = 824862 bytes
-SHA1 (patch-aa) = 7df2d9ac15feaf69bbc93e33de59ca25891c4223

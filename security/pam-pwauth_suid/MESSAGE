@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $
-
-The PAM authentication module "pam_pwauth_suid.so.0" needs to be
-installed into the directory "/usr/lib/security".
-===========================================================================

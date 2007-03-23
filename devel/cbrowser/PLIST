@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/05 09:32:02 obache Exp $
-bin/cbrowser
-share/cbrowser/builder.tcl
-share/cbrowser/calltree.tcl
-share/cbrowser/ftcllib.tcl
-share/cbrowser/hierarchy.tcl
-share/cbrowser/tclIndex
-share/cbrowser/widget.tcl
-@dirrm share/cbrowser

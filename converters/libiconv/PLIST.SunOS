@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.4 2005/07/28 15:15:18 adam Exp $
-lib/preloadable_libiconv.so

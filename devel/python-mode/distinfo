@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:32 agc Exp $
-
-SHA1 (python-mode-20041204/python-mode.el) = 4de9980a1486e12d2532e92b1d289547f85c8c1e
-RMD160 (python-mode-20041204/python-mode.el) = a5e5789a4bdbb95e9f75d59768d52117e0df5f7e
-Size (python-mode-20041204/python-mode.el) = 143778 bytes

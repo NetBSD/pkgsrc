@@ -1,5 +1,0 @@
-XXGDB is a X window interface to the GDB debugger.
-
-This X window interface has been adapted to GDB from the source
-distribution files of XDBX version 2.1 (patch level 2) which
-implements an X window interface to the DBX debugger.

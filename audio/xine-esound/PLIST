@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2006/08/06 10:36:50 wiz Exp $
-lib/xine/plugins/${XINE_LIB_VER}/xineplug_ao_out_esd.la

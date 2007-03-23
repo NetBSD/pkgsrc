@@ -1,4 +1,0 @@
-GLiv is an OpenGL image viewer, image loading is done via Gdk-pixbuf bundled
-with GTK+-2.2, rendering  with OpenGL and the graphical user interface uses
-GTK+ with GtkGLExt. GLiv  is  very  fast  and smooth at rotating, panning and
-zooming  if  you have an OpenGL accelerated graphics board.

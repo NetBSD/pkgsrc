@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/18 17:30:44 joerg Exp $
-include/X11/extensions/damageproto.h
-include/X11/extensions/damagewire.h
-lib/pkgconfig/damageproto.pc
-share/doc/damageproto/damageproto.txt
-@dirrm share/doc/damageproto
-@comment @dirrm include/X11/extensions

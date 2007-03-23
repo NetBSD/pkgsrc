@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:33 agc Exp $
-
-SHA1 (sgi-stl-3.3/stl.tar.gz) = ecb0c82dc97bddd5db73cd2e57e0fcae155153db
-RMD160 (sgi-stl-3.3/stl.tar.gz) = 1dd0bef20fdd3774e6f5a37f770d51699c7668bc
-Size (sgi-stl-3.3/stl.tar.gz) = 167463 bytes
-SHA1 (patch-aa) = f9432931c74dbdd02f78e2b6f3831592d624c728
-SHA1 (patch-ab) = 8b281b1d68026caf0cb7ab128928f0bb433b4c64

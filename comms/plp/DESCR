@@ -1,6 +1,0 @@
-PSION link
-
-This distribution is for transferring files between a PSION organiser and
-a Unix machine, via a serial cable. The code has been used successfully on
-a PC running linux and a PSION 5, but it ought to work with other flavours
-of unix and the PSION series 3 machines also.

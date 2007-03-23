@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/01/10 14:53:11 obache Exp $
-
-Documentation for DICTEM is available
-in ${PREFIX}/share/doc/dictem/README file.
-Also see ${PREFIX}/share/doc/dictem/NEWS file.
-
-===========================================================================

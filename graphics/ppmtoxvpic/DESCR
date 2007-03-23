@@ -1,5 +1,0 @@
-Utilities to create files that can be used as preview files
-for xv and gimp, usually stored in .xvpics directory.
-
-These utilities are part of the "dfm" package, but not
-installed by default.

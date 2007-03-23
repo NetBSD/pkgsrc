@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:23:25 jschauma Exp $
-bin/swisswatch
-lib/X11/app-defaults/SwissWatch
-lib/X11/app-defaults/SwissWatch-color
-${IMAKE_MAN_DIR}/swisswatch.${IMAKE_MANNEWSUFFIX}.gz

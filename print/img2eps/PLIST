@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/16 14:45:54 dillo Exp $
-bin/img2eps
-man/man1/img2eps.1

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/08 21:12:31 rillig Exp $
-man/man8/rinetd.8
-sbin/rinetd
-share/examples/rc.d/rinetd

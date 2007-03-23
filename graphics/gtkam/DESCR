@@ -1,4 +1,0 @@
-gtkam is the official GTK2 GUI for libgphoto2. Its purpose it to
-provide a standard client for libgphoto2 aimed at GNOME users.
-Consider it as a reference implementation for a graphical libgphoto2
-client.

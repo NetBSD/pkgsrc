@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:13 agc Exp $
-
-SHA1 (ilisp-20021222.tar.gz) = bb3755f9c7168dc8ce212934bedd20eb0feeadf6
-RMD160 (ilisp-20021222.tar.gz) = 8fb643c1aa388bfbadf99c23beb5c058183c585e
-Size (ilisp-20021222.tar.gz) = 261641 bytes
-SHA1 (patch-aa) = 87e96dde3d808add1b8048484d9f3342af33362c

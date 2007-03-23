@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/02 10:05:35 joerg Exp $
-
-SHA1 (PyYAML-3.03.tar.gz) = 96f04c728f2e49719ece50411f9299179c55bd82
-RMD160 (PyYAML-3.03.tar.gz) = de71ece89648c22bf9ddc4fe1d70475507840f3d
-Size (PyYAML-3.03.tar.gz) = 38830 bytes

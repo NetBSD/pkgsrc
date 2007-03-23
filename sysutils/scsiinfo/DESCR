@@ -1,6 +1,0 @@
-Scsiinfo displays information about SCSI devices attached to a given system,
-as seen by a supported SCSI device driver.  For each target known to the SCSI
-host adapter, scsiinfo reports SCSI transfer information for the device.  In
-particular, when a target supports synchronous transfer, the negotiated
-maximum transfer rate (in MB/sec) is reported.  Scsiinfo can also report the
-type and speed of each supported host adapter attached to the system.

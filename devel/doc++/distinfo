@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/03/09 12:56:53 rillig Exp $
-
-SHA1 (doc++-3.4.10.tar.gz) = 2102e99152ab91d80d7977fa5e13dd6f6043b2c8
-RMD160 (doc++-3.4.10.tar.gz) = 85b14d32e2932ceb465f1bab16eb8389cd22d72d
-Size (doc++-3.4.10.tar.gz) = 408887 bytes
-SHA1 (patch-aa) = d71fd3064b9795ed1c82044c2b42f34f166f0061
-SHA1 (patch-docify) = e38383e7be4c7d2c224c90f97317d0bdbe98685f

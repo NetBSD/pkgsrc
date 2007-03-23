@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/08/13 10:13:42 wiz Exp $
-
-SHA1 (spamprobe-1.4b.tar.gz) = a20a6c4a3ab831dd39b392c755170140d91cc372
-RMD160 (spamprobe-1.4b.tar.gz) = e3d08b6ea4eb603f4341b9c683a2092db3ba3aa5
-Size (spamprobe-1.4b.tar.gz) = 255023 bytes
-SHA1 (patch-aa) = d3367dbd5cb309c6629d174574daf9e2899ce62a

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/11 05:57:14 adam Exp $
-
-SHA1 (crossfire-client-1.9.0.tar.gz) = e9fc879eed5f5c031ae77f74161a57c22a3adbcc
-RMD160 (crossfire-client-1.9.0.tar.gz) = 6b31ade814d3db36a9dd5566bcab83f51c67c235
-Size (crossfire-client-1.9.0.tar.gz) = 735957 bytes

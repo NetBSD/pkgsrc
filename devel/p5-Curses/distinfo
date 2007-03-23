@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/12/03 01:43:04 joerg Exp $
-
-SHA1 (Curses-1.12.tgz) = 2b33a88f68783f29f773ab82f8d71bbad87a2b57
-RMD160 (Curses-1.12.tgz) = 506671db523288ec4d1471212f046810e2af1852
-Size (Curses-1.12.tgz) = 80258 bytes
-SHA1 (patch-aa) = 699dd96361ef0d3e39c17661453b062bd856cd41
-SHA1 (patch-ab) = 578e6b65a930fd561254d8b6f3da7014debd271c

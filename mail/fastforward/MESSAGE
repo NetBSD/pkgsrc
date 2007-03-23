@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/07/21 23:31:24 schmonz Exp $
-
-Be sure to read the documentation in
-${PREFIX}/share/doc/qmail/fastforward/ALIASES for setting up and
-using fastforward.
-
-===========================================================================

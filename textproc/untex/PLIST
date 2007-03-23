@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:08 zuntum Exp $
-bin/untex
-man/man1/untex.1

@@ -1,3 +1,0 @@
-Fast Fourier Transform routines in FORTRAN 77 from Netlib. These are
-single precision routines for both real and complex periodic
-sequences. Double precision versions are in the dfftpack package.

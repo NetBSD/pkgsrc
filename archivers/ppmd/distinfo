@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/04/02 16:24:40 minskim Exp $
-
-SHA1 (ppmdi1.rar) = 8d9780f78e5131f0f21ba0519d13f6d92a8eec82
-RMD160 (ppmdi1.rar) = 16fd62db9c17e6c65b4134ed322a2fce8c1f59dc
-Size (ppmdi1.rar) = 72270 bytes
-SHA1 (patch-aa) = 72bfec6320828b7b4456554a1134d5dfbb591a10
-SHA1 (patch-ab) = a5e1fa839a8aa826ae3c00e08908c9a2d1f841a6
-SHA1 (patch-ac) = 012e61b5895dcfcab20b22a822eb4c273bdeb822

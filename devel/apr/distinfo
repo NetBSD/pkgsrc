@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.20 2007/01/24 19:46:45 epg Exp $
-
-SHA1 (apr-1.2.8.tar.gz) = b8c89bab084d1bae1cb15d7b9d5f40d03dfe2c4a
-RMD160 (apr-1.2.8.tar.gz) = 299e1ddb1f7c9b0169a410e120c30abea38557c5
-Size (apr-1.2.8.tar.gz) = 1107189 bytes

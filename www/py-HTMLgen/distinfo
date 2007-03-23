@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:38 wiz Exp $
-
-SHA1 (py-HTMLgen-2.2.2/HTMLgen.tgz) = a34b9c1f9cf5536a548c66522213ac9fee1b43cd
-RMD160 (py-HTMLgen-2.2.2/HTMLgen.tgz) = bb32b2822f7ce8e49eb42853aff330429df073de
-Size (py-HTMLgen-2.2.2/HTMLgen.tgz) = 316415 bytes
-SHA1 (patch-aa) = 506d0aa49b875a02441006bc8a59adde14e2be9c
-SHA1 (patch-ab) = 92fc6aa41c590fafd75ab36b4d55f1fd952100fa

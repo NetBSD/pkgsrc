@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:10 agc Exp $
-
-SHA1 (Crypt-RIPEMD160-0.04.tar.gz) = 2310b3bae492d8b275c1ec1327f4162a0dc73203
-RMD160 (Crypt-RIPEMD160-0.04.tar.gz) = 8b880794b33f074b257434d2268ccb42596bcc9e
-Size (Crypt-RIPEMD160-0.04.tar.gz) = 57548 bytes

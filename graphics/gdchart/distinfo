@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/02/10 12:17:05 adam Exp $
-
-SHA1 (gdchart0.11.5dev.tar.gz) = c23e1cd233c38ac007b57420c20a5fa7fa206841
-RMD160 (gdchart0.11.5dev.tar.gz) = be9b11eb446738d9e30d78e8ce73b8a418b1f520
-Size (gdchart0.11.5dev.tar.gz) = 38783 bytes
-SHA1 (patch-ac) = eb4bc3be51bb1a9e8b3db9cd8c6038381fbf734a

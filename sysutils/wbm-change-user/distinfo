@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 17:36:16 jlam Exp $
-
-SHA1 (webmin-modules-1.270/change-user.wbm.gz) = 3f76afcd04ac1fd9b91dfc923a49dc2b59f3bb2f
-RMD160 (webmin-modules-1.270/change-user.wbm.gz) = 2b787f5eaf451a64400767e26cafc3a8b453df80
-Size (webmin-modules-1.270/change-user.wbm.gz) = 12628 bytes

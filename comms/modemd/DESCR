@@ -1,4 +1,0 @@
-The modemd package includes a replacement getty called modemd
-that is designed to handle modems and offer many features not
-present in standard gettys, and a modem daemon, mpoold, that
-allows processes to share local and remote modems in pools.

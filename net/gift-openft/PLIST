@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/25 23:33:05 wiz Exp $
-lib/giFT/libOpenFT.la
-share/giFT/OpenFT/OpenFT.conf.template
-share/giFT/OpenFT/nodes
-@dirrm share/giFT/OpenFT
-@unexec ${RMDIR} %D/lib/giFT 2>/dev/null || ${TRUE}

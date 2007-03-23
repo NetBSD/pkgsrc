@@ -1,4 +1,0 @@
-gICE is a powerful C text editor, developed using the GTK 2.0 toolkit.
-It provides advanced features like: AutoIdentation, Colors, text
-AutoFormating, C program AutoCorrection (gICE can read the source code
-and find lexic mistakes) and more.

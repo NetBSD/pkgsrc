@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/23 12:56:26 salo Exp $
-include/chm_lib.h
-include/lzx.h
-lib/libchm.la

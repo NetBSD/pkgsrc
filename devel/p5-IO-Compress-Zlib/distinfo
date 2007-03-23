@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/03/08 19:02:29 wiz Exp $
-
-SHA1 (IO-Compress-Zlib-2.004.tar.gz) = 5681a5f7c60d145282c625255774a5bf07ca3fda
-RMD160 (IO-Compress-Zlib-2.004.tar.gz) = 01967eeb986bf18d18974cdbfa1080526e8e8475
-Size (IO-Compress-Zlib-2.004.tar.gz) = 133210 bytes

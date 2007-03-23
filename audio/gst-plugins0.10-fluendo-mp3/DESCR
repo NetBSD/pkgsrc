@@ -1,4 +1,0 @@
-Fluendo mp3 decoder (encoder, later?) GStreamer plugin.
-
-Base code is from the ISO MPEG dist10 reference package, which is freely
-reusable.

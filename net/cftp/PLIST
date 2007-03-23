@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/06 03:20:54 jlam Exp $
-bin/cftp
-info/cftp.info
-share/doc/cftp/README
-share/doc/cftp/bindings.desc
-@dirrm share/doc/cftp

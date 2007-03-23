@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/04/23 10:55:59 jmmv Exp $
-
-SHA1 (fujiplay-1.33/fujiplay.tgz) = 6a2a42a87bb78d5eeeb040afb72636aa0aed692c
-RMD160 (fujiplay-1.33/fujiplay.tgz) = 91cbf301bd8e67a5753748d675ee1294c7d31ad7
-Size (fujiplay-1.33/fujiplay.tgz) = 12588 bytes
-SHA1 (patch-aa) = b34130401e97c358ff797a45ee4f5ff8016c2630
-SHA1 (patch-ab) = 9218c7987561e25987b509ead9e70cd4b5e35e24

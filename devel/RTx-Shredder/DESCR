@@ -1,4 +1,0 @@
-RTx::Shredder allows a RT administrator to safely remove data from the database
-by providing an API in the form of a PERL module and a Web interface as well as
-a command-line interface to use it.  Tickets, attachments, users and
-transactions can be deleted with it.

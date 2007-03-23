@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/18 17:17:50 reed Exp $
-include/X11/extensions/composite.h
-include/X11/extensions/compositeproto.h
-lib/pkgconfig/compositeproto.pc
-@comment @dirrm include/X11/extensions

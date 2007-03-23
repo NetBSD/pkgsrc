@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/08 03:53:33 tv Exp $
-
-SHA1 (picp-0.6.7.tar.gz) = 870c9af3c9d738841754dc4960ce304ffded7cf4
-RMD160 (picp-0.6.7.tar.gz) = 1aab3e2771005bb7bc76838baa63069f9367efa7
-Size (picp-0.6.7.tar.gz) = 122700 bytes
-SHA1 (patch-aa) = bae4a62253f60a88a6f94271d306d2fec4004aa4
-SHA1 (patch-ab) = ca0b13db0f89bb779e590637a407512f9adc15fb

@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.i386,v 1.1 2006/01/08 16:53:21 salo Exp $
-
-RPMFILES=		libjpeg-6.2.0-731.${SUSE_ARCH}.rpm

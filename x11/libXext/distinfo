@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/02/26 14:58:18 joerg Exp $
-
-SHA1 (libXext-1.0.3.tar.bz2) = 341796c502d0076912b090f0ac6a764501800684
-RMD160 (libXext-1.0.3.tar.bz2) = 375041cf7b89d2130a38200122ab3f27ef3ca5fd
-Size (libXext-1.0.3.tar.bz2) = 262116 bytes

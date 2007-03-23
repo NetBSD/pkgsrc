@@ -1,6 +1,0 @@
-id3ed edits the "id3" tag for mpeg layer3 files.  The mpeg3
-specification does not provide any method for storing song
-information, however the id3 tag has become a standard method for
-doing this, and most mp3 players can read the tag.  It will not cause
-any errors in players that do not support it.  The tag is 128 bytes
-long and is located at the end of the file.

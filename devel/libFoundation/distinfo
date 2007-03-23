@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/24 02:48:06 rh Exp $
-
-SHA1 (libFoundation-1.0.72-r107.tar.gz) = e6934e03d749a7a47d6e1ba5ab006d48458fd685
-RMD160 (libFoundation-1.0.72-r107.tar.gz) = 8de369d04b80d91bc939dbe0dcf9c93e44f60ee4
-Size (libFoundation-1.0.72-r107.tar.gz) = 534583 bytes

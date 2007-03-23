@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:25:49 taca Exp $
-
-SHA1 (uconv-0.4.12.tar.gz) = ccedb7effdead0ebb4eda2fb512ae18f075da6d5
-RMD160 (uconv-0.4.12.tar.gz) = 581a97313021acf83a66ff69d025520bfc73a3f4
-Size (uconv-0.4.12.tar.gz) = 546671 bytes

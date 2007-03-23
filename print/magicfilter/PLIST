@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:50 zuntum Exp $
-bin/magicfilter
-man/man8/magicfilter.8

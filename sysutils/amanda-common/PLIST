@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/03 13:45:17 rillig Exp $
-lib/libamanda.la
-lib/libamtape.la
-man/man8/amanda.8
-share/doc/amanda/COPYRIGHT
-share/doc/amanda/COPYRIGHT-APACHE
-share/doc/amanda/COPYRIGHT-REGEX
-@dirrm share/doc/amanda

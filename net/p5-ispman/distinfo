@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/11/03 23:12:43 rillig Exp $
-
-SHA1 (ispman-0.5.tar.gz) = e42c9fd4bd5fb2f7ac97140dfafe708fceaaccf8
-RMD160 (ispman-0.5.tar.gz) = 45f8442954ab7080732332a26aa1ae5893d1132e
-Size (ispman-0.5.tar.gz) = 942170 bytes
-SHA1 (patch-aa) = 3aac30a7f0cbd351fa385386519f42cbd48c08b6
-SHA1 (patch-ab) = b37a6558ba7f3b3f8a7e5e98943360c18113a569
-SHA1 (patch-ac) = d43feab466ce95a0da951eddc418d4b4e2f54fc2

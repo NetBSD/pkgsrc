@@ -1,13 +1,0 @@
-$NetBSD: patch-ak,v 1.4 2004/08/28 16:40:43 danw Exp $
-
---- src/icont/tunix.c.orig	Thu Aug  5 19:42:45 2004
-+++ src/icont/tunix.c	Thu Aug  5 19:43:16 2004
-@@ -301,7 +301,7 @@
-    else
-       strcpy(buf, ".");
-    strcat(buf, ":");
--   strcat(buf, relfile(prog, "/../../lib"));
-+   strcat(buf, relfile(prog, "/../../lib/icon"));
-    return salloc(buf);
-    }
- 

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 20:14:21 drochner Exp $
-lib/boinc3-seti/app_info.xml
-lib/boinc3-seti/${CLIENTBINNAME}
-@dirrm lib/boinc3-seti

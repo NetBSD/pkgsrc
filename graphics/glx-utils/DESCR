@@ -1,7 +1,0 @@
-The glxinfo program can be used to learn about your OpenGL library.
-It can identify the OpenGL implementation in use and the detected
-hardware.
-
-The glxgears program is a GLX implementation of the "gears" demo.
-
-These tools are from the MesaDemos source code.

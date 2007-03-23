@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:29 zuntum Exp $
-bin/mp3info
-man/man1/mp3info.1

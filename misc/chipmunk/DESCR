@@ -1,6 +1,0 @@
-Chipmunk is a language for writing short programs to perform
-application specific hardware manipulation tasks.
-
-It is specifically good at debugging hardware because you
-can interactively search for good ways to access your hardware, and
-then record it in a macro as documentation and fast repetition.

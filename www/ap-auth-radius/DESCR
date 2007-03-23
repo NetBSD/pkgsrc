@@ -1,3 +1,0 @@
-mod_auth_radius.c allows HTTP authentication to be checked against a
-RADIUS server. If you check valuable passwords such as the ones you use
-for dial-up, don't forget to use SSL.

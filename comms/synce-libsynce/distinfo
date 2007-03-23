@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 15:00:13 wiz Exp $
-
-SHA1 (synce-libsynce-0.9.1.tar.gz) = 603930b41fa987fa7e5e709a40360a616eac231c
-RMD160 (synce-libsynce-0.9.1.tar.gz) = a8c9d68196dec1b7555f56e8aab622a2817e1cf3
-Size (synce-libsynce-0.9.1.tar.gz) = 356343 bytes
-SHA1 (patch-aa) = bec59abf5b271c4f9a92af85a7cd3e3c19833d61
-SHA1 (patch-ab) = 0f36a9f97706e26ae49569dda0d21a42cfdb63ec

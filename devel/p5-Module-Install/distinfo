@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/11/03 10:41:14 obache Exp $
-
-SHA1 (Module-Install-0.64.tar.gz) = ce93e103164aaec8d5c015829ced38666a2f3fa4
-RMD160 (Module-Install-0.64.tar.gz) = 4d8785373ffebe68d6dd768f76852e210da714b6
-Size (Module-Install-0.64.tar.gz) = 80446 bytes

@@ -1,4 +1,0 @@
-RipMIME is designed to extract the attached files out of a MIME
-package (as say produced by programs such as AMaViS, Inflex and
-Xamime).  It can decode BASE64, Apple-double, UUENCODED, TNEF,
-QuotedPrintable, nested and MS MHT attachments out of mailpacks.

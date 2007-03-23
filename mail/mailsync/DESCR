@@ -1,5 +1,0 @@
-Mailsync is a way of synchronizing a collection of mailboxes. The algorithm is
-a 3-way diff. Two mailboxes are simultaneously compared to a record of the
-state of both mailboxes at last sync. New messages and message deletions are
-propagated between the two mailboxes. If you're familiar with CVS, it's the
-same principle, except there's no opportunity for conflicts.

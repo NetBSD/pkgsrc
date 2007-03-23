@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/02/27 09:12:35 wiz Exp $
-
-SHA1 (ExtUtils-F77-1.15.tar.gz) = b49b86e3c18c46906368d27b22d5459605388895
-RMD160 (ExtUtils-F77-1.15.tar.gz) = f702c45e240eb62986c407cfa7886bf4c18504f0
-Size (ExtUtils-F77-1.15.tar.gz) = 9526 bytes

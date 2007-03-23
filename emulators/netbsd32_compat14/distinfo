@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/05/11 19:02:08 veego Exp $
-
-SHA1 (compat14-i386-1.4.3.1.tar.gz) = 7c00ede3cf18bfc437e9262f0e583bde5f134004
-RMD160 (compat14-i386-1.4.3.1.tar.gz) = 7e1aba3308a3efec20384a1170f4b7b2d5e7ac72
-Size (compat14-i386-1.4.3.1.tar.gz) = 1646083 bytes
-SHA1 (compat14-sparc-1.4.3.1.tar.gz) = 9c0e46ced11f1f56fde79158edebb12898ea4ffa
-RMD160 (compat14-sparc-1.4.3.1.tar.gz) = 02a4eb94bb962889a74e9439fbb108b3b3d3e883
-Size (compat14-sparc-1.4.3.1.tar.gz) = 1831758 bytes

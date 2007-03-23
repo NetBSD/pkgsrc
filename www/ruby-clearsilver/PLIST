@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:47 taca Exp $
-${RUBY_SITEARCHLIBDIR}/hdf.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/neo.rb

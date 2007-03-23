@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/26 00:01:05 wiz Exp $
-
-SHA1 (rbuild28.zip) = 053b8d45d203b1b339b17a7f36e15288aeeb276f
-RMD160 (rbuild28.zip) = 9bb91bbdb9e1b9327b97317161f13200372963b7
-Size (rbuild28.zip) = 108040 bytes
-SHA1 (patch-aa) = c7d5a9c16c2da0a97d30c2e21d99827b3ab8f2a6
-SHA1 (patch-ab) = 1fbc4887a532d1f956875589baa8a2e0211070fc
-SHA1 (patch-ac) = 484bd715983c109f41f1d01e7150266e7c2ca4d1

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/03 00:28:06 joerg Exp $
-
-SHA1 (php4-FastTemplate/FastTemplate-1_1_0.tar.gz) = 43d2a91a50a904e8fc449c77412cfa63960fe4fb
-RMD160 (php4-FastTemplate/FastTemplate-1_1_0.tar.gz) = 00d247fa13771e84fb3bad1b40b9e0a1d6d3df07
-Size (php4-FastTemplate/FastTemplate-1_1_0.tar.gz) = 21508 bytes
-SHA1 (php4-FastTemplate/php4.diff) = 34d448bb6a102bf44a842535010b75392abbb5cb
-RMD160 (php4-FastTemplate/php4.diff) = a9ba7a6c6dfd596bbdfc05f5f654263ad03e7b4c
-Size (php4-FastTemplate/php4.diff) = 684 bytes

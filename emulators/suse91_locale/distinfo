@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/08 16:53:21 salo Exp $
-
-SHA1 (suse91/i586/glibc-locale-2.3.3-98.i586.rpm) = 329ab066b6d21f95e0329731416806015ff2eda6
-RMD160 (suse91/i586/glibc-locale-2.3.3-98.i586.rpm) = 3591c7c7c0f0d3f7ae49e627c45ce1f425bda2d3
-Size (suse91/i586/glibc-locale-2.3.3-98.i586.rpm) = 10393732 bytes
-SHA1 (suse91/x86_64/glibc-locale-2.3.3-63.x86_64.rpm) = c0a43efd7b29585ad3de03e92c71397708061758
-RMD160 (suse91/x86_64/glibc-locale-2.3.3-63.x86_64.rpm) = a563550ba2df6a656d6b83747cc4c5905905a331
-Size (suse91/x86_64/glibc-locale-2.3.3-63.x86_64.rpm) = 10264418 bytes

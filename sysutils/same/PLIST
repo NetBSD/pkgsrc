@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/04 22:46:27 rillig Exp $
-bin/same
-man/cat1/same.0
-man/man1/same.1

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/11/27 14:26:06 joerg Exp $
-
-SHA1 (wpa_supplicant-0.4.9.tar.gz) = e6a5cd6fbb7f12cc0a074da212f4fd7fbde0aec0
-RMD160 (wpa_supplicant-0.4.9.tar.gz) = 627ddb6c12f15e08448606f24b3082b50f814a43
-Size (wpa_supplicant-0.4.9.tar.gz) = 483279 bytes
-SHA1 (patch-aa) = 6168171f82fe6dc2262d1be47a1da620e6e81752
-SHA1 (patch-ab) = b6e501a9ef26c26ecbaa8c87309596856fa94cc8

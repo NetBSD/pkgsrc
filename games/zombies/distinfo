@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/03/07 15:09:59 adam Exp $
-
-SHA1 (zombies-1.0.tar.gz) = 5bc4c87211b5aa29edffb7df74ee12c0bbdc408a
-RMD160 (zombies-1.0.tar.gz) = 006fcb8876f6712178ae7486b15c6a27de6270ee
-Size (zombies-1.0.tar.gz) = 9482 bytes
-SHA1 (patch-aa) = 6bfb7789473d7395f844e66fdfd7f226f0511542
-SHA1 (patch-ab) = c17689d0b97e48e8d75c696809a77cf9664bcc4e

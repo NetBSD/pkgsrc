@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/14 23:43:25 wiz Exp $
-
-SHA1 (pygobject-2.12.3.tar.gz) = ba59f5c08516ec83e76e6442ecb42049d6852a4b
-RMD160 (pygobject-2.12.3.tar.gz) = bcc5d5d8a23a50b308cc588849d0317d6de6a285
-Size (pygobject-2.12.3.tar.gz) = 421080 bytes
-SHA1 (patch-aa) = 421c49fa969045a33b3df26fef3d8048d9901796
-SHA1 (patch-ab) = a7e4fe15f8d69a6949fbcff46e7166a308fa577c

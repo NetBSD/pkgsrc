@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/20 14:41:56 wiz Exp $
-bin/qiv
-man/man1/qiv.1

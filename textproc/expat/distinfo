@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2006/01/22 16:46:02 wiz Exp $
-
-SHA1 (expat-2.0.0.tar.gz) = 9ff011a75a1f5b60145c4afdec520442cb398d93
-RMD160 (expat-2.0.0.tar.gz) = f52ccab26950d0148c3e8b644d7c9021734de318
-Size (expat-2.0.0.tar.gz) = 450860 bytes

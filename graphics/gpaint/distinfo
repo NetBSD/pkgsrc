@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/05/06 12:42:28 joerg Exp $
-
-SHA1 (gpaint-0.2.tar.gz) = 09149b6eaf9c694cd2e4dac8ebbe5c48b186cbd2
-RMD160 (gpaint-0.2.tar.gz) = 0ab6187cea1ddd563a59a8549f8938fee0e8ecd1
-Size (gpaint-0.2.tar.gz) = 287257 bytes
-SHA1 (patch-aa) = c5456fbb93bdd3425162cb106e2a7cf68d5f1956

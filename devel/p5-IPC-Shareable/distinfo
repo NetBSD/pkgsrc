@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:26 agc Exp $
-
-SHA1 (IPC-Shareable-0.60.tar.gz) = 3f12abf204f21d190441280b3b26ae1f94fe43f7
-RMD160 (IPC-Shareable-0.60.tar.gz) = a9057025d48b6a5d06f55d369b4045bbd2a2b9f0
-Size (IPC-Shareable-0.60.tar.gz) = 29239 bytes

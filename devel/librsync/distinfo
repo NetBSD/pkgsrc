@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/20 19:15:03 snj Exp $
-
-SHA1 (librsync-0.9.7.tar.gz) = d575eb5cae7a815798220c3afeff5649d3e8b4ab
-RMD160 (librsync-0.9.7.tar.gz) = 39ca29334d0efabc0ee9e4d44abbe73a7d2fe831
-Size (librsync-0.9.7.tar.gz) = 453802 bytes
-SHA1 (patch-aa) = 79936cf4170736a59a3a918c7d7df9d63a549e7d
-SHA1 (patch-ab) = 23b3267b39c8f9185dc8321898422ace81b4e27c

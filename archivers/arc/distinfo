@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/05/02 19:06:45 wiz Exp $
-
-SHA1 (arc-5.21o.tgz) = 4b803eae04976072fae88d4dbfc4b3e45796f8f3
-RMD160 (arc-5.21o.tgz) = 2897f62452f59efcb757cd5447d6d330df0cfdd1
-Size (arc-5.21o.tgz) = 82386 bytes
-SHA1 (patch-aa) = 2222318794a68a913e80cb808e3881a4fdc07fb0
-SHA1 (patch-ab) = e85c2698747106a7319db07185bfe0b6e2480974
-SHA1 (patch-ac) = 3332d9db5c41fb205ab9f5123b0de0704ae634b3
-SHA1 (patch-ad) = 3b43c7b64d0e926677dc8d1b20f3afbf0c854a5b

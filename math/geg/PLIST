@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/01 20:37:09 wiz Exp $
-bin/geg
-man/man1/geg.1

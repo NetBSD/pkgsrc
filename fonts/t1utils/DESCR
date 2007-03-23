@@ -1,4 +1,0 @@
-Utilities for working with Postscript Type 1 font files.  In particular, this
-package includes programs for changing font files between ASCII and binary
-formats, and a "human readable" format, and it also includes a program for
-extracting the useful information from the "resource fork" of Mac OS files.

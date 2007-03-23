@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/11/13 15:00:56 obache Exp $
-
-SHA1 (855resolution-0.4.tgz) = aabba504d0592cac676188f1ce73bd25389d8fda
-RMD160 (855resolution-0.4.tgz) = d075d239257b778f509c8fd96619bfd810194d3b
-Size (855resolution-0.4.tgz) = 6740 bytes
-SHA1 (patch-aa) = b230470c91957efc67b448233140b91a600e7def
-SHA1 (patch-ab) = bb8c918da7af28567f05072399170c7cf4293f58

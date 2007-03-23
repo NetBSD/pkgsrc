@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/22 19:21:11 abs Exp $
-bin/vncpasswd
-bin/vncviewer
-man/man1/vncpasswd.1
-man/man1/vncviewer.1

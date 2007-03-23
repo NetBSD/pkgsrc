@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 14:45:25 agc Exp $
-
-SHA1 (ppsmall-1.0.tar.Z) = d4f78dcbbe0c4e4cd4cfbcdfa636af02e984a26e
-RMD160 (ppsmall-1.0.tar.Z) = dbb774a9c94f1b4d313cfbd4b0a594d90ab841d2
-Size (ppsmall-1.0.tar.Z) = 5251 bytes
-SHA1 (patch-aa) = 9d35b54768ae1df1a66d8c042f9d3565b581b03c

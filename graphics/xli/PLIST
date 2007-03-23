@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/05 20:03:29 fredb Exp $
-bin/xli
-bin/xlito
-bin/xsetbg
-bin/xview
-lib/X11/app-defaults/Xli
-${IMAKE_MAN_DIR}/xli.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xlito.${IMAKE_MANNEWSUFFIX}

@@ -1,9 +1,0 @@
-racoon speaks IKE (ISAKMP/Oakley) key management protocol, to
-establish IPsec security association with other hosts.
-
-This is based on KAME racoon, with some enhancements such as
-NAT-Traversal (needs kernel support), hybrid authentication,
-ISAKMP mode config, RADIUS support, IKE fragmentation and others.
-
-Ipsec-tools' racoon is able to act as a VPN server for the
-Cisco VPN client using hybrid authentication.

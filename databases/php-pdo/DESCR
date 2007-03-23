@@ -1,6 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-
-PDO provides a uniform data access interface, sporting advanced
-features such as prepared statements and bound parameters. PDO
-drivers are dynamically loadable and may be developed independently
-from the core, but still accessed using the same API.

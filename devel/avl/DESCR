@@ -1,5 +1,0 @@
-This is a library in ANSI C for manipulation of balanced binary
-trees.  Functions for use with three varieties of AVL tree and
-one type of red-black tree are included.  There is full documentation,
-including an explanation of what AVL and red-black trees are and why
-you'd use them, in Texinfo, Info, HTML, and plain text formats.

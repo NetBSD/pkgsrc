@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2006/11/03 07:53:55 rillig Exp $
-
-SHA1 (unzip-5.52/unzip552.tar.gz) = 1831bd59b9e607a69052f83b263384895e2d4a19
-RMD160 (unzip-5.52/unzip552.tar.gz) = b749b0923bc4cceaa6f937aef688e9713a84328c
-Size (unzip-5.52/unzip552.tar.gz) = 1140291 bytes
-SHA1 (patch-aa) = de66b7b5c45904167e8596ce5235d957c2df4d2a
-SHA1 (patch-ab) = dd426fdf4b774bd73f4ee46da470ffa3c2cf6513
-SHA1 (patch-ac) = ada9059d9b3384396bbf6437f55fa40f2f6c0c73
-SHA1 (patch-ad) = a0ad66bc1f13dd1ec9f9d7c9eb5b49ca3edb09be

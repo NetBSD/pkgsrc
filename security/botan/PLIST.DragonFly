@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.1 2006/03/01 00:33:30 joerg Exp $
-include/botan/es_ftw.h

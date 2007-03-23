@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/20 09:36:00 agc Exp $
-man/cat8/genrpm.0
-man/man8/genrpm.8
-sbin/genrpm

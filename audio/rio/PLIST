@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:45 zuntum Exp $
-bin/rio
-bin/find-lpt-port
-share/rio/README
-@dirrm share/rio

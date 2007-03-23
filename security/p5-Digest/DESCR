@@ -1,3 +1,0 @@
-A simple frontend module for autoloading of various Digest:: modules.
-It also provide documentation of the interface that all Digest:: modules
-should provide.

@@ -1,7 +1,0 @@
-Dynamic loading compatibility library
-
-dlcompat provides the dlopen() interface for dynamic loading of
-modules for applications that need it. It is based on Apple code
-that was only released via Darwin CVS.
-
-This version comes from the Fink project.

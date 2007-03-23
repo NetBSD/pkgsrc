@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/11/27 14:24:01 dsainty Exp $
-
-SHA1 (sarab-0.2.2.tar.gz) = 6119869e996305fb80d37f58bb2c6bf5e73cde27
-RMD160 (sarab-0.2.2.tar.gz) = b32a4f73ff98b57f3e486f728889d903809389ea
-Size (sarab-0.2.2.tar.gz) = 22428 bytes
-SHA1 (patch-aa) = 142123c307de32ba4a176c7c46b185124e2afb0b

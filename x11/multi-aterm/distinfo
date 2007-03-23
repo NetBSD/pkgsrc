@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 17:36:17 wiz Exp $
-
-SHA1 (multi-aterm-0.0.4.tar.gz) = a0d5843b5d98ba29c873d8a37c7676d5686a7ec1
-RMD160 (multi-aterm-0.0.4.tar.gz) = 3935e59699e238bbdedc291fb6198771673c02e1
-Size (multi-aterm-0.0.4.tar.gz) = 214408 bytes
-SHA1 (patch-aa) = 4d2cc181e0f9c6be7fc84a4bdb9819d853dd5b6a

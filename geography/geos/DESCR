@@ -1,5 +1,0 @@
-GEOS (Geometry Engine - Open Source) is a C++ port of the Java
-Topology Suite (JTS).  It contain the complete functionality of JTS in
-C++.  It includes all the OpenGIS "Simple Features for SQL" spatial
-predicate functions and spatial operators,and JTS topology functions
-like IsValid().

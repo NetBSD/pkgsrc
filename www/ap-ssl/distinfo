@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.33 2006/07/30 11:19:38 jdolecek Exp $
-
-SHA1 (mod_ssl-2.8.28-1.3.37.tar.gz) = 9db2a7240e499da2b99d0df9c1a6fbae0580ba0b
-RMD160 (mod_ssl-2.8.28-1.3.37.tar.gz) = 6b12c0a52fe0fbb7b91221d1cb37f93fbe59bb11
-Size (mod_ssl-2.8.28-1.3.37.tar.gz) = 820417 bytes
-SHA1 (patch-aa) = f2db042ff2e15ebfc9387b254467be78747cf947
-SHA1 (patch-ab) = d6e4f5ef249506b9b4f003f84d78e2eb075dcd34

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:33 jlam Exp $
-bin/mcrypt
-bin/mdecrypt
-man/man1/mcrypt.1
-share/locale/cs/LC_MESSAGES/mcrypt.mo
-share/locale/de/LC_MESSAGES/mcrypt.mo
-share/locale/el/LC_MESSAGES/mcrypt.mo
-share/locale/es_AR/LC_MESSAGES/mcrypt.mo
-share/locale/pl/LC_MESSAGES/mcrypt.mo

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/20 12:57:21 adam Exp $
-bin/glpsol
-bin/tspsol
-include/glpk.h
-lib/libglpk.la

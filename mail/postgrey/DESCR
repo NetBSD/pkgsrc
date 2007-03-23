@@ -1,9 +1,0 @@
-Postgrey is a Postfix policy server implementing greylisting developed
-by David Schweikert.
-
-Compared to greylist.pl included with Postfix (2.1.1), Postgrey has the
-following additional features:
-- Safer database handling: Postgrey does use the logging and transaction
-  features of BerkeleyDB to maximize reliability.
-- Automatical cleaning of the database: Entries that were last seen
-  more than a defined amount of time get removed automatically.

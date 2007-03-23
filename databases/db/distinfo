@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/03/15 16:13:58 tron Exp $
-
-SHA1 (db-2.7.7.tar.gz) = 786e7f1be5f8d2dbdfa205a22ae9a5d1ead85701
-RMD160 (db-2.7.7.tar.gz) = 703dcddb69884c749637e07d592c4d1850981fd1
-Size (db-2.7.7.tar.gz) = 1112976 bytes
-SHA1 (patch-aa) = 80f46598f0859c0f0b2ed0aa737c5626e99201a2
-SHA1 (patch-ab) = f524ff9a01813c4384b830a860e32db24bf502f3
-SHA1 (patch-ac) = 69e50962de9f400d771fc6fc3a4556ebf04a2ee2

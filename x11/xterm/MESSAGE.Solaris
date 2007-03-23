@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.Solaris,v 1.1 2005/02/16 22:05:36 reed Exp $
-
-This package should be deinstalled before you update to a newer Solaris
-or OpenWindows version.
-
-===========================================================================

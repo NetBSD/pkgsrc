@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
-sbin/915resolution
-share/doc/915resolution/README.txt
-@dirrm share/doc/915resolution

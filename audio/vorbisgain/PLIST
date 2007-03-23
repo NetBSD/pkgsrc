@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/22 13:48:43 rpaulo Exp $
-bin/vorbisgain
-man/man1/vorbisgain.1

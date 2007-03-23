@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 22:27:45 joerg Exp $
-include/X11/Xcursor/Xcursor.h
-lib/libXcursor.la
-lib/pkgconfig/xcursor.pc
-man/man3/Xcursor.3
-@dirrm include/X11/Xcursor
-@comment @dirrm include/X11

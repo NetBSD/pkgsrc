@@ -1,3 +1,0 @@
-This Perl 5 module is an extension for the Module::Install system
-that allow you to substitute values into files before install, for
-example paths to libs or binary executables.

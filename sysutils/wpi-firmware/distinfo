@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/02 13:35:55 rpaulo Exp $
-
-SHA1 (ipw3945-ucode-1.13.tgz) = 3e400a7677d5bcff7e573f393b32e2b8bf7db483
-RMD160 (ipw3945-ucode-1.13.tgz) = 133c771e8b7d32bfd7fcef541cf8f99e885253dd
-Size (ipw3945-ucode-1.13.tgz) = 61175 bytes

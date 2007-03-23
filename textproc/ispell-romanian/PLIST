@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/19 21:20:38 jwise Exp $
-lib/romanian.aff
-lib/romanian.hash
-lib/romanian-signs.aff
-lib/romanian-signs.hash

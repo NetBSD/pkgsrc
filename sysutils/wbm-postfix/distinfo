@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 04:03:26 jlam Exp $
-
-SHA1 (webmin-modules-1.270/postfix.wbm.gz) = 1718786cb5f0a649ed85cf0aa2aa51213ba485ea
-RMD160 (webmin-modules-1.270/postfix.wbm.gz) = 8e954f6416b69e5dabab752ad46960114f879d4f
-Size (webmin-modules-1.270/postfix.wbm.gz) = 314719 bytes

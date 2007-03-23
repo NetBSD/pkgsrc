@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (ccd2iso.tar.gz) = 9116e2f3551e33a50662b5224dc9c4b99320696b
-RMD160 (ccd2iso.tar.gz) = 32adb8e7858eb7acacba0cfec8fed79b97afa65b
-Size (ccd2iso.tar.gz) = 540276 bytes
-SHA1 (patch-aa) = d251de1ea9adb23591da3e8c1495ee5678164a0d

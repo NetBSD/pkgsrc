@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/12 15:49:47 joerg Exp $
-
-SHA1 (tix8.2.0b1.tar.gz) = c9114e56c41fc492532639127439d6f267c51402
-RMD160 (tix8.2.0b1.tar.gz) = 1a80662812ce2b97f7d052f77556de6782f5ee47
-Size (tix8.2.0b1.tar.gz) = 1374621 bytes
-SHA1 (patch-aa) = b9c15d3435d289a3469e4c1bc261df99e1a2bf2e
-SHA1 (patch-ab) = 2a46093df4d19c481d58b2a9b8945430d547a12c
-SHA1 (patch-ac) = 9702cf3635c04ce066f5d910d5a5b6ad1d87d96b
-SHA1 (patch-ad) = 305265a7d64f0cb114d3587fed5c2abae4b467c5

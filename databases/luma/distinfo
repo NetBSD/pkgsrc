@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/08 18:29:56 drochner Exp $
-
-SHA1 (luma-2.2.1.tar.bz2) = 58eb188e9c5dbc7061fe2763eea775175ee11fc5
-RMD160 (luma-2.2.1.tar.bz2) = 1f83569ccd6dfa2ec50e235ca73423c23e4bad90
-Size (luma-2.2.1.tar.bz2) = 656788 bytes
-SHA1 (patch-aa) = aa6493c3f6caea83b4b3b30c6063db0ee51540bd

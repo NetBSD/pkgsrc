@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:50 agc Exp $
-
-SHA1 (ipgrab-0.9.9.tar.gz) = 2fe9816ee2661c1efe87ce63b845a32732bf3b78
-RMD160 (ipgrab-0.9.9.tar.gz) = cef17116e4f2c86edc7d20c95fb5a6c8b900a130
-Size (ipgrab-0.9.9.tar.gz) = 289561 bytes

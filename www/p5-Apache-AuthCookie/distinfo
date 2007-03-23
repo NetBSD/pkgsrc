@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/17 12:58:26 obache Exp $
-
-SHA1 (Apache-AuthCookie-3.10.tar.gz) = 282377aaa8883a3c7e371360112012db316f40f0
-RMD160 (Apache-AuthCookie-3.10.tar.gz) = 91b003ba1e6b1cb319a00ce10ac2c4bcd29cc3f6
-Size (Apache-AuthCookie-3.10.tar.gz) = 34993 bytes

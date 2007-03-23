@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/21 04:00:56 minskim Exp $
-
-SHA1 (zidrav4unix-1.2.0.tar.gz) = e8e2e6574831509669bae3976748baec713243c6
-RMD160 (zidrav4unix-1.2.0.tar.gz) = 7043b122e8e1f394d6fe62ea81ed08d0052a199b
-Size (zidrav4unix-1.2.0.tar.gz) = 18448 bytes
-SHA1 (patch-aa) = 7e1c6bcb375d38a1aa7f3eaa4fa00e779465860a

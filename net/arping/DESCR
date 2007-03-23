@@ -1,6 +1,0 @@
-Arping can be used to find out if a specific IP address on the LAN
-is 'taken' and what MAC address owns it.  Sure, you *could* just
-use 'ping' to find out if it's taken and even if the computer blocks
-ping (and everything else) you still get an entry in your ARP cache.
-But what if you aren't on a routable net?  Or the host blocks ping
-(all ICMP even)?  Then you're out of luck.  Or you use arping.

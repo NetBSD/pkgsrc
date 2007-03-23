@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/04/20 14:14:15 joerg Exp $
-
-SHA1 (sidplay-2.0.9.tar.gz) = 2e4589cc59b3d2d37f38b98d7a0a0ba37b82da7a
-RMD160 (sidplay-2.0.9.tar.gz) = 9d7d2cbcb472ab413093e85827de2c7099782e47
-Size (sidplay-2.0.9.tar.gz) = 362140 bytes
-SHA1 (patch-aa) = 12e236e42f2cbf311e5d9ed7b25c262089f57a27

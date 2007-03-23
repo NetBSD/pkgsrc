@@ -1,5 +1,0 @@
-# $NetBSD: xorg.Xcomposite,v 1.1 2005/07/25 20:50:25 reed Exp $
-include/X11/extensions/Xcomposite.h
-lib/libXcomposite.so.1.0
-lib/libXcomposite.a
-lib/pkgconfig/xcomposite.pc

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:02 agc Exp $
-
-SHA1 (Sjeng-Free-11.0.tar.gz) = cfcbefc5a5872d6340b83fbe64d2c46cf85a8b0f
-RMD160 (Sjeng-Free-11.0.tar.gz) = ff45c8a14e1b6fde2062107eecab6ebf050acc0d
-Size (Sjeng-Free-11.0.tar.gz) = 173443 bytes
-SHA1 (patch-aa) = c0d98382bccc158a887328577757b5d98574c0ad
-SHA1 (patch-ab) = 7f87c3a8b2bc249352c07e1db73c6dc0799e3553
-SHA1 (patch-ac) = 94c8e903e821f9a77c8faa51033d5b01558d90f6
-SHA1 (patch-ad) = 94b3d1f4636262cd6669d03f3f14ca8ed40d0204

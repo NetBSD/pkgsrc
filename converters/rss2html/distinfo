@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/12/09 02:05:24 obache Exp $
-
-SHA1 (rss2html-0.8.2.tar.gz) = d1dedf12dfba3c6bcb5985e0c1b6d738b6653516
-RMD160 (rss2html-0.8.2.tar.gz) = e49889110da91661c9d8ab4d22c98493a45483b5
-Size (rss2html-0.8.2.tar.gz) = 26582 bytes

@@ -1,4 +1,0 @@
-wdm is a modification of XFree86's xdm package for graphically handling
-authentication and system login. Most of xdm has been preserved (XFree86
-4.2.1.1) with the Login interface based on a WINGs implementation using
-Tom Rothamel's "external greet" interface.

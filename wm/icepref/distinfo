@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/07/18 00:37:19 kristerw Exp $
-
-SHA1 (icepref-1.1.tar.gz) = 025c0390f7acb6768ee0b41c733bf9a3e59949b8
-RMD160 (icepref-1.1.tar.gz) = 68fbc682deb81143b8a57d1c34194a3091d5a259
-Size (icepref-1.1.tar.gz) = 29418 bytes
-SHA1 (patch-aa) = 0eee7cad3aaa787f68f0ae7a8428b4cd7d312f9b
-SHA1 (patch-ab) = 6e0f9cfff26daceeaff1233d7b34e0a264a58f70

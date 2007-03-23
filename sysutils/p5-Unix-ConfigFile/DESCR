@@ -1,4 +1,0 @@
-The Unix::ConfigFile distribution is a suite of modules that provide simple
-interfaces to various Unix configuration files.  The objective is to free the
-system administrator from dealing with the trivial formatting details of the
-files, and allow him or her to concentrate on the information therein.

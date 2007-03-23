@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/10 20:14:55 wiz Exp $
-
-SHA1 (dbxml-1.2.1.tar.gz) = cc6ce354b3fb2e00d5b424c0b15ecee4ec340842
-RMD160 (dbxml-1.2.1.tar.gz) = 162f3e14e509aefd764bb97af80d5bbf06151df7
-Size (dbxml-1.2.1.tar.gz) = 3151529 bytes
-SHA1 (patch-aa) = e0c2342f13dbec0618e5300fcd000fe16817f700

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/29 21:04:22 joerg Exp $
-
-SHA1 (mppenc-1.16.tar.bz2) = f7dc898b14e0bd954941c62435a62c23af89cb8a
-RMD160 (mppenc-1.16.tar.bz2) = 6e97bfc246b9db11532a628afba631883687554d
-Size (mppenc-1.16.tar.bz2) = 105569 bytes
-SHA1 (patch-aa) = 4cc88a533db69fbd8c650358e20f261e162d1049
-SHA1 (patch-ab) = 0aa4c32e90f18f2d2321d69942b087330fb50197

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/04/08 16:46:25 joerg Exp $
-
-SHA1 (xfmedia-0.9.1.tar.bz2) = 92eff43fb180b07039d243d1cc720aed0e4163ad
-RMD160 (xfmedia-0.9.1.tar.bz2) = 71576ca7b58eb32bffb2fdaa8bcc75c4fb78f794
-Size (xfmedia-0.9.1.tar.bz2) = 806692 bytes
-SHA1 (patch-aa) = faf57dee99db3f228d89bae17cd40879881a5198
-SHA1 (patch-ab) = f9cab8f90bb8f50758a5e3a11c3579ba374937af
-SHA1 (patch-ac) = 321e8b450f4924cc020905b59ce57d3e6174f2a4

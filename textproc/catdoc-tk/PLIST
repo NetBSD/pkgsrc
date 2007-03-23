@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/24 17:07:00 reed Exp $
-bin/wordview
-man/man1/wordview.1

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/14 17:03:54 rillig Exp $
-
-SHA1 (tetrinetx-1.13.16+qirc-1.40c.tar.gz) = 3bc0a8ce53bef3ef68b028834689d6fe85c8150a
-RMD160 (tetrinetx-1.13.16+qirc-1.40c.tar.gz) = 447c1d239919f2390748c8808cd1c026d0236afc
-Size (tetrinetx-1.13.16+qirc-1.40c.tar.gz) = 81447 bytes
-SHA1 (patch-aa) = c89202b583e2c3ebac9f566b451a61fece517bc6
-SHA1 (patch-ab) = 10136812d7d20e6c961463c3fa6973d2b23d195e

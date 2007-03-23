@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-#	$NetBSD: openapp,v 1.2 2005/09/30 23:13:57 rh Exp $
-#
-# GNUstep openapp wrapper
-. @PREFIX@/share/GNUstep/System/Library/Makefiles/GNUstep.sh
-@PREFIX@/share/GNUstep/System/Tools/openapp "$@"

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/15 09:39:39 xtraeme Exp $
-
-SHA1 (fluxconf-0.9.9.tar.gz) = c9e262d21b4badfcebccb0f500af10c854bda9eb
-RMD160 (fluxconf-0.9.9.tar.gz) = 0e9e29292d6679f0a43d6fb4d091015f66e4cf20
-Size (fluxconf-0.9.9.tar.gz) = 234276 bytes
-SHA1 (patch-aa) = 1ff7df6af20edb0cab1c4de7023b28e140326394

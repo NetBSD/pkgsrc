@@ -1,7 +1,0 @@
-The GNU Core Utilities are the basic file, shell and text manipulation
-utilities of the GNU operating system. These are the core utilities which
-are expected to exist on every operating system.
-
-Previously these utilities were offered as three individual sets of GNU
-utilities, fileutils, shellutils, and textutils. Those three have been
-combined into a single set of utilities called the coreutils.

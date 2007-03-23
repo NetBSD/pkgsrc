@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/12/08 16:59:56 wiz Exp $
-
-SHA1 (kanjidic-20061208/kanjidic.doc) = ecce26ab169d89075654f75858cdde81ec6e72f8
-RMD160 (kanjidic-20061208/kanjidic.doc) = 4f68bd824caa69f741c3e821d8a9ba2a2f1e710f
-Size (kanjidic-20061208/kanjidic.doc) = 55207 bytes
-SHA1 (kanjidic-20061208/kanjidic.gz) = 6a9377adccb65e8b72fd806a78f3bbae16425372
-RMD160 (kanjidic-20061208/kanjidic.gz) = dfb9d3f789f1c2bf64f1b10753d05fd9f8f698fc
-Size (kanjidic-20061208/kanjidic.gz) = 503435 bytes

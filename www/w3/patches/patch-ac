@@ -1,14 +1,0 @@
-$NetBSD: patch-ac,v 1.1 2002/10/18 14:50:15 minoura Exp $
-
---- lisp/font.el.orig	Wed Nov 28 20:04:21 2001
-+++ lisp/font.el	Thu Oct 17 06:26:04 2002
-@@ -996,7 +996,8 @@
-     (set-face-property face 'font-specification nil)
-     (apply 'set-face-font face font args))))
- 
--(if font-running-emacs-new-redisplay
-+(if (and font-running-emacs-new-redisplay
-+	 window-system)
-     (fset 'font-set-face-font 'font-set-face-font-new-redisplay))
- 
- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

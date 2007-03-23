@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/03/23 00:06:52 joerg Exp $
-
-SHA1 (nemesis-1.4.tar.gz) = a88e04145e5f379da4d50a9acfeaf62da68aaf94
-RMD160 (nemesis-1.4.tar.gz) = b07abbdd7baf552a40056e549653b6fba1d1feca
-Size (nemesis-1.4.tar.gz) = 144187 bytes
-SHA1 (patch-aa) = 42465612b3369e6396051326b2ba811bd8cdd10a

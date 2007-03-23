@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/03/18 20:41:28 rillig Exp $
-
-SHA1 (libwpd-0.8.9.tar.gz) = f5751f76dca619618659f480f32b35b9b7d88737
-RMD160 (libwpd-0.8.9.tar.gz) = c69853e8f86ee5c936102e00960a7fdea7984ab7
-Size (libwpd-0.8.9.tar.gz) = 569384 bytes
-SHA1 (patch-aa) = 4c91375938db1761200af1b68cacd4714a4da004

@@ -1,4 +1,0 @@
-netgroup lists the set of hosts, users, or domains that belong to the
-specified netgroup.
-innetgr returns true or false depending if the netgroup membeship test
-succeeds or fails.

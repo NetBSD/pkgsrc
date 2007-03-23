@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:03 agc Exp $
-
-SHA1 (artist-1.2.6.tar.gz) = baeb6879112c2e2724435efb9d772c3aaa5ef8e6
-RMD160 (artist-1.2.6.tar.gz) = a3b856ea16c7e816fb02026f4db275adb6824d5d
-Size (artist-1.2.6.tar.gz) = 66743 bytes
-SHA1 (patch-aa) = 14ed347849a2126c92eb1ddc897d6625dde8fa45

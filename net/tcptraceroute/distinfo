@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/23 13:50:12 joerg Exp $
-
-SHA1 (tcptraceroute-1.4.tar.gz) = 1dbd9a0a10b11695b0204bea460463a9dd921338
-RMD160 (tcptraceroute-1.4.tar.gz) = 6728355ca971b3e648e95704e74826cbc38fa94f
-Size (tcptraceroute-1.4.tar.gz) = 31918 bytes
-SHA1 (patch-aa) = 26899ae5898dcdbaa8b12a178ff6c2b362a675c9
-SHA1 (patch-ab) = 13aabeeaa1432ab55bda1f056a0dd7a236a38dd4

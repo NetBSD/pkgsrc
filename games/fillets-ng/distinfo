@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/08/14 22:34:42 wiz Exp $
-
-SHA1 (fillets-ng-0.7.3.tar.gz) = 58937e59c3108e0ed4d2a5e542f3d9b813655287
-RMD160 (fillets-ng-0.7.3.tar.gz) = 6c8f41feab9df2b6dee3942c18848d61ab2f2c7d
-Size (fillets-ng-0.7.3.tar.gz) = 311799 bytes
-SHA1 (patch-aa) = 355c8fd1a47335f41114786d65256293a9ca4968

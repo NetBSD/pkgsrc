@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:08:39 wiz Exp $
-
-SHA1 (tcl-cgi-1.3.0/cgi.tcl.tar.gz) = bbfbbbf4ce48da97ee33418a8e7790778ba84afa
-RMD160 (tcl-cgi-1.3.0/cgi.tcl.tar.gz) = 5165024a346d0e82e940baab1146905c1b8df8bd
-Size (tcl-cgi-1.3.0/cgi.tcl.tar.gz) = 114514 bytes
-SHA1 (patch-aa) = b37271c4b1d9357509ad0b95dbd432e4f1420fd9
-SHA1 (patch-ab) = cab2501a9067f279f08717948a1753619da8729d

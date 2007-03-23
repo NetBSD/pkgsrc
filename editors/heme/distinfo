@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/09 14:45:05 joerg Exp $
-
-SHA1 (heme-0.4.tar.gz) = ae7727f9861e0ac36eeac7ddccb62739468f1251
-RMD160 (heme-0.4.tar.gz) = 478f527f8e4968968d0d055fddc1cdb98b632a8e
-Size (heme-0.4.tar.gz) = 21370 bytes
-SHA1 (patch-aa) = d64d01c8f3505b75dfa54f2291b63055b5a17e91
-SHA1 (patch-ab) = cd3de9143f9a1bdb384525041d9b719c755525aa

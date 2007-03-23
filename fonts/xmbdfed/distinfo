@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/06/17 19:42:59 minskim Exp $
-
-SHA1 (xmbdfed-4.5.tar.gz) = 325f2f3a8ae68b3f5d22ff9bdd115d30cdd743db
-RMD160 (xmbdfed-4.5.tar.gz) = a6c1d9202e6d978dbc0aaa1fb6389a3d14b16c26
-Size (xmbdfed-4.5.tar.gz) = 282055 bytes
-SHA1 (patch-aa) = c56292901cfe776c26fc21da2b851aa2fccf2e02
-SHA1 (patch-ab) = eb5c46e723988cf9febf65f64e0b142ce8dccde3
-SHA1 (patch-ac) = c62140d171ea96418d48ee4b236cde8bb87b545d

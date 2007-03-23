@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/13 17:34:16 adrianp Exp $
-
-SHA1 (mod_auth_xradius-0.4.6.tar.bz2) = f05f5d9bb9ad6fb76c026679cd5fb00a9c9e48dd
-RMD160 (mod_auth_xradius-0.4.6.tar.bz2) = 82c34c82f692c6f5a321ad20103eb22b01da8d4a
-Size (mod_auth_xradius-0.4.6.tar.bz2) = 180591 bytes
-SHA1 (patch-aa) = 6cf2d151392eee1fce38d96b345e8fcd720f5ad9

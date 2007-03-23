@@ -1,6 +1,0 @@
-MetaKit is an embeddable database which runs on Unix, Windows,
-Macintosh, and other platforms.  It lets you build applications which
-store their data efficiently, in a portable way, and which will not need a
-complex runtime installation.  In terms of the data model, MetaKit takes
-the middle ground between RDBMS, OODBMS, and flat-file databases - yet it
-is quite different from each of them.

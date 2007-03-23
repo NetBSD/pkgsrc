@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/01 12:16:04 reinoud Exp $
-bin/btcheck
-bin/btget
-bin/btlist
-man/man1/btcheck.1
-man/man1/btget.1
-man/man1/btlist.1

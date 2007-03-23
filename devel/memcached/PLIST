@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/27 11:30:49 grant Exp $
-man/man1/memcached.1
-sbin/memcached
-share/doc/memcached/CONTRIBUTORS.txt
-share/doc/memcached/OSX.txt
-share/doc/memcached/memory_management.txt
-share/doc/memcached/protocol.txt
-@dirrm share/doc/memcached
