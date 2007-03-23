@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.7 2007/03/23 23:03:02 abs Exp $
+# From http://websvn.kde.org/?view=rev&revision=633614
+
+--- kpilot/lib/pilotAppInfo.h.orig	2007-01-15 11:29:07.000000000 +0000
++++ kpilot/lib/pilotAppInfo.h
+@@ -136,8 +136,15 @@ protected:
+ * (again, from pilot-link).
+ */
+ template <typename appinfo,
++#if PILOT_LINK_IS(0,12,2)
++	/* There are additional consts introduced in 0.12.2 */
++	int(*unpack)(appinfo *, const unsigned char *, PI_SIZE_T),
++	int(*pack)(const appinfo *, unsigned char *, PI_SIZE_T)
++#else
+ 	int(*unpack)(appinfo *, unsigned char *, PI_SIZE_T),
+-	int(*pack)(appinfo *, unsigned char *, PI_SIZE_T)>
++	int(*pack)(appinfo *, unsigned char *, PI_SIZE_T)
++#endif
++	>
+ class PilotAppInfo : public PilotAppInfoBase
+ {
+ public:

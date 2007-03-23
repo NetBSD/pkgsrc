@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.5 2007/03/23 23:03:02 abs Exp $
+# From http://websvn.kde.org/?view=rev&revision=633614
+
+--- kpilot/lib/pilotMemo.h.orig	2007-01-15 11:29:07.000000000 +0000
++++ kpilot/lib/pilotMemo.h
+@@ -98,6 +98,6 @@ private:
+ 	QString fText;
+ };
+ 
+-typedef PilotAppInfo<MemoAppInfo,unpack_MemoAppInfo, pack_MemoAppInfo> PilotMemoInfo;
++typedef PilotAppInfo<struct MemoAppInfo,unpack_MemoAppInfo, pack_MemoAppInfo> PilotMemoInfo;
+ 
+ #endif
