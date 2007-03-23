@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/03/23 18:59:41 abs Exp $
 
 CATEGORIES=		multimedia www
+PKGREVISION=		1
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -56,6 +57,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/flashplayer.xpt ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} != "SunOS"
 .include "../../emulators/suse_linux/Makefile.application"
