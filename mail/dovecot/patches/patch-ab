@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
+$NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
 
---- dovecot-example.conf.orig	2007-02-19 21:17:46.000000000 +0100
+--- dovecot-example.conf.orig	2007-03-23 01:00:54.000000000 +0100
 +++ dovecot-example.conf
 @@ -7,17 +7,14 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -487,19 +484,19 @@
+@@ -497,19 +494,19 @@
  
  protocol imap {
    # Login executable location.
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -509,7 +506,7 @@ protocol imap {
+@@ -519,7 +516,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
    # Send IMAP capabilities in greeting message. This makes it unnecessary for
    # clients to request it with CAPABILITY command, so it saves one round-trip.
-@@ -552,11 +549,11 @@ protocol imap {
+@@ -562,11 +559,11 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -616,7 +613,7 @@ protocol pop3 {
+@@ -626,7 +623,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -87,7 +87,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -644,10 +641,10 @@ protocol lda {
+@@ -654,10 +651,10 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -100,7 +100,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -658,7 +655,7 @@ protocol lda {
+@@ -668,7 +665,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -109,7 +109,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -772,7 +769,7 @@ auth default {
+@@ -782,7 +779,7 @@ auth default {
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work.
    # http://wiki.dovecot.org/PasswordDatabase/PAM
@@ -118,7 +118,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
      # [blocking=yes] [session=yes] [setcred=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -805,18 +802,18 @@ auth default {
+@@ -815,16 +812,16 @@ auth default {
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -131,9 +131,7 @@ $NetBSD: patch-ab,v 1.19 2007/02/21 09:53:05 ghen Exp $
    # http://wiki.dovecot.org/AuthDatabase/Passwd
 -  #passdb passwd {
 +  passdb passwd {
-     # [blocking=yes] - By default the lookups are done in the main dovecot-auth
-     # process. This setting causes the lookups to be done in auth worker
-     # proceses. Useful with remote NSS lookups that may block.
+     # [blocking=yes] - See userdb passwd for explanation
      #args = 
 -  #}
 +  }
