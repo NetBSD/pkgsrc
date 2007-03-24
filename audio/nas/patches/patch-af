@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1 2003/07/13 10:42:31 wulf Exp $
+$NetBSD: patch-af,v 1.2 2007/03/24 13:45:05 markd Exp $
 
---- clients/audio/auscope/auscope.orig	2003-07-13 20:03:00.000000000 +0930
-+++ clients/audio/auscope/auscope	2003-07-13 20:03:10.000000000 +0930
-@@ -31,7 +31,7 @@
- require "getopts.pl";
- require "sys/socket.ph";
+--- clients/audio/Imakefile.orig	2007-03-25 00:47:25.000000000 +1200
++++ clients/audio/Imakefile
+@@ -29,7 +29,7 @@
  
--$disableTimestamp = !defined($t = eval 'require "syscall.ph"');
-+$disableTimestamp = !defined($t = eval 'require "sys/syscall.ph"');
- print "Warning: time stamping disabled due to $@" if $disableTimestamp;
+ SUBDIRS = widgets \
+           auconvert auctl audemo audial auedit auinfo aupanel auplay \
+-	  aurecord autool auwave auphone auscope \
++	  aurecord autool auwave auphone \
+ 	  util examples
  
- @errorStrings = ('Success', 'BadRequest', 'BadValue', 'BadDevice', 'BadBucket', 
+ MakeSubdirs($(SUBDIRS))
