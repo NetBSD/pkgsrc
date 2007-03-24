@@ -5,8 +5,8 @@ The nspluginwrapper option (enabled by default) permits the use of
 the the Linux x86 flash player in Firefox browsers on other x86
 systems.
 
-Tested systems
-    - NetBSD-4.0			- works
-    - NetBSD-4.99.{15,16} (-current)	- does not work
+Systems tested with nspluginwrapper:
+    - NetBSD 3.99.21, 4.0_BETA2, 4.99.9	- works
+    - NetBSD 4.99.15, 4.99.16 		- does not work
     - firefox / firefox2		- works
     - firefox-gtk1 / firefox2-gtk1	- does not work
