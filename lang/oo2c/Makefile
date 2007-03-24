@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/20 19:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/24 19:21:25 joerg Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -28,6 +28,8 @@ USE_LIBTOOL=		yes
 EVAL_PREFIX+=		LIBTOOL_PREFIX=libtool-base
 LIBTOOL_PREFIX_DEFAULT=	${LOCALBASE}
 
+INSTALLATION_DIRS=	share/doc/html share/emacs/site-lisp
+
 pre-install:
 	for f in ${WRKSRC}/rsrc/OOC/oo2crc.xml; do			\
 		${SED} -e 's,${BUILDLINK_DIR},${LIBTOOL_PREFIX},g'	\
@@ -35,9 +37,8 @@ pre-install:
 	done
 
 post-install:
-	cd ${PREFIX}/share/doc/html && ${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html oo2c
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-	cd ${PREFIX}/share/emacs/site-lisp && ${LN} -sf ${PREFIX}/lib/oo2c/emacs oo2c
+	${LN} -sf ${PREFIX}/lib/oo2c/oocdoc/html ${PREFIX}/share/doc/html/oo2c
+	${LN} -sf ${PREFIX}/lib/oo2c/emacs ${PREFIX}/share/emacs/site-lisp/oo2c
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

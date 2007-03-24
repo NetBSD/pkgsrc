@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/08 22:14:12 cube Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:30 joerg Exp $
 #
 
 DISTNAME=	rbldnsd_0.996a
@@ -32,10 +32,11 @@ RCD_SCRIPTS=	rbldnsd
 
 RBLDNSD_DOCS=	NEWS README.user
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/rbldnsd
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rbldnsd ${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/rbldnsd.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rbldnsd
 	set -e; for doc in ${RBLDNSD_DOCS}; do \
 	    ${INSTALL_DATA} ${WRKSRC}/"$$doc" ${PREFIX}/share/doc/rbldnsd/; \
 	    done

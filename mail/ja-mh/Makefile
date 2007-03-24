@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/04 21:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:26 joerg Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec/mh
 CONFIGURE_ARGS+=	--enable-jmandir=${PREFIX:Q}/${PKGMANDIR:Q}/ja_JP.EUC
 CONFIGURE_ARGS+=	--enable-apop=${PREFIX:Q}/etc/pop.auth
 CONFIGURE_ARGS+=	--enable-rpop
+
+INSTALLATION_DIRS=	bin lib
 
 post-install:
 	${LN} -sf libmh.so.3.2 ${PREFIX}/lib/libmh.so.3

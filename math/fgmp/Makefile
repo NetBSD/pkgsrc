@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/03 07:53:37 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:28 joerg Exp $
 
 DISTNAME=	fgmp-1.0b5-src-10.10
 PKGNAME=	fgmp-1.0b5
@@ -11,8 +11,9 @@ COMMENT=	Minimalist free re-implementation of GNU multi-precision routines
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=	yes
+NO_CONFIGURE=	yes
 
-do-configure:;
+INSTALLATION_DIRS=	include lib
 
 do-build:
 	cd ${WRKSRC} && (						\

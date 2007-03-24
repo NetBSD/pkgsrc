@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/19 20:12:52 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/03/24 19:21:31 joerg Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -17,6 +17,8 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include ${LIBNET_CFLAGS_CMD:sh}
 LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lnet
+
+INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man8
 
 LIBNET_CFLAGS_CMD= ${BUILDLINK_PREFIX.libnet10}/bin/libnet10-config --defines
 
