@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/01/07 09:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2007/03/24 19:21:30 joerg Exp $
 
 DISTNAME=	radiusd-cistron-1.6.7
 PKGREVISION=	1
@@ -16,6 +16,9 @@ CONFLICTS+=	freeradius-[0-9]*
 MAKE_FILE=	Makefile.BSD
 BUILD_DIRS=	${WRKSRC}/src
 INSTALL_DIRS=	${WRKSRC}/src
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
+			${PKGMANDIR}/man8 sbin share/examples/raddb \
+			share/doc/radiusd-cistron
 
 RCD_SCRIPTS=	radiusd
 
@@ -34,7 +37,6 @@ CONF_FILES+=	${EGDIR}/${cfile} ${PKG_SYSCONFDIR}/${cfile:S/.sample//}
 .endfor
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiusd-cistron
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${PREFIX}/share/doc/radiusd-cistron/
 .for i in	ChangeLog README README.CVX README.Y2K README.cisco	\
 		README.pam README.proxy README.radrelay README.simul	\

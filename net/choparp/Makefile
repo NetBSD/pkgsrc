@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/11/09 09:12:30 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:29 joerg Exp $
 #
 
 DISTNAME=	choparp-20021107
@@ -13,5 +13,6 @@ NOT_FOR_PLATFORM=	Interix-*-* # does not have bpf(4) device
 
 MANCOMPRESSED_IF_MANZ=	yes
 MAKE_ENV+=	${BSD_MAKE_ENV}
+INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.pkg.mk"
