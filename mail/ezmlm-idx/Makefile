@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/12/29 06:21:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2007/03/24 06:29:28 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -34,12 +34,12 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat1 ${PKGMANDIR}/cat5
 INSTALLATION_DIRS+=	share/examples/ezmlm-idx
 
 post-extract:
-	@${MV} ${WRKSRC}/* ${WRKDIR}/${EZMLM_VERS}
-	@${RMDIR} ${WRKSRC}
-	@${MV} ${WRKDIR}/${EZMLM_VERS} ${WRKSRC}
+	${MV} ${WRKSRC}/* ${WRKDIR}/${EZMLM_VERS}
+	${RMDIR} ${WRKSRC}
+	${MV} ${WRKDIR}/${EZMLM_VERS} ${WRKSRC}
 
 pre-patch:
-	@cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < idx.patch
+	cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < idx.patch
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
