@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/07 16:04:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/24 00:19:29 joerg Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_rasterize
@@ -23,6 +23,7 @@ include/cpl_string.h
 include/cpl_vsi.h
 include/cpl_vsi_private.h
 include/cpl_win32ce_api.h
+include/cpl_wince.h
 include/gdal.h
 include/gdal_alg.h
 include/gdal_frmts.h
