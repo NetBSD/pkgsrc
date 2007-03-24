@@ -1,16 +1,14 @@
-$NetBSD: patch-ad,v 1.4 2005/01/20 00:43:15 xtraeme Exp $
+$NetBSD: patch-ad,v 1.5 2007/03/24 20:10:08 adam Exp $
 
---- linux/sw_draw.c.orig	2005-01-14 14:11:18.000000000 +0100
-+++ linux/sw_draw.c	2005-01-20 01:34:10.000000000 +0100
-@@ -124,6 +124,11 @@
+--- linux/sw_draw.c.orig	2007-01-18 17:52:16.000000000 +0100
++++ linux/sw_draw.c
+@@ -139,6 +139,9 @@ extern unsigned char prevKeep4_3Ratio;
  
  void sw_drawwin()
  {
 +#ifdef _PTH_PTHREAD_H_
-+	pthread_yield_np();
++  pthread_yield_np();
 +#endif
-+
-+
-     NGNoTransp = 0;             // Set this value to 1 within the appropriate
-                                 // video mode if you want to add a custom
-                                 // transparency routine or hardware
+   NGNoTransp = 0;             // Set this value to 1 within the appropriate
+                               // video mode if you want to add a custom
+                               // transparency routine or hardware
