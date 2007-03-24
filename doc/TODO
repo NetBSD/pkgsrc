@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6151 2007/03/24 19:31:33 wiz Exp $
+$NetBSD: TODO,v 1.6152 2007/03/24 20:11:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ Suggested package updates
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
 	o zopeedit-0.8
-	o zsnes-1.51
 	o zziplib-0.13.38
 
 Infrastructure problems which need addressing
