@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.powerpc,v 1.1.1.1 2006/03/09 20:34:38 tonio Exp $
+# $NetBSD: Makefile.powerpc,v 1.2 2007/03/24 21:52:04 salo Exp $
 
 RPMFILES=		compat-2004.11.13-4.${SUSE_ARCH}.rpm \
+			compat-g77-3.3.5-2.${SUSE_ARCH}.rpm \
 			compat-libstdc++-5.0.7-6.${SUSE_ARCH}.rpm
