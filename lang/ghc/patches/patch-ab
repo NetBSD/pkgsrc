@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2006/07/31 02:07:13 kristerw Exp $
+$NetBSD: patch-ab,v 1.8 2007/03/24 17:57:20 kristerw Exp $
 
---- mk/bootstrap.mk.orig	2006-07-29 01:11:13.000000000 +0200
-+++ mk/bootstrap.mk	2006-07-29 01:12:31.000000000 +0200
+--- ../ghc-6.4.2/mk/bootstrap.mk.orig	2006-07-29 01:11:13.000000000 +0200
++++ ../ghc-6.4.2/mk/bootstrap.mk	2006-07-29 01:12:31.000000000 +0200
 @@ -149,7 +149,7 @@
  HC_BOOT_LIBS += -lHSreadline -lHStemplate-haskell -lHSunix -lHSunix_cbits
  endif
