@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/18 20:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:08:51 wiz Exp $
 #
 
 DISTNAME=	makeppf3_src
 PKGNAME=	makeppf-3.0
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.paradogs.com/download/
+MASTER_SITES=	# http://www.paradogs.com/download/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.paradogs.com/download/
+#HOMEPAGE=	http://www.paradogs.com/pdx_ppf3.htm
 COMMENT=	PPF (Playstation Patch File) v3.0 creation tool
 
 WRKSRC=	${WRKDIR}
