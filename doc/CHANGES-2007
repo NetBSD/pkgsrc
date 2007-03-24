@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.709 2007/03/24 20:11:10 adam Exp $
+$NetBSD: CHANGES-2007,v 1.710 2007/03/24 20:53:03 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1368,7 +1368,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/argp version 1.3 [agc 2007-03-24]
 	Updated lang/ghc to 6.6 [kristerw 2007-03-24]
 	Updated devel/darcs to 1.0.8nb2 [kristerw 2007-03-24]
+	Updated security/p5-Crypt-RSA to 1.58 [heinz 2007-03-24]
 	Updated security/libfwbuilder to 2.1.10 [bad 2007-03-24]
 	Updated security/fwbuilder to 2.1.10 [bad 2007-03-24]
+	Updated net/p5-Net-DNS to 0.59 [heinz 2007-03-24]
+	Updated mail/p5-Mail-DKIM to 0.24 [heinz 2007-03-24]
 	Updated net/gnome-netstatus to 2.12.1 [wiz 2007-03-24]
+	Added textproc/p5-Encode-Detect version 1.00 [heinz 2007-03-24]
 	Updated emulators/zsnes to 1.51 [adam 2007-03-24]
+	Updated graphics/pdiff to 1.0.1 [heinz 2007-03-24]
