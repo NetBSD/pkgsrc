@@ -1,0 +1,19 @@
+Argp is an interface for parsing unix-style argument vectors.
+
+Argp provides features unavailable in the more commonly used getopt
+interface.  These features include automatically producing output in
+response to the `--help' and `--version' options, as described in the
+GNU coding standards.  Using argp makes it less likely that
+programmers will neglect to implement these additional options or keep
+them up to date.
+
+Argp also provides the ability to merge several independently defined
+option parsers into one, mediating conflicts between them and making
+the result appear seamless.  A library can export an argp option
+parser that user programs might employ in conjunction with their own
+option parsers, resulting in less work for the user programs.  Some
+programs may use only argument parsers exported by libraries, thereby
+achieving consistent and efficient option-parsing for abstractions
+implemented by the libraries.
+
+The header file <argp.h> should be included to use argp.
