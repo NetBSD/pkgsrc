@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.9 2007/03/18 19:37:12 rillig Exp $
+# $NetBSD: check-shlibs.mk,v 1.10 2007/03/24 18:23:54 heinz Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -29,7 +29,7 @@ CHECK_SHLIBS?=			no
 CHECK_SHLIBS_SUPPORTED?=	yes
 
 # All binaries and shared libraries.
-_CHECK_SHLIBS_ERE=	/(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
+_CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
 
 _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
@@ -48,17 +48,18 @@ _check-shlibs: error-check .PHONY
 	*)	ldd=${LDD:Q} ;;						\
 	esac;								\
 	${TEST} -x "$$ldd" || exit 0;					\
+	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_SHLIBS_FILELIST_CMD} |					\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
 	while read file; do						\
 		err=`$$ldd $$file 2>&1 | ${GREP} "not found" || ${TRUE}`; \
-		${TEST} -z "$$err" || ${ECHO} "$$file: $$err";		\
+		${TEST} -z "$$err" || ${ECHO} "${DESTDIR}${PREFIX}/$$file: $$err"; \
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>>${ERROR_DIR}/${.TARGET};				\
 	if ${_NONZERO_FILESIZE_P} ${ERROR_DIR}/${.TARGET}; then		\
-		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
-		${ECHO} "    at runtime.  Please fix the package (add -Wl,-R.../lib in the right"; \
-		${ECHO} "    places)!";					\
+		${ECHO} "*** The programs/libs shown above will not find the listed"; \
+		${ECHO} "    shared libraries at runtime."; \
+		${ECHO} "    Please fix the package (add -Wl,-R.../lib in the right places)!"; \
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
 	fi
