@@ -1,3 +1,3 @@
-# $NetBSD: Makefile.powerpc,v 1.1.1.1 2006/06/11 13:29:09 markd Exp $
+# $NetBSD: Makefile.powerpc,v 1.2 2007/03/24 21:52:51 salo Exp $
 
-RPMFILES=		cups-libs-1.1.23-21.${SUSE_ARCH}.rpm
+RPMFILES=		cups-libs-1.1.23-21.6.${SUSE_ARCH}.rpm
