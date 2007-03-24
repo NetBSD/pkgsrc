@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.707 2007/03/24 18:39:06 bad Exp $
+$NetBSD: CHANGES-2007,v 1.708 2007/03/24 19:30:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1370,3 +1370,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/darcs to 1.0.8nb2 [kristerw 2007-03-24]
 	Updated security/libfwbuilder to 2.1.10 [bad 2007-03-24]
 	Updated security/fwbuilder to 2.1.10 [bad 2007-03-24]
+	Updated net/gnome-netstatus to 2.12.1 [wiz 2007-03-24]
