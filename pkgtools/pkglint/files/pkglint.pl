@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.703 2007/03/08 17:42:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.704 2007/03/24 05:36:20 schmonz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4781,7 +4781,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			net news
 			packages parallel perl5 pkgtools plan9 print python
 			ruby
-			security shells sysutils
+			scm security shells sysutils
 			tcl textproc time tk
 			windowmaker wm www
 			x11 xmms
