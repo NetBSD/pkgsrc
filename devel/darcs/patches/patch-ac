@@ -1,0 +1,150 @@
+$NetBSD: patch-ac,v 1.1 2007/03/24 17:58:04 kristerw Exp $
+
+Patch needed for GHC 6.6.
+
+--- configure.orig	2006-06-16 20:59:33.000000000 +0200
++++ configure	2007-03-24 18:37:35.000000000 +0100
+@@ -3188,7 +3188,7 @@
+  rm -f Main.hi Main.o
+ 
+   check_module_save_GHCFLAGS=$GHCFLAGS
+-  GHCFLAGS="$GHCFLAGS -package text"
++  GHCFLAGS="$GHCFLAGS -package regex-compat"
+ 
+ 
+ cat << \EOF > conftest.hs
+@@ -3205,8 +3205,8 @@
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; } && test -s conftest
+ then
+-  echo "$as_me:$LINENO: result: in package text" >&5
+-echo "${ECHO_T}in package text" >&6
++  echo "$as_me:$LINENO: result: in package regex-compat" >&5
++echo "${ECHO_T}in package regex-compat" >&6
+ 
+ else
+   echo "configure: failed program was:" >&5
+@@ -3215,8 +3215,8 @@
+  rm -f Main.hi Main.o
+ 
+     GHCFLAGS=$check_module_save_GHCFLAGS
+-    echo "$as_me:$LINENO: result: no; and neither in package text" >&5
+-echo "${ECHO_T}no; and neither in package text" >&6
++    echo "$as_me:$LINENO: result: no; and neither in package regex-compat" >&5
++echo "${ECHO_T}no; and neither in package regex-compat" >&6
+ 
+ fi
+ 
+@@ -3305,7 +3305,7 @@
+ cat << \EOF > conftest.hs
+ -- #line 3306 "configure"
+ import Control.Monad.Error
+-main = seq (putStr undefined) (putStr "Hello world.\n")
++main = seq (strMsg "foo" :: String) (putStr "Hello world.\n")
+ 
+ EOF
+ rm -f Main.hi Main.o
+@@ -3332,7 +3332,7 @@
+ cat << \EOF > conftest.hs
+ -- #line 3333 "configure"
+ import Control.Monad.Error
+-main = seq (putStr undefined) (putStr "Hello world.\n")
++main = seq (strMsg "foo" :: String) (putStr "Hello world.\n")
+ 
+ EOF
+ rm -f Main.hi Main.o
+@@ -3372,7 +3372,7 @@
+ cat << \EOF > conftest.hs
+ -- #line 3373 "configure"
+ import Control.Monad.Error
+-main = seq (putStr undefined) (putStr "Hello world.\n")
++main = seq (strMsg "foo" :: String) (putStr "Hello world.\n")
+ 
+ EOF
+ rm -f Main.hi Main.o
+@@ -3399,7 +3399,7 @@
+ cat << \EOF > conftest.hs
+ -- #line 3400 "configure"
+ import Control.Monad.Error
+-main = seq (putStr undefined) (putStr "Hello world.\n")
++main = seq (strMsg "foo" :: String) (putStr "Hello world.\n")
+ 
+ EOF
+ rm -f Main.hi Main.o
+@@ -3504,6 +3504,76 @@
+ 
+ 
+ 
++echo "$as_me:$LINENO: checking for module Text.Html" >&5
++echo $ECHO_N "checking for module Text.Html... $ECHO_C" >&6
++
++
++cat << \EOF > conftest.hs
++-- #line 3516 "configure"
++import Text.Html
++main = seq (text "foo") (putStr "Hello world.\n")
++
++EOF
++rm -f Main.hi Main.o
++if { ac_try='$GHC $GHCFLAGS -o conftest conftest.hs'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } && test -s conftest
++then
++  echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.hs >&5
++  echo "end of failed program." >&5
++ rm -f Main.hi Main.o
++
++  check_module_save_GHCFLAGS=$GHCFLAGS
++  GHCFLAGS="$GHCFLAGS -package html"
++
++
++cat << \EOF > conftest.hs
++-- #line 3543 "configure"
++import Text.Html
++main = seq (text "foo") (putStr "Hello world.\n")
++
++EOF
++rm -f Main.hi Main.o
++if { ac_try='$GHC $GHCFLAGS -o conftest conftest.hs'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } && test -s conftest
++then
++  echo "$as_me:$LINENO: result: in package html" >&5
++echo "${ECHO_T}in package html" >&6
++
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.hs >&5
++  echo "end of failed program." >&5
++ rm -f Main.hi Main.o
++
++    GHCFLAGS=$check_module_save_GHCFLAGS
++    echo "$as_me:$LINENO: result: no; and neither in package html" >&5
++echo "${ECHO_T}no; and neither in package html" >&6
++
++fi
++
++
++
++fi
++
++
++
++
++
++
++
+ cat << \EOF >> Workaround.hs.prefix
+            getCurrentDirectory,
+ EOF
