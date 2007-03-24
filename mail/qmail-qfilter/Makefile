@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/24 07:06:43 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
@@ -28,6 +28,7 @@ SUBST_SED.paths+=	-e 's|/var/qmail|${QMAILDIR}|g'
 SUBST_MESSAGE.paths=	Fixing paths.
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 share/examples/qmail-qfilter
+BUILD_DEFS+=		QMAILDIR QMAIL_QFILTER_TMPDIR
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
