@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.67 2007/03/24 18:54:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q4,v 1.1.2.68 2007/03/24 21:03:57 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q4 branch:
@@ -153,3 +153,5 @@ Pullup ticket 2043 - requested by joerg
 portability fixes for firefox and thunderbird
 Pullup ticket 2058 - requested by ghen
 security update for firefox
+Pullup ticket 2059 - requested by ghen
+security update for firefox2
