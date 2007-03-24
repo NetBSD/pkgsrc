@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/03/20 15:20:33 drochner Exp $
+# $NetBSD: Makefile,v 1.57 2007/03/24 12:49:08 drochner Exp $
 
 DISTNAME=	freetype-2.3.2
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -25,9 +25,6 @@ CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 BUILD_DIRS=		${WRKSRC}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 CONFIGURE_ENV+=		ac_cv_path_GREP=${GREP:Q} ac_cv_path_EGREP=${EGREP:Q}
-# XXX I don't understand what's happening here, but the CONFIG_SHELL
-# in CONFIGURE_ENV breaks the configure script
-CONFIG_SHELL=		# null
 
 .if exists(/System/Library/Frameworks/Carbon.framework)
 LDFLAGS+=	-framework Carbon
