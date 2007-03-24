@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/23 21:32:07 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 01:57:44 joerg Exp $
 
 DISTNAME=		flpsed-0.3.9
 CATEGORIES=		print
@@ -18,5 +18,4 @@ post-install:
 
 .include "../../x11/fltk/buildlink3.mk"
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
