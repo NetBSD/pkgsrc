@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/03/09 12:01:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2007/03/24 06:49:02 schmonz Exp $
 
 DISTNAME=		nullmailer-1.03
 CATEGORIES=		mail
@@ -51,14 +51,15 @@ SUBST_FILES.paths+=	doc/nullmailer-send.8 doc/nullmailer-queue.8
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	post-configure
+
+INSTALLATION_DIRS=	share/doc/${PKGBASE} share/examples/${PKGBASE}
+BUILD_DEFS+=		VARBASE
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nullmailer
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
 		HOWTO NEWS README TODO ${PREFIX}/share/doc/nullmailer
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf				\
