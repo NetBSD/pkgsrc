@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6148 2007/03/24 06:15:33 schmonz Exp $
+$NetBSD: TODO,v 1.6149 2007/03/24 14:31:17 markd Exp $
 
 Suggested new packages
 ======================
@@ -543,8 +543,6 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kapooka-0.3
 	o kazehakase-0.4.4
-	o kdevelop-3.4
-	o kdevelop-base-3.4.0
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
