@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2007/01/25 20:59:15 markd Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/03/24 01:30:50 joerg Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -41,6 +41,10 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACSVERSION}
 LDFLAGS+=	-Wl,-z,nocombreloc
 .endif
 
+.if ${OPSYS} == "DragonFly" && exists(/usr/lib/crtbegin.o)
+CPPFLAGS+=	-DDFLY_PRE_17_CRT
+.endif
+
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	FNS_EL="@comment "
 PLIST_SUBST+=	DOCTAIL=""
@@ -67,6 +71,7 @@ post-extract:
 	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m
 	${CP} ${FILESDIR}/powermac.h ${WRKSRC}/src/m
 	${CP} ${FILESDIR}/darwin.h ${WRKSRC}/src/s
+	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CP} ${FILESDIR}/unexmacosx.c ${WRKSRC}/src
 	${CP} ${FILESDIR}/sh3el.h ${WRKSRC}/src/m
 
