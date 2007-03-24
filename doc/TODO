@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6150 2007/03/24 18:01:48 kristerw Exp $
+$NetBSD: TODO,v 1.6151 2007/03/24 19:31:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,6 @@ Suggested package updates
 	o dmidecode-2.9
 	o dnstracer-1.8
 	o dosbox-0.70
-	o dropbear-0.49
 	o drraw-2.2a3
 	o drscheme-360
 	o drupal-5.1
@@ -376,7 +375,6 @@ Suggested package updates
 	o evolution-exchange-2.10.0
 	o evolution-webcal-2.10.0
 	o ex-050325
-	o exiv2-0.14
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -463,7 +461,6 @@ Suggested package updates
 	o gok-1.2.3
 	o gossip-0.23
 	o gourmet-0.13.3
-	o gpgme-1.1.4
 	o gpredict-0.7.1
 	o gpsdrive-2.09
 	o gq-1.2.0
@@ -597,7 +594,6 @@ Suggested package updates
 	o libtorrent-0.11.2
 	o libxml++2-2.18.0
 	o licq-core-1.3.0
-	o liferea-1.2.8
 	o lighttpd-1.4.13
 	o lilypond-2.10.0
 	o lincvs-1.8.3 [now called CrossVC]
@@ -628,7 +624,6 @@ Suggested package updates
 	o memtestplus-1.70
 	o metacity-2.18.0
 	o mgetty-1.1.35
-	o micro_httpd-20051212 [pkg/34808]
 	o mined-2000.13.2
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
@@ -834,12 +829,10 @@ Suggested package updates
 	o py-TTFQuery-1.0.0
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
-	o py-cairo-1.4.0
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
 	o py-gnome2-extras-2.14.3
 	o py-gnutls-0.2.1
-	o py-imaging-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
 	o py-logging-0.4.9.6
