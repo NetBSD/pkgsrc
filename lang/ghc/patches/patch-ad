@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.8 2007/03/24 17:57:20 kristerw Exp $
+
+--- libraries/readline/package.conf.in.orig	2007-02-25 00:07:25.000000000 +0100
++++ libraries/readline/package.conf.in	2007-02-25 00:07:47.000000000 +0100
+@@ -27,7 +27,7 @@
+ depends:	base
+ hugs-options:
+ cc-options:
+-ld-options:
++ld-options:	"-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib"
+ framework-dirs:
+ frameworks:
+ haddock-interfaces:	HADDOCK_IFACE
