@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/09/28 01:05:33 salo Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/24 21:52:51 salo Exp $
 
 DISTNAME=		suse_openssl-${SUSE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
