@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:56 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/24 19:21:25 joerg Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -15,6 +15,8 @@ COMMENT=		Winding snakes game for X11
 WRKSRC=			${WRKDIR}/xnibbles
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 SUBST_CLASSES+=		audio
 SUBST_STAGE.audio=	pre-build

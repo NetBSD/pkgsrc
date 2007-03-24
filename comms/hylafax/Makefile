@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/10/01 14:00:12 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2007/03/24 19:21:19 joerg Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
@@ -34,6 +34,8 @@ MANCOMPRESSED=		yes
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
 RCD_SCRIPTS=	hylafax
+
+INSTALLATION_DIRS=	libdata/hylafax
 
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
