@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/24 06:53:16 schmonz Exp $
 #
 
 DISTNAME=		qgreylist-0.3
@@ -44,6 +44,7 @@ SUBST_SED.qmaildirs+=	-e 's|/var/qmail/whitelist|${PKG_SYSCONFDIR}/whitelist|g'
 SUBST_SED.qmaildirs+=	-e 's|/var/qmail|${QMAILDIR}|g'
 
 INSTALLATION_DIRS=	bin share/doc/qgreylist
+BUILD_DEFS+=		QMAILDIR
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/greylist ${PREFIX}/bin/qgreylist
