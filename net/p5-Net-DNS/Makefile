@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2006/11/05 17:31:10 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2007/03/24 18:43:40 heinz Exp $
 
-DISTNAME=		Net-DNS-0.58
+DISTNAME=		Net-DNS-0.59
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ndn
 CATEGORIES=		net perl5
