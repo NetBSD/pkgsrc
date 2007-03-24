@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.702 2007/03/24 14:40:34 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.703 2007/03/24 14:49:58 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/libtrace version 3.0.0 [markd 2007-03-24]
 	Added devel/kdiff3 version 0.9.91 [markd 2007-03-24]
 	Updated mail/dovecot to 1.0rc28 [ghen 2007-03-24]
+	Updated sysutils/rconfig to 0.46 [abs 2007-03-24]
