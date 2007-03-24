@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/24 19:21:30 joerg Exp $
 #
 
 DISTNAME=		nrpe-2.5.2
@@ -31,13 +31,13 @@ CONFIGURE_ARGS+=	--with-nrpe-group=${NAGIOS_GROUP:Q}
 CONF_FILES+=		${PREFIX}/share/examples/nagios/nrpe.cfg ${PKG_SYSCONFDIR}/nrpe.cfg
 RCD_SCRIPTS+=		nrpe
 
+INSTALLATION_DIRS=	sbin libexec/nagios share/examples/nagios share/examples/rc.d
+
 .include "options.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nrpe ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/nagios
 	${INSTALL_PROGRAM} ${WRKSRC}/src/check_nrpe ${PREFIX}/libexec/nagios
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nagios
 	${INSTALL_DATA} ${WRKSRC}/sample-config/nrpe.cfg ${PREFIX}/share/examples/nagios
 	${INSTALL_SCRIPT} ${WRKDIR}/nrpe ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 
