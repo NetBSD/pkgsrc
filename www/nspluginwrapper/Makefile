@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/23 08:24:37 hira Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/24 20:27:42 christos Exp $
 #
 
 DISTNAME=       nspluginwrapper-0.9.91.3
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+= --prefix=${PREFIX} --x11=${X11BASE}
 
 RPMFILE=	${DISTNAME:S:-:-i386-:}-1.x86_64.rpm
 BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
-RPM2PKG=	rpm2pkg
+RPM2PKG=	${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=	${DISTDIR}/${DIST_SUBDIR}/${RPMFILE}
 LINUXLIBDIR=	${PREFIX}/lib/nspluginwrapper/i386/linux
 
