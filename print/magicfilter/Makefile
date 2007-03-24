@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/08/31 08:22:38 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2007/03/24 19:21:31 joerg Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGREVISION=	5
@@ -35,7 +35,7 @@ SUBST_MESSAGE.mf=	Adjusting paper size in filters.
 SUBST_FILES.mf=		filters/*-filter
 SUBST_SED.mf=		-e 's/-sOutputFile=-/& -sPAPERSIZE=${LOWER_PAPERSIZE:Q:Q}/'
 
-INSTALLATION_DIRS+=	${FILTER_DIR}
+INSTALLATION_DIRS+=	bin ${FILTER_DIR} ${PKGMANDIR}/man8
 
 GENERATE_PLIST+= \
 	(cd ${WRKSRC}/filters;						\

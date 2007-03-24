@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/01/26 23:32:48 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2007/03/24 19:21:33 joerg Exp $
 
 DISTNAME=		tkman-2.2
 PKGREVISION=		1
@@ -12,6 +12,8 @@ COMMENT=		Tcl/Tk based manual browser
 DEPENDS+=		glimpse>=4.1:../../textproc/glimpse
 DEPENDS+=		rman>=3.1:../../textproc/rman
 DEPENDS+=		tk>=8.4:../../x11/tk
+
+INSTALLATION_DIRS=	bin libexec
 
 post-extract:
 .for f in Makefile manpath.tcl

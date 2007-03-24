@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/06 18:30:26 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/24 19:21:27 joerg Exp $
 #
 
 DISTNAME=	xbuffy-3.4
@@ -14,6 +14,8 @@ USE_X11BASE=	YES
 
 CPPFLAGS+=	-I${X11BASE}/include
 CPPFLAGS+=	-Wall
+
+INSTALLATION_DIRS=	lib/X11/app-defaults
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/XBuffy.ad ${PREFIX}/lib/X11/app-defaults/XBuffy

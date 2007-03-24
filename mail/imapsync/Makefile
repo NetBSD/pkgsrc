@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/10 11:18:16 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:26 joerg Exp $
 #
 
 DISTNAME=	imapsync-1.182
@@ -19,6 +19,8 @@ DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	imapsync
+
+INSTALLATION_DIRS=	bin share/doc
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/imapsync ${PREFIX}/bin

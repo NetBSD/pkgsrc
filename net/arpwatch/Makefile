@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/01/07 09:14:02 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2007/03/24 19:21:29 joerg Exp $
 #
 
 DISTNAME=	arpwatch-2.1a13
@@ -26,6 +26,8 @@ SUBST_FILES.paths=	arpsnmp.8 arpwatch.8
 SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
 
 OWN_DIRS=	${VARBASE:Q}/db/arpwatch
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 pre-patch:
 	f=arpwatch.h;							\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/02/22 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2007/03/24 19:21:33 joerg Exp $
 
 DISTNAME=	wwwoffle-2.9a
 PKGREVISION=	1
@@ -21,6 +21,8 @@ PKG_SYSCONFSUBDIR=	wwwoffle
 CONF_FILES+=		${PREFIX}/share/examples/wwwoffle/wwwoffle.conf ${PKG_SYSCONFDIR}/wwwoffle.conf
 CONF_FILES_MODE=	0640
 PLIST_SUBST+=		GZIP_CMD=${GZIP_CMD:Q}
+
+INSTALLATION_DIRS=	sbin libdata
 
 RCD_SCRIPTS=		wwwoffled
 

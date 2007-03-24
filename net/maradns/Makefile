@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/13 04:35:16 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/03/24 19:21:29 joerg Exp $
 
 DISTNAME=	maradns-1.0.39
 CATEGORIES=	net
@@ -16,6 +16,9 @@ MAKE_ENV+=		LANGUAGE="en"
 
 EGDIR=		${PREFIX}/share/examples/maradns
 CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
+			share/examples
 
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LIBS}

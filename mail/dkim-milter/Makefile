@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/24 19:21:26 joerg Exp $
 
 DISTNAME=	dkim-milter-0.1.1
 CATEGORIES=	mail
@@ -25,6 +25,8 @@ SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 			-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dkim-milter
+
 post-extract:
 	${LN} -s FreeBSD ${WRKSRC}/devtools/OS/DragonFly
 
@@ -40,7 +42,6 @@ do-install:
 	cd ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -` && \
 		${INSTALL_PROGRAM} dkim-filter/dkim-filter ${PREFIX}/sbin/dkim-milter
 	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-milter.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dkim-milter

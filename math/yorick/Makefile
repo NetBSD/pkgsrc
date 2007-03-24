@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/24 19:21:28 joerg Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -13,6 +13,7 @@ COMMENT=	Numerical algebra system (similar to Matlab)
 WRKSRC=		${WRKDIR}/yorick-1.6
 BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc
 INSTALL_DIRS=	${WRKSRC}
+INSTALLATION_DIRS=	${PKGINFODIR} ${PKGMANDIR}/man1 share/doc share/emacs/site-lisp
 
 USE_TOOLS+=	gmake makeinfo
 INFO_FILES=	# PLIST
@@ -33,7 +34,6 @@ post-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${PREFIX}/share/doc && ${LN} -sf ../yorick/1.6/doc yorick
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/emacs/*.el ${PREFIX}/share/emacs/site-lisp
 
 .include "../../x11/libX11/buildlink3.mk"

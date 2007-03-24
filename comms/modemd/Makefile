@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/18 11:43:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/03/24 19:21:19 joerg Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
@@ -14,7 +14,8 @@ MANCOMPRESSED_IF_MANZ=	yes
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/modemd
+INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/man5 \
+			${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 \
+			sbin share/examples/modemd
 
 .include "../../mk/bsd.pkg.mk"

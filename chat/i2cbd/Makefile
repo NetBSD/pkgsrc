@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/05/21 16:08:32 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/03/24 19:21:19 joerg Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
@@ -28,6 +28,8 @@ CONF_FILES_PERMS+=	${EGDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} \
 CONF_FILES_PERMS+=	/dev/null /var/log/icbd.log \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 RCD_SCRIPTS=		icbd
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/i2cbd \
+			share/examples/rc.d
 
 post-extract:
 	-${RM} -f ${WRKSRC}/*/.depend
@@ -37,7 +39,6 @@ post-build:
 		< ${WRKSRC}/etc/icbd.sh > ${WRKDIR}/icbd.sh
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f:Q} ${EGDIR}
 .endfor

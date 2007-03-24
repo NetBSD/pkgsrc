@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/24 19:21:26 joerg Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -24,7 +24,7 @@ USE_TOOLS+=	perl:run pod2man
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/demime_junkmail.cf ${PKG_SYSCONFDIR}/demime_junkmail.cf
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples
 
 do-extract:
 	@${MKDIR} ${WRKSRC}

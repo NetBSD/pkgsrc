@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/24 19:21:32 joerg Exp $
 
 DISTNAME=	fs-kit-0.4
 CATEGORIES=	sysutils
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/fs-kit
 
 CFLAGS+=	-Dunix=1
 MAKE_FILE=	makefile
+
+INSTALLATION_DIRS=	sbin share/doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fsh ${PREFIX}/sbin/fs-fsh

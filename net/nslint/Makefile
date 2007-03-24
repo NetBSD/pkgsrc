@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/12/29 07:53:32 obache Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/24 19:21:30 joerg Exp $
 #
 
 DISTNAME=	nslint-2.0.2
@@ -13,5 +13,6 @@ COMMENT=	Perform consistency checks on DNS zone files
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	nslint
 INSTALL_TARGET=	install install-man
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

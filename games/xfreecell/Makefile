@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/24 19:21:24 joerg Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 PKGREVISION=	1
@@ -14,6 +14,8 @@ USE_X11BASE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 MAKE_FILE=	makefile
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 WRKSRC=		${WRKDIR}/xfreecell
 NO_CONFIGURE=	YES

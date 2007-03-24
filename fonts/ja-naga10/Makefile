@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/24 19:21:23 joerg Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
@@ -17,6 +17,8 @@ USE_TOOLS+=		bdftopcf gzip patch
 DOCDIR=			${PREFIX}/share/doc
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FONTS_DIRS.x11=		${FONTDIR}
+
+INSTALLATION_DIRS=	lib/X11/fonts/local share/doc
 
 post-extract:
 	cd ${WRKDIR}; \
@@ -39,7 +41,6 @@ do-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.* ${DOCDIR}; \
-	${INSTALL_DATA_DIR} ${FONTDIR}; \
 	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"

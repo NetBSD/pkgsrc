@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/19 23:00:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/24 19:21:29 joerg Exp $
 #
 
 DISTNAME=	sscript-lib2.0
@@ -14,5 +14,7 @@ COMMENT=	Simple library for creating network oriented software in C
 
 NO_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+
+INSTALLATION_DIRS=	lib
 
 .include "../../mk/bsd.pkg.mk"
