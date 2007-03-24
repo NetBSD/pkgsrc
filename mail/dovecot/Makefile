@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2007/03/14 14:14:52 ghen Exp $
+# $NetBSD: Makefile,v 1.90 2007/03/24 14:39:40 ghen Exp $
 
-DISTNAME=		dovecot-1.0.rc27
+DISTNAME=		dovecot-1.0.rc28
 PKGNAME=		${DISTNAME:S/.rc/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
@@ -50,8 +50,7 @@ post-build:
 						> ${WRKDIR}/mkcert.sh
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf	\
-		${DESTDIR}${EGDIR}/dovecot.conf.default
+	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${DESTDIR}${EGDIR}
 
