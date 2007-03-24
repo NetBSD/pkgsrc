@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/11/07 22:50:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/24 07:25:28 schmonz Exp $
 #
 
 DISTNAME=		cvm-0.82
@@ -25,6 +25,8 @@ SUBST_MESSAGE.paths=	Fixing paths.
 RCD_SCRIPTS=		cvm
 PKG_GROUPS+=		cvmlog
 PKG_USERS+=		cvmlog:cvmlog
+
+BUILD_DEFS+=		QMAILDIR
 
 DJB_CONFIG_CMDS=							\
 	${ECHO} ${DJB_CONFIG_PREFIX}/include > conf-include;		\
