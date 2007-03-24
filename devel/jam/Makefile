@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/18 19:05:07 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/24 06:20:30 schmonz Exp $
 #
 
 DISTNAME=	jam-2.5
@@ -23,17 +23,17 @@ HTMLDIR=	share/doc/html/${PKGBASE}
 INSTALLATION_DIRS=	bin
 
 do-install:
-	@for f in jam mkjambase; do \
+	for f in jam mkjambase; do \
 		${INSTALL_PROGRAM} ${WRKSRC}/bin.*/$${f} ${PREFIX}/bin; \
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	@for f in Porting README RELNOTES; do \
+	for f in Porting README RELNOTES; do \
 		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${DOCDIR}; \
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	@for f in *.html; do \
+	for f in *.html; do \
 		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${HTMLDIR}; \
 	done
 
