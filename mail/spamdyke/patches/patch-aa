@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/24 07:39:25 schmonz Exp $
+
+--- spamdyke/spamdyke.c.orig	2007-03-20 21:48:39.000000000 -0400
++++ spamdyke/spamdyke.c
+@@ -37,7 +37,7 @@
+ 
+ #define VERSION_STRING                  "2.2.1"
+ 
+-#define DEFAULT_PATH                    "/bin:/usr/bin:/usr/local/bin:/var/qmail/bin:/home/vpopmail/bin"
++#define DEFAULT_PATH                    "/bin:/usr/bin:@PREFIX@/bin:/usr/local/bin:/home/vpopmail/bin"
+ #define DEFAULT_TIMEOUT_COMMAND_SECS    60
+ #define DEFAULT_TIMEOUT_CONNECTION_SECS 0
+ 
