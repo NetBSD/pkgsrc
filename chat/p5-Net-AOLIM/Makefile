@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2006/10/02 21:27:03 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/24 06:14:55 schmonz Exp $
 #
 
-DISTNAME=	Net-AOLIM-1.4
+DISTNAME=	Net-AOLIM-1.5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	chat perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
+MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.phonon.net/pub/Net-AOLIM/
 COMMENT=	Perl5 module for connecting to AOL IM (TOC protocol)
 
@@ -17,11 +16,13 @@ REPLACE_PERL+=	AOLIM-example.pl
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man7
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	MANIFEST
+SUBST_SED.paths=	-e 's,^example\.pl,AOLIM-example.pl,g'
+SUBST_STAGE.paths=	pre-configure
+
 pre-configure:
-	${MV} ${WRKSRC}/example.pl ${WRKSRC}/AOLIM-example.pl; \
-	${MV} ${WRKSRC}/MANIFEST ${WRKSRC}/MANIFEST.orig && \
-	${SED} -e 's|^example\.pl|AOLIM-example.pl|' \
-		< ${WRKSRC}/MANIFEST.orig > ${WRKSRC}/MANIFEST
+	${MV} ${WRKSRC}/example.pl ${WRKSRC}/AOLIM-example.pl
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/TOC.7 ${PREFIX}/${PKGMANDIR}/man7
