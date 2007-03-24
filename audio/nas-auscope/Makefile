@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/24 13:47:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 20:27:19 markd Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	nas-auscope-1.8
@@ -18,11 +18,12 @@ REPLACE_PERL=   auscope
 
 NO_BUILD=	yes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/auscope ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/auscope.man ${PREFIX}/${PKGMANDIR}/man1/auscope.1
+	${INSTALL_SCRIPT} ${WRKSRC}/auscope ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/auscope.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/auscope.1
 
 .include "../../audio/nas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
