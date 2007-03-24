@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:37 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/03/24 18:32:25 heinz Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.21
@@ -15,7 +15,11 @@ DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PERL5_PACKLIST=		auto/Tie/EncryptedHash/.packlist
+
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Tie/EncryptedHash.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
