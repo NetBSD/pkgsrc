@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.18 2007/03/24 18:03:09 heinz Exp $
+# $NetBSD: check-interpreter.mk,v 1.19 2007/03/24 18:12:08 heinz Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -48,12 +48,12 @@ _check-interpreter: error-check .PHONY
 		*) ;;							\
 		esac;							\
 		if [ ! -r "$$file" ]; then				\
-			${DELAYED_WARNING_MSG} "[check-interpreter.mk] File \"$$file\" cannot be read."; \
+			${DELAYED_WARNING_MSG} "[check-interpreter.mk] File \"${DESTDIR}${PREFIX}/$$file\" cannot be read."; \
 			continue;					\
 		fi;							\
 		${SHCOMMENT} "[$$file]";				\
 		interp=`${SED} -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' -e '1q' < "$$file"` \
-		|| {	${DELAYED_WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"$$file\"."; \
+		|| {	${DELAYED_WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"${DESTDIR}${PREFIX}/$$file\"."; \
 			continue;					\
 		};							\
 		case "$$interp" in					\
@@ -61,9 +61,9 @@ _check-interpreter: error-check .PHONY
 		esac;							\
 		if [ ! -f "$$interp" ]; then				\
 			if [ -x "$$file" ]; then			\
-				${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
+				${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" does not exist."; \
 			else						\
-				${DELAYED_WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
+				${DELAYED_WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" does not exist."; \
 			fi;						\
 		fi;							\
 	done
