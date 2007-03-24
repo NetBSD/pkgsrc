@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/21 18:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/24 07:05:26 schmonz Exp $
 #
 
 DISTNAME=	qmail-lint-0.55
@@ -22,6 +22,7 @@ SUBST_FILES.qmaildir=	${DISTNAME}
 SUBST_SED.qmaildir=	-e 's|/var/qmail|${QMAILDIR}|g'
 
 INSTALLATION_DIRS=	bin
+BUILD_DEFS+=		QMAILDIR
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/qmail-lint
