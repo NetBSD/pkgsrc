@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2005/12/23 16:59:46 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/03/24 00:03:30 joerg Exp $
 
 --- gsmlib/gsm_map_key.h.orig	2002-05-14 19:38:12.000000000 +0000
 +++ gsmlib/gsm_map_key.h
@@ -29,3 +29,23 @@ $NetBSD: patch-ab,v 1.1 2005/12/23 16:59:46 joerg Exp $
    };
  
    // compare two keys
+@@ -72,8 +64,7 @@ namespace gsmlib
+   // MapKey members
+   
+   template <class SortedStore>
+-    bool gsmlib::operator<(const MapKey<SortedStore> &x,
+-                           const MapKey<SortedStore> &y)
++    bool operator<(const MapKey<SortedStore> &x, const MapKey<SortedStore> &y)
+     {
+       assert(&x._myStore == &y._myStore);
+ 
+@@ -97,8 +88,7 @@ namespace gsmlib
+     }
+ 
+   template <class SortedStore>
+-    bool gsmlib::operator==(const MapKey<SortedStore> &x,
+-                            const MapKey<SortedStore> &y)
++    bool operator==(const MapKey<SortedStore> &x, const MapKey<SortedStore> &y)
+     {
+       assert(&x._myStore == &y._myStore);
+ 
