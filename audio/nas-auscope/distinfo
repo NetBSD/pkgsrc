@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/24 13:47:48 markd Exp $
+
+SHA1 (nas-1.8.src.tar.gz) = 6752861196f0b11db93572d935dc87bc6c0da348
+RMD160 (nas-1.8.src.tar.gz) = c7c99d7c3f66d8255bd5708325bd5c71c73b0a47
+Size (nas-1.8.src.tar.gz) = 1290578 bytes
+SHA1 (patch-aa) = 1b504906166df26b57d39c8c7e0099ddad7308b2
