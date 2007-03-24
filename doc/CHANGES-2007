@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.713 2007/03/24 21:13:06 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.714 2007/03/24 22:58:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1379,3 +1379,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/pdiff to 1.0.1 [heinz 2007-03-24]
 	Updated audio/dap to 2.1.5 [adam 2007-03-24]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2007Q1 branch [agc 2007-03-24]
+	Added meta-pkgs/modular-xorg-fonts version 1.0 [joerg 2007-03-24]
+	Added meta-pkgs/modular-xorg-drivers version 1.0 [joerg 2007-03-24]
