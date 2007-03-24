@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/09 19:07:56 bad Exp $
-bin/fwbedit21
-bin/fwblookup21
-bin/fwbuilder21
-bin/fwb_ipt21
-bin/fwb_pf21
-bin/fwb_ipf21
-bin/fwb_ipfw21
+@comment $NetBSD: PLIST,v 1.2 2007/03/24 18:37:20 bad Exp $
+bin/fwbedit
+bin/fwblookup
+bin/fwbuilder
+bin/fwb_ipt
+bin/fwb_pf
+bin/fwb_ipf
+bin/fwb_ipfw
 share/doc/fwbuilder-${PKGVERSION}/AUTHORS
 share/doc/fwbuilder-${PKGVERSION}/ChangeLog
 share/doc/fwbuilder-${PKGVERSION}/COPYING
@@ -19,6 +19,12 @@ share/doc/fwbuilder-${PKGVERSION}/README.pf
 share/doc/fwbuilder-${PKGVERSION}/README.routing
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.html
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.8.html
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.8.txt
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.9.html
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.9.txt
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.10.html
+share/doc/fwbuilder-2.1.10/ReleaseNotes_2.1.10.txt
 share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
 share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
 @dirrm share/doc/fwbuilder-${PKGVERSION}
@@ -51,10 +57,10 @@ share/fwbuilder21/platform/pix.xml
 share/fwbuilder21/platform/unknown.xml
 @dirrm share/fwbuilder21/platform
 @dirrm share/fwbuilder21
-share/man/man1/fwbedit21.1
-share/man/man1/fwb_ipf21.1
-share/man/man1/fwb_ipfw21.1
-share/man/man1/fwb_ipt21.1
-share/man/man1/fwblookup21.1
-share/man/man1/fwb_pf21.1
-share/man/man1/fwbuilder21.1
+share/man/man1/fwbedit.1
+share/man/man1/fwb_ipf.1
+share/man/man1/fwb_ipfw.1
+share/man/man1/fwb_ipt.1
+share/man/man1/fwblookup.1
+share/man/man1/fwb_pf.1
+share/man/man1/fwbuilder.1
