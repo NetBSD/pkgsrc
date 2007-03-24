@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 21:46:44 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 20:27:10 christos Exp $
 #
 
 PKGNAME=	libflashsupport-1.0.2098
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 NO_BUILD=	YES
 
 BUILD_DEPENDS+= rpm2pkg>=1.2:../../pkgtools/rpm2pkg
-RPM2PKG=        rpm2pkg
+RPM2PKG=        ${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=	-d ${WRKDIR} -s 3 ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 .include "../../emulators/suse_linux/Makefile.application"
