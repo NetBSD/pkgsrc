@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.703 2007/03/24 14:49:58 abs Exp $
+$NetBSD: CHANGES-2007,v 1.704 2007/03/24 15:53:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1364,3 +1364,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/kdiff3 version 0.9.91 [markd 2007-03-24]
 	Updated mail/dovecot to 1.0rc28 [ghen 2007-03-24]
 	Updated sysutils/rconfig to 0.46 [abs 2007-03-24]
+	Updated emulators/fuse to 0.7.0nb5 [adam 2007-03-24]
