@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/08 09:04:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2007/03/24 07:08:35 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20060604
@@ -25,6 +25,7 @@ FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 RCD_SCRIPTS=		qmail qmailpop3d qmailqread qmailsend qmailsmtpd
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
+BUILD_DEFS+=		QMAIL_QUEUE_EXTRA
 
 .include "../../mk/bsd.prefs.mk"
 
