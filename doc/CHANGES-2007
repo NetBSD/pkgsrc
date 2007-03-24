@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.700 2007/03/24 12:54:52 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.701 2007/03/24 14:31:18 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1356,3 +1356,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Added transset-df version 5 [drochner 2007-03-24]
 	Updated sysutils/notification-daemon to 0.3.7 [drochner 2007-03-24]
 	Updated www/liferea to 1.2.8 [drochner 2007-03-24]
+	Updated audio/nas to 1.8nb3 [markd 2007-03-24]
+	Added audio/nas-auscope version 1.8 [markd 2007-03-24]
+	Updated devel/kdevelop-base to 3.4.0 [markd 2007-03-24]
+	Updated devel/kdevelop to 3.4.0 [markd 2007-03-24]
+	Added net/libtrace version 3.0.0 [markd 2007-03-24]
+	Added devel/kdiff3 version 0.9.91 [markd 2007-03-24]
