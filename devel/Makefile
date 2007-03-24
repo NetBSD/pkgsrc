@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2007/03/24 14:23:57 markd Exp $
+# $NetBSD: Makefile,v 1.824 2007/03/24 16:59:26 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -38,6 +38,7 @@ SUBDIR+=	apr
 SUBDIR+=	apr-util
 SUBDIR+=	apr0
 SUBDIR+=	arena
+SUBDIR+=	argp
 SUBDIR+=	argtable
 SUBDIR+=	as31
 SUBDIR+=	asm2html
