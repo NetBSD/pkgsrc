@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/03/24 19:21:26 joerg Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -79,6 +79,8 @@ SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/exim
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
 		${WRKSRC}/OS/
@@ -96,9 +98,6 @@ pre-configure:
 		-e '/^DBMLIB/d' $$f > $$f.subst; \
 		${MV} -f $$f.subst $$f; \
 	done
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/exim_newaliases ${PREFIX}/sbin/exim_newaliases

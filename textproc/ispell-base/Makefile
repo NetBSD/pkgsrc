@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/06/06 21:55:41 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2007/03/24 19:21:32 joerg Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -13,6 +13,7 @@ COMMENT=	Interactive spelling checker
 CONFLICTS+=	ispell-[0-9]*
 
 USE_TOOLS+=	mktemp:run yacc
+INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 

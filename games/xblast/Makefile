@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/02 18:18:27 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2007/03/24 19:21:24 joerg Exp $
 #
 
 DISTNAME=		xblast-2.10.2
@@ -25,6 +25,8 @@ SUBST_STAGE.ossaudio=	pre-configure
 SUBST_MESSAGE.ossaudio=	"Linking ossaudio library"
 SUBST_FILES.ossaudio=	Makefile.in
 SUBST_SED.ossaudio=-e 's|xbsndsrv_LDFLAGS =|xbsndsrv_LDFLAGS = ${LIBOSSAUDIO}|'
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 pre-build:
 	${MV} ${WRKDIR}/images-2005-01-06 ${WRKSRC}/image

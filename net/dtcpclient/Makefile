@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/11/09 09:15:45 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/24 19:21:29 joerg Exp $
 #
 
 DISTNAME=	dtcpclient-20060526
@@ -22,6 +22,8 @@ SUBST_FILES.paths=	dtcpclient.8
 SUBST_SED.paths=	's|/usr/local|${PREFIX}|g'
 
 MAKE_ENV+=	${BSD_MAKE_ENV}
+
+INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/24 18:29:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:32 joerg Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
@@ -23,6 +23,9 @@ MAN8=		dirvish.8 dirvish-runall.8 dirvish-expire.8 \
 		dirvish-locate.8
 DOCS=		COPYING FAQ.html INSTALL RELEASE.html TODO.html
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
+			share/doc/dirvish
+
 do-build:
 	cd ${WRKSRC}; \
 	for f in ${EXECUTABLES}; do \
@@ -42,7 +45,6 @@ do-install:
 	for f in ${MAN8}; do \
 		${INSTALL_MAN} ${WRKSRC}/$$f ${PREFIX}/${PKGMANDIR}/man8; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dirvish
 	for f in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/dirvish; \
 	done

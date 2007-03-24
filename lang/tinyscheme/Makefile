@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:25 joerg Exp $
 
 DISTNAME=	tinyscheme-1.35
 CATEGORIES=	lang
@@ -10,5 +10,7 @@ COMMENT=	BSD-licensed R5RS small embeddable scheme implementation
 
 MAKE_FILE=	makefile
 USE_LIBTOOL=	yes
+
+INSTALLATION_DIRS=	bin include lib
 
 .include "../../mk/bsd.pkg.mk"

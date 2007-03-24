@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 13:58:19 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/24 19:21:19 joerg Exp $
 #
 
 DISTNAME=	gp-0.26
@@ -9,5 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	hdp@cs.nmsu.edu
 HOMEPAGE=	http://www.bioinformatics.org/genpak/
 COMMENT=	Manipulate DNA/RNA sequence in a Unix fashion
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples
 
 .include "../../mk/bsd.pkg.mk"

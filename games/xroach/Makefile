@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/02 18:04:52 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:25 joerg Exp $
 #
 
 DISTNAME=	xroach
@@ -15,6 +15,8 @@ DIST_SUBDIR=	xroach-4.4
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q} \
 		MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q} MANMODE=${MANMODE:Q}
 MANCOMPRESSED_IF_MANZ=	yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat6 ${PKGMANDIR}/man6
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

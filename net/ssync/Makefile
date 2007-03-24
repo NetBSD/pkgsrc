@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/24 19:21:30 joerg Exp $
 #
 
 DISTNAME=		ssync-1.6
@@ -20,5 +20,6 @@ SSYNC_PAWD?=		pwd
 NO_CONFIGURE=		yes
 BUILD_TARGET=		all PREFIX=${PREFIX} PAWD=${SSYNC_PAWD}
 INSTALL_TARGET=		install PREFIX=${PREFIX}
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

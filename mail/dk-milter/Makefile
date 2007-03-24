@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/19 16:40:27 tv Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/24 19:21:26 joerg Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	1
@@ -26,6 +26,8 @@ SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 			-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter
+
 post-extract:
 	${LN} -s FreeBSD ${WRKSRC}/devtools/OS/DragonFly
 
@@ -41,7 +43,6 @@ do-install:
 	cd ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -` && \
 		${INSTALL_PROGRAM} dk-filter/dk-filter ${PREFIX}/sbin/dk-milter
 	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-milter.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dk-milter

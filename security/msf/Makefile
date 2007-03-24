@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/05 12:33:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/24 19:21:31 joerg Exp $
 #
 
 DISTNAME=	framework-2.6
@@ -46,21 +46,12 @@ PYTHON_PATCH_SCRIPTS=	payloads/external/WindowsSyscall.py \
 .include "../../lang/python/extension.mk"
 .endif
 
-do-install:
-	${INSTALL_DATA_DIR} ${MSFDIR}
-	${INSTALL_DATA_DIR} ${MSFDIR}/docs
-	${INSTALL_DATA_DIR} ${MSFDIR}/data
-	${INSTALL_DATA_DIR} ${MSFDIR}/encoders
-	${INSTALL_DATA_DIR} ${MSFDIR}/exploits
-	${INSTALL_DATA_DIR} ${MSFDIR}/extras
-	${INSTALL_DATA_DIR} ${MSFDIR}/lib
-	${INSTALL_DATA_DIR} ${MSFDIR}/nops
-	${INSTALL_DATA_DIR} ${MSFDIR}/payloads
-	${INSTALL_DATA_DIR} ${MSFDIR}/payloads/external
-	${INSTALL_DATA_DIR} ${MSFDIR}/sdk
-	${INSTALL_DATA_DIR} ${MSFDIR}/src
-	${INSTALL_DATA_DIR} ${MSFDIR}/tools
+INSTALLATION_DIRS=	share/msf/docs share/msf/data share/msf/encoders \
+			share/msf/exploits share/msf/extras share/msf/lib \
+			share/msf/nops share/msf/payloads/external \
+			share/msf/sdk share/msf/src share/msf/tools share/doc
 
+do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${MSFDIR}/docs
 	${INSTALL_DATA} ${WRKSRC}/encoders/*.pm ${MSFDIR}/encoders
 	${INSTALL_DATA} ${WRKSRC}/exploits/*.pm ${MSFDIR}/exploits

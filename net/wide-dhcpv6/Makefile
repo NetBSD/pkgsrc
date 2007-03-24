@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/19 17:32:07 taca Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:30 joerg Exp $
 
 DISTNAME=	wide-dhcpv6-20061016
 CATEGORIES=	net
@@ -22,6 +22,9 @@ EXAMPLES=	dhcp6c.conf dhcp6s.conf
 MAN5=		dhcp6c.conf.5 dhcp6s.conf.5
 MAN8=		dhcp6c.8 dhcp6ctl.8 dhcp6relay.8 dhcp6s.8
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
+			share/examples/wide-dhcpv6
+
 do-install:
 .for f in ${COMMANDS}
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/sbin
@@ -32,7 +35,6 @@ do-install:
 .for f in ${MAN8}
 	${INSTALL_MAN} ${WRKSRC}/${f} ${PREFIX}/${PKGMANDIR}/man8
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/${f}.sample ${EGDIR}/${f}
 .endfor

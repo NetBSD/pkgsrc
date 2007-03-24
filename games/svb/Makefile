@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:55 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:24 joerg Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -13,6 +13,7 @@ COMMENT=		Spy Vs. Bob, the timeless classic
 WRKSRC=			${WRKDIR}
 USE_IMAKE=		yes
 NO_INSTALL_MANPAGES=	yes
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 post-install:
 	${INSTALL_GAME_DATA} /dev/null /var/games/svb.scorefile

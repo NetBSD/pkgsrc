@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/09 10:26:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/24 19:21:27 joerg Exp $
 
 DISTNAME=	dcdflib.f-1.1
 PKGREVISION=	2
@@ -13,8 +13,9 @@ WRKSRC=		${WRKDIR}/dcdflib.f
 BUILD_DIRS=	src
 USE_LANGUAGES=	c fortran
 
+INSTALLATION_DIRS=	lib share/doc/dcdflib.f
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dcdflib.f
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/dcdflib.f
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dcdflib.f
 

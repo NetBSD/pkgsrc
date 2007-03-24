@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/22 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/03/24 19:21:28 joerg Exp $
 
 DISTNAME=	logsurfer-1.5b
 PKGNAME=	logsurfer-1.6.2
@@ -22,7 +22,7 @@ BUILD_DEFS+=	VARBASE
 
 EGDIR=		${PREFIX}/share/examples/logsurfer
 
-INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
 
 post-install:
 	${MKDIR} ${EGDIR}

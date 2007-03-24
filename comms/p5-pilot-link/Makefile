@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/02/22 19:26:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2007/03/24 19:21:20 joerg Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -20,6 +20,7 @@ PERL5_LDFLAGS=		-lpisock
 REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link
 
 INSTALL_DIRS=		${WRKSRC}/bindings
+INSTALLATION_DIRS=	bin
 BUILD_DIRS+=		${WRKSRC}/src
 BUILD_DIRS+=		${INSTALL_DIRS}
 

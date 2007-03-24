@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/24 19:21:24 joerg Exp $
 
 DISTNAME=	jetpack
 PKGNAME=	jetpack-1.0
@@ -12,6 +12,8 @@ COMMENT=	Arcade action game for X Windows
 
 USE_IMAKE=	yes
 NO_INSTALL_MANPAGES=	yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 post-install:
 	@${CHOWN} bin:games ${PREFIX}/bin/jetpack

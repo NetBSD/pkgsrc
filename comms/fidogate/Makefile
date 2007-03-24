@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/03/19 16:40:27 tv Exp $
+# $NetBSD: Makefile,v 1.56 2007/03/24 19:21:19 joerg Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -37,7 +37,7 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/fidogate
 INSTALLATION_DIRS=	${EGDIR}		lib/fidogate		\
 			lib/fidogate/bin	share/doc/fidogate	\
 			share/fidogate		share/fidogate/sendmail	\
-			share/fidogate/sendmail/mailer
+			share/fidogate/sendmail/mailer share/examples/rc.d
 
 post-extract:
 	@${CP} ${WRKSRC}/examples/orodruin/fidogate.conf \

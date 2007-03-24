@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/11/12 01:28:03 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/03/24 19:21:31 joerg Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -35,6 +35,8 @@ CPP+=		-traditional
 .if ${OPSYS} == "IRIX"
 CPPFLAGS+=	-DHAVE_TERMIO_H
 .endif
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 post-patch:
 	@${SED} -e ' \
