@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:44 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:34 joerg Exp $
 #
 
 DISTNAME=	xcruise-0.24
@@ -14,9 +14,10 @@ COMMENT=	Navigate through a three-dimensional view of a file system
 
 USE_IMAKE=	yes
 
+INSTALLATION_DIRS=	bin lib/X11/app-defaults share/doc/xcruise
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/XCruise.ad ${PREFIX}/lib/X11/app-defaults/XCruise
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/README.jp ${PREFIX}/share/doc/xcruise
 	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/xcruise

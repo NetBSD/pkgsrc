@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/15 18:23:21 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:34 joerg Exp $
 
 DISTNAME=	xjman-0.5
 PKGREVISION=	2
@@ -64,8 +64,10 @@ post-build:
 		${SORT} >> ${PLIST_SRC})
 .endif
 
+INSTALLATION_DIRS=	${PKGMANDIR}/ja_JP.EUC/cat1 ${PKGMANDIR}/ja_JP.EUC/man1 \
+			${PKGMANDIR}/ja_JP.EUC/cat3 ${PKGMANDIR}/ja_JP.EUC/man3 share/doc/xjman
+
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xjman
 .for i in COPYRIGHT COPYRIGHT.XJDP
 	@${INSTALL_DATA} ${FILESDIR}/${i} ${PREFIX}/share/doc/xjman
 .endfor

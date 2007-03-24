@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/08/28 23:03:14 ben Exp $
+# $NetBSD: Makefile,v 1.25 2007/03/24 19:21:24 joerg Exp $
 #
 
 .include		"../../games/nethack-lib/Makefile.common"
@@ -12,6 +12,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 BUILD_TARGET=		datastuff
 INSTALL_TARGET=		manpages install-dat
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 # Special handling for the scorefiles: we do not want to delete
 # them between package installations and deinstallations.

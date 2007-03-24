@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/24 19:21:28 joerg Exp $
 
 DISTNAME=		quadpack-20001130
 PKGREVISION=		1
@@ -12,11 +12,12 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_LANGUAGES=		fortran
 WRKSRC=			${WRKDIR}/quadpack
 
+INSTALLATION_DIRS=	lib share/doc/quadpack
+
 pre-build:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quadpack
 	cd ${WRKSRC} && ${INSTALL_DATA} doc readme ${PREFIX}/share/doc/quadpack
 
 .include "../../mk/bsd.pkg.mk"
