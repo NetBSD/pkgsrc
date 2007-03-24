@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6147 2007/03/23 15:08:10 ghen Exp $
+$NetBSD: TODO,v 1.6148 2007/03/24 06:15:33 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -733,7 +733,6 @@ Suggested package updates
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-Mac-Macbinary-0.06
-	o p5-Net-AOLIM-1.5
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-Jabber-2.0
