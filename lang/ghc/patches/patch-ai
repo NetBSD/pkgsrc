@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.5 2006/10/14 02:45:10 rillig Exp $
+$NetBSD: patch-ai,v 1.6 2007/03/24 17:57:20 kristerw Exp $
 
---- distrib/prep-bin-dist-mingw.orig	2006-03-19 04:26:18.000000000 +0100
-+++ distrib/prep-bin-dist-mingw	2006-10-14 04:43:55.000000000 +0200
+--- ../ghc-6.4.2/distrib/prep-bin-dist-mingw.orig	2006-03-19 04:26:18.000000000 +0100
++++ ../ghc-6.4.2/distrib/prep-bin-dist-mingw	2006-10-14 04:43:55.000000000 +0200
 @@ -27,25 +27,25 @@
  #    - gcc_version -- what gcc version your mingw tree uses.
  #
