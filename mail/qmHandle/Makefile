@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/16 01:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/03/24 07:04:56 schmonz Exp $
 #
 
 DISTNAME=	qmhandle-1.2.0
@@ -26,6 +26,7 @@ SUBST_SED.config+=	-e 's|pidof|/usr/bin/pgrep|g'
 .endif
 
 INSTALLATION_DIRS=	bin
+BUILD_DEFS+=		QMAIL_QUEUE_DIR
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qmHandle ${PREFIX}/bin
