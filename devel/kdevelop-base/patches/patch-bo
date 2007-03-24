@@ -1,0 +1,13 @@
+$NetBSD: patch-bo,v 1.1 2007/03/24 14:01:32 markd Exp $
+
+--- buildtools/qmake/scope.cpp.orig	2007-01-26 04:42:06.000000000 +1300
++++ buildtools/qmake/scope.cpp
+@@ -147,7 +147,7 @@ Scope::Scope( unsigned int num, Scope* p
+ 
+ bool Scope::loadFromFile( const QString& filename )
+ {
+-    if ( !QFileInfo(filename).exists() || QMake::Driver::parseFile( filename, &m_root ) != 0 )
++    if ( !QFileInfo(filename).exists() || QMake::Driver::parseFile( filename, &m_root, 0 ) != 0 )
+     {
+         kdDebug( 9024 ) << "Couldn't parse project: " << filename << endl;
+         m_root = 0;
