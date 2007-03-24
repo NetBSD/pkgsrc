@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/03/12 06:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/24 20:17:57 heinz Exp $
 #
 
-DISTNAME=		PerceptualDiff-1.0
-PKGNAME=		pdiff-1.0
-PKGREVISION=		1
+DISTNAME=		PerceptualDiff-1.0.1
+PKGNAME=		pdiff-1.0.1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pdiff/}
 
@@ -12,16 +11,11 @@ HOMEPAGE=		http://pdiff.sourceforge.net/
 COMMENT=		Image comparison through perceptually based image metric
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 
-OPSYSVARS+=		LIBTIFFNAME
-LIBTIFFNAME.*=		libtiff.so
-LIBTIFFNAME.Darwin=	libtiff.dylib
-
 CMAKEFLAGS.pdiff+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
-CMAKEFLAGS.pdiff+=	-DTIFF_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.tiff}/include
-CMAKEFLAGS.pdiff+=	-DTIFF_LIBRARY:PATH=${BUILDLINK_PREFIX.tiff}/lib/${LIBTIFFNAME}
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
