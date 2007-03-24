@@ -1,0 +1,50 @@
+$NetBSD: patch-bq,v 1.1 2007/03/24 14:01:32 markd Exp $
+
+--- buildtools/lib/parsers/qmake/Makefile.in.orig	2007-01-26 04:48:03.000000000 +1300
++++ buildtools/lib/parsers/qmake/Makefile.in
+@@ -70,13 +70,13 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ libkdevqmakeparser_la_LIBADD =
+-am_libkdevqmakeparser_la_OBJECTS = qmakeast.lo qmakedriver.lo \
+-	qmake_yacc.lo qmakeastvisitor.lo
++am_libkdevqmakeparser_la_OBJECTS = qmake_lex.lo qmake_yacc.lo qmakeast.lo \
++	qmakeastvisitor.lo qmakedriver.lo
+ #>- libkdevqmakeparser_la_OBJECTS = $(am_libkdevqmakeparser_la_OBJECTS)
+ #>+ 5
+ libkdevqmakeparser_la_final_OBJECTS = libkdevqmakeparser_la.all_cpp.lo 
+-libkdevqmakeparser_la_nofinal_OBJECTS = qmakeast.lo qmakedriver.lo \
+-	qmake_yacc.lo qmakeastvisitor.lo
++libkdevqmakeparser_la_nofinal_OBJECTS = qmake_lex.lo qmake_yacc.lo qmakeast.lo \
++	qmakeastvisitor.lo qmakedriver.lo
+ @KDE_USE_FINAL_FALSE@libkdevqmakeparser_la_OBJECTS = $(libkdevqmakeparser_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libkdevqmakeparser_la_OBJECTS = $(libkdevqmakeparser_la_final_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+@@ -420,8 +420,8 @@ lib_LTLIBRARIES = libkdevqmakeparser.la
+ #>- libkdevqmakeparser_la_LDFLAGS = -no-undefined $(all_libraries) $(LIB_KIO)
+ #>+ 1
+ libkdevqmakeparser_la_LDFLAGS = -no-undefined $(KDE_NO_UNDEFINED) $(all_libraries) $(LIB_KIO)
+-libkdevqmakeparser_la_SOURCES = qmakeast.cpp qmakedriver.cpp qmake_yacc.cpp \
+-	qmakeastvisitor.cpp
++libkdevqmakeparser_la_SOURCES = qmake_lex.cpp qmake_yacc.cpp qmakeast.cpp \
++	qmakeastvisitor.cpp qmakedriver.cpp
+ 
+ kdevelopbuildtoolsincludedir = $(includedir)/kdevelop/buildtools/parsers/qmake
+ kdevelopbuildtoolsinclude_HEADERS = qmakeast.h qmakedriver.h qmakeastvisitor.h
+@@ -753,14 +753,12 @@ uninstall-am: uninstall-info-am \
+ 
+ parser:
+ 	cd $(srcdir) ; \
+-	bison -d qmake.yy -o qmake_yacc.cpp ; \
+-	mv -f qmake_yacc.hpp qmake_yacc.h ; \
++	bison -d qmake.yy -oqmake_yacc.cpp ; \
+ 	flex -oqmake_lex.cpp qmake.ll
+ 
+ parser_dbg:
+ 	cd $(srcdir) ; \
+-	bison -d qmake.yy -r all -k -t -o qmake_yacc.cpp ; \
+-	mv -f qmake_yacc.hpp qmake_yacc.h ; \
++	bison -d qmake.yy -r all -k -t -oqmake_yacc.cpp ; \
+ 	flex -d -oqmake_lex.cpp qmake.ll
+ apidox-am-yes:
+ 	@if test -z "$(DOXYGEN_EMPTY)"; then \

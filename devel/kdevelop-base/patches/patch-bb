@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2007/03/24 14:01:30 markd Exp $
+
+--- buildtools/lib/parsers/qmake/tests/viewer.cpp.orig	2007-01-26 04:42:02.000000000 +1300
++++ buildtools/lib/parsers/qmake/tests/viewer.cpp
+@@ -78,7 +78,7 @@ void Viewer::files_currentChanged(QListB
+     source->setText(str.read());
+     f.close();
+ 
+-    int result = QMake::Driver::parseFile(item->text().ascii(), &projectAST);
++    int result = QMake::Driver::parseFile(item->text().ascii(), &projectAST, 0);
+     if (projectAST && (result == 0))
+     {
+         processAST(projectAST);
