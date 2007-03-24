@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.712 2007/03/24 21:06:24 agc Exp $
+$NetBSD: CHANGES-2007,v 1.713 2007/03/24 21:13:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1353,7 +1353,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/dropbear to 0.49 [drochner 2007-03-24]
 	Updated security/gpgme to 1.1.4 [drochner 2007-03-24]
 	Added wm/compiz version 0.3.6 [drochner 2007-03-24]
-	Added transset-df version 5 [drochner 2007-03-24]
+	Added x11/transset-df version 5 [drochner 2007-03-24]
 	Updated sysutils/notification-daemon to 0.3.7 [drochner 2007-03-24]
 	Updated www/liferea to 1.2.8 [drochner 2007-03-24]
 	Updated audio/nas to 1.8nb3 [markd 2007-03-24]
