@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.710 2007/03/24 20:53:03 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.711 2007/03/24 21:03:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1377,3 +1377,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-Encode-Detect version 1.00 [heinz 2007-03-24]
 	Updated emulators/zsnes to 1.51 [adam 2007-03-24]
 	Updated graphics/pdiff to 1.0.1 [heinz 2007-03-24]
+	Updated audio/dap to 2.1.5 [adam 2007-03-24]
