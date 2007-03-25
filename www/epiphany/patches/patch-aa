@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.9 2007/03/25 08:14:36 wiz Exp $
+
+--- help/C/epiphany.xml.orig	2006-11-19 20:01:56.000000000 +0000
++++ help/C/epiphany.xml
+@@ -63,7 +63,7 @@
+ <!-- An address can be added to the publisher information.  If a role is 
+ 	 not specified, the publisher/author is the same for all versions of the 
+ 	 document.  -->
+-	<publisher> 
++	<publisher role="maintainer"> 
+ 	  <publishername>GNOME Documentation Project</publishername> 
+ 	</publisher> 
+ 
+@@ -116,6 +116,13 @@
+ 	</authorgroup>
+ 
+ 
++  <revhistory>
++    <revision>
++      <revnumber>1.7</revnumber>
++      <date>2006-01</date>
++    </revision>
++  </revhistory>
++
+ 	<releaseinfo>
+ 	  This manual describes version &appversion; of &plainfr;.
+ 	</releaseinfo>
