@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/25 05:55:26 wiz Exp $
 
 DISTNAME=		gkrellm_snmp-0.18
 PKGNAME=		gkrellm-snmp-0.18
@@ -7,7 +7,7 @@ CATEGORIES=		net sysutils
 MASTER_SITES=		http://triq.net/gkrellm/
 
 MAINTAINER=		jasper@pointless.net
-HOMEPAGE=		http://triq.net/gkrellm.html
+HOMEPAGE=		http://triq.net/gkrellm_snmp.html
 COMMENT=		Simple SNMP monitor for gkrellm
 
 USE_TOOLS+=		gmake
