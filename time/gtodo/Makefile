@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/16 12:20:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2007/03/25 06:31:12 wiz Exp $
 #
 
 DISTNAME=	gtodo-0.14
@@ -7,7 +7,7 @@ CATEGORIES=	time gnome
 MASTER_SITES=	http://download.qballcow.nl/programs/gtodo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qballcow.nl/index.php?s=4
+HOMEPAGE=	http://cms.qballcow.nl/index.php?page=Gnome_Task_List_Manager
 COMMENT=	To-do list manager for the GNOME desktop
 
 GNU_CONFIGURE=		YES
