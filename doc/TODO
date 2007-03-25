@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6160 2007/03/25 08:11:49 wiz Exp $
+$NetBSD: TODO,v 1.6161 2007/03/25 09:21:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -410,7 +410,7 @@ Suggested package updates
 	o drupal-5.1
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
-	o dvdrip-0.98.3
+	o dvdrip-0.98.4
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
@@ -649,6 +649,7 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
+	o ircservices-5.0.60
 	o ircu-2.10.12.0
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
@@ -1415,6 +1416,7 @@ Suggested package updates
 	o xscreensaver-5.01
 	o xskat-4.0
 	o xsoldier-1.4
+	o xterm-225
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
