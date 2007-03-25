@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/25 09:48:13 wiz Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -38,5 +38,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/install.html ${PREFIX}/share/doc/mpd
 	${INSTALL_DATA} ${WRKSRC}/doc/release.html ${PREFIX}/share/doc/mpd
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../..//x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
