@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/03/01 08:49:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2007/03/25 18:52:10 jmmv Exp $
 #
 
 DISTNAME=	monotone-server-0.33
@@ -41,6 +41,8 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/write-permissions \
 
 PKG_GROUPS=		${MONOTONE_GROUP}
 PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}
+
+.include "../../mk/bsd.prefs.mk"
 
 PKG_GECOS.${MONOTONE_USER}=	Monotone dedicated server
 PKG_HOME.${MONOTONE_USER}=	${VARBASE}/monotone
