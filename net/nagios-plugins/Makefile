@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/25 12:48:46 grant Exp $
 #
 
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,8 +21,6 @@ CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 .endif
-
-DEPENDS+=	nagios-base>=2.0:../../net/nagios-base
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
