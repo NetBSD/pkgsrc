@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6158 2007/03/25 06:43:06 schmonz Exp $
+$NetBSD: TODO,v 1.6159 2007/03/25 06:47:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -256,7 +256,7 @@ Suggested package updates
 	o adtool-1.3
 	o aewm++-1.0.27
 	o afterstep-2.2.4
-	o alacarte-0.11.1.1
+	o alacarte-0.11.3
 	o album-4.01
 	o alee-ttf-11.2
 	o algae-4.3.6
@@ -267,19 +267,24 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amaya-9.53
+	o amaya-9.54
 	o anjuta-2.1.1
 	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
-	o ap-layout-4.0.1a
+	o ap-jk-1.2.21
+	o ap-layout-3.3
 	o ap-mp3-0.40
-	o ap-python-3.1.4
+	o ap-python-3.3.1
 	o ap-ssl-2.8.26
 	o ap-xslt-1.3.8
+	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
+	o ap2-jk-1.2.21
+	o ap2-python-3.3.1
+	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
 	o apache-ant15-1.7.0
 	o apcupsd-3.14.0 [pkg/35594]
@@ -337,6 +342,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cal3d-0.11.0
+	o calamaris-2.59
 	o capc-calc-2.12.1.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o ccd2iso-0.2
@@ -351,6 +357,8 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clearsilver-0.10.4
+	o clearsilver-base-0.10.4
 	o clex-3.15
 	o clisp-2.41
 	o cocoon-2.1.10
@@ -392,6 +400,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dhid-5.3
+	o diction-1.10
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.6.0
@@ -424,6 +433,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
+	o elinks-0.12
 	o elm-me-2.4pl123d
 	o elscreen-1.5.2
 	o eltclsh-1.7
@@ -473,7 +483,7 @@ Suggested package updates
 	o font-adobe-75dpi-1.0.1
 	o fop-0.20.5
 	o fort77-1.18
-	o fox-1.6.19
+	o fox-1.6.24
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
 	o freeradius-1.1.5
@@ -500,6 +510,7 @@ Suggested package updates
 	o gconfmm-2.18.0
 	o gcpio-2.7
 	o gdb6-6.6
+	o gdeskcal-1.01
 	o gdl-0.7.2
 	o gdm-2.18.0
 	o gdsreader-0.3.2
@@ -600,6 +611,8 @@ Suggested package updates
 	o gtkpod-0.99.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
+	o gtodo-0.16.0rc2
+	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o gucharmap-1.10.0
 	o guile-1.8.1 [slib support broken]
@@ -620,24 +633,25 @@ Suggested package updates
 	o html2ps-1.0b5
 	o html2wml-0.4.11
 	o htmldoc-1.8.27
-	o http_load-20050629
+	o http_load-20060312
 	o httping-1.2.2
 	o httptunnel-3.3
 	o hydrogen-0.9.2
 	o hylafax-5.1.1
 	o i2ocfg-1.1
+	o ical-2.3.2
 	o icdprog-0.5
 	o icecast-2.3.1
 	o icepref-2.3
 	o icon-943
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
-	o ikiwiki-1.45
+	o ikiwiki-1.47
 	o imap-uw-2006f
 	o imapfilter-1.3
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
-	o instiki-0.10.2
+	o instiki-0.11pl1
 	o intercal-0.24
 	o ion3-devel-20061223
 	o iozone-3.283
@@ -648,11 +662,13 @@ Suggested package updates
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
-	o ispell-gaeilge-4.0
+	o iso-codes-1.0
+	o ispell-gaeilge-4.1
 	o ispell-russian-0.99f8
-	o ispell-slovak-0.3.0
+	o ispell-slovak-0.3.2
 	o ispman-1.2
 	o ja-gawk-3.1.5
+	o ja-grep-2.5.1a
 	o ja-less-382 [at http://www25.big.jp/~jam/less/]
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
@@ -753,6 +769,7 @@ Suggested package updates
 	o lmms-0.2.1
 	o loudmouth-1.2.0
 	o lout-3.31
+	o lq-sp-1.3.4.13
 	o lsh2-2.0.3
 	o ltm-0.40
 	o lucy-1.19p
@@ -847,6 +864,8 @@ Suggested package updates
 	o nmh-1.2.1
 	o nomarch-1.4
 	o ns-plugger-common-5.1.3
+	o ns-plugger-communicator-5.1.3
+	o ns-plugger-navigator-5.1.3
 	o nsca-1.2.0
 	o nsd-3.0.5
 	o nslint-2.1a7
@@ -872,7 +891,7 @@ Suggested package updates
 	o openssl-0.9.8e
 	o openttd-0.5.0
 	o oregano-0.60.0
-	o oroborus-2.0.15
+	o oroborus-2.0.18
 	o osh-20070324
 	o otpCalc-0.97
 	o p5-Algorithm-Merge-0.08
@@ -889,7 +908,8 @@ Suggested package updates
 	o p5-Business-ISBN-1.84
 	o p5-Business-ISBN-Data-1.13
 	o p5-CDDB_get-2.27
-	o p5-CGI-Minimal-1.24
+	o p5-CGI-Application-4.06
+	o p5-CGI-Minimal-1.25
 	o p5-Cache-Memcached-1.15
 	o p5-Carp-Assert-0.20
 	o p5-Chart-2.4.1
@@ -898,6 +918,7 @@ Suggested package updates
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
 	o p5-Class-Trigger-0.11
+	o p5-Convert-ASN1-0.21
 	o p5-Crypt-CBC-2.22
 	o p5-Crypt-SSLeay-0.53
 	o p5-Curses-1.15
@@ -909,6 +930,8 @@ Suggested package updates
 	o p5-DBIx-DBSchema-0.31
 	o p5-DBIx-SearchBuilder-1.48
 	o p5-Data-Dump-1.08
+	o p5-Data-FormValidator-4.50
+	o p5-DateTime-TimeZone-0.63
 	o p5-Devel-Profile-1.05
 	o p5-Devel-StackTrace-1.14
 	o p5-Device-Gsm-1.48
@@ -920,13 +943,20 @@ Suggested package updates
 	o p5-Email-Valid-0.179
 	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
+	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
 	o p5-Graph-0.20105
-	o p5-HTML-FillInForm-1.05
+	o p5-HTML-FillInForm-1.06
+	o p5-HTML-Prototype-1.48
+	o p5-HTML-Prototype-Useful-0.05
+	o p5-HTML-Table-2.05
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
+	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
+	o p5-HTTP-Server-Simple-0.27
+	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
@@ -934,6 +964,7 @@ Suggested package updates
 	o p5-IP-Country-2.23
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
+	o p5-Jemplate-0.20
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
@@ -964,6 +995,7 @@ Suggested package updates
 	o p5-PerlIO-via-symlink-0.03
 	o p5-PerlMagick-6.3.2.9
 	o p5-Pod-POM-0.15
+	o p5-Pod-Simple-3.05
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
@@ -980,13 +1012,19 @@ Suggested package updates
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
+	o p5-Test-WWW-Mechanize-1.12
 	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Tabs+Wrap-2005.0824
+	o p5-Text-Tabs+Wrap-2006.1117
+	o p5-Time-HiRes-1.9707
+	o p5-Time-Local-1.17
+	o p5-Time-TAI64-2.11
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
+	o p5-YAML-Syck-0.82
 	o p5-ispman-1.2
+	o p5-libapreq2-2.08
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o p5-version-0.71
@@ -1022,12 +1060,14 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
+	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o picp-0.6.8
-	o piewm-1.03
+	o piewm-1.04
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
@@ -1057,6 +1097,7 @@ Suggested package updates
 	o posh-0.5.5
 	o postal-0.66
 	o postfix-2.3.8
+	o postgresql-autodoc-1.30
 	o postgresql81-postgis-1.1.6
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
@@ -1075,7 +1116,7 @@ Suggested package updates
 	o pv-0.9.2
 	o pwlib-1.10.3 [pkgsrc-wip 1.10.0]
 	o pxe-1.4.2
-	o py-FourSuite-1.0b1
+	o py-FourSuite-1.0.2
 	o py-GeoIP-1.2.1
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
@@ -1090,8 +1131,12 @@ Suggested package updates
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
 	o py-extclass-2.10.2
+	o py-flup-2311
+	o py-gnome2-2.18.0
 	o py-gnome2-extras-2.14.3
+	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-html2text-2.26
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.2.1
@@ -1102,13 +1147,14 @@ Suggested package updates
 	o py-mutagen-1.10.1
 	o py-mysqldb-1.1.7
 	o py-paramiko-1.7
+	o py-pcgi-2.10.2
 	o py-pexpect-0.99999b
 	o py-proj-1.8.1a [at python.org]
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-base-3.17
-	o py-qt3-modules-3.16
-	o py-qt3-qscintilla-3.16
+	o py-qt3-modules-3.17
+	o py-qt3-qscintilla-3.17
 	o py-qt3-sip-4.5.2
 	o py-reportlab-2.0
 	o py-setuptools-0.6c5
@@ -1121,11 +1167,13 @@ Suggested package updates
 	o py-xmltools-1.4.0
 	o py-yaml-3.04
 	o py-zconfig-2.3.1
+	o py-zpublisher-2.10.2
 	o pygopherd-2.0.13
+	o pygtk-0.6.12
 	o pysol-4.82
 	o python-2.5
 	o python24-2.4.4
-	o qDecoder-7.1.1
+	o qDecoder-8.0
 	o qbrew-0.3.9
 	o qconf-1.3
 	o qemu-0.9.0
@@ -1168,6 +1216,7 @@ Suggested package updates
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o rtorrent-0.7.2
+	o ruby-clearsilver-0.10.4
 	o ruby-rcairo-1.4.1
 	o ruby-rd-mode-0.6.20
 	o rubygems-0.9.1 [requires openssl>=0.9.8]
@@ -1222,13 +1271,14 @@ Suggested package updates
 	o snes9x-1.502
 	o socat-1.6.0.0
 	o solfege-3.6.4
-	o sope-4.5.5
+	o sope-4.5.9
 	o sound-juicer-2.16.3
 	o source-highlight-2.6
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
+	o squidGuard-1.2.0p3
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
@@ -1257,6 +1307,7 @@ Suggested package updates
 	o tex-dhucs-3.1.5
 	o tfmxplay-1.1.6
 	o tightvnc-1.3.8
+	o tile-0.7.4
 	o tileworld-1.3.0
 	o tinc-1.0.7
 	o tinyproxy-1.7.0
@@ -1324,6 +1375,8 @@ Suggested package updates
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
 	o windowlab-1.34
+	o wmii-3.5.1
+	o wml-2.0.11
 	o wmweather-2.4.3
 	o worker-2.14.4
 	o wpa_gui-0.5.7
@@ -1333,8 +1386,10 @@ Suggested package updates
 	o wxRemind-0.8.6
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
+	o xalan-c-1.10.0
 	o xanalyser-1.30
 	o xbindkeys-1.8.0
+	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
 	o xchm-1.11
 	o xcircuit-3.6.85
@@ -1342,6 +1397,7 @@ Suggested package updates
 	o xdelta-3.0e
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
+	o xdpyinfo-1.0.2
 	o xemacs-21.4.19
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
@@ -1356,6 +1412,7 @@ Suggested package updates
 	o xkbset-0.5
 	o xli-2006.11.10
 	o xlispstat-3.52.20
+	o xload-1.0.2
 	o xlog-1.5
 	o xm7-1020s
 	o xmahjongg-3.70
@@ -1380,6 +1437,7 @@ Suggested package updates
 	o xpad-2.12
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
+	o xrestop-0.4
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33
 	o xrn-9.02
@@ -1388,6 +1446,7 @@ Suggested package updates
 	o xsoldier-1.4
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
+	o xtu-1.3
 	o xtux-20030306
 	o xvidcap-1.1.4
 	o xview-3.2.1.4.21.2
@@ -1404,9 +1463,10 @@ Suggested package updates
 	o zile-2.2.29
 	o zircon-1.18.256
 	o zoom-1.0.5
+	o zope-2.10.2
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
-	o zope25-CMF-1.5.4
+	o zope25-CMF-2.0.0
 	o zope25-CookieCrumbler-1.2
 	o zope25-Epoz-0.7.4
 	o zope25-ExternalEditor-0.8
@@ -1414,7 +1474,7 @@ Suggested package updates
 	o zope25-RenderableCharts-0.14.3
 	o zope25-Silva-1.0.1
 	o zope25-XMLWidgets-0.10
-	o zope25-ZWiki-0.46.0
+	o zope25-ZWiki-0.58.0
 	o zopeedit-0.8
 	o zziplib-0.13.38
 
