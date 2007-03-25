@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/03/25 14:45:19 tron Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -25,7 +25,7 @@ DISTFILES+=	${VMWARE_BIN_PATCH}.tar.gz
 SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/obsolete/
 
 DEPENDS+=	vmware-module>=3.2.1.8:../../emulators/vmware-module3
-DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/suse91_vmware
+DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 
 LICENSE=	vmware-license
 
