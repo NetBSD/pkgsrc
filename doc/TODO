@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6159 2007/03/25 06:47:38 wiz Exp $
+$NetBSD: TODO,v 1.6160 2007/03/25 08:11:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o 9base-2
+	o 9base-20060125
 	o CSP-0.34
 	o Cenon-3.82
 	o Chinput-3.0.1
@@ -243,13 +243,11 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.1
 	o TiffIO-130e
-	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-5.3.1
 	o abcmidi-20070106
 	o acme-091
-	o acpi-iasl-20040715
 	o acr-0.5.2
 	o adns-1.4
 	o adocman-0.13
@@ -269,7 +267,6 @@ Suggested package updates
 	o amavis-0.3.12
 	o amaya-9.54
 	o anjuta-2.1.1
-	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
@@ -278,7 +275,6 @@ Suggested package updates
 	o ap-layout-3.3
 	o ap-mp3-0.40
 	o ap-python-3.3.1
-	o ap-ssl-2.8.26
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
@@ -345,7 +341,7 @@ Suggested package updates
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccd2iso-0.2
+	o ccd2iso-0.3
 	o cddb-1.5.2
 	o cddbd-1.5.2
 	o cfitsio-3.030
@@ -362,7 +358,6 @@ Suggested package updates
 	o clex-3.15
 	o clisp-2.41
 	o cocoon-2.1.10
-	o columba-1.0RC1
 	o connect-1.96
 	o conserver8-8.1.15
 	o control-center-2.16.3
@@ -419,7 +414,6 @@ Suggested package updates
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
-	o dx-4.3.3
 	o e2fsprogs-1.39
 	o eagle-4.16
 	o easymenu-0.7.2p1
@@ -460,7 +454,7 @@ Suggested package updates
 	o evolution-2.10.0
 	o evolution-exchange-2.10.0
 	o evolution-webcal-2.10.0
-	o ex-050325
+	o ex-20050325
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -520,8 +514,6 @@ Suggested package updates
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
-	o gift-gnutella-0.0.10.1
-	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
 	o gimp-ufraw-0.11
@@ -657,7 +649,6 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ipsec-tools-0.6.5
 	o ircu-2.10.12.0
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
@@ -681,7 +672,6 @@ Suggested package updates
 	o jhead-2.7
 	o jigdo-0.7.3
 	o jools-1.0
-	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
 	o kadu-0.5.0
@@ -765,7 +755,6 @@ Suggested package updates
 	o lilypond-2.10.20
 	o lincvs-1.8.3 [now called CrossVC]
 	o linuxsms-0.77
-	o lmbench-2.5
 	o lmms-0.2.1
 	o loudmouth-1.2.0
 	o lout-3.31
@@ -793,7 +782,6 @@ Suggested package updates
 	o mathomatic-12.6.11
 	o mcrypt-2.6.5
 	o md-whois-4.7.20
-	o memcached-1.2
 	o memtestplus-1.70
 	o mesure-0.7.2
 	o metacity-2.18.0
@@ -801,7 +789,6 @@ Suggested package updates
 	o mgetty+sendfax-1.1.35
 	o milter-greylist-3.1.7
 	o mined-2000.13.2
-	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mirmon-1.37
 	o mk-files-20061230
@@ -818,16 +805,13 @@ Suggested package updates
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
-	o moz-flash-0.4.13
 	o mp3blaster-3.2.3
 	o mp3check-0.8.3
-	o mpage-2.5.4
 	o mpfr-2.2.1
 	o mpg123-0.65
 	o mpi-ch-1.2.7p1
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.40
-	o mpop-0.8.3
 	o mrproject-0.9.1
 	o mserv-devel-0.41
 	o msf-2.7
@@ -922,7 +906,6 @@ Suggested package updates
 	o p5-Crypt-CBC-2.22
 	o p5-Crypt-SSLeay-0.53
 	o p5-Curses-1.15
-	o p5-DBD-Oracle-1.16
 	o p5-DBD-SQLite-1.13
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.001
@@ -952,7 +935,6 @@ Suggested package updates
 	o p5-HTML-Prototype-Useful-0.05
 	o p5-HTML-Table-2.05
 	o p5-HTMLObject-2.26
-	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTP-Server-Simple-0.27
@@ -983,7 +965,6 @@ Suggested package updates
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-Jabber-2.0
-	o p5-Net-SNMP-5.1.0
 	o p5-Net-SSH-1.30
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
@@ -992,9 +973,7 @@ Suggested package updates
 	o p5-Params-Util-0.23
 	o p5-Params-Validate-0.88
 	o p5-PathTools-3.24
-	o p5-PerlIO-via-symlink-0.03
 	o p5-PerlMagick-6.3.2.9
-	o p5-Pod-POM-0.15
 	o p5-Pod-Simple-3.05
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
@@ -1028,7 +1007,6 @@ Suggested package updates
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o p5-version-0.71
-	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
@@ -1041,12 +1019,10 @@ Suggested package updates
 	o pdmenu-1.2.87
 	o pear-DB-1.7.10
 	o pear-Date-1.4.6
-	o pear-HTML_Common-1.2.2 [pkg/34468]
 	o pear-HTTP_Request-1.4.0
 	o pear-Image_Canvas-0.3.0
 	o pear-Image_Graph-0.7.2
 	o pear-Log-1.9.6
-	o pear-Mail-1.1.13 [pkg/34643]
 	o pear-Net_SMTP-1.2.8
 	o pear-Net_Sieve-1.1.5
 	o pear-Net_Socket-1.0.6
@@ -1098,7 +1074,6 @@ Suggested package updates
 	o postal-0.66
 	o postfix-2.3.8
 	o postgresql-autodoc-1.30
-	o postgresql81-postgis-1.1.6
 	o postgresql_autodoc-1.25
 	o postgrey-1.27
 	o powermanga-0.80
@@ -1113,7 +1088,6 @@ Suggested package updates
 	o puf-0.93.3
 	o putty-0.59
 	o puzzle-5.2
-	o pv-0.9.2
 	o pwlib-1.10.3 [pkgsrc-wip 1.10.0]
 	o pxe-1.4.2
 	o py-FourSuite-1.0.2
@@ -1236,7 +1210,6 @@ Suggested package updates
 	o scmgit-1.5.0.5
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o sdig-0.40
 	o seahorse-1.0
 	o sendfile-20010424
 	o sendmail-8.14.0
@@ -1284,7 +1257,6 @@ Suggested package updates
 	o statist-1.3.0
 	o stella-2.3.5
 	o stlport-4.6.2
-	o strace-4.5.8
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
 	o suse_base-10.2
@@ -1324,7 +1296,7 @@ Suggested package updates
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
-	o trio-1.4
+	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
@@ -1405,7 +1377,6 @@ Suggested package updates
 	o xf86-input-keyboard-1.2.0
 	o xfce-4.4.0
 	o xfe-0.99
-	o xfmail-1.5.4
 	o xfmedia-0.9.2 [pkg/35205; wait for xfce4 update]
 	o xfstt-1.7
 	o xisp-2.7p4
@@ -1444,7 +1415,6 @@ Suggested package updates
 	o xscreensaver-5.01
 	o xskat-4.0
 	o xsoldier-1.4
-	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
