@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2002,v 1.12 2006/05/30 19:23:25 wiz Exp $
+$NetBSD: CHANGES-2002,v 1.13 2007/03/25 08:08:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -1129,7 +1129,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ruby-mysql to 2.4.2nb1 [fredb 2002-03-21]
 	Updated ruby-sha1 to 1.2nb1 [fredb 2002-03-21]
 	Updated librep to 1.15.1nb1 [fredb 2002-03-21]
-	Updated rep-gtk to 1.15.nb2 [fredb 2002-03-21]
+	Updated rep-gtk to 0.15nb2 [fredb 2002-03-21]
 	Updated sawfish-replibs to 1.0.1nb1 [fredb 2002-03-21]
 	Updated sawfish to 1.0.1nb1 [fredb 2002-03-21]
 	Updated graphviz to 1.8.2 [seb 2002-03-21]
