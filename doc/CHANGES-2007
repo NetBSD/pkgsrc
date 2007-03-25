@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.715 2007/03/25 06:14:54 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.716 2007/03/25 11:30:03 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added meta-pkgs/modular-xorg-fonts version 1.0 [joerg 2007-03-24]
 	Added meta-pkgs/modular-xorg-drivers version 1.0 [joerg 2007-03-24]
 	Moved security/otpcalc to security/otpCalc [wiz 2007-03-25]
+	Updated sysutils/file to 4.20 [adrianp 2007-03-25]
