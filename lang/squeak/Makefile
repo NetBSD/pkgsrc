@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.30 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/03/25 05:31:57 wiz Exp $
 #
 
 DISTNAME=	Squeak-3.6-3
 PKGNAME=	squeak-3.6.3
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://www-sor.inria.fr/~piumarta/squeak/unix/release/
+MASTER_SITES=	http://squeakvm.org/unix/release/
 DISTFILES=	Squeak-3.6-3.src.tar.gz	Squeak-3.6-5429.image.tar.gz
 DISTFILES+=	Squeak-3.sources.tar.gz
 
 MAINTAINER=	fredb@NetBSD.org
-HOMEPAGE=	http://www-sor.inria.fr/~piumarta/squeak/
+HOMEPAGE=	http://squeakvm.org/unix/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 GNU_CONFIGURE=	yes
