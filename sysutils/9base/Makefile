@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/25 07:37:54 wiz Exp $
 #
 
 DISTNAME=	9base-20051114
 CATEGORIES=	sysutils shells
-MASTER_SITES=	http://wmii.de/snaps/
+MASTER_SITES=	http://www.suckless.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wmii.de/
+HOMEPAGE=	http://www.suckless.org/wiki/wmii/download
 COMMENT=	Port of various original plan9 tools
 
 CONFLICTS=		rc-[0-9]*
