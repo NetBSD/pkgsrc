@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6161 2007/03/25 09:21:25 wiz Exp $
+$NetBSD: TODO,v 1.6162 2007/03/25 15:39:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ Suggested package updates
 	o fd-2.09c
 	o fdgw-20040609
 	o fetchmail-6.3.7
-	o file-4.20
 	o file-roller-2.18.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -714,14 +713,14 @@ Suggested package updates
 	o libetpan-0.49
 	o libevent-1.3b
 	o libflash-0.4.13
-	o libgda-2.99.5
+	o libgda-2.99.6
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libgnomedb-2.99.5 [breaks mergeant-0.65]
+	o libgnomedb-2.99.6
 	o libgnomemm-2.18.0
 	o libgnomeprint-2.18.0
 	o libgnomeui-2.18.1
@@ -767,6 +766,7 @@ Suggested package updates
 	o lyx-1.4.4
 	o lyx-qt-1.4.4
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
+	o m4-1.4.9
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
@@ -784,6 +784,7 @@ Suggested package updates
 	o mcrypt-2.6.5
 	o md-whois-4.7.20
 	o memtestplus-1.70
+	o mergeant-0.66
 	o mesure-0.7.2
 	o metacity-2.18.0
 	o metakit-lib-2.4.9.6
@@ -883,6 +884,7 @@ Suggested package updates
 	o p5-AnyEvent-2.52
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
+	o p5-Apache-DBI-1.06
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.33
 	o p5-Archive-Tar-1.30
@@ -1261,7 +1263,7 @@ Suggested package updates
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
 	o suse_base-10.2
-	o swfdec-0.4.2
+	o swfdec-0.4.3
 	o swi-prolog-5.6.31
 	o sylpheed-claws-2.8.1 [now claws-mail]
 	o sympa-5.2.4
