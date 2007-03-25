@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6157 2007/03/25 06:26:11 wiz Exp $
+$NetBSD: TODO,v 1.6158 2007/03/25 06:43:06 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -764,8 +764,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
 	o mail-notification-4.0
-	o mailfront-1.01 [pkg/34765]
-	o mailfront-1.10
+	o mailfront-1.10 [pkg/34765]
 	o mailscanner-4.54.6
 	o mairix-0.19
 	o maketool-0.8.4
