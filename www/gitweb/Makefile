@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/22 17:34:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/25 18:41:26 jmmv Exp $
 #
 
 DISTNAME=	git-1.5.0.3
@@ -13,6 +13,7 @@ COMMENT=	Web interface for GIT repositories
 DEPENDS+=	apache{,2,22}-[0-9]*:../../www/apache22
 DEPENDS+=	scm${DISTNAME:S/-/>=/}:../../devel/scmgit
 
+EXTRACT_USING=	gtar
 USE_TOOLS+=	gmake perl:run
 
 BUILD_TARGET=	gitweb/gitweb.cgi
