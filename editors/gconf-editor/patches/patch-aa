@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2007/03/25 08:30:07 wiz Exp $
+
+--- docs/C/gconf-editor.xml.orig	2006-09-04 21:55:15.000000000 +0000
++++ docs/C/gconf-editor.xml
+@@ -31,7 +31,7 @@
+          </copyright>
+     -->
+ 
+-    <publisher> 
++    <publisher role="maintainer"> 
+       <publishername>GNOME Documentation Project</publishername> 
+     </publisher> 
+ 
