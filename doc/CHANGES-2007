@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.717 2007/03/25 12:50:08 grant Exp $
+$NetBSD: CHANGES-2007,v 1.718 2007/03/26 06:32:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Moved security/otpcalc to security/otpCalc [wiz 2007-03-25]
 	Updated sysutils/file to 4.20 [adrianp 2007-03-25]
 	Updated net/nagios-plugins to 1.4.3nb2 [grant 2007-03-25]
+	Updated emulators/dosbox to 0.70 [xtraeme 2007-03-26]
