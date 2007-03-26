@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/03/26 06:15:27 wiz Exp $
 #
 
 DISTNAME=	tscp181
@@ -13,7 +13,7 @@ HOMEPAGE=	http://home.comcast.net/~tckerrigan/
 COMMENT=	Tom Kerrigan's Simple Chess Program
 
 
-RESTRICTED= No distribtion without authorisation from Tom Kerrigan
+RESTRICTED= No distribution without authorisation from Tom Kerrigan
 
 NO_BIN_ON_CDROM= ${RESTRICTED}
 NO_SRC_ON_CDROM= ${RESTRICTED}
