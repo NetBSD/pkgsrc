@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6162 2007/03/25 15:39:11 wiz Exp $
+$NetBSD: TODO,v 1.6163 2007/03/26 06:32:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o dmidecode-2.9
 	o dnstop-20070307
 	o dnstracer-1.8
-	o dosbox-0.70
 	o dpkg-1.13.25
 	o drraw-2.2a3
 	o drscheme-360
