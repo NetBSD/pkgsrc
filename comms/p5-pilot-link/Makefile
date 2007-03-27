@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/03/24 19:21:20 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2007/03/27 22:24:11 wiz Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -17,7 +17,7 @@ PERL5_CONFIGURE=	NO
 PERL5_PACKLIST=		auto/PDA/Pilot/.packlist
 PERL5_LDFLAGS=		-lpisock
 
-REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link
+REPLACE_PERL+=		bindings/Perl/h2xs-pilot-link src/pilot-ietf2datebook.pl
 
 INSTALL_DIRS=		${WRKSRC}/bindings
 INSTALLATION_DIRS=	bin
@@ -39,7 +39,7 @@ SUBST_SED.progs=	-e s:@ENABLE_CONDUITS_TRUE@bin_PROGRAMS:@ENABLE_CONDUITS_TRUE@b
 #	done
 
 post-install:
-.for bin in ietf2datebook pilot-undelete sync-plan
+.for bin in pilot-ietf2datebook pilot-undelete pilot-sync-plan
 	cd ${WRKSRC}/src &&						\
 	${INSTALL_SCRIPT} ${bin} ${PREFIX}/bin
 .endfor
