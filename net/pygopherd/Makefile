@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:05 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/28 13:25:12 joerg Exp $
 #
 
 DISTNAME=	pygopherd_2.0.9
@@ -52,12 +52,13 @@ SUBST_FILES.man+=	doc/pygopherd.8
 SUBST_SED.man=		-e 's,%%PREFIX%%,${PREFIX},g'
 SUBST_SED.man+=		-e 's,%%EXAMPLEDIR%%,${EXAMPLEDIR},g'
 
+INSTALLATION_DIRS=	share/examples/pygopherd ${PKGMANDIR}/man8
+
 # XXX this is needed for the RCD script
 post-extract:
 	${MV} ${WRKDIR}/pygopherd ${WRKDIR}/${DISTNAME}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	for egfile in ${EGFILES}; do \
 		${INSTALL_DATA} $$egfile ${EXAMPLEDIR}; \
 	done
