@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/03/23 22:08:56 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2007/03/28 21:18:52 dmcmahill Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.scilab?=	../../math/scilab
 BUILDLINK_FILES.scilab+=	lib/scilab-${SCIVERSION}/Version.incl
 .endif	# SCILAB_BUILDLINK3_MK
 
-SCI=	${BUILDLINK_DIR}/lib/scilab-3.1.1
+SCI=	${BUILDLINK_DIR}/lib/scilab-4.1
 CONFIGURE_ENV+=	SCI=${SCI:Q}
 MAKE_ENV+=	SCI=${SCI:Q}
 
