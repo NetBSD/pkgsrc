@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2007/03/20 11:00:58 markd Exp $
+# $NetBSD: Makefile,v 1.91 2007/03/28 11:06:29 dmcmahill Exp $
 
 DISTNAME=		R-2.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed xmkmf
 USE_GNU_READLINE=	yes		# uses callback interface
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
-TEXINFO_REQD=		4.5
+TEXINFO_REQD=		4.7
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-R-shlib
