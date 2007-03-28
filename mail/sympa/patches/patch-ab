@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/09/26 20:13:34 seb Exp $
+$NetBSD: patch-ab,v 1.3 2007/03/28 20:51:10 bouyer Exp $
 
---- check_perl_modules.pl.orig	2004-04-19 13:07:29.000000000 +0000
-+++ check_perl_modules.pl
-@@ -156,35 +156,7 @@ sub check_modules {
+--- check_perl_modules.pl.orig	2006-11-16 10:47:33.000000000 +0100
++++ check_perl_modules.pl	2007-02-28 20:09:50.000000000 +0100
+@@ -171,35 +171,7 @@
  # Install a CPAN module
  ##----------------------
  sub install_module {
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.2 2004/09/26 20:13:34 seb Exp $
 -
 -    ## This is required on RedHat 9 for DBD::mysql installation
 -    my $lang = $ENV{'LANG'};
--    $ENV{'LANG'} = 'C' if ($ENV{'LANG'} eq 'en_US.UTF-8');
+-    $ENV{'LANG'} = 'C' if ($ENV{'LANG'} =~ /UTF\-8/);
 -
 -    unless ($> == 0) {
 -	print "\#\# You need root privileges to install $module module. \#\#\n";
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.2 2004/09/26 20:13:34 seb Exp $
 -    my $answer = <STDIN>; chomp $answer;
 -    $answer ||= $default;
 -    next unless ($answer =~ /^y$/i);
--  CPAN::Shell->conf('inactivity_timeout', 4);
+-    $CPAN::Config->{'inactivity_timeout'} = 4;
 -    CPAN::Shell->install($module);
 -
 -    ## Restore lang
