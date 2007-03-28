@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/10 19:43:24 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/28 13:30:11 joerg Exp $
 
 DISTNAME=	qDecoder-7.0.1
 CATEGORIES=	www
@@ -12,13 +12,12 @@ COMMENT=	Web Application Interface for C/C++ (CGI Library)
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+INSTALLATION_DIRS=	include lib share/doc/qDecoder  share/examples/qDecoder
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/qDecoder
 	cd ${WRKSRC}; ${INSTALL_DATA} AUTHORS CHANGES COPYING	\
 		DISCLAIMER README REFERENCE qDecoder.jpg 	\
 		${PREFIX}/share/doc/qDecoder
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/qDecoder
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} *.c *.conf s*.in	\
 		*.html ${PREFIX}/share/examples/qDecoder
 
