@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/06/26 11:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/03/28 13:25:53 joerg Exp $
 #
 
 DISTNAME=	totd-1.5.1
@@ -16,10 +16,11 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.totd
 PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
 PKG_OPTIONS_GROUP.inet6=	inet6
 
+INSTALLATION_DIRS=	${PKMANDIR}/man8 sbin share/examples/totd
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/totd ${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/totd.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/totd
 	${INSTALL_DATA} ${FILESDIR}/totd.conf.sample \
 		${PREFIX}/share/examples/totd/totd.conf.sample
 
