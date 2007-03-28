@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2007/01/13 21:24:59 abs Exp $
+# $NetBSD: Makefile,v 1.25 2007/03/28 20:51:09 bouyer Exp $
 #
 
-DISTNAME=	sympa-4.1.2
-PKGREVISION=	6
+DISTNAME=	sympa-5.2.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/
 
@@ -28,6 +27,9 @@ DEPENDS+=	p5-Net-SSLeay>=1.16:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-CGI>=2.52:../../www/p5-CGI
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
 DEPENDS+=	p5-libwww>=1.09:../../www/p5-libwww
+DEPENDS+=	p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
+DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
+DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
 DEPENDS.SunOS+=	p5-DB_File>=1.75:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
@@ -56,12 +58,16 @@ CONFIGURE_ARGS+=	--with-mhonarc=${MHONARC_PREFIX}/bin/mhonarc
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}/bin/openssl
 CONFIGURE_ARGS+=	--with-user=${SYMPA_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${SYMPA_GROUP:Q}
+CONFIGURE_ARGS+=	--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MHONARC_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		MHONARC_PREFIX=mhonarc
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sympa
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
+
+RCD_SCRIPTS=		archived bounced sympa task_manager
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmysql)
