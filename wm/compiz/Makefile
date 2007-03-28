@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/23 19:42:38 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/28 13:28:38 joerg Exp $
 #
 
 DISTNAME=	compiz-0.3.6
@@ -13,7 +13,7 @@ COMMENT=	Compositing window manager
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
