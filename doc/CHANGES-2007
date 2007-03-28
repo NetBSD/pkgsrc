@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.719 2007/03/28 11:09:18 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.720 2007/03/28 20:53:01 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1386,3 +1386,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nagios-plugins to 1.4.3nb2 [grant 2007-03-25]
 	Updated emulators/dosbox to 0.70 [xtraeme 2007-03-26]
 	Updated math/R to 2.4.1nb1 [dmcmahill 2007-03-28]
+	Updated mail/sympa to 5.2.4 [bouyer 2007-03-28]
