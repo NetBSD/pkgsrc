@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2006/09/25 18:56:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.47 2007/03/28 20:55:58 bouyer Exp $
 
 DISTNAME=	mailman-2.1.9
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bouyer@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.list.org/
 COMMENT=	The GNU Mailing List Manager
 
