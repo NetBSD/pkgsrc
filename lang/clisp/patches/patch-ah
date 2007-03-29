@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.4 2007/03/29 12:00:14 tron Exp $
+
+--- libcharset/lib/Makefile.in.orig	2005-03-23 21:28:10.000000000 +0200
++++ libcharset/lib/Makefile.in
+@@ -78,11 +78,11 @@ ref-del.sed : $(srcdir)/ref-del.sin
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	$(mkinstalldirs) $(libdir)
+-	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libcharset.la $(libdir)/libcharset.la
++	$(LIBTOOL_INSTALL) install -c -m 644 libcharset.la $(libdir)/libcharset.la
+ 	test -f $(libdir)/charset.alias && orig=$(libdir)/charset.alias \
+ 	                                || orig=charset.alias; \
+ 	sed -f ref-add.sed $$orig > $(libdir)/t-charset.alias; \
+-	$(INSTALL_DATA) $(libdir)/t-charset.alias $(libdir)/charset.alias; \
++	install -c -m 644 $(libdir)/t-charset.alias $(libdir)/charset.alias; \
+ 	rm -f $(libdir)/t-charset.alias
+ 
+ # The following is needed in order to install a simple file in $(libdir)
