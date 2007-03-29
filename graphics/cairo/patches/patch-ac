@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.5 2007/03/29 12:00:44 dmcmahill Exp $
+
+See https://bugs.freedesktop.org/show_bug.cgi?id=10441
+Instead of the patch there which relies on things like __hpux__
+we use the configure test results.
+
+--- test/pdiff/pdiff.c.orig	2007-03-19 15:08:04.000000000 -0500
++++ test/pdiff/pdiff.c
+@@ -20,7 +20,19 @@
+ #include <math.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <stdint.h>
++
++#ifdef HAVE_STDINT_H
++#  include <stdint.h>
++#else
++#  ifdef HAVE_INTTYPES_H
++#    include <inttypes.h>
++#  else
++#    ifdef HAVE_SYS_INT_TYPES_H
++#      include <sys/int_types.h>
++#    endif
++#  endif
++#endif
++
+ #include "pdiff.h"
+ 
+ #ifndef M_PI
