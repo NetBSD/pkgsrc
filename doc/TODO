@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6164 2007/03/27 21:15:05 wiz Exp $
+$NetBSD: TODO,v 1.6165 2007/03/29 18:36:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -196,6 +196,10 @@ Suggested new packages
 	Enigmail
 	http://enigmail.mozdev.org/
 	GnuPG extension for the Mozilla/Thunderbird mail client
+
+	VirtualBox
+	http://www.virtualbox.org/
+	Fast x86 emulator
 
 
 Suggested package updates
@@ -827,7 +831,7 @@ Suggested package updates
 	o musicpd-0.12.2
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
-	o nagios-3.0a1
+	o nagios-3.0a2
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.3
 	o nap-1.5.3
@@ -863,7 +867,7 @@ Suggested package updates
 	o ntp4-4.2.4
 	o nulib2-220
 	o nut-12.0 [pkg/34466]
-	o nut-12.3
+	o nut-12.4
 	o nxtvepg-2.7.7
 	o objc-3.2.8
 	o ocamlnet-2.2.4
