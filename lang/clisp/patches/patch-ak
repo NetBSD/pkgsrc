@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.3 2007/03/29 12:00:15 tron Exp $
+
+--- ffcall/callback/vacall_r/Makefile.in.orig	2006-04-25 11:10:44.000000000 +0300
++++ ffcall/callback/vacall_r/Makefile.in
+@@ -163,7 +163,7 @@ libvacall.la : $(OBJECTS)
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	if [ ! -d $(includedir) ] ; then mkdir $(includedir) ; fi
+-	$(INSTALL_DATA) vacall_r.h $(includedir)/vacall_r.h
++	install -c -m 644 vacall_r.h $(includedir)/vacall_r.h
+ 
+ install : all force
+ 	if [ ! -d $(DESTDIR)$(prefix) ] ; then mkdir $(DESTDIR)$(prefix) ; fi
