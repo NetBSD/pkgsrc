@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.4 2007/03/29 12:00:14 tron Exp $
+
+--- ffcall/avcall/Makefile.in.orig	2006-04-25 11:10:43.000000000 +0300
++++ ffcall/avcall/Makefile.in
+@@ -156,9 +156,9 @@ libavcall.la : $(OBJECTS)
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	if [ ! -d $(libdir) ] ; then mkdir $(libdir) ; fi
+-	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libavcall.la $(libdir)/libavcall.la
++	$(LIBTOOL_INSTALL) install -c -m 644 libavcall.la $(libdir)/libavcall.la
+ 	if [ ! -d $(includedir) ] ; then mkdir $(includedir) ; fi
+-	$(INSTALL_DATA) avcall.h $(includedir)/avcall.h
++	install -c -m 644 avcall.h $(includedir)/avcall.h
+ 
+ install : all force
+ 	if [ ! -d $(DESTDIR)$(prefix) ] ; then mkdir $(DESTDIR)$(prefix) ; fi
