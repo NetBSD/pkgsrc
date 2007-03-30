@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.6 2007/03/12 10:21:20 hira Exp $
+# $NetBSD: options.mk,v 1.7 2007/03/30 13:34:53 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 # kde
 PKG_OPTIONS_REQUIRED_GROUPS=	browser lang
-PKG_OPTIONS_GROUP.browser=	firefox firefox-gtk1 seamonkey seamonkey-gtk1
+PKG_OPTIONS_GROUP.browser=	firefox # seamonkey firefox-gtk1 seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
 				el en-GB en-ZA eo es et fa fi fr ga gu-IN he \
 				hi-IN hr hu it ja ka km ko ku lt mk ml-IN    \
