@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.3 2007/03/30 20:35:26 wiz Exp $
+
+--- help/C/epiphany-extensions.xml.orig	2006-10-02 20:47:08.000000000 +0000
++++ help/C/epiphany-extensions.xml
+@@ -27,7 +27,10 @@
+ <!-- please do not change the id; for translations, change lang to -->
+ <!-- appropriate code -->
+   <articleinfo> 
+-    <title>Epiphany Extensions Manual</title>       
++    <abstract role="description">
++      <para>Variuous extensions for Epiphany Web browser.</para>
++    </abstract>
++    <title>Epiphany Extensions Manual</title>
+ 
+     <copyright>
+       <year>2006</year>
+@@ -48,7 +51,7 @@
+ <!-- An address can be added to the publisher information.  If a role is 
+      not specified, the publisher/author is the same for all versions of the 
+      document.  -->
+-    <publisher> 
++    <publisher role="maintainer"> 
+       <publishername>GNOME Documentation Project</publishername> 
+     </publisher> 
+ 
+@@ -75,6 +78,13 @@
+ 	  </author> 
+     </authorgroup>
+ 
++    <revhistory>
++      <revision>
++        <revnumber>1.0</revnumber>
++        <date>2006-03</date>
++      </revision>
++    </revhistory>
++
+     <releaseinfo>
+       This manual describes version &appversion; of &frplain;.
+     </releaseinfo>
