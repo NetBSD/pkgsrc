@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6166 2007/03/30 19:22:18 wiz Exp $
+$NetBSD: TODO,v 1.6167 2007/03/30 19:37:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dhid-5.3
-	o dia-0.96
+	o dia-0.96.1
 	o diction-1.10
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -508,7 +508,7 @@ Suggested package updates
 	o gcpio-2.7
 	o gdb6-6.6
 	o gdeskcal-1.01
-	o gdl-0.7.2
+	o gdl-0.7.3
 	o gdm-2.18.0
 	o gdsreader-0.3.2
 	o generator-cbiere-0.35r3
@@ -596,7 +596,7 @@ Suggested package updates
 	o gst-plugins0.10-fluendo-mp3-0.10.5
 	o gtar-1.16.1
 	o gtar-base-1.16.1
-	o gthumb-2.10.0
+	o gthumb-2.10.1
 	o gtick-0.3.13
 	o gtk-systrace-20030623
 	o gtk2-engines-2.10.0
