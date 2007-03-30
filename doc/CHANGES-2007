@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.720 2007/03/28 20:53:01 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.721 2007/03/30 19:11:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1387,3 +1387,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/dosbox to 0.70 [xtraeme 2007-03-26]
 	Updated math/R to 2.4.1nb1 [dmcmahill 2007-03-28]
 	Updated mail/sympa to 5.2.4 [bouyer 2007-03-28]
+	Updated mail/dovecot to 1.0rc29 [ghen 2007-03-30]
