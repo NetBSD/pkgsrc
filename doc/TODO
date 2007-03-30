@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6165 2007/03/29 18:36:58 wiz Exp $
+$NetBSD: TODO,v 1.6166 2007/03/30 19:22:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,7 @@ Suggested package updates
 	o amanda-server-2.5.0
 	o amavis-0.3.12
 	o amaya-9.54
-	o anjuta-2.1.1
+	o anjuta-2.1.2
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
@@ -533,7 +533,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glade-3.2.0
 	o gld-1.7
-	o gmime-2.2.5
+	o gmime-2.2.6
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
 	o gnet1-1.1.9
@@ -623,6 +623,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.04.1
 	o hesiod-3.1.0
+	o heyu-2.0beta9
 	o hobbitmon-4.0.4 [pkg/30484]
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -649,11 +650,11 @@ Suggested package updates
 	o imapsync-1.217
 	o instiki-0.11pl1
 	o intercal-0.24
-	o ion3-devel-20061223
+	o ion3-devel-20070203 [pkg/36108]
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ircservices-5.0.60
+	o ircservices-5.0.61
 	o ircu-2.10.12.0
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
@@ -704,6 +705,7 @@ Suggested package updates
 	o leafpad-0.8.9
 	o less-394
 	o lft-2.5 [at http://pwhois.org/]
+	o lftp-3.5.10
 	o libFoundation-1.1.3
 	o libarchive-2.0.25
 	o libassuan-1.0.1
@@ -883,6 +885,7 @@ Suggested package updates
 	o openpam-20050616
 	o openssl-0.9.8e
 	o openttd-0.5.0
+	o opera-9.20
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
@@ -1123,7 +1126,7 @@ Suggested package updates
 	o py-html2text-2.26
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
-	o py-ldap-2.2.1
+	o py-ldap-2.3
 	o py-logging-0.4.9.6
 	o py-mad-0.6
 	o py-metakit-2.4.9.6
@@ -1273,6 +1276,7 @@ Suggested package updates
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
 	o sylpheed-claws-2.8.1 [now claws-mail]
+	o sylpheed-devel-2.4.0beta6
 	o sympa-5.2.4
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
@@ -1338,6 +1342,7 @@ Suggested package updates
 	o vino-2.16.0
 	o visual-regexp-3.1
 	o vlc-0.8.6a
+	o vmips-1.3.2
 	o vmware-5.5
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
@@ -1353,6 +1358,7 @@ Suggested package updates
 	o wcalc-2.2.2
 	o wdm-1.28
 	o webmin-1.330
+	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
