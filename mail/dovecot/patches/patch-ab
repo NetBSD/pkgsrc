@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
+$NetBSD: patch-ab,v 1.21 2007/03/30 19:10:38 ghen Exp $
 
---- dovecot-example.conf.orig	2007-03-23 01:00:54.000000000 +0100
+--- dovecot-example.conf.orig	2007-03-30 13:36:18.000000000 +0200
 +++ dovecot-example.conf
-@@ -7,17 +7,14 @@
+@@ -10,17 +10,14 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
  
  # Default values are shown for each setting, it's not required to uncomment
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
  # IP or host address where to listen in for connections. It's not currently
  # possible to specify multiple addresses. "*" listens in all IPv4 interfaces.
-@@ -82,7 +79,7 @@
+@@ -85,7 +82,7 @@
  #ssl_listen =
  
  # Disable SSL/TLS support.
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -497,19 +494,19 @@
+@@ -498,19 +495,19 @@
  
  protocol imap {
    # Login executable location.
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -519,7 +516,7 @@ protocol imap {
+@@ -520,7 +517,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # Send IMAP capabilities in greeting message. This makes it unnecessary for
    # clients to request it with CAPABILITY command, so it saves one round-trip.
-@@ -562,11 +559,11 @@ protocol imap {
+@@ -563,11 +560,11 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -626,7 +623,7 @@ protocol pop3 {
+@@ -627,7 +624,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -87,7 +87,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -654,10 +651,10 @@ protocol lda {
+@@ -655,10 +652,10 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -100,7 +100,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -668,7 +665,7 @@ protocol lda {
+@@ -669,7 +666,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -109,16 +109,16 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -782,7 +779,7 @@ auth default {
+@@ -784,7 +781,7 @@ auth default {
+   # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
-   # authentication to actually work.
-   # http://wiki.dovecot.org/PasswordDatabase/PAM
+   # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
 -  passdb pam {
 +  #passdb pam {
      # [blocking=yes] [session=yes] [setcred=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -815,16 +812,16 @@ auth default {
+@@ -817,15 +814,15 @@ auth default {
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -127,8 +127,7 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-   # configured in /etc/nsswitch.conf.
-   # http://wiki.dovecot.org/AuthDatabase/Passwd
+   # configured in /etc/nsswitch.conf. <doc/wiki/AuthDatabase.Passwd.txt>
 -  #passdb passwd {
 +  passdb passwd {
      # [blocking=yes] - See userdb passwd for explanation
@@ -137,4 +136,4 @@ $NetBSD: patch-ab,v 1.20 2007/03/24 14:39:44 ghen Exp $
 +  }
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
-   # http://wiki.dovecot.org/PasswordDatabase/Shadow
+   # <doc/wiki/PasswordDatabase.Shadow.txt>
