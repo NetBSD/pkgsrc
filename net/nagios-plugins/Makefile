@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/30 02:37:11 grant Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/30 05:52:37 grant Exp $
 #
 
 PKGREVISION=	2
@@ -23,7 +23,10 @@ CONFIGURE_ARGS+=	--with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 .endif
 
 # required to enable large file support on Solaris
-CPPFLAGS.SunOS!=	getconf LFS_CFLAGS
+.if ${OPSYS} == "SunOS"
+CPPFLAGS_LFS!=		getconf LFS_CFLAGS
+MAKE_ENV+=		CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
+.endif
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
