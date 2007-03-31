@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:30 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/31 14:12:10 obache Exp $
 
 DISTNAME=	wide-dhcpv6-20061016
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wide-dhcpv6/}
 
