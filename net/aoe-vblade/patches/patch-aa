@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/10 20:39:35 agc Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/31 13:36:27 obache Exp $
 
---- freebsd.c	2007/01/10 07:10:03	1.1
-+++ freebsd.c	2007/01/10 07:10:42
+--- freebsd.c.orig	2006-11-13 18:57:34.000000000 +0000
++++ freebsd.c
 @@ -14,7 +14,12 @@
  #include <sys/time.h>
  
@@ -15,3 +15,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/01/10 20:39:35 agc Exp $
  #include <net/bpf.h>
  #include <net/if.h>
  #include <net/if_arp.h>
+@@ -27,6 +32,9 @@
+ #include <sys/stat.h>
+ #include <sys/disklabel.h>
+ #include <sys/select.h>
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ #include <sys/sysctl.h>
+ 
+ #include <fcntl.h>
