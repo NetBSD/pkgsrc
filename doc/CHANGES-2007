@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.724 2007/03/31 16:28:47 obache Exp $
+$NetBSD: CHANGES-2007,v 1.725 2007/03/31 22:55:07 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1391,3 +1391,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/wide-dhcpv6 to 20061016nb1 [obache 2007-03-31]
 	Updated textproc/icu to 3.6nb1 [obache 2007-03-31]
 	Updated games/pytraffic to 2.5.4nb2 [obache 2007-03-31]
+	Updated www/firefox2 to 2.0.0.3nb1 [ghen 2007-03-31]
+	Updated www/firefox2-gtk1 to 2.0.0.3nb1 [ghen 2007-03-31]
+	Updated www/seamonkey to 1.1.1nb2 [ghen 2007-03-31]
+	Updated www/seamonkey-gtk1 to 1.1.1nb2 [ghen 2007-03-31]
