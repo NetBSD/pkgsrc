@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.721 2007/03/30 19:11:23 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.722 2007/03/31 14:13:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1388,3 +1388,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/R to 2.4.1nb1 [dmcmahill 2007-03-28]
 	Updated mail/sympa to 5.2.4 [bouyer 2007-03-28]
 	Updated mail/dovecot to 1.0rc29 [ghen 2007-03-30]
+	Updated net/wide-dhcpv6 to 20061016nb1 [obache 2007-03-31]
