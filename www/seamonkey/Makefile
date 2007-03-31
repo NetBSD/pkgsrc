@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/03/07 21:32:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.21 2007/03/31 22:51:24 ghen Exp $
 
 MOZILLA=		seamonkey
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		Full featured gecko-based browser
 
