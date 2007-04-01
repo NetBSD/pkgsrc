@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:02:52 agc Exp $
-
-SHA1 (gkrellmoon-0.3.tar.gz) = 13c774ab2acc9cadc157c7cf16776c3b6bfb42f1
-RMD160 (gkrellmoon-0.3.tar.gz) = 713a8e52223dfc61fdc2bd0e2bf324ded044fe2d
-Size (gkrellmoon-0.3.tar.gz) = 51988 bytes
-SHA1 (patch-aa) = 1af28d177f7ecaabcd41608d12685398f541c33d
