@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/01 01:58:38 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 
-MAINTAINER=		obata@lins.jp
+MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
 
