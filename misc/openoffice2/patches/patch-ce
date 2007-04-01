@@ -1,0 +1,24 @@
+$NetBSD: patch-ce,v 1.1 2007/04/01 23:50:59 hira Exp $
+
+Security fixes for CVE-2007-0239.  This has been fixed in OOo 2.2.
+
+--- scp2/source/ooo/file_ooo.scp.orig	2007-04-02 07:02:55.000000000 +0900
++++ scp2/source/ooo/file_ooo.scp	2007-04-02 07:05:41.000000000 +0900
+@@ -347,7 +347,7 @@
+     BIN_FILE_BODY;
+     Dir = gid_Dir_Program;
+     Name = "gnome-open-url";
+-    Styles = (PACKED);
++    Styles = (PACKED, PATCH);
+ End
+ 
+ File gid_File_Bin_Gnome_Open_Url_Bin
+@@ -361,7 +361,7 @@
+     BIN_FILE_BODY;
+     Dir = gid_Dir_Program;
+     Name = "kde-open-url";
+-    Styles = (PACKED);
++    Styles = (PACKED, PATCH);
+ End
+ 
+ File gid_File_Bin_Cde_Open_Url

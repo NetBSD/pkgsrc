@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1 2007/04/01 23:50:59 hira Exp $
+
+Security fixes for CVE-2007-0239.  This has been fixed in OOo 2.2.
+
+--- shell/source/unix/misc/cde-open-url.sh.orig	2006-12-02 02:57:03.000000000 +0900
++++ shell/source/unix/misc/cde-open-url.sh	2007-01-19 22:07:09.000000000 +0900
+@@ -58,5 +58,5 @@
+ fi
+ 
+ if [ -z "$TMPFILE" ]; then exit 1; fi
+-( echo $1 > "$TMPFILE"; dtaction Open "$TMPFILE"; rm -f "$TMPFILE" ) &
++( echo "$1" > "$TMPFILE"; dtaction Open "$TMPFILE"; rm -f "$TMPFILE" ) &
+ exit 0
