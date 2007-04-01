@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2007/03/25 06:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.294 2007/04/01 21:17:16 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -12,7 +12,6 @@ SUBDIR+=	PAM
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
-SUBDIR+=	amavis
 SUBDIR+=	amavis-perl
 SUBDIR+=	amavisd-new
 SUBDIR+=	antonym
