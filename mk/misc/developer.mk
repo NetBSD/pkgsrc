@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.5 2007/03/14 17:53:03 rillig Exp $
+# $NetBSD: developer.mk,v 1.6 2007/04/01 21:14:27 wiz Exp $
 #
 # Public targets for developers:
 #
@@ -9,7 +9,7 @@
 #
 #	CTYPE
 #		The type of entry to add. Must be one of "Added",
-#		"Updated", "Renamed", "Moved", of "Removed".
+#		"Updated", "Renamed", "Moved", or "Removed".
 #		The default is "Updated".
 #
 #	TO
@@ -44,6 +44,8 @@ _NETBSD_LOGIN_NAME_cmd=	${ID} -nu
 
 .if ${CTYPE} == "Updated"
 _CE_MSG1=	Updated ${PKGPATH} to ${PKGVERSION}
+.elif ${CTYPE} == "Removed"
+_CE_MSG1=	Removed ${PKGPATH}
 .elif ${CTYPE} == "Added"
 _CE_MSG1=	Added ${PKGPATH} version ${PKGVERSION}
 .elif ${CTYPE} == "Renamed" || ${CTYPE} == "Moved"
