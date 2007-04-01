@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2007/04/01 13:48:39 wiz Exp $
+
+--- libkexiv2/kexiv2.h.orig	2007-02-24 21:13:15.000000000 +0000
++++ libkexiv2/kexiv2.h
+@@ -47,6 +47,7 @@ namespace Exiv2
+     class Exifdatum;
+     class ExifData;
+     class IptcData;
++    class Error;
+ }
+ 
+ namespace KExiv2Iface
+@@ -96,6 +97,11 @@ public:
+     /** Return a string version of Exiv2 release in format "major.minor.patch" */ 
+     static QString Exiv2Version();
+ 
++    /** Generic method to print the Exiv2 C++ Exception error message from 'e'.
++        'msg' string is printed just before like debug header.
++    */
++    static void printExiv2ExceptionError(const QString& msg, Exiv2::Error& e);
++
+     //-- Metadata manipulation methods ----------------------------------------------
+ 
+     /** Clear the Comments metadata container in memory. */
