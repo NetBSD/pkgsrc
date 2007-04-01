@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.726 2007/04/01 09:12:53 obache Exp $
+$NetBSD: CHANGES-2007,v 1.727 2007/04/01 21:57:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1396,3 +1396,20 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey to 1.1.1nb2 [ghen 2007-03-31]
 	Updated www/seamonkey-gtk1 to 1.1.1nb2 [ghen 2007-03-31]
 	Updated databases/ruby-sqlite3 to 1.2.1 [obache 2007-04-01]
+	Removed wm/afterstep1 [wiz 2007-04-01]
+	Removed security/amavis [wiz 2007-04-01]
+	Removed net/ncftp2 [wiz 2007-04-01]
+	Removed wm/openbox2 [wiz 2007-04-01]
+	Removed shells/zsh3 [wiz 2007-04-01]
+	Updated security/lsh to 2.0.2 [wiz 2007-04-01]
+	Removed security/lsh2 [wiz 2007-04-01]
+	Removed audio/gkrellm1-volume [wiz 2007-04-01]
+	Removed audio/gkrellm1-volume [wiz 2007-04-01]
+	Removed audio/gkrellm1-xmms [wiz 2007-04-01]
+	Removed finance/gkrellm1-stock [wiz 2007-04-01]
+	Removed misc/gkrellm1-moon [wiz 2007-04-01]
+	Removed misc/gkrellm1-weather [wiz 2007-04-01]
+	Removed net/gkrellm-ping [wiz 2007-04-01]
+	Removed net/gkrellm1-snmp [wiz 2007-04-01]
+	Removed net/gkrellm1-wireless [wiz 2007-04-01]
+	Removed sysutils/gkrellm1 [wiz 2007-04-01]
