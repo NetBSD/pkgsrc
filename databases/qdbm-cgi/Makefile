@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/22 19:26:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/01 01:58:37 obache Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	qdbm-cgi-0.0.1.${QDBM_VERSION}
 CATEGORIES=	databases www
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://qdbm.sourceforge.net/
 COMMENT=	CGI scripts of QDBM
 

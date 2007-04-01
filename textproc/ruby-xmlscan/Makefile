@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/20 13:48:14 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/01 01:58:38 obache Exp $
 #
 
 DISTNAME=	xmlscan-${VER}
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-xmlscan-${VER}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.blue.sky.or.jp/atelier/ruby/xmlscan/
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.blue.sky.or.jp/atelier/ruby/xmlscan/
 COMMENT=	Pure Ruby XML parser
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2007/02/27 02:29:40 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/01 01:58:36 obache Exp $
 
 DISTNAME=	skf_1.94.7
 PKGNAME=	skf-1.94.7
 CATEGORIES=	japanese converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skf/24158/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/skf/
 COMMENT=	Simple Kanji Filter - i18n kanji converter
 
