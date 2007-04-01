@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6167 2007/03/30 19:37:39 wiz Exp $
+$NetBSD: TODO,v 1.6168 2007/04/01 02:02:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -1203,9 +1203,11 @@ Suggested package updates
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o rtorrent-0.7.2
+	o ruby-RMagick-1.15.5
 	o ruby-clearsilver-0.10.4
 	o ruby-rcairo-1.4.1
 	o ruby-rd-mode-0.6.20
+	o ruby-sqlite-1.2.1
 	o rubygems-0.9.1 [requires openssl>=0.9.8]
 	o rubygems-0.9.2
 	o rudiments-0.30
