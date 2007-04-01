@@ -1,0 +1,87 @@
+$NetBSD: patch-cg,v 1.1 2007/04/01 23:51:00 hira Exp $
+
+Security fixes for CVE-2007-0239.  This has been fixed in OOo 2.2.
+
+--- shell/source/unix/exec/shellexec.cxx.orig	2006-12-02 02:57:03.000000000 +0900
++++ shell/source/unix/exec/shellexec.cxx	2007-01-19 22:06:10.000000000 +0900
+@@ -4,9 +4,9 @@
+  *
+  *  $RCSfile: patch-cg,v $
+  *
+- *  $Revision: 1.1 $
++ *  $Revision: 1.1 $
+  *
+- *  last change: $Author: hira $ $Date: 2007/04/01 23:51:00 $
++ *  last change: $Author: hira $ $Date: 2007/04/01 23:51:00 $
+  *
+  *  The Contents of this file are made available subject to
+  *  the terms of GNU Lesser General Public License Version 2.1.
+@@ -52,10 +52,6 @@
+ #include <osl/file.hxx>
+ #endif
+ 
+-#ifndef _RTL_STRBUF_HXX_
+-#include <rtl/strbuf.hxx>
+-#endif
+-
+ #ifndef _RTL_USTRBUF_HXX_
+ #include <rtl/ustrbuf.hxx>
+ #endif
+@@ -124,6 +120,20 @@
+     }
+ }
+ 
++void escapeForShell( rtl::OStringBuffer & rBuffer, const rtl::OString & rURL)
++{
++    sal_Int32 nmax = rURL.getLength();
++    for(sal_Int32 n=0; n < nmax; ++n)
++    {
++        // escape every non alpha numeric characters (excluding a few "known good") by prepending a '\'
++        sal_Char c = rURL[n];
++        if( ( c < 'A' || c > 'Z' ) && ( c < 'a' || c > 'z' ) && ( c < '0' || c > '9' )  && c != '/' && c != '.' )
++            rBuffer.append( '\\' );
++        
++        rBuffer.append( c );
++    }
++}
++
+ //-----------------------------------------------------------------------------------------
+ // 
+ //-----------------------------------------------------------------------------------------
+@@ -208,7 +218,7 @@
+         OString aTmp = OUStringToOString(aProgram, osl_getThreadTextEncoding());
+         nIndex = aTmp.lastIndexOf('/');
+         if (nIndex > 0)
+-            aBuffer.append(aTmp.copy(0, nIndex+1));
++            escapeForShell(aBuffer, aTmp.copy(0, nIndex+1));
+             
+         // Respect the desktop environment - if there is an executable named 
+         // <desktop-environement-is>-open-url, pass the url to this one instead
+@@ -236,21 +246,19 @@
+              
+         aBuffer.append("open-url");
+ #endif
+-        aBuffer.append(" \'");
+-        aBuffer.append(OUStringToOString(aURL, osl_getThreadTextEncoding()));
+-        aBuffer.append("\'");
++        aBuffer.append(" ");
++        escapeForShell(aBuffer, OUStringToOString(aURL, osl_getThreadTextEncoding()));
+         
+         if ( pDesktopLaunch && *pDesktopLaunch )
+         {
+             aLaunchBuffer.append( pDesktopLaunch );
+-            aLaunchBuffer.append( " \'" );
+-            aLaunchBuffer.append(OUStringToOString(aURL, osl_getThreadTextEncoding()));
+-            aLaunchBuffer.append( "\'" );
++            aLaunchBuffer.append(" ");
++            escapeForShell(aLaunchBuffer, OUStringToOString(aURL, osl_getThreadTextEncoding()));
+         }
+     } else {
+-        aBuffer.append(OUStringToOString(aCommand, osl_getThreadTextEncoding()));
++        escapeForShell(aBuffer, OUStringToOString(aCommand, osl_getThreadTextEncoding()));
+         aBuffer.append(" ");
+-        aBuffer.append(OUStringToOString(aParameter, osl_getThreadTextEncoding()));
++        escapeForShell(aBuffer, OUStringToOString(aParameter, osl_getThreadTextEncoding()));
+     }
+     
+     // Prefer DESKTOP_LAUNCH when available
