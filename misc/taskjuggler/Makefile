@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/03/22 20:30:53 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/01 09:32:49 wiz Exp $
 #
 
 DISTNAME=	taskjuggler-2.3.1
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.taskjuggler.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,7 @@ pre-build:
 	# The log file also doesn't provide any useful information.
 	rm -f ${WRKSRC}/TestSuite/Syntax/Errors/Timezone.tjp
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../misc/kdepim3/buildlink3.mk" # for libkcal
 .include "../../x11/qt3/application.mk"
