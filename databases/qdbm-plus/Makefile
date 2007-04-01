@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:26:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/01 01:58:37 obache Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	qdbm-plus-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases devel
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://qdbm.sourceforge.net/
 COMMENT=	C++ API for QDBM
 
