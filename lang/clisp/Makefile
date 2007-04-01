@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/12/29 13:54:22 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2007/04/01 12:45:39 tron Exp $
 
 DISTNAME=	clisp-2.39
 PKGREVISION=	1
@@ -36,6 +36,7 @@ MODULES+=		--with-module=pcre --with-module=rawsock
 MODULES+=		--with-module=wildcard --with-module=zlib
 CONFIGURE_ARGS+=	${MODULES}
 TEST_TARGET=		check
+MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
 post-patch:
