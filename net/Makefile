@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.663 2007/04/01 21:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.664 2007/04/01 21:36:16 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -115,11 +115,8 @@ SUBDIR+=	gift-openft
 SUBDIR+=	giftcurs
 SUBDIR+=	gini
 SUBDIR+=	gkrellm-multiping
-SUBDIR+=	gkrellm-ping
 SUBDIR+=	gkrellm-snmp
 SUBDIR+=	gkrellm-wireless
-SUBDIR+=	gkrellm1-snmp
-SUBDIR+=	gkrellm1-wireless
 SUBDIR+=	gnapfetch
 SUBDIR+=	gnet
 SUBDIR+=	gnet1

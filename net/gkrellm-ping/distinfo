@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:47 agc Exp $
-
-SHA1 (gkrellmPing-0.2-3.tar.gz) = 9e2e6167bce18d66e7ddfa57d60af4ebf2ad39b8
-RMD160 (gkrellmPing-0.2-3.tar.gz) = a478a2048f6b8ad62063cb9a085ed7a428113c08
-Size (gkrellmPing-0.2-3.tar.gz) = 11901 bytes
-SHA1 (patch-aa) = 439b74a13ce89d513b7088f46e3f7c08e73c3c79
-SHA1 (patch-ab) = 8afc1538f0555b6aaac657a7c6da15e939d9a5ce
