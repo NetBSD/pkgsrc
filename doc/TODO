@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6173 2007/04/01 15:32:35 taca Exp $
+$NetBSD: TODO,v 1.6174 2007/04/01 22:00:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -268,7 +268,7 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
-	o amavis-0.3.12
+	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-9.54
 	o anjuta-2.1.2
 	o ap-Embperl-1.3.6
@@ -527,11 +527,6 @@ Suggested package updates
 	o gkrellm-share-2.2.10
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o gkrellm1-moon-0.6
-	o gkrellm1-snmp-0.23
-	o gkrellm1-volume-2.1.13
-	o gkrellm1-wireless-2.0.3
-	o gkrellm1-xmms-0.5.8
 	o glade-3.2.0
 	o gld-1.7
 	o gmime-2.2.6
@@ -769,7 +764,6 @@ Suggested package updates
 	o loudmouth-1.2.0
 	o lout-3.31
 	o lq-sp-1.3.4.13
-	o lsh2-2.0.3
 	o ltm-0.40
 	o lucy-1.19p
 	o lwp-2.3
@@ -843,7 +837,6 @@ Suggested package updates
 	o nas-1.8b
 	o nautilus-2.18.0.1
 	o nautilus-cd-burner-2.16.3 [needs hal]
-	o ncftp2-2.8.2
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
