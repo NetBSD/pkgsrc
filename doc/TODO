@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6172 2007/04/01 15:31:12 wiz Exp $
+$NetBSD: TODO,v 1.6173 2007/04/01 15:32:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -350,6 +350,7 @@ Suggested package updates
 	o cddbd-1.5.2
 	o cfitsio-3.030
 	o cgdb-0.6.3
+	o chasen-2.4.0
 	o chemtool-1.6.9
 	o cherokee-0.5.6
 	o chicken-2.60
@@ -792,6 +793,7 @@ Suggested package updates
 	o mathomatic-12.6.11
 	o mcrypt-2.6.5
 	o md-whois-4.7.20
+	o mecab-0.95
 	o memtestplus-1.70
 	o mergeant-0.66
 	o mesure-0.7.2
@@ -1073,6 +1075,7 @@ Suggested package updates
 	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
+	o plone-2.5.2
 	o ploticus-2.33
 	o ploticus-examples-230
 	o plotutils-2.5
@@ -1460,7 +1463,8 @@ Suggested package updates
 	o zile-2.2.29
 	o zircon-1.18.256
 	o zoom-1.0.5
-	o zope-2.10.2
+	o zope-2.9.7
+	o zope-2.10.3
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-2.0.0
