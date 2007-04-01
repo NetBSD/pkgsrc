@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/03/04 01:57:10 obache Exp $
+# $NetBSD: Makefile,v 1.34 2007/04/01 01:58:37 obache Exp $
 
 DISTNAME=	RMagick-1.15.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/18088/ \
 		http://raa.ruby-lang.org/cache/rmagick/
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby GraphicsMagick or ImageMagick extension
 
