@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/09/15 09:51:39 agc Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/01 19:36:08 rillig Exp $
 
 --- makefile.orig	2002-10-16 00:11:05.000000000 +0100
 +++ makefile	2003-09-15 10:19:50.000000000 +0100
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.4 2003/09/15 09:51:39 agc Exp $
 +BINDIR	= @PREFIX@/bin
 +LIBDIR	= @PREFIX@/share/lout
 +DOCDIR	= @PREFIX@/share/doc/lout
-+MANDIR	= @PREFIX@/man/man1
++MANDIR	= @PREFIX@/${PKGMANDIR}/man1
  
  LIBFONT = font
  LIBMAPS = maps
