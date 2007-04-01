@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2007/03/24 14:11:41 markd Exp $
+# $NetBSD: Makefile,v 1.663 2007/04/01 21:18:45 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -224,7 +224,6 @@ SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	nasd
 SUBDIR+=	nbtscan
-SUBDIR+=	ncftp2
 SUBDIR+=	ncftp3
 SUBDIR+=	neat
 SUBDIR+=	nemesis
