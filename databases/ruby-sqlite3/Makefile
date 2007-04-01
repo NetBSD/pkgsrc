@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/04/01 01:58:37 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/01 09:10:34 obache Exp $
 
-DISTNAME=	sqlite3-ruby-1.1.0
+DISTNAME=	sqlite3-ruby-1.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby//}
-PKGREVISION=	1
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/3089/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17096/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
@@ -17,7 +16,6 @@ USE_RUBY_SETUP=		yes
 DOCS=	ChangeLog LICENSE README
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 
 post-install:
