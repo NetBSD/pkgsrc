@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2007/03/31 22:51:24 ghen Exp $
+# $NetBSD: Makefile.common,v 1.22 2007/04/01 16:22:53 tron Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -204,8 +204,11 @@ pre-install:
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR:Q}/moz-install
 
+.if !target(do-install)
 post-install:
-	${FIND} ${PREFIX}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
+	${FIND} ${PREFIX}/lib/${MOZILLA}/defaults -type f -print | \
+	${XARGS} ${CHMOD} u+w
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 
