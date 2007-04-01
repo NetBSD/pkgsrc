@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1909 2007/03/02 06:01:44 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1910 2007/04/01 19:02:14 kristerw Exp $
 #
 # This file is in the public domain.
 #
@@ -132,7 +132,7 @@ PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INST
 PKG_FAIL_REASON+='The package tools installed on this system are out of date.'
 PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must'
 PKG_FAIL_REASON+='update them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
-PKG_FAIL_REASON+=''
+PKG_FAIL_REASON+=' '
 PKG_FAIL_REASON+='    (cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} update)'
 .  endif
 .endif # !NO_PKGTOOLS_REQD_CHECK
