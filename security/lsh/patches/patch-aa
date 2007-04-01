@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/12 15:55:11 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/01 21:26:49 wiz Exp $
 
 --- src/unix_interact.c.orig	2003-10-14 19:12:21.000000000 +0200
 +++ src/unix_interact.c	2003-10-14 19:12:36.000000000 +0200
