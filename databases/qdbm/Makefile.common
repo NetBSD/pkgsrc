@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2007/03/05 15:56:26 obache Exp $
+# $NetBSD: Makefile.common,v 1.16 2007/04/01 01:58:37 obache Exp $
 #
 
 DISTNAME=	qdbm-${QDBM_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qdbm/}
 QDBM_VERSION=	1.8.75
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://qdbm.sourceforge.net/
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/qdbm/distinfo
