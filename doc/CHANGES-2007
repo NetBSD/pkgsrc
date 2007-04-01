@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.725 2007/03/31 22:55:07 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.726 2007/04/01 09:12:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox2-gtk1 to 2.0.0.3nb1 [ghen 2007-03-31]
 	Updated www/seamonkey to 1.1.1nb2 [ghen 2007-03-31]
 	Updated www/seamonkey-gtk1 to 1.1.1nb2 [ghen 2007-03-31]
+	Updated databases/ruby-sqlite3 to 1.2.1 [obache 2007-04-01]
