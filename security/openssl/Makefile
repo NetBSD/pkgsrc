@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2007/03/26 11:44:18 tron Exp $
+# $NetBSD: Makefile,v 1.120 2007/04/01 21:33:05 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -101,6 +101,8 @@ PKG_SYSCONFDIR.openssl?=	/etc/openssl
 
 .if ${OPSYS} == "Darwin"
 .include "../../devel/dlcompat/buildlink3.mk"
+
+LDFLAGS+=	${BUILDLINK_LDFLAGS.dlcompat}
 .endif
 
 PKG_SYSCONFSUBDIR=	openssl
