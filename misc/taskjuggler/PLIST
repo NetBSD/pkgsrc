@@ -1,8 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 17:15:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/01 09:32:49 wiz Exp $
 bin/TaskJugglerUI
 bin/taskjuggler
 lib/libtaskjuggler.la
 share/applications/kde/taskjuggler.desktop
+share/doc/HTML/en/taskjuggler/ChangeLog.xml
+share/doc/HTML/en/taskjuggler/Example.xml
+share/doc/HTML/en/taskjuggler/FirstProject.xml
+share/doc/HTML/en/taskjuggler/GenPropertyReference.xml
+share/doc/HTML/en/taskjuggler/PropertyReference.xml
+share/doc/HTML/en/taskjuggler/SyntaxReference.xml
+share/doc/HTML/en/taskjuggler/UsageGuide.xml
+share/doc/HTML/en/taskjuggler/index.cache.bz2
+share/doc/HTML/en/taskjuggler/index.docbook
+share/doc/HTML/en/taskjuggler/taskjuggler.xml
 share/doc/taskjugglerExamples/BigProject/Common/Resources.tji
 share/doc/taskjugglerExamples/BigProject/Project1/Project1-Interface.tji
 share/doc/taskjugglerExamples/BigProject/Project1/Project1.html
@@ -94,8 +104,8 @@ share/locale/tr/LC_MESSAGES/taskjuggler.mo
 @dirrm share/kde/apps/taskjuggler
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
 @comment in kde: @dirrm share/kde/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
 @dirrm share/doc/taskjugglerExamples/ShiftSchedule
 @dirrm share/doc/taskjugglerExamples/FirstProject
@@ -104,5 +114,6 @@ share/locale/tr/LC_MESSAGES/taskjuggler.mo
 @dirrm share/doc/taskjugglerExamples/BigProject/Common
 @dirrm share/doc/taskjugglerExamples/BigProject
 @dirrm share/doc/taskjugglerExamples
+@dirrm share/doc/taskjuggler
 @dirrm share/doc/HTML/en/taskjuggler
 @comment in kde: @dirrm share/applications/kde
