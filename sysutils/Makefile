@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2007/03/13 17:40:26 obache Exp $
+# $NetBSD: Makefile,v 1.391 2007/04/01 21:36:17 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -102,7 +102,6 @@ SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
-SUBDIR+=	gkrellm1
 SUBDIR+=	gkx86info
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-pkgview
