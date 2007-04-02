@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/06/18 01:04:04 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/04/02 13:35:08 taca Exp $
 #
 
-DISTNAME=	postgrey-1.24
+DISTNAME=	postgrey-1.27
 CATEGORIES=	mail
 MASTER_SITES=	http://isg.ee.ethz.ch/tools/postgrey/pub/ \
 		http://isg.ee.ethz.ch/tools/postgrey/pub/old/
@@ -14,6 +14,7 @@ DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-IO-Multiplex-[0-9]*:../../devel/p5-IO-Multiplex
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
+NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 
@@ -33,6 +34,8 @@ PKG_GROUPS=		${POSTGREY_GROUP}
 PKG_USERS=		${POSTGREY_USER}:${POSTGREY_GROUP}
 
 PKG_GECOS.${POSTGREY_USER}=	Postgrey Daemon User
+
+BUILD_DEFS+=		POSTGREY_USER POSTGREY_GROUP POSTGREY_DBDIR VARBASE
 
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
 CONF_FILES+=		${PREFIX}/${EGDIR}/${i} \
@@ -63,17 +66,13 @@ SUBST_SED.postgrey+=	-e 's,/etc/postfix,${PKG_SYSCONFDIR},g'
 #
 SUBST_MESSAGE.postgrey=	Fixing defaults.
 
-INSTALLATION_DIRS=	sbin
-
-do-build:
+INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/postgrey ${PREFIX}/sbin/postgrey
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 .for i in COPYING Changes README
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${DOCDIR}/${i}
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${EGDIR}/${i}
 .endfor
