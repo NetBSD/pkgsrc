@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ns-open,v 1.16 2007/03/21 12:36:17 abs Exp $
+# $NetBSD: ns-open,v 1.17 2007/04/02 21:59:31 abs Exp $
 #
 # Simple script to open a URL in Netscape, starting a new process if necessary
 # If a netscape process is not running it will look for a valid netscape
@@ -35,6 +35,12 @@ for prog in $NETSCAPE_PREFERRED ; do
 done
 IFS="$oldIFS"
 
+escape()
+    {
+    str=$1
+    echo "$str" | sed -e 's/ /%20/g' -e 's/"/%22/g' -e 's/,/%2c/g' -e 's/\`/%60/g'
+    }
+
 # Check if there are any '-' options which would not be understood by ns-remote
 # Slightly involved to avoid changing $@ in case we need it for real netscape
 #
@@ -60,7 +66,7 @@ do
 	    START_NEW_NETSCAPE=1
 	    ;;
 	*)
-	    URL=`echo $a | sed -e 's/"/%22/g' -e 's/\`/%60/g' -e 's/,/%2c/g'`
+	    URL=`escape "$a"`
 	    break;
 	    ;;
     esac
