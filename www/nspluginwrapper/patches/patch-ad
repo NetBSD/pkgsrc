@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1 2007/04/02 22:38:44 abs Exp $
+
+--- Makefile.orig	2007-03-04 15:01:22.000000000 +0000
++++ Makefile
+@@ -46,6 +46,9 @@ X_LDFLAGS = -L$(x11prefix)/$(lib64) -lX1
+ ifeq ($(OS),netbsd)
+ X_LDFLAGS += -Wl,--rpath,$(x11prefix)/$(lib64)
+ endif
++ifeq ($(OS),dragonfly)
++X_LDFLAGS += -Wl,--rpath,$(x11prefix)/$(lib64)
++endif
+ 
+ ARCH_32 = $(ARCH)
+ ifeq ($(biarch), yes)
+@@ -78,7 +81,11 @@ npwrapper_RAWSRCS = npw-wrapper.c npw-rp
+ npwrapper_SOURCES = $(npwrapper_RAWSRCS:%.c=$(SRC_PATH)/src/%.c)
+ npwrapper_OBJECTS = $(npwrapper_RAWSRCS:%.c=npwrapper-%.os)
+ npwrapper_CFLAGS  = $(CFLAGS) $(X_CFLAGS) $(MOZILLA_CFLAGS) $(GLIB_CFLAGS)
++ifeq ($(OS),dragonfly)
++npwrapper_LDFLAGS = $(X_LDFLAGS) -pthread
++else
+ npwrapper_LDFLAGS = $(X_LDFLAGS) -lpthread
++endif
+ npwrapper_LDFLAGS += $(GLIB_LDFLAGS)
+ 
+ npviewer_PROGRAM = npviewer.bin
+@@ -97,7 +104,11 @@ npviewer_CFLAGS += $(GTK_CFLAGS)
+ npviewer_LDFLAGS = $(GTK_LDFLAGS) $(X_LDFLAGS)
+ endif
+ npviewer_CFLAGS  += $(MOZILLA_CFLAGS)
++ifeq ($(OS),dragonfly)
++npviewer_LDFLAGS += $(libdl_LDFLAGS) -pthread
++else
+ npviewer_LDFLAGS += $(libdl_LDFLAGS) -lpthread
++endif
+ ifeq ($(TARGET_ARCH),i386)
+ npviewer_MAPFILE = $(SRC_PATH)/src/npw-viewer.map
+ endif
+@@ -128,6 +139,12 @@ ifeq ($(OS),netbsd)
+ # XXX use the ELF decoder for native plugins too?
+ npconfig_LDFLAGS += -lpthread
+ endif
++ifeq ($(OS),dragonfly)
++# We will try to dlopen() the native plugin library. If that lib is
++# linked against libpthread, then so must our program too.
++# XXX use the ELF decoder for native plugins too?
++npconfig_LDFLAGS += -pthread
++endif
+ 
+ nploader_PROGRAM = npviewer
+ nploader_RAWSRCS = npw-viewer.sh
