@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/03/22 22:33:45 abs Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/02 22:38:44 abs Exp $
 
 --- configure.orig	2007-03-04 15:01:22.000000000 +0000
 +++ configure
@@ -40,3 +40,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/03/22 22:33:45 abs Exp $
  echo ""
  echo "NOTE: The object files are built at the place where configure is launched"
  exit 1
+@@ -458,6 +466,10 @@ if test "$host_os" = "linux"; then
+     echo "OS=linux" >> $config_mak
+     echo "#define HOST_LINUX 1" >> $config_h
+     echo "#define HOST_OS \"linux\"" >> $config_h
++elif test "$host_os" = "dragonfly"; then
++    echo "OS=dragonfly" >> $config_mak
++    echo "#define HOST_DRAGONFLY 1" >> $config_h
++    echo "#define HOST_OS \"dragonfly\"" >> $config_h
+ elif test "$host_os" = "freebsd"; then
+     echo "OS=freebsd" >> $config_mak
+     echo "#define HOST_FREEBSD 1" >> $config_h

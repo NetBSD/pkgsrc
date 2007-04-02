@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1 2007/04/02 22:38:44 abs Exp $
+
+--- ./src/npw-config.c.orig	2007-04-01 16:28:47.000000000 +0100
++++ ./src/npw-config.c
+@@ -124,6 +124,14 @@ static const char *get_system_mozilla_pl
+ 	  };
+ 	  dirs = freebsd_dirs;
+ 	}
++#elif defined(__DragonFly__)
++	{
++	  static const char *dragonfly_dirs[] = {
++		"/usr/pkg/" LIB "/mozilla/plugins",
++		"/usr/pkg/" LIB "/firefox/plugins",
++	  };
++	  dirs = dragonfly_dirs;
++	}
+ #elif defined(__NetBSD__)
+ 	{
+ 	  static const char *netbsd_dirs[] = {
+@@ -206,6 +214,13 @@ static const char **get_mozilla_plugin_d
+ 	"/usr/local/lib/npapi/linux-flashplugin",
+ 	"/usr/X11R6/Adobe/Acrobat7.0/ENU/Browser/intellinux",
+ #endif
++#if defined(__DragonFly__)
++	"/usr/pkg/lib/netscape/plugins",
++	"/usr/pkg/lib/firefox/plugins",
++	"/usr/pkg/lib/RealPlayer/mozilla",
++	"/usr/pkg/Acrobat5/Browsers/intellinux",
++	"/usr/pkg/Acrobat7/Browser/intellinux",
++#endif
+ #if defined(__NetBSD__)
+ 	"/usr/pkg/lib/netscape/plugins",
+ 	"/usr/pkg/lib/firefox/plugins",
