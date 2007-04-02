@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/23 20:50:35 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/02 07:38:00 obache Exp $
 #
 
 DISTNAME=		pycairo-1.4.0
@@ -26,7 +26,7 @@ PY_PATCHPLIST=		yes
 BUILDLINK_TRANSFORM+=	rm:-std=c99
 .endif
 
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.4.0
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
