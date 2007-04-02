@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.6 2007/04/02 12:11:01 gdt Exp $
+
+--- backend/usb-unix.c.orig	2007-02-20 08:41:07.000000000 -0500
++++ backend/usb-unix.c
+@@ -90,6 +90,11 @@ print_device(const char *uri,		/* I - De
+              strcasecmp(hostname, "Konica Minolta") &&
+              strcasecmp(hostname, "Minolta");
+ 
++#ifdef __NetBSD__
++    /* XXX Use configure test to see if reading from ulpt(4) works. */
++    use_bc = 0;
++#endif
++
+     if ((device_fd = open_device(uri, &use_bc)) == -1)
+     {
+       if (getenv("CLASS") != NULL)
