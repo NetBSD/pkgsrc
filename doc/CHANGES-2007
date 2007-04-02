@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.728 2007/04/01 23:52:17 hira Exp $
+$NetBSD: CHANGES-2007,v 1.729 2007/04/02 13:38:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1414,3 +1414,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed net/gkrellm1-wireless [wiz 2007-04-01]
 	Removed sysutils/gkrellm1 [wiz 2007-04-01]
 	Updated misc/openoffice2 to 2.1.0nb5 [hira 2007-04-01]
+	Updated mail/postgrey to 1.27 [taca 2007-04-02]
+	Updated mail/ruby-tmail to 0.10.8nb5 [taca 2007-04-02]
