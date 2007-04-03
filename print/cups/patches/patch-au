@@ -1,4 +1,8 @@
-$NetBSD: patch-au,v 1.6 2007/04/02 12:11:01 gdt Exp $
+$NetBSD: patch-au,v 1.7 2007/04/03 15:23:23 gdt Exp $
+
+This has been filed upstream as:
+
+  http://www.cups.org/str.php?L2324
 
 --- backend/usb-unix.c.orig	2007-02-20 08:41:07.000000000 -0500
 +++ backend/usb-unix.c
