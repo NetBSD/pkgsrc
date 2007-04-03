@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1 2007/04/03 09:32:08 drochner Exp $
+
+--- digikam/libs/widgets/metadata/iptcwidget.cpp.orig	2007-03-30 12:12:32.000000000 +0200
++++ digikam/libs/widgets/metadata/iptcwidget.cpp
+@@ -156,7 +156,7 @@ bool IptcWidget::decodeMetadata()
+     catch (Exiv2::Error& e)
+     {
+         DDebug() << "Cannot parse IPTC metadata using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return false;
+     }
+@@ -185,7 +185,7 @@ QString IptcWidget::getTagTitle(const QS
+     catch (Exiv2::Error& e) 
+     {
+         DDebug() << "Cannot get metadata tag title using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("Unknow");
+     }
+@@ -202,7 +202,7 @@ QString IptcWidget::getTagDescription(co
+     catch (Exiv2::Error& e) 
+     {
+         DDebug() << "Cannot get metadata tag description using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("No description available");
+     }

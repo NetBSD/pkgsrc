@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.1 2007/04/03 09:32:09 drochner Exp $
+
+--- digikam/libs/widgets/metadata/gpswidget.cpp.orig	2007-03-30 12:24:59.000000000 +0200
++++ digikam/libs/widgets/metadata/gpswidget.cpp
+@@ -305,7 +305,7 @@ bool GPSWidget::decodeMetadata()
+     {
+         setMetadataEmpty();
+         DDebug() << "Cannot parse EXIF metadata using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return false;
+     }
+@@ -343,7 +343,7 @@ QString GPSWidget::getTagTitle(const QSt
+     catch (Exiv2::Error& e) 
+     {
+         DDebug() << "Cannot get metadata tag title using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("Unknown");
+     }
+@@ -360,7 +360,7 @@ QString GPSWidget::getTagDescription(con
+     catch (Exiv2::Error& e) 
+     {   
+         DDebug() << "Cannot get metadata tag description using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("No description available");
+     }
