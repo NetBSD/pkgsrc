@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2006/12/15 17:35:20 joerg Exp $
+# $NetBSD: Makefile,v 1.76.2.1 2007/04/03 16:58:21 salo Exp $
 
 DISTNAME=		dovecot-1.0.rc15
 PKGNAME=		${DISTNAME:S/.rc/rc/}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
