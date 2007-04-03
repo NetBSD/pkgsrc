@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6178 2007/04/03 07:28:04 martti Exp $
+$NetBSD: TODO,v 1.6179 2007/04/03 22:07:12 gdt Exp $
 
 Suggested new packages
 ======================
@@ -201,6 +201,9 @@ Suggested new packages
 	http://www.virtualbox.org/
 	Fast x86 emulator
 
+	qphotosort
+	http://pintant.cat/qphotosort
+	rename photos by date to support merged albums from different sources
 
 Suggested package updates
 =========================
