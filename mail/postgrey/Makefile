@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/04/02 13:35:08 taca Exp $
+# $NetBSD: Makefile,v 1.18 2007/04/03 14:02:07 taca Exp $
 #
 
 DISTNAME=	postgrey-1.27
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://isg.ee.ethz.ch/tools/postgrey/pub/ \
 		http://isg.ee.ethz.ch/tools/postgrey/pub/old/
@@ -14,7 +15,6 @@ DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
 DEPENDS+=	p5-IO-Multiplex-[0-9]*:../../devel/p5-IO-Multiplex
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 
-NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 
@@ -67,6 +67,8 @@ SUBST_SED.postgrey+=	-e 's,/etc/postfix,${PKG_SYSCONFDIR},g'
 SUBST_MESSAGE.postgrey=	Fixing defaults.
 
 INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
+
+do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/postgrey ${PREFIX}/sbin/postgrey
