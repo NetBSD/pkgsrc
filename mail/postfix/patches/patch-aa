@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.17 2006/07/13 09:57:51 martti Exp $
+$NetBSD: patch-aa,v 1.18 2007/04/03 07:27:51 martti Exp $
 
---- postfix-install.orig	2005-08-14 01:51:38.000000000 +0000
-+++ postfix-install	2006-07-13 12:37:24.000000000 +0000
+--- postfix-install.orig	2007-03-25 23:44:02.000000000 +0300
++++ postfix-install	2007-04-03 08:51:05.000000000 +0300
 @@ -359,26 +359,6 @@
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -h -d config_directory`}
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.17 2006/07/13 09:57:51 martti Exp $
  # In case some systems special-case pathnames beginning with //.
  
  case $install_root in
-@@ -725,10 +705,3 @@
+@@ -729,10 +709,3 @@
      "sample_directory = $sample_directory" \
      "readme_directory = $readme_directory" \
  || exit 1
