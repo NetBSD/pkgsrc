@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.4.6.1 2007/04/03 16:58:21 salo Exp $
+
+Security fix taken from dovecot-1.0rc29:
+http://www.dovecot.org/list/dovecot-news/2007-March/000038.html
+
+--- src/lib-storage/index/mbox/mbox-storage.c.orig	2007-04-01 13:32:47.000000000 +0200
++++ src/lib-storage/index/mbox/mbox-storage.c
+@@ -706,6 +706,11 @@ mbox_mailbox_open(struct mail_storage *_
+ 
+ 	mail_storage_clear_error(_storage);
+ 
++	if (!mbox_is_valid_existing_name(_storage, name)) {
++		mail_storage_set_error(_storage, "Invalid mailbox name");
++		return NULL;
++	}
++
+ 	if (input != NULL)
+ 		return mbox_mailbox_open_stream(storage, name, input, flags);
+ 
+@@ -716,11 +721,6 @@ mbox_mailbox_open(struct mail_storage *_
+ 		return mbox_open(storage, "INBOX", flags);
+ 	}
+ 
+-	if (!mbox_is_valid_existing_name(_storage, name)) {
+-		mail_storage_set_error(_storage, "Invalid mailbox name");
+-		return NULL;
+-	}
+-
+ 	path = mbox_get_path(istorage, name);
+ 	if (stat(path, &st) == 0) {
+ 		if (S_ISDIR(st.st_mode)) {
