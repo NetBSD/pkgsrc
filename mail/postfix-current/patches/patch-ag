@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.15 2006/10/16 09:48:00 martti Exp $
+$NetBSD: patch-ag,v 1.16 2007/04/03 07:35:47 martti Exp $
 
---- src/util/sys_defs.h.orig	2006-10-16 12:39:27.000000000 +0000
-+++ src/util/sys_defs.h	2006-10-16 12:40:30.000000000 +0000
+--- src/util/sys_defs.h.orig	2007-03-25 00:45:33.000000000 +0200
++++ src/util/sys_defs.h	2007-04-03 08:51:26.000000000 +0300
 @@ -42,7 +42,9 @@
- #define DEF_MAILBOX_LOCK "flock"
+ #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
 +#ifndef HAS_DB
