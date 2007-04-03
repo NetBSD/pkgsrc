@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1 2007/04/03 09:32:08 drochner Exp $
+
+--- digikam/libs/widgets/metadata/makernotewidget.cpp.orig	2007-03-30 12:23:15.000000000 +0200
++++ digikam/libs/widgets/metadata/makernotewidget.cpp
+@@ -198,7 +198,7 @@ bool MakerNoteWidget::decodeMetadata()
+     catch (Exiv2::Error& e)
+     {
+         DDebug() << "Cannot parse MAKERNOTE metadata using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return false;
+     }
+@@ -227,7 +227,7 @@ QString MakerNoteWidget::getTagTitle(con
+     catch (Exiv2::Error& e) 
+     {
+         DDebug() << "Cannot get metadata tag title using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("Unknown");
+     }
+@@ -244,7 +244,7 @@ QString MakerNoteWidget::getTagDescripti
+     catch (Exiv2::Error& e) 
+     {
+         DDebug() << "Cannot get metadata tag description using Exiv2 ("
+-                  << QString::fromAscii(e.what().c_str())
++                  << QString::fromAscii(e.what())
+                   << ")" << endl;
+         return i18n("No description available");
+     }
