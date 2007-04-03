@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.730 2007/04/03 07:28:04 martti Exp $
+$NetBSD: CHANGES-2007,v 1.731 2007/04/03 07:35:51 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1417,3 +1417,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postgrey to 1.27 [taca 2007-04-02]
 	Updated mail/ruby-tmail to 0.10.8nb5 [taca 2007-04-02]
 	Updated mail/postfix to 2.4.0 [martti 2007-04-03]
+	Updated mail/postfix-current to 2.5-20070402 [martti 2007-04-03]
