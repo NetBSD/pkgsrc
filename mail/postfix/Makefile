@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2007/02/20 16:49:29 joerg Exp $
+# $NetBSD: Makefile,v 1.200 2007/04/03 07:18:59 martti Exp $
 
 DISTNAME=	postfix-2.3.7
 #PKGREVISION=	1
@@ -116,7 +116,7 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
-.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mdovecot-sasl) 
+.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mdovecot-sasl)
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
@@ -153,7 +153,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
-	cd ${WRKSRC}; sh ./postfix-install -non-interactive		\
+	cd ${WRKSRC} && sh ./postfix-install -non-interactive		\
 		config_directory="${EXAMPLEDIR}"
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
 		${PREFIX}/sbin/qshape
