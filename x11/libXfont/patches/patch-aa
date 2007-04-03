@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2007/04/03 20:27:21 drochner Exp $
+
+--- src/bitmap/bdfread.c.orig	2007-04-03 19:01:20.000000000 +0200
++++ src/bitmap/bdfread.c
+@@ -65,6 +65,12 @@ from The Open Group.
+ #include <X11/fonts/bitmap.h>
+ #include <X11/fonts/bdfint.h>
+ 
++#if HAVE_STDINT_H
++#include <stdint.h>
++#elif !defined(INT32_MAX)
++#define INT32_MAX 0x7fffffff
++#endif
++
+ #define INDICES 256
+ #define MAXENCODING 0xFFFF
+ #define BDFLINELEN  1024
+@@ -288,6 +294,11 @@ bdfReadCharacters(FontFilePtr file, Font
+ 	bdfError("invalid number of CHARS in BDF file\n");
+ 	return (FALSE);
+     }
++    if (nchars > INT32_MAX / sizeof(CharInfoRec)) {
++	bdfError("Couldn't allocate pCI (%d*%d)\n", nchars,
++		 sizeof(CharInfoRec));
++	goto BAILOUT;
++    }
+     ci = (CharInfoPtr) xalloc(nchars * sizeof(CharInfoRec));
+     if (!ci) {
+ 	bdfError("Couldn't allocate pCI (%d*%d)\n", nchars,
