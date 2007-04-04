@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/02/02 19:09:31 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/04/04 11:50:39 obache Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	5
@@ -45,5 +45,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
