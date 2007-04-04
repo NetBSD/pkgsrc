@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/22 22:50:33 tv Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/04 14:41:23 tv Exp $
 #
 
 DISTNAME=		pgpenvelope-2.10.2
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		security mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pgpenvelope/}
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pgpenvelope.sourceforge.net/
 COMMENT=		GnuPG and Pine/Procmail integration tool
 
