@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.732 2007/04/03 14:02:55 taca Exp $
+$NetBSD: CHANGES-2007,v 1.733 2007/04/04 06:09:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1419,3 +1419,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix to 2.4.0 [martti 2007-04-03]
 	Updated mail/postfix-current to 2.5-20070402 [martti 2007-04-03]
 	Updated mail/postgrey to 1.27nb1 [taca 2007-04-03]
+	Removed sysutils/gkx86info [wiz 2007-04-04]
