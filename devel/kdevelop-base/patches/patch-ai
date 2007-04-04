@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2007/03/24 14:01:29 markd Exp $
+$NetBSD: patch-ai,v 1.2 2007/04/04 13:25:28 joerg Exp $
 
 --- vcs/clearcase/clearcasemanipulator.cpp.orig	2007-01-26 04:41:45.000000000 +1300
 +++ vcs/clearcase/clearcasemanipulator.cpp
@@ -7,7 +7,7 @@ $NetBSD: patch-ai,v 1.1 2007/03/24 14:01:29 markd Exp $
  #include <errno.h>
  
 -#if defined(Q_OS_MACX) || defined(MACOSX)
-+#if defined(Q_OS_MACX) || defined(MACOSX) || defined(__NetBSD__)
+++#if defined(Q_OS_MACX) || defined(MACOSX) || defined(__NetBSD__) || defined(__DragonFly__) || defined(USE_SOLARIS)
  //this function is taken from GNU libc
  //it does not exist on macos
  int getline(char **lineptr, size_t *n, FILE *stream)
