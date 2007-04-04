@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2007/02/18 19:11:52 tv Exp $
+# $NetBSD: Makefile,v 1.237 2007/04/04 14:32:52 tv Exp $
 #
 
 COMMENT=	Programming languages
@@ -181,7 +181,6 @@ SUBDIR+=	umb-scheme
 SUBDIR+=	utilisp
 SUBDIR+=	vscm
 SUBDIR+=	vslisp
-SUBDIR+=	win32-jdk
 SUBDIR+=	wsbasic
 SUBDIR+=	yabasic
 SUBDIR+=	yap
