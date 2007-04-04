@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2007/01/30 22:34:06 joerg Exp $
+# $NetBSD: Makefile.common,v 1.48 2007/04/04 13:30:26 obache Exp $
 #
 
 DISTNAME=		libgda-2.99.2
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--without-ldap
 .if !defined(LIBGDA_PROVIDER) || empty(LIBGDA_PROVIDER:Mmysql)
 CONFIGURE_ARGS+=	--without-mysql
 .endif
+.if !defined(LIBGDA_PROVIDER) || empty(LIBGDA_PROVIDER:Mpostgres)
+CONFIGURE_ARGS+=	--without-postgres
+.endif
+
 
 .if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
