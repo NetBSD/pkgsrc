@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6179 2007/04/03 22:07:12 gdt Exp $
+$NetBSD: TODO,v 1.6180 2007/04/04 22:11:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,6 +343,7 @@ Suggested package updates
 	o btpd-0.12
 	o bug-buddy-2.18.0
 	o bwidget-1.7.0
+	o bzr-0.15
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cal3d-0.11.0
@@ -399,7 +400,7 @@ Suggested package updates
 	o dctc-0.85.9
 	o dd_rescue-1.13
 	o defendguin-0.0.11
-	o dejavu-ttf-2.15
+	o dejavu-ttf-2.16
 	o delegate-9.3.2
 	o deskbar-applet-2.18.0
 	o devIL-1.6.7
@@ -428,6 +429,7 @@ Suggested package updates
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
+	o echoping-6.0.0
 	o eclipse-3.2.0
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
@@ -682,7 +684,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kadu-0.5.0
 	o kapooka-0.3
-	o kazehakase-0.4.4
+	o kazehakase-0.4.5
 	o kdrill-6.5
 	o kinput2-3.1
 	o kismet-2007.01.1b
@@ -770,6 +772,7 @@ Suggested package updates
 	o lq-sp-1.3.4.13
 	o lsh-2.0.3
 	o ltm-0.40
+	o lua-5.1.2
 	o lucy-1.19p
 	o lwp-2.3
 	o lyx-1.4.4
@@ -1194,7 +1197,7 @@ Suggested package updates
 	o rep-gtk-0.18
 	o replex-0.1.6.7
 	o resize_image-0.7
-	o rhythmbox-0.9.8
+	o rhythmbox-0.10.0
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
@@ -1270,6 +1273,7 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.3
 	o source-highlight-2.6
+	o spamdyke-2.3.0
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
@@ -1388,9 +1392,10 @@ Suggested package updates
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xalan-c-1.10.0
 	o xanalyser-1.30
-	o xbindkeys-1.8.0
+	o xbindkeys-1.8.1
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
+	o xchat-2.8.2
 	o xchm-1.11
 	o xcircuit-3.6.85
 	o xdaliclock-2.23
