@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/03/22 21:40:40 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/04 13:34:42 joerg Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -27,6 +27,8 @@ share/fluxbox/nls/da_DK.UTF-8/fluxbox.cat
 share/fluxbox/nls/de_DE.ISO-8859-15/fluxbox.cat
 share/fluxbox/nls/de_DE.UTF-8/fluxbox.cat
 share/fluxbox/nls/el_GR.UTF-8/fluxbox.cat
+share/fluxbox/nls/es_AR.ISO-8859-15/fluxbox.cat
+share/fluxbox/nls/es_AR.UTF-8/fluxbox.cat
 share/fluxbox/nls/es_ES.ISO-8859-15/fluxbox.cat
 share/fluxbox/nls/es_ES.UTF-8/fluxbox.cat
 share/fluxbox/nls/et_EE.ISO-8859-15/fluxbox.cat
