@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/04 14:37:52 tv Exp $
 #
 
 DISTNAME=		esound-0.2.35-1
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			libesound0-0.2.35-1.tar.bz2 \
 			libaudiofile0-0.2.6-2.tar.bz2
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		interix-pkg-people@NetBSD.org
 COMMENT=		Enlightened sound daemon (daemon only) for Cygwin/Interix
 
 ONLY_FOR_PLATFORM=	Interix-*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/04 14:37:52 tv Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_CYGWIN:=release/cygwin/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tv@NetBSD.org
+MAINTAINER=		interix-pkg-people@NetBSD.org
 HOMEPAGE=		http://www.cygwin.com/
 COMMENT=		Basic Cygwin library and executables for emulation
 
