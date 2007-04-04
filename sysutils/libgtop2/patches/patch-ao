@@ -1,8 +1,39 @@
-$NetBSD: patch-ao,v 1.1 2006/02/28 23:48:12 joerg Exp $
+$NetBSD: patch-ao,v 1.2 2007/04/04 18:53:45 gdt Exp $
 
---- sysdeps/freebsd/procuid.c.orig	2004-09-23 22:44:19.000000000 +0000
+--- sysdeps/freebsd/procuid.c.orig	2005-12-12 10:09:39.000000000 +0000
 +++ sysdeps/freebsd/procuid.c
-@@ -91,8 +91,17 @@ glibtop_get_proc_uid_p (glibtop *server,
+@@ -53,11 +53,16 @@ void
+ glibtop_get_proc_uid_p (glibtop *server, glibtop_proc_uid *buf,
+ 			pid_t pid)
+ {
++#if defined(KERN_PROC2)
++	struct kinfo_proc2 *pinfo;
++#else
+ 	struct kinfo_proc *pinfo;
++#endif
+ 	int count = 0;
+ 
+ #if LIBGTOP_VERSION_CODE >= 1001000
+-#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000) \
++    && !defined(KERN_PROC2)
+ 	struct ucred ucred;
+ 	void *ucred_ptr;
+ #endif
+@@ -71,7 +76,12 @@ glibtop_get_proc_uid_p (glibtop *server,
+ 	if (pid == 0) return;
+ 
+ 	/* Get the process information */
++#if defined(KERN_PROC2)
++	pinfo = kvm_getproc2 (server->machine.kd, KERN_PROC_PID, pid,
++			sizeof(struct kinfo_proc2), &count);
++#else
+ 	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
++#endif
+ 	if ((pinfo == NULL) || (count != 1)) {
+ 		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
+ 		return;
+@@ -92,8 +102,28 @@ glibtop_get_proc_uid_p (glibtop *server,
  #else
  #define	PROC_PRIORITY	ki_priority
  #endif
@@ -16,12 +47,23 @@ $NetBSD: patch-ao,v 1.1 2006/02/28 23:48:12 joerg Exp $
 +#define	PROC_PGID	kp_eproc.e_pgid
 +#define	PROC_TPGID	kp_eproc.e_tpgid
 +#define	PROC_NICE	kp_proc.p_nice
++
++#elif defined(KERN_PROC2) /* && defined(__NetBSD__) ? */
++#define	PROC_RUID	p_ruid
++#define	PROC_SVUID	p_svuid
++#define	PROC_RGID	p_rgid
++#define	PROC_SVGID	p_svgid
++#define	PROC_PPID	p_ppid
++#define	PROC_PGID	p__pgid
++#define	PROC_TPGID	p_tpgid
++#define	PROC_NICE	p_nice
++#define	PROC_PRIORITY	p_priority
  
 +#else
  #define	PROC_RUID	kp_eproc.e_pcred.p_ruid
  #define	PROC_SVUID	kp_eproc.e_pcred.p_svuid
  #define	PROC_RGID	kp_eproc.e_pcred.p_rgid
-@@ -115,7 +124,7 @@ glibtop_get_proc_uid_p (glibtop *server,
+@@ -116,7 +146,7 @@ glibtop_get_proc_uid_p (glibtop *server,
  	buf->tpgid = pinfo [0].PROC_TPGID;
  
  	buf->nice     = pinfo [0].PROC_NICE;
