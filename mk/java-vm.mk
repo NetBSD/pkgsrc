@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.56 2007/02/22 23:52:58 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.57 2007/04/04 14:32:52 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -58,7 +58,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 _PKG_JVMS.6=		sun-jdk6
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 scsl-jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
-_PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe # win32-jdk
+_PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
 _PKG_JVMS=		${_PKG_JVMS.${USE_JAVA2}}
 
@@ -84,8 +84,6 @@ _PKG_JVM_DEFAULT?=	sun-jdk
 _PKG_JVM_DEFAULT?=	blackdown-jdk13
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk
-#.  elif !empty(MACHINE_PLATFORM:MInterix-*-*)
-#_PKG_JVM_DEFAULT?=	win32-jdk
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
@@ -135,8 +133,6 @@ _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
 	NetBSD-*-i386
-#_ONLY_FOR_PLATFORMS.win32-jdk= \
-#	Interix-*-*
 
 # Set the accepted JVMs for this platform.
 .for _jvm_ in ${_PKG_JVMS}
@@ -156,7 +152,6 @@ _JAVA_PKGBASE.sun-jdk13=	sun-jre13
 _JAVA_PKGBASE.sun-jdk14=	sun-jre14
 _JAVA_PKGBASE.sun-jdk15=	sun-jre15
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
-#_JAVA_PKGBASE.win32-jdk=	win32-jdk
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -252,7 +247,6 @@ BUILDLINK_API_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=		sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=		sun-jre6-[0-9]*
-#BUILDLINK_API_DEPENDS.win32-jdk?=		win32-jdk>=0.1
 
 _JRE.blackdown-jdk13=	blackdown-jre13
 _JRE.jdk=		jdk
@@ -263,7 +257,6 @@ _JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.sun-jdk15=		sun-jre15
 _JRE.sun-jdk6=		sun-jre6
-#_JRE.win32-jdk=		win32-jdk
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -310,10 +303,6 @@ _JDK_PKGSRCDIR=		../../lang/sun-jdk6
 _JRE_PKGSRCDIR=		../../lang/sun-jre6
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-6
 UNLIMIT_RESOURCES+=	datasize
-#.elif ${_PKG_JVM} == "win32-jdk"
-#_JDK_PKGSRCDIR=		../../lang/win32-jdk
-#_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-#_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/win32
 .endif
 
 .if defined(_JAVA_HOME_DEFAULT)
