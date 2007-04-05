@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/17 15:45:46 obache Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/05 12:21:27 obache Exp $
 #
 
 .include "../../textproc/hyperestraier/Makefile.common"
@@ -6,8 +6,6 @@
 PKGNAME=	${RUBY_PKGPREFIX}-pure-hyperestraier-1.0.0.${HYPERESTRAIER_VERSION}
 CATEGORIES=	textproc ruby
 
-MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://hyperestraier.sourceforge.net/
 COMMENT=	Ruby pure interface of Hyper Estaier
 
 MY_SUBDIR=	rubypure

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2007/03/05 15:58:19 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/04/05 12:21:27 obache Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	japanese textproc www
 
-MAINTAINER=	obata@lins.jp
-HOMEPAGE=	http://hyperestraier.sourceforge.net/
 COMMENT=	Full-text search system for communities
 
 GNU_CONFIGURE=		yes
