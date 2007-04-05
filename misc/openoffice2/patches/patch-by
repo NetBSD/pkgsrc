@@ -1,4 +1,4 @@
-$NetBSD: patch-by,v 1.1 2007/03/19 16:51:15 hira Exp $
+$NetBSD: patch-by,v 1.2 2007/04/05 23:24:02 hira Exp $
 
 --- filter/source/config/fragments/langfilter.pl.orig	2007-03-19 22:40:51.000000000 +0900
 +++ filter/source/config/fragments/langfilter.pl	2007-03-19 22:41:34.000000000 +0900
@@ -9,7 +9,7 @@ $NetBSD: patch-by,v 1.1 2007/03/19 16:51:15 hira Exp $
 +
 +# XXX
 +my $infile = $ARGV[1];
-+my $lang=$ARGV[4];
++my $lang = $ARGV[4];
 +
 +open(IN, $infile) || die "cannot open: $!";
 +

@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.13 2007/04/01 23:50:59 hira Exp $
+# $NetBSD: Makefile,v 1.14 2007/04/05 23:24:01 hira Exp $
 #
 
-OO_VER=			2.1.0
+OO_VER=			2.2.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
 
-DISTFILES=		OOo_${OO_VER}_src.tar.bz2
+DISTFILES=		OOo_${OO_VER}_src_core.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_binfilter.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 #DISTFILES+=		OOo_${OO_VER}_src_sdk.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
-DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 # Missing file from tarball...
 DISTFILES+=		bridge.h
 SITES.bridge.h=		http://www.openoffice.org/source/browse/%2Acheckout%2A/udk/bridges/inc/bridges/cpp_uno/Attic/
@@ -29,14 +28,12 @@ BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOE680_m6
+WRKSRC=			${WRKDIR}/OOF680_m14
 CONFIGURE_DIRS=		config_office
 
+# Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
+GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
-GCC_REQD+=		3.0
-.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
-USE_PKGSRC_GCC=		YES
-.endif
 
 USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
@@ -87,7 +84,7 @@ SUBST_FILES.X11_LDFLAGS=	solenv/inc/${OPENOFFICE_OUTPATH:Q}.mk
 SUBST_SED.X11_LDFLAGS=		-e 's|@X11_LDFLAGS@|${X11_LDFLAGS}|g'
 
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
-OO_PKGROOT=	/opt/openoffice.org2.1
+OO_PKGROOT=	/opt/openoffice.org2.2
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter
 
 post-extract:
