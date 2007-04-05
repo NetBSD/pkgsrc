@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/03/21 06:53:24 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/04/05 18:11:53 gdt Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -18,6 +18,8 @@ DIST=			${WRKSRC}/mozilla/dist
 BUILD_TARGET=		nss_build_all
 MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
 MAKE_ENV+=		LIBRUNPATH=${PREFIX}/lib BUILD_OPT=1
+
+MAKE_JOBS_SAFE=		no
 
 .include		"../../mk/bsd.prefs.mk"
 
