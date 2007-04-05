@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2007/03/21 12:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2007/04/05 19:03:02 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.16.2
@@ -19,6 +19,24 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+
+# XXX: only needed in 2.16.x, 2.18.x is fixed.
+SUBST_CLASSES+=		gdu
+SUBST_FILES.gdu=	mixer/docs/C/mixer_applet2.xml
+SUBST_FILES.gdu+=	drivemount/help/C/drivemount.xml
+SUBST_FILES.gdu+=	geyes/docs/C/geyes.xml
+SUBST_FILES.gdu+=	mini-commander/help/C/command-line.xml
+SUBST_FILES.gdu+=	battstat/docs/C/battstat.xml
+SUBST_FILES.gdu+=	multiload/docs/C/multiload.xml
+SUBST_FILES.gdu+=	gweather/docs/C/gweather.xml
+SUBST_FILES.gdu+=	accessx-status/docs/C/accessx-status.xml
+SUBST_FILES.gdu+=	stickynotes/docs/C/stickynotes_applet.xml
+SUBST_FILES.gdu+=	gswitchit/help/C/gswitchit.xml
+SUBST_FILES.gdu+=	trashapplet/docs/C/trashapplet.xml
+SUBST_FILES.gdu+=	cpufreq/help/C/cpufreq-applet.xml
+SUBST_SED.gdu=		-e 's/<publisher>/<publisher role="maintainer">/g'
+SUBST_STAGE.gdu=	pre-configure
+SUBST_MESSAGE.gdu=	Fixing for gnome-doc-utils-0.10.1.
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome2-applets
 PKG_SUPPORTED_OPTIONS=	inet6
