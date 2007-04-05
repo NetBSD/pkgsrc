@@ -1,16 +1,20 @@
-$NetBSD: patch-ac,v 1.5 2007/03/29 12:00:44 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.6 2007/04/05 13:12:07 drochner Exp $
 
 See https://bugs.freedesktop.org/show_bug.cgi?id=10441
 Instead of the patch there which relies on things like __hpux__
 we use the configure test results.
 
---- test/pdiff/pdiff.c.orig	2007-03-19 15:08:04.000000000 -0500
+--- test/pdiff/pdiff.c.orig	2007-03-19 21:08:04.000000000 +0100
 +++ test/pdiff/pdiff.c
-@@ -20,7 +20,19 @@
+@@ -20,7 +20,23 @@
  #include <math.h>
  #include <stdio.h>
  #include <stdlib.h>
 -#include <stdint.h>
++
++#if HAVE_CONFIG_H
++#include "config.h"
++#endif
 +
 +#ifdef HAVE_STDINT_H
 +#  include <stdint.h>
