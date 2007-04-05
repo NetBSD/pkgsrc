@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 09:14:12 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/05 12:21:26 obache Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://0xcc.net/pdumpfs/
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://0xcc.net/pdumpfs/
 COMMENT=	Simple daily backup system similar to Plan9's dumpfs
 
