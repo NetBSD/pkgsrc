@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/04/05 16:21:37 kent Exp $
 #
 PEACE_VERSION=	0.0.20060701
 DISTNAME=	peace-${PEACE_VERSION}
-SITES.peace-0.0.20060701.tar.gz=http://chiharu.hauN.org/peace/dist/
+#SITES.peace-0.0.20060701.tar.gz=http://chiharu.hauN.org/peace/dist/
 CATEGORIES=	emulators
 
 MAINTAINER=	kent@NetBSD.org
