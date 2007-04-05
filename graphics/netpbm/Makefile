@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2007/02/19 02:25:19 rillig Exp $
+# $NetBSD: Makefile,v 1.152 2007/04/05 19:41:48 gdt Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
+
+MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
