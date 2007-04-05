@@ -1,0 +1,18 @@
+$NetBSD: patch-ba,v 1.1 2007/04/05 19:03:02 wiz Exp $
+
+--- gswitchit/help/C/gswitchit.xml.orig	2007-04-05 18:06:35.000000000 +0000
++++ gswitchit/help/C/gswitchit.xml
+@@ -45,6 +45,13 @@ Template last modified Feb 12, 2002
+     <publishername>GNOME Documentation Project</publishername> 
+   </publisher> 
+ 
++  <revhistory>
++    <revision>
++      <revnumber>2.8</revnumber>
++      <date>2004-08</date>
++    </revision>
++  </revhistory>
++
+   &legal;
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
