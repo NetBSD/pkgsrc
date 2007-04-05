@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.45 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: subst.mk,v 1.46 2007/04/05 18:33:09 wiz Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -64,7 +64,7 @@ ECHO_SUBST_MSG?=	${STEP_MSG}
 _SUBST_IS_TEXT_FILE?= \
 	{ ${TEST} -f "$$file"						\
 	  && ${FILE_CMD} "$$file"					\
-	     | ${EGREP} "(executable .* script|shell script|text|Assembler source|libtool|Quake I or II world or extension)";	\
+	     | ${EGREP} "(executable .* script|shell script|text|Assembler source|libtool|Quake I or II world or extension|XML)";	\
 	} >/dev/null 2>&1
 
 _SUBST_BACKUP_SUFFIX=	.subst.sav
