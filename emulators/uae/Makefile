@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/04/04 17:36:17 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2007/04/06 06:03:08 wiz Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	3
@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == NetBSD && exists(/usr/include/sys/statvfs.h)
 CONFIGURE_ENV+=	cv_func_getmntinfo=yes fu_cv_sys_mounted_getmntinfo=yes
