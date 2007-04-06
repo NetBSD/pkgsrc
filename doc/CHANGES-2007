@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.737 2007/04/06 13:43:36 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.738 2007/04/06 14:49:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt4-libs to 4.2.3nb1 [markd 2007-04-06]
 	Updated x11/kdelibs3 to 3.5.6nb3 [markd 2007-04-06]
 	Updated misc/openoffice2-bin to 2.2.0 [ghen 2007-04-06]
+	Updated lang/ruby18-base to 1.8.6nb1 [taca 2007-04-06]
