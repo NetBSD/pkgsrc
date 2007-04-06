@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2007/03/15 08:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/04/06 13:42:25 ghen Exp $
 
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
-PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -15,8 +14,8 @@ BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 1
 
-OO_VER=			2.1
-OO_RELEASE=		2.1.0
+OO_VER=			2.2
+OO_RELEASE=		2.2.0
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -51,32 +50,32 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
 DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/packages
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/packages
 .  elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/RPMS
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/RPMS
 .  endif
 .endif
 
 .if ${OPSYS} == "DragonFly"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/RPMS
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/RPMS
 .endif
 
 .if ${OPSYS} == "Linux"
 .if ${ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/RPMS
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/RPMS
 .endif
 .endif
 
 .if ${OPSYS} == "SunOS"
 .if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/packages
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/packages
 .elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_RELEASE}_Solarisx86_install_en-US
-WRKSRC=		${WRKDIR}/OOE680_m6_native_packed-1_en-US.9095/packages
+WRKSRC=		${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/packages
 .endif
 .endif
 
