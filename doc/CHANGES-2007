@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.735 2007/04/06 12:22:04 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.736 2007/04/06 13:05:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1422,3 +1422,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed sysutils/gkx86info [wiz 2007-04-04]
 	Removed lang/win32-jdk [tv 2007-04-04]
 	Updated mail/dovecot to 1.0rc30 [ghen 2007-04-06]
+	Updated x11/qt3-libs to 3.3.8nb2 [markd 2007-04-06]
+	Updated x11/qt4-libs to 4.2.3nb1 [markd 2007-04-06]
+	Updated x11/kdelibs3 to 3.5.6nb3 [markd 2007-04-06]
