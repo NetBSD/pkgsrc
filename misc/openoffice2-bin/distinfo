@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2007/01/19 13:19:14 dmcmahill Exp $
+$NetBSD: distinfo,v 1.10 2007/04/06 13:42:25 ghen Exp $
 
-SHA1 (OOo_2.1.0_LinuxIntel_install_en-US.tar.gz) = 6de6a83d402817ef5116d28072f9dd6b0600c6d6
-RMD160 (OOo_2.1.0_LinuxIntel_install_en-US.tar.gz) = 6328142489f11ea713c80952b48e0446a1bbf905
-Size (OOo_2.1.0_LinuxIntel_install_en-US.tar.gz) = 128789627 bytes
-SHA1 (OOo_2.1.0_SolarisSparc_install_en-US.tar.gz) = 6a86792d97c16adc64ece3327271a0a12a650e86
-RMD160 (OOo_2.1.0_SolarisSparc_install_en-US.tar.gz) = e236f789f92a4408397016c1bcdfe8d8a99b7b06
-Size (OOo_2.1.0_SolarisSparc_install_en-US.tar.gz) = 130073907 bytes
-SHA1 (OOo_2.1.0_Solarisx86_install_en-US.tar.gz) = a95f45d3913b748fa91e4bb00799d69a55e063ee
-RMD160 (OOo_2.1.0_Solarisx86_install_en-US.tar.gz) = 3a853ecf799254227f261ec8924ac003b5e92dd2
-Size (OOo_2.1.0_Solarisx86_install_en-US.tar.gz) = 120444571 bytes
+SHA1 (OOo_2.2.0_LinuxIntel_install_en-US.tar.gz) = a2a04de16ab3bd9290178312339d5117f4511010
+RMD160 (OOo_2.2.0_LinuxIntel_install_en-US.tar.gz) = dba9b28c0d8ae8cef4b34dbab0ebd0b37a3d0595
+Size (OOo_2.2.0_LinuxIntel_install_en-US.tar.gz) = 131348495 bytes
+SHA1 (OOo_2.2.0_SolarisSparc_install_en-US.tar.gz) = 297452e2b11b698ee36306532a143452743b8e3c
+RMD160 (OOo_2.2.0_SolarisSparc_install_en-US.tar.gz) = a8efee0885055cb2fc2460262cc2a468dbb07ab6
+Size (OOo_2.2.0_SolarisSparc_install_en-US.tar.gz) = 131300806 bytes
+SHA1 (OOo_2.2.0_Solarisx86_install_en-US.tar.gz) = 3f0435cf590377f8c65c54f6a231c89d71fef3a1
+RMD160 (OOo_2.2.0_Solarisx86_install_en-US.tar.gz) = 5204bb8bbb791d4cdf4c784dbbec199c1a0dc11c
+Size (OOo_2.2.0_Solarisx86_install_en-US.tar.gz) = 121894989 bytes
