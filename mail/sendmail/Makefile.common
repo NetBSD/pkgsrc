@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2007/02/22 19:26:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.41 2007/04/06 00:20:32 tv Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.ayamura.org/pub/sendmail/
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	jnemeth@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
 
 LICENSE=	sendmail-license
