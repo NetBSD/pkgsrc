@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.748 2007/04/08 18:04:48 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.749 2007/04/08 18:08:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1439,3 +1439,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/roundcube version 20070314 [adrianp 2007-04-08]
 	Updated games/wesnoth to 1.2.3 [wiz 2007-04-08]
 	Updated devel/m4 to 1.4.9 [wiz 2007-04-08]
+	Updated misc/cksfv to 1.3.10 [wiz 2007-04-08]
