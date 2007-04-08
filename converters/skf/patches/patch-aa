@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2007/02/27 02:29:40 obache Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/08 05:04:38 obache Exp $
 
---- Makefile.in.orig	2007-02-24 14:09:00.000000000 +0900
+--- Makefile.in.orig	2007-03-02 00:16:29.000000000 +0900
 +++ Makefile.in
 @@ -38,6 +38,7 @@ mandir = @mandir@
  includedir = @includedir@
@@ -21,10 +21,10 @@ $NetBSD: patch-aa,v 1.4 2007/02/27 02:29:40 obache Exp $
 -LOCALEJDIR	= "$(LOCALEDIR)/ja/LC_MESSAGES"
 +LOCALEDIR	= $(localedir)
 +LOCALEJDIR	= "$(localedir)/ja/LC_MESSAGES"
+ #SKFLIBDIR	= "$(LSKFDIR)/lib"
+ SKFLIBDIR	= $(LSKFDIR)/lib
  
- PERL_DEST_DIR	= @perl_sitearch_dir@
- RUBY_DEST_DIR	= @ruby_sitearch_dir@
-@@ -93,8 +94,7 @@ CC = @CC@
+@@ -97,8 +98,7 @@ CC = @CC@
  
  SUBDIRS = 
  
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.4 2007/02/27 02:29:40 obache Exp $
  mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
  CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES = 
-@@ -161,7 +161,7 @@ DEP_FILES =  .deps/skf.P
+@@ -164,7 +164,7 @@ DEP_FILES =  .deps/skf.P
  #
  # commands
  #
