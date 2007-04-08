@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/08 23:04:53 tonio Exp $
+
+--- Makefile.orig	2007-01-23 09:13:33.000000000 +0100
++++ Makefile	2007-03-08 10:55:00.000000000 +0100
+@@ -10,12 +10,18 @@
+ 
+ # The OCaml tools to use
+ 
++ifeq (${HAVE_OCAMLOPT},"yes")
+ CAMLC=ocamlc.opt
+ CAMLOPT=ocamlopt.opt
++CAMLDEP=ocamldep.opt
++else
++CAMLC=ocamlc
++CAMLOPT=ocamlopt
++CAMLDEP=ocamldep
++endif
+ CAMLYACC=ocamlyacc
+ YACCFLAGS=-v
+ CAMLLEX=ocamllex
+-CAMLDEP=ocamldep.opt
+ DEPFLAGS=$(INCLUDES)
+ 
+ OCAML_CONFIG=$(shell $(CAMLC) -where)/Makefile.config
+@@ -489,10 +495,12 @@
+ 	for i in $(INSTALL_BINARIES); do \
+ 	  cp $$i $(BINDIR)/; \
+ 	done
++	ocamlfind install ocamlduce META -optional $(INSTALL_LIB_FILES)
++
++install.opt: FORCE META
+ 	for i in $(OPT_VARIANTS); do \
+ 	  cp $$i.opt $(BINDIR)/$$i; \
+ 	done
+-	ocamlfind install ocamlduce META -optional $(INSTALL_LIB_FILES)
+ 
+ uninstall: FORCE
+ 	for i in $(INSTALL_BINARIES); do \
