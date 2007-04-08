@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6188 2007/04/08 16:22:10 wiz Exp $
+$NetBSD: TODO,v 1.6189 2007/04/08 18:00:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1376,7 +1376,6 @@ Suggested package updates
 	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
-	o wesnoth-1.2.3
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wine-0.9.34
