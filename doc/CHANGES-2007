@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.741 2007/04/08 06:24:18 obache Exp $
+$NetBSD: CHANGES-2007,v 1.742 2007/04/08 09:07:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1430,3 +1430,5 @@ Changes to the packages collection and infrastructure in 2007:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2007Q1 branch [agc 2007-04-08]
 	Updated converters/skf to 1.95.0 [obache 2007-04-08]
 	Updated graphics/ruby-RMagick to 1.15.5 [obache 2007-04-08]
+	Updated devel/monotone to 0.34 [jmmv 2007-04-08]
+	Updated devel/monotone-server to 0.34 [jmmv 2007-04-08]
