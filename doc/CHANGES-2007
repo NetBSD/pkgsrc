@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.751 2007/04/08 22:49:32 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.752 2007/04/08 23:09:16 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1443,3 +1443,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/mldonkey to 2.8.4 [wiz 2007-04-08]
 	Updated net/mldonkey-gui to 2.8.4 [wiz 2007-04-08]
 	Updated net/unison-devel to 2.27.10 [tonio 2007-04-08]
+	Added lang/ocamlduce version 3.09.3pl1 [tonio 2007-04-08]
