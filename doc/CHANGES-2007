@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.750 2007/04/08 18:27:57 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.751 2007/04/08 22:49:32 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1442,3 +1442,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/cksfv to 1.3.10 [wiz 2007-04-08]
 	Updated net/mldonkey to 2.8.4 [wiz 2007-04-08]
 	Updated net/mldonkey-gui to 2.8.4 [wiz 2007-04-08]
+	Updated net/unison-devel to 2.27.10 [tonio 2007-04-08]
