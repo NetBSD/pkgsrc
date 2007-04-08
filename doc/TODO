@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6189 2007/04/08 18:00:08 wiz Exp $
+$NetBSD: TODO,v 1.6190 2007/04/08 18:04:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ Suggested package updates
 	o lyx-1.4.4
 	o lyx-qt-1.4.4
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
-	o m4-1.4.9
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
