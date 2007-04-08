@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6190 2007/04/08 18:04:48 wiz Exp $
+$NetBSD: TODO,v 1.6191 2007/04/08 18:08:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o cksfv-1.3.10
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o clex-3.15
