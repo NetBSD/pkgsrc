@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6185 2007/04/08 11:38:15 recht Exp $
+$NetBSD: TODO,v 1.6186 2007/04/08 13:45:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,7 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.16
 	o delegate-9.3.2
-	o deskbar-applet-2.18.0
+	o deskbar-applet-2.18.1
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dhid-5.3
@@ -477,7 +477,7 @@ Suggested package updates
 	o fast-user-switch-applet-2.16.3
 	o fd-2.09c
 	o fdgw-20040609
-	o fetchmail-6.3.7
+	o fetchmail-6.3.8
 	o file-roller-2.18.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -712,7 +712,7 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.5.10
 	o libFoundation-1.1.3
-	o libarchive-2.0.25
+	o libarchive-2.0.27
 	o libassuan-1.0.1
 	o libast-0.7
 	o libbonobo-2.18.0
@@ -847,7 +847,7 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.4
 	o nap-1.5.3
-	o nas-1.8b
+	o nas-1.9
 	o nautilus-2.18.0.1
 	o nautilus-cd-burner-2.16.3 [needs hal]
 	o ncview-1.93b
