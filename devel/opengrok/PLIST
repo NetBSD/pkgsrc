@@ -1,0 +1,85 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/08 16:59:41 adrianp Exp $
+share/examples/opengrok/conf/default/html/foot.html
+share/examples/opengrok/conf/default/html/help.html
+share/examples/opengrok/conf/default/html/img/Logo.png
+share/examples/opengrok/conf/default/html/img/icon.png
+share/examples/opengrok/conf/default/html/img/rss.png
+share/examples/opengrok/conf/default/html/img/servedby.png
+share/examples/opengrok/conf/default/html/index.html
+share/examples/opengrok/conf/default/html/print.css
+share/examples/opengrok/conf/default/html/rss.xsl.xml
+share/examples/opengrok/conf/default/html/style.css
+share/examples/opengrok/conf/default/web.xml
+share/examples/opengrok/conf/offwhite/html/foot.html
+share/examples/opengrok/conf/offwhite/html/help.html
+share/examples/opengrok/conf/offwhite/html/img/Logo.png
+share/examples/opengrok/conf/offwhite/html/img/b.gif
+share/examples/opengrok/conf/offwhite/html/img/d.gif
+share/examples/opengrok/conf/offwhite/html/img/do.gif
+share/examples/opengrok/conf/offwhite/html/img/f.gif
+share/examples/opengrok/conf/offwhite/html/img/h.gif
+share/examples/opengrok/conf/offwhite/html/img/icon.png
+share/examples/opengrok/conf/offwhite/html/img/l.gif
+share/examples/opengrok/conf/offwhite/html/img/p.gif
+share/examples/opengrok/conf/offwhite/html/img/q.gif
+share/examples/opengrok/conf/offwhite/html/img/r.gif
+share/examples/opengrok/conf/offwhite/html/img/rss.png
+share/examples/opengrok/conf/offwhite/html/img/servedby.png
+share/examples/opengrok/conf/offwhite/html/img/t.gif
+share/examples/opengrok/conf/offwhite/html/img/w.gif
+share/examples/opengrok/conf/offwhite/html/index.html
+share/examples/opengrok/conf/offwhite/html/print.css
+share/examples/opengrok/conf/offwhite/html/rss.xsl.xml
+share/examples/opengrok/conf/offwhite/html/style.css
+share/examples/opengrok/conf/offwhite/web.xml
+share/examples/opengrok/conf/polished/html/foot.html
+share/examples/opengrok/conf/polished/html/help.html
+share/examples/opengrok/conf/polished/html/img/Logo.png
+share/examples/opengrok/conf/polished/html/img/b.gif
+share/examples/opengrok/conf/polished/html/img/d.gif
+share/examples/opengrok/conf/polished/html/img/do.gif
+share/examples/opengrok/conf/polished/html/img/f.gif
+share/examples/opengrok/conf/polished/html/img/h.gif
+share/examples/opengrok/conf/polished/html/img/icon.png
+share/examples/opengrok/conf/polished/html/img/l.gif
+share/examples/opengrok/conf/polished/html/img/p.gif
+share/examples/opengrok/conf/polished/html/img/q.gif
+share/examples/opengrok/conf/polished/html/img/r.gif
+share/examples/opengrok/conf/polished/html/img/rss.png
+share/examples/opengrok/conf/polished/html/img/servedby.png
+share/examples/opengrok/conf/polished/html/img/t.gif
+share/examples/opengrok/conf/polished/html/img/w.gif
+share/examples/opengrok/conf/polished/html/index.html
+share/examples/opengrok/conf/polished/html/print.css
+share/examples/opengrok/conf/polished/html/rss.xsl.xml
+share/examples/opengrok/conf/polished/html/style.css
+share/examples/opengrok/conf/polished/web.xml
+share/examples/opengrok/paths.tsv
+share/opengrok/README.txt
+share/opengrok/lib/ant-tools.jar
+share/opengrok/lib/bcel-5.1.jar
+share/opengrok/lib/jakarta-oro-2.0.8.jar
+share/opengrok/lib/lucene-1.4.3.jar
+share/opengrok/lib/org.apache.commons.jrcs.diff.jar
+share/opengrok/lib/org.apache.commons.jrcs.rcs.jar
+share/opengrok/lib/servlet-api.jar
+share/opengrok/lib/speller.jar
+share/opengrok/lib/svn-javahl.jar
+share/opengrok/lib/swing-layout-0.9.jar
+share/opengrok/opengrok.jar
+share/opengrok/run-quiet.sh
+share/opengrok/run.sh
+share/opengrok/source.war
+@dirrm share/opengrok/lib
+@dirrm share/opengrok
+@dirrm share/examples/opengrok/conf/polished/html/img
+@dirrm share/examples/opengrok/conf/polished/html
+@dirrm share/examples/opengrok/conf/polished
+@dirrm share/examples/opengrok/conf/offwhite/html/img
+@dirrm share/examples/opengrok/conf/offwhite/html
+@dirrm share/examples/opengrok/conf/offwhite
+@dirrm share/examples/opengrok/conf/default/html/img
+@dirrm share/examples/opengrok/conf/default/html
+@dirrm share/examples/opengrok/conf/default
+@dirrm share/examples/opengrok/conf
+@dirrm share/examples/opengrok
