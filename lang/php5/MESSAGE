@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2006/06/06 16:42:02 jlam Exp $
+$NetBSD: MESSAGE,v 1.7 2007/04/08 10:49:21 ghen Exp $
 
 To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
 either configure the HTTP server to use the PHP CGI binary located in
 
         ${CGIDIR}/php
 
-or you may install a PHP module for your HTTP server, e.g. ap-php5.
+or you may install a PHP module for your HTTP server, e.g. www/ap-php.
 
 Note that php-openssl is no longer a separate package as of version
 5.0.5nb1 because the main PHP5 package has it built-in now.
