@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6191 2007/04/08 18:08:19 wiz Exp $
+$NetBSD: TODO,v 1.6192 2007/04/08 18:27:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -811,8 +811,6 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mksh-29
 	o mkvtoolnix-2.0.2
-	o mldonkey-2.8.4
-	o mldonkey-gui-2.8.4
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.1
