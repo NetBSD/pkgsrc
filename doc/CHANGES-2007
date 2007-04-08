@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.746 2007/04/08 17:10:41 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.747 2007/04/08 18:00:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1437,3 +1437,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed-devel to 2.4.0beta7 [xtraeme 2007-04-08]
 	Added devel/opengrok version 0.4 [adrianp 2007-04-08]
 	Added mail/roundcube version 20070314 [adrianp 2007-04-08]
+	Updated games/wesnoth to 1.2.3 [wiz 2007-04-08]
