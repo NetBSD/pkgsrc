@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/08 17:04:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/08 21:25:44 adrianp Exp $
 #
 
 #		SVN build 508
@@ -16,7 +16,6 @@ COMMENT=	Browser-based multilingual IMAP client
 
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.1:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../misc/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-imap>=4.3.1:../../mail/php-imap
 
 USE_LANGUAGES=	# none
 WRKSRC=		${WRKDIR}/roundcubemail
