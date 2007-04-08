@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: trace.c,v 1.1 2005/10/31 21:34:25 reed Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -38,11 +38,11 @@
 
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: trace.c,v 1.1 2005/10/31 21:34:25 reed Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: trace.c,v 1.1 2005/10/31 21:34:25 reed Exp $");
 #endif /* not lint */
 #endif
 
