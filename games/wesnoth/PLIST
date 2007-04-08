@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2007/01/15 22:26:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/08 17:59:40 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/cs/man6/wesnoth.6
 man/de/man6/wesnoth.6
 man/en_GB/man6/wesnoth.6
 man/fr/man6/wesnoth.6
+man/it/man6/wesnoth.6
 man/ja/man6/wesnoth.6
 man/man6/wesnoth.6
 man/nl/man6/wesnoth.6
@@ -1186,6 +1187,7 @@ share/wesnoth/data/languages/fr_FR.cfg
 share/wesnoth/data/languages/gl_ES.cfg
 share/wesnoth/data/languages/he_IL.cfg
 share/wesnoth/data/languages/hu_HU.cfg
+share/wesnoth/data/languages/id_ID.cfg
 share/wesnoth/data/languages/it_IT.cfg
 share/wesnoth/data/languages/ja_JP.cfg
 share/wesnoth/data/languages/ko_KR.cfg
@@ -1222,6 +1224,7 @@ share/wesnoth/data/maps/multiplayer/3p_Triple_Blitz
 share/wesnoth/data/maps/multiplayer/4p_Blue_Water_Province
 share/wesnoth/data/maps/multiplayer/4p_Castle_Hopping_Isle
 share/wesnoth/data/maps/multiplayer/4p_Clash
+share/wesnoth/data/maps/multiplayer/4p_Hamlets
 share/wesnoth/data/maps/multiplayer/4p_Isars_Cross
 share/wesnoth/data/maps/multiplayer/4p_King_of_the_Hill
 share/wesnoth/data/maps/multiplayer/4p_Lagoon
@@ -1234,6 +1237,7 @@ share/wesnoth/data/maps/multiplayer/5p_Forest_of_Fear
 share/wesnoth/data/maps/multiplayer/6p_Amohsad_Caldera
 share/wesnoth/data/maps/multiplayer/6p_Crusaders_Field
 share/wesnoth/data/maps/multiplayer/6p_Hexcake
+share/wesnoth/data/maps/multiplayer/6p_The_Manzivan_Traps
 share/wesnoth/data/maps/multiplayer/6p_Waterloo_Sunset
 share/wesnoth/data/maps/multiplayer/8p_Morituri
 share/wesnoth/data/maps/multiplayer/9p_Merkwuerdigliebe
@@ -1258,6 +1262,7 @@ share/wesnoth/data/scenarios/multiplayer/3p_Triple_Blitz.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Blue_Water_Province.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Castle_Hopping_Isle.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Clash.cfg
+share/wesnoth/data/scenarios/multiplayer/4p_Hamlets.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Isars_Cross.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_King_of_the_Hill.cfg
 share/wesnoth/data/scenarios/multiplayer/4p_Lagoon.cfg
@@ -1270,6 +1275,7 @@ share/wesnoth/data/scenarios/multiplayer/5p_Forest_of_Fear.cfg
 share/wesnoth/data/scenarios/multiplayer/6p_Amohsad_Caldera.cfg
 share/wesnoth/data/scenarios/multiplayer/6p_Crusaders_Field.cfg
 share/wesnoth/data/scenarios/multiplayer/6p_Hexcake.cfg
+share/wesnoth/data/scenarios/multiplayer/6p_The_Manzivan_Traps.cfg
 share/wesnoth/data/scenarios/multiplayer/6p_Waterloo_Sunset.cfg
 share/wesnoth/data/scenarios/multiplayer/8p_Morituri.cfg
 share/wesnoth/data/scenarios/multiplayer/9p_Merkwuerdigliebe.cfg
@@ -1541,9 +1547,12 @@ share/wesnoth/data/utils.cfg
 share/wesnoth/fonts/COPYING
 share/wesnoth/fonts/DejaVuSans.ttf
 share/wesnoth/fonts/FreeSans.ttf
+share/wesnoth/images/attacks/axe-deathblade.png
+share/wesnoth/images/attacks/axe-undead.png
 share/wesnoth/images/attacks/axe.png
 share/wesnoth/images/attacks/ballista.png
 share/wesnoth/images/attacks/baneblade.png
+share/wesnoth/images/attacks/battleaxe-undead.png
 share/wesnoth/images/attacks/battleaxe.png
 share/wesnoth/images/attacks/beak.png
 share/wesnoth/images/attacks/blank.png
@@ -1561,6 +1570,7 @@ share/wesnoth/images/attacks/cleaver.png
 share/wesnoth/images/attacks/club.png
 share/wesnoth/images/attacks/crossbow-human.png
 share/wesnoth/images/attacks/crossbow-orcish.png
+share/wesnoth/images/attacks/crossbow-undead.png
 share/wesnoth/images/attacks/crush-wose.png
 share/wesnoth/images/attacks/curse.png
 share/wesnoth/images/attacks/dagger-human.png
@@ -1586,6 +1596,7 @@ share/wesnoth/images/attacks/fist-yeti.png
 share/wesnoth/images/attacks/fist.png
 share/wesnoth/images/attacks/frenzy.png
 share/wesnoth/images/attacks/gaze.png
+share/wesnoth/images/attacks/glaive.png
 share/wesnoth/images/attacks/greatsword-human.png
 share/wesnoth/images/attacks/greatsword-orcish.png
 share/wesnoth/images/attacks/halberd.png
@@ -1604,6 +1615,7 @@ share/wesnoth/images/attacks/magic-missile.png
 share/wesnoth/images/attacks/morning-star.png
 share/wesnoth/images/attacks/mud-glob.png
 share/wesnoth/images/attacks/net.png
+share/wesnoth/images/attacks/pick-axe.png
 share/wesnoth/images/attacks/pike.png
 share/wesnoth/images/attacks/pincers.png
 share/wesnoth/images/attacks/pitchfork.png
@@ -1615,6 +1627,7 @@ share/wesnoth/images/attacks/slam-drake.png
 share/wesnoth/images/attacks/sling.png
 share/wesnoth/images/attacks/spear-orcish.png
 share/wesnoth/images/attacks/spear.png
+share/wesnoth/images/attacks/staff-elven.png
 share/wesnoth/images/attacks/staff-magic.png
 share/wesnoth/images/attacks/staff-necromantic.png
 share/wesnoth/images/attacks/staff-plague.png
@@ -1759,6 +1772,11 @@ share/wesnoth/images/halo/elven/druid-healing5.png
 share/wesnoth/images/halo/elven/druid-healing6.png
 share/wesnoth/images/halo/elven/druid-healing7.png
 share/wesnoth/images/halo/elven/druid-healing8.png
+share/wesnoth/images/halo/elven/elven-shield-halo-100pct.png
+share/wesnoth/images/halo/elven/elven-shield-halo-20pct.png
+share/wesnoth/images/halo/elven/elven-shield-halo-40pct.png
+share/wesnoth/images/halo/elven/elven-shield-halo-60pct.png
+share/wesnoth/images/halo/elven/elven-shield-halo-80pct.png
 share/wesnoth/images/halo/elven/faerie-fire-halo1.png
 share/wesnoth/images/halo/elven/faerie-fire-halo2.png
 share/wesnoth/images/halo/elven/faerie-fire-halo3.png
@@ -1789,6 +1807,17 @@ share/wesnoth/images/halo/elven/shyde-stationary-halo3.png
 share/wesnoth/images/halo/elven/shyde-stationary-halo4.png
 share/wesnoth/images/halo/elven/shyde-stationary-halo5.png
 share/wesnoth/images/halo/elven/shyde-stationary-halo6.png
+share/wesnoth/images/halo/holy/halo1.png
+share/wesnoth/images/halo/holy/halo2.png
+share/wesnoth/images/halo/holy/halo3.png
+share/wesnoth/images/halo/holy/halo4.png
+share/wesnoth/images/halo/holy/halo5.png
+share/wesnoth/images/halo/holy/halo6.png
+share/wesnoth/images/halo/holy/white-cleric-aura.png
+share/wesnoth/images/halo/holy/white-mage-halo1.png
+share/wesnoth/images/halo/holy/white-mage-halo2.png
+share/wesnoth/images/halo/holy/white-mage-halo3.png
+share/wesnoth/images/halo/holy/white-mage-halo4.png
 share/wesnoth/images/halo/lighthouse-aura.png
 share/wesnoth/images/halo/lightning-bolt-1-1.png
 share/wesnoth/images/halo/lightning-bolt-1-2.png
@@ -3787,6 +3816,8 @@ share/wesnoth/images/units/elves-wood/hero-bow.png
 share/wesnoth/images/units/elves-wood/hero-defend.png
 share/wesnoth/images/units/elves-wood/hero-melee-1.png
 share/wesnoth/images/units/elves-wood/hero-melee-2.png
+share/wesnoth/images/units/elves-wood/hero-melee-3.png
+share/wesnoth/images/units/elves-wood/hero-melee-4.png
 share/wesnoth/images/units/elves-wood/hero.png
 share/wesnoth/images/units/elves-wood/marksman+female-bow-attack1.png
 share/wesnoth/images/units/elves-wood/marksman+female-bow-attack2.png
@@ -4216,42 +4247,34 @@ share/wesnoth/images/units/human-loyalists/swordsman-attack-2.png
 share/wesnoth/images/units/human-loyalists/swordsman-attack-3.png
 share/wesnoth/images/units/human-loyalists/swordsman-defend.png
 share/wesnoth/images/units/human-loyalists/swordsman.png
+share/wesnoth/images/units/human-magi/arch-mage+female-attack-magic1.png
+share/wesnoth/images/units/human-magi/arch-mage+female-attack-magic2.png
+share/wesnoth/images/units/human-magi/arch-mage+female-attack-staff1.png
+share/wesnoth/images/units/human-magi/arch-mage+female-attack-staff2.png
 share/wesnoth/images/units/human-magi/arch-mage+female-defend.png
-share/wesnoth/images/units/human-magi/arch-mage+female-die-1.png
-share/wesnoth/images/units/human-magi/arch-mage+female-die-2.png
-share/wesnoth/images/units/human-magi/arch-mage+female-fireball-1.png
-share/wesnoth/images/units/human-magi/arch-mage+female-fireball-2.png
-share/wesnoth/images/units/human-magi/arch-mage+female-fireball-3.png
-share/wesnoth/images/units/human-magi/arch-mage+female-staff-1.png
-share/wesnoth/images/units/human-magi/arch-mage+female-staff-2.png
 share/wesnoth/images/units/human-magi/arch-mage+female.png
+share/wesnoth/images/units/human-magi/arch-mage-attack-magic1.png
+share/wesnoth/images/units/human-magi/arch-mage-attack-magic2.png
+share/wesnoth/images/units/human-magi/arch-mage-attack-staff1.png
+share/wesnoth/images/units/human-magi/arch-mage-attack-staff2.png
 share/wesnoth/images/units/human-magi/arch-mage-defend.png
-share/wesnoth/images/units/human-magi/arch-mage-die-1.png
-share/wesnoth/images/units/human-magi/arch-mage-die-2.png
-share/wesnoth/images/units/human-magi/arch-mage-fireball-1.png
-share/wesnoth/images/units/human-magi/arch-mage-fireball-2.png
-share/wesnoth/images/units/human-magi/arch-mage-fireball-3.png
-share/wesnoth/images/units/human-magi/arch-mage-staff-1.png
-share/wesnoth/images/units/human-magi/arch-mage-staff-2.png
 share/wesnoth/images/units/human-magi/arch-mage.png
+share/wesnoth/images/units/human-magi/great-mage+female-attack-magic1.png
+share/wesnoth/images/units/human-magi/great-mage+female-attack-magic2.png
+share/wesnoth/images/units/human-magi/great-mage+female-attack-staff1.png
+share/wesnoth/images/units/human-magi/great-mage+female-attack-staff2.png
 share/wesnoth/images/units/human-magi/great-mage+female-defend.png
-share/wesnoth/images/units/human-magi/great-mage+female-fireball-1.png
-share/wesnoth/images/units/human-magi/great-mage+female-fireball-2.png
-share/wesnoth/images/units/human-magi/great-mage+female-fireball-3.png
-share/wesnoth/images/units/human-magi/great-mage+female-staff-1.png
-share/wesnoth/images/units/human-magi/great-mage+female-staff-2.png
 share/wesnoth/images/units/human-magi/great-mage+female.png
+share/wesnoth/images/units/human-magi/great-mage-attack-magic1.png
+share/wesnoth/images/units/human-magi/great-mage-attack-magic2.png
+share/wesnoth/images/units/human-magi/great-mage-attack-staff1.png
+share/wesnoth/images/units/human-magi/great-mage-attack-staff2.png
 share/wesnoth/images/units/human-magi/great-mage-defend.png
-share/wesnoth/images/units/human-magi/great-mage-fireball-1.png
-share/wesnoth/images/units/human-magi/great-mage-fireball-2.png
-share/wesnoth/images/units/human-magi/great-mage-fireball-3.png
-share/wesnoth/images/units/human-magi/great-mage-staff-1.png
-share/wesnoth/images/units/human-magi/great-mage-staff-2.png
 share/wesnoth/images/units/human-magi/great-mage.png
 share/wesnoth/images/units/human-magi/mage+female-attack-magic1.png
 share/wesnoth/images/units/human-magi/mage+female-attack-magic2.png
-share/wesnoth/images/units/human-magi/mage+female-attack-staff-1.png
-share/wesnoth/images/units/human-magi/mage+female-attack-staff-2.png
+share/wesnoth/images/units/human-magi/mage+female-attack-staff1.png
+share/wesnoth/images/units/human-magi/mage+female-attack-staff2.png
 share/wesnoth/images/units/human-magi/mage+female-defend.png
 share/wesnoth/images/units/human-magi/mage+female-die-1.png
 share/wesnoth/images/units/human-magi/mage+female-die-2.png
@@ -4268,6 +4291,8 @@ share/wesnoth/images/units/human-magi/mage-die-2.png
 share/wesnoth/images/units/human-magi/mage-die-3.png
 share/wesnoth/images/units/human-magi/mage-die-4.png
 share/wesnoth/images/units/human-magi/mage.png
+share/wesnoth/images/units/human-magi/red-mage+female-attack-magic1.png
+share/wesnoth/images/units/human-magi/red-mage+female-attack-magic2.png
 share/wesnoth/images/units/human-magi/red-mage+female-attack-staff1.png
 share/wesnoth/images/units/human-magi/red-mage+female-attack-staff2.png
 share/wesnoth/images/units/human-magi/red-mage+female-defend.png
@@ -4275,10 +4300,9 @@ share/wesnoth/images/units/human-magi/red-mage+female-die-1.png
 share/wesnoth/images/units/human-magi/red-mage+female-die-2.png
 share/wesnoth/images/units/human-magi/red-mage+female-die-3.png
 share/wesnoth/images/units/human-magi/red-mage+female-die-4.png
-share/wesnoth/images/units/human-magi/red-mage+female-fireball-1.png
-share/wesnoth/images/units/human-magi/red-mage+female-fireball-2.png
-share/wesnoth/images/units/human-magi/red-mage+female-fireball-3.png
 share/wesnoth/images/units/human-magi/red-mage+female.png
+share/wesnoth/images/units/human-magi/red-mage-attack-magic1.png
+share/wesnoth/images/units/human-magi/red-mage-attack-magic2.png
 share/wesnoth/images/units/human-magi/red-mage-attack-staff1.png
 share/wesnoth/images/units/human-magi/red-mage-attack-staff2.png
 share/wesnoth/images/units/human-magi/red-mage-defend.png
@@ -4286,12 +4310,11 @@ share/wesnoth/images/units/human-magi/red-mage-die-1.png
 share/wesnoth/images/units/human-magi/red-mage-die-2.png
 share/wesnoth/images/units/human-magi/red-mage-die-3.png
 share/wesnoth/images/units/human-magi/red-mage-die-4.png
-share/wesnoth/images/units/human-magi/red-mage-fireball-1.png
-share/wesnoth/images/units/human-magi/red-mage-fireball-2.png
-share/wesnoth/images/units/human-magi/red-mage-fireball-3.png
 share/wesnoth/images/units/human-magi/red-mage.png
 share/wesnoth/images/units/human-magi/silver-mage+female-attack-magic1.png
-share/wesnoth/images/units/human-magi/silver-mage+female-attack-melee.png
+share/wesnoth/images/units/human-magi/silver-mage+female-attack-magic2.png
+share/wesnoth/images/units/human-magi/silver-mage+female-attack-staff1.png
+share/wesnoth/images/units/human-magi/silver-mage+female-attack-staff2.png
 share/wesnoth/images/units/human-magi/silver-mage+female-defend.png
 share/wesnoth/images/units/human-magi/silver-mage+female-teleport1.png
 share/wesnoth/images/units/human-magi/silver-mage+female-teleport10.png
@@ -4305,7 +4328,9 @@ share/wesnoth/images/units/human-magi/silver-mage+female-teleport8.png
 share/wesnoth/images/units/human-magi/silver-mage+female-teleport9.png
 share/wesnoth/images/units/human-magi/silver-mage+female.png
 share/wesnoth/images/units/human-magi/silver-mage-attack-magic1.png
-share/wesnoth/images/units/human-magi/silver-mage-attack-melee.png
+share/wesnoth/images/units/human-magi/silver-mage-attack-magic2.png
+share/wesnoth/images/units/human-magi/silver-mage-attack-staff1.png
+share/wesnoth/images/units/human-magi/silver-mage-attack-staff2.png
 share/wesnoth/images/units/human-magi/silver-mage-defend.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport1.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport10.png
@@ -4318,47 +4343,43 @@ share/wesnoth/images/units/human-magi/silver-mage-teleport7.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport8.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport9.png
 share/wesnoth/images/units/human-magi/silver-mage.png
-share/wesnoth/images/units/human-magi/white-cleric+female-attack-melee.png
+share/wesnoth/images/units/human-magi/white-cleric+female-attack-melee1.png
+share/wesnoth/images/units/human-magi/white-cleric+female-attack-melee2.png
 share/wesnoth/images/units/human-magi/white-cleric+female-defend.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic1.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic2.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic3.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic4.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic5.png
-share/wesnoth/images/units/human-magi/white-cleric+female-magic6.png
+share/wesnoth/images/units/human-magi/white-cleric+female-magic-1.png
+share/wesnoth/images/units/human-magi/white-cleric+female-magic-2.png
+share/wesnoth/images/units/human-magi/white-cleric+female-magic-3.png
 share/wesnoth/images/units/human-magi/white-cleric+female.png
-share/wesnoth/images/units/human-magi/white-cleric-attack-melee.png
+share/wesnoth/images/units/human-magi/white-cleric-attack-melee1.png
+share/wesnoth/images/units/human-magi/white-cleric-attack-melee2.png
 share/wesnoth/images/units/human-magi/white-cleric-defend.png
-share/wesnoth/images/units/human-magi/white-cleric-magic1.png
-share/wesnoth/images/units/human-magi/white-cleric-magic2.png
-share/wesnoth/images/units/human-magi/white-cleric-magic3.png
-share/wesnoth/images/units/human-magi/white-cleric-magic4.png
-share/wesnoth/images/units/human-magi/white-cleric-magic5.png
-share/wesnoth/images/units/human-magi/white-cleric-magic6.png
+share/wesnoth/images/units/human-magi/white-cleric-magic-1.png
+share/wesnoth/images/units/human-magi/white-cleric-magic-2.png
+share/wesnoth/images/units/human-magi/white-cleric-magic-3.png
 share/wesnoth/images/units/human-magi/white-cleric.png
 share/wesnoth/images/units/human-magi/white-mage+female-defend.png
 share/wesnoth/images/units/human-magi/white-mage+female-die-1.png
 share/wesnoth/images/units/human-magi/white-mage+female-die-2.png
 share/wesnoth/images/units/human-magi/white-mage+female-die-3.png
 share/wesnoth/images/units/human-magi/white-mage+female-die-4.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic1.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic2.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic3.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic4.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic5.png
-share/wesnoth/images/units/human-magi/white-mage+female-magic6.png
+share/wesnoth/images/units/human-magi/white-mage+female-magic-1.png
+share/wesnoth/images/units/human-magi/white-mage+female-magic-2.png
+share/wesnoth/images/units/human-magi/white-mage+female-magic-3.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-1.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-2.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-3.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-4.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-5.png
+share/wesnoth/images/units/human-magi/white-mage+female-melee-6.png
 share/wesnoth/images/units/human-magi/white-mage+female.png
 share/wesnoth/images/units/human-magi/white-mage-defend.png
 share/wesnoth/images/units/human-magi/white-mage-die-1.png
 share/wesnoth/images/units/human-magi/white-mage-die-2.png
 share/wesnoth/images/units/human-magi/white-mage-die-3.png
 share/wesnoth/images/units/human-magi/white-mage-die-4.png
-share/wesnoth/images/units/human-magi/white-mage-magic1.png
-share/wesnoth/images/units/human-magi/white-mage-magic2.png
-share/wesnoth/images/units/human-magi/white-mage-magic3.png
-share/wesnoth/images/units/human-magi/white-mage-magic4.png
-share/wesnoth/images/units/human-magi/white-mage-magic5.png
-share/wesnoth/images/units/human-magi/white-mage-magic6.png
+share/wesnoth/images/units/human-magi/white-mage-magic-1.png
+share/wesnoth/images/units/human-magi/white-mage-magic-2.png
+share/wesnoth/images/units/human-magi/white-mage-magic-3.png
 share/wesnoth/images/units/human-magi/white-mage-melee-1.png
 share/wesnoth/images/units/human-magi/white-mage-melee-2.png
 share/wesnoth/images/units/human-magi/white-mage-melee-3.png
@@ -4444,6 +4465,13 @@ share/wesnoth/images/units/human-outlaws/thief+female-defend-2-2.png
 share/wesnoth/images/units/human-outlaws/thief+female-defend-3-1.png
 share/wesnoth/images/units/human-outlaws/thief+female-defend-3-2.png
 share/wesnoth/images/units/human-outlaws/thief+female-defend.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-1.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-2.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-3.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-4.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-5.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-6.png
+share/wesnoth/images/units/human-outlaws/thief+female-die-7.png
 share/wesnoth/images/units/human-outlaws/thief+female.png
 share/wesnoth/images/units/human-outlaws/thief-attack.png
 share/wesnoth/images/units/human-outlaws/thief-defend-1-1.png
@@ -4453,6 +4481,13 @@ share/wesnoth/images/units/human-outlaws/thief-defend-2-2.png
 share/wesnoth/images/units/human-outlaws/thief-defend-3-1.png
 share/wesnoth/images/units/human-outlaws/thief-defend-3-2.png
 share/wesnoth/images/units/human-outlaws/thief-defend.png
+share/wesnoth/images/units/human-outlaws/thief-die-1.png
+share/wesnoth/images/units/human-outlaws/thief-die-2.png
+share/wesnoth/images/units/human-outlaws/thief-die-3.png
+share/wesnoth/images/units/human-outlaws/thief-die-4.png
+share/wesnoth/images/units/human-outlaws/thief-die-5.png
+share/wesnoth/images/units/human-outlaws/thief-die-6.png
+share/wesnoth/images/units/human-outlaws/thief-die-7.png
 share/wesnoth/images/units/human-outlaws/thief.png
 share/wesnoth/images/units/human-outlaws/thug-attack.png
 share/wesnoth/images/units/human-outlaws/thug-defend.png
@@ -5011,6 +5046,7 @@ share/wesnoth/images/units/undead/ghoul-attack-2.png
 share/wesnoth/images/units/undead/ghoul-defend.png
 share/wesnoth/images/units/undead/ghoul-die-1.png
 share/wesnoth/images/units/undead/ghoul-die-2.png
+share/wesnoth/images/units/undead/ghoul-die-3.png
 share/wesnoth/images/units/undead/ghoul-die-4.png
 share/wesnoth/images/units/undead/ghoul-die-5.png
 share/wesnoth/images/units/undead/ghoul-die-6.png
@@ -5135,6 +5171,21 @@ share/wesnoth/images/units/undead/zombie.png
 share/wesnoth/images/units/woses/wose-ancient-attack-1.png
 share/wesnoth/images/units/woses/wose-ancient-attack-2.png
 share/wesnoth/images/units/woses/wose-ancient-defend.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-1.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-10.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-11.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-12.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-13.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-14.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-15.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-2.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-3.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-4.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-5.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-6.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-7.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-8.png
+share/wesnoth/images/units/woses/wose-ancient-die-fall-9.png
 share/wesnoth/images/units/woses/wose-ancient.png
 share/wesnoth/images/units/woses/wose-attack-1.png
 share/wesnoth/images/units/woses/wose-attack-2.png
@@ -5166,6 +5217,21 @@ share/wesnoth/images/units/woses/wose-die-fall-9.png
 share/wesnoth/images/units/woses/wose-elder-attack-1.png
 share/wesnoth/images/units/woses/wose-elder-attack-2.png
 share/wesnoth/images/units/woses/wose-elder-defend.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-1.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-10.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-11.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-12.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-13.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-14.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-15.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-2.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-3.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-4.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-5.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-6.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-7.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-8.png
+share/wesnoth/images/units/woses/wose-elder-die-fall-9.png
 share/wesnoth/images/units/woses/wose-elder.png
 share/wesnoth/images/units/woses/wose.png
 share/wesnoth/images/wesnoth-icon.png
@@ -5579,6 +5645,16 @@ share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-tsg.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/id/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-editor.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-ei.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-httt.mo
@@ -5795,6 +5871,8 @@ share/wesnoth/translations/zh_CN/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/ja
 @dirrm share/wesnoth/translations/it/LC_MESSAGES
 @dirrm share/wesnoth/translations/it
+@dirrm share/wesnoth/translations/id/LC_MESSAGES
+@dirrm share/wesnoth/translations/id
 @dirrm share/wesnoth/translations/hu/LC_MESSAGES
 @dirrm share/wesnoth/translations/hu
 @dirrm share/wesnoth/translations/he/LC_MESSAGES
@@ -5872,6 +5950,7 @@ share/wesnoth/translations/zh_CN/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/images/items
 @dirrm share/wesnoth/images/icons
 @dirrm share/wesnoth/images/help
+@dirrm share/wesnoth/images/halo/holy
 @dirrm share/wesnoth/images/halo/elven
 @dirrm share/wesnoth/images/halo
 @dirrm share/wesnoth/images/editor
