@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6183 2007/04/08 06:24:18 obache Exp $
+$NetBSD: TODO,v 1.6184 2007/04/08 09:07:20 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ Suggested package updates
 	o molden-4.5
 	o mongrel-1.0.1
 	o mono-1.2.2
-	o monotone-0.34
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
