@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.489 2007/04/09 14:28:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.490 2007/04/09 14:59:49 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -370,6 +370,7 @@ SUBDIR+=	xf86-video-mga
 SUBDIR+=	xf86-video-neomagic
 SUBDIR+=	xf86-video-nsc
 SUBDIR+=	xf86-video-nv
+SUBDIR+=	xf86-video-nvxbox
 SUBDIR+=	xf86-video-rendition
 SUBDIR+=	xf86-video-s3
 SUBDIR+=	xf86-video-s3virge
