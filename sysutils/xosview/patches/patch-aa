@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2006/10/28 02:15:12 christos Exp $
+$NetBSD: patch-aa,v 1.16 2007/04/09 21:22:11 veego Exp $
 
---- bsd/kernel.cc.orig	2006-02-18 02:36:06.000000000 -0500
-+++ bsd/kernel.cc	2006-10-27 22:12:37.000000000 -0400
-@@ -115,6 +115,13 @@
+--- bsd/kernel.cc.orig	2006-02-18 08:36:06.000000000 +0100
++++ bsd/kernel.cc	2007-04-09 15:27:42.000000000 +0200
+@@ -115,10 +115,18 @@
  // in __NetBSD_Version__ for us if needed.
  #if defined(XOSVIEW_NETBSD) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106010000)
  #define NETBSD_1_6A
@@ -16,7 +16,82 @@ $NetBSD: patch-aa,v 1.15 2006/10/28 02:15:12 christos Exp $
  #endif
  
  #include "general.h"
-@@ -773,13 +780,12 @@
+ #include "kernel.h"		/*  To grab CVSID stuff.  */
++#include "netmeter.h"		/*  For netIface_  */
+ 
+ CVSID("$Id: patch-aa,v 1.16 2007/04/09 21:22:11 veego Exp $");
+ CVSID_DOT_H(KERNEL_H_CVSID);
+@@ -400,6 +408,8 @@
+   static int mib[] = { CTL_KERN, KERN_CPUSTATS };
+ #endif
+ #if defined(XOSVIEW_NETBSD) && (__NetBSD_Version__ >= 104260000)
++  uint64_t cp_time[CPUSTATES];
++  size_t size = sizeof(cp_time[0]) * CPUSTATES;
+   static int mib[] = { CTL_KERN, KERN_CP_TIME };
+ #endif
+ 
+@@ -407,14 +417,11 @@
+   if (CPUSTATES != 5)
+     errx (-1, "Error:  xosview for *BSD expects 5 cpu states!\n");
+ #if defined(__NetBSD_Version__) && __NetBSD_Version__ > 104260000 /* > 1.4Z */
+-  struct schedstate_percpu ssp;
+-  size_t size = sizeof(ssp.spc_cp_time);
+-  if (sysctl(mib, 2, ssp.spc_cp_time, &size, NULL, 0) < 0) {
+-    fprintf(stderr, "can't get schedstate_percpu: %s\n", strerror(errno));
+-    memset(&ssp, 0, sizeof(ssp));
++  if (sysctl(mib, 2, cp_time, &size, NULL, 0) < 0) {
++    fprintf(stderr, "xosview: sysctl kern.cp_time failed: %s\n", strerror(errno));
++    bzero(&cp_time, size);
+   }
+-  for (size = 0; size < CPUSTATES; size++)
+-    timeArray[size] = (long) ssp.spc_cp_time[size];
++  bcopy (cp_time, timeArray, size);
+ #else
+ #ifdef XOSVIEW_BSDI
+   if (sysctl(mib, 2, &cpu, &size, NULL, 0) < 0) {
+@@ -441,7 +448,7 @@
+ }
+ 
+ void
+-BSDGetNetInOut (long long * inbytes, long long * outbytes) {
++NetMeter::BSDGetNetInOut (long long * inbytes, long long * outbytes) {
+ 
+ 
+   struct ifnet * ifnetp;
+@@ -466,7 +473,8 @@
+   while (ifnetp) {
+     //  Now, dereference the pointer to get the ifnet struct.
+     safe_kvm_read ((u_long) ifnetp, &ifnet, sizeof(ifnet));
+-#ifdef NET_DEBUG
++#ifdef XOSVIEW_NETBSD
++    if (netIface_ != "False" ) {
+     char ifname[256];
+ #ifdef NETBSD_OLD_IFACE
+     //  In pre-1.2A, getting the interface name was more complicated.
+@@ -476,15 +484,21 @@
+     safe_kvm_read ((u_long) (((char*)ifnetp) + (&ifnet.if_xname[0] - (char*)&ifnet)), ifname, 256);
+     snprintf (ifname, 256, "%s", ifname);
+ #endif
++#ifdef NET_DEBUG
+     printf ("Interface name is %s\n", ifname);
+     printf ("Ibytes: %8llu Obytes %8llu\n",
+ 	(unsigned long long) ifnet.if_ibytes,
+ 	(unsigned long long) ifnet.if_obytes);
+     printf ("Ipackets:  %8llu\n", (unsigned long long) ifnet.if_ipackets);
+-#endif
++#endif /* NET_DEBUG */
++      if (ifname != netIface_)
++       goto skipif;
++    }
++#endif /* XOSVIEW_NETBSD */
+     *inbytes  += ifnet.if_ibytes;
+     *outbytes += ifnet.if_obytes;
+ 
++    skipif:
+     //  Linked-list step taken from if.c in netstat source, line 120.
+ #ifdef XOSVIEW_FREEBSD
+ #if (__FreeBSD_version >= 300000) 
+@@ -773,13 +787,12 @@
  #ifdef NETBSD_1_6A
    // Do a sysctl with a NULL data pointer to get the size that would
    // have been returned, and use that to figure out # drives.
@@ -32,7 +107,7 @@ $NetBSD: patch-aa,v 1.15 2006/10/28 02:15:12 christos Exp $
    return 1;
  #endif
    return ValidSymbol(DISKLIST_SYM_INDEX);
-@@ -816,19 +822,29 @@
+@@ -816,19 +829,29 @@
  #else
  #if defined(NETBSD_1_6A)
    // Use the new sysctl to do this for us.
