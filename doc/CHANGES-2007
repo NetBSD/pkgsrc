@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.757 2007/04/09 07:41:43 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.758 2007/04/09 09:50:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/iso-codes to 1.0 [wiz 2007-04-09]
 	Updated audio/gnome-speech to 0.4.10 [wiz 2007-04-09]
 	Updated devel/p5-Carp-Assert to 0.20 [hiramatsu 2007-04-09]
+	Updated misc/gnome-user-docs to 2.18.0 [wiz 2007-04-09]
