@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/02/22 19:26:52 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/04/09 15:56:26 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
 CATEGORIES=	net
@@ -40,7 +40,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			1.1.4
+RADVER=			1.1.5
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
