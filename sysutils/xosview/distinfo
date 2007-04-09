@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.19 2006/10/28 02:15:12 christos Exp $
+$NetBSD: distinfo,v 1.20 2007/04/09 21:22:11 veego Exp $
 
 SHA1 (xosview-1.8.3.tar.gz) = 420fd0620ff9fb9ba83fc833eeb8b872414e377e
 RMD160 (xosview-1.8.3.tar.gz) = 595e812dee686ccaa5d95eb537782679d752271b
 Size (xosview-1.8.3.tar.gz) = 259793 bytes
-SHA1 (patch-aa) = c51d8b0b033943911869aa2d262804eeeec9c109
+SHA1 (patch-aa) = 82749a793e2a57a04dec4917bce3d3d3c9f8a25d
 SHA1 (patch-ab) = 274b83fd3488af8e0c4ce0184b8c78f4f6ef87df
+SHA1 (patch-ac) = 3e9073c4ccd7e08d29a76b08f2ed0c7f9f9d9ede
+SHA1 (patch-ad) = 02ae8395e200e5cbf8d6339eced33fe5aa421d38
+SHA1 (patch-ae) = c007cdf2910fbcd8cbf232f1fa3ad31ffec88612
+SHA1 (patch-af) = 97078fbe39fcded6ab50b276f6cedb9b33a62e4b
