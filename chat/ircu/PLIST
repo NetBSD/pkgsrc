@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/09 12:39:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/09 12:46:35 adrianp Exp $
 man/man8/ircd.8
 sbin/ircd
+bin/umkpasswd
+bin/uconvert-conf
 share/doc/ircd/README
 share/doc/ircd/RELEASE.NOTES
 share/doc/ircd/INSTALL

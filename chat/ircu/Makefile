@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/04/09 12:39:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.26 2007/04/09 12:46:34 adrianp Exp $
 #
 
 DISTNAME=	ircu2.10.12.10
@@ -58,6 +58,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/ircd/ircd ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/ircd/umkpasswd ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ircd/convert-conf \
+		${PREFIX}/bin/uconvert-conf
 	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
