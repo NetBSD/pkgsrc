@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.753 2007/04/09 00:47:20 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.754 2007/04/09 00:56:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1445,3 +1445,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/unison-devel to 2.27.10 [tonio 2007-04-08]
 	Added lang/ocamlduce version 3.09.3pl1 [tonio 2007-04-08]
 	Updated devel/libbonobo to 2.18.0 [wiz 2007-04-09]
+	Updated devel/GConf2 to 2.18.0.1 [wiz 2007-04-09]
+	Updated devel/GConf2-ui to 2.18.0.1 [wiz 2007-04-09]
