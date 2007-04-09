@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2007/01/06 14:34:50 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2007/04/09 12:39:25 adrianp Exp $
 #
 
-DISTNAME=	ircu2.10.11.07
-PKGNAME=	ircu-2.10.11.07
-PKGREVISION=	1
+DISTNAME=	ircu2.10.12.10
+PKGNAME=	${DISTNAME:S/ircu2/ircu-2/}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=undernet-ircu/}
 
@@ -36,7 +35,7 @@ EGDIR=			${PREFIX}/share/examples/ircd
 DOCDIR=			${PREFIX}/share/doc/ircd
 BUILD_DEFS+=		VARBASE
 
-CONF_FILES_PERMS+=	${EGDIR}/ircd.conf.sample ${PKG_SYSCONFDIR}/ircd.conf \
+CONF_FILES_PERMS+=	${EGDIR}/example.conf ${PKG_SYSCONFDIR}/ircd.conf \
 			${IRCD_USER} ${IRCD_GROUP} 0600
 
 SPECIAL_PERMS+=		${PKG_SYSCONFDIR} ${IRCD_USER} ${IRCD_GROUP} 0700
@@ -53,36 +52,18 @@ PKG_USERS=		${IRCD_USER}:${IRCD_GROUP}
 PKG_GECOS.${IRCD_USER}=	IRC server user
 PKG_SHELL.${IRCD_USER}=	${SH}
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	tools/README doc/ircd.conf.sample
-SUBST_SED.paths=	-e "s|/usr/local/lib/irc|${PKG_SYSCONFDIR}|g"
-SUBST_SED.paths+=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
-
-post-extract:
-	mv ${WRKSRC}/tools/Makefile.crypt ${WRKSRC}/tools/Makefile.crypt.in
-
-post-build:
-	cd ${WRKSRC}/tools && \
-		env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		-f Makefile.crypt
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/ircd/ircd ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/ircd/chkconf \
-		${PREFIX}/sbin/ircd-chkconf
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkpasswd \
-		${PREFIX}/sbin/ircd-mkpasswd
 	${INSTALL_MAN} ${WRKSRC}/doc/ircd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/doc/ircd.conf.sample ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/tools/README ${DOCDIR}/README.mkpasswd
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} readme.* iauth.txt ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE.NOTES ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/readme.* ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
