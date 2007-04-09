@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/23 15:25:00 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/04/09 12:50:20 shannonjr Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -35,9 +35,6 @@ ${PYSITELIB}/prewikka/ModPythonHandler.pyo
 ${PYSITELIB}/prewikka/MyConfigParser.py
 ${PYSITELIB}/prewikka/MyConfigParser.pyc
 ${PYSITELIB}/prewikka/MyConfigParser.pyo
-${PYSITELIB}/prewikka/ParametersNormalizer.py
-${PYSITELIB}/prewikka/ParametersNormalizer.pyc
-${PYSITELIB}/prewikka/ParametersNormalizer.pyo
 ${PYSITELIB}/prewikka/Request.py
 ${PYSITELIB}/prewikka/Request.pyc
 ${PYSITELIB}/prewikka/Request.pyo
@@ -173,6 +170,9 @@ ${PYSITELIB}/prewikka/views/alertlisting.pyo
 ${PYSITELIB}/prewikka/views/heartbeatlisting.py
 ${PYSITELIB}/prewikka/views/heartbeatlisting.pyc
 ${PYSITELIB}/prewikka/views/heartbeatlisting.pyo
+${PYSITELIB}/prewikka/locale.py
+${PYSITELIB}/prewikka/locale.pyc
+${PYSITELIB}/prewikka/locale.pyo
 bin/prewikka-httpd
 sbin/runPrewikka
 share/examples/${PKGBASE}/prewikka.conf
@@ -198,6 +198,7 @@ share/prewikka/htdocs/images/search.png
 share/prewikka/htdocs/images/table_order_down.gif
 share/prewikka/htdocs/images/table_order_up.gif
 share/prewikka/htdocs/js/functions.js
+share/locale/fr/LC_MESSAGES/prewikka.mo
 @dirrm ${PYSITELIB}/prewikka/modules/auth/cgi
 @dirrm ${PYSITELIB}/prewikka/modules/auth/loginpassword
 @dirrm ${PYSITELIB}/prewikka/modules/auth
