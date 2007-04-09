@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6195 2007/04/09 01:04:46 wiz Exp $
+$NetBSD: TODO,v 1.6196 2007/04/09 01:15:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ Suggested package updates
 	o gnome-mime-data-2.18.0
 	o gnome-screensaver-2.16.3
 	o gnome-session-2.16.3
-	o gnome-speech-0.4.10
 	o gnome-spell-1.0.7
 	o gnome-themes-2.18.0
 	o gnome-user-docs-2.16.1
