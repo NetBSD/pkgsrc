@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/04/09 19:28:27 adrianp Exp $
 
-DISTNAME=	drupal-4.7.6
+DISTNAME=	drupal-5.1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -13,11 +13,16 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
 
 NO_BUILD=	YES
 DRUPAL=		${PREFIX}/share/drupal
-PAX_DIRS=	database includes misc modules scripts themes
+PAX_DIRS=	includes misc modules scripts themes
 BUILD_DEFS+=	APACHE_USER APACHE_GROUP
+
+OWN_DIRS+=		${DRUPAL}/sites/default
+OWN_DIRS_PERMS+=	${DRUPAL}/files ${APACHE_USER} ${APACHE_GROUP} 0750
 
 CONF_FILES=	${PREFIX}/share/examples/drupal/drupal.conf \
 		${PKG_SYSCONFDIR}/drupal.conf
+CONF_FILES+=	${PREFIX}/share/examples/drupal/default.profile \
+		${DRUPAL}/profiles/default/default.profile
 
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/drupal/settings.php \
 			${DRUPAL}/sites/default/settings.php \
@@ -40,18 +45,22 @@ post-extract:
 do-install:
 	${INSTALL_DATA_DIR} ${DRUPAL}
 	${INSTALL_DATA_DIR} ${DRUPAL}/files
+	${INSTALL_DATA_DIR} ${DRUPAL}/profiles
+	${INSTALL_DATA_DIR} ${DRUPAL}/profiles/default
 	${INSTALL_DATA_DIR} ${DRUPAL}/sites
+	${INSTALL_DATA_DIR} ${DRUPAL}/sites/all
 	${INSTALL_DATA_DIR} ${DRUPAL}/sites/default
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/drupal
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/drupal
-
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/drupal
+	${INSTALL_DATA} ${WRKSRC}/sites/all/README.txt \
+		${DRUPAL}/sites/all
 	${INSTALL_DATA} ${WRKSRC}/drupal.conf \
-		${PREFIX}/share/examples/drupal
+		${PREFIX}/share/examples/drupal/drupal.conf
 	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
-		${PREFIX}/share/examples/drupal
-	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
-		${DRUPAL}/sites/default/settings.php.example
+		${PREFIX}/share/examples/drupal/settings.php
+	${INSTALL_DATA} ${WRKSRC}/profiles/default/default.profile \
+		${PREFIX}/share/examples/drupal/default.profile
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
 
 .	for i in ${PAX_DIRS}
@@ -62,7 +71,7 @@ do-install:
 	${CHMOD} 0770 ${DRUPAL}/files
 
 post-install:
-	${FIND} ${DRUPAL}/themes -name \*.jpg | ${XARGS} ${CHMOD} 0644
-	${FIND} ${DRUPAL}/themes -name \*.png | ${XARGS} ${CHMOD} 0644
+	${FIND} ${DRUPAL} -name \*.jpg | ${XARGS} ${CHMOD} 0644
+	${FIND} ${DRUPAL} -name \*.png | ${XARGS} ${CHMOD} 0644
 
 .include "../../mk/bsd.pkg.mk"
