@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.754 2007/04/09 00:56:21 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.755 2007/04/09 01:04:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1447,3 +1447,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libbonobo to 2.18.0 [wiz 2007-04-09]
 	Updated devel/GConf2 to 2.18.0.1 [wiz 2007-04-09]
 	Updated devel/GConf2-ui to 2.18.0.1 [wiz 2007-04-09]
+	Updated textproc/iso-codes to 1.0 [wiz 2007-04-09]
