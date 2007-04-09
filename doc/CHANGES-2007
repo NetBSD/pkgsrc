@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.760 2007/04/09 14:30:10 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.761 2007/04/09 14:59:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-prewikka to 0.9.10 [shannonjr 2007-04-09]
 	Added x11/xf86-video-tdfx version 1.3.0 [xtraeme 2007-04-09]
 	Updated meta-pkgs/modular-xorg-drivers to 1.1 [xtraeme 2007-04-09]
+	Added x11/xf86-video-nvxbox version 20070409 [xtraeme 2007-04-09]
