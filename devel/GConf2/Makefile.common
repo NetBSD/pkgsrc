@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.42 2006/10/23 09:03:03 drochner Exp $
+# $NetBSD: Makefile.common,v 1.43 2007/04/09 00:55:45 wiz Exp $
 #
 
-GCONF2_VERSION=		2.16.0
+GCONF2_VERSION=		2.18.0.1
 
 DISTNAME=		GConf-${GCONF2_VERSION}
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.16/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org

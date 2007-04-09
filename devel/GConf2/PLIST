@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2006/10/23 15:37:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.30 2007/04/09 00:55:45 wiz Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -78,6 +78,7 @@ share/locale/ko/LC_MESSAGES/GConf2.mo
 share/locale/ku/LC_MESSAGES/GConf2.mo
 share/locale/lt/LC_MESSAGES/GConf2.mo
 share/locale/lv/LC_MESSAGES/GConf2.mo
+share/locale/mg/LC_MESSAGES/GConf2.mo
 share/locale/mk/LC_MESSAGES/GConf2.mo
 share/locale/ml/LC_MESSAGES/GConf2.mo
 share/locale/mn/LC_MESSAGES/GConf2.mo
