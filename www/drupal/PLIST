@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/09 19:28:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/09 19:30:48 adrianp Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/INSTALL.mysql.txt
 share/doc/drupal/INSTALL.pgsql.txt
@@ -7,6 +7,7 @@ share/doc/drupal/LICENSE.txt
 share/doc/drupal/MAINTAINERS.txt
 share/doc/drupal/UPGRADE.txt
 share/doc/drupal/robots.txt
+share/drupal/robots.txt
 share/drupal/cron.php
 share/drupal/includes/bootstrap.inc
 share/drupal/includes/cache.inc
