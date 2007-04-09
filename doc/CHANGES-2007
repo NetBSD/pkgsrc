@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.762 2007/04/09 19:33:54 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.763 2007/04/09 21:26:18 veego Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/echoping to 6.0.1 [adrianp 2007-04-09]
 	Updated net/freeradius to 1.1.5 [adrianp 2007-04-09]
 	Updated www/drupal to 5.1 [adrianp 2007-04-09]
+	Updated sysutils/xosview to 1.8.3nb1 [veego 2007-04-09]
