@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6198 2007/04/09 11:49:35 wiz Exp $
+$NetBSD: TODO,v 1.6199 2007/04/09 19:33:53 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ Suggested package updates
 	o cstream-2.7.3
 	o cuetools-1.3.1
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsgraph-1.6.1
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
@@ -417,7 +416,6 @@ Suggested package updates
 	o dpkg-1.13.25
 	o drraw-2.2a3
 	o drscheme-360
-	o drupal-5.1
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
 	o dvdrip-0.98.4
@@ -428,7 +426,6 @@ Suggested package updates
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
-	o echoping-6.0.0
 	o eclipse-3.2.0
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
@@ -490,7 +487,6 @@ Suggested package updates
 	o fox-1.6.24
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
-	o freeradius-1.1.5
 	o freesci-0.3.5
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
@@ -633,7 +629,6 @@ Suggested package updates
 	o html2wml-0.4.11
 	o htmldoc-1.8.27
 	o http_load-20060312
-	o httping-1.2.2
 	o httptunnel-3.3
 	o hydrogen-0.9.2
 	o hylafax-5.1.1
@@ -656,8 +651,6 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ircservices-5.0.61
-	o ircu-2.10.12.0
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
@@ -1262,7 +1255,6 @@ Suggested package updates
 	o smlnj-110.62
 	o snd-8.9
 	o snes9x-1.502
-	o socat-1.6.0.0
 	o solfege-3.6.4
 	o sope-4.5.9
 	o sound-juicer-2.16.3
