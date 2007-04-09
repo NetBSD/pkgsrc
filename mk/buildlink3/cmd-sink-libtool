@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-libtool,v 1.3 2007/03/12 19:19:45 tron Exp $
+# $NetBSD: cmd-sink-libtool,v 1.4 2007/04/09 22:33:26 tron Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,21 +39,6 @@ while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
 	$debug_log $wrapperlog "    (cmd-sink-libtool) pop:  $arg"
 	case $arg in
-	##############################################################
-	# Hardcode a workaround for perl's DynaLoader.a which is
-	# definitely a PIC code archive, but libtool isn't smart
-	# enough to realize it.  Munge the name into something that
-	# will make libtool recognize it as a PIC code archive.  We
-	# unmunge it in arg-pp-main so non-libtool wrappers see the
-	# right thing.
-	##############################################################
-	*/DynaLoader.a)
-		if [ "$OPSYS" != "Darwin" ]; then
-			arg="${arg%/DynaLoader.a}/libDynaLoader_pic.a"
-			$debug_log $wrapperlog "    (cmd-sink-libtool) to:   $arg"
-		fi
-		. $buildcmd
-		;;
 	##############################################################
 	# If we're in "compile" mode, then don't add any linker options
 	# to the command line.
