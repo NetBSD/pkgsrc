@@ -1,3 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:18 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/09 14:44:29 adrianp Exp $
 bin/echoping
+include/echoping/compilation.h
+include/echoping/echoping.h
+lib/echoping/dns.la
+lib/echoping/random.la
+lib/echoping/whois.la
 man/man1/echoping.1
+man/man1/echoping_dns.1
+man/man1/echoping_random.1
+man/man1/echoping_whois.1
+@dirrm include/echoping
+@unexec ${RMDIR} %D/lib/echoping 2>/dev/null || ${TRUE}
