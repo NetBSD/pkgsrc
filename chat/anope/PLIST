@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/20 22:40:24 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/09 09:40:23 adrianp Exp $
 lib/anope/anoperc
 lib/anope/languages/cat
 lib/anope/languages/de
@@ -61,6 +61,10 @@ lib/anope/modules/cs_tban.so
 lib/anope/modules/cs_topic.so
 lib/anope/modules/cs_xop.so
 lib/anope/modules/dreamforge.so
+lib/anope/modules/enc_md5.so
+lib/anope/modules/enc_none.so
+lib/anope/modules/enc_old.so
+lib/anope/modules/enc_sha1.so
 lib/anope/modules/he_help.so
 lib/anope/modules/hs_del.so
 lib/anope/modules/hs_delall.so
