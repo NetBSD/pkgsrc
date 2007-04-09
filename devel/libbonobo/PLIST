@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/09/15 15:06:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/09 00:46:11 wiz Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -99,6 +99,7 @@ share/gtk-doc/html/libbonobo/general.html
 share/gtk-doc/html/libbonobo/home.png
 share/gtk-doc/html/libbonobo/index.html
 share/gtk-doc/html/libbonobo/index.sgml
+share/gtk-doc/html/libbonobo/ix01.html
 share/gtk-doc/html/libbonobo/left.png
 share/gtk-doc/html/libbonobo/libbonobo-bonobo-app-client.html
 share/gtk-doc/html/libbonobo/libbonobo-bonobo-application.html
@@ -192,6 +193,7 @@ share/locale/cs/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/cy/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/da/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/de/LC_MESSAGES/libbonobo-2.0.mo
+share/locale/dz/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/el/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/en_CA/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/en_GB/LC_MESSAGES/libbonobo-2.0.mo
@@ -219,6 +221,7 @@ share/locale/ku/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/li/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/lt/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/lv/LC_MESSAGES/libbonobo-2.0.mo
+share/locale/mg/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/mk/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/ml/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/mn/LC_MESSAGES/libbonobo-2.0.mo
