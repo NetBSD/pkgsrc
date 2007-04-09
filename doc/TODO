@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6193 2007/04/09 00:47:20 wiz Exp $
+$NetBSD: TODO,v 1.6194 2007/04/09 00:56:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -213,7 +213,6 @@ Suggested package updates
 	o Cenon-3.82
 	o Chinput-3.0.1
 	o Coin-2.4.5
-	o GConf2-2.18.0.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GeoIP-1.4.2
