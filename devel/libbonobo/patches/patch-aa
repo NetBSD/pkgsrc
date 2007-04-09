@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2004/04/01 18:18:00 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/09 00:46:11 wiz Exp $
 
---- Makefile.in.orig	2004-02-02 15:28:51.000000000 +0100
+--- Makefile.in.orig	2007-03-12 13:47:59.000000000 +0000
 +++ Makefile.in
-@@ -203,7 +203,7 @@ prefix = @prefix@
- program_transform_name = @program_transform_name@
+@@ -264,7 +264,7 @@ psdir = @psdir@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
 -sysconfdir = @sysconfdir@
 +sysconfdir = @datadir@/examples
  target_alias = @target_alias@
- SUBDIRS = \
- 	idl bonobo-activation bonobo \
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
