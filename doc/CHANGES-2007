@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.761 2007/04/09 14:59:49 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.762 2007/04/09 19:33:54 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1458,3 +1458,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xf86-video-tdfx version 1.3.0 [xtraeme 2007-04-09]
 	Updated meta-pkgs/modular-xorg-drivers to 1.1 [xtraeme 2007-04-09]
 	Added x11/xf86-video-nvxbox version 20070409 [xtraeme 2007-04-09]
+	Updated devel/cvsgraph to 1.6.1 [adrianp 2007-04-09]
+	Updated chat/anope to 1.7.18 [adrianp 2007-04-09]
+	Updated net/socat to 1.6.0.0 [adrianp 2007-04-09]
+	Updated net/httping to 1.2.2 [adrianp 2007-04-09]
+	Updated chat/ircu to 2.10.2.10 [adrianp 2007-04-09]
+	Updated chat/ircservices to 5.0.61 [adrianp 2007-04-09]
+	Updated net/echoping to 6.0.1 [adrianp 2007-04-09]
+	Updated net/freeradius to 1.1.5 [adrianp 2007-04-09]
+	Updated www/drupal to 5.1 [adrianp 2007-04-09]
