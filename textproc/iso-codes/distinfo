@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/11/24 18:03:35 drochner Exp $
+$NetBSD: distinfo,v 1.5 2007/04/09 01:04:20 wiz Exp $
 
-SHA1 (iso-codes-0.58.tar.gz) = 3449003f8a55d725c9f259931e2e7277ecdcde19
-RMD160 (iso-codes-0.58.tar.gz) = f354b2d148705c713f7bc40ed7d957a9cdab9118
-Size (iso-codes-0.58.tar.gz) = 8850546 bytes
+SHA1 (iso-codes-1.0.tar.bz2) = 46cc91d6e2b8c739e25b5618158072819632f8e7
+RMD160 (iso-codes-1.0.tar.bz2) = 0c542a0c4d47aecd60382b9713ea49ffdfebec96
+Size (iso-codes-1.0.tar.bz2) = 4428316 bytes
