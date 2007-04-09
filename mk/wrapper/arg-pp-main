@@ -1,4 +1,4 @@
-# $NetBSD: arg-pp-main,v 1.5 2005/08/05 19:46:41 jlam Exp $
+# $NetBSD: arg-pp-main,v 1.6 2007/04/09 22:33:26 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,19 +35,6 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 case $arg in
-######################################################################
-# Hardcode a workaround for perl's DynaLoader.a which is definitely
-# a PIC code archive, but libtool isn't smart enough to realize it.
-# cmd-sink-libtool munged it into something libtool recognizes, but
-# now we need to unmunge it so that the compiler/linker are called
-# with the right name for the archive.
-######################################################################
-*/libDynaLoader_pic.a)
-	arg="${arg%/libDynaLoader_pic.a}/DynaLoader.a"
-	prepend_queue argbuf "$arg"
-	$debug_log $wrapperlog "    (arg-pp-main) pre:  $arg"
-	argmatch=yes
-	;;
 ######################################################################
 # Split direct paths to shared libraries into the "-Ldir -llib"
 # equivalent.
