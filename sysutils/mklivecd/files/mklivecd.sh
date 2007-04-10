@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.32 2007/03/10 00:01:23 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.33 2007/04/10 02:23:34 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -37,13 +37,13 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 # ======================================================================== #
-#  mklivecd - Make your own NetBSD/i386 Live CD-ROM/DVD-ROM                #
+#  mklivecd - Make your own NetBSD/x86 Live CD-ROM/DVD-ROM                #
 # ======================================================================== #
 
 : ${progname:=$(basename $0)}
 : ${config_dir:=$HOME/.mklivecd}
 : ${pers_conffile:=personal_config}
-: ${tmp_file:=/tmp/${progname}.$$}
+: ${tmp_file:=$(/usr/bin/mktemp /tmp/${progname}.XXXXXX)}
 : ${pkgsrc_mntstat:=$config_dir/pkgsrc_mount.stat}
 : ${pkgsrcdist_mntstat:=$config_dir/pkgsrcdist_mount.stat}
 : ${packages_mntstat:=$config_dir/packages_mount.stat}
@@ -92,6 +92,7 @@ usage()
         chroot  Chroot into the livecd
         clean   Clean the WORKDIR and ISODIR directories
         config  Create default configuration file
+        fetch   Download base/x11 sets from REMOTE_SETS_URL
         iso     Build the ISO9660 image with mkisofs(1)
 	kernel  Build and install the kernel(s) and boot files
 
@@ -119,6 +120,34 @@ showmsgstring()
     fi
 }
 
+is_enabled()
+{
+    eval _val="\$$1"
+
+    case $_val in
+        [Yy][Ee][Ss])
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+is_disabled()
+{
+    eval _val="\$$1"
+
+    case $_val in
+        [Nn][Oo])
+            return 0
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
 bye()
 {
     _exitarg="$1"
@@ -128,17 +157,18 @@ bye()
 do_conf()
 {
     BASE_VARS="SOURCEDIR PACKAGESDIR PKGSRCDIR PKGSRCDISTDIR SHAREDIR BASEDIR \
-               WORKDIR ISODIR BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS \
-               CHROOT_SHELL"
+               WORKDIR ISODIR FETCH_SETS REMOTE_SETS_URL BASE_SETS_DIR \
+               X11_SETS_DIR BASE_SETS X11_SETS CHROOT_SHELL"
 
-    KERNEL_VARS="MULTIPLE_KERNELS BOOTKERN KERNEL_NAME"
+    KERNEL_VARS="MULTIPLE_KERNELS KERNEL_CONFIG KERNEL_NAME"
 
     MISC_VARS="ENABLE_X11 MKISOFS_BIN MKISOFS_ARGS CDRECORD_BIN CDRECORD_ARGS \
                BLANK_BEFORE_BURN CDROM_DEVICE PERSONAL_CONFIG IMAGE_NAME \
-               PKG_SYSCONFDIR REMOVE_DIRS HOSTNAME VND_COMPRESSION"
+               PKG_SYSCONFDIR REMOVE_DIRS HOSTNAME VND_COMPRESSION \
+               USE_GNU_GRUB GRUB_FILES_DIR"
 
-    if [ "${ARCH}" != "x86_64" ]; then
-        MISC_VARS="${MISC_VARS} USE_GNU_GRUB GRUB_FILES_DIR"
+    if [ "${ARCH}" = "x86_64" ]; then
+        ARCH="amd64"
     fi
 
     MNT_VARS="MNT_RAMFS_CMD MNT_RAMFS_ARGS"
@@ -152,6 +182,8 @@ do_conf()
     : ${BASEDIR:=$HOME/livecd}
     : ${WORKDIR:=${BASEDIR}/work}
     : ${ISODIR:=${BASEDIR}/iso}
+    : ${FETCH_SETS:=no}
+    : ${REMOTE_SETS_URL:=ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-3.1/${ARCH}/binary/sets}
     : ${BASE_SETS_DIR:=$HOME/release/binary/sets}
     : ${X11_SETS_DIR:=${BASE_SETS_DIR}}
     : ${BASE_SETS:=etc.tgz base.tgz comp.tgz text.tgz}
@@ -161,7 +193,7 @@ do_conf()
 
     # kernel options
     : ${MULTIPLE_KERNELS:=no}
-    : ${BOOTKERN:=KERN-LIVECD}
+    : ${KERNEL_CONFIG:=KERN-LIVECD}
     : ${KERNEL_NAME:=MKLIVECD}
 
     # Miscellaneous options
@@ -176,11 +208,7 @@ do_conf()
     : ${IMAGE_NAME:=NetBSD-LiveCD}
     : ${PKG_SYSCONFDIR:=usr/pkg/etc}
     : ${REMOVE_DIRS:=altroot usr/share/info}
-    if [ "${MACHINE_ARCH}" != "x86_64" ]; then
-        : ${USE_GNU_GRUB:=yes}
-    else
-        USE_GNU_GRUB=no
-    fi
+    : ${USE_GNU_GRUB:=yes}
     : ${GRUB_FILES_DIR:=@LOCALBASE@/lib/grub/@MACHINE_ARCH@-}
     : ${VND_COMPRESSION:=no}
     #	
@@ -223,17 +251,14 @@ EOF
         echo "# MULTIPLE_KERNELS example:"; \
         echo "#";   \
         echo "# MULTIPLE_KERNELS=\"ACPI APM\""; \
-        echo "# BOOTKERN_ACPI=\"KERN_ACPI\"";   \
+        echo "# KERNEL_CONFIG_ACPI=\"KERN_ACPI\"";   \
         echo "# KERNEL_NAME_ACPI=\"LIVECD_ACPI\"";  \
-        echo "# BOOTKERN_APM=\"KERN_APM\""; \
+        echo "# KERNEL_CONFIG_APM=\"KERN_APM\""; \
         echo "# KERNEL_NAME_APM=\"LIVECD_APM\"";    \
         ) >> $config_file
         echo >> $config_file
 
-        # GNU Grub is not supported in 64bit.
-        if [ "$(/sbin/sysctl -n hw.machine_arch)" = "x86_64" ]; then
-            USE_GNU_GRUB=no
-        fi
+        [ "${ARCH}" != "i386" ] && USE_GNU_GRUB=no
 
 	echo "# Miscellaneous options" >> $config_file
 	for var in $(echo $MISC_VARS | tr ' ' '\n' | sort -u)
@@ -274,7 +299,7 @@ copy_bootfiles()
     #
     # GNU GRUB.
     #
-    if [ "$USE_GNU_GRUB" = "yes" ]; then
+    if is_enabled USE_GNU_GRUB; then
         [ ! -d $ISODIR/$GRUB_BOOTDIR ] && mkdir -p $ISODIR/$GRUB_BOOTDIR
 	for f in $GRUB_FILES
         do
@@ -315,7 +340,7 @@ do_menu_lst()
         showmsg_n "Updating menu.lst..."
         (   \
         echo "title NetBSD/$KERNEL_NAME kernel";   \
-        echo "kernel --type=netbsd /$GRUB_BOOTDIR/$BOOTKERN.gz"; \
+        echo "kernel --type=netbsd /$GRUB_BOOTDIR/$KERNEL_CONFIG.gz"; \
         echo;   \
         ) >> $ISODIR/$GRUB_BOOTDIR/menu.lst
     else
@@ -329,7 +354,7 @@ default 0
 timeout 10
 
 title NetBSD/$KERNEL_NAME kernel
-kernel --type=netbsd /$GRUB_BOOTDIR/$BOOTKERN.gz
+kernel --type=netbsd /$GRUB_BOOTDIR/$KERNEL_CONFIG.gz
 
 _EOF_
         showmsgstring
@@ -342,7 +367,7 @@ do_build_kernels()
 
     for K in ${MULTIPLE_KERNELS}
     do
-        eval bootkern=\$BOOTKERN_${K}
+        eval bootkern=\$KERNEL_CONFIG_${K}
         eval kernname=\$KERNEL_NAME_${K}
 
         cd $WORKDIR
@@ -364,14 +389,15 @@ do_build_kernels()
 	cd $kernname
 	make depend && make
 	if [ "$?" -eq 0 ]; then
-            if [ "$USE_GNU_GRUB" = "yes" ]; then
+            if is_enabled USE_GNU_GRUB; then
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$GRUB_BOOTDIR/$bootkern
             else
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$bootkern
             fi
             [ -n "$verbose_mode" ] && \
                 showmsg_n "Compressing kernel $bootkern..."
-            if [ "$USE_GNU_GRUB" = "yes" ]; then
+            
+            if is_enabled USE_GNU_GRUB; then
                 gzip $ISODIR/$GRUB_BOOTDIR/$bootkern
                 showmsgstring
 		if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst ]; then
@@ -421,47 +447,49 @@ do_cdlive()
     case "$1" in
     kernel)
         if [ ! -d $SOURCEDIR/sys ]; then
-            echo "=> CANNOT FIND NETBSD SOURCES, EXITING!"
+            echo "=> CANNOT FIND THE NETBSD SOURCES, EXITING!"
             bye 1
 	fi
 
         # if -k was specified, override values on config file.
         if [ -n "$K_ARG_SET" ]; then
-            BOOTKERN=$kernel_arg
+            KERNEL_CONFIG=$kernel_arg
             KERNEL_NAME=MKLIVECD_$kernel_arg
         fi
 
-	if [ "$MULTIPLE_KERNELS" = "no" ]; then
+        if is_disabled MULTIPLE_KERNELS; then
 	    showmsg "Building kernel on $(date):"
 	    if [ -n "$verbose_mode" ]; then
                 echo
-		showmsg "Using kernel: $BOOTKERN"
+		showmsg "Using kernel: $KERNEL_CONFIG"
 		showmsg "Kernel name: $KERNEL_NAME"
 		sleep 2
 		fi
 		echo
-		# if there's a kernel in ~/.mklivecd, use it, otherwise
-		# use the default one located in SHAREDIR.
-		if [ -s $config_dir/$BOOTKERN ]; then
-		    cp $config_dir/$BOOTKERN $WORKDIR
-		else
-		    cp $SHAREDIR/$BOOTKERN $WORKDIR
-		fi
+                #
+                # Use the specified kernel from ~/.mklivecd.
+                #
+		if [ -s $config_dir/$KERNEL_CONFIG ]; then
+		    cp $config_dir/$KERNEL_CONFIG $WORKDIR
+                else
+                    echo "=> CANNOT FIND '$KERNEL_CONFIG' in $config_dir, EXITING!"
+                    bye 1
+                fi
 
 		cd $WORKDIR
 		    [ ! -d $WORKDIR/$KERNEL_NAME ] && \
 			mkdir $WORKDIR/$KERNEL_NAME
 		    config -s $SOURCEDIR/sys -b $WORKDIR/$KERNEL_NAME \
-		        $BOOTKERN
+		        $KERNEL_CONFIG
 		cd $KERNEL_NAME
 		make depend && make
 		if [ "$?" -eq 0 ]; then
 		    copy_bootfiles
-		    showmsg_n "Compressing kernel $BOOTKERN..."
-	    	    if [ "$USE_GNU_GRUB" = "yes" ]; then
+		    showmsg_n "Compressing kernel $KERNEL_CONFIG..."
+                    if is_enabled USE_GNU_GRUB; then
 		        cp $WORKDIR/$KERNEL_NAME/netbsd \
-			    $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
-			gzip -9 $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
+			    $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
+			gzip -9 $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
 			showmsgstring
                     else
                         if [ -f $ISODIR/netbsd ]; then
@@ -477,10 +505,10 @@ do_cdlive()
                         # I'll change this when cd9660.c is fixed.
                         #
                             cp $WORKDIR/$KERNEL_NAME/netbsd \
-                                $ISODIR/k.$BOOTKERN
-			    gzip -9 $ISODIR/k.$BOOTKERN
-                            mv $ISODIR/k.$BOOTKERN.gz \
-                                $ISODIR/k.$BOOTKERN
+                                $ISODIR/k.$KERNEL_CONFIG
+			    gzip -9 $ISODIR/k.$KERNEL_CONFIG
+                            mv $ISODIR/k.$KERNEL_CONFIG.gz \
+                                $ISODIR/k.$KERNEL_CONFIG
                         else
                             cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
                             gzip -9 $ISODIR/netbsd
@@ -489,7 +517,7 @@ do_cdlive()
 			showmsgstring
                     fi
 		    if [ "$?" -eq 0 ]; then
-                        [ "$USE_GNU_GRUB" = "yes" ] && do_menu_lst
+                        is_enabled USE_GNU_GRUB && do_menu_lst
 		        [ -n "$verbose_mode" ] && \
 		            echo "=> NEXT STEP: ${progname} base"
 		    else
@@ -505,6 +533,38 @@ do_cdlive()
                 do_build_kernels
             fi
 	;;
+    fetch)
+        #
+        # Fetch the sets if the option is enabled from REMOTE_SETS_URL.
+        #
+        if is_enabled FETCH_SETS; then
+            if [ ! -d $BASE_SETS_DIR ]; then
+                showmsg "Cannot find $BASE_SETS_DIR, exiting"
+                bye 1
+            fi 
+            cd $BASE_SETS_DIR
+            for f in ${BASE_SETS}
+            do
+                if [ -f "$f" ]; then
+                    /usr/bin/ftp -4aR "$REMOTE_SETS_URL/$f"
+                fi
+
+                if [ -n "$verbose_mode" ]; then
+                    /usr/bin/ftp -4a "$REMOTE_SETS_URL/$f"
+                else
+                    showmsg_n "Downloading set $f..."
+                    /usr/bin/ftp -4a "$REMOTE_SETS_URL/$f" 2>&1 > /dev/null
+                    showmsgstring
+                fi
+            done
+        else
+            showmsg "You have disabled the option to fetch the sets."
+            bye 1
+        fi
+
+        [ -n "$verbose_mode" ] && echo "=> NEXT STEP: ${progname} base"
+
+        ;;
     base)
         for F in ${BASE_SETS}
         do
@@ -524,7 +584,7 @@ do_cdlive()
 	    fi
 	done
 
-	if [ "${ENABLE_X11}" = "yes" ]; then
+        if is_enabled ENABLE_X11; then
 	    for FX in ${X11_SETS}
 	    do
 	        if [ ! -f $X11_SETS_DIR/$FX ]; then
@@ -575,7 +635,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.32 2007/03/10 00:01:23 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.33 2007/04/10 02:23:34 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -752,28 +812,24 @@ _EOF_
             mv $ISODIR/etc/rc.d/livecd.f $ISODIR/etc/rc.d/livecd
 	fi
 
-        if [ "${ENABLE_X11}" = "yes" -a ! -f $ISODIR/etc/X11/XF86Config ]; then
+        if is_enabled ENABLE_X11 && [ ! -f $ISODIR/etc/X11/XF86Config ]; then
             if [ -f /etc/X11/XF86Config ]; then
                 cp /etc/X11/XF86Config $ISODIR/etc/X11
             fi
         fi
  
-	if [ "${PERSONAL_CONFIG}" = "yes" ]; then
+	if is_enabled PERSONAL_CONFIG; then
             if [ -f $config_dir/$pers_conffile ]; then
 	        echo
 	    	showmsg_n "Running personal config file..."
 	    	. $config_dir/$pers_conffile
 		showmsgstring
 	    	echo
-	    elif [ "${PERSONAL_CONFIG}" = "yes" ]; then
-                if [ ! -f $config_dir/$pers_conffile ]; then
-		    	echo
-		    	echo "==> CANNOT FIND PERSONAL CONFIGURATION FILE"
-		    	echo
-                        bye 1
-		else
-		    	continue
-		fi
+            else
+		echo
+		echo "==> CANNOT FIND PERSONAL CONFIGURATION FILE"
+		echo
+                bye 1
             fi
         fi
 		
@@ -865,12 +921,7 @@ _EOF_
 	done
     ;;
     iso)
-        # To make sure that it's not defined
-        if [ "${ARCH}" = "x86_64" ]; then
-            unset USE_GNU_GRUB
-        fi
-
-        if [ "$VND_COMPRESSION" = "yes" ]; then
+        if is_enabled VND_COMPRESSION; then
             cd $ISODIR
 
             if [ ! -f $ISODIR/stand/usr.zfs ]; then
@@ -909,16 +960,16 @@ _EOF_
         #
         # Detect if we are running a MULTIBOOT kernel.
         #
-        if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst -a -f $WORKDIR/$BOOTKERN ]; then
-            gunzip $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
-            config -x $ISODIR/$GRUB_BOOTDIR/$BOOTKERN | grep -q MULTIBOOT
+        if [ -f $ISODIR/$GRUB_BOOTDIR/menu.lst -a -f $WORKDIR/$KERNEL_CONFIG ]; then
+            gunzip $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
+            config -x $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG | grep -q MULTIBOOT
             if [ "$?" -eq 0 ]; then
                 showmsg "Applying fix for MULTIBOOT kernel..."
                 sed -e "s|\--type=netbsd||g" $ISODIR/boot/grub/menu.lst > \
                     $ISODIR/boot/grub/menu.lst.in
                 mv $ISODIR/boot/grub/menu.lst.in $ISODIR/boot/grub/menu.lst
             fi
-            gzip -9 $ISODIR/$GRUB_BOOTDIR/$BOOTKERN
+            gzip -9 $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
         fi
 
         _do_real_iso_image()
@@ -945,7 +996,7 @@ _EOF_
             sleep 2 # Because I want to see the messages :-)
 
             showmsg_n "Creating ISO CD9660 image..."
-            if [ "$USE_GNU_GRUB" = "yes" ]; then
+            if is_enabled USE_GNU_GRUB; then
                 [ -d $ISODIR/$GRUB_BOOTDIR ] && \
                     chown -R root:wheel $ISODIR/$GRUB_BOOTDIR
                 $MKISOFS_BIN $MKISOFS_FIXED_ARGS $GRUB_BOOT_ARGS $MKISOFS_ARGS \
@@ -978,7 +1029,7 @@ _EOF_
             bye 1
 	fi
 
-	[ "$BLANK_BEFORE_BURN" = "yes" ] && \
+        [ is_enabled BLANK_BEFORE_BURN ] && \
 	    $CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS blank=fast
 		
 	$CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS $BASEDIR/$IMAGE_NAME.iso
@@ -1071,6 +1122,9 @@ case "$target" in
     burn)
         checkconf
         do_cdlive burn
+    ;;
+    fetch)
+        do_cdlive fetch
     ;;
     *)
         usage
