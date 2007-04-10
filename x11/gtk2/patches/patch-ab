@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.16 2007/04/10 13:05:59 adam Exp $
+
+--- gdk/quartz/gdkdrawable-quartz.c.orig	2007-04-10 14:32:41.000000000 +0200
++++ gdk/quartz/gdkdrawable-quartz.c
+@@ -61,7 +61,7 @@ gdk_quartz_ref_cairo_surface (GdkDrawabl
+ 
+   gdk_drawable_get_size (drawable, &width, &height);
+ 
+-  surface = cairo_quartz_surface_create (context, width, height, TRUE);
++  surface = cairo_quartz_surface_create_for_cg_context (context, width, height);
+ 
+   info = g_new (SurfaceInfo, 1);
+   info->drawable = drawable;
