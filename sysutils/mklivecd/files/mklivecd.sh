@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.33 2007/04/10 02:23:34 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.34 2007/04/10 03:05:49 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -546,7 +546,14 @@ do_cdlive()
             for f in ${BASE_SETS}
             do
                 if [ -f "$f" ]; then
-                    /usr/bin/ftp -4aR "$REMOTE_SETS_URL/$f"
+                    echo -n "There's already '$f', do you want to "
+                    echo -n "download it again? (y/n) "
+                    read output_u
+                    if [ "$output_u" = "y" ]; then
+                        rm "$f"
+                    elif [ "$output_u" = "n" -o "$output_u" != "y" ]; then
+                           continue
+                    fi
                 fi
 
                 if [ -n "$verbose_mode" ]; then
@@ -635,7 +642,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.33 2007/04/10 02:23:34 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.34 2007/04/10 03:05:49 xtraeme Exp $
 # 
 
 # PROVIDE: root
