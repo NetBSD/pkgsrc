@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+#
+
+DISTNAME=	libgnomekbd-2.18.1
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/2.18/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Gnome keyboard configuration library
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
+MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config intltool gmake
+USE_DIRS+=	xdg-1.1
+
+GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
+PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
+PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
+
+.include "../../devel/GConf2/schemas.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libxklavier/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
