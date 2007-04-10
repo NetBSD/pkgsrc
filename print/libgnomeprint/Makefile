@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2007/02/20 18:18:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.57 2007/04/10 18:56:12 drochner Exp $
 #
 
-DISTNAME=	libgnomeprint-2.12.1
-PKGREVISION=	5
+DISTNAME=	libgnomeprint-2.18.0
 CATEGORIES=	print gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -17,6 +16,7 @@ USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-gtk-doc
 
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.4
 
@@ -53,6 +53,5 @@ PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
