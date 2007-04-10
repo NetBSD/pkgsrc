@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:55 joerg Exp $
+bin/xmag
+lib/X11/app-defaults/Xmag
+man/man1/xmag.1
