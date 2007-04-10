@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6203 2007/04/10 23:14:05 wiz Exp $
+$NetBSD: TODO,v 1.6204 2007/04/10 23:52:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -796,7 +796,6 @@ Suggested package updates
 	o memtestplus-1.70
 	o mergeant-0.66
 	o mesure-0.7.2
-	o metacity-2.18.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o milter-greylist-3.1.7
