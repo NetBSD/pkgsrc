@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+bin/gkbd-indicator-plugins-capplet
+include/libgnomekbd/gkbd-config-registry-client.h
+include/libgnomekbd/gkbd-config-registry.h
+include/libgnomekbd/gkbd-desktop-config.h
+include/libgnomekbd/gkbd-indicator-config.h
+include/libgnomekbd/gkbd-indicator-plugin.h
+include/libgnomekbd/gkbd-indicator.h
+include/libgnomekbd/gkbd-keyboard-config.h
+include/libgnomekbd/gkbd-keyboard-drawing.h
+include/libgnomekbd/gkbd-util.h
+lib/libgnomekbd.la
+lib/libgnomekbdui.la
+lib/pkgconfig/libgnomekbd.pc
+lib/pkgconfig/libgnomekbdui.pc
+share/applications/gkbd-indicator-plugins-capplet.desktop
+share/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas
+share/icons/hicolor/48x48/apps/gkbd-indicator-plugins-capplet.png
+share/libgnomekbd/glade/gkbd-indicator-plugins.glade
+share/locale/ar/LC_MESSAGES/libgnomekbd.mo
+share/locale/bg/LC_MESSAGES/libgnomekbd.mo
+share/locale/ca/LC_MESSAGES/libgnomekbd.mo
+share/locale/da/LC_MESSAGES/libgnomekbd.mo
+share/locale/dz/LC_MESSAGES/libgnomekbd.mo
+share/locale/el/LC_MESSAGES/libgnomekbd.mo
+share/locale/en_GB/LC_MESSAGES/libgnomekbd.mo
+share/locale/es/LC_MESSAGES/libgnomekbd.mo
+share/locale/fr/LC_MESSAGES/libgnomekbd.mo
+share/locale/gl/LC_MESSAGES/libgnomekbd.mo
+share/locale/hu/LC_MESSAGES/libgnomekbd.mo
+share/locale/it/LC_MESSAGES/libgnomekbd.mo
+share/locale/ja/LC_MESSAGES/libgnomekbd.mo
+share/locale/ko/LC_MESSAGES/libgnomekbd.mo
+share/locale/mk/LC_MESSAGES/libgnomekbd.mo
+share/locale/nb/LC_MESSAGES/libgnomekbd.mo
+share/locale/pt/LC_MESSAGES/libgnomekbd.mo
+share/locale/pt_BR/LC_MESSAGES/libgnomekbd.mo
+share/locale/ru/LC_MESSAGES/libgnomekbd.mo
+share/locale/sv/LC_MESSAGES/libgnomekbd.mo
+share/locale/uk/LC_MESSAGES/libgnomekbd.mo
+@dirrm share/libgnomekbd/glade
+@dirrm share/libgnomekbd
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm include/libgnomekbd
