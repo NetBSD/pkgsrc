@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.767 2007/04/10 11:42:01 adam Exp $
+$NetBSD: CHANGES-2007,v 1.768 2007/04/10 13:18:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1472,3 +1472,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/cgoban-java to 3.3.16 [rillig 2007-04-10]
 	Updated editors/vim-share to 7.0.224 [martti 2007-04-10]
 	Updated devel/gconfmm to 2.18.0 [adam 2007-04-10]
+	Updated emulators/wine to 0.9.34 [adam 2007-04-10]
