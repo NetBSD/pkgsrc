@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2007/02/22 19:26:20 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/04/10 18:15:01 drochner Exp $
 #
 
-DISTNAME=		at-spi-1.7.12
+DISTNAME=		at-spi-1.18.1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.7/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	cspi-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	libspi-1.0.pc.in
 
-BUILDLINK_API_DEPENDS.atk+=	atk>=1.12.0
+BUILDLINK_API_DEPENDS.atk+=	atk>=1.18.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
