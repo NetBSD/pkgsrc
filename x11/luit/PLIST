@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:47 joerg Exp $
+bin/luit
+man/man1/luit.1
