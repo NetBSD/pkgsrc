@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.34 2007/04/10 03:05:49 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.35 2007/04/10 20:52:01 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -635,14 +635,14 @@ do_cdlive()
 	echo "clear_tmp=no";				    \
 	) >> $ISODIR/etc/rc.conf
 
-	# /etc/rc.d/root could umount the mfs directories, 
+	# /etc/rc.d/root could umount the ramfs directories, 
 	# so it's best not to touch them.
 
 	rm $ISODIR/etc/rc.d/root
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.34 2007/04/10 03:05:49 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.35 2007/04/10 20:52:01 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -762,10 +762,10 @@ _EOF_
 
         SUBST_H_MKDIR="/rescue/mkdir -p /ramfs/home"
 	SUBST_H_MNT="/rescue/mount_null /ramfs/home /home"
-	SUBST_H_UNPACK="/rescue/tar xfzp /stand/mfs_home.tgz -C /"
+	SUBST_H_UNPACK="/rescue/tar xfzp /stand/ramfs_home.tgz -C /"
         SUBST_S_MKDIR="/rescue/mkdir -p /ramfs/pkg_sysconfdir"
 	SUBST_S_MNT="/rescue/mount_null /ramfs/pkg_sysconfdir /usr/pkg/etc" 
-	SUBST_S_UNPACK="/rescue/tar xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
+	SUBST_S_UNPACK="/rescue/tar xfzp /stand/ramfs_pkg_sysconfdir.tgz -C /"
 
 	sed -e "s|@MNT_RAMFS_ARGS@|$MNT_RAMFS_ARGS|g" \
             -e "s|@MNT_RAMFS_CMD@|$MNT_RAMFS_CMD|g" \
@@ -775,15 +775,15 @@ _EOF_
 	for U in root dev etc home
 	do
 	    if [ -d $ISODIR/$U ]; then
-	        showmsg_n "Creating /stand/mfs_$U.tgz... "
-		@TAR@ cfzp $ISODIR/stand/mfs_$U.tgz $U >/dev/null 2>&1
+	        showmsg_n "Creating /stand/ramfs_$U.tgz... "
+		@TAR@ cfzp $ISODIR/stand/ramfs_$U.tgz $U >/dev/null 2>&1
 		showmsgstring
             fi
 	done
 
-        if [ "$VND_COMPRESSION" = "no" ]; then
-                showmsg_n "Creating /stand/mfs_var.tgz... "
-                @TAR@ cfzp $ISODIR/stand/mfs_var.tgz var >/dev/null 2>&1
+        if is_disabled VND_COMPRESSION; then
+                showmsg_n "Creating /stand/ramfs_var.tgz... "
+                @TAR@ cfzp $ISODIR/stand/ramfs_var.tgz var >/dev/null 2>&1
                 showmsgstring
         fi
  
@@ -802,8 +802,8 @@ _EOF_
 	fi
                         
 	if [ -d $ISODIR/$PKG_SYSCONFDIR ]; then
-	    showmsg_n "Creating /stand/mfs_pkg_sysconfdir.tgz..."
-	    @TAR@ cfzp $ISODIR/stand/mfs_pkg_sysconfdir.tgz \
+	    showmsg_n "Creating /stand/ramfs_pkg_sysconfdir.tgz..."
+	    @TAR@ cfzp $ISODIR/stand/ramfs_pkg_sysconfdir.tgz \
 		$PKG_SYSCONFDIR >/dev/null 2>&1
 	    showmsgstring
 	    sed	-e "s|@USRPKGETC_MKDIR@|$SUBST_S_MKDIR|" \
@@ -957,10 +957,10 @@ _EOF_
                     showmsg_n "Removing /var/db/pkg... "
                     rm -rf $ISODIR/var/db/pkg/*
                     showmsgstring
-                    @TAR@ cfzp stand/mfs_var.tgz var
+                    @TAR@ cfzp stand/ramfs_var.tgz var
                 fi
             else
-                    @TAR@ cfzp stand/mfs_var.tgz var
+                    @TAR@ cfzp stand/ramfs_var.tgz var
             fi
         fi
 
@@ -987,8 +987,8 @@ _EOF_
                 rm $BASEDIR/$IMAGE_NAME.iso
             fi
 
-            if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
-                showmsg "Cannot find mfs_etc.tgz file."
+            if [ ! -f $ISODIR/stand/ramfs_etc.tgz ]; then
+                showmsg "Cannot find ramfs_etc.tgz file."
 		bye 1
             fi
             for RM in ${REMOVE_DIRS}
