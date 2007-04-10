@@ -1,0 +1,2 @@
+This package contains the autoconf/automake macros shared by the various
+modular Xorg components.
