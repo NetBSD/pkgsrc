@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/15 15:20:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/04/10 20:25:03 drochner Exp $
 bin/bug-buddy
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.glade
@@ -13,8 +13,6 @@ share/bug-buddy/bugzilla/ximian/config
 share/bug-buddy/bugzilla/ximian/mostfreq
 share/bug-buddy/bugzilla/ximian/products
 share/bug-buddy/gdb-cmd
-share/bug-buddy/gnome.png
-share/bug-buddy/ximian.png
 share/gconf/schemas/bug-buddy.schemas
 share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
