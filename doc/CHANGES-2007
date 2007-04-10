@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.770 2007/04/10 19:12:04 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.771 2007/04/10 20:27:46 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xsetmode version 1.0.0 [joerg 2007-04-10]
 	Added x11/xsetpointer version 1.0.1 [joerg 2007-04-10]
 	Updated x11/xf86-video-ati to 6.6.3nb1 [joerg 2007-04-10]
+	Added www/ocsigen version 0.6.0 [tonio 2007-04-10]
