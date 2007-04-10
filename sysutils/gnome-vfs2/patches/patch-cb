@@ -1,16 +1,14 @@
-$NetBSD: patch-cb,v 1.1 2007/01/28 15:39:27 rillig Exp $
+$NetBSD: patch-cb,v 1.2 2007/04/10 17:58:24 drochner Exp $
 
-PR: 35263
-
---- modules/file-method-acl.c.orig	2006-08-07 10:16:27.000000000 +0200
-+++ modules/file-method-acl.c	2007-01-28 16:34:35.000000000 +0100
-@@ -34,6 +34,9 @@
- #include <unistd.h>
+--- modules/file-method-acl.c.orig	2007-03-13 11:50:03.000000000 +0100
++++ modules/file-method-acl.c
+@@ -35,6 +35,9 @@
  #include <stdlib.h>
  #include <sys/types.h>
+ #ifdef HAVE_SYS_RESOURCE_H
 +#ifdef HAVE_SYS_TIME_H
-+#include <sys/time.h>		/* <sys/resource.h> needs this on MacOS X */
++#include <sys/time.h>	/* <sys/resource.h> needs this on MacOS X */
 +#endif
  #include <sys/resource.h>
+ #endif
  
- #ifdef HAVE_PWD_H
