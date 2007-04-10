@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:47:04 joerg Exp $
+bin/xmore
+lib/X11/app-defaults/XMore
+man/man1/xmore.1
