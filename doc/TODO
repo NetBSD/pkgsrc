@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6199 2007/04/09 19:33:53 adrianp Exp $
+$NetBSD: TODO,v 1.6200 2007/04/10 11:42:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ Suggested package updates
 	o gcin-1.2.7
 	o gcombust-0.1.55
 	o gconf-editor-2.18.0
-	o gconfmm-2.18.0
 	o gcpio-2.7
 	o gdb6-6.6
 	o gdeskcal-1.01
