@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.764 2007/04/10 02:26:00 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.765 2007/04/10 03:43:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1469,3 +1469,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/drupal to 5.1 [adrianp 2007-04-09]
 	Updated sysutils/xosview to 1.8.3nb1 [veego 2007-04-09]
 	Updated sysutils/mklivecd to 0.15 [xtraeme 2007-04-10]
+	Updated games/cgoban-java to 3.3.16 [rillig 2007-04-10]
