@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2007/02/22 19:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2007/04/10 18:20:56 drochner Exp $
 #
 
-DISTNAME=	libgnome-2.16.0
-PKGREVISION=	1
+DISTNAME=	libgnome-2.18.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.16/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -51,6 +50,8 @@ GCONF2_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_sound.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
+GCONF2_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
+GCONF2_SCHEMAS+=	desktop_gnome_applications_at_visual.schemas
 
 BUILDLINK_API_DEPENDS.audiofile+=	libaudiofile>=0.2.3
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0

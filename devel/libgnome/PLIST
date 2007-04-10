@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/09/15 15:08:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/04/10 18:20:56 drochner Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -24,6 +24,8 @@ share/examples/libgnome/sound/events/gnome-2.soundlist
 share/examples/libgnome/sound/events/gtk-events-2.soundlist
 share/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas
 share/gconf/schemas/desktop_gnome_accessibility_startup.schemas
+share/gconf/schemas/desktop_gnome_applications_at_mobility.schemas
+share/gconf/schemas/desktop_gnome_applications_at_visual.schemas
 share/gconf/schemas/desktop_gnome_applications_browser.schemas
 share/gconf/schemas/desktop_gnome_applications_help_viewer.schemas
 share/gconf/schemas/desktop_gnome_applications_terminal.schemas
@@ -37,13 +39,25 @@ share/gconf/schemas/desktop_gnome_peripherals_mouse.schemas
 share/gconf/schemas/desktop_gnome_sound.schemas
 share/gconf/schemas/desktop_gnome_thumbnailers.schemas
 share/gconf/schemas/desktop_gnome_typing_break.schemas
-share/gtk-doc/html/libgnome/ch01s02.html
-share/gtk-doc/html/libgnome/ch01s03.html
-share/gtk-doc/html/libgnome/ch01s04.html
-share/gtk-doc/html/libgnome/ch01s05.html
+share/gtk-doc/html/libgnome/ch01.html
+share/gtk-doc/html/libgnome/ch02.html
+share/gtk-doc/html/libgnome/ch03.html
+share/gtk-doc/html/libgnome/ch04.html
+share/gtk-doc/html/libgnome/ch05.html
+share/gtk-doc/html/libgnome/ch06.html
 share/gtk-doc/html/libgnome/home.png
 share/gtk-doc/html/libgnome/index.html
 share/gtk-doc/html/libgnome/index.sgml
+share/gtk-doc/html/libgnome/ix01.html
+share/gtk-doc/html/libgnome/ix02.html
+share/gtk-doc/html/libgnome/ix03.html
+share/gtk-doc/html/libgnome/ix04.html
+share/gtk-doc/html/libgnome/ix05.html
+share/gtk-doc/html/libgnome/ix06.html
+share/gtk-doc/html/libgnome/ix07.html
+share/gtk-doc/html/libgnome/ix08.html
+share/gtk-doc/html/libgnome/ix09.html
+share/gtk-doc/html/libgnome/ix10.html
 share/gtk-doc/html/libgnome/left.png
 share/gtk-doc/html/libgnome/libgnome-gnome-config.html
 share/gtk-doc/html/libgnome/libgnome-gnome-exec.html
@@ -77,9 +91,11 @@ share/locale/cs/LC_MESSAGES/libgnome-2.0.mo
 share/locale/cy/LC_MESSAGES/libgnome-2.0.mo
 share/locale/da/LC_MESSAGES/libgnome-2.0.mo
 share/locale/de/LC_MESSAGES/libgnome-2.0.mo
+share/locale/dz/LC_MESSAGES/libgnome-2.0.mo
 share/locale/el/LC_MESSAGES/libgnome-2.0.mo
 share/locale/en_CA/LC_MESSAGES/libgnome-2.0.mo
 share/locale/en_GB/LC_MESSAGES/libgnome-2.0.mo
+share/locale/eo/LC_MESSAGES/libgnome-2.0.mo
 share/locale/es/LC_MESSAGES/libgnome-2.0.mo
 share/locale/et/LC_MESSAGES/libgnome-2.0.mo
 share/locale/eu/LC_MESSAGES/libgnome-2.0.mo
