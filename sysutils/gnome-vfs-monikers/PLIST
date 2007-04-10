@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 19:04:16 drochner Exp $
+lib/bonobo/monikers/libmoniker_gnome_vfs_std.la
+lib/bonobo/servers/GNOME_VFS_Moniker_std.server
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@comment in libbonobo: @dirrm lib/bonobo/monikers
