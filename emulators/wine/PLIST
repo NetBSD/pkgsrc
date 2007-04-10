@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2007/03/17 23:07:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2007/04/10 13:17:48 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -768,6 +768,7 @@ lib/wine/shlwapi.dll.so
 lib/wine/snmpapi.dll.so
 lib/wine/sound.drv16
 lib/wine/spoolss.dll.so
+lib/wine/spoolsv.exe.so
 lib/wine/start.exe.so
 lib/wine/stdole2.tlb.so
 lib/wine/stdole32.tlb.so
@@ -852,6 +853,7 @@ lib/wine/wprocs.dll16
 lib/wine/ws2_32.dll.so
 lib/wine/wsock32.dll.so
 lib/wine/wtsapi32.dll.so
+lib/wine/xcopy.exe.so
 man/man1/widl.1
 man/man1/wine.1
 man/man1/winebuild.1
