@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/15 16:58:21 drochner Exp $
-include/ucl/ucl.h
-include/ucl/ucl_asm.h
-include/ucl/uclconf.h
-lib/libucl.la
-@dirrm include/ucl
