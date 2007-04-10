@@ -1,20 +1,28 @@
-.\" $NetBSD: mklivecd.8,v 1.15 2006/10/14 07:42:25 wiz Exp $
+.\" $NetBSD: mklivecd.8,v 1.16 2007/04/10 02:23:34 xtraeme Exp $
 .\"
-.\" mklivecd - Make your own NetBSD/i386 Live CD-ROM/DVD-ROM
+.\" mklivecd - Make your own NetBSD/x86 Live CD-ROM/DVD-ROM
 .\"
-.\" Copyright (c) 2004-2006 Juan Romero Pardines  <xtraeme@NetBSD.org>
+.\" Copyright (c) 2004-2007 Juan Romero Pardines.
+.\" All rights reserved.
+.\"
+.\" This code is derived from software contributed to The NetBSD Foundation
+.\" by Juan Romero Pardines.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
 .\" are met:
 .\" 1. Redistributions of source code must retain the above copyright
 .\"    notice, this list of conditions and the following disclaimer.
-.\" 2. Neither the name of The NetBSD Foundation nor the names of its
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. All advertising materials mentioning features or use of this software
+.\"    must display the following acknowledgement:
+.\"        This product includes software developed by the NetBSD
+.\"        Foundation, Inc. and its contributors.
+.\" 4. Neither the name of The NetBSD Foundation nor the names of its
 .\"    contributors may be used to endorse or promote products derived
 .\"    from this software without specific prior written permission.
-.\" 3. Neither the name of author nor the names of its contributors may
-.\"    be used to endorse or promote products derived from this software
-.\"    without specific prior written permission.
 .\"
 .\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
 .\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -28,14 +36,14 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd October 8, 2006
+.Dd April 10, 2007
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
 .Nm mklivecd
 .Nd Make your own
 .Nx
-/ i386 Live CD-ROM/DVD-ROM
+/ x86 Live CD-ROM/DVD-ROM
 .Sh SYNOPSIS
 .Nm
 .Fl v
@@ -56,11 +64,12 @@ two options for the bootloader are provided since version
 .Pa the GNU Grub bootloader
 or the
 .Nx
-cdboot bootloader (since
+ISO9660 bootloader (since
 .Nx 4.0 ) .
-By default it will use the first option:
-.Pa the GNU Grub bootloader .
-You may want to change this by changing the option
+By default on i386 will use the first option:
+.Pa the GNU Grub bootloader ,
+and the NetBSD ISO9660 booloader on amd64. You may want to
+change this by changing the option
 .Pa USE_GNU_GRUB
 to
 .Sy no .
@@ -77,7 +86,7 @@ Example:
 .Bl -tag -width XkXkernel
 .It Fl k Ar kernel
 Overrides the
-.Ar BOOTKERN
+.Ar KERNEL_CONFIG
 value specified in the configuration file,
 .Ar KERNEL_NAME
 will be modified automatically too.
@@ -105,6 +114,17 @@ target.
 Primary directory used to store the main directories and the final ISO image.
 Defaults to
 .Pa $HOME/livecd .
+.It FETCH_SETS
+If it's set to yes, it will download the sets in the target
+.Pa fetch ,
+from the URL specified in
+.Pa REMOTE_SETS_URL .
+.It REMOTE_SETS_URL
+This is the URL containing the base/x11 sets for the
+.Pa fetch
+target and if
+.Pa FETCH_SETS
+is set to yes.
 .It BASE_SETS_DIR
 The base sets directory.
 Defaults to
@@ -180,10 +200,10 @@ Sets used by default are:
 The X11 sets directory.
 Defaults to
 .Pa $BASE_SETS_DIR .
-.It BOOTKERN
+.It KERNEL_CONFIG
 Name of the
 .Nx
-kernel used for the boot image.
+configuration kernel (e.g. GENERIC) used for the boot image.
 Defaults to
 .Sy KERN-LIVECD .
 .It KERNEL_NAME
@@ -239,7 +259,7 @@ then X11 sets and configuration files will be unpacked automatically.
 Defaults to
 .Sy no .
 .It GRUB_FILES_DIR
-Directory where the grub files are stored.
+Directory where the grub files are stored. 
 Defaults to
 .Sy @LOCALBASE@/lib/grub/@MACHINE_ARCH@-/ .
 .It HOSTNAME
@@ -294,7 +314,8 @@ Defaults to
 Used to select the bootloader for the Live CD.
 When it's disabled the
 .Nx
-CDBootloader will be used.
+CD Bootloader will be used. Note that you cannot use GRUB
+on amd64, so the option shouldn't be touched on this arch.
 Defaults to
 .Sy yes .
 .It VND_COMPRESSION
@@ -356,10 +377,18 @@ You should edit it after the creation as you will probably want to
 change the default configuration, especially paths.
 .It Ar kernel
 Builds the specified kernel
-.Pa $BOOTKERN
+.Pa $KERNEL_CONFIG
 into the
 .Pa $ISODIR
 directory.
+.It Ar fetch
+Downloads the sets defined in
+.Pa $BASE_SETS
+from
+.Pa $REMOTE_SETS_URL
+and if
+.Pa $FETCH_SETS
+is enabled.
 .It Ar base
 Install the
 .Pa $BASE_SETS
@@ -435,7 +464,7 @@ and
 .Ar APMKERN ,
 both are kernel configuration files, you'll need
 to define the variables named
-.Ar BOOTKERN_${foo}
+.Ar KERNEL_CONFIG_${foo}
 and
 .Ar KERNEL_NAME_${foo}
 for every kernel specified on the
@@ -444,14 +473,14 @@ option.
 The following example shows that:
 .Bd -literal -offset indent
 MULTIPLE_KERNELS="ACPIKERN APMKERN"
-BOOTKERN_ACPIKERN="LIVECD_ACPI"
-BOOTKERN_APMKERN="LIVECD_APM"
+KERNEL_CONFIG_ACPIKERN="LIVECD_ACPI"
+KERNEL_CONFIG_APMKERN="LIVECD_APM"
 KERNEL_NAME_ACPIKERN="KERN_ACPI_LIVECD"
 KERNEL_NAME_APMKERN="KERN_APM_LIVECD"
 .Ed
 .Pp
 Note that when using this option, the
-.Pa BOOTKERN
+.Pa KERNEL_CONFIG
 and
 .Pa KERNEL_NAME
 variables, will don't have any effect.
@@ -470,15 +499,12 @@ adds this automatically in the script, otherwise your real PKG_SYSCONFDIR
 directory will be copied instead of the one located in
 .Pa $ISODIR .
 .Pp
-An example kernel config file,
-.Pa KERN-LIVECD ,
-has been installed into
-.Ar @PREFIX@/share/mklivecd ,
-based on the 2.0 branch.
-You should copy your own kernel config file into
+By default there's no default kernel, so you should copy
+your own kernel (or kernels if MULTIPLE_KERNELS is set) config
+file into
 .Ar $HOME/.mklivecd .
 The
-.Sy BOOTKERN
+.Sy KERNEL_CONFIG
 variable should point at it, if you're not using
 .Sy MULTIPLE_KERNELS .
 The important thing about the kernel is the line:
@@ -496,6 +522,7 @@ Below are the minimal steps to create your own Live CD-ROM/DVD-ROM:
 $ mklivecd config
   [edit the config file]
 $ mklivecd kernel
+$ mklivecd fetch [to download the sets if enabled]
 $ mklivecd base
 $ mklivecd chroot
   [edit what you like in there, e.g. config files]
@@ -514,3 +541,12 @@ utility was written by
 .An Juan Romero Pardines Aq xtraeme@NetBSD.org .
 .Sh BUGS
 It is not perfect but at least it does its task correctly.
+.Sh SUPPORT
+Many Live CDs are built with this software, and sometimes
+.Nm
+is not even mentioned, that's not good. If you use
+this software to build a Live CD, please say so in your
+README file or FAQ.
+If you want more features implemented, please make a
+hardware or monetary donation to continue improving
+NetBSD development.
