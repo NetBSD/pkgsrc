@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+
+SHA1 (libgnomekbd-2.18.1.tar.bz2) = 3ccab6daf54ff7349ccdf2fa675fceebd576bff4
+RMD160 (libgnomekbd-2.18.1.tar.bz2) = 461be2a5926103a28ffc49a63a833e87e7211ca9
+Size (libgnomekbd-2.18.1.tar.bz2) = 354094 bytes
+SHA1 (patch-aa) = b5f570537bcd0ab545cb4d7808ee00dd0c4fd7d3
