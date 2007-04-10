@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/09/24 16:46:03 adam Exp $
+$NetBSD: distinfo,v 1.9 2007/04/10 11:41:01 adam Exp $
 
-SHA1 (gconfmm-2.16.0.tar.bz2) = 16142b39fcd13177f9331a4b0b75e08b84bd634d
-RMD160 (gconfmm-2.16.0.tar.bz2) = 953af54d8c244c1776e228656df7e95d869bfb9f
-Size (gconfmm-2.16.0.tar.bz2) = 275789 bytes
+SHA1 (gconfmm-2.18.0.tar.bz2) = cc00409d9a9bd396cd738e040adbba86fe578e00
+RMD160 (gconfmm-2.18.0.tar.bz2) = d7cd82262e503ef476b2542467a183b4f313dcd3
+Size (gconfmm-2.18.0.tar.bz2) = 292484 bytes
