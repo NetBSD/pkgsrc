@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.15 2007/02/21 19:29:56 rillig Exp $
+# $NetBSD: transform-gcc,v 1.16 2007/04/10 03:44:34 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -46,6 +46,7 @@ case $arg in
 -M[DFMPT]		|\
 -m64			|\
 -MMD			|\
+-march=*		|\
 -mcpu=*			|\
 -mieee-fp		|\
 -O[23s]			|\
