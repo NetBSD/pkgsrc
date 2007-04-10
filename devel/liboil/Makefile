@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/11/24 13:02:48 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2007/04/10 16:09:42 drochner Exp $
 #
 
-DISTNAME=	liboil-0.3.10
+DISTNAME=	liboil-0.3.11
 CATEGORIES=	devel
 MASTER_SITES=	http://liboil.freedesktop.org/download/
 
