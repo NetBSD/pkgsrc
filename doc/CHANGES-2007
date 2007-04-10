@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.772 2007/04/10 22:04:43 rmind Exp $
+$NetBSD: CHANGES-2007,v 1.773 2007/04/10 23:34:30 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1488,3 +1488,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xf86-video-ati to 6.6.3nb1 [joerg 2007-04-10]
 	Added www/ocsigen version 0.6.0 [tonio 2007-04-10]
 	Updated databases/slony1 to 1.2.9 [rmind 2007-04-10]
+	Added devel/xorg-util-macros version 1.1.5 [joerg 2007-04-10]
