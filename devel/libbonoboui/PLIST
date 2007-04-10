@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/09/15 15:08:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/04/10 18:26:59 drochner Exp $
 bin/bonobo-browser
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
@@ -53,6 +53,7 @@ share/gtk-doc/html/libbonoboui/control.png
 share/gtk-doc/html/libbonoboui/home.png
 share/gtk-doc/html/libbonoboui/index.html
 share/gtk-doc/html/libbonoboui/index.sgml
+share/gtk-doc/html/libbonoboui/ix01.html
 share/gtk-doc/html/libbonoboui/left.png
 share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-a11y.html
 share/gtk-doc/html/libbonoboui/libbonoboui-bonobo-control-frame.html
@@ -94,6 +95,7 @@ share/locale/cs/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/cy/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/da/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/de/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/dz/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/el/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/en_CA/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/en_GB/LC_MESSAGES/libbonoboui-2.0.mo
@@ -121,6 +123,7 @@ share/locale/ku/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/li/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/lt/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/lv/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/mg/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/mk/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ml/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/mn/LC_MESSAGES/libbonoboui-2.0.mo
