@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/11/09 21:14:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/04/11 18:23:12 drochner Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -113,6 +113,7 @@ share/locale/ko/LC_MESSAGES/gcalctool.mo
 share/locale/ku/LC_MESSAGES/gcalctool.mo
 share/locale/lt/LC_MESSAGES/gcalctool.mo
 share/locale/lv/LC_MESSAGES/gcalctool.mo
+share/locale/mg/LC_MESSAGES/gcalctool.mo
 share/locale/mk/LC_MESSAGES/gcalctool.mo
 share/locale/ml/LC_MESSAGES/gcalctool.mo
 share/locale/mn/LC_MESSAGES/gcalctool.mo
