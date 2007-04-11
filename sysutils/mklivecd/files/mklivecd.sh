@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.37 2007/04/11 14:22:26 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.38 2007/04/11 14:31:35 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -154,8 +154,6 @@ showmsg_optyesno()
     echo "This option only accepts a value of 'yes' or 'no'"
     echo "(case insensitive), please update your configuration."
     echo "See mklivecd(8) for more details."
-
-    return 1
 }
 
 checkoptval()
@@ -163,9 +161,10 @@ checkoptval()
     _opt="$1"
     eval _val="\$$1"
 
-    if [ -z $_opt ]; then
+    if [ -z $_val ]; then
         echo "*** '$_opt' is not set ***"
         showmsg_optyesno
+        return 1
     fi
 
     case $_val in
@@ -175,6 +174,7 @@ checkoptval()
         *)
             echo "*** Invalid value for '$_opt' ***"
             showmsg_optyesno
+            return 1
             ;;
     esac
 }
@@ -477,7 +477,7 @@ do_cdlive()
     . $config_file
 
     YESNOVARS="FETCH_SETS ENABLE_X11 USE_GNU_GRUB \
-               VND_COMPRESSION BLANK_BEFORE_BURN"
+               VND_COMPRESSION BLANK_BEFORE_BURN PERSONAL_CONFIG"
 
     for v in $YESNOVARS
     do
@@ -686,7 +686,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.37 2007/04/11 14:22:26 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.38 2007/04/11 14:31:35 xtraeme Exp $
 # 
 
 # PROVIDE: root
