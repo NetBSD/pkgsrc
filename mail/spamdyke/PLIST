@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/24 07:39:25 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/11 14:50:37 schmonz Exp $
+bin/spamdyke-dnsmx
+bin/spamdyke-dnsptr
+bin/spamdyke-dnstxt
 bin/domain2path
 bin/domainsplit
 bin/spamdyke
