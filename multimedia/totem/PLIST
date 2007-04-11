@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2006/10/17 16:35:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/04/11 18:03:39 drochner Exp $
 bin/totem
+bin/totem-video-indexer
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
 include/totem/1/plparser/totem-pl-parser-builtins.h
@@ -35,7 +36,6 @@ share/gnome/help/totem/de/figures/totem_show_playlist_button.png
 share/gnome/help/totem/de/figures/totem_start_window.png
 share/gnome/help/totem/de/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/de/figures/totem_volume_mute_button.png
-share/gnome/help/totem/de/legal.xml
 share/gnome/help/totem/de/totem.xml
 share/gnome/help/totem/es/figures/totem_next_button.png
 share/gnome/help/totem/es/figures/totem_pause_button.png
@@ -45,7 +45,6 @@ share/gnome/help/totem/es/figures/totem_show_playlist_button.png
 share/gnome/help/totem/es/figures/totem_start_window.png
 share/gnome/help/totem/es/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/es/figures/totem_volume_mute_button.png
-share/gnome/help/totem/es/legal.xml
 share/gnome/help/totem/es/totem.xml
 share/gnome/help/totem/fr/figures/totem_next_button.png
 share/gnome/help/totem/fr/figures/totem_pause_button.png
@@ -55,12 +54,43 @@ share/gnome/help/totem/fr/figures/totem_show_playlist_button.png
 share/gnome/help/totem/fr/figures/totem_start_window.png
 share/gnome/help/totem/fr/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/fr/figures/totem_volume_mute_button.png
-share/gnome/help/totem/fr/legal.xml
 share/gnome/help/totem/fr/totem.xml
-share/gnome/help/totem/ru/figures/totem_screenshot.png
+share/gnome/help/totem/pa/figures/totem_next_button.png
+share/gnome/help/totem/pa/figures/totem_pause_button.png
+share/gnome/help/totem/pa/figures/totem_play_button.png
+share/gnome/help/totem/pa/figures/totem_previous_button.png
+share/gnome/help/totem/pa/figures/totem_show_playlist_button.png
+share/gnome/help/totem/pa/figures/totem_start_window.png
+share/gnome/help/totem/pa/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/pa/figures/totem_volume_mute_button.png
+share/gnome/help/totem/pa/totem.xml
+share/gnome/help/totem/pt_BR/figures/totem_next_button.png
+share/gnome/help/totem/pt_BR/figures/totem_pause_button.png
+share/gnome/help/totem/pt_BR/figures/totem_play_button.png
+share/gnome/help/totem/pt_BR/figures/totem_previous_button.png
+share/gnome/help/totem/pt_BR/figures/totem_show_playlist_button.png
+share/gnome/help/totem/pt_BR/figures/totem_start_window.png
+share/gnome/help/totem/pt_BR/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/pt_BR/figures/totem_volume_mute_button.png
+share/gnome/help/totem/pt_BR/totem.xml
+share/gnome/help/totem/ru/figures/totem_next_button.png
+share/gnome/help/totem/ru/figures/totem_pause_button.png
+share/gnome/help/totem/ru/figures/totem_play_button.png
+share/gnome/help/totem/ru/figures/totem_previous_button.png
+share/gnome/help/totem/ru/figures/totem_show_playlist_button.png
 share/gnome/help/totem/ru/figures/totem_start_window.png
-share/gnome/help/totem/ru/legal.xml
+share/gnome/help/totem/ru/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/ru/figures/totem_volume_mute_button.png
 share/gnome/help/totem/ru/totem.xml
+share/gnome/help/totem/sv/figures/totem_next_button.png
+share/gnome/help/totem/sv/figures/totem_pause_button.png
+share/gnome/help/totem/sv/figures/totem_play_button.png
+share/gnome/help/totem/sv/figures/totem_previous_button.png
+share/gnome/help/totem/sv/figures/totem_show_playlist_button.png
+share/gnome/help/totem/sv/figures/totem_start_window.png
+share/gnome/help/totem/sv/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/sv/figures/totem_volume_mute_button.png
+share/gnome/help/totem/sv/totem.xml
 share/gnome/help/totem/uk/figures/totem_next_button.png
 share/gnome/help/totem/uk/figures/totem_pause_button.png
 share/gnome/help/totem/uk/figures/totem_play_button.png
@@ -69,7 +99,6 @@ share/gnome/help/totem/uk/figures/totem_show_playlist_button.png
 share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
-share/gnome/help/totem/uk/legal.xml
 share/gnome/help/totem/uk/totem.xml
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
@@ -80,6 +109,7 @@ share/locale/am/LC_MESSAGES/totem.mo
 share/locale/ar/LC_MESSAGES/totem.mo
 share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
+share/locale/be@latin/LC_MESSAGES/totem.mo
 share/locale/bg/LC_MESSAGES/totem.mo
 share/locale/bn/LC_MESSAGES/totem.mo
 share/locale/bn_IN/LC_MESSAGES/totem.mo
@@ -155,26 +185,23 @@ share/omf/totem/totem-bg.omf
 share/omf/totem/totem-de.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
+share/omf/totem/totem-pa.omf
+share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
+share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
 share/pixmaps/vanity.png
 share/totem/filmholes-big-left.png
 share/totem/filmholes-big-right.png
 share/totem/filmholes.png
 share/totem/mozilla-viewer.glade
-share/totem/playlist-playing.png
+share/totem/playlist-ui.xml
 share/totem/playlist.glade
-share/totem/popup.glade
 share/totem/properties.glade
-share/totem/rhythmbox-volume-max.png
-share/totem/rhythmbox-volume-zero.png
 share/totem/screenshot.glade
 share/totem/skip_to.glade
 share/totem/stock-tool-brightness-contrast-22.png
-share/totem/stock_media_next.png
-share/totem/stock_media_pause.png
-share/totem/stock_media_play.png
-share/totem/stock_media_previous.png
+share/totem/totem-ui.xml
 share/totem/totem.glade
 share/totem/totem_logo.png
 share/totem/uri.glade
@@ -192,8 +219,14 @@ share/totem/vanity.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/totem/uk/figures
 @dirrm share/gnome/help/totem/uk
+@dirrm share/gnome/help/totem/sv/figures
+@dirrm share/gnome/help/totem/sv
 @dirrm share/gnome/help/totem/ru/figures
 @dirrm share/gnome/help/totem/ru
+@dirrm share/gnome/help/totem/pt_BR/figures
+@dirrm share/gnome/help/totem/pt_BR
+@dirrm share/gnome/help/totem/pa/figures
+@dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
 @dirrm share/gnome/help/totem/es/figures
