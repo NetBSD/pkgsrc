@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2007/03/21 12:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/04/11 18:01:13 drochner Exp $
 #
 
 .include "../../print/evince/Makefile.common"
-PKGREVISION=		3
 
 COMMENT=		Document viewer for the GNOME Desktop
 
 GCONF2_SCHEMAS=		evince.schemas
 GCONF2_SCHEMAS+=	evince-thumbnailer.schemas
+GCONF2_SCHEMAS+=	evince-thumbnailer-ps.schemas
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
 PKG_SUPPORTED_OPTIONS=	dvi djvu
