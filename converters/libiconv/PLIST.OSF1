@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.OSF1,v 1.1 2007/04/11 19:29:17 tnn Exp $
+lib/preloadable_libiconv.so
