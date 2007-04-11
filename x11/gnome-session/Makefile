@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.81 2007/03/21 12:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2007/04/11 20:25:38 drochner Exp $
 #
 
-DISTNAME=		gnome-session-2.16.2
-PKGREVISION=		1
+DISTNAME=		gnome-session-2.18.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.16/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.18/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
@@ -56,15 +55,16 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
 post-extract:
-	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
-	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
+	${MV} ${WRKSRC}/data/gnome-splash.png \
+	    ${WRKSRC}/data/gnome-splash-orig.png
 	${CP} ${DISTDIR}/gnome-splash-2.16.0.png \
-	    ${WRKSRC}/gnome-session/gnome-splash.png
+	    ${WRKSRC}/data/gnome-splash.png
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash-orig.png \
+	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash-orig.png \
 	    ${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
 
 .include "../../mk/bsd.pkg.mk"
