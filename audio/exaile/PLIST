@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 10:48:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/11 18:50:08 drochner Exp $
 bin/exaile
 share/applications/exaile.desktop
 share/exaile/exaile.glade
@@ -32,46 +32,76 @@ share/exaile/images/media-audiofile.png
 share/exaile/images/nocover.png
 share/exaile/images/playlist.png
 share/exaile/images/splash.png
+share/exaile/images/star.svg
 share/exaile/images/track.png
 share/exaile/images/trayicon.png
 share/exaile/mmkeys.so
 share/exaile/plugins/__init__.py
 share/exaile/plugins/alarmclock.py
+share/exaile/plugins/console.py
 share/exaile/plugins/desktopcover.py
 share/exaile/plugins/exailenotify.py
+share/exaile/plugins/gossip_status.py
 share/exaile/plugins/gui.py
+share/exaile/plugins/imstatus.py
+share/exaile/plugins/ipoddriver.py
 share/exaile/plugins/manager.py
+share/exaile/plugins/massstoragedriver.py
 share/exaile/plugins/minimode.py
+share/exaile/plugins/notaskbarentry.py
 share/exaile/plugins/plugins.glade
+share/exaile/plugins/resume.py
 share/exaile/plugins/serp.py
+share/exaile/plugins/sound-juicer.py
 share/exaile/plugins/streamripper.py
 share/exaile/po/ca.po
 share/exaile/po/de_DE.po
 share/exaile/po/en_GB.po
 share/exaile/po/es_ES.po
 share/exaile/po/pl.po
+share/exaile/po/pt_BR.po
 share/exaile/po/ru.po
 share/exaile/po/sv.po
 share/exaile/po/zh_CN.po
+share/exaile/sql/changes0001.sql
 share/exaile/sql/db.sql
 share/exaile/xl/__init__.py
 share/exaile/xl/audioscrobbler.py
 share/exaile/xl/common.py
 share/exaile/xl/config.py
+share/exaile/xl/config_convert.py
 share/exaile/xl/covers.py
 share/exaile/xl/db.py
 share/exaile/xl/dbusinterface.py
 share/exaile/xl/filtergui.py
-share/exaile/xl/media.py
+share/exaile/xl/media/__init__.py
+share/exaile/xl/media/flac.py
+share/exaile/xl/media/m4a.py
+share/exaile/xl/media/mp3.py
+share/exaile/xl/media/mpc.py
+share/exaile/xl/media/ogg.py
+share/exaile/xl/media/wav.py
+share/exaile/xl/media/wma.py
 share/exaile/xl/panels.py
+share/exaile/xl/player.py
 share/exaile/xl/prefs.py
 share/exaile/xl/shoutcast.py
 share/exaile/xl/track.py
 share/exaile/xl/tracks.py
 share/exaile/xl/trackslist.py
 share/exaile/xl/xlmisc.py
+share/locale/ca/LC_MESSAGES/exaile.mo
+share/locale/de_DE/LC_MESSAGES/exaile.mo
+share/locale/en_GB/LC_MESSAGES/exaile.mo
+share/locale/es_ES/LC_MESSAGES/exaile.mo
+share/locale/pl/LC_MESSAGES/exaile.mo
+share/locale/pt_BR/LC_MESSAGES/exaile.mo
+share/locale/ru/LC_MESSAGES/exaile.mo
+share/locale/sv/LC_MESSAGES/exaile.mo
+share/locale/zh_CN/LC_MESSAGES/exaile.mo
 share/pixmaps/exaile.png
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/exaile/xl/media
 @dirrm share/exaile/xl
 @dirrm share/exaile/sql
 @dirrm share/exaile/po
