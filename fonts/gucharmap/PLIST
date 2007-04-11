@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/09/15 15:13:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/04/11 18:10:44 drochner Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -27,6 +27,9 @@ share/gnome/help/gucharmap/bg/gucharmap.xml
 share/gnome/help/gucharmap/de/figures/gucharmap_window.png
 share/gnome/help/gucharmap/de/gucharmap.xml
 share/gnome/help/gucharmap/de/legal.xml
+share/gnome/help/gucharmap/en_GB/figures/gucharmap_start_window.png
+share/gnome/help/gucharmap/en_GB/figures/gucharmap_window.png
+share/gnome/help/gucharmap/en_GB/gucharmap.xml
 share/gnome/help/gucharmap/es/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/es/figures/gucharmap_window.png
 share/gnome/help/gucharmap/es/gucharmap.xml
@@ -133,6 +136,7 @@ share/locale/zh_TW/LC_MESSAGES/gucharmap.mo
 share/omf/gucharmap/gucharmap-C.omf
 share/omf/gucharmap/gucharmap-bg.omf
 share/omf/gucharmap/gucharmap-de.omf
+share/omf/gucharmap/gucharmap-en_GB.omf
 share/omf/gucharmap/gucharmap-es.omf
 share/omf/gucharmap/gucharmap-fi.omf
 share/omf/gucharmap/gucharmap-fr.omf
@@ -167,6 +171,8 @@ share/omf/gucharmap/gucharmap-zh_TW.omf
 @dirrm share/gnome/help/gucharmap/fi
 @dirrm share/gnome/help/gucharmap/es/figures
 @dirrm share/gnome/help/gucharmap/es
+@dirrm share/gnome/help/gucharmap/en_GB/figures
+@dirrm share/gnome/help/gucharmap/en_GB
 @dirrm share/gnome/help/gucharmap/de/figures
 @dirrm share/gnome/help/gucharmap/de
 @dirrm share/gnome/help/gucharmap/bg/figures
