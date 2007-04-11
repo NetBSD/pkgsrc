@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2007/03/21 12:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2007/04/11 18:14:17 drochner Exp $
 
-DISTNAME=		gnome-games-2.15.92
-PKGREVISION=		2
+DISTNAME=		gnome-games-2.18.1
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.15/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -38,7 +37,7 @@ FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
 GCONF2_SCHEMAS=		aisleriot.schemas
 GCONF2_SCHEMAS+=	blackjack.schemas
-GCONF2_SCHEMAS+=	gataxx.schemas
+GCONF2_SCHEMAS+=	glchess.schemas
 GCONF2_SCHEMAS+=	glines.schemas
 GCONF2_SCHEMAS+=	gnect.schemas
 GCONF2_SCHEMAS+=	gnibbles.schemas
@@ -47,17 +46,20 @@ GCONF2_SCHEMAS+=	gnometris.schemas
 GCONF2_SCHEMAS+=	gnomine.schemas
 GCONF2_SCHEMAS+=	gnotski.schemas
 GCONF2_SCHEMAS+=	gnotravex.schemas
+GCONF2_SCHEMAS+=	gnotski.schemas
 GCONF2_SCHEMAS+=	gtali.schemas
 GCONF2_SCHEMAS+=	iagno.schemas
 GCONF2_SCHEMAS+=	libgnomegames.schemas
 GCONF2_SCHEMAS+=	mahjongg.schemas
 GCONF2_SCHEMAS+=	same-gnome.schemas
 
-PYTHON_PATCH_SCRIPTS=	libgames-support/games-server.py
+PYTHON_PATCH_SCRIPTS+=	libgames-support/games-server.py
+PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess
+PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku
+PY_PATCHPLIST=		yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
-BUILDLINK_API_DEPENDS.howl+=	howl>=0.9.6
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
 BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 
@@ -73,8 +75,13 @@ BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-.include "../../net/howl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../x11/py-gnome2-desktop/buildlink3.mk"
+# optional for network games
+#.include "../../wip/ggz-libggz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
