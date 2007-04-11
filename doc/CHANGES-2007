@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.783 2007/04/11 11:53:24 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.784 2007/04/11 14:51:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libgnomemm to 2.18.0 [adam 2007-04-11]
 	Updated devel/libgnomeuimm to 2.18.0 [adam 2007-04-11]
 	Updated sysutils/mklivecd to 0.15.1 [xtraeme 2007-04-11]
+	Updated mail/spamdyke to 2.4.0 [schmonz 2007-04-11]
