@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2007/04/11 18:05:07 drochner Exp $
 
---- gnome-cd/bsd-cdrom.c.orig	2006-06-22 09:05:38.000000000 -0700
+--- gnome-cd/bsd-cdrom.c.orig	2007-01-06 19:17:02.000000000 +0100
 +++ gnome-cd/bsd-cdrom.c
 @@ -166,7 +166,7 @@ bsd_cdrom_update_cd (GnomeCDRom *cdrom)
  {
  	BSDCDRom *lcd = BSD_CDROM (cdrom);
  	BSDCDRomPrivate *priv;
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	struct ioc_read_toc_single_entry tocentry;
  #else
  	struct ioc_read_toc_entry tocentries;
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  
  	bsd_cdrom_invalidate (lcd);
  	priv->track_info = g_malloc ((priv->number_tracks + 1) * sizeof (BSDCDRomTrackInfo));
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	for (i = 0, j = priv->track0; i < priv->number_tracks; i++, j++) {
  		tocentry.track = j;
  		tocentry.address_format = CD_MSF_FORMAT;
@@ -24,8 +24,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  		tocentries.address_format = CD_MSF_FORMAT;
  #endif
  
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  		if (ioctl (cdrom->fd, CDIOREADTOCENTRY, &tocentry) < 0) {
  #else
  		if (ioctl (cdrom->fd, CDIOREADTOCENTRYS, &tocentries) < 0) {
@@ -33,8 +33,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  		}
  
  		priv->track_info[i].track = j;
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  		priv->track_info[i].audio_track = tocentry.entry.control == 0 ? 1 : 0;
  		ASSIGN_MSF (priv->track_info[i].address, tocentry.entry.addr.msf);
  #else
@@ -42,8 +42,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  #endif
  	}
  
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	/* On BSD, the leadout track is the track LAST_TRACK + 1. */
  	tocentry.track = priv->number_tracks + 1;
  	tocentry.address_format = CD_MSF_FORMAT;
@@ -51,8 +51,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  		bsd_cdrom_invalidate (lcd);
  		return;
  	}
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.entry.addr.msf);
  #else
  	ASSIGN_MSF (priv->track_info[priv->number_tracks].address, tocentry.addr.msf);
@@ -60,8 +60,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  		return FALSE;
  	}
  
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	if (gnome_cdrom_get_status (cdrom, &status, error) == FALSE) {
  		bsd_cdrom_close (lcd);
  		g_free (status);
@@ -69,8 +69,8 @@ $NetBSD: patch-aa,v 1.6 2006/06/30 03:16:38 joerg Exp $
  		return FALSE;
  	}
  #endif
--#ifdef __FreeBSD__
-+#ifdef __FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  	/* FIXME: Figure out how to do this on BSD */
  #else
  	if (ioctl (cdrom->fd, CDIOREADTOCHEADER, priv->tochdr) < 0) {
