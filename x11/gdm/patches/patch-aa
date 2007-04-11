@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.20 2006/09/26 16:17:04 drochner Exp $
+$NetBSD: patch-aa,v 1.21 2007/04/11 20:40:07 drochner Exp $
 
---- configure.orig	2006-09-04 23:27:10.000000000 +0200
+--- configure.orig	2007-04-09 07:16:44.000000000 +0200
 +++ configure
-@@ -28633,7 +28633,9 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -28786,7 +28786,9 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <sys/statvfs.h>
@@ -12,7 +12,35 @@ $NetBSD: patch-aa,v 1.20 2006/09/26 16:17:04 drochner Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -33911,6 +33913,7 @@ else
+@@ -34136,6 +34138,15 @@ case "$host" in
+ 	SOUND_PROGRAM=
+         GDMGNOMESESSIONCMD=gnome-session
+ 	;;
++*netbsd*)
++	GDM_USER_PATH="/bin:/usr/bin"
++	HALT_COMMAND="/sbin/shutdown -p now"
++	REBOOT_COMMAND="/sbin/shutdown -r now"
++	SUSPEND_COMMAND="/usr/sbin/zzz"
++	XSESSION_SHELL=/bin/sh
++	SOUND_PROGRAM=/usr/bin/audioplay
++	GDMGNOMESESSIONCMD="dbus-launch --exit-with-session gnome-session"
++	;;
+ *)
+         GDM_USER_PATH="/bin:/usr/bin"
+         HALT_COMMAND="/usr/bin/poweroff;/sbin/poweroff;/sbin/shutdown -h now;/usr/sbin/shutdown -h now"
+@@ -34199,6 +34210,11 @@ elif test -x /usr/bin/X; then
+    X_SERVER_PATH="/usr/bin"
+    X_SERVER="/usr/bin/X"
+    X_CONFIG_OPTIONS="-audit 0"
++elif test -x ${X11BASE}/bin/X; then
++   X_PATH="${X11BASE}/bin"
++   X_SERVER_PATH="${X11BASE}/bin"
++   X_SERVER="${X11BASE}/bin/X"
++   X_CONFIG_OPTIONS="-audit 0"
+ else
+    # what to do, what to do, this is wrong, but this just sets the
+    # defaults, perhaps this user is cross compiling or some such
+@@ -34208,6 +34224,7 @@ else
     GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
     X_CONFIG_OPTIONS="-audit 0"
  fi
