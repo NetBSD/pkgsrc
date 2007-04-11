@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/04 09:33:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/11 18:12:15 drochner Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
+${PYSITELIB}/gtk-2.0/bugbuddy.py
+${PYSITELIB}/gtk-2.0/bugbuddy.pyc
+${PYSITELIB}/gtk-2.0/bugbuddy.pyo
 ${PYSITELIB}/gtk-2.0/gnome/applet.py
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyc
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyo
@@ -17,7 +20,7 @@ ${PYSITELIB}/gtk-2.0/gnomeprint/ui.la
 ${PYSITELIB}/gtk-2.0/gtksourceview.la
 ${PYSITELIB}/gtk-2.0/gtop.la
 ${PYSITELIB}/gtk-2.0/mediaprofiles.la
-${PYSITELIB}/gtk-2.0/metacity.la
+${NAUTILUSBURN}${PYSITELIB}/gtk-2.0/nautilusburn.la
 ${PYSITELIB}/gtk-2.0/rsvg.la
 ${PYSITELIB}/gtk-2.0/totem/__init__.py
 ${PYSITELIB}/gtk-2.0/totem/__init__.pyc
@@ -65,7 +68,7 @@ share/pygtk/2.0/defs/art.defs
 share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
 share/pygtk/2.0/defs/mediaprofiles.defs
-share/pygtk/2.0/defs/metacity.defs
+${NAUTILUSBURN}share/pygtk/2.0/defs/nautilus_burn.defs
 share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/wnck.defs
