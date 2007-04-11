@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/03/21 12:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/11 21:48:04 drochner Exp $
 
-DISTNAME=	seahorse-0.8.1
-PKGNAME=	seahorse-nautilus-0.8.1
-PKGREVISION=	4
+DISTNAME=	seahorse-1.0.1
+PKGNAME=	seahorse-nautilus-1.0.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/0.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/1.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +15,8 @@ DISTINFO_FILE=	${.CURDIR}/../seahorse/distinfo
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config autoconf
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+#autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -27,17 +27,16 @@ BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 BUILD_DIRS=	plugins/nautilus-ext
 INSTALL_DIRS=	plugins/nautilus-ext
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
-
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
