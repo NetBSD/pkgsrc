@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2006/09/15 15:20:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/04/11 18:19:43 drochner Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
 share/dasher/alphabet.AfaanOromo.xml
 share/dasher/alphabet.Armenian.xml
 share/dasher/alphabet.Assamese.xml
-share/dasher/alphabet.Austen.xml
 share/dasher/alphabet.Azerbaijani.xml
 share/dasher/alphabet.Belarusian.xml
 share/dasher/alphabet.Bulgarian.xml
@@ -107,6 +106,7 @@ share/dasher/alphabet.latvian.xml
 share/dasher/alphabet.lithuanian.xml
 share/dasher/alphabet.luxembourgish.xml
 share/dasher/alphabet.macedonian.xml
+share/dasher/alphabet.malagasy.xml
 share/dasher/alphabet.maltese.xml
 share/dasher/alphabet.mongolian.xml
 share/dasher/alphabet.myanmar.xml
@@ -115,7 +115,6 @@ share/dasher/alphabet.norwegian.xml
 share/dasher/alphabet.occitan.xml
 share/dasher/alphabet.ogham.xml
 share/dasher/alphabet.pashto.xml
-share/dasher/alphabet.perl.xml
 share/dasher/alphabet.persian.xml
 share/dasher/alphabet.pinyin.xml
 share/dasher/alphabet.polish.xml
@@ -141,6 +140,7 @@ share/dasher/colour.blue.xml
 share/dasher/colour.dtd
 share/dasher/colour.euroasian.xml
 share/dasher/colour.euroasian2.xml
+share/dasher/colour.euroasian3.xml
 share/dasher/colour.jamie.xml
 share/dasher/colour.rainbow.xml
 share/dasher/colour.thai.xml
@@ -149,11 +149,15 @@ share/dasher/colour.vowels2.xml
 share/dasher/colour.xml
 share/dasher/controllabels.dtd
 share/dasher/controllabels.xml
-share/dasher/dasher.glade
+share/dasher/dasher.compose.glade
+share/dasher/dasher.direct.glade
+share/dasher/dasher.fullscreen.glade
+share/dasher/dasher.traditional.glade
+share/dasher/dashermaemo.glade
+share/dasher/dashermaemofullscreen.glade
 share/dasher/training_albanian_SQ.txt
 share/dasher/training_basque_EU.txt
 share/dasher/training_bengali_BD.txt
-share/dasher/training_bengali_bn.txt
 share/dasher/training_canna_JP.txt
 share/dasher/training_czech_CS.txt
 share/dasher/training_danish_DK.txt
@@ -178,6 +182,7 @@ share/dasher/training_swahili_KE.txt
 share/dasher/training_swedish_SE.txt
 share/dasher/training_turkish_TR.txt
 share/dasher/training_welsh_GB.txt
+share/gconf/schemas/dasher.schemas
 share/gnome/help/dasher/C/dasher.xml
 share/gnome/help/dasher/C/figures/a-z.gif
 share/gnome/help/dasher/C/figures/aa-az.gif
@@ -194,6 +199,38 @@ share/gnome/help/dasher/C/figures/prefs2.png
 share/gnome/help/dasher/C/figures/prefs3.png
 share/gnome/help/dasher/C/figures/prefs4.png
 share/gnome/help/dasher/C/figures/prefs5.png
+share/gnome/help/dasher/fr/dasher.xml
+share/gnome/help/dasher/fr/figures/a-z.gif
+share/gnome/help/dasher/fr/figures/aa-az.gif
+share/gnome/help/dasher/fr/figures/ala-alz.gif
+share/gnome/help/dasher/fr/figures/exampleHad2.png
+share/gnome/help/dasher/fr/figures/exampleHad2a.png
+share/gnome/help/dasher/fr/figures/exampleHad3a.png
+share/gnome/help/dasher/fr/figures/exampleHad4.png
+share/gnome/help/dasher/fr/figures/figure2.png
+share/gnome/help/dasher/fr/figures/main.png
+share/gnome/help/dasher/fr/figures/object.gif
+share/gnome/help/dasher/fr/figures/prefs1.png
+share/gnome/help/dasher/fr/figures/prefs2.png
+share/gnome/help/dasher/fr/figures/prefs3.png
+share/gnome/help/dasher/fr/figures/prefs4.png
+share/gnome/help/dasher/fr/figures/prefs5.png
+share/gnome/help/dasher/sv/dasher.xml
+share/gnome/help/dasher/sv/figures/a-z.gif
+share/gnome/help/dasher/sv/figures/aa-az.gif
+share/gnome/help/dasher/sv/figures/ala-alz.gif
+share/gnome/help/dasher/sv/figures/exampleHad2.png
+share/gnome/help/dasher/sv/figures/exampleHad2a.png
+share/gnome/help/dasher/sv/figures/exampleHad3a.png
+share/gnome/help/dasher/sv/figures/exampleHad4.png
+share/gnome/help/dasher/sv/figures/figure2.png
+share/gnome/help/dasher/sv/figures/main.png
+share/gnome/help/dasher/sv/figures/object.gif
+share/gnome/help/dasher/sv/figures/prefs1.png
+share/gnome/help/dasher/sv/figures/prefs2.png
+share/gnome/help/dasher/sv/figures/prefs3.png
+share/gnome/help/dasher/sv/figures/prefs4.png
+share/gnome/help/dasher/sv/figures/prefs5.png
 share/icons/hicolor/48x48/apps/dasher.png
 share/icons/hicolor/scalable/apps/dasher.svg
 share/locale/ar/LC_MESSAGES/dasher.mo
@@ -269,14 +306,21 @@ share/locale/zh_CN/LC_MESSAGES/dasher.mo
 share/locale/zh_HK/LC_MESSAGES/dasher.mo
 share/locale/zh_TW/LC_MESSAGES/dasher.mo
 share/omf/dasher/dasher-C.omf
+share/omf/dasher/dasher-fr.omf
+share/omf/dasher/dasher-sv.omf
 @dirrm share/omf/dasher
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/dasher/sv/figures
+@dirrm share/gnome/help/dasher/sv
+@dirrm share/gnome/help/dasher/fr/figures
+@dirrm share/gnome/help/dasher/fr
 @dirrm share/gnome/help/dasher/C/figures
 @dirrm share/gnome/help/dasher/C
 @dirrm share/gnome/help/dasher
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/dasher
 @comment in xdg-dirs: @dirrm share/applications
