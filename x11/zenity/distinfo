@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2006/11/28 22:08:20 drochner Exp $
+$NetBSD: distinfo,v 1.20 2007/04/11 20:41:28 drochner Exp $
 
-SHA1 (zenity-2.16.2.tar.bz2) = fb5de89e7a45102d4e68bf0df1bf6531896245b1
-RMD160 (zenity-2.16.2.tar.bz2) = dc90569d79f95be18c12ecd2f9a832e1f78490e8
-Size (zenity-2.16.2.tar.bz2) = 1492458 bytes
+SHA1 (zenity-2.18.1.tar.bz2) = 208c0673d97e3e17faaecb6092ace195225b3137
+RMD160 (zenity-2.18.1.tar.bz2) = e46c57cff78364725557e0e163662058731e841a
+Size (zenity-2.18.1.tar.bz2) = 1535729 bytes
