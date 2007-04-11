@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/04/11 06:20:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/04/11 17:49:26 drochner Exp $
 share/icons/Crux/16x16/actions/back.png
 share/icons/Crux/16x16/actions/bottom.png
 share/icons/Crux/16x16/actions/document-open.png
@@ -1248,9 +1248,6 @@ share/icons/HighContrastLargePrint/48x48/apps/screensaver.png
 share/icons/HighContrastLargePrint/48x48/apps/serviceconf.png
 share/icons/HighContrastLargePrint/48x48/apps/sound-capplet.png
 share/icons/HighContrastLargePrint/48x48/apps/star.png
-share/icons/HighContrastLargePrint/48x48/apps/staroffice-calc.png
-share/icons/HighContrastLargePrint/48x48/apps/staroffice-impress.png
-share/icons/HighContrastLargePrint/48x48/apps/staroffice-writer.png
 share/icons/HighContrastLargePrint/48x48/apps/start-here.png
 share/icons/HighContrastLargePrint/48x48/apps/stock_notes.png
 share/icons/HighContrastLargePrint/48x48/apps/stock_proxy.png
@@ -1633,9 +1630,6 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/screensaver.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/serviceconf.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/sound-capplet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/star.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-calc.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-impress.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/staroffice-writer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/start-here.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/stock_notes.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/stock_proxy.png
@@ -2941,6 +2935,7 @@ share/themes/Simple/gtk-2.0/gtkrc
 @comment in theme-dirs: @dirrm share/themes/Crux
 @dirrm share/themes/Clearlooks/metacity-1
 @comment in theme-dirs: @dirrm share/themes/Clearlooks
+@comment in xdg-dirs: @dirrm share/themes
 @dirrm share/icons/Mist/scalable/status
 @dirrm share/icons/Mist/scalable/places
 @dirrm share/icons/Mist/scalable/actions
