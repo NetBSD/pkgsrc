@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6207 2007/04/11 06:32:54 wiz Exp $
+$NetBSD: TODO,v 1.6208 2007/04/11 06:33:54 veego Exp $
 
 Suggested new packages
 ======================
@@ -550,6 +550,7 @@ Suggested package updates
 	o gnome-media-2.18.0
 	o gnome-menus-2.18.0
 	o gnome-mime-data-2.18.0
+	o gnome-panel-2.18.1
 	o gnome-screensaver-2.18.1
 	o gnome-session-2.16.3
 	o gnome-spell-1.0.7
