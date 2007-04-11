@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2006/11/28 22:10:21 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2007/04/11 00:57:45 wiz Exp $
 
-DISTNAME=		gtk-engines-2.8.2
+DISTNAME=		gtk-engines-2.10.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -15,9 +15,9 @@ CONFLICTS+=		gtk2-engines-clearlooks-[0-9]*
 CONFLICTS+=		gtk2-engines-industrial-[0-9]*
 CONFLICTS+=		gnome-themes-extras<0.8
 
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 GNU_CONFIGURE=		yes
 USE_DIRS+=		theme-1.1 xdg-1.1
 USE_LIBTOOL=		yes
