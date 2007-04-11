@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.1 2007/04/08 07:41:17 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.2 2007/04/11 09:13:19 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
 
 Created pkgsrc-2007Q1 branch [agc 2007-04-08 00:00 GMT]
+
+Pullup ticket 2062 - requested by joerg
+build fix for scilab
