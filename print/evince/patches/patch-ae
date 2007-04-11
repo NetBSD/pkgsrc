@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2007/04/11 18:01:14 drochner Exp $
+
+--- configure.orig	2007-04-04 15:57:38.000000000 +0200
++++ configure
+@@ -25750,7 +25750,7 @@ else
+ echo "${ECHO_T}yes" >&6
+ 	enable_cairo_pdf=yes
+ fi
+-	    if test x$enable_cairo_pdf == xyes; then
++	    if test x$enable_cairo_pdf = xyes; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_CAIRO_PDF 1
