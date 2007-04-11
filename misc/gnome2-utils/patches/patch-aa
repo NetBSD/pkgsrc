@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2006/04/08 17:18:26 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2007/04/11 18:06:55 drochner Exp $
 
---- gsearchtool/gsearchtool-support.c.orig	2006-04-08 16:51:54.000000000 +0000
+--- gsearchtool/gsearchtool-support.c.orig	2007-03-10 14:19:56.000000000 +0100
 +++ gsearchtool/gsearchtool-support.c
-@@ -29,6 +29,7 @@
- #  include <config.h>
+@@ -30,6 +30,7 @@
  #endif
  
+ #include <string.h>
 +#include <sys/types.h>
  #include <glib/gi18n.h>
  #include <glib/gdate.h>
