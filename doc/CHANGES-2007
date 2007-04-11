@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.782 2007/04/11 09:09:17 adam Exp $
+$NetBSD: CHANGES-2007,v 1.783 2007/04/11 11:53:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1500,3 +1500,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/gnome-vfsmm to 2.18.0 [adam 2007-04-11]
 	Updated devel/libgnomemm to 2.18.0 [adam 2007-04-11]
 	Updated devel/libgnomeuimm to 2.18.0 [adam 2007-04-11]
+	Updated sysutils/mklivecd to 0.15.1 [xtraeme 2007-04-11]
