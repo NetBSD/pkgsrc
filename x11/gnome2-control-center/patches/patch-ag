@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.3 2007/04/11 17:48:10 drochner Exp $
+
+--- libslab/directory-tile.c.orig	2007-04-05 13:32:36.000000000 +0200
++++ libslab/directory-tile.c
+@@ -644,5 +644,5 @@ static void
+ disown_spawned_child (gpointer user_data)
+ {
+ 	setsid  ();
+-	setpgrp ();
++	setpgid (0, 0);
+ }
