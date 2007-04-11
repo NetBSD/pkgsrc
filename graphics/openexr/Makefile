@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/03/13 10:00:55 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/04/11 15:39:52 joerg Exp $
 
 DISTNAME=	openexr-1.4.0a
 PKGNAME=	openexr-1.4.0
@@ -20,5 +20,6 @@ TEST_TARGET=		check
 PTHREAD_OPTS+=		require
 LIBS.IRIX+=		-lmx
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
