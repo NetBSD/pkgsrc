@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.777 2007/04/11 06:13:58 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.778 2007/04/11 06:21:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1493,3 +1493,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtk2-engines to 2.10.0 [wiz 2007-04-11]
 	Updated shells/tcsh to 6.15.00 [christos 2007-04-11]
 	Updated www/p5-Jemplate to 0.20 [hiramatsu 2007-04-11]
+	Updated x11/gnome-themes to 2.18.0 [wiz 2007-04-11]
