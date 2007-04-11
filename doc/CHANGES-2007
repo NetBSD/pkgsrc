@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.774 2007/04/10 23:52:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.775 2007/04/11 00:58:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1490,3 +1490,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/slony1 to 1.2.9 [rmind 2007-04-10]
 	Added devel/xorg-util-macros version 1.1.5 [joerg 2007-04-10]
 	Updated wm/metacity to 2.18.2 [wiz 2007-04-10]
+	Updated x11/gtk2-engines to 2.10.0 [wiz 2007-04-11]
