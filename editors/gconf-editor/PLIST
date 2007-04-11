@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/15 15:21:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/04/11 18:16:59 drochner Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -6,11 +6,18 @@ share/gconf/schemas/gconf-editor.schemas
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml
 share/gnome/help/gconf-editor/C/legal.xml
+share/gnome/help/gconf-editor/fr/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/fr/gconf-editor.xml
+share/gnome/help/gconf-editor/it/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/it/gconf-editor.xml
+share/gnome/help/gconf-editor/sv/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/sv/gconf-editor.xml
 share/icons/hicolor/48x48/apps/gconf-editor.png
 share/locale/am/LC_MESSAGES/gconf-editor.mo
 share/locale/ar/LC_MESSAGES/gconf-editor.mo
 share/locale/az/LC_MESSAGES/gconf-editor.mo
 share/locale/be/LC_MESSAGES/gconf-editor.mo
+share/locale/be@latin/LC_MESSAGES/gconf-editor.mo
 share/locale/bg/LC_MESSAGES/gconf-editor.mo
 share/locale/bn/LC_MESSAGES/gconf-editor.mo
 share/locale/bn_IN/LC_MESSAGES/gconf-editor.mo
@@ -83,6 +90,9 @@ share/locale/zh_CN/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_HK/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 share/omf/gconf-editor/gconf-editor-C.omf
+share/omf/gconf-editor/gconf-editor-fr.omf
+share/omf/gconf-editor/gconf-editor-it.omf
+share/omf/gconf-editor/gconf-editor-sv.omf
 share/pixmaps/gconf-editor/entry-blank.png
 share/pixmaps/gconf-editor/entry-bool.png
 share/pixmaps/gconf-editor/entry-list.png
@@ -97,6 +107,12 @@ share/pixmaps/gconf-editor/folder-open.png
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/gconf-editor/sv/figures
+@dirrm share/gnome/help/gconf-editor/sv
+@dirrm share/gnome/help/gconf-editor/it/figures
+@dirrm share/gnome/help/gconf-editor/it
+@dirrm share/gnome/help/gconf-editor/fr/figures
+@dirrm share/gnome/help/gconf-editor/fr
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
