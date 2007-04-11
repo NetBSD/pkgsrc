@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.786 2007/04/11 18:16:13 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.787 2007/04/11 18:21:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.4.0 [schmonz 2007-04-11]
 	Updated devel/lwp to 2.3 [gdt 2007-04-11]
 	Updated devel/rpc2 to 2.5 [gdt 2007-04-11]
+	Updated devel/rvm to 1.14 [gdt 2007-04-11]
