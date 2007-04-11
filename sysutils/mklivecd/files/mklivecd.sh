@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.38 2007/04/11 14:31:35 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.39 2007/04/11 14:40:44 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -504,15 +504,6 @@ do_cdlive()
             KERNEL_NAME=MKLIVECD_$kernel_arg
         fi
 
-        if [ -z "$USE_GNU_GRUB" ]; then
-            echo "*** USE_GNU_GRUB not set ***"
-            echo
-            echo "Please set it to 'YES' or 'NO'. On amd64 you should set it"
-            echo "to 'NO' because GRUB is not supported on this platform."
-            echo "See mklivecd(8) for more details."
-            bye 1
-        fi
-
         if is_disabled MULTIPLE_KERNELS; then
 	    showmsg "Building kernel on $(date):"
 	    if [ -n "$verbose_mode" ]; then
@@ -686,7 +677,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.38 2007/04/11 14:31:35 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.39 2007/04/11 14:40:44 xtraeme Exp $
 # 
 
 # PROVIDE: root
