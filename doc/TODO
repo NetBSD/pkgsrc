@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6212 2007/04/11 17:59:23 gdt Exp $
+$NetBSD: TODO,v 1.6213 2007/04/11 18:16:13 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1197,7 +1197,6 @@ Suggested package updates
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rpc2-2.4
 	o rpm-4.2
 	o rt3-3.6.3
 	o rtcw-1.41.3
