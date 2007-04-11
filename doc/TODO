@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6215 2007/04/11 22:48:11 wiz Exp $
+$NetBSD: TODO,v 1.6216 2007/04/11 23:22:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -754,7 +754,7 @@ Suggested package updates
 	o liferea-1.2.10
 	o lighttpd-1.4.13
 	o lilypond-2.10.20
-	o lincvs-1.8.3 [now called CrossVC]
+	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o loudmouth-1.2.0
@@ -790,6 +790,7 @@ Suggested package updates
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o milter-greylist-3.1.7
+	o mimedefang-2.62
 	o mined-2000.13.2
 	o minivmac-2.6.1
 	o mirmon-1.37
@@ -832,8 +833,7 @@ Suggested package updates
 	o nap-1.5.3
 	o nas-1.9
 	o nautilus-2.18.0.1
-	o nautilus-cd-burner-2.16.3 [needs hal]
-	o nautilus-cd-burner-2.18.1
+	o nautilus-cd-burner-2.18.1 [needs hal]
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
