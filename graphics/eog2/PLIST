@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/11/28 22:25:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/04/11 18:09:46 drochner Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/eog-gtk-ui.xml
@@ -9,8 +9,11 @@ share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/legal.xml
 share/gnome/help/eog/de/eog.xml
+share/gnome/help/eog/de/figures/eog_save_as_window.png
 share/gnome/help/eog/de/figures/eog_start_window.png
-share/gnome/help/eog/de/legal.xml
+share/gnome/help/eog/en_GB/eog.xml
+share/gnome/help/eog/en_GB/figures/eog_save_as_window.png
+share/gnome/help/eog/en_GB/figures/eog_start_window.png
 share/gnome/help/eog/es/eog.xml
 share/gnome/help/eog/es/figures/eog_save_as_window.png
 share/gnome/help/eog/es/figures/eog_start_window.png
@@ -29,6 +32,15 @@ share/gnome/help/eog/ja/legal.xml
 share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_start_window.png
 share/gnome/help/eog/ko/legal.xml
+share/gnome/help/eog/pa/eog.xml
+share/gnome/help/eog/pa/figures/eog_save_as_window.png
+share/gnome/help/eog/pa/figures/eog_start_window.png
+share/gnome/help/eog/pt_BR/eog.xml
+share/gnome/help/eog/pt_BR/figures/eog_save_as_window.png
+share/gnome/help/eog/pt_BR/figures/eog_start_window.png
+share/gnome/help/eog/ru/eog.xml
+share/gnome/help/eog/ru/figures/eog_save_as_window.png
+share/gnome/help/eog/ru/figures/eog_start_window.png
 share/gnome/help/eog/sv/eog.xml
 share/gnome/help/eog/sv/figures/eog_save_as_window.png
 share/gnome/help/eog/sv/figures/eog_start_window.png
@@ -41,6 +53,11 @@ share/gnome/help/eog/zh_CN/legal.xml
 share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
+share/icons/hicolor/16x16/apps/eog.png
+share/icons/hicolor/22x22/apps/eog.png
+share/icons/hicolor/24x24/apps/eog.png
+share/icons/hicolor/32x32/apps/eog.png
+share/icons/hicolor/scalable/apps/eog.svg
 share/locale/af/LC_MESSAGES/eog.mo
 share/locale/am/LC_MESSAGES/eog.mo
 share/locale/ar/LC_MESSAGES/eog.mo
@@ -121,31 +138,29 @@ share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
 share/omf/eog/eog-de.omf
+share/omf/eog/eog-en_GB.omf
 share/omf/eog/eog-es.omf
 share/omf/eog/eog-eu.omf
 share/omf/eog/eog-fr.omf
 share/omf/eog/eog-it.omf
 share/omf/eog/eog-ja.omf
 share/omf/eog/eog-ko.omf
+share/omf/eog/eog-pa.omf
+share/omf/eog/eog-pt_BR.omf
+share/omf/eog/eog-ru.omf
 share/omf/eog/eog-sv.omf
 share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
-share/pixmaps/eog/down-right.png
-share/pixmaps/eog/loading.png
-share/pixmaps/eog/orient-horizontal.png
-share/pixmaps/eog/orient-vertical.png
-share/pixmaps/eog/right-down.png
-share/pixmaps/eog/stock-flip-horizontal-16.png
-share/pixmaps/eog/stock-flip-vertical-16.png
-share/pixmaps/eog/stock-rotate-180-16.png
-share/pixmaps/eog/stock-rotate-270-16.png
-share/pixmaps/eog/stock-rotate-90-16.png
 share/pixmaps/gnome-eog.png
-@dirrm share/pixmaps/eog
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/eog
-@comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
 @dirrm share/gnome/help/eog/zh_CN/figures
@@ -154,6 +169,12 @@ share/pixmaps/gnome-eog.png
 @dirrm share/gnome/help/eog/uk
 @dirrm share/gnome/help/eog/sv/figures
 @dirrm share/gnome/help/eog/sv
+@dirrm share/gnome/help/eog/ru/figures
+@dirrm share/gnome/help/eog/ru
+@dirrm share/gnome/help/eog/pt_BR/figures
+@dirrm share/gnome/help/eog/pt_BR
+@dirrm share/gnome/help/eog/pa/figures
+@dirrm share/gnome/help/eog/pa
 @dirrm share/gnome/help/eog/ko/figures
 @dirrm share/gnome/help/eog/ko
 @dirrm share/gnome/help/eog/ja/figures
@@ -166,12 +187,13 @@ share/pixmaps/gnome-eog.png
 @dirrm share/gnome/help/eog/eu
 @dirrm share/gnome/help/eog/es/figures
 @dirrm share/gnome/help/eog/es
+@dirrm share/gnome/help/eog/en_GB/figures
+@dirrm share/gnome/help/eog/en_GB
 @dirrm share/gnome/help/eog/de/figures
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
-@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/eog/glade
 @dirrm share/eog
