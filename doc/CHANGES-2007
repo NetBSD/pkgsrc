@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.775 2007/04/11 00:58:10 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.776 2007/04/11 04:57:50 christos Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/xorg-util-macros version 1.1.5 [joerg 2007-04-10]
 	Updated wm/metacity to 2.18.2 [wiz 2007-04-10]
 	Updated x11/gtk2-engines to 2.10.0 [wiz 2007-04-11]
+	Updated shells/tcsh to 6.15.00 [christos 2007-04-11]
