@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.36 2007/04/11 11:51:35 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.37 2007/04/11 14:22:26 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -144,6 +144,37 @@ is_disabled()
             ;;
         *)
             return 1
+            ;;
+    esac
+}
+
+showmsg_optyesno()
+{
+    echo
+    echo "This option only accepts a value of 'yes' or 'no'"
+    echo "(case insensitive), please update your configuration."
+    echo "See mklivecd(8) for more details."
+
+    return 1
+}
+
+checkoptval()
+{
+    _opt="$1"
+    eval _val="\$$1"
+
+    if [ -z $_opt ]; then
+        echo "*** '$_opt' is not set ***"
+        showmsg_optyesno
+    fi
+
+    case $_val in
+        [Yy][Ee][Ss]|[Nn][Oo])
+            return 0
+            ;;
+        *)
+            echo "*** Invalid value for '$_opt' ***"
+            showmsg_optyesno
             ;;
     esac
 }
@@ -367,8 +398,6 @@ _EOF_
 
 do_build_kernels()
 {
-    . $config_file
-
     for K in ${MULTIPLE_KERNELS}
     do
         eval bootkern=\$KERNEL_CONFIG_${K}
@@ -446,6 +475,14 @@ _EOF_
 do_cdlive()
 {
     . $config_file
+
+    YESNOVARS="FETCH_SETS ENABLE_X11 USE_GNU_GRUB \
+               VND_COMPRESSION BLANK_BEFORE_BURN"
+
+    for v in $YESNOVARS
+    do
+        ! checkoptval $v && bye 1
+    done
 
     vars="$BASEDIR $ISODIR $WORKDIR"
 
@@ -649,7 +686,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.36 2007/04/11 11:51:35 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.37 2007/04/11 14:22:26 xtraeme Exp $
 # 
 
 # PROVIDE: root
