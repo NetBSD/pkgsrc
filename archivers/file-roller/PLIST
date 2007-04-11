@@ -1,9 +1,18 @@
-@comment $NetBSD: PLIST,v 1.21 2006/09/15 15:21:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/04/11 18:20:36 drochner Exp $
 bin/file-roller
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
+libexec/file-roller/isoinfo.sh
+libexec/file-roller/move-here.sh
 share/applications/file-roller.desktop
-share/file-roller/glade/file-roller-extract.glade
+share/file-roller/glade/ask-password.glade
 share/file-roller/glade/file-roller.glade
+share/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
+share/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
+share/file-roller/icons/hicolor/16x16/actions/extract-archive.png
+share/file-roller/icons/hicolor/24x24/actions/add-files-to-archive.png
+share/file-roller/icons/hicolor/24x24/actions/add-folder-to-archive.png
+share/file-roller/icons/hicolor/24x24/actions/extract-archive.png
+share/file-roller/icons/hicolor/24x24/actions/preview-file.png
 share/gconf/schemas/file-roller.schemas
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
@@ -42,18 +51,6 @@ share/gnome/help/file-roller/it/figures/file-roller_main_window.png
 share/gnome/help/file-roller/it/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/it/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/it/file-roller.xml
-share/gnome/help/file-roller/ja/figures/file-roller_home.png
-share/gnome/help/file-roller/ja/figures/file-roller_leftarrow.png
-share/gnome/help/file-roller/ja/figures/file-roller_main_window.png
-share/gnome/help/file-roller/ja/figures/file-roller_rightarrow.png
-share/gnome/help/file-roller/ja/figures/file-roller_uparrow.png
-share/gnome/help/file-roller/ja/file-roller.xml
-share/gnome/help/file-roller/ko/figures/file-roller_home.png
-share/gnome/help/file-roller/ko/figures/file-roller_leftarrow.png
-share/gnome/help/file-roller/ko/figures/file-roller_main_window.png
-share/gnome/help/file-roller/ko/figures/file-roller_rightarrow.png
-share/gnome/help/file-roller/ko/figures/file-roller_uparrow.png
-share/gnome/help/file-roller/ko/file-roller.xml
 share/gnome/help/file-roller/nl/figures/file-roller_home.png
 share/gnome/help/file-roller/nl/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/nl/figures/file-roller_main_window.png
@@ -78,25 +75,10 @@ share/gnome/help/file-roller/uk/figures/file-roller_main_window.png
 share/gnome/help/file-roller/uk/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/uk/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/uk/file-roller.xml
-share/gnome/help/file-roller/zh_CN/figures/file-roller_home.png
-share/gnome/help/file-roller/zh_CN/figures/file-roller_leftarrow.png
-share/gnome/help/file-roller/zh_CN/figures/file-roller_main_window.png
-share/gnome/help/file-roller/zh_CN/figures/file-roller_rightarrow.png
-share/gnome/help/file-roller/zh_CN/figures/file-roller_uparrow.png
-share/gnome/help/file-roller/zh_CN/file-roller.xml
-share/gnome/help/file-roller/zh_HK/figures/file-roller_home.png
-share/gnome/help/file-roller/zh_HK/figures/file-roller_leftarrow.png
-share/gnome/help/file-roller/zh_HK/figures/file-roller_main_window.png
-share/gnome/help/file-roller/zh_HK/figures/file-roller_rightarrow.png
-share/gnome/help/file-roller/zh_HK/figures/file-roller_uparrow.png
-share/gnome/help/file-roller/zh_HK/file-roller.xml
-share/gnome/help/file-roller/zh_TW/figures/file-roller_home.png
-share/gnome/help/file-roller/zh_TW/figures/file-roller_leftarrow.png
-share/gnome/help/file-roller/zh_TW/figures/file-roller_main_window.png
-share/gnome/help/file-roller/zh_TW/figures/file-roller_rightarrow.png
-share/gnome/help/file-roller/zh_TW/figures/file-roller_uparrow.png
-share/gnome/help/file-roller/zh_TW/file-roller.xml
-share/icons/hicolor/48x48/apps/file-roller.png
+share/icons/hicolor/16x16/apps/file-roller.png
+share/icons/hicolor/22x22/apps/file-roller.png
+share/icons/hicolor/32x32/apps/file-roller.png
+share/icons/hicolor/scalable/apps/file-roller.svg
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
@@ -181,24 +163,17 @@ share/omf/file-roller/file-roller-de.omf
 share/omf/file-roller/file-roller-es.omf
 share/omf/file-roller/file-roller-fr.omf
 share/omf/file-roller/file-roller-it.omf
-share/omf/file-roller/file-roller-ja.omf
-share/omf/file-roller/file-roller-ko.omf
 share/omf/file-roller/file-roller-nl.omf
 share/omf/file-roller/file-roller-ru.omf
 share/omf/file-roller/file-roller-sv.omf
 share/omf/file-roller/file-roller-uk.omf
-share/omf/file-roller/file-roller-zh_CN.omf
-share/omf/file-roller/file-roller-zh_HK.omf
-share/omf/file-roller/file-roller-zh_TW.omf
 @dirrm share/omf/file-roller
 @comment in scrollkeeper: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@dirrm share/gnome/help/file-roller/zh_TW/figures
-@dirrm share/gnome/help/file-roller/zh_TW
-@dirrm share/gnome/help/file-roller/zh_HK/figures
-@dirrm share/gnome/help/file-roller/zh_HK
-@dirrm share/gnome/help/file-roller/zh_CN/figures
-@dirrm share/gnome/help/file-roller/zh_CN
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/file-roller/uk/figures
 @dirrm share/gnome/help/file-roller/uk
 @dirrm share/gnome/help/file-roller/sv/figures
@@ -207,10 +182,6 @@ share/omf/file-roller/file-roller-zh_TW.omf
 @dirrm share/gnome/help/file-roller/ru
 @dirrm share/gnome/help/file-roller/nl/figures
 @dirrm share/gnome/help/file-roller/nl
-@dirrm share/gnome/help/file-roller/ko/figures
-@dirrm share/gnome/help/file-roller/ko
-@dirrm share/gnome/help/file-roller/ja/figures
-@dirrm share/gnome/help/file-roller/ja
 @dirrm share/gnome/help/file-roller/it/figures
 @dirrm share/gnome/help/file-roller/it
 @dirrm share/gnome/help/file-roller/fr/figures
@@ -226,7 +197,14 @@ share/omf/file-roller/file-roller-zh_TW.omf
 @dirrm share/gnome/help/file-roller
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/file-roller/icons/hicolor/24x24/actions
+@dirrm share/file-roller/icons/hicolor/24x24
+@dirrm share/file-roller/icons/hicolor/16x16/actions
+@dirrm share/file-roller/icons/hicolor/16x16
+@dirrm share/file-roller/icons/hicolor
+@dirrm share/file-roller/icons
 @dirrm share/file-roller/glade
 @dirrm share/file-roller
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm libexec/file-roller
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
