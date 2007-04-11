@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.8.2.1 2007/04/11 09:12:48 ghen Exp $
 
 --- routines/os_specific/getmemory.c.orig	2006-02-01 20:50:55.000000000 +0000
 +++ routines/os_specific/getmemory.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aj,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
  */
  #include "getmemory.h"
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#define ARRAY_SIZE(a) (sizeof (a) / sizeof ((a)[0]))
@@ -19,7 +19,7 @@ $NetBSD: patch-aj,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
     }
  #endif
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define MEMOK 1
 +  { /* This works on *bsd and darwin.  */
 +    unsigned int usermem;
@@ -39,7 +39,7 @@ $NetBSD: patch-aj,v 1.8 2007/03/23 22:08:57 dmcmahill Exp $
     }
  #endif
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define MEMOK 1
 +  { /* This works on *bsd and darwin.  */
 +    unsigned int physmem;

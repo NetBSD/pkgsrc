@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2007/03/23 22:08:56 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.12.2.1 2007/04/11 09:12:48 ghen Exp $
 
 --- configure.in.orig	2006-11-03 15:06:57.000000000 +0000
 +++ configure.in
@@ -129,6 +129,27 @@ $NetBSD: patch-aa,v 1.12 2007/03/23 22:08:56 dmcmahill Exp $
  		LD=ld
  		LD_LDFLAGS=$LIEEELIB
  	fi
+@@ -1283,17 +1266,17 @@ i*86-*-linux-gnu | *-linux-gnu )
+     MAKEFILE_TARGET=Makefile.mingwin32
+     ;;
+ # FreeBSD  systems (not supported by INRIA)
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+      GCC=yes
+      CC=$CC
+      CC_OPTIONS="${CFLAGS} -Dfreebsd"
+-     CC_LDFLAGS=-lm
++     CC_LDFLAGS="-lm ${LDFLAGS} -Wl,-R${X11BASE}/lib"
+      CC_PICFLAGS='-fPIC'
+      # script shell f77 have bugs, get ours
+      FC=$F77
+      FC_OPTIONS="${CFLAGS} -Dfreebsd"	
+      FC_OPTIONS_O0='-Dfreebsd'
+-     FC_LDFLAGS='-lm -Wl,--export-dynamic'
++     FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib -lm -Wl,--export-dynamic"
+      FC_PICFLAGS='-fPIC'
+      LD=ld
+      LD_LDFLAGS=-lm
 @@ -1337,8 +1320,8 @@ i*86-*-linux-gnu | *-linux-gnu )
     AC_F77_LIBRARY_LDFLAGS
     FC="$F77"
