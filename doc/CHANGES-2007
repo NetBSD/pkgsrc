@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.781 2007/04/11 06:51:56 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.782 2007/04/11 09:09:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1497,3 +1497,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/gnome-user-docs to 2.18.1 [wiz 2007-04-11]
 	Updated textproc/gnome-doc-utils to 0.10.3 [wiz 2007-04-11]
 	Updated security/ipsec-tools to 0.6.7 [ghen 2007-04-11]
+	Updated sysutils/gnome-vfsmm to 2.18.0 [adam 2007-04-11]
+	Updated devel/libgnomemm to 2.18.0 [adam 2007-04-11]
+	Updated devel/libgnomeuimm to 2.18.0 [adam 2007-04-11]
