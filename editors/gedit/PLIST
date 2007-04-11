@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2006/11/09 21:03:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/04/11 18:15:35 drochner Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.16/gedit/gedit-app.h
@@ -24,6 +24,7 @@ include/gedit-2.16/gedit/gedit-tab.h
 include/gedit-2.16/gedit/gedit-utils.h
 include/gedit-2.16/gedit/gedit-view.h
 include/gedit-2.16/gedit/gedit-window.h
+lib/gedit-2/gedit-bugreport.sh
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 lib/gedit-2/plugins/filebrowser.gedit-plugin
@@ -60,9 +61,10 @@ share/gedit-2/glade/time.glade2
 share/gedit-2/icons/gedit-plugin.png
 share/gedit-2/logo/gedit-logo.png
 share/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
-share/gedit-2/taglist/HTML.tags
-share/gedit-2/taglist/Latex.tags
-share/gedit-2/taglist/XSLT.tags
+share/gedit-2/taglist/HTML.tags.gz
+share/gedit-2/taglist/Latex.tags.gz
+share/gedit-2/taglist/XSLT.tags.gz
+share/gedit-2/taglist/XUL.tags.gz
 share/gedit-2/ui/gedit-ui.xml
 share/gnome/help/gedit/C/figures/gedit_format_bold.png
 share/gnome/help/gedit/C/figures/gedit_format_italic.png
@@ -147,6 +149,14 @@ share/gnome/help/gedit/sv/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/sv/figures/gedit_window.png
 share/gnome/help/gedit/sv/gedit.xml
 share/gnome/help/gedit/sv/legal.xml
+share/gnome/help/gedit/uk/figures/gedit_format_bold.png
+share/gnome/help/gedit/uk/figures/gedit_format_italic.png
+share/gnome/help/gedit/uk/figures/gedit_format_strikethrough.png
+share/gnome/help/gedit/uk/figures/gedit_format_underline.png
+share/gnome/help/gedit/uk/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/uk/figures/gedit_window.png
+share/gnome/help/gedit/uk/gedit.xml
+share/gnome/help/gedit/uk/legal.xml
 share/gnome/help/gedit/zh_CN/figures/gedit_format_bold.png
 share/gnome/help/gedit/zh_CN/figures/gedit_format_italic.png
 share/gnome/help/gedit/zh_CN/figures/gedit_format_strikethrough.png
@@ -296,6 +306,7 @@ share/omf/gedit/gedit-ko.omf
 share/omf/gedit/gedit-ro.omf
 share/omf/gedit/gedit-ru.omf
 share/omf/gedit/gedit-sv.omf
+share/omf/gedit/gedit-uk.omf
 share/omf/gedit/gedit-zh_CN.omf
 share/omf/gedit/gedit-zh_HK.omf
 share/omf/gedit/gedit-zh_TW.omf
@@ -308,6 +319,8 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gnome/help/gedit/zh_HK
 @dirrm share/gnome/help/gedit/zh_CN/figures
 @dirrm share/gnome/help/gedit/zh_CN
+@dirrm share/gnome/help/gedit/uk/figures
+@dirrm share/gnome/help/gedit/uk
 @dirrm share/gnome/help/gedit/sv/figures
 @dirrm share/gnome/help/gedit/sv
 @dirrm share/gnome/help/gedit/ru/figures

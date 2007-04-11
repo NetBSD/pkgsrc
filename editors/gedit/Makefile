@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2007/03/21 12:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2007/04/11 18:15:11 drochner Exp $
 #
 
-DISTNAME=		gedit-2.16.2
-PKGREVISION=		1
+DISTNAME=		gedit-2.18.1
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.16/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -22,6 +21,10 @@ PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 GCONF2_SCHEMAS=		gedit.schemas
 
 CONFIGURE_ARGS+=	--enable-schemas-install
+# XXX option?
+.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
+#CONFIGURE_ARGS+=	--disable-spell
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
@@ -41,7 +44,6 @@ BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.16.0
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
