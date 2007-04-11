@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6208 2007/04/11 06:33:54 veego Exp $
+$NetBSD: TODO,v 1.6209 2007/04/11 06:40:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ Suggested package updates
 	o gnome-applets-2.16.2
 	o gnome-build-0.1.5
 	o gnome-desktop-2.18.0
-	o gnome-doc-utils-0.10.3
 	o gnome-games-2.18.0.1
 	o gnome-keyring-0.8.1
 	o gnome-keyring-manager-2.18.0
