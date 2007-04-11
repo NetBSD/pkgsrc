@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/04/09 09:49:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2007/04/11 06:32:26 wiz Exp $
 
-SHA1 (gnome-user-docs-2.18.0.tar.bz2) = 05f76a22bb4e776d92d04885ac3007ccbe147e3f
-RMD160 (gnome-user-docs-2.18.0.tar.bz2) = 226bf5e18a4a7f8bedcbc57029eeb5e83494be87
-Size (gnome-user-docs-2.18.0.tar.bz2) = 5942980 bytes
+SHA1 (gnome-user-docs-2.18.1.tar.bz2) = 5db90b31e7e26049a209f6eac03923ae25ec90a4
+RMD160 (gnome-user-docs-2.18.1.tar.bz2) = 48cbc4aea930a5814eca828d96cc6eec4bc07ea9
+Size (gnome-user-docs-2.18.1.tar.bz2) = 5988150 bytes
