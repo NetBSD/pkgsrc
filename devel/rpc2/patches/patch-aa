@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2007/04/11 18:14:57 gdt Exp $
+
+--- secure/gen_testvectors.sh.orig	2006-03-23 14:30:54.000000000 -0500
++++ secure/gen_testvectors.sh
+@@ -48,7 +48,7 @@ vectors () {
+     keysize=0
+     cat $file | sed 's/\r//' | while read key value
+     do
+-	if [ "$key" == KEYSIZE -a "$value" != "$keysize" ] ; then
++	if [ "$key" = KEYSIZE -a "$value" != "$keysize" ] ; then
+ 	    I=0
+ 	    keysize="$value"
+ 	fi
