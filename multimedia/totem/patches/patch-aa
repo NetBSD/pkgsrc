@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2006/09/15 15:23:51 jmmv Exp $
+$NetBSD: patch-aa,v 1.6 2007/04/11 18:03:39 drochner Exp $
 
---- Makefile.in.orig	2006-09-03 21:39:11.000000000 +0200
+--- Makefile.in.orig	2007-04-04 16:41:43.000000000 +0200
 +++ Makefile.in
-@@ -315,7 +315,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
--SUBDIRS = po data src browser-plugin help
-+SUBDIRS = po data src help
- EXTRA_DIST = \
- 	COPYING.LIB		\
- 	autogen.sh		\
+@@ -73,7 +73,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-re
+   distclean-recursive maintainer-clean-recursive
+ ETAGS = etags
+ CTAGS = ctags
+-DIST_SUBDIRS = po data src help browser-plugin
++DIST_SUBDIRS = po data src help
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ distdir = $(PACKAGE)-$(VERSION)
+ top_distdir = $(distdir)
