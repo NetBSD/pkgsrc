@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2007/03/27 22:31:16 wiz Exp $
+$NetBSD: distinfo,v 1.13 2007/04/11 18:10:45 drochner Exp $
 
-SHA1 (gucharmap-1.8.0.tar.bz2) = eaaabf11c4fa7f897af5ea2d1b4072debc6ff717
-RMD160 (gucharmap-1.8.0.tar.bz2) = 366426537ffa5b3e24e31b474d6755bd37d73cb1
-Size (gucharmap-1.8.0.tar.bz2) = 2542413 bytes
-SHA1 (patch-aa) = e5b623381245dfb189bdce14ef3d5b91aab7640a
+SHA1 (gucharmap-1.10.0.tar.bz2) = 99957a7ef4be025db4e11bdf1eb7367438e1265d
+RMD160 (gucharmap-1.10.0.tar.bz2) = 6caf6b49d27fd76991db384ef894c2dd7de38dce
+Size (gucharmap-1.10.0.tar.bz2) = 2506883 bytes
