@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2006/10/12 14:16:22 drochner Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/04/11 18:01:13 drochner Exp $
 #
 
-DISTNAME=		evince-0.6.1
+DISTNAME=		evince-0.8.1
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

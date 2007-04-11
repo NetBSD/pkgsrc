@@ -1,23 +1,42 @@
-@comment $NetBSD: PLIST,v 1.13 2006/10/12 14:16:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/04/11 18:01:13 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
+man/man1/evince.1
 share/applications/evince.desktop
 share/evince/evince-password.glade
+share/evince/evince-preview-toolbar.xml
 share/evince/evince-properties.glade
 share/evince/evince-toolbar.xml
 share/evince/evince-ui.xml
 share/evince/hand-open.png
+share/evince/icons/hicolor/16x16/actions/view-page-continuous.png
+share/evince/icons/hicolor/16x16/actions/view-page-facing.png
+share/evince/icons/hicolor/16x16/actions/zoom-fit-page.png
+share/evince/icons/hicolor/16x16/actions/zoom-fit-width.png
+share/evince/icons/hicolor/22x22/actions/view-page-continuous.png
+share/evince/icons/hicolor/22x22/actions/view-page-facing.png
+share/evince/icons/hicolor/22x22/actions/zoom-fit-page.png
+share/evince/icons/hicolor/22x22/actions/zoom-fit-width.png
+share/evince/icons/hicolor/24x24/actions/view-page-continuous.png
+share/evince/icons/hicolor/24x24/actions/view-page-facing.png
+share/evince/icons/hicolor/24x24/actions/zoom-fit-page.png
+share/evince/icons/hicolor/24x24/actions/zoom-fit-width.png
 ${DJVU}share/gconf/schemas/evince-thumbnailer-djvu.schemas
 ${DVI}share/gconf/schemas/evince-thumbnailer-dvi.schemas
 share/gconf/schemas/evince-thumbnailer.schemas
+share/gconf/schemas/evince-thumbnailer-ps.schemas
 share/gconf/schemas/evince.schemas
 share/gnome/help/evince/C/evince.xml
 share/gnome/help/evince/C/figures/evince_start_window.png
 share/gnome/help/evince/C/legal.xml
 share/gnome/help/evince/bg/evince.xml
 share/gnome/help/evince/bg/figures/evince_start_window.png
+share/gnome/help/evince/ca/evince.xml
+share/gnome/help/evince/ca/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
+share/gnome/help/evince/en_GB/evince.xml
+share/gnome/help/evince/en_GB/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
 share/gnome/help/evince/es/figures/evince_start_window.png
 share/gnome/help/evince/fi/evince.xml
@@ -36,10 +55,74 @@ share/gnome/help/evince/sv/evince.xml
 share/gnome/help/evince/sv/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
+share/gtk-doc/html/evince/EvAttachment.html
+share/gtk-doc/html/evince/EvJobPrint.html
+share/gtk-doc/html/evince/EvNavigationAction.html
+share/gtk-doc/html/evince/EvNavigationActionWidget.html
+share/gtk-doc/html/evince/EvPageAction.html
+share/gtk-doc/html/evince/EvPageActionWidget.html
+share/gtk-doc/html/evince/EvWindow.html
+share/gtk-doc/html/evince/evince-EvHistory.html
+share/gtk-doc/html/evince/evince-EvImage.html
+share/gtk-doc/html/evince/evince-EvPasswordDialog.html
+share/gtk-doc/html/evince/evince-EvPasswordView.html
+share/gtk-doc/html/evince/evince-EvRenderContext.html
+share/gtk-doc/html/evince/evince-EvSidebar.html
+share/gtk-doc/html/evince/evince-EvSidebarAttachments.html
+share/gtk-doc/html/evince/evince-EvSidebarLinks.html
+share/gtk-doc/html/evince/evince-EvSidebarThumbnails.html
+share/gtk-doc/html/evince/evince-EvTooltip.html
+share/gtk-doc/html/evince/evince-ev-async-renderer.html
+share/gtk-doc/html/evince/evince-ev-document-factory.html
+share/gtk-doc/html/evince/evince-ev-document-find.html
+share/gtk-doc/html/evince/evince-ev-document-fonts.html
+share/gtk-doc/html/evince/evince-ev-document-images.html
+share/gtk-doc/html/evince/evince-ev-document-info.html
+share/gtk-doc/html/evince/evince-ev-document-links.html
+share/gtk-doc/html/evince/evince-ev-document-misc.html
+share/gtk-doc/html/evince/evince-ev-document-security.html
+share/gtk-doc/html/evince/evince-ev-document-thumbnails.html
+share/gtk-doc/html/evince/evince-ev-document-transition.html
+share/gtk-doc/html/evince/evince-ev-document.html
+share/gtk-doc/html/evince/evince-ev-file-exporter.html
+share/gtk-doc/html/evince/evince-ev-file-helpers.html
+share/gtk-doc/html/evince/evince-ev-job-queue.html
+share/gtk-doc/html/evince/evince-ev-link-action.html
+share/gtk-doc/html/evince/evince-ev-link-dest.html
+share/gtk-doc/html/evince/evince-ev-link.html
+share/gtk-doc/html/evince/evince-ev-metadata-manager.html
+share/gtk-doc/html/evince/evince-ev-page-cache.html
+share/gtk-doc/html/evince/evince-ev-pixbuf-cache.html
+share/gtk-doc/html/evince/evince-ev-print-job.html
+share/gtk-doc/html/evince/evince-ev-properties-dialog.html
+share/gtk-doc/html/evince/evince-ev-properties-fonts.html
+share/gtk-doc/html/evince/evince-ev-selection.html
+share/gtk-doc/html/evince/evince-ev-sidebar-page.html
+share/gtk-doc/html/evince/evince-ev-stock-icons.html
+share/gtk-doc/html/evince/evince-ev-utils.html
+share/gtk-doc/html/evince/evince-ev-view-accessible.html
+share/gtk-doc/html/evince/evince-ev-view.html
+share/gtk-doc/html/evince/evince-ev-window-title.html
+share/gtk-doc/html/evince/evince.devhelp
+share/gtk-doc/html/evince/evince.devhelp2
+share/gtk-doc/html/evince/home.png
+share/gtk-doc/html/evince/index.html
+share/gtk-doc/html/evince/index.sgml
+share/gtk-doc/html/evince/ix01.html
+share/gtk-doc/html/evince/left.png
+share/gtk-doc/html/evince/pt01.html
+share/gtk-doc/html/evince/pt02.html
+share/gtk-doc/html/evince/pt03.html
+share/gtk-doc/html/evince/pt04.html
+share/gtk-doc/html/evince/right.png
+share/gtk-doc/html/evince/style.css
+share/gtk-doc/html/evince/up.png
 share/icons/hicolor/16x16/apps/evince.png
 share/icons/hicolor/22x22/apps/evince.png
+share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
+share/locale/ar/LC_MESSAGES/evince.mo
 share/locale/be/LC_MESSAGES/evince.mo
 share/locale/bg/LC_MESSAGES/evince.mo
 share/locale/bn/LC_MESSAGES/evince.mo
@@ -73,6 +156,7 @@ share/locale/ko/LC_MESSAGES/evince.mo
 share/locale/ku/LC_MESSAGES/evince.mo
 share/locale/lt/LC_MESSAGES/evince.mo
 share/locale/lv/LC_MESSAGES/evince.mo
+share/locale/mg/LC_MESSAGES/evince.mo
 share/locale/mk/LC_MESSAGES/evince.mo
 share/locale/ml/LC_MESSAGES/evince.mo
 share/locale/mr/LC_MESSAGES/evince.mo
@@ -105,7 +189,9 @@ share/locale/zh_HK/LC_MESSAGES/evince.mo
 share/locale/zh_TW/LC_MESSAGES/evince.mo
 share/omf/evince/evince-C.omf
 share/omf/evince/evince-bg.omf
+share/omf/evince/evince-ca.omf
 share/omf/evince/evince-el.omf
+share/omf/evince/evince-en_GB.omf
 share/omf/evince/evince-es.omf
 share/omf/evince/evince-fi.omf
 share/omf/evince/evince-fr.omf
@@ -119,9 +205,11 @@ share/omf/evince/evince-uk.omf
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/evince
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
 @dirrm share/gnome/help/evince/sv/figures
@@ -140,8 +228,12 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince/fi
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
+@dirrm share/gnome/help/evince/en_GB/figures
+@dirrm share/gnome/help/evince/en_GB
 @dirrm share/gnome/help/evince/el/figures
 @dirrm share/gnome/help/evince/el
+@dirrm share/gnome/help/evince/ca/figures
+@dirrm share/gnome/help/evince/ca
 @dirrm share/gnome/help/evince/bg/figures
 @dirrm share/gnome/help/evince/bg
 @dirrm share/gnome/help/evince/C/figures
@@ -149,5 +241,13 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/evince/icons/hicolor/24x24/actions
+@dirrm share/evince/icons/hicolor/24x24
+@dirrm share/evince/icons/hicolor/22x22/actions
+@dirrm share/evince/icons/hicolor/22x22
+@dirrm share/evince/icons/hicolor/16x16/actions
+@dirrm share/evince/icons/hicolor/16x16
+@dirrm share/evince/icons/hicolor
+@dirrm share/evince/icons
 @dirrm share/evince
 @comment in xdg-dirs: @dirrm share/applications
