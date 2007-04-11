@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2007/03/21 12:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2007/04/11 21:48:02 drochner Exp $
 
-DISTNAME=	seahorse-0.8.1
-PKGREVISION=	4
+DISTNAME=	seahorse-1.0.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/0.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/1.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,19 +13,17 @@ DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config autoconf
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-gedit
 CONFIGURE_ARGS+=	--disable-nautilus
 
-GCONF2_SCHEMAS=	seahorse.schemas
+PKGCONFIG_OVERRIDE+=	libcryptui/cryptui.pc.in
+GCONF2_SCHEMAS= 	seahorse.schemas
 
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
@@ -35,7 +32,13 @@ pre-configure:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+# XXX
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
