@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2007/03/21 12:05:46 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2007/04/11 18:09:46 drochner Exp $
 #
 
-DISTNAME=	eog-2.16.3
-PKGREVISION=	1
+DISTNAME=	eog-2.18.1
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.16/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -32,6 +31,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
