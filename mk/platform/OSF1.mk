@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.15 2007/04/11 13:31:52 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.16 2007/04/11 18:58:52 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -59,7 +59,7 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	COFF	# type of shared lib
+_OPSYS_SHLIB_TYPE=	ECOFF	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z 	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
