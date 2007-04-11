@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2007/03/23 22:08:56 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.13.2.1 2007/04/11 09:12:48 ghen Exp $
 
 --- configure.orig	2006-11-03 15:06:57.000000000 +0000
 +++ configure
@@ -3800,6 +3800,27 @@ $NetBSD: patch-ab,v 1.13 2007/03/23 22:08:56 dmcmahill Exp $
      ac_cv_prog_F77="$ac_prog"
      echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
      break 2
+@@ -24317,17 +24312,17 @@ echo "$as_me: error: Unable to configure
+     MAKEFILE_TARGET=Makefile.mingwin32
+     ;;
+ # FreeBSD  systems (not supported by INRIA)
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+      GCC=yes
+      CC=$CC
+      CC_OPTIONS="${CFLAGS} -Dfreebsd"
+-     CC_LDFLAGS=-lm
++     CC_LDFLAGS="-lm ${LDFLAGS} -Wl,-R${X11BASE}/lib"
+      CC_PICFLAGS='-fPIC'
+      # script shell f77 have bugs, get ours
+      FC=$F77
+      FC_OPTIONS="${CFLAGS} -Dfreebsd"
+      FC_OPTIONS_O0='-Dfreebsd'
+-     FC_LDFLAGS='-lm -Wl,--export-dynamic'
++     FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib -lm -Wl,--export-dynamic"
+      FC_PICFLAGS='-fPIC'
+      LD=ld
+      LD_LDFLAGS=-lm
 @@ -24372,7 +24367,7 @@ do
    IFS=$as_save_IFS
    test -z "$as_dir" && as_dir=.
