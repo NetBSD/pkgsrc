@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6210 2007/04/11 09:09:18 adam Exp $
+$NetBSD: TODO,v 1.6211 2007/04/11 14:51:23 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.3
 	o source-highlight-2.6
-	o spamdyke-2.4.0
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
