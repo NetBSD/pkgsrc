@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/04/11 18:20:14 gdt Exp $
 #
 
-DISTNAME=	rvm-1.11
-PKGREVISION=	1
+DISTNAME=	rvm-1.14
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rvm/src/
 
