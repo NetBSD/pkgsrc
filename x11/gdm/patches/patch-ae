@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.12 2006/07/26 12:36:12 drochner Exp $
+$NetBSD: patch-ae,v 1.13 2007/04/11 20:40:08 drochner Exp $
 
---- config/Makefile.in.orig	2006-05-23 21:33:18.000000000 +0200
+--- config/Makefile.in.orig	2007-03-11 22:48:34.000000000 +0100
 +++ config/Makefile.in
-@@ -565,10 +565,6 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -582,10 +582,6 @@ install-data-hook: gdm.conf gdm.conf-cus
  		$(mkinstalldirs) $(DESTDIR)$(confdir); \
  		chmod 755 $(DESTDIR)$(confdir); \
  	fi
@@ -13,19 +13,19 @@ $NetBSD: patch-ae,v 1.12 2006/07/26 12:36:12 drochner Exp $
  	if test '!' -d `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; then \
  		$(mkinstalldirs) `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
  		chmod 755 `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
-@@ -597,10 +593,7 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -614,10 +610,7 @@ install-data-hook: gdm.conf gdm.conf-cus
  	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
  	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
  
--	-if test -f $(DESTDIR)$(localedir)/locale.alias; then \
--		cp -f $(DESTDIR)$(localedir)/locale.alias $(DESTDIR)$(localedir)/locale.alias.orig; \
+-	-if test -f $(DESTDIR)$(gdmlocaledir)/locale.alias; then \
+-		cp -f $(DESTDIR)$(gdmlocaledir)/locale.alias $(DESTDIR)$(gdmlocaledir)/locale.alias.orig; \
 -	fi
--	$(INSTALL_DATA) $(srcdir)/locale.alias $(DESTDIR)$(localedir)/locale.alias
+-	$(INSTALL_DATA) $(srcdir)/locale.alias $(DESTDIR)$(gdmlocaledir)/locale.alias
 +	$(INSTALL_DATA) $(srcdir)/locale.alias $(DESTDIR)$(confdir)/locale.alias
  
  	if test '!' -d $(DESTDIR)$(bisessdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(bisessdir); \
-@@ -678,20 +671,8 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -695,20 +688,8 @@ install-data-hook: gdm.conf gdm.conf-cus
  		chmod 755 $(DESTDIR)$(gnomercdir); \
  	fi
  
