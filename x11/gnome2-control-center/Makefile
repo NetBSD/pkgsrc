@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.76 2007/03/21 12:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2007/04/11 17:48:09 drochner Exp $
 #
 
-DISTNAME=	control-center-2.16.2
+DISTNAME=	control-center-2.18.1
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.16/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -35,8 +34,8 @@ INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 GCONF2_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
+GCONF2_SCHEMAS+=	control-center.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
 GCONF2_SCHEMAS+=	themus.schemas
 GCONF2_SCHEMAS+=	fontilus.schemas
 
@@ -80,12 +79,15 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
+.include "../../x11/libgnomekbd/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
