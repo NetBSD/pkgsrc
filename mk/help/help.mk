@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.7 2007/03/09 01:34:50 rillig Exp $
+# $NetBSD: help.mk,v 1.8 2007/04/11 06:40:09 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -15,6 +15,9 @@ _HELP_FILES+=		mk/defaults/mk.conf
 _HELP_FILES+=		lang/perl5/*.mk lang/php/*.mk lang/python/*.mk
 _HELP_FILES+=		lang/ruby/*.mk
 _HELP_FILES+=		mk/*/*.help
+.if exists(${.PARSEDIR}/../../wip/mk)
+_HELP_FILES+=		wip/mk/*.mk
+.endif
 
 .if defined(VARNAME)
 TOPIC?=		${VARNAME}
