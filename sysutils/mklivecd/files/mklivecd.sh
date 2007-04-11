@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.35 2007/04/10 20:52:01 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.36 2007/04/11 11:51:35 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -103,12 +103,12 @@ _usage_
 
 showmsg()
 {
-    echo "===> $@"
+    echo "MKLIVECD> $@"
 }
 
 showmsg_n()
 {
-    echo -n "===> $@"
+    echo -n "MKLIVECD> $@"
 }
 
 showmsgstring()
@@ -247,13 +247,13 @@ EOF
 		echo "$var=\"$val\"" >> $config_file
 	done
 	echo >> $config_file
-        (   \
-        echo "# MULTIPLE_KERNELS example:"; \
-        echo "#";   \
-        echo "# MULTIPLE_KERNELS=\"ACPI APM\""; \
-        echo "# KERNEL_CONFIG_ACPI=\"KERN_ACPI\"";   \
+        (                                           \
+        echo "# MULTIPLE_KERNELS example:";         \
+        echo "#";                                   \
+        echo "# MULTIPLE_KERNELS=\"ACPI APM\"";     \
+        echo "# KERNEL_CONFIG_ACPI=\"KERN_ACPI\"";  \
         echo "# KERNEL_NAME_ACPI=\"LIVECD_ACPI\"";  \
-        echo "# KERNEL_CONFIG_APM=\"KERN_APM\""; \
+        echo "# KERNEL_CONFIG_APM=\"KERN_APM\"";    \
         echo "# KERNEL_NAME_APM=\"LIVECD_APM\"";    \
         ) >> $config_file
         echo >> $config_file
@@ -276,12 +276,12 @@ EOF
 	done
 	echo >> $config_file
 
-	echo "=> Configuration file created, now please edit it."
-	echo "=> Path: $config_file"
+	showmsg "Configuration file created, now please edit it."
+	showmsg "Path: $config_file"
     elif [ -f $config_file -a $target != "config" ]; then
         [ -n "$verbose_mode" ] && showmsg "Using $config_file"
     else
-        showmsg "$config_file already exists!"
+        showmsg "$config_file already exists, exiting."
         bye 1
     fi
 }
@@ -309,29 +309,33 @@ copy_bootfiles()
                     [ -n "$verbose_mode" ] && \
                         showmsg "Copying $f into $ISODIR/$GRUB_BOOTDIR"
                 else
-                    echo "=> File $f not found!"
+                    echo "=> file $f not found."
                 fi
             else
                 echo "=> Not copying $f, already exists."
             fi
         done
-    else
+    elif is_disabled USE_GNU_GRUB; then
     #
     # NetBSD cd9660 bootloader (bootxx_cd9660)
     #
         if [ -f ${CDBOOT_DIR}/${CDBOOT_IMG} ]; then
             cp -f ${CDBOOT_DIR}/${CDBOOT_IMG} $ISODIR
         else
-            echo "=> Missing cdboot... exiting."
+            showmsg "Missing ${CDBOOT_IMG}... exiting."
             bye 1
         fi
 
         if [ -f ${CDBOOT_DIR}/${BOOT_IMG} ]; then
             cp -f ${CDBOOT_DIR}/${BOOT_IMG} $ISODIR
         else
-            echo "=> Missing boot... exiting."
+            showmsg "Missing ${BOOT_IMG}... exiting."
         fi
+    else
+        showmsg "Unknown value in USE_GNU_GRUB, use 'yes' or 'no'."
+        bye 1
     fi
+
 }
 
 do_menu_lst()
@@ -381,7 +385,7 @@ do_build_kernels()
 	fi
 
 	if [ ! -d $WORKDIR/$kernname -a ! -f $bootkern ]; then
-	    showmsg "Missing files... exiting."
+            showmsg "couldn't find $bootkern, exiting."
 	    bye 1
 	fi
 
@@ -389,11 +393,13 @@ do_build_kernels()
 	cd $kernname
 	make depend && make
 	if [ "$?" -eq 0 ]; then
+
             if is_enabled USE_GNU_GRUB; then
                 cp $WORKDIR/$kernname/netbsd $ISODIR/$GRUB_BOOTDIR/$bootkern
             else
-                cp $WORKDIR/$kernname/netbsd $ISODIR/$bootkern
+                cp $WORKDIR/$kernname/netbsd $ISODIR/k.$bootkern
             fi
+
             [ -n "$verbose_mode" ] && \
                 showmsg_n "Compressing kernel $bootkern..."
             
@@ -422,12 +428,16 @@ kernel --type=netbsd /$GRUB_BOOTDIR/$bootkern.gz
 _EOF_
 		fi
 		    showmsgstring
-            else
+            elif is_disabled_USE_GNU_GRUB; then
                 gzip $ISODIR/$bootkern
+                mv $ISODIR/k.$kernname.gz $ISODIR/k.$bootkern
                 showmsgstring
+            else
+                showmsg "Unknown value in USE_GNU_GRUB, use 'yes' or 'no'."
+                bye 1
             fi
         else
-            echo "=> kernel compilation failed! ($kernname)"
+            showmsg "kernel compilation failed! ($kernname), exiting."
             bye 1
         fi
     done
@@ -447,7 +457,7 @@ do_cdlive()
     case "$1" in
     kernel)
         if [ ! -d $SOURCEDIR/sys ]; then
-            echo "=> CANNOT FIND THE NETBSD SOURCES, EXITING!"
+            showmsg "couldn't find $SOURCEDIR/sys, exiting."
             bye 1
 	fi
 
@@ -457,81 +467,75 @@ do_cdlive()
             KERNEL_NAME=MKLIVECD_$kernel_arg
         fi
 
+        if [ -z "$USE_GNU_GRUB" ]; then
+            echo "*** USE_GNU_GRUB not set ***"
+            echo
+            echo "Please set it to 'YES' or 'NO'. On amd64 you should set it"
+            echo "to 'NO' because GRUB is not supported on this platform."
+            echo "See mklivecd(8) for more details."
+            bye 1
+        fi
+
         if is_disabled MULTIPLE_KERNELS; then
 	    showmsg "Building kernel on $(date):"
 	    if [ -n "$verbose_mode" ]; then
-                echo
-		showmsg "Using kernel: $KERNEL_CONFIG"
-		showmsg "Kernel name: $KERNEL_NAME"
+		showmsg "kernel configuration: $KERNEL_CONFIG"
+		showmsg "kernel name: $KERNEL_NAME"
 		sleep 2
-		fi
-		echo
-                #
-                # Use the specified kernel from ~/.mklivecd.
-                #
-		if [ -s $config_dir/$KERNEL_CONFIG ]; then
-		    cp $config_dir/$KERNEL_CONFIG $WORKDIR
+	    fi
+	    echo
+            #
+            # Use the specified kernel from ~/.mklivecd.
+            #
+	    if [ -s $config_dir/$KERNEL_CONFIG ]; then
+	        cp $config_dir/$KERNEL_CONFIG $WORKDIR
+            else
+                showmsg "couldn't find '$KERNEL_CONFIG' in $config_dir, exiting."
+                bye 1
+            fi
+
+	    cd $WORKDIR
+	    [ ! -d $WORKDIR/$KERNEL_NAME ] && mkdir $WORKDIR/$KERNEL_NAME
+            config -s $SOURCEDIR/sys -b $WORKDIR/$KERNEL_NAME $KERNEL_CONFIG
+	    cd $KERNEL_NAME
+	    make depend && make
+	    if [ "$?" -eq 0 ]; then
+	        copy_bootfiles
+	        showmsg_n "Compressing kernel $KERNEL_CONFIG..."
+
+                if is_enabled USE_GNU_GRUB; then
+                    cp $WORKDIR/$KERNEL_NAME/netbsd \
+                        $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
+		    gzip -9 $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
+		    showmsgstring
                 else
-                    echo "=> CANNOT FIND '$KERNEL_CONFIG' in $config_dir, EXITING!"
-                    bye 1
+                    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
+                    gzip -9 $ISODIR/netbsd
+                    mv $ISODIR/netbsd.gz $ISODIR/netbsd
+	            showmsgstring
                 fi
 
-		cd $WORKDIR
-		    [ ! -d $WORKDIR/$KERNEL_NAME ] && \
-			mkdir $WORKDIR/$KERNEL_NAME
-		    config -s $SOURCEDIR/sys -b $WORKDIR/$KERNEL_NAME \
-		        $KERNEL_CONFIG
-		cd $KERNEL_NAME
-		make depend && make
-		if [ "$?" -eq 0 ]; then
-		    copy_bootfiles
-		    showmsg_n "Compressing kernel $KERNEL_CONFIG..."
-                    if is_enabled USE_GNU_GRUB; then
-		        cp $WORKDIR/$KERNEL_NAME/netbsd \
-			    $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
-			gzip -9 $ISODIR/$GRUB_BOOTDIR/$KERNEL_CONFIG
-			showmsgstring
-                    else
-                        if [ -f $ISODIR/netbsd ]; then
-                        #
-                        # ISO9660 specifies that ISO Level 1 cannot handle
-                        # filenames with > 8 characters... actually the
-                        # cd9660.c standalone file-system for the bootloader
-                        # does not support ISO Level 2/3.
-                        #
-                        # Note too that '-' is not an allowed character, so
-                        # is better to use a dot '.' .
-                        #
-                        # I'll change this when cd9660.c is fixed.
-                        #
-                            cp $WORKDIR/$KERNEL_NAME/netbsd \
-                                $ISODIR/k.$KERNEL_CONFIG
-			    gzip -9 $ISODIR/k.$KERNEL_CONFIG
-                            mv $ISODIR/k.$KERNEL_CONFIG.gz \
-                                $ISODIR/k.$KERNEL_CONFIG
-                        else
-                            cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
-                            gzip -9 $ISODIR/netbsd
-                            mv $ISODIR/netbsd.gz $ISODIR/netbsd
-                        fi
-			showmsgstring
-                    fi
-		    if [ "$?" -eq 0 ]; then
-                        is_enabled USE_GNU_GRUB && do_menu_lst
-		        [ -n "$verbose_mode" ] && \
-		            echo "=> NEXT STEP: ${progname} base"
-		    else
-			echo "=> COULDN'T INSTALL THE KERNEL(S)"
-		    fi
-		else
-		    echo
-		    showmsg "Target kernel failed."
-		    bye 1
+                if [ "$?" -eq 0 ]; then
+                    is_enabled USE_GNU_GRUB && do_menu_lst
+                    [ -n "$verbose_mode" ] && \
+		        showmsg "next step: ${progname} base."
+	         else
+		    showmsg "couldn't install the kernel(s)."
 		fi
             else
-                copy_bootfiles
-                do_build_kernels
+                echo
+                showmsg "target kernel failed."
+                bye 1
             fi
+        elif [ -z "$MULTIPLE_KERNELS" ]; then
+            echo "*** MULTIPLE_KERNELS not defined ***"
+            echo
+            echo "Define it to 'NO' in the configuration file if you don't"
+            echo "want to use it. See mklivecd(8) for more details."
+        else
+            copy_bootfiles
+            do_build_kernels
+        fi
 	;;
     fetch)
         #
@@ -539,7 +543,7 @@ do_cdlive()
         #
         if is_enabled FETCH_SETS; then
             if [ ! -d $BASE_SETS_DIR ]; then
-                showmsg "Cannot find $BASE_SETS_DIR, exiting"
+                showmsg "Couldn't find $BASE_SETS_DIR, exiting"
                 bye 1
             fi 
             cd $BASE_SETS_DIR
@@ -566,20 +570,23 @@ do_cdlive()
             done
         else
             showmsg "You have disabled the option to fetch the sets."
+            showmsg "see mklivecd(8) for more details."
             bye 1
         fi
 
-        [ -n "$verbose_mode" ] && echo "=> NEXT STEP: ${progname} base"
+        [ -n "$verbose_mode" ] && showmsg "Next step: ${progname} base"
 
         ;;
     base)
         for F in ${BASE_SETS}
         do
             if [ ! -f $BASE_SETS_DIR/$F ]; then
-                showmsg "Cannot find $F, exiting."
+                showmsg "Couldn't find $F, exiting."
 		bye 1
             fi
 	done
+
+        find $ISODIR -type f | xargs chown root:wheel
 
 	showmsg "Installing base sets:"
 	for S in ${BASE_SETS}
@@ -595,7 +602,7 @@ do_cdlive()
 	    for FX in ${X11_SETS}
 	    do
 	        if [ ! -f $X11_SETS_DIR/$FX ]; then
-                    showmsg "Can't find $FX, disabling X11."
+                    showmsg "Couldn't find $FX, disabling X11."
 		    DISABLE_X11=yes
 		    break
 		fi
@@ -642,7 +649,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.35 2007/04/10 20:52:01 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.36 2007/04/11 11:51:35 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -670,8 +677,7 @@ _EOF_
 	cd $ISODIR/dev && ./MAKEDEV all
 	showmsgstring
 	showmsg "Target base finished."
-	[ -n "$verbose_mode" ] && \
-	    echo "=> NEXT STEP: ${progname} chroot"
+	[ -n "$verbose_mode" ] && showmsg "Next step: ${progname} chroot"
     ;;
     chroot)
         if [ ! -f $ISODIR/etc/profile ]; then 
@@ -709,7 +715,7 @@ _EOF_
                 fi
             fi
 	else
-	    	showmsg "==> CANNOT FIND $PKGSRCDIR"
+            showmsg "==> couldn't find $PKGSRCDIR."
 	fi
 		
 	if [ -d $PKGSRCDISTDIR ]; then
@@ -726,7 +732,7 @@ _EOF_
                 fi
             fi
 	else
-	    echo "==> CANNOT FIND $PKGSRCDISTDIR"
+            echo "==> couldn't find $PKGSRCDISTDIR."
 	fi
 
         if [ -d $PACKAGESDIR ]; then
@@ -743,7 +749,7 @@ _EOF_
                 fi
             fi
         else
-            echo "==> CANNOT FIND $PACKAGESDIR"
+            echo "==> couldn't find $PACKAGESDIR."
         fi
 
 	echo
@@ -751,7 +757,7 @@ _EOF_
 	echo
 
 	if [ ! -d $ISODIR/root ]; then
-	    showmsg "Cannot find root directory, exiting."
+	    showmsg "couldn't find root directory, exiting."
 	    bye 1
 	fi
 
@@ -834,7 +840,7 @@ _EOF_
 	    	echo
             else
 		echo
-		echo "==> CANNOT FIND PERSONAL CONFIGURATION FILE"
+                showmsg "Couldn't find personal configuration file, exiting."
 		echo
                 bye 1
             fi
@@ -849,14 +855,14 @@ _EOF_
         # Unmount pkgsrc related directories.
         #
 	if [ ! -f $pkgsrcdist_mntstat ]; then
-	    showmsg "distfiles directory was not mounted."
+	    showmsg "distfiles directory was not mounted before."
 	else
 	    cnt=$(cat $pkgsrcdist_mntstat)
 	    if [ "$cnt" -gt 1 ]; then
                 cnt=$(($cnt - 1))
 		echo $cnt > $pkgsrcdist_mntstat
 		[ -n "$verbose_mode" ] && \
-		    echo "=> distfiles directory still in use by mklivecd."
+		    showmsg "distfiles directory still in use."
             else
                 [ -n "$verbose_mode" ] && \
 		    echo "=> Unmounting distfiles directory."
@@ -864,19 +870,19 @@ _EOF_
 		if [ $? -eq 0 ]; then
 		    rm $pkgsrcdist_mntstat
 		else
-		    echo "Can't umount $PKGSRCDISTDIR."
+		    showmsg "Couldn't umount $PKGSRCDISTDIR."
 		fi
             fi
 	fi
 
         if [ ! -f $packages_mntstat ]; then
-            showmsg "packages directory was not mounted."
+            showmsg "packages directory was not mounted before."
         else
             cnt=$(cat $packages_mntstat)
             if [ "$cnt" -gt 1 ]; then
                 cnt=$(($cnt - 1))
                 echo $cnt > $packages_mntstat
-                echo "=>pkgsrc directory still in use by mklivecd."
+                showmsg "pkgsrc directory still in use."
             else
                 [ -n "$verbose_mode" ] && \
                     echo "=> Unmounting packages directory."
@@ -884,19 +890,19 @@ _EOF_
                 if [ "$?" -eq 0 ]; then
                     rm $packages_mntstat
                 else
-                    echo "Can't umount $PACKAGESDIR."
+                    showmsg "Couldn't umount $PACKAGESDIR."
                 fi
             fi
         fi
 
 	if [ ! -f $pkgsrc_mntstat ]; then
-	    showmsg "pkgsrc directory was not mounted."
+	    showmsg "pkgsrc directory was not mounted before."
 	else
 	    cnt=$(cat $pkgsrc_mntstat)
 	    if [ "$cnt" -gt 1 ]; then
 	        cnt=$(($cnt - 1)) 
 		echo $cnt > $pkgsrc_mntstat 
-		echo "=> pkgsrc directory still in use by mklivecd."
+		showmsg "pkgsrc directory still in use."
 	    else
 		[ -n "$verbose_mode" ] && \
 	    	    echo "=> Unmounting pkgsrc directory."
@@ -904,7 +910,7 @@ _EOF_
 		if [ $? -eq 0 ]; then
 		    rm $pkgsrc_mntstat
 		else
-		    echo "Can't umount $PKGSRCDIR."
+		    showmsg "Couldn't umount $PKGSRCDIR."
 		fi
             fi
 	fi
@@ -912,8 +918,10 @@ _EOF_
 	[ -n "$verbose_mode" ] && showmsg "Size: $(du -sh $ISODIR)"
     ;;
     clean)
-        if [ -f $pkgsrc_mntstat -o -f $pkgsrcdist_mntstat -o -f $packages_mntstat ]; then
-            showmsg "The pkgsrc directories are still in use! Exiting."
+        if [ -f $pkgsrc_mntstat -o \
+             -f $pkgsrcdist_mntstat -o \
+             -f $packages_mntstat ]; then
+            showmsg "The pkgsrc directories are still in use, exiting."
             bye 1
 	fi
 	showmsg "Cleaning WORKDIR: $WORKDIR"
@@ -1032,12 +1040,13 @@ _EOF_
     ;;
     burn)
         if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
-            showmsg "Can't find iso image!, exiting."
+            showmsg "Couldn't find iso image, exiting."
             bye 1
 	fi
 
-        [ is_enabled BLANK_BEFORE_BURN ] && \
+        if is_enabled BLANK_BEFORE_BURN; then
 	    $CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS blank=fast
+        fi
 		
 	$CDRECORD_BIN dev=$CDROM_DEVICE $CDRECORD_ARGS $BASEDIR/$IMAGE_NAME.iso
     ;;
@@ -1049,12 +1058,12 @@ checkconf()
 {
     if [ -f $config_file ]; then
         if [ $(id -u) -ne 0 ]; then
-            showmsg "MUST BE RUN AS ROOT!" 
+            showmsg "You must be root, exiting." 
             bye 1
         fi
         do_conf_reset; do_conf
     else
-        showmsg "$config_file DOESN'T EXIST, EXITING!"
+        showmsg "$config_file doesn't exist, exiting."
         bye 1
     fi
 }
