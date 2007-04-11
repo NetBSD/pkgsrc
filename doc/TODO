@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6211 2007/04/11 14:51:23 schmonz Exp $
+$NetBSD: TODO,v 1.6212 2007/04/11 17:59:23 gdt Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ Suggested package updates
 	o ltm-0.40
 	o lua-5.1.2
 	o lucy-1.19p
-	o lwp-2.3
 	o lyx-1.4.4
 	o lyx-qt-1.4.4
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
