@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2006/10/30 21:44:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2007/04/11 20:40:07 drochner Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -100,6 +100,7 @@ share/icons/hicolor/32x32/apps/gdm-xnest.png
 share/locale/af/LC_MESSAGES/gdm.mo
 share/locale/am/LC_MESSAGES/gdm.mo
 share/locale/ar/LC_MESSAGES/gdm.mo
+share/locale/as/LC_MESSAGES/gdm.mo
 share/locale/az/LC_MESSAGES/gdm.mo
 share/locale/be/LC_MESSAGES/gdm.mo
 share/locale/bg/LC_MESSAGES/gdm.mo
@@ -158,7 +159,6 @@ share/locale/pt_BR/LC_MESSAGES/gdm.mo
 share/locale/ro/LC_MESSAGES/gdm.mo
 share/locale/ru/LC_MESSAGES/gdm.mo
 share/locale/rw/LC_MESSAGES/gdm.mo
-share/locale/si/LC_MESSAGES/gdm.mo
 share/locale/sk/LC_MESSAGES/gdm.mo
 share/locale/sl/LC_MESSAGES/gdm.mo
 share/locale/sq/LC_MESSAGES/gdm.mo
