@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.776 2007/04/11 04:57:50 christos Exp $
+$NetBSD: CHANGES-2007,v 1.777 2007/04/11 06:13:58 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1492,3 +1492,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/metacity to 2.18.2 [wiz 2007-04-10]
 	Updated x11/gtk2-engines to 2.10.0 [wiz 2007-04-11]
 	Updated shells/tcsh to 6.15.00 [christos 2007-04-11]
+	Updated www/p5-Jemplate to 0.20 [hiramatsu 2007-04-11]
