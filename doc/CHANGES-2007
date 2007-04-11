@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.778 2007/04/11 06:21:21 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.779 2007/04/11 06:32:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated shells/tcsh to 6.15.00 [christos 2007-04-11]
 	Updated www/p5-Jemplate to 0.20 [hiramatsu 2007-04-11]
 	Updated x11/gnome-themes to 2.18.0 [wiz 2007-04-11]
+	Updated misc/gnome-user-docs to 2.18.1 [wiz 2007-04-11]
