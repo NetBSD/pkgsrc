@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2007/03/15 18:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.446 2007/04/12 10:02:37 martti Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -319,7 +319,6 @@ SUBDIR+=	xbmbrowser
 SUBDIR+=	xdvipresent
 SUBDIR+=	xfce4-artwork
 SUBDIR+=	xfce4-icon-theme
-SUBDIR+=	xfce4-iconbox
 SUBDIR+=	xfig
 SUBDIR+=	xgraph
 SUBDIR+=	xli
