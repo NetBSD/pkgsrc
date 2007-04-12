@@ -168,10 +168,6 @@ include/X11/bitmaps/xlogo16
 include/X11/bitmaps/xlogo32
 include/X11/bitmaps/xlogo64
 include/X11/bitmaps/xsnow
-include/X11/bitmaps/slisttbf
-include/X11/bitmaps/slisttbs
-include/X11/bitmaps/textlist
-include/X11/bitmaps/textlistins
 include/X11/Compose.h
 include/X11/ComposeInt.h
 include/X11/Composite.h
@@ -273,7 +269,6 @@ include/X11/Xaw/SmeLineP.h
 include/X11/Xaw/SmeP.h
 include/X11/Xaw/StripCharP.h
 include/X11/Xaw/StripChart.h
-include/X11/Xaw/Template.c
 include/X11/Xaw/Text.h
 include/X11/Xaw/Template.h
 include/X11/Xaw/TemplateP.h
