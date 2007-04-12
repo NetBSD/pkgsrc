@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6216 2007/04/11 23:22:04 wiz Exp $
+$NetBSD: TODO,v 1.6217 2007/04/12 05:34:21 hira Exp $
 
 Suggested new packages
 ======================
@@ -875,8 +875,6 @@ Suggested package updates
 	o openh323-1.19.1
 	o openldap-client-2.3.34
 	o openmortal-0.7.1
-	o openoffice-2.2
-	o openoffice-bin-2.2
 	o openpam-20050616
 	o openssl-0.9.8e
 	o openttd-0.5.0
