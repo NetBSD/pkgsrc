@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/03/21 12:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/04/12 21:22:47 wiz Exp $
 
-DISTNAME=	vino-2.13.5
-PKGREVISION=	3
+DISTNAME=	vino-2.18.1
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.13/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
