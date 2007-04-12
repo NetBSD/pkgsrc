@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.801 2007/04/12 22:10:43 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.802 2007/04/12 22:44:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/shmux to 1.0 [wiz 2007-04-12]
 	Updated sysutils/ccd2iso to 0.3 [wiz 2007-04-12]
 	Updated fonts/ko-baekmuk to 2.1 [wiz 2007-04-12]
+	Updated misc/gok to 1.2.3 [wiz 2007-04-12]
