@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/04/10 19:00:28 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2007/04/12 22:00:28 joerg Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.18.0
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config intltool
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in
