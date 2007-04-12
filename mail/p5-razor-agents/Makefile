@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/03/24 18:53:57 heinz Exp $
+# $NetBSD: Makefile,v 1.25 2007/04/12 20:21:24 heinz Exp $
 
 DISTNAME=	razor-agents-2.82
 PKGNAME=	p5-${DISTNAME}
@@ -20,8 +20,8 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PERL5_PACKLIST=		auto/razor-agents/.packlist
-CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORARCH}/Razor2/*
+PERL5_PACKLIST=	auto/razor-agents/.packlist
+REPLACE_PERL+=	lib/Razor2/*.pm  lib/Razor2/*/*.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
