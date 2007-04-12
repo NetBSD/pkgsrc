@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/10/06 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/04/12 22:10:14 wiz Exp $
 #
 
-DISTNAME=	baekmuk-2.0
-PKGNAME=	ko-baekmuk-20010718
-PKGREVISION=	6
+DISTNAME=	baekmuk-2.1
+PKGNAME=	ko-${DISTNAME}
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
 		http://zinc.skku.ac.kr/~wkpark/baekmuk/
@@ -38,8 +37,5 @@ post-extract:
 
 do-configure:
 	cd ${WRKSRC} && ${MAKE} prepare
-
-pre-install:
-	${CP} ${WRKSRC}/../fonts.alias ${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"
