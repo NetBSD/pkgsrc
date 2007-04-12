@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.791 2007/04/12 09:56:17 martti Exp $
+$NetBSD: CHANGES-2007,v 1.792 2007/04/12 10:24:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1509,3 +1509,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/qmail to 1.03nb13 [schmonz 2007-04-12]
 	Updated net/unison-devel to 2.27.12 [tonio 2007-04-12]
 	Updated meta-pkgs/xfce4 to 4.4.1 [martti 2007-04-12]
+	Updated www/jalbum to 7.1 [martti 2007-04-12]
