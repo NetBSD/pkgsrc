@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/28 03:21:51 reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/12 16:20:45 joerg Exp $
 #
 
 DISTNAME=	xconsole-1.0.2
@@ -6,9 +6,11 @@ CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	reed@reedmedia.net
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X11 client to display console messages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
