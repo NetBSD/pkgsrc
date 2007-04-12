@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/03/05 00:24:33 dbj Exp $
+# $NetBSD: Makefile,v 1.34 2007/04/12 20:31:05 joerg Exp $
 #
 
 DISTNAME=	bmake-20051105
@@ -31,7 +31,8 @@ do-configure:
 
 do-build:
 	cd ${WRKDIR} && \
-		./bmake/boot-strap -q -o ${OPSYS} --prefix=${PREFIX} \
+		${SETENV} ${MAKE_ENV} ${SH} ./bmake/boot-strap \
+		-q -o ${OPSYS} --prefix=${PREFIX} \
 		--with-default-sys-path=${makesyspath} --mksrc none \
 		--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -39,10 +40,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${PREFIX}/${PKGMANDIR}/man1
 
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.else
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
-.endif
-
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
