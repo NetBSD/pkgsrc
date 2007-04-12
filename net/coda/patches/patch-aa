@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/12 18:13:05 gdt Exp $
+
+--- debian/coda-client.postrm.orig	2004-10-15 10:50:52.000000000 -0400
++++ debian/coda-client.postrm
+@@ -5,7 +5,7 @@
+ 
+ set -e
+ 
+-if [ "$1" == "purge" ] ; then
++if [ "$1" = "purge" ] ; then
+     echo "Purging Coda client configuration and cache files" >&2
+     rm -f /etc/coda/venus.conf
+     rm -rf /var/cache/coda /var/lib/coda /var/log/coda
