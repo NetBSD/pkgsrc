@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2007/04/12 20:31:05 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/04/12 21:28:42 joerg Exp $
 #
 
 DISTNAME=	bmake-20051105
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +14,7 @@ MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
-BROKEN_IN=		pkgsrc-2006Q4
+DEPENDS+=	bootstrap-mk-files-[0-9]*:../../pkgtools/bootstrap-mk-files
 
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	yes
