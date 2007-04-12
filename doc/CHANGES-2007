@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.798 2007/04/12 21:27:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.799 2007/04/12 21:41:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1585,3 +1585,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xwininfo version 1.0.2 [joerg 2007-04-12]
 	Added net/coda version 6.9.1 [gdt 2007-04-12]
 	Updated net/vino to 2.18.1 [wiz 2007-04-12]
+	Updated sysutils/shmux to 1.0 [wiz 2007-04-12]
