@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2007/04/01 21:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.665 2007/04/12 18:13:55 gdt Exp $
 #
 
 COMMENT=	Networking tools
@@ -59,6 +59,7 @@ SUBDIR+=	cidr
 SUBDIR+=	cisco-mibs
 SUBDIR+=	citrix_ica
 SUBDIR+=	cmu-dhcpd
+SUBDIR+=	coda
 SUBDIR+=	connect
 SUBDIR+=	corkscrew
 SUBDIR+=	couriertcpd
