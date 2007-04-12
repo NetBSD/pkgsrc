@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/23 11:53:46 martti Exp $
+# $NetBSD: Makefile,v 1.20 2007/04/12 09:55:12 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,6 +8,7 @@ DISTNAME=	xfprint-${XFCE4_VERSION}
 CATEGORIES=	print
 COMMENT=	Xfce print dialog
 
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
 CONFIGURE_ARGS+=	--with-printcap=/etc/printcap
 
 .include "options.mk"

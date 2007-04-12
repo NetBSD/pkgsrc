@@ -1,19 +1,19 @@
-# $NetBSD: Makefile.common,v 1.33 2007/02/01 13:03:53 joerg Exp $
+# $NetBSD: Makefile.common,v 1.34 2007/04/12 09:55:11 martti Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.4/src/ \
-			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.4/src/
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
-XFCE4_VERSION=		4.2.4
+XFCE4_VERSION=		4.4.1
 
 # Do NOT put a PKGREVISION statement in this file!
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake pkg-config msgfmt perl
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
@@ -21,6 +21,9 @@ GCC_REQD+=		3.0
 
 XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
+.include "../../devel/xfce4-dev-tools/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 ## # Use the latest GNU tar when the native tar is buggy

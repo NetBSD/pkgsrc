@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/23 11:53:46 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/04/12 09:55:20 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_WM_BUILDLINK3_MK:=	${XFCE4_WM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-wm
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-wm
 
 .if ${XFCE4_WM_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-wm+=	xfce4-wm>=4.2.4
+BUILDLINK_API_DEPENDS.xfce4-wm+=	xfce4-wm>=4.4.1
 BUILDLINK_PKGSRCDIR.xfce4-wm?=	../../wm/xfce4-wm
 .endif	# XFCE4_WM_BUILDLINK3_MK
 
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.xfce4-wm?=	../../wm/xfce4-wm
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2007/01/20 12:18:31 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2007/04/12 09:55:13 martti Exp $
 
 --- panel-plugin/os.h.orig	2007-01-20 12:05:51.000000000 +0000
 +++ panel-plugin/os.h

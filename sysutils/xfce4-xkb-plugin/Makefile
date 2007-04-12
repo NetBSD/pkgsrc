@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2007/01/19 14:58:17 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/04/12 09:55:19 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.3.3
+XFCE4_VERSION=	0.4.3
 
 DISTNAME=	xfce4-xkb-plugin-${XFCE4_VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-xkb-plugin/
 COMMENT=	Xfce Keyboard plugin
 
-.include "../../x11/libXpm/buildlink3.mk"
+USE_TOOLS+=	intltool
+
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
