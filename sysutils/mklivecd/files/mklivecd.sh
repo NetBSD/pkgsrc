@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.42 2007/04/12 22:39:36 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.43 2007/04/12 23:07:55 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -319,7 +319,7 @@ EOF
 
 do_conf_reset()
 {
-    for F in ${BASE_VARS} ${MISC_VARS} ${MNT_VARS}
+    for F in ${BASE_VARS} ${KERNEL_ARGS} ${MISC_VARS} ${MNT_VARS}
     do
         eval $F=\"\"
     done
@@ -672,7 +672,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.42 2007/04/12 22:39:36 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.43 2007/04/12 23:07:55 xtraeme Exp $
 # 
 
 # PROVIDE: root
