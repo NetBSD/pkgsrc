@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.492 2007/04/10 19:22:51 drochner Exp $
+# $NetBSD: Makefile,v 1.493 2007/04/12 09:53:12 martti Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -401,6 +401,7 @@ SUBDIR+=	xf86vidmodeproto
 SUBDIR+=	xfce3
 SUBDIR+=	xfce4-clipman-plugin
 SUBDIR+=	xfce4-desktop
+SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-gtk2-engine
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
@@ -408,8 +409,7 @@ SUBDIR+=	xfce4-notes-plugin
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-taskbar-plugin
-SUBDIR+=	xfce4-toys
-SUBDIR+=	xfce4-trigger-launcher
+SUBDIR+=	xfce4-terminal
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-windowlist-plugin
 SUBDIR+=	xfishtank
