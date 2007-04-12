@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6222 2007/04/12 21:41:54 wiz Exp $
+$NetBSD: TODO,v 1.6223 2007/04/12 21:42:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -346,7 +346,6 @@ Suggested package updates
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o ccd2iso-0.3
 	o cddb-1.5.2
 	o cddbd-1.5.2
 	o cdrtools-2.01.01a25
