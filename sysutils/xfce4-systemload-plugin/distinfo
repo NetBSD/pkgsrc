@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.8 2007/01/20 12:15:38 joerg Exp $
+$NetBSD: distinfo,v 1.9 2007/04/12 09:55:17 martti Exp $
 
-SHA1 (xfce4-systemload-plugin-0.3.6.tar.gz) = ed477e9c8499b8e34031658237586a83bc12cef4
-RMD160 (xfce4-systemload-plugin-0.3.6.tar.gz) = a7b3f28326262eeb5aa66d5cd966474ac0a4554b
-Size (xfce4-systemload-plugin-0.3.6.tar.gz) = 229985 bytes
-SHA1 (patch-aa) = f997c210580541883fa47738d2cec667517efcac
-SHA1 (patch-ab) = 51adca6bf236f78645b0ad0741f215603b7de8bf
-SHA1 (patch-ac) = cd16d045e24b5a802faffb260f58a86a49989077
+SHA1 (xfce4-systemload-plugin-0.4.2.tar.bz2) = 517cc051633cc6f28147d5adeaf5db56219dddfb
+RMD160 (xfce4-systemload-plugin-0.4.2.tar.bz2) = 228ad33b12a6a1151be6d079bd4c5a18fd50ba76
+Size (xfce4-systemload-plugin-0.4.2.tar.bz2) = 184575 bytes
+SHA1 (patch-aa) = 5526126b144359686781e6ddc1ef43fcd0afc03a
+SHA1 (patch-ab) = 9b7c4c4fd0db26a3ac239d1ffe5f3be7c32902f8

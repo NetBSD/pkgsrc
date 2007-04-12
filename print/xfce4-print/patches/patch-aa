@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2005/03/31 18:12:29 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/12 09:55:12 martti Exp $
 
---- xfprint/Makefile.in.orig	2005-03-18 14:06:27.000000000 +0100
-+++ xfprint/Makefile.in
-@@ -266,7 +266,8 @@ xfprint4_CFLAGS = \
+--- xfprint/Makefile.in.orig	2006-07-10 12:16:08.000000000 +0000
++++ xfprint/Makefile.in	2006-07-14 11:16:56.000000000 +0000
+@@ -315,7 +315,8 @@
  xfprint4_LDADD = \
- 	$(top_builddir)/common/libxfprint.la				\
+ 	$(top_builddir)/libxfprint/libxfprint.la			\
  	@LIBXFCE4MCS_CLIENT_LIBS@                                       \
 -	@LIBXFCEGUI4_LIBS@
 +	@LIBXFCEGUI4_LIBS@ \
 +	@GMODULE_LIBS@
  
- EXTRA_DIST = xfprint.desktop
- appsdir = $(datadir)/applications
+ xfprint4_DEPENDENCIES = \
+ 	$(top_builddir)/libxfprint/libxfprint.la
