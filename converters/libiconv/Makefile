@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/03/20 00:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2007/04/12 10:27:15 tnn Exp $
 
 DISTNAME=	libiconv-1.11
 CATEGORIES=	converters
@@ -34,6 +34,14 @@ REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
 MAKE_ENV+=		PAX=${PAX:Q}
 MAKE_JOBS_SAFE=		no		# ENOENT(srclib)
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "OSF1"
+PLIST_SUBST+=		PRELOADABLE_LIBICONV=""
+.else
+PLIST_SUBST+=		PRELOADABLE_LIBICONV="@comment "
+.endif
 
 # remove any existing charset.alias; if it already exists, libiconv does
 # not overwrite it, and older versions of libiconv wrote incorrect
