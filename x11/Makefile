@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.494 2007/04/12 15:10:12 joerg Exp $
+# $NetBSD: Makefile,v 1.495 2007/04/12 18:06:43 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -328,6 +328,7 @@ SUBDIR+=	wxGTK-contrib
 SUBDIR+=	wxGTK24
 SUBDIR+=	wxWindows-docs
 SUBDIR+=	wxhaskell
+SUBDIR+=	x11perf
 SUBDIR+=	x11vnc
 SUBDIR+=	x2x
 SUBDIR+=	x3270
@@ -338,6 +339,7 @@ SUBDIR+=	xbanner
 SUBDIR+=	xbindkeys
 SUBDIR+=	xbindkeys-tk
 SUBDIR+=	xbitmaps
+SUBDIR+=	xcalc
 SUBDIR+=	xcb
 SUBDIR+=	xclip
 SUBDIR+=	xclock
@@ -416,8 +418,10 @@ SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-windowlist-plugin
 SUBDIR+=	xfishtank
 SUBDIR+=	xflame
+SUBDIR+=	xfontsel
 SUBDIR+=	xforms
 SUBDIR+=	xfstt
+SUBDIR+=	xgamma
 SUBDIR+=	xgas
 SUBDIR+=	xglobe
 SUBDIR+=	xgrk
@@ -431,10 +435,12 @@ SUBDIR+=	xkbd
 SUBDIR+=	xkbdata
 SUBDIR+=	xkbset
 SUBDIR+=	xkeycaps
+SUBDIR+=	xkill
 SUBDIR+=	xless
 SUBDIR+=	xload
 SUBDIR+=	xlockmore
 SUBDIR+=	xlockmore-lite
+SUBDIR+=	xlogo
 SUBDIR+=	xlogout
 SUBDIR+=	xlupe
 SUBDIR+=	xmag
@@ -500,8 +506,10 @@ SUBDIR+=	xview
 SUBDIR+=	xview-clients
 SUBDIR+=	xview-config
 SUBDIR+=	xview-lib
+SUBDIR+=	xvinfo
 SUBDIR+=	xwatchwin
 SUBDIR+=	xwd
+SUBDIR+=	xwininfo
 SUBDIR+=	xwit
 SUBDIR+=	xworld
 SUBDIR+=	xwrits
