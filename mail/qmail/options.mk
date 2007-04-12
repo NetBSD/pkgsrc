@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2007/03/09 12:34:22 schmonz Exp $
+# $NetBSD: options.mk,v 1.27 2007/04/12 03:42:21 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -70,7 +70,7 @@ PLIST_SUBST+=		QMAIL_TLS="@comment "
 PKG_OPTIONS+=		sasl
 .  endif
 .  include "../../security/openssl/buildlink3.mk"
-TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20060105.patch
+TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20070321.patch
 PATCHFILES+=		${TLSSASL_PATCH}
 SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
