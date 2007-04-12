@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.15 2007/01/23 11:53:46 martti Exp $
-
-SHA1 (xffm-4.2.4.tar.gz) = f2eaa1e0aeb23bbf9cff7636c7ad93ff3db2aaae
-RMD160 (xffm-4.2.4.tar.gz) = a2418f0dc11b231e5a0e7ad613cd377ae7016024
-Size (xffm-4.2.4.tar.gz) = 5077979 bytes
-SHA1 (patch-aa) = 06f2eabaad3d7901243d547e65f1737c29ba42a6
-SHA1 (patch-ab) = a2f8f23527945056cd4ba2f6acc53ba5c1fb7bfc

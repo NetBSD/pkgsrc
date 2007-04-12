@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/02/17 06:49:24 martti Exp $
+# $NetBSD: options.mk,v 1.3 2007/04/12 09:55:12 martti Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xfce4-print
 PKG_SUPPORTED_OPTIONS=	cups

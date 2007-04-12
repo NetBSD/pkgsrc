@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2006/07/02 10:13:11 martti Exp $
+$NetBSD: patch-aa,v 1.4 2007/04/12 09:55:13 martti Exp $
 
 --- panel-plugin/devperf.c.orig	2003-11-30 12:58:54.000000000 +0200
 +++ panel-plugin/devperf.c	2006-07-02 10:05:44.000000000 +0300

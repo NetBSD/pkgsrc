@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2007/01/23 11:53:47 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2007/04/12 09:55:20 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_WM_THEMES_BUILDLINK3_MK:=	${XFCE4_WM_THEMES_BUILDLINK3_MK}+
@@ -12,11 +12,12 @@ BUILDLINK_PACKAGES+=	xfce4-wm-themes
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-wm-themes
 
 .if ${XFCE4_WM_THEMES_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-wm-themes+=	xfce4-wm-themes>=4.2.4
+BUILDLINK_API_DEPENDS.xfce4-wm-themes+=	xfce4-wm-themes>=4.4.1
 BUILDLINK_PKGSRCDIR.xfce4-wm-themes?=	../../wm/xfce4-wm-themes
 .endif	# XFCE4_WM_THEMES_BUILDLINK3_MK
 
 .include "../../wm/xfce4-wm/buildlink3.mk"
+.include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,36 +1,31 @@
-# $NetBSD: Makefile,v 1.29 2007/01/23 11:53:47 martti Exp $
+# $NetBSD: Makefile,v 1.30 2007/04/12 09:55:23 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
+.include "../../mk/compiler.mk"
 
-DISTNAME=	xfce4-panel-${XFCE4_VERSION}
-#PKGREVISION=	1
-CATEGORIES=	x11
-COMMENT=	Xfce panel
+DISTNAME=		xfce4-panel-${XFCE4_VERSION}
+#PKGREVISION=		1
+CATEGORIES=		x11
+COMMENT=		Xfce panel
+
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
 
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
 
+# If using gcc-4, compile the panel launcher without GCC optimization. See
+# http://bugzilla.xfce.org/show_bug.cgi?id=2262
 
-PKG_SYSCONFSUBDIR=	xdg/xfce4/panel
-EGDIR=			${XFCE4_EGBASE}/panel
-CONF_FILES=		${EGDIR:Q}/contents.xml ${PKG_SYSCONFDIR:Q}/contents.xml
-.for l in ar az ca da el eu fi fr he hu it ja ko lt ms nl pl ro ru sk sv \
-	tr vi zh_CN zh_TW
-CONF_FILES+=		${EGDIR:Q}/contents.xml.${l} \
-			${PKG_SYSCONFDIR:Q}/contents.xml.${l}
-.endfor
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
-
-REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+.if (!empty(CC_VERSION:Mgcc-4.*))
+SUBST_CLASSES+=		launcher
+SUBST_STAGE.launcher=	post-configure
+SUBST_FILES.launcher=	plugins/launcher/Makefile
+SUBST_SED.launcher=	-e 's|-O |-O0 |g'
+SUBST_SED.launcher+=	-e 's|-O[123s] |-O0 |g'
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
