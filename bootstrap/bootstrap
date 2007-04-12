@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.93 2007/04/12 14:36:40 joerg Exp $
+# $NetBSD: bootstrap,v 1.94 2007/04/12 20:31:04 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -894,6 +894,7 @@ register_package() {
 
 echo_msg "Registering installed packages"
 register_package "pkgtools/bootstrap-mk-files"
+register_package "devel/bmake"
 case "$need_awk" in
 yes)	register_package "lang/nawk";;
 esac
