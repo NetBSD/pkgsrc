@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.65 2007/02/19 14:50:33 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.66 2007/04/12 14:51:10 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -329,6 +329,9 @@ _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .elif ${OPSYS} == "OSF1"
+_WRAP_EXTRA_ARGS.CC+=	-D_POSIX_PII_SOCKET
+_WRAP_EXTRA_ARGS.CXX+=	-D_POSIX_PII_SOCKET -D__USE_STD_IOSTREAM
+_WRAP_EXTRA_ARGS.CPP+=	-D_POSIX_PII_SOCKET
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
