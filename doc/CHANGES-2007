@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.796 2007/04/12 18:06:43 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.797 2007/04/12 18:15:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1583,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xlogo version 1.0.1 [joerg 2007-04-12]
 	Added x11/xvinfo version 1.0.1 [joerg 2007-04-12]
 	Added x11/xwininfo version 1.0.2 [joerg 2007-04-12]
+	Added net/coda version 6.9.1 [gdt 2007-04-12]
