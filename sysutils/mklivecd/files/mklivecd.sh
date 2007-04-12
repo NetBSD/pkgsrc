@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.39 2007/04/11 14:40:44 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.40 2007/04/12 22:26:19 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -346,7 +346,7 @@ copy_bootfiles()
                 echo "=> Not copying $f, already exists."
             fi
         done
-    elif is_disabled USE_GNU_GRUB; then
+    else
     #
     # NetBSD cd9660 bootloader (bootxx_cd9660)
     #
@@ -362,9 +362,6 @@ copy_bootfiles()
         else
             showmsg "Missing ${BOOT_IMG}... exiting."
         fi
-    else
-        showmsg "Unknown value in USE_GNU_GRUB, use 'yes' or 'no'."
-        bye 1
     fi
 
 }
@@ -457,13 +454,10 @@ kernel --type=netbsd /$GRUB_BOOTDIR/$bootkern.gz
 _EOF_
 		fi
 		    showmsgstring
-            elif is_disabled_USE_GNU_GRUB; then
+            else
                 gzip $ISODIR/$bootkern
                 mv $ISODIR/k.$kernname.gz $ISODIR/k.$bootkern
                 showmsgstring
-            else
-                showmsg "Unknown value in USE_GNU_GRUB, use 'yes' or 'no'."
-                bye 1
             fi
         else
             showmsg "kernel compilation failed! ($kernname), exiting."
@@ -505,6 +499,16 @@ do_cdlive()
         fi
 
         if is_disabled MULTIPLE_KERNELS; then
+            #
+            # Use the specified kernel from ~/.mklivecd.
+            #
+            if [ -s $config_dir/$KERNEL_CONFIG ]; then
+                cp $config_dir/$KERNEL_CONFIG $WORKDIR
+            else
+                showmsg "couldn't find $KERNEL_CONFIG in $config_dir, exiting."
+                bye 1
+            fi
+
 	    showmsg "Building kernel on $(date):"
 	    if [ -n "$verbose_mode" ]; then
 		showmsg "kernel configuration: $KERNEL_CONFIG"
@@ -512,15 +516,6 @@ do_cdlive()
 		sleep 2
 	    fi
 	    echo
-            #
-            # Use the specified kernel from ~/.mklivecd.
-            #
-	    if [ -s $config_dir/$KERNEL_CONFIG ]; then
-	        cp $config_dir/$KERNEL_CONFIG $WORKDIR
-            else
-                showmsg "couldn't find '$KERNEL_CONFIG' in $config_dir, exiting."
-                bye 1
-            fi
 
 	    cd $WORKDIR
 	    [ ! -d $WORKDIR/$KERNEL_NAME ] && mkdir $WORKDIR/$KERNEL_NAME
@@ -635,7 +630,7 @@ do_cdlive()
 		    break
 		fi
             done
-	    if [ "$DISABLE_X11" = "" ]; then
+	    if [ -z $DISABLE_X11 ]; then
 		showmsg "Installing X11 sets:"
 		for X in ${X11_SETS}
 		do
@@ -677,7 +672,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.39 2007/04/11 14:40:44 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.40 2007/04/12 22:26:19 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -1084,7 +1079,7 @@ _EOF_
 
 checkconf()
 {
-    if [ -f $config_file ]; then
+    if [ -f "$config_file" ]; then
         if [ $(id -u) -ne 0 ]; then
             showmsg "You must be root, exiting." 
             bye 1
@@ -1138,9 +1133,9 @@ if [ -z "$verbose_mode" ]; then
     verbose_mode=
 fi
 
-target=$1
+target="$1"
 
-case "$target" in
+case $target in
     iso)
         checkconf
         do_cdlive iso
