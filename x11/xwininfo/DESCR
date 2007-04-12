@@ -1,0 +1,4 @@
+This package provides xwininfo, a program to query the X server for
+information about windows.
+
+This is from the modular X.org X11 project.
