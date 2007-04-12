@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.92 2007/03/02 16:48:48 wiz Exp $
+# $NetBSD: bootstrap,v 1.93 2007/04/12 14:36:40 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -889,11 +889,11 @@ echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
 # register packages
 # usage: register_package <packagedirectory> [additional arguments]
 register_package() {
-	run_cmd "(cd $pkgsrcdir/$1 && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=${wrkobjdir} ${2-} bootstrap-register)"
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake -DPKG_PRESERVE MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=${wrkobjdir} ${2-} bootstrap-register)"
 }
 
 echo_msg "Registering installed packages"
-run_cmd "(cd $pkgsrcdir/pkgtools/bootstrap-mk-files && $bmake MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=$wrkobjdir bootstrap-register)"
+register_package "pkgtools/bootstrap-mk-files"
 case "$need_awk" in
 yes)	register_package "lang/nawk";;
 esac
