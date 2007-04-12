@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2007/04/12 17:53:41 joerg Exp $
+
+--- liboil/liboilcpu.c.orig	2007-04-12 17:34:43.000000000 +0000
++++ liboil/liboilcpu.c
+@@ -574,7 +574,7 @@ oil_cpu_detect_getisax (void)
+ static void
+ oil_cpu_detect_kernel_support (void)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+   int ret, enabled;
+   size_t len;
+ 
