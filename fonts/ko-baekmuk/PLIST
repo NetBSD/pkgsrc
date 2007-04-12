@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/06 13:37:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/04/12 22:10:14 wiz Exp $
 lib/X11/fonts/local/batang10.pcf.gz
 lib/X11/fonts/local/batang10b.pcf.gz
 lib/X11/fonts/local/batang12.pcf.gz
@@ -20,7 +20,6 @@ lib/X11/fonts/local/dotum16.pcf.gz
 lib/X11/fonts/local/dotum18.pcf.gz
 lib/X11/fonts/local/dotum20.pcf.gz
 lib/X11/fonts/local/dotum24.pcf.gz
-lib/X11/fonts/local/fonts.alias
 lib/X11/fonts/local/gulim10.pcf.gz
 lib/X11/fonts/local/gulim10b.pcf.gz
 lib/X11/fonts/local/gulim12.pcf.gz
