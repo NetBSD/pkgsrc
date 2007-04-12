@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 14:59:37 joerg Exp $
+bin/xrefresh
+man/man1/xrefresh.1
