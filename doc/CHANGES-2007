@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.795 2007/04/12 15:15:47 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.796 2007/04/12 18:06:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1575,3 +1575,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xplsprinters version 1.0.1 [joerg 2007-04-12]
 	Added x11/xprehashprinterlist version 1.0.1 [joerg 2007-04-12]
 	Added mail/xbiff version 1.0.1 [joerg 2007-04-12]
+	Added x11/x11perf version 1.4.1 [joerg 2007-04-12]
+	Added x11/xcalc version 1.0.1 [joerg 2007-04-12]
+	Added x11/xfontsel version 1.0.2 [joerg 2007-04-12]
+	Added x11/xgamma version 1.0.1 [joerg 2007-04-12]
+	Added x11/xkill version 1.0.1 [joerg 2007-04-12]
+	Added x11/xlogo version 1.0.1 [joerg 2007-04-12]
+	Added x11/xvinfo version 1.0.1 [joerg 2007-04-12]
+	Added x11/xwininfo version 1.0.2 [joerg 2007-04-12]
