@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.788 2007/04/11 22:48:11 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.789 2007/04/12 03:43:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1506,3 +1506,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/rpc2 to 2.5 [gdt 2007-04-11]
 	Updated devel/rvm to 1.14 [gdt 2007-04-11]
 	Updated www/gtkhtml38 to 3.14.1 [wiz 2007-04-11]
+	Updated mail/qmail to 1.03nb13 [schmonz 2007-04-12]
