@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/12 09:46:29 martti Exp $
+
+--- thunar-vfs/thunar-vfs-info.c.orig	2006-07-19 10:35:55.000000000 +0000
++++ thunar-vfs/thunar-vfs-info.c	2006-07-19 10:37:57.000000000 +0000
+@@ -55,6 +55,10 @@
+ #include <unistd.h>
+ #endif
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000900) /* NetBSD 2.99.9 */
++#define statfs statvfs
++#endif
++
+ /* implement thunar-vfs-info's inline functions */
+ #define G_IMPLEMENT_INLINES 1
+ #define __THUNAR_VFS_INFO_C__
