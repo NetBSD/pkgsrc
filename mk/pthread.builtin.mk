@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.9 2005/06/09 06:03:40 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.10 2007/04/12 18:42:02 tnn Exp $
 
 BUILTIN_PKG:=	pthread
 
@@ -59,6 +59,7 @@ BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread
 .    elif ${OPSYS} == "OSF1"
 BUILDLINK_CFLAGS.pthread+=	-pthread
+CFLAGS+=			-D_REENTRANT
 .    else
 BUILDLINK_CPPFLAGS.pthread+=	-D_REENTRANT
 .    endif
