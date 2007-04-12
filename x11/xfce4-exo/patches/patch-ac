@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/12 09:50:50 martti Exp $
+
+--- config.h.in.orig	2007-01-22 16:22:10.000000000 +0000
++++ config.h.in	2007-01-22 16:22:28.000000000 +0000
+@@ -30,6 +30,9 @@
+ /* Define to 1 if you have the <fstab.h> header file. */
+ #undef HAVE_FSTAB_H
+ 
++/* Define to 1 if you have the `getvfsstat' function. */
++#undef HAVE_GETVFSSTAT
++
+ /* Define to 1 if you have the `getfsstat' function. */
+ #undef HAVE_GETFSSTAT
+ 
