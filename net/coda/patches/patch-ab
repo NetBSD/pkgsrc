@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/12 18:13:05 gdt Exp $
+
+--- coda-src/scripts/Makefile.in.orig	2006-11-02 14:46:29.000000000 -0500
++++ coda-src/scripts/Makefile.in
+@@ -51,7 +51,7 @@ ifeq ($(SYS),solaris2)
+ else
+   # use BSD style init scripts
+   CINIT-SCRIPTS   = # rc.venus
+-  SINIT-SCRIPTS   = rc.vice
++  SINIT-SCRIPTS   = # rc.vice
+ endif
+ endif
+ 
