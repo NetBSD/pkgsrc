@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2005/06/15 09:04:32 hira Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/12 09:55:26 martti Exp $
 
---- scripts/Makefile.in.orig	2005-06-13 18:05:51.000000000 +0900
-+++ scripts/Makefile.in	2005-06-13 18:07:08.000000000 +0900
-@@ -233,7 +233,7 @@
-         -e 's,@sysconfdir\@,$(sysconfdir),g' \
- 	-e 's,@BROWSER_DEFAULT\@,@BROWSER_DEFAULT@,g'
+--- scripts/Makefile.in.orig	2006-11-05 11:08:43.000000000 +0000
++++ scripts/Makefile.in	2006-11-06 12:47:55.000000000 +0000
+@@ -239,7 +239,7 @@
+ 	-e 's,@BROWSER_DEFAULT\@,@BROWSER_DEFAULT@,g' \
+ 	-e 's,@TERMINAL_DEFAULT\@,@TERMINAL_DEFAULT@,g'
  
 -conffilesdir = @sysconfdir@/xdg/xfce4
 +conffilesdir = @datadir@/examples/xfce4

@@ -1,31 +1,26 @@
-# $NetBSD: Makefile,v 1.18 2007/02/03 09:27:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/12 09:55:24 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-session-${XFCE4_VERSION}
-#PKGREVISION=	1
-CATEGORIES=	x11
-COMMENT=	Xfce session manager
-
+DISTNAME=		xfce4-session-${XFCE4_VERSION}
+CATEGORIES=		x11
+COMMENT=		Xfce session manager
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4-session
 EGDIR=			${XFCE4_EGBASE}/session
 CONF_FILES=		${EGDIR:Q}/xfce4-session.rc \
 			${PKG_SYSCONFDIR:Q}/xfce4-session.rc
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q} \
-			ICEAUTH=${TOOLS_PATH.iceauth:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
+CONFIGURE_ARGS+=	ICEAUTH=${TOOLS_PATH.iceauth:Q}
 
 REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
-USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	iceauth:run
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+USE_TOOLS+=		iceauth:run
+USE_TOOLS+=		intltool
+USE_DIRS+=		xdg-1.4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

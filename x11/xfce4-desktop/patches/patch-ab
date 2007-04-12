@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2007/01/23 11:53:47 martti Exp $
+$NetBSD: patch-ab,v 1.4 2007/04/12 09:55:22 martti Exp $
 
---- modules/menu/Makefile.in.orig	2007-01-14 21:07:40.000000000 +0000
-+++ modules/menu/Makefile.in	2007-01-23 13:00:00.000000000 +0000
-@@ -288,7 +288,7 @@
- 	@GMODULE_LIBS@ \
- 	@LIBXFCEGUI4_LIBS@
+--- modules/menu/Makefile.in.orig	2007-04-09 18:56:43.000000000 +0300
++++ modules/menu/Makefile.in	2007-04-11 16:05:14.000000000 +0300
+@@ -348,7 +348,7 @@
+ 	$(LIBX11_LIBS) \
+ 	$(LIBXFCEGUI4_LIBS)
  
 -xfceconfdir = $(sysconfdir)/xdg/xfce4/desktop
 +xfceconfdir = $(datadir)/examples/xfce4/desktop
  xfceconf_DATA = \
  	xfce-registered-categories.xml \
- 	xfce-registered-categories.xml.cs \
+ 	xfce-registered-categories.xml.ca \

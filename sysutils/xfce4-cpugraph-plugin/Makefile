@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2007/01/20 12:18:31 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/12 09:55:13 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.2.2
+XFCE4_VERSION=	0.3.0
 
 DISTNAME=	xfce4-cpugraph-plugin-${XFCE4_VERSION}
-PKGREVISION=	4
+#PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-cpugraph-plugin/
 COMMENT=	Xfce CPU load plugin
 
-WRKSRC=		${WRKDIR}/xfce4-cpugraph-plugin
+USE_TOOLS+=	intltool
 
 .include "../../mk/bsd.prefs.mk"
 

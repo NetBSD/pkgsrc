@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/01/20 12:33:37 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2007/04/12 09:55:13 martti Exp $
 
---- panel-plugin/os.c.orig	2004-06-07 01:16:30.000000000 +0000
-+++ panel-plugin/os.c
-@@ -63,6 +63,26 @@ long GetCPUUsage (int *oldusage, int *ol
+--- panel-plugin/os.c.orig	2004-07-24 17:25:15.000000000 +0000
++++ panel-plugin/os.c	2007-01-23 15:51:04.000000000 +0000
+@@ -67,6 +67,26 @@
  	
  	return usage;
  }

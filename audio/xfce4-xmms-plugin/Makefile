@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2006/04/17 13:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/04/12 09:55:08 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.3.1
+XFCE4_VERSION=	0.5.1
 
 DISTNAME=	xfce4-xmms-plugin-${XFCE4_VERSION}
-PKGREVISION=	3
+#PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-xmms-plugin/
 COMMENT=	Xfce XMMS plugin
 
-EXTRACT_SUFX=	.tar.bz2
+USE_TOOLS+=	intltool
 
-.include "../../audio/xmms/buildlink3.mk"
+.include "options.mk"
+
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
