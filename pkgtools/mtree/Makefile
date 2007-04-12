@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/07/14 20:11:10 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2007/04/12 14:36:40 joerg Exp $
 #
 # This version of mtree installs into ${PKG_TOOLS_BIN}.
 #
@@ -8,7 +8,6 @@
 CATEGORIES=	pkgtools
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-PKG_PRESERVE=		# defined
 
 PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 

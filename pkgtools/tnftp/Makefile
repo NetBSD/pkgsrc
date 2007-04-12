@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/07/14 21:41:42 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/12 14:36:41 joerg Exp $
 #
 # This version of tnftp installs into ${PKG_TOOLS_BIN}.
 #
@@ -8,7 +8,6 @@
 CATEGORIES=	pkgtools
 
 NO_PKGTOOLS_REQD_CHECK=	yes
-PKG_PRESERVE=		yes
 
 PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 
