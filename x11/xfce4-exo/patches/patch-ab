@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/12 09:50:50 martti Exp $
+
+--- configure.orig	2007-01-22 16:16:38.000000000 +0000
++++ configure	2007-01-22 16:17:24.000000000 +0000
+@@ -21769,4 +21770,4 @@
+                   sys/mnttab.h sys/mount.h sys/param.h sys/resource.h \
+-                  sys/stat.h sys/time.h sys/types.h sys/ucred.h \
+-                  sys/wait.h time.h
++                  sys/statvfs.h sys/stat.h sys/time.h sys/types.h \
++                  sys/ucred.h sys/wait.h time.h
+ do
+@@ -22346,3 +22347,4 @@
+ 
+-for ac_func in getfsstat getmntent regexec setfsent setmntent
++
++for ac_func in getvfsstat getfsstat getmntent regexec setfsent setmntent
+ do

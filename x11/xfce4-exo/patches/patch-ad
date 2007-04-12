@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/04/12 09:50:50 martti Exp $
+
+--- exo/exo-mount-point.c.orig	2007-01-22 15:32:55.000000000 +0000
++++ exo/exo-mount-point.c	2007-01-22 16:10:55.000000000 +0000
+@@ -25,6 +25,9 @@
+ #ifdef HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
++#ifdef HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#endif
+ #ifdef HAVE_SYS_STAT_H
+ #include <sys/stat.h>
+ #endif
+@@ -250,6 +257,33 @@
+ 
+   /* close the file handle */
+   fclose (fp);
++#elif defined(HAVE_GETVFSSTAT)
++  struct statvfs *mntbuf = NULL;
++  glong           bufsize = 0;
++  gint            mntsize;
++  gint            n;
++
++  /* determine the number of active mount points */
++  mntsize = getvfsstat(NULL, 0, MNT_NOWAIT);
++  if (G_LIKELY(mntsize > 0)) {
++    /* allocate a new buffer */
++    bufsize = (mntsize + 4) * sizeof(*mntbuf);
++    mntbuf = (struct statvfs *)malloc(bufsize);
++
++    /* determine the mount point for the device file */
++    mntsize = getvfsstat(mntbuf, bufsize, ST_NOWAIT);
++    for (n = 0; n < mntsize; ++n) {
++      /* check if we have a match here */
++      exo_mount_point_add_if_matches(mask, device, folder, fstype,
++                                     mntbuf[n].f_mntfromname,
++                                     mntbuf[n].f_mntonname,
++                                     mntbuf[n].f_fstypename,
++                                     ((mntbuf[n].f_flag & MNT_RDONLY) != 0),
++                                     &mount_points);
++    }
++    /* release the buffer */
++    free(mntbuf);
++  }
+ #elif defined(HAVE_GETFSSTAT) /* BSD */
+   struct statfs *mntbuf = NULL;
+   glong          bufsize = 0;
