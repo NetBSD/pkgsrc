@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/12 21:38:24 wiz Exp $
 
-DISTNAME=	shmux-1.0b5
+DISTNAME=	shmux-1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.taranis.org/shmux/dist/
 EXTRACT_SUFX=	.tgz
