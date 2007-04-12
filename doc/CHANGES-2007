@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.790 2007/04/12 09:22:14 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.791 2007/04/12 09:56:17 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1508,3 +1508,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/gtkhtml38 to 3.14.1 [wiz 2007-04-11]
 	Updated mail/qmail to 1.03nb13 [schmonz 2007-04-12]
 	Updated net/unison-devel to 2.27.12 [tonio 2007-04-12]
+	Updated meta-pkgs/xfce4 to 4.4.1 [martti 2007-04-12]
