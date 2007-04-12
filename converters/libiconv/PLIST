@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.common,v 1.8 2007/03/20 00:44:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/12 10:27:15 tnn Exp $
 bin/iconv
 include/iconv.h
 include/libcharset.h
 include/localcharset.h
 lib/libcharset.la
 lib/libiconv.la
+${PRELOADABLE_LIBICONV}lib/preloadable_libiconv.so
 man/man1/iconv.1
 man/man3/iconv.3
 man/man3/iconv_close.3
