@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.41 2007/04/12 22:31:16 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.42 2007/04/12 22:39:36 xtraeme Exp $
 #
 # Copyright (c) 2004-2007 Juan Romero Pardines.
 # All rights reserved.
@@ -400,7 +400,7 @@ do_build_kernels()
         eval bootkern=\$KERNEL_CONFIG_${K}
         eval kernname=\$KERNEL_NAME_${K}
 
-        if [ ! -d $WORKDIR/$kernname -a ! -f $bootkern ]; then
+        if [ -f $config_dir/$bootkern ]; then
             showmsg "couldn't find $bootkern, exiting."
             bye 1
         fi
@@ -672,7 +672,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.41 2007/04/12 22:31:16 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.42 2007/04/12 22:39:36 xtraeme Exp $
 # 
 
 # PROVIDE: root
