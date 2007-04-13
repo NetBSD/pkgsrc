@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/04/12 17:53:41 joerg Exp $
+$NetBSD: distinfo,v 1.7 2007/04/13 21:01:54 drochner Exp $
 
 SHA1 (liboil-0.3.11.tar.gz) = 1c1a9952d81c1c89f73e5ed16e4665d2d7d59f7f
 RMD160 (liboil-0.3.11.tar.gz) = 4edf5dad57fa920f44ba10ca4d8e406abce30971
 Size (liboil-0.3.11.tar.gz) = 881159 bytes
 SHA1 (patch-aa) = 9f6478ae4008ed9881e6dcf99beb4b49db04c9e5
+SHA1 (patch-ab) = 36a06f38f34f43ab6d181f4e9028f7b9adf5332b
+SHA1 (patch-ac) = 8ccb2b0323b337902c384f4bdda856ca1cc2b023
