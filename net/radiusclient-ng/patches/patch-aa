@@ -1,0 +1,73 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/13 19:58:56 bouyer Exp $
+
+--- etc/Makefile.in.orig	2007-04-13 13:44:00.000000000 +0200
++++ etc/Makefile.in	2007-04-13 13:51:23.000000000 +0200
+@@ -60,7 +60,7 @@
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(pkgsysconfdir)"
++am__installdirs = "$(DESTDIR)$(egdir)"
+ pkgsysconfDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(pkgsysconf_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+@@ -172,6 +172,7 @@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++egdir = $(prefix)/share/examples/radiusclient-ng
+ target = @target@
+ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+@@ -229,20 +230,20 @@
+ 	-rm -rf .libs _libs
+ install-pkgsysconfDATA: $(pkgsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pkgsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(pkgsysconfdir)"
++	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
+ 	@list='$(pkgsysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(pkgsysconfdir)/$$f'"; \
+-	  $(pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(pkgsysconfdir)/$$f"; \
++	  echo " $(pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egdir)/$$f'"; \
++	  $(pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egdir)/$$f"; \
+ 	done
+ 
+ uninstall-pkgsysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(pkgsysconf_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(pkgsysconfdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(pkgsysconfdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(egdir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(egdir)/$$f"; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -281,7 +282,7 @@
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(pkgsysconfdir)"; do \
++	for dir in "$(DESTDIR)$(egdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
+@@ -385,12 +386,12 @@
+ 	    <$(srcdir)/radiusclient.conf.in >radiusclient.conf
+ 
+ install-data-local: servers
+-	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir); \
+-        echo " $(INSTALL) -m 600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers"; \
+-        $(INSTALL) -m 600 $(srcdir)/servers $(DESTDIR)$(pkgsysconfdir)/servers
++	$(mkinstalldirs) $(DESTDIR)$(egdir); \
++        echo " $(INSTALL) -m 600 $(srcdir)/servers $(DESTDIR)$(egdir)/servers"; \
++        $(INSTALL) -m 600 $(srcdir)/servers $(DESTDIR)$(egdir)/servers
+ 
+ uninstall-local:
+-	rm -f $(pkgsysconfdir)/servers
++	rm -f $(egdir)/servers
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
