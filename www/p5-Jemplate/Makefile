@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/04/11 06:12:27 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/13 04:06:39 hiramatsu Exp $
 
 DISTNAME=	Jemplate-0.20
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	hiramatsu@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~ingy/Jemplate/
 COMMENT=	Javascript Templating with Template Toolkit
 
