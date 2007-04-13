@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.808 2007/04/13 09:25:40 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.809 2007/04/13 11:39:03 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1596,3 +1596,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/clamav to 0.90.2 [xtraeme 2007-04-13]
 	Added wm/dwm version 3.9 [xtraeme 2007-04-13]
 	Updated filesystems/fuse-ntfs-3g to 1.328 [xtraeme 2007-04-13]
+	Removed x11/Terminal [martti 2007-04-13]
+	Removed x11/libexo [martti 2007-04-13]
