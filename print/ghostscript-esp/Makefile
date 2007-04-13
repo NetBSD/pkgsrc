@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/04/13 15:42:07 gdt Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -27,6 +27,9 @@ CONFLICTS+=	ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=	ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
+
+# uses include file apparently before it is put in place
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_TOOLS+=		gmake pkg-config
