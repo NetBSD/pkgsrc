@@ -1,9 +1,13 @@
-$NetBSD: patch-am,v 1.4 2006/10/01 20:31:13 schwarz Exp $
+$NetBSD: patch-am,v 1.5 2007/04/13 09:12:02 tnn Exp $
 
 --- include/GL/glxext.h.orig	2005-11-07 22:20:29.000000000 +0100
-+++ include/GL/glxext.h	2006-10-01 17:27:07.000000000 +0200
-@@ -334,7 +334,7 @@
- #if defined(__sun__)
++++ include/GL/glxext.h
+@@ -331,10 +331,10 @@ typedef struct {
+ } GLXBufferClobberEventSGIX;
+ #endif
+ 
+-#if defined(__sun__)
++#if defined(__sun__) || defined(__digital__)
  #include <inttypes.h>
  #if defined(__STDC__)
 -#if defined(__arch64__)
@@ -11,7 +15,7 @@ $NetBSD: patch-am,v 1.4 2006/10/01 20:31:13 schwarz Exp $
  typedef long int int64_t;
  #else
  typedef long long int int64_t;   
-@@ -343,7 +343,7 @@
+@@ -343,7 +343,7 @@ typedef long long int int64_t;   
  #elif defined(__UNIXOS2__) || defined(__SOL64__)
  typedef long int int32_t;
  typedef long long int int64_t;
