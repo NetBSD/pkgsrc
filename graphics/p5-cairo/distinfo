@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/13 23:17:22 xtraeme Exp $
+
+SHA1 (Cairo-1.023.tar.gz) = 10234f92eb2888af5553d314a583ecef7ddd6469
+RMD160 (Cairo-1.023.tar.gz) = 69c8b139e6397c7a1d020a9f508815e5c45d2cf6
+Size (Cairo-1.023.tar.gz) = 43737 bytes
