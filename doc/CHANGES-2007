@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.816 2007/04/13 23:18:44 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.817 2007/04/13 23:25:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1612,3 +1612,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.35 [adam 2007-04-13]
 	Updated devel/re2c to 0.11.3 [heinz 2007-04-13]
 	Added graphics/p5-cairo version 1.023 [xtraeme 2007-04-14]
+	Updated devel/p5-glib2 to 1.144 [xtraeme 2007-04-14]
