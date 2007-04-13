@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6228 2007/04/13 05:48:48 xtraeme Exp $
+$NetBSD: TODO,v 1.6229 2007/04/13 11:13:15 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -113,10 +113,6 @@ Suggested new packages
 	wired
 	http://bloodshed.net/wired/
 	Professional music production and creation software
-
-	coda6
-	http://www.coda.cs.cmu.edu/
-	Version 6 of coda
 
 	Blackdown JDK/JRE 1.4
 	http://www.blackdown.org/java-linux/java2-status/jdk1.4-status.html
