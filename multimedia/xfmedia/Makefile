@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/26 13:33:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/04/13 12:16:36 martti Exp $
 #
 
 DISTNAME=		xfmedia-0.9.1
@@ -36,5 +36,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libexo/buildlink3.mk"
+.include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
