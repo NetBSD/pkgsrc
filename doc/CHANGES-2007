@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.807 2007/04/13 09:08:55 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.808 2007/04/13 09:25:40 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1595,3 +1595,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xfe to 0.99 [xtraeme 2007-04-13]
 	Updated mail/clamav to 0.90.2 [xtraeme 2007-04-13]
 	Added wm/dwm version 3.9 [xtraeme 2007-04-13]
+	Updated filesystems/fuse-ntfs-3g to 1.328 [xtraeme 2007-04-13]
