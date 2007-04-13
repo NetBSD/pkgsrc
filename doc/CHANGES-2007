@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.813 2007/04/13 20:07:53 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.814 2007/04/13 21:25:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1604,3 +1604,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/evolution to 2.10.1 [wiz 2007-04-13]
 	Added net/radiusclient-ng version 0.5.5.1 [bouyer 2007-04-13]
 	Added net/nagios-plugin-radius version 1.4.3 [bouyer 2007-04-13]
+	Updated emulators/libspectrum to 0.3.0 [adam 2007-04-13]
+	Updated emulators/fuse to 0.8.0 [adam 2007-04-13]
+	Updated fonts/fontforge to 20070312 [adam 2007-04-13]
+	Updated emulators/wine to 0.9.35 [adam 2007-04-13]
