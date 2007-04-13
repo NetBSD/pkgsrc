@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2007/01/07 09:13:52 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/04/13 06:47:18 xtraeme Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
 		${MASTER_SITE_SOURCEFORGE:=nedit/} \
@@ -25,14 +25,20 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nedit ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/nedit.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit.1
-	${INSTALL_MAN} ${WRKSRC}/doc/nc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit-nc.1
+	${INSTALL_MAN} ${WRKSRC}/doc/nedit.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit.1
+	${INSTALL_MAN} ${WRKSRC}/doc/nc.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nedit-nc.1
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nedit
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/nedit
-	${INSTALL_DATA} ${WRKSRC}/ReleaseNotes ${DESTDIR}${PREFIX}/share/doc/nedit
-	${INSTALL_DATA} ${WRKSRC}/doc/faq.txt ${DESTDIR}${PREFIX}/share/doc/nedit
-	${INSTALL_DATA} ${WRKSRC}/doc/NEdit.ad ${DESTDIR}${PREFIX}/share/doc/nedit
+.for f in README ReleaseNotes
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/nedit
+.endfor
+.for f in faq.txt NEdit.ad
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/doc/nedit
+.endfor
 
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
