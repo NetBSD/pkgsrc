@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.809 2007/04/13 11:39:03 martti Exp $
+$NetBSD: CHANGES-2007,v 1.810 2007/04/13 12:24:32 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1598,3 +1598,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated filesystems/fuse-ntfs-3g to 1.328 [xtraeme 2007-04-13]
 	Removed x11/Terminal [martti 2007-04-13]
 	Removed x11/libexo [martti 2007-04-13]
+	Updated mail/dovecot to 1.0.0 [ghen 2007-04-13]
