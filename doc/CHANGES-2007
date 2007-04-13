@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.815 2007/04/13 22:16:42 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.816 2007/04/13 23:18:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1611,3 +1611,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/fontforge to 20070312 [adam 2007-04-13]
 	Updated emulators/wine to 0.9.35 [adam 2007-04-13]
 	Updated devel/re2c to 0.11.3 [heinz 2007-04-13]
+	Added graphics/p5-cairo version 1.023 [xtraeme 2007-04-14]
