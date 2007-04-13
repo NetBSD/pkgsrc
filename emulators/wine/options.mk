@@ -1,14 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2006/05/31 19:06:08 ghen Exp $
+# $NetBSD: options.mk,v 1.7 2007/04/13 21:25:48 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
-PKG_SUPPORTED_OPTIONS=	arts cups opengl sane
+PKG_SUPPORTED_OPTIONS=	cups opengl sane
 PKG_SUGGESTED_OPTIONS=	opengl
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Marts)
-.include "../../audio/arts/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
