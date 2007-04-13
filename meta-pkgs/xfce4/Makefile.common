@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2007/04/12 09:55:11 martti Exp $
+# $NetBSD: Makefile.common,v 1.35 2007/04/13 15:28:40 joerg Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ XFCE4_VERSION=		4.4.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt perl
+USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
