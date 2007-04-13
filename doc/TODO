@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6226 2007/04/13 01:38:55 xtraeme Exp $
+$NetBSD: TODO,v 1.6227 2007/04/13 05:29:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ Suggested package updates
 	o f2c-20061008
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fast-user-switch-applet-2.16.3
 	o fd-2.09c
 	o fdgw-20040609
 	o fetchmail-6.3.8
