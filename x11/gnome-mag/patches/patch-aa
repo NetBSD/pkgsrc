@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/30 17:55:33 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/13 17:36:58 wiz Exp $
 
---- magnifier/zoom-region.c.orig	Tue Dec  9 16:54:22 2003
-+++ magnifier/zoom-region.c	Tue Dec  9 16:56:18 2003
-@@ -20,6 +20,7 @@
-  * Boston, MA 02111-1307, USA.
-  */
+--- magnifier/zoom-region.c.orig	2007-03-09 16:53:32.000000000 +0000
++++ magnifier/zoom-region.c
+@@ -22,6 +22,7 @@
+ 
+ #include "config.h"
  
 +#include <sys/time.h>
  #include <stdlib.h>
