@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6227 2007/04/13 05:29:47 wiz Exp $
+$NetBSD: TODO,v 1.6228 2007/04/13 05:48:48 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
-	o fox-1.6.24
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
 	o freesci-0.3.5
@@ -1335,7 +1334,6 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xf86-input-keyboard-1.2.0
-	o xfe-0.99
 	o xfmedia-0.9.2 [pkg/35205; wait for xfce4 update]
 	o xfstt-1.7
 	o xine-lib-1.1.5

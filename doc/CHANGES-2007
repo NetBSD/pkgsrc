@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.804 2007/04/13 05:29:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.805 2007/04/13 05:48:48 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1592,3 +1592,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/dvdrip to 0.98.4 [xtraeme 2007-04-13]
 
 	Updated x11/fast-user-switch-applet to 2.18.0 [wiz 2007-04-13]
+	Updated x11/fox to 1.6.25 [xtraeme 2007-04-13]
+	Updated sysutils/xfe to 0.99 [xtraeme 2007-04-13]
