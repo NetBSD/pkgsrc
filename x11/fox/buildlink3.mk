@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/01/11 16:53:18 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/04/13 05:45:36 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FOX_BUILDLINK3_MK:=	${FOX_BUILDLINK3_MK}+
@@ -12,10 +12,9 @@ BUILDLINK_PACKAGES+=	fox
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}fox
 
 .if !empty(FOX_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.fox+=		fox>=1.4.16
-BUILDLINK_ABI_DEPENDS.fox?=	fox>=1.4.17nb2
+BUILDLINK_API_DEPENDS.fox+=	fox>=1.6.25
 BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
-BUILDLINK_INCDIRS.fox?=		include/fox-1.4
+BUILDLINK_INCDIRS.fox?=		include/fox-1.6
 .endif	# FOX_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
