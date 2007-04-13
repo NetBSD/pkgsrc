@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/24 15:51:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/04/13 21:03:39 adam Exp $
 bin/fuse
 man/man1/fuse.1
 share/fuse/128-0.rom
@@ -11,8 +11,10 @@ share/fuse/256s-2.rom
 share/fuse/256s-3.rom
 share/fuse/48.rom
 share/fuse/cassette.bmp
-share/fuse/disk_plus3.z80
+share/fuse/if1-1.rom
+share/fuse/if1-2.rom
 share/fuse/keyboard.scr
+share/fuse/microdrive.bmp
 share/fuse/plus2-0.rom
 share/fuse/plus2-1.rom
 share/fuse/plus3-0.rom
@@ -26,16 +28,6 @@ share/fuse/plus3e-2.rom
 share/fuse/plus3e-3.rom
 share/fuse/se-0.rom
 share/fuse/se-1.rom
-share/fuse/tape_128.z80
-share/fuse/tape_16.z80
-share/fuse/tape_2048.z80
-share/fuse/tape_2068.z80
-share/fuse/tape_48.z80
-share/fuse/tape_pentagon.z80
-share/fuse/tape_plus2.z80
-share/fuse/tape_plus2a.z80
-share/fuse/tape_plus3.z80
-share/fuse/tape_scorpion.z80
 share/fuse/tc2048.rom
 share/fuse/tc2068-0.rom
 share/fuse/tc2068-1.rom
