@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.802 2007/04/12 22:44:27 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.803 2007/04/13 01:38:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1589,3 +1589,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/ccd2iso to 0.3 [wiz 2007-04-12]
 	Updated fonts/ko-baekmuk to 2.1 [wiz 2007-04-12]
 	Updated misc/gok to 1.2.3 [wiz 2007-04-12]
+	Updated multimedia/dvdrip to 0.98.4 [xtraeme 2007-04-13]
+
