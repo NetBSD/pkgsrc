@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2007/04/11 22:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2007/04/13 17:37:52 wiz Exp $
 
-DISTNAME=		evolution-2.8.0
-PKGREVISION=		5
+DISTNAME=		evolution-2.10.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -95,11 +94,11 @@ PLIST_SUBST+=		HAVE_SMIME="@comment "
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.8.schemas
-GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.8.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar-2.8.schemas
-GCONF2_SCHEMAS+=	apps_evolution_shell-2.8.schemas
-GCONF2_SCHEMAS+=	evolution-mail-2.8.schemas
+GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.10.schemas
+GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.10.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar-2.10.schemas
+GCONF2_SCHEMAS+=	apps_evolution_shell-2.10.schemas
+GCONF2_SCHEMAS+=	evolution-mail-2.10.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
@@ -123,6 +122,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
@@ -134,6 +134,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
