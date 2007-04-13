@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.803 2007/04/13 01:38:56 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.804 2007/04/13 05:29:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/gok to 1.2.3 [wiz 2007-04-12]
 	Updated multimedia/dvdrip to 0.98.4 [xtraeme 2007-04-13]
 
+	Updated x11/fast-user-switch-applet to 2.18.0 [wiz 2007-04-13]
