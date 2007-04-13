@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/13 09:08:07 xtraeme Exp $
+
+--- config.mk.orig	2007-04-02 11:11:37.000000000 +0200
++++ config.mk	2007-04-13 04:30:19.000000000 +0200
+@@ -4,19 +4,18 @@
+ # Customize below to fit your system
+ 
+ # paths
+-PREFIX = /usr/local
+-MANPREFIX = ${PREFIX}/share/man
++MANPREFIX = ${PREFIX}/${PKGMANDDIR}
+ 
+-X11INC = /usr/X11R6/include
+-X11LIB = /usr/X11R6/lib
++X11INC = ${X11BASE}/include
++X11LIB = ${X11BASE}/lib
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC}
+-LIBS = -L/usr/lib -lc -L${X11LIB} -lX11
++LIBS = -lc -lX11
+ 
+ # flags
+-CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
+-LDFLAGS = ${LIBS}
++CFLAGS += -DVERSION=\"${VERSION}\"
++LDFLAGS += ${LIBS}
+ #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
+ #LDFLAGS = -g ${LIBS}
+ 
+@@ -26,4 +25,4 @@
+ #CFLAGS += -xtarget=ultra
+ 
+ # compiler and linker
+-CC = cc
++#CC = cc
