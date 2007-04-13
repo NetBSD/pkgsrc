@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/04/13 09:06:15 xtraeme Exp $
 #
 
 DISTNAME=	skippy-0.5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm
 MASTER_SITES=	http://thegraveyard.org/files/
 EXTRACT_SUFX=	.tar.bz2
