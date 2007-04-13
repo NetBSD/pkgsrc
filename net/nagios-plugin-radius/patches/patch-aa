@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/13 20:06:21 bouyer Exp $
+
+--- plugins/check_radius.c.orig	2004-12-26 00:17:44.000000000 +0100
++++ plugins/check_radius.c	2007-04-13 15:03:20.000000000 +0200
+@@ -27,7 +27,7 @@
+ #include "utils.h"
+ #include "netutils.h"
+ 
+-#include <radiusclient.h>
++#include <radiusclient-ng.h>
+ 
+ int process_arguments (int, char **);
+ void print_help (void);
+@@ -38,7 +38,7 @@
+ char *password = NULL;
+ char *nasid = NULL;
+ char *expect = NULL;
+-char *config_file = NULL;
++char *config_file = "@SYSCONFDIR@/radiusclient-ng/radiusclient.conf";
+ unsigned short port = PW_AUTH_UDP_PORT;
+ int retries = 1;
+ int verbose = FALSE;
+@@ -108,6 +108,7 @@
+ 	int result = STATE_UNKNOWN;
+ 	UINT4 client_id;
+ 	char *str;
++	rc_handle *handle;
+ 
+ 	setlocale (LC_ALL, "");
+ 	bindtextdomain (PACKAGE, LOCALEDIR);
+@@ -117,32 +118,33 @@
+ 		usage4 (_("Could not parse arguments"));
+ 
+ 	str = strdup ("dictionary");
+-	if ((config_file && rc_read_config (config_file)) ||
+-			rc_read_dictionary (rc_conf_str (str)))
++	handle = rc_read_config (config_file);
++	if (handle == NULL  ||
++	    rc_read_dictionary (handle, rc_conf_str (handle, str)))
+ 		die (STATE_UNKNOWN, _("Config file error"));
+ 
+ 	service = PW_AUTHENTICATE_ONLY;
+ 
+-	if (!(rc_avpair_add (&data.send_pairs, PW_SERVICE_TYPE, &service, 0) &&
+-				rc_avpair_add (&data.send_pairs, PW_USER_NAME, username, 0) &&
+-				rc_avpair_add (&data.send_pairs, PW_USER_PASSWORD, password, 0) &&
+-				(nasid==NULL || rc_avpair_add (&data.send_pairs, PW_NAS_IDENTIFIER, nasid, 0))))
++	if (!(rc_avpair_add (handle, &data.send_pairs, PW_SERVICE_TYPE, &service, -1, 0) &&
++				rc_avpair_add (handle, &data.send_pairs, PW_USER_NAME, username, -1, 0) &&
++				rc_avpair_add (handle, &data.send_pairs, PW_USER_PASSWORD, password, -1, 0) &&
++				(nasid==NULL || rc_avpair_add (handle, &data.send_pairs, PW_NAS_IDENTIFIER, nasid, -1, 0))))
+ 		die (STATE_UNKNOWN, _("Out of Memory?"));
+ 
+ 	/* 
+ 	 * Fill in NAS-IP-Address 
+ 	 */
+ 
+-	if ((client_id = rc_own_ipaddress ()) == 0)
++	if ((client_id = rc_own_ipaddress (handle)) == 0)
+ 		return (ERROR_RC);
+ 
+-	if (rc_avpair_add (&(data.send_pairs), PW_NAS_IP_ADDRESS, &client_id, 0) ==
++	if (rc_avpair_add (handle, &(data.send_pairs), PW_NAS_IP_ADDRESS, &client_id, -1, 0) ==
+ 			NULL) return (ERROR_RC);
+ 
+-	rc_buildreq (&data, PW_ACCESS_REQUEST, server, port, (int)timeout_interval,
++	rc_buildreq (handle, &data, PW_ACCESS_REQUEST, server, port, (int)timeout_interval,
+ 	             retries);
+ 
+-	result = rc_send_server (&data, msg);
++	result = rc_send_server (handle, &data, msg);
+ 	rc_avpair_free (data.send_pairs);
+ 	if (data.receive_pairs)
+ 		rc_avpair_free (data.receive_pairs);
