@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.817 2007/04/13 23:25:36 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.818 2007/04/13 23:28:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1613,3 +1613,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/re2c to 0.11.3 [heinz 2007-04-13]
 	Added graphics/p5-cairo version 1.023 [xtraeme 2007-04-14]
 	Updated devel/p5-glib2 to 1.144 [xtraeme 2007-04-14]
+	Updated x11/p5-gtk2 to 1.144 [xtraeme 2007-04-14]
