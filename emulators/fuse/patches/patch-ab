@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2004/07/20 13:13:08 adam Exp $
+$NetBSD: patch-ab,v 1.2 2007/04/13 21:03:39 adam Exp $
 
---- sound/Makefile.in.orig	2004-07-20 14:55:16.000000000 +0000
+--- sound/Makefile.in.orig	2007-04-09 19:26:55.000000000 +0200
 +++ sound/Makefile.in
-@@ -110,7 +110,7 @@ LIBRARIES =  $(noinst_LIBRARIES)
- 
- 
- DEFS = @DEFS@ -I. -I$(srcdir) -I..
+@@ -91,7 +91,7 @@ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
+ COREAUDIO_LIBS = @COREAUDIO_LIBS@
+ CPP = @CPP@
 -CPPFLAGS = @CPPFLAGS@
 +CPPFLAGS = @CPPFLAGS@ -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
- X_CFLAGS = @X_CFLAGS@
+ CXX = @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
