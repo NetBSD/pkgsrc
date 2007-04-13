@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/13 00:03:04 joerg Exp $
 #
 
 DISTNAME=	libgnomekbd-2.18.1
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_DIRS+=	xdg-1.1
 
 GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
