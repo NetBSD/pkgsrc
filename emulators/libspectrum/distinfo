@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 18:49:19 agc Exp $
+$NetBSD: distinfo,v 1.6 2007/04/13 21:02:44 adam Exp $
 
-SHA1 (libspectrum-0.2.2.tar.gz) = 09217bfa89c2778c71a93bc1c0aea0604ed6e0f0
-RMD160 (libspectrum-0.2.2.tar.gz) = b28bfbcae5e70d228436e16eb2f795611a42964c
-Size (libspectrum-0.2.2.tar.gz) = 386960 bytes
+SHA1 (libspectrum-0.3.0.tar.gz) = 5dc1f78535af558c46923cdafe7e40a00df327eb
+RMD160 (libspectrum-0.3.0.tar.gz) = 4902f83b6ae8ef4992a0faee22c8fc82e111893f
+Size (libspectrum-0.3.0.tar.gz) = 440561 bytes
