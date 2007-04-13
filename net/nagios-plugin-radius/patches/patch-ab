@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/13 20:06:21 bouyer Exp $
+
+--- configure.orig	2007-04-13 15:02:05.000000000 +0200
++++ configure	2007-04-13 15:02:49.000000000 +0200
+@@ -24967,13 +24967,13 @@
+ 
+ _SAVEDLIBS="$LIBS"
+ 
+-echo "$as_me:$LINENO: checking for rc_read_config in -lradiusclient" >&5
+-echo $ECHO_N "checking for rc_read_config in -lradiusclient... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for rc_read_config in -lradiusclient-ng" >&5
++echo $ECHO_N "checking for rc_read_config in -lradiusclient-ng... $ECHO_C" >&6
+ if test "${ac_cv_lib_radiusclient_rc_read_config+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lradiusclient  $LIBS"
++LIBS="-lradiusclient-ng  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -25036,13 +25036,13 @@
+ #define HAVE_LIBRADIUSCLIENT 1
+ _ACEOF
+ 
+-  LIBS="-lradiusclient $LIBS"
++  LIBS="-lradiusclient-ng $LIBS"
+ 
+ fi
+ 
+ if test "$ac_cv_lib_radiusclient_rc_read_config" = "yes"; then
+   EXTRAS="$EXTRAS check_radius"
+-	RADIUSLIBS="-lradiusclient"
++	RADIUSLIBS="-lradiusclient-ng"
+ 
+ else
+   { echo "$as_me:$LINENO: WARNING: Skipping radius plugin" >&5
