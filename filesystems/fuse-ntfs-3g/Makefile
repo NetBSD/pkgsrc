@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/26 19:55:28 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/13 09:23:57 xtraeme Exp $
 #
 
-DISTNAME=	ntfs-3g-1.0
+DISTNAME=	ntfs-3g-1.328
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	http://www.ntfs-3g.org/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.ntfs-3g.org/
 COMMENT=	NTFS driver for Linux/FreeBSD/NetBSD with read and write support
 
