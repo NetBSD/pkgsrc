@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2007/04/11 18:12:15 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/13 07:06:08 wiz Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	http://ftp.gnome.org/pub/gnome/sources/gnome-python-desktop/2.18/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -40,7 +40,8 @@ PLIST_SUBST+=	NAUTILUSBURN="@comment "
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-# XXX not built per default, might be an option
+# disabled in configure script by default
+# CONFIGURE_ARGS+=	--enable-metacity
 #.include "../../wm/metacity/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
