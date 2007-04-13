@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/04/11 17:50:42 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2007/04/13 00:02:16 joerg Exp $
 
 DISTNAME=		gtk-engines-2.10.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -17,7 +17,7 @@ CONFLICTS+=		gnome-themes-extras<0.8
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config msgfmt
 GNU_CONFIGURE=		yes
 USE_DIRS+=		theme-1.1 xdg-1.1
 USE_LIBTOOL=		yes
