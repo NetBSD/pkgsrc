@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.3 2007/04/13 21:01:56 drochner Exp $
+
+--- ./liboil/sse/composite_sse_4pix.c.orig	2007-04-13 22:37:07.000000000 +0200
++++ ./liboil/sse/composite_sse_4pix.c
+@@ -274,6 +274,11 @@ composite_in_argb_const_mask_sse (uint32
+ OIL_DEFINE_IMPL_FULL_WRAPPER (composite_in_argb_const_mask_sse,
+     composite_in_argb_const_mask, OIL_IMPL_FLAG_SSE2);
+ 
++/*
++ * These functions trigger an ICE with gcc-3.3.3 on i386.
++ * (see NetBSD PR pkg/34886)
++ */
++#if !(defined(__i386__) && __GNUC__ && (__GNUC__ < 4))
+ static void
+ composite_over_argb_sse (uint32_t *dest, const uint32_t *src, int n)
+ {
+@@ -508,6 +513,7 @@ composite_in_over_argb_const_mask_sse (u
+ }
+ OIL_DEFINE_IMPL_FULL_WRAPPER (composite_in_over_argb_const_mask_sse,
+     composite_in_over_argb_const_mask, OIL_IMPL_FLAG_SSE2);
++#endif /* i386 gcc<4 */
+ 
+ static void
+ composite_over_u8_sse (uint8_t *dest, const uint8_t *src, int n)
