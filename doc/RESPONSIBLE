@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.12 2007/03/08 15:11:14 rillig Exp $
+$NetBSD: RESPONSIBLE,v 1.13 2007/04/14 14:19:27 tnn Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -34,7 +34,8 @@ BSD/OS				reed
 Darwin				grant, schmonz
 DragonFly			joerg
 FreeBSD				grant
+HP-UX				tnn
 Interix				tv
 Linux				jschauma, grant, reed
-OSF1				grant
+OSF/1				grant, tnn
 Solaris				grant
