@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6236 2007/04/14 18:39:46 xtraeme Exp $
+$NetBSD: TODO,v 1.6237 2007/04/14 19:34:59 kleink Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.5.2
 	o dpkg-1.13.25
-	o drraw-2.2a3
 	o drscheme-360
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
