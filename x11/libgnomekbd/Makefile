@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/13 00:03:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/14 01:18:26 gdt Exp $
 #
 
 DISTNAME=	libgnomekbd-2.18.1
@@ -9,6 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome keyboard configuration library
+
+# used a library before it was created
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
