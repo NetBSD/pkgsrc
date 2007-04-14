@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.246 2007/04/11 19:09:24 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.247 2007/04/14 14:17:49 tnn Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -56,7 +56,7 @@ CUT=echo Unknown
 .endif
 
 .if !defined(OPSYS)
-OPSYS!=			${UNAME} -s | tr -d /
+OPSYS!=			${UNAME} -s | tr -d /-
 MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
 
@@ -192,6 +192,14 @@ OS_VERSION:=		${OS_VERSION:C/^V//}
 LOWER_OPSYS?=		osf${OS_VERSION}
 LOWER_VENDOR?=		dec
 
+.elif ${OPSYS} == "HPUX"
+OS_VERSION:=		${OS_VERSION:C/^B.//}
+.if ${MACHINE_ARCH} == "9000"
+MACHINE_ARCH=		hppa
+.endif
+LOWER_VENDOR=		hp
+LOWER_OPSYS?=		hpux${OS_VERSION}
+
 .elif ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
 SPARC_TARGET_ARCH?=	sparcv7
@@ -276,6 +284,12 @@ OBJECT_FMT=	ELF
 OBJECT_FMT=	XCOFF
 .elif ${OPSYS} == "OSF1"
 OBJECT_FMT=	ECOFF
+.elif ${OPSYS} == "HPUX"
+.  if ${MACHINE_ARCH} == "ia64" || (defined(ABI) && ${ABI} == "64")
+OBJECT_FMT=	ELF
+.  else
+OBJECT_FMT=	SOM
+.  endif
 .endif
 
 # Calculate depth
@@ -415,7 +429,7 @@ X11_TYPE?=		native
 .  if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.
 X11BASE?=	/usr/openwin
-.  elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
+.  elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX"
 X11BASE?=	/usr
 .  else
 X11BASE?=	/usr/X11R6

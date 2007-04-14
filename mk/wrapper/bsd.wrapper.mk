@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.66 2007/04/12 14:51:10 tnn Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.67 2007/04/14 14:17:49 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -335,6 +335,10 @@ _WRAP_EXTRA_ARGS.CPP+=	-D_POSIX_PII_SOCKET
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
+.elif ${OPSYS} == "HPUX"
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-hpux-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-hpux-ld
 .elif ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
@@ -488,6 +492,8 @@ generate-wrappers: ${_target_}
 	cmd-sink-ld \
 	cmd-sink-osf1-cc \
 	cmd-sink-osf1-ld \
+	cmd-sink-hpux-cc \
+	cmd-sink hpux-ld \
 	cmd-sink-solaris-imake \
 	cmd-sink-sunpro-cxx \
 	cmd-sink-unixware-gcc \
