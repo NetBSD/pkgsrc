@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.825 2007/04/14 18:39:47 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.826 2007/04/14 19:16:45 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1621,3 +1621,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Event-ExecFlow to 0.63 [xtraeme 2007-04-14]
 	Updated multimedia/dvdrip to 0.98.6 [xtraeme 2007-04-14]
 	Updated devel/p5-AnyEvent to 2.52 [xtraeme 2007-04-14]
+	Added devel/p5-Class-Accessor-Chained version 0.01 [kleink 2007-04-14]
+	Added textproc/p5-Text-vFile-asData version 0.05 [kleink 2007-04-14]
+	Added textproc/p5-Text-vCard version 2.00 [kleink 2007-04-14]
