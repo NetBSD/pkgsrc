@@ -1,0 +1,25 @@
+$NetBSD: README.HPUX,v 1.1 2007/04/14 14:17:49 tnn Exp $
+
+Note: HP-UX support is work-in-progress.
+
+Prerequisite patches (downloadable from HP itrc)
+------------------------------------------------
+
+ * ld(1) cumulative patch
+
+Recommended patches
+-------------------
+
+ * B3394BA Developer's Toolkit (for X11 headers)
+ * HP C/aC++ compiler
+
+Selecting which ABI to use
+--------------------------
+HP-UX supports the ABIs and object formats listed in the table below.
+32-bit is the default, 64-bit can be enabled by setting ABI=64 in mk.conf.
+The correct object format to use is autodetected.
+
+Release		Architecture	ABI	Object format
+ 11i v1/v2	PA-RISC	1.1+	32	SOM
+ 11i v1/v2	PA-RISC 2.0	64	ELF
+ 11i v2/v3	IA64		32/64	ELF

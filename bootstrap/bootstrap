@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.94 2007/04/12 20:31:04 joerg Exp $
+# $NetBSD: bootstrap,v 1.95 2007/04/14 14:17:49 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -78,8 +78,8 @@ usage="Usage: $0 "'
 # bootstrap-pkgsrc is merged into pkgsrc, we need to determine the
 # right value for OPSYS and MACHINE_ARCH.
 
-# strip / for BSD/OS
-opsys=`uname -s | tr -d /`
+# strip / for BSD/OS, strip - for HP-UX
+opsys=`uname -s | tr -d /-`
 
 die()
 {
@@ -367,8 +367,8 @@ FreeBSD)
 	set_opsys=no
 	machine_arch=`uname -p`
 	;;
-HP-UX)
-	root_group=root
+HPUX)
+	root_group=sys
 	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
