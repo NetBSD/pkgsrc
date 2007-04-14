@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.16 2007/04/11 18:58:52 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.17 2007/04/14 13:02:08 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -11,7 +11,6 @@
 
 CPP?=		/usr/bin/cpp
 ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
-FETCH_CMD?=	${LOCALBASE}/bin/ftp
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR=	share
 PS?=		/bin/ps
@@ -26,15 +25,14 @@ CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-non_hidden	# add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
-MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/etc/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=		system
-ULIMIT_CMD_datasize?=	echo ULIMIT_CMD_datasize_FIXME
-ULIMIT_CMD_stacksize?=	echo ULIMIT_CMD_stacksize_FIXME
-ULIMIT_CMD_memorysize?=	echo ULIMIT_CMD_memorysize_FIXME
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf
 IMAKE_MAN_SOURCE_PATH=	man/cat
@@ -61,11 +59,10 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ECOFF	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
-_PATCH_BACKUP_ARG?=	-b -V simple -z 	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
-# this is GNU ld.
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-all
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-none
 
