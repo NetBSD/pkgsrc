@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2007/01/26 02:49:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.47 2007/04/14 21:40:18 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -180,6 +180,7 @@ lib/kde3/kcm_icons.la
 lib/kde3/kcm_info.la
 lib/kde3/kcm_input.la
 lib/kde3/kcm_ioslaveinfo.la
+${HAVE_JOYSTICK}lib/kde3/kcm_joystick.la
 lib/kde3/kcm_kded.la
 lib/kde3/kcm_kdm.la
 lib/kde3/kcm_kdnssd.la
@@ -412,6 +413,7 @@ share/applications/kde/installktheme.desktop
 share/applications/kde/interrupts.desktop
 share/applications/kde/ioports.desktop
 share/applications/kde/ioslaveinfo.desktop
+${HAVE_JOYSTICK}share/applications/kde/joystick.desktop
 share/applications/kde/kappfinder.desktop
 share/applications/kde/kate.desktop
 share/applications/kde/kcm_kdnssd.desktop
