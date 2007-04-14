@@ -1,0 +1,48 @@
+# $NetBSD $
+
+# Empty out the command buffer and build up the command line in $cmd.
+hprunpath=
+while ! queue_is_empty cmdbuf; do
+	pop_queue cmdbuf arg
+	$debug_log $wrapperlog "    (cmd-sink-hpux-cc) pop:  $arg"
+	case $arg in
+	##############################################################
+	# HP-UX ld doesn't support multiple rpath parameters, accumulate
+	# them into a single -Wl,+b,/path1:/path2:...:pathn
+	##############################################################
+	+b|-Wl,+b|-rpath)
+		pop_queue cmdbuf dir
+		dir="${dir#-Wl,}"
+		case $hprunpath in
+		"")	hprunpath="$dir" ;;
+		*)	hprunpath="$hprunpath:$dir" ;;
+		esac
+		$debug_log $wrapperlog "    (cmd-sink-hpux-cc) drop: $dir [adding to hprunpath]"
+	;;
+	-Wl,+b,*|-R*|-Wl,-R*|-Wl,-rpath,*|-Wl,-rpath-link,*|-Wl,--rpath,*)
+		case $arg in
+		-Wl,+b,*)		R="-Wl,+b," ;;
+		-R*)			R="-R" ;;
+		-Wl,-R*)		R="-Wl,-R" ;;
+		-Wl,-rpath,*)		R="-Wl,-rpath," ;;
+		-Wl,-rpath-link,*)	R="-Wl,-rpath-link," ;;
+		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
+		esac
+		dir="${arg#$R}"
+		case $hprunpath in
+		"")	hprunpath="$dir" ;;
+		*)	hprunpath="$hprunpath:$dir" ;;
+		esac
+		$debug_log $wrapperlog "    (cmd-sink-hpux-cc) drop: $dir [adding to hprunpath]"
+		;;
+	*)
+		. $buildcmd
+		;;
+	esac
+done
+
+if $test -n "$hprunpath"; then
+	arg="-Wl,+b,$hprunpath"
+	$debug_log $wrapperlog "    (cmd-sink-hpux-cc) pop: $arg [aggregate]"
+	. $buildcmd
+fi
