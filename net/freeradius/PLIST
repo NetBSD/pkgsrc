@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/04/09 15:56:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/04/14 10:16:48 adrianp Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -328,7 +328,10 @@ share/freeradius/dictionary.rfc2869
 share/freeradius/dictionary.rfc3162
 share/freeradius/dictionary.rfc3576
 share/freeradius/dictionary.rfc3580
+share/freeradius/dictionary.rfc4372
 share/freeradius/dictionary.rfc4590
+share/freeradius/dictionary.rfc4675
+share/freeradius/dictionary.rfc4679
 share/freeradius/dictionary.riverstone
 share/freeradius/dictionary.roaringpenguin
 share/freeradius/dictionary.schulzrinne-sipping
