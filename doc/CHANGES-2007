@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.826 2007/04/14 19:16:45 kleink Exp $
+$NetBSD: CHANGES-2007,v 1.827 2007/04/14 19:34:12 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Class-Accessor-Chained version 0.01 [kleink 2007-04-14]
 	Added textproc/p5-Text-vFile-asData version 0.05 [kleink 2007-04-14]
 	Added textproc/p5-Text-vCard version 2.00 [kleink 2007-04-14]
+	Updated www/drraw to 2.2a3 [kleink 2007-04-14]
