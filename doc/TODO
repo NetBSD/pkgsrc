@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6234 2007/04/14 10:31:57 adrianp Exp $
+$NetBSD: TODO,v 1.6235 2007/04/14 18:14:21 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ Suggested package updates
 	o drscheme-360
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
-	o dvdrip-0.98.5
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
