@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.10 2007/03/24 18:23:54 heinz Exp $
+# $NetBSD: check-shlibs.mk,v 1.11 2007/04/14 14:17:49 tnn Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -29,7 +29,7 @@ CHECK_SHLIBS?=			no
 CHECK_SHLIBS_SUPPORTED?=	yes
 
 # All binaries and shared libraries.
-_CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
+_CHECK_SHLIBS_ERE=	(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib|lib/lib.*\.sl)
 
 _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 
