@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6235 2007/04/14 18:14:21 xtraeme Exp $
+$NetBSD: TODO,v 1.6236 2007/04/14 18:39:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -835,7 +835,6 @@ Suggested package updates
 	o osh-20070324
 	o otpCalc-0.97
 	o p5-Algorithm-Merge-0.08
-	o p5-AnyEvent-2.52
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-DBI-1.06
