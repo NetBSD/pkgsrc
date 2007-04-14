@@ -1,8 +1,18 @@
-$NetBSD: patch-ae,v 1.11 2007/04/09 21:22:11 veego Exp $
+$NetBSD: patch-ae,v 1.12 2007/04/14 20:32:41 veego Exp $
 
 --- bsd/pagemeter.h.orig	2003-10-09 06:22:32.000000000 +0200
-+++ bsd/pagemeter.h	2007-04-09 16:26:34.000000000 +0200
-@@ -48,7 +48,11 @@
++++ bsd/pagemeter.h	2007-04-14 22:23:47.000000000 +0200
+@@ -30,6 +30,9 @@
+ #include <vm/vm.h>
+ #endif
+ #include <uvm/uvm_extern.h>
++#if defined (VM_UVMEXP2)
++#include <sys/sysctl.h>		/*  Needed for uvmexp_sysctl.  */
++#endif
+ #else
+ #include <sys/vmmeter.h>
+ #endif
+@@ -48,7 +51,11 @@
    void getpageinfo( void );
  private:
  #if defined(UVM)
