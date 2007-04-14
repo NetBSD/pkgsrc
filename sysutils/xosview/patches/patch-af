@@ -1,19 +1,8 @@
-$NetBSD: patch-af,v 1.3 2007/04/09 21:22:11 veego Exp $
+$NetBSD: patch-af,v 1.4 2007/04/14 20:32:41 veego Exp $
 
 --- bsd/pagemeter.cc.orig	2002-03-22 04:23:41.000000000 +0100
-+++ bsd/pagemeter.cc	2007-04-09 16:30:04.000000000 +0200
-@@ -20,6 +20,10 @@
- #include "pagemeter.h"
- #include "kernel.h"		//  For NetBSD Page functions.
- 
-+#if defined(UVM) && defined (VM_UVMEXP2)
-+#include <sys/sysctl.h>         /*  Needed for uvmexp_sysctl.  */
-+#endif
-+
- CVSID("$Id: patch-af,v 1.3 2007/04/09 21:22:11 veego Exp $");
- CVSID_DOT_H(PAGEMETER_H_CVSID);
- 
-@@ -28,7 +32,13 @@
++++ bsd/pagemeter.cc	2007-04-14 22:24:12.000000000 +0200
+@@ -28,7 +28,13 @@
    total_ = total;
    BSDPageInit();
  #ifdef UVM
@@ -27,7 +16,7 @@ $NetBSD: patch-af,v 1.3 2007/04/09 21:22:11 veego Exp $
  #else
    BSDGetPageStats(&prev_);
  #endif
-@@ -57,8 +67,15 @@
+@@ -57,8 +63,15 @@
  void PageMeter::getpageinfo (void) {
  //  Begin NetBSD-specific code...
  #if defined(UVM)
