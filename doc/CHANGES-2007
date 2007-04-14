@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.822 2007/04/14 17:47:33 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.823 2007/04/14 18:08:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1618,3 +1618,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/freeradius to 1.1.6 [adrianp 2007-04-14]
 	Updated devel/libwhisker2 to 2.4 [adrianp 2007-04-14]
 	Updated emulators/gxemul to 0.4.5 [xtraeme 2007-04-14]
+	Updated devel/p5-Event-ExecFlow to 0.63 [xtraeme 2007-04-14]
