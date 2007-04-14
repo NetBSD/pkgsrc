@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6231 2007/04/13 17:39:00 wiz Exp $
+$NetBSD: TODO,v 1.6232 2007/04/14 09:17:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,6 +411,7 @@ Suggested package updates
 	o drscheme-360
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
+	o dvdrip-0.98.5
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
@@ -469,6 +470,7 @@ Suggested package updates
 	o fort77-1.18
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
+	o freeradius-1.1.6
 	o freesci-0.3.5
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
@@ -814,7 +816,7 @@ Suggested package updates
 	o ntp4-4.2.4
 	o nulib2-220
 	o nut-12.0 [pkg/34466]
-	o nut-12.4
+	o nut-12.5
 	o nxtvepg-2.7.7
 	o objc-3.2.8
 	o ocamlnet-2.2.4
@@ -1061,6 +1063,7 @@ Suggested package updates
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
+	o py-curl-7.16.2
 	o py-extclass-2.10.2
 	o py-flup-2311
 	o py-gnome2-extras-2.14.3
