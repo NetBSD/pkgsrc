@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.819 2007/04/14 04:51:45 reed Exp $
+$NetBSD: CHANGES-2007,v 1.820 2007/04/14 10:18:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-glib2 to 1.144 [xtraeme 2007-04-14]
 	Updated x11/p5-gtk2 to 1.144 [xtraeme 2007-04-14]
 	Added editors/tea version 16.0.5 [reed 2007-04-14]
+	Updated net/freeradius to 1.1.6 [adrianp 2007-04-14]
