@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2007/04/12 09:45:25 martti Exp $
+# $NetBSD: Makefile,v 1.118 2007/04/14 04:51:46 reed Exp $
 #
 
 COMMENT=	Editors
@@ -69,6 +69,7 @@ SUBDIR+=	sam
 SUBDIR+=	speedbar
 SUBDIR+=	ssam
 SUBDIR+=	tamago
+SUBDIR+=	tea
 SUBDIR+=	ted
 SUBDIR+=	ted-cs
 SUBDIR+=	ted-da
