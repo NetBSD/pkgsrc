@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/03/18 21:05:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/14 17:46:41 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -45,8 +45,6 @@ share/doc/gxemul/20051123-netbsd-prep.png
 share/doc/gxemul/20051123-netbsd-prep_small.png
 share/doc/gxemul/20060218-netbsd-evbarm.png
 share/doc/gxemul/20060218-netbsd-evbarm_small.png
-share/doc/gxemul/20060504-gdb-64bit-mips.png
-share/doc/gxemul/20060504-gdb-64bit-mips_small.png
 share/doc/gxemul/20060623-netbsd-sgimips-3.0.png
 share/doc/gxemul/20060623-netbsd-sgimips-3.0_small.png
 share/doc/gxemul/20060724-netbsd-netwinder-1.png
@@ -113,7 +111,6 @@ share/doc/gxemul/debian-9-small.png
 share/doc/gxemul/debian-9.png
 share/doc/gxemul/dreamcast.html
 share/doc/gxemul/experiments.html
-share/doc/gxemul/gdb_remote.html
 share/doc/gxemul/guestoses.html
 share/doc/gxemul/index.html
 share/doc/gxemul/intro.html
@@ -130,6 +127,7 @@ share/doc/gxemul/simplified_dyntrans.png
 share/doc/gxemul/sprite-20040711.png
 share/doc/gxemul/sprite-20040711_small.png
 share/doc/gxemul/technical.html
+share/doc/gxemul/translation.html
 share/doc/gxemul/ultrix4.5-20040706.png
 share/doc/gxemul/ultrix4.5-20040706_small.png
 @dirrm share/doc/gxemul
