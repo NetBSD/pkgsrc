@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/08/17 14:14:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/04/15 18:56:49 cjs Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -132,6 +132,7 @@ include/isc/resultclass.h
 include/isc/rwlock.h
 include/isc/serial.h
 include/isc/sha1.h
+include/isc/sha2.h
 include/isc/sockaddr.h
 include/isc/socket.h
 include/isc/stdio.h
@@ -161,6 +162,7 @@ include/isccc/symtype.h
 include/isccc/types.h
 include/isccc/util.h
 include/isccc/version.h
+include/isccfg/aclconf.h
 include/isccfg/cfg.h
 include/isccfg/grammar.h
 include/isccfg/log.h
@@ -281,6 +283,7 @@ man/man8/dnssec-signzone.8
 man/man8/lwresd.8
 man/man8/named-checkconf.8
 man/man8/named-checkzone.8
+man/man8/named-compilezone.8
 man/man8/named.8
 man/man8/nsupdate.8
 man/man8/rndc-confgen.8
@@ -291,6 +294,7 @@ sbin/lwresd
 sbin/named
 sbin/named-checkconf
 sbin/named-checkzone
+sbin/named-compilezone
 sbin/rndc
 sbin/rndc-confgen
 share/examples/rc.d/lwresd
