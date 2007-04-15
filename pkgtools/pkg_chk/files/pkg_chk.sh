@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.44 2006/11/05 21:53:27 tron Exp $
+# $Id: pkg_chk.sh,v 1.45 2007/04/15 21:34:49 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -97,7 +97,7 @@ delete_pkgs()
     {
     for pkg in $* ; do
 	if [ -d $PKG_DBDIR/$pkg ] ; then
-	    run_cmd "${PKG_DELETE} -r $pkg" 1
+	    run_cmd_su "${PKG_DELETE} -r $pkg" 1
 	fi
     done
     }
@@ -173,9 +173,10 @@ extract_variables()
 
     if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
 	cd $PKGSRCDIR/pkgtools/pkg_chk
-	extract_make_vars Makefile AWK GREP GZIP_CMD SED SORT TSORT PACKAGES \
-	                PKG_ADD PKG_DELETE PKG_INFO PKG_DBDIR PKGCHK_CONF \
- 	    		PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
+	extract_make_vars Makefile \
+		AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
+		PKGCHK_TAGS PKGCHK_UPDATE_CONF PKG_ADD PKG_DBDIR PKG_DELETE \
+		PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
 	fi
@@ -489,7 +490,7 @@ pkg_install()
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
 	fi
-	run_cmd "${PKG_ADD} $PACKAGES/$PKGNAME$PKG_SUFX"
+	run_cmd_su "${PKG_ADD} $PACKAGES/$PKGNAME$PKG_SUFX"
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    unset PKG_PATH
 	fi
@@ -545,6 +546,15 @@ run_cmd()
                 fatal "** '$1' failed"
             fi
         fi
+    fi
+    }
+
+run_cmd_su()
+    {
+    if [ -n "$SU_CMD" ]; then
+	run_cmd "${SU_CMD} '$1'" "$2"
+    else
+	run_cmd "$1" "$2"
     fi
     }
 
@@ -614,7 +624,7 @@ verbose_var()
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsSuv "$@")
+args=$(getopt BC:D:L:P:U:abcfghiklNnpqrsuv "$@")
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -679,15 +689,16 @@ test -n "$AWK"        || AWK="@AWK@"
 test -n "$GREP"       || GREP="@GREP@"
 test -n "$GZIP_CMD"   || GZIP_CMD="@GZIP_CMD@"
 export GZIP_CMD
+test -n "$ID"         || ID="@ID@"
 test -n "$MAKE"       || MAKE="@MAKE@"
 test -n "$MAKECONF"   || MAKECONF="@MAKECONF@"
 test -n "$PKG_ADD"    || PKG_ADD="@PKG_ADD@"
+test -n "$PKG_DBDIR"  || PKG_DBDIR="@PKG_DBDIR@"
 test -n "$PKG_DELETE" || PKG_DELETE="@PKG_DELETE@"
 test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
 test -n "$SED"        || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
-test -n "$PKG_DBDIR"  || PKG_DBDIR="@PKG_DBDIR@"
 
 if [ ! -f $MAKECONF ] ; then
     if [ -f @PREFIX@/etc/mk.conf ] ; then
@@ -727,6 +738,10 @@ if [ -n "$opt_P" ] ; then
 fi
 if [ -d $PACKAGES/All ] ; then
     PACKAGES="$PACKAGES/All"
+fi
+
+if [ "`${ID} -u`" = 0 ] ; then
+    SU_CMD=
 fi
 
 if [ -n "$opt_N" ]; then
