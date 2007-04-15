@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6242 2007/04/15 08:54:12 wiz Exp $
+$NetBSD: TODO,v 1.6243 2007/04/15 09:53:11 tron Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,6 @@ Suggested package updates
 	o fakeroot-1.6.5
 	o fd-2.09c
 	o fdgw-20040609
-	o fetchmail-6.3.8
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.30
