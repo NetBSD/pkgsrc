@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6244 2007/04/15 10:38:07 wiz Exp $
+$NetBSD: TODO,v 1.6245 2007/04/15 10:43:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -513,7 +513,6 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.1.5
-	o gnome-spell-1.0.7
 	o gnomeicu-0.99.12
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.3
