@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.829 2007/04/15 08:18:20 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.830 2007/04/15 08:29:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/links to 2.1.0.28 [wiz 2007-04-15]
 	Updated www/links-gui to 2.1.0.28 [wiz 2007-04-15]
 	Updated mail/evolution-exchange to 2.10.1 [wiz 2007-04-15]
+	Updated time/evolution-webcal to 2.10.0 [wiz 2007-04-15]
