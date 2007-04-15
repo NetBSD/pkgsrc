@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6246 2007/04/15 11:05:30 wiz Exp $
+$NetBSD: TODO,v 1.6247 2007/04/15 12:58:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -328,7 +328,6 @@ Suggested package updates
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o bittorrent-5.0.5
 	o blender-2.43
-	o blobwars-1.06
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bos-2.0.1
