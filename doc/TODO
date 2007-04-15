@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6238 2007/04/15 07:43:36 wiz Exp $
+$NetBSD: TODO,v 1.6239 2007/04/15 07:54:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -320,7 +320,7 @@ Suggested package updates
 	o beacon-1.3
 	o benchfft-3.1
 	o bibtex2html-1.86
-	o biew-5.6.3
+	o biew-5.6.4
 	o bind-8.4.7
 	o bind-9.4.0
 	o binutils-2.17
@@ -410,6 +410,7 @@ Suggested package updates
 	o drscheme-360
 	o dspam-3.8.0
 	o dvd+rw-tools-7.0
+	o dvdrip-0.98.6
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
@@ -574,7 +575,7 @@ Suggested package updates
 	o guile-oops-1.0.2 [gdt: only for guile 1.4; delete guile 1.4 instead]
 	o gwave-20031224
 	o gworkspace-0.8.5
-	o gzip-1.3.9
+	o gzip-1.3.12
 	o gzrecover-0.5
 	o hackbot-2.21
 	o haskell-mode-1.45
@@ -701,7 +702,7 @@ Suggested package updates
 	o libxml++2-2.18.0
 	o licq-1.3.4
 	o licq-core-1.3.0
-	o lighttpd-1.4.13
+	o lighttpd-1.4.15
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -994,6 +995,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
+	o phpmyadmin-2.10.1rc1
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o picp-0.6.8
