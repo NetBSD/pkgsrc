@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/08 20:04:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/04/15 13:11:40 wiz Exp $
 bin/gmime-config
 bin/uudecode
 bin/uuencode
@@ -33,6 +33,7 @@ include/gmime-2.0/gmime/gmime-multipart-signed.h
 include/gmime-2.0/gmime/gmime-multipart.h
 include/gmime-2.0/gmime/gmime-object.h
 include/gmime-2.0/gmime/gmime-param.h
+include/gmime-2.0/gmime/gmime-parse-utils.h
 include/gmime-2.0/gmime/gmime-parser.h
 include/gmime-2.0/gmime/gmime-part.h
 include/gmime-2.0/gmime/gmime-session-simple.h
