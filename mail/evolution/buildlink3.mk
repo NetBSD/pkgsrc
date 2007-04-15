@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2007/03/21 12:05:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2007/04/15 08:20:44 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 EVOLUTION_BUILDLINK3_MK:=	${EVOLUTION_BUILDLINK3_MK}+
@@ -17,11 +17,11 @@ BUILDLINK_ABI_DEPENDS.evolution?=	evolution>=2.8.0nb4
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 .endif	# EVOLUTION_BUILDLINK3_MK
 
-PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution\/2.8$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution\/2.10$$/ \
 				{ print "@comment in evolution: " $$0; next }
 PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution$$/ \
 				{ print "@comment in evolution: " $$0; next }
-PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.8$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.10$$/ \
 				{ print "@comment in evolution: " $$0; next }
 PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution$$/ \
 				{ print "@comment in evolution: " $$0; next }
