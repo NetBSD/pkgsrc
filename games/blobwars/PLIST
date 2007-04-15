@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/03 21:13:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/15 12:58:11 wiz Exp $
 bin/blobwars
+share/applications/blobwars.desktop
 share/doc/blobwars/CHANGES
 share/doc/blobwars/HACKING
 share/doc/blobwars/LICENSE
@@ -25,12 +26,11 @@ share/doc/blobwars/points.gif
 share/doc/blobwars/scaredMIA.gif
 share/doc/blobwars/spreadIcon.png
 share/doc/blobwars/title.png
-share/parallelrealities/blobwars.pak
-share/icons/mini/blobwars.png
-share/icons/large/blobwars.png
-share/icons/blobwars.png
+share/games/blobwars/blobwars.pak
+share/icons/hicolor/16x16/apps/blobwars.png
+share/icons/hicolor/32x32/apps/blobwars.png
+share/icons/hicolor/64x64/apps/blobwars.png
+share/locale/ca/LC_MESSAGES/blobwars.mo
+share/locale/nl/LC_MESSAGES/blobwars.mo
+@dirrm share/games/blobwars
 @dirrm share/doc/blobwars
-@dirrm share/parallelrealities
-@unexec ${RMDIR} %D/share/icons/large 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/icons/mini 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/icons 2>/dev/null || ${TRUE}
