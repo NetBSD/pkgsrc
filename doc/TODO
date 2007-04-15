@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6254 2007/04/15 21:47:36 wiz Exp $
+$NetBSD: TODO,v 1.6255 2007/04/15 22:09:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,6 +337,7 @@ Suggested package updates
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
+	o cairo-1.4.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
@@ -866,6 +867,7 @@ Suggested package updates
 	o p5-Email-Valid-0.179
 	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
+	o p5-File-NCopy-0.35
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -895,6 +897,7 @@ Suggested package updates
 	o p5-Mail-Audit-2.218
 	o p5-Mail-ListDetector-1.01
 	o p5-Mail-Webmail-Gmail-1.09
+	o p5-MailTools-1.76
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Install-0.65
