@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.832 2007/04/15 09:53:11 tron Exp $
+$NetBSD: CHANGES-2007,v 1.833 2007/04/15 10:38:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1632,3 +1632,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/evolution-exchange to 2.10.1 [wiz 2007-04-15]
 	Updated time/evolution-webcal to 2.10.0 [wiz 2007-04-15]
 	Updated misc/deskbar-applet to 2.18.1 [wiz 2007-04-15]
+	Updated databases/gnome-mime-data to 2.18.0 [wiz 2007-04-15]
