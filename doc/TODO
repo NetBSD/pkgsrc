@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6237 2007/04/14 19:34:59 kleink Exp $
+$NetBSD: TODO,v 1.6238 2007/04/15 07:43:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -704,8 +704,6 @@ Suggested package updates
 	o lighttpd-1.4.13
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
-	o links-2.1.0.28
-	o links-gui-2.1.0.28
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o loudmouth-1.2.0
