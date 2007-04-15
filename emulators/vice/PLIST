@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/02/07 19:43:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/04/15 19:13:08 wiz Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -29,6 +29,7 @@ share/doc/vice/TODO
 share/doc/vice/Walkthrough-Howto.txt
 share/doc/vice/Win32-Howto.txt
 share/doc/vice/amigaos.html
+share/doc/vice/beos.html
 share/doc/vice/cartconv.txt
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
@@ -36,6 +37,7 @@ share/doc/vice/iec-bus.txt
 share/doc/vice/index.html
 share/doc/vice/mon.txt
 share/doc/vice/new.gif
+share/doc/vice/openGLsync-howto.txt
 share/doc/vice/serial.txt
 share/doc/vice/solaris.html
 share/doc/vice/vice-logo.jpg
@@ -58,6 +60,7 @@ share/doc/vice/vice_9.html
 share/doc/vice/vice_toc.html
 share/locale/de/LC_MESSAGES/vice.mo
 share/locale/fr/LC_MESSAGES/vice.mo
+share/locale/hu/LC_MESSAGES/vice.mo
 share/locale/it/LC_MESSAGES/vice.mo
 share/locale/nl/LC_MESSAGES/vice.mo
 share/locale/pl/LC_MESSAGES/vice.mo

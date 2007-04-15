@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2007/02/07 19:43:29 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2007/04/15 19:13:09 wiz Exp $
 
---- doc/Makefile.in.orig	2007-01-21 01:53:08.000000000 +0000
+--- doc/Makefile.in.orig	2007-03-04 22:06:04.000000000 +0000
 +++ doc/Makefile.in
-@@ -245,7 +245,7 @@ xcbm2_LDFLAGS = @xcbm2_LDFLAGS@
+@@ -295,7 +295,7 @@ xcbm2_LDFLAGS = @xcbm2_LDFLAGS@
  xpet_LDFLAGS = @xpet_LDFLAGS@
  xplus4_LDFLAGS = @xplus4_LDFLAGS@
  xvic_LDFLAGS = @xvic_LDFLAGS@
 -docdir = $(VICEDIR)/doc
 +docdir = $(datadir)/doc/vice
- 
  doc_DATA = \
+ 	Minix-Howto.txt \
  	MSDOS-Ethernet-Howto.txt \
