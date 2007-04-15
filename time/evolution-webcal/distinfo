@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/09/15 15:24:43 jmmv Exp $
+$NetBSD: distinfo,v 1.10 2007/04/15 08:29:05 wiz Exp $
 
-SHA1 (evolution-webcal-2.8.0.tar.bz2) = 7c523cf5b7f2c2350cbb2c525660c0094a24fbed
-RMD160 (evolution-webcal-2.8.0.tar.bz2) = f4d98c5df5501b29a2c4d8be2fd2269e9dd28743
-Size (evolution-webcal-2.8.0.tar.bz2) = 162495 bytes
+SHA1 (evolution-webcal-2.10.0.tar.bz2) = 90b1bd93b71099fabb5b6a87c59578e4cf75b9ac
+RMD160 (evolution-webcal-2.10.0.tar.bz2) = 2a2434043d883a734d72bcd1148eb3ff016bd47f
+Size (evolution-webcal-2.10.0.tar.bz2) = 163306 bytes
