@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2007/01/17 19:18:01 tron Exp $
+$NetBSD: distinfo,v 1.36.2.1 2007/04/15 11:33:38 ghen Exp $
 
-SHA1 (fetchmail-6.3.6.tar.bz2) = 4c362d8d86c0d4efb191d0faae0b48b54b0887ba
-RMD160 (fetchmail-6.3.6.tar.bz2) = 455c1413cc5090f834e82be4876b572d4bef35cc
-Size (fetchmail-6.3.6.tar.bz2) = 1307730 bytes
+SHA1 (fetchmail-6.3.8.tar.bz2) = b8e8c51ed6cf53fc398c821fdb29d166c6713bb0
+RMD160 (fetchmail-6.3.8.tar.bz2) = 34034f9ae9fe44ba35f0a16d3128d4a9b0001df2
+Size (fetchmail-6.3.8.tar.bz2) = 1323515 bytes
