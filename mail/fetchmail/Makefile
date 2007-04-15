@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.161 2007/01/17 19:18:01 tron Exp $
+# $NetBSD: Makefile,v 1.161.2.1 2007/04/15 11:33:38 ghen Exp $
 
-DISTNAME=	fetchmail-6.3.6
+DISTNAME=	fetchmail-6.3.8
 CATEGORIES=	mail
 MASTER_SITES=	http://download.berlios.de/fetchmail/	\
 		http://download2.berlios.de/fetchmail/
