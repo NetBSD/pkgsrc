@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.838 2007/04/15 12:59:54 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.839 2007/04/15 13:06:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1639,3 +1639,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated meta-pkgs/gnome-base to 2.18.1 [wiz 2007-04-15]
 	Updated meta-pkgs/gnome to 2.18.1 [wiz 2007-04-15]
 	Updated games/blobwars to 1.06.2 [wiz 2007-04-15]
+	Updated security/p5-IO-Socket-SSL to 1.04 [wiz 2007-04-15]
