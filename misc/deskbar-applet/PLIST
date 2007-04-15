@@ -1,4 +1,29 @@
-@comment $NetBSD: PLIST,v 1.5 2007/02/04 23:19:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/15 08:53:40 wiz Exp $
+lib/deskbar-applet/handlers/recent.py
+lib/deskbar-applet/handlers/recent.pyc
+lib/deskbar-applet/handlers/recent.pyo
+lib/python2.4/site-packages/deskbar/ModuleInstaller.py
+lib/python2.4/site-packages/deskbar/ModuleInstaller.pyc
+lib/python2.4/site-packages/deskbar/ModuleInstaller.pyo
+lib/python2.4/site-packages/deskbar/updater/ErrorDialog.py
+lib/python2.4/site-packages/deskbar/updater/ErrorDialog.pyc
+lib/python2.4/site-packages/deskbar/updater/ErrorDialog.pyo
+lib/python2.4/site-packages/deskbar/updater/NewStuffUpdater.py
+lib/python2.4/site-packages/deskbar/updater/NewStuffUpdater.pyc
+lib/python2.4/site-packages/deskbar/updater/NewStuffUpdater.pyo
+lib/python2.4/site-packages/deskbar/updater/ProgressbarDialog.py
+lib/python2.4/site-packages/deskbar/updater/ProgressbarDialog.pyc
+lib/python2.4/site-packages/deskbar/updater/ProgressbarDialog.pyo
+lib/python2.4/site-packages/deskbar/updater/__init__.py
+lib/python2.4/site-packages/deskbar/updater/__init__.pyc
+lib/python2.4/site-packages/deskbar/updater/__init__.pyo
+share/gnome/help/deskbar/C/deskbar.xml
+share/gnome/help/deskbar/C/figures/deskbar-applet.png
+share/gnome/help/deskbar/C/legal.xml
+share/locale/ar/LC_MESSAGES/deskbar-applet.mo
+share/locale/fa/LC_MESSAGES/deskbar-applet.mo
+share/locale/ro/LC_MESSAGES/deskbar-applet.mo
+share/omf/deskbar/deskbar-C.omf
 lib/bonobo/servers/Deskbar_Applet.server
 lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/handlers/beagle-live.py
@@ -19,18 +44,12 @@ lib/deskbar-applet/handlers/evolution.pyo
 lib/deskbar-applet/handlers/files.py
 lib/deskbar-applet/handlers/files.pyc
 lib/deskbar-applet/handlers/files.pyo
-lib/deskbar-applet/handlers/galago.py
-lib/deskbar-applet/handlers/galago.pyc
-lib/deskbar-applet/handlers/galago.pyo
 lib/deskbar-applet/handlers/galeon.py
 lib/deskbar-applet/handlers/galeon.pyc
 lib/deskbar-applet/handlers/galeon.pyo
 lib/deskbar-applet/handlers/gdmactions.py
 lib/deskbar-applet/handlers/gdmactions.pyc
 lib/deskbar-applet/handlers/gdmactions.pyo
-lib/deskbar-applet/handlers/google-live.py
-lib/deskbar-applet/handlers/google-live.pyc
-lib/deskbar-applet/handlers/google-live.pyo
 lib/deskbar-applet/handlers/history.py
 lib/deskbar-applet/handlers/history.pyc
 lib/deskbar-applet/handlers/history.pyo
@@ -282,13 +301,18 @@ share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
+@dirrm share/omf/deskbar
 @comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/gnome/help/deskbar/C/figures
+@dirrm share/gnome/help/deskbar/C
+@dirrm share/gnome/help/deskbar
 @dirrm share/deskbar-applet/art
 @dirrm share/deskbar-applet
 @dirrm ${PYSITELIB}/deskbar/ui/window
 @dirrm ${PYSITELIB}/deskbar/ui/entriac
 @dirrm ${PYSITELIB}/deskbar/ui/cuemiac
 @dirrm ${PYSITELIB}/deskbar/ui
+@dirrm ${PYSITELIB}/deskbar/updater
 @dirrm ${PYSITELIB}/deskbar/osutils
 @dirrm ${PYSITELIB}/deskbar/keybinder
 @dirrm ${PYSITELIB}/deskbar/iconentry
