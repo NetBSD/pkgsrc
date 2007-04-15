@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6250 2007/04/15 13:12:11 wiz Exp $
+$NetBSD: TODO,v 1.6251 2007/04/15 13:14:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -925,7 +925,6 @@ Suggested package updates
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.18
-	o p5-Storable-2.16
 	o p5-Term-Size-0.203
 	o p5-Test-ClassAPI-1.04
 	o p5-Test-File-Contents-0.05

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.840 2007/04/15 13:12:11 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.841 2007/04/15 13:14:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/blobwars to 1.06.2 [wiz 2007-04-15]
 	Updated security/p5-IO-Socket-SSL to 1.04 [wiz 2007-04-15]
 	Updated mail/gmime to 2.2.6 [wiz 2007-04-15]
+	Updated devel/p5-Storable to 2.16 [wiz 2007-04-15]
