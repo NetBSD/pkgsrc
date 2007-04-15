@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/02/18 22:38:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/15 21:46:41 wiz Exp $
 bin/git
 bin/git-add
 bin/git-add--interactive
@@ -12,6 +12,7 @@ bin/git-archive
 bin/git-bisect
 bin/git-blame
 bin/git-branch
+bin/git-bundle
 bin/git-cat-file
 bin/git-check-ref-format
 bin/git-checkout
@@ -34,10 +35,10 @@ bin/git-describe
 bin/git-diff
 bin/git-diff-files
 bin/git-diff-index
-bin/git-diff-stages
 bin/git-diff-tree
 bin/git-fast-import
 bin/git-fetch
+bin/git-fetch--tool
 bin/git-fetch-pack
 bin/git-fmt-merge-msg
 bin/git-for-each-ref
@@ -75,6 +76,7 @@ bin/git-merge-recursive
 bin/git-merge-resolve
 bin/git-merge-stupid
 bin/git-merge-tree
+bin/git-mergetool
 bin/git-mktag
 bin/git-mktree
 bin/git-mv
@@ -101,7 +103,6 @@ bin/git-repo-config
 bin/git-request-pull
 bin/git-rerere
 bin/git-reset
-bin/git-resolve
 bin/git-rev-list
 bin/git-rev-parse
 bin/git-revert
@@ -151,6 +152,7 @@ man/man1/git-archive.1
 man/man1/git-bisect.1
 man/man1/git-blame.1
 man/man1/git-branch.1
+man/man1/git-bundle.1
 man/man1/git-cat-file.1
 man/man1/git-check-ref-format.1
 man/man1/git-checkout-index.1
@@ -171,7 +173,6 @@ man/man1/git-daemon.1
 man/man1/git-describe.1
 man/man1/git-diff-files.1
 man/man1/git-diff-index.1
-man/man1/git-diff-stages.1
 man/man1/git-diff-tree.1
 man/man1/git-diff.1
 man/man1/git-fast-import.1
@@ -207,6 +208,7 @@ man/man1/git-merge-index.1
 man/man1/git-merge-one-file.1
 man/man1/git-merge-tree.1
 man/man1/git-merge.1
+man/man1/git-mergetool.1
 man/man1/git-mktag.1
 man/man1/git-mktree.1
 man/man1/git-mv.1
@@ -234,7 +236,6 @@ man/man1/git-repo-config.1
 man/man1/git-request-pull.1
 man/man1/git-rerere.1
 man/man1/git-reset.1
-man/man1/git-resolve.1
 man/man1/git-rev-list.1
 man/man1/git-rev-parse.1
 man/man1/git-revert.1
@@ -276,14 +277,13 @@ share/git-core/templates/description
 share/git-core/templates/hooks/applypatch-msg
 share/git-core/templates/hooks/commit-msg
 share/git-core/templates/hooks/post-commit
+share/git-core/templates/hooks/post-receive
 share/git-core/templates/hooks/post-update
 share/git-core/templates/hooks/pre-applypatch
 share/git-core/templates/hooks/pre-commit
 share/git-core/templates/hooks/pre-rebase
 share/git-core/templates/hooks/update
 share/git-core/templates/info/exclude
-@exec ${MKDIR} %D/share/git-core/templates/remotes
-@dirrm share/git-core/templates/remotes
 @dirrm share/git-core/templates/info
 @dirrm share/git-core/templates/hooks
 @exec ${MKDIR} %D/share/git-core/templates/branches
