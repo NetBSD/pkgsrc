@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/04/13 05:45:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2007/04/15 13:59:37 joerg Exp $
 
 DISTNAME=	fox-1.6.25
 CATEGORIES=	x11
@@ -10,6 +10,7 @@ COMMENT=	Fast and extensive C++ GUI toolkit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--with-opengl
