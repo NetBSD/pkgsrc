@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6252 2007/04/15 13:29:46 wiz Exp $
+$NetBSD: TODO,v 1.6253 2007/04/15 19:20:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,6 @@ Suggested package updates
 	o valgrind-3.2.3
 	o vera-1.17
 	o vfu-4.03
-	o vice-1.21
 	o viewvc-1.0.4
 	o vifm-0.3a
 	o visual-regexp-3.1
