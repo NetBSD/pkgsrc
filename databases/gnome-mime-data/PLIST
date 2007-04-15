@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/11/14 16:58:13 drochner Exp $
-lib/pkgconfig/gnome-mime-data-2.0.pc
+@comment $NetBSD: PLIST,v 1.13 2007/04/15 10:36:19 wiz Exp $
 share/application-registry/gnome-vfs.applications
 share/examples/gnome-mime-data/gnome-vfs-mime-magic
 share/locale/af/LC_MESSAGES/gnome-mime-data.mo
@@ -77,6 +76,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-mime-data.mo
 share/locale/zu/LC_MESSAGES/gnome-mime-data.mo
 share/mime-info/gnome-vfs.keys
 share/mime-info/gnome-vfs.mime
+share/pkgconfig/gnome-mime-data-2.0.pc
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/examples/gnome-mime-data
 @comment in xdg-dirs: @dirrm share/application-registry
