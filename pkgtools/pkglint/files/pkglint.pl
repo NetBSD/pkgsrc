@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.704 2007/03/24 05:36:20 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.705 2007/04/15 22:58:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4169,6 +4169,24 @@ sub checkline_mk_shellword($$$) {
 			);
 			if ($varname ne "\@") {
 				checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", $ctx);
+			}
+
+		# The syntax of the variable modifiers can get quite
+		# hairy. In lack of motivation, we just skip anything
+		# complicated, hoping that at least the braces are
+		# balanced.
+		} elsif ($rest =~ s/^\$\{//) {
+			my $braces = 1;
+			while ($rest ne "" && $braces > 0) {
+				if ($rest =~ s/^\}//) {
+					$braces--;
+				} elsif ($rest =~ s/^\{//) {
+					$braces++;
+				} elsif ($rest =~ s/^[^{}]+//) {
+					# Nothing to do here.
+				} else {
+					last;
+				}
 			}
 
 		} elsif ($state == SWST_PLAIN) {
