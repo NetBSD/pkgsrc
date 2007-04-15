@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/04/13 23:24:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/15 19:40:41 joerg Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 
 DIST_VERSION=	1.144
 
