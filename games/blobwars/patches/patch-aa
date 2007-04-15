@@ -1,35 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/03 21:13:18 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/15 12:58:11 wiz Exp $
 
---- makefile.orig	2005-04-25 20:25:37.000000000 +0200
+--- makefile.orig	2007-04-10 18:35:02.000000000 +0000
 +++ makefile
-@@ -7,9 +7,9 @@ VERSION = 1.04
- RELEASE = 1
+@@ -7,8 +7,7 @@ VERSION = 1.06
+ RELEASE = 2
  USEPAK = 1
  
 -PREFIX=$(DESTDIR)/usr
 -BINDIR = $(PREFIX)/games/
--DATADIR = $(PREFIX)/share/games/parallelrealities/
-+#PREFIX=$(DESTDIR)/usr
 +BINDIR = $(PREFIX)/bin/
-+DATADIR = $(PREFIX)/share/parallelrealities/
+ DATADIR = $(PREFIX)/share/games/blobwars/
  DOCDIR = $(PREFIX)/share/doc/$(PROG)/
- ICONDIR = $(PREFIX)/share/icons/
- KDE = $(PREFIX)/share/applnk/Games/Arcade/
-@@ -70,8 +70,6 @@ install:
- 	mkdir -p $(ICONDIR)
- 	mkdir -p $(ICONDIR)mini
- 	mkdir -p $(ICONDIR)large
--	mkdir -p $(KDE)
--	mkdir -p $(GNOME)
+ ICONDIR = $(PREFIX)/share/icons/hicolor/
+@@ -19,7 +18,7 @@ CXXFLAGS += `sdl-config --cflags` -DVERS
+ CXXFLAGS += -DPAKNAME=\"$(PAKNAME)\" -DPAKLOCATION=\"$(DATADIR)\" -DUNIX -DGAMEPLAYMANUAL=\"$(DOCDIR)index.html\" -Wall
+ CXXFLAGS += -DLOCALEDIR=\"$(LOCALEDIR)\"
+ CXXFLAGS += $(CFLAGS)
+-LIBS = `sdl-config --libs` -lSDL_mixer -lSDL_image -lSDL_ttf -lz
++LIBS = `sdl-config --libs` -lSDL_mixer -lSDL_image -lSDL_ttf -lintl -lz
  
- 	strip $(PROG)
- 	install -o root -g games -m 755 $(PROG) $(BINDIR)$(PROG)
-@@ -80,8 +78,6 @@ install:
- 	cp $(ICONS)$(PROG).png $(ICONDIR)
- 	cp $(ICONS)$(PROG)-mini.png $(ICONDIR)mini/$(PROG).png
- 	cp $(ICONS)$(PROG)-large.png $(ICONDIR)large/$(PROG).png
--	cp $(ICONS)$(PROG).desktop $(KDE)
--	cp $(ICONS)$(PROG).desktop $(GNOME)
- 
- uninstall:
- 	$(RM) $(BINDIR)$(PROG)
+ OBJS += aquaBoss.o bosses.o bullets.o cutscene.o
+ OBJS += CAudio.o CBoss.o CCollision.o CCutscene.o CData.o CEffect.o CEngine.o CEntity.o CFileData.o CGame.o 
