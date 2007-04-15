@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.3 2004/11/01 20:31:13 jdolecek Exp $
+# $NetBSD: pear_plist.php,v 1.4 2007/04/15 13:46:42 adrianp Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
@@ -10,9 +10,13 @@ $dirrm = array();
 include_once "PEAR/Common.php";
 $obj = &new PEAR_Common;
 $info = $obj->infoFromAny("$WRKSRC/package.xml");
-$pkg = $info['package'];
 
-// output list of package files, in same order as specified in package
+if (!empty($info['attribs']) && $info['attribs']['version'] == '2.0')
+	$pkg = $info['name'];
+else
+	$pkg = $info['package'];
+
+# output list of package files, in same order as specified in package
 echo "$PEAR_LIB/.registry/".strtolower($pkg).".reg\n";
 foreach($info['filelist'] as $f => $v) {
 	switch($v['role']) {
@@ -27,6 +31,12 @@ foreach($info['filelist'] as $f => $v) {
 	default:
 		if (!empty($v['baseinstalldir']) && $v['baseinstalldir'] != '/') {
 			$prefix = $v['baseinstalldir'] . '/';
+
+			# sometimes the baseinstalldir begins with a slash,
+			# which make the PLIST output to have two instead of 
+			# one.  We fix this here.
+			if ($prefix[0] == '/')
+				$prefix = substr($prefix, 1);
 
 			if ($PEAR_DIRRM_BASEDIR)
 				$dirrm[$v['baseinstalldir']] = true;
@@ -45,8 +55,8 @@ foreach($info['filelist'] as $f => $v) {
 		$dirrm["{$prefix}{$f}"] = true;
 }
 
-// output @dirrm directives, in reverse order so that deeper
-// directories are removed first
+# output @dirrm directives, in reverse order so that deeper
+# directories are removed first
 $dirrm = array_keys($dirrm);
 rsort($dirrm);
 foreach($dirrm as $dir)
