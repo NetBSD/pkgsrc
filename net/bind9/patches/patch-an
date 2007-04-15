@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2006/08/28 16:00:45 seb Exp $
+$NetBSD: patch-an,v 1.2 2007/04/15 18:56:50 cjs Exp $
 
---- lib/bind/include/netdb.h.orig	2004-11-30 01:15:42.000000000 +0000
+--- lib/bind/include/netdb.h.orig
 +++ lib/bind/include/netdb.h
 @@ -179,9 +179,17 @@ struct	addrinfo {
  	int		_ai_pad;
@@ -12,11 +12,11 @@ $NetBSD: patch-an,v 1.1 2006/08/28 16:00:45 seb Exp $
 +#endif
 +	socklen_t	ai_addrlen;
  #else
- 	size_t		ai_addrlen;	/* length of ai_addr */
+ 	size_t		ai_addrlen;	/*%< length of ai_addr */
  #endif
 +#if defined(__NetBSD__) && (defined(__alpha__) || (defined(__i386__) && defined(_LP64)))
 +	int		_ai_pad;
 +#endif
  #ifdef __linux
- 	struct sockaddr	*ai_addr; 	/* binary address */
- 	char		*ai_canonname;	/* canonical name for hostname */
+ 	struct sockaddr	*ai_addr; 	/*%< binary address */
+ 	char		*ai_canonname;	/*%< canonical name for hostname */
