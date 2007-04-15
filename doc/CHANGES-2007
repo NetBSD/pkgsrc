@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.837 2007/04/15 12:58:35 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.838 2007/04/15 12:59:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1421,6 +1421,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postgrey to 1.27nb1 [taca 2007-04-03]
 	Removed sysutils/gkx86info [wiz 2007-04-04]
 	Removed lang/win32-jdk [tv 2007-04-04]
+	Updated games/freesci to 0.3.5 [dillo 2007-04-05]
 	Updated mail/dovecot to 1.0rc30 [ghen 2007-04-06]
 	Updated x11/qt3-libs to 3.3.8nb2 [markd 2007-04-06]
 	Updated x11/qt4-libs to 4.2.3nb1 [markd 2007-04-06]

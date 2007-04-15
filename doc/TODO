@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6247 2007/04/15 12:58:35 wiz Exp $
+$NetBSD: TODO,v 1.6248 2007/04/15 12:59:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ Suggested package updates
 	o fort77-1.18
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
-	o freesci-0.3.5
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
