@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/15 21:39:52 agc Exp $
+bin/rscode
+lib/libecc.a
+share/doc/rscode/rs.doc
+@dirrm share/doc/rscode
