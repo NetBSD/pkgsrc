@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.30 2007/01/28 01:31:52 adrianp Exp $
+$NetBSD: distinfo,v 1.31 2007/04/15 18:56:49 cjs Exp $
 
-SHA1 (bind-9.3.4.tar.gz) = f53c7e24157ae1fd881834351804bfee3c2782ee
-RMD160 (bind-9.3.4.tar.gz) = 8b5fda9542f6afbe7ffb857d72f7e545237d7826
-Size (bind-9.3.4.tar.gz) = 5405022 bytes
+SHA1 (bind-9.4.0.tar.gz) = e3b780a5a26b2c9760efbcf3dc6910a9ae3538a9
+RMD160 (bind-9.4.0.tar.gz) = 09d97d645cfc82e3ec72cf72d041274271b6669a
+Size (bind-9.4.0.tar.gz) = 6333767 bytes
 SHA1 (patch-ab) = dd12c457791a75a8b43d9dfd0c0b236dcdbe31a5
 SHA1 (patch-ac) = 4df1ece91d59b2b36fc7a4316604f1c112cf70ba
 SHA1 (patch-ad) = 0e28ae0bb42e633f1ff1111478c97ced5c222186
@@ -12,5 +12,5 @@ SHA1 (patch-ai) = fbe3b15b2d49e6767c8cfe9d985924c2ad797b9f
 SHA1 (patch-aj) = c3bbf84a8a735298552f918ac38331e06a1b68a1
 SHA1 (patch-al) = eb6a52d3f865639447ec6f9019c0ea1d2122b772
 SHA1 (patch-am) = bb267f13dbd30d492f4dfcf9c278b941efa97bed
-SHA1 (patch-an) = b3e5cd93890aa9a9cec7c14abf1b62ddbf854b14
+SHA1 (patch-an) = 6ec6ede602292ef2eaf5f0891e97576218bd8c3e
 SHA1 (patch-ao) = 9a1ed7b37befdd8e29d233fe55cd62362df3c50e
