@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.846 2007/04/15 21:27:15 agc Exp $
+$NetBSD: CHANGES-2007,v 1.847 2007/04/15 21:35:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/vice to 1.21 [wiz 2007-04-15]
 	Added devel/p5-Getopt-Mixed version 1.10 [agc 2007-04-15]
 	Added mail/t-prot version 2.4 [agc 2007-04-15]
+	Updated pkg_chk to 1.84 [abs 2007-04-15]
