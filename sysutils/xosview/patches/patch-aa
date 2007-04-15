@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2007/04/09 21:22:11 veego Exp $
+$NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
 
 --- bsd/kernel.cc.orig	2006-02-18 08:36:06.000000000 +0100
-+++ bsd/kernel.cc	2007-04-09 15:27:42.000000000 +0200
-@@ -115,10 +115,18 @@
++++ bsd/kernel.cc	2007-04-14 21:34:03.000000000 +0200
+@@ -115,8 +115,16 @@
  // in __NetBSD_Version__ for us if needed.
  #if defined(XOSVIEW_NETBSD) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106010000)
  #define NETBSD_1_6A
@@ -15,12 +15,10 @@ $NetBSD: patch-aa,v 1.16 2007/04/09 21:22:11 veego Exp $
 +#endif
  #endif
  
++#include "netmeter.h"		/*  For netIface_  */
  #include "general.h"
  #include "kernel.h"		/*  To grab CVSID stuff.  */
-+#include "netmeter.h"		/*  For netIface_  */
  
- CVSID("$Id: patch-aa,v 1.16 2007/04/09 21:22:11 veego Exp $");
- CVSID_DOT_H(KERNEL_H_CVSID);
 @@ -400,6 +408,8 @@
    static int mib[] = { CTL_KERN, KERN_CPUSTATS };
  #endif
