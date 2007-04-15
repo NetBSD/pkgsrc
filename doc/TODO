@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6243 2007/04/15 09:53:11 tron Exp $
+$NetBSD: TODO,v 1.6244 2007/04/15 10:38:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -512,11 +512,8 @@ Suggested package updates
 	o gmpc-0.14.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.16.2
 	o gnome-build-0.1.5
-	o gnome-mime-data-2.18.0
 	o gnome-spell-1.0.7
-	o gnome-utils-2.18.0
 	o gnomeicu-0.99.12
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.3
