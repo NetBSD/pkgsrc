@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/01/22 14:33:31 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2007/04/15 21:46:41 wiz Exp $
 
---- git-compat-util.h.orig	2006-07-02 08:23:24.000000000 +0200
-+++ git-compat-util.h	2006-09-16 14:44:18.951236060 +0200
-@@ -4,6 +4,8 @@
+--- git-compat-util.h.orig	2007-04-12 01:41:44.000000000 +0000
++++ git-compat-util.h
+@@ -6,6 +6,8 @@
  #ifndef FLEX_ARRAY
  #if defined(__GNUC__) && (__GNUC__ < 3)
  #define FLEX_ARRAY 0
