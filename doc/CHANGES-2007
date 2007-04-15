@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.842 2007/04/15 13:29:44 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.843 2007/04/15 15:44:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1643,3 +1643,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/gmime to 2.2.6 [wiz 2007-04-15]
 	Updated devel/p5-Storable to 2.16 [wiz 2007-04-15]
 	Updated www/curl to 7.16.2 [wiz 2007-04-15]
+	Updated print/libgnomecups to 0.2.2nb4 [obache 2007-04-15]
