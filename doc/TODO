@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6239 2007/04/15 07:54:09 wiz Exp $
+$NetBSD: TODO,v 1.6240 2007/04/15 08:18:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
-	o evolution-exchange-2.10.0
 	o evolution-webcal-2.10.0
 	o ex-20050325
 	o ezmlm-idx-5.1.0 [schmonz]
