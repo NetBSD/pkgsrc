@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.847 2007/04/15 21:35:40 abs Exp $
+$NetBSD: CHANGES-2007,v 1.848 2007/04/15 21:37:34 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Getopt-Mixed version 1.10 [agc 2007-04-15]
 	Added mail/t-prot version 2.4 [agc 2007-04-15]
 	Updated pkg_chk to 1.84 [abs 2007-04-15]
+	Added devel/gflib version 20030604 [agc 2007-04-15]
