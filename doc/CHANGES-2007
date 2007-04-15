@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.834 2007/04/15 10:43:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.835 2007/04/15 11:05:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/deskbar-applet to 2.18.1 [wiz 2007-04-15]
 	Updated databases/gnome-mime-data to 2.18.0 [wiz 2007-04-15]
 	Updated textproc/gnome-spell to 1.0.7 [wiz 2007-04-15]
+	Updated chat/gnomeicu to 0.99.12 [wiz 2007-04-15]
