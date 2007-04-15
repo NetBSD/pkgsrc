@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/15 21:35:06 agc Exp $
+bin/gf_div
+bin/gf_mult
+bin/parity_test
+bin/rs_decode_file
+bin/rs_encode_file
+bin/xor
