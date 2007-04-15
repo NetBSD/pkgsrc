@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2007/04/12 18:13:55 gdt Exp $
+# $NetBSD: Makefile,v 1.666 2007/04/15 11:36:24 kristerw Exp $
 #
 
 COMMENT=	Networking tools
@@ -215,6 +215,7 @@ SUBDIR+=	nagios-nsca
 SUBDIR+=	nagios-plugin-ldap
 SUBDIR+=	nagios-plugin-mysql
 SUBDIR+=	nagios-plugin-pgsql
+SUBDIR+=	nagios-plugin-radius
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
 SUBDIR+=	nam
@@ -380,6 +381,7 @@ SUBDIR+=	quagga
 SUBDIR+=	quagga-devel
 SUBDIR+=	queryperf
 SUBDIR+=	ra-rtsp-proxy
+SUBDIR+=	radiusclient-ng
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rbldnsd
 SUBDIR+=	rdesktop
