@@ -1,0 +1,20 @@
+t-prot is a TOFU enhancement for the mutt MUA.  It condenses quoted
+text into a single line, hides overlong signatures, and other email
+sins.
+
+TOFU is an abbreviation which mixes German and English words; it
+expands to "text oben, full-quote unten" which means "text above -
+full quote below" and describes the style of so many users who let
+their mailer or newsreader quote everything of the previous message
+and just add some text at the top; obviously they think that quoted
+text must not be changed at all.  This is quite annoying as it
+needlessly sends a lot of data even when it is not required.  Some
+editing of messages is desired.  Please point these people to the page
+http://www.river.com/users/share/etiquette/edit.html
+
+t-prot detects, and when demanded hides annoying parts in rfc2822
+messages:  TOFU, huge quoted blocks, signatures (especially when they
+are too long), excessive punktuation, blocks of empty lines, trailing
+spaces and tabs.  For use inside of MTAs or MDAs it exits with
+appropriate libc exit codes, so annoying messages may be bounced
+easily.
