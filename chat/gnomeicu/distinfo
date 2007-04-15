@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 15:59:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2007/04/15 11:05:03 wiz Exp $
 
-SHA1 (gnomeicu-0.99.5.tar.bz2) = 5cbba61cd23943359bc2c9215b7fad1b166db3d8
-RMD160 (gnomeicu-0.99.5.tar.bz2) = 359b31694679e2574d0f73143b0f1ce8b96a905d
-Size (gnomeicu-0.99.5.tar.bz2) = 2102452 bytes
+SHA1 (gnomeicu-0.99.12.tar.bz2) = 6a7dcb4c6fe606b1dc0b8c9fed762b5cc92d222c
+RMD160 (gnomeicu-0.99.12.tar.bz2) = eb81a40cfb6c20a61bd9e875c0eab088c7efde60
+Size (gnomeicu-0.99.12.tar.bz2) = 1670074 bytes
 SHA1 (patch-aa) = 707e17b3b1564b28ed02635a8b60a54f14578ef5
-SHA1 (patch-ab) = cb932608f98de39292cf763713c07bc14bb51fc5
-SHA1 (patch-ac) = 64bc13d58ac1be02f0e286f65b92cb67dfe6e8f8
+SHA1 (patch-ad) = 7352448dbdab510e3c6a6f3a6a6ec4973e7f8ae5
