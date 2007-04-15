@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/04/15 11:05:03 wiz Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 share/applications/GnomeICU.desktop
@@ -250,16 +250,20 @@ share/locale/lv/LC_MESSAGES/gnomeicu.mo
 share/locale/mk/LC_MESSAGES/gnomeicu.mo
 share/locale/ml/LC_MESSAGES/gnomeicu.mo
 share/locale/ms/LC_MESSAGES/gnomeicu.mo
+share/locale/nb/LC_MESSAGES/gnomeicu.mo
+share/locale/ne/LC_MESSAGES/gnomeicu.mo
 share/locale/nl/LC_MESSAGES/gnomeicu.mo
 share/locale/nn/LC_MESSAGES/gnomeicu.mo
-share/locale/no/LC_MESSAGES/gnomeicu.mo
+share/locale/pa/LC_MESSAGES/gnomeicu.mo
 share/locale/pl/LC_MESSAGES/gnomeicu.mo
 share/locale/pt/LC_MESSAGES/gnomeicu.mo
 share/locale/pt_BR/LC_MESSAGES/gnomeicu.mo
 share/locale/ro/LC_MESSAGES/gnomeicu.mo
 share/locale/ru/LC_MESSAGES/gnomeicu.mo
+share/locale/rw/LC_MESSAGES/gnomeicu.mo
 share/locale/sk/LC_MESSAGES/gnomeicu.mo
 share/locale/sl/LC_MESSAGES/gnomeicu.mo
+share/locale/sq/LC_MESSAGES/gnomeicu.mo
 share/locale/sr/LC_MESSAGES/gnomeicu.mo
 share/locale/sr@Latn/LC_MESSAGES/gnomeicu.mo
 share/locale/sv/LC_MESSAGES/gnomeicu.mo
@@ -268,10 +272,11 @@ share/locale/tr/LC_MESSAGES/gnomeicu.mo
 share/locale/uk/LC_MESSAGES/gnomeicu.mo
 share/locale/vi/LC_MESSAGES/gnomeicu.mo
 share/locale/zh_CN/LC_MESSAGES/gnomeicu.mo
+share/locale/zh_HK/LC_MESSAGES/gnomeicu.mo
 share/locale/zh_TW/LC_MESSAGES/gnomeicu.mo
 share/omf/gnomeicu/gnomeicu-C.omf
 share/omf/gnomeicu/gnomeicu-uk.omf
-share/pixmaps/gnome-gnomeicu.png
+share/pixmaps/gnomeicu.png
 share/sounds/gnomeicu/Auth.wav
 share/sounds/gnomeicu/File.wav
 share/sounds/gnomeicu/Online.wav
