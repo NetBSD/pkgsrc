@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.849 2007/04/15 21:41:56 agc Exp $
+$NetBSD: CHANGES-2007,v 1.850 2007/04/15 21:47:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkg_chk to 1.84 [abs 2007-04-15]
 	Added devel/gflib version 20030604 [agc 2007-04-15]
 	Added devel/rscode version 1.0 [agc 2007-04-15]
+	Updated devel/scmgit to 1.5.1.1 [wiz 2007-04-15]
