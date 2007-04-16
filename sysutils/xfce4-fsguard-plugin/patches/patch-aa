@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2007/04/12 09:55:16 martti Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/16 18:27:49 joerg Exp $
 
---- panel-plugin/fsguard.c.orig	2006-09-07 10:10:41.000000000 +0000
-+++ panel-plugin/fsguard.c	2006-09-07 10:11:25.000000000 +0000
-@@ -43,6 +43,9 @@
+--- panel-plugin/fsguard.c.orig	2005-10-11 07:29:27.000000000 +0000
++++ panel-plugin/fsguard.c
+@@ -39,10 +39,13 @@
+ #include <sys/stat.h>
+ #if defined(__linux__)
+ #include <sys/vfs.h>
+-#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #include <sys/param.h>
  #include <sys/mount.h>
  #endif
