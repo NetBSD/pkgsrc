@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.851 2007/04/16 06:51:53 abs Exp $
+$NetBSD: CHANGES-2007,v 1.852 2007/04/16 16:12:19 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1651,3 +1651,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/gflib version 20030604 [agc 2007-04-15]
 	Added devel/rscode version 1.0 [agc 2007-04-15]
 	Updated devel/scmgit to 1.5.1.1 [wiz 2007-04-15]
+	Updated sysutils/bacula to 2.0.3 [ghen 2007-04-16]
+	Updated sysutils/bacula-clientonly to 2.0.3 [ghen 2007-04-16]
+	Updated sysutils/bacula-gnome-console to 2.0.3 [ghen 2007-04-16]
+	Updated sysutils/bacula-tray-monitor to 2.0.3 [ghen 2007-04-16]
+	Updated sysutils/bacula-wx-console to 2.0.3 [ghen 2007-04-16]
