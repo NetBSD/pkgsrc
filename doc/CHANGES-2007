@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.853 2007/04/16 18:42:48 abs Exp $
+$NetBSD: CHANGES-2007,v 1.854 2007/04/16 23:22:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/bacula-tray-monitor to 2.0.3 [ghen 2007-04-16]
 	Updated sysutils/bacula-wx-console to 2.0.3 [ghen 2007-04-16]
 	Updated pkgtools/pkg_chk to 1.85 [abs 2007-04-16]
+	Updated www/opera to 9.20 [xtraeme 2007-04-16]
