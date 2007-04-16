@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/04/16 16:56:46 joerg Exp $
+
+--- configure.orig	2007-04-16 16:13:21.000000000 +0000
++++ configure
+@@ -28900,7 +28900,7 @@ fi
+     echo "$as_me:$LINENO: checking for operating system support" >&5
+ echo $ECHO_N "checking for operating system support... $ECHO_C" >&6
+   case "$target_os" in
+-  dragonfly*|freebsd*|netbsd*|openbsd*|darwin*)
++  freebsd*|netbsd*|openbsd*|darwin*)
+         ac_bm_thunar_vfs_os_impl=bsd
+     ;;
+ 
