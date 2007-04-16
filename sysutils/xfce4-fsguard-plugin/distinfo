@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/04/12 09:55:16 martti Exp $
+$NetBSD: distinfo,v 1.5 2007/04/16 18:27:49 joerg Exp $
 
 SHA1 (xfce4-fsguard-plugin-0.3.0.tar.bz2) = 63241ada67681eff66f269bfd53d6d6b11a37d4b
 RMD160 (xfce4-fsguard-plugin-0.3.0.tar.bz2) = 7989c2209b0f363cc4a2ac778d8ea627fa22378e
 Size (xfce4-fsguard-plugin-0.3.0.tar.bz2) = 113601 bytes
-SHA1 (patch-aa) = 7d34aa74ab207c47a8f1208519089e42f8b97ba4
+SHA1 (patch-aa) = 4057cfb11a39e822ca3cca304c974987aa002048
