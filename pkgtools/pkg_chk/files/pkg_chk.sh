@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.45 2007/04/15 21:34:49 abs Exp $
+# $Id: pkg_chk.sh,v 1.46 2007/04/16 18:42:21 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -484,6 +484,7 @@ pkg_install()
     PKGDIR=$2
     INSTALL=$3
 
+    FAIL=
     if [ -d $PKG_DBDIR/$PKGNAME ];then
 	msg "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" ] && is_binary_available $PKGNAME; then
