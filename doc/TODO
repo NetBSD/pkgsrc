@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6255 2007/04/15 22:09:59 wiz Exp $
+$NetBSD: TODO,v 1.6256 2007/04/16 16:12:59 ghen Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,7 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o baci-20040415
-	o bacula-2.0.3
+	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.3.14
 	o base64-1.4
