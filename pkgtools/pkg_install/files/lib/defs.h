@@ -1,4 +1,4 @@
-/* $NetBSD: defs.h,v 1.5 2006/04/24 13:52:05 dillo Exp $ */
+/* $NetBSD: defs.h,v 1.6 2007/04/16 12:55:35 joerg Exp $ */
 
 /*
  * Copyright (c) 1999-2000 Alistair G. Crooks.  All rights reserved.
