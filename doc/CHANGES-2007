@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.854 2007/04/16 23:22:33 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.855 2007/04/16 23:26:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1658,3 +1658,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/bacula-wx-console to 2.0.3 [ghen 2007-04-16]
 	Updated pkgtools/pkg_chk to 1.85 [abs 2007-04-16]
 	Updated www/opera to 9.20 [xtraeme 2007-04-16]
+	Updated misc/xchm to 1.13 [wiz 2007-04-16]
