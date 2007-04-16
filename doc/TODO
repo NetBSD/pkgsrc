@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6257 2007/04/16 23:22:33 xtraeme Exp $
+$NetBSD: TODO,v 1.6258 2007/04/16 23:26:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1299,7 +1299,6 @@ Suggested package updates
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
 	o xchat-2.8.2
-	o xchm-1.12
 	o xcircuit-3.6.85
 	o xdaliclock-2.23
 	o xdelta-3.0e
