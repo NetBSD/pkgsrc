@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2007/04/16 18:20:18 joerg Exp $
+
+--- configure.in.orig	2007-04-16 16:44:55.000000000 +0000
++++ configure.in
+@@ -44,6 +44,9 @@ dnl *** Check for kvm, needed for BSD **
+ dnl *************************************
+ AC_CHECK_LIB([kvm], [kvm_open])
+ 
++dnl *** Check for kinfo, needed for DragonFly ***
++AC_CHECK_LIB([kinfo], [kinfo_get_sched_cputime])
++
+ dnl **********************************
+ dnl *** Check for standard headers ***
+ dnl **********************************
