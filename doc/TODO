@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6258 2007/04/16 23:26:22 wiz Exp $
+$NetBSD: TODO,v 1.6259 2007/04/16 23:31:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -510,6 +510,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.1.5
+	o gnome2-utils-2.18.1
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.3
 	o gnuradio-audio-jack-3.0.3
@@ -952,8 +953,7 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
-	o parrot-0.4.4 [pkg/33736]
-	o parrot-0.4.7
+	o parrot-0.4.10 [pkg/36157]
 	o pbzip2-1.0.1
 	o pcal-4.8
 	o pciids-20070322
@@ -1030,6 +1030,7 @@ Suggested package updates
 	o putty-0.59
 	o puzzle-5.2
 	o pwlib-1.10.3 [pkgsrc-wip 1.10.0]
+	o pwlib-1.10.7
 	o pxe-1.4.2
 	o py-FourSuite-1.0.2
 	o py-GeoIP-1.2.1
@@ -1280,6 +1281,7 @@ Suggested package updates
 	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
+	o wesnoth-1.2.4
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmii-3.5.1
@@ -1362,7 +1364,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.29
+	o zile-2.2.30
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.7
