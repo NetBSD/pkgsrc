@@ -1,4 +1,4 @@
-# $NetBSD $
+# $NetBSD: hp.mk,v 1.2 2007/04/17 11:09:28 tnn Exp $
 #
 # This is the compiler definition for the HP-UX C/aC++ compilers.
 #
