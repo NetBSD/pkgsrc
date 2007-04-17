@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6259 2007/04/16 23:31:39 wiz Exp $
+$NetBSD: TODO,v 1.6260 2007/04/17 07:50:00 obache Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,6 @@ Suggested package updates
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
-	o p5-HTTP-Server-Simple-0.27
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
