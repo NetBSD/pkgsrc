@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/04/09 12:50:20 shannonjr Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/17 13:15:08 joerg Exp $
 #
 
 DISTNAME=		prewikka-${VERSION}
@@ -17,6 +17,8 @@ HOMEPAGE=		http://prelude-ids.org/download/releases/
 COMMENT=		Prelude-IDS console
 
 DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
+
+USE_TOOLS+=		msgfmt
 
 .include "../../mk/bsd.prefs.mk"
 
