@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.858 2007/04/17 09:22:37 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.859 2007/04/17 10:33:04 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1664,3 +1664,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/gtkhtml314 version 3.14.1 [wiz 2007-04-17]
 	Updated www/p5-HTTP-Server-Simple to 0.27 [obache 2007-04-17]
 	Updated devel/p5-Class-Accessor to 0.30 [hiramatsu 2007-04-17]
+	Removed mail/sendmail812 [jnemeth 2007-04-17]
+	Moved mail/sendmail to mail/sendmail813 [jnemeth 2007-04-17]
