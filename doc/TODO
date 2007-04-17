@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6262 2007/04/17 21:58:19 wiz Exp $
+$NetBSD: TODO,v 1.6263 2007/04/17 22:04:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1230,7 +1230,6 @@ Suggested package updates
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
-	o transcode-1.0.3
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
