@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+#
+# Makefile fragment shared with libmilter
+#
+
+DISTNAME=	sendmail.${DIST_VERS}
+CATEGORIES=	mail
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
+		ftp://ftp.sendmail.org/pub/sendmail/past-releases/ \
+		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
+		ftp://ftp.ayamura.org/pub/sendmail/
+
+MAINTAINER=	jnemeth@NetBSD.org
+HOMEPAGE=	http://www.sendmail.org/
+
+LICENSE=	sendmail-license
+
+DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail813/distinfo
+FILESDIR?=	${.CURDIR}/../../mail/sendmail813/files
+PATCHDIR?=	${.CURDIR}/../../mail/sendmail813/patches
+
+DIST_VERS=	8.13.8
+
+MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
+		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
+		BUILDLINK_DIR=${BUILDLINK_DIR:Q} \
+		SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
+SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
+
+BUILD_DEFS+=	SMRSH_CMDDIR
+
+WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
+USE_TOOLS+=	gm4
+MAKE_ENV+=	M4=${TOOLS_M4:Q}
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
+
+.PHONY: make-sendmail-siteconfig
+make-sendmail-siteconfig:
+	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
+	${CHMOD} +w ${SITECONFIG}
+
+.if !empty(PKG_OPTIONS:Minet6)
+	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
+.  if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS" && ${OPSYS} != "DragonFly"
+	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
+.  endif
+.endif
+	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
