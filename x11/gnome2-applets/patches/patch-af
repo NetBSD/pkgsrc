@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2007/04/17 17:59:07 drochner Exp $
+
+--- ./stickynotes/pixmaps/Makefile.in.orig	2007-04-17 18:13:05.000000000 +0200
++++ ./stickynotes/pixmaps/Makefile.in
+@@ -563,7 +563,7 @@ install-data-local:
+ 	for icon in $(icons); do \
+ 		SIZE=`echo $$icon | cut -d. -f2`; \
+ 		FILE=`echo $$icon | cut -d. -f1,3`; \
+-		if [ "$$SIZE" == "svg" ]; then \
++		if [ "$$SIZE" = "svg" ]; then \
+ 			SIZE="scalable"; \
+ 			FILE="$$FILE.svg"; \
+ 		else \
