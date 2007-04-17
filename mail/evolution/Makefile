@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2007/04/13 17:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2007/04/17 11:29:42 drochner Exp $
 
 DISTNAME=		evolution-2.10.1
 CATEGORIES=		mail time gnome
@@ -136,7 +136,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml38/buildlink3.mk"
+.include "../../www/gtkhtml314/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
