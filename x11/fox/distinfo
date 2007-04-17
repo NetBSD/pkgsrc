@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2007/04/13 05:45:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.15 2007/04/17 21:32:06 joerg Exp $
 
 SHA1 (fox-1.6.25.tar.gz) = 1811e838cdccb66c259bc94377f9d1097a307bff
 RMD160 (fox-1.6.25.tar.gz) = 41951a19e46cdb5a7989cd9ba2a2745552e098d5
 Size (fox-1.6.25.tar.gz) = 4193062 bytes
+SHA1 (patch-aa) = 1221a97f498a0df9ed35cb5eda8c879a98aff798
