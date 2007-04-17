@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/01/25 21:27:48 reed Exp $
+# $NetBSD: Makefile,v 1.47 2007/04/17 22:16:00 adrianp Exp $
 
 .include "Makefile.common"
 
@@ -28,6 +28,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	YES
+CONFIGURE_ARGS+=	--disable-mmx
 
 .if empty(PKG_BUILD_OPTIONS.gtk2+:Mquartz)
 LDFLAGS.Darwin+=	-lX11
