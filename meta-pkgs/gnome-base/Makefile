@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/04/15 11:15:22 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/04/17 17:48:47 drochner Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -54,7 +54,7 @@ DEPENDS+=	libxklavier>=3.0:../../x11/libxklavier
 DEPENDS+=	libsoup-devel>=2.2.96:../../net/libsoup-devel
 DEPENDS+=	libwnck>=2.18.0:../../devel/libwnck
 DEPENDS+=	gail>=1.18.0:../../devel/gail
-DEPENDS+=	gtkhtml38>=3.14.1:../../www/gtkhtml38
+DEPENDS+=	gtkhtml314>=3.14.1:../../www/gtkhtml314
 DEPENDS+=	gtk2-engines>=2.10.1:../../x11/gtk2-engines
 DEPENDS+=	scrollkeeper>=0.3.14:../../textproc/scrollkeeper
 DEPENDS+=	gnome-desktop>=2.18.1:../../x11/gnome-desktop
