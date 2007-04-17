@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/04/13 23:24:44 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2007/04/17 21:34:14 joerg Exp $
 
 SHA1 (Glib-1.144.tar.gz) = 38a7870501b49dee6676e055343ce6a13cfe2422
 RMD160 (Glib-1.144.tar.gz) = 1cd1c7d7863bbac8327c9e3594453d1109ce018a
 Size (Glib-1.144.tar.gz) = 242230 bytes
+SHA1 (patch-aa) = 230ca0448b73bb75264e1d7e2be9beddcac811a3
