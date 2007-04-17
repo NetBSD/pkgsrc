@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:41:00 agc Exp $
-
-SHA1 (xfce4-showdesktop-plugin-0.4.0.tar.gz) = 9b902cc43ecb6bf37ed08ba3ab0d0b237a9b5b79
-RMD160 (xfce4-showdesktop-plugin-0.4.0.tar.gz) = e0dd63eb077fcfd58833ba325bac7ac76e79d9d6
-Size (xfce4-showdesktop-plugin-0.4.0.tar.gz) = 319275 bytes
-SHA1 (patch-aa) = 844b8dd954a0e34549f7edfa452f991450503e03
