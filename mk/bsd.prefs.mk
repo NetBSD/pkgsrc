@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.247 2007/04/14 14:17:49 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.248 2007/04/17 10:48:29 tnn Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -56,7 +56,7 @@ CUT=echo Unknown
 .endif
 
 .if !defined(OPSYS)
-OPSYS!=			${UNAME} -s | tr -d /-
+OPSYS=			${:!${UNAME} -s!:S/-//g:S/\///g}
 MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
 
