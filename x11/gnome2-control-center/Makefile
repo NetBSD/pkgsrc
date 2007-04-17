@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2007/04/11 17:48:09 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2007/04/17 15:59:50 drochner Exp $
 #
 
 DISTNAME=	control-center-2.18.1
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--enable-aboutme
 CONFIGURE_ARGS+=	--with-gstreamer=0.10
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
 
@@ -30,6 +29,7 @@ PKGCONFIG_OVERRIDE+=	libwindow-settings/gnome-window-settings-2.0.pc
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
+INSTALL_MAKE_FLAGS+=	menudir=${PREFIX}/share/examples/${PKGBASE}
 
 GCONF2_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
@@ -39,13 +39,13 @@ GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF2_SCHEMAS+=	themus.schemas
 GCONF2_SCHEMAS+=	fontilus.schemas
 
-PKG_SYSCONFSUBDIR=	gnome-vfs-2.0/modules
-
 EGDIR=			${PREFIX}/share/examples/gnome2-control-center
 CONF_FILES=		${EGDIR}/theme-method.conf \
-			${PKG_SYSCONFDIR}/theme-method.conf
+			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/theme-method.conf
 CONF_FILES+=		${EGDIR}/font-method.conf \
-			${PKG_SYSCONFDIR}/font-method.conf
+			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/font-method.conf
+CONF_FILES+=		${EGDIR}/gnomecc.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/gnomecc.menu
 
 BUILDLINK_API_DEPENDS.glib2=	glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gstreamer0.10=		gstreamer0.10>=0.10.1.2
