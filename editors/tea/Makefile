@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/14 04:49:08 reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/17 13:13:42 joerg Exp $
 #
 
 DISTNAME=		tea-16.0.5
@@ -14,7 +14,7 @@ COMMENT=		Powerful, easy-to-use text editor for Gtk2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 
 .include "options.mk"
 
