@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.21 2007/04/11 18:28:13 drochner Exp $
-${BATTSTAT}etc/sound/events/battstat_applet.soundlist
+@comment $NetBSD: PLIST,v 1.22 2007/04/17 17:59:07 drochner Exp $
+bin/invest-chart
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-prefs.h
 include/libgweather/weather.h
@@ -10,6 +10,7 @@ lib/bonobo/servers/GNOME_CharpickerApplet.server
 lib/bonobo/servers/GNOME_DriveMountApplet.server
 lib/bonobo/servers/GNOME_GWeatherApplet_Factory.server
 lib/bonobo/servers/GNOME_GeyesApplet.server
+lib/bonobo/servers/GNOME_GtikApplet.server
 lib/bonobo/servers/GNOME_MailcheckApplet_Factory.server
 lib/bonobo/servers/GNOME_MiniCommanderApplet.server
 lib/bonobo/servers/GNOME_MixerApplet.server
@@ -18,19 +19,46 @@ lib/bonobo/servers/GNOME_NullApplet_Factory.server
 lib/bonobo/servers/GNOME_Panel_TrashApplet.server
 lib/bonobo/servers/GNOME_Panel_WirelessApplet.server
 lib/bonobo/servers/GNOME_StickyNotesApplet.server
+lib/bonobo/servers/Invest_Applet.server
 lib/libgweather.la
 lib/pkgconfig/gweather.pc
+${PYSITELIB}/invest/__init__.py
+${PYSITELIB}/invest/__init__.pyc
+${PYSITELIB}/invest/__init__.pyo
+${PYSITELIB}/invest/about.py
+${PYSITELIB}/invest/about.pyc
+${PYSITELIB}/invest/about.pyo
+${PYSITELIB}/invest/applet.py
+${PYSITELIB}/invest/applet.pyc
+${PYSITELIB}/invest/applet.pyo
+${PYSITELIB}/invest/chart.py
+${PYSITELIB}/invest/chart.pyc
+${PYSITELIB}/invest/chart.pyo
+${PYSITELIB}/invest/defs.py
+${PYSITELIB}/invest/defs.pyc
+${PYSITELIB}/invest/defs.pyo
+${PYSITELIB}/invest/preferences.py
+${PYSITELIB}/invest/preferences.pyc
+${PYSITELIB}/invest/preferences.pyo
+${PYSITELIB}/invest/quotes.py
+${PYSITELIB}/invest/quotes.pyc
+${PYSITELIB}/invest/quotes.pyo
+${PYSITELIB}/invest/widgets.py
+${PYSITELIB}/invest/widgets.pyc
+${PYSITELIB}/invest/widgets.pyo
 libexec/accessx-status-applet
 ${BATTSTAT}libexec/battstat-applet-2
 libexec/charpick_applet2
 libexec/drivemount_applet2
 libexec/geyes_applet2
 libexec/gweather-applet-2
+libexec/invest-applet
 libexec/mixer_applet2
 libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
+share/applications/invest-chart.desktop
 ${BATTSTAT}share/examples/gnome-applets/sound/events/battstat_applet.soundlist
 ${BATTSTAT}share/gconf/schemas/battstat.schemas
 share/gconf/schemas/charpick.schemas
@@ -50,6 +78,7 @@ share/gnome-2.0/ui/GNOME_MixerApplet.xml
 share/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome-2.0/ui/GNOME_Panel_TrashApplet.xml
 share/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
+share/gnome-2.0/ui/Invest_Applet.xml
 share/gnome-applets/geyes/Bizarre/Bizarre-eye.png
 share/gnome-applets/geyes/Bizarre/Bizarre-pupil.png
 share/gnome-applets/geyes/Bizarre/config
@@ -69,10 +98,15 @@ share/gnome-applets/geyes/Tango/config
 share/gnome-applets/geyes/Tango/tango-eye.png
 share/gnome-applets/geyes/Tango/tango-pupil.png
 ${BATTSTAT}share/gnome-applets/glade/battstat_applet.glade
+share/gnome-applets/glade/financialchart.glade
+share/gnome-applets/glade/prefs-dialog.glade
 share/gnome-applets/glade/stickynotes.glade
 share/gnome-applets/glade/trashapplet.glade
 share/gnome-applets/gweather/Locations.xml
 share/gnome-applets/gweather/locations.dtd
+share/gnome-applets/invest-applet/invest-16.png
+share/gnome-applets/invest-applet/invest-button.png
+share/gnome-applets/invest-applet/invest.svg
 share/gnome/help/accessx-status/C/accessx-status.xml
 share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/C/figures/accessx-status-disabled.png
@@ -609,8 +643,8 @@ share/icons/hicolor/32x32/apps/gnome-eyes-applet.png
 share/icons/hicolor/32x32/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/48x48/apps/ax-applet.png
 share/icons/hicolor/48x48/apps/charpick.png
-share/icons/hicolor/svgxsvg/apps/gnome-eyes-applet
-share/icons/hicolor/svgxsvg/apps/gnome-sticky-notes-applet
+share/icons/hicolor/scalable/apps/gnome-eyes-applet.svg
+share/icons/hicolor/scalable/apps/gnome-sticky-notes-applet.svg
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
@@ -828,6 +862,7 @@ share/pixmaps/accessx-status-applet/sticky-shift-none.png
 share/pixmaps/accessx-status-applet/sticky-super-latched.png
 share/pixmaps/accessx-status-applet/sticky-super-locked.png
 share/pixmaps/accessx-status-applet/sticky-super-none.png
+share/pixmaps/invest-big.png
 share/pixmaps/stickynotes/close.png
 share/pixmaps/stickynotes/locked.png
 share/pixmaps/stickynotes/resize_se.png
@@ -934,6 +969,7 @@ share/xmodmap/xmodmap.yu
 ${BATTSTAT}@dirrm share/omf/battstat
 @dirrm share/omf/accessx-status
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
@@ -1127,6 +1163,7 @@ ${BATTSTAT}@dirrm share/gnome/help/battstat
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm share/gnome-applets/invest-applet
 @dirrm share/gnome-applets/gweather
 @dirrm share/gnome-applets/glade
 @dirrm share/gnome-applets/geyes/Tango
@@ -1142,5 +1179,7 @@ ${BATTSTAT}@dirrm share/gnome/help/battstat
 ${BATTSTAT}@dirrm share/examples/gnome-applets/sound/events
 ${BATTSTAT}@dirrm share/examples/gnome-applets/sound
 ${BATTSTAT}@dirrm share/examples/gnome-applets
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/invest
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/libgweather
