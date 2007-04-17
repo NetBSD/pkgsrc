@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/04/12 09:55:24 martti Exp $
+# $NetBSD: Makefile,v 1.20 2007/04/17 17:45:07 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -18,7 +18,6 @@ REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 USE_TOOLS+=		iceauth:run
-USE_TOOLS+=		intltool
 USE_DIRS+=		xdg-1.4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

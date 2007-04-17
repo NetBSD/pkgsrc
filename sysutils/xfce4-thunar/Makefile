@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/12 09:46:28 martti Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/17 17:45:07 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,7 +12,6 @@ COMMENT=	Xfce file manager
 #DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_DIRS+=	xdg-1.2
-USE_TOOLS+=	intltool pkg-config
 
 PKGCONFIG_OVERRIDE+=	thunar-vfs/thunar-vfs-1.pc.in
 PKGCONFIG_OVERRIDE+=	thunarx/thunarx-1.pc.in
