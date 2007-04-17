@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2007/04/01 21:33:05 tron Exp $
+# $NetBSD: Makefile,v 1.121 2007/04/17 17:04:00 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -99,12 +99,6 @@ PLIST_SUBST+=		SHLIB_MAJOR=${OPENSSL_VERS:C/\..*$//}
 PKG_SYSCONFDIR.openssl?=	/etc/openssl
 .endif
 
-.if ${OPSYS} == "Darwin"
-.include "../../devel/dlcompat/buildlink3.mk"
-
-LDFLAGS+=	${BUILDLINK_LDFLAGS.dlcompat}
-.endif
-
 PKG_SYSCONFSUBDIR=	openssl
 CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
@@ -128,4 +122,5 @@ pre-configure:
 	done
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
-.include  "../../mk/bsd.pkg.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
