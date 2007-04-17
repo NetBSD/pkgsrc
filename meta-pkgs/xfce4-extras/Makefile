@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/04/17 18:20:06 martti Exp $
+# $NetBSD: Makefile,v 1.23 2007/04/17 18:42:24 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -30,7 +30,7 @@ do-install:
 .include "../../misc/xfce4-weather-plugin/buildlink3.mk"
 .include "../../net/xfce4-wavelan-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-cpugraph-plugin/buildlink3.mk"
-.if ${OPSYS} != "DragonFly"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
 .include "../../sysutils/xfce4-diskperf-plugin/buildlink3.mk"
 .endif
 .include "../../sysutils/xfce4-fsguard-plugin/buildlink3.mk"
