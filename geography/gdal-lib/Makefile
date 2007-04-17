@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/24 00:19:29 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/17 01:04:44 gdt Exp $
 #
 
 DISTNAME=		gdal-1.4.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.gdal.org/dl/
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
+
+MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran
