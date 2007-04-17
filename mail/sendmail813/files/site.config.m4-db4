@@ -1,0 +1,5 @@
+# $NetBSD: site.config.m4-db4,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+
+# enable db4
+APPENDDEF(`confENVDEF', `-DNEWDB -I${BUILDLINK_DIR}/include/db4')
+APPENDDEF(`confLIBS', `-ldb4')

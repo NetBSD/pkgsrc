@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+
+To use "${PKGNAME}" as the system's mail transport agent you have
+to install "${PREFIX}/share/examples/sendmail/mailer.conf" as global
+mailwrapper configuration file.  The command below will do that for you:
+
+ln -fs ${PREFIX}/share/examples/sendmail/mailer.conf /etc/mailer.conf
+
+If you are changing the database format used by sendmail you must run
+"newaliases" and "makemap" in order to re-create the databases.
+
+You may also need to install (and/or customize) the configuration files
+for Sendmail before it will be operational.  "cd" to the directory
+
+    ${PREFIX}/share/sendmail/cf
+
+and read the file README for instructions on creating and installing
+configuration files.
+
+===========================================================================

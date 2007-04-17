@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-v6,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+
+# enable IPv6 
+APPENDDEF(`confENVDEF', `-DNETINET6')
