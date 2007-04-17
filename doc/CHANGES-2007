@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.855 2007/04/16 23:26:22 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.856 2007/04/17 06:32:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1622,6 +1622,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Event-ExecFlow to 0.63 [xtraeme 2007-04-14]
 	Updated multimedia/dvdrip to 0.98.6 [xtraeme 2007-04-14]
 	Updated devel/p5-AnyEvent to 2.52 [xtraeme 2007-04-14]
+	Downgraded multimedia/dvdrip to 0.98.1 [xtraeme 2007-04-14]
 	Added devel/p5-Class-Accessor-Chained version 0.01 [kleink 2007-04-14]
 	Added textproc/p5-Text-vFile-asData version 0.05 [kleink 2007-04-14]
 	Added textproc/p5-Text-vCard version 2.00 [kleink 2007-04-14]
@@ -1659,3 +1660,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_chk to 1.85 [abs 2007-04-16]
 	Updated www/opera to 9.20 [xtraeme 2007-04-16]
 	Updated misc/xchm to 1.13 [wiz 2007-04-16]
+	Downgraded www/gtkhtml38 to 3.12.3nb1 [wiz 2007-04-17]
+	Added www/gtkhtml314 version 3.14.1 [wiz 2007-04-17]
