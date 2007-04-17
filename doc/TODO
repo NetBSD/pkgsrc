@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6260 2007/04/17 07:50:00 obache Exp $
+$NetBSD: TODO,v 1.6261 2007/04/17 15:04:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ Suggested package updates
 	o chasen-2.4.0
 	o chemtool-1.6.9
 	o cherokee-0.5.6
-	o chicken-2.60
 	o chkrootkit-0.47
 	o chrony-1.21
 	o cint-5.16

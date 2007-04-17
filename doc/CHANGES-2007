@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.860 2007/04/17 13:52:57 martti Exp $
+$NetBSD: CHANGES-2007,v 1.861 2007/04/17 15:04:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed sysutils/xfce4-showdesktop-plugin [martti 2007-04-17]
 	Removed x11/xfce4-taskbar-plugin [martti 2007-04-17]
 	Removed x11/xfce4-windowlist-plugin [martti 2007-04-17]
+	Updated lang/chicken to 2.60 [obache 2007-04-17]
