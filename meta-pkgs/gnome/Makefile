@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/04/15 21:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2007/04/17 21:57:24 wiz Exp $
 
 DISTNAME=	gnome-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -62,7 +62,7 @@ DEPENDS+=	evolution-exchange>=2.10.1:../../mail/evolution-exchange
 #DEPENDS+=	gnome-volume-manager>=2.17.0:../../sysutils/gnome-volume-manager
 #DEPENDS+=	sound-juicer>=2.16.3:../../audio/sound-juicer
 #DEPENDS+=	ekiga>=2.0.9:../../net/ekiga
-DEPENDS+=	${PYPKGPREFIX}-gnome-desktop>=2.18.0:../../x11/py-gnome2-desktop
+DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.18.0:../../x11/py-gnome2-desktop
 #DEPENDS+=	gnome-power-manager-2.16.0.tar.bz2
 #DEPENDS+=	gnome-sharp-2.16.0.tar.bz2
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
