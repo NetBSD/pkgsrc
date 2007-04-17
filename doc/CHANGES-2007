@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.861 2007/04/17 15:04:44 obache Exp $
+$NetBSD: CHANGES-2007,v 1.862 2007/04/17 18:52:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1672,3 +1672,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed x11/xfce4-taskbar-plugin [martti 2007-04-17]
 	Removed x11/xfce4-windowlist-plugin [martti 2007-04-17]
 	Updated lang/chicken to 2.60 [obache 2007-04-17]
+	Updated multimedia/transcode to 1.0.3 [xtraeme 2007-04-17]
