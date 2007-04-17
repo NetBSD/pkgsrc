@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2007/01/02 13:49:01 obache Exp $
+$NetBSD: distinfo,v 1.20 2007/04/17 15:03:30 obache Exp $
 
-SHA1 (chicken-2.5.tar.gz) = 5f0e160d5b803d4b51c649a3028124008507d4b6
-RMD160 (chicken-2.5.tar.gz) = 12beb80e77b9468d90605a27c96555053b3af9a3
-Size (chicken-2.5.tar.gz) = 3013368 bytes
-SHA1 (patch-aa) = 3b84cfb79f4a5403f114373ae8d3f4298276eda1
-SHA1 (patch-ab) = f21f147f13eb3e6a1e4eefdd51b7b24361e0ecf7
-SHA1 (patch-ac) = b242e53311a44d581033bdca146dd5d2f4be441f
+SHA1 (chicken-2.6.tar.gz) = 4010d21db1b0d2df3b3ab392503be4bb19073bbd
+RMD160 (chicken-2.6.tar.gz) = 0af0d79e85ee017d2ad2bfde79f4561f257c852c
+Size (chicken-2.6.tar.gz) = 3517981 bytes
+SHA1 (patch-aa) = 32f4c1d4f2fd9f047c0e10cc47772df140686cbb
+SHA1 (patch-ab) = 668666e4c288cd778ddadd0ac29a40dc47f68135
+SHA1 (patch-ac) = 77c8c3665b492de1dda379d70f1bbb6c0c39d337

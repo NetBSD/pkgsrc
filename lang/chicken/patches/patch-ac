@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
+$NetBSD: patch-ac,v 1.7 2007/04/17 15:03:30 obache Exp $
 
---- configure.orig	2006-10-17 08:38:50.000000000 +0200
+--- configure.orig	2007-03-01 10:49:51.000000000 +0000
 +++ configure
-@@ -4099,13 +4099,13 @@ darwin* | rhapsody*)
+@@ -4090,13 +4090,13 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
        lt_cv_file_magic_cmd=/usr/bin/file
        lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
        ;;
-@@ -7564,7 +7564,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7555,7 +7555,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -8142,7 +8142,7 @@ kfreebsd*-gnu)
+@@ -8133,7 +8133,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -36,7 +36,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -10522,7 +10522,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10513,7 +10513,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -11229,7 +11229,7 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11220,7 +11220,7 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -54,7 +54,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
  	# FreeBSD uses GNU C++
  	;;
        hpux9* | hpux10* | hpux11*)
-@@ -11840,7 +11840,7 @@ kfreebsd*-gnu)
+@@ -11831,7 +11831,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -14411,7 +14411,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14402,7 +14402,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -72,7 +72,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
        archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec_F77='-R$libdir'
        hardcode_direct_F77=yes
-@@ -14989,7 +14989,7 @@ kfreebsd*-gnu)
+@@ -14980,7 +14980,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -81,7 +81,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -16758,7 +16758,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -16749,7 +16749,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -90,7 +90,7 @@ $NetBSD: patch-ac,v 1.6 2007/01/02 13:49:01 obache Exp $
        archive_cmds_GCJ='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec_GCJ='-R$libdir'
        hardcode_direct_GCJ=yes
-@@ -17336,7 +17336,7 @@ kfreebsd*-gnu)
+@@ -17327,7 +17327,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  

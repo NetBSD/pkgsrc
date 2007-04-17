@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/01/02 13:49:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/17 15:03:30 obache Exp $
 bin/chicken
 bin/chicken-profile
 bin/chicken-setup
@@ -16,7 +16,6 @@ man/man1/chicken-setup.1
 man/man1/chicken.1
 man/man1/csc.1
 man/man1/csi.1
-share/chicken/banner.scm
 share/chicken/chicken-ffi-macros.scm
 share/chicken/chicken-more-macros.scm
 share/chicken/eval.exports
