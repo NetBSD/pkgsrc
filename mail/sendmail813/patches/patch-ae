@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+
+--- devtools/OS/SunOS.5.9.orig	Fri Mar 22 11:59:26 2002
++++ devtools/OS/SunOS.5.9	Mon Sep 16 15:11:10 2002
+@@ -10,6 +10,7 @@
+ define(`confENVDEF', `-DSOLARIS=20900 -DNETINET6')
+ define(`confSM_OS_HEADER', `sm_os_sunos')
+ define(`confLIBS', `-lsocket -lnsl')
++define(`confLDOPTS', `${LDFLAGS}')
+ define(`confMTCCOPTS', `-D_REENTRANT')
+ define(`confMTLDOPTS', `-lpthread')
+ define(`confMBINDIR', `/usr/lib')
