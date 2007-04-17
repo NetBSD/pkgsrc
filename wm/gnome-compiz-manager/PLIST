@@ -1,0 +1,72 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/17 21:44:41 drochner Exp $
+bin/compiz-tray-icon
+bin/gnome-compiz-preferences
+include/gnome-compiz-manager/gcm-application.h
+include/gnome-compiz-manager/gcm-classic-desktop.h
+include/gnome-compiz-manager/gcm-entry-shortcut.h
+include/gnome-compiz-manager/gcm-gl-color.h
+include/gnome-compiz-manager/gcm-gl-desktop.h
+include/gnome-compiz-manager/gcm-gl-option-gconf.h
+include/gnome-compiz-manager/gcm-gl-option.h
+include/gnome-compiz-manager/gcm-gl-plugin.h
+include/gnome-compiz-manager/gcm-page.h
+include/gnome-compiz-manager/gcm-plugin.h
+include/gnome-compiz-manager/gcm-xorg-config-device.h
+include/gnome-compiz-manager/gcm-xorg-config-files.h
+include/gnome-compiz-manager/gcm-xorg-config-parser.h
+include/gnome-compiz-manager/gcm-xorg-config-section.h
+include/gnome-compiz-manager/gcm-xorg-config-symbol.h
+include/gnome-compiz-manager/gcm-xorg.h
+lib/gnome-compiz-manager/gcp-page-desktop.plugin
+lib/gnome-compiz-manager/gcp-page-utility.plugin
+lib/gnome-compiz-manager/gcp-page-windows.plugin
+lib/gnome-compiz-manager/gcp-page-workspaces.plugin
+lib/gnome-compiz-manager/libgcp_page_desktop.la
+lib/gnome-compiz-manager/libgcp_page_utility.la
+lib/gnome-compiz-manager/libgcp_page_windows.la
+lib/gnome-compiz-manager/libgcp_page_workspaces.la
+lib/libgnome-compiz-manager.la
+lib/pkgconfig/gnome-compiz-manager.pc
+man/man1/compiz-tray-icon.1
+man/man1/gnome-compiz-preferences.1
+share/applications/gnome-compiz-preferences.desktop
+share/doc/gnome-compiz-manager/AUTHORS
+share/doc/gnome-compiz-manager/COPYING
+share/doc/gnome-compiz-manager/COPYING.GPL
+share/doc/gnome-compiz-manager/COPYING.LGPL
+share/doc/gnome-compiz-manager/ChangeLog
+share/doc/gnome-compiz-manager/INSTALL
+share/doc/gnome-compiz-manager/NEWS
+share/doc/gnome-compiz-manager/README
+share/gconf/schemas/gnome-compiz-preferences.schemas
+share/gnome-compiz-manager/display.svg
+share/gnome-compiz-manager/glade/desktop.png
+share/gnome-compiz-manager/glade/display.svg
+share/gnome-compiz-manager/glade/gcp-page-desktop.glade
+share/gnome-compiz-manager/glade/gcp-page-utility.glade
+share/gnome-compiz-manager/glade/gcp-page-windows.glade
+share/gnome-compiz-manager/glade/gcp-page-workspaces.glade
+share/gnome-compiz-manager/glade/gnome-compiz-preferences.glade
+share/gnome-compiz-manager/glade/logo.png
+share/gnome-compiz-manager/glade/logo24.png
+share/gnome-compiz-manager/glade/mouse.svg
+share/gnome-compiz-manager/gnome-compiz-manager.png
+share/gnome-compiz-manager/left-button-mouse.svg
+share/gnome-compiz-manager/left-button.svg
+share/gnome-compiz-manager/logo.png
+share/gnome-compiz-manager/logo24.png
+share/gnome-compiz-manager/logooff24.png
+share/gnome-compiz-manager/metacity24.png
+share/gnome-compiz-manager/middle-button-mouse.svg
+share/gnome-compiz-manager/middle-button.svg
+share/gnome-compiz-manager/mouse.svg
+share/gnome-compiz-manager/right-button-mouse.svg
+share/gnome-compiz-manager/right-button.svg
+share/locale/fr/LC_MESSAGES/gnome-compiz-manager.mo
+@dirrm share/gnome-compiz-manager/glade
+@dirrm share/gnome-compiz-manager
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/doc/gnome-compiz-manager
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/gnome-compiz-manager
+@dirrm include/gnome-compiz-manager

@@ -1,0 +1,5 @@
+Gnome Compiz Manager is small utility, which manage GL Desktop configuration
+on XGL/AiGLX. It's composed of two applications:
+=> compiz-tray-icon: it lets you load or unload the GL Desktop
+=> gnome-compiz-preferences: it lets you configure the plugins and options
+   related to your GL Desktop in a simple way
