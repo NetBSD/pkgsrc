@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2006/03/13 21:21:39 joerg Exp $
+$NetBSD: distinfo,v 1.10 2007/04/17 18:51:45 xtraeme Exp $
 
-SHA1 (transcode-1.0.2.tar.gz) = 831a55a0218913e43261eb614ccca34a0d1b3d0d
-RMD160 (transcode-1.0.2.tar.gz) = 5a07777093b3d395180396a662dc765c179cd687
-Size (transcode-1.0.2.tar.gz) = 2347861 bytes
+SHA1 (transcode-1.0.3.tar.bz2) = 80617acac039bbab66ae36f6e11469e3f759d59e
+RMD160 (transcode-1.0.3.tar.bz2) = f7c2db91be55c14a8e59eee4467a7f6a1bd73c83
+Size (transcode-1.0.3.tar.bz2) = 1987499 bytes
 SHA1 (patch-aa) = 01c2093ff606b4a0744dd0b8e5422277d081b8f2
 SHA1 (patch-ab) = ce8477442d9e9bb5680fef2aacd6e496f95a5ff2
 SHA1 (patch-ac) = 1e5fa05a1238b8e20f7f89a8f3d1c3cda55cbe49

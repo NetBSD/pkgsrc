@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.38 2007/03/08 09:07:41 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2007/04/17 18:51:45 xtraeme Exp $
 #
 
-DISTNAME=	transcode-1.0.2
-PKGREVISION=	10
+DISTNAME=	transcode-1.0.3
+#PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://dl.fkb.wormulon.net/transcode/ \
+MASTER_SITES=	http://fromani.exit1.org/ \
+		http://dl.fkb.wormulon.net/transcode/ \
 		http://dl.kel.wormulon.net/transcode/ \
 		http://kraymer.de/mirroring/ \
 		http://www.jakemsr.com/transcode/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.transcoding.org/
