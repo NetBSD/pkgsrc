@@ -1,0 +1,38 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
+
+--- smrsh/smrsh.8.orig	2004-08-06 04:55:35.000000000 +0100
++++ smrsh/smrsh.8
+@@ -39,7 +39,7 @@ Briefly,
+ .I smrsh
+ limits programs to be in a single directory,
+ by default
+-/usr/adm/sm.bin,
++@@SMRSH_CMDDIR@@,
+ allowing the system administrator to choose the set of acceptable commands,
+ and to the shell builtin commands ``exec'', ``exit'', and ``echo''.
+ It also rejects any commands with the characters
+@@ -56,7 +56,7 @@ so forwarding to ``/usr/ucb/vacation'',
+ and
+ ``vacation''
+ all actually forward to
+-``/usr/adm/sm.bin/vacation''.
++``@@SMRSH_CMDDIR@@/vacation''.
+ .PP
+ System administrators should be conservative about populating
+ the sm.bin directory.
+@@ -86,13 +86,9 @@ to adjust the default search path
+ (defaults to ``/bin:/usr/bin:/usr/ucb'')
+ and/or \-DSMRSH_CMDDIR=\e"\fIdir\fP\e"
+ to change the default program directory
+-(defaults to ``/usr/adm/sm.bin'').
++(defaults to ``@@SMRSH_CMDDIR@@'').
+ .SH FILES
+-/usr/adm/sm.bin \- default directory for restricted programs on most OSs
+-.PP
+-/var/adm/sm.bin \- directory for restricted programs on HP UX and Solaris
+-.PP
+-/usr/libexec/sm.bin \- directory for restricted programs on FreeBSD (>= 3.3) and DragonFly BSD
++@@SMRSH_CMDDIR@@ \- default directory for restricted programs
+ 
+ .SH SEE ALSO
+ sendmail(8)
