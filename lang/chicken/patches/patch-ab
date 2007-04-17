@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2007/01/02 13:49:01 obache Exp $
+$NetBSD: patch-ab,v 1.10 2007/04/17 15:03:30 obache Exp $
 
---- Makefile.in.orig	2006-10-17 08:38:48.000000000 +0200
+--- Makefile.in.orig	2007-03-01 10:49:50.000000000 +0000
 +++ Makefile.in
-@@ -1473,10 +1473,10 @@ regex.exports: $(regexexports)
+@@ -1841,10 +1841,10 @@ chicken-defaults.h: chicken-defaults.h.i
  
  # Install docs and sources.
  install-data-local:

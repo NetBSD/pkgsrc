@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2007/01/02 13:49:01 obache Exp $
+$NetBSD: patch-aa,v 1.12 2007/04/17 15:03:30 obache Exp $
 
---- Makefile.am.orig	2006-10-02 08:15:40.000000000 +0200
+--- Makefile.am.orig	2007-02-26 07:05:57.000000000 +0000
 +++ Makefile.am
-@@ -290,10 +290,10 @@ regex.exports: $(regexexports)
+@@ -298,10 +298,10 @@ pkgdata_DATA = chicken-more-macros.scm \
  
  # Install docs and sources.
  install-data-local:
