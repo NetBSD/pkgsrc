@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.7 2007/04/17 20:31:35 joerg Exp $
+
+--- Src/Gtk2/dasher_main.cpp.orig	2007-04-17 19:50:29.000000000 +0000
++++ Src/Gtk2/dasher_main.cpp
+@@ -1,5 +1,7 @@
+ #include "config.h"
+ 
++#include <unistd.h>
++
+ #include <gdk/gdk.h>
+ #include <gdk/gdkx.h>
+ #include <glade/glade.h>
