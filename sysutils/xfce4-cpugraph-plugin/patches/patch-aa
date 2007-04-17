@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.5 2007/04/17 13:05:08 joerg Exp $
+
+--- configure.ac.orig	2007-04-17 12:26:04.000000000 +0000
++++ configure.ac
+@@ -29,6 +29,9 @@ AC_PROG_INTLTOOL
+ dnl Check for standard header files
+ AC_HEADER_STDC
+ 
++dnl *** Check for kinfo, needed for DragonFly ***
++AC_CHECK_LIB([kinfo], [kinfo_get_sched_cputime])
++
+ dnl configure the panel plugin
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
+ 
