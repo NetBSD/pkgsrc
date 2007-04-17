@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/04/11 17:48:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/04/17 15:59:50 drochner Exp $
 bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
@@ -116,6 +116,7 @@ share/desktop-directories/font-method.directory
 share/desktop-directories/gnomecc.directory
 share/desktop-directories/theme-method.directory
 share/examples/gnome2-control-center/font-method.conf
+share/examples/gnome2-control-center/gnomecc.menu
 share/examples/gnome2-control-center/theme-method.conf
 share/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas
