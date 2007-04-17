@@ -65,6 +65,7 @@ djbware-errno-hack	Patch to #include <errno.h> for correctness.
 doc			Include the documentation.
 domainscale	
 drac			Enable DRAC support.
+dri			Enable Direct Rendering support.
 drupal-xmlservices	Enable XML-based services.
 dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
@@ -112,7 +113,6 @@ gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
 glpk	
-glx			Enable support for direct rendering.
 gnome	
 gnupg	
 gnuplot	
