@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/04/03 20:25:44 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2007/04/17 19:07:49 dillo Exp $
 
 DISTNAME=	xorg-server-1.2.0
 PKGREVISION=	2
@@ -22,11 +22,12 @@ USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-dri
 
-PKG_SUPPORTED_OPTIONS=	glx
+PKG_SUPPORTED_OPTIONS=	dri
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xorg-server
+PKG_OPTIONS_LEGACY_OPTS=glx:dri
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mglx)
+.if !empty(PKG_OPTIONS:Mdri)
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		MesaLib-6.5.2.tar.bz2
 SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
@@ -63,7 +64,7 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
-.if empty(PKG_OPTIONS:Mglx)
+.if empty(PKG_OPTIONS:Mdri)
 # for GLX we already have the Mesa source
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
