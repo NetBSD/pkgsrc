@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/04/12 09:55:11 martti Exp $
+# $NetBSD: Makefile,v 1.21 2007/04/17 13:50:07 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -39,14 +39,5 @@ do-install:
 .include "../../time/xfce4-datetime-plugin/buildlink3.mk"
 .include "../../x11/xfce4-clipman-plugin/buildlink3.mk"
 .include "../../x11/xfce4-notes-plugin/buildlink3.mk"
-
-## WHAT TO DO WITH THESE?
-# .include "../../graphics/xfce4-artwork/buildlink3.mk"
-
-## CURRENTLY NO SUPPORT FOR 4.4
-# .include "../../sysutils/xfce4-minicmd-plugin/buildlink3.mk"
-# .include "../../sysutils/xfce4-showdesktop-plugin/buildlink3.mk"
-# .include "../../x11/xfce4-taskbar-plugin/buildlink3.mk"
-# .include "../../x11/xfce4-windowlist-plugin/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
