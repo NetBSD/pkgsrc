@@ -112,6 +112,7 @@ gif			Enable GIF support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 glib1	
 glpk	
+glx			Enable support for direct rendering.
 gnome	
 gnupg	
 gnuplot	
