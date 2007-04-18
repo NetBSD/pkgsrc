@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6263 2007/04/17 22:04:55 wiz Exp $
+$NetBSD: TODO,v 1.6264 2007/04/18 14:13:43 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1198,7 +1198,6 @@ Suggested package updates
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
 	o sylpheed-claws-2.9.0 [now claws-mail]
-	o sylpheed-devel-2.4.0beta8
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
 	o tcpdpriv-0.9

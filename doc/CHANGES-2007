@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.862 2007/04/17 18:52:47 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.863 2007/04/18 14:13:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed x11/xfce4-windowlist-plugin [martti 2007-04-17]
 	Updated lang/chicken to 2.60 [obache 2007-04-17]
 	Updated multimedia/transcode to 1.0.3 [xtraeme 2007-04-17]
+	Updated mail/sylpheed-devel to 2.4.0rc [xtraeme 2007-04-18]
