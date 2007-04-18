@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/11 14:50:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/18 15:36:18 joerg Exp $
 #
 
 DISTNAME=	spamdyke-2.4.0
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 BUILD_TARGET=	openbsd
 .endif
 
