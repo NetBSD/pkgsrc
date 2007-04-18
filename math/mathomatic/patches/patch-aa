@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.17 2006/08/15 15:38:26 minskim Exp $
+$NetBSD: patch-aa,v 1.18 2007/04/18 21:09:13 minskim Exp $
 
---- makefile.orig	2006-07-23 03:22:54.000000000 -0700
+--- makefile.orig	2007-04-04 15:06:10.000000000 -0700
 +++ makefile
-@@ -7,8 +7,8 @@ CFLAGS		+= -O -DUNIX -DVERSION=\"$(VERSI
- LDFLAGS		+= -s
- LIBS		+= -lm
+@@ -8,8 +8,8 @@ LDFLAGS		+= -s # The default linker flag
+ LIBS		+= -lm # The default libraries to link.
  
+ # "make READLINE=1" to include readline support:
 -CFLAGS		+= $(READLINE:1=-DREADLINE)
 -LIBS		+= $(READLINE:1=-lreadline -lncurses)
 +CFLAGS		+= -DREADLINE
 +LIBS		+= -lreadline
  
+ # Install directories:
  prefix		?= /usr/local
- bindir		?= $(prefix)/bin
