@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.865 2007/04/18 21:10:04 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.866 2007/04/18 23:42:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1676,3 +1676,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed-devel to 2.4.0rc [xtraeme 2007-04-18]
 	Updated mail/gld to 1.7 [ghen 2007-04-18]
 	Updated math/mathomatic to 12.6.12 [minskim 2007-04-18]
+	Updated games/wesnoth to 1.2.4 [wiz 2007-04-18]
+	Updated mail/p5-MailTools to 1.76 [wiz 2007-04-18]
