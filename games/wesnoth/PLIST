@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/04/08 17:59:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/04/18 23:25:51 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/cs/man6/wesnoth.6
@@ -10,11 +10,14 @@ man/ja/man6/wesnoth.6
 man/man6/wesnoth.6
 man/nl/man6/wesnoth.6
 man/pt_BR/man6/wesnoth.6
+man/ru/man6/wesnoth.6
 man/sk/man6/wesnoth.6
 man/sv/man6/wesnoth.6
 share/wesnoth/data/COPYING.txt
 share/wesnoth/data/abilities.cfg
 share/wesnoth/data/about.cfg
+share/wesnoth/data/ais/parse.py
+share/wesnoth/data/ais/safe.py
 share/wesnoth/data/ais/sample.py
 share/wesnoth/data/amla.cfg
 share/wesnoth/data/animation-utils.cfg
@@ -133,13 +136,11 @@ share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/cockatrice-attack13
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/cockatrice-defend.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/cockatrice.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-defend.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-1.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-2.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-3.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-4.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-5.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee-6.png
-share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-ranged.png
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee1.png
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-melee2.png
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-ranged1.png
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-ranged2.png
+share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage-ranged3.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elder-mage.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elvish-high-lord-attack-sword-1.png
 share/wesnoth/data/campaigns/Heir_To_The_Throne/images/units/elvish-high-lord-attack-sword-2.png
@@ -1334,17 +1335,18 @@ share/wesnoth/data/tutorial/images/portraits/delfador.png
 share/wesnoth/data/tutorial/images/portraits/konrad.png
 share/wesnoth/data/tutorial/images/portraits/lisar.png
 share/wesnoth/data/tutorial/images/units/elder-mage-defend.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-1.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-2.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-3.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-4.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-5.png
-share/wesnoth/data/tutorial/images/units/elder-mage-melee-6.png
-share/wesnoth/data/tutorial/images/units/elder-mage-ranged.png
+share/wesnoth/data/tutorial/images/units/elder-mage-melee1.png
+share/wesnoth/data/tutorial/images/units/elder-mage-melee2.png
+share/wesnoth/data/tutorial/images/units/elder-mage-ranged1.png
+share/wesnoth/data/tutorial/images/units/elder-mage-ranged2.png
+share/wesnoth/data/tutorial/images/units/elder-mage-ranged3.png
 share/wesnoth/data/tutorial/images/units/elder-mage.png
-share/wesnoth/data/tutorial/images/units/human-junior-princess-attack.png
-share/wesnoth/data/tutorial/images/units/human-junior-princess-defend.png
-share/wesnoth/data/tutorial/images/units/human-junior-princess.png
+share/wesnoth/data/tutorial/images/units/human-princess-attack-1.png
+share/wesnoth/data/tutorial/images/units/human-princess-attack-2.png
+share/wesnoth/data/tutorial/images/units/human-princess-attack-3.png
+share/wesnoth/data/tutorial/images/units/human-princess-attack-4.png
+share/wesnoth/data/tutorial/images/units/human-princess-defend.png
+share/wesnoth/data/tutorial/images/units/human-princess.png
 share/wesnoth/data/tutorial/images/units/konrad-fighter-attack-1.png
 share/wesnoth/data/tutorial/images/units/konrad-fighter-attack-2.png
 share/wesnoth/data/tutorial/images/units/konrad-fighter-defend.png
@@ -4343,16 +4345,20 @@ share/wesnoth/images/units/human-magi/silver-mage-teleport7.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport8.png
 share/wesnoth/images/units/human-magi/silver-mage-teleport9.png
 share/wesnoth/images/units/human-magi/silver-mage.png
-share/wesnoth/images/units/human-magi/white-cleric+female-attack-melee1.png
-share/wesnoth/images/units/human-magi/white-cleric+female-attack-melee2.png
 share/wesnoth/images/units/human-magi/white-cleric+female-defend.png
+share/wesnoth/images/units/human-magi/white-cleric+female-mace-1.png
+share/wesnoth/images/units/human-magi/white-cleric+female-mace-2.png
+share/wesnoth/images/units/human-magi/white-cleric+female-mace-3.png
+share/wesnoth/images/units/human-magi/white-cleric+female-mace-4.png
 share/wesnoth/images/units/human-magi/white-cleric+female-magic-1.png
 share/wesnoth/images/units/human-magi/white-cleric+female-magic-2.png
 share/wesnoth/images/units/human-magi/white-cleric+female-magic-3.png
 share/wesnoth/images/units/human-magi/white-cleric+female.png
-share/wesnoth/images/units/human-magi/white-cleric-attack-melee1.png
-share/wesnoth/images/units/human-magi/white-cleric-attack-melee2.png
 share/wesnoth/images/units/human-magi/white-cleric-defend.png
+share/wesnoth/images/units/human-magi/white-cleric-mace-1.png
+share/wesnoth/images/units/human-magi/white-cleric-mace-2.png
+share/wesnoth/images/units/human-magi/white-cleric-mace-3.png
+share/wesnoth/images/units/human-magi/white-cleric-mace-4.png
 share/wesnoth/images/units/human-magi/white-cleric-magic-1.png
 share/wesnoth/images/units/human-magi/white-cleric-magic-2.png
 share/wesnoth/images/units/human-magi/white-cleric-magic-3.png
@@ -6060,6 +6066,8 @@ share/wesnoth/translations/zh_CN/LC_MESSAGES/wesnoth.mo
 @unexec ${RMDIR} %D/man/sv 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sk/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/ru 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/pt_BR/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/pt_BR 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/nl/man6 2>/dev/null || ${TRUE}
