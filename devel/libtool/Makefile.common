@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2007/04/04 18:09:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.70 2007/04/18 16:31:18 tnn Exp $
 
 ###########################################################################
 ###########################################################################
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 # The configure script doesn't seem to be working out the need for -p
 # or -B, so tell it
 #
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
