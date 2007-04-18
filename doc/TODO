@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6266 2007/04/18 21:10:04 minskim Exp $
+$NetBSD: TODO,v 1.6267 2007/04/18 23:42:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -893,7 +893,6 @@ Suggested package updates
 	o p5-Mail-Audit-2.218
 	o p5-Mail-ListDetector-1.01
 	o p5-Mail-Webmail-Gmail-1.09
-	o p5-MailTools-1.76
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Install-0.65
@@ -1276,7 +1275,6 @@ Suggested package updates
 	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
-	o wesnoth-1.2.4
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmii-3.5.1
