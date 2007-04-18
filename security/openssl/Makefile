@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2007/04/17 17:04:00 tron Exp $
+# $NetBSD: Makefile,v 1.122 2007/04/18 14:11:33 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -103,6 +103,8 @@ PKG_SYSCONFSUBDIR=	openssl
 CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
+
+DL_AUTO_VARS=		yes
 
 # Some shells don't accept empty word lists in for loops.  For those
 # Makefiles where this occurs, edit the file so that we avoid running
