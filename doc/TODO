@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6264 2007/04/18 14:13:43 xtraeme Exp $
+$NetBSD: TODO,v 1.6265 2007/04/18 17:07:13 ghen Exp $
 
 Suggested new packages
 ======================
@@ -503,7 +503,6 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade-3.2.0
 	o glchess-1.0.5
-	o gld-1.7
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
 	o gnet1-1.1.9
