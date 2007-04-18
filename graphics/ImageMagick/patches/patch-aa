@@ -1,41 +1,41 @@
-$NetBSD: patch-aa,v 1.42 2007/02/15 08:05:52 adam Exp $
+$NetBSD: patch-aa,v 1.43 2007/04/18 22:44:22 drochner Exp $
 
---- configure.orig	2007-02-10 21:49:48.000000000 +0100
+--- configure.orig	2007-03-31 22:30:48.000000000 +0200
 +++ configure
-@@ -19001,9 +19001,6 @@ fi
+@@ -18984,9 +18984,6 @@ fi
  # Enable building/use of libltdl if we are building shared libraries regardless
  # of whether modules are built or not.
  with_ltdl='no'
 -if test "$libtool_build_shared_libs" != 'no' ; then
--  with_ltdl='yes'
+-    with_ltdl='yes'
 -fi
  
   if test "$with_ltdl" != 'no'; then
    WITH_LTDL_TRUE=
-@@ -34663,7 +34660,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -34622,7 +34619,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasFONTCONFIG 1
  _ACEOF
  
--  if test "$with_modules" == 'no' ; then
-+  if test "$with_modules" = 'no' ; then
+-    if test "$with_modules" == 'no' ; then
++    if test "$with_modules" = 'no' ; then
      CPPFLAGS="$FONTCONFIG_CFLAGS $CPPFLAGS"
-   fi
+     fi
  fi
-@@ -36781,7 +36778,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -36794,7 +36791,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasGVC 1
  _ACEOF
  
--  if test "$with_modules" == 'no' ; then
-+  if test "$with_modules" = 'no' ; then
-     CPPFLAGS="$GVC_CFLAGS $CPPFLAGS"
-   fi
+-    if test "$with_modules" == 'no' ; then
++    if test "$with_modules" = 'no' ; then
+         CPPFLAGS="$GVC_CFLAGS $CPPFLAGS"
+     fi
  fi
-@@ -37326,7 +37323,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -37337,7 +37334,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasRSVG 1
  _ACEOF
  
--  if test "$with_modules" == 'no' ; then
-+  if test "$with_modules" = 'no' ; then
-     CPPFLAGS="$RSVG_CFLAGS $CPPFLAGS"
-   fi
+-    if test "$with_modules" == 'no' ; then
++    if test "$with_modules" = 'no' ; then
+         CPPFLAGS="$RSVG_CFLAGS $CPPFLAGS"
+     fi
  fi
