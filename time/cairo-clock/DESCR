@@ -1,0 +1,4 @@
+MacSlow's Cairo-Clock is an analog clock displaying the system time.
+It leverages the visual features offered by Xorg 6.9/7.0 in combination with
+a compositing manager (e.g. xcompmgr), GTK+ 2.8.x, and Cairo 1.0.2
+to produce a time display with pretty pixels.
