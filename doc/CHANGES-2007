@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.864 2007/04/18 17:06:48 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.865 2007/04/18 21:10:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/transcode to 1.0.3 [xtraeme 2007-04-17]
 	Updated mail/sylpheed-devel to 2.4.0rc [xtraeme 2007-04-18]
 	Updated mail/gld to 1.7 [ghen 2007-04-18]
+	Updated math/mathomatic to 12.6.12 [minskim 2007-04-18]
