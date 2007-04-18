@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6265 2007/04/18 17:07:13 ghen Exp $
+$NetBSD: TODO,v 1.6266 2007/04/18 21:10:04 minskim Exp $
 
 Suggested new packages
 ======================
@@ -717,7 +717,6 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
-	o mathomatic-12.6.11
 	o mcrypt-2.6.5
 	o md-whois-4.7.20
 	o mecab-0.95
