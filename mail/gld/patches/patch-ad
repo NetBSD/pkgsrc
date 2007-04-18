@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2006/03/02 21:03:39 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2007/04/18 17:06:16 ghen Exp $
 
---- server.c.orig	2005-09-16 12:17:59.000000000 +0200
+--- server.c.orig	2006-05-01 22:43:10.000000000 +0200
 +++ server.c
-@@ -208,7 +208,7 @@ long ts;
- int pid;
+@@ -210,7 +210,7 @@ if(SQLConnect(cnf->sqlhost,cnf->sqluser,
+ 	return(-1);
+ 	}
  
- pid=getpid();
 -GetPeerIp(s,ip,buff);
 +GetPeerIp(s,ip,BLEN,buff,BLEN);
  
  //
  // We check if this IP is authorized to connect to us
-@@ -261,21 +261,34 @@ while(1==1)
+@@ -265,21 +265,34 @@ while(1==1)
  	// Now, we are sure our buffer string length is no more than BLEN
  	// as all parameters are defined also as buffers with a BLEN size
  	// no buffer overflow is possible using strcpy .
@@ -50,7 +50,7 @@ $NetBSD: patch-ad,v 1.2 2006/03/02 21:03:39 wiz Exp $
  
  	}
  
-@@ -300,7 +313,11 @@ Quote(sender);
+@@ -304,7 +317,11 @@ Quote(sender);
  // Now, we can safely use, str** functions
  //
  
