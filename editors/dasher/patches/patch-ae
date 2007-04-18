@@ -1,0 +1,40 @@
+$NetBSD: patch-ae,v 1.1 2007/04/18 23:19:28 wiz Exp $
+
+--- Src/DasherCore/TimeSpan.cpp.orig	2007-04-18 13:15:12.000000000 +0200
++++ Src/DasherCore/TimeSpan.cpp
+@@ -114,6 +114,7 @@ string CTimeSpan::GetTimeStamp()
+ #else
+     struct timeval sTimeBuffer;
+     struct timezone sTimezoneBuffer;
++    time_t help; /* workaround for bad NetBSD struct timeval */
+ #endif
+     char* szTimeLine = NULL;
+ 
+@@ -122,7 +123,8 @@ string CTimeSpan::GetTimeStamp()
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    help = sTimeBuffer.tv_sec;
++    szTimeLine = ctime(&help);
+ #endif
+   
+   if ((szTimeLine != NULL) && (strlen(szTimeLine) > 18))
+@@ -188,6 +190,7 @@ string CTimeSpan::GetDateStamp()
+ #else
+   struct timeval sTimeBuffer;
+   struct timezone sTimezoneBuffer;
++  time_t help; /* workaround for bad NetBSD struct timeval */
+ #endif
+   char* szTimeLine = NULL;
+ 
+@@ -196,7 +199,8 @@ string CTimeSpan::GetDateStamp()
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    help = sTimeBuffer.tv_sec;
++    szTimeLine = ctime(&help);
+ #endif
+ 
+  
