@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/18 22:28:01 drochner Exp $
+
+--- src/cairo-clock.c.orig	2007-04-13 14:45:41.000000000 +0200
++++ src/cairo-clock.c
+@@ -32,6 +32,7 @@
+ **
+ *******************************************************************************/
+  
++#define _NETBSD_SOURCE /* for getopt_long */
+ #include <time.h>
+ #include <math.h>
+ #include <string.h>
