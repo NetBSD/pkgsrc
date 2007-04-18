@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2007/04/18 23:19:28 wiz Exp $
+
+--- Src/DasherCore/UserLog.cpp.orig	2007-04-18 13:17:45.000000000 +0200
++++ Src/DasherCore/UserLog.cpp
+@@ -658,6 +658,7 @@ void CUserLog::SetOuputFilename(const st
+ #else
+     struct timeval sTimeBuffer;
+     struct timezone sTimezoneBuffer;
++    time_t help; /* workaround for bad NetBSD struct timeval */
+ #endif
+     char* szTimeLine = NULL;
+ 
+@@ -666,7 +667,8 @@ void CUserLog::SetOuputFilename(const st
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    help = sTimeBuffer.tv_sec;
++    szTimeLine = ctime(&help);
+ #endif
+ 
+     if ((szTimeLine != NULL) && (strlen(szTimeLine) > 18))

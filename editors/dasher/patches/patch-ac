@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.3 2007/04/18 23:19:27 wiz Exp $
+
+--- Src/DasherCore/BasicLog.cpp.orig	2007-04-16 16:06:42.000000000 +0200
++++ Src/DasherCore/BasicLog.cpp
+@@ -79,6 +79,7 @@ std::string CBasicLog::GetDateStamp() {
+ #else
+   struct timeval sTimeBuffer;
+   struct timezone sTimezoneBuffer;
++  time_t help; /* workaround for bad NetBSD struct timeval */
+ #endif
+   char* szTimeLine = NULL;
+ 
+@@ -87,7 +88,8 @@ std::string CBasicLog::GetDateStamp() {
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    help = sTimeBuffer.tv_sec;
++    szTimeLine = ctime(&help);
+ #endif
+ 
+     return std::string(szTimeLine).substr(0, 24);

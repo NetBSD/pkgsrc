@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2007/04/18 23:19:28 wiz Exp $
+
+--- Src/DasherCore/FileLogger.cpp.orig	2007-04-18 13:11:35.000000000 +0200
++++ Src/DasherCore/FileLogger.cpp
+@@ -503,6 +503,7 @@ std::string CFileLogger::GetTimeDateStam
+ #else
+     struct timeval sTimeBuffer;
+     struct timezone sTimezoneBuffer;
++    time_t help; /* workaround for bad NetBSD struct timeval */
+ #endif
+     char* szTimeLine = NULL;
+ 
+@@ -511,7 +512,8 @@ std::string CFileLogger::GetTimeDateStam
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    help = sTimeBuffer.tv_sec;
++    szTimeLine = ctime(&help);
+ #endif
+  
+     // Format is:
