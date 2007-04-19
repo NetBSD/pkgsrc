@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6267 2007/04/18 23:42:19 wiz Exp $
+$NetBSD: TODO,v 1.6268 2007/04/19 02:30:11 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -431,7 +431,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.6
 	o enscript-1.6.4
-	o epdfview-0.1.6
 	o epic4-2.6
 	o epstool-3.08
 	o eric3-3.9.4
