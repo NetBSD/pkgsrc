@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2007/04/16 18:42:21 abs Exp $
+# $NetBSD: Makefile,v 1.49 2007/04/19 18:44:22 abs Exp $
 
 DISTNAME=	pkg_chk-1.85
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,7 +24,9 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKECONF?=	/etc/mk.conf
+# Avoid changing any the actual value of MAKECONF
+TMP_MAKECONF=${MAKECONF}
+TMP_MAKECONF?=/etc/mk.conf
 
 #XXX: how to get GZIP_CMD?!
 do-build:
@@ -31,7 +34,7 @@ do-build:
 	  -e 's#@GREP@#${GREP}#g' \
 	  -e 's#@GZIP_CMD@#gzip#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
-	  -e 's#@MAKECONF@#${MAKECONF}#g' \
+	  -e 's#@MAKECONF@#${TMP_MAKECONF}#g' \
 	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
 	  -e 's#@PKG_DELETE@#${PKG_DELETE}#g' \
 	  -e 's#@PKG_INFO@#${PKG_INFO}#g' \
