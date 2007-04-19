@@ -1,4 +1,4 @@
-# $NetBSD: compat32.mk,v 1.2 2007/04/19 17:26:01 xtraeme Exp $
+# $NetBSD: compat32.mk,v 1.3 2007/04/19 21:25:28 xtraeme Exp $
 #
 
 .ifndef SUSE_LINUX_COMPAT32_MK
@@ -65,15 +65,15 @@ SUSE_COMPAT32_SUFFIX=	# empty
 PKG_FAIL_REASON+=	${MYSTRING}
 .      endif
 .    endif # end of PKG_OPTIONS.suse=compat32
+.  endif # end of NetBSD && x86_64
 #
 # This is to avoid to use the same code on every package
 # many times.
 #
-.    ifdef SUSE_INCLUDE_MAKEFILE_ARCH
-.      if exists(Makefile.${MACHINE_ARCH})
-.        include "Makefile.${MACHINE_ARCH}"
-.      endif
+.  ifdef SUSE_INCLUDE_MAKEFILE_ARCH
+.    if exists(Makefile.${MACHINE_ARCH})
+.      include "Makefile.${MACHINE_ARCH}"
 .    endif
-.  endif # end of NetBSD && x86_64
+.  endif
 
 .endif # end of SUSE_LINUX_COMPAT32_MK
