@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.16 2006/11/14 14:09:50 joerg Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/04/19 20:14:58 drochner Exp $
 #
 
-DISTNAME=	dia-0.95-1
-DIAPKGNAME=	dia-0.95.1
-PKGNAME=	${DIAPKGNAME:S/dia-/dia${DIA_SUBPKG}-/}
+DISTNAME=	dia-0.96.1
+PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.95/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.96/}
 
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
