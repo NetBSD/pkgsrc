@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.870 2007/04/19 20:57:18 seb Exp $
+$NetBSD: CHANGES-2007,v 1.871 2007/04/19 21:42:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1682,3 +1682,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed time/xfce4-calendar [martti 2007-04-19]
 	Updated www/lighttpd to 1.4.15 [root 2007-04-19]
 	Added devel/p5-Regexp-MatchContext version 0.0.2 [seb 2007-04-19]
+	Updated x11/libxklavier to 3.2 [wiz 2007-04-19]
+	Updated misc/gnome2-utils to 2.18.1 [wiz 2007-04-19]
+	Updated archivers/file-roller to 2.18.2 [wiz 2007-04-19]
+	Updated meta-pkgs/gnome to 2.18.1nb1 [wiz 2007-04-19]
