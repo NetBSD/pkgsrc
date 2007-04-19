@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.21 2007/04/11 19:01:00 tnn Exp $
+# $NetBSD: plist.mk,v 1.22 2007/04/19 23:13:42 tnn Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -155,6 +155,7 @@ _PLIST_INFO_AWK+=	-f ${.CURDIR}/../../mk/plist/plist-info.awk
 _PLIST_SHLIB_AWK=	-f ${_SHLIB_AWKFILE.${SHLIB_TYPE}}
 _SHLIB_AWKFILE.ECOFF=	${.CURDIR}/../../mk/plist/shlib-elf.awk
 _SHLIB_AWKFILE.ELF=	${.CURDIR}/../../mk/plist/shlib-elf.awk
+_SHLIB_AWKFILE.SOM=	${.CURDIR}/../../mk/plist/shlib-som.awk
 _SHLIB_AWKFILE.aixlib=	${.CURDIR}/../../mk/plist/shlib-none.awk
 _SHLIB_AWKFILE.a.out=	${.CURDIR}/../../mk/plist/shlib-aout.awk
 _SHLIB_AWKFILE.dylib=	${.CURDIR}/../../mk/plist/shlib-dylib.awk
