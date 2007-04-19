@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.12 2006/10/02 16:00:38 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/04/19 15:30:21 xtraeme Exp $
 
 .include "../../emulators/suse100_linux/vars.mk"
 .include "../../emulators/suse100_linux/arch.mk"
+.include "../../emulators/suse100_linux/compat32.mk"
 
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
 			NetBSD-[2-9]*-powerpc \
@@ -24,7 +25,9 @@ MASTER_SITE_SUSE100?= \
 	ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
 	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD}
 
+.ifndef SUSE_COMPAT32
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
+.endif
 
 WRKSRC?=		${WRKDIR}
 MANCOMPRESSED?=		yes
@@ -32,18 +35,27 @@ MANCOMPRESSED?=		yes
 # Don't check any script interpreter, as long as nobody complains.
 CHECK_INTERPRETER_SKIP=	*
 
-EMULSUBDIR=		emul/linux
+EMULSUBDIR=		emul/linux${SUSE_COMPAT32_SUFFIX}
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
 
 # Set location of OPSYS-specific emulation directory
 .if ${OPSYS} == "NetBSD"
+.  ifndef SUSE_COMPAT32
 OPSYS_EMULDIR=		/${EMULSUBDIR}
+.  else
+OPSYS_EMULDIR=		${EMULSUBDIR}
+.  endif
 .elif (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly")
 OPSYS_EMULDIR=		/compat/${EMULSUBDIR:T}
 .else
 OPSYS_EMULDIR=		/${EMULSUBDIR}
 .endif
-FILES_SUBST+=		OPSYS_EMULDIR=${OPSYS_EMULDIR:Q}
+FILES_SUBST+=		OPSYS_EMULDIR=${OPSYS_EMULDIR:Q} \
+			OPSYS_EMULSUBDIR=${OPSYS_EMULSUBDIR:Q}
+
+.ifdef SUSE_COMPAT32
+PLIST_SUBST+=		${FILES_SUBST}
+.endif
 
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
@@ -56,17 +68,19 @@ BUILD_DEFS+=		RPMIGNOREPATH
 # The SuSE Linux packages have circular dependencies.
 LDD?=			${TRUE}
 
+.ifndef SUSE_COMPAT32
 RPM2PKGSTRIP?=		1
 RPM2PKGARGS?=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-.if empty(RPM2PKGSTRIP:M0)
+.  if empty(RPM2PKGSTRIP:M0)
 RPM2PKGARGS+=		-s ${RPM2PKGSTRIP}
-.endif
-.for TEMP in ${RPMIGNOREPATH}
+.  endif
+.  for TEMP in ${RPMIGNOREPATH}
 RPM2PKGARGS+=		-i ${TEMP}
-.endfor
-.for TEMP in ${RPMFILES}
+.  endfor
+.  for TEMP in ${RPMFILES}
 RPM2PKGARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
-.endfor
+.  endfor
+.endif
 
 # regenerate distinfo for all platforms supported by the suse100_* packages
 suse100-distinfo:
@@ -81,7 +95,14 @@ suse100-distinfo:
 	) > distinfo.new
 	${MV} -f distinfo.new distinfo
 
-.if !target(do-install)
+.ifdef SUSE_COMPAT32_SUFFIX
+LOCAL_ARCH=	i386
+.else
+LOCAL_ARCH=	${MACHINE_ARCH}
+.endif
+
+.if empty(${.CURDIR:Msuse100_base}) && !defined(SUSE_COMPAT32)
+.  if !target(do-install)
 do-install:
 	@if [ -f ${PKGDIR}/PLIST ]; then \
 	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
@@ -89,8 +110,9 @@ do-install:
 	  ${RM} -f ${PLIST_SRC}; \
 	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
 	fi
-	@if [ -f ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} ]; then \
-	    ${SED} -e 's,^/,${EMULSUBDIR}/,' ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} >> ${PLIST_SRC}; \
+	@if [ -f ${PKGDIR}/PLIST_rpmfix.${LOCAL_ARCH} ]; then \
+	    ${SED} -e 's,^/,${EMULSUBDIR}/,' \
+	    	${PKGDIR}/PLIST_rpmfix.${LOCAL_ARCH} >> ${PLIST_SRC}; \
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
@@ -103,4 +125,5 @@ do-install:
 	  ${GREP} '^@dirrm' ${PLIST_SRC}.old >>${PLIST_SRC} || ${TRUE}; \
 	  ${RM} -f ${PLIST_SRC}.old; \
 	fi
+.  endif
 .endif
