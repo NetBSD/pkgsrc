@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.40 2007/03/09 03:28:58 rillig Exp $
+# $NetBSD: install.mk,v 1.41 2007/04/19 16:52:03 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -228,7 +228,7 @@ _INSTALL_ONE_DIR_CMD= { \
 .PHONY: install-makedirs
 install-makedirs:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
-.if !defined(NO_MTREE)
+.if defined(USE_MTREE)
 	${RUN} [ ! -f ${_MTREE_FILE} ] ||				\
 		${MTREE} ${_MTREE_ARGS} ${DESTDIR}${PREFIX}/
 .endif
