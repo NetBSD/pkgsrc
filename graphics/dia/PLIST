@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/06/11 16:55:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/04/19 20:14:59 drochner Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libbondgraph_objects.la
@@ -27,6 +27,7 @@ lib/dia/libshape_filter.la
 lib/dia/libstandard_objects.la
 lib/dia/libsvg_filter.la
 lib/dia/libuml_objects.la
+lib/dia/libvdx_filter.la
 lib/dia/libwpg_filter.la
 lib/dia/libxfig_filter.la
 lib/dia/libxslt_filter.la
@@ -115,6 +116,90 @@ share/dia/shapes/Assorted/triangle-isoceles.png
 share/dia/shapes/Assorted/triangle-isoceles.shape
 share/dia/shapes/Assorted/triangle-rightangle.png
 share/dia/shapes/Assorted/triangle-rightangle.shape
+share/dia/shapes/BPMN/Activity-Looping.png
+share/dia/shapes/BPMN/Activity-Looping.shape
+share/dia/shapes/BPMN/Ad-Hoc-Collapsed-Sub-Process.png
+share/dia/shapes/BPMN/Ad-Hoc-Collapsed-Sub-Process.shape
+share/dia/shapes/BPMN/Collapsed-Sub-Process.png
+share/dia/shapes/BPMN/Collapsed-Sub-Process.shape
+share/dia/shapes/BPMN/Compensation-Collapsed-Sub-Process.png
+share/dia/shapes/BPMN/Compensation-Collapsed-Sub-Process.shape
+share/dia/shapes/BPMN/Compensation.png
+share/dia/shapes/BPMN/Compensation.shape
+share/dia/shapes/BPMN/Data-Object.png
+share/dia/shapes/BPMN/Data-Object.shape
+share/dia/shapes/BPMN/End-Event-Cancel.png
+share/dia/shapes/BPMN/End-Event-Cancel.shape
+share/dia/shapes/BPMN/End-Event-Compensation.png
+share/dia/shapes/BPMN/End-Event-Compensation.shape
+share/dia/shapes/BPMN/End-Event-Error.png
+share/dia/shapes/BPMN/End-Event-Error.shape
+share/dia/shapes/BPMN/End-Event-Link.png
+share/dia/shapes/BPMN/End-Event-Link.shape
+share/dia/shapes/BPMN/End-Event-Message.png
+share/dia/shapes/BPMN/End-Event-Message.shape
+share/dia/shapes/BPMN/End-Event-Multiple.png
+share/dia/shapes/BPMN/End-Event-Multiple.shape
+share/dia/shapes/BPMN/End-Event-Terminate.png
+share/dia/shapes/BPMN/End-Event-Terminate.shape
+share/dia/shapes/BPMN/End-Event.png
+share/dia/shapes/BPMN/End-Event.shape
+share/dia/shapes/BPMN/Gateway-Complex.png
+share/dia/shapes/BPMN/Gateway-Complex.shape
+share/dia/shapes/BPMN/Gateway-Exclusive-XOR-Data-Based.png
+share/dia/shapes/BPMN/Gateway-Exclusive-XOR-Data-Based.shape
+share/dia/shapes/BPMN/Gateway-Exclusive-XOR-Event-Based.png
+share/dia/shapes/BPMN/Gateway-Exclusive-XOR-Event-Based.shape
+share/dia/shapes/BPMN/Gateway-Inclusive-OR.png
+share/dia/shapes/BPMN/Gateway-Inclusive-OR.shape
+share/dia/shapes/BPMN/Gateway-Parallel-AND.png
+share/dia/shapes/BPMN/Gateway-Parallel-AND.shape
+share/dia/shapes/BPMN/Gateway.png
+share/dia/shapes/BPMN/Gateway.shape
+share/dia/shapes/BPMN/Group.png
+share/dia/shapes/BPMN/Group.shape
+share/dia/shapes/BPMN/Intermediate-Event-Cancel.png
+share/dia/shapes/BPMN/Intermediate-Event-Cancel.shape
+share/dia/shapes/BPMN/Intermediate-Event-Compensation.png
+share/dia/shapes/BPMN/Intermediate-Event-Compensation.shape
+share/dia/shapes/BPMN/Intermediate-Event-Error.png
+share/dia/shapes/BPMN/Intermediate-Event-Error.shape
+share/dia/shapes/BPMN/Intermediate-Event-Link.png
+share/dia/shapes/BPMN/Intermediate-Event-Link.shape
+share/dia/shapes/BPMN/Intermediate-Event-Message.png
+share/dia/shapes/BPMN/Intermediate-Event-Message.shape
+share/dia/shapes/BPMN/Intermediate-Event-Multiple.png
+share/dia/shapes/BPMN/Intermediate-Event-Multiple.shape
+share/dia/shapes/BPMN/Intermediate-Event-Rule.png
+share/dia/shapes/BPMN/Intermediate-Event-Rule.shape
+share/dia/shapes/BPMN/Intermediate-Event-Timer.png
+share/dia/shapes/BPMN/Intermediate-Event-Timer.shape
+share/dia/shapes/BPMN/Intermediate-Event.png
+share/dia/shapes/BPMN/Intermediate-Event.shape
+share/dia/shapes/BPMN/Looping-Collapsed-Sub-Process.png
+share/dia/shapes/BPMN/Looping-Collapsed-Sub-Process.shape
+share/dia/shapes/BPMN/Multiple-Instance-Collapsed-Sub-Process.png
+share/dia/shapes/BPMN/Multiple-Instance-Collapsed-Sub-Process.shape
+share/dia/shapes/BPMN/Multiple-Instance-Task.png
+share/dia/shapes/BPMN/Multiple-Instance-Task.shape
+share/dia/shapes/BPMN/Start-Event-Link.png
+share/dia/shapes/BPMN/Start-Event-Link.shape
+share/dia/shapes/BPMN/Start-Event-Message.png
+share/dia/shapes/BPMN/Start-Event-Message.shape
+share/dia/shapes/BPMN/Start-Event-Multiple.png
+share/dia/shapes/BPMN/Start-Event-Multiple.shape
+share/dia/shapes/BPMN/Start-Event-Rule.png
+share/dia/shapes/BPMN/Start-Event-Rule.shape
+share/dia/shapes/BPMN/Start-Event-Timer.png
+share/dia/shapes/BPMN/Start-Event-Timer.shape
+share/dia/shapes/BPMN/Start-Event.png
+share/dia/shapes/BPMN/Start-Event.shape
+share/dia/shapes/BPMN/Task.png
+share/dia/shapes/BPMN/Task.shape
+share/dia/shapes/BPMN/Text-Annotation.png
+share/dia/shapes/BPMN/Text-Annotation.shape
+share/dia/shapes/BPMN/Transaction.png
+share/dia/shapes/BPMN/Transaction.shape
 share/dia/shapes/ChemEng/ACgen.png
 share/dia/shapes/ChemEng/ACgen.shape
 share/dia/shapes/ChemEng/SaT-fixedtube.png
@@ -1127,6 +1212,8 @@ share/dia/shapes/Electric/vrelay.png
 share/dia/shapes/Electric/vrelay.shape
 share/dia/shapes/Flowchart/collate.png
 share/dia/shapes/Flowchart/collate.shape
+share/dia/shapes/Flowchart/datasource.png
+share/dia/shapes/Flowchart/datasource.shape
 share/dia/shapes/Flowchart/delay.png
 share/dia/shapes/Flowchart/delay.shape
 share/dia/shapes/Flowchart/display.png
@@ -1459,11 +1546,11 @@ share/dia/shapes/sybase/stableq.png
 share/dia/shapes/sybase/stableq.shape
 share/dia/sheets/AADL.sheet
 share/dia/sheets/Assorted.sheet
+share/dia/sheets/BPMN.sheet
 share/dia/sheets/ChemEng.sheet
 share/dia/sheets/Circuit.sheet
 share/dia/sheets/Contact.sheet
 share/dia/sheets/Cybernetics.sheet
-share/dia/sheets/EML.sheet
 share/dia/sheets/ER.sheet
 share/dia/sheets/ER/weakentity.png
 share/dia/sheets/Electric.sheet
@@ -1534,6 +1621,9 @@ share/dia/sheets/civil.sheet
 share/dia/sheets/jigsaw.sheet
 share/dia/sheets/network.sheet
 share/dia/sheets/sybase.sheet
+share/dia/ui/display-ui.xml
+share/dia/ui/popup-ui.xml
+share/dia/ui/toolbox-ui.xml
 share/dia/xslt/dia-uml.xsl
 share/dia/xslt/dia-uml2c++.xsl
 share/dia/xslt/dia-uml2componentlist.xsl
@@ -1571,6 +1661,7 @@ ${DIA_HELPDIR}/pl/graphics/greendots.png
 ${DIA_HELPDIR}/pl/graphics/home_network.png
 ${DIA_HELPDIR}/pl/graphics/line_props.png
 share/locale/am/LC_MESSAGES/dia.mo
+share/locale/ar/LC_MESSAGES/dia.mo
 share/locale/az/LC_MESSAGES/dia.mo
 share/locale/be/LC_MESSAGES/dia.mo
 share/locale/bg/LC_MESSAGES/dia.mo
@@ -1587,6 +1678,7 @@ share/locale/eu/LC_MESSAGES/dia.mo
 share/locale/fi/LC_MESSAGES/dia.mo
 share/locale/fr/LC_MESSAGES/dia.mo
 share/locale/ga/LC_MESSAGES/dia.mo
+share/locale/gl/LC_MESSAGES/dia.mo
 share/locale/gu/LC_MESSAGES/dia.mo
 share/locale/hr/LC_MESSAGES/dia.mo
 share/locale/hu/LC_MESSAGES/dia.mo
@@ -1595,6 +1687,8 @@ share/locale/is/LC_MESSAGES/dia.mo
 share/locale/it/LC_MESSAGES/dia.mo
 share/locale/ja/LC_MESSAGES/dia.mo
 share/locale/ko/LC_MESSAGES/dia.mo
+share/locale/lt/LC_MESSAGES/dia.mo
+share/locale/lv/LC_MESSAGES/dia.mo
 share/locale/mk/LC_MESSAGES/dia.mo
 share/locale/ml/LC_MESSAGES/dia.mo
 share/locale/mn/LC_MESSAGES/dia.mo
@@ -1615,6 +1709,7 @@ share/locale/sq/LC_MESSAGES/dia.mo
 share/locale/sr/LC_MESSAGES/dia.mo
 share/locale/sr@Latn/LC_MESSAGES/dia.mo
 share/locale/sv/LC_MESSAGES/dia.mo
+share/locale/th/LC_MESSAGES/dia.mo
 share/locale/tr/LC_MESSAGES/dia.mo
 share/locale/uk/LC_MESSAGES/dia.mo
 share/locale/vi/LC_MESSAGES/dia.mo
@@ -1640,6 +1735,7 @@ share/pixmaps/dia_gnome_icon.png
 @dirrm ${DIA_HELPDIR}
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/dia/xslt
+@dirrm share/dia/ui
 @dirrm share/dia/sheets/UML
 @dirrm share/dia/sheets/KAOS
 @dirrm share/dia/sheets/Jackson
@@ -1667,6 +1763,7 @@ share/pixmaps/dia_gnome_icon.png
 @dirrm share/dia/shapes/Cisco
 @dirrm share/dia/shapes/Circuit
 @dirrm share/dia/shapes/ChemEng
+@dirrm share/dia/shapes/BPMN
 @dirrm share/dia/shapes/Assorted
 @dirrm share/dia/shapes
 @dirrm share/dia
