@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/22 14:40:33 tron Exp $
+# $NetBSD: Makefile,v 1.12 2007/04/19 16:11:34 xtraeme Exp $
 
 DISTNAME=	opera-plugins-1.0
 PKGREVISION=	1
@@ -28,6 +28,8 @@ PLUGIN_DIR=	${PREFIX}/lib/netscape/plugins
 # name. If you get more plugins working add them (including dependences)
 # and bump the version number.
 PLUGINS=	libflashplayer.so
+
+SUSE_COMPAT32=	yes
 
 INSTALLATION_DIRS=	${EMULSUBDIR}/usr/lib/opera/plugins
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/12 08:24:38 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/19 16:11:35 xtraeme Exp $
 #
 
 PKGNAME=	libflashsupport-1.0.2098
@@ -18,7 +18,7 @@ BUILD_DEPENDS+= rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 RPM2PKG=        ${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=	-d ${WRKDIR} -s 3 ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
 
-.include "../../emulators/suse_linux/Makefile.application"
+SUSE_COMPAT32=	yes
 
 .if !defined(USE_NATIVE_LINUX)
 DEPENDS+=		suse_base>=9.1:../../emulators/${SUSE_DIR_PREFIX}_base
@@ -33,7 +33,10 @@ do-extract:
 	${RPM2PKG} ${RPM2PKGARGS}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/libflashsupport.so ${PREFIX}/emul/linux/usr/lib
-	${INSTALL_DATA} ${WRKDIR}/doc/libflashsupport-1.0/README ${PREFIX}/share/doc/libflashsupport.README
+	${INSTALL_LIB} ${WRKDIR}/libflashsupport.so \
+		${PREFIX}/${EMULSUBDIR}/usr/lib
+	${INSTALL_DATA} ${WRKDIR}/doc/libflashsupport-1.0/README \
+		${PREFIX}/share/doc/libflashsupport.README
 
+.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
