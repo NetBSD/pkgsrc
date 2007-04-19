@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/09 20:34:10 tonio Exp $
-sbin/linux-mkpwd
+@comment $NetBSD: PLIST,v 1.2 2007/04/19 15:30:20 xtraeme Exp $
+sbin/linux${SUSE_COMPAT32_SUFFIX}-mkpwd
 @unexec ${RM} -f %D/${EMULSUBDIR}/etc/ld.so.cache
 ${EMULSUBDIR}/etc/SuSE-release
 ${EMULSUBDIR}/etc/mtab
