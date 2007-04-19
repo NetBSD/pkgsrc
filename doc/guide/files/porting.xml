@@ -1,4 +1,4 @@
-<!-- $NetBSD: porting.xml,v 1.3 2006/11/23 11:54:57 yyamano Exp $ -->
+<!-- $NetBSD: porting.xml,v 1.4 2007/04/19 16:54:58 joerg Exp $ -->
 
 <chapter id="porting"> <?dbhtml filename="porting.html"?>
 <title>Porting pkgsrc</title>
@@ -41,9 +41,8 @@
 	<listitem><para>This file contains a list of directories,
 	together with their permission bits and ownership. These
 	directories will be created automatically with every package
-	that does not explicitly set <varname>NO_MTREE</varname>. There
-	have been some discussions about whether this file is needed at
-	all, but with no result.</para></listitem></varlistentry>
+	that explicitly sets <varname>USE_MTREE</varname>. This feature will
+	be removed.</para></listitem></varlistentry>
 
 	<varlistentry><term><filename>mk/platform/<replaceable>MyOS</replaceable>.x11.dist</filename></term>
 	<listitem><para>Just copy one of the pre-existing x11.dist files
