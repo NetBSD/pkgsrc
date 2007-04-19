@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
+$NetBSD: patch-ab,v 1.3 2007/04/19 18:27:59 drochner Exp $
 
---- Dclock.c.orig	Tue Jan  7 01:43:15 2003
-+++ Dclock.c	Tue Jan  7 01:43:49 2003
-@@ -21,8 +21,6 @@
+--- Dclock.c.orig	2007-04-19 18:51:51.000000000 +0200
++++ Dclock.c
+@@ -21,8 +21,6 @@ static void
  #define CLOCK_WIDTH	256
  #define CLOCK_HEIGHT	80
  #define DATE_FMT	"%W, %M %d"
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  
  
  static Boolean SetValues(), show_time();
-@@ -367,8 +365,8 @@
+@@ -367,8 +365,8 @@ DclockWidget w;
  
      if (w->dclock.interval_id != (XtIntervalId)NULL)
  	XtRemoveTimeOut(w->dclock.interval_id);
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
      for (n = 0; n < 10; n++) {
  	XFreePixmap(XtDisplay(w), w->dclock.digits[n]);
  	XFreePixmap(XtDisplay(w), w->dclock.tiny_digits[n]);
-@@ -388,7 +386,7 @@
+@@ -388,7 +386,7 @@ DclockWidget    w;
      Pixmap pix;
      GC gc = w->dclock.foreGC;
  
@@ -31,16 +31,16 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  	return;
  
      winwidth = w->core.width;
-@@ -450,7 +448,7 @@
+@@ -450,7 +448,7 @@ DclockWidget    w;
  	    make_number(w, w->dclock.tiny_digits[i], gc, i, tiny_segment_pts);
  	}
  	else
 -	    w->dclock.tiny_digits[i] = NULL;
-+	    (Widget) w->dclock.tiny_digits[i] = (Pixmap) NULL;
++	    w->dclock.tiny_digits[i] = (Pixmap) NULL;
      }
      /* The colon[0] area is blank */
      if (w->dclock.colon[0])
-@@ -627,9 +625,9 @@
+@@ -627,9 +625,9 @@ DclockWidget    w;
  {
      Boolean save_scroll = w->dclock.scroll;
      Boolean save_fade = w->dclock.fade;
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  	return;
  
      if (w->dclock.interval_id != (XtIntervalId)NULL) {
-@@ -663,7 +661,7 @@
+@@ -663,7 +661,7 @@ DclockWidget w;
  {
      char buf[11];
      Boolean alarm_went_off = False;
@@ -61,7 +61,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
      register struct tm *l_time = localtime(&t);
      int digit_w = w->dclock.digit_w;
      int digit_h = w->dclock.digit_h;
-@@ -802,7 +800,7 @@
+@@ -802,7 +800,7 @@ register char *p;
  		turn_off[i] = oldmask & ~newmask;
  	    }
  	    else
@@ -70,7 +70,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
   
  	for (j = 1; j != FADE_ITER; ++j)
  	{
-@@ -875,27 +873,36 @@
+@@ -875,27 +873,36 @@ struct tm *now;
  	if (*p != '%')
  	    *datep++ = *p;
  	else switch (*++p) {
@@ -119,7 +119,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  	}
      }
      *datep = 0;
-@@ -906,7 +913,7 @@
+@@ -906,7 +913,7 @@ struct tm *now;
  
      /* remove what was there in case the whole thing isn't overwritten */
      XFillRectangle(XtDisplay(w), XtWindow(w), w->dclock.backGC,
@@ -128,7 +128,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  	winwidth, w->dclock.font->ascent + w->dclock.font->descent);
  
      XDrawString(XtDisplay(w), XtWindow(w), w->dclock.foreGC,
-@@ -924,7 +931,8 @@
+@@ -924,7 +931,8 @@ XtIntervalId *id;
  {
      Boolean alarm_went_off = show_time(w);
      w->dclock.interval_id =
@@ -138,7 +138,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  			timeout, (XtPointer)w);
  }
  
-@@ -960,8 +968,8 @@
+@@ -960,8 +968,8 @@ DclockWidget current, request, new;
      ||  new->dclock.tails != current->dclock.tails
      ||  new->dclock.fade != current->dclock.fade
      ||  new->dclock.miltime != current->dclock.miltime) {
@@ -149,7 +149,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  	GetGC(new);
  	Resize(new); /* pixmaps need to be redrawn */
  	do_redraw = True;
-@@ -1024,7 +1032,7 @@
+@@ -1024,7 +1032,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNreverseVideo, !w->dclock.reverse);
@@ -158,7 +158,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  }
  
  static void
-@@ -1038,7 +1046,7 @@
+@@ -1038,7 +1046,7 @@ DclockWidget w;
  	return;
      }
      XtSetArg(arg, XtNmilitaryTime, !w->dclock.miltime);
@@ -167,7 +167,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  }
  
  static void
-@@ -1052,7 +1060,7 @@
+@@ -1052,7 +1060,7 @@ DclockWidget w;
  	return;
      }
      XtSetArg(arg, XtNseconds, !w->dclock.seconds);
@@ -176,7 +176,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  }
  
  static void
-@@ -1062,7 +1070,7 @@
+@@ -1062,7 +1070,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNfade, !w->dclock.fade);
@@ -185,7 +185,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
      if (w->dclock.fade && w->dclock.scroll)
  	toggle_scroll(w);
  }
-@@ -1074,7 +1082,7 @@
+@@ -1074,7 +1082,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNtails, !w->dclock.tails);
@@ -194,7 +194,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  }
  
  static void
-@@ -1084,7 +1092,7 @@
+@@ -1084,7 +1092,7 @@ DclockWidget w;
      Arg arg;
  
      XtSetArg(arg, XtNalarm, !w->dclock.alarm);
@@ -203,7 +203,7 @@ $NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
  }
  
  static void
-@@ -1124,20 +1132,24 @@
+@@ -1124,20 +1132,24 @@ XButtonEvent *event;
  		    int digit = w->dclock.alarm_time[i>1?i+1:i] - '0';
  		    int mod;
  		    switch (i) {
