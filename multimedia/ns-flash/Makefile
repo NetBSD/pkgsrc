@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/03/23 22:59:16 abs Exp $
+# $NetBSD: Makefile,v 1.22 2007/04/19 16:11:34 xtraeme Exp $
 
 CATEGORIES=		multimedia www
 PKGREVISION=		2
@@ -14,9 +14,11 @@ NOT_FOR_PLATFORM=	SunOS-*-i386
 WRKSRC=			${WRKDIR}/${WRKNAME}
 DIST_SUBDIR=		flash/${FLASH_VERS}
 
+SUSE_COMPAT32=		yes
+SUSE_COMPAT32_OPT=	yes
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 FLASH_VERS=		9.0r31
 DEPENDS+=		suse_compat>=9.0:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=9.0:../../emulators/${SUSE_DIR_PREFIX}_x11
@@ -58,10 +60,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/flashplayer.xpt ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
 .if ${OPSYS} != "SunOS"
-.include "../../emulators/suse_linux/Makefile.application"
+.  include "../../emulators/suse_linux/Makefile.application"
 .endif
 .include "../../mk/bsd.pkg.mk"
