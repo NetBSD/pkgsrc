@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.866 2007/04/18 23:42:19 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.867 2007/04/19 02:30:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1678,3 +1678,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/mathomatic to 12.6.12 [minskim 2007-04-18]
 	Updated games/wesnoth to 1.2.4 [wiz 2007-04-18]
 	Updated mail/p5-MailTools to 1.76 [wiz 2007-04-18]
+	Updated print/epdfview to 0.1.6 [xtraeme 2007-04-19]
