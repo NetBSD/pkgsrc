@@ -1,14 +1,16 @@
-$NetBSD: patch-ac,v 1.5 2006/09/15 15:11:53 jmmv Exp $
+$NetBSD: patch-ac,v 1.6 2007/04/19 21:39:18 wiz Exp $
 
---- libxklavier/xklavier.c.orig	2006-06-30 02:37:24.000000000 +0200
+--- libxklavier/xklavier.c.orig	2007-02-23 21:56:59.000000000 +0000
 +++ libxklavier/xklavier.c
-@@ -1,4 +1,5 @@
+@@ -18,6 +18,7 @@
+  */
+ 
  #include <string.h>
 +#include <stdlib.h>
  #include <time.h>
  
  #include <X11/Xatom.h>
-@@ -473,8 +474,7 @@ xkl_engine_ensure_vtable_inited(XklEngin
+@@ -492,8 +493,7 @@ xkl_engine_ensure_vtable_inited(XklEngin
  	if (xkl_engine_priv(engine, backend_id) == NULL) {
  		xkl_debug(0, "ERROR: XKL VTable is NOT initialized.\n");
  		/* force the crash! */
