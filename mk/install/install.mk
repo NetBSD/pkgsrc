@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.41 2007/04/19 16:52:03 joerg Exp $
+# $NetBSD: install.mk,v 1.42 2007/04/19 18:16:36 xtraeme Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -147,7 +147,8 @@ _INSTALL_ALL_TARGETS+=		install-check-umask
 _INSTALL_ALL_TARGETS+=		check-files-pre
 .endif
 _INSTALL_ALL_TARGETS+=		install-makedirs
-.if !empty(INSTALLATION_DIRS_FROM_PLIST:M[Yy][Ee][Ss])
+.if defined(INSTALLATION_DIRS_FROM_PLIST) && \
+	!empty(INSTALLATION_DIRS_FROM_PLIST:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
 .endif
 .if ${_USE_DESTDIR} == "no"
