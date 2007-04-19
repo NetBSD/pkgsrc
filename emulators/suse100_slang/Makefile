@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/06/30 16:20:24 salo Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/19 15:30:22 xtraeme Exp $
 
 DISTNAME=		suse_slang-${SUSE_VERSION}
 PKGREVISION=		2
@@ -17,12 +17,10 @@ NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+SUSE_INCLUDE_MAKEFILE_ARCH=	yes
 
 post-install:
-	cd ${PREFIX}/${EMULSUBDIR}/usr/lib/ &&  \
+	cd ${PREFIX}/${EMULSUBDIR}/usr/lib &&  \
 		${LN} -sf libslang-utf8.so.1 libslang.so.1
 
 .include "../../emulators/suse100_linux/Makefile.common"
