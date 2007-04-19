@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.9 2006/11/05 15:10:08 joerg Exp $
+# $NetBSD: unprivileged.mk,v 1.10 2007/04/19 16:52:03 joerg Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -53,10 +53,6 @@ DOCOWN=			${UNPRIVILEGED_USER}
 # when overwriting files if they are not writable.
 BINMODE=		755
 NONBINMODE=		644
-
-# mtree is useless as a regular user because it won't set directory
-# ownerships correctly.
-NO_MTREE=		yes
 .endif
 
 .if (defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss]))

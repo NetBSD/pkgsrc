@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.17 2007/03/14 16:23:48 joerg Exp $
+# $NetBSD: metadata.mk,v 1.18 2007/04/19 16:52:03 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -326,7 +326,9 @@ _PKG_CREATE_ARGS+=				-c ${_COMMENT_FILE}
 _PKG_CREATE_ARGS+=	${_MESSAGE_FILE:D	-D ${_MESSAGE_FILE}}
 _PKG_CREATE_ARGS+=				-d ${_DESCR_FILE}
 _PKG_CREATE_ARGS+=				-f ${PLIST}
-_PKG_CREATE_ARGS+=	${NO_MTREE:D:U		-m ${_MTREE_FILE}}
+.if defined(USE_MTREE)
+_PKG_CREATE_ARGS+=				-m ${_MTREE_FILE}}
+.endif
 _PKG_CREATE_ARGS+=	${PKG_PRESERVE:D	-n ${_PRESERVE_FILE}}
 _PKG_CREATE_ARGS+=				-S ${_SIZE_ALL_FILE}
 _PKG_CREATE_ARGS+=				-s ${_SIZE_PKG_FILE}
@@ -380,7 +382,9 @@ _CONTENTS_TARGETS+=	plist
 _CONTENTS_TARGETS+=	${_PRESERVE_FILE}
 _CONTENTS_TARGETS+=	${_SIZE_ALL_FILE}
 _CONTENTS_TARGETS+=	${_SIZE_PKG_FILE}
-_CONTENTS_TARGETS+=	${NO_MTREE:D:U${_MTREE_FILE}}
+.if defined(USE_MTRE)
+_CONTENTS_TARGETS+=	${_MTREE_FILE}
+.endif
 
 ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
