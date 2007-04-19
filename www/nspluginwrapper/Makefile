@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/24 20:27:42 christos Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/19 16:11:34 xtraeme Exp $
 #
 
 DISTNAME=       nspluginwrapper-0.9.91.3
@@ -36,7 +36,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/i386/linux/npviewer ${LINUXLIBDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/i386/linux/npviewer.bin ${LINUXLIBDIR}
 
-ONLY_FOR_PLATFORM=	*-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
