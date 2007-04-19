@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/19 21:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/19 15:30:22 xtraeme Exp $
 #
 
 DISTNAME=		rarlinux-3.6.0
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/rar
 # old name of the package
 CONFLICTS=		rarlinux-[0-9]* rar-linux-[0-9]*
 
-.include "../../emulators/suse_linux/Makefile.application"
+SUSE_COMPAT32=		yes
 
 .if !defined(USE_NATIVE_LINUX)
 DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
@@ -39,4 +39,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/rar-bin
 	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${PREFIX}/share/doc/rar-bin
 
+.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
