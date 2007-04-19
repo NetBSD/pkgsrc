@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6270 2007/04/19 15:00:45 ghen Exp $
+$NetBSD: TODO,v 1.6271 2007/04/19 21:42:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o fakeroot-1.6.5
 	o fd-2.09c
 	o fdgw-20040609
-	o file-roller-2.18.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.30
@@ -517,7 +516,6 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.1.5
-	o gnome2-utils-2.18.1
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.3
 	o gnuradio-audio-jack-3.0.3
@@ -696,7 +694,6 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.11.2
-	o libxklavier-3.2
 	o libxml++2-2.18.0
 	o licq-1.3.4
 	o licq-core-1.3.0
