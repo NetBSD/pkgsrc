@@ -1,4 +1,4 @@
-# $NetBSD: compat32.mk,v 1.1 2007/04/19 15:31:07 xtraeme Exp $
+# $NetBSD: compat32.mk,v 1.2 2007/04/19 17:26:01 xtraeme Exp $
 #
 
 .ifndef SUSE_LINUX_COMPAT32_MK
@@ -60,7 +60,8 @@ EMULSUBDIR:=		emul/linux32
 .    else
 OPSYS_EMULSUBDIR=	linux
 SUSE_COMPAT32_SUFFIX=	# empty
-.      if empty(ONLY_FOR_PLATFORM:MNetBSD-*-x86_64)
+.      if defined(ONLY_FOR_PLATFORM) && \
+	    empty(ONLY_FOR_PLATFORM:MNetBSD-*-x86_64)
 PKG_FAIL_REASON+=	${MYSTRING}
 .      endif
 .    endif # end of PKG_OPTIONS.suse=compat32
