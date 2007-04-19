@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.868 2007/04/19 06:57:02 martti Exp $
+$NetBSD: CHANGES-2007,v 1.869 2007/04/19 16:21:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-MailTools to 1.76 [wiz 2007-04-18]
 	Updated print/epdfview to 0.1.6 [xtraeme 2007-04-19]
 	Removed time/xfce4-calendar [martti 2007-04-19]
+	Updated www/lighttpd to 1.4.15 [root 2007-04-19]
