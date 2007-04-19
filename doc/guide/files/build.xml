@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.44 2007/03/03 13:27:03 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.45 2007/04/19 16:54:58 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -720,16 +720,10 @@
 
       <listitem><para>A list of directories relative to
       <varname>PREFIX</varname> that are created by pkgsrc at the
-      beginning of the <emphasis>install</emphasis> phase.  If
-      this variable is set,
-      <varname>NO_MTREE</varname>=<quote>yes</quote> is assumed,
-      which means that the package claims to create all needed
-      directories itself before installing files to it. Therefore
-      this variable should only be set in
-      <filename>Makefile</filename>s that are under control of the
-      package's author. The directories are created with the
-      correct ownership, depending on their
-      name.</para></listitem></varlistentry>
+      beginning of the <emphasis>install</emphasis> phase.
+      The package is supposed to create all needed directories itself
+      before installing files to it and list all other directories here.
+      </para></listitem></varlistentry>
 
     </variablelist>
 
