@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.869 2007/04/19 16:21:09 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.870 2007/04/19 20:57:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1681,3 +1681,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/epdfview to 0.1.6 [xtraeme 2007-04-19]
 	Removed time/xfce4-calendar [martti 2007-04-19]
 	Updated www/lighttpd to 1.4.15 [root 2007-04-19]
+	Added devel/p5-Regexp-MatchContext version 0.0.2 [seb 2007-04-19]
