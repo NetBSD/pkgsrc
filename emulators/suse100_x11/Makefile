@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/30 16:20:24 salo Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/19 15:30:22 xtraeme Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -16,11 +16,7 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
-
-.include "../../mk/bsd.prefs.mk"
+SUSE_INCLUDE_MAKEFILE_ARCH=	yes
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: INSTALL,v 1.3 2006/06/23 15:48:50 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2007/04/19 15:30:20 xtraeme Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
-	emulsubdir=linux
+	emulsubdir="@OPSYS_EMULSUBDIR@"
 
 	emuldir="@OPSYS_EMULDIR@"
 	pkgemuldir="${PKG_PREFIX}/emul/$emulsubdir"

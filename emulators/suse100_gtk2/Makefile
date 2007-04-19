@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/24 21:52:51 salo Exp $
+# $NetBSD: Makefile,v 1.8 2007/04/19 15:30:21 xtraeme Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		3
@@ -26,11 +26,7 @@ FILES_SUBST+=		EMULDIR=${EMULDIR:Q}
 FILES_SUBST+=		BINSUFFIX=${BINSUFFIX:Q}
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+SUSE_INCLUDE_MAKEFILE_ARCH=	yes
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
