@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2006/10/10 19:48:52 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/19 20:14:59 drochner Exp $
 
---- configure.orig	2006-05-25 22:49:43.000000000 +0200
-+++ configure	2006-10-10 21:45:38.000000000 +0200
-@@ -21854,7 +21854,8 @@ if test "${with_gnomeprint+set}" = set; 
+--- configure.orig	2007-03-29 08:11:17.000000000 +0200
++++ configure
+@@ -20515,7 +20515,7 @@ if test "${with_freetype+set}" = set; th
+ else
+   with_freetype=yes
+ fi;
+-if test "x$with_freetype" == "xyes"; then
++if test "x$with_freetype" = "xyes"; then
+ 
+ pkg_failed=no
+ echo "$as_me:$LINENO: checking for PANGOFT2" >&5
+@@ -20989,7 +20989,8 @@ if test "${with_gnomeprint+set}" = set; 
  else
    with_gnomeprint=no
  fi;
@@ -12,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2006/10/10 19:48:52 rillig Exp $
  
  pkg_failed=no
  echo "$as_me:$LINENO: checking for GNOMEPRINT" >&5
-@@ -22717,7 +22718,7 @@ else
+@@ -21927,7 +21928,7 @@ else
  echo "${ECHO_T}no" >&6
  fi
  
@@ -21,7 +30,7 @@ $NetBSD: patch-aa,v 1.4 2006/10/10 19:48:52 rillig Exp $
     { { echo "$as_me:$LINENO: error: xgettext program not found: $XGETTEXT." >&5
  echo "$as_me: error: xgettext program not found: $XGETTEXT." >&2;}
     { (exit 1); exit 1; }; }
-@@ -25828,7 +25829,7 @@ echo $ECHO_N "checking for $am_display_P
+@@ -25023,7 +25024,7 @@ echo $ECHO_N "checking for $am_display_P
  if test "${am_cv_python_pythondir+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -30,7 +39,7 @@ $NetBSD: patch-aa,v 1.4 2006/10/10 19:48:52 rillig Exp $
       echo "$PYTHON_PREFIX/lib/python$PYTHON_VERSION/site-packages"`
  fi
  echo "$as_me:$LINENO: result: $am_cv_python_pythondir" >&5
-@@ -25846,7 +25847,7 @@ echo $ECHO_N "checking for $am_display_P
+@@ -25041,7 +25042,7 @@ echo $ECHO_N "checking for $am_display_P
  if test "${am_cv_python_pyexecdir+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
