@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/02 10:35:04 sketch Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/19 15:30:20 xtraeme Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		3
@@ -18,11 +18,10 @@ CHECK_FILES_SKIP+=	${PREFIX}/${EMULSUBDIR}/etc/ld.so.cache
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q} LINUX_LIB=${LINUX_LIB:Q}
+PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q} LINUX_LIB=${LINUX_LIB:Q} \
+			SUSE_COMPAT32_SUFFIX=${SUSE_COMPAT32_SUFFIX:Q}
 
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 			./etc/cron.daily ./etc/csh.cshrc ./etc/csh.login \
@@ -34,9 +33,9 @@ RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 LINUX_LIB?=		lib
 
-.include "../../mk/bsd.prefs.mk"
-
 INSTALLATION_DIRS=	sbin
+
+SUSE_INCLUDE_MAKEFILE_ARCH=	yes
 
 do-build:
 	@for FILE in ${FILESDIR}/SuSE-release ${FILESDIR}/*.sh; do \
@@ -49,9 +48,8 @@ do-build:
 	done
 
 do-install:
-	for FILE in ${WRKDIR}/*.sh; do \
-	  ${INSTALL_SCRIPT} $$FILE ${PREFIX}/sbin/`basename $$FILE .sh`; \
-	done
+	${INSTALL_SCRIPT} ${FILESDIR}/linux-mkpwd.sh \
+		${PREFIX}/sbin/linux${SUSE_COMPAT32_SUFFIX}-mkpwd
 	${INSTALL_DATA_DIR} ${EMULDIR}/dev
 	${INSTALL_DATA} /dev/MAKEDEV ${EMULDIR}/dev
 	if [ -f /dev/MAKEDEV.subr ]; then \
