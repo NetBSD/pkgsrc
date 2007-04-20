@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6274 2007/04/20 13:38:35 tron Exp $
+$NetBSD: TODO,v 1.6275 2007/04/20 14:12:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -961,7 +961,6 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
-	o parrot-0.4.10 [pkg/36157]
 	o pbzip2-1.0.1
 	o pcal-4.8
 	o pciids-20070322
