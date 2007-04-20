@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/01/24 15:58:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/04/20 06:07:16 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -450,6 +450,7 @@ share/examples/gnutls/ex-session-info.c
 share/examples/gnutls/ex-verify.c
 share/examples/gnutls/ex-x509-info.c
 share/examples/gnutls/tcp.c
+share/locale/de/LC_MESSAGES/gnutls.mo
 share/locale/en@boldquot/LC_MESSAGES/gnutls.mo
 share/locale/en@quot/LC_MESSAGES/gnutls.mo
 share/locale/pl/LC_MESSAGES/gnutls.mo
