@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.46 2007/04/16 18:42:21 abs Exp $
+# $Id: pkg_chk.sh,v 1.47 2007/04/20 09:25:37 tron Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -701,7 +701,7 @@ test -n "$SED"        || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
 
-if [ ! -f $MAKECONF ] ; then
+if [ ! -f "$MAKECONF" ] ; then
     if [ -f @PREFIX@/etc/mk.conf ] ; then
 	MAKECONF=@PREFIX@/etc/mk.conf
     elif [ -f /etc/mk.conf ] ; then
