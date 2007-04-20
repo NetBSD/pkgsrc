@@ -1,8 +1,10 @@
-# $NetBSD: compat32.mk,v 1.3 2007/04/19 21:25:28 xtraeme Exp $
+# $NetBSD: compat32.mk,v 1.4 2007/04/20 21:35:00 xtraeme Exp $
 #
 
 .ifndef SUSE_LINUX_COMPAT32_MK
 SUSE_LINUX_COMPAT32_MK=	# defined
+
+.include "../../mk/bsd.prefs.mk"
 
 .  if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
 
