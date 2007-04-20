@@ -1,0 +1,24 @@
+--- src/mn-client-session.c.orig	Wed Jan 17 15:07:49 2007
++++ src/mn-client-session.c	Fri Apr 20 19:05:51 2007
+@@ -369,6 +369,8 @@
+ {
+   SSL_CTX *ctx;
+   GError *err = NULL;
++  static GStaticMutex ssl_lock = G_STATIC_MUTEX_INIT;
++  int status;
+ 
+   g_return_val_if_fail(session != NULL, FALSE);
+   g_return_val_if_fail(session->ssl == NULL, FALSE);
+@@ -394,7 +396,11 @@
+       return FALSE;
+     }
+ 
+-  if (SSL_connect(session->ssl) != 1)
++  g_static_mutex_lock(&ssl_lock);
++  status = SSL_connect(session->ssl);
++  g_static_mutex_unlock(&ssl_lock);
++
++  if (status != 1)
+     {
+       mn_client_session_set_error(session, MN_CLIENT_SESSION_ERROR_OTHER, _("unable to perform the SSL/TLS handshake: %s"), mn_ssl_get_error());
+       return FALSE;
