@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/05 00:55:32 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/20 14:29:21 gdt Exp $
 bin/mail-notification
 lib/bonobo/servers/GNOME_MailNotification.server
 share/applications/mail-notification-properties.desktop
@@ -11,7 +11,14 @@ share/gnome/help/mail-notification/C/figures/mailbox-emblem-polled.png
 share/gnome/help/mail-notification/C/figures/mailbox-emblem-unknown.png
 share/gnome/help/mail-notification/C/mail-notification.xml
 share/gnome/help/mail-notification/C/software-license.xml
+share/icons/hicolor/16x16/apps/mail-notification.png
+share/icons/hicolor/22x22/apps/mail-notification.png
+share/icons/hicolor/24x24/apps/mail-notification.png
+share/icons/hicolor/32x32/apps/mail-notification.png
+share/icons/hicolor/48x48/apps/mail-notification.png
+share/icons/hicolor/scalable/apps/mail-notification.svg
 share/locale/bg/LC_MESSAGES/mail-notification.mo
+share/locale/ca/LC_MESSAGES/mail-notification.mo
 share/locale/cs/LC_MESSAGES/mail-notification.mo
 share/locale/de/LC_MESSAGES/mail-notification.mo
 share/locale/fr/LC_MESSAGES/mail-notification.mo
@@ -26,12 +33,9 @@ share/locale/sr@Latn/LC_MESSAGES/mail-notification.mo
 share/locale/sv/LC_MESSAGES/mail-notification.mo
 share/mail-notification/ui/gmail.png
 share/mail-notification/ui/logo.png
-share/mail-notification/ui/mail-summary-popup.glade
 share/mail-notification/ui/mailbox-properties-dialog.glade
 share/mail-notification/ui/properties-dialog.glade
 share/omf/mail-notification/mail-notification-C.omf
-share/pixmaps/mail-notification.png
-@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/mail-notification
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/mail-notification/ui
