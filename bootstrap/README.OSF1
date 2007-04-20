@@ -1,7 +1,26 @@
-$NetBSD: README.OSF1,v 1.1 2004/11/20 04:31:35 grant Exp $
+$NetBSD: README.OSF1,v 1.2 2007/04/20 13:16:01 tnn Exp $
 
-To use the native compiler, set PKGSRC_COMPILER=ccc in mk.conf. Use
-the native compiler whenever possible for performance reasons.
+Prebuilt pkgtools and gcc binaries
+----------------------------------
+To get started quickly, prebuilt kits can be downloaded from
+
+	ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnn/
+and
+	ftp://ftp.NetBSD.org/pub/pkgsrc/bootstrap-pkgsrc/
+
+Bootstrapping pkgsrc
+--------------------
+The bootstrap currently requires gcc. To use the compiler kit from above:
+
+	# env CC=/usr/local/gcc4/bin/gcc CFLAGS=-O2 ./bootstrap
+
+Selecting which compiler to use
+-------------------------------
+After the bootstrap is completed, you must decide which compiler to use.
+To keep using gcc, add CC=/path/to/gcc and CXX=/path/to/g++ to your
+newly created mk.conf.
+
+To use the native compiler, set PKGSRC_COMPILER=ccc in mk.conf.
 
 If you need the C++ Compiler it is available from
 
@@ -9,18 +28,10 @@ If you need the C++ Compiler it is available from
 
 It may need a separate license to run.
 
-Should you need gcc, install lang/gcc34. When you switch between
-compilers, you must rebuild libtool-base.
-
-Some packages require a BSD-style install, but will not use the INSTALL
-environment variable. If you get install-related errors, try:
-# ln -s /usr/pkg/bin/install-sh /usr/pkg/bin/install
-$ PATH=/usr/pkg/bin:$PATH; export PATH
-
+Tips and Tricks
+---------------
 Other suggestions to make the system more well-behaved:
 
 	MANPATH=/usr/pkg/share/man:/usr/share/man
 	PAGER=less
 	stty status ""
-
-Bootstrap tested on AlphaServer 4100 with Tru64 5.1B PK4 and DS10 with PK3.
