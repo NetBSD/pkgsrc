@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6273 2007/04/20 06:08:18 wiz Exp $
+$NetBSD: TODO,v 1.6274 2007/04/20 13:38:35 tron Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ Suggested package updates
 	o libstatgrab-0.14
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
-	o libtorrent-0.11.2
 	o libxml++2-2.18.0
 	o licq-1.3.4
 	o licq-core-1.3.0
@@ -1140,7 +1139,6 @@ Suggested package updates
 	o rpm-4.2
 	o rt3-3.6.3
 	o rtcw-1.41.3
-	o rtorrent-0.7.2
 	o ruby-clearsilver-0.10.4
 	o ruby-rcairo-1.4.1
 	o ruby-rd-mode-0.6.20
