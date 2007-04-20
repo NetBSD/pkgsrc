@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/26 18:48:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/04/20 13:37:57 tron Exp $
 include/torrent/bitfield.h
 include/torrent/chunk_manager.h
 include/torrent/common.h
@@ -9,6 +9,7 @@ include/torrent/data/block_transfer.h
 include/torrent/data/file.h
 include/torrent/data/file_list.h
 include/torrent/data/file_list_iterator.h
+include/torrent/data/file_manager.h
 include/torrent/data/file_utils.h
 include/torrent/data/piece.h
 include/torrent/data/transfer_list.h
