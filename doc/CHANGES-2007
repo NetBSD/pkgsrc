@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.875 2007/04/20 09:50:43 tron Exp $
+$NetBSD: CHANGES-2007,v 1.876 2007/04/20 11:02:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1689,3 +1689,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added print/gtklp version 1.2.3 [roland 2007-04-20]
 	Updated security/gnutls to 1.6.2 [wiz 2007-04-20]
 	Updated pkgtools/pkg_chk to 1.85nb3 [tron 2007-04-20]
+	Updated emulators/wine to 0.9.35nb1 [tnn 2007-04-20]
