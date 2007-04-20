@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2007/03/30 13:34:53 hira Exp $
+# $NetBSD: options.mk,v 1.8 2007/04/20 14:44:11 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 # kde
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
 PKG_OPTIONS_REQUIRED_GROUPS=	browser lang
 PKG_OPTIONS_GROUP.browser=	firefox # seamonkey firefox-gtk1 seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
@@ -23,58 +23,58 @@ PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 OPENOFFICE_LANGUAGE=		${PKG_OPTIONS:Mlang-*:S/^lang-//1}
 
 .if !empty(PKG_OPTIONS:Mfirefox)
-.include "../../www/firefox/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-system-mozilla --with-firefox
+.include "../../www/firefox/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mfirefox-gtk1)
-.include "../../www/firefox-gtk1/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-system-mozilla --with-firefox
+.include "../../www/firefox-gtk1/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mseamonkey)
-.include "../../www/seamonkey/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-system-mozilla
+.include "../../www/seamonkey/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mseamonkey-gtk1)
-.include "../../www/seamonkey-gtk1/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-system-mozilla
+.include "../../www/seamonkey-gtk1/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
+.include "../../print/cups/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .else
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gtk
 # *.pc files are needed with NetBSD using native XFree86.
-.if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
+.  if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
 USE_BUILTIN.Xfixes=	no
 USE_BUILTIN.Xrandr=	no
 USE_BUILTIN.Xrender=	no
-.endif
+.  endif
+.include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
 .endif
 
-# XXX: Not yet.
 .if !empty(PKG_OPTIONS:Mkde)
-.include "../../x11/kdelibs3/buildlink3.mk"
+CONFIGURE_ENV+=		KDEDIR=${BUILDLINK_PREFIX.kdelibs:Q}
 CONFIGURE_ARGS+=	--enable-kde --enable-kdeab
+.include "../../x11/kdelibs3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-kde --disable-kdeab
 .endif
