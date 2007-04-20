@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46 2007/04/20 13:36:25 tnn Exp $	*/
+/*	$NetBSD: perform.c,v 1.47 2007/04/20 14:25:13 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.46 2007/04/20 13:36:25 tnn Exp $");
+__RCSID("$NetBSD: perform.c,v 1.47 2007/04/20 14:25:13 joerg Exp $");
 #endif
 #endif
 
@@ -355,7 +355,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 			needed = 4 * (uint64_t) sb.st_size;
 			if (!inPlace && min_free(playpen) < needed) {
-				warnx("projected size of %" PRIu64 " bytes exceeds available free space\n"
+				warnx("projected size of %" MY_PRIu64 " bytes exceeds available free space\n"
 				    "in %s. Please set your PKG_TMPDIR variable to point\n"
 				    "to a location with more free space and try again.",
 					needed, playpen);
