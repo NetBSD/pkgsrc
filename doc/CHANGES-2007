@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.879 2007/04/20 14:25:31 hira Exp $
+$NetBSD: CHANGES-2007,v 1.880 2007/04/20 14:30:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libtorrent to 0.11.4 [tron 2007-04-20]
 	Updated net/rtorrent to 0.7.4 [tron 2007-04-20]
 	Updated lang/parrot to 0.4.11 [obache 2007-04-20]
+	Updated mail/mail-notification to 4.0 [gdt 2007-04-20]
