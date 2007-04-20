@@ -1,0 +1,9 @@
+--- doc/Makefile.orig	2007-04-13 20:20:26.000000000 +0200
++++ doc/Makefile	2007-04-13 20:21:08.000000000 +0200
+@@ -151,7 +151,7 @@
+ 	@if [  -d $(DESTDIR)$(DOCDIR)/html ]; then \
+ 		rm -rf $(DESTDIR)$(DOCDIR)/html; \
+ 	fi
+-	cp -R html/ $(DESTDIR)$(DOCDIR)
++	cp -R html/. $(DESTDIR)$(DOCDIR)
+ 
