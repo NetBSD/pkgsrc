@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.873 2007/04/20 05:50:53 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.874 2007/04/20 06:08:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/file-roller to 2.18.2 [wiz 2007-04-19]
 	Updated meta-pkgs/gnome to 2.18.1nb1 [wiz 2007-04-19]
 	Added print/gtklp version 1.2.3 [roland 2007-04-20]
+	Updated security/gnutls to 1.6.2 [wiz 2007-04-20]
