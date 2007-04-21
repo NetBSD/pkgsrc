@@ -1,7 +1,8 @@
-# $NetBSD: cmd-sink-hpux-ld,v 1.1 2007/04/14 14:17:50 tnn Exp $
+# $NetBSD: cmd-sink-hpux-ld,v 1.2 2007/04/21 01:29:25 tnn Exp $
 
 # Empty out the command buffer and build up the command line in $cmd.
 hprunpath=
+hprunpathdirs=
 while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
 	$debug_log $wrapperlog "    (cmd-sink-hpux-ld) pop:  $arg"
@@ -13,6 +14,7 @@ while ! queue_is_empty cmdbuf; do
 	+b|-Wl,+b|-rpath)
 		pop_queue cmdbuf dir
 		dir="${dir#-Wl,}"
+		hprunpathdirs="$hprunpathdirs $dir"
 		case $hprunpath in
 		"")	hprunpath="$dir" ;;
 		*)	hprunpath="$hprunpath:$dir" ;;
@@ -29,6 +31,7 @@ while ! queue_is_empty cmdbuf; do
 		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
 		esac
 		dir="${arg#$R}"
+		hprunpathdirs="$hprunpathdirs $dir"
 		case $hprunpath in
 		"")	hprunpath="$dir" ;;
 		*)	hprunpath="$hprunpath:$dir" ;;
@@ -48,4 +51,17 @@ if $test -n "$hprunpath"; then
 	arg=$hprunpath
 	$debug_log $wrapperlog "    (cmd-sink-hpux-ld) pop: $arg [aggregate]"
 	. $buildcmd
+##############################################################################
+# Turn paths from the run path into additional -L arguments. This works around
+# the braindead HP-UX ld(1) which needs to relink binaries against libraries
+# in ${PREFIX} to get run paths correct.
+# NB: This is not optimal because it exposes the package to possibly unwanted
+# libraries. (Ideally this should be done only in the installation phase.)   
+##############################################################################
+	for dir in $hprunpathdirs
+	do
+		arg="-L$dir"
+		$debug_log $wrapperlog "    (cmd-sink-hpux-ld) pop: $arg [from run path]"
+		. $buildcmd
+	done
 fi
