@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.890 2007/04/21 15:20:29 obache Exp $
+$NetBSD: CHANGES-2007,v 1.891 2007/04/21 15:36:32 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1748,5 +1748,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/ruby-rcsparse version 0.0.0.37 [wiz 2007-04-21]
 	Added devel/fromcvs version 0.0.0.99 [wiz 2007-04-21]
 	Updated x11/xlockmore to 5.24 [hubertf 2007-04-21]
+	Updated mail/p5-Email-Simple to 1.999 [heinz 2007-04-21]
 	Added sysutils/dbus-qt3 version 0.70 [drochner 2007-04-21]
+	Added mail/p5-Email-MIME-ContentType version 1.014 [heinz 2007-04-21]
+	Added mail/p5-Email-MIME-Encodings version 1.311 [heinz 2007-04-21]
+	Added mail/p5-Email-MIME version 1.859 [heinz 2007-04-21]
 	Updated net/tinc to 1.0.7 [obache 2007-04-21]
+	Updated mail/p5-Email-Valid to 0.179 [heinz 2007-04-21]
