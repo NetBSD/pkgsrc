@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.882 2007/04/21 05:36:27 obache Exp $
+$NetBSD: CHANGES-2007,v 1.883 2007/04/21 07:06:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-tunnel to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-useradmin to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-cyrus-imapd to 1.5 [obache 2007-04-21]
+	Updated audio/easytag to 2.0.1 [wiz 2007-04-21]
