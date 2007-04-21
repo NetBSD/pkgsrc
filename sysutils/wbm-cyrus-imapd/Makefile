@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/05/16 16:38:46 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/21 05:27:00 obache Exp $
 
-DISTNAME=	cyrus-imapd-mod-1.4.3
-WBMNAME=	cyrus-imapd
+DISTNAME=	cyrus-imapd-mod-1.5
+WBM_NAME=	cyrus-imapd
 PKGNAME=	wbm-${DISTNAME:S/-mod-/-/}
 MASTER_SITES=	http://www.tecchio.net/webmin/cyrus/
 
@@ -11,6 +11,8 @@ DEPENDS+=	p5-Mail-IMAPClient-[0-9]*:../../mail/p5-Mail-IMAPClient
 
 HOMEPAGE=	http://www.tecchio.net/webmin/cyrus/
 COMMENT=	Webmin module for administering Cyrus IMAP
+
+WBM_STD_MODULE=	NO
 
 .include "../../sysutils/webmin/wbm.mk"
 .include "../../mk/bsd.pkg.mk"
