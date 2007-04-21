@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.1 2006/06/04 14:44:14 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2007/04/21 05:22:58 obache Exp $
 
---- proc/module.info.orig	2006-06-04 14:17:15.000000000 +0000
+--- proc/module.info.orig	2007-04-09 05:00:48.000000000 +0000
 +++ proc/module.info
-@@ -10,7 +10,7 @@ desc_zh_CN=进程管理器
- desc_pt=Processos em Curso
+@@ -13,7 +13,7 @@ desc_pt=Processos em Curso
  category=system
+ desc_zh_TW.UTF-8=鍩疯涓殑绋嬪簭
  desc_tr=莂lan S黵e鏻er
 -os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows
 +os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows dragonfly

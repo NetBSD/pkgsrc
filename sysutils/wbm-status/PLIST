@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:43:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
 share/examples/webmin/status/config
 share/webmin/status/CHANGELOG
 share/webmin/status/WEBMIN-STATUS-MIB.txt
 share/webmin/status/acl_security.pl
+share/webmin/status/alive-monitor.pl
 share/webmin/status/apache-monitor.pl
 share/webmin/status/backup_config.pl
 share/webmin/status/bind8-monitor.pl
@@ -12,7 +13,7 @@ share/webmin/status/config
 share/webmin/status/config-*-linux
 share/webmin/status/config-debian-linux
 share/webmin/status/config-debian-linux-3.0
-share/webmin/status/config-debian-linux-3.1
+share/webmin/status/config-debian-linux-3.1-*
 share/webmin/status/config-freebsd
 share/webmin/status/config-hpux
 share/webmin/status/config-netbsd
@@ -23,6 +24,7 @@ share/webmin/status/config.info.de
 share/webmin/status/config.info.es
 share/webmin/status/config.info.fa
 share/webmin/status/config.info.fr
+share/webmin/status/config.info.ja_JP.UTF-8
 share/webmin/status/config.info.ja_JP.euc
 share/webmin/status/config.info.nl
 share/webmin/status/config.info.pl
@@ -32,7 +34,10 @@ share/webmin/status/config.info.sv
 share/webmin/status/config.info.tr
 share/webmin/status/config.info.uk_UA
 share/webmin/status/config.info.zh_CN
+share/webmin/status/config.info.zh_CN.UTF-8
 share/webmin/status/config.info.zh_TW.Big5
+share/webmin/status/config.info.zh_TW.UTF-8
+share/webmin/status/consume-monitor.pl
 share/webmin/status/defaultacl
 share/webmin/status/delete_mons.cgi
 share/webmin/status/dhcpd-monitor.pl
@@ -43,6 +48,7 @@ share/webmin/status/edit_sched.cgi
 share/webmin/status/exec-monitor.pl
 share/webmin/status/feedback_files.pl
 share/webmin/status/file-monitor.pl
+share/webmin/status/ftp-monitor.pl
 share/webmin/status/hostsentry-monitor.pl
 share/webmin/status/http-monitor.pl
 share/webmin/status/iface-monitor.pl
@@ -64,7 +70,9 @@ share/webmin/status/lang/en
 share/webmin/status/lang/es
 share/webmin/status/lang/fa
 share/webmin/status/lang/fr
+share/webmin/status/lang/ja_JP.UTF-8
 share/webmin/status/lang/ja_JP.euc
+share/webmin/status/lang/ko_KR.UTF-8
 share/webmin/status/lang/ko_KR.euc
 share/webmin/status/lang/nl
 share/webmin/status/lang/pl
@@ -75,7 +83,9 @@ share/webmin/status/lang/sv
 share/webmin/status/lang/tr
 share/webmin/status/lang/uk_UA
 share/webmin/status/lang/zh_CN
+share/webmin/status/lang/zh_CN.UTF-8
 share/webmin/status/lang/zh_TW.Big5
+share/webmin/status/lang/zh_TW.UTF-8
 share/webmin/status/load-monitor.pl
 share/webmin/status/log_parser.pl
 share/webmin/status/mailq-monitor.pl
@@ -94,8 +104,10 @@ share/webmin/status/postgresql-monitor.pl
 share/webmin/status/proc-monitor.pl
 share/webmin/status/proftpd-monitor.pl
 share/webmin/status/qmailadmin-monitor.pl
+share/webmin/status/query-monitor.pl
 share/webmin/status/raid-monitor.pl
 share/webmin/status/refresh.cgi
+share/webmin/status/rssh-monitor.pl
 share/webmin/status/samba-monitor.pl
 share/webmin/status/save_mon.cgi
 share/webmin/status/save_sched.cgi
@@ -131,3 +143,4 @@ share/webmin/status/xinetd-monitor.pl
 @dirrm share/webmin/status/images
 @dirrm share/webmin/status
 @dirrm share/examples/webmin/status
+@dirrm etc/webmin/status
