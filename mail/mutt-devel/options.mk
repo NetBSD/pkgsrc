@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.23 2007/03/04 17:22:45 tonio Exp $
+# $NetBSD: options.mk,v 1.24 2007/04/21 18:27:21 tonio Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=	ssl smime sasl mutt-hcache idn mutt-compressed-mbox debug
+PKG_SUPPORTED_OPTIONS=	ssl smime sasl mutt-hcache idn mutt-smtp debug
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
 .include "../../mk/bsd.options.mk"
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 SUBST_CLASSES+=		curse
 SUBST_MESSAGE.curse=	Fixing mutt to avoid ncursesw
 SUBST_STAGE.curse=	post-patch
-SUBST_FILES.curse=	configure.in configure
+SUBST_FILES.curse=	configure
 SUBST_SED.curse=	-e 's,for lib in ncurses ncursesw,for lib in ncurses,'
 .endif
 
@@ -97,13 +97,12 @@ CONFIGURE_ARGS+=	--disable-hcache
 .endif
 
 ###
-### Compressed mail boxes
+### Internal SMTP relay support
 ###
-.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
-PATCH_SITES=		http://www.spinnaker.de/mutt/compressed/
-PATCHFILES+=		patch-1.5.14.rr.compressed.1.gz
-PATCH_DIST_STRIP=	-p1
-CONFIGURE_ARGS+=	--enable-compressed
+.if !empty(PKG_OPTIONS:Mmutt-smtp)
+CONFIGURE_ARGS+=       --enable-smtp
+.else
+CONFIGURE_ARGS+=       --disable-smtp
 .endif
 
 ###
@@ -121,4 +120,5 @@ CONFIGURE_ARGS+=	--disable-idn
 ###
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+CFLAGS+= -g
 .endif
