@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6277 2007/04/20 17:54:48 wiz Exp $
+$NetBSD: TODO,v 1.6278 2007/04/21 05:36:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1282,10 +1282,8 @@ Suggested package updates
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
-	o wbm-cyrus-imapd-1.5
 	o wcalc-2.2.2
 	o wdm-1.28
-	o webmin-1.340
 	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
