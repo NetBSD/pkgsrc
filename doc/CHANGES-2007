@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.886 2007/04/21 10:41:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.887 2007/04/21 11:26:02 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1747,3 +1747,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/ruby-rbtree version 0.2.0 [wiz 2007-04-21]
 	Added devel/ruby-rcsparse version 0.0.0.20070218 [wiz 2007-04-21]
 	Added devel/fromcvs version 0.0.0.20070314 [wiz 2007-04-21]
+	Updated x11/xlockmore to 5.24 [hubertf 2007-04-21]
