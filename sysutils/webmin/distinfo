@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.11 2006/06/29 17:45:39 xtraeme Exp $
+$NetBSD: distinfo,v 1.12 2007/04/21 05:22:57 obache Exp $
 
-SHA1 (webmin-1.270-minimal.tar.gz) = 31fa4cf18205a0dac74e38290a03950450abae26
-RMD160 (webmin-1.270-minimal.tar.gz) = 94847d56eb9aebefc234178656dc53daa3af91c6
-Size (webmin-1.270-minimal.tar.gz) = 1301974 bytes
-SHA1 (patch-aa) = c643cb0f568629288584902b942c792652cc366e
-SHA1 (patch-ab) = 5d91a836b0f1dd51feeda60db7c864c4e93d5c3c
-SHA1 (patch-ac) = 12c133cb1beefd2614f4caa15cc2b29cd1721efa
-SHA1 (patch-ad) = 710b6187ed37fe328daa407d2c7b5de7298ede24
-SHA1 (patch-ae) = 34434aa603791f55a18005fd8a0cf2586aca0988
-SHA1 (patch-af) = 8d2c8d60d2c090050aa41f1762ae8375e3e313c4
-SHA1 (patch-ag) = 024c5ba807bb72007ece1ccaec0d3ddaf9ce00ba
-SHA1 (patch-ah) = 2fe613a0100fb7c9ceb3335bf93120703e01fd7b
-SHA1 (patch-ai) = d3c76a331e634f0c873a870fa31855a97ad68b5e
+SHA1 (webmin-1.340.tar.gz) = 530bb583824688f24fc4c6d0b8522d43c7f5bb96
+RMD160 (webmin-1.340.tar.gz) = 5f4cfe51e052c2f46dc7f6813e74fb0e5aebff05
+Size (webmin-1.340.tar.gz) = 15851601 bytes
+SHA1 (patch-aa) = 75b5fe5c5f0a0f83db32e47a3d9bbe277c51decb
+SHA1 (patch-ab) = fa07200462df76af23b9952739388053940c6743
+SHA1 (patch-ad) = ab3975853a0c4815a6c9d0a66bc64ce5018d2301
+SHA1 (patch-ae) = dc32ccf318777410f5cb702ccefb88b0f87fa209
+SHA1 (patch-af) = ccf2054a957808dc301354590e58d44ade3264a7
+SHA1 (patch-ag) = 4a2ba61d26a3f3a9bb0e1a22a8afb65d66e43746
+SHA1 (patch-ah) = 90617e16d08ccad3925d95c60fbe4002c770069b
+SHA1 (patch-ai) = 196df511dbf8e6d80bedd496f5494b13c7625a3b
