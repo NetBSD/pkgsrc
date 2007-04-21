@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.884 2007/04/21 07:10:48 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.885 2007/04/21 08:37:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1716,14 +1716,14 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-cluster-webmin to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-custom to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-dhcpd to 1.340 [obache 2007-04-21]
-	Updated sysutils/wbm-dovcot to 1.340 [obache 2007-04-21]
+	Updated sysutils/wbm-dovecot to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-fetchmail to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-file to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-htaccess-htpasswd to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-inetd to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-ipfilter to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-ldap-useradmin to 1.340 [obache 2007-04-21]
-	Updated sysutils/wbm-ldapmin to 1.340 [obache 2007-04-21]
+	Updated sysutils/wbm-lpadmin to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-mailboxes to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-mount to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-mysql to 1.340 [obache 2007-04-21]
