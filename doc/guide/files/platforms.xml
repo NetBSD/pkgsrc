@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.53 2007/02/08 23:25:10 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.54 2007/04/21 02:57:58 kano Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -114,6 +114,12 @@ directory on ftp.NetBSD.org.</para>
 	<entry role="binary-pkgs-url"></entry>
       </row>
       <row>
+	<entry role="osname">HP-UX 11.11/hppa</entry>
+	<entry role="date">20070421</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-HPUX-B.11.11-hppa-20070421.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
 	<entry role="osname">Interix 3.5</entry>
 	<entry role="date">20061106</entry>
 	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Interix-3.5-i386-20061106.tar.gz">binary kit</ulink></entry>
@@ -147,6 +153,12 @@ directory on ftp.NetBSD.org.</para>
 	<entry role="osname">OpenBSD 3.5/i386</entry>
 	<entry role="date">20040703</entry>
 	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.5-i386-20040703.tar.gz">binary kit</ulink></entry>
+	<entry role="binary-pkgs-url"></entry>
+      </row>
+      <row>
+	<entry role="osname">OSF1 5.1/alpha</entry>
+	<entry role="date">20070420</entry>
+	<entry role="kit-url"><ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OSF1-V5.1-alpha-20070420.tar.gz">binary kit</ulink></entry>
 	<entry role="binary-pkgs-url"></entry>
       </row>
       <row>
