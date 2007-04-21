@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/21 14:31:18 drochner Exp $
+include/dbus-1.0/dbus/connection.h
+include/dbus-1.0/dbus/dbus-qt.h
+include/dbus-1.0/dbus/message.h
+include/dbus-1.0/dbus/server.h
+lib/libdbus-qt-1.la
+@comment in dbus: @dirrm include/dbus-1.0/dbus
