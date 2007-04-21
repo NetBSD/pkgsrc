@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.832 2007/04/19 20:54:10 seb Exp $
+# $NetBSD: Makefile,v 1.833 2007/04/21 10:40:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -156,6 +156,7 @@ SUBDIR+=	flex
 SUBDIR+=	flim
 SUBDIR+=	florist
 SUBDIR+=	fortran-utils
+SUBDIR+=	fromcvs
 SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
 SUBDIR+=	g-wrap1
@@ -687,6 +688,8 @@ SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
+SUBDIR+=	ruby-rbtree
+SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-rgl
