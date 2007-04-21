@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.53 2006/10/04 22:24:49 rillig Exp $
+# $NetBSD: module.mk,v 1.54 2007/04/21 09:41:00 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -46,6 +46,7 @@ TEST_TARGET?=		test
 
 .include "../../mk/compiler.mk"
 
+# see http://mail-index.netbsd.org/tech-pkg/2007/04/20/0004.html
 .if ${OPSYS} == "AIX"
 .  if !empty(CC_VERSION:Mgcc*)
 BROKEN=		Perl does not like building with GCC on AIX, please use a different compiler
