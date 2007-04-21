@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/21 10:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/21 11:37:45 wiz Exp $
 
 DISTNAME=	fromcvs-0.0.0_20070314
 PKGNAME=	${DISTNAME:S/_/./}
@@ -20,19 +20,19 @@ WRKSRC=		${WRKDIR}/fromcvs-e8d986fb9ba7
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
-	${ECHO} "${RUBY} -I${PREFIX}/share/ruby-fromcvs ${PREFIX}/share/ruby-fromcvs/togit.rb \"$$""@\"" >> ${WRKSRC}/togit
+	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"$$""@\"" >> ${WRKSRC}/togit
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/tohg
-	${ECHO} "${RUBY} -I${PREFIX}/share/ruby-fromcvs ${PREFIX}/share/ruby-fromcvs/tohg.rb \"$$""@\"" >> ${WRKSRC}/tohg
+	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"$$""@\"" >> ${WRKSRC}/tohg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ruby-fromcvs
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ruby-fromcvs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ruby-fromcvs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ruby-fromcvs/commitset
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fromcvs
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/fromcvs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/fromcvs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/fromcvs/commitset
 	${INSTALL_DATA} ${WRKSRC}/commitset/* \
-		${PREFIX}/share/ruby-fromcvs/commitset
-	${INSTALL_DATA} ${WRKSRC}/*.rb ${PREFIX}/share/ruby-fromcvs
-	${INSTALL_DATA} ${WRKSRC}/*.py ${PREFIX}/share/ruby-fromcvs
+		${PREFIX}/share/fromcvs/commitset
+	${INSTALL_DATA} ${WRKSRC}/*.rb ${PREFIX}/share/fromcvs
+	${INSTALL_DATA} ${WRKSRC}/*.py ${PREFIX}/share/fromcvs
 	${INSTALL_SCRIPT} ${WRKSRC}/togit ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/tohg ${PREFIX}/bin
 
