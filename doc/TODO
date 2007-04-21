@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6282 2007/04/21 15:34:58 heinz Exp $
+$NetBSD: TODO,v 1.6283 2007/04/21 18:28:41 tonio Exp $
 
 Suggested new packages
 ======================
@@ -772,7 +772,6 @@ Suggested package updates
 	o multitail-5.0.0
 	o muse-0.9.2
 	o musicpd-0.12.2
-	o mutt-devel-1.5.15 [tonio]
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
 	o nagios-3.0a2
