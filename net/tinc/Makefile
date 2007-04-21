@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/21 15:19:01 obache Exp $
 #
 
-DISTNAME=	tinc-1.0.4
+DISTNAME=	tinc-1.0.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.tinc-vpn.org/packages/
 
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.tinc-vpn.org/
 COMMENT=	Virtual Private Network (VPN) daemon
 
 GNU_CONFIGURE=	yes
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
-.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
