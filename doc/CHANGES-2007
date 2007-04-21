@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.885 2007/04/21 08:37:08 taca Exp $
+$NetBSD: CHANGES-2007,v 1.886 2007/04/21 10:41:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1744,3 +1744,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-useradmin to 1.340 [obache 2007-04-21]
 	Updated sysutils/wbm-cyrus-imapd to 1.5 [obache 2007-04-21]
 	Updated audio/easytag to 2.0.1 [wiz 2007-04-21]
+	Added devel/ruby-rbtree version 0.2.0 [wiz 2007-04-21]
+	Added devel/ruby-rcsparse version 0.0.0.20070218 [wiz 2007-04-21]
+	Added devel/fromcvs version 0.0.0.20070314 [wiz 2007-04-21]
