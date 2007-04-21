@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:42:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
 share/examples/webmin/quota/config
 share/webmin/quota/CHANGELOG
 share/webmin/quota/acl_security.pl
@@ -15,6 +15,7 @@ share/webmin/quota/config-solaris
 share/webmin/quota/config-unixware
 share/webmin/quota/config.info
 share/webmin/quota/config.info.ca
+share/webmin/quota/config.info.da
 share/webmin/quota/config.info.de
 share/webmin/quota/config.info.es
 share/webmin/quota/config.info.fr
@@ -27,7 +28,9 @@ share/webmin/quota/config.info.sv
 share/webmin/quota/config.info.tr
 share/webmin/quota/config.info.uk_UA
 share/webmin/quota/config.info.zh_CN
+share/webmin/quota/config.info.zh_CN.UTF-8
 share/webmin/quota/config.info.zh_TW.Big5
+share/webmin/quota/config.info.zh_TW.UTF-8
 share/webmin/quota/copy_group.cgi
 share/webmin/quota/copy_group_form.cgi
 share/webmin/quota/copy_user.cgi
@@ -45,6 +48,7 @@ share/webmin/quota/group_filesys.cgi
 share/webmin/quota/group_grace_form.cgi
 share/webmin/quota/group_grace_save.cgi
 share/webmin/quota/help/copy_group.ca.html
+share/webmin/quota/help/copy_group.da.html
 share/webmin/quota/help/copy_group.es.html
 share/webmin/quota/help/copy_group.fr.html
 share/webmin/quota/help/copy_group.html
@@ -52,7 +56,9 @@ share/webmin/quota/help/copy_group.nl.html
 share/webmin/quota/help/copy_group.pl.html
 share/webmin/quota/help/copy_group.sv.html
 share/webmin/quota/help/copy_group.zh_TW.Big5.html
+share/webmin/quota/help/copy_group.zh_TW.UTF-8.html
 share/webmin/quota/help/copy_user.ca.html
+share/webmin/quota/help/copy_user.da.html
 share/webmin/quota/help/copy_user.es.html
 share/webmin/quota/help/copy_user.fr.html
 share/webmin/quota/help/copy_user.html
@@ -60,6 +66,8 @@ share/webmin/quota/help/copy_user.nl.html
 share/webmin/quota/help/copy_user.pl.html
 share/webmin/quota/help/copy_user.sv.html
 share/webmin/quota/help/copy_user.zh_TW.Big5.html
+share/webmin/quota/help/copy_user.zh_TW.UTF-8.html
+share/webmin/quota/help/edit_group_mass.ca.html
 share/webmin/quota/help/edit_group_mass.html
 share/webmin/quota/help/edit_group_quota.ca.html
 share/webmin/quota/help/edit_group_quota.es.html
@@ -69,6 +77,8 @@ share/webmin/quota/help/edit_group_quota.nl.html
 share/webmin/quota/help/edit_group_quota.pl.html
 share/webmin/quota/help/edit_group_quota.sv.html
 share/webmin/quota/help/edit_group_quota.zh_TW.Big5.html
+share/webmin/quota/help/edit_group_quota.zh_TW.UTF-8.html
+share/webmin/quota/help/edit_user_mass.ca.html
 share/webmin/quota/help/edit_user_mass.html
 share/webmin/quota/help/edit_user_quota.ca.html
 share/webmin/quota/help/edit_user_quota.es.html
@@ -78,6 +88,7 @@ share/webmin/quota/help/edit_user_quota.nl.html
 share/webmin/quota/help/edit_user_quota.pl.html
 share/webmin/quota/help/edit_user_quota.sv.html
 share/webmin/quota/help/edit_user_quota.zh_TW.Big5.html
+share/webmin/quota/help/edit_user_quota.zh_TW.UTF-8.html
 share/webmin/quota/help/group_filesys.ca.html
 share/webmin/quota/help/group_filesys.es.html
 share/webmin/quota/help/group_filesys.fr.html
@@ -86,6 +97,7 @@ share/webmin/quota/help/group_filesys.nl.html
 share/webmin/quota/help/group_filesys.pl.html
 share/webmin/quota/help/group_filesys.sv.html
 share/webmin/quota/help/group_filesys.zh_TW.Big5.html
+share/webmin/quota/help/group_filesys.zh_TW.UTF-8.html
 share/webmin/quota/help/group_grace.ca.html
 share/webmin/quota/help/group_grace.es.html
 share/webmin/quota/help/group_grace.fr.html
@@ -94,6 +106,7 @@ share/webmin/quota/help/group_grace.nl.html
 share/webmin/quota/help/group_grace.pl.html
 share/webmin/quota/help/group_grace.sv.html
 share/webmin/quota/help/group_grace.zh_TW.Big5.html
+share/webmin/quota/help/group_grace.zh_TW.UTF-8.html
 share/webmin/quota/help/intro.ca.html
 share/webmin/quota/help/intro.es.html
 share/webmin/quota/help/intro.fr.html
@@ -102,6 +115,7 @@ share/webmin/quota/help/intro.nl.html
 share/webmin/quota/help/intro.pl.html
 share/webmin/quota/help/intro.sv.html
 share/webmin/quota/help/intro.zh_TW.Big5.html
+share/webmin/quota/help/intro.zh_TW.UTF-8.html
 share/webmin/quota/help/list_groups.ca.html
 share/webmin/quota/help/list_groups.es.html
 share/webmin/quota/help/list_groups.fr.html
@@ -117,6 +131,7 @@ share/webmin/quota/help/list_users.nl.html
 share/webmin/quota/help/list_users.pl.html
 share/webmin/quota/help/list_users.sv.html
 share/webmin/quota/help/list_users.zh_TW.Big5.html
+share/webmin/quota/help/list_users.zh_TW.UTF-8.html
 share/webmin/quota/help/user_filesys.ca.html
 share/webmin/quota/help/user_filesys.es.html
 share/webmin/quota/help/user_filesys.fr.html
@@ -125,6 +140,7 @@ share/webmin/quota/help/user_filesys.nl.html
 share/webmin/quota/help/user_filesys.pl.html
 share/webmin/quota/help/user_filesys.sv.html
 share/webmin/quota/help/user_filesys.zh_TW.Big5.html
+share/webmin/quota/help/user_filesys.zh_TW.UTF-8.html
 share/webmin/quota/help/user_grace.ca.html
 share/webmin/quota/help/user_grace.es.html
 share/webmin/quota/help/user_grace.fr.html
@@ -133,6 +149,7 @@ share/webmin/quota/help/user_grace.nl.html
 share/webmin/quota/help/user_grace.pl.html
 share/webmin/quota/help/user_grace.sv.html
 share/webmin/quota/help/user_grace.zh_TW.Big5.html
+share/webmin/quota/help/user_grace.zh_TW.UTF-8.html
 share/webmin/quota/hpux-lib.pl
 share/webmin/quota/images/icon.gif
 share/webmin/quota/images/smallicon.gif
@@ -141,11 +158,14 @@ share/webmin/quota/install_check.pl
 share/webmin/quota/irix-lib.pl
 share/webmin/quota/lang/ca
 share/webmin/quota/lang/cz
+share/webmin/quota/lang/da
 share/webmin/quota/lang/en
 share/webmin/quota/lang/es
 share/webmin/quota/lang/fr
 share/webmin/quota/lang/it
+share/webmin/quota/lang/ja_JP.UTF-8
 share/webmin/quota/lang/ja_JP.euc
+share/webmin/quota/lang/ko_KR.UTF-8
 share/webmin/quota/lang/ko_KR.euc
 share/webmin/quota/lang/nl
 share/webmin/quota/lang/pl
@@ -157,7 +177,9 @@ share/webmin/quota/lang/sv
 share/webmin/quota/lang/tr
 share/webmin/quota/lang/uk_UA
 share/webmin/quota/lang/zh_CN
+share/webmin/quota/lang/zh_CN.UTF-8
 share/webmin/quota/lang/zh_TW.Big5
+share/webmin/quota/lang/zh_TW.UTF-8
 share/webmin/quota/linux-lib.pl
 share/webmin/quota/list_groups.cgi
 share/webmin/quota/list_users.cgi
@@ -169,6 +191,7 @@ share/webmin/quota/notes
 share/webmin/quota/openbsd-lib.pl
 share/webmin/quota/quota-lib.pl
 share/webmin/quota/save_email.cgi
+share/webmin/quota/save_gemail.cgi
 share/webmin/quota/save_group_mass.cgi
 share/webmin/quota/save_group_quota.cgi
 share/webmin/quota/save_gsync.cgi
@@ -187,3 +210,4 @@ share/webmin/quota/useradmin_update.pl
 @dirrm share/webmin/quota/help
 @dirrm share/webmin/quota
 @dirrm share/examples/webmin/quota
+@dirrm etc/webmin/quota

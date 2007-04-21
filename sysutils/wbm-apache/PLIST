@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:39:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:58 obache Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -64,11 +64,13 @@ share/webmin/apache/config-windows
 share/webmin/apache/config.info
 share/webmin/apache/config.info.bg
 share/webmin/apache/config.info.ca
+share/webmin/apache/config.info.da
 share/webmin/apache/config.info.de
 share/webmin/apache/config.info.es
 share/webmin/apache/config.info.fa
 share/webmin/apache/config.info.fr
 share/webmin/apache/config.info.hu
+share/webmin/apache/config.info.ja_JP.UTF-8
 share/webmin/apache/config.info.ja_JP.euc
 share/webmin/apache/config.info.nl
 share/webmin/apache/config.info.pl
@@ -79,7 +81,9 @@ share/webmin/apache/config.info.sv
 share/webmin/apache/config.info.tr
 share/webmin/apache/config.info.uk_UA
 share/webmin/apache/config.info.zh_CN
+share/webmin/apache/config.info.zh_CN.UTF-8
 share/webmin/apache/config.info.zh_TW.Big5
+share/webmin/apache/config.info.zh_TW.UTF-8
 share/webmin/apache/config_solaris.txt.1.25
 share/webmin/apache/core.pl
 share/webmin/apache/create_dir.cgi
@@ -140,6 +144,7 @@ share/webmin/apache/index.cgi
 share/webmin/apache/install_check.pl
 share/webmin/apache/lang/bg
 share/webmin/apache/lang/ca
+share/webmin/apache/lang/da
 share/webmin/apache/lang/de
 share/webmin/apache/lang/en
 share/webmin/apache/lang/es
@@ -147,7 +152,9 @@ share/webmin/apache/lang/fa
 share/webmin/apache/lang/fr
 share/webmin/apache/lang/hu
 share/webmin/apache/lang/it
+share/webmin/apache/lang/ja_JP.UTF-8
 share/webmin/apache/lang/ja_JP.euc
+share/webmin/apache/lang/ko_KR.UTF-8
 share/webmin/apache/lang/ko_KR.euc
 share/webmin/apache/lang/nl
 share/webmin/apache/lang/pl
@@ -159,7 +166,9 @@ share/webmin/apache/lang/sv
 share/webmin/apache/lang/tr
 share/webmin/apache/lang/uk_UA
 share/webmin/apache/lang/zh_CN
+share/webmin/apache/lang/zh_CN.UTF-8
 share/webmin/apache/lang/zh_TW.Big5
+share/webmin/apache/lang/zh_TW.UTF-8
 share/webmin/apache/list_authgroups.cgi
 share/webmin/apache/list_authusers.cgi
 share/webmin/apache/log_parser.pl
@@ -171,7 +180,15 @@ share/webmin/apache/mod_alias.pl
 share/webmin/apache/mod_apachessl.pl
 share/webmin/apache/mod_asis.pl
 share/webmin/apache/mod_auth.pl
+share/webmin/apache/mod_auth_basic.pl
 share/webmin/apache/mod_auth_dbm.pl
+share/webmin/apache/mod_auth_digest.pl
+share/webmin/apache/mod_authn_dbm.pl
+share/webmin/apache/mod_authn_file.pl
+share/webmin/apache/mod_authz_dbm.pl
+share/webmin/apache/mod_authz_groupfile.pl
+share/webmin/apache/mod_authz_host.pl
+share/webmin/apache/mod_authz_owner.pl
 share/webmin/apache/mod_autoindex.pl
 share/webmin/apache/mod_bandwidth.pl
 share/webmin/apache/mod_browser.pl
@@ -184,6 +201,8 @@ share/webmin/apache/mod_disk_cache.pl
 share/webmin/apache/mod_env.pl
 share/webmin/apache/mod_expires.pl.broken
 share/webmin/apache/mod_ext_filter.pl
+share/webmin/apache/mod_fastcgi.pl
+share/webmin/apache/mod_fcgid.pl
 share/webmin/apache/mod_imap.pl
 share/webmin/apache/mod_include.pl
 share/webmin/apache/mod_info.pl
@@ -201,6 +220,7 @@ share/webmin/apache/mod_php3.pl
 share/webmin/apache/mod_php4.pl
 share/webmin/apache/mod_php5.pl
 share/webmin/apache/mod_proxy.pl
+share/webmin/apache/mod_ruby.pl
 share/webmin/apache/mod_setenvif.pl
 share/webmin/apache/mod_speling.pl
 share/webmin/apache/mod_ssl.pl
