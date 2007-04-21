@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/04/21 05:22:57 obache Exp $
 
-DISTNAME=	webmin-1.270-minimal
-PKGNAME=	${DISTNAME:S/-minimal$//}
-PKGREVISION=	3
+.include "version.mk"
+
+DISTNAME=	webmin-${WBM_VERSION}
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.webmin.com/
 COMMENT=	Perl web server and CGI for Unix system administration
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
@@ -29,30 +27,32 @@ FILES_SUBST+=		WEBMIN_EGDIR=${WEBMIN_EGDIR:Q}
 FILES_SUBST+=		WEBMIN_ETCDIR=${WEBMIN_ETCDIR:Q}
 FILES_SUBST+=		WEBMIN_VARDIR=${WEBMIN_VARDIR:Q}
 MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
+BUILD_DEFS+=		VARBASE
+
+WEBMIN_MINIMAL_MODULES=	acl cron init inittab man proc servers webmin webminlog
 
 PKG_SYSCONFSUBDIR=	webmin
 OWN_DIRS_PERMS+=	${WEBMIN_VARDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
-.for _file_ in		config install-dir perl-path var-path version
-CONF_FILES+=		${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
+.for f in		config install-dir perl-path var-path version
+CONF_FILES+=		${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-.for _module_ in	acl cron init inittab man proc servers webmin	\
-			webminlog
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${_module_}			\
+.for m in		${WEBMIN_MINIMAL_MODULES}
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${m}				\
 			${ROOT_USER} ${ROOT_GROUP} 0700
-CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_module_}/config		\
-			${PKG_SYSCONFDIR}/${_module_}/config		\
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${m}/config			\
+			${PKG_SYSCONFDIR}/${m}/config			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
-.for _file_ in		miniserv.pem
-CONF_FILES_PERMS+=	${WEBMIN_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+.for f in		miniserv.pem
+CONF_FILES_PERMS+=	${WEBMIN_DIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
-.for _file_ in		miniserv.conf miniserv.users webmin.acl
-CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+.for f in		miniserv.conf miniserv.users webmin.acl
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
-.for _file_ in		reload restart start stop
-CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+.for f in		reload restart start stop
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		webmin
@@ -65,8 +65,21 @@ post-extract:
 	${CP} ${FILESDIR}/acl_config-dragonfly ${WRKSRC}/acl/config-dragonfly
 	${CP} ${FILESDIR}/init_config-dragonfly ${WRKSRC}/init/config-dragonfly
 	${CP} ${FILESDIR}/man_config-dragonfly ${WRKSRC}/man/config-dragonfly
-	${CP} ${FILESDIR}/proc_config-dragonfly ${WRKSRC}/proc//config-dragonfly
+	${CP} ${FILESDIR}/proc_config-dragonfly ${WRKSRC}/proc/config-dragonfly
 
+pre-configure:
+	cd ${WRKSRC} &&							\
+	ptn="@"`${ECHO} ${WEBMIN_MINIMAL_MODULES}|sed -e 's/ /@/g'`"@" &&	\
+	for m in `${ECHO} */module.info | sed -e 's/\/module.info//g'`; do \
+		case $${ptn} in						\
+		*@$${m}@*) ;;						\
+		*)	rm -rf $${m} ;;					\
+		esac;							\
+	done &&								\
+	for t in `${ECHO} */theme.info | sed -e 's/\/theme.info//g'`; do\
+		rm -rf $${t};						\
+	done &&								\
+	touch ${WRKSRC}/minimal-install
 
 do-configure:
 	${SED}	-e "s,@WEBMIN_EGDIR@,${WEBMIN_EGDIR},g"			\

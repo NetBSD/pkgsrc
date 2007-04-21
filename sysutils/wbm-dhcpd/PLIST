@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 04:02:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:00 obache Exp $
 share/examples/webmin/dhcpd/config
 share/webmin/dhcpd/CHANGELOG
 share/webmin/dhcpd/acl_security.pl
@@ -8,7 +8,7 @@ share/webmin/dhcpd/config-coherent-linux
 share/webmin/dhcpd/config-corel-linux
 share/webmin/dhcpd/config-debian-linux
 share/webmin/dhcpd/config-debian-linux-3.0
-share/webmin/dhcpd/config-debian-linux-3.1
+share/webmin/dhcpd/config-debian-linux-3.1-*
 share/webmin/dhcpd/config-freebsd
 share/webmin/dhcpd/config-generic-linux
 share/webmin/dhcpd/config-gentoo-linux
@@ -25,8 +25,9 @@ share/webmin/dhcpd/config-openbsd-3.6-*
 share/webmin/dhcpd/config-openserver
 share/webmin/dhcpd/config-osf1
 share/webmin/dhcpd/config-redhat-linux
+share/webmin/dhcpd/config-redhat-linux-14.0-*
 share/webmin/dhcpd/config-redhat-linux-6.0-6.2
-share/webmin/dhcpd/config-redhat-linux-7.0-*
+share/webmin/dhcpd/config-redhat-linux-7.0-13.0
 share/webmin/dhcpd/config-slackware-linux
 share/webmin/dhcpd/config-slackware-linux-4.0
 share/webmin/dhcpd/config-slackware-linux-7.1-*
@@ -35,32 +36,40 @@ share/webmin/dhcpd/config-solaris
 share/webmin/dhcpd/config-suse-linux
 share/webmin/dhcpd/config-suse-linux-7.1-7.3
 share/webmin/dhcpd/config-suse-linux-8.0
-share/webmin/dhcpd/config-suse-linux-8.2-*
+share/webmin/dhcpd/config-suse-linux-8.2-9.1
+share/webmin/dhcpd/config-suse-linux-9.2-*
 share/webmin/dhcpd/config-trustix-linux
 share/webmin/dhcpd/config-turbo-linux
 share/webmin/dhcpd/config-united-linux
 share/webmin/dhcpd/config-unixware
 share/webmin/dhcpd/config.info
 share/webmin/dhcpd/config.info.ca
+share/webmin/dhcpd/config.info.da
 share/webmin/dhcpd/config.info.de
 share/webmin/dhcpd/config.info.es
 share/webmin/dhcpd/config.info.fa
 share/webmin/dhcpd/config.info.fr
+share/webmin/dhcpd/config.info.ja_JP.UTF-8
 share/webmin/dhcpd/config.info.ja_JP.euc
 share/webmin/dhcpd/config.info.nl
 share/webmin/dhcpd/config.info.pl
 share/webmin/dhcpd/config.info.pt_BR
 share/webmin/dhcpd/config.info.ru_RU
 share/webmin/dhcpd/config.info.ru_SU
+share/webmin/dhcpd/config.info.sk
 share/webmin/dhcpd/config.info.sv
 share/webmin/dhcpd/config.info.tr
 share/webmin/dhcpd/config.info.uk_UA
 share/webmin/dhcpd/config.info.zh_CN
+share/webmin/dhcpd/config.info.zh_CN.UTF-8
 share/webmin/dhcpd/config.info.zh_TW.Big5
+share/webmin/dhcpd/config.info.zh_TW.UTF-8
 share/webmin/dhcpd/confirm_delete.cgi
 share/webmin/dhcpd/defaultacl
 share/webmin/dhcpd/delete_all.cgi
+share/webmin/dhcpd/delete_hosts.cgi
 share/webmin/dhcpd/delete_lease.cgi
+share/webmin/dhcpd/delete_subnets.cgi
 share/webmin/dhcpd/dhcpd-lib.pl
 share/webmin/dhcpd/edit_group.cgi
 share/webmin/dhcpd/edit_host.cgi
@@ -75,6 +84,7 @@ share/webmin/dhcpd/edit_zones.cgi
 share/webmin/dhcpd/help/acl.ca.html
 share/webmin/dhcpd/help/acl.es.html
 share/webmin/dhcpd/help/acl.html
+share/webmin/dhcpd/help/acl.ja_JP.UTF-8.html
 share/webmin/dhcpd/help/acl.ja_JP.euc.html
 share/webmin/dhcpd/help/acl.pt_BR.html
 share/webmin/dhcpd/help/acl_info.ca.html
@@ -97,13 +107,16 @@ share/webmin/dhcpd/images/subnet.gif
 share/webmin/dhcpd/index.cgi
 share/webmin/dhcpd/install_check.pl
 share/webmin/dhcpd/lang/ca
+share/webmin/dhcpd/lang/da
 share/webmin/dhcpd/lang/de
 share/webmin/dhcpd/lang/en
 share/webmin/dhcpd/lang/es
 share/webmin/dhcpd/lang/fa
 share/webmin/dhcpd/lang/fr
+share/webmin/dhcpd/lang/ja_JP.UTF-8
 share/webmin/dhcpd/lang/ja_JP.euc
 share/webmin/dhcpd/lang/ja_JP.jis
+share/webmin/dhcpd/lang/ko_KR.UTF-8
 share/webmin/dhcpd/lang/ko_KR.euc
 share/webmin/dhcpd/lang/nl
 share/webmin/dhcpd/lang/pl
@@ -111,11 +124,14 @@ share/webmin/dhcpd/lang/pt
 share/webmin/dhcpd/lang/pt_BR
 share/webmin/dhcpd/lang/ru_RU
 share/webmin/dhcpd/lang/ru_SU
+share/webmin/dhcpd/lang/sk
 share/webmin/dhcpd/lang/sv
 share/webmin/dhcpd/lang/tr
 share/webmin/dhcpd/lang/uk_UA
 share/webmin/dhcpd/lang/zh_CN
+share/webmin/dhcpd/lang/zh_CN.UTF-8
 share/webmin/dhcpd/lang/zh_TW.Big5
+share/webmin/dhcpd/lang/zh_TW.UTF-8
 share/webmin/dhcpd/list_leases.cgi
 share/webmin/dhcpd/log_parser.pl
 share/webmin/dhcpd/lookup_group.cgi
@@ -143,3 +159,4 @@ share/webmin/dhcpd/stop.cgi
 @dirrm share/webmin/dhcpd/help
 @dirrm share/webmin/dhcpd
 @dirrm share/examples/webmin/dhcpd
+@dirrm etc/webmin/dhcpd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 04:03:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -21,6 +21,7 @@ share/webmin/postfix/config.info.ca
 share/webmin/postfix/config.info.de
 share/webmin/postfix/config.info.es
 share/webmin/postfix/config.info.fr
+share/webmin/postfix/config.info.ja_JP.UTF-8
 share/webmin/postfix/config.info.ja_JP.euc
 share/webmin/postfix/config.info.pl
 share/webmin/postfix/config.info.ru_RU
@@ -29,7 +30,9 @@ share/webmin/postfix/config.info.sv
 share/webmin/postfix/config.info.tr
 share/webmin/postfix/config.info.uk_UA
 share/webmin/postfix/config.info.zh_CN
+share/webmin/postfix/config.info.zh_CN.UTF-8
 share/webmin/postfix/config.info.zh_TW.Big5
+share/webmin/postfix/config.info.zh_TW.UTF-8
 share/webmin/postfix/debug.cgi
 share/webmin/postfix/defaultacl
 share/webmin/postfix/delete_aliases.cgi
@@ -49,7 +52,40 @@ share/webmin/postfix/filter.pl
 share/webmin/postfix/flushq.cgi
 share/webmin/postfix/general.cgi
 share/webmin/postfix/header.cgi
+share/webmin/postfix/help/access.ca.html
 share/webmin/postfix/help/access.html
+share/webmin/postfix/help/alias_cmt.ca.html
+share/webmin/postfix/help/alias_cmt.html
+share/webmin/postfix/help/alias_enabled.ca.html
+share/webmin/postfix/help/alias_enabled.es.html
+share/webmin/postfix/help/alias_enabled.fr.html
+share/webmin/postfix/help/alias_enabled.html
+share/webmin/postfix/help/alias_enabled.pl.html
+share/webmin/postfix/help/alias_enabled.ru_RU.html
+share/webmin/postfix/help/alias_enabled.ru_SU.html
+share/webmin/postfix/help/alias_enabled.sv.html
+share/webmin/postfix/help/alias_enabled.zh_TW.Big5.html
+share/webmin/postfix/help/alias_enabled.zh_TW.UTF-8.html
+share/webmin/postfix/help/alias_name.ca.html
+share/webmin/postfix/help/alias_name.es.html
+share/webmin/postfix/help/alias_name.fr.html
+share/webmin/postfix/help/alias_name.html
+share/webmin/postfix/help/alias_name.pl.html
+share/webmin/postfix/help/alias_name.ru_RU.html
+share/webmin/postfix/help/alias_name.ru_SU.html
+share/webmin/postfix/help/alias_name.sv.html
+share/webmin/postfix/help/alias_name.zh_TW.Big5.html
+share/webmin/postfix/help/alias_name.zh_TW.UTF-8.html
+share/webmin/postfix/help/alias_to.ca.html
+share/webmin/postfix/help/alias_to.es.html
+share/webmin/postfix/help/alias_to.fr.html
+share/webmin/postfix/help/alias_to.html
+share/webmin/postfix/help/alias_to.pl.html
+share/webmin/postfix/help/alias_to.ru_RU.html
+share/webmin/postfix/help/alias_to.ru_SU.html
+share/webmin/postfix/help/alias_to.sv.html
+share/webmin/postfix/help/alias_to.zh_TW.Big5.html
+share/webmin/postfix/help/alias_to.zh_TW.UTF-8.html
 share/webmin/postfix/help/aliases.ca.html
 share/webmin/postfix/help/aliases.es.html
 share/webmin/postfix/help/aliases.html
@@ -138,6 +174,7 @@ share/webmin/postfix/help/opt_canonical_maps.es.html
 share/webmin/postfix/help/opt_canonical_maps.html
 share/webmin/postfix/help/opt_canonical_maps.pl.html
 share/webmin/postfix/help/opt_canonical_maps.sv.html
+share/webmin/postfix/help/opt_check_sender_access.ca.html
 share/webmin/postfix/help/opt_check_sender_access.html
 share/webmin/postfix/help/opt_command_time_limit.ca.html
 share/webmin/postfix/help/opt_command_time_limit.es.html
@@ -535,6 +572,7 @@ share/webmin/postfix/help/opt_reject_code.es.html
 share/webmin/postfix/help/opt_reject_code.html
 share/webmin/postfix/help/opt_reject_code.pl.html
 share/webmin/postfix/help/opt_reject_code.sv.html
+share/webmin/postfix/help/opt_reject_rbl_client.ca.html
 share/webmin/postfix/help/opt_reject_rbl_client.html
 share/webmin/postfix/help/opt_relay_domains.ca.html
 share/webmin/postfix/help/opt_relay_domains.de.html
@@ -801,8 +839,10 @@ share/webmin/postfix/lang/de
 share/webmin/postfix/lang/en
 share/webmin/postfix/lang/es
 share/webmin/postfix/lang/fr
+share/webmin/postfix/lang/ja_JP.UTF-8
 share/webmin/postfix/lang/ja_JP.euc
 share/webmin/postfix/lang/ja_JP.jis
+share/webmin/postfix/lang/ko_KR.UTF-8
 share/webmin/postfix/lang/ko_KR.euc
 share/webmin/postfix/lang/pl
 share/webmin/postfix/lang/pt_BR
@@ -811,9 +851,12 @@ share/webmin/postfix/lang/ru_SU
 share/webmin/postfix/lang/sv
 share/webmin/postfix/lang/uk_UA
 share/webmin/postfix/lang/zh_CN
+share/webmin/postfix/lang/zh_CN.UTF-8
 share/webmin/postfix/lang/zh_TW.Big5
+share/webmin/postfix/lang/zh_TW.UTF-8
 share/webmin/postfix/ldap.cgi
 share/webmin/postfix/local_delivery.cgi
+share/webmin/postfix/log_parser.pl
 share/webmin/postfix/mailq.cgi
 share/webmin/postfix/mailq_search.cgi
 share/webmin/postfix/manual.cgi
@@ -854,3 +897,4 @@ share/webmin/postfix/virtual.cgi
 @dirrm share/webmin/postfix/help
 @dirrm share/webmin/postfix
 @dirrm share/examples/webmin/postfix
+@dirrm etc/webmin/postfix

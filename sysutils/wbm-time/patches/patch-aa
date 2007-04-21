@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/05/16 15:44:04 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/21 05:23:07 obache Exp $
 
---- module.info.orig	Tue Apr  4 23:16:16 2006
-+++ module.info
+--- time/module.info.orig	2007-04-09 05:00:48.000000000 +0000
++++ time/module.info
 @@ -1,7 +1,7 @@
  desc_ru_SU=Системное время
  risk=low medium high
