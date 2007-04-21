@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/04/05 23:24:01 hira Exp $
+# $NetBSD: Makefile,v 1.15 2007/04/21 05:40:27 hira Exp $
 #
 
 OO_VER=			2.2.0
@@ -48,6 +48,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
@@ -66,24 +67,18 @@ CONFIGURE_ARGS+=	--without-java --disable-odk --disable-gcjaot
 
 # NOTE: In this version, this value should be separated by space (comma
 #       causes build error).
-CONFIGURE_ARGS+=	--with-lang=${OPENOFFICE_LANGUAGE}
+CONFIGURE_ARGS+=	--with-lang=${OO_LANGS:Q}
 
 .include "options.mk"
 
 UNLIMIT_RESOURCES+=	datasize
 
-OPENOFFICE_VERSION=	OpenOffice.org${OO_VER}
+OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
-MESSAGE_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
+MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
 INSTALLATION_DIRS=	bin
 
-SUBST_CLASSES+=			X11_LDFLAGS
-SUBST_MESSAGE.X11_LDFLAGS=	Adding X11_LDFLAGS.
-SUBST_STAGE.X11_LDFLAGS=	post-patch
-SUBST_FILES.X11_LDFLAGS=	solenv/inc/${OPENOFFICE_OUTPATH:Q}.mk
-SUBST_SED.X11_LDFLAGS=		-e 's|@X11_LDFLAGS@|${X11_LDFLAGS}|g'
-
-OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install/${OPENOFFICE_LANGUAGE}
+OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_PKGROOT=	/opt/openoffice.org2.2
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter
 
@@ -95,29 +90,31 @@ do-build:
 	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "export PTHREAD_DIAGASSERT=Ael && cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
 
 post-build:
-	cd ${WRKDIR} &&				\
-	${RM} -fr opt &&			\
-	for f in ${OO_PKGPATH:Q}/*/*.sw; do	\
-		${TAR} xpf $$f;			\
+	cd ${WRKDIR} &&						\
+	${RM} -fr opt &&					\
+	for l in ${OO_LANGS}; do				\
+		for f in ${OO_PKGPATH:Q}/$${l}/*/*.sw; do	\
+			${TAR} xpfk $$f;			\
+		done;						\
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${OPENOFFICE_VERSION}
-	cd ${WRKDIR}${OO_PKGROOT} &&					\
-	${TAR} cf - . | ${TAR} Cxpf ${PREFIX}/${OPENOFFICE_VERSION} -
-	for f in ${OO_PROGRAMS}; do					\
-		${LN} -sf ${PREFIX}/${OPENOFFICE_VERSION}/program/$$f	\
-			${PREFIX}/bin/$$f;				\
+	${INSTALL_DATA_DIR} ${PREFIX}/${OO_RELEASE}
+	cd ${WRKDIR}${OO_PKGROOT} &&				\
+	${TAR} cf - . | ${TAR} Cxpf ${PREFIX}/${OO_RELEASE} -
+	for f in ${OO_PROGRAMS}; do				\
+		${LN} -sf ${PREFIX}/${OO_RELEASE}/program/$$f	\
+			${PREFIX}/bin/$$f;			\
 	done
 
 post-install:
-	cd ${PREFIX} &&							\
-	${FIND} ${OPENOFFICE_VERSION} \! -type d -print |		\
-	${SORT} > ${PLIST_SRC} &&					\
-	${FIND} ${OPENOFFICE_VERSION} -type d -print | ${SORT} -r |	\
+	cd ${PREFIX} &&						\
+	${FIND} ${OO_RELEASE} \! -type d -print |		\
+	${SORT} > ${PLIST_SRC} &&				\
+	${FIND} ${OO_RELEASE} -type d -print | ${SORT} -r |	\
 	${AWK} '{print("@dirrm "$$1)}' >> ${PLIST_SRC}
-	for f in ${OO_PROGRAMS}; do					\
-		${ECHO} bin/$$f >> ${PLIST_SRC};			\
+	for f in ${OO_PROGRAMS}; do				\
+		${ECHO} bin/$$f >> ${PLIST_SRC};		\
 	done
 
 # everything specific to your OS/Arch goes into its own Makefile

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2007/04/20 14:44:11 hira Exp $
+# $NetBSD: options.mk,v 1.9 2007/04/21 05:40:27 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
-PKG_OPTIONS_REQUIRED_GROUPS=	browser lang
+PKG_OPTIONS_REQUIRED_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox # seamonkey firefox-gtk1 seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
 				el en-GB en-ZA eo es et fa fi fr ga gu-IN he \
@@ -12,7 +12,7 @@ OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
 				ta-IN te-IN tg th ti-ER tn tr ts uk ur-IN ve \
 				vi xh zh-CN zh-TW zu
 .for l in ${OO_SUPPORTED_LANGUAGES}
-PKG_OPTIONS_GROUP.lang+=	lang-${l}
+PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
 PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US firefox
 PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
@@ -20,7 +20,10 @@ PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-OPENOFFICE_LANGUAGE=		${PKG_OPTIONS:Mlang-*:S/^lang-//1}
+.for l in ${PKG_OPTIONS:Mlang-*}
+OO_LANGS+=	${l:S/^lang-//1}
+.endfor
+OO_LANGS?=	en-US
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 CONFIGURE_ARGS+=	--with-system-mozilla --with-firefox
