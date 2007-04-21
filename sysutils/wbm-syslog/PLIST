@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:43:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
 share/examples/webmin/syslog/config
 share/webmin/syslog/CHANGELOG
 share/webmin/syslog/acl_security.pl
@@ -38,6 +38,7 @@ share/webmin/syslog/config.info.de
 share/webmin/syslog/config.info.es
 share/webmin/syslog/config.info.fr
 share/webmin/syslog/config.info.hu
+share/webmin/syslog/config.info.ja_JP.UTF-8
 share/webmin/syslog/config.info.ja_JP.euc
 share/webmin/syslog/config.info.pl
 share/webmin/syslog/config.info.ru_RU
@@ -46,7 +47,9 @@ share/webmin/syslog/config.info.sv
 share/webmin/syslog/config.info.tr
 share/webmin/syslog/config.info.uk_UA
 share/webmin/syslog/config.info.zh_CN
+share/webmin/syslog/config.info.zh_CN.UTF-8
 share/webmin/syslog/config.info.zh_TW.Big5
+share/webmin/syslog/config.info.zh_TW.UTF-8
 share/webmin/syslog/defaultacl
 share/webmin/syslog/edit_log.cgi
 share/webmin/syslog/images/icon.gif
@@ -59,7 +62,9 @@ share/webmin/syslog/lang/en
 share/webmin/syslog/lang/es
 share/webmin/syslog/lang/fr
 share/webmin/syslog/lang/hu
+share/webmin/syslog/lang/ja_JP.UTF-8
 share/webmin/syslog/lang/ja_JP.euc
+share/webmin/syslog/lang/ko_KR.UTF-8
 share/webmin/syslog/lang/ko_KR.euc
 share/webmin/syslog/lang/pl
 share/webmin/syslog/lang/ru_RU
@@ -68,7 +73,9 @@ share/webmin/syslog/lang/sv
 share/webmin/syslog/lang/tr
 share/webmin/syslog/lang/uk_UA
 share/webmin/syslog/lang/zh_CN
+share/webmin/syslog/lang/zh_CN.UTF-8
 share/webmin/syslog/lang/zh_TW.Big5
+share/webmin/syslog/lang/zh_TW.UTF-8
 share/webmin/syslog/log_parser.pl
 share/webmin/syslog/low.risk
 share/webmin/syslog/low.skill
@@ -84,3 +91,4 @@ share/webmin/syslog/syslog-lib.pl
 @dirrm share/webmin/syslog/images
 @dirrm share/webmin/syslog
 @dirrm share/examples/webmin/syslog
+@dirrm etc/webmin/syslog

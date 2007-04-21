@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/16 15:42:42 jlam Exp $
+$NetBSD: distinfo,v 1.2 2007/04/21 05:23:05 obache Exp $
 
-SHA1 (webmin-modules-1.270/sendmail.wbm.gz) = dd67c541915a7a8155903dcccf600b88a44d3d07
-RMD160 (webmin-modules-1.270/sendmail.wbm.gz) = ae771e506417f4c75d72602c4fbe3b69d596855a
-Size (webmin-modules-1.270/sendmail.wbm.gz) = 283084 bytes
+SHA1 (webmin-1.340.tar.gz) = 530bb583824688f24fc4c6d0b8522d43c7f5bb96
+RMD160 (webmin-1.340.tar.gz) = 5f4cfe51e052c2f46dc7f6813e74fb0e5aebff05
+Size (webmin-1.340.tar.gz) = 15851601 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:41:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:03 obache Exp $
 share/examples/webmin/mount/config
 share/webmin/mount/CHANGELOG
 share/webmin/mount/acl_security.pl
@@ -46,7 +46,9 @@ share/webmin/mount/config.info.sv
 share/webmin/mount/config.info.tr
 share/webmin/mount/config.info.uk_UA
 share/webmin/mount/config.info.zh_CN
+share/webmin/mount/config.info.zh_CN.UTF-8
 share/webmin/mount/config.info.zh_TW.Big5
+share/webmin/mount/config.info.zh_TW.UTF-8
 share/webmin/mount/create_swap.cgi
 share/webmin/mount/defaultacl
 share/webmin/mount/edit_mount.cgi
@@ -60,6 +62,7 @@ share/webmin/mount/freebsd-mounts-4.c
 share/webmin/mount/freebsd-mounts-5
 share/webmin/mount/freebsd-mounts-5.c
 share/webmin/mount/help/edit_dir.ca.html
+share/webmin/mount/help/edit_dir.fa.html
 share/webmin/mount/help/edit_dir.fr.html
 share/webmin/mount/help/edit_dir.html
 share/webmin/mount/help/help.ca.html
@@ -67,64 +70,82 @@ share/webmin/mount/help/help.es.html
 share/webmin/mount/help/help.html
 share/webmin/mount/help/help.sv.html
 share/webmin/mount/help/help.zh_TW.Big5.html
+share/webmin/mount/help/help.zh_TW.UTF-8.html
 share/webmin/mount/help/linux_auth.ca.html
 share/webmin/mount/help/linux_auth.fr.html
 share/webmin/mount/help/linux_auth.html
 share/webmin/mount/help/linux_bg.ca.html
+share/webmin/mount/help/linux_bg.fa.html
 share/webmin/mount/help/linux_bg.fr.html
 share/webmin/mount/help/linux_bg.html
 share/webmin/mount/help/linux_intr.ca.html
 share/webmin/mount/help/linux_intr.fr.html
 share/webmin/mount/help/linux_intr.html
 share/webmin/mount/help/linux_nodev.ca.html
+share/webmin/mount/help/linux_nodev.fa.html
 share/webmin/mount/help/linux_nodev.fr.html
 share/webmin/mount/help/linux_nodev.html
 share/webmin/mount/help/linux_noexec.ca.html
+share/webmin/mount/help/linux_noexec.fa.html
 share/webmin/mount/help/linux_noexec.fr.html
 share/webmin/mount/help/linux_noexec.html
 share/webmin/mount/help/linux_nosuid.ca.html
+share/webmin/mount/help/linux_nosuid.fa.html
 share/webmin/mount/help/linux_nosuid.fr.html
 share/webmin/mount/help/linux_nosuid.html
 share/webmin/mount/help/linux_port.ca.html
+share/webmin/mount/help/linux_port.fa.html
 share/webmin/mount/help/linux_port.fr.html
 share/webmin/mount/help/linux_port.html
 share/webmin/mount/help/linux_retrans.ca.html
+share/webmin/mount/help/linux_retrans.fa.html
 share/webmin/mount/help/linux_retrans.fr.html
 share/webmin/mount/help/linux_retrans.html
 share/webmin/mount/help/linux_ro.ca.html
+share/webmin/mount/help/linux_ro.fa.html
 share/webmin/mount/help/linux_ro.fr.html
 share/webmin/mount/help/linux_ro.html
 share/webmin/mount/help/linux_rsize.ca.html
 share/webmin/mount/help/linux_rsize.fr.html
 share/webmin/mount/help/linux_rsize.html
 share/webmin/mount/help/linux_sec.ca.html
+share/webmin/mount/help/linux_sec.fa.html
 share/webmin/mount/help/linux_sec.fr.html
 share/webmin/mount/help/linux_sec.html
 share/webmin/mount/help/linux_soft.ca.html
+share/webmin/mount/help/linux_soft.fa.html
 share/webmin/mount/help/linux_soft.fr.html
 share/webmin/mount/help/linux_soft.html
 share/webmin/mount/help/linux_sync.ca.html
+share/webmin/mount/help/linux_sync.fa.html
 share/webmin/mount/help/linux_sync.fr.html
 share/webmin/mount/help/linux_sync.html
 share/webmin/mount/help/linux_timeo.ca.html
+share/webmin/mount/help/linux_timeo.fa.html
 share/webmin/mount/help/linux_timeo.fr.html
 share/webmin/mount/help/linux_timeo.html
 share/webmin/mount/help/linux_transfert.ca.html
+share/webmin/mount/help/linux_transfert.fa.html
 share/webmin/mount/help/linux_transfert.fr.html
 share/webmin/mount/help/linux_transfert.html
 share/webmin/mount/help/linux_user.ca.html
+share/webmin/mount/help/linux_user.fa.html
 share/webmin/mount/help/linux_user.fr.html
 share/webmin/mount/help/linux_user.html
 share/webmin/mount/help/linux_vers.ca.html
+share/webmin/mount/help/linux_vers.fa.html
 share/webmin/mount/help/linux_vers.fr.html
 share/webmin/mount/help/linux_vers.html
 share/webmin/mount/help/linux_wsize.ca.html
+share/webmin/mount/help/linux_wsize.fa.html
 share/webmin/mount/help/linux_wsize.fr.html
 share/webmin/mount/help/linux_wsize.html
 share/webmin/mount/help/nfsdir.ca.html
+share/webmin/mount/help/nfsdir.fa.html
 share/webmin/mount/help/nfsdir.fr.html
 share/webmin/mount/help/nfsdir.html
 share/webmin/mount/help/nfshost.ca.html
+share/webmin/mount/help/nfshost.fa.html
 share/webmin/mount/help/nfshost.fr.html
 share/webmin/mount/help/nfshost.html
 share/webmin/mount/hpux-lib.pl
@@ -166,7 +187,9 @@ share/webmin/mount/lang/fa
 share/webmin/mount/lang/fr
 share/webmin/mount/lang/hu
 share/webmin/mount/lang/it
+share/webmin/mount/lang/ja_JP.UTF-8
 share/webmin/mount/lang/ja_JP.euc
+share/webmin/mount/lang/ko_KR.UTF-8
 share/webmin/mount/lang/ko_KR.euc
 share/webmin/mount/lang/pl
 share/webmin/mount/lang/ru_RU
@@ -175,12 +198,16 @@ share/webmin/mount/lang/sv
 share/webmin/mount/lang/tr
 share/webmin/mount/lang/uk_UA
 share/webmin/mount/lang/zh_CN
+share/webmin/mount/lang/zh_CN.UTF-8
 share/webmin/mount/lang/zh_TW.Big5
+share/webmin/mount/lang/zh_TW.UTF-8
 share/webmin/mount/linux-lib.pl
 share/webmin/mount/log_parser.pl
 share/webmin/mount/low.skill
 share/webmin/mount/macos-lib.pl
 share/webmin/mount/macos-mounts
+share/webmin/mount/macos-mounts-intel
+share/webmin/mount/macos-mounts-intel.c
 share/webmin/mount/macos-mounts.c
 share/webmin/mount/medium.skill
 share/webmin/mount/module.info
@@ -197,6 +224,7 @@ share/webmin/mount/openbsd-mounts-2
 share/webmin/mount/openbsd-mounts-2.c
 share/webmin/mount/openbsd-mounts-3
 share/webmin/mount/openbsd-mounts-3.c
+share/webmin/mount/openbsd-mounts-4.c
 share/webmin/mount/osf1-lib.pl
 share/webmin/mount/rbac-mapping
 share/webmin/mount/save_mount.cgi
@@ -210,3 +238,4 @@ share/webmin/mount/unmount.cgi
 @dirrm share/webmin/mount/help
 @dirrm share/webmin/mount
 @dirrm share/examples/webmin/mount
+@dirrm etc/webmin/mount

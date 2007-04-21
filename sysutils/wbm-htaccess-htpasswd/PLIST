@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:41:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:01 obache Exp $
 share/examples/webmin/htaccess-htpasswd/config
 share/webmin/htaccess-htpasswd/CHANGELOG
 share/webmin/htaccess-htpasswd/acl_security.pl
 share/webmin/htaccess-htpasswd/config
+share/webmin/htaccess-htpasswd/config-windows
 share/webmin/htaccess-htpasswd/config.info
 share/webmin/htaccess-htpasswd/config.info.ca
 share/webmin/htaccess-htpasswd/config.info.de
@@ -10,8 +11,11 @@ share/webmin/htaccess-htpasswd/config.info.es
 share/webmin/htaccess-htpasswd/config.info.fr
 share/webmin/htaccess-htpasswd/config.info.hu
 share/webmin/htaccess-htpasswd/config.info.ms
+share/webmin/htaccess-htpasswd/config.info.tr
 share/webmin/htaccess-htpasswd/config.info.zh_TW.Big5
+share/webmin/htaccess-htpasswd/config.info.zh_TW.UTF-8
 share/webmin/htaccess-htpasswd/defaultacl
+share/webmin/htaccess-htpasswd/delete.cgi
 share/webmin/htaccess-htpasswd/edit_dir.cgi
 share/webmin/htaccess-htpasswd/edit_group.cgi
 share/webmin/htaccess-htpasswd/edit_user.cgi
@@ -27,7 +31,9 @@ share/webmin/htaccess-htpasswd/lang/es
 share/webmin/htaccess-htpasswd/lang/fr
 share/webmin/htaccess-htpasswd/lang/hu
 share/webmin/htaccess-htpasswd/lang/ms
+share/webmin/htaccess-htpasswd/lang/tr
 share/webmin/htaccess-htpasswd/lang/zh_TW.Big5
+share/webmin/htaccess-htpasswd/lang/zh_TW.UTF-8
 share/webmin/htaccess-htpasswd/log_parser.pl
 share/webmin/htaccess-htpasswd/md5-lib.pl
 share/webmin/htaccess-htpasswd/module.info
@@ -40,3 +46,4 @@ share/webmin/htaccess-htpasswd/useradmin_update.pl
 @dirrm share/webmin/htaccess-htpasswd/images
 @dirrm share/webmin/htaccess-htpasswd
 @dirrm share/examples/webmin/htaccess-htpasswd
+@dirrm etc/webmin/htaccess-htpasswd

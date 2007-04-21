@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1 2006/06/04 14:44:14 joerg Exp $
+$NetBSD: patch-af,v 1.2 2007/04/21 05:22:58 obache Exp $
 
---- servers/servers-lib.pl.orig	2006-06-04 14:16:40.000000000 +0000
+--- servers/servers-lib.pl.orig	2007-04-09 05:00:08.000000000 +0000
 +++ servers/servers-lib.pl
-@@ -177,6 +177,7 @@ else {
- 		  [ 'slackware', 'Slackware Linux', 'slackware-linux' ],
+@@ -184,6 +184,7 @@ else {
  		  [ 'linux', 'Linux', '.*-linux' ],
+ 
  		  [ 'freebsd', 'FreeBSD', 'freebsd' ],
 +		  [ 'dragonfly', 'DragonFly', 'dragonfly' ],
  		  [ 'solaris', 'Solaris', 'solaris' ],

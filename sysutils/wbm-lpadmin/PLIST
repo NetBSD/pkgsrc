@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:41:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:02 obache Exp $
 share/examples/webmin/lpadmin/config
 share/webmin/lpadmin/CHANGELOG
 share/webmin/lpadmin/acl_security.pl
@@ -20,6 +20,7 @@ share/webmin/lpadmin/config-aix
 share/webmin/lpadmin/config-coherent-linux
 share/webmin/lpadmin/config-corel-linux
 share/webmin/lpadmin/config-debian-linux
+share/webmin/lpadmin/config-debian-linux-3.1-*
 share/webmin/lpadmin/config-freebsd
 share/webmin/lpadmin/config-generic-linux
 share/webmin/lpadmin/config-gentoo-linux
@@ -55,6 +56,7 @@ share/webmin/lpadmin/config.info.de
 share/webmin/lpadmin/config.info.es
 share/webmin/lpadmin/config.info.fr
 share/webmin/lpadmin/config.info.hu
+share/webmin/lpadmin/config.info.ja_JP.UTF-8
 share/webmin/lpadmin/config.info.ja_JP.euc
 share/webmin/lpadmin/config.info.nl
 share/webmin/lpadmin/config.info.pl
@@ -64,11 +66,14 @@ share/webmin/lpadmin/config.info.sv
 share/webmin/lpadmin/config.info.tr
 share/webmin/lpadmin/config.info.uk_UA
 share/webmin/lpadmin/config.info.zh_CN
+share/webmin/lpadmin/config.info.zh_CN.UTF-8
 share/webmin/lpadmin/config.info.zh_TW.Big5
+share/webmin/lpadmin/config.info.zh_TW.UTF-8
 share/webmin/lpadmin/cups-driver.pl
 share/webmin/lpadmin/cups-lib.pl
 share/webmin/lpadmin/defaultacl
 share/webmin/lpadmin/delete_printer.cgi
+share/webmin/lpadmin/delete_printers.cgi
 share/webmin/lpadmin/drivers
 share/webmin/lpadmin/edit_printer.cgi
 share/webmin/lpadmin/freebsd-lib.pl
@@ -86,7 +91,9 @@ share/webmin/lpadmin/lang/es
 share/webmin/lpadmin/lang/fr
 share/webmin/lpadmin/lang/hu
 share/webmin/lpadmin/lang/it
+share/webmin/lpadmin/lang/ja_JP.UTF-8
 share/webmin/lpadmin/lang/ja_JP.euc
+share/webmin/lpadmin/lang/ko_KR.UTF-8
 share/webmin/lpadmin/lang/ko_KR.euc
 share/webmin/lpadmin/lang/nl
 share/webmin/lpadmin/lang/pl
@@ -98,7 +105,9 @@ share/webmin/lpadmin/lang/sv
 share/webmin/lpadmin/lang/tr
 share/webmin/lpadmin/lang/uk_UA
 share/webmin/lpadmin/lang/zh_CN
+share/webmin/lpadmin/lang/zh_CN.UTF-8
 share/webmin/lpadmin/lang/zh_TW.Big5
+share/webmin/lpadmin/lang/zh_TW.UTF-8
 share/webmin/lpadmin/linux-lib.pl
 share/webmin/lpadmin/list_jobs.cgi
 share/webmin/lpadmin/log_parser.pl
@@ -129,3 +138,4 @@ share/webmin/lpadmin/webmin-driver.pl
 @dirrm share/webmin/lpadmin/images
 @dirrm share/webmin/lpadmin
 @dirrm share/examples/webmin/lpadmin
+@dirrm etc/webmin/lpadmin

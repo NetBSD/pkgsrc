@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 04:16:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -14,7 +14,7 @@ share/webmin/postgresql/config-freebsd
 share/webmin/postgresql/config-gentoo-linux
 share/webmin/postgresql/config-mandrake-linux
 share/webmin/postgresql/config-msc-linux
-share/webmin/postgresql/config-netbsd
+share/webmin/postgresql/config-${LOWER_OPSYS}
 share/webmin/postgresql/config-redhat-linux
 share/webmin/postgresql/config-redhat-linux-10.0-*
 share/webmin/postgresql/config-redhat-linux-7.0-7.2
@@ -27,23 +27,30 @@ share/webmin/postgresql/config-suse-linux-7.1-9.0
 share/webmin/postgresql/config-suse-linux-9.1-*
 share/webmin/postgresql/config-trustix-linux
 share/webmin/postgresql/config-united-linux
+share/webmin/postgresql/config-windows
 share/webmin/postgresql/config.info
 share/webmin/postgresql/config.info.ca
 share/webmin/postgresql/config.info.de
 share/webmin/postgresql/config.info.es
 share/webmin/postgresql/config.info.fr
+share/webmin/postgresql/config.info.ja_JP.UTF-8
 share/webmin/postgresql/config.info.ja_JP.euc
 share/webmin/postgresql/config.info.pl
 share/webmin/postgresql/config.info.ru_RU
 share/webmin/postgresql/config.info.ru_SU
 share/webmin/postgresql/config.info.sv
+share/webmin/postgresql/config.info.tr
 share/webmin/postgresql/config.info.uk_UA
 share/webmin/postgresql/config.info.zh_CN
+share/webmin/postgresql/config.info.zh_CN.UTF-8
 share/webmin/postgresql/config.info.zh_TW.Big5
+share/webmin/postgresql/config.info.zh_TW.UTF-8
+share/webmin/postgresql/cpan_modules.pl
 share/webmin/postgresql/create_table.cgi
 share/webmin/postgresql/csv.cgi
 share/webmin/postgresql/csv_form.cgi
 share/webmin/postgresql/defaultacl
+share/webmin/postgresql/delete_grants.cgi
 share/webmin/postgresql/delete_groups.cgi
 share/webmin/postgresql/delete_hosts.cgi
 share/webmin/postgresql/delete_users.cgi
@@ -67,12 +74,14 @@ share/webmin/postgresql/edit_view.cgi
 share/webmin/postgresql/exec.cgi
 share/webmin/postgresql/exec_file.cgi
 share/webmin/postgresql/exec_form.cgi
+share/webmin/postgresql/help/backup_form.ca.html
 share/webmin/postgresql/help/backup_form.html
 share/webmin/postgresql/help/create_field.ca.html
 share/webmin/postgresql/help/create_field.es.html
 share/webmin/postgresql/help/create_field.html
 share/webmin/postgresql/help/create_field.hu.html
 share/webmin/postgresql/help/create_field.it.html
+share/webmin/postgresql/help/create_field.ja_JP.UTF-8.html
 share/webmin/postgresql/help/create_field.ja_JP.euc.html
 share/webmin/postgresql/help/create_field.pl.html
 share/webmin/postgresql/help/csv.ca.html
@@ -85,6 +94,7 @@ share/webmin/postgresql/help/edit_dbase.es.html
 share/webmin/postgresql/help/edit_dbase.html
 share/webmin/postgresql/help/edit_dbase.hu.html
 share/webmin/postgresql/help/edit_dbase.it.html
+share/webmin/postgresql/help/edit_dbase.ja_JP.UTF-8.html
 share/webmin/postgresql/help/edit_dbase.ja_JP.euc.html
 share/webmin/postgresql/help/edit_dbase.pl.html
 share/webmin/postgresql/help/edit_field.ca.html
@@ -92,6 +102,7 @@ share/webmin/postgresql/help/edit_field.es.html
 share/webmin/postgresql/help/edit_field.html
 share/webmin/postgresql/help/edit_field.hu.html
 share/webmin/postgresql/help/edit_field.it.html
+share/webmin/postgresql/help/edit_field.ja_JP.UTF-8.html
 share/webmin/postgresql/help/edit_field.ja_JP.euc.html
 share/webmin/postgresql/help/edit_field.pl.html
 share/webmin/postgresql/help/edit_table.ca.html
@@ -99,6 +110,7 @@ share/webmin/postgresql/help/edit_table.es.html
 share/webmin/postgresql/help/edit_table.html
 share/webmin/postgresql/help/edit_table.hu.html
 share/webmin/postgresql/help/edit_table.it.html
+share/webmin/postgresql/help/edit_table.ja_JP.UTF-8.html
 share/webmin/postgresql/help/edit_table.ja_JP.euc.html
 share/webmin/postgresql/help/edit_table.pl.html
 share/webmin/postgresql/help/exec_form.ca.html
@@ -106,6 +118,7 @@ share/webmin/postgresql/help/exec_form.es.html
 share/webmin/postgresql/help/exec_form.html
 share/webmin/postgresql/help/exec_form.hu.html
 share/webmin/postgresql/help/exec_form.it.html
+share/webmin/postgresql/help/exec_form.ja_JP.UTF-8.html
 share/webmin/postgresql/help/exec_form.ja_JP.euc.html
 share/webmin/postgresql/help/exec_form.pl.html
 share/webmin/postgresql/help/intro.ca.html
@@ -113,6 +126,7 @@ share/webmin/postgresql/help/intro.es.html
 share/webmin/postgresql/help/intro.html
 share/webmin/postgresql/help/intro.hu.html
 share/webmin/postgresql/help/intro.it.html
+share/webmin/postgresql/help/intro.ja_JP.UTF-8.html
 share/webmin/postgresql/help/intro.ja_JP.euc.html
 share/webmin/postgresql/help/intro.pl.html
 share/webmin/postgresql/help/list_grants.ca.html
@@ -120,6 +134,7 @@ share/webmin/postgresql/help/list_grants.es.html
 share/webmin/postgresql/help/list_grants.html
 share/webmin/postgresql/help/list_grants.hu.html
 share/webmin/postgresql/help/list_grants.it.html
+share/webmin/postgresql/help/list_grants.ja_JP.UTF-8.html
 share/webmin/postgresql/help/list_grants.ja_JP.euc.html
 share/webmin/postgresql/help/list_grants.pl.html
 share/webmin/postgresql/help/list_groups.ca.html
@@ -127,6 +142,7 @@ share/webmin/postgresql/help/list_groups.es.html
 share/webmin/postgresql/help/list_groups.html
 share/webmin/postgresql/help/list_groups.hu.html
 share/webmin/postgresql/help/list_groups.it.html
+share/webmin/postgresql/help/list_groups.ja_JP.UTF-8.html
 share/webmin/postgresql/help/list_groups.ja_JP.euc.html
 share/webmin/postgresql/help/list_groups.pl.html
 share/webmin/postgresql/help/list_hosts.ca.html
@@ -134,6 +150,7 @@ share/webmin/postgresql/help/list_hosts.es.html
 share/webmin/postgresql/help/list_hosts.html
 share/webmin/postgresql/help/list_hosts.hu.html
 share/webmin/postgresql/help/list_hosts.it.html
+share/webmin/postgresql/help/list_hosts.ja_JP.UTF-8.html
 share/webmin/postgresql/help/list_hosts.ja_JP.euc.html
 share/webmin/postgresql/help/list_hosts.pl.html
 share/webmin/postgresql/help/list_users.ca.html
@@ -141,6 +158,7 @@ share/webmin/postgresql/help/list_users.es.html
 share/webmin/postgresql/help/list_users.html
 share/webmin/postgresql/help/list_users.hu.html
 share/webmin/postgresql/help/list_users.it.html
+share/webmin/postgresql/help/list_users.ja_JP.UTF-8.html
 share/webmin/postgresql/help/list_users.ja_JP.euc.html
 share/webmin/postgresql/help/list_users.pl.html
 share/webmin/postgresql/help/newdb_form.ca.html
@@ -148,6 +166,7 @@ share/webmin/postgresql/help/newdb_form.es.html
 share/webmin/postgresql/help/newdb_form.html
 share/webmin/postgresql/help/newdb_form.hu.html
 share/webmin/postgresql/help/newdb_form.it.html
+share/webmin/postgresql/help/newdb_form.ja_JP.UTF-8.html
 share/webmin/postgresql/help/newdb_form.ja_JP.euc.html
 share/webmin/postgresql/help/newdb_form.pl.html
 share/webmin/postgresql/help/table_form.ca.html
@@ -155,6 +174,7 @@ share/webmin/postgresql/help/table_form.es.html
 share/webmin/postgresql/help/table_form.html
 share/webmin/postgresql/help/table_form.hu.html
 share/webmin/postgresql/help/table_form.it.html
+share/webmin/postgresql/help/table_form.ja_JP.UTF-8.html
 share/webmin/postgresql/help/table_form.ja_JP.euc.html
 share/webmin/postgresql/help/table_form.pl.html
 share/webmin/postgresql/help/view_table.ca.html
@@ -162,6 +182,7 @@ share/webmin/postgresql/help/view_table.es.html
 share/webmin/postgresql/help/view_table.html
 share/webmin/postgresql/help/view_table.hu.html
 share/webmin/postgresql/help/view_table.it.html
+share/webmin/postgresql/help/view_table.ja_JP.UTF-8.html
 share/webmin/postgresql/help/view_table.ja_JP.euc.html
 share/webmin/postgresql/help/view_table.pl.html
 share/webmin/postgresql/images/Thumbs.db
@@ -190,15 +211,20 @@ share/webmin/postgresql/lang/es
 share/webmin/postgresql/lang/fr
 share/webmin/postgresql/lang/hu
 share/webmin/postgresql/lang/it
+share/webmin/postgresql/lang/ja_JP.UTF-8
 share/webmin/postgresql/lang/ja_JP.euc
+share/webmin/postgresql/lang/ko_KR.UTF-8
 share/webmin/postgresql/lang/ko_KR.euc
 share/webmin/postgresql/lang/pl
+share/webmin/postgresql/lang/pt
 share/webmin/postgresql/lang/ru_RU
 share/webmin/postgresql/lang/ru_SU
 share/webmin/postgresql/lang/sv
 share/webmin/postgresql/lang/uk_UA
 share/webmin/postgresql/lang/zh_CN
+share/webmin/postgresql/lang/zh_CN.UTF-8
 share/webmin/postgresql/lang/zh_TW.Big5
+share/webmin/postgresql/lang/zh_TW.UTF-8
 share/webmin/postgresql/list_grants.cgi
 share/webmin/postgresql/list_groups.cgi
 share/webmin/postgresql/list_hosts.cgi
@@ -209,6 +235,9 @@ share/webmin/postgresql/login.cgi
 share/webmin/postgresql/module.info
 share/webmin/postgresql/newdb.cgi
 share/webmin/postgresql/newdb_form.cgi
+share/webmin/postgresql/old/download.cgi
+share/webmin/postgresql/old/search_form.cgi
+share/webmin/postgresql/old/view_table.cgi
 share/webmin/postgresql/postgresql-lib.pl
 share/webmin/postgresql/restore.cgi
 share/webmin/postgresql/restore_form.cgi
@@ -228,9 +257,12 @@ share/webmin/postgresql/stop.cgi
 share/webmin/postgresql/table_form.cgi
 share/webmin/postgresql/up.cgi
 share/webmin/postgresql/useradmin_update.pl
+share/webmin/postgresql/view-lib.pl
 share/webmin/postgresql/view_table.cgi
+@dirrm share/webmin/postgresql/old
 @dirrm share/webmin/postgresql/lang
 @dirrm share/webmin/postgresql/images
 @dirrm share/webmin/postgresql/help
 @dirrm share/webmin/postgresql
 @dirrm share/examples/webmin/postgresql
+@dirrm etc/webmin/postgresql

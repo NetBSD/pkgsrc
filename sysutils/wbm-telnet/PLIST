@@ -1,17 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:43:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:06 obache Exp $
 share/examples/webmin/telnet/config
+share/webmin/telnet/CHANGELOG
 share/webmin/telnet/config
-share/webmin/telnet/config-coherent-linux
-share/webmin/telnet/config-debian-linux-3.0-*
-share/webmin/telnet/config-freebsd-5.0-*
-share/webmin/telnet/config-macos-1.3-*
-share/webmin/telnet/config-mandrake-linux-9.0-*
-share/webmin/telnet/config-open-linux-3.1e
-share/webmin/telnet/config-redhat-linux-8.0-*
-share/webmin/telnet/config-solaris-10-*
-share/webmin/telnet/config-suse-linux-8.0-*
-share/webmin/telnet/config-turbo-linux-7.0-*
-share/webmin/telnet/config-united-linux
 share/webmin/telnet/config.info
 share/webmin/telnet/config.info.ca
 share/webmin/telnet/config.info.de
@@ -27,7 +17,9 @@ share/webmin/telnet/config.info.sv
 share/webmin/telnet/config.info.tr
 share/webmin/telnet/config.info.uk_UA
 share/webmin/telnet/config.info.zh_CN
+share/webmin/telnet/config.info.zh_CN.UTF-8
 share/webmin/telnet/config.info.zh_TW.Big5
+share/webmin/telnet/config.info.zh_TW.UTF-8
 share/webmin/telnet/images/icon.gif
 share/webmin/telnet/images/smallicon.gif
 share/webmin/telnet/index.cgi
@@ -40,7 +32,9 @@ share/webmin/telnet/lang/en
 share/webmin/telnet/lang/es
 share/webmin/telnet/lang/fr
 share/webmin/telnet/lang/it
+share/webmin/telnet/lang/ja_JP.UTF-8
 share/webmin/telnet/lang/ja_JP.euc
+share/webmin/telnet/lang/ko_KR.UTF-8
 share/webmin/telnet/lang/ko_KR.euc
 share/webmin/telnet/lang/ms
 share/webmin/telnet/lang/pl
@@ -53,7 +47,9 @@ share/webmin/telnet/lang/sv
 share/webmin/telnet/lang/tr
 share/webmin/telnet/lang/uk_UA
 share/webmin/telnet/lang/zh_CN
+share/webmin/telnet/lang/zh_CN.UTF-8
 share/webmin/telnet/lang/zh_TW.Big5
+share/webmin/telnet/lang/zh_TW.UTF-8
 share/webmin/telnet/module.info
 share/webmin/telnet/ssh.conf
 share/webmin/telnet/telnet.conf
@@ -61,3 +57,4 @@ share/webmin/telnet/telnet.conf
 @dirrm share/webmin/telnet/images
 @dirrm share/webmin/telnet
 @dirrm share/examples/webmin/telnet
+@dirrm etc/webmin/telnet

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:41:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:00 obache Exp $
 share/examples/webmin/fetchmail/config
 share/webmin/fetchmail/CHANGELOG
 share/webmin/fetchmail/acl_security.pl
@@ -31,6 +31,7 @@ share/webmin/fetchmail/config.info.ru_RU
 share/webmin/fetchmail/config.info.ru_SU
 share/webmin/fetchmail/config.info.uk_UA
 share/webmin/fetchmail/config.info.zh_TW.Big5
+share/webmin/fetchmail/config.info.zh_TW.UTF-8
 share/webmin/fetchmail/defaultacl
 share/webmin/fetchmail/edit_cron.cgi
 share/webmin/fetchmail/edit_global.cgi
@@ -50,14 +51,18 @@ share/webmin/fetchmail/lang/en
 share/webmin/fetchmail/lang/es
 share/webmin/fetchmail/lang/hu
 share/webmin/fetchmail/lang/it
+share/webmin/fetchmail/lang/ja_JP.UTF-8
 share/webmin/fetchmail/lang/ja_JP.euc
+share/webmin/fetchmail/lang/ko_KR.UTF-8
 share/webmin/fetchmail/lang/ko_KR.euc
 share/webmin/fetchmail/lang/pl
 share/webmin/fetchmail/lang/ru_RU
 share/webmin/fetchmail/lang/ru_SU
 share/webmin/fetchmail/lang/uk_UA
 share/webmin/fetchmail/lang/zh_CN
+share/webmin/fetchmail/lang/zh_CN.UTF-8
 share/webmin/fetchmail/lang/zh_TW.Big5
+share/webmin/fetchmail/lang/zh_TW.UTF-8
 share/webmin/fetchmail/log_parser.pl
 share/webmin/fetchmail/module.info
 share/webmin/fetchmail/save_cron.cgi
@@ -69,3 +74,4 @@ share/webmin/fetchmail/stop.cgi
 @dirrm share/webmin/fetchmail/images
 @dirrm share/webmin/fetchmail
 @dirrm share/examples/webmin/fetchmail
+@dirrm etc/webmin/fetchmail

@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/05/19 17:14:53 jlam Exp $
+$NetBSD: distinfo,v 1.3 2007/04/21 05:23:07 obache Exp $
 
-SHA1 (webmin-modules-1.270/time.wbm.gz) = d4b785569fd27a78b5ff9ade348ef8fe1fbca9aa
-RMD160 (webmin-modules-1.270/time.wbm.gz) = 73b049052db9b13c865b0d5af8ef7684074f19c6
-Size (webmin-modules-1.270/time.wbm.gz) = 32355 bytes
-SHA1 (patch-aa) = 12531637b08992dd84c8f49863b0892b63606eac
-SHA1 (patch-ab) = a4d2bdb99969c6a16fc15f8f011be5b2a8199ef1
+SHA1 (webmin-1.340.tar.gz) = 530bb583824688f24fc4c6d0b8522d43c7f5bb96
+RMD160 (webmin-1.340.tar.gz) = 5f4cfe51e052c2f46dc7f6813e74fb0e5aebff05
+Size (webmin-1.340.tar.gz) = 15851601 bytes
+SHA1 (patch-aa) = f8d96032a71758d6360758c400c6c404db750820

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:44:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:07 obache Exp $
 share/examples/webmin/time/config
 share/webmin/time/CHANGELOG
 share/webmin/time/acl_security.pl
@@ -21,6 +21,7 @@ share/webmin/time/config.info.es
 share/webmin/time/config.info.fa
 share/webmin/time/config.info.fr
 share/webmin/time/config.info.hu
+share/webmin/time/config.info.ja_JP.UTF-8
 share/webmin/time/config.info.ja_JP.euc
 share/webmin/time/config.info.ms
 share/webmin/time/config.info.pl
@@ -31,12 +32,15 @@ share/webmin/time/config.info.sv
 share/webmin/time/config.info.tr
 share/webmin/time/config.info.uk_UA
 share/webmin/time/config.info.zh_CN
+share/webmin/time/config.info.zh_CN.UTF-8
 share/webmin/time/config.info.zh_TW.Big5
+share/webmin/time/config.info.zh_TW.UTF-8
 share/webmin/time/defaultacl
 share/webmin/time/freebsd-lib.pl
 share/webmin/time/help/hardware_time.ca.html
 share/webmin/time/help/hardware_time.de.html
 share/webmin/time/help/hardware_time.es.html
+share/webmin/time/help/hardware_time.fa.html
 share/webmin/time/help/hardware_time.fr.html
 share/webmin/time/help/hardware_time.html
 share/webmin/time/help/hardware_time.hu.html
@@ -46,9 +50,11 @@ share/webmin/time/help/hardware_time.ru_SU.html
 share/webmin/time/help/hardware_time.sk.html
 share/webmin/time/help/hardware_time.sv.html
 share/webmin/time/help/hardware_time.zh_TW.Big5.html
+share/webmin/time/help/hardware_time.zh_TW.UTF-8.html
 share/webmin/time/help/index.ca.html
 share/webmin/time/help/index.de.html
 share/webmin/time/help/index.es.html
+share/webmin/time/help/index.fa.html
 share/webmin/time/help/index.fr.html
 share/webmin/time/help/index.html
 share/webmin/time/help/index.hu.html
@@ -58,9 +64,11 @@ share/webmin/time/help/index.ru_SU.html
 share/webmin/time/help/index.sk.html
 share/webmin/time/help/index.sv.html
 share/webmin/time/help/index.zh_TW.Big5.html
+share/webmin/time/help/index.zh_TW.UTF-8.html
 share/webmin/time/help/system_time.ca.html
 share/webmin/time/help/system_time.de.html
 share/webmin/time/help/system_time.es.html
+share/webmin/time/help/system_time.fa.html
 share/webmin/time/help/system_time.fr.html
 share/webmin/time/help/system_time.html
 share/webmin/time/help/system_time.hu.html
@@ -70,9 +78,11 @@ share/webmin/time/help/system_time.ru_SU.html
 share/webmin/time/help/system_time.sk.html
 share/webmin/time/help/system_time.sv.html
 share/webmin/time/help/system_time.zh_TW.Big5.html
+share/webmin/time/help/system_time.zh_TW.UTF-8.html
 share/webmin/time/help/timeserver.ca.html
 share/webmin/time/help/timeserver.de.html
 share/webmin/time/help/timeserver.es.html
+share/webmin/time/help/timeserver.fa.html
 share/webmin/time/help/timeserver.fr.html
 share/webmin/time/help/timeserver.html
 share/webmin/time/help/timeserver.hu.html
@@ -82,6 +92,7 @@ share/webmin/time/help/timeserver.ru_SU.html
 share/webmin/time/help/timeserver.sk.html
 share/webmin/time/help/timeserver.sv.html
 share/webmin/time/help/timeserver.zh_TW.Big5.html
+share/webmin/time/help/timeserver.zh_TW.UTF-8.html
 share/webmin/time/images/icon.gif
 share/webmin/time/images/smallicon.gif
 share/webmin/time/index.cgi
@@ -93,8 +104,10 @@ share/webmin/time/lang/es
 share/webmin/time/lang/fa
 share/webmin/time/lang/fr
 share/webmin/time/lang/hu
+share/webmin/time/lang/ja_JP.UTF-8
 share/webmin/time/lang/ja_JP.euc
 share/webmin/time/lang/ja_JP.jis
+share/webmin/time/lang/ko_KR.UTF-8
 share/webmin/time/lang/ko_KR.euc
 share/webmin/time/lang/ms
 share/webmin/time/lang/pl
@@ -105,7 +118,9 @@ share/webmin/time/lang/sv
 share/webmin/time/lang/tr
 share/webmin/time/lang/uk_UA
 share/webmin/time/lang/zh_CN
+share/webmin/time/lang/zh_CN.UTF-8
 share/webmin/time/lang/zh_TW.Big5
+share/webmin/time/lang/zh_TW.UTF-8
 share/webmin/time/linux-lib.pl
 share/webmin/time/log_parser.pl
 share/webmin/time/module.info
@@ -121,3 +136,4 @@ share/webmin/time/uninstall.pl
 @dirrm share/webmin/time/help
 @dirrm share/webmin/time
 @dirrm share/examples/webmin/time
+@dirrm etc/webmin/time

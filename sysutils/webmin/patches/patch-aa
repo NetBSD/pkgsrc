@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/05/16 04:01:28 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/21 05:22:57 obache Exp $
 
---- setup.sh.orig	2006-04-04 19:12:35.000000000 -0400
+--- setup.sh.orig	2007-04-09 05:00:00.000000000 +0000
 +++ setup.sh
 @@ -35,6 +35,11 @@ echo ""
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.4 2006/05/16 04:01:28 jlam Exp $
  	if [ "$?" = "0" -a "$config_dir" != "/etc/webmin" ]; then
  		echo "ERROR: Config directory $config_dir is not empty"
  		echo ""
-@@ -518,6 +530,12 @@ else
+@@ -522,6 +534,12 @@ else
  
  	kfile=$config_dir/miniserv.pem
  	openssl version >/dev/null 2>&1
@@ -48,13 +48,12 @@ $NetBSD: patch-aa,v 1.4 2006/05/16 04:01:28 jlam Exp $
  	if [ "$?" = "0" ]; then
  		# We can generate a new SSL key for this host
  		host=`hostname`
-@@ -719,32 +737,35 @@ EOF
+@@ -728,31 +746,34 @@ EOF
  	echo ""
  fi
  
 -echo "Changing ownership and permissions .."
 -for m in $newmods; do
--	echo Chowning $config_dir/$m
 -	chown -R root $config_dir/$m
 -	chgrp -R bin $config_dir/$m
 -	chmod -R og-rw $config_dir/$m
@@ -83,7 +82,6 @@ $NetBSD: patch-aa,v 1.4 2006/05/16 04:01:28 jlam Exp $
 +#
 +#echo "Changing ownership and permissions .."
 +#for m in $newmods; do
-+#	echo Chowning $config_dir/$m
 +#	chown -R root $config_dir/$m
 +#	chgrp -R bin $config_dir/$m
 +#	chmod -R og-rw $config_dir/$m
