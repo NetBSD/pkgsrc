@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:39:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:59 obache Exp $
 share/examples/webmin/cluster-cron/config
+share/webmin/cluster-cron/CHANGELOG
 share/webmin/cluster-cron/cluster-cron-lib.pl
 share/webmin/cluster-cron/cron.pl
 share/webmin/cluster-cron/delete.cgi
+share/webmin/cluster-cron/delete_jobs.cgi
 share/webmin/cluster-cron/edit.cgi
 share/webmin/cluster-cron/exec.cgi
 share/webmin/cluster-cron/help/intro.de.html

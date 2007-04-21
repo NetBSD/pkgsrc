@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:40:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:00 obache Exp $
 share/examples/webmin/custom/config
 share/webmin/custom/CHANGELOG
 share/webmin/custom/acl_security.pl
@@ -14,6 +14,7 @@ share/webmin/custom/config.info.nl
 share/webmin/custom/config.info.pl
 share/webmin/custom/config.info.ru_RU
 share/webmin/custom/config.info.ru_SU
+share/webmin/custom/config.info.sk
 share/webmin/custom/config.info.tr
 share/webmin/custom/config.info.uk_UA
 share/webmin/custom/custom-lib.pl
@@ -46,6 +47,7 @@ share/webmin/custom/help/cmd.nl.html
 share/webmin/custom/help/cmd.pl.html
 share/webmin/custom/help/cmd.sv.html
 share/webmin/custom/help/cmd.zh_TW.Big5.html
+share/webmin/custom/help/cmd.zh_TW.UTF-8.html
 share/webmin/custom/help/command.ca.html
 share/webmin/custom/help/command.de.html
 share/webmin/custom/help/command.es.html
@@ -55,6 +57,7 @@ share/webmin/custom/help/command.nl.html
 share/webmin/custom/help/command.pl.html
 share/webmin/custom/help/command.sv.html
 share/webmin/custom/help/command.zh_TW.Big5.html
+share/webmin/custom/help/command.zh_TW.UTF-8.html
 share/webmin/custom/help/create.ca.html
 share/webmin/custom/help/create.de.html
 share/webmin/custom/help/create.es.html
@@ -64,6 +67,7 @@ share/webmin/custom/help/create.nl.html
 share/webmin/custom/help/create.pl.html
 share/webmin/custom/help/create.sv.html
 share/webmin/custom/help/create.zh_TW.Big5.html
+share/webmin/custom/help/create.zh_TW.UTF-8.html
 share/webmin/custom/help/desc.ca.html
 share/webmin/custom/help/desc.de.html
 share/webmin/custom/help/desc.es.html
@@ -73,6 +77,7 @@ share/webmin/custom/help/desc.nl.html
 share/webmin/custom/help/desc.pl.html
 share/webmin/custom/help/desc.sv.html
 share/webmin/custom/help/desc.zh_TW.Big5.html
+share/webmin/custom/help/desc.zh_TW.UTF-8.html
 share/webmin/custom/help/dir.ca.html
 share/webmin/custom/help/dir.de.html
 share/webmin/custom/help/dir.html
@@ -85,6 +90,7 @@ share/webmin/custom/help/edit.nl.html
 share/webmin/custom/help/edit.pl.html
 share/webmin/custom/help/edit.sv.html
 share/webmin/custom/help/edit.zh_TW.Big5.html
+share/webmin/custom/help/edit.zh_TW.UTF-8.html
 share/webmin/custom/help/editor.ca.html
 share/webmin/custom/help/editor.de.html
 share/webmin/custom/help/editor.es.html
@@ -132,6 +138,7 @@ share/webmin/custom/help/intro.nl.html
 share/webmin/custom/help/intro.pl.html
 share/webmin/custom/help/intro.sv.html
 share/webmin/custom/help/intro.zh_TW.Big5.html
+share/webmin/custom/help/intro.zh_TW.UTF-8.html
 share/webmin/custom/help/noshow.ca.html
 share/webmin/custom/help/noshow.de.html
 share/webmin/custom/help/noshow.es.html
@@ -162,6 +169,7 @@ share/webmin/custom/help/raw.nl.html
 share/webmin/custom/help/raw.pl.html
 share/webmin/custom/help/raw.sv.html
 share/webmin/custom/help/raw.zh_TW.Big5.html
+share/webmin/custom/help/raw.zh_TW.UTF-8.html
 share/webmin/custom/help/run.ca.html
 share/webmin/custom/help/run.de.html
 share/webmin/custom/help/run.es.html
@@ -171,6 +179,7 @@ share/webmin/custom/help/run.nl.html
 share/webmin/custom/help/run.pl.html
 share/webmin/custom/help/run.sv.html
 share/webmin/custom/help/run.zh_TW.Big5.html
+share/webmin/custom/help/run.zh_TW.UTF-8.html
 share/webmin/custom/help/timeout.ca.html
 share/webmin/custom/help/timeout.de.html
 share/webmin/custom/help/timeout.html
@@ -183,6 +192,7 @@ share/webmin/custom/help/user.nl.html
 share/webmin/custom/help/user.pl.html
 share/webmin/custom/help/user.sv.html
 share/webmin/custom/help/user.zh_TW.Big5.html
+share/webmin/custom/help/user.zh_TW.UTF-8.html
 share/webmin/custom/help/usermin.ca.html
 share/webmin/custom/help/usermin.de.html
 share/webmin/custom/help/usermin.html
@@ -196,18 +206,23 @@ share/webmin/custom/lang/es
 share/webmin/custom/lang/fr
 share/webmin/custom/lang/hu
 share/webmin/custom/lang/it
+share/webmin/custom/lang/ja_JP.UTF-8
 share/webmin/custom/lang/ja_JP.euc
+share/webmin/custom/lang/ko_KR.UTF-8
 share/webmin/custom/lang/ko_KR.euc
 share/webmin/custom/lang/nl
 share/webmin/custom/lang/pl
 share/webmin/custom/lang/pt
 share/webmin/custom/lang/ru_RU
 share/webmin/custom/lang/ru_SU
+share/webmin/custom/lang/sk
 share/webmin/custom/lang/sv
 share/webmin/custom/lang/tr
 share/webmin/custom/lang/uk_UA
 share/webmin/custom/lang/zh_CN
+share/webmin/custom/lang/zh_CN.UTF-8
 share/webmin/custom/lang/zh_TW.Big5
+share/webmin/custom/lang/zh_TW.UTF-8
 share/webmin/custom/log_parser.pl
 share/webmin/custom/module.info
 share/webmin/custom/run.cgi

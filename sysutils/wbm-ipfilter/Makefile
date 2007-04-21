@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/16 04:02:54 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/21 05:23:01 obache Exp $
 
-DISTNAME=	ipfilter
-PKGNAME=	wbm-${DISTNAME}-${WBM_VERSION}
-DIST_SUBDIR=	webmin-modules-${WBM_VERSION}
+WBM_NAME=	ipfilter
 
-# The version is from the module.info file from the extracted distfile.
-WBM_VERSION=	1.270
+WBM_DEPEND_MODULES+=	net
 
-DEPENDS+=	wbm-net>=1.270:../../sysutils/wbm-net
-
-HOMEPAGE=	http://www.webmin.com/standard.html
 COMMENT=	Webmin module for IPFilter configuration
+
+post-extract:
+	cp ${FILESDIR}/ipfilter_config-netbsd ${WRKSRC}/${WBM_NAME}/config-netbsd
 
 .include "../../sysutils/webmin/wbm.mk"
 .include "../../mk/bsd.pkg.mk"
