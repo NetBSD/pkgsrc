@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/21 10:20:05 wiz Exp $
+
+SHA1 (rbtree-0.2.0.tar.gz) = 25f22403caaa99e3f11ed0e9932ff127401956f7
+RMD160 (rbtree-0.2.0.tar.gz) = 6d6d1f5f0d6fb4c5baf82ce31699b53cb74b3add
+Size (rbtree-0.2.0.tar.gz) = 24383 bytes

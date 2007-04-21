@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/21 10:20:05 wiz Exp $
+${RUBY_SITEARCHLIBDIR}/rbtree.${RUBY_DLEXT}
