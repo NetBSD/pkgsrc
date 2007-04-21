@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 04:02:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:01 obache Exp $
 share/examples/webmin/file/config
 share/webmin/file/ACLEditor.class
 share/webmin/file/ACLEntry.class
@@ -36,6 +36,7 @@ share/webmin/file/EXTWindow.class
 share/webmin/file/EditorWindow.class
 share/webmin/file/ErrorWindow.class
 share/webmin/file/ErrorWindow.java
+share/webmin/file/ExtractWindow.class
 share/webmin/file/FileAttribute.class
 share/webmin/file/FileManager.class
 share/webmin/file/FileManager.java
@@ -51,6 +52,7 @@ share/webmin/file/Hierarchy.class
 share/webmin/file/Hierarchy.java
 share/webmin/file/HierarchyCallback.class
 share/webmin/file/HierarchyNode.class
+share/webmin/file/HistoryWindow.class
 share/webmin/file/ImagePanel.class
 share/webmin/file/LinedPanel.class
 share/webmin/file/LinedPanel.java
@@ -107,99 +109,13 @@ share/webmin/file/copy.cgi
 share/webmin/file/defaultacl
 share/webmin/file/delete.cgi
 share/webmin/file/edit_html.cgi
+share/webmin/file/extract.cgi
 share/webmin/file/file-lib.pl
 share/webmin/file/file.jar
 share/webmin/file/filesystems.cgi
 share/webmin/file/getattrs.cgi
 share/webmin/file/getext.cgi
 share/webmin/file/getfacl.cgi
-share/webmin/file/htmlarea/dialog.js
-share/webmin/file/htmlarea/htmlarea.css
-share/webmin/file/htmlarea/htmlarea.js
-share/webmin/file/htmlarea/images/ed_about.gif
-share/webmin/file/htmlarea/images/ed_align_center.gif
-share/webmin/file/htmlarea/images/ed_align_justify.gif
-share/webmin/file/htmlarea/images/ed_align_left.gif
-share/webmin/file/htmlarea/images/ed_align_right.gif
-share/webmin/file/htmlarea/images/ed_blank.gif
-share/webmin/file/htmlarea/images/ed_charmap.gif
-share/webmin/file/htmlarea/images/ed_color_bg.gif
-share/webmin/file/htmlarea/images/ed_color_fg.gif
-share/webmin/file/htmlarea/images/ed_copy.gif
-share/webmin/file/htmlarea/images/ed_custom.gif
-share/webmin/file/htmlarea/images/ed_cut.gif
-share/webmin/file/htmlarea/images/ed_delete.gif
-share/webmin/file/htmlarea/images/ed_format_bold.gif
-share/webmin/file/htmlarea/images/ed_format_italic.gif
-share/webmin/file/htmlarea/images/ed_format_strike.gif
-share/webmin/file/htmlarea/images/ed_format_sub.gif
-share/webmin/file/htmlarea/images/ed_format_sup.gif
-share/webmin/file/htmlarea/images/ed_format_underline.gif
-share/webmin/file/htmlarea/images/ed_help.gif
-share/webmin/file/htmlarea/images/ed_hr.gif
-share/webmin/file/htmlarea/images/ed_html.gif
-share/webmin/file/htmlarea/images/ed_image.gif
-share/webmin/file/htmlarea/images/ed_indent_less.gif
-share/webmin/file/htmlarea/images/ed_indent_more.gif
-share/webmin/file/htmlarea/images/ed_left_to_right.gif
-share/webmin/file/htmlarea/images/ed_link.gif
-share/webmin/file/htmlarea/images/ed_list_bullet.gif
-share/webmin/file/htmlarea/images/ed_list_num.gif
-share/webmin/file/htmlarea/images/ed_paste.gif
-share/webmin/file/htmlarea/images/ed_redo.gif
-share/webmin/file/htmlarea/images/ed_right_to_left.gif
-share/webmin/file/htmlarea/images/ed_save.gif
-share/webmin/file/htmlarea/images/ed_show_border.gif
-share/webmin/file/htmlarea/images/ed_splitcel.gif
-share/webmin/file/htmlarea/images/ed_undo.gif
-share/webmin/file/htmlarea/images/fullscreen_maximize.gif
-share/webmin/file/htmlarea/images/fullscreen_minimize.gif
-share/webmin/file/htmlarea/images/insert_table.gif
-share/webmin/file/htmlarea/lang/b5.js
-share/webmin/file/htmlarea/lang/cz.js
-share/webmin/file/htmlarea/lang/da.js
-share/webmin/file/htmlarea/lang/de.js
-share/webmin/file/htmlarea/lang/ee.js
-share/webmin/file/htmlarea/lang/el.js
-share/webmin/file/htmlarea/lang/en.js
-share/webmin/file/htmlarea/lang/es.js
-share/webmin/file/htmlarea/lang/fi.js
-share/webmin/file/htmlarea/lang/fr.js
-share/webmin/file/htmlarea/lang/gb.js
-share/webmin/file/htmlarea/lang/he.js
-share/webmin/file/htmlarea/lang/hu.js
-share/webmin/file/htmlarea/lang/it.js
-share/webmin/file/htmlarea/lang/ja-euc.js
-share/webmin/file/htmlarea/lang/ja-jis.js
-share/webmin/file/htmlarea/lang/ja-sjis.js
-share/webmin/file/htmlarea/lang/ja-utf8.js
-share/webmin/file/htmlarea/lang/lt.js
-share/webmin/file/htmlarea/lang/lv.js
-share/webmin/file/htmlarea/lang/nb.js
-share/webmin/file/htmlarea/lang/nl.js
-share/webmin/file/htmlarea/lang/no.js
-share/webmin/file/htmlarea/lang/pl.js
-share/webmin/file/htmlarea/lang/pt_br.js
-share/webmin/file/htmlarea/lang/ro.js
-share/webmin/file/htmlarea/lang/ru.js
-share/webmin/file/htmlarea/lang/se.js
-share/webmin/file/htmlarea/lang/si.js
-share/webmin/file/htmlarea/lang/vn.js
-share/webmin/file/htmlarea/license.txt
-share/webmin/file/htmlarea/popupdiv.js
-share/webmin/file/htmlarea/popups/about.html
-share/webmin/file/htmlarea/popups/blank.html
-share/webmin/file/htmlarea/popups/custom2.html
-share/webmin/file/htmlarea/popups/editor_help.html
-share/webmin/file/htmlarea/popups/fullscreen.html
-share/webmin/file/htmlarea/popups/insert_image.html
-share/webmin/file/htmlarea/popups/insert_table.html
-share/webmin/file/htmlarea/popups/link.html
-share/webmin/file/htmlarea/popups/old-fullscreen.html
-share/webmin/file/htmlarea/popups/old_insert_image.html
-share/webmin/file/htmlarea/popups/popup.js
-share/webmin/file/htmlarea/popups/select_color.html
-share/webmin/file/htmlarea/popupwin.js
 share/webmin/file/images/Thumbs.db
 share/webmin/file/images/acl.gif
 share/webmin/file/images/add.gif
@@ -216,6 +132,7 @@ share/webmin/file/images/dir.gif
 share/webmin/file/images/down.gif
 share/webmin/file/images/edit.gif
 share/webmin/file/images/ext.gif
+share/webmin/file/images/extract.gif
 share/webmin/file/images/file.gif
 share/webmin/file/images/find.gif
 share/webmin/file/images/goto.gif
@@ -263,7 +180,9 @@ share/webmin/file/lang/es
 share/webmin/file/lang/fa
 share/webmin/file/lang/fr
 share/webmin/file/lang/it
+share/webmin/file/lang/ja_JP.UTF-8
 share/webmin/file/lang/ja_JP.euc
+share/webmin/file/lang/ko_KR.UTF-8
 share/webmin/file/lang/ko_KR.euc
 share/webmin/file/lang/pl
 share/webmin/file/lang/pt
@@ -275,7 +194,9 @@ share/webmin/file/lang/sv
 share/webmin/file/lang/tr
 share/webmin/file/lang/uk_UA
 share/webmin/file/lang/zh_CN
+share/webmin/file/lang/zh_CN.UTF-8
 share/webmin/file/lang/zh_TW.Big5
+share/webmin/file/lang/zh_TW.UTF-8
 share/webmin/file/list.cgi
 share/webmin/file/list_exports.cgi
 share/webmin/file/list_shares.cgi
@@ -297,17 +218,990 @@ share/webmin/file/setattrs.cgi
 share/webmin/file/setext.cgi
 share/webmin/file/setfacl.cgi
 share/webmin/file/show.cgi
+share/webmin/file/size.cgi
 share/webmin/file/unicode.pl
 share/webmin/file/unicode/zh_TW.Big5
 share/webmin/file/upform.cgi
 share/webmin/file/upload.cgi
 share/webmin/file/upload2.cgi
+share/webmin/file/xinha/Xinha.css
+share/webmin/file/xinha/XinhaCore.js
+share/webmin/file/xinha/contrib/lc_parse_strings.php
+share/webmin/file/xinha/contrib/php-xinha.php
+share/webmin/file/xinha/examples/Extended.html
+share/webmin/file/xinha/examples/custom.css
+share/webmin/file/xinha/examples/dynamic.css
+share/webmin/file/xinha/examples/ext_example-body.html
+share/webmin/file/xinha/examples/ext_example-dest.php
+share/webmin/file/xinha/examples/ext_example-menu.php
+share/webmin/file/xinha/examples/ext_example.html
+share/webmin/file/xinha/examples/full_example.css
+share/webmin/file/xinha/examples/full_example.js
+share/webmin/file/xinha/examples/simple_example.html
+share/webmin/file/xinha/examples/stylist.css
+share/webmin/file/xinha/examples/testbed.html
+share/webmin/file/xinha/htmlarea.js
+share/webmin/file/xinha/images/de/bold.gif
+share/webmin/file/xinha/images/de/italic.gif
+share/webmin/file/xinha/images/de/underline.gif
+share/webmin/file/xinha/images/ed_about.gif
+share/webmin/file/xinha/images/ed_align.gif
+share/webmin/file/xinha/images/ed_align_center.gif
+share/webmin/file/xinha/images/ed_align_justify.gif
+share/webmin/file/xinha/images/ed_align_left.gif
+share/webmin/file/xinha/images/ed_align_right.gif
+share/webmin/file/xinha/images/ed_blank.gif
+share/webmin/file/xinha/images/ed_buttons_main.gif
+share/webmin/file/xinha/images/ed_charmap.gif
+share/webmin/file/xinha/images/ed_clearfonts.gif
+share/webmin/file/xinha/images/ed_color_bg.gif
+share/webmin/file/xinha/images/ed_color_fg.gif
+share/webmin/file/xinha/images/ed_copy.gif
+share/webmin/file/xinha/images/ed_custom.gif
+share/webmin/file/xinha/images/ed_cut.gif
+share/webmin/file/xinha/images/ed_delete.gif
+share/webmin/file/xinha/images/ed_format_bold.gif
+share/webmin/file/xinha/images/ed_format_italic.gif
+share/webmin/file/xinha/images/ed_format_strike.gif
+share/webmin/file/xinha/images/ed_format_sub.gif
+share/webmin/file/xinha/images/ed_format_sup.gif
+share/webmin/file/xinha/images/ed_format_underline.gif
+share/webmin/file/xinha/images/ed_help.gif
+share/webmin/file/xinha/images/ed_hr.gif
+share/webmin/file/xinha/images/ed_html.gif
+share/webmin/file/xinha/images/ed_image.gif
+share/webmin/file/xinha/images/ed_indent_less.gif
+share/webmin/file/xinha/images/ed_indent_more.gif
+share/webmin/file/xinha/images/ed_killword.gif
+share/webmin/file/xinha/images/ed_left_to_right.gif
+share/webmin/file/xinha/images/ed_link.gif
+share/webmin/file/xinha/images/ed_list_bullet.gif
+share/webmin/file/xinha/images/ed_list_num.gif
+share/webmin/file/xinha/images/ed_overwrite.gif
+share/webmin/file/xinha/images/ed_paste.gif
+share/webmin/file/xinha/images/ed_print.gif
+share/webmin/file/xinha/images/ed_redo.gif
+share/webmin/file/xinha/images/ed_right_to_left.gif
+share/webmin/file/xinha/images/ed_rmformat.gif
+share/webmin/file/xinha/images/ed_save.gif
+share/webmin/file/xinha/images/ed_save.png
+share/webmin/file/xinha/images/ed_saveas.gif
+share/webmin/file/xinha/images/ed_selectall.gif
+share/webmin/file/xinha/images/ed_show_border.gif
+share/webmin/file/xinha/images/ed_splitblock.gif
+share/webmin/file/xinha/images/ed_splitcel.gif
+share/webmin/file/xinha/images/ed_undo.gif
+share/webmin/file/xinha/images/ed_word_cleaner.gif
+share/webmin/file/xinha/images/fr/bold.gif
+share/webmin/file/xinha/images/fr/strikethrough.gif
+share/webmin/file/xinha/images/fr/underline.gif
+share/webmin/file/xinha/images/fullscreen_maximize.gif
+share/webmin/file/xinha/images/fullscreen_minimize.gif
+share/webmin/file/xinha/images/insert_table.gif
+share/webmin/file/xinha/images/insertfilelink.gif
+share/webmin/file/xinha/images/insertmacro.png
+share/webmin/file/xinha/images/tidy.gif
+share/webmin/file/xinha/images/toggle_borders.gif
+share/webmin/file/xinha/images/xinha_logo.gif
+share/webmin/file/xinha/lang/b5.js
+share/webmin/file/xinha/lang/ch.js
+share/webmin/file/xinha/lang/cz.js
+share/webmin/file/xinha/lang/da.js
+share/webmin/file/xinha/lang/de.js
+share/webmin/file/xinha/lang/ee.js
+share/webmin/file/xinha/lang/el.js
+share/webmin/file/xinha/lang/es.js
+share/webmin/file/xinha/lang/fa.js
+share/webmin/file/xinha/lang/fi.js
+share/webmin/file/xinha/lang/fr.js
+share/webmin/file/xinha/lang/gb.js
+share/webmin/file/xinha/lang/he.js
+share/webmin/file/xinha/lang/hu.js
+share/webmin/file/xinha/lang/it.js
+share/webmin/file/xinha/lang/ja.js
+share/webmin/file/xinha/lang/lt.js
+share/webmin/file/xinha/lang/lv.js
+share/webmin/file/xinha/lang/nb.js
+share/webmin/file/xinha/lang/nl.js
+share/webmin/file/xinha/lang/pl.js
+share/webmin/file/xinha/lang/pt_br.js
+share/webmin/file/xinha/lang/ro.js
+share/webmin/file/xinha/lang/ru.js
+share/webmin/file/xinha/lang/sh.js
+share/webmin/file/xinha/lang/si.js
+share/webmin/file/xinha/lang/sr.js
+share/webmin/file/xinha/lang/sv.js
+share/webmin/file/xinha/lang/vn.js
+share/webmin/file/xinha/license.txt
+share/webmin/file/xinha/modules/ColorPicker/ColorPicker.js
+share/webmin/file/xinha/modules/CreateLink/link.html
+share/webmin/file/xinha/modules/CreateLink/link.js
+share/webmin/file/xinha/modules/Dialogs/dialog.js
+share/webmin/file/xinha/modules/Dialogs/inline-dialog.js
+share/webmin/file/xinha/modules/Dialogs/panel-dialog.js
+share/webmin/file/xinha/modules/Dialogs/popupwin.js
+share/webmin/file/xinha/modules/FullScreen/full-screen.js
+share/webmin/file/xinha/modules/FullScreen/lang/de.js
+share/webmin/file/xinha/modules/FullScreen/lang/fr.js
+share/webmin/file/xinha/modules/FullScreen/lang/ja.js
+share/webmin/file/xinha/modules/FullScreen/lang/nb.js
+share/webmin/file/xinha/modules/FullScreen/lang/pl.js
+share/webmin/file/xinha/modules/FullScreen/lang/ru.js
+share/webmin/file/xinha/modules/FullScreen/lang/sv.js
+share/webmin/file/xinha/modules/Gecko/Gecko.js
+share/webmin/file/xinha/modules/Gecko/paraHandlerBest.js
+share/webmin/file/xinha/modules/Gecko/paraHandlerDirty.js
+share/webmin/file/xinha/modules/GetHtml/DOMwalk.js
+share/webmin/file/xinha/modules/GetHtml/TransformInnerHTML.js
+share/webmin/file/xinha/modules/InsertImage/insert_image.html
+share/webmin/file/xinha/modules/InsertImage/insert_image.js
+share/webmin/file/xinha/modules/InsertTable/insert_table.html
+share/webmin/file/xinha/modules/InsertTable/insert_table.js
+share/webmin/file/xinha/modules/InternetExplorer/InternetExplorer.js
+share/webmin/file/xinha/plugins/Abbreviation/abbr/de.js
+share/webmin/file/xinha/plugins/Abbreviation/abbr/en.js
+share/webmin/file/xinha/plugins/Abbreviation/abbreviation.css
+share/webmin/file/xinha/plugins/Abbreviation/abbreviation.js
+share/webmin/file/xinha/plugins/Abbreviation/img/ed_abbreviation.gif
+share/webmin/file/xinha/plugins/Abbreviation/lang/de.js
+share/webmin/file/xinha/plugins/Abbreviation/lang/fr.js
+share/webmin/file/xinha/plugins/Abbreviation/lang/ja.js
+share/webmin/file/xinha/plugins/Abbreviation/lang/nb.js
+share/webmin/file/xinha/plugins/Abbreviation/popups/abbreviation.html
+share/webmin/file/xinha/plugins/BackgroundImage/background-image.js
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/blufur.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/palecnvs.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/ppplcnvs.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/thumbnails/blufur.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/thumbnails/palecnvs.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/thumbnails/ppplcnvs.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/thumbnails/ylwsand.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/ylwsand.jpg
+share/webmin/file/xinha/plugins/BackgroundImage/img/ed_bgimage.gif
+share/webmin/file/xinha/plugins/BackgroundImage/lang/de.js
+share/webmin/file/xinha/plugins/BackgroundImage/lang/fr.js
+share/webmin/file/xinha/plugins/BackgroundImage/lang/ja.js
+share/webmin/file/xinha/plugins/BackgroundImage/lang/nb.js
+share/webmin/file/xinha/plugins/BackgroundImage/popups/bgimage.html
+share/webmin/file/xinha/plugins/CSS/css.js
+share/webmin/file/xinha/plugins/CharCounter/char-counter.js
+share/webmin/file/xinha/plugins/CharCounter/lang/de.js
+share/webmin/file/xinha/plugins/CharCounter/lang/fr.js
+share/webmin/file/xinha/plugins/CharCounter/lang/ja.js
+share/webmin/file/xinha/plugins/CharCounter/lang/nb.js
+share/webmin/file/xinha/plugins/CharacterMap/CharacterMap.css
+share/webmin/file/xinha/plugins/CharacterMap/character-map.js
+share/webmin/file/xinha/plugins/CharacterMap/img/ed_charmap.gif
+share/webmin/file/xinha/plugins/CharacterMap/lang/de.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/fr.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/it.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/ja.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/nb.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/nl.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/ru.js
+share/webmin/file/xinha/plugins/CharacterMap/lang/sv.js
+share/webmin/file/xinha/plugins/CharacterMap/popups/select_character.html
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/clientside-spellcheck.js
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/img/clientside-spellcheck.gif
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/img/he-spell-check.gif
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/lang/de.js
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/lang/ja.js
+share/webmin/file/xinha/plugins/ClientsideSpellcheck/lang/nb.js
+share/webmin/file/xinha/plugins/ContextMenu/1.pl
+share/webmin/file/xinha/plugins/ContextMenu/context-menu.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/de.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/el.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/fr.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/he.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/ja.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/nb.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/nl.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/pl.js
+share/webmin/file/xinha/plugins/ContextMenu/lang/sv.js
+share/webmin/file/xinha/plugins/ContextMenu/menu.css
+share/webmin/file/xinha/plugins/DefinitionList/definition-list.css
+share/webmin/file/xinha/plugins/DefinitionList/definition-list.js
+share/webmin/file/xinha/plugins/DefinitionList/img/ed_dd.gif
+share/webmin/file/xinha/plugins/DefinitionList/img/ed_dl.gif
+share/webmin/file/xinha/plugins/DefinitionList/img/ed_dt.gif
+share/webmin/file/xinha/plugins/DefinitionList/lang/ja.js
+share/webmin/file/xinha/plugins/DoubleClick/double-click.js
+share/webmin/file/xinha/plugins/DynamicCSS/dynamiccss.js
+share/webmin/file/xinha/plugins/DynamicCSS/lang/de.js
+share/webmin/file/xinha/plugins/DynamicCSS/lang/fr.js
+share/webmin/file/xinha/plugins/DynamicCSS/lang/ja.js
+share/webmin/file/xinha/plugins/DynamicCSS/lang/nb.js
+share/webmin/file/xinha/plugins/DynamicCSS/lang/nl.js
+share/webmin/file/xinha/plugins/EditTag/edit-tag.js
+share/webmin/file/xinha/plugins/EditTag/img/ed_edit_tag.gif
+share/webmin/file/xinha/plugins/EditTag/lang/de.js
+share/webmin/file/xinha/plugins/EditTag/lang/fr.js
+share/webmin/file/xinha/plugins/EditTag/lang/ja.js
+share/webmin/file/xinha/plugins/EditTag/lang/nb.js
+share/webmin/file/xinha/plugins/EditTag/popups/edit_tag.html
+share/webmin/file/xinha/plugins/Equation/ASCIIMathML.js
+share/webmin/file/xinha/plugins/Equation/equation.js
+share/webmin/file/xinha/plugins/Equation/example.html
+share/webmin/file/xinha/plugins/Equation/img/abs_value.gif
+share/webmin/file/xinha/plugins/Equation/img/diag_fraction.gif
+share/webmin/file/xinha/plugins/Equation/img/divide.gif
+share/webmin/file/xinha/plugins/Equation/img/dsp_greater_equal.gif
+share/webmin/file/xinha/plugins/Equation/img/dsp_less_equal.gif
+share/webmin/file/xinha/plugins/Equation/img/dsp_notequal.gif
+share/webmin/file/xinha/plugins/Equation/img/equation.gif
+share/webmin/file/xinha/plugins/Equation/img/equation.old.gif
+share/webmin/file/xinha/plugins/Equation/img/greater_equal_than.gif
+share/webmin/file/xinha/plugins/Equation/img/hor_fraction.gif
+share/webmin/file/xinha/plugins/Equation/img/less_equal_than.gif
+share/webmin/file/xinha/plugins/Equation/img/mul.gif
+share/webmin/file/xinha/plugins/Equation/img/notequal.gif
+share/webmin/file/xinha/plugins/Equation/img/parenthesis.gif
+share/webmin/file/xinha/plugins/Equation/img/root.gif
+share/webmin/file/xinha/plugins/Equation/img/square_root.gif
+share/webmin/file/xinha/plugins/Equation/lang/de.js
+share/webmin/file/xinha/plugins/Equation/lang/ja.js
+share/webmin/file/xinha/plugins/Equation/popups/dialog.html
+share/webmin/file/xinha/plugins/Equation/readme.txt
+share/webmin/file/xinha/plugins/ExtendedFileManager/Classes/ExtendedFileManager.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/Readme.txt
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/EditorContent.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/ImageEditor.css
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/dialog.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/editor.css
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/editor.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/editorFrame.css
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/editorFrame.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/hover.htc
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/imagelist.css
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/images.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/manager.css
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/manager.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/popup.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/slider.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/assets/wz_jsgraphics.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/backend.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/config.inc.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images/.htaccess
+share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images/bikerpeep.jpg
+share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images/linux/linux.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images/wesnoth078.jpg
+share/webmin/file/xinha/plugins/ExtendedFileManager/editor.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/editorFrame.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/extended-file-manager.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/def.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/def_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/doc.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/doc_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/fla.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/fla_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/folder.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/folder_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/gif_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/gz.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/gz_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/html.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/html_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/jpg_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/js.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/js_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/mov.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/mov_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/pdf.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/pdf_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/php.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/php_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/png_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/ppt.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/ppt_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/rar.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/rar_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/txt.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/txt_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/xls.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/xls_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/zip.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/icons/zip_small.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/images.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/1x1_transparent.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/2x2.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/2x2_w.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btnFolderNew.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btnFolderNew1.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btnFolderUp.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btnFolderUp1.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btn_cancel.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/btn_ok.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/crop.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/default.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/div.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/dots.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/ed_linkfile.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/ed_linkfile1.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_active.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_copy.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_cut.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_paste.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_pencil.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_rename.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/edit_trash.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/folder.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/hand.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/islocked2.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/locked.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/measure.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/noimages.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/rotate.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/save.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/scale.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/spacer.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/t_black.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/t_white.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/unlocked.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/unlocked2.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/img/unlocked_empty.gif
+share/webmin/file/xinha/plugins/ExtendedFileManager/lang/de.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/lang/ja.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/lang/nb.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/lang/nl.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/lang/pl.js
+share/webmin/file/xinha/plugins/ExtendedFileManager/manager.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/resizer.php
+share/webmin/file/xinha/plugins/ExtendedFileManager/thumbs.php
+share/webmin/file/xinha/plugins/Filter/filter.js
+share/webmin/file/xinha/plugins/Filter/filters/paragraph.js
+share/webmin/file/xinha/plugins/Filter/filters/word.js
+share/webmin/file/xinha/plugins/Filter/img/ed_filter.gif
+share/webmin/file/xinha/plugins/Filter/lang/ja.js
+share/webmin/file/xinha/plugins/FindReplace/find-replace.js
+share/webmin/file/xinha/plugins/FindReplace/fr_engine.js
+share/webmin/file/xinha/plugins/FindReplace/img/ed_find.gif
+share/webmin/file/xinha/plugins/FindReplace/lang/de.js
+share/webmin/file/xinha/plugins/FindReplace/lang/fr.js
+share/webmin/file/xinha/plugins/FindReplace/lang/ja.js
+share/webmin/file/xinha/plugins/FindReplace/lang/nb.js
+share/webmin/file/xinha/plugins/FindReplace/lang/pl.js
+share/webmin/file/xinha/plugins/FindReplace/lang/pt_br.js
+share/webmin/file/xinha/plugins/FindReplace/lang/ru.js
+share/webmin/file/xinha/plugins/FindReplace/lang/sv.js
+share/webmin/file/xinha/plugins/FindReplace/popups/find_replace.html
+share/webmin/file/xinha/plugins/FormOperations/README
+share/webmin/file/xinha/plugins/FormOperations/default_form.html
+share/webmin/file/xinha/plugins/FormOperations/form-operations.js
+share/webmin/file/xinha/plugins/FormOperations/formmail.php
+share/webmin/file/xinha/plugins/FormOperations/iframe.css
+share/webmin/file/xinha/plugins/FormOperations/img/buttons.gif
+share/webmin/file/xinha/plugins/FormOperations/lang/de.js
+share/webmin/file/xinha/plugins/FormOperations/lang/fr.js
+share/webmin/file/xinha/plugins/FormOperations/lang/ja.js
+share/webmin/file/xinha/plugins/FormOperations/lang/nb.js
+share/webmin/file/xinha/plugins/FormOperations/panel.html
+share/webmin/file/xinha/plugins/Forms/forms.css
+share/webmin/file/xinha/plugins/Forms/forms.js
+share/webmin/file/xinha/plugins/Forms/img/ed_button.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_checkbox.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_fieldset.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_file.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_form.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_hidden.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_image.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_label.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_password.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_radio.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_reset.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_select.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_submit.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_text.gif
+share/webmin/file/xinha/plugins/Forms/img/ed_textarea.gif
+share/webmin/file/xinha/plugins/Forms/lang/ja.js
+share/webmin/file/xinha/plugins/Forms/popups/fieldset.html
+share/webmin/file/xinha/plugins/Forms/popups/form.html
+share/webmin/file/xinha/plugins/Forms/popups/input.html
+share/webmin/file/xinha/plugins/Forms/popups/label.html
+share/webmin/file/xinha/plugins/Forms/popups/select.html
+share/webmin/file/xinha/plugins/Forms/popups/textarea.html
+share/webmin/file/xinha/plugins/FullPage/full-page.js
+share/webmin/file/xinha/plugins/FullPage/img/docprop.gif
+share/webmin/file/xinha/plugins/FullPage/lang/de.js
+share/webmin/file/xinha/plugins/FullPage/lang/fr.js
+share/webmin/file/xinha/plugins/FullPage/lang/he.js
+share/webmin/file/xinha/plugins/FullPage/lang/ja.js
+share/webmin/file/xinha/plugins/FullPage/lang/nb.js
+share/webmin/file/xinha/plugins/FullPage/lang/nl.js
+share/webmin/file/xinha/plugins/FullPage/lang/pl.js
+share/webmin/file/xinha/plugins/FullPage/lang/ro.js
+share/webmin/file/xinha/plugins/FullPage/popups/docprop.html
+share/webmin/file/xinha/plugins/GetHtml/get-html.js
+share/webmin/file/xinha/plugins/HorizontalRule/horizontal-rule.js
+share/webmin/file/xinha/plugins/HorizontalRule/lang/de.js
+share/webmin/file/xinha/plugins/HorizontalRule/lang/fr.js
+share/webmin/file/xinha/plugins/HorizontalRule/lang/ja.js
+share/webmin/file/xinha/plugins/HorizontalRule/lang/nb.js
+share/webmin/file/xinha/plugins/HorizontalRule/popups/edit_horizontal_rule.html
+share/webmin/file/xinha/plugins/HtmlEntities/Entities.js
+share/webmin/file/xinha/plugins/HtmlEntities/html-entities.js
+share/webmin/file/xinha/plugins/HtmlEntities/iso-8859-1.js
+share/webmin/file/xinha/plugins/HtmlTidy/README
+share/webmin/file/xinha/plugins/HtmlTidy/html-tidy-config.cfg
+share/webmin/file/xinha/plugins/HtmlTidy/html-tidy-logic.php
+share/webmin/file/xinha/plugins/HtmlTidy/html-tidy.js
+share/webmin/file/xinha/plugins/HtmlTidy/img/html-tidy.gif
+share/webmin/file/xinha/plugins/HtmlTidy/lang/de.js
+share/webmin/file/xinha/plugins/HtmlTidy/lang/fr.js
+share/webmin/file/xinha/plugins/HtmlTidy/lang/ja.js
+share/webmin/file/xinha/plugins/HtmlTidy/lang/nb.js
+share/webmin/file/xinha/plugins/HtmlTidy/lang/nl.js
+share/webmin/file/xinha/plugins/ImageManager/Classes/Files.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/GD.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/IM.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/ImageEditor.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/ImageManager.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/NetPBM.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/Thumbnail.php
+share/webmin/file/xinha/plugins/ImageManager/Classes/Transform.php
+share/webmin/file/xinha/plugins/ImageManager/README.txt
+share/webmin/file/xinha/plugins/ImageManager/assets/EditorContent.js
+share/webmin/file/xinha/plugins/ImageManager/assets/ImageEditor.css
+share/webmin/file/xinha/plugins/ImageManager/assets/dialog.js
+share/webmin/file/xinha/plugins/ImageManager/assets/editor.css
+share/webmin/file/xinha/plugins/ImageManager/assets/editor.js
+share/webmin/file/xinha/plugins/ImageManager/assets/editorFrame.css
+share/webmin/file/xinha/plugins/ImageManager/assets/editorFrame.js
+share/webmin/file/xinha/plugins/ImageManager/assets/hover.htc
+share/webmin/file/xinha/plugins/ImageManager/assets/imagelist.css
+share/webmin/file/xinha/plugins/ImageManager/assets/images.js
+share/webmin/file/xinha/plugins/ImageManager/assets/manager.css
+share/webmin/file/xinha/plugins/ImageManager/assets/manager.js
+share/webmin/file/xinha/plugins/ImageManager/assets/popup.js
+share/webmin/file/xinha/plugins/ImageManager/assets/slider.js
+share/webmin/file/xinha/plugins/ImageManager/assets/wz_jsgraphics.js
+share/webmin/file/xinha/plugins/ImageManager/backend.php
+share/webmin/file/xinha/plugins/ImageManager/config.inc.php
+share/webmin/file/xinha/plugins/ImageManager/ddt.php
+share/webmin/file/xinha/plugins/ImageManager/demo_images/bikerpeep.jpg
+share/webmin/file/xinha/plugins/ImageManager/demo_images/linux/linux.gif
+share/webmin/file/xinha/plugins/ImageManager/demo_images/wesnoth078.jpg
+share/webmin/file/xinha/plugins/ImageManager/editor.php
+share/webmin/file/xinha/plugins/ImageManager/editorFrame.php
+share/webmin/file/xinha/plugins/ImageManager/image-manager.js
+share/webmin/file/xinha/plugins/ImageManager/images.php
+share/webmin/file/xinha/plugins/ImageManager/img/2x2.gif
+share/webmin/file/xinha/plugins/ImageManager/img/2x2_w.gif
+share/webmin/file/xinha/plugins/ImageManager/img/btnFolderNew.gif
+share/webmin/file/xinha/plugins/ImageManager/img/btnFolderUp.gif
+share/webmin/file/xinha/plugins/ImageManager/img/btn_cancel.gif
+share/webmin/file/xinha/plugins/ImageManager/img/btn_ok.gif
+share/webmin/file/xinha/plugins/ImageManager/img/crop.gif
+share/webmin/file/xinha/plugins/ImageManager/img/default.gif
+share/webmin/file/xinha/plugins/ImageManager/img/div.gif
+share/webmin/file/xinha/plugins/ImageManager/img/dots.gif
+share/webmin/file/xinha/plugins/ImageManager/img/edit_active.gif
+share/webmin/file/xinha/plugins/ImageManager/img/edit_pencil.gif
+share/webmin/file/xinha/plugins/ImageManager/img/edit_trash.gif
+share/webmin/file/xinha/plugins/ImageManager/img/folder.gif
+share/webmin/file/xinha/plugins/ImageManager/img/hand.gif
+share/webmin/file/xinha/plugins/ImageManager/img/islocked2.gif
+share/webmin/file/xinha/plugins/ImageManager/img/locked.gif
+share/webmin/file/xinha/plugins/ImageManager/img/measure.gif
+share/webmin/file/xinha/plugins/ImageManager/img/noimages.gif
+share/webmin/file/xinha/plugins/ImageManager/img/rotate.gif
+share/webmin/file/xinha/plugins/ImageManager/img/save.gif
+share/webmin/file/xinha/plugins/ImageManager/img/scale.gif
+share/webmin/file/xinha/plugins/ImageManager/img/spacer.gif
+share/webmin/file/xinha/plugins/ImageManager/img/t_black.gif
+share/webmin/file/xinha/plugins/ImageManager/img/t_white.gif
+share/webmin/file/xinha/plugins/ImageManager/img/unlocked.gif
+share/webmin/file/xinha/plugins/ImageManager/img/unlocked2.gif
+share/webmin/file/xinha/plugins/ImageManager/lang/de.js
+share/webmin/file/xinha/plugins/ImageManager/lang/fr.js
+share/webmin/file/xinha/plugins/ImageManager/lang/ja.js
+share/webmin/file/xinha/plugins/ImageManager/lang/nb.js
+share/webmin/file/xinha/plugins/ImageManager/lang/pl.js
+share/webmin/file/xinha/plugins/ImageManager/lang/ru.js
+share/webmin/file/xinha/plugins/ImageManager/lang/sv.js
+share/webmin/file/xinha/plugins/ImageManager/manager.php
+share/webmin/file/xinha/plugins/ImageManager/resizer.php
+share/webmin/file/xinha/plugins/ImageManager/thumbs.php
+share/webmin/file/xinha/plugins/InsertAnchor/img/insert-anchor.gif
+share/webmin/file/xinha/plugins/InsertAnchor/img/placeholder.gif
+share/webmin/file/xinha/plugins/InsertAnchor/insert-anchor.css
+share/webmin/file/xinha/plugins/InsertAnchor/insert-anchor.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/de.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/fr.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/ja.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/nb.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/nl.js
+share/webmin/file/xinha/plugins/InsertAnchor/lang/pl.js
+share/webmin/file/xinha/plugins/InsertAnchor/popups/insert_anchor.html
+share/webmin/file/xinha/plugins/InsertMarquee/img/ed_marquee.gif
+share/webmin/file/xinha/plugins/InsertMarquee/insert-marquee.js
+share/webmin/file/xinha/plugins/InsertMarquee/lang/de.js
+share/webmin/file/xinha/plugins/InsertMarquee/lang/fr.js
+share/webmin/file/xinha/plugins/InsertMarquee/lang/it.js
+share/webmin/file/xinha/plugins/InsertMarquee/lang/ja.js
+share/webmin/file/xinha/plugins/InsertMarquee/lang/nb.js
+share/webmin/file/xinha/plugins/InsertMarquee/popups/insert_marquee.html
+share/webmin/file/xinha/plugins/InsertPagebreak/img/pagebreak.gif
+share/webmin/file/xinha/plugins/InsertPagebreak/insert-pagebreak.js
+share/webmin/file/xinha/plugins/InsertPagebreak/lang/de.js
+share/webmin/file/xinha/plugins/InsertPagebreak/lang/fr.js
+share/webmin/file/xinha/plugins/InsertPagebreak/lang/ja.js
+share/webmin/file/xinha/plugins/InsertPagebreak/lang/nb.js
+share/webmin/file/xinha/plugins/InsertPicture/InsertPicture.php
+share/webmin/file/xinha/plugins/InsertPicture/demo_pictures/bikerpeep.jpg
+share/webmin/file/xinha/plugins/InsertPicture/demo_pictures/wesnoth078.jpg
+share/webmin/file/xinha/plugins/InsertPicture/img/btn_open.gif
+share/webmin/file/xinha/plugins/InsertPicture/img/nopic.gif
+share/webmin/file/xinha/plugins/InsertPicture/insert-picture.js
+share/webmin/file/xinha/plugins/InsertPicture/lang/de.js
+share/webmin/file/xinha/plugins/InsertPicture/lang/fr.js
+share/webmin/file/xinha/plugins/InsertPicture/lang/ja.js
+share/webmin/file/xinha/plugins/InsertPicture/lang/nb.js
+share/webmin/file/xinha/plugins/InsertPicture/lang/sv.js
+share/webmin/file/xinha/plugins/InsertPicture/viewpicture.html
+share/webmin/file/xinha/plugins/InsertSnippet/InsertSnippet.css
+share/webmin/file/xinha/plugins/InsertSnippet/demosnippets.js
+share/webmin/file/xinha/plugins/InsertSnippet/img/ed_snippet.gif
+share/webmin/file/xinha/plugins/InsertSnippet/insert-snippet.js
+share/webmin/file/xinha/plugins/InsertSnippet/lang/de.js
+share/webmin/file/xinha/plugins/InsertSnippet/lang/ja.js
+share/webmin/file/xinha/plugins/InsertSnippet/lang/nb.js
+share/webmin/file/xinha/plugins/InsertSnippet/popups/insertsnippet.html
+share/webmin/file/xinha/plugins/InsertSnippet/readme.html
+share/webmin/file/xinha/plugins/InsertSnippet/snippets.html
+share/webmin/file/xinha/plugins/InsertSnippet/snippets.php
+share/webmin/file/xinha/plugins/InsertWords/insert-words.js
+share/webmin/file/xinha/plugins/LangMarks/img/el.gif
+share/webmin/file/xinha/plugins/LangMarks/img/en.gif
+share/webmin/file/xinha/plugins/LangMarks/img/fr.gif
+share/webmin/file/xinha/plugins/LangMarks/img/la.gif
+share/webmin/file/xinha/plugins/LangMarks/lang-marks.css
+share/webmin/file/xinha/plugins/LangMarks/lang-marks.js
+share/webmin/file/xinha/plugins/LangMarks/lang/de.js
+share/webmin/file/xinha/plugins/LangMarks/lang/fr.js
+share/webmin/file/xinha/plugins/LangMarks/lang/ja.js
+share/webmin/file/xinha/plugins/LangMarks/lang/nb.js
+share/webmin/file/xinha/plugins/LangMarks/lang/nl.js
+share/webmin/file/xinha/plugins/Linker/dTree/api.html
+share/webmin/file/xinha/plugins/Linker/dTree/dtree.css
+share/webmin/file/xinha/plugins/Linker/dTree/dtree.js
+share/webmin/file/xinha/plugins/Linker/dTree/example01.html
+share/webmin/file/xinha/plugins/Linker/dTree/img/base.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/cd.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/copy.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/empty.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/folder.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/folderopen.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/globe.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/imgfolder.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/join.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/joinbottom.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/line.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/minus.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/minusbottom.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/move.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/musicfolder.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/nolines_minus.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/nolines_plus.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/offline.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/offline.png
+share/webmin/file/xinha/plugins/Linker/dTree/img/page.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/plus.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/plusbottom.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/question.gif
+share/webmin/file/xinha/plugins/Linker/dTree/img/trash.gif
+share/webmin/file/xinha/plugins/Linker/dialog.html
+share/webmin/file/xinha/plugins/Linker/lang/de.js
+share/webmin/file/xinha/plugins/Linker/lang/fr.js
+share/webmin/file/xinha/plugins/Linker/lang/ja.js
+share/webmin/file/xinha/plugins/Linker/lang/nb.js
+share/webmin/file/xinha/plugins/Linker/lang/pl.js
+share/webmin/file/xinha/plugins/Linker/linker.js
+share/webmin/file/xinha/plugins/Linker/scan.php
+share/webmin/file/xinha/plugins/ListType/ListType.css
+share/webmin/file/xinha/plugins/ListType/img/circle.png
+share/webmin/file/xinha/plugins/ListType/img/decimal.png
+share/webmin/file/xinha/plugins/ListType/img/disc.png
+share/webmin/file/xinha/plugins/ListType/img/lower-alpha.png
+share/webmin/file/xinha/plugins/ListType/img/lower-roman.png
+share/webmin/file/xinha/plugins/ListType/img/none.png
+share/webmin/file/xinha/plugins/ListType/img/square.png
+share/webmin/file/xinha/plugins/ListType/img/upper-alpha.png
+share/webmin/file/xinha/plugins/ListType/img/upper-roman.png
+share/webmin/file/xinha/plugins/ListType/lang/de.js
+share/webmin/file/xinha/plugins/ListType/lang/fr.js
+share/webmin/file/xinha/plugins/ListType/lang/ja.js
+share/webmin/file/xinha/plugins/ListType/lang/nb.js
+share/webmin/file/xinha/plugins/ListType/lang/nl.js
+share/webmin/file/xinha/plugins/ListType/lang/pl.js
+share/webmin/file/xinha/plugins/ListType/lang/ru.js
+share/webmin/file/xinha/plugins/ListType/lang/sv.js
+share/webmin/file/xinha/plugins/ListType/list-type.js
+share/webmin/file/xinha/plugins/NoteServer/img/note.gif
+share/webmin/file/xinha/plugins/NoteServer/lang/de.js
+share/webmin/file/xinha/plugins/NoteServer/lang/fr.js
+share/webmin/file/xinha/plugins/NoteServer/lang/ja.js
+share/webmin/file/xinha/plugins/NoteServer/lang/nb.js
+share/webmin/file/xinha/plugins/NoteServer/note-server.js
+share/webmin/file/xinha/plugins/NoteServer/popups/codenote.html
+share/webmin/file/xinha/plugins/PasteText/img/ed_paste_text.gif
+share/webmin/file/xinha/plugins/PasteText/lang/de.js
+share/webmin/file/xinha/plugins/PasteText/lang/fr.js
+share/webmin/file/xinha/plugins/PasteText/lang/ja.js
+share/webmin/file/xinha/plugins/PasteText/lang/nb.js
+share/webmin/file/xinha/plugins/PasteText/lang/pl.js
+share/webmin/file/xinha/plugins/PasteText/paste-text.js
+share/webmin/file/xinha/plugins/PasteText/popups/paste_text.html
+share/webmin/file/xinha/plugins/QuickTag/img/ed_quicktag.gif
+share/webmin/file/xinha/plugins/QuickTag/lang/de.js
+share/webmin/file/xinha/plugins/QuickTag/lang/fr.js
+share/webmin/file/xinha/plugins/QuickTag/lang/ja.js
+share/webmin/file/xinha/plugins/QuickTag/lang/nb.js
+share/webmin/file/xinha/plugins/QuickTag/lang/pl.js
+share/webmin/file/xinha/plugins/QuickTag/lang/pt_br.js
+share/webmin/file/xinha/plugins/QuickTag/popups/quicktag.html
+share/webmin/file/xinha/plugins/QuickTag/quick-tag.js
+share/webmin/file/xinha/plugins/QuickTag/tag-lib.js
+share/webmin/file/xinha/plugins/SaveSubmit/README.txt
+share/webmin/file/xinha/plugins/SaveSubmit/img/ed_save_green.gif
+share/webmin/file/xinha/plugins/SaveSubmit/img/ed_save_red.gif
+share/webmin/file/xinha/plugins/SaveSubmit/lang/de.js
+share/webmin/file/xinha/plugins/SaveSubmit/lang/ja.js
+share/webmin/file/xinha/plugins/SaveSubmit/lang/ru.js
+share/webmin/file/xinha/plugins/SaveSubmit/save-submit.js
+share/webmin/file/xinha/plugins/SetId/img/placeholder.gif
+share/webmin/file/xinha/plugins/SetId/img/set-id.gif
+share/webmin/file/xinha/plugins/SetId/lang/de.js
+share/webmin/file/xinha/plugins/SetId/lang/ja.js
+share/webmin/file/xinha/plugins/SetId/lang/nb.js
+share/webmin/file/xinha/plugins/SetId/popups/set_id.html
+share/webmin/file/xinha/plugins/SetId/set-id.css
+share/webmin/file/xinha/plugins/SetId/set-id.js
+share/webmin/file/xinha/plugins/SmartReplace/img/smartquotes.gif
+share/webmin/file/xinha/plugins/SmartReplace/lang/de.js
+share/webmin/file/xinha/plugins/SmartReplace/lang/ja.js
+share/webmin/file/xinha/plugins/SmartReplace/popups/dialog.html
+share/webmin/file/xinha/plugins/SmartReplace/readme.txt
+share/webmin/file/xinha/plugins/SmartReplace/smart-replace.js
+share/webmin/file/xinha/plugins/SpellChecker/README
+share/webmin/file/xinha/plugins/SpellChecker/aspell_setup.php
+share/webmin/file/xinha/plugins/SpellChecker/img/he-spell-check.gif
+share/webmin/file/xinha/plugins/SpellChecker/img/spell-check.gif
+share/webmin/file/xinha/plugins/SpellChecker/lang/cz.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/da.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/de.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/fr.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/he.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/hu.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/ja.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/nb.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/nl.js
+share/webmin/file/xinha/plugins/SpellChecker/lang/ro.js
+share/webmin/file/xinha/plugins/SpellChecker/readme-tech.html
+share/webmin/file/xinha/plugins/SpellChecker/spell-check-logic.php
+share/webmin/file/xinha/plugins/SpellChecker/spell-check-savedicts.php
+share/webmin/file/xinha/plugins/SpellChecker/spell-check-style.css
+share/webmin/file/xinha/plugins/SpellChecker/spell-check-ui.html
+share/webmin/file/xinha/plugins/SpellChecker/spell-check-ui.js
+share/webmin/file/xinha/plugins/SpellChecker/spell-checker.js
+share/webmin/file/xinha/plugins/Stylist/lang/de.js
+share/webmin/file/xinha/plugins/Stylist/lang/fr.js
+share/webmin/file/xinha/plugins/Stylist/lang/ja.js
+share/webmin/file/xinha/plugins/Stylist/lang/nb.js
+share/webmin/file/xinha/plugins/Stylist/lang/pl.js
+share/webmin/file/xinha/plugins/Stylist/stylist.js
+share/webmin/file/xinha/plugins/SuperClean/dialog.html
+share/webmin/file/xinha/plugins/SuperClean/filters/paragraph.js
+share/webmin/file/xinha/plugins/SuperClean/filters/word.js
+share/webmin/file/xinha/plugins/SuperClean/img/ed_superclean.gif
+share/webmin/file/xinha/plugins/SuperClean/lang/de.js
+share/webmin/file/xinha/plugins/SuperClean/lang/fr.js
+share/webmin/file/xinha/plugins/SuperClean/lang/ja.js
+share/webmin/file/xinha/plugins/SuperClean/lang/nb.js
+share/webmin/file/xinha/plugins/SuperClean/super-clean.js
+share/webmin/file/xinha/plugins/SuperClean/tidy.php
+share/webmin/file/xinha/plugins/TableOperations/img/cell-delete.gif
+share/webmin/file/xinha/plugins/TableOperations/img/cell-insert-after.gif
+share/webmin/file/xinha/plugins/TableOperations/img/cell-insert-before.gif
+share/webmin/file/xinha/plugins/TableOperations/img/cell-merge.gif
+share/webmin/file/xinha/plugins/TableOperations/img/cell-prop.gif
+share/webmin/file/xinha/plugins/TableOperations/img/cell-split.gif
+share/webmin/file/xinha/plugins/TableOperations/img/col-delete.gif
+share/webmin/file/xinha/plugins/TableOperations/img/col-insert-after.gif
+share/webmin/file/xinha/plugins/TableOperations/img/col-insert-before.gif
+share/webmin/file/xinha/plugins/TableOperations/img/col-split.gif
+share/webmin/file/xinha/plugins/TableOperations/img/row-delete.gif
+share/webmin/file/xinha/plugins/TableOperations/img/row-insert-above.gif
+share/webmin/file/xinha/plugins/TableOperations/img/row-insert-under.gif
+share/webmin/file/xinha/plugins/TableOperations/img/row-prop.gif
+share/webmin/file/xinha/plugins/TableOperations/img/row-split.gif
+share/webmin/file/xinha/plugins/TableOperations/img/table-prop.gif
+share/webmin/file/xinha/plugins/TableOperations/lang/cz.js
+share/webmin/file/xinha/plugins/TableOperations/lang/da.js
+share/webmin/file/xinha/plugins/TableOperations/lang/de.js
+share/webmin/file/xinha/plugins/TableOperations/lang/el.js
+share/webmin/file/xinha/plugins/TableOperations/lang/fi.js
+share/webmin/file/xinha/plugins/TableOperations/lang/fr.js
+share/webmin/file/xinha/plugins/TableOperations/lang/he.js
+share/webmin/file/xinha/plugins/TableOperations/lang/it.js
+share/webmin/file/xinha/plugins/TableOperations/lang/ja.js
+share/webmin/file/xinha/plugins/TableOperations/lang/nb.js
+share/webmin/file/xinha/plugins/TableOperations/lang/nl.js
+share/webmin/file/xinha/plugins/TableOperations/lang/pl.js
+share/webmin/file/xinha/plugins/TableOperations/lang/ro.js
+share/webmin/file/xinha/plugins/TableOperations/lang/ru.js
+share/webmin/file/xinha/plugins/TableOperations/lang/sv.js
+share/webmin/file/xinha/plugins/TableOperations/table-operations.js
+share/webmin/file/xinha/plugins/Template/img/ed_template.gif
+share/webmin/file/xinha/plugins/Template/img/layout_01.gif
+share/webmin/file/xinha/plugins/Template/img/layout_02.gif
+share/webmin/file/xinha/plugins/Template/img/layout_03.gif
+share/webmin/file/xinha/plugins/Template/lang/de.js
+share/webmin/file/xinha/plugins/Template/lang/fr.js
+share/webmin/file/xinha/plugins/Template/lang/it.js
+share/webmin/file/xinha/plugins/Template/lang/ja.js
+share/webmin/file/xinha/plugins/Template/lang/nb.js
+share/webmin/file/xinha/plugins/Template/popups/template.html
+share/webmin/file/xinha/plugins/Template/template.css
+share/webmin/file/xinha/plugins/Template/template.js
+share/webmin/file/xinha/plugins/UnFormat/img/unformat.gif
+share/webmin/file/xinha/plugins/UnFormat/lang/de.js
+share/webmin/file/xinha/plugins/UnFormat/lang/fr.js
+share/webmin/file/xinha/plugins/UnFormat/lang/ja.js
+share/webmin/file/xinha/plugins/UnFormat/lang/nb.js
+share/webmin/file/xinha/plugins/UnFormat/lang/nl.js
+share/webmin/file/xinha/plugins/UnFormat/popups/unformat.html
+share/webmin/file/xinha/plugins/UnFormat/un-format.js
+share/webmin/file/xinha/popups/about.html
+share/webmin/file/xinha/popups/blank.html
+share/webmin/file/xinha/popups/editor_help.html
+share/webmin/file/xinha/popups/popup.css
+share/webmin/file/xinha/popups/popup.js
+share/webmin/file/xinha/popups/select_color.html
+share/webmin/file/xinha/release-notes.txt
+share/webmin/file/xinha/skins/blue-look/button-background.png
+share/webmin/file/xinha/skins/blue-look/separator.gif
+share/webmin/file/xinha/skins/blue-look/skin.css
+share/webmin/file/xinha/skins/blue-metallic/button-background.png
+share/webmin/file/xinha/skins/blue-metallic/separator.gif
+share/webmin/file/xinha/skins/blue-metallic/skin.css
+share/webmin/file/xinha/skins/green-look/button-background.gif
+share/webmin/file/xinha/skins/green-look/separator.gif
+share/webmin/file/xinha/skins/green-look/skin.css
+share/webmin/file/xinha/skins/inditreuse/README
+share/webmin/file/xinha/skins/inditreuse/back.png
+share/webmin/file/xinha/skins/inditreuse/button-background.png
+share/webmin/file/xinha/skins/inditreuse/hover.png
+share/webmin/file/xinha/skins/inditreuse/selected.png
+share/webmin/file/xinha/skins/inditreuse/separator.png
+share/webmin/file/xinha/skins/inditreuse/skin.css
+share/webmin/file/xinha/skins/silva/dialog.jpg
+share/webmin/file/xinha/skins/silva/html.gif
+share/webmin/file/xinha/skins/silva/skin.css
+share/webmin/file/xinha/skins/silva/statusbar.png
+share/webmin/file/xinha/skins/silva/toolbar.png
+share/webmin/file/xinha/skins/titan/README
+share/webmin/file/xinha/skins/titan/back.png
+share/webmin/file/xinha/skins/titan/button-background.png
+share/webmin/file/xinha/skins/titan/hover.png
+share/webmin/file/xinha/skins/titan/selected.png
+share/webmin/file/xinha/skins/titan/separator.png
+share/webmin/file/xinha/skins/titan/skin.css
+share/webmin/file/xinha/skins/xp-blue/back.png
+share/webmin/file/xinha/skins/xp-blue/button-background.png
+share/webmin/file/xinha/skins/xp-blue/hover.png
+share/webmin/file/xinha/skins/xp-blue/selected.png
+share/webmin/file/xinha/skins/xp-blue/separator.png
+share/webmin/file/xinha/skins/xp-blue/skin.css
+share/webmin/file/xinha/skins/xp-green/back.png
+share/webmin/file/xinha/skins/xp-green/button-background.png
+share/webmin/file/xinha/skins/xp-green/hover.png
+share/webmin/file/xinha/skins/xp-green/selected.png
+share/webmin/file/xinha/skins/xp-green/separator.png
+share/webmin/file/xinha/skins/xp-green/skin.css
+@dirrm share/webmin/file/xinha/skins/xp-green
+@dirrm share/webmin/file/xinha/skins/xp-blue
+@dirrm share/webmin/file/xinha/skins/titan
+@dirrm share/webmin/file/xinha/skins/silva
+@dirrm share/webmin/file/xinha/skins/inditreuse
+@dirrm share/webmin/file/xinha/skins/green-look
+@dirrm share/webmin/file/xinha/skins/blue-metallic
+@dirrm share/webmin/file/xinha/skins/blue-look
+@dirrm share/webmin/file/xinha/skins
+@dirrm share/webmin/file/xinha/popups
+@dirrm share/webmin/file/xinha/plugins/UnFormat/popups
+@dirrm share/webmin/file/xinha/plugins/UnFormat/lang
+@dirrm share/webmin/file/xinha/plugins/UnFormat/img
+@dirrm share/webmin/file/xinha/plugins/UnFormat
+@dirrm share/webmin/file/xinha/plugins/Template/popups
+@dirrm share/webmin/file/xinha/plugins/Template/lang
+@dirrm share/webmin/file/xinha/plugins/Template/img
+@dirrm share/webmin/file/xinha/plugins/Template
+@dirrm share/webmin/file/xinha/plugins/TableOperations/lang
+@dirrm share/webmin/file/xinha/plugins/TableOperations/img
+@dirrm share/webmin/file/xinha/plugins/TableOperations
+@dirrm share/webmin/file/xinha/plugins/SuperClean/lang
+@dirrm share/webmin/file/xinha/plugins/SuperClean/img
+@dirrm share/webmin/file/xinha/plugins/SuperClean/filters
+@dirrm share/webmin/file/xinha/plugins/SuperClean
+@dirrm share/webmin/file/xinha/plugins/Stylist/lang
+@dirrm share/webmin/file/xinha/plugins/Stylist
+@dirrm share/webmin/file/xinha/plugins/SpellChecker/lang
+@dirrm share/webmin/file/xinha/plugins/SpellChecker/img
+@dirrm share/webmin/file/xinha/plugins/SpellChecker
+@dirrm share/webmin/file/xinha/plugins/SmartReplace/popups
+@dirrm share/webmin/file/xinha/plugins/SmartReplace/lang
+@dirrm share/webmin/file/xinha/plugins/SmartReplace/img
+@dirrm share/webmin/file/xinha/plugins/SmartReplace
+@dirrm share/webmin/file/xinha/plugins/SetId/popups
+@dirrm share/webmin/file/xinha/plugins/SetId/lang
+@dirrm share/webmin/file/xinha/plugins/SetId/img
+@dirrm share/webmin/file/xinha/plugins/SetId
+@dirrm share/webmin/file/xinha/plugins/SaveSubmit/lang
+@dirrm share/webmin/file/xinha/plugins/SaveSubmit/img
+@dirrm share/webmin/file/xinha/plugins/SaveSubmit
+@dirrm share/webmin/file/xinha/plugins/QuickTag/popups
+@dirrm share/webmin/file/xinha/plugins/QuickTag/lang
+@dirrm share/webmin/file/xinha/plugins/QuickTag/img
+@dirrm share/webmin/file/xinha/plugins/QuickTag
+@dirrm share/webmin/file/xinha/plugins/PasteText/popups
+@dirrm share/webmin/file/xinha/plugins/PasteText/lang
+@dirrm share/webmin/file/xinha/plugins/PasteText/img
+@dirrm share/webmin/file/xinha/plugins/PasteText
+@dirrm share/webmin/file/xinha/plugins/NoteServer/popups
+@dirrm share/webmin/file/xinha/plugins/NoteServer/lang
+@dirrm share/webmin/file/xinha/plugins/NoteServer/img
+@dirrm share/webmin/file/xinha/plugins/NoteServer
+@dirrm share/webmin/file/xinha/plugins/ListType/lang
+@dirrm share/webmin/file/xinha/plugins/ListType/img
+@dirrm share/webmin/file/xinha/plugins/ListType
+@dirrm share/webmin/file/xinha/plugins/Linker/lang
+@dirrm share/webmin/file/xinha/plugins/Linker/dTree/img
+@dirrm share/webmin/file/xinha/plugins/Linker/dTree
+@dirrm share/webmin/file/xinha/plugins/Linker
+@dirrm share/webmin/file/xinha/plugins/LangMarks/lang
+@dirrm share/webmin/file/xinha/plugins/LangMarks/img
+@dirrm share/webmin/file/xinha/plugins/LangMarks
+@dirrm share/webmin/file/xinha/plugins/InsertWords
+@dirrm share/webmin/file/xinha/plugins/InsertSnippet/popups
+@dirrm share/webmin/file/xinha/plugins/InsertSnippet/lang
+@dirrm share/webmin/file/xinha/plugins/InsertSnippet/img
+@dirrm share/webmin/file/xinha/plugins/InsertSnippet
+@dirrm share/webmin/file/xinha/plugins/InsertPicture/lang
+@dirrm share/webmin/file/xinha/plugins/InsertPicture/img
+@dirrm share/webmin/file/xinha/plugins/InsertPicture/demo_pictures
+@dirrm share/webmin/file/xinha/plugins/InsertPicture
+@dirrm share/webmin/file/xinha/plugins/InsertPagebreak/lang
+@dirrm share/webmin/file/xinha/plugins/InsertPagebreak/img
+@dirrm share/webmin/file/xinha/plugins/InsertPagebreak
+@dirrm share/webmin/file/xinha/plugins/InsertMarquee/popups
+@dirrm share/webmin/file/xinha/plugins/InsertMarquee/lang
+@dirrm share/webmin/file/xinha/plugins/InsertMarquee/img
+@dirrm share/webmin/file/xinha/plugins/InsertMarquee
+@dirrm share/webmin/file/xinha/plugins/InsertAnchor/popups
+@dirrm share/webmin/file/xinha/plugins/InsertAnchor/lang
+@dirrm share/webmin/file/xinha/plugins/InsertAnchor/img
+@dirrm share/webmin/file/xinha/plugins/InsertAnchor
+@dirrm share/webmin/file/xinha/plugins/ImageManager/lang
+@dirrm share/webmin/file/xinha/plugins/ImageManager/img
+@dirrm share/webmin/file/xinha/plugins/ImageManager/demo_images/linux
+@dirrm share/webmin/file/xinha/plugins/ImageManager/demo_images
+@dirrm share/webmin/file/xinha/plugins/ImageManager/assets
+@dirrm share/webmin/file/xinha/plugins/ImageManager/Classes
+@dirrm share/webmin/file/xinha/plugins/ImageManager
+@dirrm share/webmin/file/xinha/plugins/HtmlTidy/lang
+@dirrm share/webmin/file/xinha/plugins/HtmlTidy/img
+@dirrm share/webmin/file/xinha/plugins/HtmlTidy
+@dirrm share/webmin/file/xinha/plugins/HtmlEntities
+@dirrm share/webmin/file/xinha/plugins/HorizontalRule/popups
+@dirrm share/webmin/file/xinha/plugins/HorizontalRule/lang
+@dirrm share/webmin/file/xinha/plugins/HorizontalRule
+@dirrm share/webmin/file/xinha/plugins/GetHtml
+@dirrm share/webmin/file/xinha/plugins/FullPage/popups
+@dirrm share/webmin/file/xinha/plugins/FullPage/lang
+@dirrm share/webmin/file/xinha/plugins/FullPage/img
+@dirrm share/webmin/file/xinha/plugins/FullPage
+@dirrm share/webmin/file/xinha/plugins/Forms/popups
+@dirrm share/webmin/file/xinha/plugins/Forms/lang
+@dirrm share/webmin/file/xinha/plugins/Forms/img
+@dirrm share/webmin/file/xinha/plugins/Forms
+@dirrm share/webmin/file/xinha/plugins/FormOperations/lang
+@dirrm share/webmin/file/xinha/plugins/FormOperations/img
+@dirrm share/webmin/file/xinha/plugins/FormOperations
+@dirrm share/webmin/file/xinha/plugins/FindReplace/popups
+@dirrm share/webmin/file/xinha/plugins/FindReplace/lang
+@dirrm share/webmin/file/xinha/plugins/FindReplace/img
+@dirrm share/webmin/file/xinha/plugins/FindReplace
+@dirrm share/webmin/file/xinha/plugins/Filter/lang
+@dirrm share/webmin/file/xinha/plugins/Filter/img
+@dirrm share/webmin/file/xinha/plugins/Filter/filters
+@dirrm share/webmin/file/xinha/plugins/Filter
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/lang
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/img
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/icons
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images/linux
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/demo_images
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/assets
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager/Classes
+@dirrm share/webmin/file/xinha/plugins/ExtendedFileManager
+@dirrm share/webmin/file/xinha/plugins/Equation/popups
+@dirrm share/webmin/file/xinha/plugins/Equation/lang
+@dirrm share/webmin/file/xinha/plugins/Equation/img
+@dirrm share/webmin/file/xinha/plugins/Equation
+@dirrm share/webmin/file/xinha/plugins/EditTag/popups
+@dirrm share/webmin/file/xinha/plugins/EditTag/lang
+@dirrm share/webmin/file/xinha/plugins/EditTag/img
+@dirrm share/webmin/file/xinha/plugins/EditTag
+@dirrm share/webmin/file/xinha/plugins/DynamicCSS/lang
+@dirrm share/webmin/file/xinha/plugins/DynamicCSS
+@dirrm share/webmin/file/xinha/plugins/DoubleClick
+@dirrm share/webmin/file/xinha/plugins/DefinitionList/lang
+@dirrm share/webmin/file/xinha/plugins/DefinitionList/img
+@dirrm share/webmin/file/xinha/plugins/DefinitionList
+@dirrm share/webmin/file/xinha/plugins/ContextMenu/lang
+@dirrm share/webmin/file/xinha/plugins/ContextMenu
+@dirrm share/webmin/file/xinha/plugins/ClientsideSpellcheck/lang
+@dirrm share/webmin/file/xinha/plugins/ClientsideSpellcheck/img
+@dirrm share/webmin/file/xinha/plugins/ClientsideSpellcheck
+@dirrm share/webmin/file/xinha/plugins/CharacterMap/popups
+@dirrm share/webmin/file/xinha/plugins/CharacterMap/lang
+@dirrm share/webmin/file/xinha/plugins/CharacterMap/img
+@dirrm share/webmin/file/xinha/plugins/CharacterMap
+@dirrm share/webmin/file/xinha/plugins/CharCounter/lang
+@dirrm share/webmin/file/xinha/plugins/CharCounter
+@dirrm share/webmin/file/xinha/plugins/CSS
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage/popups
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage/lang
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage/img
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage/backgrounds/thumbnails
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage/backgrounds
+@dirrm share/webmin/file/xinha/plugins/BackgroundImage
+@dirrm share/webmin/file/xinha/plugins/Abbreviation/popups
+@dirrm share/webmin/file/xinha/plugins/Abbreviation/lang
+@dirrm share/webmin/file/xinha/plugins/Abbreviation/img
+@dirrm share/webmin/file/xinha/plugins/Abbreviation/abbr
+@dirrm share/webmin/file/xinha/plugins/Abbreviation
+@dirrm share/webmin/file/xinha/plugins
+@dirrm share/webmin/file/xinha/modules/InternetExplorer
+@dirrm share/webmin/file/xinha/modules/InsertTable
+@dirrm share/webmin/file/xinha/modules/InsertImage
+@dirrm share/webmin/file/xinha/modules/GetHtml
+@dirrm share/webmin/file/xinha/modules/Gecko
+@dirrm share/webmin/file/xinha/modules/FullScreen/lang
+@dirrm share/webmin/file/xinha/modules/FullScreen
+@dirrm share/webmin/file/xinha/modules/Dialogs
+@dirrm share/webmin/file/xinha/modules/CreateLink
+@dirrm share/webmin/file/xinha/modules/ColorPicker
+@dirrm share/webmin/file/xinha/modules
+@dirrm share/webmin/file/xinha/lang
+@dirrm share/webmin/file/xinha/images/fr
+@dirrm share/webmin/file/xinha/images/de
+@dirrm share/webmin/file/xinha/images
+@dirrm share/webmin/file/xinha/examples
+@dirrm share/webmin/file/xinha/contrib
+@dirrm share/webmin/file/xinha
 @dirrm share/webmin/file/unicode
 @dirrm share/webmin/file/lang
 @dirrm share/webmin/file/images
-@dirrm share/webmin/file/htmlarea/popups
-@dirrm share/webmin/file/htmlarea/lang
-@dirrm share/webmin/file/htmlarea/images
-@dirrm share/webmin/file/htmlarea
 @dirrm share/webmin/file
 @dirrm share/examples/webmin/file
+@dirrm etc/webmin/file

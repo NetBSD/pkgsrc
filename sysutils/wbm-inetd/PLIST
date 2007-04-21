@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:40:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:01 obache Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/backup_config.pl
 share/webmin/inetd/config-aix
@@ -16,9 +16,9 @@ share/webmin/inetd/config-macos
 share/webmin/inetd/config-macos-1.5-*
 share/webmin/inetd/config-mandrake-linux
 share/webmin/inetd/config-msc-linux
-share/webmin/inetd/config-netbsd
+share/webmin/inetd/config-${LOWER_OPSYS}
 share/webmin/inetd/config-open-linux
-share/webmin/inetd/config-open-linux-3.1e
+share/webmin/inetd/config-open-linux-${OS_VERSION}e
 share/webmin/inetd/config-openbsd
 share/webmin/inetd/config-openserver
 share/webmin/inetd/config-osf1
@@ -47,7 +47,9 @@ share/webmin/inetd/config.info.sv
 share/webmin/inetd/config.info.tr
 share/webmin/inetd/config.info.uk_UA
 share/webmin/inetd/config.info.zh_CN
+share/webmin/inetd/config.info.zh_CN.UTF-8
 share/webmin/inetd/config.info.zh_TW.Big5
+share/webmin/inetd/config.info.zh_TW.UTF-8
 share/webmin/inetd/delete_rpc.cgi
 share/webmin/inetd/delete_serv.cgi
 share/webmin/inetd/edit_rpc.cgi
@@ -57,6 +59,7 @@ share/webmin/inetd/help/help.es.html
 share/webmin/inetd/help/help.html
 share/webmin/inetd/help/help.sv.html
 share/webmin/inetd/help/help.zh_TW.Big5.html
+share/webmin/inetd/help/help.zh_TW.UTF-8.html
 share/webmin/inetd/images/icon.gif
 share/webmin/inetd/images/smallicon.gif
 share/webmin/inetd/index.cgi
@@ -71,13 +74,17 @@ share/webmin/inetd/lang/es
 share/webmin/inetd/lang/fr
 share/webmin/inetd/lang/hu
 share/webmin/inetd/lang/it
+share/webmin/inetd/lang/ja_JP.UTF-8
 share/webmin/inetd/lang/ja_JP.euc
+share/webmin/inetd/lang/ko_KR.UTF-8
 share/webmin/inetd/lang/ko_KR.euc
 share/webmin/inetd/lang/pl
 share/webmin/inetd/lang/sv
 share/webmin/inetd/lang/tr
 share/webmin/inetd/lang/zh_CN
+share/webmin/inetd/lang/zh_CN.UTF-8
 share/webmin/inetd/lang/zh_TW.Big5
+share/webmin/inetd/lang/zh_TW.UTF-8
 share/webmin/inetd/log_parser.pl
 share/webmin/inetd/module.info
 share/webmin/inetd/restart_inetd.cgi
@@ -88,3 +95,4 @@ share/webmin/inetd/save_serv.cgi
 @dirrm share/webmin/inetd/help
 @dirrm share/webmin/inetd
 @dirrm share/examples/webmin/inetd
+@dirrm etc/webmin/inetd

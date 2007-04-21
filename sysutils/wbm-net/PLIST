@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 04:03:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:03 obache Exp $
 share/examples/webmin/net/config
 share/webmin/net/CHANGELOG
 share/webmin/net/acl_security.pl
@@ -22,6 +22,7 @@ share/webmin/net/config.info.de
 share/webmin/net/config.info.es
 share/webmin/net/config.info.fa
 share/webmin/net/config.info.fr
+share/webmin/net/config.info.ja_JP.UTF-8
 share/webmin/net/config.info.ja_JP.euc
 share/webmin/net/config.info.pl
 share/webmin/net/config.info.ru_RU
@@ -30,10 +31,17 @@ share/webmin/net/config.info.sv
 share/webmin/net/config.info.tr
 share/webmin/net/config.info.uk_UA
 share/webmin/net/config.info.zh_CN
+share/webmin/net/config.info.zh_CN.UTF-8
 share/webmin/net/config.info.zh_TW.Big5
+share/webmin/net/config.info.zh_TW.UTF-8
+share/webmin/net/create_route.cgi
 share/webmin/net/cygwin-lib.pl
 share/webmin/net/debian-linux-lib.pl
 share/webmin/net/defaultacl
+share/webmin/net/delete_aifcs.cgi
+share/webmin/net/delete_bifcs.cgi
+share/webmin/net/delete_hosts.cgi
+share/webmin/net/delete_routes.cgi
 share/webmin/net/edit_aifc.cgi
 share/webmin/net/edit_bifc.cgi
 share/webmin/net/edit_host.cgi
@@ -59,7 +67,9 @@ share/webmin/net/lang/es
 share/webmin/net/lang/fa
 share/webmin/net/lang/fr
 share/webmin/net/lang/it
+share/webmin/net/lang/ja_JP.UTF-8
 share/webmin/net/lang/ja_JP.euc
+share/webmin/net/lang/ko_KR.UTF-8
 share/webmin/net/lang/ko_KR.euc
 share/webmin/net/lang/nl
 share/webmin/net/lang/pl
@@ -70,7 +80,9 @@ share/webmin/net/lang/sv
 share/webmin/net/lang/tr
 share/webmin/net/lang/uk_UA
 share/webmin/net/lang/zh_CN
+share/webmin/net/lang/zh_CN.UTF-8
 share/webmin/net/lang/zh_TW.Big5
+share/webmin/net/lang/zh_TW.UTF-8
 share/webmin/net/linux-lib.pl
 share/webmin/net/list_dns.cgi
 share/webmin/net/list_hosts.cgi
@@ -109,6 +121,7 @@ share/webmin/net/suse-linux-9.0-lib.pl
 share/webmin/net/suse-linux-9.1-lib.pl
 share/webmin/net/suse-linux-9.2-lib.pl
 share/webmin/net/suse-linux-9.3-lib.pl
+share/webmin/net/suse-linux-10.1-lib.pl
 share/webmin/net/suse-linux-lib.pl
 share/webmin/net/trustix-linux-lib.pl
 share/webmin/net/turbo-linux-lib.pl

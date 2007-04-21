@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 15:42:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
 share/examples/webmin/sendmail/config
 share/webmin/sendmail/CHANGELOG
 share/webmin/sendmail/access-lib.pl
@@ -64,7 +64,9 @@ share/webmin/sendmail/config.info.sv
 share/webmin/sendmail/config.info.tr
 share/webmin/sendmail/config.info.uk_UA
 share/webmin/sendmail/config.info.zh_CN
+share/webmin/sendmail/config.info.zh_CN.UTF-8
 share/webmin/sendmail/config.info.zh_TW.Big5
+share/webmin/sendmail/config.info.zh_TW.UTF-8
 share/webmin/sendmail/create_file.cgi
 share/webmin/sendmail/defaultacl
 share/webmin/sendmail/defines
@@ -94,6 +96,8 @@ share/webmin/sendmail/feedback_files.pl
 share/webmin/sendmail/filter.pl
 share/webmin/sendmail/flushq.cgi
 share/webmin/sendmail/generics-lib.pl
+share/webmin/sendmail/help/alias_cmt.ca.html
+share/webmin/sendmail/help/alias_cmt.html
 share/webmin/sendmail/help/alias_enabled.ca.html
 share/webmin/sendmail/help/alias_enabled.es.html
 share/webmin/sendmail/help/alias_enabled.fr.html
@@ -103,6 +107,7 @@ share/webmin/sendmail/help/alias_enabled.ru_RU.html
 share/webmin/sendmail/help/alias_enabled.ru_SU.html
 share/webmin/sendmail/help/alias_enabled.sv.html
 share/webmin/sendmail/help/alias_enabled.zh_TW.Big5.html
+share/webmin/sendmail/help/alias_enabled.zh_TW.UTF-8.html
 share/webmin/sendmail/help/alias_name.ca.html
 share/webmin/sendmail/help/alias_name.es.html
 share/webmin/sendmail/help/alias_name.fr.html
@@ -112,6 +117,7 @@ share/webmin/sendmail/help/alias_name.ru_RU.html
 share/webmin/sendmail/help/alias_name.ru_SU.html
 share/webmin/sendmail/help/alias_name.sv.html
 share/webmin/sendmail/help/alias_name.zh_TW.Big5.html
+share/webmin/sendmail/help/alias_name.zh_TW.UTF-8.html
 share/webmin/sendmail/help/alias_to.ca.html
 share/webmin/sendmail/help/alias_to.es.html
 share/webmin/sendmail/help/alias_to.fr.html
@@ -121,6 +127,7 @@ share/webmin/sendmail/help/alias_to.ru_RU.html
 share/webmin/sendmail/help/alias_to.ru_SU.html
 share/webmin/sendmail/help/alias_to.sv.html
 share/webmin/sendmail/help/alias_to.zh_TW.Big5.html
+share/webmin/sendmail/help/alias_to.zh_TW.UTF-8.html
 share/webmin/sendmail/help/aliases.ca.html
 share/webmin/sendmail/help/aliases.es.html
 share/webmin/sendmail/help/aliases.fr.html
@@ -130,6 +137,7 @@ share/webmin/sendmail/help/aliases.ru_RU.html
 share/webmin/sendmail/help/aliases.ru_SU.html
 share/webmin/sendmail/help/aliases.sv.html
 share/webmin/sendmail/help/aliases.zh_TW.Big5.html
+share/webmin/sendmail/help/aliases.zh_TW.UTF-8.html
 share/webmin/sendmail/help/edit_alias.ca.html
 share/webmin/sendmail/help/edit_alias.es.html
 share/webmin/sendmail/help/edit_alias.fr.html
@@ -139,6 +147,7 @@ share/webmin/sendmail/help/edit_alias.ru_RU.html
 share/webmin/sendmail/help/edit_alias.ru_SU.html
 share/webmin/sendmail/help/edit_alias.sv.html
 share/webmin/sendmail/help/edit_alias.zh_TW.Big5.html
+share/webmin/sendmail/help/edit_alias.zh_TW.UTF-8.html
 share/webmin/sendmail/help/intro.ca.html
 share/webmin/sendmail/help/intro.es.html
 share/webmin/sendmail/help/intro.fr.html
@@ -148,6 +157,9 @@ share/webmin/sendmail/help/intro.ru_RU.html
 share/webmin/sendmail/help/intro.ru_SU.html
 share/webmin/sendmail/help/intro.sv.html
 share/webmin/sendmail/help/intro.zh_TW.Big5.html
+share/webmin/sendmail/help/intro.zh_TW.UTF-8.html
+share/webmin/sendmail/help/opt_BadRcptThrottle.ca.html
+share/webmin/sendmail/help/opt_BadRcptThrottle.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.ca.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.es.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.fr.html
@@ -157,6 +169,7 @@ share/webmin/sendmail/help/opt_ConnectionRateThrottle.ru_RU.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.ru_SU.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.sv.html
 share/webmin/sendmail/help/opt_ConnectionRateThrottle.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_ConnectionRateThrottle.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_DH.ca.html
 share/webmin/sendmail/help/opt_DH.es.html
 share/webmin/sendmail/help/opt_DH.fr.html
@@ -166,6 +179,7 @@ share/webmin/sendmail/help/opt_DH.ru_RU.html
 share/webmin/sendmail/help/opt_DH.ru_SU.html
 share/webmin/sendmail/help/opt_DH.sv.html
 share/webmin/sendmail/help/opt_DH.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_DH.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_DR.ca.html
 share/webmin/sendmail/help/opt_DR.es.html
 share/webmin/sendmail/help/opt_DR.fr.html
@@ -175,6 +189,7 @@ share/webmin/sendmail/help/opt_DR.ru_RU.html
 share/webmin/sendmail/help/opt_DR.ru_SU.html
 share/webmin/sendmail/help/opt_DR.sv.html
 share/webmin/sendmail/help/opt_DR.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_DR.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_DS.ca.html
 share/webmin/sendmail/help/opt_DS.es.html
 share/webmin/sendmail/help/opt_DS.fr.html
@@ -184,6 +199,7 @@ share/webmin/sendmail/help/opt_DS.ru_RU.html
 share/webmin/sendmail/help/opt_DS.ru_SU.html
 share/webmin/sendmail/help/opt_DS.sv.html
 share/webmin/sendmail/help/opt_DS.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_DS.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_DaemonPortOptions.ca.html
 share/webmin/sendmail/help/opt_DaemonPortOptions.es.html
 share/webmin/sendmail/help/opt_DaemonPortOptions.html
@@ -198,6 +214,7 @@ share/webmin/sendmail/help/opt_ForwardPath.ru_RU.html
 share/webmin/sendmail/help/opt_ForwardPath.ru_SU.html
 share/webmin/sendmail/help/opt_ForwardPath.sv.html
 share/webmin/sendmail/help/opt_ForwardPath.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_ForwardPath.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_LogLevel.ca.html
 share/webmin/sendmail/help/opt_LogLevel.es.html
 share/webmin/sendmail/help/opt_LogLevel.fr.html
@@ -207,6 +224,7 @@ share/webmin/sendmail/help/opt_LogLevel.ru_RU.html
 share/webmin/sendmail/help/opt_LogLevel.ru_SU.html
 share/webmin/sendmail/help/opt_LogLevel.sv.html
 share/webmin/sendmail/help/opt_LogLevel.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_LogLevel.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_MatchGECOS.ca.html
 share/webmin/sendmail/help/opt_MatchGECOS.es.html
 share/webmin/sendmail/help/opt_MatchGECOS.html
@@ -220,6 +238,7 @@ share/webmin/sendmail/help/opt_MaxDaemonChildren.ru_RU.html
 share/webmin/sendmail/help/opt_MaxDaemonChildren.ru_SU.html
 share/webmin/sendmail/help/opt_MaxDaemonChildren.sv.html
 share/webmin/sendmail/help/opt_MaxDaemonChildren.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_MaxDaemonChildren.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_MaxHopCount.ca.html
 share/webmin/sendmail/help/opt_MaxHopCount.es.html
 share/webmin/sendmail/help/opt_MaxHopCount.html
@@ -233,6 +252,7 @@ share/webmin/sendmail/help/opt_MaxMessageSize.ru_RU.html
 share/webmin/sendmail/help/opt_MaxMessageSize.ru_SU.html
 share/webmin/sendmail/help/opt_MaxMessageSize.sv.html
 share/webmin/sendmail/help/opt_MaxMessageSize.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_MaxMessageSize.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.ca.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.es.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.fr.html
@@ -242,6 +262,7 @@ share/webmin/sendmail/help/opt_MaxQueueRunSize.ru_RU.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.ru_SU.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.sv.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_MaxQueueRunSize.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.ca.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.es.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.fr.html
@@ -251,6 +272,7 @@ share/webmin/sendmail/help/opt_MinFreeBlocks.ru_RU.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.ru_SU.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.sv.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_MinFreeBlocks.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_MinQueueAge.ca.html
 share/webmin/sendmail/help/opt_MinQueueAge.es.html
 share/webmin/sendmail/help/opt_MinQueueAge.fr.html
@@ -260,6 +282,7 @@ share/webmin/sendmail/help/opt_MinQueueAge.ru_RU.html
 share/webmin/sendmail/help/opt_MinQueueAge.ru_SU.html
 share/webmin/sendmail/help/opt_MinQueueAge.sv.html
 share/webmin/sendmail/help/opt_MinQueueAge.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_MinQueueAge.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_PostMasterCopy.ca.html
 share/webmin/sendmail/help/opt_PostMasterCopy.es.html
 share/webmin/sendmail/help/opt_PostMasterCopy.fr.html
@@ -269,6 +292,7 @@ share/webmin/sendmail/help/opt_PostMasterCopy.ru_RU.html
 share/webmin/sendmail/help/opt_PostMasterCopy.ru_SU.html
 share/webmin/sendmail/help/opt_PostMasterCopy.sv.html
 share/webmin/sendmail/help/opt_PostMasterCopy.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_PostMasterCopy.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_QueueDirectory.ca.html
 share/webmin/sendmail/help/opt_QueueDirectory.es.html
 share/webmin/sendmail/help/opt_QueueDirectory.fr.html
@@ -278,6 +302,7 @@ share/webmin/sendmail/help/opt_QueueDirectory.ru_RU.html
 share/webmin/sendmail/help/opt_QueueDirectory.ru_SU.html
 share/webmin/sendmail/help/opt_QueueDirectory.sv.html
 share/webmin/sendmail/help/opt_QueueDirectory.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_QueueDirectory.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_QueueLA.ca.html
 share/webmin/sendmail/help/opt_QueueLA.es.html
 share/webmin/sendmail/help/opt_QueueLA.fr.html
@@ -287,6 +312,7 @@ share/webmin/sendmail/help/opt_QueueLA.ru_RU.html
 share/webmin/sendmail/help/opt_QueueLA.ru_SU.html
 share/webmin/sendmail/help/opt_QueueLA.sv.html
 share/webmin/sendmail/help/opt_QueueLA.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_QueueLA.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_RefuseLA.ca.html
 share/webmin/sendmail/help/opt_RefuseLA.es.html
 share/webmin/sendmail/help/opt_RefuseLA.fr.html
@@ -296,6 +322,7 @@ share/webmin/sendmail/help/opt_RefuseLA.ru_RU.html
 share/webmin/sendmail/help/opt_RefuseLA.ru_SU.html
 share/webmin/sendmail/help/opt_RefuseLA.sv.html
 share/webmin/sendmail/help/opt_RefuseLA.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_RefuseLA.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_SendMimeErrors.ca.html
 share/webmin/sendmail/help/opt_SendMimeErrors.es.html
 share/webmin/sendmail/help/opt_SendMimeErrors.fr.html
@@ -305,6 +332,7 @@ share/webmin/sendmail/help/opt_SendMimeErrors.ru_RU.html
 share/webmin/sendmail/help/opt_SendMimeErrors.ru_SU.html
 share/webmin/sendmail/help/opt_SendMimeErrors.sv.html
 share/webmin/sendmail/help/opt_SendMimeErrors.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_SendMimeErrors.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.ca.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.es.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.fr.html
@@ -314,6 +342,7 @@ share/webmin/sendmail/help/opt_Timeout.queuereturn.ru_RU.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.ru_SU.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.sv.html
 share/webmin/sendmail/help/opt_Timeout.queuereturn.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_Timeout.queuereturn.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.ca.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.es.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.fr.html
@@ -323,6 +352,7 @@ share/webmin/sendmail/help/opt_Timeout.queuewarn.ru_RU.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.ru_SU.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.sv.html
 share/webmin/sendmail/help/opt_Timeout.queuewarn.zh_TW.Big5.html
+share/webmin/sendmail/help/opt_Timeout.queuewarn.zh_TW.UTF-8.html
 share/webmin/sendmail/help/opt_dmode.ca.html
 share/webmin/sendmail/help/opt_dmode.es.html
 share/webmin/sendmail/help/opt_dmode.html
@@ -338,6 +368,7 @@ share/webmin/sendmail/help/units.ru_RU.html
 share/webmin/sendmail/help/units.ru_SU.html
 share/webmin/sendmail/help/units.sv.html
 share/webmin/sendmail/help/units.zh_TW.Big5.html
+share/webmin/sendmail/help/units.zh_TW.UTF-8.html
 share/webmin/sendmail/images/access.gif
 share/webmin/sendmail/images/aliases.gif
 share/webmin/sendmail/images/attach.gif
@@ -370,8 +401,10 @@ share/webmin/sendmail/lang/de
 share/webmin/sendmail/lang/en
 share/webmin/sendmail/lang/es
 share/webmin/sendmail/lang/fr
+share/webmin/sendmail/lang/ja_JP.UTF-8
 share/webmin/sendmail/lang/ja_JP.euc
 share/webmin/sendmail/lang/ja_JP.jis
+share/webmin/sendmail/lang/ko_KR.UTF-8
 share/webmin/sendmail/lang/ko_KR.euc
 share/webmin/sendmail/lang/nl
 share/webmin/sendmail/lang/pl
@@ -382,7 +415,9 @@ share/webmin/sendmail/lang/sv
 share/webmin/sendmail/lang/tr
 share/webmin/sendmail/lang/uk_UA
 share/webmin/sendmail/lang/zh_CN
+share/webmin/sendmail/lang/zh_CN.UTF-8
 share/webmin/sendmail/lang/zh_TW.Big5
+share/webmin/sendmail/lang/zh_TW.UTF-8
 share/webmin/sendmail/list_access.cgi
 share/webmin/sendmail/list_aliases.cgi
 share/webmin/sendmail/list_cgs.cgi
@@ -434,3 +469,4 @@ share/webmin/sendmail/virtusers-lib.pl
 @dirrm share/webmin/sendmail/help
 @dirrm share/webmin/sendmail
 @dirrm share/examples/webmin/sendmail
+@dirrm etc/webmin/sendmail

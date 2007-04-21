@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:39:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:58 obache Exp $
 share/examples/webmin/at/config
 share/webmin/at/CHANGELOG
 share/webmin/at/acl_security.pl
@@ -41,12 +41,15 @@ share/webmin/at/config.info.pt_BR
 share/webmin/at/config.info.ru_RU
 share/webmin/at/config.info.ru_SU
 share/webmin/at/config.info.sk
+share/webmin/at/config.info.sv
 share/webmin/at/config.info.tr
 share/webmin/at/config.info.uk_UA
 share/webmin/at/config.info.zh_TW.Big5
+share/webmin/at/config.info.zh_TW.UTF-8
 share/webmin/at/create_job.cgi
 share/webmin/at/defaultacl
 share/webmin/at/delete_job.cgi
+share/webmin/at/delete_jobs.cgi
 share/webmin/at/edit_job.cgi
 share/webmin/at/freebsd-lib.pl
 share/webmin/at/images/icon.gif
@@ -69,10 +72,13 @@ share/webmin/at/lang/pt_BR
 share/webmin/at/lang/ru_RU
 share/webmin/at/lang/ru_SU
 share/webmin/at/lang/sk
+share/webmin/at/lang/sv
 share/webmin/at/lang/tr
 share/webmin/at/lang/uk_UA
 share/webmin/at/lang/zh_CN
+share/webmin/at/lang/zh_CN.UTF-8
 share/webmin/at/lang/zh_TW.Big5
+share/webmin/at/lang/zh_TW.UTF-8
 share/webmin/at/linux-lib.pl
 share/webmin/at/macos-lib.pl
 share/webmin/at/module.info

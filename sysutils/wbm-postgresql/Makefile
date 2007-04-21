@@ -1,16 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/02/19 21:52:43 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/21 05:23:04 obache Exp $
 
-DISTNAME=	postgresql
-PKGNAME=	wbm-${DISTNAME}-${WBM_VERSION}
-DIST_SUBDIR=	webmin-modules-${WBM_VERSION}
+WBM_NAME=	postgresql
 
-# The version is from the module.info file from the extracted distfile.
-WBM_VERSION=	1.270
-
-HOMEPAGE=	http://www.webmin.com/standard.html
 COMMENT=	Webmin module for managing PostgreSQL databases
-
-BROKEN=		"Distfile broken"
 
 .include "../../sysutils/webmin/wbm.mk"
 .include "../../mk/bsd.pkg.mk"

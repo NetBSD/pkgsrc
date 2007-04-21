@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:42:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
 share/examples/webmin/qmailadmin/config
 share/webmin/qmailadmin/CHANGELOG
 share/webmin/qmailadmin/autoreply.pl
@@ -56,6 +56,7 @@ share/webmin/qmailadmin/lang/ru_RU
 share/webmin/qmailadmin/lang/ru_SU
 share/webmin/qmailadmin/lang/uk_UA
 share/webmin/qmailadmin/lang/zh_CN
+share/webmin/qmailadmin/lang/zh_CN.UTF-8
 share/webmin/qmailadmin/list_aliases.cgi
 share/webmin/qmailadmin/list_assigns.cgi
 share/webmin/qmailadmin/list_bads.cgi
