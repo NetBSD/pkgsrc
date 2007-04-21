@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/12/28 11:51:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/04/21 20:40:52 rillig Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -200,7 +200,7 @@ java/sun-1.4/lib/zi/Africa/Abidjan
 java/sun-1.4/lib/zi/Africa/Accra
 java/sun-1.4/lib/zi/Africa/Addis_Ababa
 java/sun-1.4/lib/zi/Africa/Algiers
-java/sun-1.4/lib/zi/Africa/Asmera
+java/sun-1.4/lib/zi/Africa/Asmara
 java/sun-1.4/lib/zi/Africa/Bamako
 java/sun-1.4/lib/zi/Africa/Bangui
 java/sun-1.4/lib/zi/Africa/Banjul
@@ -264,10 +264,12 @@ java/sun-1.4/lib/zi/America/Argentina/Tucuman
 java/sun-1.4/lib/zi/America/Argentina/Ushuaia
 java/sun-1.4/lib/zi/America/Aruba
 java/sun-1.4/lib/zi/America/Asuncion
+java/sun-1.4/lib/zi/America/Atikokan
 java/sun-1.4/lib/zi/America/Bahia
 java/sun-1.4/lib/zi/America/Barbados
 java/sun-1.4/lib/zi/America/Belem
 java/sun-1.4/lib/zi/America/Belize
+java/sun-1.4/lib/zi/America/Blanc-Sablon
 java/sun-1.4/lib/zi/America/Boa_Vista
 java/sun-1.4/lib/zi/America/Bogota
 java/sun-1.4/lib/zi/America/Boise
@@ -279,7 +281,6 @@ java/sun-1.4/lib/zi/America/Cayenne
 java/sun-1.4/lib/zi/America/Cayman
 java/sun-1.4/lib/zi/America/Chicago
 java/sun-1.4/lib/zi/America/Chihuahua
-java/sun-1.4/lib/zi/America/Coral_Harbour
 java/sun-1.4/lib/zi/America/Costa_Rica
 java/sun-1.4/lib/zi/America/Cuiaba
 java/sun-1.4/lib/zi/America/Curacao
@@ -466,7 +467,7 @@ java/sun-1.4/lib/zi/Atlantic/Azores
 java/sun-1.4/lib/zi/Atlantic/Bermuda
 java/sun-1.4/lib/zi/Atlantic/Canary
 java/sun-1.4/lib/zi/Atlantic/Cape_Verde
-java/sun-1.4/lib/zi/Atlantic/Faeroe
+java/sun-1.4/lib/zi/Atlantic/Faroe
 java/sun-1.4/lib/zi/Atlantic/Madeira
 java/sun-1.4/lib/zi/Atlantic/Reykjavik
 java/sun-1.4/lib/zi/Atlantic/South_Georgia
@@ -477,6 +478,7 @@ java/sun-1.4/lib/zi/Australia/Brisbane
 java/sun-1.4/lib/zi/Australia/Broken_Hill
 java/sun-1.4/lib/zi/Australia/Currie
 java/sun-1.4/lib/zi/Australia/Darwin
+java/sun-1.4/lib/zi/Australia/Eucla
 java/sun-1.4/lib/zi/Australia/Hobart
 java/sun-1.4/lib/zi/Australia/Lindeman
 java/sun-1.4/lib/zi/Australia/Lord_Howe
@@ -556,6 +558,7 @@ java/sun-1.4/lib/zi/Europe/Uzhgorod
 java/sun-1.4/lib/zi/Europe/Vaduz
 java/sun-1.4/lib/zi/Europe/Vienna
 java/sun-1.4/lib/zi/Europe/Vilnius
+java/sun-1.4/lib/zi/Europe/Volgograd
 java/sun-1.4/lib/zi/Europe/Warsaw
 java/sun-1.4/lib/zi/Europe/Zaporozhye
 java/sun-1.4/lib/zi/Europe/Zurich
