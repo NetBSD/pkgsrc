@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.5 2005/10/03 14:16:53 tonio Exp $
+$NetBSD: patch-ag,v 1.6 2007/04/21 18:27:21 tonio Exp $
 
---- doc/Makefile.in.orig	2005-09-15 14:19:54.000000000 +0000
+--- doc/Makefile.in.orig	2007-04-06 09:17:10.000000000 +0200
 +++ doc/Makefile.in
-@@ -79,8 +79,8 @@ install: all instdoc
+@@ -395,7 +395,7 @@ uninstall-am: uninstall-info-am uninstal
+ all:
+ 	$(MAKE) makedoc-all
+ 
+-makedoc-all: mutt.1 muttrc.man manual.html stamp-doc-chunked manual.txt
++makedoc-all: mutt.1 muttrc.man
+ 
+ install-data-local: makedoc-all instdoc
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
+@@ -406,8 +406,8 @@ install-data-local: makedoc-all instdoc
  	./instdoc $(srcdir)/dotlock.man \
  		$(DESTDIR)$(mandir)/man1/mutt_dotlock.1
  	./instdoc muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5

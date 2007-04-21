@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2007/03/04 17:22:45 tonio Exp $
+# $NetBSD: Makefile,v 1.58 2007/04/21 18:27:21 tonio Exp $
 
-DISTNAME=		mutt-1.5.14
-PKGREVISION=		1
+DISTNAME=		mutt-1.5.15
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -62,12 +61,5 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-
-# Fix some absolute paths in installed files.
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fix absolute path
-SUBST_STAGE.paths=	post-build
-SUBST_FILES.paths=	contrib/gpg.rc
-SUBST_SED.paths=	-e 's,/usr/bin/gpg,gpg,g'
 
 .include "../../mk/bsd.pkg.mk"

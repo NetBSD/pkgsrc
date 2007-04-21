@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.10 2007/04/21 18:27:21 tonio Exp $
+
+http://dev.mutt.org/hg/mutt/rev/9f6afccedd2f
+
+--- imap/imap.c.orig	2007-04-06 21:52:53.000000000 +0200
++++ imap/imap.c
+@@ -757,9 +757,6 @@ int imap_open_mailbox (CONTEXT* ctx)
+   return 0;
+ 
+  fail:
+-#ifdef USE_HCACHE
+-  mutt_hcache_close (idata->hcache);
+-#endif
+   if (idata->state == IMAP_SELECTED)
+     idata->state = IMAP_AUTHENTICATED;
+  fail_noidata:
+@@ -1324,6 +1321,7 @@ int imap_close_mailbox (CONTEXT* ctx)
+ 
+ #ifdef USE_HCACHE
+   mutt_hcache_close (idata->hcache);
++  idata->hcache = NULL;
+ #endif
+   mutt_bcache_close (&idata->bcache);
+ 
