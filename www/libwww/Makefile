@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/04/21 06:03:44 obache Exp $
+# $NetBSD: Makefile,v 1.74 2007/04/21 11:17:47 obache Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/
 EXTRACT_SUFX=		.tgz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} libwww-configure-5.4.0nb1.gz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} libwww-configure-5.4.0nb2.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.w3.org/Library/
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-SITES.libwww-configure-5.4.0nb1.gz=	${MASTER_SITE_LOCAL}
+SITES.libwww-configure-5.4.0nb2.gz=	${MASTER_SITE_LOCAL}
 
 USE_TOOLS+=		automake14 gmake gzcat perl
 USE_LIBTOOL=		YES
@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 .include "options.mk"
 
 post-extract:
-	gzcat ${DISTDIR}/libwww-configure-5.4.0nb1.gz > ${WRKSRC}/configure
+	gzcat ${DISTDIR}/libwww-configure-5.4.0nb2.gz > ${WRKSRC}/configure
 
 pre-configure:
 	chmod a+x ${WRKSRC}/configure
