@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/21 10:38:06 wiz Exp $
+bin/togit
+bin/tohg
+share/ruby-fromcvs/commitset/commitset
+share/ruby-fromcvs/commitset/commitset.cgi
+share/ruby-fromcvs/commitset/commitset.rb
+share/ruby-fromcvs/fromcvs.rb
+share/ruby-fromcvs/tagexpander.rb
+share/ruby-fromcvs/todb.rb
+share/ruby-fromcvs/togit.rb
+share/ruby-fromcvs/tohg.py
+share/ruby-fromcvs/tohg.rb
+share/doc/ruby-fromcvs/README
+@dirrm share/ruby-fromcvs/commitset
+@dirrm share/ruby-fromcvs
+@dirrm share/doc/ruby-fromcvs
