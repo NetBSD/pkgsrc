@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6281 2007/04/21 15:20:29 obache Exp $
+$NetBSD: TODO,v 1.6282 2007/04/21 15:34:58 heinz Exp $
 
 Suggested new packages
 ======================
@@ -871,8 +871,6 @@ Suggested package updates
 	o p5-Device-SerialPort-1.2.0
 	o p5-Digest-SHA-5.44
 	o p5-Email-Abstract-2.132
-	o p5-Email-Simple-1.999
-	o p5-Email-Valid-0.179
 	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
 	o p5-File-NCopy-0.35
