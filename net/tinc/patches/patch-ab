@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/03/23 16:28:01 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/04/21 15:19:01 obache Exp $
 
---- configure.orig	2006-03-23 15:55:08.000000000 +0000
+--- configure.orig	2007-01-05 12:51:40.000000000 +0000
 +++ configure
-@@ -6198,7 +6198,7 @@ _ACEOF
+@@ -6399,7 +6399,7 @@ _ACEOF
  
       rm -f src/device.c; ln -sf linux/device.c src/device.c
    ;;
