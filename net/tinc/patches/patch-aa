@@ -1,38 +1,29 @@
-$NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
+$NetBSD: patch-aa,v 1.3 2007/04/21 15:19:01 obache Exp $
 
---- src/protocol_auth.c	Fri May 27 14:28:54 2005
-+++ src/protocol_auth.c	Fri May 27 14:28:30 2005
-@@ -118,7 +118,7 @@
+--- src/protocol_auth.c.orig	2006-04-26 13:53:05.000000000 +0000
++++ src/protocol_auth.c
+@@ -128,10 +128,10 @@ bool send_metakey(connection_t *c)
  
- bool send_metakey(connection_t *c)
- {
--	char buffer[MAX_STRING_SIZE];
-+	char *buffer;
- 	int len;
- 	bool x;
- 
-@@ -129,10 +129,11 @@
  	/* Allocate buffers for the meta key */
  
+-	buffer = alloca(2 * len + 1);
++	buffer = xmalloc_and_zero(2 * len + 1);
+ 	
  	if(!c->outkey)
 -		c->outkey = xmalloc(len);
 +		c->outkey = xmalloc_and_zero(len);
  
  	if(!c->outctx)
  		c->outctx = xmalloc_and_zero(sizeof(*c->outctx));
-+	buffer = xmalloc_and_zero(2 * len + 1);
- 	cp();
- 	/* Copy random data to the buffer */
- 
-@@ -167,6 +168,7 @@
- 	if(RSA_public_encrypt(len, c->outkey, buffer, c->rsa_key, RSA_NO_PADDING) != len) {
+@@ -169,6 +169,7 @@ bool send_metakey(connection_t *c)
+ 	if(RSA_public_encrypt(len, (unsigned char *)c->outkey, (unsigned char *)buffer, c->rsa_key, RSA_NO_PADDING) != len) {
  		logger(LOG_ERR, _("Error during encryption of meta key for %s (%s)"),
  			   c->name, c->hostname);
 +		free(buffer);
  		return false;
  	}
  
-@@ -191,35 +193,45 @@
+@@ -193,35 +194,45 @@ bool send_metakey(connection_t *c)
  					c->outcipher->iv_len)) {
  			logger(LOG_ERR, _("Error during initialisation of cipher for %s (%s): %s"),
  					c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
@@ -81,15 +72,15 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  		return false;
  	}
  
-@@ -240,6 +252,7 @@
- 	if(RSA_private_decrypt(len, buffer, c->inkey, myself->connection->rsa_key, RSA_NO_PADDING) != len) {	/* See challenge() */
+@@ -242,6 +253,7 @@ bool metakey_h(connection_t *c)
+ 	if(RSA_private_decrypt(len, (unsigned char *)buffer, (unsigned char *)c->inkey, myself->connection->rsa_key, RSA_NO_PADDING) != len) {	/* See challenge() */
  		logger(LOG_ERR, _("Error during encryption of meta key for %s (%s)"),
  			   c->name, c->hostname);
 +		free(buffer);
  		return false;
  	}
  
-@@ -258,6 +271,7 @@
+@@ -260,6 +272,7 @@ bool metakey_h(connection_t *c)
  		
  		if(!c->incipher) {
  			logger(LOG_ERR, _("%s (%s) uses unknown cipher!"), c->name, c->hostname);
@@ -97,7 +88,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  			return false;
  		}
  
-@@ -267,6 +281,7 @@
+@@ -269,6 +282,7 @@ bool metakey_h(connection_t *c)
  					c->incipher->iv_len)) {
  			logger(LOG_ERR, _("Error during initialisation of cipher from %s (%s): %s"),
  					c->name, c->hostname, ERR_error_string(ERR_get_error(), NULL));
@@ -105,7 +96,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  			return false;
  		}
  
-@@ -282,11 +297,13 @@
+@@ -284,11 +298,13 @@ bool metakey_h(connection_t *c)
  
  		if(!c->indigest) {
  			logger(LOG_ERR, _("Node %s (%s) uses unknown digest!"), c->name, c->hostname);
@@ -119,7 +110,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  			return false;
  		}
  	} else {
-@@ -297,19 +314,22 @@
+@@ -299,6 +315,7 @@ bool metakey_h(connection_t *c)
  
  	c->allow_request = CHALLENGE;
  
@@ -127,23 +118,24 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  	return send_challenge(c);
  }
  
- bool send_challenge(connection_t *c)
+@@ -306,6 +323,7 @@ bool send_challenge(connection_t *c)
  {
--	char buffer[MAX_STRING_SIZE];
-+	char *buffer;
+ 	char *buffer;
  	int len;
 +	bool ret;
  
  	cp();
  
- 	/* CHECKME: what is most reasonable value for len? */
- 
- 	len = RSA_size(c->rsa_key);
-+	buffer = xmalloc_and_zero(2 * len + 1);
+@@ -315,7 +333,7 @@ bool send_challenge(connection_t *c)
  
  	/* Allocate buffers for the challenge */
  
-@@ -327,29 +347,37 @@
+-	buffer = alloca(2 * len + 1);
++	buffer = xmalloc_and_zero(2 * len + 1);
+ 
+ 	if(!c->hischallenge)
+ 		c->hischallenge = xmalloc(len);
+@@ -331,29 +349,37 @@ bool send_challenge(connection_t *c)
  
  	/* Send the challenge */
  
@@ -187,7 +179,7 @@ $NetBSD: patch-aa,v 1.2 2005/06/17 15:32:44 hira Exp $
  		return false;
  	}
  
-@@ -366,6 +394,7 @@
+@@ -370,6 +396,7 @@ bool challenge_h(connection_t *c)
  
  	/* Rest is done by send_chal_reply() */
  
