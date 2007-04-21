@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/04/21 11:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/21 11:51:19 wiz Exp $
 
-DISTNAME=	fromcvs-0.0.0_20070314
-PKGNAME=	${DISTNAME:S/_/./}
+DISTNAME=	7a1ad0af8464
+# Last part of PKGNAME is changeset number
+PKGNAME=	fromcvs-0.0.0.99
 CATEGORIES=	devel scm
-MASTER_SITES=	#
+MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/archive/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
@@ -11,12 +12,13 @@ HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/
 COMMENT=	CVS repository conversion tool
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rbtree>=0.2.0:../../devel/ruby-rbtree
-DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.20070210:../../devel/ruby-rcsparse
+DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.37:../../devel/ruby-rcsparse
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
 
 LICENSE=        corecode-license
 
-WRKSRC=		${WRKDIR}/fromcvs-e8d986fb9ba7
+WRKSRC=		${WRKDIR}/fromcvs-${DISTNAME}
+DIST_SUBDIR=	fromcvs
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
