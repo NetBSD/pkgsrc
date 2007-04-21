@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.21 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.22 2007/04/21 02:59:53 kano Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -179,6 +179,10 @@ minutes!</para>
       <row>
         <entry><ulink url="http://www.tru64.org/">OSF/1</ulink></entry>
         <entry align="center">Nov 2004</entry>
+      </row>
+      <row>
+        <entry><ulink url="http://www.hp.com/products1/unix/">HP-UX</ulink></entry>
+        <entry align="center">Apr 2007</entry>
       </row>
     </tbody>
   </tgroup>
