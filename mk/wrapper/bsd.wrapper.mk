@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.67 2007/04/14 14:17:49 tnn Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.68 2007/04/21 14:53:19 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -493,7 +493,7 @@ generate-wrappers: ${_target_}
 	cmd-sink-osf1-cc \
 	cmd-sink-osf1-ld \
 	cmd-sink-hpux-cc \
-	cmd-sink hpux-ld \
+	cmd-sink-hpux-ld \
 	cmd-sink-solaris-imake \
 	cmd-sink-sunpro-cxx \
 	cmd-sink-unixware-gcc \
