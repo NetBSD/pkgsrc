@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.16 2007/04/12 20:31:04 joerg Exp $
+# $NetBSD: mkbinarykit,v 1.17 2007/04/21 01:27:44 tnn Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -13,7 +13,7 @@ usage="Usage: $0 "'
 	[ --no-build ] [ --workdir=<work dir> ] [ bootstrap script arguments ]
 	[ --fetch-cmd=<ftp command> ]'
 
-opsys=`uname -s`
+opsys=`uname -s | tr -d /-`
 osrev=`uname -r`
 ospro=`uname -p`
 date=`date +%Y%m%d`
@@ -55,6 +55,9 @@ Interix)
 	# Don't use the interopsystems.com package dir
 	pkgdbdir=$prefix/pkgdb
 	ospro=i386
+	;;
+HPUX)
+	ospro=`uname -m | sed 's/^9000.*$/hppa/'`
 	;;
 NetBSD)
 	;;
