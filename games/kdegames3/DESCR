@@ -1,15 +1,15 @@
 This is a compilation of various games that are part of the standard KDE
 distribution:
 
-* kabalone: board game: move 6 pieces from your opponent over the edge
 * kasteroids: shoot at those nasty asteroids
 * katomic: build complex atoms with a minimal amount of moves
 * kbackgammon: play backgammon against a local human player, via a
                game server or against GNU Backgammon (not included)
 * kbattleship: battleship game with built-in game server
 * kblackbox: find atoms in a grid by shooting electrons
-* kfouleggs: a famous japanese game known as puyo-puyo
 * kbounce: claim areas and don't get disturbed
+* kenolaba: board game: move 6 pieces from your opponent over the edge
+* kfouleggs: a famous japanese game known as puyo-puyo
 * kjumpingcube: a tactical game for number-crunchers
 * klines: place 5 equal pieces together, but wait, there are 3 new ones
 * mahjongg: a tile laying patience
