@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/21 10:38:06 wiz Exp $
+
+SHA1 (fromcvs-0.0.0_20070314.tar.bz2) = 05f5b289b15e4d10fc1f48e843ab0b8d0c400205
+RMD160 (fromcvs-0.0.0_20070314.tar.bz2) = 19e79dfd7b34eae69f6f105bd5007c57b9050223
+Size (fromcvs-0.0.0_20070314.tar.bz2) = 16698 bytes
