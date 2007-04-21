@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.891 2007/04/21 15:36:32 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.892 2007/04/21 18:28:40 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1755,3 +1755,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/p5-Email-MIME version 1.859 [heinz 2007-04-21]
 	Updated net/tinc to 1.0.7 [obache 2007-04-21]
 	Updated mail/p5-Email-Valid to 0.179 [heinz 2007-04-21]
+	Updated mail/mutt-devel to 1.5.15 [tonio 2007-04-21]
