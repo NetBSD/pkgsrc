@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.1 2007/04/14 14:17:49 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.2 2007/04/21 13:54:46 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -64,6 +64,11 @@ SERIAL_DEVICES?=	/dev/tty0p0 \
 			/dev/tty1p0
 
 _INCOMPAT_ICONV=   HPUX-*-*
+
+# Builtin openssl and zlib have issues. Prefer pkgsrc's until we know which
+# versions work.
+PREFER.openssl?=	pkgsrc
+PREFER.zlib?=		pkgsrc
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
