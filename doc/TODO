@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6279 2007/04/21 07:06:29 wiz Exp $
+$NetBSD: TODO,v 1.6280 2007/04/21 07:11:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dhid-5.3
-	o dia-0.96.1
 	o diction-1.10
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -704,7 +703,6 @@ Suggested package updates
 	o libxml++2-2.18.0
 	o licq-1.3.4
 	o licq-core-1.3.0
-	o lighttpd-1.4.15
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -849,7 +847,6 @@ Suggested package updates
 	o p5-CGI-Minimal-1.25
 	o p5-Cache-Memcached-1.15
 	o p5-Chart-2.4.1
-	o p5-Class-Accessor-0.30
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
@@ -1054,7 +1051,6 @@ Suggested package updates
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
-	o py-curl-7.16.2
 	o py-extclass-2.10.2
 	o py-flup-2311
 	o py-gnome2-extras-2.14.3
