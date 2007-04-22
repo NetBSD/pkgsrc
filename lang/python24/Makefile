@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/11/03 07:15:41 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/04/22 20:12:43 tnn Exp $
 #
 
 DISTNAME=	Python-2.4.3
@@ -51,6 +51,8 @@ PY_PLATNAME=	${LOWER_OPSYS}
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
 PY_PLATNAME=	sunos${OS_VERSION:C/\..*//}
+.elif ${OPSYS} == "HPUX"
+PY_PLATNAME=	hp-ux11
 .else
 PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
@@ -146,6 +148,12 @@ post-build:
 post-install:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.4.2.dylib	\
 		${DESTDIR}${PREFIX}/lib/libpython2.4.dylib
+.endif
+
+.if ${OPSYS} == "HPUX"
+post-install:
+	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.4.sl \
+		${DESTDIR}${PREFIX}/lib/libpython2.4.sl.1.0
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
