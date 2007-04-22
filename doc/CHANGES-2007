@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.895 2007/04/22 16:48:50 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.896 2007/04/22 21:09:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1760,3 +1760,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/sun-jdk14 to 2.14 [roland 2007-04-21]
 	Updated devel/p5-Params-Util to 0.23 [seb 2007-04-22]
 	Updated games/openttd to 0.5.1 [tnn 2007-04-22]
+	Added devel/p5-B-Keywords version 1.06 [seb 2007-04-22]
+	Added devel/p5-Module-Starter version 1.42 [seb 2007-04-22]
+	Added devel/p5-Module-Starter-PBP version 0.0.3 [seb 2007-04-22]
+	Added devel/p5-PPI version 1.118 [seb 2007-04-22]
+	Added devel/p5-Perl-Critic version 1.051 [seb 2007-04-22]
+	Added devel/p5-Task-Weaken version 0.99 [seb 2007-04-22]
+	Added devel/p5-Test-Object version 0.07 [seb 2007-04-22]
+	Added devel/p5-Test-Perl-Critic version 1.01 [seb 2007-04-22]
