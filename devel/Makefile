@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2007/04/21 10:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.834 2007/04/22 21:06:40 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -369,6 +369,7 @@ SUBDIR+=	p5-AppConfig-Std
 SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
+SUBDIR+=	p5-B-Keywords
 SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Cache
@@ -505,6 +506,8 @@ SUBDIR+=	p5-Module-Install-Substitute
 SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
 SUBDIR+=	p5-Module-ScanDeps
+SUBDIR+=	p5-Module-Starter
+SUBDIR+=	p5-Module-Starter-PBP
 SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
@@ -515,6 +518,7 @@ SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
 SUBDIR+=	p5-POE
+SUBDIR+=	p5-PPI
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Util
 SUBDIR+=	p5-Params-Validate
@@ -523,6 +527,7 @@ SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
 SUBDIR+=	p5-Path-Class
 SUBDIR+=	p5-PathTools
+SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Perl6-Export
 SUBDIR+=	p5-Perl6-Slurp
@@ -551,6 +556,7 @@ SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-Sub-Uplevel
+SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-Prompt
 SUBDIR+=	p5-Term-ReadKey
@@ -569,6 +575,8 @@ SUBDIR+=	p5-Test-LongString
 SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
 SUBDIR+=	p5-Test-NoWarnings
+SUBDIR+=	p5-Test-Object
+SUBDIR+=	p5-Test-Perl-Critic
 SUBDIR+=	p5-Test-Pod
 SUBDIR+=	p5-Test-Pod-Coverage
 SUBDIR+=	p5-Test-Simple
