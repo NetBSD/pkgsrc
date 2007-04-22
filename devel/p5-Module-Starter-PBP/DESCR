@@ -1,0 +1,12 @@
+The Perl 5 module Module::Starter::PBP implements a simple approach
+to creating modules and their support files, based on the
+Module::Starter module.
+
+When used as a Module::Starter plugin, this module allows you to
+specify a simple directory of templates which are filled in with
+module-specific information, and thereafter form the basis of your
+new module.
+
+The default templates that this module initially provides are based
+on the recommendations in the book "Perl Best Practices" (O'Reilly,
+2005).
