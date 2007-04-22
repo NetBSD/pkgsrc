@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/22 09:13:41 heinz Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/22 09:25:24 heinz Exp $
 
 P5_LIBINTL_VER=	1.16
 DISTNAME=	libintl-perl-${P5_LIBINTL_VER}
@@ -16,6 +16,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/libintl-perl/.packlist
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/Recode.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/Recode/*.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/RecodeData.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/RecodeData/*.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/Messages.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/TextDomain.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/gettext_pp.pm
+CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Locale/gettext_xs.pod
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
