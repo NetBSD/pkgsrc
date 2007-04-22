@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/03/24 18:35:14 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/22 09:00:22 heinz Exp $
 #
 
 DISTNAME=		Crypt-RSA-1.58
@@ -30,8 +30,13 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/RSA/.packlist
 
-CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Crypt/RSA.pm
-CHECK_INTERPRETER_SKIP+=${PERL5_SUB_INSTALLVENDORLIB}/Crypt/RSA/*
+REPLACE_PERL+=		lib/Crypt/RSA.pm
+REPLACE_PERL+=		lib/Crypt/RSA/*.pm
+REPLACE_PERL+=		lib/Crypt/RSA/ES/*.pm
+REPLACE_PERL+=		lib/Crypt/RSA/Key/*.pm
+REPLACE_PERL+=		lib/Crypt/RSA/Key/Private/*.pm
+REPLACE_PERL+=		lib/Crypt/RSA/Key/Public/*.pm
+REPLACE_PERL+=		lib/Crypt/RSA/SS/*.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
