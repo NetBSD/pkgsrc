@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.893 2007/04/21 20:41:38 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.894 2007/04/22 13:06:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/mutt-devel to 1.5.15 [tonio 2007-04-21]
 	Updated lang/sun-jre14 to 2.14 [roland 2007-04-21]
 	Updated lang/sun-jdk14 to 2.14 [roland 2007-04-21]
+	Updated devel/p5-Params-Util to 0.23 [seb 2007-04-22]
