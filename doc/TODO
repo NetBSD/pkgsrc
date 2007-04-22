@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6284 2007/04/22 13:06:59 seb Exp $
+$NetBSD: TODO,v 1.6285 2007/04/22 16:48:40 tnn Exp $
 
 Suggested new packages
 ======================
@@ -823,7 +823,6 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openpam-20050616
 	o openssl-0.9.8e
-	o openttd-0.5.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
