@@ -1,0 +1,5 @@
+The Perl 5 module Module::Starter is a simple starter kit for any
+module. Module::Starter is used to create a skeletal CPAN distribution
+including basic builder scripts, tests, documentation, and module
+code.  This module is used via the provided front-end script
+module-starter.
