@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-hpux-ld,v 1.2 2007/04/21 01:29:25 tnn Exp $
+# $NetBSD: cmd-sink-hpux-ld,v 1.3 2007/04/22 18:56:22 tnn Exp $
 
 # Empty out the command buffer and build up the command line in $cmd.
 hprunpath=
@@ -37,6 +37,11 @@ while ! queue_is_empty cmdbuf; do
 		*)	hprunpath="$hprunpath:$dir" ;;
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-hpux-ld) drop: $dir [adding to hprunpath]"
+		;;
+	# Handle linker optimization flag.
+	-O*|+O|+O?)
+		arg=-O
+		. $buildcmd
 		;;
 	*)
 		. $buildcmd
