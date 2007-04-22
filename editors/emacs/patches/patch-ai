@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.7 2007/04/22 06:55:03 obache Exp $
+
+--- src/m/intel386.h.orig	1997-08-30 07:18:39.000000000 +0000
++++ src/m/intel386.h
+@@ -239,3 +239,7 @@ NOTE-END */
+ 
+ #define SEGMENT_MASK ((SEGMENT_SIZE)-1)
+ #endif
++
++#ifdef MAC_OSX
++#define CANNOT_DUMP
++#endif
