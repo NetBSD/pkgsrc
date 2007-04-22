@@ -1,0 +1,5 @@
+One recurring problem in Perl modules that use Scalar::Util's
+"weaken" function is that it is not present in the pure-perl variant.
+So if your module uses "weaken", you can just add the following to
+your Module::Install-based Makefile.PL (or equivalent):
+  requires 'Task::Weaken';
