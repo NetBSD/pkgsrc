@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2007/04/05 19:41:48 gdt Exp $
+# $NetBSD: Makefile,v 1.153 2007/04/22 09:58:10 tnn Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -56,6 +56,8 @@ MAKE_ENV+=	BUILD_FIASCO=N
 
 .if ${OPSYS} == "Darwin"
 MAKE_ENV+=	NETPBMLIBTYPE="dylib" NETPBMLIBSUFFIX="dylib"
+.elif ${OPSYS} == "HPUX" && ${OBJECT_FMT} == "SOM"
+MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="sl"
 .else
 MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 .endif
