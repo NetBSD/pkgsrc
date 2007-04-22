@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/22 16:46:25 tnn Exp $
 
-DISTNAME=	openttd-0.4.8-source
-PKGNAME=	openttd-0.4.8
+DISTNAME=	openttd-0.5.1-source
+PKGNAME=	openttd-0.5.1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.openttd.com/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 EXTRACT_SUFX=	.tar.bz2
 
+USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 DATA_DIR=	${PREFIX}/share/games/openttd
@@ -41,6 +42,8 @@ do-install:
 	${INSTALL_DATA} -m 644 ${WRKSRC}/docs/Manual.txt ${DATA_DIR}/docs
 	${INSTALL_DATA} -m 644 ${WRKSRC}/docs/multiplayer.txt ${DATA_DIR}/docs
 
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
