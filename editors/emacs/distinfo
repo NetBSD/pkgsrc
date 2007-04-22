@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.33 2007/03/24 01:30:50 joerg Exp $
+$NetBSD: distinfo,v 1.34 2007/04/22 06:55:03 obache Exp $
 
 SHA1 (emacs-21.4a.tar.gz) = cdb33731180fe4a912838af805dd35e3f55394d4
 RMD160 (emacs-21.4a.tar.gz) = c312e739935b56d08783bbfe97992297a363cb8a
 Size (emacs-21.4a.tar.gz) = 20403483 bytes
 SHA1 (patch-aa) = fee6fe91fb9a2f75300903cc5c6e023bb8de6be5
-SHA1 (patch-ab) = 9304a3fe06ab5bcdad4401fd570a1794b7da818f
+SHA1 (patch-ab) = 9c268f822b4422307787f27a63ebc67ae43aa8a7
 SHA1 (patch-ac) = a2de7619fece50cb42b0e23b1651b5bf742ff69a
 SHA1 (patch-ad) = 39a11bc214ae3d2f9d634c30b196a46d473ab92f
 SHA1 (patch-ae) = e2b66b23efb90608470aef5ebd0c75e27bcd6b55
 SHA1 (patch-af) = 821e0c3cce819ce11f393ce5f498f13d652e4d94
 SHA1 (patch-ag) = 3d64c0d53e3a8a737eeb04a6080a92a826b73620
 SHA1 (patch-ah) = 6cd1b122b370ee7110e096088a132cd420356714
+SHA1 (patch-ai) = 20fb931d649a55ae7ee6eb27ec5ba7cc938db0f7
 SHA1 (patch-aj) = 7f28335b3da583e5cef9e527cd1f9d4b0d92faa7
 SHA1 (patch-ak) = c37ecdcb1e0b0211b15baa7100dd43eab3f0830b
 SHA1 (patch-am) = 7109d3a5cf1470e11e33abe97297cde24cf0ec91

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2006/06/06 16:23:17 minskim Exp $
+$NetBSD: patch-ab,v 1.24 2007/04/22 06:55:03 obache Exp $
 
 --- configure.orig	2003-03-18 14:19:12.000000000 +0000
 +++ configure
-@@ -822,9 +822,15 @@ case "${canonical}" in
+@@ -822,9 +822,17 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
        arm-*-netbsd*)	machine=arm ;;
@@ -15,10 +15,12 @@ $NetBSD: patch-ab,v 1.23 2006/06/06 16:23:17 minskim Exp $
 +  ## Darwin / Mac OS X
 +  powerpc-apple-darwin* )
 +    machine=powermac opsys=darwin ;;
++  i386-apple-darwin* )
++    machine=intel386 opsys=darwin ;;
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
-@@ -909,6 +915,10 @@ case "${canonical}" in
+@@ -909,6 +917,10 @@ case "${canonical}" in
      machine=macppc opsys=gnu-linux
    ;;
  
@@ -29,7 +31,7 @@ $NetBSD: patch-ab,v 1.23 2006/06/06 16:23:17 minskim Exp $
    ## Altos 3068
    m68*-altos-sysv* )
      machine=altos opsys=usg5-2
-@@ -1659,6 +1669,7 @@ case "${canonical}" in
+@@ -1659,6 +1671,7 @@ case "${canonical}" in
        *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-386bsd* )	        opsys=386bsd ;;
        *-freebsd* )	        opsys=freebsd ;;
@@ -37,7 +39,7 @@ $NetBSD: patch-ab,v 1.23 2006/06/06 16:23:17 minskim Exp $
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -9124,6 +9135,22 @@ EOF
+@@ -9124,6 +9137,22 @@ EOF
  fi
  
  
