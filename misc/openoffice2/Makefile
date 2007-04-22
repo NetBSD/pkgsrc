@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/04/21 05:40:27 hira Exp $
+# $NetBSD: Makefile,v 1.16 2007/04/22 23:15:24 hira Exp $
 #
 
 OO_VER=			2.2.0
+PKGREVISION=		1
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -78,9 +79,10 @@ PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
 INSTALLATION_DIRS=	bin
 
+OO_UNXNAME=	openoffice.org2.2
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
-OO_PKGROOT=	/opt/openoffice.org2.2
-OO_PROGRAMS=	scalc sdraw simpress soffice swriter
+OO_PKGROOT=	/opt/${OO_UNXNAME}
+OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
 
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/bridge.h		\
@@ -97,6 +99,12 @@ post-build:
 			${TAR} xpfk $$f;			\
 		done;						\
 	done
+	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
+	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/soffice \"\$$@\""	\
+		>> ${WRKDIR}/${OO_UNXNAME}
+	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}-printeradmin
+	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/spadmin"	\
+		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${OO_RELEASE}
@@ -106,6 +114,9 @@ do-install:
 		${LN} -sf ${PREFIX}/${OO_RELEASE}/program/$$f	\
 			${PREFIX}/bin/$$f;			\
 	done
+	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
+		${PREFIX}/bin
 
 post-install:
 	cd ${PREFIX} &&						\
@@ -116,6 +127,8 @@ post-install:
 	for f in ${OO_PROGRAMS}; do				\
 		${ECHO} bin/$$f >> ${PLIST_SRC};		\
 	done
+	${ECHO} bin/${OO_UNXNAME} >> ${PLIST_SRC}
+	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${PLIST_SRC}
 
 # everything specific to your OS/Arch goes into its own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
