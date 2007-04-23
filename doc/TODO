@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6288 2007/04/23 10:22:21 tnn Exp $
+$NetBSD: TODO,v 1.6289 2007/04/23 11:37:38 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
-	o weechat-0.2.4
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
