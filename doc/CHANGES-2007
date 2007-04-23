@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.901 2007/04/23 11:37:37 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.902 2007/04/23 13:31:01 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/rubygems to 0.9.2 [minskim 2007-04-23]
 	Added devel/xdelta3 version 3.0q [tnn 2007-04-23]
 	Updated chat/weechat to 0.2.4 [tonio 2007-04-23]
+	Updated net/p5-Net-eBay to 0.41 [abs 2007-04-23]

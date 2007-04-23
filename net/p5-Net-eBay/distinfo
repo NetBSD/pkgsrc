@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/13 21:43:36 abs Exp $
+$NetBSD: distinfo,v 1.2 2007/04/23 13:24:13 abs Exp $
 
-SHA1 (Net-eBay-0.40.tar.gz) = 23a9e3258b1e6e2246df67a33f57a4fe9432382f
-RMD160 (Net-eBay-0.40.tar.gz) = 9990f6d6d273fcfd9e181068c48cdfbfbcc09d85
-Size (Net-eBay-0.40.tar.gz) = 13505 bytes
+SHA1 (Net-eBay-0.41.tar.gz) = 722a7cad9e675b18a5c0fd3d9d6903c287485864
+RMD160 (Net-eBay-0.41.tar.gz) = 5dab24952d8b96f896970b11cc4afed934af1609
+Size (Net-eBay-0.41.tar.gz) = 17645 bytes
