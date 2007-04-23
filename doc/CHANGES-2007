@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.902 2007/04/23 13:31:01 abs Exp $
+$NetBSD: CHANGES-2007,v 1.903 2007/04/23 14:17:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/xdelta3 version 3.0q [tnn 2007-04-23]
 	Updated chat/weechat to 0.2.4 [tonio 2007-04-23]
 	Updated net/p5-Net-eBay to 0.41 [abs 2007-04-23]
+	Updated games/openttd to 0.5.1nb1 [tnn 2007-04-23]
