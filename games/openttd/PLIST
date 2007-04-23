@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/22 16:46:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/04/23 14:16:40 tnn Exp $
 bin/openttd
+share/games/openttd/data/2ccmap.grf
+share/games/openttd/data/airports.grf
 share/games/openttd/data/autorail.grf
 share/games/openttd/data/canalsw.grf
 share/games/openttd/data/dosdummy.grf
+share/games/openttd/data/elrailsw.grf
 share/games/openttd/data/nsignalsw.grf
 share/games/openttd/data/openttd.grf
 share/games/openttd/data/opntitle.dat
@@ -13,11 +16,13 @@ share/games/openttd/docs/multiplayer.txt
 share/games/openttd/docs/readme.txt
 share/games/openttd/lang/american.lng
 share/games/openttd/lang/brazilian_portuguese.lng
+share/games/openttd/lang/bulgarian.lng
 share/games/openttd/lang/catalan.lng
 share/games/openttd/lang/czech.lng
 share/games/openttd/lang/danish.lng
 share/games/openttd/lang/dutch.lng
 share/games/openttd/lang/english.lng
+share/games/openttd/lang/esperanto.lng
 share/games/openttd/lang/estonian.lng
 share/games/openttd/lang/finnish.lng
 share/games/openttd/lang/french.lng
@@ -26,16 +31,24 @@ share/games/openttd/lang/german.lng
 share/games/openttd/lang/hungarian.lng
 share/games/openttd/lang/icelandic.lng
 share/games/openttd/lang/italian.lng
+share/games/openttd/lang/japanese.lng
+share/games/openttd/lang/korean.lng
+share/games/openttd/lang/lithuanian.lng
 share/games/openttd/lang/norwegian_bokmal.lng
 share/games/openttd/lang/norwegian_nynorsk.lng
 share/games/openttd/lang/origveh.lng
 share/games/openttd/lang/polish.lng
 share/games/openttd/lang/portuguese.lng
 share/games/openttd/lang/romanian.lng
+share/games/openttd/lang/russian.lng
+share/games/openttd/lang/simplified_chinese.lng
 share/games/openttd/lang/slovak.lng
+share/games/openttd/lang/slovenian.lng
 share/games/openttd/lang/spanish.lng
 share/games/openttd/lang/swedish.lng
+share/games/openttd/lang/traditional_chinese.lng
 share/games/openttd/lang/turkish.lng
+share/games/openttd/lang/ukrainian.lng
 @dirrm share/games/openttd/lang
 @dirrm share/games/openttd/docs
 @unexec ${RMDIR} %D/share/games/openttd/data 2>/dev/null || ${TRUE}
