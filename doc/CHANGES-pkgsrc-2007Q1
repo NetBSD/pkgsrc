@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.4 2007/04/19 17:23:57 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.5 2007/04/23 19:18:09 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -11,3 +11,5 @@ Pullup ticket 2065 - requested by tron
 security update for fetchmail
 Pullup ticket 2070 - requested by joerg
 security update for lighttpd
+Pullup ticket 2074 - requested by xtraeme
+security update for opera
