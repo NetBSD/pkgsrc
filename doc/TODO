@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6286 2007/04/23 03:21:55 minskim Exp $
+$NetBSD: TODO,v 1.6287 2007/04/23 07:21:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,9 @@ Suggested package updates
 	o cppunit-1.12.0
 	o crafty-19.5
 	o cross-h8300-hms-binutils-2.17
-	o crossfire-client-1.9.1
+	o crossfire-client-1.10.0
+	o crossfire-maps-1.10.0
+	o crossfire-server-1.10.0
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
@@ -442,7 +444,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o epic4-2.6
 	o epstool-3.08
-	o eric3-3.9.4
+	o eric3-3.9.5
 	o erlang-11.3
 	o erlang-doc-11.3
 	o erlang-man-11.3
@@ -547,10 +549,12 @@ Suggested package updates
 	o gq-1.2.0
 	o grace-5.1.21
 	o gramofile-1.6P
+	o gramps2-2.2.7
 	o grap-1.40
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
+	o gsasl-0.2.16
 	o gsharutils-4.6.3
 	o gsm-1.0.12
 	o gss-0.0.17
@@ -581,7 +585,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.04.1
 	o hesiod-3.1.0
-	o heyu-2.0beta9
+	o heyu-2.0beta10
 	o hobbitmon-4.0.4 [pkg/30484]
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -701,6 +705,7 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
 	o libxml++2-2.18.0
+	o libxml2-2.6.28
 	o licq-1.3.4
 	o licq-core-1.3.0
 	o lilypond-2.10.20
@@ -737,6 +742,7 @@ Suggested package updates
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
+	o micq-0.5.3
 	o milter-greylist-3.1.7
 	o mimedefang-2.62
 	o mined-2000.13.2
@@ -776,7 +782,7 @@ Suggested package updates
 	o mysql4-server-4.1.22
 	o nagios-3.0a2
 	o nano-1.2.5 [pkg/32859|pkg/34511]
-	o nano-2.0.4
+	o nano-2.0.5
 	o nap-1.5.3
 	o nas-1.9
 	o nautilus-cd-burner-2.18.1 [needs hal]
@@ -887,6 +893,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
+	o p5-IO-Socket-SSL-1.05
 	o p5-IO-Zlib-1.05
 	o p5-IP-Country-2.23
 	o p5-Ima-DBI-0.34
@@ -951,6 +958,7 @@ Suggested package updates
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o p5-version-0.71
+	o p7zip-4.45
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
@@ -1211,6 +1219,7 @@ Suggested package updates
 	o ted-en-us-2.17
 	o tex-dhucs-3.1.5
 	o tfmxplay-1.1.6
+	o thunderbird-2.0
 	o tightvnc-1.3.8
 	o tile-0.7.4
 	o tileworld-1.3.0
@@ -1246,6 +1255,7 @@ Suggested package updates
 	o unalz-0.61
 	o unix2dos-1.3
 	o uno-2.11
+	o unrar-3.7.5
 	o up-imapproxy-1.2.5
 	o upx-2.90
 	o userppp-030706
@@ -1340,7 +1350,7 @@ Suggested package updates
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33
 	o xrn-9.02
-	o xscreensaver-5.01
+	o xscreensaver-5.02
 	o xskat-4.0
 	o xsoldier-1.4
 	o xterm-225
