@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6285 2007/04/22 16:48:40 tnn Exp $
+$NetBSD: TODO,v 1.6286 2007/04/23 03:21:55 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1133,8 +1133,6 @@ Suggested package updates
 	o ruby-clearsilver-0.10.4
 	o ruby-rcairo-1.4.1
 	o ruby-rd-mode-0.6.20
-	o rubygems-0.9.1 [requires openssl>=0.9.8]
-	o rubygems-0.9.2
 	o rudiments-0.30
 	o rxvt-unicode-8.2
 	o sablecc-3.2
