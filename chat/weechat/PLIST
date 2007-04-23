@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/15 20:25:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/04/23 11:36:49 tonio Exp $
 bin/weechat-curses
 ${WITHLUA}lib/weechat/plugins/lua.la
 ${WITHPYTHON}lib/weechat/plugins/python.la
@@ -13,6 +13,7 @@ share/doc/weechat/weechat_quickstart.en.txt
 share/doc/weechat/weechat_quickstart.fr.txt
 share/doc/weechat/weechat_quickstart.pl.txt
 share/doc/weechat/weechat_quickstart.ru.txt
+share/doc/weechat/weechat_quickstart.sco.txt
 share/locale/cs/LC_MESSAGES/weechat.mo
 share/locale/de/LC_MESSAGES/weechat.mo
 share/locale/es/LC_MESSAGES/weechat.mo
