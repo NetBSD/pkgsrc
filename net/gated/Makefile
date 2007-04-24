@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/04/24 12:06:18 tron Exp $
+# $NetBSD: Makefile,v 1.29 2007/04/24 12:14:23 tron Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
@@ -41,8 +41,11 @@ do-configure:
 		${RM} -f Config
 
 post-install:
-	cd ${WRKSRC}/doc && ${PAX} -rw -pe . ${PREFIX}/share/doc/gated
+	${CHMOD} -w ${PREFIX}/bin/gdc ${PREFIX}/bin/ospf_monitor
+	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/gated
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/gated
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/gated
+	${FIND} ${PREFIX}/share/doc/gated -type f -print | \
+	${XARGS} ${CHMOD} -x
 
 .include "../../mk/bsd.pkg.mk"
