@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/24 16:34:02 dmcmahill Exp $
+
+--- Makefile.orig	2007-03-04 21:15:33.000000000 -0500
++++ Makefile
+@@ -351,6 +351,7 @@ ifeq ($(uname_S),Darwin)
+ 	NO_STRLCPY = YesPlease
+ endif
+ ifeq ($(uname_S),SunOS)
++	NEEDS_LIBICONV = YesPlease
+ 	NEEDS_SOCKET = YesPlease
+ 	NEEDS_NSL = YesPlease
+ 	SHELL_PATH = /bin/bash
+@@ -371,6 +372,9 @@ ifeq ($(uname_S),SunOS)
+ 	INSTALL = ginstall
+ 	TAR = gtar
+ 	BASIC_CFLAGS += -D__EXTENSIONS__
++	BASIC_CFLAGS += -I${prefix}/include
++	BASIC_LDFLAGS += -L${prefix}/lib
++	ALL_LDFLAGS += -Wl,-R${prefix}/lib
+ endif
+ ifeq ($(uname_O),Cygwin)
+ 	NO_D_TYPE_IN_DIRENT = YesPlease
+@@ -399,12 +403,10 @@ ifeq ($(uname_S),OpenBSD)
+ 	BASIC_LDFLAGS += -L/usr/local/lib
+ endif
+ ifeq ($(uname_S),NetBSD)
+-	ifeq ($(shell expr "$(uname_R)" : '[01]\.'),2)
+-		NEEDS_LIBICONV = YesPlease
+-	endif
+-	BASIC_CFLAGS += -I/usr/pkg/include
+-	BASIC_LDFLAGS += -L/usr/pkg/lib
+-	ALL_LDFLAGS += -Wl,-rpath,/usr/pkg/lib
++	NEEDS_LIBICONV = YesPlease
++	BASIC_CFLAGS += -I${prefix}/include
++	BASIC_LDFLAGS += -L${prefix}/lib
++	ALL_LDFLAGS += -Wl,-rpath,${prefix}/lib
+ endif
+ ifeq ($(uname_S),AIX)
+ 	NO_STRCASESTR=YesPlease
