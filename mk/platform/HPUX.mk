@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.2 2007/04/21 13:54:46 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.3 2007/04/24 19:48:26 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -69,6 +69,11 @@ _INCOMPAT_ICONV=   HPUX-*-*
 # versions work.
 PREFER.openssl?=	pkgsrc
 PREFER.zlib?=		pkgsrc
+
+.if defined(OS_VERSION) && ${OS_VERSION} == "11.11" && \
+    !defined(BUILDING_POSIX_HEADERS)
+.include "../../pkgtools/posix_headers/buildlink3.mk"
+.endif
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
