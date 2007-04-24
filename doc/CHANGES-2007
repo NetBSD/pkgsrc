@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.908 2007/04/24 15:33:34 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.909 2007/04/24 16:38:29 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1780,3 +1780,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/eb to 4.3 [uebayasi 2007-04-24]
 	Updated chat/navi2ch to 1.7.5.99.20070423 [uebayasi 2007-04-24]
 	Updated pkgtools/pkglint to 4.77 [tnn 2007-04-24]
+	Added devel/git-fvcs version 1.5.0.3 [dmcmahill 2007-04-24]
