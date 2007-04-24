@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.912 2007/04/24 21:11:04 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.913 2007/04/24 22:45:03 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/u9fs version 2.0.3 [agc 2007-04-24]
 	Added pkgtools/posix_headers version 0.4 [tnn 2007-04-24]
 	Updated mail/getmail to 4.7.4 [schmonz 2007-04-24]
+	Updated devel/cpuflags to 1.07 [abs 2007-04-24]
