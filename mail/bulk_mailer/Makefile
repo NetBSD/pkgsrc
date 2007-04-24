@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/24 22:31:19 abs Exp $
 #
 
 DISTNAME=	bulk_mailer-1.13
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://cs.utk.edu/pub/moore/bulk_mailer/
 
