@@ -1,0 +1,6 @@
+This package attempts to resolve deficiencies in system headers.
+These deficiencies are commonly found on older operating system releases.
+When use of posix_headers has been enabled on a platform, this package will
+become a compile-time dependency for every package. It will provide customized
+header files that take preference over some system provided ones (that may
+not even exist). This happens transparently through use of buildlink3.
