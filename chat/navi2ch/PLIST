@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/02/20 14:52:47 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/04/24 15:25:05 uebayasi Exp $
 ${EMACS_INFOPREFIX}/navi2ch.info
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.elc
@@ -14,6 +14,7 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-bookmark.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-bookmark.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-config.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-directory.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-directory.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-e21.el
@@ -38,6 +39,8 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-localfile.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-localfile.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-machibbs.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-machibbs.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-megabbs.el
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-megabbs.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-message.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-message.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-mona.el
@@ -64,9 +67,6 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-xmas.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-xmas.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch.elc
-share/navi2ch/icons/navi2ch-logo.img
-share/navi2ch/icons/navi2ch-logo.xbm
-share/navi2ch/icons/navi2ch-logo.xpm
 share/navi2ch/icons/plugged.xpm
 share/navi2ch/icons/unplugged.xpm
 @dirrm share/navi2ch/icons
