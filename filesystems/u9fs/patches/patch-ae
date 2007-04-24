@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
+
+--- safecpy.c	2007/04/24 07:25:17	1.1
++++ safecpy.c	2007/04/24 07:26:57
+@@ -1,4 +1,5 @@
+ #include <stdio.h>
++#include <string.h>
+ 
+ void
+ safecpy(char *to, char *from, int tolen)

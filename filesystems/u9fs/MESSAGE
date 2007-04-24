@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
+
+To activate u9fs, you need to add the following lines to your
+/etc/inetd.conf file:
+
+ 564   stream tcp nowait root    ${PREFIX}/libexec/u9fs u9fs -D -a none
+
+After that, tell inetd to reload its config file:
+
+	/etc/rc.d/inetd reload
+
+*********************************************************************
+WARNING: "-a none" ABOVE MEANS THAT NO AUTHENTICATION WILL BE DONE ON
+ANY CLIENTS WHICH CONNECT TO u9fs. THIS IS ALMOST CERTAINLY NOT WHAT
+YOU WANT
+*********************************************************************
+
+===========================================================================

@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
+
+--- u9fs.c	2007/04/23 22:01:05	1.1
++++ u9fs.c	2007/04/23 22:29:28
+@@ -28,7 +28,14 @@
+ #define DEFAULTLOG "/tmp/u9fs.log"
+ #endif
+ 
++#if __linux__
+ #include <linux/kdev_t.h>
++#elif __NetBSD__
++#include <sys/types.h>
++#define MAJOR(m)	major(m)
++#define MINOR(m)	minor(m)
++#define MKDEV(maj,min)	makedev(maj, min)
++#endif
+ 
+ char *logfile = DEFAULTLOG;
+ char *rootpath = "/";
+@@ -752,11 +759,11 @@
+ 			}
+ 			d->extension = estrdup(link);
+ 		} else if (d->mode&DMDEVICE) {
+-			int major = MAJOR(st->st_rdev);
+-			int minor = MINOR(st->st_rdev);
++			int majordev = MAJOR(st->st_rdev);
++			int minordev = MINOR(st->st_rdev);
+ 
+ 			if(S_ISCHR(st->st_mode)) {
+-				sprintf(link, "c %u %u", major, minor);
++				sprintf(link, "c %u %u", majordev, minordev);
+ 			} else {
+ 				sprintf(link, "b %u %u", MAJOR(st->st_rdev), MINOR(st->st_rdev));
+ 			}

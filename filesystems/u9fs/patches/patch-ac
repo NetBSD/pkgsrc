@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
+
+--- plan9.h	2007/04/23 22:30:40	1.1
++++ plan9.h	2007/04/23 22:06:13
+@@ -1,9 +1,15 @@
++#include <sys/param.h>
++
++#if defined(BSD) && BSD >= 199506
++#define _BSD_TYPES
++#else
+ /* magic to get SUSV2 standard, including pread, pwrite*/
+ #define _XOPEN_SOURCE 500
+ /* magic to get 64-bit pread/pwrite */
+ #define _LARGEFILE64_SOURCE
+ /* magic to get 64-bit stat on Linux, maybe others */
+ #define _FILE_OFFSET_BITS 64
++#endif /* !BSD */
+ 
+ #ifdef sgi
+ #define _BSD_TYPES	1	/* for struct timeval */
