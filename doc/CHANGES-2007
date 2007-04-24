@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.907 2007/04/24 15:26:32 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.908 2007/04/24 15:33:34 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tcpdump to 3.9.5 [ghen 2007-04-24]
 	Updated textproc/eb to 4.3 [uebayasi 2007-04-24]
 	Updated chat/navi2ch to 1.7.5.99.20070423 [uebayasi 2007-04-24]
+	Updated pkgtools/pkglint to 4.77 [tnn 2007-04-24]
