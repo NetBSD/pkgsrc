@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.910 2007/04/24 19:09:14 agc Exp $
+$NetBSD: CHANGES-2007,v 1.911 2007/04/24 19:44:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkglint to 4.77 [tnn 2007-04-24]
 	Added devel/git-fvcs version 1.5.0.3 [dmcmahill 2007-04-24]
 	Added filesystems/u9fs version 2.0.3 [agc 2007-04-24]
+	Added pkgtools/posix_headers version 0.4 [tnn 2007-04-24]
