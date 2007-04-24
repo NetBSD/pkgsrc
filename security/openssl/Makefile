@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2007/04/18 14:11:33 tron Exp $
+# $NetBSD: Makefile,v 1.123 2007/04/24 14:10:37 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -77,6 +77,15 @@ CONFIGURE_ARGS+=	irix64-mips4-gcc
 CONFIGURE_ARGS+=	irix64-mips4-cc
 .    endif
 .  endif
+.elif ${OPSYS} == "Darwin"
+.include "../../mk/dlopen.buildlink3.mk"
+
+SUBST_CLASSES+=		dl
+SUBST_MESSAGE.dl=	Adding dynmamic link compatibility library.
+SUBST_STAGE.dl=		post-configure
+SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
+			crypto/pkcs7/Makefile fips/Makefile test/Makefile
+SUBST_SED.dl=		-e "s,^EX_LIBS=,EX_LIBS=${BUILDLINK_LDFLAGS.dlcompat} ,g"
 .endif
 
 .include "../../security/openssl/options.mk"
@@ -104,8 +113,6 @@ CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
-DL_AUTO_VARS=		yes
-
 # Some shells don't accept empty word lists in for loops.  For those
 # Makefiles where this occurs, edit the file so that we avoid running
 # the loop.
@@ -124,5 +131,4 @@ pre-configure:
 	done
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
