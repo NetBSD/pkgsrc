@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/03/05 11:06:42 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/04/24 15:01:03 uebayasi Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -19,8 +19,6 @@ include/eb/text.h
 include/eb/zio.h
 lib/libeb.la
 share/aclocal/eb4.m4
-share/eb/appendix/LIST
-share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
 share/eb/appendix/cencro-1.0/catalog.app
 share/eb/appendix/cencro-1.0/cencro.app
@@ -111,6 +109,10 @@ share/eb/appendix/heritage-2.2/roget.app
 share/eb/appendix/heritage-2.2/roget/appendix
 share/eb/appendix/heritage-2.2/root.app
 share/eb/appendix/heritage-2.2/root/appendix
+share/eb/appendix/hyogen-1.0/catalogs.app
+share/eb/appendix/hyogen-1.0/catalogs
+share/eb/appendix/hyogen-1.0/hyogen/data/furoku
+share/eb/appendix/hyogen-1.0/hyogen.app
 share/eb/appendix/izumi-2.0/catalog
 share/eb/appendix/izumi-2.0/catalog.app
 share/eb/appendix/izumi-2.0/file1.app
@@ -320,6 +322,9 @@ share/examples/eb/eb.conf.default
 @dirrm share/eb/appendix/jitenban-2.4
 @dirrm share/eb/appendix/izumi-2.0/file1
 @dirrm share/eb/appendix/izumi-2.0
+@dirrm share/eb/appendix/hyogen-1.0/hyogen/data
+@dirrm share/eb/appendix/hyogen-1.0/hyogen
+@dirrm share/eb/appendix/hyogen-1.0
 @dirrm share/eb/appendix/heritage-2.2/root
 @dirrm share/eb/appendix/heritage-2.2/roget
 @dirrm share/eb/appendix/heritage-2.2/info
