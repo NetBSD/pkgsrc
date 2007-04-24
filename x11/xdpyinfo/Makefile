@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/03/17 18:40:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/24 15:16:42 joerg Exp $
 #
 
-DISTNAME=	xdpyinfo-1.0.1
+DISTNAME=	xdpyinfo-1.0.2
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
