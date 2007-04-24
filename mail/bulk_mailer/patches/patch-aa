@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2004/06/08 10:57:42 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/24 22:31:19 abs Exp $
 
---- bulk_mailer.c.orig	2000-05-24 20:34:33.000000000 +0100
-+++ bulk_mailer.c
+--- bulk_mailer.c.orig	2000-05-24 19:34:33.000000000 +0000
++++ bulk_mailer.c	2007-04-12 13:08:43.000000000 +0000
 @@ -101,7 +101,7 @@
  #include "patchlevel.h"
  
@@ -11,3 +11,19 @@ $NetBSD: patch-aa,v 1.1 2004/06/08 10:57:42 cjep Exp $
  #endif
  
  #ifndef HAVE_STRERROR
+@@ -291,6 +291,7 @@
+ #endif
+ 
+ 
++#ifndef HAVE_STRNDUP
+ /*
+  * copy the first 'len' characters of a string into malloc'ed
+  * memory, appending a NUL to the copy.
+@@ -307,6 +308,7 @@
+     result[len] = '\0';
+     return result;
+ }
++#endif
+ 
+ /*
+  * sort by case-folded reversed domain

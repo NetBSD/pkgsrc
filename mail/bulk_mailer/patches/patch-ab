@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2007/04/24 22:31:19 abs Exp $
+
+--- configure.in.orig	1998-01-21 15:41:47.000000000 +0000
++++ configure.in	2007-04-12 13:04:55.000000000 +0000
+@@ -15,6 +15,6 @@
+ AC_STRUCT_TM
+ 
+ dnl Checks for library functions.
+-AC_CHECK_FUNCS(gethostname strdup strerror)
++AC_CHECK_FUNCS(gethostname strdup strndup strerror)
+ 
+ AC_OUTPUT(Makefile)
