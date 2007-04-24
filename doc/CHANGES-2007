@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.906 2007/04/24 15:05:55 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.907 2007/04/24 15:26:32 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1778,3 +1778,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/gated to 3.5.11nb3 [tron 2007-04-24]
 	Updated net/tcpdump to 3.9.5 [ghen 2007-04-24]
 	Updated textproc/eb to 4.3 [uebayasi 2007-04-24]
+	Updated chat/navi2ch to 1.7.5.99.20070423 [uebayasi 2007-04-24]
