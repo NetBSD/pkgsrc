@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/02/20 23:12:21 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2007/04/24 15:01:03 uebayasi Exp $
 
---- Makefile.in.orig	2006-02-20 14:26:52.000000000 +0000
+--- Makefile.in.orig	2006-08-31 02:03:05.000000000 +0000
 +++ Makefile.in
-@@ -657,7 +657,7 @@ info-am:
+@@ -664,7 +664,7 @@ info-am:
  
  install-data-am: install-appendixDATA
  

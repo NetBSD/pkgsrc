@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.39 2006/04/07 18:40:46 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/04/24 15:01:03 uebayasi Exp $
 
-DISTNAME=	eb-4.1.3
-PKGREVISION=	2
+DISTNAME=	eb-4.3
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
 DISTFILES=	${EB_DISTFILES} \
-		${EB_LISTS} \
 		${EB_APPENDICES}
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
 COMMENT=	C library for accessing EB, EBG, EBXA and EPWING CD-ROM dictionaries
 
-EB_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-EB_LISTS=	LIST \
-		LIST-ja
+EB_DISTFILES=	${DISTNAME}.tar.bz2
 EB_APPENDICES=	\
 		cencro-1.0.tar.gz \
 		chujiten-2.3.tar.gz \
@@ -33,6 +29,7 @@ EB_APPENDICES=	\
 		genius2-1.1.tar.gz \
 		global-2.0.tar.gz \
 		heritage-2.2.tar.gz \
+		hyogen-1.0.tar.gz \
 		izumi-2.0.tar.gz \
 		jitenban-2.4.tar.gz \
 		jitenban97-2.1.tar.gz \
@@ -52,7 +49,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake gtar perl
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
@@ -78,16 +75,13 @@ INSTALLATION_DIRS=	share/eb/appendix
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-post-extract:
-	${RM} -rf ${WRKSRC}/zlib
-
 post-install:
-	for f in ${EB_LISTS}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$${f} ${EB_APPENDIXDIR}; \
-	done
-	for f in ${EB_APPENDICES}; do \
-		${GTAR} -C ${EB_APPENDIXDIR} -zxmf ${_DISTDIR}/$${f}; \
-	done
+	( \
+		cd ${EB_APPENDIXDIR} && \
+		for f in ${EB_APPENDICES}; do \
+			${EXTRACT_CMD} ${_DISTDIR}/$${f}; \
+		done \
+	)
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/eb.conf ${EGDIR}/eb.conf.default
 
