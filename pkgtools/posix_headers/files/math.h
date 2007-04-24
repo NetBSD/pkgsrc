@@ -1,7 +1,7 @@
-/* $NetBSD: math.h,v 1.1.1.1 2007/04/24 19:35:46 tnn Exp $ */
+/* $NetBSD: math.h,v 1.2 2007/04/24 23:12:44 tnn Exp $ */
 #ifndef _PKGSRC_MATH_H_
 #define _PKGSRC_MATH_H_
-#include "/usr/include/math.h"
+#include "@REAL_HEADER@"
 #ifdef __hpux
 /* Floatified math functions are not available. */
 #define floorf(x)	((float)floor (x))
