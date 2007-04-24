@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.68 2007/03/21 15:05:08 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.69 2007/04/24 22:44:20 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -98,6 +98,8 @@ case $hw_machine_arch in
 	*AMD\ Athlon\ XP\ *)		FLAGS='-march=athlon-xp'	;;
 	*AMD\ K7*|*AMD\ Athlon*)	FLAGS='-march=athlon'		;;
 	*AMD\ Unknown\ K7\ \(Athlon\)*) FLAGS='-march=athlon'		;;
+	*AMD\ Opteron\(tm\)\ Processor*) FLAGS='-march=opteron'		;;
+	*AMD\ Turion\(tm\)\ 64\ Mobile*) FLAGS='-march=athlon64'	;;
 	*386-class*)			FLAGS='-march=i386'		;;
 	*486-class*)			FLAGS='-march=i486'		;;
 	*586-class*)			FLAGS='-march=pentium'		;;
