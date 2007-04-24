@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.903 2007/04/23 14:17:30 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.904 2007/04/24 12:14:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/weechat to 0.2.4 [tonio 2007-04-23]
 	Updated net/p5-Net-eBay to 0.41 [abs 2007-04-23]
 	Updated games/openttd to 0.5.1nb1 [tnn 2007-04-23]
+	Updated net/gated to 3.5.11nb3 [tron 2007-04-24]
