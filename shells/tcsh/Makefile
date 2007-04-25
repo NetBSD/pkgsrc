@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/04/11 06:13:57 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/04/25 13:21:43 obache Exp $
 #
 
 DISTNAME=	tcsh-6.15.00
@@ -11,7 +11,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.tcsh.org/Welcome
 COMMENT=	Extended C-shell with many useful features
 
-CONFLICTS=	static-tcsh-[0-9]*
+CONFLICTS?=	static-tcsh-[0-9]*
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	all catalogs
