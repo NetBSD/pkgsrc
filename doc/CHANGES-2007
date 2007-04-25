@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.917 2007/04/25 12:05:14 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.918 2007/04/25 13:10:07 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1790,3 +1790,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ap2-jk to 1.2.22 [obache 2007-04-25]
 	Updated textproc/p5-YAML-Syck to 0.85 [hiramatsu 2007-04-25]
 	Removed devel/git-fvcs [dmcmahill 2007-04-25]
+	Updated mail/postfix to 2.4.0nb1 [ghen 2007-04-25]
