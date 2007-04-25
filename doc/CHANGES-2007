@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.915 2007/04/25 06:25:50 obache Exp $
+$NetBSD: CHANGES-2007,v 1.916 2007/04/25 09:41:25 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/apache-tomcat55 to 5.5.23 [obache 2007-04-25]
 	Updated www/ap-jk to 1.2.22 [obache 2007-04-25]
 	Updated www/ap2-jk to 1.2.22 [obache 2007-04-25]
+	Updated textproc/p5-YAML-Syck to 0.85 [hiramatsu 2007-04-25]
