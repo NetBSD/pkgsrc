@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/09/27 11:28:32 taca Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/25 18:06:51 tnn Exp $
 
---- command.c.orig	2004-02-04 13:52:26.000000000 +0900
+--- command.c.orig	2005-12-03 21:20:32.000000000 +0100
 +++ command.c
-@@ -203,7 +203,7 @@ exec_mca()
+@@ -204,7 +204,7 @@ exec_mca()
  			every_first_cmd = save(cbuf);
  		break;
  	case A_OPT_TOGGLE:
