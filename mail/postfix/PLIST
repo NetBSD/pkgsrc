@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/04/03 07:27:51 martti Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/04/25 13:09:35 ghen Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -39,6 +39,7 @@ man/man1/postlog.1
 man/man1/postmap.1
 man/man1/postqueue.1
 man/man1/postsuper.1
+man/man1/qshape.1
 man/man1/sendmail.1
 man/man5/access.5
 man/man5/aliases.5
