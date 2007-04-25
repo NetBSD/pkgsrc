@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6290 2007/04/25 06:25:50 obache Exp $
+$NetBSD: TODO,v 1.6291 2007/04/25 16:42:05 tnn Exp $
 
 Suggested new packages
 ======================
@@ -673,7 +673,6 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libelf-0.8.9
 	o libetpan-0.49
-	o libevent-1.3b
 	o libflash-0.4.13
 	o libgda-2.99.6
 	o libggi-2.2.2
