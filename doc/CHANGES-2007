@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.921 2007/04/25 17:22:10 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.922 2007/04/25 18:41:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1794,3 +1794,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libgphoto2 to 2.3.1nb3 [sborrill 2007-04-25]
 	Updated devel/libevent to 1.3b [tnn 2007-04-25]
 	Updated mail/sylpheed to 2.4.0 [xtraeme 2007-04-25]
+	Updated misc/less to 394 [tnn 2007-04-25]
+	Updated net/lftp to 3.5.11 [tnn 2007-04-25]
