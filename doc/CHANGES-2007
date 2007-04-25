@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.914 2007/04/25 06:16:41 obache Exp $
+$NetBSD: CHANGES-2007,v 1.915 2007/04/25 06:25:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1786,3 +1786,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/getmail to 4.7.4 [schmonz 2007-04-24]
 	Updated devel/cpuflags to 1.07 [abs 2007-04-24]
 	Updated www/apache-tomcat55 to 5.5.23 [obache 2007-04-25]
+	Updated www/ap-jk to 1.2.22 [obache 2007-04-25]
+	Updated www/ap2-jk to 1.2.22 [obache 2007-04-25]
