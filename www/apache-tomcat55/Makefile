@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/04/25 06:14:45 obache Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -9,7 +9,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://tomcat.apache.org/
 COMMENT=	The Apache Project's Java Servlet 2.4 and JSP 2.0 server
 
-TOMCAT_VERSION=	5.5.20
+TOMCAT_VERSION=	5.5.23
 
 USE_JAVA=	run
 # This needs java 1.5 or higher.
@@ -67,7 +67,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/conf/${CATALINA_DIR}/${f} ${EGDIR2}
 .endfor
 	${INSTALL_DATA_DIR} ${TOMCAT_LIB}
-	${RM} -r ${WRKSRC}/temp/*
+	${RM} -rf ${WRKSRC}/temp/*
 	@(cd ${WRKSRC} && ${PAX} -rw -pm . ${TOMCAT_LIB};		\
 	${FIND} ${TOMCAT_LIB} -type f -print | ${XARGS} ${CHMOD} a+r;	\
 	${FIND} ${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print	\

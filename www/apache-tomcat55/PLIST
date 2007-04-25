@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/22 19:43:55 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/04/25 06:14:45 obache Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -41,7 +41,7 @@ tomcat/server/lib/catalina-cluster.jar
 tomcat/server/lib/catalina-optional.jar
 tomcat/server/lib/catalina-storeconfig.jar
 tomcat/server/lib/catalina.jar
-tomcat/server/lib/commons-modeler.jar
+tomcat/server/lib/commons-modeler-2.0.jar
 tomcat/server/lib/servlets-cgi.renametojar
 tomcat/server/lib/servlets-default.jar
 tomcat/server/lib/servlets-invoker.jar
@@ -702,6 +702,7 @@ tomcat/webapps/tomcat-docs/printer/setup.html
 tomcat/webapps/tomcat-docs/printer/ssi-howto.html
 tomcat/webapps/tomcat-docs/printer/ssl-howto.html
 tomcat/webapps/tomcat-docs/printer/status.html
+tomcat/webapps/tomcat-docs/printer/virtual-hosting-howto.html
 tomcat/webapps/tomcat-docs/printer/windows-service-howto.html
 tomcat/webapps/tomcat-docs/proxy-howto.html
 tomcat/webapps/tomcat-docs/realm-howto.html
@@ -813,6 +814,7 @@ tomcat/webapps/tomcat-docs/setup.html
 tomcat/webapps/tomcat-docs/ssi-howto.html
 tomcat/webapps/tomcat-docs/ssl-howto.html
 tomcat/webapps/tomcat-docs/status.html
+tomcat/webapps/tomcat-docs/virtual-hosting-howto.html
 tomcat/webapps/tomcat-docs/windows-service-howto.html
 tomcat/webapps/webdav/WEB-INF/web.xml
 tomcat/webapps/webdav/index.html
