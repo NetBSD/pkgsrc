@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2007/02/11 05:22:24 tv Exp $
+# $NetBSD: Makefile,v 1.22 2007/04/25 16:39:41 tnn Exp $
 
 DISTNAME=	scanssh-2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://monkey.org/~provos/				\
 		ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/scanssh/
