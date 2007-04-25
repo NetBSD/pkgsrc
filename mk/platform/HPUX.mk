@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.3 2007/04/24 19:48:26 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.4 2007/04/25 13:29:11 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -71,7 +71,7 @@ PREFER.openssl?=	pkgsrc
 PREFER.zlib?=		pkgsrc
 
 .if defined(OS_VERSION) && ${OS_VERSION} == "11.11" && \
-    !defined(BUILDING_POSIX_HEADERS)
+    !defined(BUILDING_POSIX_HEADERS) && !make(bootstrap-register)
 .include "../../pkgtools/posix_headers/buildlink3.mk"
 .endif
 
