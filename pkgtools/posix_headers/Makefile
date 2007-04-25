@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/24 23:12:44 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/25 11:15:02 tnn Exp $
 
 DISTNAME=		posix_headers-0.4
 PKGREVISION=		1
@@ -42,9 +42,9 @@ do-build:
 .endfor
 
 do-install:
-	for h in ${POSIX_HEADERS.${OPSYS}}; do \
-		${INSTALL_DATA} ${WRKSRC}/"$$h" ${PREFIX}/include/"$$h"; \
-		${ECHO} include/"$$h" >> ${PLIST_SRC}; \
-	done
+.for header in ${POSIX_HEADERS.${OPSYS}}
+	${INSTALL_DATA} ${WRKSRC}/${header} ${PREFIX}/include/${header}
+	${ECHO} include/${header} >> ${PLIST_SRC}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
