@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.95 2007/04/14 14:17:49 tnn Exp $
+# $NetBSD: bootstrap,v 1.96 2007/04/25 13:24:24 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -375,6 +375,7 @@ HPUX)
 	need_awk=yes
 	need_sed=yes
 	set_opsys=no
+	machine_arch=`uname -m | sed 's/^9000.*$/hppa/'`
 	;;
 IRIX*)
 	if [ -d "/usr/freeware/bin" ]; then
