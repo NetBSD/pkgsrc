@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.919 2007/04/25 13:37:13 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.920 2007/04/25 16:42:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/git-fvcs [dmcmahill 2007-04-25]
 	Updated mail/postfix to 2.4.0nb1 [ghen 2007-04-25]
 	Updated devel/libgphoto2 to 2.3.1nb3 [sborrill 2007-04-25]
+	Updated devel/libevent to 1.3b [tnn 2007-04-25]
