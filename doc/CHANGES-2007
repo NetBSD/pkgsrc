@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.913 2007/04/24 22:45:03 abs Exp $
+$NetBSD: CHANGES-2007,v 1.914 2007/04/25 06:16:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1785,3 +1785,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added pkgtools/posix_headers version 0.4 [tnn 2007-04-24]
 	Updated mail/getmail to 4.7.4 [schmonz 2007-04-24]
 	Updated devel/cpuflags to 1.07 [abs 2007-04-24]
+	Updated www/apache-tomcat55 to 5.5.23 [obache 2007-04-25]
