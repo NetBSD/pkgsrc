@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2007/04/15 21:46:41 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2007/04/26 01:23:49 dmcmahill Exp $
 
 NetBSD 3.0 needs -liconv, too.
 
-CFLAGS, LDFLAGS and LIBS should be taken from the environment.
+AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 
 --- Makefile.orig	2007-04-12 01:41:44.000000000 +0000
 +++ Makefile
@@ -15,7 +15,18 @@ CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  ALL_CFLAGS = $(CFLAGS)
  ALL_LDFLAGS = $(LDFLAGS)
  STRIP ?= strip
-@@ -360,6 +358,7 @@ ifeq ($(uname_S),Darwin)
+@@ -154,10 +152,6 @@ GITWEB_SITE_FOOTER =
+ 
+ export prefix bindir gitexecdir template_dir
+ 
+-CC = gcc
+-AR = ar
+-TAR = tar
+-INSTALL = install
+ RPMBUILD = rpmbuild
+ 
+ # sparse is architecture-neutral, which means that we need to tell it
+@@ -360,6 +354,7 @@ ifeq ($(uname_S),Darwin)
  	NO_STRLCPY = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
@@ -23,7 +34,16 @@ CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  	NEEDS_SOCKET = YesPlease
  	NEEDS_NSL = YesPlease
  	SHELL_PATH = /bin/bash
-@@ -408,9 +407,7 @@ ifeq ($(uname_S),OpenBSD)
+@@ -377,8 +372,6 @@ ifeq ($(uname_S),SunOS)
+ 		NO_C99_FORMAT = YesPlease
+ 		NO_STRTOUMAX = YesPlease
+ 	endif
+-	INSTALL = ginstall
+-	TAR = gtar
+ 	BASIC_CFLAGS += -D__EXTENSIONS__
+ endif
+ ifeq ($(uname_O),Cygwin)
+@@ -408,9 +401,7 @@ ifeq ($(uname_S),OpenBSD)
  	BASIC_LDFLAGS += -L/usr/local/lib
  endif
  ifeq ($(uname_S),NetBSD)
@@ -34,7 +54,7 @@ CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  	BASIC_CFLAGS += -I/usr/pkg/include
  	BASIC_LDFLAGS += -L/usr/pkg/lib
  	ALL_LDFLAGS += -Wl,-rpath,/usr/pkg/lib
-@@ -648,7 +645,7 @@ prefix_SQ = $(subst ','\'',$(prefix))
+@@ -648,7 +639,7 @@ prefix_SQ = $(subst ','\'',$(prefix))
  SHELL_PATH_SQ = $(subst ','\'',$(SHELL_PATH))
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  
@@ -43,3 +63,18 @@ CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
  	-DETC_GITCONFIG='"$(ETC_GITCONFIG_SQ)"' $(COMPAT_CFLAGS)
+@@ -890,10 +881,10 @@ check: common-cmds.h
+ ### Installation rules
+ 
+ install: all
+-	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(bindir_SQ)'
+-	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(gitexecdir_SQ)'
+-	$(INSTALL) $(ALL_PROGRAMS) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
+-	$(INSTALL) git$X gitk '$(DESTDIR_SQ)$(bindir_SQ)'
++	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(bindir_SQ)'
++	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
++	$(BSD_INSTALL_SCRIPT) $(ALL_PROGRAMS) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
++	$(BSD_INSTALL_SCRIPT) git$X gitk '$(DESTDIR_SQ)$(bindir_SQ)'
+ 	$(MAKE) -C templates DESTDIR='$(DESTDIR_SQ)' install
+ 	$(MAKE) -C perl prefix='$(prefix_SQ)' install
+ 	$(MAKE) -C git-gui install
