@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2007/04/06 00:20:32 tv Exp $
+# $NetBSD: Makefile.common,v 1.42 2007/04/26 06:26:27 jnemeth Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -19,7 +19,7 @@ DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail/distinfo
 FILESDIR?=	${.CURDIR}/../../mail/sendmail/files
 PATCHDIR?=	${.CURDIR}/../../mail/sendmail/patches
 
-DIST_VERS=	8.13.8
+DIST_VERS=	8.14.1
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
 		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
@@ -36,14 +36,15 @@ MAKE_ENV+=	M4=${TOOLS_M4:Q}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+.PHONY: make-sendmail-siteconfig
 make-sendmail-siteconfig:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
 	${CHMOD} +w ${SITECONFIG}
 
 .if !empty(PKG_OPTIONS:Minet6)
 	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
-.if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS" && ${OPSYS} != "DragonFly"
+.  if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS" && ${OPSYS} != "DragonFly"
 	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
-.endif
+.  endif
 .endif
 	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}

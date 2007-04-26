@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.98 2007/04/19 19:24:09 joerg Exp $
+# $NetBSD: Makefile,v 1.99 2007/04/26 06:26:27 jnemeth Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	4
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -27,7 +26,7 @@ PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	../mailer.conf include/sm/conf.h smrsh/smrsh.8 cf/cf/Makefile
+SUBST_FILES.paths=	../mailer.conf smrsh/smrsh.8 cf/cf/Makefile
 SUBST_SED.paths+=	-e "s|@@BINGRP@@|${BINGRP}|g"
 SUBST_SED.paths+=	-e "s|@@BINOWN@@|${BINOWN}|g"
 SUBST_SED.paths+=	-e "s|@@INSTALL@@|${INSTALL}|g"
@@ -41,33 +40,33 @@ INSTALLATION_DIRS=	bin lib sbin
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
-	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mldap)
-	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mdb2)
-	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mdb4)
-	${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mtls)
-	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
-	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+	cat ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
 .endif
 
 post-extract:
-	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 do-build:
-	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
+	(cd ${WRKSRC} && env ${MAKE_ENV} ./Build)
 
 post-build:
-	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
-	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+	cp ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
+	cp ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
@@ -79,14 +78,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${PREFIX}/share/examples/sendmail/
-	cd ${WRKSRC}/cf && ${PAX} -rw -pp -pm -s',^.*\.orig$$,,' . ${PREFIX}/share/sendmail
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
+	cd ${WRKSRC}/cf && pax -rw -pp -pm -s',^.*\.orig$$,,' . ${PREFIX}/share/sendmail
+	chown -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
 
-	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsm/libsm.a \
+	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | tr \  . | tr \/ - | sed s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
 
 	${INSTALL_DATA} \
-		${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ - | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
+		${WRKSRC}/obj.`${UNAME} -srm | tr \  . | tr \/ - | sed s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmap*.pl \
 		${PREFIX}/share/examples/sendmail/
@@ -99,4 +98,4 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -`
+OBJDIR!=	${ECHO} obj.`${UNAME} -srm | tr \  . | tr \/ -`
