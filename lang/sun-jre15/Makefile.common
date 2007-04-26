@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2007/01/12 18:23:39 tv Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/04/26 20:07:30 tv Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
 EXTRACT_SUFX=	.bin
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/javase/downloads/index_jdk5.jsp
 DOWNLOAD_NAME=	${SHORT_NAME} 5.0 Update ${PKGNAME_NOREV:C/^.*\.//}
