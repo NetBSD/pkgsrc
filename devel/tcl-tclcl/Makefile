@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2007/01/16 21:25:59 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2007/04/26 15:32:24 minskim Exp $
 
-DISTNAME=	tclcl-src-1.18
+DISTNAME=	tclcl-src-1.19
 PKGNAME=	tcl-${DISTNAME:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
