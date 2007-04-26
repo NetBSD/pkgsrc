@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/04/21 10:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/04/26 01:23:48 dmcmahill Exp $
 #
 
 DISTNAME=	git-1.5.1.1
 PKGNAME=	scm${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
@@ -17,13 +18,14 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 MAKE_ENV+=	DESTDIR=""
 MAKE_ENV+=	HOME=${PREFIX:Q}
 USE_LANGUAGES=	c99
-USE_TOOLS+=	gmake perl:run sh:run
+USE_TOOLS+=	gmake perl:run sh:run wish:run tar
 EXTRACT_USING=	gtar
 
 MAKE_ENV+=	CURLDIR=${BUILDLINK_PREFIX.curl:Q}
 MAKE_ENV+=	PERL_PATH=${PERL5:Q}
 MAKE_ENV+=	PYTHON_PATH=${PYTHONBIN:Q}
 MAKE_ENV+=	SHELL_PATH=${SH:Q}
+MAKE_ENV+=	TAR=${TAR:Q}
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}

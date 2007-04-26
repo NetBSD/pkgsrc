@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2007/04/26 01:23:49 dmcmahill Exp $
+
+--- templates/Makefile.orig	2007-03-05 02:15:33.000000000 +0000
++++ templates/Makefile
+@@ -41,6 +41,6 @@ clean:
+ 	rm -rf blt boilerplates.made
+ 
+ install: all
+-	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(template_dir_SQ)'
++	$(BSD_INSTALL_DATA_DIR) '$(DESTDIR_SQ)$(template_dir_SQ)'
+ 	(cd blt && $(TAR) cf - .) | \
+ 	(cd '$(DESTDIR_SQ)$(template_dir_SQ)' && $(TAR) xf -)
