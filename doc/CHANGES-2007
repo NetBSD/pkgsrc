@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.922 2007/04/25 18:41:07 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.923 2007/04/26 06:57:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1796,3 +1796,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed to 2.4.0 [xtraeme 2007-04-25]
 	Updated misc/less to 394 [tnn 2007-04-25]
 	Updated net/lftp to 3.5.11 [tnn 2007-04-25]
+	Updated mail/sendmail to 8.14.1 [jnemeth 2007-04-26]
+	Updated mail/libmilter to 8.14.1 [jnemeth 2007-04-26]
