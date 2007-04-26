@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2007/04/23 22:08:30 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2007/04/26 14:31:48 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LESSTIF_BUILDLINK3_MK:=	${LESSTIF_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.lesstif?=	../../x11/lesstif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk" 
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/printproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
