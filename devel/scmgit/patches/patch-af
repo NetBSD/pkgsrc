@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2007/04/26 01:23:49 dmcmahill Exp $
+
+--- Documentation/Makefile.orig	2007-03-05 02:15:33.000000000 +0000
++++ Documentation/Makefile
+@@ -59,9 +59,10 @@ man1: $(DOC_MAN1)
+ man7: $(DOC_MAN7)
+ 
+ install: man
+-	$(INSTALL) -d -m755 $(DESTDIR)$(man1dir) $(DESTDIR)$(man7dir)
+-	$(INSTALL) -m644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
+-	$(INSTALL) -m644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(man1dir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(man7dir)
++	$(BSD_INSTALL_MAN) $(DOC_MAN1) $(DESTDIR)$(man1dir)
++	$(BSD_INSTALL_MAN) $(DOC_MAN7) $(DESTDIR)$(man7dir)
+ 
+ 
+ #

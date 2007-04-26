@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2007/04/26 01:23:49 dmcmahill Exp $
+
+--- git-gui/Makefile.orig	2007-04-12 01:41:44.000000000 +0000
++++ git-gui/Makefile
+@@ -54,8 +54,8 @@ $(patsubst %.sh,%,$(SCRIPT_SH)): GIT-VER
+ all:: $(ALL_PROGRAMS)
+ 
+ install: all
+-	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(gitexecdir_SQ)'
+-	$(INSTALL) git-gui '$(DESTDIR_SQ)$(gitexecdir_SQ)'
++	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
++	$(BSD_INSTALL_SCRIPT) git-gui '$(DESTDIR_SQ)$(gitexecdir_SQ)'
+ 	$(foreach p,$(GITGUI_BUILT_INS), rm -f '$(DESTDIR_SQ)$(gitexecdir_SQ)/$p' && ln '$(DESTDIR_SQ)$(gitexecdir_SQ)/git-gui' '$(DESTDIR_SQ)$(gitexecdir_SQ)/$p' ;)
+ 
+ dist-version:
