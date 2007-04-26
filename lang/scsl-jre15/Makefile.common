@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2007/02/15 14:40:37 rillig Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/04/26 20:14:29 tv Exp $
 
 DIST_VER=	1_5_0-p3-bin-duh1
 PKG_VER=	${DIST_VER:S/_/./g:S/-p/p/:S/-bin-duh/./}
@@ -7,7 +7,7 @@ CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://www.duh.org/NetBSD/java2/
 DOWNLOAD_NAME=	${SHORT_NAME} 5.0 for BSD
