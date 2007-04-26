@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
+$NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
 
---- channels/Makefile.orig	2006-08-17 23:57:19.000000000 +0200
-+++ channels/Makefile	2006-09-13 10:46:23.000000000 +0200
-@@ -22,12 +22,13 @@
+--- channels/Makefile.orig	2007-03-26 12:21:56.000000000 +0200
++++ channels/Makefile	2007-04-26 11:23:18.000000000 +0200
+@@ -24,12 +24,13 @@
  endif
  
  ifeq ($(findstring BSD,${OSARCH}),BSD)
@@ -17,45 +17,50 @@ $NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
  endif
  
  ifeq (${OSARCH},Linux)
-@@ -74,39 +75,39 @@
+@@ -76,43 +77,43 @@
  endif
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
 -  CHANNEL_LIBS+=chan_phone.so
-+#   CHANNEL_LIBS+=chan_phone.so
++#  CHANNEL_LIBS+=chan_phone.so
  endif
  
  ifneq ($(wildcard h323/libchanh323.a),)
 -  CHANNEL_LIBS+=chan_h323.so
-+#   CHANNEL_LIBS+=chan_h323.so
++#  CHANNEL_LIBS+=chan_h323.so
  endif
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/mISDNuser/mISDNlib.h),)
 -  CHANNEL_LIBS+=chan_misdn.so
 -  CFLAGS+=-Imisdn  
-+#   CHANNEL_LIBS+=chan_misdn.so
-+#   CFLAGS+=-Imisdn  
++#  CHANNEL_LIBS+=chan_misdn.so
++#  CFLAGS+=-Imisdn  
+ endif
+ 
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/mISDNdsp.h),)
+-  CFLAGS+=-DMISDN_1_2
++#  CFLAGS+=-DMISDN_1_2
  endif
  
  CFLAGS+=-Wno-missing-prototypes -Wno-missing-declarations
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/alsa/asoundlib.h),)
 -  CHANNEL_LIBS+=chan_alsa.so
-+#   CHANNEL_LIBS+=chan_alsa.so
++#  CHANNEL_LIBS+=chan_alsa.so
  endif
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libpri.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libpri.so.1),)
 -  CFLAGS+=-DZAPATA_PRI
 -  ZAPPRI=-lpri
-+#   CFLAGS+=-DZAPATA_PRI
-+#   ZAPPRI=-lpri
++#  CFLAGS+=-DZAPATA_PRI
++#  ZAPPRI=-lpri
  endif
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/lib/libmfcr2.so.1)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/lib/libmfcr2.so.1),)
 -  CFLAGS+=-DZAPATA_R2
 -  ZAPR2=-lmfcr2
-+#   CFLAGS+=-DZAPATA_R2
-+#   ZAPR2=-lmfcr2
++#  CFLAGS+=-DZAPATA_R2
++#  ZAPR2=-lmfcr2
  endif
  
  ALSA_SRC=chan_alsa.c
@@ -68,7 +73,7 @@ $NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
  endif
  
  ifndef WITHOUT_ZAPTEL
-@@ -122,10 +123,10 @@
+@@ -128,10 +129,10 @@
  endif
  endif # WITHOUT_ZAPTEL
  
@@ -83,7 +88,7 @@ $NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
  
  CFLAGS+=-DCRYPTO
  
-@@ -137,9 +138,9 @@
+@@ -143,9 +144,9 @@
  
  ZAPDIR=/usr/lib
  
@@ -96,7 +101,7 @@ $NetBSD: patch-ad,v 1.5 2006/09/16 15:29:35 hira Exp $
  
  ifndef OPENH323DIR
    OPENH323DIR=$(HOME)/openh323
-@@ -164,13 +165,13 @@
+@@ -171,13 +172,13 @@
    include .depend
  endif
  
