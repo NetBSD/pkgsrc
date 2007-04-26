@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.923 2007/04/26 06:57:30 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.924 2007/04/26 09:43:14 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/lftp to 3.5.11 [tnn 2007-04-25]
 	Updated mail/sendmail to 8.14.1 [jnemeth 2007-04-26]
 	Updated mail/libmilter to 8.14.1 [jnemeth 2007-04-26]
+	Updated comms/asterisk to 1.2.18 [mjl 2007-04-26]
