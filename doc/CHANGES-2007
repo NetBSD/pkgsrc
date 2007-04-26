@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.925 2007/04/26 15:29:13 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.926 2007/04/26 15:32:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1800,3 +1800,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/libmilter to 8.14.1 [jnemeth 2007-04-26]
 	Updated comms/asterisk to 1.2.18 [mjl 2007-04-26]
 	Updated lang/tcl-otcl to 1.13 [minskim 2007-04-26]
+	Updated devel/tcl-tclcl to 1.19 [minskim 2007-04-26]
