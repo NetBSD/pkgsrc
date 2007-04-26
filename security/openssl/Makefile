@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2007/04/24 14:10:37 tron Exp $
+# $NetBSD: Makefile,v 1.124 2007/04/26 21:11:05 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -85,7 +85,7 @@ SUBST_MESSAGE.dl=	Adding dynmamic link compatibility library.
 SUBST_STAGE.dl=		post-configure
 SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
 			crypto/pkcs7/Makefile fips/Makefile test/Makefile
-SUBST_SED.dl=		-e "s,^EX_LIBS=,EX_LIBS=${BUILDLINK_LDFLAGS.dlcompat} ,g"
+SUBST_SED.dl=		-e "s,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS} ,g"
 .endif
 
 .include "../../security/openssl/options.mk"
