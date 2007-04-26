@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2007/01/20 20:08:32 tv Exp $
+# $NetBSD: options.mk,v 1.17 2007/04/26 06:26:27 jnemeth Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers
@@ -13,7 +13,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	starttls:tls
 ###
 .if !empty(PKG_OPTIONS:Mdb2)
 .  include "../../databases/db/buildlink3.mk"
-.    elif !empty(PKG_OPTIONS:Mdb4)
+.elif !empty(PKG_OPTIONS:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
 .endif
 
