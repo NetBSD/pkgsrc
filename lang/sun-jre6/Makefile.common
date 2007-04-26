@@ -1,13 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1 2007/02/18 19:11:28 tv Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/04/26 20:35:33 tv Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
 EXTRACT_SUFX=	.bin
 
-MAINTAINER=	tv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/javase/downloads/index.jsp
-DOWNLOAD_NAME=	${SHORT_NAME} 5.0 Update ${PKGNAME_NOREV:C/^.*\.//}
 ARCHIVE=	http://java.sun.com/products/archive/
 
 LICENSE=	jdk13-license
@@ -57,7 +56,7 @@ FETCH_MESSAGE+=	" from:"
 FETCH_MESSAGE+=	"	${DOWNLOAD}"
 FETCH_MESSAGE+=	"	or ${ARCHIVE}"
 FETCH_MESSAGE+=	""
-FETCH_MESSAGE+=	" Click 'Download ${DOWNLOAD_NAME}', read and accept the"
+FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
 
 post-fetch:
