@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+
+--- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
++++ panel-plugin/battery.c	2007-04-25 02:57:46.000000000 +0900
+@@ -35,6 +35,7 @@
+ #include <sys/ioctl.h>
+ #include <machine/apmvar.h>
+ #define APMDEVICE "/dev/apm"
++#define _APM_BATT_UNKNOWN 0xffff /* from sys/dev/acpi/acpi_apm.c */
+ #elif __linux__
+ #include <libapm.h>
+ #endif
+@@ -209,7 +210,7 @@
+       battmon->method = BM_BROKEN;
+       fd = open(APMDEVICE, O_RDONLY);
+       if (fd == -1) return FALSE;
+-      +      if (ioctl(fd, APM_IOC_GETPOWER, &apm) == -1) {
++      if (ioctl(fd, APM_IOC_GETPOWER, &apm) == -1) {
+         close(fd);
+              return FALSE;
+     }
+@@ -302,13 +303,16 @@
+       battmon->method = BM_BROKEN;
+       fd = open(APMDEVICE, O_RDONLY);
+       if (fd == -1) return TRUE;
+-      if (ioctl(fd, APM_IOC_GETPOWER, &apminfo) == -1)
++      if (ioctl(fd, APM_IOC_GETPOWER, &apm) == -1)
+             return TRUE;
+       close(fd);
+       charge = apm.battery_life;
+       time_remaining = apm.minutes_left;
+       acline = apm.ac_state ? TRUE : FALSE;
+ 
++      if(battmon->timeoutid != 0) g_source_remove(battmon->timeoutid);
++      battmon->timeoutid = g_timeout_add(2 * 1024,
++              (GSourceFunc) update_apm_status, battmon);
+ #else
+     struct apm_info apm;
+     DBG ("Updating battery status...");
+@@ -477,7 +481,15 @@
+         }
+ 
+         gtk_widget_show((GtkWidget *)active_label);
+-        g_snprintf(buffer, sizeof(buffer),"%02d:%02d ",time_remaining/60,time_remaining%60);
++	if (acline
++#ifdef __NetBSD__
++	    || time_remaining == _APM_BATT_UNKNOWN
++#endif
++        )
++		g_snprintf(buffer, sizeof(buffer), "--:--");
++	else
++		g_snprintf(buffer, sizeof(buffer),"%02d:%02d ",
++			   time_remaining/60,time_remaining%60);
+         gtk_label_set_text(active_label,buffer);
+ 
+     } else {
