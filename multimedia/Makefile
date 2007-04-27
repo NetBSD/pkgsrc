@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2007/03/22 21:48:00 abs Exp $
+# $NetBSD: Makefile,v 1.106 2007/04/27 10:57:53 martti Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -108,6 +108,8 @@ SUBDIR+=	win32-codecs
 SUBDIR+=	x264-devel
 SUBDIR+=	xanim
 SUBDIR+=	xawtv
+SUBDIR+=	xfce4-mpc-plugin
+SUBDIR+=	xfce4-radio-plugin
 SUBDIR+=	xfmedia
 SUBDIR+=	xine-lib
 SUBDIR+=	xine-ui
