@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:48 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/04/27 22:17:13 seb Exp $
 #
 
 DISTNAME=	Text-CSV_XS-0.23
@@ -9,7 +9,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-# HOMEPAGE=	http://
+HOMEPAGE=	http://search.cpan.org/dist/Text-CSV_XS/
 COMMENT=	Routines for composition and decomposition of comma-separated values
 
 PERL5_PACKLIST=		auto/Text/CSV_XS/.packlist
