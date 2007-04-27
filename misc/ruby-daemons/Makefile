@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/02/04 00:05:28 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/27 19:45:07 minskim Exp $
 
-DISTNAME=	daemons-1.0.4
+DISTNAME=	daemons-1.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16466/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/17812/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
