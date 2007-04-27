@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/12/06 16:57:51 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2007/04/27 04:08:19 uebayasi Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR:Q}
 CONFIGURE_ARGS+=	--with-logdir=${NDTPD_LOGDIR:Q}
 CONFIGURE_ARGS+=	--with-eb
 CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR.eb}/eb.conf
+CONFIGURE_ARGS+=	--with-eb-conf=${PKG_SYSCONFDIR}/eb.conf
 
 CONFIGURE_ENV+=		ac_cv_path_BZIP2=bzip2
 CONFIGURE_ENV+=		ac_cv_path_COMPRESS=compress
