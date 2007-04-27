@@ -1,51 +1,40 @@
-$NetBSD: patch-ab,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-ab,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- defs.h	2006-01-12 05:18:53.000000000 -0500
-+++ defs.h	2006-03-04 22:25:02.000000000 -0500
-@@ -267,6 +267,37 @@
- #define PR_FAULTED      S_CORE
- #endif
- 
-+#if !defined(PTRACE_ATTACH) && defined(PT_ATTACH)
-+#define PTRACE_ATTACH PT_ATTACH
-+#endif
-+#if !defined(PTRACE_DETACH) && defined(PT_DETACH)
-+#define PTRACE_DETACH PT_DETACH
-+#endif
-+#if !defined(PTRACE_TRACEME) && defined(PT_TRACE_ME)
-+#define PTRACE_TRACEME PT_TRACE_ME
-+#endif
-+#if !defined(PTRACE_SYSCALL) && defined(PT_SYSCALL)
-+#define PTRACE_SYSCALL PT_SYSCALL
-+#endif
-+#if !defined(PTRACE_KILL) && defined(PT_KILL)
-+#define PTRACE_KILL PT_KILL
-+#endif
-+#if !defined(PTRACE_CONT) && defined(PT_CONTINUE)
-+#define PTRACE_CONT PT_CONTINUE
-+#endif
-+#if !defined(PTRACE_PEEKDATA) && defined(PT_READ_D)
-+#define PTRACE_PEEKDATA PT_READ_D
-+#endif
-+#if !defined(PTRACE_PEEKUSER) && defined(PT_READ_I)
-+#define PTRACE_PEEKUSER PT_READ_I
-+#endif
-+#if !defined(PTRACE_GETREGS) && defined(PT_GETREGS)
-+#define PTRACE_GETREGS PT_GETREGS
-+#endif
-+#if !defined(PTRACE_SETREGS) && defined(PT_SETREGS)
-+#define PTRACE_SETREGS PT_SETREGS
-+#endif
+--- /dev/null	2007-04-26 23:20:40.000000000 -0400
++++ netbsd/Makefile	2007-04-27 15:14:51.000000000 -0400
+@@ -0,0 +1,35 @@
 +
- /* Trace Control Block */
- struct tcb {
- 	short flags;		/* See below for TCB_ values */
-@@ -309,6 +340,8 @@
- #endif
- #ifdef FREEBSD
- 	struct procfs_status status;
-+#endif
-+#ifdef ALLBSD
- 	int pfd_reg;
- 	int pfd_status;
- #endif
++arch != uname -p
++
++DEP=	syscallent.h ioctlent.h errnoent.h signalent.h
++ALL=	${DEP}
++ALL+=	syscall.h ${arch}/errnoent1.h ${arch}/ioctlent1.h ${arch}/syscallent1.h ${arch}/signalent1.h
++
++all: ${ALL}
++
++syscallent.h: syscalls.pl syscalls.print syscalls.cat /usr/src/sys/kern/syscalls.master
++	@chmod +x syscalls.pl
++	syscalls.pl /usr/src/sys/kern/syscalls.master syscalls.print syscalls.cat > $@
++
++syscall.h: syscallent.h
++
++signalent.h: mksignal /usr/include/sys/signal.h
++	@chmod +x mksignal
++	mksignal /usr/include/sys/signal.h > $@
++
++errnoent.h: mkerrno /usr/include/sys/errno.h
++	@chmod +x mkerrno
++	mkerrno /usr/include/sys/errno.h > $@
++
++ioctlent.h: ioctlent.sh
++	@chmod +x ioctlent.sh
++	ioctlent.sh > $@
++
++.for i in ${DEP}
++${arch}/${i:R}1.h:
++	@mkdir -p ${arch}
++	echo '#include "../$i"' > $@
++.endfor
++
++clean:
++	rm -f ${ALL} ioctlent.c ioctlent
