@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.927 2007/04/27 11:16:06 martti Exp $
+$NetBSD: CHANGES-2007,v 1.928 2007/04/27 11:21:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1802,7 +1802,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/tcl-otcl to 1.13 [minskim 2007-04-26]
 	Updated devel/tcl-tclcl to 1.19 [minskim 2007-04-26]
 	Added multimedia/xfce4-mpc-plugin version 0.3.1 [martti 2007-04-27]
-	Added multimedia/xfce4-radio-plugin version 0.2.0 [martti 2007-04-27]
 	Added sysutils/xfce4-battery-plugin version 0.5.0 [martti 2007-04-27]
 	Added sysutils/xfce4-genmon-plugin version 3.1 [martti 2007-04-27]
 	Added textproc/xfce4-dict-plugin version 0.2.1 [martti 2007-04-27]

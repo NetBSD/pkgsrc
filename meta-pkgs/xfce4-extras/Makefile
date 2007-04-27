@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/04/27 11:18:25 martti Exp $
+# $NetBSD: Makefile,v 1.25 2007/04/27 11:21:47 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -30,7 +30,6 @@ do-install:
 .include "../../misc/xfce4-weather-plugin/buildlink3.mk"
 .include "../../net/xfce4-wavelan-plugin/buildlink3.mk"
 .include "../../multimedia/xfce4-mpc-plugin/buildlink3.mk"
-.include "../../multimedia/xfce4-radio-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-battery-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-cpugraph-plugin/buildlink3.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
