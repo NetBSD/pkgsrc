@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/04/23 03:21:04 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/04/27 19:31:08 minskim Exp $
 
 DISTNAME=	rubygems-0.9.2
 CATEGORIES=	misc ruby
@@ -13,7 +13,7 @@ RUBY_REQD=	1.8.3
 
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin
-REPLACE_FILE_PAT=	*
+REPLACE_FILE_PAT=	[a-z]*
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
