@@ -1,0 +1,277 @@
+$NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
+
+--- syscall.c.orig	2006-01-12 05:18:53.000000000 -0500
++++ syscall.c	2007-04-26 18:09:23.000000000 -0400
+@@ -38,9 +38,9 @@
+ #include <signal.h>
+ #include <time.h>
+ #include <errno.h>
++#include <sys/param.h>
+ #include <sys/user.h>
+ #include <sys/syscall.h>
+-#include <sys/param.h>
+ 
+ #if HAVE_ASM_REG_H
+ #if defined (SPARC) || defined (SPARC64)
+@@ -56,6 +56,10 @@
+ #endif
+ #endif
+ 
++#ifdef NETBSD
++#include <machine/reg.h>
++#include <x86/psl.h>
++#endif
+ #ifdef HAVE_SYS_REG_H
+ #include <sys/reg.h>
+ #ifndef PTRACE_PEEKUSR
+@@ -634,6 +638,7 @@
+ }
+ #endif
+ 
++#ifndef NETBSD
+ static void
+ decode_subcall(tcp, subcall, nsubcalls, style)
+ struct tcb *tcp;
+@@ -719,6 +724,7 @@
+ #endif /* FREEBSD */
+ 	}
+ }
++#endif /* !NETBSD */
+ #endif
+ 
+ struct tcb *tcp_last = NULL;
+@@ -855,9 +861,9 @@
+        static long rax;
+ #endif
+ #endif /* LINUX */
+-#ifdef FREEBSD
+-	struct reg regs;
+-#endif /* FREEBSD */
++#ifdef ALLBSD
++	static struct reg regs;
++#endif /* ALLBSD */
+ 
+ int
+ get_scno(tcp)
+@@ -1318,9 +1324,9 @@
+ #ifdef HAVE_PR_SYSCALL
+ 	scno = tcp->status.PR_SYSCALL;
+ #else /* !HAVE_PR_SYSCALL */
+-#ifndef FREEBSD
++#ifndef ALLBSD
+ 	scno = tcp->status.PR_WHAT;
+-#else /* FREEBSD */
++#else /* ALLBSD */
+ 	if (pread(tcp->pfd_reg, &regs, sizeof(regs), 0) < 0) {
+ 	        perror("pread");
+                 return -1;
+@@ -1334,8 +1340,45 @@
+ 	        scno = regs.r_eax;
+ 	        break;
+ 	}
+-#endif /* FREEBSD */
++#endif /* ALLBSD */
+ #endif /* !HAVE_PR_SYSCALL */
++#else /* !USE_PROCFS */
++#ifdef NETBSD
++	if (ptrace(PTRACE_GETREGS,pid,(char *)&regs, 0) < 0) {
++	        perror("GETREGS");
++		return -1;
++	}
++#ifdef __i386__
++	switch (regs.r_eax) {
++	case SYS_syscall:
++	case SYS___syscall:
++    	        if ((scno = ptrace(PTRACE_PEEKUSER, pid,
++		    (char *)regs.r_esp + sizeof(int), sizeof(int))) == -1) {
++			perror("PEEKUSER __syscall");
++			return -1;
++		}
++	        break;
++	default:
++	        scno = regs.r_eax;
++	        break;
++        }
++#endif
++#ifdef __x86_64__
++	switch (regs.regs[_REG_RAX]) {
++	case SYS_syscall:
++	case SYS___syscall:
++    	        if ((scno = ptrace(PTRACE_PEEKUSER, pid,
++		    (char *)regs.regs[_REG_URSP] + sizeof(regs.regs[0]), sizeof(regs.regs[0]))) == -1) {
++			perror("PEEKUSER __syscall");
++			return -1;
++		}
++	        break;
++	default:
++	        scno = regs.regs[_REG_RAX];
++	        break;
++        }
++#endif
++#endif /* NETBSD */
+ #endif /* USE_PROCFS */
+ 	if (!(tcp->flags & TCB_INSYSCALL))
+ 		tcp->scno = scno;
+@@ -1360,7 +1403,9 @@
+ struct tcb *tcp;
+ {
+ #ifndef USE_PROCFS
++#ifndef NETBSD
+ 	int pid = tcp->pid;
++#endif
+ #else /* USE_PROCFS */
+ 	int scno = known_scno(tcp);
+ 
+@@ -1733,17 +1778,36 @@
+ 		}
+ #endif /* MIPS */
+ #endif /* SVR4 */
+-#ifdef FREEBSD
++#ifdef ALLBSD
++#ifdef __i386__
+ 		if (regs.r_eflags & PSL_C) {
+  		        tcp->u_rval = -1;
+ 		        u_error = regs.r_eax;
+ 		} else {
+ 		        tcp->u_rval = regs.r_eax;
++#if 0
++			/* XXX Linux only */
+ 			tcp->u_lrval =
+ 			  ((unsigned long long) regs.r_edx << 32) +  regs.r_eax;
++#endif
+ 		        u_error = 0;
+ 		}
+-#endif /* FREEBSD */
++#endif
++#ifdef __x86_64__
++		if (regs.regs[_REG_RFL] & PSL_C) {
++ 		        tcp->u_rval = -1;
++		        u_error = regs.regs[_REG_RAX];
++		} else {
++		        tcp->u_rval = regs.regs[_REG_RAX];
++#if 0
++			/* XXX Linux only */
++			tcp->u_lrval =
++			  ((unsigned long long) regs.regs[_REG_RDX] << 64) +  regs.regs[_REG_RAX];
++#endif
++		        u_error = 0;
++		}
++#endif
++#endif /* ALLBSD */
+ 	tcp->u_error = u_error;
+ 	return 1;
+ }
+@@ -1926,6 +1990,32 @@
+                 return -1;
+         }
+ #endif /* FREEBSD */
++#ifdef NETBSD
++	if (ptrace(PTRACE_GETREGS, tcp->pid, (char *)&regs, 0) < 0)
++		return -1;
++#ifdef __i386__
++	if (error) {
++		regs.r_eflags |= PSL_C;
++		regs.r_eax = error;
++	}
++	else {
++		regs.r_eflags &= ~PSL_C;
++		regs.r_eax = rval;
++	}
++#endif
++#ifdef __x86_64__
++	if (error) {
++		regs.regs[_REG_RFL] |= PSL_C;
++		regs.regs[_REG_RAX] = error;
++	}
++	else {
++		regs.regs[_REG_RFL] &= ~PSL_C;
++		regs.regs[_REG_RAX] = rval;
++	}
++#endif
++	if (ptrace(PTRACE_SETREGS, tcp->pid, (char *)&regs, 0) < 0)
++		return -1;
++#endif /* NETBSD */
+ 
+ 	/* All branches reach here on success (only).  */
+ 	tcp->u_error = error;
+@@ -1938,7 +2028,9 @@
+ struct tcb *tcp;
+ {
+ #ifndef USE_PROCFS
++#ifndef NETBSD
+ 	int pid = tcp->pid;
++#endif
+ #endif /* !USE_PROCFS */
+ #ifdef LINUX
+ #if defined(S390) || defined(S390X)
+@@ -2236,6 +2328,50 @@
+ 	I DONT KNOW WHAT TO DO
+ #endif /* !HAVE_PR_SYSCALL */
+ #endif /* SVR4 */
++#ifdef NETBSD
++	if (tcp->scno >= 0 && tcp->scno < nsyscalls && sysent[tcp->scno].nargs != -1)
++		tcp->u_nargs = sysent[tcp->scno].nargs;
++	else
++		tcp->u_nargs = 5;
++#ifdef __i386__
++	switch(regs.r_eax) {
++	case SYS___syscall:
++		umoven(tcp, regs.r_esp + sizeof(int) + sizeof(quad_t),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++        case SYS_syscall:
++		umoven(tcp, regs.r_esp + 2 * sizeof(int),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++        default:
++		umoven(tcp, regs.r_esp + sizeof(int),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++	}
++#endif
++#ifdef __x86_64__
++	switch(regs.regs[_REG_RAX]) {
++	case SYS___syscall:
++		umoven(tcp, regs.regs[_REG_URSP] + sizeof(regs.regs[0]) + sizeof(quad_t),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++        case SYS_syscall:
++		umoven(tcp, regs.regs[_REG_URSP] + 2 * sizeof(regs.regs[0]),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++        default:
++		umoven(tcp, regs.regs[_REG_URSP] + sizeof(regs.regs[0]),
++		    tcp->u_nargs * sizeof(unsigned long),
++		    (char *) tcp->u_arg);
++		break;
++	}
++#endif
++#endif /* NETBSD */
+ #ifdef FREEBSD
+ 	if (tcp->scno >= 0 && tcp->scno < nsyscalls &&
+ 	    sysent[tcp->scno].nargs > tcp->status.val)
+@@ -2648,6 +2784,19 @@
+ 	pread(tcp->pfd_reg, &regs, sizeof(regs), 0);
+ 	val = regs.r_edx;
+ #endif
++#ifdef NETBSD
++	struct reg regs;
++	if (ptrace(PTRACE_GETREGS, tcp->pid, (char *)&regs, sizeof(regs)) < 0) {
++		perror("PTRACE_GETREGS get edx");
++		return -1;
++	}
++#ifdef __i386__
++	val = regs.r_edx;
++#endif
++#ifdef __x86_64__
++	val = regs.regs[_REG_RDX];
++#endif
++#endif /* NETBSD */
+ 	return val;
+ }
+ 
