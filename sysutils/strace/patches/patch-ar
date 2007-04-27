@@ -1,0 +1,50 @@
+$NetBSD: patch-ar,v 1.3 2007/04/27 19:45:02 christos Exp $
+
+--- sock.c.orig	2005-06-01 15:02:37.000000000 -0400
++++ sock.c	2007-04-27 11:31:51.000000000 -0400
+@@ -60,15 +60,23 @@
+ 	{ IFF_NOARP,		"IFF_NOARP"		},
+ 	{ IFF_PROMISC,		"IFF_PROMISC"		},
+ 	{ IFF_ALLMULTI,		"IFF_ALLMULTI"		},
++#ifdef IFF_MASTER
+ 	{ IFF_MASTER,		"IFF_MASTER"		},
++#endif
++#ifdef IFF_SLAVE
+ 	{ IFF_SLAVE,		"IFF_SLAVE"		},
++#endif
+ 	{ IFF_MULTICAST,	"IFF_MULTICAST"		},
++#ifdef IFF_PORTSEL
+ 	{ IFF_PORTSEL,		"IFF_PORTSEL"		},
++#endif
++#ifdef IFF_AUTOMEDIA
+ 	{ IFF_AUTOMEDIA,	"IFF_AUTOMEDIA"		},
++#endif
+ 	{ 0,			NULL			}
+ };
+ 
+-
++#ifndef ALLBSD
+ static void
+ print_addr(tcp, addr, ifr)
+ struct tcb *tcp;
+@@ -82,16 +90,19 @@
+ 	} else
+ 		printstr(tcp, addr, sizeof(ifr->ifr_addr.sa_data));
+ }
++#endif
+ 
+ int
+ sock_ioctl(tcp, code, arg)
+ struct tcb *tcp;
+ long code, arg;
+ {
+-	struct ifreq ifr;
+ 	struct ifconf ifc;
++#ifndef ALLBSD
++	struct ifreq ifr;
+ 	const char *str = NULL;
+ 	unsigned char *bytes;
++#endif
+ 
+ 	if (entering(tcp)) {
+ 		if (code == SIOCGIFCONF) {
