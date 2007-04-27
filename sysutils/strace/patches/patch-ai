@@ -1,40 +1,57 @@
-$NetBSD: patch-ai,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-ai,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- resource.c	2005-12-01 23:08:27.000000000 -0500
-+++ resource.c	2006-03-04 18:16:13.000000000 -0500
-@@ -41,7 +41,7 @@
- #ifdef SUNOS4
- #include <ufs/quota.h>
- #endif /* SUNOS4 */
--#if defined(SVR4) || defined(FREEBSD)
-+#if defined(SVR4) || defined(ALLBSD)
- #include <sys/times.h>
- #include <sys/time.h>
- #endif
-@@ -567,9 +567,9 @@
+--- ioctl.c.orig	2005-02-02 15:32:13.000000000 -0500
++++ ioctl.c	2007-04-27 11:35:05.000000000 -0400
+@@ -68,6 +68,7 @@
+ const struct ioctlent *ioctlent;
+ int nioctlents;
  
- #endif /* Linux */
++#ifndef NETBSD
+ static int
+ compare(a, b)
+ const void *a;
+@@ -77,11 +78,19 @@
+ 	unsigned long code2 = ((struct ioctlent *) b)->code;
+ 	return (code1 > code2) ? 1 : (code1 < code2) ? -1 : 0;
+ }
++#endif
  
--#if defined(SUNOS4) || defined(FREEBSD)
-+#if defined(SUNOS4) || defined(ALLBSD)
+ const struct ioctlent *
+ ioctl_lookup(code)
+ long code;
+ {
++#ifdef NETBSD
++	int i;
++	for (i = 0; i < nioctlents; i++)
++		if (ioctlent[i].code == code)
++			return  &ioctlent[i];
++	return NULL;
++#else
+ 	struct ioctlent *iop, ioent;
  
--#ifdef FREEBSD
-+#ifdef ALLBSD
- #include <ufs/ufs/quota.h>
- #endif
- 
-@@ -599,7 +599,7 @@
- 		tprintf(", ");
- 		printstr(tcp, tcp->u_arg[1], -1);
- #endif
--#ifdef FREEBSD
-+#ifdef ALLBSD
- 		printpath(tcp, tcp->u_arg[0]);
- 		tprintf(", ");
- 		printxval(quotacmds, tcp->u_arg[1], "Q_???");
-@@ -609,4 +609,4 @@
- 	return 0;
+ 	ioent.code = code;
+@@ -96,6 +105,7 @@
+ 			break;
+ 		}
+ 	return iop;
++#endif
  }
  
--#endif /* SUNOS4 || FREEBSD */
-+#endif /* SUNOS4 || ALLBSD */
+ const struct ioctlent *
+@@ -130,14 +140,14 @@
+ 	case 0x89:
+ #else /* !LINUX */
+ 	case 'r': case 's': case 'i':
+-#ifndef FREEBSD
++#ifndef ALLBSD
+ 	case 'p':
+ #endif
+ #endif /* !LINUX */
+ 		return sock_ioctl(tcp, code, arg);
+ #ifdef USE_PROCFS
+ #ifndef HAVE_MP_PROCFS
+-#ifndef FREEBSD
++#ifndef ALLBSD
+ 	case 'q':
+ #else
+ 	case 'p':

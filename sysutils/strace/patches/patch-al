@@ -1,113 +1,14 @@
-$NetBSD: patch-al,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-al,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- strace.c	2006-01-12 04:50:49.000000000 -0500
-+++ strace.c	2006-03-05 00:36:05.000000000 -0500
-@@ -820,13 +820,13 @@
- 	}
- #else
- 	/* Open the process pseudo-file in /proc. */
--#ifndef FREEBSD
-+#ifndef ALLBSD
- 	sprintf(proc, "/proc/%d", tcp->pid);
- 	if ((tcp->pfd = open(proc, O_RDWR|O_EXCL)) < 0) {
--#else /* FREEBSD */
-+#else /* ALLBSD */
- 	sprintf(proc, "/proc/%d/mem", tcp->pid);
- 	if ((tcp->pfd = open(proc, O_RDWR)) < 0) {
--#endif /* FREEBSD */
-+#endif /* ALLBSD */
- 		perror("strace: open(\"/proc/...\", ...)");
- 		return -1;
- 	}
-@@ -839,7 +839,7 @@
- 		return -1;
- 	}
- #endif
--#ifdef FREEBSD
-+#ifdef ALLBSD
- 	sprintf(proc, "/proc/%d/regs", tcp->pid);
- 	if ((tcp->pfd_reg = open(proc, O_RDONLY)) < 0) {
- 		perror("strace: open(\"/proc/.../regs\", ...)");
-@@ -853,7 +853,7 @@
- 		}
- 	} else
- 		tcp->pfd_status = -1;
--#endif /* FREEBSD */
-+#endif /* ALLBSD */
- 	rebuild_pollv();
- 	if (!attaching) {
- 		/*
-@@ -869,7 +869,7 @@
- 			    break;
- 		}
- 	}
--#ifndef FREEBSD
-+#ifndef ALLBSD
- 	/* Stop the process so that we own the stop. */
- 	if (IOCTL(tcp->pfd, PIOCSTOP, (char *)NULL) < 0) {
- 		perror("strace: PIOCSTOP");
-@@ -1204,8 +1204,10 @@
- int sig;
- {
- 	int error = 0;
-+#if defined(NETBSD) || defined(LINUX)
-+	int resumed, status;
-+#endif
- #ifdef LINUX
--	int status, resumed;
- 	struct tcb *zombie = NULL;
- 
- 	/* If the group leader is lingering only because of this other
-@@ -1219,16 +1221,18 @@
- 	if (tcp->flags & TCB_BPTSET)
- 		sig = SIGKILL;
- 
--#ifdef LINUX
-+#if defined(LINUX) || defined(NETBSD)
- 	/*
- 	 * Linux wrongly insists the child be stopped
- 	 * before detaching.  Arghh.  We go through hoops
- 	 * to make a clean break of things.
- 	 */
- #if defined(SPARC)
-+#ifdef PTRACE_SUNDETACH
- #undef PTRACE_DETACH
- #define PTRACE_DETACH PTRACE_SUNDETACH
- #endif
-+#endif
- 	if ((error = ptrace(PTRACE_DETACH, tcp->pid, (char *) 1, sig)) == 0) {
- 		/* On a clear day, you can see forever. */
- 	}
-@@ -1296,7 +1300,7 @@
- 			}
- 		}
- 	}
--#endif /* LINUX */
-+#endif /* NETBSD */
- 
- #if defined(SUNOS4)
- 	/* PTRACE_DETACH won't respect `sig' argument, so we post it here. */
-@@ -2047,9 +2051,9 @@
- 		pid = wait4(-1, &status, 0, cflag ? &ru : NULL);
- #endif /* __WALL */
- #endif /* LINUX */
--#ifdef SUNOS4
-+#if defined(SUNOS4) || defined(NETBSD)
- 		pid = wait(&status);
--#endif /* SUNOS4 */
-+#endif /* SUNOS4 || NETBSD */
- 		wait_errno = errno;
- 		if (interactive)
- 			sigprocmask(SIG_BLOCK, &blocked_set, NULL);
-@@ -2279,7 +2283,11 @@
- 				printtrailer(tcp);
- 			}
- 			if (((tcp->flags & TCB_ATTACHED) ||
-+#ifdef LINUX
- 			     tcp->nclone_threads > 0) &&
-+#else
-+			     0) &&
-+#endif
- 				!sigishandled(tcp, WSTOPSIG(status))) {
- #ifdef TCB_GROUP_EXITING
- 				handle_group_exit(tcp, WSTOPSIG(status));
+--- /dev/null	2007-04-26 23:20:40.000000000 -0400
++++ netbsd/mkerrno	2007-04-26 16:32:26.000000000 -0400
+@@ -0,0 +1,9 @@
++#!/usr/bin/awk -f
++BEGIN {
++	printf("\t\"ERRNO0\",\n");
++}
++/^#define[ 	]E/ {
++	if ($3 > 0) {
++		printf("\t\"%s\",\n", $2);
++	}
++}

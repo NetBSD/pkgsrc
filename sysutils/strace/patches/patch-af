@@ -1,66 +1,106 @@
-$NetBSD: patch-af,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-af,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- net.c	2005-07-04 19:33:38.000000000 -0400
-+++ net.c	2006-03-04 19:12:24.000000000 -0500
-@@ -43,12 +43,16 @@
- #endif
+--- configure.orig	2006-01-12 06:20:14.000000000 -0500
++++ configure	2007-04-27 11:31:55.000000000 -0400
+@@ -309,7 +309,7 @@
+ # include <unistd.h>
+ #endif"
  
- #include <netinet/in.h>
--#ifdef HAVE_NETINET_TCP_H
-+#if defined(HAVE_NETINET_TCP_H) || defined(NETBSD)
- #include <netinet/tcp.h>
- #endif
--#ifdef HAVE_NETINET_UDP_H
-+#if defined(HAVE_NETINET_UDP_H) || defined(NETBSD)
- #include <netinet/udp.h>
- #endif
-+#ifdef NETBSD
-+#include <sys/param.h>
-+#include <sys/ucred.h>
-+#endif
- #include <arpa/inet.h>
- #include <net/if.h>
- #if defined(LINUX)
-@@ -1125,12 +1129,21 @@
- 			free(cmsg);
- 			return;
- 		}
-+#if !defined(SCM_CREDENTIALS) && defined(SCM_CREDS)
-+#define SCM_CREDENTIALS SCM_CREDS
-+#endif
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT build build_cpu build_vendor build_os host host_cpu host_vendor host_os opsys arch LINUX_TRUE LINUX_FALSE I386_TRUE I386_FALSE X86_64_TRUE X86_64_FALSE SUNOS4_TRUE SUNOS4_FALSE SVR4_TRUE SVR4_FALSE FREEBSD_TRUE FREEBSD_FALSE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE WARNFLAGS CPP EGREP PERL LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar MAINTAINER_MODE_TRUE MAINTAINER_MODE_FALSE MAINT build build_cpu build_vendor build_os host host_cpu host_vendor host_os opsys arch LINUX_TRUE LINUX_FALSE I386_TRUE I386_FALSE X86_64_TRUE X86_64_FALSE SUNOS4_TRUE SUNOS4_FALSE SVR4_TRUE SVR4_FALSE FREEBSD_TRUE FREEBSD_FALSE NETBSD_TRUE NETBSD_FALSE ALLBSD_TRUE ALLBSD_FALSE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE WARNFLAGS CPP EGREP PERL LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -1882,6 +1882,24 @@
+ #define FREEBSD 1
+ _ACEOF
+ 
 +
- 		if (cmsg->cmsg_type == SCM_CREDENTIALS
- 		    && CMSG_LEN(sizeof(struct ucred)) <= cmsg_len) {
- 			struct ucred *uc = (struct ucred *) CMSG_DATA (cmsg);
++cat >>confdefs.h <<\_ACEOF
++#define ALLBSD 1
++_ACEOF
++
++	;;
++netbsd*)
++	opsys=netbsd
++
++cat >>confdefs.h <<\_ACEOF
++#define NETBSD 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define ALLBSD 1
++_ACEOF
++
+ 	;;
+ *)
+ 	echo "$as_me:$LINENO: result: NO!" >&5
+@@ -2092,6 +2110,26 @@
+ fi
  
-+#ifdef NETBSD
-+			tprintf("{uid=%ld, gid=%ld}}",
-+				(long)uc->cr_uid, (long)uc->cr_gid);
-+#else
- 			tprintf("{pid=%ld, uid=%ld, gid=%ld}}",
- 				(long)uc->pid, (long)uc->uid, (long)uc->gid);
-+#endif
- 			free(cmsg);
- 			return;
- 		}
-@@ -1470,7 +1483,7 @@
- 		else
- 			tprintf("[%u, %u]", fds[0], fds[1]);
- 	}
--#elif defined(SPARC) || defined(SPARC64) || defined(SH) || defined(SVR4) || defined(FREEBSD) || defined(IA64)
-+#elif defined(SPARC) || defined(SPARC64) || defined(SH) || defined(SVR4) || defined(ALLBSD) || defined(IA64)
- 	if (exiting(tcp))
- 		tprintf("[%lu, %lu]", tcp->u_rval, getrval2(tcp));
- #endif
-@@ -1517,9 +1530,9 @@
- 		else
- 			tprintf(", [%u, %u]", fds[0], fds[1]);
- #endif /* LINUX */
--#if defined(SUNOS4) || defined(SVR4) || defined(FREEBSD)
-+#if defined(SUNOS4) || defined(SVR4) || defined(ALLBSD)
- 		tprintf(", [%lu, %lu]", tcp->u_rval, getrval2(tcp));
--#endif /* SUNOS4 || SVR4 || FREEBSD */
-+#endif /* SUNOS4 || SVR4 || ALLBSD */
- 	}
- 	return 0;
- }
+ 
++
++if test x$opsys = xnetbsd; then
++  NETBSD_TRUE=
++  NETBSD_FALSE='#'
++else
++  NETBSD_TRUE='#'
++  NETBSD_FALSE=
++fi
++
++
++
++if test x$opsys = xnetbsd -o x$opsys = xfreebsd; then
++  ALLBSD_TRUE=
++  ALLBSD_FALSE='#'
++else
++  ALLBSD_TRUE='#'
++  ALLBSD_FALSE=
++fi
++
++
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'
+ ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+@@ -8511,6 +8549,20 @@
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${NETBSD_TRUE}" && test -z "${NETBSD_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"NETBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
++if test -z "${ALLBSD_TRUE}" && test -z "${ALLBSD_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"ALLBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"ALLBSD\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${AMDEP_TRUE}" && test -z "${AMDEP_FALSE}"; then
+   { { echo "$as_me:$LINENO: error: conditional \"AMDEP\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+@@ -8898,6 +8950,8 @@
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
+@@ -9104,6 +9158,10 @@
+ s,@SVR4_FALSE@,$SVR4_FALSE,;t t
+ s,@FREEBSD_TRUE@,$FREEBSD_TRUE,;t t
+ s,@FREEBSD_FALSE@,$FREEBSD_FALSE,;t t
++s,@NETBSD_TRUE@,$NETBSD_TRUE,;t t
++s,@NETBSD_FALSE@,$NETBSD_FALSE,;t t
++s,@ALLBSD_TRUE@,$ALLBSD_TRUE,;t t
++s,@ALLBSD_FALSE@,$ALLBSD_FALSE,;t t
+ s,@CC@,$CC,;t t
+ s,@CFLAGS@,$CFLAGS,;t t
+ s,@LDFLAGS@,$LDFLAGS,;t t

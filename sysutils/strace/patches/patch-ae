@@ -1,22 +1,26 @@
-$NetBSD: patch-ae,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-ae,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- ipc.c	2005-12-01 23:34:09.000000000 -0500
-+++ ipc.c	2006-03-04 18:14:08.000000000 -0500
-@@ -32,7 +32,7 @@
+--- configure.ac.orig	2006-01-12 06:18:27.000000000 -0500
++++ configure.ac	2007-04-27 11:31:50.000000000 -0400
+@@ -33,6 +33,12 @@
+ freebsd*)
+ 	opsys=freebsd
+ 	AC_DEFINE([FREEBSD], 1, [Define for the FreeBSD operating system.])
++	AC_DEFINE([ALLBSD], 1, [Define for the BSD-like operating system.])
++	;;
++netbsd*)
++	opsys=netbsd
++	AC_DEFINE([NETBSD], 1, [Define for the NetBSD operating system.])
++	AC_DEFINE([ALLBSD], 1, [Define for the BSD-like operating system.])
+ 	;;
+ *)
+ 	AC_MSG_RESULT([NO!])
+@@ -119,6 +125,8 @@
+ AM_CONDITIONAL([SUNOS4], [test x$opsys = xsunos4])
+ AM_CONDITIONAL([SVR4], [test x$opsys = xsvr4])
+ AM_CONDITIONAL([FREEBSD], [test x$opsys = xfreebsd])
++AM_CONDITIONAL([NETBSD], [test x$opsys = xnetbsd])
++AM_CONDITIONAL([ALLBSD], [test x$opsys = xnetbsd -o x$opsys = xfreebsd])
  
- #include "defs.h"
- 
--#if defined(LINUX) || defined(SUNOS4) || defined(FREEBSD)
-+#if defined(LINUX) || defined(SUNOS4) || defined(ALLBSD)
- 
- # ifdef HAVE_MQUEUE_H
- #  include <mqueue.h>
-@@ -411,7 +411,7 @@
- 	return 0;
- }
- 
--#endif /* defined(LINUX) || defined(SUNOS4) || defined(FREEBSD) */
-+#endif /* defined(LINUX) || defined(SUNOS4) || defined(ALLBSD) */
- 
- #ifdef LINUX
- int sys_mq_open(tcp)
+ AC_PROG_CC
+ AC_GNU_SOURCE

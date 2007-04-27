@@ -1,50 +1,22 @@
-$NetBSD: patch-ak,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-ak,v 1.2 2007/04/27 19:45:01 christos Exp $
 
---- sock.c	2005-06-01 15:02:37.000000000 -0400
-+++ sock.c	2006-03-05 02:02:18.000000000 -0500
-@@ -60,15 +60,23 @@
- 	{ IFF_NOARP,		"IFF_NOARP"		},
- 	{ IFF_PROMISC,		"IFF_PROMISC"		},
- 	{ IFF_ALLMULTI,		"IFF_ALLMULTI"		},
-+#ifdef IFF_MASTER
- 	{ IFF_MASTER,		"IFF_MASTER"		},
-+#endif
-+#ifdef IFF_SLAVE
- 	{ IFF_SLAVE,		"IFF_SLAVE"		},
-+#endif
- 	{ IFF_MULTICAST,	"IFF_MULTICAST"		},
-+#ifdef IFF_PORTSEL
- 	{ IFF_PORTSEL,		"IFF_PORTSEL"		},
-+#endif
-+#ifdef IFF_AUTOMEDIA
- 	{ IFF_AUTOMEDIA,	"IFF_AUTOMEDIA"		},
-+#endif
- 	{ 0,			NULL			}
- };
+--- ipc.c.orig	2005-12-01 23:34:09.000000000 -0500
++++ ipc.c	2007-04-27 11:31:50.000000000 -0400
+@@ -32,7 +32,7 @@
  
--
-+#ifndef ALLBSD
- static void
- print_addr(tcp, addr, ifr)
- struct tcb *tcp;
-@@ -82,16 +90,19 @@
- 	} else
- 		printstr(tcp, addr, sizeof(ifr->ifr_addr.sa_data));
+ #include "defs.h"
+ 
+-#if defined(LINUX) || defined(SUNOS4) || defined(FREEBSD)
++#if defined(LINUX) || defined(SUNOS4) || defined(ALLBSD)
+ 
+ # ifdef HAVE_MQUEUE_H
+ #  include <mqueue.h>
+@@ -411,7 +411,7 @@
+ 	return 0;
  }
-+#endif
  
- int
- sock_ioctl(tcp, code, arg)
- struct tcb *tcp;
- long code, arg;
- {
--	struct ifreq ifr;
- 	struct ifconf ifc;
-+#ifndef ALLBSD
-+	struct ifreq ifr;
- 	const char *str = NULL;
- 	unsigned char *bytes;
-+#endif
+-#endif /* defined(LINUX) || defined(SUNOS4) || defined(FREEBSD) */
++#endif /* defined(LINUX) || defined(SUNOS4) || defined(ALLBSD) */
  
- 	if (entering(tcp)) {
- 		if (code == SIOCGIFCONF) {
+ #ifdef LINUX
+ int sys_mq_open(tcp)
