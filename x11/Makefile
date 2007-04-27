@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2007/04/17 13:50:06 martti Exp $
+# $NetBSD: Makefile,v 1.498 2007/04/27 10:53:33 martti Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -404,11 +404,14 @@ SUBDIR+=	xfce3
 SUBDIR+=	xfce4-clipman-plugin
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-exo
+SUBDIR+=	xfce4-eyes-plugin
 SUBDIR+=	xfce4-gtk2-engine
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-notes-plugin
 SUBDIR+=	xfce4-panel
+SUBDIR+=	xfce4-places-plugin
+SUBDIR+=	xfce4-screenshooter-plugin
 SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-terminal
 SUBDIR+=	xfce4-utils
