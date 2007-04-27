@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.928 2007/04/27 11:21:49 martti Exp $
+$NetBSD: CHANGES-2007,v 1.929 2007/04/27 13:42:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1809,3 +1809,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xfce4-eyes-plugin version 4.4.0 [martti 2007-04-27]
 	Added x11/xfce4-places-plugin version 0.1.0 [martti 2007-04-27]
 	Added x11/xfce4-screenshooter-plugin version 1.0.0 [martti 2007-04-27]
+	Updated graphics/ruby-RMagick to 1.15.6 [obache 2007-04-27]
