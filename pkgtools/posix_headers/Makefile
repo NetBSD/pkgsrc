@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/04/25 11:15:02 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/27 13:54:24 tnn Exp $
 
 DISTNAME=		posix_headers-0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -18,8 +18,8 @@ ONLY_FOR_PLATFORM=	HPUX-11.11-* # add more as needed
 
 PLIST_SRC=		${WRKDIR}/PLIST_SRC
 
-POSIX_HEADERS.HPUX=	sys/select.h stdint.h math.h
-SUBST_HEADERS.HPUX=	math.h
+POSIX_HEADERS.HPUX=	sys/select.h stdint.h math.h resolv.h
+SUBST_HEADERS.HPUX=	math.h resolv.h
 
 BUILDING_POSIX_HEADERS=	yes
 
