@@ -1,0 +1,16 @@
+$NetBSD: patch-ck,v 1.1 2007/04/28 17:14:53 bouyer Exp $
+
+--- xenstore/xs_lib.c.orig	2007-01-08 16:00:53.000000000 +0100
++++ xenstore/xs_lib.c	2007-04-26 13:16:40.000000000 +0200
+@@ -79,8 +79,10 @@
+ 	if (s)
+ 		return s;
+ 
+-#ifdef __linux__
++#if defined(__linux__)
+ 	return "/proc/xen/xenbus";
++#elif defined(__NetBSD__)
++	return "/kern/xen/xenbus";
+ #else
+ 	return "/dev/xen/xenbus";
+ #endif

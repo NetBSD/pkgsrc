@@ -1,16 +1,16 @@
-$NetBSD: patch-ba,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-ba,v 1.3 2007/04/28 17:14:52 bouyer Exp $
 
---- python/Makefile.orig	2006-10-16 22:26:18.000000000 +0200
-+++ python/Makefile	2006-10-16 22:26:53.000000000 +0200
+--- python/Makefile.orig	2007-01-08 16:00:49.000000000 +0100
++++ python/Makefile	2007-04-25 18:39:08.000000000 +0200
 @@ -11,10 +11,10 @@
  .PHONY: install
  ifndef XEN_PYTHON_NATIVE_INSTALL
  install: all
--	CFLAGS="$(CFLAGS)" python setup.py install --home="$(DESTDIR)/usr" --prefix="" --force
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --home="$(DESTDIR)/usr" --prefix="" --force
 +	python setup.py install
  else
  install: all
--	CFLAGS="$(CFLAGS)" python setup.py install --root="$(DESTDIR)" --force
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --root="$(DESTDIR)" --force
 +	python setup.py install
  endif
  

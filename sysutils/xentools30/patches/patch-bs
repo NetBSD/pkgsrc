@@ -1,55 +1,16 @@
-$NetBSD: patch-bs,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-bs,v 1.3 2007/04/28 17:14:52 bouyer Exp $
 
---- xenstore/Makefile.orig	2006-10-04 04:28:30.000000000 +0200
-+++ xenstore/Makefile	2006-10-17 00:08:10.000000000 +0200
-@@ -33,6 +33,7 @@
- XENSTORED_OBJS = xenstored_core.o xenstored_watch.o xenstored_domain.o xenstored_transaction.o xs_lib.o talloc.o utils.o tdb.o hashtable.o
+--- xenstore/Makefile.orig	2007-01-08 16:00:52.000000000 +0100
++++ xenstore/Makefile	2007-04-25 18:45:31.000000000 +0200
+@@ -29,6 +29,7 @@
  
- XENSTORED_Linux = xenstored_linux.o
-+XENSTORED_NetBSD = xenstored_netbsd.o
+ XENSTORED_OBJS_$(CONFIG_Linux) = xenstored_linux.o
+ XENSTORED_OBJS_$(CONFIG_SunOS) = xenstored_solaris.o
++XENSTORED_OBJS_$(CONFIG_NetBSD) = xenstored_netbsd.o
  
- XENSTORED_OBJS += $(XENSTORED_$(OS))
+ XENSTORED_OBJS += $(XENSTORED_OBJS_y)
  
-@@ -40,31 +41,31 @@
- all: libxenstore.so libxenstore.a xenstored $(CLIENTS) xs_tdb_dump xenstore-control xenstore-ls
- 
- test_interleaved_transactions: test_interleaved_transactions.o
--	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
-+	$(LINK.o) $^ $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
- 
- .PHONY: testcode
- testcode: xs_test xenstored_test xs_random
- 
- xenstored: $(XENSTORED_OBJS)
--	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -lxenctrl -o $@
-+	$(LINK.o) $^ $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -lxenctrl -o $@
- 
- $(CLIENTS): xenstore-%: xenstore_%.o libxenstore.so
--	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
-+	$(LINK.o) $< $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
- 
- $(CLIENTS_OBJS): xenstore_%.o: xenstore_client.c
- 	$(COMPILE.c) -DCLIENT_$(*F) -o $@ $<
- 
- xenstore-control: xenstore_control.o libxenstore.so
--	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
-+	$(LINK.o) $< $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
- 
- xenstore-ls: xsls.o libxenstore.so
--	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
-+	$(LINK.o) $< $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
- 
- xenstored_test: xenstored_core_test.o xenstored_watch_test.o xenstored_domain_test.o xenstored_transaction_test.o xs_lib.o talloc_test.o fake_libxc.o utils.o tdb.o
--	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
-+	$(LINK.o) $^ $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -o $@
- 
- xs_tdb_dump: xs_tdb_dump.o utils.o tdb.o talloc.o
--	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
-+	$(LINK.o) $^ $(LOADLIBES)  $(LDFLAGS) $(LDLIBS) -o $@
- 
- xs_test xs_random xs_stress xs_crashme: LDFLAGS+=-lpthread
- xs_test: xs_test.o xs_lib.o utils.o
-@@ -172,19 +173,17 @@
+@@ -168,22 +169,20 @@
  
  .PHONY: install
  install: all
@@ -83,3 +44,6 @@ $NetBSD: patch-bs,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 +	$(BSD_INSTALL_LIB) libxenstore.a $(PREFIX)/lib
 +	$(BSD_INSTALL_DATA) xs.h $(PREFIX)/include
 +	$(BSD_INSTALL_DATA) xs_lib.h $(PREFIX)/include
+ 
+ -include $(PROG_DEP)
+ 

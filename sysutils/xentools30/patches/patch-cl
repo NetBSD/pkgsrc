@@ -1,0 +1,12 @@
+$NetBSD: patch-cl,v 1.1 2007/04/28 17:14:53 bouyer Exp $
+
+--- python/xen/xend/server/XMLRPCServer.py.orig	2007-04-26 19:26:44.000000000 +0200
++++ python/xen/xend/server/XMLRPCServer.py	2007-04-26 19:26:52.000000000 +0200
+@@ -177,6 +177,7 @@
+         # -----------------------------------------------------------------
+         try:
+             self.server.socket.settimeout(1.0)
++	    self.server.socket.setblocking(True);
+             while self.running:
+                 self.server.handle_request()
+         finally:

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-aa,v 1.3 2007/04/28 17:14:50 bouyer Exp $
 
---- Makefile.orig	2006-10-04 04:27:58.000000000 +0200
-+++ Makefile	2006-10-17 00:20:51.000000000 +0200
-@@ -5,24 +5,16 @@
+--- Makefile.orig	2007-01-08 16:00:46.000000000 +0100
++++ Makefile	2007-04-25 18:22:10.000000000 +0200
+@@ -5,27 +5,18 @@
  SUBDIRS-y += libxc
  SUBDIRS-y += xenstore
  SUBDIRS-y += misc
@@ -19,6 +19,9 @@ $NetBSD: patch-aa,v 1.2 2006/10/19 22:57:13 bouyer Exp $
  SUBDIRS-y += xenstat
 -SUBDIRS-y += libaio
 -SUBDIRS-y += blktap
+-SUBDIRS-y += libfsimage
+ SUBDIRS-$(XENFB_TOOLS) += xenfb
+ SUBDIRS-$(LIBXENAPI_BINDINGS) += libxen
  
  # These don't cross-compile
  ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))
@@ -27,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2006/10/19 22:57:13 bouyer Exp $
  endif
  
  .PHONY: all
-@@ -30,34 +22,27 @@
+@@ -33,34 +24,27 @@
  	@set -e; for subdir in $(SUBDIRS-y); do \
  		$(MAKE) -C $$subdir $@; \
  	done
@@ -61,4 +64,4 @@ $NetBSD: patch-aa,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 -	$(MAKE) -C check clean
  
  .PHONY: ioemu ioemuinstall ioemuclean
- ifdef CONFIG_IOEMU
+ ifeq ($(CONFIG_IOEMU),y)

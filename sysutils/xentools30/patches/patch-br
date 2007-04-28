@@ -1,12 +1,13 @@
-$NetBSD: patch-br,v 1.3 2006/11/05 20:39:46 rillig Exp $
+$NetBSD: patch-br,v 1.4 2007/04/28 17:14:52 bouyer Exp $
 
---- xenstat/xentop/Makefile.orig	2006-10-16 22:38:10.000000000 +0200
-+++ xenstat/xentop/Makefile	2006-10-16 22:38:38.000000000 +0200
-@@ -36,8 +36,8 @@
+--- xenstat/xentop/Makefile.orig	2007-01-08 16:00:52.000000000 +0100
++++ xenstat/xentop/Makefile	2007-04-25 18:43:18.000000000 +0200
+@@ -33,9 +33,8 @@
  
  .PHONY: install
  install: xentop xentop.1
 -	$(INSTALL_PROG) xentop $(DESTDIR)$(sbindir)/xentop
+-	$(INSTALL_DIR) $(DESTDIR)$(man1dir)
 -	$(INSTALL_DATA) xentop.1 $(DESTDIR)$(man1dir)/xentop.1
 +	$(BSD_INSTALL_PROGRAM) xentop $(PREFIX)/sbin
 +	$(BSD_INSTALL_DATA) xentop.1 $(PREFIX)/$(PKGMANDIR)/man1

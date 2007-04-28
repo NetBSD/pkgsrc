@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-bb,v 1.3 2007/04/28 17:14:52 bouyer Exp $
 
---- python/xen/xend/XendRoot.py.orig	2006-10-16 22:27:14.000000000 +0200
-+++ python/xen/xend/XendRoot.py	2006-10-16 22:27:58.000000000 +0200
-@@ -40,16 +40,16 @@
+--- python/xen/xend/XendRoot.py.orig	2007-04-25 22:26:04.000000000 +0200
++++ python/xen/xend/XendRoot.py	2007-04-25 22:26:18.000000000 +0200
+@@ -37,7 +37,7 @@
      """Root of the management classes."""
  
      """Default path to the config file."""
@@ -11,14 +11,3 @@ $NetBSD: patch-bb,v 1.2 2006/10/19 22:57:13 bouyer Exp $
  
      """Environment variable used to override config_default."""
      config_var     = "XEND_CONFIG"
- 
-     """Where network control scripts live."""
--    network_script_dir = "/etc/xen/scripts"
-+    network_script_dir = "@XENDCONFDIR@/scripts"
- 
-     """Where block control scripts live."""
--    block_script_dir = "/etc/xen/scripts"
-+    block_script_dir = "@XENDCONFDIR@/scripts"
- 
-     """Default path to the log file. """
-     logfile_default = "/var/log/xen/xend.log"

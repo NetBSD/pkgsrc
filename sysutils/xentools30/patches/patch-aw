@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-aw,v 1.3 2007/04/28 17:14:52 bouyer Exp $
 
---- misc/Makefile.orig	2006-10-04 04:28:16.000000000 +0200
-+++ misc/Makefile	2006-10-17 00:12:40.000000000 +0200
-@@ -15,27 +15,26 @@
+--- misc/Makefile.orig	2007-01-08 16:00:49.000000000 +0100
++++ misc/Makefile	2007-04-25 18:37:08.000000000 +0200
+@@ -11,8 +11,10 @@
  
  TARGETS  = xenperf xc_shadow
  
@@ -15,14 +15,7 @@ $NetBSD: patch-aw,v 1.2 2006/10/19 22:57:13 bouyer Exp $
  
  .PHONY: all
  all: build
- 
- .PHONY: build
- build: $(TARGETS)
--	$(MAKE) -C miniterm
--ifeq ($(CONFIG_MBOOTPACK),y)
--	$(MAKE) -C mbootpack
--endif
--	$(MAKE) -C lomount
+@@ -24,11 +26,13 @@
  
  .PHONY: install
  install: build
@@ -40,8 +33,8 @@ $NetBSD: patch-aw,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 +#	$(MAKE) -C lomount install
  #       No sense in installing miniterm on the Xen box.
  #	$(MAKE) -C miniterm install
- #       Likewise mbootpack
-@@ -52,4 +51,4 @@
+ 
+@@ -42,4 +46,4 @@
  	$(CC) -c $(CFLAGS) -o $@ $<
  
  $(TARGETS): %: %.o Makefile

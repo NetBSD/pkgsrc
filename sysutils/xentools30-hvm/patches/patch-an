@@ -1,24 +1,24 @@
-$NetBSD: patch-an,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
+$NetBSD: patch-an,v 1.2 2007/04/28 17:14:54 bouyer Exp $
 
---- firmware/Makefile.orig	2006-10-04 04:28:02.000000000 +0200
-+++ firmware/Makefile	2006-10-18 17:34:43.000000000 +0200
+--- firmware/Makefile.orig	2007-01-08 16:00:48.000000000 +0100
++++ firmware/Makefile	2007-04-26 21:34:58.000000000 +0200
 @@ -4,7 +4,7 @@
  # hvmloader is a 32-bit protected mode binary.
  # It belongs in /usr/lib, not /usr/lib64.
  TARGET      := hvmloader/hvmloader
--INSTALL_DIR := $(DESTDIR)/usr/lib/xen/boot
-+INSTALL_DIR := $(PREFIX)/lib/xen/boot
+-INST_DIR := $(DESTDIR)/usr/lib/xen/boot
++INST_DIR := $(PREFIX)/lib/xen/boot
  
  SUBDIRS :=
  SUBDIRS += rombios
-@@ -29,8 +29,8 @@
+@@ -28,8 +28,8 @@
  
  .PHONY: install
  install: all
--	[ -d $(INSTALL_DIR) ] || install -d -m0755 $(INSTALL_DIR)
--	[ ! -e $(TARGET) ] || install -m0644 $(TARGET) $(INSTALL_DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)
-+	$(BSD_INSTALL_DATA) $(TARGET) $(INSTALL_DIR)
+-	[ -d $(INST_DIR) ] || $(INSTALL_DIR) $(INST_DIR)
+-	[ ! -e $(TARGET) ] || $(INSTALL_DATA) $(TARGET) $(INST_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(INST_DIR)
++	$(BSD_INSTALL_DATA) $(TARGET) $(INST_DIR)
  
  .PHONY: clean
  clean: 
