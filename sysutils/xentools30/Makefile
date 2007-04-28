@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/28 17:14:50 bouyer Exp $
 #
 
-DISTNAME=		xen-3.0.3_0-src
-PKGNAME=		xentools30-3.0.3
-PKGREVISION=		2
+DISTNAME=		xen-3.0.4_1-src
+PKGNAME=		xentools30-3.0.4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
-			http://bits.xensource.com/oss-xen/release/3.0.3-0/src.tgz/
+			http://bits.xensource.com/oss-xen/release/3.0.4-1/src.tgz/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
@@ -22,19 +21,20 @@ ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
 
-WRKSRC=			${WRKDIR}/xen-3.0.3_0-src/tools
+WRKSRC=			${WRKDIR}/xen-3.0.4_1-src/tools
 CHECK_PORTABILITY_SKIP=	examples/*
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST=		EGDIR=${EGDIR}
 
+USE_TOOLS+=		perl 	#for pod2man
 USE_TOOLS+=		gmake
 MAKE_ENV+=		CONFIG_NetBSD=yes
 MAKE_ENV+=		CONFIG_MBOOTPACK=no
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		XEN_TARGET_ARCH="x86_32"
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
+PYTHON_VERSIONS_ACCEPTED= 24 23
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS+=	misc/xm
 PYTHON_PATCH_SCRIPTS+=	misc/netfix
@@ -42,7 +42,6 @@ PYTHON_PATCH_SCRIPTS+=	misc/xen-bugtool
 PYTHON_PATCH_SCRIPTS+=	misc/xencons
 PYTHON_PATCH_SCRIPTS+=	misc/xend
 PYTHON_PATCH_SCRIPTS+=	misc/xensymoops
-PYTHON_PATCH_SCRIPTS+=	pygrub/src/fsys/ext2/test.py
 PYTHON_PATCH_SCRIPTS+=	pygrub/src/pygrub
 PYTHON_PATCH_SCRIPTS+=	python/xen/util/bugtool.py
 PYTHON_PATCH_SCRIPTS+=	python/xen/xend/sxp.py
@@ -66,13 +65,12 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 SUBST_CLASSES+=		pathsvar
 SUBST_STAGE.pathsvar=	pre-configure
-SUBST_FILES.pathsvar=	debugger/pdb/xcs.ml \
-			examples/init.d/sysconfig.xendomains \
+SUBST_FILES.pathsvar=	examples/init.d/sysconfig.xendomains \
 			examples/xend-config.sxp \
 			python/xen/xend/server/relocate.py \
 			python/xen/xend/XendRoot.py \
 			security/Makefile security/python/xensec_gen/main.py \
-			xenstore/Makefile xenstore/xs_lib.c
+			xenstore/xs_lib.c
 SUBST_SED.pathsvar=	-e "s|/var/lib|${VARBASE}/run|g"
 
 SUBST_CLASSES+=		py
@@ -84,16 +82,12 @@ SUBST_SED.py=		-e "s,python,${PYTHONBIN},g"
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	ioemu/configure
-SUBST_FILES.conf+=	ioemu/vl.c
-SUBST_FILES.conf+=	python/xen/xend/XendRoot.py
-SUBST_FILES.conf+=	python/xen/xm/tests/test_create.py
+SUBST_FILES.conf=	python/xen/xend/XendRoot.py
+SUBST_FILES.conf+=	python/xen/xend/osdep.py
 SUBST_FILES.conf+=	python/xen/xm/create.py
 SUBST_FILES.conf+=	python/xen/xm/addlabel.py
 SUBST_FILES.conf+=	python/xen/xm/getlabel.py
 SUBST_FILES.conf+=	python/xen/xm/rmlabel.py
-SUBST_FILES.conf+=	security/example.txt
-SUBST_FILES.conf+=	security/secpol_xml2bin.h
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
 SUBST_CLASSES+=		prefix
@@ -106,13 +100,9 @@ SUBST_SED.prefix=	-e "s,@PREFIX@,${PREFIX},g"
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		proc
 SUBST_STAGE.proc=	pre-configure
-SUBST_FILES.proc=	libxc/xc_misc.c
-SUBST_FILES.proc+=	python/xen/xend/XendVnet.py
+SUBST_FILES.proc=	python/xen/xend/XendVnet.py
 SUBST_FILES.proc+=	python/xen/xend/balloon.py
-SUBST_FILES.proc+=	security/secpol_tool.c
-SUBST_FILES.proc+=	xenmon/xenbaked.c
 SUBST_FILES.proc+=	xenstore/xs_lib.c
-SUBST_FILES.proc+=	xentrace/xentrace.c
 SUBST_SED.proc=		-e "s|/proc|/kern|g"
 PROCPATH=		/kern
 .else
@@ -141,6 +131,12 @@ pre-build:
 		${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
 	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || \
 		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
+	${CP} ${FILESDIR}/NetBSD.mk ${WRKSRC}/../config/
+	pod2man ${WRKSRC}/../docs/man/xend-config.sxp.pod.5 \
+	    ${WRKDIR}/xend-config.sxp.5
+	pod2man ${WRKSRC}/../docs/man/xmdomain.cfg.pod.5 \
+	    ${WRKDIR}/xmdomain.cfg.5
+	pod2man ${WRKSRC}/../docs/man/xm.pod.1 ${WRKDIR}/xm.1
 
 .if ${OPSYS} == "NetBSD"
 post-build:
@@ -171,6 +167,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
 .endfor
 	${RM} -rf ${PREFIX}/lib/xen
+	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${PREFIX}/man/man5
+	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${PREFIX}/man/man5
+	${INSTALL_DATA} ${WRKDIR}/xm.1 ${PREFIX}/man/man1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
