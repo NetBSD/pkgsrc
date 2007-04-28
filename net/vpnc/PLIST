@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/03 21:48:17 hubertf Exp $
-bin/vpnc
+@comment $NetBSD: PLIST,v 1.3 2007/04/28 20:17:11 hubertf Exp $
 bin/vpnc-disconnect
 man/man8/vpnc.8
+sbin/vpnc
 share/doc/vpnc/README
 share/examples/vpnc/vpnc.conf
 share/examples/vpnc/vpnc-script
