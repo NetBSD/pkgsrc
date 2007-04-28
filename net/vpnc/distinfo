@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2006/09/27 12:50:29 hubertf Exp $
+$NetBSD: distinfo,v 1.8 2007/04/28 20:17:12 hubertf Exp $
 
-SHA1 (vpnc-0.3.3.tar.gz) = 95559e1c5b1f4bc78dc1a0b9f95e1a2d65a84c0a
-RMD160 (vpnc-0.3.3.tar.gz) = ffcb229fb8cac18f8d6dea0e67f88cec420f31da
-Size (vpnc-0.3.3.tar.gz) = 59939 bytes
-SHA1 (patch-aa) = b7645f093f1c3bfbdf81871b3582273a1e6ddda0
-SHA1 (patch-ab) = 5dff14059698724e3cb5478c005b5e229fd03dbf
-SHA1 (patch-ac) = 04402b87425c32dc6c72a21a7e0cdcbe60965acb
-SHA1 (patch-ad) = d386a3861f6c272b6471732089067a842757bdcb
+SHA1 (vpnc-0.4.0.tar.gz) = e39b63bbebf37758e8fb7eb2ec44dfc9b7afdaab
+RMD160 (vpnc-0.4.0.tar.gz) = 1640481601074d4517746f6e3b147b12f24b06e3
+Size (vpnc-0.4.0.tar.gz) = 75491 bytes
+SHA1 (patch-aa) = 80c183434e635cb95a0a6f0a481b118e654e6699
+SHA1 (patch-ab) = 458f86249e20d1948b5f99f5d4f39c35b19a0e13
+SHA1 (patch-ac) = 3f680616b4d49b3f6b525fc75669166798819376
