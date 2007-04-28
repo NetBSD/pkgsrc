@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/04/27 13:54:24 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/04/28 21:03:56 tnn Exp $
 
-BUILD_DEPENDS+=		posix_headers>=0.4nb2:../../pkgtools/posix_headers
+BUILD_DEPENDS+=		posix_headers>=0.4nb5:../../pkgtools/posix_headers
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POSIX_HEADERS_BUILDLINK3_MK:=	${POSIX_HEADERS_BUILDLINK3_MK}+
