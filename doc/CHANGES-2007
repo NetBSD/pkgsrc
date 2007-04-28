@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.934 2007/04/28 10:17:26 seb Exp $
+$NetBSD: CHANGES-2007,v 1.935 2007/04/28 11:28:35 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1815,3 +1815,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/ruby-gem_plugin to 0.2.2 [minskim 2007-04-27]
 	Updated devel/apr-util to 1.2.8nb1 [minskim 2007-04-28]
 	Added devel/p5-Sub-Installer version 0.0.3 [seb 2007-04-28]
+	Added devel/p5-Sort-Maker version 0.06 [seb 2007-04-28]
