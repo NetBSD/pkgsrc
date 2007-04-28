@@ -1,4 +1,4 @@
-# $NetBSD: transform-ccc-cc,v 1.4 2006/11/30 11:58:55 rillig Exp $
+# $NetBSD: transform-ccc-cc,v 1.5 2007/04/28 21:32:30 tnn Exp $
 #
 
 transform_setname "transform-ccc-cc"
@@ -10,7 +10,7 @@ case $arg in
 -[DILlU]?*	|\
 -O[01]		) transform_pass ;;
 
-# XXX: What's the benefit of -g3 over -g?
+# -g3 is required if debugging is wanted while optimizing with -O2. 
 -g		) transform_to "-g3" ;;
 
 # Directories for the runtime library search path are passed via
