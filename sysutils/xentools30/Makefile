@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/04/28 17:14:50 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/28 17:41:31 bouyer Exp $
 #
 
 DISTNAME=		xen-3.0.4_1-src
@@ -132,11 +132,15 @@ pre-build:
 	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || \
 		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
 	${CP} ${FILESDIR}/NetBSD.mk ${WRKSRC}/../config/
-	pod2man ${WRKSRC}/../docs/man/xend-config.sxp.pod.5 \
-	    ${WRKDIR}/xend-config.sxp.5
-	pod2man ${WRKSRC}/../docs/man/xmdomain.cfg.pod.5 \
-	    ${WRKDIR}/xmdomain.cfg.5
-	pod2man ${WRKSRC}/../docs/man/xm.pod.1 ${WRKDIR}/xm.1
+	pod2man ${WRKSRC}/../docs/man/xend-config.sxp.pod.5  |\
+	    sed -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+	    >${WRKDIR}/xend-config.sxp.5
+	pod2man ${WRKSRC}/../docs/man/xmdomain.cfg.pod.5 |\
+	    sed -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+	    >${WRKDIR}/xmdomain.cfg.5
+	pod2man ${WRKSRC}/../docs/man/xm.pod.1 |\
+	    sed -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+	    >${WRKDIR}/xm.1
 
 .if ${OPSYS} == "NetBSD"
 post-build:
