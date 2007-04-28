@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/24 19:37:20 epg Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/28 06:23:04 minskim Exp $
 #
 
 DISTNAME=	apr-util-1.2.8
+PKGREVISION=    1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
@@ -22,7 +23,8 @@ PKGCONFIG_OVERRIDE+=	apr-util.pc.in
 CONFIGURE_ARGS+= \
 		--with-apr=${BUILDLINK_PREFIX.apr}/bin/apr-1-config \
 		--with-expat=${BUILDLINK_PREFIX.expat} \
-		--without-gdbm
+		--without-gdbm --without-sqlite3
+MAKE_ENV+=      WRAPPER_DIR=${WRAPPER_DIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
