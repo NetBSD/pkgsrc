@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
+$NetBSD: patch-au,v 1.2 2007/04/28 03:42:31 christos Exp $
 
 --- syscall.c.orig	2006-01-12 05:18:53.000000000 -0500
-+++ syscall.c	2007-04-26 18:09:23.000000000 -0400
++++ syscall.c	2007-04-27 23:32:49.000000000 -0400
 @@ -38,9 +38,9 @@
  #include <signal.h>
  #include <time.h>
@@ -65,7 +65,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  	if (pread(tcp->pfd_reg, &regs, sizeof(regs), 0) < 0) {
  	        perror("pread");
                  return -1;
-@@ -1334,8 +1340,45 @@
+@@ -1334,8 +1340,41 @@
  	        scno = regs.r_eax;
  	        break;
  	}
@@ -97,11 +97,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
 +	switch (regs.regs[_REG_RAX]) {
 +	case SYS_syscall:
 +	case SYS___syscall:
-+    	        if ((scno = ptrace(PTRACE_PEEKUSER, pid,
-+		    (char *)regs.regs[_REG_URSP] + sizeof(regs.regs[0]), sizeof(regs.regs[0]))) == -1) {
-+			perror("PEEKUSER __syscall");
-+			return -1;
-+		}
++		scno = regs.regs[_REG_RDI];
 +	        break;
 +	default:
 +	        scno = regs.regs[_REG_RAX];
@@ -112,7 +108,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  #endif /* USE_PROCFS */
  	if (!(tcp->flags & TCB_INSYSCALL))
  		tcp->scno = scno;
-@@ -1360,7 +1403,9 @@
+@@ -1360,7 +1399,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -122,7 +118,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  #else /* USE_PROCFS */
  	int scno = known_scno(tcp);
  
-@@ -1733,17 +1778,36 @@
+@@ -1733,17 +1774,36 @@
  		}
  #endif /* MIPS */
  #endif /* SVR4 */
@@ -161,7 +157,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  	tcp->u_error = u_error;
  	return 1;
  }
-@@ -1926,6 +1990,32 @@
+@@ -1926,6 +1986,32 @@
                  return -1;
          }
  #endif /* FREEBSD */
@@ -194,7 +190,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  
  	/* All branches reach here on success (only).  */
  	tcp->u_error = error;
-@@ -1938,7 +2028,9 @@
+@@ -1938,7 +2024,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -204,7 +200,7 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
  #endif /* !USE_PROCFS */
  #ifdef LINUX
  #if defined(S390) || defined(S390X)
-@@ -2236,6 +2328,50 @@
+@@ -2236,6 +2324,58 @@
  	I DONT KNOW WHAT TO DO
  #endif /* !HAVE_PR_SYSCALL */
  #endif /* SVR4 */
@@ -233,29 +229,37 @@ $NetBSD: patch-au,v 1.1 2007/04/27 19:45:02 christos Exp $
 +	}
 +#endif
 +#ifdef __x86_64__
++{
++	int bias, i;
++	static int ar[2][6] = {
++	    { _REG_RDI, _REG_RSI, _REG_RDX,
++	      _REG_R10, _REG_R8, _REG_R9 },	/* x86-64 ABI */
++	    { _REG_RBX, _REG_RCX, _REG_RDX,
++	      _REG_RSI, _REG_RDI, _REG_RBP }	/* i386 ABI */
++	};
 +	switch(regs.regs[_REG_RAX]) {
 +	case SYS___syscall:
-+		umoven(tcp, regs.regs[_REG_URSP] + sizeof(regs.regs[0]) + sizeof(quad_t),
-+		    tcp->u_nargs * sizeof(unsigned long),
-+		    (char *) tcp->u_arg);
-+		break;
 +        case SYS_syscall:
-+		umoven(tcp, regs.regs[_REG_URSP] + 2 * sizeof(regs.regs[0]),
-+		    tcp->u_nargs * sizeof(unsigned long),
-+		    (char *) tcp->u_arg);
++		bias = 1;
 +		break;
 +        default:
-+		umoven(tcp, regs.regs[_REG_URSP] + sizeof(regs.regs[0]),
-+		    tcp->u_nargs * sizeof(unsigned long),
-+		    (char *) tcp->u_arg);
++		bias = 0;
 +		break;
 +	}
++	for (i = 0; i < tcp->u_nargs; i++) {
++		tcp->u_arg[i] = regs.regs[ar[0][i + bias]];
++#if 0
++		if (upeek(tcp->pid, ar[0][i + bias] * 8, &tcp->u_arg[i]) < 0)
++			return -1;
++#endif
++	}
++}
 +#endif
 +#endif /* NETBSD */
  #ifdef FREEBSD
  	if (tcp->scno >= 0 && tcp->scno < nsyscalls &&
  	    sysent[tcp->scno].nargs > tcp->status.val)
-@@ -2648,6 +2784,19 @@
+@@ -2648,6 +2788,19 @@
  	pread(tcp->pfd_reg, &regs, sizeof(regs), 0);
  	val = regs.r_edx;
  #endif
