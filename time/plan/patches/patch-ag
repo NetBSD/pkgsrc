@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2006/01/02 22:29:03 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2007/04/28 15:20:43 reed Exp $
 
---- file_w.c.orig	2006-01-02 22:20:56.000000000 +0000
-+++ file_w.c
+--- file_w.c.orig	2005-01-09 03:56:32.000000000 -0600
++++ file_w.c	2007-04-26 09:01:01.000000000 -0500
 @@ -12,6 +12,7 @@
  #ifdef MIPS
  #include <sys/types.h>
@@ -10,11 +10,3 @@ $NetBSD: patch-ag,v 1.1 2006/01/02 22:29:03 joerg Exp $
  #else
  #include <unistd.h>
  #include <fcntl.h>
-@@ -23,7 +24,6 @@
- 
- static BOOL writefile(struct plist *, char *, int, int);
- 
--extern int		errno;
- extern char		*progname;		/* argv[0] */
- extern struct config	config;			/* global configuration data */
- extern struct plist	*mainlist;		/* all schedule entries */

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2006/01/02 22:29:03 joerg Exp $
+$NetBSD: patch-af,v 1.3 2007/04/28 15:20:42 reed Exp $
 
---- netplan.c.orig	2000-03-21 20:57:40.000000000 +0000
-+++ netplan.c
+--- netplan.c.orig	2005-01-26 12:55:34.000000000 -0600
++++ netplan.c	2007-04-26 09:01:01.000000000 -0500
 @@ -4,6 +4,7 @@
  
  typedef void *Widget;	/* dummy for prototype declarations in config.h */
@@ -10,11 +10,3 @@ $NetBSD: patch-af,v 1.2 2006/01/02 22:29:03 joerg Exp $
  #include <stdio.h>
  #include <string.h>
  #include <stdlib.h>
-@@ -51,7 +52,6 @@ static struct pfile	*file_list;	/* array
- struct client		*client_list;	/* array of clients (entry 0 unused) */
- static fd_set		rd0, wr0, ex0;	/* preset fd masks for main select */
- static time_t		update_time;	/* date of last unwritten change */
--extern int		errno;
- static BOOL             do_auth = FALSE;/* authentication required (identd) */
- static int		netplan_port[2];/* ports we are listening on */
- static int		fd_inet[2];	/* file descriptor for base socket */
