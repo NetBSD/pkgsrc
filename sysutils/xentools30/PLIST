@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/04/28 17:14:50 bouyer Exp $
 bin/readnotes
 bin/xc_restore
 bin/xc_save
@@ -31,6 +31,9 @@ lib/libxenstore.so
 lib/libxenstore.so.3.0
 lib/libxenstore.so.3.0.0
 man/man1/xentop.1
+man/man1/xm.1
+man/man5/xend-config.sxp.5
+man/man5/xmdomain.cfg.5
 ${PYSITELIB}/xen/__init__.py
 ${PYSITELIB}/xen/__init__.pyc
 ${PYSITELIB}/xen/lowlevel/__init__.py
@@ -80,6 +83,8 @@ ${PYSITELIB}/xen/util/ip.py
 ${PYSITELIB}/xen/util/ip.pyc
 ${PYSITELIB}/xen/util/mac.py
 ${PYSITELIB}/xen/util/mac.pyc
+${PYSITELIB}/xen/util/mkdir.py
+${PYSITELIB}/xen/util/mkdir.pyc
 ${PYSITELIB}/xen/util/pci.py
 ${PYSITELIB}/xen/util/pci.pyc
 ${PYSITELIB}/xen/util/security.py
@@ -118,12 +123,28 @@ ${PYSITELIB}/xen/xend/PrettyPrint.py
 ${PYSITELIB}/xen/xend/PrettyPrint.pyc
 ${PYSITELIB}/xen/xend/Vifctl.py
 ${PYSITELIB}/xen/xend/Vifctl.pyc
+${PYSITELIB}/xen/xend/XendAPIConstants.py
+${PYSITELIB}/xen/xend/XendAPIConstants.pyc
+${PYSITELIB}/xen/xend/XendConfig.py
+${PYSITELIB}/xen/xend/XendConfig.pyc
+${PYSITELIB}/xen/xend/XendAPI.py
+${PYSITELIB}/xen/xend/XendAPI.pyc
+${PYSITELIB}/xen/xend/osdep.py
+${PYSITELIB}/xen/xend/osdep.pyc
+${PYSITELIB}/xen/xend/XendVDI.py
+${PYSITELIB}/xen/xend/XendVDI.pyc
+${PYSITELIB}/xen/xend/XendAuthSessions.py
+${PYSITELIB}/xen/xend/XendAuthSessions.pyc
 ${PYSITELIB}/xen/xend/XendBootloader.py
 ${PYSITELIB}/xen/xend/XendBootloader.pyc
 ${PYSITELIB}/xen/xend/XendCheckpoint.py
 ${PYSITELIB}/xen/xend/XendCheckpoint.pyc
 ${PYSITELIB}/xen/xend/XendClient.py
 ${PYSITELIB}/xen/xend/XendClient.pyc
+${PYSITELIB}/xen/xend/XendConstants.py
+${PYSITELIB}/xen/xend/XendConstants.pyc
+${PYSITELIB}/xen/xend/XendDevices.py
+${PYSITELIB}/xen/xend/XendDevices.pyc
 ${PYSITELIB}/xen/xend/XendDmesg.py
 ${PYSITELIB}/xen/xend/XendDmesg.pyc
 ${PYSITELIB}/xen/xend/XendDomain.py
@@ -140,6 +161,8 @@ ${PYSITELIB}/xen/xend/XendProtocol.py
 ${PYSITELIB}/xen/xend/XendProtocol.pyc
 ${PYSITELIB}/xen/xend/XendRoot.py
 ${PYSITELIB}/xen/xend/XendRoot.pyc
+${PYSITELIB}/xen/xend/XendStorageRepository.py
+${PYSITELIB}/xen/xend/XendStorageRepository.pyc
 ${PYSITELIB}/xen/xend/XendVnet.py
 ${PYSITELIB}/xen/xend/XendVnet.pyc
 ${PYSITELIB}/xen/xend/__init__.py
@@ -202,6 +225,8 @@ ${PYSITELIB}/xen/xend/server/tpmif.py
 ${PYSITELIB}/xen/xend/server/tpmif.pyc
 ${PYSITELIB}/xen/xend/server/usbif.py
 ${PYSITELIB}/xen/xend/server/usbif.pyc
+${PYSITELIB}/xen/xend/server/vfbif.py
+${PYSITELIB}/xen/xend/server/vfbif.pyc
 ${PYSITELIB}/xen/xend/sxp.py
 ${PYSITELIB}/xen/xend/sxp.pyc
 ${PYSITELIB}/xen/xend/tests/__init__.py
@@ -226,6 +251,8 @@ ${PYSITELIB}/xen/xend/xenstore/xswatch.py
 ${PYSITELIB}/xen/xend/xenstore/xswatch.pyc
 ${PYSITELIB}/xen/xm/__init__.py
 ${PYSITELIB}/xen/xm/__init__.pyc
+${PYSITELIB}/xen/xm/XenAPI.py
+${PYSITELIB}/xen/xm/XenAPI.pyc
 ${PYSITELIB}/xen/xm/addlabel.py
 ${PYSITELIB}/xen/xm/addlabel.pyc
 ${PYSITELIB}/xen/xm/cfgbootpolicy.py
@@ -252,6 +279,8 @@ ${PYSITELIB}/xen/xm/main.py
 ${PYSITELIB}/xen/xm/main.pyc
 ${PYSITELIB}/xen/xm/migrate.py
 ${PYSITELIB}/xen/xm/migrate.pyc
+${PYSITELIB}/xen/xm/new.py
+${PYSITELIB}/xen/xm/new.pyc
 ${PYSITELIB}/xen/xm/opts.py
 ${PYSITELIB}/xen/xm/opts.pyc
 ${PYSITELIB}/xen/xm/resources.py

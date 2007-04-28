@@ -1,17 +1,17 @@
-$NetBSD: patch-bb,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
+$NetBSD: patch-bb,v 1.2 2007/04/28 17:14:54 bouyer Exp $
 
---- ioemu/Makefile.target.orig	2006-10-18 18:30:56.000000000 +0200
-+++ ioemu/Makefile.target	2006-10-18 18:32:08.000000000 +0200
-@@ -553,12 +553,8 @@
+--- ioemu/Makefile.target.orig	2007-01-08 16:00:48.000000000 +0100
++++ ioemu/Makefile.target	2007-04-26 21:38:21.000000000 +0200
+@@ -567,12 +567,8 @@
  	rm -rf config.mak config.h
  
  install: all 
 -	mkdir -p "$(DESTDIR)$(bindir)" "$(DESTDIR)$(configdir)"
 -ifneq ($(PROGS),)
--	$(INSTALL) -m 755 -s $(PROGS) "$(DESTDIR)$(bindir)"
+-	$(INSTALL_PROG) $(PROGS) "$(DESTDIR)$(bindir)"
 -endif
--	install -m 755 $(TARGET_PATH)/qemu-dm.debug "$(DESTDIR)$(bindir)"
--	install -m 755 $(TARGET_PATH)/qemu-ifup "$(DESTDIR)$(configdir)"
+-	$(INSTALL_PROG) $(TARGET_PATH)/qemu-dm.debug "$(DESTDIR)$(bindir)"
+-	$(INSTALL_PROG) $(TARGET_PATH)/qemu-ifup "$(DESTDIR)$(configdir)"
 +	$(BSD_INSTALL_PROGRAM_DIR) "$(bindir)"
 +	$(BSD_INSTALL_PROGRAM) $(PROGS) "$(DESTDIR)$(bindir)"
  
