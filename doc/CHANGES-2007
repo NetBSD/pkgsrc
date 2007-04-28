@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.932 2007/04/27 20:00:00 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.933 2007/04/28 06:24:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/rake to 0.7.3 [minskim 2007-04-27]
 	Updated misc/ruby-daemons to 1.0.5 [minskim 2007-04-27]
 	Updated misc/ruby-gem_plugin to 0.2.2 [minskim 2007-04-27]
+	Updated devel/apr-util to 1.2.8nb1 [minskim 2007-04-28]
