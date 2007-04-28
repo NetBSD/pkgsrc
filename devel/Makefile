@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.837 2007/04/25 11:51:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.838 2007/04/28 10:15:45 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -555,6 +555,7 @@ SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-String-Format
+SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Term-ProgressBar
