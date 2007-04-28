@@ -1,8 +1,8 @@
-$NetBSD: patch-bt,v 1.2 2006/10/19 22:57:13 bouyer Exp $
+$NetBSD: patch-bt,v 1.3 2007/04/28 17:14:52 bouyer Exp $
 
---- /dev/null	2006-10-17 00:06:16.000000000 +0200
-+++ xenstore/xenstored_netbsd.c	2006-10-17 00:07:33.000000000 +0200
-@@ -0,0 +1,69 @@
+--- /dev/null	2007-04-25 19:26:24.000000000 +0200
++++ xenstore/xenstored_netbsd.c	2007-04-25 19:28:19.000000000 +0200
+@@ -0,0 +1,73 @@
 +/******************************************************************************
 + *
 + * Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
@@ -71,4 +71,8 @@ $NetBSD: patch-bt,v 1.2 2006/10/19 22:57:13 bouyer Exp $
 +	close(fd);
 +
 +	return addr;
++}
++
++void xenbus_notify_running(void)
++{
 +}

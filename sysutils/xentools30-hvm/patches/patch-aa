@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/28 17:14:54 bouyer Exp $
 
---- Makefile.orig	2006-10-04 04:27:58.000000000 +0200
-+++ Makefile	2006-10-18 17:33:39.000000000 +0200
-@@ -2,31 +2,11 @@
+--- Makefile.orig	2007-01-08 16:00:46.000000000 +0100
++++ Makefile	2007-04-26 21:56:16.000000000 +0200
+@@ -2,34 +2,11 @@
  include $(XEN_ROOT)/tools/Rules.mk
  
  SUBDIRS-y :=
@@ -22,6 +22,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
 -SUBDIRS-y += xenstat
 -SUBDIRS-y += libaio
 -SUBDIRS-y += blktap
+-SUBDIRS-y += libfsimage
+-SUBDIRS-$(XENFB_TOOLS) += xenfb
+-SUBDIRS-$(LIBXENAPI_BINDINGS) += libxen
 -
 -# These don't cross-compile
 -ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))
@@ -36,7 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
  	@set -e; for subdir in $(SUBDIRS-y); do \
  		$(MAKE) -C $$subdir $@; \
  	done
-@@ -53,18 +33,16 @@
+@@ -56,18 +33,16 @@
  
  .PHONY: check
  check:
@@ -47,7 +50,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/19 22:58:21 bouyer Exp $
 -	$(MAKE) -C check clean
  
  .PHONY: ioemu ioemuinstall ioemuclean
- ifdef CONFIG_IOEMU
+ ifeq ($(CONFIG_IOEMU),y)
  export IOEMU_DIR ?= ioemu
  ioemu ioemuinstall:
  	[ -f $(IOEMU_DIR)/config-host.mak ] || \
