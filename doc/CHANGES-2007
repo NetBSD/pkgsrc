@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.938 2007/04/28 20:17:04 hubertf Exp $
+$NetBSD: CHANGES-2007,v 1.939 2007/04/28 22:07:23 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xentools30 to 3.0.4 [bouyer 2007-04-28]
 	Updated sysutils/xentools30-hvm to 3.0.4 [bouyer 2007-04-28]
 	Updated net/vpnc to 0.4.0 [hubertf 2007-04-28]
+	Updated lang/php5 to 5.2.1nb2 [sborrill 2007-04-28]
