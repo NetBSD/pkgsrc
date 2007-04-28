@@ -1,4 +1,4 @@
-/* $NetBSD: stdlib.h,v 1.1 2007/04/28 21:03:56 tnn Exp $ */
+/* $NetBSD: stdlib.h,v 1.2 2007/04/28 21:25:06 tnn Exp $ */
 #ifndef _PKGSRC_STDLIB_H_
 #define _PKGSRC_STDLIB_H_
 #include "@REAL_HEADER@"
@@ -15,7 +15,7 @@ static __inline int setenv(const char *name, const char *value, int overwrite) {
 	char *c;
 	int ret;
 	if (!overwrite && getenv(name)) return(-1);
-	c = malloc(strlen(name)+strlen(value)+2);
+	c = (char*)malloc(strlen(name)+strlen(value)+2);
 	if(!c) return(-1);
 	sprintf(c, "%s=%s", name, value);
 	ret = putenv(c);
