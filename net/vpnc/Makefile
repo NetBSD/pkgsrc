@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/02/22 19:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/04/28 20:17:11 hubertf Exp $
 #
 
-DISTNAME=		vpnc-0.3.3
-PKGREVISION=		4
+DISTNAME=		vpnc-0.4.0
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 
@@ -13,6 +12,7 @@ COMMENT=		Client for Cisco3000 VPN Concentrator
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 BUILD_TARGET=		vpnc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vpnc
 	${INSTALL_DATA_DIR} ${EGDIR}
 	:
-	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-disconnect ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/vpnc.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/vpnc
