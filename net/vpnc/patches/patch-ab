@@ -1,24 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2006/03/23 16:53:28 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2007/04/28 20:17:13 hubertf Exp $
 
---- Makefile.orig	2005-05-01 20:30:35.000000000 +0000
-+++ Makefile
-@@ -23,7 +23,7 @@ SBINDIR=$(PREFIX)/sbin
- MANDIR=$(PREFIX)/share/man
+--- Makefile.orig	2007-02-19 21:51:12.000000000 +0100
++++ Makefile	2007-04-28 11:32:25.000000000 +0200
+@@ -35,7 +35,7 @@ VERSION := $(shell sh mk-version)
+ RELEASE_VERSION := $(shell cat VERSION)
  
  CC=gcc
--CFLAGS=-W -Wall -O -g '-DVERSION="$(shell cat VERSION)"' $(shell libgcrypt-config --cflags)
-+CFLAGS=-W -Wall -O -g '-DVERSION="$(shell cat VERSION)"' $(shell libgcrypt-config --cflags) -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
- LDFLAGS=-g $(shell libgcrypt-config --libs)
- 
- ifeq ($(shell uname -s), Linux)
-@@ -33,6 +33,10 @@ ifeq ($(shell uname -s), FreeBSD)
- CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
- SYSDEP=sysdep-bsd.o
- endif
-+ifeq ($(shell uname -s), DragonFly)
-+CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
-+SYSDEP=sysdep-bsd.o
-+endif
- ifeq ($(shell uname -s), NetBSD)
- CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
- SYSDEP=sysdep-bsd.o
+-CFLAGS += -W -Wall -O3 -Wmissing-declarations -Wwrite-strings -g
++CFLAGS += -W -Wall -O3 -Wmissing-declarations -Wwrite-strings -g -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
+ CPPFLAGS = -DVERSION=\"$(VERSION)\"
+ LDFLAGS = -g $(shell libgcrypt-config --libs)
+ CFLAGS +=  $(shell libgcrypt-config --cflags)
