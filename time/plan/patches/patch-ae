@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2006/01/02 22:29:03 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2007/04/28 15:20:42 reed Exp $
 
 --- g_dbfile.c.orig	1998-12-24 11:04:41.000000000 +0000
 +++ g_dbfile.c
@@ -10,11 +10,3 @@ $NetBSD: patch-ae,v 1.2 2006/01/02 22:29:03 joerg Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <time.h>
-@@ -34,7 +35,6 @@
- #define R_SEP	'\n'			/* row (card) separator */
- #define ESC	'\\'			/* treat next char literally */
- 
--extern int	errno;
- extern char	*progname;		/* argv[0] */
- extern Widget	toplevel;		/* top-level shell for icon name */
- 

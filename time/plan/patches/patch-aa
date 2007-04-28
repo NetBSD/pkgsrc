@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2007/04/28 15:20:42 reed Exp $
 
---- Makefile.orig	2000-07-17 20:07:03.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2005-02-06 13:11:34.000000000 -0600
++++ Makefile	2007-04-26 09:15:40.000000000 -0500
 @@ -8,19 +8,19 @@
  # after "=", this is parsed and rewritten by the configure script.
  #
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
 -LIB=/usr/local/lib
 +LIB=${PREFIX}/libexec/plan
  #				# help file (plan.help)
--SBIN=/usr/local/lib
+-SBIN=/usr/local/bin
 +SBIN=${LIB}
  #				# system programs (netplan)
 -HELP=/usr/local/lib
@@ -21,15 +21,15 @@ $NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
 -NETPLANDIR=/usr/local/lib
 +NETPLANDIR=${LIB}
  #				# unformatted nroff manpage (plan.[14])
--MAN=/usr/local/man
-+MAN=${PREFIX}/man/man
+-MAN=/usr/local/man/man
++MAN=${PREFIX}/${PKGMANDIR}/man
  #				# formatted manpage (plan.[14])
 -CATMAN=/usr/catman/local/cat
-+CATMAN=${PREFIX}/man/cat
++CATMAN=${PREFIX}/${PKGMANDIR}/cat
  #				# subdirectory in home dir, or empty
  PLANRULE=
  #				# lockfile for plan, %d is uid
-@@ -34,12 +34,12 @@ LEX=lex
+@@ -34,12 +34,12 @@
  #				# standard Unix compiler generator
  YACC=yacc
  #				# numerical user ID of <nobody> account
@@ -45,46 +45,46 @@ $NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
  #				# by default, fork on startup? TRUE or FALSE
  DOFORK=TRUE
  #				# switching to ISO8859-1
-@@ -55,7 +55,7 @@ HOLIDAY=german
- #				# do NOT define -O2 on DEC OSF/1 machines!
+@@ -57,7 +57,7 @@
+ DEBUG=-g
  DEBUG=-O2
  #				# what to do without make arguments
--DEFTARGET=help
+-DEFTARGET=linux
 +DEFTARGET=netbsd
  #------------------------- end of configuration section ----------------------
  
  OPT=$(DEBUG) $(PLANRULE) -DPLANLOCK=\"$(PLANLOCK)\" -DPLANDLOCK=\"$(PLANDLOCK)\"
-@@ -102,7 +102,7 @@ DESTDIR=
+@@ -103,7 +103,7 @@
  
  SGI4_C	=
  SGI5_C	= -DSYSV -DSVR4 -DDESKTOP
--SGI6_C	= -n32 -mips3 -woff 1110,1167,1185 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
-+SGI6_C	= ${CFLAGS} -woff 1110,1167,1185 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
+-SGI6_C	= -n32 -mips3 -woff 1167 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
++SGI6_C	= ${CFLAGS} -woff 1167 -DSYSV -DSVR4 -DDESKTOP -D_BSD_SIGNALS
  HP8_C	= -Aa -I/usr/include/Motif1.1 -I/usr/include/X11R4 -I/usr/include\
  	  -D_INCLUDE_HPUX_SOURCE -D_INCLUDE_POSIX_SOURCE\
  	  -D_INCLUDE_XOPEN_SOURCE -DNOREGEX -DFIXMBAR -DRABBITS
-@@ -140,8 +140,7 @@ NCR_C	= -DNCR -DNOMSEP -DRABBITS
+@@ -137,8 +137,7 @@
  USL_C	= -DNOKILL0 -I/usr/X/include
  BSDI_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi
  BSDIG_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi -ansi 
 -NBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DRABBITS -DNOLOCK -DNOREGEX\
 -	  -DNO_MOTIF
-+NBSD_C	= ${CFLAGS} -ansi -DBSD -DRABBITS -DNOLOCK -DNOREGEX
++NBSD_C	= ${CFLAGS} -ansi -DBSD -DRABBITS -DNOLOCK -DNOREGEX 
  FBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DNOLOCK -DNOREGEX -DRABBITS\
  	  -DSTDLIBMALLOC
- LINUX_C	= -I/usr/X11R6/include -D_POSIX_SOURCE -DNOLOCK -DLINUX
-@@ -224,8 +223,8 @@ BSDI_L1	= -lXm -lXt -lX11
+ OBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DRABBITS -DNOLOCK -DNOREGEX\
+@@ -217,8 +216,8 @@
  BSDI_L2	= -lc
  BSDIG_L1= -L/usr/X11/lib -lXm -lXt -lX11
  BSDIG_L2= -L/usr/X11/lib -lc
 -NBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11
 -NBSD_L2	= -L/usr/X11R6/lib -lc
-+NBSD_L1	= ${LDFLAGS} -lXm -lXt -lX11
++NBSD_L1	=  ${LDFLAGS} -lXm -lXt -lX11
 +NBSD_L2	= ${LDFLAGS} -lc
  FBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11 -lXext -lSM -lICE -lXpm
  FBSD_L2	= -L/usr/X11R6/lib -lc
- LINUX_L1= -L/usr/X11R6/lib -L/usr/lib/X11R6/lib -lSM -lXm -lXt -lX11 -lXpm -lc -lXext -lSM -lICE -lX11
-@@ -419,8 +418,8 @@ bsdi:
+ OBSD_L1	= -L/usr/local/lib -lXm -L/usr/X11R6/lib -lXt -lX11
+@@ -403,8 +402,8 @@
  bsdig:
  	env CF="$(BSDIG_C)" L1F="$(BSDIG_L1)" L2F="$(BSDIG_L2)" MYCC=gcc make all
  
@@ -95,7 +95,7 @@ $NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
  
  freebsd:
  	env CF="$(FBSD_C)" L1F="$(FBSD_L1)" L2F="$(FBSD_L2)" MYCC=${CC} make all
-@@ -569,34 +568,18 @@ g_dbase.o g_dbfile.o g_formfile.o g_form
+@@ -556,34 +555,18 @@
  
  #---------------------------------------------------------------
  install:
@@ -115,15 +115,15 @@ $NetBSD: patch-aa,v 1.5 2006/01/02 22:29:03 joerg Exp $
 -	-(test x'$(JAPAN)' != x && chmod 644 $(DESTDIR)$(LIB)/plan_calSJ.ps) || exit 0
 -	mkdir -p $(DESTDIR)$(NETPLANDIR)/netplan.dir
 -	-chmod 700 $(DESTDIR)$(NETPLANDIR)/netplan.dir || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -x "`which nroff`" && nroff -man ../misc/plan.1 >../misc/plan.1cat) || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -x "`which nroff`" && nroff -man ../misc/plan.4 >../misc/plan.4cat) || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -x "`which nroff`" && nroff -man ../misc/netplan.1 >../misc/netplan.1cat) || exit 0
--	-(test x'$(MAN)'    != xNONE' -a -d $(DESTDIR)$(MAN)1 && cp ../misc/plan.1 $(DESTDIR)$(MAN)1/plan) || exit 0
--	-(test x'$(MAN)'    != xNONE' -a -d $(DESTDIR)$(MAN)4 && cp ../misc/plan.4 $(DESTDIR)$(MAN)4/plan) || exit 0
--	-(test x'$(MAN)'    != xNONE' -a -d $(DESTDIR)$(MAN)1 && cp ../misc/netplan.1 $(DESTDIR)$(MAN)1/netplan) || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -d $(DESTDIR)$(CATMAN)1 && cp ../misc/plan.1cat $(DESTDIR)$(CATMAN)1/plan) || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -d $(DESTDIR)$(CATMAN)4 && cp ../misc/plan.4cat $(DESTDIR)$(CATMAN)4/plan) || exit 0
--	-(test x'$(CATMAN)' != xNONE' -a -d $(DESTDIR)$(CATMAN)1 && cp ../misc/netplan.1cat $(DESTDIR)$(CATMAN)1/netplan) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -x "`which nroff`" && nroff -man ../misc/plan.1 >../misc/plan.1cat) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -x "`which nroff`" && nroff -man ../misc/plan.4 >../misc/plan.4cat) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -x "`which nroff`" && nroff -man ../misc/netplan.1 >../misc/netplan.1cat) || exit 0
+-	-(test x'$(MAN)'    != xNONE -a -d $(DESTDIR)$(MAN)1 && cp ../misc/plan.1 $(DESTDIR)$(MAN)1/plan) || exit 0
+-	-(test x'$(MAN)'    != xNONE -a -d $(DESTDIR)$(MAN)4 && cp ../misc/plan.4 $(DESTDIR)$(MAN)4/plan) || exit 0
+-	-(test x'$(MAN)'    != xNONE -a -d $(DESTDIR)$(MAN)1 && cp ../misc/netplan.1 $(DESTDIR)$(MAN)1/netplan) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -d $(DESTDIR)$(CATMAN)1 && cp ../misc/plan.1cat $(DESTDIR)$(CATMAN)1/plan) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -d $(DESTDIR)$(CATMAN)4 && cp ../misc/plan.4cat $(DESTDIR)$(CATMAN)4/plan) || exit 0
+-	-(test x'$(CATMAN)' != xNONE -a -d $(DESTDIR)$(CATMAN)1 && cp ../misc/netplan.1cat $(DESTDIR)$(CATMAN)1/netplan) || exit 0
 -	-(test -f ${HOME}/.holiday || cp ../holiday/holiday_$(HOLIDAY) ${HOME}/.holiday) || exit 0
 -	-(test `uname` = IRIX -o `uname` = IRIX64 && mkdir $$HOME/.icons) || exit 0
 -	-(test `uname` = IRIX -o `uname` = IRIX64 && cp ../misc/Plan.icon $$HOME/.icons/Plan.icon) || exit 0
