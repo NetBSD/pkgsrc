@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2007/04/27 19:45:01 christos Exp $
+$NetBSD: distinfo,v 1.6 2007/04/28 03:42:30 christos Exp $
 
 SHA1 (strace-4.5.14.tar.bz2) = 72c17d1dd6786d22ca0aaaa7292b8edcd70a27de
 RMD160 (strace-4.5.14.tar.bz2) = cb42cac34d1624dd24842ada0dbb9dfff67e8e93
@@ -12,7 +12,7 @@ SHA1 (patch-af) = 5e12fe5d4087275e889a49a63ce4d0e0b565b5d8
 SHA1 (patch-ag) = 02c6ce49d7bcefb97e69acc630b5bf82a8bb8a1d
 SHA1 (patch-ah) = ad11dff799e48ae9592cb2bb688602637b72f3e2
 SHA1 (patch-ai) = 01430e21dd0e6d2e19f93fab8846a3464ee5e7a0
-SHA1 (patch-aj) = 67cf49628622bca7ed3a14c1b014e97b58ebbaba
+SHA1 (patch-aj) = b5adc80e0d3f949e8d4d1c9fcbd49839a6b4d907
 SHA1 (patch-ak) = 7b34a03fa9c8761038ef9b19f8ecbded2cc656b8
 SHA1 (patch-al) = ea408e93a15c5fdd8054a65b409c60536ca928eb
 SHA1 (patch-am) = edb9a6a4b76b6f0a39427562fe96a73fea3ecf4a
@@ -23,11 +23,11 @@ SHA1 (patch-aq) = ed501801c93f1b4f9549fce5804f02a98a6d8c18
 SHA1 (patch-ar) = 12b13f8b7e2054cbe57da6b502f3fe49b91de9ff
 SHA1 (patch-as) = b241a70fb33aabb8282578a124b04aca05f0d3f2
 SHA1 (patch-at) = da44d0101eb069ea231bdce7051af357e43cb3d1
-SHA1 (patch-au) = ad22866dba3248bdd94f0011d649c092886c13d6
-SHA1 (patch-av) = 039e074373167eb895b2af0a66e5b29ad409496a
-SHA1 (patch-aw) = 6a0d47a187e9aed739f809a68725630157ac2333
-SHA1 (patch-ax) = 21045db2efb1cde53a9f9ef7aeb76e09f9ae1d0b
-SHA1 (patch-ay) = 366a8e42d65a7ffa65b96c32018e5bdbbf67f43e
+SHA1 (patch-au) = fe4c23730ec3bb5624eb49cc981441ccb4b4a620
+SHA1 (patch-av) = fc31e45bf956cf5ddc09e01a7b1a02f15ece7968
+SHA1 (patch-aw) = 6d9c8243df401fb18e621c8965667778640c9d01
+SHA1 (patch-ax) = 6bb4fdfaf26f9ded736f0aa8f0209815ccbea199
+SHA1 (patch-ay) = 9a6942117fc4d26a9256a573559597560295d9c0
 SHA1 (patch-az) = af6272c48668785dffd7c5b42b8fa2c8edb562d0
 SHA1 (patch-ba) = be8e2f79bd8818b99bdce63fb73802f1a4014b2f
 SHA1 (patch-bb) = 044c9a3a1fe88d0c8d12012012dc0428fde5a5c5
