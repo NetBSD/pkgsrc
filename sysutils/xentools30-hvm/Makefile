@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/28 17:14:53 bouyer Exp $
 #
 
-DISTNAME=		xen-3.0.3_0-src
-PKGNAME=		xentools30-hvm-3.0.3
+DISTNAME=		xen-3.0.4_1-src
+PKGNAME=		xentools30-hvm-3.0.4
 PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
-			http://bits.xensource.com/oss-xen/release/3.0.3-0/src.tgz/
+			http://bits.xensource.com/oss-xen/release/3.0.4-1/src.tgz/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
@@ -22,7 +22,7 @@ ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
 
-WRKSRC=			${WRKDIR}/xen-3.0.3_0-src/tools
+WRKSRC=			${WRKDIR}/xen-3.0.4_1-src/tools
 CHECK_PORTABILITY_SKIP+=	examples/*
 
 EGDIR=			${PREFIX}/share/examples/xen
@@ -33,9 +33,7 @@ USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		XEN_TARGET_ARCH="x86_32"
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
-PY_PATCHPLIST=		yes
-PYTHON_PATCH_SCRIPTS=	ioemu/keymaps/convert-map
+PYTHON_VERSIONS_ACCEPTED= 24 23
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -67,6 +65,7 @@ pre-build:
 	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
 	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio.h || ${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
 	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || ${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
+	${CP} ${FILESDIR}/NetBSD.mk ${WRKSRC}/../config/
 
 .if ${OPSYS} == "NetBSD"
 post-build:
