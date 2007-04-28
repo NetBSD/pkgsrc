@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/02/03 00:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/04/28 17:46:21 tnn Exp $
 
 DISTNAME=	libgcrypt-1.2.4
 CATEGORIES=	security
@@ -24,7 +24,8 @@ INFO_FILES=		yes # PLIST
 
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
     empty(MACHINE_PLATFORM:MNetBSD-*-alpha) && \
-    empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
+    empty(MACHINE_PLATFORM:MNetBSD-*-sparc) && \
+    empty(MACHINE_PLATFORM:M*-*-hppa)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
