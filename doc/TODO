@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6293 2007/04/26 06:57:29 jnemeth Exp $
+$NetBSD: TODO,v 1.6294 2007/04/28 15:24:27 reed Exp $
 
 Suggested new packages
 ======================
@@ -996,7 +996,6 @@ Suggested package updates
 	o pioneers-0.10.2
 	o pircbot-1.4.4
 	o pkg_select-20051209
-	o plan-1.9
 	o plib-1.8.4
 	o pload-0.9.5
 	o plone-2.5.2
