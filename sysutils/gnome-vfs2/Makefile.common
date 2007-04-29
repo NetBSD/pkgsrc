@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.42 2007/04/10 17:58:21 drochner Exp $
+# $NetBSD: Makefile.common,v 1.43 2007/04/29 11:47:03 tnn Exp $
 #
 
 GNOME_VFS2_VERSION=	2.18.1
 
 DISTNAME=		gnome-vfs-${GNOME_VFS2_VERSION}
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
@@ -23,7 +24,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
-CONFIGURE_ARGS+=	--disable-fam
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-howl
 CONFIGURE_ARGS+=	--disable-openssl
