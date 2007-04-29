@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/24 17:57:19 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/04/29 22:12:02 kristerw Exp $
 bin/ghc
 bin/${PKGNAME}
 bin/ghc-pkg
@@ -18,6 +18,7 @@ lib/${PKGNAME}/HSbase.o
 lib/${PKGNAME}/HSbase_cbits.o
 lib/${PKGNAME}/HScgi.o
 lib/${PKGNAME}/HSfgl.o
+lib/${PKGNAME}/HSfilepath.o
 lib/${PKGNAME}/HSghc.o
 lib/${PKGNAME}/HShaskell-src.o
 lib/${PKGNAME}/HShaskell98.o
@@ -368,8 +369,12 @@ lib/${PKGNAME}/imports/Control/Monad.hi
 lib/${PKGNAME}/imports/Control/Monad.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Cont.hi
 lib/${PKGNAME}/imports/Control/Monad/Cont.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Cont/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/Cont/Class.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Error.hi
 lib/${PKGNAME}/imports/Control/Monad/Error.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Error/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/Error/Class.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Fix.hi
 lib/${PKGNAME}/imports/Control/Monad/Fix.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Identity.hi
@@ -380,8 +385,16 @@ lib/${PKGNAME}/imports/Control/Monad/List.hi
 lib/${PKGNAME}/imports/Control/Monad/List.p_hi
 lib/${PKGNAME}/imports/Control/Monad/RWS.hi
 lib/${PKGNAME}/imports/Control/Monad/RWS.p_hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Class.p_hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Lazy.hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Lazy.p_hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Strict.hi
+lib/${PKGNAME}/imports/Control/Monad/RWS/Strict.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Reader.hi
 lib/${PKGNAME}/imports/Control/Monad/Reader.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Reader/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/Reader/Class.p_hi
 lib/${PKGNAME}/imports/Control/Monad/ST.hi
 lib/${PKGNAME}/imports/Control/Monad/ST.p_hi
 lib/${PKGNAME}/imports/Control/Monad/ST/Lazy.hi
@@ -392,10 +405,22 @@ lib/${PKGNAME}/imports/Control/Monad/STM.hi
 lib/${PKGNAME}/imports/Control/Monad/STM.p_hi
 lib/${PKGNAME}/imports/Control/Monad/State.hi
 lib/${PKGNAME}/imports/Control/Monad/State.p_hi
+lib/${PKGNAME}/imports/Control/Monad/State/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/State/Class.p_hi
+lib/${PKGNAME}/imports/Control/Monad/State/Lazy.hi
+lib/${PKGNAME}/imports/Control/Monad/State/Lazy.p_hi
+lib/${PKGNAME}/imports/Control/Monad/State/Strict.hi
+lib/${PKGNAME}/imports/Control/Monad/State/Strict.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Trans.hi
 lib/${PKGNAME}/imports/Control/Monad/Trans.p_hi
 lib/${PKGNAME}/imports/Control/Monad/Writer.hi
 lib/${PKGNAME}/imports/Control/Monad/Writer.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Class.hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Class.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Lazy.hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Lazy.p_hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Strict.hi
+lib/${PKGNAME}/imports/Control/Monad/Writer/Strict.p_hi
 lib/${PKGNAME}/imports/Control/Parallel.hi
 lib/${PKGNAME}/imports/Control/Parallel.p_hi
 lib/${PKGNAME}/imports/Control/Parallel/Strategies.hi
@@ -598,10 +623,12 @@ lib/${PKGNAME}/imports/Data/Time/Clock/UTC.hi
 lib/${PKGNAME}/imports/Data/Time/Clock/UTC.p_hi
 lib/${PKGNAME}/imports/Data/Time/Clock/UTCDiff.hi
 lib/${PKGNAME}/imports/Data/Time/Clock/UTCDiff.p_hi
+lib/${PKGNAME}/imports/Data/Time/Format.hi
+lib/${PKGNAME}/imports/Data/Time/Format.p_hi
+lib/${PKGNAME}/imports/Data/Time/Format/Parse.hi
+lib/${PKGNAME}/imports/Data/Time/Format/Parse.p_hi
 lib/${PKGNAME}/imports/Data/Time/LocalTime.hi
 lib/${PKGNAME}/imports/Data/Time/LocalTime.p_hi
-lib/${PKGNAME}/imports/Data/Time/LocalTime/Format.hi
-lib/${PKGNAME}/imports/Data/Time/LocalTime/Format.p_hi
 lib/${PKGNAME}/imports/Data/Time/LocalTime/LocalTime.hi
 lib/${PKGNAME}/imports/Data/Time/LocalTime/LocalTime.p_hi
 lib/${PKGNAME}/imports/Data/Time/LocalTime/TimeOfDay.hi
@@ -852,8 +879,6 @@ lib/${PKGNAME}/imports/Network/BSD.hi
 lib/${PKGNAME}/imports/Network/BSD.p_hi
 lib/${PKGNAME}/imports/Network/CGI.hi
 lib/${PKGNAME}/imports/Network/CGI.p_hi
-lib/${PKGNAME}/imports/Network/CGI/Compat.hi
-lib/${PKGNAME}/imports/Network/CGI/Compat.p_hi
 lib/${PKGNAME}/imports/Network/CGI/Cookie.hi
 lib/${PKGNAME}/imports/Network/CGI/Cookie.p_hi
 lib/${PKGNAME}/imports/Network/CGI/Monad.hi
@@ -878,8 +903,6 @@ lib/${PKGNAME}/imports/Random.hi
 lib/${PKGNAME}/imports/Random.p_hi
 lib/${PKGNAME}/imports/Ratio.hi
 lib/${PKGNAME}/imports/Ratio.p_hi
-lib/${PKGNAME}/imports/Setup.hi
-lib/${PKGNAME}/imports/Setup.p_hi
 lib/${PKGNAME}/imports/StablePtr.hi
 lib/${PKGNAME}/imports/StablePtr.p_hi
 lib/${PKGNAME}/imports/Storable.hi
@@ -904,6 +927,12 @@ lib/${PKGNAME}/imports/System/Environment.hi
 lib/${PKGNAME}/imports/System/Environment.p_hi
 lib/${PKGNAME}/imports/System/Exit.hi
 lib/${PKGNAME}/imports/System/Exit.p_hi
+lib/${PKGNAME}/imports/System/FilePath.hi
+lib/${PKGNAME}/imports/System/FilePath.p_hi
+lib/${PKGNAME}/imports/System/FilePath/Posix.hi
+lib/${PKGNAME}/imports/System/FilePath/Posix.p_hi
+lib/${PKGNAME}/imports/System/FilePath/Windows.hi
+lib/${PKGNAME}/imports/System/FilePath/Windows.p_hi
 lib/${PKGNAME}/imports/System/IO.hi
 lib/${PKGNAME}/imports/System/IO.p_hi
 lib/${PKGNAME}/imports/System/IO/Error.hi
@@ -1101,6 +1130,8 @@ lib/${PKGNAME}/include/HsNet.h
 lib/${PKGNAME}/include/HsNetworkConfig.h
 lib/${PKGNAME}/include/HsReadline.h
 lib/${PKGNAME}/include/HsReadlineConfig.h
+lib/${PKGNAME}/include/HsTime.h
+lib/${PKGNAME}/include/HsTimeConfig.h
 lib/${PKGNAME}/include/HsUnix.h
 lib/${PKGNAME}/include/HsUnixConfig.h
 lib/${PKGNAME}/include/InfoTables.h
@@ -1162,6 +1193,8 @@ lib/${PKGNAME}/libHScgi.a
 lib/${PKGNAME}/libHScgi_p.a
 lib/${PKGNAME}/libHSfgl.a
 lib/${PKGNAME}/libHSfgl_p.a
+lib/${PKGNAME}/libHSfilepath.a
+lib/${PKGNAME}/libHSfilepath_p.a
 lib/${PKGNAME}/libHSghc.a
 lib/${PKGNAME}/libHShaskell-src.a
 lib/${PKGNAME}/libHShaskell-src_p.a
@@ -1229,6 +1262,7 @@ lib/${PKGNAME}/unlit
 @dirrm lib/${PKGNAME}/imports/System/Posix
 @dirrm lib/${PKGNAME}/imports/System/Mem
 @dirrm lib/${PKGNAME}/imports/System/IO
+@dirrm lib/${PKGNAME}/imports/System/FilePath
 @dirrm lib/${PKGNAME}/imports/System/Directory
 @dirrm lib/${PKGNAME}/imports/System/Console
 @dirrm lib/${PKGNAME}/imports/System
@@ -1248,6 +1282,7 @@ lib/${PKGNAME}/unlit
 @dirrm lib/${PKGNAME}/imports/Debug/QuickCheck
 @dirrm lib/${PKGNAME}/imports/Debug
 @dirrm lib/${PKGNAME}/imports/Data/Time/LocalTime
+@dirrm lib/${PKGNAME}/imports/Data/Time/Format
 @dirrm lib/${PKGNAME}/imports/Data/Time/Clock
 @dirrm lib/${PKGNAME}/imports/Data/Time/Calendar
 @dirrm lib/${PKGNAME}/imports/Data/Time
@@ -1264,7 +1299,13 @@ lib/${PKGNAME}/unlit
 @dirrm lib/${PKGNAME}/imports/Data/Array
 @dirrm lib/${PKGNAME}/imports/Data
 @dirrm lib/${PKGNAME}/imports/Control/Parallel
+@dirrm lib/${PKGNAME}/imports/Control/Monad/Writer
+@dirrm lib/${PKGNAME}/imports/Control/Monad/State
 @dirrm lib/${PKGNAME}/imports/Control/Monad/ST
+@dirrm lib/${PKGNAME}/imports/Control/Monad/Reader
+@dirrm lib/${PKGNAME}/imports/Control/Monad/RWS
+@dirrm lib/${PKGNAME}/imports/Control/Monad/Error
+@dirrm lib/${PKGNAME}/imports/Control/Monad/Cont
 @dirrm lib/${PKGNAME}/imports/Control/Monad
 @dirrm lib/${PKGNAME}/imports/Control/Concurrent/STM
 @dirrm lib/${PKGNAME}/imports/Control/Concurrent
