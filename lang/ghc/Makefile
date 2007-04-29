@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2007/03/24 17:57:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.35 2007/04/29 22:12:02 kristerw Exp $
 
-DISTNAME=	ghc-6.6
+DISTNAME=	ghc-6.6.1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/6.6/
-DISTFILES=	ghc-6.6-src.tar.bz2 \
-		ghc-6.6-src-extralibs.tar.bz2 \
+MASTER_SITES=	http://www.haskell.org/ghc/dist/6.6.1/
+DISTFILES=	ghc-6.6.1-src.tar.bz2 \
+		ghc-6.6.1-src-extralibs.tar.bz2 \
 		ghc-6.4.2-src.tar.bz2 \
 		ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz
 
