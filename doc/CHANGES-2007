@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.942 2007/04/29 13:03:45 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.943 2007/04/29 20:14:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1825,3 +1825,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/x11vnc to 0.9 [obache 2007-04-29]
 	Updated emulators/wine to 0.9.36 [adam 2007-04-29]
 	Updated sysutils/gnome-vfs2 to 2.18.1nb1 [tnn 2007-04-29]
+	Added math/orpie version 1.4.3nb1 [tnn 2007-04-29]
