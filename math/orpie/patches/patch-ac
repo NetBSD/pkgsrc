@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+
+--- Makefile.in.orig	2005-10-30 03:50:43.000000000 +0100
++++ Makefile.in
+@@ -148,13 +148,8 @@ version.ml: Makefile
+ 
+ install-indep: 
+ 	mkdir -p $(BINDIR)
+-	if test "$(prefix)" = "/usr"; then \
+-		mkdir -p $(DESTDIR)/etc; \
+-  	install -m 644 orpierc $(DESTDIR)/etc; \
+-	else \
+-		mkdir -p $(DESTDIR)/$(prefix)/etc; \
+-		install -m 644 orpierc $(DESTDIR)/$(prefix)/etc; \
+-	fi
++		mkdir -p $(DESTDIR)/$(prefix)/share/examples/orpie; \
++		install -m 644 orpierc $(DESTDIR)/$(prefix)/share/examples/orpie; \
+ 	mkdir -p $(MANDIR)/man1
+ 	mkdir -p $(MANDIR)/man5
+ 	install -m 644 doc/orpie.1 $(MANDIR)/man1/orpie.1
