@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+
+--- gsl/mlgsl_error.c.orig	2007-04-24 16:06:49.000000000 +0200
++++ gsl/mlgsl_error.c
+@@ -43,7 +43,7 @@ void ml_gsl_raise_exn(int gsl_errno)
+   exn_arg = alloc_small(2, 0);
+   Store_field(exn_arg, 0, Val_int(conv_err_code(gsl_errno)));
+   Store_field(exn_arg, 1, copy_string(ml_gsl_exn_msg));
+-  CAMLreturn(raise_with_arg(*ml_gsl_exn, exn_arg));
++  raise_with_arg(*ml_gsl_exn, exn_arg);
+ }
+ 
+ static void ml_gsl_error_handler(const char *reason, const char *file,

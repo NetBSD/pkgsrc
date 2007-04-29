@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+
+SHA1 (orpie-1.4.3.tar.gz) = 068fd06467b20dea54c230933e2ee391cebe2616
+RMD160 (orpie-1.4.3.tar.gz) = 81a1cf45ea761dd67ca3eae75fa8ff670c2c6989
+Size (orpie-1.4.3.tar.gz) = 356721 bytes
+SHA1 (patch-aa) = 2c2afd826a8efcc31bd015188ed9ca028fdaf199
+SHA1 (patch-ab) = 32912430fe15b5125f5ae1cbd6131d8d16cd2645
+SHA1 (patch-ac) = 13c3059b24997214af57f12da90b6cf03c5877ee
