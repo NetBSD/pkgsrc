@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.941 2007/04/29 12:49:40 adam Exp $
+$NetBSD: CHANGES-2007,v 1.942 2007/04/29 13:03:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/php5 to 5.2.1nb2 [sborrill 2007-04-28]
 	Updated x11/x11vnc to 0.9 [obache 2007-04-29]
 	Updated emulators/wine to 0.9.36 [adam 2007-04-29]
+	Updated sysutils/gnome-vfs2 to 2.18.1nb1 [tnn 2007-04-29]
