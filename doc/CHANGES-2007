@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.944 2007/04/29 21:51:24 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.945 2007/04/29 22:14:03 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1826,3 +1826,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.36 [adam 2007-04-29]
 	Updated sysutils/gnome-vfs2 to 2.18.1nb1 [tnn 2007-04-29]
 	Added math/orpie version 1.4.3 [tnn 2007-04-29]
+	Updated lang/ghc to 6.6.1 [kristerw 2007-04-29]
