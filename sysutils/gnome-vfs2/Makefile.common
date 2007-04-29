@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.43 2007/04/29 11:47:03 tnn Exp $
+# $NetBSD: Makefile.common,v 1.44 2007/04/29 13:09:27 tnn Exp $
 #
 
 GNOME_VFS2_VERSION=	2.18.1
 
 DISTNAME=		gnome-vfs-${GNOME_VFS2_VERSION}
-PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
