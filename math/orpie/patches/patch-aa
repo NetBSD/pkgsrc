@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+
+--- curses/ml_curses.c.orig	2005-01-30 05:52:05.000000000 +0100
++++ curses/ml_curses.c
+@@ -170,7 +170,6 @@ static void winch_handler(int n)
+ }
+ 
+ #include "functions.c"
+-#include "caml/signals.h"
+ 
+ /* The following routines were rewritten 07/14/04 by Paul Pelzl
+  * to allow other threads to run while getch() is blocking */
