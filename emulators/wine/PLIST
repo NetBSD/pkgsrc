@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2007/04/13 21:25:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2007/04/29 12:48:05 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -117,6 +117,7 @@ include/wine/windows/d3d9types.h
 include/wine/windows/d3dcaps.h
 include/wine/windows/d3dhal.h
 include/wine/windows/d3drm.h
+include/wine/windows/d3drmdef.h
 include/wine/windows/d3dtypes.h
 include/wine/windows/d3dvec.inl
 include/wine/windows/d3dx8core.h
@@ -284,6 +285,7 @@ include/wine/windows/ntddstor.h
 include/wine/windows/ntdsapi.h
 include/wine/windows/ntquery.h
 include/wine/windows/ntsecapi.h
+include/wine/windows/ntsecpkg.h
 include/wine/windows/ntstatus.h
 include/wine/windows/oaidl.h
 include/wine/windows/oaidl.idl
@@ -444,6 +446,7 @@ include/wine/windows/zmouse.h
 lib/libwine.so
 lib/libwine.so.1
 lib/libwine.so.1.0
+lib/wine/acledit.dll.so
 lib/wine/activeds.dll.so
 lib/wine/advapi32.dll.so
 lib/wine/advpack.dll.so
@@ -636,6 +639,7 @@ lib/wine/libshell32.def
 lib/wine/libshfolder.def
 lib/wine/libshlwapi.def
 lib/wine/libsnmpapi.def
+lib/wine/libspoolss.def
 lib/wine/libsti.def
 lib/wine/libstrmiids.a
 lib/wine/libtapi32.def
@@ -777,6 +781,7 @@ lib/wine/sti.dll.so
 lib/wine/storage.dll16
 lib/wine/stress.dll16
 lib/wine/svrapi.dll.so
+lib/wine/sxs.dll.so
 lib/wine/system.drv16
 lib/wine/tapi32.dll.so
 lib/wine/taskmgr.exe.so
