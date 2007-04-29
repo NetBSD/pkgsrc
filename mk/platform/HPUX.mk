@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.4 2007/04/25 13:29:11 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.5 2007/04/29 11:54:25 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -64,6 +64,12 @@ SERIAL_DEVICES?=	/dev/tty0p0 \
 			/dev/tty1p0
 
 _INCOMPAT_ICONV=   HPUX-*-*
+
+# sysutils/fam is not usable on HP-UX.
+FAM_DEFAULT?=		gamin
+
+# mit-krb5 is builtin, and heimdal doesn't build.
+KRB5_DEFAULT?=		mit-krb5
 
 # Builtin openssl and zlib have issues. Prefer pkgsrc's until we know which
 # versions work.
