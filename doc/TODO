@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6294 2007/04/28 15:24:27 reed Exp $
+$NetBSD: TODO,v 1.6295 2007/04/29 04:01:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -1286,7 +1286,6 @@ Suggested package updates
 	o wwwoffle-2.9b
 	o wxGTK-2.8
 	o wxRemind-0.8.6
-	o x11vnc-0.9
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xalan-c-1.10.0
