@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-hpux-ld,v 1.3 2007/04/22 18:56:22 tnn Exp $
+# $NetBSD: cmd-sink-hpux-ld,v 1.4 2007/04/29 13:16:48 tnn Exp $
 
 # Empty out the command buffer and build up the command line in $cmd.
 hprunpath=
@@ -42,6 +42,9 @@ while ! queue_is_empty cmdbuf; do
 	-O*|+O|+O?)
 		arg=-O
 		. $buildcmd
+		;;
+	# Eat gnu-specific linker flags.
+	--version-script*)
 		;;
 	*)
 		. $buildcmd
