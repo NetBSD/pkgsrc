@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2006/09/16 12:20:32 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2007/04/29 11:47:03 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS2_BUILDLINK3_MK:=	${GNOME_VFS2_BUILDLINK3_MK}+
@@ -25,6 +25,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules/ \
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/fam/buildlink3.mk"
+.include "../../mk/fam.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
