@@ -1,9 +1,10 @@
 TeamSpeak End User License Agreement
-Last Updated: July 25th, 2006
+Last Updated: February 13th, 2007
 
-THIS IS A LEGAL AGREEMENT between 'you,' the end user of TeamSpeak
-brand software, and TeamSpeak Systems, an Essen, Germany based
-company.
+THIS IS A LEGAL AGREEMENT between 'you', the end user of TeamSpeak
+brand software, TeamSpeak Systems, an Essen, Germany based company,
+and Triton CI & Associates LLC, a San Diego, California, USA based
+Limited Liability Company.
 
 Use of the software you are about to download or install indicates
 your acceptance of these terms. You also agree to accept these
@@ -12,9 +13,17 @@ download or installation process. As used in this Agreement, the
 capitalized term 'Software' means the TeamSpeak voice communication
 software (either the freeware or commercial versions) together with
 any and all enhancements, upgrades, and updates that may be provided
-to you in the future by TeamSpeak Systems. IF YOU DO NOT AGREE TO
-THESE TERMS AND CONDITIONS, YOU SHOULD INDICATE SO AT THE BOTTOM
-OF THIS SCREEN AND DO NOT PROCEED.
+to you in the future by TeamSpeak Systems.
+
+Any terms in this agreement related to TeamSpeak product ownership,
+distribution, or modification will be handled in accordance with
+the laws of Essen, Germany. Any terms in this agreement related to
+compliance with TeamSpeak licensing, sales, or billing related
+issues will be handled in accordance with the laws of California,
+USA.
+
+IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, YOU SHOULD
+INDICATE SO AT THE BOTTOM OF THIS SCREEN AND DO NOT PROCEED.
 
 Ownership
 
@@ -37,73 +46,122 @@ TeamSpeak Systems grants you a limited, non-exclusive, non-transferable
 and non-sublicensable right to use the commercial version of the
 Software solely in accordance with the following terms and conditions:
 
-1. Use of TeamSpeak You may download and use TeamSpeak on multiple
-computers owned, leased or rented by you; however, you are the only
-individual with the right to use your licensed copy(ies) of TeamSpeak.
-All copies of TeamSpeak must include TeamSpeak Systems‚s copyright
-notice.
+1. Use of TeamSpeak
+You may download and use TeamSpeak on multiple computers owned,
+leased or rented by you; however, you are the only individual with
+the right to use your licensed copy(ies) of TeamSpeak.  All copies
+of TeamSpeak must include TeamSpeak Systems' copyright notice.
 
-2. Third Party Distribution Prohibited Distribution of TeamSpeak
-by you to third parties is hereby expressly prohibited.
+2. Third Party Distribution Prohibited
+Distribution of TeamSpeak by you to third parties is hereby expressly
+prohibited unless you obtain permission from TeamSpeak, in writing,
+to do so.
 
-3. Authorized TeamSpeak Host Provider (ATHP) Licensing Fees oth
-parties. All ATHP based licensing is 'billed in arrears'. This
-means that you will be billed and invoiced on the first day of each
-month for all hosting based on AVERAGE MONTHLY SLOT COUNT that
-occurred during the previous month, with a minimum fee of $14 for
-a 100 minimum slot count. All payments are due 15 days after you
-receive your invoice (NET 15). ATHPs that fail to comply with our
-licensing requirements may have their ATHP license revoked and/or
-servers suspended.
+3. Authorized TeamSpeak Host Provider (ATHP) Licensing Fees
+Authorized TeamSpeak Host Providers (ATHPs) are entities that rent
+TeamSpeak servers to others for profit of ANY kind - be it monetary,
+from direct sales, advertising profit, or intangible goods and
+services.  ATHPs typically charge their customers a monthly fee OR
+include TeamSpeak as part of other services or offerings to their
+customers free of charge. You are subject to ATHP usage based
+licensing fees if you charge an access or rental fee either directly,
+indirectly, OR via inclusion of a TeamSpeak server as part of any
+rental or other paid service **REGARDLESS** of whether or not you
+choose to charge for the TeamSpeak server itself.
 
-4. ATHP Examples Examples where ATHP-based licensing applies include
-but are not limited to the following:  a) Direct Fees - If you
-charge a monthly rental or usage fee for a TeamSpeak server OR
-channel you are subject to ATHP licensing fees.  b) Indirect Fees
-‚ If you ‚sponsor‚ a clan and ask them to advertise for you in
-return for the use of a TeamSpeak server OR channel you are subject
-to ATHP licensing fees.  c) Inclusion Fees ‚ If you are a Game
-Server Provider (GSP) that hosts a TeamSpeak server OR channel to
-someone who is paying a monthly fee to rent a game server then you
-are subject to ATHP licensing fees **REGARDLESS** of whether or
-not you choose to charge for the TeamSpeak server itself.
+4. ATHP Billing Cycles and Slot Count Calculation
+All ATHPs are billed in arrears based on usage information that is
+automatically tracked and reported back to us on a daily basis.
+Deliberately preventing normal communication (ie - via an outbound
+firewall) from any servers you host back to our servers for the
+purpose of allowing us to properly bill you or accurately determine
+your license status is strictly forbidden. In addition, changing
+the ServerMaxUsers setting (ie - the maximum slots or users allowed
+on the server) on a daily basis to deliberately alter our AVERAGE
+MONTHLY SLOT COUNT calculations in your favor is also strictly
+forbidden. For example, if you choose to sell a 50 slot server to
+a customer, the server MUST remain configured at 50 slots at all
+times. You may only change the ServerMaxUsers for each of your
+servers when the customer chooses to upgrade or downgrade their
+server's capacity.
 
-5. Single Server Use Licensing (SSUL) Fees SSUL is for entities
-that wish to use TeamSpeak in a commercial environment but are not
-in the business of renting servers. This is a one time (non-recurring)
-license fee good for 1 year of free version updates as they are
-made available. After the 1 year period expires, you may continue
-using the existing version but will not be able to upgrade without
-an additional upgrade fee.
+If you are registering to become an ATHP, you hereby acknowledge
+that there will be a $10 SETUP FEE in addition to a MINIMUM monthly
+license fee of $14 for a 100 minimum slot count. You further
+acknowledge that the initial invoice generated by our billing system
+may reflect up to 6 months of prior usage and BACK-OWED licensing
+fees may apply if you have profited from TeamSpeak in the past and
+have never been licensed. You also acknowledge and realize that
+initial invoices generated may be inaccurate and are subject to
+review by both parties. All ATHP based licensing is 'billed in
+arrears'. This means that you will be billed and invoiced on the
+first day of each month for all hosting based on AVERAGE MONTHLY
+SLOT COUNT that occurred during the previous month, with a minimum
+fee of $14 for a 100 minimum slot count. All payments are due 15
+days after you receive your invoice (NET 15). ATHPs that fail to
+comply with our licensing requirements may have their ATHP license
+revoked and/or servers suspended.
 
-6. SSUL Examples Examples where SSUL licensing applies include but
-are not limited to the following:  a) A company that wants to use
-TeamSpeak as a means of teleconferencing with co-workers to cut
-costs on typical long distance telephone charges.  b) An ATHP that
-wants to use a TeamSpeak server for internal corporate communication.
-The TeamSpeak server MUST reside on a physical server that is not
-a part of the ATHPs normal customer base or server farm.
+5. ATHP Examples
+Examples where ATHP-based licensing applies include but are not
+limited to the following:
 
-7. SSUL Upgrades TeamSpeak Systems will provide you with free
-upgrades for a period that begins on the purchase date and ends
-365 days later. Such upgrades will include any upgrades for TeamSpeak
-that are released by TeamSpeak Systems for general distribution to
-TeamSpeak licensees during the one year period for which you are
-entitled to receive free upgrades. TeamSpeak Systems has no obligation
-to provide you with any upgrades that are not released for general
-distribution to TeamSpeak Systems‚s other licensees. Nothing in
-this Agreement shall be construed to obligate TeamSpeak Systems to
+a) Direct Fees - If you charge a monthly rental or usage fee for
+a TeamSpeak server OR channel you are subject to ATHP licensing
+fees.
+b) Indirect Fees - If you "sponsor" a clan and ask them to advertise
+for you in return for the use of a TeamSpeak server OR channel you
+are subject to ATHP licensing fees.
+c) Inclusion Fees - If you are a Game Server Provider (GSP) that
+hosts a TeamSpeak server OR channel to someone who is paying a
+monthly fee to rent a game server then you are subject to ATHP
+licensing fees REGARDLESS of whether or not you choose to charge
+for the TeamSpeak server itself.
+
+6. Single Server Use (SSU) Licensing Fees
+SSU fees are for entities that wish to use TeamSpeak in a commercial
+environment but are not in the business of renting servers. This
+is a one time (non-recurring) license fee good for 1 year of free
+version updates for the SERVER, as they are made available, for
+the EXISTING version of TeamSpeak for which the license was purchased.
+After the 1 year period expires, you may continue using the existing
+version of TeamSpeak for which you purchased the SSU license, but
+you may not be able to upgrade to the next major release version
+without an additional upgrade fee.
+
+7. SSU Examples
+Examples where SSU licensing applies include but are not limited
+to the following:
+
+a) A company that wants to use TeamSpeak as a means of teleconferencing
+with co-workers to cut costs on typical long distance telephone
+charges.
+b) An ATHP that wants to use a TeamSpeak server for internal
+corporate communication. The TeamSpeak server MUST reside on a
+physical server that is not a part of the ATHP's normal customer
+base or ATHP-licensed server farm.
+
+8. SSU Upgrades
+TeamSpeak Systems will provide you with free upgrades for a period
+that begins on the purchase date and ends 365 days later. Such
+upgrades will include any upgrades for the EXISTING version of
+TeamSpeak, for which your SSU license was purchased, that are
+released by TeamSpeak Systems for general distribution to TeamSpeak
+licensees during the one year period for which you are entitled to
+receive free upgrades. TeamSpeak Systems has no obligation to
+provide you with any upgrades that are not released for general
+distribution to TeamSpeak Systems' other licensees. Nothing in this
+Agreement shall be construed to obligate TeamSpeak Systems to
 provide upgrades to you under any circumstances.
 
-8. Billing All billing is handled by Triton CI & Associates, LLC,
-a San Diego, California, USA based limited liability company. Any
-and all licensing or billing related inquiries must be e-mailed to
+9. Billing
+All billing is handled by Triton CI & Associates. Any and all
+licensing or billing related inquiries must be e-mailed to
 sales@tritoncia.com.
 
-9. Pricing The latest pricing information can always be found at
-our website via the following link: http://sales.tritoncia.com/pricing.php
-For bulk rates or licensing packages not offered or shown on our
-website please contact us via e-mail at sales@tritoncia.com.
+10. Pricing
+The latest pricing information can always be found on Triton's
+website via the following link:  http://sales.tritoncia.com/pricing.php
 
 Grant of License Applicable To TeamSpeak for Non-Commercial Entities
 
@@ -112,75 +170,108 @@ TeamSpeak Systems grants you a limited, non-exclusive, non-sublicensable,
 and revocable right to use the freeware version of the Software
 solely in accordance with the following terms and conditions:
 
-1. Use of TeamSpeak TeamSpeak is being distributed as Freeware. It
-may be freely used, copied and distributed as long as it is not
-sold and all original files are included, including this license.
-You may download and use both the TeamSpeak Client or Server
-applications on as many computers as you require. TeamSpeak servers
-are defined as ANY server upon which a connection is allowed -- be
-it virtual or physical. You must not exceed a total of 1000 slots
-over a maximum of 10 TeamSpeak servers within your organization.
-In addition, you must configure each of your servers to run no more
-than 100 slots.
+1. Use of TeamSpeak
+TeamSpeak is being distributed as Freeware. It may be freely used,
+copied and distributed as long as it is not sold and all original
+files are included, including this license.  You may download and
+use both the TeamSpeak Client or Server applications on as many
+computers as you require. TeamSpeak servers are defined as ANY
+server upon which a connection is allowed -- be it virtual or
+physical. You may host up to 1000 slots TOTAL within your ENTIRE
+organization. In addition, the maximum number of servers and slot
+counts configured on each server must not exceed any ONE of the
+following configurations:
+a) 10 servers, 100 slots each, for a total of 1000 slots
+b) 4 servers, 250 slots each, for a total of 1000 slots
+c) 2 servers, 500 slots each, for a total of 1000 slots
+d) 1 server, 1000 slots, for a total of 1000 slots
 
-2. Non-Profit Organization (NPO) License If your non-commercial
-entity hosts TeamSpeak servers 100% free of charge to the open pub
-AND your website is free of any advertisements or Paypal donation
-buttons, you may be entitled to receive a special NPO license.  In
-order to qualify you must meet ALL of the following REQUIREMENTS:
+2. Non-Profit Organization (NPO) License
+IMPORTANT: As of August 1st, 2006, the NPO license is no longer
+being offered to any organizations. We feel strongly that we already
+have sufficient organizations that have acquired an NPO license
+and we have no immediate plans to offer this license type again in
+the future.
+
+Some non-profit organizations (NPOs) may be granted a special NPO
+license which allows them to exceed the 1000 slot limit imposed by
+Section 1 above. Such organizations must remain 100% NON-PROFIT at
+all times and must be free of any advertisements, Paypal donation
+buttons, or any other form of profit of ANY kind - be it monetary,
+advertising profit, or intangible goods and services received as
+reward or compensation of any kind.
+
+In essence, licensed NPOs MUST meet ALL of the following REQUIREMENTS
+at all times:
+
 a) You must be a 100% non-profit entity. If we cannot easily
 determine this by visiting your website we may require you to
-provide us with documented proof.  b) You cannot advertise for any
-sort of profit OR for any commercial entity at all on your website.
-In addition, and due to abuse, we also don't allow the use of Paypal
-buttons anywhere on your site.  c) Your website must be up and
-running/active/live so we can visit the site and review its content.
-d) Your entity must be large enough to require at least 1000 slots
-(regardless of the number of servers).  For further information
-please contact sales@tritoncia.com. Please note that a typical
-gaming guild or clan hosting a private TeamSpeak server for themselves
-(up to 100 slots) OR renting a server from an Authorized TeamSpeak
-Host Provider (ATHP) is NOT considered an NPO, will NOT qualify to
-receive an NPO license, and must abide by the terms and conditions
-set forth in this license agreement.
+provide us with documented proof.
+b) You cannot advertise for any sort of profit OR for any commercial
+entity at all on your website.  In addition, and due to abuse, we
+also don't allow the use of Paypal buttons anywhere on your site.
+c) You are not allowed to benefit from profit of ANY kind - be it
+monetary, advertising profit, or intangible goods and services
+received as reward or compensation.
+d) Your website must be up and running/active/live so we can visit
+the site and review its content from time to time.
+e) Your entity must be large enough to require at least 1000 slots
+(regardless of the number of servers). HOWEVER, as of January 1st,
+2007, you CANNOT host more than 5000 slots TOTAL throughout your
+entire organization.  If you are currently a licensed NPO and you
+are exceeding a TOTAL of 5000 slots throughout your entire
+organization, you MUST shutdown any extra servers NO LATER THAN
+January 1st, 2007.
 
-3. Distribution Permitted You may make copies of your copy of
-TeamSpeak to give to others provided that such copies are not
-modified from the original downloaded copy of TeamSpeak. You may
-not charge a fee for distributing copies of TeamSpeak. If a copy
-of TeamSpeak is distributed, TeamSpeak Systems requests that you
-send TeamSpeak Systems an e-mail addressed to sales@tritoncia.com
-notifying TeamSpeak Systems of such distribution and the identity
-of the person or entity receiving the copy of TeamSpeak.
+For further information please contact sales@tritoncia.com. Please
+note that a typical gaming guild or clan hosting a private TeamSpeak
+server for themselves (up to 100 slots) OR renting a server from
+an Authorized TeamSpeak Host Provider (ATHP) is NOT considered an
+NPO, will NOT qualify to receive an NPO license, and must abide by
+the terms and conditions set forth in this license agreement.
 
-4. Termination TeamSpeak Systems may terminate your license for
-TeamSpeak at any time, for any reason or no reason. TeamSpeak
-Systems may also terminate your license in TeamSpeak if you breach
-any of the terms and conditions set forth in this Agreement. Upon
-termination, you shall immediately destroy all copies of TeamSpeak
-in your possession, custody or control.
+3. Distribution Permitted
+You may make copies of your copy of TeamSpeak to give to others
+provided that such copies are not modified from the original
+downloaded copy of TeamSpeak. You may not charge a fee for distributing
+copies of TeamSpeak. If a copy of TeamSpeak is distributed, TeamSpeak
+Systems requests that you send TeamSpeak Systems an e-mail addressed
+to sales@tritoncia.com notifying TeamSpeak Systems of such distribution
+and the identity of the person or entity receiving the copy of
+TeamSpeak.
 
-5. Fees There is no license fee for TeamSpeak for Non-Commercial
-Entities. If you wish to utilize TeamSpeak within a commercial
-environment, you will be required to pay the applicable license
-fees (see below).
+4. Termination
+TeamSpeak Systems may terminate your license for TeamSpeak at any
+time, for any reason or no reason. TeamSpeak Systems may also
+terminate your license in TeamSpeak if you breach any of the terms
+and conditions set forth in this Agreement. Upon termination, you
+shall immediately destroy all copies of TeamSpeak in your possession,
+custody or control.
 
-6. Examples Examples of Non-Commercial Entities include but are
-not limited to the following:  a) An individual hosting a single
-TeamSpeak server configured to allow up to 100 slots for their
-online gaming clan using their home Cable/DSL connection for
-non-profit.  b) An individual hosting 10 TeamSpeak servers with
-100 slots each but does NOT ask for fees, does not advertise, nor
-receives any sort of compensation or benefits for doing so.  c) An
-individual that rents a dedicated server from a hosting company
-but does NOT ask for fees from clan members AND does NOT rent or
-share space with others for profit.  d) A church or other non-profit,
-non-commercial organization hosting a free TeamSpeak server for
-online bible study discussions.  e) A public or non-commercial
-school hosting 1 TeamSpeak server on 10 physical machines, each
-configured to allow no more than 100 slots and is completely free
-of charge to students, allowing them to receive help with homework
-for their classes online.
+5. Fees
+There is no license fee for TeamSpeak for Non-Commercial Entities.
+If you wish to utilize TeamSpeak within a commercial environment,
+you will be required to pay the applicable license fees (see below).
+
+6. Examples
+Examples of Non-Commercial Entities include but are not limited to
+the following:
+
+a) An individual hosting a single TeamSpeak server configured to
+allow up to 100 slots for their online gaming clan using their home
+Cable/DSL connection for non-profit.
+b) An individual hosting 10 TeamSpeak servers with 100 slots each
+but does NOT ask for fees, does not advertise, nor receives any
+sort of compensation or benefits for doing so.
+c) An individual that rents a dedicated server from a hosting
+company but does NOT ask for fees from clan members AND does NOT
+rent or share space with others for profit.
+d) A church or other non-profit, non-commercial organization hosting
+a free TeamSpeak server for online bible study discussions.
+e) A public or non-commercial school hosting 1 TeamSpeak server on
+10 physical machines, each configured to allow no more than 100
+slots and is completely free of charge to students, allowing them
+to receive help with homework for their classes online.
 
 If you are uncertain as to whether your organization qualifies as
 a Non-Commercial Entity you must contact us via e-mail at
@@ -198,7 +289,7 @@ alter, or transfer, electronically or otherwise, the Software or
 any of the accompanying documentation except as expressly permitted
 in this Agreement; or (iii) redistribute, sell, rent, lease,
 sublicense, or otherwise transfer rights to the Software whether
-in a stand-alone configuration or as incorporated with other software
+n a stand-alone configuration or as incorporated with other software
 code written by any party except as expressly permitted in this
 Agreement.
 
@@ -231,7 +322,7 @@ Agreement.
 
 Disclaimer of Warranty
 
-THE SOFTWARE IS PROVIDED ON AN ‚AS IS‚ BASIS, WITHOUT WARRANTY OF
+THE SOFTWARE IS PROVIDED ON AN 'AS IS' BASIS, WITHOUT WARRANTY OF
 ANY KIND, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE
 WARRANTIES THAT IT IS FREE OF DEFECTS, VIRUS FREE, ABLE TO OPERATE
 ON AN UNINTERRUPTED BASIS, MERCHANTABLE, FIT FOR A PARTICULAR
@@ -279,7 +370,7 @@ Software Suggestions
 TeamSpeak Systems welcomes suggestions for enhancing the Software
 and any accompanying documentation that may result in computer
 programs, reports, presentations, documents, ideas or inventions
-relating or useful to TeamSpeak Systems‚ business. You acknowledge
+relating or useful to TeamSpeak Systems' business. You acknowledge
 that all title, ownership rights, and intellectual property rights
 concerning such suggestions shall become the exclusive property of
 TeamSpeak Systems and may be used for its business purposes in its
@@ -287,6 +378,21 @@ sole discretion without any payment or accounting to you.
 
 Miscellaneous
 
-ny term or condition of this Agreement or any breach thereof, in
-any one instance, shall not waive such term or condition or any
-subsequent breach thereof.
+This Agreement constitutes the entire agreement between the parties
+concerning the Software, and is subject to change by TeamSpeak
+Systems at any time. This Agreement shall be governed by the laws
+of Essen, Germany, excluding its conflict of law provisions. All
+disputes relating to this Agreement are subject to the exclusive
+jurisdiction of the courts of Essen, Germany and you expressly
+consent to the exercise of personal jurisdiction in the courts of
+Essen, Germany in connection with any such dispute. This Agreement
+shall not be governed by the United Nations Convention on Contracts
+for the International Sale of Goods. If any provision in this
+Agreement should be held illegal or unenforceable by a court of
+competent jurisdiction, such provision shall be modified to the
+extent necessary to render it enforceable without losing its intent,
+or severed from this Agreement if no such modification is possible,
+and other provisions of this Agreement shall remain in full force
+and effect. A waiver by either party of any term or condition of
+this Agreement or any breach thereof, in any one instance, shall
+not waive such term or condition or any subsequent breach thereof.
