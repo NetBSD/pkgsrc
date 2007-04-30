@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.956 2007/04/30 18:28:33 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.957 2007/04/30 19:30:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1857,3 +1857,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/teamspeak-server version 2.0.23.15 [abs 2007-04-30]
 	Added devel/ruby-fastthread version 1.0 [minskim 2007-04-30]
 	Updated www/mongrel to 1.0.1 [minskim 2007-04-30]
+	Updated security/mhash to 0.9.9 [adam 2007-04-30]
+	Updated security/libmcrypt to 2.5.8 [adam 2007-04-30]
+	Updated security/mcrypt to 2.6.5 [adam 2007-04-30]
