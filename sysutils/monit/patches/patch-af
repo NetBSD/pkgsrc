@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2007/04/30 20:53:54 heinz Exp $
+
+fixes crash on NetBSD due to usage of already destroyed mutex.
+See also http://cvs.savannah.gnu.org/viewcvs/monit/log.c?rev=1.33&root=monit&r1=1.33&view=log
+  
+--- log.c.orig	2007-01-03 22:02:06.000000000 +0100
++++ log.c
+@@ -277,7 +277,7 @@ void log_close() {
+     LogError("%s: Error closing the log file -- %s\n",
+ 	prog, STRERROR);
+   }
+-  pthread_mutex_destroy(&log_mutex);
++
+   LOG= NULL;
+   
+ }
