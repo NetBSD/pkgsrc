@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/15 12:24:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/04/30 09:12:54 adam Exp $
 bin/7z
 bin/7za
 ${DYNAMIC_7Z}lib/7z/7z
@@ -29,6 +29,7 @@ man/man1/7za.1
 man/man1/7zr.1
 share/doc/p7zip/README
 share/doc/p7zip/commands/add.htm
+share/doc/p7zip/commands/bench.htm
 share/doc/p7zip/commands/delete.htm
 share/doc/p7zip/commands/extract.htm
 share/doc/p7zip/commands/extract_full.htm
