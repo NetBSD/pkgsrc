@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2007/04/30 17:03:11 minskim Exp $
+${RUBY_SITEARCHLIBDIR}/fastthread.${RUBY_DLEXT}
