@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.840 2007/04/30 15:18:35 abs Exp $
+# $NetBSD: Makefile,v 1.841 2007/04/30 17:03:11 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -692,6 +692,7 @@ SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
+SUBDIR+=	ruby-fastthread
 SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-glib
 SUBDIR+=	ruby-gnome2-pango
