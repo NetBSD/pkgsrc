@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2006/05/31 23:15:11 wiz Exp $
+$NetBSD: patch-aa,v 1.15 2007/04/30 09:12:54 adam Exp $
 
---- makefile.machine.orig	2006-05-28 13:00:07.000000000 +0000
+--- makefile.machine.orig	2007-04-21 21:01:38.000000000 +0200
 +++ makefile.machine
-@@ -3,17 +3,17 @@
+@@ -3,19 +3,19 @@
  # LITTLE_ENDIAN and BIG_ENDIAN are already defined by the system headers
  #
  
@@ -25,4 +25,6 @@ $NetBSD: patch-aa,v 1.14 2006/05/31 23:15:11 wiz Exp $
 -LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
 +LOCAL_LIBS=${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 +LOCAL_LIBS_DLL=$(LOCAL_LIBS)
+ 
+ OBJ_CRC32=$(OBJ_CRC32_C)
  
