@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.957 2007/04/30 19:30:23 adam Exp $
+$NetBSD: CHANGES-2007,v 1.958 2007/04/30 21:27:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1860,3 +1860,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/mhash to 0.9.9 [adam 2007-04-30]
 	Updated security/libmcrypt to 2.5.8 [adam 2007-04-30]
 	Updated security/mcrypt to 2.6.5 [adam 2007-04-30]
+	Updated www/rails to 1.2.3 [minskim 2007-04-30]
