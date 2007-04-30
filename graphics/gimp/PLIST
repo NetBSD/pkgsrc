@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/09/17 06:49:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2007/04/30 12:03:05 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -469,6 +469,7 @@ share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpColorSpace.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpHSV.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpRGB.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.devhelp
+share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.devhelp2
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.html
 share/doc/${PKGNAME}/libgimpcolor/right.png
 share/doc/${PKGNAME}/libgimpcolor/style.css
@@ -482,6 +483,7 @@ share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpMath.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpMatrix.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath-GimpVector.html
 share/doc/${PKGNAME}/libgimpmath/libgimpmath.devhelp
+share/doc/${PKGNAME}/libgimpmath/libgimpmath.devhelp2
 share/doc/${PKGNAME}/libgimpmath/libgimpmath.html
 share/doc/${PKGNAME}/libgimpmath/right.png
 share/doc/${PKGNAME}/libgimpmath/style.css
@@ -493,6 +495,7 @@ share/doc/${PKGNAME}/libgimpmodule/index.html
 share/doc/${PKGNAME}/libgimpmodule/index.sgml
 share/doc/${PKGNAME}/libgimpmodule/left.png
 share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.devhelp
+share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.devhelp2
 share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.html
 share/doc/${PKGNAME}/libgimpmodule/right.png
 share/doc/${PKGNAME}/libgimpmodule/style.css
@@ -1759,10 +1762,6 @@ share/locale/nl/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/nl/LC_MESSAGES/gimp20.mo
-share/locale/no/LC_MESSAGES/gimp20-libgimp.mo
-share/locale/no/LC_MESSAGES/gimp20-script-fu.mo
-share/locale/no/LC_MESSAGES/gimp20-std-plug-ins.mo
-share/locale/no/LC_MESSAGES/gimp20.mo
 share/locale/pa/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/pa/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/pa/LC_MESSAGES/gimp20-std-plug-ins.mo
