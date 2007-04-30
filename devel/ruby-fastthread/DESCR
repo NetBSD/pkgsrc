@@ -1,0 +1,2 @@
+fastthread is a Ruby extension which re-implements the primitives in
+Ruby's thread.rb in C.
