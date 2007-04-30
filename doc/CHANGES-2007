@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.951 2007/04/30 13:41:21 adam Exp $
+$NetBSD: CHANGES-2007,v 1.952 2007/04/30 13:42:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1832,6 +1832,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.45 [adam 2007-04-30]
 	Updated sysutils/estd to 0.5nb4 [tron 2007-04-30]
 	Updated graphics/gimp to 2.2.14 [adam 2007-04-30]
+	Updated graphics/gimp24 to 2.3.16 [adam 2007-04-30]
 	Updated databases/postgresql82 to 8.2.4 [adam 2007-04-30]
 	Updated databases/postgresql82-client to 8.2.4 [adam 2007-04-30]
 	Updated databases/postgresql82-server to 8.2.4 [adam 2007-04-30]
