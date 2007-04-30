@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/01 06:38:48 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2007/04/30 18:28:05 minskim Exp $
 
---- Rakefile.orig	2006-10-14 21:35:20.000000000 -0700
+--- Rakefile.orig	2007-04-30 10:47:26.000000000 -0700
 +++ Rakefile
 @@ -26,7 +26,7 @@ task :compile => [:http11] do
    end
@@ -11,12 +11,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/11/01 06:38:48 minskim Exp $
  
  task :ragel do
    sh %{/usr/local/bin/ragel ext/http11/http11_parser.rl | /usr/local/bin/rlcodegen -G2 -o ext/http11/http11_parser.c}
-@@ -73,8 +73,6 @@ setup_gem(name, version) do |spec|
+@@ -69,13 +69,9 @@ setup_gem(name, version) do |spec|
      spec.files += ['lib/http11.so']
      spec.extensions.clear
      spec.platform = Gem::Platform::WIN32
 -  else
--    spec.add_dependency('daemons', '>= 0.4.2')
+-    spec.add_dependency('daemons', '>= 1.0.3')
+-    spec.add_dependency('fastthread', '>= 0.6.2')
    end
    
-   spec.add_dependency('gem_plugin', '>= 0.2.1')
+   spec.add_dependency('gem_plugin', '>= 0.2.2')
+-  spec.add_dependency('cgi_multipart_eof_fix', '>= 1.0.0')
+ end
+ 
+ task :install do
