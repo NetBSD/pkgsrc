@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.953 2007/04/30 15:20:23 abs Exp $
+$NetBSD: CHANGES-2007,v 1.954 2007/04/30 15:35:12 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1854,3 +1854,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-plpython to 8.0.13 [adam 2007-04-30]
 	Updated databases/postgresql80-pltcl to 8.0.13 [adam 2007-04-30]
 	Added devel/perltidy version 20070424 [abs 2007-04-30]
+	Added net/teamspeak-server version 2.0.23.15 [abs 2007-04-30]
