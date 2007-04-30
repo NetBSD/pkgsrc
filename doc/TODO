@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6298 2007/04/30 18:29:44 minskim Exp $
+$NetBSD: TODO,v 1.6299 2007/04/30 19:30:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -686,7 +686,6 @@ Suggested package updates
 	o liblive-2007.02.20
 	o liblzo-2.02
 	o libmatroska-0.8.1
-	o libmcrypt-2.5.8
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -727,7 +726,6 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
-	o mcrypt-2.6.5
 	o md-whois-4.7.20
 	o mecab-0.95
 	o memtestplus-1.70
