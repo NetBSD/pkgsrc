@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/30 18:28:05 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/30 19:24:11 minskim Exp $
 
 DISTNAME=	mongrel-1.0.1
 CATEGORIES=	www
@@ -19,6 +19,10 @@ REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 REPLACE_FILE_PAT=	webrick_compare.rb
 RUBY_HAS_ARCHLIB=	yes
 
+PLIST_SRC=	${PKGDIR}/PLIST.common
+PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC+=	${PKGDIR}/PLIST.common_end
+
 FIND_PREFIX:=	RAKE_PREFIX=rake
 .include "../../mk/find-prefix.mk"
 
@@ -34,5 +38,15 @@ do-build:
 
 do-install:
 	${GEM} install ${WRKSRC}/pkg/${DISTNAME}.gem -l
+
+post-install:
+	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
+.for rdocdir in lib/ruby/gems/1.8/doc/${DISTNAME}/rdoc			\
+		lib/ruby/gems/1.8/gems/${DISTNAME}/doc/rdoc
+	${FIND} ${PREFIX}/${rdocdir} -type f -print			\
+		| ${SORT} -r						\
+		| ${SED} 's;${PREFIX}/;;g'				\
+		>> ${WRKDIR}/PLIST_DYNAMIC
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
