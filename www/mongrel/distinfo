@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/01 06:38:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2007/04/30 18:28:05 minskim Exp $
 
-SHA1 (mongrel-0.3.13.4.gem) = cd26aa0f238eba5bc769e16091adbff91e9d1958
-RMD160 (mongrel-0.3.13.4.gem) = 3d3c51522da2664dc676a74d0e116951bd65b55a
-Size (mongrel-0.3.13.4.gem) = 156160 bytes
-SHA1 (patch-aa) = cc430f5637d1e9c194a5e5cefde4f4f8d571536f
+SHA1 (mongrel-1.0.1.gem) = 9efda5fd0f989cba6ebf342985bf8a6b4c5fd056
+RMD160 (mongrel-1.0.1.gem) = ac30135e517c20ccd220e63e26a0d6cf0600bbd2
+Size (mongrel-1.0.1.gem) = 159232 bytes
+SHA1 (patch-aa) = 58447f604c661de0ef670a26c998651e356a8fa7
+SHA1 (patch-ab) = 669e9fcd99db932585e12af3694a4d8c93c4d2f0

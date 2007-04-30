@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2007/04/30 18:28:05 minskim Exp $
+
+--- bin/mongrel_rails.orig	2007-04-30 10:59:44.000000000 -0700
++++ bin/mongrel_rails
+@@ -9,7 +9,6 @@ require 'yaml'
+ require 'mongrel'
+ require 'mongrel/rails'
+ require 'etc'
+-require 'cgi_multipart_eof_fix' rescue nil
+ 
+ module Mongrel
+   class Start < GemPlugin::Plugin "/commands"
