@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/30 15:33:27 abs Exp $
+
+SHA1 (teamspeak/server_linux) = 7434d4240864b74a3628fdfa960f395d3bb8cfc2
+RMD160 (teamspeak/server_linux) = f4fa7f1d9781af33554e49d154639db3cd0e10ee
+Size (teamspeak/server_linux) = 947480 bytes
+SHA1 (teamspeak/ts2_server_rc2_20201.tar.bz2) = bb53e9ed76b3364d046ac7a709853161bfdb35a5
+RMD160 (teamspeak/ts2_server_rc2_20201.tar.bz2) = 7fbafd77bcd1b0765de97ae1401e8ac30740a6aa
+Size (teamspeak/ts2_server_rc2_20201.tar.bz2) = 1112816 bytes
