@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/01/02 23:20:06 abs Exp $
+# $NetBSD: Makefile,v 1.13 2007/04/30 09:54:15 tron Exp $
 
 DISTNAME=	estd-r5
 PKGNAME=	estd-0.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.elektro-eel.org/
 
@@ -14,14 +14,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	share/examples/rc.d
 
-ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 DragonFly-*-i386 \
-			NetBSD-[4-9]*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
+			NetBSD-[4-9]*-x86_64 DragonFly-*-i386
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	do-configure
-SUBST_MESSAGE.prefix=	Substituting PREFIX.
-SUBST_FILES.prefix=	*.sh
-SUBST_SED.prefix=	-e 's|@PREFIX@|${PREFIX}|'
 RCD_SCRIPTS=		estd
+
+SUBST_CLASSES+=		rc.d
+SUBST_STAGE.rc.d=	do-configure
+SUBST_MESSAGE.rc.d=	Fixing startup script.
+SUBST_FILES.rc.d=	estd.sh
+SUBST_SED.rc.d=		-e 's|@PREFIX@|${PREFIX}|'
+SUBST_SED.rc.d+=	-e 's|@ECHO@|${ECHO}|'
 
 .include "../../mk/bsd.pkg.mk"
