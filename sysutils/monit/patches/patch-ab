@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/30 20:53:54 heinz Exp $
+
+Shut up warnings about "subscript has type char"
+
+--- p.y.orig	2007-01-12 22:17:12.000000000 +0100
++++ p.y
+@@ -3320,7 +3320,7 @@ static int cleanup_hash_string(char *has
+ 
+     if (isxdigit((int) hashstring[i])) {
+       
+-      hashstring[j]=tolower(hashstring[i]);
++      hashstring[j]=tolower((int)hashstring[i]);
+       j++;
+ 
+     } 
