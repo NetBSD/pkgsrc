@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/30 20:53:54 heinz Exp $
+
+C source files must be told where the "sysconfdir" is.
+
+--- Makefile.in.orig	2007-01-11 23:04:46.000000000 +0100
++++ Makefile.in
+@@ -61,7 +61,7 @@ PROG		= monit
+ 
+ INCDIR		= -I. -I./device -I./http -I./process -I./protocols
+ LIB 		= @LEXLIB@ @LIBS@
+-DEFINES		= -D@ARCH@
++DEFINES		= -D@ARCH@ -DSYSCONFDIR="\"@sysconfdir@\""
+ 
+ # ------------------------------------------------------------------- #
+ 
