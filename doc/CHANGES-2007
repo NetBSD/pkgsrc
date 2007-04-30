@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.952 2007/04/30 13:42:03 adam Exp $
+$NetBSD: CHANGES-2007,v 1.953 2007/04/30 15:20:23 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1853,3 +1853,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-plperl to 8.0.13 [adam 2007-04-30]
 	Updated databases/postgresql80-plpython to 8.0.13 [adam 2007-04-30]
 	Updated databases/postgresql80-pltcl to 8.0.13 [adam 2007-04-30]
+	Added devel/perltidy version 20070424 [abs 2007-04-30]
