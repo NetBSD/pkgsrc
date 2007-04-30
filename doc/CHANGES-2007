@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.946 2007/04/30 01:45:13 obache Exp $
+$NetBSD: CHANGES-2007,v 1.947 2007/04/30 05:16:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1828,3 +1828,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added math/orpie version 1.4.3 [tnn 2007-04-29]
 	Updated lang/ghc to 6.6.1 [kristerw 2007-04-29]
 	Added converters/p5-JSON version 1.11 [obache 2007-04-30]
+	Added www/p5-HTML-Strip version 1.06 [obache 2007-04-30]
