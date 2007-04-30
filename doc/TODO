@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6295 2007/04/29 04:01:06 obache Exp $
+$NetBSD: TODO,v 1.6296 2007/04/30 09:14:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -952,7 +952,6 @@ Suggested package updates
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o p5-version-0.71
-	o p7zip-4.45
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
