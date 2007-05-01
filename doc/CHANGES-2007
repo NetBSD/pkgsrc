@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.961 2007/05/01 12:06:51 veego Exp $
+$NetBSD: CHANGES-2007,v 1.962 2007/05/01 16:19:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1867,3 +1867,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-XML-Feed version 0.12 [heinz 2007-04-30]
 	Updated devel/p5-Perl-Tidy to 20070424 [abs 2007-05-01]
 	Updated devel/libgphoto2 to 2.3.1nb4 [veego 2007-05-01]
+	Updated filesystems/fuse-ntfs-3g to 1.417 [xtraeme 2007-05-01]
