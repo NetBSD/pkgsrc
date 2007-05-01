@@ -1,2 +1,4 @@
-Perl-Tidy is a tool to indent and reformat Perl scripts.  It can also
-write scripts in HTML format.
+Perltidy reads a Perl script and writes an indented, reformatted
+script. The default formatting closely follows the recommendations
+in perlstyle(1).  Perltidy can also display perl code in syntax-
+colored HTML output.

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.959 2007/04/30 23:01:35 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.960 2007/05/01 11:29:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1853,7 +1853,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-plperl to 8.0.13 [adam 2007-04-30]
 	Updated databases/postgresql80-plpython to 8.0.13 [adam 2007-04-30]
 	Updated databases/postgresql80-pltcl to 8.0.13 [adam 2007-04-30]
-	Added devel/perltidy version 20070424 [abs 2007-04-30]
 	Added net/teamspeak-server version 2.0.23.15 [abs 2007-04-30]
 	Added devel/ruby-fastthread version 1.0 [minskim 2007-04-30]
 	Updated www/mongrel to 1.0.1 [minskim 2007-04-30]
@@ -1866,3 +1865,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-CGI-FormBuilder to 3.0501 [heinz 2007-04-30]
 	Added textproc/p5-Feed-Find version 0.06 [heinz 2007-04-30]
 	Added textproc/p5-XML-Feed version 0.12 [heinz 2007-04-30]
+	Updated devel/p5-Perl-Tidy to 20070424 [abs 2007-05-01]
