@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.965 2007/05/01 22:05:51 seb Exp $
+$NetBSD: CHANGES-2007,v 1.966 2007/05/01 23:04:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xfce4-battery-plugin to 0.5.0nb1 [martti 2007-05-01]
 	Updated editors/vim-share to 7.0.237 [martti 2007-05-01]
 	Added devel/p5-Contextual-Return version 0.2.1 [seb 2007-05-01]
+	Updated textproc/ruby-redcloth to 3.0.4nb1 [minskim 2007-05-01]
