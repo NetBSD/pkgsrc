@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/11/27 21:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/01 12:24:36 gdt Exp $
 #
 
 DISTNAME=		asciidoc-8.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		${HOMEPAGE}	\
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
@@ -30,11 +30,17 @@ INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/images/icons/callouts \
 			${PKGMANDIR}/man1
 
+DOCDIR=		${PREFIX}/share/doc/asciidoc
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/asciidoc.py ${PREFIX}/bin/asciidoc
 	${INSTALL_SCRIPT} ${WRKSRC}/a2x ${PREFIX}/bin/a2x
 	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DOCDIR}
+
 	cd ${WRKSRC} && ${PAX} -wr -pma *.conf stylesheets filters/*.py \
 		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/icons/callouts/* images/icons/*.png \
