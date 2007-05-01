@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.32 2006/12/04 14:34:20 kano Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.33 2007/05/01 11:44:48 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -468,8 +468,10 @@ the one that corresponds to your release (determine via <command>uname
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
-<filename role="pkg">security/sudo</filename>) and then put the following
-into your <filename>/etc/mk.conf</filename>:</para>
+<filename role="pkg">security/sudo</filename>) and then put the
+following into your <filename>/etc/mk.conf</filename>, somewhere
+<emphasis>after</emphasis> the definition of the
+<varname>LOCALBASE</varname> variable:</para>
 
 <programlisting>
     .if exists(${LOCALBASE}/bin/sudo)
