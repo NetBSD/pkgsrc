@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/04/14 17:46:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/05/01 16:34:45 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -73,6 +73,8 @@ share/doc/gxemul/20070308-linux-dreamcast-2.png
 share/doc/gxemul/20070308-linux-dreamcast-2_small.png
 share/doc/gxemul/20070318-netbsd-macppc.png
 share/doc/gxemul/20070318-netbsd-macppc_small.png
+share/doc/gxemul/20070419-openbsd-landisk.png
+share/doc/gxemul/20070419-openbsd-landisk_small.png
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
 share/doc/gxemul/README
