@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/30 15:33:27 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/01 11:34:05 abs Exp $
 
 PKGNAME=		teamspeak-server-2.0.23.15
 DISTNAME=		ts2_server_rc2_20201
@@ -32,7 +32,7 @@ RESTRICTED=             Redistribution to third parties is expressly prohibited
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
-LICENSE=                teamspeak-license
+LICENSE=		teamspeak-license-200700213
 
 WRKSRC=		${WRKDIR}/tss2_rc2
 EGDIR=		${PREFIX}/share/examples
