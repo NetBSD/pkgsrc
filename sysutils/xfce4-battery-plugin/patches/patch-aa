@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/01 17:42:00 martti Exp $
 
 --- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
-+++ panel-plugin/battery.c	2007-04-25 02:57:46.000000000 +0900
++++ panel-plugin/battery.c	2007-05-01 01:32:49.000000000 +0900
 @@ -35,6 +35,7 @@
  #include <sys/ioctl.h>
  #include <machine/apmvar.h>
  #define APMDEVICE "/dev/apm"
-+#define _APM_BATT_UNKNOWN 0xffff /* from sys/dev/acpi/acpi_apm.c */
++#define _ACPI_APM_BATT_UNKNOWN 0xffff /* from sys/dev/acpi/acpi_apm.c */
  #elif __linux__
  #include <libapm.h>
  #endif
@@ -37,20 +37,27 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
  #else
      struct apm_info apm;
      DBG ("Updating battery status...");
-@@ -477,7 +481,15 @@
+@@ -460,6 +464,11 @@
+ 
+     if(battmon->options.display_percentage && !(battmon->options.hide_when_full && acline && charge >= 99)){
+         gtk_widget_show((GtkWidget *)battmon->charge);
++#if defined(__NetBSD__) || defined(__OpenBSD__)
++	 if (apm.nbattery == 0)
++            g_snprintf(buffer, sizeof(buffer),"--%% ");
++	 else
++#endif
+         g_snprintf(buffer, sizeof(buffer),"%d%% ", charge);
+         gtk_label_set_text(battmon->charge,buffer);
+     } else {
+@@ -477,6 +486,11 @@
          }
  
          gtk_widget_show((GtkWidget *)active_label);
--        g_snprintf(buffer, sizeof(buffer),"%02d:%02d ",time_remaining/60,time_remaining%60);
-+	if (acline
-+#ifdef __NetBSD__
-+	    || time_remaining == _APM_BATT_UNKNOWN
++#if defined(__NetBSD__)
++	 if (acline || time_remaining == _ACPI_APM_BATT_UNKNOWN)
++            g_snprintf(buffer, sizeof(buffer), "--:--");
++	 else
 +#endif
-+        )
-+		g_snprintf(buffer, sizeof(buffer), "--:--");
-+	else
-+		g_snprintf(buffer, sizeof(buffer),"%02d:%02d ",
-+			   time_remaining/60,time_remaining%60);
+         g_snprintf(buffer, sizeof(buffer),"%02d:%02d ",time_remaining/60,time_remaining%60);
          gtk_label_set_text(active_label,buffer);
  
-     } else {
