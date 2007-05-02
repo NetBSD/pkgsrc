@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.11 2005/11/13 22:48:32 heinz Exp $
+$NetBSD: patch-ae,v 1.12 2007/05/02 15:20:45 heinz Exp $
 
---- spamd/spamd.raw.orig	Wed Sep 14 04:07:32 2005
+--- spamd/spamd.raw.orig	2007-04-23 14:15:48.000000000 +0200
 +++ spamd/spamd.raw
-@@ -2073,8 +2073,9 @@ sub backtrace_handler {
+@@ -2404,8 +2404,9 @@ sub backtrace_handler {
  }
  
  sub daemonize {
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.11 2005/11/13 22:48:32 heinz Exp $
  
    # be a nice daemon and chdir to the root so we don't block any
    # unmount attempts
-@@ -2273,12 +2274,12 @@ Create user preferences files if they do
+@@ -2664,12 +2665,12 @@ Create user preferences files if they do
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.
@@ -27,5 +27,5 @@ $NetBSD: patch-ae,v 1.11 2005/11/13 22:48:32 heinz Exp $
 -the default directories (usually C</etc/mail/spamassassin> or similar).
 +the default directories (usually C<@@LOCAL_RULES_DIR@@> or similar).
  
- =item B<-d>, B<--daemonize>
+ =item B<--cf='config line'>
  

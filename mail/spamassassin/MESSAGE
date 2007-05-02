@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.10 2005/11/13 22:48:32 heinz Exp $
+$NetBSD: MESSAGE,v 1.11 2007/05/02 15:20:45 heinz Exp $
 
 If you upgrade from an earlier version *PLEASE* take a look at the file
 UPGRADE in
@@ -10,6 +10,7 @@ Some configuration options were changed and some features are now provided
 by plugins (they may not be enabled after installation).
 
 For more information see 'perldoc Mail::SpamAssassin::Conf' and the man
-pages for 'spamassassin', 'spamd'/'spamc', 'sa-learn' and 'sa-update'.
+pages for 'spamassassin', 'spamd'/'spamc', 'sa-learn', 'sa-update' and
+'sa-compile'.
 Please check that your existing mail configuration still works.
 ===========================================================================
