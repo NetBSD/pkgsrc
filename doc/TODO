@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6300 2007/05/02 16:38:13 wiz Exp $
+$NetBSD: TODO,v 1.6301 2007/05/02 16:55:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -955,7 +955,6 @@ Suggested package updates
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
-	o p5-YAML-Syck-0.82
 	o p5-ispman-1.2
 	o p5-libapreq2-2.08
 	o p5-perl-ldap-0.34
@@ -1216,7 +1215,6 @@ Suggested package updates
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-3.9.5
 	o tcpillust-1.00b
 	o tcpreplay-3.0.1
 	o tcpslice-1.2a3
@@ -1284,7 +1282,6 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.0.1
 	o vp-1.6
-	o vpnc-0.4.0
 	o vsftpd-2.0.5
 	o vttest-20070304
 	o wMosaic-3.8.22
