@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.967 2007/05/02 05:10:33 martti Exp $
+$NetBSD: CHANGES-2007,v 1.968 2007/05/02 08:12:37 cjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1875,3 +1875,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-redcloth to 3.0.4nb1 [minskim 2007-05-01]
 	Updated mail/postfix to 2.4.1 [martti 2007-05-02]
 	Updated mail/postfix-current to 2.5-20070501 [martti 2007-05-02]
+	Updated net/bind9 to 9.4.1 [cjs 2007-05-02]
