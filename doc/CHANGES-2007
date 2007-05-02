@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.969 2007/05/02 09:29:35 martti Exp $
+$NetBSD: CHANGES-2007,v 1.970 2007/05/02 15:21:58 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix-current to 2.5-20070501 [martti 2007-05-02]
 	Updated net/bind9 to 9.4.1 [cjs 2007-05-02]
 	Updated editors/vim-share to 7.0.239 [martti 2007-05-02]
+	Updated mail/spamassassin to 3.2.0 [heinz 2007-05-02]
