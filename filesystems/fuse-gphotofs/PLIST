@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/02 19:43:40 sborrill Exp $
+bin/gphotofs
+share/doc/fuse-gphotofs/README
