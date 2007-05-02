@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6301 2007/05/02 16:55:26 wiz Exp $
+$NetBSD: TODO,v 1.6302 2007/05/02 17:07:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1313,7 +1313,6 @@ Suggested package updates
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
-	o xdpyinfo-1.0.2
 	o xemacs-21.4.19
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
