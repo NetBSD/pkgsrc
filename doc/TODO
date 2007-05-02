@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6299 2007/04/30 19:30:33 adam Exp $
+$NetBSD: TODO,v 1.6300 2007/05/02 16:38:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -223,6 +223,7 @@ Suggested package updates
 	o Gorm-1.2.0
 	o GridSim-3.3
 	o PAM-0.99.7.1
+	o R-2.5.0
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-ISwR-1.0.6
@@ -254,7 +255,7 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.1
 	o TiffIO-130e
-	o Transmission-0.7.0
+	o Transmission-0.72
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-5.3.1
@@ -265,7 +266,7 @@ Suggested package updates
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
-	o afterstep-2.2.4
+	o afterstep-2.2.5
 	o album-4.01
 	o alee-ttf-11.2
 	o algae-4.3.6
@@ -276,6 +277,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-perl-0.3.12 [called just amavis]
+	o amavisd-new-2.5.0
 	o amaya-9.54
 	o anjuta-2.1.2
 	o ap-Embperl-1.3.6
@@ -352,16 +354,18 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cdrtools-2.01.01a25
+	o cdrtools-2.01.01a26
+	o cfengine2-2.2.0
 	o cfitsio-3.030
-	o cgdb-0.6.3
+	o cgdb-0.6.4
 	o chasen-2.4.0
-	o chemtool-1.6.9
+	o chemtool-1.6.10
 	o cherokee-0.5.6
 	o chkrootkit-0.47
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o classpath-0.95
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o clex-3.15
@@ -389,6 +393,7 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.3.8
+	o darkstat-3.0.619 [pkg/36250]
 	o darts-0.31
 	o db4-4.5.20
 	o dbench-3.04
@@ -409,6 +414,7 @@ Suggested package updates
 	o dirac-0.6.0
 	o dircproxy-devel-1.2.0.2
 	o dmidecode-2.9
+	o dnsmasq-2.39
 	o dnstop-20070307
 	o dnstracer-1.8
 	o doxygen-1.5.2
@@ -423,6 +429,7 @@ Suggested package updates
 	o e2fsprogs-1.39
 	o eagle-4.16
 	o easymenu-0.7.2p1
+	o easytag-2.0.2
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ede-1.1
@@ -513,6 +520,7 @@ Suggested package updates
 	o glade-3.2.0
 	o glchess-1.0.5
 	o glibmm-2.12.8
+	o gmime-2.2.8
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
 	o gnet1-1.1.9
@@ -592,7 +600,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-5.1.2
+	o hylafax-5.1.3
 	o i2ocfg-1.1
 	o ical-2.3.2
 	o icdprog-0.5
@@ -614,6 +622,7 @@ Suggested package updates
 	o ipcalc-0.41
 	o irrd-2.3.3
 	o irrtoolset-nox11-4.8.4
+	o irssi-0.8.11
 	o iselect-1.3.1
 	o ispell-gaeilge-4.1
 	o ispell-russian-0.99f8
@@ -682,6 +691,7 @@ Suggested package updates
 	o libgpod-0.4.0
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
+	o libidn-0.6.12
 	o libjit-0.1.0
 	o liblive-2007.02.20
 	o liblzo-2.02
@@ -743,6 +753,8 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mksh-29
 	o mkvtoolnix-2.0.2
+	o mldonkey-2.8.5
+	o mldonkey-gui-2.8.5
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.1
@@ -760,19 +772,20 @@ Suggested package updates
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.40
 	o mrproject-0.9.1
+	o mrtg-2.15.2
 	o mserv-devel-0.41
 	o msf-2.7
 	o msmtp-1.4.11
 	o mtail-1.1.1 [pkg/34512]
 	o multi-gnome-terminal-1.6.2
-	o multitail-5.0.0
+	o multitail-5.0.1
 	o muse-0.9.2
 	o musicpd-0.12.2
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
 	o nagios-3.0a2
 	o nano-1.2.5 [pkg/32859|pkg/34511]
-	o nano-2.0.5
+	o nano-2.0.6
 	o nap-1.5.3
 	o nas-1.9
 	o nautilus-cd-burner-2.18.1 [needs hal]
@@ -859,7 +872,7 @@ Suggested package updates
 	o p5-Data-FormValidator-4.50
 	o p5-DateTime-TimeZone-0.63
 	o p5-Devel-Profile-1.05
-	o p5-Devel-StackTrace-1.14
+	o p5-Devel-StackTrace-1.15
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
@@ -955,9 +968,10 @@ Suggested package updates
 	o pcal-4.8
 	o pciids-20070322
 	o pciutils-2.2.0
+	o pcre-7.1
 	o pdmenu-1.2.87
 	o pear-DB-1.7.10
-	o pear-Date-1.4.6
+	o pear-Date-1.4.7 [pkg/36211]
 	o pear-HTTP_Request-1.4.0
 	o pear-Image_Canvas-0.3.0
 	o pear-Image_Graph-0.7.2
@@ -979,7 +993,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.10.1rc1
+	o phpmyadmin-2.10.1
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o picp-0.6.8
@@ -1016,6 +1030,8 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.18
+	o prelude-lml-0.9.9
+	o prelude-manager-0.9.8
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1042,6 +1058,7 @@ Suggested package updates
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
+	o py-curl-7.16.2.1
 	o py-extclass-2.10.2
 	o py-flup-2311
 	o py-gnome2-extras-2.14.3
@@ -1063,7 +1080,7 @@ Suggested package updates
 	o py-proj-1.8.1a [at python.org]
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
-	o py-qt3-3.17.1
+	o py-qt3-3.17.2
 	o py-qt3-base-3.17
 	o py-qt3-modules-3.17
 	o py-qt3-qscintilla-3.17
@@ -1124,6 +1141,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.2
+	o rrdtool-1.2.21
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
@@ -1152,6 +1170,7 @@ Suggested package updates
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.0.4.1
+	o silc-server-1.0.4
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o silc-toolkit-1.0.2
 	o simh-3.7.0
@@ -1169,7 +1188,8 @@ Suggested package updates
 	o smartmontools-5.37 [jmmv]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.62
-	o snd-8.9
+	o smokeping-2.1.0
+	o snd-9.0
 	o snes9x-1.502
 	o solfege-3.6.4
 	o sope-4.5.9
@@ -1192,16 +1212,18 @@ Suggested package updates
 	o swi-prolog-5.6.31
 	o sylpheed-claws-2.9.1 [now claws-mail]
 	o sysinfo-4.2.2
+	o tailor-0.9.28
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpdump-3.9.5
 	o tcpillust-1.00b
-	o tcpreplay-3.0.0
+	o tcpreplay-3.0.1
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
+	o tea-16.1.1
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-dhucs-3.1.5
@@ -1220,6 +1242,7 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.6b5
+	o tor-0.1.2.13
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
@@ -1341,7 +1364,7 @@ Suggested package updates
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
-	o xvidcap-1.1.4
+	o xvidcap-1.1.5
 	o xview-3.2.1.4.21.2
 	o xwpe-1.5.30a
 	o xzip-182
