@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.971 2007/05/02 17:07:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.972 2007/05/02 19:48:05 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/bind9 to 9.4.1 [cjs 2007-05-02]
 	Updated editors/vim-share to 7.0.239 [martti 2007-05-02]
 	Updated mail/spamassassin to 3.2.0 [heinz 2007-05-02]
+	Added filesystems/fuse-gphotofs version 0.3 [sborrill 2007-05-02]
