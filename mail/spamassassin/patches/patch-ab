@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.12 2006/05/26 20:53:00 heinz Exp $
+$NetBSD: patch-ab,v 1.13 2007/05/02 15:20:45 heinz Exp $
 
---- Makefile.PL.orig	2006-05-24 22:07:30.000000000 +0200
+--- Makefile.PL.orig	2007-04-23 14:15:49.000000000 +0200
 +++ Makefile.PL
-@@ -163,6 +163,7 @@ my %makefile = (
+@@ -167,6 +167,7 @@ my %makefile = (
        'spamassassin.raw' => 'spamassassin',
        'sa-learn.raw'     => 'sa-learn',
        'sa-update.raw'    => 'sa-update',
 +      'spamc/qmail-spamc.c' => 'spamc/qmail-spamc$(EXE_EXT)',
+       'sa-compile.raw'    => 'sa-compile',
        'spamc/spamc.c'    => 'spamc/spamc$(EXE_EXT)',
        'spamd/spamd.raw'  => 'spamd/spamd',
-     },
-@@ -1146,16 +1147,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
+@@ -1194,17 +1195,19 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
  conf__install:
  	-$(MKPATH) $(B_CONFDIR)
@@ -18,11 +18,13 @@ $NetBSD: patch-ab,v 1.12 2006/05/26 20:53:00 heinz Exp $
 -	$(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
+-	$(PERL) -MFile::Copy -e "copy(q{rules/v320.pre}, q{$(B_CONFDIR)/v320.pre}) unless -f q{$(B_CONFDIR)/v320.pre}"
 +	@ # manage local.cf and *.pre through pkgsrc .mk files
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v320.pre}, q{$(B_CONFDIR)/v320.pre}) unless -f q{$(B_CONFDIR)/v320.pre}"
  
  data__install:
  	-$(MKPATH) $(B_DATADIR)
