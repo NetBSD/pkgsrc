@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2007/04/19 20:39:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.49 2007/05/02 08:11:56 heinz Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -39,9 +41,9 @@ CONFIGURE_ARGS+=	--disable-xlib
 INSTALLATION_DIRS+=	share/doc/xchat lib/xchat/plugins
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xchat/
-	${INSTALL_DATA} ${WRKSRC}/faq.html ${PREFIX}/share/doc/xchat/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xchat/
+	${INSTALL_DATA} ${WRKSRC}/faq.html ${DESTDIR}${PREFIX}/share/doc/xchat/
 	${INSTALL_DATA} ${WRKSRC}/plugins/plugin20.html \
-		${PREFIX}/share/doc/xchat/
+		${DESTDIR}${PREFIX}/share/doc/xchat/
 
 .include "../../mk/bsd.pkg.mk"
