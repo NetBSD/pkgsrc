@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/03/24 13:45:05 markd Exp $
+# $NetBSD: Makefile,v 1.74 2007/05/02 12:51:43 gdt Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,6 +12,10 @@ HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+# 1) uses dia library before it is built
+# 2) make succeeds even with failures, making this problem non-obvious
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake
