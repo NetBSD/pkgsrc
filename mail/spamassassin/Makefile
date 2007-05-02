@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2007/02/15 21:43:43 heinz Exp $
+# $NetBSD: Makefile,v 1.80 2007/05/02 15:20:45 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.1.8
-PKGNAME=	spamassassin-3.1.8
+DISTNAME=	Mail-SpamAssassin-3.2.0
+PKGNAME=	spamassassin-3.2.0
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -11,7 +11,6 @@ HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,13 +48,13 @@ PERL5_PACKLIST=		auto/Mail/SpamAssassin/.packlist
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_DIRS=		${WRKSRC}/spamc
-BUILD_DIRS=		${WRKSRC}
+CONFIGURE_DIRS=		spamc
+BUILD_DIRS=		.
 PERL5_CONFIGURE=	NO # we need the default "do-configure" target
 PERL5_CONFIGURE_DIRS=	${WRKSRC}
 
 # test t/meta needs this
-REPLACE_PERL+=		masses/parse-rules-for-masses
+REPLACE_PERL+=		build/parse-rules-for-masses
 
 MAKE_PARAMS+=		CONTACT_ADDRESS=${SPAMASSASSIN_CONTACT_ADDRESS:Q}
 MAKE_PARAMS+=		DEFRULESDIR="${RULESDIR}"
@@ -74,7 +73,7 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 RULE_SUBDIR=		share/spamassassin
 RULESDIR=		${PREFIX}/${RULE_SUBDIR}
 
-PRE_FILES=		init.pre v310.pre v312.pre
+PRE_FILES=		init.pre v310.pre v312.pre v320.pre
 .for p in ${PRE_FILES}
 CONF_FILES+=		${EGDIR}/${p}  ${PKG_SYSCONFDIR}/${p}
 .endfor
@@ -82,8 +81,22 @@ CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf	\
 			${RULESDIR}/user_prefs.template		\
 		 	  ${PKG_SYSCONFDIR}/user_prefs.template
 
-INSTALLATION_DIRS+=	${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/spamc\
-			${DOC_SUBDIR}/spamd ${RULE_SUBDIR}
+SA_INSTALLDIRS=		${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/ldap
+SA_INSTALLDIRS+=	${DOC_SUBDIR}/rules ${DOC_SUBDIR}/spamc
+SA_INSTALLDIRS+=	${DOC_SUBDIR}/spamd ${DOC_SUBDIR}/sql ${RULE_SUBDIR}
+
+SA_DOCFILES=		INSTALL LICENSE README TRADEMARK UPGRADE USAGE NOTICE
+SA_DOCFILES+=		CREDITS PACKAGING Changes
+SA_DOCFILES+=		ldap/README ldap/README.testing ldap/sa_test.ldif
+SA_DOCFILES+=		rules/STATISTICS-set0.txt rules/STATISTICS-set1.txt
+SA_DOCFILES+=		rules/STATISTICS-set2.txt rules/STATISTICS-set3.txt
+SA_DOCFILES+=		spamc/README.qmail
+SA_DOCFILES+=		sample-nonspam.txt sample-spam.txt
+SA_DOCFILES+=		spamd/README spamd/README.vpopmail
+SA_DOCFILES+=		sql/README sql/README.awl sql/README.bayes
+SA_DOCFILES+=		sql/awl_mysql.sql sql/awl_pg.sql sql/bayes_mysql.sql
+SA_DOCFILES+=		sql/bayes_pg.sql sql/userpref_mysql.sql
+SA_DOCFILES+=		sql/userpref_pg.sql
 
 OWN_DIRS+=		${VARBASE}/spamassassin
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/sa-update-keys ${SHAREOWN} ${SHAREGRP} 0700
@@ -96,12 +109,12 @@ SUBST_SED.sa2+=		-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
 
 SUBST_CLASSES+=		sa3
 SUBST_STAGE.sa3=	pre-configure
-SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README		\
-			spamc/README.qmail				\
-			lib/Mail/SpamAssassin/Conf.pm			\
-			lib/Mail/SpamAssassin/Plugin/Test.pm		\
-			spamd/README spamd/README.vpopmail sql/README	\
-			sql/README.awl sa-update.raw
+SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README
+SUBST_FILES.sa3+=	spamc/README.qmail
+SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Conf.pm
+SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Plugin/Test.pm
+SUBST_FILES.sa3+=	spamd/README spamd/README.vpopmail sql/README
+SUBST_FILES.sa3+=	sql/README.awl sa-learn.raw sa-compile.raw sa-update.raw
 SUBST_SED.sa3=		-e s!/usr/share!${PREFIX}/share!g
 SUBST_SED.sa3+=		-e s!/usr/bin!${PREFIX}/bin!g
 SUBST_SED.sa3+=		-e s!/usr/local/bin!${PREFIX}/bin!g
@@ -121,84 +134,52 @@ INTERPRETER_SUPPORT=	YES
 FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT:Q}
 FILES_SUBST+=		OPSYS=${OPSYS:Q}
 
-post-extract:
-	@# correct bad SA permissions
-	@${CHMOD} a+x ${WRKSRC}/tools/convert_awl_dbm_to_sql
-
 pre-configure: perl5-configure
-	@# GNU configure needs version.h -> create it
-	@cd ${WRKSRC}/spamc && ${PERL5} ./version.h.pl
-	@# values will be set via the SUBST framework in options.mk
-	@${CP} ${WRKSRC}/t/config.dist ${WRKSRC}/t/config
+	# GNU configure needs version.h -> create it
+	cd ${WRKSRC}/spamc && ${PERL5} ./version.h.pl
+	# values will be set via the SUBST framework in options.mk
+	${CP} ${WRKSRC}/t/config.dist ${WRKSRC}/t/config
 
 post-install:
-	@${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
-.for f in INSTALL LICENSE README TRADEMARK UPGRADE USAGE		\
-		CREDITS PACKAGING STATUS BUGS Changes			\
-		spamc/README.qmail					\
-		sample-nonspam.txt sample-spam.txt spamd/README		\
-		spamd/README.vpopmail
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
-	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
+	${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
+.for dir in ${SA_INSTALLDIRS}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${dir}
 .endfor
-.for f in STATISTICS-set0.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
-	  STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DESTDIR}${DOCDIR}
-	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
+.for f in ${SA_DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
+	${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
-.for dir in masses sql ldap tools
-	@cd ${WRKSRC};							\
-	for d in `${FIND} ${dir} -type d -print`; do			\
-		${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/$$d;			\
-	done;								\
-	for f in `${FIND} ${dir} -type f -print`; do			\
-		if ${TEST} -x $$f ; then				\
-			${SED} -e "1s,#!.*/bin/perl,#!${PERL5}," < $$f	\
-				> $${f}.fixed &&			\
-			${MV} $${f}.fixed $$f &&			\
-			${CHMOD} +x $$f &&				\
-			${INSTALL_SCRIPT} $$f ${DESTDIR}${DOCDIR}/$$f;		\
-		else							\
-			${INSTALL_DATA} $$f ${DESTDIR}${DOCDIR}/$$f;		\
-		fi;							\
-		${ECHO} "${DOC_SUBDIR}/$$f" >> ${PLIST_ADD};		\
-	done;								\
-	{ for d in `${FIND} ${dir} -type d -print`; do			\
-		${ECHO} "@dirrm ${DOC_SUBDIR}/$$d";			\
-	done; } | ${SORT} -r >> ${PLIST_ADD};
-.endfor
-	@cd ${WRKSRC}/rules;						\
+
+	cd ${WRKSRC}/rules;						\
 	for f in [0-9]*.cf; do						\
 		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
 	for f in ${PRE_FILES}; do					\
-		${INSTALL_DATA} $$f ${DESTDIR}${EGDIR} &&				\
+		${INSTALL_DATA} $$f ${DESTDIR}${EGDIR} &&		\
 		${ECHO} ${EG_SUBDIR}/$$f >> ${PLIST_ADD};		\
 	done
-	@# examples are in the static PLIST
-	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
-	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
-	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
-	@${CHOWN} ${SHAREOWN} ${DESTDIR}${RULESDIR}/*
-	@${CHGRP} ${SHAREGRP} ${DESTDIR}${RULESDIR}/*
-	@${CHMOD} a=r ${DESTDIR}${RULESDIR}/*
-	@{ for d in ${INSTALLATION_DIRS}; do				\
+	# examples are in the static PLIST
+	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
+	{ for d in ${SA_INSTALLDIRS}; do				\
 		${ECHO} "@dirrm $$d";					\
 	done; } | ${SORT} -r >> ${PLIST_ADD};
 
 # make sure we install the patched version of init.pre but can run the
 # tests with the original file
 pre-patch:
-	@${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.notpatched
+	${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.notpatched
 
 post-patch:
-	@${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.patched
+	${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.patched
 
 pre-test:
-	@${CP} ${WRKDIR}/init.pre.notpatched ${WRKSRC}/rules/init.pre
+	${CP} ${WRKDIR}/init.pre.notpatched ${WRKSRC}/rules/init.pre
 
 post-test:
-	@${CP} ${WRKDIR}/init.pre.patched ${WRKSRC}/rules/init.pre
+	${CP} ${WRKDIR}/init.pre.patched ${WRKSRC}/rules/init.pre
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
