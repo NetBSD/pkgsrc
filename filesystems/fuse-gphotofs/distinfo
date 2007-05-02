@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/02 19:43:40 sborrill Exp $
+
+SHA1 (gphotofs-0.3.tar.bz2) = 24b6a66f89da6f53bf4240a91003841c2ff41fc5
+RMD160 (gphotofs-0.3.tar.bz2) = 34fc6c5019319c57fcfc8c53938fccbf6cede18d
+Size (gphotofs-0.3.tar.bz2) = 76186 bytes
+SHA1 (patch-aa) = ab598c3c3dd5d1ca568d3a7a433ac8f508c8a25f
