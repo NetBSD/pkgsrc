@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/02 19:43:40 sborrill Exp $
+
+--- configure.orig	2007-05-02 21:33:59.000000000 +0100
++++ configure	2007-05-02 21:33:59.000000000 +0100
+@@ -6069,7 +6069,7 @@
+      posrcprefix="../"
+    fi
+    rm -f po/POTFILES
+-   sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
++   test -f $srcdir/po/POTFILES.in && sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
+ 
+ 
