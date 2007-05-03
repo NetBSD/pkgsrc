@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6308 2007/05/03 12:38:27 wiz Exp $
+$NetBSD: TODO,v 1.6309 2007/05/03 12:43:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1255,7 +1255,6 @@ Suggested package updates
 	o unalz-0.61
 	o unix2dos-1.3
 	o uno-2.11
-	o unrar-3.7.5
 	o up-imapproxy-1.2.5
 	o upx-2.90
 	o userppp-030706
