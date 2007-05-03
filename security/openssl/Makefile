@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2007/04/26 21:11:05 tron Exp $
+# $NetBSD: Makefile,v 1.125 2007/05/03 14:23:42 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -81,7 +81,7 @@ CONFIGURE_ARGS+=	irix64-mips4-cc
 .include "../../mk/dlopen.buildlink3.mk"
 
 SUBST_CLASSES+=		dl
-SUBST_MESSAGE.dl=	Adding dynmamic link compatibility library.
+SUBST_MESSAGE.dl=	Adding dynamic link compatibility library.
 SUBST_STAGE.dl=		post-configure
 SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
 			crypto/pkcs7/Makefile fips/Makefile test/Makefile
