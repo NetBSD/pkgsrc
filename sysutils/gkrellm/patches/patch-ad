@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2005/09/08 13:19:56 cube Exp $
+$NetBSD: patch-ad,v 1.3 2007/05/03 20:21:27 cube Exp $
 
---- src/sysdeps/bsd-net-open.c.orig	2005-05-24 05:44:48.000000000 +0200
+--- src/sysdeps/bsd-net-open.c.orig	2006-07-20 23:38:57.000000000 +0200
 +++ src/sysdeps/bsd-net-open.c
 @@ -23,110 +23,10 @@
  
@@ -68,7 +68,7 @@ $NetBSD: patch-ad,v 1.2 2005/09/08 13:19:56 cube Exp $
 -		/* Separate read/write stats were implemented in NetBSD 1.6K.
 -		*/
 -
--#if __NetBSD_Version__ >= 106110000
+-#if (__NetBSD_Version__ >= 106110000) || defined(__OpenBSD__)
 -		rbytes = d.dk_rbytes;
 -		wbytes = d.dk_wbytes;
 -#else
@@ -115,7 +115,7 @@ $NetBSD: patch-ad,v 1.2 2005/09/08 13:19:56 cube Exp $
  #include "../inet.h"
  
  /* NO IPv6 SUPPORT YET */
-@@ -191,6 +91,7 @@ gkrellm_sys_inet_read_tcp_data(void)
+@@ -193,6 +93,7 @@ gkrellm_sys_inet_read_tcp_data(void)
        next = (struct inpcb *)inpcb.inp_queue.cqe_next;
     }
  }
@@ -123,7 +123,7 @@ $NetBSD: patch-ad,v 1.2 2005/09/08 13:19:56 cube Exp $
  
  gboolean
  gkrellm_sys_inet_init(void)
-@@ -199,95 +100,6 @@ gkrellm_sys_inet_init(void)
+@@ -201,95 +102,6 @@ gkrellm_sys_inet_init(void)
  	}
  
  /* ===================================================================== */
