@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6310 2007/05/03 13:19:35 wiz Exp $
+$NetBSD: TODO,v 1.6311 2007/05/03 20:25:10 cube Exp $
 
 Suggested new packages
 ======================
@@ -510,10 +510,7 @@ Suggested package updates
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
 	o gimp-ufraw-0.11
-	o gkrellm-2.2.10 [pkg/34957]
 	o gkrellm-multiping-2.0.13
-	o gkrellm-server-2.2.10
-	o gkrellm-share-2.2.10
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade-3.2.0
