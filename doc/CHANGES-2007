@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.975 2007/05/03 11:55:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.976 2007/05/03 12:00:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1883,3 +1883,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/mldonkey to 2.8.5 [wiz 2007-05-03]
 	Updated audio/easytag to 2.0.2 [wiz 2007-05-03]
 	Updated mail/gmime to 2.2.8 [wiz 2007-05-03]
+	Updated devel/libidn to 0.6.12 [wiz 2007-05-03]
