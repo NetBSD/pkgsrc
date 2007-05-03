@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2006/10/30 20:57:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.40 2007/05/03 13:19:00 wiz Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -67,6 +67,7 @@ share/doc/libxml2/examples.xml
 share/doc/libxml2/examples.xsl
 share/doc/libxml2/html/book1.html
 share/doc/libxml2/html/home.png
+share/doc/libxml2/html/index.html
 share/doc/libxml2/html/left.png
 share/doc/libxml2/html/libxml-DOCBparser.html
 share/doc/libxml2/html/libxml-HTMLparser.html
