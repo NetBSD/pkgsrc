@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6304 2007/05/03 11:51:42 wiz Exp $
+$NetBSD: TODO,v 1.6305 2007/05/03 11:55:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ Suggested package updates
 	o glade-3.2.0
 	o glchess-1.0.5
 	o glibmm-2.12.8
-	o gmime-2.2.8
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
 	o gnet1-1.1.9
