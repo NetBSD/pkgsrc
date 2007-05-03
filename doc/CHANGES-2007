@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.973 2007/05/03 11:44:56 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.974 2007/05/03 11:51:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1881,3 +1881,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamassassin to 3.2.0 [heinz 2007-05-02]
 	Added filesystems/fuse-gphotofs version 0.3 [sborrill 2007-05-02]
 	Updated net/mldonkey to 2.8.5 [wiz 2007-05-03]
+	Updated audio/easytag to 2.0.2 [wiz 2007-05-03]
