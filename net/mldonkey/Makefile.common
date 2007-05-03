@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.24 2007/04/08 18:27:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2007/05/03 11:44:27 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.8.4
+DISTNAME=	mldonkey-2.8.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
