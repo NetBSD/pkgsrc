@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/03 12:11:37 abs Exp $
+
+SHA1 (alpine-0.99.tar.bz2) = 240f2b3d5229714ab1e7cc1ef3a4339dfaccf2e7
+RMD160 (alpine-0.99.tar.bz2) = a896213860badede88500e746f9186310b4d1364
+Size (alpine-0.99.tar.bz2) = 4920156 bytes
+SHA1 (patch-aa) = 1269dcd9b9a86980ac02facc65ec5beb6dd45221
