@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6307 2007/05/03 12:31:32 wiz Exp $
+$NetBSD: TODO,v 1.6308 2007/05/03 12:38:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1204,7 +1204,6 @@ Suggested package updates
 	o swi-prolog-5.6.31
 	o sylpheed-claws-2.9.1 [now claws-mail]
 	o sysinfo-4.2.2
-	o tailor-0.9.28
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9

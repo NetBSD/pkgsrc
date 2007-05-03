@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.978 2007/05/03 12:31:32 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.979 2007/05/03 12:38:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1887,3 +1887,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/alpine version 0.99 [abs 2007-05-03]
 	Updated devel/pcre to 7.1 [wiz 2007-05-03]
 	Updated security/p5-IO-Socket-SSL to 1.05 [wiz 2007-05-03]
+	Updated devel/tailor to 0.9.28 [wiz 2007-05-03]
