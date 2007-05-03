@@ -48,11 +48,23 @@ ifeq ($(filter openssl, $(SSL_TYPE)),)
 CONFIGURE_ARGS+=	--without-openssl
 endif
 
+USE_LIBSENSORS?=	yes
+ifeq ($(without-libsensors),yes)
+USE_LIBSENSORS=		no
+endif
+ifeq ($(without-libsensors),1)
+USE_LIBSENSORS=		no
+endif
+ifeq ($(USE_LIBSENSORS),no)
+CONFIGURE_ARGS+=	--without-libsensors
+endif
+
 GREP?=		grep
 
 DUMMY_VAR:=	$(shell ./configure $(CONFIGURE_ARGS))
 HAVE_GNUTLS=	$(shell $(GREP) -c HAVE_GNUTLS configure.h)
 HAVE_SSL=	$(shell $(GREP) -c HAVE_SSL configure.h)
+HAVE_LIBSENSORS=	$(shell $(GREP) -c HAVE_LIBSENSORS configure.h)
 
 ifeq ($(HAVE_GNUTLS),1)
 SSL_LIBS?=	-lgnutls-openssl
@@ -64,7 +76,12 @@ MD5_LIBS=
 endif
 endif
 
-LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS)
+ifeq ($(HAVE_LIBSENSORS),1)
+SENSORS_LIBS?=	-lsensors
+endif
+
+LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS) \
+	$(SENSORS_LIBS)
 
 override CFLAGS += -Wall $(FLAGS)
 

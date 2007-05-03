@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.37 2006/08/13 07:33:37 xtraeme Exp $
+$NetBSD: distinfo,v 1.38 2007/05/03 20:21:27 cube Exp $
 
-SHA1 (gkrellm-2.2.9.tar.bz2) = 114c09c78ae27bbb1b2f4c2edb346800831f2cef
-RMD160 (gkrellm-2.2.9.tar.bz2) = e6de12774ec85c51dce18e3208340d1a080a6398
-Size (gkrellm-2.2.9.tar.bz2) = 691133 bytes
+SHA1 (gkrellm-2.2.10.tar.bz2) = 329d0ba5600998f21b75491937c3c2924ab6ed40
+RMD160 (gkrellm-2.2.10.tar.bz2) = 6694838015716c09291887ae598daceb4f4b440f
+Size (gkrellm-2.2.10.tar.bz2) = 718894 bytes
 SHA1 (patch-aa) = bc07107ed828a5a86012cae39316c1d35d2d7a4d
 SHA1 (patch-ab) = e900c811ddea106efee5cbfc04d0cf14cc6e6451
 SHA1 (patch-ac) = 8890d5a5e8eaf21508a1bf91de788183fd6f7a75
-SHA1 (patch-ad) = 18218e5e9e7a8cfaabb20ec03865670ae66a15bd
-SHA1 (patch-ae) = e7c85ed5985bffd4cc2528b8c9fe258436257f75
+SHA1 (patch-ad) = 2a12402c941a5a197aa58e711e254ae2c91dfb10
+SHA1 (patch-ae) = 7ebbdd1dddb87f84f6e9e7ae316af18b316d4ddf
 SHA1 (patch-ag) = 6791436e17fccd7265cda8b4e3da229c4937c20f
 SHA1 (patch-ah) = 2018be5c2dd11c22c6d3f7c7fc8607e2c63123f3
 SHA1 (patch-ai) = 234e3e1e458e5709157668cf7d18faabdd076071

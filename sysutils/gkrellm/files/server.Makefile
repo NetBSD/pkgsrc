@@ -49,6 +49,26 @@ ifeq ($(HAVE_GETADDRINFO),1)
     FLAGS += -DHAVE_GETADDRINFO
 endif
 
+USE_LIBSENSORS?=	yes
+ifeq ($(without-libsensors),yes)
+USE_LIBSENSORS=		no
+endif
+ifeq ($(without-libsensors),1)
+USE_LIBSENSORS=		no
+endif
+ifeq ($(USE_LIBSENSORS),no)
+CONFIGURE_ARGS+=	--without-libsensors
+endif
+
+GREP?=		grep
+
+DUMMY_VAR:=	$(shell ./configure $(CONFIGURE_ARGS))
+HAVE_LIBSENSORS=	$(shell $(GREP) -c HAVE_LIBSENSORS configure.h)
+
+ifeq ($(HAVE_LIBSENSORS),1)
+SENSORS_LIBS?=	-lsensors
+LIBS+=	$(SENSORS_LIBS)
+endif
 
 override CFLAGS += -Wall $(FLAGS)
 
@@ -74,7 +94,7 @@ uninstall:
 	rm -f $(SMANDIR)/$(PACKAGE_D).1
 
 clean:
-	rm -f *.o *~ *.bak gkrellmd core
+	rm -f *.o *~ *.bak configure.h configure.log gkrellmd core
 
 SYSDEPS = ../src/sysdeps/bsd-common.c ../src/sysdeps/bsd-net-open.c \
 	../src/sysdeps/freebsd.c ../src/sysdeps/gtop.c \
