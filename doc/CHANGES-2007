@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.980 2007/05/03 12:43:19 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.981 2007/05/03 13:19:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1889,3 +1889,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-IO-Socket-SSL to 1.05 [wiz 2007-05-03]
 	Updated devel/tailor to 0.9.28 [wiz 2007-05-03]
 	Updated archivers/unrar to 3.7.5 [wiz 2007-05-03]
+	Updated textproc/libxml2 to 2.6.28 [wiz 2007-05-03]
