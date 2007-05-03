@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 2007/05/03 19:13:35 gdt Exp $
+
 --- src/mn-client-session.c.orig	Wed Jan 17 15:07:49 2007
 +++ src/mn-client-session.c	Fri Apr 20 19:05:51 2007
 @@ -369,6 +369,8 @@
