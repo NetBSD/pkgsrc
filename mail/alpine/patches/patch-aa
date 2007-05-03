@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/03 12:11:37 abs Exp $
+
+--- alpine/after.c.orig	2007-04-01 00:06:28.000000000 +0100
++++ alpine/after.c
+@@ -60,8 +60,10 @@ start_after(AFTER_S *a)
+ 	/* Initialize and set thread detached attribute */
+ 	pthread_attr_init(&attr);
+ 	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
++#if 	defined(PTHREAD_STACK_MIN)
+ 	stack = PTHREAD_STACK_MIN + 0x10000;
+ 	pthread_attr_setstacksize(&attr, stack);
++#endif /*defined(PTHREAD_STACK_MIN)
+ 
+ 	if(rc = pthread_create(&after_thread, &attr, do_after, (void *) a)){
+ 	    after_active = 0;
