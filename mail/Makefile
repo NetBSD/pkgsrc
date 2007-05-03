@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2007/04/21 15:23:00 heinz Exp $
+# $NetBSD: Makefile,v 1.315 2007/05/03 12:12:53 abs Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -6,6 +6,7 @@ COMMENT=	Electronic mail utilities
 SUBDIR+=	GNUMail
 SUBDIR+=	Pantomime
 SUBDIR+=	YoSucker
+SUBDIR+=	alpine
 SUBDIR+=	anomy-sanitizer
 SUBDIR+=	archivemail
 SUBDIR+=	autorespond
