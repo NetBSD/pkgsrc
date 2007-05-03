@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2007/01/06 23:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/05/03 12:27:54 wiz Exp $
 
-DISTNAME=	pcre-7.0
+DISTNAME=	pcre-7.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/	\
 		ftp://pcre.sourceforge.net/pub/pcre/
@@ -22,10 +22,5 @@ PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in
 
 # needs a stacksize of 4mb, default is 2mb
 TEST_TARGET=		test
-
-# Avoid an ICE in gcc2 on sparc64
-# use CONFIGURE_ARGS instead of the usual CONFIGURE_ENV as the latter just
-# won't work with -this- configure
-CONFIGURE_ARGS+=	F77=${FALSE:Q}
 
 .include "../../mk/bsd.pkg.mk"
