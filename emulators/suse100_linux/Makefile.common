@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2007/04/20 21:35:00 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.15 2007/05/04 23:46:56 xtraeme Exp $
 
 .include "../../emulators/suse100_linux/vars.mk"
 .include "../../emulators/suse100_linux/compat32.mk"
@@ -35,6 +35,7 @@ MANCOMPRESSED?=		yes
 # Don't check any script interpreter, as long as nobody complains.
 CHECK_INTERPRETER_SKIP=	*
 
+OPSYS_EMULSUBDIR=	linux${SUSE_COMPAT32_SUFFIX}
 EMULSUBDIR=		emul/linux${SUSE_COMPAT32_SUFFIX}
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
 
