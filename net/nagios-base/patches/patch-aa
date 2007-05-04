@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/08/17 14:19:00 taca Exp $
+$NetBSD: patch-aa,v 1.3 2007/05/04 04:53:03 grant Exp $
 
---- Makefile.in.orig	2006-05-31 01:31:44.000000000 +0900
+--- Makefile.in.orig	2006-05-31 02:31:44.000000000 +1000
 +++ Makefile.in
 @@ -21,16 +21,17 @@ LDFLAGS=@LDFLAGS@ @LIBS@
  
@@ -23,10 +23,12 @@ $NetBSD: patch-aa,v 1.2 2006/08/17 14:19:00 taca Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -59,60 +60,6 @@ all:
+@@ -57,61 +58,7 @@ all:
+ 	cd $(SRC_BASE) && $(MAKE)
+ 	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
- 	cd $(SRC_MODULE) && $(MAKE)
- 
+-	cd $(SRC_MODULE) && $(MAKE)
+-
 -	@echo ""
 -	@echo "*** Compile finished ***"
 -	@echo ""
@@ -80,10 +82,10 @@ $NetBSD: patch-aa,v 1.2 2006/08/17 14:19:00 taca Exp $
 -	@echo ""
 -	@echo "Enjoy."
 -	@echo ""
--
++#	cd $(SRC_MODULE) && $(MAKE)
+ 
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
- 
 @@ -183,12 +130,11 @@ install-unstripped: 
  	$(MAKE) install-basic
  
