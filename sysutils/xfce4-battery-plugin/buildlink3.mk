@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/05/01 17:42:00 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/05/04 10:18:17 hira Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK:=	${XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-battery-plugin
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-battery-plugin
 
 .if ${XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-battery-plugin+=	xfce4-battery-plugin>=0.5.0nb1
+BUILDLINK_API_DEPENDS.xfce4-battery-plugin+=	xfce4-battery-plugin>=0.5.0nb2
 BUILDLINK_PKGSRCDIR.xfce4-battery-plugin?=	../../sysutils/xfce4-battery-plugin
 .endif	# XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK
 
