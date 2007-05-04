@@ -1,0 +1,9 @@
+PythonDaap is a (under development) DAAP client implemented in Python,
+and based on PyTunes by Davyd Madeley.  The authentication stuff
+(needed by recent copies of iTunes) has been added, and a primitive
+object model that can download individual tracks, and has playlist
+support.
+
+This distribution also includes an implementation of Apple's custom
+MD5 hasher as a python module.  This hasher is used in the DAAP
+authentication protocol, documented by David Hammerton.
