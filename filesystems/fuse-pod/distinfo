@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/04 23:48:33 agc Exp $
+
+SHA1 (fusepod-0.5.1.tar.bz2) = 61fda80b27b0305fbfa26ba58d395b4ddbd72525
+RMD160 (fusepod-0.5.1.tar.bz2) = ad68b3f6c81a3ce7546771a8b2fd3dd6ce061447
+Size (fusepod-0.5.1.tar.bz2) = 78547 bytes
+SHA1 (patch-aa) = cb2aceb2aefaa8b99dc95fce70835edb85ab1a92
+SHA1 (patch-ab) = 923f7f7449c85d2ea537845b779aebec6aede1e8
