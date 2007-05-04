@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/04/26 20:35:33 tv Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/04 04:53:31 markd Exp $
 
 DISTNAME=	jdk-6u1-linux-i586
-PKGNAME=	sun-jdk6-6.0
+PKGNAME=	sun-jdk6-6.0.1
 MASTER_SITES=	# empty
 
 DOWNLOAD_NAME=	JDK 6u1
