@@ -1,0 +1,15 @@
+The libgmail project is a pure Python binding to provide access to
+Google's Gmail web-mail service.
+
+The library allows the user to log into an account, retrieve a list of
+threads, display information about them and display the source of the
+individual messages.
+
+In addition, the library allows the user to:
+	Archive Gmail messages to mbox format
+
+	Use your Gmail account as a SMTP server
+
+	Use your Gmail account as a POP server
+
+	Use your Gmail account as a FTP server!
