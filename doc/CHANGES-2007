@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.988 2007/05/04 20:26:22 agc Exp $
+$NetBSD: CHANGES-2007,v 1.989 2007/05/04 22:57:32 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/py-fuse-bindings version 0.2pre1 [agc 2007-05-04]
 	Added mail/py-libgmail version 0.1.5.1 [agc 2007-05-04]
 	Added audio/py-daap version 0.7 [agc 2007-05-04]
+	Added filesystems/fuse-gmailfs version 0.7.2 [agc 2007-05-04]
