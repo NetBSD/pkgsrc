@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/04 22:55:10 agc Exp $
+
+--- mount.gmailfs	2007/04/24 11:38:56	1.1
++++ mount.gmailfs	2007/04/24 11:40:07
+@@ -15,7 +15,7 @@
+ 
+ import sys, os, os.path, time, optparse, getpass, re, tempfile, signal
+ 
+-DEFAULT_GMAILFS_LOCATION     = '/usr/share/gmailfs/gmailfs.py'
++DEFAULT_GMAILFS_LOCATION     = '@PYSITELIB@/gmailfs.py'
+ # delay (in seconds) after which we consider gmailfs could not mount, and
+ # we abort.
+ GMAILFS_MOUNTING_MAX_DELAY   = 12 

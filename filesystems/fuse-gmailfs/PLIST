@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/04 22:55:10 agc Exp $
+${PYSITELIB}/gmailfs.py
+sbin/mount_gmailfs
+share/examples/gmailfs/gmailfs.conf
+@dirrm share/examples/gmailfs
