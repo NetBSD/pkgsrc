@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2007/04/30 05:15:32 obache Exp $
+# $NetBSD: Makefile,v 1.506 2007/05/04 21:46:29 heinz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -266,6 +266,7 @@ SUBDIR+=	p5-Template-Generate
 SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-Test-WWW-Mechanize
 SUBDIR+=	p5-URI
+SUBDIR+=	p5-URI-Fetch
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-WWW-Curl
