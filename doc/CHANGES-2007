@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.983 2007/05/04 07:49:57 rh Exp $
+$NetBSD: CHANGES-2007,v 1.984 2007/05/04 07:50:32 rh Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1893,4 +1893,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/gkrellm to 2.2.10 [cube 2007-05-03]
 	Updated sysutils/gkrellm-server to 2.2.10 [cube 2007-05-03]
 	Updated sysutils/gkrellm-share to 2.2.10 [cube 2007-05-03]
-	Updated games/cgoban-java to 3.3.17 [rillig 2007-05-04]
+	Updated games/cgoban-java to 3.3.17 [rh 2007-05-04]
