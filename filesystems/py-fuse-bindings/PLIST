@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/04 19:51:52 agc Exp $
+${PYSITELIB}/fuse.py
+${PYSITELIB}/fuse.pyc
+${PYSITELIB}/fuseparts/__init__.py
+${PYSITELIB}/fuseparts/__init__.pyc
+${PYSITELIB}/fuseparts/_fusemodule.so
+${PYSITELIB}/fuseparts/setcompatwrap.py
+${PYSITELIB}/fuseparts/setcompatwrap.pyc
+${PYSITELIB}/fuseparts/subbedopts.py
+${PYSITELIB}/fuseparts/subbedopts.pyc
+share/examples/fuse-python/hello.py
+share/examples/fuse-python/xmp.py
+@dirrm share/examples/fuse-python
+@dirrm ${PYSITELIB}/fuseparts
