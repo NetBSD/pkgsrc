@@ -1,0 +1,13 @@
+FUSEPod is a userspace filesystem which mounts your iPod into a directory
+for easy browsing of your songs on your iPod.
+
+Features
+========
+
+        * Read and Write support
+        * Viewing/Removing playlists
+        * Configurable directory layout
+        * Transparent copying of files onto iPod
+        * Tracks have tags in extended attributes
+        * Discovers where your iPod is mounted
+        * Statistics file

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/04 23:48:33 agc Exp $
+
+--- src/fusepod.cpp	2007/05/04 23:21:09	1.1
++++ src/fusepod.cpp	2007/05/04 23:23:52
+@@ -672,7 +672,7 @@
+     return paths;
+ }
+ 
+-void * fusepod_init () {
++void * fusepod_init (fuse_conn_info *connection) {
+     syncing = false;
+     syncing_file = "";
+ 

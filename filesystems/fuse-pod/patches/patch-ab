@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/04 23:48:33 agc Exp $
+
+--- src/fusepod_ipod.cpp	2007/05/04 23:28:59	1.1
++++ src/fusepod_ipod.cpp	2007/05/04 23:30:15
+@@ -417,7 +417,7 @@
+ 
+     stats << "FUSEPod Version: " << PACKAGE_VERSION << endl;
+     stats << "ITunesDB Version: " << this->ipod->version << endl;
+-    stats << "Real Mountpoint: " << this->ipod->mountpoint << endl;
++    stats << "Real Mountpoint: " << this->mount_point << endl;
+ 
+     Playlist * mpl = itdb_playlist_mpl (ipod);
+     stats << "iPod Name: " << (mpl && mpl->name ? string(mpl->name) : "Unknown") << endl; 
