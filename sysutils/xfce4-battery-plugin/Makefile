@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/05/01 17:41:59 martti Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/04 10:13:12 hira Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.5.0
 
 DISTNAME=	xfce4-battery-plugin-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-battery-plugin/
 COMMENT=	Xfce battey monitor plugin
