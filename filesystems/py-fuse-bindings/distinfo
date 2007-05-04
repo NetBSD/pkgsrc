@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/04 19:51:52 agc Exp $
+
+SHA1 (fuse-python-0.2pre1-20060720.tar.bz2) = ba96a05d23fe878d42af632bbc359a046e2e1190
+RMD160 (fuse-python-0.2pre1-20060720.tar.bz2) = b87ba3ef4859964524c8b5a3573b4549770cf2a4
+Size (fuse-python-0.2pre1-20060720.tar.bz2) = 34199 bytes
+SHA1 (patch-aa) = e1e6fcd47efcb2965627657f377d78d484294a61

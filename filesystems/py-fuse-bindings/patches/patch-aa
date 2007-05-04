@@ -1,0 +1,51 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/04 19:51:52 agc Exp $
+
+--- fuseparts/_fusemodule.c	2007/04/29 20:39:47	1.1
++++ fuseparts/_fusemodule.c	2007/04/29 20:42:20
+@@ -149,9 +149,15 @@
+ 	 * and we don't use autotools so we just dare to throw these in as is. 
+ 	 */
+ 
+-	fetchattr_soft(st, st_rdev);
++#ifdef __NetBSD__
++	st->st_blocks = (st->st_size + 511) / 512;
++	st->st_blksize = 4096;
++	st->st_rdev = st->st_dev;
++#else
+ 	fetchattr_soft_d(st, st_blksize, 4096);
+ 	fetchattr_soft_d(st, st_blocks, (st->st_size + 511)/512);
++	fetchattr_soft(st, st_rdev);
++#endif
+ 
+ #undef fetchattr_soft
+ #undef fetchattr_soft_d
+@@ -707,6 +713,9 @@
+ static int
+ pyfuse_loop_mt(struct fuse *f)
+ {
++#ifdef __NetBSD__
++	return fuse_loop(f);
++#else
+ 	PyInterpreterState *interp;
+ 	PyThreadState *save;
+ 	int err;
+@@ -723,6 +732,7 @@
+ 	PyEval_RestoreThread(save);
+ 
+ 	return(err);
++#endif
+ }
+ 
+ static struct fuse *fuse=NULL;
+@@ -916,7 +926,11 @@
+ 
+ 	path = PyString_AsString(arg1);
+ 
++#ifdef __NetBSD__
++	err = 0;
++#else
+ 	err = fuse_invalidate(fuse, path);
++#endif
+ 
+ 	ret = PyInt_FromLong(err);
+ 
