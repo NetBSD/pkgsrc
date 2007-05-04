@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/04 22:55:10 agc Exp $
+
+SHA1 (gmailfs-0.7.2.tar.gz) = 30190dd7f06dade00d60194059b53651c010e28b
+RMD160 (gmailfs-0.7.2.tar.gz) = fa3932ac6e9ae47c92a160e3968769114ca627a4
+Size (gmailfs-0.7.2.tar.gz) = 21941 bytes
+SHA1 (patch-aa) = 9f8b12304982390c9a087fe5472d98838c6999a4
+SHA1 (patch-ab) = db4c9a39dccdc51bee9de7783a400c0963e33ceb

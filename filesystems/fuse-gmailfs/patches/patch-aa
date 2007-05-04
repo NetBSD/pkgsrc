@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/04 22:55:10 agc Exp $
+
+--- gmailfs.py	2007/04/24 11:37:20	1.1
++++ gmailfs.py	2007/04/24 11:37:57
+@@ -1120,7 +1120,7 @@
+ defaultLoggingHandler = logging.StreamHandler(sys.stdout)
+ _addLoggingHandlerHelper(defaultLoggingHandler)
+ 
+-GmailConfig("/etc/gmailfs.conf")
++GmailConfig("@PKG_SYSCONFDIR@/gmailfs.conf")
+ try:
+     libgmail.ConfigLogs(log)
+ except:

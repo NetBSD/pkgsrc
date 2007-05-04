@@ -1,0 +1,3 @@
+GmailFS is a virtual filesystem developed by Richard Jones which
+allows users to mount and use their Gmail email account's storage as a
+local disk drive.
