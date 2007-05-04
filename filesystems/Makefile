@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/05/02 19:45:26 sborrill Exp $
+# $NetBSD: Makefile,v 1.12 2007/05/04 19:53:32 agc Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -14,6 +14,7 @@ SUBDIR+=	fuse-httpfs
 SUBDIR+=	fuse-lzofs
 SUBDIR+=	fuse-ntfs-3g
 SUBDIR+=	fuse-unionfs
+SUBDIR+=	py-fuse-bindings
 SUBDIR+=	u9fs
 
 .include "../mk/bsd.pkg.subdir.mk"
