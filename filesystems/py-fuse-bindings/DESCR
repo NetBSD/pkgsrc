@@ -1,0 +1,11 @@
+Python bindings for the FUSE and refuse interfaces.
+
+FUSE allows file sytsem operations to take place at user level, rather
+than in the kernel.  Refuse is a BSD-licensed re-implementation of
+fuse, running on top of the puffs functionality.  This package
+provides a python language interface to the FUSE interface.
+
+To achieve backwards compatibility with previous versions of the fuse
+bindings for python, set the environment variable
+
+	FUSE_PYTHON_COMPAT=0.1
