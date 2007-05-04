@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/04 20:08:54 agc Exp $
+${PYSITELIB}/lgconstants.py
+${PYSITELIB}/lgconstants.pyc
+${PYSITELIB}/libgmail.py
+${PYSITELIB}/libgmail.pyc

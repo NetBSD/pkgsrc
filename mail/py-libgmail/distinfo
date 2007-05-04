@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/04 20:08:54 agc Exp $
+
+SHA1 (libgmail-0.1.5.1.tar.gz) = 6d23e50e402d8c8cdafa88ad14191cd0a6b1fb3a
+RMD160 (libgmail-0.1.5.1.tar.gz) = 8c9e0133060759f00673fd0fe2484fe0c15d4033
+Size (libgmail-0.1.5.1.tar.gz) = 27158 bytes
