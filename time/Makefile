@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/04/27 11:02:36 martti Exp $
+# $NetBSD: Makefile,v 1.58 2007/05/05 22:09:04 markd Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -63,6 +63,7 @@ SUBDIR+=	ptimetracker
 SUBDIR+=	py-mxDateTime
 SUBDIR+=	rclock
 SUBDIR+=	remind
+SUBDIR+=	rsibreak
 SUBDIR+=	ruby-tzinfo
 SUBDIR+=	saytime
 SUBDIR+=	sunbird
