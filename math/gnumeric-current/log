@@ -1,0 +1,550 @@
+Gnumeric 1.7.10
+
+Andreas:
+	* Reimplement scaling
+	* Save orientation
+	* Show paper preview
+	* Show unit selector in print dialog
+	* Add margin adjustments
+
+Jean:
+	* New Time Series Analysis plugin.
+
+Jody:
+	* Fix inadvertent relocation of reference on other sheets. [#433907]
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.9
+
+Andreas:
+	* Switch to gtk print from gnome print
+	  (some feature regression)
+
+Jody:
+	* Import and Export for inline arrays in ODF. (now patched in OOo)
+	* Export cell comments to xls.
+
+Morten:
+	* Require three digits after a thousands separator in order to
+	  accept it as a number. [#415007]
+	* Fix autofill issue.  [#414815]
+	* Fix criticals with frozen panes.  [#308562]
+	* Fix rich text problem.  [#417632]
+	* Use GtkRecentManager.  Fixes #115112.
+	* Ignore local files that no longer exist.  [#67453]
+	* Fix XL load crash.  [#418868]
+	* Fix format guessed for $123,456.78  [#423603]
+	* Perform UTF-8 normalization during search.  [#421678]
+	* Allow selecting a locale for sorting.  [#427019]
+	* Make sure ssindex doesn't update the recent-files list.
+	* Update recent-files on load and save.  [#152584]
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.8
+
+Morten:
+	* Fix FACT.  [#410005]
+	* Fix gui problems after replacing pristine book.  [#410365] [#410371].
+	* Fix R1C1 preventing the use of, e.g., COS and RADIANS.  [#410609]
+	* Fix editing of out-of-range numbers with date format.
+	* Improve CopyDown and CopyRight.  [#112847]
+	* Make file chooser show more files for load.
+
+Oliver Burnett-Hall:
+	* Fix R1C1 problem in formula guru.
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.7
+
+Jody:
+	* Patch a leak in DataTables.
+	* Fix AutoFormat loading.
+	* Add support for the standard builtin formats in xlsx.
+	* Fix col/row grouping deletion. [#388505]
+	* Basic ODF AutoFilter partial import/export.
+	* Some property dialogs for combos and lists.
+
+Morten:
+	* Unify layout and string value formatting.
+	* Make sheet duplication handle sheet-local names.
+	* Make sheet duplication change sheet references to point to
+	  the new sheet.  [#158825, #158691]
+	* Fix parsing of new workbook-level named expresions.  [#306686]
+	* Fix xml loading of names that refer to other names.
+	* Fix crash from old-style file.  [#392054]
+	* Fix cell contents reading from old v7 files.  [#392054]
+	* Make sure we call g_thread_init early.  [#392050]
+	* Fix CRITICALs with DOLLAR.
+	* Fix progress display for .gnumeric and thus splash.  [#392546]
+	* Don't allow "1D2" [win32] or "0x1234p1" as numbers.  [#393347]
+	* Fix redraw problem.  [#393359]
+	* Don't complain over encoding-less documents unless there is a reason.
+	* Don't pull in popt. [#396329]
+	* Fix OO import crash.  [#396200]
+	* Fix part of problem loading style conditions.  [#397679]
+	* Fix generated libspreadsheet-1.7.pc [#399550]
+	* Fix tsv import problem.  [#404264]
+	* Fix R1C1 crash.  [#407274]
+	* Fix R1C1 issues.  [#407247]
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.6
+
+Jody:
+	* Fix sax import of autofilters. [#383400]
+	* Fix autofilter lists with only 1 combo. [#383400]
+	* Implement sax import of sheet objects.
+	* Implement List and Combo objects.
+	* Avoid pixel dirt when drawing hidden cursor. [#365960]
+	* XLSX support for import and export of autofilters.
+	* Right click on combos/list always brings up popup. [#135966]
+
+Morten:
+	* Fix title problem.  [#382643]
+	* Fix sax loading of comments.
+	* Fix scaling and rtl orientation of comment marker.  [#381700]
+	* Set a saver after loading with the sax loader.
+	* Implement undo for sheet object widgets. [#384136]
+	* Work around a gcc bug.
+	* Improve number formatting.
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.5
+
+Jon Kåre:
+	* Fix zoom preference. [#378043]
+
+Jody:
+	* Improve xls import/export of 'best fit' column widths. [#378560]
+	* Implement Validate from List cell combo. [#375620]
+	* Fix xls import of checkboxes with empty labels. [#375620]
+	* Put the style feedback onto an idle handle to improve cursor
+	  responsiveness.
+	* Improve autofill/validation combos.
+	    - Alt-Down opens a combo in the current cell
+	    - Enter, Alt-Up/Down selects within an open combo
+	    - Drag autoscroll
+	    - set initial selection for validate from list
+	    - Home/End jumps to top bottom.
+	    - Fix in RTL mode.
+	    - List items unfiltered by other active conditions. [#114307]
+	* Fix .gnumeric import of col/row groupings. [#380015]
+	* SAX import for autofilters
+	* Fix XSD schema
+	    - Add autofilters
+	    - Add inputmessages
+	    - Add Workbook Attributes
+	    - Make it validate
+	* Start simplifying the object anchor types for xlsx.
+	* Fix RTL text display.
+	* Fix a collection of dialog leaks.
+
+Morten:
+	* Add automatic test framework.
+	* Fix sc import of functions with no args.
+	* Prevent ssconvert from updating the recent-files list.
+	* Fix goal-seek crash.  [#377961]
+	* Minor goal-seek improvements.  [#379234]
+	* Fix critical in name definition dialog.
+	* Improve precision of goal-seek.
+	* Fix a case where goal seek went outside the interval.
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.4
+
+Jody:
+	* Fix splash.
+	* Fix crash.
+	* Make auto filter combo a real widget.
+
+Morten:
+	* Fix ssconvert error handling.
+	* Fix RATE.
+
+--------------------------------------------------------------------------
+Gnumeric 1.7.3
+
+Eduardo Lima:
+	* Make printing support optional. [#331948]
+
+Jon Kåre:
+	* Fix another clipboard crash. [#362993]
+	* Fix encoding of mailtos. [#148550]
+	* Fix crash in sheet label context menu. [#363261]
+	* Fix crash when deleting same sheet from two views. [#364082]
+	* Fix crash reading inconsistent file. [#312010]
+	* Remove "deactivate all" button from plugin manager.
+	* Fix crash due to invalid border line type. [#364658]
+	* Fix crash on loading Excel file with unusual text box. [#340293]
+	* Fix loading Excel files with unusual cell merges. [#331190]
+	* Update window list when closing view. [#366335]
+	* Fix crash when attempting to edit locked cell. [#367870]
+	* Fix initial sizing bug. [#368825]
+
+Jody:
+	* Rewrite expression relocation logic.
+	* Add accelerator (Alt-=) for auto-sum.
+	* Make paytype handler more flexible.
+	* Fix DIF import/export.
+	* Add accelerator for group/ungroup and inc/dec indent.
+	* Make clipboard faster.
+	* Support exporting only visible content to clipboard.
+	* Fix checkbox objects.
+
+Joseph Pingenot:
+	* Add more conditional format types.
+
+Morten:
+	* Basic life support for perl-loader.  [#362911]
+	* Fix csv problems.  [#359269]
+	* Fix crash deleting and adding sheets. [#363549]
+	* Fix jump-to-area crash.  [#363977]
+	* Fix search crash.  [#364085]
+	* Fix IPMT, PPMT issues.
+	* Start fixing issues with sheets being deleted underneath a
+	  dialog.  [#364291]
+	* Fix undo/redo problems in cases where all sheets might become
+	  temporarily hidden.  [#366477]
+	* Fix crash relating to workbook disposal.  [#366570]
+	* Fix edit-line weirdness.  [#367870]
+	* Cleanup g_free and g_strdup calls.  [#369661]
+	* Fix undo for sheet object copy.  [#308300]
+	* Fix redo for sheet object copy.  [#308300]
+	* Add a bugzilla component for bug-buddy.  [#348829]
+	* Make WorkbookView a more proper gobject.
+	* Fix autosave crash.
+	* Handle parsing of "2005/12" and "12/2005".
+	* Handle parsing of "1-10" in non-date cells.  [#376090]
+	* Handle new documentation format in the function selector.
+	* Improve formula editor a bit.
+	* Fix sheet object selection problem.  [#376866]
+
+--------------------------------------------------------------------------
+
+Gnumeric 1.7.2
+
+Emmanuel :
+	* New look for col/row headers.
+
+Jody :
+	* Fix off by one pt, printing vertical borders in RTL mode.  [#317662]
+	* Handle the last (we hope) MS XL array iteration. [#361074]
+	* Fix inversion check for cell relocation. [#350222]
+
+Jon Kåre:
+        * Fix import of certain hyperlinks from Excel.
+	* Fix bug which hid file type selector when saving images.
+	* Fix crash when storing to clipboard manager.  [#321714]
+	* Fix warnings when storing to clipboard manager.  [#342580]
+	* Fix warnings when pasting objects over clipboard. [#308569]
+        * Fix import of images in Excel files written by PHP/Perl. [#155696]
+
+Morten:
+	* Fix font preview crash.
+	* Fix performance problem with big paste.  [#359392]
+	* Fix paste crash.  [#360672]
+	* Fix transposed pasting of arrays.  [#349288]
+	* Fix sharing problem with regular pasting of arrays.
+	* Fix toolbar hiding/unhiding.
+	* Fix inter-workbook crash.  [#323811]
+	* Re-implement sharing of top-level expressions.
+	* Fix stale sheet pointer problems in clipboard.  [#323762]
+	* Fix growing button in sheet manage dialog.  [#362558]
+	* Expand default stack.  (With JKH.)  [#92131]
+	* Force expression sharing on load.
+
+--------------------------------------------------------------------------
+
+Gnumeric 1.7.1
+
+Andreas:
+	* Fix ngettext calls [#345027]
+	* Use ngettext to support correct plurals [#123860]
+	* Fix zoom-dialog labels [#311206]
+	* Initialize locale selector in stf export.
+	* Added Sheet_Title predefined name [#342542]
+	* Improve Define Names dialog [#345896]
+	* Fix button sensitivity in Define Names dialog in presence
+	  of identical workbook and sheet scope names
+	* Remove some warnings on AMD64 [#346045]
+	* Add "switch scope" button to define names dialog [#345896]
+	* Add "print area" to sheets [#164058]
+	* Fix writing of floating point preference values under
+	  --without-gnome [#346433]
+	* Added menu items to set/clear/show the print area of a sheet
+	  [#164058]
+	* Add a latex-exporter for an unformatted table fragments [#325980]
+	* Implement content export in the OpenDocument exporter.
+	* Fix undo text for definition/update of names [#346962]
+	* Fix interaction of merged cells, cell comments and undo [#347536]
+	* Fix undo problem for paste [#347826]
+	* Fix crash when jumping to Print_Area [#349686]
+	* Adjust width of tables in LaTeX export [#350625]
+	* Check for empty styles.xml and meta.xml files in OpenDocument 
+	  import [#350644]  Patch by sum1_abi@yahoo.com.
+
+Jean Brefort:
+	* Smoothing generated by Excel graphs supported. [#349457]
+	* Don't use auto_shape or auto_dash when plot has no marker/line
+	and series have while importing from excel. [#319727]
+
+Jody:
+	* Fix ODF sheet name import ('aa''a' == aa'a).
+	* Don't lose the orientation of line objects when copying.
+	* Add context menu binding for selected objects. [#338616]
+	* Allow File->Save even when editing an object. [#338619]
+	* Only install util man pages if they are built. [#341916]
+	* Handle Tab/Return movement. [#88167]
+	* Re-enable R1C1 parsing.
+	* Remove GnmCell::col_info to shrink cell by a ptr
+	* Remove ColRowInfo::pos to shrink col/row by an int
+	* Update schema a bit.
+	* Update GLPK to version 4.9.
+	* Make ODF merge cell import more flexible. [#347263]
+	* Restore ctrl-a as alternative for select-all.
+	* Select All no longer moves the edit_pos.
+	* Extend GDA type conversions, and make compatibile with 1.9.103.
+
+Morten:
+	* Moved font metrics to goffice.
+	* Fixed font initialization.
+	* Fix minor mouse cursor problem.  [#341877]
+	* Improve handling of invalid xls files.  [#341917]
+	* Try harder not producing CRITICALs on buggy files.
+	* Fixup expression sharer interfaces.
+	* Fix scientific-number editing problem.  [#342583]
+	* Reduce memory consumption for dependency storage.
+	* Fix CRITICAL for --debug-deps on startup.
+	* Fix sheet duplication problem related to the solver.
+	* Fix stf import crash.  [#345477]
+	* Fix problems with decreasing month autofill.  [#346028]
+	* Fix CRITICALs for =[].  [#347916]
+	* Fix problems with sheet reordering.  [#349255]
+	* Fix clipboard code's memory usage.  [#348922]
+	* Fix ods import of time values.  [#355943]
+
+Shixin Zeng:
+	* Add \L{} escape to LaTeX exporter (The content of the 
+          braces is being inserted literally into the LaTeX file.) 
+
+--------------------------------------------------------------------------
+
+Gnumeric 1.7.0
+
+PACKAGERS :
+    If you store supported mimetypes anywhere other than gnumeric.desktop you
+    will need to resync.
+
+Andreas:
+	* Fix lost minus signs in latex output. [#325656]
+	* Add has-header preference to the sort preferences. [#327278]
+	* Fix sort dialog crash. [329236]
+	* Make sort dialog range entry sensitive to keyboard entry.
+	  [#329250]
+
+Harun Vos:
+	* Fix Win32 crash-on-start for pre-WinXP.
+
+Ivan, Y.C. Wong:
+	* Fix Gdk-WARNING when cutting or copying cells. [#314210]
+	* No more debug command prompt.
+	* Error/warning messages will go to an existing command
+	  prompt (if any).
+
+Jody:
+	* Handle the special case of ADDRESS (r1c1) actually relative.
+	* Make sheet name quoting modular.
+	* AREAS handles error conditions better.
+	* Make Array formulas use less memory
+	* Fix xls import of optimized CHOOSE
+	* Dup sheet props when duping a sheet.
+	* Adding an autofilter dirties the sheet.
+	* Move Workbook::uri and ::dirty into GODoc
+	* Handle inconsistency with XL's model of vararg eval. [#336212]
+	* Export underlines to html.
+	* handle ctrl/shift space during rangeselection.
+	* Fix path to docs. [#330339]
+	* Handle canceling object drag motion. [#314866]
+	* Fix image drags with previously selected objects.
+	* Handle oddness in xls files generated by 'miniCalc' [#336858]
+	* Do not make backgrounds for xl95 charts transparent.
+	* Basic import and export for MS Office 12 (beta1) files
+	* xls import optimization for shared strings.
+	* Install the headers for libspreadsheet. [#332218]
+	* Enable ODF metadata import.
+	* Fix ODF import of underlines.
+	* Fix ODF import of sheets with quoted names.
+	* Enable ODF import of hidden rows/cols.
+	* Fix ODF import of col/row cell default styles.
+
+Klokan Pridal:
+	* Implement xml saving/loading of "protected" attribute.  [#334257]
+	* Implement xls saving/loading of "protected" attribute.  [#330129]
+
+Luciano Miguel Wolf:
+	* ODS import improvements.
+
+Morten:
+	* Fix COUNTBLANK.
+	* Fix auto-filter formatting issue.  [#322392]
+	* Fix ATAN2(0,0).
+	* Make AND, OR, and XOR ignore strings as claimed.
+	* Fix TRIM for non-ASCII case with spaces at end.
+	* Fix TYPE crash.  [#323128]
+	* Plug leak.
+	* Fix sheet quoting problem.  [#323546]
+	* Improve Excel compatibility of BIN2DEC, BIN2HEX, and
+	  BIN2OCT.  [#323787]
+	* Fix crash on xml load.  [#323888]
+	* Fix file corruption on saving scenarios.  [#323927]
+	* Fix a pile of leaks in solver and scenario saving and loading.
+	* Fix leaks in solver dialog.
+	* Fix parser leak.  [#301127]
+	* Fix NetBSD compilation.  [#324358]
+	* Fix solver dialog crash.  [#324585]
+	* Fix FMR in SUBSTITUTE.
+	* Fix REPLACE and SEARCH for non-ASCII strings.
+	* Fix division-by-zero problems in FIXED, ROUND, ROUNDUP,
+	  ROUNDDOWN, TRUNC.
+	* Fix accuracy of ROUND, ROUNDUP, ROUNDDOWN, TRUNC.
+	* Fix out-of-memory problem in REPT.
+	* Fix lots of little XL compatibility problems in string
+	  functions.
+	* Fix error on Search-and-replace.
+	* Improve handling of boolean args for "R" functions.
+	* Fix near-infinite loop in FACTDOUBLE.
+	* Fix text-to-columns crash probably affecting stf import too.
+	* Fix font preference crash.  [#326830]
+	* Fix memory allocation problem for writing charts.
+	* Fix loading of boolean constants from ods files.
+	* Fix MID for out-of-bounds values.
+	* Fix constructed-range parsing for OO.
+	* Improve .desktop file.  [#328015]
+	* Make expressions use less memory by merging ref_count
+	  and operator fields.
+	* Split expression memory pool into one for large and one for
+	  small nodes.
+	* Fix SECOND, MINUTE, HOUR compatibility problems.
+	* Fix DATE compatibility for bizarre input.
+	* Cleanup parameter handling in financial functions.
+	* Fix parsing problem with underscores in sheet names.  [#329236]
+	* Fix LCM and GCD for large arguments.
+	* Switch gnumeric option handling to GOption.
+	* Switch ssconvert option handling to GOption.  [#154395]
+	* Switch ssindex option handling to GOption.  [#154395]
+	* Fix problem with solver error message translation.
+	* Expand the range of certain random number functions.
+	* Fix large-argument cases for BITOR, BITAND, BITXOR, BITLSHIFT,
+	  and BITRSHIFT.
+	* Redo string-to-value parsing.
+	* Allow "12Dec2001" for date entry.  [#56168]
+	* Allow "20041231:103355".
+	* Fix bogus duplicate-accelerator warnings.  [#324692]
+	* Fix criticals relating to toolbar combos for very narrow windows.
+	  [#162498]
+	* Allow vertical toolbars.
+	* Save a bit of memory for function calls.
+	* Fix type confusing in mps importer.
+	* Greatly reduce the use of the type-unsafe GnmExprList.
+	* Use argc/argv form for sheet function taking uneval'd args.
+	* Fix expression creation and leaks in mps importer.
+	* Use toolbuttons for edit-line buttons.  [#331916]
+	* Go to end of text on F2.  [#319311]
+	* Let GtkNotebook handle hidden sheets by using hidden tabs.
+	* Fix updates of tab colours.
+	* Make Workbook a little more like a proper GObject.
+	* Rework "dirty" handling for sheets and workbooks.
+	* Fix 64-bit problem for xls save.
+	* Fix printing issue when sheet is zoomed.  [#332932]
+	* Fix dbf import issue.  [#332878]
+	* Fix menu feedback when replacing a pristine workbook
+	  by a file.
+	* Fix stf text import speed regression.  [#333407]
+	* Fix XIRR issues.  [#333620]  [#333631]
+	* Fix autofilter for text that looks like numbers.  [#333809]
+	* Plug leak in SEARCH.
+	* Fix printing issue with wrapped, right-aligned text.  [#334144]
+	* Introduce top-level expressions.
+	* Eliminate ref-counting at the sub-expression level.
+	* Plug leaks in preferences dialog.
+	* Make CORREL, COVAR, RSQ, SLOPE, and INTERCEPT really ignore
+	  blanks.  [#334591]
+	* Fix DOLLARDE and DOLLARFR.
+	* Resurrect the ability to name external workbooks by filename,
+	  including relative filename.  (But things still expand to URIs.)
+	* Improve Excel compatibility for ROMAN and COMBIN in extreme cases.
+	* Fix sheet object deletion crash.  [#335052]
+	* Make ISPRIME and PFACTOR work for much larger numbers.
+	* Fix border case for iterative evaluation.
+	* Display and xml-save inter-workbook references using relative
+	  URIs.  [#334724]
+	* Fix theming problem.  [#309060]
+	* Fix validation problems.  [#114086]
+	* Fix validation handling of errors/strings/booleans.
+	* Implement WORKDAY.
+	* Improve Excel compatibility for EDATE and EOMONTH in extreme
+	  cases.
+	* Fix EVEN and ODD for very large numbers.
+	* Fix sheet-manage dialog crash.  [#336165]
+	* Reimplement autofill.
+	* Fix xls export of data tables.
+	* Fix xls export for intersections.
+	* Fix parser crash for ={-TRUE}.
+	* Get rid of integer/float split.
+	* Allow ={+42}.
+	* Fix copy-and-paste problem between gnumeric instances.  [#337215]
+	* Improve handling of strings that look like numbers or expressions
+	  during search-and-replace.  [#167304]
+	* Fix rendering problems for values with attached formats.
+	* Fix button ordering on Win32.  [#170479]
+	* Fix rendering on fractions that round to 0.  [#314210]
+	* Add undo handling to deletion of names.  Fix recalc are removing
+	  or defining names.  [#312610]
+	* Improve editing of cells containing currency amounts, fractions,
+	  or percentages.
+	* Improve 1-2-3 import for Chinese files.  [#337968]
+	* Fix 1-2-3 format handling.
+	* Fix parsing of "4/2005".  [#166413]
+	* Fix initial sheet selection in the sheet-manage dialog. [#331984]
+	* Make autofill understand 3Q01, 4Q01, 1Q02, ...  [#61650]
+	* Make autofill understand Apr, Jul, Oct, Jan, ... (and other skip-N
+	  sequences, with or without year.)
+	* Make autofill fit columns.
+	* Fix sorting undo problem.  [#161890]
+	* Add locale choice on text export.  [#123339]
+	* Remove stray "Back" button for text export's one-sheet case.
+	* Fix elusive sheet tab tracking bug after we replaced the initial
+	  pristine workbook by a newly loaded one.
+	* Fix GUI inconsistency for text import.  [#338694]
+	* Fix crash on save+quit.  [#338847]
+	* Auto-fit width when entering new values or formulas.
+	* Auto-fit height when entering string constants.
+	* Fix fits for wrapped text.  [#67351]
+	* Fix minor undo problem for applying a height-changing format.
+	* When undoing or redoing, move to where things happen. [#114077,
+	  #154705]
+	* Add tooltips to a few combos.  [#339122]
+	* Improve stf import format guessing.  [#332997]
+	* Improve stf import for sloppy clumps of whitespace.  [#339297]
+	* Improve stf import's keyboard navigation.
+	* Fix applix import issue.  [#339190]
+	* Fix critical.  [#339793]
+	* Make "General" format pixel-perfect.
+	* Fix zoomed rendering issue.  [#310492]
+	* Warn for confusing text-formatted-non-string situation. [#339834]
+	* Fix filling of text formatted as non-general.
+	* Fix printing problem for cells that haven't been displayed.
+	* Fix critical on exit for --debug=1.
+	* Display tooltips during autofill.  [#51272]
+	* Fix editing of comments attached to merged regions.
+
+Jon Kåre:
+        * Hand clipboard off to clipboard manager when exiting.
+	* Handle non breaking space in html input.
+	* Handle .xls containing html fragment [#311879]
+
+Nick Lamb:
+	* Fix CONVERT crash.  [#323678]
+
+Philo Vivero:
+	* New loan template.  [#317201]

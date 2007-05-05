@@ -1,0 +1,7 @@
+Gnumeric is a powerful and easy to use spreadsheet program from
+the GNOME project.  The goal for this spreadsheet is to compete
+with the commercial offerings.  Users of Excel should be already
+familiar with Gnumeric advanced features.  A plugin system lets
+you extend Gnumeric with GPL extensions, and an optional
+Python and Perl plugins let you define complex functions in those
+popular languages.

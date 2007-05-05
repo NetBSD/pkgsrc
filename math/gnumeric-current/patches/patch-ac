@@ -1,0 +1,92 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/05 21:34:14 wiz Exp $
+
+--- configure.orig	2007-05-03 23:46:50.000000000 +0000
++++ configure
+@@ -23749,12 +23749,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_GDA_CFLAGS="$GDA_CFLAGS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgda-2.0 >= 1.9.103\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "libgda-2.0 >= 1.9.103") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgda-3.0 >= 1.9.103\"") >&5
++  ($PKG_CONFIG --exists --print-errors "libgda-3.0 >= 1.9.103") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GDA_CFLAGS=`$PKG_CONFIG --cflags "libgda-2.0 >= 1.9.103" 2>/dev/null`
++  pkg_cv_GDA_CFLAGS=`$PKG_CONFIG --cflags "libgda-3.0 >= 1.9.103" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -23767,12 +23767,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_GDA_LIBS="$GDA_LIBS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgda-2.0 >= 1.9.103\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "libgda-2.0 >= 1.9.103") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgda-3.0 >= 1.9.103\"") >&5
++  ($PKG_CONFIG --exists --print-errors "libgda-3.0 >= 1.9.103") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GDA_LIBS=`$PKG_CONFIG --libs "libgda-2.0 >= 1.9.103" 2>/dev/null`
++  pkg_cv_GDA_LIBS=`$PKG_CONFIG --libs "libgda-3.0 >= 1.9.103" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -23791,9 +23791,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        GDA_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgda-2.0 >= 1.9.103"`
++	        GDA_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgda-3.0 >= 1.9.103"`
+         else
+-	        GDA_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgda-2.0 >= 1.9.103"`
++	        GDA_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgda-3.0 >= 1.9.103"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$GDA_PKG_ERRORS" >&5
+@@ -23819,12 +23819,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_GNOMEDB_CFLAGS="$GNOMEDB_CFLAGS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomedb-2.0 >= 1.3.0\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "libgnomedb-2.0 >= 1.3.0") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomedb-3.0 >= 1.3.0\"") >&5
++  ($PKG_CONFIG --exists --print-errors "libgnomedb-3.0 >= 1.3.0") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOMEDB_CFLAGS=`$PKG_CONFIG --cflags "libgnomedb-2.0 >= 1.3.0" 2>/dev/null`
++  pkg_cv_GNOMEDB_CFLAGS=`$PKG_CONFIG --cflags "libgnomedb-3.0 >= 1.3.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -23837,12 +23837,12 @@ if test -n "$PKG_CONFIG"; then
+         pkg_cv_GNOMEDB_LIBS="$GNOMEDB_LIBS"
+     else
+         if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomedb-2.0 >= 1.3.0\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "libgnomedb-2.0 >= 1.3.0") 2>&5
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libgnomedb-3.0 >= 1.3.0\"") >&5
++  ($PKG_CONFIG --exists --print-errors "libgnomedb-3.0 >= 1.3.0") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOMEDB_LIBS=`$PKG_CONFIG --libs "libgnomedb-2.0 >= 1.3.0" 2>/dev/null`
++  pkg_cv_GNOMEDB_LIBS=`$PKG_CONFIG --libs "libgnomedb-3.0 >= 1.3.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -23861,9 +23861,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        GNOMEDB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgnomedb-2.0 >= 1.3.0"`
++	        GNOMEDB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libgnomedb-3.0 >= 1.3.0"`
+         else
+-	        GNOMEDB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnomedb-2.0 >= 1.3.0"`
++	        GNOMEDB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnomedb-3.0 >= 1.3.0"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$GNOMEDB_PKG_ERRORS" >&5
