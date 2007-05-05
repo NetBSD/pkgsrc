@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/06/04 16:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/05 22:09:19 adrianp Exp $
 
 DISTNAME=	Net_Sieve-1.1.1
 CATEGORIES+=	net
+PKGREVISION=	1
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://pear.php.net/package/Net_Sieve/
