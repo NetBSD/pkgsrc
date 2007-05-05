@@ -1,0 +1,18 @@
+SSLCrypto is a package for Python that dramatically eases the task of
+adding encryption to Python programs.
+
+It provides a unified API that is almost totally compatible with that
+of ezPyCrypto, except that it takes advantage of the OpenSSL Crypto
+Library to deliver massive improvements in speed and security.
+
+After using ezPyCrypto myself, I found that while it performed ok with
+smaller public key sizes, it proved impossibly slow with larger keys.
+This slowness, resulting from non-optimal code in its backend (the
+Python Cryptography Toolkit) meant that on a 1.5 GHz Athlon XP, it was
+taking several minutes to generate 4096-bit keys.  Completely
+unacceptable if you need real security.
+
+Performance is absolutely critical for an encryption API.  If slowness
+deters people from using adequate-sized keys, security will be
+severely compromised, almost to the extent that there's little point
+in using encryption in the first place.
