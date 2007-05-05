@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.994 2007/05/05 12:47:48 obache Exp $
+$NetBSD: CHANGES-2007,v 1.995 2007/05/05 15:19:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1905,3 +1905,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/goffice to 0.4.0 [wiz 2007-05-05]
 	Updated textproc/eb to 4.3nb1 [obache 2007-05-05]
 	Updated www/ja-trac to 0.10.4.1 [obache 2007-05-05]
+	Updated security/amavisd-new to 2.5.0 [xtraeme 2007-05-05]
