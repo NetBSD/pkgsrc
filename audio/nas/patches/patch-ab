@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.12 2006/01/11 11:32:38 markd Exp $
+$NetBSD: patch-ab,v 1.13 2007/05/05 21:31:10 markd Exp $
 
---- server/Imakefile.orig	2005-06-04 16:40:58.000000000 +1200
+--- server/Imakefile.orig	2006-08-14 13:04:17.000000000 +1200
 +++ server/Imakefile
 @@ -61,7 +61,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
  #endif
@@ -15,8 +15,8 @@ $NetBSD: patch-ab,v 1.12 2006/01/11 11:32:38 markd Exp $
  #endif
  
  
--#if defined(i386SVR4Architecture) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture) || defined(__DragonFly__)
-+#if defined(i386SVR4Architecture) || defined(__FreeBSD__) || defined(NetBSDArchitecture) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture) || defined(__DragonFly__)
+-#if defined(i386SVR4Architecture) || defined(__FreeBSD_kernel__) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture) || defined(__DragonFly__)
++#if defined(i386SVR4Architecture) || defined(__FreeBSD_kernel__) || defined(__FreeBSD__) || defined(NetBSDArchitecture) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture) || defined(USLArchitecture) || defined(cygwinArchitecture) || defined(__DragonFly__)
  # define CanBuildAuServer	YES
  
  # if defined(cygwinArchitecture)
