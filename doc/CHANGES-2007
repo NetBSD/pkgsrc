@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.997 2007/05/05 21:48:29 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.998 2007/05/05 22:15:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1910,3 +1910,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Added lang/pear version 1.5.2 [adrianp 2007-05-05]
 	Updated www/php4 to 4.4.6nb1 [adrianp 2007-05-05]
 	Updated lang/php5 to 5.2.1nb3 [adrianp 2007-05-05]
+	Updated audio/nas to 1.9 [markd 2007-05-05]
+	Updated audio/nas-auscope to 1.9 [markd 2007-05-05]
+	Updated sysutils/k3b to 1.0.1 [markd 2007-05-05]
+	Updated net/kftpgrabber to 0.8.1 [markd 2007-05-05]
+	Updated multimedia/kmplayer to 0.9.4a [markd 2007-05-05]
+	Added time/rsibreak version 0.8.0 [markd 2007-05-05]
