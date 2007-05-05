@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/02 12:19:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/05/05 12:46:58 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/trac/About.py
@@ -160,6 +160,9 @@ ${PYSITELIB}/trac/upgrades/db18.pyo
 ${PYSITELIB}/trac/upgrades/db19.py
 ${PYSITELIB}/trac/upgrades/db19.pyc
 ${PYSITELIB}/trac/upgrades/db19.pyo
+${PYSITELIB}/trac/upgrades/db20.py
+${PYSITELIB}/trac/upgrades/db20.pyc
+${PYSITELIB}/trac/upgrades/db20.pyo
 ${PYSITELIB}/trac/upgrades/db3.py
 ${PYSITELIB}/trac/upgrades/db3.pyc
 ${PYSITELIB}/trac/upgrades/db3.pyo
@@ -307,6 +310,7 @@ share/examples/trac/htdigest.py
 share/examples/trac/migrateticketmodel.py
 share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
+share/examples/trac/trac-post-commit-hook.cmd
 share/examples/trac/trac-pre-commit-hook
 share/trac/cgi-bin/trac.cgi
 share/trac/cgi-bin/trac.fcgi
