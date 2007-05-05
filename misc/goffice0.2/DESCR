@@ -1,0 +1,8 @@
+This is a library for common operations for document centric
+applications that are conceptually simple, but complex to implement
+fully. Supported operations include:
+    - plugins
+    - load/save documents
+    - undo/redo
+
+This package contains the 0.2 branch of the goffice project.
