@@ -1,0 +1,194 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 21:21:45 adrianp Exp $
+bin/pear
+bin/peardev
+bin/pecl
+lib/php/.channels/.alias/pear.txt
+lib/php/.channels/.alias/pecl.txt
+lib/php/.channels/__uri.reg
+lib/php/.channels/pear.php.net.reg
+lib/php/.channels/pecl.php.net.reg
+lib/php/.depdb
+lib/php/.depdblock
+lib/php/.filemap
+lib/php/.lock
+@exec ${MKDIR} %D/lib/php/.registry/.channel.__uri
+@exec ${MKDIR} %D/lib/php/.registry/.channel.pecl.php.net
+lib/php/.registry/archive_tar.reg
+lib/php/.registry/console_getopt.reg
+lib/php/.registry/pear.reg
+lib/php/.registry/structures_graph.reg
+lib/php/Archive/Tar.php
+lib/php/Console/Getopt.php
+lib/php/OS/Guess.php
+lib/php/PEAR.php
+lib/php/PEAR/Autoloader.php
+lib/php/PEAR/Builder.php
+lib/php/PEAR/ChannelFile.php
+lib/php/PEAR/ChannelFile/Parser.php
+lib/php/PEAR/Command.php
+lib/php/PEAR/Command/Auth.php
+lib/php/PEAR/Command/Auth.xml
+lib/php/PEAR/Command/Build.php
+lib/php/PEAR/Command/Build.xml
+lib/php/PEAR/Command/Channels.php
+lib/php/PEAR/Command/Channels.xml
+lib/php/PEAR/Command/Common.php
+lib/php/PEAR/Command/Config.php
+lib/php/PEAR/Command/Config.xml
+lib/php/PEAR/Command/Install.php
+lib/php/PEAR/Command/Install.xml
+lib/php/PEAR/Command/Mirror.php
+lib/php/PEAR/Command/Mirror.xml
+lib/php/PEAR/Command/Package.php
+lib/php/PEAR/Command/Package.xml
+lib/php/PEAR/Command/Pickle.php
+lib/php/PEAR/Command/Pickle.xml
+lib/php/PEAR/Command/Registry.php
+lib/php/PEAR/Command/Registry.xml
+lib/php/PEAR/Command/Remote.php
+lib/php/PEAR/Command/Remote.xml
+lib/php/PEAR/Command/Test.php
+lib/php/PEAR/Command/Test.xml
+lib/php/PEAR/Common.php
+lib/php/PEAR/Config.php
+lib/php/PEAR/Dependency.php
+lib/php/PEAR/Dependency2.php
+lib/php/PEAR/DependencyDB.php
+lib/php/PEAR/Downloader.php
+lib/php/PEAR/Downloader/Package.php
+lib/php/PEAR/ErrorStack.php
+lib/php/PEAR/Exception.php
+lib/php/PEAR/Frontend.php
+lib/php/PEAR/Frontend/CLI.php
+lib/php/PEAR/Installer.php
+lib/php/PEAR/Installer/Role.php
+lib/php/PEAR/Installer/Role/Common.php
+lib/php/PEAR/Installer/Role/Data.php
+lib/php/PEAR/Installer/Role/Data.xml
+lib/php/PEAR/Installer/Role/Doc.php
+lib/php/PEAR/Installer/Role/Doc.xml
+lib/php/PEAR/Installer/Role/Ext.php
+lib/php/PEAR/Installer/Role/Ext.xml
+lib/php/PEAR/Installer/Role/Php.php
+lib/php/PEAR/Installer/Role/Php.xml
+lib/php/PEAR/Installer/Role/Script.php
+lib/php/PEAR/Installer/Role/Script.xml
+lib/php/PEAR/Installer/Role/Src.php
+lib/php/PEAR/Installer/Role/Src.xml
+lib/php/PEAR/Installer/Role/Test.php
+lib/php/PEAR/Installer/Role/Test.xml
+lib/php/PEAR/PackageFile.php
+lib/php/PEAR/PackageFile/Generator/v1.php
+lib/php/PEAR/PackageFile/Generator/v2.php
+lib/php/PEAR/PackageFile/Parser/v1.php
+lib/php/PEAR/PackageFile/Parser/v2.php
+lib/php/PEAR/PackageFile/v1.php
+lib/php/PEAR/PackageFile/v2.php
+lib/php/PEAR/PackageFile/v2/Validator.php
+lib/php/PEAR/PackageFile/v2/rw.php
+lib/php/PEAR/Packager.php
+lib/php/PEAR/REST.php
+lib/php/PEAR/REST/10.php
+lib/php/PEAR/REST/11.php
+lib/php/PEAR/Registry.php
+lib/php/PEAR/Remote.php
+lib/php/PEAR/RunTest.php
+lib/php/PEAR/Task/Common.php
+lib/php/PEAR/Task/Postinstallscript.php
+lib/php/PEAR/Task/Postinstallscript/rw.php
+lib/php/PEAR/Task/Replace.php
+lib/php/PEAR/Task/Replace/rw.php
+lib/php/PEAR/Task/Unixeol.php
+lib/php/PEAR/Task/Unixeol/rw.php
+lib/php/PEAR/Task/Windowseol.php
+lib/php/PEAR/Task/Windowseol/rw.php
+lib/php/PEAR/Validate.php
+lib/php/PEAR/Validator/PECL.php
+lib/php/PEAR/XMLParser.php
+lib/php/Structures/Graph.php
+lib/php/Structures/Graph/Manipulator/AcyclicTest.php
+lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
+lib/php/Structures/Graph/Node.php
+lib/php/System.php
+lib/php/data/PEAR/package.dtd
+lib/php/data/PEAR/template.spec
+lib/php/data/Structures_Graph/LICENSE
+lib/php/data/Structures_Graph/genpackage.xml.pl
+lib/php/data/Structures_Graph/package.sh
+lib/php/data/Structures_Graph/publish.sh
+lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
+lib/php/doc/PEAR/INSTALL
+lib/php/doc/PEAR/README
+lib/php/doc/Structures_Graph/docs/generate.sh
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_AcyclicTest.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_TopologicalSorter.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Node.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_AcyclicTest_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_TopologicalSorter_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Node_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/tutorial_Structures_Graph.pkg.html
+lib/php/doc/Structures_Graph/docs/html/classtrees_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/elementindex.html
+lib/php/doc/Structures_Graph/docs/html/elementindex_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/errors.html
+lib/php/doc/Structures_Graph/docs/html/index.html
+lib/php/doc/Structures_Graph/docs/html/li_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/media/banner.css
+lib/php/doc/Structures_Graph/docs/html/media/stylesheet.css
+lib/php/doc/Structures_Graph/docs/html/packages.html
+lib/php/doc/Structures_Graph/docs/html/todolist.html
+lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
+lib/php/pearcmd.php
+lib/php/peclcmd.php
+lib/php/test/Structures_Graph/tests/README
+lib/php/test/Structures_Graph/tests/all-tests.php
+lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
+@dirrm lib/php/doc/Archive_Tar/docs
+@dirrm lib/php/doc/Archive_Tar
+@dirrm lib/php/doc/PEAR
+@dirrm lib/php/data/Structures_Graph
+@dirrm lib/php/data/PEAR
+@unexec ${RMDIR} %D/lib/php/data 2>/dev/null || ${TRUE}
+@dirrm lib/php/Structures/Graph/Manipulator
+@dirrm lib/php/Structures/Graph
+@dirrm lib/php/Structures
+@dirrm lib/php/PEAR/Validator
+@dirrm lib/php/PEAR/Task/Windowseol
+@dirrm lib/php/PEAR/Task/Unixeol
+@dirrm lib/php/PEAR/Task/Replace
+@dirrm lib/php/PEAR/Task/Postinstallscript
+@dirrm lib/php/PEAR/Task
+@dirrm lib/php/PEAR/REST
+@dirrm lib/php/PEAR/PackageFile/v2
+@dirrm lib/php/PEAR/PackageFile/Parser
+@dirrm lib/php/PEAR/PackageFile/Generator
+@dirrm lib/php/PEAR/PackageFile
+@dirrm lib/php/PEAR/Installer/Role
+@dirrm lib/php/PEAR/Installer
+@dirrm lib/php/PEAR/Frontend
+@dirrm lib/php/PEAR/Downloader
+@dirrm lib/php/PEAR/Command
+@dirrm lib/php/PEAR/ChannelFile
+@dirrm lib/php/PEAR
+@dirrm lib/php/OS
+@dirrm lib/php/Console
+@dirrm lib/php/Archive
+@dirrm lib/php/test/Structures_Graph/tests/testCase
+@dirrm lib/php/test/Structures_Graph/tests
+@dirrm lib/php/test/Structures_Graph
+@unexec ${RMDIR} %D/lib/php/test 2>/dev/null || ${TRUE}
+@dirrm lib/php/doc/Structures_Graph/docs/html/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/html/media
+@dirrm lib/php/doc/Structures_Graph/docs/html
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials
+@dirrm lib/php/doc/Structures_Graph/docs
+@dirrm lib/php/doc/Structures_Graph
+@unexec ${RMDIR} %D/lib/php/doc 2>/dev/null || ${TRUE}
+@dirrm lib/php/.registry/.channel.pecl.php.net
+@dirrm lib/php/.registry/.channel.__uri
+@unexec ${RMDIR} %D/lib/php/.registry 2>/dev/null || ${TRUE}
+@dirrm lib/php/.channels/.alias
+@dirrm lib/php/.channels
