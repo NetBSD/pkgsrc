@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/04/24 15:01:03 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/05/05 09:13:31 obache Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -254,6 +254,8 @@ share/eb/doc/ebzip-09.html
 share/eb/doc/ebzip-10.html
 share/eb/doc/ebzip.html
 share/examples/eb/eb.conf.default
+share/locale/ja/LC_MESSAGES/eb.mo
+share/locale/ja/LC_MESSAGES/ebutils.mo
 @dirrm share/examples/eb
 @dirrm share/eb/doc
 @dirrm share/eb/appendix/superdic98-1.0/koujien/data
