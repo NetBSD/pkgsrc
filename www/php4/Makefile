@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2007/03/03 13:19:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.76 2007/05/05 21:35:05 adrianp Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
+PKGREVISION=		1
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
@@ -47,19 +48,6 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
-USE_TOOLS+=	gzcat
-
-SUBST_CLASSES=		pear
-SUBST_STAGE.pear=	pre-install
-SUBST_FILES.pear=	${WRKDIR}/pear.sh
-SUBST_SED.pear=		-e "s|@php_bin@|${PREFIX}/bin/php|g"
-SUBST_SED.pear+=	-e "s|@php_dir@|${PREFIX}/lib/php|g"
-SUBST_SED.pear+=	-e "s|@SH@|${SH}|g"
-SUBST_MESSAGE.pear=	Fixing pear installation script.
-
-post-extract:
-	${CP} ${FILESDIR}/pear.sh ${WRKDIR}
-
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
@@ -69,6 +57,5 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
-	${INSTALL_SCRIPT} ${WRKDIR}/pear.sh ${PREFIX}/bin/pear
 
 .include "../../mk/bsd.pkg.mk"
