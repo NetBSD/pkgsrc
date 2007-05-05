@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/05 22:07:59 markd Exp $
+
+SHA1 (Rsibreak-0.8.0.tar.bz2) = a365a810e6fd4f5482cf63499205001e817f5934
+RMD160 (Rsibreak-0.8.0.tar.bz2) = bc1f696a5d2d8f88178ab39e079e22265b5b7bf5
+Size (Rsibreak-0.8.0.tar.bz2) = 832998 bytes
+SHA1 (patch-aa) = 28c169b9c2820fc92a8ad2f149fc8830b1e7257b

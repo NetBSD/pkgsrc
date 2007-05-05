@@ -1,0 +1,117 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 22:07:59 markd Exp $
+bin/rsibreak
+share/applications/kde/rsibreak.desktop
+share/doc/kde/HTML/da/rsibreak/common
+share/doc/kde/HTML/da/rsibreak/index.cache.bz2
+share/doc/kde/HTML/da/rsibreak/index.docbook
+share/doc/kde/HTML/en/rsibreak/common
+share/doc/kde/HTML/en/rsibreak/dcop.png
+share/doc/kde/HTML/en/rsibreak/index.cache.bz2
+share/doc/kde/HTML/en/rsibreak/index.docbook
+share/doc/kde/HTML/en/rsibreak/logo.png
+share/doc/kde/HTML/en/rsibreak/popup.png
+share/doc/kde/HTML/en/rsibreak/statistics.png
+share/doc/kde/HTML/en/rsibreak/suspend.png
+share/doc/kde/HTML/nl/rsibreak/common
+share/doc/kde/HTML/nl/rsibreak/index.cache.bz2
+share/doc/kde/HTML/nl/rsibreak/index.docbook
+share/doc/kde/HTML/nl/rsibreak/popup.png
+share/doc/kde/HTML/nl/rsibreak/statistics.png
+share/doc/kde/HTML/nl/rsibreak/suspend.png
+share/doc/kde/HTML/pt/rsibreak/common
+share/doc/kde/HTML/pt/rsibreak/index.cache.bz2
+share/doc/kde/HTML/pt/rsibreak/index.docbook
+share/doc/kde/HTML/sv/rsibreak/common
+share/doc/kde/HTML/sv/rsibreak/dcop.png
+share/doc/kde/HTML/sv/rsibreak/index.cache.bz2
+share/doc/kde/HTML/sv/rsibreak/index.docbook
+share/doc/kde/HTML/sv/rsibreak/popup.png
+share/doc/kde/HTML/sv/rsibreak/statistics.png
+share/doc/kde/HTML/sv/rsibreak/suspend.png
+share/icons/hicolor/128x128/apps/rsibreak.png
+share/icons/hicolor/16x16/apps/rsibreak.png
+share/icons/hicolor/22x22/apps/rsibreak.png
+share/icons/hicolor/32x32/apps/rsibreak.png
+share/kde/apps/rsibreak/eventsrc
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreak0.png
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreak1.png
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreak2.png
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreak3.png
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreak4.png
+share/kde/apps/rsibreak/icons/hicolor/16x16/actions/rsibreakx.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreak0.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreak1.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreak2.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreak3.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreak4.png
+share/kde/apps/rsibreak/icons/hicolor/22x22/actions/rsibreakx.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/duringbreaks.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreak0.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreak1.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreak2.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreak3.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreak4.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/rsibreakx.png
+share/kde/apps/rsibreak/icons/hicolor/32x32/actions/timings.png
+share/kde/autostart/rsibreak.desktop
+share/locale/ar/LC_MESSAGES/rsibreak.mo
+share/locale/bg/LC_MESSAGES/rsibreak.mo
+share/locale/br/LC_MESSAGES/rsibreak.mo
+share/locale/ca/LC_MESSAGES/rsibreak.mo
+share/locale/cs/LC_MESSAGES/rsibreak.mo
+share/locale/da/LC_MESSAGES/rsibreak.mo
+share/locale/de/LC_MESSAGES/rsibreak.mo
+share/locale/el/LC_MESSAGES/rsibreak.mo
+share/locale/en_GB/LC_MESSAGES/rsibreak.mo
+share/locale/es/LC_MESSAGES/rsibreak.mo
+share/locale/et/LC_MESSAGES/rsibreak.mo
+share/locale/fr/LC_MESSAGES/rsibreak.mo
+share/locale/ga/LC_MESSAGES/rsibreak.mo
+share/locale/gl/LC_MESSAGES/rsibreak.mo
+share/locale/it/LC_MESSAGES/rsibreak.mo
+share/locale/ja/LC_MESSAGES/rsibreak.mo
+share/locale/ka/LC_MESSAGES/rsibreak.mo
+share/locale/nl/LC_MESSAGES/rsibreak.mo
+share/locale/pl/LC_MESSAGES/rsibreak.mo
+share/locale/pt/LC_MESSAGES/rsibreak.mo
+share/locale/pt_BR/LC_MESSAGES/rsibreak.mo
+share/locale/ru/LC_MESSAGES/rsibreak.mo
+share/locale/sk/LC_MESSAGES/rsibreak.mo
+share/locale/sr/LC_MESSAGES/rsibreak.mo
+share/locale/sr@Latn/LC_MESSAGES/rsibreak.mo
+share/locale/sv/LC_MESSAGES/rsibreak.mo
+share/locale/tr/LC_MESSAGES/rsibreak.mo
+@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/apps/rsibreak/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/rsibreak/icons/hicolor/32x32
+@dirrm share/kde/apps/rsibreak/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/rsibreak/icons/hicolor/22x22
+@dirrm share/kde/apps/rsibreak/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/rsibreak/icons/hicolor/16x16
+@dirrm share/kde/apps/rsibreak/icons/hicolor
+@dirrm share/kde/apps/rsibreak/icons
+@dirrm share/kde/apps/rsibreak
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/sv/rsibreak
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/pt/rsibreak
+@comment in kde: @dirrm share/doc/kde/HTML/pt
+@dirrm share/doc/kde/HTML/nl/rsibreak
+@comment in kde: @dirrm share/doc/kde/HTML/nl
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak
+@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs
+@dirrm share/doc/kde/HTML/en/rsibreak
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/da/rsibreak
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/applications/kde
