@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6313 2007/05/05 15:19:42 xtraeme Exp $
+$NetBSD: TODO,v 1.6314 2007/05/05 22:15:07 markd Exp $
 
 Suggested new packages
 ======================
@@ -642,7 +642,6 @@ Suggested package updates
 	o jools-1.0
 	o jpegpixi-1.1.1
 	o jwhois-3.2.3
-	o k3b-1.0.1
 	o kadu-0.5.0
 	o kapooka-0.3
 	o kazehakase-0.4.6
@@ -650,7 +649,6 @@ Suggested package updates
 	o kinput2-3.1
 	o kismet-2007.01.1b
 	o kmp-0.5
-	o kmplayer-0.9.4
 	o kmymoney2-0.8.6
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
@@ -782,7 +780,6 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.6
 	o nap-1.5.3
-	o nas-1.9
 	o nautilus-cd-burner-2.18.1 [needs hal]
 	o ncview-1.93b
 	o ne-2.01
