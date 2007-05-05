@@ -1,0 +1,9 @@
+The PEAR package contains:
+* the PEAR installer, for creating, distributing and installing packages
+* the PEAR_Exception PHP5 error handling mechanism
+* the PEAR_ErrorStack advanced error handling mechanism
+* the PEAR_Error error handling mechanism
+* the OS_Guess class for retrieving info about the OS where PHP is running on
+* the System class for quick handling of common operations with files and
+  directories
+* the PEAR base class

@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/05/05 21:21:45 adrianp Exp $
+
+In order to use PEAR packages you may want to alter the default
+include_path of PHP to include the PEAR installation directory where the
+packages are located.  To do this you need to edit the include_path
+directive in your php.ini file:
+
+	${PKG_SYSCONFDIR}/php.ini
+
+Change the "include_path" directive to read as follows:
+
+	include_path = ".:${PREFIX}/lib/php"
+
+===========================================================================
