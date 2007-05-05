@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.992 2007/05/05 00:35:21 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.993 2007/05/05 09:14:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1903,3 +1903,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/py-SSLCrypto version 0.1.1 [agc 2007-05-05]
 	Added misc/goffice0.2 version 0.2.2nb1 [wiz 2007-05-05]
 	Updated misc/goffice to 0.4.0 [wiz 2007-05-05]
+	Updated textproc/eb to 4.3nb1 [obache 2007-05-05]
