@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/05/05 22:09:18 adrianp Exp $
 
 DISTNAME=	Image_Canvas-0.2.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	adrianp@NetBSD.org
