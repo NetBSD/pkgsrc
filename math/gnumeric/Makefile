@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2007/03/21 12:05:49 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2007/05/05 00:18:59 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.6.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -46,8 +46,7 @@ BUILDLINK_API_DEPENDS.libgda+=	libgda>=1.9.103
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.goffice+=	goffice>=0.2.1
-.include "../../misc/goffice/buildlink3.mk"
+.include "../../misc/goffice0.2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
 .include "../../print/libgnomeprint/buildlink3.mk"
