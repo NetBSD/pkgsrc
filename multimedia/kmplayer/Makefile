@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2007/01/26 04:25:47 markd Exp $
+# $NetBSD: Makefile,v 1.41 2007/05/05 21:43:36 markd Exp $
 #
 
-DISTNAME=	kmplayer-0.9.3a
-PKGREVISION=	2
+DISTNAME=	kmplayer-0.9.4a
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://kmplayer.kde.org/pkgs/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +30,7 @@ SUBST_FILES.desktop=	src/kmplayer.desktop
 SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
