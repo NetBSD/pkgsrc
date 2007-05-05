@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/05 22:07:59 markd Exp $
+
+XFree86 extensions/dpms.h doesn't wrap the function definitions with extern C
+so don't include it but do same explicitly :-(
+
+--- rsibreak/src/rsitimer_dpms.cpp.orig	2006-10-14 06:33:00.000000000 +1300
++++ rsibreak/src/rsitimer_dpms.cpp
+@@ -17,7 +17,14 @@
+ */
+ 
+ #include <X11/Xutil.h>
+-#include <X11/extensions/dpms.h>
++#include <X11/X.h>
++#include <X11/Xmd.h>
++
++_XFUNCPROTOBEGIN
++extern Bool DPMSQueryExtension(Display *, int *, int *);
++extern Bool DPMSCapable(Display *);
++extern Bool DPMSGetTimeouts(Display *, CARD16 *, CARD16 *, CARD16 *);
++_XFUNCPROTOEND
+ 
+ bool QueryDPMSTimeouts(Display* display, int& standby, int& suspend, int& off)
+ {
