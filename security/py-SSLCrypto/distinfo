@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/05 00:03:54 agc Exp $
+
+SHA1 (SSLCrypto-0.1.1.tar.gz) = 3e33e86ed6ad0db5546f53d6809008398d7b8ae5
+RMD160 (SSLCrypto-0.1.1.tar.gz) = c2dfaaed00105ff0d039cda3b1a2f19cca556632
+Size (SSLCrypto-0.1.1.tar.gz) = 141376 bytes
