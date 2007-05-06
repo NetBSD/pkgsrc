@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2007/05/06 00:28:57 taca Exp $
+
+--- zzip/file.c.orig	2003-07-29 04:52:49.000000000 +0900
++++ zzip/file.c
+@@ -708,7 +708,9 @@ zzip_open_shared_io (ZZIP_FILE* stream,
+     /* see if we can open a file that is a zip file */
+     { char basename[PATH_MAX];
+       char* p;
+-      strcpy (basename, filename);
++      int filename_len = strlen (filename);
++      if (filename_len >= PATH_MAX) { errno = ENAMETOOLONG; return 0; }
++      memcpy (basename, filename, filename_len+1);
+ 
+       /* see if we can share the same zip directory */
+       if (stream && stream->dir && stream->dir->realname)
