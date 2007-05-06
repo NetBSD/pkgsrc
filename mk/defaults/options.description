@@ -43,6 +43,7 @@ cdparanoia		Use cdparanoia to rip CDDA media.
 cgi
 coqide			Enable ide support for coq.
 charset	
+clamav			Enable ClamAV support.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -67,6 +68,9 @@ domainscale
 drac			Enable DRAC support.
 dri			Enable Direct Rendering support.
 drupal-xmlservices	Enable XML-based services.
+dspam-preferences-extension	Enable preferences extension.
+dspam-verbose-debug	Enable verbose debugging support.
+dspam-virtualusers	Enable support for virtual users.
 dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
@@ -324,6 +328,7 @@ sun-jre-jce		Use unlimited strength cryptograpy extension.
 svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
 syslogng-spoof		Spoof the original source address of forwarded packets
+syslog			Enable syslog support.
 tcpd	
 tcpwrappers	
 tdb	
