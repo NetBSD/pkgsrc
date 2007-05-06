@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1002 2007/05/06 13:10:29 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1003 2007/05/06 14:08:37 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1922,3 +1922,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/java-qdbm version 1.0.0.1.8.75 [obache 2007-05-06]
 	Updated graphics/php-gd to 4.4.6nb1 [tron 2007-05-06]
 	Updated graphics/php-gd to 5.2.1nb1 [tron 2007-05-06]
+	Added net/p5-RPC-XML version 0.59 [heinz 2007-05-06]
+	Updated time/p5-Time-Local to 1.17 [heinz 2007-05-06]
+	Added net/p5-Net-OpenID-Consumer version 0.13 [heinz 2007-05-06]
