@@ -38,9 +38,6 @@ while ! queue_is_empty cmdbuf; do
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-hpux-cc) drop: $dir [adding to hprunpath]"
 		;;
-	# Eat gnu specific linker flags.
-	-Wl,--version-script*)
-		;;
 	*)
 		. $buildcmd
 		;;
