@@ -1,16 +1,20 @@
-$NetBSD: patch-af,v 1.6 2007/03/14 11:36:26 markd Exp $
+$NetBSD: patch-af,v 1.7 2007/05/06 21:41:30 christos Exp $
 
-Official lsof patch to fix build with newer Solaris 10s.
-
-*** /tmp/T0dLaqXT	Tue Jul 18 23:11:15 2006
---- dialects/sun/machine.h	Mon Jul 10 19:59:17 2006
-***************
-*** 76,81 ****
---- 76,82 ----
-  
-  # if	solaris>=80000
-  #include <sys/wait.h>
-+ #include <sys/types32.h>
-  #define	_KERNEL	1
-  #include <netinet/in.h>
-  #undef	_KERNEL
+--- dialects/n+obsd/dlsof.h.orig	2006-03-28 16:54:15.000000000 -0500
++++ dialects/n+obsd/dlsof.h	2007-05-06 17:37:00.000000000 -0400
+@@ -161,6 +161,7 @@
+ #include <sys/socketvar.h>
+ #include <sys/un.h>
+ #include <sys/unpcb.h>
++#include <net/route.h>
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>
+ #include <netinet/ip.h>
+@@ -170,7 +171,6 @@
+ #include <netinet6/in6_pcb.h>
+ # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
+ 
+-#include <net/route.h>
+ #include <netinet/in_pcb.h>
+ #include <netinet/ip_var.h>
+ #include <netinet/tcp.h>
