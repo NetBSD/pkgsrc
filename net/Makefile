@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.668 2007/05/06 13:28:28 heinz Exp $
+# $NetBSD: Makefile,v 1.669 2007/05/06 14:02:24 heinz Exp $
 #
 
 COMMENT=	Networking tools
@@ -291,6 +291,7 @@ SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-Ident
 SUBDIR+=	p5-Net-Libdnet
 SUBDIR+=	p5-Net-NBName
+SUBDIR+=	p5-Net-OpenID-Consumer
 SUBDIR+=	p5-Net-Packet
 SUBDIR+=	p5-Net-Pcap
 SUBDIR+=	p5-Net-RawIP
