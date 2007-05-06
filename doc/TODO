@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6314 2007/05/05 22:15:07 markd Exp $
+$NetBSD: TODO,v 1.6315 2007/05/06 16:36:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ Suggested package updates
 	o erlang-doc-11.3
 	o erlang-man-11.3
 	o esh-0.8.5
-	o esound-0.2.38
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
