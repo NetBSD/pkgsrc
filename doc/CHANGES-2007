@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1000 2007/05/06 09:58:21 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1001 2007/05/06 13:01:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1919,3 +1919,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added time/rsibreak version 0.8.0 [markd 2007-05-05]
 	Updated archivers/zziplib to 0.10.82nb3 [taca 2007-05-06]
 	Updated devel/re2c to 0.12.0 [heinz 2007-05-06]
+	Added databases/java-qdbm version 1.0.0.1.8.75 [obache 2007-05-06]
