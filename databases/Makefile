@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2007/03/11 16:46:59 grant Exp $
+# $NetBSD: Makefile,v 1.228 2007/05/06 12:59:48 obache Exp $
 #
 
 COMMENT=	Databases
@@ -27,6 +27,7 @@ SUBDIR+=	guile-pg
 SUBDIR+=	iodbc
 SUBDIR+=	ipa_sdb
 SUBDIR+=	java-db3
+SUBDIR+=	java-qdbm
 SUBDIR+=	jdb
 SUBDIR+=	jdbc-postgresql80
 SUBDIR+=	jdbc-postgresql81
