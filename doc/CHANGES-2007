@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.998 2007/05/05 22:15:06 markd Exp $
+$NetBSD: CHANGES-2007,v 1.999 2007/05/06 00:29:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/kftpgrabber to 0.8.1 [markd 2007-05-05]
 	Updated multimedia/kmplayer to 0.9.4a [markd 2007-05-05]
 	Added time/rsibreak version 0.8.0 [markd 2007-05-05]
+	Updated archivers/zziplib to 0.10.82nb3 [taca 2007-05-06]
