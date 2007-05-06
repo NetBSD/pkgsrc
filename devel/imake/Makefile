@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/22 20:33:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/06 15:00:57 heinz Exp $
 #
 
 DISTNAME=		imake-1.0.2
@@ -17,6 +17,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
 DEPENDS+=		xorg-cf-files>=1.0.2nb1:../../x11/xorg-cf-files
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 LIB_MAN_SUFFIX=3 FILE_MAN_SUFFIX=5
 
 .include "../../x11/xproto/buildlink3.mk"
 
