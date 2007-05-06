@@ -1,19 +1,18 @@
-$NetBSD: patch-ad,v 1.11 2006/06/04 21:00:54 christos Exp $
+$NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
 
---- dialects/n+obsd/dnode.c.orig	2005-08-08 15:53:32.000000000 -0400
-+++ dialects/n+obsd/dnode.c	2006-06-04 16:57:22.000000000 -0400
-@@ -38,6 +38,10 @@
+--- dialects/n+obsd/dnode.c.orig	2007-04-24 12:22:06.000000000 -0400
++++ dialects/n+obsd/dnode.c	2007-05-06 16:43:51.000000000 -0400
+@@ -38,6 +38,9 @@
  
  #include "lsof.h"
  
 +#if __NetBSD_Version__ > 399001800
 +#define NOLOCKF
 +#endif
-+
  
- #if	defined(HASFDESCFS) && HASFDESCFS==1
- _PROTOTYPE(static int lkup_dev_tty,(dev_t *dr, INODETYPE *ir));
-@@ -183,7 +187,9 @@
+ #if	defined(HAS_DINODE_U)
+ #define	DINODE_U	dinode_u
+@@ -194,7 +197,9 @@
  	unsigned char ns;
  	unsigned char rdevs;
  	char *ep, *ty;
@@ -23,7 +22,7 @@ $NetBSD: patch-ad,v 1.11 2006/06/04 21:00:54 christos Exp $
  	struct inode i;
  	struct mfsnode m;
  	struct nfsnode n;
-@@ -608,6 +614,7 @@
+@@ -619,6 +624,7 @@
  
  	    }
  
@@ -31,7 +30,7 @@ $NetBSD: patch-ad,v 1.11 2006/06/04 21:00:54 christos Exp $
  	    if ((lff = i.i_lockf)) {
  
  	    /*
-@@ -656,6 +663,7 @@
+@@ -667,6 +673,7 @@
  		    break;
  		} while ((lfp = lf.lf_next) && lfp != lff);
  	    }
