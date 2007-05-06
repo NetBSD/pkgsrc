@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/06 14:00:56 heinz Exp $
+
+SHA1 (Net-OpenID-Consumer-0.13.tar.gz) = 98946e866c320ec1d75c0dd5b398498a48774127
+RMD160 (Net-OpenID-Consumer-0.13.tar.gz) = 9ab4c99b3e30e2778122fe251483532f7055078a
+Size (Net-OpenID-Consumer-0.13.tar.gz) = 17395 bytes
