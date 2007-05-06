@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/04/25 07:32:48 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2007/05/06 17:50:21 jdolecek Exp $
 
 DISTNAME=	openttd-0.5.1-source
 PKGNAME=	openttd-0.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
 
@@ -24,6 +24,9 @@ MAKE_ENV+=	USE_HOMEDIR=1
 MAKE_ENV+=	PERSONAL_DIR=.openttd
 MAKE_ENV+=	WITH_NETWORK=1
 MAKE_ENV+=	X11BASE=${X11BASE:Q}
+
+# disable custom assert for Mac OS X
+CFLAGS+=	-DNDEBUG=1
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S:-source::}
 
