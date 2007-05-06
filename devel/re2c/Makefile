@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/04/13 22:14:46 heinz Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/06 09:56:14 heinz Exp $
 
-DISTNAME=	re2c-0.11.3
+DISTNAME=	re2c-0.12.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=re2c/}
 
@@ -15,5 +15,7 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
 REPLACE_SH+=	run_tests.sh.in
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
