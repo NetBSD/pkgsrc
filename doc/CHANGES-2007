@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1003 2007/05/06 14:08:37 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1004 2007/05/06 16:36:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1925,3 +1925,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/p5-RPC-XML version 0.59 [heinz 2007-05-06]
 	Updated time/p5-Time-Local to 1.17 [heinz 2007-05-06]
 	Added net/p5-Net-OpenID-Consumer version 0.13 [heinz 2007-05-06]
+	Updated audio/esound to 0.2.38 [wiz 2007-05-06]
