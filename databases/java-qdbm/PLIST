@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/06 12:58:36 obache Exp $
+lib/libjqdbm.so
+lib/libjqdbm.so.1
+lib/libjqdbm.so.1.0.0
+lib/qdbm.jar
+share/doc/qdbm/java/japidoc/allclasses-frame.html
+share/doc/qdbm/java/japidoc/allclasses-noframe.html
+share/doc/qdbm/java/japidoc/constant-values.html
+share/doc/qdbm/java/japidoc/index-all.html
+share/doc/qdbm/java/japidoc/index.html
+share/doc/qdbm/java/japidoc/overview-summary.html
+share/doc/qdbm/java/japidoc/overview-tree.html
+share/doc/qdbm/java/japidoc/package-list
+share/doc/qdbm/java/japidoc/packages.html
+share/doc/qdbm/java/japidoc/qdbm/ADBM.html
+share/doc/qdbm/java/japidoc/qdbm/Curia.html
+share/doc/qdbm/java/japidoc/qdbm/CuriaException.html
+share/doc/qdbm/java/japidoc/qdbm/DBMException.html
+share/doc/qdbm/java/japidoc/qdbm/Depot.html
+share/doc/qdbm/java/japidoc/qdbm/DepotException.html
+share/doc/qdbm/java/japidoc/qdbm/Util.html
+share/doc/qdbm/java/japidoc/qdbm/Villa.html
+share/doc/qdbm/java/japidoc/qdbm/VillaCursor.html
+share/doc/qdbm/java/japidoc/qdbm/VillaException.html
+share/doc/qdbm/java/japidoc/qdbm/package-frame.html
+share/doc/qdbm/java/japidoc/qdbm/package-summary.html
+share/doc/qdbm/java/japidoc/qdbm/package-tree.html
+share/doc/qdbm/java/japidoc/resources/inherit.gif
+share/doc/qdbm/java/japidoc/serialized-form.html
+share/doc/qdbm/java/japidoc/stylesheet.css
+share/doc/qdbm/java/jspex-ja.html
+share/doc/qdbm/java/jspex.html
+@dirrm share/doc/qdbm/java/japidoc/qdbm
+@dirrm share/doc/qdbm/java/japidoc/resources
+@dirrm share/doc/qdbm/java/japidoc
+@dirrm share/doc/qdbm/java
