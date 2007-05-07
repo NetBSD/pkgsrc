@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1011 2007/05/07 15:18:23 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1012 2007/05/07 16:40:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1933,3 +1933,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.0.243 [martti 2007-05-07]
 	Updated mail/dspam to 3.8.0 [adrianp 2007-05-07]
 	Updated lang/librep to 0.17nb3 [tnn 2007-05-07]
+	Updated pkgtools/libnbcompat to 20070507 [joerg 2007-05-07]
