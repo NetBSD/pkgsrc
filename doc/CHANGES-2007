@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1009 2007/05/07 09:31:13 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1010 2007/05/07 12:45:32 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1931,3 +1931,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/lsof to 4.78 [christos 2007-05-06]
 	Updated editors/vim-share to 7.0.243 [martti 2007-05-07]
 	Updated mail/dspam to 3.8.0 [adrianp 2007-05-07]
+	Updated lang/librep to 0.17nb3 [tnn 2007-05-07]
