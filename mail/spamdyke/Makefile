@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/04/18 15:36:18 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/07 19:43:43 schmonz Exp $
 #
 
-DISTNAME=	spamdyke-2.4.0
+DISTNAME=	spamdyke-2.5.0
 CATEGORIES=	mail
-MASTER_SITES=	http://freesoftware.silence.org/spamdyke/releases/
+MASTER_SITES=	${HOMEPAGE}releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schmonz@NetBSD.org
@@ -11,6 +11,7 @@ HOMEPAGE=	http://freesoftware.silence.org/spamdyke/
 COMMENT=	Monitors and intercept incoming SMTP connections to qmail
 
 BUILD_DIRS=	${PKGBASE} utils
+BUILD_TARGET=	bsd
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${PKGBASE}/spamdyke.c
@@ -18,12 +19,6 @@ SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_STAGE.paths=	do-configure
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
-BUILD_TARGET=	openbsd
-.endif
 
 do-install:
 	cd ${WRKSRC}/${PKGBASE};					\
