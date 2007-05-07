@@ -1,0 +1,29 @@
+$NetBSD: patch-ai,v 1.1 2007/05/07 12:42:19 tnn Exp $
+
+--- src/timers.c.orig	2007-05-07 14:22:37.000000000 +0200
++++ src/timers.c
+@@ -128,7 +128,7 @@ fix_time (long *secs, long *msecs)
+ 	*msecs += 1000;
+ 	(*secs)--;
+     }
+-    while (*msecs > 1000)
++    while (*msecs >= 1000)
+     {
+ 	*msecs -= 1000;
+ 	(*secs)++;
+@@ -252,6 +252,7 @@ to re-enable it.
+     t->function = fun;
+     t->secs = rep_get_long_int (secs);
+     t->msecs = rep_get_long_int (msecs);
++    fix_time (&t->secs, &t->msecs);
+     t->next_alloc = allocated_timers;
+     allocated_timers = t;
+     insert_timer (t);
+@@ -290,6 +291,7 @@ duration. Otherwise, the existing values
+     {
+ 	TIMER(timer)->secs = rep_get_long_int (secs);
+ 	TIMER(timer)->msecs = rep_get_long_int (msecs);
++	fix_time (&TIMER (timer)->secs, &TIMER (timer)->msecs);
+     }
+     insert_timer (TIMER(timer));
+     return timer;
