@@ -1,13 +1,16 @@
-# $NetBSD: options.mk,v 1.19 2007/02/22 19:26:41 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2007/05/07 09:29:54 adrianp Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
-PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
-			domainscale \
-			clamav syslog debug verbose-debug
+PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs domainscale
+PKG_SUPPORTED_OPTIONS+=	clamav syslog debug dspam-verbose-debug
+
+PKG_OPTIONS_LEGACY_OPTS+=	verbose-debug:dspam-verbose-debug
+PKG_OPTIONS_LEGACY_OPTS+=	virtualusers:dspam-virtualusers
+PKG_OPTIONS_LEGACY_OPTS+=	preferences-extension:dspam-preferences-extension
 
 ###
 ### DSPAM_DELIVERY_AGENT is the tool called to to deliver messages.
@@ -39,7 +42,7 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'
 ### This is the backend database used to store the DSPAM signatures as
 ### well as other state information.  The recommended storage driver is
 ### "mysql", even for small installations.
-### Possible: mysql, pgsql, bdb, sqlite, sqlite3 or hash
+### Possible: mysql, pgsql, sqlite, sqlite3 or hash
 ### Default: hash
 ###
 DSPAM_STORAGE_DRIVER?=	hash
@@ -67,8 +70,6 @@ CONFIGURE_ARGS+=	\
 	--with-pgsql-includes=${PGSQL_PREFIX}/include/postgresql	\
 	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
 PGSQL_PLIST_SUBST=	PGSQL=
-.elif !empty(DSPAM_STORAGE_DRIVER:Mbdb)
-PKG_FAIL_REASON+=	"Berkeley DB3/4 is deprecated (not recommended). Please migrate to a different storage driver."
 .elif !empty(DSPAM_STORAGE_DRIVER:Msqlite)
 .  include "../../databases/sqlite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite_drv
@@ -78,7 +79,7 @@ SQLITE_PLIST_SUBST=	SQLITE=
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite3_drv
 SQLITE_PLIST_SUBST+=	SQLITE=
 .else
-PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \`${DSPAM_STORAGE_DRIVER}\'"
+PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \\'${DSPAM_STORAGE_DRIVER}\\'"
 .endif
 
 # daemon mode only supports MySQL, PostgreSQL or hash
@@ -104,7 +105,7 @@ PLIST_SUBST+=		${HASH_PLIST_SUBST}
 ### The following are only available for mysql and pgsql backends.
 ###
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-PKG_SUPPORTED_OPTIONS+=	preferences-extension virtualusers ldap
+PKG_SUPPORTED_OPTIONS+=	dspam-preferences-extension dspam-virtualusers ldap
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -212,6 +213,6 @@ CONFIGURE_ARGS+=	--enable-debug
 ### LOGDIR/dspam.debug file. Implies '--enable-debug'.
 ### Never enable this for production builds !
 ###
-.if !empty(PKG_OPTIONS:Mverbose-debug)
+.if !empty(PKG_OPTIONS:Mdspam-verbose-debug)
 CONFIGURE_ARGS+=	--enable-verbose-debug
 .endif

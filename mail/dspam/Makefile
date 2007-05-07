@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2006/12/10 04:36:30 obache Exp $
+# $NetBSD: Makefile,v 1.56 2007/05/07 09:29:54 adrianp Exp $
 
-DISTNAME=	dspam-3.6.8
-PKGREVISION=	2
+DISTNAME=	dspam-3.8.0
 CATEGORIES=	mail
-MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
+MASTER_SITES=	http://dspam.nuclearelephant.com/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dspam.nuclearelephant.com/
@@ -13,27 +12,27 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 USE_TOOLS+=		perl:run pkg-config
-REPLACE_PERL=		src/tools/dspam_train.in			\
-			src/tools/dspam_logrotate			\
-			webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
+REPLACE_PERL=		src/tools/dspam_train.in
+REPLACE_PERL+=		src/tools/dspam_logrotate
+REPLACE_PERL+=		webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
 
 PKGCONFIG_OVERRIDE+=	src/dspam.pc.in
 
 SUBST_CLASSES+=		cgi
 SUBST_STAGE.cgi=	post-patch
-SUBST_FILES.cgi=	webui/cgi-bin/templates/nav_performance.html	    \
-			webui/cgi-bin/configure.pl.in			    \
-			webui/cgi-bin/dspam.cgi webui/cgi-bin/admin.cgi	    \
-			webui/cgi-bin/graph.cgi webui/cgi-bin/admingraph.cgi
-SUBST_SED.cgi=		-e "s|auxw|${DSPAM_PSFLAGS}|g"			    \
-			-e "s|yourdomain.com|${DSPAM_DOMAIN}|g"		    \
-			-e "s|./admins|${PKG_SYSCONFDIR}/cgi-admins|"	    \
-			-e "s|configure.pl|${PKG_SYSCONFDIR}/configure.pl|" \
-			-e "s|\"\/\";|\"${DSPAM_WWWHOME}\";|" 		    \
-			-e "s|\$$FILE = \"./default.prefs\";|\$$FILE = \"${PKG_SYSCONFDIR}/cgi-default.prefs\";|"
+SUBST_FILES.cgi=	webui/cgi-bin/templates/nav_performance.html
+SUBST_FILES.cgi+=	webui/cgi-bin/configure.pl.in
+SUBST_FILES.cgi+=	webui/cgi-bin/dspam.cgi webui/cgi-bin/admin.cgi
+SUBST_FILES.cgi+=	webui/cgi-bin/graph.cgi webui/cgi-bin/admingraph.cgi
+SUBST_SED.cgi=		-e "s|auxw|${DSPAM_PSFLAGS}|g"
+SUBST_SED.cgi+=		-e "s|yourdomain.com|${DSPAM_DOMAIN}|g"
+SUBST_SED.cgi+=		-e "s|./admins|${PKG_SYSCONFDIR}/cgi-admins|"
+SUBST_SED.cgi+=		-e "s|configure.pl|${PKG_SYSCONFDIR}/configure.pl|"
+SUBST_SED.cgi+=		-e "s|\"\\/\";|\"${DSPAM_WWWHOME}\";|"
+SUBST_SED.cgi+=		-e "s|\$$FILE = \"./default.prefs\";|\$$FILE = \"${PKG_SYSCONFDIR}/cgi-default.prefs\";|"
 SUBST_MESSAGE.cgi=	Fixing paths and default options.
 
-BUILD_DEFS+=		DSPAM_HOME
+BUILD_DEFS+=		DSPAM_HOME VARBASE APACHE_USER APACHE_GROUP
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
@@ -61,9 +60,9 @@ DSPAM_WWWUSER?=		${APACHE_USER}
 DSPAM_WWWGROUP?=	${APACHE_GROUP}
 
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE:Q}
-CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME:Q}			\
+CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME:Q}		\
 			--with-dspam-home-owner=${DSPAM_USER:Q}		\
-			--with-dspam-home-group=${DSPAM_GROUP:Q}		\
+			--with-dspam-home-group=${DSPAM_GROUP:Q}	\
 			--with-dspam-owner=${DSPAM_USER:Q}		\
 			--with-dspam-group=${DSPAM_GROUP:Q}		\
 			--with-dspam-mode=${DSPAM_BINMODE:Q}		\
@@ -106,11 +105,11 @@ FILES_SUBST+=		DSPAM_PIDDIR=${DSPAM_PIDDIR:Q}
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	src/dspam.conf.in
-SUBST_SED.conf=		-e "s,@dspam_home@,${DSPAM_HOME},g" \
-			-e "s,@delivery_agent@,${DSPAM_DELIVERY_AGENT_BIN},g" \
-			-e "s|@PREFIX@|${PREFIX}|g" \
-			-e "s|@VARBASE@|${VARBASE}|g" \
-			-e "s|@DSPAM_PIDDIR@|${DSPAM_PIDDIR}|g"
+SUBST_SED.conf=		-e "s|@dspam_home@|${DSPAM_HOME}|g"
+SUBST_SED.conf+=	-e "s|@delivery_agent@|${DSPAM_DELIVERY_AGENT_BIN}|g"
+SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.conf+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.conf+=	-e "s|@DSPAM_PIDDIR@|${DSPAM_PIDDIR}|g"
 SUBST_MESSAGE.conf=	Fixing configuration file.
 
 post-install:
@@ -148,5 +147,10 @@ post-install:
 	 cd ${WRKSRC}/src/tools.sqlite_drv && \
 	 	${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
 .endif
+
+	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/*.txt
+	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/templates/*.html
+	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/htdocs/*.css
+	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/htdocs/*.gif
 
 .include "../../mk/bsd.pkg.mk"
