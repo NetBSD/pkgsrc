@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2006/10/06 20:55:46 rillig Exp $
+$NetBSD: distinfo,v 1.11 2007/05/07 14:14:06 hauke Exp $
 
-SHA1 (radmind-1.7.1.tar.gz) = b6c95e5c17eb8d2232988ec306959c120d5d48bf
-RMD160 (radmind-1.7.1.tar.gz) = 9ee6990f72a022e2c42380e6936462afb3191bb7
-Size (radmind-1.7.1.tar.gz) = 378163 bytes
+SHA1 (radmind-1.8.0.tar.gz) = 2d775ee01ac47ad47f6129b6282bb533600c7df7
+RMD160 (radmind-1.8.0.tar.gz) = e6e8f0ac067b6c96a7a397d0fd3b540cc707bd2b
+Size (radmind-1.8.0.tar.gz) = 387738 bytes
 SHA1 (patch-aa) = 46c1e6b29980712382180c856f389357d6bbee70
-SHA1 (patch-ab) = 49f0efb9c3497aee8337b077cfc70ec5866ff78d
+SHA1 (patch-ab) = 444b151795499cb09ceb7cf1722b6cbd45e8998f
 SHA1 (patch-ac) = c1ea9930b9c2fee94a0b0d43e8aeec1925e454e7
 SHA1 (patch-ad) = 40974d0b41be44c2ebd0d29dca31bcc42837328a
 SHA1 (patch-ae) = 58b15301aa1df00e6e5bab9f21db8ddc99461f2a
