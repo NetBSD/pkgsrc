@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.13 2006/07/06 21:14:20 jlam Exp $ -->
+<!-- $NetBSD: README.top,v 1.14 2007/05/07 08:19:35 rillig Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -33,12 +33,11 @@ is also available:
 <hr noshade>
 
 For more information on how to build any of the packages from
-the NetBSD Packages Collection, see the included <A HREF="README">README</A> file.
-For a more in-depth description, see the
+the NetBSD Packages Collection, see the
 <A HREF="doc/pkgsrc.html">doc/pkgsrc.html</A> document.
 
 The most up-to-date version of the Packages Collection is available from
-<A HREF="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc">the NetBSD ftp server</A>.
+<A HREF="ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/">the NetBSD ftp server</A>.
 
 </body>
 </html>
