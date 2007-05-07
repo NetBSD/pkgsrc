@@ -5511,9 +5511,9 @@ esac
 fi
 
 
-{ echo "$as_me:$LINENO: checking for SHA2File" >&5
-echo $ECHO_N "checking for SHA2File... $ECHO_C" >&6; }
-if test "${ac_cv_func_SHA2File+set}" = set; then
+{ echo "$as_me:$LINENO: checking for SHA512_File" >&5
+echo $ECHO_N "checking for SHA512_File... $ECHO_C" >&6; }
+if test "${ac_cv_func_SHA512_File+set}" = set; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
   cat >conftest.$ac_ext <<_ACEOF
@@ -5522,12 +5522,12 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
-/* Define SHA2File to an innocuous variant, in case <limits.h> declares SHA2File.
+/* Define SHA512_File to an innocuous variant, in case <limits.h> declares SHA512_File.
    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
-#define SHA2File innocuous_SHA2File
+#define SHA512_File innocuous_SHA512_File
 
 /* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char SHA2File (); below.
+    which can conflict with char SHA512_File (); below.
     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
     <limits.h> exists even on freestanding compilers.  */
 
@@ -5537,7 +5537,7 @@ cat >>conftest.$ac_ext <<_ACEOF
 # include <assert.h>
 #endif
 
-#undef SHA2File
+#undef SHA512_File
 
 /* Override any GCC internal prototype to avoid an error.
    Use char because int might match the return type of a GCC
@@ -5545,18 +5545,18 @@ cat >>conftest.$ac_ext <<_ACEOF
 #ifdef __cplusplus
 extern "C"
 #endif
-char SHA2File ();
+char SHA512_File ();
 /* The GNU C library defines this for functions which it implements
     to always fail with ENOSYS.  Some functions are actually named
     something starting with __ and the normal name is an alias.  */
-#if defined __stub_SHA2File || defined __stub___SHA2File
+#if defined __stub_SHA512_File || defined __stub___SHA512_File
 choke me
 #endif
 
 int
 main ()
 {
-return SHA2File ();
+return SHA512_File ();
   ;
   return 0;
 }
@@ -5579,20 +5579,20 @@ eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
 	 test ! -s conftest.err
        } && test -s conftest$ac_exeext &&
        $as_test_x conftest$ac_exeext; then
-  ac_cv_func_SHA2File=yes
+  ac_cv_func_SHA512_File=yes
 else
   echo "$as_me: failed program was:" >&5
 sed 's/^/| /' conftest.$ac_ext >&5
 
-	ac_cv_func_SHA2File=no
+	ac_cv_func_SHA512_File=no
 fi
 
 rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
       conftest$ac_exeext conftest.$ac_ext
 fi
-{ echo "$as_me:$LINENO: result: $ac_cv_func_SHA2File" >&5
-echo "${ECHO_T}$ac_cv_func_SHA2File" >&6; }
-if test $ac_cv_func_SHA2File = yes; then
+{ echo "$as_me:$LINENO: result: $ac_cv_func_SHA512_File" >&5
+echo "${ECHO_T}$ac_cv_func_SHA512_File" >&6; }
+if test $ac_cv_func_SHA512_File = yes; then
   :
 else
 
