@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.13 2006/12/17 19:27:57 jschauma Exp $
+$NetBSD: README,v 1.14 2007/05/07 16:38:47 joerg Exp $
 
  0 Introduction
  ==============
@@ -61,6 +61,11 @@ on the following operating systems:
 	IRIX-6.5/mipseb			<jschauma@NetBSD.org>
 	Linux/i386			<schwarz@NetBSD.org>
 	RHEL4 Linux 2.6/i386		<jschauma@NetBSD.org>
+
+libnbcompat-20070507 has been tested to build and install correctly
+on the following operating systems:
+
+	DragonFly-1.8/i386		<joerg@NetBSD.org>
 
  3 Usage
  =======

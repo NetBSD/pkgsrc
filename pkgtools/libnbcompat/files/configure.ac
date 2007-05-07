@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.52 2006/08/26 21:28:21 seb Exp $
+dnl $NetBSD: configure.ac,v 1.53 2007/05/07 16:38:47 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -96,7 +96,7 @@ AC_CHECK_HEADERS([md5.h], [
 	])
 ])
 
-AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
+AC_CHECK_HEADERS([md5.h rmd160.h sha1.h sha2.h])
 AC_CHECK_FUNC(MD5File, [:], [
        	AC_DEFINE(HAVE_NBCOMPAT_MD5)
 	AH_TEMPLATE([HAVE_NBCOMPAT_MD5], [
@@ -123,6 +123,16 @@ AC_CHECK_FUNC(SHA1File, [:], [
         ])
 	AC_LIBOBJ(sha1)
 	AC_LIBOBJ(sha1hl)
+])
+
+AC_CHECK_FUNC(SHA2File, [:], [
+       	AC_DEFINE(HAVE_NBCOMPAT_SHA2)
+	AH_TEMPLATE([HAVE_NBCOMPAT_SHA2], [
+		Define to 1 if the `SHA2*' functions are built into the
+		library.
+        ])
+	AC_LIBOBJ(sha2)
+	AC_LIBOBJ(sha2hl)
 ])
 
 pkg_use_nbcompat_getopt_long=yes
