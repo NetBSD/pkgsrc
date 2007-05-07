@@ -1,11 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2007/04/11 14:50:38 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/07 19:43:52 schmonz Exp $
 
---- spamdyke/Makefile.orig	2007-04-02 15:53:22.000000000 -0400
+--- spamdyke/Makefile.orig	2007-05-04 18:22:40.000000000 -0400
 +++ spamdyke/Makefile
-@@ -1,5 +1,5 @@
+@@ -1,8 +1,10 @@
  #CFLAGS := -Wall -g -funsigned-char
 -CFLAGS := -Wall -O2 -funsigned-char
 +CFLAGS += -Wall -O2 -funsigned-char
  LFLAGS := -lresolv
+ OFILES := spamdyke.o command_line.o dns.o environment.o usage.o search_fs.o exec.o base64.o
  
- all: spamdyke
++all: spamdyke
++
+ spamdyke: $(OFILES)
+ 	@echo -----------------------------------------
+ 	@echo NOTE: To compile on *BSD, run "make bsd".
