@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.5 2007/03/16 10:28:50 rillig Exp $
+# $NetBSD: show.mk,v 1.6 2007/05/07 09:35:53 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -72,7 +72,7 @@ build-defs-message: show-build-defs .PHONY
 #	interested parties a better insight into the inner workings of
 #	pkgsrc.
 #
-# Keywords: debug show
+# Keywords: debug show _vargroups
 #
 
 _LABEL._USER_VARS=	usr
