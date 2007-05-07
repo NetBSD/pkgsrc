@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1010 2007/05/07 12:45:32 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1011 2007/05/07 15:18:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -728,6 +728,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/eog2 to 2.16.3 [drochner 2007-02-08]
 	Updated devel/devhelp to 0.13 [drochner 2007-02-08]
 	Updated games/KoboDeluxe to 0.4pre10 [drochner 2007-02-08]
+	Updated audio/libgpod to 0.4.2 [drochner 2007-02-08]
 	Updated x11/py-gtk2 to 2.10.4 [drochner 2007-02-08]
 	Updated audio/sweep to 0.9.2 [drochner 2007-02-08]
 	Updated audio/amarok to 1.4.5 [drochner 2007-02-08]
