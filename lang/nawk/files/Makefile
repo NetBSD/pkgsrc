@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/07/14 14:23:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/07 22:39:07 rillig Exp $
 #
 # This file is copied from "makefile" with the following modifications
 # for pkgsrc:
@@ -35,7 +35,7 @@ SHIP = README FIXES $(SOURCE) ytab[ch].bak makefile makefile.win \
 	vcvars32.bat buildwin.bat mac.code awk.1
 
 a.out:	ytab.o $(OFILES)
-	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm
+	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm -o $@
 
 clean:
 	rm -f a.out *.o *.obj maketab maketab.exe *.bb *.bbg *.da *.gcov # proctab.c
