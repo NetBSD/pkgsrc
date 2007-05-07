@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1006 2007/05/06 20:09:35 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1007 2007/05/07 01:38:06 christos Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1928,3 +1928,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/esound to 0.2.38 [wiz 2007-05-06]
 	Updated www/php4 to 4.4.7 [adrianp 2007-05-06]
 	Updated lang/php5 to 5.2.2 [adrianp 2007-05-06]
+	Updated sysutils/lsof to 4.78 [christos 2007-05-06]
