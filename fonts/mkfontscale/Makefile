@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/03/18 20:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/05/07 20:13:27 joerg Exp $
 #
 
 DISTNAME=		mkfontscale-1.0.3
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
