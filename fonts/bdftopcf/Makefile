@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/14 19:49:24 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/07 20:13:27 joerg Exp $
 #
 
 DISTNAME=		bdftopcf-1.0.0
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXfont/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
