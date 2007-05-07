@@ -1,4 +1,4 @@
-# $NetBSD: alternatives.mk,v 1.8 2006/11/10 20:48:41 rillig Exp $
+# $NetBSD: alternatives.mk,v 1.9 2007/05/07 09:32:11 rillig Exp $
 #
 # This Makefile fragment handles the alternatives system, registering a
 # package in the database.
@@ -24,6 +24,10 @@
 
 .if !defined(ALTERNATIVES_MK)
 ALTERNATIVES_MK=	# defined
+
+_VARGROUPS+=		alternatives
+_PKG_VARS.alternatives=	ALTERNATIVES_SRC
+_SYS_VARS.alternatives=	PKG_ALTERNATIVES
 
 .if exists(${.CURDIR}/ALTERNATIVES)
 ALTERNATIVES_SRC?=	${.CURDIR}/ALTERNATIVES
