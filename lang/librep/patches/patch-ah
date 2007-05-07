@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2007/05/07 12:42:19 tnn Exp $
+
+--- src/main.c.orig	2007-05-07 14:21:20.000000000 +0200
++++ src/main.c
+@@ -157,6 +157,11 @@ get_main_options(char *prog_name, int *a
+     return rep_TRUE;
+ }
+ 
++/* GCC 4 helpfully inlines this function and breaks the stack check. */
++#if __GNUC__ >= 4
++static void check_configuration (int *stack_low) __attribute__ ((noinline));
++#endif
++
+ static void
+ check_configuration (int *stack_low)
+ {
