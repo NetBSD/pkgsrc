@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.19 2007/01/24 19:48:44 epg Exp $
+# $NetBSD: apache.mk,v 1.20 2007/05/07 09:32:29 rillig Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -39,6 +39,11 @@
 
 .if !defined(APACHE_MK)
 APACHE_MK=			# defined
+
+_VARGROUPS+=		apache
+_USER_VARS.apache=	PKG_APACHE_DEFAULT
+_PKG_VARS.apache=	PKG_APACHE_ACCEPTED USE_APR
+_SYS_VARS.apache=	PKG_APACHE APACHE_PKG_PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
