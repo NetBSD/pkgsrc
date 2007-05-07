@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/14 21:11:10 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/07 20:13:27 joerg Exp $
 #
 
 DISTNAME=		font-util-1.0.1
@@ -16,5 +16,7 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		bdftruncate.pl
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../mk/bsd.pkg.mk"
