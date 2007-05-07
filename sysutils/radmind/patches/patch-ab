@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2006/10/05 02:49:30 rillig Exp $
+$NetBSD: patch-ab,v 1.6 2007/05/07 14:14:06 hauke Exp $
 
---- ra.sh.orig	2006-07-19 22:17:51.000000000 +0200
-+++ ra.sh	2006-10-05 04:45:56.000000000 +0200
-@@ -25,7 +25,7 @@ SERVER="_RADMIND_HOST"
- TLSLEVEL="_RADMIND_AUTHLEVEL"
+--- ra.sh.orig	2007-02-27 16:20:09.000000000 +0100
++++ ra.sh
+@@ -29,7 +29,7 @@ TLSLEVEL="_RADMIND_AUTHLEVEL"
  EDITOR=${EDITOR:-vi}
  USER=${SUDO_USER:-$USER}
+ TMPDIR="${TMPDIR:=/tmp}"
 -DEFAULTS="/etc/defaults/radmind"
 +DEFAULTS="_PKG_SYSCONFDIR/radmind.defaults"
  FSDIFFROOT="."
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
  CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
-@@ -35,7 +35,7 @@ VERSION=_RADMIND_VERSION
+@@ -39,7 +39,7 @@ VERSION=_RADMIND_VERSION
  PREAPPLY="_RADMIND_PREAPPLY"
  POSTAPPLY="_RADMIND_POSTAPPLY"
  
@@ -20,9 +20,9 @@ $NetBSD: patch-ab,v 1.5 2006/10/05 02:49:30 rillig Exp $
  RETRY=10
  
  MKTEMP="_RADMIND_MKTEMP"
-@@ -51,14 +51,6 @@ fi
- LTMP="${TMPDIR}/lapply.out"
- FTMP="${TMPDIR}/fsdiff.out"
+@@ -55,14 +55,6 @@ fi
+ LTMP="${RASHTMP}/lapply.out"
+ FTMP="${RASHTMP}/fsdiff.out"
  
 -# different systems use different default dirs
 -if [ ! -f "${DEFAULTS}" ]; then
@@ -35,21 +35,3 @@ $NetBSD: patch-ab,v 1.5 2006/10/05 02:49:30 rillig Exp $
  Yn() {
      echo -n "$*" "[Yn] "
      read ans
-@@ -89,7 +81,7 @@ cleanup() {
- 
- dopreapply() {
-     if [ -d ${PREAPPLY} ]; then
--	SCRIPTS=`find ${PREAPPLY} -perm +u+x \! -type d | sort`
-+	SCRIPTS=`find ${PREAPPLY} -perm -u+x \! -type d | sort`
- 	if [ "${SCRIPTS}" ]; then
- 	    for script in ${SCRIPTS}; do
- 		${script} "$1"
-@@ -100,7 +92,7 @@ dopreapply() {
- 
- dopostapply() {
-     if [ -d ${POSTAPPLY} ]; then
--	SCRIPTS=`find ${POSTAPPLY} -perm +u+x \! -type d | sort`
-+	SCRIPTS=`find ${POSTAPPLY} -perm -u+x \! -type d | sort`
- 	if [ "${SCRIPTS}" ]; then
- 	    for script in ${SCRIPTS}; do
- 		${script} "$1"
