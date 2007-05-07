@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1 2007/05/07 12:42:19 tnn Exp $
+
+--- src/ffi.c.orig	2007-05-07 14:17:55.000000000 +0200
++++ src/ffi.c
+@@ -307,9 +307,11 @@ rep_ffi_marshal (unsigned int type_id, r
+ 	    *(double *)ptr = (double) rep_get_float (value);
+ 	    return ptr + sizeof (double);
+ 
++#if FFI_TYPE_LONGDOUBLE != FFI_TYPE_DOUBLE
+ 	case FFI_TYPE_LONGDOUBLE:
+ 	    *(long double *)ptr = (long double) rep_get_float (value);
+ 	    return ptr + sizeof (long double);
++#endif
+ 
+ 	case FFI_TYPE_UINT8:
+ 	    *(uint8_t *)ptr = (uint8_t) rep_get_long_int (value);
+@@ -435,9 +437,11 @@ rep_ffi_demarshal (unsigned int type_id,
+ 	    *value = rep_make_float (*(double *)ptr, rep_TRUE);
+ 	    return ptr + sizeof (double);
+ 
++#if FFI_TYPE_LONGDOUBLE != FFI_TYPE_DOUBLE
+ 	case FFI_TYPE_LONGDOUBLE:
+ 	    *value = rep_make_float (*(long double *)ptr, rep_TRUE);
+ 	    return ptr + sizeof (long double);
++#endif
+ 
+ 	case FFI_TYPE_UINT8:
+ 	    *value = rep_MAKE_INT (*(uint8_t *)ptr);
