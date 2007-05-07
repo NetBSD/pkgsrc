@@ -1,4 +1,4 @@
-# $NetBSD: pkg-build-options.mk,v 1.2 2007/04/10 03:45:36 rillig Exp $
+# $NetBSD: pkg-build-options.mk,v 1.3 2007/05/07 09:26:40 rillig Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
@@ -16,16 +16,16 @@
 #	pkgbase := wine
 #	.include "../../mk/pkg-build-options.mk"
 #
-# TODO: Query the installed package if it exists.
-#
+
+.include "${.PARSEDIR}/bsd.fast.prefs.mk"
 
 .if defined(BUILDLINK_DEPTH) && !empty(BUILDLINK_DEPTH)
 .  for b in ${pkgbase}
 .    if !defined(PKG_BUILD_OPTIONS.${b})
 PKG_BUILD_OPTIONS.${b} != \
-	cd ${BUILDLINK_PKGSRCDIR.${b}} \
-	&& ${MAKE} ${MAKEFLAGS} \
-		show-var VARNAME=PKG_OPTIONS
+	${PKG_INFO} -Q PKG_OPTIONS ${pkgbase} 2>/dev/null \
+	|| { cd ${BUILDLINK_PKGSRCDIR.${b}} \
+	     && ${MAKE} ${MAKEFLAGS} show-var VARNAME=PKG_OPTIONS; }
 
 MAKEFLAGS+=	PKG_BUILD_OPTIONS.${b}=${PKG_BUILD_OPTIONS.${b}:Q}
 .    endif
