@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/17 21:44:41 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/08 15:49:22 joerg Exp $
 #
 
 DISTNAME=	gnome-compiz-manager-0.10.4
@@ -11,7 +11,7 @@ COMMENT=	Utility to manage GL Desktop configuration
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_DIRS+=	xdg-1.1
 
 GCONF2_SCHEMAS+=	gnome-compiz-preferences.schemas
