@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/21 14:31:18 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/08 15:47:48 joerg Exp $
 #
 
 DISTNAME=	dbus-qt3-0.70
@@ -13,7 +13,7 @@ COMMENT=	D-BUS Qt bindings
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-qt3-moc=${QTDIR}/bin/moc
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
 
 .include "../../sysutils/dbus/buildlink3.mk"
