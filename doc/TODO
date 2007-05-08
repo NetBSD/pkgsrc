@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6318 2007/05/08 20:41:42 wiz Exp $
+$NetBSD: TODO,v 1.6319 2007/05/08 21:02:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -563,7 +563,6 @@ Suggested package updates
 	o gtar-base-1.16.1
 	o gtick-0.3.13
 	o gtk-systrace-20030623
-	o gtk2+-2.10.12
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.13
 	o gtklife-5.1
