@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/04/30 19:06:47 adam Exp $
+# $NetBSD: Makefile,v 1.21 2007/05/08 15:51:32 joerg Exp $
 
 DISTNAME=	mhash-0.9.9
 CATEGORIES=	security devel
@@ -12,5 +12,7 @@ COMMENT=	Hash algorithms library
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+INSTALLATION_DIRS=	include/mutils
 
 .include "../../mk/bsd.pkg.mk"
