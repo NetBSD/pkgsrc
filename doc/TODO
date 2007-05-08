@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6316 2007/05/07 12:35:59 cube Exp $
+$NetBSD: TODO,v 1.6317 2007/05/08 19:41:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -515,7 +515,6 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade-3.2.1
 	o glchess-1.0.5
-	o glib2-2.12.12
 	o glibmm-2.12.9
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
