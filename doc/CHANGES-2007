@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1013 2007/05/07 19:44:06 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1014 2007/05/08 19:41:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1935,3 +1935,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/librep to 0.17nb3 [tnn 2007-05-07]
 	Updated pkgtools/libnbcompat to 20070507 [joerg 2007-05-07]
 	Updated mail/spamdyke to 2.5.0 [schmonz 2007-05-07]
+	Updated devel/glib2 to 2.12.12 [wiz 2007-05-08]
