@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1015 2007/05/08 20:41:41 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1016 2007/05/08 21:02:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1937,3 +1937,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.5.0 [schmonz 2007-05-07]
 	Updated devel/glib2 to 2.12.12 [wiz 2007-05-08]
 	Updated devel/pango to 1.16.4 [wiz 2007-05-08]
+	Updated x11/gtk2 to 2.10.12 [wiz 2007-05-08]
