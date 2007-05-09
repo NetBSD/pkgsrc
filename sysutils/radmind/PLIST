@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/18 13:11:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/05/09 09:58:08 hauke Exp $
 bin/fsdiff
 bin/ktcheck
 bin/lapply
@@ -8,6 +8,7 @@ bin/lfdiff
 bin/lmerge
 bin/lsort
 bin/ra.sh
+bin/repo
 bin/twhich
 man/man1/fsdiff.1
 man/man1/ktcheck.1
@@ -18,6 +19,7 @@ man/man1/lfdiff.1
 man/man1/lmerge.1
 man/man1/lsort.1
 man/man1/rash.1
+man/man1/repo.1
 man/man1/twhich.1
 man/man5/applefile.5
 man/man8/radmind.8
