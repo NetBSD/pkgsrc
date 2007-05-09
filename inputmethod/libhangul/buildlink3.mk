@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/05 01:43:59 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/05/09 17:29:39 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBHANGUL_BUILDLINK3_MK:=	${LIBHANGUL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libhangul
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libhangul
 
 .if ${LIBHANGUL_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.3
+BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.4
 BUILDLINK_PKGSRCDIR.libhangul?=	../../inputmethod/libhangul
 .endif	# LIBHANGUL_BUILDLINK3_MK
 
