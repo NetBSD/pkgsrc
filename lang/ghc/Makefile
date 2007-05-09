@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/04/29 22:12:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.36 2007/05/09 13:47:01 obache Exp $
 
 DISTNAME=	ghc-6.6.1
 CATEGORIES=	lang
@@ -15,7 +15,7 @@ COMMENT=	Compiler for the functional language Haskell
 SITES.ghc-6.4.2-src.tar.bz2=http://www.haskell.org/ghc/dist/6.4.2/
 SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 
-ONLY_FOR_PLATFORM= FreeBSD-*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM= FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
 
