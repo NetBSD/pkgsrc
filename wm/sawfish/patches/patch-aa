@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/10/08 13:22:37 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2007/05/09 10:09:45 tnn Exp $
 
---- configure.orig	Thu Mar 15 08:12:53 2001
+--- configure.orig	2003-03-25 09:30:27.000000000 +0100
 +++ configure
-@@ -657,7 +657,7 @@
+@@ -643,7 +643,7 @@ esac
  
  sawfishdir='${datadir}/sawfish'
  lispdir='${sawfishdir}/${version}/lisp'
@@ -11,3 +11,30 @@ $NetBSD: patch-aa,v 1.4 2002/10/08 13:22:37 wiz Exp $
  sawfishexecdir='${libexecdir}/sawfish/${version}/${host_type}'
  
  # Extract the first word of "gcc", so it can be a program name with args.
+@@ -2688,7 +2688,7 @@ cat >conftest <<EOF
+   (error
+     (throw 'quit 1)))
+ EOF
+-if REP_GTK_DONT_INITIALIZE=1 rep ./conftest 2>&5; then
++if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep ./conftest 2>&5; then
+   echo "$ac_t""yes" 1>&6
+ else
+   echo "$ac_t""no" 1>&6
+@@ -3387,7 +3387,7 @@ fi
+ if test "$enable_themer" = yes; then
+     echo $ac_n "checking for rep-gtk libglade wrapper""... $ac_c" 1>&6
+ echo "configure:3390: checking for rep-gtk libglade wrapper" >&5
+-  if REP_GTK_DONT_INITIALIZE=1 rep --batch -l gui.gtk.libglade 2>&5; then 
++  if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep --batch -l gui.gtk.libglade 2>&5; then 
+     echo "$ac_t""yes" 1>&6
+     add_subdir "themer"
+   else 
+@@ -3408,7 +3408,7 @@ fi
+ if test "$enable_gnome_widgets" != "no"; then
+   echo $ac_n "checking for rep-gtk GNOME wrappers""... $ac_c" 1>&6
+ echo "configure:3411: checking for rep-gtk GNOME wrappers" >&5
+-  if REP_GTK_DONT_INITIALIZE=1 rep --batch -l gui.gtk-2.gnome-ui 2>&5; then 
++  if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep --batch -l gui.gtk-2.gnome-ui 2>&5; then 
+     echo "$ac_t""yes" 1>&6
+     REP_GTK_GNOME=yes
+   else 
