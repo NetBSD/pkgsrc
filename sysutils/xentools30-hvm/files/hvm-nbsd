@@ -48,7 +48,7 @@ disk = [ 'file:/home/domains/vmx,ioemu:hda,w', 'file:/home/domains/i386cd.iso,io
 boot='d'
 
 # By default, 'xm create' will try to open an X window on the current display
-# for the virtal framebuffer. You can have the virtal framebuffer in vnc
+# for the virtual framebuffer. You can have the virtual framebuffer in vnc
 # instead, and connect using a vnc client (using localhost:$vncdisplay)
 # If vncunused is set to 1 (this is the default value), vncdisplay
 # will be set to the first unused port; so it's recommended to
