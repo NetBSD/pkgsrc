@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6319 2007/05/08 21:02:58 wiz Exp $
+$NetBSD: TODO,v 1.6320 2007/05/09 09:39:15 dillo Exp $
 
 Suggested new packages
 ======================
@@ -850,7 +850,6 @@ Suggested package updates
 	o p5-Crypt-CBC-2.22
 	o p5-Crypt-SSLeay-0.53
 	o p5-Curses-1.15
-	o p5-DBD-SQLite-1.13
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
 	o p5-DBIx-ContextualFetch-1.03
