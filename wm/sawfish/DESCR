@@ -12,6 +12,6 @@ that may be achieved through separate applications.
 
 All high-level wm functions are implemented in Lisp for future
 extensibility or redefinition. Currently this includes menus (using
-GTK+), interactive window moving and resizing, virtual workspaces,
+GTK2+), interactive window moving and resizing, virtual workspaces,
 iconification, focus/transient window policies, frame theme definitions
 and much more.
