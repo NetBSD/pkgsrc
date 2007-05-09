@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/09 10:01:28 tnn Exp $
+
+--- rep-gtk.h.orig	2004-09-02 19:40:23.000000000 +0200
++++ rep-gtk.h
+@@ -291,10 +291,10 @@ void gtk_menu_popup_interp (GtkMenu *men
+ 
+ GtkWidget*
+ gtk_radio_menu_item_new_with_label_from_widget (GtkRadioMenuItem *group,
+-						gchar            *label);
++						const gchar            *label);
+ GtkWidget*
+ gtk_radio_menu_item_new_with_mnemonic_from_widget (GtkRadioMenuItem *group,
+-						   gchar            *label);
++						   const gchar            *label);
+ GtkWidget* gtk_radio_menu_item_new_from_widget (GtkRadioMenuItem *group);
+ GtkWidget* gtk_pixmap_new_interp (char *file, GtkWidget *intended_parent);
+ 
