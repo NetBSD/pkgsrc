@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2007/05/09 13:39:12 obache Exp $
+
+--- configure.orig	2007-04-29 12:19:45.000000000 +0200
++++ configure
+@@ -1702,13 +1702,7 @@ RULE="----------------------------------
+ 
+ # Check whether --with-chroot-dir was given.
+ if test "${with_chroot_dir+set}" = set; then
+-  withval=$with_chroot_dir; if test \! -d "$withval" ; then
+-   { { echo "$as_me:$LINENO: error: directory $withval doesn't exist" >&5
+-echo "$as_me: error: directory $withval doesn't exist" >&2;}
+-   { (exit 1); exit 1; }; }
+-  else
+-   _chd="$withval"
+-  fi
++  _chd=$with_chroot_dir
+ else
+   # Find an "empty" directory to serve as the chroot.
+   _chd="/var/empty"
