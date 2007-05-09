@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1017 2007/05/09 02:44:21 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1018 2007/05/09 03:00:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1939,3 +1939,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/pango to 1.16.4 [wiz 2007-05-08]
 	Updated x11/gtk2 to 2.10.12 [wiz 2007-05-08]
 	Added cad/adms version 2.2.5 [dmcmahill 2007-05-08]
+	Added devel/p5-Readonly version 1.03 [seb 2007-05-09]
+	Added devel/p5-Readonly-XS version 1.04 [seb 2007-05-09]
