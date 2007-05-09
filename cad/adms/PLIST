@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
+bin/admsCheck
+bin/admsXml
+lib/libadmsFile.la
+lib/libadmsObject.la
+lib/libadmsPreprocessor.la
+lib/libadmsVeriloga.la
