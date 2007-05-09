@@ -1,0 +1,6 @@
+The Perl 5 module Readonly::XS is a companion module to the Readonly
+module.  You do not use Readonly::XS directly.  Instead, once it
+is installed, the Readonly module will detect this and will use it
+for creating read-only scalars.  This results in a significant
+speed improvement.  This does not speed up read-only arrays or
+hashes.
