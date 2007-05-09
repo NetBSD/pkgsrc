@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/09 10:01:28 tnn Exp $
+libexec/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2/gtk.la
+libexec/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2/libglade.la
+libexec/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2/types.la
+@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/gui/gtk-2
+@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/gui
