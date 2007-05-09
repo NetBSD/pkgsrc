@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6320 2007/05/09 09:39:15 dillo Exp $
+$NetBSD: TODO,v 1.6321 2007/05/09 13:41:34 obache Exp $
 
 Suggested new packages
 ======================
@@ -392,7 +392,6 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.3.8
-	o darkstat-3.0.619 [pkg/36250]
 	o darts-0.31
 	o db4-4.5.20
 	o dbench-3.04
