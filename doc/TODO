@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6321 2007/05/09 13:41:34 obache Exp $
+$NetBSD: TODO,v 1.6322 2007/05/09 19:37:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -220,7 +220,7 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GeoIP-1.4.2
-	o Gorm-1.2.0
+	o Gorm-1.2.1
 	o GridSim-3.3
 	o PAM-0.99.7.1
 	o R-2.5.0
@@ -303,14 +303,14 @@ Suggested package updates
 	o arpwatch-2.1a15
 	o asapm-3.1
 	o ascii-3.8
-	o aspell-danish-1.6.4
+	o aspell-danish-1.6.5
 	o aspell-faroese-0.2.28
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
 	o asterisk-1.4.2
 	o astyle-1.15.3
 	o autoconvert-0.3.16
-	o autogen-5.8.9
+	o autogen-5.9.1
 	o avcheck-0.91
 	o avl-2.0.2a
 	o avr-binutils-2.17
@@ -427,6 +427,7 @@ Suggested package updates
 	o e2fsprogs-1.39
 	o eagle-4.16
 	o easymenu-0.7.2p1
+	o easytag-2.1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ede-1.1
@@ -492,7 +493,7 @@ Suggested package updates
 	o gauche-0.8.10
 	o gcc-4.1.2
 	o gcc-ssp-3.4.4
-	o gcin-1.2.7
+	o gcin-1.3.4
 	o gcombust-0.1.55
 	o gcpio-2.7
 	o gdal-1.4.1
@@ -515,13 +516,14 @@ Suggested package updates
 	o glade-3.2.1
 	o glchess-1.0.5
 	o glibmm-2.12.9
+	o glpk-4.16
 	o gmp3info-0.8.5a
 	o gmpc-0.14.0
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.1.5
 	o gnu-crypto-2.1.0
-	o gnupg2-2.0.3
+	o gnupg2-2.0.4
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
 	o gnuradio-audio-portaudio-3.0.3
@@ -543,6 +545,7 @@ Suggested package updates
 	o gogo-3.11p1
 	o gossip-0.24
 	o gourmet-0.13.3
+	o gperf-3.0.3
 	o gpredict-0.7.1
 	o gpsdrive-2.09
 	o gq-1.2.0
@@ -611,6 +614,7 @@ Suggested package updates
 	o instiki-0.11pl1
 	o intercal-0.24
 	o ion3-devel-20070203 [pkg/36108]
+	o ion3-devel-20070506
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -680,6 +684,7 @@ Suggested package updates
 	o libgii-1.0.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.0.0
+	o libgtop-2.14.9
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
 	o libjit-0.1.0
@@ -699,7 +704,7 @@ Suggested package updates
 	o libxml++2-2.18.0
 	o licq-1.3.4
 	o licq-core-1.3.0
-	o liferea-1.2.13
+	o liferea-1.2.14
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -748,6 +753,7 @@ Suggested package updates
 	o moc-2.4.1
 	o molden-4.5
 	o mono-1.2.2
+	o monotone-0.35
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
@@ -771,7 +777,7 @@ Suggested package updates
 	o musicpd-0.12.2
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
-	o nagios-3.0a2
+	o nagios-3.0a4
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.6
 	o nap-1.5.3
@@ -912,6 +918,7 @@ Suggested package updates
 	o p5-PV-1.5
 	o p5-Params-Validate-0.88
 	o p5-PathTools-3.24
+	o p5-Perl-Tidy-20070508
 	o p5-PerlMagick-6.3.2.9
 	o p5-Pod-Simple-3.05
 	o p5-PostScript-MailLabels-2.25
@@ -972,10 +979,12 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php4-4.4.7
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
+	o php5-5.2.2
 	o phpmyadmin-2.10.1
 	o phppgadmin-4.0.1
 	o phylip-3.65
@@ -1141,6 +1150,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scm-5e3
+	o scribus-1.3.3.9
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sendfile-20010424
@@ -1163,7 +1173,7 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-5.0.1
-	o skill-4.1.3
+	o skill-4.1.4
 	o skkinput-2.06.4
 	o skype-1.4.0.58
 	o smalleiffel-0.90
@@ -1180,6 +1190,7 @@ Suggested package updates
 	o source-highlight-2.6
 	o spcaview-20060501
 	o spim-7.3
+	o sqlite3-3.3.17
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
 	o squidGuard-1.2.0p3
@@ -1194,7 +1205,7 @@ Suggested package updates
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
 	o sylpheed-2.4.1
-	o sylpheed-claws-2.9.1 [now claws-mail]
+	o sylpheed-claws-2.9.2 [now claws-mail]
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
@@ -1211,7 +1222,7 @@ Suggested package updates
 	o tex-dhucs-3.1.5
 	o tfmxplay-1.1.6
 	o thunderbird-2.0
-	o tightvnc-1.3.8
+	o tightvnc-1.3.9
 	o tile-0.7.4
 	o tileworld-1.3.0
 	o tinyproxy-1.7.0
