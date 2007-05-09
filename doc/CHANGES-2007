@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1022 2007/05/09 10:42:32 dillo Exp $
+$NetBSD: CHANGES-2007,v 1.1023 2007/05/09 13:41:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1952,3 +1952,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed x11/rep-gtk [tnn 2007-05-09]
 	Removed wm/sawfish-replibs [tnn 2007-05-09]
 	Removed wm/sawfish-themes [tnn 2007-05-09]
+	Updated net/darkstat to 3.0.619 [obache 2007-05-09]
