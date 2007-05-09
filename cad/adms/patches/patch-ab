@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
+
+--- configure.orig	2007-02-05 12:21:02.000000000 +0000
++++ configure
+@@ -1945,7 +1945,7 @@ ac_config_headers="$ac_config_headers co
+ 
+ 
+ # force use of gnu compiler
+-CC=gcc
++#CC=gcc
+ 
+ # specific configuration.
+ ac_aux_dir=
