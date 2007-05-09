@@ -1,4 +1,4 @@
-#	NetBSD: Makefile.in,v 1.5 2005/06/10 04:36:12 lukem Exp
+#	$NetBSD: Makefile.in,v 1.1.1.4 2007/05/09 04:44:36 lukem Exp $
 #
 
 srcdir	= @srcdir@
@@ -8,6 +8,7 @@ SHELL	= /bin/sh
 prefix	= @prefix@
 exec_prefix = @exec_prefix@
 bindir	= @bindir@
+datarootdir = @datarootdir@
 mandir	= @mandir@
 transform = @program_transform_name@
 
