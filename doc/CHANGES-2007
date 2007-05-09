@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1023 2007/05/09 13:41:34 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1024 2007/05/09 17:30:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1953,3 +1953,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed wm/sawfish-replibs [tnn 2007-05-09]
 	Removed wm/sawfish-themes [tnn 2007-05-09]
 	Updated net/darkstat to 3.0.619 [obache 2007-05-09]
+	Updated inputmethod/libhangul to 0.0.4 [minskim 2007-05-09]
