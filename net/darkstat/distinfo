@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/10/07 07:49:01 obache Exp $
+$NetBSD: distinfo,v 1.3 2007/05/09 13:39:11 obache Exp $
 
-SHA1 (darkstat/darkstat-3.0.540.tar.bz2) = aaca2ba07c8479b7bf2393261b0093f568746766
-RMD160 (darkstat/darkstat-3.0.540.tar.bz2) = c9ee36a5381bfc26c81759f4cde6153abac4264c
-Size (darkstat/darkstat-3.0.540.tar.bz2) = 75293 bytes
-SHA1 (patch-aa) = 8f5de074e5a5fc7798a8c196f116f12417b81d83
+SHA1 (darkstat/darkstat-3.0.619.tar.bz2) = d38aeb6c6a77b324cd1e267625f40509b358a83a
+RMD160 (darkstat/darkstat-3.0.619.tar.bz2) = 39fc8fa9e49b7cfe73917d97a062cd8855f38828
+Size (darkstat/darkstat-3.0.619.tar.bz2) = 82508 bytes
+SHA1 (patch-ab) = afb531d2c041582c1c6d62c948e7b58ca7f6bd1c
