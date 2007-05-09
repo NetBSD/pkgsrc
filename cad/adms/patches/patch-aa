@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
+
+--- configure.ac.orig	2007-02-01 21:29:53.000000000 +0000
++++ configure.ac
+@@ -494,7 +494,7 @@ AC_INIT([adms],[2.2.5],[r29173@users.sou
+ AC_CONFIG_HEADER([config.h])
+ 
+ # force use of gnu compiler
+-CC=gcc
++#CC=gcc
+ 
+ # specific configuration.
+ AC_CONFIG_AUX_DIR([auxconf])
