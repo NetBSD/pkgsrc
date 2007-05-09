@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1019 2007/05/09 08:06:35 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1020 2007/05/09 09:39:15 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1946,3 +1946,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/powerdns-mysql to 2.9.21 [ghen 2007-05-09]
 	Updated net/powerdns-pgsql to 2.9.21 [ghen 2007-05-09]
 	Updated net/powerdns-sqlite to 2.9.21 [ghen 2007-05-09]
+	Updated database/p5-DBD-SQLite to 1.13 [dillo 2007-05-09]
