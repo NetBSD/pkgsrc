@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
+
+SHA1 (adms-2.2.5.tar.gz) = 03093643feee7ef759cf2f65b497155e2e0df791
+RMD160 (adms-2.2.5.tar.gz) = 274f2330696e9e0825b77a3a3ca0a307e9f00bed
+Size (adms-2.2.5.tar.gz) = 706220 bytes
+SHA1 (patch-aa) = 8a2d74b1f4ccec749e65a0ed6e2cc334050d7805
+SHA1 (patch-ab) = 4405750dda622a9ccc9063ca827a692f19279b9b
