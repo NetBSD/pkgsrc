@@ -1,46 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/09 10:09:45 tnn Exp $
 
---- src/Makefile.in.orig	Fri Sep  1 18:45:15 2000
-+++ src/Makefile.in
-@@ -19,6 +19,9 @@
- # along with sawmill; see the file COPYING.  If not, write to
- # the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+--- Makedefs.in.orig	2003-01-12 21:30:40.000000000 +0100
++++ Makedefs.in
+@@ -98,7 +98,7 @@ REP_MSGFMT=@REP_MSGFMT@
  
-+# Don't build client.la by default from this Makefile.  client.la is
-+# packaged by x11/sawfish-replibs.
-+
- include ../Makedefs
+ # used when compiling/running lisp code
+ REP_ENVIRON=REP_DL_LOAD_PATH=$(top_builddir)/src/.libexec \
+-	    REP_GTK_DONT_INITIALIZE=1
++	    REP_GTK_DONT_INITIALIZE=1 $(REP_ENV_PKGSRC)
  
- top_builddir=..
-@@ -32,7 +35,7 @@
- OBJS := $(SRCS:.c=.o)
- 
- DL_SRCS := gradient.c flippers.c x.c selection.c play-sample.c
--DL_OBJS := $(DL_SRCS:%.c=%.la) client.la
-+DL_OBJS := $(DL_SRCS:%.c=%.la)
- DL_DSTS = sawfish/wm/util/gradient.la sawfish/wm/util/flippers.la \
- 	  sawfish/wm/util/x.la sawfish/wm/util/selection.la \
- 	  sawfish/wm/util/play-sample.la
-@@ -71,6 +74,8 @@
- 	  $(rep_LIBTOOL) --mode=install $(INSTALL_PROGRAM) \
- 	  $(notdir $(x)) $(DESTDIR)$(sawfishexecdir)/$(dir $(x));)
- 	$(rep_INSTALL_ALIASES) -c . $(DESTDIR)$(sawfishexecdir)
-+
-+install-client-la : client.la
- 	$(rep_LIBTOOL) --mode=install $(INSTALL_PROGRAM) client.la $(DESTDIR)$(repexecdir)/sawfish/
- 
- uninstall :
-@@ -82,10 +87,12 @@
- 	for dl in $(DL_DSTS); do \
- 	  $(rep_LIBTOOL) rm $(DESTDIR)${sawfishexecdir}/$$dl; \
- 	done
-+
-+uninstall-client-la :
- 	$(rep_DL_UNINSTALL) $(DESTDIR)$(repexecdir)/sawfish/client.la
- 
- installdirs : mkinstalldirs
--	$(SHELL) $< $(DESTDIR)$(bindir) $(DESTDIR)$(repexecdir)/sawfish \
-+	$(SHELL) $< $(DESTDIR)$(bindir) \
- 	  $(foreach x,$(DL_DIRS),$(DESTDIR)$(sawfishexecdir)/$(x))
- 
- .libexec :
+ %.mo : %.po
+ 	$(REP_MSGFMT) $(MSGFMTFLAGS) -o $@ $<
