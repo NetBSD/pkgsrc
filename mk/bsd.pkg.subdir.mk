@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.65 2006/07/27 21:46:45 jlam Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.66 2007/05/09 23:33:52 joerg Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -90,7 +90,7 @@ ${SUBDIR}::
 		show-downlevel show-pkgsrc-dir show-var show-vars \
 		bulk-install bulk-package fetch-list-one-pkg \
 		fetch-list-recursive update clean-update lint \
-		check-vulnerable \
+		check-vulnerable pbulk-index \
 		${PKG_MISC_TARGETS}
 .if !target(__target)
 .PHONY: ${__target}
