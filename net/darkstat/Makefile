@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2006/10/07 07:49:01 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/09 13:39:11 obache Exp $
 #
 
-DISTNAME=		darkstat-3.0.540
+DISTNAME=		darkstat-3.0.619
 CATEGORIES=		net
 MASTER_SITES=		http://dmr.ath.cx/net/darkstat/
 DIST_SUBDIR=		darkstat
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://dmr.ath.cx/net/darkstat/
 COMMENT=		Network statistics gatherer
-
-SUBST_CLASSES+=		conv_c
-SUBST_STAGE.conv_c=	post-patch
-SUBST_FILES.conv_c=	conv.c
-SUBST_SED.conv_c=	-e 's,/var/empty,${PREFIX}/share/darkstat/chroot,'
 
 BUILD_TARGET=		darkstat
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-chroot-dir=${PREFIX}/share/darkstat/chroot
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/darkstat
