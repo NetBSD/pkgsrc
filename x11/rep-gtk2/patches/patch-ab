@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/09 10:01:28 tnn Exp $
+
+--- gtk-compat.c.orig	2004-09-02 19:43:49.000000000 +0200
++++ gtk-compat.c
+@@ -64,7 +64,7 @@ gtk_menu_popup_interp (GtkMenu *menu,
+ 
+ GtkWidget*
+ gtk_radio_menu_item_new_with_label_from_widget (GtkRadioMenuItem *group,
+-						gchar            *label)
++						const gchar            *label)
+ {
+   GSList *g = group? gtk_radio_menu_item_group (group) : NULL;
+   return gtk_radio_menu_item_new_with_label (g, label);
+@@ -72,7 +72,7 @@ gtk_radio_menu_item_new_with_label_from_
+ 
+ GtkWidget*
+ gtk_radio_menu_item_new_with_mnemonic_from_widget (GtkRadioMenuItem *group,
+-						   gchar            *label)
++						   const gchar            *label)
+ {
+   GSList *g = group? gtk_radio_menu_item_group (group) : NULL;
+   return gtk_radio_menu_item_new_with_mnemonic (g, label);
