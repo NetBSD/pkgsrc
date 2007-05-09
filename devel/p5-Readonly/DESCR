@@ -1,0 +1,4 @@
+The Perl 5 module Readonly provides a facility for creating
+non-modifiable scalars, arrays, and hashes. This facility also
+overcomes the limitations of the Perl built-in mechanism (the "use
+constant" pragma) to create constant scalars and lists.
