@@ -1,18 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/28 06:36:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/09 23:14:40 tnn Exp $
 bin/mrxvt
 man/man1/mrxvt.1
-share/doc/mrxvt/README.greek
-share/doc/mrxvt/README.menu
-share/doc/mrxvt/README.xvt
-share/doc/mrxvt/TIPS
-share/doc/mrxvt/mrxvt.vbs
-share/doc/mrxvt/mrxvtset.pl
-share/doc/mrxvt/xdefaults-sample.txt
-share/doc/mrxvt/xterm.seq
+share/doc/mrxvt/README.greek.bz2
+share/doc/mrxvt/README.menu.bz2
+share/doc/mrxvt/README.xvt.bz2
+share/doc/mrxvt/behind_mrxvt.txt.bz2
+share/doc/mrxvt/hack-mrxvt.txt.bz2
+share/doc/mrxvt/mrxvt_seq.txt.bz2
+share/doc/mrxvt/rxvtRef.txt.bz2
+share/doc/mrxvt/xterm-ctlseqs.txt.bz2
+share/doc/mrxvt/scripts/mrxvt.vbs
+share/doc/mrxvt/scripts/mrxvtset.pl
+share/doc/mrxvt/scripts/settitle.c
+share/examples/mrxvt/default.menu
+share/examples/mrxvt/mrxvtrc
+share/examples/mrxvt/mrxvtrc.sample
+share/examples/mrxvt/submenus.menu
 share/pixmaps/mrxvt-csh.png
 share/pixmaps/mrxvt-csh.xpm
 share/pixmaps/mrxvt-root.png
 share/pixmaps/mrxvt-root.xpm
 share/pixmaps/mrxvt.png
 share/pixmaps/mrxvt.xpm
+@dirrm share/doc/mrxvt/scripts
 @dirrm share/doc/mrxvt
+@dirrm share/examples/mrxvt
