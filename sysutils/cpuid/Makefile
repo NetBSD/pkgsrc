@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:59:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/05/09 11:57:27 ghen Exp $
 
 DISTNAME=	cpuid-3.3
 CATEGORIES=	sysutils
@@ -9,6 +9,7 @@ HOMEPAGE=	http://directory.fsf.org/System_administration/Configuration/cpuid.htm
 COMMENT=	CPU identification feature
 
 ONLY_FOR_PLATFORM=	*-*-i386
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
 INSTALLATION_DIRS=	bin
 
