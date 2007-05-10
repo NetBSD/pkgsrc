@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.6 2007/04/23 23:27:55 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.7 2007/05/10 08:03:26 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -15,3 +15,5 @@ Pullup ticket 2074 - requested by xtraeme
 security update for opera
 Pullup ticket 2072 - requested by ghen
 dovecot update
+Pullup ticket 2079 - requested by martti
+security update for squirrelmail
