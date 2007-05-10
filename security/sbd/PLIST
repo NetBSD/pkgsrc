@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/10 18:18:16 agc Exp $
+bin/sbd
+bin/sbdd
+share/sbd/PROTOCOL
+share/sbd/README
+share/sbd/athkey.bits
+share/sbd/deckey.bits
+share/sbd/enckey.bits
+@dirrm share/sbd
