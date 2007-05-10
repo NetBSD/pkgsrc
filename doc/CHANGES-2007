@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1027 2007/05/10 06:48:45 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1028 2007/05/10 09:25:00 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1956,4 +1956,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated inputmethod/libhangul to 0.0.4 [minskim 2007-05-09]
 	Updated x11/mrxvt to 0.5.2 [tnn 2007-05-09]
 	Updated audio/wavpack to 4.41.0 [tnn 2007-05-09]
-	Updated mail/squirrelmail to 1.4.10 [martti 2007-05-09]
+	Updated mail/squirrelmail to 1.4.10a [martti 2007-05-09]
