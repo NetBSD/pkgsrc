@@ -1,4 +1,4 @@
-# $NetBSD: plugin.mk,v 1.3 2006/02/17 07:04:25 martti Exp $
+# $NetBSD: plugin.mk,v 1.4 2007/05/10 10:08:24 martti Exp $
 
 DISTNAME?=		${PLUGIN_NAME}-${PLUGIN_VERSION}
 PKGNAME=		sm-${PLUGIN_NAME}-${PLUGIN_VERSION}
@@ -19,7 +19,7 @@ PLIST_SUBST+=		PLUGIN_DIR=${PLUGIN_DIR:Q}
 
 do-install:
 	cd ${WRKSRC:Q} && \
-		${FIND} . -type f ! -name '*.orig' 2>/dev/null | \
-		${PAX} -rw ${FULL_PLUGIN_DIR}
+		find . -type f ! -name '*.orig' 2>/dev/null | \
+		pax -rw ${FULL_PLUGIN_DIR}
 
 .include "../../mail/squirrelmail/buildlink3.mk"
