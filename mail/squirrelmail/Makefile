@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2007/05/10 09:24:44 martti Exp $
+# $NetBSD: Makefile,v 1.85 2007/05/10 10:08:24 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.10a
 CATEGORIES=	mail www
@@ -58,25 +58,28 @@ SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'
 SUBST_SED.paths+=	-e 's,@SMDIR@,${SMDIR},g'
 SUBST_STAGE.paths=	post-patch
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 share/examples/squirrelmail share/squirrelmail
+INSTALLATION_DIRS=	${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	share/examples/squirrelmail
+INSTALLATION_DIRS+=	share/squirrelmail
 
 post-extract:
-	${CP} ${FILESDIR:Q}/squirrelmail.conf.dist \
+	cp ${FILESDIR:Q}/squirrelmail.conf.dist \
 		${WRKDIR:Q}/squirrelmail.conf.dist
 
 pre-configure:
-	${FIND} ${WRKSRC:Q} \( -name "*.orig*" -o -name ".cvsignore" \) -print | ${XARGS} ${RM} -f
+	find ${WRKSRC:Q} \( -name '*.orig*' -or -name '.cvsignore' \) \
+		-exec rm -f {} \;
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR:Q}/squirrelmail.conf.dist ${EGDIR:Q}/squirrelmail.conf
-	${CP} -R ${WRKSRC:Q}/* ${SMDIR:Q}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
-	${FIND} ${SMDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${SMDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHMOD} a+x ${SMDIR:Q}/config/conf.pl
+	cp -R ${WRKSRC:Q}/* ${SMDIR:Q}
+	chown -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
+	find ${SMDIR} -type d -exec chmod ${PKGDIRMODE} {} \;
+	find ${SMDIR} -type f -exec chmod ${SHAREMODE} {} \;
+	chmod a+x ${SMDIR:Q}/config/conf.pl
 	${INSTALL_DATA} ${WRKSRC:Q}/data/index.php ${USER_PREFS_DIR:Q}/
 	${INSTALL_DATA} ${WRKSRC:Q}/data/.htaccess ${USER_PREFS_DIR:Q}/
-	${MV} ${PREFIX}/share/squirrelmail/contrib/conf.pl.8 \
+	mv ${PREFIX}/share/squirrelmail/contrib/conf.pl.8 \
 	  ${PREFIX}/${PKGMANDIR}/man8/squirrelmail-conf.pl.8
 
 .include "../../lang/php/phpversion.mk"
