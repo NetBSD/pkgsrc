@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2007/05/10 06:48:28 martti Exp $
+# $NetBSD: Makefile,v 1.84 2007/05/10 09:24:44 martti Exp $
 
-DISTNAME=	squirrelmail-1.4.10
+DISTNAME=	squirrelmail-1.4.10a
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
