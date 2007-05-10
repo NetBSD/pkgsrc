@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/10 18:18:16 agc Exp $
+
+--- sbd.cpp	2007/05/10 09:59:22	1.1
++++ sbd.cpp	2007/05/10 10:00:30
+@@ -121,7 +121,7 @@
+   
+   // We always assume server recieved the command ok
+   // truncate file so same bytes are not used
+-  truncateFile("enckey.bits", keyBytesUsed);
++  truncateFile(PKG_SYSCONFDIR "/" "enckey.bits", keyBytesUsed);
+ 
+   return 0;
+ }
+@@ -136,7 +136,7 @@
+   eMsg="";                               // Finished cypher text
+   
+   // get key bytes from file
+-  readKey("enckey.bits", key, SHA1_SIZE*2 + msg.size());
++  readKey(PKG_SYSCONFDIR "/" "enckey.bits", key, SHA1_SIZE*2 + msg.size());
+   
+   // Copy 20 bytes of key over to hashOTP for computing HMAC-SHA1
+   for (i = 0; i < SHA1_SIZE; i++)
