@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.27 2007/05/07 09:31:05 obache Exp $
+# $NetBSD: msgfmt.sh,v 1.28 2007/05/10 15:42:29 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -117,7 +117,7 @@ while test $# -gt 0; do
 		# skip all checks
 		shift
 		;;
-	[!-]*)
+	[!-]*|-)
 		pofile="$1"
 		cmd="$cmd -"; shift
 		;;
