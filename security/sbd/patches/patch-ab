@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/10 18:18:16 agc Exp $
+
+--- sbdd.cpp	2007/05/10 09:59:22	1.1
++++ sbdd.cpp	2007/05/10 10:01:05
+@@ -110,8 +110,8 @@
+       return 1;
+     }
+     
+-    readKey("athkey.bits", authBytes, AUTH_SIZE);
+-    truncateFile("athkey.bits", AUTH_SIZE);
++    readKey(PKG_SYSCONFDIR "/" "athkey.bits", authBytes, AUTH_SIZE);
++    truncateFile(PKG_SYSCONFDIR "/" "athkey.bits", AUTH_SIZE);
+   
+     for (i = 0; i < authBytes.size() ; i++)
+     {
+@@ -180,7 +180,7 @@
+   unsigned char hashOTP[SHA1_SIZE];      // First 20 bytes of OTP used to comput HMAC-SHA1 
+   unsigned char finishedHash[SHA1_SIZE]; // Finished HMAC-SHA1 hash
+   
+-  readKey("deckey.bits", key, infileCmd.size()+SHA1_SIZE);
++  readKey(PKG_SYSCONFDIR "/" "deckey.bits", key, infileCmd.size()+SHA1_SIZE);
+   
+   // Copy 20 bytes of key over to hashOTP for computing HMAC-SHA1
+   for (i = 0; i < SHA1_SIZE; i++)
+@@ -227,7 +227,7 @@
+     logFile << "system() returned : " << system(cmd.c_str()) << endl;
+     
+     //truncate bytes file
+-    truncateFile("deckey.bits", infileCmd.size()+SHA1_SIZE);
++    truncateFile(PKG_SYSCONFDIR "/" "deckey.bits", infileCmd.size()+SHA1_SIZE);
+     return 0;
+   }
+ 
