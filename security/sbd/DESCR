@@ -1,0 +1,13 @@
+One-time cipher based back door program for executing emergency
+commands.
+
+Secure Back Door(SBD) is an alternative to leaving SSH open all the
+time.  It is based on a secure one-time keypad method, that insures
+maximum security.  Since SBD is very small, it is less likely to have
+security exploits, as compared to SSH.  Therefore, you could leave an
+important computer up and running with just sbdd running in the
+background, and if an emergency came about, you could simple execute a
+command to bring ssh up, then work on the computer as regular.  It
+would be as simple as doing ./sbd domain.com "/etc/init.d/sshd start",
+and with the proper key file set, the remote computer would have ssh
+up and running shortly.
