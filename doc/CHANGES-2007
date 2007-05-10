@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1029 2007/05/10 16:09:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1030 2007/05/10 18:20:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/wavpack to 4.41.0 [tnn 2007-05-09]
 	Updated mail/squirrelmail to 1.4.10a [martti 2007-05-09]
 	Updated audio/easytag to 2.1 [wiz 2007-05-10]
+	Added security/sbd version 0.5 [agc 2007-05-10]
