@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.2 2006/12/18 12:36:17 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.3 2007/05/10 02:55:31 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -60,15 +60,18 @@
 # of foo pulls in foo-share which conflicts with foo.  This needlessly
 # loses.
 #
-#   Parse mk.conf for PKGSRCDIR, etc.
-
-test -n "$PKG_DBDIR" || PKG_DBDIR=/var/db/pkg
-test -n "$PKGSRCDIR" || PKGSRCDIR=/usr/pkgsrc
-
-unset PKG_PATH || true  #or pkgsrc makefiles will complain
 
 # Substituted by pkgsrc at pre-configure time.
 MAKE=@MAKE@
+
+test -z "$PKG_DBDIR" && PKG_DBDIR=/var/db/pkg
+test -z "$MAKECONF" && M=/etc/mk.conf && test -f $M && MAKECONF=$M
+test -z "$MAKECONF" && M=/usr/pkg/etc/mk.conf && test -f $M && MAKECONF=$M
+test -z "$PKGSRCDIR" && test -f "$MAKECONF" && \
+    PKGSRCDIR="`$MAKE -f \"$MAKECONF\" BSD_PKG_MK=1 -V PKGSRCDIR`"
+test -z "$PKGSRCDIR" && PKGSRCDIR=/usr/pkgsrc
+
+unset PKG_PATH || true  #or pkgsrc makefiles will complain
 
 usage()
 {
