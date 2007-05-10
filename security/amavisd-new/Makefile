@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/05/05 15:18:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.30 2007/05/10 12:58:27 xtraeme Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
+PKGREVISION=	1
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
@@ -24,7 +25,6 @@ DEPENDS+=	p5-Digest-MD5>=2.22:../../security/p5-Digest-MD5
 DEPENDS+=	p5-MIME-tools>=5.417:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.58:../../mail/p5-MailTools
 DEPENDS+=	p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
-DEPENDS+=	p5-Net>=1.16:../../net/p5-Net
 DEPENDS+=	p5-Net-Server>=0.88:../../net/p5-Net-Server
 DEPENDS+=	p5-Time-HiRes>=1.49:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
