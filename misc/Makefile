@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2007/05/05 00:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2007/05/10 21:06:58 seb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -10,6 +10,7 @@ SUBDIR+=	ascii
 SUBDIR+=	asr-manpages
 SUBDIR+=	astrolog
 SUBDIR+=	autocue
+SUBDIR+=	basket
 SUBDIR+=	bbappconf
 SUBDIR+=	bbdb
 SUBDIR+=	bbweather
