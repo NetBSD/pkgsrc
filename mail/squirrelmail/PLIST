@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/12/04 13:06:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.20.4.1 2007/05/10 08:02:30 ghen Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -64,14 +64,13 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.6.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.7.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.8.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.9.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.9a.txt
 share/squirrelmail/doc/authentication.txt
-share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
 share/squirrelmail/doc/index.html
 share/squirrelmail/doc/presets.txt
 share/squirrelmail/doc/russian_apache.txt
 share/squirrelmail/doc/security.txt
-share/squirrelmail/doc/themes.txt
 share/squirrelmail/doc/translating.txt
 share/squirrelmail/doc/translating_help.txt
 share/squirrelmail/functions/abook_database.php
