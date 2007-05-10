@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/05/09 23:14:40 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2007/05/10 00:44:38 tnn Exp $
 #
 
 DISTNAME=	mrxvt-0.5.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 
@@ -19,12 +20,13 @@ CONFIGURE_ARGS+=	--enable-text-shadow
 CONFIGURE_ARGS+=	--enable-24bits
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-EGDIR=			${PREFIX}/share/examples/mrxvt
-CONF_FILES=		${EGDIR}/mrxvtrc ${PKG_SYSCONFDIR}/mrxvtrc
-CONF_FILES+=		${EGDIR}/default.menu ${PKG_SYSCONFDIR}/default.menu
-CONF_FILES+=		${EGDIR}/submenus.menu ${PKG_SYSCONFDIR}/submenus.menu
+EGDIR=			${PREFIX}/share/examples
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/mrxvt
+CONF_FILES=		${EGDIR}/mrxvt/mrxvtrc ${PKG_SYSCONFDIR}/mrxvt/mrxvtrc
+CONF_FILES+=		${EGDIR}/mrxvt/default.menu ${PKG_SYSCONFDIR}/mrxvt/default.menu
+CONF_FILES+=		${EGDIR}/mrxvt/submenus.menu ${PKG_SYSCONFDIR}/mrxvt/submenus.menu
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:C/\/mrxvt//:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
