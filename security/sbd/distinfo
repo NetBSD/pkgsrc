@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/10 18:18:16 agc Exp $
+
+SHA1 (sbd-0.5.tar.gz) = 958860dc240105b705a0127409cfb5e4da4109ab
+RMD160 (sbd-0.5.tar.gz) = 374db4f75210bc04ed9dd91c1c608fa2984856b3
+Size (sbd-0.5.tar.gz) = 25750 bytes
+SHA1 (patch-aa) = e516c2a43d33e3e4a0c808f38a128bce8b96fedf
+SHA1 (patch-ab) = afa9111e000d25dd05189554c2d97991d799ed5c
