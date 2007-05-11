@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/08 17:04:08 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2007/05/11 11:51:05 schmonz Exp $
 
-SHA1 (roundcube-0.1-20070314.tar.bz2) = 1c54fe2a44214e850ddcbc4837e29536548d8173
-RMD160 (roundcube-0.1-20070314.tar.bz2) = e022f42d78243b1f65dcdc0b557b80ebe8a84c53
-Size (roundcube-0.1-20070314.tar.bz2) = 755003 bytes
+SHA1 (roundcube-0.1-20070508.tar.bz2) = caf52339e7b4d6a97d0aee14d9f9fd85b0bbfacd
+RMD160 (roundcube-0.1-20070508.tar.bz2) = 9a0070c192482ab9c2e127c4c2f26d23887217db
+Size (roundcube-0.1-20070508.tar.bz2) = 765709 bytes
+SHA1 (patch-aa) = 6672520123bab023c2ee50a363a3c634db2202e3
+SHA1 (patch-ab) = 15ed0f903072be25eaf1d0edac8ddbe8cca8ac25
