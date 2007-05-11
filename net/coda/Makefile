@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/15 14:03:50 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/11 15:19:11 gdt Exp $
 #
 
 DISTNAME=	coda-6.9.1
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	Coda distributed fileystem
+
+# See http://coda.wikidev.net/Quick_Client_Action for hints on how
+# to configure venus.
 
 # Top-level Makefile is missing .WAIT, reported upstream 20070412 by gdt.
 MAKE_JOBS_SAFE=	no
