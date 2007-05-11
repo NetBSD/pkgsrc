@@ -1,5 +1,5 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.4 2007/05/10 03:02:20 tnn Exp $
-.Dd May 10, 2007
+.\" $NetBSD: pkg_rolling-replace.8,v 1.5 2007/05/11 16:48:55 tnn Exp $
+.Dd May 11, 2007
 .Dt PKG_ROLLING-REPLACE 8
 .Os
 .Sh NAME
@@ -91,8 +91,9 @@ Path to
 .Pa mk.conf .
 Defaults to
 .Pa /etc/mk.conf
-with a fallback to
-.Pa /usr/pkgsrc/etc/mk.conf .
+or
+.Pa ${PREFIX}/etc/mk.conf 
+(if using bmake).
 .It Ev PKGSRCDIR
 Base of pkgsrc tree.
 Defaults to value configured in MAKECONF or
