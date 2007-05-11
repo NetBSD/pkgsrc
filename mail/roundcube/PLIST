@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/08 17:04:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/11 11:51:05 schmonz Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -16,14 +16,14 @@ share/examples/roundcube/db.inc.php
 share/examples/roundcube/main.inc.php
 share/examples/roundcube/roundcube.conf
 share/roundcube/.htaccess
-share/roundcube/config/.htaccess
 share/roundcube/index.php
-share/roundcube/logs/.htaccess
 share/roundcube/program/blank.gif
 share/roundcube/program/blocked.gif
 share/roundcube/program/include/bugs.inc
 share/roundcube/program/include/cache.inc
 share/roundcube/program/include/main.inc
+share/roundcube/program/include/rcmail_template.inc
+share/roundcube/program/include/rcube_contacts.inc
 share/roundcube/program/include/rcube_db.inc
 share/roundcube/program/include/rcube_imap.inc
 share/roundcube/program/include/rcube_ldap.inc
@@ -306,6 +306,7 @@ share/roundcube/program/lib/html2text.inc
 share/roundcube/program/lib/icl_commons.inc
 share/roundcube/program/lib/imap.inc
 share/roundcube/program/lib/mime.inc
+share/roundcube/program/lib/rc_mail_mime.inc
 share/roundcube/program/lib/utf7.inc
 share/roundcube/program/lib/utf8.class.php
 share/roundcube/program/localization/am/labels.inc
@@ -338,10 +339,14 @@ share/roundcube/program/localization/et_EE/labels.inc
 share/roundcube/program/localization/et_EE/messages.inc
 share/roundcube/program/localization/eu/labels.inc
 share/roundcube/program/localization/eu/messages.inc
+share/roundcube/program/localization/fa/labels.inc
+share/roundcube/program/localization/fa/messages.inc
 share/roundcube/program/localization/fi/labels.inc
 share/roundcube/program/localization/fi/messages.inc
 share/roundcube/program/localization/fr/labels.inc
 share/roundcube/program/localization/fr/messages.inc
+share/roundcube/program/localization/hi/labels.inc
+share/roundcube/program/localization/hi/messages.inc
 share/roundcube/program/localization/hr/labels.inc
 share/roundcube/program/localization/hr/messages.inc
 share/roundcube/program/localization/hu/labels.inc
@@ -353,6 +358,8 @@ share/roundcube/program/localization/it/labels.inc
 share/roundcube/program/localization/it/messages.inc
 share/roundcube/program/localization/ja/labels.inc
 share/roundcube/program/localization/ja/messages.inc
+share/roundcube/program/localization/kur_KU/labels.inc
+share/roundcube/program/localization/kur_KU/messages.inc
 share/roundcube/program/localization/lt/labels.inc
 share/roundcube/program/localization/lt/messages.inc
 share/roundcube/program/localization/lv/labels.inc
@@ -395,12 +402,14 @@ share/roundcube/program/localization/vn/labels.inc
 share/roundcube/program/localization/vn/messages.inc
 share/roundcube/program/localization/zh_CN/labels.inc
 share/roundcube/program/localization/zh_CN/messages.inc
+share/roundcube/program/steps/addressbook/copy.inc
 share/roundcube/program/steps/addressbook/delete.inc
 share/roundcube/program/steps/addressbook/edit.inc
 share/roundcube/program/steps/addressbook/func.inc
-share/roundcube/program/steps/addressbook/ldapsearchform.inc
 share/roundcube/program/steps/addressbook/list.inc
+share/roundcube/program/steps/addressbook/mailto.inc
 share/roundcube/program/steps/addressbook/save.inc
+share/roundcube/program/steps/addressbook/search.inc
 share/roundcube/program/steps/addressbook/show.inc
 share/roundcube/program/steps/error.inc
 share/roundcube/program/steps/mail/addcontact.inc
@@ -414,7 +423,6 @@ share/roundcube/program/steps/mail/list.inc
 share/roundcube/program/steps/mail/mark.inc
 share/roundcube/program/steps/mail/move_del.inc
 share/roundcube/program/steps/mail/quotadisplay.inc
-share/roundcube/program/steps/mail/quotaimg.inc
 share/roundcube/program/steps/mail/rss.inc
 share/roundcube/program/steps/mail/search.inc
 share/roundcube/program/steps/mail/sendmail.inc
@@ -569,7 +577,6 @@ share/roundcube/skins/default/includes/links.html
 share/roundcube/skins/default/includes/settingscripts.html
 share/roundcube/skins/default/includes/settingstabs.html
 share/roundcube/skins/default/includes/taskbar.html
-share/roundcube/skins/default/ldapsearchform.css
 share/roundcube/skins/default/mail.css
 share/roundcube/skins/default/pngbehavior.htc
 share/roundcube/skins/default/print.css
@@ -583,7 +590,6 @@ share/roundcube/skins/default/templates/editcontact.html
 share/roundcube/skins/default/templates/editidentity.html
 share/roundcube/skins/default/templates/error.html
 share/roundcube/skins/default/templates/identities.html
-share/roundcube/skins/default/templates/ldappublicsearch.html
 share/roundcube/skins/default/templates/login.html
 share/roundcube/skins/default/templates/mail.html
 share/roundcube/skins/default/templates/managefolders.html
@@ -594,8 +600,6 @@ share/roundcube/skins/default/templates/printmessage.html
 share/roundcube/skins/default/templates/settings.html
 share/roundcube/skins/default/templates/showcontact.html
 share/roundcube/skins/default/watermark.html
-share/roundcube/temp/.htaccess
-@dirrm share/roundcube/temp
 @dirrm share/roundcube/skins/default/templates
 @dirrm share/roundcube/skins/default/includes
 @dirrm share/roundcube/skins/default/images/icons
@@ -630,13 +634,16 @@ share/roundcube/temp/.htaccess
 @dirrm share/roundcube/program/localization/nb_NO
 @dirrm share/roundcube/program/localization/lv
 @dirrm share/roundcube/program/localization/lt
+@dirrm share/roundcube/program/localization/kur_KU
 @dirrm share/roundcube/program/localization/ja
 @dirrm share/roundcube/program/localization/it
 @dirrm share/roundcube/program/localization/id_ID
 @dirrm share/roundcube/program/localization/hu
 @dirrm share/roundcube/program/localization/hr
+@dirrm share/roundcube/program/localization/hi
 @dirrm share/roundcube/program/localization/fr
 @dirrm share/roundcube/program/localization/fi
+@dirrm share/roundcube/program/localization/fa
 @dirrm share/roundcube/program/localization/eu
 @dirrm share/roundcube/program/localization/et_EE
 @dirrm share/roundcube/program/localization/es
@@ -707,8 +714,6 @@ share/roundcube/temp/.htaccess
 @dirrm share/roundcube/program/js
 @dirrm share/roundcube/program/include
 @dirrm share/roundcube/program
-@dirrm share/roundcube/logs
-@dirrm share/roundcube/config
 @dirrm share/roundcube
 @dirrm share/examples/roundcube/SQL
 @dirrm share/examples/roundcube
