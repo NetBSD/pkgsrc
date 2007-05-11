@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1035 2007/05/11 21:40:23 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.1036 2007/05/11 22:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/popt to 1.7nb7 [obache 2007-05-11]
 	Added devel/p5-Smart-Comments version 1.0.2 [seb 2007-05-11]
 	Updated wm/dwm to 4.0 [tonio 2007-05-11]
+	Updated www/lynx to 2.8.6.5 [wiz 2007-05-11]
