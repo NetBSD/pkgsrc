@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1032 2007/05/11 11:51:20 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1033 2007/05/11 13:52:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/sbd version 0.5 [agc 2007-05-10]
 	Added misc/basket version 1.0.2 [seb 2007-05-10]
 	Updated mail/roundcube to 20070508 [schmonz 2007-05-11]
+	Updated devel/popt to 1.7nb7 [obache 2007-05-11]
