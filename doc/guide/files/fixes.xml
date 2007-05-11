@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.81 2007/03/01 22:29:15 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.82 2007/05/11 22:47:13 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -159,6 +159,12 @@
     text should be added to <filename>pkgsrc/licenses</filename>
     for displaying. A list of known licenses can be seen in this
     directory.</para>
+
+    <para>When the license changes, please make sure that the new
+    license has a different name (e.g., append the version number if
+    it exists, or the date). Just because a user agreed to a previous
+    version of a license does not mean that the new version is
+    automatically ok too.</para>
 
     <para>The use of <varname>LICENSE=shareware</varname>,
     <varname>LICENSE=no-commercial-use</varname>, and similar
