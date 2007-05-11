@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.21 2007/05/09 19:56:18 joerg Exp $
+# $NetBSD: apache.mk,v 1.22 2007/05/11 08:35:52 rillig Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -58,7 +58,7 @@ USE_APR?=			no
 # The available apache packages:
 _PKG_APACHES=			apache13 apache2 apache22
 
-_APACHE_PKGBASE.apache13=	apache-1\*
+_APACHE_PKGBASE.apache13=	apache-1*
 _APACHE_PKG_PREFIX.apache13=	ap13
 _APACHE_PKGSRCDIR.apache13=	../../www/apache
 
@@ -66,7 +66,7 @@ _APACHE_PKGBASE.apache2=	apache-2.0*
 _APACHE_PKG_PREFIX.apache2=	ap2
 _APACHE_PKGSRCDIR.apache2=	../../www/apache2
 
-_APACHE_PKGBASE.apache22=	apache-2.[23456789]\*
+_APACHE_PKGBASE.apache22=	apache-2.[23456789]*
 _APACHE_PKG_PREFIX.apache22=	ap22
 _APACHE_PKGSRCDIR.apache22=	../../www/apache22
 
@@ -90,7 +90,7 @@ PKG_APACHE_ACCEPTED=		# none
 .for _ap_ in ${PKG_APACHE_ACCEPTED}
 _APACHE_OK.${_ap_}=	yes
 _APACHE_INSTALLED.${_ap_}!= \
-	if ${PKG_INFO} -qe ${_APACHE_PKGBASE.${_ap_}}; then		\
+	if ${PKG_INFO} -qe ${_APACHE_PKGBASE.${_ap_}:Q}; then		\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
