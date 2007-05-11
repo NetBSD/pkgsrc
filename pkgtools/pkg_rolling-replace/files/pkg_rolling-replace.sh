@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.3 2007/05/10 02:55:31 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.4 2007/05/11 16:48:55 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -62,12 +62,11 @@
 #
 
 # Substituted by pkgsrc at pre-configure time.
-MAKE=@MAKE@
+MAKE="@MAKE@"
 
 test -z "$PKG_DBDIR" && PKG_DBDIR=/var/db/pkg
-test -z "$MAKECONF" && M=/etc/mk.conf && test -f $M && MAKECONF=$M
-test -z "$MAKECONF" && M=/usr/pkg/etc/mk.conf && test -f $M && MAKECONF=$M
-test -z "$PKGSRCDIR" && test -f "$MAKECONF" && \
+test -z "$MAKECONF" && MAKECONF="@MAKECONF@"
+test -f "$MAKECONF" && test -z "$PKGSRCDIR" && \
     PKGSRCDIR="`$MAKE -f \"$MAKECONF\" BSD_PKG_MK=1 -V PKGSRCDIR`"
 test -z "$PKGSRCDIR" && PKGSRCDIR=/usr/pkgsrc
 
