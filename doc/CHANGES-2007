@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1034 2007/05/11 16:28:11 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1035 2007/05/11 21:40:23 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1963,3 +1963,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/roundcube to 20070508 [schmonz 2007-05-11]
 	Updated devel/popt to 1.7nb7 [obache 2007-05-11]
 	Added devel/p5-Smart-Comments version 1.0.2 [seb 2007-05-11]
+	Updated wm/dwm to 4.0 [tonio 2007-05-11]
