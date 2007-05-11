@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2007/05/11 11:51:05 schmonz Exp $
+
+--- config/main.inc.php.dist.orig	2007-05-08 05:22:27.000000000 -0400
++++ config/main.inc.php.dist
+@@ -88,10 +88,10 @@ $rcmail_config['list_cols'] = array('sub
+ $rcmail_config['skin_path'] = 'skins/default/';
+ 
+ // use this folder to store temp files (must be writebale for apache user)
+-$rcmail_config['temp_dir'] = 'temp/';
++$rcmail_config['temp_dir'] = '@VARBASE@/tmp/roundcube/';
+ 
+ // use this folder to store log files (must be writebale for apache user)
+-$rcmail_config['log_dir'] = 'logs/';
++$rcmail_config['log_dir'] = '@VARBASE@/log/roundcube/';
+ 
+ // session lifetime in minutes
+ $rcmail_config['session_lifetime'] = 10;

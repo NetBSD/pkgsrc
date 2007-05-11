@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/04/08 21:25:44 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/11 11:51:05 schmonz Exp $
 #
 
-#		SVN build 508
-DISTNAME=	roundcube-0.1-20070314
+DISTNAME=	roundcube-0.1-20070508
 PKGNAME=	${DISTNAME:S/-0.1//}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.farrokhi.net/roundcube/
@@ -12,55 +11,56 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 
-.include "../../lang/php/phpversion.mk"
-
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.1:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../misc/php-mbstring
-
 USE_LANGUAGES=	# none
+NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/roundcubemail
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	httpd
 
-BUILD_DEFS+=	APACHE_USER APACHE_GROUP
+BUILD_DEFS+=	APACHE_USER APACHE_GROUP VARBASE
 RCDIR=		${PREFIX}/share/roundcube
 EGDIR=		${PREFIX}/share/examples/roundcube
 DOCDIR=		${PREFIX}/share/doc/roundcube
 PAX_DIRS=	program skins
 
 MESSAGE_SUBST+=	DOCDIR=${DOCDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+FILES_SUBST+=	RCDIR=${RCDIR:Q}
 
-CONF_FILES=		${EGDIR}/roundcube.conf ${PKG_SYSCONFDIR}/roundcube.conf
-CONF_FILES_PERMS+=	${EGDIR}/db.inc.php ${RCDIR}/config/db.inc.php \
-			${APACHE_USER} ${APACHE_GROUP} 0440
-CONF_FILES_PERMS+=	${EGDIR}/main.inc.php ${RCDIR}/config/main.inc.php \
-			${APACHE_USER} ${APACHE_GROUP} 0440
+OWN_DIRS+=	${PKG_SYSCONFDIR}/roundcube
+OWN_DIRS_PERMS+=${VARBASE}/log/roundcube ${APACHE_USER} ${APACHE_GROUP} 0755
+OWN_DIRS_PERMS+=${VARBASE}/tmp/roundcube ${APACHE_USER} ${APACHE_GROUP} 0755
+
+CONF_FILES=	${EGDIR}/roundcube.conf ${PKG_SYSCONFDIR}/roundcube.conf
+CONF_FILES_PERMS+=	\
+	${EGDIR}/db.inc.php ${PKG_SYSCONFDIR}/roundcube/db.inc.php \
+		${APACHE_USER} ${APACHE_GROUP} 0440 \
+	${EGDIR}/main.inc.php ${PKG_SYSCONFDIR}/roundcube/main.inc.php \
+		${APACHE_USER} ${APACHE_GROUP} 0440
 
 SUBST_CLASSES+=		files
-SUBST_STAGE.files=	post-build
+SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
+SUBST_FILES.files+=	config/main.inc.php.dist
+SUBST_FILES.files+=	program/include/main.inc
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
+SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
+
+INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
 
 .include "options.mk"
 .include "../../mk/apache.mk"
 
-do-build:
-	${CP} ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
+post-extract:
+	cp ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
+
+pre-install:
+	find ${WRKSRC} -name "*.orig" -print | xargs rm -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${RCDIR}
-	${INSTALL_DATA_DIR} ${RCDIR}/config
-	${INSTALL_DATA_DIR} ${RCDIR}/program
-	${INSTALL_DATA_DIR} ${RCDIR}/skins
-	${INSTALL_DATA_DIR} ${RCDIR}/temp
-	${INSTALL_DATA_DIR} ${RCDIR}/logs
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/SQL
-	${INSTALL_DATA_DIR} ${DOCDIR}
-
 	${INSTALL_DATA} ${WRKSRC}/roundcube.conf ${EGDIR}/roundcube.conf
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
@@ -70,23 +70,17 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${EGDIR}/SQL/
 
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${RCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/config/.htaccess ${RCDIR}/config/
-	${INSTALL_DATA} ${WRKSRC}/temp/.htaccess ${RCDIR}/temp/
-	${INSTALL_DATA} ${WRKSRC}/logs/.htaccess ${RCDIR}/logs/
 
 	${INSTALL_DATA} ${WRKSRC}/index.php ${RCDIR}/
 
 	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist ${EGDIR}/db.inc.php
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist ${EGDIR}/main.inc.php
 
-	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${RCDIR}/temp/
-	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${RCDIR}/logs/
-
 .for i in ${PAX_DIRS}
-	cd ${WRKSRC}/${i} && ${PAX} -rw . ${RCDIR}/${i}
-	${FIND} ${RCDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${FIND} ${RCDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
+	cd ${WRKSRC}/${i} && pax -rw . ${RCDIR}/${i}
+	find ${RCDIR}/${i} -type f | xargs chmod ${SHAREMODE}
+	find ${RCDIR}/${i} -type d | xargs chmod ${PKGDIRMODE}
+	chown -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
