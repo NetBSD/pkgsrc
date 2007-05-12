@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/17 12:13:11 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/12 11:08:31 shannonjr Exp $
 bin/gpg-agent
+sbin/applygnupgdefaults
 libexec/gpg-preset-passphrase
 libexec/gpg-protect-tool
+libexec/gnupg-pcsc-wrapper
 share/locale/be/LC_MESSAGES/gnupg2.mo
 share/locale/ca/LC_MESSAGES/gnupg2.mo
 share/locale/cs/LC_MESSAGES/gnupg2.mo
@@ -31,3 +33,4 @@ share/locale/sv/LC_MESSAGES/gnupg2.mo
 share/locale/tr/LC_MESSAGES/gnupg2.mo
 share/locale/zh_CN/LC_MESSAGES/gnupg2.mo
 share/locale/zh_TW/LC_MESSAGES/gnupg2.mo
+man/man8/applygnupgdefaults.8
