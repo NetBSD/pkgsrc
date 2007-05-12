@@ -1,0 +1,23 @@
+$NetBSD: patch-dc,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+diff -ruN ../Orig/mozilla/gc/boehm/mach_dep.c ./gc/boehm/mach_dep.c
+--- ../Orig/mozilla/gc/boehm/mach_dep.c	1999-09-30 11:25:45.000000000 +0900
++++ ./gc/boehm/mach_dep.c	2005-12-04 19:44:28.000000000 +0900
+@@ -206,7 +206,7 @@
+ 	&& !defined(SCO) && !defined(SCO_ELF) \
+  	&& !(defined(LINUX)       && defined(__ELF__)) \
+ 	&& !(defined(__FreeBSD__) && defined(__ELF__)) \
+-	&& !defined(DOS4GW)
++	&& !defined(DOS4GW) && !(defined(__DragonFly__) && defined(__ELF__))
+ 	/* I386 code, generic code does not appear to work */
+ 	/* It does appear to work under OS2, and asms dont */
+ 	/* This is used for some 38g UNIX variants and for CYGWIN32 */
+@@ -220,7 +220,7 @@
+ #       endif
+ 
+ #	if ( defined(I386) && defined(LINUX) && defined(__ELF__) ) \
+-	|| ( defined(I386) && defined(__FreeBSD__) && defined(__ELF__) )
++	|| ( defined(I386) && (defined(__FreeBSD__) || defined(__DragonFly__)) && defined(__ELF__) )
+ 
+ 	/* This is modified for Linux with ELF (Note: _ELF_ only) */
+ 	/* This section handles FreeBSD with ELF. */

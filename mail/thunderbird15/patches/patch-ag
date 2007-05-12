@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- extensions/transformiix/source/base/ErrorObserver.h.orig	2006-02-02 13:20:05.000000000 +0100
++++ extensions/transformiix/source/base/ErrorObserver.h
+@@ -41,7 +41,8 @@
+ 
+ #include "txCore.h"
+ #ifdef TX_EXE
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ #endif
+ 
+ /**

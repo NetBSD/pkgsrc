@@ -1,0 +1,15 @@
+$NetBSD: patch-ax,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- security/coreconf/SunOS5.mk.orig	2006-04-25 03:32:16.000000000 +0200
++++ security/coreconf/SunOS5.mk
+@@ -176,6 +176,10 @@ endif
+ endif
+ DSO_LDOPTS += -z combreloc -z defs -z ignore
+ 
++ifdef LIBRUNPATH
++DSO_LDOPTS += -R$(LIBRUNPATH)
++endif
++
+ # -KPIC generates position independent code for use in shared libraries.
+ # (Similarly for -fPIC in case of gcc.)
+ ifdef NS_USE_GCC

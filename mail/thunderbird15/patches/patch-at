@@ -1,0 +1,36 @@
+$NetBSD: patch-at,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+--- directory/c-sdk/ldap/libraries/libprldap/ldappr-io.c.orig	2006-05-25 11:38:04.000000000 +1200
++++ directory/c-sdk/ldap/libraries/libprldap/ldappr-io.c
+@@ -292,12 +292,12 @@ prldap_try_one_address( struct lextiof_s
+      * Set up address and open a TCP socket:
+      */
+     if ( PR_SUCCESS != PR_SetNetAddr( PR_IpAddrNull, /* don't touch IP addr. */
+-		PRLDAP_DEFAULT_ADDRESS_FAMILY, (PRUint16)port, addrp )) { 
++		PR_NetAddrFamily( addrp ), (PRUint16)port, addrp )) { 
+ 	return( -1 );
+     }
+ 
+     if (( prsockp->prsock_prfd = PR_OpenTCPSocket(
+-		PRLDAP_DEFAULT_ADDRESS_FAMILY )) == NULL ) {
++		PR_NetAddrFamily( addrp ))) == NULL ) {
+ 	return( -1 );
+     }
+ 
+@@ -390,14 +390,14 @@ prldap_connect( const char *hostlist, in
+ 
+ 	if ( PR_SUCCESS == PR_StringToNetAddr( host, &addr )) {
+ 		
+-		if ( PRLDAP_DEFAULT_ADDRESS_FAMILY == PR_AF_INET6 &&
++		/*if ( PRLDAP_DEFAULT_ADDRESS_FAMILY == PR_AF_INET6 &&
+ 				PR_AF_INET == PR_NetAddrFamily( &addr )) {
+ 			PRUint32	ipv4ip = addr.inet.ip;
+ 			memset( &addr, 0, sizeof(addr));
+ 			PR_ConvertIPv4AddrToIPv6( ipv4ip, &addr.ipv6.ip );
+ 			addr.ipv6.family = PR_AF_INET6;
+ 			
+-		}
++		}*/
+ 	    rc = prldap_try_one_address( prsockp, &addr, port,
+ 			timeout, options );
+ 	} else {

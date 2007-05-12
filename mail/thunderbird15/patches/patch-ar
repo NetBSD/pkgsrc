@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- mailnews/movemail/src/movemail.c.orig	2005-12-29 17:00:05.000000000 +0000
++++ mailnews/movemail/src/movemail.c
+@@ -51,8 +51,8 @@ typedef int XP_Bool;
+ 
+ #define LINUX_GLIBC_2
+ 
+-#include <sys/errno.h>
+-#if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
++#include <errno.h>
++#if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2) && !defined(__DragonFly__)
+ extern char *sys_errlist[];
+ extern int sys_nerr;
+ #endif

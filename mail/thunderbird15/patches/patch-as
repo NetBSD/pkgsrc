@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+--- build/autoconf/mozconfig2configure.orig	2006-02-22 16:41:28.000000000 +0000
++++ build/autoconf/mozconfig2configure	2006-10-20 12:26:11.000000000 +0100
+@@ -79,7 +79,7 @@
+ ac_add_app_options() {
+   APP=$1
+   shift;
+-  if [ "$APP" == "$MOZ_BUILD_APP" ]; then
++  if [ "$APP" = "$MOZ_BUILD_APP" ]; then
+       ac_add_options "$*";
+   fi
+ }

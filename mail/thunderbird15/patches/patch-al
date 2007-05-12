@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- gfx/src/ps/nsFontMetricsPS.h.orig	2006-02-02 13:20:15.000000000 +0100
++++ gfx/src/ps/nsFontMetricsPS.h
+@@ -424,7 +424,7 @@ protected:
+   nsCOMPtr<nsITrueTypeFontCatalogEntry> mFaceID;
+   nsCOMPtr<nsIFreeType2> mFt2;
+   PRUint16        mPixelSize;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
+   nsCString       mFontNameBase;   // the base name of type 1 (sub) fonts
+   nscoord         mHeight; 
+ 
+@@ -493,7 +493,7 @@ public:
+ protected:
+   nsCOMPtr<nsITrueTypeFontCatalogEntry> mEntry;
+   nsCOMPtr<nsIFreeType2> mFt2;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
+ };
+ #endif   // MOZ_ENABLE_FREETYPE2
+ #endif   // MOZ_ENABLE_XFT

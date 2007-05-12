@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+diff -ru ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.h ./gfx/src/x11shared/nsFontFreeType.h
+--- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.h	2003-04-23 01:25:13.000000000 +0900
++++ ./gfx/src/x11shared/nsFontFreeType.h	2004-06-15 23:56:10.000000000 +0900
+@@ -110,7 +110,7 @@
+   XImage *GetXImage(PRUint32 width, PRUint32 height);
+   nsITrueTypeFontCatalogEntry *mFaceID;
+   PRUint16        mPixelSize;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
+   nsCOMPtr<nsIFreeType2> mFt2;
+ };
+ 
