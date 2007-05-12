@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2007/04/29 12:48:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.62 2007/05/12 20:40:43 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -710,6 +710,7 @@ lib/wine/msvideo.dll16
 lib/wine/mswsock.dll.so
 lib/wine/msxml3.dll.so
 lib/wine/nddeapi.dll.so
+lib/wine/net.exe.so
 lib/wine/netapi32.dll.so
 lib/wine/newdev.dll.so
 lib/wine/notepad.exe.so
