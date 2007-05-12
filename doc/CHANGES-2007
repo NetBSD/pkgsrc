@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1037 2007/05/11 23:47:56 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1038 2007/05/12 00:53:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/dwm to 4.0 [tonio 2007-05-11]
 	Updated www/lynx to 2.8.6.5 [wiz 2007-05-11]
 	Updated pkgtools/pkg_rolling-replace to 0.04nb5 [tnn 2007-05-11]
+	Updated devel/popt to 1.10.7 [obache 2007-05-12]
