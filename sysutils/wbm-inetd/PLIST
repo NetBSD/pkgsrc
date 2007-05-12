@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/05/12 00:16:52 obache Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/backup_config.pl
 share/webmin/inetd/config-aix
@@ -16,9 +16,9 @@ share/webmin/inetd/config-macos
 share/webmin/inetd/config-macos-1.5-*
 share/webmin/inetd/config-mandrake-linux
 share/webmin/inetd/config-msc-linux
-share/webmin/inetd/config-${LOWER_OPSYS}
+share/webmin/inetd/config-netbsd
 share/webmin/inetd/config-open-linux
-share/webmin/inetd/config-open-linux-${OS_VERSION}e
+share/webmin/inetd/config-open-linux-3.1e
 share/webmin/inetd/config-openbsd
 share/webmin/inetd/config-openserver
 share/webmin/inetd/config-osf1
