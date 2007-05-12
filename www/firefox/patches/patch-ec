@@ -1,6 +1,9 @@
-$NetBSD: patch-ec,v 1.1 2006/10/16 12:09:13 seb Exp $
+$NetBSD: patch-ec,v 1.2 2007/05/12 13:53:11 ghen Exp $
 
---- build/autoconf/mozconfig2configure.orig	2006-02-22 16:41:28.000000000 +0000
+ERROR: [check-portability.sh] => Found test ... == ...:
+ERROR: [check-portability.sh] build/autoconf/mozconfig2configure: if [ "$APP" == "$MOZ_BUILD_APP" ]; then
+
+--- build/autoconf/mozconfig2configure.orig	2006-02-22 17:19:52.000000000 +0100
 +++ build/autoconf/mozconfig2configure
 @@ -79,7 +79,7 @@ ac_add_options() {
  ac_add_app_options() {

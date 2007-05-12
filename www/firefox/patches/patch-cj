@@ -1,4 +1,4 @@
-$NetBSD: patch-cj,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-cj,v 1.6 2007/05/12 13:53:10 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp ./extensions/transformiix/source/xpath/MultiplicativeExpr.cpp
 --- ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp	2004-06-17 09:12:43.000000000 +0900

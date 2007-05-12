@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-aa,v 1.4 2007/05/12 13:53:07 ghen Exp $
 
 diff -ruN ../Orig/mozilla/config/autoconf.mk.in ./config/autoconf.mk.in
 --- ../Orig/mozilla/config/autoconf.mk.in	2005-08-18 02:17:17.000000000 +0900

@@ -1,4 +1,4 @@
-$NetBSD: patch-cm,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-cm,v 1.6 2007/05/12 13:53:10 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp ./extensions/transformiix/source/xslt/txXSLTPatterns.cpp
 --- ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-01-16 06:30:39.000000000 +0900

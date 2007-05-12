@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ba,v 1.6 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	2004-04-28 09:33:44.000000000 +0900

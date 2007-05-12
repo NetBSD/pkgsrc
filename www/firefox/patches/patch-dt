@@ -1,4 +1,4 @@
-$NetBSD: patch-dt,v 1.2 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-dt,v 1.3 2007/05/12 13:53:11 ghen Exp $
 
 diff -ruN ../Orig/mozilla/directory/c-sdk/config/arch.mk ./directory/c-sdk/config/arch.mk
 --- ../Orig/mozilla/directory/c-sdk/config/arch.mk	2002-03-27 06:51:57.000000000 +0900

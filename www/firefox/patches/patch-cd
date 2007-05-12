@@ -1,4 +1,4 @@
-$NetBSD: patch-cd,v 1.3 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-cd,v 1.4 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/modules/plugin/base/public/nptypes.h ./modules/plugin/base/public/nptypes.h
 --- ../Orig/mozilla/modules/plugin/base/public/nptypes.h	2005-05-20 06:49:42.000000000 +0900

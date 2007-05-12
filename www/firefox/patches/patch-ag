@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ag,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/base/ErrorObserver.h ./extensions/transformiix/source/base/ErrorObserver.h
 --- ../Orig/mozilla/extensions/transformiix/source/base/ErrorObserver.h	2004-05-21 19:41:22.000000000 +0900

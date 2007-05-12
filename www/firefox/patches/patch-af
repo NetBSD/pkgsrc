@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-af,v 1.5 2007/05/12 13:53:07 ghen Exp $
 
 diff -ruN ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/freebl/unix_rand.c
 --- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2005-10-11 08:22:50.000000000 +0900

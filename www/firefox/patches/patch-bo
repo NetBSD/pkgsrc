@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.6 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-bo,v 1.7 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
 --- ../Orig/mozilla/nsprpub/configure.in	2005-09-16 07:37:52.000000000 +0900

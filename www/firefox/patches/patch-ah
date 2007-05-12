@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ah,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/gfx/idl/nsIFreeType2.idl ./gfx/idl/nsIFreeType2.idl
 --- ../Orig/mozilla/gfx/idl/nsIFreeType2.idl	2004-04-16 08:30:02.000000000 +0900

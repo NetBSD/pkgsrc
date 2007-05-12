@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.7 2007/02/25 00:43:23 ghen Exp $
+$NetBSD: patch-ap,v 1.8 2007/05/12 13:53:08 ghen Exp $
 
---- ./security/coreconf/command.mk.orig	2005-10-11 01:46:12.000000000 +0200
-+++ ./security/coreconf/command.mk
+--- security/coreconf/command.mk.orig	2006-03-29 22:26:44.000000000 +0200
++++ security/coreconf/command.mk
 @@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
  CCF           = $(CC) $(CFLAGS)
  LINK_DLL      = $(LINK) $(OS_DLLFLAGS) $(DLLFLAGS)

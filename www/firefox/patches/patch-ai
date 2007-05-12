@@ -1,17 +1,9 @@
-$NetBSD: patch-ai,v 1.5 2006/10/19 10:25:17 markd Exp $
+$NetBSD: patch-ai,v 1.6 2007/05/12 13:53:08 ghen Exp $
 
---- gfx/src/ps/nsFontMetricsPS.cpp.orig	2006-05-07 14:01:25.000000000 +1200
-+++ gfx/src/ps/nsFontMetricsPS.cpp
-@@ -993,7 +993,7 @@ nsFontPSXft::FindFont(PRUnichar aChar, c
- 
-         fontps *fps = new fontps;
-         fps->entry = xftEntry;
--        fps->charset = fc_charset;
-+        fps->charset = FcCharSetCopy (fc_charset);
-         fps->fontps = nsnull;
-         fpi.fontps->AppendElement(fps);
-     }
-@@ -1868,10 +1868,10 @@ nsFontPSFreeType::Init(nsITrueTypeFontCa
+diff -ruN ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp ./gfx/src/ps/nsFontMetricsPS.cpp
+--- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.cpp	2005-04-28 17:04:00.000000000 +0900
++++ ./gfx/src/ps/nsFontMetricsPS.cpp	2005-12-04 19:06:07.000000000 +0900
+@@ -1859,10 +1859,10 @@
    
    mPixelSize = NSToIntRound(app2dev * mFont->size);
  
@@ -26,7 +18,7 @@ $NetBSD: patch-ai,v 1.5 2006/10/19 10:25:17 markd Exp $
  
    nsresult rv;
    mFt2 = do_GetService(NS_FREETYPE2_CONTRACTID, &rv);
-@@ -1905,7 +1905,7 @@ nsFontPSFreeType::GetWidth(const PRUnich
+@@ -1896,7 +1896,7 @@
    if (!face)
      return 0;
  
@@ -35,7 +27,7 @@ $NetBSD: patch-ai,v 1.5 2006/10/19 10:25:17 markd Exp $
    nsresult rv = mFt2->GetImageCache(&iCache);
    if (NS_FAILED(rv)) {
      NS_ERROR("Failed to get Image Cache");
-@@ -1943,8 +1943,8 @@ nsFontPSFreeType::getFTFace()
+@@ -1934,8 +1934,8 @@
    
    FTC_Manager cManager;
    mFt2->GetFTCacheManager(&cManager);
@@ -46,7 +38,7 @@ $NetBSD: patch-ai,v 1.5 2006/10/19 10:25:17 markd Exp $
    NS_ASSERTION(rv==0, "failed to get face/size");
    if (rv)
      return nsnull;
-@@ -2388,16 +2388,16 @@ void nsFT2Type1Generator::GeneratePSFont
+@@ -2379,16 +2379,16 @@
    mEntry->GetFamilyName(fontName);
    mEntry->GetStyleName(styleName);
    
