@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2006/12/12 13:11:35 shannonjr Exp $
+$NetBSD: patch-ai,v 1.2 2007/05/12 11:08:31 shannonjr Exp $
 
---- autogen.sh.orig	2006-10-17 06:15:03.000000000 -0600
+--- autogen.sh.orig	2007-05-07 12:11:13.000000000 -0600
 +++ autogen.sh
-@@ -129,9 +129,9 @@ fi
+@@ -40,7 +40,7 @@ MSGMERGE=${GETTEXT_PREFIX}${MSGMERGE:-ms
+ 
+ DIE=no
+ FORCE=
+-if test "$1" == "--force"; then
++if test "$1" = "--force"; then
+   FORCE=" --force"
+   shift
+ fi
+@@ -182,9 +182,9 @@ fi
  if check_version $AUTOMAKE $automake_vers_num $automake_vers; then
    check_version $ACLOCAL $automake_vers_num $autoconf_vers automake
  fi

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/02/05 11:43:01 shannonjr Exp $
+# $NetBSD: Makefile,v 1.10 2007/05/12 11:08:31 shannonjr Exp $
 #
 
-DISTNAME=		gnupg-2.0.2
+DISTNAME=		gnupg-2.0.4
 PKGNAME=		${DISTNAME:S/gnupg/gnupg2/}
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -9,8 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		pth-2.0.7.tar.gz
 SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
-DISTFILES+=		libassuan-1.0.0.tar.bz2
-SITES.libassuan-1.0.0.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
+DISTFILES+=		libassuan-1.0.1.tar.bz2
+SITES.libassuan-1.0.1.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
@@ -62,7 +62,7 @@ pre-configure:
 	cd  ${WRKDIR}/pth-2.0.7 && \
 	./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && \
 	${MAKE} install
-	cd  ${WRKDIR}/libassuan-1.0.0 && \
+	cd  ${WRKDIR}/libassuan-1.0.1 && \
 	${SETENV} ${CONFIGURE_ENV} ./autogen.sh && \
 	${SETENV} ${CONFIGURE_ENV} ./configure --enable-maintainer-mode --prefix=${WRKDIR}/libassuan --with-pth-prefix=${WRKDIR}/pth && \
 	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
