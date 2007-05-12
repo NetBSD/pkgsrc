@@ -1,0 +1,13 @@
+$NetBSD: patch-bq,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- xpcom/io/nsLocalFileUnix.h.orig	2006-02-02 13:20:12.000000000 +0100
++++ xpcom/io/nsLocalFileUnix.h
+@@ -73,7 +73,7 @@
+ #endif
+ 
+ // so we can statfs on freebsd
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || (defined(__NetBSD__) && !defined(HAVE_STATVFS))
+     #define HAVE_SYS_STATFS_H
+     #define STATFS statfs
+     #include <sys/param.h>
