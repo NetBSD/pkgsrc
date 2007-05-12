@@ -1,0 +1,14 @@
+$NetBSD: patch-db,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+--- js/src/Makefile.in.orig	2006-02-02 13:20:09.000000000 +0100
++++ js/src/Makefile.in
+@@ -256,6 +256,9 @@ endif # WINNT
+ ifeq ($(OS_ARCH),FreeBSD)
+ LDFLAGS		+= -pthread
+ endif
++ifeq ($(OS_ARCH),DragonFly)
++LDFLAGS		+= -pthread
++endif
+ ifeq ($(OS_ARCH),IRIX)
+ ifdef USE_N32
+ DASH_R		+= -n32
