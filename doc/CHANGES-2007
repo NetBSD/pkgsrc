@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1045 2007/05/12 14:05:33 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1046 2007/05/12 20:42:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1995,3 +1995,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-mecab version 0.95 [obache 2007-05-12]
 	Added textproc/py-mecab version 0.95 [obache 2007-05-12]
 	Added textproc/ruby-mecab version 0.95 [obache 2007-05-12]
+	Updated emulators/libspectrum to 0.3.0.1 [adam 2007-05-12]
+	Updated emulators/fuse to 0.8.0.1  [adam 2007-05-12]
+	Updated emulators/fuse-utils to 0.8.0.1 [adam 2007-05-12]
+	Updated emulators/wine to 0.9.37 [adam 2007-05-12]
