@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2006/04/23 14:14:07 ghen Exp $
+$NetBSD: patch-ab,v 1.10 2007/05/12 06:53:22 ghen Exp $
 
---- configure.in.orig	2006-04-19 18:33:30.000000000 +0200
+--- configure.in.orig	2007-03-14 02:00:50.000000000 +0100
 +++ configure.in
-@@ -1399,7 +1399,6 @@ case "$target" in
+@@ -1433,7 +1433,6 @@ case "$target" in
      DSO_LDOPTS=''
      STRIP="$STRIP -x -S"
      _PLATFORM_DEFAULT_TOOLKIT='mac'
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.9 2006/04/23 14:14:07 ghen Exp $
      TARGET_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      # set MACOSX to generate lib/mac/MoreFiles/Makefile
      MACOSX=1
-@@ -1418,7 +1417,7 @@ case "$target" in
+@@ -1452,7 +1451,7 @@ case "$target" in
      LDFLAGS=$_SAVE_LDFLAGS
      ;;
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.9 2006/04/23 14:14:07 ghen Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1432,6 +1431,9 @@ case "$target" in
+@@ -1466,6 +1465,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -29,30 +29,16 @@ $NetBSD: patch-ab,v 1.9 2006/04/23 14:14:07 ghen Exp $
      ;; 
  
  *-hpux*)
-@@ -1826,6 +1828,13 @@ case "$target" in
-     if test "$LIBRUNPATH"; then
- 	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
-     fi
-+
-+    case "${target_cpu}" in
-+    alpha*)
-+    	CFLAGS="$CFLAGS -mieee"
-+    	CXXFLAGS="$CXXFLAGS -mieee"
-+    ;;
-+    esac
-     ;;
- 
- *-nto*) 
-@@ -2051,7 +2060,7 @@ dnl the qsort routine under solaris is f
-        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
+@@ -2136,7 +2138,7 @@ dnl the qsort routine under solaris is f
+        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -h $@ -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
--       DSO_LDOPTS='-G -Qoption ld -z,muldefs -h $@'
-+       DSO_LDOPTS='-G -z muldefs -h $@'
+-       DSO_LDOPTS='-G -Qoption ld -z,muldefs'
++       DSO_LDOPTS='-G -z,muldefs'
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -2711,7 +2720,7 @@ then
+@@ -2836,7 +2838,7 @@ then
      fi
  
  	case "$target" in
@@ -61,7 +47,7 @@ $NetBSD: patch-ab,v 1.9 2006/04/23 14:14:07 ghen Exp $
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -5279,7 +5288,7 @@ dnl ====================================
+@@ -5638,7 +5640,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
