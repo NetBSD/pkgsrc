@@ -1,4 +1,4 @@
-$NetBSD: patch-ea,v 1.1 2006/02/12 11:04:51 ghen Exp $
+$NetBSD: patch-ea,v 1.2 2007/05/12 13:53:11 ghen Exp $
 
 --- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
 +++ toolkit/components/history/src/nsGlobalHistory.cpp

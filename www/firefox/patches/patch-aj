@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-aj,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFreeType.h
 --- ../Orig/mozilla/gfx/src/freetype/nsFreeType.h	2005-05-02 02:36:19.000000000 +0900

@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-al,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h ./gfx/src/ps/nsFontMetricsPS.h
 --- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h	2005-06-29 03:29:10.000000000 +0900

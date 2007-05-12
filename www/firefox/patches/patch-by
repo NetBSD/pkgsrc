@@ -1,4 +1,4 @@
-$NetBSD: patch-by,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-by,v 1.5 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp ./layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp
 --- ../Orig/mozilla/layout/svg/renderer/src/libart/nsSVGLibartGlyphMetricsFT.cpp	2004-11-24 03:01:01.000000000 +0900
