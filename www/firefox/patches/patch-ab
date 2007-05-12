@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2006/04/15 14:20:31 ghen Exp $
+$NetBSD: patch-ab,v 1.7 2007/05/12 13:53:07 ghen Exp $
 
---- configure.in.orig	2006-04-15 10:47:18.000000000 +0200
+--- configure.in.orig	2006-03-29 22:26:28.000000000 +0200
 +++ configure.in
 @@ -1418,7 +1418,7 @@ case "$target" in
      LDFLAGS=$_SAVE_LDFLAGS
@@ -21,9 +21,9 @@ $NetBSD: patch-ab,v 1.6 2006/04/15 14:20:31 ghen Exp $
      ;; 
  
  *-hpux*)
-@@ -1826,6 +1829,13 @@ case "$target" in
+@@ -1903,6 +1906,13 @@ case "$target" in
      if test "$LIBRUNPATH"; then
- 	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
+ 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
      fi
 +
 +    case "${target_cpu}" in
@@ -34,17 +34,17 @@ $NetBSD: patch-ab,v 1.6 2006/04/15 14:20:31 ghen Exp $
 +    esac
      ;;
  
- *-nto*) 
-@@ -2051,7 +2061,7 @@ dnl the qsort routine under solaris is f
-        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
+ *-openvms*) 
+@@ -2100,7 +2110,7 @@ dnl the qsort routine under solaris is f
+        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -h $@ -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
--       DSO_LDOPTS='-G -Qoption ld -z,muldefs -h $@'
-+       DSO_LDOPTS='-G -z muldefs -h $@'
+-       DSO_LDOPTS='-G -Qoption ld -z,muldefs'
++       DSO_LDOPTS='-G -z muldefs'
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -5279,7 +5289,7 @@ dnl ====================================
+@@ -5451,7 +5461,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
