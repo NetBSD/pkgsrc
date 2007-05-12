@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1044 2007/05/12 14:00:34 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1045 2007/05/12 14:05:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1987,3 +1987,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/firefox15 version 1.5.0.11 [ghen 2007-05-12]
 	Added www/firefox15-bin version 1.5.0.11 [ghen 2007-05-12]
 	Added www/firefox15-gtk1 version 1.5.0.11 [ghen 2007-05-12]
+	Added textproc/mecab version 0.95 [obache 2007-05-12]
+	Added textproc/mecab-base version 0.95 [obache 2007-05-12]
+	Added textproc/mecab-ipadic version 2.7.0.20060707 [obache 2007-05-12]
+	Added textproc/mecab-jumandic version 5.1.20070304 [obache 2007-05-12]
+	Added textproc/java-mecab version 0.95 [obache 2007-05-12]
+	Added textproc/p5-mecab version 0.95 [obache 2007-05-12]
+	Added textproc/py-mecab version 0.95 [obache 2007-05-12]
+	Added textproc/ruby-mecab version 0.95 [obache 2007-05-12]
