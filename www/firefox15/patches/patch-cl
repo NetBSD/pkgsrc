@@ -1,0 +1,32 @@
+$NetBSD: patch-cl,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp ./extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp	2005-01-24 19:50:39.000000000 +0900
++++ ./extensions/transformiix/source/xslt/txStylesheetCompileHandlers.cpp	2005-12-04 19:44:00.000000000 +0900
+@@ -279,7 +279,7 @@
+               txStylesheetCompilerState& aState,
+               double& aNumber)
+ {
+-    aNumber = Double::NaN;
++    aNumber = Double::NaN();
+     txStylesheetAttr* attr = nsnull;
+     nsresult rv = getStyleAttr(aAttributes, aAttrCount, kNameSpaceID_None,
+                                aName, aRequired, &attr);
+@@ -500,7 +500,7 @@
+     NS_ENSURE_SUCCESS(rv, rv);
+ 
+     txExpandedName nullExpr;
+-    double prio = Double::NaN;
++    double prio = Double::NaN();
+ 
+     nsAutoPtr<txPattern> match(new txRootPattern());
+     NS_ENSURE_TRUE(match, NS_ERROR_OUT_OF_MEMORY);
+@@ -1060,7 +1060,7 @@
+                       aState, mode);
+     NS_ENSURE_SUCCESS(rv, rv);
+ 
+-    double prio = Double::NaN;
++    double prio = Double::NaN();
+     rv = getNumberAttr(aAttributes, aAttrCount, txXSLTAtoms::priority,
+                        PR_FALSE, aState, prio);
+     NS_ENSURE_SUCCESS(rv, rv);

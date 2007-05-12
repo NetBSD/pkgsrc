@@ -1,0 +1,18 @@
+$NetBSD: patch-ch,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/base/txCore.h ./extensions/transformiix/source/base/txCore.h
+--- ../Orig/mozilla/extensions/transformiix/source/base/txCore.h	2004-05-26 20:54:37.000000000 +0900
++++ ./extensions/transformiix/source/base/txCore.h	2005-12-04 19:42:43.000000000 +0900
+@@ -65,9 +65,9 @@
+     /**
+      * Useful constants
+      */
+-    static const double NaN;
+-    static const double POSITIVE_INFINITY;
+-    static const double NEGATIVE_INFINITY;
++    static double NaN();
++    static double PositiveInfinity();
++    static double NegativeInfinity();
+ 
+     /**
+      * Determines whether the given double represents positive or negative
