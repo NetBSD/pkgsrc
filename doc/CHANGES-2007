@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1042 2007/05/12 12:54:54 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.1043 2007/05/12 13:48:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/prelude-lml to 0.9.9 [shannonjr 2007-05-12]
 	Updated security/prelude-manager to 0.9.8 [shannonjr 2007-05-12]
 	Updated security/gnupg2 to 2.0.4 [shannonjr 2007-05-12]
+	Updated editors/gtranslator to 1.1.7 [wiz 2007-05-12]
