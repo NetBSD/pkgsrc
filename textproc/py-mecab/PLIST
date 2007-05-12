@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/12 13:56:34 obache Exp $
+${PYSITELIB}/MeCab.py
+${PYSITELIB}/MeCab.pyc
+${PYSITELIB}/_MeCab.so
+${PYSITELIB}/MeCab.pyo
