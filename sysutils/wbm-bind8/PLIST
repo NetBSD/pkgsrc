@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/05/12 06:34:05 obache Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -36,6 +36,7 @@ share/webmin/bind8/config-irix
 share/webmin/bind8/config-macos
 share/webmin/bind8/config-macos-1.3-*
 share/webmin/bind8/config-mandrake-linux
+share/webmin/bind8/config-mandrake-linux-10.2-*
 share/webmin/bind8/config-msc-linux
 share/webmin/bind8/config-netbsd
 share/webmin/bind8/config-open-linux
@@ -118,6 +119,24 @@ share/webmin/bind8/find_zones.cgi
 share/webmin/bind8/forward_form.cgi
 share/webmin/bind8/free_chooser.cgi
 share/webmin/bind8/hint_form.cgi
+share/webmin/bind8/images/.xvpics/A.gif
+share/webmin/bind8/images/.xvpics/AAAA.gif
+share/webmin/bind8/images/.xvpics/ALL.gif
+share/webmin/bind8/images/.xvpics/CNAME.gif
+share/webmin/bind8/images/.xvpics/HINFO.gif
+share/webmin/bind8/images/.xvpics/KEY.gif
+share/webmin/bind8/images/.xvpics/LOC.gif
+share/webmin/bind8/images/.xvpics/MX.gif
+share/webmin/bind8/images/.xvpics/NS.gif
+share/webmin/bind8/images/.xvpics/PTR.gif
+share/webmin/bind8/images/.xvpics/RP.gif
+share/webmin/bind8/images/.xvpics/SRV.gif
+share/webmin/bind8/images/.xvpics/TXT.gif
+share/webmin/bind8/images/.xvpics/WKS.gif
+share/webmin/bind8/images/.xvpics/gen.gif
+share/webmin/bind8/images/.xvpics/hint.gif
+share/webmin/bind8/images/.xvpics/rndc.gif
+share/webmin/bind8/images/.xvpics/whois.gif
 share/webmin/bind8/images/A.gif
 share/webmin/bind8/images/AAAA.gif
 share/webmin/bind8/images/ALL.gif
@@ -245,6 +264,7 @@ share/webmin/bind8/view_text.cgi
 share/webmin/bind8/whois-servers
 share/webmin/bind8/whois.cgi
 @dirrm share/webmin/bind8/lang
+@dirrm share/webmin/bind8/images/.xvpics
 @dirrm share/webmin/bind8/images
 @dirrm share/webmin/bind8
 @dirrm share/examples/webmin/bind8
