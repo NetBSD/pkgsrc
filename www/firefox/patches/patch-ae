@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ae,v 1.5 2007/05/12 13:53:07 ghen Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	2004-04-18 23:18:18.000000000 +0900

@@ -1,4 +1,4 @@
-$NetBSD: patch-ck,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ck,v 1.6 2007/05/12 13:53:10 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/functions/txFormatNumberFunctionCall.cpp ./extensions/transformiix/source/xslt/functions/txFormatNumberFunctionCall.cpp
 --- ../Orig/mozilla/extensions/transformiix/source/xslt/functions/txFormatNumberFunctionCall.cpp	2004-06-17 09:12:44.000000000 +0900

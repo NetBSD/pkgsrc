@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.Linux.i386,v 1.8 2006/11/25 21:38:51 jdolecek Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.9 2007/05/12 13:53:12 ghen Exp $
 
-DISTNAME=	${MOZILLA}-${MOZ_DISTVER}
-MOZ_DIR=	${MOZ_VER}/linux-i686/en-US
-MOZ_PLATFORM=	linux
+DISTNAME=		firefox-${MOZ_DISTVER}
+MOZ_DIR=		${MOZ_DISTVER}/linux-i686/en-US
+MOZ_PLATFORM=		linux

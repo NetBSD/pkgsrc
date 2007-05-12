@@ -1,4 +1,4 @@
-$NetBSD: patch-dh,v 1.2 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-dh,v 1.3 2007/05/12 13:53:10 ghen Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h ./xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h	2004-04-18 23:18:18.000000000 +0900

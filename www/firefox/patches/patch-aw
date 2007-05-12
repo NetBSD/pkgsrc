@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-aw,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
 --- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	2004-12-15 14:52:41.000000000 +0900
