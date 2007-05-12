@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2007/05/11 13:50:40 obache Exp $
+# $NetBSD: Makefile,v 1.36 2007/05/12 00:52:28 obache Exp $
 #
 
-DISTNAME=	popt-1.7
-PKGREVISION=	7
+DISTNAME=	popt-1.10.7
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
-		ftp://ftp.iks-jena.de/pub/software/unix/misc/		\
-		ftp://sunsite.cnlab-switch.ch/mirror/rpm/dist/rpm-4.1.x/
+MASTER_SITES=	http://wraptastic.org/pub/rpm-4.4.x/		\
+		ftp://wraptastic.org/pub/rpm-4.4.x/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
@@ -16,11 +14,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ORBit<=0.5.3
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+
+TEST_TARGET=		check
 
 # XXX: avoid to check GNU xgettext.
 post-extract:
