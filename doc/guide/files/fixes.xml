@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.83 2007/05/12 01:01:39 gdt Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.84 2007/05/12 06:55:57 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -240,7 +240,7 @@
 	<para>Binaries may not be placed on CD-ROM containing other
 	binary packages, for which a distribution charge may be made.
 	In this case, set this variable to
-	<varname>${RESTRICTED}</varname>.
+	<varname>${RESTRICTED}</varname>.</para>
       </listitem>
 
       <listitem>
