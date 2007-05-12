@@ -1,0 +1,62 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/05/12 13:56:10 ghen Exp $
+
+diff -ruN ../Orig/mozilla/gfx/src/freetype/nsFreeType.cpp ./gfx/src/freetype/nsFreeType.cpp
+--- ../Orig/mozilla/gfx/src/freetype/nsFreeType.cpp	2005-07-14 03:21:10.000000000 +0900
++++ ./gfx/src/freetype/nsFreeType.cpp	2005-12-04 19:06:15.000000000 +0900
+@@ -110,11 +110,11 @@
+   {"FT_New_Face",             NS_FT2_OFFSET(nsFT_New_Face),             PR_TRUE},
+   {"FT_Outline_Decompose",    NS_FT2_OFFSET(nsFT_Outline_Decompose),    PR_TRUE},
+   {"FT_Set_Charmap",          NS_FT2_OFFSET(nsFT_Set_Charmap),          PR_TRUE},
+-  {"FTC_Image_Cache_Lookup",  NS_FT2_OFFSET(nsFTC_Image_Cache_Lookup),  PR_TRUE},
+-  {"FTC_Manager_Lookup_Size", NS_FT2_OFFSET(nsFTC_Manager_Lookup_Size), PR_TRUE},
++  {"FTC_ImageCache_Lookup",  NS_FT2_OFFSET(nsFTC_Image_Cache_Lookup),   PR_TRUE},
++  {"FTC_Manager_LookupFace", NS_FT2_OFFSET(nsFTC_Manager_LookupFace),   PR_TRUE},
+   {"FTC_Manager_Done",        NS_FT2_OFFSET(nsFTC_Manager_Done),        PR_TRUE},
+   {"FTC_Manager_New",         NS_FT2_OFFSET(nsFTC_Manager_New),         PR_TRUE},
+-  {"FTC_Image_Cache_New",     NS_FT2_OFFSET(nsFTC_Image_Cache_New),     PR_TRUE},
++  {"FTC_ImageCache_New",     NS_FT2_OFFSET(nsFTC_Image_Cache_New),      PR_TRUE},
+ // #ifdef MOZ_SVG
+   {"FT_Glyph_Transform",      NS_FT2_OFFSET(nsFT_Glyph_Transform),      PR_TRUE},
+   {"FT_Get_Kerning",          NS_FT2_OFFSET(nsFT_Get_Kerning),          PR_TRUE},
+@@ -288,7 +288,7 @@
+ } 
+  
+ NS_IMETHODIMP
+-nsFreeType2::ImageCacheLookup(FTC_Image_Cache cache, FTC_Image_Desc *desc,
++nsFreeType2::ImageCacheLookup(FTC_ImageCache cache, FTC_ImageType *desc,
+                               FT_UInt glyphID, FT_Glyph *glyph)
+ { 
+   // call the FreeType2 function via the function pointer
+@@ -297,11 +297,11 @@
+ } 
+  
+ NS_IMETHODIMP
+-nsFreeType2::ManagerLookupSize(FTC_Manager manager, FTC_Font font,
+-                               FT_Face *face, FT_Size *size)
++nsFreeType2::ManagerLookupFace(FTC_Manager manager, FTC_FaceID face_id,
++                               FT_Face *face)
+ { 
+   // call the FreeType2 function via the function pointer
+-  FT_Error error = nsFTC_Manager_Lookup_Size(manager, font, face, size);
++  FT_Error error = nsFTC_Manager_LookupFace(manager, face_id, face);
+   return error ? NS_ERROR_FAILURE : NS_OK;
+ } 
+  
+@@ -326,7 +326,7 @@
+ } 
+  
+ NS_IMETHODIMP
+-nsFreeType2::ImageCacheNew(FTC_Manager manager, FTC_Image_Cache *cache)
++nsFreeType2::ImageCacheNew(FTC_Manager manager, FTC_ImageCache *cache)
+ { 
+   // call the FreeType2 function via the function pointer
+   FT_Error error = nsFTC_Image_Cache_New(manager, cache);
+@@ -395,7 +395,7 @@
+ } 
+  
+ NS_IMETHODIMP
+-nsFreeType2::GetImageCache(FTC_Image_Cache *aCache)
++nsFreeType2::GetImageCache(FTC_ImageCache *aCache)
+ {
+   *aCache = mImageCache;
+   return NS_OK;

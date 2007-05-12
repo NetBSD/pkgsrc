@@ -1,0 +1,84 @@
+$NetBSD: patch-bo,v 1.1.1.1 2007/05/12 13:56:11 ghen Exp $
+
+diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
+--- ../Orig/mozilla/nsprpub/configure.in	2005-09-16 07:37:52.000000000 +0900
++++ ./nsprpub/configure.in	2005-12-04 19:17:56.000000000 +0900
+@@ -57,7 +57,7 @@
+ USE_IPV6=
+ USE_MDUPDATE=
+ _MACOSX_DEPLOYMENT_TARGET=
+-_OPTIMIZE_FLAGS=-O
++_OPTIMIZE_FLAGS=
+ _DEBUG_FLAGS=-g
+ MOZ_DEBUG=1
+ MOZ_OPTIMIZE=
+@@ -1045,6 +1045,34 @@
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
+     MDCPUCFG_H=_freebsd.cfg
+     PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
++    ;;
++
++*-dragonfly*)
++    if test -z "$USE_NSPR_THREADS"; then
++        USE_PTHREADS=1
++    fi
++    AC_DEFINE(XP_UNIX)
++    AC_DEFINE(FREEBSD)
++    AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
++    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
++    MOZ_OBJFORMAT=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
++    if test "$MOZ_OBJFORMAT" = "elf"; then
++        DLL_SUFFIX=so
++    else
++        DLL_SUFFIX=so.1.0
++    fi
++    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
++    DSO_CFLAGS=-fPIC
++    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
++    MDCPUCFG_H=_freebsd.cfg
++    PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     ;;
+ 
+ *-hpux*)
+@@ -1544,6 +1572,7 @@
+     AC_DEFINE(XP_UNIX)
+     AC_DEFINE(NETBSD)
+     AC_DEFINE(HAVE_BSD_FLOCK)
++    AC_DEFINE(HAVE_SOCKLEN_T)
+     USE_NSPR_THREADS=1
+     MDCPUCFG_H=_netbsd.cfg
+     PR_MD_CSRCS=netbsd.c
+@@ -2307,7 +2336,7 @@
+ 	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
+ 	    ac_cv_have_dash_pthread=yes
+ 		case "$target_os" in
+-	    freebsd*)
++	    freebsd* | dragonfly*)
+ # Freebsd doesn't use -pthread for compiles, it uses them for linking
+             ;;
+ 	    *)
+@@ -2345,7 +2374,7 @@
+             _PTHREAD_LDFLAGS=
+         fi
+ 	    ;;
+-    *-freebsd*)
++    *-freebsd* | *-dragonfly*)
+ 	    AC_DEFINE(_REENTRANT)
+ 	    AC_DEFINE(_THREAD_SAFE)
+ 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
+@@ -2426,7 +2455,7 @@
+         AC_DEFINE(_PR_NEED_PTHREAD_INIT)
+     fi
+     ;;
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test -n "$USE_NSPR_THREADS"; then
+         AC_DEFINE(_PR_LOCAL_THREADS_ONLY)
+     fi

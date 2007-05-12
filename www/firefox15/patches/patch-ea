@@ -1,0 +1,14 @@
+$NetBSD: patch-ea,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+--- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
++++ toolkit/components/history/src/nsGlobalHistory.cpp
+@@ -1132,6 +1132,9 @@ nsGlobalHistory::SetPageTitle(nsIURI *aU
+   rv = aURI->GetSpec(URISpec);
+   NS_ENSURE_SUCCESS(rv, rv);
+ 
++  if (URISpec.Length() > HISTORY_URI_LENGTH_MAX)
++    URISpec.Left(URISpec, HISTORY_URI_LENGTH_MAX);
++
+   nsCOMPtr<nsIMdbRow> row;
+   rv = FindRow(kToken_URLColumn, URISpec.get(), getter_AddRefs(row));
+ 

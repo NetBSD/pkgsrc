@@ -1,0 +1,33 @@
+$NetBSD: patch-bs,v 1.1.1.1 2007/05/12 13:56:11 ghen Exp $
+
+diff -ruN ../Orig/mozilla/config/mkdepend/imakemdep.h ./config/mkdepend/imakemdep.h
+--- ../Orig/mozilla/config/mkdepend/imakemdep.h	2004-04-21 06:38:14.000000000 +0900
++++ ./config/mkdepend/imakemdep.h	2005-12-04 19:21:01.000000000 +0900
+@@ -235,7 +235,7 @@
+ #ifdef _CRAY
+ #define DEFAULT_CPP "/lib/pcpp"
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__386BSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #define DEFAULT_CPP "/usr/libexec/cpp"
+ #endif
+ #ifdef	MACH
+@@ -273,7 +273,7 @@
+ #ifdef unix
+ 	"-Uunix",	/* remove unix symbol so that filename unix.c okay */
+ #endif
+-#if defined(__386BSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(MACH)
++#if defined(__386BSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(MACH) || defined(__DragonFly__)
+ # ifdef __i386__
+ 	"-D__i386__",
+ # endif
+@@ -713,6 +713,9 @@
+ #ifdef __sgi
+ 	{"__sgi", "1"},
+ #endif
++#ifdef __DragonFly__
++	{"__DragonFly__", "1"},
++#endif
+ #ifdef __FreeBSD__
+ 	{"__FreeBSD__", "1"},
+ #endif

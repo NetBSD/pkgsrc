@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1.1.1 2007/05/12 13:56:11 ghen Exp $
+
+diff -ruN ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
+--- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	2004-12-15 14:52:41.000000000 +0900
++++ ./widget/src/gtksuperwin/Makefile.in	2005-12-04 19:08:57.000000000 +0900
+@@ -46,6 +46,7 @@
+ LIBRARY_NAME	= gtksuperwin
+ EXPORT_LIBRARY = 1
+ LIBXUL_LIBRARY = 1
++MKSHLIB		= $(MKCSHLIB)
+ 
+ PACKAGE_FILE = gtksuperwin.pkg
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-dd,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/mailnews/movemail/src/movemail.c ./mailnews/movemail/src/movemail.c
+--- ../Orig/mozilla/mailnews/movemail/src/movemail.c	2004-04-18 03:33:14.000000000 +0900
++++ ./mailnews/movemail/src/movemail.c	2005-12-04 19:44:32.000000000 +0900
+@@ -52,7 +52,7 @@
+ #define LINUX_GLIBC_2
+ 
+ #include <sys/errno.h>
+-#if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
++#if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2) && !defined(__DragonFly__)
+ extern char *sys_errlist[];
+ extern int sys_nerr;
+ #endif

@@ -1,0 +1,61 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/12 13:56:10 ghen Exp $
+
+diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2005-06-15 17:32:21.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2006-04-09 23:31:15.000000000 +0900
+@@ -61,10 +61,13 @@
+ #
+ # Lots of Unixish x86 flavors
+ #
+-ifneq (,$(filter FreeBSD NetBSD OpenBSD BSD_OS Darwin,$(OS_ARCH)))
++ifneq (,$(filter DragonFly FreeBSD NetBSD OpenBSD BSD_OS Darwin,$(OS_ARCH)))
+ ifeq (86,$(findstring 86,$(OS_TEST)))
+ CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
+ endif
++ifeq (amd64,$(OS_TEST))
++CPPSRCS		:= xptcinvoke_x86_64_linux.cpp xptcstubs_x86_64_linux.cpp
++endif
+ endif
+ #
+ # New code for Linux, et. al., with gcc
+@@ -157,7 +160,7 @@
+ # NetBSD/ARM
+ #
+ ifeq ($(OS_ARCH),NetBSD)
+-ifneq (,$(filter arm% sa110,$(OS_TEST)))
++ifneq (,$(filter arm%,$(TARGET_CPU)))
+ CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
+ endif
+ endif
+@@ -191,7 +194,7 @@
+ # NetBSD/m68k
+ #
+ ifeq ($(OS_ARCH),NetBSD)
+-ifneq (,$(filter amiga atari hp300 mac68k mvme68k next68k sun3 sun3x x68k,$(OS_TEST)))
++ifneq (,$(filter m68k,$(TARGET_CPU)))
+ CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
+ endif
+ endif
+@@ -274,6 +277,7 @@
+ ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
+ CPPSRCS		:= xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
+ ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
++AS		:= $(CC) -c -x assembler-with-cpp
+ endif
+ 
+ #
+@@ -322,6 +326,13 @@
+ CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
+ ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
+ endif
++#   
++# NetBSD/SPARC64
++#   
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
++CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
++ASFILES                := xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
++endif
+ #
+ # Solaris/SPARC
+ #
+Only in ./xpcom/reflect/xptcall/src/md/unix: Makefile.in.orig
