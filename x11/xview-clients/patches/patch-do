@@ -1,0 +1,13 @@
+$NetBSD: patch-do,v 1.1 2007/05/12 00:22:19 tnn Exp $
+
+--- olwmslave/propsrecv.c.orig	1993-06-29 07:12:13.000000000 +0200
++++ olwmslave/propsrecv.c
+@@ -15,7 +15,7 @@ static char     sccsid[] = "@(#) propsre
+ #include "propscmd.h"
+ 
+ extern	int	ShowWindowProps();
+-	void	ReceivePropsCmd();
++static	void	ReceivePropsCmd();
+ 
+ /* ----------------------------------------------------------------------
+  *	RegisterPropsWindow

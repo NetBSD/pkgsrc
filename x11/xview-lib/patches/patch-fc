@@ -1,0 +1,13 @@
+$NetBSD: patch-fc,v 1.1 2007/05/12 00:22:17 tnn Exp $
+
+--- lib/libxview/io_stream/input.c.orig	1993-06-29 07:15:05.000000000 +0200
++++ lib/libxview/io_stream/input.c
+@@ -22,7 +22,7 @@ static char     sccsid[] = "@(#)input.c 
+ 		XV_MSG("input stream not of type input"), 0); \
+ 	ops = in->ops.input_ops
+ 
+-char	*stream_getstring();
++static char	*stream_getstring();
+ 
+ /* GENERIC INPUT FUNCTIONS */
+ 
