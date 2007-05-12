@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1041 2007/05/12 07:29:31 hira Exp $
+$NetBSD: CHANGES-2007,v 1.1042 2007/05/12 12:54:54 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1974,3 +1974,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/thunderbird15 version 1.5.0.10nb1 [ghen 2007-05-12]
 	Added mail/thunderbird15-gtk1 version 1.5.0.10nb1 [ghen 2007-05-12]
 	Updated print/evince to 0.8.1nb1 [hira 2007-05-12]
+	Updated security/prelude-lml to 0.9.9 [shannonjr 2007-05-12]
+	Updated security/prelude-manager to 0.9.8 [shannonjr 2007-05-12]
+	Updated security/gnupg2 to 2.0.4 [shannonjr 2007-05-12]
