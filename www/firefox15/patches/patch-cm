@@ -1,0 +1,14 @@
+$NetBSD: patch-cm,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp ./extensions/transformiix/source/xslt/txXSLTPatterns.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-01-16 06:30:39.000000000 +0900
++++ ./extensions/transformiix/source/xslt/txXSLTPatterns.cpp	2005-12-04 19:44:15.000000000 +0900
+@@ -98,7 +98,7 @@
+ double txUnionPattern::getDefaultPriority()
+ {
+     NS_ASSERTION(0, "Don't call getDefaultPriority on txUnionPattern");
+-    return Double::NaN;
++    return Double::NaN();
+ }
+ 
+ /*

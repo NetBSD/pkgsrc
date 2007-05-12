@@ -1,0 +1,14 @@
+$NetBSD: patch-dt,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/directory/c-sdk/config/arch.mk ./directory/c-sdk/config/arch.mk
+--- ../Orig/mozilla/directory/c-sdk/config/arch.mk	2002-03-27 06:51:57.000000000 +0900
++++ ./directory/c-sdk/config/arch.mk	2005-12-04 19:45:29.000000000 +0900
+@@ -138,7 +138,7 @@
+ # Handle FreeBSD 2.2-STABLE and Linux 2.0.30-osfmach3
+ #
+ 
+-ifeq (,$(filter-out Linux FreeBSD,$(OS_ARCH)))
++ifeq (,$(filter-out Linux DragonFly FreeBSD,$(OS_ARCH)))
+ OS_RELEASE	:= $(shell echo "$(OS_RELEASE)" | sed 's/-.*//')
+ endif
+ 

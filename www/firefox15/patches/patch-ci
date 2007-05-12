@@ -1,0 +1,14 @@
+$NetBSD: patch-ci,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/FunctionCall.cpp ./extensions/transformiix/source/xpath/FunctionCall.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xpath/FunctionCall.cpp	2005-01-29 20:07:14.000000000 +0900
++++ ./extensions/transformiix/source/xpath/FunctionCall.cpp	2005-12-04 19:43:01.000000000 +0900
+@@ -105,7 +105,7 @@
+     nsRefPtr<txAExprResult> exprResult;
+     nsresult rv = aExpr->evaluate(aContext, getter_AddRefs(exprResult));
+     if (NS_FAILED(rv))
+-        return Double::NaN;
++        return Double::NaN();
+ 
+     return exprResult->numberValue();
+ }
