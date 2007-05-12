@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2007/04/30 22:59:34 heinz Exp $
+# $NetBSD: Makefile,v 1.359 2007/05/12 14:01:04 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -119,6 +119,7 @@ SUBDIR+=	ja-grep
 SUBDIR+=	ja-groff
 SUBDIR+=	ja-sed
 SUBDIR+=	jade
+SUBDIR+=	java-mecab
 SUBDIR+=	jing
 SUBDIR+=	kakasi
 SUBDIR+=	kbanner
@@ -136,6 +137,10 @@ SUBDIR+=	lout
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-expat
 SUBDIR+=	makeztxt
+SUBDIR+=	mecab
+SUBDIR+=	mecab-base
+SUBDIR+=	mecab-ipadic
+SUBDIR+=	mecab-jumandic
 SUBDIR+=	namazu2
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
@@ -255,6 +260,7 @@ SUBDIR+=	p5-XML-Xerces
 SUBDIR+=	p5-YAML
 SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-libxml
+SUBDIR+=	p5-mecab
 SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	par
 SUBDIR+=	php-json
@@ -286,6 +292,7 @@ SUBDIR+=	py-html2text
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-markdown
+SUBDIR+=	py-mecab
 SUBDIR+=	py-textile
 SUBDIR+=	py-xml
 SUBDIR+=	py-xmltools
@@ -304,6 +311,7 @@ SUBDIR+=	rubber
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-html-parser
+SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-native-hyperestraier
 SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-pure-hyperestraier
