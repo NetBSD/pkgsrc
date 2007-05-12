@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/11/17 12:34:47 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2007/05/12 11:11:25 shannonjr Exp $
 #
 
-DISTNAME=		libassuan-1.0.0
+DISTNAME=		libassuan-1.0.1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/libassuan/
 EXTRACT_SUFX=		.tar.bz2
