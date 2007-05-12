@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1.1.1 2007/05/12 13:56:10 ghen Exp $
+
+diff -ruN ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h ./gfx/src/ps/nsFontMetricsPS.h
+--- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h	2005-06-29 03:29:10.000000000 +0900
++++ ./gfx/src/ps/nsFontMetricsPS.h	2005-12-04 19:07:24.000000000 +0900
+@@ -424,7 +424,8 @@
+   nsCOMPtr<nsITrueTypeFontCatalogEntry> mFaceID;
+   nsCOMPtr<nsIFreeType2> mFt2;
+   PRUint16        mPixelSize;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
++
+   nsCString       mFontNameBase;   // the base name of type 1 (sub) fonts
+   nscoord         mHeight; 
+ 
+@@ -493,7 +494,7 @@
+ protected:
+   nsCOMPtr<nsITrueTypeFontCatalogEntry> mEntry;
+   nsCOMPtr<nsIFreeType2> mFt2;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
+ };
+ #endif   // MOZ_ENABLE_FREETYPE2
+ #endif   // MOZ_ENABLE_XFT

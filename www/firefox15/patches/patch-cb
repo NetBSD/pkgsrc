@@ -1,0 +1,27 @@
+$NetBSD: patch-cb,v 1.1.1.1 2007/05/12 13:56:11 ghen Exp $
+
+diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp	2004-04-18 23:18:18.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp	2005-12-04 19:35:01.000000000 +0900
+@@ -104,8 +104,10 @@
+                 if ((PRUint32) d & 4) d++; // doubles are 8-byte aligned on stack
+                 *((double*) d) = s->val.d;
+                 d += 2;
++#if __GXX_ABI_VERSION < 100
+ 		if (gpr < GPR_COUNT)
+ 		    gpr += 2;
++#endif
+             }
+         }
+         else if (!s->IsPtrData() && s->type == nsXPTType::T_FLOAT) {
+@@ -114,8 +116,10 @@
+             else {
+                 *((float*) d) = s->val.f;
+ 		d += 1;
++#if __GXX_ABI_VERSION < 100
+ 		if (gpr < GPR_COUNT)
+ 		    gpr += 1;
++#endif
+ 	    }
+         }
+         else if (!s->IsPtrData() && (s->type == nsXPTType::T_I64

@@ -1,0 +1,41 @@
+$NetBSD: patch-aj,v 1.1.1.1 2007/05/12 13:56:10 ghen Exp $
+
+diff -ruN ../Orig/mozilla/gfx/src/freetype/nsFreeType.h ./gfx/src/freetype/nsFreeType.h
+--- ../Orig/mozilla/gfx/src/freetype/nsFreeType.h	2005-05-02 02:36:19.000000000 +0900
++++ ./gfx/src/freetype/nsFreeType.h	2005-12-04 19:06:10.000000000 +0900
+@@ -120,13 +120,13 @@
+ typedef FT_Error (*FT_New_Face_t)(FT_Library, const char*, FT_Long, FT_Face*);
+ typedef FT_Error (*FT_Set_Charmap_t)(FT_Face face, FT_CharMap  charmap);
+ typedef FT_Error (*FTC_Image_Cache_Lookup_t)
+-                      (FTC_Image_Cache, FTC_Image_Desc*, FT_UInt, FT_Glyph*);
+-typedef FT_Error (*FTC_Manager_Lookup_Size_t)
+-                      (FTC_Manager, FTC_Font, FT_Face*, FT_Size*);
++                      (FTC_ImageCache, FTC_ImageType*, FT_UInt, FT_Glyph*);
++typedef FT_Error (*FTC_Manager_LookupFace_t)
++                      (FTC_Manager, FTC_FaceID, FT_Face*);
+ typedef FT_Error (*FTC_Manager_Done_t)(FTC_Manager);
+ typedef FT_Error (*FTC_Manager_New_t)(FT_Library, FT_UInt, FT_UInt, FT_ULong,
+                        FTC_Face_Requester, FT_Pointer, FTC_Manager*);
+-typedef FT_Error (*FTC_Image_Cache_New_t)(FTC_Manager, FTC_Image_Cache*);
++typedef FT_Error (*FTC_Image_Cache_New_t)(FTC_Manager, FTC_ImageCache*);
+ // #ifdef MOZ_SVG
+ typedef FT_Error (*FT_Glyph_Transform_t)(FT_Glyph, FT_Matrix*, FT_Vector*);
+ typedef FT_Error (*FT_Get_Kerning_t)
+@@ -181,7 +181,7 @@
+   FT_Outline_Decompose_t    nsFT_Outline_Decompose;
+   FT_Set_Charmap_t          nsFT_Set_Charmap;
+   FTC_Image_Cache_Lookup_t  nsFTC_Image_Cache_Lookup;
+-  FTC_Manager_Lookup_Size_t nsFTC_Manager_Lookup_Size;
++  FTC_Manager_LookupFace_t  nsFTC_Manager_LookupFace;
+   FTC_Manager_Done_t        nsFTC_Manager_Done;
+   FTC_Manager_New_t         nsFTC_Manager_New;
+   FTC_Image_Cache_New_t     nsFTC_Image_Cache_New;
+@@ -229,7 +229,7 @@
+   PRLibrary      *mSharedLib;
+   FT_Library      mFreeTypeLibrary;
+   FTC_Manager     mFTCacheManager;
+-  FTC_Image_Cache mImageCache;
++  FTC_ImageCache  mImageCache;
+ 
+   static nsHashtable   *sFontFamilies;
+   static nsHashtable   *sRange1CharSetNames;

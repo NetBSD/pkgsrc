@@ -1,0 +1,19 @@
+$NetBSD: patch-cd,v 1.1.1.1 2007/05/12 13:56:11 ghen Exp $
+
+diff -ruN ../Orig/mozilla/modules/plugin/base/public/nptypes.h ./modules/plugin/base/public/nptypes.h
+--- ../Orig/mozilla/modules/plugin/base/public/nptypes.h	2005-05-20 06:49:42.000000000 +0900
++++ ./modules/plugin/base/public/nptypes.h	2005-12-04 19:35:14.000000000 +0900
+@@ -93,6 +93,7 @@
+    */
+   #include <stdint.h>
+ 
++  #if !defined(__cplusplus)
+   #if !defined(__GNUC__) || (__GNUC__ > 2 || __GNUC_MINOR__ > 95)
+     #include <stdbool.h>
+   #else
+@@ -102,4 +103,5 @@
+      */
+     #define bool int
+   #endif
++  #endif
+ #endif

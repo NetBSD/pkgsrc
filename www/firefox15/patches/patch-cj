@@ -1,0 +1,33 @@
+$NetBSD: patch-cj,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp ./extensions/transformiix/source/xpath/MultiplicativeExpr.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/xpath/MultiplicativeExpr.cpp	2004-06-17 09:12:43.000000000 +0900
++++ ./extensions/transformiix/source/xpath/MultiplicativeExpr.cpp	2005-12-04 19:43:04.000000000 +0900
+@@ -79,22 +79,22 @@
+ #if defined(XP_WIN)
+                 /* XXX MSVC miscompiles such that (NaN == 0) */
+                 if (Double::isNaN(rightDbl))
+-                    result = Double::NaN;
++                    result = Double::NaN();
+                 else
+ #endif
+                 if (leftDbl == 0 || Double::isNaN(leftDbl))
+-                    result = Double::NaN;
++                    result = Double::NaN();
+                 else if (Double::isNeg(leftDbl) ^ Double::isNeg(rightDbl))
+-                    result = Double::NEGATIVE_INFINITY;
++                    result = Double::NegativeInfinity();
+                 else
+-                    result = Double::POSITIVE_INFINITY;
++                    result = Double::PositiveInfinity();
+             }
+             else
+                 result = leftDbl / rightDbl;
+             break;
+         case MODULUS:
+             if (rightDbl == 0) {
+-                result = Double::NaN;
++                result = Double::NaN();
+             }
+             else {
+ #if defined(XP_WIN)

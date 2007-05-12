@@ -1,0 +1,15 @@
+$NetBSD: patch-dv,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/js/src/Makefile.in ./js/src/Makefile.in
+--- ../Orig/mozilla/js/src/Makefile.in	2005-06-01 23:26:26.000000000 +0900
++++ ./js/src/Makefile.in	2005-12-04 19:45:33.000000000 +0900
+@@ -256,6 +256,9 @@
+ ifeq ($(OS_ARCH),FreeBSD)
+ LDFLAGS		+= -pthread
+ endif
++ifeq ($(OS_ARCH),DragonFly)
++LDFLAGS		+= -pthread
++endif
+ ifeq ($(OS_ARCH),IRIX)
+ ifdef USE_N32
+ DASH_R		+= -n32
