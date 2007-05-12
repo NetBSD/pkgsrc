@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-aq,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/directory/c-sdk/configure.in ./directory/c-sdk/configure.in
 --- ../Orig/mozilla/directory/c-sdk/configure.in	2005-06-15 06:27:33.000000000 +0900

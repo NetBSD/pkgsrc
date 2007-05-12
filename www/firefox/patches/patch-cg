@@ -1,4 +1,4 @@
-$NetBSD: patch-cg,v 1.7 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-cg,v 1.8 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/base/Double.cpp ./extensions/transformiix/source/base/Double.cpp
 --- ../Orig/mozilla/extensions/transformiix/source/base/Double.cpp	2004-06-17 09:12:42.000000000 +0900

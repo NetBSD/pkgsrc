@@ -1,4 +1,4 @@
-$NetBSD: patch-ci,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ci,v 1.6 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/extensions/transformiix/source/xpath/FunctionCall.cpp ./extensions/transformiix/source/xpath/FunctionCall.cpp
 --- ../Orig/mozilla/extensions/transformiix/source/xpath/FunctionCall.cpp	2005-01-29 20:07:14.000000000 +0900
