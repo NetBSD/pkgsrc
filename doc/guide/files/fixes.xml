@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.84 2007/05/12 06:55:57 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.85 2007/05/12 10:13:44 kano Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -116,7 +116,7 @@
     packages with that particular license may be built.  Note that
     this documentation avoids the term "accepted the license".  The
     pkgsrc system is merely providing a mechanism to avoid
-    accidentially building a package with a non-free license;
+    accidentally building a package with a non-free license;
     judgement and responsibility remain with the user.  (Installation
     of binary packages are not currently subject to this mechanism;
     this is a bug.)</para>
@@ -183,7 +183,7 @@
     append the version number if it exists, or the date).  Just
     because a user told pkgsrc to build programs under a previous
     version of a license does not mean that pkgsrc should build
-    programs under the new licenes.  The higher-level point is that
+    programs under the new licenses.  The higher-level point is that
     pkgsrc does not evaluate licenses for reasonableness; the only
     test is a mechanistic test of whether a particular text has been
     approved by either of two bodies.</para>
