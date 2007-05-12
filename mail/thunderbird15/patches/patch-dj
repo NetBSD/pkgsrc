@@ -1,0 +1,14 @@
+$NetBSD: patch-dj,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+diff -ruN ../Orig/mozilla/dbm/src/mktemp.c ./dbm/src/mktemp.c
+--- ../Orig/mozilla/dbm/src/mktemp.c	2003-01-21 08:13:37.000000000 +0900
++++ ./dbm/src/mktemp.c	2005-12-04 19:44:43.000000000 +0900
+@@ -98,7 +98,7 @@
+ static int 
+ _gettemp(char *path, register int *doopen, int extraFlags)
+ {    
+-#if !defined(_WINDOWS) || defined(_WIN32)
++#if (!defined(_WINDOWS) || defined(_WIN32)) && !defined(errno)
+ 	extern int errno;                    
+ #endif
+ 	register char *start, *trv;
