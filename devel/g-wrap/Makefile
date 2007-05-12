@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/01/21 12:52:44 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/05/12 20:56:23 gdt Exp $
 
 DISTNAME=	g-wrap-1.9.6
 PKGREVISION=	2
@@ -11,6 +11,7 @@ COMMENT=	Tool for generating guile wrappers for C code
 
 DEPENDS+=	guile-lib>=0.1.2:../../devel/guile-lib
 
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo pkg-config
