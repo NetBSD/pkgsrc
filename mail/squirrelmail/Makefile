@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2007/05/10 10:08:24 martti Exp $
+# $NetBSD: Makefile,v 1.86 2007/05/12 23:49:01 heinz Exp $
 
 DISTNAME=	squirrelmail-1.4.10a
 CATEGORIES=	mail www
@@ -67,7 +67,7 @@ post-extract:
 		${WRKDIR:Q}/squirrelmail.conf.dist
 
 pre-configure:
-	find ${WRKSRC:Q} \( -name '*.orig*' -or -name '.cvsignore' \) \
+	find ${WRKSRC:Q} \( -name '*.orig*' -o -name '.cvsignore' \) \
 		-exec rm -f {} \;
 
 do-install:
