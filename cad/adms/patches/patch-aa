@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/12 11:33:42 dmcmahill Exp $
+
+- don't force the use of gcc.
+- avoid a check for flex/bison which fail if you have specified
+  the full path.
 
 --- configure.ac.orig	2007-02-01 21:29:53.000000000 +0000
 +++ configure.ac
@@ -11,3 +15,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/05/09 02:40:18 dmcmahill Exp $
  
  # specific configuration.
  AC_CONFIG_AUX_DIR([auxconf])
+@@ -512,14 +512,14 @@ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+ 
+ #force use of flex/bison
+-if test "x$LEX" != "xflex"; then
+-  AC_MSG_WARN(Program flex not found (found $LEX))
+-  AC_MSG_ERROR(Please install gnu flex from http://www.gnu.org/software/flex/)
+-fi
+-if test "x$YACC" != "xbison -y"; then
+-  AC_MSG_WARN(Program bison not found (found $YACC))
+-  AC_MSG_ERROR(Please install gnu bison from http://www.gnu.org/software/bison/)
+-fi
++#if test "x$LEX" != "xflex"; then
++#  AC_MSG_WARN(Program flex not found (found $LEX))
++#  AC_MSG_ERROR(Please install gnu flex from http://www.gnu.org/software/flex/)
++#fi
++#if test "x$YACC" != "xbison -y"; then
++#  AC_MSG_WARN(Program bison not found (found $YACC))
++#  AC_MSG_ERROR(Please install gnu bison from http://www.gnu.org/software/bison/)
++#fi
+ 
+ #advice use of gcc
+ if test "x$GCC" = "xyes"; then
