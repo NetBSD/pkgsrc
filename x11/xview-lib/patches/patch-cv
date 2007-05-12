@@ -1,8 +1,8 @@
-$NetBSD: patch-cv,v 1.1 2001/12/20 09:20:04 tron Exp $
+$NetBSD: patch-cv,v 1.2 2007/05/12 00:22:17 tnn Exp $
 
---- lib/libxview/textsw/ps_impl.c.orig	Tue Jun 29 07:17:39 1993
-+++ lib/libxview/textsw/ps_impl.c	Thu Dec 20 10:09:17 2001
-@@ -62,6 +62,10 @@
+--- lib/libxview/textsw/ps_impl.c.orig	1993-06-29 07:17:39.000000000 +0200
++++ lib/libxview/textsw/ps_impl.c
+@@ -62,6 +62,10 @@ static Es_index ps_read(), ps_scratch_re
  static Es_index ps_replace(), ps_scratch_replace();
  static int      ps_set();
  
@@ -13,3 +13,12 @@ $NetBSD: patch-cv,v 1.1 2001/12/20 09:20:04 tron Exp $
  static Es_index write_header_etc();
  
  static struct es_ops ps_ops = {
+@@ -1575,7 +1579,7 @@ ps_undo_to_mark(esh, mark, notify_proc, 
+     private->last_write_plus_one = ES_INFINITY;
+ }
+ 
+-static          caddr_t
++caddr_t
+ #ifdef ANSI_FUNC_PROTO
+ ps_get(Es_handle esh, Es_attribute attribute, ...)
+ #else

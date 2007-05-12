@@ -1,7 +1,7 @@
-$NetBSD: patch-di,v 1.1 2001/12/28 14:58:07 tron Exp $
+$NetBSD: patch-di,v 1.2 2007/05/12 00:22:19 tnn Exp $
 
---- olwmslave/helpwin.c.orig	Tue Jun 29 07:12:11 1993
-+++ olwmslave/helpwin.c	Fri Dec 28 15:55:43 2001
+--- olwmslave/helpwin.c.orig	1993-06-29 07:12:11.000000000 +0200
++++ olwmslave/helpwin.c
 @@ -6,7 +6,6 @@
  /* ----------------------------------------------------------------------
   *	helpwin.c
@@ -10,10 +10,26 @@ $NetBSD: patch-di,v 1.1 2001/12/28 14:58:07 tron Exp $
  
  #include <stdio.h>
  #include <xview/xview.h>
-@@ -136,6 +135,7 @@
- Bool		ImageHelpWindow();
- void		MoreHelp();
- void		ErrorNotice();
+@@ -128,14 +127,15 @@ char		*help_get_text();
+  *	Local Forward Functions
+  * ---------------------------------------------------------------------*/
+ int		ShowHelpWindow();
+-void		InitHelpWindow();
+-Bool		CreateHelpWindow();
+-Notify_value	DestroyHelpWindow();
+-void		ResetHelpWindow();
+-Bool		TextHelpWindow();
+-Bool		ImageHelpWindow();
+-void		MoreHelp();
+-void		ErrorNotice();
++static void		InitHelpWindow();
++static Bool		CreateHelpWindow();
++static Notify_value	DestroyHelpWindow();
++static void		ResetHelpWindow();
++static Bool		TextHelpWindow();
++static Bool		ImageHelpWindow();
++static void		MoreHelp();
++static void		ErrorNotice();
 +static int	ConstrainMousePos();
  
  /* ----------------------------------------------------------------------
