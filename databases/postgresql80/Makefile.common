@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2007/02/08 20:00:57 adam Exp $
+# $NetBSD: Makefile.common,v 1.27.2.1 2007/05/12 14:39:50 salo Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -22,7 +22,11 @@ HOMEPAGE?=	http://www.postgresql.org/
 #
 MASTER_SORT_REGEX=	${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^[\/]*&\/ :\/\/[^\/]*&\\./}
 
-CONFLICTS+=	postgresql-[0-9]* postgresql73-* postgresql74-* postgresql81-*
+CONFLICTS+=	postgresql-[0-9]*
+CONFLICTS+=	postgresql73-*
+CONFLICTS+=	postgresql74-*
+CONFLICTS+=	postgresql81-*
+CONFLICTS+=	postgresql82-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql80/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql80/files
@@ -35,7 +39,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql80/patches
 #
 # Note: Do not forget jdbc-postgresql80 when updating version
 #
-DIST_VERS?=		8.0.12
+DIST_VERS?=		8.0.13
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_API_DEPENDS.postgresql80-client+=	postgresql80-client>=${BASE_VERS}
