@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/08 20:00:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2007/05/12 14:39:52 salo Exp $
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libpq.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/initdb.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
@@ -63,6 +63,7 @@ ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_controldata.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_dump.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_resetxlog.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/psql.mo
+${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/pg_config.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/initdb.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libpq.mo
 ${PG_SUBPREFIX}${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/pg_config.mo
@@ -694,7 +695,8 @@ ${PG_SUBPREFIX}share/doc/postgresql/FAQ_MINGW
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_SCO
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_Solaris
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_brazilian
-${PG_SUBPREFIX}share/doc/postgresql/FAQ_chinese
+${PG_SUBPREFIX}share/doc/postgresql/FAQ_chinese_simp
+${PG_SUBPREFIX}share/doc/postgresql/FAQ_chinese_trad
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_czech
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_farsi
 ${PG_SUBPREFIX}share/doc/postgresql/FAQ_french
@@ -1169,6 +1171,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-15.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-16.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-17.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-18.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-19.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-4.html
@@ -1186,6 +1189,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-13.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-14.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-15.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-16.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-17.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-4.html
@@ -1199,6 +1203,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-10.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-11.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-12.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-13.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-4.html
@@ -1216,11 +1221,13 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-5.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-6.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-7.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-8.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-9.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-3.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/resources.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/role-attributes.html
@@ -1486,7 +1493,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/wal-intro.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/wal-reliability.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/wal.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/warm-standby.html
-${PG_SUBPREFIX}share/doc/postgresql/html/x71115.html
+${PG_SUBPREFIX}share/doc/postgresql/html/x71171.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xaggr.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xfunc-c.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/xfunc-internal.html
@@ -1536,4 +1543,3 @@ ${PG_SUBPREFIX}share/postgresql/psqlrc.sample
 @dirrm ${PG_SUBPREFIX}include/postgresql
 @dirrm ${PG_SUBPREFIX}include/libpq
 ${PG_DIRRM_SUBPREFIX}
-${PG_SUBPREFIX}share/locale/nb/LC_MESSAGES/pg_config.mo

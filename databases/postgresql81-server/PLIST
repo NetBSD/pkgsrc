@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/08 18:55:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2007/05/12 14:39:51 salo Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -63,6 +63,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Abidjan
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Accra
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Addis_Ababa
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Algiers
+${PG_SUBPREFIX}share/postgresql/timezone/Africa/Asmara
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Asmera
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Bamako
 ${PG_SUBPREFIX}share/postgresql/timezone/Africa/Bangui
@@ -184,6 +185,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Marengo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Petersburg
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Vevay
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Vincennes
+${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana/Winamac
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Indianapolis
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Moncton
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Inuvik
@@ -232,6 +234,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Rainy_River
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Rankin_Inlet
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Recife
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Regina
+${PG_SUBPREFIX}share/postgresql/timezone/America/Resolute
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Rio_Branco
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Rosario
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Santiago
@@ -360,6 +363,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Bermuda
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Canary
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Cape_Verde
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Faeroe
+${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Faroe
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Jan_Mayen
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Madeira
 ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic/Reykjavik
@@ -373,6 +377,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Broken_Hill
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Canberra
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Currie
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Darwin
+${PG_SUBPREFIX}share/postgresql/timezone/Australia/Eucla
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Hobart
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/LHI
 ${PG_SUBPREFIX}share/postgresql/timezone/Australia/Lindeman
@@ -611,6 +616,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Universal
 ${PG_SUBPREFIX}share/postgresql/timezone/W-SU
 ${PG_SUBPREFIX}share/postgresql/timezone/WET
 ${PG_SUBPREFIX}share/postgresql/timezone/Zulu
+${PG_SUBPREFIX}share/postgresql/timezone/posixrules
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/US
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Pacific
 @dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mideast

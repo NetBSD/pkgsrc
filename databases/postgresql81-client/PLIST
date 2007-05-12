@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/08 20:00:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2007/05/12 14:39:51 salo Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -987,6 +987,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-15.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-16.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-17.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-18.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-19.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-3-4.html
@@ -1004,6 +1005,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-13.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-14.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-15.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-16.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-17.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-7-4-4.html
@@ -1017,6 +1019,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-10.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-11.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-12.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-13.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-2.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-0-4.html
@@ -1033,6 +1036,7 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-5.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-6.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-7.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1-8.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/resources.html
