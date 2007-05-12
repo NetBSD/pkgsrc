@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1039 2007/05/12 06:35:45 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1040 2007/05/12 07:02:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1969,3 +1969,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/popt to 1.10.7 [obache 2007-05-12]
 	Updated sysutils/wbm-apache to 1.345 [obache 2007-05-12]
 	Updated sysutils/wbm-bind8 to 1.346 [obache 2007-05-12]
+	Updated mail/thunderbird to 2.0.0.0 [ghen 2007-05-12]
+	Updated mail/thunderbird-gtk1 to 2.0.0.0 [ghen 2007-05-12]
+	Added mail/thunderbird15 version 1.5.0.10nb1 [ghen 2007-05-12]
+	Added mail/thunderbird15-gtk1 version 1.5.0.10nb1 [ghen 2007-05-12]
