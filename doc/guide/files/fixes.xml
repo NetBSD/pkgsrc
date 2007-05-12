@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.82 2007/05/11 22:47:13 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.83 2007/05/12 01:01:39 gdt Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -97,20 +97,37 @@
   <sect2 id="handling-licenses">
     <title>Handling licenses</title>
 
-    <para>A package may be covered by a license which the user has
-    or has not agreed to accept.  For these cases, pkgsrc contains
-    a mechanism to note that a package is covered by a particular
-    license, and the package cannot be built unless the user has
-    accepted the license.  (Installation of binary packages are
-    not currently subject to this mechanism.)  Packages with
-    licenses that are either Open Source according to the Open
-    Source Initiative or Free according to the Free Software
-    Foundation will not be marked with a license tag.  Packages
-    with licenses that have not been determined to meet either
-    definition will be marked with a license tag referring to the
-    license.  This will prevent building unless pkgsrc is informed
-    that the license is acceptable, and enables displaying the
-    license.</para>
+    <para>Authors of software can choose the licence under which
+    software can be copied.  This is due to copyright law, and reasons
+    for license choices are outside the scope of pkgsrc.  The pkgsrc
+    system recognizes that there are a number of licenses which some
+    users may find objectionable or difficult or impossible to comply
+    with.  The Free Software Foundation has declared some licenses
+    "Free", and the Open Source Initiative has a definition of "Open
+    Source".  The pkgsrc system, as a policy choice, does not label
+    packages which have licenses that are Free or Open Source.
+    However, packages without a license meeting either of those tests
+    are labeled with a license tag denoting the license.  Note that a
+    package with no license to copy trivially does not meet either the
+    Free or Open Source test.</para>
+
+    <para>For packages which are not Free or Open Source, pkgsrc will
+    not build the package unless the user has indicated to pkgsrc that
+    packages with that particular license may be built.  Note that
+    this documentation avoids the term "accepted the license".  The
+    pkgsrc system is merely providing a mechanism to avoid
+    accidentially building a package with a non-free license;
+    judgement and responsibility remain with the user.  (Installation
+    of binary packages are not currently subject to this mechanism;
+    this is a bug.)</para>
+
+    <para>One might want to only install packages with a BSD license,
+    or the GPL, and not the other.  The pkgsrc license tag mechanism
+    does not provide a way to do this.  It might be possible to put in
+    tags for free licenses, and have a default
+    <varname>ACCEPTABLE_LICENSES</varname> variable value, but this is
+    widely viewed as having a very poor ratio of benefit to
+    work.</para>
 
     <para>The license tag mechanism is intended to address
     copyright-related issues surrounding building, installing and
@@ -119,10 +136,11 @@
     <varname>NO_SRC_ON_FTP</varname>, etc.).  However, the above
     definition of licenses for which tags are not needed implies
     that packages with redistribution restrictions should have
-    tags.</para>
+    tags, because Free or Open Source programs do not have
+    redistribution restrictions.</para>
 
-    <para>Denoting that a package is covered by a particular license
-    is done by placing the license in
+    <para>Denoting that a package may be copied according to a
+    particular license is done by placing the license in
     <filename>pkgsrc/licenses</filename> and setting the
     <varname>LICENSE</varname> variable to a string identifying the
     license, e.g. in <filename
@@ -133,8 +151,8 @@
     </programlisting>
 
     <para>When trying to build, the user will get a notice that the
-    package is covered by a license which has not been
-    accepted:</para>
+    package is covered by a license which has not been placed in the
+    <varname>ACCEPTABLE_LICENSES</varname> variable:</para>
 
     <programlisting>
       &cprompt; <userinput>make</userinput>
@@ -146,42 +164,61 @@
     </programlisting>
 
     <para>The license can be viewed with <command>make
-    show-license</command>, and if it is considered appropriate,
-    the line printed above can be added to
-    <filename>/etc/mk.conf</filename> to indicate acceptance of
-    the particular license:</para>
+    show-license</command>, and if the user so chooses, the line
+    printed above can be added to <filename>/etc/mk.conf</filename> to
+    convey to pkgsrc that it should not in the future fail because of
+    that license:</para>
 
     <programlisting>
       ACCEPTABLE_LICENSES+=xv-license
     </programlisting>
 
-    <para>When adding a package with a new license, the license
-    text should be added to <filename>pkgsrc/licenses</filename>
-    for displaying. A list of known licenses can be seen in this
+    <para>When adding a package with a new license, the license text
+    should be added to <filename>pkgsrc/licenses</filename> for
+    displaying.  A list of known licenses can be seen in this
     directory.</para>
 
-    <para>When the license changes, please make sure that the new
-    license has a different name (e.g., append the version number if
-    it exists, or the date). Just because a user agreed to a previous
-    version of a license does not mean that the new version is
-    automatically ok too.</para>
+    <para>When the license changes (in a way other than formatting),
+    please make sure that the new license has a different name (e.g.,
+    append the version number if it exists, or the date).  Just
+    because a user told pkgsrc to build programs under a previous
+    version of a license does not mean that pkgsrc should build
+    programs under the new licenes.  The higher-level point is that
+    pkgsrc does not evaluate licenses for reasonableness; the only
+    test is a mechanistic test of whether a particular text has been
+    approved by either of two bodies.</para>
 
     <para>The use of <varname>LICENSE=shareware</varname>,
-    <varname>LICENSE=no-commercial-use</varname>, and similar
-    language is deprecated because it does not crisply refer to
-    a particular license text.  Another problem with such usage
-    is that it does not enable a user to denote acceptance of
-    the license for a single package without accepting the same
-    license text for another package.  In particular, this can
-    be inappropriate when e.g. one accepts a particular license to
-    indicate to pkgsrc that a fee has been paid.</para>
-  </sect2>
+    <varname>LICENSE=no-commercial-use</varname>, and similar language
+    is deprecated because it does not crisply refer to a particular
+    license text.  Another problem with such usage is that it does not
+    enable a user to tell pkgsrc to proceed for a single package
+    without also telling pkgsrc to proceed for all packages with that
+    tag.</para> </sect2>
 
   <sect2 id="restricted-packages">
     <title>Restricted packages</title>
 
     <para>Some licenses restrict how software may be re-distributed.
-    In order to satisfy these restrictions, the package system
+    Because a license tag is required unless the package is Free or
+    Open Source, all packages with restrictions should have license
+    tags.  By declaring the restrictions, package tools can
+    automatically refrain from e.g. placing binary packages on FTP
+    sites.</para>
+
+    <para>There are four restrictions that may be encoded, which are
+    the cross product of sources (distfiles) and binaries not being
+    placed on FTP sites and CD-ROMs.  Because this is rarely the exact
+    language in any license, and because non-Free licenses tend to be
+    different from each other, pkgsrc adopts a definition of FTP and
+    CD-ROM.  Pkgsrc uses "FTP" to mean that the source or binary file
+    should not be made available over the Internet at no charge.
+    Pkgsrc uses "CD-ROM" to mean that the source or binary may not be
+    made available on some kind of media, together with other source
+    and binary packages, and which is sold for a distribution charge.
+    </para>
+
+    <para>In order to encode these restrictions, the package system
     defines five make variables that can be set to note these
     restrictions:</para>
 
@@ -191,43 +228,46 @@
 
 	<para>This variable should be set whenever a restriction
 	exists (regardless of its kind).  Set this variable to a
-	string containing the reason for the restriction.</para>
+	string containing the reason for the restriction.  It should
+	be understood that those wanting to understand the restriction
+	will have to read the license, and perhaps seek advice of
+	counsel.</para>
       </listitem>
 
       <listitem>
 	<para><varname>NO_BIN_ON_CDROM</varname></para>
 
-	<para>Binaries may not be placed on CD-ROM.  Set this
-	variable to <varname>${RESTRICTED}</varname> whenever a
-	binary package may not be included on a CD-ROM.</para>
+	<para>Binaries may not be placed on CD-ROM containing other
+	binary packages, for which a distribution charge may be made.
+	In this case, set this variable to
+	<varname>${RESTRICTED}</varname>.
       </listitem>
 
       <listitem>
 	<para><varname>NO_BIN_ON_FTP</varname></para>
 
-	<para>Binaries may not be placed on an FTP server.  Set
-	this variable to <varname>${RESTRICTED}</varname>
-	whenever a binary package may not be made available
-	on the Internet.</para>
+	<para>Binaries may not made available on the Internet without
+	charge.  In this case, set this variable to
+	<varname>${RESTRICTED}</varname>.  If this variable is set,
+	binary packages will not be included on ftp.NetBSD.org.</para>
       </listitem>
 
       <listitem>
 	<para><varname>NO_SRC_ON_CDROM</varname></para>
 
-	<para>Distfiles may not be placed on CD-ROM.  Set this
-	variable to <varname>${RESTRICTED}</varname> if
-	re-distribution of the source code or other distfile(s) is
-	not allowed on CD-ROMs.</para>
+	<para>Distfiles may not be placed on CD-ROM, together with
+	other distfiles, for which a fee may be charged.  In this
+	case, set this variable to <varname>${RESTRICTED}</varname>.
+	</para>
       </listitem>
 
       <listitem>
 	<para><varname>NO_SRC_ON_FTP</varname></para>
 
-	<para>Distfiles may not be placed on FTP.  Set this variable
-	to <varname>${RESTRICTED}</varname> if re-distribution of
-	the source code or other distfile(s) via the Internet is not
-	allowed.  If this variable is not set, the distfile(s) will
-	be mirrored on ftp.NetBSD.org.</para>
+	<para>Distfiles may not made available via FTP at no charge.
+	In this case, set this variable to
+	<varname>${RESTRICTED}</varname>.  If this variable is set,
+	the distfile(s) will not be mirrored on ftp.NetBSD.org.</para>
       </listitem>
     </itemizedlist>
 
