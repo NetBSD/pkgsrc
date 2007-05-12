@@ -1,0 +1,26 @@
+$NetBSD: patch-bb,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- nsprpub/pr/include/md/_netbsd.h.orig	2006-02-02 13:52:50.000000000 +0100
++++ nsprpub/pr/include/md/_netbsd.h
+@@ -44,6 +44,8 @@
+ #define _PR_SI_ARCHITECTURE "x86"
+ #elif defined(__alpha__)
+ #define _PR_SI_ARCHITECTURE "alpha"
++#elif defined(__amd64__)
++#define _PR_SI_ARCHITECTURE "amd64"
+ #elif defined(__m68k__)
+ #define _PR_SI_ARCHITECTURE "m68k"
+ #elif defined(__powerpc__)
+@@ -95,6 +97,12 @@
+ #define _PR_HAVE_GETPROTO_R_INT
+ #endif
+ 
++#if __NetBSD_Version__ >= 106370000
++/* NetBSD 1.6ZK */
++#define _PR_HAVE_GETPROTO_R
++#define _PR_HAVE_GETPROTO_R_INT
++#endif
++
+ #define USE_SETJMP
+ 
+ #ifndef _PR_PTHREADS

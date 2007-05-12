@@ -1,0 +1,33 @@
+# $NetBSD: Makefile-thunderbird.common,v 1.1.1.1 2007/05/12 06:57:53 ghen Exp $
+
+MOZILLA_BIN=		thunderbird-bin
+MOZ_VER=		1.5.0.10
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		thunderbird-${MOZ_VER}-source
+CATEGORIES=		mail
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
+
+HOMEPAGE=		http://www.mozilla.org/projects/thunderbird/
+
+CONFIGURE_ENV+=		MOZ_THUNDERBIRD=1
+MAKE_ENV+=		MOZ_THUNDERBIRD=1
+
+DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird15/distinfo
+PATCHDIR=		${.CURDIR}/../../mail/thunderbird15/patches
+
+CONFIGURE_ARGS+=	--enable-application=mail
+CONFIGURE_ARGS+=	--enable-single-profile
+CONFIGURE_ARGS+=	--enable-debug=-g
+CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
+
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
+
+post-install:
+	cd ${PREFIX}/lib/${MOZILLA} && \
+	${SETENV} LD_LIBRARY_PATH=.:${PREFIX}/lib MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
+		./${MOZILLA_BIN} -register
+
+.include "../../www/seamonkey/Makefile.common"

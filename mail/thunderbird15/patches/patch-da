@@ -1,0 +1,13 @@
+$NetBSD: patch-da,v 1.1.1.1 2007/05/12 06:57:58 ghen Exp $
+
+--- xpcom/build/malloc.c.orig	2005-12-29 17:03:39.000000000 +0000
++++ xpcom/build/malloc.c
+@@ -918,7 +918,7 @@ struct mallinfo {
+ 
+ 
+ #ifdef LACKS_UNISTD_H
+-#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ #if __STD_C
+ extern Void_t*     sbrk(ptrdiff_t);
+ #else

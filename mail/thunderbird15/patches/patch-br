@@ -1,0 +1,22 @@
+$NetBSD: patch-br,v 1.1.1.1 2007/05/12 06:57:57 ghen Exp $
+
+--- nsprpub/pr/src/misc/prnetdb.c.orig	2006-02-02 13:19:56.000000000 +0100
++++ nsprpub/pr/src/misc/prnetdb.c
+@@ -2110,7 +2110,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
+          */
+         hints.ai_socktype = SOCK_STREAM;
+ 
++/* NetBSD >= 2.99.9 has a thread-safe resolver */
++#if defined(__NetBSD_Version__) && __NetBSD_Version__ < 299000900
++	LOCK_DNS();
++#endif
++
+         rv = GETADDRINFO(hostname, NULL, &hints, &res);
++
++#if defined(__NetBSD_Version__) && __NetBSD_Version__ < 299000900
++	UNLOCK_DNS();
++#endif
++
+         if (rv == 0)
+             return (PRAddrInfo *) res;
+ 
