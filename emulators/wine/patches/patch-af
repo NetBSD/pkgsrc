@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.22 2007/03/17 23:07:58 adam Exp $
+$NetBSD: patch-af,v 1.23 2007/05/12 20:40:43 adam Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2007-03-16 17:40:46.000000000 +0100
+--- dlls/ntdll/signal_i386.c.orig	2007-05-11 19:35:02.000000000 +0200
 +++ dlls/ntdll/signal_i386.c
 @@ -167,7 +167,7 @@ typedef struct trapframe SIGCONTEXT;
  
@@ -69,7 +69,7 @@ $NetBSD: patch-af,v 1.22 2007/03/17 23:07:58 adam Exp $
  #else
      TRAP_x86_DIVIDE     = 0,   /* Division by zero exception */
      TRAP_x86_TRCTRAP    = 1,   /* Single-step exception */
-@@ -1376,7 +1418,11 @@ BOOL SIGNAL_Init(void)
+@@ -1385,7 +1427,11 @@ BOOL SIGNAL_Init(void)
  #endif  /* HAVE_SIGALTSTACK */
  
      sig_act.sa_mask = server_block_set;
