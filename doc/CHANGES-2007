@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1040 2007/05/12 07:02:23 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1041 2007/05/12 07:29:31 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1973,3 +1973,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/thunderbird-gtk1 to 2.0.0.0 [ghen 2007-05-12]
 	Added mail/thunderbird15 version 1.5.0.10nb1 [ghen 2007-05-12]
 	Added mail/thunderbird15-gtk1 version 1.5.0.10nb1 [ghen 2007-05-12]
+	Updated print/evince to 0.8.1nb1 [hira 2007-05-12]
