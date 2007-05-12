@@ -1,4 +1,4 @@
-$NetBSD: patch-df,v 1.2 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-df,v 1.3 2007/05/12 13:53:10 ghen Exp $
 
 diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_freebsd.h ./nsprpub/pr/include/md/_freebsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_freebsd.h	2004-11-24 06:22:35.000000000 +0900

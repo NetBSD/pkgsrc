@@ -1,4 +1,4 @@
-$NetBSD: patch-br,v 1.6 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-br,v 1.7 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/nsprpub/pr/src/misc/prnetdb.c ./nsprpub/pr/src/misc/prnetdb.c
 --- ../Orig/mozilla/nsprpub/pr/src/misc/prnetdb.c	2005-08-19 02:24:38.000000000 +0900

@@ -1,4 +1,4 @@
-$NetBSD: patch-cb,v 1.3 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-cb,v 1.4 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_ppc_netbsd.cpp	2004-04-18 23:18:18.000000000 +0900
