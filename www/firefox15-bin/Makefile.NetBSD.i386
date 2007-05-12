@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.NetBSD.i386,v 1.1.1.1 2007/05/12 13:56:51 ghen Exp $
+
+BUILD_DEFS+=	MOZILLA_USE_LINUX
+
+.if defined(MOZILLA_USE_LINUX)
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
+.  include "Makefile.Linux.i386"
+.  if defined(SUSE_PREFER) && !empty(SUSE_PREFER:M10.0)
+DEPENDS+=	suse_compat>=10.0:../../emulators/suse100_compat
+.  endif
+.else
+PKG_SKIP_REASON+=	"No native pre-built NetBSD binary available."
+PKG_SKIP_REASON+=	"Set MOZILLA_USE_LINUX if you want to use the Linux binary."
+DISTNAME=		${MOZILLA}-${MOZ_DISTVER}-i386-unknown-netbsdelf1.6
+EXTRACT_SUFX=		.tar.bz2
+MOZ_PLATFORM=		netbsd
+
+# no 1.0 build for NetBSD
+#ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+.endif
