@@ -1,7 +1,11 @@
-$Id: README,v 1.1 2006/01/11 22:39:49 rillig Exp $
+$Id: README,v 1.2 2007/05/12 13:17:31 wiz Exp $
 
 The pkgsrc guide is written in DocBook, which is an SGML schema for
 writing technical documentation. A reference of the valid XML tags can
 be found on the web site:
 
     http://www.docbook.org/tdg5/en/html/docbook.html
+
+For details about changing the contents of the guide, see
+	"Editing guidelines for the pkgsrc guide"
+in the pkgsrc guide.
