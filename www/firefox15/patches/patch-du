@@ -1,0 +1,18 @@
+$NetBSD: patch-du,v 1.1.1.1 2007/05/12 13:56:12 ghen Exp $
+
+diff -ruN ../Orig/mozilla/config/rules.mk ./config/rules.mk
+--- ../Orig/mozilla/config/rules.mk	2005-10-11 08:16:39.000000000 +0900
++++ ./config/rules.mk	2005-12-04 19:45:31.000000000 +0900
+@@ -447,6 +447,12 @@
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++ifdef IS_COMPONENT
++EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++endif
++endif
++
+ ifeq ($(OS_ARCH),NetBSD)
+ ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
+ ifeq ($(MODULE),layout)
