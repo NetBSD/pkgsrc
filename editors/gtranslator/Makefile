@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/03/21 12:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/05/12 13:46:20 wiz Exp $
 
-DISTNAME=	gtranslator-1.0.2
-PKGREVISION=	9
+DISTNAME=	gtranslator-1.1.7
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtranslator/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/1.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtranslator.sourceforge.net/

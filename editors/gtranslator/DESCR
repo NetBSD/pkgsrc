@@ -1,9 +1,10 @@
-gtranslator is an enhanced gettext po file editor for the GNOME2 desktop
-environment. It handles all forms of gettext po files like compiled gettext
-po files (gmo/mo files), compressed po files (po.gz/po.bz2 etc.) and features
-many comfortable everyday usage features like Find/Replace, Auto Translation,
-Message Translation Learning, Messages Table (for having an overview of the
-translations/messages in the po file), Easy navigation and editing of
-translation messages & comments of the translation where accurate. It has got
-really very much to offer therefore you should simply test it and be happy
-with it!
+gtranslator is an enhanced gettext po file editor for the GNOME2
+desktop environment. It handles all forms of gettext po files like
+compiled gettext po files (gmo/mo files), compressed po files
+(po.gz/po.bz2 etc.) and features many comfortable everyday usage
+features like Find/Replace, Auto Translation, Message Translation
+Learning, Messages Table (for having an overview of the
+translations/messages in the po file), Easy navigation and editing
+of translation messages & comments of the translation where accurate.
+It has got really very much to offer therefore you should simply
+test it and be happy with it!
