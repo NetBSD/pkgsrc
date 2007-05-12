@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/12 13:55:03 obache Exp $
+
+SHA1 (mecab-perl-0.95.tar.gz) = 95f37327d46b341d9ccafd04eb25cc2094b71109
+RMD160 (mecab-perl-0.95.tar.gz) = 0d1319e0d9f590214474fcd68f69a5e4993fa8ad
+Size (mecab-perl-0.95.tar.gz) = 33743 bytes
