@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-an,v 1.5 2007/05/12 13:53:08 ghen Exp $
 
 diff -ruN ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.h ./gfx/src/x11shared/nsFontFreeType.h
 --- ../Orig/mozilla/gfx/src/x11shared/nsFontFreeType.h	2004-04-18 06:52:34.000000000 +0900

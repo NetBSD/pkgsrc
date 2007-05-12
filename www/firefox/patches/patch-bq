@@ -1,4 +1,4 @@
-$NetBSD: patch-bq,v 1.6 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-bq,v 1.7 2007/05/12 13:53:09 ghen Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h ./xpcom/io/nsLocalFileUnix.h
 --- ../Orig/mozilla/xpcom/io/nsLocalFileUnix.h	2004-04-18 23:18:14.000000000 +0900
