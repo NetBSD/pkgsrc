@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.8 2007/05/10 09:45:51 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.9 2007/05/12 14:40:30 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -19,3 +19,5 @@ Pullup ticket 2079 - requested by martti
 security update for squirrelmail
 Pullup ticket 2081 - requested by martti
 bugfix update for squirrelmail
+Pullup ticket 2080 - requested by ghen
+security update for postgresql
