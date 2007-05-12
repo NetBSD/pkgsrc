@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2007/02/05 11:43:01 shannonjr Exp $
+$NetBSD: patch-ac,v 1.3 2007/05/12 11:08:31 shannonjr Exp $
 
 --- common/Makefile.am.orig	2007-01-31 05:11:51.000000000 -0700
 +++ common/Makefile.am

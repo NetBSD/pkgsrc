@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/11/17 12:13:11 shannonjr Exp $
+$NetBSD: patch-af,v 1.2 2007/05/12 11:08:31 shannonjr Exp $
 
---- ../libassuan-1.0.0/src/Makefile.am.orig	2006-10-09 04:26:41.000000000 -0600
-+++ ../libassuan-1.0.0/src/Makefile.am
+--- ../libassuan-1.0.1/src/Makefile.am.orig	2006-11-21 11:17:18.000000000 -0700
++++ ../libassuan-1.0.1/src/Makefile.am
 @@ -26,6 +26,7 @@ MOSTLYCLEANFILES = assuan-errors.c
  
  if HAVE_PTH
