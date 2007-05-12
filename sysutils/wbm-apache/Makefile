@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/04/21 05:22:58 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/12 06:27:39 obache Exp $
 
 WBM_NAME=	apache
+WBM_MOD_REV=	5
 
 COMMENT=	Webmin module for configuring Apache servers
 

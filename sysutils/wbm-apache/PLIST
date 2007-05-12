@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/05/12 06:27:39 obache Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -108,6 +108,8 @@ share/webmin/apache/files_index.cgi
 share/webmin/apache/find_htaccess.cgi
 share/webmin/apache/htaccess.cgi
 share/webmin/apache/htaccess_index.cgi
+share/webmin/apache/images/.xvpics/type_icon_17.gif
+share/webmin/apache/images/.xvpics/type_icon_20.gif
 share/webmin/apache/images/def.gif
 share/webmin/apache/images/defines.gif
 share/webmin/apache/images/dir.gif
@@ -264,6 +266,7 @@ share/webmin/apache/useradmin_update.pl
 share/webmin/apache/virt_index.cgi
 share/webmin/apache/worker.pl
 @dirrm share/webmin/apache/lang
+@dirrm share/webmin/apache/images/.xvpics
 @dirrm share/webmin/apache/images
 @dirrm share/webmin/apache
 @dirrm share/examples/webmin/apache
