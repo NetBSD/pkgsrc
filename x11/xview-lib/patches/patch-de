@@ -1,7 +1,7 @@
-$NetBSD: patch-de,v 1.3 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-de,v 1.4 2007/05/12 00:22:17 tnn Exp $
 
---- lib/libxview/textsw/es_file.c.orig	1993-06-29 05:17:34.000000000 +0000
-+++ lib/libxview/textsw/es_file.c
+--- ./lib/libxview/textsw/es_file.c.orig	1993-06-29 07:17:34.000000000 +0200
++++ ./lib/libxview/textsw/es_file.c
 @@ -85,18 +85,15 @@ static char     sccsid[] = "@(#)es_file.
  
  #include <string.h>
@@ -63,6 +63,15 @@ $NetBSD: patch-de,v 1.3 2006/01/05 18:25:57 joerg Exp $
  
      if (status == 0)
  	status = &dummy_status;
+@@ -473,7 +486,7 @@ Error_Return:
+ }
+ 
+ /* ARGSUSED */
+-static          caddr_t
++caddr_t
+ #ifdef ANSI_FUNC_PROTO
+ es_file_get(Es_handle esh, Es_attribute attribute, ...)
+ #else
 @@ -1146,9 +1159,16 @@ es_file_copy_status(esh, to)
      Es_file_data    private = ABS_TO_REP(esh);
      int             dummy;

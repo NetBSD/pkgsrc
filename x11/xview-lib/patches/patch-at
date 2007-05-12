@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.3 2006/01/05 18:25:57 joerg Exp $
+$NetBSD: patch-at,v 1.4 2007/05/12 00:22:16 tnn Exp $
 
---- lib/libxview/win/win_input.c.orig	Mon Jun 27 00:27:53 1994
-+++ lib/libxview/win/win_input.c	Thu Dec 20 10:09:19 2001
+--- ./lib/libxview/win/win_input.c.orig	1994-06-27 00:27:53.000000000 +0200
++++ ./lib/libxview/win/win_input.c
 @@ -56,6 +56,7 @@ static int      BlockForEvent();
  static int      GetButtonEvent();
  static int      win_translate_KP_keysym();
@@ -30,6 +30,15 @@ $NetBSD: patch-at,v 1.3 2006/01/05 18:25:57 joerg Exp $
  					       buffer, BUFFERSIZE)) {
  			        (void)win_translate_KP_keysym(ksym, buffer);
  			    }
+@@ -2316,7 +2319,7 @@ chording(display, bEvent, timeout)
+     /* XView does a passive grab on the SELECT button! */
+     window_x_allow_events(display);
+ 
+-    return BlockForEvent(display, xevent, timeout * 1000, GetButtonEvent,
++    return BlockForEvent(display, &xevent, timeout * 1000, GetButtonEvent,
+ 			 (char *) bEvent);
+ }
+ 
 @@ -2341,7 +2344,6 @@ BlockForEvent(display, xevent, usec, pre
      int             result;
      struct timeval  timeout;
