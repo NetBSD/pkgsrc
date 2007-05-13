@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.848 2007/05/13 14:43:47 seb Exp $
+# $NetBSD: Makefile,v 1.849 2007/05/13 17:58:00 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -467,6 +467,7 @@ SUBDIR+=	p5-IO-Capture
 SUBDIR+=	p5-IO-Compress-Base
 SUBDIR+=	p5-IO-Compress-Zlib
 SUBDIR+=	p5-IO-Digest
+SUBDIR+=	p5-IO-InSitu
 SUBDIR+=	p5-IO-Interactive
 SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
