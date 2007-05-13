@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2006/10/04 20:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/05/13 11:58:48 dmcmahill Exp $
 #
 
 DISTNAME=	gwave-20030804
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	http://www.cs.unc.edu/~tell/dist/
 
@@ -21,6 +21,6 @@ CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
 post-extract:
 	${RM} ${WRKSRC}/src/init_scheme_string.c
 
-.include "../../devel/guile14-gtk/buildlink3.mk"
+.include "../../devel/guile-gtk/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
