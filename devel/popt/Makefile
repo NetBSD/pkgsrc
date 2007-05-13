@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/05/12 00:52:28 obache Exp $
+# $NetBSD: Makefile,v 1.37 2007/05/13 15:04:00 obache Exp $
 #
 
 DISTNAME=	popt-1.10.7
@@ -24,6 +24,12 @@ TEST_TARGET=		check
 # XXX: avoid to check GNU xgettext.
 post-extract:
 	touch ${WRKDIR}/rpm.c
+
+# XXX: avoid to install library into ${PREFIX}/lib64 on 64-bit
+SUBST_CLASSES+=		mark64
+SUBST_STAGE.mark64=	pre-configure
+SUBST_FILES.mark64=	Makefile.am Makefile.in
+SUBST_SED.mark64=	-e 's|@MARK64@||g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
