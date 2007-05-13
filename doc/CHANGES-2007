@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1058 2007/05/13 20:49:40 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.1059 2007/05/13 22:45:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Getopt-Euclid version 0.1.0 [seb 2007-05-13]
 	Added devel/p5-Class-Std version 0.0.8 [seb 2007-05-13]
 	Updated devel/gputils to 0.13.4 [bouyer 2007-05-13]
+	Added finance/gnucash-current version 2.1.1 [wiz 2007-05-13]
