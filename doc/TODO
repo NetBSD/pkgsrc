@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6327 2007/05/13 10:46:35 jmmv Exp $
+$NetBSD: TODO,v 1.6328 2007/05/13 13:03:34 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1183,7 +1183,6 @@ Suggested package updates
 	o smokeping-2.1.0
 	o snd-9.0
 	o snes9x-1.51
-	o solfege-3.8.0
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o source-highlight-2.6
