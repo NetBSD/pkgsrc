@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6328 2007/05/13 13:03:34 schmonz Exp $
+$NetBSD: TODO,v 1.6329 2007/05/13 14:57:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ Suggested package updates
 	o ical-2.3.2
 	o icdprog-0.5
 	o icecast-2.3.1
-	o icepref-2.3
 	o icon-943
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
@@ -766,7 +765,6 @@ Suggested package updates
 	o mpi-ch-1.2.7p1
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.40
-	o mrproject-0.9.1
 	o mrtg-2.15.2
 	o mserv-devel-0.41
 	o msf-2.7
@@ -1084,8 +1082,7 @@ Suggested package updates
 	o py-textile-2.0.11
 	o py-twisted-2.4.0
 	o py-urwid-0.9.7.2
-	o py-xmltools-1.4.0
-	o py-yaml-3.04
+	o py-yaml-3.05
 	o py-zconfig-2.3.1
 	o py-zpublisher-2.10.2
 	o pygopherd-2.0.13
@@ -1266,6 +1263,7 @@ Suggested package updates
 	o vfu-4.03
 	o viewvc-1.0.4
 	o vifm-0.3a
+	o vim-7.1
 	o visual-regexp-3.1
 	o vlc-0.8.6b
 	o vmips-1.3.2
