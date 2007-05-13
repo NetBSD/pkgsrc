@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/13 22:43:38 wiz Exp $
+
+--- src/core-utils/gnc-gkeyfile-utils.c.orig	2007-04-28 23:16:20.000000000 +0000
++++ src/core-utils/gnc-gkeyfile-utils.c
+@@ -303,7 +303,6 @@ gnc_key_file_save_to_file (const gchar *
+ {
+   gchar *contents;
+   gint fd;
+-  extern int errno;
+   gint length;
+   ssize_t written;
+   gboolean success = TRUE;
