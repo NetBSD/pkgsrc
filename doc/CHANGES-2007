@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1050 2007/05/13 14:24:12 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1051 2007/05/13 14:45:08 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added audio/qtplay version 1.3.1 [schmonz 2007-05-13]
 	Updated audio/solfege to 3.8.0 [schmonz 2007-05-13]
 	Added devel/p5-Regexp-Assemble version 0.28 [seb 2007-05-13]
+	Added devel/p5-IO-Interactive version 0.0.3 [seb 2007-05-13]
