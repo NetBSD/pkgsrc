@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2007/05/05 21:27:31 adrianp Exp $
+# $NetBSD: Makefile,v 1.240 2007/05/13 14:39:16 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -39,7 +39,6 @@ SUBDIR+=	fort77
 SUBDIR+=	g95
 SUBDIR+=	gauche
 SUBDIR+=	gawk
-SUBDIR+=	gb
 SUBDIR+=	gcc
 SUBDIR+=	gcc-ssp
 SUBDIR+=	gcc3

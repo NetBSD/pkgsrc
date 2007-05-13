@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2007/05/13 14:20:37 seb Exp $
+# $NetBSD: Makefile,v 1.847 2007/05/13 14:39:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -132,7 +132,6 @@ SUBDIR+=	doxygen
 SUBDIR+=	doxymacs
 SUBDIR+=	eclipse
 SUBDIR+=	edcommon
-SUBDIR+=	eel
 SUBDIR+=	eel2
 SUBDIR+=	eet
 SUBDIR+=	electricfence
@@ -203,7 +202,6 @@ SUBDIR+=	gsoap
 SUBDIR+=	gst-plugins0.10-pango
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtl
-SUBDIR+=	gtoolkit-examples
 SUBDIR+=	guile-fcgi
 SUBDIR+=	guile-gnome
 SUBDIR+=	guile-gtk
@@ -330,7 +328,6 @@ SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
 SUBDIR+=	mph
-SUBDIR+=	mrproject
 SUBDIR+=	nana
 SUBDIR+=	nasm
 SUBDIR+=	nbitools

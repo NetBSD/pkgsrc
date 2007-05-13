@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.448 2007/04/17 13:50:06 martti Exp $
+# $NetBSD: Makefile,v 1.449 2007/05/13 14:39:16 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -121,7 +121,6 @@ SUBDIR+=	gnome-icon-theme
 SUBDIR+=	gnuplot
 SUBDIR+=	gnuplot-nox11
 SUBDIR+=	gocr
-SUBDIR+=	gpaint
 SUBDIR+=	gphoto
 SUBDIR+=	gphoto2
 SUBDIR+=	gqview
@@ -183,7 +182,6 @@ SUBDIR+=	libgnomecanvasmm
 SUBDIR+=	libkexif
 SUBDIR+=	libkexiv2
 SUBDIR+=	libkipi
-SUBDIR+=	librsvg
 SUBDIR+=	librsvg2
 SUBDIR+=	libscigraphica
 SUBDIR+=	libungif
@@ -261,7 +259,6 @@ SUBDIR+=	py-biggles
 SUBDIR+=	py-cairo
 SUBDIR+=	py-gd
 SUBDIR+=	py-gdchart
-SUBDIR+=	py-gimp
 SUBDIR+=	py-gnuplot
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk

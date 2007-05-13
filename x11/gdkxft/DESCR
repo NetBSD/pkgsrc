@@ -1,4 +1,0 @@
-  Gdkxft transparently adds anti-aliased font support to gtk+-1.2.x under
-XFree86-4.0 or higher.  Once you have installed gdkxft, you can run any
-(well, nearly any) existing gtk+ binary and see anti-aliased fonts in the
-gtk widgets.  You don't need to recompile gtk+ or your applications.

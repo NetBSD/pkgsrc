@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2007/05/12 14:01:04 obache Exp $
+# $NetBSD: Makefile,v 1.360 2007/05/13 14:39:16 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -295,7 +295,6 @@ SUBDIR+=	py-markdown
 SUBDIR+=	py-mecab
 SUBDIR+=	py-textile
 SUBDIR+=	py-xml
-SUBDIR+=	py-xmltools
 SUBDIR+=	py-yaml
 SUBDIR+=	pyDict
 SUBDIR+=	qprint
