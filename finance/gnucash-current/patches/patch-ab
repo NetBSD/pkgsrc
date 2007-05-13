@@ -1,0 +1,89 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/13 22:43:38 wiz Exp $
+
+--- src/app-utils/gnc-ui-util.c.orig	2007-04-28 23:16:37.000000000 +0000
++++ src/app-utils/gnc-ui-util.c
+@@ -103,6 +103,14 @@ gnc_configure_account_separator (void)
+     free(string);
+ }
+ 
++#if defined(__DragonFly__)
++#define LC_CAST	(char **)
++#define LC_CAST2 (char *)
++#else
++#define LC_CAST
++#define LC_CAST2
++#endif
++
+ 
+ static void
+ gnc_configure_reverse_balance (void)
+@@ -780,16 +788,16 @@ gnc_localeconv (void)
+ 
+   lc = *localeconv();
+ 
+-  gnc_lconv_set_utf8(&lc.decimal_point, ".");
+-  gnc_lconv_set_utf8(&lc.thousands_sep, ",");
+-  gnc_lconv_set_utf8(&lc.grouping, "\003");
+-  gnc_lconv_set_utf8(&lc.int_curr_symbol, "USD ");
+-  gnc_lconv_set_utf8(&lc.currency_symbol, "$");
+-  gnc_lconv_set_utf8(&lc.mon_decimal_point, ".");
+-  gnc_lconv_set_utf8(&lc.mon_thousands_sep, ",");
+-  gnc_lconv_set_utf8(&lc.mon_grouping, "\003");
+-  gnc_lconv_set_utf8(&lc.negative_sign, "-");
+-  gnc_lconv_set_utf8(&lc.positive_sign, "");
++  gnc_lconv_set_utf8(LC_CAST &lc.decimal_point, ".");
++  gnc_lconv_set_utf8(LC_CAST &lc.thousands_sep, ",");
++  gnc_lconv_set_utf8(LC_CAST &lc.grouping, "\003");
++  gnc_lconv_set_utf8(LC_CAST &lc.int_curr_symbol, "USD ");
++  gnc_lconv_set_utf8(LC_CAST &lc.currency_symbol, "$");
++  gnc_lconv_set_utf8(LC_CAST &lc.mon_decimal_point, ".");
++  gnc_lconv_set_utf8(LC_CAST &lc.mon_thousands_sep, ",");
++  gnc_lconv_set_utf8(LC_CAST &lc.mon_grouping, "\003");
++  gnc_lconv_set_utf8(LC_CAST &lc.negative_sign, "-");
++  gnc_lconv_set_utf8(LC_CAST &lc.positive_sign, "");
+ 
+   gnc_lconv_set_char(&lc.frac_digits, 2);
+   gnc_lconv_set_char(&lc.int_frac_digits, 2);
+@@ -1293,13 +1301,13 @@ PrintAmountInternal(char *buf, gnc_numer
+ 
+     if (info->monetary)
+     {
+-      separator = lc->mon_thousands_sep;
+-      group = lc->mon_grouping;
++      separator = LC_CAST2 lc->mon_thousands_sep;
++      group = LC_CAST2 lc->mon_grouping;
+     }
+     else
+     {
+-      separator = lc->thousands_sep;
+-      group = lc->grouping;
++      separator = LC_CAST2 lc->thousands_sep;
++      group = LC_CAST2 lc->grouping;
+     }
+ 
+     buf_ptr = buf;
+@@ -1367,7 +1375,7 @@ PrintAmountInternal(char *buf, gnc_numer
+   }
+   else
+   {
+-    char *decimal_point;
++    const char *decimal_point;
+     guint8 num_decimal_places = 0;
+     char *temp_ptr = temp_buf;
+ 
+@@ -1803,13 +1811,13 @@ xaccParseAmount (const char * in_str, gb
+   {
+     group_separator = g_utf8_get_char(lc->mon_thousands_sep);
+     decimal_point = g_utf8_get_char(lc->mon_decimal_point);
+-    group = lc->mon_grouping;
++    group = LC_CAST2 lc->mon_grouping;
+   }
+   else
+   {
+     group_separator = g_utf8_get_char(lc->thousands_sep);
+     decimal_point = g_utf8_get_char(lc->decimal_point);
+-    group = lc->grouping;
++    group = LC_CAST2 lc->grouping;
+   }
+ 
+   return xaccParseAmountExtended(in_str, monetary, negative_sign, decimal_point,
