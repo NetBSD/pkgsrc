@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2007/05/13 06:14:38 darcy Exp $
+
+--- vobcopy.h.orig	2004-11-22 14:12:58.000000000 -0500
++++ vobcopy.h
+@@ -5,6 +5,9 @@
+ #define MAX_STRING  81
+ #define MAX_DIFFER  2000
+ 
++#if defined(FALSE)
++typedef int bool;
++#else
+ #if defined(__APPLE__) && defined(__GNUC__)
+ typedef int bool;
+ 
+@@ -13,6 +16,7 @@ typedef int bool;
+ #else
+   typedef enum  { FALSE=0, TRUE=1 }  bool;
+ #endif /* Darwin */
++#endif /* defined FALSE */
+ 
+ 
+ void usage(char *);
