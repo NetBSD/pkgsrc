@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/13 14:17:55 seb Exp $
+
+SHA1 (Regexp-Assemble-0.28.tar.gz) = 6874a17798e86441a3ef1fee8e5daaf2460f334c
+RMD160 (Regexp-Assemble-0.28.tar.gz) = 33effcdcef97471918de9ef2dc8dcc1271546238
+Size (Regexp-Assemble-0.28.tar.gz) = 82595 bytes
