@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2007/05/13 21:38:27 wiz Exp $
 #
 
 RELVERSION=	1.3.1
@@ -26,7 +26,7 @@ BLACKDOWN_ARCH?=	${MACHINE_ARCH}
 BLACKDOWN_REL=	rc1
 EXTRACT_SUFX=	.tar.bz2
 .elif ${BLACKDOWN_ARCH} == "ppc"
-DEPENDS+=	suse_base>=7.3:../../emulators/suse_base
+DEPENDS+=	suse_base>=7.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -69,3 +69,5 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
 	cd ${WRKSRC} && ${PAX} -rw . ${JVM_HOME}
+
+.include "../../emulators/suse_linux/Makefile.application"
