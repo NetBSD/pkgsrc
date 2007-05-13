@@ -1,0 +1,35 @@
+$NetBSD: patch-al,v 1.1 2007/05/13 16:59:39 taca Exp $
+
+--- zooext.c.orig	1993-05-01 12:58:50.000000000 +0900
++++ zooext.c
+@@ -89,6 +89,7 @@ int alloc_size;                         
+ #endif
+ struct direntry direntry;                 /* directory entry */
+ int first_dir = 1;								/* first dir entry seen? */
++unsigned long zoo_pointer = 0;            /* Track our position in the file */
+ 
+ static char extract_ver[] = "Zoo %d.%d is needed to extract %s.\n";
+ static char no_space[] = "Insufficient disk space to extract %s.\n";
+@@ -169,6 +170,9 @@ if (fiz_ofs != 0L) {                /* i
+ 		exit_status = 1;
+    }
+    zooseek (zoo_file, zoo_header.zoo_start, 0); /* seek to where data begins */
++
++   /* Begin tracking our position in the file */
++   zoo_pointer = zoo_header.zoo_start;
+ }
+ 
+ #ifndef PORTABLE
+@@ -597,6 +601,12 @@ bit 23==0 and bit 22==1. */
+    } /* end if */
+ 
+ loop_again:
++
++   /* Make sure we are not seeking to already processed data */
++   if (next_ptr <= zoo_pointer)
++          prterror ('f', "ZOO chain structure is corrupted\n");
++   zoo_pointer = next_ptr;
++
+    zooseek (zoo_file, next_ptr, 0); /* ..seek to next dir entry */
+ } /* end while */
+ 
