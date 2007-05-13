@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2006/09/13 14:41:58 taca Exp $
+$NetBSD: patch-ae,v 1.10 2007/05/13 16:45:44 taca Exp $
 
---- icons/Makefile.in.orig	2006-06-12 15:10:08.000000000 +0900
+--- icons/Makefile.in.orig	2006-11-05 08:20:02.000000000 +0900
 +++ icons/Makefile.in
-@@ -258,7 +258,7 @@ ICON2 = anthony-bomb.gif \
+@@ -266,7 +266,7 @@ ICON2 = anthony-bomb.gif \
  		anthony-xbm.gif \
  		anthony-xpm.gif
  
