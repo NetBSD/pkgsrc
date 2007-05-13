@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1046 2007/05/12 20:42:36 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1047 2007/05/13 10:46:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -1999,3 +1999,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/fuse to 0.8.0.1  [adam 2007-05-12]
 	Updated emulators/fuse-utils to 0.8.0.1 [adam 2007-05-12]
 	Updated emulators/wine to 0.9.37 [adam 2007-05-12]
+	Updated devel/monotone to 0.35 [jmmv 2007-05-13]
+	Updated devel/monotone-server to 0.35 [jmmv 2007-05-13]
