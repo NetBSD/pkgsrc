@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1048 2007/05/13 12:19:05 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1049 2007/05/13 13:03:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2002,3 +2002,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/monotone to 0.35 [jmmv 2007-05-13]
 	Updated devel/monotone-server to 0.35 [jmmv 2007-05-13]
 	Added audio/qtplay version 1.3.1 [schmonz 2007-05-13]
+	Updated audio/solfege to 3.8.0 [schmonz 2007-05-13]
