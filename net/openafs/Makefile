@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/03/21 19:49:24 gendalia Exp $
+# $NetBSD: Makefile,v 1.23 2007/05/13 06:59:16 agc Exp $
 
 DISTNAME=	openafs-1.4.4-src
 PKGREVISION=	1
@@ -53,5 +53,12 @@ OWN_DIRS+=		${VARBASE}/openafs/logs
 OWN_DIRS_PERMS+=	${VARBASE}/openafs/db ${ROOT_USER} ${ROOT_GROUP} 700
 
 FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
+
+# attempt to future-proof configuration
+pre-build:
+	cd ${WRKSRC}/src/config && for i in 40 50 60 70 80 90; do	\
+		${SED} -e 's|nbsd20|nbsd'$$i'|g' param.i386_nbsd20.h > param.i386_nbsd$$i.h; \
+		${CP} param.nbsd30.h param.nbsd$$i.h; 			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
