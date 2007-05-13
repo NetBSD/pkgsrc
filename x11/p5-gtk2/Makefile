@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/05/13 22:40:03 dogcow Exp $
+# $NetBSD: Makefile,v 1.22 2007/05/13 22:57:57 wiz Exp $
 
 DISTNAME=	Gtk2-${DIST_VER}
 PKGNAME=	p5-gtk2-${DIST_VER}
@@ -17,8 +17,8 @@ USE_TOOLS+=	pkg-config
 DIST_VER=	1.144
 
 PERL5_PACKLIST=	auto/Gtk2/.packlist
-DEPENDS+=	p5-glib2>=1.140:../../devel/p5-glib2
 
+BUILDLINK_API_DEPENDS.p5-glib2+=	p5-glib2>=1.140
 .include "../../devel/p5-glib2/buildlink3.mk"
 .include "../../graphics/p5-cairo/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
