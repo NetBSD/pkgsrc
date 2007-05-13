@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1051 2007/05/13 14:45:08 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1052 2007/05/13 14:55:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2005,3 +2005,21 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/solfege to 3.8.0 [schmonz 2007-05-13]
 	Added devel/p5-Regexp-Assemble version 0.28 [seb 2007-05-13]
 	Added devel/p5-IO-Interactive version 0.0.3 [seb 2007-05-13]
+	Removed x11/gtoolkit [wiz 2007-05-13]
+	Removed devel/gtoolkit-examples [wiz 2007-05-13]
+	Removed finance/gnucash-gtk1 [wiz 2007-05-13]
+	Removed devel/mrproject [wiz 2007-05-13]
+	Removed graphics/gpaint [wiz 2007-05-13]
+	Removed graphics/py-gimp [wiz 2007-05-13]
+	Removed wm/icepref [wiz 2007-05-13]
+	Removed lang/gb [wiz 2007-05-13]
+	Removed security/tinyca [wiz 2007-05-13]
+	Removed sysutils/medusa [wiz 2007-05-13]
+	Removed textproc/py-xmltools [wiz 2007-05-13]
+	Removed www/gtkhtml [wiz 2007-05-13]
+	Removed www/glibwww [wiz 2007-05-13]
+	Removed net/soup [wiz 2007-05-13]
+	Removed math/guppi [wiz 2007-05-13]
+	Removed devel/eel [wiz 2007-05-13]
+	Removed graphics/librsvg [wiz 2007-05-13]
+	Removed x11/gdkxft [wiz 2007-05-13]
