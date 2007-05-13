@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.707 2007/05/01 11:16:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.708 2007/05/13 21:43:26 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4459,8 +4459,12 @@ sub checkline_mk_shelltext($$) {
 					if (!exists(get_required_vartool_varnames()->{$vartool})) {
 						$opt_warn_extra and $line->log_note("You can write \"${plain_tool}\" instead of \"${shellword}\".");
 						$opt_warn_extra and $line->explain_note(
-							"The wrapper framework from pkgsrc takes care that a sufficiently",
-							"capable implementation of that tool will be selected.");
+"The wrapper framework from pkgsrc takes care that a sufficiently",
+"capable implementation of that tool will be selected.",
+"",
+"Calling the commands by their plain name instead of the macros is",
+"only available in the {pre,do,post}-* targets. For all other targets,",
+"you should still use the macros.");
 					}
 				}
 
