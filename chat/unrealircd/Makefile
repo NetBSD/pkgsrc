@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/01/03 12:46:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2007/05/13 21:15:58 adrianp Exp $
 
 DISTNAME=	Unreal3.2.6
 PKGNAME=	unrealircd-3.2.6
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://unrealircd.icedslash.com/ \
 		http://www.blurryfox.com/unreal/ \
@@ -13,6 +14,7 @@ COMMENT=	Advanced IRC server with IPv6 and SSL support
 
 CONFLICTS+=	ircu-[0-9]*
 
+DIST_SUBDIR=	${PKGNAME}
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config gmake
 WRKSRC=		${WRKDIR}/Unreal3.2
