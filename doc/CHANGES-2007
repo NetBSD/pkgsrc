@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1052 2007/05/13 14:55:35 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1053 2007/05/13 16:46:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/eel [wiz 2007-05-13]
 	Removed graphics/librsvg [wiz 2007-05-13]
 	Removed x11/gdkxft [wiz 2007-05-13]
+	Updated www/squid to 2.6.13 [taca 2007-05-13]
