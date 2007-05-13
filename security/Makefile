@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2007/05/10 18:19:17 agc Exp $
+# $NetBSD: Makefile,v 1.298 2007/05/13 14:39:16 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -261,7 +261,6 @@ SUBDIR+=	tacshell
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
-SUBDIR+=	tinyca
 SUBDIR+=	tkpasman
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
