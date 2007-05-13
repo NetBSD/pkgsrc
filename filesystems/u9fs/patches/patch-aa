@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/13 15:34:05 agc Exp $
 
 --- makefile	2007/04/23 21:54:35	1.1
 +++ makefile	2007/04/23 21:55:35
-@@ -49,16 +49,16 @@
+@@ -49,16 +49,19 @@
  	fcall.h\
  	plan9.h
  
@@ -19,6 +19,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
  
  install: u9fs
 -	cp u9fs ../../bin
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/libexec
 +	${BSD_INSTALL_PROGRAM} u9fs ${PREFIX}/libexec/
++	${BSD_INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
++	${BSD_INSTALL_MAN} u9fs.8 ${PREFIX}/${PKGMANDIR}/man8/
  
  .PHONY: clean install
