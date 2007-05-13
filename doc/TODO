@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6329 2007/05/13 14:57:18 wiz Exp $
+$NetBSD: TODO,v 1.6330 2007/05/13 22:40:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -222,6 +222,7 @@ Suggested package updates
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
 	o GridSim-3.3
+	o ImageMagick-6.3.4.1
 	o PAM-0.99.7.1
 	o R-2.5.0
 	o R-CGIwithR-0.72
@@ -510,7 +511,7 @@ Suggested package updates
 	o gifsicle-1.48
 	o gimp-docs-2.0.10
 	o gimp-print-5.0 [now called gutenprint]
-	o gimp-ufraw-0.11
+	o gimp-ufraw-0.11 [pkg/36315]
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
@@ -568,7 +569,7 @@ Suggested package updates
 	o gtick-0.3.13
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.0
-	o gtkam-0.1.13
+	o gtkam-0.1.14 [pkg/36317]
 	o gtklife-5.1
 	o gtkmm-2.10.10
 	o gtkpod-0.99.8
@@ -773,6 +774,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-5.0.3
 	o muse-0.9.2
+	o musicbrainz-3.0.0
 	o musicpd-0.12.2
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
@@ -819,6 +821,7 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
+	o opencdk-0.6.0
 	o openh323-1.19.1
 	o openldap-client-2.3.34
 	o openmortal-0.7.1
@@ -887,12 +890,13 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
+	o p5-IO-Socket-SSL-1.06
 	o p5-IO-Zlib-1.05
 	o p5-IP-Country-2.23
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
 	o p5-Locale-Codes-2.07
-	o p5-Log-Dispatch-2.17
+	o p5-Log-Dispatch-2.18
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.22
@@ -900,6 +904,7 @@ Suggested package updates
 	o p5-Mail-Audit-2.218
 	o p5-Mail-ListDetector-1.01
 	o p5-Mail-Webmail-Gmail-1.09
+	o p5-MailTools-1.77
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Install-0.65
@@ -939,10 +944,13 @@ Suggested package updates
 	o p5-Test-WWW-Mechanize-1.12
 	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
+	o p5-Text-Glob-0.08
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-Time-Local-1.17
 	o p5-Time-TAI64-2.11
+	o p5-WWW-Mechanize-1.24
+	o p5-Want-0.14
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
@@ -1070,7 +1078,7 @@ Suggested package updates
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-3.17.2
-	o py-qt3-base-3.17
+	o py-qt3-base-3.17.2
 	o py-qt3-modules-3.17
 	o py-qt3-qscintilla-3.17
 	o py-qt3-sip-4.6
