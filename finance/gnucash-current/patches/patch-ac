@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/13 22:43:38 wiz Exp $
+
+--- src/app-utils/gnc-exp-parser.c.orig	2007-04-28 23:16:37.000000000 +0000
++++ src/app-utils/gnc-exp-parser.c
+@@ -546,9 +546,15 @@ gnc_exp_parser_parse_separate_vars (cons
+ 
+   lc = gnc_localeconv ();
+ 
++#if defined(__DragonFly__)
++  pe = init_parser (vars, (char *)lc->mon_decimal_point, (char *)lc->mon_thousands_sep,
++                    trans_numeric, numeric_ops, negate_numeric, g_free,
++                    func_op);
++#else
+   pe = init_parser (vars, lc->mon_decimal_point, lc->mon_thousands_sep,
+                     trans_numeric, numeric_ops, negate_numeric, g_free,
+                     func_op);
++#endif
+ 
+   error_loc = parse_string (&result, expression, pe);
+ 
