@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.4 2006/09/13 14:41:58 taca Exp $
+$NetBSD: patch-ap,v 1.5 2007/05/13 16:45:44 taca Exp $
 
---- helpers/basic_auth/MSNT/Makefile.in.orig	2006-06-12 15:09:45.000000000 +0900
+--- helpers/basic_auth/MSNT/Makefile.in.orig	2006-11-05 08:19:50.000000000 +0900
 +++ helpers/basic_auth/MSNT/Makefile.in
-@@ -516,9 +516,9 @@ info: info-am
+@@ -524,9 +524,9 @@ info: info-am
  
  info-am:
  

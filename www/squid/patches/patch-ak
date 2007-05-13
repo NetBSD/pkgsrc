@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.10 2006/09/13 14:41:58 taca Exp $
+$NetBSD: patch-ak,v 1.11 2007/05/13 16:45:44 taca Exp $
 
---- src/cf.data.pre.orig	2006-07-31 10:31:18.000000000 +0900
+--- src/cf.data.pre.orig	2007-04-25 06:30:03.000000000 +0900
 +++ src/cf.data.pre
-@@ -1349,6 +1349,23 @@ DOC_START
+@@ -1414,6 +1414,23 @@ DOC_START
  DOC_END
  
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ak,v 1.10 2006/09/13 14:41:58 taca Exp $
  NAME: useragent_log
  TYPE: string
  LOC: Config.Log.useragent
-@@ -3245,12 +3262,12 @@ DOC_END
+@@ -3311,12 +3328,12 @@ DOC_END
  
  NAME: cache_effective_user
  TYPE: string

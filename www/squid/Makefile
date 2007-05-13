@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.191 2007/03/21 05:25:01 taca Exp $
+# $NetBSD: Makefile,v 1.192 2007/05/13 16:45:44 taca Exp $
 
-DISTNAME=	squid-2.6.STABLE12
+DISTNAME=	squid-2.6.STABLE13
 PKGNAME=	${DISTNAME:S/STABLE//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.6/ \
@@ -60,7 +60,8 @@ CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 			--enable-removal-policies=lru,heap \
 			--enable-poll \
 			--enable-underscores \
-			--enable-storeio=${SQUID_BACKENDS:Q}
+			--enable-storeio=${SQUID_BACKENDS:Q} \
+			--with-aio
 
 #
 # generic helpers
@@ -105,7 +106,7 @@ post-install:
 .endfor
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	@cd ${WRKSRC};						\
+	cd ${WRKSRC};						\
 	for i in ${DOCFILES}; do				\
 		${INSTALL_DATA} $$i ${DOCDIR};			\
 	done
