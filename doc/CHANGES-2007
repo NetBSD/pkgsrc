@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1056 2007/05/13 19:28:18 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1057 2007/05/13 20:46:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2027,3 +2027,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/zoo to 2.10.1nb3 [taca 2007-05-13]
 	Added devel/p5-IO-InSitu version 0.0.2 [seb 2007-05-13]
 	Added devel/p5-Getopt-Euclid version 0.1.0 [seb 2007-05-13]
+	Added devel/p5-Class-Std version 0.0.8 [seb 2007-05-13]
