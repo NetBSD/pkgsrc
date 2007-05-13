@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2006/09/13 14:41:58 taca Exp $
+$NetBSD: patch-ab,v 1.8 2007/05/13 16:45:44 taca Exp $
 
---- scripts/Makefile.in.orig	2006-06-12 15:10:08.000000000 +0900
+--- scripts/Makefile.in.orig	2006-11-05 08:20:03.000000000 +0900
 +++ scripts/Makefile.in
-@@ -198,7 +198,7 @@ am__leading_dot = @am__leading_dot@
+@@ -206,7 +206,7 @@ am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
  am__tar = @am__tar@
  am__untar = @am__untar@
