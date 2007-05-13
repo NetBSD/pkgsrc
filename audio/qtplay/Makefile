@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/13 12:18:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/13 13:13:41 schmonz Exp $
 #
 
 DISTNAME=	qtplay1.3.1
@@ -21,7 +21,7 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && \
-	cc -o qtplay -framework Carbon -framework QuickTime qtplay.c
+	cc -o ${PKGBASE} -framework Carbon -framework QuickTime ${CFLAGS} ${CPPFLAGS} qtplay.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qtplay ${PREFIX}/bin
