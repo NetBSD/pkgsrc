@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/21 11:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/13 01:34:27 wiz Exp $
 
 DISTNAME=	7a1ad0af8464
 # Last part of PKGNAME is changeset number
@@ -22,9 +22,9 @@ DIST_SUBDIR=	fromcvs
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
-	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"$$""@\"" >> ${WRKSRC}/togit
+	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"\$$@\"" >> ${WRKSRC}/togit
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/tohg
-	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"$$""@\"" >> ${WRKSRC}/tohg
+	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"\$$@\"" >> ${WRKSRC}/tohg
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fromcvs
