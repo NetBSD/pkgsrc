@@ -1,0 +1,8 @@
+The Perl 5 module IO::InSitu provides the open_rw( ) subroutine:
+It takes the names of two files: one to be opened for reading, the
+other for writing. It returns a list of two filehandles, opened to
+those two files. However, if the two filenames refer to the same
+file, open_rw( ) first makes a temporary copy of the file, which
+it opens for input. It then opens the original file for output. In
+such cases, when the input filehandle is eventually closed, IO::InSitu
+arranges for the temporary file to be automatically deleted.
