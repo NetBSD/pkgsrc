@@ -1,14 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2006/06/13 07:28:56 dbj Exp $
-
---- src/htmlcluealigned.h.orig	2001-05-21 08:47:11.000000000 -0400
-+++ src/htmlcluealigned.h
-@@ -38,9 +38,6 @@ struct _HTMLClueAlignedClass {
- };
- 
- 
--extern HTMLClueAlignedClass html_cluealigned_class;
--
--
- void        html_cluealigned_type_init   (void);
- void        html_cluealigned_class_init  (HTMLClueAlignedClass *klass,
- 					  HTMLType              type,
