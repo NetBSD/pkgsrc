@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.16 2007/05/15 22:31:17 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.17 2007/05/15 23:45:27 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -35,3 +35,9 @@ Pullup ticket 2076 - requested by rillig
 BUILD_INFO infrastructure fix
 Pullup ticket 2082 - requested by rillig
 gcc4 build fix for js
+Pullup ticket 2084 - requested by adrianp
+security update for php4
+Pullup ticket 2085 - requested by adrianp
+security update for php5
+Pullup ticket 2086 - requested by adrianp
+reset PKGREVISION after php update
