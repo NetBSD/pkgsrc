@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1.2.2 2007/05/15 22:19:57 salo Exp $
+
+--- src/common/calcomp.h.orig	2007-04-18 18:22:13.000000000 +0000
++++ src/common/calcomp.h
+@@ -83,7 +83,7 @@ extern void	varset(char *fname, int assi
+ extern void	dclear(char *name);
+ extern void	dremove(char *name);
+ extern int	vardefined(char *name);
+-extern char	*setcontext(char *ctx);
++extern char	*my_setcontext(char *ctx);
+ extern char	*pushcontext(char *ctx);
+ extern char	*popcontext(void);
+ extern char	*qualname(char *nam, int lvl);

@@ -1,0 +1,22 @@
+$NetBSD: patch-aw,v 1.1.2.2 2007/05/15 22:19:57 salo Exp $
+
+--- src/common/caldefn.c.orig	2007-04-18 18:22:26.000000000 +0000
++++ src/common/caldefn.c
+@@ -198,7 +198,7 @@ vardefined(	/* return non-zero if variab
+ 
+ 
+ char *
+-setcontext(			/* set a new context path */
++my_setcontext(			/* set a new context path */
+ 	register char  *ctx
+ )
+ {
+@@ -239,7 +239,7 @@ pushcontext(		/* push on another context
+     register int  n;
+ 
+     strcpy(oldcontext, context);	/* save old context */
+-    setcontext(ctx);			/* set new context */
++    my_setcontext(ctx);			/* set new context */
+     n = strlen(context);		/* tack on old */
+     if (n+strlen(oldcontext) > MAXCNTX) {
+ 	strncpy(context+n, oldcontext, MAXCNTX-n);

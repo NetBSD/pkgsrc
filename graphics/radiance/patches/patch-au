@@ -1,0 +1,46 @@
+$NetBSD: patch-au,v 1.1.2.2 2007/05/15 22:19:57 salo Exp $
+
+--- src/rt/func.c.orig	2007-04-18 18:21:19.000000000 +0000
++++ src/rt/func.c
+@@ -56,7 +56,7 @@ getfunc(	/* get function for this modifi
+ 	if (initfile[0]) {		/* initialize on first call */
+ 		esupport |= E_VARIABLE|E_FUNCTION|E_INCHAN|E_RCONST|E_REDEFW;
+ 		esupport &= ~(E_OUTCHAN);
+-		setcontext("");
++		my_setcontext("");
+ 		scompile("Dx=$1;Dy=$2;Dz=$3;", NULL, 0);
+ 		scompile("Nx=$4;Ny=$5;Nz=$6;", NULL, 0);
+ 		scompile("Px=$7;Py=$8;Pz=$9;", NULL, 0);
+@@ -81,12 +81,12 @@ getfunc(	/* get function for this modifi
+ 		goto memerr;
+ 	i = strlen(arg[ff]);			/* set up context */
+ 	if (i == 1 && arg[ff][0] == '.')
+-		setcontext(f->ctx = "");	/* "." means no file */
++		my_setcontext(f->ctx = "");	/* "." means no file */
+ 	else {
+ 		strcpy(sbuf,arg[ff]);		/* file name is context */
+ 		if (i > LCALSUF && !strcmp(sbuf+i-LCALSUF, CALSUF))
+ 			sbuf[i-LCALSUF] = '\0';	/* remove suffix */
+-		setcontext(f->ctx = savestr(sbuf));
++		my_setcontext(f->ctx = savestr(sbuf));
+ 		if (!vardefined(REFVNAME)) {	/* file loaded? */
+ 			loadfunc(arg[ff]);
+ 			varset(REFVNAME, '=', 1.0);
+@@ -150,7 +150,7 @@ freefunc(			/* free memory associated wi
+ 	for (i = 0; f->ep[i] != NULL; i++)
+ 		epfree(f->ep[i]);
+ 	if (f->ctx[0]) {			/* done with definitions */
+-		setcontext(f->ctx);
++		my_setcontext(f->ctx);
+ 		i = varvalue(REFVNAME)-.5;	/* reference_count-- */
+ 		if (i > 0)
+ 			varset(REFVNAME, '=', (double)i);
+@@ -179,7 +179,7 @@ setfunc(			/* set channels for function 
+ 	if ((f = (MFUNC *)m->os) == NULL)
+ 		objerror(m, CONSISTENCY, "setfunc called before getfunc");
+ 					/* set evaluator context */
+-	setcontext(f->ctx);
++	my_setcontext(f->ctx);
+ 					/* check to see if matrix set */
+ 	if (m == fobj && r->rno == lastrno)
+ 		return(0);
