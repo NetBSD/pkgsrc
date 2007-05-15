@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/02/24 21:06:00 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/15 13:28:22 obache Exp $
 
 --- greed.c.orig	2002-07-30 22:03:43.000000000 +0000
 +++ greed.c
@@ -22,3 +22,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/02/24 21:06:00 wiz Exp $
  	int attribs[9];
  #ifdef A_COLOR
  	char *colors;
+@@ -276,7 +277,7 @@ char *argv[];
+ 						init_pair(cp-colors+1,
+ 							strchr(cnames, tolower(*cp))-cnames,
+ 							COLOR_BLACK);
+-						attribs[cp-colors]=COLOR_PAIR(cp-colors+1);
++						attribs[cp-colors]=COLOR_PAIR((cp-colors+1));
+ 						if (isupper(*cp))
+ 							attribs[cp-colors] |= A_BOLD;
+ 					}
