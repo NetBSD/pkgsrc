@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.2.2 2007/05/15 22:30:57 salo Exp $
+
+--- src/iostream.c.orig	1998-11-25 10:06:10.000000000 +0200
++++ src/iostream.c
+@@ -233,7 +233,7 @@ js_iostream_read (JSIOStream *stream, vo
+ 
+ 	  stream->bufpos += got;
+ 	  size -= got;
+-	  (unsigned char *) ptr += got;
++	  ptr = (unsigned char *) ptr + got;
+ 	  total += got;
+ 	}
+       else
+@@ -290,7 +290,7 @@ js_iostream_write (JSIOStream *stream, v
+       stream->data_in_buf += space;
+       total += space;
+       size -= space;
+-      (unsigned char *) ptr += space;
++      ptr = (unsigned char *) ptr + space;
+ 
+       /* Now the buffer contains buffered write data. */
+       stream->writep = 1;
