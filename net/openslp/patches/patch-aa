@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2007/04/03 13:25:16 adam Exp $
+$NetBSD: patch-aa,v 1.6.2.1 2007/05/15 16:10:15 salo Exp $
 
---- configure.in.orig	2007-04-03 14:33:20.000000000 +0200
+--- configure.in.orig	2005-02-15 21:06:02.000000000 +0100
 +++ configure.in
-@@ -130,7 +130,6 @@ if test X"$GCC" = X"yes"; then        
+@@ -130,7 +130,7 @@ if test X"$GCC" = X"yes"; then        
         CFLAGS="$CFLAGS -Werror"
      fi
      if test X"$debug" = X"no"; then 
 -       OPTFLAGS="-O3"
++	OPTFLAGS=""
      fi
      
  elif $CC -V 2>&1 | grep "WorkShop Compilers"; then
