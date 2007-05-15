@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2007/02/22 19:27:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37.2.1 2007/05/15 22:19:53 salo Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -71,7 +71,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 
 .if ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=--without-tcsetpgrp
-.elif ${OPSYS} == "IRIX"
+.elif ${OPSYS} == "IRIX" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=--with-tcsetpgrp
 .endif
 

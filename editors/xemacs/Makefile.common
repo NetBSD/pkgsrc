@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2007/02/15 14:27:48 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18.2.1 2007/05/15 22:19:58 salo Exp $
 
 DISTNAME=	xemacs-21.4.17
 CATEGORIES=	editors
@@ -70,6 +70,10 @@ WITH_DIALOGS= \
 .  if !exists(/usr/demo/SOUND/libaudio.a) && !exists(/usr/demo/SOUND/lib/libaudio.a)
 CONFIGURE_ARGS+=	--with_sound=none
 .  endif
+.endif
+
+.if ${OPSYS} == "DragonFly" && exists(/usr/lib/crtbegin.o)
+CPPFLAGS+=	-DDFLY_PRE_17_CRT
 .endif
 
 .if defined(MANZ)

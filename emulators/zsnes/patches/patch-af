@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.2.2.1 2007/05/15 22:19:51 salo Exp $
+
+--- tools/depbuild.cpp.orig	2007-04-16 15:40:03.000000000 +0000
++++ tools/depbuild.cpp
+@@ -24,6 +24,7 @@ This program generates dependencies for 
+ #include <iostream>
+ #include <string>
+ #include <cstdio>
++#include <unistd.h>
+ using namespace std;
+ 
+ #include "fileutil.h"
