@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/11/14 17:24:33 reed Exp $
+# $NetBSD: Makefile,v 1.3.4.1 2007/05/15 13:09:00 salo Exp $
 
 DISTNAME=	xf86-video-ati-6.6.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
