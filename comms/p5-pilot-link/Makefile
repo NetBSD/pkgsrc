@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2007/03/27 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/05/15 13:13:25 obache Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
 
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 
 COMMENT=		Perl bindings for pilot-link
 
@@ -29,6 +30,9 @@ SUBST_STAGE.progs=	post-patch
 SUBST_MESSAGE.progs=	Trim programs to build
 SUBST_FILES.progs=	src/Makefile.in
 SUBST_SED.progs=	-e s:@ENABLE_CONDUITS_TRUE@bin_PROGRAMS:@ENABLE_CONDUITS_TRUE@bin_PROGRAMSX:
+
+post-extract:
+	rm -f ${WRKSRC}/bindings/Perl/pm_to_blib
 
 #post-patch:
 #	cd ${WRKSRC} &&							\
