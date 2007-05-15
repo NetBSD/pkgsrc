@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.10 2007/05/15 13:09:22 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.11 2007/05/15 14:57:14 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -23,3 +23,5 @@ Pullup ticket 2080 - requested by ghen
 security update for postgresql
 Pullup ticket 2063 - requested by joerg
 vga restore fix for xf86-video-ati
+Pullup ticket 2066 - requested by obache
+build fix for snownews
