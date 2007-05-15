@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2007/05/15 23:10:05 agc Exp $
+
+--- src/ntfs-3g.c	2007/05/15 12:39:26	1.1
++++ src/ntfs-3g.c	2007/05/15 12:38:53
+@@ -2060,7 +2060,7 @@
+ 	struct fuse_args margs = FUSE_ARGS_INIT(0, NULL);
+ 	
+ 	/* The fuse_mount() options get modified, so we always rebuild it */
+-	if ((fuse_opt_add_arg(&margs, "") == -1 ||
++	if ((fuse_opt_add_arg(&margs, EXEC_NAME) == -1 ||
+ 	     fuse_opt_add_arg(&margs, "-o") == -1 ||
+ 	     fuse_opt_add_arg(&margs, parsed_options) == -1)) {
+ 		ntfs_log_error("Failed to set FUSE options.\n");
