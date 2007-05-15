@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2007/04/24 22:16:38 abs Exp $
+# $NetBSD: Makefile,v 1.53 2007/05/15 14:48:43 tron Exp $
 
 DISTNAME=	pkg_chk-1.85
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,6 +32,7 @@ do-build:
 	${SED} -e 's#@AWK@#${AWK}#g' \
 	  -e 's#@GREP@#${GREP}#g' \
 	  -e 's#@GZIP_CMD@#gzip#g' \
+	  -e 's#@ID@#${ID}#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${TMP_MAKECONF}#g' \
 	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
