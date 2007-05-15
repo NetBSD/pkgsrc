@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1061 2007/05/15 14:49:07 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1062 2007/05/15 19:41:14 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2032,3 +2032,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added finance/gnucash-current version 2.1.1 [wiz 2007-05-13]
 	Updated comms/p5-pilot-link to 0.12.2nb1 [obache 2007-05-15]
 	Updated pkgtools/pkg_chk to 1.85nb5 [tron 2007-05-15]
+	Updated textproc/raptor to 1.4.15 [heinz 2007-05-15]
+	Added textproc/liblrdf version 0.4.0 [heinz 2007-05-15]
