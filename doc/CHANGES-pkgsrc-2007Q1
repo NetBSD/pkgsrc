@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.15 2007/05/15 22:29:37 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.16 2007/05/15 22:31:17 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -33,3 +33,5 @@ Pullup ticket 2075 - requested by joerg
 various DragonFly portability and modular X.org fixes
 Pullup ticket 2076 - requested by rillig
 BUILD_INFO infrastructure fix
+Pullup ticket 2082 - requested by rillig
+gcc4 build fix for js
