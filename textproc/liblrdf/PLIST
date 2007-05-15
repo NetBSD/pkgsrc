@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/15 19:25:31 heinz Exp $
+include/lrdf.h
+include/lrdf_types.h
+lib/liblrdf.la
+lib/pkgconfig/lrdf.pc
+share/ladspa/rdf/ladspa.rdfs
+@dirrm share/ladspa/rdf
+@dirrm share/ladspa
