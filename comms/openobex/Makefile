@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/12/19 18:09:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/05/15 13:11:57 xtraeme Exp $
 #
 
 DISTNAME=	openobex-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
@@ -22,7 +22,8 @@ PKGCONFIG_OVERRIDE=	openobex.pc.in
 SUBST_CLASSES+=		bt
 SUBST_STAGE.bt=		post-patch
 SUBST_FILES.bt=		include/obex.h
-SUBST_SED.bt=		-e "s|ifndef SOL_RFCOMM|ifdef SOL_RFCOMM|"
+SUBST_SED.bt=		-e "s|\#ifndef SOL_RFCOMM|\#ifdef __NetBSD__|"
+SUBST_SED.bt+=		-e "s|typedef char\* bdaddr_t\;|\#include \<bluetooth.h\>|"
 SUBST_MESSAGE.bt=	Fixing bluetooth detection.
 .endif
 
