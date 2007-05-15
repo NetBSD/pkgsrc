@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.12 2007/05/15 15:53:31 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.13 2007/05/15 16:10:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -27,3 +27,5 @@ Pullup ticket 2066 - requested by obache
 build fix for snownews
 Pullup ticket 2068 - requested by heinz
 esniper update
+Pullup ticket 2071 - requested by dmcmahill
+portability fix for openslp
