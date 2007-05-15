@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/15 19:25:31 heinz Exp $
+
+SHA1 (liblrdf-0.4.0.tar.gz) = 17ce55f692bc52ed12605091b99106255f964b5f
+RMD160 (liblrdf-0.4.0.tar.gz) = 2cb371c99552ac3045b72e20786494575ded37d8
+Size (liblrdf-0.4.0.tar.gz) = 336959 bytes
