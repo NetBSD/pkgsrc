@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.13 2007/05/15 16:10:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.14 2007/05/15 22:20:36 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -29,3 +29,5 @@ Pullup ticket 2068 - requested by heinz
 esniper update
 Pullup ticket 2071 - requested by dmcmahill
 portability fix for openslp
+Pullup ticket 2075 - requested by joerg
+various DragonFly portability and modular X.org fixes
