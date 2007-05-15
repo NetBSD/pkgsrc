@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/02/20 20:46:20 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.14.2.1 2007/05/15 23:42:39 salo Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -226,6 +226,7 @@ lib/php/.lock
 @exec ${MKDIR} %D/lib/php/.registry/.channel.__uri
 @exec ${MKDIR} %D/lib/php/.registry/.channel.pecl.php.net
 lib/php/.registry/archive_tar.reg
+lib/php/.registry/structures_graph.reg
 lib/php/.registry/console_getopt.reg
 lib/php/.registry/pear.reg
 lib/php/Archive/Tar.php
@@ -316,6 +317,10 @@ lib/php/PEAR/Task/Windowseol/rw.php
 lib/php/PEAR/Validate.php
 lib/php/PEAR/Validator/PECL.php
 lib/php/PEAR/XMLParser.php
+lib/php/Structures/Graph.php
+lib/php/Structures/Graph/Manipulator/AcyclicTest.php
+lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
+lib/php/Structures/Graph/Node.php
 lib/php/System.php
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
@@ -330,9 +335,39 @@ lib/php/build/scan_makefile_in.awk
 lib/php/build/shtool
 lib/php/data/PEAR/package.dtd
 lib/php/data/PEAR/template.spec
+lib/php/data/Structures_Graph/LICENSE
+lib/php/data/Structures_Graph/genpackage.xml.pl
+lib/php/data/Structures_Graph/package.sh
+lib/php/data/Structures_Graph/publish.sh
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
+lib/php/doc/PEAR/INSTALL
+lib/php/doc/PEAR/README
+lib/php/doc/Structures_Graph/docs/generate.sh
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_AcyclicTest.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Manipulator_TopologicalSorter.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/Structures_Graph_Node.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_AcyclicTest_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Manipulator_TopologicalSorter_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_Node_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/_Structures_Graph_php.html
+lib/php/doc/Structures_Graph/docs/html/Structures_Graph/tutorial_Structures_Graph.pkg.html
+lib/php/doc/Structures_Graph/docs/html/classtrees_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/elementindex.html
+lib/php/doc/Structures_Graph/docs/html/elementindex_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/errors.html
+lib/php/doc/Structures_Graph/docs/html/index.html
+lib/php/doc/Structures_Graph/docs/html/li_Structures_Graph.html
+lib/php/doc/Structures_Graph/docs/html/media/banner.css
+lib/php/doc/Structures_Graph/docs/html/media/stylesheet.css
+lib/php/doc/Structures_Graph/docs/html/packages.html
+lib/php/doc/Structures_Graph/docs/html/todolist.html
+lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
 lib/php/pearcmd.php
 lib/php/peclcmd.php
+lib/php/test/Structures_Graph/tests/README
+lib/php/test/Structures_Graph/tests/all-tests.php
+lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
 libexec/cgi-bin/php
 man/man1/php-config.1
 man/man1/php.1
@@ -344,10 +379,22 @@ share/php/php.gif
 @dirrm share/examples/php
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
+@dirrm lib/php/doc/PEAR
+@dirrm lib/php/doc/Structures_Graph/docs/html/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/html/media
+@dirrm lib/php/doc/Structures_Graph/docs/html
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph
+@dirrm lib/php/doc/Structures_Graph/docs/tutorials
+@dirrm lib/php/doc/Structures_Graph/docs
+@dirrm lib/php/doc/Structures_Graph
 @dirrm lib/php/doc
 @dirrm lib/php/data/PEAR
+@dirrm lib/php/data/Structures_Graph
 @dirrm lib/php/data
 @dirrm lib/php/build
+@dirrm lib/php/Structures/Graph/Manipulator
+@dirrm lib/php/Structures/Graph
+@dirrm lib/php/Structures
 @dirrm lib/php/PEAR/Validator
 @dirrm lib/php/PEAR/Task/Windowseol
 @dirrm lib/php/PEAR/Task/Unixeol
@@ -369,6 +416,9 @@ share/php/php.gif
 @dirrm lib/php/OS
 @dirrm lib/php/Console
 @dirrm lib/php/Archive
+@dirrm lib/php/test/Structures_Graph/tests/testCase
+@dirrm lib/php/test/Structures_Graph/tests
+@dirrm lib/php/test/Structures_Graph
 @dirrm lib/php/.registry/.channel.pecl.php.net
 @dirrm lib/php/.registry/.channel.__uri
 @dirrm lib/php/.registry
