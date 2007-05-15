@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2.8.1 2007/05/15 22:19:50 salo Exp $
+
+--- Makefile.orig	2007-04-16 14:22:01.000000000 +0000
++++ Makefile
+@@ -68,7 +68,7 @@ CC = cc
+ # For Apollo, change -lX11 to -L/usr/X11/libX11
+ # For Solaris, add -L/usr/openwin/lib
+ # For Linux, use  
+-LIBS = -L/usr/X11R6/lib -lX11 -lm -lncurses -ltermcap
++LIBS = ${X11_LDFLAGS} ${LDFLAGS} -lX11 -lm -lncurses -ltermcap
+ #LIBS = -L/usr/X11R6/lib -lX11 -lm -lcurses -ltermcap
+ #LIBS = -lX11 -lm -lcurses -ltermcap
+ 

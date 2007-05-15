@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2007/03/24 20:10:08 adam Exp $
+$NetBSD: patch-aa,v 1.6.2.1 2007/05/15 22:19:51 salo Exp $
 
---- configure.orig	2007-01-25 01:51:21.000000000 +0100
+--- configure.orig	2007-01-25 00:51:21.000000000 +0000
 +++ configure
+@@ -3422,7 +3422,7 @@ case x$target in
+     CFLAGS="$CFLAGS -D__BEOS__"
+     NFLAGS="$NFLAGS -D__BEOS__ -f elf -DELF"
+     ;;
+-  *-*-*bsd*)
++  *-*-*bsd* | *-*-dragonfly*)
+     CFLAGS="$CFLAGS -D__BSDSDL__"
+     NFLAGS="$NFLAGS -D__BSDSDL__ -f elf -DELF"
+     ;;
 @@ -5233,7 +5233,7 @@ echo "$as_me: WARNING: If you intend to 
      CFLAGS="$CFLAGS -O3 -fomit-frame-pointer -fprefetch-loop-arrays -fforce-addr $STRIP -D__RELEASE__"
      NFLAGS="$NFLAGS -O99999999 -D__RELEASE__"

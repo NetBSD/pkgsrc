@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2006/04/28 16:55:10 joerg Exp $
+$NetBSD: distinfo,v 1.8.8.1 2007/05/15 22:19:56 salo Exp $
 
 SHA1 (rad3R6P1.tar.gz) = 71f46abd1c30be282a93237fa0c162d3bf0b1f99
 RMD160 (rad3R6P1.tar.gz) = 3bcf40518a57cdb5455264c83a3e206b67b3d1fa
@@ -26,3 +26,6 @@ SHA1 (patch-aq) = 3ce1e089c7a26c176cd725eab2e7ceae8c51e557
 SHA1 (patch-ar) = e2afaad398d61f152ce9a7f3ddf451547c359e13
 SHA1 (patch-as) = 9b7c6bef44a4f9640b7a30253522ffab425ffbac
 SHA1 (patch-at) = 34bf252c122727308ebaa47177afabbc888a4f6a
+SHA1 (patch-au) = 35660480163fb7444ebbdb1fee4ad1cebf866ef4
+SHA1 (patch-av) = 0bfd2ec0fb16f3c106a285b49f1cf48a29274fbb
+SHA1 (patch-aw) = 6b57d85e4c4ef4a3501f4a0263ef8a47fbac8958
