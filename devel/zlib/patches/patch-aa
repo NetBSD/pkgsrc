@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2007/01/13 13:50:11 schwarz Exp $
+$NetBSD: patch-aa,v 1.11 2007/05/15 19:39:12 heinz Exp $
 
---- Makefile.in.orig	2004-09-15 16:27:20.000000000 +0200
-+++ Makefile.in	2005-04-10 12:48:19.000000000 +0200
+--- Makefile.in.orig	2005-07-18 04:25:21.000000000 +0200
++++ Makefile.in
 @@ -16,7 +16,6 @@
  # To install in $HOME instead of /usr/local, use:
  #    make install prefix=$HOME
@@ -10,15 +10,19 @@ $NetBSD: patch-aa,v 1.10 2007/01/13 13:50:11 schwarz Exp $
  
  CFLAGS=-O
  #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
-@@ -54,7 +53,6 @@
+@@ -54,10 +53,9 @@ OBJA =
  
  TEST_OBJS = example.o minigzip.o
  
 -all: example$(EXE) minigzip$(EXE)
  
  check: test
- test: all
-@@ -77,11 +75,11 @@
+-test: all
++test: all example minigzip
+ 	@LD_LIBRARY_PATH=.:$(LD_LIBRARY_PATH) ; export LD_LIBRARY_PATH; \
+ 	echo hello world | ./minigzip | ./minigzip -d || \
+ 	  echo '		*** minigzip test FAILED ***' ; \
+@@ -77,19 +75,24 @@ match.o: match.S
  	mv _match.o match.o
  	rm -f _match.s
  
@@ -34,14 +38,17 @@ $NetBSD: patch-aa,v 1.10 2007/01/13 13:50:11 schwarz Exp $
 +	${LIBTOOL} --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -c $<
  
  example$(EXE): example.o $(LIBS)
- 	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS)
-@@ -90,6 +88,11 @@
- 	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS)
+-	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS)
++	${LIBTOOL} --mode=link ${CC} ${CPPFLAGS} ${CFLAGS} ${PKGSRC_LDFLAGS} -o $@ $>
+ 
+ minigzip$(EXE): minigzip.o $(LIBS)
+-	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS)
++	${LIBTOOL} --mode=link ${CC} ${CPPFLAGS} ${CFLAGS} ${PKGSRC_LDFLAGS} -o $@ $>
  
  install: $(LIBS)
-+	${BSD_INSTALL_DATA} zconf.h zlib.h ${PREFIX}/include
-+	${BSD_INSTALL_DATA} zlib.3 ${PREFIX}/${PKGMANDIR}/man3
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libz.la ${PREFIX}/lib
++	${BSD_INSTALL_DATA} zconf.h zlib.h ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} zlib.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libz.la ${DESTDIR}${PREFIX}/lib
 +
 +installold: $(LIBS)
  	-@if [ ! -d $(exec_prefix) ]; then mkdir -p $(exec_prefix); fi
