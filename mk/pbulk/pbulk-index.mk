@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.1 2007/05/09 23:33:52 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.2 2007/05/16 16:48:12 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -73,7 +73,7 @@ pbulk-index: pbulk-index-item
 # A second ODE for loop is used to close the shell for loops.
 #
 pbulk-index:
-	@${_PBULK_MULTI_NEEDED:@._t.@\
+	@set -e; ${_PBULK_MULTI_NEEDED:@._t.@\
 		for ${._t.} in ${_PBULK_SORTED_LIST.${._t.}}; do \
 			_PBULK_MULTI_VALUE_${._t.}=$$${._t.}; \
 			export _PBULK_MULTI_VALUE_${._t.}; \
