@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/12/15 13:09:58 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2007/05/16 12:56:48 obache Exp $
 
 Here is general notes for namazu2 package by pkgsrc.
 
@@ -39,6 +39,7 @@ Here is general notes for namazu2 package by pkgsrc.
    package, too.
 
    DocCat is a commercial product from Dehenken Limited.
-   See http://www.dehenken.co.jp/products/doccat/doccat.html in detail.
+   See http://www.dehenken.co.jp/products/products-01/products-dc01.html
+   in detail.
 
 ===========================================================================
