@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
 
 --- fuse/obexfs.c.orig	2006-01-19 15:46:43.000000000 +0100
-+++ fuse/obexfs.c	2007-05-14 09:28:37.000000000 +0200
++++ fuse/obexfs.c	2007-05-16 12:52:58.000000000 +0200
 @@ -26,6 +26,8 @@
  /* strndup */
  #define _GNU_SOURCE
@@ -23,7 +23,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
  #include <sys/types.h>
  #include <dirent.h>
  #include <signal.h>
-@@ -412,12 +418,20 @@
+@@ -49,7 +55,6 @@
+ 
+ #define UNUSED(x) x __attribute__((unused))
+ 
+-#define DEBUGOUPUT
+ #ifdef DEBUGOUPUT
+ #define DEBUG(...) fprintf(stderr, __VA_ARGS__)
+ #else
+@@ -412,12 +417,20 @@
  	return 0;
  }
  
