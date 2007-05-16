@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -15,13 +15,6 @@ USE_TOOLS+=	autoconf gmake pkg-config
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
-
-.include "../../mk/bsd.prefs.mk"
-
-# puffs does not play well with libpthread, disable it.
-.if ${OPSYS} == "NetBSD"
-BUILDLINK_TRANSFORM+=	rm:-lpthread
-.endif
 
 .include "../../comms/obexftp/buildlink3.mk"
 .include "../../comms/openobex/buildlink3.mk"
