@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.18 2007/05/15 23:54:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.19 2007/05/16 21:07:54 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -43,3 +43,5 @@ Pullup ticket 2086 - requested by adrianp
 reset PKGREVISION after php update
 Pullup ticket 2083 - requested by hira
 build fix for openoffice2
+Pullup ticket 2087 - requested by wiz
+security update for png
