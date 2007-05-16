@@ -1,0 +1,2 @@
+This module is a perl extension for generating stand-alone or inline SVG
+(scaleable vector graphics) images using the W3C SVG xml recommendation.
