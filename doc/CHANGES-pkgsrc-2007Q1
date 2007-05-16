@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.19 2007/05/16 21:07:54 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.20 2007/05/16 21:21:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -45,3 +45,5 @@ Pullup ticket 2083 - requested by hira
 build fix for openoffice2
 Pullup ticket 2087 - requested by wiz
 security update for png
+Pullup ticket 2088 - requested by ghen
+security update for clamav
