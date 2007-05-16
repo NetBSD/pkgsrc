@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6334 2007/05/16 19:34:52 wiz Exp $
+$NetBSD: TODO,v 1.6335 2007/05/16 20:42:45 heinz Exp $
 
 Suggested new packages
 ======================
@@ -851,7 +851,6 @@ Suggested package updates
 	o p5-CGI-Application-4.06
 	o p5-CGI-Minimal-1.25
 	o p5-Cache-Memcached-1.15
-	o p5-Chart-2.4.1
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
@@ -1118,7 +1117,6 @@ Suggested package updates
 	o radiusd-cistron-1.6.8
 	o raine-0.50.3
 	o randread-0.2
-	o raptor-1.4.15
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
