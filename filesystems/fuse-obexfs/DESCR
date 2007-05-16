@@ -1,0 +1,4 @@
+FUSE based filesystem using ObexFTP (currently beta).
+
+Actually ObexFS is just a thin layer wrapping a basic ObexFTP
+client into FUSE callbacks.

@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+
+--- fuse/obexfs.c.orig	2006-01-19 15:46:43.000000000 +0100
++++ fuse/obexfs.c	2007-05-14 09:28:37.000000000 +0200
+@@ -26,6 +26,8 @@
+ /* strndup */
+ #define _GNU_SOURCE
+ 
++#include "config.h"
++
+ /* at least fuse v 2.2 is needed */
+ #define FUSE_USE_VERSION 22
+ #include <fuse.h>
+@@ -37,7 +39,11 @@
+ #include <fcntl.h>
+ #include <dirent.h>
+ #include <errno.h>
++#if HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#else
+ #include <sys/statfs.h>
++#endif
+ #include <sys/types.h>
+ #include <dirent.h>
+ #include <signal.h>
+@@ -412,12 +418,20 @@
+ 	return 0;
+ }
+ 
++#if HAVE_SYS_STATVFS_H
++static int ofs_statfs(const char *UNUSED(label), struct statvfs *st)
++#else
+ static int ofs_statfs(const char *UNUSED(label), struct statfs *st)
++#endif
+ {
+ 	int res;
+ 	int size, free;
+ 
++#if HAVE_SYS_STATVFS_H
++	memset(st, 0, sizeof(struct statvfs));
++#else
+ 	memset(st, 0, sizeof(struct statfs));
++#endif
+ 
+ 	res = ofs_connect();
+ 	if(res < 0)

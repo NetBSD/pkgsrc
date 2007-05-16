@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+
+SHA1 (obexfs-0.8.tar.gz) = 99c0c54212a2fc874107efbc9ad2ba7ad2b7ab37
+RMD160 (obexfs-0.8.tar.gz) = a3440c923c5f371261fffec91be2c909571ced1e
+Size (obexfs-0.8.tar.gz) = 76393 bytes
+SHA1 (patch-aa) = f2251b42fbb811deb842ec87d50d8d59fed5ca39
+SHA1 (patch-ab) = 63936898afa0cbf1c2e972d9aef9a6681de65f20
+SHA1 (patch-ac) = 42a1f77900e49f7e3afc9b3e935d66443b92ad69
