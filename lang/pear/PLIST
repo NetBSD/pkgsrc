@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 21:21:45 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/16 12:00:08 adrianp Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -145,6 +145,7 @@ lib/php/peclcmd.php
 lib/php/test/Structures_Graph/tests/README
 lib/php/test/Structures_Graph/tests/all-tests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
+share/examples/pear/pear.conf
 @dirrm lib/php/doc/Archive_Tar/docs
 @dirrm lib/php/doc/Archive_Tar
 @dirrm lib/php/doc/PEAR
@@ -192,3 +193,4 @@ lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
 @unexec ${RMDIR} %D/lib/php/.registry 2>/dev/null || ${TRUE}
 @dirrm lib/php/.channels/.alias
 @dirrm lib/php/.channels
+@dirrm share/examples/pear
