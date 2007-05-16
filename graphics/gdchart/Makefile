@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/05/16 15:33:59 heinz Exp $
 
 DISTNAME=	gdchart0.11.5dev
 PKGNAME=	gdchart-0.11.5
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.fred.net/brv/chart/ \
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.fred.net/brv/chart/
 COMMENT=	Easy to use, fast C API for creating charts and graphs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	include lib
@@ -25,18 +27,22 @@ post-patch:
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libgdchart.la \
-		 ${PREFIX}/lib
-	${LIBTOOL} -n --finish ${PREFIX}/lib
-	${INSTALL_DATA}	${WRKSRC}/gdchart.h ${PREFIX}/include
-	${INSTALL_DATA}	${WRKSRC}/gdc.h ${PREFIX}/include
-	${INSTALL_DATA}	${WRKSRC}/gdcpie.h ${PREFIX}/include
-	${INSTALL_DATA_DIR} -d -m 0755 ${PREFIX}/share/doc/gdchart
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/gdchart
-	${INSTALL_DATA_DIR} -d -m 0755 ${PREFIX}/share/examples/gdchart
-	${INSTALL_DATA} ${WRKSRC}/gdc_samp1.c ${PREFIX}/share/examples/gdchart
-	${INSTALL_DATA} ${WRKSRC}/gdc_samp2.c ${PREFIX}/share/examples/gdchart
+		 ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} -n --finish ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA}	${WRKSRC}/gdchart.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA}	${WRKSRC}/gdc.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA}	${WRKSRC}/gdcpie.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/share/doc/gdchart
+	${INSTALL_DATA} ${WRKSRC}/README.txt \
+		${DESTDIR}${PREFIX}/share/doc/gdchart
+	${INSTALL_DATA_DIR} -d -m 0755 \
+		${DESTDIR}${PREFIX}/share/examples/gdchart
+	${INSTALL_DATA} ${WRKSRC}/gdc_samp1.c \
+		${DESTDIR}${PREFIX}/share/examples/gdchart
+	${INSTALL_DATA} ${WRKSRC}/gdc_samp2.c \
+		${DESTDIR}${PREFIX}/share/examples/gdchart
 	${INSTALL_DATA} ${WRKSRC}/gdc_pie_samp.c \
-		${PREFIX}/share/examples/gdchart
+		${DESTDIR}${PREFIX}/share/examples/gdchart
 
 .include "../../graphics/gd/buildlink3.mk"
 
