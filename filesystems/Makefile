@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/05/04 23:49:32 agc Exp $
+# $NetBSD: Makefile,v 1.15 2007/05/16 10:33:26 xtraeme Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -14,6 +14,7 @@ SUBDIR+=	fuse-gphotofs
 SUBDIR+=	fuse-httpfs
 SUBDIR+=	fuse-lzofs
 SUBDIR+=	fuse-ntfs-3g
+SUBDIR+=	fuse-obexfs
 SUBDIR+=	fuse-pod
 SUBDIR+=	fuse-unionfs
 SUBDIR+=	py-fuse-bindings
