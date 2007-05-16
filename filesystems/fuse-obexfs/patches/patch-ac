@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+
+--- fuse/Makefile.in.orig	2006-02-08 22:19:29.000000000 +0100
++++ fuse/Makefile.in	2007-05-14 09:32:33.000000000 +0200
+@@ -118,13 +118,13 @@
+ 
+ obexautofs_SOURCES = obexautofs.c
+ 
+-bin_PROGRAMS = obexfs obexautofs
++bin_PROGRAMS = obexfs
+ subdir = fuse
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = obexfs$(EXEEXT) obexautofs$(EXEEXT)
++bin_PROGRAMS = obexfs$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_obexautofs_OBJECTS = obexautofs.$(OBJEXT)
+@@ -141,14 +141,14 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/obexautofs.Po ./$(DEPDIR)/obexfs.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/obexfs.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+-DIST_SOURCES = $(obexautofs_SOURCES) $(obexfs_SOURCES)
++DIST_SOURCES = $(obexfs_SOURCES)
+ DIST_COMMON = $(srcdir)/Makefile.in Makefile.am
+-SOURCES = $(obexautofs_SOURCES) $(obexfs_SOURCES)
++SOURCES = $(obexfs_SOURCES)
+ 
+ all: all-am
+ 
+@@ -196,7 +196,6 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/obexautofs.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/obexfs.Po@am__quote@
+ 
+ .c.o:
