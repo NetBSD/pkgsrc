@@ -1,0 +1,10 @@
+wdfs is a webdav filesystem with special features for accessing subversion
+repositories. it is based on fuse v2.5+ and neon v0.24.7+.
+
+features:
+ - generic webdav filesystem
+ - http redirect support
+ - https support
+ - file locking support (different modes)
+ - access to all revisions of a webdav exported subversion repository
+ - versioning filesystem for autoversioning enabled subversion repositories
