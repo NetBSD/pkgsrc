@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/16 19:56:37 agc Exp $
+
+--- src/Makefile.in	2007/03/11 22:35:55	1.1
++++ src/Makefile.in	2007/03/11 22:37:43
+@@ -56,9 +56,9 @@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -pthread
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = $(CCLD) -pthread $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(wdfs_SOURCES)
+ DIST_SOURCES = $(wdfs_SOURCES)
+ ETAGS = etags

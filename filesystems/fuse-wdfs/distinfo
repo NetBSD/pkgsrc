@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/16 19:56:37 agc Exp $
+
+SHA1 (wdfs-1.4.1.tar.gz) = 7748ef4f3d00a0910a2bc09c5901929408e8a990
+RMD160 (wdfs-1.4.1.tar.gz) = f2d682ba7840ba11ada3f0444fddb921890240fb
+Size (wdfs-1.4.1.tar.gz) = 109223 bytes
+SHA1 (patch-aa) = 3353a90a2a411f9633e26dd6a0df05d0c0ab083d
