@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1063 2007/05/16 04:56:42 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1064 2007/05/16 07:35:21 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/raptor to 1.4.15 [heinz 2007-05-15]
 	Added textproc/liblrdf version 0.4.0 [heinz 2007-05-15]
 	Updated editors/vim-share to 7.1.2 [martti 2007-05-16]
+	Updated mail/dovecot to 1.0.0nb1 [ghen 2007-05-16]
