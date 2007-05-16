@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/05 21:21:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/16 12:00:07 adrianp Exp $
 #
 
 DISTNAME=	PEAR-1.5.2
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -22,6 +23,9 @@ CONFLICTS+=	php<4.4.6nb1
 .elif ${PKG_PHP_VERSION} == "5"
 CONFLICTS+=	php<5.2.1nb2
 .endif
+
+CONF_FILES=	${PREFIX}/share/examples/pear/pear.conf \
+		${PKG_SYSCONFDIR}/pear.conf
 
 BUNDLE=		${WRKSRC}/install/go-pear-bundle
 
@@ -82,8 +86,11 @@ do-build:
 	${CP} ${WRKSRC}/PEAR.php ${BUNDLE}
 
 do-install:
-	${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pear
+	${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
 	${INSTALL_SCRIPT} ${WRKSRC}/pear.sh ${PREFIX}/bin/pear
+	${CP} ${PKG_SYSCONFDIR}/pear.conf ${PREFIX}/share/examples/pear
+	${RM} ${PKG_SYSCONFDIR}/pear.conf
 
 .if ${PKG_PHP_VERSION} == "4"
 BUILDLINK_API_DEPENDS.php+=	php>=4.4.6nb1
