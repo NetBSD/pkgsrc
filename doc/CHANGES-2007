@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1065 2007/05/16 09:01:35 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1066 2007/05/16 10:34:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0.0nb1 [ghen 2007-05-16]
 	Updated databases/rrdtool to 1.2.23 [martti 2007-05-16]
 	Updated net/mrtg to 2.15.2 [martti 2007-05-16]
+	Added filesystems/fuse-obexfs version 0.8 [xtraeme 2007-05-16]
