@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6333 2007/05/16 09:01:35 martti Exp $
+$NetBSD: TODO,v 1.6334 2007/05/16 19:34:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -526,6 +526,7 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-build-0.1.6
 	o gnome-games-2.18.1.1
+	o gnome-speech-0.4.12
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.4
 	o gnuradio-audio-jack-3.0.3
@@ -652,7 +653,7 @@ Suggested package updates
 	o kinput2-3.1
 	o kismet-2007.01.1b
 	o kmp-0.5
-	o kmymoney2-0.8.6
+	o kmymoney2-0.8.6 [pkg/36353]
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
 	o ksi-3.4.2
@@ -699,6 +700,7 @@ Suggested package updates
 	o libnids-1.21
 	o libole2-2.2.8
 	o libosip-3.0.2
+	o libprelude-0.9.14
 	o libshout-2.2.2
 	o libssh-0.2
 	o libstatgrab-0.14
