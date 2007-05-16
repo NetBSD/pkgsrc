@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/16 11:46:11 xtraeme Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -12,6 +12,8 @@ COMMENT=	FUSE based filesystem using ObexFTP
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
+
+BUILDLINK_API_DEPENDS.openobex+=	openobex>=1.3nb2
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
