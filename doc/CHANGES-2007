@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1068 2007/05/16 19:37:06 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1069 2007/05/16 19:59:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-obexfs version 0.8 [xtraeme 2007-05-16]
 	Updated lang/pear to 1.5.4 [adrianp 2007-05-16]
 	Updated graphics/png to 1.2.18 [wiz 2007-05-16]
+	Added filesystems/fuse-wdfs version 1.4.1 [agc 2007-05-16]
