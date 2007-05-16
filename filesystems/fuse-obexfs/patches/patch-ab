@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/16 10:32:52 xtraeme Exp $
+
+--- configure.in.orig	2006-02-08 22:18:40.000000000 +0100
++++ configure.in	2007-05-14 09:22:27.000000000 +0200
+@@ -7,6 +7,7 @@
+ AC_PROG_RANLIB
+ AC_PROG_INSTALL
+ 
++AC_CHECK_HEADERS(sys/statvfs.h)
+ PKG_CHECK_MODULES(OPENOBEX,openobex)
+ # PKG_CHECK_MODULES(OBEXFTP,obexftp)
+ 
