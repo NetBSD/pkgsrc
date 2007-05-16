@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1062 2007/05/15 19:41:14 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1063 2007/05/16 04:56:42 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2034,3 +2034,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_chk to 1.85nb5 [tron 2007-05-15]
 	Updated textproc/raptor to 1.4.15 [heinz 2007-05-15]
 	Added textproc/liblrdf version 0.4.0 [heinz 2007-05-15]
+	Updated editors/vim-share to 7.1.2 [martti 2007-05-16]
