@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/05/16 12:00:07 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/16 12:19:08 adrianp Exp $
 #
 
-DISTNAME=	PEAR-1.5.2
-PKGREVISION=	1
+DISTNAME=	PEAR-1.5.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -31,7 +30,7 @@ BUNDLE=		${WRKSRC}/install/go-pear-bundle
 
 # everything else that forms a part of the "base" PEAR install
 #
-PEAR_SRCS=		PEAR-1.5.2${EXTRACT_SUFX}
+PEAR_SRCS=		PEAR-1.5.4${EXTRACT_SUFX}
 DISTFILES+=		${PEAR_SRCS}
 EXTRACT_ONLY+=		${PEAR_SRCS}
 
