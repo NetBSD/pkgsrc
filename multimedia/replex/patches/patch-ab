@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/17 10:07:02 mlelstv Exp $
 
---- replex.c.orig	2005-03-27 21:54:23.000000000 +0200
+--- replex.c.orig	2007-02-26 08:46:54.000000000 +0100
 +++ replex.c
-@@ -39,6 +39,10 @@
+@@ -41,6 +41,10 @@
  #include "replex.h"
  #include "pes.h"
  
@@ -12,4 +12,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
 +
  static int replex_all_set(struct replex *rx);
  
- int replex_check_id(struct replex *rx, uint16_t id)
+ void overflow_exit(struct replex *rx)
