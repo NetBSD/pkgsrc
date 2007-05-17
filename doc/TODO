@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6340 2007/05/17 17:42:16 wiz Exp $
+$NetBSD: TODO,v 1.6341 2007/05/17 17:48:40 heinz Exp $
 
 Suggested new packages
 ======================
@@ -871,7 +871,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Digest-SHA-5.44
 	o p5-Email-Abstract-2.132
 	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
@@ -893,7 +892,6 @@ Suggested package updates
 	o p5-IO-Interface-1.03
 	o p5-IO-Socket-SSL-1.06
 	o p5-IO-Zlib-1.05
-	o p5-IP-Country-2.23
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
 	o p5-Locale-Codes-2.07
@@ -912,7 +910,6 @@ Suggested package updates
 	o p5-Module-Pluggable-3.5
 	o p5-Module-ScanDeps-0.72
 	o p5-Net-Amazon-S3-0.38
-	o p5-Net-DNS-SEC-0.14
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-Jabber-2.0
