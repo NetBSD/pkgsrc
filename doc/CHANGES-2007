@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1075 2007/05/17 22:38:17 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1076 2007/05/17 22:59:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2052,7 +2052,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-Digest-SHA to 5.44 [heinz 2007-05-17]
 	Updated security/p5-Net-DNS-SEC to 0.14 [heinz 2007-05-17]
 	Removed devel/g-wrap1 [wiz 2007-05-17]
-	Updated devel/g-wrap196 to 1.9.6nb2 [wiz 2007-05-17]
+	Added devel/g-wrap196 version 1.9.6nb2 [wiz 2007-05-17]
 	Updated finance/gnucash to 2.0.5nb4 [wiz 2007-05-17]
 	Updated devel/p5-Want to 0.14 [seb 2007-05-17]
 	Updated textproc/p5-Convert-ASN1 to 0.21 [seb 2007-05-17]
