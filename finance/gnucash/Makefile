@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.113 2007/05/05 00:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2007/05/17 17:41:27 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.0.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -49,8 +49,7 @@ GCONF2_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.g-wrap+=	g-wrap<1.9.7
-.include "../../devel/g-wrap/buildlink3.mk"
+.include "../../devel/g-wrap196/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
