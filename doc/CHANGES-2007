@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1072 2007/05/17 17:50:35 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1073 2007/05/17 20:31:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2054,3 +2054,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/g-wrap1 [wiz 2007-05-17]
 	Updated devel/g-wrap196 to 1.9.6nb2 [wiz 2007-05-17]
 	Updated finance/gnucash to 2.0.5nb4 [wiz 2007-05-17]
+	Updated devel/p5-Want to 0.14 [seb 2007-05-17]
