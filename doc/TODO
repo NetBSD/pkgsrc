@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6338 2007/05/17 14:43:27 taca Exp $
+$NetBSD: TODO,v 1.6339 2007/05/17 14:54:14 gdt Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,7 @@ Suggested package updates
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.7 [breaks gnucash-2.0.x]
+	o g-wrap-1.9.8 [breaks gnucash-2.0.x, gdt has update to commit]
 	o gaim-2.0 [now called pidgin]
 	o gaim-icb-20070203
 	o gamin-0.1.8
