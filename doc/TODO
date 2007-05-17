@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6335 2007/05/16 20:42:45 heinz Exp $
+$NetBSD: TODO,v 1.6336 2007/05/17 10:07:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,7 @@ Suggested package updates
 	o bioperl-1.5.0
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o bittorrent-5.0.5
-	o blender-2.43
+	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bos-2.0.1
@@ -408,6 +408,7 @@ Suggested package updates
 	o dejavu-ttf-2.16
 	o delegate-9.3.2
 	o devIL-1.6.7
+	o devhelp-0.14
 	o devtodo-0.1.19
 	o dhid-5.3
 	o diction-1.10
@@ -494,7 +495,7 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.10
-	o gcc-4.1.2
+	o gcc-4.2.0
 	o gcc-ssp-3.4.4
 	o gcin-1.3.4
 	o gcombust-0.1.55
