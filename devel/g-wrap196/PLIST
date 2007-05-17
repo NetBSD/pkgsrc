@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/17 17:39:04 wiz Exp $
+bin/g-wrap-config
+include/ffi.h
+include/ffitarget.h
+include/g-wrap-wct.h
+include/g-wrap/core-runtime.h
+include/g-wrap/ffi-support.h
+include/g-wrap/guile-compatibility.h
+include/g-wrap/guile-runtime.h
+include/g-wrap/guile-wct.h
+info/g-wrap.info
+lib/libffi.la
+lib/libgw-guile-gw-glib.la
+lib/libgw-guile-standard.la
+lib/libgwrap-core-runtime.la
+lib/libgwrap-guile-runtime.la
+lib/pkgconfig/g-wrap-2.0-guile.pc
+share/guile/site/g-wrap.scm
+share/guile/site/g-wrap/c-types.scm
+share/guile/site/g-wrap/compat.scm
+share/guile/site/g-wrap/enumeration.scm
+share/guile/site/g-wrap/guile.scm
+share/guile/site/g-wrap/guile/ws/standard.scm
+share/guile/site/g-wrap/gw-glib-spec.scm
+share/guile/site/g-wrap/gw-glib.scm
+share/guile/site/g-wrap/gw-standard-spec.scm
+share/guile/site/g-wrap/gw-wct-spec.scm
+share/guile/site/g-wrap/gw-wct.scm
+share/guile/site/g-wrap/gw/standard.scm
+share/guile/site/g-wrap/rti.scm
+share/guile/site/g-wrap/simple-type.scm
+share/guile/site/g-wrap/util.scm
+share/guile/site/g-wrap/ws/standard.scm
+@dirrm share/guile/site/g-wrap/ws
+@dirrm share/guile/site/g-wrap/gw
+@dirrm share/guile/site/g-wrap/guile/ws
+@dirrm share/guile/site/g-wrap/guile
+@dirrm share/guile/site/g-wrap
+@dirrm include/g-wrap
