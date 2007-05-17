@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/12 13:47:03 obache Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/17 15:38:26 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -31,10 +31,12 @@ SUBST_STAGE.confdir=	pre-configure
 SUBST_FILES.confdir=	Makefile.in
 SUBST_SED.confdir=	-e "s,\$$(sysconfdir),${EGDIR},"
 
-SUBST_CLASSES+=		rpaths
-SUBST_STAGE.rpaths=	pre-configure
-SUBST_FILES.rpaths=	mecab-config.in
-SUBST_SED.rpaths=	-e '/echo[ 	]*-L/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	configure
+SUBST_SED.pthread=	-e 's|-lpthread||g'
+
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
