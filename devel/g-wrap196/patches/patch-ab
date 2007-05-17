@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/17 17:39:04 wiz Exp $
+
+--- libffi/configure.orig	2005-03-01 18:52:45.000000000 +0100
++++ libffi/configure
+@@ -19903,6 +19903,7 @@ case "$host" in
+ i*86-*-linux*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-solaris*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-beos*) TARGET=X86; TARGETDIR=x86;;
++i*86-*-dragonfly*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-freebsd* | i*86-*-kfreebsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-netbsdelf* | i*86-*-knetbsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-win32*) TARGET=X86_WIN32; TARGETDIR=x86;;
+@@ -19920,7 +19921,7 @@ m68k-*-linux*) TARGET=M68K; TARGETDIR=m6
+ mips64*-*);;
+ mips-sgi-irix5.* | mips-sgi-irix6.*) TARGET=MIPS_IRIX; TARGETDIR=mips;;
+ mips*-*-linux*) TARGET=MIPS_LINUX; TARGETDIR=mips;;
+-powerpc*-*-linux* | powerpc-*-sysv*) TARGET=POWERPC; TARGETDIR=powerpc;;
++powerpc*-*-linux* | powerpc-*-netbsd* | powerpc-*-sysv*) TARGET=POWERPC; TARGETDIR=powerpc;;
+ powerpc-*-beos*) TARGET=POWERPC; TARGETDIR=powerpc;;
+ powerpc-*-darwin*) TARGET=POWERPC_DARWIN; TARGETDIR=powerpc;;
+ powerpc-*-aix*) TARGET=POWERPC_AIX; TARGETDIR=powerpc;;
+@@ -19929,7 +19930,7 @@ arm*-*-linux-*) TARGET=ARM; TARGETDIR=ar
+ arm*-*-netbsdelf* | arm*-*-knetbsd*-gnu) TARGET=ARM; TARGETDIR=arm;;
+ s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+ s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+-x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu | x86_64-*-netbsd*) TARGET=X86_64; TARGETDIR=x86;;
+ sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
+ sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
+ hppa-*-linux* | parisc-*-linux*) TARGET=PA; TARGETDIR=pa;;

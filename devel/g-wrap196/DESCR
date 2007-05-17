@@ -1,0 +1,20 @@
+G-Wrap is a tool (and Guile library) for generating function wrappers
+for inter-language calls. It currently only supports generating Guile
+wrappers for C functions.
+
+This package provides G-Wrap TNG (to be 2.0), with the following
+goals:
+
+  * Use GOOPS, for enhanced flexibility
+
+  * Get rid of the cruft that has accumulated, simplify where possible
+    without sacrificing features
+
+  * Be target-language agnostic; i.e. clean separation of the core and
+    e.g. the Guile-specific code. New languages (perhaps even
+    non-Schemes) should be easy to add.
+
+  * Offer the current (1.3.4+) wrapping API as a compatibility layer.
+
+This package contains the 1.9.6 version of g-wrap because it's
+the last one that's compatible with gnucash 2.0.x.

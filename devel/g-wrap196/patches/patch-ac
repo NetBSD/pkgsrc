@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/17 17:39:04 wiz Exp $
+
+--- configure.orig	2005-04-14 14:57:14.000000000 +0000
++++ configure
+@@ -21699,8 +21699,8 @@ else
+   if test "x$ac_cv_env_GLIB_CFLAGS_set" = "xset"; then
+ 	pkg_cv_GLIB_CFLAGS=$ac_cv_env_GLIB_CFLAGS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if $PKG_CONFIG --exists "glib" >/dev/null 2>&1; then
+-		pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "glib" 2>/dev/null`
++	if $PKG_CONFIG --exists "glib-2.0" >/dev/null 2>&1; then
++		pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -21718,8 +21718,8 @@ else
+   if test "x$ac_cv_env_GLIB_LIBS_set" = "xset"; then
+ 	pkg_cv_GLIB_LIBS=$ac_cv_env_GLIB_LIBS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if $PKG_CONFIG --exists "glib" >/dev/null 2>&1; then
+-		pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "glib" 2>/dev/null`
++	if $PKG_CONFIG --exists "glib-2.0" >/dev/null 2>&1; then
++		pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "glib-2.0" 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -21731,7 +21731,7 @@ echo "$as_me:$LINENO: result: $pkg_cv_GL
+ echo "${ECHO_T}$pkg_cv_GLIB_LIBS" >&6
+ 
+ if test $pkg_failed = yes; then
+-	GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib"`
++	GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0"`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$GLIB_PKG_ERRORS" 1>&5
+ 
