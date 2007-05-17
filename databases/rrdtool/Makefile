@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/05/16 09:01:10 martti Exp $
+# $NetBSD: Makefile,v 1.55 2007/05/17 14:41:09 taca Exp $
 
 DISTNAME=	rrdtool-1.2.23
 CATEGORIES=	databases graphics net
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-ruby
 
 PTHREAD_OPTS+=		require
 PERL5_CONFIGURE=	no
