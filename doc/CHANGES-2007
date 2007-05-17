@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1071 2007/05/17 17:42:16 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1072 2007/05/17 17:50:35 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2045,6 +2045,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Added graphics/p5-SVG version 2.33 [heinz 2007-05-16]
 	Added graphics/p5-GD-SVG version 0.28 [heinz 2007-05-16]
 	Updated graphics/p5-Chart to 2.4.1 [heinz 2007-05-16]
+	Updated mail/p5-Mail-DKIM to 0.25 [heinz 2007-05-17]
+	Updated mail/p5-razor-agents to 2.83 [heinz 2007-05-17]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.24 [heinz 2007-05-17]
+	Updated net/p5-IP-Country to 2.23 [heinz 2007-05-17]
+	Updated security/p5-Digest-SHA to 5.44 [heinz 2007-05-17]
+	Updated security/p5-Net-DNS-SEC to 0.14 [heinz 2007-05-17]
 	Removed devel/g-wrap1 [wiz 2007-05-17]
 	Updated devel/g-wrap196 to 1.9.6nb2 [wiz 2007-05-17]
 	Updated finance/gnucash to 2.0.5nb4 [wiz 2007-05-17]
