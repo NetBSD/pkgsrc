@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/02/15 22:22:19 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2007/05/17 16:40:18 heinz Exp $
 #
 
-DISTNAME=		Crypt-OpenSSL-RSA-0.22
+DISTNAME=		Crypt-OpenSSL-RSA-0.24
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ors
 CATEGORIES=		security perl5
@@ -14,6 +14,7 @@ COMMENT=		Perl5 wrapper module for the OpenSSL RSA functions
 DEPENDS+=		p5-Crypt-OpenSSL-Bignum-[0-9]*:../../security/p5-Crypt-OpenSSL-Bignum
 DEPENDS+=		p5-Crypt-OpenSSL-Random-[0-9]*:../../security/p5-Crypt-OpenSSL-Random
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Crypt/OpenSSL/RSA/.packlist
