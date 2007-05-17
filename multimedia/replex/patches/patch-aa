@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/17 10:07:02 mlelstv Exp $
 
---- Makefile.orig	2005-03-27 21:54:24.000000000 +0200
+--- Makefile.orig	2007-02-26 08:46:54.000000000 +0100
 +++ Makefile
-@@ -1,16 +1,17 @@
- VERSION = 0.1.4
+@@ -1,17 +1,17 @@
+ VERSION = 0.1.6.7
  DISTNAME = replex-$(VERSION)
  TARNAME = $(DISTNAME).tar.gz	
 -INCS   = -I..
-+INCS   =
- CFLAGS =  -g -Wall -O2 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+-CFLAGS =  -g -m32 -Wall -O6 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DVERSION=\"$(VERSION)\"
+-LDFLAGS = -m32
 -LIBS   = -L. 
++INCS   =
++CFLAGS =  -g -Wall -O2 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DVERSION=\"$(VERSION)\"
 +LIBS   =
  MFLAG  = -M
  OBJS = element.o pes.o mpg_common.o ts.o ringbuffer.o avi.o multiplex.o
@@ -23,7 +25,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
  
  
  .PHONY: depend clean install uninstall
-@@ -37,13 +38,15 @@ dist: $(SRC) $(HEADERS) Makefile
+@@ -38,14 +38,15 @@ dist: $(SRC) $(HEADERS) Makefile
  %.o:    %.c %.h
  	$(CC) -c $(CFLAGS) $(INCS) $(DEFINES) $<
  
@@ -38,9 +40,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/11 18:36:11 wiz Exp $
  uninstall:
 -	rm -f $(DESTDIR)/lib/libreplex.a
 -	rm -f $(DESTDIR)/bin/replex
+-
 +	rm -f $(PREFIX)/share/doc/replex/README
 +	rmdir $(PREFIX)/share/doc/replex
 +	rm -f $(PREFIX)/bin/replex
  
- 
  .depend: 
+ 	$(CC) $(DEFINES) $(MFLAG) $(SRC) $(CSRC) $(CPPSRC) $(INCS)> .depend
