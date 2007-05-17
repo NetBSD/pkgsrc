@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1074 2007/05/17 21:11:23 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1075 2007/05/17 22:38:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2056,3 +2056,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/gnucash to 2.0.5nb4 [wiz 2007-05-17]
 	Updated devel/p5-Want to 0.14 [seb 2007-05-17]
 	Updated textproc/p5-Convert-ASN1 to 0.21 [seb 2007-05-17]
+	Updated devel/p5-Module-CoreList to 2.11 [seb 2007-05-17]
