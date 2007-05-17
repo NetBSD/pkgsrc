@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/17 17:39:04 wiz Exp $
+
+--- g-wrap/Makefile.in.orig	2005-01-25 13:35:45.000000000 +0100
++++ g-wrap/Makefile.in
+@@ -352,6 +352,7 @@ uninstall-info-am:
+ install-nobase_gwrapmoduleDATA: $(nobase_gwrapmodule_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(gwrapmoduledir)" || $(mkdir_p) "$(DESTDIR)$(gwrapmoduledir)"
++	test -z "$(gwrapmoduledir)/ws" || $(mkdir_p) "$(DESTDIR)$(gwrapmoduledir)/ws"
+ 	@$(am__vpath_adj_setup) \
+ 	list='$(nobase_gwrapmodule_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
