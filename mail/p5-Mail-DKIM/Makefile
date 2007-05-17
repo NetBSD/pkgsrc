@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/04/22 09:00:21 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/17 10:00:45 heinz Exp $
 #
 
-DISTNAME=		Mail-DKIM-0.24
+DISTNAME=		Mail-DKIM-0.25
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5mdk
 CATEGORIES=		mail perl5
@@ -11,7 +11,7 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Mail-DKIM/
 COMMENT=		Perl5 module for DKIM-based mail-signing and -verifying
 
-DEPENDS+=		p5-Crypt-OpenSSL-RSA-[0-9]*:../../security/p5-Crypt-OpenSSL-RSA
+DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.22:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Error-[0-9]*:../../devel/p5-Error
