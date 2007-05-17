@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6336 2007/05/17 10:07:16 wiz Exp $
+$NetBSD: TODO,v 1.6337 2007/05/17 10:10:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,6 @@ Suggested package updates
 	o doxygen-1.5.2
 	o dpkg-1.13.25
 	o drscheme-360
-	o dspam-3.8.0
 	o dvd+rw-tools-7.0
 	o dvdrip-0.98.6
 	o dvdstyler-1.5beta5
@@ -529,7 +528,6 @@ Suggested package updates
 	o gnome-games-2.18.1.1
 	o gnome-speech-0.4.12
 	o gnu-crypto-2.1.0
-	o gnupg2-2.0.4
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
 	o gnuradio-audio-portaudio-3.0.3
@@ -738,7 +736,6 @@ Suggested package updates
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.20
-	o mecab-0.95
 	o memtestplus-1.70
 	o mergeant-0.66
 	o mesure-0.7.2
@@ -950,7 +947,6 @@ Suggested package updates
 	o p5-Text-Glob-0.08
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
-	o p5-Time-Local-1.17
 	o p5-Time-TAI64-2.11
 	o p5-WWW-Mechanize-1.24
 	o p5-Want-0.14
@@ -1030,8 +1026,6 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.18
-	o prelude-lml-0.9.9
-	o prelude-manager-0.9.8
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1150,8 +1144,6 @@ Suggested package updates
 	o samba-3.0.25
 	o sarg-2.2.31
 	o sather-1.2.2
-	o sawfish-1.3
-	o sawfish-replibs-1.3
 	o scamper-20070201
 	o scew-0.4.0
 	o sch-3.8.3
@@ -1227,7 +1219,6 @@ Suggested package updates
 	o ted-en-us-2.17
 	o tex-dhucs-3.1.5
 	o tfmxplay-1.1.6
-	o thunderbird-2.0
 	o tightvnc-1.3.9
 	o tile-0.7.4
 	o tileworld-1.3.0
