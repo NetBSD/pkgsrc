@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/05/15 15:51:06 obache Exp $
+# $NetBSD: Makefile,v 1.13 2007/05/18 07:54:24 obache Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
@@ -10,8 +10,6 @@ VTK_CMAKE_OPT=	-DPYTHON_INCLUDE_PATH:STRING=${PREFIX}/${PYINC} \
 		-DPYTHON_LIBRARY:STRING=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so \
 		-DVTK_WRAP_PYTHON:BOOL=ON \
 		-DCMAKE_BACKWARDS_COMPATIBILITY=2.2
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=			yes
@@ -27,7 +25,19 @@ VTK_PY_LIBS=	bin/libvtkCommonPython.so \
 		bin/libvtkRenderingPythonTkWidgets.so \
 		bin/libvtkHybridPython.so
 
-BUILD_TARGET=	default_target_Wrapping_Python
+BUILD_TARGET=	vtkpython/fast \
+		vtkWrapPython/fast \
+		vtkCommonPython/fast \
+		vtkFilteringPython/fast \
+		vtkImagingPython/fast \
+		vtkGraphicsPython/fast \
+		vtkIOPython/fast \
+		vtkRenderingPython/fast \
+		vtkRenderingPythonTkWidgets/fast \
+		vtkHybridPython/fast
+
+post-configure:
+	${INSTALL_LIB} ${PREFIX}/lib/vtk/*.so ${WRKSRC}/bin
 
 pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_TARGET}
@@ -36,11 +46,6 @@ pre-install:
 	for lib in ${VTK_PY_LIBS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$lib ${VTK_LIBDIR}; \
 	done
-
-# XXX this doesn't get linked with correct RPATH, and is unnecessary anyway
-post-install:
-	${RM} -f ${PREFIX}/bin/vtkpython
-	${LN} -s ${PYTHONBIN} ${PREFIX}/bin/vtkpython
 
 DEPENDS+=	vtk>=${VTK_VERSION}:../../graphics/vtk
 
