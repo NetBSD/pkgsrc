@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/05/18 10:03:31 peter Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	peter@pointless.nl
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find packages by package name in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/04/25 16:39:41 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/18 10:03:31 peter Exp $
 
 DISTNAME=	crawl-0.4
 PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://monkey.org/~provos/
 
-MAINTAINER=	peter@pointless.nl
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~provos/crawl/
 COMMENT=	Small and efficient HTTP crawler
 
