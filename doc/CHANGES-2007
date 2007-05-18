@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1078 2007/05/18 07:51:19 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1079 2007/05/18 09:21:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2059,3 +2059,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Module-CoreList to 2.11 [seb 2007-05-17]
 	Added graphics/tesseract version 1.04b [wiz 2007-05-18]
 	Updated graphics/vtk to 4.2.6nb4 [obache 2007-05-18]
+	Updated security/ap-modsecurity2 to 2.1.1 [adrianp 2007-05-18]
