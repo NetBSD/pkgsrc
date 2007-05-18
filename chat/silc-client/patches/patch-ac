@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2005/04/08 15:12:48 salo Exp $
+$NetBSD: patch-ac,v 1.9 2007/05/18 21:04:25 salo Exp $
 
---- irssi/src/perl/Makefile.in.orig	2005-04-06 15:04:38.000000000 +0200
-+++ irssi/src/perl/Makefile.in	2005-04-08 16:13:33.000000000 +0200
-@@ -284,7 +284,7 @@
+--- apps/irssi/src/perl/Makefile.in.orig	2006-01-06 14:46:28.000000000 +0100
++++ apps/irssi/src/perl/Makefile.in	2006-01-08 20:47:56.000000000 +0100
+@@ -281,7 +281,7 @@
  	-I$(top_srcdir)/src/fe-common/core \
  	-I$(top_srcdir)/src/fe-common/silc \
  	$(GLIB_CFLAGS) \
@@ -11,21 +11,3 @@ $NetBSD: patch-ac,v 1.8 2005/04/08 15:12:48 salo Exp $
  	-DPERL_USE_LIB=\""$(PERL_USE_LIB)"\" \
  	-DPERL_STATIC_LIBS=$(PERL_STATIC_LIBS) \
  	$(PERL_CFLAGS)
-@@ -707,7 +707,7 @@
- 	$(top_srcdir)/file2header.sh $(srcdir)/irssi-core.pl irssi_core_code > irssi-core.pl.h
- 
- all-local:
--	for dir in "$(perl_dirs)"; do \
-+	for dir in $(perl_dirs); do \
- 	  cd $$dir && \
- 	  if [ ! -f Makefile ]; then \
-             $(perlpath) Makefile.PL $(PERL_MM_PARAMS); \
-@@ -717,7 +717,7 @@
- 	done
- 
- install-exec-local:
--	for dir in "$(perl_dirs)"; do \
-+	for dir in $(perl_dirs); do \
- 	  cd $$dir && $(MAKE) install && cd ..; \
- 	done
- 
