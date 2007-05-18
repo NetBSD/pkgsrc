@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/05/18 21:26:54 joerg Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
-PKGNAME=	py-pcgi-2.2.2
-PKGREVISION=	2
+PKGNAME=	${PYPKGPREFIX}-pcgi-2.2.2
 CATEGORIES=	www python
 MASTER_SITES=	http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
