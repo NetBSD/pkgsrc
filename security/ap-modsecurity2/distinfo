@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/03/18 10:35:13 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2007/05/18 09:20:09 adrianp Exp $
 
-SHA1 (modsecurity-apache_2.1.0.tar.gz) = 1f3d9444c8bdf527ab1ca0eef6f93ea88922eff2
-RMD160 (modsecurity-apache_2.1.0.tar.gz) = ca16c4a6644d1f0b338486e72d5d52a5c48304b4
-Size (modsecurity-apache_2.1.0.tar.gz) = 650133 bytes
-SHA1 (patch-aa) = a5c3c76204789ea3e3ea63379a3bdd9c0dd8bf17
+SHA1 (modsecurity-apache_2.1.1.tar.gz) = 06527f16271628b882d375b4a0ad188d13dc7291
+RMD160 (modsecurity-apache_2.1.1.tar.gz) = 17e94c19d51f7e9e09ef435f81d696ec638aad44
+Size (modsecurity-apache_2.1.1.tar.gz) = 650607 bytes
+SHA1 (patch-aa) = 58909761e850fff12b989e68b70f418b6720c96d
