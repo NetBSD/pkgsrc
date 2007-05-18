@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2006/12/22 21:04:14 joerg Exp $
+# $NetBSD: options.mk,v 1.12 2007/05/18 14:24:17 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
-PKG_SUPPORTED_OPTIONS+= exim-appendfile-mbx exim-build-eximon
+PKG_SUPPORTED_OPTIONS+= exim-appendfile-mbx exim-auth-dovecot exim-build-eximon
 PKG_SUPPORTED_OPTIONS+= exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+= exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
 PKG_SUPPORTED_OPTIONS+= exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
@@ -24,6 +24,10 @@ LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILDIR=yes
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-mailstore)
 LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MAILSTORE=yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-auth-dovecot)
+LOCAL_MAKEFILE_OPTIONS+=AUTH_DOVECOT=yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-mbx)
