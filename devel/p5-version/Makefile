@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 12:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/05/18 20:21:50 heinz Exp $
 #
 
 DISTNAME=	version-0.70
@@ -10,6 +10,7 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~jpeacock/version/
 COMMENT=	Perl extension for Version Objects
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_MODULE_TYPE= Module::Build
 
