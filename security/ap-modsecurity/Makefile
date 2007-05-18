@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/21 12:36:07 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/18 10:23:16 adrianp Exp $
 #
 
 DISTNAME=	modsecurity-apache_1.9.4
@@ -12,13 +12,18 @@ COMMENT=	Intrusion detection and prevention engine for web applications
 
 .include "../../mk/apache.mk"
 
+PKG_APACHE_ACCEPTED=	apache13 apache2
+
 .if ${PKG_APACHE} == "apache2"
 APACHE_DIR=	apache2
 MOD_EXTN=	la
-.else
+.endif
+
+.if ${PKG_APACHE} == "apache13"
 APACHE_DIR=	apache1
 MOD_EXTN=	so
 .endif
+
 PTHREAD_OPTS+=	require
 
 .include "../../mk/pthread.buildlink3.mk"
