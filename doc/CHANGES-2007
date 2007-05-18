@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1076 2007/05/17 22:59:10 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1077 2007/05/18 06:41:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Want to 0.14 [seb 2007-05-17]
 	Updated textproc/p5-Convert-ASN1 to 0.21 [seb 2007-05-17]
 	Updated devel/p5-Module-CoreList to 2.11 [seb 2007-05-17]
+	Added graphics/tesseract version 1.04b [wiz 2007-05-18]
