@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2004/06/06 11:45:06 salo Exp $
+$NetBSD: patch-ab,v 1.12 2007/05/18 21:04:25 salo Exp $
 
---- irssi/Makefile.in.orig	2004-01-14 14:29:02.000000000 +0100
-+++ irssi/Makefile.in	2004-06-05 14:36:55.000000000 +0200
-@@ -258,7 +258,7 @@
+--- apps/irssi/Makefile.in.orig	2007-03-07 19:02:19.000000000 +0000
++++ apps/irssi/Makefile.in	2007-05-18 20:19:04.000000000 +0000
+@@ -282,7 +282,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  @BUILD_PLUGINS_TRUE@PLUGINS = plugins
  @BUILD_SERVERTEST_TRUE@SERVERTEST = servertest
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.11 2004/06/06 11:45:06 salo Exp $
  
  #
  # INCLUDE defines
-@@ -283,7 +283,7 @@
+@@ -297,7 +297,7 @@ INCLUDES = $(ADD_INCLUDES) $(SILC_CFLAGS
  #confdir = $(sysconfdir)
  confdir = $(silc_etcdir)
  conffile = silc.conf
