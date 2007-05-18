@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6344 2007/05/18 21:05:31 salo Exp $
+$NetBSD: TODO,v 1.6345 2007/05/18 21:14:31 salo Exp $
 
 Suggested new packages
 ======================
@@ -1157,7 +1157,6 @@ Suggested package updates
 	o shorten-3.6.1
 	o siag-3.6.1
 	o sign-1.0.7
-	o silc-server-1.0.4
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o silc-toolkit-1.0.2
 	o simh-3.7.0
