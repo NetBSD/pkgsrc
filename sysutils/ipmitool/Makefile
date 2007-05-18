@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/10 14:27:47 martti Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/18 19:33:26 heinz Exp $
 #
 
 DISTNAME=		ipmitool-1.8.8
@@ -9,6 +9,7 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://ipmitool.sourceforge.net/
 COMMENT=		Command-line utility for managing IPMI devices
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
