@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6345 2007/05/18 21:14:31 salo Exp $
+$NetBSD: TODO,v 1.6346 2007/05/18 23:29:08 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.3.14
-	o base-1.3.6
 	o base64-1.4
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -334,7 +333,6 @@ Suggested package updates
 	o bibtex2html-1.86
 	o biew-5.6.4
 	o bind-8.4.7
-	o bind-9.4.0
 	o binutils-2.17
 	o bioperl-1.5.0
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
@@ -1177,7 +1175,6 @@ Suggested package updates
 	o smokeping-2.1.0
 	o snd-9.0
 	o snes9x-1.51
-	o snort-2.6.1.5
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o source-highlight-2.6
