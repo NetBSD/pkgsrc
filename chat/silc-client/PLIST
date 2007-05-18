@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/09/22 08:09:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/05/18 21:04:25 salo Exp $
 bin/silc
 lib/silc-client/libsilc.la
 lib/silc-client/libsilcclient.la
@@ -15,7 +15,6 @@ man/man1/silc.1
 share/doc/silc-client/CHANGES
 share/doc/silc-client/COPYING
 share/doc/silc-client/CREDITS
-share/doc/silc-client/CodingStyle
 share/doc/silc-client/FAQ
 share/doc/silc-client/INSTALL
 share/doc/silc-client/README
