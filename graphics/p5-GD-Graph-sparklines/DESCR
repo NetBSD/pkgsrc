@@ -1,0 +1,5 @@
+"Sparklines are data-intense, design-simple word-sized graphics"
+  Edward Tufte, in "Beautiful Evidence"
+
+GD::Graph::sparklines is a Perl module for creating sparklines using the
+GD::Graph infrastructure.
