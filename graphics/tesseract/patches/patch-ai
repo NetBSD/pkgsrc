@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.1.1 2007/05/18 06:39:27 wiz Exp $
+
+--- configure.orig	2007-02-02 21:37:43.000000000 +0100
++++ configure
+@@ -7083,7 +7083,8 @@ else
+   if test "$cross_compiling" = yes; then
+   ac_cv_func_fork_works=cross
+ else
+-  cat >conftest.$ac_ext <<_ACEOF
++  cat confdefs.h >conftest.$ac_ext
++  cat >>conftest.$ac_ext <<_ACEOF
+ /* By Ruediger Kuhlmann. */
+       #include <sys/types.h>
+       #if HAVE_UNISTD_H
