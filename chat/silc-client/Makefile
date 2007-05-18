@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/02/22 19:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/05/18 21:04:25 salo Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -37,6 +36,7 @@ CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR:Q}
 CONFIGURE_ARGS+=	--with-terminfo
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--without-libtoolfix
 
 .include "../../mk/bsd.prefs.mk"
@@ -62,11 +62,11 @@ CONFIGURE_ARGS+=	--disable-asm
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/irssi/config.h ${SILC_CLIENT_CONFIG_H}
-	${INSTALL_DATA} ${WRKSRC}/irssi/irssi-config ${SILC_CLIENT_CONFIG}
+	${INSTALL_DATA} ${WRKSRC}/apps/irssi/config.h ${SILC_CLIENT_CONFIG_H}
+	${INSTALL_DATA} ${WRKSRC}/apps/irssi/irssi-config ${SILC_CLIENT_CONFIG}
 .if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/${PKGBASE}/scripts
-	${INSTALL_DATA} ${WRKSRC}/irssi/scripts/*.pl	\
+	${INSTALL_DATA} ${WRKSRC}/apps/irssi/scripts/*.pl	\
 		${PREFIX}/libexec/${PKGBASE}/scripts
 # Create PLIST fragment for Perl modules.
 #
