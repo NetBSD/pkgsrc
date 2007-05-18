@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2007/05/18 06:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.452 2007/05/18 19:20:45 heinz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -211,6 +211,7 @@ SUBDIR+=	ov519view
 SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
 SUBDIR+=	p5-GD
+SUBDIR+=	p5-GD-Graph-sparklines
 SUBDIR+=	p5-GD-SVG
 SUBDIR+=	p5-GDGraph
 SUBDIR+=	p5-GDGraph3d
