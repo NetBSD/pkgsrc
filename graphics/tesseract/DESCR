@@ -1,0 +1,9 @@
+This code is a raw OCR engine. It has NO PAGE LAYOUT ANALYSIS, NO
+OUTPUT FORMATTING, and NO UI. It can only process an image of a
+single column and create text from it. It can detect fixed pitch
+vs proportional text.  Having said that, in 1995, this engine was
+in the top 3 in terms of character accuracy, and it compiles and
+runs on both Linux and Windows. Another current limitation is that
+it only recognizes English and its character set is only US-ASCII.
+Training code IS included in the open source release however, and
+will be included in a future release.

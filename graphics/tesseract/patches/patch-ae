@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/05/18 06:39:27 wiz Exp $
+
+--- cutil/globals.h.orig	2006-06-17 00:17:07.000000000 +0200
++++ cutil/globals.h
+@@ -43,9 +43,11 @@ extern int acts[MAXPROC];        /*actio
+ extern int debugs[MAXPROC];      /*debug flags */
+ extern int plots[MAXPROC];       /*plot flags */
+ extern int corners[4];           /*corners of scan window */
++extern "C" {
+ extern int optind;               /*option index */
+ extern char *optarg;             /*option argument */
+                                  /*image file name */
++}
+ extern char imagefile[FILENAMESIZE];
+                                  /* main directory */
+ extern char directory[FILENAMESIZE];
