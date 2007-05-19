@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2007/03/17 15:43:15 taca Exp $
+$NetBSD: distinfo,v 1.53.2.1 2007/05/19 18:17:42 salo Exp $
 
 SHA1 (dfs_referral.diff) = 26d395028e2f7ae59d115a277864ef791bfc14b9
 RMD160 (dfs_referral.diff) = 4dcc1bf7eaf1452d9fb02884448dc88fb5ddeed3
@@ -6,6 +6,15 @@ Size (dfs_referral.diff) = 615 bytes
 SHA1 (directory_delete.diff) = ace447241ee40e495bb2fd065996d624c0ca615c
 RMD160 (directory_delete.diff) = 0cc49ade7403b22937d858e1fe7e9357d49f6be3
 Size (directory_delete.diff) = 2218 bytes
+SHA1 (samba-3.0.24-CVE-2007-2444.patch) = 0f94ecb0233a31b42896a36a4855e21bc49cb450
+RMD160 (samba-3.0.24-CVE-2007-2444.patch) = 2bd5ed0106441097fe50bab91a34257584e16950
+Size (samba-3.0.24-CVE-2007-2444.patch) = 3026 bytes
+SHA1 (samba-3.0.24-CVE-2007-2446.patch) = 31b76c825f932df351e85d4df48b219ce83b13ac
+RMD160 (samba-3.0.24-CVE-2007-2446.patch) = d9cba3b72dac65de0add57d56d97c2d68d7ea9bb
+Size (samba-3.0.24-CVE-2007-2446.patch) = 8426 bytes
+SHA1 (samba-3.0.24-CVE-2007-2447.patch) = 15e4061e4883c195101078bbcf772be9c23d75e2
+RMD160 (samba-3.0.24-CVE-2007-2447.patch) = 96af89d98f71bda674e92e57c0afb867dbda9252
+Size (samba-3.0.24-CVE-2007-2447.patch) = 6234 bytes
 SHA1 (samba-3.0.24.tar.gz) = 216020b58abca191b8146f76f98a8bda3508fcd3
 RMD160 (samba-3.0.24.tar.gz) = f208dca645d07a195169e005a50fb4c4879254eb
 Size (samba-3.0.24.tar.gz) = 17708128 bytes

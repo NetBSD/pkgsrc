@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.patches,v 1.3 2007/03/17 15:43:15 taca Exp $
+# $NetBSD: Makefile.patches,v 1.3.2.1 2007/05/19 18:17:41 salo Exp $
 #
 # This Makefile fragment describes the recommended patches for the
 # currently packaged version of Samba.  All recommended patches for
@@ -18,3 +18,12 @@ PATCHFILES=	share_security_ntlmv2.diff \
 		dfs_referral.diff \
 		directory_delete.diff
 PATCH_DIST_STRIP= -p2
+
+.for CVE_PATCH in samba-3.0.24-CVE-2007-2444.patch \
+  samba-3.0.24-CVE-2007-2446.patch \
+  samba-3.0.24-CVE-2007-2447.patch
+PATCHFILES+=		${CVE_PATCH}
+SITES.${CVE_PATCH}=	http://www.samba.org/samba/ftp/patches/security/
+.endfor
+
+PATCH_DIST_STRIP.samba-3.0.24-CVE-2007-2447.patch=	-p1
