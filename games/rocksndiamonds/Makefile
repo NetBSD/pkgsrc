@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/03/18 18:29:38 adam Exp $
+# $NetBSD: Makefile,v 1.35 2007/05/19 22:36:11 heinz Exp $
 
 DISTNAME=	rocksndiamonds-3.2.3
 CATEGORIES=	games x11
@@ -8,9 +8,11 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban
 
+PKG_DESTDIR_SUPPORT=	# wrong permissions in +INSTALL script
+
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man6
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man6
 
 PKG_GROUPS+=	${GAMEGRP}
 PKG_USERS+=	${GAMEOWN}:${GAMEGRP}
@@ -58,21 +60,23 @@ MAKE_FLAGS+=	X11_LIBS=-lX11
 .include "options.mk"
 
 do-install:
-	${INSTALL_GAME} ${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
+	${INSTALL_GAME} ${WRKSRC}/rocksndiamonds ${DESTDIR:Q}${PREFIX:Q}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 \
-		${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
-	${INSTALL_DATA_DIR} ${SHAREDIR}
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man6/rocksndiamonds.6
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${SHAREDIR:Q}
 	# auto-generated PLIST
 	rm -f ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
 	set -e;								\
 	cd ${WRKSRC} &&							\
 	for d in sounds graphics levels music; do 			\
 		find "$${d}" -type d -print | { while read subdir; do	\
-			${INSTALL_DATA_DIR}  ${SHAREDIR}/"$${subdir}";	\
+			${INSTALL_DATA_DIR} 				\
+				${DESTDIR:Q}${SHAREDIR:Q}/"$${subdir}";	\
 			${ECHO} "@dirrm ${SHARESUBDIR}/$${subdir}";	\
 		done ; } | sort -r >> ${WRKDIR}/PLIST.D;		\
 		find "$${d}" -type f -print | while read f; do		\
-			${INSTALL_DATA} "$${f}" ${SHAREDIR}/"$${f}";	\
+			${INSTALL_DATA} "$${f}"				\
+				${DESTDIR:Q}${SHAREDIR:Q}/"$${f}";	\
 			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F;\
 		done ;							\
 	done
