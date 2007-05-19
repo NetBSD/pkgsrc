@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/19 12:39:30 wiz Exp $
+
+--- po/Makefile.in.in.orig	2007-05-19 11:00:21.000000000 +0000
++++ po/Makefile.in.in
+@@ -30,7 +30,7 @@ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+-mkinstalldirs = $(SHELL) @install_sh@ -d
++mkinstalldirs = @install_sh@ -d
+ mkdir_p = @mkdir_p@
+ 
+ GMSGFMT_ = @GMSGFMT@
