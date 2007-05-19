@@ -1,28 +1,29 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/27 12:04:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/05/19 01:24:26 xtraeme Exp $
 bin/openmsx
 openmsx/bin/openmsx
 openmsx/doc/AUTHORS
 openmsx/doc/GPL
 openmsx/doc/README
-openmsx/doc/after-bussum-FAQ.txt
 openmsx/doc/cbios.txt
-openmsx/doc/commands.txt
 openmsx/doc/exampleconfigs.xml
-openmsx/doc/manual/cartnotfound.png
+openmsx/doc/manual/commands.html
 openmsx/doc/manual/compile.html
+openmsx/doc/manual/diskmanipulator.html
 openmsx/doc/manual/faq.html
 openmsx/doc/manual/index.html
 openmsx/doc/manual/manual-minty.css
 openmsx/doc/manual/manual-purple.css
 openmsx/doc/manual/manual.css
-openmsx/doc/manual/nocartfound.png
+openmsx/doc/manual/nocartfound021.png
 openmsx/doc/manual/setup.html
 openmsx/doc/manual/user.html
+openmsx/doc/openmsx-control-xml.txt
 openmsx/doc/release-history.txt
 openmsx/doc/release-notes.txt
-openmsx/doc/using-diskmanipulator.txt
 openmsx/share/extensions/Checkmark_FM_Stereo_PAK/hardwareconfig.xml
 openmsx/share/extensions/Checkmark_FM_Stereo_PAK/roms/SHA1SUMS
+openmsx/share/extensions/DDX_3.0/hardwareconfig.xml
+openmsx/share/extensions/DDX_3.0/roms/SHA1SUMS
 openmsx/share/extensions/Konami_EC-702/hardwareconfig.xml
 openmsx/share/extensions/Konami_EC-702/roms/SHA1SUMS
 openmsx/share/extensions/Konami_SD-Snatcher_Sound_Cartridge/hardwareconfig.xml
@@ -33,8 +34,14 @@ openmsx/share/extensions/Microsol_CDX-2/hardwareconfig.xml
 openmsx/share/extensions/Microsol_CDX-2/roms/SHA1SUMS
 openmsx/share/extensions/Panasonic_FS-CA1/hardwareconfig.xml
 openmsx/share/extensions/Panasonic_FS-CA1/roms/SHA1SUMS
+openmsx/share/extensions/Panasonic_FS-FD1A/hardwareconfig.xml
+openmsx/share/extensions/Panasonic_FS-FD1A/roms/SHA1SUMS
 openmsx/share/extensions/Philips_NMS_1205/hardwareconfig.xml
 openmsx/share/extensions/Philips_NMS_1205/roms/SHA1SUMS
+openmsx/share/extensions/Philips_VY_0010/hardwareconfig.xml
+openmsx/share/extensions/Philips_VY_0010/roms/SHA1SUMS
+openmsx/share/extensions/Sony_HBD-50/hardwareconfig.xml
+openmsx/share/extensions/Sony_HBD-50/roms/SHA1SUMS
 openmsx/share/extensions/Sony_HBD-F1/hardwareconfig.xml
 openmsx/share/extensions/Sony_HBD-F1/roms/SHA1SUMS
 openmsx/share/extensions/Sony_HBI-55/hardwareconfig.xml
@@ -42,6 +49,7 @@ openmsx/share/extensions/Sony_HBK-30/hardwareconfig.xml
 openmsx/share/extensions/Sony_HBK-30/roms/SHA1SUMS
 openmsx/share/extensions/Toshiba_HX-MU900/hardwareconfig.xml
 openmsx/share/extensions/Toshiba_HX-MU900/roms/SHA1SUMS
+openmsx/share/extensions/advram/hardwareconfig.xml
 openmsx/share/extensions/audio/hardwareconfig.xml
 openmsx/share/extensions/audio2/hardwareconfig.xml
 openmsx/share/extensions/debugdevice/hardwareconfig.xml
@@ -67,9 +75,16 @@ openmsx/share/extensions/rs232/roms/SHA1SUMS
 openmsx/share/extensions/scc+/hardwareconfig.xml
 openmsx/share/extensions/scc/hardwareconfig.xml
 openmsx/share/extensions/slotexpander/hardwareconfig.xml
+openmsx/share/icons/openMSX-logo-128.png
+openmsx/share/icons/openMSX-logo-16.png
+openmsx/share/icons/openMSX-logo-32.png
+openmsx/share/icons/openMSX-logo-48.png
+openmsx/share/icons/openMSX-logo-64.png
 openmsx/share/init.tcl
 openmsx/share/keymaps/keymap.default
 openmsx/share/keymaps/keymap.rus2eng
+openmsx/share/machines/Al_Alamiah_AX170/hardwareconfig.xml
+openmsx/share/machines/Al_Alamiah_AX170/roms/SHA1SUMS
 openmsx/share/machines/Boosted_MSX2_EN/README
 openmsx/share/machines/Boosted_MSX2_EN/hardwareconfig.xml
 openmsx/share/machines/Boosted_MSX2_EN/roms/README
@@ -154,6 +169,8 @@ openmsx/share/machines/Panasonic_FS-A1WSX/hardwareconfig.xml
 openmsx/share/machines/Panasonic_FS-A1WSX/roms/SHA1SUMS
 openmsx/share/machines/Panasonic_FS-A1WX/hardwareconfig.xml
 openmsx/share/machines/Panasonic_FS-A1WX/roms/SHA1SUMS
+openmsx/share/machines/Philips_NMS_801/hardwareconfig.xml
+openmsx/share/machines/Philips_NMS_801/roms/SHA1SUMS
 openmsx/share/machines/Philips_NMS_8220/hardwareconfig.xml
 openmsx/share/machines/Philips_NMS_8220/roms/SHA1SUMS
 openmsx/share/machines/Philips_NMS_8245/hardwareconfig.xml
@@ -171,8 +188,8 @@ openmsx/share/machines/Philips_VG_8230/roms/SHA1SUMS
 openmsx/share/machines/Philips_VG_8235/hardwareconfig.xml
 openmsx/share/machines/Philips_VG_8235/roms/SHA1SUMS
 openmsx/share/machines/SHA1SUMS
-openmsx/share/machines/Sanyo_MPC100/hardwareconfig.xml
-openmsx/share/machines/Sanyo_MPC100/roms/SHA1SUMS
+openmsx/share/machines/Sanyo_MPC-100/hardwareconfig.xml
+openmsx/share/machines/Sanyo_MPC-100/roms/SHA1SUMS
 openmsx/share/machines/Sanyo_PHC-35J/hardwareconfig.xml
 openmsx/share/machines/Sanyo_PHC-35J/roms/SHA1SUMS
 openmsx/share/machines/Sanyo_PHC-70FD/hardwareconfig.xml
@@ -204,28 +221,70 @@ openmsx/share/machines/Sony_HB-F900/hardwareconfig.xml
 openmsx/share/machines/Sony_HB-F900/roms/SHA1SUMS
 openmsx/share/machines/Sony_HB-F9P/hardwareconfig.xml
 openmsx/share/machines/Sony_HB-F9P/roms/SHA1SUMS
+openmsx/share/machines/Sony_HB-F9P_Russian/hardwareconfig.xml
+openmsx/share/machines/Sony_HB-F9P_Russian/roms/SHA1SUMS
 openmsx/share/machines/Spectravideo_SVI-728/hardwareconfig.xml
 openmsx/share/machines/Spectravideo_SVI-728/roms/SHA1SUMS
+openmsx/share/machines/Spectravideo_SVI-738/hardwareconfig.xml
+openmsx/share/machines/Spectravideo_SVI-738/roms/SHA1SUMS
 openmsx/share/machines/Toshiba_HX-10/hardwareconfig.xml
 openmsx/share/machines/Toshiba_HX-10/roms/SHA1SUMS
+openmsx/share/machines/Yamaha_AX350II/hardwareconfig.xml
+openmsx/share/machines/Yamaha_AX350II/roms/SHA1SUMS
+openmsx/share/machines/Yashica_YC-64/hardwareconfig.xml
+openmsx/share/machines/Yashica_YC-64/roms/SHA1SUMS
 openmsx/share/machines/msx1
 openmsx/share/machines/msx2
 openmsx/share/machines/msx2plus
 openmsx/share/machines/turbor
+openmsx/share/playball/README
+openmsx/share/scripts/about.tcl
+openmsx/share/scripts/autoplug.tcl
+openmsx/share/scripts/backwards_compatibility.tcl
 openmsx/share/scripts/cheat.tcl
 openmsx/share/scripts/convert_hardwareconfig.py
 openmsx/share/scripts/convert_hardwareconfig2.py
 openmsx/share/scripts/cpuregs.tcl
 openmsx/share/scripts/cycle.tcl
 openmsx/share/scripts/disasm.tcl
+openmsx/share/scripts/guess_title.tcl
 openmsx/share/scripts/load_icons.tcl
+openmsx/share/scripts/monitor.tcl
 openmsx/share/scripts/multi_screenshot.tcl
+openmsx/share/scripts/psg_log.tcl
+openmsx/share/scripts/reg_log.tcl
 openmsx/share/scripts/save_debuggable.tcl
-openmsx/share/scripts/showmem.tcl
+openmsx/share/scripts/showdebuggable.tcl
+openmsx/share/scripts/slot.tcl
+openmsx/share/scripts/soundlog.tcl
 openmsx/share/scripts/stack.tcl
+openmsx/share/scripts/text_echo.tcl
 openmsx/share/scripts/toggle_freq.tcl
-openmsx/share/scripts/trainers.tcl
+openmsx/share/scripts/trainer.tcl
+openmsx/share/scripts/trainerdefs.tclinclude
+openmsx/share/scripts/umrcallback.tcl
+openmsx/share/scripts/vdp.tcl
+openmsx/share/scripts/vdrive.tcl
 openmsx/share/settings.xml
+openmsx/share/shaders/HQ2xLiteOffset.dat
+openmsx/share/shaders/HQ2xOffsets.dat
+openmsx/share/shaders/HQ2xWeights.dat
+openmsx/share/shaders/HQ3xLiteOffset.dat
+openmsx/share/shaders/HQ3xOffsets.dat
+openmsx/share/shaders/HQ3xWeights.dat
+openmsx/share/shaders/HQ4xLiteOffset.dat
+openmsx/share/shaders/HQ4xOffsets.dat
+openmsx/share/shaders/HQ4xWeights.dat
+openmsx/share/shaders/hq.frag
+openmsx/share/shaders/hq.vert
+openmsx/share/shaders/hqlite.frag
+openmsx/share/shaders/hqlite.vert
+openmsx/share/shaders/scale2x.frag
+openmsx/share/shaders/scale2x.vert
+openmsx/share/shaders/simple.frag
+openmsx/share/shaders/simple.vert
+openmsx/share/shaders/tv.frag
+openmsx/share/shaders/tv.vert
 openmsx/share/skins/ConsoleBackground.png
 openmsx/share/skins/ConsoleBackground1.png
 openmsx/share/skins/ConsoleBackground2.png
@@ -287,7 +346,6 @@ openmsx/share/skins/set4/skin.tcl
 openmsx/share/skins/set4/turbo-off.png
 openmsx/share/skins/set4/turbo-on.png
 openmsx/share/softwaredb.xml
-openmsx/share/systemroms/.cvsignore
 openmsx/share/systemroms/README
 @dirrm openmsx/share/systemroms
 @dirrm openmsx/share/skins/set4
@@ -295,11 +353,21 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/skins/set1
 @dirrm openmsx/share/skins/none
 @dirrm openmsx/share/skins
+@dirrm openmsx/share/shaders
 @dirrm openmsx/share/scripts
+@dirrm openmsx/share/playball
+@dirrm openmsx/share/machines/Yashica_YC-64/roms
+@dirrm openmsx/share/machines/Yashica_YC-64
+@dirrm openmsx/share/machines/Yamaha_AX350II/roms
+@dirrm openmsx/share/machines/Yamaha_AX350II
 @dirrm openmsx/share/machines/Toshiba_HX-10/roms
 @dirrm openmsx/share/machines/Toshiba_HX-10
+@dirrm openmsx/share/machines/Spectravideo_SVI-738/roms
+@dirrm openmsx/share/machines/Spectravideo_SVI-738
 @dirrm openmsx/share/machines/Spectravideo_SVI-728/roms
 @dirrm openmsx/share/machines/Spectravideo_SVI-728
+@dirrm openmsx/share/machines/Sony_HB-F9P_Russian/roms
+@dirrm openmsx/share/machines/Sony_HB-F9P_Russian
 @dirrm openmsx/share/machines/Sony_HB-F9P/roms
 @dirrm openmsx/share/machines/Sony_HB-F9P
 @dirrm openmsx/share/machines/Sony_HB-F900/roms
@@ -331,8 +399,8 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/machines/Sanyo_PHC-70FD
 @dirrm openmsx/share/machines/Sanyo_PHC-35J/roms
 @dirrm openmsx/share/machines/Sanyo_PHC-35J
-@dirrm openmsx/share/machines/Sanyo_MPC100/roms
-@dirrm openmsx/share/machines/Sanyo_MPC100
+@dirrm openmsx/share/machines/Sanyo_MPC-100/roms
+@dirrm openmsx/share/machines/Sanyo_MPC-100
 @dirrm openmsx/share/machines/Philips_VG_8235/roms
 @dirrm openmsx/share/machines/Philips_VG_8235
 @dirrm openmsx/share/machines/Philips_VG_8230/roms
@@ -349,6 +417,8 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/machines/Philips_NMS_8245
 @dirrm openmsx/share/machines/Philips_NMS_8220/roms
 @dirrm openmsx/share/machines/Philips_NMS_8220
+@dirrm openmsx/share/machines/Philips_NMS_801/roms
+@dirrm openmsx/share/machines/Philips_NMS_801
 @dirrm openmsx/share/machines/Panasonic_FS-A1WX/roms
 @dirrm openmsx/share/machines/Panasonic_FS-A1WX
 @dirrm openmsx/share/machines/Panasonic_FS-A1WSX/roms
@@ -429,8 +499,11 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/machines/C-BIOS_MSX1
 @dirrm openmsx/share/machines/Boosted_MSX2_EN/roms
 @dirrm openmsx/share/machines/Boosted_MSX2_EN
+@dirrm openmsx/share/machines/Al_Alamiah_AX170/roms
+@dirrm openmsx/share/machines/Al_Alamiah_AX170
 @dirrm openmsx/share/machines
 @dirrm openmsx/share/keymaps
+@dirrm openmsx/share/icons
 @dirrm openmsx/share/extensions/slotexpander
 @dirrm openmsx/share/extensions/scc+
 @dirrm openmsx/share/extensions/scc
@@ -456,6 +529,7 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/extensions/debugdevice
 @dirrm openmsx/share/extensions/audio2
 @dirrm openmsx/share/extensions/audio
+@dirrm openmsx/share/extensions/advram
 @dirrm openmsx/share/extensions/Toshiba_HX-MU900/roms
 @dirrm openmsx/share/extensions/Toshiba_HX-MU900
 @dirrm openmsx/share/extensions/Sony_HBK-30/roms
@@ -463,8 +537,14 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/extensions/Sony_HBI-55
 @dirrm openmsx/share/extensions/Sony_HBD-F1/roms
 @dirrm openmsx/share/extensions/Sony_HBD-F1
+@dirrm openmsx/share/extensions/Sony_HBD-50/roms
+@dirrm openmsx/share/extensions/Sony_HBD-50
+@dirrm openmsx/share/extensions/Philips_VY_0010/roms
+@dirrm openmsx/share/extensions/Philips_VY_0010
 @dirrm openmsx/share/extensions/Philips_NMS_1205/roms
 @dirrm openmsx/share/extensions/Philips_NMS_1205
+@dirrm openmsx/share/extensions/Panasonic_FS-FD1A/roms
+@dirrm openmsx/share/extensions/Panasonic_FS-FD1A
 @dirrm openmsx/share/extensions/Panasonic_FS-CA1/roms
 @dirrm openmsx/share/extensions/Panasonic_FS-CA1
 @dirrm openmsx/share/extensions/Microsol_CDX-2/roms
@@ -475,6 +555,8 @@ openmsx/share/systemroms/README
 @dirrm openmsx/share/extensions/Konami_SD-Snatcher_Sound_Cartridge
 @dirrm openmsx/share/extensions/Konami_EC-702/roms
 @dirrm openmsx/share/extensions/Konami_EC-702
+@dirrm openmsx/share/extensions/DDX_3.0/roms
+@dirrm openmsx/share/extensions/DDX_3.0
 @dirrm openmsx/share/extensions/Checkmark_FM_Stereo_PAK/roms
 @dirrm openmsx/share/extensions/Checkmark_FM_Stereo_PAK
 @dirrm openmsx/share/extensions
