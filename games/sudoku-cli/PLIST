@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
+bin/sudoku-cli
+man/man6/sudoku-cli.6
+share/sudoku-cli/template

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
+
+SHA1 (sudoku-1.0.1.tgz) = ee5f8e392bd5fda758f982a793576ff9d24a15fd
+RMD160 (sudoku-1.0.1.tgz) = 77ddc4069c4736fda0285936ae9ecde47f9d46f8
+Size (sudoku-1.0.1.tgz) = 31576 bytes
+SHA1 (patch-aa) = 2bd5169bb9901ca54573cd2aecde46b582344692
+SHA1 (patch-ab) = 7e6a6d63cb3367e21d49ce7e2db613dd439b7197
