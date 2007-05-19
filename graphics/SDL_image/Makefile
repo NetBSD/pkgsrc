@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/05/19 22:23:56 heinz Exp $
 
 DISTNAME=	SDL_image-1.2.5
 CATEGORIES=	graphics devel
@@ -10,6 +10,7 @@ COMMENT=	Load images as SDL surfaces
 
 CONFLICTS=		SDL-image-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		YES
@@ -20,7 +21,7 @@ INSTALLATION_DIRS=	bin
 
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
-		${PREFIX}/bin
+		${DESTDIR:Q}${PREFIX:Q}/bin
 
 BUILDLINK_API_DEPENDS.SDL+=	SDL>=1.2.10
 .include "../../devel/SDL/buildlink3.mk"
