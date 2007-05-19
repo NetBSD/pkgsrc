@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2007/05/16 19:22:29 heinz Exp $
+# $NetBSD: Makefile,v 1.37 2007/05/19 13:42:37 heinz Exp $
 
-DISTNAME=	GD-2.30
+DISTNAME=	GD-2.35
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=	p5bd
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
@@ -16,10 +15,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.28
 
+USE_LANGUAGES=		c
+
 PERL5_PACKLIST=		auto/GD/.packlist
 PERL5_OPTIONS+=		threads
 
-MAKE_ENV+=		GD_LIBS=${LDFLAGS:M*:Q}
+MAKE_ENV+=		GD_LIBS=${LDFLAGS:Q}
 MAKE_PARAMS+=		-lib_gd_path=${BUILDLINK_PREFIX.gd}
 
 .include "../../graphics/gd/buildlink3.mk"
