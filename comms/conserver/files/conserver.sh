@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: conserver.sh,v 1.4 2004/07/10 22:35:32 salo Exp $
+# $NetBSD: conserver.sh,v 1.5 2007/05/19 14:05:03 wiz Exp $
 #
 # PROVIDE: conserver
 # REQUIRE: DAEMON
@@ -17,6 +17,7 @@ required_files="@PKG_SYSCONFDIR@/conserver.cf"
 pidfile="/var/run/conserver.pid"
 command_args="-d"              # _must_ start as daemon from rc.d;
                                # add more flags through ${${name}_flags}
+extra_commands="reload"
 
 if [ -f /etc/rc.subr ]
 then
