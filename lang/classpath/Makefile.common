@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/01/05 16:48:58 obache Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/05/19 14:07:49 wiz Exp $
 
 DISTNAME=		classpath-0.93
 CATEGORIES=		devel
@@ -15,6 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../lang/classpath/distinfo
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+UNLIMIT_RESOURCES+=	datasize
 
 # XXX this must be fixed as an optional build flag
 CONFIGURE_ARGS+=	--disable-gconf-peer
