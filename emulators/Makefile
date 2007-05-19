@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2007/03/21 16:11:26 tron Exp $
+# $NetBSD: Makefile,v 1.159 2007/05/19 12:40:31 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -61,6 +61,7 @@ SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
 SUBDIR+=	m1
 SUBDIR+=	makeppf
+SUBDIR+=	mednafen
 SUBDIR+=	minivmac
 SUBDIR+=	mmix
 SUBDIR+=	netbsd32_compat14
