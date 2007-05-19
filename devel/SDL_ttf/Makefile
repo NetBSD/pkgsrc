@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/12 16:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/05/19 22:18:13 heinz Exp $
 
 DISTNAME=	SDL_ttf-2.0.8
 CATEGORIES=	devel
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/release/
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_ttf/
 COMMENT=	Use TrueType fonts in your SDL applications
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
