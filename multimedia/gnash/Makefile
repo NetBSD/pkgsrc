@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/15 14:29:54 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/19 03:38:18 heinz Exp $
 #
 
 DISTNAME=		gnash-0.7.2
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnash/
 COMMENT=		GPL Flash movie player
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -19,7 +21,7 @@ CONFIGURE_ARGS+=	--enable-mp3
 USE_TOOLS+=		bash msgfmt pkg-config
 
 # /bin/sh finds a syntax error without line number
-CONFIG_SHELL=		${LOCALBASE}/bin/bash
+CONFIG_SHELL=		${TOOLS_BASH}
 
 .include "options.mk"
 
