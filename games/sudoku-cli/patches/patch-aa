@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/19 01:10:17 heinz Exp $
+
+--- Makefile.orig	2005-07-25 03:13:53.000000000 +0200
++++ Makefile
+@@ -7,6 +7,16 @@
+ OWN=-o bin
+ GRP=-g operator
+ 
++INSTALL_BIN?=install -s $(OWN) $(GRP) -m 755
++INSTALL_DATADIR?=install -d $(OWN) $(GRP) -m 755
++INSTALL_DATA?=install $(OWN) $(GRP) -m 644
++INSTALL_MAN?=install $(OWN) $(GRP) -m 644
++BINDIR?=/usr/bin
++SUDOKUNAME?=sudoku
++LIBDIR?=/usr/lib/sudoku
++MAN6DIR?=/usr/man/man6
++SHAREMAN6DIR?=/usr/share/man/man6
++
+ # Minix requires compilation flags for a clean compile
+ sudoku: sudoku.c
+ 	if [ -x /usr/bin/uname -a `/usr/bin/uname` = Minix ] ; then \
+@@ -19,16 +29,16 @@ clean:
+ # Simple support for alternate systems
+ install: sudoku sudoku.6
+ 	if [ -x /usr/bin/uname -a `/usr/bin/uname` = Minix ] ; then \
+-	install -s -S 8kw $(OWN) $(GRP) -m 755 sudoku /usr/bin/sudoku ; \
++	install -s -S 8kw $(OWN) $(GRP) -m 755 sudoku /usr/bin/${SUDOKUNAME} ; \
+ 	else \
+-	install -s $(OWN) $(GRP) -m 755 sudoku /usr/bin/sudoku ; \
++	${INSTALL_BIN} sudoku ${DESTDIR}${BINDIR}/${SUDOKUNAME} ; \
+ 	fi
+-	install -d $(OWN) $(GRP) -m 755 /usr/lib/sudoku
+-	install $(OWN) $(GRP) -m 644 template /usr/lib/sudoku/template
+-	if [ -d /usr/man/man6 ] ; then \
+-	install $(OWN) $(GRP) -m 644 sudoku.6 /usr/man/man6/sudoku.6 ; \
+-	elif [ -d /usr/share/man/man6 ] ; then \
+-	install $(OWN) $(GRP) -m 644 sudoku.6 /usr/share/man/man6/sudoku.6 ; \
++	${INSTALL_DATADIR} ${DESTDIR}${LIBDIR}
++	${INSTALL_DATA} template ${DESTDIR}${LIBDIR}/template
++	if [ -d ${DESTDIR}${MAN6DIR} ] ; then \
++	${INSTALL_MAN} sudoku.6 ${DESTDIR}${MAN6DIR}/${SUDOKUNAME}.6 ; \
++	elif [ -d ${DESTDIR}${SHAREMAN6DIR}  ] ; then \
++	${INSTALL_MAN} sudoku.6 ${DESTDIR}${SHAREMAN6DIR}/${SUDOKUNAME}.6 ; \
+ 	else \
+ 	echo Warning: Manual page not installed ; \
+ 	fi
