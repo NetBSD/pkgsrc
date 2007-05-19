@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/10/01 18:44:57 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/05/19 14:05:45 wiz Exp $
 
 DISTNAME=		rt-3.4.5
 PKGREVISION=		4
@@ -12,6 +12,7 @@ COMMENT=		Industrial-grade ticketing system
 .include "options.mk"
 
 USE_TOOLS+=	perl:run
+REPLACE_PERL+=	rt-dump-database rt-setup-database rt-test-dependencies
 
 # Core dependencies:
 DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
