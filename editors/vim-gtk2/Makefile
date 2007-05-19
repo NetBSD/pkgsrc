@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2006/11/13 17:56:38 reed Exp $
+# $NetBSD: Makefile,v 1.27 2007/05/19 00:11:59 heinz Exp $
 
 PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 GTK2 GUI
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../editors/vim-share/Makefile.common"
 
@@ -19,14 +21,19 @@ USE_TOOLS+=		pkg-config
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installvimbin
 
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+CHECK_INTERPRETER_SKIP+=${PKGMANDIR}/man1/gvim.1 ${PKGMANDIR}/man1/gview.1
+CHECK_INTERPRETER_SKIP+=${PKGMANDIR}/man1/rgvim.1 ${PKGMANDIR}/man1/rgview.1
+
 post-install:
 .for f in gvim.1 gview.1 rgvim.1 rgview.1
-	${RM} -f ${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
-	${LN} -s vim.1 ${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
+	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
+	${LN} -s vim.1 ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/${f:Q}
 .endfor
 .for f in gvim gview rgvim rgview rvim rview
-	${RM} -f ${PREFIX:Q}/bin/${f:Q}
-	${LN} -s vim ${PREFIX:Q}/bin/${f:Q}
+	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/bin/${f:Q}
+	${LN} -s vim ${DESTDIR:Q}${PREFIX:Q}/bin/${f:Q}
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
