@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2007/01/09 15:06:28 joerg Exp $
+# $NetBSD: Makefile,v 1.77 2007/05/19 22:48:52 wiz Exp $
 
 DISTNAME=	SDL-1.2.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -27,7 +27,7 @@ CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS"
 .  include "../../devel/binutils/buildlink3.mk"
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+BUILD_DEPENDS+=		yasm>=0.6.0:../../devel/yasm
 NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
 .else
