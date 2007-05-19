@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2007/04/05 16:29:38 drochner Exp $
+# $NetBSD: Makefile,v 1.58.2.1 2007/05/19 17:54:52 salo Exp $
 
 DISTNAME=	freetype-2.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
