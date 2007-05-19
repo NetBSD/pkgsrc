@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1085 2007/05/19 01:14:54 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1086 2007/05/19 01:25:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/snort to 2.6.1.5 [adrianp 2007-05-18]
 	Updated security/base to 1.3.6 [adrianp 2007-05-18]
 	Added games/sudoku-cli version 1.0.1 [heinz 2007-05-19]
+	Updated emulators/openmsx to 0.6.2 [xtraeme 2007-05-19]
