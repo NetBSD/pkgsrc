@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2006/07/16 22:37:49 seb Exp $
+$NetBSD: distinfo,v 1.17 2007/05/19 14:12:05 wiz Exp $
 
 SHA1 (dictd-1.9.15.tar.gz) = 081ea97a4a6a936855af30d9c2a31f5733985822
 RMD160 (dictd-1.9.15.tar.gz) = 4cdef7132855d4ef949ba7ceacbea16881e3ef5d
@@ -12,4 +12,4 @@ SHA1 (patch-ah) = d3453553e15858054bce4943a0316d485938806a
 SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
 SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b
 SHA1 (patch-ak) = ab11363903da1f173add59a132b347db9241345f
-SHA1 (patch-al) = 6925dbf41b2d099bb635aa08498cddb52b441759
+SHA1 (patch-al) = bb4e4757b17825fdc06534c7a70426e3c47fd945
