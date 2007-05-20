@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.853 2007/05/20 02:44:15 heinz Exp $
+# $NetBSD: Makefile,v 1.854 2007/05/20 15:48:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -6,7 +6,6 @@ COMMENT=	Development utilities
 SUBDIR+=	ArX
 SUBDIR+=	ArX2
 SUBDIR+=	ExmanIDE
-SUBDIR+=	GConf
 SUBDIR+=	GConf2
 SUBDIR+=	GConf2-ui
 SUBDIR+=	Gorm
@@ -60,7 +59,6 @@ SUBDIR+=	blib
 SUBDIR+=	bmake
 SUBDIR+=	boaconstructor
 SUBDIR+=	boehm-gc
-SUBDIR+=	bonobo
 SUBDIR+=	boost-build
 SUBDIR+=	boost-docs
 SUBDIR+=	boost-headers
@@ -160,7 +158,6 @@ SUBDIR+=	ftnchek
 SUBDIR+=	g-wrap
 SUBDIR+=	g-wrap196
 SUBDIR+=	gail
-SUBDIR+=	gal
 SUBDIR+=	gconfmm
 SUBDIR+=	gcvs
 SUBDIR+=	gdb
@@ -257,7 +254,6 @@ SUBDIR+=	libextractor
 SUBDIR+=	libffi
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgetopt
-SUBDIR+=	libglade
 SUBDIR+=	libglade2
 SUBDIR+=	libglademm
 SUBDIR+=	libgnome
@@ -344,7 +340,6 @@ SUBDIR+=	nsis
 SUBDIR+=	nspr
 SUBDIR+=	nspr-reference
 SUBDIR+=	nss
-SUBDIR+=	oaf
 SUBDIR+=	ocaml-findlib
 SUBDIR+=	ode
 SUBDIR+=	ogre
