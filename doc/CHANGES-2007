@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1095 2007/05/20 15:48:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1096 2007/05/20 15:49:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed print/gnome-print [wiz 2007-05-20]
 	Removed graphics/gdk-pixbuf-gnome [wiz 2007-05-20]
 	Removed devel/oaf [wiz 2007-05-20]
+	Added meta-pkgs/modular-xorg-apps version 1.0 [joerg 2007-05-20]
