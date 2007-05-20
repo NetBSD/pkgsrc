@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/05/11 16:48:55 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/20 13:35:55 tnn Exp $
 
 DISTNAME=	pkg_rolling-replace-0.04
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -44,7 +44,7 @@ do-extract: check-pkgsrc-patch
 do-install: check-pkgsrc-patch
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_rolling-replace.sh \
 		${PREFIX}/sbin/pkg_rolling-replace
-	${INSTALL_SCRIPT} ${FILESDIR}/pkg_rolling-replace.8 \
+	${INSTALL_MAN} ${FILESDIR}/pkg_rolling-replace.8 \
 		${PREFIX}/${PKGMANDIR}/man8/pkg_rolling-replace.8
 
 check-pkgsrc-patch:
