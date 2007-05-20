@@ -1,0 +1,12 @@
+SQLite is a small fast embedded SQL database engine.
+
+DBD::SQLite2 embeds that database engine into a DBD driver, so
+if you want a relational database for your project, but don't
+want to install a large RDBMS system like MySQL or PostgreSQL,
+then DBD::SQLite2 may be just what you need.
+
+Note: DBD::SQLite2 is the old version of DBD::SQLite, and embeds
+version 2.x.x of the sqlite library. The current version of
+DBD::SQLite embeds version 3 or possibly later.
+This release is designed to allow to have both versions installed
+on the same system.
