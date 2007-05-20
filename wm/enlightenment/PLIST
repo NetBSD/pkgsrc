@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/12/02 18:20:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/05/20 11:59:51 dsieger Exp $
 bin/e16
 bin/edox
 bin/eesh
@@ -21,6 +21,7 @@ share/e16/config/backup-tooltips.cfg
 share/e16/config/bindings.cfg
 share/e16/config/definitions
 share/e16/config/e16keyedit.db
+share/e16/config/fonts.cfg-xft_example
 share/e16/config/matches.cfg
 share/e16/config/menus.cfg
 share/e16/config/pix/about.png
@@ -54,7 +55,6 @@ share/e16/config/pix/mouse_any.png
 share/e16/config/pix/moveres.png
 share/e16/config/pix/note.png
 share/e16/config/pix/pager.png
-share/e16/config/pix/pawn.png
 share/e16/config/pix/place.png
 share/e16/config/pix/pumpkin.png
 share/e16/config/pix/raise.png
@@ -82,9 +82,10 @@ share/e16/misc/E16
 share/e16/misc/Xclients.e-gnome
 share/e16/misc/Xclients.e-kde
 share/e16/misc/Xclients.e16
-share/e16/misc/e-gnome.desktop
-share/e16/misc/e-kde.desktop
+share/e16/misc/e16-gnome.desktop
+share/e16/misc/e16-kde.desktop
 share/e16/misc/e16.desktop
+share/e16/misc/e16.png
 share/e16/misc/starte16
 share/e16/scripts/e_cache_clean
 share/e16/scripts/e_cache_query
