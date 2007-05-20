@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1097 2007/05/20 15:57:59 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1098 2007/05/20 16:38:37 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2098,3 +2098,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/oaf [wiz 2007-05-20]
 	Added meta-pkgs/modular-xorg-apps version 1.0 [joerg 2007-05-20]
 	Updated www/geeklog to 1.4.1 [taca 2007-05-20]
+	Updated x11/libSM to 1.0.3 [joerg 2007-05-20]
