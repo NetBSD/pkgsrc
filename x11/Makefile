@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.501 2007/05/20 15:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.502 2007/05/20 15:26:06 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -25,7 +25,6 @@ SUBDIR+=	bitmap
 SUBDIR+=	blt
 SUBDIR+=	bwidget
 SUBDIR+=	compositeproto
-SUBDIR+=	control-center
 SUBDIR+=	damageproto
 SUBDIR+=	devilspie
 SUBDIR+=	dfm
@@ -254,7 +253,6 @@ SUBDIR+=	py-qt3-modules
 SUBDIR+=	py-qt3-qscintilla
 SUBDIR+=	py-qt3-sip
 SUBDIR+=	py-wxWidgets
-SUBDIR+=	pygtk
 SUBDIR+=	qt1
 SUBDIR+=	qt2
 SUBDIR+=	qt2-designer
