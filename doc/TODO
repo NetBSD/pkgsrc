@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6349 2007/05/20 15:26:50 wiz Exp $
+$NetBSD: TODO,v 1.6350 2007/05/20 15:58:54 taca Exp $
 
 Suggested new packages
 ======================
@@ -752,7 +752,7 @@ Suggested package updates
 	o mmg-2.0.2
 	o moc-2.4.1
 	o molden-4.5
-	o mono-1.2.2
+	o mono-1.2.4
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
