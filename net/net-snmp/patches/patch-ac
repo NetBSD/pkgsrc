@@ -1,0 +1,126 @@
+$NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
+
+--- configure.in.orig	2006-11-24 17:53:18.000000000 +0000
++++ configure.in
+@@ -2670,6 +2670,8 @@ elif test "x$askedpkcs" = "xyes"; then
+     AC_CHECK_LIB(pkcs11, C_Initialize)
+ fi
+ 
++AC_CHECK_LIB(des, des_cbc_encrypt)
++
+ # Check for libraries that the agent needs
+ # saving old libraries
+ NONAGENTLIBS=$LIBS
+@@ -3347,6 +3349,12 @@ AC_CHECK_HEADERS(netinet/ip6.h netinet6/
+ #if HAVE_NETINET_IP6_H
+ #include <netinet/ip6.h>
+ #endif
++#if HAVE_NET_IF_H
++#include <net/if.h>
++#endif
++#if HAVE_NET_ROUTE_H
++#include <net/route.h>
++#endif
+ ]])
+ # DYNAMIC MODULE SUPPORT
+ AC_CHECK_HEADERS(dlfcn.h)
+@@ -3732,7 +3740,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3744,7 +3754,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3780,7 +3792,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3798,7 +3812,9 @@ AC_TRY_COMPILE([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3822,7 +3838,9 @@ AC_TRY_COMPILE([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3879,7 +3897,9 @@ AC_TRY_COMPILE([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3903,7 +3923,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3916,7 +3938,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3929,7 +3953,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -3942,7 +3968,9 @@ AC_CHECK_STRUCT_FOR([
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
