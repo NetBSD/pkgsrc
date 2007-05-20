@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/20 02:42:27 heinz Exp $
+
+SHA1 (uuid-1.6.0.tar.gz) = 081b91cf6b57ec8f3df1601d1b6fec092eb597d3
+RMD160 (uuid-1.6.0.tar.gz) = 6755ee46fbcf254df7ae7742fea16142b3ad70d4
+Size (uuid-1.6.0.tar.gz) = 406796 bytes
+SHA1 (patch-aa) = 3ba1b261ed40ec882e45b92c60383515e81939db
