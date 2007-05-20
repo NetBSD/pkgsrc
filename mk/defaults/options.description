@@ -317,6 +317,8 @@ spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 
 speex			Enable speex support.
 spidermonkey		Enable Mozilla's C implementation of JavaScript.
 sqlite			Enable SQLite support.
+squirrelmail-japanese	Add experimental Japanese fix to squirrelmail.
+squirrelmail-lite	Add experimental none-frame support to squirrelmail.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
 static
