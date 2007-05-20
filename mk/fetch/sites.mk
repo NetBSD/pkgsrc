@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.24 2007/05/20 08:53:40 wiz Exp $
+# $NetBSD: sites.mk,v 1.25 2007/05/20 08:54:36 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -28,8 +28,6 @@ MASTER_SITE_GNU+=       \
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/ \
 	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
-	ftp://archive.progeny.com/gnustep/ \
-	http://archive.progeny.com/gnustep/ \
 	ftp://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/ \
 	http://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/
 
@@ -381,7 +379,6 @@ MASTER_SITE_GENTOO+= \
 	http://adelie.polymtl.ca/ \
 	http://mirrors.tds.net/gentoo/ \
 	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
-	http://ftp.gentoo.skynet.be/pub/gentoo/ \
 	http://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/ \
 	http://ftp.easynet.nl/mirror/gentoo/ \
 	http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
