@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:19 wiz Exp $
-
-SHA1 (pygtk-0.6.11.tar.gz) = d460dbbfc86f153db6c6440ac95a6915892be1d8
-RMD160 (pygtk-0.6.11.tar.gz) = 3dcf7148509091d0d99d2f3bd4597c80a270c465
-Size (pygtk-0.6.11.tar.gz) = 401327 bytes
