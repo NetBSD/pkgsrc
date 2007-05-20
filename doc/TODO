@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6347 2007/05/20 09:01:53 xtraeme Exp $
+$NetBSD: TODO,v 1.6348 2007/05/20 15:23:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ Suggested package updates
 	o gossip-0.24
 	o gourmet-0.13.3
 	o gperf-3.0.3
-	o gpredict-0.7.1
 	o gpsdrive-2.09
 	o gq-1.2.0
 	o grace-5.1.21
@@ -770,7 +769,6 @@ Suggested package updates
 	o msf-2.7
 	o msmtp-1.4.11
 	o mtail-1.1.1 [pkg/34512]
-	o multi-gnome-terminal-1.6.2
 	o multitail-5.0.3
 	o muse-0.9.2
 	o musicbrainz-3.0.0
