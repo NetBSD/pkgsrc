@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6346 2007/05/18 23:29:08 adrianp Exp $
+$NetBSD: TODO,v 1.6347 2007/05/20 09:01:53 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1255,7 +1255,6 @@ Suggested package updates
 	o valgrind-3.2.3
 	o vera-1.17
 	o vfu-4.03
-	o viewvc-1.0.4
 	o vifm-0.3a
 	o visual-regexp-3.1
 	o vlc-0.8.6b
