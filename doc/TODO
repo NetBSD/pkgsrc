@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6348 2007/05/20 15:23:00 wiz Exp $
+$NetBSD: TODO,v 1.6349 2007/05/20 15:26:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -374,7 +374,6 @@ Suggested package updates
 	o cocoon-2.1.10
 	o connect-1.96
 	o conserver8-8.1.15
-	o control-center-2.16.3
 	o coreutils-6.9
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
@@ -1083,7 +1082,6 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o py-zpublisher-2.10.2
 	o pygopherd-2.0.13
-	o pygtk-0.6.12
 	o pysol-4.82
 	o python-2.5
 	o python24-2.4.4
