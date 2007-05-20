@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1099 2007/05/20 17:10:50 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1100 2007/05/20 17:28:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2101,3 +2101,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libSM to 1.0.3 [joerg 2007-05-20]
 	Updated mail/squirrelmail to 1.4.10anb1 [taca 2007-05-20]
 	Removed mail/ja-squirrelmail [taca 2007-05-20]
+	Removed x11/gnome-libs [wiz 2007-05-20]
