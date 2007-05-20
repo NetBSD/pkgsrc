@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.4 2007/05/11 16:48:55 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.5 2007/05/20 13:35:56 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -123,8 +123,8 @@ check_packages_mismatched()
 	# Look for the first thing that looks like pkg-version rather
 	# than category/pkg and remove the version.
         for word in $line; do
-            if [ "$(echo $word | egrep '^[^/]+-[0-9][^/]*$')" ]; then
-                echo $word | sed 's/-[0-9].*//'
+            if [ "$(echo $word | egrep '^[^/]+-[0-9][^-/]*$')" ]; then
+                echo $word | sed 's/-[0-9][^-]*$//'
                 break  #done with this line
             fi
         done
@@ -139,7 +139,7 @@ check_packages_w_flag()
     for pkgver in $(pkg_info -e '*'); do
         if pkg_info -Bq $pkgver \
                 | egrep "^$_flag=[Yy][Ee][Ss]" > /dev/null; then
-            echo $pkgver | sed 's/-[0-9].*//'
+            echo $pkgver | sed 's/-[0-9][^-]*$//'
         fi
     done
 }
@@ -148,11 +148,11 @@ check_packages_w_flag()
 depgraph_installed()
 {
     for pkgver in $(pkg_info -e '*'); do
-        pkg=$(echo $pkgver | sed 's/-[0-9].*//')
+        pkg=$(echo $pkgver | sed 's/-[0-9][^-]*$//')
 	# Include $pkg as a node without dependencies in case it has none.
         echo $pkg $pkg
         for depver in $(pkg_info -Nq $pkg); do
-            dep=$(echo $depver | sed 's/-[0-9].*//')
+            dep=$(echo $depver | sed 's/-[0-9][^-]*$//')
             echo $dep $pkg
         done
     done
@@ -327,14 +327,14 @@ while [ -n "$REPLACE_TODO" ]; do
 
     if ! is_member $pkg $DEPENDS_CHECKED; then
 	echo "${OPI} Checking if $pkg has new depends..."
-	OLD_DEPENDS=$(pkg_info -Nq $pkg | sed 's/-[0-9].*[[:>:]]//g')
+	OLD_DEPENDS=$(pkg_info -Nq $pkg | sed 's/-[0-9][^-]*$//')
 	NEW_DEPENDS=
 	cd "$PKGSRCDIR/$pkgdir"
 	bdeps=$(${MAKE} show-depends VARNAME=BUILD_DEPENDS)
 	rdeps=$(${MAKE} show-depends)
 	for depver in $bdeps $rdeps; do
-	    dep=$(echo $depver | sed -e 's/-[0-9].*//' -e 's/[<>]=[0-9].*//' \
-		-e 's/-[][].*//')
+	    dep=$(echo $depver | sed -E -e 's/[:[].*$/0/' \
+		-e 's/(>=|<=|-)[0-9][^-]*$//')
 	    if ! is_member $dep $OLD_DEPENDS $NEW_DEPENDS; then
 		NEW_DEPENDS="$NEW_DEPENDS $dep"
 		DEPGRAPH_SRC="$DEPGRAPH_SRC $dep $pkg"
