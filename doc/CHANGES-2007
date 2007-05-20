@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1092 2007/05/20 13:56:57 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1093 2007/05/20 15:23:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2079,3 +2079,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/ossp-uuid version 1.6.0 [heinz 2007-05-20]
 	Updated www/viewvc to 1.0.4 [xtraeme 2007-05-20]
 	Updated net/net-snmp to 5.4nb1 [seb 2007-05-20]
+	Updated multimedia/ogle_gui to 0.9.2nb7 [wiz 2007-05-20]
+	Removed graphics/p5-Gnome [wiz 2007-05-20]
+	Removed ham/gpredict [wiz 2007-05-20]
+	Removed textproc/pyDict [wiz 2007-05-20]
+	Removed wm/econf [wiz 2007-05-20]
+	Removed x11/multi-gnome-terminal [wiz 2007-05-20]
