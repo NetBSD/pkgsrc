@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.3 2006/07/23 13:21:09 taca Exp $
+# $NetBSD: DEINSTALL,v 1.4 2007/05/20 15:56:44 taca Exp $
 
 GEEKLOG_DIR="@GEEKLOG_DIR@"
 GEEKLOG_EXAMPLESDIR="@GEEKLOG_EXAMPLESDIR@"
@@ -8,6 +8,7 @@ GEEKLOG_TMPL_DIR="@GEEKLOG_TMPL_DIR@"
 
 case ${STAGE} in
 DEINSTALL)
+	(cd ${GEEKLOG_PUBDIR}; ${RM} -fr admin)
 	(cd ${GEEKLOG_TMPL_DIR}
 	${FIND} ${GEEKLOG_TMPL_SUB} -type f -print | \
 		while read f; do
