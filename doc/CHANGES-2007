@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1090 2007/05/20 02:46:29 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1091 2007/05/20 09:01:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/samba to 3.0.24nb2 [tron 2007-05-19]
 	Added databases/p5-DBD-SQLite2 version 0.33 [heinz 2007-05-20]
 	Added devel/ossp-uuid version 1.6.0 [heinz 2007-05-20]
+	Updated www/viewvc to 1.0.4 [xtraeme 2007-05-20]
