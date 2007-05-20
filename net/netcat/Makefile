@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/11/12 20:58:51 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2007/05/20 15:38:33 heinz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -15,6 +15,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.securityfocus.com/tools/137
 COMMENT=	Read and write data across network connections
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
@@ -41,21 +42,23 @@ post-build:
 	@cd ${WRKSRC}/data && ${SETENV} ${MAKE_ENV} ${MAKE} ${EXTRA_PROGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nc ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/nc ${DESTDIR:Q}${PREFIX:Q}/sbin
 .for i in ${EXTRA_PROGS}
-	${INSTALL_PROGRAM} ${WRKSRC}/data/${i} ${PREFIX}/sbin/nc-${i}
+	${INSTALL_PROGRAM} ${WRKSRC}/data/${i} \
+		${DESTDIR:Q}${PREFIX:Q}/sbin/nc-${i}
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/${EXAMPLE_DIR}
-	@(							\
-	cd ${WRKSRC}/data;					\
-	${RM} -f PLIST.data;					\
-	for i in README Makefile *.c *.d;			\
-	do							\
-	    ${INSTALL_DATA} $$i ${PREFIX}/${EXAMPLE_DIR};	\
-	    ${ECHO} ${EXAMPLE_DIR}/$$i >> PLIST.data;		\
-	done;							\
-	${ECHO} "@dirrm ${EXAMPLE_DIR}" >> PLIST.data;		\
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/${EXAMPLE_DIR}
+	@(								\
+	cd ${WRKSRC}/data;						\
+	${RM} -f PLIST.data;						\
+	for i in README Makefile *.c *.d;				\
+	do								\
+	    ${INSTALL_DATA} $$i ${DESTDIR:Q}${PREFIX:Q}/${EXAMPLE_DIR};	\
+	    ${ECHO} ${EXAMPLE_DIR}/$$i >> PLIST.data;			\
+	done;								\
+	${ECHO} "@dirrm ${EXAMPLE_DIR}" >> PLIST.data;			\
 	)
-	${INSTALL_MAN} ${FILESDIR}/nc.1 ${PREFIX}/${PKGMANDIR}/man1/nc.1
+	${INSTALL_MAN} ${FILESDIR}/nc.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/nc.1
 
 .include "../../mk/bsd.pkg.mk"
