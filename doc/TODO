@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6350 2007/05/20 15:58:54 taca Exp $
+$NetBSD: TODO,v 1.6351 2007/05/20 22:26:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -564,6 +564,7 @@ Suggested package updates
 	o gst-plugins0.10-fluendo-mp3-0.10.5
 	o gtar-1.16.1
 	o gtar-base-1.16.1
+	o gthumb-2.10.3
 	o gtick-0.3.13
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.0
@@ -607,7 +608,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ikiwiki-1.47
-	o imap-uw-2006f
+	o imap-uw-2006h
 	o imapfilter-1.3
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -888,6 +889,7 @@ Suggested package updates
 	o p5-IO-Zlib-1.05
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
+	o p5-Image-Info-1.25
 	o p5-Locale-Codes-2.07
 	o p5-Log-Dispatch-2.18
 	o p5-MARC-1.38
@@ -903,6 +905,7 @@ Suggested package updates
 	o p5-Module-Install-0.65
 	o p5-Module-Pluggable-3.5
 	o p5-Module-ScanDeps-0.72
+	o p5-Net-1.21
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
@@ -1190,7 +1193,7 @@ Suggested package updates
 	o suse_base-10.2
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
-	o sylpheed-2.4.1
+	o sylpheed-2.4.2
 	o sylpheed-claws-2.9.2 [now claws-mail]
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
@@ -1212,7 +1215,7 @@ Suggested package updates
 	o tileworld-1.3.0
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
-	o tkcvs-8.0.3
+	o tkcvs-8.0.4
 	o tkdiff-4.1.3 [pkg/34440]
 	o tkgate-1.8.7
 	o tkhylafax-3.2
@@ -1221,6 +1224,7 @@ Suggested package updates
 	o tob-0.26
 	o top-3.6b5
 	o tor-0.1.2.13
+	o totem-2.18.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
