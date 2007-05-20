@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.66 2007/01/28 19:23:22 kristerw Exp $
+# $NetBSD: pre-build,v 1.67 2007/05/20 23:33:06 kristerw Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -261,7 +261,9 @@ done
 
 if [ x"$BMAKE" = x"bmake" ]; then
 	for pkg in archivers/pax devel/bmake devel/mk-files lang/nawk \
-	    net/tnftp sysutils/install-sh textproc/nbsed; do
+	    net/tnftp pkgtools/bootstrap-mk-files pkgtools/bootstrap-extras \
+	    pkgtools/tnftp pkgtools/mtree pkgtools/pax pkgtools/pkg_install \
+	    sysutils/install-sh textproc/nbsed; do
 		mkdir -p "${BULKFILESDIR}/${pkg}"
 		echo "Don't blow away bootstrap-pkgsrc stuff!" \
 		> "${BULKFILESDIR}/${pkg}/${BROKENF}"
