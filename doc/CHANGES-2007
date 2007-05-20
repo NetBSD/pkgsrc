@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1094 2007/05/20 15:26:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1095 2007/05/20 15:48:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2087,3 +2087,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed x11/multi-gnome-terminal [wiz 2007-05-20]
 	Removed x11/control-center [wiz 2007-05-20]
 	Removed x11/pygtk [wiz 2007-05-20]
+	Updated devel/gnome-build to 0.1.3nb1 [wiz 2007-05-20]
+	Removed devel/gal [wiz 2007-05-20]
+	Removed devel/libglade [wiz 2007-05-20]
+	Removed sysutils/gnome-vfs [wiz 2007-05-20]
+	Removed devel/bonobo [wiz 2007-05-20]
+	Removed devel/GConf [wiz 2007-05-20]
+	Removed print/gnome-print [wiz 2007-05-20]
+	Removed graphics/gdk-pixbuf-gnome [wiz 2007-05-20]
+	Removed devel/oaf [wiz 2007-05-20]
