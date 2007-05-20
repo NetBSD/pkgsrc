@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1089 2007/05/19 17:58:34 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1090 2007/05/20 02:46:29 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2071,5 +2071,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Added games/sudoku-cli version 1.0.1 [heinz 2007-05-19]
 	Updated emulators/openmsx to 0.6.2 [xtraeme 2007-05-19]
 	Added emulators/mednafen version 0.8.1 [wiz 2007-05-19]
+	Updated graphics/p5-GD to 2.35 [heinz 2007-05-19]
+	Updated graphics/p5-GDGraph to 1.44 [heinz 2007-05-19]
 	Updated graphics/freetype2 to 2.3.4nb1 [tron 2007-05-19]
 	Updated net/samba to 3.0.24nb2 [tron 2007-05-19]
+	Added databases/p5-DBD-SQLite2 version 0.33 [heinz 2007-05-20]
+	Added devel/ossp-uuid version 1.6.0 [heinz 2007-05-20]
