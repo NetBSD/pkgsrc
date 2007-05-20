@@ -1,19 +1,21 @@
-# $NetBSD: Makefile.common,v 1.3 2007/02/22 19:27:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/05/20 15:56:44 taca Exp $
 #
 
 GEEKLOG_BASE=		share/geeklog
 GEEKLOG_PUB=		share/httpd/geeklog
-GEEKLOG_TMPL=		share/geeklog/default
+GEEKLOG_ADMIN=		${GEEKLOG_BASE}/admin
+GEEKLOG_TMPL=		${GEEKLOG_BASE}/default
 
 # Geeklog system
 GEEKLOG_DIR=		${PREFIX}/${GEEKLOG_BASE}
 
 # Geeklog public area
 GEEKLOG_PUBDIR=		${PREFIX}/${GEEKLOG_PUB}
-
-GEEKLOG_DOCDIR=	${PREFIX}/share/doc/geeklog
-GEEKLOG_EXAMPLESDIR=	${PREFIX}/share/examples/geeklog
+GEEKLOG_ADMIN_DIR=	${PREFIX}/${GEEKLOG_ADMIN}
 GEEKLOG_TMPL_DIR=	${PREFIX}/${GEEKLOG_TMPL}
+
+GEEKLOG_DOCDIR=		${PREFIX}/share/doc/geeklog
+GEEKLOG_EXAMPLESDIR=	${PREFIX}/share/examples/geeklog
 
 .include "../../mk/bsd.prefs.mk"
 

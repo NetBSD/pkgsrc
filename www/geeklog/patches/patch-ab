@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/06/15 13:26:44 taca Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/20 15:56:45 taca Exp $
 
---- emailgeeklogstories.orig	2006-05-28 18:41:42.000000000 +0900
+--- emailgeeklogstories.orig	2003-01-10 23:44:01.000000000 +0900
 +++ emailgeeklogstories
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/php -q 

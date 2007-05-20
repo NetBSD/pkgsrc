@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/05/20 15:56:44 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -13,7 +13,7 @@ COMMENT=	PHP/MySQL based application for managing dynamic web content
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
-VER=		1.4.0sr5-1
+VER=		1.4.1
 NO_BUILD=	YES
 
 BUILD_DEFS+=	APACHE_GROUP GEEKLOG_SITEBASE
@@ -22,8 +22,9 @@ GEEKLOG_SYS=		emailgeeklogstories language plugins readme sql system
 GEEKLOG_TMPL_SUB=	backend images/articles images/library \
 			images/topics images/userphotos
 
-GEEKLOG_CONF_FILES=	config.php plugins/links/config.php \
-			plugins/polls/config.php plugins/spamx/config.php \
+GEEKLOG_CONF_FILES=	config.php plugins/calendar/config.php \
+			plugins/links/config.php plugins/polls/config.php \
+			plugins/spamx/config.php \
 			plugins/staticpages/config.php \
 			system/lib-custom.php
 
@@ -39,16 +40,20 @@ CONF_FILES_PERMS+=	${GEEKLOG_EXAMPLESDIR}/${f} \
 OWN_DIRS_PERMS+=	${GEEKLOG_DIR}/backups ${BINOWN} ${APACHE_GROUP} 0770 \
 			${GEEKLOG_DIR}/data ${BINOWN} ${APACHE_GROUP} 0770 \
 			${GEEKLOG_DIR}/logs ${BINOWN} ${APACHE_GROUP} 0775
+OWN_DIRS+=		${GEEKLOG_PUB}
 
 FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP:Q} \
 			GEEKLOG_DIR=${GEEKLOG_DIR:Q} \
 			GEEKLOG_EXAMPLESDIR=${GEEKLOG_EXAMPLESDIR:Q} \
 			GEEKLOG_PUBDIR=${GEEKLOG_PUBDIR:Q} \
+			GEEKLOG_ADMIN_DIR=${GEEKLOG_ADMIN_DIR:Q} \
 			GEEKLOG_TMPL_SUB=${GEEKLOG_TMPL_SUB:Q} \
-			GEEKLOG_TMPL_DIR=${GEEKLOG_TMPL_DIR:Q}
+			GEEKLOG_TMPL_DIR=${GEEKLOG_TMPL_DIR:Q} \
+			PAX=${PAX:Q}
 
 PLIST_SUBST+=		GEEKLOG_BASE=${GEEKLOG_BASE:Q} \
 			GEEKLOG_PUB=${GEEKLOG_PUB:Q} \
+			GEEKLOG_ADMIN=${GEEKLOG_ADMIN:Q} \
 			GEEKLOG_TMPL=${GEEKLOG_TMPL:Q}
 
 .include "../../www/geeklog/Makefile.common"
@@ -87,6 +92,7 @@ pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
 	cd ${WRKSRC}/public_html; \
 		${FIND} ${GEEKLOG_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
+	${CHMOD} 0664 ${WRKSRC}/public_html/backend/geeklog.rss
 	cd ${WRKSRC}/system; \
 		${FIND} pear -type f -exec ${CHMOD} 0644 {} \;
 
@@ -98,9 +104,14 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${GEEKLOG_EXAMPLESDIR}/${f}
 	${RM} ${WRKSRC}/${f}
 .endfor
-	${INSTALL_SCRIPT} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/createdb.php ${GEEKLOG_DIR}
 	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
-	cd ${WRKSRC}; ${CP} -R ${GEEKLOG_SYS} ${GEEKLOG_DIR}
+.for f in ${GEEKLOG_SYS}
+	cd ${WRKSRC}; ${PAX} -rw ${f} ${GEEKLOG_DIR}
+.endfor
+	cd ${WRKSRC}/public_html; \
+		${PAX} -rw admin ${GEEKLOG_DIR}; \
+		${RM} -rf admin
 .for d in ${GEEKLOG_TMPL_SUB}
 	cd ${WRKSRC}/public_html; \
 		if [ -d ${d} ]; then \
