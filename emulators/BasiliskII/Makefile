@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/05/20 17:23:16 wiz Exp $
 
 DISTNAME=	BasiliskII_src_01052006
 PKGNAME=	BasiliskII-1.0.20060501
@@ -18,8 +18,6 @@ CONFIGURE_DIRS=		src/Unix
 CONFIGURE_ARGS+=	--disable-fbdev-dga
 CONFIGURE_ARGS+=	--enable-addressing=banks
 CONFIGURE_ARGS+=	--without-mon
-# disable gnome support, or configure will break if gnome-libs is installed
-CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG=no
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
 .include "options.mk"
