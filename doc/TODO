@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6352 2007/05/21 02:45:52 taca Exp $
+$NetBSD: TODO,v 1.6353 2007/05/21 04:41:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -775,8 +775,6 @@ Suggested package updates
 	o musicpd-0.12.2
 	o mysql4-client-4.1.22
 	o mysql4-server-4.1.22
-	o mysql5-client-5.0.41
-	o mysql5-server-5.0.41
 	o mzscheme-360 [pkg/36330]
 	o nagios-3.0a4
 	o nano-1.2.5 [pkg/32859|pkg/34511]

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1100 2007/05/20 17:28:58 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1101 2007/05/21 04:41:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2102,3 +2102,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/squirrelmail to 1.4.10anb1 [taca 2007-05-20]
 	Removed mail/ja-squirrelmail [taca 2007-05-20]
 	Removed x11/gnome-libs [wiz 2007-05-20]
+	Updated databases/mysql5-client to 5.0.41 [xtraeme 2007-05-21]
+	Updated databases/mysql5-server to 5.0.41 [xtraeme 2007-05-21]
