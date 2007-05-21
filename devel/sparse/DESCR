@@ -1,0 +1,11 @@
+Sparse, the semantic parser, provides a compiler frontend capable
+of parsing most of ANSI C as well as many GCC extensions, and a
+collection of sample compiler backends, including a static analyzer
+also called "sparse". Sparse provides a set of annotations designed
+to convey semantic information about types, such as what address
+space pointers point to, or what locks a function acquires or
+releases.
+
+Linus Torvalds started writing Sparse in 2003, initially targeting
+issues such as mixing pointers to user address space and pointers
+to kernel address space.

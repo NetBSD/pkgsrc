@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/21 20:46:43 reed Exp $
+
+--- Makefile.orig	2007-05-21 15:15:45.000000000 -0500
++++ Makefile	2007-05-21 15:17:21.000000000 -0500
+@@ -15,8 +15,8 @@
+ #
+ CFLAGS += -DDEBUG
+ 
+-DESTDIR=
+-PREFIX=$(HOME)
++DESTDIR?=
++PREFIX?=$(HOME)
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+ INCLUDEDIR=$(PREFIX)/include
+@@ -48,15 +48,15 @@
+ 	install -d $(DESTDIR)$(INCLUDEDIR)/sparse
+ 	install -d $(DESTDIR)$(PKGCONFIGDIR)
+ 	for f in $(INST_PROGRAMS); do \
+-		install -v $$f $(DESTDIR)$(BINDIR)/$$f || exit 1; \
++		install $$f $(DESTDIR)$(BINDIR)/$$f || exit 1; \
+ 	done
+ 	for f in $(LIBS); do \
+-		install -m 644 -v $$f $(DESTDIR)$(LIBDIR)/$$f || exit 1; \
++		install -m 644 $$f $(DESTDIR)$(LIBDIR)/$$f || exit 1; \
+ 	done
+ 	for f in $(LIB_H); do \
+-		install -m 644 -v $$f $(DESTDIR)$(INCLUDEDIR)/sparse/$$f || exit 1; \
++		install -m 644 $$f $(DESTDIR)$(INCLUDEDIR)/sparse/$$f || exit 1; \
+ 	done
+-	install -m 644 -v sparse.pc $(DESTDIR)$(PKGCONFIGDIR)/sparse.pc
++	install -m 644 sparse.pc $(DESTDIR)$(PKGCONFIGDIR)/sparse.pc
+ 
+ sparse.pc: sparse.pc.in
+ 	sed 's|@version@|$(VERSION)|g;s|@prefix@|$(PREFIX)|g;s|@libdir@|$(LIBDIR)|g;s|@includedir@|$(INCLUDEDIR)|g' sparse.pc.in > sparse.pc
