@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/05/21 10:02:31 joerg Exp $
 #
 
 DISTNAME=	galway-0.33
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www x11 gnome
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tgz
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Web editor programmed in Scheme
 
-DEPENDS+=	guile-gtk-0.19*:../../devel/guile14-gtk
+DEPENDS+=	guile-gtk>=0.19:../../devel/guile14-gtk
 
 NO_BUILD=	yes
 
