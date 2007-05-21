@@ -1,0 +1,14 @@
+$NetBSD: patch-bg,v 1.1.2.2 2007/05/21 22:06:18 salo Exp $
+
+
+--- sql/sql_parse.cc.orig	2007-05-21 04:56:56.000000000 +0200
++++ sql/sql_parse.cc	2007-05-21 04:59:31.000000000 +0200
+@@ -3304,7 +3304,7 @@
+ 	*/
+ 	old_list= table[0];
+ 	new_list= table->next_local[0];
+-	if (check_grant(thd, ALTER_ACL, &old_list, 0, 1, 0) ||
++	if (check_grant(thd, ALTER_ACL | DROP_ACL, &old_list, 0, 1, 0) ||
+ 	    (!test_all_bits(table->next_local->grant.privilege,
+ 			    INSERT_ACL | CREATE_ACL) &&
+ 	     check_grant(thd, INSERT_ACL | CREATE_ACL, &new_list, 0, 1, 0)))
