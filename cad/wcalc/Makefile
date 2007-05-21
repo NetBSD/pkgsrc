@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/21 10:04:40 joerg Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Meta-pkg for the Wcalc Transmission Line Analysis/Synthesis Calculator
 
 VER=	${DISTNAME:S/wcalc-//}
 
-DEPENDS+=	libwcalc-${VER}*:../../cad/libwcalc
-DEPENDS+=	cgi-wcalc-${VER}*:../../cad/cgi-wcalc
-DEPENDS+=	sci-wcalc-${VER}*:../../cad/sci-wcalc
-DEPENDS+=	stdio-wcalc-${VER}*:../../cad/stdio-wcalc
-DEPENDS+=	wcalc-docs-${VER}*:../../cad/wcalc-docs
+DEPENDS+=	libwcalc-${VER}{,nb*}:../../cad/libwcalc
+DEPENDS+=	cgi-wcalc-${VER}{,nb*}:../../cad/cgi-wcalc
+DEPENDS+=	sci-wcalc-${VER}{,nb*}:../../cad/sci-wcalc
+DEPENDS+=	stdio-wcalc-${VER}{,nb*}:../../cad/stdio-wcalc
+DEPENDS+=	wcalc-docs-${VER}{,nb*}:../../cad/wcalc-docs
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wcalc
 PKG_SUPPORTED_OPTIONS=		mex wcalc-gtk1
