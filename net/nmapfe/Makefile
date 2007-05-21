@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/05/21 10:01:44 joerg Exp $
 #
 
 DISTNAME=	nmap-4.20
 PKGNAME=	nmapfe-0.9.5
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	net security
 MASTER_SITES=	http://insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Graphical front end to the nmap port scanner
 
-DEPENDS+=	nmap-[234].*:../../net/nmap
+DEPENDS+=	nmap>=2<5:../../net/nmap
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
