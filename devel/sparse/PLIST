@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/21 20:46:43 reed Exp $
+bin/cgcc
+bin/sparse
+include/sparse/allocate.h
+include/sparse/bitmap.h
+include/sparse/compat.h
+include/sparse/dissect.h
+include/sparse/expression.h
+include/sparse/flow.h
+include/sparse/ident-list.h
+include/sparse/lib.h
+include/sparse/linearize.h
+include/sparse/parse.h
+include/sparse/ptrlist.h
+include/sparse/scope.h
+include/sparse/storage.h
+include/sparse/symbol.h
+include/sparse/target.h
+include/sparse/token.h
+lib/libsparse.a
+lib/pkgconfig/sparse.pc
+share/doc/sparse/FAQ
+share/doc/sparse/LICENSE
+share/doc/sparse/README
+@dirrm include/sparse
+@dirrm share/doc/sparse
