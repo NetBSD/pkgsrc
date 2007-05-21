@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6355 2007/05/21 20:25:50 xtraeme Exp $
+$NetBSD: TODO,v 1.6356 2007/05/21 22:34:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -659,6 +659,7 @@ Suggested package updates
 	o lapack-20070226
 	o latd-1.21
 	o lavaps-2.7
+	o lbdb-0.35
 	o lcab-1.0b11
 	o lcc-4.2
 	o ldapsdk-6.0.2
@@ -1020,6 +1021,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.18
+	o prelude-lml-0.9.10
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
