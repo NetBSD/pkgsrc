@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.23 2007/05/20 22:42:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.24 2007/05/21 22:07:17 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -53,3 +53,5 @@ Pullup ticket 2092 - requested by tron
 security fixes for samba
 Pullup ticket 2093 - requested by ghen
 security update for ipsec-tools
+Pullup ticket 2094 - requested by xtraeme
+security update for mysql5
