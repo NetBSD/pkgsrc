@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.7 2007/03/11 18:42:28 adam Exp $
+$NetBSD: patch-ae,v 1.7.2.1 2007/05/21 22:06:18 salo Exp $
 
---- scripts/Makefile.in.orig	2007-03-05 20:23:19.000000000 +0100
-+++ scripts/Makefile.in
-@@ -355,13 +355,12 @@ yassl_h_ln_cmd = @yassl_h_ln_cmd@
+--- scripts/Makefile.in.orig	2007-05-21 04:54:42.000000000 +0200
++++ scripts/Makefile.in	2007-05-21 04:55:14.000000000 +0200
+@@ -355,13 +355,12 @@
  yassl_libs = @yassl_libs@
  yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
  zlib_dir = @zlib_dir@
 -bin_SCRIPTS = @server_scripts@ \
-+bin_SCRIPTS = \
++bin_SCRIPTS =  \
  			msql2mysql \
  			mysql_config \
  			mysql_fix_privilege_tables \
@@ -17,11 +17,11 @@ $NetBSD: patch-ae,v 1.7 2007/03/11 18:42:28 adam Exp $
  			mysql_zap \
  			mysqlaccess \
  			mysqlbug \
-@@ -372,7 +371,6 @@ bin_SCRIPTS = @server_scripts@ \
+@@ -372,7 +371,6 @@
  			mysql_explain_log \
  			mysql_tableinfo \
  			mysql_upgrade_shell \
--			mysqld_multi \
- 			mysql_create_system_tables
+-			mysqld_multi
  
  noinst_SCRIPTS = make_binary_distribution \
+ 			make_sharedlib_distribution \
