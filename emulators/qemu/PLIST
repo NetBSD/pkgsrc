@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/17 07:51:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/05/21 20:24:44 xtraeme Exp $
 bin/qemu
 bin/qemu-img
 bin/qemu-system-arm
@@ -54,6 +54,9 @@ share/qemu/ppc_rom.bin
 share/qemu/vgabios-cirrus.bin
 share/qemu/vgabios.bin
 share/qemu/video.x
+share/qemu/pxe-ne2k_pci.bin
+share/qemu/pxe-pcnet.bin
+share/qemu/pxe-rtl8139.bin
 @dirrm share/qemu/keymaps
 @dirrm share/qemu
 @dirrm share/doc/qemu
