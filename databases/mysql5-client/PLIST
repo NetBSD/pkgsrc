@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2006/08/06 16:30:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.5.6.1 2007/05/21 22:06:17 salo Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
 bin/mysql_convert_table_format
-bin/mysql_create_system_tables
 bin/mysql_explain_log
 bin/mysql_find_rows
 bin/mysql_fix_extensions
@@ -26,6 +25,7 @@ bin/mysqlshow
 bin/mysqltest
 bin/mysqltestmanager-pwgen
 bin/mysqltestmanagerc
+include/mysql/decimal.h
 include/mysql/errmsg.h
 include/mysql/keycache.h
 include/mysql/m_ctype.h
@@ -40,7 +40,6 @@ include/mysql/my_list.h
 include/mysql/my_net.h
 include/mysql/my_no_pthread.h
 include/mysql/my_pthread.h
-include/mysql/my_semaphore.h
 include/mysql/my_sys.h
 include/mysql/my_xml.h
 include/mysql/mysql.h
@@ -73,6 +72,9 @@ share/examples/mysql/my-medium.cnf
 share/examples/mysql/my-small.cnf
 share/mysql/fill_help_tables.sql
 share/mysql/mysql_fix_privilege_tables.sql
+share/mysql/mysql_system_tables.sql
+share/mysql/mysql_system_tables_data.sql
+share/mysql/mysql_test_data_timezone.sql
 @dirrm share/mysql
 @dirrm share/examples/mysql
 @dirrm lib/mysql

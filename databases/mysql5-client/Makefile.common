@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.20 2007/03/11 18:42:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.20.2.1 2007/05/21 22:06:17 salo Exp $
 
-DISTNAME=		mysql-5.0.37
+DISTNAME=		mysql-5.0.41
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -43,12 +43,6 @@ CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-libedit
 
-# We need the full readline on NetBSD 1.6.x
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.*)
-USE_BUILTIN.readline=	no
-.include "../../devel/readline/buildlink3.mk"
-.endif
-
 # This forces mysql.info _not_ to be rebuilt.
 CONFIGURE_ARGS+=	--without-docs
 
@@ -88,29 +82,31 @@ CXXFLAGS+=		-DHAVE_CURSES_H
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
-CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
-CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
-CONFIGURE_ENV+=	ac_cv_func_pthread_setschedparam=no
-CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
+CFLAGS+=		-DSIGNALS_DONT_BREAK_READ
+CXXFLAGS+=		-DSIGNALS_DONT_BREAK_READ
+CONFIGURE_ENV+=		ac_cv_func_pthread_setschedparam=no
+CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
-SUBST_CLASSES+=		mk scripts
+SUBST_CLASSES=		mk
 SUBST_STAGE.mk=		post-patch
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
 			mysys/Makefile.in strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
 SUBST_MESSAGE.mk=	Fixing Makefiles.
-SUBST_STAGE.scripts=	post-patch
-SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
+
+SUBST_CLASSES+=		scr
+SUBST_STAGE.scr=	post-patch
+SUBST_FILES.scr=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
-SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
-SUBST_SED.scripts+=	-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
-SUBST_MESSAGE.scripts=	Fixing scripts.
+SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
+SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
+SUBST_MESSAGE.scr=	Fixing scripts.
 
 # Fix broken shared library detection under Mac OS X
 .if ${OPSYS} == Darwin

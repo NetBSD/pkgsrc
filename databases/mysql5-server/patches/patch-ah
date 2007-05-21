@@ -1,19 +1,19 @@
-$NetBSD: patch-ah,v 1.4 2007/03/11 18:42:49 adam Exp $
+$NetBSD: patch-ah,v 1.4.2.1 2007/05/21 22:06:19 salo Exp $
 
---- include/Makefile.in.orig	2007-03-05 20:22:51.000000000 +0100
-+++ include/Makefile.in
-@@ -362,13 +362,7 @@ HEADERS_GEN = mysql_version.h my_config.
+--- include/Makefile.in.orig	2007-05-21 06:03:49.000000000 +0200
++++ include/Makefile.in	2007-05-21 06:04:11.000000000 +0200
+@@ -362,13 +362,7 @@
  HEADERS_ABI = mysql.h mysql_com.h mysql_time.h \
  			my_list.h my_alloc.h typelib.h
  
 -pkginclude_HEADERS = $(HEADERS_ABI) my_dbug.h m_string.h my_sys.h \
 -			my_xml.h mysql_embed.h \
--			my_semaphore.h my_pthread.h my_no_pthread.h raid.h \
--			errmsg.h my_global.h my_net.h \
+-			my_pthread.h my_no_pthread.h raid.h \
+-			decimal.h errmsg.h my_global.h my_net.h \
 -			my_getopt.h sslopt-longopts.h my_dir.h \
 -			sslopt-vars.h sslopt-case.h sql_common.h keycache.h \
 -			m_ctype.h $(HEADERS_GEN)
-+pkginclude_HEADERS =
++pkginclude_HEADERS = 
  
  noinst_HEADERS = config-win.h config-os2.h config-netware.h \
  			heap.h my_bitmap.h\

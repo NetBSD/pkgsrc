@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2007/03/11 18:42:28 adam Exp $
+$NetBSD: patch-ac,v 1.4.2.1 2007/05/21 22:06:18 salo Exp $
 
---- configure.in.orig	2007-03-05 20:21:13.000000000 +0100
-+++ configure.in
-@@ -487,7 +487,7 @@ then
+--- configure.in.orig	2007-05-21 05:53:04.000000000 +0200
++++ configure.in	2007-05-21 05:53:27.000000000 +0200
+@@ -487,7 +487,7 @@
    FIND_PROC="$PS \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
  else
    case $SYSTEM_TYPE in
@@ -11,16 +11,7 @@ $NetBSD: patch-ac,v 1.4 2007/03/11 18:42:28 adam Exp $
        FIND_PROC="$PS p \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
        ;;
      *darwin*)
-@@ -794,6 +794,8 @@ AC_SEARCH_LIBS(crypt, crypt, AC_DEFINE(H
- 
- # For sem_xxx functions on Solaris 2.6
- AC_CHECK_FUNC(sem_init, , AC_CHECK_LIB(posix4, sem_init))
-+# For sem_xxx functions on NetBSD
-+AC_CHECK_FUNC(sem_init, , AC_CHECK_LIB(rt, sem_init))
- MYSQL_CHECK_ZLIB_WITH_COMPRESS
- 
- # For large pages support
-@@ -1119,7 +1121,7 @@ case $SYSTEM_TYPE in
+@@ -1121,7 +1121,7 @@
        MAX_C_OPTIMIZE="-O"
      fi
      ;;

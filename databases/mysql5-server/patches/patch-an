@@ -1,31 +1,31 @@
-$NetBSD: patch-an,v 1.2 2007/03/11 18:42:50 adam Exp $
+$NetBSD: patch-an,v 1.2.2.1 2007/05/21 22:06:20 salo Exp $
 
---- configure.in.orig	2007-03-05 20:21:13.000000000 +0100
-+++ configure.in
-@@ -487,7 +487,7 @@ then
-   FIND_PROC="$PS \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
- else
-   case $SYSTEM_TYPE in
--    *freebsd*)
-+    *freebsd*|*dragonfly*)
-       FIND_PROC="$PS p \$\$PID | grep -v grep | grep \$\$MYSQLD > /dev/null"
-       ;;
-     *darwin*)
-@@ -794,6 +794,8 @@ AC_SEARCH_LIBS(crypt, crypt, AC_DEFINE(H
+--- mysql-test/Makefile.in.orig	2007-05-21 06:02:04.000000000 +0200
++++ mysql-test/Makefile.in	2007-05-21 06:03:13.000000000 +0200
+@@ -374,7 +374,7 @@
+ @HAVE_NDBCLUSTER_DB_FALSE@USE_NDBCLUSTER = \"\"
+ @HAVE_NDBCLUSTER_DB_TRUE@USE_NDBCLUSTER = \"--ndbcluster\"
+ benchdir_root = $(prefix)
+-testdir = $(benchdir_root)/mysql-test
++testdir = $(benchdir_root)/share/mysql-test
+ EXTRA_SCRIPTS = mysql-test-run-shell.sh install_test_db.sh valgrind.supp $(PRESCRIPTS)
+ EXTRA_DIST = $(EXTRA_SCRIPTS) suite
+ GENSCRIPTS = mysql-test-run-shell mysql-test-run install_test_db mtr
+@@ -770,12 +770,11 @@
+ 	-rm -rf `find $(distdir)/suite -type d -name SCCS`
  
- # For sem_xxx functions on Solaris 2.6
- AC_CHECK_FUNC(sem_init, , AC_CHECK_LIB(posix4, sem_init))
-+# For sem_xxx functions on NetBSD
-+AC_CHECK_FUNC(sem_init, , AC_CHECK_LIB(rt, sem_init))
- MYSQL_CHECK_ZLIB_WITH_COMPRESS
- 
- # For large pages support
-@@ -1119,7 +1121,7 @@ case $SYSTEM_TYPE in
-       MAX_C_OPTIMIZE="-O"
-     fi
-     ;;
--  *freebsd*)
-+  *freebsd*|*dragonfly*)
-     AC_MSG_WARN([Adding fix for interrupted reads])
-     OSVERSION=`sysctl -a | grep osreldate | awk '{ print $2 }'`
-     if test "$OSVERSION" -gt "480100" && \
+ install-data-local:
+-	$(mkinstalldirs) \
+-		$(DESTDIR)$(testdir)/t \
+-		$(DESTDIR)$(testdir)/r \
+-		$(DESTDIR)$(testdir)/include \
+-		$(DESTDIR)$(testdir)/std_data \
+-		$(DESTDIR)$(testdir)/lib
++	$(mkinstalldirs) $(DESTDIR)$(testdir)/t
++	$(mkinstalldirs) $(DESTDIR)$(testdir)/r
++	$(mkinstalldirs) $(DESTDIR)$(testdir)/include
++	$(mkinstalldirs) $(DESTDIR)$(testdir)/std_data
++	$(mkinstalldirs) $(DESTDIR)$(testdir)/lib
+ 	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(testdir)
+ 	-$(INSTALL_DATA) $(srcdir)/t/*.def $(DESTDIR)$(testdir)/t
+ 	$(INSTALL_DATA) $(srcdir)/t/*.test $(DESTDIR)$(testdir)/t
