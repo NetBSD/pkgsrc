@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1101 2007/05/21 04:41:23 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1102 2007/05/21 05:07:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2104,3 +2104,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed x11/gnome-libs [wiz 2007-05-20]
 	Updated databases/mysql5-client to 5.0.41 [xtraeme 2007-05-21]
 	Updated databases/mysql5-server to 5.0.41 [xtraeme 2007-05-21]
+	Updated mail/sylpheed to 2.4.2 [xtraeme 2007-05-21]
