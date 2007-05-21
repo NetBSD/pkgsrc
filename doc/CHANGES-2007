@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1104 2007/05/21 20:48:41 reed Exp $
+$NetBSD: CHANGES-2007,v 1.1105 2007/05/21 22:34:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2107,3 +2107,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed to 2.4.2 [xtraeme 2007-05-21]
 	Updated emulators/qemu to 0.9.0 [xtraeme 2007-05-21]
 	Added devel/sparse version 0.3 [reed 2007-05-21]
+	Updated finance/gnucash-current to 2.1.2 [wiz 2007-05-21]
