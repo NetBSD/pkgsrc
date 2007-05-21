@@ -1,0 +1,16 @@
+$NetBSD: patch-bh,v 1.1.2.2 2007/05/21 22:06:19 salo Exp $
+
+--- client/mysql.cc.orig	2007-05-21 05:45:33.000000000 +0200
++++ client/mysql.cc	2007-05-21 05:46:28.000000000 +0200
+@@ -1415,7 +1415,11 @@
+ */
+ 
+ #if defined(USE_NEW_READLINE_INTERFACE) || defined(USE_LIBEDIT_INTERFACE)
++#  ifdef __NetBSD__
++int no_completion(const char *, int)
++#  else
+ char *no_completion(const char*,int)
++#  endif
+ #else
+ char *no_completion()
+ #endif
