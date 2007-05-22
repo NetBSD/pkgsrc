@@ -1,0 +1,14 @@
+$NetBSD: patch-cs,v 1.1 2007/05/22 12:18:01 spz Exp $
+
+--- ./src/RtConfig/f_cisco.cc.orig	2007-01-23 01:45:16.000000000 +0100
++++ ./src/RtConfig/f_cisco.cc
+@@ -777,7 +777,8 @@ void CiscoConfig::printRE(ostream &s, 
+ 	 s << out.str();
+ 	 cerr << "Warning: ip as-path access-list is too long for cisco to handle" << endl;
+       } else {
+-	 int inc = hasTilda ? 1 : (240 - lineLen + size) >? 5;
++	 int inc = hasTilda ? 1 : 
++		( ( (240 - lineLen + size) > 5 ) ? (240 - lineLen + size) : 5 );
+ 	 p = strdup(out.str().c_str());
+ 	 q = strchr(r, ')') + 1;
+ 	 *r = 0;

@@ -1,7 +1,7 @@
-$NetBSD: patch-bj,v 1.1 2005/03/06 11:40:21 spz Exp $
+$NetBSD: patch-bj,v 1.2 2007/05/22 12:17:49 spz Exp $
 
---- src/Core/util/Buffer.cc.orig	2004-07-30 12:58:10.000000000 +0200
-+++ src/Core/util/Buffer.cc
+--- ./src/Core/util/Buffer.cc.orig	2006-10-09 18:05:14.000000000 +0200
++++ ./src/Core/util/Buffer.cc
 @@ -36,7 +36,11 @@
  #include <cassert>
  #include <iomanip>
@@ -13,4 +13,16 @@ $NetBSD: patch-bj,v 1.1 2005/03/06 11:40:21 spz Exp $
 +#endif
  
  using namespace std;
+ 
+@@ -174,7 +178,10 @@ Buffer::uncompress()
+ 
+ void Buffer::extend(unsigned long minExtend) {
+    assert(!callerAllocated);	// !!!
+-   capacity = (capacity + BufferExtendIncrement) >? (size + minExtend);
++   // using deprecated g++ only operators is not that portable,
++   // use ordinary trigraph instead
++   capacity = ( (capacity + BufferExtendIncrement) > (size + minExtend) ) ?
++			   (capacity + BufferExtendIncrement) : (size + minExtend);
+    contents = (char *)realloc(contents, capacity);
+ }
  
