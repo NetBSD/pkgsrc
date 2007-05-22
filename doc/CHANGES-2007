@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1105 2007/05/21 22:34:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1106 2007/05/22 11:14:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/qemu to 0.9.0 [xtraeme 2007-05-21]
 	Added devel/sparse version 0.3 [reed 2007-05-21]
 	Updated finance/gnucash-current to 2.1.2 [wiz 2007-05-21]
+	Updated mail/squirrelmail to 1.4.10anb2 [taca 2007-05-22]
