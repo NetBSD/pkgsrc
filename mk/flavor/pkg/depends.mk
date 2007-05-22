@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.29 2007/05/22 18:08:33 joerg Exp $
+# $NetBSD: depends.mk,v 1.30 2007/05/22 21:27:59 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -49,20 +49,12 @@ _RESOLVE_DEPENDS_CMD=	\
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
-_INSTALL_DEPENDS_CMD=	\
-	${SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} \
-		_PKGSRC_DEPS=${_PKSRC_DEPS:Q} \
-		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
-		DEPENDS_TARGET=${DEPENDS_TARGET:Q} \
-		MAKE=${MAKE:Q} \
-		MAKEFLAGS=${MAKEFLAGS:Q} \
-		OBJECT_FMT=${OBJECT_FMT:Q} \
-		PKG_ADMIN=${PKG_ADMIN_CMD:Q} \
-		PKG_INFO=${PKG_INFO:Q} \
-		_PKGNAME=${PKGNAME:Q} \
-		PKGSRC_MAKE_ENV=${PKGSRC_MAKE_ENV:Q} \
-		SETENV=${SETENV:Q} \
-		${SH} ${PKGSRCDIR}/mk/flavor/pkg/install-dependencies
+_INSTALL_DEPENDS=	${PKGSRCDIR}/mk/flavor/pkg/install-dependencies
+.for _var in _PKG_DBDIR _PKGSR_DEPS _DEPENDS_FILE DEPENDS_TARGET \
+	MAKE MAKEFLAGS OBJECT_FMT PKG_ADMIN PKG_INFO PKGNAME \
+	PKGSRC_MAKE_ENV SETENV
+_INSTALL_DEPENDS_ARGS+=	${_var}=${${_var}:Q:Q}
+.endfor
 
 ${_DEPENDS_FILE}:
 	${RUN} ${MKDIR} ${.TARGET:H}
@@ -75,7 +67,7 @@ ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 #	Installs any missing dependencies.
 #
 _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
-	${RUN}${_INSTALL_DEPENDS_CMD} no-bootstrap
+	${RUN}${SH} ${_INSTALL_DEPENDS} no-bootstrap ${_INSTALL_DEPENDS_ARGS}
 
 # _flavor-post-install-dependencies:
 #	Targets after installing all dependencies.
@@ -95,7 +87,7 @@ _BOOTSTRAP_DEPENDS_TARGETS+=	${_DEPENDS_FILE}
 _BOOTSTRAP_DEPENDS_TARGETS+=	release-bootstrap-depends-lock
 
 bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
-	${RUN}${_INSTALL_DEPENDS_CMD} bootstrap
+	${RUN}${SH} ${_INSTALL_DEPENDS} bootstrap ${_INSTALL_DEPENDS_ARGS}
 
 .PHONY: 
 acquire-bootstrap-depends-lock: acquire-lock

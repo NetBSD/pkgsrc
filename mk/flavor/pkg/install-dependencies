@@ -22,10 +22,10 @@
 
 set -e
 
-DEPENDS_FILE=${_DEPENDS_FILE}
-unset _DEPENDS_FILE
-PKGNAME=${_PKGNAME}
-unset _PKGNAME
+bootstrap_mode="$1"
+shift
+
+eval "$@"
 
 error_msg() {
 	${ECHO} "ERROR:" "$*" 1>&2
@@ -39,8 +39,8 @@ find_best() {
 	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest $1 || ${TRUE}
 }
 
-${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
-	if $TEST "$1" = "bootstrap"; then
+${CAT} ${_DEPENDS_FILE} | while read type pattern dir; do
+	if $TEST "$bootstrap_mode" = "bootstrap"; then
 		$TEST "$type" != "bootstrap" && continue
 	else
 		$TEST "$type" = "bootstrap" && continue
