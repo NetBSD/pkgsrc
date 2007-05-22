@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/01/24 19:46:45 epg Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/05/22 10:53:20 xtraeme Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 EXTRACT_SUFX=		.tar.bz2
@@ -7,4 +7,4 @@ APACHE_VERSION=		2.2.4
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
 			http://www.NetBSD.org/images/logos/
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
