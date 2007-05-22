@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1109 2007/05/22 13:01:07 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1110 2007/05/22 16:59:16 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/xchat-python to 2.8.2 [tron 2007-05-22]
 	Updated net/samba to 3.0.24nb3 [tron 2007-05-22]
 	Updated net/wide-dhcpv6 to 20070507 [obache 2007-05-22]
+	Updated chat/eggdrop to 1.6.17nb1 [lkundrak 2007-05-22]
