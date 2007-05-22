@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: register-dependencies,v 1.2 2006/06/04 05:43:56 jlam Exp $
+# $NetBSD: register-dependencies,v 1.3 2007/05/22 16:17:16 joerg Exp $
 #
 ######################################################################
 #
@@ -12,13 +12,10 @@
 #
 # DESCRIPTION
 #	register-dependencies registers a dependency relationship from
-#	the named package pkgname and the dependencies passed in via
-#	standard input.  The dependencies may be wildcard patterns.
+#	the named package pkgname and the packages passed in via 
+#	standard input.
 #
 # ENVIRONMENT
-#	PKG_ADMIN
-#		This is the path to the pkg_admin command.
-#
 #	PKG_DBDIR
 #		This is the package meta-data directory in which the
 #		packages are registered.  By default, this is /var/db/pkg.
@@ -28,7 +25,6 @@
 : ${AWK:=awk}
 : ${CP:=cp}
 : ${ECHO:=echo}
-: ${PKG_ADMIN:=pkg_admin}
 : ${PKG_DBDIR:=/var/db/pkg}
 : ${RM:=rm}
 : ${TEST:=test}
@@ -37,11 +33,10 @@
 
 PKGNAME="$1"
 
-while read dependency; do
-	pkg=`${PKG_ADMIN} -b -d ${PKG_DBDIR} -S lsbest "$dependency" || ${TRUE}`
+while read pkg; do
 	pkgdir="${PKG_DBDIR}/$pkg"
-	if ${TEST} -z "$pkg" -o ! -d "$pkgdir"; then
-		${ECHO} 1>&2 "$dependency not found - dependency NOT registered"
+	if ${TEST} ! -d "$pkgdir"; then
+		${ECHO} 1>&2 "$pkg not found - dependency NOT registered"
 		continue
 	fi
 	req="$pkgdir/+REQUIRED_BY"
