@@ -1,12 +1,48 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.17 2007/04/21 01:27:44 tnn Exp $
+# $NetBSD: mkbinarykit,v 1.18 2007/05/22 17:48:32 schmonz Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
 # copied to ${PREFIX}/etc/mk.conf or to the location specified
 # by using --mkconf. Run this program from the pkgsrc/bootstrap
 # directory.
+
+mkbinarykit_macpkg()
+{
+	local macdestdir
+	macdestdir=${wrkdir}/macpkg-destdir
+	rm -rf ${macdestdir} || die "cleanup destdir"
+
+	mkdir -p ${macdestdir}${prefix} || die "mkdir destprefix"
+	rmdir ${macdestdir}${prefix} || die "rmdir destprefix"
+	cp -Rp ${prefix} ${macdestdir}${prefix} || die "copy prefix"
+	mkdir -p ${macdestdir}${pkgdbdir} || die "mkdir destdbdir"
+	rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
+	cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
+
+	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" -e "s|%TARGETDIR%|${targetdir}|g" < macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
+	/Developer/Tools/packagemaker -build -proj ${wrkdir}/macpkg.pmproj -p "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
+	ls -dl "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
+}
+
+mkbinarykit_tar()
+{
+	# in case tar was built by bootstrap
+	PATH="$prefix/bin:$PATH"; export PATH
+	[ ! -d $sysconfdir ] && mkdir -p $sysconfdir 
+	cp ${wrkdir}/mk.conf.example $mkfile &&						\
+	cd / && \
+	tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar" \
+		.$prefix .$pkgdbdir .$mkfile && \
+	ls -l "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"
+}
+
+die()
+{
+	echo "error: can't $@" >&2
+	exit 1
+}
 
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
@@ -141,10 +177,11 @@ $strip "$prefix/"bin/*
 $strip "$prefix/"sbin/*
 
 echo "Making binary kit."
-PATH="$prefix/bin:$PATH"; export PATH # in case tar was built by bootstrap
-[ ! -d $sysconfdir ] && mkdir -p $sysconfdir 
-cp ${wrkdir}/mk.conf.example $mkfile &&						\
-cd / && 								\
-tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"	\
-					.$prefix .$pkgdbdir .$mkfile && \
-ls -l "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"
+case "$opsys" in
+Darwin)
+	mkbinarykit_macpkg
+	;;
+*)
+	mkbinarykit_tar
+	;;
+esac
