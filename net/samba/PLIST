@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/02/11 18:39:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/05/22 12:41:04 tron Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -102,9 +102,11 @@ man/man8/tdbbackup.8
 man/man8/tdbdump.8
 man/man8/umount.cifs.8
 man/man8/winbindd.8
+${SMBMOUNT}sbin/mount.cifs
 sbin/nmbd
 sbin/smbd
 sbin/swat
+${SMBMOUNT}sbin/umount.cifs
 ${WINBIND}sbin/winbindd
 share/doc/samba/NT4-Locking.reg
 share/doc/samba/NT4_PlainPassword.reg
