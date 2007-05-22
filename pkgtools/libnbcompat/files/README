@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.14 2007/05/07 16:38:47 joerg Exp $
+$NetBSD: README,v 1.15 2007/05/22 18:06:39 tnn Exp $
 
  0 Introduction
  ==============
@@ -66,6 +66,9 @@ libnbcompat-20070507 has been tested to build and install correctly
 on the following operating systems:
 
 	DragonFly-1.8/i386		<joerg@NetBSD.org>
+	HPUX-11.11/hppa			<tnn@NetBSD.org>
+	OSF1-5.1B/alpha			<tnn@NetBSD.org>
+	Solaris 10/sparc		<tnn@NetBSD.org>
 
  3 Usage
  =======
