@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.26 2007/05/21 22:42:22 wiz Exp $
+# $NetBSD: sites.mk,v 1.27 2007/05/22 12:27:08 martti Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -53,7 +53,7 @@ MASTER_SITE_R_CRAN+=    \
 MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.tex.ac.uk/tex-archive/ \
-	ftp://ftp.dante.de/tex-archive/ 
+	ftp://ftp.dante.de/tex-archive/
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
@@ -126,7 +126,7 @@ MASTER_SITE_SOURCEFORGE_JP+=	\
 MASTER_SITE_SUSE+=	\
 	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
-	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ 
+	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/
 
 MASTER_SITE_MOZILLA+=   \
 	http://ftp.mozilla.org/pub/mozilla.org/ \
