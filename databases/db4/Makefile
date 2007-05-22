@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/11/05 17:43:59 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2007/05/22 15:57:27 obache Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -10,7 +10,7 @@ PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2 patch.4.4.20.3 patch.4.4.20.4
 PATCH_SITES=		http://www.oracle.com/technology/products/berkeley-db/db/update/4.4.20/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.oracle.com/database/berkeley-db/db/index.html
+HOMEPAGE=		http://www.oracle.com/database/berkeley-db/index.html
 COMMENT=		Berkeley DB version 4 from Oracle
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
