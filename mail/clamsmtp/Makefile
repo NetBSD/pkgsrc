@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/05/22 11:26:13 martti Exp $
+# $NetBSD: Makefile,v 1.29 2007/05/22 12:28:55 martti Exp $
 
 DISTNAME=		clamsmtp-1.8
 CATEGORIES=		mail
@@ -24,6 +24,8 @@ CONF_FILES=		${EGDIR}/clamsmtpd.conf \
 			${PKG_SYSCONFDIR}/clamsmtpd.conf
 
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
+
+BUILD_DEFS+=		CLAMAV_USER
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${EGDIR}
