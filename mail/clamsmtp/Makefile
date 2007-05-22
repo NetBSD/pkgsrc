@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2006/10/27 17:37:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2007/05/22 11:03:49 xtraeme Exp $
 
 DISTNAME=		clamsmtp-1.8
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/nielsen/software/clamsmtp/
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://memberwebs.com/nielsen/software/clamsmtp/
 COMMENT=		SMTP filter that allows you to check for viruses
 
