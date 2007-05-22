@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1106 2007/05/22 11:14:11 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1107 2007/05/22 12:20:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2109,3 +2109,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/sparse version 0.3 [reed 2007-05-21]
 	Updated finance/gnucash-current to 2.1.2 [wiz 2007-05-21]
 	Updated mail/squirrelmail to 1.4.10anb2 [taca 2007-05-22]
+	Updated chat/xchat to 2.8.2 [tron 2007-05-22]
+	Updated chat/xchat-perl to 2.8.2 [tron 2007-05-22]
+	Updated chat/xchat-python to 2.8.2 [tron 2007-05-22]

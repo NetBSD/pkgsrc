@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6356 2007/05/21 22:34:21 wiz Exp $
+$NetBSD: TODO,v 1.6357 2007/05/22 12:20:08 tron Exp $
 
 Suggested new packages
 ======================
@@ -1291,7 +1291,6 @@ Suggested package updates
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
-	o xchat-2.8.2
 	o xcircuit-3.6.85
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
