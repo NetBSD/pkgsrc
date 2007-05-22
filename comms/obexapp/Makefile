@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/05/06 08:33:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2007/05/22 18:53:55 plunky Exp $
 #
 
-DISTNAME=	obexapp-1.4.5
+DISTNAME=	obexapp-1.4.7
 CATEGORIES=	comms
 MASTER_SITES=	http://www.geocities.com/m_evmenkin/
 
@@ -15,22 +15,15 @@ OWN_DIRS+=		${VARBASE}/spool/obex
 
 RCD_SCRIPTS+=		obexapp
 
-SUBST_CLASSES+=		mk var
-SUBST_FILES.mk=		Makefile
-SUBST_STAGE.mk=		post-configure
-SUBST_SED.mk=		-e "s|-lbsdxml|-lexpat|"
-SUBST_SED.mk+=		-e "s|/usr/local/man|${PREFIX}|"
-SUBST_SED.mk+=		-e "s|/usr/local|${PREFIX}|"
-SUBST_SED.mk+=		-e "s|CFLAGS=|CFLAGS+=|"
-SUBST_FILES.var=	obexapp.1 obexapp.h
-SUBST_STAGE.var=	post-configure
-SUBST_SED.var=		-e "s|/var|${VARBASE}|"
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	Makefile obexapp.1 obexapp.h
+SUBST_STAGE.paths=	post-configure
+SUBST_SED.paths+=	-e "s|/usr/local/man|${PREFIX}|"
+SUBST_SED.paths+=	-e "s|/usr/local|${PREFIX}|"
+SUBST_SED.paths+=	-e "s|/var|${VARBASE}|"
 
 # Sigh, this needs the GNU libiconv.
 USE_GNU_ICONV=		yes
-
-# Too many warnings with gcc4, disable them for now.
-BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # because the directory name conflicts with the rc.d script
 post-extract:
