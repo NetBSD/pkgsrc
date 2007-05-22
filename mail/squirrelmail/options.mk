@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/05/20 17:02:17 taca Exp $
+# $NetBSD: options.mk,v 1.2 2007/05/22 11:13:27 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squirrelmail
 PKG_SUPPORTED_OPTIONS=	squirrelmail-japanese squirrelmail-lite
@@ -14,5 +14,5 @@ PATCH_DIST_STRIP=	-p1
 
 .if !empty(PKG_OPTIONS:Msquirrelmail-lite)
 PATCH_SITES+=		ftp://ftp.back-street.net/pub/squirrelmail/
-PATCHFILES+=		squirrelmail-1.4.10a-lite-20070511-patch
+PATCHFILES+=		squirrelmail-1.4.10a-lite-20070522-patch
 .endif
