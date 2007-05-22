@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1108 2007/05/22 12:41:54 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1109 2007/05/22 13:01:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2113,3 +2113,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/xchat-perl to 2.8.2 [tron 2007-05-22]
 	Updated chat/xchat-python to 2.8.2 [tron 2007-05-22]
 	Updated net/samba to 3.0.24nb3 [tron 2007-05-22]
+	Updated net/wide-dhcpv6 to 20070507 [obache 2007-05-22]
