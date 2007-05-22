@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.13 2007/05/22 16:17:16 joerg Exp $
+# $NetBSD: depends.mk,v 1.14 2007/05/22 19:04:24 joerg Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -37,6 +37,7 @@ ${_COOKIE.depends}: real-depends
 ### real-depends is a helper target onto which one can hook all of the
 ### targets that do the actual dependency installation.
 ###
+_REAL_DEPENDS_TARGETS+=	bootstrap-depends
 _REAL_DEPENDS_TARGETS+=	depends-message
 _REAL_DEPENDS_TARGETS+=	pre-depends-hook
 _REAL_DEPENDS_TARGETS+=	_flavor-install-dependencies
