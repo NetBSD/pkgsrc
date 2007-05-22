@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.28 2007/05/22 17:30:54 joerg Exp $
+# $NetBSD: depends.mk,v 1.29 2007/05/22 18:08:33 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -70,11 +70,6 @@ ${_DEPENDS_FILE}:
 
 ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 	${RUN} ${_RESOLVE_DEPENDS_CMD} > ${.TARGET}
-
-# _flavor-list-dependencies:
-#	Compute dependency list.
-#
-_flavor-list-dependencies: .PHONY ${_DEPENDS_FILE}
 
 # _flavor-install-dependencies:
 #	Installs any missing dependencies.
