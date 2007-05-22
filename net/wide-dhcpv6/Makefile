@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2007/03/31 14:12:10 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/22 12:53:01 obache Exp $
 
-DISTNAME=	wide-dhcpv6-20061016
-PKGREVISION=	1
+DISTNAME=	wide-dhcpv6-20070507
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wide-dhcpv6/}
 
@@ -25,6 +24,13 @@ MAN8=		dhcp6c.8 dhcp6ctl.8 dhcp6relay.8 dhcp6s.8
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
 			share/examples/wide-dhcpv6
+
+
+SUBST_CLASSES+=		fix-paths
+SUBST_STAGE.fix-paths=	pre-configure
+SUBST_MESSAGE.fix-paths=Fixing absolute paths.
+SUBST_FILES.fix-paths=	${MAN5} ${MAN8}
+SUBST_SED.fix-paths=	-e 's,/usr/local/etc,${PKG_SYSCONFDIR:Q},g'
 
 do-install:
 .for f in ${COMMANDS}
