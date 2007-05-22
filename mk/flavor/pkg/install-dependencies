@@ -27,12 +27,6 @@ unset _DEPENDS_FILE
 PKGNAME=${_PKGNAME}
 unset _PKGNAME
 
-if [ $# = 1 ]; then
-	type_filter=$1
-else
-	type_filter=all
-fi
-
 error_msg() {
 	${ECHO} "ERROR:" "$*" 1>&2
 }
@@ -46,7 +40,11 @@ find_best() {
 }
 
 ${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
-	[ $type_filter != all ] && [ $type_filter = "$filter" ] && continue
+	if $TEST "$1" = "bootstrap"; then
+		$TEST "$type" != "bootstrap" && continue
+	else
+		$TEST "$type" = "bootstrap" && continue
+	fi
 	pkg=`find_best "$pattern"`
 	case "$pkg" in
 	"")
