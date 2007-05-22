@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.27 2007/05/22 16:17:16 joerg Exp $
+# $NetBSD: depends.mk,v 1.28 2007/05/22 17:30:54 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -64,8 +64,6 @@ _INSTALL_DEPENDS_CMD=	\
 		SETENV=${SETENV:Q} \
 		${SH} ${PKGSRCDIR}/mk/flavor/pkg/install-dependencies
 
-bootstrap-depends: ${_DEPENDS_FILE}
-
 ${_DEPENDS_FILE}:
 	${RUN} ${MKDIR} ${.TARGET:H}
 	${RUN} ${_LIST_DEPENDS_CMD} > ${.TARGET}
@@ -82,7 +80,7 @@ _flavor-list-dependencies: .PHONY ${_DEPENDS_FILE}
 #	Installs any missing dependencies.
 #
 _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
-	${RUN}${_INSTALL_DEPENDS_CMD}
+	${RUN}${_INSTALL_DEPENDS_CMD} no-bootstrap
 
 # _flavor-post-install-dependencies:
 #	Targets after installing all dependencies.
