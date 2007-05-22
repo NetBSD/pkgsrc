@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/25 21:27:49 reed Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/05/22 12:18:58 tron Exp $
 bin/xchat
 share/applications/xchat.desktop
 share/doc/xchat/README
 share/doc/xchat/faq.html
 share/doc/xchat/plugin20.html
 share/locale/be/LC_MESSAGES/xchat.mo
+share/locale/ca/LC_MESSAGES/xchat.mo
 share/locale/cs/LC_MESSAGES/xchat.mo
 share/locale/de/LC_MESSAGES/xchat.mo
 share/locale/el/LC_MESSAGES/xchat.mo
@@ -24,7 +25,9 @@ share/locale/ru/LC_MESSAGES/xchat.mo
 share/locale/sq/LC_MESSAGES/xchat.mo
 share/locale/sr/LC_MESSAGES/xchat.mo
 share/locale/sv/LC_MESSAGES/xchat.mo
+share/locale/uk/LC_MESSAGES/xchat.mo
 share/locale/vi/LC_MESSAGES/xchat.mo
+share/locale/zh_CN/LC_MESSAGES/xchat.mo
 share/locale/zh_TW/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
 @comment in xdg-dirs: @dirrm share/pixmaps
