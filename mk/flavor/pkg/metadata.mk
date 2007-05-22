@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.19 2007/05/01 12:41:10 rillig Exp $
+# $NetBSD: metadata.mk,v 1.20 2007/05/22 16:17:16 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -274,11 +274,10 @@ ${_PRESERVE_FILE}:
 _SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
 _METADATA_TARGETS+=	${_SIZE_ALL_FILE}
 
-${_SIZE_ALL_FILE}: ${_COOKIE.depends}
+${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_DEPENDS_PATTERNS_CMD} |					\
-	${XARGS} -n 1 ${_PKG_BEST_EXISTS} | ${SORT} -u |		\
+	${_FULL_DEPENDS_CMD} | ${SORT} -u |				\
 	${XARGS} -n 256 ${PKG_INFO} -qs |				\
 	${AWK} 'BEGIN { s = 0 } /^[0-9]+$$/ { s += $$1 } END { print s }' \
 		> ${.TARGET}
@@ -316,13 +315,21 @@ ${_SIZE_PKG_FILE}: plist
 _CONTENTS_FILE=		${PKG_DB_TMPDIR}/+CONTENTS
 _METADATA_TARGETS+=	${_CONTENTS_FILE}
 
+_DEPENDS_PLIST=		${WRKDIR}/.PLIST_deps
+
+${_DEPENDS_PLIST}: ${PLIST}
+	${RUN} { \
+	${AWK} '$$1 == "full" { printf "@blddep %s\n@pkgdep %s\n", $$3, $$2; }' < ${_RDEPENDS_FILE}; \
+	${AWK} '$$1 == "bootstrap" || $$1 == "build" { printf "@blddep %s\n", $$3; }' < ${_RDEPENDS_FILE}; \
+	${CAT} ${PLIST}; } > ${.TARGET}
+
 _PKG_CREATE_ARGS+=				-v -l -U
 _PKG_CREATE_ARGS+=				-B ${_BUILD_INFO_FILE}
 _PKG_CREATE_ARGS+=				-b ${_BUILD_VERSION_FILE}
 _PKG_CREATE_ARGS+=				-c ${_COMMENT_FILE}
 _PKG_CREATE_ARGS+=	${_MESSAGE_FILE:D	-D ${_MESSAGE_FILE}}
 _PKG_CREATE_ARGS+=				-d ${_DESCR_FILE}
-_PKG_CREATE_ARGS+=				-f ${PLIST}
+_PKG_CREATE_ARGS+=				-f ${_DEPENDS_PLIST}
 .if defined(USE_MTREE)
 _PKG_CREATE_ARGS+=				-m ${_MTREE_FILE}}
 .endif
@@ -330,10 +337,6 @@ _PKG_CREATE_ARGS+=	${PKG_PRESERVE:D	-n ${_PRESERVE_FILE}}
 _PKG_CREATE_ARGS+=				-S ${_SIZE_ALL_FILE}
 _PKG_CREATE_ARGS+=				-s ${_SIZE_PKG_FILE}
 _PKG_CREATE_ARGS+=	${CONFLICTS:D		-C ${CONFLICTS:Q}}
-_PKG_CREATE_ARGS+=				${_DEPENDS_ARG_cmd:sh}
-.if ${PKGTOOLS_VERSION} >= 20070308
-_PKG_CREATE_ARGS+=				${_BUILD_DEPENDS_ARG_cmd:sh}
-.endif
 _PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
 _PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
 
@@ -343,20 +346,6 @@ _PKG_ARGS_INSTALL+=	-p ${PREFIX}
 .else
 _PKG_ARGS_INSTALL+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
 .endif
-
-_DEPENDS_ARG_cmd=	depends=`${_DEPENDS_PATTERNS_CMD}`;		\
-			if ${TEST} -n "$$depends"; then			\
-				${ECHO} "-P \"$$depends\"";		\
-			else						\
-				${ECHO};				\
-			fi
-
-_BUILD_DEPENDS_ARG_cmd=	depends=`${_BUILD_DEPENDS_PATTERNS_CMD}`;	\
-			if ${TEST} -n "$$depends"; then			\
-				${ECHO} "-T \"$$depends\"";		\
-			else						\
-				${ECHO};				\
-			fi
 
 _DEINSTALL_ARG_cmd=	if ${TEST} -f ${DEINSTALL_FILE}; then		\
 				${ECHO} "-k "${DEINSTALL_FILE:Q};	\
@@ -372,9 +361,10 @@ _INSTALL_ARG_cmd=	if ${TEST} -f ${INSTALL_FILE}; then		\
 _CONTENTS_TARGETS+=	${_BUILD_INFO_FILE}
 _CONTENTS_TARGETS+=	${_BUILD_VERSION_FILE}
 _CONTENTS_TARGETS+=	${_COMMENT_FILE}
-_CONTENTS_TARGETS+=	${_COOKIE.depends}
+_CONTENTS_TARGETS+=	${_DEPENDS_FILE}
 _CONTENTS_TARGETS+=	${_DESCR_FILE}
 _CONTENTS_TARGETS+=	${_MESSAGE_FILE}
+_CONTENTS_TARGETS+=	${_DEPENDS_PLIST}
 _CONTENTS_TARGETS+=	plist
 _CONTENTS_TARGETS+=	${_PRESERVE_FILE}
 _CONTENTS_TARGETS+=	${_SIZE_ALL_FILE}
