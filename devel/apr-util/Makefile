@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/28 06:23:04 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/22 10:53:20 xtraeme Exp $
 #
 
 DISTNAME=	apr-util-1.2.8
@@ -6,7 +6,7 @@ PKGREVISION=    1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Runtime utilities
 
