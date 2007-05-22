@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/05/13 01:34:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/22 19:13:49 wiz Exp $
 
 DISTNAME=	7a1ad0af8464
 # Last part of PKGNAME is changeset number
 PKGNAME=	fromcvs-0.0.0.99
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/archive/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,12 @@ LICENSE=        corecode-license
 
 WRKSRC=		${WRKDIR}/fromcvs-${DISTNAME}
 DIST_SUBDIR=	fromcvs
+
+SUBST_CLASSES+=		python
+SUBST_FILES.python+=	tohg.rb
+SUBST_MESSAGE.python+=	Fixing path to Python interpreter.
+SUBST_SED.python+=	-e "s!'python'!'${PYTHONBIN}'!"
+SUBST_STAGE.python+=	pre-build
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
@@ -39,4 +46,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tohg ${PREFIX}/bin
 
 .include "../../lang/ruby/modules.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
