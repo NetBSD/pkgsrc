@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.9 2007/03/09 00:39:55 rillig Exp $
+# $NetBSD: install.mk,v 1.10 2007/05/22 16:17:16 joerg Exp $
 #
 # _flavor-check-conflicts:
 #	Checks for conflicts between the package and installed packages.
@@ -52,10 +52,9 @@ _flavor-check-installed: .PHONY error-check
 _REGISTER_DEPENDENCIES=							\
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR:Q}				\
 		AWK=${TOOLS_AWK:Q}					\
-		PKG_ADMIN=${PKG_ADMIN_CMD:Q}				\
 	${SH} ${PKGSRCDIR}/mk/flavor/pkg/register-dependencies
 
-_flavor-register: .PHONY generate-metadata ${_COOKIE.depends}
+_flavor-register: .PHONY generate-metadata ${_RDEPENDS_FILE}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
@@ -65,5 +64,5 @@ _flavor-register: .PHONY generate-metadata ${_COOKIE.depends}
 	case ${_AUTOMATIC:Q}"" in					\
 	[yY][eE][sS])	${PKG_ADMIN} set automatic=yes ${PKGNAME} ;;	\
 	esac
-	${_PKG_SILENT}${_PKG_DEBUG}${_DEPENDS_PATTERNS_CMD} |		\
+	${_PKG_SILENT}${_PKG_DEBUG}${_FULL_DEPENDS_CMD} |		\
 		${SORT} -u | ${_REGISTER_DEPENDENCIES} ${PKGNAME}

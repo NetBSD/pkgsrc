@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.12 2007/03/09 00:39:54 rillig Exp $
+# $NetBSD: depends.mk,v 1.13 2007/05/22 16:17:16 joerg Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -40,6 +40,7 @@ ${_COOKIE.depends}: real-depends
 _REAL_DEPENDS_TARGETS+=	depends-message
 _REAL_DEPENDS_TARGETS+=	pre-depends-hook
 _REAL_DEPENDS_TARGETS+=	_flavor-install-dependencies
+_REAL_DEPENDS_TARGETS+=	_flavor-post-install-dependencies
 _REAL_DEPENDS_TARGETS+=	depends-cookie
 _REAL_DEPENDS_TARGETS+=	error-check
 
