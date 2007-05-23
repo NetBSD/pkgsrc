@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.19 2007/05/23 05:06:03 schmonz Exp $
+# $NetBSD: mkbinarykit,v 1.20 2007/05/23 13:54:15 schmonz Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -72,7 +72,6 @@ sedprog="sed"
 
 case "$opsys" in
 AIX)
-	syscondir=$prefix/etc
 	pkgdbdir=$prefix/pkgdb
 	;;
 Darwin)
