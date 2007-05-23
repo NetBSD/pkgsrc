@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.71 2007/02/15 14:47:09 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2007/05/23 23:46:08 wiz Exp $
 
 DISTNAME=	screen-4.0.3
 CATEGORIES=	misc shells
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
-		${MASTER_SITE_GNU:=screen/}
+		http://komquats.com/distfiles/ \
+		http://people.freebsd.org/~cy/distfiles/
+#		${MASTER_SITE_GNU:=screen/}
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
