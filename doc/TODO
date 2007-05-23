@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6360 2007/05/23 09:40:13 xtraeme Exp $
+$NetBSD: TODO,v 1.6361 2007/05/23 13:40:58 obache Exp $
 
 Suggested new packages
 ======================
@@ -651,7 +651,6 @@ Suggested package updates
 	o kinput2-3.1
 	o kismet-2007.01.1b
 	o kmp-0.5
-	o kmymoney2-0.8.6 [pkg/36353]
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
 	o ksi-3.4.2
