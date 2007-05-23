@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/01/26 03:36:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/05/23 13:59:37 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -120,9 +120,15 @@ share/doc/kde/HTML/fr/kandy/common
 share/doc/kde/HTML/fr/kandy/index.cache.bz2
 share/doc/kde/HTML/fr/kandy/index.docbook
 share/doc/kde/HTML/fr/kappfinder/man-kappfinder.1.docbook
+share/doc/kde/HTML/fr/karm/clipboard-history.png
 share/doc/kde/HTML/fr/karm/common
+share/doc/kde/HTML/fr/karm/copy-this-task.png
+share/doc/kde/HTML/fr/karm/csvexport.png
+share/doc/kde/HTML/fr/karm/daterange.png
+share/doc/kde/HTML/fr/karm/idle-detect.png
 share/doc/kde/HTML/fr/karm/index.cache.bz2
 share/doc/kde/HTML/fr/karm/index.docbook
+share/doc/kde/HTML/fr/karm/karm.png
 share/doc/kde/HTML/fr/kasteroids/common
 share/doc/kde/HTML/fr/kasteroids/index.cache.bz2
 share/doc/kde/HTML/fr/kasteroids/index.docbook
@@ -586,6 +592,7 @@ share/doc/kde/HTML/fr/khelpcenter/userguide/common
 share/doc/kde/HTML/fr/khelpcenter/userguide/control-center.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/credits-and-license.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/customizing-desktop.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/email.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/extragear-applications.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/file-sharing.docbook
@@ -650,6 +657,7 @@ share/doc/kde/HTML/fr/khelpcenter/userguide/screen-captures.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/services.png
 share/doc/kde/HTML/fr/khelpcenter/userguide/shared-sessions.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/shortcuts.docbook
+share/doc/kde/HTML/fr/khelpcenter/userguide/splash-screen.png
 share/doc/kde/HTML/fr/khelpcenter/userguide/staff.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/standard-menu-entries.docbook
 share/doc/kde/HTML/fr/khelpcenter/userguide/switching-sessions.docbook
@@ -937,6 +945,9 @@ share/doc/kde/HTML/fr/kmplot/menu.docbook
 share/doc/kde/HTML/fr/kmplot/reference.docbook
 share/doc/kde/HTML/fr/kmplot/settingsdlg.png
 share/doc/kde/HTML/fr/kmplot/using.docbook
+share/doc/kde/HTML/fr/knetattach/common
+share/doc/kde/HTML/fr/knetattach/index.cache.bz2
+share/doc/kde/HTML/fr/knetattach/index.docbook
 share/doc/kde/HTML/fr/knetworkconf/common
 share/doc/kde/HTML/fr/knetworkconf/index.cache.bz2
 share/doc/kde/HTML/fr/knetworkconf/index.docbook
@@ -1000,6 +1011,20 @@ share/doc/kde/HTML/fr/kodo/index.docbook
 share/doc/kde/HTML/fr/kolf/common
 share/doc/kde/HTML/fr/kolf/index.cache.bz2
 share/doc/kde/HTML/fr/kolf/index.docbook
+share/doc/kde/HTML/fr/kolourpaint/common
+share/doc/kde/HTML/fr/kolourpaint/image_balance.png
+share/doc/kde/HTML/fr/kolourpaint/image_emboss.png
+share/doc/kde/HTML/fr/kolourpaint/image_flatten.png
+share/doc/kde/HTML/fr/kolourpaint/image_flip.png
+share/doc/kde/HTML/fr/kolourpaint/image_invert.png
+share/doc/kde/HTML/fr/kolourpaint/image_reduce_colors.png
+share/doc/kde/HTML/fr/kolourpaint/image_resize_scale.png
+share/doc/kde/HTML/fr/kolourpaint/image_rotate.png
+share/doc/kde/HTML/fr/kolourpaint/image_skew.png
+share/doc/kde/HTML/fr/kolourpaint/image_soften_sharpen.png
+share/doc/kde/HTML/fr/kolourpaint/index.cache.bz2
+share/doc/kde/HTML/fr/kolourpaint/index.docbook
+share/doc/kde/HTML/fr/kolourpaint/kolourpaint-main.png
 share/doc/kde/HTML/fr/kompare/common
 share/doc/kde/HTML/fr/kompare/index.cache.bz2
 share/doc/kde/HTML/fr/kompare/index.docbook
@@ -1089,6 +1114,7 @@ share/doc/kde/HTML/fr/kooka/index.docbook
 share/doc/kde/HTML/fr/kooka/kooka_gocr.png
 share/doc/kde/HTML/fr/kooka/kooka_gocr_result.png
 share/doc/kde/HTML/fr/kooka/kooka_mainctrl.png
+share/doc/kde/HTML/fr/kopete/chatstyle.docbook
 share/doc/kde/HTML/fr/kopete/common
 share/doc/kde/HTML/fr/kopete/index.cache.bz2
 share/doc/kde/HTML/fr/kopete/index.docbook
@@ -2170,7 +2196,6 @@ share/locale/fr/LC_MESSAGES/nsplugin.mo
 share/locale/fr/LC_MESSAGES/pitchablespeed.mo
 share/locale/fr/LC_MESSAGES/ppdtranslations.mo
 share/locale/fr/LC_MESSAGES/privacy.mo
-share/locale/fr/LC_MESSAGES/qeditor.mo
 share/locale/fr/LC_MESSAGES/quanta.mo
 share/locale/fr/LC_MESSAGES/quicklauncher.mo
 share/locale/fr/LC_MESSAGES/rellinks.mo
@@ -2292,12 +2317,14 @@ share/locale/fr/relecture_gui
 @dirrm share/doc/kde/HTML/fr/konq-plugins/babel
 @dirrm share/doc/kde/HTML/fr/konq-plugins
 @dirrm share/doc/kde/HTML/fr/kompare
+@dirrm share/doc/kde/HTML/fr/kolourpaint
 @dirrm share/doc/kde/HTML/fr/kolf
 @dirrm share/doc/kde/HTML/fr/kodo
 @dirrm share/doc/kde/HTML/fr/knotes
 @dirrm share/doc/kde/HTML/fr/knode
 @dirrm share/doc/kde/HTML/fr/knewsticker
 @dirrm share/doc/kde/HTML/fr/knetworkconf
+@dirrm share/doc/kde/HTML/fr/knetattach
 @dirrm share/doc/kde/HTML/fr/kmplot
 @dirrm share/doc/kde/HTML/fr/kmouth
 @dirrm share/doc/kde/HTML/fr/kmousetool
