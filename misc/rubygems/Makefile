@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/04/27 19:31:08 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/23 01:51:19 minskim Exp $
 
-DISTNAME=	rubygems-0.9.2
+DISTNAME=	rubygems-0.9.3
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/17190/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/20585/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -15,5 +15,18 @@ USE_RUBY_SETUP=	yes
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin
 REPLACE_FILE_PAT=	[a-z]*
 
+PLIST_SRC=      ${PKGDIR}/PLIST.common
+PLIST_SRC+=     ${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC+=     ${PKGDIR}/PLIST.common_end
+
 .include "../../lang/ruby/modules.mk"
+
+post-install:
+	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
+	${FIND} ${PREFIX}/lib/ruby/gems/1.8/doc/${DISTNAME}/rdoc	\
+		-type f -print						\
+		| ${SORT} -r						\
+		| ${SED} 's;${PREFIX}/;;g'				\
+		>> ${WRKDIR}/PLIST_DYNAMIC
+
 .include "../../mk/bsd.pkg.mk"
