@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/01/26 02:58:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/05/23 13:16:11 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -493,6 +493,7 @@ share/doc/kde/HTML/en/kmix/index.cache.bz2
 share/doc/kde/HTML/en/kmix/index.docbook
 share/doc/kde/HTML/en/kmix/kmix-channel-playback.png
 share/doc/kde/HTML/en/kmix/kmix-channel-record.png
+share/doc/kde/HTML/en/kmix/kmix-channel-switches.png
 share/doc/kde/HTML/en/kmix/kmix-window.png
 share/doc/kde/HTML/en/krec/common
 share/doc/kde/HTML/en/krec/index.cache.bz2
