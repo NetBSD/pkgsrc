@@ -2264,7 +2264,9 @@ Make sure you don't need any of the packages still installed.
 
 Warning
 
-During the bulk build, all packages will be removed!
+During the bulk build, all packages, their configuration files and some more
+files from /var, and possibly also /home will be removed! Don't run a bulk
+build with privileges that might harm your system.
 
 Be sure to remove all other things that might interfere with builds, like some
 libs installed in /usr/local, etc. then become root and type:
@@ -6385,7 +6387,7 @@ For packages which are not Free or Open Source, pkgsrc will not build the
 package unless the user has indicated to pkgsrc that packages with that
 particular license may be built. Note that this documentation avoids the term
 "accepted the license". The pkgsrc system is merely providing a mechanism to
-avoid accidentially building a package with a non-free license; judgement and
+avoid accidentally building a package with a non-free license; judgement and
 responsibility remain with the user. (Installation of binary packages are not
 currently subject to this mechanism; this is a bug.)
 
@@ -6435,7 +6437,7 @@ When the license changes (in a way other than formatting), please make sure
 that the new license has a different name (e.g., append the version number if
 it exists, or the date). Just because a user told pkgsrc to build programs
 under a previous version of a license does not mean that pkgsrc should build
-programs under the new licenes. The higher-level point is that pkgsrc does not
+programs under the new licenses. The higher-level point is that pkgsrc does not
 evaluate licenses for reasonableness; the only test is a mechanistic test of
 whether a particular text has been approved by either of two bodies.
 

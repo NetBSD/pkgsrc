@@ -2783,8 +2783,12 @@ PKG_OPTIONS.apache=     suexec </pre>
       installed.</p>
 <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Warning</h3>
-<p>During the bulk build, <span class="emphasis"><em>all packages will be
-	removed!</em></span></p>
+<p>During the bulk build, <span class="emphasis"><em>all packages, their
+	configuration files and some more files from
+	<code class="filename">/var</code>, <code class="filename">/home</code> and
+	possibly other locations will be removed! So don't run a bulk
+	build with privileges that might harm your
+	system.</em></span></p>
 </div>
 <p>Be sure to remove all other things that might
       interfere with builds, like some libs installed in
@@ -7496,7 +7500,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id454976"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id2707770"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7506,7 +7510,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id454985"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id2707780"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7517,7 +7521,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id454995"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id2707790"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7695,7 +7699,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     packages with that particular license may be built.  Note that
     this documentation avoids the term "accepted the license".  The
     pkgsrc system is merely providing a mechanism to avoid
-    accidentially building a package with a non-free license;
+    accidentally building a package with a non-free license;
     judgement and responsibility remain with the user.  (Installation
     of binary packages are not currently subject to this mechanism;
     this is a bug.)</p>
@@ -7751,7 +7755,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     append the version number if it exists, or the date).  Just
     because a user told pkgsrc to build programs under a previous
     version of a license does not mean that pkgsrc should build
-    programs under the new licenes.  The higher-level point is that
+    programs under the new licenses.  The higher-level point is that
     pkgsrc does not evaluate licenses for reasonableness; the only
     test is a mechanistic test of whether a particular text has been
     approved by either of two bodies.</p>
@@ -9491,7 +9495,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id459757"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713521"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9507,7 +9511,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id459792"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2713559"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9525,7 +9529,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id459830"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2713600"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9543,7 +9547,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id459868"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2713639"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9556,7 +9560,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id459888"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2713659"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9572,7 +9576,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id459917"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2713757"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9596,7 +9600,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id460061"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2713834"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9621,7 +9625,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id460131"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2713873"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9669,7 +9673,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id460227"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2713934"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
