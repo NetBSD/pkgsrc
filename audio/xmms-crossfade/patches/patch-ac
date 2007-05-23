@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2002/10/27 06:47:45 rh Exp $
+$NetBSD: patch-ac,v 1.3 2007/05/23 12:00:04 rillig Exp $
 
---- oss.c.orig	Tue May 15 07:35:52 2001
-+++ oss.c
+--- oss.c.orig	2001-05-14 23:35:52.000000000 +0200
++++ oss.c	2007-05-23 13:57:16.000000000 +0200
 @@ -42,9 +42,10 @@
  #  include <sys/soundcard.h>
  #elif defined(HAVE_MACHINE_SOUNDCARD_H)
@@ -14,7 +14,16 @@ $NetBSD: patch-ac,v 1.2 2002/10/27 06:47:45 rh Exp $
  /* output plugin callback prototypes */
  static void oss_get_volume      (int *l, int *r);
  static void oss_set_volume      (int l, int r);
-@@ -305,9 +306,9 @@ oss_open_audio(AFormat fmt, int rate, in
+@@ -91,6 +92,8 @@ static gint     dsp_buffer_size = 0;
+ static gint     dsp_fragment_size = 0;
+ static gboolean dsp_select_works = FALSE;
+ 
++/* let's assume that this is really meant to be a local variable. */
++#define buffer_mutex oss_c_local_variable_buffer_mutex
+ static pthread_mutex_t buffer_mutex;
+ static pthread_t       buffer_thread;
+ 
+@@ -305,9 +308,9 @@ oss_open_audio(AFormat fmt, int rate, in
    if(config->oss_use_alt_audio_device && (config->oss_alt_audio_device != NULL))
      device_name = g_strdup(config->oss_alt_audio_device);
    else if(config->oss_audio_device > 0)
@@ -26,7 +35,7 @@ $NetBSD: patch-ac,v 1.2 2002/10/27 06:47:45 rh Exp $
  
    /* HACK: Test if the device is not locked by another process. This is
     *       just a crude workaround to avoid complete lockup of XMMS. It is
-@@ -499,13 +500,26 @@ buffer_thread_f(void *arg)
+@@ -499,13 +502,26 @@ buffer_thread_f(void *arg)
    while(dsp_fd != -1) {
      /* wait for device */
      if(dsp_select_works) {
