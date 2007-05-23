@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.5 2007/05/20 13:35:56 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.6 2007/05/23 18:11:05 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -67,7 +67,9 @@ MAKE="@MAKE@"
 test -z "$PKG_DBDIR" && PKG_DBDIR=/var/db/pkg
 test -z "$MAKECONF" && MAKECONF="@MAKECONF@"
 test -f "$MAKECONF" && test -z "$PKGSRCDIR" && \
-    PKGSRCDIR="`$MAKE -f \"$MAKECONF\" BSD_PKG_MK=1 -V PKGSRCDIR`"
+    PKGSRCDIR="`(cat "$MAKECONF"; \
+    printf '\n_print_pkgsrcdir:\n\t@echo "${PKGSRCDIR}"\n') | \
+    "$MAKE" BSD_PKG_MK=1 -f - _print_pkgsrcdir`"
 test -z "$PKGSRCDIR" && PKGSRCDIR=/usr/pkgsrc
 
 unset PKG_PATH || true  #or pkgsrc makefiles will complain
