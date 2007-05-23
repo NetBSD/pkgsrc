@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2007/03/24 14:01:26 markd Exp $
+# $NetBSD: Makefile,v 1.63 2007/05/23 13:52:58 markd Exp $
 
-DISTNAME=	kdevelop-3.4.0
-PKGNAME=	kdevelop-base-3.4.0
+DISTNAME=	kdevelop-3.4.1
+PKGNAME=	kdevelop-base-3.4.1
 CATEGORIES=	devel kde
 
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
-MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop-3.4.0/src/}
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
@@ -22,6 +21,7 @@ DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
 CONFLICTS+=	kdevelop<=1.3
 
 USE_TOOLS+=	msgfmt perl:run
+USE_LANGUAGES+=	fortran
 
 REPLACE_PERL+= \
 	kdevprj2kdevelop \
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+= \
 	--with-db-lib=db4 \
 	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html \
 	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
+
+.include "options.mk"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
