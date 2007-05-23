@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1120 2007/05/23 14:10:05 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1121 2007/05/23 14:12:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2212,3 +2212,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/kde3-i18n-zh_TW to 3.5.7 [markd 2007-05-23]
 	Updated devel/kdevelop-base to 3.4.1 [markd 2007-05-23]
 	Updated devel/kdevelop to 3.4.1 [markd 2007-05-23]
+	Added comms/libopensync version 0.22 [markd 2007-05-23]
