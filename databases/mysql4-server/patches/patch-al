@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+$NetBSD: patch-al,v 1.2 2007/05/23 08:11:51 martti Exp $
 
---- include/my_pthread.h.orig	2003-12-14 21:23:47.000000000 +0000
-+++ include/my_pthread.h	2003-12-20 12:09:31.000000000 +0000
+--- include/my_pthread.h.orig	2006-11-03 04:15:38.000000000 +0200
++++ include/my_pthread.h	2007-05-23 08:54:00.000000000 +0300
 @@ -19,7 +19,13 @@
  #ifndef _my_pthread_h
  #define _my_pthread_h
@@ -16,7 +16,7 @@ $NetBSD: patch-al,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
  #ifndef ETIME
  #define ETIME ETIMEDOUT				/* For FreeBSD */
  #endif
-@@ -301,7 +307,11 @@
+@@ -297,7 +303,11 @@
  #endif
  
  #ifndef HAVE_NONPOSIX_SIGWAIT
