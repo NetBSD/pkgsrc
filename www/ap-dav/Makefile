@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/02 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/05/23 12:23:11 ghen Exp $
 
 DISTNAME=		mod_dav-1.0.3-1.3.6
 PKGNAME=		ap13-dav-1.0.3
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/mod_dav/
 COMMENT=		Apache WebDAV module
 
-CONFLICTS=	ap-dav-[0-9]*
+CONFLICTS=		ap-dav-[0-9]*
 
 APACHE_MODULE=		YES
 GNU_CONFIGURE=		YES
