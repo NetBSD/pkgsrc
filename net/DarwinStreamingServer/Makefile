@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/12/15 13:11:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/23 07:52:15 adam Exp $
 
-DISTNAME=	DarwinStreamingSrvr5.5.4-Source
-PKGNAME=	DarwinStreamingServer-5.5.4
+DISTNAME=	DarwinStreamingSrvr5.5.5-Source
+PKGNAME=	DarwinStreamingServer-5.5.5
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://www.opensource.apple.com/projects/streaming/release/
-EXTRACT_SUFX=	.tar
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://developer.apple.com/opensource/server/streaming/
@@ -45,7 +44,6 @@ BUILD_DIRS+=	QTFileTools/QTRTPGen.tproj
 BUILD_DIRS+=	QTFileTools/QTSDPGen.tproj
 BUILD_DIRS+=	QTFileTools/QTSampleLister.tproj
 BUILD_DIRS+=	QTFileTools/QTTrackInfo.tproj
-BUILD_DIRS+=	StreamingLoadTool
 
 INSTALLATION_DIRS+=	libexec/StreamingServerModules
 INSTALLATION_DIRS+=	share/examples/streaming
@@ -93,6 +91,7 @@ SUBST_FILES.makefile+=	APIModules/QTSSHomeDirectoryModule/Makefile.POSIX
 SUBST_FILES.makefile+=	APIModules/QTSSRawFileModule.bproj/Makefile.POSIX
 SUBST_FILES.makefile+=	APIModules/QTSSRefMovieModule/Makefile.POSIX
 SUBST_FILES.makefile+=	APIModules/QTSSSpamDefenseModule.bproj/Makefile.POSIX
+SUBST_FILES.makefile+=	APIStubLib/makefile.apistublib.POSIX
 SUBST_FILES.makefile+=	CommonUtilitiesLib/Makefile.POSIX
 SUBST_FILES.makefile+=	HTTPUtilitiesLib/Makefile.POSIX
 SUBST_FILES.makefile+=	MP3Broadcaster/Makefile.POSIX
@@ -107,10 +106,9 @@ SUBST_FILES.makefile+=	QTFileTools/QTRTPGen.tproj/Makefile.POSIX
 SUBST_FILES.makefile+=	QTFileTools/QTSDPGen.tproj/Makefile.POSIX
 SUBST_FILES.makefile+=	QTFileTools/QTSampleLister.tproj/Makefile.POSIX
 SUBST_FILES.makefile+=	QTFileTools/QTTrackInfo.tproj/Makefile.POSIX
-SUBST_FILES.makefile+=	StreamingLoadTool/Makefile.POSIX
 SUBST_FILES.makefile+=	StreamingProxy.tproj/Makefile.POSIX
 SUBST_FILES.makefile+=	qtpasswd.tproj/Makefile.POSIX
-SUBST_SED.makefile+=	-e "s|-O[23]||"
+SUBST_SED.makefile+=	-e "s|-O[023]||"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -159,8 +157,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/qtgroups ${PREFIX}/share/examples/streaming
 	${INSTALL_DATA}	${WRKSRC}/Documentation/readme.txt ${PREFIX}/share/streaming
 	${INSTALL_DATA}	${WRKSRC}/Documentation/3rdPartyAcknowledgements.rtf ${PREFIX}/share/streaming
-	${INSTALL_PROGRAM} ${WRKSRC}/StreamingLoadTool/StreamingLoadTool ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/StreamingLoadTool/streamingloadtool.conf ${PREFIX}/share/examples/streaming
 	${INSTALL_SCRIPT} ${WRKSRC}/WebAdmin/src/streamingadminserver.pl ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.pl ${PREFIX}/share/streaming/AdminHtml
 	${INSTALL_DATA} ${WRKSRC}/WebAdmin/WebAdminHtml/*.cgi ${PREFIX}/share/streaming/AdminHtml
