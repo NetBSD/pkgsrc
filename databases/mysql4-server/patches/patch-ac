@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2006/05/26 18:25:34 seb Exp $
+$NetBSD: patch-ac,v 1.7 2007/05/23 08:11:50 martti Exp $
 
---- mysql-test/Makefile.in.orig	2006-04-29 05:36:32.000000000 +0000
-+++ mysql-test/Makefile.in
-@@ -371,7 +371,7 @@ zlib_dir = @zlib_dir@
+--- mysql-test/Makefile.in.orig	2006-11-03 04:18:36.000000000 +0200
++++ mysql-test/Makefile.in	2007-05-23 08:52:54.000000000 +0300
+@@ -372,7 +372,7 @@
  @HAVE_NDBCLUSTER_DB_FALSE@USE_NDBCLUSTER = \"\"
  @HAVE_NDBCLUSTER_DB_TRUE@USE_NDBCLUSTER = \"--ndbcluster\"
  benchdir_root = $(prefix)
@@ -10,4 +10,4 @@ $NetBSD: patch-ac,v 1.6 2006/05/26 18:25:34 seb Exp $
 +testdir = $(benchdir_root)/share/mysql-test
  EXTRA_SCRIPTS = mysql-test-run.sh install_test_db.sh $(PRESCRIPTS)
  EXTRA_DIST = $(EXTRA_SCRIPTS) 
- GENSCRIPTS = mysql-test-run install_test_db
+ GENSCRIPTS = mysql-test-run install_test_db mtr
