@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.18 2007/05/22 17:48:32 schmonz Exp $
+# $NetBSD: mkbinarykit,v 1.19 2007/05/23 05:06:03 schmonz Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -21,7 +21,9 @@ mkbinarykit_macpkg()
 	rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
 	cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
 
-	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" -e "s|%TARGETDIR%|${targetdir}|g" < macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
+	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" \
+		-e "s|%TARGETDIR%|${targetdir}|g" -e "s|%DATE%|${date}|g" \
+		< macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
 	/Developer/Tools/packagemaker -build -proj ${wrkdir}/macpkg.pmproj -p "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
 	ls -dl "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
 }
@@ -72,6 +74,11 @@ case "$opsys" in
 AIX)
 	syscondir=$prefix/etc
 	pkgdbdir=$prefix/pkgdb
+	;;
+Darwin)
+	ospro=universal
+	export CFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.4u.sdk'
+	export LDFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk'
 	;;
 DragonFly)
 	case "$osrev" in
