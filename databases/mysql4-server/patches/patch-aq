@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.5 2005/01/10 15:47:18 xtraeme Exp $
+$NetBSD: patch-aq,v 1.6 2007/05/23 08:11:51 martti Exp $
 
---- include/Makefile.in.orig	2005-01-10 16:13:53.000000000 +0100
-+++ include/Makefile.in	2005-01-10 16:14:24.000000000 +0100
-@@ -317,14 +317,8 @@
+--- include/Makefile.in.orig	2006-11-03 04:18:30.000000000 +0200
++++ include/Makefile.in	2007-05-23 08:54:47.000000000 +0300
+@@ -336,14 +336,8 @@
  vio_dir = @vio_dir@
  vio_libs = @vio_libs@
  zlib_dir = @zlib_dir@
