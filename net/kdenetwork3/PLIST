@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/01/26 02:55:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/05/23 13:10:04 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -757,6 +757,7 @@ share/kde/apps/kopete/styles/Clear/Contents/Resources/Outgoing/Content.html
 share/kde/apps/kopete/styles/Clear/Contents/Resources/Outgoing/NextContent.html
 share/kde/apps/kopete/styles/Clear/Contents/Resources/Outgoing/buddy_icon.png
 share/kde/apps/kopete/styles/Clear/Contents/Resources/Status.html
+share/kde/apps/kopete/styles/Clear/Contents/Resources/Variants/No_avatars.css
 share/kde/apps/kopete/styles/Clear/Contents/Resources/images/body-background.png
 share/kde/apps/kopete/styles/Clear/Contents/Resources/images/body-inbound-arrow.png
 share/kde/apps/kopete/styles/Clear/Contents/Resources/images/body-inbound-avatar.png
@@ -1731,6 +1732,7 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kopete/styles/Clear/Contents
 @dirrm share/kde/apps/kopete/styles/Clear
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/images
+@dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/Variants
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/Outgoing
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/Incoming
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources
