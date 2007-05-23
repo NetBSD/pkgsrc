@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1118 2007/05/23 11:05:00 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1119 2007/05/23 13:40:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/mysql4-server to 4.1.22 [martti 2007-05-23]
 	Updated converters/txt2man to 1.5.5 [xtraeme 2007-05-23]
 	Updated shells/mksh to 29.4 [joerg 2007-05-23]
+	Updated finance/kmymoney2 to 0.8.6 [obache 2007-05-23]
