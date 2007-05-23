@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/20 00:54:01 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/23 15:05:36 rillig Exp $
 #
 
 DISTNAME=	blokus-1.0
@@ -12,10 +12,10 @@ HOMEPAGE=	http://www.saschahlusiak.de/blokus/
 COMMENT=	Abstract strategy board game for two to four players
 
 RESTRICTED=		Redistribution prohibited
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
