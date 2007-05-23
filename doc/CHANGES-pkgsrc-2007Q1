@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.25 2007/05/23 12:01:09 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.26 2007/05/23 12:15:37 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -45,7 +45,7 @@ Pullup ticket 2083 - requested by hira
 build fix for openoffice2
 Pullup ticket 2087 - requested by wiz
 security update for png
-Pullup ticket 2088 - requested by ghen
+Pullup ticket 2088 - requested by xtraeme
 security update for clamav
 Pullup ticket 2091 - requested by tron
 security fix for freetype2
