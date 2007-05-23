@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1111 2007/05/22 19:14:54 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1112 2007/05/23 01:17:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2116,3 +2116,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/wide-dhcpv6 to 20070507 [obache 2007-05-22]
 	Updated chat/eggdrop to 1.6.17nb1 [lkundrak 2007-05-22]
 	Updated devel/fromcvs to 0.0.0.99nb1 [wiz 2007-05-22]
+	Updated misc/ruby-daemons to 1.0.6 [minskim 2007-05-23]
