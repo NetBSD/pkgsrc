@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
+$NetBSD: patch-af,v 1.8 2007/05/23 13:05:35 markd Exp $
 
 --- kcontrol/info/info_netbsd.cpp.orig	2005-09-10 20:25:05.000000000 +1200
 +++ kcontrol/info/info_netbsd.cpp
@@ -17,7 +17,7 @@ $NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
  	int num; // number of mounts
 -	// FIXME: older pkgsrc patches checked ST_RDONLY for this declaration
 -	// what is ST_RDONLY and how does it affect getmntinfo?
-+#ifdef ST_RDONLY
++#ifdef HAVE_STATVFS
 +	struct statvfs *mnt; // mount data pointer
 +#else
  	struct statfs *mnt; // mount data pointer
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
  		unsigned long long big[2];
  		QString vv[5];
  
-+#ifdef ST_RDONLY
++#ifdef HAVE_STATVFS
 +		big[0] = big[1] = mnt->f_frsize; // coerce the product
 +#else
  		big[0] = big[1] = mnt->f_bsize; // coerce the product
@@ -41,7 +41,7 @@ $NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
  				.arg(mnt->f_files ? mnt->f_ffree*100/mnt->f_files : 0);
  
  		vv[4] = QString::null;
-+#ifdef ST_RDONLY
++#ifdef HAVE_STATVFS
 +#define MNTF(x) if (mnt->f_flag & ST_##x) vv[4] += QString::fromLatin1(#x " ");
 +#else
  #define MNTF(x) if (mnt->f_flags & MNT_##x) vv[4] += QString::fromLatin1(#x " ");
@@ -53,7 +53,7 @@ $NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
  		MNTF(EXPORTED)
  		MNTF(EXPUBLIC)
  		MNTF(EXRDONLY)
-+#ifndef ST_RDONLY
++#ifndef HAVE_STATVFS
  		MNTF(IGNORE)
 +#endif
  		MNTF(LOCAL)
