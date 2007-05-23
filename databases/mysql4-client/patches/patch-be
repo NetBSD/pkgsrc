@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1 2006/06/19 07:53:00 seb Exp $
+$NetBSD: patch-be,v 1.2 2007/05/23 08:11:50 martti Exp $
 
---- sql/sql_lex.cc.orig	2006-05-24 18:00:37.000000000 +0000
-+++ sql/sql_lex.cc
-@@ -892,6 +892,8 @@ int yylex(void *arg, void *yythd)
+--- sql/sql_lex.cc.orig	2006-11-03 04:15:21.000000000 +0200
++++ sql/sql_lex.cc	2007-05-23 08:26:27.000000000 +0300
+@@ -894,6 +894,8 @@
        while (lex->ptr != lex->end_of_query &&
  	     ((c=yyGet()) != '*' || yyPeek() != '/'))
        {

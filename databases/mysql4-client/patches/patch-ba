@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2005/02/18 00:48:05 xtraeme Exp $
+$NetBSD: patch-ba,v 1.2 2007/05/23 08:11:50 martti Exp $
 
---- client/mysql.cc.orig	2005-02-18 01:36:23.000000000 +0100
-+++ client/mysql.cc	2005-02-18 01:38:00.000000000 +0100
+--- client/mysql.cc.orig	2006-11-03 04:15:47.000000000 +0200
++++ client/mysql.cc	2007-05-23 08:25:23.000000000 +0300
 @@ -39,6 +39,9 @@
  #include "my_readline.h"
  #include <signal.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-ba,v 1.1 2005/02/18 00:48:05 xtraeme Exp $
  
  #if defined(USE_LIBEDIT_INTERFACE) && defined(HAVE_LOCALE_H)
  #include <locale.h>
-@@ -408,8 +411,13 @@
+@@ -410,8 +413,13 @@
    if (opt_sigint_ignore)
      signal(SIGINT, SIG_IGN);
    else

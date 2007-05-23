@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/08/31 12:42:42 seb Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/05/23 08:11:50 martti Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -43,6 +43,7 @@ man/man1/mysqld_safe.1
 man/man1/pack_isam.1
 man/man1/perror.1
 man/man1/replace.1
+man/man8/mysqld.8
 share/examples/rc.d/mysqld
 share/mysql-test/README
 share/mysql-test/cacert.pem
@@ -112,6 +113,7 @@ share/mysql-test/lib/mtr_misc.pl
 share/mysql-test/lib/mtr_process.pl
 share/mysql-test/lib/mtr_report.pl
 share/mysql-test/lib/mtr_timer.pl
+share/mysql-test/mtr
 share/mysql-test/mysql-test-run
 share/mysql-test/mysql-test-run.pl
 share/mysql-test/r/alias.result
@@ -524,6 +526,7 @@ share/mysql-test/r/windows.result
 share/mysql-test/server-cert.pem
 share/mysql-test/server-key.pem
 share/mysql-test/std_data/Moscow_leap
+share/mysql-test/std_data/bug15328.cnf
 share/mysql-test/std_data/cacert.pem
 share/mysql-test/std_data/client-cert.pem
 share/mysql-test/std_data/client-key.pem
