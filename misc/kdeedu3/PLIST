@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/01/26 03:12:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/05/23 13:27:17 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -80,6 +80,7 @@ share/applications/kde/ktouch.desktop
 share/applications/kde/kturtle.desktop
 share/applications/kde/kverbos.desktop
 share/applications/kde/kvoctrain.desktop
+share/applications/kde/kwordquiz.desktop
 share/doc/kde/HTML/en/blinken/blinken1.png
 share/doc/kde/HTML/en/blinken/blinken2.png
 share/doc/kde/HTML/en/blinken/blinken_accesskeys.png
@@ -646,7 +647,6 @@ share/icons/locolor/16x16/actions/edit_remove.png
 share/kde/applnk/Edutainment/Languages/.directory
 share/kde/applnk/Edutainment/Mathematics/.directory
 share/kde/applnk/Edutainment/Miscellaneous/.directory
-share/kde/applnk/Edutainment/Miscellaneous/kwordquiz.desktop
 share/kde/applnk/Edutainment/Science/.directory
 share/kde/applnk/Edutainment/Tools/.directory
 share/kde/apps/blinken/README.packagers
@@ -1721,6 +1721,7 @@ share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_desert.svgz
 share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_grownup.svgz
 share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_kids.svgz
 share/kde/apps/klettres/klettresui.rc
+share/kde/apps/klettres/nds.txt
 share/kde/apps/klettres/pics/klettres_desert.png
 share/kde/apps/klettres/pics/klettres_grownup.png
 share/kde/apps/klettres/pics/klettres_kids.jpeg
