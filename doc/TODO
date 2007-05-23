@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6359 2007/05/23 08:12:20 martti Exp $
+$NetBSD: TODO,v 1.6360 2007/05/23 09:40:13 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1241,7 +1241,6 @@ Suggested package updates
 	o twelf-1.5r1
 	o twolame-0.3.10
 	o txt2html-2.45
-	o txt2man-1.5.5
 	o ubs-0.20
 	o ucarp-1.3
 	o ucblogo-5.5
