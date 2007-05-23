@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/18 10:27:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/05/23 10:32:47 rillig Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -91,6 +91,8 @@ share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/bulgarian-bds.vim
+share/vim/${VIM_SUBDIR}/keymap/bulgarian-phonetic.vim
 share/vim/${VIM_SUBDIR}/keymap/bulgarian.vim
 share/vim/${VIM_SUBDIR}/keymap/canfr-win.vim
 share/vim/${VIM_SUBDIR}/keymap/czech.vim
@@ -113,6 +115,7 @@ share/vim/${VIM_SUBDIR}/keymap/hebrewp_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/kana.vim
 share/vim/${VIM_SUBDIR}/keymap/lithuanian-baltic.vim
 share/vim/${VIM_SUBDIR}/keymap/magyar_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/mongolian_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/persian-iranian_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/persian.vim
 share/vim/${VIM_SUBDIR}/keymap/pinyin.vim
@@ -139,7 +142,10 @@ share/vim/${VIM_SUBDIR}/keymap/slovak_cp1250.vim
 share/vim/${VIM_SUBDIR}/keymap/slovak_iso-8859-2.vim
 share/vim/${VIM_SUBDIR}/keymap/slovak_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/tamil_tscii.vim
+share/vim/${VIM_SUBDIR}/keymap/thaana-phonetic_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/thaana.vim
 share/vim/${VIM_SUBDIR}/keymap/ukrainian-jcuken.vim
+share/vim/${VIM_SUBDIR}/keymap/vietnamese-viqr_utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/README.txt
 share/vim/${VIM_SUBDIR}/lang/af/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ca/LC_MESSAGES/vim.mo
@@ -242,6 +248,9 @@ share/vim/${VIM_SUBDIR}/lang/menu_sk_sk.1250.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sk_sk.cp1250.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sk_sk.iso_8859-2.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sk_sk.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sl_si.cp1250.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sl_si.latin2.vim
+share/vim/${VIM_SUBDIR}/lang/menu_sl_si.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_slovak_slovak_republic.1250.vim
 share/vim/${VIM_SUBDIR}/lang/menu_spanish_spain.850.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sr.utf-8.vim
