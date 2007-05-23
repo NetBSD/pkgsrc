@@ -1,12 +1,23 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.20 2007/05/23 13:54:15 schmonz Exp $
+# $NetBSD: mkbinarykit,v 1.21 2007/05/23 19:41:05 schmonz Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
 # copied to ${PREFIX}/etc/mk.conf or to the location specified
 # by using --mkconf. Run this program from the pkgsrc/bootstrap
 # directory.
+
+setenv_universal()
+{
+	case "$opsys" in
+		Darwin)
+			ospro=universal
+			export CFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.4u.sdk'
+			export LDFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk'
+		;;
+	esac
+}
 
 mkbinarykit_macpkg()
 {
@@ -49,7 +60,7 @@ die()
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
 	[ --no-build ] [ --workdir=<work dir> ] [ bootstrap script arguments ]
-	[ --fetch-cmd=<ftp command> ]'
+	[ --fetch-cmd=<ftp command> ] [ --universal ]'
 
 opsys=`uname -s | tr -d /-`
 osrev=`uname -r`
@@ -73,11 +84,6 @@ sedprog="sed"
 case "$opsys" in
 AIX)
 	pkgdbdir=$prefix/pkgdb
-	;;
-Darwin)
-	ospro=universal
-	export CFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.4u.sdk'
-	export LDFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk'
 	;;
 DragonFly)
 	case "$osrev" in
@@ -126,6 +132,7 @@ while [ $# -gt 0 ]; do
         --ignore-case-check) ignorecasecheck=yes ;;
         --ignore-user-check) ignoreusercheck=yes ;;
 	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
+	--universal)	setenv_universal ;;
         --*)            echo "$usage"; exit 1 ;;
         esac
         shift
