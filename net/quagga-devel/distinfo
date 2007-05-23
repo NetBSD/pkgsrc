@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/12/02 05:06:33 minskim Exp $
+$NetBSD: distinfo,v 1.4.4.1 2007/05/23 11:59:27 ghen Exp $
 
-SHA1 (quagga-0.99.4.tar.gz) = eb5c12c6345e7651114c704dd3c945d0c7595c10
-RMD160 (quagga-0.99.4.tar.gz) = a0818323c7dc714ed9514cf3cb8110a891b2fa5d
-Size (quagga-0.99.4.tar.gz) = 2207774 bytes
-SHA1 (patch-aa) = 1f79ffb63837c2e93204906c7ec96373154ced2e
-SHA1 (patch-ab) = e6b98d9f0ebbf8ce7ddc1ac6fc70a6da0a5a0234
+SHA1 (quagga-0.99.7.tar.gz) = da2d690275e38bb58841edc265ba3bd154b10dd2
+RMD160 (quagga-0.99.7.tar.gz) = f7ae94f2b5f4782efa7b70bd59924492618133fe
+Size (quagga-0.99.7.tar.gz) = 2350372 bytes
