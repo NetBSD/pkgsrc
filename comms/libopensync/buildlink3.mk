@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/05/23 12:44:40 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/05/23 21:27:26 seb Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBOPENSYNC_BUILDLINK3_MK:=	${LIBOPENSYNC_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libopensync
 
 .if ${LIBOPENSYNC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libopensync+=	libopensync>=0.22
-BUILDLINK_PKGSRCDIR.libopensync?=	../../mcs/libopensync
+BUILDLINK_PKGSRCDIR.libopensync?=	../../comms/libopensync
 .endif	# LIBOPENSYNC_BUILDLINK3_MK
 
 .include "../../databases/sqlite3/buildlink3.mk"
