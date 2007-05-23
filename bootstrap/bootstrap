@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.96 2007/04/25 13:24:24 tnn Exp $
+# $NetBSD: bootstrap,v 1.97 2007/05/23 04:20:36 schmonz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -818,7 +818,7 @@ yes)	# bootstrap tnftp
 	esac
 	echo_msg "Installing tnftp"
 	copy_src $pkgsrcdir/net/tnftp/files tnftp
-	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV CPPFLAGS=\"$CPPFLAGS $tnftpxflags\" $shprog ./configure $configure_quiet_flags --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
+	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV CPPFLAGS=\"$CPPFLAGS $tnftpxflags\" $shprog ./configure $configure_quiet_flags --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $sedprog -e 's|-ledit|../libedit/libedit.a|' < src/Makefile > src/Makefile.tmp && mv src/Makefile.tmp src/Makefile && $bmake && (cd src && $bmake install))"
 	;;
 esac
 
