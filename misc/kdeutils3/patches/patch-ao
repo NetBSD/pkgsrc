@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.13 2006/01/08 12:07:52 markd Exp $
+$NetBSD: patch-ao,v 1.14 2007/05/23 13:19:23 markd Exp $
 
---- configure.orig	2005-11-26 20:19:12.000000000 +1300
+--- configure.orig	2007-05-14 23:44:00.000000000 +1200
 +++ configure
-@@ -34076,6 +34076,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -37382,6 +37382,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  
@@ -10,37 +10,34 @@ $NetBSD: patch-ao,v 1.13 2006/01/08 12:07:52 markd Exp $
  #include <sys/mount.h>
  
  
-@@ -34785,19 +34786,18 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -38175,17 +38176,19 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
 +#include <math.h>
 +
- /* Override any gcc2 internal prototype to avoid an error.  */
+ /* Override any GCC internal prototype to avoid an error.
+    Use char because int might match the return type of a GCC
+    builtin and then its argument prototype would still apply.  */
  #ifdef __cplusplus
  extern "C"
  #endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
 -char isinf ();
-+
 +double d = 0.0;
  int
  main ()
  {
--isinf ();
--  ;
--  return 0;
-+  return isinf (d);
+-return isinf ();
++return isinf (d);
+   ;
+   return 0;
  }
- _ACEOF
- rm -f conftest.$ac_objext conftest$ac_exeext
-@@ -38008,6 +38008,8 @@ else
-   version=""2.4""
+@@ -42097,6 +42100,8 @@ else
+   version=""2.5""
  fi
  
 +version="$PYVERSSUFFIX"
 +
- echo "$as_me:$LINENO: checking for Python$version" >&5
- echo $ECHO_N "checking for Python$version... $ECHO_C" >&6
+ { echo "$as_me:$LINENO: checking for Python$version" >&5
+ echo $ECHO_N "checking for Python$version... $ECHO_C" >&6; }
  
