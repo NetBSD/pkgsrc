@@ -1,31 +1,37 @@
-# $NetBSD: Makefile,v 1.2 2007/02/22 19:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/23 11:02:32 joerg Exp $
 
-DISTNAME=			mksh-R28
-PKGNAME=			mksh-28
+DISTNAME=			mksh-R29e
+PKGNAME=			mksh-29.4
 CATEGORIES=			shells
-MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/
+MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
+				http://pub.allbsd.org/MirOS/dist/mir/mksh/
 EXTRACT_SUFX=			.cpio.gz
 
 MAINTAINER=			pkgsrc-users@NetBSD.org
-HOMEPAGE=			http://www.mirbsd.de/?mksh
+HOMEPAGE=			http://mirbsd.de/mksh
 COMMENT=			MirBSD Korn Shell
 
 WRKSRC=				${WRKDIR}/mksh
 WRKBUILD?=			${WRKSRC}
 
 PKG_INSTALLATION_TYPES=		pkgviews overwrite
+PKG_DESTDIR_SUPPORT=		user-destdir
+
 PKG_SHELL=			bin/mksh
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mksh
 PKG_SUPPORTED_OPTIONS=		static
-PKG_SUGGESTED_OPTIONS=		static
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mstatic)
-LDFLAGS+=			-static
+BUILD_PARMS=			-r	# don't call nRoff
+
+.if empty(PKG_OPTIONS:Mstatic)
+BUILD_PARMS+=			-d	# build dynamically linked
+.else
+BUILD_PARMS+=			-nd	# build statically linked
 .endif
 
 LIBS+=				${LDADD}
@@ -33,7 +39,7 @@ LIBS+=				${LDADD}
 LIBS+=				-lcrypt
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/mksh
+INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1 share/examples/mksh
 
 do-build:
 	cd ${WRKBUILD} && LIBS=${LIBS:Q} CC=${CC:Q} CFLAGS=${CFLAGS:Q} \
@@ -41,11 +47,12 @@ do-build:
 	    ${TOOLS_SHELL} ${WRKSRC}/Build.sh ${BUILD_PARMS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKBUILD}/mksh ${PREFIX}/bin/mksh
-	${INSTALL_MAN} ${WRKSRC}/mksh.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/dot.mkshrc ${PREFIX}/share/examples/mksh
+	${INSTALL_PROGRAM} ${WRKBUILD}/mksh ${DESTDIR}${PREFIX}/bin/mksh
+	${INSTALL_MAN} ${WRKSRC}/mksh.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/dot.mkshrc ${DESTDIR}${PREFIX}/share/examples/mksh/
 
-#USE_TOOLS+=			ed:test perl:test
+# comment this out if you do not want to run the regression tests
+#USE_TOOLS+=			perl
 #do-test:
 #	${WRKBUILD}/test.sh -v
 
