@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/05/23 07:14:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/05/23 07:20:35 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_BUILD_BUILDLINK3_MK:=	${GNOME_BUILD_BUILDLINK3_MK}+
@@ -21,7 +21,6 @@ BUILDLINK_PKGSRCDIR.gnome-build?=	../../devel/gnome-build
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/oaf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
