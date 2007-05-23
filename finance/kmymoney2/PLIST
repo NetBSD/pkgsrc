@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/26 04:03:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/05/23 13:38:23 obache Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -334,17 +334,21 @@ ${HAS_LIBOFX}share/kde/services/kmm_ofximport.desktop
 share/kde/servicetypes/kmymoneyimporterplugin.desktop
 share/kde/servicetypes/kmymoneyplugin.desktop
 share/locale/ca/LC_MESSAGES/kmymoney2.mo
+share/locale/cs/LC_MESSAGES/kmymoney2.mo
 share/locale/da/LC_MESSAGES/kmymoney2.mo
 share/locale/de/LC_MESSAGES/kmymoney2.mo
 share/locale/en_GB/LC_MESSAGES/kmymoney2.mo
 share/locale/es/LC_MESSAGES/kmymoney2.mo
+share/locale/es_AR/LC_MESSAGES/kmymoney2.mo
 share/locale/fr/LC_MESSAGES/kmymoney2.mo
 share/locale/gl/LC_MESSAGES/kmymoney2.mo
 share/locale/it/LC_MESSAGES/kmymoney2.mo
 share/locale/lt/LC_MESSAGES/kmymoney2.mo
+share/locale/pl/LC_MESSAGES/kmymoney2.mo
 share/locale/pt_BR/LC_MESSAGES/kmymoney2.mo
 share/locale/pt_PT/LC_MESSAGES/kmymoney2.mo
 share/locale/ru/LC_MESSAGES/kmymoney2.mo
+share/locale/sk/LC_MESSAGES/kmymoney2.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/mimelnk/application
 @dirrm share/kde/apps/kmymoney2/templates/ru_SU
