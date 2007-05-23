@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.30 2007/05/22 21:27:59 joerg Exp $
+# $NetBSD: depends.mk,v 1.31 2007/05/23 00:23:24 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -26,6 +26,11 @@ _RDEPENDS_FILE=	${WRKDIR}/.rdepends
 
 _FULL_DEPENDS_CMD=	\
 	${AWK} '$$1 == "full" { print $$3; }' < ${_RDEPENDS_FILE}
+
+_REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
+				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
+				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
+			${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk
 
 _flavor-show-depends: .PHONY
 	@case ${VARNAME:Q}"" in						\
