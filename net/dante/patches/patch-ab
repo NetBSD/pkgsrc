@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2006/05/26 08:50:13 adam Exp $
+$NetBSD: patch-ab,v 1.9 2007/05/23 11:12:35 sketch Exp $
 
---- configure.orig	2006-01-16 12:49:45.000000000 +0100
-+++ configure
-@@ -19251,7 +19251,6 @@ else
+--- configure.orig	2006-01-16 11:49:45.000000000 +0000
++++ configure	2007-05-23 10:56:06.000000000 +0100
+@@ -19251,7 +19251,6 @@
  echo "${ECHO_T}no" >&6
      #autoconf_compflags is set to "-g -O2" with GCC
      #override CFLAGS when running configure to avoid this
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.8 2006/05/26 08:50:13 adam Exp $
  fi
  
  #-Wall ?
-@@ -25124,8 +25123,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -25124,8 +25123,13 @@
  #include <netdb.h>
  #include <unistd.h>
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.8 2006/05/26 08:50:13 adam Exp $
  );
  int
  main ()
-@@ -25166,9 +25170,18 @@ cat >>confdefs.h <<_ACEOF
+@@ -25166,9 +25170,18 @@
  #define HAVE_PROT_GETHOSTBYADDR_1 const char *
  _ACEOF
  
@@ -44,3 +44,11 @@ $NetBSD: patch-ab,v 1.8 2006/05/26 08:50:13 adam Exp $
  
  cat >>confdefs.h <<_ACEOF
  #define HAVE_PROT_GETHOSTBYADDR_3 int
+@@ -35245,6 +35258,6 @@
+ fi
+ 
+ VINFO=README.latest
+-test -s "$VINFO" && cat "$VINFO"
++test -s "$VINFO" && cat "$VINFO" || true
+ 
+ exit 0
