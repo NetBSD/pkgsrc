@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/01/26 03:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/05/23 13:59:35 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -10,6 +10,7 @@ share/doc/kde/HTML/en_GB/common/logotp3.png
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
+share/doc/kde/HTML/en_GB/kalarm/alarmmessage.png
 share/doc/kde/HTML/en_GB/kalarm/common
 share/doc/kde/HTML/en_GB/kalarm/editwindow.png
 share/doc/kde/HTML/en_GB/kalarm/index.cache.bz2
@@ -1170,7 +1171,6 @@ share/locale/en_GB/LC_MESSAGES/nsplugin.mo
 share/locale/en_GB/LC_MESSAGES/pitchablespeed.mo
 share/locale/en_GB/LC_MESSAGES/ppdtranslations.mo
 share/locale/en_GB/LC_MESSAGES/privacy.mo
-share/locale/en_GB/LC_MESSAGES/qeditor.mo
 share/locale/en_GB/LC_MESSAGES/quanta.mo
 share/locale/en_GB/LC_MESSAGES/quicklauncher.mo
 share/locale/en_GB/LC_MESSAGES/rellinks.mo

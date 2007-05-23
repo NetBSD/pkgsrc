@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/08/02 14:24:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/05/23 13:59:41 markd Exp $
 share/kde/apps/khangman/data/nb/animals.kvtml
 share/kde/apps/khangman/data/nb/easy.kvtml
 share/kde/apps/khangman/data/nb/hard.kvtml
@@ -541,7 +541,6 @@ share/locale/nb/LC_MESSAGES/nsplugin.mo
 share/locale/nb/LC_MESSAGES/pitchablespeed.mo
 share/locale/nb/LC_MESSAGES/ppdtranslations.mo
 share/locale/nb/LC_MESSAGES/privacy.mo
-share/locale/nb/LC_MESSAGES/qeditor.mo
 share/locale/nb/LC_MESSAGES/quanta.mo
 share/locale/nb/LC_MESSAGES/quicklauncher.mo
 share/locale/nb/LC_MESSAGES/rellinks.mo
