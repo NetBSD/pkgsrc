@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2007/04/14 21:40:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.48 2007/05/23 13:05:34 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -2988,7 +2988,7 @@ share/kde/apps/kthememanager/themes/YellowOnBlue-big/YellowOnBlue-big.xml
 share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.preview.png
 share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.xml
 share/kde/apps/kwin/b2.desktop
-share/kde/apps/kwin/default_rules/fsp_workarounds_1
+share/kde/apps/kwin/default_rules/fsp_workarounds_1.kwinrules
 share/kde/apps/kwin/eventsrc
 share/kde/apps/kwin/keramik.desktop
 share/kde/apps/kwin/laptop.desktop
@@ -3764,6 +3764,8 @@ share/locale/l10n/mc/entry.desktop
 share/locale/l10n/mc/flag.png
 share/locale/l10n/md/entry.desktop
 share/locale/l10n/md/flag.png
+share/locale/l10n/me/entry.desktop
+share/locale/l10n/me/flag.png
 share/locale/l10n/mg/entry.desktop
 share/locale/l10n/mg/flag.png
 share/locale/l10n/mh/entry.desktop
@@ -3861,6 +3863,8 @@ share/locale/l10n/qa/entry.desktop
 share/locale/l10n/qa/flag.png
 share/locale/l10n/ro/entry.desktop
 share/locale/l10n/ro/flag.png
+share/locale/l10n/rs/entry.desktop
+share/locale/l10n/rs/flag.png
 share/locale/l10n/ru/entry.desktop
 share/locale/l10n/ru/flag.png
 share/locale/l10n/rw/entry.desktop
@@ -3966,8 +3970,6 @@ share/locale/l10n/ws/entry.desktop
 share/locale/l10n/ws/flag.png
 share/locale/l10n/ye/entry.desktop
 share/locale/l10n/ye/flag.png
-share/locale/l10n/yu/entry.desktop
-share/locale/l10n/yu/flag.png
 share/locale/l10n/za/entry.desktop
 share/locale/l10n/za/flag.png
 share/locale/l10n/zm/entry.desktop
@@ -3977,7 +3979,6 @@ share/locale/l10n/zw/flag.png
 @dirrm share/locale/l10n/zw
 @dirrm share/locale/l10n/zm
 @dirrm share/locale/l10n/za
-@dirrm share/locale/l10n/yu
 @dirrm share/locale/l10n/ye
 @dirrm share/locale/l10n/ws
 @dirrm share/locale/l10n/wf
@@ -4027,6 +4028,7 @@ share/locale/l10n/zw/flag.png
 @dirrm share/locale/l10n/sa
 @dirrm share/locale/l10n/rw
 @dirrm share/locale/l10n/ru
+@dirrm share/locale/l10n/rs
 @dirrm share/locale/l10n/ro
 @dirrm share/locale/l10n/qa
 @dirrm share/locale/l10n/py
@@ -4073,6 +4075,7 @@ share/locale/l10n/zw/flag.png
 @dirrm share/locale/l10n/mk
 @dirrm share/locale/l10n/mh
 @dirrm share/locale/l10n/mg
+@dirrm share/locale/l10n/me
 @dirrm share/locale/l10n/md
 @dirrm share/locale/l10n/mc
 @dirrm share/locale/l10n/ma
