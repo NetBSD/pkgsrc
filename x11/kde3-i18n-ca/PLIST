@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/01/26 03:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2007/05/23 13:59:33 markd Exp $
 share/doc/kde/HTML/ca/amor/common
 share/doc/kde/HTML/ca/amor/index.cache.bz2
 share/doc/kde/HTML/ca/amor/index.docbook
@@ -568,6 +568,10 @@ share/doc/kde/HTML/ca/kmenuedit/selectinternet.png
 share/doc/kde/HTML/ca/kmessedwords/common
 share/doc/kde/HTML/ca/kmessedwords/index.cache.bz2
 share/doc/kde/HTML/ca/kmessedwords/index.docbook
+share/doc/kde/HTML/ca/kmix/common
+share/doc/kde/HTML/ca/kmix/index.cache.bz2
+share/doc/kde/HTML/ca/kmix/index.docbook
+share/doc/kde/HTML/ca/kmix/kmix-window.png
 share/doc/kde/HTML/ca/kmoon/common
 share/doc/kde/HTML/ca/kmoon/index.cache.bz2
 share/doc/kde/HTML/ca/kmoon/index.docbook
@@ -668,6 +672,18 @@ share/doc/kde/HTML/ca/konsole/tabbar.png
 share/doc/kde/HTML/ca/kontact/common
 share/doc/kde/HTML/ca/kontact/index.cache.bz2
 share/doc/kde/HTML/ca/kontact/index.docbook
+share/doc/kde/HTML/ca/korganizer/common
+share/doc/kde/HTML/ca/korganizer/event-attachments.png
+share/doc/kde/HTML/ca/korganizer/event-attendees.png
+share/doc/kde/HTML/ca/korganizer/event-freebusy.png
+share/doc/kde/HTML/ca/korganizer/event-general.png
+share/doc/kde/HTML/ca/korganizer/event-recurrence.png
+share/doc/kde/HTML/ca/korganizer/index.cache.bz2
+share/doc/kde/HTML/ca/korganizer/index.docbook
+share/doc/kde/HTML/ca/korganizer/outlook-to-vcalendar.docbook
+share/doc/kde/HTML/ca/korganizer/plugins-chapter.docbook
+share/doc/kde/HTML/ca/korganizer/remotefile-resource.png
+share/doc/kde/HTML/ca/korganizer/todo-general.png
 share/doc/kde/HTML/ca/kpackage/common
 share/doc/kde/HTML/ca/kpackage/index.cache.bz2
 share/doc/kde/HTML/ca/kpackage/index.docbook
@@ -698,6 +714,9 @@ share/doc/kde/HTML/ca/krdc/index.docbook
 share/doc/kde/HTML/ca/krfb/common
 share/doc/kde/HTML/ca/krfb/index.cache.bz2
 share/doc/kde/HTML/ca/krfb/index.docbook
+share/doc/kde/HTML/ca/ksig/common
+share/doc/kde/HTML/ca/ksig/index.cache.bz2
+share/doc/kde/HTML/ca/ksig/index.docbook
 share/doc/kde/HTML/ca/ksim/common
 share/doc/kde/HTML/ca/ksim/index.cache.bz2
 share/doc/kde/HTML/ca/ksim/index.docbook
@@ -1247,12 +1266,6 @@ share/locale/ca/LC_MESSAGES/kolourpaint.mo
 share/locale/ca/LC_MESSAGES/kolourpicker.mo
 share/locale/ca/LC_MESSAGES/kommander.mo
 share/locale/ca/LC_MESSAGES/kompare.mo
-share/locale/ca/LC_MESSAGES/konnector_dummy.mo
-share/locale/ca/LC_MESSAGES/konnector_kabc.mo
-share/locale/ca/LC_MESSAGES/konnector_kcal.mo
-share/locale/ca/LC_MESSAGES/konnector_local.mo
-share/locale/ca/LC_MESSAGES/konnector_qtopia.mo
-share/locale/ca/LC_MESSAGES/konnector_remote.mo
 share/locale/ca/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/ca/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/locale/ca/LC_MESSAGES/konqsidebar_metabar.mo
@@ -1398,7 +1411,6 @@ share/locale/ca/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/ca/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/ca/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/ca/LC_MESSAGES/libkickermenu_tom.mo
-share/locale/ca/LC_MESSAGES/libkitchensync.mo
 share/locale/ca/LC_MESSAGES/libkleopatra.mo
 share/locale/ca/LC_MESSAGES/libkmime.mo
 share/locale/ca/LC_MESSAGES/libkonq.mo
@@ -1418,7 +1430,6 @@ share/locale/ca/LC_MESSAGES/mediaapplet.mo
 share/locale/ca/LC_MESSAGES/mediacontrol.mo
 share/locale/ca/LC_MESSAGES/mf_konqplugin.mo
 share/locale/ca/LC_MESSAGES/minitoolsplugin.mo
-share/locale/ca/LC_MESSAGES/multisynk.mo
 share/locale/ca/LC_MESSAGES/naughtyapplet.mo
 share/locale/ca/LC_MESSAGES/nexscope.mo
 share/locale/ca/LC_MESSAGES/noatun.mo
@@ -1426,7 +1437,6 @@ share/locale/ca/LC_MESSAGES/nsplugin.mo
 share/locale/ca/LC_MESSAGES/pitchablespeed.mo
 share/locale/ca/LC_MESSAGES/ppdtranslations.mo
 share/locale/ca/LC_MESSAGES/privacy.mo
-share/locale/ca/LC_MESSAGES/qeditor.mo
 share/locale/ca/LC_MESSAGES/quanta.mo
 share/locale/ca/LC_MESSAGES/quicklauncher.mo
 share/locale/ca/LC_MESSAGES/rellinks.mo
@@ -1480,6 +1490,7 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/ksplashml
 @dirrm share/doc/kde/HTML/ca/kspell
 @dirrm share/doc/kde/HTML/ca/ksim
+@dirrm share/doc/kde/HTML/ca/ksig
 @dirrm share/doc/kde/HTML/ca/krfb
 @dirrm share/doc/kde/HTML/ca/krdc
 @dirrm share/doc/kde/HTML/ca/kpovmodeler
@@ -1487,6 +1498,7 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kpercentage
 @dirrm share/doc/kde/HTML/ca/kpager
 @dirrm share/doc/kde/HTML/ca/kpackage
+@dirrm share/doc/kde/HTML/ca/korganizer
 @dirrm share/doc/kde/HTML/ca/kontact
 @dirrm share/doc/kde/HTML/ca/konsole
 @dirrm share/doc/kde/HTML/ca/konqueror
@@ -1512,6 +1524,7 @@ share/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kmouth
 @dirrm share/doc/kde/HTML/ca/kmousetool
 @dirrm share/doc/kde/HTML/ca/kmoon
+@dirrm share/doc/kde/HTML/ca/kmix
 @dirrm share/doc/kde/HTML/ca/kmessedwords
 @dirrm share/doc/kde/HTML/ca/kmenuedit
 @dirrm share/doc/kde/HTML/ca/kmail
