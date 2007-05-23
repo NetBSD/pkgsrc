@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.30 2006/11/23 11:49:55 yyamano Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.31 2007/05/23 12:36:56 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -213,8 +213,12 @@
       installed.</para>
 
       <warning>
-	<para>During the bulk build, <emphasis>all packages will be
-	removed!</emphasis></para>
+	<para>During the bulk build, <emphasis>all packages, their
+	configuration files and some more files from
+	<filename>/var</filename>, <filename>/home</filename> and
+	possibly other locations will be removed! So don't run a bulk
+	build with privileges that might harm your
+	system.</emphasis></para>
       </warning>
 
       <para>Be sure to remove all other things that might
