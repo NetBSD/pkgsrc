@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/23 12:44:40 markd Exp $
+
+--- formats/vformats-xml/vformat.c.orig	2007-03-27 23:49:27.000000000 +1200
++++ formats/vformats-xml/vformat.c
+@@ -236,7 +236,7 @@ static void _read_attribute_value_add (V
+ 	if (charset) {
+ 
+ 		cd = iconv_open("UTF-8", charset->str);
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(__NetBSD__)
+                 if (iconv(cd, (const char**)&inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
+ #else
+                 if (iconv(cd, &inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
+@@ -264,7 +264,7 @@ static void _read_attribute_value_add (V
+ 
+ 			/* because inbuf is not UTF-8, we think it is ISO-8859-1 */
+                         cd = iconv_open("UTF-8", "ISO-8859-1");
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(__NetBSD__)
+                         if (iconv(cd, (const char**)&inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
+ #else
+                         if (iconv(cd, &inbuf, &inbytesleft, &p, &outbytesleft) != (size_t)(-1)) {
+@@ -302,8 +302,8 @@ static void _read_attribute_value (VForm
+ 			if ((a = *(++lp)) == '\0') break;
+ 			if ((b = *(++lp)) == '\0') break;
+ 			
+-			if (isalnum(a)) {
+-				if (isalnum(b)) {
++			if (isalnum((int)a)) {
++				if (isalnum((int)b)) {
+ 					/* e.g. ...N=C3=BCrnberg\r\n
+ 					 *          ^^^
+ 			       		 */
+@@ -317,7 +317,7 @@ static void _read_attribute_value (VForm
+ 					 * ^
+ 					 */
+ 					char *tmplp = lp;
+-					if (*(++tmplp) == '\r' && *(++tmplp) == '\n' && isalnum(*(++tmplp))) {
++					if (*(++tmplp) == '\r' && *(++tmplp) == '\n' && isalnum((int)*(++tmplp))) {
+ 						x1 = a;
+ 						x2 = *tmplp;
+ 						lp = tmplp;	
+@@ -336,7 +336,7 @@ static void _read_attribute_value (VForm
+ 				c = *(++tmplp);
+ 				d = *(++tmplp);
+ 				e = *(++tmplp);
+-				if (b == '\r' && c == '\n' && isalnum(d) && isalnum(e)) {
++				if (b == '\r' && c == '\n' && isalnum((int)d) && isalnum((int)e)) {
+ 					x1 = d;
+ 					x2 = e;
+ 					lp = tmplp;
+@@ -357,8 +357,8 @@ static void _read_attribute_value (VForm
+ 			if (x1 && x2) {
+ 				char c;
+ 
+-				a = tolower (x1);
+-				b = tolower (x2);
++				a = tolower ((int)x1);
++				b = tolower ((int)x2);
+ 
+ 				c = (((a>='a'?a-'a'+10:a-'0')&0x0f) << 4)
+ 					| ((b>='a'?b-'a'+10:b-'0')&0x0f);
