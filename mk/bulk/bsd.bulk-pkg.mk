@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.141 2007/05/19 14:10:35 wiz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.142 2007/05/23 10:50:44 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -363,7 +363,8 @@ bulk-package:
 		} 2>&1 | ${TEE} -a ${_BUILDLOG:Q}; \
 	else \
 		( if ${PKG_INFO} -qe ${PKGWILDCARD:Q}; then \
-			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
+			oldpkg=`${PKG_INFO} -e ${PKGWILDCARD}`; \
+			${BULK_MSG} "Removing outdated (installed) package $$oldpkg first." ; \
 			${DO} ${PKG_DELETE} -r ${PKGWILDCARD:Q} ;\
 		fi ; \
 		if [ -f ${PKGFILE} ]; then \
@@ -456,7 +457,7 @@ bulk-package:
 			  ${ECHO} "<body>";				\
 			  ${ECHO} "<pre>";				\
 			  ${TO_HTML} < ${_BUILDLOG:Q};			\
-			  ${MAKE} debug 2>&1 | ${TO_HTML} >> ${_BROKENFILE:Q} ; \
+			  ${MAKE} debug 2>&1 | ${TO_HTML};		\
 			  ${ECHO} "</pre>";				\
 			} > ${_BROKENFILE:Q};				\
 			${RM} -f ${_BUILDLOG:Q};			\
