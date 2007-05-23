@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2007/01/26 02:53:44 markd Exp $
+$NetBSD: distinfo,v 1.18 2007/05/23 13:07:18 markd Exp $
 
-SHA1 (kdewebdev-3.5.6.tar.bz2) = debe10b9c13ef98e0af9926516b4a46f9750ef49
-RMD160 (kdewebdev-3.5.6.tar.bz2) = 9d95cd254233cccb2105346d1a2ec6697ebed185
-Size (kdewebdev-3.5.6.tar.bz2) = 6050792 bytes
+SHA1 (kdewebdev-3.5.7.tar.bz2) = 5efaa07f1ac0d31fdad983f3f5632decc372aa3c
+RMD160 (kdewebdev-3.5.7.tar.bz2) = b1b8aa641e4e1dfe5be8af5b30b9cf910c8957d7
+Size (kdewebdev-3.5.7.tar.bz2) = 6046289 bytes
