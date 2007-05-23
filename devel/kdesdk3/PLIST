@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/01/26 03:28:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/05/23 13:45:05 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -263,6 +263,12 @@ share/doc/kde/HTML/en/kdesvn-build/index.docbook
 share/doc/kde/HTML/en/kompare/common
 share/doc/kde/HTML/en/kompare/index.cache.bz2
 share/doc/kde/HTML/en/kompare/index.docbook
+share/doc/kde/HTML/en/kompare/settings-diff1.png
+share/doc/kde/HTML/en/kompare/settings-diff2.png
+share/doc/kde/HTML/en/kompare/settings-diff3.png
+share/doc/kde/HTML/en/kompare/settings-diff4.png
+share/doc/kde/HTML/en/kompare/settings-view1.png
+share/doc/kde/HTML/en/kompare/settings-view2.png
 share/doc/kde/HTML/en/umbrello/activity-diagram.png
 share/doc/kde/HTML/en/umbrello/add-remove-languages.png
 share/doc/kde/HTML/en/umbrello/aggregation.png
@@ -767,10 +773,12 @@ share/kde/apps/umbrello/pics/CVstruct.png
 share/kde/apps/umbrello/pics/actor.png
 share/kde/apps/umbrello/pics/aggregation.png
 share/kde/apps/umbrello/pics/align_bottom.png
+share/kde/apps/umbrello/pics/align_hori_distribute.png
 share/kde/apps/umbrello/pics/align_hori_middle.png
 share/kde/apps/umbrello/pics/align_left.png
 share/kde/apps/umbrello/pics/align_right.png
 share/kde/apps/umbrello/pics/align_top.png
+share/kde/apps/umbrello/pics/align_vert_distribute.png
 share/kde/apps/umbrello/pics/align_vert_middle.png
 share/kde/apps/umbrello/pics/anchor.png
 share/kde/apps/umbrello/pics/andline.png
