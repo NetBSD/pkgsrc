@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/01/26 03:06:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/05/23 13:33:15 markd Exp $
 bin/atlantikdesigner
 bin/fsview
 bin/jpegorient
@@ -139,6 +139,10 @@ share/doc/kde/HTML/en/konq-plugins/validators/index.docbook
 share/doc/kde/HTML/en/konq-plugins/webarchiver/common
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.docbook
+share/doc/kde/HTML/en/ksig/common
+share/doc/kde/HTML/en/ksig/index.cache.bz2
+share/doc/kde/HTML/en/ksig/index.docbook
+share/doc/kde/HTML/en/ksig/screenshot.png
 share/icons/crystalsvg/16x16/actions/babelfish.png
 share/icons/crystalsvg/16x16/actions/cssvalidator.png
 share/icons/crystalsvg/16x16/actions/domtreeviewer.png
@@ -183,11 +187,21 @@ share/icons/locolor/16x16/apps/ktimemon.png
 share/icons/locolor/32x32/apps/konqsidebar_mediaplayer.png
 share/icons/locolor/32x32/apps/ktimemon.png
 share/kde/applnk/.hidden/arkplugin.desktop
+share/kde/applnk/.hidden/crashesplugin.desktop
+share/kde/applnk/.hidden/dirfilterplugin.desktop
+share/kde/applnk/.hidden/fsview.desktop
 share/kde/applnk/.hidden/katefll.desktop
 share/kde/applnk/.hidden/kcmkuick.desktop
+share/kde/applnk/.hidden/khtmlsettingsplugin.desktop
+share/kde/applnk/.hidden/kimgalleryplugin.desktop
 share/kde/applnk/.hidden/kuickplugin.desktop
 share/kde/applnk/.hidden/lnkforward.desktop
 share/kde/applnk/.hidden/mediaplayerplugin.desktop
+share/kde/applnk/.hidden/plugin_babelfish.desktop
+share/kde/applnk/.hidden/plugin_domtreeviewer.desktop
+share/kde/applnk/.hidden/plugin_validators.desktop
+share/kde/applnk/.hidden/plugin_webarchiver.desktop
+share/kde/applnk/.hidden/uachangerplugin.desktop
 share/kde/apps/akregator/pics/rss.png
 share/kde/apps/atlantikdesigner/atlantikdesignerui.rc
 share/kde/apps/domtreeviewer/domtreeviewerui.rc
@@ -438,6 +452,7 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
+@dirrm share/doc/kde/HTML/en/ksig
 @dirrm share/doc/kde/HTML/en/konq-plugins/webarchiver
 @dirrm share/doc/kde/HTML/en/konq-plugins/validators
 @dirrm share/doc/kde/HTML/en/konq-plugins/uachanger
