@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.27 2007/05/22 12:27:08 martti Exp $
+# $NetBSD: sites.mk,v 1.28 2007/05/23 23:48:52 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -24,13 +24,11 @@ MASTER_SITE_GNU+=       \
 
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/ \
-	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
 	ftp://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/ \
 	http://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/
 
 MASTER_SITE_PERL_CPAN+= \
 	ftp://cpan.pair.com/modules/by-module/ \
-	http://ftp.u-paris10.fr/perl/CPAN/modules/by-module/ \
 	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
@@ -84,7 +82,7 @@ MASTER_SITE_KDE+=	\
 	http://www.t.ring.gr.jp/archives/X/kde/stable/ \
 	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
 	ftp://ftp.planetmirror.com.au/pub/kde/stable/ \
-	http://ftp.planetmirror.com.au/pub/kde/stable/ \
+	http://public.planetmirror.com/pub/kde/stable/ \
 	http://mirrors.isc.org/pub/kde/stable/ \
 	ftp://ftp.oregonstate.edu/pub/kde/stable/ \
 	ftp://ftp.gtlib.cc.gatech.edu/pub/kde/stable/ \
@@ -151,7 +149,6 @@ MASTER_SITE_APACHE+=    \
 	http://apache.planetmirror.com.au/dist/ \
 	http://www.ibiblio.org/pub/mirrors/apache/ \
 	http://apache.oregonstate.edu/ \
-	http://www.tux.org/pub/net/apache/dist/ \
 	http://apache.secsup.org/dist/ \
 	http://apache.osuosl.org/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
@@ -167,7 +164,6 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.mirrors.cybercity.dk/Downloads/	\
 	ftp://ftp.fh-wolfenbuettel.de/pub/database/mysql/Downloads/	\
 	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/	\
-	http://netmirror.org/mirror/mysql.com/Downloads/	\
 	http://mirrors.ntua.gr/MySQL/Downloads/		\
 	ftp://ftp.ntua.gr/pub/databases/mysql/Downloads/	\
 	http://mysql.sote.hu/Downloads/	\
@@ -189,7 +185,6 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.au.debian.org/debian/ \
 	http://ftp.wa.au.debian.org/debian/ \
 	http://ftp.bg.debian.org/debian/ \
-	http://ftp.br.debian.org/debian/ \
 	http://ftp.cl.debian.org/debian/ \
 	http://ftp.cz.debian.org/debian/ \
 	http://ftp.de.debian.org/debian/ \
@@ -213,7 +208,6 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.se.debian.org/debian/ \
 	http://ftp.si.debian.org/debian/ \
 	http://ftp.sk.debian.org/debian/ \
-	http://ftp.tr.debian.org/debian/ \
 	http://ftp.us.debian.org/debian/
 
 MASTER_SITE_OPENOFFICE+=	\
@@ -235,7 +229,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.tu-chemnitz.de/pub/openoffice/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
 	ftp://ftp.join.uni-muenster.de/pub/software/OpenOffice/ \
-	http://ftp.leo.org/download/pub/comp/general/office/openoffice/ \
 	http://ftp.ntua.gr/pub/OpenOffice/ \
 	http://ftp.fsf.hu/OpenOffice.org/ \
 	http://ftp.rhnet.is/pub/OpenOffice/ \
@@ -260,7 +253,6 @@ MASTER_SITE_OPENOFFICE+=	\
 
 MASTER_SITE_CYGWIN+= \
 	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
-	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
 	http://mirrors.xmission.com/cygwin/ \
 	ftp://ftp.t.ring.gr.jp/pub/pc/gnu-win32/ \
 	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
