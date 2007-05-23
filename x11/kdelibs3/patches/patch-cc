@@ -1,26 +1,26 @@
-$NetBSD: patch-cc,v 1.7 2005/05/31 14:13:24 markd Exp $
+$NetBSD: patch-cc,v 1.8 2007/05/23 12:57:46 markd Exp $
 
---- kdeui/ksconfig.cpp.orig	2005-05-24 00:17:17.000000000 +1200
+--- kdeui/ksconfig.cpp.orig	2007-05-14 19:52:25.000000000 +1200
 +++ kdeui/ksconfig.cpp
-@@ -429,6 +429,8 @@ void KSpellConfig::getAvailDictsIspell (
+@@ -442,6 +442,8 @@ void KSpellConfig::getAvailDictsIspell (
    // dictionary path
-   QFileInfo dir ("/usr/lib/ispell");
+   QFileInfo dir ("/usr/lib" KDELIBSUFF "/ispell");
    if (!dir.exists() || !dir.isDir())
 +    dir.setFile ("@LOCALBASE@/lib");
 +  if (!dir.exists() || !dir.isDir())
-     dir.setFile ("/usr/local/lib/ispell");
+     dir.setFile ("/usr/local/lib" KDELIBSUFF "/ispell");
    if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/local/share/ispell");
-@@ -498,6 +500,8 @@ void KSpellConfig::getAvailDictsAspell (
+@@ -511,6 +513,8 @@ void KSpellConfig::getAvailDictsAspell (
    if (!dir.exists() || !dir.isDir())
-     dir.setFile ("/usr/lib/aspell-0.60");
+     dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
    if (!dir.exists() || !dir.isDir())
 +    dir.setFile ("@LOCALBASE@/lib");
 +  if (!dir.exists() || !dir.isDir())
-     dir.setFile ("/usr/local/lib/aspell");
+     dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
    if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/share/aspell");
-@@ -579,6 +583,8 @@ KSpellConfig::fillDicts( QComboBox* box,
+@@ -592,6 +596,8 @@ KSpellConfig::fillDicts( QComboBox* box,
        // dictionary path
        QFileInfo dir ("/usr/lib/ispell");
        if (!dir.exists() || !dir.isDir())
@@ -29,12 +29,12 @@ $NetBSD: patch-cc,v 1.7 2005/05/31 14:13:24 markd Exp $
          dir.setFile ("/usr/local/lib/ispell");
        if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/local/share/ispell");
-@@ -649,6 +655,8 @@ KSpellConfig::fillDicts( QComboBox* box,
+@@ -667,6 +673,8 @@ KSpellConfig::fillDicts( QComboBox* box,
        if (!dir.exists() || !dir.isDir())
-         dir.setFile ("/usr/lib/aspell-0.60");
+         dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
        if (!dir.exists() || !dir.isDir())
 +        dir.setFile ("@LOCALBASE@/lib");
 +      if (!dir.exists() || !dir.isDir())
-         dir.setFile ("/usr/local/lib/aspell");
+         dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
        if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/share/aspell");
