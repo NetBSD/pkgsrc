@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
+$NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
 
---- configure.orig	2007-01-24 21:54:16.000000000 +1300
+--- configure.orig	2007-05-17 19:11:02.000000000 +1200
 +++ configure
 @@ -8906,7 +8906,7 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
@@ -101,7 +101,7 @@ $NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
  	  libltdl_cv_sys_dlopen_deplibs=yes
  	  ;;
  	solaris*)
-@@ -49610,7 +49610,7 @@ echo "$as_me: error: Fast malloc is not 
+@@ -49611,7 +49611,7 @@ echo "$as_me: error: Fast malloc is not 
      esac
      case $target_os in
          linux*) ;;
@@ -110,7 +110,7 @@ $NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
          *)
              if test "$kde_fast_malloc" = "notgiven"; then
                  kde_fast_malloc=no
-@@ -56249,7 +56249,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
+@@ -56253,7 +56253,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
        gssapi_flavor=HEIMDAL
      fi
    else
@@ -119,7 +119,7 @@ $NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
  
  gssapi_incdir=NO
  for i in $search_incs;
-@@ -56292,7 +56292,7 @@ done
+@@ -56296,7 +56296,7 @@ done
              GSSAPI_LIBS="-L$gssapi_libdir "
              test "$USE_RPATH" = yes && GSSAPI_RPATH="-R $gssapi_libdir"
            fi
@@ -128,7 +128,7 @@ $NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
            with_gssapi=FOUND
            gssapi_flavor=HEIMDAL
            break
-@@ -56336,7 +56336,7 @@ echo "${ECHO_T}searched but not found" >
+@@ -56340,7 +56340,7 @@ echo "${ECHO_T}searched but not found" >
        GSSAPI_LIBS="${GSSAPI_LIBS}-lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${LIBRESOLV}"
      else
        gssapi_flavor=HEIMDAL
@@ -137,45 +137,29 @@ $NetBSD: patch-ae,v 1.9 2007/01/26 02:44:28 markd Exp $
      fi
    fi
    if test "x$gssapi_flavor" = "xMIT" ; then
-@@ -56539,18 +56539,12 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
+@@ -56720,10 +56720,11 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
-+#include <math.h>
- 
--/* Override any GCC internal prototype to avoid an error.
--   Use char because int might match the return type of a GCC
--   builtin and then its argument prototype would still apply.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--char isinf ();
+ #include <math.h>
++float f;
  int
  main ()
  {
--return isinf ();
-+return isinf (0.0);
+-float f = 0.0; isnan(f)
++return isnan(f)
    ;
    return 0;
  }
-@@ -56800,18 +56794,12 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
+@@ -56794,10 +56795,11 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
-+#include <math.h>
- 
--/* Override any GCC internal prototype to avoid an error.
--   Use char because int might match the return type of a GCC
--   builtin and then its argument prototype would still apply.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--char isnan ();
+ #include <math.h>
++float f;
  int
  main ()
  {
--return isnan ();
-+return isnan (0.0);
+-float f = 0.0; isinf(f)
++return isinf(f)
    ;
    return 0;
  }
