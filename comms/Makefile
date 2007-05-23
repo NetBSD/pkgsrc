@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/12/07 20:34:18 plunky Exp $
+# $NetBSD: Makefile,v 1.67 2007/05/23 14:05:22 markd Exp $
 #
 
 COMMENT=	Communication utilities
@@ -27,6 +27,7 @@ SUBDIR+=	jpilot-syncmal
 SUBDIR+=	kermit
 SUBDIR+=	kyopon
 SUBDIR+=	libmal
+SUBDIR+=	libopensync
 SUBDIR+=	linuxsms
 SUBDIR+=	lrzsz
 SUBDIR+=	malsync
