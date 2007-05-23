@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2007/04/22 22:45:07 minskim Exp $
+# $NetBSD: Makefile,v 1.80 2007/05/23 02:31:03 minskim Exp $
 #
 
-DISTNAME=		mathomatic-12.6.12
-PKGREVISION=            1
+DISTNAME=		mathomatic-12.7.1
 CATEGORIES=		math
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tar.bz2
