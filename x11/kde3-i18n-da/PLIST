@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/01/26 03:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/05/23 13:59:34 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -1098,6 +1098,9 @@ share/doc/kde/HTML/da/kscd/index.docbook
 share/doc/kde/HTML/da/kshisen/common
 share/doc/kde/HTML/da/kshisen/index.cache.bz2
 share/doc/kde/HTML/da/kshisen/index.docbook
+share/doc/kde/HTML/da/ksig/common
+share/doc/kde/HTML/da/ksig/index.cache.bz2
+share/doc/kde/HTML/da/ksig/index.docbook
 share/doc/kde/HTML/da/ksim/common
 share/doc/kde/HTML/da/ksim/index.cache.bz2
 share/doc/kde/HTML/da/ksim/index.docbook
@@ -1339,10 +1342,6 @@ share/doc/kde/HTML/da/lisa/index.docbook
 share/doc/kde/HTML/da/lskat/common
 share/doc/kde/HTML/da/lskat/index.cache.bz2
 share/doc/kde/HTML/da/lskat/index.docbook
-share/doc/kde/HTML/da/multisynk/common
-share/doc/kde/HTML/da/multisynk/index.cache.bz2
-share/doc/kde/HTML/da/multisynk/index.docbook
-share/doc/kde/HTML/da/multisynk/konnectors-chapter.docbook
 share/doc/kde/HTML/da/noatun/common
 share/doc/kde/HTML/da/noatun/index.cache.bz2
 share/doc/kde/HTML/da/noatun/index.docbook
@@ -2034,7 +2033,6 @@ share/locale/da/LC_MESSAGES/nsplugin.mo
 share/locale/da/LC_MESSAGES/pitchablespeed.mo
 share/locale/da/LC_MESSAGES/ppdtranslations.mo
 share/locale/da/LC_MESSAGES/privacy.mo
-share/locale/da/LC_MESSAGES/qeditor.mo
 share/locale/da/LC_MESSAGES/quanta.mo
 share/locale/da/LC_MESSAGES/quicklauncher.mo
 share/locale/da/LC_MESSAGES/rellinks.mo
@@ -2073,7 +2071,6 @@ share/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/scripts
 @dirrm share/doc/kde/HTML/da/quanta
 @dirrm share/doc/kde/HTML/da/noatun
-@dirrm share/doc/kde/HTML/da/multisynk
 @dirrm share/doc/kde/HTML/da/lskat
 @dirrm share/doc/kde/HTML/da/lisa
 @dirrm share/doc/kde/HTML/da/lilo-config
@@ -2114,6 +2111,7 @@ share/locale/da/flag.png
 @dirrm share/doc/kde/HTML/da/ksirtet
 @dirrm share/doc/kde/HTML/da/ksirc
 @dirrm share/doc/kde/HTML/da/ksim
+@dirrm share/doc/kde/HTML/da/ksig
 @dirrm share/doc/kde/HTML/da/kshisen
 @dirrm share/doc/kde/HTML/da/kscd
 @dirrm share/doc/kde/HTML/da/ksame

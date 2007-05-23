@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2005/07/12 12:17:33 markd Exp $
+$NetBSD: patch-al,v 1.2 2007/05/23 13:59:39 markd Exp $
 
---- messages/kdepim/libkmime.po.orig	Tue May 24 01:51:25 2005
+--- messages/kdepim/libkmime.po.orig	2007-05-14 22:41:26.000000000 +1200
 +++ messages/kdepim/libkmime.po
 @@ -1,17 +1,16 @@
  # SOME DESCRIPTIVE TITLE.
@@ -11,11 +11,11 @@ $NetBSD: patch-al,v 1.1 2005/07/12 12:17:33 markd Exp $
  msgstr ""
 -"Project-Id-Version: PACKAGE VERSION\n"
 +"Project-Id-Version: unknown PACKAGE VERSION\n"
- "POT-Creation-Date: 2004-10-26 01:19+0200\n"
+ "POT-Creation-Date: 2007-01-23 02:43+0100\n"
 -"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 -"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 -"Language-Team: LANGUAGE <LL@li.org>\n"
-+"PO-Revision-Date: 2004-10-26 01:19+0200\n"
++"PO-Revision-Date: 2007-01-23 02:43+0100\n"
 +"Last-Translator: Not Known <EMAIL@ADDRESS>\n"
 +"Language-Team: is <LL@li.org>\n"
  "MIME-Version: 1.0\n"
