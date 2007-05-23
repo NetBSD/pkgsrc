@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.8 2006/05/26 18:25:34 seb Exp $
+$NetBSD: patch-af,v 1.9 2007/05/23 08:11:49 martti Exp $
 
---- configure.orig	2006-05-23 01:12:19.000000000 +0000
-+++ configure
-@@ -20463,7 +20463,7 @@ then
+--- configure.orig	2006-11-03 04:19:18.000000000 +0200
++++ configure	2007-05-23 08:20:46.000000000 +0300
+@@ -20547,7 +20547,7 @@
    FIND_PROC="$PS \$\$PID | grep -v grep | grep mysqld > /dev/null"
  else
    case $SYSTEM_TYPE in
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.8 2006/05/26 18:25:34 seb Exp $
        FIND_PROC="$PS p \$\$PID | grep -v grep | grep mysqld > /dev/null"
        ;;
      *darwin*)
-@@ -24651,6 +24651,10 @@ case $SYSTEM_TYPE in
+@@ -24736,6 +24736,10 @@
        MAX_C_OPTIMIZE="-O"
      fi
      ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.8 2006/05/26 18:25:34 seb Exp $
    *freebsd*)
      echo "Adding fix for interrupted reads"
      OSVERSION=`sysctl -a | grep osreldate | awk '{ print $2 }'`
-@@ -36551,30 +36555,10 @@ else
+@@ -36636,30 +36640,10 @@
  fi;
  
  
@@ -53,7 +53,7 @@ $NetBSD: patch-af,v 1.8 2006/05/26 18:25:34 seb Exp $
  
  
  
-@@ -36864,7 +36848,7 @@ then
+@@ -36954,7 +36938,7 @@
  else
    bench_dirs=""
  fi
@@ -62,7 +62,7 @@ $NetBSD: patch-af,v 1.8 2006/05/26 18:25:34 seb Exp $
  
  
  # Don't build readline, i have it already
-@@ -36981,7 +36965,7 @@ int
+@@ -37071,7 +37055,7 @@
  main ()
  {
  
