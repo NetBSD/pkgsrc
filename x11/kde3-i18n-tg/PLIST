@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/08/02 14:24:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/05/23 13:59:48 markd Exp $
 share/kde/apps/khangman/data/tg/animals.kvtml
 share/kde/apps/khangman/data/tg/easy.kvtml
 share/kde/apps/khangman/data/tg/hard.kvtml
@@ -152,6 +152,7 @@ share/locale/tg/LC_MESSAGES/kcmperformance.mo
 share/locale/tg/LC_MESSAGES/kcmprintmgr.mo
 share/locale/tg/LC_MESSAGES/kcmsamba.mo
 share/locale/tg/LC_MESSAGES/kcmscreensaver.mo
+share/locale/tg/LC_MESSAGES/kcmshell.mo
 share/locale/tg/LC_MESSAGES/kcmsmartcard.mo
 share/locale/tg/LC_MESSAGES/kcmsmserver.mo
 share/locale/tg/LC_MESSAGES/kcmspellchecking.mo
@@ -394,6 +395,7 @@ share/locale/tg/LC_MESSAGES/ksplashthemes.mo
 share/locale/tg/LC_MESSAGES/kstars.mo
 share/locale/tg/LC_MESSAGES/kstart.mo
 share/locale/tg/LC_MESSAGES/kstartperf.mo
+share/locale/tg/LC_MESSAGES/kstyle_highcontrast_config.mo
 share/locale/tg/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/tg/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/tg/LC_MESSAGES/kstyle_plastik_config.mo
@@ -486,7 +488,6 @@ share/locale/tg/LC_MESSAGES/nsplugin.mo
 share/locale/tg/LC_MESSAGES/pitchablespeed.mo
 share/locale/tg/LC_MESSAGES/ppdtranslations.mo
 share/locale/tg/LC_MESSAGES/privacy.mo
-share/locale/tg/LC_MESSAGES/qeditor.mo
 share/locale/tg/LC_MESSAGES/quanta.mo
 share/locale/tg/LC_MESSAGES/quicklauncher.mo
 share/locale/tg/LC_MESSAGES/rellinks.mo

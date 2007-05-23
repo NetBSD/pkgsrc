@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/01/26 03:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/05/23 13:59:36 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -1059,6 +1059,9 @@ share/doc/kde/HTML/et/kscd/index.docbook
 share/doc/kde/HTML/et/kshisen/common
 share/doc/kde/HTML/et/kshisen/index.cache.bz2
 share/doc/kde/HTML/et/kshisen/index.docbook
+share/doc/kde/HTML/et/ksig/common
+share/doc/kde/HTML/et/ksig/index.cache.bz2
+share/doc/kde/HTML/et/ksig/index.docbook
 share/doc/kde/HTML/et/ksim/common
 share/doc/kde/HTML/et/ksim/index.cache.bz2
 share/doc/kde/HTML/et/ksim/index.docbook
@@ -1723,12 +1726,6 @@ share/locale/et/LC_MESSAGES/kolourpaint.mo
 share/locale/et/LC_MESSAGES/kolourpicker.mo
 share/locale/et/LC_MESSAGES/kommander.mo
 share/locale/et/LC_MESSAGES/kompare.mo
-share/locale/et/LC_MESSAGES/konnector_dummy.mo
-share/locale/et/LC_MESSAGES/konnector_kabc.mo
-share/locale/et/LC_MESSAGES/konnector_kcal.mo
-share/locale/et/LC_MESSAGES/konnector_local.mo
-share/locale/et/LC_MESSAGES/konnector_qtopia.mo
-share/locale/et/LC_MESSAGES/konnector_remote.mo
 share/locale/et/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/et/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/locale/et/LC_MESSAGES/konqsidebar_metabar.mo
@@ -1874,7 +1871,6 @@ share/locale/et/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/et/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/et/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/et/LC_MESSAGES/libkickermenu_tom.mo
-share/locale/et/LC_MESSAGES/libkitchensync.mo
 share/locale/et/LC_MESSAGES/libkleopatra.mo
 share/locale/et/LC_MESSAGES/libkmime.mo
 share/locale/et/LC_MESSAGES/libkonq.mo
@@ -1894,7 +1890,6 @@ share/locale/et/LC_MESSAGES/mediaapplet.mo
 share/locale/et/LC_MESSAGES/mediacontrol.mo
 share/locale/et/LC_MESSAGES/mf_konqplugin.mo
 share/locale/et/LC_MESSAGES/minitoolsplugin.mo
-share/locale/et/LC_MESSAGES/multisynk.mo
 share/locale/et/LC_MESSAGES/naughtyapplet.mo
 share/locale/et/LC_MESSAGES/nexscope.mo
 share/locale/et/LC_MESSAGES/noatun.mo
@@ -1902,7 +1897,6 @@ share/locale/et/LC_MESSAGES/nsplugin.mo
 share/locale/et/LC_MESSAGES/pitchablespeed.mo
 share/locale/et/LC_MESSAGES/ppdtranslations.mo
 share/locale/et/LC_MESSAGES/privacy.mo
-share/locale/et/LC_MESSAGES/qeditor.mo
 share/locale/et/LC_MESSAGES/quanta.mo
 share/locale/et/LC_MESSAGES/quicklauncher.mo
 share/locale/et/LC_MESSAGES/rellinks.mo
@@ -1977,6 +1971,7 @@ share/locale/et/flag.png
 @dirrm share/doc/kde/HTML/et/ksirtet
 @dirrm share/doc/kde/HTML/et/ksirc
 @dirrm share/doc/kde/HTML/et/ksim
+@dirrm share/doc/kde/HTML/et/ksig
 @dirrm share/doc/kde/HTML/et/kshisen
 @dirrm share/doc/kde/HTML/et/kscd
 @dirrm share/doc/kde/HTML/et/ksame

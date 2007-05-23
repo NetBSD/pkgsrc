@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/01/26 03:36:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/05/23 13:59:42 markd Exp $
 share/doc/kde/HTML/nl/KRegExpEditor/common
 share/doc/kde/HTML/nl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/nl/KRegExpEditor/index.docbook
@@ -44,6 +44,7 @@ share/doc/kde/HTML/nl/kamera/index.docbook
 share/doc/kde/HTML/nl/kandy/common
 share/doc/kde/HTML/nl/kandy/index.cache.bz2
 share/doc/kde/HTML/nl/kandy/index.docbook
+share/doc/kde/HTML/nl/kappfinder/man-kappfinder.1.docbook
 share/doc/kde/HTML/nl/karm/common
 share/doc/kde/HTML/nl/karm/index.cache.bz2
 share/doc/kde/HTML/nl/karm/index.docbook
@@ -71,6 +72,7 @@ share/doc/kde/HTML/nl/kate/highlighting.docbook
 share/doc/kde/HTML/nl/kate/index.cache.bz2
 share/doc/kde/HTML/nl/kate/index.docbook
 share/doc/kde/HTML/nl/kate/kate.png
+share/doc/kde/HTML/nl/kate/man-kate.1.docbook
 share/doc/kde/HTML/nl/kate/mdi.docbook
 share/doc/kde/HTML/nl/kate/menus.docbook
 share/doc/kde/HTML/nl/kate/part.docbook
@@ -445,9 +447,11 @@ share/doc/kde/HTML/nl/khelpcenter/userguide/accessibility.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/base-kde-applications.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/browser-fine-tuning.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/burning-cds.docbook
+share/doc/kde/HTML/nl/khelpcenter/userguide/common
 share/doc/kde/HTML/nl/khelpcenter/userguide/control-center.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/credits-and-license.docbook
+share/doc/kde/HTML/nl/khelpcenter/userguide/customizing-desktop.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/email.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/extragear-applications.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/file-sharing.docbook
@@ -458,6 +462,8 @@ share/doc/kde/HTML/nl/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/glossary.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/groupware-kontact.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/history.docbook
+share/doc/kde/HTML/nl/khelpcenter/userguide/index.cache.bz2
+share/doc/kde/HTML/nl/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/internet-shortcuts.docbook
 share/doc/kde/HTML/nl/khelpcenter/userguide/intro.docbook
@@ -521,6 +527,7 @@ share/doc/kde/HTML/nl/kig/index.cache.bz2
 share/doc/kde/HTML/nl/kig/index.docbook
 share/doc/kde/HTML/nl/kig/macro_wizard.png
 share/doc/kde/HTML/nl/kig/macros_at_work.png
+share/doc/kde/HTML/nl/kig/man-kig.1.docbook
 share/doc/kde/HTML/nl/kig/selecting_objects.png
 share/doc/kde/HTML/nl/kig/simple_locus_construction.png
 share/doc/kde/HTML/nl/kig/test_run_macro.png
@@ -529,6 +536,9 @@ share/doc/kde/HTML/nl/kig/text_label_wizard.png
 share/doc/kde/HTML/nl/kinfocenter/blockdevices/common
 share/doc/kde/HTML/nl/kinfocenter/blockdevices/index.cache.bz2
 share/doc/kde/HTML/nl/kinfocenter/blockdevices/index.docbook
+share/doc/kde/HTML/nl/kinfocenter/cdinfo/common
+share/doc/kde/HTML/nl/kinfocenter/cdinfo/index.cache.bz2
+share/doc/kde/HTML/nl/kinfocenter/cdinfo/index.docbook
 share/doc/kde/HTML/nl/kinfocenter/common
 share/doc/kde/HTML/nl/kinfocenter/devices/common
 share/doc/kde/HTML/nl/kinfocenter/devices/index.cache.bz2
@@ -661,6 +671,7 @@ share/doc/kde/HTML/nl/klipper/index.docbook
 share/doc/kde/HTML/nl/kmag/common
 share/doc/kde/HTML/nl/kmag/index.cache.bz2
 share/doc/kde/HTML/nl/kmag/index.docbook
+share/doc/kde/HTML/nl/kmag/man-kmag.1.docbook
 share/doc/kde/HTML/nl/kmag/screenshot.png
 share/doc/kde/HTML/nl/kmahjongg/common
 share/doc/kde/HTML/nl/kmahjongg/index.cache.bz2
@@ -704,6 +715,7 @@ share/doc/kde/HTML/nl/kmoon/index.docbook
 share/doc/kde/HTML/nl/kmousetool/common
 share/doc/kde/HTML/nl/kmousetool/index.cache.bz2
 share/doc/kde/HTML/nl/kmousetool/index.docbook
+share/doc/kde/HTML/nl/kmousetool/man-kmousetool.1.docbook
 share/doc/kde/HTML/nl/kmouth/common
 share/doc/kde/HTML/nl/kmouth/index.cache.bz2
 share/doc/kde/HTML/nl/kmouth/index.docbook
@@ -713,6 +725,7 @@ share/doc/kde/HTML/nl/kmouth/kmouthcwcp.png
 share/doc/kde/HTML/nl/kmouth/kmouthedit.png
 share/doc/kde/HTML/nl/kmouth/kmouthmain.png
 share/doc/kde/HTML/nl/kmouth/kmouthwizard.png
+share/doc/kde/HTML/nl/kmouth/man-kmouth.1.docbook
 share/doc/kde/HTML/nl/kmplot/commands.docbook
 share/doc/kde/HTML/nl/kmplot/common
 share/doc/kde/HTML/nl/kmplot/configuration.docbook
@@ -1095,6 +1108,22 @@ share/doc/kde/HTML/nl/ktouch/screenshot3.png
 share/doc/kde/HTML/nl/ktron/common
 share/doc/kde/HTML/nl/ktron/index.cache.bz2
 share/doc/kde/HTML/nl/ktron/index.docbook
+share/doc/kde/HTML/nl/kttsd/addtalker.png
+share/doc/kde/HTML/nl/kttsd/audio.png
+share/doc/kde/HTML/nl/kttsd/common
+share/doc/kde/HTML/nl/kttsd/festivalintconf.png
+share/doc/kde/HTML/nl/kttsd/filters.png
+share/doc/kde/HTML/nl/kttsd/general.png
+share/doc/kde/HTML/nl/kttsd/index.cache.bz2
+share/doc/kde/HTML/nl/kttsd/index.docbook
+share/doc/kde/HTML/nl/kttsd/interruption.png
+share/doc/kde/HTML/nl/kttsd/jobs.png
+share/doc/kde/HTML/nl/kttsd/notifications.png
+share/doc/kde/HTML/nl/kttsd/selecttalker.png
+share/doc/kde/HTML/nl/kttsd/stringreplacer.png
+share/doc/kde/HTML/nl/kttsd/talkerchooser.png
+share/doc/kde/HTML/nl/kttsd/talkers.png
+share/doc/kde/HTML/nl/kttsd/xmltransformer.png
 share/doc/kde/HTML/nl/ktuberling/common
 share/doc/kde/HTML/nl/ktuberling/index.cache.bz2
 share/doc/kde/HTML/nl/ktuberling/index.docbook
@@ -1672,12 +1701,6 @@ share/locale/nl/LC_MESSAGES/kolourpaint.mo
 share/locale/nl/LC_MESSAGES/kolourpicker.mo
 share/locale/nl/LC_MESSAGES/kommander.mo
 share/locale/nl/LC_MESSAGES/kompare.mo
-share/locale/nl/LC_MESSAGES/konnector_dummy.mo
-share/locale/nl/LC_MESSAGES/konnector_kabc.mo
-share/locale/nl/LC_MESSAGES/konnector_kcal.mo
-share/locale/nl/LC_MESSAGES/konnector_local.mo
-share/locale/nl/LC_MESSAGES/konnector_qtopia.mo
-share/locale/nl/LC_MESSAGES/konnector_remote.mo
 share/locale/nl/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/nl/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/locale/nl/LC_MESSAGES/konqsidebar_metabar.mo
@@ -1823,7 +1846,6 @@ share/locale/nl/LC_MESSAGES/libkickermenu_recentdocs.mo
 share/locale/nl/LC_MESSAGES/libkickermenu_remotemenu.mo
 share/locale/nl/LC_MESSAGES/libkickermenu_systemmenu.mo
 share/locale/nl/LC_MESSAGES/libkickermenu_tom.mo
-share/locale/nl/LC_MESSAGES/libkitchensync.mo
 share/locale/nl/LC_MESSAGES/libkleopatra.mo
 share/locale/nl/LC_MESSAGES/libkmime.mo
 share/locale/nl/LC_MESSAGES/libkonq.mo
@@ -1843,7 +1865,6 @@ share/locale/nl/LC_MESSAGES/mediaapplet.mo
 share/locale/nl/LC_MESSAGES/mediacontrol.mo
 share/locale/nl/LC_MESSAGES/mf_konqplugin.mo
 share/locale/nl/LC_MESSAGES/minitoolsplugin.mo
-share/locale/nl/LC_MESSAGES/multisynk.mo
 share/locale/nl/LC_MESSAGES/naughtyapplet.mo
 share/locale/nl/LC_MESSAGES/nexscope.mo
 share/locale/nl/LC_MESSAGES/noatun.mo
@@ -1906,6 +1927,7 @@ share/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kuickshow
 @dirrm share/doc/kde/HTML/nl/kturtle
 @dirrm share/doc/kde/HTML/nl/ktuberling
+@dirrm share/doc/kde/HTML/nl/kttsd
 @dirrm share/doc/kde/HTML/nl/ktron
 @dirrm share/doc/kde/HTML/nl/ktouch
 @dirrm share/doc/kde/HTML/nl/ktnef
@@ -2003,6 +2025,7 @@ share/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/nl/kinfocenter/dma
 @dirrm share/doc/kde/HTML/nl/kinfocenter/devices
+@dirrm share/doc/kde/HTML/nl/kinfocenter/cdinfo
 @dirrm share/doc/kde/HTML/nl/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/nl/kinfocenter
 @dirrm share/doc/kde/HTML/nl/kig
@@ -2106,6 +2129,7 @@ share/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/kate
 @dirrm share/doc/kde/HTML/nl/kasteroids
 @dirrm share/doc/kde/HTML/nl/karm
+@dirrm share/doc/kde/HTML/nl/kappfinder
 @dirrm share/doc/kde/HTML/nl/kandy
 @dirrm share/doc/kde/HTML/nl/kamera
 @dirrm share/doc/kde/HTML/nl/kalzium

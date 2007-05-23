@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/10/12 11:17:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/05/23 13:59:36 markd Exp $
 share/doc/kde/HTML/eu/common/fdl-translated.html
 share/doc/kde/HTML/eu/common/gpl-translated.html
 share/doc/kde/HTML/eu/common/kde-localised.css
@@ -552,7 +552,6 @@ share/locale/eu/LC_MESSAGES/nsplugin.mo
 share/locale/eu/LC_MESSAGES/pitchablespeed.mo
 share/locale/eu/LC_MESSAGES/ppdtranslations.mo
 share/locale/eu/LC_MESSAGES/privacy.mo
-share/locale/eu/LC_MESSAGES/qeditor.mo
 share/locale/eu/LC_MESSAGES/quanta.mo
 share/locale/eu/LC_MESSAGES/quicklauncher.mo
 share/locale/eu/LC_MESSAGES/rellinks.mo
