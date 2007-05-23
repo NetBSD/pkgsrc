@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2006/05/26 18:25:34 seb Exp $
+$NetBSD: patch-aa,v 1.11 2007/05/23 08:11:50 martti Exp $
 
---- Makefile.in.orig	2006-04-29 05:36:56.000000000 +0000
-+++ Makefile.in
-@@ -352,12 +352,8 @@ AUTOMAKE_OPTIONS = foreign
+--- Makefile.in.orig	2006-11-03 04:19:15.000000000 +0200
++++ Makefile.in	2007-05-23 08:52:06.000000000 +0300
+@@ -353,12 +353,8 @@
  EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
  			README COPYING EXCEPTIONS-CLIENT
  

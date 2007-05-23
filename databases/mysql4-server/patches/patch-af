@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.9 2005/10/26 17:33:07 joerg Exp $
+$NetBSD: patch-af,v 1.10 2007/05/23 08:11:51 martti Exp $
 
---- configure.orig	2005-05-13 13:34:04.000000000 +0200
-+++ configure	2005-05-23 15:42:07.000000000 +0200
-@@ -21053,7 +21053,7 @@ then
+--- configure.orig	2006-11-03 04:19:18.000000000 +0200
++++ configure	2007-05-23 08:53:36.000000000 +0300
+@@ -20547,7 +20547,7 @@
    FIND_PROC="$PS \$\$PID | grep -v grep | grep mysqld > /dev/null"
  else
    case $SYSTEM_TYPE in
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.9 2005/10/26 17:33:07 joerg Exp $
        FIND_PROC="$PS p \$\$PID | grep -v grep | grep mysqld > /dev/null"
        ;;
      *darwin*)
-@@ -25265,6 +25265,10 @@ case $SYSTEM_TYPE in
+@@ -24736,6 +24736,10 @@
        MAX_C_OPTIMIZE="-O"
      fi
      ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.9 2005/10/26 17:33:07 joerg Exp $
    *freebsd*)
      echo "Adding fix for interrupted reads"
      OSVERSION=`sysctl -a | grep osreldate | awk '{ print $2 }'`
-@@ -37003,33 +37007,10 @@
+@@ -36636,33 +36640,10 @@
  fi;
  
  
@@ -56,7 +56,7 @@ $NetBSD: patch-af,v 1.9 2005/10/26 17:33:07 joerg Exp $
  
  
    echo "$as_me:$LINENO: checking if we should build MySQLFS" >&5
-@@ -37421,7 +37402,7 @@
+@@ -37071,7 +37052,7 @@
  main ()
  {
  
