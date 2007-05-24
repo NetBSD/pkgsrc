@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/18 00:56:11 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2007/05/24 22:56:29 heinz Exp $
 #
 
 VERS=		0.51b3
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://elfsh.segfault.net/
 COMMENT=	ELF format exploration shell
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -29,16 +31,16 @@ SUBST_SED.elfsh+=	-e s,@@PREFIX@@,${PREFIX},
 INSTALLATION_DIRS=	bin include lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vm/elfsh ${PREFIX}/bin/elfsh
-	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.a ${PREFIX}/lib/libelfsh.a
-	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.so ${PREFIX}/lib/libelfsh.so
-	${INSTALL_DATA} ${WRKSRC}/libelfsh/include/libelfsh.h ${PREFIX}/include/libelfsh.h
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/elfsh
-	${INSTALL_DATA} ${WRKSRC}/modules/modremap.so ${PREFIX}/lib/elfsh
-	${INSTALL_DATA} ${WRKSRC}/modules/modtest.so ${PREFIX}/lib/elfsh
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/elfsh
-	${INSTALL_DATA} ${WRKSRC}/doc/elfsh-ref.txt ${PREFIX}/share/doc/elfsh/elfsh-ref.txt
-	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt ${PREFIX}/share/doc/elfsh/libelfsh-ref.txt
+	${INSTALL_PROGRAM} ${WRKSRC}/vm/elfsh ${DESTDIR:Q}${PREFIX:Q}/bin/elfsh
+	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.a ${DESTDIR:Q}${PREFIX:Q}/lib/libelfsh.a
+	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.so ${DESTDIR:Q}${PREFIX:Q}/lib/libelfsh.so
+	${INSTALL_DATA} ${WRKSRC}/libelfsh/include/libelfsh.h ${DESTDIR:Q}${PREFIX:Q}/include/libelfsh.h
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/lib/elfsh
+	${INSTALL_DATA} ${WRKSRC}/modules/modremap.so ${DESTDIR:Q}${PREFIX:Q}/lib/elfsh
+	${INSTALL_DATA} ${WRKSRC}/modules/modtest.so ${DESTDIR:Q}${PREFIX:Q}/lib/elfsh
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/share/doc/elfsh
+	${INSTALL_DATA} ${WRKSRC}/doc/elfsh-ref.txt ${DESTDIR:Q}${PREFIX:Q}/share/doc/elfsh/elfsh-ref.txt
+	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt ${DESTDIR:Q}${PREFIX:Q}/share/doc/elfsh/libelfsh-ref.txt
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
