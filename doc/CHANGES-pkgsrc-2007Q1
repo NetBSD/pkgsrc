@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.26 2007/05/23 12:15:37 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.27 2007/05/24 09:13:34 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -57,3 +57,5 @@ Pullup ticket 2094 - requested by xtraeme
 security update for mysql5
 Pullup ticket 2096 - requested by gdt
 security update for quagga-devel
+Pullup ticket 2097 - requested by salo
+security fix for eggdrop
