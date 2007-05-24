@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1.2.2 2007/05/24 09:13:13 ghen Exp $
+
+Fix for http://www.eggheads.org/bugzilla/show_bug.cgi?id=462
+
+--- src/mod/server.mod/servmsg.c.orig	2007-05-22 18:29:49.000000000 +0200
++++ src/mod/server.mod/servmsg.c
+@@ -424,7 +424,8 @@ static int gotmsg(char *from, char *msg)
+   to = newsplit(&msg);
+   fixcolon(msg);
+   /* Only check if flood-ctcp is active */
+-  strcpy(uhost, from);
++  strncpy(uhost, from, UHOSTMAX);
++  uhost[UHOSTMAX] = '\0';
+   nick = splitnick(&uhost);
+   if (flud_ctcp_thr && detect_avalanche(msg)) {
+     if (!ignoring) {
