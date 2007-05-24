@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2007/05/24 02:06:17 dmcmahill Exp $
+
+--- commandline.cpp.orig	2000-01-12 03:31:50.000000000 -0500
++++ commandline.cpp
+@@ -1,6 +1,18 @@
+ #include <cstdlib>
+ 
+ #define _GNU_SOURCE
++
++// If either _POSIX_SOURCE or _XOPEN_SOURCE are defined
++// then the libgetopt getopt.h will skip defining 
++// struct option (for getopt_long)
++#ifdef _POSIX_SOURCE
++#undef _POSIX_SOURCE
++#endif
++
++#ifdef _XOPEN_SOURCE
++#undef _XOPEN_SOURCE
++#endif
++
+ #include <getopt.h>
+ 
+ #include "commandline.h"
