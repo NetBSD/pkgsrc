@@ -1,4 +1,4 @@
-# $NetBSD: help.mk,v 1.8 2007/04/11 06:40:09 rillig Exp $
+# $NetBSD: help.mk,v 1.9 2007/05/24 05:33:49 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
@@ -29,13 +29,13 @@ TOPIC?=		${topic}
 .PHONY: help
 help:
 .if !defined(TOPIC)
-	@${PRINTF} "usage: %s help topic=<topic>\\n" ${MAKE:Q}
-	@${PRINTF} "\\n"
-	@${PRINTF} "\\t<topic> may be a variable name or a make target,\\n"
-	@${PRINTF} "\\tfor example CONFIGURE_DIRS or patch. For convenience,\\n"
-	@${PRINTF} "\\tyou don't need to use uppercase letters when typing\\n"
-	@${PRINTF} "\\tvariable names.\\n"
-	@${PRINTF} "\\n"
+	@${ECHO} "usage: "${MAKE:Q}" help topic=<topic>"
+	@${ECHO} ""
+	@${ECHO} "	<topic> may be a variable name or a make target,"
+	@${ECHO} "	for example CONFIGURE_DIRS or patch. For convenience,"
+	@${ECHO} "	you don't need to use uppercase letters when typing"
+	@${ECHO} "	variable names."
+	@${ECHO} ""
 .else
 	${RUN} cd ${PKGSRCDIR};						\
 	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES}
