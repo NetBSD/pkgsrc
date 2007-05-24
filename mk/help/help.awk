@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.13 2007/03/09 01:34:50 rillig Exp $
+# $NetBSD: help.awk,v 1.14 2007/05/24 05:29:06 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -32,6 +32,8 @@ BEGIN {
 #
 function end_of_topic() {
 	if (relevant && comment_lines > 2) {
+		if (found_anything)
+			print "";
 		found_anything = yes;
 		print "===> "last_fname":";
 		for (i = 0; i < nlines; i++) {
