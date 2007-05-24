@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1 2007/05/22 18:53:56 plunky Exp $
+$NetBSD: patch-af,v 1.2 2007/05/24 14:06:33 xtraeme Exp $
 
---- Makefile.orig	2007-05-21 19:57:47.000000000 +0100
-+++ Makefile
-@@ -17,9 +17,9 @@ CFLAGS+=	-I/usr/local/include \
+--- Makefile.orig	2007-04-23 20:29:18.000000000 +0200
++++ Makefile	2007-05-24 15:43:11.000000000 +0200
+@@ -17,9 +17,9 @@
  		-I/usr/local/include/openobex \
  		-fno-strict-aliasing
  
 -DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBBSDXML} ${LIBREADLINE}
-+DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBEXPAT} ${LIBREADLINE}
++DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBREADLINE}
  LDADD=		-L/usr/lib -L/usr/local/lib \
 -		-lbluetooth -lsdp -lopenobex -lbsdxml -lreadline -liconv
 +		-lbluetooth -lsdp -lopenobex -lexpat -lreadline -liconv
