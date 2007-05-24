@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/24 16:23:23 obache Exp $
+
+--- Makefile.orig	Wed Jan 15 02:07:44 2003
++++ Makefile	Sun Jul 27 14:51:51 2003
+@@ -56,8 +56,8 @@
+ #FLAGS = -O -m -DMEM_CHECK
+ 
+ # for gcc
+-CC = gcc
+-FLAGS = -g -W -Wall -ansi -DAUDIT -DMEM_DEBUG
++CC ?= gcc
++FLAGS = -ansi -DAUDIT -DMEM_DEBUG
+ #FLAGS = -O3 -mcpu=pentiumpro -fomit-frame-pointer -W -Wall -ansi -DMEM_CHECK
+ #FLAGS = -O -pg -W -Wall -ansi -DMEM_CHECK
+ #LDFLAGS = -pg
+@@ -80,7 +80,7 @@
+ # ----- nothing should be changed below this line -----
+ 
+ COBJ = mem.o nhash.o cpp.o lexer.o assert.o macro.o eval.o
+-CFLAGS = $(FLAGS) -DSTAND_ALONE
++CFLAGS += $(FLAGS) -DSTAND_ALONE
+ 
+ all: ucpp
+ 
