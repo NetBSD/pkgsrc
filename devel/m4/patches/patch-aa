@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.4 2007/05/24 21:51:47 dmcmahill Exp $
+
+avoid the following incorrect behaviour.
+
+% echo "eval(-2/2)" | gm4 -
+2147483647
+
+has been reported on bug-m4@gnu.org
+
+--- src/eval.c.orig	2007-01-09 16:12:43.000000000 +0000
++++ src/eval.c
+@@ -721,7 +721,7 @@ mult_term (eval_token et, int32_t *v1)
+ 	    /* Avoid the x86 SIGFPE on INT_MIN / -1.  */
+ 	    *v1 = (int32_t) -(uint32_t) *v1;
+ 	  else
+-	    *v1 = (int32_t) ((uint32_t) *v1 / (uint32_t) v2);
++	    *v1 = *v1 / v2;
+ 	  break;
+ 
+ 	case MODULO:
