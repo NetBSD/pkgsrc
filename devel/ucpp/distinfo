@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/24 16:23:23 obache Exp $
+
+SHA1 (ucpp-1.3.tar.gz) = 48073c0a1ed661ea4056d393018250a34755bd01
+RMD160 (ucpp-1.3.tar.gz) = d9b1896cb84af12c7dac762099839af6ed644f19
+Size (ucpp-1.3.tar.gz) = 91537 bytes
+SHA1 (patch-aa) = 63765593c773212ae37da6b738e31b49cb98e181
