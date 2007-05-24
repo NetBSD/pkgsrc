@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2007/03/11 22:25:55 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2007/05/24 04:46:52 rillig Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
@@ -22,25 +22,27 @@ CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS+=	config/urt
 HAS_CONFIGURE=	yes
 MAKE_FILE=	makefile
-BUILD_TARGET=
+BUILD_TARGET=	# the default one
+
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 post-extract:
-	${CHMOD} 644 ${WRKSRC}/man/man1/rletotarga.1
+	chmod 644 ${WRKSRC}/man/man1/rletotarga.1
 
 SUBST_CLASSES+=	man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	config/urt
-SUBST_SED.man=		's,^\(\#defpath MAN_DEST\).*,\1 ${PREFIX}/${PKGMANDIR},'
+SUBST_SED.man=		-e 's,^\(\#defpath MAN_DEST\).*,\1 ${PREFIX}/${PKGMANDIR},'
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
 	cd ${PREFIX}/share/doc/urt && \
-	    ${PAX} -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar
+	    pax -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar
 	cd ${PREFIX}/share/examples/urt && \
-	    ${PAX} -r -p m -f ${DISTDIR}/urt-img.tar && \
-	    ${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} . && \
-	    ${FIND} . -type d -print | ${XARGS} ${CHMOD} 755 && \
-	    ${FIND} . -type f -print | ${XARGS} ${CHMOD} 644
+	    pax -r -p m -f ${DISTDIR}/urt-img.tar
+	cd ${PREFIX} && \
+	    chown -R ${ROOT_USER}:${ROOT_GROUP} share/doc/urt share/examples/urt && \
+	    find share/doc/urt share/examples/urt -type d -print | xargs chmod 755 && \
+	    find share/doc/urt share/examples/urt -type f -print | xargs chmod 444
 
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
