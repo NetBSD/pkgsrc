@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/24 10:48:11 minskim Exp $
+${RUBY_SITELIBDIR}/syntax.rb
+${RUBY_SITELIBDIR}/syntax/common.rb
+${RUBY_SITELIBDIR}/syntax/convertors/abstract.rb
+${RUBY_SITELIBDIR}/syntax/convertors/html.rb
+${RUBY_SITELIBDIR}/syntax/lang/ruby.rb
+${RUBY_SITELIBDIR}/syntax/lang/xml.rb
+${RUBY_SITELIBDIR}/syntax/lang/yaml.rb
+${RUBY_SITELIBDIR}/syntax/version.rb
+@dirrm ${RUBY_SITELIBDIR}/syntax/lang
+@dirrm ${RUBY_SITELIBDIR}/syntax/convertors
+@dirrm ${RUBY_SITELIBDIR}/syntax
