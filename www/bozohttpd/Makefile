@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/01/07 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2007/05/24 14:00:38 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-20060517
@@ -26,7 +26,7 @@ PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
 CPPFLAGS+=	-DINET6
 .endif
 CPPFLAGS+=	-Wno-error
-MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
+MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.options.mk"
 
