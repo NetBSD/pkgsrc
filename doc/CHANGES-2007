@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1127 2007/05/25 11:43:59 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1128 2007/05/25 11:55:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2222,3 +2222,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-HTML-FillInForm to 1.06 [markd 2007-05-25]
 	Added www/p5-CGI-Application-Plugin-DBH to 4.00 [markd 2007-05-25]
 	Added www/p5-CGI-Application-Plugin-ValidateRM to 2.1 [markd 2007-05-25]
+	Added print/tex-xkeyval version 2.5f [jmmv 2007-05-25]
+	Added print/tex-glossaries version 1.0 [jmmv 2007-05-25]
