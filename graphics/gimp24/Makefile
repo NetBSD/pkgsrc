@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/04/30 13:34:03 adam Exp $
+# $NetBSD: Makefile,v 1.41 2007/05/25 22:57:34 joerg Exp $
 
 DISTNAME=	gimp-2.3.16
 CATEGORIES=	graphics
@@ -70,7 +70,7 @@ PLIST_SUBST+=	TWAIN="@comment "
 .include "../../print/gimp-print-lib/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.if empty(PKG_BUILD_OPTIONS.gtk2+:Mx11)
+.if empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 PLIST_SUBST+=	REMOTE="@comment "
 .else
 PLIST_SUBST+=	REMOTE=""
