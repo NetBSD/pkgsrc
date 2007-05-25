@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/25 11:53:15 jmmv Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/latex/xkeyval/xkeyval.pdf
+${PKG_LOCALTEXMFPREFIX}/tex/generic/xkeyval/keyval.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/xkeyval/pst-xkey.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/xkeyval/xkeyval.tex
+${PKG_LOCALTEXMFPREFIX}/tex/generic/xkeyval/xkvtxhdr.tex
+${PKG_LOCALTEXMFPREFIX}/tex/latex/xkeyval/pst-xkey.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/xkeyval/xkeyval.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/xkeyval/xkvltxp.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/xkeyval/xkvview.sty
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/xkeyval
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/xkeyval
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/xkeyval
