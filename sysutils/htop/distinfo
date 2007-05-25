@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/25 19:30:21 agc Exp $
+
+SHA1 (htop-0.6.5.tar.gz) = c9bbea594d3ae1940f0b53b44396b684e6e87ded
+RMD160 (htop-0.6.5.tar.gz) = e2d212ae7aa92db6090c699f43ba7ca500936ebc
+Size (htop-0.6.5.tar.gz) = 134628 bytes
