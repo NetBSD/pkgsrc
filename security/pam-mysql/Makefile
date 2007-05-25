@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/16 14:34:44 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/05/25 07:30:49 obache Exp $
 
 DISTNAME=	pam_mysql-0.7RC1
 PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q}
 CONFIGURE_ARGS+=	--with-pam-mods-dir=${PREFIX:Q}/lib/security
+CONFIGURE_ARGS+=	--with-pam=${PAMBASE:Q}
 CONFIGURE_ARGS+=	--disable-static
 
 post-install:
