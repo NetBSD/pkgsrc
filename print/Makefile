@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2007/05/20 15:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2007/05/25 11:55:13 jmmv Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -112,6 +112,7 @@ SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-dhucs
 SUBDIR+=	tex-fixme
 SUBDIR+=	tex-foiltex
+SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-igo
@@ -124,6 +125,7 @@ SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-pgf
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-ucs
+SUBDIR+=	tex-xkeyval
 SUBDIR+=	texmf-dirs
 SUBDIR+=	transfig
 SUBDIR+=	xfce4-print
