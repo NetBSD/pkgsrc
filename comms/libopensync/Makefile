@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/23 12:44:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/25 10:47:53 markd Exp $
 #
 
 DISTNAME=	libopensync-0.22
@@ -14,6 +14,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--disable-python
 
 DISTURL=${MASTER_SITES}${DISTNAME}${EXTRACT_SUFX}?format=raw
 pre-fetch:
