@@ -1,0 +1,6 @@
+The glossaries package supports acronyms and multiple glossaries.
+New entries are defined to have a name and description (and optionally
+an associated symbol).  Plural forms can also be specified.  New
+glossary styles can be defined, and preambles and postambles can be
+specified.  There is provision for loading a database of terms: only
+terms used in the text will be added to the relevant glossary.
