@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6362 2007/05/25 05:16:41 taca Exp $
+$NetBSD: TODO,v 1.6363 2007/05/25 11:44:00 markd Exp $
 
 Suggested new packages
 ======================
@@ -875,7 +875,6 @@ Suggested package updates
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
 	o p5-Graph-0.20105
-	o p5-HTML-FillInForm-1.06
 	o p5-HTML-Prototype-1.48
 	o p5-HTML-Prototype-Useful-0.05
 	o p5-HTML-Table-2.05
