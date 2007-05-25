@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1131 2007/05/25 23:38:36 rh Exp $
+$NetBSD: CHANGES-2007,v 1.1132 2007/05/25 23:40:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xorg-libs to 6.9.0nb11 [reinoud 2007-05-25]
 	Added sysutils/htop version 0.6.5 [agc 2007-05-25]
 	Updated mail/Pantomime to 1.1.2nb4 [rh 2007-05-25]
+	Added devel/ragel version 5.21 [minskim 2007-05-25]
