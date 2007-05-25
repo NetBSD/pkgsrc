@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.186 2007/03/05 23:35:59 rillig Exp $
+# $NetBSD: replace.mk,v 1.187 2007/05/25 15:12:52 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1030,6 +1030,17 @@ TOOLS_CREATE.bdftruncate=	bdftruncate
 .  endif
 .endif
 
+.if !defined(TOOLS_IGNORE.xauth) && !empty(_USE_TOOLS:Mxauth)
+.  if !empty(PKGPATH:Mx11/xauth)
+MAKEFLAGS+=		TOOLS_IGNORE.xauth=
+.  else
+TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xauth=xauth
+TOOLS_PATH.xauth=		${TOOLS_PREFIX.xauth}/bin/xauth
+TOOLS_CREATE.xauth=		xauth
+.   endif
+.endif
+
 .if !defined(TOOLS_IGNORE.xinit) && !empty(_USE_TOOLS:Mxinit)
 .  if !empty(PKGPATH:Mx11/xinit)
 MAKEFLAGS+=		TOOLS_IGNORE.xinit=
@@ -1058,7 +1069,7 @@ TOOLS_CREATE.xmessage=		xmessage
 # native tool available.
 #
 .if ${X11_TYPE} != "modular"
-_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale xinit xmessage
+_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale xauth xinit xmessage
 
 .for _t_ in ${_TOOLS.x11-clients}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
