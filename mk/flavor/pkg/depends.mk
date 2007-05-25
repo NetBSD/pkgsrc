@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.31 2007/05/23 00:23:24 joerg Exp $
+# $NetBSD: depends.mk,v 1.32 2007/05/25 19:07:23 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -54,12 +54,49 @@ _RESOLVE_DEPENDS_CMD=	\
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
-_INSTALL_DEPENDS=	${PKGSRCDIR}/mk/flavor/pkg/install-dependencies
-.for _var in _PKG_DBDIR _PKGSR_DEPS _DEPENDS_FILE DEPENDS_TARGET \
-	MAKE MAKEFLAGS OBJECT_FMT PKG_ADMIN PKG_INFO PKGNAME \
-	PKGSRC_MAKE_ENV SETENV
-_INSTALL_DEPENDS_ARGS+=	${_var}=${${_var}:Q:Q}
-.endfor
+# _DEPENDS_INSTALL_CMD expects "$pattern" to hold the dependency pattern
+#	and "$dir" to hold the package directory path associated with
+#	that dependency pattern.
+#
+_DEPENDS_INSTALL_CMD=							\
+	pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;		\
+	case "$$pkg" in							\
+	"")								\
+		${STEP_MSG} "Required installed package $$pattern: NOT found"; \
+		target=${DEPENDS_TARGET:Q};				\
+		${STEP_MSG} "Verifying $$target for $$dir";		\
+		if ${TEST} ! -d "$$dir"; then				\
+			${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
+			exit 1;						\
+		fi;							\
+		cd $$dir;						\
+		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
+		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
+		case "$$pkg" in						\
+		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
+			${ERROR_MSG} "    be installed, but one cannot be found.  Perhaps there is a"; \
+			${ERROR_MSG} "    stale work directory for $$dir?"; \
+			exit 1;						\
+		esac;							\
+		${STEP_MSG} "Returning to build of ${PKGNAME}";		\
+		;;							\
+	*)								\
+		objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;		\
+		case "$$objfmt" in					\
+		"")	${WARNING_MSG} "[depends.mk] Unknown object format for installed package $$pkg" ;; \
+		${OBJECT_FMT})	;;					\
+		*)	${ERROR_MSG} "[depends.mk] Installed package $$pkg has an"; \
+			${ERROR_MSG} "    object format \`\`$$objfmt'' which differs from \`\`${OBJECT_FMT}''.  Please"; \
+			${ERROR_MSG} "    update the $$pkg package to ${OBJECT_FMT}."; \
+			exit 1;						\
+			;;						\
+		esac;							\
+		if ${TEST} -z "$$silent"; then				\
+			${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+		fi;							\
+		;;							\
+	esac;								\
+	done
 
 ${_DEPENDS_FILE}:
 	${RUN} ${MKDIR} ${.TARGET:H}
@@ -72,7 +109,11 @@ ${_RDEPENDS_FILE}: ${_DEPENDS_FILE}
 #	Installs any missing dependencies.
 #
 _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
-	${RUN}${SH} ${_INSTALL_DEPENDS} no-bootstrap ${_INSTALL_DEPENDS_ARGS}
+	${RUN}${CAT} ${_DEPENDS_FILE} | 				\
+	while read type pattern dir; do					\
+		${TEST} "$$type" = "bootstrap" && continue;		\
+		${_DEPENDS_INSTALL_CMD};				\
+	done
 
 # _flavor-post-install-dependencies:
 #	Targets after installing all dependencies.
@@ -92,7 +133,11 @@ _BOOTSTRAP_DEPENDS_TARGETS+=	${_DEPENDS_FILE}
 _BOOTSTRAP_DEPENDS_TARGETS+=	release-bootstrap-depends-lock
 
 bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
-	${RUN}${SH} ${_INSTALL_DEPENDS} bootstrap ${_INSTALL_DEPENDS_ARGS}
+	${RUN}${CAT} ${_DEPENDS_FILE} | 				\
+	while read type pattern dir; do					\
+		${TEST} "$$type" != "bootstrap" && continue;		\
+		${_DEPENDS_INSTALL_CMD};				\
+	done
 
 .PHONY: 
 acquire-bootstrap-depends-lock: acquire-lock
