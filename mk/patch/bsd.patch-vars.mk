@@ -1,4 +1,4 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.3 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.4 2007/05/25 14:21:32 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -31,9 +31,17 @@
 USE_TOOLS+=	patch
 .endif
 
+# Just testing whether the directories exist or not is not enough.
+# There may be directories that are empty except for the CVS metafiles.
+# This complicated test is necessary to not record pkgtools/digest
+# as a dependency for devel/bmake.
 .if (defined(PATCHDIR) && exists(${PATCHDIR})) || \
     (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
+_patches!=	echo ${PATCHDIR}/* ${LOCALPATCHES}/${PKGPATH}/*
+_patches:=	${_patches:N*/CVS:N*/\*}
+.  if !empty(_patches)
 USE_TOOLS+=	digest:bootstrap
+.  endif
 .endif
 
 # These tools are used to output the contents of the distribution patches
