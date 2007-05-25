@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/19 23:38:49 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/05/25 18:22:45 heinz Exp $
 #
 
 DISTNAME=	elf-0.5.3
@@ -11,6 +11,8 @@ MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.kerneled.com/projects/elf/
 COMMENT=	ELF header analyzer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 
 BUILD_DIRS=	${WRKSRC}/src
@@ -19,8 +21,8 @@ BUILD_TARGET=	elf
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/elf ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/elf ${DESTDIR:Q}${PREFIX:Q}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/elf.1 ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
