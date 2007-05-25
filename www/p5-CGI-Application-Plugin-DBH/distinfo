@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/25 11:29:58 markd Exp $
+
+SHA1 (CGI-Application-Plugin-DBH-4.00.tar.gz) = 41d4b4587ae59e7b5518a76583172c501aa621ab
+RMD160 (CGI-Application-Plugin-DBH-4.00.tar.gz) = 2b943cfbb59faf90859b801db514fe97ff4e3268
+Size (CGI-Application-Plugin-DBH-4.00.tar.gz) = 6702 bytes
