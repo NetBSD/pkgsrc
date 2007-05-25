@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2006/12/12 21:52:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2007/05/25 18:02:45 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -26,13 +26,13 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0\/2.10.0\/(engines|filesystems|immodules|
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !defined(PKG_BUILD_OPTIONS.gtk2+)
-PKG_BUILD_OPTIONS.gtk2+!= \
+.if !defined(PKG_BUILD_OPTIONS.gtk2)
+PKG_BUILD_OPTIONS.gtk2!= \
 	cd ${BUILDLINK_PKGSRCDIR.gtk2} && \
 	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.gtk2+=${PKG_BUILD_OPTIONS.gtk2+:Q}
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.gtk2=${PKG_BUILD_OPTIONS.gtk2+:Q}
 .endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.gtk2+
+MAKEVARS+=	PKG_BUILD_OPTIONS.gtk2
 
 .if !empty(PKG_BUILD_OPTIONS.gtk2+:Mx11)
 .include "../../x11/libXcursor/buildlink3.mk"
