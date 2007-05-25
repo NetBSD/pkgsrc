@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2007/05/25 21:51:13 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2007/05/25 21:53:00 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -34,7 +34,7 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.gtk2=${PKG_BUILD_OPTIONS.gtk2:Q}
 .endif
 MAKEVARS+=	PKG_BUILD_OPTIONS.gtk2
 
-.if !empty(PKG_BUILD_OPTIONS.gtk2+:Mx11)
+.if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
