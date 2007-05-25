@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.508 2007/05/15 21:23:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.509 2007/05/25 11:34:29 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -188,6 +188,8 @@ SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-CGI
 SUBDIR+=	p5-CGI-Application
+SUBDIR+=	p5-CGI-Application-Plugin-DBH
+SUBDIR+=	p5-CGI-Application-Plugin-ValidateRM
 SUBDIR+=	p5-CGI-FastTemplate
 SUBDIR+=	p5-CGI-FormBuilder
 SUBDIR+=	p5-CGI-Kwiki
