@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/05/02 08:11:56 heinz Exp $
+# $NetBSD: Makefile,v 1.50 2007/05/25 23:08:57 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,7 +31,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	YES
 
-.if empty(PKG_BUILD_OPTIONS.gtk2+:Mquartz)
+.if empty(PKG_BUILD_OPTIONS.gtk2:Mquartz)
 LDFLAGS.Darwin+=	-lX11
 .else
 CONFIGURE_ARGS+=	--disable-xlib
