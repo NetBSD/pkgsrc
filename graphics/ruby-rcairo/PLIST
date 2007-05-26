@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/23 16:57:25 minskim Exp $
-${RUBY_SITELIBDIR}/cairo.rb
+@comment $NetBSD: PLIST,v 1.2 2007/05/26 14:13:42 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/cairo.${RUBY_DLEXT}
-${RUBY_SITEARCHLIBDIR}/rb_cairo.h
+${RUBY_SITELIBDIR}/cairo.rb
+${RUBY_SITELIBDIR}/cairo/context.rb
+${RUBY_SITELIBDIR}/cairo/context/circle.rb
+${RUBY_SITELIBDIR}/cairo/context/path.rb
+${RUBY_SITELIBDIR}/cairo/context/quad.rb
+${RUBY_SITELIBDIR}/cairo/context/rectangle.rb
+@dirrm ${RUBY_SITELIBDIR}/cairo/context
+@dirrm ${RUBY_SITELIBDIR}/cairo
