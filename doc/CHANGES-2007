@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1135 2007/05/26 01:39:04 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1136 2007/05/26 01:48:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2231,3 +2231,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/GNUMail to 1.1.2nb7 [rh 2007-05-25]
 	Added textproc/xhtmldiff version 1.2.2 [minskim 2007-05-26]
 	Added textproc/ruby-hpricot version 0.5.140 [minskim 2007-05-26]
+	Added www/ruby-mechanize version 0.6.8 [minskim 2007-05-26]
