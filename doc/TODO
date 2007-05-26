@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6363 2007/05/25 11:44:00 markd Exp $
+$NetBSD: TODO,v 1.6364 2007/05/26 14:27:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -1130,7 +1130,6 @@ Suggested package updates
 	o rt3-3.6.3
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
-	o ruby-rcairo-1.4.1
 	o ruby-rd-mode-0.6.20
 	o rudiments-0.30
 	o rxvt-unicode-8.2
