@@ -1,0 +1,7 @@
+Ruby bindings for cairo // cairo extension for Ruby
+
+ * PNG saving
+ * PostScript saving
+ * PDF saving
+ * SVG saving
+ * all cairo API
