@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/03 15:33:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/05/26 11:50:12 xtraeme Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -7,6 +7,42 @@ bin/resolver
 bin/router
 bin/s2s
 bin/sm
+lib/jabberd/authreg_anon.la
+${DB_OPT}lib/jabberd/authreg_db.la
+${LDAP_OPT}lib/jabberd/authreg_ldap.la
+${MYSQL_OPT}lib/jabberd/authreg_mysql.la
+${PAM_OPT}lib/jabberd/authreg_pam.la
+${PGSQL_OPT}lib/jabberd/authreg_pgsql.la
+${SQLITE_OPT}lib/jabberd/authreg_sqlite.la
+lib/jabberd/authreg_pipe.la
+lib/jabberd/mod_active.la
+lib/jabberd/mod_amp.la
+lib/jabberd/mod_announce.la
+lib/jabberd/mod_deliver.la
+lib/jabberd/mod_disco-publish.la
+lib/jabberd/mod_disco.la
+lib/jabberd/mod_echo.la
+lib/jabberd/mod_help.la
+lib/jabberd/mod_iq-last.la
+lib/jabberd/mod_iq-ping.la
+lib/jabberd/mod_iq-private.la
+lib/jabberd/mod_iq-time.la
+lib/jabberd/mod_iq-vcard.la
+lib/jabberd/mod_iq-version.la
+lib/jabberd/mod_offline.la
+lib/jabberd/mod_presence.la
+lib/jabberd/mod_privacy.la
+lib/jabberd/mod_roster.la
+lib/jabberd/mod_session.la
+lib/jabberd/mod_status.la
+lib/jabberd/mod_template-roster.la
+lib/jabberd/mod_vacation.la
+lib/jabberd/mod_validate.la
+lib/jabberd/storage_fs.la
+${DB_OPT}lib/jabberd/storage_db.la
+${MYSQL_OPT}lib/jabberd/storage_mysql.la
+${PGSQL_OPT}lib/jabberd/storage_pgsql.la
+${SQLITE_OPT}lib/jabberd/storage_sqlite.la
 man/man8/c2s.8
 man/man8/jabberd.8
 man/man8/resolver.8
@@ -14,15 +50,20 @@ man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
 share/examples/jabberd/c2s.xml
+share/examples/jabberd/db-setup-status.mysql
 share/examples/jabberd/db-setup.mysql
 share/examples/jabberd/db-setup.pgsql
+share/examples/jabberd/db-setup.sqlite
+share/examples/jabberd/db-update.mysql
 share/examples/jabberd/jabberd.cfg
 share/examples/jabberd/resolver.xml
 share/examples/jabberd/roster.xml
+share/examples/jabberd/router-filter.xml
 share/examples/jabberd/router-users.xml
 share/examples/jabberd/router.xml
 share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
+share/examples/jabberd/storage.xml
 share/examples/rc.d/c2s
 share/examples/rc.d/jabberd
 share/examples/rc.d/resolver
@@ -30,3 +71,4 @@ share/examples/rc.d/router
 share/examples/rc.d/s2s
 share/examples/rc.d/sm
 @dirrm share/examples/jabberd
+@dirrm lib/jabberd
