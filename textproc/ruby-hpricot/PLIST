@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/26 01:34:44 minskim Exp $
+${RUBY_SITELIBDIR}/hpricot.rb
+${RUBY_SITELIBDIR}/hpricot/blankslate.rb
+${RUBY_SITELIBDIR}/hpricot/builder.rb
+${RUBY_SITELIBDIR}/hpricot/elements.rb
+${RUBY_SITELIBDIR}/hpricot/htmlinfo.rb
+${RUBY_SITELIBDIR}/hpricot/inspect.rb
+${RUBY_SITELIBDIR}/hpricot/modules.rb
+${RUBY_SITELIBDIR}/hpricot/parse.rb
+${RUBY_SITELIBDIR}/hpricot/tag.rb
+${RUBY_SITELIBDIR}/hpricot/tags.rb
+${RUBY_SITELIBDIR}/hpricot/traverse.rb
+${RUBY_SITELIBDIR}/hpricot/xchar.rb
+${RUBY_SITEARCHLIBDIR}/hpricot_scan.${RUBY_DLEXT}
+@dirrm ${RUBY_SITELIBDIR}/hpricot
