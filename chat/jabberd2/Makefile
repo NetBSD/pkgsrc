@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/05/26 11:50:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2007/05/26 13:33:56 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.1.6
@@ -36,8 +36,10 @@ REPLACE_PERL+=		tools/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		JABBERD_USER JABBERD_GROUP
-BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR
+JABBERD_DBDIR?=		${VARBASE}/db/jabberd
+
+BUILD_DEFS+=		VARBASE JABBERD_USER JABBERD_GROUP
+BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR JABBERD_DBDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
@@ -86,6 +88,7 @@ pre-configure:
 		-e "s|@SSLCERTS@|${SSLCERTS}|g"				\
 		-e "s|@BINDIR@|${PREFIX}/bin|g"				\
 		-e "s|@DBDIR@|${JABBERD_DBDIR}|g"			\
+		-e "s|@pkglibdir@|${PREFIX}/lib/jabberd|g"		\
 		${WRKSRC}/etc/${f}.in > ${WRKSRC}/etc/${f}
 .endfor
 
