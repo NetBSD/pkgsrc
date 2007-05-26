@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/26 01:34:44 minskim Exp $
+
+SHA1 (hpricot-0.5.140.tgz) = c30ba9a0217bf0d43bc2d8ee0876845aa3f521c6
+RMD160 (hpricot-0.5.140.tgz) = ee011a8d8dbb9991acbf6c38c1175fc756faf0f1
+Size (hpricot-0.5.140.tgz) = 212870 bytes
+SHA1 (patch-aa) = 9a1b69d5cc2a2b88fbdba97a8c283daa1f406a0c

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/26 01:34:44 minskim Exp $
+
+--- Rakefile.orig	2007-04-03 14:26:53.000000000 -0700
++++ Rakefile
+@@ -7,7 +7,7 @@ require 'fileutils'
+ include FileUtils
+ 
+ NAME = "hpricot"
+-REV = `svn info`[/Revision: (\d+)/, 1] rescue nil
++REV = "140"
+ VERS = ENV['VERSION'] || "0.5" + (REV ? ".#{REV}" : "")
+ PKG = "#{NAME}-#{VERS}"
+ BIN = "*.{bundle,jar,so,obj,pdb,lib,def,exp}"
