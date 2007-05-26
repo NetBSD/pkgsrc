@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.509 2007/05/25 11:34:29 markd Exp $
+# $NetBSD: Makefile,v 1.510 2007/05/26 01:48:23 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -306,6 +306,7 @@ SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-htmlsplit
+SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-webunit
 SUBDIR+=	sarg
