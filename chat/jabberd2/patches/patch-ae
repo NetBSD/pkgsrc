@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2006/04/21 09:18:37 rillig Exp $
+$NetBSD: patch-ae,v 1.3 2007/05/26 11:50:13 xtraeme Exp $
 
---- etc/router.xml.in.orig	2003-11-05 01:19:46.000000000 +0100
-+++ etc/router.xml.in	2003-11-05 01:20:44.000000000 +0100
+--- etc/router.xml.in.orig	2007-05-26 12:05:26.000000000 +0200
++++ etc/router.xml.in	2007-05-26 12:06:18.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -29,12 +29,20 @@ $NetBSD: patch-ae,v 1.2 2006/04/21 09:18:37 rillig Exp $
  
      <!-- Shared secret used to identify legacy components (that is,
           "jabber:component:accept" components that authenticate using
-@@ -46,7 +46,7 @@
-          connections. If this is commented out, connecting components
-          will not be able to request a SSL-encrypted channel. -->
+@@ -52,7 +52,7 @@
+          If this is commented out, connecting components will not be able
+          to request an SSL-encrypted channel. -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
    </local>
  
+@@ -185,6 +185,6 @@
+ 
+   <!-- File containing packet filter rules.
+        May be used for fine grained packet routing control. -->
+-  <filter>@sysconfdir@/router-filter.xml</filter>
++  <filter>@PKG_SYSCONFDIR@/router-filter.xml</filter>
+ 
+ </router>

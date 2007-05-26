@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/03/28 19:44:10 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
 
---- etc/resolver.xml.in.orig	2003-10-08 02:27:59.000000000 +0200
-+++ etc/resolver.xml.in	2003-10-08 02:28:49.000000000 +0200
+--- etc/resolver.xml.in.orig	2007-05-26 12:06:43.000000000 +0200
++++ etc/resolver.xml.in	2007-05-26 12:07:09.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -11,16 +11,16 @@ $NetBSD: patch-af,v 1.1.1.1 2004/03/28 19:44:10 xtraeme Exp $
  
    <!-- Router connection configuration -->
    <router>
-@@ -23,7 +23,7 @@
-          commented out, or the file can't be read, no attempt will be
-          made to establish an encrypted channel with the router. -->
+@@ -28,7 +28,7 @@
+          If this is commented out, or the file can't be read, no attempt
+          will be made to establish an encrypted channel with the router. -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
      <!-- Router connection retry -->
-@@ -52,7 +52,7 @@
+@@ -61,7 +61,7 @@
  
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
