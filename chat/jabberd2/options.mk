@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2007/05/26 11:50:12 xtraeme Exp $
+# $NetBSD: options.mk,v 1.14 2007/05/26 13:33:56 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -16,8 +16,6 @@ PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite gnusasl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
-BUILD_DEFS+=		VARBASE JABBERD_DBDIR
-JABBERD_DBDIR?=		${VARBASE}/db/jabberd
 PLIST_SUBST+=		DB_OPT=
 CONFIGURE_ARGS+=	--enable-db
 .  include "../../databases/db4/buildlink3.mk"
