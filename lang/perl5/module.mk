@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.54 2007/04/21 09:41:00 rillig Exp $
+# $NetBSD: module.mk,v 1.55 2007/05/26 12:46:20 heinz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -55,6 +55,11 @@ BROKEN=		Perl does not like building with GCC on AIX, please use a different com
 
 .if ${PERL5_MODULE_TYPE} == "Module::Build"
 _PERL5_MODTYPE=		modbuild
+.  if ${_USE_DESTDIR} != "no"
+_PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
+.  else
+_PERL5_MODBUILD_DESTDIR_OPTION=
+.  endif
 .elif ${PERL5_MODULE_TYPE} == "MakeMaker"
 _PERL5_MODTYPE=		makemaker
 .endif
@@ -134,7 +139,7 @@ do-modbuild-test:
 
 .PHONY: do-modbuild-install
 do-modbuild-install:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${_PERL5_MODBUILD_DESTDIR_OPTION}
 
 .if target(do-${_PERL5_MODTYPE}-build) && !defined(NO_BUILD)
 do-build: do-${_PERL5_MODTYPE}-build
