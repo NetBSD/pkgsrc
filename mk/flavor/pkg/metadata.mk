@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.20 2007/05/22 16:17:16 joerg Exp $
+# $NetBSD: metadata.mk,v 1.21 2007/05/26 11:58:33 heinz Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -86,7 +86,7 @@ ${_BUILD_INFO_FILE}: plist
 	esac;								\
 	for i in "" $$libs; do						\
 		${TEST} "$$i" != "" || continue;			\
-		${ECHO} "PROVIDES=$$i" >> ${.TARGET}.tmp;		\
+		${ECHO} "PROVIDES=$${i#${DESTDIR}}" >> ${.TARGET}.tmp;	\
 	done;								\
 	for req in "" $$requires; do					\
 		${TEST} "$$req" != "" || continue;			\
