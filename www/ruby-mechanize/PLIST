@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/26 01:46:51 minskim Exp $
+${RUBY_SITELIBDIR}/mechanize.rb
+${RUBY_SITELIBDIR}/mechanize/cookie.rb
+${RUBY_SITELIBDIR}/mechanize/errors.rb
+${RUBY_SITELIBDIR}/mechanize/form.rb
+${RUBY_SITELIBDIR}/mechanize/form_elements.rb
+${RUBY_SITELIBDIR}/mechanize/history.rb
+${RUBY_SITELIBDIR}/mechanize/inspect.rb
+${RUBY_SITELIBDIR}/mechanize/list.rb
+${RUBY_SITELIBDIR}/mechanize/monkey_patch.rb
+${RUBY_SITELIBDIR}/mechanize/net-overrides/net/http.rb
+${RUBY_SITELIBDIR}/mechanize/net-overrides/net/https.rb
+${RUBY_SITELIBDIR}/mechanize/net-overrides/net/protocol.rb
+${RUBY_SITELIBDIR}/mechanize/page.rb
+${RUBY_SITELIBDIR}/mechanize/page_elements.rb
+${RUBY_SITELIBDIR}/mechanize/parsers/rexml_page.rb
+${RUBY_SITELIBDIR}/mechanize/pluggable_parsers.rb
+${RUBY_SITELIBDIR}/mechanize/rexml.rb
+@dirrm ${RUBY_SITELIBDIR}/mechanize/parsers
+@dirrm ${RUBY_SITELIBDIR}/mechanize/net-overrides/net
+@dirrm ${RUBY_SITELIBDIR}/mechanize/net-overrides
+@dirrm ${RUBY_SITELIBDIR}/mechanize
