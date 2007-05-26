@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.34 2007/02/22 19:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/05/26 11:50:12 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.0s11
+DISTNAME=		jabberd-2.1.6
 CATEGORIES=		chat
-MASTER_SITES=		http://files.jabberstudio.org/jabberd2/
+MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://jabberd.jabberstudio.org/2/
+HOMEPAGE=		http://jabberd2.xiaoka.com/
 COMMENT=		Instant messaging server (version 2)
 
 CONFLICTS=		jabberd-[0-9]*
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6b
 BUILDLINK_FNAME_TRANSFORM.db4+=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path
@@ -35,7 +36,8 @@ REPLACE_PERL+=		tools/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP JABBERD_LOGDIR JABBERD_PIDDIR
+BUILD_DEFS+=		JABBERD_USER JABBERD_GROUP
+BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
@@ -53,8 +55,10 @@ EGDIR=			${PREFIX}/share/examples/jabberd
 CONF_FILES=		${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
 
 FILES=			c2s.xml resolver.xml router.xml			\
-			router-users.xml s2s.xml sm.xml
-DBFILES=		db-setup.mysql db-setup.pgsql
+			router-users.xml router-filter.xml s2s.xml	\
+			sm.xml storage.xml
+DBFILES=		db-setup.mysql db-setup.pgsql db-update.mysql	\
+			db-setup-status.mysql db-setup.sqlite
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -69,13 +73,13 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 
 post-extract:
 .for f in ${FILES}
-	@${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
+	${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
-	@${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
+	${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 
 pre-configure:
 .for f in ${FILES} jabberd.cfg
-	@${SED}								\
+	${SED}								\
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
 		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g"			\
@@ -101,4 +105,5 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

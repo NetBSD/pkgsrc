@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/03/28 19:44:09 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
 
---- etc/s2s.xml.in.orig	2003-10-08 02:31:16.000000000 +0200
-+++ etc/s2s.xml.in	2003-10-08 02:31:56.000000000 +0200
+--- etc/s2s.xml.in.orig	2007-05-26 12:04:13.000000000 +0200
++++ etc/s2s.xml.in	2007-05-26 12:05:01.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -11,16 +11,16 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/03/28 19:44:09 xtraeme Exp $
  
    <!-- Router connection configuration -->
    <router>
-@@ -33,7 +33,7 @@
-          commented out, or the file can't be read, no attempt will be
-          made to establish an encrypted channel with the router. -->
+@@ -38,7 +38,7 @@
+          If this is commented out, or the file can't be read, no attempt
+          will be made to establish an encrypted channel with the router. -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
      <!-- Router connection retry -->
-@@ -62,7 +62,7 @@
+@@ -71,7 +71,7 @@
  
      <!-- if logging to file, this is the filename of the logfile -->
      <!--
@@ -29,3 +29,21 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/03/28 19:44:09 xtraeme Exp $
      -->
    </log>
  
+@@ -105,7 +105,7 @@
+          If this is commented out, or the file can't be read, no attempt will be
+          made to establish encrypted connections with other servers. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
+ 
+     <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
+@@ -116,7 +116,7 @@
+     <!-- File containing an optional SSL certificate chain file for SSL 
+          connections. -->
+     <!--
+-    <cachain>@sysconfdir@/cachain.pem</cachain>
++    <cachain>@SSLCERTS@/cachain.pem</cachain>
+     -->
+ 
+   </local>

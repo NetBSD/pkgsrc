@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
+$NetBSD: patch-ag,v 1.4 2007/05/26 11:50:13 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2005-01-20 15:39:58.000000000 +0100
-+++ etc/c2s.xml.in	2005-01-20 15:41:39.000000000 +0100
+--- etc/c2s.xml.in.orig	2007-05-26 12:07:39.000000000 +0200
++++ etc/c2s.xml.in	2007-05-26 12:09:13.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -11,16 +11,16 @@ $NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
  
    <!-- Router connection configuration -->
    <router>
-@@ -23,7 +23,7 @@
-          commented out, or the file can't be read, no attempt will be
-          made to establish an encrypted channel with the router. -->
+@@ -28,7 +28,7 @@
+          If this is commented out, or the file can't be read, no attempt
+          will be made to establish an encrypted channel with the router. -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
      <!-- Router connection retry -->
-@@ -56,7 +56,7 @@
+@@ -61,7 +61,7 @@
      
      <!-- If logging to file, this is the filename of the logfile -->
      <!--
@@ -29,23 +29,25 @@ $NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
      -->
    </log>
  
-@@ -88,13 +88,13 @@
-          connections. If this is commented out, clients will not be
-          offered the STARTTLS stream extension -->
+@@ -109,7 +109,7 @@
+     <id register-enable='true'>localhost</id>
+     <!-- or
+     <id realm='company'
+-        pemfile='/usr/local/etc/jabberd/server.pem'
++	pemfile='@SSLCERTS@/server.pem'
+         verify-mode='7'
+         require-starttls='true'
+         register-enable='true'
+@@ -142,7 +142,7 @@
+          If this is commented out, clients will not be offered
+          the STARTTLS stream extension -->
      <!--
 -    <pemfile>@sysconfdir@/server.pem</pemfile>
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
-     <!-- File containing an optional SSL certificate chain file for client
-          SSL connections. -->
-     <!--
--    <cachain>@sysconfdir@/cachain.pem</cachain>
-+    <cachain>@SSLCERTS@/cachain.pem</cachain>
-     -->
- 
-     <!-- Require STARTTLS. If this is enabled, clients must do STARTTLS
-@@ -295,7 +295,7 @@
+     <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
+@@ -339,7 +339,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -54,7 +56,7 @@ $NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
        
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -348,7 +348,7 @@
+@@ -403,13 +403,13 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
@@ -62,4 +64,11 @@ $NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
 +      <exec>@BINDIR@/pipe-auth.pl</exec>
      </pipe>
  
-   </authreg>
+     <!-- SQLite driver configuration -->
+     <sqlite>
+       <!-- Database name -->
+-      <dbname>@localstatedir@/jabberd/db/sqlite.db</dbname>
++      <dbname>@DBDIR@/sqlite.db</dbname>
+ 
+       <!-- Transacation support. If this is commented out, transactions
+            will be disabled. This might make database accesses faster,
