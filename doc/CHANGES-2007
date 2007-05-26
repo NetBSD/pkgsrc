@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1134 2007/05/26 00:59:50 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1135 2007/05/26 01:39:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/ragel version 5.21 [minskim 2007-05-25]
 	Updated mail/GNUMail to 1.1.2nb7 [rh 2007-05-25]
 	Added textproc/xhtmldiff version 1.2.2 [minskim 2007-05-26]
+	Added textproc/ruby-hpricot version 0.5.140 [minskim 2007-05-26]
