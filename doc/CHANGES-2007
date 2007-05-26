@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1143 2007/05/26 15:04:25 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1144 2007/05/26 16:56:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed graphics/rcairo [obache 2007-05-26]
 	Updated graphics/ruby-rcairo to 1.4.1 [obache 2007-05-26]
 	Updated graphics/gimp to 2.2.14nb1 [tron 2007-05-26]
+	Updated graphics/ruby-rcairo to 1.4.1nb1 [obache 2007-05-26]
