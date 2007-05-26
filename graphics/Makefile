@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.455 2007/05/26 06:35:28 obache Exp $
+# $NetBSD: Makefile,v 1.456 2007/05/26 13:46:03 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -271,6 +271,7 @@ SUBDIR+=	qiv
 SUBDIR+=	qvplay
 SUBDIR+=	radiance
 SUBDIR+=	rayshade
+SUBDIR+=	rcairo
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
 SUBDIR+=	ruby-RMagick
