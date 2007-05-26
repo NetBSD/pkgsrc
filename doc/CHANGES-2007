@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1133 2007/05/25 23:58:20 rh Exp $
+$NetBSD: CHANGES-2007,v 1.1134 2007/05/26 00:59:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/Pantomime to 1.1.2nb4 [rh 2007-05-25]
 	Added devel/ragel version 5.21 [minskim 2007-05-25]
 	Updated mail/GNUMail to 1.1.2nb7 [rh 2007-05-25]
+	Added textproc/xhtmldiff version 1.2.2 [minskim 2007-05-26]
