@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1139 2007/05/26 13:18:57 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1140 2007/05/26 13:47:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2238,3 +2238,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated meta-pkgs/ruby-gnome2 to 0.16.0nb1 [obache 2007-05-26]
 	Updated chat/jabberd2 to 2.1.6 [xtraeme 2007-05-26]
 	Added textproc/ruby-htree version 0.6 [obache 2007-05-26]
+	Added graphics/rcairo version 1.4.1 [obache 2007-05-26]
