@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/26 13:16:00 obache Exp $
+
+SHA1 (htree-0.6.tar.gz) = 65802070175fb272abc009258da06e8a68b75a12
+RMD160 (htree-0.6.tar.gz) = 3eadacb0882bc83de387873fdd8974de98ac2a62
+Size (htree-0.6.tar.gz) = 94585 bytes
