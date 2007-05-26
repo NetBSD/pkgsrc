@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.28 2007/05/23 23:48:52 wiz Exp $
+# $NetBSD: sites.mk,v 1.29 2007/05/26 04:07:11 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -51,7 +51,9 @@ MASTER_SITE_R_CRAN+=    \
 MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.tex.ac.uk/tex-archive/ \
-	ftp://ftp.dante.de/tex-archive/
+	ftp://ftp.dante.de/tex-archive/ \
+	ftp://www.t.ring.gr.jp/pub/text/CTAN/ \
+	http://www.t.ring.gr.jp/archives/text/CTAN/
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
