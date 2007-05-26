@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/26 06:21:30 obache Exp $
+
+SHA1 (ruby-gettext-package-1.9.0.tar.gz) = 0603700974ec91fdd480e0a72093b406c53b1fcb
+RMD160 (ruby-gettext-package-1.9.0.tar.gz) = 1db3e8522e33bd4c8cce382c59674f159fa3447c
+Size (ruby-gettext-package-1.9.0.tar.gz) = 249650 bytes
