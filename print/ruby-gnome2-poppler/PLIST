@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/27 02:00:02 obache Exp $
+${RUBY_SITELIBDIR}/poppler.rb
+${RUBY_SITEARCHLIBDIR}/poppler.${RUBY_DLEXT}
