@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2007/04/21 18:27:21 tonio Exp $
+# $NetBSD: Makefile,v 1.59 2007/05/27 17:39:47 tonio Exp $
 
 DISTNAME=		mutt-1.5.15
+PKGREVISION=		1
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
