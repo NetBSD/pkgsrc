@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/27 02:58:40 obache Exp $
+libexec/cgi-bin/mimetex.cgi
