@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2005/08/26 21:36:29 adrianp Exp $
+$NetBSD: patch-ba,v 1.1 2007/05/27 09:49:54 schmonz Exp $
 
 --- src/cvsbug.in.orig	2005-08-26 22:30:56.000000000 +0100
 +++ src/cvsbug.in

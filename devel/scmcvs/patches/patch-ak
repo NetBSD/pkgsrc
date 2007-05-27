@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.7 2006/01/29 02:40:40 wiz Exp $
+$NetBSD: patch-ak,v 1.1 2007/05/27 09:49:52 schmonz Exp $
 
 --- src/checkout.c.orig	2005-09-24 19:56:35.000000000 +0200
 +++ src/checkout.c
