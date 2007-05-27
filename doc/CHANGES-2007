@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1148 2007/05/27 09:17:51 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1149 2007/05/27 09:51:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2248,3 +2248,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/mimetex version 1.64 [obache 2007-05-27]
 	Updated graphics/ruby-rcairo to 1.5.0 [obache 2007-05-27]
 	Updated net/Transmission to 0.72 [tnn 2007-05-27]
+	Moved devel/cvs to devel/scmcvs [schmonz 2007-05-27]
