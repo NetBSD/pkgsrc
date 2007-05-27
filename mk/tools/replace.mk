@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.188 2007/05/27 01:44:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.189 2007/05/27 02:11:13 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1246,13 +1246,16 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 
 ######################################################################
 
+# Create a TOOLS_ENV variable that holds a shell environment that
+# defines all of the "TOOL" variables for use within a shell.  This
+# shell environment may need to be passed to the configure or build
+# phases since these paths may be hardcoded into package scripts, and
+# if they're not pre-specified, then they'll be searched for in the
+# PATH, which would find the ones in ${TOOLS_DIR}.
+
 # For packages that use GNU configure scripts, pass the appropriate
 # environment variables to ensure the proper command is invoked for
-# each tool.  We do this since these paths may be hardcoded into
-# package scripts, and if they're not pre-specified, then they'll be
-# searched for in the PATH, which would find the ones in ${TOOLS_DIR}.
-#
-# The value passed via the shell environment is stored in
+# each tool.  The value passed via the shell environment is stored in
 # TOOLS_VALUE_GNU.<tool>, which defaults to the full command line of
 # the tool.
 #
@@ -1263,8 +1266,20 @@ TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_CMDLINE.${_t_}}
 .    endif
 .    if defined(TOOLS_VALUE_GNU.${_t_})
 .      for _v_ in ${_TOOLS_VARNAME_GNU.${_t_}}
-CONFIGURE_ENV+=		${_v_}=${TOOLS_VALUE_GNU.${_t_}:Q}
+TOOLS_ENV+=	${_v_}=${TOOLS_VALUE_GNU.${_t_}:Q}
 .      endfor
 .    endif
+.  endfor
+CONFIGURE_ENV+=	${TOOLS_ENV}
+.endif
+
+# For packages that do not use GNU configure scripts, pass the full
+# command-line for each tool used.
+#
+.if !defined(GNU_CONFIGURE)
+.  for _t_ in ${_USE_TOOLS}
+.    for _v_ in ${_TOOLS_VARNAME.${_t_}}
+TOOLS_ENV+=	${_v_}=${TOOLS_CMDLINE.${_t_}:Q}
+.    endfor
 .  endfor
 .endif
