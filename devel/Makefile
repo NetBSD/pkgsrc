@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2007/05/27 09:49:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.860 2007/05/27 19:43:28 heinz Exp $
 #
 
 COMMENT=	Development utilities
@@ -444,6 +444,7 @@ SUBDIR+=	p5-File-NFSLock
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Temp
+SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Type
 SUBDIR+=	p5-File-Which
 SUBDIR+=	p5-File-chdir
