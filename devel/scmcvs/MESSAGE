@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/07/09 17:03:27 grant Exp $
+$NetBSD: MESSAGE,v 1.1 2007/05/27 09:49:50 schmonz Exp $
 
 Set up the master source repository.  See the "Setting up the repository"
 section of cvs.info for details; the one-line summary is (if you are

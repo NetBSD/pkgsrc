@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.8 2006/01/29 02:40:40 wiz Exp $
+$NetBSD: patch-ap,v 1.1 2007/05/27 09:49:53 schmonz Exp $
 
 --- src/main.c.orig	2005-09-05 20:04:38.000000000 +0200
 +++ src/main.c
