@@ -1,23 +1,12 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.22 2007/05/23 19:42:19 schmonz Exp $
+# $NetBSD: mkbinarykit,v 1.23 2007/05/27 19:55:58 schmonz Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
 # copied to ${PREFIX}/etc/mk.conf or to the location specified
 # by using --mkconf. Run this program from the pkgsrc/bootstrap
 # directory.
-
-setenv_universal()
-{
-	case "$opsys" in
-		Darwin)
-			ospro=universal
-			export CFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.4u.sdk'
-			export LDFLAGS='-arch i386 -arch ppc -arch ppc64 -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk'
-		;;
-	esac
-}
 
 mkbinarykit_macpkg()
 {
@@ -28,9 +17,12 @@ mkbinarykit_macpkg()
 	mkdir -p ${macdestdir}${prefix} || die "mkdir destprefix"
 	rmdir ${macdestdir}${prefix} || die "rmdir destprefix"
 	cp -Rp ${prefix} ${macdestdir}${prefix} || die "copy prefix"
-	mkdir -p ${macdestdir}${pkgdbdir} || die "mkdir destdbdir"
-	rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
-	cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
+
+	if [ ! -d ${macdestdir}${pkgdbdir} ]; then
+		mkdir -p ${macdestdir}${pkgdbdir} || die "mkdir destdbdir"
+		rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
+		cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
+	fi
 
 	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" \
 		-e "s|%TARGETDIR%|${targetdir}|g" -e "s|%DATE%|${date}|g" \
@@ -60,7 +52,7 @@ die()
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
 	[ --no-build ] [ --workdir=<work dir> ] [ bootstrap script arguments ]
-	[ --fetch-cmd=<ftp command> ] [ --universal ]'
+	[ --fetch-cmd=<ftp command> ]'
 
 opsys=`uname -s | tr -d /-`
 osrev=`uname -r`
@@ -84,6 +76,19 @@ sedprog="sed"
 case "$opsys" in
 AIX)
 	pkgdbdir=$prefix/pkgdb
+	;;
+Darwin)
+	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
+	universal_sdk="/Developer/SDKs/MacOSX${macosx_version}u.sdk"
+	if [ -d "${universal_sdk}" ]; then
+		echo "===> Building Universal binaries."
+		ospro=universal
+		export CFLAGS="-arch i386 -arch ppc -arch ppc64 -arch x86_64 -isysroot ${universal_sdk}"
+		export LDFLAGS="-arch i386 -arch ppc -arch ppc64 -arch x86_64 -Wl,-syslibroot,${universal_sdk}"
+	else
+		echo "===> Building non-Universal binaries."
+	fi
+	unset macosx_version universal_sdk
 	;;
 DragonFly)
 	case "$osrev" in
@@ -132,7 +137,6 @@ while [ $# -gt 0 ]; do
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--workdir=*)	wrkdir=`echo $1 | $sedprog -e 's|--workdir=||'` ;;
-	--universal)	setenv_universal ;;
 	--*)		echo "$usage"; exit 1 ;;
 	esac
 	shift
