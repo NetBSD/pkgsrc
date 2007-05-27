@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.187 2007/05/25 15:12:52 joerg Exp $
+# $NetBSD: replace.mk,v 1.188 2007/05/27 01:44:42 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1256,8 +1256,8 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 # TOOLS_VALUE_GNU.<tool>, which defaults to the full command line of
 # the tool.
 #
-.for _t_ in ${_USE_TOOLS}
-.  if defined(GNU_CONFIGURE)
+.if defined(GNU_CONFIGURE)
+.  for _t_ in ${_USE_TOOLS}
 .    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
 TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_CMDLINE.${_t_}}
 .    endif
@@ -1266,5 +1266,5 @@ TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_CMDLINE.${_t_}}
 CONFIGURE_ENV+=		${_v_}=${TOOLS_VALUE_GNU.${_t_}:Q}
 .      endfor
 .    endif
-.  endif
-.endfor
+.  endfor
+.endif
