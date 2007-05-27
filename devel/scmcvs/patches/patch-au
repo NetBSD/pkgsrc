@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.11 2006/01/29 02:40:40 wiz Exp $
+$NetBSD: patch-au,v 1.1 2007/05/27 09:49:54 schmonz Exp $
 
 --- src/commit.c.orig	2005-09-22 09:56:20.000000000 +0200
 +++ src/commit.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.8 2006/01/29 02:40:40 wiz Exp $
+$NetBSD: patch-ao,v 1.1 2007/05/27 09:49:53 schmonz Exp $
 
 --- src/lock.c.orig	2005-05-03 17:34:53.000000000 +0200
 +++ src/lock.c

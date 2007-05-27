@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.9 2005/04/19 12:39:18 wiz Exp $
+$NetBSD: patch-ai,v 1.1 2007/05/27 09:49:52 schmonz Exp $
 
 --- src/parseinfo.c.orig	2005-03-16 23:01:21.000000000 +0100
 +++ src/parseinfo.c
