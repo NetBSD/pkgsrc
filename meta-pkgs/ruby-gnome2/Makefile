@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/05/26 11:13:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/27 02:02:51 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Set of Ruby language bindings for GNOME2
 DISTFILES=	# empty
 CATEGORIES=	meta-pkgs gnome
@@ -17,6 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-libart>=${VERSION}:../../graphics/ruby-gnome2-libart
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-panelapplet>=${VERSION}:../../x11/ruby-gnome2-panelapplet
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-poppler>=${VERSION}:../../print/ruby-gnome2-poppler
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=${VERSION}:../../graphics/ruby-gnome2-rsvg
 
 EXTRACT_ONLY=	# empty
