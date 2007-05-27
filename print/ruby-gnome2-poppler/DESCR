@@ -1,0 +1,5 @@
+Ruby-GNOME 2 is a set of Ruby language bindings for the various
+application development libraries included with the GNOME/GTK+
+environment.
+
+Ruby/Poppler is a Ruby binding of poppler-glib.
