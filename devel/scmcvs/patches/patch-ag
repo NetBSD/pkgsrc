@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.6 2005/04/19 12:39:18 wiz Exp $
+$NetBSD: patch-ag,v 1.1 2007/05/27 09:49:52 schmonz Exp $
 
 --- lib/xtime.h.orig	2005-03-04 20:05:09.000000000 +0100
 +++ lib/xtime.h
