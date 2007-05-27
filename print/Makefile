@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2007/05/26 06:31:52 obache Exp $
+# $NetBSD: Makefile,v 1.171 2007/05/27 02:01:14 obache Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -98,6 +98,7 @@ SUBDIR+=	py-reportlab-renderPM
 SUBDIR+=	rlpr
 SUBDIR+=	rtf2latex
 SUBDIR+=	ruby-gnome2-gnomeprint
+SUBDIR+=	ruby-gnome2-poppler
 SUBDIR+=	scribus
 SUBDIR+=	scribus-doc
 SUBDIR+=	stylewriter
