@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1144 2007/05/26 16:56:44 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1145 2007/05/27 02:05:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2243,3 +2243,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-rcairo to 1.4.1 [obache 2007-05-26]
 	Updated graphics/gimp to 2.2.14nb1 [tron 2007-05-26]
 	Updated graphics/ruby-rcairo to 1.4.1nb1 [obache 2007-05-26]
+	Added print/ruby-gnome2-poppler version 0.16.0 [obache 2007-05-27]
+	Updated meta-pkgs/ruby-gnome2 to 0.16.0nb2 [obache 2007-05-27]
