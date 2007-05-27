@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2007/05/26 16:52:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/05/27 04:10:52 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/cairo.${RUBY_DLEXT}
 ${RUBY_SITEARCHLIBDIR}/rb_cairo.h
 ${RUBY_SITELIBDIR}/cairo.rb
+${RUBY_SITELIBDIR}/cairo/color.rb
+${RUBY_SITELIBDIR}/cairo/colors.rb
+${RUBY_SITELIBDIR}/cairo/constants.rb
 ${RUBY_SITELIBDIR}/cairo/context.rb
+${RUBY_SITELIBDIR}/cairo/context/blur.rb
 ${RUBY_SITELIBDIR}/cairo/context/circle.rb
+${RUBY_SITELIBDIR}/cairo/context/color.rb
 ${RUBY_SITELIBDIR}/cairo/context/path.rb
-${RUBY_SITELIBDIR}/cairo/context/quad.rb
 ${RUBY_SITELIBDIR}/cairo/context/rectangle.rb
+${RUBY_SITELIBDIR}/cairo/path.rb
+${RUBY_SITELIBDIR}/cairo/point.rb
 @dirrm ${RUBY_SITELIBDIR}/cairo/context
 @dirrm ${RUBY_SITELIBDIR}/cairo
