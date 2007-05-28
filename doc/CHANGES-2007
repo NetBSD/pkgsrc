@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1152 2007/05/28 07:24:31 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1153 2007/05/28 07:31:02 gson Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2256,3 +2256,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/mutt to 1.4.2.3 [tron 2007-05-27]
 	Added devel/p5-File-Tempdir version 0.02 [heinz 2007-05-27]
 	Updated sysutils/memtester to 4.0.7 [schmonz 2007-05-28]
+	Updated audio/tcl-snack to 2.2.10 [gson 2007-05-28]
