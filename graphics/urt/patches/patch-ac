@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.3 2000/11/08 21:57:20 tron Exp $
+$NetBSD: patch-ac,v 1.4 2007/05/28 20:14:00 heinz Exp $
 
 Extensive hacking around - instead of installing manual pages which
 simply source other man pages, make a symbolic link to the target.
 
---- man/makefile.src.orig	Thu Feb 27 21:26:52 1992
-+++ man/makefile.src	Mon Aug 24 17:42:59 1998
-@@ -197,11 +197,9 @@
+--- man/makefile.src.orig	1992-02-27 22:26:52.000000000 +0100
++++ man/makefile.src
+@@ -197,11 +197,9 @@ PAGE3_INSTALL_NAME = \`basename \$$i\`
  GET_SETUP_OK_PAGE3 = man3/rle_get_setup_ok.3
  #endif
  
@@ -19,7 +19,7 @@ simply source other man pages, make a symbolic link to the target.
  
  # Default action is to print all man pages
  all:
-@@ -211,7 +209,6 @@
+@@ -211,55 +209,72 @@ all:
  
  # Put the manual pages into a global location
  install: install-1 install-3 install-5
@@ -27,7 +27,13 @@ simply source other man pages, make a symbolic link to the target.
  
  install-1: $(PAGES1)
  	@-sh -c "if test '$(DEST)X' != X ; then \
-@@ -223,11 +220,10 @@
+ 		for i in $? ; do \
+ 			dpgm=\`basename \$$i .1\`.$(SUFF1) ; \
+-			echo cp \$$i $(DEST1)/\$$dpgm ; \
+-			cp \$$i $(DEST1)/\$$dpgm ; \
++			echo cp \$$i $(DESTDIR)$(DEST1)/\$$dpgm ; \
++			cp \$$i $(DESTDIR)$(DEST1)/\$$dpgm ; \
+ 		done ; \
  	else \
  		true ; \
  	fi"
@@ -39,9 +45,11 @@ simply source other man pages, make a symbolic link to the target.
 -		for i in $? ; do \
 +		for i in ${MANPAGES3} ; do \
  			dpgm=${PAGE3_INSTALL_NAME} ; \
- 			echo cp \$$i $(DEST3)/\$$dpgm ; \
- 			cp \$$i $(DEST3)/\$$dpgm ; \
-@@ -235,15 +231,34 @@
+-			echo cp \$$i $(DEST3)/\$$dpgm ; \
+-			cp \$$i $(DEST3)/\$$dpgm ; \
++			echo cp \$$i $(DESTDIR)$(DEST3)/\$$dpgm ; \
++			cp \$$i $(DESTDIR)$(DEST3)/\$$dpgm ; \
+ 		done ; \
  	else \
  		true ; \
  	fi"
@@ -52,8 +60,8 @@ simply source other man pages, make a symbolic link to the target.
 +	@for i in ${SOPAGES3}; do \
 +		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
 +		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
-+		echo "ln -fs ../$$tgt ${DEST3}/$$dpgm"; \
-+		ln -fs ../$$tgt ${DEST3}/$$dpgm; \
++		echo "ln -fs ../$$tgt $(DESTDIR)${DEST3}/$$dpgm"; \
++		ln -fs ../$$tgt $(DESTDIR)${DEST3}/$$dpgm; \
 +	done
 +
 +install-5: ${MANPAGES5} 5links
@@ -62,8 +70,8 @@ simply source other man pages, make a symbolic link to the target.
 -		cp $? $(DEST5); \
 +		for i in ${MANPAGES5} ; do \
 +			dpgm=${PAGE3_INSTALL_NAME} ; \
-+			echo cp \$$i $(DEST5)/\$$dpgm; \
-+			cp \$$i $(DEST5)/\$$dpgm; \
++			echo cp \$$i $(DESTDIR)$(DEST5)/\$$dpgm; \
++			cp \$$i $(DESTDIR)$(DEST5)/\$$dpgm; \
 +		done; \
  	else true; \
  	fi"
@@ -73,11 +81,33 @@ simply source other man pages, make a symbolic link to the target.
 +	@for i in ${SOPAGES5}; do \
 +		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
 +		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
-+		echo "ln -fs ../$$tgt ${DEST5}/$$dpgm"; \
-+		ln -fs ../$$tgt ${DEST5}/$$dpgm; \
++		echo "ln -fs ../$$tgt $(DESTDIR)${DEST5}/$$dpgm"; \
++		ln -fs ../$$tgt $(DESTDIR)${DEST5}/$$dpgm; \
 +	done
 +
 +
  
  # Clean up installed man pages
  pristine:
+ 	-rm -f install*
+ 	@-if test $(DEST)X != X ; then \
+ 	    for i in man1/*.1 ; do \
+-		echo "rm -f $(DEST1)/`basename $$i .1`.$(SUFF1)" ;\
+-		rm -f $(DEST1)/`basename $$i .1`.$(SUFF1) ;\
++		echo "rm -f $(DESTDIR)$(DEST1)/`basename $$i .1`.$(SUFF1)" ;\
++		rm -f $(DESTDIR)$(DEST1)/`basename $$i .1`.$(SUFF1) ;\
+ 	    done ; \
+ 	    for i in $(PAGES3) ; do \
+-		eval "echo rm -f $(DEST3)/${PAGE3_INSTALL_NAME}" ; \
+-		eval "rm -f $(DEST3)/${PAGE3_INSTALL_NAME}" ; \
++		eval "echo rm -f $(DESTDIR)$(DEST3)/${PAGE3_INSTALL_NAME}" ; \
++		eval "rm -f $(DESTDIR)$(DEST3)/${PAGE3_INSTALL_NAME}" ; \
+ 	    done ; \
+ 	    for i in man5/*.5 ; do \
+-		echo rm -f $(DEST5)/$$i ; \
+-		rm -f $(DEST5)/$$i ; \
++		echo rm -f $(DESTDIR)$(DEST5)/$$i ; \
++		rm -f $(DESTDIR)$(DEST5)/$$i ; \
+ 	    done ; \
+ 	else \
+ 	    true ;\
