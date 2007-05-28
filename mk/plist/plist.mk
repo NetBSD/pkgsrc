@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.22 2007/04/19 23:13:42 tnn Exp $
+# $NetBSD: plist.mk,v 1.23 2007/05/28 13:54:25 heinz Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -64,6 +64,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.common_end
 
 # This is the path to the generated PLIST file.
 PLIST=		${WRKDIR}/.PLIST
+_PLIST_NOKEYWORDS=${PLIST}.nokeywords
 
 ######################################################################
 
@@ -229,7 +230,7 @@ _GENERATE_PLIST=	${_SET_OWNER_GROUP};				\
 .endif
 
 .PHONY: plist
-plist: ${PLIST}
+plist: ${PLIST} ${_PLIST_NOKEYWORDS}
 
 .if ${PLIST_TYPE} == "static"
 ${PLIST}: ${PLIST_SRC}
@@ -241,6 +242,20 @@ ${PLIST}:
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} |		\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}		\
 		> ${.TARGET}
+
+# for list of keywords see pkg_create(1)
+${_PLIST_NOKEYWORDS}: ${PLIST}
+	${_PKG_SILENT}${_PKG_DEBUG} ${AWK} < ${PLIST} > ${.TARGET} '	\
+		BEGIN {							\
+			FILTER="@(";					\
+			FILTER=FILTER"cd|cwd|src|exec|unexec|mode|option";\
+			FILTER=FILTER"|owner|group|comment|ignore";	\
+			FILTER=FILTER"|ignore_inst|name|dirrm|mtree";	\
+			FILTER=FILTER"|display|pkgdep|blddep|pkgcfl";	\
+			FILTER=FILTER")[[:space:]]";			\
+		};							\
+		$$0 ~ FILTER { next };					\
+		{ print }'
 
 .if defined(INFO_FILES)
 INFO_FILES_cmd=								\
