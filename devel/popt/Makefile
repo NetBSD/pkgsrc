@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/05/13 15:04:00 obache Exp $
+# $NetBSD: Makefile,v 1.38 2007/05/28 07:57:46 obache Exp $
 #
 
 DISTNAME=	popt-1.10.7
@@ -30,6 +30,8 @@ SUBST_CLASSES+=		mark64
 SUBST_STAGE.mark64=	pre-configure
 SUBST_FILES.mark64=	Makefile.am Makefile.in
 SUBST_SED.mark64=	-e 's|@MARK64@||g'
+
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

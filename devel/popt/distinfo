@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.17 2007/05/12 00:52:29 obache Exp $
+$NetBSD: distinfo,v 1.18 2007/05/28 07:57:46 obache Exp $
 
 SHA1 (popt-1.10.7.tar.gz) = c1a22bd3b50b24f64654c69a6f91142ca54ca853
 RMD160 (popt-1.10.7.tar.gz) = d5342c1a5e1059f45d75a93ca7a3c997b2fef05d
 Size (popt-1.10.7.tar.gz) = 728283 bytes
-SHA1 (patch-ab) = ceefe880c3a1e55c70c9308f148163627be41dbe
-SHA1 (patch-ac) = cf0fe2bed11d930e51f4f92c1a0fdc54ea089d29
-SHA1 (patch-ad) = 6f5cccbdbf762b81c93643f83a2ce555e9e6f8dd
