@@ -1,5 +1,10 @@
-$NetBSD: distinfo,v 1.29 2007/05/13 10:45:19 jmmv Exp $
+$NetBSD: distinfo,v 1.30 2007/05/28 08:13:25 dan Exp $
 
 SHA1 (monotone-0.35.tar.gz) = b745eee239ab198f4263493c7f79cfd1b6935127
 RMD160 (monotone-0.35.tar.gz) = 91cb91fc25415f8357a57f199a5f83b8ea9293a1
 Size (monotone-0.35.tar.gz) = 4857094 bytes
+SHA1 (patch-da) = 7788a38488e3ea143ba0a82dbe5a367c34f0d41f
+SHA1 (patch-db) = 3225f5e42e3fc36d071e67d66778c38a28ac03ab
+SHA1 (patch-dc) = 2daf64dc25410b82d9ba031e3e77fd099493ad63
+SHA1 (patch-dd) = 84748f95117632726b7ded61ece7cd1f895011a4
+SHA1 (patch-de) = 25839f337dff78514b845647b948a53902a83172
