@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/05/28 07:29:11 gson Exp $
 
-DISTNAME=	snack2.2.8
-PKGNAME=	tcl-snack-2.2.8
-PKGREVISION=	1
+DISTNAME=	snack2.2.10
+PKGNAME=	tcl-snack-2.2.10
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.kth.se/~kare/
+MASTER_SITES=	http://www.speech.kth.se/snack/dist/
 
 MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://www.speech.kth.se/snack/
