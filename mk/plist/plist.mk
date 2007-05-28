@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.23 2007/05/28 13:54:25 heinz Exp $
+# $NetBSD: plist.mk,v 1.24 2007/05/28 13:59:10 heinz Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -64,7 +64,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.common_end
 
 # This is the path to the generated PLIST file.
 PLIST=		${WRKDIR}/.PLIST
-_PLIST_NOKEYWORDS=${PLIST}.nokeywords
+_PLIST_NOKEYWORDS=${PLIST}_nokeywords
 
 ######################################################################
 
