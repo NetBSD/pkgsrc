@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1155 2007/05/28 08:15:14 dan Exp $
+$NetBSD: CHANGES-2007,v 1.1156 2007/05/28 12:44:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2259,3 +2259,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/tcl-snack to 2.2.10 [gson 2007-05-28]
 	Updated audio/wavesurfer to 1.8.5 [gson 2007-05-28]
 	Updated devel/monotone to 0.35nb1 [dan 2007-05-28]
+	Updated graphics/gimp to 2.2.15 [adam 2007-05-28]
+	Updated graphics/gimp24 to 2.3.17 [adam 2007-05-28]
