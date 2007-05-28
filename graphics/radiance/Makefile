@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 14:58:22 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/05/28 20:35:38 heinz Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -12,6 +12,8 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}supp${EXTRACT_SUFX}
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ray
 
@@ -52,6 +54,8 @@ MAKE_ENV+=	MV=${MV:Q} RM=${RM:Q} CP=${CP:Q}			\
 		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}			\
 		RANLIB=${RANLIB:Q} AR=${AR:Q}
 
+DESTDIRPREFIX=	${DESTDIR}${PREFIX}
+
 do-configure:
 .for patchee in ${PATCHEES}
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' 				\
@@ -69,18 +73,20 @@ do-build:
 	@${RM} -f ${WRKSRC}/radiance/bin/wish*
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/radiance
-	cd ${WRKSRC}/radiance && ${PAX} -rw . ${PREFIX}/radiance/
-	${INSTALL_DATA_DIR} ${PREFIX}/radiance/obj
-	cd ${WRKSRC}/obj && ${PAX} -rw . ${PREFIX}/radiance/obj/
-	${INSTALL_DATA_DIR} ${PREFIX}/radiance/lib
-	cd ${WRKSRC}/lib && ${PAX} -rw . ${PREFIX}/radiance/lib/
-	${INSTALL_DATA_DIR} ${PREFIX}/radiance/man
-	cd ${WRKSRC}/doc/man && ${PAX} -rw . ${PREFIX}/radiance/man/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/radiance
-	${INSTALL_DATA} ${WRKSRC}/doc/pdf/*.pdf ${PREFIX}/share/doc/radiance/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/radiance
-	${INSTALL_DATA} ${WRKSRC}/doc/ray.html ${PREFIX}/share/doc/radiance/index.html
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance
+	cd ${WRKSRC}/radiance && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/obj
+	cd ${WRKSRC}/obj && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/obj/
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/lib
+	cd ${WRKSRC}/lib && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/lib/
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/man
+	cd ${WRKSRC}/doc/man && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/man/
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/share/doc/radiance
+	${INSTALL_DATA} ${WRKSRC}/doc/pdf/*.pdf \
+		${DESTDIRPREFIX:Q}/share/doc/radiance/
+	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/share/doc/html/radiance
+	${INSTALL_DATA} ${WRKSRC}/doc/ray.html \
+		${DESTDIRPREFIX:Q}/share/doc/radiance/index.html
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
