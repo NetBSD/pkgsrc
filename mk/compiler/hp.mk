@@ -1,4 +1,4 @@
-# $NetBSD: hp.mk,v 1.2 2007/04/17 11:09:28 tnn Exp $
+# $NetBSD: hp.mk,v 1.3 2007/05/28 11:07:00 martti Exp $
 #
 # This is the compiler definition for the HP-UX C/aC++ compilers.
 #
@@ -52,7 +52,7 @@ _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
-# 
+#
 _LANGUAGES.hp=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.hp+=	${LANGUAGES.hp:M${_lang_}}
@@ -66,7 +66,7 @@ PREPEND_PATH+=	${_HP_DIR}/bin
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_HP_VARS}
 .  if !target(${_HP_${_var_}})
-override-tools: ${_HP_${_var_}}        
+override-tools: ${_HP_${_var_}}
 ${_HP_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\

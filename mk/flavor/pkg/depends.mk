@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.33 2007/05/25 23:24:35 joerg Exp $
+# $NetBSD: depends.mk,v 1.34 2007/05/28 11:07:00 martti Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -138,6 +138,6 @@ bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
 		${_DEPENDS_INSTALL_CMD};				\
 	done
 
-.PHONY: 
+.PHONY:
 acquire-bootstrap-depends-lock: acquire-lock
 release-bootstrap-depends-lock: release-lock
