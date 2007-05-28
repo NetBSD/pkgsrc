@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.15 2007/02/18 00:08:36 adrianp Exp $
+# $NetBSD: mkreadme,v 1.16 2007/05/28 11:07:00 martti Exp $
 #
 # Script for README.html generation
 #
@@ -302,7 +302,7 @@ else
     exit 1
 fi
 
-# this needs to happen here as DISTDIR has not been populated until this 
+# this needs to happen here as DISTDIR has not been populated until this
 # stage (see above)
 if [ "x$pv" = "xdefault" ]; then
     PVDIR=$DISTDIR

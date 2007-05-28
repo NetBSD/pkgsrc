@@ -793,7 +793,7 @@ EOF
 	exit ;;
     *:Interix*:[3456]*)
     	case ${UNAME_MACHINE} in
-	    x86) 
+	    x86)
 		echo i586-pc-interix${UNAME_RELEASE}
 		exit ;;
 	    EM64T | authenticamd)
