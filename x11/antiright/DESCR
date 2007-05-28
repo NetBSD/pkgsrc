@@ -1,0 +1,12 @@
+This package contains the gtkshell GUI creator, the gshterm vte-based terminal
+emulator, a text editor, a simple IDE ideal for C development, and the ACE
+sample desktop implementation. gtkshell allows one to create a gtk2 GUI
+from the command line, by specifying widgets and options
+at the command line.  gshterm is transparent vte-based terminal emulator.
+ACE is a script which implements desktop features with gtkshell, including
+a deskbar with a clock, a settings utility and configuration system,
+a sticky notes applet, system monitors, a manual page browser, and configurable
+launchers for applications.  gtkshell also provides GUIDL, the
+GUI Definition Language parser for specifying static interface definitions.
+Using gtkshell and the examples provided by ACE, one can rapidly construct
+a GUI application, leaving the developer to focus on application logic.
