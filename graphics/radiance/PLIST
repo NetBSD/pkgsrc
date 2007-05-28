@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/18 03:51:07 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/05/28 20:35:38 heinz Exp $
 radiance/bin/arch2rad
 radiance/bin/bgraph
 radiance/bin/cnt
@@ -276,7 +276,6 @@ radiance/lib/tcl/trad.icon
 radiance/lib/tcl/util.tcl
 radiance/lib/tilt.cal
 radiance/lib/tmesh.cal
-radiance/man/cat1/.DS_Store
 radiance/man/cat1/arch2rad.1
 radiance/man/cat1/bgraph.1
 radiance/man/cat1/cnt.1
@@ -385,9 +384,7 @@ radiance/man/cat1/xform.1
 radiance/man/cat1/xglaresrc.1
 radiance/man/cat1/ximage.1
 radiance/man/cat1/xshowtrace.1
-radiance/man/cat3/.DS_Store
 radiance/man/cat3/meta.3
-radiance/man/cat5/.DS_Store
 radiance/man/cat5/metafile.5
 radiance/man/man1/arch2rad.1
 radiance/man/man1/bgraph.1
@@ -539,7 +536,6 @@ radiance/obj/alpha/Z.norm
 radiance/obj/alpha/alpha.pkg
 radiance/obj/alpha/conv2.c
 radiance/obj/alpha/convert.c
-radiance/obj/cabin/.DS_Store
 radiance/obj/cabin/Makefile
 radiance/obj/cabin/anim1/anim2.vf
 radiance/obj/cabin/anim1/errs
@@ -553,7 +549,6 @@ radiance/obj/cabin/anim1/script2
 radiance/obj/cabin/anim1/spline.cal
 radiance/obj/cabin/anim1/view.fmt
 radiance/obj/cabin/anim1/view2.fmt
-radiance/obj/cabin/animv1/.DS_Store
 radiance/obj/cabin/animv1/anim2.vf
 radiance/obj/cabin/animv1/ball1.xf
 radiance/obj/cabin/ball1.rad
