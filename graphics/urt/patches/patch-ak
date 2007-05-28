@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2001/03/02 16:52:29 skrll Exp $
+$NetBSD: patch-ak,v 1.5 2007/05/28 20:14:00 heinz Exp $
 
---- lib/makefile.src.orig	Wed Mar  4 19:32:53 1992
+--- lib/makefile.src.orig	1992-03-04 20:32:53.000000000 +0100
 +++ lib/makefile.src
-@@ -26,6 +26,9 @@
+@@ -26,6 +26,9 @@ OBJS = Runput.o buildmap.o cmd_name.o co
  	vaxshort.o \
  	$(OPT_OBJS)
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ak,v 1.4 2001/03/02 16:52:29 skrll Exp $
  LIBNAME = librle.a
  
  # Just rebuild the object files.
-@@ -36,40 +39,13 @@
+@@ -36,40 +39,13 @@ objs: $(OBJS)
  #  is more useful to have a non-debug version than nothing at all.)
  # Do nothing if $(DEST) is empty (or not defined)
  install: buildlib
@@ -40,7 +40,7 @@ $NetBSD: patch-ak,v 1.4 2001/03/02 16:52:29 skrll Exp $
 -	else \
 -		true ; \
 -	fi"
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBNAME:.a=.la} ${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${LIBNAME:.a=.la} ${DESTDIR}${PREFIX}/lib
  	touch install
  
  # Rebuild the library from all the .o files.
@@ -51,7 +51,7 @@ $NetBSD: patch-ak,v 1.4 2001/03/02 16:52:29 skrll Exp $
 -#ifndef NO_RANLIB
 -	ranlib $(LIBNAME)
 -#endif
-+	${LIBTOOL} --mode=link ${CC} -o ${LIBNAME:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
++	${LIBTOOL} --mode=link ${CC} -o ${LIBNAME:.a=.la} ${OBJS:.o=.lo} -rpath ${DESTDIR}${PREFIX}/lib -version-info 1:0
  	touch buildlib
  
  # Clean up installed stuff and binaries
