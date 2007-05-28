@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/04/30 13:34:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/05/28 12:41:49 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 ${REMOTE}bin/gimp-remote-2.3
@@ -194,7 +194,6 @@ include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpquerybox.h
 include/gimp-2.0/libgimpwidgets/gimpratioentry.h
-include/gimp-2.0/libgimpwidgets/gimpresolutionentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
 include/gimp-2.0/libgimpwidgets/gimpstock.h
@@ -277,8 +276,8 @@ lib/gimp/2.0/plug-ins/gee_zoom
 lib/gimp/2.0/plug-ins/gfig
 lib/gimp/2.0/plug-ins/gflare
 lib/gimp/2.0/plug-ins/gfli
-lib/gimp/2.0/plug-ins/gif
-lib/gimp/2.0/plug-ins/gifload
+lib/gimp/2.0/plug-ins/gif-load
+lib/gimp/2.0/plug-ins/gif-save
 lib/gimp/2.0/plug-ins/gih
 lib/gimp/2.0/plug-ins/gimpressionist
 lib/gimp/2.0/plug-ins/glasstile
@@ -332,8 +331,8 @@ lib/gimp/2.0/plug-ins/polar
 lib/gimp/2.0/plug-ins/postscript
 lib/gimp/2.0/plug-ins/print
 lib/gimp/2.0/plug-ins/procedure-browser
-lib/gimp/2.0/plug-ins/psd
-lib/gimp/2.0/plug-ins/psd_save
+lib/gimp/2.0/plug-ins/psd-load
+lib/gimp/2.0/plug-ins/psd-save
 lib/gimp/2.0/plug-ins/psp
 lib/gimp/2.0/plug-ins/randomize
 lib/gimp/2.0/plug-ins/raw
@@ -365,7 +364,8 @@ lib/gimp/2.0/plug-ins/sunras
 lib/gimp/2.0/plug-ins/svg
 lib/gimp/2.0/plug-ins/tga
 lib/gimp/2.0/plug-ins/threshold_alpha
-lib/gimp/2.0/plug-ins/tiff
+lib/gimp/2.0/plug-ins/tiff-load
+lib/gimp/2.0/plug-ins/tiff-save
 lib/gimp/2.0/plug-ins/tile
 lib/gimp/2.0/plug-ins/tileit
 lib/gimp/2.0/plug-ins/tiler
@@ -1697,6 +1697,8 @@ share/locale/eu/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/eu/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/eu/LC_MESSAGES/gimp20-tips.mo
 share/locale/eu/LC_MESSAGES/gimp20.mo
+share/locale/fa/LC_MESSAGES/gimp20-python.mo
+share/locale/fa/LC_MESSAGES/gimp20-tips.mo
 share/locale/fi/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/fi/LC_MESSAGES/gimp20-python.mo
 share/locale/fi/LC_MESSAGES/gimp20-script-fu.mo
@@ -1811,6 +1813,8 @@ share/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/nl/LC_MESSAGES/gimp20-tips.mo
 share/locale/nl/LC_MESSAGES/gimp20.mo
+share/locale/oc/LC_MESSAGES/gimp20-python.mo
+share/locale/oc/LC_MESSAGES/gimp20-tips.mo
 share/locale/pa/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/pa/LC_MESSAGES/gimp20-python.mo
 share/locale/pa/LC_MESSAGES/gimp20-script-fu.mo
