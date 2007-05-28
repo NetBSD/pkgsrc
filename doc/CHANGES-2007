@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1150 2007/05/27 13:34:34 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1151 2007/05/28 05:45:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2250,3 +2250,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/Transmission to 0.72 [tnn 2007-05-27]
 	Moved devel/cvs to devel/scmcvs [schmonz 2007-05-27]
 	Updated mail/mutt to 1.4.2.3 [tron 2007-05-27]
+	Updated sysutils/memtester to 4.0.7 [schmonz 2007-05-28]
