@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.47 2007/05/24 04:46:52 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/05/28 20:14:00 heinz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
 PKGREVISION=	8
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub/
-DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
+MASTER_SITES=	ftp://ftp.iastate.edu/pub/utah-raster/
+DISTFILES=	urt-3.1b.tar.Z urt-doc.tar.Z urt-img.tar.Z
 
-PATCH_SITES=	ftp://ptolemy.berkeley.edu/pub/misc/urt/
+PATCH_SITES=	http://www.funet.fi/pub/graphics/packages/urt/rel2/
 PATCHFILES=	urt-3.1b-3.1b1.patch
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.cs.utah.edu/gdc/projects/urt/
 COMMENT=	Toolkit and library for raster image processing
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LIBTOOL=	yes
@@ -35,11 +38,11 @@ SUBST_FILES.man=	config/urt
 SUBST_SED.man=		-e 's,^\(\#defpath MAN_DEST\).*,\1 ${PREFIX}/${PKGMANDIR},'
 
 post-install:
-	cd ${PREFIX}/share/doc/urt && \
-	    pax -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar
-	cd ${PREFIX}/share/examples/urt && \
-	    pax -r -p m -f ${DISTDIR}/urt-img.tar
-	cd ${PREFIX} && \
+	cd ${DESTDIR:Q}${PREFIX:Q}/share/doc/urt && \
+	    pax -z -r -p m -s '/doc/./' -f ${DISTDIR}/urt-doc.tar.Z
+	cd ${DESTDIR:Q}${PREFIX:Q}/share/examples/urt && \
+	    pax -z -r -p m -f ${DISTDIR}/urt-img.tar.Z
+	cd ${DESTDIR:Q}${PREFIX:Q} && \
 	    chown -R ${ROOT_USER}:${ROOT_GROUP} share/doc/urt share/examples/urt && \
 	    find share/doc/urt share/examples/urt -type d -print | xargs chmod 755 && \
 	    find share/doc/urt share/examples/urt -type f -print | xargs chmod 444
