@@ -1,0 +1,5 @@
+Algorithm2e is an environment for writing algorithms in LaTeX2e.
+An algorithm is defined as a floating object like figures.  It
+provides macros that allow you to create different sorts of key
+words, thus a set of predefined key words is given.  You can
+also change the typography of the keywords.
