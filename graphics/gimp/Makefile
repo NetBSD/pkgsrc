@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2007/05/26 15:00:22 tron Exp $
+# $NetBSD: Makefile,v 1.155 2007/05/28 12:20:42 adam Exp $
 
-DISTNAME=	gimp-2.2.14
-PKGREVISION=	1
+DISTNAME=	gimp-2.2.15
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
@@ -58,6 +57,7 @@ PLIST_SUBST+=		TWAIN="@comment "
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
