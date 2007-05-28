@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1153 2007/05/28 07:31:02 gson Exp $
+$NetBSD: CHANGES-2007,v 1.1154 2007/05/28 07:39:41 gson Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-File-Tempdir version 0.02 [heinz 2007-05-27]
 	Updated sysutils/memtester to 4.0.7 [schmonz 2007-05-28]
 	Updated audio/tcl-snack to 2.2.10 [gson 2007-05-28]
+	Updated audio/wavesurfer to 1.8.5 [gson 2007-05-28]
