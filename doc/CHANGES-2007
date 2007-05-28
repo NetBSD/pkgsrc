@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1157 2007/05/28 13:21:26 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1158 2007/05/28 14:10:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp to 2.2.15 [adam 2007-05-28]
 	Updated graphics/gimp24 to 2.3.17 [adam 2007-05-28]
 	Added x11/antiright version 3.4 [obache 2007-05-28]
+	Added print/tex-algorithm2e version 3.9 [jmmv 2007-05-28]
