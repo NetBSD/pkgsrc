@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/28 14:07:16 jmmv Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e.pdf
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex01.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex02.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex03.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex04.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex05.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex06.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex07.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exfor.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exrepeat.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exswitch.tex
+${PKG_LOCALTEXMFPREFIX}/tex/latex/algorithm2e/algorithm2e.sty
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/algorithm2e
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex
