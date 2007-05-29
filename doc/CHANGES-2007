@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1162 2007/05/29 05:01:18 gendalia Exp $
+$NetBSD: CHANGES-2007,v 1.1163 2007/05/29 09:05:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ap-jk to 1.2.23 [obache 2007-05-29]
 	Updated www/ap2-jk to 1.2.23 [obache 2007-05-29]
 	Update net/hobbitclient to 4.2.0 [gendalia 2007-05-29]
+	Updated www/analog to 6.0nb1 [tron 2007-05-29]
