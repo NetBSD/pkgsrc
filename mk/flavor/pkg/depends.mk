@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.34 2007/05/28 11:07:00 martti Exp $
+# $NetBSD: depends.mk,v 1.35 2007/05/29 15:26:25 jlam Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -45,6 +45,12 @@ _LIST_DEPENDS_CMD=	\
 			" "${BOOTSTRAP_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
+
+_LIST_DEPENDS_CMD.bootstrap=	\
+	${SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
+		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
+		${SH} ${PKGSRCDIR}/mk/flavor/pkg/list-dependencies \
+			" "${BOOTSTRAP_DEPENDS:Q} " " " "
 
 _RESOLVE_DEPENDS_CMD=	\
 	${SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
@@ -128,11 +134,14 @@ _flavor-post-install-dependencies: .PHONY ${_RDEPENDS_FILE}
 ###
 .PHONY: bootstrap-depends
 _BOOTSTRAP_DEPENDS_TARGETS+=	acquire-bootstrap-depends-lock
-_BOOTSTRAP_DEPENDS_TARGETS+=	${_DEPENDS_FILE}
+_BOOTSTRAP_DEPENDS_TARGETS+=	_flavor-bootstrap-depends
 _BOOTSTRAP_DEPENDS_TARGETS+=	release-bootstrap-depends-lock
 
 bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
-	${RUN}${CAT} ${_DEPENDS_FILE} | 				\
+
+.PHONY: _flavor-bootstrap-depends
+_flavor-bootstrap-depends:
+	${RUN}${_LIST_DEPENDS_CMD.bootstrap} | 				\
 	while read type pattern dir; do					\
 		${TEST} "$$type" != "bootstrap" && continue;		\
 		${_DEPENDS_INSTALL_CMD};				\
