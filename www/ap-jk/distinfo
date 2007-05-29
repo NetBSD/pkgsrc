@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2007/04/25 06:24:02 obache Exp $
+$NetBSD: distinfo,v 1.9 2007/05/29 02:22:22 obache Exp $
 
-SHA1 (tomcat-connectors-1.2.22-src.tar.gz) = 9c6ca8df4e54ce4654c0ccd61bdd6bab5982b0da
-RMD160 (tomcat-connectors-1.2.22-src.tar.gz) = a378022f3b817216f71c7236d87479265d4fb6f1
-Size (tomcat-connectors-1.2.22-src.tar.gz) = 1346940 bytes
+SHA1 (tomcat-connectors-1.2.23-src.tar.gz) = 9ab3c108a9e6b20dc7dd172917f8941eee0ec32c
+RMD160 (tomcat-connectors-1.2.23-src.tar.gz) = d7892ff73f22e83feb49b4746d769f518e3f4c6a
+Size (tomcat-connectors-1.2.23-src.tar.gz) = 1368060 bytes
 SHA1 (patch-aa) = c7a68265883fd7494356543a17dcec0be7744fe9
 SHA1 (patch-ab) = 57e4ead1a73d9a47fb634d5c7fb18d49d0393a08
 SHA1 (patch-ac) = 14fdec1c921f369ee51a5d73a3bee3ec9056f07a
