@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2007/05/23 22:11:38 kristerw Exp $
+# $NetBSD: Makefile,v 1.230 2007/05/29 10:16:42 joerg Exp $
 #
 
 COMMENT=	Databases
@@ -203,6 +203,5 @@ SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yasql
-SUBDIR+=	zope-mysql
 
 .include "../mk/bsd.pkg.subdir.mk"
