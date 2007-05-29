@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/29 22:17:19 schmonz Exp $
 #
 
 DISTNAME=		suphp-0.6.0
 PKGNAME=		ap2-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://www.suphp.org/download/
 
@@ -18,10 +18,9 @@ GCC_REQD+=		3.0	# the C++ code uses the .at() method
 CONFIGURE_ARGS+=	APXS=${APXS}
 CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER:Q}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/httpd/suphp_log
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-# I don't know why this is necessary, but it is.
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/httpd
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/apr-0
+BUILD_DEFS+=		APACHE_USER VARBASE
 
 EGDIR=			${PREFIX}/share/examples/suphp
 CONF_FILES=		${EGDIR}/suphp.conf ${PKG_SYSCONFDIR}/suphp.conf
@@ -32,7 +31,7 @@ PKG_APACHE_ACCEPTED=	apache2 apache22
 SUBST_CLASSES+=		suphp
 SUBST_STAGE.suphp=	post-configure
 SUBST_FILES.suphp=	doc/suphp.conf-example
-SUBST_SED.suphp=	s,wwwrun,${APACHE_USER},g
+SUBST_SED.suphp=	-e "s,wwwrun,${APACHE_USER},g"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR:Q}
