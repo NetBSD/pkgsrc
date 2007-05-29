@@ -1,5 +1,5 @@
 # RCSid:
-#	$Id: makefile.boot.in,v 1.2 2007/05/23 04:21:05 schmonz Exp $
+#	$Id: makefile.boot.in,v 1.3 2007/05/29 19:00:42 schmonz Exp $
 
 srcdir=@srcdir@
 VPATH=.:$(srcdir)
@@ -10,8 +10,7 @@ OBJ=lstAppend.o lstDupl.o lstInit.o lstOpen.o lstAtEnd.o lstEnQueue.o \
     lstDatum.o lstForEach.o lstMember.o lstSucc.o lstDeQueue.o \
     lstForEachFrom.o lstDestroy.o lstNext.o 
 
-CFLAGS=@CFLAGS@
-CFLAGS+=-I..
+CFLAGS=@CFLAGS@ -I..
 all: ${OBJ}
 
 depend:
