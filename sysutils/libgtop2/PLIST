@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2006/08/06 19:06:44 jmmv Exp $
-bin/libgtop_daemon2
+@comment $NetBSD: PLIST,v 1.15 2007/05/29 12:45:14 obache Exp $
+${LIBGTOP_SERVER}bin/libgtop_daemon2
 ${LIBGTOP_SERVER}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
 include/libgtop-2.0/glibtop/close.h
