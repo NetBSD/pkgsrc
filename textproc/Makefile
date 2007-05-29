@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2007/05/26 13:17:16 obache Exp $
+# $NetBSD: Makefile,v 1.367 2007/05/29 10:16:52 joerg Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -283,7 +283,6 @@ SUBDIR+=	py-X
 SUBDIR+=	py-cmTemplate
 SUBDIR+=	py-csv
 SUBDIR+=	py-docutils
-SUBDIR+=	py-dtml
 SUBDIR+=	py-elementtree
 SUBDIR+=	py-expat
 SUBDIR+=	py-feedparser
