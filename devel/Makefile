@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.860 2007/05/27 19:43:28 heinz Exp $
+# $NetBSD: Makefile,v 1.861 2007/05/29 15:41:56 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -634,6 +634,7 @@ SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	popt
 SUBDIR+=	prcs
+SUBDIR+=	psvn
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
 SUBDIR+=	pthread-stublib
