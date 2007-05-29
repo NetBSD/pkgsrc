@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/29 15:40:18 taca Exp $
+${EMACS_LISPPREFIX}/psvn.el
+${EMACS_LISPPREFIX}/psvn.elc
