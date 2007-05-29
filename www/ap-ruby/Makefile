@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/03/24 09:37:33 taca Exp $
+# $NetBSD: Makefile,v 1.32 2007/05/29 22:41:46 schmonz Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -31,16 +31,6 @@ PKG_SYSCONFSUBDIR?=	httpd
 CONF_FILES+=		${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
 			${PKG_SYSCONFDIR}/mod_ruby.conf
 
-.include "../../mk/apache.mk"
-
-.if empty(PKG_APACHE:Mapache13)
-.if empty(PKG_APACHE:Mapache22)
-CONFIGURE_ARGS+=	--with-apr-includes=${PREFIX}/include/apr-0
-.else
-CONFIGURE_ARGS+=	--with-apr-includes=${PREFIX}/include/apr-1
-.endif
-.endif
-
 post-build:
 	cd ${WRKSRC}/doc; ${MAKE}
 	${SED} -e 's|/usr/local/apache/libexec|${LOCALBASE}/lib/httpd|g' \
@@ -60,4 +50,5 @@ post-install:
 .include "../../lang/ruby/modules.mk"
 .include "../../textproc/ruby-eruby/buildlink3.mk"
 .include "../../textproc/ruby-rdtool/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
