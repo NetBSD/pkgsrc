@@ -1,0 +1,74 @@
+$NetBSD: patch-ac,v 1.5 2007/05/29 09:03:13 tron Exp $
+
+--- alias.c.orig	2004-12-19 13:51:30.000000000 +0000
++++ alias.c	2007-05-29 08:58:48.000000000 +0100
+@@ -13,6 +13,10 @@
+ 
+ #include "anlghea3.h"
+ 
++#if defined(NI_MAXHOST) && defined(AI_NUMERICHOST) && defined(NI_NAMEREQD)
++#define	IPV6	1
++#endif
++
+ /* Throughout this file, to avoid a buffer overflow, we must be careful when we
+    do any operation which can increase the length of the name. Such operations
+    are thankfully rare, except for user aliases in wildalias().
+@@ -213,7 +217,12 @@
+   /* DNS lookup */
+ 
+ #ifndef NODNS
++#ifdef IPV6
++  if (dnslevel != DNS_NONE &&
++      (ISDIGIT(name[len]) || strchr(name, ':') != NULL)) {
++#else
+   if (dnslevel != DNS_NONE && ISDIGIT(name[len])) {
++#endif
+     do_dns(name, NULL, dnslevel);
+     len = (int)strlen(name) - 1;
+   }
+@@ -605,6 +614,37 @@
+   done = IpAddr2Name(name);
+   /* Doesn't currently include code to use SIGALRM */
+ #else
++#ifdef IPV6
++    struct addrinfo hints, *res;
++    char host[NI_MAXHOST];
++
++    memset(&hints, 0, sizeof(hints));
++    hints.ai_flags = AI_NUMERICHOST;
++    res = NULL;
++#ifndef NOALARM
++    if (SETJMP(jumpbuf))
++      signal(SIGALRM, SIG_DFL);
++    /* reset to default handling in case SIGALRM is raised exogenously */
++    else {
++      signal(SIGALRM, sighandler);
++      alarm(dnstimeout);
++#endif
++      if (getaddrinfo(name, NULL, &hints, &res) == 0 && res != NULL) {
++        if (res->ai_addr != NULL && res->ai_addrlen > 0 &&
++	    getnameinfo(res->ai_addr, res->ai_addrlen, host, sizeof(host),
++			NULL, 0, NI_NAMEREQD) == 0) {
++	  strncpy(name, host, BLOCKSIZE - 1);
++	  name[BLOCKSIZE - 1] = '\0';
++	  done = TRUE;
++        }
++	freeaddrinfo(res);
++      }
++#ifndef NOALARM
++      alarm(0);
++      signal(SIGALRM, SIG_DFL);
++    }
++#endif
++#else
+   addr = inet_addr(name);
+   if (addr != INET_ADDR_ERR) {
+     addrp = (char *) &addr;
+@@ -631,6 +671,7 @@
+     }
+ #endif
+   }
++#endif  /* not IPV6 */
+ #endif  /* not MAC */
+   if (done)
+     debug('D', "  resolved to %s", name);
