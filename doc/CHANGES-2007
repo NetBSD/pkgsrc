@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1164 2007/05/29 10:16:42 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1165 2007/05/29 12:25:29 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2277,3 +2277,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed www/zope-confera [joerg 2007-05-29]
 	Removed lang/py-extclass [joerg 2007-05-29]
 	Removed databases/zope-mysql [joerg 2007-05-29]
+	Updated devel/binutils to 2.17 [martti 2007-05-29]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6367 2007/05/29 01:23:28 minskim Exp $
+$NetBSD: TODO,v 1.6368 2007/05/29 12:25:30 martti Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,6 @@ Suggested package updates
 	o bibtex2html-1.86
 	o biew-5.6.4
 	o bind-8.4.7
-	o binutils-2.17
 	o bioperl-1.5.0
 	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o bittorrent-5.0.5
