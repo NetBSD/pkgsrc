@@ -1,18 +1,63 @@
-# $NetBSD: Makefile,v 1.4 2006/06/09 16:14:37 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/29 04:58:06 gendalia Exp $
 #
 
-DISTNAME=		hobbitclient-0.3
-CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
-EXTRACT_SUFX=		.tgz
+DISTNAME=	hobbit-4.2.0
+PKGNAME=	hobbitclient-4.2.0
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 
-MAINTAINER=		manu@NetBSD.org
-HOMEPAGE=		http://hobbitmon.sourceforge.net/
-COMMENT=		Client for Hobbit Monitor or Big brother
+MAINTAINER=	gendalia@NetBSD.org
+HOMEPAGE=	http://hobbitmon.sourceforge.net/
+COMMENT=	Free-software client for the Hobbit monitor
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		yacc
-BUILD_TARGET=		hobbitc
+PATCHFILES+=allinone.patch
+SITES.allinone.patch=http://www.hobbitmon.com/hobbitsw/patches/
 
-.include "../../devel/sysexits/buildlink3.mk"
+HAS_CONFIGURE=	YES
+USE_TOOLS+=	gmake
+#INSTALL_TARGET=
+
+.include "../../mk/bsd.prefs.mk"
+
+BBUSER?=	hobbit
+BBGROUP?=	hobbit
+BBTOPDIR?=	${PREFIX}/hobbit
+BBLOGDIR?=	${VARBASE}/log/hobbit
+BBSERVERNAME?=	"`uname -n`"
+BBSERVERIP?=	127.0.0.1
+CONFTYPE?=	"server"
+BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=	BBSERVERNAME
+BUILD_DEFS+=	BBSERVERIP
+
+RCD_SCRIPTS+=	hobbitclient
+PKG_GROUPS=	${BBGROUP}
+PKG_USERS=	${BBUSER:Q}:${BBGROUP:Q}
+
+PKG_GECOS.${BBUSER}=	Hobbit monitor
+PKG_HOME.${BBUSER}=	${BBTOPDIR}
+
+CONFIGURE_ARGS+="--client"
+
+CONFIGURE_ENV+=	TARGET=hobbit
+CONFIGURE_ENV+=	BBHOSTNAME="${BBSERVERNAME}"
+CONFIGURE_ENV+=	BBUSER=${BBUSER:Q}
+CONFIGURE_ENV+=	BBTOPDIR=${BBTOPDIR:Q}
+CONFIGURE_ENV+=	BBLOGDIR=${BBLOGDIR:Q}
+CONFIGURE_ENV+=	BBHOSTIP=${BBSERVERIP:Q}
+CONFIGURE_ENV+=	MANROOT=${PREFIX}/${PKGMANDIR}/
+CONFIGURE_ENV+=	CONFTYPE="${CONFTYPE}"
+
+USE_TOOLS+=     awk:run         cat:run         cp:run
+USE_TOOLS+=     cut:run         date:run        egrep:run
+USE_TOOLS+=     expr:run        find:run        grep:run
+USE_TOOLS+=     head:run        id:run          ls:run
+USE_TOOLS+=     mv:run          rm:run          sed:run
+USE_TOOLS+=     sort:run        tail:run        touch:run
+USE_TOOLS+=     tr:run          wc:run
+
+MAKE_ENV+=	MAKE=${MAKE_PROGRAM:Q}
+MAKE_ENV+=	PKGDIR=${PREFIX:Q}
+MAKE_ENV+=	${TOOLS_ENV}
+
 .include "../../mk/bsd.pkg.mk"
