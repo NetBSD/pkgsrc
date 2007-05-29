@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/05/29 15:40:18 taca Exp $
+
+You will need to customize your .emacs.el (or default.el) file to
+autoload psvn for Emacs. For example:
+
+(autoload 'svn-status "psvn" "svn interface" t)
+
+===========================================================================
