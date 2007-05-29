@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.14 2007/05/29 09:58:59 obache Exp $
+
+--- gdk/quartz/gdkselection-quartz.c.orig	2007-05-02 16:27:34.000000000 +0000
++++ gdk/quartz/gdkselection-quartz.c
+@@ -122,6 +122,12 @@ gdk_utf8_to_compound_text_for_display (G
+   return 0;
+ }
+ 
++void
++gdk_free_text_list (gchar **list)
++{
++  /* FIXME: Implement */
++}
++
+ static gint
+ make_list (const gchar  *text,
+ 	   gint          length,
