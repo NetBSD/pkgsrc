@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/02/01 14:41:04 obache Exp $
+# $NetBSD: Makefile,v 1.1 2007/05/29 01:06:31 schmonz Exp $
 
 DISTNAME=	jcode.pl-2.13
-PKGNAME=	p5-jcode-2.13
-SVR4_PKGNAME=	p5jc2
-PKGREVISION=	2
+PKGNAME=	${DISTNAME:S/jcode.pl/jcode-perl/}
+SVR4_PKGNAME=	jcopl
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
