@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.189 2007/05/27 02:11:13 jlam Exp $
+# $NetBSD: replace.mk,v 1.190 2007/05/29 03:00:44 dmcmahill Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -142,7 +142,8 @@ _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
 .endfor
 
 .if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
-.  if (${_TOOLS_DEPMETHOD.bison-yacc} == "BUILD_DEPENDS") && \
+.  if defined(_TOOLS_DEPMETHOD.bison-yacc) && \
+      (${_TOOLS_DEPMETHOD.bison-yacc} == "BUILD_DEPENDS") && \
       defined(_TOOLS_DEPMETHOD.yacc)
 _TOOLS_DEPMETHOD.bison-yacc=	${_TOOLS_DEPMETHOD.yacc}
 .  endif
