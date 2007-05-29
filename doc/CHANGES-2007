@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1167 2007/05/29 15:39:03 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1168 2007/05/29 15:44:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/binutils to 2.17 [martti 2007-05-29]
 	Updated archivers/p7zip to 4.47 [adam 2007-05-29]
 	Updated sysutils/cdrtools to 2.01.01.27 [obache 2007-05-29]
+	Added devel/psvn version 25168 [taca 2007-05-29]
