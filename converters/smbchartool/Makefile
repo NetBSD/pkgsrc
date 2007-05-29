@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/07/07 22:10:06 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/29 01:07:49 schmonz Exp $
 #
 
 DISTNAME=	smbchartool-2.3a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters japanese
 MASTER_SITES=	ftp://ftp.samba.gr.jp/pub/samba-jp/tool/
 
@@ -14,7 +14,7 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.miraclelinux.com/technet/samba30/migration.html
 COMMENT=	File name conversion tool for Samba
 
-DEPENDS+=	p5-jcode>=2.13:../../converters/p5-jcode
+DEPENDS+=	jcode-perl>=2.13:../../converters/jcode-perl
 DEPENDS+=	p5-Text-Iconv>=1.4:../../converters/p5-Text-Iconv
 
 USE_TOOLS+=	perl:run
