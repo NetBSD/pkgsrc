@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/11/02 17:41:23 adam Exp $
+# $NetBSD: Makefile,v 1.61 2007/05/29 18:35:58 heinz Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -13,6 +13,7 @@ COMMENT=	Ousterhout's Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
@@ -58,18 +59,20 @@ SUBST_FILES.tcl-config=	unix/tclConfig.sh
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
 
-INSTALLATION_DIRS+=	${PREFIX}/include/tcl
-INSTALLATION_DIRS+=	${PREFIX}/include/tcl/unix
-INSTALLATION_DIRS+=	${PREFIX}/include/tcl/generic
-INSTALLATION_DIRS+=	${PREFIX}/lib/tcl
+INSTALLATION_DIRS+=	include/tcl
+INSTALLATION_DIRS+=	include/tcl/unix
+INSTALLATION_DIRS+=	include/tcl/generic
+INSTALLATION_DIRS+=	lib/tcl
 
 post-install:
-	cd ${PREFIX}/bin && ln -s tclsh8.4 tclsh
-	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h ${PREFIX}/include/tcl/unix
+	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ln -s tclsh8.4 tclsh
+	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h \
+		${DESTDIR:Q}${PREFIX:Q}/include/tcl/unix
 .for f in	regex.h tcl.h tclCompile.h tclDecls.h tclIO.h		\
 		tclInitScript.h tclInt.h tclIntDecls.h tclIntPlatDecls.h\
 		tclMath.h tclPlatDecls.h tclPort.h tclRegexp.h
-	${INSTALL_DATA} ${WRKSRC}/generic/${f} ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/${f} \
+		${DESTDIR:Q}${PREFIX:Q}/include/tcl/generic
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
