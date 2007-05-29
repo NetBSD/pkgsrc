@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1159 2007/05/29 01:12:03 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1160 2007/05/29 01:23:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added print/tex-algorithm2e version 3.9 [jmmv 2007-05-28]
 	Moved converters/p5-jcode to converters/jcode-perl [schmonz 2007-05-29]
 	Updated converters/smbchartool to 2.3anb2 [schmonz 2007-05-29]
+	Updated graphics/ps2eps to 1.64 [minskim 2007-05-29]
