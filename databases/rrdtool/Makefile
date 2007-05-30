@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/05/17 14:41:09 taca Exp $
+# $NetBSD: Makefile,v 1.56 2007/05/30 07:25:39 martti Exp $
 
 DISTNAME=	rrdtool-1.2.23
 CATEGORIES=	databases graphics net
@@ -39,6 +39,5 @@ SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.include "../../www/cgilib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
