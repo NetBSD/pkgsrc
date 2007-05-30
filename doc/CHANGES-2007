@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1173 2007/05/30 07:58:59 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1174 2007/05/30 12:48:02 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.6.0 [schmonz 2007-05-30]
 	Updated mail/clamsmtp to 1.8nb1 [martti 2007-05-30]
 	Updated mail/postfix-current to 2.5-20070529 [martti 2007-05-30]
+	Updated net/unison-devel to 2.27.29 [tonio 2007-05-30]
