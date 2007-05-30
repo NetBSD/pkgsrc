@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/05/30 07:25:39 martti Exp $
+# $NetBSD: Makefile,v 1.57 2007/05/30 07:32:33 martti Exp $
 
 DISTNAME=	rrdtool-1.2.23
 CATEGORIES=	databases graphics net
@@ -7,10 +7,6 @@ MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/rrdtool/
 COMMENT=	Data analysis tool generating graphical representations
-
-# needs FPC code not found in older versions of NetBSD
-NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
-			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
