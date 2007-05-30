@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6368 2007/05/29 12:25:30 martti Exp $
+$NetBSD: TODO,v 1.6369 2007/05/30 22:59:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -217,6 +217,7 @@ Suggested package updates
 	o Cenon-3.82
 	o Chinput-3.0.1
 	o Coin-2.4.5
+	o GMT-4.2.0
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GeoIP-1.4.2
@@ -353,7 +354,6 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cdrtools-2.01.01a26
 	o cfengine2-2.2.0
 	o cfitsio-3.030
 	o cgdb-0.6.4
@@ -370,6 +370,7 @@ Suggested package updates
 	o clex-3.15
 	o clisp-2.41 [pkg/36334]
 	o cocoon-2.1.10
+	o comix-3.6.4
 	o connect-1.96
 	o conserver8-8.1.15
 	o coreutils-6.9
@@ -424,6 +425,7 @@ Suggested package updates
 	o dvdstyler-1.5beta5
 	o dvipdfmx-20061211
 	o dvipng-1.9
+	o dwm-4.1
 	o e2fsprogs-1.39
 	o eagle-4.16
 	o easymenu-0.7.2p1
@@ -516,7 +518,8 @@ Suggested package updates
 	o glade-3.2.1
 	o glchess-1.0.5
 	o glibmm-2.12.9
-	o glpk-4.16
+	o glpk-4.17
+	o gmime-2.2.9
 	o gmp3info-0.8.5a
 	o gmpc-0.15.0
 	o gnet1-1.1.9
@@ -541,6 +544,7 @@ Suggested package updates
 	o gnustep-1.14.0
 	o gnustep-make-2.0.0
 	o gnustep-objc-1.4.0
+	o gnutls-1.6.3
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -551,7 +555,7 @@ Suggested package updates
 	o gq-1.2.0
 	o grace-5.1.21
 	o gramofile-1.6P
-	o gramps2-2.2.7
+	o gramps2-2.2.8
 	o grap-1.40
 	o grep-2.5.1a
 	o grhino-0.16.0
@@ -559,7 +563,7 @@ Suggested package updates
 	o gsasl-0.2.16
 	o gsharutils-4.6.3
 	o gsm-1.0.12
-	o gss-0.0.17
+	o gss-0.21
 	o gst-plugins0.10-fluendo-mp3-0.10.5
 	o gtar-1.16.1
 	o gtar-base-1.16.1
@@ -590,6 +594,7 @@ Suggested package updates
 	o hesiod-3.1.0
 	o heyu-2.0beta10
 	o hobbitmon-4.0.4 [pkg/30484]
+	o honeyd-1.5c
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -657,8 +662,8 @@ Suggested package updates
 	o lapack-20070226
 	o latd-1.21
 	o lavaps-2.7
-	o lbdb-0.35
-	o lcab-1.0b11
+	o lbdb-0.35.1
+	o lcab-1.0b12
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
@@ -695,6 +700,7 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
+	o liboil-0.3.12
 	o libole2-2.2.8
 	o libosip-3.0.2
 	o libprelude-0.9.14
@@ -967,6 +973,7 @@ Suggested package updates
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
+	o pekwm-0.1.6
 	o pen-0.17.1
 	o pfqueue-0.5.6
 	o pfstat-1.8
@@ -1042,7 +1049,6 @@ Suggested package updates
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.4
 	o py-curl-7.16.2.1
-	o py-extclass-2.10.2
 	o py-flup-2311
 	o py-gnome2-extras-2.14.3
 	o py-gnosis-utils-1.2.1
@@ -1058,7 +1064,6 @@ Suggested package updates
 	o py-mutagen-1.11
 	o py-mysqldb-1.1.7
 	o py-paramiko-1.7
-	o py-pcgi-2.10.2
 	o py-pexpect-0.99999b
 	o py-prewikka-0.9.11
 	o py-proj-1.8.1a [at python.org]
@@ -1079,7 +1084,6 @@ Suggested package updates
 	o py-urwid-0.9.7.2
 	o py-yaml-3.05
 	o py-zconfig-2.3.1
-	o py-zpublisher-2.10.2
 	o pygopherd-2.0.13
 	o pysol-4.82
 	o python-2.5
@@ -1098,6 +1102,7 @@ Suggested package updates
 	o qwt-0.4.0
 	o radiance-3.7.2
 	o radiusd-cistron-1.6.8
+	o radmind-1.8.1
 	o raine-0.50.3
 	o randread-0.2
 	o rat-4.2.25
@@ -1136,7 +1141,8 @@ Suggested package updates
 	o sch-3.8.3
 	o scheme48-1.6 [pkg/36335]
 	o scm-5e3
-	o scribus-1.3.3.9
+	o scons-0.97
+	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sendfile-20010424
@@ -1159,9 +1165,9 @@ Suggested package updates
 	o skampi-5.0.1
 	o skill-4.1.4
 	o skkinput-2.06.4
-	o skype-1.4.0.58
+	o skype-1.4.0.64
 	o smalleiffel-0.90
-	o smalltalk-2.3.3
+	o smalltalk-2.3.4
 	o smartmontools-5.37 [jmmv]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.62
@@ -1216,7 +1222,7 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.6b5
-	o tor-0.1.2.13
+	o tor-0.1.2.14
 	o totem-2.18.2
 	o tpasm-1.2
 	o tpb-0.6.4
@@ -1274,7 +1280,7 @@ Suggested package updates
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9b
-	o wxGTK-2.8
+	o wxGTK-2.8.4
 	o wxRemind-0.8.6
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
@@ -1346,10 +1352,9 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.31
+	o zile-2.2.32
 	o zircon-1.18.256
 	o zoom-1.0.5
-	o zope-2.9.7
 	o zope-2.10.3
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
