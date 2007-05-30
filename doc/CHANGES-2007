@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1174 2007/05/30 12:48:02 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.1175 2007/05/30 13:47:12 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2287,3 +2287,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/clamsmtp to 1.8nb1 [martti 2007-05-30]
 	Updated mail/postfix-current to 2.5-20070529 [martti 2007-05-30]
 	Updated net/unison-devel to 2.27.29 [tonio 2007-05-30]
+	Updated chat/riece to 4.0.0 [uebayasi 2007-05-30]
