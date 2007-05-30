@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2007/02/23 22:22:38 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/05/30 08:54:29 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDAL_LIB_BUILDLINK3_MK:=	${GDAL_LIB_BUILDLINK3_MK}+
@@ -16,13 +16,8 @@ BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=1.3.1
 BUILDLINK_PKGSRCDIR.gdal-lib?=	../../geography/gdal-lib
 .endif	# GDAL_LIB_BUILDLINK3_MK
 
-.if !defined(PKG_BUILD_OPTIONS.gdal-lib)
-PKG_BUILD_OPTIONS.gdal-lib!=                                             \
-	cd ${BUILDLINK_PKGSRCDIR.gdal-lib} &&                            \
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.gdal-lib=${PKG_BUILD_OPTIONS.gdal-lib:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.gdal-lib
+pkgbase := gdal-lib
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.gdal-lib:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
