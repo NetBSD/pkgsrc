@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/11/06 11:26:30 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/05/30 08:54:30 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AALIB_BUILDLINK3_MK:=	${AALIB_BUILDLINK3_MK}+
@@ -17,13 +17,8 @@ BUILDLINK_ABI_DEPENDS.aalib+=	aalib>=1.4.0.5nb2
 BUILDLINK_PKGSRCDIR.aalib?=	../../graphics/aalib
 .endif	# AALIB_BUILDLINK3_MK
 
-.if !defined(PKG_BUILD_OPTIONS.aalib)
-PKG_BUILD_OPTIONS.aalib!=						\
-	cd ${BUILDLINK_PKGSRCDIR.aalib} &&				\
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.aalib=${PKG_BUILD_OPTIONS.aalib:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.aalib
+pkgbase := aalib
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.aalib:Mncurses)
 .  include "../../devel/ncurses/buildlink3.mk"

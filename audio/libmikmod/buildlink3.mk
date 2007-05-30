@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/12/12 21:52:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2007/05/30 08:54:28 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMIKMOD_BUILDLINK3_MK:=	${LIBMIKMOD_BUILDLINK3_MK}+
@@ -16,13 +16,8 @@ BUILDLINK_API_DEPENDS.libmikmod+=	libmikmod>=3.1.9
 BUILDLINK_ABI_DEPENDS.libmikmod+=	libmikmod>=3.1.11.1nb2
 BUILDLINK_PKGSRCDIR.libmikmod?=	../../audio/libmikmod
 
-.  include "../../mk/bsd.fast.prefs.mk"
-.  if !defined(PKG_BUILD_OPTIONS.libmikmod)
-PKG_BUILD_OPTIONS.libmikmod!=	cd ${BUILDLINK_PKGSRCDIR.libmikmod} && \
-			${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.libmikmod=${PKG_BUILD_OPTIONS.libmikmod:Q}
-.  endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.libmikmod
+pkgbase := libmikmod
+.include "../../mk/pkg-build-options.mk"
 
 # On some platforms, libmikmod dynamically loads esound,
 # so there is no library dependency
