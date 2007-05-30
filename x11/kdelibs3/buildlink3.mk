@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2007/01/26 02:44:28 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2007/05/30 08:54:31 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -19,13 +19,8 @@ BUILDLINK_ABI_DEPENDS.kdelibs?=	kdelibs>=3.5.6
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 .endif	# KDELIBS_BUILDLINK3_MK
 
-.if !defined(PKG_BUILD_OPTIONS.kdelibs)
-PKG_BUILD_OPTIONS.kdelibs!=						\
-	cd ${BUILDLINK_PKGSRCDIR.kdelibs} &&				\
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdelibs=${PKG_BUILD_OPTIONS.kdelibs:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.kdelibs
+pkgbase := kdelibs
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.kdelibs:Mcups)
 .  include "../../print/cups/buildlink3.mk"

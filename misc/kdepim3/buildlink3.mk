@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/17 23:47:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/05/30 08:54:30 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -17,13 +17,8 @@ BUILDLINK_ABI_DEPENDS.kdepim?=	kdepim>=3.5.5nb2
 BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
 .endif	# KDEPIM_BUILDLINK3_MK
 
-.if !defined(PKG_BUILD_OPTIONS.kdepim)
-PKG_BUILD_OPTIONS.kdepim!=						\
-	cd ${BUILDLINK_PKGSRCDIR.kdepim} &&				\
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdepim=${PKG_BUILD_OPTIONS.kdepim:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.kdepim
+pkgbase := kdepim
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"

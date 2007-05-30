@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2007/01/09 15:06:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2007/05/30 08:54:28 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
@@ -29,13 +29,8 @@ PTHREAD_OPTS+=	require
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-.if !defined(PKG_BUILD_OPTIONS.SDL)
-PKG_BUILD_OPTIONS.SDL!= \
-	cd ${BUILDLINK_PKGSRCDIR.SDL} && \
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.SDL=${PKG_BUILD_OPTIONS.SDL:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.SDL
+pkgbase := SDL
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.SDL:Maalib)
 .include "../../graphics/aalib/buildlink3.mk"

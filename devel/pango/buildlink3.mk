@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2006/12/12 21:52:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/05/30 08:54:29 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PANGO_BUILDLINK3_MK:=	${PANGO_BUILDLINK3_MK}+
@@ -19,13 +19,8 @@ BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !defined(PKG_BUILD_OPTIONS.pango)
-PKG_BUILD_OPTIONS.pango!= \
-	cd ${BUILDLINK_PKGSRCDIR.pango} && \
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.pango=${PKG_BUILD_OPTIONS.pango:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.pango
+pkgbase := pango
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.pango:Mx11)
 .include "../../x11/libXft/buildlink3.mk"
