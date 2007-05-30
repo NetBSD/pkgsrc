@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.97 2007/05/23 04:20:36 schmonz Exp $
+# $NetBSD: bootstrap,v 1.98 2007/05/30 01:42:59 schmonz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -651,12 +651,12 @@ MANOWN=$user
 MANGRP=$group" > ${wrkdir}/Makefile.inc
 fi
 
-# make sure we're using a case-sensitive file system on Darwin
+# make sure we're using a case-sensitive file system
 if [ $ignorecasecheck = "no" ]; then
 case "$opsys" in
 Darwin|Interix)
 	echo_msg "Testing file system case sensitivity"
-	for fs in "$prefix" "$pkgsrcdir"; do
+	for fs in "$prefix"; do
 		testdir="pkgsrc-REQUIRES-case-SENSITIVE-filesystem"
 		testdir_mangled="PKGSRC-requires-CASE-sensitive-FILESYSTEM"
 		mkdir_p "$fs/$testdir" || die "can't verify filesystem ($fs) case-sensitivity"
