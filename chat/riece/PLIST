@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/20 12:45:08 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/05/30 13:46:13 uebayasi Exp $
 ${EMACS_INFOPREFIX}/riece-en.info
 ${EMACS_INFOPREFIX}/riece-ja.info
 ${EMACS_LISPPREFIX}/riece/aproxy.rb
@@ -129,6 +129,8 @@ ${EMACS_LISPPREFIX}/riece/riece-skk-kakutei.elc
 ${EMACS_LISPPREFIX}/riece/riece-submit-bug-report.xpm
 ${EMACS_LISPPREFIX}/riece/riece-toolbar.el
 ${EMACS_LISPPREFIX}/riece/riece-toolbar.elc
+${EMACS_LISPPREFIX}/riece/riece-twitter.el
+${EMACS_LISPPREFIX}/riece/riece-twitter.elc
 ${EMACS_LISPPREFIX}/riece/riece-unread.el
 ${EMACS_LISPPREFIX}/riece/riece-unread.elc
 ${EMACS_LISPPREFIX}/riece/riece-url.el
