@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/30 14:01:47 obache Exp $
+
+--- Imakefile.orig	2007-03-14 23:54:53.000000000 +0200
++++ Imakefile
+@@ -3,7 +3,7 @@
+ BASEDIR = $(PROJECTROOT)
+ BINDIR = $(BASEDIR)/bin
+ PIXMAPDIR = $(BASEDIR)/share/xxkb
+-LOCAL_LIBRARIES = $(XONLYLIB) -lXpm -lXt
++LOCAL_LIBRARIES = $(XONLYLIB) -lXpm -lXt -lXext
+ 
+ OBJS = xxkb.o resource.o wlist.o
+ PIXMAPS = pixmaps/by15.xpm pixmaps/by48.xpm \
+@@ -16,7 +16,7 @@ PIXMAPS = pixmaps/by15.xpm pixmaps/by48.
+ 	  pixmaps/bg15.xpm pixmaps/bg48.xpm
+ 
+ DEFINES = -DAPPDEFDIR=\"$(DESTDIR)$(XAPPLOADDIR)\" -DAPPDEFFILE=\"XXkb\" \
+-	-DXT_RESOURCE_SEARCH -DSHAPE_EXT
++	-DSHAPE_EXT
+ 
+ #if WITH_SVG_SUPPORT
+ DEFINES += -DSVG_GRAPHICS

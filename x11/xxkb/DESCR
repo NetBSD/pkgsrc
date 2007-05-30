@@ -1,0 +1,4 @@
+XXKB remembers the layout for each application window and changes the
+keyboard state accordingly when the window gets a focus, it also shows
+the current keyboard layout (an XKB group) and allows to switch it
+with a mouse click and has many other useful features.
