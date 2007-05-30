@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/25 00:02:35 sborrill Exp $
+# $NetBSD: Makefile,v 1.11 2007/05/30 18:06:38 rillig Exp $
 
 .include "Makefile.common"
 
@@ -212,6 +212,7 @@ CONFIGURE_ARGS+=	${AP_CFG_ARGS.${ap_mod}}
 
 post-extract:
 	${TOUCH} ${WRKSRC}/build/libtool
+	${ECHO} "" >> ${WRKSRC}/docs/conf/extra/httpd-languages.conf.in
 
 post-build:
 	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g"			\
