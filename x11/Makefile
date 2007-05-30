@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2007/05/28 13:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.505 2007/05/30 01:22:10 schmonz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -11,7 +11,6 @@ SUBDIR+=	Xbae
 SUBDIR+=	Xcomposite
 SUBDIR+=	Xfixes
 SUBDIR+=	XmHTML
-SUBDIR+=	Xrandr
 SUBDIR+=	Xrender
 SUBDIR+=	acidlaunch
 SUBDIR+=	alacarte
@@ -205,6 +204,7 @@ SUBDIR+=	libXxf86vm
 SUBDIR+=	libdrm
 SUBDIR+=	libgnomekbd
 SUBDIR+=	liblbxutil
+SUBDIR+=	liboldXrandr
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
