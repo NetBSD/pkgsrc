@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1175 2007/05/30 13:47:12 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.1176 2007/05/30 14:04:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2288,3 +2288,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix-current to 2.5-20070529 [martti 2007-05-30]
 	Updated net/unison-devel to 2.27.29 [tonio 2007-05-30]
 	Updated chat/riece to 4.0.0 [uebayasi 2007-05-30]
+	Added x11/xxkb version 1.11 [obache 2007-05-30]
