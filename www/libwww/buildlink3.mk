@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/12/12 21:52:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/05/30 08:54:31 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWWW_BUILDLINK3_MK:=	${LIBWWW_BUILDLINK3_MK}+
@@ -19,13 +19,8 @@ BUILDLINK_PKGSRCDIR.libwww?=	../../www/libwww
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !defined(PKG_BUILD_OPTIONS.libwww)
-PKG_BUILD_OPTIONS.libwww!= \
-	cd ${BUILDLINK_PKGSRCDIR.libwww} && \
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.libwww=${PKG_BUILD_OPTIONS.libwww:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.libwww
+pkgbase := libwww
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.libwww:Msocks4)
 .include "../../net/socks4/buildlink3.mk"

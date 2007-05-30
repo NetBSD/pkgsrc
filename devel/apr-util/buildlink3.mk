@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/01/24 19:37:20 epg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/05/30 08:54:29 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 APR_UTIL_BUILDLINK3_MK:=	${APR_UTIL_BUILDLINK3_MK}+
@@ -20,13 +20,8 @@ BUILDLINK_FILES.apr-util+=	lib/aprutil.exp
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.  if !defined(PKG_BUILD_OPTIONS.apr-util)
-PKG_BUILD_OPTIONS.apr-util!=	cd ${BUILDLINK_PKGSRCDIR.apr-util} && \
-			${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.apr-util=${PKG_BUILD_OPTIONS.apr-util:Q}
-.  endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.apr-util
-.endif	# APR_UTIL_BUILDLINK3_MK
+pkgbase := apr-util
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.apr-util:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
