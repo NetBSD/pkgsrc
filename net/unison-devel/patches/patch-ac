@@ -1,19 +1,13 @@
-$NetBSD: patch-ac,v 1.8 2007/04/13 14:54:41 tonio Exp $
+$NetBSD: patch-ac,v 1.9 2007/05/30 12:46:58 tonio Exp $
 
---- pty.c.orig	Mon Apr  2 05:03:20 2007
+--- pty.c.orig	2007-04-13 16:30:01.000000000 +0200
 +++ pty.c
-@@ -15,12 +15,13 @@ extern void uerror (char * cmdname, valu
+@@ -15,7 +15,7 @@ extern void uerror (char * cmdname, valu
  #define HAS_OPENPTY 1
  #endif
  
 -#ifdef __APPLE__
 +#if defined(__APPLE__) || defined(__NetBSD__)
  #include <util.h>
- #define HAS_OPENPTY 1
- #endif
- 
- #ifdef __FreeBSD__
-+#include <sys/types.h>
- #include <libutil.h>
  #define HAS_OPENPTY 1
  #endif
