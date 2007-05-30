@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1169 2007/05/29 22:18:23 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1170 2007/05/30 01:23:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2282,3 +2282,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/cdrtools to 2.01.01.27 [obache 2007-05-29]
 	Added devel/psvn version 25168 [taca 2007-05-29]
 	Updated www/ap2-suphp to 0.6.0nb3 [schmonz 2007-05-29]
+	Moved x11/Xrandr to x11/liboldXrandr [schmonz 2007-05-30]
