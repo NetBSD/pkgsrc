@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1176 2007/05/30 14:04:32 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1177 2007/05/30 19:11:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2289,3 +2289,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/unison-devel to 2.27.29 [tonio 2007-05-30]
 	Updated chat/riece to 4.0.0 [uebayasi 2007-05-30]
 	Added x11/xxkb version 1.11 [obache 2007-05-30]
+	Updated misc/rubygems to 0.9.4 [minskim 2007-05-30]
