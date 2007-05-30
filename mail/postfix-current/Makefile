@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2007/05/02 05:10:15 martti Exp $
+# $NetBSD: Makefile,v 1.82 2007/05/30 07:58:29 martti Exp $
 
-DISTNAME=	postfix-2.5-20070501
+DISTNAME=	postfix-2.5-20070529
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
@@ -157,5 +157,7 @@ do-install:
 		config_directory="${EXAMPLEDIR}"
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
 		${PREFIX}/sbin/qshape
+	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
+		${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
