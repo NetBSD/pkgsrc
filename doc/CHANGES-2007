@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1171 2007/05/30 05:58:20 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1172 2007/05/30 06:07:28 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ap2-suphp to 0.6.0nb3 [schmonz 2007-05-29]
 	Moved x11/Xrandr to x11/liboldXrandr [schmonz 2007-05-30]
 	Updated mail/spamdyke to 2.6.0 [schmonz 2007-05-30]
+	Updated mail/clamsmtp to 1.8nb1 [martti 2007-05-30]
