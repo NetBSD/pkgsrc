@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2007/05/02 05:02:48 martti Exp $
+# $NetBSD: Makefile,v 1.204 2007/05/30 07:56:27 martti Exp $
 
 DISTNAME=	postfix-2.4.1
 #PKGREVISION=	1
@@ -157,7 +157,7 @@ do-install:
 		config_directory="${EXAMPLEDIR}"
 	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
 		${PREFIX}/sbin/qshape
-	${INSTALL_SCRIPT} ${WRKSRC}/man/man1/qshape.1 \
+	${INSTALL_MAN} ${WRKSRC}/man/man1/qshape.1 \
 		${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
