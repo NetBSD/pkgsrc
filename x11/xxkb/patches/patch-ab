@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/05/30 14:01:47 obache Exp $
+
+--- XXkb.ad.var.orig	2007-03-14 23:54:53.000000000 +0200
++++ XXkb.ad.var
+@@ -5,6 +5,8 @@ XXkb.group.alt: 2
+ 
+ XXkb.mainwindow.enable: yes
+ XXkb.mainwindow.geometry: 48x48
++! Possible values: normal, top, tray, wmaker
++XXkb.mainwindow.type: normal
+ XXkb.mainwindow.image.1: en48.xpm
+ XXkb.mainwindow.image.2: ru48.xpm
+ XXkb.mainwindow.image.3: su48.xpm
+@@ -18,9 +20,6 @@ XXkb.*.label.foreground: white
+ XXkb.*.label.background: blue4
+ XXkb.*.label.enable: no
+ 
+-! XXkb.mainwindow.type:
+-! possible values - normal, top, tray, wmaker
+-
+ XXkb.button.enable: yes
+ XXkb.button.geometry: 15x15-60+7
+ XXkb.button.image.1: en15.xpm
