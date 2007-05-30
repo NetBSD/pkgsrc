@@ -1,0 +1,19 @@
+$NetBSD: patch-udns,v 1.1 2007/05/30 19:49:54 rillig Exp $
+
+The sunpro compiler thinks that union{...} and const union{...} are
+different data types and that they may not occur in the ?: operator.
+
+--- mDNSCore/uDNS.c.orig	Mon Feb 20 22:40:36 2006
++++ mDNSCore/uDNS.c	Wed May 30 21:43:51 2007
+@@ -3622,8 +3622,9 @@
+ 	result.zoneData.primaryAddr.type = mDNSAddrType_IPv4;
+ 	AssignDomainName(&result.zoneData.zoneName, &context->zone);
+ 	result.zoneData.zoneClass = context->zoneClass;
+-	result.zoneData.llqPort    = context->findLLQPort    ? context->llqPort    : zeroIPPort;
+-	result.zoneData.updatePort = context->findUpdatePort ? context->updatePort : zeroIPPort;
++	mDNSIPPort zero = zeroIPPort;
++	result.zoneData.llqPort    = context->findLLQPort    ? context->llqPort    : zero;
++	result.zoneData.updatePort = context->findUpdatePort ? context->updatePort : zero;
+ 	context->callback(mStatus_NoError, context->m, context->callbackInfo, &result);
+ 	goto cleanup;
+ 			
