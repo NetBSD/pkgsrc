@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2007/04/12 09:20:55 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2007/05/30 12:46:58 tonio Exp $
 
-DISTNAME=	unison-2.27.12
+DISTNAME=	unison-2.27.29
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/
 
