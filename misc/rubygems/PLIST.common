@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2007/05/23 01:51:19 minskim Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2007/05/30 19:09:33 minskim Exp $
 bin/gem
 bin/gem_mirror
 bin/gem_server
@@ -425,8 +425,10 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/refresh-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/search-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/search-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/set_cache_data-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/system_cache_file-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/system_cache_file-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/update-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/user_cache_file-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/user_cache_file-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/write_cache-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCacheEntry/cdesc-SourceInfoCacheEntry.yaml
