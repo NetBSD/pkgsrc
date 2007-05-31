@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1178 2007/05/30 22:58:21 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1179 2007/05/31 05:26:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/xxkb version 1.11 [obache 2007-05-30]
 	Updated misc/rubygems to 0.9.4 [minskim 2007-05-30]
 	Updated devel/fromcvs to 0.0.0.100 [wiz 2007-05-30]
+	Updated mail/clamav to 0.90.3 [martti 2007-05-31]
