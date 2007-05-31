@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.22 2007/04/17 17:59:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/05/31 13:26:09 obache Exp $
+${CPUFREQ}bin/cpufreq-selector
 bin/invest-chart
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-prefs.h
@@ -6,6 +7,7 @@ include/libgweather/weather.h
 lib/bonobo/servers/GNOME_AccessxStatusApplet.server
 ${BATTSTAT}lib/bonobo/servers/GNOME_BattstatApplet.server
 lib/bonobo/servers/GNOME_CDPlayerApplet.server
+${CPUFREQ}lib/bonobo/servers/GNOME_CPUFreqApplet.server
 lib/bonobo/servers/GNOME_CharpickerApplet.server
 lib/bonobo/servers/GNOME_DriveMountApplet.server
 lib/bonobo/servers/GNOME_GWeatherApplet_Factory.server
@@ -49,6 +51,7 @@ ${PYSITELIB}/invest/widgets.pyo
 libexec/accessx-status-applet
 ${BATTSTAT}libexec/battstat-applet-2
 libexec/charpick_applet2
+${CPUFREQ}libexec/cpufreq-applet
 libexec/drivemount_applet2
 libexec/geyes_applet2
 libexec/gweather-applet-2
@@ -62,6 +65,7 @@ share/applications/invest-chart.desktop
 ${BATTSTAT}share/examples/gnome-applets/sound/events/battstat_applet.soundlist
 ${BATTSTAT}share/gconf/schemas/battstat.schemas
 share/gconf/schemas/charpick.schemas
+${CPUFREQ}share/gconf/schemas/cpufreq-applet.schemas
 share/gconf/schemas/drivemount.schemas
 share/gconf/schemas/geyes.schemas
 share/gconf/schemas/gweather.schemas
@@ -71,6 +75,7 @@ share/gconf/schemas/stickynotes.schemas
 share/gnome-2.0/ui/GNOME_AccessxApplet.xml
 ${BATTSTAT}share/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome-2.0/ui/GNOME_CharpickerApplet.xml
+${CPUFREQ}share/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
 share/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome-2.0/ui/GNOME_GWeatherApplet.xml
 share/gnome-2.0/ui/GNOME_GeyesApplet.xml
@@ -98,6 +103,7 @@ share/gnome-applets/geyes/Tango/config
 share/gnome-applets/geyes/Tango/tango-eye.png
 share/gnome-applets/geyes/Tango/tango-pupil.png
 ${BATTSTAT}share/gnome-applets/glade/battstat_applet.glade
+${CPUFREQ}share/gnome-applets/glade/cpufreq-preferences.glade
 share/gnome-applets/glade/financialchart.glade
 share/gnome-applets/glade/prefs-dialog.glade
 share/gnome-applets/glade/stickynotes.glade
@@ -316,6 +322,87 @@ share/gnome/help/char-palette/uk/figures/charpalette_applet.png
 share/gnome/help/char-palette/uk/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/uk/figures/charpick-preferences.png
 share/gnome/help/char-palette/uk/figures/charpick_characters.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/legal.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/cpufreq-applet.xml
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-100.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-25.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-50.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-75.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-preferences-smp.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-preferences.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-selector-both.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-selector.png
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet.png
 share/gnome/help/drivemount/C/drivemount.xml
 share/gnome/help/drivemount/C/figures/drivemount-applet_eject.png
 share/gnome/help/drivemount/C/figures/drivemount-applet_example.png
@@ -633,16 +720,21 @@ share/gnome/help/trashapplet/sv/figures/trash-applet.png
 share/gnome/help/trashapplet/sv/trashapplet.xml
 share/gnome/help/trashapplet/uk/figures/trash-applet.png
 share/gnome/help/trashapplet/uk/trashapplet.xml
+${CPUFREQ}share/icons/hicolor/16x16/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/16x16/apps/gnome-eyes-applet.png
 share/icons/hicolor/16x16/apps/gnome-sticky-notes-applet.png
+${CPUFREQ}share/icons/hicolor/22x22/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/22x22/apps/gnome-eyes-applet.png
 share/icons/hicolor/22x22/apps/gnome-sticky-notes-applet.png
+${CPUFREQ}share/icons/hicolor/24x24/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/24x24/apps/gnome-eyes-applet.png
 share/icons/hicolor/24x24/apps/gnome-sticky-notes-applet.png
+${CPUFREQ}share/icons/hicolor/32x32/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/32x32/apps/gnome-eyes-applet.png
 share/icons/hicolor/32x32/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/48x48/apps/ax-applet.png
 share/icons/hicolor/48x48/apps/charpick.png
+${CPUFREQ}share/icons/hicolor/scalable/apps/gnome-cpu-frequency-applet.svg
 share/icons/hicolor/scalable/apps/gnome-eyes-applet.svg
 share/icons/hicolor/scalable/apps/gnome-sticky-notes-applet.svg
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
@@ -765,6 +857,14 @@ share/omf/char-palette/char-palette-nl.omf
 share/omf/char-palette/char-palette-pt_BR.omf
 share/omf/char-palette/char-palette-sv.omf
 share/omf/char-palette/char-palette-uk.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-C.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-en_GB.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-es.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-fr.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-nl.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-sv.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-uk.omf
+${CPUFREQ}share/omf/cpufreq-applet/cpufreq-applet-zh_CN.omf
 share/omf/drivemount/drivemount-C.omf
 share/omf/drivemount/drivemount-en_GB.omf
 share/omf/drivemount/drivemount-es.omf
@@ -862,6 +962,11 @@ share/pixmaps/accessx-status-applet/sticky-shift-none.png
 share/pixmaps/accessx-status-applet/sticky-super-latched.png
 share/pixmaps/accessx-status-applet/sticky-super-locked.png
 share/pixmaps/accessx-status-applet/sticky-super-none.png
+${CPUFREQ}share/pixmaps/cpufreq-applet/cpufreq-100.png
+${CPUFREQ}share/pixmaps/cpufreq-applet/cpufreq-25.png
+${CPUFREQ}share/pixmaps/cpufreq-applet/cpufreq-50.png
+${CPUFREQ}share/pixmaps/cpufreq-applet/cpufreq-75.png
+${CPUFREQ}share/pixmaps/cpufreq-applet/cpufreq-na.png
 share/pixmaps/invest-big.png
 share/pixmaps/stickynotes/close.png
 share/pixmaps/stickynotes/locked.png
@@ -956,6 +1061,7 @@ share/xmodmap/xmodmap.us_intl
 share/xmodmap/xmodmap.yu
 @dirrm share/xmodmap
 @dirrm share/pixmaps/stickynotes
+${CPUFREQ}@dirrm share/pixmaps/cpufreq-applet
 @dirrm share/pixmaps/accessx-status-applet
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/trashapplet
@@ -966,6 +1072,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/omf/geyes
 @dirrm share/omf/drivemount
 @dirrm share/omf/char-palette
+${CPUFREQ}@dirrm share/omf/cpufreq-applet
 ${BATTSTAT}@dirrm share/omf/battstat
 @dirrm share/omf/accessx-status
 @comment in scrollkeeper: @dirrm share/omf
@@ -1105,6 +1212,23 @@ ${BATTSTAT}@dirrm share/omf/battstat
 @dirrm share/gnome/help/drivemount/C/figures
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/zh_CN
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/uk
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/sv
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/nl
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/fr
+${CPUFREQ}share/gnome/help/cpufreq-applet/es/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/es
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/en_GB
+${CPUFREQ}share/gnome/help/cpufreq-applet/C/figures
+${CPUFREQ}share/gnome/help/cpufreq-applet/C
+${CPUFREQ}share/gnome/help/cpufreq-applet
 @dirrm share/gnome/help/char-palette/uk/figures
 @dirrm share/gnome/help/char-palette/uk
 @dirrm share/gnome/help/char-palette/sv/figures
