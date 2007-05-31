@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2007/05/12 13:53:12 ghen Exp $
+# $NetBSD: Makefile,v 1.29 2007/05/31 07:25:09 ghen Exp $
 
 MOZILLA=		firefox
-MOZ_VER=		2.0.0.3
+MOZ_VER=		2.0.0.4
 MOZ_DISTVER=		${MOZ_VER}
 
 HOMEPAGE=		http://www.mozilla.com/en-US/firefox/
