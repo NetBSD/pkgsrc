@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/02/28 20:42:05 xtraeme Exp $
+# $NetBSD: options.mk,v 1.1.4.1 2007/05/31 13:57:56 salo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	curl milter clamav-experimental
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	curl
 # force use of pkgsrc version of libmilter -- clamav uses the sendmail binary
 # to check API compatibility(!), so it must build with as new a version of
 # libmilter as pkgsrc is capable of providing
-USE_BUILTIN.libmilter=  no
+USE_BUILTIN.libmilter=	no
 .  include "../../mail/libmilter/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-milter
 PLIST_SUBST+=		MILTER=
