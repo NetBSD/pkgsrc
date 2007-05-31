@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:21:44 reed Exp $
+# $NetBSD: builtin.mk,v 1.4.8.1 2007/05/31 11:26:46 salo Exp $
 
 BUILTIN_PKG:=	binutils
 .include "../../mk/buildlink3/bsd.builtin.mk"
@@ -22,10 +22,10 @@ USE_BUILTIN.binutils=	${IS_BUILTIN.binutils}
 .    if defined(BUILTIN_PKG.binutils) && \
         !empty(IS_BUILTIN.binutils:M[yY][eE][sS])
 USE_BUILTIN.binutils=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.binutils}
+.      for dep in ${BUILDLINK_API_DEPENDS.binutils}
 .        if !empty(USE_BUILTIN.binutils:M[yY][eE][sS])
 USE_BUILTIN.binutils!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.binutils:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.binutils:Q}; then	\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -38,8 +38,8 @@ USE_BUILTIN.binutils!=							\
 #
 _INCOMPAT_BINUTILS=	NetBSD-0.*-* NetBSD-1.[01234]*-*		\
 			NetBSD-1.5.*-* NetBSD-1.5[A-X]-*
-.    for _pattern_ in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for pattern in ${_INCOMPAT_BINUTILS} ${INCOMPAT_BINUTILS}
+.      if !empty(MACHINE_PLATFORM:M${pattern})
 USE_BUILTIN.binutils=	no
 .      endif
 .    endfor

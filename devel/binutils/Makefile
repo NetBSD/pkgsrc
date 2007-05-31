@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32.4.1 2007/05/31 11:26:46 salo Exp $
 
-DISTNAME=	binutils-2.16.1
+DISTNAME=	binutils-2.17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
@@ -42,16 +42,16 @@ PLIST_SUBST+=	NO_GPROF=""
 # the need for perl as build dependency.
 #
 post-configure:
-.for _file_ in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi gas/doc/as.1
-	if [ -f ${WRKSRC}/${_file_} ]; then				\
-		${TOUCH} ${WRKSRC}/${_file_};				\
+.for f in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi gas/doc/as.1
+	if [ -f ${WRKSRC}/${f} ]; then					\
+		touch ${WRKSRC}/${f};					\
 	fi
 .endfor
 
 post-install:
-	${FIND} ${BINUTILS_PREFIX}/lib/ldscripts -type f -print		\
-		| ${SORT} -r						\
-		| ${SED} 's;${PREFIX}/;;g'				\
+	find ${BINUTILS_PREFIX}/lib/ldscripts -type f -print		\
+		| sort -r						\
+		| sed 's;${PREFIX}/;;g'					\
 		> ${WRKDIR}/PLIST_DYNAMIC
 
 .include "../../mk/bsd.pkg.mk"

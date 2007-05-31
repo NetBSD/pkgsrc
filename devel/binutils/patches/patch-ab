@@ -1,25 +1,25 @@
-$NetBSD: patch-ab,v 1.1 2006/02/26 23:59:41 joerg Exp $
+$NetBSD: patch-ab,v 1.1.10.1 2007/05/31 11:26:47 salo Exp $
 
---- bfd/configure.orig	2006-02-26 23:20:22.000000000 +0000
-+++ bfd/configure
-@@ -9960,7 +9960,7 @@ if test "${target}" = "${host}"; then
+--- bfd/configure.orig	2006-06-23 21:17:03.000000000 +0300
++++ bfd/configure	2007-05-29 14:36:21.000000000 +0300
+@@ -11499,7 +11499,7 @@
  	COREFILE=trad-core.lo
  	TRAD_HEADER='"hosts/i386bsd.h"'
  	;;
 -  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu)
-+  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu | i[3-7]86-*-freebsd*)
++  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu | i[3-7]86-*-dragonfly*)
  	COREFILE=''
  	TRAD_HEADER='"hosts/i386bsd.h"'
  	;;
-@@ -11555,6 +11555,7 @@ do
+@@ -13097,6 +13097,7 @@
      bfd_elf32_hppa_vec)		tb="$tb elf32-hppa.lo elf32.lo $elf" ;;
      bfd_elf32_i370_vec)		tb="$tb elf32-i370.lo elf32.lo $elf" ;;
-     bfd_elf32_i386_freebsd_vec)	tb="$tb elf32-i386.lo elf32.lo $elf" ;;
-+    bfd_elf32_i386_dragonfly_vec)	tb="$tb elf32-i386.lo elf32.lo $elf" ;;
-     bfd_elf32_i386_vec)		tb="$tb elf32-i386.lo elf32.lo $elf" ;;
+     bfd_elf32_i386_freebsd_vec)	tb="$tb elf32-i386.lo elf-vxworks.lo elf32.lo $elf" ;;
++    bfd_elf32_i386_dragonfly_vec) tb="$tb elf32-i386.lo elf-vxworks.lo elf32.lo $elf" ;;
+     bfd_elf32_i386_vxworks_vec)	tb="$tb elf32-i386.lo elf-vxworks.lo elf32.lo $elf" ;;
+     bfd_elf32_i386_vec)		tb="$tb elf32-i386.lo elf-vxworks.lo elf32.lo $elf" ;;
      bfd_elf32_i860_little_vec)	tb="$tb elf32-i860.lo elf32.lo $elf" ;;
-     bfd_elf32_i860_vec)		tb="$tb elf32-i860.lo elf32.lo $elf" ;;
-@@ -11668,6 +11669,7 @@ do
+@@ -13218,6 +13219,7 @@
      i386coff_vec)		tb="$tb coff-i386.lo cofflink.lo" ;;
      i386dynix_vec)		tb="$tb i386dynix.lo aout32.lo" ;;
      i386freebsd_vec)		tb="$tb i386freebsd.lo aout32.lo" ;;
