@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2007/04/17 17:59:06 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2007/05/31 13:26:09 obache Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
@@ -61,6 +61,16 @@ CONFIGURE_ARGS+=	--disable-battstat
 
 PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
 PRINT_PLIST_AWK+=	/examples/ { print "$${BATTSTAT}"$$0; next; }
+
+.if ${OPSYS} == "Linux" && exists(/usr/include/cpufreq.h)
+GCONF2_SCHEMAS+=	cpufreq-applet.schemas
+PLIST_SUBST+=		CPUFREQ=
+.else
+PLIST_SUBST+=		CPUFREQ="@comment "
+CONFIGURE_ARGS+=	--disable-cpufreq
+.endif
+
+PRINT_PLIST_AWK+=	/[Cc][Pp][Uu][Ff]req/ { print "$${CPUFREQ}"$$0; next; }
 
 .include "../../devel/GConf2/schemas.mk"
 
