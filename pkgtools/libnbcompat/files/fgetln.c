@@ -1,4 +1,4 @@
-/*	$NetBSD: fgetln.c,v 1.3 2004/09/11 19:01:40 jlam Exp $	*/
+/*	$NetBSD: fgetln.c,v 1.4 2007/05/31 10:18:49 rillig Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -40,6 +40,12 @@
 #include <nbcompat/stdio.h>
 #include <nbcompat/stdlib.h>
 
+/*
+ * XXX: This implementation doesn't quite conform to the specification
+ * in the man page, in that it only manages one buffer at all, not one
+ * per stdio stream. Since the previous implementation did the same,
+ * this won't break anything new.
+ */
 char *
 fgetln(fp, len)
 	FILE *fp;
@@ -47,7 +53,8 @@ fgetln(fp, len)
 {
 	static char *buf = NULL;
 	static size_t bufsiz = 0;
-	char *ptr;
+	static size_t buflen = 0;
+	int c;
 
 	if (buf == NULL) {
 		bufsiz = BUFSIZ;
@@ -55,34 +62,27 @@ fgetln(fp, len)
 			return NULL;
 	}
 
-	if (fgets(buf, bufsiz, fp) == NULL)
-		return NULL;
-	*len = 0;
+	buflen = 0;
+	while ((c = fgetc(fp)) != EOF) {
+		if (buflen >= bufsiz) {
+			size_t nbufsiz = bufsiz + BUFSIZ;
+			char *nbuf = realloc(buf, nbufsiz);
 
-	while ((ptr = strchr(&buf[*len], '\n')) == NULL) {
-		size_t nbufsiz = bufsiz + BUFSIZ;
-		char *nbuf = realloc(buf, nbufsiz);
+			if (nbuf == NULL) {
+				int oerrno = errno;
+				free(buf);
+				errno = oerrno;
+				buf = NULL;
+				return NULL;
+			}
 
-		if (nbuf == NULL) {
-			int oerrno = errno;
-			free(buf);
-			errno = oerrno;
-			buf = NULL;
-			return NULL;
-		} else
 			buf = nbuf;
-
-		/*
-		 * We need to overwrite the '\0' written by the last call
-		 * to fgets().
-		 */
-		*len = bufsiz - 1;
-		if (fgets(&buf[bufsiz - 1], BUFSIZ + 1, fp) == NULL)
-			return buf;
-
-		bufsiz = nbufsiz;
+			bufsiz = nbufsiz;
+		}
+		buf[buflen++] = c;
+		if (c == '\n')
+			break;
 	}
-
-	*len = (ptr - buf) + 1;
-	return buf;
+	*len = buflen;
+	return buflen == 0 ? NULL : buf;
 }
