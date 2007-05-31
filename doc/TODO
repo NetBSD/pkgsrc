@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6369 2007/05/30 22:59:14 wiz Exp $
+$NetBSD: TODO,v 1.6370 2007/05/31 23:20:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,6 +322,7 @@ Suggested package updates
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.3.14
+	o balsa2-2.4.16
 	o base64-1.4
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -354,7 +355,7 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cfengine2-2.2.0
+	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cgdb-0.6.4
 	o chasen-2.4.0
@@ -394,6 +395,7 @@ Suggested package updates
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.3.8
 	o darts-0.31
+	o dasher-4.4.2
 	o db4-4.5.20
 	o dbench-3.04
 	o dbmail-2.2.4
@@ -446,7 +448,9 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.7
 	o enscript-1.6.4
+	o eog2-2.18.2
 	o epic4-2.6
+	o epiphany-extensions-2.18.2
 	o epstool-3.08
 	o eric3-3.9.5
 	o erlang-11.3
@@ -465,9 +469,10 @@ Suggested package updates
 	o fakeroot-1.6.5
 	o fd-2.09c
 	o fdgw-20040609
+	o file-roller-2.18.3
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o findutils-4.2.30
+	o findutils-4.2.31
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
@@ -486,7 +491,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g-wrap-1.9.8
-	o gaim-2.0 [now called pidgin]
+	o gaim-2.0.1 [now called pidgin]
 	o gaim-icb-20070203
 	o gamin-0.1.8
 	o gap-4r4p9
@@ -501,6 +506,7 @@ Suggested package updates
 	o gdb6-6.6
 	o gdeskcal-1.01
 	o gdl-0.7.5
+	o gdm-2.18.2
 	o gdsreader-0.3.2
 	o geany-0.11
 	o generator-cbiere-0.35r3
@@ -526,6 +532,8 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-build-0.1.6
 	o gnome-games-2.18.1.1
+	o gnome-mag-0.14.4
+	o gnome-screensaver-2.18.2
 	o gnome-speech-0.4.12
 	o gnu-crypto-2.1.0
 	o gnuradio-audio-jack-3.0.3
@@ -548,7 +556,8 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
-	o gossip-0.24
+	o gok-1.2.5
+	o gossip-0.26
 	o gourmet-0.13.3
 	o gperf-3.0.3
 	o gpsdrive-2.09
@@ -570,6 +579,7 @@ Suggested package updates
 	o gthumb-2.10.3
 	o gtick-0.3.13
 	o gtk-systrace-20030623
+	o gtk2-engines-2.10.2
 	o gtk2-sharp-2.10.0
 	o gtkam-0.1.14 [pkg/36317]
 	o gtklife-5.1
@@ -693,6 +703,7 @@ Suggested package updates
 	o libgtop-2.14.9
 	o libgtop2-2.14.8
 	o libhydrogen-0.9.2
+	o libidn-0.6.13
 	o libjit-0.1.0
 	o liblive-2007.02.20
 	o liblzo-2.02
@@ -717,7 +728,7 @@ Suggested package updates
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
-	o loudmouth-1.2.0
+	o loudmouth-1.2.2
 	o lout-3.31
 	o lq-sp-1.3.4.13
 	o lsh-2.0.3
@@ -784,7 +795,7 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.6
 	o nap-1.5.3
-	o nautilus-cd-burner-2.18.1 [needs hal]
+	o nautilus-cd-burner-2.18.2 [needs hal]
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
@@ -829,6 +840,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openpam-20050616
 	o openssl-0.9.8e
+	o openttd-0.5.2
 	o opera-9.21
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -1038,6 +1050,7 @@ Suggested package updates
 	o py-GeoIP-1.2.1
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
+	o py-ORBit-2.14.3
 	o py-Optik-1.4.1
 	o py-Scientific-2.5.5
 	o py-Scientific-doc-2.5.5
@@ -1113,7 +1126,7 @@ Suggested package updates
 	o rep-gtk-0.18
 	o replex-0.1.6.7
 	o resize_image-0.7
-	o rhythmbox-0.10.0
+	o rhythmbox-0.10.1
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
@@ -1263,7 +1276,7 @@ Suggested package updates
 	o vobcopy-1.0.1
 	o vp-1.6
 	o vsftpd-2.0.5
-	o vte-0.16.3
+	o vte-0.16.4
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1352,6 +1365,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenity-2.18.2
 	o zile-2.2.32
 	o zircon-1.18.256
 	o zoom-1.0.5
