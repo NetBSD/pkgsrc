@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/21 13:23:54 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/05/31 12:48:33 dmcmahill Exp $
 bin/convert_sym
 bin/garchive
 bin/gmk_sym
 bin/gnet_hier_verilog.sh
 bin/grenum
 bin/gsch2pcb
-bin/gschemdoc
 bin/gschlas
 bin/gschupdate
 bin/gsymfix.pl
 bin/gsymupdate
 bin/olib
 bin/pads_backannotate
+bin/pcb_backannotate
 bin/refdes_renum
 bin/sarlacc_schem
 bin/sarlacc_sym

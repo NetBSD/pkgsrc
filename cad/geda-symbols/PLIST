@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/02/22 04:25:56 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/05/31 12:48:34 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -790,6 +790,7 @@ share/gEDA/sym/font/O-double-acute-accent.sym
 share/gEDA/sym/font/O-diaeresis.sym
 share/gEDA/sym/font/O-slash.sym
 share/gEDA/sym/font/O.sym
+share/gEDA/sym/font/Omega.sym
 share/gEDA/sym/font/P.sym
 share/gEDA/sym/font/Q.sym
 share/gEDA/sym/font/R.sym

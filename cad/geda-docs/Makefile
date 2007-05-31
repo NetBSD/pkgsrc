@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/21 13:23:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2007/05/31 12:48:34 dmcmahill Exp $
 #
 
 DISTNAME=		geda-docs-${PKGVERSION}
@@ -20,6 +20,9 @@ USE_TOOLS+=		find
 
 PLIST_SRC=		${WRKDIR}/PLIST
 
+# The docs are a snapshot of the wiki and each time around this is substantially different
+# which makes maintaining the PLIST a bit of a pain.  So, automatically generate this
+# portion of the PLIST.
 post-install:
 	${CAT} ${.CURDIR}/PLIST.pre > ${PLIST_SRC}
 	${FIND} ${PREFIX}/share/doc/geda-doc/wiki -type f -print | \
