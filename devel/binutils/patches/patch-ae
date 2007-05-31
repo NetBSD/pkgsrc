@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2006/02/26 23:59:41 joerg Exp $
+$NetBSD: patch-ae,v 1.1.10.1 2007/05/31 11:26:48 salo Exp $
 
---- ld/configure.tgt.orig	2006-02-26 23:48:51.000000000 +0000
-+++ ld/configure.tgt
-@@ -205,7 +205,7 @@ i[3-7]86-*-elf*)	targ_emul=elf_i386 ;;
+--- ld/configure.tgt.orig	2006-04-05 15:41:57.000000000 +0300
++++ ld/configure.tgt	2007-05-29 14:32:32.000000000 +0300
+@@ -194,7 +194,7 @@
  i[3-7]86-*-kaos*)	targ_emul=elf_i386 ;;
  i[3-7]86-*-freebsdaout* | i[3-7]86-*-freebsd[12].* | i[3-7]86-*-freebsd[12])
  			targ_emul=i386bsd ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2006/02/26 23:59:41 joerg Exp $
  		        targ_emul=elf_i386_fbsd
  			targ_extra_emuls="elf_i386 i386bsd" ;;
  x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu)
-@@ -592,6 +592,10 @@ case "${target}" in
+@@ -585,6 +585,10 @@
    NATIVE_LIB_DIRS='/lib /usr/lib /usr/local/lib'
    ;;
  
