@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.142 2007/05/23 10:50:44 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.143 2007/05/31 11:49:09 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -568,7 +568,8 @@ bulk-package:
 # been modified and need rebuilding.
 .PHONY: bulk-install
 bulk-install:
-	@if [ `${RECURSIVE_MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
+	${RUN} if ${PKG_INFO} -qe ${PKGNAME} ; then exit 0; fi;		\
+	if [ `${RECURSIVE_MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ${PKG_INFO} -qe ${PKGNAME} ; then :; \
 		else \
 			${DO} ${RECURSIVE_MAKE} install-depends ; \
