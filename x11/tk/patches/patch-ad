@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.10 2006/11/02 17:42:03 adam Exp $
+$NetBSD: patch-ad,v 1.11 2007/05/31 13:02:06 adam Exp $
 
---- unix/configure.in.orig	2006-10-19 19:27:34.000000000 +0200
+--- unix/configure.in.orig	2007-05-25 18:09:53.000000000 +0200
 +++ unix/configure.in
-@@ -302,6 +302,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -301,6 +301,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
