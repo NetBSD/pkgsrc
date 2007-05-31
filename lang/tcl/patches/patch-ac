@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2006/11/02 17:41:23 adam Exp $
+$NetBSD: patch-ac,v 1.11 2007/05/31 13:01:53 adam Exp $
 
---- unix/tclUnixInit.c.orig	2006-09-10 19:04:42.000000000 +0200
+--- unix/tclUnixInit.c.orig	2007-04-29 04:19:51.000000000 +0200
 +++ unix/tclUnixInit.c
 @@ -26,7 +26,7 @@
  #       endif
@@ -23,7 +23,7 @@ $NetBSD: patch-ac,v 1.10 2006/11/02 17:41:23 adam Exp $
  
  /*
   * The Init script (common to Windows and Unix platforms) is
-@@ -221,7 +226,7 @@ TclpInitPlatform()
+@@ -223,7 +228,7 @@ TclpInitPlatform()
      (void) signal(SIGPIPE, SIG_IGN);
  #endif /* SIGPIPE */
  
@@ -32,7 +32,7 @@ $NetBSD: patch-ac,v 1.10 2006/11/02 17:41:23 adam Exp $
      /*
       * Adjust the rounding mode to be more conventional. Note that FreeBSD
       * only provides the __fpsetreg() used by the following two for the GNU
-@@ -779,6 +784,11 @@ TclpSetVariables(interp)
+@@ -781,6 +786,11 @@ TclpSetVariables(interp)
      int unameOK;
      CONST char *user;
      Tcl_DString ds;
@@ -44,7 +44,7 @@ $NetBSD: patch-ac,v 1.10 2006/11/02 17:41:23 adam Exp $
  
  #ifdef HAVE_COREFOUNDATION
      char tclLibPath[MAXPATHLEN + 1];
-@@ -905,8 +915,16 @@ TclpSetVariables(interp)
+@@ -907,8 +917,16 @@ TclpSetVariables(interp)
  	    Tcl_SetVar2(interp, "tcl_platform", "osVersion", name.release,
  		    TCL_GLOBAL_ONLY|TCL_APPEND_VALUE);
  	}
