@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.30 2007/05/31 11:11:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.31 2007/05/31 11:27:11 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -65,3 +65,5 @@ Pullup ticket 2099 - requested by tron
 security update for mutt
 Pullup ticket 2100 - requested by obache
 security update for ap-jk
+Pullup ticket 2102 - requested by martti
+security update for binutils
