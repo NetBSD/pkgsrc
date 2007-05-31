@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/07/08 23:11:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2007/05/31 10:18:49 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBNBCOMPAT_BUILDLINK3_MK:=	${LIBNBCOMPAT_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libnbcompat
 
 .if !empty(LIBNBCOMPAT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libnbcompat+=	libnbcompat>=20040911
+BUILDLINK_ABI_DEPENDS.libnbcompat+=	libnbcompat>=20070531
 BUILDLINK_PKGSRCDIR.libnbcompat?=	../../pkgtools/libnbcompat
 BUILDLINK_DEPMETHOD.libnbcompat?=	build
 BUILDLINK_LDADD.libnbcompat=		-lnbcompat
