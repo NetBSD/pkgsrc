@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2007/02/22 19:27:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4.2.1 2007/05/31 11:10:45 salo Exp $
 
-JK_VERSION=	1.2.19
+JK_VERSION=	1.2.23
 CATEGORIES=	www java
 MASTER_SITES=	http://www.apache.org/dist/tomcat/tomcat-connectors/jk/source/jk-${JK_VERSION}/
 
