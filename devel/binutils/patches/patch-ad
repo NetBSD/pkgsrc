@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2006/02/26 23:59:41 joerg Exp $
+$NetBSD: patch-ad,v 1.1.10.1 2007/05/31 11:26:47 salo Exp $
 
---- gas/configure.tgt.orig	2006-02-26 23:44:39.000000000 +0000
-+++ gas/configure.tgt
-@@ -199,7 +199,7 @@ case ${generic_target} in
+--- gas/configure.tgt.orig	2006-04-05 15:41:57.000000000 +0300
++++ gas/configure.tgt	2007-05-29 14:42:07.000000000 +0300
+@@ -191,7 +191,7 @@
    i386-*-freebsdaout*)			fmt=aout em=386bsd ;;
    i386-*-freebsd[12].*)			fmt=aout em=386bsd ;;
    i386-*-freebsd[12])			fmt=aout em=386bsd ;;
@@ -11,11 +11,11 @@ $NetBSD: patch-ad,v 1.1 2006/02/26 23:59:41 joerg Exp $
  				    	fmt=elf em=freebsd ;;
    i386-*-sysv*)				fmt=coff ;;
    i386-*-sco3.2v5*coff)			fmt=coff ;;
-@@ -413,6 +413,7 @@ case ${generic_target} in
+@@ -382,6 +382,7 @@
  
    *-*-aout | *-*-scout)			fmt=aout ;;
    *-*-freebsd* | *-*-kfreebsd*-gnu)	fmt=elf em=freebsd ;;
 +  *-*-dragonfly*)			fmt=elf em=freebsd ;;
-   *-*-nindy*)				fmt=bout ;;
    *-*-bsd*)				fmt=aout em=sun3 ;;
    *-*-generic)				fmt=generic ;;
+   *-*-xray | *-*-hms)			fmt=coff ;;
