@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1183 2007/05/31 12:52:40 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1184 2007/05/31 13:03:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2302,6 +2302,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey to 1.1.2 [ghen 2007-05-31]
 	Updated www/seamonkey-bin to 1.1.2 [ghen 2007-05-31]
 	Updated www/seamonkey-gtk1 to 1.1.2 [ghen 2007-05-31]
+	Updated lang/tcl to 8.4.15 [adam 2007-05-31]
+	Updated x11/tk to 8.4.15 [adam 2007-05-31]
 	Updated cad/libgeda to 20070526 [dmcmahill 2007-06-01]
 	Updated cad/gattrib to 20070526 [dmcmahill 2007-06-01]
 	Updated cad/gschem to 20070526 [dmcmahill 2007-06-01]
