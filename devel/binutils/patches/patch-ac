@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/02/26 23:59:41 joerg Exp $
+$NetBSD: patch-ac,v 1.1.10.1 2007/05/31 11:26:47 salo Exp $
 
---- bfd/config.bfd.orig	2006-02-26 23:39:27.000000000 +0000
-+++ bfd/config.bfd
-@@ -492,7 +492,7 @@ case "${targ}" in
+--- bfd/config.bfd.orig	2006-04-05 15:41:57.000000000 +0300
++++ bfd/config.bfd	2007-05-29 14:31:45.000000000 +0300
+@@ -503,7 +503,7 @@
      targ_selvecs=i386bsd_vec
      targ_underscore=yes
      ;;

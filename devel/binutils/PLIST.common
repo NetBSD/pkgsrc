@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2006/04/17 07:07:15 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.12.8.1 2007/05/31 11:26:46 salo Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -63,12 +63,16 @@ share/locale/es/LC_MESSAGES/gas.mo
 ${NO_GPROF}share/locale/es/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/ld.mo
 share/locale/es/LC_MESSAGES/opcodes.mo
+share/locale/fi/LC_MESSAGES/binutils.mo
+share/locale/fi/LC_MESSAGES/opcodes.mo
 share/locale/fr/LC_MESSAGES/bfd.mo
 share/locale/fr/LC_MESSAGES/binutils.mo
 share/locale/fr/LC_MESSAGES/gas.mo
 ${NO_GPROF}share/locale/fr/LC_MESSAGES/gprof.mo
 share/locale/fr/LC_MESSAGES/ld.mo
 share/locale/fr/LC_MESSAGES/opcodes.mo
+${NO_GPROF}share/locale/ga/LC_MESSAGES/gprof.mo
+share/locale/ga/LC_MESSAGES/opcodes.mo
 ${NO_GPROF}share/locale/id/LC_MESSAGES/gprof.mo
 share/locale/id/LC_MESSAGES/opcodes.mo
 share/locale/ja/LC_MESSAGES/bfd.mo
@@ -80,6 +84,10 @@ share/locale/ro/LC_MESSAGES/bfd.mo
 share/locale/ro/LC_MESSAGES/binutils.mo
 share/locale/ro/LC_MESSAGES/opcodes.mo
 share/locale/ru/LC_MESSAGES/binutils.mo
+share/locale/rw/LC_MESSAGES/bfd.mo
+share/locale/rw/LC_MESSAGES/binutils.mo
+share/locale/rw/LC_MESSAGES/gas.mo
+${NO_GPROF}share/locale/rw/LC_MESSAGES/gprof.mo
 share/locale/sv/LC_MESSAGES/bfd.mo
 share/locale/sv/LC_MESSAGES/binutils.mo
 ${NO_GPROF}share/locale/sv/LC_MESSAGES/gprof.mo
@@ -91,6 +99,13 @@ share/locale/tr/LC_MESSAGES/gas.mo
 ${NO_GPROF}share/locale/tr/LC_MESSAGES/gprof.mo
 share/locale/tr/LC_MESSAGES/ld.mo
 share/locale/tr/LC_MESSAGES/opcodes.mo
+share/locale/vi/LC_MESSAGES/bfd.mo
+share/locale/vi/LC_MESSAGES/binutils.mo
+share/locale/vi/LC_MESSAGES/ld.mo
+share/locale/vi/LC_MESSAGES/opcodes.mo
 share/locale/zh_CN/LC_MESSAGES/bfd.mo
 share/locale/zh_CN/LC_MESSAGES/binutils.mo
+share/locale/zh_CN/LC_MESSAGES/ld.mo
+share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 ${NO_GPROF}share/locale/vi/LC_MESSAGES/gprof.mo
+share/locale/zh_TW/LC_MESSAGES/binutils.mo
