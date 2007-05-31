@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1180 2007/05/31 07:28:23 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1181 2007/05/31 10:19:00 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2298,3 +2298,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox15 to 1.5.0.12 [ghen 2007-05-31]
 	Updated www/firefox15-bin to 1.5.0.12 [ghen 2007-05-31]
 	Updated www/firefox15-gtk1 to 1.5.0.12 [ghen 2007-05-31]
+	Updated pkgtools/libnbcompat to 20070531 [roland 2007-05-31]
