@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/01/31 16:26:22 abs Exp $
+$NetBSD: patch-aa,v 1.4.10.1 2007/05/31 11:10:45 salo Exp $
 
---- common/jk_util.c.orig	2005-07-01 16:41:08.000000000 +0100
+--- common/jk_util.c.orig	2007-04-10 14:29:48.000000000 +0000
 +++ common/jk_util.c
-@@ -1242,7 +1242,7 @@ int jk_gettid()
+@@ -1720,7 +1720,7 @@ int jk_gettid()
      pthread_getunique_np(&t, &tid);
      return ((int)(tid.intId.lo & 0xFFFFFFFF));
  #else
