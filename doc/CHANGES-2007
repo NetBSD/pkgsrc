@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1179 2007/05/31 05:26:59 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1180 2007/05/31 07:28:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2292,3 +2292,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/rubygems to 0.9.4 [minskim 2007-05-30]
 	Updated devel/fromcvs to 0.0.0.100 [wiz 2007-05-30]
 	Updated mail/clamav to 0.90.3 [martti 2007-05-31]
+	Updated www/firefox to 2.0.0.4 [ghen 2007-05-31]
+	Updated www/firefox-bin to 2.0.0.4 [ghen 2007-05-31]
+	Updated www/firefox-gtk1 to 2.0.0.4 [ghen 2007-05-31]
+	Updated www/firefox15 to 1.5.0.12 [ghen 2007-05-31]
+	Updated www/firefox15-bin to 1.5.0.12 [ghen 2007-05-31]
+	Updated www/firefox15-gtk1 to 1.5.0.12 [ghen 2007-05-31]
