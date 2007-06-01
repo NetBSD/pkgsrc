@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.13 2006/09/10 19:31:42 wiz Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.14 2007/06/01 11:07:26 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -20,7 +20,7 @@
     <filename>PLIST</filename> file you write:</para>
 
     <programlisting>
-      @comment &#36;NetBSD&#36;
+@comment &#36;NetBSD&#36;
     </programlisting>
   </sect1>
 
@@ -56,7 +56,7 @@
     resulting PLIST:</para>
 
     <programlisting>
-      PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
+PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
     </programlisting>
 
     <para>And to get all the <varname>@dirrm</varname> lines referring
@@ -64,7 +64,7 @@
     <varname>@comment</varname>s:</para>
 
     <programlisting>
-      PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
     </programlisting>
   </sect1>
 
@@ -141,7 +141,7 @@
     linkend="components.optional"/>):</para>
 
     <programlisting>
-      PLIST_SUBST+=   SOMEVAR="somevalue"
+PLIST_SUBST+=   SOMEVAR="somevalue"
     </programlisting>
 
     <para>This replaces all occurrences of <quote>${SOMEVAR}</quote>
@@ -221,7 +221,7 @@
     an extra package to remove it.  Therefore, one simply does:</para>
 
     <programlisting>
-      @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
     </programlisting>
 
     <para>in the PLISTs of all affected packages, instead of the
@@ -250,8 +250,8 @@
     idea of the *-dirs packages available, issue:</para>
 
     <programlisting>
-      &cprompt; cd .../pkgsrc
-      &cprompt; ls -d */*-dirs
+&cprompt; cd .../pkgsrc
+&cprompt; ls -d */*-dirs
     </programlisting>
 
     <para>Their use from other packages is very simple.  The
@@ -265,7 +265,7 @@
     following line in it:</para>
 
     <programlisting>
-      USE_DIRS+=      xdg-1.1
+USE_DIRS+=      xdg-1.1
     </programlisting>
 
     <para>After regenerating the PLIST using <command>make
