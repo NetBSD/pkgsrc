@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/05/12 11:08:31 shannonjr Exp $
+# $NetBSD: Makefile,v 1.11 2007/06/01 00:12:35 wiz Exp $
 #
 
 DISTNAME=		gnupg-2.0.4
@@ -36,7 +36,7 @@ CONFIGURE_ENV+=		gnupg_cv_pth_is_sane=yes
 
 TEST_TARGET=		check
 
-# XXX It looks like that gpgsm support could be splitted in its own package,
+# XXX It looks like that gpgsm support could be split into its own package,
 # according to the configure script.  If that's true, this use of the options
 # framework is incorrect and should be fixed.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
