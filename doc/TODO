@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6370 2007/05/31 23:20:50 wiz Exp $
+$NetBSD: TODO,v 1.6371 2007/06/01 00:46:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,6 @@ Suggested package updates
 	o clex-3.15
 	o clisp-2.41 [pkg/36334]
 	o cocoon-2.1.10
-	o comix-3.6.4
 	o connect-1.96
 	o conserver8-8.1.15
 	o coreutils-6.9
