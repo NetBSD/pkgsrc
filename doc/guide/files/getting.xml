@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.18 2007/04/20 08:33:41 ghen Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.19 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -58,7 +58,7 @@ and dashes.</para>
 	supfile has a line
 
 <programlisting>
-    release=pkgsrc
+release=pkgsrc
 </programlisting>
 
 	in it, see the examples in

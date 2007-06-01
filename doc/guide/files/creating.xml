@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.6 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.7 2007/06/01 11:07:24 rillig Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -44,17 +44,17 @@ needed for building the package, but not when using it, use
 Your package may then look like this:</para>
 
 <programlisting>
-    [...]
+[...]
 
-    BUILD_DEPENDS+= lua>=5.0:../../lang/lua
-    DEPENDS+=       screen-[0-9]*:../../misc/screen
-    DEPENDS+=       screen>=4.0:../../misc/screen
+BUILD_DEPENDS+= lua>=5.0:../../lang/lua
+DEPENDS+=       screen-[0-9]*:../../misc/screen
+DEPENDS+=       screen>=4.0:../../misc/screen
 
-    [...]
+[...]
 
-    .include "../../<replaceable>category</replaceable>/<replaceable>package</replaceable>/buildlink3.mk"
-    .include "../../devel/glib2/buildlink3.mk"
-    .include "../../mk/bsd.pkg.mk"
+.include "../../<replaceable>category</replaceable>/<replaceable>package</replaceable>/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
 </programlisting>
 
 </step>
@@ -144,15 +144,15 @@ pkgsrc. As the description says it has to do with the web, the obvious
 choice for the category is <quote>www</quote>.</para>
 
 <programlisting>
-    &uprompt; mkdir www/nvu
-    &uprompt; cd www/nvu
+&uprompt; mkdir www/nvu
+&uprompt; cd www/nvu
 </programlisting>
 
 <para>The web site says that the sources are available as a tar file, so
 I fed that URL to the <command>url2pkg</command> program:</para>
 
 <programlisting>
-    &uprompt; url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+&uprompt; url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
 </programlisting>
 
 <para>My editor popped up, and I added a <varname>PKGNAME</varname> line
@@ -163,46 +163,46 @@ not have the word <quote>sources</quote> in it. I also filled in the
 <filename>Makefile</filename> looked like that:</para>
 
 <programlisting>
-    # &#36;NetBSD&#36;
-    #
+# &#36;NetBSD&#36;
+#
 
-    DISTNAME=       nvu-1.0-sources
-    PKGNAME=        nvu-1.0
-    CATEGORIES=     www
-    MASTER_SITES=   http://cvs.nvu.com/download/
-    EXTRACT_SUFX=   .tar.bz2
+DISTNAME=       nvu-1.0-sources
+PKGNAME=        nvu-1.0
+CATEGORIES=     www
+MASTER_SITES=   http://cvs.nvu.com/download/
+EXTRACT_SUFX=   .tar.bz2
 
-    MAINTAINER=     rillig@NetBSD.org
-    HOMEPAGE=       http://cvs.nvu.com/
-    COMMENT=        Web Authoring System
+MAINTAINER=     rillig@NetBSD.org
+HOMEPAGE=       http://cvs.nvu.com/
+COMMENT=        Web Authoring System
 
-    # url2pkg-marker (please do not remove this line.)
-    .include "../../mk/bsd.pkg.mk"
+# url2pkg-marker (please do not remove this line.)
+.include "../../mk/bsd.pkg.mk"
 </programlisting>
 
 <para>Then, I quit the editor and watched pkgsrc downloading a large
 source archive:</para>
 
 <programlisting>
-    url2pkg> Running "make makesum" ...
-    => Required installed package digest>=20010302: digest-20060826 found
-    => Fetching nvu-1.0-sources.tar.bz2
-    Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
-    100% |*************************************| 28992 KB  150.77 KB/s    00:00 ETA
-    29687976 bytes retrieved in 03:12 (150.77 KB/s)
-    url2pkg> Running "make extract" ...
-    => Required installed package digest>=20010302: digest-20060826 found
-    => Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
-    => Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
-    work.bacc -> /tmp/roland/pkgsrc/www/nvu/work.bacc
-    ===> Installing dependencies for nvu-1.0
-    ===> Overriding tools for nvu-1.0
-    ===> Extracting for nvu-1.0
-    url2pkg> Adjusting the Makefile.
+url2pkg> Running "make makesum" ...
+=> Required installed package digest>=20010302: digest-20060826 found
+=> Fetching nvu-1.0-sources.tar.bz2
+Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+100% |*************************************| 28992 KB  150.77 KB/s00:00 ETA
+29687976 bytes retrieved in 03:12 (150.77 KB/s)
+url2pkg> Running "make extract" ...
+=> Required installed package digest>=20010302: digest-20060826 found
+=> Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+=> Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+work.bacc -> /tmp/roland/pkgsrc/www/nvu/work.bacc
+===> Installing dependencies for nvu-1.0
+===> Overriding tools for nvu-1.0
+===> Extracting for nvu-1.0
+url2pkg> Adjusting the Makefile.
 
-    Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
+Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
 
-    Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
+Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
 </programlisting>
 
 </sect3>
@@ -218,18 +218,18 @@ in the package, let's hope that it will complain about everything it
 needs.</para>
 
 <programlisting>
-    &uprompt; bmake
-    => Required installed package digest>=20010302: digest-20060826 found
-    => Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
-    => Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
-    ===> Patching for nvu-1.0
-    ===> Creating toolchain wrappers for nvu-1.0
-    ===> Configuring for nvu-1.0
-    [...]
-    configure: error: Perl 5.004 or higher is required.
-    [...]
-    WARNING: Please add USE_TOOLS+=perl to the package Makefile.
-    [...]
+&uprompt; bmake
+=> Required installed package digest>=20010302: digest-20060826 found
+=> Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+=> Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+===> Patching for nvu-1.0
+===> Creating toolchain wrappers for nvu-1.0
+===> Configuring for nvu-1.0
+[...]
+configure: error: Perl 5.004 or higher is required.
+[...]
+WARNING: Please add USE_TOOLS+=perl to the package Makefile.
+[...]
 </programlisting>
 
 <para>That worked quite well. So I opened the package Makefile in my
@@ -240,37 +240,37 @@ installed in the <quote>tools</quote> phase, I need to build the package
 from scratch.</para>
 
 <programlisting>
-    &uprompt; bmake clean
-    ===> Cleaning for nvu-1.0
-    &uprompt; bmake
-    [...]
-    *** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
-    GNU Make.  You will not be able to build Mozilla without GNU Make.
-    [...]
+&uprompt; bmake clean
+===> Cleaning for nvu-1.0
+&uprompt; bmake
+[...]
+*** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
+GNU Make.  You will not be able to build Mozilla without GNU Make.
+[...]
 </programlisting>
 
 <para>So I added <quote>gmake</quote> to the
 <varname>USE_TOOLS</varname> line and tried again (from scratch).</para>
 
 <programlisting>
-    [...]
-    checking for GTK - version >= 1.2.0... no
-    *** Could not run GTK test program, checking why...
-    [...]
+[...]
+checking for GTK - version >= 1.2.0... no
+*** Could not run GTK test program, checking why...
+[...]
 </programlisting>
 
 <para>Now to the other dependencies. The first question is: Where is the
 GTK package hidden in pkgsrc?</para>
 
 <programlisting>
-    &uprompt; echo ../../*/gtk*
-    [many packages ...]
-    &uprompt; echo ../../*/gtk
-    ../../x11/gtk
-    &uprompt; echo ../../*/gtk2
-    ../../x11/gtk2
-    &uprompt; echo ../../*/gtk2/bui*
-    ../../x11/gtk2/buildlink3.mk
+&uprompt; echo ../../*/gtk*
+[many packages ...]
+&uprompt; echo ../../*/gtk
+../../x11/gtk
+&uprompt; echo ../../*/gtk2
+../../x11/gtk2
+&uprompt; echo ../../*/gtk2/bui*
+../../x11/gtk2/buildlink3.mk
 </programlisting>
 
 <para>The first try was definitely too broad. The second one had exactly
@@ -287,25 +287,25 @@ file, adding the dependency is very easy. I just inserted an
 <filename>Makefile</filename>, so that it now looks like this:</para>
 
 <programlisting>
-    [...]
-    .include "../../x11/gtk2/buildlink3.mk"
-    .include "../../mk/bsd.pkg.mk
+[...]
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk
 </programlisting>
 
 <para>After another <command>bmake clean && bmake</command>, the answer
 was:</para>
 
 <programlisting>
-    [...]
-    checking for gtk-config... /home/roland/pkg/bin/gtk-config
-    checking for GTK - version >= 1.2.0... no
-    *** Could not run GTK test program, checking why...
-    *** The test program failed to compile or link. See the file config.log for the
-    *** exact error that occured. This usually means GTK was incorrectly installed
-    *** or that you have moved GTK since it was installed. In the latter case, you
-    *** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
-    configure: error: Test for GTK failed.
-    [...]
+[...]
+checking for gtk-config... /home/roland/pkg/bin/gtk-config
+checking for GTK - version >= 1.2.0... no
+*** Could not run GTK test program, checking why...
+*** The test program failed to compile or link. See the file config.log for the
+*** exact error that occured. This usually means GTK was incorrectly installed
+*** or that you have moved GTK since it was installed. In the latter case, you
+*** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
+configure: error: Test for GTK failed.
+[...]
 </programlisting>
 
 <para>In this particular case, the assumption that <quote>every package
@@ -318,13 +318,13 @@ So I changed the <literal>x11/gtk2</literal> to
 and tried again.</para>
 
 <programlisting>
-    [...]
-    cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr     -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
-    In file included from xpidl.c:42:
-    xpidl.h:53:24: libIDL/IDL.h: No such file or directory
-    In file included from xpidl.c:42:
-    xpidl.h:132: error: parse error before "IDL_ns"
-    [...]
+[...]
+cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+In file included from xpidl.c:42:
+xpidl.h:53:24: libIDL/IDL.h: No such file or directory
+In file included from xpidl.c:42:
+xpidl.h:132: error: parse error before "IDL_ns"
+[...]
 </programlisting>
 
 <para>The package still does not find all of its dependencies. Now the
@@ -332,10 +332,10 @@ question is: Which package provides the
 <filename>libIDL/IDL.h</filename> header file?</para>
 
 <programlisting>
-    &uprompt; echo ../../*/*idl*
-    ../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
-    &uprompt; echo ../../*/*IDL*
-    ../../net/libIDL
+&uprompt; echo ../../*/*idl*
+../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
+&uprompt; echo ../../*/*IDL*
+../../net/libIDL
 </programlisting>
 
 <para>Let's take the one from the second try. So I included the
@@ -347,8 +347,8 @@ large, I didn't want to fix it. So I added the following to the package
 <filename>Makefile</filename> and tried again:</para>
 
 <programlisting>
-    CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
-    BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
+BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
 </programlisting>
 
 <para>The latter line is needed because the package expects the library
@@ -369,11 +369,11 @@ everything worked.</para>
 <title>Installing the package</title>
 
 <programlisting>
-    &uprompt; bmake CHECK_FILES=no install
-    [...]
-    &uprompt; bmake print-PLIST >PLIST
-    &uprompt; bmake deinstall
-    &uprompt; bmake install
+&uprompt; bmake CHECK_FILES=no install
+[...]
+&uprompt; bmake print-PLIST >PLIST
+&uprompt; bmake deinstall
+&uprompt; bmake install
 </programlisting>
 
 </sect3>

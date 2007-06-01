@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.34 2007/01/11 07:33:15 wiz Exp $ -->
+<!-- $NetBSD: components.xml,v 1.35 2007/06/01 11:07:24 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -57,16 +57,16 @@ sections.</para>
     <varname>CATEGORIES</varname>. If more than
     one is used, they need to be separated by spaces:</para>
 
-    <programlisting>
-      archivers     cross         geography     meta-pkgs     security
-      audio         databases     graphics      misc          shells
-      benchmarks    devel         ham           multimedia    sysutils
-      biology       editors       inputmethod   net           textproc
-      cad           emulators     lang          news          time
-      chat          finance       mail          parallel      wm
-      comms         fonts         math          pkgtools      www
-      converters    games         mbone         print         x11
-    </programlisting>
+<programlisting>
+archivers     cross         geography     meta-pkgs     security
+audio         databases     graphics      misc          shells
+benchmarks    devel         ham           multimedia    sysutils
+biology       editors       inputmethod   net           textproc
+cad           emulators     lang          news          time
+chat          finance       mail          parallel      wm
+comms         fonts         math          pkgtools      www
+converters    games         mbone         print         x11
+</programlisting>
     </listitem>
 
     <listitem><para><varname>MASTER_SITES</varname>,
@@ -306,7 +306,7 @@ sections.</para>
   <varname>PATCHDIR</varname> to the path where the patch files
   can be found, e.g.:</para>
 <programlisting>
-    PATCHDIR= ${.CURDIR}/../xemacs/patches
+PATCHDIR= ${.CURDIR}/../xemacs/patches
 </programlisting>
 
     <para>Patch files that are distributed by the author or other
@@ -373,55 +373,68 @@ sections.</para>
 	    <row>
 	      <entry>configure script</entry>
 	      <entry>
-		<programlisting>case ${target_os} in
-		netbsd*) have_kvm=yes ;;
-		*)       have_kvm=no  ;;
-		esac</programlisting>
+<programlisting>
+case ${target_os} in
+netbsd*) have_kvm=yes ;;
+*)       have_kvm=no  ;;
+esac
+</programlisting>
 	      </entry>
 
 	      <entry>
-		<programlisting>AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)</programlisting>
+<programlisting>
+AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)
+</programlisting>
 	      </entry>
 	    </row>
 
 	    <row>
 	      <entry>C source file</entry>
 	      <entry>
-		<programlisting>#if defined(__NetBSD__)
-		#  include &lt;sys/event.h&gt;
-		#endif</programlisting>
+<programlisting>
+#if defined(__NetBSD__)
+#  include &lt;sys/event.h&gt;
+#endif
+</programlisting>
 	      </entry>
 	      <entry>
-		<programlisting>#if defined(HAVE_SYS_EVENT_H)
-		#  include &lt;sys/event.h&gt;
-		#endif</programlisting>
+<programlisting>
+#if defined(HAVE_SYS_EVENT_H)
+#  include &lt;sys/event.h&gt;
+#endif
+</programlisting>
 	      </entry>
 	    </row>
 
 	    <row>
 	      <entry>C source file</entry>
-	      <entry><programlisting>int
-	      monitor_file(...)
-	      {
-	      #if defined(__NetBSD__)
-	      int fd = kqueue();
-	      ...
-	      #else
-	      ...
-	      #endif
-	      }</programlisting>
+	      <entry>
+<programlisting>
+int
+monitor_file(...)
+{
+#if defined(__NetBSD__)
+        int fd = kqueue();
+        ...
+#else
+        ...
+#endif
+}
+</programlisting>
 	      </entry>
 	      <entry>
-		<programlisting>int
-		monitor_file(...)
-		{
-		#if defined(HAVE_KQUEUE)
-		int fd = kqueue();
-		...
-		#else
-		...
-		#endif
-		}</programlisting>
+<programlisting>
+int
+monitor_file(...)
+{
+#if defined(HAVE_KQUEUE)
+        int fd = kqueue();
+        ...
+#else
+	...
+#endif
+}
+</programlisting>
 	      </entry>
 	    </row>
 	  </tbody>
@@ -543,9 +556,9 @@ sections.</para>
 	    <varname>MESSAGE_SUBST</varname> in the package's
 	    <filename>Makefile</filename>:</para>
 
-	    <programlisting>
-	      MESSAGE_SUBST+=  SOMEVAR="somevalue"
-	    </programlisting>
+<programlisting>
+MESSAGE_SUBST+=  SOMEVAR="somevalue"
+</programlisting>
 
 	    <para>replaces "${SOMEVAR}" with <quote>somevalue</quote> in
 	    <filename>MESSAGE</filename>.  By default, substitution is
@@ -656,8 +669,8 @@ sections.</para>
     packages, set the <varname>FILESDIR</varname> variable to point
     to the other package's <filename>files</filename> directory,
     e.g.:</para>
-    <programlisting>
-      FILESDIR=${.CURDIR}/../xemacs/files
-    </programlisting>
+<programlisting>
+FILESDIR=${.CURDIR}/../xemacs/files
+</programlisting>
   </sect1>
 </chapter>

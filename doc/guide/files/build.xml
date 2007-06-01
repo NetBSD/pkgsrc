@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.45 2007/04/19 16:54:58 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.46 2007/06/01 11:07:24 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -137,20 +137,20 @@
 	<para>The following lines are taken from
 	<filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
 
-	<programlisting>
-	  EVAL_PREFIX+=           GTKDIR=gtk+
-	  CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-	  CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-	  CONFIGURE_ARGS+=        --enable-multibyte
-	</programlisting>
+<programlisting>
+EVAL_PREFIX+=           GTKDIR=gtk+
+CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+CONFIGURE_ARGS+=        --enable-multibyte
+</programlisting>
 
 	<para>Specific defaults can be defined for the packages
 	evaluated using <varname>EVAL_PREFIX</varname>, by using a
 	definition of the form:</para>
 
-	<programlisting>
-	  GTKDIR_DEFAULT= ${LOCALBASE}
-	</programlisting>
+<programlisting>
+GTKDIR_DEFAULT= ${LOCALBASE}
+</programlisting>
 
 	<para>where <varname>GTKDIR</varname> corresponds
 	to the first definition in
@@ -252,9 +252,9 @@
       additional filenames using the <literal>+=</literal>
       operator, but you have write for example:</para>
 
-      <programlisting>
-	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
-      </programlisting>
+<programlisting>
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+</programlisting>
 
       <para>Each distfile is fetched from a list of sites, usually
       <varname>MASTER_SITES</varname>. If the package has multiple
@@ -266,13 +266,13 @@
       <filename><replaceable>distfile</replaceable></filename>
       (including the suffix) can be found.</para>
 
-      <programlisting>
-	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-	DISTFILES+=     foo-file.tar.gz
-	SITES.foo-file.tar.gz= \
-	http://www.somewhere.com/somehow/ \
-	http://www.somewhereelse.com/mirror/somehow/
-      </programlisting>
+<programlisting>
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=     foo-file.tar.gz
+SITES.foo-file.tar.gz= \
+http://www.somewhere.com/somehow/ \
+http://www.somewhereelse.com/mirror/somehow/
+</programlisting>
 
       <para>When actually fetching the distfiles, each item from
       <varname>MASTER_SITES</varname> or
@@ -284,9 +284,9 @@
       that gets the name of the distfile as a parameter. In this
       case, the definition would look like:</para>
 
-      <programlisting>
-	MASTER_SITES=   http://www.example.com/download.cgi?file=
-      </programlisting>
+<programlisting>
+MASTER_SITES=   http://www.example.com/download.cgi?file=
+</programlisting>
 
       <para>There are some predefined values for
       <varname>MASTER_SITES</varname>, which can be used in
@@ -295,33 +295,33 @@
 
       <!-- sort mk/fetch/sites.mk | sed -n 's/\(^MA[A-Z_]*\).*/    ${\1}/p' -->
 
-      <programlisting>
-	${MASTER_SITE_APACHE}
-	${MASTER_SITE_BACKUP}
-	${MASTER_SITE_CYGWIN}
-	${MASTER_SITE_DEBIAN}
-	${MASTER_SITE_FREEBSD}
-	${MASTER_SITE_FREEBSD_LOCAL}
-	${MASTER_SITE_GENTOO}
-	${MASTER_SITE_GNOME}
-	${MASTER_SITE_GNU}
-	${MASTER_SITE_GNUSTEP}
-	${MASTER_SITE_IFARCHIVE}
-	${MASTER_SITE_KDE}
-	${MASTER_SITE_MOZILLA}
-	${MASTER_SITE_MYSQL}
-	${MASTER_SITE_OPENOFFICE}
-	${MASTER_SITE_PERL_CPAN}
-	${MASTER_SITE_PGSQL}
-	${MASTER_SITE_R_CRAN}
-	${MASTER_SITE_SOURCEFORGE}
-	${MASTER_SITE_SOURCEFORGE_JP}
-	${MASTER_SITE_SUNSITE}
-	${MASTER_SITE_SUSE}
-	${MASTER_SITE_TEX_CTAN}
-	${MASTER_SITE_XCONTRIB}
-	${MASTER_SITE_XEMACS}
-      </programlisting>
+<programlisting>
+${MASTER_SITE_APACHE}
+${MASTER_SITE_BACKUP}
+${MASTER_SITE_CYGWIN}
+${MASTER_SITE_DEBIAN}
+${MASTER_SITE_FREEBSD}
+${MASTER_SITE_FREEBSD_LOCAL}
+${MASTER_SITE_GENTOO}
+${MASTER_SITE_GNOME}
+${MASTER_SITE_GNU}
+${MASTER_SITE_GNUSTEP}
+${MASTER_SITE_IFARCHIVE}
+${MASTER_SITE_KDE}
+${MASTER_SITE_MOZILLA}
+${MASTER_SITE_MYSQL}
+${MASTER_SITE_OPENOFFICE}
+${MASTER_SITE_PERL_CPAN}
+${MASTER_SITE_PGSQL}
+${MASTER_SITE_R_CRAN}
+${MASTER_SITE_SOURCEFORGE}
+${MASTER_SITE_SOURCEFORGE_JP}
+${MASTER_SITE_SUNSITE}
+${MASTER_SITE_SUSE}
+${MASTER_SITE_TEX_CTAN}
+${MASTER_SITE_XCONTRIB}
+${MASTER_SITE_XEMACS}
+</programlisting>
 
       <para>Some explanations for the less self-explaining ones:
       <varname>MASTER_SITE_BACKUP</varname> contains backup sites
@@ -338,10 +338,10 @@
       <emphasis>must</emphasis> use the following construct to
       specify a subdirectory:</para>
 
-      <programlisting>
-	MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
-	MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
-      </programlisting>
+<programlisting>
+MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+</programlisting>
 
       <para>Note the trailing slash after the subdirectory
       name.</para>
@@ -356,9 +356,9 @@
       user). If the files do not exist, they are fetched using
       commands of the form</para>
 
-      <programlisting>
-	${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
-      </programlisting>
+<programlisting>
+${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+</programlisting>
 
       <para>where <literal>${site}</literal> varies through
       several possibilities in turn: first,
@@ -553,12 +553,13 @@
     <quote>yes</quote> instead. What happens in the
     <emphasis>configure</emphasis> phase is roughly:</para>
 
-    <programlisting>
-      .for d in ${CONFIGURE_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${CONFIGURE_ENV} \
-      ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-      .endfor
-    </programlisting>
+<programlisting>
+.for d in ${CONFIGURE_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.endfor
+</programlisting>
 
     <para><varname>CONFIGURE_DIRS</varname> (default:
     <quote>.</quote>) is a list of pathnames relative to
@@ -591,13 +592,16 @@
     <para>For building a package, a rough equivalent of the
     following code is executed.</para>
 
-    <programlisting>
-      .for d in ${BUILD_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-      ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-      -f ${MAKE_FILE} ${BUILD_TARGET}
-      .endfor
-    </programlisting>
+<programlisting>
+.for d in ${BUILD_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+                -f ${MAKE_FILE} \
+                ${BUILD_TARGET}
+.endfor
+</programlisting>
 
     <para><varname>BUILD_DIRS</varname> (default:
     <quote>.</quote>) is a list of pathnames relative to
@@ -641,13 +645,16 @@
     before and after this code, much magic is performed to do
     consistency checks, registering the package, and so on.</para>
 
-    <programlisting>
-      .for d in ${INSTALL_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-      ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-      -f ${MAKE_FILE} ${BUILD_TARGET}
-      .endfor
-    </programlisting>
+<programlisting>
+.for d in ${INSTALL_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} \
+                ${INSTALL_TARGET}
+.endfor
+</programlisting>
 
     <para>The variable's meanings are analogous to the ones in the
     <emphasis>build</emphasis> phase.
