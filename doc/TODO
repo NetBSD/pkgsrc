@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6374 2007/06/01 20:21:41 wiz Exp $
+$NetBSD: TODO,v 1.6375 2007/06/01 20:47:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -910,7 +910,6 @@ Suggested package updates
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Audit-2.218
 	o p5-Mail-Webmail-Gmail-1.09
-	o p5-MailTools-1.77
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Install-0.65
