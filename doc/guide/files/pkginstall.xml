@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.14 2007/01/10 17:58:43 reed Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.15 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -114,7 +114,7 @@ directories anywhere in the file system:</para>
     numerical mode.  For example:</para>
 
 <programlisting>
-    MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
 </programlisting>
 
     <para>The difference between the two is exactly the same as their
@@ -164,7 +164,7 @@ installation prefix:</para>
     this order.  For example:</para>
 
 <programlisting>
-    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 </programlisting>
 
     <para>The difference between the two is exactly the same as their
@@ -288,7 +288,7 @@ extra flag to the configuration script; this is the case of GNU Autoconf-
 generated files:</para>
 
 <programlisting>
-    CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 </programlisting>
 
 <para>Note that this specifies where the package has to <emphasis>look
@@ -326,8 +326,8 @@ about their syntax and their purpose.  Here is an example, taken from the
 <filename role="pkg">mail/mutt</filename> package:</para>
 
 <programlisting>
-    EGDIR=        ${PREFIX}/share/doc/mutt/samples
-    CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+EGDIR=        ${PREFIX}/share/doc/mutt/samples
+CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 </programlisting>
 
 <para>Note that the <varname>EGDIR</varname> variable is specific to that
@@ -380,7 +380,7 @@ to:</para>
     Continuing the previous example:</para>
 
 <programlisting>
-    RCD_SCRIPTS+=   cupsd
+RCD_SCRIPTS+=   cupsd
 </programlisting>
   </listitem>
 
@@ -445,7 +445,7 @@ installation, it can do so by using the pkginstall framework.</para>
 syntax:</para>
 
 <programlisting>
-    user:group
+user:group
 </programlisting>
 
 <para>Further specification of user details may be done by setting
@@ -465,7 +465,7 @@ not specified.</para>
 <varname>PKG_GROUPS</varname> variable, whose syntax is:</para>
 
 <programlisting>
-    group
+group
 </programlisting>
 
 <para>The numeric GID of the group may be set by defining
@@ -497,7 +497,7 @@ add some hooks to the installation scripts to handle it.  Consider the
 following example, taken from <filename role="pkg">shells/zsh</filename>:</para>
 
 <programlisting>
-    PKG_SHELL=      ${PREFIX}/bin/zsh
+PKG_SHELL=      ${PREFIX}/bin/zsh
 </programlisting>
 
 <!-- ================================================================== -->
@@ -536,7 +536,7 @@ installation prefix.  Consider the following example, taken from <filename
 role="pkg">fonts/dbz-ttf</filename>:</para>
 
 <programlisting>
-    FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
 </programlisting>
 
 <!-- ================================================================== -->
