@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6373 2007/06/01 20:13:09 wiz Exp $
+$NetBSD: TODO,v 1.6374 2007/06/01 20:21:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ Suggested package updates
 	o libmpeg3-1.7
 	o libnasl-2.3.1
 	o libnids-1.21
-	o liboil-0.3.12
 	o libole2-2.2.8
 	o libosip-3.0.2
 	o libprelude-0.9.14
