@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1190 2007/06/01 15:25:19 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1191 2007/06/01 18:23:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix to 2.4.3 [martti 2007-06-01]
 	Updated security/amavisd-new to 2.5.1 [xtraeme 2007-06-01]
 	Updated mail/qmHandle to 1.2.3 [schmonz 2007-06-01]
+	Updated net/p5-Net to 1.21 [wiz 2007-06-01]

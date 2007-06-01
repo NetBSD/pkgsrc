@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6371 2007/06/01 00:46:28 wiz Exp $
+$NetBSD: TODO,v 1.6372 2007/06/01 18:23:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ Suggested package updates
 	o p5-Math-Random-0.69
 	o p5-Module-Install-0.65
 	o p5-Module-ScanDeps-0.72
-	o p5-Net-1.21
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
