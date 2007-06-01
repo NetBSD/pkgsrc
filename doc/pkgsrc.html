@@ -346,7 +346,7 @@
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
 <dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
 <dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
@@ -937,7 +937,7 @@ and dashes.</p>
 
 </p>
 <pre class="programlisting">
-    release=pkgsrc
+release=pkgsrc
 </pre>
 <p>
 
@@ -1506,7 +1506,7 @@ file and inspect the contents before extracting it.
 	don't have a termcap/terminfo entry for it, but the following .termcap
 	entry provides adequate emulation in most cases:</p>
 <pre class="programlisting">
-	  interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	</pre>
 </div>
 <div class="sect3" lang="en">
@@ -1616,7 +1616,7 @@ file and inspect the contents before extracting it.
 
       </p>
 <pre class="programlisting">
-	PKGSRC_COMPILER=        mipspro
+PKGSRC_COMPILER=        mipspro
       </pre>
 <p>
 
@@ -1643,8 +1643,8 @@ file and inspect the contents before extracting it.
 <p>To bootstrap using icc, assuming the default icc installation
       directory:</p>
 <pre class="programlisting">
-	env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-	ac_cv___attribute__=yes ./bootstrap
+env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+ac_cv___attribute__=yes ./bootstrap
       </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
@@ -1659,7 +1659,7 @@ file and inspect the contents before extracting it.
 <p>After bootstrapping, you should set <code class="varname">PKGSRC_COMPILER</code>
       in <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
-	PKGSRC_COMPILER=        icc
+PKGSRC_COMPILER=        icc
       </pre>
 <p>The default installation directory for icc is
       <code class="filename">/opt/intel_cc_80</code>, which
@@ -1667,7 +1667,7 @@ file and inspect the contents before extracting it.
       directory, set <code class="varname">ICCBASE</code> in
       <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
-	ICCBASE=                /opt/icc
+ICCBASE=                /opt/icc
       </pre>
 <p>pkgsrc uses the static linking method of the runtime libraries
       provided by icc, so binaries can be run on other systems which do not
@@ -1711,11 +1711,11 @@ file and inspect the contents before extracting it.
 	  as well. You can work around this by enclosing all the pkgsrc-specific parts
 	  of the file with:</p>
 <pre class="programlisting">
-	    .ifdef BSD_PKG_MK
-	    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-	    .else
-	    # OpenBSD stuff
-	    .endif
+.ifdef BSD_PKG_MK
+# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
+.else
+# OpenBSD stuff
+.endif
 	  </pre>
 </li>
 </ol></div>
@@ -1770,10 +1770,10 @@ file and inspect the contents before extracting it.
 <p>You should set the following variables in your
 	<code class="filename">mk.conf</code> file:</p>
 <pre class="programlisting">
-    CC=     cc
-    CXX=    CC
-    CPP=    cc -E
-    CXXCPP= CC -E
+CC=     cc
+CXX=    CC
+CPP=    cc -E
+CXXCPP= CC -E
 </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
@@ -1789,8 +1789,8 @@ file and inspect the contents before extracting it.
 	following lines in your <code class="filename">mk.conf</code>
 	file:</p>
 <pre class="programlisting">
-    PKGSRC_COMPILER=        sunpro
-    ABI=                    64
+PKGSRC_COMPILER=        sunpro
+ABI=                    64
 </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
@@ -1808,8 +1808,8 @@ file and inspect the contents before extracting it.
       scripts, for example by installing <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a> and adding the following lines
       to your <code class="filename">mk.conf</code>:</p>
 <pre class="programlisting">
-	CONFIG_SHELL=   ${LOCALBASE}/bin/bash
-	WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
+CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
       </pre>
 <p>Then, rebuild the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/libtool-base/README.html" target="_top"><code class="filename">devel/libtool-base</code></a> package.</p>
 </div>
@@ -2455,7 +2455,7 @@ works.</p>
 	please make sure to use the <code class="literal">+=</code> operator
 	instead of the <code class="literal">=</code> operator:</p>
 <pre class="programlisting">
-    CFLAGS+=        -your -flags
+CFLAGS+=        -your -flags
 </pre>
 <p>Using <code class="varname">CFLAGS=</code> (i.e. without the
 	&#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that need
@@ -2477,7 +2477,7 @@ the inclusion of <code class="filename">mk/x11.buildlink3.mk</code>.  As with
 <code class="varname">CFLAGS</code>, if you do not wish to override these
 settings, use the <code class="literal">+=</code> operator:</p>
 <pre class="programlisting">
-    LDFLAGS+=        -your -linkerflags
+LDFLAGS+=        -your -linkerflags
 </pre>
 </div>
 </div>
@@ -2676,15 +2676,15 @@ PKG_OPTIONS.apache=     suexec </pre>
 	As used in this example, <code class="varname">_ACCEPTABLE=yes</code>
 	accepts <span class="emphasis"><em>all</em></span> licenses.</p>
 <pre class="programlisting">
-	  PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
-	  WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
-	  BSDSRCDIR=      /usr/src
-	  BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
-	  OBJHOSTNAME?=   yes               # use work.`hostname`
-	  FAILOVER_FETCH= yes               # insist on the correct checksum
-	  PKG_DEVELOPER?= yes
-	  _ACCEPTABLE=    yes
-	</pre>
+PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
+WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
+BSDSRCDIR=      /usr/src
+BSDXSRCDIR=     /usr/xsrc         # for x11/xservers
+OBJHOSTNAME?=   yes               # use work.`hostname`
+FAILOVER_FETCH= yes               # insist on the correct checksum
+PKG_DEVELOPER?= yes
+_ACCEPTABLE=    yes
+</pre>
 <p>Some options that are especially useful for bulk builds
 	can be found at the top lines of the file
 	<code class="filename">mk/bulk/bsd.bulk-pkg.mk</code>. The most useful
@@ -2767,11 +2767,11 @@ PKG_OPTIONS.apache=     suexec </pre>
       version of ssh for some reason, be sure to install ssh before
       starting it from <code class="filename">rc.local</code>:</p>
 <pre class="programlisting">
-	( cd /usr/pkgsrc/security/ssh ; make bulk-install )
-	if [ -f /usr/pkg/etc/rc.d/sshd ]; then
-	/usr/pkg/etc/rc.d/sshd
-	fi
-      </pre>
+(cd /usr/pkgsrc/security/ssh &amp;&amp; make bulk-install)
+if [ -f /usr/pkg/etc/rc.d/sshd ]; then
+  /usr/pkg/etc/rc.d/sshd
+fi
+</pre>
 <p>Not doing so will result in you being not able to log in
       via ssh after the bulk build is finished or if the machine
       gets rebooted or crashes. You have been warned! :)</p>
@@ -3109,18 +3109,18 @@ configurable in the <code class="filename">bootstrap/bootstrap</code> script.
 When pkgsrc has been installed as root, the default locations
 are:</p>
 <pre class="programlisting">
-    LOCALBASE=              /usr/pkg
-    PKG_SYSCONFBASE=        /usr/pkg/etc
-    VARBASE=                /var
-    PKG_DBDIR=              /var/db/pkg
+LOCALBASE=              /usr/pkg
+PKG_SYSCONFBASE=        /usr/pkg/etc
+VARBASE=                /var
+PKG_DBDIR=              /var/db/pkg
 </pre>
 <p>In unprivileged mode (when pkgsrc has been installed as any other
 user), the default locations are:</p>
 <pre class="programlisting">
-    LOCALBASE=              ${HOME}/pkg
-    PKG_SYSCONFBASE=        ${HOME}/pkg/etc
-    VARBASE=                ${HOME}/pkg/var
-    PKG_DBDIR=              ${HOME}/pkg/var/db/pkg
+LOCALBASE=              ${HOME}/pkg
+PKG_SYSCONFBASE=        ${HOME}/pkg/etc
+VARBASE=                ${HOME}/pkg/var
+PKG_DBDIR=              ${HOME}/pkg/var/db/pkg
 </pre>
 <p>What these four directories are for, and what they look like is
 explained below.</p>
@@ -3284,7 +3284,7 @@ it contains items for both pkgsrc users and developers.</p>
 </ul></div>
 <p>To subscribe, do:</p>
 <pre class="programlisting">
-    <code class="prompt">%</code> echo subscribe <em class="replaceable"><code>listname</code></em> | mail majordomo@NetBSD.org
+<code class="prompt">%</code> echo subscribe <em class="replaceable"><code>listname</code></em> | mail majordomo@NetBSD.org
 </pre>
 <p>Archives for all these mailing lists are available from
 <a href="http://mail-index.NetBSD.org/" target="_top">http://mail-index.NetBSD.org/</a>.</p>
@@ -3412,10 +3412,10 @@ values.</p>
 <code class="filename">wget</code> to resume downloads, you'll have to use something
 like:</p>
 <pre class="programlisting">
-    FETCH_CMD=             wget
-    FETCH_BEFORE_ARGS=     --passive-ftp
-    FETCH_RESUME_ARGS=     -c
-    FETCH_OUTPUT_ARGS=     -O
+FETCH_CMD=             wget
+FETCH_BEFORE_ARGS=     --passive-ftp
+FETCH_RESUME_ARGS=     -c
+FETCH_OUTPUT_ARGS=     -O
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -3426,7 +3426,7 @@ X11 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openw
 ...), you will have to add the following line into
 <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
-    X11_TYPE=XFree86
+X11_TYPE=XFree86
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -3437,7 +3437,7 @@ X11 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openw
 you will have to add the following line into
 <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
-    X11_TYPE=xorg
+X11_TYPE=xorg
 </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
@@ -3456,8 +3456,8 @@ form of a URL, e.g. in Amdahl, the machine
 port 80 as the proxy port number.  So the proxy environment variables
 are:</p>
 <pre class="programlisting">
-    ftp_proxy=ftp://orpheus.amdahl.com:80/
-    http_proxy=http://orpheus.amdahl.com:80/
+ftp_proxy=ftp://orpheus.amdahl.com:80/
+http_proxy=http://orpheus.amdahl.com:80/
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -3551,9 +3551,9 @@ following into your <code class="filename">/etc/mk.conf</code>, somewhere
 <span class="emphasis"><em>after</em></span> the definition of the
 <code class="varname">LOCALBASE</code> variable:</p>
 <pre class="programlisting">
-    .if exists(${LOCALBASE}/bin/sudo)
-    SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
-    .endif
+.if exists(${LOCALBASE}/bin/sudo)
+SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+.endif
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -3858,7 +3858,7 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
 <dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
 <dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
@@ -3949,17 +3949,17 @@ needed for building the package, but not when using it, use
 <code class="varname">BUILD_DEPENDS</code> instead of <code class="varname">DEPENDS</code>.
 Your package may then look like this:</p>
 <pre class="programlisting">
-    [...]
+[...]
 
-    BUILD_DEPENDS+= lua&gt;=5.0:../../lang/lua
-    DEPENDS+=       screen-[0-9]*:../../misc/screen
-    DEPENDS+=       screen&gt;=4.0:../../misc/screen
+BUILD_DEPENDS+= lua&gt;=5.0:../../lang/lua
+DEPENDS+=       screen-[0-9]*:../../misc/screen
+DEPENDS+=       screen&gt;=4.0:../../misc/screen
 
-    [...]
+[...]
 
-    .include "../../<em class="replaceable"><code>category</code></em>/<em class="replaceable"><code>package</code></em>/buildlink3.mk"
-    .include "../../devel/glib2/buildlink3.mk"
-    .include "../../mk/bsd.pkg.mk"
+.include "../../<em class="replaceable"><code>category</code></em>/<em class="replaceable"><code>package</code></em>/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
 </pre>
 </li>
 <li><p>Run <span><strong class="command">pkglint</strong></span> to see what things still need
@@ -4029,13 +4029,13 @@ that the &#8220;<span class="quote">nvu</span>&#8221; package has not yet been i
 pkgsrc. As the description says it has to do with the web, the obvious
 choice for the category is &#8220;<span class="quote">www</span>&#8221;.</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> mkdir www/nvu
-    <code class="prompt">$</code> cd www/nvu
+<code class="prompt">$</code> mkdir www/nvu
+<code class="prompt">$</code> cd www/nvu
 </pre>
 <p>The web site says that the sources are available as a tar file, so
 I fed that URL to the <span><strong class="command">url2pkg</strong></span> program:</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+<code class="prompt">$</code> url2pkg http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
 </pre>
 <p>My editor popped up, and I added a <code class="varname">PKGNAME</code> line
 below the <code class="varname">DISTNAME</code> line, as the package name should
@@ -4044,44 +4044,44 @@ not have the word &#8220;<span class="quote">sources</span>&#8221; in it. I also
 <code class="varname">COMMENT</code> fields. Then the package
 <code class="filename">Makefile</code> looked like that:</p>
 <pre class="programlisting">
-    # $NetBSD$
-    #
+# $NetBSD$
+#
 
-    DISTNAME=       nvu-1.0-sources
-    PKGNAME=        nvu-1.0
-    CATEGORIES=     www
-    MASTER_SITES=   http://cvs.nvu.com/download/
-    EXTRACT_SUFX=   .tar.bz2
+DISTNAME=       nvu-1.0-sources
+PKGNAME=        nvu-1.0
+CATEGORIES=     www
+MASTER_SITES=   http://cvs.nvu.com/download/
+EXTRACT_SUFX=   .tar.bz2
 
-    MAINTAINER=     rillig@NetBSD.org
-    HOMEPAGE=       http://cvs.nvu.com/
-    COMMENT=        Web Authoring System
+MAINTAINER=     rillig@NetBSD.org
+HOMEPAGE=       http://cvs.nvu.com/
+COMMENT=        Web Authoring System
 
-    # url2pkg-marker (please do not remove this line.)
-    .include "../../mk/bsd.pkg.mk"
+# url2pkg-marker (please do not remove this line.)
+.include "../../mk/bsd.pkg.mk"
 </pre>
 <p>Then, I quit the editor and watched pkgsrc downloading a large
 source archive:</p>
 <pre class="programlisting">
-    url2pkg&gt; Running "make makesum" ...
-    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
-    =&gt; Fetching nvu-1.0-sources.tar.bz2
-    Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
-    100% |*************************************| 28992 KB  150.77 KB/s    00:00 ETA
-    29687976 bytes retrieved in 03:12 (150.77 KB/s)
-    url2pkg&gt; Running "make extract" ...
-    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
-    =&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
-    =&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
-    work.bacc -&gt; /tmp/roland/pkgsrc/www/nvu/work.bacc
-    ===&gt; Installing dependencies for nvu-1.0
-    ===&gt; Overriding tools for nvu-1.0
-    ===&gt; Extracting for nvu-1.0
-    url2pkg&gt; Adjusting the Makefile.
+url2pkg&gt; Running "make makesum" ...
+=&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+=&gt; Fetching nvu-1.0-sources.tar.bz2
+Requesting http://cvs.nvu.com/download/nvu-1.0-sources.tar.bz2
+100% |*************************************| 28992 KB  150.77 KB/s00:00 ETA
+29687976 bytes retrieved in 03:12 (150.77 KB/s)
+url2pkg&gt; Running "make extract" ...
+=&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+=&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+=&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+work.bacc -&gt; /tmp/roland/pkgsrc/www/nvu/work.bacc
+===&gt; Installing dependencies for nvu-1.0
+===&gt; Overriding tools for nvu-1.0
+===&gt; Extracting for nvu-1.0
+url2pkg&gt; Adjusting the Makefile.
 
-    Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
+Remember to correct CATEGORIES, HOMEPAGE, COMMENT, and DESCR when you're done!
 
-    Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
+Good luck! (See pkgsrc/doc/pkgsrc.txt for some more help :-)
 </pre>
 </div>
 <div class="sect3" lang="en">
@@ -4094,18 +4094,18 @@ dependencies this package has. But since there is a GNU configure script
 in the package, let's hope that it will complain about everything it
 needs.</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> bmake
-    =&gt; Required installed package digest&gt;=20010302: digest-20060826 found
-    =&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
-    =&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
-    ===&gt; Patching for nvu-1.0
-    ===&gt; Creating toolchain wrappers for nvu-1.0
-    ===&gt; Configuring for nvu-1.0
-    [...]
-    configure: error: Perl 5.004 or higher is required.
-    [...]
-    WARNING: Please add USE_TOOLS+=perl to the package Makefile.
-    [...]
+<code class="prompt">$</code> bmake
+=&gt; Required installed package digest&gt;=20010302: digest-20060826 found
+=&gt; Checksum SHA1 OK for nvu-1.0-sources.tar.bz2
+=&gt; Checksum RMD160 OK for nvu-1.0-sources.tar.bz2
+===&gt; Patching for nvu-1.0
+===&gt; Creating toolchain wrappers for nvu-1.0
+===&gt; Configuring for nvu-1.0
+[...]
+configure: error: Perl 5.004 or higher is required.
+[...]
+WARNING: Please add USE_TOOLS+=perl to the package Makefile.
+[...]
 </pre>
 <p>That worked quite well. So I opened the package Makefile in my
 editor, and since it already has a <code class="varname">USE_TOOLS</code> line, I
@@ -4114,33 +4114,33 @@ package have changed now, and since a perl wrapper is automatically
 installed in the &#8220;<span class="quote">tools</span>&#8221; phase, I need to build the package
 from scratch.</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> bmake clean
-    ===&gt; Cleaning for nvu-1.0
-    <code class="prompt">$</code> bmake
-    [...]
-    *** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
-    GNU Make.  You will not be able to build Mozilla without GNU Make.
-    [...]
+<code class="prompt">$</code> bmake clean
+===&gt; Cleaning for nvu-1.0
+<code class="prompt">$</code> bmake
+[...]
+*** /tmp/roland/pkgsrc/www/nvu/work.bacc/.tools/bin/make is not \
+GNU Make.  You will not be able to build Mozilla without GNU Make.
+[...]
 </pre>
 <p>So I added &#8220;<span class="quote">gmake</span>&#8221; to the
 <code class="varname">USE_TOOLS</code> line and tried again (from scratch).</p>
 <pre class="programlisting">
-    [...]
-    checking for GTK - version &gt;= 1.2.0... no
-    *** Could not run GTK test program, checking why...
-    [...]
+[...]
+checking for GTK - version &gt;= 1.2.0... no
+*** Could not run GTK test program, checking why...
+[...]
 </pre>
 <p>Now to the other dependencies. The first question is: Where is the
 GTK package hidden in pkgsrc?</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> echo ../../*/gtk*
-    [many packages ...]
-    <code class="prompt">$</code> echo ../../*/gtk
-    ../../x11/gtk
-    <code class="prompt">$</code> echo ../../*/gtk2
-    ../../x11/gtk2
-    <code class="prompt">$</code> echo ../../*/gtk2/bui*
-    ../../x11/gtk2/buildlink3.mk
+<code class="prompt">$</code> echo ../../*/gtk*
+[many packages ...]
+<code class="prompt">$</code> echo ../../*/gtk
+../../x11/gtk
+<code class="prompt">$</code> echo ../../*/gtk2
+../../x11/gtk2
+<code class="prompt">$</code> echo ../../*/gtk2/bui*
+../../x11/gtk2/buildlink3.mk
 </pre>
 <p>The first try was definitely too broad. The second one had exactly
 one result, which is very good. But there is one pitfall with GNOME
@@ -4154,23 +4154,23 @@ file, adding the dependency is very easy. I just inserted an
 <code class="literal">.include</code> line before the last line of the package
 <code class="filename">Makefile</code>, so that it now looks like this:</p>
 <pre class="programlisting">
-    [...]
-    .include "../../x11/gtk2/buildlink3.mk"
-    .include "../../mk/bsd.pkg.mk
+[...]
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk
 </pre>
 <p>After another <span><strong class="command">bmake clean &amp;&amp; bmake</strong></span>, the answer
 was:</p>
 <pre class="programlisting">
-    [...]
-    checking for gtk-config... /home/roland/pkg/bin/gtk-config
-    checking for GTK - version &gt;= 1.2.0... no
-    *** Could not run GTK test program, checking why...
-    *** The test program failed to compile or link. See the file config.log for the
-    *** exact error that occured. This usually means GTK was incorrectly installed
-    *** or that you have moved GTK since it was installed. In the latter case, you
-    *** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
-    configure: error: Test for GTK failed.
-    [...]
+[...]
+checking for gtk-config... /home/roland/pkg/bin/gtk-config
+checking for GTK - version &gt;= 1.2.0... no
+*** Could not run GTK test program, checking why...
+*** The test program failed to compile or link. See the file config.log for the
+*** exact error that occured. This usually means GTK was incorrectly installed
+*** or that you have moved GTK since it was installed. In the latter case, you
+*** may want to edit the gtk-config script: /home/roland/pkg/bin/gtk-config
+configure: error: Test for GTK failed.
+[...]
 </pre>
 <p>In this particular case, the assumption that &#8220;<span class="quote">every package
 prefers GNOME 2</span>&#8221; had been wrong. The first of the lines above
@@ -4181,22 +4181,22 @@ So I changed the <code class="literal">x11/gtk2</code> to
 <code class="literal">x11/gtk</code> in the package <code class="filename">Makefile</code>,
 and tried again.</p>
 <pre class="programlisting">
-    [...]
-    cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr     -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
-    In file included from xpidl.c:42:
-    xpidl.h:53:24: libIDL/IDL.h: No such file or directory
-    In file included from xpidl.c:42:
-    xpidl.h:132: error: parse error before "IDL_ns"
-    [...]
+[...]
+cc -o xpidl.o -c -DOSTYPE=\"NetBSD3\" -DOSARCH=\"NetBSD\"   -I../../../dist/include/xpcom -I../../../dist/include -I/tmp/roland/pkgsrc/www/nvu/work.bacc/mozilla/dist/include/nspr -I/usr/X11R6/include   -fPIC -DPIC -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -Wall -W -Wno-unused -Wpointer-arith -Wcast-align -Wno-long-long -pedantic -O2 -I/home/roland/pkg/include -I/usr/include -Dunix -pthread -pipe  -DDEBUG -D_DEBUG -DDEBUG_roland -DTRACING -g -I/home/roland/pkg/include/glib/glib-1.2 -I/home/roland/pkg/lib/glib/include -I/usr/pkg/include/orbit-1.0   -I/home/roland/pkg/include -I/usr/include  -I/usr/X11R6/include -include ../../../mozilla-config.h -DMOZILLA_CLIENT -Wp,-MD,.deps/xpidl.pp xpidl.c
+In file included from xpidl.c:42:
+xpidl.h:53:24: libIDL/IDL.h: No such file or directory
+In file included from xpidl.c:42:
+xpidl.h:132: error: parse error before "IDL_ns"
+[...]
 </pre>
 <p>The package still does not find all of its dependencies. Now the
 question is: Which package provides the
 <code class="filename">libIDL/IDL.h</code> header file?</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> echo ../../*/*idl*
-    ../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
-    <code class="prompt">$</code> echo ../../*/*IDL*
-    ../../net/libIDL
+<code class="prompt">$</code> echo ../../*/*idl*
+../../devel/py-idle ../../wip/idled ../../x11/acidlaunch
+<code class="prompt">$</code> echo ../../*/*IDL*
+../../net/libIDL
 </pre>
 <p>Let's take the one from the second try. So I included the
 <code class="filename">../../net/libIDL/buildlink3.mk</code> file and tried
@@ -4206,8 +4206,8 @@ couldn't have ever worked, but since the Mozilla source tree is quite
 large, I didn't want to fix it. So I added the following to the package
 <code class="filename">Makefile</code> and tried again:</p>
 <pre class="programlisting">
-    CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
-    BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
+CPPFLAGS+=              -I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
+BUILDLINK_TRANSFORM+=   -l:IDL:IDL-2
 </pre>
 <p>The latter line is needed because the package expects the library
 <code class="filename">libIDL.so</code>, but only
@@ -4224,11 +4224,11 @@ everything worked.</p>
 <div class="titlepage"><div><div><h4 class="title">
 <a name="creating.nvu.inst"></a>9.2.1.3. Installing the package</h4></div></div></div>
 <pre class="programlisting">
-    <code class="prompt">$</code> bmake CHECK_FILES=no install
-    [...]
-    <code class="prompt">$</code> bmake print-PLIST &gt;PLIST
-    <code class="prompt">$</code> bmake deinstall
-    <code class="prompt">$</code> bmake install
+<code class="prompt">$</code> bmake CHECK_FILES=no install
+[...]
+<code class="prompt">$</code> bmake print-PLIST &gt;PLIST
+<code class="prompt">$</code> bmake deinstall
+<code class="prompt">$</code> bmake install
 </pre>
 </div>
 </div>
@@ -4309,15 +4309,15 @@ sections.</p>
     <code class="varname">CATEGORIES</code>. If more than
     one is used, they need to be separated by spaces:</p>
 <pre class="programlisting">
-      archivers     cross         geography     meta-pkgs     security
-      audio         databases     graphics      misc          shells
-      benchmarks    devel         ham           multimedia    sysutils
-      biology       editors       inputmethod   net           textproc
-      cad           emulators     lang          news          time
-      chat          finance       mail          parallel      wm
-      comms         fonts         math          pkgtools      www
-      converters    games         mbone         print         x11
-    </pre>
+archivers     cross         geography     meta-pkgs     security
+audio         databases     graphics      misc          shells
+benchmarks    devel         ham           multimedia    sysutils
+biology       editors       inputmethod   net           textproc
+cad           emulators     lang          news          time
+chat          finance       mail          parallel      wm
+comms         fonts         math          pkgtools      www
+converters    games         mbone         print         x11
+</pre>
 </li>
 <li><p><code class="varname">MASTER_SITES</code>,
     <code class="varname">DYNAMIC_MASTER_SITES</code>,
@@ -4507,7 +4507,7 @@ sections.</p>
   <code class="varname">PATCHDIR</code> to the path where the patch files
   can be found, e.g.:</p>
 <pre class="programlisting">
-    PATCHDIR= ${.CURDIR}/../xemacs/patches
+PATCHDIR= ${.CURDIR}/../xemacs/patches
 </pre>
 <p>Patch files that are distributed by the author or other
     maintainers can be listed in
@@ -4568,53 +4568,65 @@ sections.</p>
 <tr>
 <td>configure script</td>
 <td>
-		<pre class="programlisting">case ${target_os} in
-		netbsd*) have_kvm=yes ;;
-		*)       have_kvm=no  ;;
-		esac</pre>
+<pre class="programlisting">
+case ${target_os} in
+netbsd*) have_kvm=yes ;;
+*)       have_kvm=no  ;;
+esac
+</pre>
 	      </td>
 <td>
-		<pre class="programlisting">AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)</pre>
-	      </td>
-</tr>
-<tr>
-<td>C source file</td>
-<td>
-		<pre class="programlisting">#if defined(__NetBSD__)
-		#  include &lt;sys/event.h&gt;
-		#endif</pre>
-	      </td>
-<td>
-		<pre class="programlisting">#if defined(HAVE_SYS_EVENT_H)
-		#  include &lt;sys/event.h&gt;
-		#endif</pre>
+<pre class="programlisting">
+AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)
+</pre>
 	      </td>
 </tr>
 <tr>
 <td>C source file</td>
 <td>
-<pre class="programlisting">int
-	      monitor_file(...)
-	      {
-	      #if defined(__NetBSD__)
-	      int fd = kqueue();
-	      ...
-	      #else
-	      ...
-	      #endif
-	      }</pre>
+<pre class="programlisting">
+#if defined(__NetBSD__)
+#  include &lt;sys/event.h&gt;
+#endif
+</pre>
 	      </td>
 <td>
-		<pre class="programlisting">int
-		monitor_file(...)
-		{
-		#if defined(HAVE_KQUEUE)
-		int fd = kqueue();
-		...
-		#else
-		...
-		#endif
-		}</pre>
+<pre class="programlisting">
+#if defined(HAVE_SYS_EVENT_H)
+#  include &lt;sys/event.h&gt;
+#endif
+</pre>
+	      </td>
+</tr>
+<tr>
+<td>C source file</td>
+<td>
+<pre class="programlisting">
+int
+monitor_file(...)
+{
+#if defined(__NetBSD__)
+        int fd = kqueue();
+        ...
+#else
+        ...
+#endif
+}
+</pre>
+	      </td>
+<td>
+<pre class="programlisting">
+int
+monitor_file(...)
+{
+#if defined(HAVE_KQUEUE)
+        int fd = kqueue();
+        ...
+#else
+	...
+#endif
+}
+</pre>
 	      </td>
 </tr>
 </tbody>
@@ -4699,8 +4711,8 @@ sections.</p>
 	    <code class="varname">MESSAGE_SUBST</code> in the package's
 	    <code class="filename">Makefile</code>:</p>
 <pre class="programlisting">
-	      MESSAGE_SUBST+=  SOMEVAR="somevalue"
-	    </pre>
+MESSAGE_SUBST+=  SOMEVAR="somevalue"
+</pre>
 <p>replaces "${SOMEVAR}" with &#8220;<span class="quote">somevalue</span>&#8221; in
 	    <code class="filename">MESSAGE</code>.  By default, substitution is
 	    performed for <code class="varname">PKGNAME</code>,
@@ -4794,8 +4806,8 @@ sections.</p>
     to the other package's <code class="filename">files</code> directory,
     e.g.:</p>
 <pre class="programlisting">
-      FILESDIR=${.CURDIR}/../xemacs/files
-    </pre>
+FILESDIR=${.CURDIR}/../xemacs/files
+</pre>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -4842,16 +4854,16 @@ sections.</p>
     <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
     regenerated properly. Example:</p>
 <pre class="programlisting">
-    wrong:
-            @echo "line 1" &gt; ${.TARGET}
-            @echo "line 2" &gt;&gt; ${.TARGET}
-            @false
+wrong:
+        @echo "line 1" &gt; ${.TARGET}
+        @echo "line 2" &gt;&gt; ${.TARGET}
+        @false
 
-    correct:
-            @echo "line 1" &gt; ${.TARGET}.tmp
-            @echo "line 2" &gt;&gt; ${.TARGET}.tmp
-            @false
-            @mv ${.TARGET}.tmp ${.TARGET}
+correct:
+        @echo "line 1" &gt; ${.TARGET}.tmp
+        @echo "line 2" &gt;&gt; ${.TARGET}.tmp
+        @false
+        @mv ${.TARGET}.tmp ${.TARGET}
 </pre>
 <p>When you run <span><strong class="command">make wrong</strong></span> twice, the file
     <code class="filename">wrong</code> will exist, although there was an error
@@ -4949,16 +4961,16 @@ sections.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="adding-to-list"></a>11.3.1. Adding things to a list</h3></div></div></div>
 <pre class="programlisting">
-    STRING=                 foo * bar `date`
-    INT_LIST=               # empty
-    ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-    EXT_LIST=               # empty
-    ANOTHER_EXT_LIST=       a=b c=d
+STRING=                 foo * bar `date`
+INT_LIST=               # empty
+ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
+EXT_LIST=               # empty
+ANOTHER_EXT_LIST=       a=b c=d
 
-    INT_LIST+=              ${STRING}               # 1
-    INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-    EXT_LIST+=              ${STRING:Q}             # 3
-    EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+INT_LIST+=              ${STRING}               # 1
+INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
+EXT_LIST+=              ${STRING:Q}             # 3
+EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 </pre>
 <p>When you add a string to an external list (example 3), it
       must be quoted. In all other cases, you must not add a quoting
@@ -4970,10 +4982,10 @@ sections.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="converting-internal-to-external"></a>11.3.2. Converting an internal list into an external list</h3></div></div></div>
 <pre class="programlisting">
-    EXT_LIST=       # empty
-    .for i in ${INT_LIST}
-    EXT_LIST+=      ${i:Q}""
-    .endfor
+EXT_LIST=       # empty
+.for i in ${INT_LIST}
+EXT_LIST+=      ${i:Q}""
+.endfor
 </pre>
 <p>This code converts the internal list
       <code class="varname">INT_LIST</code> into the external list
@@ -4988,17 +5000,17 @@ sections.</p>
 	are many ways to get it wrong and only few that can handle every
 	nastiness.</p>
 <pre class="programlisting">
-    STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
-    EXT_LIST=       string=${STRING:Q} x=second\ item
+STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
+EXT_LIST=       string=${STRING:Q} x=second\ item
 
-    all:
-            echo ${STRING}                  # 1
-            echo "${STRING}"                # 2
-            echo "${STRING:Q}"              # 3
-            echo ${STRING:Q}                # 4
-            echo x${STRING:Q} | sed 1s,.,,  # 5
-            printf "%s\\n" ${STRING:Q}""    # 6
-            env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+all:
+        echo ${STRING}                  # 1
+        echo "${STRING}"                # 2
+        echo "${STRING:Q}"              # 3
+        echo ${STRING:Q}                # 4
+        echo x${STRING:Q} | sed 1s,.,,  # 5
+        printf "%s\\n" ${STRING:Q}""    # 6
+        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 </pre>
 <p>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</p>
@@ -5051,15 +5063,15 @@ sections.</p>
 	pass the <code class="varname">CPPFLAGS</code> value properly trimmed. And
 	here is how we do it:</p>
 <pre class="programlisting">
-    CPPFLAGS=               # empty
-    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
-    CPPFLAGS+=              ${MY_CPPFLAGS}
+CPPFLAGS=               # empty
+CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+CPPFLAGS+=              ${MY_CPPFLAGS}
 
-    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
-    all:
-            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-            echo x${CONFIGURE_ARGS}x        # properly trimmed
+all:
+        echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+        echo x${CONFIGURE_ARGS}x        # properly trimmed
 </pre>
 </li>
 <li><p>The example above contains one bug: The
@@ -5079,17 +5091,17 @@ sections.</p>
 	are two completely different cases which can be solved with the
 	same trick.</p>
 <pre class="programlisting">
-    EMPTY=                  # empty
-    empty_test:
-            for i in a ${EMPTY:Q} c; do \
-                    echo "$$i"; \
-            done
+EMPTY=                  # empty
+empty_test:
+        for i in a ${EMPTY:Q} c; do \
+            echo "$$i"; \
+        done
 
-    for_test:
-    .for i in a:\ a:\test.txt
-            echo ${i:Q}
-            echo "foo"
-    .endfor
+for_test:
+.for i in a:\ a:\test.txt
+        echo ${i:Q}
+        echo "foo"
+.endfor
 </pre>
 <p>The first example will only print two of the three lines
 	we might have expected. This is because
@@ -5116,7 +5128,7 @@ sections.</p>
       contains a ``-'' character, one of the closing braces is included
       in <code class="varname">${VAR}</code> after this code executes.</p>
 <pre class="programlisting">
-    VAR:=   ${VAR:N${_othervar_:C/-//}}
+VAR:=   ${VAR:N${_othervar_:C/-//}}
 </pre>
 <p>For a more complex code snippet and a workaround, see the
       package <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/regress/make-quoting/README.html" target="_top"><code class="filename">regress/make-quoting</code></a>, testcase
@@ -5154,7 +5166,7 @@ sections.</p>
 <p>Be sure to add a RCS ID line as the first thing in any
     <code class="filename">PLIST</code> file you write:</p>
 <pre class="programlisting">
-      @comment $NetBSD$
+@comment $NetBSD$
     </pre>
 </div>
 <div class="sect1" lang="en">
@@ -5185,13 +5197,13 @@ sections.</p>
     <code class="filename">libdata/foo</code> directory removed from the
     resulting PLIST:</p>
 <pre class="programlisting">
-      PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
+PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
     </pre>
 <p>And to get all the <code class="varname">@dirrm</code> lines referring
     to a specific (shared) directory converted to
     <code class="varname">@comment</code>s:</p>
 <pre class="programlisting">
-      PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
+PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
     </pre>
 </div>
 <div class="sect1" lang="en">
@@ -5243,7 +5255,7 @@ sections.</p>
     can add variables and their expansions to this variable in the
     following way, similar to <code class="varname">MESSAGE_SUBST</code> (see <a href="#components.optional" title="10.5. Optional files">Section 10.5, &#8220;Optional files&#8221;</a>):</p>
 <pre class="programlisting">
-      PLIST_SUBST+=   SOMEVAR="somevalue"
+PLIST_SUBST+=   SOMEVAR="somevalue"
     </pre>
 <p>This replaces all occurrences of &#8220;<span class="quote">${SOMEVAR}</span>&#8221;
     in the <code class="filename">PLIST</code> with
@@ -5299,7 +5311,7 @@ sections.</p>
     is shared by a few unrelated packages, it's often not worth to add
     an extra package to remove it.  Therefore, one simply does:</p>
 <pre class="programlisting">
-      @unexec ${RMDIR} %D/path/to/shared/directory 2&gt;/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/path/to/shared/directory 2&gt;/dev/null || ${TRUE}
     </pre>
 <p>in the PLISTs of all affected packages, instead of the
     regular "@dirrm" line.</p>
@@ -5318,8 +5330,8 @@ sections.</p>
 <p>From now on, we'll discuss the second solution.  To get an
     idea of the *-dirs packages available, issue:</p>
 <pre class="programlisting">
-      <code class="prompt">%</code> cd .../pkgsrc
-      <code class="prompt">%</code> ls -d */*-dirs
+<code class="prompt">%</code> cd .../pkgsrc
+<code class="prompt">%</code> ls -d */*-dirs
     </pre>
 <p>Their use from other packages is very simple.  The
     <code class="varname">USE_DIRS</code> variable takes a list of package names
@@ -5330,7 +5342,7 @@ sections.</p>
     <code class="filename">share/applications</code>, it should have the
     following line in it:</p>
 <pre class="programlisting">
-      USE_DIRS+=      xdg-1.1
+USE_DIRS+=      xdg-1.1
     </pre>
 <p>After regenerating the PLIST using <span><strong class="command">make
     print-PLIST</strong></span>, you should get the right (commented out)
@@ -5409,19 +5421,19 @@ sections.</p>
 <p>If a dependency on a particular package is required for its libraries and
     headers, then we replace:</p>
 <pre class="programlisting">
-      DEPENDS+=   foo&gt;=1.1.0:../../category/foo
-    </pre>
+DEPENDS+=       foo&gt;=1.1.0:../../category/foo
+</pre>
 <p>with</p>
 <pre class="programlisting">
-      .include "../../category/foo/buildlink3.mk"
-    </pre>
+.include "../../category/foo/buildlink3.mk"
+</pre>
 <p>The buildlink3.mk files usually define the required dependencies.
     If you need a newer version of the dependency when using buildlink3.mk
     files, then you can define it in your Makefile; for example:</p>
 <pre class="programlisting">
-      BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
-      .include "../../category/foo/buildlink3.mk"
-    </pre>
+BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
+.include "../../category/foo/buildlink3.mk"
+</pre>
 <p>There are several <code class="filename">buildlink3.mk</code>
     files in <code class="filename">pkgsrc/mk</code>
     that handle special package issues:</p>
@@ -5487,28 +5499,28 @@ sections.</p>
       <code class="filename">buildlink3.mk</code> is taken
       from <code class="filename">pkgsrc/graphics/tiff</code>:</p>
 <pre class="programlisting">
-	# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
 
-	BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-	TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
+TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
 
-	.if !empty(BUILDLINK_DEPTH:M+)
-	BUILDLINK_DEPENDS+=     tiff
-	.endif
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=     tiff
+.endif
 
-	BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-	BUILDLINK_PACKAGES+=    tiff
+BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
+BUILDLINK_PACKAGES+=    tiff
 
-	.if !empty(TIFF_BUILDLINK3_MK:M+)
-	BUILDLINK_API_DEPENDS.tiff+=        tiff&gt;=3.6.1
-	BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-	.endif  # TIFF_BUILDLINK3_MK
+.if ${TIFF_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.tiff+=        tiff&gt;=3.6.1
+BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
+.endif  # TIFF_BUILDLINK3_MK
 
-	.include "../../devel/zlib/buildlink3.mk"
-	.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 
-	BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
-      </pre>
+BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+</pre>
 <p>The header and footer manipulate
       <code class="varname">BUILDLINK_DEPTH</code>, which is common across all
       <code class="filename">buildlink3.mk</code> files and is used to track
@@ -5690,45 +5702,42 @@ sections.</p>
 <p>The following is the recommended template for builtin.mk
       files:</p>
 <pre class="programlisting">
-	.if !defined(IS_BUILTIN.foo)
-	#
-	# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
-	# genuinely exists in the system or not.
-	#
-	IS_BUILTIN.foo?=        no
+.if !defined(IS_BUILTIN.foo)
+#
+# IS_BUILTIN.foo is set to "yes" or "no" depending on whether "foo"
+# genuinely exists in the system or not.
+#
+IS_BUILTIN.foo?=        no
 
-	# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
-	# version can be determined.
-	#
-	.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
-	BUILTIN_PKG.foo?=       foo-1.0
-	.  endif
-	.endif  # IS_BUILTIN.foo
+# BUILTIN_PKG.foo should be set here if "foo" is built-in and its package
+# version can be determined.
+#
+.  if !empty(IS_BUILTIN.foo:M[yY][eE][sS])
+BUILTIN_PKG.foo?=       foo-1.0
+.  endif
+.endif  # IS_BUILTIN.foo
 
-	.if !defined(USE_BUILTIN.foo)
-	USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
-	.  if defined(BUILTIN_PKG.foo)
-	.    for _depend_ in ${BUILDLINK_API_DEPENDS.foo}
-	.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
-	USE_BUILTIN.foo!=                                                       \
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
-	${ECHO} "yes";                                            \
-	else                                                              \
-	${ECHO} "no";                                             \
-	fi
-	.      endif
-	.    endfor
-	.  endif
-	.endif  # USE_BUILTIN.foo
+.if !defined(USE_BUILTIN.foo)
+USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
+.  if defined(BUILTIN_PKG.foo)
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.foo}
+.      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
+USE_BUILTIN.foo!=                                                       \
+        ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}            \
+        &amp;&amp; ${ECHO} "yes" || ${ECHO} "no"
+.      endif
+.    endfor
+.  endif
+.endif  # USE_BUILTIN.foo
 
-	CHECK_BUILTIN.foo?=     no
-	.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
-	#
-	# Here we place code that depends on whether USE_BUILTIN.foo is set to
-	# "yes" or "no".
-	#
-	.endif  # CHECK_BUILTIN.foo
-      </pre>
+CHECK_BUILTIN.foo?=     no
+.if !empty(CHECK_BUILTIN.foo:M[nN][oO])
+#
+# Here we place code that depends on whether USE_BUILTIN.foo is set to
+# "yes" or "no".
+#
+.endif  # CHECK_BUILTIN.foo
+</pre>
 <p>The first section sets
       <code class="varname">IS_BUILTIN.<em class="replaceable"><code>pkg</code></em></code>
       depending on if <em class="replaceable"><code>pkg</code></em> really exists
@@ -5797,9 +5806,9 @@ sections.</p>
 	using pkgsrc versions of software for all but the most basic
       bits on a NetBSD system, you can set:</p>
 <pre class="programlisting">
-	PREFER_PKGSRC=  yes
-	PREFER_NATIVE=  getopt skey tcp_wrappers
-      </pre>
+PREFER_PKGSRC=  yes
+PREFER_NATIVE=  getopt skey tcp_wrappers
+</pre>
 <p>A package <span class="emphasis"><em>must</em></span> have a
       <code class="filename">builtin.mk</code>
       file to be listed in <code class="varname">PREFER_NATIVE</code>,
@@ -5908,7 +5917,7 @@ directories anywhere in the file system:</p>
     separated by spaces: the directory name, its owner, its group and its
     numerical mode.  For example:</p>
 <pre class="programlisting">
-    MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
 </pre>
 <p>The difference between the two is exactly the same as their
     non-<code class="varname">PERMS</code> counterparts.</p>
@@ -5947,7 +5956,7 @@ installation prefix:</p>
     specifies their owner, their group and their numeric permissions, in
     this order.  For example:</p>
 <pre class="programlisting">
-    SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+SUPPORT_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
 </pre>
 <p>The difference between the two is exactly the same as their
     non-<code class="varname">PERMS</code> counterparts.</p>
@@ -6029,7 +6038,7 @@ achieve it.  If you are lucky, though, it may be as easy as passing an
 extra flag to the configuration script; this is the case of GNU Autoconf-
 generated files:</p>
 <pre class="programlisting">
-    CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
 </pre>
 <p>Note that this specifies where the package has to <span class="emphasis"><em>look
 for</em></span> its configuration files, not where they will be originally
@@ -6059,8 +6068,8 @@ used.  Check out <a href="#files-outside-prefix" title="14.1.2. File manipulatio
 about their syntax and their purpose.  Here is an example, taken from the
 <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/mail/mutt/README.html" target="_top"><code class="filename">mail/mutt</code></a> package:</p>
 <pre class="programlisting">
-    EGDIR=        ${PREFIX}/share/doc/mutt/samples
-    CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+EGDIR=        ${PREFIX}/share/doc/mutt/samples
+CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 </pre>
 <p>Note that the <code class="varname">EGDIR</code> variable is specific to that
 package and has no meaning outside it.</p>
@@ -6093,7 +6102,7 @@ to:</p>
     without its extension, to the <code class="varname">RCD_SCRIPTS</code> variable.
     Continuing the previous example:</p>
 <pre class="programlisting">
-    RCD_SCRIPTS+=   cupsd
+RCD_SCRIPTS+=   cupsd
 </pre>
 </li>
 </ol></div>
@@ -6130,7 +6139,7 @@ installation, it can do so by using the pkginstall framework.</p>
 <code class="varname">PKG_USERS</code> variable.  Each entry has the following
 syntax:</p>
 <pre class="programlisting">
-    user:group
+user:group
 </pre>
 <p>Further specification of user details may be done by setting
 per-user variables.
@@ -6147,7 +6156,7 @@ not specified.</p>
 <p>Similarly, groups can be created by adding entries to the
 <code class="varname">PKG_GROUPS</code> variable, whose syntax is:</p>
 <pre class="programlisting">
-    group
+group
 </pre>
 <p>The numeric GID of the group may be set by defining
 <code class="varname">PKG_GID.<em class="replaceable"><code>group</code></em></code>.</p>
@@ -6171,7 +6180,7 @@ accomplish this task.</p>
 add some hooks to the installation scripts to handle it.  Consider the
 following example, taken from <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/zsh/README.html" target="_top"><code class="filename">shells/zsh</code></a>:</p>
 <pre class="programlisting">
-    PKG_SHELL=      ${PREFIX}/bin/zsh
+PKG_SHELL=      ${PREFIX}/bin/zsh
 </pre>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -6197,7 +6206,7 @@ database files within each of those directories.  For convenience, if the
 directory path is relative, it is taken to be relative to the package's
 installation prefix.  Consider the following example, taken from <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/fonts/dbz-ttf/README.html" target="_top"><code class="filename">fonts/dbz-ttf</code></a>:</p>
 <pre class="programlisting">
-    FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
 </pre>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -6245,51 +6254,51 @@ by the hypothetical ``wibble'' package, either in the package
 e.g. <code class="filename">options.mk</code>, that is included by the
 main package <code class="filename">Makefile</code>.</p>
 <pre class="programlisting">
-    PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
-    PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
-    PKG_OPTIONS_OPTIONAL_GROUPS=    database
-    PKG_OPTIONS_GROUP.database=     mysql pgsql
-    PKG_SUGGESTED_OPTIONS=          wibble-foo
-    PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
-    PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
+PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
+PKG_OPTIONS_OPTIONAL_GROUPS=    database
+PKG_OPTIONS_GROUP.database=     mysql pgsql
+PKG_SUGGESTED_OPTIONS=          wibble-foo
+PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
+PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
 
-    .include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
-    # this package was previously named wibble2
-    .if defined(PKG_OPTIONS.wibble2)
-    PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
-    PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR} instead."
-    .endif
+# this package was previously named wibble2
+.if defined(PKG_OPTIONS.wibble2)
+PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
+PKG_OPTIONS_DEPRECATED_WARNINGS+= \
+        "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR} instead."
+.endif
 
-    .include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.options.mk"
 
-    # Package-specific option-handling
+# Package-specific option-handling
 
-    ###
-    ### FOO support
-    ###
-    .if !empty(PKG_OPTIONS:Mwibble-foo)
-    CONFIGURE_ARGS+=    --enable-foo
-    .endif
+###
+### FOO support
+###
+.if !empty(PKG_OPTIONS:Mwibble-foo)
+CONFIGURE_ARGS+=    --enable-foo
+.endif
 
-    ###
-    ### LDAP support
-    ###
-    .if !empty(PKG_OPTIONS:Mldap)
-    .  include "../../databases/openldap-client/buildlink3.mk"
-    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap-client}
-    .endif
+###
+### LDAP support
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap-client}
+.endif
 
-    ###
-    ### database support
-    ###
-    .if !empty(PKG_OPTIONS:Mmysql)
-    .  include "../../mk/mysql.buildlink3.mk"
-    .endif
-    .if !empty(PKG_OPTIONS:Mpgsql)
-    .  include "../../mk/pgsql.buildlink3.mk"
-    .endif
+###
+### database support
+###
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../mk/mysql.buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
+.endif
 </pre>
 <p>The first section contains the information about which build
 options are supported by the package, and any default options settings
@@ -6370,7 +6379,7 @@ options.</p>
 each option.  The correct way to check for an option is to check
 whether it is listed in <code class="varname">PKG_OPTIONS</code>:</p>
 <pre class="programlisting">
-    .if !empty(PKG_OPTIONS:M<em class="replaceable"><code>option</code></em>)
+.if !empty(PKG_OPTIONS:M<em class="replaceable"><code>option</code></em>)
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -6534,17 +6543,17 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <p>The following lines are taken from
 	<code class="filename">pkgsrc/wm/scwm/Makefile</code>:</p>
 <pre class="programlisting">
-	  EVAL_PREFIX+=           GTKDIR=gtk+
-	  CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-	  CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-	  CONFIGURE_ARGS+=        --enable-multibyte
-	</pre>
+EVAL_PREFIX+=           GTKDIR=gtk+
+CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+CONFIGURE_ARGS+=        --enable-multibyte
+</pre>
 <p>Specific defaults can be defined for the packages
 	evaluated using <code class="varname">EVAL_PREFIX</code>, by using a
 	definition of the form:</p>
 <pre class="programlisting">
-	  GTKDIR_DEFAULT= ${LOCALBASE}
-	</pre>
+GTKDIR_DEFAULT= ${LOCALBASE}
+</pre>
 <p>where <code class="varname">GTKDIR</code> corresponds
 	to the first definition in
 	the <code class="varname">EVAL_PREFIX</code> pair.</p>
@@ -6628,8 +6637,8 @@ support.</span>&#8221; The file is sorted by option names.</p>
       additional filenames using the <code class="literal">+=</code>
       operator, but you have write for example:</p>
 <pre class="programlisting">
-	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
-      </pre>
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+</pre>
 <p>Each distfile is fetched from a list of sites, usually
       <code class="varname">MASTER_SITES</code>. If the package has multiple
       <code class="varname">DISTFILES</code> or multiple
@@ -6640,12 +6649,12 @@ support.</span>&#8221; The file is sorted by option names.</p>
       <code class="filename"><em class="replaceable"><code>distfile</code></em></code>
       (including the suffix) can be found.</p>
 <pre class="programlisting">
-	DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
-	DISTFILES+=     foo-file.tar.gz
-	SITES.foo-file.tar.gz= \
-	http://www.somewhere.com/somehow/ \
-	http://www.somewhereelse.com/mirror/somehow/
-      </pre>
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=     foo-file.tar.gz
+SITES.foo-file.tar.gz= \
+http://www.somewhere.com/somehow/ \
+http://www.somewhereelse.com/mirror/somehow/
+</pre>
 <p>When actually fetching the distfiles, each item from
       <code class="varname">MASTER_SITES</code> or
       <code class="varname">SITES.*</code> gets the name of each distfile
@@ -6656,39 +6665,39 @@ support.</span>&#8221; The file is sorted by option names.</p>
       that gets the name of the distfile as a parameter. In this
       case, the definition would look like:</p>
 <pre class="programlisting">
-	MASTER_SITES=   http://www.example.com/download.cgi?file=
-      </pre>
+MASTER_SITES=   http://www.example.com/download.cgi?file=
+</pre>
 <p>There are some predefined values for
       <code class="varname">MASTER_SITES</code>, which can be used in
       packages.  The names of the variables should speak for
       themselves.</p>
 <pre class="programlisting">
-	${MASTER_SITE_APACHE}
-	${MASTER_SITE_BACKUP}
-	${MASTER_SITE_CYGWIN}
-	${MASTER_SITE_DEBIAN}
-	${MASTER_SITE_FREEBSD}
-	${MASTER_SITE_FREEBSD_LOCAL}
-	${MASTER_SITE_GENTOO}
-	${MASTER_SITE_GNOME}
-	${MASTER_SITE_GNU}
-	${MASTER_SITE_GNUSTEP}
-	${MASTER_SITE_IFARCHIVE}
-	${MASTER_SITE_KDE}
-	${MASTER_SITE_MOZILLA}
-	${MASTER_SITE_MYSQL}
-	${MASTER_SITE_OPENOFFICE}
-	${MASTER_SITE_PERL_CPAN}
-	${MASTER_SITE_PGSQL}
-	${MASTER_SITE_R_CRAN}
-	${MASTER_SITE_SOURCEFORGE}
-	${MASTER_SITE_SOURCEFORGE_JP}
-	${MASTER_SITE_SUNSITE}
-	${MASTER_SITE_SUSE}
-	${MASTER_SITE_TEX_CTAN}
-	${MASTER_SITE_XCONTRIB}
-	${MASTER_SITE_XEMACS}
-      </pre>
+${MASTER_SITE_APACHE}
+${MASTER_SITE_BACKUP}
+${MASTER_SITE_CYGWIN}
+${MASTER_SITE_DEBIAN}
+${MASTER_SITE_FREEBSD}
+${MASTER_SITE_FREEBSD_LOCAL}
+${MASTER_SITE_GENTOO}
+${MASTER_SITE_GNOME}
+${MASTER_SITE_GNU}
+${MASTER_SITE_GNUSTEP}
+${MASTER_SITE_IFARCHIVE}
+${MASTER_SITE_KDE}
+${MASTER_SITE_MOZILLA}
+${MASTER_SITE_MYSQL}
+${MASTER_SITE_OPENOFFICE}
+${MASTER_SITE_PERL_CPAN}
+${MASTER_SITE_PGSQL}
+${MASTER_SITE_R_CRAN}
+${MASTER_SITE_SOURCEFORGE}
+${MASTER_SITE_SOURCEFORGE_JP}
+${MASTER_SITE_SUNSITE}
+${MASTER_SITE_SUSE}
+${MASTER_SITE_TEX_CTAN}
+${MASTER_SITE_XCONTRIB}
+${MASTER_SITE_XEMACS}
+</pre>
 <p>Some explanations for the less self-explaining ones:
       <code class="varname">MASTER_SITE_BACKUP</code> contains backup sites
       for packages that are maintained in <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/%24%7BDIST_SUBDIR%7D" target="_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}</a>.  <code class="varname">MASTER_SITE_LOCAL</code> contains local
@@ -6699,9 +6708,9 @@ support.</span>&#8221; The file is sorted by option names.</p>
       <span class="emphasis"><em>must</em></span> use the following construct to
       specify a subdirectory:</p>
 <pre class="programlisting">
-	MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
-	MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
-      </pre>
+MASTER_SITES=   ${MASTER_SITE_GNU:=subdirectory/name/}
+MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=project_name/}
+</pre>
 <p>Note the trailing slash after the subdirectory
       name.</p>
 </div>
@@ -6714,8 +6723,8 @@ support.</span>&#8221; The file is sorted by option names.</p>
       user). If the files do not exist, they are fetched using
       commands of the form</p>
 <pre class="programlisting">
-	${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
-      </pre>
+${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+</pre>
 <p>where <code class="literal">${site}</code> varies through
       several possibilities in turn: first,
       <code class="varname">MASTER_SITE_OVERRIDE</code> is tried, then the
@@ -6869,11 +6878,12 @@ support.</span>&#8221; The file is sorted by option names.</p>
     &#8220;<span class="quote">yes</span>&#8221; instead. What happens in the
     <span class="emphasis"><em>configure</em></span> phase is roughly:</p>
 <pre class="programlisting">
-      .for d in ${CONFIGURE_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${CONFIGURE_ENV} \
-      ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-      .endfor
-    </pre>
+.for d in ${CONFIGURE_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.endfor
+</pre>
 <p><code class="varname">CONFIGURE_DIRS</code> (default:
     &#8220;<span class="quote">.</span>&#8221;) is a list of pathnames relative to
     <code class="varname">WRKSRC</code>. In each of these directories, the
@@ -6902,12 +6912,15 @@ support.</span>&#8221; The file is sorted by option names.</p>
 <p>For building a package, a rough equivalent of the
     following code is executed.</p>
 <pre class="programlisting">
-      .for d in ${BUILD_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-      ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-      -f ${MAKE_FILE} ${BUILD_TARGET}
-      .endfor
-    </pre>
+.for d in ${BUILD_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
+                -f ${MAKE_FILE} \
+                ${BUILD_TARGET}
+.endfor
+</pre>
 <p><code class="varname">BUILD_DIRS</code> (default:
     &#8220;<span class="quote">.</span>&#8221;) is a list of pathnames relative to
     <code class="varname">WRKSRC</code>. In each of these directories,
@@ -6944,12 +6957,15 @@ support.</span>&#8221; The file is sorted by option names.</p>
     before and after this code, much magic is performed to do
     consistency checks, registering the package, and so on.</p>
 <pre class="programlisting">
-      .for d in ${INSTALL_DIRS}
-      cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
-      ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-      -f ${MAKE_FILE} ${BUILD_TARGET}
-      .endfor
-    </pre>
+.for d in ${INSTALL_DIRS}
+        cd ${WRKSRC} \
+        &amp;&amp; cd ${d} \
+        &amp;&amp; env ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} \
+                ${INSTALL_TARGET}
+.endfor
+</pre>
 <p>The variable's meanings are analogous to the ones in the
     <span class="emphasis"><em>build</em></span> phase.
     <code class="varname">INSTALL_DIRS</code> defaults to
@@ -7500,7 +7516,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2707770"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id2707841"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7510,7 +7526,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2707780"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id2707850"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7521,7 +7537,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2707790"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id2707861"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7587,7 +7603,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
 <dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
 <dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
@@ -7669,11 +7685,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     which will be needed, and this should be set in the package's
     <code class="filename">Makefile</code>, e.g.:</p>
 <pre class="programlisting">
-      INTERACTIVE_STAGE=      build
+INTERACTIVE_STAGE=      build
     </pre>
 <p>Multiple interactive stages can be specified:</p>
 <pre class="programlisting">
-      INTERACTIVE_STAGE=      configure install
+INTERACTIVE_STAGE=      configure install
     </pre>
 <p>The user can then decide to skip this package by setting the
     <code class="varname">BATCH</code> variable.</p>
@@ -7725,18 +7741,18 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="varname">LICENSE</code> variable to a string identifying the
     license, e.g. in <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>:</p>
 <pre class="programlisting">
-      LICENSE=        xv-license
+LICENSE=        xv-license
     </pre>
 <p>When trying to build, the user will get a notice that the
     package is covered by a license which has not been placed in the
     <code class="varname">ACCEPTABLE_LICENSES</code> variable:</p>
 <pre class="programlisting">
-      <code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
-      ===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
-      ===&gt;     To view the license, enter "/usr/bin/make show-license".
-      ===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
-      ===&gt;     ACCEPTABLE_LICENSES+=xv-license
-      *** Error code 1
+<code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
+===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
+===&gt;     To view the license, enter "/usr/bin/make show-license".
+===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
+===&gt;     ACCEPTABLE_LICENSES+=xv-license
+*** Error code 1
     </pre>
 <p>The license can be viewed with <span><strong class="command">make
     show-license</strong></span>, and if the user so chooses, the line
@@ -7744,7 +7760,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     convey to pkgsrc that it should not in the future fail because of
     that license:</p>
 <pre class="programlisting">
-      ACCEPTABLE_LICENSES+=xv-license
+ACCEPTABLE_LICENSES+=xv-license
     </pre>
 <p>When adding a package with a new license, the license text
     should be added to <code class="filename">pkgsrc/licenses</code> for
@@ -7858,7 +7874,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>The format for a <code class="varname">BUILD_DEPENDS</code> and a
     <code class="varname">DEPENDS</code> definition is:</p>
 <pre class="programlisting">
-      &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
+&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
     </pre>
 <p>Please note that the &#8220;<span class="quote">pre-req-package-name</span>&#8221;
     may include any of the wildcard version numbers recognized by
@@ -7869,7 +7885,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	libraries to build or run, and if that package has a
 	<code class="filename">buildlink3.mk</code> file available, use it:</p>
 <pre class="programlisting">
-	  .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 	</pre>
 </li>
 <li>
@@ -7878,7 +7894,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	file available, use the <code class="varname">BUILD_DEPENDS</code>
 	definition:</p>
 <pre class="programlisting">
-	  BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 	</pre>
 </li>
 <li>
@@ -7887,11 +7903,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	available, this is specified using the
 	<code class="varname">DEPENDS</code> definition. For example:</p>
 <pre class="programlisting">
-	  DEPENDS+=       xpm-3.4j:../../graphics/xpm
+DEPENDS+=       xpm-3.4j:../../graphics/xpm
 	</pre>
 <p>You can also use wildcards in package dependences:</p>
 <pre class="programlisting">
-	  DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
+DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
 	</pre>
 <p>Note that such wildcard dependencies are retained when
 	creating binary packages.  The dependency is checked when
@@ -7906,7 +7922,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	will only build against a certain minimum version of a
 	pre-requisite:</p>
 <pre class="programlisting">
-	  DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
+DEPENDS+=       tiff&gt;=3.5.4:../../graphics/tiff
 	</pre>
 <p>This means that the package will build against version
 	3.5.4 of the tiff library or newer.  Such a dependency may
@@ -7920,7 +7936,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	correctly.  Such recommendations can be expressed using
 	<code class="varname">ABI_DEPENDS</code>:</p>
 <pre class="programlisting">
-	  ABI_DEPENDS+=   tiff&gt;=3.6.1:../../graphics/tiff
+ABI_DEPENDS+=   tiff&gt;=3.6.1:../../graphics/tiff
 	</pre>
 <p>In addition to the above <code class="varname">DEPENDS</code>
 	line, this denotes that while a package will build against
@@ -7954,7 +7970,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	be able to execute the latex binary from the teTeX package
 	when it runs, and that is specified:</p>
 <pre class="programlisting">
-	  DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
+DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 	</pre>
 <p>The comment about wildcard dependencies from previous
 	paragraph applies here, too.</p>
@@ -7982,11 +7998,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     install the same shared library, thus you set in
     <code class="filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
 <pre class="programlisting">
-      CONFLICTS=      Xaw-Xpm-[0-9]*
+CONFLICTS=      Xaw-Xpm-[0-9]*
     </pre>
 <p>and in <code class="filename">pkgsrc/x11/Xaw-Xpm/Makefile</code>:</p>
 <pre class="programlisting">
-      CONFLICTS=      Xaw3d-[0-9]*
+CONFLICTS=      Xaw3d-[0-9]*
     </pre>
 <p>Packages will automatically conflict with other packages
     with the name prefix and a different version
@@ -8059,8 +8075,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     (2, ...). The &#8220;<span class="quote">nb</span>&#8221; is treated like a
     &#8220;<span class="quote">.</span>&#8221; by the package tools. e.g.</p>
 <pre class="programlisting">
-      DISTNAME=       foo-17.42
-      PKGREVISION=    9
+DISTNAME=       foo-17.42
+PKGREVISION=    9
     </pre>
 <p>will result in a <code class="varname">PKGNAME</code> of
     &#8220;<span class="quote">foo-17.42nb9</span>&#8221;. If you want to use the original
@@ -8071,7 +8087,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="varname">PKGREVISION</code> should be removed, e.g. on a new
     minor release of the above package, things should be like:</p>
 <pre class="programlisting">
-      DISTNAME=       foo-17.43
+DISTNAME=       foo-17.43
     </pre>
 <p><code class="varname">PKGREVISION</code> should be incremented for any
     non-trivial change in the resulting binary package.  Without a
@@ -8084,20 +8100,26 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="varname">PKGREVISION</code> is appropriate.  Examples of
     changes that do not merit increasing
     <code class="varname">PKGREVISION</code> are:</p>
-<pre class="programlisting">
-      Changing <code class="varname">HOMEPAGE</code>, <code class="varname">MAINTAINER</code>,
-      or comments in Makefile.
-      Changing build variables if the resulting binary package is the same.
-      Changing <code class="filename">DESCR</code>.
-      Adding <code class="varname">PKG_OPTIONS</code> if the default options don't change.
-    </pre>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Changing <code class="varname">HOMEPAGE</code>, <code class="varname">MAINTAINER</code>,
+      or comments in Makefile.</p></li>
+<li><p>
+      Changing build variables if the resulting binary package is the same.</p></li>
+<li><p>
+      Changing <code class="filename">DESCR</code>.</p></li>
+<li><p>
+      Adding <code class="varname">PKG_OPTIONS</code> if the default options don't change.</p></li>
+</ul></div>
 <p>Examples of changes that do merit an increase to
     <code class="varname">PKGREVISION</code> include:</p>
-<pre class="programlisting">
-      Security fixes
-      Changes or additions to a patch file
-      Changes to the <code class="filename">PLIST</code>
-    </pre>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+      Security fixes</p></li>
+<li><p>
+      Changes or additions to a patch file</p></li>
+<li><p>
+      Changes to the <code class="filename">PLIST</code></p></li>
+</ul></div>
 <p>PKGREVISION must also be incremented when dependencies have ABI
     changes.</p>
 </div>
@@ -8110,13 +8132,13 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     easy-to-use interface for replacing text in files.
     Example:</p>
 <pre class="programlisting">
-      SUBST_CLASSES+=                 fix-paths
-      SUBST_STAGE.fix-paths=          pre-configure
-      SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
-      SUBST_FILES.fix-paths=          src/*.c
-      SUBST_FILES.fix-paths+=         scripts/*.sh
-      SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
-      SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_FILES.fix-paths=          src/*.c
+SUBST_FILES.fix-paths+=         scripts/*.sh
+SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
     </pre>
 <p><code class="varname">SUBST_CLASSES</code> is a list of identifiers
     that are used to identify the different SUBST blocks that are
@@ -8180,9 +8202,9 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="varname">FETCH_MESSAGE</code> to a list of lines that are
     displayed to the user before aborting the build. Example:</p>
 <pre class="programlisting">
-      FETCH_MESSAGE=  "Please download the files"
-      FETCH_MESSAGE+= "    "${DISTFILES:Q}
-      FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
+FETCH_MESSAGE=  "Please download the files"
+FETCH_MESSAGE+= "    "${DISTFILES:Q}
+FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     </pre>
 </div>
 <div class="sect2" lang="en">
@@ -8251,8 +8273,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	&#8220;<span class="quote">ar</span>&#8221;, &#8220;<span class="quote">ranlib</span>&#8221;, and &#8220;<span class="quote">ld
 	-Bshareable</span>&#8221; commands, and instead use:</p>
 <pre class="programlisting">
-	  ${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} \
-	  -rpath ${PREFIX}/lib -version-info major:minor
+${LIBTOOL} --mode=link \
+    ${CC} -o ${.TARGET:.a=.la} \
+        ${OBJS:.o=.lo} \
+        -rpath ${PREFIX}/lib \
+        -version-info major:minor
 	</pre>
 <p>Note that the library is changed to have a
 	<code class="filename">.la</code> extension, and the objects are
@@ -8267,22 +8292,22 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	shared library version.</p>
 <p>From the libtool manual:</p>
 <pre class="programlisting">
-	  So, libtool library versions are described by three integers:
+So, libtool library versions are described by three integers:
 
-	  CURRENT
-	  The most recent interface number that this library implements.
+CURRENT
+The most recent interface number that this library implements.
 
-	  REVISION
-	  The implementation number of the CURRENT interface.
+REVISION
+The implementation number of the CURRENT interface.
 
-	  AGE
-	  The difference between the newest and oldest interfaces that
-	  this library implements.  In other words, the library implements
-	  all the interface numbers in the range from number `CURRENT -
-	  AGE' to `CURRENT'.
+AGE
+The difference between the newest and oldest interfaces that
+this library implements.  In other words, the library implements
+all the interface numbers in the range from number `CURRENT -
+AGE' to `CURRENT'.
 
-	  If two libraries have identical CURRENT and AGE numbers, then the
-	  dynamic linker chooses the library with the greater REVISION number.
+If two libraries have identical CURRENT and AGE numbers, then the
+dynamic linker chooses the library with the greater REVISION number.
 	</pre>
 <p>The &#8220;<span class="quote">-release</span>&#8221; option will produce
 	different results for a.out and ELF (excluding symlinks)
@@ -8318,11 +8343,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	expects you to change that argument to be the
 	<code class="filename">.la</code> file. e.g.</p>
 <pre class="programlisting">
-	  ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
+${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
 	</pre>
 <p>should be changed to:</p>
 <pre class="programlisting">
-	  ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></em> <em class="replaceable"><code>../somelib/somelib.la</code></em>
+${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></em> <em class="replaceable"><code>../somelib/somelib.la</code></em>
 	</pre>
 <p>and it will do the right thing with the libraries.</p>
 </li>
@@ -8332,7 +8357,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 	--mode=install</span>&#8221;, and change the library name to
 	<code class="filename">.la</code>. e.g.</p>
 <pre class="programlisting">
-	  ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
+${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
 	</pre>
 <p>This will install the static <code class="filename">.a</code>,
 	shared library, any needed symlinks, and run
@@ -8393,27 +8418,26 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     target.</p>
 <p>For packages that need only autoconf:</p>
 <pre class="programlisting">
-      AUTOCONF_REQD=  2.50            # if default version is not good enough
-      USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
-      ...
+AUTOCONF_REQD=  2.50            # if default version is not good enough
+USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+...
 
-      pre-configure:
-      cd ${WRKSRC}; autoconf
+pre-configure:
+        cd ${WRKSRC} &amp;&amp; autoconf
 
-      ...
+...
     </pre>
 <p>and for packages that need automake and autoconf:</p>
 <pre class="programlisting">
-      AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
-      USE_TOOLS+=     automake        # use "automake14" for automake-1.4
-      ...
+AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
+USE_TOOLS+=     automake        # use "automake14" for automake-1.4
+...
 
-      pre-configure:
-      cd ${WRKSRC};                          \
-      aclocal; autoheader;                   \
-      automake -a --foreign -i; autoconf
+pre-configure:
+        set -e; cd ${WRKSRC}; \
+        aclocal; autoheader; automake -a --foreign -i; autoconf
 
-      ...
+...
     </pre>
 <p>Packages which use GNU Automake will almost certainly
     require GNU Make.</p>
@@ -8529,43 +8553,43 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>To distinguish between 4.4 BSD-derived systems and the
         rest of the world, you should use the following code.</p>
 <pre class="programlisting">
-    #include &lt;sys/param.h&gt;
-    #if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
-      /* BSD-specific code goes here */
-    #else
-      /* non-BSD-specific code goes here */
-    #endif
+#include &lt;sys/param.h&gt;
+#if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
+/* BSD-specific code goes here */
+#else
+/* non-BSD-specific code goes here */
+#endif
 </pre>
 <p>If this distinction is not fine enough, you can also test
 	for the following macros.</p>
 <pre class="programlisting">
-    FreeBSD     __FreeBSD__
-    DragonFly   __DragonFly__
-    Interix     __INTERIX
-    IRIX        __sgi (TODO: get a definite source for this)
-    Linux       linux, __linux, __linux__
-    NetBSD      __NetBSD__
-    OpenBSD     __OpenBSD__
-    Solaris     sun, __sun
+FreeBSD     __FreeBSD__
+DragonFly   __DragonFly__
+Interix     __INTERIX
+IRIX        __sgi (TODO: get a definite source for this)
+Linux       linux, __linux, __linux__
+NetBSD      __NetBSD__
+OpenBSD     __OpenBSD__
+Solaris     sun, __sun
 </pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="fixes.build.cpp.arch"></a>18.5.1.2. C preprocessor macros to identify the hardware architecture</h4></div></div></div>
 <pre class="programlisting">
-    i386        i386, __i386, __i386__
-    MIPS        __mips
-    SPARC       sparc, __sparc
+i386        i386, __i386, __i386__
+MIPS        __mips
+SPARC       sparc, __sparc
 </pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="fixes.build.cpp.compiler"></a>18.5.1.3. C preprocessor macros to identify the compiler</h4></div></div></div>
 <pre class="programlisting">
-    GCC         __GNUC__ (major version), __GNUC_MINOR__
-    MIPSpro     _COMPILER_VERSION (0x741 for MIPSpro 7.41)
-    SunPro      __SUNPRO_C (0x570 for Sun C 5.7)
-    SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
+GCC         __GNUC__ (major version), __GNUC_MINOR__
+MIPSpro     _COMPILER_VERSION (0x741 for MIPSpro 7.41)
+SunPro      __SUNPRO_C (0x570 for Sun C 5.7)
+SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
 </pre>
 </div>
 </div>
@@ -8652,18 +8676,18 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>When you are using the SunPro compiler, there is another
 possibility. That compiler cannot handle the following code:</p>
 <pre class="programlisting">
-    extern int extern_func(int);
+extern int extern_func(int);
 
-    static inline int
-    inline_func(int x)
-    {
+static inline int
+inline_func(int x)
+{
         return extern_func(x);
-    }
+}
 
-    int main(void)
-    {
+int main(void)
+{
         return 0;
-    }
+}
 </pre>
 <p>It generates the code for <code class="function">inline_func</code> even if
 that function is never used. This code then refers to
@@ -8697,8 +8721,8 @@ of functions.</p>
     directory at a time. As such, you should call
     <code class="literal">${INSTALL_*_DIR}</code> like this:</p>
 <pre class="programlisting">
-      ${INSTALL_DATA_DIR} ${PREFIX}/dir1
-      ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+${INSTALL_DATA_DIR} ${PREFIX}/dir1
+${INSTALL_DATA_DIR} ${PREFIX}/dir2
     </pre>
 <p>You can also just append &#8220;<span class="quote"><code class="literal">dir1
     dir2</code></span>&#8221; to the
@@ -8736,7 +8760,7 @@ of functions.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="installing-score-files"></a>18.6.3. Installing score files</h3></div></div></div>
+<a name="installing-score-files"></a>18.6.3. Installing highscore files</h3></div></div></div>
 <p>Certain packages, most of them in the games category, install
     a score file that allows all users on the system to record their
     highscores.  In order for this to work, the binaries need to be
@@ -8764,11 +8788,11 @@ of functions.</p>
       following definitions in your <code class="filename">Makefile</code> (we
     shall use <span><strong class="command">tclsh</strong></span> in this example):</p>
 <pre class="programlisting">
-      REPLACE_INTERPRETER+=   tcl
-      REPLACE.tcl.old=        .*/bin/tclsh
-      REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
-      REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
-      # relative to ${WRKSRC}, just as in REPLACE_PERL
+REPLACE_INTERPRETER+=   tcl
+REPLACE.tcl.old=        .*/bin/tclsh
+REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
+REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
+# relative to ${WRKSRC}, just as in REPLACE_PERL
     </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
@@ -8796,7 +8820,7 @@ of functions.</p>
     <code class="varname">PERL5_PACKLIST</code> to a space-separated list of
     paths to packlist files, e.g.:</p>
 <pre class="programlisting">
-      PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
+PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     </pre>
 <p>The variables <code class="varname">PERL5_SITELIB</code>,
     <code class="varname">PERL5_SITEARCH</code>, and
@@ -9372,8 +9396,8 @@ of functions.</p>
   imported with a vendor tag of &#8220;<span class="quote">TNF</span>&#8221; and a release tag of
   &#8220;<span class="quote">pkgsrc-base</span>&#8221;, e.g:</p>
 <pre class="programlisting">
-    <code class="prompt">$</code> cd .../pkgsrc/category/pkgname
-    <code class="prompt">$</code> cvs import pkgsrc/category/pkgname TNF pkgsrc-base
+<code class="prompt">$</code> cd .../pkgsrc/category/pkgname
+<code class="prompt">$</code> cvs import pkgsrc/category/pkgname TNF pkgsrc-base
 </pre>
 <p>Remember to move the directory from which you imported out of
   the way, or cvs will complain the next time you &#8220;<span class="quote">cvs
@@ -9495,7 +9519,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2713521"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713470"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9511,7 +9535,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2713559"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2713509"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9529,7 +9553,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2713600"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2713549"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9547,7 +9571,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2713639"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2713589"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9560,7 +9584,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2713659"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2713677"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9576,7 +9600,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2713757"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2713707"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9600,7 +9624,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2713834"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2713784"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9625,7 +9649,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2713873"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2713822"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9673,7 +9697,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2713934"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2713953"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9792,9 +9816,11 @@ give you a general idea on the minimum required tools:</p>
 <p>Almost all GNOME applications use the GNU Autotools as their
     build system.  As a general rule you will need to tell this to your
     package:</p>
-<pre class="programlisting">GNU_CONFIGURE=yes
+<pre class="programlisting">
+GNU_CONFIGURE=yes
 USE_LIBTOOL=yes
-USE_TOOLS+=gmake</pre>
+USE_TOOLS+=gmake
+</pre>
 </li>
 <li>
 <p>If the package uses pkg-config to detect dependencies, add this
@@ -10122,7 +10148,7 @@ details.</p>
 	the default value and just define it as in the following
 	example.</p>
 <pre class="programlisting">
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
 </pre>
 <p>Because of the selection of this default value, the same
 	value appears in many package Makefiles. Similarly for
@@ -10157,13 +10183,13 @@ details.</p>
 	<code class="varname">CONFIGURE_ARGS</code>. To make the effect more
 	clear, here is an example:</p>
 <pre class="programlisting">
-    CONFIGURE_ARGS=         # none
-    CFLAGS=                 -O
-    CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
+CONFIGURE_ARGS=         # none
+CFLAGS=                 -O
+CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
 
-    CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
+CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
 
-    CFLAGS+=                -Wall
+CFLAGS+=                -Wall
 	</pre>
 <p>This code shows how the use of the <code class="literal">:=</code>
 	operator can quickly lead to unexpected results. The first
@@ -10516,41 +10542,41 @@ details.</p>
 <div class="titlepage"><div><div><h3 class="title">
 <a name="example-Makefile"></a>A.1.1. Makefile</h3></div></div></div>
 <pre class="programlisting">
-    # $NetBSD$
-    #
+# $NetBSD$
+#
 
-    DISTNAME=       bison-1.25
-    CATEGORIES=     devel
-    MASTER_SITES=   ${MASTER_SITE_GNU}
+DISTNAME=       bison-1.25
+CATEGORIES=     devel
+MASTER_SITES=   ${MASTER_SITE_GNU}
 
-    MAINTAINER=     thorpej@NetBSD.org
-    HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
-    COMMENT=        GNU yacc clone
+MAINTAINER=     thorpej@NetBSD.org
+HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+COMMENT=        GNU yacc clone
 
-    GNU_CONFIGURE=  yes
-    INFO_FILES=     bison.info
+GNU_CONFIGURE=  yes
+INFO_FILES=     bison.info
 
-    .include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
 </pre>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="example-descr"></a>A.1.2. DESCR</h3></div></div></div>
 <pre class="programlisting">
-    GNU version of yacc.  Can make re-entrant parsers, and numerous other
-    improvements.  Why you would want this when Berkeley <a href="http://netbsd.gw.com/cgi-bin/man-cgi?yacc+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
-    of the NetBSD source tree is beyond me.
+GNU version of yacc.  Can make re-entrant parsers, and numerous other
+improvements.  Why you would want this when Berkeley <a href="http://netbsd.gw.com/cgi-bin/man-cgi?yacc+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
+of the NetBSD source tree is beyond me.
 </pre>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="example-plist"></a>A.1.3. PLIST</h3></div></div></div>
 <pre class="programlisting">
-    @comment $NetBSD$
-    bin/bison
-    man/man1/bison.1.gz
-    share/bison.simple
-    share/bison.hairy
+@comment $NetBSD$
+bin/bison
+man/man1/bison.1.gz
+share/bison.simple
+share/bison.hairy
 </pre>
 </div>
 <div class="sect2" lang="en">
