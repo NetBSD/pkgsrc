@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.7 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.8 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -108,9 +108,11 @@ give you a general idea on the minimum required tools:</para>
     build system.  As a general rule you will need to tell this to your
     package:</para>
 
-    <programlisting>GNU_CONFIGURE=yes
+    <programlisting>
+GNU_CONFIGURE=yes
 USE_LIBTOOL=yes
-USE_TOOLS+=gmake</programlisting>
+USE_TOOLS+=gmake
+</programlisting>
   </listitem>
 
   <listitem>

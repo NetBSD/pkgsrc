@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.54 2007/04/21 02:57:58 kano Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.55 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -504,7 +504,7 @@ file and inspect the contents before extracting it.
 	entry provides adequate emulation in most cases:</para>
 
 	<programlisting>
-	  interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	</programlisting>
 
       </sect3>
@@ -623,7 +623,7 @@ file and inspect the contents before extracting it.
       <para>If you are using SGI's MIPSPro compiler, please set
 
       <programlisting>
-	PKGSRC_COMPILER=        mipspro
+PKGSRC_COMPILER=        mipspro
       </programlisting>
 
       in <filename>/etc/mk.conf</filename>.  Otherwise, pkgsrc will assume you
@@ -654,8 +654,8 @@ file and inspect the contents before extracting it.
       directory:</para>
 
       <programlisting>
-	env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
-	ac_cv___attribute__=yes ./bootstrap
+env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
+ac_cv___attribute__=yes ./bootstrap
       </programlisting>
 
       <note>
@@ -673,7 +673,7 @@ file and inspect the contents before extracting it.
       in <filename>/etc/mk.conf</filename>:</para>
 
       <programlisting>
-	PKGSRC_COMPILER=        icc
+PKGSRC_COMPILER=        icc
       </programlisting>
 
       <para>The default installation directory for icc is
@@ -683,7 +683,7 @@ file and inspect the contents before extracting it.
       <filename>/etc/mk.conf</filename>:</para>
 
       <programlisting>
-	ICCBASE=                /opt/icc
+ICCBASE=                /opt/icc
       </programlisting>
 
       <para>pkgsrc uses the static linking method of the runtime libraries
@@ -739,11 +739,11 @@ file and inspect the contents before extracting it.
 	  of the file with:</para>
 
 	  <programlisting>
-	    .ifdef BSD_PKG_MK
-	    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-	    .else
-	    # OpenBSD stuff
-	    .endif
+.ifdef BSD_PKG_MK
+# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
+.else
+# OpenBSD stuff
+.endif
 	  </programlisting>
 	</listitem>
       </orderedlist>
@@ -811,10 +811,10 @@ file and inspect the contents before extracting it.
 	<filename>mk.conf</filename> file:</para>
 
 <programlisting>
-    CC=     cc
-    CXX=    CC
-    CPP=    cc -E
-    CXXCPP= CC -E
+CC=     cc
+CXX=    CC
+CPP=    cc -E
+CXXCPP= CC -E
 </programlisting>
 
 	<note><para>The <varname>CPP</varname> setting might break some
@@ -830,8 +830,8 @@ file and inspect the contents before extracting it.
 	file:</para>
 
 <programlisting>
-    PKGSRC_COMPILER=        sunpro
-    ABI=                    64
+PKGSRC_COMPILER=        sunpro
+ABI=                    64
 </programlisting>
 
 	<note><para>This setting has been tested for the SPARC
@@ -849,8 +849,8 @@ file and inspect the contents before extracting it.
       to your <filename>mk.conf</filename>:</para>
 
       <programlisting>
-	CONFIG_SHELL=   ${LOCALBASE}/bin/bash
-	WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
+CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
       </programlisting>
 
       <para>Then, rebuild the <filename
