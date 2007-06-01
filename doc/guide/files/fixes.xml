@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.85 2007/05/12 10:13:44 kano Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.86 2007/06/01 08:53:06 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1311,7 +1311,7 @@ of functions.</para>
   </sect2>
 
   <sect2 id="installing-score-files">
-    <title>Installing score files</title>
+    <title>Installing highscore files</title>
 
     <para>Certain packages, most of them in the games category, install
     a score file that allows all users on the system to record their
