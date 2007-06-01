@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1185 2007/05/31 21:37:52 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1186 2007/06/01 00:46:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2316,3 +2316,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated cad/geda to 20070526 [dmcmahill 2007-06-01]
 	Updated mail/thunderbird15 to 1.5.0.12 [ghen 2007-05-31]
 	Updated mail/thunderbird15-gtk1 to 1.5.0.12 [ghen 2007-05-31]
+	Updated graphics/comix to 3.6.4 [wiz 2007-06-01]
