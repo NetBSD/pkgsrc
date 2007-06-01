@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.11 2006/09/13 23:26:21 wiz Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.12 2007/06/01 11:07:24 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -16,21 +16,21 @@
       <title>Makefile</title>
 
 <programlisting>
-    # &#36;NetBSD&#36;
-    #
+# &#36;NetBSD&#36;
+#
 
-    DISTNAME=       bison-1.25
-    CATEGORIES=     devel
-    MASTER_SITES=   ${MASTER_SITE_GNU}
+DISTNAME=       bison-1.25
+CATEGORIES=     devel
+MASTER_SITES=   ${MASTER_SITE_GNU}
 
-    MAINTAINER=     thorpej@NetBSD.org
-    HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
-    COMMENT=        GNU yacc clone
+MAINTAINER=     thorpej@NetBSD.org
+HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+COMMENT=        GNU yacc clone
 
-    GNU_CONFIGURE=  yes
-    INFO_FILES=     bison.info
+GNU_CONFIGURE=  yes
+INFO_FILES=     bison.info
 
-    .include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.pkg.mk"
 </programlisting>
     </sect2>
 
@@ -38,9 +38,9 @@
       <title>DESCR</title>
 
 <programlisting>
-    GNU version of yacc.  Can make re-entrant parsers, and numerous other
-    improvements.  Why you would want this when Berkeley &man.yacc.1; is part
-    of the &os; source tree is beyond me.
+GNU version of yacc.  Can make re-entrant parsers, and numerous other
+improvements.  Why you would want this when Berkeley &man.yacc.1; is part
+of the &os; source tree is beyond me.
 </programlisting>
     </sect2>
 
@@ -48,11 +48,11 @@
       <title>PLIST</title>
 
 <programlisting>
-    @comment &#36;NetBSD&#36;
-    bin/bison
-    man/man1/bison.1.gz
-    share/bison.simple
-    share/bison.hairy
+@comment &#36;NetBSD&#36;
+bin/bison
+man/man1/bison.1.gz
+share/bison.simple
+share/bison.hairy
 </programlisting>
     </sect2>
 

@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.6 2006/12/10 16:46:50 kano Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.7 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -66,7 +66,7 @@
 	example.</para>
 
 <programlisting>
-    DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
+DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
 </programlisting>
 
 	<para>Because of the selection of this default value, the same
@@ -112,13 +112,13 @@
 	clear, here is an example:</para>
 
 	<programlisting>
-    CONFIGURE_ARGS=         # none
-    CFLAGS=                 -O
-    CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
+CONFIGURE_ARGS=         # none
+CFLAGS=                 -O
+CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
 
-    CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
+CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
 
-    CFLAGS+=                -Wall
+CFLAGS+=                -Wall
 	</programlisting>
 
 	<para>This code shows how the use of the <literal>:=</literal>
