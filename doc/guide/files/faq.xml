@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.33 2007/05/01 11:44:48 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.34 2007/06/01 11:07:25 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -51,7 +51,7 @@ it contains items for both pkgsrc users and developers.</para>
 <para>To subscribe, do:</para>
 
 <programlisting>
-    &cprompt; echo subscribe <replaceable>listname</replaceable> | mail majordomo@NetBSD.org
+&cprompt; echo subscribe <replaceable>listname</replaceable> | mail majordomo@NetBSD.org
 </programlisting>
 
 <para>Archives for all these mailing lists are available from
@@ -279,10 +279,10 @@ values.</para>
 like:</para>
 
 <programlisting>
-    FETCH_CMD=             wget
-    FETCH_BEFORE_ARGS=     --passive-ftp
-    FETCH_RESUME_ARGS=     -c
-    FETCH_OUTPUT_ARGS=     -O
+FETCH_CMD=             wget
+FETCH_BEFORE_ARGS=     --passive-ftp
+FETCH_RESUME_ARGS=     -c
+FETCH_OUTPUT_ARGS=     -O
 </programlisting>
 
 </sect1>
@@ -298,7 +298,7 @@ X11 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>,
 <filename>/etc/mk.conf</filename>:</para>
 
 <programlisting>
-    X11_TYPE=XFree86
+X11_TYPE=XFree86
 </programlisting>
 
 </sect1>
@@ -314,7 +314,7 @@ you will have to add the following line into
 <filename>/etc/mk.conf</filename>:</para>
 
 <programlisting>
-    X11_TYPE=xorg
+X11_TYPE=xorg
 </programlisting>
 
 <note><para>The DragonFly operating system defaults to using
@@ -336,8 +336,8 @@ port 80 as the proxy port number.  So the proxy environment variables
 are:</para>
 
 <programlisting>
-    ftp_proxy=ftp://orpheus.amdahl.com:80/
-    http_proxy=http://orpheus.amdahl.com:80/
+ftp_proxy=ftp://orpheus.amdahl.com:80/
+http_proxy=http://orpheus.amdahl.com:80/
 </programlisting>
 
 </sect1>
@@ -474,9 +474,9 @@ following into your <filename>/etc/mk.conf</filename>, somewhere
 <varname>LOCALBASE</varname> variable:</para>
 
 <programlisting>
-    .if exists(${LOCALBASE}/bin/sudo)
-    SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
-    .endif
+.if exists(${LOCALBASE}/bin/sudo)
+SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+.endif
 </programlisting>
 
 </sect1>

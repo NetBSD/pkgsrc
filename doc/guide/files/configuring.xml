@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.26 2007/03/03 12:30:12 kano Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.27 2007/06/01 11:07:24 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -211,7 +211,7 @@ works.</para>
 	instead of the <literal>=</literal> operator:</para>
 
 <programlisting>
-    CFLAGS+=        -your -flags
+CFLAGS+=        -your -flags
 </programlisting>
 
 	<para>Using <varname>CFLAGS=</varname> (i.e. without the
@@ -236,7 +236,7 @@ the inclusion of <filename>mk/x11.buildlink3.mk</filename>.  As with
 <varname>CFLAGS</varname>, if you do not wish to override these
 settings, use the <literal>+=</literal> operator:</para>
 <programlisting>
-    LDFLAGS+=        -your -linkerflags
+LDFLAGS+=        -your -linkerflags
 </programlisting>
 </sect2>
 </sect1>
