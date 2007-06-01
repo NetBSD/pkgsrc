@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/04/20 06:07:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/06/01 20:12:44 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -376,6 +376,8 @@ man/man3/gnutls_x509_crt_get_key_usage.3
 man/man3/gnutls_x509_crt_get_pk_algorithm.3
 man/man3/gnutls_x509_crt_get_pk_dsa_raw.3
 man/man3/gnutls_x509_crt_get_pk_rsa_raw.3
+man/man3/gnutls_x509_crt_get_raw_dn.3
+man/man3/gnutls_x509_crt_get_raw_issuer_dn.3
 man/man3/gnutls_x509_crt_get_serial.3
 man/man3/gnutls_x509_crt_get_signature_algorithm.3
 man/man3/gnutls_x509_crt_get_subject_alt_name.3
