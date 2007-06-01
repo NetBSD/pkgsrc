@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/03/07 15:09:59 adam Exp $
+$NetBSD: patch-aa,v 1.5 2007/06/01 08:58:44 rillig Exp $
 
 --- Makefile.orig	1999-06-26 14:37:17.000000000 +0000
 +++ Makefile
@@ -10,13 +10,14 @@ $NetBSD: patch-aa,v 1.4 2005/03/07 15:09:59 adam Exp $
 +#PREFIX		= /usr/local
  BINDIR		= ${PREFIX}/bin
  MANDIR		= ${PREFIX}/man/man6
- SCOREFILE	= /var/games/zombies_score
+-SCOREFILE	= /var/games/zombies_score
 -BINOWN		= games
 -BINGRP		= games
 -BINMODE		= 2555
 -MANOWN		= root
 -MANGRP		= wheel
 -MANMODE		= 444
++SCOREFILE	= ${VARBASE}/games/zombies_score
 +#BINOWN		= games
 +#BINGRP		= games
 +#BINMODE		= 2555
