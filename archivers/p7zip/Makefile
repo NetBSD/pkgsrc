@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/05/29 12:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.29 2007/06/01 00:54:47 wiz Exp $
 
 DISTNAME=	p7zip_4.47_src_all
 PKGNAME=	p7zip-4.47
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 MAKE_FILE=		makefile
+MAKE_JOBS_SAFE=		no # missing header when compiling sfx
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
