@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1188 2007/06/01 03:34:23 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1189 2007/06/01 04:42:07 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/comix to 3.6.4 [wiz 2007-06-01]
 	Updated www/galway to 0.33nb10 [wiz 2007-06-01]
 	Updated mail/postfix to 2.4.3 [martti 2007-06-01]
+	Updated security/amavisd-new to 2.5.1 [xtraeme 2007-06-01]
