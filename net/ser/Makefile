@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/23 06:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/01 00:26:36 wiz Exp $
 #
 
 DISTNAME=	ser-0.8.14_src
@@ -26,6 +26,8 @@ MAKE_ENV+= cfg-prefix=${PREFIX}/share/examples
 MAKE_ENV+= EGDIR=${EGDIR:Q}
 
 CHECK_PORTABILITY_SKIP+=	scripts/sc
+
+.include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
