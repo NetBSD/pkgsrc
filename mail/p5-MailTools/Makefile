@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2007/04/18 23:41:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/01 20:46:53 wiz Exp $
 
-DISTNAME=	MailTools-1.76
+DISTNAME=	MailTools-1.77
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mto
 CATEGORIES=	mail perl5
