@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1196 2007/06/02 02:36:57 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.1197 2007/06/02 08:30:45 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-MailTools to 1.77 [wiz 2007-06-01]
 	Updated www/w3m to 0.5.2 [uebayasi 2007-06-02]
 	Updated www/w3m-img to 0.5.2 [uebayasi 2007-06-02]
+	Added x11/nucleo version 0.6 [agc 2007-06-02]
