@@ -1,22 +1,40 @@
-# $NetBSD: Makefile,v 1.3 2006/01/20 20:40:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/02 17:50:28 jmmv Exp $
 #
 
 BOOST_PACKAGE=		build
 BOOST_COMMENT=		(Boost.Build framework)
 BOOST_CONFIG=		no
 
+PKGREVISION=		1
+
 .include "../../meta-pkgs/boost/Makefile.common"
+
+SUBST_CLASSES+=		confdir
+SUBST_MESSAGE.confdir=	Fixing path to site-config.jam.
+SUBST_STAGE.confdir=	pre-build
+SUBST_FILES.confdir=	tools/build/v2/build-system.jam
+SUBST_SED.confdir=	-e 's,/etc,${PKG_SYSCONFDIR},g'
+
+EGDIR=			${PREFIX}/share/examples/boost-build
+CONF_FILES=		${EGDIR}/site-config.jam \
+			${PKG_SYSCONFDIR}/site-config.jam
 
 .include "toolset.mk"
 
-INSTALLATION_DIRS=	bin
+post-extract:
+	${FIND} ${WRKSRC}/tools/build/v2 -type d -exec ${CHMOD} 755 {} \;
+	${FIND} ${WRKSRC}/tools/build/v2 -type f -exec ${CHMOD} 644 {} \;
 
 do-build:
-	@cd ${WRKSRC}/tools/build/jam_src && \
-	    ${SETENV} ${MAKE_ENV} ${SH} ./build.sh ${BOOST_TOOLSET}
+	{ ${ECHO} '# System wide configuration file for Boost.Build.' ; \
+	  ${ECHO} ; \
+	  ${ECHO} 'using ${BOOST_TOOLSET} ;' ; } >${WRKDIR}/site-config.jam
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/jam_src/bin.*/bjam \
-	    ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/boost-build
+	cd ${WRKSRC}/tools/build/v2 && ${PAX} -rw -pp -pm . \
+	    ${PREFIX}/share/boost-build
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/site-config.jam ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
