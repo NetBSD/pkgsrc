@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1198 2007/06/02 11:39:07 bad Exp $
+$NetBSD: CHANGES-2007,v 1.1199 2007/06/02 12:49:26 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2330,3 +2330,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/w3m-img to 0.5.2 [uebayasi 2007-06-02]
 	Added x11/nucleo version 0.6 [agc 2007-06-02]
 	Updated devel/svk to 2.0.1 [bad 2007-06-02]
+	Updated graphics/spcaview to 0.6b [hamajima 2007-06-02]
