@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1201 2007/06/02 17:52:54 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.1202 2007/06/02 19:11:05 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2335,3 +2335,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/boost-jam version 1.33.1 [jmmv 2007-06-02]
 	Updated devel/boost-build to 1.33.1nb1 [jmmv 2007-06-02]
 	Updated meta-pkgs/boost to 1.33.1nb3 [jmmv 2007-06-02]
+	Added wm/metisse version 0.4.0rc4 [agc 2007-06-02]
