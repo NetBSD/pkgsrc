@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/02 08:27:43 agc Exp $
+
+--- nucleo/network/udp/UdpSocket.cxx	2007/06/01 20:38:33	1.1
++++ nucleo/network/udp/UdpSocket.cxx	2007/06/01 20:38:50
+@@ -12,6 +12,7 @@
+ #include <nucleo/network/udp/UdpSocket.H>
+ #include <nucleo/network/NetworkUtils.H>
+ 
++#include <errno.h>
+ #include <arpa/inet.h>
+ #include <sys/socket.h>
+ #include <netdb.h>

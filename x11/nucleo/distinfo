@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/02 08:27:43 agc Exp $
+
+SHA1 (nucleo-0.6.tar.bz2) = e8935ea8998ec80e24fad65c29a2981bd1b4fccc
+RMD160 (nucleo-0.6.tar.bz2) = d1eefd7dc03645a5a11af299c0225bed118500cf
+Size (nucleo-0.6.tar.bz2) = 806154 bytes
+SHA1 (patch-aa) = de7e9bb9ab4bca00ef72269357027d6e1748c6cb
+SHA1 (patch-ab) = 6b38f25a856a30826662a3019966250ca8526903
+SHA1 (patch-ac) = d213cb6302e3f5e8664b0775de5a1e2adaa1e624
+SHA1 (patch-ad) = b9e94e3183c7d861396e44eefb881ce8b40c4c25
