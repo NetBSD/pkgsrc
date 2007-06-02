@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1195 2007/06/01 20:47:24 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1196 2007/06/02 02:36:57 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2326,3 +2326,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/gnutls to 1.6.3 [wiz 2007-06-01]
 	Updated devel/liboil to 0.3.12 [wiz 2007-06-01]
 	Updated mail/p5-MailTools to 1.77 [wiz 2007-06-01]
+	Updated www/w3m to 0.5.2 [uebayasi 2007-06-02]
+	Updated www/w3m-img to 0.5.2 [uebayasi 2007-06-02]
