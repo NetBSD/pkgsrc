@@ -1,0 +1,13 @@
+Planner is a project management tool for the GNOME desktop.  Among other
+things, it provides:
+
+- Task managment: define a list of tasks to accomplish a project, the
+  dependencies among them and their lengths.  Of course, you can view a
+  Gantt chart from this data.
+
+- Resource management: define a list of resources for your project and
+  assign them to tasks.
+
+- Calendar management: create different calendars for the human resources
+  in your project so that tasks can be automatically scheduled according
+  to their calendars.
