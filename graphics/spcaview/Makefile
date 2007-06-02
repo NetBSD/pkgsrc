@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2006/11/13 19:27:27 reinoud Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/02 12:47:51 hamajima Exp $
 #
 
 DISTNAME=	spca5xx-20060402
-PKGNAME=	spcaview-0.60
+PKGNAME=	spcaview-0.6b
 #PKGREVISION=	1
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://mxhaard.free.fr/spca50x/Download/
+MASTER_SITES=	http://mxhaard.free.fr/spca50x/Download/oldrelease/
 
 PATCH_SITES=	http://www.medias.ne.jp/~takam/bsd/
-PATCHFILES= 	spca5xx-bsd-0.6a.patch.gz
+PATCHFILES= 	spca5xx-bsd-0.6b.patch.gz
 PATCH_DIST_STRIP=	-p3
 
 MAINTAINER=	hamajima@NetBSD.org
