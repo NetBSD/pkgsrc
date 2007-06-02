@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.3 2006/11/13 19:27:28 reinoud Exp $
+$NetBSD: patch-aa,v 1.4 2007/06/02 12:47:51 hamajima Exp $
 
 --- spca561.h.orig	2006-11-13 17:01:02.000000000 +0100
 +++ spca561.h
-@@ -735,6 +735,7 @@ static int spca561_config(struct usb_spc
-     case 0x403b:
+@@ -736,6 +736,7 @@ static int spca561_config(struct usb_spc
      case 0x092b:
      case 0x092c:
+     case 0x092e:
 +    case 0x092f:
  	spca50x->chip_revision = Rev012A;
  	break;
