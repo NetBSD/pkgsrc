@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2007/02/17 20:59:50 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/06/02 11:36:50 bad Exp $
 
-DISTNAME=	SVK-v2.0.0
-PKGNAME=	svk-2.0.0
+DISTNAME=	SVK-v2.0.1
+PKGNAME=	svk-2.0.1
 PKGREVISION=	1
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
@@ -25,6 +25,7 @@ DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
 DEPENDS+=	p5-Class-Data-Inheritable>=0.06:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Data-Hierarchy>=0.30:../../devel/p5-Data-Hierarchy
+DEPENDS+=	p5-File-Temp>=0.17:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Type>=0.22:../../devel/p5-File-Type
 DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 DEPENDS+=	p5-IO-Digest>=0.10:../../devel/p5-IO-Digest
