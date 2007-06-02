@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.46 2007/02/04 20:54:57 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.47 2007/06/02 02:35:42 uebayasi Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 
-MAINTAINER=	kei@NetBSD.org
+MAINTAINER=	kei@NetBSD.org, uebayasi@NetBSD.org
 HOMEPAGE=	http://w3m.sourceforge.net/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake	# Needed for some combinations of options...
 USE_TOOLS+=	msgfmt
 USE_PKGLOCALEDIR=       yes
 
-W3M_VERS=	0.5.1
+W3M_VERS=	0.5.2
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_TOOLS+=	perl:run
