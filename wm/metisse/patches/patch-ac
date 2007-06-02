@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+
+--- xserver/os/access.c	2007/06/02 10:55:20	1.1
++++ xserver/os/access.c	2007/06/02 10:56:15
+@@ -142,6 +142,11 @@
+ #endif
+ 
+ #ifdef HAS_GETIFADDRS
++#include <sys/types.h>
++#  ifdef __NetBSD__
++#  include <sys/socket.h>
++typedef	unsigned int	u_int;
++#  endif
+ #include <ifaddrs.h>
+ #endif
+ 

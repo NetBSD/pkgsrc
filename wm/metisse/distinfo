@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/02 19:07:32 agc Exp $
+
+SHA1 (metisse-0.4.0-rc4.tar.bz2) = 01b4893fd68d46eb44d8ab7d8d11bee442de3017
+RMD160 (metisse-0.4.0-rc4.tar.bz2) = 9ff492c68081b01d51c564d2d5c2136d8db1c19c
+Size (metisse-0.4.0-rc4.tar.bz2) = 6017779 bytes
+SHA1 (patch-aa) = 846aeb65849c0bdc964a324dfe5cf388140b5990
+SHA1 (patch-ab) = bc0818f6b2a2afec8f2d42865d858bcfad83f21d
+SHA1 (patch-ac) = 4f8bb2c57834d927907c56a1a9413866e05cf99b
+SHA1 (patch-ad) = a46283deeffa06aeb23e44add909ff7a382429a0
+SHA1 (patch-ae) = c2f24e4b9e3a4685b22ee17699cda4bea9c22d51

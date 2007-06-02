@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+
+--- xserver/os/osdep.h	2007/06/02 10:45:12	1.1
++++ xserver/os/osdep.h	2007/06/02 10:48:18
+@@ -117,6 +117,12 @@
+ 
+ #include <stddef.h>
+ #include <sys/types.h>
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199506)
++#include <sys/select.h>
++typedef __fd_mask	fd_mask;
++#endif
+ 
+ typedef Bool (*ValidatorFunc)(ARRAY8Ptr Auth, ARRAY8Ptr Data, int packet_type);
+ typedef Bool (*GeneratorFunc)(ARRAY8Ptr Auth, ARRAY8Ptr Data, int packet_type);
