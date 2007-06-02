@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/01 19:38:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/02 17:51:48 jmmv Exp $
 #
 
 BOOST_PACKAGE=		headers
@@ -9,7 +9,7 @@ BOOST_CONFIG=		generate
 
 BJAM_ARGS+=		--with-unknown # disable all libraries
 
-.include "../../devel/boost-build/bjam.mk"
+.include "../../devel/boost-jam/bjam.mk"
 
 # The following is a quick hack to let boost compile under NetBSD with GCC 4.
 .include "../../mk/bsd.prefs.mk"
