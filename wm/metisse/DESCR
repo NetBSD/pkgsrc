@@ -1,0 +1,10 @@
+Metisse is an X-based window system designed with two goals in mind.
+First, it should make it easy for HCI researchers to design and
+implement innovative window management techniques Second, it should
+conform to existing standards and be robust and efficient enough to be
+used on a daily basis, making it a suitable platform for the
+evaluation of the proposed techniques.
+
+Metisse is not focused on a particular kind of interaction (e.g.  3D)
+and should not be seen as a new desktop proposal.  It is rather a tool
+for creating new types of desktop environments.
