@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/02 19:07:32 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/02 19:25:37 agc Exp $
 #
 
 DISTNAME=	metisse-0.4.0-rc4
@@ -23,10 +23,10 @@ DEPENDS+=	rxvt>=2.7.10nb5:../../x11/rxvt
 
 .include "../../audio/rplay/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../local/nucleo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/nucleo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
