@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1200 2007/06/02 16:43:28 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.1201 2007/06/02 17:52:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2332,3 +2332,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/svk to 2.0.1 [bad 2007-06-02]
 	Updated graphics/spcaview to 0.6b [hamajima 2007-06-02]
 	Added time/planner version 0.14.2 [jmmv 2007-06-02]
+	Added devel/boost-jam version 1.33.1 [jmmv 2007-06-02]
+	Updated devel/boost-build to 1.33.1nb1 [jmmv 2007-06-02]
+	Updated meta-pkgs/boost to 1.33.1nb3 [jmmv 2007-06-02]
