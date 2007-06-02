@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:40 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/06/02 17:51:49 jmmv Exp $
 #
 
 BOOST_PACKAGE=		python
@@ -12,7 +12,7 @@ BJAM_ARGS+=		--with-python
 BJAM_ARGS+=		-sPYTHON_ROOT=${PREFIX}
 BJAM_ARGS+=		-sPYTHON_VERSION=${PYVERSSUFFIX}
 
-.include "../../devel/boost-build/bjam.mk"
+.include "../../devel/boost-jam/bjam.mk"
 .include "../../lang/python/application.mk"
 
 do-build: bjam-build
