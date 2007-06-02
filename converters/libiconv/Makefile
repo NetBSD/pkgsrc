@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/04/12 10:27:15 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2007/06/02 06:56:06 schmonz Exp $
 
 DISTNAME=	libiconv-1.11
 CATEGORIES=	converters
@@ -15,7 +15,7 @@ COMMENT=	Character set conversion library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES+=		c99 c++
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -34,6 +34,13 @@ REQD_FILES=		${EGDIR}/charset.alias ${PREFIX}/lib/charset.alias
 
 MAKE_ENV+=		PAX=${PAX:Q}
 MAKE_JOBS_SAFE=		no		# ENOENT(srclib)
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=		-c99
+.endif
+
 
 .include "../../mk/bsd.prefs.mk"
 
