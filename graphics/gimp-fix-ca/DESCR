@@ -1,0 +1,4 @@
+Fix-CA is a Gimp plug-in to correct chromatic aberration (CA).
+
+The Fix-CA plug-in can be accessed via the menu:
+        Filters->Colors->Chromatic Aberration....
