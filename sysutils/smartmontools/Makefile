@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/07/17 17:01:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/06/03 10:40:07 jmmv Exp $
 
-DISTNAME=		smartmontools-5.36
+DISTNAME=		smartmontools-5.37
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
@@ -10,6 +10,7 @@ COMMENT=		Control and monitor storage systems using SMART
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES+=		c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
