@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2007/03/01 18:19:46 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2007/06/03 10:55:10 ghen Exp $
 
-DISTNAME=	scribus-1.3.3.8
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		scribus-1.3.3.8
+CATEGORIES=		print
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scribus.net/
-COMMENT=	Publishing layout with graphical interface
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.scribus.net/
+COMMENT=		Publishing layout with graphical interface
 
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
