@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/03 07:48:13 dsainty Exp $
+
+SHA1 (gimp-fix-ca-2.1.0.c) = 5fa6d39c18902d2de933484b4a36eeba5c5f3208
+RMD160 (gimp-fix-ca-2.1.0.c) = 6ed5c278290c5bc59e9b64aa8ead01ebcc70f45d
+Size (gimp-fix-ca-2.1.0.c) = 24854 bytes
