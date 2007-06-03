@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2007/05/28 14:09:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.173 2007/06/03 08:59:36 jmmv Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -127,6 +127,7 @@ SUBDIR+=	tex-ocrb
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-pgf
 SUBDIR+=	tex-prosper
+SUBDIR+=	tex-resume
 SUBDIR+=	tex-ucs
 SUBDIR+=	tex-xkeyval
 SUBDIR+=	texmf-dirs
