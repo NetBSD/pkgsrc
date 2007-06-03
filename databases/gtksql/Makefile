@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2006/12/28 12:12:57 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/03 23:28:15 wiz Exp $
 #
 
 DISTNAME=		gtksql-0.3
 PKGREVISION=		7
 CATEGORIES=		databases
-MASTER_SITES=		http://membres.lycos.fr/bbrox/GtkSQL/ \
-			${MASTER_SITE_SUNSITE:=X11/gtkbuffet/apps/gtksql/} \
-			ftp://ftp.infodrom.north.de/pub/unix/gtkbuffet/apps/gtksql/ \
-			ftp://ftp.loxinfo.co.th/pub/unix/database/
+MASTER_SITES=		http://membres.lycos.fr/bbrox/GtkSQL/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://membres.lycos.fr/bbrox/GtkSQL/
