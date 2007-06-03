@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2007/01/26 21:58:42 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2007/06/03 00:41:27 wiz Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	http://festvox.org/packed/festival/1.95/ \
-		ftp://cslu.cse.ogi.edu/pub/tts/
+MASTER_SITES=	http://festvox.org/packed/festival/1.95/
 DISTFILES=	${DISTNAME}.tar.gz \
 		speech_tools-1.2.95-beta.tar.gz
 
