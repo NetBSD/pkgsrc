@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/01/08 17:58:08 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/06/03 23:27:23 wiz Exp $
 
 DISTNAME=	xcircuit-3.4.26
 CATEGORIES=	cad graphics
-MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/ \
-		http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/
+MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	shaun@inerd.com
