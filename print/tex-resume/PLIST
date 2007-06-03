@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/03 08:59:02 jmmv Exp $
+${PKG_LOCALTEXMFPREFIX}/tex/latex/resume/res.cls
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/resume
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
