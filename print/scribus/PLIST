@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/03/01 18:19:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/06/03 10:55:36 ghen Exp $
 bin/scribus
 include/scribus/about.h
 include/scribus/actionmanager.h
@@ -515,6 +515,7 @@ share/doc/${PKGNAME}/en/images/kfontinstaller.png
 share/doc/${PKGNAME}/en/images/ksnapshot.png
 share/doc/${PKGNAME}/en/images/layers1.png
 share/doc/${PKGNAME}/en/images/layers2.png
+share/doc/${PKGNAME}/en/images/lprof.png
 share/doc/${PKGNAME}/en/images/monprof1.png
 share/doc/${PKGNAME}/en/images/monprof2.png
 share/doc/${PKGNAME}/en/images/monprof3.png
@@ -639,6 +640,7 @@ share/doc/${PKGNAME}/en/toolbox10.html
 share/doc/${PKGNAME}/en/toolbox11.html
 share/doc/${PKGNAME}/en/toolbox12.html
 share/doc/${PKGNAME}/en/toolbox13.html
+share/doc/${PKGNAME}/en/toolbox14.html
 share/doc/${PKGNAME}/en/toolbox2.html
 share/doc/${PKGNAME}/en/toolbox3.html
 share/doc/${PKGNAME}/en/toolbox4.html
