@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.708 2007/05/13 21:43:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.709 2007/06/03 18:38:14 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4798,7 +4798,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			inputmethod
 			japanese java
 			kde korean
-			lang linux
+			lang linux local
 			mail math mbone meta-pkgs misc multimedia
 			net news
 			packages parallel perl5 pkgtools plan9 print python
