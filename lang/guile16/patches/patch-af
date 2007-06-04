@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- doc/ref/Makefile.in.orig	2004-10-05 05:34:07.000000000 +0200
++++ doc/ref/Makefile.in
+@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-DIST_COMMON = $(guile_TEXINFOS) $(srcdir)/Makefile.am \
++DIST_COMMON = $(info_TEXINFOS) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(srcdir)/stamp-vti \
+ 	$(srcdir)/version.texi $(top_srcdir)/am/pre-inst-guile \
+ 	ChangeLog mdate-sh texinfo.tex

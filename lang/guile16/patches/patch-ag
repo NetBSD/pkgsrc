@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- doc/goops/Makefile.in.orig	2004-10-05 05:34:07.000000000 +0200
++++ doc/goops/Makefile.in
+@@ -36,7 +36,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ subdir = doc/goops
+-DIST_COMMON = $(goops_TEXINFOS) $(srcdir)/Makefile.am \
++DIST_COMMON = $(info_TEXINFOS) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in ChangeLog
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/guile-config/qthreads.m4 \
