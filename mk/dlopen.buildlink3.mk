@@ -1,8 +1,22 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.14 2007/04/27 15:02:37 tron Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.15 2007/06/04 08:10:32 rillig Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
 #
+# It defines the variables DL_CFLAGS, DL_LDFLAGS and DL_LIBS, which
+# are also exported into the CONFIGURE_ENV and MAKE_ENV environments.
+#
+# Package-settable variables:
+#
+# DL_AUTO_VARS
+#	When set to "yes", the necessary flags are added automatically
+#	to CFLAGS and friends.
+#
+#	Default: no
+#
+# Keywords: dl dlopen
+#
+
 DLOPEN_BUILDLINK3_MK:=	${DLOPEN_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
