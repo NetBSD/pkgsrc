@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1211 2007/06/04 12:56:45 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1212 2007/06/04 14:46:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2345,3 +2345,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/drraw to 2.2a4 [kleink 2007-06-03]
 	Added graphics/rabbit version 0.5.2 [obache 2007-06-04]
 	Updated mail/clamsmtp to 1.8nb2 [martti 2007-06-04]
+	Updated x11/gdm to 2.18.1nb1 [jmmv 2007-06-04]
