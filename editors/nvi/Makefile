@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/04 14:45:47 schmonz Exp $
 #
 
 DISTNAME=	nvi-1.81.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
-MASTER_SITES=	http://193.190.253.81/~skimo/nvi/devel/
+MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://193.190.253.81/~skimo/nvi/devel/
+HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,6 +24,7 @@ CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 CONFIGURE_ENV+=		vi_cv_include_sys_select=no
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
+LDFLAGS+=		-flat_namespace
 .endif
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build.unix
