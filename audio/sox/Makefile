@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2007/03/06 23:55:07 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2007/06/04 05:44:09 wiz Exp $
 
 DISTNAME=	sox-13.0.0
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/} \
-		http://www.cnpbagwell.com/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sox.sourceforge.net/
