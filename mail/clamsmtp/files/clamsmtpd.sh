@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamsmtpd.sh,v 1.6 2007/05/30 06:07:08 martti Exp $
+# $NetBSD: clamsmtpd.sh,v 1.7 2007/06/04 12:55:48 martti Exp $
 #
 # PROVIDE: clamsmtpd
 # REQUIRE: LOGIN clamd
@@ -30,7 +30,7 @@ pidfile="@VARBASE@/run/clamsmtpd.pid"
 start_precmd="clamsmtpd_prestart"
 start_cmd="clamsmtpd_start"
 
-clamav_conffile="@PKG_SYSCONFDIR@/clamav.conf"
+clamav_conffile="@PKG_SYSCONFDIR@/clamd.conf"
 if [ -f "${clamav_conffile}" ]; then
 	socket=`@AWK@ 'BEGIN {r = "/tmp/clamd"};
 			/^#/ {next}; /^LocalSocket[ 	]/ {r = $2};
