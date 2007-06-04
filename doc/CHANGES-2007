@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1212 2007/06/04 14:46:56 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.1213 2007/06/04 14:49:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added graphics/rabbit version 0.5.2 [obache 2007-06-04]
 	Updated mail/clamsmtp to 1.8nb2 [martti 2007-06-04]
 	Updated x11/gdm to 2.18.1nb1 [jmmv 2007-06-04]
+	Updated editors/nvi to 1.81.5nb4 [schmonz 2007-06-04]
