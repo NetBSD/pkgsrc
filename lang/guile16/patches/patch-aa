@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- libguile/guile.c.orig	2002-12-07 14:41:32.000000000 -0800
++++ libguile/guile.c
+@@ -88,7 +88,7 @@ main (int argc, char **argv)
+ {
+ #ifdef DYNAMIC_LINKING
+   /* libtool automagically inserts this variable into your executable... */
+-  extern const scm_lt_dlsymlist lt_preloaded_symbols[];
++  extern const scm_lt_dlsymlist *lt_preloaded_symbols;
+   scm_lt_dlpreload_default (lt_preloaded_symbols);
+ #endif
+   scm_boot_guile (argc, argv, inner_main, 0);

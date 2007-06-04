@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- guile-readline/Makefile.in.orig	2006-05-28 03:14:33.000000000 +0000
++++ guile-readline/Makefile.in
+@@ -59,7 +59,7 @@ am__vpath_adj = case $$p in \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgincludedir)"
+-libLTLIBRARIES_INSTALL = $(INSTALL)
++libLTLIBRARIES_INSTALL = $(INSTALL_DATA)
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ libguilereadline_v_@LIBGUILEREADLINE_MAJOR@_la_DEPENDENCIES =  \
+ 	../libguile/libguile.la
+@@ -213,7 +213,7 @@ lib_LTLIBRARIES = libguilereadline-v-@LI
+ libguilereadline_v_@LIBGUILEREADLINE_MAJOR@_la_SOURCES = readline.c
+ libguilereadline_v_@LIBGUILEREADLINE_MAJOR@_la_LIBADD = ../libguile/libguile.la
+ libguilereadline_v_@LIBGUILEREADLINE_MAJOR@_la_LDFLAGS = -version-info @LIBGUILEREADLINE_INTERFACE@ \
+-  -export-dynamic -no-undefined
++  -export-dynamic
+ 
+ BUILT_SOURCES = readline.x
+ pkginclude_HEADERS = readline.h

@@ -1,0 +1,84 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- libguile/gc_os_dep.c.orig	2004-12-14 06:21:39.000000000 +0100
++++ libguile/gc_os_dep.c
+@@ -107,6 +107,11 @@ typedef int GC_bool;
+ #    define OPENBSD
+ #    define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__alpha__)
++#    define ALPHA
++#    define NETBSD
++#    define mach_type_known
++# endif
+ # if defined(__NetBSD__) && defined(__powerpc__)
+ #    define POWERPC
+ #    define NETBSD
+@@ -124,7 +129,7 @@ typedef int GC_bool;
+ #    define NETBSD
+ #    define mach_type_known
+ # endif
+-# if defined(__NetBSD__) && defined(__sparc__)
++# if defined(__NetBSD__) && (defined(__sparc__) || defined(__sparc_v9__))
+ #    define SPARC
+ #    define NETBSD
+ #    define mach_type_known
+@@ -243,7 +248,7 @@ typedef int GC_bool;
+ # endif
+ # if defined(__alpha) || defined(__alpha__)
+ #   define ALPHA
+-#   if !defined(LINUX)
++#   if !defined(LINUX) && !defined(NETBSD)
+ #     define OSF1	/* a.k.a Digital Unix */
+ #   endif
+ #   define mach_type_known
+@@ -296,6 +301,11 @@ typedef int GC_bool;
+ #   define NETBSD
+ #   define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__x86_64__)
++#   define X86_64
++#   define NETBSD
++#   define mach_type_known
++# endif
+ # if defined(bsdi) && defined(i386)
+ #    define I386
+ #    define BSDI
+@@ -435,12 +445,12 @@ scm_get_stack_base ()
+ /*
+  * For each architecture and OS, the following need to be defined:
+  *
+- * CPP_WORD_SZ is a simple integer constant representing the word size.
++ * CPP_WORDSZ is a simple integer constant representing the word size.
+  * in bits.  We assume byte addressibility, where a byte has 8 bits.
+- * We also assume CPP_WORD_SZ is either 32 or 64.
++ * We also assume CPP_WORDSZ is either 32 or 64.
+  * (We care about the length of pointers, not hardware
+  * bus widths.  Thus a 64 bit processor with a C compiler that uses
+- * 32 bit pointers should use CPP_WORD_SZ of 32, not 64. Default is 32.)
++ * 32 bit pointers should use CPP_WORDSZ of 32, not 64. Default is 32.)
+  *
+  * MACH_TYPE is a string representation of the machine type.
+  * OS_TYPE is analogous for the OS.
+@@ -985,6 +995,21 @@ scm_get_stack_base ()
+ #    endif
+ # endif
+ 
++# ifdef X86_64
++#   define MACH_TYPE "X86_64"
++#   define ALIGNMENT 8
++#   define ALIGN_DOUBLE
++#   define CPP_WORDSZ 64
++#   ifdef NETBSD
++#	define OS_TYPE "NETBSD"
++#   endif
++#   if defined(NETBSD)
++#	define HEURISTIC2
++	extern char etext;
++#	define DATASTART ((ptr_t)(&etext))
++#   endif
++#   endif
++
+ # ifdef NS32K
+ #   define MACH_TYPE "NS32K"
+ #   define ALIGNMENT 4

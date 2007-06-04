@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- guile-config/guile-config.in.orig	Sun Dec  8 07:41:30 2002
++++ guile-config/guile-config.in
+@@ -177,7 +177,7 @@
+             (string=? libdir "/usr/lib/"))
+         (display-separated (cons "-lguile -lguile-ltdl" other-flags))
+         (display-separated (cons
+-                            (string-append "-L" (get-build-info 'libdir))
++                            (string-append "-Wl,-R" (get-build-info 'libdir) " -L" (get-build-info 'libdir))
+                             (cons "-lguile -lguile-ltdl" other-flags))))
+     (newline)))
+ 
