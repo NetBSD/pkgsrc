@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.14 2007/05/24 05:29:06 rillig Exp $
+# $NetBSD: help.awk,v 1.15 2007/06/04 08:11:07 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -70,7 +70,7 @@ always {
 ($1 == "#" && $2 == "Keywords:") {
 	for (i = 3; i <= NF; i++) {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
-		if (w == lctopic) {
+		if (w == lctopic || w == lctopic",") {
 			relevant = yes;
 		}
 	}
