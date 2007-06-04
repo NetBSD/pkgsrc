@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- configure.orig	2006-07-18 17:48:48.000000000 +0000
++++ configure
+@@ -30498,6 +30498,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <sys/types.h>
+ #include <sys/socket.h>
+ 
+ int

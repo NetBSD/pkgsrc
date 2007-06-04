@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2007/06/04 23:38:40 dmcmahill Exp $
+
+--- libguile/_scm.h.orig	2005-09-05 16:15:00.000000000 +0200
++++ libguile/_scm.h
+@@ -111,7 +111,9 @@
+ # define SCM_SYSCALL(line) line;
+ #endif /* ndef SCM_SYSCALL */
+ 
+-#if !defined (MSDOS) && !defined (__MINGW32__)
++#include <errno.h>
++
++#if !defined (MSDOS) && !defined (__MINGW32__) && !defined(errno)
+ # ifdef ARM_ULIB
+     extern volatile int errno;
+ # else
