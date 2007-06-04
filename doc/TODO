@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6376 2007/06/03 10:41:14 jmmv Exp $
+$NetBSD: TODO,v 1.6377 2007/06/04 21:14:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -988,6 +988,7 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.2.3
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
