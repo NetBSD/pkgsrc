@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/27 13:37:46 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/06/04 22:19:15 wiz Exp $
 #
 
 DISTNAME=	xscript.tar
@@ -6,10 +6,7 @@ PKGNAME=	xscript-19930228
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
-		ftp://ftp.gwdg.de/pub/x11/x.org/R5contrib/ \
-		ftp://ftp.tu-darmstadt.de/pub/X11/R5contrib/ \
-		ftp://unix.hensa.ac.uk/mirrors/ftp.x.org/R5contrib/ \
-		ftp://ftp.darenet.dk/ny/mirrors/ftp.x.org/R5contrib/
+		ftp://ftp.gwdg.de/pub/x11/x.org/R5contrib/
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
