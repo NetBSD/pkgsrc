@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.3 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.4 2007/06/04 12:10:20 rillig Exp $
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
@@ -12,7 +12,7 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	defined
 
 CONFIGURE_ENV+=	CONFIG_SHELL=${CONFIG_SHELL:Q}
 CONFIGURE_ENV+=	LIBS=${LIBS:M*:Q}
-CONFIGURE_ENV+=	install_sh=${INSTALL:Q}
+CONFIGURE_ENV+=	install_sh=${TOOLS_CMD.install_sh:Q}
 CONFIGURE_ENV+=	ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}
 
 .if (defined(USE_LIBTOOL) || !empty(PKGPATH:Mdevel/libtool-base)) && \
