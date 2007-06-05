@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1219 2007/06/05 05:45:04 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1220 2007/06/05 05:51:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2353,3 +2353,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/apache22 to 2.2.4nb4 [lkundrak 2007-06-05]
 	Updated security/opencdk to 0.6.0 [wiz 2007-06-05]
 	Updated devel/guile-fcgi to 0.1nb7 [wiz 2007-06-05]
+	Removed devel/guile-oops [wiz 2007-06-05]
+	Removed devel/guile14-gtk [wiz 2007-06-05]
+	Removed lang/guile14 [wiz 2007-06-05]
