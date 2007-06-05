@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1217 2007/06/05 01:43:45 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1218 2007/06/05 05:43:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.6.1 [schmonz 2007-06-04]
 	Added lang/guile16 version 1.6.8 [dmcmahill 2007-06-04]
 	Updated www/apache22 to 2.2.4nb4 [lkundrak 2007-06-05]
+	Updated security/opencdk to 0.6.0 [wiz 2007-06-05]
