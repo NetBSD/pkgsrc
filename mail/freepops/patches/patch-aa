@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- configure.sh.orig	2007-04-23 16:53:30.000000000 -0400
++++ configure.sh
+@@ -76,6 +76,13 @@ LUAFLAGS=${LUAFLAGS:-""}
+ LIBEXPAT_STATIC_PATH=${LIBEXPAT_STATIC_PATH:-$PWD/../lib/lib/}
+ }
+ 
++set_pkgsrc() {
++set_default
++OS=${OPSYS}-pkgsrc
++WHERE=${PREFIX}/
++CFLAGS="${CFLAGS} -Wall -DHAVE_CONFIG_H -I$PWD"
++}
++
+ set_linux() {
+ set_default
+ OS=Linux
+@@ -304,6 +311,9 @@ case $1 in
+ 		usage
+ 		exit 1
+ 	;;
++	pkgsrc)
++		set_pkgsrc
++	;;
+ 	linux)
+ 		set_linux
+ 	;;
