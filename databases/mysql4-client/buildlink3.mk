@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2007/05/23 08:11:48 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2007/06/05 06:05:24 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MYSQL_CLIENT_BUILDLINK3_MK:=	${MYSQL_CLIENT_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}mysql-client
 
 .if ${MYSQL_CLIENT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.mysql-client+=	mysql-client>=4.1.22
+BUILDLINK_API_DEPENDS.mysql-client+=	mysql-client<5.0
 BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql4-client
 BUILDLINK_LIBDIRS.mysql-client?=	lib/mysql
 BUILDLINK_INCDIRS.mysql-client?=	include/mysql
