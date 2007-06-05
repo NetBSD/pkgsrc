@@ -11,3 +11,6 @@ To install the Linux flash player into a native Firefox browser:
   - Also install multimedia/ns-flash and multimedia/libflashsupport
   - Run "nspluginwrapper -i /usr/pkg/lib/netscape/plugins/libflashplayer.so"
   - Run Firefox
+
+You do not need nspluginwrapper if the ABI of the plugin and browser are the
+same, such as running a 32 bit Linux firefox and flash plugin under NetBSD.
