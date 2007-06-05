@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:28:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/06/05 06:01:16 wiz Exp $
 
 DISTNAME=	xpk-0.1.4
 PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.jormas.com/~vesuri/xpk/ \
-		http://energyhq.homeip.net/files/
+MASTER_SITES=	http://vesuri.jormas.com/xpk/ \
+		http://www.energyhq.es.eu.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jormas.com/~vesuri/xpk/
