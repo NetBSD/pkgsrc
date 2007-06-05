@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- src/Makefile.orig	2007-04-23 17:17:37.000000000 -0400
++++ src/Makefile
+@@ -174,7 +174,7 @@ ifeq "$(OS)" "BeOS"
+ else
+ ifeq "$(SSL)" "openssl"
+ 	LDFLAGS+=-L ../modules/lib $(addprefix -l,$(LIBSTOLINK))\
+-		-ldl -lm -lpthread -lcrypto -rdynamic \
++		-lm -lpthread -lcrypto \
+ 		$(CURL_LD_FLAGS) $(EXPAT_LD_FLAGS)
+ else
+ 	LDFLAGS+=-L ../modules/lib $(addprefix -l,$(LIBSTOLINK))\

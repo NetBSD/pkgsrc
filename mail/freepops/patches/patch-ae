@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- src/freepops.h.orig	2007-01-14 09:37:30.000000000 -0500
++++ src/freepops.h
+@@ -50,7 +50,7 @@ extern char *configfile;
+ #ifdef WIN32
+ #define FREEPOPS_SHARE "./"
+ #else
+-#define FREEPOPS_SHARE "/usr/share/freepops/"
++#define FREEPOPS_SHARE "@PREFIX@/share/freepops/"
+ #endif
+ 
+ #endif

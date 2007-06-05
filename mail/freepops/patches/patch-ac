@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- doc/freepopsd.1.orig	2007-01-14 09:37:30.000000000 -0500
++++ doc/freepopsd.1
+@@ -54,7 +54,7 @@ a valid filename to log to this file.
+ Moves the process to background releasing the tty
+ .TP
+ \fB \-n\fR, \fB\-\-no-pid-file
+-Don't create the pid file containing the process id in /var/run/.
++Don't create the pid file containing the process id in @VARBASE@/run/.
+ .TP
+ \fB \-P \fRproxyaddress:proxyport, \fB\-\-proxy \fRproxyaddress:proxyport
+ You can specify the http proxy name and port separated by :. 
+@@ -114,10 +114,10 @@ Prints the program version.
+ .\"sense only in a lan-wide installation.
+ .SH FILES
+ .TP
+-.I /usr/share/frepops/lua/*
++.I @PREFIX@/share/freepops/lua/*
+ Webmails access implementation
+ .TP
+-.I /etc/freepops/config.lua
++.I @PKG_SYSCONFDIR@/config.lua
+ Configuration file, interesting only for paths, addresses to modules binding,
+ and accept/reject policy on mail addresses
+ \".TP
