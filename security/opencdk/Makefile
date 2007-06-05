@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2007/02/05 22:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/06/05 05:35:19 wiz Exp $
 
-DISTNAME=	opencdk-0.5.13
+DISTNAME=	opencdk-0.6.0
 CATEGORIES=	security devel
 MASTER_SITES=	http://josefsson.org/gnutls/releases/opencdk/ \
 		ftp://ftp.gnutls.org/pub/gnutls/opencdk/
@@ -29,7 +29,6 @@ PKGCONFIG_OVERRIDE=	src/opencdk.pc.in
 INSTALLATION_DIRS=	${DOCDIR} ${HTMLDIR} ${EGDIR}
 
 pre-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/DETAILS ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA}	${WRKSRC}/doc/opencdk-api.html ${DESTDIR}${HTMLDIR}
 	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.gpg *.c ${DESTDIR}${EGDIR}
 
