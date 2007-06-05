@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/11 11:51:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/05 20:25:26 adrianp Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -386,6 +386,8 @@ share/roundcube/program/localization/se/labels.inc
 share/roundcube/program/localization/se/messages.inc
 share/roundcube/program/localization/si/labels.inc
 share/roundcube/program/localization/si/messages.inc
+share/roundcube/program/localization/sl/labels.inc
+share/roundcube/program/localization/sl/messages.inc
 share/roundcube/program/localization/sk/labels.inc
 share/roundcube/program/localization/sk/messages.inc
 share/roundcube/program/localization/sr_cyrillic/labels.inc
@@ -396,12 +398,12 @@ share/roundcube/program/localization/th/labels.inc
 share/roundcube/program/localization/th/messages.inc
 share/roundcube/program/localization/tr/labels.inc
 share/roundcube/program/localization/tr/messages.inc
-share/roundcube/program/localization/tw/labels.inc
-share/roundcube/program/localization/tw/messages.inc
 share/roundcube/program/localization/vn/labels.inc
 share/roundcube/program/localization/vn/messages.inc
 share/roundcube/program/localization/zh_CN/labels.inc
 share/roundcube/program/localization/zh_CN/messages.inc
+share/roundcube/program/localization/zh_TW/labels.inc
+share/roundcube/program/localization/zh_TW/messages.inc
 share/roundcube/program/steps/addressbook/copy.inc
 share/roundcube/program/steps/addressbook/delete.inc
 share/roundcube/program/steps/addressbook/edit.inc
@@ -613,15 +615,16 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/steps/mail
 @dirrm share/roundcube/program/steps/addressbook
 @dirrm share/roundcube/program/steps
+@dirrm share/roundcube/program/localization/zh_TW
 @dirrm share/roundcube/program/localization/zh_CN
 @dirrm share/roundcube/program/localization/vn
-@dirrm share/roundcube/program/localization/tw
 @dirrm share/roundcube/program/localization/tr
 @dirrm share/roundcube/program/localization/th
 @dirrm share/roundcube/program/localization/sr_latin
 @dirrm share/roundcube/program/localization/sr_cyrillic
 @dirrm share/roundcube/program/localization/sk
 @dirrm share/roundcube/program/localization/si
+@dirrm share/roundcube/program/localization/sl
 @dirrm share/roundcube/program/localization/se
 @dirrm share/roundcube/program/localization/ru
 @dirrm share/roundcube/program/localization/ro
