@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/12/09 14:06:13 obache Exp $
+# $NetBSD: Makefile,v 1.20 2007/06/05 05:37:34 wiz Exp $
 
 DISTNAME=		gsasl-0.2.15
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/gsasl/releases/ \
 			ftp://alpha.gnu.org/pub/gnu/gsasl/
