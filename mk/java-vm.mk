@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.57 2007/04/04 14:32:52 tv Exp $
+# $NetBSD: java-vm.mk,v 1.58 2007/06/05 13:35:06 rillig Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -35,6 +35,14 @@
 #
 # Variables set by this file:
 #
+# JAVA_BINPREFIX
+#	The prefix for the Java binaries. The path to the real binaries
+#	is constructed by appending -${program} to it.
+#
+#	Examples:
+#	* ${JAVA_BINPREFIX}-java is the path to the Java interpreter.
+#	* ${JAVA_BINPREFIX}-javac is the path to the Java compiler.
+#
 # PKG_JVM
 #	The name of the selected Java implementation.
 #
@@ -44,6 +52,11 @@
 
 .if !defined(JAVA_VM_MK)
 JAVA_VM_MK=	# defined
+
+_VARGROUPS+=		java
+_USER_VARS.java=	PKG_JVM_DEFAULT
+_PKG_VARS.java=		USE_JAVA USE_JAVA2 PKG_JVMS_ACCEPTED
+_SYS_VARS.java=		PKG_JVM PKG_JAVA_HOME JAVA_BINPREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -152,6 +165,17 @@ _JAVA_PKGBASE.sun-jdk13=	sun-jre13
 _JAVA_PKGBASE.sun-jdk14=	sun-jre14
 _JAVA_PKGBASE.sun-jdk15=	sun-jre15
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
+
+# The following is copied from the respective JVM Makefiles.
+_JAVA_NAME.blackdown-jdk13=	blackdown13
+_JAVA_NAME.jdk=			jdk11
+_JAVA_NAME.jdk14=		jdk14
+_JAVA_NAME.kaffe=		kaffe
+_JAVA_NAME.scsl-jre15=		scsl15
+_JAVA_NAME.sun-jdk13=		sun13
+_JAVA_NAME.sun-jdk14=		sun14
+_JAVA_NAME.sun-jdk15=		sun15
+_JAVA_NAME.sun-jdk6=		sun6
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -329,12 +353,6 @@ EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 .  endif
 .endif
 
-# PKG_JVM is a publicly readable variable containing the name of the JVM
-#	we will be using.
-#
-# PKG_JAVA_HOME is a publicly readable variable containing ${JAVA_HOME}
-#	for the PKG_JVM described above.
-#
 PKG_JVM:=		${_PKG_JVM}
 .if defined(BUILDLINK_JAVA_PREFIX.${_PKG_JVM})
 PKG_JAVA_HOME?=		${BUILDLINK_JAVA_PREFIX.${_PKG_JVM}}
@@ -352,9 +370,10 @@ CLASSPATH?=		${CLASSPATH_cmd:sh}
 
 ALL_ENV+=		CLASSPATH=${CLASSPATH:Q}
 ALL_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-BUILD_DEFS+=		PKG_JVM_DEFAULT
-BUILD_DEFS_EFFECTS+=	PKG_JVM PKG_JAVA_HOME
+BUILD_DEFS+=		${_USER_VARS.java}
+BUILD_DEFS_EFFECTS+=	${_SYS_VARS.java}
 MAKEFLAGS+=		PKG_JVM=${PKG_JVM:Q}
 PREPEND_PATH+=		${PKG_JAVA_HOME}/bin
+JAVA_BINPREFIX=		${LOCALBASE}/bin/${_JAVA_NAME.${_PKG_JVM}}
 
 .endif	# JAVA_VM_MK
