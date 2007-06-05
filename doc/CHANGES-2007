@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1225 2007/06/05 20:26:53 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1226 2007/06/05 22:10:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/freepops version 0.2.4 [schmonz 2007-06-05]
 	Updated lang/jamvm to 1.4.5 [roland 2007-06-05]
 	Updated mail/roundcube to 20070528 [adrianp 2007-06-05]
+	Updated graphics/jpeg to 6bnb4 [tnn 2007-06-05]
