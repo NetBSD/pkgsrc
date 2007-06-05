@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/16 12:20:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/05 05:37:36 wiz Exp $
 #
 
 GST_PLUGINS0.8_NAME=	gnomevfs
@@ -6,7 +6,7 @@ GST_PLUGINS0.8_DIR=	ext/gnomevfs
 GST_PLUGINS0.8_FLAG=	gnome_vfs
 
 .include "../../multimedia/gst-plugins0.8/Makefile.common"
-PKGREVISION=		6
+PKGREVISION=		7
 
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
