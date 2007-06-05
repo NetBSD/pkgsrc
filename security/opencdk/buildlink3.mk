@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2007/06/05 05:35:20 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENCDK_BUILDLINK3_MK:=	${OPENCDK_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}opencdk
 
 .if !empty(OPENCDK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.opencdk+=	opencdk>=0.5.4nb1
-BUILDLINK_ABI_DEPENDS.opencdk+=	opencdk>=0.5.8nb1
+BUILDLINK_ABI_DEPENDS.opencdk+=	opencdk>=0.6.0
 BUILDLINK_PKGSRCDIR.opencdk?=	../../security/opencdk
 .endif	# OPENCDK_BUILDLINK3_MK
 
