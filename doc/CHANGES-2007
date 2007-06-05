@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1222 2007/06/05 05:58:56 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.1223 2007/06/05 06:01:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2357,3 +2357,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/guile14-gtk [wiz 2007-06-05]
 	Removed lang/guile14 [wiz 2007-06-05]
 	Added devel/bouml version 2.27 [roland 2007-06-05]
+	Added mail/freepops version 0.2.4 [schmonz 2007-06-05]
