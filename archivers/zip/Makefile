@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2007/06/05 06:02:46 wiz Exp $
 
 DISTNAME=	zip232
 PKGNAME=	zip-2.32
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
-		http://ftp.info-zip.org/pub/infozip/src/ \
-		http://sunsite.cnlab-switch.ch/ftp/mirror/infozip/src/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/infozip/src/ \
-		http://www.mirrorservice.org/sites/ftp.info-zip.org/pub/infozip/src/
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
