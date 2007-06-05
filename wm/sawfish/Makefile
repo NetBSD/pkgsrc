@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2007/05/09 10:09:45 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2007/06/05 08:51:15 tnn Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
+PKGREVISION=		1
 SF_VERS=		1.3
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
@@ -42,6 +43,8 @@ REP_ENV_PKGSRC=		LD_PRELOAD=/usr/lib/libpthread.so
 .else
 REP_ENV_PKGSRC=
 .endif
+
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../lang/librep/buildlink3.mk"
