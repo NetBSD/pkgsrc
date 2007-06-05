@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2007/05/20 17:05:42 taca Exp $
+# $NetBSD: Makefile,v 1.319 2007/06/05 05:57:24 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -59,6 +59,7 @@ SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
 SUBDIR+=	fetchyahoo
 SUBDIR+=	fix-mime-charset
+SUBDIR+=	freepops
 SUBDIR+=	fromto
 SUBDIR+=	getmail
 SUBDIR+=	gld
