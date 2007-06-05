@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/06/05 05:56:42 rillig Exp $
+
+Set maximum number of concurent users + 1 of the same project.  Example is
+1 person, so set to 1+1=2.
+	export BOUML_ID=2
+
+Set your favorite editor if you do not want BOUML's editor.
+	export BOUML_EDITOR=emacs
+
+Remember for QT3 to work:
+	export QTDIR=${PREFIX}/pkg/qt3
+	export PATH=${PATH}:${QTDIR}/bin
+	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${PREFIX}/X11R6/lib:${QTDIR}/lib
+
+Remember that QT3 must have been built with the -no-xft option.
+	i.e. build and install "pkgsrc/x11/qt3-libs" with the following line
+		CONFIGURE_ARGS+= -no-xft
+	added to file
+		${PREFIX}/pkgsrc/x11/qt3-libs/Makefile.common
+
+Remember that bouml does not work with QT4.
+===========================================================================
