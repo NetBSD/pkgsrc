@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/04/21 14:32:02 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/05 05:52:11 wiz Exp $
 #
 
 DISTNAME=	mousetar-20021217
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/mouse/tar/
+MASTER_SITES=	ftp://sparkle.rodents.montreal.qc.ca/pub/mouse/ftp.netbsd.org/tar/
 DISTFILES=	tar.c tar.man
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
