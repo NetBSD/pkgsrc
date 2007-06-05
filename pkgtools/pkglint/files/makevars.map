@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.161 2007/03/18 23:09:53 rillig Exp $
+# $NetBSD: makevars.map,v 1.162 2007/06/05 13:38:04 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -370,6 +370,7 @@ INSTALL_TEMPLATES	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [$package]
 IS_BUILTIN.*		YesNo_Indirectly [builtin.mk:psu]
+JAVA_BINPREFIX		Pathname [$system]
 JAVA_CLASSPATH		ShellWord [$package]
 JAVA_HOME		Pathname [$package]
 JAVA_NAME		Filename [$package]
