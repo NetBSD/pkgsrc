@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6377 2007/06/04 21:14:23 xtraeme Exp $
+$NetBSD: TODO,v 1.6378 2007/06/05 05:43:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -831,7 +831,6 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o opencdk-0.6.0
 	o openh323-1.19.1
 	o openldap-client-2.3.34
 	o openmortal-0.7.1
