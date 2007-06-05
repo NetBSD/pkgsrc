@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- Makefile.orig	2007-05-26 06:18:56.000000000 -0400
++++ Makefile
+@@ -60,26 +60,19 @@ install: all
+ 	$(H)mkdir -p $(PREFIX)
+ 	$(H)mkdir -p $(PREFIX)bin
+ 	$(H)mkdir -p $(PREFIX)share/freepops/lua/
+-	$(H)mkdir -p $(DESTDIR)var/lib/freepops/lua_unofficial/
+-	$(H)mkdir -p $(DESTDIR)var/lib/freepops/lua_updates/
+ 	$(H)mkdir -p $(PREFIX)share/doc/freepops/
+-	$(H)mkdir -p $(PREFIX)share/man/man1/
+-	$(H)mkdir -p $(DESTDIR)etc/freepops
++	$(H)mkdir -p $(PREFIX)$(PKGMANDIR)/man1/
++	$(H)mkdir -p $(PREFIX)share/examples/freepops/
+ 	$(H)if [ ! -z "$(FLTKUI)" ]; then \
+ 		mkdir -p $(PREFIX)lib/freepops/; \
+ 		cp updater-ui/fltk/updater_fltk$(SHAREDEXTENSION) \
+ 			$(PREFIX)lib/freepops/; \
+ 		cp updater-ui/fltk/freepops-updater-fltk $(PREFIX)bin; \
+ 	fi
+-	$(H)cp updater-ui/dialog/freepops-updater-dialog $(PREFIX)bin
+-	$(H)chmod a+rx $(PREFIX)bin/freepops-updater-dialog
+ 	$(H)cp src/freepopsd$(EXEEXTENSION) $(PREFIX)bin
+ 	$(H)cp src/lua/*.lua modules/include/*.lua config.lua \
+ 		$(PREFIX)share/freepops/lua/
+ 	# keep these in sync with win32 installer
+-	$(H)mkdir -p $(DESTDIR)var/lib/freepops/lua_updates/lxp
+-	$(H)mkdir -p $(DESTDIR)var/lib/freepops/lua_updates/browser
+-	$(H)mkdir -p $(DESTDIR)var/lib/freepops/lua_updates/soap
+ 	$(H)mkdir -p $(PREFIX)share/freepops/lua/lxp/
+ 	$(H)mkdir -p $(PREFIX)share/freepops/lua/browser/
+ 	$(H)mkdir -p $(PREFIX)share/freepops/lua/soap/
+@@ -98,14 +91,12 @@ install: all
+ 			cp $$X $(PREFIX)share/freepops/lua/soap/; \
+ 		done; \
+ 	fi
+-	$(H)cp doc/freepopsd.1  $(PREFIX)share/man/man1/
+-	$(H)cp doc/freepops-updater-dialog.1  $(PREFIX)share/man/man1/
++	$(H)cp doc/freepopsd.1  $(PREFIX)$(PKGMANDIR)/man1/
+ 	$(H)if [ ! -z "$(FLTKUI)" ]; then \
+-		cp doc/freepops-updater-fltk.1  $(PREFIX)share/man/man1/;\
++		cp doc/freepops-updater-fltk.1  $(PREFIX)$(PKGMANDIR)/man1/;\
+ 	fi
+-	$(H)cp doc/manual*.pdf  $(PREFIX)share/doc/freepops/ || true
+ 	$(H)cp doc/MANUAL.txt  $(PREFIX)share/doc/freepops/ || true
+-	$(H)cp config.lua $(DESTDIR)etc/freepops/
++	$(H)cp config.lua $(PREFIX)/share/examples/freepops/
+ 
+ uninstall:
+ 	$(H)rm -f $(DESTDIR)etc/freepops/config.lua

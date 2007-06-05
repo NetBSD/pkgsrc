@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- config.h.orig	2007-05-26 06:02:06.000000000 -0400
++++ config.h
+@@ -16,7 +16,7 @@
+ // common
+ #define VERSION 	"0.2.4"
+ #define PROGRAMNAME	"FreePOPs"
+-#define PIDFILE 	"/var/run/freepopsd.pid"
++#define PIDFILE 	"@VARBASE@/run/freepopsd.pid"
+ #define POP3PORT  	2000
+ #define MAXTHREADS 	5
+ 

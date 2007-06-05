@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+
+--- src/lua/freepops.lua.orig	2007-03-24 13:19:24.000000000 -0400
++++ src/lua/freepops.lua
+@@ -64,7 +64,7 @@ local __loadfile = loadfile
+ local function load_config()
+ 
+ 	local paths = { 
+-		"/etc/freepops/",
++		"@PKG_SYSCONFDIR@/",
+ 		"./",
+ 		os.getenv("FREEPOPSLUA_PATH") or "./" ,
+ 	}
