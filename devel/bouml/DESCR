@@ -1,0 +1,16 @@
+BOUML is a free UML tool box (under development) allowing you to specify and
+generate code in C++, Java and Idl. It runs under Unix/Linux/Solaris, MacOS X,
+and Windows. Also generates UML elements from code.
+
+This package requires QT3 built with -no-xft.  Bouml does not work with QT4.
+
+QT3 must be built with the -no-xft option because the QT3 package has
+been configured to depend on Xft2.  When QT3 opens a font, the font size is
+wrong, and the following message is given to the console:"couldn't open
+fontconfigs chosen font with Xft!!!"  Until the relationship between QT3,
+fontconfigs, and Xft2 is resolved, use the -no-xft option.  i.e. Prior to
+building bouml, build and install "pkgsrc/x11/qt3-libs" with the following
+line
+	CONFIGURE_ARGS+= -no-xft
+added to
+	pkgsrc/x11/qt3-libs/Makefile.common
