@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1224 2007/06/05 14:09:08 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.1225 2007/06/05 20:26:53 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/bouml version 2.27 [roland 2007-06-05]
 	Added mail/freepops version 0.2.4 [schmonz 2007-06-05]
 	Updated lang/jamvm to 1.4.5 [roland 2007-06-05]
+	Updated mail/roundcube to 20070528 [adrianp 2007-06-05]
