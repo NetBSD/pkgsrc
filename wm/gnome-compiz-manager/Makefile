@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/05/08 15:49:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/05 05:37:37 wiz Exp $
 #
 
 DISTNAME=	gnome-compiz-manager-0.10.4
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://download.gna.org/gcm/gnome-compiz-manager/
 
