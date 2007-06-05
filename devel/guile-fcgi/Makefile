@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/05 05:44:37 wiz Exp $
 
 DISTNAME=	guile-fcgi-0.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -18,6 +18,6 @@ do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} guile-fcgi.x
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
 
-.include "../../lang/guile14/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
