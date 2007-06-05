@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/05/28 12:20:42 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2007/06/05 05:37:07 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gimp
 
 .if !empty(GIMP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.2.9nb1
-BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.2.13nb2
+BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.2.15nb1
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
 .endif	# GIMP_BUILDLINK3_MK
 
