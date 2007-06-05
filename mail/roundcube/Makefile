@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/05/11 11:51:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/05 20:25:26 adrianp Exp $
 #
 
-DISTNAME=	roundcube-0.1-20070508
+DISTNAME=	roundcube-0.1-20070528
 PKGNAME=	${DISTNAME:S/-0.1//}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.farrokhi.net/roundcube/
@@ -26,6 +26,7 @@ DOCDIR=		${PREFIX}/share/doc/roundcube
 PAX_DIRS=	program skins
 
 MESSAGE_SUBST+=	DOCDIR=${DOCDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
 FILES_SUBST+=	RCDIR=${RCDIR:Q}
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/roundcube
