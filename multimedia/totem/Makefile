@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2007/04/11 18:03:39 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2007/06/05 08:11:44 wiz Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT+=	(using GStreamer)
+PKGREVISION=	1
 
 CONFLICTS+=	totem-xine-[0-9]*
 
