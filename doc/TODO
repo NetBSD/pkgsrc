@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6384 2007/06/06 19:34:31 adrianp Exp $
+$NetBSD: TODO,v 1.6385 2007/06/06 20:57:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -424,10 +424,10 @@ Suggested package updates
 	o drscheme-370
 	o dvd+rw-tools-7.0
 	o dvdrip-0.98.6
-	o dvdstyler-1.5beta5
+	o dvdstyler-1.5
 	o dvipdfmx-20061211
 	o dvipng-1.9
-	o dwm-4.1
+	o dwm-4.2
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -443,6 +443,7 @@ Suggested package updates
 	o elm-me-2.4pl123d
 	o elscreen-1.5.2
 	o eltclsh-1.7
+	o emacs-22.1
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.7
@@ -519,7 +520,7 @@ Suggested package updates
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glade-3.2.1
+	o glade-3.3.0
 	o glchess-1.0.5
 	o glibmm-2.12.9
 	o glpk-4.17
@@ -530,7 +531,7 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-build-0.1.6
 	o gnome-games-2.18.1.1
-	o gnome-mag-0.14.4
+	o gnome-mag-0.14.5
 	o gnome-screensaver-2.18.2
 	o gnome-speech-0.4.12
 	o gnu-crypto-2.1.0
@@ -548,7 +549,8 @@ Suggested package updates
 	o gnuradio-video-sdl-3.0.3
 	o gnuradio-wxgui-3.0.3
 	o gnustep-1.14.0
-	o gnustep-make-2.0.0
+	o gnustep-examples-1.2.0
+	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -570,7 +572,9 @@ Suggested package updates
 	o gsharutils-4.6.3
 	o gsm-1.0.12
 	o gss-0.21
+	o gst-plugins0.10-base-0.10.13
 	o gst-plugins0.10-fluendo-mp3-0.10.5
+	o gstreamer0.10-0.10.13
 	o gtar-1.16.1
 	o gtar-base-1.16.1
 	o gthumb-2.10.3
@@ -751,7 +755,7 @@ Suggested package updates
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
-	o micq-0.5.3
+	o micq-0.5.4
 	o milter-greylist-3.1.7
 	o mimedefang-2.62
 	o mined-2000.13.2
@@ -992,7 +996,7 @@ Suggested package updates
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o phpmyadmin-2.10.1
-	o phppgadmin-4.0.1
+	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
 	o piewm-1.04
@@ -1105,6 +1109,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-4.3
 	o quagga-devel-0.99.6
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -1163,6 +1168,7 @@ Suggested package updates
 	o shorten-3.6.1
 	o siag-3.6.1
 	o sign-1.0.7
+	o silc-client-1.1
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
 	o silc-toolkit-1.1
 	o simh-3.7.0
@@ -1272,7 +1278,7 @@ Suggested package updates
 	o vobcopy-1.0.1
 	o vp-1.6
 	o vsftpd-2.0.5
-	o vte-0.16.4
+	o vte-0.16.5
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
