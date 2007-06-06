@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1227 2007/06/06 06:13:59 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1228 2007/06/06 09:35:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2362,3 +2362,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/roundcube to 20070528 [adrianp 2007-06-05]
 	Updated graphics/jpeg to 6bnb4 [tnn 2007-06-05]
 	Updated security/opencdk to 0.6.1 [wiz 2007-06-06]
+	Updated sysutils/e2fsprogs to 1.39 [martti 2007-06-06]
