@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1234 2007/06/06 22:31:28 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1235 2007/06/06 22:38:08 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/ckmame to 0.9 [wiz 2007-06-06]
 	Updated print/dvipdfmx to 0.0.0.20070518 [minskim 2007-06-06]
 	Updated fonts/tex-unttf to 1.0.1.20070507 [minskim 2007-06-06]
+	Added security/Bastille version 3.0.9 [roland 2007-06-06]
