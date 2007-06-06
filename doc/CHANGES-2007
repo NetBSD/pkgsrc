@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1228 2007/06/06 09:35:32 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1229 2007/06/06 12:30:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2363,3 +2363,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/jpeg to 6bnb4 [tnn 2007-06-05]
 	Updated security/opencdk to 0.6.1 [wiz 2007-06-06]
 	Updated sysutils/e2fsprogs to 1.39 [martti 2007-06-06]
+	Updated print/poster to 20060221 [markd 2007-06-06]
+	Updated print/cups to 1.2.11 [markd 2007-06-06]
+	Added graphics/koverartist version 0.5 [markd 2007-06-06]
+	Added time/p5-DateTime-Format-ICal version 0.08 [markd 2007-06-06]
+	Added time/p5-DateTime-Event-Recurrence version 0.16 [markd 2007-06-06]
+	Added time/p5-DateTime-Event-ICal version 0.09 [markd 2007-06-06]
+	Added time/p5-Data-ICal version 0.13 [markd 2007-06-06]
+	Added time/p5-Data-ICal-DateTime version 0.65 [markd 2007-06-06]
