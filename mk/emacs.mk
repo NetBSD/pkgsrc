@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.32 2007/06/06 08:23:23 rillig Exp $
+# $NetBSD: emacs.mk,v 1.33 2007/06/06 08:25:04 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -184,6 +184,8 @@ _SYS_VARS.emacs=	EMACS_BIN EMACS_ETCPREFIX EMACS_FLAVOR \
 			EMACS_INFOPREFIX EMACS_LISPPREFIX \
 			EMACS_PKGNAME_PREFIX \
 			EMACS_VERSION_MAJOR EMACS_VERSION_MINOR
+BUILD_DEFS+=		${_USER_VARS.emacs}
+BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 .include "../../mk/bsd.prefs.mk"
 
