@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.192 2007/01/25 15:37:12 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.193 2007/06/06 09:29:53 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -80,6 +80,19 @@
 #
 # BUILDLINK_*	public buildlink-related variables usable in other Makefiles
 # _BLNK_*	private buildlink-related variables to this Makefile
+
+_VARGROUPS+=		bl3
+.for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDFLAGS LIBS
+_SYS_VARS.bl3+=		BUILDLINK_${v}
+.endfor
+.for p in ${BUILDLINK_PACKAGES}
+.  for v in AUTO_VARS BUILTIN_MK CONTENTS_FILTER CPPFLAGS DEPMETHOD FILES_CMD INCDIRS IS_DEPOT LDFLAGS LIBDIRS PKGNAME PREFIX RPATHDIRS
+_SYS_VARS.bl3+=		BUILDLINK_${v}.${p}
+.  endfor
+.  for v in IGNORE_PKG USE_BUILTIN
+_SYS_VARS.bl3+=		${v}.${p}
+.  endfor
+.endfor
 
 .if ${PKG_DEBUG_LEVEL} > 0
 ECHO_BUILDLINK_MSG?=	${ECHO}
