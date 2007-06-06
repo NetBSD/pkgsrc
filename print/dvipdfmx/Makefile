@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.27 2006/04/20 18:45:34 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2007/06/06 22:16:33 minskim Exp $
 
-DISTNAME=	dvipdfmx-20050831
+DISTNAME=	dvipdfmx-20070518
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	5
 CATEGORIES=	print converters
-MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/current/
+MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/release/
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
 COMMENT=	Dvi to pdf converter with CID-keyed font support
 
-DEPENDS+=	adobe-cmaps>=20060419:../../fonts/adobe-cmaps
+DEPENDS+=	adobe-cmaps>=20060615:../../fonts/adobe-cmaps
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
-USE_DIRS+=		texmf-1.0
+USE_DIRS+=		texmf-1.4
 USE_TOOLS+=		gs:run
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}
@@ -26,12 +25,12 @@ MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}
 .include "../../print/teTeX/module.mk"
 
 post-install:
-	cd ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap; \
-	for file in ../../../Adobe/Resource/CMap/*; do \
-		${LN} -s $$file `${BASENAME} $$file`; \
+	cd ${PKG_LOCALTEXMFPREFIX}/dvipdfm; \
+	for file in ../../Adobe/Resource/CMap/*; do \
+		${LN} -sf $$file `${BASENAME} $$file`; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dvipdfmx
-	${MV} ${PKG_LOCALTEXMFPREFIX}/dvipdfm/config/dvipdfmx.cfg \
+	${MV} ${PKG_LOCALTEXMFPREFIX}/dvipdfm/dvipdfmx.cfg \
 		${PREFIX}/share/examples/dvipdfmx/
 
 .include "../../mk/bsd.pkg.mk"
