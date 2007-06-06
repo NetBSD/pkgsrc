@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
+bin/koverartist
+share/doc/kde/HTML/en/koverartist/common
+share/doc/kde/HTML/en/koverartist/index.cache.bz2
+share/doc/kde/HTML/en/koverartist/index.docbook
+share/icons/hicolor/128x128/apps/koverartist.png
+share/icons/hicolor/16x16/apps/koverartist.png
+share/icons/hicolor/22x22/apps/koverartist.png
+share/icons/hicolor/32x32/apps/koverartist.png
+share/icons/hicolor/48x48/apps/koverartist.png
+share/icons/hicolor/64x64/apps/koverartist.png
+share/kde/applnk/Multimedia/koverartist.desktop
+share/kde/apps/koverartist/cases/cd-multiple.koac
+share/kde/apps/koverartist/cases/cd-slim-contents.koac
+share/kde/apps/koverartist/cases/cd-slim-simple.koac
+share/kde/apps/koverartist/cases/cd-standard.koac
+share/kde/apps/koverartist/cases/cd-wideslim-contents.koac
+share/kde/apps/koverartist/cases/cd-wideslim-simple.koac
+share/kde/apps/koverartist/cases/dvd-slim.koac
+share/kde/apps/koverartist/cases/dvd-standard.koac
+share/kde/apps/koverartist/koverartistui.rc
+share/kde/mimelnk/application/x-koverartist.desktop
+share/locale/de/LC_MESSAGES/koverartist.mo
+share/locale/es/LC_MESSAGES/koverartist.mo
+share/locale/fr/LC_MESSAGES/koverartist.mo
+share/locale/it/LC_MESSAGES/koverartist.mo
+share/locale/pl/LC_MESSAGES/koverartist.mo
+share/locale/pt/LC_MESSAGES/koverartist.mo
+share/locale/ru/LC_MESSAGES/koverartist.mo
+@comment in kde: @dirrm share/kde/mimelnk/application
+@dirrm share/kde/apps/koverartist/cases
+@dirrm share/kde/apps/koverartist
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/koverartist
+@comment in kde: @dirrm share/doc/kde/HTML/en

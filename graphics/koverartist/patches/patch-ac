@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
+
+--- src/rendererbase.cpp.orig	2006-04-28 00:52:30.000000000 +1200
++++ src/rendererbase.cpp
+@@ -35,6 +35,10 @@
+ 
+ #include <iostream>
+ 
++#ifdef __NetBSD__
++#define fmin(a,b) ((a)<(b)?(a):(b))
++#define fmax(a,b) ((a)>(b)?(a):(b))
++#endif
+ 
+ namespace KoverArtist
+ {
