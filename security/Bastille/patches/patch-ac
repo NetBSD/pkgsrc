@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/06 22:37:59 rillig Exp $
+
+--- Install.sh.orig	2005-04-18 23:26:39.000000000 +0200
++++ Install.sh	2006-12-03 12:09:56.000000000 +0100
+@@ -99,6 +99,8 @@ cp OSMap/LINUX.system $RPM_BUILD_ROOT/us
+ cp OSMap/HP-UX.bastille $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
+ cp OSMap/HP-UX.system $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
+ cp OSMap/HP-UX.service $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
++cp OSMap/NetBSD.bastille $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
++cp OSMap/NetBSD.system $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
+ cp OSMap/OSX.bastille $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
+ cp OSMap/OSX.system $RPM_BUILD_ROOT/usr/share/Bastille/OSMap
+ 
