@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/06/06 12:43:31 tnn Exp $
 
-DISTNAME=		euler-1.60.6
-PKGREVISION=		5
+DISTNAME=		euler-1.61.0
+PKGNAME=		euler-1.61
+EXTRACT_SUFX=		.tgz
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=euler/}
 
@@ -9,9 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://euler.sourceforge.net/index.html
 COMMENT=		Interactive numerical analysis and graphics program
 
-WRKSRC=			${WRKDIR}/euler-1.60/source
-MAKE_FILE=		makefile
-BUILD_TARGET=		euler
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
