@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2007/06/05 05:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/06/06 06:11:16 wiz Exp $
 
-DISTNAME=	opencdk-0.6.0
+DISTNAME=	opencdk-0.6.1
 CATEGORIES=	security devel
 MASTER_SITES=	http://josefsson.org/gnutls/releases/opencdk/ \
-		ftp://ftp.gnutls.org/pub/gnutls/opencdk/
+		ftp://ftp.gnutls.org/pub/gnutls/opencdk/ \
+		http://www.gnu.org/software/gnutls/releases/opencdk/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
@@ -33,5 +35,6 @@ pre-install:
 	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.gpg *.c ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
