@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.10 2007/04/19 16:52:03 joerg Exp $
+# $NetBSD: unprivileged.mk,v 1.11 2007/06/06 12:41:53 rillig Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -27,11 +27,11 @@ UNPRIVILEGED_USER!=	${ID} -n -u
 UNPRIVILEGED_GROUP!=	${ID} -n -g
 .  endif
 
-.if ${_USE_DESTDIR} == "user-destdir" && (!defined(UNPRIVILEGED) || empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
+.  if ${_USE_DESTDIR} == "user-destdir" && (!defined(UNPRIVILEGED) || empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
 _SU_ROOT_USER:=		${ROOT_USER}
 REAL_ROOT_USER:=	${ROOT_USER}
 REAL_ROOT_GROUP:=	${ROOT_GROUP}
-.endif
+.  endif
 
 # Override super-user account.
 ROOT_GROUP=		${UNPRIVILEGED_GROUP}
