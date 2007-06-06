@@ -1,0 +1,108 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/06 22:37:59 rillig Exp $
+lib/Bastille/API.pm
+lib/Bastille/AccountSecurity.pm
+lib/Bastille/Apache.pm
+lib/Bastille/BootSecurity.pm
+lib/Bastille/ConfigureMiscPAM.pm
+lib/Bastille/DNS.pm
+lib/Bastille/DisableUserTools.pm
+lib/Bastille/FTP.pm
+lib/Bastille/FilePermissions.pm
+lib/Bastille/Firewall.pm
+lib/Bastille/HP_API.pm
+lib/Bastille/HP_UX.pm
+lib/Bastille/IOLoader.pm
+lib/Bastille/IPFilter.pm
+lib/Bastille/LogAPI.pm
+lib/Bastille/Logging.pm
+lib/Bastille/MiscellaneousDaemons.pm
+lib/Bastille/OSX_API.pm
+lib/Bastille/PSAD.pm
+lib/Bastille/PatchDownload.pm
+lib/Bastille/Patches.pm
+lib/Bastille/Printing.pm
+lib/Bastille/RemoteAccess.pm
+lib/Bastille/SecureInetd.pm
+lib/Bastille/Sendmail.pm
+lib/Bastille/TMPDIR.pm
+lib/Bastille/TestAPI.pm
+lib/Bastille/test_AccountSecurity.pm
+lib/Bastille/test_Apache.pm
+lib/Bastille/test_BootSecurity.pm
+lib/Bastille/test_DNS.pm
+lib/Bastille/test_DisableUserTools.pm
+lib/Bastille/test_FTP.pm
+lib/Bastille/test_FilePermissions.pm
+lib/Bastille/test_HP_UX.pm
+lib/Bastille/test_Logging.pm
+lib/Bastille/test_MiscellaneousDaemons.pm
+lib/Bastille/test_Printing.pm
+lib/Bastille/test_SecureInetd.pm
+lib/Bastille/test_Sendmail.pm
+lib/perl5/site_perl/Bastille_Curses.pm
+lib/perl5/site_perl/Bastille_Tk.pm
+lib/perl5/site_perl/Curses/Widgets.pm
+sbin/AutomatedBastille
+sbin/BastilleBackEnd
+sbin/InteractiveBastille
+sbin/RevertBastille
+sbin/UndoBastille
+sbin/bastille
+share/Bastille/Credits
+share/Bastille/FKL/configs/fkl_config_redhat.cfg
+share/Bastille/Modules.txt
+share/Bastille/OSMap/HP-UX.bastille
+share/Bastille/OSMap/HP-UX.service
+share/Bastille/OSMap/HP-UX.system
+share/Bastille/OSMap/LINUX.bastille
+share/Bastille/OSMap/LINUX.system
+share/Bastille/OSMap/NetBSD.bastille
+share/Bastille/OSMap/NetBSD.system
+share/Bastille/OSMap/OSX.bastille
+share/Bastille/OSMap/OSX.system
+share/Bastille/Questions/AccountSecurity.txt
+share/Bastille/Questions/Apache.txt
+share/Bastille/Questions/BootSecurity.txt
+share/Bastille/Questions/ConfigureMiscPAM.txt
+share/Bastille/Questions/DNS.txt
+share/Bastille/Questions/DisableUserTools.txt
+share/Bastille/Questions/FTP.txt
+share/Bastille/Questions/FilePermissions.txt
+share/Bastille/Questions/Firewall.txt
+share/Bastille/Questions/HP_UX.txt
+share/Bastille/Questions/IPFilter.txt
+share/Bastille/Questions/Logging.txt
+share/Bastille/Questions/MiscellaneousDaemons.txt
+share/Bastille/Questions/PSAD.txt
+share/Bastille/Questions/Patches.txt
+share/Bastille/Questions/Printing.txt
+share/Bastille/Questions/SecureInetd.txt
+share/Bastille/Questions/Sendmail.txt
+share/Bastille/Questions/TMPDIR.txt
+share/Bastille/Weights.txt
+share/Bastille/bastille-firewall
+share/Bastille/bastille-firewall-early.sh
+share/Bastille/bastille-firewall-pre-audit.sh
+share/Bastille/bastille-firewall-reset
+share/Bastille/bastille-firewall-schedule
+share/Bastille/bastille-firewall.cfg
+share/Bastille/bastille-ipchains
+share/Bastille/bastille-netfilter
+share/Bastille/bastille-tmpdir-defense.sh
+share/Bastille/bastille-tmpdir.csh
+share/Bastille/bastille-tmpdir.sh
+share/Bastille/bastille.jpg
+share/Bastille/complete.xbm
+share/Bastille/hosts.allow
+share/Bastille/ifup-local
+share/Bastille/incomplete.xbm
+share/Bastille/wz_tooltip.js
+@exec ${MKDIR} %D/var/lock/subsys/bastille
+@dirrm var/lock/subsys/bastille
+@dirrm share/Bastille/Questions
+@dirrm share/Bastille/OSMap
+@dirrm share/Bastille/FKL/configs
+@dirrm share/Bastille/FKL
+@dirrm share/Bastille
+@dirrm lib/perl5/site_perl/Curses
+@dirrm lib/Bastille
