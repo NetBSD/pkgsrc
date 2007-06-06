@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.68 2007/04/21 14:53:19 tnn Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.69 2007/06/06 13:20:34 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -417,7 +417,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAP_SHELL_LIB}					\
 		${_WRAP_SUBR_SH}					\
 		${_WRAP_TRANSFORM.${_wrappee_}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} 								\
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
 	${ECHO_WRAPPER_MSG} "=> Creating ${_wrappee_} wrapper: $$wrapper"; \
         gen_wrapper=yes;						\
@@ -458,13 +458,13 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${CHMOD} +x $$wrapper;					\
 		;;							\
 	esac
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 
 .  for _alias_ in ${_WRAP_ALIASES.${_wrappee_}:S/^/${WRAPPER_BINDIR}\//}
 .    if !target(${_alias_})
 generate-wrappers: ${_alias_}
 ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} 								\
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
 	if [ ! -x ${.TARGET} -a -x $$wrapper ]; then			\
 		${ECHO_WRAPPER_MSG} "=> Linking ${_wrappee_} wrapper: ${.TARGET}"; \
@@ -508,61 +508,57 @@ generate-wrappers: ${_target_}
 	transform-xlc-cc \
 	wrapper-subr.sh
 ${WRAPPER_TMPDIR}/${w}: ${WRAPPER_SRCDIR}/${w}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .endfor
 
 .if !target(${_WRAP_GEN_REORDER})
 ${_WRAP_GEN_REORDER}: 							\
 		${_WRAP_SHELL_LIB}					\
 		${WRAPPER_SRCDIR}/gen-reorder.sh
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} 								\
 	${CAT} ${WRAPPER_SRCDIR}/gen-reorder.sh				\
 		| ${SED} ${_WRAP_SUBST_SED}				\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN} ${CHMOD} +x ${.TARGET}
 .endif
 
 .if !target(${_WRAP_GEN_TRANSFORM})
 ${_WRAP_GEN_TRANSFORM}:							\
 		${_WRAP_SHELL_LIB}					\
 		${WRAPPER_SRCDIR}/gen-transform.sh
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} 								\
 	${CAT} ${WRAPPER_SRCDIR}/gen-transform.sh			\
 		| ${SED} ${_WRAP_SUBST_SED}				\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN} ${CHMOD} +x ${.TARGET}
 .endif
 
 .if !target(${_WRAP_REORDERLIBS})
 ${_WRAP_REORDERLIBS}: ${_WRAP_GEN_REORDER}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_WRAP_GEN_REORDER} ${WRAPPER_REORDER_CMDS} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${_WRAP_GEN_REORDER} ${WRAPPER_REORDER_CMDS} > ${.TARGET}
 .endif
 
 .  if !target(${_WRAP_SHELL_LIB})
 ${_WRAP_SHELL_LIB}: ${.CURDIR}/../../mk/scripts/shell-lib
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .if !target(${_WRAP_TRANSFORM_SEDFILE})
 ${_WRAP_TRANSFORM_SEDFILE}: ${_WRAP_GEN_TRANSFORM}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_WRAP_GEN_TRANSFORM} transform ${_WRAP_TRANSFORM_CMDS}	\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${_WRAP_GEN_TRANSFORM} transform ${_WRAP_TRANSFORM_CMDS}	\
 		> ${.TARGET}
 .endif
 
 .if !target(${_WRAP_UNTRANSFORM_SEDFILE})
 ${_WRAP_UNTRANSFORM_SEDFILE}: ${_WRAP_GEN_TRANSFORM}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} 								\
 	${_WRAP_GEN_TRANSFORM} untransform ${_WRAP_TRANSFORM_CMDS}	\
 		> ${.TARGET}
 .endif
@@ -570,29 +566,26 @@ ${_WRAP_UNTRANSFORM_SEDFILE}: ${_WRAP_GEN_TRANSFORM}
 .for _wrappee_ in ${_WRAPPEES}
 .  if !target(${_WRAP_EMPTY_FILE})
 ${_WRAP_EMPTY_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_ARG_PP_MAIN.${_wrappee_}})
 ${_WRAP_ARG_PP_MAIN.${_wrappee_}}: ${WRAPPER_SRCDIR}/arg-pp-main
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_ARG_SOURCE.${_wrappee_}})
 ${_WRAP_ARG_SOURCE.${_wrappee_}}: ${WRAPPER_SRCDIR}/arg-source
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_BUILDCMD.${_wrappee_}})
 ${_WRAP_BUILDCMD.${_wrappee_}}: ${WRAPPER_SRCDIR}/buildcmd
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_CACHE.${_wrappee_}})
@@ -603,29 +596,26 @@ ${_WRAP_CACHE.${_wrappee_}}:
 
 .  if !target(${_WRAP_CACHE_BODY.${_wrappee_}})
 ${_WRAP_CACHE_BODY.${_wrappee_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_CMD_SINK.${_wrappee_}})
 ${_WRAP_CMD_SINK.${_wrappee_}}: ${WRAPPER_SRCDIR}/cmd-sink
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_LOGIC.${_wrappee_}})
 ${_WRAP_LOGIC.${_wrappee_}}: ${WRAPPER_SRCDIR}/logic
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 
 .  if !target(${_WRAP_SCAN.${_wrappee_}})
 ${_WRAP_SCAN.${_wrappee_}}: ${WRAPPER_SRCDIR}/scan
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .  endif
 .endfor	# _WRAPPEES
 
@@ -717,6 +707,6 @@ post-wrapper:
 
 .PHONY: wrapper-cookie
 wrapper-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.wrapper} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.wrapper:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}
+	${RUN} [ ! -f ${_COOKIE.wrapper} ]
+	${RUN} ${MKDIR} ${_COOKIE.wrapper:H}
+	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}
