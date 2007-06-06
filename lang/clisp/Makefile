@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2007/04/01 12:45:39 tron Exp $
+# $NetBSD: Makefile,v 1.61 2007/06/06 21:29:54 uwe Exp $
 
 DISTNAME=	clisp-2.39
 PKGREVISION=	1
@@ -40,9 +40,8 @@ MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 
 post-patch:
-	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/ffcall/callback/trampoline_r
-	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/ffcall/callback/trampoline_r
-	${CP} files/vacall-rs6000-netbsd.s ${WRKSRC}/ffcall/callback/vacall_r
+	${CP} files/vacall-rs6000-netbsd.s \
+		${WRKSRC}/ffcall/callback/vacall_r/vacall-powerpc-netbsd.s
 
 post-configure:
 	cd ${WRKSRC}/src && \

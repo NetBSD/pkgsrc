@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2007/04/01 12:45:39 tron Exp $
+$NetBSD: distinfo,v 1.16 2007/06/06 21:29:55 uwe Exp $
 
 SHA1 (clisp-2.39.tar.bz2) = 388cc208cd0bd05a154840e83a4b824a493acbc0
 RMD160 (clisp-2.39.tar.bz2) = b31e53cb97a116c683543ee74093fe2a05ed9ea4
@@ -13,5 +13,5 @@ SHA1 (patch-ag) = f3ce92e3f0806197015b971cce24311a5a447050
 SHA1 (patch-ah) = 6a607e00e1815fe332325a91865889a03c60c3a0
 SHA1 (patch-ai) = 8291cfd4c27cbb22d5a72168cdb21c6d26400f54
 SHA1 (patch-aj) = 37af4382519ddb21587006789165ba1173e17577
-SHA1 (patch-ak) = 748c6638cab0f401d8f1f4e60df8cf5394d593ca
+SHA1 (patch-ak) = 690589ada412c8de3cb60a2db3b47c8a753b723c
 SHA1 (patch-al) = 90ec5cc5028dba1ecda7d499def88303cbff2d2a
