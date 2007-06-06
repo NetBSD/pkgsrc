@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/05 23:51:15 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/06 20:55:29 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 include/zip.h
@@ -8,13 +8,16 @@ man/man1/zipcmp.1
 man/man1/zipmerge.1
 man/man3/libzip.3
 man/man3/zip_add.3
+man/man3/zip_add_dir.3
 man/man3/zip_close.3
 man/man3/zip_delete.3
+man/man3/zip_error_clear.3
 man/man3/zip_error_get.3
 man/man3/zip_error_get_sys_type.3
 man/man3/zip_error_to_str.3
 man/man3/zip_errors.3
 man/man3/zip_fclose.3
+man/man3/zip_file_error_clear.3
 man/man3/zip_file_error_get.3
 man/man3/zip_file_strerror.3
 man/man3/zip_fopen.3
@@ -38,6 +41,7 @@ man/man3/zip_source_function.3
 man/man3/zip_source_zip.3
 man/man3/zip_stat.3
 man/man3/zip_stat_index.3
+man/man3/zip_stat_init.3
 man/man3/zip_strerror.3
 man/man3/zip_unchange.3
 man/man3/zip_unchange_all.3
