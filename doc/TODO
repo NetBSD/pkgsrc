@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6382 2007/06/06 12:30:36 markd Exp $
+$NetBSD: TODO,v 1.6383 2007/06/06 12:49:12 tnn Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
-	o euler-1.61
 	o ex-20050325
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
