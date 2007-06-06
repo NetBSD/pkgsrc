@@ -1,0 +1,2 @@
+This module handles formatting and parsing of iCal format datetimes
+and durations, per RFC 2445.
