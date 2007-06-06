@@ -1,8 +1,19 @@
-$NetBSD: patch-af,v 1.3 2007/06/06 09:35:18 martti Exp $
-
---- lib/ext2fs/ismounted.c.orig	2005-09-06 12:40:14.000000000 +0300
-+++ lib/ext2fs/ismounted.c	2007-06-06 12:09:36.000000000 +0300
-@@ -196,7 +196,11 @@
+$NetBSD: patch-af,v 1.4 2007/06/06 10:29:15 martti Exp $
+--- lib/ext2fs/ismounted.c.orig	2007-06-06 13:22:30.000000000 +0300
++++ lib/ext2fs/ismounted.c	2007-06-06 13:23:15.000000000 +0300
+@@ -29,7 +29,11 @@
+ #include <sys/mount.h>
+ #endif /* HAVE_GETMNTINFO */
+ #include <string.h>
++#if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900
++#include <sys/statvfs.h>
++#else
+ #include <sys/stat.h>
++#endif
+ 
+ #include "ext2_fs.h"
+ #include "ext2fs.h"
+@@ -196,7 +200,11 @@
  static errcode_t check_getmntinfo(const char *file, int *mount_flags,
  				  char *mtpt, int mtlen)
  {
@@ -14,3 +25,14 @@ $NetBSD: patch-af,v 1.3 2007/06/06 09:35:18 martti Exp $
          int    len, n;
          const  char   *s1;
  	char	*s2;
+@@ -325,9 +333,9 @@
+ 			*mount_flags |= EXT2_MF_BUSY;
+ 	} else
+ 		close(fd);
++#endif
+ 
+ 	return 0;
+-#endif
+ }
+ 
+ /*

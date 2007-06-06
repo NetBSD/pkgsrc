@@ -1,0 +1,11 @@
+--- e2fsck/unix.c.orig	2007-06-06 13:04:31.000000000 +0300
++++ e2fsck/unix.c	2007-06-06 13:19:33.000000000 +0300
+@@ -173,7 +173,7 @@
+ 	retval = ext2fs_check_if_mounted(ctx->filesystem_name,
+ 					 &ctx->mount_flags);
+ 	if (retval) {
+-		com_err("ext2fs_check_if_mount", retval,
++		com_err("ext2fs_check_if_mounted", retval,
+ 			_("while determining whether %s is mounted."),
+ 			ctx->filesystem_name);
+ 		return;
