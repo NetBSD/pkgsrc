@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/06/05 05:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2007/06/06 06:23:58 wiz Exp $
 
 DISTNAME=	gnutls-1.6.3
 PKGREVISION=	1
@@ -28,7 +28,9 @@ INFO_FILES=		yes
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
 
-BUILDLINK_API_DEPENDS.opencdk+=	opencdk>=0.5.5
+# Disabled because 1.6.x doesn't work with opencdk-0.6.x
+CONFIGURE_ARGS+=	--with-included-opencdk
+#BUILDLINK_API_DEPENDS.opencdk+=	opencdk>=0.5.5
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2
 
@@ -54,5 +56,6 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
-.include "../../security/opencdk/buildlink3.mk"
+# Disabled because 1.6.x doesn't work with opencdk-0.6.x
+#.include "../../security/opencdk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
