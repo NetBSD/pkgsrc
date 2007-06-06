@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.59 2007/03/07 00:33:24 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.60 2007/06/06 07:12:31 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -156,20 +156,24 @@ PKG_OPTIONS=		# empty
 
 # Check for variable definitions required before including this file.
 .if !defined(PKG_OPTIONS_VAR)
-PKG_FAIL_REASON+=	"bsd.options.mk: PKG_OPTIONS_VAR is not defined."
-.elif !defined(PKG_SUPPORTED_OPTIONS) && !defined(PKG_OPTIONS_OPTIONAL_GROUPS) && !defined(PKG_OPTIONS_REQUIRED_GROUPS) && !defined(PKG_OPTIONS_NONEMPTY_SETS)
-# no supported options: set PKG_OPTIONS to empty and skip rest of file
-PKG_OPTIONS=	#empty
-.else # process the rest of the file
+PKG_FAIL_REASON+=	"[bsd.options.mk] PKG_OPTIONS_VAR is not defined."
+.endif
+.if !defined(PKG_SUPPORTED_OPTIONS) \
+   && !defined(PKG_OPTIONS_OPTIONAL_GROUPS) \
+   && !defined(PKG_OPTIONS_REQUIRED_GROUPS) \
+   && !defined(PKG_OPTIONS_NONEMPTY_SETS)
+PKG_SUPPORTED_OPTIONS?=	# none
+PKG_FAIL_REASON+=	"[bsd.options.mk] The package has no options, but includes this file."
+.endif
 
 #
 # create map of option to group and add group options to PKG_SUPPORTED_OPTIONS
 #
 .for _grp_ in ${PKG_OPTIONS_OPTIONAL_GROUPS} ${PKG_OPTIONS_REQUIRED_GROUPS}
 _PKG_OPTIONS_GROUP_STACK.${_grp_}:=#empty
-.if !defined(PKG_OPTIONS_GROUP.${_grp_}) || empty(PKG_OPTIONS_GROUP.${_grp_})
-PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_GROUP."${_grp_:Q}" must be non-empty."
-.endif
+.  if !defined(PKG_OPTIONS_GROUP.${_grp_}) || empty(PKG_OPTIONS_GROUP.${_grp_})
+PKG_FAIL_REASON+=	"[bsd.options.mk] PKG_OPTIONS_GROUP."${_grp_:Q}" must be non-empty."
+.  endif
 .  for _opt_ in ${PKG_OPTIONS_GROUP.${_grp_}}
 PKG_SUPPORTED_OPTIONS+= ${_opt_}
 _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
@@ -182,7 +186,7 @@ _PKG_OPTIONS_GROUP_MAP.${_opt_}=${_grp_}
 _PKG_OPTIONS_ALL_SETS:=#empty
 .for _set_ in ${PKG_OPTIONS_NONEMPTY_SETS}
 .  if !defined(PKG_OPTIONS_SET.${_set_}) || empty(PKG_OPTIONS_SET.${_set_})
-PKG_FAIL_REASON:="bsd.options.mk: PKG_OPTIONS_SET."${_set_:Q}" must be non-empty."
+PKG_FAIL_REASON+=	"[bsd.options.mk] PKG_OPTIONS_SET."${_set_:Q}" must be non-empty."
 .  endif
 .  for _opt_ in ${PKG_OPTIONS_SET.${_set_}}
 PKG_SUPPORTED_OPTIONS+=	${_opt_}
@@ -193,7 +197,7 @@ _PKG_OPTIONS_ALL_SETS+=	${_opt_}
 #
 # include deprecated variable to options mapping
 #
-.include "${.CURDIR}/../../mk/defaults/obsolete.mk"
+.include "${.PARSEDIR}/defaults/obsolete.mk"
 
 #
 # place options implied by legacy variables in PKG_LEGACY_OPTIONS
@@ -241,10 +245,10 @@ _OPTIONS_DEFAULT_SUPPORTED:=	#empty
 .for _o_ in ${PKG_DEFAULT_OPTIONS}
 _opt_:=		${_o_}
 _popt_:=	${_opt_:C/^-//}
-.if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_}) \
+.  if !empty(PKG_SUPPORTED_OPTIONS:M${_popt_}) \
 	|| defined(_PKG_LEGACY_OPTMAP.${_popt_})
 _OPTIONS_DEFAULT_SUPPORTED:=${_OPTIONS_DEFAULT_SUPPORTED} ${_opt_}
-.endif
+.  endif
 .endfor
 .undef _opt_
 .undef _popt_
@@ -295,12 +299,12 @@ PKG_OPTIONS:=	${PKG_OPTIONS} ${_popt_}
 
 .for _grp_ in ${PKG_OPTIONS_REQUIRED_GROUPS}
 .  if empty(_PKG_OPTIONS_GROUP_STACK.${_grp_})
-PKG_FAIL_REASON:="One of the following options must be selected: "${PKG_OPTIONS_GROUP.${_grp_}:O:u:Q}
+PKG_FAIL_REASON+=	"[bsd.options.mk] One of the following options must be selected: "${PKG_OPTIONS_GROUP.${_grp_}:O:u:Q}
 .  endif
 .endfor
 
 .for _grp_ in ${PKG_OPTIONS_REQUIRED_GROUPS} ${PKG_OPTIONS_OPTIONAL_GROUPS}
-.undef _opt_
+.  undef _opt_
 .  for _o_ in ${_PKG_OPTIONS_GROUP_STACK.${_grp_}}
 _opt_:=		${_o_}
 .  endfor
@@ -318,16 +322,15 @@ _ISEMPTY:=false
 .    endif
 .  endfor
 .  if ${_ISEMPTY} == "true"
-PKG_FAIL_REASON:="At least one of the following options must be selected: "${PKG_OPTIONS_SET.${_set_}:O:u:Q}
+PKG_FAIL_REASON+=	"[bsd.options.mk] At least one of the following options must be selected: "${PKG_OPTIONS_SET.${_set_}:O:u:Q}
 .  endif
 .endfor
 .undef _ISEMPTY
 
 .if !empty(_OPTIONS_UNSUPPORTED)
-PKG_FAIL_REASON:=	"The following selected options are not supported: "${_OPTIONS_UNSUPPORTED:O:u:Q}"."
+PKG_FAIL_REASON+=	"[bsd.options.mk] The following selected options are not supported: "${_OPTIONS_UNSUPPORTED:O:u:Q}"."
 .endif
 
-.undef _OPTIONS_UNSUPPORTED
 .undef _OPTIONS_DEFAULT_SUPPORTED
 PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
 
@@ -383,13 +386,13 @@ show-options:
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting PKG_DEFAULT_OPTIONS"
 	@${ECHO} "or "${PKG_OPTIONS_VAR:Q}"."
-.    if defined(PKG_OPTIONS_DEPRECATED_WARNINGS)
+.if defined(PKG_OPTIONS_DEPRECATED_WARNINGS)
 	@${ECHO}
 	@for l in ${PKG_OPTIONS_DEPRECATED_WARNINGS}; \
 	do \
 		${ECHO} "$$l"; \
 	done
-.    endif
+.endif
 
 .if defined(PKG_SUPPORTED_OPTIONS)
 .PHONY: supported-options-message
@@ -426,5 +429,3 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 .  endif
 .endif
-
-.endif # defined(PKG_OPTIONS_VAR) && defined(PKG_SUPPORTED_OPTIONS)
