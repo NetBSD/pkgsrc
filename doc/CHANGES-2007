@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1233 2007/06/06 22:17:33 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1234 2007/06/06 22:31:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/libzip to 0.8 [wiz 2007-06-06]
 	Updated emulators/ckmame to 0.9 [wiz 2007-06-06]
 	Updated print/dvipdfmx to 0.0.0.20070518 [minskim 2007-06-06]
+	Updated fonts/tex-unttf to 1.0.1.20070507 [minskim 2007-06-06]
