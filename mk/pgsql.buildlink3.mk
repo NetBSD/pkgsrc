@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.22 2007/02/10 08:59:07 rillig Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.23 2007/06/06 12:40:05 rillig Exp $
 #
 # User-settable variables:
 #
@@ -17,6 +17,11 @@
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
+
+_VARGROUPS+=		pgsql
+_USER_VARS.pgsql=	PGSQL_VERSION_DEFAULT
+_PKG_VARS.pgsql=	PGSQL_VERSIONS_ACCEPTED
+_SYS_VARS.pgsql=	PG_LIB_EXT PGSQL_TYPE PGPKGSRCDIR
 
 .include "../../mk/bsd.prefs.mk"
 
