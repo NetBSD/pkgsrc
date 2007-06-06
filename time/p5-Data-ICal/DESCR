@@ -1,0 +1,2 @@
+Data::ICal is a straightforward generator for iCalendar (RFC 2445) files, such
+as those used in Apple's iCal.
