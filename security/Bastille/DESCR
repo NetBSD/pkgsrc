@@ -1,0 +1,19 @@
+Bastille is a system hardening / lockdown program which enhances the
+security of a Unix host.  It configures daemons, system settings and
+firewalls to be more secure.  It can shut off unneeded services like rcp
+and rlogin, and helps create "chroot jails" that help limit the
+vulnerability of common Internet services like Web services and DNS.
+
+This tool currently hardens Red Hat (Fedora Core, Enterprise and
+Legacy/Classic), SuSE, Debian, Gentoo, Mandrake Linux, HP-UX, Mac OS X
+and Turbo Linux.
+
+If run in the preferred interactive mode, it can teach you a good deal
+about  security while personalizing your system security state.
+
+Bastille can also assess and report on the state of a system, which may
+serve as an aid to security administrators, auditors and system
+administrators who wish to investigate the state of their system's
+hardening without making changes to such.  This assessment functionality
+has only been tested on Red Hat Linux (Fedora, Legacy, Enterprise) and
+SUSE systems.

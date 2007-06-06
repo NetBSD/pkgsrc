@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/06 22:37:59 rillig Exp $
+
+--- Bastille/API.pm.orig	2006-04-03 15:16:05.000000000 +0200
++++ Bastille/API.pm	2006-12-03 12:08:08.000000000 +0100
+@@ -490,6 +490,8 @@ sub GetDistro() {
+ 		}
+ 	        elsif ( $release =~ /(^HP-UX)\s*B\.(\d+\.\d+)/ ) {
+ 		   $distro="$1$2";
++		} elsif ( $release =~ /^(\w+)\s+(\d+)/) {
++		   $distro="$1$2";
+ 		}
+ 		else {
+ 		   print STDERR "$err Could not determine operating system version!\n";
+@@ -576,6 +578,10 @@ sub getSupportedOSHash () {
+ 			      "HP-UX11.31"
+ 			      ],
+ 
++		"NetBSD" => [
++			"NetBSD1", "NetBSD2", "NetBSD3", "NetBSD4",
++		],
++
+ 		  "OSX" => [
+ 			    'OSX10.2','OSX10.3','OSX10.4'
+ 			    ]
+@@ -768,6 +774,7 @@ sub getFileAndServiceInfo($$) {
+     my %oSInfoPath = ( 
+ 		       "LINUX" => "/usr/share/Bastille/OSMap/",
+ 		       "HP-UX" => "/etc/opt/sec_mgmt/bastille/OSMap/",
++		       "NetBSD" => "@PREFIX@/share/Bastille/OSMap/",
+ 		       "OSX" => "/usr/share/Bastille/OSMap/"
+ 		       );
+ 
