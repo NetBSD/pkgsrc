@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6385 2007/06/06 20:57:17 wiz Exp $
+$NetBSD: TODO,v 1.6386 2007/06/06 22:17:33 minskim Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ Suggested package updates
 	o dvd+rw-tools-7.0
 	o dvdrip-0.98.6
 	o dvdstyler-1.5
-	o dvipdfmx-20061211
 	o dvipng-1.9
 	o dwm-4.2
 	o eagle-4.16
