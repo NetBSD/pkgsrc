@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2007/05/23 13:19:23 markd Exp $
+# $NetBSD: Makefile,v 1.60 2007/06/06 11:10:33 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -27,6 +27,7 @@ CPPFLAGS+=		-DARK_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
 CPPFLAGS+=             -D__NetBSD_APM__
 .endif
 
+CONFIGURE_ARGS+=	--with-snmp=no
 CONFIGURE_ARGS+=	--with-pythondir=${LOCALBASE}
 CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
