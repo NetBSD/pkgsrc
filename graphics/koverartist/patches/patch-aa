@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
+
+--- src/cdinfo.cpp.orig	2007-05-28 19:36:06.000000000 +1200
++++ src/cdinfo.cpp
+@@ -33,7 +33,7 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
+-#ifdef __FreeBSD__
++#if defined(HAVE_SYS_CDIO_H)
+ # include <sys/cdio.h>
+ # define CDROM_LEADOUT 0xAA
+ #else
+@@ -91,8 +91,10 @@ bool CdInfo::open()
+       mErrorCode = errno;
+       if (mErrorCode==EACCES)
+          mErrorText = i18n("You do not have permission to read from %1").arg(mDevice);
++#ifdef ENOMEDIUM
+       else if (mErrorCode==ENOMEDIUM)
+          mErrorText = i18n("Please insert a disc into %1 and try again").arg(mDevice);
++#endif
+       else if (mErrorCode==EBUSY)
+          mErrorText = i18n("%1 is busy").arg(mDevice);
+       else mErrorText = i18n("Cannot open %1: %2").arg(mDevice).arg(strerror(mErrorCode));
+@@ -100,7 +102,7 @@ bool CdInfo::open()
+       return false;
+    }
+ 
+-#ifndef __FreeBSD__
++#if !(defined(__FreeBSD__) || defined(__NetBSD__))
+    int st = ioctl(mFd, CDROM_DISC_STATUS);
+    if (st!=CDS_AUDIO && st!=CDS_MIXED && st!=CDS_NO_INFO)
+    {
+@@ -194,7 +196,7 @@ int CdInfo::cddbSum(int n)
+ 
+ int CdInfo::readTocHeader()
+ {
+-#ifdef __FreeBSD__
++#ifdef HAVE_SYS_CDIO_H
+    ioc_toc_header hdr;
+    if (ioctl(mFd, CDIOREADTOCHEADER, &hdr)<0) return -1;
+    return hdr.ending_track;
+@@ -212,14 +214,17 @@ bool CdInfo::readTocEntry(int aEntryTrac
+ {
+    int frame = 0;
+ 
+-#ifdef __FreeBSD__
+-   ioc_read_toc_single_entry entry;
+-   entry.track = aEntryTrack;
+-   entry.format = CD_MSF_FORMAT;
+-   if (ioctl(mFd, CDIOREADTOCENTRY, &entry)) return false;
+-   aTrack.min = entry.entry.addr.msf.minute;
+-   aTrack.sec = entry.entry.addr.msf.second;
+-   frame = entry.entry.addr.msf.frame;
++#ifdef HAVE_SYS_CDIO_H
++   struct cd_toc_entry toc_buffer;
++   ioc_read_toc_entry entry;
++   entry.starting_track = aEntryTrack;
++   entry.address_format = CD_MSF_FORMAT;
++   entry.data = &toc_buffer;
++   entry.data_len = sizeof(toc_buffer);
++   if (ioctl(mFd, CDIOREADTOCENTRYS, &entry)) return false;
++   aTrack.min = toc_buffer.addr.msf.minute;
++   aTrack.sec = toc_buffer.addr.msf.second;
++   frame = toc_buffer.addr.msf.frame;
+ 
+ #else /* not __FreeBSD__*/
+ 
