@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/05/06 20:07:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.52 2007/06/06 19:33:12 adrianp Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES=		lang
@@ -35,7 +35,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php-cgi ${CGIDIR}/php
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
