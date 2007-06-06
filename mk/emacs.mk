@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.31 2007/02/20 12:36:02 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.32 2007/06/06 08:23:23 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -62,14 +62,6 @@
 #			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
 #		Default value:
 #			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
-#	REPLACE_EMACS
-#		Description:
-#			If set, correct the #!/path/to/emacs line in the
-#			specified files.
-#		Possible values:
-#			<a list of files relative to ${WRKDIR}>
-#		Default value:
-#			<undefined>
 #
 # Variables provided for ELPs:
 #
@@ -184,6 +176,14 @@
 
 .if !defined(EMACS_MK)
 EMACS_MK=	# defined
+
+_VARGROUPS+=		emacs
+_USER_VARS.emacs=	EMACS_TYPE
+_PKG_VARS.emacs=	EMACS_MODULES EMACS_VERSIONS_ACCEPTED
+_SYS_VARS.emacs=	EMACS_BIN EMACS_ETCPREFIX EMACS_FLAVOR \
+			EMACS_INFOPREFIX EMACS_LISPPREFIX \
+			EMACS_PKGNAME_PREFIX \
+			EMACS_VERSION_MAJOR EMACS_VERSION_MINOR
 
 .include "../../mk/bsd.prefs.mk"
 
