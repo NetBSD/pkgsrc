@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1231 2007/06/06 19:34:31 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1232 2007/06/06 20:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2374,3 +2374,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/rdesktop to 1.5.0nb2 [tnn 2007-06-06]
 	Updated math/euler to 1.61 [tnn 2007-06-06]
 	Updated lang/php5 to 5.2.3 [adrianp 2007-06-06]
+	Updated archivers/libzip to 0.8 [wiz 2007-06-06]
+	Updated emulators/ckmame to 0.9 [wiz 2007-06-06]
