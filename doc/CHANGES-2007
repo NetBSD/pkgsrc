@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1229 2007/06/06 12:30:36 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1230 2007/06/06 12:49:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2371,3 +2371,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added time/p5-DateTime-Event-ICal version 0.09 [markd 2007-06-06]
 	Added time/p5-Data-ICal version 0.13 [markd 2007-06-06]
 	Added time/p5-Data-ICal-DateTime version 0.65 [markd 2007-06-06]
+	Updated net/rdesktop to 1.5.0nb2 [tnn 2007-06-06]
+	Updated math/euler to 1.61 [tnn 2007-06-06]
