@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/15 02:34:48 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/06/06 22:30:34 minskim Exp $
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unbm/ounbmm00.enc
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unbm/ounbmm01.enc
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unbm/ounbmm02.enc
@@ -2411,9 +2411,13 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unyt/unytm6.enc
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unyt/unytm7.enc
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unyt/unytm8.enc
 ${PKG_LOCALTEXMFPREFIX}/fonts/enc/pdftex/unttf/unyt/unytm9.enc
-${PKG_LOCALTEXMFPREFIX}/fonts/map/dvipdfm/cid-unttf.map
-${PKG_LOCALTEXMFPREFIX}/fonts/map/pdftex/unttf-pdftex.map
-${PKG_LOCALTEXMFPREFIX}/fonts/map/ttf2pk/unttf2pk.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/dvipdfm/cid-unttf-dhucs.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/dvipdfm/cid-unttf-hlatex.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/pdftex/unttf-pdftex-dhucs.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/pdftex/unttf-pdftex-hlatex.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/pdftex/unttf-pdftex-obsolete.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/ttf2pk/unttf2pk-dhucs.map
+${PKG_LOCALTEXMFPREFIX}/fonts/map/ttf2pk/unttf2pk-hlatex.map
 ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/unttf/unbm/ounbmc.ofm
 ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/unttf/unbm/ounbmco.ofm
 ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/unttf/unbm/ounbmm.ofm
@@ -2564,6 +2568,7 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/unttf/unyt/ounytm.ovf
 ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/unttf/unyt/ounytmo.ovf
 ${PKG_LOCALTEXMFPREFIX}/fonts/ovp/unttf/untz/ountzm.ovp
 ${PKG_LOCALTEXMFPREFIX}/fonts/ovp/unttf/untz/ountzmo.ovp
+${PKG_LOCALTEXMFPREFIX}/fonts/sfd/UCS2.sfd
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/unttf/unbm/ounbmc00.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/unttf/unbm/ounbmc01.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/unttf/unbm/ounbmc02.tfm
