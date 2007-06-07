@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6388 2007/06/07 04:50:21 wiz Exp $
+$NetBSD: TODO,v 1.6389 2007/06/07 05:02:32 taca Exp $
 
 Suggested new packages
 ======================
@@ -688,6 +688,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libelf-0.8.9
+	o libexif-0.6.15
 	o libetpan-0.49
 	o libflash-0.4.13
 	o libgda-3.0.1
@@ -1281,6 +1282,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
+	o webmin-1.340
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
