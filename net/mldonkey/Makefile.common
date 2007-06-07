@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.25 2007/05/03 11:44:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2007/06/07 04:49:50 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.8.5
+DISTNAME=	mldonkey-2.8.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +19,7 @@ USE_TOOLS+=		gmake perl
 
 CONFIGURE_ENV+=		WGET=""
 CONFIGURE_ENV+=		ac_cv_prog_WGET="no"
+CONFIGURE_ARGS+=	--enable-directconnect
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 MAKE_ENV+=		BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ARGS+=	--enable-pthread-lib
