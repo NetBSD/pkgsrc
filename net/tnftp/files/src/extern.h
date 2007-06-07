@@ -1,8 +1,8 @@
-/*	NetBSD: extern.h,v 1.7 2005/06/10 04:05:01 lukem Exp	*/
-/*	from	NetBSD: extern.h,v 1.69 2005/06/10 00:18:46 lukem Exp	*/
+/*	$NetBSD: extern.h,v 1.1.1.5 2007/06/07 04:00:20 lukem Exp $	*/
+/*	from	NetBSD: extern.h,v 1.72 2007/05/24 05:05:18 lukem Exp	*/
 
 /*-
- * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2007 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -161,13 +161,11 @@ void	lostpeer(int);
 void	lpage(int, char **);
 void	lpwd(int, char **);
 void	ls(int, char **);
-void	mabort(void);
 void	macdef(int, char **);
 void	makeargv(void);
 void	makedir(int, char **);
 void	mdelete(int, char **);
 void	mget(int, char **);
-void	mintr(int);
 void	mls(int, char **);
 void	mlst(int, char **);
 void	modtime(int, char **);
@@ -198,6 +196,7 @@ void	removedir(int, char **);
 void	renamefile(int, char **);
 void	reset(int, char **);
 void	restart(int, char **);
+const char *rfc2822time(const struct tm *);
 void	rmthelp(int, char **);
 void	rmtstatus(int, char **);
 char   *rprompt(void);
@@ -249,10 +248,10 @@ void	updatelocalcwd(void);
 void	updateremotecwd(void);
 void	usage(void);
 void	user(int, char **);
-int	xconnect(int, const struct sockaddr *, socklen_t);
-int	xlisten(int, int);
-int	xpoll(struct pollfd *, int, int);
-void   *xmalloc(size_t);
-StringList *xsl_init(void);
-void	xsl_add(StringList *, char *);
-char   *xstrdup(const char *);
+int	ftp_connect(int, const struct sockaddr *, socklen_t);
+int	ftp_listen(int, int);
+int	ftp_poll(struct pollfd *, int, int);
+void   *ftp_malloc(size_t);
+StringList *ftp_sl_init(void);
+void	ftp_sl_add(StringList *, char *);
+char   *ftp_strdup(const char *);
