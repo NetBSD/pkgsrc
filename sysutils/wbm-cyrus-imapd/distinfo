@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/04/21 05:27:00 obache Exp $
+$NetBSD: distinfo,v 1.3 2007/06/07 15:11:51 obache Exp $
 
-SHA1 (cyrus-imapd-mod-1.5.wbm.gz) = b2e9914a376b22188c086b7e992be77e57709a49
-RMD160 (cyrus-imapd-mod-1.5.wbm.gz) = 3f2092ccde916a10cf4a9cc49c71bed071901d20
-Size (cyrus-imapd-mod-1.5.wbm.gz) = 49537 bytes
+SHA1 (cyrus-imapd-mod-1.6.wbm.gz) = a29648830424a0541b5ba04489eb7e18b1a942a0
+RMD160 (cyrus-imapd-mod-1.6.wbm.gz) = 7c2f243dd124ead3e7f798e9c0f819224dff2c84
+Size (cyrus-imapd-mod-1.6.wbm.gz) = 50945 bytes
