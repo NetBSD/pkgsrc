@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2006/10/01 14:47:43 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/06/07 13:01:34 pooka Exp $
 
-DISTNAME=		mzscheme-205.src.unix
-PKGNAME=		mzscheme-205
+DISTNAME=		mz-360-src-unix
+PKGNAME=		mzscheme-360
 CATEGORIES=		lang
-MASTER_SITES=		http://download.plt-scheme.org/bundles/205/mzscheme/
+MASTER_SITES=		http://download.plt-scheme.org/bundles/360/mz/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.plt-scheme.org/software/mzscheme/
@@ -11,35 +12,35 @@ COMMENT=		R5RS-compliant scheme
 
 CONFLICTS+=		drscheme-[0-9]*
 
-WRKSRC=			${WRKDIR}/plt
+WRKSRC=			${WRKDIR}/mz-360
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 CONFIGURE_SCRIPT=	./configure
-EXTRACT_USING=		pax
+# causes the build to use libtool
+CONFIGURE_ARGS=		--enable-shared
+USE_LIBTOOL=		yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i386
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-# setup-extension.ss is classified as precompiled, which it isn't.
-_SUBST_IS_TEXT_FILE=	true
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME}
 
 SUBST_CLASSES+=		mz
 SUBST_STAGE.mz=		pre-configure
 SUBST_MESSAGE.mz=	Adjusting installation prefix.
-SUBST_FILES.mz=		man/man1/mzscheme.1 man/man1/help-desk.1
 SUBST_FILES.mz+=	collects/make/setup-extension.ss
 SUBST_FILES.mz+=	collects/slibinit/init.ss
+SUBST_FILES.mz+=	src/configure
 SUBST_SED.mz=		-e 's@XXXPREFIXXXX@${PREFIX}@g'
+SUBST_SED.mz+=		-e 's@XXXMZDOCDIRXXX@${PREFIX}/share/doc/${PKGNAME}@g'
+# setup-extension.ss is classified as precompiled, which it isn't.
+SUBST_SKIP_TEXT_CHECK.mz=	yes
 
-do-install:
-	cd ${WRKDIR}/plt/src/mzscheme && ${MAKE} normal-install
-	${INSTALL_DATA_DIR} ${PREFIX}/include/mzscheme
-	${INSTALL_DATA} ${WRKDIR}/plt/include/*.h ${PREFIX}/include/mzscheme
-	${INSTALL_MAN} ${WRKDIR}/plt/man/man1/mzscheme.1 ${PREFIX}/${PKGMANDIR}/man1
-	[ -d ${PREFIX}/lib/plt ] || ${INSTALL_DATA_DIR} ${PREFIX}/lib/plt
-	cd ${WRKDIR}/plt && ${PAX} -wr -s ',.*\.orig$$,,' collects ${PREFIX}/lib/plt
+LIBTOOL_OVERRIDE=	src/lt/libtool src/foreign/gcc/libffi/libtool
+
+post-patch:
+	${RM} ${WRKSRC}/collects/make/setup-extension.ss.orig
+	${RM} ${WRKSRC}/collects/slibinit/init.ss.orig
 
 .include "../../mk/bsd.pkg.mk"
