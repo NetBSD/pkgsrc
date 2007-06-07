@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/06/17 19:26:48 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2007/06/07 07:50:57 schmonz Exp $
 
 DISTNAME=	sqwebmail-5.1.2
 PKGREVISION=	1
@@ -18,6 +18,12 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 PKG_SUPPORTED_OPTIONS+=	fam
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mfam)
+.  include "../../mk/fam.buildlink3.mk"
+.endif
 
 # PKGNAME is a parameter to the following file.
 PKGNAME=		${DISTNAME}
