@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6389 2007/06/07 05:02:32 taca Exp $
+$NetBSD: TODO,v 1.6390 2007/06/07 15:18:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -1282,7 +1282,6 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2.2
 	o wdm-1.28
-	o webmin-1.340
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
