@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6391 2007/06/07 19:49:43 wiz Exp $
+$NetBSD: TODO,v 1.6392 2007/06/07 19:53:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ Suggested package updates
 	o devhelp-0.14
 	o devtodo-0.1.19
 	o dhid-5.3
-	o dialog-1.1.20070528
 	o diction-1.10
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e

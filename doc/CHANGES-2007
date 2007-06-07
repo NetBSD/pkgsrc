@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1246 2007/06/07 19:49:43 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1247 2007/06/07 19:53:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-tunnel to 1.350 [obache 2007-06-07]
 	Updated sysutils/wbm-useradmin to 1.350 [obache 2007-06-07]
 	Updated databases/sqlite3 to 3.3.17 [wiz 2007-06-07]
+	Updated misc/dialog to 1.1.20070528 [wiz 2007-06-07]
