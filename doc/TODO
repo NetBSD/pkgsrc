@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6393 2007/06/07 19:57:24 wiz Exp $
+$NetBSD: TODO,v 1.6394 2007/06/07 20:02:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -687,7 +687,6 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libelf-0.8.9
-	o libexif-0.6.15
 	o libetpan-0.49
 	o libflash-0.4.13
 	o libgda-3.0.1

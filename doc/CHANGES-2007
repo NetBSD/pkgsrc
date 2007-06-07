@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1248 2007/06/07 19:57:24 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1249 2007/06/07 20:02:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/sqlite3 to 3.3.17 [wiz 2007-06-07]
 	Updated misc/dialog to 1.1.20070528 [wiz 2007-06-07]
 	Updated devel/libidn to 0.6.13 [wiz 2007-06-07]
+	Updated graphics/libexif to 0.6.15 [wiz 2007-06-07]
