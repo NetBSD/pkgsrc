@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/21 05:22:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/06/07 15:13:46 obache Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -456,6 +456,7 @@ share/webmin/init/config-osf1
 share/webmin/init/config-redhat-linux
 share/webmin/init/config-slackware-linux
 share/webmin/init/config-solaris
+share/webmin/init/config-solaris-10-*
 share/webmin/init/config-suse-linux
 share/webmin/init/config-suse-linux-7.1-*
 share/webmin/init/config-trustix-linux
@@ -1248,6 +1249,7 @@ share/webmin/webmin/config.info.tr
 share/webmin/webmin/cpan_modules.pl
 share/webmin/webmin/delete_cache.cgi
 share/webmin/webmin/delete_mod.cgi
+share/webmin/webmin/download_cert.cgi
 share/webmin/webmin/edit_access.cgi
 share/webmin/webmin/edit_advanced.cgi
 share/webmin/webmin/edit_anon.cgi
