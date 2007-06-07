@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/05/05 09:13:31 obache Exp $
+# $NetBSD: Makefile,v 1.42 2007/06/07 13:01:27 uebayasi Exp $
 
 DISTNAME=	eb-4.3
 PKGREVISION=	1
@@ -69,7 +69,7 @@ EGDIR=		${PREFIX}/share/examples/eb
 SUBST_CLASSES+=		runpath
 SUBST_STAGE.runpath=	post-patch
 SUBST_FILES.runpath=	configure configure.ac
-SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1-Wl,-R\2 -L\2\3|'
+SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(.*\)$$|\1${COMPILER_RPATH_FLAG}\2 -L\2\3|'
 
 INSTALLATION_DIRS=	share/eb/appendix
 
