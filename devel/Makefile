@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.863 2007/06/05 05:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.864 2007/06/07 16:50:14 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -65,6 +65,7 @@ SUBDIR+=	boost-headers
 SUBDIR+=	boost-jam
 SUBDIR+=	boost-libs
 SUBDIR+=	boost-python
+SUBDIR+=	bouml
 SUBDIR+=	buddy
 SUBDIR+=	bugzilla
 SUBDIR+=	buildtool
