@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.298 2007/05/13 14:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2007/06/07 16:50:25 wiz Exp $
 #
 
 COMMENT=	Security tools
 
 SUBDIR+=	AiCA
 SUBDIR+=	AiSSLtelnet
+SUBDIR+=	Bastille
 SUBDIR+=	CSP
 SUBDIR+=	EasyPG
 SUBDIR+=	MyPasswordSafe
