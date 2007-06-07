@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/10/13 01:36:07 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/07 08:08:16 rh Exp $
 #
 
-DISTNAME=		libupnp-1.3.1
+DISTNAME=		libupnp-1.4.6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pupnp.sourceforge.net/
@@ -29,6 +30,17 @@ pre-configure:
 	${MKDIR} -p ${BUILDLINK_DIR}/include/linux
 	${LN} -s /usr/include/net/if.h ${BUILDLINK_DIR}/include/linux/if.h
 .endif
+
+post-install:
+.for doc in IXML_Programming_Guide UPnP_Programming_Guide
+	${INSTALL_DATA} ${WRKSRC}/docs/dist/${doc}.pdf			\
+			${PREFIX}/share/doc/${PKGNAME_NOREV}
+.endfor
+.for dir in ixml upnp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME_NOREV}/html/${dir}
+	${INSTALL_DATA} ${WRKSRC}/docs/dist/${doc}/html/${dir}/*	\
+			${PREFIX}/share/doc/${PKGNAME_NOREV}/html/${dir}
+.endfor
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
