@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1236 2007/06/06 23:51:16 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1237 2007/06/07 01:35:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2380,3 +2380,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/tex-unttf to 1.0.1.20070507 [minskim 2007-06-06]
 	Added security/Bastille version 3.0.9 [roland 2007-06-06]
 	Updated print/tex-dhucs to 3.2.2 [minskim 2007-06-06]
+	Updated mail/getmail to 4.7.5 [schmonz 2007-06-07]
