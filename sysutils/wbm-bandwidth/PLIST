@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:22:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/07 15:13:48 obache Exp $
 share/examples/webmin/bandwidth/config
 share/webmin/bandwidth/CHANGELOG
 share/webmin/bandwidth/acl_security.pl
@@ -9,10 +9,12 @@ share/webmin/bandwidth/config.info
 share/webmin/bandwidth/config.info.ca
 share/webmin/bandwidth/config.info.de
 share/webmin/bandwidth/config.info.es
+share/webmin/bandwidth/config.info.fr
 share/webmin/bandwidth/config.info.hu
 share/webmin/bandwidth/config.info.sv
 share/webmin/bandwidth/defaultacl
 share/webmin/bandwidth/help/intro.ca.html
+share/webmin/bandwidth/help/intro.fr.html
 share/webmin/bandwidth/help/intro.html
 share/webmin/bandwidth/images/blue.gif
 share/webmin/bandwidth/images/icon.gif
