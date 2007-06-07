@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1241 2007/06/07 13:05:13 pooka Exp $
+$NetBSD: CHANGES-2007,v 1.1242 2007/06/07 13:20:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2385,3 +2385,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libupnp to 1.4.6 [rh 2007-06-07]
 	Updated comms/conserver8 to 8.1.16 [he 2007-06-07]
 	Updated lang/mzscheme to 360 [pooka 2007-06-07]
+	Updated multimedia/mplayer to 1.0rc9nb6 [tron 2007-06-07]
+	Updated gmplayer to 1.0rc9nb2 [tron 2007-06-07]
