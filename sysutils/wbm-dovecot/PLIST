@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:41:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/07 15:13:52 obache Exp $
 share/examples/webmin/dovecot/config
 share/webmin/dovecot/CHANGELOG
 share/webmin/dovecot/apply.cgi
 share/webmin/dovecot/bootup.cgi
 share/webmin/dovecot/config
 share/webmin/dovecot/config-debian-linux
+share/webmin/dovecot/config-gentoo-linux
 share/webmin/dovecot/config-mandrake-linux
 share/webmin/dovecot/config-redhat-linux-11.0-*
 share/webmin/dovecot/config-suse-linux
