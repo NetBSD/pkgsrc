@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1237 2007/06/07 01:35:28 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1238 2007/06/07 04:50:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/Bastille version 3.0.9 [roland 2007-06-06]
 	Updated print/tex-dhucs to 3.2.2 [minskim 2007-06-06]
 	Updated mail/getmail to 4.7.5 [schmonz 2007-06-07]
+	Updated net/mldonkey to 2.8.7 [wiz 2007-06-07]
