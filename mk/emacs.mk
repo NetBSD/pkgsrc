@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.34 2007/06/06 08:33:54 rillig Exp $
+# $NetBSD: emacs.mk,v 1.35 2007/06/07 10:46:32 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -312,7 +312,7 @@ GNU_CONFIGURE_INFODIR?=	${EMACS_INFOPREFIX}
 .  if "${e}" == ${EMACS_FLAVOR} || "${e}" == ${_EMACS_TYPE}
 PLIST_SUBST+=	FOR_${e}="" NOTFOR_${e}="@comment "
 .  else
-PLIST_SUBST+=	FOR_${e}="@comment " NOTFORM_${e}=""
+PLIST_SUBST+=	FOR_${e}="@comment " NOTFOR_${e}=""
 .  endif
 .endfor
 
