@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.59 2007/04/17 11:05:33 tnn Exp $
+# $NetBSD: compiler.mk,v 1.60 2007/06/08 20:48:16 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -172,8 +172,12 @@ fail-wrapper: .USE
 	exec 1>${.TARGET};						\
 	${ECHO} '#!'${TOOLS_SHELL:Q};					\
 	${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
-	${ECHO} ${ECHO:Q} '"*** Please consider adding USE_LANGUAGES+='${.TARGET:T:S/-fail-wrapper//:Q}' to the package Makefile." >> $$wrapperlog'; \
-	${ECHO} ${ECHO:Q} '"*** Please consider adding USE_LANGUAGES+='${.TARGET:T:S/-fail-wrapper//:Q}' to the package Makefile." > ${WARNING_DIR}/${.TARGET:T}'; \
+	${ECHO} 'lang="${.TARGET:T:S/-fail-wrapper//}"'; \
+	${ECHO} 'msg="*** Please consider adding $$lang to USE_LANGUAGES in the package Makefile."'; \
+	${ECHO} '${ECHO} "$$msg" >> $$wrapperlog'; \
+	${ECHO} '${ECHO} "$$msg" >> ${WARNING_DIR}/${.TARGET:T}'; \
+	${ECHO} '${ECHO} "ERROR: To use this compiler, you have to add $$lang to" 1>&2'; \
+	${ECHO} '${ECHO} "ERROR: USE_LANGUAGES in the package Makefile." 1>&2'; \
 	${ECHO} 'exit 1'
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
