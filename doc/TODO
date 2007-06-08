@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6406 2007/06/08 12:43:48 wiz Exp $
+$NetBSD: TODO,v 1.6407 2007/06/08 13:04:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -568,9 +568,6 @@ Suggested package updates
 	o gsharutils-4.6.3
 	o gsm-1.0.12
 	o gss-0.21
-	o gst-plugins0.10-base-0.10.13
-	o gst-plugins0.10-fluendo-mp3-0.10.5
-	o gstreamer0.10-0.10.13
 	o gtar-1.16.1
 	o gtar-base-1.16.1
 	o gthumb-2.10.3
