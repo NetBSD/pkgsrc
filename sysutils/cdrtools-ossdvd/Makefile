@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2007/02/22 19:27:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/06/08 17:30:09 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://crashrecovery.org/oss-dvd.html
 COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs/DVDs
 
-CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-*
+CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-[a-z0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -32,8 +32,8 @@ BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=	ARCH=""
 MAKE_ENV+=	MAKEPROG="gmake"
-MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
-MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
+MAKE_ENV+=	COPTX=${CFLAGS:Q}
+MAKE_ENV+=	LDOPTX=${LDFLAGS:Q}
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
