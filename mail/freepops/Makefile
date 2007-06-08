@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/08 16:30:52 schmonz Exp $
 #
 
 DISTNAME=		freepops-0.2.4
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.freepops.org/
 COMMENT=		Extensible POP3 interface to webmail
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bash:run bison gmake patch tar
+USE_TOOLS+=		bash:run bison gmake gsed patch tar
 USE_LIBTOOL=		yes
 REPLACE_BASH=		configure.sh
 HAS_CONFIGURE=		yes
