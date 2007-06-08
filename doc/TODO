@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6396 2007/06/08 07:05:59 wiz Exp $
+$NetBSD: TODO,v 1.6397 2007/06/08 07:21:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,6 @@ Suggested package updates
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
-	o cairo-1.4.6
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
@@ -1036,7 +1035,6 @@ Suggested package updates
 	o puf-0.93.3
 	o putty-0.60
 	o puzzle-5.2
-	o pwlib-1.10.3 [pkgsrc-wip 1.10.0]
 	o pwlib-1.10.7
 	o pxe-1.4.2
 	o py-FourSuite-1.0.2
