@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6404 2007/06/08 11:56:10 wiz Exp $
+$NetBSD: TODO,v 1.6405 2007/06/08 12:25:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,6 @@ Suggested package updates
 	o cyrus-imapd-2.3.8
 	o darts-0.31
 	o dasher-4.4.2
-	o db4-4.5.20
 	o dbench-3.04
 	o dbmail-2.2.4
 	o dbxml-2.1.8
