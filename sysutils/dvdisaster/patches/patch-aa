@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+--- help-dialogs.c.orig	2007-01-20 16:47:21.000000000 +0100
++++ help-dialogs.c
+@@ -494,7 +494,9 @@ void AboutDialog()
+    AboutTextWithLink(vbox, _("\nThis program is <b>not the original</b>. It is based on the\n"
+ 			     "source code of dvdisaster, but contains third-party changes.\n\n"
+ 			     "Please do not bother the original authors of dvdisaster\n"
+-			     "([www.dvdisaster.org]) about issues with this version.\n"),
++			     "([www.dvdisaster.org]) about issues with this version.\n\n"
++			     "The pkgsrc patches applied to this version will hopefully\n"
++			     "be integrated into the next official version.\n"),
+ 		             "http://www.dvdisaster.org");
+ 
+ #else
