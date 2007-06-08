@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1274 2007/06/08 20:24:38 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1275 2007/06/08 22:50:31 epg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2485,3 +2485,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/cdrtools-ossdvd to 2.01.1.36nb2 [wiz 2007-06-08]
 	Updated x11/xclip to 0.08nb3 [wiz 2007-06-08]
 	Added sysutils/dvdisaster version 0.70.4 [heinz 2007-06-08]
+	Updated devel/subversion to 1.4.4 [epg 2007-06-08]
