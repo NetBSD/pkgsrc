@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2006/12/28 11:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/08 18:33:09 wiz Exp $
 
 DISTNAME=	festvox_kallpc8k
 PKGNAME=	festvox-kal8-1.4.0
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
-		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
