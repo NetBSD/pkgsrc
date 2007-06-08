@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2007/06/07 07:27:09 rillig Exp $
+# $NetBSD: Makefile,v 1.128 2007/06/08 08:23:49 rillig Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -134,11 +134,6 @@ SUBST_STAGE.paths=	post-patch
 pre-configure:
 	cd ${WRKSRC}/ksysguard/ksysguardd && rm -f DragonFly && ln -s FreeBSD DragonFly
 
-post-configure:
-	# Make sure that fontinst has been selected.
-	# Otherwise the package gets incomplete.
-	grep "s,@include_fontinst_tn_TRUE@,," ${WRKSRC}/config.status
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
 	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag-1.0.png ${PREFIX}/${ICONDIR}/NetBSD-flag.png
@@ -176,6 +171,12 @@ post-install:
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
 CONFIGURE_ENV+= ac_cv_func_getutxent='no'
+.endif
+
+.if ${OPSYS} == "NetBSD"
+# We always use pkg-config for detecting the fontconfig version, since there
+# may exist an old version of fontconfig-config on systems that have been
+# updated from NetBSD 1.x.
 CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .endif
 
