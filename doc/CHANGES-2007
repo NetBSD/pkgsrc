@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1252 2007/06/08 06:10:11 pooka Exp $
+$NetBSD: CHANGES-2007,v 1.1253 2007/06/08 06:34:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2437,3 +2437,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.6.2 [schmonz 2007-06-08]
 	Updated devel/ko-po-check to 0.8 [minskim 2007-06-08]
 	Added misc/ipbt version 7471 [pooka 2007-06-08]
+	Updated audio/musicbrainz to 2.1.5 [wiz 2007-06-08]
