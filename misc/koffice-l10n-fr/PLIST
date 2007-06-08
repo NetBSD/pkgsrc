@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/12/03 04:17:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/08 12:57:01 markd Exp $
 share/doc/kde/HTML/fr/karbon/common
 share/doc/kde/HTML/fr/karbon/index.cache.bz2
 share/doc/kde/HTML/fr/karbon/index.docbook
@@ -35,6 +35,21 @@ share/doc/kde/HTML/fr/kchart/kchart-wizard3.png
 share/doc/kde/HTML/fr/kchart/kchart-wizard4.png
 share/doc/kde/HTML/fr/kchart/shortcut.png
 share/doc/kde/HTML/fr/kchart/toolbars.png
+share/doc/kde/HTML/fr/kexi/basics.docbook
+share/doc/kde/HTML/fr/kexi/building.docbook
+share/doc/kde/HTML/fr/kexi/common
+share/doc/kde/HTML/fr/kexi/comparing.docbook
+share/doc/kde/HTML/fr/kexi/configuration.docbook
+share/doc/kde/HTML/fr/kexi/credits.docbook
+share/doc/kde/HTML/fr/kexi/database.docbook
+share/doc/kde/HTML/fr/kexi/designingforms.docbook
+share/doc/kde/HTML/fr/kexi/enteringdataintotables.docbook
+share/doc/kde/HTML/fr/kexi/enteringdatausingforms.docbook
+share/doc/kde/HTML/fr/kexi/index.cache.bz2
+share/doc/kde/HTML/fr/kexi/index.docbook
+share/doc/kde/HTML/fr/kexi/intro.docbook
+share/doc/kde/HTML/fr/kexi/menus.docbook
+share/doc/kde/HTML/fr/kexi/querydesigning.docbook
 share/doc/kde/HTML/fr/kformula/ambiguous-string.png
 share/doc/kde/HTML/fr/kformula/common
 share/doc/kde/HTML/fr/kformula/file-toolbar.png
@@ -437,6 +452,7 @@ share/locale/fr/LC_MESSAGES/thesaurus_tool.mo
 @dirrm share/doc/kde/HTML/fr/koffice
 @dirrm share/doc/kde/HTML/fr/kivio
 @dirrm share/doc/kde/HTML/fr/kformula
+@dirrm share/doc/kde/HTML/fr/kexi
 @dirrm share/doc/kde/HTML/fr/kchart
 @dirrm share/doc/kde/HTML/fr/karbon
 @comment in kde: @dirrm share/doc/kde/HTML/fr
