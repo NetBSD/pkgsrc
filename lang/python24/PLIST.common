@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.common,v 1.7 2006/11/03 07:15:41 joerg Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2007/06/08 14:16:15 wiz Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
 include/python${PY_VER_SUFFIX}/Python.h
+include/python${PY_VER_SUFFIX}/Python-ast.h
 include/python${PY_VER_SUFFIX}/abstract.h
 include/python${PY_VER_SUFFIX}/bitset.h
 include/python${PY_VER_SUFFIX}/boolobject.h
@@ -239,6 +240,9 @@ lib/python${PY_VER_SUFFIX}/bsddb/test/test_lock.pyo
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_misc.py
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_misc.pyc
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_misc.pyo
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_pickle.py
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_pickle.pyc
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_pickle.pyo
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_queue.py
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_queue.pyc
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_queue.pyo
@@ -1817,6 +1821,7 @@ lib/python${PY_VER_SUFFIX}/test/sample_doctest.pyo
 lib/python${PY_VER_SUFFIX}/test/seq_tests.py
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/seq_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/sgml_input.html
 lib/python${PY_VER_SUFFIX}/test/sortperf.py
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyc
 lib/python${PY_VER_SUFFIX}/test/sortperf.pyo
@@ -2726,6 +2731,9 @@ lib/python${PY_VER_SUFFIX}/test/testtar.tar
 lib/python${PY_VER_SUFFIX}/test/tf_inherit_check.py
 lib/python${PY_VER_SUFFIX}/test/tf_inherit_check.pyc
 lib/python${PY_VER_SUFFIX}/test/tf_inherit_check.pyo
+lib/python${PY_VER_SUFFIX}/test/threaded_import_hangers.py
+lib/python${PY_VER_SUFFIX}/test/threaded_import_hangers.pyc
+lib/python${PY_VER_SUFFIX}/test/threaded_import_hangers.pyo
 lib/python${PY_VER_SUFFIX}/test/tokenize_tests.txt
 lib/python${PY_VER_SUFFIX}/test/xmltests.py
 lib/python${PY_VER_SUFFIX}/test/xmltests.pyc
