@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/08 21:57:33 sborrill Exp $
+--- Makefile.orig	2006-01-09 16:43:23.000000000 +0000
++++ Makefile	2007-06-08 17:32:17.000000000 +0100
+@@ -1,9 +1,9 @@
+ CC        = gcc
+ CFLAGS    = -g -O2 -Wall
+-XROOT     = /usr/X11R6
++XROOT     = ${X11BASE}
+ INCLUDES  = -I$(XROOT)/include
+ LIBS      = -lX11 -lXext -lXpm 
+-LDPATH    = -L$(XROOT)/lib
++LDPATH    = -L$(XROOT)/lib ${LDFLAGS}
+ 
+ DESTDIR   =
+ PROG      = desklaunch
