@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1264 2007/06/08 13:00:31 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1265 2007/06/08 13:04:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2472,3 +2472,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/koffice-l10n-et to 1.6.3 [markd 2007-06-08]
 	Updated misc/koffice-l10n-fi to 1.6.3 [markd 2007-06-08]
 	Updated misc/koffice-l10n-fr to 1.6.3 [markd 2007-06-08]
+	Updated multimedia/gstreamer0.10 to 0.10.13 [wiz 2007-06-08]
+	Updated multimedia/gst-plugins0.10-base to 0.10.13 [wiz 2007-06-08]
+	Updated audio/gst-plugins0.10-fluendo-mp3 to 0.10.6 [wiz 2007-06-08]
