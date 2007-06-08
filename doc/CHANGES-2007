@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1263 2007/06/08 12:25:37 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1264 2007/06/08 13:00:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2464,3 +2464,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/irssi to 0.8.11 [wiz 2007-06-08]
 	Updated graphics/jpegpixi to 1.1.1 [wiz 2007-06-08]
 	Updated databases/db4 to 4.5.20.2 [wiz 2007-06-08]
+	Updated misc/koffice to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-da to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-de to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-en_GB to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-es to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-et to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-fi to 1.6.3 [markd 2007-06-08]
+	Updated misc/koffice-l10n-fr to 1.6.3 [markd 2007-06-08]
