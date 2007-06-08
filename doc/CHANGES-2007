@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1250 2007/06/08 01:08:37 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1251 2007/06/08 02:56:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libidn to 0.6.13 [wiz 2007-06-07]
 	Updated graphics/libexif to 0.6.15 [wiz 2007-06-07]
 	Updated mail/spamdyke to 2.6.2 [schmonz 2007-06-08]
+	Updated devel/ko-po-check to 0.8 [minskim 2007-06-08]
