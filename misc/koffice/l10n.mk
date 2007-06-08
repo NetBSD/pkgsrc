@@ -1,4 +1,4 @@
-# $NetBSD: l10n.mk,v 1.2 2007/02/27 12:04:28 markd Exp $
+# $NetBSD: l10n.mk,v 1.3 2007/06/08 12:50:14 markd Exp $
 #
 
 # This file provides useful defaults for the l10n packages of koffice.
@@ -12,7 +12,7 @@
 #	The full name of the language (e.g. German, Brasilian)
 #
 
-KOFFICE_VERSION?=	1.6.2
+KOFFICE_VERSION?=	1.6.3
 
 DISTNAME=	koffice-l10n-${KOFFICE_LANGCODE}-${KOFFICE_VERSION}
 CATEGORIES=	misc kde
