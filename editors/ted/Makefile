@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2006/12/27 13:37:36 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2007/06/08 18:41:22 wiz Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
 PKGREVISION=	5
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/	\
-		ftp://metalab.unc.edu/pub/packages/editors/ted/
+MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
