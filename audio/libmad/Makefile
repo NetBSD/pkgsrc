@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2006/11/05 17:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/08 18:34:38 wiz Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
-		ftp://ftp.mars.org/pub/mpeg/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
 MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/

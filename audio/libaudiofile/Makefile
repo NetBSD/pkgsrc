@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2006/11/05 17:14:19 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/08 18:34:38 wiz Exp $
 
 DISTNAME=		audiofile-0.2.6
 PKGNAME=		lib${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.68k.org/~michael/audiofile/ \
-			ftp://ftp.68k.org/pub/michael/ \
 			${MASTER_SITE_GNOME:=sources/audiofile/0.2/}
 
 MAINTAINER=		tron@NetBSD.org

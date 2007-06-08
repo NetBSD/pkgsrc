@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2006/12/28 11:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/06/08 18:33:08 wiz Exp $
 
 DISTNAME=	festvox_ellpc11k
 PKGNAME=	festvox-el11-1.4.0
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
-		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
