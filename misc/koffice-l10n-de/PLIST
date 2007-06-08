@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/02/27 12:13:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/06/08 12:57:01 markd Exp $
 share/doc/kde/HTML/de/karbon/common
 share/doc/kde/HTML/de/karbon/index.cache.bz2
 share/doc/kde/HTML/de/karbon/index.docbook
@@ -291,7 +291,6 @@ share/doc/kde/HTML/de/kword/framestylist.png
 share/doc/kde/HTML/de/kword/fundimentals.docbook
 share/doc/kde/HTML/de/kword/graphics.docbook
 share/doc/kde/HTML/de/kword/headerfooter.docbook
-share/doc/kde/HTML/de/kword/horizline.docbook
 share/doc/kde/HTML/de/kword/index.cache.bz2
 share/doc/kde/HTML/de/kword/index.docbook
 share/doc/kde/HTML/de/kword/inscoldlg.png
