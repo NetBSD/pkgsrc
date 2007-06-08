@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2006/06/20 13:29:01 tron Exp $
+$NetBSD: patch-ap,v 1.2 2007/06/08 14:16:17 wiz Exp $
 
---- Modules/socketmodule.c.orig	2006-02-20 09:42:37.000000000 +0000
-+++ Modules/socketmodule.c	2006-06-20 14:23:33.000000000 +0100
-@@ -341,7 +341,8 @@
+--- Modules/socketmodule.c.orig	2006-10-10 16:20:41.000000000 +0000
++++ Modules/socketmodule.c
+@@ -355,7 +355,8 @@ const char *inet_ntop(int af, const void
  #define SEGMENT_SIZE 65535
  #endif
  
