@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2007/05/30 05:58:11 schmonz Exp $
+$NetBSD: patch-aa,v 1.5 2007/06/08 01:08:29 schmonz Exp $
 
---- spamdyke/spamdyke.h.orig	2007-05-24 22:26:48.000000000 -0400
+--- spamdyke/spamdyke.h.orig	2007-06-06 18:19:50.000000000 -0400
 +++ spamdyke/spamdyke.h
 @@ -32,7 +32,7 @@
  
  #define STRLEN(X)                       (sizeof(X) - 1)
  
 -#define DEFAULT_PATH                    "/bin:/usr/bin:/usr/local/bin:/var/qmail/bin:/home/vpopmail/bin"
-+#define DEFAULT_PATH                    "/bin:/usr/bin:@PREFIX@/bin:/var/qmail/bin:/home/vpopmail/bin"
++#define DEFAULT_PATH                    "/bin:/usr/bin:@PREFIX@/bin:@QMAILDIR@/bin:/home/vpopmail/bin"
  #define DEFAULT_TIMEOUT_COMMAND_SECS    60
  #define DEFAULT_TIMEOUT_CONNECTION_SECS 0
  #define TIMEOUT_CHECKPASSWORD_SECS      30
