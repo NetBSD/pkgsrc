@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/07/19 22:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/08 08:38:27 wiz Exp $
 #
 
-DISTNAME=		Devel-StackTrace-1.13
+DISTNAME=		Devel-StackTrace-1.15
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5dst
 CATEGORIES=		devel perl5
