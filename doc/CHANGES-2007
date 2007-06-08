@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1255 2007/06/08 07:21:19 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1256 2007/06/08 08:00:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2440,3 +2440,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/musicbrainz to 2.1.5 [wiz 2007-06-08]
 	Added audio/libmusicbrainz version 3.0.0 [wiz 2007-06-08]
 	Updated graphics/cairo to 1.4.6 [wiz 2007-06-08]
+	Updated security/p5-Crypt-SSLeay to 0.55 [wiz 2007-06-08]
