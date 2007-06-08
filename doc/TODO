@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6407 2007/06/08 13:04:31 wiz Exp $
+$NetBSD: TODO,v 1.6408 2007/06/08 13:10:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,6 +377,7 @@ Suggested package updates
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
 	o courier-mta-0.54.2
+	o cpio-2.8
 	o cpmtools-2.6
 	o cppunit-1.12.0
 	o crafty-19.5
@@ -564,12 +565,12 @@ Suggested package updates
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
-	o gsasl-0.2.16
+	o gsasl-0.2.18
 	o gsharutils-4.6.3
 	o gsm-1.0.12
 	o gss-0.21
-	o gtar-1.16.1
-	o gtar-base-1.16.1
+	o gtar-1.17
+	o gtar-base-1.17
 	o gthumb-2.10.3
 	o gtick-0.3.13
 	o gtk-systrace-20030623
