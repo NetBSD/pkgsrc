@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2007/03/13 09:10:24 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2007/06/08 12:58:11 wiz Exp $
 
---- configure.orig	2007-03-07 13:58:48.000000000 +0100
+--- configure.orig	2007-06-05 12:14:32.000000000 +0000
 +++ configure
-@@ -29846,7 +29846,7 @@ rm -f conftest.err conftest.$ac_objext c
- echo "${ECHO_T}$flag_ok" >&6
+@@ -29637,7 +29637,7 @@ rm -f core conftest.err conftest.$ac_obj
+ echo "${ECHO_T}$flag_ok" >&6; }
  
  
 -        if test "x$ERROR_CFLAGS" == "x"
 +        if test "x$ERROR_CFLAGS" = "x"
      then
  
-   echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all,no%E_EMPTY_DECLARATION,no%E_STATEMENT_NOT_REACHED" >&5
-@@ -29912,7 +29912,7 @@ rm -f conftest.err conftest.$ac_objext c
- echo "${ECHO_T}$flag_ok" >&6
+   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all,no%E_EMPTY_DECLARATION,no%E_STATEMENT_NOT_REACHED" >&5
+@@ -29700,7 +29700,7 @@ rm -f core conftest.err conftest.$ac_obj
+ echo "${ECHO_T}$flag_ok" >&6; }
  
  
 -            if test "x$ERROR_CFLAGS" == "x"
 +            if test "x$ERROR_CFLAGS" = "x"
        then
  
-   echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
+   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
