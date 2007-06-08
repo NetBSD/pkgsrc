@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1258 2007/06/08 08:07:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1259 2007/06/08 11:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2443,3 +2443,20 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-Crypt-SSLeay to 0.55 [wiz 2007-06-08]
 	Updated security/p5-IO-Socket-SSL to 1.06 [wiz 2007-06-08]
 	Updated sysutils/dvd+rw-tools to 7.0 [wiz 2007-06-08]
+	Updated devel/p5-IO-Zlib to 1.05 [wiz 2007-06-08]
+	Updated archivers/p5-Archive-Tar to 1.30 [wiz 2007-06-08]
+	Updated databases/p5-Apache-DBI to 1.06 [wiz 2007-06-08]
+	Updated databases/p5-DBIx-DBSchema to 0.31 [wiz 2007-06-08]
+	Updated devel/p5-Devel-StackTrace to 1.15 [wiz 2007-06-08]
+	Updated devel/p5-Test-ClassAPI to 1.04 [wiz 2007-06-08]
+	Updated textproc/p5-Text-Glob to 0.08 [wiz 2007-06-08]
+	Updated sysutils/p5-File-NCopy to 0.35 [wiz 2007-06-08]
+	Updated databases/p5-DBIx-SearchBuilder to 1.48 [wiz 2007-06-08]
+	Updated devel/p5-Params-Validate to 0.88 [wiz 2007-06-08]
+	Updated devel/p5-Log-Dispatch to 2.18 [wiz 2007-06-08]
+	Updated www/p5-libapreq2 to 2.08 [wiz 2007-06-08]
+	Updated www/p5-WWW-Mechanize to 1.24 [wiz 2007-06-08]
+	Updated www/p5-Test-WWW-Mechanize to 1.12 [wiz 2007-06-08]
+	Updated graphics/p5-Image-Info to 1.25 [wiz 2007-06-08]
+	Updated textproc/py-html2text to 2.28 [wiz 2007-06-08]
+	Removed sysutils/p5-File-NCopy [wiz 2007-06-08]
