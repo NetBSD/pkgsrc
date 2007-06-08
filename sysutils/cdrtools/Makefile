@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/08 23:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/08 23:05:15 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a27
 PKGNAME=	cdrtools-2.01.01.27
@@ -27,8 +27,8 @@ BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 # avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=	ARCH=""
 MAKE_ENV+=	MAKEPROG="gmake"
-MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
-MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
+MAKE_ENV+=	COPTX=${CFLAGS:Q}
+MAKE_ENV+=	LDOPTX=${LDFLAGS:Q}
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
