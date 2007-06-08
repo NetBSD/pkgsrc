@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1268 2007/06/08 17:02:53 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1269 2007/06/08 17:14:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/openbox to 3.4.0 [wiz 2007-06-08]
 	Updated lang/python24 to 2.4.4 [wiz 2007-06-08]
 	Updated audio/libtunepimp to 0.5.3nb3 [wiz 2007-06-08]
+	Updated audio/vorbis-tools to 1.1.1nb5 [wiz 2007-06-08]
