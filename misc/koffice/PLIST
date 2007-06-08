@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/02/27 12:04:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/06/08 12:50:14 markd Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -142,6 +142,7 @@ include/kexidb/lookupfieldschema.h
 include/kexidb/migratemanager.h
 include/kexidb/msghandler.h
 include/kexidb/object.h
+include/kexidb/parser.h
 include/kexidb/preparedstatement.h
 include/kexidb/queryschema.h
 include/kexidb/queryschemaparameter.h
@@ -202,6 +203,7 @@ include/kis_filter_config_widget.h
 include/kis_filter_configuration.h
 include/kis_filter_manager.h
 include/kis_filter_registry.h
+include/kis_filter_strategy.h
 include/kis_filters_listview.h
 include/kis_generic_registry.h
 include/kis_global.h
@@ -227,6 +229,7 @@ include/kis_iteratorpixeltrait.h
 include/kis_iterators_pixel.h
 include/kis_label_zoom.h
 include/kis_layer.h
+include/kis_layer_visitor.h
 include/kis_layerbox.h
 include/kis_layerlist.h
 include/kis_matrix_widget.ui.h
@@ -239,6 +242,7 @@ include/kis_nameserver.h
 include/kis_opengl_image_context.h
 include/kis_paint_device.h
 include/kis_paint_device_iface.h
+include/kis_paint_layer.h
 include/kis_painter.h
 include/kis_paintop.h
 include/kis_paintop_box.h
@@ -271,6 +275,7 @@ include/kis_tool_paint.h
 include/kis_tool_registry.h
 include/kis_tool_types.h
 include/kis_transaction.h
+include/kis_transform_worker.h
 include/kis_types.h
 include/kis_u16_base_colorspace.h
 include/kis_u8_base_colorspace.h
@@ -400,6 +405,7 @@ lib/kde3/kritaroundcornersfilter.la
 lib/kde3/kritascreenshot.la
 lib/kde3/kritascripting.la
 lib/kde3/kritaselectiontools.la
+lib/kde3/kritaselectopaque.la
 lib/kde3/kritaseparatechannels.la
 lib/kde3/kritashearimage.la
 lib/kde3/kritasmalltilesfilter.la
@@ -620,6 +626,7 @@ share/applications/kde/kchart.desktop
 share/applications/kde/kexi.desktop
 share/applications/kde/kformula.desktop
 share/applications/kde/kivio.desktop
+share/applications/kde/koffice.desktop
 share/applications/kde/koshell.desktop
 share/applications/kde/kplato.desktop
 share/applications/kde/kpresenter.desktop
@@ -732,6 +739,7 @@ share/doc/kde/HTML/en/koffice/TODO
 share/doc/kde/HTML/en/koffice/common
 share/doc/kde/HTML/en/koffice/index.cache.bz2
 share/doc/kde/HTML/en/koffice/index.docbook
+share/doc/kde/HTML/en/koffice/koffice.desktop
 share/doc/kde/HTML/en/koshell/common
 share/doc/kde/HTML/en/koshell/index.cache.bz2
 share/doc/kde/HTML/en/koshell/index.docbook
@@ -4228,6 +4236,7 @@ share/kde/apps/kritaplugins/modify_selection.rc
 share/kde/apps/kritaplugins/rotateimage.rc
 share/kde/apps/kritaplugins/screenshot-krita.rc
 share/kde/apps/kritaplugins/scripting.rc
+share/kde/apps/kritaplugins/selectopaque.rc
 share/kde/apps/kritaplugins/shearimage.rc
 share/kde/apps/kritaplugins/substrate.rc
 share/kde/apps/kritaplugins/wetplugin.rc
@@ -4717,6 +4726,7 @@ share/kde/services/kritaroundcornersfilter.desktop
 share/kde/services/kritascreenshot.desktop
 share/kde/services/kritascripting.desktop
 share/kde/services/kritaselectiontools.desktop
+share/kde/services/kritaselectopaque.desktop
 share/kde/services/kritaseparatechannels.desktop
 share/kde/services/kritashearimage.desktop
 share/kde/services/kritasmalltilesfilter.desktop
