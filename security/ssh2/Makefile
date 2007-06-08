@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/06/08 15:24:58 heinz Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -10,8 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ssh.com/
 COMMENT=	Secure Shell client and server for V.2 SSH protocol
 
-CONFLICTS+=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
-CONFLICTS+=	openssh+gssapi-[0-9]* ssh2-nox11-[0-9]*
+PKG_DESTDIR_SUPPORT=	destdir
+
+CONFLICTS+=		openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
+CONFLICTS+=		openssh+gssapi-[0-9]* ssh2-nox11-[0-9]*
 
 GNU_CONFIGURE=		YES
 
@@ -88,14 +90,16 @@ DOCS=			CHANGES FAQ HOWTO.anonymous.sftp INSTALL LICENSE \
 			RFC.authorization_program_protocol \
 			RFC.kbdint_plugin_protocol
 
+TEST_TARGET=		check
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE}
 .for file in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR:Q}${PREFIX:Q}/share/doc/${PKGBASE}
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${EGDIR:Q}
 .for file in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR:Q}${EGDIR:Q}
 .endfor
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
