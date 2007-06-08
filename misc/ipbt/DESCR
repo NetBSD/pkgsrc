@@ -1,0 +1,7 @@
+IPBT plays ttyrec files, like ttyplay, but provides the ability to
+seek forward and backward in the recorded file.  Additional features
+include slow motion and fast forwarding.
+
+The ttydump and ttygrep utilities provide functionality to extract
+part of the recorded file and to search for frames containing a
+search pattern, respectively.
