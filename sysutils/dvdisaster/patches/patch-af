@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  - Add option "--with-embedded-src-path", default value is "yes" to keep
+    the current behaviour.
+
+--- configure.orig	2007-01-20 13:30:22.000000000 +0100
++++ configure
+@@ -128,6 +128,7 @@ WITH_OPTION nls yes "[yes | no]"
+ WITH_OPTION memdebug no "[no | yes]"
+ WITH_OPTION efence no "[no | yes]"
+ WITH_OPTION logfile no "[no | yes]"
++WITH_OPTION embedded-src-path yes "[yes | no]"
+ 
+ if test "$cfg_with_efence" == "yes"; then
+   if ! CHECK_LIBRARY efence malloc efence; then
