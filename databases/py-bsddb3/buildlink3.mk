@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/08/08 16:55:18 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/06/08 12:25:00 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_BSDDB3_BUILDLINK3_MK:=	${PY_BSDDB3_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-bsddb3
 .  include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.3.3nb1
-BUILDLINK_ABI_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.3.3nb2
+BUILDLINK_ABI_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.4.2nb1
 BUILDLINK_PKGSRCDIR.py-bsddb3?=	../../databases/py-bsddb3
 .endif	# PY_BSDDB3_BUILDLINK3_MK
 
