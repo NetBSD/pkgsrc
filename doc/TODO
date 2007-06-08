@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6397 2007/06/08 07:21:19 wiz Exp $
+$NetBSD: TODO,v 1.6398 2007/06/08 08:00:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -861,7 +861,6 @@ Suggested package updates
 	o p5-Class-Factory-1.05
 	o p5-Class-Trigger-0.11
 	o p5-Crypt-CBC-2.22
-	o p5-Crypt-SSLeay-0.53
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
