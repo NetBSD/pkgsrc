@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/24 20:11:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2007/06/08 08:44:56 wiz Exp $
 
-SHA1 (File-NCopy-0.34.tar.gz) = 825d22db107370c5aa143a2dd4120ff7010dc950
-RMD160 (File-NCopy-0.34.tar.gz) = f63045b8230f645c1e6b4dea65107fff9ac6fa15
-Size (File-NCopy-0.34.tar.gz) = 7495 bytes
+SHA1 (File-NCopy-0.35.tar.gz) = f2c80213b95d235e08becc8ae0458d331034a8c3
+RMD160 (File-NCopy-0.35.tar.gz) = ee10481f9aa59a1f264e93c85b3cb4c008b03977
+Size (File-NCopy-0.35.tar.gz) = 8400 bytes
