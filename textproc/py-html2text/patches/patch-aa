@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2007/01/19 00:55:06 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/08 11:39:02 wiz Exp $
 
---- html2text-2.25.py.orig	2007-01-18 19:06:49.000000000 -0500
-+++ html2text-2.25.py
+--- html2text.py.orig	2007-01-18 19:06:49.000000000 -0500
++++ html2text.py
 @@ -150,7 +150,7 @@ class _html2text(sgmllib.SGMLParser):
  		self.lastWasNL = 0
  	
