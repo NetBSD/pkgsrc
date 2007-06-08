@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6395 2007/06/08 07:03:28 wiz Exp $
+$NetBSD: TODO,v 1.6396 2007/06/08 07:05:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -487,7 +487,6 @@ Suggested package updates
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.8
 	o gaim-2.0.1 [now called pidgin]
 	o gaim-icb-20070203
 	o gamin-0.1.8
@@ -1019,7 +1018,6 @@ Suggested package updates
 	o pnetlib-0.7.4
 	o po4a-0.29
 	o polsms-2.1.0
-	o poppler-0.5.9
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
