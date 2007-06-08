@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6400 2007/06/08 08:07:34 wiz Exp $
+$NetBSD: TODO,v 1.6401 2007/06/08 11:46:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -841,10 +841,8 @@ Suggested package updates
 	o p5-Algorithm-Merge-0.08
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
-	o p5-Apache-DBI-1.06
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.33
-	o p5-Archive-Tar-1.30
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
@@ -864,19 +862,15 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
 	o p5-DBIx-ContextualFetch-1.03
-	o p5-DBIx-DBSchema-0.31
-	o p5-DBIx-SearchBuilder-1.48
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
 	o p5-DateTime-TimeZone-0.63
 	o p5-Devel-Profile-1.05
-	o p5-Devel-StackTrace-1.15
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
-	o p5-File-NCopy-0.35
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -891,12 +885,9 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
-	o p5-IO-Zlib-1.05
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
-	o p5-Image-Info-1.25
 	o p5-Locale-Codes-2.07
-	o p5-Log-Dispatch-2.18
 	o p5-MARC-1.38
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.22
@@ -916,7 +907,6 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-PAR-0.90
 	o p5-PV-1.5
-	o p5-Params-Validate-0.88
 	o p5-PathTools-3.24
 	o p5-Perl-Tidy-20070508
 	o p5-PerlMagick-6.3.2.9
@@ -931,25 +921,20 @@ Suggested package updates
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.18
 	o p5-Term-Size-0.203
-	o p5-Test-ClassAPI-1.04
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
-	o p5-Test-WWW-Mechanize-1.12
 	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Glob-0.08
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
-	o p5-WWW-Mechanize-1.24
 	o p5-XML-RAI-1.04
 	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
-	o p5-libapreq2-2.08
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o p5-version-0.71
@@ -1054,7 +1039,6 @@ Suggested package updates
 	o py-gnome2-extras-2.14.3
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-html2text-2.26
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3
