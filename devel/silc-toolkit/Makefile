@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/06/08 18:39:24 wiz Exp $
 #
 
 DISTNAME=		silc-toolkit-0.9.13
 PKGREVISION=		1
 CATEGORIES=		devel chat security
 MASTER_SITES=		http://www.silcnet.org/download/toolkit/sources/ \
-			ftp://ftp.silcnet.org/silc/toolkit/sources/ \
-			http://www.fi.silcnet.org/download/toolkit/sources/ \
-			ftp://ftp.au.silcnet.org/pub/silcnet/toolkit/sources/ \
-			http://www.at.silcnet.org/download/toolkit/sources/
+			ftp://ftp.silcnet.org/silc/toolkit/sources/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		salo@NetBSD.org

@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/08 18:39:23 wiz Exp $
 #
 
 DISTNAME=	gobo15
 PKGNAME=	gobo-eiffel-1.5
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.gobosoft.com/download/ \
-		http://www.eiffel-forum.org/archive/bezault/ \
-		ftp://ftp.eiffel.com/pub/shelf/bezault/
+MASTER_SITES=	ftp://ftp.eiffel.com/pub/shelf/bezault/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
