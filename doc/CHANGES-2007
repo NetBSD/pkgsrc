@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1249 2007/06/07 20:02:45 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1250 2007/06/08 01:08:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2434,3 +2434,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/dialog to 1.1.20070528 [wiz 2007-06-07]
 	Updated devel/libidn to 0.6.13 [wiz 2007-06-07]
 	Updated graphics/libexif to 0.6.15 [wiz 2007-06-07]
+	Updated mail/spamdyke to 2.6.2 [schmonz 2007-06-08]
