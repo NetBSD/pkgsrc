@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1270 2007/06/08 17:19:28 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1271 2007/06/08 17:22:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/libtunepimp to 0.5.3nb3 [wiz 2007-06-08]
 	Updated audio/vorbis-tools to 1.1.1nb5 [wiz 2007-06-08]
 	Updated audio/timidity to 2.13.2nb7 [wiz 2007-06-08]
+	Updated multimedia/mplayer to 1.0rc9nb7 [tron 2007-06-08]
