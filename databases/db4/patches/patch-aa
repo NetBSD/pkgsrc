@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2006/11/05 17:43:59 joerg Exp $
+$NetBSD: patch-aa,v 1.12 2007/06/08 12:23:51 wiz Exp $
 
---- dist/Makefile.in.orig	2005-11-08 12:47:22.000000000 +0000
+--- dist/Makefile.in.orig	2006-09-13 16:22:38.000000000 +0000
 +++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2006/11/05 17:43:59 joerg Exp $
  SOFLAGS=	@SOFLAGS@
  LIBMAJOR=	@DB_VERSION_MAJOR@
  LIBVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
-@@ -60,7 +60,7 @@ LIBS=		@LIBS@
+@@ -60,7 +60,7 @@ LIBS=		@LIBSO_LIBS@
  TEST_LIBS=	@TEST_LIBS@
  LIBCSO_LIBS=	@LIBCSO_LIBS@ @LIBSO_LIBS@
  
@@ -38,20 +38,19 @@ $NetBSD: patch-aa,v 1.11 2006/11/05 17:43:59 joerg Exp $
  libcxx=		$(libcxx_base).a
  libcxx_version=	$(libcxx_base)-$(LIBVERSION).a
  libxso=		$(libcxx_base)-$(LIBVERSION)@SOSUFFIX@
-@@ -107,10 +107,10 @@ JAVA_EXDIR=	$(srcdir)/examples_java/src
- JAVA_RPCDIR=	$(srcdir)/rpc_server/java
+@@ -105,9 +105,9 @@ JAVA_SRCDIR=	$(srcdir)/java/src
+ JAVA_EXDIR=	$(srcdir)/examples_java/src
  JAVA_SLEEPYCAT=	$(srcdir)/java/src/com/sleepycat
  
 -libj_jarfile=	db.jar
 +libj_jarfile=	db4.jar
  libj_exjarfile=	dbexamples.jar
- rpc_jarfile=	dbsvc.jar
 -libjso_base=	libdb_java
 +libjso_base=	libdb4_java
  libjso=		$(libjso_base)-$(LIBVERSION)@JMODSUFFIX@
  libjso_static=	$(libjso_base)-$(LIBVERSION).a
  libjso_target=	$(libjso_base)-$(LIBVERSION).la
-@@ -125,7 +125,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
+@@ -122,7 +122,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
  ##################################################
  TCL_INCLUDE_SPEC=	@TCL_INCLUDE_SPEC@
  LIBTSO_LIBS=	@LIBTSO_LIBS@ @LIBSO_LIBS@
@@ -60,34 +59,34 @@ $NetBSD: patch-aa,v 1.11 2006/11/05 17:43:59 joerg Exp $
  libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -867,8 +867,7 @@ install_include:
- 	    ($(mkdir) -p $(DESTDIR)$(includedir) && \
- 	    $(chmod) $(dmode) $(DESTDIR)$(includedir))
- 	@cd $(DESTDIR)$(includedir) && $(rm) -f $(INCDOT)
--	@$(cp) -p $(INCDOT) $(DESTDIR)$(includedir)
--	@cd $(DESTDIR)$(includedir) && $(chmod) $(fmode) $(INCDOT)
+@@ -723,8 +723,7 @@ install_include:
+ 	    ($(MKDIR) -p $(DESTDIR)$(includedir) && \
+ 	    $(CHMOD) $(dmode) $(DESTDIR)$(includedir))
+ 	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
+-	@$(CP) -p $(INCDOT) $(DESTDIR)$(includedir)
+-	@cd $(DESTDIR)$(includedir) && $(CHMOD) $(fmode) $(INCDOT)
 +	${BSD_INSTALL_DATA} $(INCDOT) $(DESTDIR)$(includedir)
  
  uninstall_include:
- 	@cd $(DESTDIR)$(includedir) && $(rm) -f $(INCDOT)
-@@ -879,7 +878,7 @@ install_lib:
- 	    ($(mkdir) -p $(DESTDIR)$(libdir) && \
- 	    $(chmod) $(dmode) $(DESTDIR)$(libdir))
- 	@cd $(DESTDIR)$(libdir) && $(rm) -f $(LIB_INSTALL_FILE_LIST)
+ 	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
+@@ -735,7 +734,7 @@ install_lib:
+ 	    ($(MKDIR) -p $(DESTDIR)$(libdir) && \
+ 	    $(CHMOD) $(dmode) $(DESTDIR)$(libdir))
+ 	@cd $(DESTDIR)$(libdir) && $(RM) -f $(LIB_INSTALL_FILE_LIST)
 -	@$(INSTALLER) @INSTALL_LIBS@ $(DESTDIR)$(libdir)
 +	@libtool --mode=install ${BSD_INSTALL_LIB} @INSTALL_LIBS@ $(DESTDIR)$(libdir)
  	@(cd $(DESTDIR)$(libdir) && \
- 	    test -f $(libso) && $(ln) -s $(libso) $(libso_default); \
- 	    test -f $(libso) && $(ln) -s $(libso) $(libso_major); \
-@@ -903,11 +902,8 @@ install_utilities:
- 	    ($(mkdir) -p $(DESTDIR)$(bindir) && \
- 	    $(chmod) $(dmode) $(DESTDIR)$(bindir))
+ 	    test -f $(libso) && $(LN) -s $(libso) $(libso_default); \
+ 	    test -f $(libso) && $(LN) -s $(libso) $(libso_major); \
+@@ -759,11 +758,8 @@ install_utilities:
+ 	    ($(MKDIR) -p $(DESTDIR)$(bindir) && \
+ 	    $(CHMOD) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
--		$(rm) -f $(DESTDIR)$(bindir)/$$i $(DESTDIR)$(bindir)/$$i.exe; \
--		test -f $$i.exe && i=$$i.exe || true; \
+-		test -f $$i.exe && i=$$i.exe || i=$$i; \
+-		$(RM) -f $(DESTDIR)$(bindir)/$$i; \
 -		$(INSTALLER) $$i $(DESTDIR)$(bindir)/$$i; \
--		test -f $(strip) && $(strip) $(DESTDIR)$(bindir)/$$i || true; \
--		$(chmod) $(emode) $(DESTDIR)$(bindir)/$$i; \
+-		test "$(STRIP)" = "none" || $(STRIP) $(DESTDIR)$(bindir)/$$i; \
+-		$(CHMOD) $(emode) $(DESTDIR)$(bindir)/$$i; \
 +		target="${DESTDIR}${bindir}/`echo $$i | sed '${transform}'`"; \
 +		libtool --mode=install ${BSD_INSTALL_PROGRAM} $$i $$target; \
  	done
