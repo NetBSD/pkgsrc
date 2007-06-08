@@ -1,16 +1,53 @@
-$NetBSD: patch-aa,v 1.6 2004/04/14 14:41:34 adam Exp $
+$NetBSD: patch-aa,v 1.7 2007/06/08 17:18:53 wiz Exp $
 
---- timidity/sun_a.c.orig	2002-07-19 00:43:58.000000000 +0000
+--- timidity/sun_a.c.orig	2007-06-08 17:14:22.000000000 +0000
 +++ timidity/sun_a.c
-@@ -70,7 +70,11 @@
- #define SUNAUDIO_AENC_SIGWORD	AENC_SIGWORDB
- #endif
+@@ -300,6 +300,18 @@ int output_data(char *buff, int32 nbytes
  
-+#ifndef __NetBSD__
- #define AUDIO_DEV    "/dev/audio"
-+#else
-+#define AUDIO_DEV    "/dev/sound"
+ 
+ #if !defined(I_FLUSH) || !defined(FLUSHW)
++#  if defined(AUDIO_FLUSH)	/* NetBSD */
++static int sun_discard_playing(void)
++{
++    if(ioctl(dpm.fd, AUDIO_FLUSH, NULL) < 0)
++    {
++	ctl->cmsg(CMSG_ERROR, VERB_NORMAL, "%s: (ioctl) %s",
++		  dpm.name, strerror(errno));
++	return -1;
++    }
++    return 0;
++}
++#  else
+ static void null_proc(){}
+ static int sun_discard_playing(void)
+ {
+@@ -312,6 +324,7 @@ static int sun_discard_playing(void)
+     signal(SIGALRM, orig_alarm_handler);
+     return open_output();
+ }
++#  endif
+ #else
+ static int sun_discard_playing(void)
+ {
+@@ -332,6 +345,21 @@ static int acntl(int request, void *arg)
+ 
+     switch(request)
+     {
++#ifdef __NetBSD__
++      case PM_REQ_GETQSIZ:
++	if(ioctl(audioctl_fd, AUDIO_GETINFO, &auinfo) < 0)
++	    return -1;
++	return auinfo.play.buffer_size;
++
++      case PM_REQ_GETFRAGSIZ:
++	if(ioctl(audioctl_fd, AUDIO_GETINFO, &auinfo) < 0)
++	    return -1;
++	return auinfo.blocksize;
++
++      case PM_REQ_OUTPUT_FINISH:
++	return ioctl(audioctl_fd, AUDIO_DRAIN, NULL);
 +#endif
- #define AUDIO_CTLDEV "/dev/audioctl"
- 
- 
++
+       case PM_REQ_GETFILLED:
+ 	if(ioctl(audioctl_fd, AUDIO_GETINFO, &auinfo) < 0)
+ 	    return -1;
