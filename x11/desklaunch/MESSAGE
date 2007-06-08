@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/06/08 21:57:33 sborrill Exp $
+
+For details on configuring desklaunch, please read
+${PREFIX}/share/doc/desklaunch.README
+
+===========================================================================
