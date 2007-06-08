@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6409 2007/06/08 13:20:49 obache Exp $
+$NetBSD: TODO,v 1.6410 2007/06/08 13:34:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o ex-20050325
-	o expat-2.0.1
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -822,10 +821,9 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openbox-3.4.0
 	o openh323-1.19.1
 	o openldap-2.3.35
-	o openldap-client-2.3.34
+	o openldap-client-2.3.35
 	o openmortal-0.7.1
 	o openpam-20050616
 	o openssl-0.9.8e
