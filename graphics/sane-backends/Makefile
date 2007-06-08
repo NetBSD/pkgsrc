@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.35 2007/02/22 19:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2007/06/08 20:50:55 gdt Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
 DISTNAME=	sane-backends-${SANE_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+
+# lib/Makefile.in builds .o files and then .a, but rules for shlibs,
+# while apparently independent, cause libtool to create .o again,
+# making it possible for the ar step of the .a build to fail to find
+# the .o
+MAKE_JOBS_SAFE=		NO
 
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
