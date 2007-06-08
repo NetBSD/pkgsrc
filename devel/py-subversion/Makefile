@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2007/06/08 12:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/06/08 22:49:26 epg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	1
 COMMENT=	Python bindings and tools for Subversion
 
 PKG_DESTDIR_SUPPORT=	user-destdir
