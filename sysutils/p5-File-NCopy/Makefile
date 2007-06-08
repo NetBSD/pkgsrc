@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:30:42 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/08 08:44:55 wiz Exp $
 
-DISTNAME=	File-NCopy-0.34
+DISTNAME=	File-NCopy-0.35
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MZ/MZSANFORD/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CH/CHORNY/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/File-NCopy/
