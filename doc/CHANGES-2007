@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1266 2007/06/08 13:34:19 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1267 2007/06/08 14:17:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/gst-plugins0.10-fluendo-mp3 to 0.10.6 [wiz 2007-06-08]
 	Updated textproc/expat to 2.0.1 [wiz 2007-06-08]
 	Updated wm/openbox to 3.4.0 [wiz 2007-06-08]
+	Updated lang/python24 to 2.4.4 [wiz 2007-06-08]
