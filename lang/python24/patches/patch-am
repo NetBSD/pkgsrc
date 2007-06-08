@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
+$NetBSD: patch-am,v 1.4 2007/06/08 14:16:16 wiz Exp $
 
---- setup.py.orig	2006-03-23 20:07:46.000000000 +0100
+--- setup.py.orig	2006-10-08 17:41:25.000000000 +0000
 +++ setup.py
 @@ -15,7 +15,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -30,7 +30,7 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
  
          # Add paths to popular package managers on OS X/darwin
          if sys.platform == "darwin":
-@@ -456,9 +462,7 @@ class PyBuildExt(build_ext):
+@@ -485,9 +491,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -466,9 +470,7 @@ class PyBuildExt(build_ext):
+@@ -495,9 +499,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -52,7 +52,7 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -486,151 +488,52 @@ class PyBuildExt(build_ext):
+@@ -515,168 +517,51 @@ class PyBuildExt(build_ext):
          # similar functionality (but slower of course) implemented in Python.
  
          # Sleepycat Berkeley DB interface.  http://www.sleepycat.com
@@ -95,8 +95,25 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
 -            db_inc_paths.append('/pkg/db-3.%d/include' % x)
 -            db_inc_paths.append('/opt/db-3.%d/include' % x)
 -
+-        # Add some common subdirectories for Sleepycat DB to the list,
+-        # based on the standard include directories. This way DB3/4 gets
+-        # picked up when it is installed in a non-standard prefix and
+-        # the user has added that prefix into inc_dirs.
+-        std_variants = []
+-        for dn in inc_dirs:
+-            std_variants.append(os.path.join(dn, 'db3'))
+-            std_variants.append(os.path.join(dn, 'db4'))
+-            for x in (0,1,2,3,4):
+-                std_variants.append(os.path.join(dn, "db4%d"%x))
+-                std_variants.append(os.path.join(dn, "db4.%d"%x))
+-            for x in (2,3):
+-                std_variants.append(os.path.join(dn, "db3%d"%x))
+-                std_variants.append(os.path.join(dn, "db3.%d"%x))
+-
+-        db_inc_paths = std_variants + db_inc_paths
+-
 -        db_ver_inc_map = {}
- 
+-
 -        class db_found(Exception): pass
 +        class Notfound(Exception): pass
          try:
@@ -244,7 +261,7 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -643,6 +546,13 @@ class PyBuildExt(build_ext):
+@@ -689,6 +574,13 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -258,7 +275,7 @@ $NetBSD: patch-am,v 1.3 2006/04/12 20:21:48 drochner Exp $
              elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
                    and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
-@@ -1186,8 +1096,8 @@ def main():
+@@ -1224,8 +1116,8 @@ def main():
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
