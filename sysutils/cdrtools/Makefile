@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/05/29 15:32:16 obache Exp $
+# $NetBSD: Makefile,v 1.15 2007/06/08 23:04:54 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a27
 PKGNAME=	cdrtools-2.01.01.27
@@ -51,9 +51,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
-SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
-			readcd/readcd.1
-SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
+SUBST_FILES.fix=	btcflash/btcflash.1
+SUBST_FILES.fix+=	cdrecord/cdrecord.1
+SUBST_FILES.fix+=	cdrecord/defaults.c
+SUBST_FILES.fix+=	mkisofs/diag/isoinfo.8
+SUBST_FILES.fix+=	readcd/readcd.1
+SUBST_FILES.fix+=	scgcheck/scgcheck.1
+SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
 post-extract:
