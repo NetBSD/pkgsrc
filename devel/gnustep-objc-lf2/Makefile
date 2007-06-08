@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2006/09/20 23:17:41 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/06/08 18:39:23 wiz Exp $
 #
 
 DISTNAME=	gnustep-objc-lf2.95.3-r88
 PKGNAME=	${DISTNAME:S/.9/-2.9/:S/-r/./}
 PKGREVISION=	1
 CATEGORIES=	devel gnustep
-MASTER_SITES=	ftp://ftp.opengroupware.org/sources/releases/		\
-		http://download.opengroupware.org/nightly/sources/releases/
+MASTER_SITES=	http://download.opengroupware.org/nightly/sources/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sope.opengroupware.org/en/build/thirdparty.html\#gstep_objc
