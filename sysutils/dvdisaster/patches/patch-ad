@@ -1,0 +1,49 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  - Honor configure option --with-embedded-src-path
+
+  - Unification of SYS_(LINUX|FREEBSD|DARWIN|UNKNOWN) to "ifndef SYS_MINGW"
+    taken from upstream CVS sources.
+
+--- closure.c.orig	2007-01-20 16:44:59.000000000 +0100
++++ closure.c
+@@ -174,10 +174,13 @@ static void get_base_dirs()
+    char *appdata;
+ #endif
+ 
+-   /*** The source directory is supposed to hold the most recent files,
++   /*** Unless completely disabled through a configure option, the
++	source directory is supposed to hold the most recent files,
+ 	so try this first. Not necessary under Windows as it will always
+ 	use the directory the binary has been called from. */
+ 
++#ifdef WITH_EMBEDDED_SRC_PATH_YES
++
+ #ifndef SYS_MINGW
+    if(!stat(SRCDIR, &mystat))
+    {  Closure->binDir = g_strdup(SRCDIR);
+@@ -187,12 +190,14 @@ static void get_base_dirs()
+    } 
+ #endif
+ 
++#endif /* WITH_EMBEDDED_SRC_PATH_YES */
++
+    /*** Otherwise try the installation directory. 
+ 	On Linux this is a hardcoded directory.
+ 	Windows has binary distributions with no prior known installation place,
+ 	but luckily it provides a way for figuring out that location. */
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN) || defined(SYS_UNKNOWN)
++#ifndef SYS_MINGW
+    if(!stat(BINDIR, &mystat))
+      Closure->binDir = g_strdup(BINDIR);
+ 
+@@ -212,7 +217,7 @@ static void get_base_dirs()
+    /*** The location of the dotfile depends on the operating system. 
+ 	Under Unix the users home directory is used. */
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN) || defined(SYS_UNKNOWN)
++#ifndef SYS_MINGW
+ find_dotfile:
+ 
+    Closure->dotFile = g_strdup_printf("%s/.dvdisaster", g_getenv("HOME"));

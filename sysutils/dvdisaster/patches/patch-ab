@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  make it work with NetBSD's SCSI layer
+
+--- scsi-layer.h.orig	2007-01-20 15:44:49.000000000 +0000
++++ scsi-layer.h	2007-01-27 17:36:15.000000000 +0000
+@@ -117,7 +117,7 @@
+ } Sense;
+ #endif
+ 
+-#ifdef SYS_UNKNOWN
++#if defined(SYS_UNKNOWN) || defined(SYS_NETBSD)
+ #define MAX_CDB_SIZE 16   /* longest possible SCSI command */
+ 
+ /* This is actually the little endian version of the
+@@ -177,7 +177,7 @@
+ 
+ typedef struct _DeviceHandle
+ {
+-#ifdef SYS_LINUX
++#if defined(SYS_LINUX) || defined(SYS_NETBSD)
+    int fd;                    /* device file descriptor */
+ #endif
+ #ifdef SYS_FREEBSD
