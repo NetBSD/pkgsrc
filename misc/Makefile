@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2007/05/10 21:06:58 seb Exp $
+# $NetBSD: Makefile,v 1.278 2007/06/08 06:08:22 pooka Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -76,6 +76,7 @@ SUBDIR+=	gxmame
 SUBDIR+=	hanzim
 SUBDIR+=	heyu
 SUBDIR+=	ibutton-pdkit
+SUBDIR+=	ipbt
 SUBDIR+=	iselect
 SUBDIR+=	ja-less
 SUBDIR+=	ja-man
