@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/06/08 11:30:09 wiz Exp $
 
-DISTNAME=	libapreq2-2.07
-PKGNAME=	p5-libapreq2-2.07
+DISTNAME=	libapreq2-2.08
+PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5la2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/libapreq/}
