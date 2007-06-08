@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/08 06:07:25 pooka Exp $
+
+--- Makefile.orig	2007-04-19 15:24:41.000000000 +0300
++++ Makefile	2007-06-08 08:57:16.000000000 +0300
+@@ -7,7 +7,7 @@
+        wcwidth.o xenc.o
+ 
+ ipbt: $(IPBT)
+-	$(CC) $(LFLAGS) -o ipbt $(IPBT) -lm -lncurses
++	$(CC) $(LDFLAGS) -o ipbt $(IPBT) -lm -lncurses
+ 
+ be_none.o: be_none.c putty.h puttyps.h unix.h charset.h network.h misc.h \
+   puttymem.h
