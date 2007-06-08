@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/06/08 14:16:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2007/06/08 22:16:25 tron Exp $
 
 DISTNAME=	Python-2.4.4
 PKGNAME=	python24-2.4.4
@@ -46,6 +45,7 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python24/PLIST.common_end
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
 PY_PLATNAME=	${LOWER_OPSYS}
+USE_TOOLS+=	gmake
 .elif ${OPSYS} == "IRIX"
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
 .elif ${OPSYS} == "SunOS"
@@ -142,7 +142,8 @@ post-extract:
 
 .if ${OPSYS} == "Darwin"
 post-build:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} libpython2.4.2.dylib)
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} libpython2.4.2.dylib
 
 post-install:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.4.2.dylib	\
