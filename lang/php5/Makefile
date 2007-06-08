@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/06/07 10:45:42 adrianp Exp $
+# $NetBSD: Makefile,v 1.54 2007/06/08 12:29:53 adrianp Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -32,10 +32,18 @@ MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
+SUBST_CLASSES+=		cgi
+SUBST_MESSAGE.cgi=	Fixing CGI path.
+SUBST_STAGE.cgi=	pre-configure
+SUBST_FILES.cgi=	configure
+SUBST_SED.cgi=		-e 's,@CGIDIR@,${CGIDIR},g'
+
+pre-install:
+	${INSTALL_DATA_DIR} ${CGIDIR}
+
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
-	${INSTALL_DATA_DIR} ${CGIDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php-cgi ${CGIDIR}/php
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
