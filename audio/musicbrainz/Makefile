@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/06/08 06:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/06/08 07:04:52 wiz Exp $
 
 DISTNAME=	libmusicbrainz-2.1.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://musicbrainz.org/doc/libmusicbrainz
-COMMENT=	Second generation incarnation of the CD Index
+COMMENT=	Second generation incarnation of the CD Index (2.x series)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
