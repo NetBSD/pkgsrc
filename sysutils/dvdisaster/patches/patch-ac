@@ -1,0 +1,136 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  - Add system type SYS_NETBSD
+
+  - Process "--with*" options before "--*dir=*". Since the latter is a more
+    general expression it catches "--with-*dir" when it should not.
+
+  - Allow several "-" characters in options (provided by upstream author)
+
+--- scripts/bash-based-configure.orig	2006-04-18 20:14:45.000000000 +0200
++++ scripts/bash-based-configure
+@@ -60,7 +60,7 @@
+ # WITH_OPTION name default  adds -DWITH_OPTION_VALUE for -with-option=value args
+ #			    to CFG_WITH_OPTIONS,
+ 
+-CONFIGURE_VERSION="0.51"
++CONFIGURE_VERSION="0.51nb2"
+ 
+ echo "Bash based configure V$CONFIGURE_VERSION"
+ echo
+@@ -129,6 +129,15 @@ case "$cfg_uname" in
+ 	}
+ 	;;
+ 
++  NetBSD*) cfg_system=netbsd
++        CFG_SYS_OPTIONS="-DSYS_NETBSD"
++        CFG_EXE_SUFFIX=""
++	CFG_SYS_LDFLAGS="-lutil"
++	function add_linker_flags()
++	{  lflags_return="-L$1 -Wl,-rpath,$1 $2"
++	}
++	;;
++
+   *) cfg_system=unknown-system
+         CFG_SYS_OPTIONS="-DSYS_UNKNOWN"
+         CFG_EXE_SUFFIX=""
+@@ -188,6 +197,18 @@ do
+   -buildroot=* | --buildroot=*)
+     cfg_buildroot=$cfg_optarg ;;
+ 
++  # process the -with-foo=bar into $cfg_with_foo=bar
++
++  -with-*=* | --with-*=*)
++    eval `echo "$cfg_opt" | sed -e 's/[-]*with-/cfg_with_/' -e 'y/-/_/'` ;;
++
++  # process -with-foo into $cfg_with_foo=yes
++
++  -with-* | --with-*)
++    cfg_eval=`echo "$cfg_opt" | sed -e 's/[-]*with-/cfg_with_/' -e 'y/-/_/'`
++    cfg_eval="$cfg_eval=yes"
++    eval "$cfg_eval" ;;
++
+   -*dir=* | --*dir=*)
+     eval `echo "$cfg_opt" | sed -e 's/[-]*/cfg_/' ` ;;
+ 
+@@ -201,18 +222,6 @@ do
+   -*-libraries=*)
+     eval `echo "$cfg_opt" | sed -e 's/[-]*/cfg_/' -e 's/-libraries/_lib/'` ;;
+ 
+-  # process the -with-foo=bar into $cfg_with_foo=bar
+-
+-  -with-*=* | --with-*=*)
+-    eval `echo "$cfg_opt" | sed -e 's/[-]*with-/cfg_with_/' -e 's/-/_/'` ;;
+-
+-  # process -with-foo into $cfg_with_foo=yes
+-
+-  -with-* | --with-*)
+-    cfg_eval=`echo "$cfg_opt" | sed -e 's/[-]*with-/cfg_with_/' -e 's/-/_/'`
+-    cfg_eval="$cfg_eval=yes"
+-    eval "$cfg_eval" ;;
+-
+   -version | --version)
+     exit 0 ;;
+ 
+@@ -342,15 +351,16 @@ function REQUIRE_GCC()
+ # in one sweep at the Makefile.config generation.
+ 
+ function WITH_OPTION()
+-{  local option_name=`echo $1 | sed -e 's/-/_/'`
++{  local option_name=$1
++   local cooked_name=`echo $1 | sed -e 'y/-/_/'`
+    local default="$2"
+    local description="$3"
+ 
+    # first check number of arguments and deal with help mode
+ 
+-   if test -z "$option_name" || test -z "$default"; then 
++   if test -z "$cooked_name" || test -z "$default"; then 
+       echo "WITH_OPTION needs at last two arguments"
+-      return option_name
++      return cooked_name
+    fi
+ 
+    if test -n "$cfg_help_mode"; then
+@@ -362,31 +372,31 @@ function WITH_OPTION()
+ 
+    echo -n " with $option_name: "
+ 
+-   eval "cfg_forced_arg=\$cfg_force_with_$option_name"
++   eval "cfg_forced_arg=\$cfg_force_with_$cooked_name"
+    if test -n "$cfg_forced_arg"; then
+       echo "$cfg_forced_arg (forced by previous tests)"
+-      CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${option_name}_$cfg_forced_arg"
+-      eval "cfg_with_$option_name=\$cfg_forced_arg"
+-      export "cfg_with_$option_name"
++      CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${cooked_name}_$cfg_forced_arg"
++      eval "cfg_with_$cooked_name=\$cfg_forced_arg"
++      export "cfg_with_$cooked_name"
+       return 0
+    fi
+ 
+    # now start the real processing
+-   # if $cfg_with_$option_name is unset, we set it to the default value
++   # if $cfg_with_$cooked_name is unset, we set it to the default value
+    # so that the programmer can write custom shell functions depending on it.
+ 
+-   eval "cfg_user_arg=\$cfg_with_$option_name"
++   eval "cfg_user_arg=\$cfg_with_$cooked_name"
+ 
+    if test -z "$cfg_user_arg"; then
+ 	echo "$default"
+-	CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${option_name}_$default"
+-	eval "cfg_with_$option_name=\$default"
++	CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${cooked_name}_$default"
++	eval "cfg_with_$cooked_name=\$default"
+    else
+ 	echo "$cfg_user_arg (user supplied)"
+-	CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${option_name}_$cfg_user_arg"
++	CFG_WITH_OPTIONS="$CFG_WITH_OPTIONS -Dwith_${cooked_name}_$cfg_user_arg"
+    fi
+ 
+-   export "cfg_with_$option_name"
++   export "cfg_with_$cooked_name"
+    return 0
+ }
+ 

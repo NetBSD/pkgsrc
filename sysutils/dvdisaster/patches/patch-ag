@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  - Use SRCDIR only when configure option --with-embedded-src-path is set
+    to yes.
+
+--- dvdisaster.c.orig	2007-01-20 16:44:59.000000000 +0100
++++ dvdisaster.c
+@@ -159,10 +159,12 @@ int main(int argc, char *argv[])
+    char *read_range = NULL;
+ #ifdef WITH_NLS_YES
+    char *locale_test;
+- #ifndef SYS_MINGW
++ #ifdef WITH_EMBEDDED_SRC_PATH_YES
++  #ifndef SYS_MINGW
+    char src_locale_path[strlen(SRCDIR)+10];
+- #else
++  #else
+    char *bin_locale_path = NULL;
++  #endif
+  #endif
+ #endif
+ 
+@@ -245,9 +247,13 @@ int main(int argc, char *argv[])
+ #ifndef SYS_MINGW
+     /* Try local source directory first */
+ 
++#ifdef WITH_EMBEDDED_SRC_PATH_YES
+     g_sprintf(src_locale_path,"%s/locale",SRCDIR);
+     bindtextdomain("dvdisaster", src_locale_path);
+ //printf("testing src %s\n", src_locale_path);
++
++#endif /* WITH_EMBEDDED_SRC_PATH_YES */
++
+     /* TRANSLATORS: 
+        This is a dummy entry which is supposed to translate into "ok".
+        Please do not return anything else here. */
