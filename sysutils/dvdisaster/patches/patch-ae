@@ -1,0 +1,51 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+
+  On NetBSD behave similar to other UN*X variants regarding the browser.
+
+--- show-manual.c.orig	2007-01-20 16:44:59.000000000 +0100
++++ show-manual.c
+@@ -21,7 +21,7 @@
+ 
+ #include "dvdisaster.h"
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN)
++#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_NETBSD) || defined(SYS_DARWIN)
+ #include <sys/wait.h>
+ #endif
+ 
+@@ -34,7 +34,7 @@
+  *** Ask user to specify his browser
+  ***/
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN)
++#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_NETBSD) || defined(SYS_DARWIN)
+ #define SEARCH_BUTTON 1
+ 
+ typedef struct
+@@ -172,7 +172,7 @@ static void msg_destroy_cb(GtkWidget *wi
+    bi->msg = NULL; 
+ }
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN)
++#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_NETBSD) || defined(SYS_DARWIN)
+ 
+ /* 
+  * The following list of browsers and html wrappers
+@@ -270,7 +270,7 @@ static gboolean browser_timeout_func(gpo
+  * Invoke the browser
+  */
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN)
++#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_NETBSD) || defined(SYS_DARWIN)
+ static void try_browser(browser_info *bi)
+ {  pid_t pid;
+ 
+@@ -390,7 +390,7 @@ void ShowHTML(char *target)
+    g_timeout_add(1000, browser_timeout_func, (gpointer)bi);
+ #endif
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN)
++#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_NETBSD) || defined(SYS_DARWIN)
+    /* Try the first browser */
+ 
+    browser_index = 0;
