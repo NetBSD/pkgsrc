@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/05/16 12:19:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/08 12:37:32 adrianp Exp $
 #
 
 DISTNAME=	PEAR-1.5.4
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -91,11 +92,12 @@ do-install:
 	${CP} ${PKG_SYSCONFDIR}/pear.conf ${PREFIX}/share/examples/pear
 	${RM} ${PKG_SYSCONFDIR}/pear.conf
 
+.include "${PHPPKGSRCDIR}/buildlink3.mk"
+
 .if ${PKG_PHP_VERSION} == "4"
 BUILDLINK_API_DEPENDS.php+=	php>=4.4.6nb1
 .elif ${PKG_PHP_VERSION} == "5"
 BUILDLINK_API_DEPENDS.php+=	php>=5.2.1nb2
 .endif
 
-.include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
