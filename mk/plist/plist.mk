@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.24 2007/05/28 13:59:10 heinz Exp $
+# $NetBSD: plist.mk,v 1.25 2007/06/09 11:02:23 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -10,9 +10,17 @@
 #	are listed in files.  Valid values are "dynamic" and "static",
 #	and the default value is "static".
 #
-#    PLIST_SRC is the source file(s) for the generated PLIST file.  By
-#	default, its value is constructed from the PLIST.* files within
-#	the package directory.
+#    PLIST_SRC is the list of source files from which the PLIST file of
+#	the binary package will be generated. By default, its value is
+#	constructed from the PLIST.* files within the package directory,
+#	in the following order (if the files are present):
+#
+#	PLIST.common
+#	PLIST.${OPSYS}			(e.g., PLIST.NetBSD)
+#	PLIST.${MACHINE_ARCH}		(e.g,, PLIST.macppc)
+#	PLIST.${OPSYS}-${MACHINE_ARCH}	(e.g., PLIST.NetBSD-macppc)
+#	PLIST
+#	PLIST.common_end
 #
 #    GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
@@ -29,18 +37,6 @@ PLIST_TYPE?=	static
 
 ######################################################################
 
-# PLIST_SRC is the source file for the generated PLIST file.  If PLIST_SRC
-# is not explicitly defined, then build one up from various PLIST.* files
-# that are present in the package directory.  The order goes (if the files
-# are present):
-#
-#	PLIST.common
-#	PLIST.${OPSYS}			(e.g., PLIST.NetBSD)
-#	PLIST.${MACHINE_ARCH}		(e.g,, PLIST.macppc)
-#	PLIST.${OPSYS}-${MACHINE_ARCH}	(e.g., PLIST.NetBSD-macppc)
-#	PLIST
-#	PLIST.common_end
-#
 .if !defined(PLIST_SRC)
 .  if exists(${PKGDIR}/PLIST.common)
 PLIST_SRC+=	${PKGDIR}/PLIST.common
