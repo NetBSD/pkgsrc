@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1289 2007/06/09 23:19:13 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1290 2007/06/09 23:21:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/opera to 9.21 [jdolecek 2007-06-09]
 	Updated devel/p5-AppConfig to 1.65 [abs 2007-06-10]
 	Updated devel/p5-File-HomeDir to 0.65 [abs 2007-06-10]
+	Updated archivers/p5-Archive-Tar to 1.32 [abs 2007-06-10]
