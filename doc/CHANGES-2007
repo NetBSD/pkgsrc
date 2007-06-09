@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1278 2007/06/09 06:00:58 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1279 2007/06/09 06:03:01 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2486,6 +2486,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xclip to 0.08nb3 [wiz 2007-06-08]
 	Added sysutils/dvdisaster version 0.70.4 [heinz 2007-06-08]
 	Updated devel/subversion to 1.4.4 [epg 2007-06-08]
+	Added x11/desklaunch version 1.1.5 [sborrill 2007-06-08]
 	Updated textproc/ruby-hpricot to 0.5.140nb1 [minskim 2007-06-09]
 	Updated databases/py-bsddb3 to 4.5.0 [wiz 2007-06-09]
 	Updated chat/irssi-icb to 0.14nb9 [wiz 2007-06-09]
