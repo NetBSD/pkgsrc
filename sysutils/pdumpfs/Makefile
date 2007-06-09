@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/04/05 12:21:26 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/09 01:19:20 obache Exp $
 #
 
 DISTNAME=	pdumpfs-${VER}
@@ -15,7 +15,8 @@ BUILD_TARGET=	pdumpfs
 
 REPLACE_RUBY=	pdumpfs.in
 
-INSTALLATION_DIRS=	share/doc/pdumpfs
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${PKGMANDIR}/ja_JP.EUC/man8 \
+			share/doc/pdumpfs
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pdumpfs ${PREFIX}/bin
