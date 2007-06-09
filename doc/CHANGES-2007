@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1276 2007/06/09 00:59:27 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1277 2007/06/09 05:59:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added sysutils/dvdisaster version 0.70.4 [heinz 2007-06-08]
 	Updated devel/subversion to 1.4.4 [epg 2007-06-08]
 	Updated textproc/ruby-hpricot to 0.5.140nb1 [minskim 2007-06-09]
+	Updated databases/py-bsddb3 to 4.5.0 [wiz 2007-06-09]
