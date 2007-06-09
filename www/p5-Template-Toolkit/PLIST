@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/01 12:56:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/09 23:54:01 abs Exp $
 share/tt2/docs/README
 share/tt2/docs/html/FAQ/FAQ.html
 share/tt2/docs/html/FAQ/index.html
@@ -43,7 +43,6 @@ share/tt2/docs/html/Modules/Template/Plugin/Format.html
 share/tt2/docs/html/Modules/Template/Plugin/HTML.html
 share/tt2/docs/html/Modules/Template/Plugin/Image.html
 share/tt2/docs/html/Modules/Template/Plugin/Iterator.html
-share/tt2/docs/html/Modules/Template/Plugin/Math.html
 share/tt2/docs/html/Modules/Template/Plugin/Pod.html
 share/tt2/docs/html/Modules/Template/Plugin/Procedural.html
 share/tt2/docs/html/Modules/Template/Plugin/String.html
@@ -51,7 +50,6 @@ share/tt2/docs/html/Modules/Template/Plugin/Table.html
 share/tt2/docs/html/Modules/Template/Plugin/URL.html
 share/tt2/docs/html/Modules/Template/Plugin/View.html
 share/tt2/docs/html/Modules/Template/Plugin/Wrap.html
-share/tt2/docs/html/Modules/Template/Plugin/XML/Style.html
 share/tt2/docs/html/Modules/Template/Plugins.html
 share/tt2/docs/html/Modules/Template/Provider.html
 share/tt2/docs/html/Modules/Template/Service.html
@@ -129,7 +127,6 @@ share/tt2/docs/src/Modules/Template/Plugin/Format.html
 share/tt2/docs/src/Modules/Template/Plugin/HTML.html
 share/tt2/docs/src/Modules/Template/Plugin/Image.html
 share/tt2/docs/src/Modules/Template/Plugin/Iterator.html
-share/tt2/docs/src/Modules/Template/Plugin/Math.html
 share/tt2/docs/src/Modules/Template/Plugin/Pod.html
 share/tt2/docs/src/Modules/Template/Plugin/Procedural.html
 share/tt2/docs/src/Modules/Template/Plugin/String.html
@@ -137,7 +134,6 @@ share/tt2/docs/src/Modules/Template/Plugin/Table.html
 share/tt2/docs/src/Modules/Template/Plugin/URL.html
 share/tt2/docs/src/Modules/Template/Plugin/View.html
 share/tt2/docs/src/Modules/Template/Plugin/Wrap.html
-share/tt2/docs/src/Modules/Template/Plugin/XML/Style.html
 share/tt2/docs/src/Modules/Template/Plugins.html
 share/tt2/docs/src/Modules/Template/Provider.html
 share/tt2/docs/src/Modules/Template/Service.html
@@ -1330,7 +1326,6 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/src/Tools
 @dirrm share/tt2/docs/src/Release
 @dirrm share/tt2/docs/src/Modules/Template/Stash
-@dirrm share/tt2/docs/src/Modules/Template/Plugin/XML
 @dirrm share/tt2/docs/src/Modules/Template/Plugin
 @dirrm share/tt2/docs/src/Modules/Template/Namespace
 @dirrm share/tt2/docs/src/Modules/Template
@@ -1345,7 +1340,6 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/html/Tools
 @dirrm share/tt2/docs/html/Release
 @dirrm share/tt2/docs/html/Modules/Template/Stash
-@dirrm share/tt2/docs/html/Modules/Template/Plugin/XML
 @dirrm share/tt2/docs/html/Modules/Template/Plugin
 @dirrm share/tt2/docs/html/Modules/Template/Namespace
 @dirrm share/tt2/docs/html/Modules/Template
