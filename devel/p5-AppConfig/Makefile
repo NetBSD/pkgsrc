@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2007/02/27 12:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/09 23:15:32 abs Exp $
 
-DISTNAME=	AppConfig-1.64
+DISTNAME=	AppConfig-1.65
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5apc
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AD/ADAMK/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AppConfig/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/AppConfig/
