@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1301 2007/06/09 23:39:32 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1302 2007/06/09 23:43:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2512,3 +2512,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Module-Install to 0.67 [abs 2007-06-10]
 	Updated devel/p5-Module-ScanDeps to 0.74 [abs 2007-06-10]
 	Updated devel/p5-PAR-Dist to 0.22 [abs 2007-06-10]
+	Updated devel/p5-Params-Util to 0.25 [abs 2007-06-10]
