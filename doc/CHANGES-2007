@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1275 2007/06/08 22:50:31 epg Exp $
+$NetBSD: CHANGES-2007,v 1.1276 2007/06/09 00:59:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xclip to 0.08nb3 [wiz 2007-06-08]
 	Added sysutils/dvdisaster version 0.70.4 [heinz 2007-06-08]
 	Updated devel/subversion to 1.4.4 [epg 2007-06-08]
+	Updated textproc/ruby-hpricot to 0.5.140nb1 [minskim 2007-06-09]
