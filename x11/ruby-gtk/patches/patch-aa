@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/07/09 13:06:55 taca Exp $
+$NetBSD: patch-aa,v 1.7 2007/06/09 14:11:56 taca Exp $
 
 --- src/rbgdkevent.c.orig	2003-07-07 02:20:37.000000000 +0900
 +++ src/rbgdkevent.c	2006-07-08 14:46:30.000000000 +0900
