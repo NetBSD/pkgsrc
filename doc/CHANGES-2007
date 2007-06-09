@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1299 2007/06/09 23:36:59 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1300 2007/06/09 23:38:12 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2510,3 +2510,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-ExtUtils-ParseXS to 2.18 [abs 2007-06-10]
 	Updated devel/p5-Module-Build to 0.2808 [abs 2007-06-10]
 	Updated devel/p5-Module-Install to 0.67 [abs 2007-06-10]
+	Updated devel/p5-Module-ScanDeps to 0.74 [abs 2007-06-10]
