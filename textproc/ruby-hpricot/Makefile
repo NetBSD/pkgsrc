@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/26 01:34:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/09 00:58:51 minskim Exp $
 
 DISTNAME=	hpricot-0.5.140
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://code.whytheluckystiff.net/dist/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +12,7 @@ HOMEPAGE=	http://code.whytheluckystiff.net/hpricot/
 COMMENT=	Fast, enjoyable HTML parser for Ruby
 
 BUILD_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
-BUILD_DEPENDS+=	rake>=0.7:../../devel/rake
+BUILD_DEPENDS+=	rake>=0.7.3:../../devel/rake
 
 RUBY_HAS_ARCHLIB=	yes
 
