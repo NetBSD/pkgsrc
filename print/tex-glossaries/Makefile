@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/25 11:54:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/09 07:34:01 jmmv Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-1.0
+PKGNAME=	tex-${DISTNAME}-1.02
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
 EXTRACT_SUFX=	.zip
@@ -12,6 +12,7 @@ COMMENT=	Macros for creation of glossaries
 
 DEPENDS+=	tex-xkeyval>=2.5f:../../print/tex-xkeyval
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_DIRS+=	texmf-1.4
 USE_TOOLS+=	perl:run
 
