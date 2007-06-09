@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.25 2007/02/07 18:25:29 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.26 2007/06/09 11:27:33 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -133,14 +133,17 @@ case $arg in
 
 #-xc99		) transform_to_and_split "-xc99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__" ;;
 
-# Ignore all other -f flags.
--f*		) transform_discard_with_warning ;;
-
 # Ignore some flags that are unnecessary for SunPro.
 -ansi		|\
+-fPIE		|\
+-fpie		|\
 -pedantic	|\
+-pie		|\
 -pipe		|\
 -traditional	) transform_discard ;;
+
+# Ignore all other -f flags.
+-f*		) transform_discard_with_warning ;;
 
 # Unknown options.
 -*		) transform_pass_with_warning ;;
