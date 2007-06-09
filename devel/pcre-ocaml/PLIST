@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/20 14:22:04 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/09 11:05:00 rillig Exp $
 lib/ocaml/site-lib/pcre/META
 lib/ocaml/site-lib/pcre/dllpcre_stubs.so
 lib/ocaml/site-lib/pcre/libpcre_stubs.a
-lib/ocaml/site-lib/pcre/pcre.a
 lib/ocaml/site-lib/pcre/pcre.cma
 lib/ocaml/site-lib/pcre/pcre.cmi
-lib/ocaml/site-lib/pcre/pcre.cmxa
 lib/ocaml/site-lib/pcre/pcre.mli
 share/examples/pcre-ocaml/cloc/Makefile
 share/examples/pcre-ocaml/cloc/README
