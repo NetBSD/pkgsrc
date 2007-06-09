@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.glade,v 1.1 2007/06/09 13:17:18 wiz Exp $
+bin/lablgladecc2
+lib/ocaml/lablgtk2/glade.cmi
+lib/ocaml/lablgtk2/glade.cmx
+lib/ocaml/lablgtk2/glade.ml
+lib/ocaml/lablgtk2/lablglade.a
+lib/ocaml/lablgtk2/lablglade.cma
+lib/ocaml/lablgtk2/lablglade.cmxa
+lib/ocaml/lablgtk2/liblablglade2.a
+lib/ocaml/stublibs/dlllablglade2.so
