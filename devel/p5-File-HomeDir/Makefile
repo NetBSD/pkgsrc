@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/05/27 20:47:07 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/09 23:18:25 abs Exp $
 #
 
-DISTNAME=		File-HomeDir-0.64
+DISTNAME=		File-HomeDir-0.65
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
