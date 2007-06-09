@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1279 2007/06/09 06:03:01 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.1280 2007/06/09 06:11:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-hpricot to 0.5.140nb1 [minskim 2007-06-09]
 	Updated databases/py-bsddb3 to 4.5.0 [wiz 2007-06-09]
 	Updated chat/irssi-icb to 0.14nb9 [wiz 2007-06-09]
+	Updated lang/clisp to 2.41 [obache 2007-06-09]
