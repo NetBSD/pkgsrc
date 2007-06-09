@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/02 17:50:28 jmmv Exp $
-etc/site-config.jam
+@comment $NetBSD: PLIST,v 1.3 2007/06/09 07:42:23 jmmv Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
 share/boost-build/bootstrap.jam
@@ -370,7 +369,7 @@ share/boost-build/tools/como-win.jam
 share/boost-build/tools/como.jam
 share/boost-build/tools/cw-config.jam
 share/boost-build/tools/cw.jam
-share/boost-build/tools/${LOWER_OPSYS}.jam
+share/boost-build/tools/darwin.jam
 share/boost-build/tools/docutils.jam
 share/boost-build/tools/doxygen-config.jam
 share/boost-build/tools/doxygen.jam
@@ -451,6 +450,7 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/test/startup/bootstrap-env
 @dirrm share/boost-build/test/startup/boost-root/build
 @dirrm share/boost-build/test/startup/boost-root
+@dirrm share/boost-build/test/startup
 @dirrm share/boost-build/test/railsys/program/main
 @dirrm share/boost-build/test/railsys/program/liba
 @dirrm share/boost-build/test/railsys/program/include
@@ -458,6 +458,7 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/test/railsys/libx/src
 @dirrm share/boost-build/test/railsys/libx/include
 @dirrm share/boost-build/test/railsys/libx
+@dirrm share/boost-build/test/railsys
 @dirrm share/boost-build/test/project-test4/lib2
 @dirrm share/boost-build/test/project-test4/lib
 @dirrm share/boost-build/test/project-test4
@@ -495,6 +496,7 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/example/make
 @dirrm share/boost-build/example/libraries/util/foo/include
 @dirrm share/boost-build/example/libraries/util/foo
+@dirrm share/boost-build/example/libraries/util
 @dirrm share/boost-build/example/libraries/app
 @dirrm share/boost-build/example/libraries
 @dirrm share/boost-build/example/hello
