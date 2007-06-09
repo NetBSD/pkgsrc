@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6411 2007/06/08 14:17:31 wiz Exp $
+$NetBSD: TODO,v 1.6412 2007/06/09 06:18:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ Suggested package updates
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o clex-3.15
-	o clisp-2.41 [pkg/36334]
 	o cocoon-2.1.10
 	o connect-1.96
 	o conserver8-8.1.15
