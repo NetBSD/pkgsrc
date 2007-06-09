@@ -1,23 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2007/06/06 21:29:55 uwe Exp $
+$NetBSD: patch-ak,v 1.6 2007/06/09 06:10:31 obache Exp $
 
---- ffcall/callback/vacall_r/Makefile.in.orig	2006-04-25 12:10:44.000000000 +0400
+--- ffcall/callback/vacall_r/Makefile.in.orig	2006-09-03 23:39:43.000000000 +0000
 +++ ffcall/callback/vacall_r/Makefile.in
-@@ -120,12 +120,13 @@ vacall-arm.lo : vacall-arm.s
- vacall-arm.s : $(srcdir)/vacall-arm.S
- 	$(CPP) $(ASPFLAGS) $(srcdir)/vacall-arm.S | grep -v '^ *#line' | grep -v '^#' | sed -e 's,% ,%,g' -e 's,//,@,g' -e 's,\$$,#,g' > vacall-arm.s
- 
--vacall-powerpc.lo : $(srcdir)/vacall-powerpc-aix.old.s $(srcdir)/vacall-powerpc-aix.new.s $(srcdir)/vacall-powerpc-sysv4.s $(srcdir)/vacall-powerpc-linux.s $(srcdir)/vacall-powerpc-macos.s
-+vacall-powerpc.lo : $(srcdir)/vacall-powerpc-aix.old.s $(srcdir)/vacall-powerpc-aix.new.s $(srcdir)/vacall-powerpc-sysv4.s $(srcdir)/vacall-powerpc-linux.s $(srcdir)/vacall-powerpc-macos.s $(srcdir)/vacall-powerpc-netbsd.s
- 	case "$(OS)" in \
- 	  aix3*) syntax=aix.old;; \
- 	  aix*) syntax=aix.new;; \
- 	  linux*) syntax=linux;; \
- 	  macos* | darwin*) syntax=macos;; \
-+	  netbsd*) syntax=netbsd;; \
- 	  *) syntax=sysv4;; \
- 	esac; \
- 	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/vacall-powerpc-$${syntax}.s ; \
-@@ -163,7 +164,7 @@ libvacall.la : $(OBJECTS)
+@@ -164,7 +164,7 @@ libvacall.la : $(OBJECTS)
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
  install-lib : all force
  	if [ ! -d $(includedir) ] ; then mkdir $(includedir) ; fi
