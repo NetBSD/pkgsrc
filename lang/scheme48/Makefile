@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/12/12 23:17:40 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2007/06/09 06:59:03 obache Exp $
 
-DISTNAME=		scheme48-1.3
+DISTNAME=		scheme48-1.6
 CATEGORIES=		lang
-MASTER_SITES=		http://s48.org/1.3/
+MASTER_SITES=		http://s48.org/1.6/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -13,6 +13,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		enough
+TEST_TARGET=		check		# fail if USER == root directory owner
 
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}/man1
 
