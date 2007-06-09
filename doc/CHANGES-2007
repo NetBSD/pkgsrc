@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1281 2007/06/09 07:00:07 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1282 2007/06/09 07:34:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/irssi-icb to 0.14nb9 [wiz 2007-06-09]
 	Updated lang/clisp to 2.41 [obache 2007-06-09]
 	Updated lang/scheme48 to 1.6 [obache 2007-06-09]
+	Updated print/tex-glossaries to 1.02 [jmmv 2007-06-09]
