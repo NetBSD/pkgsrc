@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/01/06 22:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2007/06/10 16:03:45 rillig Exp $
 #
 
 DISTNAME=		aspell-0.60.5
@@ -32,6 +32,7 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 # https://sourceforge.net/tracker/?func=detail&atid=100245&aid=1336865&group_id=245
 # Disable dynamic loading of filters until it is fixed.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aspell
+PKG_SUPPORTED_OPTIONS=	# none
 #PKG_SUPPORTED_OPTIONS=	aspell-loadable-filters
 
 .include "../../mk/bsd.options.mk"
