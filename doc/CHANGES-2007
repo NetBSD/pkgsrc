@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1334 2007/06/10 13:45:36 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1335 2007/06/10 13:47:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2545,3 +2545,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/p5-SQL-ReservedWords version 0.7 [abs 2007-06-10]
 	Added time/p5-Rose-DateTime version 0.532 [abs 2007-06-10]
 	Added devel/p5-Rose-Object version 0.84 [abs 2007-06-10]
+	Added databases/p5-Rose-DB version 0.734 [abs 2007-06-10]
