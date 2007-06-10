@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1331 2007/06/10 13:08:48 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1332 2007/06/10 13:40:49 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2542,3 +2542,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/fox to 1.6.27 [xtraeme 2007-06-10]
 	Added devel/p5-Clone-PP version 1.02 [abs 2007-06-10]
 	Updated devel/ruby-rd-mode to 0.6.20 [taca 2007-06-10]
+	Added databases/p5-SQL-ReservedWords version 0.7 [abs 2007-06-10]
