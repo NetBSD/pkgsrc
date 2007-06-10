@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/10/19 11:17:11 obache Exp $
+$NetBSD: distinfo,v 1.4 2007/06/10 09:30:22 obache Exp $
 
-SHA1 (Business-ISBN-Data-1.11.tar.gz) = 2a12ee1a6367be3a6af37654855ac73d81810c51
-RMD160 (Business-ISBN-Data-1.11.tar.gz) = 0cdd2ce26634630a16214a226495c9e56f442b6b
-Size (Business-ISBN-Data-1.11.tar.gz) = 9634 bytes
+SHA1 (Business-ISBN-Data-1.14.tar.gz) = 45aef4d86154cb9022c1279b14cdd95d28b4e365
+RMD160 (Business-ISBN-Data-1.14.tar.gz) = 75e4e76d6bc9b179eac73c483d50ae0f72de2a53
+Size (Business-ISBN-Data-1.14.tar.gz) = 10031 bytes
