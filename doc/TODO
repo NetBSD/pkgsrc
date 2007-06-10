@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6414 2007/06/10 08:34:05 wiz Exp $
+$NetBSD: TODO,v 1.6415 2007/06/10 09:48:55 obache Exp $
 
 Suggested new packages
 ======================
@@ -842,9 +842,6 @@ Suggested package updates
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-BerkeleyDB-0.31
-	o p5-Business-ISBN-1.84
-	o p5-Business-ISBN-Data-1.13
 	o p5-CDDB_get-2.27
 	o p5-CGI-Application-4.06
 	o p5-CGI-Minimal-1.25
@@ -885,9 +882,7 @@ Suggested package updates
 	o p5-Image-ExifTool-6.82
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
-	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.22
-	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Audit-2.218
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
@@ -904,9 +899,7 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-PathTools-3.24
-	o p5-Perl-Tidy-20070508
 	o p5-PerlMagick-6.3.2.9
-	o p5-Pod-Simple-3.05
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
@@ -915,7 +908,6 @@ Suggested package updates
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
-	o p5-Spreadsheet-WriteExcel-2.18
 	o p5-Term-Size-0.203
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
@@ -933,7 +925,6 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
-	o p5-version-0.71
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
