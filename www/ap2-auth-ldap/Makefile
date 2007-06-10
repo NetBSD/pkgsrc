@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/08 23:34:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2007/06/10 08:40:16 joerg Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
@@ -18,6 +18,7 @@ CPPFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lldap -llber
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 
+.include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
@@ -37,6 +38,5 @@ do-install:
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/apache.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
