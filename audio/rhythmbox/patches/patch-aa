@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2006/07/02 11:32:40 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2007/06/10 06:29:47 obache Exp $
 
---- player/rb-recorder-gst.c.orig	2006-01-18 05:22:11.000000000 +0100
-+++ player/rb-recorder-gst.c
-@@ -25,7 +25,9 @@
+--- plugins/cd-recorder/rb-recorder-gst.c.orig	2007-01-09 06:42:20.000000000 +0000
++++ plugins/cd-recorder/rb-recorder-gst.c
+@@ -26,7 +26,9 @@
  #include <string.h>
  #include <math.h>
  #include <time.h>
