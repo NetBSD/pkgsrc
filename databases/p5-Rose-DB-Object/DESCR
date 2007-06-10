@@ -1,0 +1,14 @@
+Rose::DB::Object is a base class for objects that encapsulate a
+single row in a database table. It provides the following functions:
+
+ * Create a row in the database by saving a newly constructed object.
+ * Initialize an object by loading a row from the database.
+ * Update a row by saving a modified object back to the database.
+ * Delete a row from the database.
+ * Fetch an object referred to by a foreign key in the current object.
+   (i.e., "one to one" and "many to one" relationships.)
+ * Fetch multiple objects that refer to the current object, either directly
+   through foreign keys or indirectly through a mapping table. (i.e., "one
+   to many" and "many to many" relationships.)
+ * Load an object along with "foreign objects" that are related through any
+   of the supported relationship types.
