@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1340 2007/06/10 21:28:28 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.1341 2007/06/10 21:54:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2551,3 +2551,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/mutt-devel to 1.5.16 [tonio 2007-06-10]
 	Updated databases/lbdb to 0.35.1 [tonio 2007-06-10]
 	Updated security/caff to 0.4.10 [tonio 2007-06-10]
+	Updated devel/ko-po-check to 0.8nb1 [minskim 2007-06-10]
