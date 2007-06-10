@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/09 18:36:36 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/10 08:48:43 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.1
@@ -55,7 +55,7 @@ DEPENDS+=	xsetroot-[0-9]*:../../x11/xsetroot
 DEPENDS+=	xsm-[0-9]*:../../x11/xsm
 DEPENDS+=	xvinfo-[0-9]*:../../x11/xvinfo
 DEPENDS+=	xwininfo-[0-9]*:../../x11/xwininfo
-DEPENDS+=	xwd-[0-9]*:../../x11/xwud
+DEPENDS+=	xwd-[0-9]*:../../x11/xwd
 DEPENDS+=	xwud-[0-9]*:../../x11/xwud
 
 NO_BUILD=		yes
