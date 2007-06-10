@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2006/07/08 13:01:39 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2007/06/10 06:29:48 obache Exp $
 
---- data/iradio-initial.pls.orig	2006-03-31 04:34:01.000000000 +0200
-+++ data/iradio-initial.pls
+--- plugins/iradio/iradio-initial.pls.orig	2007-01-09 06:42:22.000000000 +0000
++++ plugins/iradio/iradio-initial.pls
 @@ -3,10 +3,10 @@ numberofentries=25
  file1=http://www.somafm.com/groovesalad.pls
  title1=Groove Salad
