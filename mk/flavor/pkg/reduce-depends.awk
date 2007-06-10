@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.3 2006/06/06 20:05:44 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.4 2007/06/10 07:31:42 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -105,7 +105,7 @@ BEGIN {
 		for (d = 1; d <= D; d++) {
 			dep = depends[pkgpath, d]
 			if (dep ~ /[{]/ || \
-			    dep ~ />=[0-9]+<[0-9]+/ || \
+			    dep ~ />=[0-9][0-9\.]*<[0-9]+/ || \
 			    dep !~ />=[0-9]+/)
 			{
 				reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
