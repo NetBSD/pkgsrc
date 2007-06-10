@@ -1,15 +1,44 @@
-$NetBSD: patch-ck,v 1.1 2007/04/22 23:15:25 hira Exp $
+$NetBSD: patch-ck,v 1.2 2007/06/10 04:55:06 hira Exp $
 
---- vcl/unx/gtk/app/gtkinst.cxx.orig	2007-04-23 05:50:27.000000000 +0900
-+++ vcl/unx/gtk/app/gtkinst.cxx	2007-04-23 05:51:07.000000000 +0900
-@@ -329,7 +329,9 @@
-     // that locked the mutex with Grab()
-     OMutex::acquire();
-     mnCount = nGrabs;
--    if( mnCount == 0 )
-+    if( mnCount == 0 ) {
-+        gdk_threads_leave();
-         mnThreadId = 0;
-+    }
-     OMutex::release();
+--- vcl/unx/gtk/app/gtkinst.cxx.orig	2006-09-17 21:29:23.000000000 +0900
++++ vcl/unx/gtk/app/gtkinst.cxx	2007-06-10 11:50:10.000000000 +0900
+@@ -221,6 +221,7 @@
+ 
+ GtkYieldMutex::GtkYieldMutex()
+ {
++	mutex_locked = 0;
  }
+ 
+ void GtkYieldMutex::acquire()
+@@ -237,7 +238,10 @@
+     OMutex::release();
+     
+     // obtain gdk mutex
+-    gdk_threads_enter();
++    // gdk_threads_enter();
++    /* XXX: With systray quickstarter, the mutex is already locking. */
++    if( g_mutex_trylock( gdk_threads_mutex ) )
++	mutex_locked = 1;
+ 
+     // obtained gdk mutex, now lock count is one by definition
+     OMutex::acquire();
+@@ -257,7 +261,10 @@
+         mnCount--;
+         if( mnCount == 0 )
+         {
+-            gdk_threads_leave();
++	    if (mutex_locked) {
++                gdk_threads_leave();
++		mutex_locked = 0;
++            }
+             mnThreadId = 0;
+         }
+     }
+@@ -292,6 +299,7 @@
+     
+     // obtained gdk mutex, now lock count is one by definition
+     OMutex::acquire();
++    mutex_locked = 1;
+     mnCount = 1;
+     mnThreadId = aCurrentThread;
+     OMutex::release();
