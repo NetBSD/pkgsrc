@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/05/30 22:01:54 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/06/10 04:30:29 joerg Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -51,6 +51,13 @@ CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX:Q}
 PLIST_SUBST+=	HAS_IO="@comment "
 .else
 PLIST_SUBST+=	HAS_IO=
+.endif
+
+#
+# Work around for getucontext(3)
+#
+.if ${OPSYS} == "DragonFly" && ${OS_VERSION} == "1.8.0"
+CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 .endif
 
 #
