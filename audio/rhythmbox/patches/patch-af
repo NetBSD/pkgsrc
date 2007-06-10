@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/07/02 11:32:40 drochner Exp $
+$NetBSD: patch-af,v 1.2 2007/06/10 06:29:48 obache Exp $
 
---- shell/rb-shell-player.c.orig	2006-04-22 12:44:25.000000000 +0200
+--- shell/rb-shell-player.c.orig	2007-02-06 11:33:59.000000000 +0000
 +++ shell/rb-shell-player.c
-@@ -903,10 +903,8 @@ rb_shell_player_open_playlist_url (RBShe
+@@ -570,10 +570,8 @@ rb_shell_player_open_playlist_url (RBShe
  		rb_player_play (player->priv->mmplayer, &error);
  
  	if (error) {
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.1 2006/07/02 11:32:40 drochner Exp $
  	}
  	g_idle_add ((GSourceFunc) notify_playing_idle, player);
  }
-@@ -958,13 +956,17 @@ open_location_thread (OpenLocationThread
+@@ -1133,13 +1131,17 @@ open_location_thread (OpenLocationThread
  
  			location = g_queue_pop_head (data->player->priv->playlist_urls);
  			rb_debug ("playing first stream url %s", data->location);

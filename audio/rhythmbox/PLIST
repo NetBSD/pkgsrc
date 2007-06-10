@@ -1,14 +1,34 @@
-@comment $NetBSD: PLIST,v 1.13 2006/10/17 16:45:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/06/10 06:29:47 obache Exp $
 bin/rhythmbox
 bin/rhythmbox-client
-lib/rhythmbox/plugins/audiocd.rb-plugin
+lib/librhythmbox-core.la
+lib/rhythmbox/plugins/audiocd/audiocd.rb-plugin
+lib/rhythmbox/plugins/audiocd/libaudiocd.la
+lib/rhythmbox/plugins/audiocd/multiple-album.glade
+lib/rhythmbox/plugins/audioscrobbler/audioscrobbler-prefs.glade
+lib/rhythmbox/plugins/audioscrobbler/audioscrobbler-ui.xml
 lib/rhythmbox/plugins/audioscrobbler/audioscrobbler.rb-plugin
 lib/rhythmbox/plugins/audioscrobbler/libaudioscrobbler.la
 lib/rhythmbox/plugins/cd-recorder/cd-recorder.rb-plugin
 lib/rhythmbox/plugins/cd-recorder/libcd-recorder.la
+lib/rhythmbox/plugins/cd-recorder/recorder.glade
+lib/rhythmbox/plugins/generic-player/generic-player-ui.xml
 lib/rhythmbox/plugins/generic-player/generic-player.rb-plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.la
-lib/rhythmbox/plugins/libaudiocd.la
+lib/rhythmbox/plugins/iradio/iradio-initial.pls
+lib/rhythmbox/plugins/iradio/iradio-ui.xml
+lib/rhythmbox/plugins/iradio/iradio.rb-plugin
+lib/rhythmbox/plugins/iradio/libiradio.la
+lib/rhythmbox/plugins/iradio/station-properties.glade
+lib/rhythmbox/plugins/mmkeys/libmmkeys.la
+lib/rhythmbox/plugins/mmkeys/mmkeys.rb-plugin
+lib/rhythmbox/plugins/power-manager/libpower-manager.la
+lib/rhythmbox/plugins/power-manager/power-manager.rb-plugin
+lib/rhythmbox/plugins/visualizer/libvisualizer.la
+lib/rhythmbox/plugins/visualizer/rb-visualizer-glue.h
+lib/rhythmbox/plugins/visualizer/visualizer-controls.glade
+lib/rhythmbox/plugins/visualizer/visualizer-ui.xml
+lib/rhythmbox/plugins/visualizer/visualizer.rb-plugin
 libexec/rhythmbox-metadata
 share/applications/rhythmbox.desktop
 share/dbus-1/services/org.gnome.Rhythmbox.service
@@ -19,7 +39,6 @@ share/doc/rhythmbox/ch04.html
 share/doc/rhythmbox/ch05.html
 share/doc/rhythmbox/ch06.html
 share/doc/rhythmbox/ch07.html
-share/doc/rhythmbox/ch08.html
 share/doc/rhythmbox/home.png
 share/doc/rhythmbox/index.html
 share/doc/rhythmbox/index.sgml
@@ -37,11 +56,8 @@ share/doc/rhythmbox/rhythmbox-rb-file-helpers.html
 share/doc/rhythmbox/rhythmbox-rb-glade-helpers.html
 share/doc/rhythmbox/rhythmbox-rb-header.html
 share/doc/rhythmbox/rhythmbox-rb-history.html
-share/doc/rhythmbox/rhythmbox-rb-iradio-source.html
 share/doc/rhythmbox/rhythmbox-rb-library-source.html
-share/doc/rhythmbox/rhythmbox-rb-load-failure-dialog.html
 share/doc/rhythmbox/rhythmbox-rb-metadata.html
-share/doc/rhythmbox/rhythmbox-rb-new-station-dialog.html
 share/doc/rhythmbox/rhythmbox-rb-play-order-linear-loop.html
 share/doc/rhythmbox/rhythmbox-rb-play-order-linear.html
 share/doc/rhythmbox/rhythmbox-rb-play-order-random-by-age-and-rating.html
@@ -60,7 +76,6 @@ share/doc/rhythmbox/rhythmbox-rb-property-view.html
 share/doc/rhythmbox/rhythmbox-rb-query-creator.html
 share/doc/rhythmbox/rhythmbox-rb-rating-helper.html
 share/doc/rhythmbox/rhythmbox-rb-rating.html
-share/doc/rhythmbox/rhythmbox-rb-recorder.html
 share/doc/rhythmbox/rhythmbox-rb-search-entry.html
 share/doc/rhythmbox/rhythmbox-rb-shell-clipboard.html
 share/doc/rhythmbox/rhythmbox-rb-shell-player.html
@@ -71,7 +86,6 @@ share/doc/rhythmbox/rhythmbox-rb-song-info.html
 share/doc/rhythmbox/rhythmbox-rb-source-header.html
 share/doc/rhythmbox/rhythmbox-rb-sourcelist-model.html
 share/doc/rhythmbox/rhythmbox-rb-sourcelist.html
-share/doc/rhythmbox/rhythmbox-rb-station-properties-dialog.html
 share/doc/rhythmbox/rhythmbox-rb-statusbar.html
 share/doc/rhythmbox/rhythmbox-rb-stock-icons.html
 share/doc/rhythmbox/rhythmbox-rb-string-helpers.html
@@ -105,6 +119,20 @@ share/gnome/help/rhythmbox/C/figures/rb-window-small.png
 share/gnome/help/rhythmbox/C/figures/rb-window.png
 share/gnome/help/rhythmbox/C/legal.xml
 share/gnome/help/rhythmbox/C/rhythmbox.xml
+share/gnome/help/rhythmbox/el/figures/rb-iradio-main.png
+share/gnome/help/rhythmbox/el/figures/rb-notification-area-menu.png
+share/gnome/help/rhythmbox/el/figures/rb-notification-window.png
+share/gnome/help/rhythmbox/el/figures/rb-notification-zone.png
+share/gnome/help/rhythmbox/el/figures/rb-podcast-main.png
+share/gnome/help/rhythmbox/el/figures/rb-statusbar.png
+share/gnome/help/rhythmbox/el/figures/rb-toolbar-prevplaynext.png
+share/gnome/help/rhythmbox/el/figures/rb-toolbar-repeat.png
+share/gnome/help/rhythmbox/el/figures/rb-toolbar-shuffle.png
+share/gnome/help/rhythmbox/el/figures/rb-toolbar.png
+share/gnome/help/rhythmbox/el/figures/rb-volume-changer.png
+share/gnome/help/rhythmbox/el/figures/rb-window-small.png
+share/gnome/help/rhythmbox/el/figures/rb-window.png
+share/gnome/help/rhythmbox/el/rhythmbox.xml
 share/gnome/help/rhythmbox/es/figures/rb-iradio-main.png
 share/gnome/help/rhythmbox/es/figures/rb-notification-area-menu.png
 share/gnome/help/rhythmbox/es/figures/rb-notification-window.png
@@ -186,6 +214,7 @@ share/locale/cs/LC_MESSAGES/rhythmbox.mo
 share/locale/cy/LC_MESSAGES/rhythmbox.mo
 share/locale/da/LC_MESSAGES/rhythmbox.mo
 share/locale/de/LC_MESSAGES/rhythmbox.mo
+share/locale/dz/LC_MESSAGES/rhythmbox.mo
 share/locale/el/LC_MESSAGES/rhythmbox.mo
 share/locale/en_CA/LC_MESSAGES/rhythmbox.mo
 share/locale/en_GB/LC_MESSAGES/rhythmbox.mo
@@ -197,6 +226,7 @@ share/locale/fr/LC_MESSAGES/rhythmbox.mo
 share/locale/ga/LC_MESSAGES/rhythmbox.mo
 share/locale/gl/LC_MESSAGES/rhythmbox.mo
 share/locale/he/LC_MESSAGES/rhythmbox.mo
+share/locale/hi/LC_MESSAGES/rhythmbox.mo
 share/locale/hr/LC_MESSAGES/rhythmbox.mo
 share/locale/hu/LC_MESSAGES/rhythmbox.mo
 share/locale/id/LC_MESSAGES/rhythmbox.mo
@@ -232,6 +262,7 @@ share/locale/zh_CN/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_HK/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
 share/omf/rhythmbox/rhythmbox-C.omf
+share/omf/rhythmbox/rhythmbox-el.omf
 share/omf/rhythmbox/rhythmbox-es.omf
 share/omf/rhythmbox/rhythmbox-fr.omf
 share/omf/rhythmbox/rhythmbox-ru.omf
@@ -244,28 +275,19 @@ share/rhythmbox/art/rhythmbox-podcast.png
 share/rhythmbox/art/rhythmbox-set-star.png
 share/rhythmbox/art/rhythmbox-tray-icon.png
 share/rhythmbox/art/rhythmbox-unset-star.png
-share/rhythmbox/daap-ui.xml
-share/rhythmbox/generic-player-ui.xml
-share/rhythmbox/glade/audioscrobbler-prefs.glade
 share/rhythmbox/glade/create-playlist.glade
-share/rhythmbox/glade/daap-prefs.glade
 share/rhythmbox/glade/druid.glade
 share/rhythmbox/glade/general-prefs.glade
 share/rhythmbox/glade/library-prefs.glade
 share/rhythmbox/glade/playlist-save.glade
 share/rhythmbox/glade/plugins.glade
 share/rhythmbox/glade/podcast-feed-properties.glade
-share/rhythmbox/glade/podcast-new.glade
 share/rhythmbox/glade/podcast-prefs.glade
 share/rhythmbox/glade/podcast-properties.glade
-share/rhythmbox/glade/recorder.glade
 share/rhythmbox/glade/song-info-multiple.glade
 share/rhythmbox/glade/song-info.glade
-share/rhythmbox/glade/station-new.glade
-share/rhythmbox/glade/station-properties.glade
+share/rhythmbox/glade/uri-new.glade
 share/rhythmbox/glade/uri.glade
-share/rhythmbox/ipod-ui.xml
-share/rhythmbox/iradio-initial.pls
 share/rhythmbox/playlists.xml
 share/rhythmbox/rhythmbox-ui.xml
 @dirrm share/rhythmbox/glade
@@ -285,6 +307,8 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrm share/gnome/help/rhythmbox/fr
 @dirrm share/gnome/help/rhythmbox/es/figures
 @dirrm share/gnome/help/rhythmbox/es
+@dirrm share/gnome/help/rhythmbox/el/figures
+@dirrm share/gnome/help/rhythmbox/el
 @dirrm share/gnome/help/rhythmbox/C/figures
 @dirrm share/gnome/help/rhythmbox/C
 @dirrm share/gnome/help/rhythmbox
@@ -293,8 +317,13 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrm share/doc/rhythmbox
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/rhythmbox/plugins/visualizer
+@dirrm lib/rhythmbox/plugins/power-manager
+@dirrm lib/rhythmbox/plugins/mmkeys
+@dirrm lib/rhythmbox/plugins/iradio
 @dirrm lib/rhythmbox/plugins/generic-player
 @dirrm lib/rhythmbox/plugins/cd-recorder
 @dirrm lib/rhythmbox/plugins/audioscrobbler
+@dirrm lib/rhythmbox/plugins/audiocd
 @dirrm lib/rhythmbox/plugins
 @dirrm lib/rhythmbox
