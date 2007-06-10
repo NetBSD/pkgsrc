@@ -1,0 +1,13 @@
+This module provides a general-purpose clone function to make deep
+copies of Perl data structures. It calls itself recursively to copy
+nested hash, array, scalar and reference types, including tied
+variables and objects.
+
+The clone() function takes a scalar argument to copy. To duplicate
+arrays or hashes, pass them in by reference:
+
+The clone() function also accepts an optional second parameter that
+can be used to limit the depth of the copy. If you pass a limit of
+0, clone will return the same value you supplied; for a limit of
+1, a shallow copy is constructed; for a limit of 2, two layers of
+copying are done, and so on.
