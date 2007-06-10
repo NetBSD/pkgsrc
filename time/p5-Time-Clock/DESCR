@@ -1,0 +1,11 @@
+A Time::Clock object is a twenty-four hour clock with nanosecond
+precision and wrap-around. It is a clock only; it has absolutely
+no concept of dates. Vagaries of date/time such as leap seconds
+and daylight savings time are unsupported.
+
+When a Time::Clock object hits 23:59:59.999999999 and at least one
+more nanosecond is added, it will wrap around to 00:00:00.000000000.
+This works in reverse when time is subtracted.
+
+Time::Clock objects automatically stringify to a user-definable
+format.
