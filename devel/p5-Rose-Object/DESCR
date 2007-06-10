@@ -1,0 +1,9 @@
+Rose::Class is a generic base class for classes. It provides a
+single class method (error), but may be expanded further in the
+future.
+
+A class that inherits from Rose::Class is not expected to allow
+objects of that class to be instantiated, since the namespace for
+class and object methods is shared. For example, it is common for
+Rose::Object-derived classes to have error methods, but this would
+conflict with the Rose::Class method of the same name.
