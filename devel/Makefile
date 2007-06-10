@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.864 2007/06/07 16:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.865 2007/06/10 13:53:03 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -394,6 +394,7 @@ SUBDIR+=	p5-Class-Trigger
 SUBDIR+=	p5-Class-WhiteHole
 SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Clone
+SUBDIR+=	p5-Clone-PP
 SUBDIR+=	p5-Compress-Raw-Zlib
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-General
@@ -406,6 +407,7 @@ SUBDIR+=	p5-Curses-UI-POE
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-Dump
 SUBDIR+=	p5-Data-Hierarchy
+SUBDIR+=	p5-Data-OptList
 SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Data-UUID
@@ -542,6 +544,7 @@ SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Regexp-Assemble
 SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Shellish
+SUBDIR+=	p5-Rose-Object
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Notify
@@ -558,6 +561,8 @@ SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-String-Format
+SUBDIR+=	p5-Sub-Exporter
+SUBDIR+=	p5-Sub-Install
 SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Task-Weaken
