@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/09 14:29:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/10 09:26:02 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.1
@@ -12,13 +12,14 @@ COMMENT=	Modular Xorg driver meta-package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
 NO_CONFIGURE=		yes
 
 do-install:
+
+.include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
@@ -53,6 +54,8 @@ DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
 DEPENDS+=	xf86-video-vga-[0-9]*:../../x11/xf86-video-vga
 DEPENDS+=	xf86-video-via-[0-9]*:../../x11/xf86-video-via
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 DEPENDS+=	xf86-video-wsfb-[0-9]*:../../x11/xf86-video-wsfb
+.endif
 
 .include "../../mk/bsd.pkg.mk"
