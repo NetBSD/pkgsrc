@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1338 2007/06/10 20:03:54 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.1339 2007/06/10 21:14:04 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/p5-Rose-DB-Object version 0.764 [abs 2007-06-10]
 	Added net/p5-Geo-IPfree version 0.2 [minskim 2007-06-10]
 	Updated mail/mutt-devel to 1.5.16 [tonio 2007-06-10]
+	Updated databases/lbdb to 0.35.1 [tonio 2007-06-10]
