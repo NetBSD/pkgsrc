@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/01/15 20:25:01 tonio Exp $
+# $NetBSD: options.mk,v 1.3 2007/06/10 22:20:10 tonio Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
-PKG_SUPPORTED_OPTIONS=	charset python lua
+PKG_SUPPORTED_OPTIONS=	charset gnutls python lua
 PKG_SUGGESTED_OPTIONS=	charset
 
 .include "../../mk/bsd.options.mk"
@@ -12,6 +12,10 @@ PLIST_SUBST+= WITHCHARSET=""
 .else
 CONFIGURE_ARGS+=	--disable-charset
 PLIST_SUBST+= WITHCHARSET="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
