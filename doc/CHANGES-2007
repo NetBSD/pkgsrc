@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1321 2007/06/10 09:43:20 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1322 2007/06/10 09:45:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2528,6 +2528,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Perl-Tidy to 20070508 [obache 2007-06-10]
 	Updated devel/p5-version to 0.7203 [obache 2007-06-10]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.3200 [obache 2007-06-10]
+	Updated math/p5-Spreadsheet-WriteExcel to 2.18 [obache 2007-06-10]
 	Updated misc/p5-Business-ISBN-Data to 1.14 [obache 2007-06-10]
 	Updated misc/p5-Business-ISBN to 1.84 [obache 2007-06-10]
 	Updated misc/p5-Mac-Macbinary to 0.06 [obache 2007-06-10]
