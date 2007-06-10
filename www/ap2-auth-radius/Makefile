@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/08 23:34:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/10 08:41:06 joerg Exp $
 
 DISTNAME=	mod_auth_radius
 PKGNAME=	ap2-auth-radius-1.5.7
@@ -17,9 +17,9 @@ APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mod_auth_radius
 USE_LIBTOOL=		YES
 
-BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
-
 PKG_APACHE_ACCEPTED=	apache2 apache22
+.include "../../mk/apache.mk"
+BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 .include "../../security/openssl/buildlink3.mk"
 
@@ -45,5 +45,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf \
 		${PREFIX}/share/examples/mod_auth_radius
 
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
