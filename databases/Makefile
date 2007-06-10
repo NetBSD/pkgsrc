@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2007/05/29 10:16:42 joerg Exp $
+# $NetBSD: Makefile,v 1.231 2007/06/10 13:53:03 abs Exp $
 #
 
 COMMENT=	Databases
@@ -93,7 +93,10 @@ SUBDIR+=	p5-MLDBM
 SUBDIR+=	p5-MLDBM-Sync
 SUBDIR+=	p5-Net-MySQL
 SUBDIR+=	p5-Palm
+SUBDIR+=	p5-Rose-DB
+SUBDIR+=	p5-Rose-DB-Object
 SUBDIR+=	p5-SQL-Abstract
+SUBDIR+=	p5-SQL-ReservedWords
 SUBDIR+=	p5-SQL-Statement
 SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
