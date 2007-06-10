@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1314 2007/06/10 08:36:33 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1315 2007/06/10 08:42:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-BerkeleyDB to 0.31 [obache 2007-06-10]
 	Updated databases/p5-DB_File to 1.815 [obache 2007-06-10]
 	Updated databases/p5-MLDBM-Sync to 0.30 [obache 2007-06-10]
+	Updated devel/p5-Perl-Tidy to 20070508 [obache 2007-06-10]
