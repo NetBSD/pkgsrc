@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2007/03/15 16:41:01 taca Exp $
+# $NetBSD: Makefile.common,v 1.15 2007/06/10 13:47:03 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -28,7 +28,7 @@ RUBY_HOMEPAGE=		http://www.ruby-lang.org/en/
 
 # common default
 .if !empty(RUBY_PATCH_LEVEL)
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}.${RUBY_PATCH_LEVEL}
+RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-p${RUBY_PATCH_LEVEL}
 .else
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 .endif
