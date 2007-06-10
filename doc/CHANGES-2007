@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1326 2007/06/10 11:38:43 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1327 2007/06/10 11:39:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2537,3 +2537,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added time/p5-DateTime-Format-Pg version 0.16001 [abs 2007-06-10]
 	Added time/p5-DateTime-Format-MySQL version 0.04 [abs 2007-06-10]
 	Added devel/p5-Sub-Install version 0.924 [abs 2007-06-10]
+	Added devel/p5-Sub-Exporter version 0.974 [abs 2007-06-10]
