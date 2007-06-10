@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/13 15:16:34 taca Exp $
+# $NetBSD: Makefile,v 1.19 2007/06/10 13:07:47 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -12,7 +12,7 @@ COMMENT=	Editing mode for RD (Ruby Document Format)
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
-RUBY_RD_VERSION=	0.6.18
+RUBY_RD_VERSION=	0.6.20
 RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
