@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1308 2007/06/10 00:38:09 reed Exp $
+$NetBSD: CHANGES-2007,v 1.1309 2007/06/10 04:44:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2519,3 +2519,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated time/p5-DateTime-Locale to 0.34 [abs 2007-06-10]
 	Updated time/p5-DateTime-TimeZone to 0.6602 [abs 2007-06-10]
 	Updated www/p5-Template-Toolkit to 2.19 [abs 2007-06-10]
+	Updated graphics/ruby-RMagick to 1.15.7 [obache 2007-06-10]
