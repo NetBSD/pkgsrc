@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6415 2007/06/10 09:48:55 obache Exp $
+$NetBSD: TODO,v 1.6416 2007/06/10 11:10:23 abs Exp $
 
 Suggested new packages
 ======================
@@ -857,12 +857,10 @@ Suggested package updates
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
-	o p5-DateTime-TimeZone-0.63
 	o p5-Devel-Profile-1.05
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-ExtUtils-ParseXS-2.18
 	o p5-File-Copy-Recursive-0.31
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
@@ -887,8 +885,6 @@ Suggested package updates
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
-	o p5-Module-Install-0.65
-	o p5-Module-ScanDeps-0.72
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
