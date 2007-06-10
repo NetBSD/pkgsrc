@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1311 2007/06/10 06:31:39 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1312 2007/06/10 08:18:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.7 [obache 2007-06-10]
 	Updated misc/openoffice2 to 2.2.0nb4 [hira 2007-06-10]
 	Updated audio/rhythmbox to 0.9.8 [obache 2007-06-10]
+	Updated databases/p5-BerkeleyDB to 0.31 [obache 2007-06-10]
