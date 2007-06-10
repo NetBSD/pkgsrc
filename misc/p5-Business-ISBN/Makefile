@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/10/19 11:26:08 obache Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/10 09:36:31 obache Exp $
 #
 
-DISTNAME=		Business-ISBN-1.82
+DISTNAME=		Business-ISBN-1.84
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5bui
 CATEGORIES=		misc perl5
