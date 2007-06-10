@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2007/06/10 21:55:39 tonio Exp $
 
---- Makefile.orig	2006-08-01 12:11:34.000000000 +0000
+--- Makefile.orig	2007-02-14 02:08:35.000000000 +0100
 +++ Makefile
-@@ -1,20 +1,13 @@
+@@ -1,18 +1,11 @@
 -DESTDIR = /usr/local
 -BINDIR = /usr/local/bin
 -SHAREDIR = /usr/local/share/imapfilter
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
 -INCDIRS = -I/usr/local/include
 -LIBDIRS = -L/usr/local/lib
 -
--MYCFLAGS = -Wall -O
+-MYCFLAGS = -Wall -g
 -MYLDFLAGS = 
 +DESTDIR = $(PREFIX)
 +BINDIR = $(PREFIX)/bin
@@ -24,12 +24,9 @@ $NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
 -LDFLAGS = $(MYLDFLAGS) $(LIBDIRS)
 +CFLAGS+= $(DEFS)
  
--LIBS = -lm -llua -llualib -lssl -lcrypto
-+LIBS = -lm -llua -lssl -lcrypto
+ LIBS = -lm -llua -lssl -lcrypto -lpcre
  
- MAN_BIN = imapfilter.1
- MAN_CONFIG = imapfilter_config.5
-@@ -30,7 +23,7 @@ OBJ = auth.o buffer.o cert.o core.o file
+@@ -31,7 +24,7 @@ OBJ = auth.o buffer.o cert.o core.o file
  all: $(BIN)
  
  $(BIN): $(OBJ)
@@ -38,7 +35,7 @@ $NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
  
  $(OBJ): imapfilter.h
  buffer.o imap.o imapfilter.o namespace.o request.o response.o: buffer.h
-@@ -42,19 +35,15 @@ auth.o cert.o imap.o imapfilter.o log.o 
+@@ -43,21 +36,16 @@ auth.o cert.o imap.o imapfilter.o log.o 
  imapfilter.o: version.h
  
  install: $(BIN)
@@ -49,6 +46,8 @@ $NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
 -		chmod 0644 $(SHAREDIR)/$(INTERFACE_LUA)
 -	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
 -		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
+-	cp -f $(REGEX_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(REGEX_LUA)
 -	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
 -	cp -f $(MAN_BIN) $(MANDIR)/man1 && \
 -		chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
@@ -60,10 +59,11 @@ $NetBSD: patch-aa,v 1.7 2006/08/14 22:36:12 wiz Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)
 +	$(BSD_INSTALL_DATA) $(INTERFACE_LUA) $(SHAREDIR)/$(INTERFACE_LUA)
 +	$(BSD_INSTALL_DATA) $(AUXILIARY_LUA) $(SHAREDIR)/$(AUXILIARY_LUA)
++	$(BSD_INSTALL_DATA) $(AUXILIARY_LUA) $(SHAREDIR)/$(REGEX_LUA)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
 +	$(BSD_INSTALL_MAN) $(MAN_BIN) $(MANDIR)/man1/$(MAN_BIN)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man5
 +	$(BSD_INSTALL_MAN) $(MAN_CONFIG) $(MANDIR)/man5/$(MAN_CONFIG)
  
  deinstall:
- 	rm -f $(BINDIR)/$(BIN) $(SHAREDIR)/$(INTERFACE_LUA) \
+ 	rm -f $(BINDIR)/$(BIN) \
