@@ -1,0 +1,3 @@
+Sub::Exporter provides a sophisticated alternative to Exporter.pm.
+It allows for renaming, currying/sub-generation, and other cool
+stuff.
