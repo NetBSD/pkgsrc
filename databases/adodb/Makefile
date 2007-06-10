@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/10 08:44:24 joerg Exp $
 #
 
 DISTNAME=	adodb481
 PKGNAME=	adodb-4.81
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
@@ -11,7 +12,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://adodb.sourceforge.net/
 COMMENT=	Active Data Objects Data Base for php4
 
-DEPENDS+=	php>=4.1.0:../../www/php4
+DEPENDS+=	php>=4.1.0<5:../../www/php4
 
 WRKSRC=		${WRKDIR}/adodb
 NO_CONFIGURE=	YES
