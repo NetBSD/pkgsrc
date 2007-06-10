@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6417 2007/06/10 11:42:23 xtraeme Exp $
+$NetBSD: TODO,v 1.6418 2007/06/10 21:14:04 tonio Exp $
 
 Suggested new packages
 ======================
@@ -663,7 +663,6 @@ Suggested package updates
 	o lapack-20070226
 	o latd-1.21
 	o lavaps-2.7
-	o lbdb-0.35.1
 	o lcab-1.0b12
 	o lcc-4.2
 	o ldapsdk-6.0.2
