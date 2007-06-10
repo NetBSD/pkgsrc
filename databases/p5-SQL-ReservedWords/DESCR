@@ -1,0 +1,10 @@
+Reserved SQL words by standard and vendors, including:
+ * ANSI/ISO
+ * DB2
+ * MySQL
+ * ODBC
+ * Oracle
+ * PostgreSQL
+ * SQL Server
+ * SQLite
+ * Sybase
