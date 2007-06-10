@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2007/06/08 12:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2007/06/10 06:14:18 joerg Exp $
 
 .include "Makefile.common"
 
@@ -26,6 +26,7 @@ CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
+.include "../../devel/apr0/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.12.2.0.58
 
 # the following must be set before bsd.prefs.mk in order to make += work
@@ -35,7 +36,6 @@ BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.12.2.0.58
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/apr0/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
