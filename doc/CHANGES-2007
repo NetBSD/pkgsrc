@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1329 2007/06/10 11:42:22 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1330 2007/06/10 11:43:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2540,3 +2540,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Sub-Exporter version 0.974 [abs 2007-06-10]
 	Added devel/p5-Data-OptList version 0.101 [abs 2007-06-10]
 	Updated x11/fox to 1.6.27 [xtraeme 2007-06-10]
+	Added devel/p5-Clone-PP version 1.02 [abs 2007-06-10]
