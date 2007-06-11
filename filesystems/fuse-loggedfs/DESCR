@@ -1,0 +1,2 @@
+Loggedfs is a filesystem which logs (via rlog and syslog) exactly what
+is happening on every vnode operation.
