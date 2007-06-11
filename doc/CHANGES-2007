@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1357 2007/06/11 19:13:13 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1358 2007/06/11 20:15:56 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/darkstat to 3.0.619nb1 [obache 2007-06-11]
 	Added textproc/ruby-ferret version 0.11.4 [minskim 2007-06-11]
 	Added textproc/p5-Text-Textile version 2.03 [heinz 2007-06-11]
+	Added filesystems/fuse-loggedfs version 0.4 [agc 2007-06-11]
