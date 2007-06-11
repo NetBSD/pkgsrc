@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+
+SHA1 (loggedfs-0.4.tar.bz2) = a20eae4c035e5eeaec066d5b5d14b42dac2b2189
+RMD160 (loggedfs-0.4.tar.bz2) = e2ad904e70fec7c9a188f2bc5d6528adfcb104f2
+Size (loggedfs-0.4.tar.bz2) = 14851 bytes
+SHA1 (patch-aa) = 58eeb1ac9db64605e96fa8bc63de2f1f5c398b0c
+SHA1 (patch-ab) = 864bf2488034a3217f530ed6a8171633424b9928

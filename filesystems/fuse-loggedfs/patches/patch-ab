@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+
+--- Makefile	2007/06/08 15:32:49	1.1
++++ Makefile	2007/06/08 15:34:17
+@@ -1,5 +1,5 @@
+ CC=g++
+-CFLAGS=-Wall -ansi -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 -DRLOG_COMPONENT="loggedfs" `xml2-config --cflags`
++CFLAGS=-Wall -ansi -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 -DRLOG_COMPONENT="loggedfs" `xml2-config --cflags` ${CPPFLAGS}
+ LDFLAGS=-Wall -ansi -lpcre -lfuse -lrlog `xml2-config --libs`
+ srcdir=src
+ builddir=build
