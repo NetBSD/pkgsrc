@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2007/06/11 17:41:52 minskim Exp $
+# $NetBSD: Makefile,v 1.372 2007/06/11 19:13:56 heinz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -206,6 +206,7 @@ SUBDIR+=	p5-Text-Shellwords
 SUBDIR+=	p5-Text-Substitute
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Text-Template
+SUBDIR+=	p5-Text-Textile
 SUBDIR+=	p5-Text-Unaccent
 SUBDIR+=	p5-Text-WikiFormat
 SUBDIR+=	p5-Text-WrapI18N
