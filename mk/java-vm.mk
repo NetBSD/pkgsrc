@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.58 2007/06/05 13:35:06 rillig Exp $
+# $NetBSD: java-vm.mk,v 1.59 2007/06/11 07:03:18 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: jdk sun-jdk13 blackdown-jdk13 kaffe
-#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 scsl-jdk15
+#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 scsl-jdk15 jdk15
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -69,7 +69,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # This is a list of all of the JDKs that may be used.
 #
 _PKG_JVMS.6=		sun-jdk6
-_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 scsl-jdk15
+_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 scsl-jdk15 jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
@@ -119,6 +119,9 @@ _ONLY_FOR_PLATFORMS.jdk= \
 _ONLY_FOR_PLATFORMS.jdk14= \
 	DragonFly-*-i386 \
 	NetBSD-[2-9].*-i386
+_ONLY_FOR_PLATFORMS.jdk15= \
+	DragonFly-*-i386 \
+	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
 _ONLY_FOR_PLATFORMS.scsl-jdk15= \
@@ -159,6 +162,7 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 _JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk14=		jdk14
+_JAVA_PKGBASE.jdk15=		jdk15
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.scsl-jdk15=	scsl-jre15
 _JAVA_PKGBASE.sun-jdk13=	sun-jre13
@@ -260,6 +264,7 @@ BUILDLINK_API_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
 BUILDLINK_API_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
 BUILDLINK_API_DEPENDS.jdk?=			jdk-[0-9]*
 BUILDLINK_API_DEPENDS.jdk14?=		jdk14-[0-9]*
+BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.scsl-jdk15?=		scsl-jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.scsl-jre15?=		scsl-jre15-[0-9]*
@@ -275,6 +280,7 @@ BUILDLINK_API_DEPENDS.sun-jre6?=		sun-jre6-[0-9]*
 _JRE.blackdown-jdk13=	blackdown-jre13
 _JRE.jdk=		jdk
 _JRE.jdk14=		jdk14
+_JRE.jdk15=		jdk15
 _JRE.kaffe=		kaffe
 _JRE.scsl-jdk15=	scsl-jre15
 _JRE.sun-jdk13=		sun-jre13
@@ -301,6 +307,10 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
 _JDK_PKGSRCDIR=		../../wip/jdk14
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.4.2
+.elif ${_PKG_JVM} == "jdk15"
+_JDK_PKGSRCDIR=		../../wip/jdk15
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
 .elif ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
