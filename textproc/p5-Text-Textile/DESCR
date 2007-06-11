@@ -1,0 +1,8 @@
+Text::Textile is a Perl module for converting Textile syntax to XHTML.
+
+From Wikipedia:
+  Textile is a lightweight markup language originally developed by Dean Allen
+  and billed as a "humane Web text generator". Textile converts its marked-up
+  text input to valid, well-formed XHTML and also inserts character entity
+  references for apostrophes, opening and closing single and double quotation
+  marks, ellipses and em dashes.
