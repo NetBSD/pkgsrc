@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2007/04/14 04:51:46 reed Exp $
+# $NetBSD: Makefile,v 1.119 2007/06/11 13:40:39 markd Exp $
 #
 
 COMMENT=	Editors
@@ -24,6 +24,8 @@ SUBDIR+=	emacs
 SUBDIR+=	emacs-nox11
 SUBDIR+=	emacs-packages
 SUBDIR+=	emacs20
+SUBDIR+=	emacs21
+SUBDIR+=	emacs21-nox11
 SUBDIR+=	ex
 SUBDIR+=	fe
 SUBDIR+=	gate
