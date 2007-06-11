@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 03:05:44 minskim Exp $
+bin/rubyforge
+${RUBY_SITELIBDIR}/http-access2/cookie.rb
+${RUBY_SITELIBDIR}/http-access2/http.rb
+${RUBY_SITELIBDIR}/rubyforge.rb
+${RUBY_DOCDIR}/rubyforge/README.txt
+@dirrm ${RUBY_DOCDIR}/rubyforge
+@dirrm ${RUBY_SITELIBDIR}/http-access2
