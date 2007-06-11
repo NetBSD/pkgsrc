@@ -1,0 +1,3 @@
+Feed normalizer is an extensible Ruby wrapper for Atom and RSS
+parsers.  It wraps various RSS and Atom parsers, and returns a single
+unified object graph, regardless of the underlying feed format.
