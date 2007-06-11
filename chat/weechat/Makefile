@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/10 22:20:09 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/11 21:56:48 xtraeme Exp $
 #
 
 DISTNAME=	weechat-0.2.5
@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-ruby --disable-perl --disable-aspell
-MAKE_ENV+=	INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
+MAKE_ENV+=		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
 INCOMPAT_CURSES+=	NetBSD-*-*
 
