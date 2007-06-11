@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.514 2007/06/11 04:59:07 minskim Exp $
+# $NetBSD: Makefile,v 1.515 2007/06/11 04:59:57 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -95,6 +95,7 @@ SUBDIR+=	elinks
 SUBDIR+=	emacs-w3m
 SUBDIR+=	epiphany
 SUBDIR+=	epiphany-extensions
+SUBDIR+=	erubis
 SUBDIR+=	fcgi
 SUBDIR+=	ffproxy
 SUBDIR+=	firefox
