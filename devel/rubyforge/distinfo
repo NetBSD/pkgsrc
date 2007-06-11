@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/11 03:05:44 minskim Exp $
+
+SHA1 (rubyforge-0.4.2.gem) = f5bfc0e4bb99f7d7ecd1b596dfa8f27f6e357564
+RMD160 (rubyforge-0.4.2.gem) = 6307d63de22e08a82d62adc420a7c70f4ec7361f
+Size (rubyforge-0.4.2.gem) = 28672 bytes
