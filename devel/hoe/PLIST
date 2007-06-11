@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 03:42:06 minskim Exp $
+bin/sow
+${RUBY_DOCDIR}/hoe/README.txt
+${RUBY_SITELIBDIR}/hoe.rb
+${RUBY_SITELIBDIR}/test_hoe.rb
+@dirrm ${RUBY_DOCDIR}/hoe
