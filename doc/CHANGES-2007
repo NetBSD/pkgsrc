@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1358 2007/06/11 20:15:56 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1359 2007/06/11 21:08:37 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2572,3 +2572,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/ruby-ferret version 0.11.4 [minskim 2007-06-11]
 	Added textproc/p5-Text-Textile version 2.03 [heinz 2007-06-11]
 	Added filesystems/fuse-loggedfs version 0.4 [agc 2007-06-11]
+	Updated wm/pekwm to 0.1.6 [xtraeme 2007-06-11]
