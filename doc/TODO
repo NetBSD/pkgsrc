@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6420 2007/06/10 22:21:47 tonio Exp $
+$NetBSD: TODO,v 1.6421 2007/06/11 00:07:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -738,6 +738,7 @@ Suggested package updates
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.20
+	o mecab-0.96
 	o memtestplus-1.70
 	o mergeant-0.66
 	o mesure-0.7.2
