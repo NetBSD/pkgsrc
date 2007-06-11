@@ -1,0 +1,84 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+
+--- src/loggedfs.cpp	2007/02/21 21:49:53	1.1
++++ src/loggedfs.cpp	2007/02/21 21:51:15
+@@ -30,7 +30,11 @@
+ #include <fcntl.h>
+ #include <dirent.h>
+ #include <errno.h>
++#ifdef HAVE_SYS_STATVFS_H
++#include <sys/statvfs.h>
++#else
+ #include <sys/statfs.h>
++#endif
+ #ifdef HAVE_SETXATTR
+ #include <sys/xattr.h>
+ #endif
+@@ -85,12 +89,14 @@
+ 
+ static char* getAbsolutePath(const char *path)
+ {
+-    char *realPath=new char[strlen(path)+strlen(loggedfsArgs->mountPoint)+1];
++    char *realPath=new char[strlen(path)+strlen(loggedfsArgs->mountPoint)+2];
++
++    (void) snprintf(realPath, strlen(path)+strlen(loggedfsArgs->mountPoint)+2,
++    		"%s%s%s",
++		loggedfsArgs->mountPoint,
++		(path[0] == '/') ? "" : "/",
++		path);
+ 
+-    strcpy(realPath,loggedfsArgs->mountPoint);
+-    if (realPath[strlen(realPath)-1]=='/')
+-        realPath[strlen(realPath)-1]='\0';
+-    strcat(realPath,path);
+     return realPath;
+ 
+ }
+@@ -156,7 +162,7 @@
+ 
+     char *aPath=getAbsolutePath(path);
+     path=getRelativePath(path);
+-    res = lstat(path, stbuf);
++    res = lstat(aPath, stbuf);
+     loggedfs_log(aPath,"getattr",res,"getattr %s",aPath);
+     if(res == -1)
+         return -errno;
+@@ -210,7 +216,7 @@
+     path=getRelativePath(path);
+ 
+ 
+-    dp = opendir(path);
++    dp = opendir(aPath);
+     if(dp == NULL) {
+         res = -errno;
+         loggedfs_log(aPath,"readdir",-1,"readdir %s",aPath);
+@@ -427,7 +433,7 @@
+     return 0;
+ }
+ 
+-#if (FUSE_USE_VERSION==25)
++#if (FUSE_USE_VERSION >= 25)
+ static int loggedFS_utime(const char *path, struct utimbuf *buf)
+ {
+     int res;
+@@ -650,7 +656,11 @@
+ // logging the ~/.kde/share/config directory, in which hard links for lock
+ // files are verified by their inode equivalency.
+ 
++#ifdef __NetBSD__
++#define COMMON_OPTS ""
++#else
+ #define COMMON_OPTS "nonempty,use_ino"
++#endif
+ 
+     while ((res = getopt (argc, argv, "hpfec:l:")) != -1)
+     {
+@@ -770,7 +780,7 @@
+     loggedFS_oper.chmod	= loggedFS_chmod;
+     loggedFS_oper.chown	= loggedFS_chown;
+     loggedFS_oper.truncate	= loggedFS_truncate;
+-#if (FUSE_USE_VERSION==25)
++#if (FUSE_USE_VERSION >= 25)
+     loggedFS_oper.utime       = loggedFS_utime;
+ #else
+     loggedFS_oper.utimens	= loggedFS_utimens;
