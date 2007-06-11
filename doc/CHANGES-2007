@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1354 2007/06/11 14:30:24 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1355 2007/06/11 16:12:46 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2567,3 +2567,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/emacs-nox11 to 22.1 [markd 2007-06-11]
 	Updated devel/emacs-ilisp to 20021222nb2 [markd 2007-06-11]
 	Updated math/ess to 5.3.4 [markd 2007-06-11]
+	Updated net/darkstat to 3.0.619nb1 [obache 2007-06-11]
