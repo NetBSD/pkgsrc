@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 04:55:33 minskim Exp $
+bin/erubis
+${RUBY_SITELIBDIR}/erubis.rb
+${RUBY_SITELIBDIR}/erubis/context.rb
+${RUBY_SITELIBDIR}/erubis/converter.rb
+${RUBY_SITELIBDIR}/erubis/engine.rb
+${RUBY_SITELIBDIR}/erubis/engine/ec.rb
+${RUBY_SITELIBDIR}/erubis/engine/ejava.rb
+${RUBY_SITELIBDIR}/erubis/engine/ejavascript.rb
+${RUBY_SITELIBDIR}/erubis/engine/enhanced.rb
+${RUBY_SITELIBDIR}/erubis/engine/eperl.rb
+${RUBY_SITELIBDIR}/erubis/engine/ephp.rb
+${RUBY_SITELIBDIR}/erubis/engine/eruby.rb
+${RUBY_SITELIBDIR}/erubis/engine/escheme.rb
+${RUBY_SITELIBDIR}/erubis/engine/optimized.rb
+${RUBY_SITELIBDIR}/erubis/enhancer.rb
+${RUBY_SITELIBDIR}/erubis/error.rb
+${RUBY_SITELIBDIR}/erubis/evaluator.rb
+${RUBY_SITELIBDIR}/erubis/generator.rb
+${RUBY_SITELIBDIR}/erubis/helper.rb
+${RUBY_SITELIBDIR}/erubis/helpers/rails_helper.rb
+${RUBY_SITELIBDIR}/erubis/local-setting.rb
+${RUBY_SITELIBDIR}/erubis/main.rb
+${RUBY_SITELIBDIR}/erubis/tiny.rb
+@dirrm ${RUBY_SITELIBDIR}/erubis/helpers
+@dirrm ${RUBY_SITELIBDIR}/erubis/engine
+@dirrm ${RUBY_SITELIBDIR}/erubis
