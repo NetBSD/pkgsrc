@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6422 2007/06/11 14:30:24 markd Exp $
+$NetBSD: TODO,v 1.6423 2007/06/11 21:08:37 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -938,7 +938,6 @@ Suggested package updates
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
-	o pekwm-0.1.6
 	o pen-0.17.1
 	o pfqueue-0.5.6
 	o pfstat-1.8
