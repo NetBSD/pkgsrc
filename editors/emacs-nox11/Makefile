@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2007/01/25 21:00:05 markd Exp $
+# $NetBSD: Makefile,v 1.26 2007/06/11 13:57:21 markd Exp $
 
-DISTNAME=	emacs-${EMACSVERSION}a
-PKGNAME=	emacs-nox11-${EMACSVERSION}a
-PKGREVISION=	8
+DISTNAME=	emacs-${EMACSVERSION}
+PKGNAME=	emacs-nox11-${EMACSVERSION}
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor) - non X11 version
 
@@ -10,6 +9,11 @@ COMMENT=	GNU editing macros (editor) - non X11 version
 
 CONFLICTS+=	emacs-[0-9]*
 
-CONFIGURE_ARGS+=--without-x
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-xpm
+CONFIGURE_ARGS+=	--without-jpeg
+CONFIGURE_ARGS+=	--without-tiff
+CONFIGURE_ARGS+=	--without-gif
+CONFIGURE_ARGS+=	--without-png
 
 .include "../../mk/bsd.pkg.mk"
