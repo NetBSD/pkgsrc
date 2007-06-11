@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2007/02/01 22:47:39 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/11 21:07:50 xtraeme Exp $
 #
 
-DISTNAME=	pekwm-0.1.5
+DISTNAME=	pekwm-0.1.6
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.pekwm.org/trac
 COMMENT=	Window manager based on aewm++
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:run
 USE_LANGUAGES=	c c++
 
