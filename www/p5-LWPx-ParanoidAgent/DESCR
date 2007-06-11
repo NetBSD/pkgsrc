@@ -1,0 +1,8 @@
+The Perl module LWPx::ParanoidAgent is a subclass of LWP::UserAgent,
+but paranoid against attackers. It's to be used when you're fetching a
+remote resource on behalf of a possibly malicious user.
+
+This class can do whatever LWP::UserAgent can (callbacks, uploads from
+files, etc), except proxy support is explicitly removed, because in that
+case you should do your paranoia at your proxy. Only "http:" and "https:"
+URL schemes are supported.
