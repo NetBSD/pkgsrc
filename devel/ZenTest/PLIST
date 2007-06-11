@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 07:59:55 minskim Exp $
+bin/autotest
+bin/multiruby
+bin/rails_test_audit
+bin/ruby_fork
+bin/ruby_fork_client
+bin/unit_diff
+bin/zentest
+${RUBY_SITELIBDIR}/autotest.rb
+${RUBY_SITELIBDIR}/autotest/autoupdate.rb
+${RUBY_SITELIBDIR}/autotest/camping.rb
+${RUBY_SITELIBDIR}/autotest/discover.rb
+${RUBY_SITELIBDIR}/autotest/emacs.rb
+${RUBY_SITELIBDIR}/autotest/fixtures.rb
+${RUBY_SITELIBDIR}/autotest/growl.rb
+${RUBY_SITELIBDIR}/autotest/heckle.rb
+${RUBY_SITELIBDIR}/autotest/html_report.rb
+${RUBY_SITELIBDIR}/autotest/kdenotify.rb
+${RUBY_SITELIBDIR}/autotest/menu.rb
+${RUBY_SITELIBDIR}/autotest/migrate.rb
+${RUBY_SITELIBDIR}/autotest/notify.rb
+${RUBY_SITELIBDIR}/autotest/pretty.rb
+${RUBY_SITELIBDIR}/autotest/rails.rb
+${RUBY_SITELIBDIR}/autotest/redgreen.rb
+${RUBY_SITELIBDIR}/autotest/screen.rb
+${RUBY_SITELIBDIR}/autotest/shame.rb
+${RUBY_SITELIBDIR}/autotest/snarl.rb
+${RUBY_SITELIBDIR}/autotest/timestamp.rb
+${RUBY_SITELIBDIR}/functional_test_matrix.rb
+${RUBY_SITELIBDIR}/ruby_fork.rb
+${RUBY_SITELIBDIR}/test/rails.rb
+${RUBY_SITELIBDIR}/test/rails/controller_test_case.rb
+${RUBY_SITELIBDIR}/test/rails/functional_test_case.rb
+${RUBY_SITELIBDIR}/test/rails/helper_test_case.rb
+${RUBY_SITELIBDIR}/test/rails/ivar_proxy.rb
+${RUBY_SITELIBDIR}/test/rails/pp_html_document.rb
+${RUBY_SITELIBDIR}/test/rails/rake_tasks.rb
+${RUBY_SITELIBDIR}/test/rails/render_tree.rb
+${RUBY_SITELIBDIR}/test/rails/test_case.rb
+${RUBY_SITELIBDIR}/test/rails/view_test_case.rb
+${RUBY_SITELIBDIR}/test/zentest_assertions.rb
+${RUBY_SITELIBDIR}/unit_diff.rb
+${RUBY_SITELIBDIR}/zentest.rb
+${RUBY_SITELIBDIR}/zentest_mapping.rb
+${RUBY_DOCDIR}/ZenTest/LinuxJournalArticle.txt
+${RUBY_DOCDIR}/ZenTest/README.txt
+${RUBY_EXAMPLESDIR}/ZenTest/example.txt
+${RUBY_EXAMPLESDIR}/ZenTest/example1.rb
+${RUBY_EXAMPLESDIR}/ZenTest/example2.rb
+${RUBY_EXAMPLESDIR}/ZenTest/example_dot_autotest.rb
+@dirrm ${RUBY_EXAMPLESDIR}/ZenTest
+@dirrm ${RUBY_DOCDIR}/ZenTest
+@dirrm ${RUBY_SITELIBDIR}/test/rails
+@dirrm ${RUBY_SITELIBDIR}/test
+@dirrm ${RUBY_SITELIBDIR}/autotest
