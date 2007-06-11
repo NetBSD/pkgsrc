@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 17:28:17 minskim Exp $
+${RUBY_SITELIBDIR}/ferret.rb
+${RUBY_SITELIBDIR}/ferret/browser.rb
+${RUBY_SITELIBDIR}/ferret/browser/s/global.js
+${RUBY_SITELIBDIR}/ferret/browser/s/style.css
+${RUBY_SITELIBDIR}/ferret/browser/views/document/list.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/document/show.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/error/index.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/help/index.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/home/index.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/layout.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/term-vector/index.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/term/index.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/views/term/termdocs.rhtml
+${RUBY_SITELIBDIR}/ferret/browser/webrick.rb
+${RUBY_SITELIBDIR}/ferret/document.rb
+${RUBY_SITELIBDIR}/ferret/field_infos.rb
+${RUBY_SITELIBDIR}/ferret/index.rb
+${RUBY_SITELIBDIR}/ferret/number_tools.rb
+${RUBY_SITELIBDIR}/ferret_version.rb
+${RUBY_SITEARCHLIBDIR}/ferret_ext.${RUBY_DLEXT}
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/term-vector
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/term
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/home
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/help
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/error
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views/document
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/views
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser/s
+@dirrm ${RUBY_SITELIBDIR}/ferret/browser
+@dirrm ${RUBY_SITELIBDIR}/ferret
