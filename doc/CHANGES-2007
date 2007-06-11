@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1356 2007/06/11 17:41:52 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1357 2007/06/11 19:13:13 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2485,6 +2485,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/cdrtools-ossdvd to 2.01.1.36nb2 [wiz 2007-06-08]
 	Updated x11/xclip to 0.08nb3 [wiz 2007-06-08]
 	Added sysutils/dvdisaster version 0.70.4 [heinz 2007-06-08]
+	Updated sysutils/dvdisaster to 0.70.4nb2 [heinz 2007-06-08]
 	Updated devel/subversion to 1.4.4 [epg 2007-06-08]
 	Added x11/desklaunch version 1.1.5 [sborrill 2007-06-08]
 	Updated textproc/ruby-hpricot to 0.5.140nb1 [minskim 2007-06-09]
@@ -2569,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/ess to 5.3.4 [markd 2007-06-11]
 	Updated net/darkstat to 3.0.619nb1 [obache 2007-06-11]
 	Added textproc/ruby-ferret version 0.11.4 [minskim 2007-06-11]
+	Added textproc/p5-Text-Textile version 2.03 [heinz 2007-06-11]
