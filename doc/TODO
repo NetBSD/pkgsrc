@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6421 2007/06/11 00:07:48 obache Exp $
+$NetBSD: TODO,v 1.6422 2007/06/11 14:30:24 markd Exp $
 
 Suggested new packages
 ======================
@@ -439,7 +439,6 @@ Suggested package updates
 	o elm-me-2.4pl123d
 	o elscreen-1.5.2
 	o eltclsh-1.7
-	o emacs-22.1
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.7
