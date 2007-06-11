@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/10 09:26:02 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/11 09:27:33 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.1
@@ -54,7 +54,7 @@ DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
 DEPENDS+=	xf86-video-vga-[0-9]*:../../x11/xf86-video-vga
 DEPENDS+=	xf86-video-via-[0-9]*:../../x11/xf86-video-via
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=	xf86-video-wsfb-[0-9]*:../../x11/xf86-video-wsfb
 .endif
 
