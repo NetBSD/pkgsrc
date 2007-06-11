@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/11 03:05:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/11 03:13:11 minskim Exp $
 
 DISTNAME=	rubyforge-0.4.2
 CATEGORIES=	devel ruby
@@ -22,6 +22,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/http-access2
 	${INSTALL_DATA} ${WRKSRC}/lib/http-access2/* \
 		${RUBY_SITELIBDIR}/http-access2
+	${INSTALL_DATA} ${WRKSRC}/lib/http-access2.rb ${RUBY_SITELIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/rubyforge.rb ${RUBY_SITELIBDIR}
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rubyforge
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${RUBY_DOCDIR}/rubyforge
