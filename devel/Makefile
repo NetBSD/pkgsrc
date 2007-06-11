@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.865 2007/06/10 13:53:03 abs Exp $
+# $NetBSD: Makefile,v 1.866 2007/06/11 03:08:18 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -716,6 +716,7 @@ SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subversion
+SUBDIR+=	rubyforge
 SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
