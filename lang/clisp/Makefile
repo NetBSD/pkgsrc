@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2007/06/09 06:10:31 obache Exp $
+# $NetBSD: Makefile,v 1.63 2007/06/11 18:28:38 uwe Exp $
 
 DISTNAME=	clisp-2.41
 CATEGORIES=	lang
@@ -37,10 +37,6 @@ CONFIGURE_ARGS+=	${MODULES}
 TEST_TARGET=		check
 MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
-
-post-patch:
-	${CP} files/vacall-rs6000-netbsd.s \
-		${WRKSRC}/ffcall/callback/vacall_r/vacall-powerpc-netbsd.s
 
 post-configure:
 	cd ${WRKSRC}/src && \
