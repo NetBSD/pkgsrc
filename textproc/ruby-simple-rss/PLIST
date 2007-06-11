@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 04:03:51 minskim Exp $
+${RUBY_SITELIBDIR}/simple-rss.rb
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000001.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000002.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000004.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000005.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000006.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000007.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src/M000008.html
+${RUBY_DOCDIR}/simple-rss/classes/SimpleRSSError.html
+${RUBY_DOCDIR}/simple-rss/created.rid
+${RUBY_DOCDIR}/simple-rss/files/README.html
+${RUBY_DOCDIR}/simple-rss/files/lib/simple-rss_rb.html
+${RUBY_DOCDIR}/simple-rss/fr_class_index.html
+${RUBY_DOCDIR}/simple-rss/fr_file_index.html
+${RUBY_DOCDIR}/simple-rss/fr_method_index.html
+${RUBY_DOCDIR}/simple-rss/index.html
+${RUBY_DOCDIR}/simple-rss/rdoc-style.css
+@dirrm ${RUBY_DOCDIR}/simple-rss/files/lib
+@dirrm ${RUBY_DOCDIR}/simple-rss/files
+@dirrm ${RUBY_DOCDIR}/simple-rss/classes/SimpleRSS.src
+@dirrm ${RUBY_DOCDIR}/simple-rss/classes
+@dirrm ${RUBY_DOCDIR}/simple-rss
