@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.35 2007/06/07 10:46:32 rillig Exp $
+# $NetBSD: emacs.mk,v 1.36 2007/06/11 14:01:58 markd Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -206,10 +206,10 @@ _EMACS_REQD.emacs22nox=	emacs-nox11>=22
 _EMACS_REQD.xemacs214=	xemacs>=21.4
 _EMACS_REQD.xemacs215=	xemacs>=21.5
 _EMACS_DEP.emacs20=	../../editors/emacs20
-_EMACS_DEP.emacs21=	../../editors/emacs
-_EMACS_DEP.emacs21nox=	../../editors/emacs-nox11
-_EMACS_DEP.emacs22=	../../wip/emacs-current
-_EMACS_DEP.emacs22nox=	../../wip/emacs-current-nox11
+_EMACS_DEP.emacs21=	../../editors/emacs21
+_EMACS_DEP.emacs21nox=	../../editors/emacs21-nox11
+_EMACS_DEP.emacs22=	../../editors/emacs
+_EMACS_DEP.emacs22nox=	../../editors/emacs-nox11
 _EMACS_DEP.xemacs214=	../../editors/xemacs
 _EMACS_DEP.xemacs215=	../../editors/xemacs-current
 
