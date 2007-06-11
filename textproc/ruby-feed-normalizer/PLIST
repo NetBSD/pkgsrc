@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 04:40:37 minskim Exp $
+${RUBY_SITELIBDIR}/feed-normalizer.rb
+${RUBY_SITELIBDIR}/html-cleaner.rb
+${RUBY_SITELIBDIR}/parsers/rss.rb
+${RUBY_SITELIBDIR}/parsers/simple-rss.rb
+${RUBY_SITELIBDIR}/structures.rb
+${RUBY_DOCDIR}/feed-normalizer/Readme.txt
+@dirrm ${RUBY_DOCDIR}/feed-normalizer
+@dirrm ${RUBY_SITELIBDIR}/parsers
