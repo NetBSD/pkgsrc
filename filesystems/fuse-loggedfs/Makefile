@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/11 22:02:37 xtraeme Exp $
 #
 
 DISTNAME=	loggedfs-0.4
@@ -23,7 +23,8 @@ USE_LANGUAGES+=	c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/loggedfs ${PREFIX}/bin/loggedfs
-	${INSTALL_MAN} ${WRKSRC}/loggedfs.1 ${PREFIX}/${PKGMANDIR}/man1/loggedfs.1
+	${INSTALL_MAN} ${WRKSRC}/loggedfs.1 \
+		${PREFIX}/${PKGMANDIR}/man1/loggedfs.1
 
 .include "../../devel/librlog/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
