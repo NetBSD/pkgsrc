@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1355 2007/06/11 16:12:46 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1356 2007/06/11 17:41:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/emacs-ilisp to 20021222nb2 [markd 2007-06-11]
 	Updated math/ess to 5.3.4 [markd 2007-06-11]
 	Updated net/darkstat to 3.0.619nb1 [obache 2007-06-11]
+	Added textproc/ruby-ferret version 0.11.4 [minskim 2007-06-11]
