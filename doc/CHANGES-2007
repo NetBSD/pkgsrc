@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1344 2007/06/10 23:26:53 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1345 2007/06/11 03:08:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/imapfilter to 1.3 [tonio 2007-06-10]
 	Updated chat/weechat to 0.2.5 [tonio 2007-06-10]
 	Added p5-Template-Stash-EscapeHTML version 0.01 [abs 2007-06-10]
+	Added devel/rubyforge version 0.4.2 [minskim 2007-06-11]
