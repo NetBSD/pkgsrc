@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/11 14:07:28 markd Exp $
 #
 
 DISTNAME=	ilisp-20021222
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilisp/}
 
@@ -24,11 +24,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ilisp.emacs \
 		${PREFIX}/share/examples/emacs-ilisp
 	${INSTALL_DATA_DIR} ${SITELISP}
-	${INSTALL_DATA} ${WRKSRC}/*.el* ${SITELISP}
+	${INSTALL_DATA} ${WRKSRC}/*.el ${SITELISP}
+	${INSTALL_DATA} ${WRKSRC}/*.elc ${SITELISP}
 	${INSTALL_DATA} ${WRKSRC}/*.lisp ${SITELISP}
 	${INSTALL_DATA} ${WRKSRC}/*.scm ${SITELISP}
 	${INSTALL_DATA_DIR} ${SITELISP}/extra
-	${INSTALL_DATA} ${WRKSRC}/extra/*.el* ${SITELISP}/extra
+	${INSTALL_DATA} ${WRKSRC}/extra/*.el ${SITELISP}/extra
+	${INSTALL_DATA} ${WRKSRC}/extra/*.elc ${SITELISP}/extra
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
