@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2007/06/12 15:26:07 xtraeme Exp $
+# $NetBSD: options.mk,v 1.16 2007/06/12 21:17:34 jwise Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -11,6 +11,7 @@ PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
 # SASL implementation
 PKG_OPTIONS_GROUP.sasl=		cyrus-sasl gnusasl
+PKG_SUPPORTED_OPTIONS+=		debug
 PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite gnusasl
 
 .include "../../mk/bsd.options.mk"
@@ -88,4 +89,8 @@ CONFIGURE_ARGS+=	--enable-pam
 .else
 PLIST_SUBST+=		PAM_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-pam
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+CONFIGURE_ARGS+=	--enable-debug
 .endif
