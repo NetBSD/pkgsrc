@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/05/20 17:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/06/12 17:27:25 wiz Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -57,6 +57,11 @@ pre-build:
 		${FILESDIR}/pdb_self_doc.c
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
