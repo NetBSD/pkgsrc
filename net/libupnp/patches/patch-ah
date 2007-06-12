@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2007/06/12 21:59:32 joerg Exp $
+
+--- threadutil/inc/ithread.h.orig	2007-06-12 21:46:07.000000000 +0000
++++ threadutil/inc/ithread.h
+@@ -51,7 +51,7 @@ extern "C" {
+ #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+ #endif
+ 
+-#ifdef PTHREAD_MUTEX_RECURSIVE
++#if defined(PTHREAD_MUTEX_RECURSIVE) || defined(__DragonFly__)
+ /* This system has SuS2-compliant mutex attributes.
+  * E.g. on Cygwin, where we don't have the old nonportable (NP) symbols
+  */
