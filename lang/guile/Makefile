@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/06/12 03:02:33 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.74 2007/06/12 19:49:28 joerg Exp $
 
 DISTNAME=		guile-1.8.1
 CATEGORIES=		lang
@@ -41,6 +41,9 @@ post-patch:
 	echo "(define-module (ice-9 slib))" > ${WRKSRC}/ice-9/slib.scm
 	echo "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm 
 
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	ac_cv_type_complex_double=no
+.endif
 
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=		-Dmacosx
