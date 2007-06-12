@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/12/10 22:54:56 markd Exp $
+# $NetBSD: options.mk,v 1.4 2007/06/12 08:51:14 ghen Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnash
@@ -18,4 +18,3 @@ CONFIGURE_ARGS+=	--enable-klash
 CONFIGURE_ARGS+=	--disable-klash
 CONFIGURE_ARGS+=	--disable-plugin
 .endif
-
