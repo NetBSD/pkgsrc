@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/02/06 18:16:02 joerg Exp $
+# $NetBSD: options.mk,v 1.5 2007/06/12 12:51:07 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.BasiliskII
 PKG_SUPPORTED_OPTIONS=	esound gtk sdl
@@ -31,5 +31,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .endif
