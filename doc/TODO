@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6427 2007/06/12 22:26:08 wiz Exp $
+$NetBSD: TODO,v 1.6428 2007/06/12 23:04:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -874,7 +874,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
-	o p5-IO-Socket-SSL-1.07
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
 	o p5-Locale-Codes-2.07
