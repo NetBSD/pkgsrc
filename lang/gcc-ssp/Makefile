@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/09/27 15:46:11 abs Exp $
+# $NetBSD: Makefile,v 1.48 2007/06/12 22:00:39 joerg Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -27,7 +27,7 @@ GCC_FILESDIR=		${.CURDIR}/../gcc/files
 #			NetBSD-*-powerpc NetBSD-*-macppc \
 #			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
 #			NetBSD-*-amigappc NetBSD-*-sandpoint
-NOT_FOR_PLATFORM=	Interix-*-* *-*-x86_64
+NOT_FOR_PLATFORM=	Interix-*-* *-*-x86_64 DragonFly-*-*
 
 USE_TOOLS+=		gmake
 
