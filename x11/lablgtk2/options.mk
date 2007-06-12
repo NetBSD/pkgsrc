@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/06/09 13:17:19 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/06/12 04:43:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk2
 PKG_SUPPORTED_OPTIONS=	glade gnomecanvas svg
@@ -14,7 +14,7 @@ PLIST_SRC+=		PLIST.glade
 CONFIGURE_ARGS+=	--without-glade
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnome)
+.if !empty(PKG_OPTIONS:Mgnomecanvas)
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
@@ -32,7 +32,7 @@ PLIST_SRC+=		PLIST.svg
 CONFIGURE_ARGS+=	--without-rsvg
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnome) || !empty(PKG_OPTIONS:Msvg)
+.if !empty(PKG_OPTIONS:Mgnomecanvas) || !empty(PKG_OPTIONS:Msvg)
 PLIST_SRC+=		PLIST.gnome
 .endif
 
