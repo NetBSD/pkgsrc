@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2005/10/10 17:19:51 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2007/06/12 03:02:35 dmcmahill Exp $
 
---- libguile/_scm.h.orig	2005-09-05 16:15:00.000000000 +0200
+--- libguile/_scm.h.orig	2006-10-04 03:35:06.000000000 +0000
 +++ libguile/_scm.h
-@@ -111,7 +111,9 @@
+@@ -116,7 +116,9 @@
  # define SCM_SYSCALL(line) line;
  #endif /* ndef SCM_SYSCALL */
  

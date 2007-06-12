@@ -1,0 +1,42 @@
+$NetBSD: patch-ao,v 1.1 2007/06/12 03:02:35 dmcmahill Exp $
+
+64-bit fix from Debian
+
+--- test-suite/tests/numbers.test.orig	2006-10-04 03:35:10.000000000 +0000
++++ test-suite/tests/numbers.test
+@@ -2243,7 +2243,7 @@
+ 
+     (with-test-prefix "big / real"
+       (pass-if (nan? (max big*5 +nan.0)))
+-      (pass-if (= big*5  (max big*5 -inf.0)))
++      (pass-if (eqv? (exact->inexact big*5)  (max big*5 -inf.0)))
+       (pass-if (= +inf.0 (max big*5 +inf.0)))
+       (pass-if (= 1.0 (max (- big*5) 1.0)))
+       (pass-if (inexact? (max big*5 1.0)))
+@@ -2252,7 +2252,7 @@
+     (with-test-prefix "real / big"
+       (pass-if (nan? (max +nan.0 big*5)))
+       (pass-if (= +inf.0 (max +inf.0 big*5)))
+-      (pass-if (= big*5  (max -inf.0 big*5)))
++      (pass-if (eqv? (exact->inexact big*5)  (max -inf.0 big*5)))
+       (pass-if (= 1.0 (max 1.0 (- big*5))))
+       (pass-if (inexact? (max 1.0 big*5)))
+       (pass-if (= (exact->inexact big*5) (max 1.0 big*5))))
+@@ -2370,7 +2370,7 @@
+ 
+     (with-test-prefix "big / real"
+       (pass-if (nan? (min big*5 +nan.0)))
+-      (pass-if (= big*5  (min big*5  +inf.0)))
++      (pass-if (eqv? (exact->inexact big*5)  (min big*5  +inf.0)))
+       (pass-if (= -inf.0 (min big*5  -inf.0)))
+       (pass-if (= 1.0 (min big*5 1.0)))
+       (pass-if (inexact? (min (- big*5) 1.0)))
+@@ -2378,7 +2378,7 @@
+ 
+     (with-test-prefix "real / big"
+       (pass-if (nan? (min +nan.0 big*5)))
+-      (pass-if (= big*5  (min +inf.0 big*5)))
++      (pass-if (eqv? (exact->inexact big*5)  (min +inf.0 big*5)))
+       (pass-if (= -inf.0 (min -inf.0 big*5)))
+       (pass-if (= 1.0 (min 1.0 big*5)))
+       (pass-if (inexact? (min 1.0 (- big*5))))

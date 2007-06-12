@@ -1,0 +1,53 @@
+$NetBSD: patch-al,v 1.1 2007/06/12 03:02:35 dmcmahill Exp $
+
+echo -n is not portable and causes broken configure scripts.
+
+fix the test and fix the output for the braces test needed on
+solaris.
+
+--- ./configure.in.orig	2006-10-05 15:19:40.000000000 -0400
++++ ./configure.in	2007-06-04 14:29:47.777075000 -0400
+@@ -28,6 +28,6 @@
+ AC_PREREQ(2.53)
+ 
+-AC_INIT(m4_esyscmd(. ./GUILE-VERSION && echo -n ${PACKAGE}),
+-        m4_esyscmd(. ./GUILE-VERSION && echo -n ${GUILE_VERSION}))
++AC_INIT(m4_esyscmd(. ./GUILE-VERSION && printf ${PACKAGE}),
++        m4_esyscmd(. ./GUILE-VERSION && printf ${GUILE_VERSION}))
+ AC_CONFIG_AUX_DIR([.])
+ AC_CONFIG_SRCDIR(GUILE-VERSION)
+@@ -1060,5 +1060,5 @@
+             , with_threads=yes)
+ 
+-AC_SUBST(SCM_I_GSC_NEED_BRACES_ON_PTHREAD_ONCE_INIT, 0)
++SCM_I_GSC_NEED_BRACES_ON_PTHREAD_ONCE_INIT=0
+ 
+ case "$with_threads" in
+@@ -1088,4 +1088,14 @@
+     # test checks whether it works without.
+     #
++
++    # If we're using GCC, ask for aggressive warnings.  Otherwise the test
++    # below for braces may pass but then fail during compilation due to 
++    # stricter checks at compile time
++    case "$GCC" in
++        yes )
++            CFLAGS="${CFLAGS} -Wall -Werror"
++            ;;
++    esac
++
+     AC_CACHE_CHECK([whether PTHREAD_ONCE_INIT needs braces],
+       guile_cv_need_braces_on_pthread_once_init,
+@@ -1094,5 +1104,5 @@
+         [guile_cv_need_braces_on_pthread_once_init=no],
+         [guile_cv_need_braces_on_pthread_once_init=yes])])
+-    if test "$guile_cv_need_braces_on_pthread_once_init" = yes; then
++    if test "$guile_cv_need_braces_on_pthread_once_init" = "yes"; then
+       SCM_I_GSC_NEED_BRACES_ON_PTHREAD_ONCE_INIT=1
+     fi
+@@ -1105,4 +1115,5 @@
+   ;;
+ esac
++AC_SUBST([SCM_I_GSC_NEED_BRACES_ON_PTHREAD_ONCE_INIT], $SCM_I_GSC_NEED_BRACES_ON_PTHREAD_ONCE_INIT)
+ 
+ case "$with_threads" in
