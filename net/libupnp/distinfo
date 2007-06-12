@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2007/06/07 08:08:16 rh Exp $
+$NetBSD: distinfo,v 1.4 2007/06/12 21:59:32 joerg Exp $
 
 SHA1 (libupnp-1.4.6.tar.bz2) = eb7d8c725f9813bcaff0eb6a8bc18e43f3c4bc77
 RMD160 (libupnp-1.4.6.tar.bz2) = 022f867a7f4466dcaf1954a4643b7a32c4a7a95e
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 48cf5476743acd415996dc3b065cc7d3cf9b4dbb
 SHA1 (patch-ae) = e60148122ddd01f8c1020235c58ec7fa3cf7b179
 SHA1 (patch-af) = 323bf256f9c7e0949897e07860dfa890ed5b60f3
 SHA1 (patch-ag) = e13203b590bb671ddf98564cefdb260cccb6bcb9
+SHA1 (patch-ah) = bfe8b269cd7e8ee0f7e4ab0685fe70524960a365
