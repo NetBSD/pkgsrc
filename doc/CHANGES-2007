@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1363 2007/06/12 17:43:21 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1364 2007/06/12 18:02:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2578,3 +2578,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/guile to 1.8.1 [dmcmahill 2007-06-11]
 	Updated mail/mairix to 0.20 [tonio 2007-06-12]
 	Updated wm/openbox to 3.4.2 [wiz 2007-06-12]
+	Updated wm/obconf to 2.0.1 [wiz 2007-06-12]
