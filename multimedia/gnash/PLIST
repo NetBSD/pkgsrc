@@ -1,13 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/05 15:15:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/12 21:26:15 ghen Exp $
+bin/cygnal
 bin/gnash
 bin/gparser
 bin/gprocessor
+include/ltdl.h
 lib/libgnashamf.la
 lib/libgnashbackend.la
 lib/libgnashbase.la
 lib/libgnashgeo.la
 lib/libgnashgui.la
+lib/libgnashplayer.la
 lib/libgnashserver.la
+lib/libltdl.la
 man/man1/gnash.1
+share/gnash/GnashG.png
 share/gnash/gnash_128_96.ico
+share/locale/de/gnash.mo
+share/locale/es/gnash.mo
+share/locale/fr/gnash.mo
 @dirrm share/gnash
