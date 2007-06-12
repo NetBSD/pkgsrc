@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1360 2007/06/12 00:08:38 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1361 2007/06/12 03:10:11 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2575,3 +2575,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/pekwm to 0.1.6 [xtraeme 2007-06-11]
 	Added www/p5-LWPx-ParanoidAgent version 1.03 [heinz 2007-06-11]
 	Added time/p5-DateTime-Calendar-Discordian version 0.9.4 [heinz 2007-06-12]
+	Updated lang/guile to 1.8.1 [dmcmahill 2007-06-11]
