@@ -1,4 +1,9 @@
-$NetBSD: patch-ab,v 1.13 2007/05/02 15:20:45 heinz Exp $
+$NetBSD: patch-ab,v 1.14 2007/06/12 21:43:30 heinz Exp $
+
+  - enable build of qmail-spamc
+  - some files (local.cf, *.pre) are managed by pkgsrc, disable
+    their installation.
+  - pkgsrc creates B_DATADIR, so there is no need to re-set permissions
 
 --- Makefile.PL.orig	2007-04-23 14:15:49.000000000 +0200
 +++ Makefile.PL
