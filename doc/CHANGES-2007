@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1361 2007/06/12 03:10:11 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1362 2007/06/12 15:24:47 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2576,3 +2576,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/p5-LWPx-ParanoidAgent version 1.03 [heinz 2007-06-11]
 	Added time/p5-DateTime-Calendar-Discordian version 0.9.4 [heinz 2007-06-12]
 	Updated lang/guile to 1.8.1 [dmcmahill 2007-06-11]
+	Updated mail/mairix to 0.20 [tonio 2007-06-12]
