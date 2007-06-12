@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/08 21:57:33 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/12 20:59:31 joerg Exp $
 #
 
 VERSION=	1.1.5
@@ -22,4 +22,7 @@ do-install:
 		${PREFIX}/share/doc/desklaunch.README
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
