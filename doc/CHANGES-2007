@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1367 2007/06/12 22:26:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1368 2007/06/12 22:39:03 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2581,4 +2581,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/obconf to 2.0.1 [wiz 2007-06-12]
 	Updated textproc/db2latex to 0.8pre1nb5 [minskim 2007-06-12]
 	Updated multimedia/gnash to 0.8.0 [ghen 2007-06-12]
+	Updated mail/spamassassin to 3.2.1 [heinz 2007-06-12]
 	Updated misc/dialog to 1.1.20070604 [wiz 2007-06-12]
