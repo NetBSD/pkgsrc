@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2007/05/26 13:33:56 xtraeme Exp $
+# $NetBSD: options.mk,v 1.15 2007/06/12 15:26:07 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -16,9 +16,15 @@ PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite gnusasl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
+SUBST_CLASSES+=		fixdb
+SUBST_STAGE.fixdb=	post-configure
+SUBST_FILES.fixdb=	storage/Makefile.in
+SUBST_SED.fixdb=	-e "s|@DB_LIBS@||g"
+BUILDLINK_TRANSFORM+=	rm:-ldb
+BDB_ACCEPTED=		db4
 PLIST_SUBST+=		DB_OPT=
 CONFIGURE_ARGS+=	--enable-db
-.  include "../../databases/db4/buildlink3.mk"
+.  include "../../mk/bdb.buildlink3.mk"
 .else
 PLIST_SUBST+=		DB_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-db
