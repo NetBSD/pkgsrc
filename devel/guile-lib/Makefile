@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/01/14 12:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/12 02:55:15 dmcmahill Exp $
 
 DISTNAME=	guile-lib-0.1.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/guile-lib/
 
@@ -36,5 +37,5 @@ INSTALLATION_DIRS+=	share/guile/site/sxml/upstream
 INSTALLATION_DIRS+=	share/guile/site/term
 INSTALLATION_DIRS+=	share/guile/site/texinfo
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile16/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
