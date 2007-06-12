@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2007/05/02 15:20:45 heinz Exp $
+# $NetBSD: Makefile,v 1.81 2007/06/12 21:43:30 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.2.0
-PKGNAME=	spamassassin-3.2.0
+DISTNAME=	Mail-SpamAssassin-3.2.1
+PKGNAME=	spamassassin-3.2.1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -10,16 +10,18 @@ MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam
 
+PKG_DESTDIR_SUPPORT=	destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=	p5-Net-DNS>=0.34:../../net/p5-Net-DNS
-DEPENDS+=	p5-HTML-Parser>=3.31:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Parser>=3.43:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
+DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
 
 USE_TOOLS+=	perl
@@ -41,6 +43,7 @@ SPAMASSASSIN_CONTACT_ADDRESS?=	postmaster
 .include "options.mk"
 
 BUILD_DEFS+=		SPAMASSASSIN_CONTACT_ADDRESS
+BUILD_DEFS+=		VARBASE
 
 PLIST_ADD=		${WRKSRC}/.PLIST_ADD
 PLIST_SRC=		${PKGDIR}/PLIST ${PLIST_ADD}
@@ -106,11 +109,12 @@ SUBST_STAGE.sa2=	pre-configure
 SUBST_FILES.sa2=	README spamd/spamd.raw
 SUBST_SED.sa2=		-e s!@@PREFIX@@!${PREFIX}!g
 SUBST_SED.sa2+=		-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
+SUBST_SED.sa2+=		-e s!@VARBASE@!${VARBASE}!g
 
 SUBST_CLASSES+=		sa3
 SUBST_STAGE.sa3=	pre-configure
 SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README
-SUBST_FILES.sa3+=	spamc/README.qmail
+SUBST_FILES.sa3+=	spamc/README.qmail spamc/spamc.pod
 SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Conf.pm
 SUBST_FILES.sa3+=	lib/Mail/SpamAssassin/Plugin/Test.pm
 SUBST_FILES.sa3+=	spamd/README spamd/README.vpopmail sql/README
