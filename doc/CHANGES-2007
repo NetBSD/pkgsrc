@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1359 2007/06/11 21:08:37 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1360 2007/06/12 00:08:38 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2573,3 +2573,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-Text-Textile version 2.03 [heinz 2007-06-11]
 	Added filesystems/fuse-loggedfs version 0.4 [agc 2007-06-11]
 	Updated wm/pekwm to 0.1.6 [xtraeme 2007-06-11]
+	Added www/p5-LWPx-ParanoidAgent version 1.03 [heinz 2007-06-11]
+	Added time/p5-DateTime-Calendar-Discordian version 0.9.4 [heinz 2007-06-12]
