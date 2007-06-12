@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/06/12 17:27:25 wiz Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -161,7 +161,6 @@ lib/gimp/1.2/plug-ins/gtm
 lib/gimp/1.2/plug-ins/guillotine
 lib/gimp/1.2/plug-ins/gz
 lib/gimp/1.2/plug-ins/header
-${HELPBROWSER}lib/gimp/1.2/plug-ins/helpbrowser
 lib/gimp/1.2/plug-ins/hot
 lib/gimp/1.2/plug-ins/hrz
 lib/gimp/1.2/plug-ins/ifscompose
