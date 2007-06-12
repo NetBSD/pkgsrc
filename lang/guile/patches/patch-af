@@ -1,13 +1,41 @@
-$NetBSD: patch-af,v 1.3 2004/11/18 12:30:49 wiz Exp $
+$NetBSD: patch-af,v 1.4 2007/06/12 03:02:34 dmcmahill Exp $
 
---- doc/ref/Makefile.in.orig	2004-10-05 05:34:07.000000000 +0200
-+++ doc/ref/Makefile.in
-@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
- POST_UNINSTALL = :
- build_triplet = @build@
- host_triplet = @host@
--DIST_COMMON = $(guile_TEXINFOS) $(srcdir)/Makefile.am \
-+DIST_COMMON = $(info_TEXINFOS) $(srcdir)/Makefile.am \
- 	$(srcdir)/Makefile.in $(srcdir)/stamp-vti \
- 	$(srcdir)/version.texi $(top_srcdir)/am/pre-inst-guile \
- 	ChangeLog mdate-sh texinfo.tex
+Avoid a segfault if ttyname returns NULL.  Observed on NetBSD-2/alpha.
+
+Avoid len being undefined on solaris-2.9.  This guile function still
+doesn't work right on solaris-2.9 which is missing unsetenv().
+
+--- libguile/posix.c.orig	2006-10-04 03:35:07.000000000 +0000
++++ libguile/posix.c
+@@ -831,14 +831,20 @@ SCM_DEFINE (scm_ttyname, "ttyname", 1, 0
+   scm_i_scm_pthread_mutex_lock (&scm_i_misc_mutex);
+   SCM_SYSCALL (result = ttyname (fd));
+   err = errno;
+-  ret = scm_from_locale_string (result);
+-  scm_i_pthread_mutex_unlock (&scm_i_misc_mutex);
+ 
+   if (!result)
+     {
+       errno = err;
+       SCM_SYSERROR;
++      ret = scm_from_locale_string ("unknown");
++    }
++  else
++    {
++      ret = scm_from_locale_string (result);
+     }
++
++  scm_i_pthread_mutex_unlock (&scm_i_misc_mutex);
++
+   return ret;
+ }
+ #undef FUNC_NAME
+@@ -1312,7 +1318,7 @@ SCM_DEFINE (scm_putenv, "putenv", 1, 0, 
+ {
+   int rv;
+   char *c_str = scm_to_locale_string (str);
+-#ifdef __MINGW32__
++#if defined(__MINGW32__) || !defined(HAVE_UNSETENV)
+   size_t len = strlen (c_str);
+ #endif
+ 

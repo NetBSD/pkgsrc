@@ -1,0 +1,15 @@
+$NetBSD: patch-ap,v 1.1 2007/06/12 03:02:36 dmcmahill Exp $
+
+fix from Debian
+
+--- test-suite/tests/srfi-14.test.orig	2006-10-04 03:35:10.000000000 +0000
++++ test-suite/tests/srfi-14.test
+@@ -290,7 +290,7 @@
+ 
+   (pass-if "char-set:punctuation (membership)"
+      (if (not %latin1)
+-	 (thrown 'unresolved)
++	 (throw 'unresolved)
+ 	 (let ((punctuation (char-set->list char-set:punctuation)))
+ 	   (every? (lambda (8-bit-char)
+ 		     (memq 8-bit-char punctuation))
