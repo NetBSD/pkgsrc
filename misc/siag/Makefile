@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2007/05/16 18:40:12 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2007/06/12 02:55:16 dmcmahill Exp $
 #
 # Note: I have tried to update this package to 3.6.0, but there were
 # some undefined identifiers "DndDrop" and "DndRawData" in the
 # xsiag/window.c file.
 
 DISTNAME=	siag-3.5.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc textproc math
 MASTER_SITES=	ftp://siag.nu/pub/siag/
 
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=--with-xawm=Xaw
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile16/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/mowitz/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
