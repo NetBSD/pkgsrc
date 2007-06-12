@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/27 02:58:40 obache Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/12 21:04:56 joerg Exp $
 #
 
 DISTNAME=	mimetex
@@ -15,6 +15,8 @@ COMMENT=	CGI to convert LaTeX math expression to GIF image
 USE_LANGUAGES=	c
 
 WRKSRC=		${WRKDIR}
+
+INSTALLATION_DIRS=	libexec/cgi-bin
 
 do-build:
 		cd ${WRKSRC:Q} && \
