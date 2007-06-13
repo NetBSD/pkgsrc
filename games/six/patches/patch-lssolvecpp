@@ -1,0 +1,29 @@
+$NetBSD: patch-lssolvecpp,v 1.1 2007/06/13 00:10:44 rillig Exp $
+
+--- six/lssolve.cpp.orig	2004-07-19 10:30:50.000000000 +0200
++++ six/lssolve.cpp	2007-06-13 02:06:20.000000000 +0200
+@@ -120,7 +120,11 @@ static void backwardSubstitution(const M
+   double temp;
+ 
+   x(n - 1) = b(n - 1) / U(n - 1, n - 1);
++#if defined(__NetBSD__)
++  if(isnan(x(n - 1)))
++#else
+   if(std::isnan(x(n - 1)))
++#endif
+      x(n - 1) = 0.;
+   for(i = n - 2; i >= 0; i--) {
+     // Should be: x(i)=((b(i)-U(i,i,i+1,n-1)*x(i+1,n-1))/U(i,i))(0);
+@@ -131,7 +135,11 @@ static void backwardSubstitution(const M
+       temp += U.data()[iPos + j] * x(j);
+     }
+     x(i) = (b(i) - temp) / U.data()[iPos + i];
+-    if(std::isnan(x(i)))
++#if defined(__NetBSD__)
++  if(isnan(x(i)))
++#else
++  if(std::isnan(x(i)))
++#endif
+        x(i) = 0.;
+   }
+ }
