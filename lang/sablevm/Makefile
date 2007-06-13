@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/03/24 19:21:25 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/06/13 14:25:49 joerg Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -36,7 +36,7 @@ PRINT_PLIST_AWK+=     /^@dirrm java\/sablevm$$/ \
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/lib
 
-INSTALLATION_DIRS=	java/sablevm/lib/sablevm/bin
+INSTALLATION_DIRS=	java/sablevm/lib/sablevm/bin java/sablevm/lib/sablevm/jre
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
