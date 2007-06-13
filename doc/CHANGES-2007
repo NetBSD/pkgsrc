@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1369 2007/06/12 23:04:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1370 2007/06/13 00:03:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamassassin to 3.2.1 [heinz 2007-06-12]
 	Updated misc/dialog to 1.1.20070604 [wiz 2007-06-12]
 	Updated security/p5-IO-Socket-SSL to 1.07 [wiz 2007-06-12]
+	Added games/six version 0.5.3 [roland 2007-06-13]
