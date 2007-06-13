@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.35 2007/06/13 08:05:39 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.36 2007/06/13 14:17:01 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -75,3 +75,5 @@ Pullup ticket 2107 - requested by tron
 security fix for mplayer/gmplayer
 Pullup ticket 2111 - requested by heinz
 security update for spamassassin
+Pullup ticket 2105 - requested by lkundrak
+security fix for apache22
