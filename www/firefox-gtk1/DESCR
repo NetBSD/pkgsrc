@@ -9,7 +9,7 @@ can be extended by developers using industry standards such as XML,
 CSS, JavaScript, C++, etc. Many extensions are available.
 
 Note: Firefox 1.5.0.x will be maintained with security and stability
-updates until April 24, 2007. All users are encouraged to upgrade to
-Firefox 2 (pkgsrc/www/firefox2 and firefox2-gtk1).
+updates until June 2007. All users are encouraged to upgrade to
+Firefox 2 (will be the default in pkgsrc-2007Q2).
 
 firefox-gtk1 uses GTK+-1.x widgets.
