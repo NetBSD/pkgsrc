@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6428 2007/06/12 23:04:39 wiz Exp $
+$NetBSD: TODO,v 1.6429 2007/06/13 22:23:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -591,6 +591,7 @@ Suggested package updates
 	o gzip-1.3.12
 	o gzrecover-0.5
 	o hackbot-2.21
+	o hanzim-1.8
 	o haskell-mode-1.45
 	o hercules-3.04.1
 	o hesiod-3.1.0
@@ -619,9 +620,7 @@ Suggested package updates
 	o imapsync-1.217
 	o instiki-0.11pl1
 	o intercal-0.24
-	o ion3-20070608
-	o ion3-devel-20070318 [pkg/36108]
-	o ion3-devel-20070506
+	o ion3-devel-20070608 [pkg/36108]
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
