@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.6 2006/09/15 14:18:41 obache Exp $
+# $NetBSD: gettext.mk,v 1.7 2007/06/13 14:21:47 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # treated specially below.
 #
 _TOOLS.gettext-tools=		gettext msgmerge xgettext
-_TOOLS_DEP.gettext-tools=	{gettext-tools>=0.14.5,gettext>=0.10.36}
+_TOOLS_DEP.gettext-tools=	{gettext-tools>=0.14.5,gettext>=0.10.36<0.14.5}
 
 .for _t_ in ${_TOOLS.gettext-tools}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:C/:.*//:M${_t_})
