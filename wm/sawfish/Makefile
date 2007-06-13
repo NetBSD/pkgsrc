@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/06/05 08:51:15 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2007/06/13 20:23:41 joerg Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -23,7 +23,7 @@ MAKE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-themer
 
-USE_TOOLS+=		gmake makeinfo msgfmt
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 
