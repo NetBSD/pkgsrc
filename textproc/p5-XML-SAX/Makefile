@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/27 14:03:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/06/13 23:17:31 heinz Exp $
 
 DISTNAME=	XML-SAX-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -10,21 +10,20 @@ HOMEPAGE=	http://search.cpan.org/dist/XML-SAX/
 COMMENT=	Perl interface to the SAX2 XML Parser
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+=	p5-XML-NamespaceSupport>=0.03:../../textproc/p5-XML-NamespaceSupport
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		auto/XML/SAX/.packlist
+DEPENDS+=	p5-XML-NamespaceSupport>=0.03:../../textproc/p5-XML-NamespaceSupport
+# included in perl>=5.6.1
+#DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 
-.include "../../mk/bsd.prefs.mk"
+MAKE_ENV=	SKIP_SAX_INSTALL=yes
 
-.if ${_USE_DESTDIR} != "no"
-.include "../../lang/perl5/vars.mk"
+PERL5_PACKLIST=	auto/XML/SAX/.packlist
 
-INSTALL_ENV+=	PERL5LIB=${DESTDIR}${PERL5_INSTALLVENDORLIB}
-.endif
+FILES_SUBST+=	PERL5_INSTALLVENDORLIB=${PERL5_INSTALLVENDORLIB:Q}
+
+post-install:
+	${ECHO} > ${DESTDIR:Q}${PERL5_INSTALLVENDORLIB}/XML/SAX/ParserDetails.ini
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
