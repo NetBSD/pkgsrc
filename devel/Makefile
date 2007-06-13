@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.868 2007/06/11 08:01:40 minskim Exp $
+# $NetBSD: Makefile,v 1.869 2007/06/13 13:30:48 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -268,6 +268,7 @@ SUBDIR+=	libiberty
 SUBDIR+=	libidn
 SUBDIR+=	libinstaller
 SUBDIR+=	libjit
+SUBDIR+=	libjudy
 SUBDIR+=	libltdl
 SUBDIR+=	libmatchbox
 SUBDIR+=	libmemcache
