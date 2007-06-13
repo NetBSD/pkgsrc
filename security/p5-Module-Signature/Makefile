@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/27 09:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/06/13 09:50:46 heinz Exp $
 #
 
 DISTNAME=	Module-Signature-0.55
@@ -11,12 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Module-Signature/
 COMMENT=	Perl5 module adding cryptographic authentications to CPAN distributions
 
-DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
-DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
-DEPENDS+=	p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Module/Signature/.packlist
+DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
+DEPENDS+=		p5-PAR-Dist-[0-9]*:../../devel/p5-PAR-Dist
+
+USE_LANGUAGES=		# empty
+PERL5_PACKLIST=		auto/Module/Signature/.packlist
 
 INSTALLATION_DIRS+=	share/Module-Signature
 
@@ -26,8 +28,8 @@ post-extract:
 
 post-install:
 	${PKG_SILENT}${PKG_DEBUG}	\
-	for f in ${WRKSRC}/*.pub; do	\
-		${INSTALL_DATA} $$f ${PREFIX}/share/Module-Signature;	\
+	for f in ${WRKSRC}/*.pub; do ${INSTALL_DATA} $$f	\
+		${DESTDIR:Q}${PREFIX:Q}/share/Module-Signature;	\
 	done
 
 .include "../../lang/perl5/module.mk"
