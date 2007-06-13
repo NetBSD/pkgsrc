@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+# $NetBSD: mysqld.sh,v 1.2 2007/06/13 13:24:07 xtraeme Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -36,7 +36,7 @@ start_cmd="mysqld_start"
 
 mysqld_precmd()
 {
-	if [ ! -d ${mysqld_datadir} ]; then
+	if [ ! -d ${mysqld_datadir}/mysql ]; then
 		mysqld_initdb
 	fi
 }
