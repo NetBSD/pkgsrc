@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/13 16:35:31 dmcmahill Exp $
 
 DISTNAME=	autogen-5.8.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autogen/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,7 @@ INFO_FILES=		# PLIST
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/autoopts
 
-.include "../../lang/guile/buildlink3.mk"
+# explicitly checks for guile <= 1.7 in the configure test.
+.include "../../lang/guile16/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
