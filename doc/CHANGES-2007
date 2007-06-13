@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1372 2007/06/13 22:29:55 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1373 2007/06/13 23:35:55 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2586,4 +2586,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-IO-Socket-SSL to 1.07 [wiz 2007-06-12]
 	Added games/six version 0.5.3 [roland 2007-06-13]
 	Added devel/libjudy version 1.0.4 [obache 2007-06-13]
+	Updated net/p5-NetAddr-IP to 4.007 [heinz 2007-06-13]
 	Updated audio/xmms to 1.2.10nb9 [wiz 2007-06-13]
+	Updated textproc/p5-XML-SAX-Expat to 0.39 [heinz 2007-06-13]
+	Updated textproc/p5-XML-LibXML to 1.63 [heinz 2007-06-13]
