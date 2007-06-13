@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/07 21:32:55 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2007/06/13 21:32:56 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2050,6 +2050,7 @@ include/${MOZILLA}/uriloader/nsURILoader.h
 include/${MOZILLA}/url-classifier/nsIUrlClassifierDBService.h
 include/${MOZILLA}/url-classifier/nsIUrlClassifierStreamUpdater.h
 include/${MOZILLA}/url-classifier/nsIUrlClassifierTable.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierUtils.h
 include/${MOZILLA}/url-classifier/nsIUrlListManager.h
 include/${MOZILLA}/urlformatter/nsIURLFormatter.h
 include/${MOZILLA}/util/nsTimer.h
