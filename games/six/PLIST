@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/13 00:03:26 rillig Exp $
+bin/six
+share/doc/kde/HTML/en/six/filter.png
+share/doc/kde/HTML/en/six/index.cache.bz2
+share/doc/kde/HTML/en/six/index.docbook
+share/icons/hicolor/32x32/actions/blackplayer.png
+share/icons/hicolor/32x32/actions/swap.png
+share/icons/hicolor/32x32/actions/whiteplayer.png
+share/icons/hicolor/32x32/apps/six.png
+share/icons/hicolor/48x48/apps/six.png
+share/icons/locolor/16x16/actions/blackplayer.png
+share/icons/locolor/16x16/actions/swap.png
+share/icons/locolor/16x16/actions/whiteplayer.png
+share/icons/locolor/16x16/apps/six.png
+share/icons/locolor/22x22/actions/blackplayer.png
+share/icons/locolor/22x22/actions/swap.png
+share/icons/locolor/22x22/actions/whiteplayer.png
+share/icons/locolor/32x32/apps/six.png
+share/kde/applnk/Games/Board/six.desktop
+share/kde/apps/six/sixui.rc
+share/kde/mimelnk/application/vnd.kde.six.desktop
+share/locale/it/LC_MESSAGES/six.mo
