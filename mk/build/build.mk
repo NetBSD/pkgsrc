@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.12 2007/03/18 23:09:09 rillig Exp $
+# $NetBSD: build.mk,v 1.13 2007/06/13 20:34:48 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -22,6 +22,8 @@
 #	at most MAKE_JOBS jobs are carried out in parallel. The default
 #	value is "yes", and packages that don't support it must
 #	explicitly set it to "no".
+#
+#	Keywords: parallel
 #
 # Variables defined in this file:
 #
