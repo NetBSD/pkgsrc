@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2007/04/14 22:12:14 dillo Exp $
+# $NetBSD: Makefile,v 1.67 2007/06/13 22:29:20 wiz Exp $
 #
 
-PKGREVISION=		8
+PKGREVISION=		9
 
 .include "Makefile.common"
 
