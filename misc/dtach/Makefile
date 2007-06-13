@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/13 23:53:54 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/13 23:56:11 jlam Exp $
 
 DISTNAME=	dtach-0.7
 CATEGORIES=	misc
@@ -12,13 +12,14 @@ GNU_CONFIGURE=	yes
 BUILD_TARGET=	dtach
 
 DOCS=		COPYING README dtach.spec
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/dtach ${PREFIX:Q}/bin
 	${INSTALL_MAN} ${WRKSRC:Q}/dtach.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/${PKGBASE:Q}
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${PREFIX:Q}/share/doc/${PKGBASE:Q}
-.endfor
+	${INSTALL_DATA_DIR} ${DOCDIR:Q}
+	cd ${WRKSRC:Q}; for f in ${DOCS}; do				\
+		${INSTALL_DATA} $$f ${DOCDIR}/$$f;			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
