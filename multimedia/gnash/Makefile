@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/06/12 21:26:15 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2007/06/14 06:01:29 wiz Exp $
 #
 
 DISTNAME=		gnash-0.8.0
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_GNU:=gnash/0.8.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,6 +31,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
