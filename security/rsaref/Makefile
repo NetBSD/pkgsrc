@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/09/09 02:46:08 obache Exp $
+# $NetBSD: Makefile,v 1.37 2007/06/14 18:58:15 gdt Exp $
 #
 
 DISTNAME=		rsaref
@@ -11,9 +11,13 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Encryption/authentication library, RSA/MDX/DES
 
+LICENSE=		rsaref-license
+RESTRICTED=		No generation of income.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 WRKSRC=			${WRKDIR}/install
 CRYPTO=			yes
-LICENSE=		rsaref-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
