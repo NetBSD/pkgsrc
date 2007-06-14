@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:36:09 wiz Exp $
+$NetBSD: distinfo,v 1.1.2.2 2007/06/14 22:03:10 salo Exp $
 
 SHA1 (libXrandr-1.0.2.tar.bz2) = 9d0d5fe7ddab5c976a75cc848afa56aa6beabf18
 RMD160 (libXrandr-1.0.2.tar.bz2) = a75443dabe360398d8de287f6885cd7569190132

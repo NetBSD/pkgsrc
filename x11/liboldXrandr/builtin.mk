@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2006/05/21 11:46:29 rillig Exp $
+# $NetBSD: builtin.mk,v 1.1.2.2 2007/06/14 22:03:09 salo Exp $
 
 BUILTIN_PKG:=	Xrandr
 
