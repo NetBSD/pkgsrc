@@ -1,0 +1,14 @@
+$NetBSD: patch-bv,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+
+--- libxc/xenctrl.h.orig	2007-01-08 16:00:49.000000000 +0100
++++ libxc/xenctrl.h	2007-04-26 21:40:23.000000000 +0200
+@@ -16,6 +16,9 @@
+ 
+ #include <stddef.h>
+ #include <stdint.h>
++#undef uint8_t
++#undef uint16_t
++#undef uint32_t
+ #include <xen/xen.h>
+ #include <xen/domctl.h>
+ #include <xen/sysctl.h>
