@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/24 19:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/14 12:56:43 gdt Exp $
 #
 
 DISTNAME=	framework-2.6
@@ -14,6 +14,11 @@ DEPENDS+=	p5-Net-SSLeay>=1.23:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Term-ReadLine>=1.14:../../devel/p5-Term-ReadLine
 
 LICENSE=	inlineegg-license
+RESTRICTED=	No permission to redistribute
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 MSFDIR=		${PREFIX}/share/msf
 MESSAGE_SUBST+= MSFDIR=${MSFDIR:Q}
