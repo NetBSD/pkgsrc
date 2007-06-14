@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/04/05 23:03:52 reinoud Exp $
+$NetBSD: patch-ab,v 1.1.2.2 2007/06/14 22:03:10 salo Exp $
 
 --- Xrandr.c.orig	2003-05-28 00:26:42.000000000 +0200
 +++ Xrandr.c
