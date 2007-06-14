@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2007/05/23 08:11:50 martti Exp $
+$NetBSD: distinfo,v 1.28 2007/06/14 21:27:41 adrianp Exp $
 
 SHA1 (mysql-4.1.22.tar.gz) = 857e942cc3207caf56e2aa48961fc1ed66d932e6
 RMD160 (mysql-4.1.22.tar.gz) = bfcf5058e4247cf4d7d1550ea54c64ebc8bc615e
@@ -19,3 +19,4 @@ SHA1 (patch-ax) = c73f0d59c9e079abc8fc16965297257cb8f8a592
 SHA1 (patch-bd) = 6eb42818196f0a981e7d85fa5791030483a037c4
 SHA1 (patch-be) = 9cb9e8fe550e168a67cd90d0fd7fc6cc9d4029d5
 SHA1 (patch-bf) = 1bbcdd13fa662e2b17114b8b390d16cebccf389c
+SHA1 (patch-bg) = e388cbafcc2d6eff1df881984442f34bdb7c07f6
