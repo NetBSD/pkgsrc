@@ -1,0 +1,25 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+
+SHA1 (xen-3.1.0-src.tgz) = fa4b54c36626f2cce9b15dc99cafda0b42c54777
+RMD160 (xen-3.1.0-src.tgz) = 2fd65a3b81e522d0ed2d62fd11e5977167f1ceb3
+Size (xen-3.1.0-src.tgz) = 6831094 bytes
+SHA1 (patch-aa) = 663c798a472501d4c38add5049faded5b7e807aa
+SHA1 (patch-an) = cb6e3a7eac490851f2eacf557f05daf0d6966cce
+SHA1 (patch-ao) = d1250258d09cf9b330a4e9d52e85332a0eef7998
+SHA1 (patch-ap) = 33f2bdbef6df3f2105d4502b8066abb6c952fc6c
+SHA1 (patch-ar) = c8748761267dd82c75deab79d13b71d56bcf2223
+SHA1 (patch-as) = 8850108d0c8f101642f4855184253824f9c214b5
+SHA1 (patch-at) = 2311289176c83fcd3ff18b90bab9c2e5e05a52f1
+SHA1 (patch-au) = beb2eaa8bf832e179e69b1758cfe0fafafdc496b
+SHA1 (patch-av) = be2a1440126908996410f92a04ad479f8a2ca373
+SHA1 (patch-aw) = 2776799b391983ad79af0f28367287a4a865260a
+SHA1 (patch-ax) = 93411fbeff95f76d723fdda993d55a2740d3a713
+SHA1 (patch-ay) = 6c5b1e469d6dfd853f68a3151ee46e7c56d8247c
+SHA1 (patch-ba) = ee151472a9ec28301b67e696e81673c4bf753ed6
+SHA1 (patch-bb) = 19e3d323efab335a50f0410d1197ecbee5b7798b
+SHA1 (patch-bv) = 2ba938aef7a5c9eb417e443577b841bae0e0550a
+SHA1 (patch-ci) = 1338452d7994b3de40e80fb395175ddbe325b577
+SHA1 (patch-ck) = d085b0ced66544963441fff5231e06fd9ac03878
+SHA1 (patch-cl) = ad26eee7b315ec512453c73cdc29253e0fa6266f
+SHA1 (patch-cp) = 1f774a6636ce6646fc83bab304e84ce2d8886db5
+SHA1 (patch-cq) = b2fcddf97e92a49828504777232841c8d5e3df16

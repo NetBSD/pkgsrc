@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+lib/xen/boot/hvmloader
+libexec/qemu-dm
+share/examples/xen/hvm
+share/xen/qemu/keymaps/ar
+share/xen/qemu/keymaps/common
+share/xen/qemu/keymaps/da
+share/xen/qemu/keymaps/de
+share/xen/qemu/keymaps/de-ch
+share/xen/qemu/keymaps/en-gb
+share/xen/qemu/keymaps/en-us
+share/xen/qemu/keymaps/es
+share/xen/qemu/keymaps/et
+share/xen/qemu/keymaps/fi
+share/xen/qemu/keymaps/fo
+share/xen/qemu/keymaps/fr
+share/xen/qemu/keymaps/fr-be
+share/xen/qemu/keymaps/fr-ca
+share/xen/qemu/keymaps/fr-ch
+share/xen/qemu/keymaps/hr
+share/xen/qemu/keymaps/hu
+share/xen/qemu/keymaps/is
+share/xen/qemu/keymaps/it
+share/xen/qemu/keymaps/ja
+share/xen/qemu/keymaps/lt
+share/xen/qemu/keymaps/lv
+share/xen/qemu/keymaps/mk
+share/xen/qemu/keymaps/modifiers
+share/xen/qemu/keymaps/nl
+share/xen/qemu/keymaps/nl-be
+share/xen/qemu/keymaps/no
+share/xen/qemu/keymaps/pl
+share/xen/qemu/keymaps/pt
+share/xen/qemu/keymaps/pt-br
+share/xen/qemu/keymaps/ru
+share/xen/qemu/keymaps/sl
+share/xen/qemu/keymaps/sv
+share/xen/qemu/keymaps/th
+share/xen/qemu/keymaps/tr
+@dirrm lib/xen/boot
+@dirrm lib/xen
+@dirrm share/xen/qemu/keymaps
+@dirrm share/xen/qemu

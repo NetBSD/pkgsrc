@@ -1,0 +1,16 @@
+$NetBSD: patch-ci,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+
+--- ../xen/include/public/arch-x86/xen.h.orig	2007-04-25 19:25:41.000000000 +0200
++++ ../xen/include/public/arch-x86/xen.h	2007-04-25 19:25:43.000000000 +0200
+@@ -35,9 +35,10 @@
+ #define __DEFINE_XEN_GUEST_HANDLE(name, type) \
+     typedef type * __guest_handle_ ## name
+ #endif
++#define __XEN_GUEST_HANDLE(name)          __guest_handle_ ## name
+ 
+ #define DEFINE_XEN_GUEST_HANDLE(name)   __DEFINE_XEN_GUEST_HANDLE(name, name)
+-#define XEN_GUEST_HANDLE(name)          __guest_handle_ ## name
++#define XEN_GUEST_HANDLE(name)          __XEN_GUEST_HANDLE(name)
+ #define set_xen_guest_handle(hnd, val)  do { (hnd).p = val; } while (0)
+ #ifdef __XEN_TOOLS__
+ #define get_xen_guest_handle(val, hnd)  do { val = (hnd).p; } while (0)
