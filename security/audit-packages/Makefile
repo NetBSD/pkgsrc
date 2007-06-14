@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/12/10 13:06:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.76 2007/06/14 08:12:29 joerg Exp $
 
 DISTNAME=	audit-packages-1.46
 CATEGORIES=	security pkgtools
@@ -21,7 +21,8 @@ NO_CHECKSUM=	yes
 OWN_DIRS=	${PKGVULNDIR}
 MAN8DIR=	${PREFIX}/${PKGMANDIR}/man8
 CAT8DIR=	${PREFIX}/${PKGMANDIR}/cat8
-INSTALLATION_DIRS=	${CAT8DIR} ${MAN8DIR} sbin
+INSTALLATION_DIRS=	${CAT8DIR} ${MAN8DIR} sbin \
+			share/examples/audit-packages
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -72,10 +73,8 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/audit-packages
-
 	${INSTALL_DATA} ${FILESDIR}/audit-packages.conf \
-		${PREFIX}/share/examples/audit-packages
+		${DESTDIR}${PREFIX}/share/examples/audit-packages
 
 	for f in audit-packages download-vulnerability-list; do	\
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/sbin; \
