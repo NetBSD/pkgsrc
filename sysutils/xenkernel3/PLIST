@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/14 19:37:00 bouyer Exp $
+xen3-kernel/xen.gz
+@dirrm xen3-kernel
