@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/11/24 23:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/14 11:50:51 obache Exp $
 
 DISTNAME=	thttpd-2.25b
 PKGREVISION=	5
@@ -36,6 +36,8 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	thttpd.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
+
+MAKE_JOBS_SAFE=	no
 
 post-extract:
 	${CP} ${FILESDIR}/thttpd.conf ${WRKSRC}
