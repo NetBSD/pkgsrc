@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/24 19:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/14 18:39:05 gdt Exp $
 
 DISTNAME=	fs-kit-0.4
 CATEGORIES=	sysutils
@@ -10,6 +10,9 @@ HOMEPAGE=	http://www.nobius.org/~dbg/
 COMMENT=	User-level filesystem testing kit
 
 LICENSE=	fs-kit-license
+RESTRICTED=		No commercial use.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/fs-kit
 
