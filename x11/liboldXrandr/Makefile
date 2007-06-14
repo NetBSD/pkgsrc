@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/22 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1.2.2 2007/06/14 22:03:08 salo Exp $
 #
 
 DISTNAME=		libXrandr-1.0.2
