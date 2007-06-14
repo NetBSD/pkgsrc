@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1378 2007/06/14 18:54:59 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1379 2007/06/14 18:59:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2595,3 +2595,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2 to 2.2.0nb5 [hira 2007-06-14]
 	Updated sysutils/file to 4.21 [adrianp 2007-06-14]
 	Added textproc/itex2MML version 1.2.2 [minskim 2007-06-14]
+	Added textproc/ruby-itex2MML version 1.2.2 [minskim 2007-06-14]
