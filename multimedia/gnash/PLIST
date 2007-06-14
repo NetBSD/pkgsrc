@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/12 21:26:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/14 06:01:29 wiz Exp $
 bin/cygnal
 bin/gnash
 bin/gparser
 bin/gprocessor
-include/ltdl.h
 lib/libgnashamf.la
 lib/libgnashbackend.la
 lib/libgnashbase.la
@@ -11,7 +10,6 @@ lib/libgnashgeo.la
 lib/libgnashgui.la
 lib/libgnashplayer.la
 lib/libgnashserver.la
-lib/libltdl.la
 man/man1/gnash.1
 share/gnash/GnashG.png
 share/gnash/gnash_128_96.ico
