@@ -1,0 +1,165 @@
+$NetBSD: patch-ar,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+
+--- ioemu/vl.c.orig	2007-05-18 16:45:21.000000000 +0200
++++ ioemu/vl.c	2007-06-12 23:59:27.000000000 +0200
+@@ -37,14 +37,17 @@
+ #include <sys/poll.h>
+ #include <sys/mman.h>
+ #include <sys/ioctl.h>
++#include <sys/resource.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <net/if.h>
++#include <net/if_tap.h>
+ #include <arpa/inet.h>
+ #include <dirent.h>
+ #include <netdb.h>
+ #ifdef _BSD
+ #include <sys/stat.h>
+-#ifndef __APPLE__
++#ifndef _BSD
+ #include <libutil.h>
+ #endif
+ #else
+@@ -89,8 +92,8 @@
+ #include "exec-all.h"
+ 
+ #include <xen/hvm/params.h>
+-#define DEFAULT_NETWORK_SCRIPT "/etc/xen/qemu-ifup"
+-#define DEFAULT_BRIDGE "xenbr0"
++#define DEFAULT_NETWORK_SCRIPT "@XENDCONFDIR@/scripts/qemu-ifup"
++#define DEFAULT_BRIDGE "bridge0"
+ 
+ //#define DEBUG_UNUSED_IOPORT
+ //#define DEBUG_IOPORT
+@@ -1663,7 +1666,7 @@
+     return 0;
+ }
+ 
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__NetBSD__)
+ CharDriverState *qemu_chr_open_pty(void)
+ {
+     struct termios tty;
+@@ -1814,7 +1817,7 @@
+     chr->chr_ioctl = tty_serial_ioctl;
+     return chr;
+ }
+-
++#if defined(__linux__)
+ static int pp_ioctl(CharDriverState *chr, int cmd, void *arg)
+ {
+     int fd = (int)chr->opaque;
+@@ -1877,13 +1880,14 @@
+     chr->chr_ioctl = pp_ioctl;
+     return chr;
+ }
++#endif /* __linux__ */
+ 
+ #else
+ CharDriverState *qemu_chr_open_pty(void)
+ {
+     return NULL;
+ }
+-#endif
++#endif /* __linux__ || __NetBSD__ */
+ 
+ #endif /* !defined(_WIN32) */
+ 
+@@ -3126,7 +3130,7 @@
+     fclose(f);
+     atexit(smb_exit);
+ 
+-    snprintf(smb_cmdline, sizeof(smb_cmdline), "/usr/sbin/smbd -s %s",
++    snprintf(smb_cmdline, sizeof(smb_cmdline), "@PREFIX@/sbin/smbd -s %s",
+              smb_conf);
+     
+     slirp_add_exec(0, smb_cmdline, 4, 139);
+@@ -3190,16 +3194,26 @@
+     int fd;
+     char *dev;
+     struct stat s;
++    struct ifreq ifr;
+ 
+     fd = open("/dev/tap", O_RDWR);
+     if (fd < 0) {
+-        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation\n");
++        fprintf(stderr, "warning: could not open /dev/tap: no virtual network emulation: %s\n", strerror(errno));
+         return -1;
+     }
+ 
++#ifdef TAPGIFNAME
++    if (ioctl (fd, TAPGIFNAME, (void*)&ifr) < 0) {
++	fprintf(stderr, "warning: could not open get tap name: %s\n",
++	    strerror(errno));
++	return -1;
++    }
++    pstrcpy(ifname, ifname_size, ifr.ifr_name);
++#else
+     fstat(fd, &s);
+     dev = devname(s.st_rdev, S_IFCHR);
+     pstrcpy(ifname, ifname_size, dev);
++#endif
+ 
+     fcntl(fd, F_SETFL, O_NONBLOCK);
+     return fd;
+@@ -5934,7 +5948,6 @@
+     nr_buckets = (((MAX_MCACHE_SIZE >> PAGE_SHIFT) +
+                    (1UL << (MCACHE_BUCKET_SHIFT - PAGE_SHIFT)) - 1) >>
+                   (MCACHE_BUCKET_SHIFT - PAGE_SHIFT));
+-    fprintf(logfile, "qemu_map_cache_init nr_buckets = %lx\n", nr_buckets);
+ 
+     /*
+      * Use mmap() directly: lets us allocate a big hash table with no up-front
+@@ -5943,8 +5956,9 @@
+      */
+     size = nr_buckets * sizeof(struct map_cache);
+     size = (size + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1);
++    fprintf(logfile, "qemu_map_cache_init nr_buckets = %lx size %lu\n", nr_buckets, size);
+     mapcache_entry = mmap(NULL, size, PROT_READ|PROT_WRITE,
+-                          MAP_SHARED|MAP_ANONYMOUS, 0, 0);
++                          MAP_SHARED|MAP_ANONYMOUS, -1, 0);
+     if (mapcache_entry == MAP_FAILED) {
+         errno = ENOMEM;
+         return -1;
+@@ -6081,6 +6095,7 @@
+     unsigned long ioreq_pfn;
+     extern void *shared_page;
+     extern void *buffered_io_page;
++    struct rlimit rl;
+ #ifdef __ia64__
+     unsigned long nr_pages;
+     xen_pfn_t *page_array;
+@@ -6089,6 +6104,32 @@
+ 
+     char qemu_dm_logfilename[64];
+ 
++    /* XXX required for now */
++    if (setenv("PTHREAD_DIAGASSERT", "A", 1) != 0)
++       perror("setenv");
++    if (getrlimit(RLIMIT_STACK, &rl) != 0) {
++       perror("getrlimit(RLIMIT_STACK)");
++       exit(1);
++    }
++    rl.rlim_cur = rl.rlim_max;
++    if (setrlimit(RLIMIT_STACK, &rl) != 0)
++       perror("setrlimit(RLIMIT_STACK)");
++    if (getrlimit(RLIMIT_DATA, &rl) != 0) {
++       perror("getrlimit(RLIMIT_DATA)");
++       exit(1);
++    }
++    rl.rlim_cur = rl.rlim_max;
++    if (setrlimit(RLIMIT_DATA, &rl) != 0)
++       perror("setrlimit(RLIMIT_DATA)");
++    rl.rlim_cur = RLIM_INFINITY;
++    rl.rlim_max = RLIM_INFINITY;
++    if (setrlimit(RLIMIT_RSS, &rl) != 0)
++       perror("setrlimit(RLIMIT_RSS)");
++    rl.rlim_cur = RLIM_INFINITY;
++    rl.rlim_max = RLIM_INFINITY;
++    if (setrlimit(RLIMIT_MEMLOCK, &rl) != 0)
++       perror("setrlimit(RLIMIT_MEMLOCK)");
++
+     LIST_INIT (&vm_change_state_head);
+ #ifndef _WIN32
+     {
