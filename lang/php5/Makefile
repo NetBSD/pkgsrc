@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.48.2.1 2007/05/15 23:42:38 salo Exp $
+# $NetBSD: Makefile,v 1.48.2.2 2007/06/14 23:34:08 salo Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
+PKGREVISION=		2
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 5
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake lex
 LIBTOOL_OVERRIDE=	# empty
@@ -28,17 +31,31 @@ CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 
+MAKE_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
+
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
+SUBST_CLASSES+=		cgi
+SUBST_MESSAGE.cgi=	Fixing CGI path.
+SUBST_STAGE.cgi=	pre-configure
+SUBST_FILES.cgi=	configure
+SUBST_SED.cgi=		-e 's,@CGIDIR@,${CGIDIR},g'
+
+pre-install:
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${CGIDIR:Q}
+
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
-	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
-	${INSTALL_DATA_DIR} ${CGIDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/php
-	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php \
+		${DESTDIR:Q}${PREFIX:Q}/bin/php
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/php.1
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php-cgi \
+		${DESTDIR:Q}${CGIDIR:Q}/php
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${EGDIR:Q}
+	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended \
+		${DESTDIR:Q}${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/share/php
+	${INSTALL_DATA} ${WRKSRC}/php.gif ${DESTDIR:Q}${PREFIX:Q}/share/php
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.2.12.1 2007/06/14 23:34:09 salo Exp $
+
+--- configure.orig	2007-05-30 20:50:52.000000000 +0200
++++ configure
+@@ -11985,7 +11985,7 @@ EOF
+ 
+     echo "$ac_t""$PHP_ENABLE_FASTCGI" 1>&6
+ 
+-    INSTALL_IT="@echo \"Installing PHP CGI binary: \$(INSTALL_ROOT)\$(bindir)/\"; \$(INSTALL) -m 0755 \$(SAPI_CGI_PATH) \$(INSTALL_ROOT)\$(bindir)/\$(program_prefix)php-cgi\$(program_suffix)\$(EXEEXT)"
++    INSTALL_IT="@echo \"Installing PHP CGI binary: \$(INSTALL_ROOT)@CGIDIR@/\"; \$(INSTALL) -m 0755 \$(SAPI_CGI_PATH) \$(INSTALL_ROOT)@CGIDIR@/php"
+     
+   PHP_SAPI=cgi
+   
