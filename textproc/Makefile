@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2007/06/11 19:13:56 heinz Exp $
+# $NetBSD: Makefile,v 1.373 2007/06/14 18:54:59 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -115,6 +115,7 @@ SUBDIR+=	ispell-russian-io
 SUBDIR+=	ispell-slovak
 SUBDIR+=	ispell-spanish
 SUBDIR+=	ispell-svenska
+SUBDIR+=	itex2MML
 SUBDIR+=	ja-grep
 SUBDIR+=	ja-groff
 SUBDIR+=	ja-sed
