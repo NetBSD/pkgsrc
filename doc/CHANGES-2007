@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1380 2007/06/14 19:47:32 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.1381 2007/06/14 23:58:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Deleted sysutils/xenkernel30 [bouyer 2007-06-14]
 	Deleted sysutils/xentools30 [bouyer 2007-06-14]
 	Deleted sysutils/xentools30-hvm [bouyer 2007-06-14]
+	Updated graphics/gphoto2 to 2.3.1nb1 [obache 2007-06-14]
