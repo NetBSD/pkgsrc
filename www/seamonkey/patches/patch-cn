@@ -1,6 +1,6 @@
-$NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
+$NetBSD: patch-cn,v 1.2.6.1 2007/06/14 00:18:39 salo Exp $
 
---- extensions/transformiix/source/xpath/XFormsFunctionCall.cpp.orig	2006-06-13 22:58:31.000000000 +0200
+--- extensions/transformiix/source/xpath/XFormsFunctionCall.cpp.orig	2007-05-03 03:37:36.000000000 +0200
 +++ extensions/transformiix/source/xpath/XFormsFunctionCall.cpp
 @@ -104,7 +104,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
          res = (res/i);
@@ -20,16 +20,16 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
        nsresult rv = xformsService->GetDaysFromDateTime(date, &result);
        if (NS_SUCCEEDED(rv)) {
          res = result;
-@@ -222,7 +222,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -211,7 +211,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
        NS_ENSURE_SUCCESS(rv, rv);
  
        PRInt32 index = 0;
 -      double res = Double::NaN;
 +      double res = Double::NaN();
-       rv = xformsService->GetRepeatIndex(repeatEle, &index);
+       rv = xformsService->GetRepeatIndexById(mResolverNode, indexId, &index);
        NS_ENSURE_SUCCESS(rv, rv);
  
-@@ -354,7 +354,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -344,7 +344,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
                                        getter_AddRefs(nodes));
        NS_ENSURE_SUCCESS(rv, rv);
     
@@ -38,7 +38,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
        PRInt32 i;
        for (i = 0; i < nodes->size(); ++i) {
          double test;
-@@ -362,7 +362,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -352,7 +352,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
          txXPathNodeUtils::appendNodeValue(nodes->get(i), resultStr);
          test = Double::toDouble(resultStr);
          if (Double::isNaN(test)) {
@@ -47,7 +47,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
            break;
          }
          if (test > res || i == 0) {
-@@ -382,7 +382,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -372,7 +372,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
                                        getter_AddRefs(nodes));
        NS_ENSURE_SUCCESS(rv, rv);
     
@@ -56,7 +56,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
        PRInt32 i;
        for (i = 0; i < nodes->size(); ++i) {
          double test;
-@@ -390,7 +390,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -380,7 +380,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
          txXPathNodeUtils::appendNodeValue(nodes->get(i), resultStr);
          test = Double::toDouble(resultStr);
          if (Double::isNaN(test)) {
@@ -65,7 +65,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
            break;
          }
          if ((test < res) || (i==0)) {
-@@ -413,7 +413,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -403,7 +403,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
        NS_ENSURE_SUCCESS(rv, rv);
  
        PRInt32 result = 0;
@@ -74,7 +74,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
        nsresult rv = xformsService->GetMonths(duration, &result);
        if (NS_SUCCEEDED(rv)) {
          res = result;
-@@ -489,7 +489,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -479,7 +479,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
            // up the chain
            return rv;
          }
@@ -83,7 +83,7 @@ $NetBSD: patch-cn,v 1.2 2006/07/31 11:58:04 ghen Exp $
        }
  
        return aContext->recycler()->getNumberResult(res, aResult);
-@@ -514,7 +514,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
+@@ -504,7 +504,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
            // up the chain
            return rv;
          }

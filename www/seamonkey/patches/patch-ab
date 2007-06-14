@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2007/01/20 10:54:44 ghen Exp $
+$NetBSD: patch-ab,v 1.6.2.1 2007/06/14 00:18:39 salo Exp $
 
 --- configure.in.orig	2007-01-11 19:45:06.000000000 +0100
 +++ configure.in
@@ -48,7 +48,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/20 10:54:44 ghen Exp $
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
 -       DSO_LDOPTS='-G -Qoption ld -z,muldefs'
-+       DSO_LDOPTS='-G -z,muldefs'
++       DSO_LDOPTS='-G -z muldefs'
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
