@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/13 23:56:11 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/14 01:09:42 jlam Exp $
 
 DISTNAME=	dtach-0.7
 CATEGORIES=	misc
@@ -13,6 +13,8 @@ BUILD_TARGET=	dtach
 
 DOCS=		COPYING README dtach.spec
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/dtach ${PREFIX:Q}/bin
