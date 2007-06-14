@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/06/10 04:55:06 hira Exp $
+# $NetBSD: Makefile,v 1.20 2007/06/14 14:31:12 hira Exp $
 #
 
 OO_VER=			2.2.0
-PKGREVISION=		4
+PKGREVISION=		5
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -62,6 +62,9 @@ CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
 
 # XXX: Error in OOo internal libsndfile.
 CONFIGURE_ARGS+=	--disable-pasf --without-nas
+
+# systray quickstarter is broken with mutex handling.
+CONFIGURE_ARGS+=	--disable-systray
 
 # Disable Java.
 CONFIGURE_ARGS+=	--without-java --disable-odk --disable-gcjaot
