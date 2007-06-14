@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/05/30 12:29:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/06/14 08:56:11 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 ${REMOTE}bin/gimp-remote-2.3
@@ -122,6 +122,7 @@ include/gimp-2.0/libgimpcolor/gimpadaptivesupersample.h
 include/gimp-2.0/libgimpcolor/gimpbilinear.h
 include/gimp-2.0/libgimpcolor/gimpcmyk.h
 include/gimp-2.0/libgimpcolor/gimpcolor.h
+include/gimp-2.0/libgimpcolor/gimpcolormanaged.h
 include/gimp-2.0/libgimpcolor/gimpcolorspace.h
 include/gimp-2.0/libgimpcolor/gimpcolortypes.h
 include/gimp-2.0/libgimpcolor/gimphsl.h
@@ -1114,6 +1115,7 @@ share/gtk-doc/html/libgimpcolor/left.png
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpAdaptiveSupersample.html
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpBilinear.html
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpCMYK.html
+share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpColorManaged.html
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpColorSpace.html
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpHSV.html
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpRGB.html
