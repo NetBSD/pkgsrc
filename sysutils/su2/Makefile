@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/06/14 17:50:09 gdt Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -9,7 +9,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.ccs.neu.edu/pub/sysadmin/
 COMMENT=		Enhanced su, users su with own password + more
 
-LICENSE=		no-profit
+# XXX add in license from distfile
+LICENSE=		su2-license
+RESTRICTED=		may not be sold for profit
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 NO_CONFIGURE=		yes
 
 SUBST_CLASSES+=		preproc
