@@ -1,0 +1,16 @@
+$NetBSD: patch-be,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- python/xen/lowlevel/acm/acm.c.orig	2006-10-17 00:18:15.000000000 +0200
++++ python/xen/lowlevel/acm/acm.c	2006-10-17 00:18:25.000000000 +0200
+@@ -26,10 +26,10 @@
+ #include <stdlib.h>
+ #include <sys/ioctl.h>
+ #include <netinet/in.h>
++#include <xenctrl.h>
+ #include <xen/acm.h>
+ #include <xen/acm_ops.h>
+ 
+-#include <xenctrl.h>
+ 
+ #define PERROR(_m, _a...) \
+ fprintf(stderr, "ERROR: " _m " (%d = %s)\n" , ## _a ,    \

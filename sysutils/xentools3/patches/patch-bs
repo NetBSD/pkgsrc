@@ -1,0 +1,49 @@
+$NetBSD: patch-bs,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- xenstore/Makefile.orig	2007-05-18 16:45:21.000000000 +0200
++++ xenstore/Makefile	2007-05-27 14:41:40.000000000 +0200
+@@ -29,6 +29,7 @@
+ 
+ XENSTORED_OBJS_$(CONFIG_Linux) = xenstored_linux.o
+ XENSTORED_OBJS_$(CONFIG_SunOS) = xenstored_solaris.o
++XENSTORED_OBJS_$(CONFIG_NetBSD) = xenstored_netbsd.o
+ 
+ XENSTORED_OBJS += $(XENSTORED_OBJS_y)
+ 
+@@ -168,22 +169,20 @@
+ 
+ .PHONY: install
+ install: all
+-	$(INSTALL_DIR) $(DESTDIR)/var/run/xenstored
+-	$(INSTALL_DIR) $(DESTDIR)/var/lib/xenstored
+-	$(INSTALL_DIR) $(DESTDIR)/usr/bin
+-	$(INSTALL_DIR) $(DESTDIR)/usr/sbin
+-	$(INSTALL_DIR) $(DESTDIR)/usr/include
+-	$(INSTALL_PROG) xenstored $(DESTDIR)/usr/sbin
+-	$(INSTALL_PROG) $(CLIENTS) $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) xenstore-control $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) xenstore-ls $(DESTDIR)/usr/bin
+-	$(INSTALL_DIR) $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_PROG) libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)
+-	ln -sf libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)/libxenstore.so.$(MAJOR)
+-	ln -sf libxenstore.so.$(MAJOR) $(DESTDIR)/usr/$(LIBDIR)/libxenstore.so
+-	$(INSTALL_DATA) libxenstore.a $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) xs.h $(DESTDIR)/usr/include
+-	$(INSTALL_DATA) xs_lib.h $(DESTDIR)/usr/include
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
++	$(BSD_INSTALL_DATA_DIR) -p $(PREFIX)/include
++	$(BSD_INSTALL_PROGRAM) xenstored $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) $(CLIENTS) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenstore-control $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenstore-ls $(PREFIX)/bin
++	$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxenstore.so.$(MAJOR).$(MINOR) $(PREFIX)/lib
++	ln -sf libxenstore.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxenstore.so.$(MAJOR)
++	ln -sf libxenstore.so.$(MAJOR) $(PREFIX)/lib/libxenstore.so
++	$(BSD_INSTALL_LIB) libxenstore.a $(PREFIX)/lib
++	$(BSD_INSTALL_DATA) xs.h $(PREFIX)/include
++	$(BSD_INSTALL_DATA) xs_lib.h $(PREFIX)/include
+ 
+ -include $(PROG_DEP)
+ 
