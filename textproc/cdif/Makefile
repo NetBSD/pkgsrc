@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/14 18:33:51 gdt Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -9,7 +9,11 @@ EXTRACT_SUFX=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Word context diff
 
-LICENSE=		no-commercial-use
+# XXX add cdif-license
+LICENSE=		cdif-license
+RESTRICTED=		Redistribution only for "non-commercial purpose".
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		perl:run
