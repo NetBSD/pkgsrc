@@ -1,0 +1,13 @@
+$NetBSD: patch-cu,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- libxc/xc_dom_boot.c.orig	2007-05-27 17:55:28.000000000 +0200
++++ libxc/xc_dom_boot.c	2007-05-27 17:55:46.000000000 +0200
+@@ -163,7 +163,7 @@
+     }
+ 
+     ptr = mmap(NULL, count << page_shift, PROT_READ | PROT_WRITE,
+-               MAP_SHARED, dom->guest_xc, 0);
++               MAP_SHARED | MAP_ANON, -1, 0);
+     if ( ptr == MAP_FAILED )
+     {
+         xc_dom_panic(XC_INTERNAL_ERROR,

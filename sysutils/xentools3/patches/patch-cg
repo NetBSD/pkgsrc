@@ -1,0 +1,42 @@
+$NetBSD: patch-cg,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- xenstat/xentop/xentop.c.orig	2006-10-04 04:28:30.000000000 +0200
++++ xenstat/xentop/xentop.c	2006-10-17 00:16:10.000000000 +0200
+@@ -18,7 +18,8 @@
+  *  along with this program; if not, write to the Free Software
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+-#include <curses.h>
++#include <ncurses.h>
++#define vw_printw vwprintw
+ #include <ctype.h>
+ #include <errno.h>
+ #include <stdio.h>
+@@ -27,7 +28,11 @@
+ #include <sys/time.h>
+ #include <time.h>
+ #include <unistd.h>
++#ifndef __NetBSD__
+ #include <linux/kdev_t.h>
++#else
++#include <stdarg.h>
++#endif
+ 
+ #include <xenstat.h>
+ 
+@@ -895,6 +900,7 @@
+ /* Output all VBD information */
+ void do_vbd(xenstat_domain *domain)
+ {
++#ifdef notyet
+ 	int i = 0;
+ 	xenstat_vbd *vbd;
+ 	unsigned num_vbds = 0;
+@@ -911,6 +917,7 @@
+ 		      xenstat_vbd_rd_reqs(vbd),
+ 		      xenstat_vbd_wr_reqs(vbd));
+ 	}
++#endif
+ }
+ 
+ static void top(void)

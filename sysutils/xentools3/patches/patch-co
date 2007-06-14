@@ -1,0 +1,40 @@
+$NetBSD: patch-co,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- ../docs/man/xm.pod.1.orig	2007-01-08 16:00:44.000000000 +0100
++++ ../docs/man/xm.pod.1	2007-04-28 19:21:52.000000000 +0200
+@@ -72,7 +72,7 @@
+ Name=Value combinations.
+ 
+ Configfile can either be an absolute path to a file, or a relative
+-path to a file located in /etc/xen.
++path to a file located in @XENDCONFDIR@.
+ 
+ Create will return B<as soon> as the domain is started.  This B<does
+ not> mean the guest OS in the domain has actually booted, or is
+@@ -97,7 +97,7 @@
+ 
+   xm create Fedora4
+ 
+-This creates a domain with the file /etc/xen/Fedora4, and returns as
++This creates a domain with the file @XENDCONFDIR@/Fedora4, and returns as
+ soon as it is run.
+ 
+ =item I<without config file>
+@@ -798,7 +798,7 @@
+ name pre-fix for the policy xml file. The preceding name parts are
+ translated into the local path pointing to the policy xml file
+ relative to the global policy root directory
+-(/etc/xen/acm-security/policies). For example,
++(@XENDCONFDIR@/acm-security/policies). For example,
+ example.chwall_ste.client_v1 denotes the policy file
+ example/chwall_ste/client_v1-security_policy.xml relative to the
+ global policy root directory.
+@@ -889,7 +889,7 @@
+ =over 4
+ 
+ This step creates client_v1.map and client_v1.bin files in
+-/etc/xen/acm-security/policies/example/chwall_ste.
++@XENDCONFDIR@/acm-security/policies/example/chwall_ste.
+ 
+     xm makepolicy example.chwall_ste.client_v1
+ 
