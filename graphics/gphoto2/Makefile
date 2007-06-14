@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2007/01/02 18:33:50 adam Exp $
+# $NetBSD: Makefile,v 1.39 2007/06/14 23:58:31 obache Exp $
 
 DISTNAME=	gphoto2-2.3.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,9 @@ CONFIGURE_ARGS+=	--with-aalib-prefix=${BUILDLINK_PREFIX.aalib}
 CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
 CONFIGURE_ARGS+=	--with-exif-prefix=${BUILDLINK_PREFIX.libexif}
 CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
+
+# uses rl_completion_matches() (NetBSD 3.* don't have) and rl_copy_text()
+USE_GNU_READLINE=	yes
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
