@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2007/03/07 22:02:25 joerg Exp $
+$NetBSD: distinfo,v 1.36.2.1 2007/06/14 01:42:49 salo Exp $
 
-SHA1 (thunderbird-1.5.0.10-source.tar.bz2) = a6467c946f9e668bcf7b3a06dcaeceb601b98fce
-RMD160 (thunderbird-1.5.0.10-source.tar.bz2) = 926484cd1880e7921bf10ba0774064e43acc9283
-Size (thunderbird-1.5.0.10-source.tar.bz2) = 36159990 bytes
+SHA1 (thunderbird-1.5.0.12-source.tar.bz2) = 79ce2996e18b76c23981753f1084f5c914483d74
+RMD160 (thunderbird-1.5.0.12-source.tar.bz2) = 0632eb7764d6c73271adc05387338c0770d82fba
+Size (thunderbird-1.5.0.12-source.tar.bz2) = 36172395 bytes
 SHA1 (patch-aa) = ff3586c00ff8d3fa6a1bda639116778169ad4466
 SHA1 (patch-ab) = 824a3ce1f608e8fff16e2366c7962f23a4321b10
 SHA1 (patch-ac) = 02804b8276b4b9552ea4587e6c020b87ddb59cf0
