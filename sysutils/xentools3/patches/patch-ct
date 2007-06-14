@@ -1,0 +1,56 @@
+$NetBSD: patch-ct,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- python/xen/xend/XendNode.py.orig	2007-05-18 16:45:21.000000000 +0200
++++ python/xen/xend/XendNode.py	2007-05-27 17:30:50.000000000 +0200
+@@ -106,17 +106,15 @@
+             # We can run off the end of the cpuinfo list if domain0 does not
+             # have #vcpus == #pcpus. In that case we just replicate one that's
+             # in the hash table.
+-            if not cpuinfo.has_key(number):
+-                number = cpuinfo.keys()[0]
+             if arch.type == "x86":
+                 self.cpus[u].update(
+                     { 'host'     : self.uuid,
+                       'features' : cpu_features,
+-                      'speed'    : int(float(cpuinfo[number]['cpu MHz'])),
+-                      'vendor'   : cpuinfo[number]['vendor_id'],
+-                      'modelname': cpuinfo[number]['model name'],
+-                      'stepping' : cpuinfo[number]['stepping'],
+-                      'flags'    : cpuinfo[number]['flags'],
++                      'speed'    : 0,
++                      'vendor'   : 'unkown',
++                      'modelname': 'unkown',
++                      'stepping' : 'unkown',
++                      'flags'    : 'unkown',
+                     })
+             elif arch.type == "ia64":
+                 self.cpus[u].update(
+@@ -627,27 +625,7 @@
+ 
+ def parse_proc_cpuinfo():
+     cpuinfo = {}
+-    f = file('/proc/cpuinfo', 'r')
+-    try:
+-        p = -1
+-        d = {}
+-        for line in f:
+-            keyvalue = line.split(':')
+-            if len(keyvalue) != 2:
+-                continue
+-            key = keyvalue[0].strip()
+-            val = keyvalue[1].strip()
+-            if key == 'processor':
+-                if p != -1:
+-                    cpuinfo[p] = d
+-                p = int(val)
+-                d = {}
+-            else:
+-                d[key] = val
+-        cpuinfo[p] = d
+-        return cpuinfo
+-    finally:
+-        f.close()
++    return cpuinfo
+ 
+ 
+ def instance():

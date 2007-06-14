@@ -1,0 +1,21 @@
+$NetBSD: patch-cf,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- xenstat/libxenstat/Makefile.orig	2007-05-18 16:45:21.000000000 +0200
++++ xenstat/libxenstat/Makefile	2007-05-27 14:45:56.000000000 +0200
+@@ -31,6 +31,7 @@
+ OBJECTS-y=src/xenstat.o
+ OBJECTS-$(CONFIG_Linux) += src/xenstat_linux.o
+ OBJECTS-$(CONFIG_SunOS) += src/xenstat_solaris.o
++OBJECTS-$(CONFIG_NetBSD) += src/xenstat_netbsd.o
+ SONAME_FLAGS=-Wl,$(SONAME_LDFLAG) -Wl,libxenstat.so.$(MAJOR)
+ 
+ WARN_FLAGS=-Wall -Werror
+@@ -97,7 +98,7 @@
+ all-bindings: perl-bindings python-bindings
+ 
+ # The install-bindings target installs all the language bindings
+-install-bindings: install-perl-bindings install-python-bindings
++install-bindings: install-python-bindings
+ 
+ $(BINDINGS): $(SHLIB) $(SHLIB_LINKS) src/xenstat.h
+ 

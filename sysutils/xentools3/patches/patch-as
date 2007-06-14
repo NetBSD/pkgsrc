@@ -1,0 +1,45 @@
+$NetBSD: patch-as,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- libxc/Makefile.orig	2007-05-18 16:45:21.000000000 +0200
++++ libxc/Makefile	2007-05-27 13:46:42.000000000 +0200
+@@ -23,6 +23,7 @@
+ CTRL_SRCS-$(CONFIG_Linux) += xc_linux.c
+ CTRL_SRCS-$(CONFIG_SunOS) += xc_solaris.c
+ CTRL_SRCS-$(CONFIG_X86_Linux) += xc_ptrace.c xc_ptrace_core.c
++CTRL_SRCS-$(CONFIG_NetBSD) += xc_netbsd.c
+ 
+ GUEST_SRCS-y :=
+ GUEST_SRCS-y += xg_private.c
+@@ -102,19 +103,19 @@
+ 
+ .PHONY: install
+ install: build
+-	[ -d $(DESTDIR)/usr/$(LIBDIR) ] || $(INSTALL_DIR) $(DESTDIR)/usr/$(LIBDIR)
+-	[ -d $(DESTDIR)/usr/include ] || $(INSTALL_DIR) $(DESTDIR)/usr/include
+-	$(INSTALL_PROG) libxenctrl.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) libxenctrl.a $(DESTDIR)/usr/$(LIBDIR)
+-	ln -sf libxenctrl.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)/libxenctrl.so.$(MAJOR)
+-	ln -sf libxenctrl.so.$(MAJOR) $(DESTDIR)/usr/$(LIBDIR)/libxenctrl.so
+-	$(INSTALL_DATA) xenctrl.h $(DESTDIR)/usr/include
+-
+-	$(INSTALL_PROG) libxenguest.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) libxenguest.a $(DESTDIR)/usr/$(LIBDIR)
+-	ln -sf libxenguest.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)/libxenguest.so.$(MAJOR)
+-	ln -sf libxenguest.so.$(MAJOR) $(DESTDIR)/usr/$(LIBDIR)/libxenguest.so
+-	$(INSTALL_DATA) xenguest.h $(DESTDIR)/usr/include
++	$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/include
++	$(BSD_INSTALL_LIB) libxenctrl.so.$(MAJOR).$(MINOR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxenctrl.a  $(PREFIX)/lib
++	ln -sf libxenctrl.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxenctrl.so.$(MAJOR)
++	ln -sf libxenctrl.so.$(MAJOR) $(PREFIX)/lib/libxenctrl.so
++	$(BSD_INSTALL_DATA) xenctrl.h $(PREFIX)/include
++
++	$(BSD_INSTALL_LIB) libxenguest.so.$(MAJOR).$(MINOR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxenguest.a $(PREFIX)/lib
++	ln -sf libxenguest.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxenguest.so.$(MAJOR)
++	ln -sf libxenguest.so.$(MAJOR) $(PREFIX)/lib/libxenguest.so
++	$(BSD_INSTALL_DATA) xenguest.h $(PREFIX)/include
+ 
+ .PHONY: TAGS
+ TAGS:

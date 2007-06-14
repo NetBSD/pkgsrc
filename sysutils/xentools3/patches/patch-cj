@@ -1,0 +1,23 @@
+$NetBSD: patch-cj,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- python/xen/xend/osdep.py.orig	2007-04-25 22:22:18.000000000 +0200
++++ python/xen/xend/osdep.py	2007-04-25 22:23:03.000000000 +0200
+@@ -22,9 +22,11 @@
+ _scripts_dir = {
+     "Linux": "/etc/xen/scripts",
+     "SunOS": "/usr/lib/xen/scripts",
++    "NetBSD": "@XENDCONFDIR@/scripts",
+ }
+ 
+ _xend_autorestart = {
++    "NetBSD": True,
+     "Linux": True,
+     "SunOS": False,
+ }
+@@ -32,5 +34,5 @@
+ def _get(var, default=None):
+     return var.get(os.uname()[0], default)
+ 
+-scripts_dir = _get(_scripts_dir, "/etc/xen/scripts")
++scripts_dir = _get(_scripts_dir, "@XENDCONFDIR@/scripts")
+ xend_autorestart = _get(_xend_autorestart)

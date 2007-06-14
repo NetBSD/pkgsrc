@@ -1,0 +1,22 @@
+$NetBSD: patch-cr,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- libxc/xc_dom_core.c.orig	2007-05-27 15:17:22.000000000 +0200
++++ libxc/xc_dom_core.c	2007-05-27 15:17:39.000000000 +0200
+@@ -122,7 +122,7 @@
+     memset(block, 0, sizeof(*block));
+     block->mmap_len = size;
+     block->mmap_ptr = mmap(NULL, block->mmap_len,
+-                           PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS,
++                           PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON,
+                            -1, 0);
+     if ( block->mmap_ptr == MAP_FAILED )
+     {
+@@ -354,7 +354,7 @@
+     {
+         mode = "anonymous memory";
+         phys->ptr = mmap(NULL, phys->count << page_shift,
+-                         PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS,
++                         PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON,
+                          -1, 0);
+         if ( phys->ptr == MAP_FAILED )
+         {
