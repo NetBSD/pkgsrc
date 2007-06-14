@@ -1,0 +1,24 @@
+$NetBSD: patch-cc,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+
+--- console/client/main.c.orig	2007-05-18 16:45:21.000000000 +0200
++++ console/client/main.c	2007-05-27 14:43:14.000000000 +0200
+@@ -34,7 +34,11 @@
+ #include <sys/select.h>
+ #include <err.h>
+ #include <errno.h>
++#ifndef __NetBSD__
+ #include <pty.h>
++#endif
++#include <string.h>
++
+ 
+ #include "xs.h"
+ 
+@@ -289,6 +293,7 @@
+ 		err(errno, "Could not read tty from store");
+ 	}
+ 
++	init_term(spty, &attr);
+ 	init_term(STDIN_FILENO, &attr);
+ 	console_loop(spty, xs, path);
+ 	restore_term(STDIN_FILENO, &attr);
