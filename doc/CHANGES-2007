@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1374 2007/06/14 06:02:06 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1375 2007/06/14 08:57:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-XML-SAX-Expat to 0.39 [heinz 2007-06-13]
 	Updated textproc/p5-XML-LibXML to 1.63 [heinz 2007-06-13]
 	Updated multimedia/gnash to 0.8.0nb1 [wiz 2007-06-14]
+	Updated graphics/gimp24 to 2.3.18 [adam 2007-06-14]
