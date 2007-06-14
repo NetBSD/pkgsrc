@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.38 2007/06/14 00:19:11 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.39 2007/06/14 01:43:09 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -81,3 +81,5 @@ Pullup ticket 2106 - requested by ghen
 security updates for firefox
 Pullup ticket 2108 - requested by ghen
 security update for seamonkey
+Pullup ticket 2109 - requested by ghen
+security update for thunderbird
