@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/03/07 21:32:56 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2007/06/14 00:18:40 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -359,10 +359,6 @@ lib/${MOZILLA}/components/xuldoc.xpt
 lib/${MOZILLA}/components/xultmpl.xpt
 lib/${MOZILLA}/defaults/autoconfig/platform.js
 lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
-lib/${MOZILLA}/defaults/isp/US/movemail.rdf
-lib/${MOZILLA}/defaults/isp/movemail.rdf
-lib/${MOZILLA}/defaults/messenger/SpamAssassin.sfd
-lib/${MOZILLA}/defaults/messenger/SpamPal.sfd
 lib/${MOZILLA}/defaults/messenger/US/mailViews.dat
 lib/${MOZILLA}/defaults/messenger/mailViews.dat
 lib/${MOZILLA}/defaults/pref/browser-prefs.js
@@ -403,6 +399,9 @@ lib/${MOZILLA}/icons/mozicon16.xpm
 lib/${MOZILLA}/icons/mozicon50.xpm
 lib/${MOZILLA}/init.d/README
 lib/${MOZILLA}/install.rdf
+lib/${MOZILLA}/isp/SpamAssassin.sfd
+lib/${MOZILLA}/isp/SpamPal.sfd
+lib/${MOZILLA}/isp/movemail.rdf
 @comment libfreebl.chk
 lib/${MOZILLA}/libsoftokn3.chk
 lib/${MOZILLA}/res/EditorOverride.css
@@ -1839,6 +1838,7 @@ include/${MOZILLA}/msgcompose/nsIMsgComposeProgressParams.h
 include/${MOZILLA}/msgcompose/nsIMsgComposeSecure.h
 include/${MOZILLA}/msgcompose/nsIMsgComposeService.h
 include/${MOZILLA}/msgcompose/nsIMsgQuote.h
+include/${MOZILLA}/msgcompose/nsIMsgQuotingOutputStreamListener.h
 include/${MOZILLA}/msgcompose/nsIMsgRecipientArray.h
 include/${MOZILLA}/msgcompose/nsIMsgSend.h
 include/${MOZILLA}/msgcompose/nsIMsgSendLater.h
@@ -3056,6 +3056,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm lib/${MOZILLA}/res/dtd
 @dirrm lib/${MOZILLA}/res
 @dirrm lib/${MOZILLA}/plugins
+@dirrm lib/${MOZILLA}/isp
 @dirrm lib/${MOZILLA}/init.d
 @dirrm lib/${MOZILLA}/icons
 @dirrm lib/${MOZILLA}/greprefs
@@ -3068,8 +3069,6 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm lib/${MOZILLA}/defaults/pref
 @dirrm lib/${MOZILLA}/defaults/messenger/US
 @dirrm lib/${MOZILLA}/defaults/messenger
-@dirrm lib/${MOZILLA}/defaults/isp/US
-@dirrm lib/${MOZILLA}/defaults/isp
 @dirrm lib/${MOZILLA}/defaults/autoconfig
 @dirrm lib/${MOZILLA}/defaults
 @dirrm lib/${MOZILLA}/components
