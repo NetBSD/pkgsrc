@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/06/08 07:20:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/06/15 17:47:59 drochner Exp $
 ${CARBON}include/cairo/cairo-atsui.h
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -63,9 +63,9 @@ share/gtk-doc/html/cairo/cairo.devhelp2
 share/gtk-doc/html/cairo/home.png
 share/gtk-doc/html/cairo/index.html
 share/gtk-doc/html/cairo/index.sgml
+share/gtk-doc/html/cairo/index-1.2.html
+share/gtk-doc/html/cairo/index-1.4.html
 share/gtk-doc/html/cairo/ix01.html
-share/gtk-doc/html/cairo/ix02.html
-share/gtk-doc/html/cairo/ix03.html
 share/gtk-doc/html/cairo/language-bindings.html
 share/gtk-doc/html/cairo/left.png
 share/gtk-doc/html/cairo/pt01.html

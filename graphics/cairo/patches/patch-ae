@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.7 2007/06/08 07:20:53 wiz Exp $
+$NetBSD: patch-ae,v 1.8 2007/06/15 17:47:59 drochner Exp $
 
 Fixes cairo on 8-bit pseudo color and other 8-bit displays.
 See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 
---- src/cairo-xlib-surface-private.h-orig	2007-05-02 14:43:14.184165000 +0800
-+++ src/cairo-xlib-surface-private.h	2007-05-02 14:50:38.143706000 +0800
+--- src/cairo-xlib-surface-private.h.orig	2007-05-09 15:37:39.000000000 +0200
++++ src/cairo-xlib-surface-private.h	2007-06-15 14:15:41.000000000 +0200
 @@ -39,6 +39,14 @@
  
  typedef struct _cairo_xlib_surface cairo_xlib_surface_t;
@@ -20,7 +20,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  struct _cairo_xlib_surface {
      cairo_surface_t base;
  
-@@ -88,6 +96,8 @@ struct _cairo_xlib_surface {
+@@ -89,6 +97,8 @@ struct _cairo_xlib_surface {
      cairo_filter_t filter;
      int repeat;
      XTransform xtransform;
@@ -28,10 +28,10 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 +    struct clut_r3g3b2 *clut;
  };
  
- #endif /* CAIRO_XLIB_SURFACE_PRIVATE_H */
---- src/cairo-xlib-surface.c-orig	2007-05-02 14:55:09.281677000 +0800
-+++ src/cairo-xlib-surface.c	2007-05-02 14:53:31.401179000 +0800
-@@ -446,6 +446,74 @@ _swap_ximage_to_native (XImage *ximage)
+ enum {
+--- src/cairo-xlib-surface.c.orig	2007-06-07 19:44:01.000000000 +0200
++++ src/cairo-xlib-surface.c	2007-06-15 14:13:26.000000000 +0200
+@@ -489,6 +489,74 @@ _swap_ximage_to_native (XImage *ximage)
      }
  }
  
@@ -106,7 +106,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _get_image_surface (cairo_xlib_surface_t    *surface,
  		    cairo_rectangle_int16_t *interest_rect,
-@@ -607,6 +675,36 @@ _get_image_surface (cairo_xlib_surface_t
+@@ -650,6 +718,36 @@ _get_image_surface (cairo_xlib_surface_t
      }
      else
      {
@@ -143,7 +143,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  	/*
  	 * XXX This can't work.  We must convert the data to one of the
  	 * supported pixman formats.  Pixman needs another function
-@@ -619,6 +717,8 @@ _get_image_surface (cairo_xlib_surface_t
+@@ -662,6 +760,8 @@ _get_image_surface (cairo_xlib_surface_t
  						    ximage->width,
  						    ximage->height,
  						    ximage->bytes_per_line);
@@ -152,7 +152,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  	if (image->base.status)
  	    goto FAIL;
      }
-@@ -698,6 +798,31 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
+@@ -757,6 +857,31 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
      return CAIRO_STATUS_SUCCESS;
  }
  
@@ -184,7 +184,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _draw_image_surface (cairo_xlib_surface_t   *surface,
  		     cairo_image_surface_t  *image,
-@@ -710,22 +835,54 @@ _draw_image_surface (cairo_xlib_surface_
+@@ -769,22 +894,54 @@ _draw_image_surface (cairo_xlib_surface_
  {
      XImage ximage;
      unsigned int bpp, alpha, red, green, blue;
@@ -242,7 +242,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
      ximage.bits_per_pixel = bpp;
      ximage.red_mask = red;
      ximage.green_mask = green;
-@@ -1885,6 +2042,13 @@ _cairo_xlib_surface_create_internal (Dis
+@@ -2029,6 +2186,13 @@ _cairo_xlib_surface_create_internal (Dis
      surface->have_clip_rects = FALSE;
      surface->clip_rects = surface->embedded_clip_rects;
      surface->num_clip_rects = 0;
