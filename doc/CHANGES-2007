@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1381 2007/06/14 23:58:53 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1382 2007/06/15 01:06:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2603,3 +2603,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Deleted sysutils/xentools30 [bouyer 2007-06-14]
 	Deleted sysutils/xentools30-hvm [bouyer 2007-06-14]
 	Updated graphics/gphoto2 to 2.3.1nb1 [obache 2007-06-14]
+	Added textproc/ruby-maruku version 0.5.6 [minskim 2007-06-15]
