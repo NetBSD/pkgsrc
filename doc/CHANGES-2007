@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1383 2007/06/15 08:56:35 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1384 2007/06/15 13:41:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/ruby-maruku version 0.5.6 [minskim 2007-06-15]
 	Updated mail/thunderbird to 2.0.0.4 [ghen 2007-06-15]
 	Updated mail/thunderbird-gtk1 to 2.0.0.4 [ghen 2007-06-15]
+	Updated math/mathomatic to 12.7.2 [minskim 2007-06-15]
