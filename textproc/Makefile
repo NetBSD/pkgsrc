@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2007/06/14 18:59:59 minskim Exp $
+# $NetBSD: Makefile,v 1.375 2007/06/15 01:06:58 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -316,6 +316,7 @@ SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-itex2MML
+SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-native-hyperestraier
 SUBDIR+=	ruby-nqxml
