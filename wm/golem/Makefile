@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/06/15 17:44:45 joerg Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -15,8 +15,11 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--enable-i18n
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--enable-xinerama
+.include "../../x11/libXinerama/buildlink3.mk"
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.golem
