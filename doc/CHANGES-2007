@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1384 2007/06/15 13:41:12 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1385 2007/06/15 16:09:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2607,3 +2607,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/thunderbird to 2.0.0.4 [ghen 2007-06-15]
 	Updated mail/thunderbird-gtk1 to 2.0.0.4 [ghen 2007-06-15]
 	Updated math/mathomatic to 12.7.2 [minskim 2007-06-15]
+	Updated databases/py-mssql to 0.8.0 [obache 2007-06-15]
