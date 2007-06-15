@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.35 2007/06/01 11:07:24 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.36 2007/06/15 10:26:53 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -296,6 +296,9 @@ converters    games         mbone         print         x11
   maintainer.  This benefits non-pkgsrc users of the package,
   and usually makes it possible to remove the patch in future
   version.</para>
+
+  <para>The file names of the patch files are usually of the form
+  <filename>patch-<replaceable>[a-z][a-z]</replaceable></filename>.</para>
 
 </sect2>
 <sect2 id="components.patches.sources">
