@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/02/15 22:53:09 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2007/06/15 17:16:02 joerg Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -65,7 +65,7 @@ MAKE_ENV+=	FILEFORMAT=elf
 .  endif
 .endif
 
-.if exists(${X11BASE}/lib/libXxf86dga.a)
+.if exists(${X11BASE}/lib/libXxf86dga.a) || ${X11_TYPE} != "native"
 CONFIGURE_ARGS+=	--with-extensions
 .endif
 
