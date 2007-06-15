@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/22 19:01:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/06/15 19:05:56 bouyer Exp $
+libexec/cgi-bin/upsstats.cgi
+libexec/cgi-bin/upsfstats.cgi
+libexec/cgi-bin/upsimage.cgi
+libexec/cgi-bin/multimon.cgi
 sbin/apcaccess
 sbin/apctest
 sbin/apcupsd
@@ -22,14 +26,14 @@ share/doc/html/apcupsd/support.wml
 share/doc/html/apcupsd/systems.html
 share/doc/html/apcupsd/systems.wml
 share/doc/html/apcupsd/template.inc
+share/examples/apcupsd/apccontrol
 share/examples/apcupsd/apcupsd.master.conf
 share/examples/apcupsd/apcupsd.slave.conf
-share/examples/apcupsd/apccontrol
 share/examples/apcupsd/changeme
 share/examples/apcupsd/commfailure
 share/examples/apcupsd/commok
-share/examples/apcupsd/masterconnect
-share/examples/apcupsd/mastertimeout
+share/examples/apcupsd/hosts.conf
+share/examples/apcupsd/multimon.conf
 share/examples/apcupsd/offbattery
 share/examples/apcupsd/onbattery
 share/examples/rc.d/apcupsd
