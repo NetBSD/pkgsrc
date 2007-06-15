@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/06/08 22:16:25 tron Exp $
+# $NetBSD: Makefile,v 1.33 2007/06/15 21:08:41 dmcmahill Exp $
 
 DISTNAME=	Python-2.4.4
 PKGNAME=	python24-2.4.4
@@ -109,6 +109,7 @@ PLIST_SUBST+=	NOSHLIB="@comment "
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
+LIBS+=		${BDB_LIBS}
 PLIST_SUBST+=	BSDDBMODULE=
 PLIST_SUBST+=	NOSHLIB=
 .if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
