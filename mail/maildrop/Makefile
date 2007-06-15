@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/02/22 19:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/06/15 18:15:18 jlam Exp $
 
 DISTNAME=	maildrop-2.0.2
 CATEGORIES=	security
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--disable-authlib
 
 REQD_DIRS=	${DOCDIR}
 SPECIAL_PERMS=	bin/lockmail ${REAL_ROOT_USER} ${COURIER_GROUP} 755
-SPECIAL_PERMS+=	bin/maildrop ${REAL_ROOT_USER} ${COURIER_GROUP} 4755
+SPECIAL_PERMS+=	bin/maildrop ${REAL_ROOT_USER} ${COURIER_GROUP} 4555
 
 .include "../../devel/sysexits/buildlink3.mk"
 

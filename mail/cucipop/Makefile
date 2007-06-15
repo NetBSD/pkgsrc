@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2007/06/15 18:15:17 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -20,7 +20,7 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q}
 MAKE_ENV+=	ROOT_GROUP=${ROOT_GROUP:Q}
 
 REQD_DIRS+=	${PREFIX}/share/cucipop/bulletins
-SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
+SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2555
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cucipop
 PKG_SUPPORTED_OPTIONS=	db inet6
