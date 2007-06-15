@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.101 2007/03/07 23:32:49 rillig Exp $
+# $NetBSD: build,v 1.102 2007/06/15 15:52:22 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -45,6 +45,7 @@ target=bulk-package
 makeargs=""
 noemail=no
 post_only=no
+prepare_only=no
 
 ##
 ## Functions
@@ -80,6 +81,10 @@ The following options are supported:
 
    -p | --post-build
         Run the post-build processing and generate the report only.
+
+   --prepare
+        Only generate the package database that will be used when bulk
+        building the packages.
 
    -r | --resume
 	Resume a previously interrupted bulk build.
@@ -404,6 +409,12 @@ do_bulk_build () {
 		fi
 	fi
 
+	# XXX: This looks like a hack, and indeed, the functions in this file
+	# should be reorganized to better reflect the phases of the bulk build.
+	if [ $prepare_only = yes ]; then
+		exit 0
+	fi
+
 	do_real_bulk_build
 	do_bulk_cleanup
 }
@@ -437,6 +448,10 @@ while test $# -gt 0; do
 		;;
 	-p|--post-build)
 		post_only=yes
+		shift
+		;;
+	--prepare)
+		prepare_only=yes
 		shift
 		;;
 	-r|--resume|--restart|restart)
