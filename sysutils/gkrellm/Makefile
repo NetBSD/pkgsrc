@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/05/03 20:21:27 cube Exp $
+# $NetBSD: Makefile,v 1.57 2007/06/15 18:15:21 jlam Exp $
 .include "Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config
 # NetBSD 3.99.1 and above don't have to be installed setgid.
 .if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || \
     (${OPSYS} == "NetBSD" && (!empty(OS_VERSION:M[123]*) && empty(OS_VERSION:M3.99.*))))
-SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
+SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${BINOWN} kmem 2555
 .endif
 
 NOT_FOR_PLATFORM=	IRIX-*-*

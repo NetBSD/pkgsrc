@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/01 15:14:28 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/06/15 18:15:21 jlam Exp $
 
 .include "../../sysutils/gkrellm/Makefile.common"
 
@@ -14,7 +14,7 @@ CONF_FILES=		${PREFIX:Q}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX:Q}
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly")
-SPECIAL_PERMS+=		${PREFIX:Q}/bin/gkrellmd ${ROOT_USER} kmem 2711
+SPECIAL_PERMS+=		${PREFIX:Q}/bin/gkrellmd ${BINOWN} kmem 2555
 .endif
 
 NOT_FOR_PLATFORM=	IRIX-*-*

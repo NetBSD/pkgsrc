@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/02/22 19:26:14 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/06/15 18:15:06 jlam Exp $
 
 DISTNAME=	minicom-2.1
 PKGREVISION=	2
@@ -25,7 +25,7 @@ EGDIR=			${PREFIX}/share/examples/minicom
 
 PKG_GROUPS=		dialer
 PKG_USERS=		uucp:dialer
-SPECIAL_PERMS=		${PREFIX}/bin/minicom uucp dialer 4755
+SPECIAL_PERMS=		${PREFIX}/bin/minicom uucp dialer 4555
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} uucp dialer 0755
 CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
 			uucp dialer 0644
