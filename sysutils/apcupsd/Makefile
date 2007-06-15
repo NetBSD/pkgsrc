@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2007/06/15 19:05:56 bouyer Exp $
+# $NetBSD: Makefile,v 1.51 2007/06/15 21:15:38 bouyer Exp $
 
 DISTNAME=		apcupsd-3.14.1
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -55,7 +56,7 @@ CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q}
 
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 
-CONF_FILES_PERMS+= ${EGDIR}/apcupsd.master.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${ROOT_USER} ${ROOT_GROUP} 644
+CONF_FILES_PERMS+= ${EGDIR}/apcupsd.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${ROOT_USER} ${ROOT_GROUP} 644
 CONF_FILES_PERMS+= ${EGDIR}/changeme ${PKG_SYSCONFDIR}/changeme ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commfailure ${PKG_SYSCONFDIR}/commfailure ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commok ${PKG_SYSCONFDIR}/commok ${ROOT_USER} ${ROOT_GROUP} 755
@@ -84,12 +85,6 @@ SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 # XXX we should probably allow the tty to be set in /etc/mk.conf too
 #
 post-build:
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \
-		${WRKSRC}/examples/apcupsd.master.conf > \
-		${WRKDIR}/apcupsd.master.conf
-	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \
-		${WRKSRC}/examples/apcupsd.slave.conf > \
-		${WRKDIR}/apcupsd.slave.conf
 .for file in ${MANFILES}
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|'\
 	     -e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|' \
@@ -101,9 +96,7 @@ HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
     publishsite support.html support.wml systems.html systems.wml template.inc
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/apcupsd.master.conf \
-		${PREFIX}/share/examples/apcupsd
-	${INSTALL_DATA} ${WRKDIR}/apcupsd.slave.conf \
+	${INSTALL_DATA} ${WRKSRC}/platforms/etc/apcupsd.conf \
 		${PREFIX}/share/examples/apcupsd
 .for file in ${EGFILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/platforms/${file} \
