@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2007/01/29 09:11:06 abs Exp $
+# $NetBSD: Makefile,v 1.61 2007/06/15 17:50:48 joerg Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -35,7 +35,9 @@ CONFIGURE_ENV+=		ac_cv_header_net_if_ppp_h=yes
 CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
 .endif
 
-.if !exists(${X11BASE}/lib/libXss.so)
+.if ${X11_TYPE} != "native"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.elif !exists(${X11BASE}/lib/libXss.so)
 CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .endif
 
