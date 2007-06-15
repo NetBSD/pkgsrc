@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/05/16 12:56:48 obache Exp $
+$NetBSD: MESSAGE,v 1.3 2007/06/15 18:17:41 obache Exp $
 
 Here is general notes for namazu2 package by pkgsrc.
 
@@ -9,9 +9,19 @@ Here is general notes for namazu2 package by pkgsrc.
 2. if you upgrade from namazu 1.X, you need to rebuild index files
    since index file format was changed from namazu prior to 2.0.
 
-3. In order to processing Japanese, you need to set "LC_ALL", "LANG"
-   or "LC_CTYPE" environment to "ja".  Or use --indexing-lang option
-   of mknmz.
+3. In order to processing Japanese, you should install any of the following
+   WAKATI modues:
+	KAKASI	(textproc/p5-Text-Kakasi)
+	ChaSen	(textporc/p5-Text-ChaSen)
+	MeCab	(textproc/p5-mcab)
+   And specify WAKATI module in "namazurc" file or option of mknmz:
+		namazurc		mknmz
+   	KAKASI	$WAKATI=$KAKASI		-k or --use-kakasi
+   	ChaSen	$WAKATI=$CHASEN		-c or --use-chasen
+   	MeCab	$WAKATI=$MECAB		-e or --use-mecab
+
+   Then, you need to set "LC_ALL", "LANG" or "LC_CTYPE" environment to "ja".
+   Or use --indexing-lang option of mknmz.
 
 4. In order to display Japanese message, you need to set "LANGUAGE",
    "LC_ALL", "LC_MESSAGES" or "LANG" environment to "ja".
