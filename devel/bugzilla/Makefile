@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/03 17:21:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/15 14:20:10 jlam Exp $
 #
 
 DISTNAME=	bugzilla-2.22.2
@@ -38,9 +38,9 @@ MESSAGE_SUBST+=	BZDIR=${BZDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 BZDIR=		${PREFIX}/share/bugzilla
 EGDIR=		${PREFIX}/share/examples/bugzilla
 DOCDIR=		${PREFIX}/share/doc/bugzilla
-CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf \
-		${EGDIR}/localconfig ${BZDIR}/localconfig
-SPECIAL_PERMS=	${BZDIR}/localconfig ${APACHE_USER} ${SHAREGRP} 0400
+CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf
+CONF_FILES_PERMS=	${EGDIR}/localconfig ${BZDIR}/localconfig \
+			${APACHE_USER} ${SHAREGRP} 0400
 PAX_DIRS=	Bugzilla skins template
 
 REPLACE_PERL+=	*.pl *.cgi
