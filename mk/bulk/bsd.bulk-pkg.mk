@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.143 2007/05/31 11:49:09 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.144 2007/06/15 22:28:53 wiz Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -239,7 +239,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken by the bulk build administrato
 bulk-cache:
 	@${BULK_MSG} "Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ} lang/perl5
-	cd ${PKGSRCDIR}/${__prereq} && ${RECURSIVE_MAKE} bulk-install
+	cd ${PKGSRCDIR}/${__prereq} && ${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-install
 .endfor
 	${RM} -f ${BULK_DBFILE}
 	${TOUCH} ${BULK_DBFILE}
@@ -375,7 +375,7 @@ bulk-package:
 			done ;\
 		fi; \
 		${BULK_MSG} "Bulk building ${PKGNAME}" ; \
-		${DO} ${RECURSIVE_MAKE} clean;\
+		${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${BULK_MSG} "Currently installed packages:"; \
 			${PKG_INFO} -e "*" | ${SED} -e "s,^,* ,"; \
@@ -437,7 +437,7 @@ bulk-package:
 			${DO}       ${RM} -f ${_INTERACTIVE_COOKIE} ; \
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
-		${DO} ${RECURSIVE_MAKE} package; \
+		${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} package; \
 		${ECHO} "";						\
 		${ECHO} "===> Warnings from the wrapper log (sorted):"; \
 		${GREP} "^WARNING" ${WRKLOG} | ${SORT} -u | ${TO_HTML}; \
@@ -474,7 +474,7 @@ bulk-package:
 			${BULK_MSG} "${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${_BROKENFILE:Q} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
-			${DO}       ${RECURSIVE_MAKE} deinstall ; \
+			${DO}       ${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall ; \
 			${ECHO} "</pre>" >> ${_BROKENFILE:Q}; \
 			nbrokenby=0;\
 			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
@@ -493,15 +493,15 @@ bulk-package:
 						${ECHO} "<li>$$pkgname ($$pkgdir)</li>";\
 						pkgerr='-1'; pkgignore=''; pkgskip=''; \
 						if [ "${USE_BULK_BROKEN_CHECK}" = 'yes' ]; then \
-							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
-							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
+							pkgignore=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-var VARNAME=PKG_FAIL_REASON)`; \
+							pkgskip=`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-var VARNAME=PKG_SKIP_REASON)`; \
 						fi; \
 						if [ ! -z "$${pkgignore}$${pkgskip}" -a ! -f "$${pkg_brokenfile}" ]; then \
 							{ ${BULK_MSG} "$$pkgname ($$pkgdir) may not be packaged because:"; \
 							  ${BULK_MSG} "$$pkgignore"; \
 							  ${BULK_MSG} "$$pkgskip"; \
 							} >> "$${pkg_brokenfile}"; \
-							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} show-var VARNAME=BROKEN)`" ]; then \
+							if [ "${USE_BULK_BROKEN_CHECK}" != 'yes' ] || [ -z "`(cd ${PKGSRCDIR}/$$pkgdir && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-var VARNAME=BROKEN)`" ]; then \
 								pkgerr="0"; \
 							else \
 								pkgerr="1"; \
@@ -535,7 +535,7 @@ bulk-package:
 		fi;							\
 		case ${_PRESERVE_WRKDIR} in				\
 		yes|YES)	;;					\
-		*)	${DO} ${RECURSIVE_MAKE} clean;;			\
+		*)	${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean;;			\
 		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
@@ -569,16 +569,16 @@ bulk-package:
 .PHONY: bulk-install
 bulk-install:
 	${RUN} if ${PKG_INFO} -qe ${PKGNAME} ; then exit 0; fi;		\
-	if [ `${RECURSIVE_MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
+	if [ `${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ${PKG_INFO} -qe ${PKGNAME} ; then :; \
 		else \
-			${DO} ${RECURSIVE_MAKE} install-depends ; \
+			${DO} ${RECURSIVE_MAKE} ${MAKEFLAGS} install-depends ; \
 			${BULK_MSG} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \
-		${DO}       ${RECURSIVE_MAKE} bulk-package PRECLEAN=no; \
+		${DO}       ${RECURSIVE_MAKE} ${MAKEFLAGS} bulk-package PRECLEAN=no; \
 	fi
 
 bulk-info: .PHONY
