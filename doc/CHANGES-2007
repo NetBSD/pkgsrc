@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1390 2007/06/15 21:41:13 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1391 2007/06/15 21:51:22 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2613,3 +2613,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/apcupsd to 3.14.1nb1 [bouyer 2007-06-15]
 	Updated x11/lablgtk2 to 2.6.0nb13 [wiz 2007-06-15]
 	Updated net/mldonkey-gui to 2.8.7nb1 [wiz 2007-06-15]
+	Added print/tex-cooking version 0.9b [dmcmahill 2007-06-15]
