@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/11/03 06:46:21 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2007/06/15 17:45:37 obache Exp $
 
-DISTNAME=	lua-5.1.1
-PKGREVISION=	1
+DISTNAME=	lua-5.1.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -34,10 +33,18 @@ EGDIR=		${PREFIX}/share/examples/lua
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(OPSYS:M*BSD*)
+.if ${OPSYS} == "FreeBSD"
+BUILD_TARGET=	freebsd
+.elif !empty(OPSYS:M*BSD*) || ${OPSYS} == "DragonFly"
 BUILD_TARGET=	bsd
 .elif ${OPSYS} == "Linux"
 BUILD_TARGET=	linux
+.elif ${OPSYS} == "Darwin"
+BUILD_TARGET=	macosx
+.elif ${OPSYS} == "SunOS"
+BUILD_TARGET=	solaris
+.elif ${OPSYS} == "AIX"
+BUILD_TARGET=	aix
 .else
 BUILD_TARGET=	generic
 .endif
