@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2007/04/05 00:22:24 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.66 2007/06/15 17:30:43 joerg Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -72,7 +72,7 @@ CONFIGURE_ARGS+=	-verbose
 
 QMAKE_RANLIB?=		${TRUE}
 
-.if ${X11_TYPE} == "modular"
+.if ${X11_TYPE} != "native"
 .include "../../x11/libXinerama/buildlink3.mk"
 .elif !exists(${X11BASE}/lib/libXinerama.so) && \
 	!exists(${X11BASE}/lib/libXinerama.dylib)
