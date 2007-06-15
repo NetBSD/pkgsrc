@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1388 2007/06/15 21:17:08 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.1389 2007/06/15 21:40:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/lua to 5.1.2 [obache 2007-06-15]
 	Updated textproc/namazu2 to 2.0.17nb1 [obache 2007-06-15]
 	Updated sysutils/apcupsd to 3.14.1nb1 [bouyer 2007-06-15]
+	Updated x11/lablgtk2 to 2.6.0nb13 [wiz 2007-06-15]
