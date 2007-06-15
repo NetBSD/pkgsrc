@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.2 2007/02/15 12:50:40 rillig Exp $
+# $NetBSD: application.mk,v 1.3 2007/06/15 17:33:40 joerg Exp $
 #
 # This file provides useful definitions for packages that contain
 # QT applications.
@@ -29,8 +29,9 @@ QTDIR?=			${PREFIX}/qt3
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--disable-rpath
-.if exists(${X11BASE}/lib/libXinerama.so)
+.if exists(${X11BASE}/lib/libXinerama.so) || ${X11_TYPE} != "native"
 CONFIGURE_ARGS+=	--with-xinerama
+.include "../../x11/libXinerama/buildlink3.mk"
 .endif
 
 CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
