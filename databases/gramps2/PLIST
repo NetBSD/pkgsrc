@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/01 17:56:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/06/15 18:05:09 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -105,6 +105,9 @@ share/gramps/DateHandler/_Date_fr.pyo
 share/gramps/DateHandler/_Date_lt.py
 share/gramps/DateHandler/_Date_lt.pyc
 share/gramps/DateHandler/_Date_lt.pyo
+share/gramps/DateHandler/_Date_nb.py
+share/gramps/DateHandler/_Date_nb.pyc
+share/gramps/DateHandler/_Date_nb.pyo
 share/gramps/DateHandler/_Date_nl.py
 share/gramps/DateHandler/_Date_nl.pyc
 share/gramps/DateHandler/_Date_nl.pyo
@@ -1334,12 +1337,6 @@ share/gramps/data/main5.css
 share/gramps/data/main6.css
 share/gramps/data/papersize.xml
 share/gramps/data/system_filters.xml
-share/gramps/data/templates/blue_edge.tpkg
-share/gramps/data/templates/marble.tpkg
-share/gramps/data/templates/pink_marble.tpkg
-share/gramps/data/templates/sepia.tpkg
-share/gramps/data/templates/sky_border.tpkg
-share/gramps/data/templates/templates.xml
 share/gramps/data/tips.xml
 share/gramps/docgen/AsciiDoc.py
 share/gramps/docgen/AsciiDoc.pyc
@@ -1662,7 +1659,6 @@ share/pixmaps/gramps.png
 @dirrm share/gramps/glade
 @dirrm share/gramps/example
 @dirrm share/gramps/docgen
-@dirrm share/gramps/data/templates
 @dirrm share/gramps/data
 @dirrm share/gramps/Selectors
 @dirrm share/gramps/ReportBase

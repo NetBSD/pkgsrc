@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2007/02/01 17:56:11 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2007/06/15 18:05:09 drochner Exp $
 
---- src/GrampsDb/_GrampsDbBase.py.orig	2007-01-31 21:12:34.000000000 +0100
+--- src/GrampsDb/_GrampsDbBase.py.orig	2007-04-07 06:12:19.000000000 +0200
 +++ src/GrampsDb/_GrampsDbBase.py
 @@ -39,7 +39,7 @@ import random
  import locale
@@ -10,4 +10,4 @@ $NetBSD: patch-ah,v 1.1 2007/02/01 17:56:11 drochner Exp $
 +from bsddb3 import db
  from gettext import gettext as _
  
- try:
+ import logging
