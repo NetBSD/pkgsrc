@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.14 2007/06/11 13:57:15 markd Exp $
+# $NetBSD: Makefile.common,v 1.15 2007/06/15 01:39:32 markd Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 
 CONFLICTS=	mule-[0-9]*
+CONFLICTS+=	elisp-manual-[0-9]*
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
