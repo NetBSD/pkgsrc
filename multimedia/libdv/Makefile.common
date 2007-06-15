@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/11/05 17:25:35 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/06/15 17:52:05 joerg Exp $
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
@@ -28,7 +28,9 @@ CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-.if !exists(${X11BASE}/include/X11/extensions/Xvlib.h)
+.if ${X11_TYPE} != "native"
+.include "../../x11/libXv/buildlink3.mk"
+.elif !exists(${X11BASE}/include/X11/extensions/Xvlib.h)
 CONFIGURE_ARGS+=	--disable-xv
 .endif
 
