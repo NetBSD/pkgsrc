@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/06/08 12:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/15 17:13:05 joerg Exp $
 #
 
 DISTNAME=		gramps-2.2.6
@@ -10,12 +10,8 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://gramps-project.org/
 COMMENT=	Genealogical Research and Analysis Management Programming System
 
-.if !exists(/usr/bin/msgconv)
-BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
-.endif
-
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		msgfmt pkg-config intltool
+USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 # disable gconf schema and mime type processing
