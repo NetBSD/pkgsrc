@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.25 2007/06/15 08:55:29 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.26 2007/06/15 16:11:41 joerg Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		2.0.0.4
@@ -29,5 +29,11 @@ post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \
 	${SETENV} LD_LIBRARY_PATH=.:${PREFIX}/lib MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
 		./${MOZILLA_BIN} -register
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
+.endif
 
 .include "../../www/seamonkey/Makefile.common"
