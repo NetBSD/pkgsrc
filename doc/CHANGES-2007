@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1396 2007/06/15 22:50:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1397 2007/06/15 23:28:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2619,3 +2619,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/clamav to 0.90.3nb1 [wiz 2007-06-15]
 	Updated security/opencdk to 0.6.4 [wiz 2007-06-15]
 	Removed devel/ArX [wiz 2007-06-15]
+	Updated mail/prayer to 1.0.18 [wiz 2007-06-15]
