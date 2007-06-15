@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/07/17 18:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/06/15 22:15:11 wiz Exp $
 
 DISTNAME=	gtkballs-3.1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://gtkballs.antex.ru/dist/
 
@@ -15,13 +15,16 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
+BUILD_DEFS+=		GAMEDATAMODE
+BUILD_DEFS+=		VARBASE
+
 PLIST_SUBST+=	VARBASE=${VARBASE:Q}
 
-CONF_FILES_PERMS+=	/dev/null ${PREFIX}/${GAMES_DIR}/gtkballs-scores \
-			${ROOT_USER} games 664
+CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/gtkballs-scores \
+			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
-	${MV} ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
+	mv ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
