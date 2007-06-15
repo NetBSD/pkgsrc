@@ -1,6 +1,6 @@
 #!/bin/sh
-# $Heimdal: krb5-config.in,v 1.9 2002/09/09 22:29:06 joda Exp $
-# $NetBSD: krb5-config,v 1.1 2006/01/26 22:46:15 markd Exp $
+# Heimdal: krb5-config.in,v 1.9 2002/09/09 22:29:06 joda Exp 
+# $NetBSD: krb5-config,v 1.2 2007/06/15 19:03:16 joerg Exp $
 
 do_libs=no
 do_cflags=no
