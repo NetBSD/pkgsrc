@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/06/08 12:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/06/15 23:28:16 wiz Exp $
 #
 
-DISTNAME=	prayer-1.0.12
-PKGREVISION=	5
+DISTNAME=	prayer-1.0.18
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -46,11 +45,13 @@ FILES_SUBST+=	VAR_PREFIX=${VAR_PREFIX:Q}
 post-patch:
 	${FIND} ${WRKSRC} -name CVS -type d -print | ${SORT} -r | \
 		${XARGS} ${RM} -r
+	cp ${WRKSRC}/defaults/Config ${WRKSRC}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../databases/db4/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

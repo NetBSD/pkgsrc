@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1 2005/01/09 00:07:47 schmonz Exp $
+$NetBSD: patch-ag,v 1.2 2007/06/15 23:28:17 wiz Exp $
 
---- prayer/response.c	2003-04-15 14:00:03.000000000 +0100
-+++ prayer/response.c	2005-01-05 18:32:01.000000000 +0000
-@@ -694,7 +694,12 @@
+--- prayer/response.c.orig	2003-04-15 13:00:03.000000000 +0000
++++ prayer/response.c
+@@ -694,7 +694,12 @@ response_file(struct request *request,
      } else
          bputs(b, "Content-Type: text/plain" CRLF);
-
+ 
 -    bprintf(b, "Content-Length: %lu" CRLF, sbuf.st_size);
 +    /* Hack: cast sbuf.st_size to long here as we are only dealing
 +     * with small files.  Otherwise, we will send "Content-Length: 0"
@@ -13,7 +13,6 @@ $NetBSD: patch-ag,v 1.1 2005/01/09 00:07:47 schmonz Exp $
 +     * which confuses browsers.
 +     */
 +    bprintf(b, "Content-Length: %lu" CRLF, (long)sbuf.st_size);
-
+ 
      /* Following stolen from Apache:
       *
-
