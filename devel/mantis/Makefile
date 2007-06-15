@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/11/14 13:05:12 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2007/06/15 14:21:27 jlam Exp $
 
 DISTNAME=	mantis-1.0.6
 CATEGORIES=	devel www
@@ -31,9 +31,10 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 MANTIS_HOME=	${PREFIX}/share/mantis
 EGDIR=		${PREFIX}/share/examples/mantis
-CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf \
-		${EGDIR}/config_inc.php ${MANTIS_HOME}/config_inc.php
-SPECIAL_PERMS=	${MANTIS_HOME}/config_inc.php ${APACHE_USER} ${SHAREGRP} 0400
+CONF_FILES+=	${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf
+CONF_FILES_PERMS+=	${EGDIR}/config_inc.php \
+			${MANTIS_HOME}/config_inc.php
+			${APACHE_USER} ${SHAREGRP} 0400
 MANTIS_EG=	config_inc.php mantis.conf mantis_offline.php.sample
 
 SUBST_CLASSES+=		conf
