@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1387 2007/06/15 18:18:01 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1388 2007/06/15 21:17:08 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/py-mssql to 0.8.0 [obache 2007-06-15]
 	Updated lang/lua to 5.1.2 [obache 2007-06-15]
 	Updated textproc/namazu2 to 2.0.17nb1 [obache 2007-06-15]
+	Updated sysutils/apcupsd to 3.14.1nb1 [bouyer 2007-06-15]
