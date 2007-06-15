@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2007/06/15 14:26:23 darcy Exp $
+
+--- src/core/shell.c.orig	2007-06-14 12:07:07.000000000 -0400
++++ src/core/shell.c
+@@ -530,7 +530,7 @@ shell_exec_set(gnutella_shell_t *sh, con
+ 			stub->guint64.set(prop, &val, 0, 1);
+ 		}
+ 		break;
+-	case PROP_TYPE_STRING:
++	case gg_PROP_TYPE_STRING:
+ 		stub->string.set(prop, tok_value);
+ 		break;
+ 	case PROP_TYPE_STORAGE:
