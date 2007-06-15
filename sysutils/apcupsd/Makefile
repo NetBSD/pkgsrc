@@ -1,35 +1,49 @@
-# $NetBSD: Makefile,v 1.49 2007/03/24 19:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2007/06/15 19:05:56 bouyer Exp $
 
-DISTNAME=		apcupsd-3.12.4
+DISTNAME=		apcupsd-3.14.1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
-PKGREVISION=		1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
 
-USE_TOOLS+=		gmake msgfmt sh makedepend
+USE_TOOLS+=		msgfmt sh makedepend
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 
-PKG_SYSCONFSUBDIR= apcupsd
+PKG_SYSCONFSUBDIR= 	apcupsd
 
-# Thread support is needed to for http support, and to compile powerflute,
-# which has a curses interface
+# Thread support is needed to compile powerflute, which has a curses
+# interface (apparently needing ncurses), but pthreads isn't very
+# efficient and is less preferred.
 #
-#CONFIGURE_ARGS+=	--enable-http		# include http support
 #.include "../../devel/ncurses/buildlink3.mk"
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 
+# XXX this should be an option...
+CONFIGURE_ARGS+=	--enable-cgi		# include CGI support
+CONFIGURE_ARGS+=	--with-cgi-bin=${PREFIX}/libexec/cgi-bin
+#CONFIGURE_ARGS+=	--with-net-port=${APCUPSD_NET_PORT}	# un-registered port is 7000
+
+#CONFIGURE_ARGS+=	--with-nis-port=${APCUPSD_NIS_PORT}	# registered port is 3551
+#CONFIGURE_ARGS+=	--with-upscable=${APCUPSD_UPS_CABLE}
+#CONFIGURE_ARGS+=	--with-upscable=${APCUPSD_UPS_TYPE}
+
 CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
 CONFIGURE_ARGS+=	--enable-usb		# enable USB network driver
-#CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
+# XXX this should be an option...
+.include "../../net/net-snmp/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
+# XXX is this supposed to be the full filename?
+CONFIGURE_ARGS+=	--with-log-dir=${VARBASE}/db/apcupsd.events
+# NOTE:  You want the /dev/ttyXX for smart cables such as 940-0024C,
+# but probably the /dev/dtyXX for a basic smart-custom cable
 CONFIGURE_ARGS+=	--with-serial-dev=/dev/tty01
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # configure sets sbindir to '${prefix}/sbin' without expanding $prefix
@@ -37,6 +51,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 
 CONFIGURE_ENV+=		SCRIPTSHELL=${TOOLS_SH:Q}
+CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q}
 
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 
@@ -44,8 +59,8 @@ CONF_FILES_PERMS+= ${EGDIR}/apcupsd.master.conf ${PKG_SYSCONFDIR}/apcupsd.conf $
 CONF_FILES_PERMS+= ${EGDIR}/changeme ${PKG_SYSCONFDIR}/changeme ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commfailure ${PKG_SYSCONFDIR}/commfailure ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commok ${PKG_SYSCONFDIR}/commok ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+= ${EGDIR}/masterconnect ${PKG_SYSCONFDIR}/masterconnect ${ROOT_USER} ${ROOT_GROUP} 755
-CONF_FILES_PERMS+= ${EGDIR}/mastertimeout ${PKG_SYSCONFDIR}/mastertimeout ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/multimon.conf ${PKG_SYSCONFDIR}/multimon.conf  ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+= ${EGDIR}/hosts.conf ${PKG_SYSCONFDIR}/hosts.conf  ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
@@ -53,12 +68,20 @@ RCD_SCRIPTS=	apcupsd
 RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/distributions/netbsd/apcupsd
 
 EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
-    etc/masterconnect etc/mastertimeout etc/offbattery etc/onbattery
+    etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
 MANFILES= apcupsd apctest
 
 INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d 
 
-# we should probably allow the tty to be set in /etc/mk.conf too
+SUBST_CLASSES+=		strip
+SUBST_STAGE.strip=	pre-configure
+SUBST_FILES.strip=	autoconf/install-sh autoconf/targets.mak
+SUBST_FILES.strip+=	src/gapcmon/Makefile.in src/cgi/Makefile.in
+SUBST_FILES.strip+=	src/Makefile.in
+SUBST_SED.strip=	-e "s|STRIP|STRIPFLAG|g"
+SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
+
+# XXX we should probably allow the tty to be set in /etc/mk.conf too
 #
 post-build:
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \

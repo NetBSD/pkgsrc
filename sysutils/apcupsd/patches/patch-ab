@@ -1,12 +1,80 @@
-$NetBSD: patch-ab,v 1.4 2006/11/15 21:46:25 bouyer Exp $
+$NetBSD: patch-ab,v 1.5 2007/06/15 19:05:56 bouyer Exp $
 
 --- examples/apcupsd.master.conf.orig	2002-05-28 15:34:19.000000000 +0200
-+++ examples/apcupsd.master.conf	2006-11-15 17:25:41.000000000 +0100
-@@ -33,11 +33,11 @@
++++ examples/apcupsd.master.conf	2007-06-15 17:12:48.000000000 +0200
+@@ -1,78 +1,120 @@
+ ## apcupsd.conf v1.1 ##
+-# 
+-#  for apcupsd release 3.8.0
+-#
+-# "apcupsd" POSIX config file
+-#
+-#  If you have used a prior version of apcupsd, the CONTROL script file
+-#  (/sbin/powersc) has now been replaced by /etc/apcupsd/apccontrol.
+-#  Consequently, the CONTROL configuration statement is obsolete.
+-#  The following configuration statements have been replaced by scripts
+-#  called from /etc/apcupsd/apccontrol, and thus are obsolete:
+-#  BATTCMD, LIMITCMN, LOADCMD, PWRCMD, REBOOTCMD, REMOTECMD, RETCMD,
+-#  and TIMECMD. 
+ #
++#  for apcupsd release 3.10.6 (10 October 2003) - freebsd
+ #
++# "apcupsd" POSIX config file
+ #
+ # ========= General configuration parameters ============
+ #
++# UPSNAME xxx
++#   Use this to give your UPS a name in log files and such. This
++#   is particulary useful if you have multiple UPSes.  This does not
++#   set the EEPROM.
++#UPSNAME
++#
+ # UPSCABLE [ simple | smart |
+-#            940-00(20B,23A,24B,24C,24G,95A,95B,95C) |
++#            940-00(20B,20C,23A,24B,24C,24G,95A,95B,95C) |
+ #            940-15(24C) |
+-#            ether ]
++#            ether, usb ]
+ # defines the type of cable that you have.
+ UPSCABLE smart
+ #
++# Old types, still valid, are mapped to the new generic drives
++#   automatically
+ # UPSTYPE [ backups | sharebasic | netups |
+ #           backupspro | smartvsups |
+ #           newbackupspro | backupspropnp |
+ #           smartups | matrixups | sharesmart ]
++#
++# *** NEW TYPES FOR GENERIC DRIVERS ***
++# UPSTYPE [ dumb | apcsmart | net | usb | snmp | test]
+ # defines the type of UPS you have.
+ UPSTYPE smartups
+ #
  #
  #DEVICE <string> /dev/<serial port>
- # name of your serial port
+-# name of your serial port
 -DEVICE /dev/ttyS0
++# name of your UPS device
++#
++# Here a table of the possible devices related with the UPS drivers.
++#
++#   NOTE!!! for USB devices, please use a form indicated below
++#      including the [0-15] as written!
++#
++# Driver   Device                    Description
++# dumb     /dev/tty**                Serial character device
++# apcsmart /dev/tty**                Serial character device
++# usb      /dev/usb/hid/hiddev[0-15] If you follow our naming scheme
++# usb      /dev/usb/hiddev[0-15]      On some systems
++# net      hostname:port             Network link to a master apcupsd
++#                                    through NIS
++# snmp     hostname:port:vendor:community
++#                                    SNMP Network link to an SNMP-enabled
++#                                    UPS device. Vendor is the MIB used by
++#                                    the UPS device: can be "APC" or "RFC"
++#                                    where APC is the powernet MIB and RFC
++#                                    is the IETF's rfc1628 UPS-MIB.
++#                                    Port is usually 161.
 +DEVICE /dev/tty01
  #
  #LOCKFILE <path to lockfile>
@@ -16,49 +84,256 @@ $NetBSD: patch-ab,v 1.4 2006/11/15 21:46:25 bouyer Exp $
  #
  #
  #
-@@ -80,7 +80,7 @@
+ # ======== configuration parameters used during power failures ==========
+ #
+-# BATTERYLEVEL <percent of battery charge for shutdown> 10
++# Note: BATTERYLEVEL, MINUTES, and TIMEOUT work in conjunction, so
++# the first that occurs will cause the initation of a shutdown.
++#
++# If during a power failure, the remaining battery percentage
++# (as reported by the UPS) is below or equal to BATTERYLEVEL,
++# apcupsd will initiate a system shutdown.
+ BATTERYLEVEL 5
+ #
+-# MINUTES <time in minutes of remaining battery runtime before shutdown> 5
++#
++# If during a power failure, the remaining runtime in minutes
++# (as calculated internally by the UPS) is below or equal to MINUTES,
++# apcupsd, will initiate a system shutdown.
+ MINUTES 3
+ #
+-# TIMEOUT <time is seconds to run on UPS after a power failure>
++#
++# If during a power failure, the UPS has run on batteries for TIMEOUT
++# many seconds or longer, apcupsd will initiate a system shutdown.
++# A value of 0 disables this timer.
++#
+ #  Note, if you have a Smart UPS, you will most likely want to disable
+ #    this timer by setting it to zero. That way, you UPS will continue
+-#    on batteries until either the % charge remaing drops below BATTERYLEVEL,
+-#    or the remaining battery runtime drops below MINUTES.  Of course,
++#    on batteries until either the % charge remaing drops to or below BATTERYLEVEL,
++#    or the remaining battery runtime drops to or below MINUTES.  Of course,
+ #    if you are testing, setting this to 60 causes a quick system shutdown
+-#    if you pull the power plug.   
++#    if you pull the power plug.
+ #  If you have an older dumb UPS, you will want to set this to less than
+ #    the time you know you can run on batteries.
+ TIMEOUT 0
+-
+ #
+-# ANNOY <int> <30> <0> disables
++#
+ #  Time in seconds between annoying users to signoff prior to
+-#  system shutdown.
++#  system shutdown. 0 disables.
+ ANNOY 300
+ #
+-# ANNOYDELAY <int> <60> <0> disables delay before annoying user
++# Initial delay after power failure before warning users to get
++# off the system.
+ ANNOYDELAY 60
+ #
++# The condition which determines when users are prevented from
++# logging in during a power failure.
+ # NOLOGON <string> [ disable | timeout | percent | minutes | always ]
+ NOLOGON disable
+ #
+ #
++# If killdelay is set, apcupsd will continue running after a
++# shutdown has been requested, and after the specified time in
++# seconds attempt to kill the power.  This is for use on systems
++# where apcupsd cannot regain control after a shutdown.
++# KILLDELAY <seconds>  0 disables
++KILLDELAY 0
++#
+ #
+ # ==== Configuration statements the network information server =========
+ #
+@@ -80,83 +122,149 @@
  #  information server. If netstatus is on, a network information
  #  server process will be started for serving the STATUS and
  #  EVENT data over the network (used by CGI programs).
 -NETSERVER on
 +NETSERVER off
  #
- # SERVERPORT <port> default is 7000
+-# SERVERPORT <port> default is 7000
++# NISIP <dotted notation ip address>
++#  IP address on which NIS server will listen for incoming connections.
++#  Default value is 0.0.0.0 that means any incoming request will be
++#  serviced but if you want it to listen to a single subnet you can
++#  set it up to that subnet address, for example 192.168.10.0
++#  Additionally you can listen for a single IP like 192.168.10.1
++NISIP 0.0.0.0
++#
++# NISPORT <port> default is 3551 as registered with the IANA
  #  port to use for sending STATUS and EVENTS data over the network.
-@@ -91,7 +91,7 @@
+ #  It is not used unless NETSERVER is on. If you change this port,
+ #  you will need to change the corresponding value in the cgi directory
+ #  and rebuild the cgi programs.
+-SERVERPORT 7000
++NISPORT 3551
  #
  # If you want the last few EVENTS to be available over the network
  # by the network information server, you must define an EVENTSFILE.
 -EVENTSFILE /etc/apcupsd/apcupsd.events
 +EVENTSFILE /var/log/apcupsd.events
  #
++# EVENTSFILEMAX <kilobytes>
++#  By default, the size of the EVENTSFILE will be not be allowed to exceed
++#  10 kilobytes.  When the file grows beyond this limit, older EVENTS will
++#  be removed from the beginning of the file (first in first out).  The
++#  parameter EVENTSFILEMAX can be set to a different kilobyte value, or set
++#  to zero to allow the EVENTSFILE to grow without limit.
++EVENTSFILEMAX 10
  #
++# ========== Configuration statements used if sharing =============
++#            a UPS and controlling it via the network
  #
-@@ -102,7 +102,7 @@
++#      The configuration statements below are used if you
++#      want to share one UPS to power multiple machines and have them
++#      communicate by the network. Obviously, the master is connected
++#      to the UPS via the serial cable, and it communicates to the
++#      "slaves" via the network -- i.e. the slaves get their info
++#      concerning the UPS via the ethernet.
++#
++# UPSCLASS [ standalone | shareslave | sharemaster | netslave | netmaster ]
++# normally standalone unless you share a UPS with multiple machines.
++UPSCLASS standalone
++#
++# Unless you want to share the UPS (power multiple machines).
++#  this should be disable
++# UPSMODE [ disable | share | net | sharenet ]
++UPSMODE disable
+ #
+ # ===== Configuration statements to control apcupsd system logging ========
+ #
+-# STATTIME <int> <120> <0> disables <update rate in seconds for status file >
++# Time interval in seconds between writing the STATUS file; 0 disables
  STATTIME 0
  #
- # STATFILE
+-# STATFILE
 -STATFILE /etc/apcupsd/apcupsd.status
++# Location of STATUS file (written to only if STATTIME is non-zero)
 +STATFILE /var/run/apcupsd.status
  #
  #
  # LOGSTATS [ on | off ] on enables, off disables
-@@ -134,15 +134,15 @@
+-# Note! This generates a lot of output, so if         
++# Note! This generates a lot of output, so if
+ #       you turn this on, be sure that the
+ #       file defined in syslog.conf for LOG_NOTICE is a named pipe.
++#  You probably do not want this on.
+ LOGSTATS off
  #
- # UPSCLASS [ standalone | shareslave | sharemaster | netslave | netmaster ]
- # normally standalone unless you share a UPS with multiple machines.
+ #
+-# DATATIME <int> <120> <0> disables <update rate in seconds for data logging >
++# Time interval in seconds between writing the DATA records to
++#   the log file. 0 disables.
+ DATATIME 0
+ #
+-# FACILITY defines the logging facility (class) for logging to syslog. 
+-#          If not specified, it defaults to "daemon". This is useful 
++# FACILITY defines the logging facility (class) for logging to syslog.
++#          If not specified, it defaults to "daemon". This is useful
+ #          if you want to separate the data logged by apcupsd from other
+ #          programs.
+-#FACILITY local0
++#FACILITY DAEMON
+ #
+ #
+ #
+ #
++# ========== Configuration statements used in updating the UPS EPROM =========
+ #
+-# ========== Configuration statements used if sharing =============
+-#            a UPS and controlling it via the network              
++# UPS name, max 8 characters  -- used only during -n or --rename-ups
++UPSNAME LK-SMART
+ #
+-#      The configuration statements below are used if you
+-#      want to share one UPS for multiple machines and have them
+-#      communicate by the network.
++# Battery date - 8 characters -- used only during -u or --update-battery-date
++BATTDATE 11/20/01
+ #
+-# UPSCLASS [ standalone | shareslave | sharemaster | netslave | netmaster ]
+-# normally standalone unless you share a UPS with multiple machines.
 -UPSCLASS netmaster
-+UPSCLASS standalone
++#  The following items are set during -c or --configure
  #
- # Unless you want to share the UPS (power multiple machines).
- #  this should be disable
- # UPSMODE [ disable | share | net | sharenet ]
+-# Unless you want to share the UPS (power multiple machines).
+-#  this should be disable
+-# UPSMODE [ disable | share | net | sharenet ]
 -UPSMODE net
-+UPSMODE disable
++# Sensitivity to line voltage quality (H cause faster transfer to batteries)
++# SENSITIVITY H M L        (default = H)
++#SENSITIVITY H
++#
++# UPS delay after power return (seconds)
++# WAKEUP 000 060 180 300   (default = 0)
++WAKEUP 60
++#
++# UPS Grace period after request to power off (seconds)
++# SLEEP 020 180 300 600    (default = 20)
++SLEEP 180
++#
++#
++# Low line voltage causing transfer to batteries
++# The permitted values depend on your model as defined by last letter
++#  of FIRMWARE or APCMODEL. Some representative values are:
++#    D 106 103 100 097
++#    M 177 172 168 182
++#    A 092 090 088 086
++#    I 208 204 200 196     (default = 0 => not valid)
++LOTRANSFER  208
++#
++# High line voltage causing transfer to batteries
++# The permitted values depend on your model as defined by last letter
++#  of FIRMWARE or APCMODEL. Some representative values are:
++#    D 127 130 133 136
++#    M 229 234 239 224
++#    A 108 110 112 114
++#    I 253 257 261 265     (default = 0 => not valid)
++HITRANSFER 253
  #
- #NETACCESS <string> [ true | false ] Enable Network Access Support
+-#NETACCESS <string> [ true | false ] Enable Network Access Support
 -NETACCESS true
-+NETACCESS false
++# Battery change needed to restore power
++# RETURNCHARGE 00 15 50 90 (default = 15)
++#RETURNCHARGE 15
  #
- # NETTIME <int>
- NETTIME 10
+-# NETTIME <int>
+-NETTIME 10
++# Alarm delay
++# 0 = zero delay after pwr fail, T = power fail + 30 sec, L = low battery, N = never
++# BEEPSTATE 0 T L N        (default = 0)
++BEEPSTATE 0
+ #
+-# NETPORT <int>
+-NETPORT 6666
++# Low battery warning delay in minutes
++# LOWBATT 02 05 07 10      (default = 02)
++#LOWBATT 2
+ #
+-# MASTER <string>
+-#MASTER
++# UPS Output voltage when running on batteries
++# The permitted values depend on your model as defined by last letter
++#  of FIRMWARE or APCMODEL. Some representative values are:
++#    D 115
++#    M 208
++#    A 100
++#    I 230 240 220 225     (default = 0 => not valid)
++OUTPUTVOLTS 230
+ #
+-# SLAVE <string>
+-SLAVE my.network.slave.com
++# Self test interval in hours 336=2 weeks, 168=1 week, ON=at power on
++# SELFTEST 336 168 ON OFF  (default = 336)
++SELFTEST 168
+ #
+-# Note, USERMAGIC is only used by a slave, not here
+-# USERMAGIC <string>
+-#USERMAGIC
+ #
