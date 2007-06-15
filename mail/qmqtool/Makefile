@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/24 07:10:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/15 14:57:10 jlam Exp $
 #
 
 DISTNAME=	qmqtool-current
@@ -16,7 +16,6 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
 NO_BUILD=	yes
 REPLACE_PERL=	qmqtool
-SPECIAL_PERMS+=	${PREFIX}/sbin/qmqtool ${ROOT_USER} ${ROOT_GROUP} 0700
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/qmqtool
@@ -34,5 +33,6 @@ do-install:
 	cp qmqtool ${PREFIX}/sbin; \
 	cp Artistic ChangeLog FAQ README ${PREFIX}/share/doc/qmqtool; \
 	cp -Rp contrib ${PREFIX}/share/examples/qmqtool
+	${CHMOD} 0700 ${PREFIX}/sbin/qmqtool
 
 .include "../../mk/bsd.pkg.mk"
