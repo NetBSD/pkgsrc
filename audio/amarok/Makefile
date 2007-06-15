@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2007/02/18 12:09:31 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/06/15 22:12:54 wiz Exp $
 
 DISTNAME=		amarok-1.4.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_KDE:=amarok/1.4.5/src/}
 EXTRACT_SUFX=		.tar.bz2
@@ -50,6 +50,15 @@ REPLACE_RUBY= \
 	amarok/src/scripts/score_impulsive/score_impulsive.rb \
 	amarok/src/scripts/templates/amarok.rb \
 	amarok/src/scripts/templates/ruby_qt_template.rb
+
+SUBST_CLASSES+=		dotkdedir
+SUBST_STAGE.dotkdedir=	post-patch
+SUBST_MESSAGE.dotkdedir=Replacing .kde/share with .kde/share/kde
+SUBST_FILES.dotkdedir= \
+	amarok/src/scripts/playlist2html/Playlist.py \
+	amarok/src/scripts/webcontrol/Playlist.py \
+	doc/*/config.docbook doc/*/faq.docbook doc/*/advanced.docbook
+SUBST_SED.dotkdedir=	-e 's,\.kde/share/,.kde/share/kde/,'
 
 BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.3.0
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
