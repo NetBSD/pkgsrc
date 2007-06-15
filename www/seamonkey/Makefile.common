@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2007/04/01 16:22:53 tron Exp $
+# $NetBSD: Makefile.common,v 1.23 2007/06/15 17:36:11 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -95,9 +95,11 @@ CONFIGURE_ARGS+=	--enable-calendar
 CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) && \
-	exists(${X11BASE}/lib/libXinerama.so)
+.if ${X11_TYPE} != "native" || \
+	(exists(${X11BASE}/include/X11/extensions/Xinerama.h) && \
+	exists(${X11BASE}/lib/libXinerama.so))
 CONFIGURE_ARGS+=	--enable-xinerama
+.include "../../x11/libXinerama/buildlink3.mk"
 .endif
 
 # avoid creating a .mozilla directory in the users home
