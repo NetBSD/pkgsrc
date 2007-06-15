@@ -1,72 +1,73 @@
-$NetBSD: patch-ae,v 1.5 2007/03/07 20:47:05 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2007/06/15 19:05:56 bouyer Exp $
 
---- autoconf/configure.in.orig	2006-04-07 22:42:15.000000000 +0000
-+++ autoconf/configure.in
-@@ -63,13 +63,6 @@ dnl
-   if test x$sysconfdir = x'${prefix}/etc' ; then
-      sysconfdir='/etc/apcupsd'
-   fi
--
+--- autoconf/configure.in.orig	2007-06-15 13:15:54.000000000 +0200
++++ autoconf/configure.in	2007-06-15 13:34:19.000000000 +0200
+@@ -80,12 +80,6 @@
+       sysconfdir='/etc/apcupsd'
+    fi
+ 
 -dnl
 -dnl If the user has not set -sbindir, we set our default as /sbin
 -dnl
--  if test x$sbindir = x'${exec_prefix}/sbin' ; then
--     sbindir='/sbin'
--  fi
+-   if test x$sbindir = x'${exec_prefix}/sbin' ; then
+-      sbindir='/sbin'
+-   fi
  fi
  
  dnl
-@@ -161,7 +154,7 @@ else
-     WIN32=
-     WINLIBS=
-     APCACCESS=apcaccess
--    SMTP=smtp
-+    SMTP=
-     APCTEST=apctest
- fi
- AC_SUBST(WIN32)
-@@ -468,7 +461,7 @@ else
- 	AM_CONDITIONAL(HAVE_LINUX_OS, $FALSEPRG)
+@@ -154,7 +148,7 @@
+ AC_SUBST(PTHREAD_LFLAGS)
+ 
+ APCACCESS=apcaccess
+-SMTP=smtp
++SMTP=
+ APCTEST=apctest
+ AC_SUBST(APCACCESS)
+ AC_SUBST(SMTP)
+@@ -439,7 +433,7 @@
+    AM_CONDITIONAL(HAVE_LINUX_OS, $FALSEPRG)
  fi
  
 -if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
 +if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
  then
- 	AM_CONDITIONAL(HAVE_FREEBSD_OS, $TRUEPRG)
- 	AC_DEFINE(HAVE_FREEBSD_OS)
-@@ -750,7 +743,8 @@ AC_HELP_STRING([--disable-usb], [No USB 
- 		AC_SUBST(USB_TYPE)
- 	elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD -o \
- 		  $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD -o \
--		  $HAVE_UNAME=yes -a x`uname -s` = xNetBSD ; then
-+		  $HAVE_UNAME=yes -a x`uname -s` = xNetBSD -o \
-+		  $HAVE_UNAME=yes -a x`uname -s` = xDragonFly; then
- 		AC_DEFINE(HAVE_USB_DRIVER)
- 		USB_DRIVER="usb"
- 		USB_TYPE="bsd"
-@@ -1156,7 +1150,7 @@ then
+    AM_CONDITIONAL(HAVE_FREEBSD_OS, $TRUEPRG)
+    AC_DEFINE(HAVE_FREEBSD_OS)
+@@ -718,7 +712,8 @@
+            AC_MSG_RESULT([Using Linux USB driver.])
+         elif test $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD -o \
+                   $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD -o \
+-                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD ; then
++                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xNetBSD -o \
++                  $GENERICUSB = "no" -a $HAVE_UNAME=yes -a x`uname -s` = xDragonFly ; then
+            LIBUSBHIDINC="-I\$(topdir)/src/libusbhid"
+            LIBUSBHID=libusbhid
+            LIBUSBHIDOBJS="\$(topdir)/src/libusbhid/*.o"
+@@ -1169,7 +1164,7 @@
  elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
  then
- 	DISTNAME=freebsd
+    DISTNAME=freebsd
 -elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD
 +elif test $HAVE_UNAME=yes -a x`uname -s` = xNetBSD || test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
  then
- 	DISTNAME=netbsd
+    DISTNAME=netbsd
  elif test $HAVE_UNAME=yes -a x`uname -s` = xOpenBSD
-@@ -1316,7 +1310,7 @@ debian)
- 	platforms/debian/ups-monitor \
- 	"
-   ;;
+@@ -1297,7 +1292,7 @@
+       platforms/debian/apcupsd \
+       platforms/debian/ups-monitor"
+    ;;
 -freebsd)
 +freebsd|dragonfly)
-     DISTVER=`uname -a |awk '{print $3}'`
-     SERIALDEV=/dev/cuaa0
-     nologdir=/var/run
-@@ -1355,6 +1349,7 @@ netbsd)
-     DFILES="\
- 	platforms/netbsd/Makefile \
- 	platforms/netbsd/apcupsd \
-+	platforms/netbsd/apccontrol \
- 	"
-   ;;
+    DISTVER=`uname -a |awk '{print $3}'`
+    SERIALDEV=/dev/cuaa0
+    nologdir=/var/run
+@@ -1335,7 +1330,8 @@
+    LDFLAGS="$LDFLAGS -pthread"
+    DFILES="\
+       platforms/netbsd/Makefile \
+-      platforms/netbsd/apcupsd"
++      platforms/netbsd/apcupsd \
++      platforms/netbsd/apccontrol"
+    ;;
  openbsd)
+    DISTVER=`uname -a |awk '{print $3}'`
