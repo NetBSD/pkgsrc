@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2007/04/11 18:09:46 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2007/06/15 18:08:07 drochner Exp $
 
---- Makefile.in.orig	2007-04-09 21:35:36.000000000 +0200
+--- Makefile.in.orig	2007-05-28 20:21:14.000000000 +0200
 +++ Makefile.in
-@@ -231,7 +231,7 @@ desktop_DATA = $(desktop_in_files:.deskt
+@@ -276,7 +276,7 @@ desktop_in_files = eog.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
  gladedir = $(datadir)/eog/glade
  glade_DATA = eog.glade
- 
 -schemasdir = $(sysconfdir)/gconf/schemas
 +schemasdir = $(datadir)/gconf/schemas
  schemas_in_files = eog.schemas.in
  schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
- 
+ icondir = $(datadir)/pixmaps
