@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/05/13 02:59:08 obache Exp $
+# $NetBSD: Makefile,v 1.35 2007/06/15 18:17:42 obache Exp $
 
 DISTNAME=	namazu-2.0.17
+PKGREVISION=	1
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/stable/ \
 		http://namazu.ipmedia.de/stable/
@@ -10,9 +11,7 @@ HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Full-text search system intended for easy use
 
 DEPENDS+=	p5-File-MMagic>=1.25:../../misc/p5-File-MMagic
-DEPENDS+=	p5-Text-Kakasi>=1.04:../../textproc/p5-Text-Kakasi
 DEPENDS+=	p5-nkf>=1.7:../../converters/p5-nkf
-DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
 
 CONFLICTS+=	namazu-[0-9]*
 
@@ -27,13 +26,24 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 CONFIGURE_ARGS+=	--localstatedir=${DATADIR:Q} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
 			--sysconfdir=${PKG_SYSCONFBASE:Q}
+CONFIGURE_ENV+=		KAKASI="module_kakasi"
+CONFIGURE_ENV+=		ac_cv_path_KAKASI="module_kakasi"
+CONFIGURE_ENV+=		CHASEN="module_chasen"
+CONFIGURE_ENV+=		ac_cv_path_CHASEN="module_chasen"
+CONFIGURE_ENV+=		MECAB="module_mecab"
+CONFIGURE_ENV+=		ac_cv_path_MECAB="module_mecab"
 DATADIR=		${PREFIX}/libdata
 EXAMPLESDIR=		${PREFIX}/share/examples/namazu
 EXAMPLES=		mknmzrc namazurc
 
+SUBST_CLASSES+=		wakati
+SUBST_STAGE.wakati=	pre-configure
+SUBST_FILES.wakati=	pl/conf.pl.in
+SUBST_SED.wakati=	-e 's|@OPT_WAKATI_DEFAULT@|none|'
+
 .include "../../mk/bsd.prefs.mk"
 
-PKG_SYSCONFSUBDIR?=	namazu
+PKG_SYSCONFSUBDIR=	namazu
 .for f in ${EXAMPLES}
 CONF_FILES+=		${EXAMPLESDIR}/${f}	${PKG_SYSCONFDIR}/${f}
 .endfor
@@ -44,7 +54,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DATADIR}/namazu
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	cd ${WRKSRC}/conf; ${INSTALL_DATA} ${f}-sample ${EXAMPLESDIR}/${f}
+	cd ${WRKSRC}/conf && ${INSTALL_DATA} ${f}-sample ${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
