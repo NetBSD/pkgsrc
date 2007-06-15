@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2007/05/31 05:26:46 martti Exp $
+# $NetBSD: Makefile,v 1.74 2007/06/15 22:31:39 wiz Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
