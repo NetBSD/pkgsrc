@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/01/13 17:49:14 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2007/06/15 17:08:12 joerg Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -16,8 +16,9 @@ BUILDLINK_API_DEPENDS.qt3-libs?=    qt3-libs>=3.0
 DEPENDS+=	licq-core-[0-9]*:../../chat/licq-core
 
 .include "../../mk/bsd.prefs.mk"
-.if ! exists(${X11BASE}/lib/libXss.so)
-NOT_FOR_PLATFORM= NetBSD-*-*
+
+.if !exists(${X11BASE}/lib/libXss.so) && ${X11_TYPE} == "native"
+PKG_FAIL_REASON+=	"XScrnSaver support is needed"
 .endif
 
 GNU_CONFIGURE=		YES
@@ -32,6 +33,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
