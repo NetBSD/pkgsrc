@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/06/07 07:50:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.52 2007/06/15 18:15:19 jlam Exp $
 
 DISTNAME=	sqwebmail-5.1.2
 PKGREVISION=	1
@@ -99,7 +99,7 @@ CONF_FILES_PERMS+=	${PREFIX}/share/courier/sqwebmail/${_file_}	\
 			${COURIER_SCRIPT_PERMS}
 .endfor
 SPECIAL_PERMS=		${LIBEXECDIR}/sqwebpasswd			\
-			${COURIER_USER} ${COURIER_GROUP} 2755
+			${COURIER_USER} ${COURIER_GROUP} 2555
 
 RCD_SCRIPTS=		sqwebmail
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin
