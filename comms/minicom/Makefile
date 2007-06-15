@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/06/15 18:15:06 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2007/06/15 18:23:49 jlam Exp $
 
 DISTNAME=	minicom-2.1
 PKGREVISION=	2
@@ -23,12 +23,14 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	minicom
 EGDIR=			${PREFIX}/share/examples/minicom
 
+UUCP_USER?=		uucp	# shared with net/uucp
+
 PKG_GROUPS=		dialer
-PKG_USERS=		uucp:dialer
-SPECIAL_PERMS=		${PREFIX}/bin/minicom uucp dialer 4555
-OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} uucp dialer 0755
+PKG_USERS=		${UUCP_USER}:dialer
+SPECIAL_PERMS=		${PREFIX}/bin/minicom ${UUCP_USER} dialer 4555
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} ${UUCP_USER} dialer 0755
 CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
-			uucp dialer 0644
+			${UUCP_USER} dialer 0644
 
 SUBST_CLASSES+=	minicom
 SUBST_MESSAGE.minicom=	Fixing hardcoded paths.
