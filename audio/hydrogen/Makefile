@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/11 10:50:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/15 17:04:17 joerg Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGREVISION=	5
@@ -19,10 +19,9 @@ CONFIGURE_ARGS+=	--disable-jack-support
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} != "native"
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 .include "../../x11/libXinerama/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xinerama
-.elif exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 .endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
