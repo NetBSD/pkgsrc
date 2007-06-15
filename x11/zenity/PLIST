@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/04/11 20:41:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/06/15 17:58:20 drochner Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -51,6 +51,18 @@ share/gnome/help/zenity/fr/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/fr/zenity.xml
+share/gnome/help/zenity/ru/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/ru/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/ru/zenity.xml
 share/gnome/help/zenity/sv/figures/zenity-calendar-screenshot.png
 share/gnome/help/zenity/sv/figures/zenity-entry-screenshot.png
 share/gnome/help/zenity/sv/figures/zenity-error-screenshot.png
@@ -153,6 +165,7 @@ share/omf/zenity/zenity-C.omf
 share/omf/zenity/zenity-bg.omf
 share/omf/zenity/zenity-es.omf
 share/omf/zenity/zenity-fr.omf
+share/omf/zenity/zenity-ru.omf
 share/omf/zenity/zenity-sv.omf
 share/omf/zenity/zenity-uk.omf
 share/zenity/clothes/gnome-tshirt.png
@@ -178,6 +191,8 @@ share/zenity/zenity.png
 @dirrm share/gnome/help/zenity/uk
 @dirrm share/gnome/help/zenity/sv/figures
 @dirrm share/gnome/help/zenity/sv
+@dirrm share/gnome/help/zenity/ru/figures
+@dirrm share/gnome/help/zenity/ru
 @dirrm share/gnome/help/zenity/fr/figures
 @dirrm share/gnome/help/zenity/fr
 @dirrm share/gnome/help/zenity/es/figures
