@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2006/07/10 11:09:24 dmcmahill Exp $
+$NetBSD: distinfo,v 1.14 2007/06/15 23:40:00 dmcmahill Exp $
 
-SHA1 (latex-mk-1.8.tar.gz) = 402265cd9d8ab58d194146990e70f8c8299be6b9
-RMD160 (latex-mk-1.8.tar.gz) = 3b01d20ed2ac48d80e36f4b4adf84265bfd37d98
-Size (latex-mk-1.8.tar.gz) = 560753 bytes
+SHA1 (latex-mk-1.9.tar.gz) = 79e9ceaf37ecd6d68396105764757568abe5a579
+RMD160 (latex-mk-1.9.tar.gz) = be556e06e7c6a995142c08cc1595992c67a85f20
+Size (latex-mk-1.9.tar.gz) = 575580 bytes
