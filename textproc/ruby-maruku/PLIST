@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/15 01:05:05 minskim Exp $
+bin/marudown
+bin/maruku
+bin/marutest
+bin/marutex
+${RUBY_SITELIBDIR}/maruku.rb
+${RUBY_SITELIBDIR}/maruku/attributes.rb
+${RUBY_SITELIBDIR}/maruku/defaults.rb
+${RUBY_SITELIBDIR}/maruku/errors_management.rb
+${RUBY_SITELIBDIR}/maruku/ext/math.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/elements.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/mathml_engines/blahtex.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/mathml_engines/itex2mml.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/mathml_engines/none.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/mathml_engines/ritex.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/parsing.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/to_html.rb
+${RUBY_SITELIBDIR}/maruku/ext/math/to_latex.rb
+${RUBY_SITELIBDIR}/maruku/helpers.rb
+${RUBY_SITELIBDIR}/maruku/input/charsource.rb
+${RUBY_SITELIBDIR}/maruku/input/extensions.rb
+${RUBY_SITELIBDIR}/maruku/input/html_helper.rb
+${RUBY_SITELIBDIR}/maruku/input/linesource.rb
+${RUBY_SITELIBDIR}/maruku/input/parse_block.rb
+${RUBY_SITELIBDIR}/maruku/input/parse_doc.rb
+${RUBY_SITELIBDIR}/maruku/input/parse_span_better.rb
+${RUBY_SITELIBDIR}/maruku/input/rubypants.rb
+${RUBY_SITELIBDIR}/maruku/input/type_detection.rb
+${RUBY_SITELIBDIR}/maruku/input_textile2/t2_parser.rb
+${RUBY_SITELIBDIR}/maruku/maruku.rb
+${RUBY_SITELIBDIR}/maruku/output/s5/fancy.rb
+${RUBY_SITELIBDIR}/maruku/output/s5/to_s5.rb
+${RUBY_SITELIBDIR}/maruku/output/to_html.rb
+${RUBY_SITELIBDIR}/maruku/output/to_latex.rb
+${RUBY_SITELIBDIR}/maruku/output/to_latex_entities.rb
+${RUBY_SITELIBDIR}/maruku/output/to_latex_strings.rb
+${RUBY_SITELIBDIR}/maruku/output/to_markdown.rb
+${RUBY_SITELIBDIR}/maruku/output/to_s.rb
+${RUBY_SITELIBDIR}/maruku/string_utils.rb
+${RUBY_SITELIBDIR}/maruku/structures.rb
+${RUBY_SITELIBDIR}/maruku/structures_inspect.rb
+${RUBY_SITELIBDIR}/maruku/structures_iterators.rb
+${RUBY_SITELIBDIR}/maruku/tests/benchmark.rb
+${RUBY_SITELIBDIR}/maruku/tests/new_parser.rb
+${RUBY_SITELIBDIR}/maruku/tests/tests.rb
+${RUBY_SITELIBDIR}/maruku/textile2.rb
+${RUBY_SITELIBDIR}/maruku/toc.rb
+${RUBY_SITELIBDIR}/maruku/usage/example1.rb
+${RUBY_SITELIBDIR}/maruku/version.rb
+${RUBY_SITELIBDIR}/sort_prof.rb
+@dirrm ${RUBY_SITELIBDIR}/maruku/usage
+@dirrm ${RUBY_SITELIBDIR}/maruku/tests
+@dirrm ${RUBY_SITELIBDIR}/maruku/output/s5
+@dirrm ${RUBY_SITELIBDIR}/maruku/output
+@dirrm ${RUBY_SITELIBDIR}/maruku/input_textile2
+@dirrm ${RUBY_SITELIBDIR}/maruku/input
+@dirrm ${RUBY_SITELIBDIR}/maruku/ext/math/mathml_engines
+@dirrm ${RUBY_SITELIBDIR}/maruku/ext/math
+@dirrm ${RUBY_SITELIBDIR}/maruku/ext
+@dirrm ${RUBY_SITELIBDIR}/maruku
