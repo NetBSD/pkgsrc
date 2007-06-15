@@ -1,0 +1,12 @@
+Maruku is a Markdown interpreter written in Ruby.
+
+The other Ruby implementation of Markdown is Bluecloth.  Maruku is
+much different in philosophy from Bluecloth; the biggest difference is
+that parsing is separated from rendering.  In Maruku, an in-memory
+representation of the Markdown document is created.  Instead,
+Bluecloth mantains the document in memory as a String at all times,
+and does a series of gsub to transform to HTML.
+
+Maruku is usually faster than Bluecloth.  Bluecloth is faster for very
+small documents.  Bluecloth sometimes chokes on very big documents (it
+is reported that the blame should be on Ruby's regexp implementation).
