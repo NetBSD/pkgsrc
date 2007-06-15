@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/06/15 14:29:41 jlam Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	10
@@ -16,7 +16,7 @@ COMMENT=	Multi-lingual terminal emulator for X
 
 USE_IMAKE=	YES
 
-SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${ROOT_USER} ${ROOT_GROUP} 4711
+SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${SETUID_ROOT_PERMS}
 
 BUILD_DEFS+=	KTERM_USE_WALLPAPER
 
