@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6431 2007/06/15 17:46:47 obache Exp $
+$NetBSD: TODO,v 1.6432 2007/06/15 23:28:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -984,7 +984,6 @@ Suggested package updates
 	o postgresql-autodoc-1.30
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
-	o prayer-1.0.18
 	o prelude-lml-0.9.10
 	o profit-2.5.3
 	o projclock-0.9
