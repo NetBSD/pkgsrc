@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/04/10 23:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2007/06/15 17:41:54 joerg Exp $
 #
 
 DISTNAME=	metacity-2.18.2
@@ -22,7 +22,9 @@ GCONF2_SCHEMAS=		metacity.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !exists(${X11BASE}/lib/libXinerama.so)
+.if ${X11_TYPE} != "native"
+.include "../../x11/libXinerama/buildlink3.mk"
+.else !exists(${X11BASE}/lib/libXinerama.so)
 CONFIGURE_ARGS+=	--disable-xinerama
 .endif
 
