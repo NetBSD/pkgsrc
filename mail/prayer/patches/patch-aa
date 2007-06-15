@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
+$NetBSD: patch-aa,v 1.9 2007/06/15 23:28:17 wiz Exp $
 
---- Config.orig	2005-01-06 13:51:08.000000000 +0100
-+++ Config	2006-10-23 10:21:43.000000000 +0200
-@@ -15,9 +15,9 @@ DIRECT_ENABLE        = false  # Experime
+--- defaults/Config.orig	2006-04-05 12:35:35.000000000 +0000
++++ defaults/Config
+@@ -16,9 +16,9 @@ DIRECT_ENABLE        = false  # Experime
  MUTEX_SEMAPHORE      = false  # Use SYSV mutexes rather than file locking
  
  # Following depend on the way that you have configured c-client
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
  
  # Probably don't need the following
  ACCOUNTD_ENABLE      = false  # Only of use in Cambridge at the moment.
-@@ -31,13 +31,13 @@ CC           = gcc
+@@ -32,13 +32,13 @@ CC           = gcc
  # Location of make program (GNU make required)
  MAKE         = gmake
  # Location of install program (GNU install or compatible required)
@@ -32,20 +32,20 @@ $NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
  BASE_LIBS    = -lcrypt
  
  # Base Compiler options for Sun SUNWspro compiler
-@@ -57,9 +57,9 @@ BASE_LIBS    = -lcrypt
+@@ -58,9 +58,9 @@ BASE_LIBS    = -lcrypt
  # which points to ../../imap/c-client. This just reduces the amount of
  # noise output on each line when building the package.
  #
 -CCLIENT_DIR=./c-client
 -CCLIENT_INCLUDE=-I $(CCLIENT_DIR)
--CCLIENT_LIB=./$(CCLIENT_DIR)/c-client.a
+-CCLIENT_LIBS=./$(CCLIENT_DIR)/c-client.a
 +CCLIENT_DIR=${BUILDLINK_PREFIX.imap-uw}
 +CCLIENT_INCLUDE=-I $(CCLIENT_DIR)/include/c-client
-+CCLIENT_LIB=$(CCLIENT_DIR)/lib/libc-client.a
++CCLIENT_LIBS=$(CCLIENT_DIR)/lib/libc-client.a
  CCLIENT_SSL_ENABLE  = true
  
  #
-@@ -102,8 +102,8 @@ PAM_INCLUDE =
+@@ -107,8 +107,8 @@ PAM_INCLUDE =
  PAM_LIBS    = -lpam
  
  # Kerberos (required if CCLIENT_KERB_ENABLE set)
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
  
  # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
  #
-@@ -127,8 +127,8 @@ DB_INCLUDE=
+@@ -132,8 +132,8 @@ DB_INCLUDE=
  DB_LIBS=-ldb
  
  # Following suitable for FreeBSD with DB 4 package installed
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
  
  ############################################################################
  
-@@ -142,16 +142,16 @@ BROOT=
+@@ -147,16 +147,16 @@ BROOT=
  
  # Directory, User and group for read-write files: log files, sockets etc
  VAR_PREFIX = /var/spool/prayer
@@ -89,7 +89,7 @@ $NetBSD: patch-aa,v 1.8 2006/10/23 08:31:29 rillig Exp $
  
  # Access permissions for general objects (wrt above users and groups)
  PUBLIC_EXEC  = 0755
-@@ -164,6 +164,6 @@ PRIVATE_DIR  = 0750
+@@ -169,6 +169,6 @@ PRIVATE_DIR  = 0750
  PRIVATE_FILE = 0640
  
  # Location of configuration files and binaries

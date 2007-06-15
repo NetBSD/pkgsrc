@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2006/02/19 09:24:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/06/15 23:28:16 wiz Exp $
 sbin/prayer
 sbin/prayer-cyclog
+sbin/prayer-db-prune
 sbin/prayer-sem-prune
 sbin/prayer-session
 sbin/prayer-ssl-prune
@@ -11,7 +12,10 @@ share/examples/prayer/welcome.html
 share/examples/rc.d/prayer
 share/prayer/help/abook_add.html
 share/prayer/help/abook_list.html
+share/prayer/help/abook_lookup.html
 share/prayer/help/abook_search.html
+share/prayer/help/abook_take.html
+share/prayer/help/abook_update.html
 share/prayer/help/abook_xfer.html
 share/prayer/help/attachments.html
 share/prayer/help/block.html
