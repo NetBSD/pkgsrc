@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1397 2007/06/15 23:28:45 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1398 2007/06/15 23:41:50 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2620,3 +2620,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/opencdk to 0.6.4 [wiz 2007-06-15]
 	Removed devel/ArX [wiz 2007-06-15]
 	Updated mail/prayer to 1.0.18 [wiz 2007-06-15]
+	Updated print/latex-mk to 1.9 [dmcmahill 2007-06-15]
