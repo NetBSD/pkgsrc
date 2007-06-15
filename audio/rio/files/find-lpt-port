@@ -1,5 +1,6 @@
-#! /bin/sh
-# $NetBSD: find-lpt-port,v 1.1 2000/01/11 11:32:11 agc Exp $
+#!@SH@
+#
+# $NetBSD: find-lpt-port,v 1.2 2007/06/15 15:13:34 jlam Exp $
 #
 # Small shell script to find the lpt port easily
 
