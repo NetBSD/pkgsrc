@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/01/02 12:24:00 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/15 16:42:19 manu Exp $
 #
 
 DISTNAME=		nss_ldap-240
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		databases
 MASTER_SITES=		http://www.padl.com/download/
 
@@ -19,6 +19,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+= --with-ldap-conf-file=${PKG_SYSCONFDIR}/nss_ldap.conf
 CONFIGURE_ARGS+= --with-ldap-secret-file=${PKG_SYSCONFDIR}/nss_ldap.secret
 CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+= --enable-schema-mapping
 MAKE_FLAGS+=		INST_UID=${BINOWN} INST_GID=${BINGRP}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
