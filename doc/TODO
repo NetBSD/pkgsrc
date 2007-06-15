@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6429 2007/06/13 22:23:57 wiz Exp $
+$NetBSD: TODO,v 1.6430 2007/06/15 16:10:00 obache Exp $
 
 Suggested new packages
 ======================
@@ -1025,7 +1025,6 @@ Suggested package updates
 	o py-m2crypto-0.17
 	o py-mad-0.6
 	o py-metakit-2.4.9.6
-	o py-mssql-0.8.0 [pkg/36478]
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.11
 	o py-mysqldb-1.1.7
