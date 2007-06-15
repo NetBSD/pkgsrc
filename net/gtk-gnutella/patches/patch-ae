@@ -1,0 +1,121 @@
+$NetBSD: patch-ae,v 1.4 2007/06/15 14:26:23 darcy Exp $
+
+--- src/if/gnet_property.c.orig	2007-06-14 12:07:07.000000000 -0400
++++ src/if/gnet_property.c
+@@ -730,7 +730,7 @@ gnet_prop_init(void) {
+     gnet_property->props[3].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[3].type               = PROP_TYPE_STRING;
++    gnet_property->props[3].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[3].data.string.def    = &new_version_str_def;
+     gnet_property->props[3].data.string.value  = &new_version_str;
+     if (gnet_property->props[3].data.string.def) {
+@@ -2843,7 +2843,7 @@ gnet_prop_init(void) {
+     gnet_property->props[113].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[113].type               = PROP_TYPE_STRING;
++    gnet_property->props[113].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[113].data.string.def    = &socks_user_def;
+     gnet_property->props[113].data.string.value  = &socks_user;
+     if (gnet_property->props[113].data.string.def) {
+@@ -2864,7 +2864,7 @@ gnet_prop_init(void) {
+     gnet_property->props[114].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[114].type               = PROP_TYPE_STRING;
++    gnet_property->props[114].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[114].data.string.def    = &socks_pass_def;
+     gnet_property->props[114].data.string.value  = &socks_pass;
+     if (gnet_property->props[114].data.string.def) {
+@@ -2901,7 +2901,7 @@ gnet_prop_init(void) {
+     gnet_property->props[116].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[116].type               = PROP_TYPE_STRING;
++    gnet_property->props[116].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[116].data.string.def    = &proxy_hostname_def;
+     gnet_property->props[116].data.string.value  = &proxy_hostname;
+     if (gnet_property->props[116].data.string.def) {
+@@ -3492,7 +3492,7 @@ gnet_prop_init(void) {
+     gnet_property->props[146].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[146].type               = PROP_TYPE_STRING;
++    gnet_property->props[146].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[146].data.string.def    = &scan_extensions_def;
+     gnet_property->props[146].data.string.value  = &scan_extensions;
+     if (gnet_property->props[146].data.string.def) {
+@@ -3547,7 +3547,7 @@ gnet_prop_init(void) {
+     gnet_property->props[149].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[149].type               = PROP_TYPE_STRING;
++    gnet_property->props[149].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[149].data.string.def    = &save_file_path_def;
+     gnet_property->props[149].data.string.value  = &save_file_path;
+     if (gnet_property->props[149].data.string.def) {
+@@ -3568,7 +3568,7 @@ gnet_prop_init(void) {
+     gnet_property->props[150].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[150].type               = PROP_TYPE_STRING;
++    gnet_property->props[150].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[150].data.string.def    = &move_file_path_def;
+     gnet_property->props[150].data.string.value  = &move_file_path;
+     if (gnet_property->props[150].data.string.def) {
+@@ -3589,7 +3589,7 @@ gnet_prop_init(void) {
+     gnet_property->props[151].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[151].type               = PROP_TYPE_STRING;
++    gnet_property->props[151].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[151].data.string.def    = &bad_file_path_def;
+     gnet_property->props[151].data.string.value  = &bad_file_path;
+     if (gnet_property->props[151].data.string.def) {
+@@ -3610,7 +3610,7 @@ gnet_prop_init(void) {
+     gnet_property->props[152].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[152].type               = PROP_TYPE_STRING;
++    gnet_property->props[152].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[152].data.string.def    = &shared_dirs_paths_def;
+     gnet_property->props[152].data.string.value  = &shared_dirs_paths;
+     if (gnet_property->props[152].data.string.def) {
+@@ -3631,7 +3631,7 @@ gnet_prop_init(void) {
+     gnet_property->props[153].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[153].type               = PROP_TYPE_STRING;
++    gnet_property->props[153].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[153].data.string.def    = &local_netmasks_string_def;
+     gnet_property->props[153].data.string.value  = &local_netmasks_string;
+     if (gnet_property->props[153].data.string.def) {
+@@ -4765,7 +4765,7 @@ gnet_prop_init(void) {
+     gnet_property->props[214].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[214].type               = PROP_TYPE_STRING;
++    gnet_property->props[214].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[214].data.string.def    = &server_hostname_def;
+     gnet_property->props[214].data.string.value  = &server_hostname;
+     if (gnet_property->props[214].data.string.def) {
+@@ -5630,7 +5630,7 @@ gnet_prop_init(void) {
+     gnet_property->props[259].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[259].type               = PROP_TYPE_STRING;
++    gnet_property->props[259].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[259].data.string.def    = &ancient_version_force_def;
+     gnet_property->props[259].data.string.value  = &ancient_version_force;
+     if (gnet_property->props[259].data.string.def) {
+@@ -6223,7 +6223,7 @@ gnet_prop_shutdown(void) {
+     }
+ 
+     for (n = 0; n < GNET_PROPERTY_NUM; n ++) {
+-        if (gnet_property->props[n].type == PROP_TYPE_STRING) {
++        if (gnet_property->props[n].type == gg_PROP_TYPE_STRING) {
+ 			gchar **p = gnet_property->props[n].data.string.value;
+             struct event *e = gnet_property->props[n].ev_changed;
+ 	    G_FREE_NULL(*p);

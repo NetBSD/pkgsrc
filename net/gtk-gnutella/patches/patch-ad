@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.4 2007/06/15 14:26:22 darcy Exp $
+
+--- src/if/props.tpl.orig	2007-06-14 12:07:07.000000000 -0400
++++ src/if/props.tpl
+@@ -468,7 +468,7 @@ FOR prop =][=
+         (sprintf "%s_choices" (. prop-var-name    ))=];[=
+ 
+     = string =]
+-    [=(. current-prop)=].type               = PROP_TYPE_STRING;
++    [=(. current-prop)=].type               = gg_PROP_TYPE_STRING;
+     [=(. current-prop)=].data.string.def    = [=(. prop-def-var)=];
+     [=(. current-prop)=].data.string.value  = [=(. prop-var)=];
+     if ([=(. current-prop)=].data.string.def) {
+@@ -500,7 +500,7 @@ void
+     }
+ 
+     for (n = 0; n < [=(. prop-num)=]; n ++) {
+-        if ([=(. prop-set)=]->props[n].type == PROP_TYPE_STRING) {
++        if ([=(. prop-set)=]->props[n].type == gg_PROP_TYPE_STRING) {
+ 			gchar **p = [=(. prop-array)=][n].data.string.value;
+             struct event *e = [=(. prop-array)=][n].ev_changed;
+ 	    G_FREE_NULL(*p);
