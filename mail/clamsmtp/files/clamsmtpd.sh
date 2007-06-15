@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamsmtpd.sh,v 1.7 2007/06/04 12:55:48 martti Exp $
+# $NetBSD: clamsmtpd.sh,v 1.8 2007/06/15 09:47:06 martti Exp $
 #
 # PROVIDE: clamsmtpd
 # REQUIRE: LOGIN clamd
@@ -13,9 +13,10 @@
 #
 # The following variables are optional:
 #
-#       clamsmtpd_user="@CLAMAV_USER@"	    # user to run clamsmtpd as
+#       clamsmtpd_maxwait="600"             # max wait time for clamd
+#       clamsmtpd_user="@CLAMAV_USER@"      # user to run clamsmtpd as
 #       clamsmtpd_addr="localhost:10026"    # address to forward mail to;
-#					    # see clamsmtpd(8).
+#                                           # see clamsmtpd(8).
 #
 
 if [ -f /etc/rc.subr ]; then
@@ -42,18 +43,16 @@ else
 	: ${socket="/tmp/clamd"}
 	: ${clamsmtpd_user="@CLAMAV_USER@"}
 fi
+: ${clamsmtpd_maxwait="600"}
 
 clamsmtpd_prestart()
 {
 	if [ ! -S "${socket}" ]; then
-		# Max wait time is 2 minutes
-		retries=11
-
-		@ECHO@ -n "Waiting for clamd to become ready"
-		while [ ${retries} -gt 0 -a ! -S "${socket}" ]; do
+		@ECHO@ -n "Waiting max ${clamsmtpd_maxwait} seconds for clamd to become ready"
+		while [ ${clamsmtpd_maxwait} -gt 0 -a ! -S "${socket}" ]; do
 			@ECHO@ -n "."
 			sleep 10
-			retries=$((retries - 1))
+			clamsmtpd_maxwait=$((clamsmtpd_maxwait - 10))
 		done
 		if [ ! -S "${socket}" ]; then
 			@ECHO@ ""
