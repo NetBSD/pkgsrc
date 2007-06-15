@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/15 01:05:05 minskim Exp $
-bin/marudown
-bin/maruku
-bin/marutest
-bin/marutex
+@comment $NetBSD: PLIST,v 1.2 2007/06/15 01:10:21 minskim Exp $
 ${RUBY_SITELIBDIR}/maruku.rb
 ${RUBY_SITELIBDIR}/maruku/attributes.rb
 ${RUBY_SITELIBDIR}/maruku/defaults.rb
