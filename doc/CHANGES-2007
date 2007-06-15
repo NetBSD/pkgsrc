@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1393 2007/06/15 22:15:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1394 2007/06/15 22:32:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2616,3 +2616,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added print/tex-cooking version 0.9b [dmcmahill 2007-06-15]
 	Updated audio/amarok to 1.4.5nb4 [wiz 2007-06-15]
 	Updated games/gtkballs to 3.1.5nb5 [wiz 2007-06-15]
+	Updated mail/clamav to 0.90.3nb1 [wiz 2007-06-15]
