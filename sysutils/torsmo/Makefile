@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/19 19:50:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/15 18:15:21 jlam Exp $
 
 DISTNAME=	torsmo-0.18
 CATEGORIES=	sysutils
@@ -19,7 +19,7 @@ DOCDIR=		${PREFIX}/share/doc/torsmo
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" \
 			  || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux")
-SPECIAL_PERMS+=	bin/torsmo ${ROOT_USER} kmem 2555
+SPECIAL_PERMS+=	bin/torsmo ${BINOWN} kmem 2555
 .endif
 
 do-install:
