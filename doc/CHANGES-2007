@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1410 2007/06/16 21:59:56 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1411 2007/06/16 22:22:19 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0.1 [ghen 2007-06-16]
 	Updated emulators/gxemul to 0.4.6 [xtraeme 2007-06-16]
 	Updated graphics/ImageMagick to 6.3.4.9 [heinz 2007-06-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2007Q2 branch [agc 2007-06-16]
