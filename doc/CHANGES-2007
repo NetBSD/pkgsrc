@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1398 2007/06/15 23:41:50 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1399 2007/06/16 02:35:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2621,3 +2621,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/ArX [wiz 2007-06-15]
 	Updated mail/prayer to 1.0.18 [wiz 2007-06-15]
 	Updated print/latex-mk to 1.9 [dmcmahill 2007-06-15]
+	Updated devel/meld to 1.1.5.1 [obache 2007-06-16]
