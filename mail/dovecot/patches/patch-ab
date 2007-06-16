@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.21 2007/03/30 19:10:38 ghen Exp $
+$NetBSD: patch-ab,v 1.22 2007/06/16 15:01:17 ghen Exp $
 
---- dovecot-example.conf.orig	2007-03-30 13:36:18.000000000 +0200
+--- dovecot-example.conf.orig	2007-06-13 02:47:39.000000000 +0200
 +++ dovecot-example.conf
 @@ -10,17 +10,14 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
@@ -109,7 +109,7 @@ $NetBSD: patch-ab,v 1.21 2007/03/30 19:10:38 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -784,7 +781,7 @@ auth default {
+@@ -785,7 +782,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -118,14 +118,14 @@ $NetBSD: patch-ab,v 1.21 2007/03/30 19:10:38 ghen Exp $
      # [blocking=yes] [session=yes] [setcred=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -817,15 +814,15 @@ auth default {
+@@ -818,15 +815,15 @@ auth default {
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
 -  }
 +  #}
  
-   # /etc/passwd or similar, using getpwnam()
+   # System users (NSS, /etc/passwd, or similiar)
    # In many systems nowadays this uses Name Service Switch, which is
    # configured in /etc/nsswitch.conf. <doc/wiki/AuthDatabase.Passwd.txt>
 -  #passdb passwd {
@@ -135,5 +135,5 @@ $NetBSD: patch-ab,v 1.21 2007/03/30 19:10:38 ghen Exp $
 -  #}
 +  }
  
-   # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
-   # <doc/wiki/PasswordDatabase.Shadow.txt>
+   # Shadow passwords for system users (NSS, /etc/shadow or similiar).
+   # Deprecated by PAM nowadays.
