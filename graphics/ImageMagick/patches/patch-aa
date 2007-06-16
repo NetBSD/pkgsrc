@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.43 2007/04/18 22:44:22 drochner Exp $
+$NetBSD: patch-aa,v 1.44 2007/06/16 21:58:10 heinz Exp $
 
---- configure.orig	2007-03-31 22:30:48.000000000 +0200
+--- configure.orig	2007-06-09 19:41:57.000000000 +0200
 +++ configure
-@@ -18984,9 +18984,6 @@ fi
+@@ -19095,9 +19095,6 @@ fi
  # Enable building/use of libltdl if we are building shared libraries regardless
  # of whether modules are built or not.
  with_ltdl='no'
@@ -12,7 +12,16 @@ $NetBSD: patch-aa,v 1.43 2007/04/18 22:44:22 drochner Exp $
  
   if test "$with_ltdl" != 'no'; then
    WITH_LTDL_TRUE=
-@@ -34622,7 +34619,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -19603,7 +19600,7 @@ if test "x$with_windows_font_dir" = "xno
+     with_windows_font_dir=
+ fi
+ if test "$with_windows_font_dir" != '' ; then
+-    DISTCHECK_CONFIG_FLAGS="${DISTCHECK_CONFIG_FLAGS} --with-windows-font-dir==$with_windows_font_dir "
++    DISTCHECK_CONFIG_FLAGS="${DISTCHECK_CONFIG_FLAGS} --with-windows-font-dir=$with_windows_font_dir "
+ fi
+ 
+ 
+@@ -34749,7 +34746,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasFONTCONFIG 1
  _ACEOF
  
@@ -21,7 +30,7 @@ $NetBSD: patch-aa,v 1.43 2007/04/18 22:44:22 drochner Exp $
      CPPFLAGS="$FONTCONFIG_CFLAGS $CPPFLAGS"
      fi
  fi
-@@ -36794,7 +36791,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -36921,7 +36918,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasGVC 1
  _ACEOF
  
@@ -30,7 +39,16 @@ $NetBSD: patch-aa,v 1.43 2007/04/18 22:44:22 drochner Exp $
          CPPFLAGS="$GVC_CFLAGS $CPPFLAGS"
      fi
  fi
-@@ -37337,7 +37334,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -37464,7 +37461,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define HasOPENEXR 1
+ _ACEOF
+ 
+-    if test "$with_modules" == 'no' ; then
++    if test "$with_modules" = 'no' ; then
+         CPPFLAGS="$OPENEXR_CFLAGS $CPPFLAGS"
+     fi
+ fi
+@@ -37576,7 +37573,7 @@ cat >>confdefs.h <<\_ACEOF
  #define HasRSVG 1
  _ACEOF
  
