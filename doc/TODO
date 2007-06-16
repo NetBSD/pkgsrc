@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6436 2007/06/16 13:11:29 wiz Exp $
+$NetBSD: TODO,v 1.6437 2007/06/16 14:34:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -1021,6 +1021,7 @@ Suggested package updates
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3
+	o py-libxml2-2.6.28
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.17
 	o py-mad-0.6
