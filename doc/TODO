@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6437 2007/06/16 14:34:17 taca Exp $
+$NetBSD: TODO,v 1.6438 2007/06/16 22:01:12 heinz Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
 	o GridSim-3.3
-	o ImageMagick-6.3.4.1
 	o PAM-0.99.7.1
 	o R-2.5.0
 	o R-CGIwithR-0.72
@@ -879,7 +878,6 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MP3-Info-1.22
-	o p5-Mail-Audit-2.218
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
@@ -914,7 +912,6 @@ Suggested package updates
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
 	o p5-XML-RAI-1.04
-	o p5-XML-SAX-Expat-0.37
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.34
