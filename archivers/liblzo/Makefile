@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2005/08/07 16:02:12 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2007/06/16 14:52:20 wiz Exp $
 #
 
 DISTNAME=	lzo-1.08
 PKGNAME=	lib${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/ \
-		ftp://ftp.elf.stuba.sk/pub/pc/pack/
+MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/LZO-v1/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
