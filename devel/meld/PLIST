@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/17 22:41:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/16 02:35:08 obache Exp $
 bin/meld
 lib/meld/diffutil.py
 lib/meld/diffutil.pyc
@@ -71,10 +71,12 @@ lib/meld/vcview.pyc
 lib/meld/vcview.pyo
 share/application-registry/meld.applications
 share/applications/meld.desktop
+share/ar/LC_MESSAGES/meld.mo
 share/bg/LC_MESSAGES/meld.mo
 share/ca/LC_MESSAGES/meld.mo
 share/cs/LC_MESSAGES/meld.mo
 share/de/LC_MESSAGES/meld.mo
+share/dz/LC_MESSAGES/meld.mo
 share/en_CA/LC_MESSAGES/meld.mo
 share/en_GB/LC_MESSAGES/meld.mo
 share/es/LC_MESSAGES/meld.mo
@@ -83,6 +85,9 @@ share/fr/LC_MESSAGES/meld.mo
 share/gnome/help/meld/C/figures/dirdiff.png
 share/gnome/help/meld/C/figures/filediff.png
 share/gnome/help/meld/C/meld.xml
+share/gnome/help/meld/es/figures/dirdiff.png
+share/gnome/help/meld/es/figures/filediff.png
+share/gnome/help/meld/es/meld.xml
 share/hu/LC_MESSAGES/meld.mo
 share/it/LC_MESSAGES/meld.mo
 share/ja/LC_MESSAGES/meld.mo
@@ -122,6 +127,7 @@ share/meld/glade2/vcview.glade
 share/ne/LC_MESSAGES/meld.mo
 share/nl/LC_MESSAGES/meld.mo
 share/omf/meld/meld-C.omf
+share/omf/meld/meld-es.omf
 share/pa/LC_MESSAGES/meld.mo
 share/pixmaps/meld.png
 share/pt/LC_MESSAGES/meld.mo
@@ -174,6 +180,8 @@ share/zh_TW/LC_MESSAGES/meld.mo
 @dirrm share/it
 @dirrm share/hu/LC_MESSAGES
 @dirrm share/hu
+@dirrm share/gnome/help/meld/es/figures
+@dirrm share/gnome/help/meld/es
 @dirrm share/gnome/help/meld/C/figures
 @dirrm share/gnome/help/meld/C
 @dirrm share/gnome/help/meld
