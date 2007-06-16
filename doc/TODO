@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6435 2007/06/16 07:44:17 adam Exp $
+$NetBSD: TODO,v 1.6436 2007/06/16 13:11:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -416,6 +416,7 @@ Suggested package updates
 	o dnsmasq-2.39
 	o dnstop-20070307
 	o dnstracer-1.8
+	o dovecot-1.0.1
 	o doxygen-1.5.2
 	o dpkg-1.13.25
 	o drscheme-370
@@ -655,6 +656,7 @@ Suggested package updates
 	o kmp-0.5
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
+	o kphotobook-0.0.7
 	o ksi-3.4.2
 	o ktorrent-2.1.2
 	o kye-0.9.3
@@ -699,6 +701,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libole2-2.2.8
+	o libopensync-0.30
 	o libosip-3.0.2
 	o libprelude-0.9.14
 	o libshout-2.2.2
@@ -947,7 +950,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.10.2rc1
+	o phpmyadmin-2.10.2
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1305,6 +1308,7 @@ Suggested package updates
 	o xwpe-1.5.30a
 	o xzip-182
 	o yafc-1.1
+	o yasm-0.6.1
 	o yaz-2.1.54
 	o yodl-2.01.02
 	o ysm-2.9.9.1
