@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/06/15 11:23:54 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2007/06/16 21:17:52 rillig Exp $
 
 DISTNAME=	libexif-0.6.16
 CATEGORIES=	graphics
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
-PKGCONFIG_OVERRIDE=	libexif/libexif.pc.in
+PKGCONFIG_OVERRIDE=	libexif.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
