@@ -1,10 +1,14 @@
-# $NetBSD: options.mk,v 1.4 2006/11/15 15:28:21 martin Exp $
+# $NetBSD: options.mk,v 1.5 2007/06/16 01:14:48 dmcmahill Exp $
 
 PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
 PKG_SUPPORTED_OPTIONS	= debug
 
 .if ( ${MOZILLA_BIN} == "firefox-bin" || ${MOZILLA_BIN} == "thunderbird-bin" )
 PKG_SUPPORTED_OPTIONS  += official-mozilla-branding
+.endif
+
+.if ( ${MOZILLA_BIN} == "firefox-bin" || ${MOZILLA_BIN} == "seamonkey-bin" )
+PKG_SUPPORTED_OPTIONS  += mozilla-single-profile
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -15,6 +19,10 @@ PKG_SUPPORTED_OPTIONS  += official-mozilla-branding
 CONFIGURE_ARGS+=	--disable-debug
 .else
 CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Mmozilla-single-profile)
+CONFIGURE_ARGS+=	--enable-single-profile
 .endif
 
 # Enable Official mozilla.org Branding for Firefox or Thunderbird.
