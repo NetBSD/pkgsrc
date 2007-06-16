@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2007/04/18 22:44:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.56 2007/06/16 21:58:09 heinz Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -108,6 +108,7 @@ include/wand/compare.h
 include/wand/composite.h
 include/wand/conjure.h
 include/wand/convert.h
+include/wand/deprecate.h
 include/wand/display.h
 include/wand/drawing-wand.h
 include/wand/identify.h
@@ -140,6 +141,7 @@ lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
 man/man1/ImageMagick.1
+man/man1/Magick++-config.1
 man/man1/Magick-config.1
 man/man1/Wand-config.1
 man/man1/animate.1
@@ -165,6 +167,10 @@ share/ImageMagick-${IM_MAJOR_VER}/config/thresholds.xml
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/arc.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/background.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/black.png
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_clipped.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_darker.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_lin.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_log.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/button.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/configure.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/definitive-guide.png
@@ -252,6 +258,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/compare.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/composite.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/constitute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/decorate.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/deprecate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/display.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/draw.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/drawing-wand.html
@@ -262,6 +269,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-deprecate.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-property.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-wand.html
@@ -302,6 +310,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/download.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/fx.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/high-dynamic-range.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/history.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/identify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/import.html
@@ -317,6 +326,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/mailing-list.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/miff.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/mogrify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/montage.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/motion-picture.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/perl-magick.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/quantize.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/resources.html
