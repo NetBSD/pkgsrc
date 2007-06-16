@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/10/12 14:29:46 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/16 02:35:08 obache Exp $
 #
 
-DISTNAME=		meld-1.1.4
+DISTNAME=		meld-1.1.5.1
 CATEGORIES=		devel
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/meld/1.1/
 EXTRACT_SUFX=		.tar.bz2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 DEPENDS+=		${PYPKGPREFIX}-gtk2>=2.6.0:../../x11/py-gtk2
 DEPENDS+=		${PYPKGPREFIX}-gnome2>=2.6.0:../../x11/py-gnome2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://meld.sourceforge.net/
 COMMENT=		Visual diff and merge tool
 
