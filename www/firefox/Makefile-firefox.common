@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.44 2007/05/31 07:25:07 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.45 2007/06/16 01:14:48 dmcmahill Exp $
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		2.0.0.4
@@ -19,7 +19,6 @@ DISTINFO_FILE=		${.CURDIR}/../../www/firefox/distinfo
 PATCHDIR=		${.CURDIR}/../../www/firefox/patches
 
 CONFIGURE_ARGS+=	--enable-application=browser
-CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--without-gssapi
 
 CONFIGURE_ARGS+=	--enable-canvas
