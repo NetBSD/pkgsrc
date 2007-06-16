@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1407 2007/06/16 18:16:06 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1408 2007/06/16 20:37:05 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2340,7 +2340,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added graphics/gimp-fix-ca version 2.1.0 [dsainty 2007-06-03]
 	Added print/tex-resume version 20010823 [jmmv 2007-06-03]
 	Updated sysutils/smartmontools to 5.37 [jmmv 2007-06-03]
-	Updated print/scribus to 1.3.3.9 [ghen 2007-06-03]	
+	Updated print/scribus to 1.3.3.9 [ghen 2007-06-03]
 	Updated sysutils/htop to 0.6.6 [xtraeme 2007-06-03]
 	Updated www/drraw to 2.2a4 [kleink 2007-06-03]
 	Added graphics/rabbit version 0.5.2 [obache 2007-06-04]
