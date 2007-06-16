@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1400 2007/06/16 07:44:17 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1401 2007/06/16 10:37:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/latex-mk to 1.9 [dmcmahill 2007-06-15]
 	Updated devel/meld to 1.1.5.1 [obache 2007-06-16]
 	Updated emulators/wine to 0.9.39 [adam 2007-06-16]
+	Updated devel/psvn to 25241 [taca 2007-06-16]
