@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.509 2007/06/16 13:09:38 sborrill Exp $
+# $NetBSD: Makefile,v 1.510 2007/06/16 22:39:24 kristerw Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -26,8 +26,8 @@ SUBDIR+=	blt
 SUBDIR+=	bwidget
 SUBDIR+=	compositeproto
 SUBDIR+=	damageproto
-SUBDIR+=	deskmenu
 SUBDIR+=	desklaunch
+SUBDIR+=	deskmenu
 SUBDIR+=	devilspie
 SUBDIR+=	dfm
 SUBDIR+=	dtx11session
