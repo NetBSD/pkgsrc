@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1403 2007/06/16 11:46:41 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1404 2007/06/16 13:09:37 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2627,3 +2627,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/psvn to 25241 [taca 2007-06-16]
 	Updated devel/netbsd-iscsi to 20070615 [agc 2007-06-16]
 	Updated mail/p5-Mail-Audit to 2.219 [heinz 2007-06-16]
+	Added x11/deskmenu version 1.4.2 [sborrill 2007-06-16]
