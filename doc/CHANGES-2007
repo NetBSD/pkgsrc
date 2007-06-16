@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1406 2007/06/16 15:05:08 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1407 2007/06/16 18:16:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2630,3 +2630,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/deskmenu version 1.4.2 [sborrill 2007-06-16]
 	Updated x11/xpmicons to 1.0nb5 [obache 2007-06-16]
 	Updated mail/dovecot to 1.0.1 [ghen 2007-06-16]
+	Updated emulators/gxemul to 0.4.6 [xtraeme 2007-06-16]
