@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1402 2007/06/16 10:46:08 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1403 2007/06/16 11:46:41 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2594,6 +2594,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp24 to 2.3.18 [adam 2007-06-14]
 	Updated misc/openoffice2 to 2.2.0nb5 [hira 2007-06-14]
 	Updated sysutils/file to 4.21 [adrianp 2007-06-14]
+	Updated games/enigma to 1.01 [heinz 2007-06-14]
 	Added textproc/itex2MML version 1.2.2 [minskim 2007-06-14]
 	Added textproc/ruby-itex2MML version 1.2.2 [minskim 2007-06-14]
 	Added sysutils/xenkernel3 version 3.1.0 [bouyer 2007-06-14]
@@ -2625,3 +2626,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.39 [adam 2007-06-16]
 	Updated devel/psvn to 25241 [taca 2007-06-16]
 	Updated devel/netbsd-iscsi to 20070615 [agc 2007-06-16]
+	Updated mail/p5-Mail-Audit to 2.219 [heinz 2007-06-16]
