@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/05/29 15:40:18 taca Exp $
+$NetBSD: distinfo,v 1.2 2007/06/16 10:36:24 taca Exp $
 
-SHA1 (psvn-25168/psvn.el) = f0d20a24db6e7df79ae64731faf8c067c339ac7d
-RMD160 (psvn-25168/psvn.el) = a225a0a415b232de0b0ad313258041e7d82e8680
-Size (psvn-25168/psvn.el) = 265530 bytes
+SHA1 (psvn-25241/psvn.el) = c69176ca42cf5dc2405f76f0f2b2d2186c2b5fb6
+RMD160 (psvn-25241/psvn.el) = 6acfbf7a4a54374246a5570a34e8b233780e8ed1
+Size (psvn-25241/psvn.el) = 265675 bytes
