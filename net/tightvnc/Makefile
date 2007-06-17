@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/06/17 20:58:49 tnn Exp $
 #
 
-DISTNAME=		tightvnc-1.2.9
-PKGREVISION=	2
+DISTNAME=		tightvnc-1.3.9
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
@@ -20,6 +19,14 @@ USE_TOOLS+=		perl:run
 NO_INSTALL_MANPAGES=	yes
 
 BUILD_TARGET=		World
+
+.include "../../mk/bsd.prefs.mk"
+
+# XXX - this should go into Xvnc's NetBSD.cf, but imake doesn't
+# seem to pick it up. Someone with strong X-fu needs to look at it.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+_WRAP_EXTRA_ARGS.CC+=	-DDDXTIME -D_XSERVER64 -DGCCUSESGAS
+.endif
 
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
@@ -46,4 +53,7 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
