@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/14 18:53:10 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/17 17:32:27 minskim Exp $
 
 DISTNAME=	itexToMML
-PKGNAME=	itex2MML-1.2.2
+PKGNAME=	itex2MML-1.2.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://golem.ph.utexas.edu/~distler/blog/files/
 
