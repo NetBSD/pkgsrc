@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2007/06/15 16:35:41 joerg Exp $
+# $NetBSD: Makefile.common,v 1.21 2007/06/17 13:47:00 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -211,7 +211,7 @@ CONFIGURE_ARGS+=	 --without-pthreads
 CONFIGURE_ARGS+=	 --with-pthreads
 .endif
 
-.if (${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)) || ${X11_TYPE} != "native"
+.if ${MOZILLA_USE_XFT} == "YES" && (exists(${X11BASE}/include/X11/Xdefs.h) || ${X11_TYPE} != "native")
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependency, which is what we want.
 .include "../../x11/libXft/buildlink3.mk"
