@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/02/05 14:33:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2007/06/17 21:24:41 minskim Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	9
@@ -47,7 +47,9 @@ post-extract:
 			${GUNZIP_CMD} $$f ; \
 		fi ; \
 	done
-	@cd ${WRKSRC} ; ${SH} libf77 ; ${SH} libi77
+	@${MV} ${WRKSRC}/libf77 ${WRKSRC}/libf77.sh
+	@${MV} ${WRKSRC}/libi77 ${WRKSRC}/libi77.sh
+	@cd ${WRKSRC} ; ${SH} libf77.sh ; ${SH} libi77.sh
 	@${RM} ${WRKSRC}/src/index.html
 	@${MV} ${WRKSRC}/src/.depend  ${WRKSRC}/src/depend.orig
 	@${GUNZIP_CMD} ${WRKSRC}/src/*.gz
