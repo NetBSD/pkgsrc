@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6438 2007/06/16 22:01:12 heinz Exp $
+$NetBSD: TODO,v 1.6439 2007/06/17 07:35:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -771,7 +771,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.40
 	o mserv-devel-0.41
 	o msf-2.7
-	o msmtp-1.4.11
+	o msmtp-1.4.12
 	o mtail-1.1.1 [pkg/34512]
 	o mtools-3.9.11
 	o multitail-5.0.5
@@ -1240,7 +1240,7 @@ Suggested package updates
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9b
 	o wxGTK-2.8.4
-	o wxRemind-0.9.1
+	o wxRemind-0.9.3
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xalan-c-1.10.0
