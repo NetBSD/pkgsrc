@@ -1,5 +1,6 @@
-/* $NetBSD: host.def,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $ */
+/* $NetBSD: host.def,v 1.2 2007/06/17 19:33:54 jlam Exp $ */
 
 #define ProjectRoot @PREFIX@
+#define ManPath @PREFIX@/@PKGMANDIR@
 #define BuildHtmlManPages NO
 #define MakeCmd @MAKE@
