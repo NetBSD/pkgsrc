@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2007/02/23 14:01:20 drochner Exp $
+$NetBSD: distinfo,v 1.5 2007/06/17 19:11:37 minskim Exp $
 
 SHA1 (nagi_src_-_2002-11-14.tar.gz) = 3afeae70e78dd36a3d8b114212992318a8182372
 RMD160 (nagi_src_-_2002-11-14.tar.gz) = 0dbbb6895ba067d91d5afd3ba11c8f82aacf1488
@@ -19,3 +19,4 @@ SHA1 (patch-am) = 291aea5cdc08121061004bd4bf982cd7eb44f9af
 SHA1 (patch-an) = 37363bc784c77889520420b8464094cee36758c1
 SHA1 (patch-ao) = 3bf0b7e698d14c9e2bce15b92a5c60a1d1c520ed
 SHA1 (patch-ap) = 4088c8aed0cd8eaf5d8994dacfcec963909d5b54
+SHA1 (patch-aq) = c9d594c13f73d02af33d26af1c53f4ee13398991
