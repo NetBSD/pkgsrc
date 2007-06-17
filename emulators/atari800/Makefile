@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/06/17 18:36:19 minskim Exp $
 
 DISTNAME=	atari800-2.0.2
 PKGREVISION=	2
@@ -17,7 +17,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake unzip
 GNU_CONFIGURE=		yes
 
 .include "options.mk"
@@ -26,7 +26,7 @@ GNU_CONFIGURE=		yes
 MAKE_FLAGS+=	HOME=${WRKSRC:Q}
 
 post-extract:
-	@cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -Lqo ${DISTDIR}/xf25.zip
+	@cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/xf25.zip
 	${SED} -e 's,@PREFIX@,${PREFIX},g' <${FILESDIR}/atari800.cfg \
 		>${WRKSRC}/atari800.cfg
 
