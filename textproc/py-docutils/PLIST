@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/25 11:15:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/06/17 14:34:12 joerg Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2newlatex.py
@@ -116,7 +116,6 @@ ${PYSITELIB}/docutils/parsers/rst/directives/references.pyo
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.py
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.pyc
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.pyo
-${PYSITELIB}/docutils/parsers/rst/include/isogrk4-wide.txt
 ${PYSITELIB}/docutils/parsers/rst/include/README.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isoamsa.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isoamsb.txt
@@ -131,15 +130,16 @@ ${PYSITELIB}/docutils/parsers/rst/include/isodia.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isogrk1.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isogrk2.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isogrk3.txt
-${PYSITELIB}/docutils/parsers/rst/include/isomfrk-wide.txt
+${PYSITELIB}/docutils/parsers/rst/include/isogrk4-wide.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isogrk4.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isolat1.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isolat2.txt
-${PYSITELIB}/docutils/parsers/rst/include/isomopf-wide.txt
+${PYSITELIB}/docutils/parsers/rst/include/isomfrk-wide.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isomfrk.txt
+${PYSITELIB}/docutils/parsers/rst/include/isomopf-wide.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isomopf.txt
-${PYSITELIB}/docutils/parsers/rst/include/isomscr.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isomscr-wide.txt
+${PYSITELIB}/docutils/parsers/rst/include/isomscr.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isonum.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isopub.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isotech.txt
@@ -282,12 +282,15 @@ ${PYSITELIB}/docutils/writers/docutils_xml.pyo
 ${PYSITELIB}/docutils/writers/html4css1/__init__.py
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyc
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyo
+${PYSITELIB}/docutils/writers/html4css1/html4css1.css
 ${PYSITELIB}/docutils/writers/latex2e/__init__.py
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyo
+${PYSITELIB}/docutils/writers/latex2e/latex2e.tex
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.py
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/newlatex2e/__init__.pyo
+${PYSITELIB}/docutils/writers/newlatex2e/base.tex
 ${PYSITELIB}/docutils/writers/newlatex2e/unicode_map.py
 ${PYSITELIB}/docutils/writers/newlatex2e/unicode_map.pyc
 ${PYSITELIB}/docutils/writers/newlatex2e/unicode_map.pyo
@@ -297,6 +300,8 @@ ${PYSITELIB}/docutils/writers/null.pyo
 ${PYSITELIB}/docutils/writers/pep_html/__init__.py
 ${PYSITELIB}/docutils/writers/pep_html/__init__.pyc
 ${PYSITELIB}/docutils/writers/pep_html/__init__.pyo
+${PYSITELIB}/docutils/writers/pep_html/pep.css
+${PYSITELIB}/docutils/writers/pep_html/template.txt
 ${PYSITELIB}/docutils/writers/pseudoxml.py
 ${PYSITELIB}/docutils/writers/pseudoxml.pyc
 ${PYSITELIB}/docutils/writers/pseudoxml.pyo
@@ -304,8 +309,8 @@ ${PYSITELIB}/docutils/writers/s5_html/__init__.py
 ${PYSITELIB}/docutils/writers/s5_html/__init__.pyc
 ${PYSITELIB}/docutils/writers/s5_html/__init__.pyo
 ${PYSITELIB}/docutils/writers/s5_html/themes/README.txt
-${PYSITELIB}/docutils/writers/s5_html/themes/big-black/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/__base__
+${PYSITELIB}/docutils/writers/s5_html/themes/big-black/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/pretty.css
@@ -319,12 +324,12 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/default/print.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/s5-core.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/slides.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/slides.js
-${PYSITELIB}/docutils/writers/s5_html/themes/medium-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/medium-black/__base__
+${PYSITELIB}/docutils/writers/s5_html/themes/medium-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/medium-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/medium-white/pretty.css
-${PYSITELIB}/docutils/writers/s5_html/themes/small-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-black/__base__
+${PYSITELIB}/docutils/writers/s5_html/themes/small-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/pretty.css
 ${PYSITELIB}/roman.py
