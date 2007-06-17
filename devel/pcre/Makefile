@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/06/08 18:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/06/17 17:05:08 joerg Exp $
 
 DISTNAME=	pcre-7.1
 CATEGORIES=	devel
+PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -16,6 +17,12 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-utf8
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_MESSAGE.rpath=	Fixing rpath output in pcre-config
+SUBST_FILES.rpath=	pcre-config.in
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in
 
