@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2007/04/10 15:58:34 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/17 15:15:09 joerg Exp $
 #
 
 DISTNAME=	ucl-1.03
+PKGREVISION=	1
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/ucl/download/
 
@@ -24,11 +25,10 @@ SUBST_STAGE.example=	post-patch
 SUBST_FILES.example=	examples/Makefile.in
 SUBST_SED.example=	-e "s|@MAKEINFO@||g"
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/ucl
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ucl
-	for i in simple.c lutil.h uclpack.c Makefile; do		\
+	for i in simple.c lutil.h uclpack.c; do		\
 	${INSTALL_DATA} ${WRKSRC}/examples/$$i ${PREFIX}/share/examples/ucl;\
 		done;
 	cd ${WRKSRC}/examples && libtool --mode=install ${INSTALL_PROGRAM} uclpack ${PREFIX}/bin
