@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/05/25 11:15:03 markd Exp $
+# $NetBSD: Makefile,v 1.22 2007/06/17 14:34:12 joerg Exp $
 
 DISTNAME=	docutils-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docutils/}
 
