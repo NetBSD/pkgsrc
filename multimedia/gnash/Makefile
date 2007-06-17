@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/14 06:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/17 10:18:13 wiz Exp $
 #
 
 DISTNAME=		gnash-0.8.0
@@ -18,6 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-mp3
+CONFIGURE_ARGS+=	--enable-media=mad
 USE_TOOLS+=		bash msgfmt pkg-config
 
 # /bin/sh finds a syntax error without line number
