@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD: ports/net/dtcpclient/files/dtcpclient.sh,v 1.5 2004/06/11 15:49:48 ume Exp $
-# $NetBSD: dtcpclient.sh,v 1.1.1.1 2005/01/23 05:07:43 hamajima Exp $
+# $NetBSD: dtcpclient.sh,v 1.2 2007/06/17 04:23:32 obache Exp $
 #
 
 # PROVIDE: dtcpclient
@@ -33,7 +33,7 @@ dtcpclient_flags=${dtcpclient_flags:-"-t network -Dl"}	# Flags to dtcpclient pro
 name="dtcpclient"
 rcvar=`set_rcvar`
 command="${prefix}/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 extra_commands="reload"
 
 load_rc_config $name
