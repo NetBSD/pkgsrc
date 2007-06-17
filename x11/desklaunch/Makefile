@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/12 20:59:31 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/17 14:37:28 joerg Exp $
 #
 
 VERSION=	1.1.5
@@ -14,7 +14,7 @@ COMMENT=	X utility for binding commands to pixmap icons
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/desklaunch ${PREFIX}/bin
