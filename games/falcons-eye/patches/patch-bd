@@ -1,8 +1,16 @@
-$NetBSD: patch-bd,v 1.2 2003/12/20 16:51:38 ben Exp $
+$NetBSD: patch-bd,v 1.3 2007/06/17 19:19:18 minskim Exp $
 
 --- win/jtp/jtp_sdl.c.orig	2001-07-02 07:05:50.000000000 -0700
 +++ win/jtp/jtp_sdl.c
-@@ -405,6 +405,11 @@ void jtp_SDLPollForMessage(char waitform
+@@ -11,7 +11,6 @@
+ -------------------------------------------------------------------*/
+ 
+ #include <stdlib.h>
+-#include <malloc.h>
+ #include <unistd.h>
+ #include <signal.h>
+ #include <errno.h>
+@@ -405,6 +404,11 @@ void jtp_SDLPollForMessage(char waitform
  {
    SDL_Event cur_event;
  
