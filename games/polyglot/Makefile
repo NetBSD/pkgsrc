@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/02 20:06:07 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/17 15:24:32 joerg Exp $
 #
 
 DISTNAME=		polyglot_14
@@ -25,6 +25,18 @@ SUBST_CLASSES+=		ini
 SUBST_STAGE.ini=	post-configure
 SUBST_FILES.ini=	fruit.ini
 SUBST_SED.ini=		-e 's,@LOCALBASE@,${LOCALBASE},g'
+
+SRCS=		adapter.cpp attack.cpp board.cpp book.cpp book_make.cpp \
+		book_merge.cpp colour.cpp engine.cpp epd.cpp fen.cpp	\
+		game.cpp hash.cpp io.cpp line.cpp list.cpp main.cpp	\
+		move.cpp move_do.cpp move_gen.cpp move_legal.cpp	\
+		option.cpp parse.cpp pgn.cpp piece.cpp posix.cpp	\
+		random.cpp san.cpp search.cpp square.cpp uci.cpp	\
+		util.cpp
+
+do-build:
+	cd ${WRKSRC}/src && \
+		${CXX} ${CXXFLAGS} ${LDFLAGS} -lm -o polyglot ${SRCS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/polyglot ${PREFIX}/bin/
