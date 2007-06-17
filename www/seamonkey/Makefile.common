@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2007/06/15 18:13:41 joerg Exp $
+# $NetBSD: Makefile.common,v 1.26 2007/06/17 14:03:30 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -220,8 +220,8 @@ CONFIGURE_ARGS+=	--without-pthreads
 CONFIGURE_ARGS+=	--with-pthreads
 .endif
 
-.if ${X11_TYPE} != "native" || \
-    (${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h))
+.if ${MOZILLA_USE_XFT} == "YES" && \
+    (${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/Xdefs.h))
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependency, which is what we want.
 .include "../../x11/libXft/buildlink3.mk"
