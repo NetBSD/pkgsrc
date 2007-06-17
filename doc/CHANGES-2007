@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1413 2007/06/17 07:43:30 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1414 2007/06/17 17:34:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2635,3 +2635,5 @@ Changes to the packages collection and infrastructure in 2007:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2007Q2 branch [agc 2007-06-16]
 	Updated net/dtcpclient to 20060526nb1 [obache 2007-06-17]
 	Updated emulators/darcnes to 20010401nb3 [wiz 2007-06-17]
+	Updated textproc/itex2MML to 1.2.3 [minskim 2007-06-17]
+	Updated textproc/ruby-itex2MML to 1.2.3 [minskim 2007-06-17]
