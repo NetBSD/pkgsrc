@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 13:13:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/18 17:58:35 joerg Exp $
 include/vtk/expat.h
 include/vtk/expatDllConfig.h
 include/vtk/png.h
@@ -772,7 +772,6 @@ lib/vtk/CMake/libcmVTK_WRAP_PYTHON2.so
 lib/vtk/CMake/libcmVTK_WRAP_TCL2.so
 lib/vtk/CMake/vtkLoadCMakeExtensions.cmake
 lib/vtk/UseVTK.cmake
-lib/vtk/VTKBuildSettings.cmake
 lib/vtk/VTKConfig.cmake
 lib/vtk/VTKLibraryDepends.cmake
 lib/vtk/doxygen/authors.txt
