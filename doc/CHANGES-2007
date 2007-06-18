@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1417 2007/06/18 00:42:32 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1418 2007/06/18 04:02:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2640,4 +2640,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tightvncviewer to 1.3.9 [tnn 2007-06-17]
 	Updated net/tightvnc to 1.3.9 [tnn 2007-06-17]
 	Updated mail/clamav to 0.90.3nb2 [wiz 2007-06-17]
-	Added lang/guile16-gtk version 0.5 [dmcmahill 2007-06-17]
+	Added devel/guile16-gtk version 0.5 [dmcmahill 2007-06-17]
