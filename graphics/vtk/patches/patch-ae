@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2007/06/18 17:58:36 joerg Exp $
+
+--- cmake_install.cmake.orig	2007-06-17 16:02:44.000000000 +0000
++++ cmake_install.cmake
+@@ -36,7 +36,6 @@ FILE(INSTALL DESTINATION "${CMAKE_INSTAL
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/vtkHybridInstantiator.h")
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/vtkConfigure.h")
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/vtkToolkits.h")
+-FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/VTKBuildSettings.cmake")
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/UseVTK.cmake")
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vtk" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/VTKLibraryDepends.cmake")
+ FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/vtk/CMake" TYPE FILE FILES "/scratch/graphics/vtk/work/VTK/CMake/vtkLoadCMakeExtensions.cmake")
