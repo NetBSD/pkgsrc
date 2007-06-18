@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/05/19 22:02:59 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2007/06/18 04:16:47 schmonz Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -30,7 +30,9 @@ post-wrapper:
 			> ${BUILDLINK_DIR}/include/malloc.h;		\
 	fi
 
-.if ${MACHINE_ARCH} == "i386"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
