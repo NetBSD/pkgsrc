@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/06/13 20:23:41 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2007/06/18 23:42:00 tnn Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-themer
 
 USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 INFO_FILES=		YES
