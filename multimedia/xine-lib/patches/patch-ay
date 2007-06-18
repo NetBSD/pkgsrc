@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.3 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libdts/Makefile.in.orig	2007-06-18 19:26:19.000000000 +0000
++++ src/libdts/Makefile.in
+@@ -562,7 +562,7 @@ xineplug_LTLIBRARIES = $(dts_module)
+ xineplug_decode_dts_la_SOURCES = xine_dts_decoder.c $(internal_sources)
+ xineplug_decode_dts_la_CFLAGS = $(LIBDTS_CFLAGS) $(VISIBILITY_FLAG) $(fnsa)
+ xineplug_decode_dts_la_LDFLAGS = $(xineplug_ldflags)
+-@EXTERNAL_LIBDTS_FALSE@xineplug_decode_dts_la_LIBADD = $(XINE_LIB) -lm
++@EXTERNAL_LIBDTS_FALSE@xineplug_decode_dts_la_LIBADD = $(XINE_LIB) -lm $(LIBINTL)
+ @EXTERNAL_LIBDTS_TRUE@xineplug_decode_dts_la_LIBADD = $(XINE_LIB) $(LIBDTS_LIBS) -lm
+ noinst_HEADERS = bitstream.h internal-dts.h dts_internal.h tables.h tables_adpcm.h \
+ 	tables_fir.h tables_huffman.h tables_quantization.h tables_vq.h

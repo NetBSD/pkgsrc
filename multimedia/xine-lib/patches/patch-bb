@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.5 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libfaad/Makefile.in.orig	2007-06-18 19:48:11.000000000 +0000
++++ src/libfaad/Makefile.in
+@@ -633,7 +633,7 @@ xineplug_decode_faad_la_SOURCES = \
+ 	xine_faad_decoder.c
+ 
+ xineplug_decode_faad_la_LDFLAGS = $(xineplug_ldflags)
+-xineplug_decode_faad_la_LIBADD = -lm $(XINE_LIB)
++xineplug_decode_faad_la_LIBADD = -lm $(XINE_LIB) $(LIBINTL)
+ noinst_HEADERS = \
+ 	analysis.h \
+ 	bits.h \
