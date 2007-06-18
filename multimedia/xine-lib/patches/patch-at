@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.5 2007/06/18 21:16:11 joerg Exp $
+
+--- src/liba52/Makefile.in.orig	2007-06-17 20:23:04.000000000 +0000
++++ src/liba52/Makefile.in
+@@ -570,7 +570,7 @@ xineplug_decode_a52_la_SOURCES = \
+ @EXTERNAL_A52DEC_FALSE@xineplug_decode_a52_la_LIBADD = $(XINE_LIB) -lm
+ @EXTERNAL_A52DEC_TRUE@xineplug_decode_a52_la_LIBADD = $(XINE_LIB) -la52 -lm
+ xineplug_decode_a52_la_CFLAGS = $(VISIBILITY_FLAG)
+-xineplug_decode_a52_la_LDFLAGS = $(xineplug_ldflags)
++xineplug_decode_a52_la_LDFLAGS = $(xineplug_ldflags) $(LIBINTL)
+ noinst_HEADERS = \
+ 	a52.h \
+ 	a52_internal.h \
