@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.5 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libmusepack/Makefile.in.orig	2007-06-18 19:50:33.000000000 +0000
++++ src/libmusepack/Makefile.in
+@@ -569,8 +569,8 @@ EXTRA_DIST = diff_against_svn.patch
+ @EXTERNAL_MPCDEC_FALSE@	mpc_reader.c requant.c streaminfo.c synth_filter.c
+ 
+ @EXTERNAL_MPCDEC_TRUE@internal_sources = 
+-@EXTERNAL_MPCDEC_FALSE@xineplug_decode_mpc_la_LIBADD = $(XINE_LIB)
+-@EXTERNAL_MPCDEC_TRUE@xineplug_decode_mpc_la_LIBADD = $(XINE_LIB) -lmpcdec
++@EXTERNAL_MPCDEC_FALSE@xineplug_decode_mpc_la_LIBADD = $(XINE_LIB) $(LIBINTL)
++@EXTERNAL_MPCDEC_TRUE@xineplug_decode_mpc_la_LIBADD = $(XINE_LIB) $(LIBINTL) -lmpcdec
+ xineplug_decode_mpc_la_SOURCES = $(internal_sources) xine_musepack_decoder.c
+ xineplug_decode_mpc_la_CFLAGS = $(VISIBILITY_FLAG)
+ xineplug_decode_mpc_la_LDFLAGS = $(xineplug_ldflags)
