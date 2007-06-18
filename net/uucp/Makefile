@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/06/15 18:15:20 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/18 14:45:28 jlam Exp $
 
 DISTNAME=	uucp-1.07
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=uucp/}
 
@@ -10,6 +10,8 @@ COMMENT=	Taylor UUCP
 HOMEPAGE=	http://www.airs.com/ian/uucp.html
 
 USE_TOOLS+=	mkdir:run pwd:run rmdir:run
+
+.include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR=	uucp
 GNU_CONFIGURE=		yes
@@ -24,6 +26,10 @@ UUCP_GROUP?=	daemon
 UUCP_USER?=	uucp
 PKG_GROUPS=	${UUCP_GROUP}
 PKG_USERS=	${UUCP_USER}:${UUCP_GROUP}
+
+PKG_GECOS.${UUCP_USER}=	UNIX-to-UNIX Copy
+PKG_HOMES.${UUCP_USER}=	${UUCP_PUBDIR}
+PKG_SHELL.${UUCP_USER}=	${PREFIX}/libexec/uucp/uucico
 
 INFO_FILES=	# PLIST
 
@@ -51,6 +57,35 @@ OWN_DIRS_PERMS=		${UUCP_LOCKDIR} ${UUCP_USER} ${UUCP_GROUP} 0755
 OWN_DIRS_PERMS+=	${UUCP_SPOOLDIR} ${UUCP_USER} ${UUCP_GROUP} 0755
 OWN_DIRS_PERMS+=	${UUCP_PUBDIR} ${UUCP_USER} ${UUCP_GROUP} 1777
 
+SUBST_CLASSES+=		nbsd
+SUBST_STAGE.nbsd=	post-configure
+SUBST_MESSAGE.nbsd=	Fixing Makefiles for rmail and uucpd.
+SUBST_FILES.nbsd=	rmail/Makefile uucpd/Makefile
+SUBST_VARS.nbsd=	PREFIX PKGMANDIR UUCPD_CPPFLAGS UUCPD_LIBS	\
+			INSTALL_PROGRAM INSTALL_MAN
+
+# The necessary libraries and compiler flags for building uucpd are
+# platform-specific.
+#
+UUCPD_CPPFLAGS.${OPSYS}=	# empty
+.if exists(/usr/include/utmp.h)
+UUCPD_CPPFLAGS.${OPSYS}+=	-DSUPPORT_UTMP
+.endif
+.if exists(/usr/include/utmpx.h)
+UUCPD_CPPFLAGS.${OPSYS}+=	-DSUPPORT_UTMPX
+.endif
+UUCPD_CPPFLAGS.Darwin=	-DSUPPORT_UTMP
+UUCPD_CPPFLAGS.*=	# empty
+UUCPD_LIBS.Darwin=	# empty
+UUCPD_LIBS.*=		-lcrypt -lutil
+OPSYSVARS+=		UUCPD_CPPFLAGS UUCPD_LIBS
+
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 share/examples/uucp
+
+post-extract:
+	${CP} -R ${FILESDIR}/rmail ${WRKSRC}
+	${CP} -R ${FILESDIR}/uucpd ${WRKSRC}
+
 # Generate a policy_local.h header file that holds the paths used by UUCP.
 post-configure:
 	@${RM} -f ${WRKSRC}/policy_local.h
@@ -60,11 +95,11 @@ post-configure:
 	@${ECHO} "#define ${_var_}	\""${UUCP_${_var_}:Q}"\""	\
 		>> ${WRKSRC}/policy_local.h
 .endfor
-.for _var_ in rmail uucpd
-	@${MKDIR} ${WRKSRC}/${_var_}
-	@(cd ${FILESDIR}/${_var_} && for f in [a-zM]*; do \
-	    ${SED} -e "s,@PREFIX@,${PREFIX}," < $$f > ${WRKSRC}/${_var_}/$$f; \
-	 done)
-.endfor
+
+post-install:
+	cd ${FILESDIR}/etc; for f in [a-z]*; do				\
+		${TEST} -f $$f || continue;				\
+		${INSTALL_DATA} $$f ${PREFIX}/share/examples/uucp;	\
+	done
 
 .include "../../mk/bsd.pkg.mk"
