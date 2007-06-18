@@ -1,0 +1,22 @@
+$NetBSD: patch-av,v 1.5 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libspudvb/Makefile.in.orig	2007-06-06 13:40:49.000000000 +0000
++++ src/libspudvb/Makefile.in
+@@ -389,7 +389,7 @@ MSGMERGE = @MSGMERGE@
+ MUSEPACK_FALSE = @MUSEPACK_FALSE@
+ MUSEPACK_TRUE = @MUSEPACK_TRUE@
+ NET_LIBS = @NET_LIBS@
+-NOUNDEF = @NOUNDEF@
++#NOUNDEF = @NOUNDEF@
+ OBJC = @OBJC@
+ OBJCDEPMODE = @OBJCDEPMODE@
+ OBJCFLAGS = @OBJCFLAGS@
+@@ -544,7 +544,7 @@ xinepostdir = $(XINE_PLUGINDIR)/post
+ vidixdir = $(XINE_PLUGINDIR)/vidix
+ xineplug_LTLIBRARIES = xineplug_decode_spudvb.la
+ xineplug_decode_spudvb_la_SOURCES = xine_spudvb_decoder.c
+-xineplug_decode_spudvb_la_LIBADD = $(XINE_LIB) $(PTHREAD_LIBS)
++xineplug_decode_spudvb_la_LIBADD = $(XINE_LIB) $(PTHREAD_LIBS) $(LIBINTL)
+ xineplug_decode_spudvb_la_CFLAGS = $(VISIBILITY_FLAG)
+ xineplug_decode_spudvb_la_LDFLAGS = $(xineplug_ldflags)
+ all: all-am
