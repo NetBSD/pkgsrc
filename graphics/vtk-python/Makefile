@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/05/18 07:54:24 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/06/18 19:15:44 joerg Exp $
 #
 
 PKGNAME=	vtk-python-${VTKDIST_VERSION}
@@ -9,6 +9,7 @@ COMMENT=	Python wrapper libraries for vtk; see vtk package for details
 VTK_CMAKE_OPT=	-DPYTHON_INCLUDE_PATH:STRING=${PREFIX}/${PYINC} \
 		-DPYTHON_LIBRARY:STRING=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so \
 		-DVTK_WRAP_PYTHON:BOOL=ON \
+		-DOPENGL_INCLUDE_DIR=${BUILDLINK_PREFIX.MesaLib:Q} \
 		-DCMAKE_BACKWARDS_COMPATIBILITY=2.2
 
 USE_LANGUAGES=	c c++
