@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/16 13:06:33 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/18 16:16:38 joerg Exp $
 #
 
 VERSION=	1.4.2
@@ -12,10 +12,10 @@ HOMEPAGE=	http://www.oroborus.org/?node=Download
 COMMENT=	X utility for providing root menus
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/deskmenu
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -27,7 +27,6 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/deskmenu ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/deskmenu
 	${INSTALL_DATA} ${WRKSRC}/example_rc \
 		${PREFIX}/share/examples/deskmenu/deskmenurc
 
