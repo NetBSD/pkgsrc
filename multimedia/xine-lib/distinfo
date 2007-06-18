@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2007/06/15 18:20:05 drochner Exp $
+$NetBSD: distinfo,v 1.47 2007/06/18 21:16:10 joerg Exp $
 
 SHA1 (xine-lib-1.1.7.tar.gz) = 219d0ac7f43e37faf2d597d2c424f7fd51d2237b
 RMD160 (xine-lib-1.1.7.tar.gz) = 519426526ecc7e8c5f4871e2fdf7770fc57e31b7
@@ -7,16 +7,29 @@ SHA1 (patch-aa) = e09d34a121080b03bc67b2d8a3ca27463b771acc
 SHA1 (patch-ab) = ef13b60c2bea54f354acf1b2d70c04594dac36c9
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ae) = 78060d0d1a721642776a909ab3dfef6bd4441a33
+SHA1 (patch-af) = 68ed767a7c320c37157368b07d843e9f5048267c
 SHA1 (patch-ag) = 56ea1513f33f4d26581707303a001f62a6eb4abe
 SHA1 (patch-ah) = ba408237d4a717cc91b5d06ede425048914a9a1f
 SHA1 (patch-ai) = f0b33c1a36082445a86bcf71e07a6210aa21b7dc
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 744f59d1b9e40983f25bb532db1a5d4e92be6fbe
 SHA1 (patch-al) = 9e3ad86a7d7f32e58de157fa37141138af10838e
+SHA1 (patch-am) = 67392b0db6de3ec97bc5fc5e46e08ee2e67ec97c
 SHA1 (patch-ao) = 3ccc00285e425ec3753838ce6f1450d598d89425
 SHA1 (patch-ap) = 075b0691fc2b760dd1069957b7f8f00361f9ae39
+SHA1 (patch-aq) = f6efa28ab1b9a24b79c18c181a5d309db53172e4
+SHA1 (patch-ar) = f06014618890efec9274a4c21d2fff2998723a39
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
+SHA1 (patch-at) = c9be143d87ec1f9d37fc4a1d0670df00c0e79e27
+SHA1 (patch-au) = 59a9eac67a8aaabd9b105180a5c6e23fe8427fd8
+SHA1 (patch-av) = 58a0489cd0099f84fdaeb89bf35f7dcfc3bd040a
 SHA1 (patch-aw) = 78ab44197a6b9f85e4b272d522ce254de4d557dc
+SHA1 (patch-ax) = 09328458d39266f1f9d87f366626c973a05ffc5d
+SHA1 (patch-ay) = d4919b3816ddd74413f3e5f5b7a99dc5209562d7
+SHA1 (patch-az) = c314f6a6b95a69c749bf9962ebfdd0a3d35aaeb8
+SHA1 (patch-ba) = a57a963fa918a2f7b44c226af36b9a08bce9dcc6
+SHA1 (patch-bb) = ded7a74e46dc86c3b38b7fe912ff9142742c4ac7
+SHA1 (patch-bc) = 12fa12764dee855e8c4f7f5c64f5a389f7584ee3
 SHA1 (patch-bd) = 2f0f39512d185377cca1ebaf4e891d518a1c14d0
 SHA1 (patch-be) = 04eb23f58cb96dab4b7c7120092364915ebaf330
 SHA1 (patch-bg) = 83f97ad77c8295fcaf78a7ea7fe9c4f87efd80d0

@@ -1,0 +1,19 @@
+$NetBSD: patch-ar,v 1.4 2007/06/18 21:16:11 joerg Exp $
+
+--- src/libffmpeg/Makefile.in.orig	2007-06-17 20:17:46.000000000 +0000
++++ src/libffmpeg/Makefile.in
+@@ -604,12 +604,12 @@ xineplug_LTLIBRARIES = xineplug_decode_f
+ xineplug_decode_ff_la_CFLAGS = $(VISIBILITY_FLAG) $(AM_CFLAGS)
+ xineplug_decode_ff_la_LDFLAGS = $(xineplug_ldflags) $(IMPURE_TEXT_LDFLAGS)
+ xineplug_decode_ff_la_LIBADD = $(MLIB_LIBS) $(XINE_LIB) -lm $(ZLIB_LIBS) \
+-	$(link_ffmpeg) $(PTHREAD_LIBS)
++	$(link_ffmpeg) $(PTHREAD_LIBS) $(LIBINTL)
+ 
+ xineplug_decode_dvaudio_la_CFLAGS = $(VISIBILITY_FLAG) $(AM_CFLAGS)
+ xineplug_decode_dvaudio_la_LDFLAGS = $(xineplug_ldflags)
+ xineplug_decode_dvaudio_la_SOURCES = ff_dvaudio_decoder.c
+-xineplug_decode_dvaudio_la_LIBADD = $(XINE_LIB)
++xineplug_decode_dvaudio_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ all: all-recursive
+ 
+ .SUFFIXES:

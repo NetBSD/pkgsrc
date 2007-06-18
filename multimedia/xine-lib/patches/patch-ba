@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.5 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libreal/Makefile.in.orig	2007-06-18 19:43:07.000000000 +0000
++++ src/libreal/Makefile.in
+@@ -550,7 +550,7 @@ xinepostdir = $(XINE_PLUGINDIR)/post
+ vidixdir = $(XINE_PLUGINDIR)/vidix
+ @ENABLE_REAL_TRUE@xineplug_LTLIBRARIES = xineplug_decode_real.la
+ xineplug_decode_real_la_SOURCES = xine_real_video_decoder.c real_common.c xine_real_audio_decoder.c
+-xineplug_decode_real_la_LIBADD = $(XINE_LIB) $(DYNAMIC_LD_LIBS)
++xineplug_decode_real_la_LIBADD = $(XINE_LIB) $(DYNAMIC_LD_LIBS) $(LIBINTL)
+ xineplug_decode_real_la_CFLAGS = $(VISIBILITY_FLAG)
+ xineplug_decode_real_la_LDFLAGS = $(xineplug_ldflags)
+ noinst_HEADERS = real_common.h

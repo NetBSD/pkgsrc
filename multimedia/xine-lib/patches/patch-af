@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.5 2007/06/18 21:16:10 joerg Exp $
+
+--- src/video_out/Makefile.in.orig	2007-06-17 19:17:10.000000000 +0000
++++ src/video_out/Makefile.in
+@@ -870,10 +870,10 @@ xineplug_vo_out_xcbxv_la_CFLAGS = $(VISI
+ xineplug_vo_out_xshm_la_SOURCES = yuv2rgb.c yuv2rgb_mmx.c yuv2rgb_mlib.c \
+ 	video_out_xshm.c $(X11OSD)
+ 
+-xineplug_vo_out_xshm_la_LIBADD = $(MLIB_LIBS) $(X_LIBS) $(XINE_LIB) $(PTHREAD_LIBS)
++xineplug_vo_out_xshm_la_LIBADD = $(MLIB_LIBS) $(X_LIBS) $(XINE_LIB) $(PTHREAD_LIBS) $(LIBINTL)
+ xineplug_vo_out_xshm_la_CFLAGS = $(VISIBILITY_FLAG) $(X_CFLAGS) $(MLIB_CFLAGS) -fno-strict-aliasing
+ xineplug_vo_out_xv_la_SOURCES = $(X11OSD) deinterlace.c video_out_xv.c
+-xineplug_vo_out_xv_la_LIBADD = $(XV_LIBS) $(X_LIBS) $(XINE_LIB) $(PTHREAD_LIBS)
++xineplug_vo_out_xv_la_LIBADD = $(XV_LIBS) $(X_LIBS) $(XINE_LIB) $(PTHREAD_LIBS) $(LIBINTL)
+ xineplug_vo_out_xv_la_CFLAGS = $(VISIBILITY_FLAG) $(X_CFLAGS) $(XV_CFLAGS) -fno-strict-aliasing
+ xineplug_vo_out_xvmc_la_SOURCES = deinterlace.c video_out_xvmc.c
+ xineplug_vo_out_xvmc_la_LIBADD = $(XVMC_LIBS) $(XV_LIBS) $(X_LIBS) $(XINE_LIB) $(PTHREAD_LIBS)
+@@ -934,7 +934,7 @@ xineplug_vo_out_directx_la_CPPFLAGS = $(
+ xineplug_vo_out_directx_la_LIBADD = $(DIRECTX_VIDEO_LIBS) $(XINE_LIB) $(PTHREAD_LIBS)
+ xineplug_vo_out_directx_la_CFLAGS = $(VISIBILITY_FLAG)
+ xineplug_vo_out_none_la_SOURCES = video_out_none.c
+-xineplug_vo_out_none_la_LIBADD = $(XINE_LIB) $(PTHREAD_LIBS)
++xineplug_vo_out_none_la_LIBADD = $(XINE_LIB) $(PTHREAD_LIBS) $(LIBINTL)
+ xineplug_vo_out_none_la_CFLAGS = $(VISIBILITY_FLAG)
+ xineplug_vo_out_macosx_la_SOURCES = video_out_macosx.m
+ xineplug_vo_out_macosx_la_CPPFLAGS = $(AM_CPPFLAGS) $(X_CFLAGS) $(MLIB_CFLAGS)

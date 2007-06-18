@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.4 2007/06/18 21:16:12 joerg Exp $
+
+--- src/libxinevdec/Makefile.in.orig	2007-06-18 19:36:37.000000000 +0000
++++ src/libxinevdec/Makefile.in
+@@ -594,7 +594,7 @@ xineplug_LTLIBRARIES = $(image_module) \
+ 	xineplug_decode_yuv.la
+ 
+ xineplug_decode_bitplane_la_SOURCES = bitplane.c
+-xineplug_decode_bitplane_la_LIBADD = $(XINE_LIB)
++xineplug_decode_bitplane_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_decode_rgb_la_SOURCES = rgb.c
+ xineplug_decode_rgb_la_LIBADD = $(XINE_LIB)
+ xineplug_decode_yuv_la_SOURCES = yuv.c
