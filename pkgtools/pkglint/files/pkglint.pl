@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.709 2007/06/03 18:38:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.710 2007/06/18 09:35:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5055,6 +5055,14 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 	} elsif ($type eq "Message") {
 		if ($value =~ qr"^[\"'].*[\"']$") {
 			$line->log_warning("${varname} should not be quoted.");
+			$line->explain_warning(
+"The quoting is only needed for variables which are interpreted as",
+"multiple words (or, generally speaking, a list of something). A single",
+"text message does not belong to this class, since it is only printed",
+"as a whole.",
+"",
+"On the other hand, PKG_FAIL_REASON is a _list_ of text messages, so in",
+"that case, the quoting has to be done.");
 		}
 
 	} elsif ($type eq "Option") {
