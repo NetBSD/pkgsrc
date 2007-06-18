@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.28 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: DragonFly.mk,v 1.29 2007/06/18 08:14:54 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -30,8 +30,8 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
-# DragonFly does not provide an X11, so default to X.org's X11
-X11_TYPE?=		xorg
+# DragonFly does not provide an X11, so default to modular X.org
+X11_TYPE?=		modular
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	man/man
