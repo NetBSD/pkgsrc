@@ -1,5 +1,57 @@
-# $NetBSD: phpversion.mk,v 1.5 2006/06/02 18:27:56 joerg Exp $
-# PHP wrapper, for module builds
+# $NetBSD: phpversion.mk,v 1.6 2007/06/18 07:21:09 rillig Exp $
+#
+# This file selects a PHP version, based on the user's preferences and
+# the installed packages.
+#
+# === User-settable variables ===
+#
+# PHP_VERSION_DEFAULT
+#	The PHP version to choose when more than one is acceptable to
+#	the package.
+#
+#	Possible: 4 5
+#	Default: 4
+#
+# === Package-settable variables ===
+#
+# PHP_VERSIONS_ACCEPTED
+#	The PHP versions that are accepted by the package.
+#
+#	Possible: 4 5
+#	Default: 4 5
+#
+# PHP_VERSION_REQD
+#	If the package works only with a specific PHP version, this
+#	variable can be used to force it.
+#
+#	Possible: (undefined) 4 5
+#	Default: (undefined)
+#
+# === Variables defined by this file ===
+#
+# PKG_PHP_VERSION
+#	The selected PHP version.
+#
+#	Possible: 4 5
+#	Default: ${PHP_VERSION_DEFAULT}
+#
+# PKG_PHP
+#	The same as ${PKG_PHP_VERSION}, prefixed with "PHP".
+#	XXX: Why is this necessary?
+#
+# PHPPKGSRCDIR
+#	The directory of the PHP implementation, relative to the
+#	package directory.
+#
+#	Example: ../../lang/php5
+#
+# PHP_PKG_PREFIX
+#	The prefix that is prepended to the package name.
+#
+#	Example: php5
+#
+# Keywords: php
+#
 
 .if !defined(PHPVERSION_MK)
 PHPVERSION_MK=	defined
