@@ -1,0 +1,65 @@
+$NetBSD: patch-am,v 1.5 2007/06/18 21:16:11 joerg Exp $
+
+--- src/demuxers/Makefile.in.orig	2007-06-17 19:36:35.000000000 +0000
++++ src/demuxers/Makefile.in
+@@ -728,25 +728,25 @@ xineplug_LTLIBRARIES = $(ogg_module) $(a
+ 	xineplug_dmx_flv.la 
+ 
+ xineplug_dmx_ogg_la_SOURCES = demux_ogg.c
+-xineplug_dmx_ogg_la_LIBADD = $(VORBIS_LIBS) $(SPEEX_LIBS) $(THEORA_LIBS) $(OGG_LIBS) $(XINE_LIB)
++xineplug_dmx_ogg_la_LIBADD = $(VORBIS_LIBS) $(SPEEX_LIBS) $(THEORA_LIBS) $(OGG_LIBS) $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_ogg_la_CFLAGS = $(AM_CFLAGS) $(VORBIS_CFLAGS) $(SPEEX_CFLAGS) $(THEORA_CFLAGS) $(OGG_CFLAGS)
+ xineplug_dmx_avi_la_SOURCES = demux_avi.c
+-xineplug_dmx_avi_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_avi_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_mpeg_block_la_SOURCES = demux_mpeg_block.c
+-xineplug_dmx_mpeg_block_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_mpeg_block_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_mpeg_la_SOURCES = demux_mpeg.c
+ xineplug_dmx_mpeg_la_LIBADD = $(XINE_LIB)
+ xineplug_dmx_mpeg_elem_la_SOURCES = demux_elem.c
+ xineplug_dmx_mpeg_elem_la_LIBADD = $(XINE_LIB)
+ xineplug_dmx_mpeg_pes_la_SOURCES = demux_mpeg_pes.c
+-xineplug_dmx_mpeg_pes_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_mpeg_pes_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_mpeg_ts_la_SOURCES = demux_ts.c
+ xineplug_dmx_mpeg_ts_la_LIBADD = $(XINE_LIB)
+ xineplug_dmx_qt_la_SOURCES = demux_qt.c
+ xineplug_dmx_qt_la_LIBADD = $(XINE_LIB) $(ZLIB_LIBS)
+ xineplug_dmx_qt_la_CPPFLAGS = $(ZLIB_CPPFLAGS)
+ xineplug_dmx_asf_la_SOURCES = demux_asf.c asfheader.c
+-xineplug_dmx_asf_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_asf_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_asf_la_CFLAGS = $(AM_CFLAGS) -fno-strict-aliasing
+ xineplug_dmx_fli_la_SOURCES = demux_fli.c
+ xineplug_dmx_fli_la_LIBADD = $(XINE_LIB)
+@@ -767,7 +767,7 @@ xineplug_dmx_games_la_SOURCES = group_ga
+ 				demux_film.c demux_smjpeg.c demux_4xm.c \
+ 				demux_vmd.c
+ 
+-xineplug_dmx_games_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_games_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_games_la_LDFLAGS = -avoid-version -module
+ xineplug_dmx_audio_la_SOURCES = group_audio.c demux_aud.c demux_aiff.c \
+ 				demux_cdda.c demux_mpgaudio.c demux_nsf.c \
+@@ -777,7 +777,7 @@ xineplug_dmx_audio_la_SOURCES = group_au
+ 				demux_mpc.c demux_dts.c demux_shn.c \
+ 				demux_tta.c
+ 
+-xineplug_dmx_audio_la_LIBADD = $(XINE_LIB) $(LIBMODPLUG_LIBS)
++xineplug_dmx_audio_la_LIBADD = $(XINE_LIB) $(LIBMODPLUG_LIBS) $(LIBINTL)
+ xineplug_dmx_audio_la_CFLAGS = $(AM_CFLAGS) $(LIBMODPLUG_CFLAGS)
+ xineplug_dmx_yuv_frames_la_SOURCES = demux_yuv_frames.c
+ xineplug_dmx_yuv_frames_la_LIBADD = $(XINE_LIB)
+@@ -792,9 +792,9 @@ xineplug_dmx_matroska_la_LIBADD = $(XINE
+ xineplug_dmx_matroska_la_CPPFLAGS = $(ZLIB_CPPFLAGS)
+ xineplug_dmx_matroska_la_CFLAGS = $(AM_CFLAGS) -fno-strict-aliasing
+ xineplug_dmx_iff_la_SOURCES = demux_iff.c
+-xineplug_dmx_iff_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_iff_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineplug_dmx_flv_la_SOURCES = demux_flv.c
+-xineplug_dmx_flv_la_LIBADD = $(XINE_LIB)
++xineplug_dmx_flv_la_LIBADD = $(XINE_LIB) $(LIBINTL)
+ xineinclude_HEADERS = demux.h
+ noinst_HEADERS = asfheader.h qtpalette.h group_games.h group_audio.h id3.h ebml.h matroska.h iff.h flacutils.h
+ all: all-am
