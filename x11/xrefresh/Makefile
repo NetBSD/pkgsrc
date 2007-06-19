@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/12 14:59:37 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:14 joerg Exp $
 #
 
 DISTNAME=		xrefresh-1.0.2
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libX11/buildlink3.mk"
 
