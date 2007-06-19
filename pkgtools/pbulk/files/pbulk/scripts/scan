@@ -1,0 +1,88 @@
+#!@SH@
+# $NetBSD: scan,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+#
+# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# This code was developed as part of Google's Summer of Code 2007 program.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+# COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+# OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+. @PBULK_CONFIG@
+
+set -e
+
+if [ -z "${limited_list}" ]; then
+	echo "Scanning..."
+	case "${master_mode}" in
+	[nN][oO])
+		${pscan} -v -M ${make} ${pkgsrc} ${loc}/pscan
+		;;
+	[yY][eE][sS])
+		${pscan} -v -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan
+		;;
+	*)
+		echo "master_mode must be either yes or no."
+		exit 1
+		;;
+	esac
+	echo "Resolving..."
+	${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve.log
+else
+	initial=1
+	cp "${limited_list}" ${loc}/missing
+
+	while [ -s ${loc}/missing ]; do
+		sort -u ${loc}/missing > ${loc}/missing.s
+		echo "Scanning..."
+		case "${master_mode}" in
+		[nN][oO])
+			${pscan} -v -l -M ${make} ${pkgsrc} ${loc}/pscan < ${loc}/missing.s
+			;;
+		[yY][eE][sS])
+			${pscan} -v -l -I ${pscan_start_script} -m ${master_port_scan} -M ${make} ${pkgsrc} ${loc}/pscan < ${loc}/missing.s
+			;;
+		*)
+			echo "master_mode must be either yes or no."
+			exit 1
+			;;
+		esac
+		echo "Resolving..."
+		if [ "$initial" = 1 ]; then
+			${presolve} -i ${loc}/missing -v ${loc}/pscan > ${loc}/presolve
+			initial=0
+		else
+			${presolve} -i ${loc}/missing -v ${loc}/presolve ${loc}/pscan > ${loc}/presolve.new
+		cmp -s ${loc}/presolve.new ${loc}/presolve && break
+			mv ${loc}/presolve.new ${loc}/presolve
+		fi
+	done
+
+	if [ -s ${loc}/missing ]; then
+		echo "Unresolvable dependencies found, exiting:"
+		cat ${loc}/missing
+		exit 1
+	fi
+fi
