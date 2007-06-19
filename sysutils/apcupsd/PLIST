@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/06/15 21:15:39 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/06/19 22:22:55 bouyer Exp $
 libexec/cgi-bin/upsstats.cgi
 libexec/cgi-bin/upsfstats.cgi
 libexec/cgi-bin/upsimage.cgi
@@ -28,6 +28,7 @@ share/doc/html/apcupsd/systems.wml
 share/doc/html/apcupsd/template.inc
 share/examples/apcupsd/apccontrol
 share/examples/apcupsd/apcupsd.conf
+share/examples/apcupsd/apcupsd.css
 share/examples/apcupsd/changeme
 share/examples/apcupsd/commfailure
 share/examples/apcupsd/commok
