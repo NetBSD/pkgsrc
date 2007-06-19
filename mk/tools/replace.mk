@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.191 2007/06/19 14:21:18 joerg Exp $
+# $NetBSD: replace.mk,v 1.192 2007/06/19 17:01:12 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -270,16 +270,18 @@ TOOLS_CMD.byacc=		${TOOLS_DIR}/bin/yacc
 .  endif
 .endif
 
-.if !defined(TOOLS_IGNORE.bzcat) && !empty(_USE_TOOLS:Mbzcat)
-.  if !empty(PKGPATH:Marchivers/bzip2)
-MAKEFLAGS+=			TOOLS_IGNORE.bzcat=
-.  elif !empty(_TOOLS_USE_PKGSRC.bzcat:M[yY][eE][sS])
-TOOLS_DEPENDS.bzcat?=		bzip2>=0.9.0b:../../archivers/bzip2
-TOOLS_CREATE+=			bzcat
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bzcat=bzip2
-TOOLS_PATH.bzcat=		${TOOLS_PREFIX.bzcat}/bin/bzcat
+.for _t_ in bzip2 bzcat
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Marchivers/bzip2)
+MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=		bzip2>=0.9.0b:../../archivers/bzip2
+TOOLS_CREATE+=			${_t_}
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=bzip2
+TOOLS_PATH.bzcat=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
 .  endif
-.endif
+.endfor
 
 .if !defined(TOOLS_IGNORE.csh) && !empty(_USE_TOOLS:Mcsh)
 .  if !empty(PKGPATH:Mshells/tcsh)

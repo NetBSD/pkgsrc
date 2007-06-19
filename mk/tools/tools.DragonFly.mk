@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.29 2007/06/19 14:21:19 joerg Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.30 2007/06/19 17:01:12 joerg Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -8,6 +8,7 @@ TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
+TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
 TOOLS_PLATFORM.chown?=		/usr/sbin/chown

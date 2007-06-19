@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.29 2007/06/19 14:21:19 joerg Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.30 2007/06/19 17:01:12 joerg Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -6,9 +6,8 @@ TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
-.if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
-.endif
+TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
 TOOLS_PLATFORM.chmod?=		/bin/chmod
