@@ -1,0 +1,64 @@
+#!@SH@
+# $NetBSD: build,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+#
+# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# This code was developed as part of Google's Summer of Code 2007 program.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+# COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+# OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+. @PBULK_CONFIG@
+
+set -e
+
+echo "Building..."
+case "${master_mode}" in
+[nN][oO])
+	${pbuild} -r ${loc}/pbuild -v -b ${pbuild_script} ${loc}/presolve ${loc}/success ${loc}/error
+	;;
+[yY][eE][sS])
+	${pbuild} -r ${loc}/pbuild -I ${pbuild_start_script} -m ${master_port_build} -v ${loc}/presolve ${loc}/success ${loc}/error
+	;;
+*)
+	echo "master_mode must be either yes or no."
+	exit 1
+	;;
+esac
+
+echo "BUILD_END=`date +%s`" >> ${loc}/status
+
+echo "Building pkg_summary..."
+cd ${packages}/All
+sed 's/$/.tgz/' < ${loc}/success | sort | xargs ${external_pkg_info} -X | ${gzip} -c > pkg_summary.gz
+${gzip} -dc < pkg_summary.gz | ${bzip2} -c > pkg_summary.bz2
+
+echo "Building SHA512..."
+cd ${packages}
+{
+	echo "All/pkg_summary.bz2"
+	echo "All/pkg_summary.gz"
+	sed 's|^\(.*\)$|All/\1.tgz|' < ${loc}/success
+} | sort | xargs ${digest} SHA512 | ${bzip2} -c > SHA512.bz2

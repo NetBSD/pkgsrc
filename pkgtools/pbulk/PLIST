@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/19 19:49:55 joerg Exp $
+bin/bulkbuild
+bin/pbulk-build
+bin/pbulk-resolve
+bin/pbulk-scan
+libexec/pbulk/build
+libexec/pbulk/build-client-start
+libexec/pbulk/client-clean
+libexec/pbulk/compute-packages
+libexec/pbulk/create-broken-graph
+libexec/pbulk/create-report
+libexec/pbulk/create-report-html
+libexec/pbulk/create-report-txt
+libexec/pbulk/pkg-build
+libexec/pbulk/pkg-up-to-date
+libexec/pbulk/pre-build
+libexec/pbulk/report
+libexec/pbulk/scan
+libexec/pbulk/scan-client-start
+libexec/pbulk/upload
+man/cat1/pbulk-build.0
+man/cat1/pbulk-resolve.0
+man/cat1/pbulk-scan.0
+man/man1/pbulk-build.1
+man/man1/pbulk-resolve.1
+man/man1/pbulk-scan.1
+share/examples/pbulk/pbulk.conf
+@dirrm share/examples/pbulk
+@dirrm libexec/pbulk
