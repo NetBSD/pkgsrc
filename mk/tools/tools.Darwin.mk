@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.31 2006/12/13 01:03:14 minskim Exp $
+# $NetBSD: tools.Darwin.mk,v 1.32 2007/06/19 14:21:19 joerg Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -43,6 +43,7 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+TOOLS_PLATFORM.ident?=		/usr/bin/ident
 TOOLS_PLATFORM.install?=	/usr/bin/install
 .if exists(/usr/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
