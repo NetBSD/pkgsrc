@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2007/06/15 18:23:49 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2007/06/19 21:46:39 jlam Exp $
 
 DISTNAME=	minicom-2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms
 MASTER_SITES=	http://alioth.debian.org/download.php/123/
 
@@ -23,20 +23,22 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 PKG_SYSCONFSUBDIR=	minicom
 EGDIR=			${PREFIX}/share/examples/minicom
 
-UUCP_USER?=		uucp	# shared with net/uucp
+PKG_GROUPS=		${DIALER_GROUP}
+PKG_USERS=		${UUCP_USER}:${UUCP_GROUP}
 
-PKG_GROUPS=		dialer
-PKG_USERS=		${UUCP_USER}:dialer
-SPECIAL_PERMS=		${PREFIX}/bin/minicom ${UUCP_USER} dialer 4555
-OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} ${UUCP_USER} dialer 0755
+SPECIAL_PERMS=		${PREFIX}/bin/minicom ${UUCP_USER} ${DIALER_GROUP} 4555
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} ${UUCP_USER} ${DIALER_GROUP} 0755
 CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
-			${UUCP_USER} dialer 0644
+			${UUCP_USER} ${DIALER_GROUP} 0644
 
-SUBST_CLASSES+=	minicom
+EVAL_PREFIX+=		GKERMIT_PREFIX=gkermit
+EVAL_PREFIX+=		LRZSZ_PREFIX=lrzsz
+
+SUBST_CLASSES+=		minicom
 SUBST_MESSAGE.minicom=	Fixing hardcoded paths.
 SUBST_STAGE.minicom=	post-patch
 SUBST_FILES.minicom=	src/rwconf.c
-SUBST_SED.minicom=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.minicom=	PREFIX GKERMIT_PREFIX LRZSZ_PREFIX
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
