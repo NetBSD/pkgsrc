@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.1.1.1 2007/06/19 19:49:58 joerg Exp $ */
+/* $NetBSD: event.c,v 1.2 2007/06/19 20:42:49 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,6 +31,7 @@
  * SUCH DAMAGE.
  */
 
+#include <sys/types.h>
 #include <sys/ioctl.h>
 #include <sys/time.h>
 #include <event.h>
