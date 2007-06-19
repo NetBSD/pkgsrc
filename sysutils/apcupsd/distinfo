@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2007/06/15 21:15:39 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2007/06/19 22:22:55 bouyer Exp $
 
 SHA1 (apcupsd-3.14.1.tar.gz) = ee2a9ba074b688aba047d571098f44dc591e985c
 RMD160 (apcupsd-3.14.1.tar.gz) = f6655123f7daa91966e9a2a4877e90b70babc670
@@ -15,3 +15,5 @@ SHA1 (patch-ai) = be802d4ea438ac991f7e0ebd1c086699aade0b2b
 SHA1 (patch-aj) = cce8e25f52cc4eaa38eb31baffceb33fe4a43cee
 SHA1 (patch-al) = a41cb4ee8d896fc633d8869f24e548fda0761340
 SHA1 (patch-am) = a2c060519748cf95f0f9aaa284f783f086c1d7d4
+SHA1 (patch-an) = 56afb8709129ec3bb42d4c29fa5a24c9032aa8a3
+SHA1 (patch-ao) = 4bae4f04a5766b49f1a3cf13cf63c70bd3807937
