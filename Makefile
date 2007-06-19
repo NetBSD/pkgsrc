@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2007/06/19 13:39:56 joerg Exp $
+# $NetBSD: Makefile,v 1.83 2007/06/19 22:30:33 wiz Exp $
 #
 # This is the top-level Makefile of pkgsrc. It contains a list of the
 # categories of packages, as well as some targets that operate on the
@@ -45,7 +45,7 @@ SUBDIR+=	${HOST_SPECIFIC_PKGS}
 SUBDIR+=	${GROUP_SPECIFIC_PKGS}
 SUBDIR+=	${USER_SPECIFIC_PKGS}
 .else
-# Package in the x11 category tend to require a lot more parse time
+# Packages in the x11 category tend to require a lot more parse time
 # than the rest of the packages. Reorder it to the beginning to avoid
 # stalling parallel scans near the end of a run.
 SUBDIR+=	x11
