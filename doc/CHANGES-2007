@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1422 2007/06/19 18:46:15 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1423 2007/06/19 19:51:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2645,3 +2645,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added wm/twm version 1.0.3 [jlam 2007-06-19]
 	Updated meta-pkgs/modular-xorg-apps to 1.2 [jlam 2007-06-19]
 	Updated textproc/postgresql-autodoc to 1.30 [mjl 2007-06-19]
+	Added pkgtools/pbulk version 0.1 [root 2007-06-19]
