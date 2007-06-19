@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.27 2007/04/13 06:56:20 hiramatsu Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.28 2007/06/19 14:21:19 joerg Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -42,6 +42,7 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
+TOOLS_PLATFORM.ident?=		/usr/bin/ident
 TOOLS_PLATFORM.install?=	/usr/bin/install
 .if exists(/usr/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
