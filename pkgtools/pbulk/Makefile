@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/19 19:49:55 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/19 23:51:18 rillig Exp $
 
 DISTNAME=	pbulk-0.1
 CATEGORIES=	pkgtools
@@ -39,7 +39,7 @@ PBULK_CONFIG=	${PKG_SYSCONFDIR}/pbulk.conf
 INSTALLATION_DIRS=	bin libexec/pbulk \
 			${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 \
 			share/examples/pbulk
-INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
