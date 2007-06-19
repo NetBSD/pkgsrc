@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2007/04/26 06:26:27 jnemeth Exp $
+# $NetBSD: Makefile,v 1.100 2007/06/19 17:10:55 jnemeth Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -37,6 +37,7 @@ SUBST_MESSAGE.paths=	Fixing paths.
 REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
 
 INSTALLATION_DIRS=	bin lib sbin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
