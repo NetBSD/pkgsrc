@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.1.1.1 2007/06/19 19:49:56 joerg Exp $ */
+/* $NetBSD: master.c,v 1.2 2007/06/19 21:06:05 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,6 +31,7 @@
  * SUCH DAMAGE.
  */
 
+#include <sys/types.h>
 #include <sys/ioctl.h>
 #include <sys/queue.h>
 #include <sys/socket.h>
