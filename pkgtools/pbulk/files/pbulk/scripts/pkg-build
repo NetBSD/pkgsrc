@@ -1,0 +1,102 @@
+#!@SH@
+# $NetBSD: pkg-build,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+#
+# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# This code was developed as part of Google's Summer of Code 2007 program.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+# COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+# OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+. @PBULK_CONFIG@
+
+cleanup() {
+	${make} clean > /dev/null 2>&1 || true
+	exit 1
+}
+
+run_make() {
+	${make} $1 \
+		BATCH=1 \
+		DEPENDS_TARGET=/nonexistent \
+		${MAKE_FLAGS} \
+		WRKLOG=${bulkdir}/${pkgname}/work.log
+
+}
+
+while read build_info_line; do
+	case "${build_info_line}" in
+	PKGNAME=*)
+		pkgname=${build_info_line#PKGNAME=}
+		;;
+	PKG_LOCATION=*)
+		pkgdir=${build_info_line#PKG_LOCATION=}
+		;;
+	DEPENDS=*)
+		dependencies=${build_info_line#DEPENDS=}
+		;;
+	MULTI_VERSION=*)
+		MAKE_FLAGS=${build_info_line#MULTI_VERSION=*}
+		;;
+	esac
+done
+
+${pkg_up_to_date_script} ${pkgname} ${dependencies} && exit 0
+
+set -e
+
+# Clean build system first
+rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
+# Install fresh bootstrap state
+[ -n "${bootstrapkit}" ] &&  tar xzf ${bootstrapkit} -C /
+
+# Output directory
+mkdir -p ${bulkdir}/${pkgname}
+
+# Go to target directory
+cd ${pkgsrc}/${pkgdir}
+# Clean build area, just in case
+${make} clean > ${bulkdir}/${pkgname}/pre-clean.log 2>&1
+# Install all dependencies the package said it would need
+if [ ! -z "$dependencies" ]; then
+	PKG_PATH=${packages}/All ${pkg_add} $dependencies > ${bulkdir}/${pkgname}/depends.log 2>&1
+fi
+# Build package, create a separate log file for each major phase
+run_make checksum  > ${bulkdir}/${pkgname}/checksum.log 2>&1 || cleanup
+run_make configure  > ${bulkdir}/${pkgname}/configure.log 2>&1 || cleanup
+run_make all  > ${bulkdir}/${pkgname}/build.log 2>&1 || cleanup
+run_make install  > ${bulkdir}/${pkgname}/install.log 2>&1 || cleanup
+run_make package  > ${bulkdir}/${pkgname}/package.log 2>&1 || cleanup
+# Clean build area
+${make} clean > ${bulkdir}/${pkgname}/clean.log 2>&1
+# Test uninstall rules
+${pkg_delete} ${pkgname} > ${bulkdir}/${pkgname}/deinstall.log 2>&1
+
+# Comment the following out if you want to test all deinstall scripts.
+# This is quite expensive and mostly redundant, so it is disabled by default.
+#${pkg_delete} -r \* > /dev/null 2>&1 || true
+
+# Cleanup build logs on success
+rm -R ${bulkdir}/${pkgname}

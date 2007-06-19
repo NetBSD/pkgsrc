@@ -1,0 +1,19 @@
+pbulk is the modular bulk build framework for pkgsrc.
+
+This package contains:
+
+- pbulk-scan, a program to scan the entire pkgsrc tree
+  or a list of directories therein for packages and
+  dependencies. Distributed operation using a master/client
+  mode is supported.
+
+- pbulk-resolve, a program to resolve the dependencies
+  from the output of pbulk-scan
+
+- pbulk-build, the build scheduler. Distributed builds via TCP
+  are supported.
+
+- bulkbuild and related scripts to implement full and limited
+  bulk builds on top of those programs.
+
+The pbulk framework is considered experimental.
