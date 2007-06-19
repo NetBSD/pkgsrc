@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/27 12:24:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:11 joerg Exp $
 #
 
 DISTNAME=		libXxf86dga-1.0.1
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
 PKGCONFIG_OVERRIDE+=	xxf86dga.pc.in
 

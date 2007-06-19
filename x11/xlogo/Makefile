@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/12 18:03:57 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:13 joerg Exp $
 #
 
 DISTNAME=		xlogo-1.0.1
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
