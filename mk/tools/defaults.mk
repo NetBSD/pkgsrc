@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.50 2007/06/19 17:01:12 joerg Exp $
+# $NetBSD: defaults.mk,v 1.51 2007/06/19 17:01:31 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,6 +93,7 @@ _TOOLS_VARNAME.gzip=		GZIP_CMD
 _TOOLS_VARNAME.head=		HEAD
 _TOOLS_VARNAME.hostname=	HOSTNAME_CMD
 _TOOLS_VARNAME.id=		ID
+_TOOLS_VARNAME.ident=		IDENT
 _TOOLS_VARNAME.imake=		IMAKE
 _TOOLS_VARNAME.install=		INSTALL
 _TOOLS_VARNAME.install-info=	INSTALL_INFO
