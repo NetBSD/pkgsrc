@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/06/07 08:08:16 rh Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/19 01:40:13 rh Exp $
 #
 
-DISTNAME=		libupnp-1.4.6
+DISTNAME=		libupnp-1.6.0-rc1
+PKGNAME=		${DISTNAME:S/-rc1/rc1/}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pupnp.sourceforge.net/
 COMMENT=		Portable Universal Plug and Play (UPnP) SDK
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-rc1//}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
@@ -18,20 +20,8 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libupnp.pc.in
 
-pre-configure:
-.if !exists(/usr/include/malloc.h)
-	${LN} -s /usr/include/stdlib.h ${BUILDLINK_DIR}/include/malloc.h
-.endif
-.if !exists(/usr/include/sys/sysinfo.h)
-	${MKDIR} -p ${BUILDLINK_DIR}/include/sys
-	${TOUCH} ${BUILDLINK_DIR}/include/sys/sysinfo.h
-.endif
-.if !exists(/usr/include/linux/if.h)
-	${MKDIR} -p ${BUILDLINK_DIR}/include/linux
-	${LN} -s /usr/include/net/if.h ${BUILDLINK_DIR}/include/linux/if.h
-.endif
-
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME_NOREV}
 .for doc in IXML_Programming_Guide UPnP_Programming_Guide
 	${INSTALL_DATA} ${WRKSRC}/docs/dist/${doc}.pdf			\
 			${PREFIX}/share/doc/${PKGNAME_NOREV}
