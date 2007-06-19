@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2007/06/15 21:15:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.52 2007/06/19 22:22:55 bouyer Exp $
 
 DISTNAME=		apcupsd-3.14.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -57,6 +57,7 @@ CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q}
 EGDIR=          ${PREFIX}/share/examples/apcupsd
 
 CONF_FILES_PERMS+= ${EGDIR}/apcupsd.conf ${PKG_SYSCONFDIR}/apcupsd.conf ${ROOT_USER} ${ROOT_GROUP} 644
+CONF_FILES_PERMS+= ${EGDIR}/apcupsd.css ${PKG_SYSCONFDIR}/apcupsd.css ${ROOT_USER} ${ROOT_GROUP} 644
 CONF_FILES_PERMS+= ${EGDIR}/changeme ${PKG_SYSCONFDIR}/changeme ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commfailure ${PKG_SYSCONFDIR}/commfailure ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/commok ${PKG_SYSCONFDIR}/commok ${ROOT_USER} ${ROOT_GROUP} 755
@@ -97,6 +98,8 @@ HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/platforms/etc/apcupsd.conf \
+		${PREFIX}/share/examples/apcupsd
+	${INSTALL_DATA} ${WRKSRC}/src/cgi/apcupsd.css \
 		${PREFIX}/share/examples/apcupsd
 .for file in ${EGFILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/platforms/${file} \
