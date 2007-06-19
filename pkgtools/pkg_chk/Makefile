@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/05/15 14:48:43 tron Exp $
+# $NetBSD: Makefile,v 1.54 2007/06/19 16:08:47 abs Exp $
 
 DISTNAME=	pkg_chk-1.85
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	mktemp:run
+USE_TOOLS+= 	gzip:run
 NO_CHECKSUM=	YES
 
 CONFLICTS=	pkgchk-[0-9]*
@@ -27,11 +28,10 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 # Avoid changing any the actual value of MAKECONF
 TMP_MAKECONF=${MAKECONF:U/etc/mk.conf}
 
-#XXX: how to get GZIP_CMD?!
 do-build:
 	${SED} -e 's#@AWK@#${AWK}#g' \
 	  -e 's#@GREP@#${GREP}#g' \
-	  -e 's#@GZIP_CMD@#gzip#g' \
+	  -e 's#@GZIP_CMD@#${GZIP_CMD}#g' \
 	  -e 's#@ID@#${ID}#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${TMP_MAKECONF}#g' \
