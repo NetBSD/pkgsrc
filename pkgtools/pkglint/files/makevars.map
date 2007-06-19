@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.162 2007/06/05 13:38:04 rillig Exp $
+# $NetBSD: makevars.map,v 1.163 2007/06/19 20:05:36 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -351,6 +351,7 @@ INSTALLATION_DIRS_FROM_PLIST	Yes [$package]
 INSTALL_DATA		ShellCommand [$system]
 INSTALL_DATA_DIR	ShellCommand [$system]
 INSTALL_DIRS		List of WrksrcSubdirectory [$package_list]
+INSTALL_ENV		List of ShellWord [$package_list]
 INSTALL_FILE		Pathname [m:s]
 INSTALL_GAME		ShellCommand [$system]
 INSTALL_GAME_DATA	ShellCommand [$system]
@@ -635,6 +636,7 @@ SUBST_FILTER_CMD.*	ShellCommand [m:s,c:s,h:s,o:s,Makefile.*:s]
 SUBST_MESSAGE.*		Message [m:s,c:s,h:s,o:s,Makefile.*:s]
 SUBST_SED.*		SedCommands [m:as,c:as,h:as,o:as,Makefile.*:as]
 SUBST_STAGE.*		Stage [$package]
+SUBST_VARS.*		List of Varname [$package_list]
 SVR4_PKGNAME		SVR4PkgName [$package]
 TEST_DIRS		List of WrksrcSubdirectory [$package_list]
 TEST_ENV		List of ShellWord [$package_list]
