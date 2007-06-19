@@ -1,4 +1,4 @@
-# $NetBSD options.mk $
+# $NetBSD: options.mk,v 1.4 2007/06/19 00:23:51 joerg Exp $
 
 # Global and legacy options
 
