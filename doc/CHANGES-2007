@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1420 2007/06/19 14:56:14 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.1421 2007/06/19 15:02:36 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2643,3 +2643,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/guile16-gtk version 0.5 [dmcmahill 2007-06-17]
 	Updated net/libupnp to 1.6.0rc1 [rh 2007-06-19]
 	Added wm/twm version 1.0.3 [jlam 2007-06-19]
+	Updated meta-pkgs/modular-xorg-apps to 1.2 [jlam 2007-06-19]
