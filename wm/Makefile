@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2007/06/02 19:09:03 agc Exp $
+# $NetBSD: Makefile,v 1.96 2007/06/19 14:56:48 jlam Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -64,6 +64,7 @@ SUBDIR+=	sawfish
 SUBDIR+=	selectwm
 SUBDIR+=	skippy
 SUBDIR+=	tvtwm
+SUBDIR+=	twm
 SUBDIR+=	uwm
 SUBDIR+=	vtwm
 SUBDIR+=	w9wm
