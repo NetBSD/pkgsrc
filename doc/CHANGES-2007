@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1419 2007/06/19 01:41:19 rh Exp $
+$NetBSD: CHANGES-2007,v 1.1420 2007/06/19 14:56:14 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/clamav to 0.90.3nb2 [wiz 2007-06-17]
 	Added devel/guile16-gtk version 0.5 [dmcmahill 2007-06-17]
 	Updated net/libupnp to 1.6.0rc1 [rh 2007-06-19]
+	Added wm/twm version 1.0.3 [jlam 2007-06-19]
