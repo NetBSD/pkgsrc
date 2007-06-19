@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.190 2007/05/29 03:00:44 dmcmahill Exp $
+# $NetBSD: replace.mk,v 1.191 2007/06/19 14:21:18 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -432,6 +432,17 @@ TOOLS_CREATE+=			gzip
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzip=gzip-base
 TOOLS_PATH.gzip=		${TOOLS_PREFIX.gzip}/bin/gzip
 TOOLS_ARGS.gzip=		-nf ${GZIP}
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.ident) && !empty(_USE_TOOLS:Mident)
+.  if !empty(PKGPATH:Mdevel/rcs)
+MAKEFLAGS+=			TOOLS_IGNORE.ident=
+.  elif !empty(_TOOLS_USE_PKGSRC.ident:M[yY][eE][sS])
+TOOLS_DEPENDS.ident?=		rcs-[0-9]*:../../devel/rcs
+TOOLS_CREATE+=			ident
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ident=rcs
+TOOLS_PATH.ident=		${TOOLS_PREFIX.ident}/bin/ident
 .  endif
 .endif
 
