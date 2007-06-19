@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.8 2005/02/04 00:43:42 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.9 2007/06/19 00:45:13 joerg Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -124,7 +124,7 @@ copy_file()
 			{ print }					\
 		' $_f > $_destdir/$_newf.tmp
 		if [ -f $_destdir/$_newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+		   diff -q -I "\$Net""BSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
 			rm -f $_destdir/$_newf.tmp
 		else
 			rm -f $_destdir/$_newf
@@ -135,7 +135,7 @@ copy_file()
 		# Copy the manpage over, and generate the catpage.
 		cp $_newf $_destdir/$_newf.tmp
 		if [ -f $_destdir/$_newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+		   diff -q -I "\$Net""BSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
 			rm -f $_destdir/$_newf.tmp
 		else
 			mv -f $_destdir/$_newf.tmp $_destdir/$_newf
@@ -147,7 +147,7 @@ copy_file()
 		# Everything else just gets copied verbatim.
 		cp $_newf $_destdir/$_newf.tmp
 		if [ -f $_destdir/$_newf ] &&				\
-		   diff -q -I "\$NetBSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
+		   diff -q -I "\$Net""BSD.*\$" $_destdir/$_newf $_destdir/$_newf.tmp >/dev/null; then
 			rm -f $_destdir/$_newf.tmp
 		else
 			mv -f $_destdir/$_newf.tmp $_destdir/$_newf
