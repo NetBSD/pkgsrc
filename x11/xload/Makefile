@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/17 18:40:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/19 09:39:12 joerg Exp $
 #
 
 DISTNAME=	xload-1.0.1
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
