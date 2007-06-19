@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.18 2007/06/06 12:43:04 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.19 2007/06/19 13:11:01 dmcmahill Exp $
 #
 # Public targets:
 #
@@ -43,12 +43,12 @@ debug: \
 _show-dbginfo-file-versions:
 	@${PRINTF} "File versions:\\n"
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	sedexpr='s,.*\([$$]NetBSD:[^$$]*\$$\).*,\1,p';			\
+	sedexpr='s,^.*\([$$]NetBSD:[^$$]*\$$\).*,\1,p';			\
 	${FIND} * -type f -print					\
 	| while read fname; do						\
 	  ident=`${SED} -n						\
-	    -e 's,.*\\([$$]NetBSD:[^$$]*\\$$\\).*,\\1,p'		\
-	    -e 's,.*\\([$$]Id:[^$$]*\\$$\\).*,\\1,p'			\
+	    -e 's,^.*\\([$$]NetBSD:[^$$]*\\$$\\).*,\\1,p'		\
+	    -e 's,^.*\\([$$]Id:[^$$]*\\$$\\).*,\\1,p'			\
 	    "$${fname}"` || continue;					\
 	  case $${ident} in						\
 	  *?*) ${PRINTF} "\\t%s: %s\\n" "$${fname}" "$${ident}";;	\
