@@ -1,0 +1,11 @@
+#!@SH@
+# $NetBSD: client-clean,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+# Clean build system first
+rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
+# Install fresh bootstrap state
+[ -n "${bootstrapkit}" ] &&  tar xzf ${bootstrapkit} -C /
