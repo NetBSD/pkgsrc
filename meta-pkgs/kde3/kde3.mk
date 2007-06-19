@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.15 2007/02/28 11:12:33 markd Exp $
+# $NetBSD: kde3.mk,v 1.16 2007/06/19 13:31:01 joerg Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -39,7 +39,7 @@ KDE3_MK=	# defined
 
 USE_PKGLOCALEDIR=	YES
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 # work-around bug noted in PR #25402
@@ -63,8 +63,9 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--with-extra-includes=${_KDE3_EXTRA_INCLUDES:Q}
 CONFIGURE_ARGS+=	--disable-rpath
 CONFIGURE_ARGS+=	--disable-debug
-.if exists(${X11BASE}/lib/libXinerama.so)
+.if exists(${X11BASE}/lib/libXinerama.so) || ${X11_TYPE} != "native"
 CONFIGURE_ARGS+=	--with-xinerama
+.include "../../x11/libXinerama/buildlink3.mk"
 .endif
 
 CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
