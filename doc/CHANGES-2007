@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1427 2007/06/20 18:12:44 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1428 2007/06/20 18:16:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2650,3 +2650,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/apcupsd to 3.14.1nb2 [bouyer 2007-06-20]
 	Updated sysutils/install-sh to 20070620 [jlam 2007-06-20]
 	Added wm/obpager version 1.8 [tnn 2007-06-20]
+	Updated misc/openoffice2-bin to 2.2.1 [tron 2007-06-20]
