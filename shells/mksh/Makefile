@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/05/23 11:02:32 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/20 17:20:45 joerg Exp $
 
-DISTNAME=			mksh-R29e
-PKGNAME=			mksh-29.4
+DISTNAME=			mksh-R29f
+PKGNAME=			mksh-29.6
 CATEGORIES=			shells
 MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
 				http://pub.allbsd.org/MirOS/dist/mir/mksh/
