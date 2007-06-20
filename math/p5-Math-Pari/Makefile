@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/05 13:41:21 tv Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/20 15:52:35 joerg Exp $
 #
 
 DISTNAME=		Math-Pari-2.010703
@@ -6,6 +6,11 @@ PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5mpa
 CATEGORIES=		math perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
+
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+			pari-2.1.6.tgz
+
+#SITES.pari-2.1.6.tgz=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Math-Pari/
@@ -17,19 +22,6 @@ COMMENT=		Perl5 interface to the pari math library
 GCC_REQD+=		2.95
 MAKE_ENV+=		MP_NOGNUPLOT=1
 PERL5_PACKLIST=		auto/Math/Pari/.packlist
-
-# XXX: could be improved...
-PKGSRCDIR.pari=		${.CURDIR}/../../math/pari
-WRKSRC.pari_cmd=		\
-	cd ${PKGSRCDIR.pari} && ${MAKE} show-var VARNAME=WRKSRC
-
-post-extract:
-	cd ${PKGSRCDIR.pari:Q} && ${MAKE} configure &&		\
-	${RM} -f ${WRKSRC}/pari-*
-	${LN} -sf ${WRKSRC.pari_cmd:sh:Q} ${WRKSRC}
-
-pre-clean:
-	cd ${PKGSRCDIR.pari:Q} && ${MAKE} clean
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
