@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/11 14:16:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/20 11:49:39 markd Exp $
+${EMACS_ETCPREFIX}/ess/ess-s4.S
+${EMACS_ETCPREFIX}/ess/ess-sas-sh-command
+${EMACS_ETCPREFIX}/ess/ess-sp3.S
+${EMACS_ETCPREFIX}/ess/function-outline.S
+${EMACS_ETCPREFIX}/ess/icons/rbuffer.xpm
+${EMACS_ETCPREFIX}/ess/icons/rfunction.xpm
+${EMACS_ETCPREFIX}/ess/icons/rline.xpm
+${EMACS_ETCPREFIX}/ess/icons/rregion.xpm
+${EMACS_ETCPREFIX}/ess/icons/spluslogo.xpm
+${EMACS_ETCPREFIX}/ess/icons/startr.xpm
+${EMACS_ETCPREFIX}/ess/icons/switch_ess.xpm
+${EMACS_ETCPREFIX}/ess/icons/switchr.xpm
+${EMACS_ETCPREFIX}/ess/icons/switchs.xpm
 ${EMACS_INFOPREFIX}/ess.info
 ${EMACS_LISPPREFIX}/ess/ess-comp.el
 ${EMACS_LISPPREFIX}/ess/ess-comp.elc
@@ -103,3 +116,5 @@ ${EMACS_LISPPREFIX}/ess/noweb-font-lock-mode.elc
 ${EMACS_LISPPREFIX}/ess/noweb-mode.el
 ${EMACS_LISPPREFIX}/ess/noweb-mode.elc
 @dirrm ${EMACS_LISPPREFIX}/ess
+@dirrm ${EMACS_ETCPREFIX}/ess/icons
+@dirrm ${EMACS_ETCPREFIX}/ess
