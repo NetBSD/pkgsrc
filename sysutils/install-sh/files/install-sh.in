@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: install-sh.in,v 1.1.1.1 2006/07/17 14:19:01 jlam Exp $
+# $NetBSD: install-sh.in,v 1.2 2007/06/20 16:18:36 jlam Exp $
 # This script now also installs multiple files, but might choke on installing
 # multiple files with spaces in the file names.
 #
@@ -101,92 +101,80 @@ while [ x"$1" != x ]; do
 	    shift
 	    continue;;
 
-	*)  if [ x"$src" = x ]
+	*)  if [ x"$msrc" = x ]
 	    then
-		src=$1
-		msrc=$1
+		msrc="$dst"
 	    else
-		# this colon is to work around a 386BSD /bin/sh bug
-		:
-		msrc="$msrc $1"
-		dst=$1
+		msrc="$msrc $dst"
 	    fi
+	    src="$dst"
+	    dst="$1"
 	    shift
 	    continue;;
     esac
 done
 
-if [ x"$dir_arg" = x -a x"$msrc" != x"$src $dst" ]
+if [ x"$dir_arg" = x ]
 then
-	if [ ! -d "$dst" ]; then
-		echo "install: destination is not a directory"
-		exit 1
+	dstisfile=""
+	if [ ! -d "$dst" ]
+	then
+		if [ x"$msrc" = x"$src" ]
+		then
+			dstisfile=true
+		else
+			echo "install: destination is not a directory"
+			exit 1
+		fi
 	fi
 else
-	msrc=$src
+	msrc="$msrc $dst"
 fi
 
-
-if [ x"$src" = x ]
+if [ x"$msrc" = x ]
 then
-	echo "install:	no input file specified"
+	echo "install: no destination specified"
 	exit 1
-else
-	true
-fi
+fi      
+
+for srcarg in $msrc; do
 
 if [ x"$dir_arg" != x ]; then
-	dst=$src
-	src=""
-	
-	if [ -d "$dst" ]; then
-		instcmd=:
-		chmodcmd=""
-	else
-		instcmd=mkdir
-	fi
-else
 
-# Waiting for this to be detected by the "$instcmd $src $dsttmp" command
+	dstarg="$srcarg"
+else
+	dstarg="$dst"
+
+# Waiting for this to be detected by the "$instcmd $srcarg $dsttmp" command
 # might cause directories to be created, which would be especially bad 
 # if $src (and thus $dsttmp) contains '*'.
 
-	if [ -f "$src" ]
+	if [ -f "$srcarg" ]
 	then
-		true
-	elif [ -d "$src" ]
+		doinst="$instcmd"
+	elif [ -d "$srcarg" ]
 	then
-		echo "install: $src: not a regular file"
+		echo "install: $srcarg: not a regular file"
 		exit 1
-	elif [ x"$src" = x"/dev/null" ]
+	elif [ "$srcarg" = "/dev/null" ]
 	then
-		instcmd="$cpprog"
+		doinst="$cpprog"
 	else
-		echo "install:  $src does not exist"
+		echo "install:  $srcarg does not exist"
 		exit 1
 	fi
 	
-	if [ x"$dst" = x ]
-	then
-		echo "install:	no destination specified"
-		exit 1
-	else
-		true
-	fi
-
 # If destination is a directory, append the input filename; if your system
 # does not like double slashes in filenames, you may need to add some logic
 
-	if [ -d "$dst" ]
+	if [ -d "$dstarg" ]
 	then
-		dst="$dst"/`basename "$src"`
-	else
-		true
+		dstarg="$dstarg"/`basename "$srcarg"`
 	fi
 fi
 
 ## this sed command emulates the dirname command
-dstdir=`echo "$dst" | sed -e 's,[^/]*$,,;s,/$,,;s,^$,.,'`
+dstdir=`echo "$dstarg" | sed -e 's,[^/]*$,,;s,/$,,;s,^$,.,'`
 
 # Make sure that the destination directory exists.
 #  this part is taken from Noah Friedman's mkinstalldirs script
@@ -211,7 +199,11 @@ while [ $# -ne 0 ] ; do
 
 	if [ ! -d "${pathcomp}" ] ;
         then
-		$mkdirprog "${pathcomp}"
+		$doit $mkdirprog "${pathcomp}"
+        	if [ x"$chowncmd" != x ]; then $doit $chowncmd "${pathcomp}"; else true ; fi &&
+        	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "${pathcomp}"; else true ; fi &&
+        	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "${pathcomp}"; else true ; fi
+
 	else
 		true
 	fi
@@ -220,25 +212,26 @@ while [ $# -ne 0 ] ; do
 done
 fi
 
-if [ x"$dir_arg" != x ]
-then
-	$doit $instcmd "$dst" &&
-
-	if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dst"; else true ; fi &&
-	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dst"; else true ; fi &&
-	if [ x"$stripcmd" != x ]; then $doit $stripcmd $stripflags "$dst"; else true ; fi &&
-	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dst"; else true ; fi
-else
-
-# If we're going to rename the final executable, determine the name now.
-
-	for arg in `echo "$msrc"| sed -e 's/ [^ ]*$//'`; do
-
-		if [ x"$msrc" = x"$src" ]
-		then
-			file=$dst
+	if [ x"$dir_arg" != x ]
+	then
+		if [ -d "$dstarg" ]; then
+			true
 		else
-			file=$arg
+			$doit $mkdirprog "$dstarg" &&
+
+			if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dstarg"; else true ; fi &&
+			if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dstarg"; else true ; fi &&
+			if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dstarg"; else true ; fi
+		fi
+	else
+
+# If we're going to rename the final file, determine the name now.
+
+		if [ x"$dstisfile" = x ]
+		then
+			file=$srcarg
+		else
+			file=$dst
 		fi
 
 		if [ x"$transformarg" = x ] 
@@ -264,7 +257,7 @@ else
 
 # Move or copy the file name to the temp name
 
-		$doit $instcmd $arg "$dsttmp" &&
+		$doit $doinst $srcarg "$dsttmp" &&
 
 		trap "rm -f ${dsttmp}" 0 &&
 
@@ -283,9 +276,9 @@ else
 
 		$doit $rmcmd -f "$dstdir/$dstfile" &&
 		$doit $mvcmd "$dsttmp" "$dstdir/$dstfile"
-	done
+	fi
 
-fi &&
+done &&
 
 
 exit 0
