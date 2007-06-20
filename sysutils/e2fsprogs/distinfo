@@ -1,7 +1,19 @@
-$NetBSD: distinfo,v 1.12 2007/06/06 10:29:14 martti Exp $
+$NetBSD: distinfo,v 1.13 2007/06/20 19:51:09 jlam Exp $
 
 SHA1 (e2fsprogs-1.39.tar.gz) = c2dad0c9bd76701eafe3804e2a7d072aa198f046
 RMD160 (e2fsprogs-1.39.tar.gz) = 67e77a7cbf0e719fa8b5a8ac6285b334e1c3481b
 Size (e2fsprogs-1.39.tar.gz) = 3695111 bytes
-SHA1 (patch-aa) = a02135c39559a691f022063351ccb974f9930afb
-SHA1 (patch-af) = 4477e239e166295b06a5664d4ec7a92fa29c4f84
+SHA1 (patch-aa) = 5e7010e1d9280c9ad7b64b89eaa3675cc9262ec7
+SHA1 (patch-af) = 5bc4a9eec2a01154ade21c810ecb26272f3453c6
+SHA1 (patch-al) = 81d3169f156422739659f491ae52a53f932b0799
+SHA1 (patch-am) = 05a547a48b02d267e200d6161e982e5cf1226d3b
+SHA1 (patch-an) = 0324fe2a0b7a9464f8af401d554e07a0bcfa22e2
+SHA1 (patch-ao) = 57c8757cd378a72d728475f26cdf9a452afbf64b
+SHA1 (patch-ap) = 175e97acf1a7cfcbd3a18c80ed513f26ac111e13
+SHA1 (patch-aq) = 7289be157b0449a85fc3ec0a8f8a561333719116
+SHA1 (patch-ar) = 8a4a7ba5bd51ba8d68e6954c82ac6fd4cdf6153d
+SHA1 (patch-as) = e4a4221c5a870b6e2fa1001d77b01e5bf74dd20d
+SHA1 (patch-at) = 80785a73eaa57a4a73bd0a683697ea2f890f8dbc
+SHA1 (patch-au) = 87d7571695d7899323d30eb8acee108f6570c32f
+SHA1 (patch-av) = 07f3fbf646e2e9716ea10d55580fa15dd99db01d
+SHA1 (patch-aw) = 4f25dc800f6fc3a428f43eba2b9674c7b3256ea6
