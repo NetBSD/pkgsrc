@@ -1,0 +1,24 @@
+$NetBSD: patch-au,v 1.1 2007/06/20 19:51:11 jlam Exp $
+
+--- misc/mke2fs.c.orig	2006-05-13 09:16:57.000000000 -0400
++++ misc/mke2fs.c
+@@ -61,6 +61,10 @@ extern int optind;
+ #define ZAP_BOOTBLOCK
+ #endif
+ 
++#ifndef ETC_DIR
++#define ETC_DIR "/etc"		/* Where to find the config file */
++#endif
++
+ extern int isatty(int);
+ extern FILE *fpopen(const char *cmd, const char *mode);
+ 
+@@ -870,7 +874,7 @@ static void syntax_err_report(const char
+ 	exit(1);
+ }
+ 
+-static const char *config_fn[] = { "/etc/mke2fs.conf", 0 };
++static const char *config_fn[] = { ETC_DIR "/mke2fs.conf", 0 };
+ 
+ static void edit_feature(const char *str, __u32 *compat_array) 
+ {

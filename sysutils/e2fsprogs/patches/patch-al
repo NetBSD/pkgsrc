@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2007/06/20 19:51:09 jlam Exp $
+
+--- MCONFIG.in.orig	2006-03-22 20:19:19.000000000 -0500
++++ MCONFIG.in
+@@ -33,7 +33,7 @@ datadir = @datadir@
+ 
+ CC = @CC@
+ BUILD_CC = @BUILD_CC@
+-DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
++DEFS = -DLOCALEDIR=\"$(localedir)\" -DETC_DIR=\"$(root_sysconfdir)\" @DEFS@
+ CFLAGS = @CFLAGS@
+ CPPFLAGS =  -I$(top_builddir)/lib -I$(top_srcdir)/lib @CPPFLAGS@
+ INTL_FLAGS = @INTL_FLAGS@
