@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.1.1.1 2007/06/19 19:49:57 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.2 2007/06/20 13:04:15 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -57,7 +57,7 @@ add_job(const char *cat, size_t cat_len, const char *dir, size_t dir_len)
 {
 	char *location;
 
-	location = xasprintf("%.*s/%.*s", (int)cat_len, cat, dir_len, dir);
+	location = xasprintf("%.*s/%.*s", (int)cat_len, cat, (int)dir_len, dir);
 	add_job_full(location);
 	free(location);
 }
