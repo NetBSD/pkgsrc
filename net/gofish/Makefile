@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/06/20 17:46:03 jlam Exp $
 
 DISTNAME=		gofish-1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gofish/}
 
@@ -13,39 +13,35 @@ WRKSRC=			${WRKDIR}/gofish
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-			--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-gopheruser=${GOPHER_USER:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 EGDIR=			${PREFIX}/share/examples/gofish
-RUNTIMEDIR=	${VARBASE}/gopher
+RUNTIMEDIR=		${VARBASE}/gopher
 
-GOPHER_USER=	gopher
-GOPHER_GROUP=	gopher
-GOPHER_UID=		30
-GOPHER_GID=		30
-
-PKG_GROUPS=	${GOPHER_GROUP}
-PKG_USERS=	${GOPHER_USER}:${GOPHER_GROUP}
-PKG_GID.${GOPHER_GROUP}=	${GOPHER_GID}
-PKG_UID.${GOPHER_USER}=		${GOPHER_UID}
-
-OWN_DIRS_PERMS=	${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
+GOPHER_USER?=		gopher
+GOPHER_GROUP?=		gopher
+PKG_GROUPS=		${GOPHER_GROUP}
+PKG_USERS=		${GOPHER_USER}:${GOPHER_GROUP}
+PKG_GROUPS_VARS+=	GOPHER_GROUP
+PKG_USERS_VARS+=	GOPHER_USER
 
 RCD_SCRIPTS=		gopherd
 
-CONF_FILES=	${EGDIR}/gofish.conf ${PKG_SYSCONFDIR}/gofish.conf \
-		${EGDIR}/gofish-www.conf ${PKG_SYSCONFDIR}/gofish-www.conf
+OWN_DIRS_PERMS=		${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
 
-FILES_SUBST+=	RUNTIMEDIR=${RUNTIMEDIR:Q}
+.for FILE in gofish.conf gofish-www.conf
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
+
+FILES_SUBST+=		RUNTIMEDIR=${RUNTIMEDIR:Q}
 FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 
-post-configure:
-	${MV} ${WRKSRC}/gofish.conf ${WRKSRC}/gofish.conf.orig
-	${SED}	-e "s/;uid = -1/uid = ${GOPHER_UID}/g"	\
-		-e "s/;gid = -1/gid = ${GOPHER_GID}/g"  \
-		${WRKSRC}/gofish.conf.orig		\
-		> ${WRKSRC}/gofish.conf
-
+SUBST_CLASSES+=		user
+SUBST_MESSAGE.user=	Fixing name of gopher user in files.
+SUBST_FILES.user=	gofish.conf
+SUBST_SED.user=		-e "s/;user = gopher/user = ${GOPHER_USER}/g"	
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gofish
