@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2007/06/06 09:35:17 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/20 19:51:08 jlam Exp $
 bin/chattr
 bin/lsattr
 bin/uuidgen
@@ -18,6 +18,7 @@ man/man8/e2image.8
 man/man8/e2label.8
 man/man8/filefrag.8
 man/man8/findfs.8
+${FSCK}man/man8/fsck.8
 man/man8/fsck.ext2.8
 man/man8/fsck.ext3.8
 man/man8/logsave.8
@@ -36,6 +37,7 @@ sbin/e2image
 sbin/e2label
 sbin/filefrag
 sbin/findfs
+${FSCK}sbin/fsck
 sbin/fsck.ext2
 sbin/fsck.ext3
 sbin/logsave
@@ -45,6 +47,7 @@ sbin/mkfs.ext3
 sbin/mklost+found
 sbin/resize2fs
 sbin/tune2fs
+share/examples/ext2fs/mke2fs.conf
 share/locale/cs/LC_MESSAGES/e2fsprogs.mo
 share/locale/de/LC_MESSAGES/e2fsprogs.mo
 share/locale/es/LC_MESSAGES/e2fsprogs.mo
