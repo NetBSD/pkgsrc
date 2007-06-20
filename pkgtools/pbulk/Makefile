@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/19 23:51:18 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/20 13:31:26 joerg Exp $
 
 DISTNAME=	pbulk-0.1
 CATEGORIES=	pkgtools
@@ -48,6 +48,12 @@ do-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pbulk.conf ${DESTDIR}${PREFIX}/share/examples/pbulk/pbulk.conf
+
+.if ${OPSYS} == "NetBSD"
+.  if !empty(OS_VERSION:M2.*)
+USE_BUILTIN.libevent = no
+.  endif
+.endif
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
