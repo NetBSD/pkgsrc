@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2007/01/30 21:00:31 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/20 16:49:18 jlam Exp $
 
 DISTNAME=	neXtaw-0.15.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://siag.nu/pub/neXtaw/
 
@@ -28,7 +28,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/README.XAW3D ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	for file in ${WRKSRC}/doc/app-defaults/*; do			\
+	cd ${WRKSRC}/doc/app-defaults; for file in *; do		\
+		case "$${file}" in					\
+		Makefile*)	continue ;;				\
+		esac;							\
 		${INSTALL_DATA} $${file} ${EGDIR};			\
 	done
 
