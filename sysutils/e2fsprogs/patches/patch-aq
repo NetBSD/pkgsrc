@@ -1,0 +1,38 @@
+$NetBSD: patch-aq,v 1.1 2007/06/20 19:51:10 jlam Exp $
+
+--- misc/Makefile.in.orig	2006-03-27 00:58:10.000000000 -0500
++++ misc/Makefile.in
+@@ -228,7 +228,7 @@ installdirs:
+ 		$(DESTDIR)$(root_sbindir) $(DESTDIR)$(bindir) \
+ 		$(DESTDIR)$(man1dir) $(DESTDIR)$(man8dir) \
+ 		$(DESTDIR)$(man1dir) $(DESTDIR)$(man5dir) \
+-		$(DESTDIR)$(libdir) $(DESTDIR)/etc
++		$(DESTDIR)$(libdir) $(DESTDIR)$(root_sysconfdir)
+ 
+ install: all $(SMANPAGES) $(UMANPAGES) installdirs
+ 	@for i in $(SPROGS); do \
+@@ -288,10 +288,10 @@ install: all $(SMANPAGES) $(UMANPAGES) i
+ 		echo "	INSTALL_DATA $(man5dir)/$$i"; \
+ 		$(INSTALL_DATA) $$i $(DESTDIR)$(man5dir)/$$i; \
+ 	done
+-	@if ! test -f $(DESTDIR)/etc/mke2fs.conf; then \
+-		echo "	INSTALL_DATA /etc/mke2fs.conf"; \
++	@if ! test -f $(DESTDIR)$(root_sysconfdir)/mke2fs.conf; then \
++		echo "	INSTALL_DATA $(root_sysconfdir)/mke2fs.conf"; \
+ 		$(INSTALL_DATA) $(srcdir)/mke2fs.conf \
+-			$(DESTDIR)/etc/mke2fs.conf; \
++			$(DESTDIR)$(root_sysconfdir)/mke2fs.conf; \
+ 	fi
+ 
+ install-strip: install
+@@ -336,8 +336,8 @@ uninstall:
+ 	for i in $(FMANPAGES); do \
+ 		$(RM) -f $(DESTDIR)$(man5dir)/$$i; \
+ 	done
+-	if cmp -s $(srcdir)/mke2fs.conf $(DESTDIR)/etc/mke2fs.conf; then \
+-		$(RM) $(DESTDIR)/etc/mke2fs.conf; \
++	if cmp -s $(srcdir)/mke2fs.conf $(DESTDIR)$(root_sysconfdir)/mke2fs.conf; then \
++		$(RM) $(DESTDIR)$(root_sysconfdir)/mke2fs.conf; \
+ 	fi
+ 
+ clean:
