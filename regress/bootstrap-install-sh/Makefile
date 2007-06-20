@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/17 05:20:23 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/20 16:26:20 jlam Exp $
 
 DISTNAME=	bootstrap-install-sh-0.0
 CATEGORIES=	regress
@@ -7,19 +7,25 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	jlam@pkgsrc.org
-COMMENT=	Test functionality of bootstrap install-sh
+COMMENT=	Test functionality of sysutils/install-sh
 
 EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
+NO_CHECKSUM=	yes
+NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_PACKAGE=	yes
 
 INSTALL_SH=	${WRKSRC}/install-sh
 
-regress: extract
 post-extract:
-	${CP} ${FILESDIR}/install-sh ${INSTALL_SH}
-	${CHMOD} +x ${INSTALL_SH}
+	${CP} ${PKGSRCDIR}/sysutils/install-sh/files/install-sh.in ${WRKSRC}
+
+do-configure:
+	${SED}	-e "s|@DEFAULT_INSTALL_MODE@|"${PKGDIRMODE}"|g"		\
+		${WRKSRC}/install-sh.in > ${WRKSRC}/install-sh
+	${CHMOD} +x ${WRKSRC}/install-sh
+
+regress: configure
 
 # create one directory using -d
 regress: test-d1
