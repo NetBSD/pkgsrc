@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/06/19 21:07:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2007/06/20 02:22:33 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -52,13 +52,13 @@ MAKE_ENV+=	CFLAGS_INET6=-DINET6
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-configure
+SUBST_MESSAGE.prefix=	Fixing prefix definitions.
+SUBST_FILES.prefix=	cucipop.8 makevpopdb.8
+SUBST_SED.prefix=	-e "s|@prefix@|${PREFIX}|g"
+
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
-pre-configure:
-	@(cd ${WRKSRC};							\
-	for f in config.h cucipop.8 makevpopdb.8; do			\
-		${SED} -e 's|@prefix@|${PREFIX}|g' $$f > $$f.fixed &&	\
-		${MV} $$f.fixed $$f;					\
-	done)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cucipop ${PREFIX}/sbin
