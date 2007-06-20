@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/05/13 13:02:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/20 18:45:38 schmonz Exp $
 #
 
 DISTNAME=		solfege-3.8.0
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 
@@ -16,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-oss-sound
 CONFIGURE_ARGS+=	--disable-pygtk-test
 CONFIGURE_ARGS+=	--enable-docbook-stylesheet=${LOCALBASE}/share/xsl/docbook/html/chunk.xsl
 
@@ -23,6 +25,7 @@ USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
+PYCOMPILEALL=		${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 SUBST_CLASSES+=		sound
 SUBST_STAGE.sound=	do-configure
@@ -47,6 +50,11 @@ WAVPLAYER=	${LOCALBASE}/bin/qtplay
 MIDIPLAYER=	${LOCALBASE}/bin/qtplay
 DEPENDS+=	qtplay-[0-9]*:../../audio/qtplay
 .endif
+
+post-install:
+	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/solfege/mpd \
+		${PREFIX}/share/solfege/soundcard \
+		${PREFIX}/share/solfege/src
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
