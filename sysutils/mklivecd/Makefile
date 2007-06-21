@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2007/06/21 12:28:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/21 12:31:51 xtraeme Exp $
 
 DISTNAME=	mklivecd-0.15.2
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
+# Please don't commit to that package without permission from
+# Juan Romero Pardines <xtraeme at NetBSD dot org>.
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Make your own NetBSD/x86 Live CD-ROM/DVD-ROM
 
