@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1432 2007/06/21 18:18:30 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1433 2007/06/21 19:08:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/mklivecd to 0.15.2 [xtraeme 2007-06-21]
 	Updated editors/mined to 2000.13.2 [tnn 2007-06-21]
 	Updated sysutils/cdrtools to 2.01.01.27nb1 [wiz 2007-06-21]
+	Updated mail/spamdyke to 2.6.3 [schmonz 2007-06-21]
