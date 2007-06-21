@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6443 2007/06/21 13:51:28 tnn Exp $
+$NetBSD: TODO,v 1.6444 2007/06/21 19:41:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -662,7 +662,6 @@ Suggested package updates
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
-	o ktorrent-2.1.2
 	o kye-0.9.3
 	o lapack-20070226
 	o latd-1.21
