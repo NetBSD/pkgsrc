@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2006/10/05 10:57:37 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2007/06/21 15:52:16 jlam Exp $
 
---- configure.orig	2006-01-29 14:10:47.000000000 +0100
-+++ configure	2006-10-05 12:51:00.000000000 +0200
+--- configure.orig	2006-11-19 08:46:47.000000000 -0500
++++ configure
 @@ -2959,7 +2959,7 @@ _ACEOF
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2006/10/05 10:57:37 rillig Exp $
  			ASCIIDOC_FLAGS=--unsafe
  		fi
  		rm config.asciidoc-unsafe.*
-@@ -17103,7 +17103,7 @@ if test -z "$disable_lua"; then
+@@ -17578,7 +17578,7 @@ if test -z "$disable_lua"; then
  	for luadir in "$withval" "" /usr /usr/local; do
  		for suffix in "" 50 51; do
  			if test "$cf_result" = no; then
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.5 2006/10/05 10:57:37 rillig Exp $
  
  				if test ! -z "$luadir"; then
  					LUA_LIBS="-L$luadir/lib $LUA_LIBS"
-@@ -17127,10 +17127,10 @@ int
+@@ -17602,10 +17602,10 @@ int
  main ()
  {
  	lua_State *L = lua_open();
@@ -35,3 +35,12 @@ $NetBSD: patch-aa,v 1.5 2006/10/05 10:57:37 rillig Exp $
  						lua_pushboolean(L, 1);
  						lua_close(L);
    ;
+@@ -23243,7 +23243,7 @@ _ACEOF
+ 
+ 
+ # Create LIBDIR #define for config.h
+-LIBDIR=`eval echo "$libdir"`
++LIBDIR="$LOCALEDIR"
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define LIBDIR "$LIBDIR"
