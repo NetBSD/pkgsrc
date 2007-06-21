@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2007/02/03 02:59:22 joerg Exp $
+# $NetBSD: Makefile,v 1.75 2007/06/21 00:58:04 minskim Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -30,7 +30,7 @@ INSTALL_TARGET=		install-strip
 
 .include "../../mk/compiler.mk"
 
-.if ${MACHINE_ARCH} != "i386" || !empty(CC_VERSION:Mgcc-4.1.*)
+.if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ENV+=		ac_cv_c_inline_asm=no
 .endif
 
