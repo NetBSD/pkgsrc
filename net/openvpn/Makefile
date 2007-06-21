@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/02/28 11:06:21 sborrill Exp $
+# $NetBSD: Makefile,v 1.21 2007/06/21 21:44:42 jlam Exp $
 #
 
-DISTNAME=	openvpn-2.1_rc2
-PKGNAME=	openvpn-2.1rc2
+DISTNAME=	openvpn-2.1_rc4
+PKGNAME=	openvpn-2.1rc4
 
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
@@ -22,12 +22,17 @@ PKG_SYSCONFSUBDIR=	openvpn
 DATADIR=		${PREFIX}/share/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+EASYRSADIR=		${DATADIR}/easy-rsa
 RCD_SCRIPTS=		openvpn
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--enable-password-save
 CONFIGURE_ARGS+=	--disable-dependency-tracking
+
+# Pthread support is still considered very experimental, so don't enable
+# it for the default (production) build.
+#
+#CONFIGURE_ARGS+=	--enable-pthread
 
 INSTALLATION_DIRS=	${DATADIR}/easy-rsa	${EGDIR}/config		\
 			${DOCDIR}		${EGDIR}/keys		\
@@ -43,35 +48,32 @@ DL_AUTO_VARS=		yes
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-# Fix up the paths to tools in the pkitool script.
-post-build:
-	for file in ${WRKSRC}/easy-rsa/2.0/pkitool; do			\
-		${SED}	-e "s|^\\(GREP\\)=.*|\\1=\""${GREP}"\"|"		\
-			-e "s|^\\(OPENSSL\\)=.*|\\1=\""${SSLBASE}/bin/openssl"\"|" \
-			$$file > $$file.new;				\
-		${MV} -f $$file.new $$file;				\
-		${CHMOD} +x $$file;					\
-	done
+SUBST_CLASSES+=		pkitool
+SUBST_STAGE.pkitool=	post-build
+SUBST_MESSAGE.pkitool=	Fixing up default paths to grep & openssl in pkitool.
+SUBST_FILES.pkitool=	easy-rsa/2.0/pkitool
+SUBST_SED.pkitool=	\
+	-e "s|\\(GREP\\)=.*|\\1=\""${GREP:Q}"\"|"			\
+	-e "s|\\(OPENSSL\\)=.*|\\1=\""${SSLBASE:Q}/bin/openssl"\"|"
 
 post-install:
-	dir=${DATADIR:S/^${PREFIX}\///}/easy-rsa;			\
-	cd ${WRKSRC}/easy-rsa/2.0;					\
-	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
-	while read file; do						\
+	cd ${WRKSRC:Q}/easy-rsa/2.0; for file in [a-zR]*; do		\
 		case $$file in						\
-		[A-Z]*|*.cnf|vars)	${INSTALL_DATA} $$file ${PREFIX}/$$dir ;; \
-		*)		${INSTALL_SCRIPT} $$file ${PREFIX}/$$dir ;; \
+		*.orig)	;;						\
+		[A-Z]*|*.cnf|vars)					\
+			${INSTALL_DATA} $$file ${EASYRSADIR:Q} ;;	\
+		*)	${INSTALL_SCRIPT} $$file ${EASYRSADIR:Q} ;;	\
 		esac;							\
 	done
-	${INSTALL_DATA} ${WRKSRC}/management/management-notes.txt ${DOCDIR}
-	cd ${WRKSRC}/sample-config-files; for file in *; do		\
-		${INSTALL_DATA} $$file ${EGDIR}/config;			\
+	${INSTALL_DATA} ${WRKSRC:Q}/management/management-notes.txt ${DOCDIR:Q}
+	cd ${WRKSRC:Q}/sample-config-files; for file in *; do		\
+		${INSTALL_DATA} $$file ${EGDIR:Q}/config;		\
 	done
-	cd ${WRKSRC}/sample-scripts; for file in *; do			\
-		${INSTALL_DATA} $$file ${EGDIR}/scripts;		\
+	cd ${WRKSRC:Q}/sample-scripts; for file in *; do		\
+		${INSTALL_DATA} $$file ${EGDIR:Q}/scripts;		\
 	done
-	cd ${WRKSRC}/sample-keys; for file in *; do			\
-		${INSTALL_DATA} $$file ${EGDIR}/keys;			\
+	cd ${WRKSRC:Q}/sample-keys; for file in *; do			\
+		${INSTALL_DATA} $$file ${EGDIR:Q}/keys;			\
 	done
 
 .include "../../mk/bsd.pkg.mk"
