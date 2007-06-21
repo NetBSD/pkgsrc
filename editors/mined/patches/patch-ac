@@ -1,10 +1,20 @@
-$NetBSD: patch-ac,v 1.1 2003/07/01 15:52:37 agc Exp $
+$NetBSD: patch-ac,v 1.2 2007/06/21 13:48:27 tnn Exp $
 
-Pass the value of ${PREFIX} down so that the help file can be found
-
---- makefile.bsd	2003/06/17 16:35:05	1.1
-+++ makefile.bsd	2003/06/17 16:35:37
-@@ -43,7 +43,7 @@
+--- src/makefile.bsd.orig	2006-10-18 00:00:00.000000000 +0200
++++ src/makefile.bsd
+@@ -15,9 +15,9 @@ root	= $(INSTALLROOT)
+ #   (a copy of the mined home page).
+ 
+ # directories for target "make install"
+-prefix	= $(root)/usr
++prefix	= ${PREFIX}
+ bindir	= $(prefix)/bin
+-mandir	= $(prefix)/share/man
++mandir	= $(prefix)/${PKGMANDIR}
+ rundir	= $(prefix)/share/mined
+ # FreeBSD:
+ #docdir	= $(lprefix)/share/doc/mined
+@@ -96,7 +96,7 @@ SLIB	= $(termcap)
  SYSTEM	= -Dunix
  
  # select operating system environment

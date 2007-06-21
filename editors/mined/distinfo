@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/06/12 13:05:10 joerg Exp $
+$NetBSD: distinfo,v 1.7 2007/06/21 13:48:25 tnn Exp $
 
-SHA1 (mined-2000.7.tar.gz) = 644bb15455f636b58a05b67a988421a6dc99cf90
-RMD160 (mined-2000.7.tar.gz) = 9e01b738b12c600af649f1066661095b1b88f484
-Size (mined-2000.7.tar.gz) = 1208334 bytes
-SHA1 (patch-aa) = c0467b6017cf54827ba3c1de23c9ba9e3f31acf7
-SHA1 (patch-ab) = d3a99e8d14797233b6abf8c1096d65bd3451d28c
-SHA1 (patch-ac) = 9624eae0aecde080174f8d3c982b209aa703273c
-SHA1 (patch-ad) = 7c858247b8cf478d0a260a20dfdac3306a6739e6
+SHA1 (mined-2000.13.2.tar.gz) = 603ba089b4499ffede7b3397c94ae1fd655438e9
+RMD160 (mined-2000.13.2.tar.gz) = a0a6f70fd48551c071d47fe18d0e395f5b74ccbc
+Size (mined-2000.13.2.tar.gz) = 3915266 bytes
+SHA1 (patch-ac) = 143b4589cac371b18c8e1670202bcd8b1f253cba
+SHA1 (patch-ad) = ad901718e77a44fb1bd3f2165b4b1e6c4994a884
+SHA1 (patch-ae) = d842d09a248557dda9a5976b40e0adaae631fcb8
