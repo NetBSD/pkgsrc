@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/06/08 01:08:29 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2007/06/21 19:08:45 schmonz Exp $
 
---- spamdyke/spamdyke.h.orig	2007-06-06 18:19:50.000000000 -0400
+--- spamdyke/spamdyke.h.orig	2007-06-19 22:15:41.000000000 -0400
 +++ spamdyke/spamdyke.h
 @@ -32,7 +32,7 @@
  
