@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1431 2007/06/21 13:51:27 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1432 2007/06/21 18:18:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2654,3 +2654,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/solfege to 3.8.0nb1 [schmonz 2007-06-20]
 	Updated sysutils/mklivecd to 0.15.2 [xtraeme 2007-06-21]
 	Updated editors/mined to 2000.13.2 [tnn 2007-06-21]
+	Updated sysutils/cdrtools to 2.01.01.27nb1 [wiz 2007-06-21]
