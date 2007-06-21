@@ -1,17 +1,25 @@
-$NetBSD: patch-ai,v 1.3 2007/05/29 15:32:17 obache Exp $
+$NetBSD: patch-ai,v 1.4 2007/06/21 18:16:16 wiz Exp $
 
---- libscg/scsi-bsd.c.orig	2006-11-26 18:12:57.000000000 +0100
+--- libscg/scsi-bsd.c.orig	2004-01-14 23:13:05.000000000 +0000
 +++ libscg/scsi-bsd.c
-@@ -52,7 +52,7 @@ static	char __sccsid[] =
+@@ -39,6 +39,7 @@ static	char __sccsid[] =
+ 
+ #undef	sense
+ #include <sys/scsiio.h>
++#include <util.h>
+ 
+ /*
+  *	Warning: you may change this source, but if you do that
+@@ -47,7 +48,7 @@ static	char __sccsid[] =
   *	Choose your name instead of "schily" and make clear that the version
   *	string is related to a modified source.
   */
 -LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.44";	/* The version for this transport*/
-+LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.44nb1";	/* The version for this transport*/
++LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.44nb1";	/* The version for this transport */
  
  #define	MAX_SCG		16	/* Max # of SCSI controllers */
  #define	MAX_TGT		16
-@@ -112,7 +112,7 @@ scgo_version(scgp, what)
+@@ -107,7 +108,7 @@ scgo_version(scgp, what)
  		 * return "schily" for the SCG_AUTHOR request.
  		 */
  		case SCG_AUTHOR:
@@ -20,23 +28,18 @@ $NetBSD: patch-ai,v 1.3 2007/05/29 15:32:17 obache Exp $
  		case SCG_SCCS_ID:
  			return (__sccsid);
  		}
-@@ -144,6 +144,15 @@ scgo_open(scgp, device)
+@@ -139,6 +140,10 @@ scgo_open(scgp, device)
  	register int	l;
  	register int	nopen = 0;
  	char		devname[64];
 +#if defined(__NetBSD__)
 +	struct scsi_addr mysaddr;
-+#if defined(__i386__) || defined(__amd64__)
-+	char	slicename[] = "d";	/* i386 is special */
-+#else
-+	char	slicename[] = "c";	/* this is what the rest uses */
-+#endif
-+	char	*myslicename = slicename;
++	int		myslicename = getrawpartition();
 +#endif
  
  	if (busno >= MAX_SCG || tgt >= MAX_TGT || tlun >= MAX_LUN) {
  		errno = EINVAL;
-@@ -170,6 +179,60 @@ scgo_open(scgp, device)
+@@ -165,6 +170,60 @@ scgo_open(scgp, device)
  	if ((device != NULL && *device != '\0') || (busno == -2 && tgt == -2))
  		goto openbydev;
  
@@ -58,7 +61,7 @@ $NetBSD: patch-ai,v 1.3 2007/05/29 15:32:17 obache Exp $
 +#if defined(__NetBSD__)
 +	if (busno >= 0 && tgt >= 0 && tlun >= 0) {
 +		for (l=0; l < MAX_LUN ; l++) {
-+			sprintf(devname, "/dev/rcd%d%s", l, myslicename);
++			sprintf(devname, "/dev/rcd%d%c", l, 'a' + myslicename);
 +			f = open(devname, O_RDWR);
 +			if (f >= 0) {
 +				if (ioctl(f, SCIOCIDENTIFY, &mysaddr) < 0) {
@@ -70,10 +73,10 @@ $NetBSD: patch-ai,v 1.3 2007/05/29 15:32:17 obache Exp $
 +					scglocal(scgp)->scgfiles[busno][tgt][tlun] = f;
 +					return(1);
 +				}
-+			} else goto openbydev;
++			}
 +		}
 +	} else for (l=0; l < MAX_LUN ; l++) {
-+			sprintf(devname, "/dev/rcd%d%s", l, myslicename);
++			sprintf(devname, "/dev/rcd%d%c", l, 'a' + myslicename);
 +			f = open(devname, O_RDWR);
 +			if (f >= 0) {
 +				if (ioctl(f, SCIOCIDENTIFY, &mysaddr) < 0) {
@@ -97,7 +100,7 @@ $NetBSD: patch-ai,v 1.3 2007/05/29 15:32:17 obache Exp $
  	if (busno >= 0 && tgt >= 0 && tlun >= 0) {
  
  		js_snprintf(devname, sizeof (devname),
-@@ -206,6 +269,7 @@ scgo_open(scgp, device)
+@@ -201,6 +260,7 @@ scgo_open(scgp, device)
  			}
  		}
  	}
