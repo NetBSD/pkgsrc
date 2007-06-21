@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2007/01/13 18:54:24 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2007/06/21 19:32:55 wiz Exp $
 
---- libktorrent/net/socket.cpp.orig	2006-11-21 19:08:44.000000000 +0000
+--- libktorrent/net/socket.cpp.orig	2007-02-04 13:22:44.000000000 +0000
 +++ libktorrent/net/socket.cpp
 @@ -38,7 +38,7 @@
  #include <sys/filio.h>
  #endif
  
--#if defined(Q_OS_MACX) || defined(Q_OS_DARWIN) || (defined(Q_OS_FREEBSD) && __FreeBSD_version < 600020) || defined (Q_OS_SOLARIS)
-+#if defined(Q_OS_MACX) || defined(Q_OS_DARWIN) || (defined(Q_OS_FREEBSD) && !defined(__DragonFly__) && __FreeBSD_version < 600020) || defined (Q_OS_SOLARIS)
+-#if defined(Q_OS_MACX) || defined(Q_OS_DARWIN) || (defined(Q_OS_FREEBSD) && __FreeBSD_version < 600020) || defined (Q_OS_SOLARIS) || defined(Q_OS_NETBSD) 
++#ifndef MSG_NOSIGNAL
  #define MSG_NOSIGNAL 0
  #endif
  
@@ -29,15 +29,3 @@ $NetBSD: patch-aa,v 1.2 2007/01/13 18:54:24 joerg Exp $
  		int val = 1;
  		if (setsockopt(m_fd,SOL_SOCKET,SO_NOSIGPIPE,&val,sizeof(int)) < 0)
  		{
-@@ -160,7 +160,11 @@ namespace net
- 	
- 	int Socket::send(const bt::Uint8* buf,int len)
- 	{
-+#ifdef MSG_NOSIGNAL
- 		int ret = ::send(m_fd,buf,len,MSG_NOSIGNAL);
-+#else
-+		int ret = ::send(m_fd,buf,len,0);	/* SIGPIPE is ignored anyway */
-+#endif
- 		if (ret < 0)
- 		{
- 			if (errno != EAGAIN && errno != EWOULDBLOCK)
