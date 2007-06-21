@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
+$NetBSD: patch-aa,v 1.7 2007/06/21 18:33:19 minskim Exp $
 
---- Makefile.orig	Fri Jan 17 20:10:55 1997
-+++ Makefile	Fri Mar 12 17:20:39 1999
-@@ -4,11 +4,12 @@
+--- Makefile.orig	1997-01-17 11:10:55.000000000 -0800
++++ Makefile
+@@ -4,25 +4,28 @@
  
  MAKE=make
  SHELL=/bin/sh
@@ -18,7 +18,12 @@ $NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
  LIBDIR=$(INSTROOT)/lib
  INCDIR=$(INSTROOT)/include
  MANDIR=$(INSTROOT)/man/man3
-@@ -19,10 +20,10 @@
+ 
++.PHONY: install
++
+ #
+ # Add -g for debugging information
+ #
  # Add -DHAVE_ANSIHEADERS if your system have the ANSI C header files
  # needed for our purposes (stdlib, string, unistd).
  #
@@ -31,7 +36,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
  
  OBJS = ident.o id_open.o id_close.o id_query.o id_parse.o support.o version.o
  
-@@ -33,6 +34,7 @@
+@@ -33,6 +36,7 @@ fail:
  	@echo aix
  	@echo bsd
  	@echo bsd2.11
@@ -39,7 +44,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
  	@echo dynix
  	@echo hpux
  	@echo irix
-@@ -52,8 +54,8 @@
+@@ -52,8 +56,8 @@ all: 	$(LIBIDENT)
  
  $(LIBIDENT):	$(OBJS)
  	-$(RM) $(LIBIDENT)
@@ -50,7 +55,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
  
  testers: lookup-tester ident-tester
  
-@@ -82,13 +84,9 @@
+@@ -82,13 +86,9 @@ version:
  #
  
  install:
@@ -67,7 +72,7 @@ $NetBSD: patch-aa,v 1.6 2003/01/19 09:04:04 salo Exp $
  
  clean:
  	-$(RM) $(LIBIDENT) ident-tester lookup-tester *~ core *.o \#*
-@@ -126,6 +124,8 @@
+@@ -126,6 +126,8 @@ bsd:
  bsd2.11:
  	@$(MAKE) all CC="$(CC)" CFLAGS="-O -DSIGRETURNTYPE=int -DHAVE_ANSIHEADERS"
  
