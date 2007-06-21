@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6442 2007/06/19 22:31:13 wiz Exp $
+$NetBSD: TODO,v 1.6443 2007/06/21 13:51:28 tnn Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,6 @@ Suggested package updates
 	o micq-0.5.4.1
 	o milter-greylist-3.1.7
 	o mimedefang-2.62
-	o mined-2000.13.2
 	o minivmac-2.6.1
 	o mirmon-1.37
 	o mk-files-20061230
