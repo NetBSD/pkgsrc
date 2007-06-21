@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.37 2007/06/20 11:40:22 markd Exp $
+# $NetBSD: emacs.mk,v 1.38 2007/06/21 13:20:59 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -341,8 +341,8 @@ _EMACS_PKGDEP.${_EMACS_TYPE},base?=	\
 _EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=20.7:../../editors/leim20
 .elif !empty(_EMACS_TYPE:Mxemacs*) || !empty(_EMACS_TYPE:Memacs21*)
 _EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=21.2:../../editors/leim
-.else
-_EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=22:../../wip/leim-current
+.elif !empty(_EMACS_TYPE:Mxemacs*) || !empty(_EMACS_TYPE:Memacs22*)
+_EMACS_PKGDEP.${_EMACS_TYPE},leim?=	# nothing
 .endif
 
 .for _mod_ in ${EMACS_MODULES}
