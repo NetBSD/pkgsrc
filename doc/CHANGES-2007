@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1435 2007/06/21 21:07:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1436 2007/06/21 21:45:55 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2658,3 +2658,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamdyke to 2.6.3 [schmonz 2007-06-21]
 	Updated net/ktorrent to 2.1.4 [wiz 2007-06-21]
 	Updated devel/subversion-base to 1.4.4nb1 [wiz 2007-06-21]
+	Updated net/openvpn to 2.1rc4 [jlam 2007-06-21]
