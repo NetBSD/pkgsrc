@@ -1,0 +1,27 @@
+$NetBSD: patch-ak,v 1.1 2007/06/22 14:13:16 lkundrak Exp $
+
+Fix for CVE-2007-3316 format-string vulnerability in CDDA module described
+by VideoLAN-SA-0702 advisory.  Backported from 0.8.6c.
+
+--- modules/access/cdda.c.orig	2007-06-22 16:00:43.000000000 +0200
++++ modules/access/cdda.c
+@@ -630,7 +630,9 @@ static int GetTracks( access_t *p_access
+                     {
+                         vlc_input_item_AddInfo( &p_item->input,
+                                             _(VLC_META_INFO_CAT),
+-                                            _(VLC_META_TITLE),
++                                            _(VLC_META_TITLE), "%s", 
++                                             cddb_track_get_title( t ) );
++
+                                             cddb_track_get_title( t ) );
+                         if( p_item->input.psz_name )
+                             free( p_item->input.psz_name );
+@@ -641,7 +643,7 @@ static int GetTracks( access_t *p_access
+                     if( psz_result )
+                     {
+                         vlc_input_item_AddInfo( &p_item->input,
+-                                            _(VLC_META_INFO_CAT),
++                                            _(VLC_META_INFO_CAT), "%s",
+                                             _(VLC_META_ARTIST), psz_result );
+                     }
+                 }
