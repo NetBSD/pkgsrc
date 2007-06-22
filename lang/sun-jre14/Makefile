@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2007/04/21 20:40:52 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/06/22 11:21:23 rillig Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	j2re-1_4_2_14-linux-i586
 PKGNAME=	sun-jre14-2.14
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
@@ -42,6 +43,9 @@ PLIST_SRC=	${WRKDIR}/PLIST
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip
 .endif
+
+post-extract:
+	cd ${WRKSRC} && chmod -R go-w .
 
 do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
