@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1439 2007/06/22 14:34:31 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1440 2007/06/22 22:31:43 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2662,3 +2662,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2 to 2.2.1 [hira 2007-06-22]
 	Updated multimedia/vlc to 0.8.5nb6 [lkundrak 2007-06-22]
 	Updated multimedia/vlc07 to 0.7.2nb17 [lkundrak 2007-06-22]
+	Updated devel/cogito to 0.18.2nb1 [dmcmahill 2007-06-22]
