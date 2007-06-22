@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2007/05/07 09:29:54 adrianp Exp $
+# $NetBSD: options.mk,v 1.21 2007/06/22 13:14:22 adrianp Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -48,8 +48,8 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'
 DSPAM_STORAGE_DRIVER?=	hash
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
 .if empty(DSPAM_STORAGE_DRIVER:Mmysql) && empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-PKG_OPTIONS:=		${PKG_OPTIONS:Nvirtualusers}
-PKG_OPTIONS:=		${PKG_OPTIONS:Npreferences-extension}
+PKG_OPTIONS:=		${PKG_OPTIONS:Ndspam-virtualusers}
+PKG_OPTIONS:=		${PKG_OPTIONS:Ndspam-preferences-extension}
 PKG_OPTIONS:=		${PKG_OPTIONS:Nldap}
 .endif
 .if !empty(DSPAM_STORAGE_DRIVER:Mhash)
@@ -114,7 +114,7 @@ PKG_SUPPORTED_OPTIONS+=	dspam-preferences-extension dspam-virtualusers ldap
 ### Used to store user preferences in the backend instead of flat files
 ### (built-in method).
 ###
-.if !empty(PKG_OPTIONS:Mpreferences-extension)
+.if !empty(PKG_OPTIONS:Mdspam-preferences-extension)
 CONFIGURE_ARGS+=	--enable-preferences-extension
 .endif
 
@@ -122,7 +122,7 @@ CONFIGURE_ARGS+=	--enable-preferences-extension
 ### Tells DSPAM to create virtual user ids.  Use this if your users are
 ### not system users.
 ###
-.if !empty(PKG_OPTIONS:Mvirtualusers)
+.if !empty(PKG_OPTIONS:Mdspam-virtualusers)
 CONFIGURE_ARGS+=	--enable-virtual-users
 .endif
 
