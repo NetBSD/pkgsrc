@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.19 2007/06/15 17:00:28 hira Exp $
+$NetBSD: distinfo,v 1.20 2007/06/22 03:52:20 hira Exp $
 
-SHA1 (openoffice-2.2.0/OOo_2.2.0_src_binfilter.tar.bz2) = d1fa827e2c08d7e3d67b2588b1136ed9e774ef42
-RMD160 (openoffice-2.2.0/OOo_2.2.0_src_binfilter.tar.bz2) = 1bb07f01e872ed003dbac3e11bc5732904076ae1
-Size (openoffice-2.2.0/OOo_2.2.0_src_binfilter.tar.bz2) = 7763249 bytes
-SHA1 (openoffice-2.2.0/OOo_2.2.0_src_core.tar.bz2) = a3b334c6a855366944e9e1e441a5fbe2f2d7bcb1
-RMD160 (openoffice-2.2.0/OOo_2.2.0_src_core.tar.bz2) = 84e2bfaad21760c5a92a73aac46765ed01638ffa
-Size (openoffice-2.2.0/OOo_2.2.0_src_core.tar.bz2) = 123160673 bytes
-SHA1 (openoffice-2.2.0/OOo_2.2.0_src_l10n.tar.bz2) = fdb120f18310efb95938cdf30a0855ef8456d346
-RMD160 (openoffice-2.2.0/OOo_2.2.0_src_l10n.tar.bz2) = 8b66d4e05ebfbc673eac3a5326f88d5ba0a3e7b2
-Size (openoffice-2.2.0/OOo_2.2.0_src_l10n.tar.bz2) = 76592096 bytes
-SHA1 (openoffice-2.2.0/OOo_2.2.0_src_system.tar.bz2) = 311331016cbc6112e0cf9829d6ef6782acccc01b
-RMD160 (openoffice-2.2.0/OOo_2.2.0_src_system.tar.bz2) = 90ef3a39896a15afc75094c5366f72a0a3237916
-Size (openoffice-2.2.0/OOo_2.2.0_src_system.tar.bz2) = 30976956 bytes
-SHA1 (openoffice-2.2.0/bridge.h) = c6db3e96432f27f15a753a65c6bf2e97e64f566a
-RMD160 (openoffice-2.2.0/bridge.h) = 191fb56e56df85d49651988290d20db914670951
-Size (openoffice-2.2.0/bridge.h) = 6734 bytes
+SHA1 (openoffice-2.2.1/OOo_2.2.1_src_binfilter.tar.bz2) = aa2c316e0fab13a25c07c2cfd0eafb7a50c96678
+RMD160 (openoffice-2.2.1/OOo_2.2.1_src_binfilter.tar.bz2) = a6194849bb8e2130709a7ff769a8e751a43f86c6
+Size (openoffice-2.2.1/OOo_2.2.1_src_binfilter.tar.bz2) = 7756778 bytes
+SHA1 (openoffice-2.2.1/OOo_2.2.1_src_core.tar.bz2) = dad86ea3e8ed2805986c82333cf7a12040696269
+RMD160 (openoffice-2.2.1/OOo_2.2.1_src_core.tar.bz2) = fa6775f397bf093ad5be19c28c18d179bb1057b8
+Size (openoffice-2.2.1/OOo_2.2.1_src_core.tar.bz2) = 123479583 bytes
+SHA1 (openoffice-2.2.1/OOo_2.2.1_src_l10n.tar.bz2) = f7c1592210c60313464b7f2cec88cb850578aec1
+RMD160 (openoffice-2.2.1/OOo_2.2.1_src_l10n.tar.bz2) = 58f56faab079f179348f4c64cdbe176e296345f7
+Size (openoffice-2.2.1/OOo_2.2.1_src_l10n.tar.bz2) = 76560727 bytes
+SHA1 (openoffice-2.2.1/OOo_2.2.1_src_system.tar.bz2) = 295c70a94d37b811c4ad3f437c58e564c979ad51
+RMD160 (openoffice-2.2.1/OOo_2.2.1_src_system.tar.bz2) = 0487071a7f2cb92122984e5d928b2d7b4b55b85f
+Size (openoffice-2.2.1/OOo_2.2.1_src_system.tar.bz2) = 31149966 bytes
+SHA1 (openoffice-2.2.1/bridge.h) = c6db3e96432f27f15a753a65c6bf2e97e64f566a
+RMD160 (openoffice-2.2.1/bridge.h) = 191fb56e56df85d49651988290d20db914670951
+Size (openoffice-2.2.1/bridge.h) = 6734 bytes
 SHA1 (patch-aa) = 352774b0e509f41787573594b8f8f8bbe72d6824
 SHA1 (patch-ac) = ed6d84d40c3543eed754d74a5e65caf137f31c3d
 SHA1 (patch-ad) = 10d348282a4e5e6907e4e2cd828997f4549be58c
