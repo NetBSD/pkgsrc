@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 2007/06/22 14:13:17 lkundrak Exp $
+
+Fix for CVE-2007-3316 format-string vulnerability in SAP module described
+by VideoLAN-SA-0702 advisory.  Backported from 0.8.6c.
+
+--- modules/services_discovery/sap.c.orig	2007-06-22 16:06:09.000000000 +0200
++++ modules/services_discovery/sap.c
+@@ -818,12 +818,12 @@ sap_announce_t *CreateAnnounce( services
+     if( psz_value != NULL )
+     {
+         vlc_input_item_AddInfo( &p_item->input, _("Session"),
+-                                _("Tool"), psz_value );
++                                _("Tool"), "%s", psz_value );
+     }
+     if( strcmp( p_sdp->psz_username, "-" ) )
+     {
+         vlc_input_item_AddInfo( &p_item->input, _("Session"),
+-                                _("User"), p_sdp->psz_username );
++                                _("User"), "%s", p_sdp->psz_username );
+     }
+ 
+     psz_value = GetAttribute( p_sap->p_sdp, "x-plgroup" );
