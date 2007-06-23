@@ -1,17 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2007/05/17 15:38:26 obache Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/23 04:31:55 obache Exp $
 
---- configure.orig	2007-03-11 15:31:34.000000000 +0000
+--- configure.orig	2007-03-20 08:33:35.000000000 +0000
 +++ configure
-@@ -25843,12 +25843,6 @@ echo "$as_me: error: \"SUN make does not
-         fi
+@@ -25844,8 +25844,8 @@ echo "$as_me: error: \"SUN make does not
  fi
  
--if test -n "$GCC"; then
+ if test -n "$GCC"; then
 -   CFLAGS="-O3 -Wall -Wno-deprecated"
 -   CXXFLAGS="-O3 -Wall -Wno-deprecated"
--fi
--
--
- # Check whether --with-charset was given.
- if test "${with_charset+set}" = set; then
-   withval=$with_charset; CHARSET=${withval}
++   CFLAGS="${CFLAGS} -Wall -Wno-deprecated"
++   CXXFLAGS="${CXXFLAGS} -Wall -Wno-deprecated"
+ fi
+ 
+ 
