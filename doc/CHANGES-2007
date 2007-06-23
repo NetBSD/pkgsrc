@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1440 2007/06/22 22:31:43 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1441 2007/06/23 04:35:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2663,3 +2663,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/vlc to 0.8.5nb6 [lkundrak 2007-06-22]
 	Updated multimedia/vlc07 to 0.7.2nb17 [lkundrak 2007-06-22]
 	Updated devel/cogito to 0.18.2nb1 [dmcmahill 2007-06-22]
+	Updated textproc/mecab to 0.96 [obache 2007-06-23]
+	Updated textproc/mecab-base to 0.96 [obache 2007-06-23]
+	Updated textproc/mecab-ipadic to 2.7.0.20070610 [obache 2007-06-23]
+	Updated textproc/java-mecab to 0.96 [obache 2007-06-23]
+	Updated textproc/p5-mecab to 0.96 [obache 2007-06-23]
+	Updated textproc/py-mecab to 0.96 [obache 2007-06-23]
+	Updated textproc/ruby-mecab to 0.96 [obache 2007-06-23]
