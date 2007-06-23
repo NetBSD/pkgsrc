@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/17 15:38:26 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/23 04:31:55 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -37,6 +37,12 @@ SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
 
 PTHREAD_AUTO_VARS=	yes
+
+# XXX: avoid compiler error with -O2.
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc*)
+BUILDLINK_TRANSFORM+=	rename:-O2:-O3
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
