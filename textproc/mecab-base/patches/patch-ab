@@ -1,19 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2007/05/17 15:38:26 obache Exp $
+$NetBSD: patch-ab,v 1.2 2007/06/23 04:31:55 obache Exp $
 
---- configure.in.orig	2007-03-07 14:05:27.000000000 +0000
+--- configure.in.orig	2007-03-20 08:33:22.000000000 +0000
 +++ configure.in
-@@ -94,14 +94,6 @@ else
+@@ -97,8 +97,8 @@ dnl
+ dnl check gcc
+ dnl
+ if test -n "$GCC"; then
+-   CFLAGS="-O3 -Wall -Wno-deprecated"
+-   CXXFLAGS="-O3 -Wall -Wno-deprecated"
++   CFLAGS="$CFLAGS -Wall -Wno-deprecated"
++   CXXFLAGS="$CXXFLAGS -Wall -Wno-deprecated"
  fi
  
  dnl
--dnl check gcc
--dnl
--if test -n "$GCC"; then
--   CFLAGS="-O3 -Wall -Wno-deprecated"
--   CXXFLAGS="-O3 -Wall -Wno-deprecated"
--fi
--
--dnl
- dnl check Char Code
- dnl 
- AC_ARG_WITH(
