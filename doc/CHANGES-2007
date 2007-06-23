@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1441 2007/06/23 04:35:28 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1442 2007/06/23 12:41:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2622,6 +2622,20 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/ArX [wiz 2007-06-15]
 	Updated mail/prayer to 1.0.18 [wiz 2007-06-15]
 	Updated print/latex-mk to 1.9 [dmcmahill 2007-06-15]
+	Updated graphics/libexif to 0.6.16 [drochner 2007-06-15]
+	Updated graphics/exif to 0.6.15 [drochner 2007-06-15]
+	Updated graphics/cairo to 1.4.8 [drochner 2007-06-15]
+	Updated x11/gtk2 to 2.10.13 [drochner 2007-06-15]
+	Updated devel/libwnck to 2.18.2 [drochner 2007-06-15]
+	Updated x11/libgnomekbd to 2.18.2 [drochner 2007-06-15]
+	Updated x11/vte to 0.16.5 [drochner 2007-06-15]
+	Updated x11/zenity to 2.18.2 [drochner 2007-06-15]
+	Updated www/liferea to 1.2.16b [drochner 2007-06-15]
+	Updated databases/gramps2 to 2.2.8 [drochner 2007-06-15]
+	Updated graphics/eog2 to 2.18.2 [drochner 2007-06-15]
+	Updated graphics/gthumb to 2.10.3 [drochner 2007-06-15]
+	Updated multimedia/xine-lib to 1.1.7 [drochner 2007-06-15]
+	Updated multimedia/totem to 2.18.2 [drochner 2007-06-15]
 	Updated devel/meld to 1.1.5.1 [obache 2007-06-16]
 	Updated emulators/wine to 0.9.39 [adam 2007-06-16]
 	Updated devel/psvn to 25241 [taca 2007-06-16]
@@ -2647,6 +2661,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/postgresql-autodoc to 1.30 [mjl 2007-06-19]
 	Added pkgtools/pbulk version 0.1 [root 2007-06-19]
 	Updated shells/mksh to 29.6 [joerg 2007-06-19]
+	Updated audio/exaile to 0.2.9nb1 [drochner 2007-06-19]
 	Updated sysutils/apcupsd to 3.14.1nb2 [bouyer 2007-06-20]
 	Updated sysutils/install-sh to 20070620 [jlam 2007-06-20]
 	Added wm/obpager version 1.8 [tnn 2007-06-20]
