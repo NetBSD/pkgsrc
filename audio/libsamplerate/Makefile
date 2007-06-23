@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/13 07:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/23 08:06:00 minskim Exp $
 #
 
 DISTNAME=	libsamplerate-0.1.2
@@ -14,6 +14,10 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+= ${WRKSRC}/samplerate.pc.in
+
+.if exists(/Developer/Headers/FlatCarbon)
+BUILDLINK_PASSTHRU_DIRS+=		/Developer/Headers/FlatCarbon
+.endif
 
 TEST_TARGET=	check
 
