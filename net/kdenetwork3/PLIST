@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/05/23 13:10:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/06/23 21:41:23 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1726,13 +1726,13 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kopete/styles/Gaim/Contents
 @dirrm share/kde/apps/kopete/styles/Gaim
 @dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/images
+@dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/Variants
 @dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/Outgoing
 @dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/Incoming
 @dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources
 @dirrm share/kde/apps/kopete/styles/Clear/Contents
 @dirrm share/kde/apps/kopete/styles/Clear
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/images
-@dirrm share/kde/apps/kopete/styles/Clear/Contents/Resources/Variants
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/Outgoing
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources/Incoming
 @dirrm share/kde/apps/kopete/styles/Clean/Contents/Resources
