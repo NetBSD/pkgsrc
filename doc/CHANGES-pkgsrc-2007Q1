@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.42 2007/06/14 23:52:41 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.43 2007/06/23 22:38:31 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -89,3 +89,5 @@ Pullup ticket 2113 - requested by adrianp
 security update for php5
 Pullup ticket 2114 - requested by adrianp
 security update for file
+Pullup ticket 2115 - requested by lkundrak
+security update for apache-tomcat55
