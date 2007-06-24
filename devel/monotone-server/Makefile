@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2007/05/13 10:45:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2007/06/24 20:55:27 jmmv Exp $
 #
 
 DISTNAME=	monotone-server-0.35
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,10 +27,7 @@ OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/keys \
 BUILD_DEFS+=		MONOTONE_GROUP MONOTONE_USER
 
 EXAMPLEDIR=		${PREFIX}/share/examples/monotone-server
-CONF_FILES_PERMS=	${EXAMPLEDIR}/branches.conf \
-			${PKG_SYSCONFDIR}/branches.conf \
-			${MONOTONE_USER} ${MONOTONE_GROUP} 600
-CONF_FILES_PERMS+=	${EXAMPLEDIR}/hooks.conf \
+CONF_FILES_PERMS=	${EXAMPLEDIR}/hooks.conf \
 			${PKG_SYSCONFDIR}/hooks.conf \
 			${MONOTONE_USER} ${MONOTONE_GROUP} 600
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/read-permissions \
@@ -65,7 +63,7 @@ FILES_SUBST+=		MONOTONE_USER=${MONOTONE_USER:Q}
 INSTALLATION_DIRS=	sbin
 
 do-extract:
-.for f in branches.conf hooks.conf monotone-server-init.sh read-permissions \
+.for f in hooks.conf monotone-server-init.sh read-permissions \
           write-permissions
 	${CP} ${FILESDIR}/${f} ${WRKSRC}
 .endfor
@@ -74,7 +72,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/monotone-server-init.sh \
 		${PREFIX}/sbin/monotone-server-init
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/branches.conf ${EXAMPLEDIR}/branches.conf
 	${INSTALL_DATA} ${WRKSRC}/hooks.conf ${EXAMPLEDIR}/hooks.conf
 	${INSTALL_DATA} ${WRKSRC}/read-permissions \
 		${EXAMPLEDIR}/read-permissions

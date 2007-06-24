@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: monotone-server-init.sh,v 1.3 2006/02/21 16:09:16 jmmv Exp $
+# $NetBSD: monotone-server-init.sh,v 1.4 2007/06/24 20:55:29 jmmv Exp $
 #
 
 progname=$(basename $0)
@@ -81,7 +81,7 @@ cd ${home}
 
 echo "Initializing database: \`${home}/monotone.db'"
 su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
-    --db=monotone.db db init"
+    --db=monotone.db --keydir=${PKG_SYSCONFDIR}/keys db init"
 
 cat <<EOF
 
@@ -93,17 +93,11 @@ you can forget about it (assuming you have a safe copy).
 EOF
 
 su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
-    --db=monotone.db genkey ${keyname}"
-su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
-    --db=monotone.db pubkey ${keyname} >${keyname}-public"
-su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
-    --db=monotone.db privkey ${keyname} >${keyname}-private"
+    --db=monotone.db --keydir=${PKG_SYSCONFDIR}/keys \
+    genkey ${keyname}"
 
-chown ${MONOTONE_USER}:${MONOTONE_GROUP} monotone.db \
-      ${keyname}-public ${keyname}-private
+chown ${MONOTONE_USER}:${MONOTONE_GROUP} monotone.db
 chmod 600 monotone.db
-chmod 444 ${keyname}-public
-chmod 400 ${keyname}-private
 
 cat <<EOF
 
@@ -114,13 +108,17 @@ It contains the key pair that authenticates your server:
 
     ${PKG_SYSCONFDIR}/keys/${keyname}
 
-At last, edit the following files to finish the configuration of your
-new server:
+Then, edit the following files to finish the configuration of your new
+server:
 
-    ${PKG_SYSCONFDIR}/branches.conf
     ${PKG_SYSCONFDIR}/hooks.conf
     ${PKG_SYSCONFDIR}/read-permissions
     ${PKG_SYSCONFDIR}/write-permissions
+
+At last, do not forget to register the public keys for the users with
+write access by using a command similar to:
+
+    monotone --db=${home}/monotone.db read < file-with-public-keys
 
 Once finished, use the installed rc.d script (monotone) to start the
 dedicated server process.
