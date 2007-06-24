@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.18 2007/01/10 12:54:36 abs Exp $
+$NetBSD: patch-aa,v 1.19 2007/06/24 10:55:41 abs Exp $
 
---- Local/Makefile.pkgsrc.orig	2007-01-10 12:40:16.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2007-06-24 11:43:28.000000000 +0100
 +++ Local/Makefile.pkgsrc
 @@ -100,7 +100,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -106,8 +106,8 @@ $NetBSD: patch-aa,v 1.18 2007/01/10 12:54:36 abs Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1118,3 +1118,10 @@ TMPDIR="/tmp"
- # SUPPORT_MOVE_FROZEN_MESSAGES=yes
+@@ -1134,3 +1134,10 @@ TMPDIR="/tmp"
+ # ENABLE_DISABLE_FSYNC=yes
  
  # End of EDITME for Exim 4.
 +
