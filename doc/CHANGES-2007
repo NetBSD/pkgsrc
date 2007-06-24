@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1444 2007/06/24 07:52:47 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1445 2007/06/24 10:56:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2687,3 +2687,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-mecab to 0.96 [obache 2007-06-23]
 	Updated editors/tamago to 20020909nb2 [taca 2007-06-24]
 	Updated comms/asterisk to 1.2.19 [mjl 2007-06-24]
+	Updated mail/exim to 4.67 [abs 2007-06-24]
