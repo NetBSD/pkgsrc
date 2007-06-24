@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1442 2007/06/23 12:41:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1443 2007/06/24 05:35:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2685,3 +2685,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-mecab to 0.96 [obache 2007-06-23]
 	Updated textproc/py-mecab to 0.96 [obache 2007-06-23]
 	Updated textproc/ruby-mecab to 0.96 [obache 2007-06-23]
+	Updated editors/tamago to 20020909nb2 [taca 2007-06-24]
