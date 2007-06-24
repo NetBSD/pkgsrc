@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: monotone.sh,v 1.4 2006/04/10 17:46:31 jmmv Exp $
+# $NetBSD: monotone.sh,v 1.5 2007/06/24 20:55:30 jmmv Exp $
 #
 # PROVIDE: monotone
 # REQUIRE: DAEMON
@@ -9,10 +9,6 @@
 
 if [ -f "@PKG_SYSCONFDIR@/rc.conf" ]; then
     . @PKG_SYSCONFDIR@/rc.conf
-fi
-
-if [ -f "@PKG_SYSCONFDIR@/branches.conf" ]; then
-    monotone_branches=$(cat @PKG_SYSCONFDIR@/branches.conf | grep -v '^#')
 fi
 
 : ${monotone_group=@MONOTONE_GROUP@}
@@ -25,12 +21,12 @@ command="@PREFIX@/bin/mtn"
 command_args="--norc \
               --confdir=@PKG_SYSCONFDIR@ \
               --db=${monotone_home}/monotone.db \
+              --keydir=@PKG_SYSCONFDIR@/keys \
               --rcfile=@PKG_SYSCONFDIR@/hooks.conf \
-              serve ${monotone_branches} \
+              serve \
               >>${monotone_home}/monotone.log 2>&1 &"
 required_dirs="@PKG_SYSCONFDIR@/keys"
-required_files="@PKG_SYSCONFDIR@/branches.conf \
-                @PKG_SYSCONFDIR@/hooks.conf \
+required_files="@PKG_SYSCONFDIR@/hooks.conf \
                 @PKG_SYSCONFDIR@/read-permissions \
                 @PKG_SYSCONFDIR@/write-permissions \
                 ${monotone_home}/monotone.db"
