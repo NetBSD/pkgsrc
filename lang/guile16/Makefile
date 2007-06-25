@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/06/05 23:32:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/25 21:36:18 dmcmahill Exp $
 
 DISTNAME=		guile-1.6.8
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		guile16-1.6.8
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
@@ -22,7 +22,15 @@ TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
 OWN_DIRS=		${PREFIX}/share/guile/site
 
-BUILDLINK_PASSTHRU_DIRS=	${PREFIX}/guile/1.6
+BUILDLINK_PASSTHRU_DIRS+=	${GNU_CONFIGURE_PREFIX}
+
+# Without doing this, guile is unable to load its shared modules on
+# at least SunOS-5.9/sparc and maybe others.
+# Loading of modules can be verified by running
+# ${GNU_CONFIGURE_PREFIX}/bin/guile
+# and at the guile> prompt:
+# (load-extension "libguile-srfi-srfi-13-14-v-1" "scm_init_srfi_13")
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${GNU_CONFIGURE_PREFIX}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
