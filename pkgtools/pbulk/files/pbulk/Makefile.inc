@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.inc,v 1.1.1.1 2007/06/19 19:49:55 joerg Exp $
+# $NetBSD: Makefile.inc,v 1.2 2007/06/25 21:38:43 joerg Exp $
 
 BINDIR?=	${PREFIX}/bin
 
@@ -16,3 +16,5 @@ CPPFLAGS+=
 LDADD+=		-levent
 .endif
 .endif
+
+LDADD+=		-lnbcompat

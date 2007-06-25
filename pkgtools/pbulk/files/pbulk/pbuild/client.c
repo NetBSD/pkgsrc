@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.1.1.1 2007/06/19 19:49:56 joerg Exp $ */
+/* $NetBSD: client.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,14 +31,18 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+
 #include <sys/socket.h>
-#include <err.h>
+#include <nbcompat/err.h>
 #include <errno.h>
+#ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#endif
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 
 #include <arpa/inet.h>
 
@@ -60,7 +64,7 @@ client_mode(const char *client_port)
 	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (fd == -1)
 		err(1, "Could not create socket");	
-	if (connect(fd, (struct sockaddr *)&dst, dst.sin_len) == -1)
+	if (connect(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
 		err(1, "Could not connect socket");
 
 loop:

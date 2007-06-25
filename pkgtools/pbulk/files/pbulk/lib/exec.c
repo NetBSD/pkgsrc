@@ -1,4 +1,4 @@
-/* $NetBSD: exec.c,v 1.1.1.1 2007/06/19 19:49:58 joerg Exp $ */
+/* $NetBSD: exec.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,10 +31,14 @@
  * SUCH DAMAGE.
  */
 
-#include <err.h>
+#include <nbcompat.h>
+
+#include <nbcompat/err.h>
+#ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
-#include <string.h>
-#include <unistd.h>
+#endif
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 
 #include "pbulk.h"
 

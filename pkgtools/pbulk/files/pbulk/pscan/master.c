@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.2 2007/06/19 21:06:05 joerg Exp $ */
+/* $NetBSD: master.c,v 1.3 2007/06/25 21:38:46 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,18 +31,23 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/types.h>
+#include <nbcompat.h>
+
+#include <nbcompat/types.h>
+#include <nbcompat/queue.h>
 #include <sys/ioctl.h>
-#include <sys/queue.h>
+#ifdef __sun
+#include <sys/filio.h>
+#endif
 #include <sys/socket.h>
-#include <sys/time.h>
+#include <nbcompat/time.h>
 #include <sys/wait.h>
-#include <err.h>
+#include <nbcompat/err.h>
 #include <event.h>
 #include <signal.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/string.h>
 
 #include "pbulk.h"
 #include "pscan.h"
@@ -173,15 +178,14 @@ listen_handler(int sock, short event, void *arg)
 	struct scan_peer *peer;
 	struct sockaddr_in src;
 	socklen_t src_len;
-	int fd, ioctl_arg;
+	int fd;
 
 	src_len = sizeof(src);
 	if ((fd = accept(sock, (struct sockaddr *)&src, &src_len)) == -1) {
 		warn("Could not accept connection");
 		return;
 	}
-	ioctl_arg = 1;
-	if (ioctl(fd, FIONBIO, &ioctl_arg) == -1) {
+	if (set_nonblocking(fd) == -1) {
 		(void)close(fd);
 		warn("Could not set non-blocking IO");
 		return;
@@ -210,9 +214,11 @@ master_mode(const char *master_port, const char *start_script)
 	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (fd == -1)
 		err(1, "Could not create socket");	
+#ifdef FIOCLEX
 	if (ioctl(fd, FIOCLEX, NULL) == -1)
 		err(1, "Could not set close-on-exec flag");
-	if (bind(fd, (struct sockaddr *)&dst, dst.sin_len) == -1)
+#endif
+	if (bind(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
 		err(1, "Could not bind socket");
 	if (listen(fd, 5) == -1)
 		err(1, "Could not listen on socket");
