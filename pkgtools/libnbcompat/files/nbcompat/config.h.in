@@ -6,6 +6,9 @@
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
 
+/* Define to 1 if you have the `snprintf' function. */
+#undef HAVE_ASPRINTF
+
 /* Define to 1 if you have the <assert.h> header file. */
 #undef HAVE_ASSERT_H
 

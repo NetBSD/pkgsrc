@@ -1,4 +1,4 @@
-/*	$NetBSD: queue.h,v 1.2 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: queue.h,v 1.3 2007/06/25 21:35:05 joerg Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993
@@ -66,6 +66,32 @@ struct {								\
 }
 #endif
 
+#ifndef LIST_INIT
+#define	LIST_INIT(head) do {						\
+	(head)->lh_first = NULL;					\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef LIST_INSERT_AFTER
+#define	LIST_INSERT_AFTER(listelm, elm, field) do {			\
+	if (((elm)->field.le_next = (listelm)->field.le_next) != NULL)	\
+		(listelm)->field.le_next->field.le_prev =		\
+		    &(elm)->field.le_next;				\
+	(listelm)->field.le_next = (elm);				\
+	(elm)->field.le_prev = &(listelm)->field.le_next;		\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef LIST_INSERT_BEFORE
+#define	LIST_INSERT_BEFORE(listelm, elm, field) do {			\
+	QUEUEDEBUG_LIST_OP((listelm), field)				\
+	(elm)->field.le_prev = (listelm)->field.le_prev;		\
+	(elm)->field.le_next = (listelm);				\
+	*(listelm)->field.le_prev = (elm);				\
+	(listelm)->field.le_prev = &(elm)->field.le_next;		\
+} while (/*CONSTCOND*/0)
+#endif
+
 #ifndef LIST_INSERT_HEAD
 #define LIST_INSERT_HEAD(head, elm, field) do {				\
 	if (((elm)->field.le_next = (head)->lh_first) != NULL)		\
@@ -75,10 +101,20 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif
 
-#ifndef LIST_INIT
-#define	LIST_INIT(head) do {						\
-	(head)->lh_first = NULL;					\
+#ifndef LIST_REMOVE
+#define	LIST_REMOVE(elm, field) do {					\
+	if ((elm)->field.le_next != NULL)				\
+		(elm)->field.le_next->field.le_prev = 			\
+		    (elm)->field.le_prev;				\
+	*(elm)->field.le_prev = (elm)->field.le_next;			\
 } while (/*CONSTCOND*/0)
+#endif
+
+#ifndef LIST_FOREACH
+#define	LIST_FOREACH(var, head, field)					\
+	for ((var) = ((head)->lh_first);				\
+		(var);							\
+		(var) = ((var)->field.le_next))
 #endif
 
 #ifndef LIST_EMPTY
@@ -89,6 +125,90 @@ struct {								\
 #endif
 #ifndef LIST_NEXT
 #define	LIST_NEXT(elm, field)		((elm)->field.le_next)
+#endif
+
+#ifndef SLIST_HEAD
+#define	SLIST_HEAD(name, type)						\
+struct name {								\
+	struct type *slh_first;	/* first element */			\
+}
+#endif
+
+#ifndef SLIST_HEAD_INITIALIZER
+#define	SLIST_HEAD_INITIALIZER(head)					\
+	{ NULL }
+#endif
+
+#ifndef SLIST_ENTRY
+#define	SLIST_ENTRY(type)						\
+struct {								\
+	struct type *sle_next;	/* next element */			\
+}
+#endif
+
+#ifndef SLIST_INIT
+#define	SLIST_INIT(head) do {						\
+	(head)->slh_first = NULL;					\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_INSERT_AFTER
+#define	SLIST_INSERT_AFTER(slistelm, elm, field) do {			\
+	(elm)->field.sle_next = (slistelm)->field.sle_next;		\
+	(slistelm)->field.sle_next = (elm);				\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_INSERT_HEAD
+#define	SLIST_INSERT_HEAD(head, elm, field) do {			\
+	(elm)->field.sle_next = (head)->slh_first;			\
+	(head)->slh_first = (elm);					\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_REMOVE_HEAD
+#define	SLIST_REMOVE_HEAD(head, field) do {				\
+	(head)->slh_first = (head)->slh_first->field.sle_next;		\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_REMOVE
+#define	SLIST_REMOVE(head, elm, type, field) do {			\
+	if ((head)->slh_first == (elm)) {				\
+		SLIST_REMOVE_HEAD((head), field);			\
+	}								\
+	else {								\
+		struct type *curelm = (head)->slh_first;		\
+		while(curelm->field.sle_next != (elm))			\
+			curelm = curelm->field.sle_next;		\
+		curelm->field.sle_next =				\
+		    curelm->field.sle_next->field.sle_next;		\
+	}								\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_REMOVE_AFTER
+#define	SLIST_REMOVE_AFTER(slistelm, field) do {			\
+	(slistelm)->field.sle_next =					\
+	    SLIST_NEXT(SLIST_NEXT((slistelm), field), field);		\
+} while (/*CONSTCOND*/0)
+#endif
+
+#ifndef SLIST_FOREACH
+#define	SLIST_FOREACH(var, head, field)					\
+	for((var) = (head)->slh_first; (var); (var) = (var)->field.sle_next)
+#endif
+
+#ifndef SLIST_EMPTY
+#define	SLIST_EMPTY(head)	((head)->slh_first == NULL)
+#endif
+
+#ifndef SLIST_FIRST
+#define	SLIST_FIRST(head)	((head)->slh_first)
+#endif
+
+#ifndef SLIST_NEXT
+#define	SLIST_NEXT(elm, field)	((elm)->field.sle_next)
 #endif
 
 #ifndef TAILQ_HEAD
@@ -140,6 +260,23 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif
 
+#define	TAILQ_INSERT_AFTER(head, listelm, elm, field) do {		\
+	if (((elm)->field.tqe_next = (listelm)->field.tqe_next) != NULL)\
+		(elm)->field.tqe_next->field.tqe_prev = 		\
+		    &(elm)->field.tqe_next;				\
+	else								\
+		(head)->tqh_last = &(elm)->field.tqe_next;		\
+	(listelm)->field.tqe_next = (elm);				\
+	(elm)->field.tqe_prev = &(listelm)->field.tqe_next;		\
+} while (/*CONSTCOND*/0)
+
+#define	TAILQ_INSERT_BEFORE(listelm, elm, field) do {			\
+	(elm)->field.tqe_prev = (listelm)->field.tqe_prev;		\
+	(elm)->field.tqe_next = (listelm);				\
+	*(listelm)->field.tqe_prev = (elm);				\
+	(listelm)->field.tqe_prev = &(elm)->field.tqe_next;		\
+} while (/*CONSTCOND*/0)
+
 #ifndef TAILQ_REMOVE
 #define TAILQ_REMOVE(head, elm, field) do {				\
 	if (((elm)->field.tqe_next) != NULL)				\
@@ -151,10 +288,20 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif
 
-#ifndef TAILQ_HEAD_INITIALIZER
-#define TAILQ_HEAD_INITIALIZER(head)					\
-	{ NULL, &(head).tqh_first }
+#ifndef TAILQ_FOREACH
+#define TAILQ_FOREACH(var, head, field)					\
+	for ((var) = ((head)->tqh_first);				\
+		(var);							\
+		(var) = ((var)->field.tqe_next))
 #endif
+
+#ifndef TAILQ_FOREACH_REVERSE
+#define	TAILQ_FOREACH_REVERSE(var, head, headname, field)		\
+	for ((var) = (*(((struct headname *)((head)->tqh_last))->tqh_last));	\
+		(var);							\
+		(var) = (*(((struct headname *)((var)->field.tqe_prev))->tqh_last)))
+#endif
+
 #ifndef TAILQ_EMPTY
 #define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
 #endif
@@ -163,12 +310,6 @@ struct {								\
 #endif
 #ifndef TAILQ_NEXT
 #define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
-#endif
-#ifndef TAILQ_FOREACH
-#define TAILQ_FOREACH(var, head, field)					\
-	for ((var) = ((head)->tqh_first);				\
-		(var);							\
-		(var) = ((var)->field.tqe_next))
 #endif
 
 #endif /* !_NBCOMPAT_QUEUE_H */
