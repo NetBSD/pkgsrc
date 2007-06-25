@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.h,v 1.1.1.1 2007/06/19 19:49:57 joerg Exp $ */
+/* $NetBSD: pscan.h,v 1.2 2007/06/25 21:38:46 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,7 +31,9 @@
  * SUCH DAMAGE.
  */
 
+#ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
+#endif
 
 enum job_state {
 	JOB_OPEN,

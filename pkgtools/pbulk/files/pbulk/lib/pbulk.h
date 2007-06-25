@@ -1,4 +1,4 @@
-/* $NetBSD: pbulk.h,v 1.1.1.1 2007/06/19 19:49:58 joerg Exp $ */
+/* $NetBSD: pbulk.h,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -32,7 +32,7 @@
  */
 
 #include <netinet/in.h>
-#include <unistd.h>
+#include <nbcompat/unistd.h>
 
 #if defined(__GNUC__) && __GNUC__ >= 2
 char		*xasprintf(const char *, ...)
@@ -40,6 +40,8 @@ char		*xasprintf(const char *, ...)
 #else
 char		*xasprintf(const char *, ...);
 #endif
+
+int		 set_nonblocking(int);
 
 void		 deferred_read(int fd, void *, size_t, void *,
 			       void (*)(void *), void (*)(void *));

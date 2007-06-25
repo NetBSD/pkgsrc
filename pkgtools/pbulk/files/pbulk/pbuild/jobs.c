@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.1.1.1 2007/06/19 19:49:56 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,16 +31,18 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/stat.h>
-#include <err.h>
+#include <nbcompat.h>
+
+#include <nbcompat/stat.h>
+#include <nbcompat/err.h>
 #include <fcntl.h>
 #include <limits.h>
 #include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/time.h>
+#include <nbcompat/unistd.h>
 
 #include "pbulk.h"
 #include "pbuild.h"

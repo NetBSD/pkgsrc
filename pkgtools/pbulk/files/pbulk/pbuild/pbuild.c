@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.1.1.1 2007/06/19 19:49:56 joerg Exp $ */
+/* $NetBSD: pbuild.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,14 +31,16 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+
 #include <sys/wait.h>
-#include <err.h>
+#include <nbcompat/err.h>
 #include <errno.h>
 #include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/time.h>
 
 #include "pbulk.h"
 #include "pbuild.h"

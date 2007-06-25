@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.2 2007/06/19 20:42:49 joerg Exp $ */
+/* $NetBSD: event.c,v 1.3 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,12 +31,17 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/types.h>
+#include <nbcompat.h>
+
+#include <nbcompat/types.h>
 #include <sys/ioctl.h>
-#include <sys/time.h>
+#ifdef __sun
+#include <sys/filio.h>
+#endif
+#include <nbcompat/time.h>
 #include <event.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/unistd.h>
 
 #include "pbulk.h"
 
@@ -144,4 +149,15 @@ deferred_write(int fd, const void *buf, size_t buf_len, void *arg,
 	event_set(&data->ev, data->fd, EV_WRITE,
 	    deferred_write_handler, data);
 	event_add(&data->ev, NULL);
+}
+
+int
+set_nonblocking(int fd)
+{
+	int ioctl_arg;
+
+	ioctl_arg = 1;
+	if (ioctl(fd, FIONBIO, &ioctl_arg) == -1)
+		return -1;
+	return 0;
 }

@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.1.1.1 2007/06/19 19:49:57 joerg Exp $ */
+/* $NetBSD: presolve.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,16 +31,18 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/queue.h>
+#include <nbcompat.h>
+
+#include <nbcompat/queue.h>
 #include <sys/stat.h>
-#include <ctype.h>
-#include <err.h>
+#include <nbcompat/ctype.h>
+#include <nbcompat/err.h>
 #include <fcntl.h>
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <nbcompat/limits.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 
 #include "pbulk.h"
 

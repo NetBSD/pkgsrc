@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.1.1.1 2007/06/19 19:49:56 joerg Exp $ */
+/* $NetBSD: pbuild.h,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  */
 
-#include <sys/queue.h>
+#include <nbcompat/queue.h>
 #include <inttypes.h>
 
 enum job_state {

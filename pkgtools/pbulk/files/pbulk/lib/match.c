@@ -1,4 +1,4 @@
-/* $NetBSD: match.c,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $ */
+/* $NetBSD: match.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -28,13 +28,15 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <ctype.h>
-#include <err.h>
-#include <fnmatch.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include <nbcompat.h>
+
+#include <nbcompat/ctype.h>
+#include <nbcompat/err.h>
+#include <nbcompat/fnmatch.h>
+#include <nbcompat/limits.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/string.h>
 
 #include "pbulk.h"
 

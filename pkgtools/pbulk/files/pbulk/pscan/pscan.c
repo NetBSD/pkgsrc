@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.1.1.1 2007/06/19 19:49:57 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.2 2007/06/25 21:38:46 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,16 +31,19 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+
 #include <sys/uio.h>
-#include <err.h>
+#include <nbcompat/err.h>
+#ifdef HAVE_INTTYPES_H
 #include <inttypes.h>
-#include <limits.h>
+#endif
+#include <nbcompat/limits.h>
 #include <signal.h>
-#include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
 
 #include "pbulk.h"
 #include "pscan.h"
