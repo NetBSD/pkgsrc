@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/05/09 13:47:01 obache Exp $
+# $NetBSD: Makefile,v 1.37 2007/06/25 21:18:37 rillig Exp $
 
 DISTNAME=	ghc-6.6.1
 CATEGORIES=	lang
@@ -18,6 +18,9 @@ SITES.ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
 ONLY_FOR_PLATFORM= FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
 
 CHECK_PORTABILITY_SKIP=	distrib/prep-bin-dist-mingw
+
+# += in a shell script, but in embedded AWK code, so it's ok.
+CHECK_PORTABILITY_SKIP+=	libraries/base/cbits/ubconfc
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/ghc-6.4.2/ghc/compiler/ghc-inplace
