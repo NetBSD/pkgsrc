@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2007/06/20 13:31:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/25 21:38:43 joerg Exp $
 
-DISTNAME=	pbulk-0.1
+DISTNAME=	pbulk-0.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -55,5 +55,11 @@ USE_BUILTIN.libevent = no
 .  endif
 .endif
 
+.if ${OPSYS} == "SunOS"
+LDADD+=		-lsocket -lresolv
+MAKE_ENV+=	LDADD=${LDADD:Q}
+.endif
+
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
