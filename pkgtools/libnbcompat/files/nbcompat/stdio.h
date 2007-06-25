@@ -1,4 +1,4 @@
-/*	$NetBSD: stdio.h,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: stdio.h,v 1.2 2007/06/25 21:35:06 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -39,6 +39,10 @@
 #ifndef _NBCOMPAT_STDIO_H_
 #define _NBCOMPAT_STDIO_H_
 
+#if HAVE_STDARG_H
+# include <stdarg.h>
+#endif
+
 #if HAVE_STDIO_H
 # include <stdio.h>
 #endif
@@ -61,6 +65,12 @@ char	*fgetln(FILE *, size_t *);
 
 #if !HAVE_SNPRINTF
 int	snprintf(char *, size_t, const char *, ...);
+int	vsnprintf(char *, size_t, const char *, va_list);
+#endif
+
+#if !HAVE_ASPRINTF
+int	asprintf(char **, const char *, ...);
+int	vasprintf(char **, const char *, va_list);
 #endif
 
 #endif	/* !_NBCOMPAT_STDIO_H_ */
