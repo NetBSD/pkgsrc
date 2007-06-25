@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.54 2007/05/07 21:41:34 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.55 2007/06/25 21:35:05 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20040911], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20070622], [grant@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -216,7 +216,7 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv isblank \
+AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
 	lchflags lchmod lchown lutimes mkdtemp mkstemp setenv setgroupent \
 	setpassent setprogname snprintf statvfs strdup strerror strlcat \
 	strlcpy strmode strsep strtoll unsetenv usleep utimes warn
