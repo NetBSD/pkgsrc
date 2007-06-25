@@ -1,4 +1,4 @@
-/* $NetBSD: netaddr.c,v 1.1.1.1 2007/06/19 19:49:58 joerg Exp $ */
+/* $NetBSD: netaddr.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -31,12 +31,14 @@
  * SUCH DAMAGE.
  */
 
+#include <nbcompat.h>
+
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <errno.h>
 #include <netinet/in.h>
-#include <stdlib.h>
-#include <string.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
 
 #include "pbulk.h"
 
@@ -68,7 +70,9 @@ parse_sockaddr_in(const char *str, struct sockaddr_in *addr)
 		return -1;
 	addr->sin_port = htons((in_port_t)tmp);
 	addr->sin_addr = in;
+#if !defined(__sun)
 	addr->sin_len = sizeof(*addr);
+#endif
 	addr->sin_family = AF_INET;
 	return 0;
 }
