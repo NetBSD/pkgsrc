@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/12/17 19:21:42 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.47 2007/06/25 13:05:56 tron Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	7
