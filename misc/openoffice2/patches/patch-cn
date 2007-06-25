@@ -1,0 +1,17 @@
+$NetBSD: patch-cn,v 1.1.2.2 2007/06/25 15:37:47 salo Exp $
+
+--- desktop/scripts/soffice.sh.orig	2007-06-10 11:44:31.000000000 +0900
++++ desktop/scripts/soffice.sh	2007-06-10 11:45:05.000000000 +0900
+@@ -55,6 +55,12 @@
+     export JITC_PROCESSOR_TYPE
+ fi
+ 
++# XXX: Ignore "unlocking unlocked mutex" error.
++if [ $sd_platform = "NetBSD" ]; then
++    PTHREAD_DIAGASSERT=AEL
++    export PTHREAD_DIAGASSERT
++fi
++
+ # set -x
+ 
+ # resolve installation directory

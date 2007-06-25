@@ -1,9 +1,8 @@
-$NetBSD: patch-ch,v 1.1 2007/04/05 23:26:13 hira Exp $
+$NetBSD: patch-ch,v 1.1.2.1 2007/06/25 15:37:46 salo Exp $
 
---- solenv/inc/unxbsdi3.mk.orig	2007-04-05 10:28:46.000000000 +0900
-+++ solenv/inc/unxbsdi3.mk	2007-04-05 10:28:43.000000000 +0900
-@@ -0,0 +1,183 @@
-+# $NetBSD: patch-ch,v 1.1 2007/04/05 23:26:13 hira Exp $
+--- solenv/inc/unxbsdi3.mk.orig	2007-04-21 03:03:25.000000000 +0900
++++ solenv/inc/unxbsdi3.mk	2007-04-21 03:21:29.000000000 +0900
+@@ -0,0 +1,179 @@
 +#
 +# mk file for NetBSD/i386 with gcc 3.4.x and higher.
 +#
@@ -144,8 +143,6 @@ $NetBSD: patch-ch,v 1.1 2007/04/05 23:26:13 hira Exp $
 +STDSLOCUI=
 +STDOBJVCL=$(L)$/salmain.o
 +
-+X11_LDFLAGS=@X11_LDFLAGS@
-+
 +# libraries for linking applications
 +STDLIBCUIST=-lm -lc -lgcc_s -lstdc++
 +STDLIBGUIMT=${X11_LDFLAGS} -lX11 -lpthread -lm -lc -lgcc_s -lstdc++
@@ -185,4 +182,3 @@ $NetBSD: patch-ch,v 1.1 2007/04/05 23:26:13 hira Exp $
 +DLLPOSTFIX=bi
 +DLLPRE=lib
 +DLLPOST=.so
-+
