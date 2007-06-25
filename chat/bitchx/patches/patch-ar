@@ -1,0 +1,21 @@
+$NetBSD: patch-ar,v 1.1.2.2 2007/06/25 18:17:25 ghen Exp $
+
+This patch fixes CVE-2007-3360 flaw, where a malicious server could
+inject a hook possibly executiong malicious code and direct client
+into executing it by using bogus hook index.
+
+--- source/hook.c.orig	2007-06-25 15:41:37.000000000 +0200
++++ source/hook.c	2007-06-25 15:41:39.000000000 +0200
+@@ -837,6 +837,12 @@ int 	BX_do_hook (int which, char *format
+ #ifdef WANT_TCL
+ 	int		tcl_ret = 0;
+ #endif	
++
++	/* CVE-2007-3360 boundary check */
++	if (which >= sizeof(hook_functions)/sizeof(hook_functions[0])) {
++		return NO_ACTION_TAKEN;
++	}
++
+ 	/*
+ 	 * Figure out where the hooks are for the event type were asserting
+ 	 */
