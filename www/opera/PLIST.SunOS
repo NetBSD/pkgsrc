@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.5 2007/01/23 02:51:31 dmcmahill Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.6 2007/06/25 21:35:48 dmcmahill Exp $
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/spellcheck.so
@@ -61,15 +61,21 @@ share/opera/styles/info.css
 share/opera/styles/mime.css
 share/opera/styles/plugins.css
 share/opera/styles/user/accessibility.css
+share/opera/styles/user/altdebugger.css
+share/opera/styles/user/classid.css
 share/opera/styles/user/contrastbw.css
 share/opera/styles/user/contrastwb.css
-share/opera/styles/user/debugwithoutline.css
+share/opera/styles/user/disablebreaks.css
+share/opera/styles/user/disablefloats.css
+share/opera/styles/user/disableforms.css
+share/opera/styles/user/disablepositioning.css
 share/opera/styles/user/disabletables.css
-share/opera/styles/user/hidenonlinkimages.css
-share/opera/styles/user/imageandlinkonly.css
-share/opera/styles/user/nostalgia.css
-share/opera/styles/user/showstructure.css
-share/opera/styles/user/textonly.css
+share/opera/styles/user/outline.css
+share/opera/styles/user/structureblock.css
+share/opera/styles/user/structureinline.css
+share/opera/styles/user/structuretables.css
+share/opera/styles/user/tablelayout.css
+share/opera/styles/user/toc.css
 share/opera/styles/warning.css
 share/opera/styles/wml.css
 share/opera/svg-mobd.dat
