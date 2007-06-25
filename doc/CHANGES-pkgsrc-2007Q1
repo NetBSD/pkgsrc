@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.45 2007/06/25 15:38:11 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.46 2007/06/25 18:17:49 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -95,3 +95,5 @@ Pullup ticket 2116 - requested by tron
 security update for openoffice2-bin
 Pullup ticket 2117 - requested by lkundrak
 security update for openoffice2
+Pullup ticket 2120 - requested by lkundrak
+security fix for bitchx
