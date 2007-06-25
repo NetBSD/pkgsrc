@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1446 2007/06/24 20:56:04 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.1447 2007/06/25 14:17:53 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2689,3 +2689,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated comms/asterisk to 1.2.19 [mjl 2007-06-24]
 	Updated mail/exim to 4.67 [abs 2007-06-24]
 	Updated devel/monotone-server to 0.35nb1 [jmmv 2007-06-24]
+	Updated chat/bitchx to 1.1nb1 [lkundrak 2007-06-25]
