@@ -1,4 +1,4 @@
-/*	$NetBSD: queue.h,v 1.3 2007/06/25 21:35:05 joerg Exp $	*/
+/*	$NetBSD: queue.h,v 1.4 2007/06/26 22:10:46 dmcmahill Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993
@@ -260,6 +260,7 @@ struct {								\
 } while (/*CONSTCOND*/0)
 #endif
 
+#ifndef TAILQ_INSERT_AFTER
 #define	TAILQ_INSERT_AFTER(head, listelm, elm, field) do {		\
 	if (((elm)->field.tqe_next = (listelm)->field.tqe_next) != NULL)\
 		(elm)->field.tqe_next->field.tqe_prev = 		\
@@ -269,13 +270,16 @@ struct {								\
 	(listelm)->field.tqe_next = (elm);				\
 	(elm)->field.tqe_prev = &(listelm)->field.tqe_next;		\
 } while (/*CONSTCOND*/0)
+#endif
 
+#ifndef TAILQ_INSERT_BEFORE
 #define	TAILQ_INSERT_BEFORE(listelm, elm, field) do {			\
 	(elm)->field.tqe_prev = (listelm)->field.tqe_prev;		\
 	(elm)->field.tqe_next = (listelm);				\
 	*(listelm)->field.tqe_prev = (elm);				\
 	(listelm)->field.tqe_prev = &(elm)->field.tqe_next;		\
 } while (/*CONSTCOND*/0)
+#endif
 
 #ifndef TAILQ_REMOVE
 #define TAILQ_REMOVE(head, elm, field) do {				\
