@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2007/03/19 16:40:26 tv Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/26 09:00:03 rillig Exp $
 #
 
 DISTNAME=		binkd098
 PKGNAME=		binkd-0.9.8
 PKGREVISION=		2
 CATEGORIES=		comms
-MASTER_SITES=		http://homepage.corbina.net/~maloff/binkd/ \
-			ftp://happy.kiev.ua/pub/fidosoft/mailer/binkd/
+MASTER_SITES=		ftp://happy.kiev.ua/pub/fidosoft/mailer/binkd/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
