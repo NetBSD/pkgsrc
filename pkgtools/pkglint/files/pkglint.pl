@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.710 2007/06/18 09:35:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.711 2007/06/26 06:08:11 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4242,7 +4242,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^[^\$"\\\`]+//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[\$!#?\@])//) {
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?\@]|\$\$)//) {
 				my ($shvarname) = ($1);
 				$opt_debug_shell and $line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${shvarname}.");
 			} elsif ($rest =~ s/^\$\$//) {
