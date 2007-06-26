@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1450 2007/06/26 10:41:45 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1451 2007/06/26 11:50:14 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/libnbcompat to 20070622 [joerg 2007-06-25]
 	Updated pkgtools/pbulk to 0.2 [joerg 2007-06-25]
 	Updated x11/lesstif to 0.95.0nb1 [tnn 2007-06-26]
+	Updated multimedia/xvidcore to 1.1.2nb1 [lkundrak 2007-06-26]
