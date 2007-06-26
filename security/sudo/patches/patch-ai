@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1.2.2 2007/06/26 11:59:28 ghen Exp $
+
+--- auth/kerb5.c.orig	2005-03-29 23:38:36.000000000 -0500
++++ auth/kerb5.c	2007-06-25 04:51:20.000000000 -0400
+@@ -57,7 +57,7 @@
+ #ifdef HAVE_HEIMDAL
+ # define extract_name(c, p)		krb5_principal_get_comp_string(c, p, 1)
+ # define krb5_free_data_contents(c, d)	krb5_data_free(d)
+-# define ENCTYPE_DES_CBC_MD5		ETYPE_DES_CBC_MD5	/* XXX */
++# define ENCTYPE_DES_CBC_MD5		0		/* 0 is wildcard */
+ #else
+ # define extract_name(c, p)		(krb5_princ_component(c, p, 1)->data)
+ #endif
+@@ -274,7 +274,6 @@
+ 	log_error(NO_EXIT,
+ 		  "%s: host service key not found: %s", auth_name,
+ 		  error_message(error));
+-	error = 0;
+ 	goto cleanup;
+     }
+     if (keyblock)
