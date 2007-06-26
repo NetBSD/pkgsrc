@@ -1,0 +1,48 @@
+$NetBSD: patch-ac,v 1.1 2007/06/26 11:45:17 lkundrak Exp $
+
+This is believed to fix CVE-2007-3329.
+Though there is no more information about the vulnerability apart from function names,
+it seems that coeff is the only index that could point out of bounds causing harm
+and only these three functions share this code.
+
+--- src/bitstream/mbcoding.c.orig	2007-06-26 13:38:17.000000000 +0200
++++ src/bitstream/mbcoding.c
+@@ -1073,12 +1073,10 @@ get_intra_block(Bitstream * bs,
+ 		}
+ 		coeff += run;
+ 		
+-#ifdef _DEBUG
+ 		if(coeff>=64) {
+ 		  DPRINTF(XVID_DEBUG_ERROR,"error: overflow in coefficient index\n");
+ 		  return;
+ 		}
+-#endif
+ 
+ 		block[scan[coeff]] = level;
+ 
+@@ -1121,12 +1119,10 @@ get_inter_block_h263(
+ 		}
+ 		p += run;
+ 
+-#ifdef _DEBUG
+ 		if(p>=64)	{
+ 		  DPRINTF(XVID_DEBUG_ERROR,"error: overflow in coefficient index\n");
+ 		  return;
+ 		}
+-#endif
+ 
+ 		if (level < 0) {
+ 			level = level*quant_m_2 - quant_add;
+@@ -1163,12 +1159,10 @@ get_inter_block_mpeg(
+ 		}
+ 		p += run;
+ 
+-#ifdef _DEBUG
+ 		if(p>=64)	{
+ 		  DPRINTF(XVID_DEBUG_ERROR,"error: overflow in coefficient index\n");
+ 		  return;
+ 		}
+-#endif
+ 
+ 		if (level < 0) {
+ 			level = ((2 * -level + 1) * matrix[scan[p]] * quant) >> 4;
