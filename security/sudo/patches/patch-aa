@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2004/08/24 17:31:48 cube Exp $
+$NetBSD: patch-aa,v 1.13 2007/06/26 15:05:50 jlam Exp $
 
---- Makefile.in.orig	2004-05-28 22:27:59.000000000 +0200
+--- Makefile.in.orig	2005-11-08 13:21:58.000000000 -0500
 +++ Makefile.in
 @@ -181,7 +181,7 @@ testsudoers: $(TESTOBJS) $(LIBOBJS)
  	$(CC) -o $@ $(TESTOBJS) $(LIBOBJS) $(LDFLAGS) $(LIBS) $(NET_LIBS)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.12 2004/08/24 17:31:48 cube Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@PARSESRCS = sudo.tab.h sudo.tab.c lex.yy.c def_data.c def_data.h
-@@ -292,11 +292,11 @@ sudoers.man:: sudoers.man.in
+@@ -292,20 +292,20 @@ sudoers.man:: sudoers.man.in
  
  sudoers.cat: sudoers.man
  
@@ -25,3 +25,34 @@ $NetBSD: patch-aa,v 1.12 2004/08/24 17:31:48 cube Exp $
  	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform) \
  	    $(DESTDIR)$(noexecdir)
  
+ install-binaries: $(PROGS)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
+ 	rm -f $(DESTDIR)$(sudodir)/sudoedit
+ 	ln $(DESTDIR)$(sudodir)/sudo $(DESTDIR)$(sudodir)/sudoedit
+ 
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
+ 
+ install-noexec: sudo_noexec.la
+ 	$(LIBTOOL) --mode=install $(INSTALL) sudo_noexec.la $(DESTDIR)$(noexecdir)
+@@ -315,15 +315,15 @@ bininst-noexec: sudo_noexec.la
+ 
+ install-sudoers:
+ 	test -f $(DESTDIR)$(sudoersdir)/sudoers || \
+-	    $(INSTALL) -O $(sudoers_uid) -G $(sudoers_gid) -M $(sudoers_mode) \
++	    $(INSTALL) -o $(sudoers_uid) -g $(sudoers_gid) -m $(sudoers_mode) \
+ 		$(srcdir)/sudoers $(DESTDIR)$(sudoersdir)/sudoers
+ 
+ install-man:
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
+ 	@rm -f $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
+ 	ln $(DESTDIR)$(mandirsu)/sudo.$(mansectsu) $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
+-	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/visudo.$(mantype) $(DESTDIR)$(mandirsu)/visudo.$(mansectsu)
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudoers.$(mantype) $(DESTDIR)$(mandirform)/sudoers.$(mansectform)
+ @MAN_POSTINSTALL@
+ 
+ check:
