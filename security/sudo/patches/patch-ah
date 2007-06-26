@@ -1,8 +1,27 @@
-$NetBSD: patch-ah,v 1.4 2006/01/15 11:32:07 adrianp Exp $
+$NetBSD: patch-ah,v 1.4.10.1 2007/06/26 11:59:28 ghen Exp $
 
---- env.c.orig	2005-11-08 18:21:33.000000000 +0000
-+++ env.c
-@@ -130,6 +130,7 @@ static const char *initial_badenv_table[
+--- env.c.orig	2005-11-08 13:21:33.000000000 -0500
++++ env.c	2007-06-25 04:44:24.000000000 -0400
+@@ -105,14 +105,14 @@
+ #ifdef __APPLE__
+     "DYLD_*",
+ #endif
+-#ifdef HAVE_KERB4
++#if defined(HAVE_KERB4) || defined(HAVE_KERB5)
+     "KRB_CONF*",
+     "KRBCONFDIR",
+     "KRBTKFILE",
+-#endif /* HAVE_KERB4 */
+-#ifdef HAVE_KERB5
+     "KRB5_CONFIG*",
+-#endif /* HAVE_KERB5 */
++    "KRB5_KTNAME",
++    "KRB5CCNAME",
++#endif /* HAVE_KERB4 || HAVE_KERB5 */
+ #ifdef HAVE_SECURID
+     "VAR_ACE",
+     "USR_ACE",
+@@ -130,6 +130,7 @@
      "PERLLIB",
      "PERL5LIB",
      "PERL5OPT",
