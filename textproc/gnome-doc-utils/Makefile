@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/04/11 06:39:44 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/26 13:54:29 rillig Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.10.3
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
 
-PKGCONFIG_OVERRIDE=	gnome-doc-utils.pc.in
+PKGCONFIG_OVERRIDE=	tools/gnome-doc-utils.pc.in
 PKGCONFIG_OVERRIDE+=	xml2po/xml2po.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
