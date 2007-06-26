@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/03/21 07:19:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/06/26 05:38:57 rillig Exp $
 share/icons/gnome/16x16/actions/add.png
 share/icons/gnome/16x16/actions/address-book-new.png
 share/icons/gnome/16x16/actions/application-exit.png
@@ -127,7 +127,6 @@ share/icons/gnome/16x16/actions/gtk-refresh.png
 share/icons/gnome/16x16/actions/gtk-remove.png
 share/icons/gnome/16x16/actions/gtk-save-as.png
 share/icons/gnome/16x16/actions/gtk-save.png
-share/icons/gnome/16x16/actions/gtk-select-all.png
 share/icons/gnome/16x16/actions/gtk-sort-ascending.png
 share/icons/gnome/16x16/actions/gtk-sort-descending.png
 share/icons/gnome/16x16/actions/gtk-stop.png
@@ -278,10 +277,6 @@ share/icons/gnome/16x16/actions/view-refresh.png
 share/icons/gnome/16x16/actions/view-restore.png
 share/icons/gnome/16x16/actions/view-sort-ascending.png
 share/icons/gnome/16x16/actions/view-sort-descending.png
-share/icons/gnome/16x16/actions/viewmag+.png
-share/icons/gnome/16x16/actions/viewmag-.png
-share/icons/gnome/16x16/actions/viewmag1.png
-share/icons/gnome/16x16/actions/viewmagfit.png
 share/icons/gnome/16x16/actions/window-close.png
 share/icons/gnome/16x16/actions/window-new.png
 share/icons/gnome/16x16/actions/window_fullscreen.png
@@ -1735,7 +1730,6 @@ share/icons/gnome/22x22/actions/gtk-refresh.png
 share/icons/gnome/22x22/actions/gtk-remove.png
 share/icons/gnome/22x22/actions/gtk-save-as.png
 share/icons/gnome/22x22/actions/gtk-save.png
-share/icons/gnome/22x22/actions/gtk-select-all.png
 share/icons/gnome/22x22/actions/gtk-sort-ascending.png
 share/icons/gnome/22x22/actions/gtk-sort-descending.png
 share/icons/gnome/22x22/actions/gtk-stop.png
@@ -1886,10 +1880,6 @@ share/icons/gnome/22x22/actions/view-refresh.png
 share/icons/gnome/22x22/actions/view-restore.png
 share/icons/gnome/22x22/actions/view-sort-ascending.png
 share/icons/gnome/22x22/actions/view-sort-descending.png
-share/icons/gnome/22x22/actions/viewmag+.png
-share/icons/gnome/22x22/actions/viewmag-.png
-share/icons/gnome/22x22/actions/viewmag1.png
-share/icons/gnome/22x22/actions/viewmagfit.png
 share/icons/gnome/22x22/actions/window-close.png
 share/icons/gnome/22x22/actions/window-new.png
 share/icons/gnome/22x22/actions/window_fullscreen.png
@@ -2553,7 +2543,6 @@ share/icons/gnome/24x24/actions/gtk-refresh.png
 share/icons/gnome/24x24/actions/gtk-remove.png
 share/icons/gnome/24x24/actions/gtk-save-as.png
 share/icons/gnome/24x24/actions/gtk-save.png
-share/icons/gnome/24x24/actions/gtk-select-all.png
 share/icons/gnome/24x24/actions/gtk-sort-ascending.png
 share/icons/gnome/24x24/actions/gtk-sort-descending.png
 share/icons/gnome/24x24/actions/gtk-stop.png
@@ -2704,10 +2693,6 @@ share/icons/gnome/24x24/actions/view-refresh.png
 share/icons/gnome/24x24/actions/view-restore.png
 share/icons/gnome/24x24/actions/view-sort-ascending.png
 share/icons/gnome/24x24/actions/view-sort-descending.png
-share/icons/gnome/24x24/actions/viewmag+.png
-share/icons/gnome/24x24/actions/viewmag-.png
-share/icons/gnome/24x24/actions/viewmag1.png
-share/icons/gnome/24x24/actions/viewmagfit.png
 share/icons/gnome/24x24/actions/window-close.png
 share/icons/gnome/24x24/actions/window-new.png
 share/icons/gnome/24x24/actions/window_fullscreen.png
@@ -3982,7 +3967,6 @@ share/icons/gnome/32x32/actions/gtk-redo-ltr.png
 share/icons/gnome/32x32/actions/gtk-remove.png
 share/icons/gnome/32x32/actions/gtk-save-as.png
 share/icons/gnome/32x32/actions/gtk-save.png
-share/icons/gnome/32x32/actions/gtk-select-all.png
 share/icons/gnome/32x32/actions/gtk-sort-ascending.png
 share/icons/gnome/32x32/actions/gtk-sort-descending.png
 share/icons/gnome/32x32/actions/gtk-stop.png
@@ -4055,10 +4039,6 @@ share/icons/gnome/32x32/actions/view-fullscreen.png
 share/icons/gnome/32x32/actions/view-restore.png
 share/icons/gnome/32x32/actions/view-sort-ascending.png
 share/icons/gnome/32x32/actions/view-sort-descending.png
-share/icons/gnome/32x32/actions/viewmag+.png
-share/icons/gnome/32x32/actions/viewmag-.png
-share/icons/gnome/32x32/actions/viewmag1.png
-share/icons/gnome/32x32/actions/viewmagfit.png
 share/icons/gnome/32x32/actions/window-new.png
 share/icons/gnome/32x32/actions/window_fullscreen.png
 share/icons/gnome/32x32/actions/window_new.png
@@ -4846,7 +4826,6 @@ share/icons/gnome/scalable/actions/gtk-redo-ltr.svg
 share/icons/gnome/scalable/actions/gtk-remove.svg
 share/icons/gnome/scalable/actions/gtk-save-as.svg
 share/icons/gnome/scalable/actions/gtk-save.svg
-share/icons/gnome/scalable/actions/gtk-select-all.svg
 share/icons/gnome/scalable/actions/gtk-sort-ascending.svg
 share/icons/gnome/scalable/actions/gtk-sort-descending.svg
 share/icons/gnome/scalable/actions/gtk-stop.svg
@@ -4929,10 +4908,6 @@ share/icons/gnome/scalable/actions/view-fullscreen.svg
 share/icons/gnome/scalable/actions/view-restore.svg
 share/icons/gnome/scalable/actions/view-sort-ascending.svg
 share/icons/gnome/scalable/actions/view-sort-descending.svg
-share/icons/gnome/scalable/actions/viewmag+.svg
-share/icons/gnome/scalable/actions/viewmag-.svg
-share/icons/gnome/scalable/actions/viewmag1.svg
-share/icons/gnome/scalable/actions/viewmagfit.svg
 share/icons/gnome/scalable/actions/window-new.svg
 share/icons/gnome/scalable/actions/window_fullscreen.svg
 share/icons/gnome/scalable/actions/window_new.svg
