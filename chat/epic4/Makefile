@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/04/11 21:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/26 09:05:18 rillig Exp $
 #
 
 DISTNAME=	epic4-2.2
@@ -10,7 +10,6 @@ MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.eu.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.irc.org/irc/clients/unix/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.parodius.com/pub/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-PRODUCTION/ \
 		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2
