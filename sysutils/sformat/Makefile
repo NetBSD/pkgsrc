@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/27 13:40:49 joerg Exp $
 #
 
 DISTNAME=		sformat-3.5
@@ -31,5 +31,9 @@ MAKE_ENV+=	CCOM="gcc"
 .endif
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+
+post-extract:
+	${CP} ${WRKSRC}/RULES/os-freebsd.id ${WRKSRC}/RULES/os-dragonfly.id
+	${CP} ${WRKSRC}/RULES/os-freebsd.def ${WRKSRC}/RULES/os-dragonfly.def
 
 .include "../../mk/bsd.pkg.mk"
