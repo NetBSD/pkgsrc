@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/28 16:36:45 schmonz Exp $
 
---- configure.sh.orig	2007-04-23 16:53:30.000000000 -0400
+--- configure.sh.orig	2007-06-22 15:14:35.000000000 -0400
 +++ configure.sh
 @@ -76,6 +76,13 @@ LUAFLAGS=${LUAFLAGS:-""}
  LIBEXPAT_STATIC_PATH=${LIBEXPAT_STATIC_PATH:-$PWD/../lib/lib/}
