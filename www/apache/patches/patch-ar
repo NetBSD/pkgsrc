@@ -1,0 +1,40 @@
+$NetBSD: patch-ar,v 1.5 2007/06/28 00:38:01 lkundrak Exp $
+
+--- src/main/http_main.c.orig	2007-06-28 02:10:30.000000000 +0200
++++ src/main/http_main.c
+@@ -2751,6 +2751,17 @@ static int find_child_by_pid(int pid)
+     return -1;
+ }
+ 
++static int safe_child_kill(pid_t pid, int sig)
++{
++    if (getpgid(pid) == getpgrp()) {
++        return kill(pid, sig);
++    }
++    else {
++        errno = EINVAL;
++        return -1;
++    }
++}
++
+ static void reclaim_child_processes(int terminate)
+ {
+ #ifndef MULTITHREAD
+@@ -5113,7 +5124,7 @@ static void perform_idle_server_maintena
+ 		else if (ps->last_rtime + ss->timeout_len < now) {
+ 		    /* no progress, and the timeout length has been exceeded */
+ 		    ss->timeout_len = 0;
+-		    kill(ps->pid, SIG_TIMEOUT_KILL);
++		    safe_child_kill(ps->pid, SIG_TIMEOUT_KILL);
+ 		}
+ 	    }
+ #endif
+@@ -5126,7 +5137,7 @@ static void perform_idle_server_maintena
+ 	 * while we were counting. Use the define SIG_IDLE_KILL to reflect
+ 	 * which signal should be used on the specific OS.
+ 	 */
+-	kill(ap_scoreboard_image->parent[to_kill].pid, SIG_IDLE_KILL);
++	safe_child_kill(ap_scoreboard_image->parent[to_kill].pid, SIG_IDLE_KILL);
+ 	idle_spawn_rate = 1;
+ #ifdef TPF
+         ap_update_child_status(to_kill, SERVER_DEAD, (request_rec *)NULL);
