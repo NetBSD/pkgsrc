@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/06/10 04:30:29 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/06/28 01:31:52 dmcmahill Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -28,7 +28,14 @@ CONFIGURE_ARGS+= --enable-shared \
 		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 WRKSRC=		${RUBY_WRKSRC}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
 LIBS.SunOS+=	-lsunmath -lm
+.else
+LIBS.SunOS+=	-lm
+.endif
 
 # Ruby build process depends on config.status's content
 CONFIG_STATUS_OVERRIDE=	# empty
