@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.47 2007/06/26 11:59:58 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q1,v 1.1.2.48 2007/06/28 10:50:21 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q1 branch:
@@ -99,3 +99,5 @@ Pullup ticket 2120 - requested by lkundrak
 security fix for bitchx
 Pullup ticket 2121, 2122 - requested by tls
 security fix for sudo
+Pullup ticket 2124 - requested by lkundrak
+security fix for proftpd
