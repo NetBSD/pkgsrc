@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.2.12.1 2007/06/28 10:49:45 ghen Exp $
+
+Part of fix for CVE-2007-2165 grabbed from upstream #2922.
+
+--- modules/mod_core.c.orig	2007-06-27 01:13:50.000000000 +0200
++++ modules/mod_core.c
+@@ -4444,6 +4444,8 @@ static int core_sess_init(void) {
+   config_rec *c = NULL;
+   unsigned int *debug_level = NULL;
+ 
++  init_auth();
++
+   /* Check for a server-specific TimeoutIdle. */
+   c = find_config(main_server->conf, CONF_PARAM, "TimeoutIdle", FALSE);
+   if (c != NULL)
