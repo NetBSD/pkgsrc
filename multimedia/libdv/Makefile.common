@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2007/06/15 17:52:05 joerg Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/06/28 10:11:33 obache Exp $
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-gtk
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386)
+.if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386) || (${OPSYS} == "Interix")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
