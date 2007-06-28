@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6450 2007/06/27 01:49:17 schmonz Exp $
+$NetBSD: TODO,v 1.6451 2007/06/28 16:37:45 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ Suggested package updates
 	o fort77-1.18
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
-	o freepops-0.2.5
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
