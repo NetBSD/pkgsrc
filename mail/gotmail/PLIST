@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/31 20:34:19 minskim Exp $
-bin/gotmail
-man/man1/gotmail.1
-share/doc/gotmail/README
-share/examples/gotmail/sample.gotmailrc
-@dirrm share/examples/gotmail
-@dirrm share/doc/gotmail
