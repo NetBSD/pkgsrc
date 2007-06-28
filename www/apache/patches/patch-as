@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.5 2007/06/28 00:38:01 lkundrak Exp $
+$NetBSD: patch-as,v 1.6 2007/06/28 00:43:36 lkundrak Exp $
+
+Fix for CVE-2006-5752 XSS in mod_status with ExtendedStatus on.
 
 --- src/modules/standard/mod_status.c.orig	2007-06-28 02:39:31.000000000 +0200
 +++ src/modules/standard/mod_status.c	2007-06-28 02:44:25.000000000 +0200
