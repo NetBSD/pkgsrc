@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.6 2007/06/28 00:43:36 lkundrak Exp $
+$NetBSD: patch-ar,v 1.7 2007/06/28 01:24:39 lkundrak Exp $
 
-Fix for CVE-2007-1863 remote crash when mod_cache enabled.
+Fix for CVE-2007-3304 denial of service.
 
 --- src/main/http_main.c.orig	2007-06-28 02:10:30.000000000 +0200
 +++ src/main/http_main.c
