@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1458 2007/06/28 16:37:45 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1459 2007/06/28 18:31:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2735,3 +2735,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed misc/koffice-i18n-zh_TW [markd 2007-06-28]
 	Removed misc/koffice-i18n-zu [markd 2007-06-28]
 	Updated mail/freepops to 0.2.5 [schmonz 2007-06-28]
+	Removed mail/gotmail [schmonz 2007-06-28]
