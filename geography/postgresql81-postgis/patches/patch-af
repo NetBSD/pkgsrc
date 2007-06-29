@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2007/06/29 23:35:34 joerg Exp $
+
+--- extras/template_gis/profile.orig	2007-06-29 23:03:59.000000000 +0000
++++ extras/template_gis/profile
+@@ -1,7 +1,7 @@
+ 
+ #those are the default variables for postgresql-postgis.
+-#this file will be scanned from /etc/default/postgis,
+-#and then from $HOME/postgis/profile
++#this file will be scanned from @PKG_SYSCONFDIR@/postgis,
++#and then from $HOME/.postgis/profile
+ 
+ #values should NOT be in quotes
+ 
