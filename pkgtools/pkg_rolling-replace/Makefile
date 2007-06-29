@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/06/29 17:00:44 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/29 18:18:37 tnn Exp $
 
 DISTNAME=	pkg_rolling-replace-0.04
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,6 +34,8 @@ SUBST_STAGE.makeconf=	pre-configure
 SUBST_MESSAGE.makeconf=	Recording default path of mk.conf.
 SUBST_FILES.makeconf=	pkg_rolling-replace.sh
 SUBST_SED.makeconf=	-e 's,@MAKECONF@,${MAKE:T:Mbmake:S/bmake/${PREFIX}/g}/etc/mk.conf,g'
+
+REPLACE_SH+=		pkg_rolling-replace.sh
 
 .include "../../mk/bsd.prefs.mk"
 
