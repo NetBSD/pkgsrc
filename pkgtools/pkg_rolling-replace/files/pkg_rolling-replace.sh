@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.8 2007/06/05 08:22:32 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.9 2007/06/29 17:00:44 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -334,8 +334,8 @@ while [ -n "$REPLACE_TODO" ]; do
 	bdeps=$(${MAKE} show-depends VARNAME=BUILD_DEPENDS)
 	rdeps=$(${MAKE} show-depends)
 	for depver in $bdeps $rdeps; do
-	    dep=$(echo $depver | sed -E -e 's/[:[].*$/0/' \
-		-e 's/(>=|<=|-)[0-9][^-]*$//')
+	    dep=$(echo $depver | sed -e 's/[:[].*$/0/' -e 's/>=[0-9][^-]*$//' \
+		-e 's/<=[0-9][^-]*$//' -e 's/-[0-9][^-]*$//')
 	    if ! is_member $dep $OLD_DEPENDS $NEW_DEPENDS; then
 		NEW_DEPENDS="$NEW_DEPENDS $dep"
 		DEPGRAPH_SRC="$DEPGRAPH_SRC $dep $pkg"
