@@ -1,5 +1,5 @@
-#!@AWK@ -f -
-# $NetBSD: create-broken-graph.awk,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+#!@AWK@ -f
+# $NetBSD: create-broken-graph.awk,v 1.2 2007/06/29 22:43:26 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
