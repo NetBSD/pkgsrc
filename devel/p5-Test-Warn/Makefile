@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/29 21:19:51 markd Exp $
 #
 
 DISTNAME=		Test-Warn-0.08
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -12,6 +12,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Test-Warn/
 COMMENT=		Perl extension to test methods for warnings
 
 DEPENDS+=		p5-Array-Compare-[0-9]*:../../devel/p5-Array-Compare
+DEPENDS+=		p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
 DEPENDS+=		p5-Tree-DAG_Node-[0-9]*:../../devel/p5-Tree-DAG_Node
 
 USE_LANGUAGES=		# empty
