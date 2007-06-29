@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2007/06/29 23:35:33 joerg Exp $
+
+--- extras/template_gis/mktemplate_gis.1.orig	2007-06-29 23:04:07.000000000 +0000
++++ extras/template_gis/mktemplate_gis.1
+@@ -89,7 +89,7 @@ scripts/contrib directory for this postg
+ .LP
+ The environment variables for template_gis creation, removal and usage may be stored in files, as follows:
+ .TP
+-.B /etc/default/postgis
++.B @PKG_SYSCONFDIR@/postgis
+ will designate default values for the whole system.
+ .TP
+ .B $HOME/.postgis/profile

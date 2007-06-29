@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.7 2007/01/12 18:11:49 gdt Exp $
+$NetBSD: distinfo,v 1.8 2007/06/29 23:35:33 joerg Exp $
 
 SHA1 (postgis-1.2.1.tar.gz) = 0a47bde414bf691fb624ead37cc119687aba14df
 RMD160 (postgis-1.2.1.tar.gz) = b5f8c542a143d460ebc1387a0d9e4b69335e73c3
 Size (postgis-1.2.1.tar.gz) = 2084672 bytes
 SHA1 (patch-aa) = 9660b7e2be9a039bca88f0f66e9075faf97fe41d
+SHA1 (patch-ab) = 5bd37a8c5cd71c0e90c3ccd43d6e658d840e4b3a
+SHA1 (patch-ac) = ecee68429d1d27241d1bfe96ca45053b4368fffc
+SHA1 (patch-ad) = 7ca1849a616d4ffc3dbcf9030b216b93c5d06168
+SHA1 (patch-ae) = 17d5844ed09e0299081906b949ec503f6f8f515c
+SHA1 (patch-af) = c4a63c071db31fd1c018142a24fb1e4ca9043578

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/12 18:11:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/06/29 23:35:32 joerg Exp $
 bin/mktemplate_gis.sh
 bin/pgsql2shp
 bin/postgis_env.sh
@@ -19,9 +19,11 @@ share/doc/postgis/README.postgis
 share/doc/postgis/ZMSgeoms.txt
 share/doc/postgis/long_xact.xml
 share/doc/postgis/postgis.xml
+share/examples/postgis/profile
 share/postgresql/contrib/lwpostgis.sql
 share/postgresql/contrib/lwpostgis_upgrade.sql
 share/postgresql/contrib/spatial_ref_sys.sql
 @dirrm share/postgresql/contrib
+@dirrm share/examples/postgis
 @dirrm share/doc/postgis
 @dirrm share/doc/html/postgis

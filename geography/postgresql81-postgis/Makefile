@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/29 23:35:32 joerg Exp $
 
 DISTNAME=		postgis-${VERSION}
 VERSION=		1.2.1
+PKGREVISION=		1
 PKGNAME=		postgresql81-postgis-${VERSION}
 MASTER_SITES=		http://postgis.refractions.net/download/
 CATEGORIES=		databases geography
@@ -24,6 +25,16 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
 
 DOCDIR=		${PREFIX}/share/doc/postgis
 HTMLDIR=	${PREFIX}/share/doc/html/postgis
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	extras/template_gis/profile \
+			extras/template_gis/createdb.postgis.1 \
+			extras/template_gis/mktemplate_gis.1 \
+			extras/template_gis/postgis_env.sh.in
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_STAGE.paths=	pre-configure
+
+CONF_FILES=	share/examples/postgis/profile ${PKG_SYSCONFDIR}/postgis
 
 # Install is manual because distribution fails if docbook prereqs are not
 # satisfied, rather than using the prebuilt versions which are actually
