@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/06/27 12:57:20 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/06/29 22:53:21 joerg Exp $
 
 DISTNAME=	yudit-2.8.1
 CATEGORIES=	editors
@@ -10,7 +10,7 @@ HOMEPAGE=	http://yudit.org/
 COMMENT=	Unicode Text Editor
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgmerge
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-x
 
