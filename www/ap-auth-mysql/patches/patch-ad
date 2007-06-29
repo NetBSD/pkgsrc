@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2004/07/19 00:08:41 kristerw Exp $
+$NetBSD: patch-ad,v 1.3 2007/06/29 22:58:55 joerg Exp $
 
---- mod_auth_mysql.c.orig	Sun Jun 27 13:34:55 2004
-+++ mod_auth_mysql.c	Mon Jul 19 01:57:11 2004
+--- mod_auth_mysql.c.orig	2004-06-27 11:34:55.000000000 +0000
++++ mod_auth_mysql.c
 @@ -29,14 +29,14 @@
  #define SNPRINTF apr_snprintf
  #define PSTRDUP apr_pstrdup
@@ -19,7 +19,26 @@ $NetBSD: patch-ad,v 1.2 2004/07/19 00:08:41 kristerw Exp $
  #endif
  
  #include <httpd.h>
-@@ -94,7 +94,7 @@
+@@ -51,12 +51,18 @@
+ #include <ap_md5.h>
+ #endif
+ 
++#ifndef APR_XtOffsetOf
++#define APR_XtOffsetOf(x,y) APR_OFFSETOF(x,y)
++#endif
++
+ #include <mysql.h>
+ #include <errmsg.h>
+ #include <mysqld_error.h>
+ 
+ #ifdef HAVE_CRYPT_H
+ #include <crypt.h>
++#else
++#include <unistd.h>
+ #endif
+ 
+ #ifndef TRUE
+@@ -94,7 +100,7 @@ unsigned long auth_db_client_flag = 0;
  #define CRYPT_MD5_ENCRYPTION_FLAG	1<<3
  #endif
  #define PHP_MD5_ENCRYPTION_FLAG		1<<4
@@ -28,7 +47,7 @@ $NetBSD: patch-ad,v 1.2 2004/07/19 00:08:41 kristerw Exp $
  #define CRYPT_ENCRYPTION_FLAG		1<<5
  #endif
  
-@@ -126,7 +126,7 @@
+@@ -126,7 +132,7 @@ static int check_crypt_MD5_encryption(co
  }
  #endif
  
@@ -37,7 +56,7 @@ $NetBSD: patch-ad,v 1.2 2004/07/19 00:08:41 kristerw Exp $
  static int check_crypt_encryption(const char *passwd, char *enc_passwd)
  {
  	return (!strcmp(crypt(passwd, enc_passwd), enc_passwd));
-@@ -206,7 +206,9 @@
+@@ -206,7 +212,9 @@ encryption_type_entry supported_encrypti
  #if CRYPT_MD5
  	{ "Crypt_MD5",		check_crypt_MD5_encryption,		CRYPT_MD5_ENCRYPTION_FLAG },
  #endif
@@ -47,7 +66,7 @@ $NetBSD: patch-ad,v 1.2 2004/07/19 00:08:41 kristerw Exp $
  	{ "PHP_MD5",		check_PHP_MD5_encryption,		PHP_MD5_ENCRYPTION_FLAG	},
  	/* add additional encryption types below */
  	{ NULL,			NULL,					0 }
-@@ -1463,14 +1465,17 @@
+@@ -1463,14 +1471,17 @@ int mysql_authenticate_basic_user(reques
  		return res;
  	}
  
