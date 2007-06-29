@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1460 2007/06/28 18:52:16 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1461 2007/06/29 17:53:04 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2737,3 +2737,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/freepops to 0.2.5 [schmonz 2007-06-28]
 	Removed mail/gotmail [schmonz 2007-06-28]
 	Added comms/asterisk-sounds-native version 20060209 [mjl 2007-06-28]
+	Updated x11/fast-user-switch-applet to 2.18.0nb2 [jnemeth 2007-06-29]
