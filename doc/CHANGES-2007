@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1462 2007/06/29 18:20:34 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1463 2007/06/29 21:32:58 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2739,3 +2739,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added comms/asterisk-sounds-native version 20060209 [mjl 2007-06-28]
 	Updated x11/fast-user-switch-applet to 2.18.0nb2 [jnemeth 2007-06-29]
 	Updated pkgtools/pkg_rolling-replace to 0.04nb9 [tnn 2007-06-29]
+	Updated print/ghostscript to 8.54nb3 [dmcmahill 2007-06-29]
