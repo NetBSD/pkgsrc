@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2007/06/29 23:35:33 joerg Exp $
+
+--- extras/template_gis/Makefile.orig	2007-06-29 22:50:54.000000000 +0000
++++ extras/template_gis/Makefile
+@@ -31,8 +31,8 @@ MAN1_TARGET=$(MAN1_TARGETDIR)/$(MAN1)
+ MAN1_INSTALL=$(INSTALL_DATA) $(MAN1) $(MAN1_TARGET)
+ MAN1_UNINSTALL=rm -f $(MAN1_TARGET)
+ 
+-DEFAULTS_DIR=$(DESTDIR)/etc/default
+-SCRIPT_DEFAULTS=$(DEFAULTS_DIR)/postgis
++DEFAULTS_DIR=$(DESTDIR)${prefix}/share/examples/postgis
++SCRIPT_DEFAULTS=$(DEFAULTS_DIR)
+ 
+ all: $(SCRIPTS_IN)
+ 	$(foreach SCRIPT, $(SCRIPTS), $(SCRIPT_PREPARE);)
