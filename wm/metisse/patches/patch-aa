@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/29 22:46:50 joerg Exp $
 
 --- fvwm-insitu/config.h.in	2007/06/02 08:47:27	1.1
 +++ fvwm-insitu/config.h.in	2007/06/02 08:51:55
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
         #pragma alloca
  #  else
 -#    ifndef alloca /* predefined by HP cc +Olibcalls */
-+#    ifdef __NetBSD__
++#    if defined(__NetBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
 +#      include <stdlib.h>
 +#    else
 +#      ifndef alloca /* predefined by HP cc +Olibcalls */
