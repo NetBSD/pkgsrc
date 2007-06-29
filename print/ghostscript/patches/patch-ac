@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.3 2007/06/29 19:24:46 dmcmahill Exp $
+
+Don't segfault on 64-bit systems.
+
+Patch found in Debian bug 390875 and tested on netbsd-2/alpha.
+
+--- src/gxfcopy.c.orig	2006-03-23 12:39:23.000000000 +0000
++++ src/gxfcopy.c
+@@ -2391,7 +2391,7 @@ order_font_data(gs_copied_font_data_t *c
+ 	    a[j++] = &cfdata->names[i];
+ 	}
+     }
+-    qsort(a, cfdata->num_glyphs, sizeof(int), compare_glyph_names);
++    qsort(a, cfdata->num_glyphs, sizeof(gs_copied_glyph_name_t *), compare_glyph_names);
+     for (; j >= 0; j--)
+ 	cfdata->glyphs[j].order_index = a[j] - cfdata->names;    
+     gs_free_object(memory, a, "order_font_data");
