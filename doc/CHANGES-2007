@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1464 2007/06/29 22:44:10 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1465 2007/06/29 22:57:23 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_rolling-replace to 0.04nb9 [tnn 2007-06-29]
 	Updated print/ghostscript to 8.54nb3 [dmcmahill 2007-06-29]
 	Updated pkgtools/pbulk to 0.4 [root 2007-06-29]
+	Updated textproc/po4a to 0.23nb2 [root 2007-06-29]
