@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/30 18:42:24 joerg Exp $
 
---- src/cdinfo.cpp.orig	2007-05-28 19:36:06.000000000 +1200
+--- src/cdinfo.cpp.orig	2006-04-28 07:18:54.000000000 +0000
 +++ src/cdinfo.cpp
-@@ -33,7 +33,7 @@
+@@ -32,8 +32,9 @@
+ #include <sys/ioctl.h>
  #include <sys/stat.h>
  #include <sys/types.h>
++#include <unistd.h>
  
 -#ifdef __FreeBSD__
 +#if defined(HAVE_SYS_CDIO_H)
  # include <sys/cdio.h>
  # define CDROM_LEADOUT 0xAA
  #else
-@@ -91,8 +91,10 @@ bool CdInfo::open()
+@@ -91,8 +92,10 @@ bool CdInfo::open()
        mErrorCode = errno;
        if (mErrorCode==EACCES)
           mErrorText = i18n("You do not have permission to read from %1").arg(mDevice);
@@ -22,16 +24,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
        else if (mErrorCode==EBUSY)
           mErrorText = i18n("%1 is busy").arg(mDevice);
        else mErrorText = i18n("Cannot open %1: %2").arg(mDevice).arg(strerror(mErrorCode));
-@@ -100,7 +102,7 @@ bool CdInfo::open()
+@@ -100,7 +103,7 @@ bool CdInfo::open()
        return false;
     }
  
 -#ifndef __FreeBSD__
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
     int st = ioctl(mFd, CDROM_DISC_STATUS);
     if (st!=CDS_AUDIO && st!=CDS_MIXED && st!=CDS_NO_INFO)
     {
-@@ -194,7 +196,7 @@ int CdInfo::cddbSum(int n)
+@@ -194,7 +197,7 @@ int CdInfo::cddbSum(int n)
  
  int CdInfo::readTocHeader()
  {
@@ -40,7 +42,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
     ioc_toc_header hdr;
     if (ioctl(mFd, CDIOREADTOCHEADER, &hdr)<0) return -1;
     return hdr.ending_track;
-@@ -212,14 +214,17 @@ bool CdInfo::readTocEntry(int aEntryTrac
+@@ -212,14 +215,17 @@ bool CdInfo::readTocEntry(int aEntryTrac
  {
     int frame = 0;
  
