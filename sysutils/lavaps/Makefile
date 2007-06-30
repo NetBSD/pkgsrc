@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/08 20:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/30 19:18:47 joerg Exp $
 #
 
 DISTNAME=	lavaps-1.20
@@ -20,5 +20,11 @@ CONFIGURE_ARGS+=	--with-additional-includes=-I${LOCALBASE:Q}/include \
 		--with-tk-ver=8.3.2 \
 		--with-tcltk-lib-suffix-type=nodot
 
+BUILDLINK_DEPMETHOD.libXt?=	build
+
 .include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
