@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/10/11 19:01:01 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/06/30 15:05:08 joerg Exp $
 
---- configure.orig	2005-10-11 18:46:20.000000000 +0000
+--- configure.orig	2005-06-01 21:01:19.000000000 +0000
 +++ configure
 @@ -3960,13 +3960,13 @@ darwin* | rhapsody*)
    esac
@@ -36,3 +36,20 @@ $NetBSD: patch-ab,v 1.1 2005/10/11 19:01:01 joerg Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
+@@ -9022,12 +9022,12 @@ if test -n "$APXS"; then
+                     | cut -f2 -d"/" \
+                     | cut -f1 -d" "`
+     major_version=`echo $APACHE_VERSION|cut -f1,2 -d.`
+-    if test "$major_version" = "2.0"; then
+-      APACHE_VERSION_2=true
+-      APACHE_VERSION_1_3=false
+-    else
++    if test "$major_version" = "1.3"; then
+       APACHE_VERSION_2=false
+       APACHE_VERSION_1_3=true
++    else
++      APACHE_VERSION_2=true
++      APACHE_VERSION_1_3=false
+     fi
+ 
+ 

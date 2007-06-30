@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/03 16:43:38 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/30 15:05:08 joerg Exp $
 
 Allow the directives to be set in the global configuration file, too.
+Fix APR 1.2 build.
 
---- src/apache2/mod_suphp.c.orig	Sun Feb 27 18:56:37 2005
-+++ src/apache2/mod_suphp.c	Wed Aug  3 13:19:12 2005
+--- src/apache2/mod_suphp.c.orig	2005-02-27 17:56:37.000000000 +0000
++++ src/apache2/mod_suphp.c
 @@ -313,8 +313,8 @@ static const command_rec suphp_cmds[] =
      AP_INIT_TAKE2("suPHP_UserGroup", suphp_handle_cmd_user_group, NULL, RSRC_CONF | ACCESS_CONF,
                    "User and group scripts shall be run as"),
@@ -15,3 +16,36 @@ Allow the directives to be set in the global configuration file, too.
      {NULL}
  };
  
+@@ -558,7 +558,9 @@ static int suphp_handler(request_rec *r)
+             return rv;
+         }
+         
+-        APR_BRIGADE_FOREACH(bucket, bb)
++	for (bucket = APR_BRIGADE_FIRST(bb);
++	     bucket != APR_BRIGADE_SENTINEL(bb);
++	     bucket = APR_BUCKET_NEXT(bucket))
+         {
+             const char *data;
+             apr_size_t len;
+@@ -629,7 +631,9 @@ static int suphp_handler(request_rec *r)
+             
+             const char *buf;
+             apr_size_t blen;
+-            APR_BRIGADE_FOREACH(b, bb)
++
++	    for (b = APR_BRIGADE_FIRST(bb); b != APR_BRIGADE_SENTINEL(bb);
++		 b = APR_BUCKET_NEXT(b))
+             {
+                 if (APR_BUCKET_IS_EOS(b))
+                     break;
+@@ -650,7 +654,9 @@ static int suphp_handler(request_rec *r)
+             /* empty brigade (script output) */
+             const char *buf;
+             apr_size_t blen;
+-            APR_BRIGADE_FOREACH(b, bb)
++
++            for (b = APR_BRIGADE_FIRST(bb); b != APR_BRIGADE_SENTINEL(bb);
++		 b = APR_BUCKET_NEXT(b))
+             {
+                 if (APR_BUCKET_IS_EOS(b))
+                     break;
