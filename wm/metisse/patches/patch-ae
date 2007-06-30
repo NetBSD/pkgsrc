@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+$NetBSD: patch-ae,v 1.2 2007/06/30 15:22:09 joerg Exp $
 
 --- FvwmCompositor/main/LayerManager.cxx	2007/06/02 12:31:01	1.1
 +++ FvwmCompositor/main/LayerManager.cxx	2007/06/02 12:32:00
@@ -6,7 +6,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
  #define A_PAGER_MODE_MARGIN_P 0.02
  
  // --------------------------------------------------------------------
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +static inline double
 +fmin(double x, double y)
 +{
