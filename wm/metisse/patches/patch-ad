@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+$NetBSD: patch-ad,v 1.2 2007/06/30 15:22:09 joerg Exp $
 
 --- FvwmCompositor/renderer/WindowRenderer.cxx	2007/06/02 12:23:48	1.1
 +++ FvwmCompositor/renderer/WindowRenderer.cxx	2007/06/02 12:27:40
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
  // ---------------------------------------------------------------------------
  //
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +static inline double
 +fmin(double x, double y)
 +{
