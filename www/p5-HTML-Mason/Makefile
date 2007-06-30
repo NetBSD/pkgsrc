@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/06/08 12:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/06/30 16:09:09 joerg Exp $
 
 DISTNAME=		HTML-Mason-1.3101
 PKGNAME=		p5-HTML-Mason-1.31.1
@@ -30,7 +30,7 @@ PKG_SUGGESTED_OPTIONS=	modperl
 .  if ${PKG_APACHE} == "apache13"
 DEPENDS+=	p5-libapreq>=0.32:../../www/p5-libapreq
 .include "../../www/ap-perl/buildlink3.mk"
-.  elif ${PKG_APACHE} == "apache2"
+.  elif ${PKG_APACHE} == "apache2" || ${PKG_APACHE} == "apache22"
 DEPENDS+=	p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 .include "../../www/ap2-perl/buildlink3.mk"
 .  endif
