@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/12/15 14:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/06/30 16:09:08 joerg Exp $
 
 DISTNAME=	mod_chroot-0.3
-PKGNAME=	ap2-chroot-0.3
+PKGNAME=	${APACHE_PKG_PREFIX}-chroot-0.3
 PKGREVISION=	2
 CATEGORIES=	www security
 MASTER_SITES=	http://core.segfault.pl/~hobbit/mod_chroot/dist/

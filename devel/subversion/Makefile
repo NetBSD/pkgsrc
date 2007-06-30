@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.29 2006/11/03 19:34:11 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/06/30 16:09:07 joerg Exp $
 
 PKGNAME=	subversion-${SVNVER}
 COMMENT=	Version control system, meta-package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	subversion-base-${SVNVER}{,nb[0-9]*}:../../devel/subversion-base
 DEPENDS+=	p5-subversion-${SVNVER}{,nb[0-9]*}:../../devel/p5-subversion
+.if !empty(PKG_OPTIONS:Mapache22)
+DEPENDS+=	ap22-subversion-${SVNVER}{,nb[0-9]*}:../../www/ap2-subversion
+.else
 DEPENDS+=	ap2-subversion-${SVNVER}{,nb[0-9]*}:../../www/ap2-subversion
+.endif
 DEPENDS+=	${PYPKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/py-subversion
 DEPENDS+=	${RUBY_PKGPREFIX}-subversion-${SVNVER}{,nb[0-9]*}:../../devel/ruby-subversion
 
