@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/15 23:33:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/30 19:16:26 joerg Exp $
 bin/bsp2img
 bin/hw-master
 bin/nq-glx
@@ -26,6 +26,22 @@ bin/qw-master
 bin/qw-server
 bin/wad
 bin/zpak
+include/QF/GL/ati.h
+include/QF/GL/defines.h
+include/QF/GL/extensions.h
+include/QF/GL/funcs.h
+include/QF/GL/qf_explosions.h
+include/QF/GL/qf_funcs_list.h
+include/QF/GL/qf_lightmap.h
+include/QF/GL/qf_noisetextures.h
+include/QF/GL/qf_rlight.h
+include/QF/GL/qf_rmain.h
+include/QF/GL/qf_rsurf.h
+include/QF/GL/qf_screen.h
+include/QF/GL/qf_sky.h
+include/QF/GL/qf_textures.h
+include/QF/GL/qf_vid.h
+include/QF/GL/types.h
 include/QF/bspfile.h
 include/QF/cbuf.h
 include/QF/cdaudio.h
@@ -182,4 +198,5 @@ share/games/quakeforge/QF/menu.dat.gz
 @dirrm include/QF/ruamoko/gui
 @dirrm include/QF/ruamoko
 @dirrm include/QF/plugin
+@dirrm include/QF/GL
 @dirrm include/QF
