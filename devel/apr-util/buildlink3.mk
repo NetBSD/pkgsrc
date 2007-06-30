@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/06/08 12:25:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/06/30 15:04:55 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 APR_UTIL_BUILDLINK3_MK:=	${APR_UTIL_BUILDLINK3_MK}+
@@ -15,10 +15,15 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}apr-util
 BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.2.8
 BUILDLINK_ABI_DEPENDS.apr-util?=	apr-util>=1.2.8nb1
 BUILDLINK_PKGSRCDIR.apr-util?=	../../devel/apr-util
-.endif	# APR_UTIL_BUILDLINK3_MK
 
 BUILDLINK_FILES.apr-util+=	bin/apu-1-config
 BUILDLINK_FILES.apr-util+=	lib/aprutil.exp
+
+${BUILDLINK_DIR}/bin/apu-config: buildlink-directories
+	${MKDIR} ${BUILDLINK_DIR}/bin && ${LN} -fs apu-1-config ${BUILDLINK_DIR}/bin/apu-config
+
+buildlink-apr-util-cookie: ${BUILDLINK_DIR}/bin/apu-config
+.endif	# APR_UTIL_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
