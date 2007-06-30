@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/30 16:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/30 19:45:13 joerg Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -17,7 +17,7 @@ USE_TOOLS+=	gmake
 APACHE_MODULE=	yes
 DIST_VER=	2004112100
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache2
 
 CONFIGURE_ARGS+=	--enable-fallback-wraparound
 CONFIGURE_ARGS+=	--enable-libxslt-hack
