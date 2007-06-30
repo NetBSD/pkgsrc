@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/06/22 14:34:16 lkundrak Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/30 14:28:05 joerg Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -50,9 +50,11 @@ PLIST_SUBST+=		DVDCSS="@comment "
 CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
 
+INSTALLATION_DIRS=	share/vlc/skins/default share/vlc/skins2/default \
+			share/vlc/skins2/fonts share/vlc/http/admin \
+			share/vlc/http/vlm
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins/default
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/${PKGMANDIR}/man1
 

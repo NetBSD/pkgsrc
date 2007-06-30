@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2006/09/26 07:19:41 martti Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2007/06/30 14:28:05 joerg Exp $
+@dirrm share/vlc/skins2/default
+@dirrm share/vlc/skins2
 @dirrm share/vlc/skins/default
 @dirrm share/vlc/skins
+@dirrm share/vlc/http/vlm
 @dirrm share/vlc/http/admin
 @dirrm share/vlc/http
 @dirrm share/vlc
