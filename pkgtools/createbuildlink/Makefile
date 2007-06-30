@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/11/02 18:02:07 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2007/06/30 12:58:59 tnn Exp $
 
 DISTNAME=	createbuildlink-3.13
 CATEGORIES=	pkgtools sysutils
@@ -19,10 +19,11 @@ NO_BUILD=	yes
 
 SCRIPT=		${DISTNAME:C/-.*$//}
 SCRIPTS=	${SCRIPT} substplistbasedirs
+REPLACE_SH+=	${SCRIPTS}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
-do-configure:
+do-extract:
 .for scr in ${SCRIPTS}
 	${SED}	-e 's|@PKGVERSION@|${PKGVERSION}|'		\
 		-e 's|@MAKE@|${MAKE}|'				\
