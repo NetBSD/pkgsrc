@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/10 08:40:16 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/06/30 14:35:11 joerg Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
@@ -16,7 +16,7 @@ APACHE_MODULE_NAME=	mm_auth_ldap_module
 USE_LIBTOOL=		YES
 CPPFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lldap -llber
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache2
 
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
