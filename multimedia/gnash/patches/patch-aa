@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2007/06/12 21:26:15 ghen Exp $
+$NetBSD: patch-aa,v 1.8 2007/06/30 15:11:24 joerg Exp $
 
---- configure.orig	2007-06-09 03:41:56.000000000 +0200
+--- configure.orig	2007-06-09 01:41:56.000000000 +0000
 +++ configure
 @@ -8239,13 +8239,13 @@ echo $ECHO_N "checking for library file 
    LIBPRE="lib"
@@ -36,7 +36,18 @@ $NetBSD: patch-aa,v 1.7 2007/06/12 21:26:15 ghen Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_WINSOCK 1
-@@ -51973,7 +51973,7 @@ if $need_sdl; then
+@@ -48042,9 +48042,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ pthreads=no
+-PTHREAD_LIBS=""
+-PTHREAD_CFLAGS=""
+-
++PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ 
+ if test x"$PTHREAD_LIBS$PTHREAD_CFLAGS" != x; then
+   save_CFLAGS="$CFLAGS"
+@@ -51973,7 +51971,7 @@ if $need_sdl; then
      echo "               Install it from http://www.libsdl.org/download-1.2.php"
      echo "               or .deb users: apt-get install libsdl1.2-dev"
      echo "               or .rpm users: yum install SDL-devel"
@@ -45,7 +56,7 @@ $NetBSD: patch-aa,v 1.7 2007/06/12 21:26:15 ghen Exp $
  	echo "               or select a different GUI with --enable-gui= "
       x"$media_handler" = x"ffmpeg" -o x"$media_handler" = x"mad"  &&
  	echo "               or use --enable-media=gst"
-@@ -52057,7 +52057,7 @@ fi
+@@ -52057,7 +52055,7 @@ fi
  if test x"$BOOST_LIBS" != x; then
      # Only cygnal requires date_time at present, so it's OK if either
      # you don't want cygnal or do have date_time installed.
@@ -54,7 +65,7 @@ $NetBSD: patch-aa,v 1.7 2007/06/12 21:26:15 ghen Exp $
  	echo "        BOOST flags are: $BOOST_CFLAGS"
  	echo "        BOOST libs are: $BOOST_LIBS"
      else
-@@ -52072,7 +52072,7 @@ else
+@@ -52072,7 +52070,7 @@ else
      echo "        ERROR: No BOOST development package installed!"
      echo "               Install it from http://www.boost.org"
      echo "               or .deb users: apt-get install libboost-thread-dev"
