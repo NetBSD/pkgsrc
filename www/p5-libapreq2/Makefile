@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/06/19 21:59:32 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/06/30 16:09:09 joerg Exp $
 
 DISTNAME=	libapreq2-2.08
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
 
-DEPENDS+=	p5-ExtUtils-XSBuilder>=0.23:../../devel/p5-ExtUtils-XSBuilder
+PKG_APACHE_ACCEPTED=	apache2 apache22
 
-BUILDLINK_API_DEPENDS.ap2-perl+=	ap2-perl>=2.0.1
+DEPENDS+=	p5-ExtUtils-XSBuilder>=0.23:../../devel/p5-ExtUtils-XSBuilder
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
@@ -34,11 +34,12 @@ pre-configure:
 	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}
 	${LN} -fs ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}
 
-
 #pre-configure:
 #	cd ${WRKSRC} && ./buildconf
 
 .include "../../www/ap2-perl/buildlink3.mk"
-.include "../../www/apache2/buildlink3.mk"
+.include "../../mk/apache.mk"
+
+BUILDLINK_API_DEPENDS.ap2-perl+=	${APACHE_PKG_PREFIX}-perl>=2.0.1
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.48
 .include "../../mk/bsd.pkg.mk"

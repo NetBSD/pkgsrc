@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/12/08 23:34:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2007/06/30 16:09:09 joerg Exp $
 #
 
 DISTNAME=	mod_transform-0.4.0
-PKGNAME=	${DISTNAME:S/mod_/ap2-/}
+PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.outoforder.cc/downloads/mod_transform/
