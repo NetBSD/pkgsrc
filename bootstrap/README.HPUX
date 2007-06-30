@@ -1,17 +1,19 @@
-$NetBSD: README.HPUX,v 1.1 2007/04/14 14:17:49 tnn Exp $
-
-Note: HP-UX support is work-in-progress.
+$NetBSD: README.HPUX,v 1.2 2007/06/30 10:54:37 tnn Exp $
 
 Prerequisite patches (downloadable from HP itrc)
 ------------------------------------------------
-
- * ld(1) cumulative patch
+ * The latest HP-UX "quality pack" patch bundle (GOLDQPK)
+ * ld(1) cumulative patch (might be included in the above)
 
 Recommended patches
 -------------------
-
  * B3394BA Developer's Toolkit (for X11 headers)
  * HP C/aC++ compiler
+
+Compiler
+--------
+Prebuilt GCC toolchains suitable for use with pkgsrc can be downloaded from
+ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnn/ .
 
 Selecting which ABI to use
 --------------------------
