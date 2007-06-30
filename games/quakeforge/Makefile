@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/15 16:55:14 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/06/30 19:16:26 joerg Exp $
 
 DISTNAME=		quakeforge-0.5.5
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 
@@ -36,9 +36,7 @@ PLIST_SUBST+=		COND_SUN=""
 PLIST_SUBST+=		COND_SUN="@comment "
 .endif
 
-pre-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/include/QF/plugin
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/include/QF/ruamoko/gui
+INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
