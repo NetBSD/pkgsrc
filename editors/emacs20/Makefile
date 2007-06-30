@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/20 19:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/06/30 01:01:12 joerg Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	8
@@ -50,6 +50,10 @@ CHECK_WRKREF_SKIP+=	bin/emacs-20.7
 LDFLAGS+=	-Wl,-z,nocombreloc
 .endif
 
+.if ${OPSYS} == "DragonFly" && exists(/usr/lib/crtbegin.o)
+CPPFLAGS+=	-DDFLY_PRE_17_CRT
+.endif
+
 EMACS_USE_POP?=	yes
 .if (defined(EMACS_USE_POP) && \
     (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
@@ -90,6 +94,7 @@ INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 post-extract:
 	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m
+	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig*" -print | ${XARGS} ${RM} -f
