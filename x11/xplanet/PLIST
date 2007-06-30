@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/06/30 15:06:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/06/30 03:57:10 joerg Exp $
 bin/xplanet
 man/man1/xplanet.1
 share/xplanet/arcs/README
@@ -8,6 +8,7 @@ share/xplanet/config/default
 share/xplanet/config/earth_markers
 share/xplanet/config/moon_orbit
 share/xplanet/config/overlay_clouds
+share/xplanet/ephemeris/README
 share/xplanet/fonts/FreeMonoBold.ttf
 share/xplanet/fonts/README
 share/xplanet/images/README
