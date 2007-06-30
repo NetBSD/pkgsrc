@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2007/05/04 10:13:12 hira Exp $
+$NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
 
---- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
-+++ panel-plugin/battery.c	2007-05-01 01:32:49.000000000 +0900
+--- panel-plugin/battery.c.orig	2007-01-17 17:56:51.000000000 +0000
++++ panel-plugin/battery.c
+@@ -25,7 +25,7 @@
+ #include <config.h>
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <machine/apm_bios.h>
+ #elif __OpenBSD__
+ #include <sys/param.h>
 @@ -35,6 +35,7 @@
  #include <sys/ioctl.h>
  #include <machine/apmvar.h>
@@ -10,7 +19,16 @@ $NetBSD: patch-aa,v 1.3 2007/05/04 10:13:12 hira Exp $
  #elif __linux__
  #include <libapm.h>
  #endif
-@@ -209,7 +210,7 @@
+@@ -155,7 +156,7 @@ init_options(t_battmon_options *options)
+ gboolean
+ detect_battery_info(t_battmon *battmon)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+   /* This is how I read the information from the APM subsystem under
+      FreeBSD.  Each time this functions is called (once every second)
+      the APM device is opened, read from and then closed.
+@@ -209,7 +210,7 @@ detect_battery_info(t_battmon *battmon)
        battmon->method = BM_BROKEN;
        fd = open(APMDEVICE, O_RDONLY);
        if (fd == -1) return FALSE;
@@ -19,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 2007/05/04 10:13:12 hira Exp $
          close(fd);
               return FALSE;
      }
-@@ -302,13 +303,16 @@
+@@ -302,13 +303,16 @@ update_apm_status(t_battmon *battmon)
        battmon->method = BM_BROKEN;
        fd = open(APMDEVICE, O_RDONLY);
        if (fd == -1) return TRUE;
@@ -37,7 +55,16 @@ $NetBSD: patch-aa,v 1.3 2007/05/04 10:13:12 hira Exp $
  #else
      struct apm_info apm;
      DBG ("Updating battery status...");
-@@ -460,6 +464,11 @@
+@@ -400,7 +404,7 @@ update_apm_status(t_battmon *battmon)
+         acline = apm.ac_line_status ? TRUE : FALSE;
+         
+     }
+-#elif __FreeBSD__
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+     else {
+  /* This is how I read the information from the APM subsystem under
+      FreeBSD.  Each time this functions is called (once every second)
+@@ -460,6 +464,11 @@ battmon.c:241: for each function it appe
  
      if(battmon->options.display_percentage && !(battmon->options.hide_when_full && acline && charge >= 99)){
          gtk_widget_show((GtkWidget *)battmon->charge);
@@ -49,7 +76,7 @@ $NetBSD: patch-aa,v 1.3 2007/05/04 10:13:12 hira Exp $
          g_snprintf(buffer, sizeof(buffer),"%d%% ", charge);
          gtk_label_set_text(battmon->charge,buffer);
      } else {
-@@ -477,6 +486,11 @@
+@@ -477,6 +486,11 @@ battmon.c:241: for each function it appe
          }
  
          gtk_widget_show((GtkWidget *)active_label);
