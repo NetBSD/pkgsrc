@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1467 2007/06/29 23:42:12 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1468 2007/06/30 02:51:55 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2659,7 +2659,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added wm/twm version 1.0.3 [jlam 2007-06-19]
 	Updated meta-pkgs/modular-xorg-apps to 1.2 [jlam 2007-06-19]
 	Updated textproc/postgresql-autodoc to 1.30 [mjl 2007-06-19]
-	Added pkgtools/pbulk version 0.1 [root 2007-06-19]
+	Added pkgtools/pbulk version 0.1 [joerg 2007-06-19]
 	Updated shells/mksh to 29.6 [joerg 2007-06-19]
 	Updated audio/exaile to 0.2.9nb1 [drochner 2007-06-19]
 	Updated sysutils/apcupsd to 3.14.1nb2 [bouyer 2007-06-20]
@@ -2740,7 +2740,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/fast-user-switch-applet to 2.18.0nb2 [jnemeth 2007-06-29]
 	Updated pkgtools/pkg_rolling-replace to 0.04nb9 [tnn 2007-06-29]
 	Updated print/ghostscript to 8.54nb3 [dmcmahill 2007-06-29]
-	Updated pkgtools/pbulk to 0.4 [root 2007-06-29]
-	Updated textproc/po4a to 0.23nb2 [root 2007-06-29]
-	Updated geography/postgresql81-postgis to 1.2.1nb1 [root 2007-06-29]
-	Updated textproc/postgresql-autodoc to 1.30nb1 [root 2007-06-29]
+	Updated pkgtools/pbulk to 0.4 [joerg 2007-06-29]
+	Updated textproc/po4a to 0.23nb2 [joerg 2007-06-29]
+	Updated geography/postgresql81-postgis to 1.2.1nb1 [joerg 2007-06-29]
+	Updated textproc/postgresql-autodoc to 1.30nb1 [joerg 2007-06-29]
