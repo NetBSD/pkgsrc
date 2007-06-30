@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2007/02/22 19:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/06/30 03:57:10 joerg Exp $
 
 DISTNAME=	xplanet-1.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
@@ -16,7 +16,7 @@ CONFIGURE_ENV+=		PERL=${_ENV_PERL:Q}
 _ENV_PERL=		${TOOLS_SETENV} perl
 
 # directory creation should be fixed in the future release of xplanet
-XPLANET_DIRS=		arcs config fonts images markers origin
+XPLANET_DIRS=		arcs config ephemeris fonts images markers origin
 XPLANET_DIRS+=		satellites scripts spice stars
 INSTALLATION_DIRS+=	${XPLANET_DIRS:C,.*,share/xplanet/&,g}
 
@@ -27,6 +27,8 @@ PKG_SUGGESTED_OPTIONS=	x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mx11)
+USE_TOOLS+=	pkg-config
+
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/pango/buildlink3.mk"
