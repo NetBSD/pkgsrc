@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:29:31 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2007/06/30 05:07:02 joerg Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -22,11 +22,14 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox
 CONFIG_GUESS_OVERRIDE=	../config.guess
 CONFIG_SUB_OVERRIDE=	../config.sub
 
+EMACS21_FILESDIR=	${.CURDIR}/../../editors/emacs21/files
+
 post-extract:
 	@${ECHO} '#!/bin/sh' >${WRKSRC}/configure
 	@${ECHO} 'cd ..' >>${WRKSRC}/configure
 	@${ECHO} 'exec ./configure $$*' >>${WRKSRC}/configure
 	@${CHMOD} +x ${WRKSRC}/configure
+	${CP} ${EMACS21_FILESDIR}/dragonfly.h ${WRKSRC}/../src/s
 
 .include "../../mk/bsd.prefs.mk"
 
