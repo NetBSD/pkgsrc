@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/04/16 14:48:31 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/30 14:19:52 schmonz Exp $
 #
 
 DISTNAME=		xfrac310
 PKGNAME=		xfractint-3.10
 PKGREVISION=		1
 CATEGORIES=		math
-MASTER_SITES=		http://spanky.triumf.ca/pub/fractals/programs/unix/
+MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		rillig@NetBSD.org
@@ -24,6 +24,15 @@ BUILDLINK_TRANSFORM+=	l:ncurses:curses
 INSTALLATION_DIRS=	share/xfractint
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+
+# xfractint sources assume <malloc.h> exists.
+# Create a fake one for platforms that don't have it.
+#
+post-wrapper:
+	if ${TEST} ! -f /usr/include/malloc.h; then			\
+		${ECHO} "#include <stdlib.h>"				\
+			> ${BUILDLINK_DIR}/include/malloc.h;		\
+	fi
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
