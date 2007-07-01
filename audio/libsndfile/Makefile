@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/01/07 15:02:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/07/01 20:47:46 heinz Exp $
 
 DISTNAME=	libsndfile-1.0.17
 PKGREVISION=	1
@@ -13,6 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
 COMMENT=	Library for reading and writing audio files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
