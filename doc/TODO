@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6451 2007/06/28 16:37:45 schmonz Exp $
+$NetBSD: TODO,v 1.6452 2007/07/01 00:07:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ Suggested package updates
 	o py-textile-2.0.11
 	o py-twisted-2.4.0
 	o py-urwid-0.9.7.2
-	o py-yaml-3.05
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
