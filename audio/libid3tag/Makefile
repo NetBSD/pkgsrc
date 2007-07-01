@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/06/08 18:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/01 15:57:16 heinz Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -10,9 +10,10 @@ MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/
 COMMENT=	ID3 tag library, part of MAD (MPEG Audio Decoder)
 
-CONFLICTS=	mad<0.15
-
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CONFLICTS=	mad<0.15
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -29,7 +30,7 @@ post-build:
 		< ${FILESDIR}/id3tag.pc.in > ${WRKDIR}/id3tag.pc
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/id3tag.pc ${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKDIR:Q}/id3tag.pc ${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
