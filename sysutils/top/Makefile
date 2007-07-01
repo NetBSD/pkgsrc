@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/07/01 22:43:05 tnn Exp $
 
-DISTNAME=	top-3.6alpha7
-PKGNAME=	top-3.6a7
+DISTNAME=	top-3.6.1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.groupsys.com/pub/top/
 

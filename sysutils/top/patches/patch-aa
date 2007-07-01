@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.9 2006/06/01 21:55:28 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2007/07/01 22:43:05 tnn Exp $
 
---- commands.c.orig	2006-06-01 21:29:34.000000000 +0000
+--- commands.c.orig	2007-04-20 15:31:18.000000000 +0200
 +++ commands.c
 @@ -32,8 +32,6 @@
- #include "version.h"
  #include "machine.h"
+ #include "help.h"
  
 -extern int  errno;
 -
