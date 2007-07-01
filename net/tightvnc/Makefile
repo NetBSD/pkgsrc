@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/07/01 00:13:31 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2007/07/01 00:25:07 tnn Exp $
 #
 
 DISTNAME=		tightvnc-1.3.9
@@ -30,7 +30,7 @@ _WRAP_EXTRA_ARGS.CC+=	-DDDXTIME -D_XSERVER64 -DGCCUSESGAS
 .endif
 
 .if ${X11_TYPE} == "modular"
-DEPENDS=		rgb>=1.0.1:../../x11/rgb
+DEPENDS+=		rgb>=1.0.1:../../x11/rgb
 RGBPATH=		${PREFIX}/share/X11/rgb
 .else
 RGBPATH=		${X11BASE}/lib/X11/rgb
@@ -46,8 +46,8 @@ SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
 REPLACE_PERL=		vncserver
 
 post-extract:
-	(echo "#define DefaultRGBDatabase ${RGBPATH}";\
-	 echo "#define DefaultFontPath ${FONTPATH}")\
+	(${ECHO} "#define DefaultRGBDatabase ${RGBPATH}";\
+	 ${ECHO} "#define DefaultFontPath ${FONTPATH}")\
 	>> ${WRKSRC}/Xvnc/config/cf/site.def
 
 # We have to frob a few things, and we want our own permissions, so it's easier
