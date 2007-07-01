@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/14 19:37:00 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/01 20:20:24 bouyer Exp $
 #
 
 VERSION=	3.1.0
@@ -13,6 +13,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/Ports/xen/
 COMMENT=	Xen3 Kernel
 CONFLICTS=	xenkernel30-*
+
+ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
 
 WRKSRC=		${WRKDIR}/dist
 
