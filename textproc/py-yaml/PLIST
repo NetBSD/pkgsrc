@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/02 10:05:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/01 00:06:50 wiz Exp $
 ${PYSITELIB}/yaml/__init__.py
 ${PYSITELIB}/yaml/__init__.pyc
 ${PYSITELIB}/yaml/__init__.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/yaml/composer.pyo
 ${PYSITELIB}/yaml/constructor.py
 ${PYSITELIB}/yaml/constructor.pyc
 ${PYSITELIB}/yaml/constructor.pyo
+${PYSITELIB}/yaml/cyaml.py
+${PYSITELIB}/yaml/cyaml.pyc
+${PYSITELIB}/yaml/cyaml.pyo
 ${PYSITELIB}/yaml/dumper.py
 ${PYSITELIB}/yaml/dumper.pyc
 ${PYSITELIB}/yaml/dumper.pyo
