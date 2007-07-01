@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/02/09 20:10:50 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2007/07/01 15:50:01 heinz Exp $
 
 DISTNAME=	faad2-2.0
 PKGREVISION=	9
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.audiocoding.com/
 COMMENT=	AAC decoding library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Dolby doesn't allow binary distributions
 NO_BIN_ON_FTP=	${RESTRICTED}
