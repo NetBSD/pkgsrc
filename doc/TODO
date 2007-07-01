@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6453 2007/07/01 00:34:22 wiz Exp $
+$NetBSD: TODO,v 1.6454 2007/07/01 08:57:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -223,8 +223,9 @@ Suggested package updates
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
 	o GridSim-3.3
+	o Mesa-7.0
 	o PAM-0.99.7.1
-	o R-2.5.0
+	o R-2.5.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-ISwR-1.0.6
@@ -278,8 +279,9 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-perl-0.3.12 [called just amavis]
+	o amavisd-new-2.5.2
 	o amaya-9.54
-	o anjuta-2.1.3
+	o anjuta-2.2.0
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
@@ -353,6 +355,7 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
+	o cdrtools-2.01.01.28
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cgdb-0.6.4
@@ -373,7 +376,7 @@ Suggested package updates
 	o coreutils-6.9
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
-	o courier-mta-0.54.2
+	o courier-mta-0.56
 	o cpio-2.8
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -385,6 +388,7 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
+	o curl-7.16.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cweb-3.64a
 	o cxref-1.6b
@@ -407,6 +411,7 @@ Suggested package updates
 	o devtodo-0.1.19
 	o dhid-5.3
 	o diction-1.10
+	o digikam-0.9.2
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.7.0
@@ -516,13 +521,12 @@ Suggested package updates
 	o glade-3.3.0
 	o glchess-1.0.5
 	o glibmm-2.12.10
-	o glpk-4.17
 	o gmime-2.2.9
 	o gmp3info-0.8.5a
 	o gmpc-0.15.1
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-build-0.1.6
+	o gnome-build-0.1.7
 	o gnome-games-2.18.2.1
 	o gnome-mag-0.14.5
 	o gnome-screensaver-2.18.2
@@ -555,6 +559,7 @@ Suggested package updates
 	o gourmet-0.13.3
 	o gpaint-0.3.1
 	o gperf-3.0.3
+	o gperiodic-2.0.9
 	o gpsdrive-2.09
 	o gq-1.2.0
 	o grace-5.1.21
@@ -564,13 +569,14 @@ Suggested package updates
 	o grhino-0.16.0
 	o gri-2.12.8
 	o gsasl-0.2.18
+	o gsed-4.1.6
 	o gsharutils-4.6.3
 	o gsm-1.0.12
 	o gss-0.21
 	o gst-plugins0.10-good-0.10.6
 	o gtar-1.17
 	o gtar-base-1.17
-	o gthumb-2.10.4
+	o gthumb-2.10.5
 	o gtick-0.3.13
 	o gtk-systrace-20030623
 	o gtk2-engines-2.10.2
@@ -709,8 +715,10 @@ Suggested package updates
 	o libstatgrab-0.14
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
+	o libtool-1.5.24
 	o libxml++-2.18.1
 	o libxml++2-2.18.0
+	o libxml2-2.6.29
 	o licq-1.3.4
 	o licq-core-1.3.0
 	o lilypond-2.10.20
@@ -729,6 +737,7 @@ Suggested package updates
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
+	o mail-notification-4.1
 	o mailfront-1.10 [pkg/34765]
 	o mailscanner-4.54.6
 	o maketool-0.8.4
@@ -740,6 +749,7 @@ Suggested package updates
 	o mathomatic-12.7.3
 	o md-whois-4.7.20
 	o memtestplus-1.70
+	o mercurial-0.9.4
 	o mergeant-0.66
 	o mesure-0.7.2
 	o metacity-2.18.5
@@ -824,6 +834,7 @@ Suggested package updates
 	o openldap-2.3.35
 	o openldap-client-2.3.35
 	o openmortal-0.7.1
+	o openmotif-2.3
 	o openpam-20050616
 	o openssl-0.9.8e
 	o openttd-0.5.2
@@ -1114,9 +1125,9 @@ Suggested package updates
 	o shorten-3.6.1
 	o siag-3.6.1
 	o sign-1.0.7
-	o silc-client-1.1
+	o silc-client-1.1.1
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
-	o silc-toolkit-1.1
+	o silc-toolkit-1.1.1
 	o simh-3.7.0
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
@@ -1152,9 +1163,11 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
+	o sunbird-0.5
 	o suse_base-10.2
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
+	o sylpheed-2.4.3
 	o sylpheed-claws-2.9.2 [now claws-mail]
 	o sympa-5.3
 	o sysinfo-4.2.2
@@ -1220,7 +1233,7 @@ Suggested package updates
 	o vmware-5.5
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vobcopy-1.0.1
+	o vobcopy-1.0.2
 	o vp-1.6
 	o vsftpd-2.0.5
 	o vte-0.16.6
@@ -1242,7 +1255,7 @@ Suggested package updates
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9b
 	o wxGTK-2.8.4
-	o wxRemind-0.9.5
+	o wxRemind-0.9.10
 	o x11vnc-0.9.2
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
@@ -1252,6 +1265,7 @@ Suggested package updates
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
 	o xcircuit-3.6.85
+	o xcompmgr-1.1.3
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
@@ -1298,7 +1312,7 @@ Suggested package updates
 	o xscreensaver-5.02
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-226
+	o xterm-227
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
@@ -1314,7 +1328,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.34
+	o zile-2.2.36
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.10.3
