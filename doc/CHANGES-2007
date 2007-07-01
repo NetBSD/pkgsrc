@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1480 2007/07/01 12:38:37 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.1481 2007/07/01 15:57:12 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2758,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.40 [adam 2007-07-01]
 	Updated games/scummvm to 0.10.0 [adam 2007-07-01]
 	Added devel/stgit version 0.12.1 [dmcmahill 2007-07-01]
+	Updated net/httping to 1.2.3 [adrianp 2007-07-01]
