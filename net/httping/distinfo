@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/04/09 09:49:47 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2007/07/01 15:56:08 adrianp Exp $
 
-SHA1 (httping-1.2.2.tgz) = 7e8787089db5d9d7f9ab36b1bf57bd2338821832
-RMD160 (httping-1.2.2.tgz) = d0a24fcd882bccc9f74be7c6200216f10f09117f
-Size (httping-1.2.2.tgz) = 13026 bytes
+SHA1 (httping-1.2.3.tgz) = 06042be0f1e3d602e0483ecf621c24bec2ada24c
+RMD160 (httping-1.2.3.tgz) = 58df5bf96689cb4e16df88e6ac9da7ffff6c8779
+Size (httping-1.2.3.tgz) = 13082 bytes
