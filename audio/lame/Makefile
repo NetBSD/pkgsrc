@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/07/01 15:51:33 heinz Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -14,6 +14,7 @@ VERS=		3.97
 
 LICENSE=	lame-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
