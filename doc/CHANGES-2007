@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1469 2007/06/30 15:57:00 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1470 2007/07/01 00:07:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated geography/postgresql81-postgis to 1.2.1nb1 [joerg 2007-06-29]
 	Updated textproc/postgresql-autodoc to 1.30nb1 [joerg 2007-06-29]
 	Updated math/R-ISwR to 1.0.6 [joerg 2007-06-30]
+	Updated textproc/py-yaml to 3.05 [wiz 2007-07-01]
