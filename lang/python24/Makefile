@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/06/15 21:08:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2007/07/01 00:10:18 adrianp Exp $
 
 DISTNAME=	Python-2.4.4
 PKGNAME=	python24-2.4.4
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PRIVILEGED_STAGE+=	clean
 
 # Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
@@ -42,6 +43,10 @@ PLIST_SRC=	${.CURDIR}/../../lang/python24/PLIST.common
 PLIST_SRC+=	${.CURDIR}/../../lang/python24/PLIST.${OPSYS}
 .endif
 PLIST_SRC+=	${.CURDIR}/../../lang/python24/PLIST.common_end
+
+.if ${OPSYS} == "NetBSD"
+PRIVILEGED_STAGE+=	clean
+.endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
 PY_PLATNAME=	${LOWER_OPSYS}
