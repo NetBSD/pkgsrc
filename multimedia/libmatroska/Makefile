@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/01 20:23:19 heinz Exp $
 #
 
 DISTNAME=	libmatroska-0.8.0
@@ -11,6 +11,7 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.matroska.org/
 COMMENT=	Extensible open standard Audio/Video container format
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
