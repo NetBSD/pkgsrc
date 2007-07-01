@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/09 00:17:06 chris Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/01 11:59:01 chris Exp $
 
---- configure.orig	2004-02-07 22:39:42.000000000 +0000
-+++ configure	2004-02-07 22:39:57.000000000 +0000
-@@ -3192,7 +3192,7 @@
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lmusicbrainz -ldl $LIBS"
-+LIBS="-lmusicbrainz $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
- #include "confdefs.h"
+--- configure.in.orig	2007-07-01 12:45:08.000000000 +0100
++++ configure.in
+@@ -50,7 +50,7 @@ AC_CHECK_LIB(musicbrainz, mb_GetVersion,
+              echo "*  http://www.musicbrainz.org/download " 
+              echo "*"
+              AC_MSG_ERROR("Cannot build. Stop.")
+-             ,-ldl)
++             ,)
+ 
+ AC_TRY_RUN([
+ #include <musicbrainz/mb_c.h>
