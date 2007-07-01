@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2007/02/26 11:22:28 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2007/07/01 10:12:02 adam Exp $
 
-DISTNAME=	scummvm-0.9.1
-PKGREVISION=	3
+DISTNAME=	scummvm-0.10.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,8 +13,8 @@ USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-agi
 
 UNLIMIT_RESOURCES=	datasize
 
