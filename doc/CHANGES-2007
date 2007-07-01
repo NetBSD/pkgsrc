@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1481 2007/07/01 15:57:12 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1482 2007/07/01 20:16:31 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2759,3 +2759,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/scummvm to 0.10.0 [adam 2007-07-01]
 	Added devel/stgit version 0.12.1 [dmcmahill 2007-07-01]
 	Updated net/httping to 1.2.3 [adrianp 2007-07-01]
+	Updated www/p5-WWW-Mechanize to 1.30 [heinz 2007-07-01]
+	Updated misc/p5-Locale-Maketext-Lexicon to 0.64 [heinz 2007-07-01]
