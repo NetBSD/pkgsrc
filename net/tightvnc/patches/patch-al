@@ -1,17 +1,13 @@
-$NetBSD: patch-al,v 1.2 2007/06/17 20:58:49 tnn Exp $
+$NetBSD: patch-al,v 1.3 2007/07/01 00:13:32 tnn Exp $
 
---- vncserver.orig	2007-04-26 12:57:06.000000000 +0200
+--- vncserver.orig	2007-06-30 23:05:23.000000000 +0200
 +++ vncserver
-@@ -42,10 +42,10 @@ $fontPath = "unix/:7100";
+@@ -38,7 +38,7 @@ $depth = 24;
+ $desktopName = "X";
+ $vncClasses = "/usr/local/vnc/classes";
+ $vncUserDir = "$ENV{HOME}/.vnc";
+-$fontPath = "unix/:7100";
++#$fontPath = "unix/:7100";
  $authType = "-rfbauth $vncUserDir/passwd";
  
  # Here is another example of setting the font path:
--# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
-+$fontPath = "/usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
- 
- # X colors database path is optional, uncomment and edit to use:
--# $colorPath = "/usr/lib/X11/rgb";
-+$colorPath = "/usr/X11R6/lib/X11/rgb";
- 
- # You might wish to make your vnc directory under /tmp, to make sure
- # passwords are always kept on the local filesystem. To do that, just

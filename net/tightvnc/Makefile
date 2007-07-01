@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/06/17 20:58:49 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2007/07/01 00:13:31 tnn Exp $
 #
 
 DISTNAME=		tightvnc-1.3.9
+PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
@@ -28,6 +29,27 @@ BUILD_TARGET=		World
 _WRAP_EXTRA_ARGS.CC+=	-DDDXTIME -D_XSERVER64 -DGCCUSESGAS
 .endif
 
+.if ${X11_TYPE} == "modular"
+DEPENDS=		rgb>=1.0.1:../../x11/rgb
+RGBPATH=		${PREFIX}/share/X11/rgb
+.else
+RGBPATH=		${X11BASE}/lib/X11/rgb
+.endif
+FONTPATH=		${X11BASE}/lib/X11/fonts/misc,${X11BASE}/lib/X11/fonts/75dpi
+
+SUBST_CLASSES+=		hpath
+SUBST_STAGE.hpath=	pre-configure
+SUBST_MESSAGE.hpath=	fixing hardcoded paths
+SUBST_FILES.hpath=	vncserver
+SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
+
+REPLACE_PERL=		vncserver
+
+post-extract:
+	(echo "#define DefaultRGBDatabase ${RGBPATH}";\
+	 echo "#define DefaultFontPath ${FONTPATH}")\
+	>> ${WRKSRC}/Xvnc/config/cf/site.def
+
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
 post-install:
@@ -43,11 +65,7 @@ post-install:
 	    ${PREFIX}/bin/vncpasswd
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
 	    ${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
-	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
-		-e 's|/usr/bin/perl|${PERL5}|g' \
-		< ${WRKSRC}/vncserver \
-		> ${WRKSRC}/vncserver.local
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${PREFIX}/bin/vncserver
 	${INSTALL_MAN} ${WRKSRC}/vncserver.man \
 	    ${PREFIX}/${PKGMANDIR}/man1/vncserver.1
 
