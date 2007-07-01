@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1483 2007/07/01 20:21:33 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1484 2007/07/01 22:45:58 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/httping to 1.2.3 [adrianp 2007-07-01]
 	Updated www/p5-WWW-Mechanize to 1.30 [heinz 2007-07-01]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.64 [heinz 2007-07-01]
+	Updated sysutils/top to 3.6.1 [tnn 2007-07-01]
