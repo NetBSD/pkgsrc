@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/16 00:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/01 15:47:54 heinz Exp $
 
 DISTNAME=		mpeg4ip-1.5.0.1
 PKGNAME=		libmp4v2-1.5.0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mpeg4ip.sourceforge.net/
 COMMENT=		libmp4v2 from mpeg4ip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		mpeg4ip<1.5.0.1
 
