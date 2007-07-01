@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1479 2007/07/01 10:12:58 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1480 2007/07/01 12:38:37 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2757,3 +2757,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/fontforge to 20070607 [adam 2007-07-01]
 	Updated emulators/wine to 0.9.40 [adam 2007-07-01]
 	Updated games/scummvm to 0.10.0 [adam 2007-07-01]
+	Added devel/stgit version 0.12.1 [dmcmahill 2007-07-01]
