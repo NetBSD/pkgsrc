@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1475 2007/07/01 07:56:05 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1476 2007/07/01 09:04:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2752,3 +2752,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tightvnc to 1.3.9nb1 [tnn 2007-07-01]
 	Added net/solaris-tap version 20070625 [tnn 2007-07-01]
 	Updated graphics/gd to 2.0.35 [adam 2007-07-01]
+	Updated mail/sylpheed to 2.4.3 [xtraeme 2007-07-01]
