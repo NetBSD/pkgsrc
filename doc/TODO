@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6456 2007/07/01 09:07:02 adam Exp $
+$NetBSD: TODO,v 1.6457 2007/07/01 10:12:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -1114,7 +1114,6 @@ Suggested package updates
 	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o scummvm-0.10.0
 	o sendfile-20010424
 	o ser-0.9.6
 	o sharity-3.3
