@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1477 2007/07/01 09:07:02 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1478 2007/07/01 10:05:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed to 2.4.3 [xtraeme 2007-07-01]
 	Updated math/glpk to 4.18 [adam 2007-07-01]
 	Updated fonts/fontforge to 20070607 [adam 2007-07-01]
+	Updated emulators/wine to 0.9.40 [adam 2007-07-01]
