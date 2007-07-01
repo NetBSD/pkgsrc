@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/06/21 21:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/07/01 01:11:38 tnn Exp $
 #
 
 DISTNAME=	openvpn-2.1_rc4
@@ -38,6 +38,8 @@ INSTALLATION_DIRS=	${DATADIR}/easy-rsa	${EGDIR}/config		\
 			${DOCDIR}		${EGDIR}/keys		\
 						${EGDIR}/scripts
 
+.include "../../mk/bsd.prefs.mk"
+
 # OpenVPN 2.x has a shared module "plugin" architecture that allows
 # inserting callbacks into the server for various tasks.
 #
@@ -47,6 +49,9 @@ DL_AUTO_VARS=		yes
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.if ${OPSYS} == "SunOS"
+.include "../../net/solaris-tap/buildlink3.mk"
+.endif
 
 SUBST_CLASSES+=		pkitool
 SUBST_STAGE.pkitool=	post-build
