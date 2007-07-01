@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6452 2007/07/01 00:07:41 wiz Exp $
+$NetBSD: TODO,v 1.6453 2007/07/01 00:34:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -277,7 +277,6 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
-	o amarok-1.4.6
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-9.54
 	o anjuta-2.1.3
