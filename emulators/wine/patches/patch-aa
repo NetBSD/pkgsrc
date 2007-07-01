@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.27 2007/03/17 23:07:58 adam Exp $
+$NetBSD: patch-aa,v 1.28 2007/07/01 10:04:26 adam Exp $
 
---- Make.rules.in.orig	2007-03-16 17:40:46.000000000 +0100
+--- Make.rules.in.orig	2007-06-29 19:36:20.000000000 +0200
 +++ Make.rules.in
-@@ -118,7 +118,7 @@ CLEAN_TARGETS = $(IDL_GEN_C_SRCS) $(IDL_
+@@ -119,7 +119,7 @@ CLEAN_TARGETS = $(IDL_GEN_C_SRCS) $(IDL_
                  $(BISON_SRCS:.y=.tab.c) $(BISON_SRCS:.y=.tab.h) $(LEX_SRCS:.l=.yy.c) \
                  $(MC_SRCS:.mc=.mc.rc) $(RC_SRCS:.rc=.res) $(RC_SRCS16:.rc=.res)
  
