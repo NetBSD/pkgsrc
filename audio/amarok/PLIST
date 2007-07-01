@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/02/08 18:04:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/07/01 00:33:52 wiz Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -44,13 +44,11 @@ share/doc/kde/HTML/de/amarok/config_playback.png
 share/doc/kde/HTML/de/amarok/config_scrobbler.png
 share/doc/kde/HTML/de/amarok/context.png
 share/doc/kde/HTML/de/amarok/coverman.png
-share/doc/kde/HTML/de/amarok/develop.docbook
 share/doc/kde/HTML/de/amarok/dynamic_bar.png
 share/doc/kde/HTML/de/amarok/dynamic_settings.png
 share/doc/kde/HTML/de/amarok/equalizer.png
 share/doc/kde/HTML/de/amarok/faq.docbook
 share/doc/kde/HTML/de/amarok/file_browser.png
-share/doc/kde/HTML/de/amarok/hidden.docbook
 share/doc/kde/HTML/de/amarok/index.cache.bz2
 share/doc/kde/HTML/de/amarok/index.docbook
 share/doc/kde/HTML/de/amarok/logo.png
@@ -250,6 +248,7 @@ share/doc/kde/HTML/nl/amarok/context.png
 share/doc/kde/HTML/nl/amarok/coverman.png
 share/doc/kde/HTML/nl/amarok/develop.docbook
 share/doc/kde/HTML/nl/amarok/dynamic_bar.png
+share/doc/kde/HTML/nl/amarok/dynamic_settings.png
 share/doc/kde/HTML/nl/amarok/equalizer.png
 share/doc/kde/HTML/nl/amarok/faq.docbook
 share/doc/kde/HTML/nl/amarok/feature_guide.docbook
@@ -257,8 +256,10 @@ share/doc/kde/HTML/nl/amarok/file_browser.png
 share/doc/kde/HTML/nl/amarok/hidden.docbook
 share/doc/kde/HTML/nl/amarok/index.cache.bz2
 share/doc/kde/HTML/nl/amarok/index.docbook
+share/doc/kde/HTML/nl/amarok/logo.png
 share/doc/kde/HTML/nl/amarok/media_device.png
 share/doc/kde/HTML/nl/amarok/menubar.png
+share/doc/kde/HTML/nl/amarok/musicbrainz.png
 share/doc/kde/HTML/nl/amarok/pl_browser.png
 share/doc/kde/HTML/nl/amarok/pl_tip1.png
 share/doc/kde/HTML/nl/amarok/play_list.png
@@ -460,6 +461,7 @@ share/kde/apps/amarok/icons/crystalsvg/22x22/actions/dynamic.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/player_playlist_2.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/random.png
 share/kde/apps/amarok/icons/crystalsvg/22x22/actions/repeat_playlist.png
+share/kde/apps/amarok/icons/crystalsvg/22x22/actions/visualizations.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/dynamic.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/podcast.png
 share/kde/apps/amarok/icons/crystalsvg/64x64/actions/podcast_new.png
@@ -898,8 +900,10 @@ share/kde/apps/amarok/scripts/lyrics_lyrc/lyrics_lyrc.rb
 share/kde/apps/amarok/scripts/lyrics_lyrc/lyrics_lyrc.spec
 share/kde/apps/amarok/scripts/playlist2html/Playlist.py
 share/kde/apps/amarok/scripts/playlist2html/PlaylistServer.py
+share/kde/apps/amarok/scripts/playlist2html/PlaylistServer.spec
 share/kde/apps/amarok/scripts/playlist2html/README
 share/kde/apps/amarok/scripts/playlist2html/playlist2html.py
+share/kde/apps/amarok/scripts/playlist2html/playlist2html.spec
 share/kde/apps/amarok/scripts/ruby_debug/debug.rb
 share/kde/apps/amarok/scripts/score_default/COPYING
 share/kde/apps/amarok/scripts/score_default/README
@@ -962,7 +966,9 @@ share/kde/servicetypes/amarok_plugin.desktop
 share/locale/af/LC_MESSAGES/amarok.mo
 share/locale/ar/LC_MESSAGES/amarok.mo
 share/locale/az/LC_MESSAGES/amarok.mo
+share/locale/be/LC_MESSAGES/amarok.mo
 share/locale/bg/LC_MESSAGES/amarok.mo
+share/locale/bn/LC_MESSAGES/amarok.mo
 share/locale/br/LC_MESSAGES/amarok.mo
 share/locale/ca/LC_MESSAGES/amarok.mo
 share/locale/cs/LC_MESSAGES/amarok.mo
@@ -971,8 +977,10 @@ share/locale/da/LC_MESSAGES/amarok.mo
 share/locale/de/LC_MESSAGES/amarok.mo
 share/locale/el/LC_MESSAGES/amarok.mo
 share/locale/en_GB/LC_MESSAGES/amarok.mo
+share/locale/eo/LC_MESSAGES/amarok.mo
 share/locale/es/LC_MESSAGES/amarok.mo
 share/locale/et/LC_MESSAGES/amarok.mo
+share/locale/eu/LC_MESSAGES/amarok.mo
 share/locale/fa/LC_MESSAGES/amarok.mo
 share/locale/fi/LC_MESSAGES/amarok.mo
 share/locale/fr/LC_MESSAGES/amarok.mo
@@ -981,15 +989,19 @@ share/locale/gl/LC_MESSAGES/amarok.mo
 share/locale/he/LC_MESSAGES/amarok.mo
 share/locale/hi/LC_MESSAGES/amarok.mo
 share/locale/hu/LC_MESSAGES/amarok.mo
+share/locale/id/LC_MESSAGES/amarok.mo
 share/locale/is/LC_MESSAGES/amarok.mo
 share/locale/it/LC_MESSAGES/amarok.mo
 share/locale/ja/LC_MESSAGES/amarok.mo
-share/locale/ka/LC_MESSAGES/amarok.mo
 share/locale/km/LC_MESSAGES/amarok.mo
 share/locale/ko/LC_MESSAGES/amarok.mo
+share/locale/ku/LC_MESSAGES/amarok.mo
+share/locale/lo/LC_MESSAGES/amarok.mo
 share/locale/lt/LC_MESSAGES/amarok.mo
+share/locale/mk/LC_MESSAGES/amarok.mo
 share/locale/ms/LC_MESSAGES/amarok.mo
 share/locale/nb/LC_MESSAGES/amarok.mo
+share/locale/nds/LC_MESSAGES/amarok.mo
 share/locale/nl/LC_MESSAGES/amarok.mo
 share/locale/nn/LC_MESSAGES/amarok.mo
 share/locale/pa/LC_MESSAGES/amarok.mo
@@ -1005,6 +1017,7 @@ share/locale/sl/LC_MESSAGES/amarok.mo
 share/locale/sq/LC_MESSAGES/amarok.mo
 share/locale/sr/LC_MESSAGES/amarok.mo
 share/locale/sr@Latn/LC_MESSAGES/amarok.mo
+share/locale/ss/LC_MESSAGES/amarok.mo
 share/locale/sv/LC_MESSAGES/amarok.mo
 share/locale/ta/LC_MESSAGES/amarok.mo
 share/locale/tg/LC_MESSAGES/amarok.mo
