@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2007/04/13 21:04:24 adam Exp $
+$NetBSD: patch-ae,v 1.6 2007/07/01 09:05:14 adam Exp $
 
---- configure.orig	2007-02-07 22:26:57.000000000 +0100
+--- configure.orig	2007-04-30 03:53:16.000000000 +0200
 +++ configure
-@@ -24253,7 +24253,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+@@ -24454,7 +24454,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >po/Makefile.in
   echo 'prefix = @prefix@' >> po/Makefile.in
