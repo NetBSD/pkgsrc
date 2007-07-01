@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1471 2007/07/01 00:24:26 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1472 2007/07/01 00:26:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2747,3 +2747,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/R-ISwR to 1.0.6 [joerg 2007-06-30]
 	Updated textproc/py-yaml to 3.05 [wiz 2007-07-01]
 	Updated devel/fromcvs to 0.0.0.102 [wiz 2007-07-01]
+	Added sysutils/cdrkit version 1.1.6 [wiz 2007-07-01]
