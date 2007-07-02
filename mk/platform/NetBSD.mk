@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.21 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.22 2007/07/02 14:03:40 joerg Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -10,7 +10,6 @@ ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 

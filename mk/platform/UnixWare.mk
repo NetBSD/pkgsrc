@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.23 2006/10/06 14:28:46 joerg Exp $
+# $NetBSD: UnixWare.mk,v 1.24 2007/07/02 14:03:41 joerg Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -8,7 +8,6 @@ PKGLOCALEDIR?=	lib
 PS?=		/usr/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
 
