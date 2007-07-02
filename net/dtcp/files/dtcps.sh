@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: /repoman/r/pcvs/ports/net/dtcp/files/dtcps.sh,v 1.1 2004/04/19 18:40:52 ume Exp $
-# $NetBSD: dtcps.sh,v 1.3 2005/02/01 14:26:14 hamajima Exp $
+# $NetBSD: dtcps.sh,v 1.4 2007/07/02 09:46:51 joerg Exp $
 #
 
 # PROVIDE: dtcps
