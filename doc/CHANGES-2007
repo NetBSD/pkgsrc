@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1488 2007/07/02 10:14:48 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1489 2007/07/02 13:24:28 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.1.18 [martti 2007-07-02]
 	Updated mail/alpine to 0.999 [abs 2007-07-02]
 	Updated databases/p5-gdbm to 1.08 [obache 2007-07-02]
+	Updated audio/flac123 to 0.0.10 [lkundrak 2007-07-02]
