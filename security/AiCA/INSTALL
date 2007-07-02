@@ -1,5 +1,5 @@
 #
-# $NetBSD
+# $NetBSD: INSTALL,v 1.2 2007/07/02 08:36:12 joerg Exp $
 
 case ${STAGE} in
 POST-INSTALL)
