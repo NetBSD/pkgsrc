@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/06/24 14:32:13 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2007/07/02 07:19:03 adam Exp $
 
---- makefile.glb.orig	2005-01-29 20:13:32.000000000 +0100
+--- makefile.glb.orig	2007-06-28 10:07:11.000000000 +0200
 +++ makefile.glb
-@@ -2,7 +2,7 @@
- MY_HOME=../../../myWindows
+@@ -1,6 +1,6 @@
  
  RM=rm -f
 -CFLAGS=-c \
