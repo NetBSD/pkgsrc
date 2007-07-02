@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2006/12/27 15:26:35 wulf Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/07/02 16:20:35 wulf Exp $
 bin/xlog
 man/man1/xlog.1
-share/application-registry/xlog.applications
 share/applications/xlog.desktop
-share/applnk/Applications/xlog.desktop
 share/locale/cs/LC_MESSAGES/xlog.mo
 share/locale/da/LC_MESSAGES/xlog.mo
 share/locale/es/LC_MESSAGES/xlog.mo
@@ -12,11 +10,9 @@ share/locale/nl/LC_MESSAGES/xlog.mo
 share/locale/pl/LC_MESSAGES/xlog.mo
 share/locale/sk/LC_MESSAGES/xlog.mo
 share/locale/sv/LC_MESSAGES/xlog.mo
-share/mime-info/xlog.keys
-share/mime-info/xlog.mime
 share/mime/packages/xlog.xml
-share/mimelnk/text/x-xlog.desktop
 share/pixmaps/gnome-mime-text-x-xlog.png
+share/pixmaps/xlog-icon.png
 share/pixmaps/xlog/cwdaemon.png
 share/pixmaps/xlog/gnome-mime-text-x-xlog.png
 share/pixmaps/xlog/jigsaw.png
@@ -45,12 +41,8 @@ share/xlog/AUTHORS
 share/xlog/BUGS
 share/xlog/ChangeLog
 share/xlog/FAQ
-share/xlog/FAQ.fr
-share/xlog/FAQ.pl
 share/xlog/KEYS
 share/xlog/MANUAL
-share/xlog/MANUAL.fr
-share/xlog/MANUAL.pl
 share/xlog/THANKS
 share/xlog/TODO
 share/xlog/dxcc/cty.dat
@@ -64,8 +56,10 @@ share/xlog/images/xlog-mainwindow.png
 share/xlog/images/xlog-mergelogdialog.png
 share/xlog/images/xlog-newlogdialog.png
 share/xlog/images/xlog-openlogdialog.png
+share/xlog/images/xlog-preferencesdialog-general.png
 share/xlog/images/xlog-preferencesdialog-hamlib.png
 share/xlog/images/xlog-preferencesdialog-info.png
+share/xlog/images/xlog-preferencesdialog-logs.png
 share/xlog/images/xlog-printdialog.png
 share/xlog/images/xlog-scorewindow.png
 share/xlog/images/xlog-workedwindow.png
