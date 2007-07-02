@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/01/14 09:03:09 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2007/07/02 19:21:14 gdt Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		6
@@ -9,6 +9,9 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www-unix.mcs.anl.gov/mpi/mpich1/
 COMMENT=		Free implementation of the Message Passing Interface
+
+# many failures
+MAKE_JOBS_SAFE=		no
 
 .if !exists(/usr/bin/ssh)
 DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
