@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2007/06/15 17:30:43 joerg Exp $
+# $NetBSD: Makefile.common,v 1.67 2007/07/02 20:06:43 tnn Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -26,8 +26,6 @@ CONFIGURE_ARGS+=	-shared -sm -thread \
 			-system-libmng -system-libjpeg \
 			${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
-CONFIGURE_ARGS.SunOS+=	-no-xrender
-OPSYSVARS+=		CONFIGURE_ARGS
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 
