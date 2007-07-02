@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
-#	$NetBSD: Darwin.pkg.dist,v 1.28 2007/02/20 18:57:05 wiz Exp $
+#	$NetBSD: common-dirs.mtree,v 1.1 2007/07/02 14:54:21 joerg Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -851,10 +851,6 @@
                 ..
             ..
             ja
-                LC_MESSAGES
-                ..
-            ..
-            ja_JP
                 LC_MESSAGES
                 ..
             ..
