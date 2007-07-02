@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2007/06/25 23:53:28 tls Exp $
+$NetBSD: patch-ai,v 1.2 2007/07/02 06:04:03 tls Exp $
 
 --- auth/kerb5.c.orig	2005-03-29 23:38:36.000000000 -0500
-+++ auth/kerb5.c	2007-06-25 04:51:20.000000000 -0400
++++ auth/kerb5.c	2007-07-02 01:44:01.000000000 -0400
 @@ -57,7 +57,7 @@
  #ifdef HAVE_HEIMDAL
  # define extract_name(c, p)		krb5_principal_get_comp_string(c, p, 1)
@@ -11,7 +11,13 @@ $NetBSD: patch-ai,v 1.1 2007/06/25 23:53:28 tls Exp $
  #else
  # define extract_name(c, p)		(krb5_princ_component(c, p, 1)->data)
  #endif
-@@ -274,7 +274,6 @@
+@@ -269,12 +269,11 @@
+      * and enctype is currently ignored anyhow.)
+      */
+     if ((error = krb5_kt_read_service_key(sudo_context, NULL, princ, 0,
+-					 ENCTYPE_DES_CBC_MD5, &keyblock))) {
++					 0, &keyblock))) {
+ 	/* Keytab or service key does not exist. */
  	log_error(NO_EXIT,
  		  "%s: host service key not found: %s", auth_name,
  		  error_message(error));
