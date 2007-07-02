@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install-vars.mk,v 1.6 2007/04/19 16:52:03 joerg Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.7 2007/07/02 14:54:10 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -11,10 +11,6 @@
 #	be used to determine which directories need to be created before
 #	the "real" installation should start.
 #
-
-.if defined(USE_MTREE)
-USE_TOOLS+=	mtree:bootstrap
-.endif
 
 # If MANZ is defined, then we want the final man pages to be compressed.
 # If MANZ is not defined, then we want the final man pages to be

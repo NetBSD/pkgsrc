@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.67 2007/05/20 23:33:06 kristerw Exp $
+# $NetBSD: pre-build,v 1.68 2007/07/02 14:54:09 joerg Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -82,7 +82,7 @@ fi
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
 	( cd "$LOCALBASE" && tar cf /tmp/$$.tar \
-		sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create       \
+		sbin/pkg_add sbin/pkg_admin sbin/pkg_create       \
 		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm    \
 		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk   \
 		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk               \
@@ -104,8 +104,8 @@ if [ x"$BMAKE" = x"bmake" ]; then
 		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1           \
 		man/man1/pkg_admin.1 man/man1/pkg_create.1                   \
 		man/man1/pkg_delete.1 man/man1/pkg_info.1                    \
-		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat8/mtree.0     \
-		man/man8/mtree.8 man/cat7/packages.0 etc/mk.conf )
+		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat7/packages.0  \
+		etc/mk.conf )
 fi
 
 #
@@ -262,7 +262,7 @@ done
 if [ x"$BMAKE" = x"bmake" ]; then
 	for pkg in archivers/pax devel/bmake devel/mk-files lang/nawk \
 	    net/tnftp pkgtools/bootstrap-mk-files pkgtools/bootstrap-extras \
-	    pkgtools/tnftp pkgtools/mtree pkgtools/pax pkgtools/pkg_install \
+	    pkgtools/tnftp pkgtools/pax pkgtools/pkg_install \
 	    sysutils/install-sh textproc/nbsed; do
 		mkdir -p "${BULKFILESDIR}/${pkg}"
 		echo "Don't blow away bootstrap-pkgsrc stuff!" \
