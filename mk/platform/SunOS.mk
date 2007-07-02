@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.28 2006/10/06 14:31:32 joerg Exp $
+# $NetBSD: SunOS.mk,v 1.29 2007/07/02 14:03:41 joerg Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -8,7 +8,6 @@ PKGLOCALEDIR?=	lib
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
 

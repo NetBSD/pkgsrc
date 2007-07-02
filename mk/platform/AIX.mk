@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.25 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: AIX.mk,v 1.26 2007/07/02 14:03:34 joerg Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -9,7 +9,6 @@ PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 # AIX strip fails too easily.  Use a wrapper script instead
 .if exists(${LOCALBASE}/bin/strip)
 STRIP?=     ${LOCALBASE}/bin/strip
