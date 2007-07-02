@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.51 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: Interix.mk,v 1.52 2007/07/02 14:03:40 joerg Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -83,7 +83,6 @@ IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
-RSH?=		/usr/bin/rsh
 SU?=		/bin/su
 TYPE?=		type				# Shell builtin
 

@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.24 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: OpenBSD.mk,v 1.25 2007/07/02 14:03:41 joerg Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -8,7 +8,6 @@ PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 

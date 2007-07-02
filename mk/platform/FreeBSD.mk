@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.19 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.20 2007/07/02 14:03:40 joerg Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -8,7 +8,6 @@ IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 PW?=		/usr/sbin/pw
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
