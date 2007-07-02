@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/11/03 21:29:45 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/02 09:44:39 joerg Exp $
 #
 
 DISTNAME=	screws-0.56
@@ -22,9 +22,9 @@ MAKE_ENV+=	PERL=${PERL5:Q}
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/default.conf ${PKG_SYSCONFDIR}/screws.conf
-FILESDIR=	${WRKSRC}/src/Utils/files
 
-RCD_SCRIPTS=	screws
+RCD_SCRIPTS=		screws
+RCD_SCRIPT_SRC.screws=	${WRKSRC}/src/Utils/files/screws.sh
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
