@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.27 2006/11/18 07:48:06 rillig Exp $
+# $NetBSD: Linux.mk,v 1.28 2007/07/02 14:03:40 joerg Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -9,7 +9,6 @@ PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 SU?=		/bin/su
 TYPE?=		type			# Shell builtin
 
