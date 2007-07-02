@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.30 2007/07/02 14:03:38 joerg Exp $
+# $NetBSD: DragonFly.mk,v 1.31 2007/07/02 14:06:22 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -14,17 +14,13 @@ TYPE?=		type				# Shell builtin
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
-.if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
-.else
-EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
-.endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
-ROOT_GROUP?=	wheel
+ROOT_GROUP?=		wheel
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
