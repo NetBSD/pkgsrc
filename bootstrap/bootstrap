@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.99 2007/07/01 23:27:43 tnn Exp $
+# $NetBSD: bootstrap,v 1.100 2007/07/02 14:59:19 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -327,24 +327,20 @@ case "$opsys" in
 Darwin)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=no
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
 	;;
 DragonFly)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=no
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog tarprog tar
-	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
 	case `uname -r` in
 	1.1[0-9]*)
@@ -360,7 +356,6 @@ DragonFly)
 FreeBSD)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -370,7 +365,6 @@ FreeBSD)
 HPUX)
 	root_group=sys
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -385,7 +379,6 @@ IRIX*)
 		overpath="/usr/bsd/bin:$overpath"
 	fi
 	root_group=sys
-	need_mtree=yes
 	need_bsd_install=yes
 	need_pax=yes
 	get_abi "IRIX"
@@ -413,7 +406,6 @@ Linux)
 	fi
 	root_group=root
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -423,25 +415,21 @@ Linux)
 NetBSD)
 	root_group=wheel
 	need_pax=no
-	need_mtree=no
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
 	check_prog paxprog pax
 	check_prog tarprog tar
-	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
 	;;
 OpenBSD)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=no
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	check_prog mtreeprog mtree
 	machine_arch=`uname -m`
 	;;
 SunOS)
@@ -450,7 +438,6 @@ SunOS)
 	fi
 	root_group=root
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=no
 	need_awk=yes
 	need_sed=yes
@@ -462,7 +449,6 @@ SunOS)
 AIX)
 	root_group=system
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -484,7 +470,6 @@ Interix)
 	root_user=`id -u`
 	root_group=131616
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -500,7 +485,6 @@ Interix)
 UnixWare)
 	root_group=sys
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=no
 	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
 	need_mkdir=yes
@@ -513,7 +497,6 @@ UnixWare)
 OSF1)
 	root_group=system
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -523,7 +506,6 @@ OSF1)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
 	root_group=wheel
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -537,7 +519,6 @@ esac
 case "$full" in
 yes)
 	need_pax=yes
-	need_mtree=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -850,18 +831,6 @@ yes)	echo_msg "Installing pax"
 	;;
 esac
 
-# bootstrap mtree if necessary
-case "$need_mtree" in
-yes)	echo_msg "Installing mtree"
-	copy_src $pkgsrcdir/pkgtools/mtree/files mtree
-	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && $bmake install)"
-	echo "TOOLS_PLATFORM.mtree?=		$prefix/sbin/mtree" >> ${MKCONF_EXAMPLE}
-	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
-	;;
-*)	pkg_install_args="$pkg_install_args --with-mtree=$mtreeprog"
-	;;
-esac
-
 # bootstrap pkg_install
 echo_msg "Installing pkgtools"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
@@ -918,9 +887,6 @@ yes)	register_package "pkgtools/bootstrap-extras";;
 esac
 case "$need_ftp" in
 yes)	register_package "pkgtools/tnftp";;
-esac
-case "$need_mtree" in
-yes)	register_package "pkgtools/mtree";;
 esac
 case "$need_pax" in
 yes)	register_package "pkgtools/pax";;
