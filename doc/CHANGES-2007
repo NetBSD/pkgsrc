@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1492 2007/07/02 15:31:20 wulf Exp $
+$NetBSD: CHANGES-2007,v 1.1493 2007/07/02 16:22:52 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-gdbm to 1.08 [obache 2007-07-02]
 	Updated audio/flac123 to 0.0.10 [lkundrak 2007-07-02]
 	Updated ham/hamlib to 1.2.6.2 [wulf 2007-07-02]
+	Updated ham/xlog to 1.5 [wulf 2007-07-02]
