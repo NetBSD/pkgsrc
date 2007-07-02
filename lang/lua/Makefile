@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2007/06/15 17:45:37 obache Exp $
+# $NetBSD: Makefile,v 1.34 2007/07/02 13:36:38 joerg Exp $
 
 DISTNAME=	lua-5.1.2
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -24,9 +25,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-MAKE_ENV+=	MYCFLAGS=${CFLAGS:M*:Q}
-MAKE_ENV+=	MYLDFLAGS=${LDFLAGS:M*:Q}\ ${LIBS:M*:Q}
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
+CFLAGS+=	-DLUA_ROOT=\"${PREFIX:Q}/\"
 
 DOCDIR=		${PREFIX}/share/doc/lua
 EGDIR=		${PREFIX}/share/examples/lua
