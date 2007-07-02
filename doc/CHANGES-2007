@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1487 2007/07/02 09:40:01 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1488 2007/07/02 10:14:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2766,3 +2766,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.48 [adam 2007-07-02]
 	Updated editors/vim-share to 7.1.18 [martti 2007-07-02]
 	Updated mail/alpine to 0.999 [abs 2007-07-02]
+	Updated databases/p5-gdbm to 1.08 [obache 2007-07-02]
