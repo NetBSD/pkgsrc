@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2006/03/04 21:29:10 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2007/07/02 10:14:09 obache Exp $
 
-DISTNAME=	perl-5.6.1
-PKGNAME=	p5-gdbm-1.05
+DISTNAME=	perl-5.8.8
+PKGNAME=	p5-gdbm-1.08
 SVR4_PKGNAME=	p5gdm
-PKGREVISION=	4
 CATEGORIES=	databases perl5
-MASTER_SITES+=	ftp://cpan.teleglobe.net/pub/CPAN/src/5.0/maint/ \
-		ftp://perl.secsup.org/pub/perl/src/5.0/maint/ \
-		ftp://ftp.lug.udel.edu/pub/CPAN/src/5.0/maint/ \
-		ftp://ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/ \
-		ftp://ftp.ruhr-uni-bochum.de/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/src/5.0/maint/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Perl interface to gdbm - GNU database manager
