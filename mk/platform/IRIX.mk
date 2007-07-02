@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.28 2006/10/06 14:28:46 joerg Exp $
+# $NetBSD: IRIX.mk,v 1.29 2007/07/02 14:03:40 joerg Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -13,7 +13,6 @@ IMAKEOPTS+=	-DManPath=${PREFIX}/man
 .endif
 PKGLOCALEDIR?=	share
 PS?=		/sbin/ps
-RSH?=		/usr/bsd/rsh
 SU?=		/sbin/su
 TYPE?=		/sbin/type
 

@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.20 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: BSDOS.mk,v 1.21 2007/07/02 14:03:35 joerg Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -13,7 +13,6 @@ PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
 # and remove this comment.
-RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 # sh doesn't have built-in type
 TYPE?=		which
