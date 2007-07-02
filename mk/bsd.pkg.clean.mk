@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.10 2007/07/01 00:06:40 adrianp Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.11 2007/07/02 20:24:27 adrianp Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -27,7 +27,7 @@
 
 CLEANDEPENDS?=	no
 
-.if defined(PRIVILEGED_STAGE) && !empty(PRIVILEGED_STAGE:Mclean)
+.if defined(PRIVILEGED_STAGES) && !empty(PRIVILEGED_STAGES:Mclean)
 _MAKE_CLEAN_AS_ROOT=yes
 .endif
 
