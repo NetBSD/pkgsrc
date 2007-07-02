@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.15 2007/04/30 09:12:54 adam Exp $
+$NetBSD: patch-aa,v 1.16 2007/07/02 07:19:03 adam Exp $
 
---- makefile.machine.orig	2007-04-21 21:01:38.000000000 +0200
+--- makefile.machine.orig	2007-07-01 19:02:13.000000000 +0200
 +++ makefile.machine
-@@ -3,19 +3,19 @@
+@@ -3,20 +3,20 @@
  # LITTLE_ENDIAN and BIG_ENDIAN are already defined by the system headers
  #
  
 -OPTFLAGS=-O
 +OPTFLAGS=
  
--ALLFLAGS=${OPTFLAGS} -s -fPIC \
+-ALLFLAGS=${OPTFLAGS} -s \
 +ALLFLAGS=${OPTFLAGS} -Wall \
      	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE \
  	-DNDEBUG -D_REENTRANT -DENV_UNIX \
@@ -17,9 +17,12 @@ $NetBSD: patch-aa,v 1.15 2007/04/30 09:12:54 adam Exp $
  
 -CXX=g++ $(ALLFLAGS)
 -CC=gcc $(ALLFLAGS)
+-CC_SHARED=-fPIC
+-LINK_SHARED=-fPIC -shared
 +CXX+=$(ALLFLAGS)
 +CC+=$(ALLFLAGS)
- LINK_SHARED=-shared
++CC_SHARED=
++LINK_SHARED=-shared
  
 -LOCAL_LIBS=-lpthread
 -LOCAL_LIBS_DLL=$(LOCAL_LIBS) -ldl
