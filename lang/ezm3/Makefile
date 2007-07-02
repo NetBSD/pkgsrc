@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/07/01 00:07:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/02 20:24:27 adrianp Exp $
 
 DISTNAME=	ezm3-1.2
 PKGREVISION=	2
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 INSTALL_TARGET=		all
 MAKE_ARGS+=		M3OPTIONS="-DBUILD_ALL -DSHIP_ALL"
 PLIST_SUBST+=		TARGET=${TARGET:Q} TARGETDIR=${TARGETDIR:Q}
-PRIVILEGED_STAGE+=	clean
+PRIVILEGED_STAGES+=	clean
 
 # XXX CFLAGS has to be empty, because if it's not, the build
 # XXX process will fail.
