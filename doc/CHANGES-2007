@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1486 2007/07/02 07:49:54 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1487 2007/07/02 09:40:01 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/top to 3.6.1 [tnn 2007-07-01]
 	Updated archivers/p7zip to 4.48 [adam 2007-07-02]
 	Updated editors/vim-share to 7.1.18 [martti 2007-07-02]
+	Updated mail/alpine to 0.999 [abs 2007-07-02]
