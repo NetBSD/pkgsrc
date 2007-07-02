@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/01/25 14:41:31 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/02 09:43:13 joerg Exp $
 
 --- unvis/libunvis.c.orig	2006-01-25 14:33:51.000000000 +0000
 +++ unvis/libunvis.c
-@@ -40,11 +40,6 @@ __RCSID("$NetBSD: unvis.c,v 1.24 2003/08
+@@ -40,11 +40,6
  #endif
  #endif /* LIBC_SCCS and not lint */
  
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.1 2006/01/25 14:41:31 joerg Exp $
  #include <sys/types.h>
  
  #include <assert.h>
-@@ -52,20 +47,11 @@ __RCSID("$NetBSD: unvis.c,v 1.24 2003/08
+@@ -52,20 +47,11
  #include <stdio.h>
  #include <vis.h>
  
