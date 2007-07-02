@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.42 2007/04/19 18:16:36 xtraeme Exp $
+# $NetBSD: install.mk,v 1.43 2007/07/02 14:54:10 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -203,12 +203,9 @@ install-check-umask:
 ### install-makedirs (PRIVATE)
 ######################################################################
 ### install-makedirs is a target to create directories expected to
-### exist prior to installation.  If a package sets INSTALLATION_DIRS,
-### then it's known to pre-create all of the directories that it needs
-### at install-time, so we don't need mtree to do it for us.
+### exist prior to installation.  The package is supposed to create
+### all directories not listed in INSTALLATION_DIRS.
 ###
-_MTREE_FILE?=	${PKGSRCDIR}/mk/platform/${OPSYS}.pkg.dist
-_MTREE_ARGS?=	-U -f ${_MTREE_FILE} -d -e -p
 
 # A shell command that creates the directory ${DESTDIR}${PREFIX}/$$dir
 # with appropriate permissions and ownership.
@@ -229,10 +226,6 @@ _INSTALL_ONE_DIR_CMD= { \
 .PHONY: install-makedirs
 install-makedirs:
 	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}
-.if defined(USE_MTREE)
-	${RUN} [ ! -f ${_MTREE_FILE} ] ||				\
-		${MTREE} ${_MTREE_ARGS} ${DESTDIR}${PREFIX}/
-.endif
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
 	${RUN}								\
