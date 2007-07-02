@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1489 2007/07/02 13:24:28 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1490 2007/07/02 13:30:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2763,6 +2763,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-WWW-Mechanize to 1.30 [heinz 2007-07-01]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.64 [heinz 2007-07-01]
 	Updated sysutils/top to 3.6.1 [tnn 2007-07-01]
+	Updated pkgtools/bootstrap-extras to 20070202 [tnn 2007-07-02]
 	Updated archivers/p7zip to 4.48 [adam 2007-07-02]
 	Updated editors/vim-share to 7.1.18 [martti 2007-07-02]
 	Updated mail/alpine to 0.999 [abs 2007-07-02]
