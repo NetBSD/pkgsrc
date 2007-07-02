@@ -16,9 +16,8 @@
  *          Wolfram Schneider <wosch@FreeBSD.org>
  *          Hiten Pandya <hmp@backplane.com>
  *
- * $FreeBSD: src/usr.bin/top/machine.c,v 1.29.2.2 2001/07/31 20:27:05 tmm Exp $
+ * $NetBSD: m_dragonfly.c,v 1.2 2007/07/02 09:48:24 joerg Exp $
  * $DragonFly: src/usr.bin/top/machine.c,v 1.18 2005/11/14 18:50:18 dillon Exp $
- * $NetBSD: m_dragonfly.c,v 1.1 2006/06/01 21:55:28 joerg Exp $
  */
 
 
