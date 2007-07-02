@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2007/07/01 15:51:33 heinz Exp $
+# $NetBSD: Makefile,v 1.59 2007/07/02 15:03:58 tnn Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -41,7 +41,7 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double -DFLOAT_MAX=DBL_MAX
 .endif
 
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
+.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin" && ${OPSYS} != "Interix"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-nasm
 .endif
