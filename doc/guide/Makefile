@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.28 2007/03/08 16:02:32 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2007/07/02 19:00:01 tnn Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-DISTFILES=		htdocs-share-20070119.tar.gz
+DISTFILES=		htdocs-share-20070702.tar.gz
 
 MAINTAINER=		packages@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/Documentation/pkgsrc/
+HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=		The pkgsrc guide
 
 # To regenerate pkgsrc/doc/pkgsrc.{html,txt} and
-# htdocs/Documentation/pkgsrc, just run "make regen".
+# htdocs/docs/pkgsrc, just run "make regen".
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
@@ -58,7 +58,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 .if !empty(OUTPUTS:Mhtml) || !empty(OUTPUTS:Mhtml-split)
 	${INSTALL_DATA} ${WRKSRC}/*.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/htdocs/NetBSD.css ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/htdocs/global.css ${DOCDIR}
 .endif
 .if !empty(OUTPUTS:Mascii)
 	${INSTALL_DATA} ${WRKSRC}/pkgsrc.txt ${DOCDIR}
@@ -89,7 +89,7 @@ install-doc: build
 
 install-htdocs: build
 	cd ${WRKSRC} && ${CP} pkgsrc.txt pkgsrc.pdf pkgsrc.ps *.html	\
-		${HTDOCSDIR}/Documentation/pkgsrc
+		${HTDOCSDIR}/docs/pkgsrc
 
 .PHONY: regen regen-doc regen-htdocs
 regen: regen-doc regen-htdocs
@@ -103,10 +103,10 @@ regen-doc: build
 
 regen-htdocs: build
 	@${STEP_MSG} "Updating the files in htdocs"
-	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs update
+	cd ${HTDOCSDIR}/docs/pkgsrc && cvs update
 	${MAKE} ${MAKEFLAGS} install-htdocs
 	@${STEP_MSG} "Committing the files in htdocs"
-	cd ${HTDOCSDIR}/Documentation/pkgsrc && cvs commit -m "regen"
+	cd ${HTDOCSDIR}/docs/pkgsrc && cvs commit -m "regen"
 
 do-lint:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} lint
@@ -135,6 +135,6 @@ htdocs-share:
 	cd ${HTDOCSDIR}							\
 	&& pax -wz -f ${.CURDIR}/htdocs-share-${PKGVERSION}.tar.gz	\
 		-s ',^,htdocs/,'					\
-		NetBSD.css share
+		global.css share
 
 .include "../../mk/bsd.pkg.mk"
