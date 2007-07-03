@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1502 2007/07/03 14:54:34 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1503 2007/07/03 15:45:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2780,3 +2780,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/phpmyadmin to 2.10.2 [tron 2007-07-03]
 	Updated security/amavisd-new to 2.5.2 [xtraeme 2007-07-03]
 	Updated net/p5-Net-DNS to 0.60 [taca 2007-07-03]
+	Updated sysutils/mklivecd to 0.15.3 [xtraeme 2007-07-03]
+
