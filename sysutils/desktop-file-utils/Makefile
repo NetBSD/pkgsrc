@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/11/18 23:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/03 19:47:36 wiz Exp $
 #
 
-DISTNAME=	desktop-file-utils-0.12
+DISTNAME=	desktop-file-utils-0.13
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://freedesktop.org/software/desktop-file-utils/releases/
 
