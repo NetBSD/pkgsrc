@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.11 2005/03/23 21:40:35 yamt Exp $ */
+/*	$NetBSD: digest.c,v 1.12 2007/07/03 18:54:03 joerg Exp $ */
 
 /*
  * Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
@@ -34,12 +34,10 @@
 #include "config.h"
 #endif
 
-#include <digest-types.h>
-
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001-2005 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.11 2005/03/23 21:40:35 yamt Exp $");
+__RCSID("$NetBSD: digest.c,v 1.12 2007/07/03 18:54:03 joerg Exp $");
 #endif
 
 
