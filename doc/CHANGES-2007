@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1503 2007/07/03 15:45:55 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1504 2007/07/03 17:13:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2782,3 +2782,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/p5-Net-DNS to 0.60 [taca 2007-07-03]
 	Updated sysutils/mklivecd to 0.15.3 [xtraeme 2007-07-03]
 
+	Updated www/curl to 7.16.3 [wiz 2007-07-03]
