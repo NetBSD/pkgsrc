@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/05 23:12:39 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/03 14:04:17 joerg Exp $
 #
 
 DISTNAME=	checkperms-1.7
@@ -14,6 +14,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+CHECK_PERMS=		no
+
 .if ${OPSYS} == "Linux"
 MAKE_ENV+=	NOGCCERROR=yes		# see PR 35930
 .endif
