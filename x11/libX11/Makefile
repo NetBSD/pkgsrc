@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/04/03 20:28:38 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/03 13:35:49 joerg Exp $
 #
 
 DISTNAME=		libX11-1.1.1
@@ -23,6 +23,12 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-man-pages=3
 CONFIGURE_ARGS+=	--without-xcb
 PKGCONFIG_OVERRIDE+=	x11.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"

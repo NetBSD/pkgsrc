@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/26 14:58:17 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/03 13:35:49 joerg Exp $
 #
 
 DISTNAME=		libXext-1.0.3
@@ -18,6 +18,12 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xext.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
