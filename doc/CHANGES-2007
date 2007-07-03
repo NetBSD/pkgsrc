@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1510 2007/07/03 19:45:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1511 2007/07/03 19:48:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2789,3 +2789,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/wesnoth to 1.2.5 [wiz 2007-07-03]
 	Updated pkgtools/digest to 20070703 [joerg 2007-07-03]
 	Updated devel/libwnck to 2.18.3 [wiz 2007-07-03]
+	Updated sysutils/desktop-file-utils to 0.13 [wiz 2007-07-03]
