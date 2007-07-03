@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6470 2007/07/03 19:45:12 wiz Exp $
+$NetBSD: TODO,v 1.6471 2007/07/03 19:48:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,7 +405,6 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.18
 	o delegate-9.3.2
-	o desktop-file-utils-0.13
 	o devIL-1.6.7
 	o devhelp-0.15
 	o devtodo-0.1.19
