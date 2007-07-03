@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2007/06/26 11:45:16 lkundrak Exp $
+# $NetBSD: Makefile,v 1.29 2007/07/03 19:53:00 wiz Exp $
 
-DISTNAME=	xvidcore-1.1.2
-PKGREVISION=	1
+DISTNAME=	xvidcore-1.1.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
