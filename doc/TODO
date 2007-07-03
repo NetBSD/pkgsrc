@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6460 2007/07/02 16:45:45 wulf Exp $
+$NetBSD: TODO,v 1.6461 2007/07/03 05:08:53 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1361,6 +1361,16 @@ Infrastructure problems which need addressing
 	  white-space and other special characters.
 
 	o bootstrap building of gcc2/gcc3.
+
+Licenses of packages
+====================
+
+[Please add here any package that requires the user to accept anything
+else than a single, simple license. List the files and how they are
+combined (one-of, all, additional-license-per-option, ...). This
+information will be used to extend the license framework as needed.]
+
+
 
 Suggested pkgsrc enhancements
 =============================
