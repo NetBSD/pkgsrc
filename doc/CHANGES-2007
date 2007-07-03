@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1498 2007/07/03 12:41:36 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1499 2007/07/03 13:33:55 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2776,3 +2776,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/gaim-encryption to 2.39 [lkundrak 2007-07-03]
 	Updated devel/gdb6 to 6.2.1nb4 [lkundrak 2007-07-03]
 	Updated devel/gdb to 5.3nb5 [lkundrak 2007-07-03]
+	Updated net/citrix_ica to 10.6.115659 [sborrill 2007-07-03]
