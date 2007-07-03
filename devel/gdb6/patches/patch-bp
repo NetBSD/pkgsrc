@@ -1,0 +1,15 @@
+$NetBSD: patch-bp,v 1.1 2007/07/03 12:32:28 lkundrak Exp $
+
+Patch for CVE-2005-1705 from Gentoo #88398.
+
+--- gdb/main.c.orig	2004-07-26 21:01:36.000000000 +0200
++++ gdb/main.c
+@@ -696,7 +696,7 @@ extern int gdbtk_test (char *);
+ 
+   if (!homedir
+       || memcmp ((char *) &homebuf, (char *) &cwdbuf, sizeof (struct stat)))
+-    if (!inhibit_gdbinit)
++    if (!inhibit_gdbinit && (cwdbuf.st_uid == getuid()) && (!cwdbuf.st_mode & (S_IWOTH)))
+       {
+ 	catch_command_errors (source_command, gdbinit, 0, RETURN_MASK_ALL);
+       }
