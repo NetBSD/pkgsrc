@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6461 2007/07/03 05:08:53 rillig Exp $
+$NetBSD: TODO,v 1.6462 2007/07/03 14:19:18 tron Exp $
 
 Suggested new packages
 ======================
@@ -969,7 +969,6 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.10.2
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
