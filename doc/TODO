@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6471 2007/07/03 19:48:14 wiz Exp $
+$NetBSD: TODO,v 1.6472 2007/07/03 19:53:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1329,7 +1329,6 @@ Suggested package updates
 	o xtux-20030306
 	o xv-20070520
 	o xvidcap-1.1.6
-	o xvidcore-1.1.3
 	o xview-3.2.1.4.21.2
 	o xwpe-1.5.30a
 	o xzip-182
