@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6467 2007/07/03 17:25:23 wiz Exp $
+$NetBSD: TODO,v 1.6468 2007/07/03 17:30:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1168,7 +1168,6 @@ Suggested package updates
 	o source-highlight-2.7
 	o spcaview-20060501
 	o spim-7.3
-	o sqlite3-3.4.0
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
 	o squidGuard-1.2.0p3
