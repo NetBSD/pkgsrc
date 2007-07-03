@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6469 2007/07/03 18:09:25 wiz Exp $
+$NetBSD: TODO,v 1.6470 2007/07/03 19:45:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.24
-	o libwnck-2.18.3
 	o libxml++-2.18.1
 	o libxml++2-2.18.0
 	o libxml2-2.6.29
