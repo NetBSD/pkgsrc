@@ -60,8 +60,6 @@
 #include "config.h"
 #endif
 
-#include <digest-types.h>
-
 #include <errno.h>
 #include <fcntl.h>
 #ifdef HAVE_STDINT_H

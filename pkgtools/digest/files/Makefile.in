@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.4 2005/03/23 14:32:19 agc Exp $
+# $Id: Makefile.in,v 1.5 2007/07/03 18:54:02 joerg Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -44,10 +44,9 @@ COMPILE= $(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
 
 digest_OBJS = digest.o md5c.o rmd160.o rmd160hl.o sha2.o sha2hl.o \
 md5hl.o sha1.o sha1hl.o tiger.o whirlpool.o
-bits_OBJS = bits.o
 
 SRCS= digest.c md5c.c rmd160.c rmd160hl.c sha2.c sha2hl.c md5hl.c sha1.c \
-sha1hl.c bits.c md5.h rmd160.h sha1.h sha2.h tiger.c tiger.h whirlpool.c \
+sha1hl.c md5.h rmd160.h sha1.h sha2.h tiger.c tiger.h whirlpool.c \
 whirlpool.h
 
 DISTFILES= $(SRCS) AUTHORS COPYING DESCR INSTALL Makefile.in NEWS aclocal.m4 \
@@ -59,32 +58,14 @@ missing mkinstalldirs regress.sh
 
 all: digest
 
-digest-types.h: bits
-	./bits digest-types.h
-
-bits: bits.o
-	$(LINK) $(bits_OBJS) $(LIBS)
-
 digest: $(digest_OBJS)
 	$(LINK) $(digest_OBJS) $(LIBS)
 
 check: digest
 	@SHELL@ $(srcdir)/regress.sh
 
-digest.o: digest-types.h
-md5c.o: digest-types.h
-rmd160.o: digest-types.h
-rmd160hl.o: digest-types.h
-sha2.o: digest-types.h
-sha2hl.o: digest-types.h
-md5hl.o: digest-types.h
-sha1.o: digest-types.h
-sha1hl.o: digest-types.h
-tiger.o: digest-types.h
-whirlpool.o: digest-types.h
-
 clean:
-	rm -f *.o digest bits digest-types.h
+	rm -f *.o digest
 
 distclean: clean
 	rm -f Makefile config.h

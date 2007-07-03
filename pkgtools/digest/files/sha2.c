@@ -38,9 +38,6 @@
 #include <config.h>
 #endif
 
-#include <digest-types.h>
-
-
 #include <stdio.h>
 #include <string.h>	/* memcpy()/memset() or bcopy()/bzero() */
 #include <assert.h>	/* assert() */

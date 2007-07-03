@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.4 2007/07/03 18:54:04 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -22,10 +22,8 @@
 #include <config.h>
 #endif
 
-#include <digest-types.h>
-
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.4 2007/07/03 18:54:04 joerg Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -67,10 +65,10 @@ __weak_alias(RMD160Final,_RMD160Final)
 
 /* collect four bytes into one word: */
 #define BYTES_TO_DWORD(strptr)			\
-    (((u_int32_t) *((strptr)+3) << 24) |	\
-    ((u_int32_t) *((strptr)+2) << 16) |		\
-    ((u_int32_t) *((strptr)+1) <<  8) |		\
-    ((u_int32_t) *(strptr)))
+    (((uint32_t) *((strptr)+3) << 24) |	\
+    ((uint32_t) *((strptr)+2) << 16) |		\
+    ((uint32_t) *((strptr)+1) <<  8) |		\
+    ((uint32_t) *(strptr)))
 
 /* ROL(x, n) cyclically rotates x over n bits to the left */
 /* x must be of an unsigned 32 bits type and 0 <= n < 32. */
@@ -156,10 +154,10 @@ RMD160Init(RMD160_CTX *context)
 /********************************************************************/
 
 void
-RMD160Transform(u_int32_t state[5], const u_int32_t block[16])
+RMD160Transform(uint32_t state[5], const uint32_t block[16])
 {
-	u_int32_t aa, bb, cc, dd, ee;
-	u_int32_t aaa, bbb, ccc, ddd, eee;
+	uint32_t aa, bb, cc, dd, ee;
+	uint32_t aaa, bbb, ccc, ddd, eee;
 
 	_DIAGASSERT(state != NULL);
 	_DIAGASSERT(block != NULL);
@@ -362,13 +360,13 @@ RMD160Transform(u_int32_t state[5], const u_int32_t block[16])
 /********************************************************************/
 
 void
-RMD160Update(RMD160_CTX *context, const u_char *data, u_int32_t nbytes)
+RMD160Update(RMD160_CTX *context, const u_char *data, uint32_t nbytes)
 {
-	u_int32_t X[16];
-	u_int32_t ofs = 0;
-	u_int32_t i;
+	uint32_t X[16];
+	uint32_t ofs = 0;
+	uint32_t i;
 #if BYTE_ORDER != LITTLE_ENDIAN
-	u_int32_t j;
+	uint32_t j;
 #endif
 
 	_DIAGASSERT(context != NULL);
@@ -424,10 +422,10 @@ RMD160Update(RMD160_CTX *context, const u_char *data, u_int32_t nbytes)
 void
 RMD160Final(u_char digest[20], RMD160_CTX *context)
 {
-	u_int32_t i;
-	u_int32_t X[16];
+	uint32_t i;
+	uint32_t X[16];
 #if BYTE_ORDER != LITTLE_ENDIAN
-	u_int32_t j;
+	uint32_t j;
 #endif
 
 	_DIAGASSERT(digest != NULL);
