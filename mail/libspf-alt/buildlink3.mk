@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/07/03 13:54:45 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSPF_ALT_BUILDLINK3_MK:=	${LIBSPF_ALT_BUILDLINK3_MK}+
@@ -18,6 +18,6 @@ BUILDLINK_PKGSRCDIR.libspf_alt?=	../../mail/libspf-alt
 .endif	# LIBSPF_ALT_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../net/bind9/buildlink3.mk"
+.include "../../mk/resolv.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

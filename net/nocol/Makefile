@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/07/03 13:54:46 joerg Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -62,4 +62,5 @@ post-install:
 			    ${PREFIX}/share/nocol/gifs;			\
 	done
 
+.include "../../mk/resolv.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
