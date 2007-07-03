@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6466 2007/07/03 17:20:33 wiz Exp $
+$NetBSD: TODO,v 1.6467 2007/07/03 17:25:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ Suggested package updates
 	o mathomatic-12.7.3
 	o md-whois-4.7.20
 	o memtestplus-1.70
-	o mercurial-0.9.4
 	o mergeant-0.66
 	o mesure-0.7.2
 	o metacity-2.18.5
