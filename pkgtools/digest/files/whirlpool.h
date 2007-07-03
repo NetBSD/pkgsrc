@@ -1,7 +1,7 @@
 #ifndef PORTABLE_C__
 #define PORTABLE_C__
 
-#include <limits.h>
+#include "config.h"
 
 /* Definition of minimum-width integer types
  * 
@@ -15,48 +15,22 @@
  * i.e., to specify the size of the result of each expression.
  */
 
-typedef signed char s8;
-typedef unsigned char u8;
-
-#if UINT_MAX >= 4294967295UL
-
-typedef signed short s16;
-typedef signed int s32;
-typedef unsigned short u16;
-typedef unsigned int u32;
-
-#define ONE32   0xffffffffU
-
-#else
-
-typedef signed int s16;
-typedef signed long s32;
-typedef unsigned int u16;
-typedef unsigned long u32;
-
-#define ONE32   0xffffffffUL
-
-#endif
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
 
 #define ONE8    0xffU
 #define ONE16   0xffffU
-
+#define ONE32   0xffffffffUL
+#define LL(v)   (v##ULL)
+#define ONE64   LL(0xffffffffffffffff)
 #define T8(x)   ((x) & ONE8)
 #define T16(x)  ((x) & ONE16)
 #define T32(x)  ((x) & ONE32)
-
-#ifdef _MSC_VER
-typedef unsigned __int64 u64;
-typedef signed __int64 s64;
-#define LL(v)   (v##i64)
-#define ONE64   LL(0xffffffffffffffff)
-#else  /* !_MSC_VER */
-typedef unsigned long long u64;
-typedef signed long long s64;
-#define LL(v)   (v##ULL)
-#define ONE64   LL(0xffffffffffffffff)
-#endif /* ?_MSC_VER */
 #define T64(x)  ((x) & ONE64)
+
+
 #define ROTR64(v, n)   (((v) >> (n)) | T64((v) << (64 - (n))))
 /*
  * Note: the test is used to detect native 64-bit architectures;

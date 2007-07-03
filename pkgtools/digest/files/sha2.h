@@ -40,34 +40,9 @@
 extern "C" {
 #endif
 
-/*
- * Define the following sha2_* types to types of the correct length on
- * the native archtecture.   Most BSD systems and Linux define u_intXX_t
- * types.  Machines with very recent ANSI C headers, can use the
- * uintXX_t definintions from inttypes.h by defining USE_INTTYPES_H
- * during compile or in the sha.h header file.
- *
- * Machines that support neither u_intXX_t nor inttypes.h's uintXX_t
- * will need to define these three typedefs below (and the appropriate
- * ones in sha.h too) by hand according to their system architecture.
- *
- * Thank you, Jun-ichiro itojun Hagino, for suggesting using u_intXX_t
- * types and pointing out recent ANSI C support for uintXX_t in inttypes.h.
- */
-#ifdef USE_INTTYPES_H
-
 typedef uint8_t  sha2_byte;    /* Exactly 1 byte */
 typedef uint32_t sha2_word32;  /* Exactly 4 bytes */
 typedef uint64_t sha2_word64;  /* Exactly 8 bytes */
-
-#else /* USE_INTTYPES_H */
-
-typedef u_int8_t  sha2_byte;   /* Exactly 1 byte */
-typedef u_int32_t sha2_word32; /* Exactly 4 bytes */
-typedef u_int64_t sha2_word64; /* Exactly 8 bytes */
-
-#endif /* USE_INTTYPES_H */
-
 
 /*** SHA-256/384/512 Various Length Definitions ***********************/
 #define SHA256_BLOCK_LENGTH		64
@@ -98,12 +73,11 @@ typedef SHA512_CTX SHA384_CTX;
 
 /*** SHA-256/384/512 Function Prototypes ******************************/
 #ifndef NOPROTO
-#ifdef SHA2_USE_INTTYPES_H
 
 void SHA256_Init(SHA256_CTX *);
 void SHA256_Update(SHA256_CTX*, const uint8_t*, size_t);
 void SHA256_Final(uint8_t[SHA256_DIGEST_LENGTH], SHA256_CTX*);
-char* SHA256_End(SHA256_CTX*, char[SHA256_DIGEST_STRING_LENGTH]);
+char* SHA256_End(SHA256_CTX*, u_char[SHA256_DIGEST_STRING_LENGTH]);
 char* SHA256_Data(const uint8_t*, size_t, uint8_t *);
 char *SHA256_File(char *, char *);
 
@@ -120,31 +94,6 @@ void SHA512_Final(uint8_t[SHA512_DIGEST_LENGTH], SHA512_CTX*);
 char* SHA512_End(SHA512_CTX*, char[SHA512_DIGEST_STRING_LENGTH]);
 char* SHA512_Data(const uint8_t*, size_t, char[SHA512_DIGEST_STRING_LENGTH]);
 char *SHA512_File(char *, char *);
-
-#else /* SHA2_USE_INTTYPES_H */
-
-void SHA256_Init(SHA256_CTX *);
-void SHA256_Update(SHA256_CTX*, const u_int8_t*, size_t);
-void SHA256_Final(u_int8_t[SHA256_DIGEST_LENGTH], SHA256_CTX*);
-char* SHA256_End(SHA256_CTX*, u_char *);
-char* SHA256_Data(const u_int8_t*, size_t, u_char *);
-char *SHA256_File(char *, char *);
-
-void SHA384_Init(SHA384_CTX*);
-void SHA384_Update(SHA384_CTX*, const u_int8_t*, size_t);
-void SHA384_Final(u_int8_t[SHA384_DIGEST_LENGTH], SHA384_CTX*);
-char* SHA384_End(SHA384_CTX*, char[SHA384_DIGEST_STRING_LENGTH]);
-char* SHA384_Data(const u_int8_t*, size_t, char[SHA384_DIGEST_STRING_LENGTH]);
-char *SHA384_File(char *, char *);
-
-void SHA512_Init(SHA512_CTX*);
-void SHA512_Update(SHA512_CTX*, const u_int8_t*, size_t);
-void SHA512_Final(u_int8_t[SHA512_DIGEST_LENGTH], SHA512_CTX*);
-char* SHA512_End(SHA512_CTX*, char[SHA512_DIGEST_STRING_LENGTH]);
-char* SHA512_Data(const u_int8_t*, size_t, char[SHA512_DIGEST_STRING_LENGTH]);
-char *SHA512_File(char *, char *);
-
-#endif /* SHA2_USE_INTTYPES_H */
 
 #else /* NOPROTO */
 
