@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1496 2007/07/03 10:38:25 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1497 2007/07/03 12:33:03 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2774,3 +2774,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated ham/gpredict to 0.8.0 [wulf 2007-07-02]
 	Added time/py-dateutil version 1.2 [wiz 2007-07-02]
 	Updated chat/gaim-encryption to 2.39 [lkundrak 2007-07-03]
+	Updated devel/gdb6 to 6.2.1nb4 [lkundrak 2007-07-03]
