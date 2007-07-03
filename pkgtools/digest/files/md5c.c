@@ -1,4 +1,4 @@
-/*	$NetBSD: md5c.c,v 1.3 2002/12/21 04:06:14 schmonz Exp $	*/
+/*	$NetBSD: md5c.c,v 1.4 2007/07/03 18:54:04 joerg Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
@@ -33,8 +33,6 @@
 #include <config.h>
 #endif
 
-#include <digest-types.h>
-
 #if defined(_KERNEL) || defined(_STANDALONE)
 #include <lib/libkern/libkern.h>
 #include <sys/param.h>
@@ -58,8 +56,8 @@
 #endif
 
 typedef unsigned char *POINTER;
-typedef u_int16_t UINT2;
-typedef u_int32_t UINT4;
+typedef uint16_t UINT2;
+typedef uint32_t UINT4;
 
 /*
  * Constants for MD5Transform routine.
