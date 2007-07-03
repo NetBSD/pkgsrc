@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2007/06/08 01:08:29 schmonz Exp $
+$NetBSD: patch-ac,v 1.5 2007/07/03 13:54:46 joerg Exp $
 
---- utils/Makefile.orig	2007-06-05 22:51:35.000000000 -0400
+--- utils/Makefile.orig	2007-06-06 02:51:35.000000000 +0000
 +++ utils/Makefile
-@@ -1,5 +1,5 @@
+@@ -1,6 +1,6 @@
  #CFLAGS := -Wall -g -funsigned-char -I../spamdyke
 -CFLAGS := -Wall -O2 -funsigned-char -I../spamdyke
+-LFLAGS := -lresolv
 +CFLAGS += -Wall -O2 -funsigned-char -I../spamdyke
- LFLAGS := -lresolv
++LFLAGS := ${RESOLV_LDFLAGS}
  
  all: domain2path domainsplit dnstxt dnsptr dnsmx passwordcheck
+ 
