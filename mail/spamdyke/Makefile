@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/06/21 19:08:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/03 13:54:45 joerg Exp $
 #
 
 DISTNAME=	spamdyke-2.6.3
@@ -41,4 +41,5 @@ do-install:
 		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/${PKGBASE};	\
 	done
 
+.include "../../mk/resolv.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
