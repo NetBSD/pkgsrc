@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/11/02 18:02:07 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2007/07/03 14:04:17 joerg Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -15,10 +15,11 @@ COMMENT?=	Message digest wrapper utility
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+CHECK_PERMS=		no
+
 GNU_CONFIGURE=		yes
 
 NO_PKGTOOLS_REQD_CHECK=	yes
-NO_CHECKSUM=		yes
 NO_MTREE=		yes
 
 # XXX Remove the following line after pkgsrc/bootstrap is up and
@@ -26,6 +27,8 @@ NO_MTREE=		yes
 USE_NATIVE_GCC=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+NO_CHECKSUM=		yes
 
 VERSION!=	${AWK} -F "'" '/^PACKAGE_VERSION=/ {print $$2}' \
 		${FILESDIR}/configure
