@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2007/04/18 23:25:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/07/03 18:08:49 wiz Exp $
 bin/wesnoth
-bin/wmlxgettext
 man/cs/man6/wesnoth.6
 man/de/man6/wesnoth.6
 man/en_GB/man6/wesnoth.6
@@ -709,6 +708,17 @@ share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/misc/time/7dawn2.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/misc/time/8morning2.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/misc/time/9midday2.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-guardian.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-defend-both.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-defend-melee.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-moving-1.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-moving-2.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-moving-3.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-1.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-2.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-3.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-4.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-5.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter-ranged-6.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-hunter.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-sentinel.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/naga-warden.png
@@ -4085,6 +4095,7 @@ share/wesnoth/images/units/human-loyalists/fencer.png
 share/wesnoth/images/units/human-loyalists/general-attack-crossbow.png
 share/wesnoth/images/units/human-loyalists/general-attack-sword1.png
 share/wesnoth/images/units/human-loyalists/general-attack-sword2.png
+share/wesnoth/images/units/human-loyalists/general-defend-crossbow.png
 share/wesnoth/images/units/human-loyalists/general-defend.png
 share/wesnoth/images/units/human-loyalists/general-leading.png
 share/wesnoth/images/units/human-loyalists/general.png
@@ -4999,14 +5010,11 @@ share/wesnoth/images/units/undead-skeletal/deathknight-leading.png
 share/wesnoth/images/units/undead-skeletal/deathknight.png
 share/wesnoth/images/units/undead-skeletal/draug-attack1.png
 share/wesnoth/images/units/undead-skeletal/draug-attack2.png
-share/wesnoth/images/units/undead-skeletal/draug-defend.png
-share/wesnoth/images/units/undead-skeletal/draug-die-1.png
-share/wesnoth/images/units/undead-skeletal/draug-die-2.png
+share/wesnoth/images/units/undead-skeletal/draug-defend-1.png
+share/wesnoth/images/units/undead-skeletal/draug-defend-2.png
 share/wesnoth/images/units/undead-skeletal/draug.png
 share/wesnoth/images/units/undead-skeletal/revenant-attack.png
 share/wesnoth/images/units/undead-skeletal/revenant-defend.png
-share/wesnoth/images/units/undead-skeletal/revenant-dying-2.png
-share/wesnoth/images/units/undead-skeletal/revenant-dying.png
 share/wesnoth/images/units/undead-skeletal/revenant.png
 share/wesnoth/images/units/undead-skeletal/skeleton-attack.png
 share/wesnoth/images/units/undead-skeletal/skeleton-attackb.png
