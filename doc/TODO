@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6468 2007/07/03 17:30:28 wiz Exp $
+$NetBSD: TODO,v 1.6469 2007/07/03 18:09:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1258,7 +1258,6 @@ Suggested package updates
 	o wdm-1.28
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
-	o wesnoth-1.2.5
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wmii-3.5.1
