@@ -11,8 +11,6 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <digest-types.h>
-
 #include "tiger.h"
 
 /* NOTE that this code is NOT FULLY OPTIMIZED for any  */

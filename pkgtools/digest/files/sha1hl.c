@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.4 2002/12/21 04:06:15 schmonz Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.5 2007/07/03 18:54:05 joerg Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -14,8 +14,6 @@
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
-
-#include <digest-types.h>
 
 #ifdef HAVE_FCNTL_H
 #include <fcntl.h>
@@ -35,7 +33,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.4 2002/12/21 04:06:15 schmonz Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.5 2007/07/03 18:54:05 joerg Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT
@@ -67,7 +65,7 @@ SHA1End(ctx, buf)
 
     SHA1Final(digest,ctx);
     for (i = 0; i < 20; i++) {
-	p[i + i] = hex[((u_int32_t)digest[i]) >> 4];
+	p[i + i] = hex[((uint32_t)digest[i]) >> 4];
 	p[i + i + 1] = hex[digest[i] & 0x0f];
     }
     p[i + i] = '\0';

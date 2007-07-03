@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.8 2006/08/29 13:43:11 joerg Exp $
+dnl $Id: configure.ac,v 1.9 2007/07/03 18:54:03 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nbsd-digest],[20060826],[agc@netbsd.org])
+AC_INIT([nbsd-digest],[20070703],[agc@netbsd.org])
 AC_CONFIG_SRCDIR([digest.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -28,25 +28,10 @@ AC_CHECK_HEADERS([errno.h fcntl.h inttypes.h locale.h machine/endian.h])
 AC_CHECK_HEADERS([stdlib.h sys/bitypes.h sys/byteorder.h sys/cdefs.h])
 AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/param.h])
 
-dnl Checks for typedefs, structures, and compiler characteristics.
-AC_C___ATTRIBUTE__
-AC_C_CONST
-AC_TYPE_SIZE_T
-AC_CHECK_TYPES([long long, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_t, u_int32_t, u_int64_t, uint8_t, uint16_t, uint32_t, uint64_t],[],[],
-[#if STDC_HEADERS
-#include <stdlib.h>
-#include <stddef.h>
-#endif
-#ifdef HAVE_INTTYPES_H
-#include <inttypes.h>
-#endif
-#ifdef HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
-#ifdef HAVE_SYS_BITYPES_H
-#include <sys/bitypes.h>
-#endif])
-AC_C_BIGENDIAN
+AC_TYPE_UINT8_T
+AC_TYPE_UINT16_T
+AC_TYPE_UINT32_T
+AC_TYPE_UINT64_T
 
 # Checks for library functions.
 AC_FUNC_STRERROR_R

@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.4 2007/07/03 18:54:04 joerg Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -15,10 +15,8 @@
 #include <config.h>
 #endif
 
-#include <digest-types.h>
-
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.4 2007/07/03 18:54:04 joerg Exp $");
 #endif	/* not lint */
 
 
@@ -66,7 +64,7 @@ RMD160End(RMD160_CTX *ctx, char *buf)
 
     RMD160Final(digest,ctx);
     for (i = 0; i < 20; i++) {
-	p[i + i] = hex[(u_int32_t)digest[i] >> 4];
+	p[i + i] = hex[(uint32_t)digest[i] >> 4];
 	p[i + i + 1] = hex[digest[i] & 0x0f];
     }
     p[i + i] = '\0';
