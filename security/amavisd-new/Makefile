@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/06/01 04:41:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.32 2007/07/03 14:21:06 xtraeme Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
 		http://mirror.mainloop.se/amavisd/
 
-VERSION=	2.5.1
+VERSION=	2.5.2
 PATCHLEVEL=	# empty
 
 MAINTAINER=	jdunn@aquezada.com
