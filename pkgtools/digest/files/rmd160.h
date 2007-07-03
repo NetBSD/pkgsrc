@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.2 2002/12/21 04:06:15 schmonz Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.3 2007/07/03 18:54:04 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -25,16 +25,16 @@
 #define _RMD160_H_
 
 typedef struct {
-	u_int32_t	state[5];	/* state (ABCDE) */
-	u_int32_t	length[2];	/* number of bits */
+	uint32_t	state[5];	/* state (ABCDE) */
+	uint32_t	length[2];	/* number of bits */
 	u_char		bbuffer[64];    /* overflow buffer */
-	u_int32_t	buflen;		/* number of chars in bbuffer */
+	uint32_t	buflen;		/* number of chars in bbuffer */
 } RMD160_CTX;
 
 __BEGIN_DECLS
 void	RMD160Init(RMD160_CTX *);
-void	RMD160Transform(u_int32_t[5], const u_int32_t[16]);
-void	RMD160Update(RMD160_CTX *, const u_char *, u_int32_t);
+void	RMD160Transform(uint32_t[5], const uint32_t[16]);
+void	RMD160Update(RMD160_CTX *, const u_char *, uint32_t);
 void	RMD160Final(u_char[20], RMD160_CTX *);
 #ifndef	_KERNEL
 char	*RMD160End(RMD160_CTX *, char *);
