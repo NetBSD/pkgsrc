@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/26 15:06:37 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/03 13:35:49 joerg Exp $
 #
 
 DISTNAME=		libXt-1.0.5
@@ -20,6 +20,12 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xt.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
