@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1512 2007/07/03 19:53:28 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1513 2007/07/03 20:02:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libwnck to 2.18.3 [wiz 2007-07-03]
 	Updated sysutils/desktop-file-utils to 0.13 [wiz 2007-07-03]
 	Updated multimedia/xvidcore to 1.1.3 [wiz 2007-07-03]
+	Updated print/gv to 3.6.3 [wiz 2007-07-03]
