@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1507 2007/07/03 17:30:28 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1508 2007/07/03 18:09:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2786,3 +2786,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/pcre to 7.2 [wiz 2007-07-03]
 	Updated devel/mercurial to 0.9.4 [wiz 2007-07-03]
 	Updated databases/sqlite3 to 3.4.0 [wiz 2007-07-03]
+	Updated games/wesnoth to 1.2.5 [wiz 2007-07-03]
