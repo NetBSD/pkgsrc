@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2007/07/03 13:54:46 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2007/07/03 14:42:33 joerg Exp $
 
 --- spamdyke/Makefile.orig	2007-05-24 22:55:10.000000000 +0000
 +++ spamdyke/Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.4 2007/07/03 13:54:46 joerg Exp $
 -CFLAGS_TLS := -DTLS
 -LFLAGS_TLS := -lssl -lcrypto
 +CFLAGS += -Wall -O2 -funsigned-char
-+LFLAGS := ${RESOLV_DLFAGS}
++LFLAGS := ${RESOLV_LDFLAGS}
 +CFLAGS_TLS ?= -DTLS
 +LFLAGS_TLS ?= -lssl -lcrypto
  OFILES := spamdyke.o command_line.o dns.o environment.o usage.o search_fs.o exec.o base64.o tls.o
