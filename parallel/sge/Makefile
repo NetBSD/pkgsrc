@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/06/08 12:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/07/04 20:54:55 jlam Exp $
 #
 
 PKGNAME=		sge-6.0.8
@@ -40,6 +40,8 @@ SGE_USER?=		sgeadmin
 SGE_GROUP?=		sgeadmin
 PKG_GROUPS=		${SGE_GROUP}
 PKG_USERS=		${SGE_USER}:${SGE_GROUP}::Sun\ Grid\ Engine\ Administrator
+PKG_GROUPS_VARS+=	SGE_GROUP
+PKG_USERS_VARS+=	SGE_USER
 
 EVAL_PREFIX+=	PKGSRC_SSL_PREFIX=openssl
 

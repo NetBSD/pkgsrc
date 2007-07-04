@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/07/05 06:53:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/07/04 20:54:39 jlam Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -20,6 +20,8 @@ INSTALL_TARGET=	install install.man
 WNNOWNER?=	${FREEWNN_USER}
 SEDSCRIPT+=	-e 's|\(WNNOWNER = \).*|\1${WNNOWNER}|'
 SEDSCRIPT+=	-e 's|\([JCKT]\)\(WNNDICDIR = \).*|\1\2${IMDICTDIR}/wnn/$$(\1WNNLANG)|'
+
+PKG_USERS_VARS+=	WNNOWNER FREEWNN_USER
 
 .if defined(WNN_TARGET) && (${WNN_TARGET} == "SERVER")
 MAKE_ENV+=	"WNN_TARGET=SERVER"

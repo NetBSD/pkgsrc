@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/05 06:53:13 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/04 20:54:40 jlam Exp $
 #
 
 PKGNAME=	ja-FreeWnn-server-bin-1.10
@@ -24,10 +24,12 @@ RCD_SCRIPTS=	ja_freewnn
 
 FREEWNN_USER?=	wnn
 FREEWNN_GROUP?=	jserver
-BUILD_DEFS+=	FREEWNN_USER FREEWNN_GROUP
 
 PKG_GROUPS=	${FREEWNN_GROUP}
 PKG_USERS=	${FREEWNN_USER}:${FREEWNN_GROUP}
+
+PKG_GROUPS_VARS+=	FREEWNN_GROUP
+PKG_USERS_VARS+=	FREEWNN_USER
 
 .include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
 .include "../../inputmethod/ja-freewnn-lib/Makefile.common"

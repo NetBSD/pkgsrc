@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/01/04 12:16:57 ghen Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/04 20:54:59 jlam Exp $
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 
@@ -13,8 +13,6 @@ MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 
 CONFIGURE_ARGS+=	--with-dir-user=${BACULA_DIR_USER:Q} --with-dir-group=${BACULA_GROUP:Q}
 CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER:Q} --with-sd-group=${BACULA_GROUP:Q}
-
-BUILD_DEFS+=		BACULA_DIR_USER BACULA_SD_USER BACULA_GROUP
 
 OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} ${ROOT_USER} ${BACULA_GROUP} 770
 
