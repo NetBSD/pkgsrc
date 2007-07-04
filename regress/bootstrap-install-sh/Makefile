@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/20 16:26:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/04 19:18:12 jlam Exp $
 
 DISTNAME=	bootstrap-install-sh-0.0
 CATEGORIES=	regress
@@ -15,7 +15,7 @@ NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_PACKAGE=	yes
 
-INSTALL_SH=	${WRKSRC}/install-sh
+INSTALL_SH?=	${WRKSRC}/install-sh
 
 post-extract:
 	${CP} ${PKGSRCDIR}/sysutils/install-sh/files/install-sh.in ${WRKSRC}
@@ -47,6 +47,30 @@ test-d3:
 	( ${TEST} -d ${WRKSRC}/d3_dir1 && \
 	  ${TEST} -d ${WRKSRC}/d3_dir2 && \
 	  ${TEST} -d ${WRKSRC}/d3_dir3 ) || exit 1
+
+# create one directory with several nonexistent intermediate directories
+regress: test-d4
+test-d4:
+	${INSTALL_SH} -d -m 700 ${WRKSRC}/d4_comp1/d4_comp2/d4_comp3/d4_final
+	${TEST} -d ${WRKSRC}/d4_comp1/d4_comp2/d4_comp3/d4_final || exit 1
+	${FIND} ${WRKSRC}/d4_comp1 -type d -exec ${LS} -ld {} \; |	\
+	while read a b; do						\
+		case "$$b" in						\
+		*/d4_final)						\
+			case "$$a" in					\
+			d${MODE_7}${MODE_0}${MODE_0})			\
+					exit 0 ;;			\
+			*)		exit 1 ;;			\
+			esac;						\
+			;;						\
+		*)							\
+			case "$$a" in					\
+			${MODE_DIR})	exit 0 ;;			\
+			*)		exit 1 ;;			\
+			esac;						\
+			;;						\
+		esac;							\
+	done
 
 # copy one existing file to nonexistent file
 regress: test-c1
@@ -95,6 +119,9 @@ MODE_4=	r--
 MODE_5=	r-x
 MODE_6=	rw-
 MODE_7=	rwx
+
+# Convert ${PKGDIRMODE} into the appropriate "ls" output.
+MODE_DIR=	d${MODE_${PKGDIRMODE:C/(.)(.)(.)/\1/}}${MODE_${PKGDIRMODE:C/(.)(.)(.)/\2/}}${MODE_${PKGDIRMODE:C/(.)(.)(.)/\3/}}
 
 # test mode permissions on installing file to nonexisting file
 regress: test-m1
