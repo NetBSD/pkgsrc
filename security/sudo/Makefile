@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2007/07/02 06:04:01 tls Exp $
+# $NetBSD: Makefile,v 1.92 2007/07/04 20:37:50 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.8p12
@@ -25,6 +25,8 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		NROFFPROG=${CAT} # to always install man instead of cat
+CONFIGURE_ENV+=		mansectsu=8
+CONFIGURE_ENV+=		mansectform=5
 CONFIGURE_ARGS+=	--disable-root-mailer
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-timedir=${VARBASE:Q}/run/sudo
