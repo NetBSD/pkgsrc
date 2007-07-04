@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/04/23 00:12:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2007/07/04 20:54:50 jlam Exp $
 
 DISTNAME=		mydns-1.1.0
 CATEGORIES=		net
@@ -18,7 +18,8 @@ MYDNS_USER?=		mydns
 MYDNS_GROUP?=		mydns
 MYDNS_PERMS=		${ROOT_USER} ${ROOT_GROUP} 600
 
-BUILD_DEFS+=		MYDNS_USER MYDNS_GROUP
+PKG_GROUPS_VARS+=	MYDNS_GROUP
+PKG_USERS_VARS+=	MYDNS_USER
 
 SUBST_CLASSES+=		user
 SUBST_STAGE.user=	pre-build

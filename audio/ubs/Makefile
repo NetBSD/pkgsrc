@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/07/04 20:54:31 jlam Exp $
 #
 
 DISTNAME=		ubs-0.17
@@ -19,11 +19,12 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		UBS_BASEDIR UBS_USER UBS_GROUP
-
 UBS_BASEDIR?=		/var/spool/ubs
 UBS_USER?=		ubs
 UBS_GROUP?=		ubs
+PKG_USERS_VARS+=	UBS_USER
+PKG_GROUPS_VARS+=	UBS_GROUP
+BUILD_DEFS+=		UBS_BASEDIR
 
 PKG_GROUPS=		${UBS_GROUP}
 PKG_USERS=		${UBS_USER}:${UBS_GROUP}

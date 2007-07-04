@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/06/30 13:47:38 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/04 20:54:56 jlam Exp $
 #
 
 DISTNAME=	base-1.3.6
@@ -33,9 +33,11 @@ MESSAGE_SUBST+= EGDIR=${EGDIR:Q} BASE_DIR=${BASE_DIR:Q}
 PAX_DIRS=	admin help images includes languages scripts setup sql styles
 WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}
-BUILD_DEFS+=	WWW_USER WWW_GROUP
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/base_maintenance.pl
+
+PKG_GROUPS_VARS+=	WWW_GROUP
+PKG_USERS_VARS+=	WWW_USER
 
 CONF_FILES=	${EGDIR}/base.conf ${PKG_SYSCONFDIR}/base.conf
 

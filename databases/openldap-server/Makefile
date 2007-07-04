@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/02 11:29:16 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/04 20:54:35 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 COMMENT=		Lightweight Directory Access Protocol server suite
@@ -32,7 +32,6 @@ BUILD_DIRS=		include libraries servers
 TEST_DIRS=		tests
 INSTALL_DIRS=		servers
 
-BUILD_DEFS+=		SLAPD_USER SLURPD_USER LDAP_GROUP
 BUILD_DEFS+=		OPENLDAP_ETCDIR OPENLDAP_VARDIR
 
 PKG_GROUPS=		${LDAP_GROUP}
