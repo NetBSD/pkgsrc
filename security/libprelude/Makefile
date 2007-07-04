@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/06/05 05:37:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/04 20:54:57 jlam Exp $
 #
 DISTNAME=		libprelude-0.9.14
 PKGREVISION=		1
@@ -16,7 +16,10 @@ COMMENT=		Provides the framework for using the Prelude system
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
 
-BUILD_DEFS+=		PRELUDE_USER PRELUDE_GROUP VARBASE
+PKG_GROUPS_VARS+=	PRELUDE_GROUP
+PKG_USERS_VARS+=	PRELUDE_USER
+
+BUILD_DEFS+=		VARBASE
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

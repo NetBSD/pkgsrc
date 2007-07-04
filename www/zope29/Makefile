@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/04/01 15:29:45 taca Exp $
+# $NetBSD: Makefile,v 1.12 2007/07/04 20:55:06 jlam Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${VER}-final
@@ -34,6 +34,8 @@ WEBBASEDIR?=		www
 SZOPEBASEDIR?=		${WEBBASEDIR}/Zope29
 
 # Do not change anything below this line.
+
+PKG_USERS_VARS+=	ZOPE_USER
 
 .if defined(INSTANCENAME)
 ZOPEINSTANCENAME=	${INSTANCENAME}

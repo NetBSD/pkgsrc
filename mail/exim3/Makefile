@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/07/04 20:54:43 jlam Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -13,8 +13,6 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 CONFLICTS+=	exim-exiscan-[0-9]*
 
-
-BUILD_DEFS+=		EXIM_USER EXIM_GROUP
 BUILD_DEFS+=		EXIM_DB.mysql EXIM_DB.pgsql
 
 PKG_SYSCONFSUBDIR?=	exim
@@ -30,6 +28,9 @@ OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 
 PKG_GROUPS=		${EXIM_GROUP}
 PKG_USERS=		${EXIM_USER}:${EXIM_GROUP}
+
+PKG_GROUPS_VARS+=	EXIM_GROUP
+PKG_USERS_VARS+=	EXIM_USER
 
 PKG_UID.${EXIM_USER}?=	8
 PKG_GECOS.${EXIM_USER}=	Exim mail server user

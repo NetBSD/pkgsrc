@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/12 14:39:22 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/04 20:54:53 jlam Exp $
 
 PKGNAME=		teamspeak-server-2.0.23.15
 DISTNAME=		ts2_server_rc2_20201
@@ -49,7 +49,9 @@ TSUSER?=		teamspeak
 TSGROUP?=		teamspeak
 TSHOME?=		${HOMEBASE}/${TSUSER}
 
-BUILD_DEFS+=		TSUSER TSGROUP TSHOME
+PKG_GROUPS_VARS+=	TSGROUP
+PKG_USERS_VARS+=	TSUSER
+BUILD_DEFS+=		TSHOME
 
 PKG_GROUPS=		${TSGROUP}
 PKG_USERS=		${TSUSER}:${TSGROUP}

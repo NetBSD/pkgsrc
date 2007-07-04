@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/03/28 13:25:12 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/07/04 20:54:52 jlam Exp $
 #
 
 DISTNAME=	pygopherd_2.0.9
@@ -17,6 +17,9 @@ PY_PATCHPLIST=	yes
 PKG_SYSCONFSUBDIR=	pygopherd
 EXAMPLEDIR=	${PREFIX}/share/examples/pygopherd
 RUNTIMEDIR=	${VARBASE}/gopher
+
+PKG_GROUPS_VARS+=	GOPHER_GROUP
+PKG_USERS_VARS+=	GOPHER_USER
 
 GOPHER_USER=	gopher
 GOPHER_GROUP=	gopher
