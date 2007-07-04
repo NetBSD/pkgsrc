@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.11 2007/06/06 12:41:53 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.12 2007/07/04 20:54:48 jlam Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -17,7 +17,15 @@
 #	Specifies the user name (or uid) that will be used to install
 #	files.
 
-.if (defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])) || ${_USE_DESTDIR} == "user-destdir"
+_UNPRIVILEGED=		# empty
+.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+_UNPRIVILEGED+=		unprivileged
+.endif
+.if (${_USE_DESTDIR} == "user-destdir")
+_UNPRIVILEGED+=		user-destdir
+.endif
+
+.if !empty(_UNPRIVILEGED)
 
 # Guess which user/group has to be used.
 .  if !defined(UNPRIVILEGED_USER) || empty(UNPRIVILEGED_USER)
@@ -27,7 +35,8 @@ UNPRIVILEGED_USER!=	${ID} -n -u
 UNPRIVILEGED_GROUP!=	${ID} -n -g
 .  endif
 
-.  if ${_USE_DESTDIR} == "user-destdir" && (!defined(UNPRIVILEGED) || empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
+.  if empty(_UNPRIVILEGED:Munprivileged) && !empty(_UNPRIVILEGED:Muser-destdir)
+# Only do following for privileged, user-destdir builds.
 _SU_ROOT_USER:=		${ROOT_USER}
 REAL_ROOT_USER:=	${ROOT_USER}
 REAL_ROOT_GROUP:=	${ROOT_GROUP}
@@ -53,9 +62,32 @@ DOCOWN=			${UNPRIVILEGED_USER}
 # when overwriting files if they are not writable.
 BINMODE=		755
 NONBINMODE=		644
+
+.  if !empty(_UNPRIVILEGED:Munprivileged) && empty(_UNPRIVILEGED:Muser-destdir)
+# Only do the following for unprivileged, normal builds.
+
+# PKG_USERS_VARS is a list of variables that hold bare user names, e.g
+#	APACHE_USER, etc.
+#
+# PKG_GROUPS_VARS is a list of variables that hold bare group names, e.g
+#	UUCP_GROUP, etc.
+#
+PKG_USERS_VARS?=	# empty
+PKG_GROUPS_VARS?=	# empty
+BUILD_DEFS+=		${PKG_USERS_VARS} ${PKG_GROUPS_VARS}
+
+# Override per-package, custom users and groups.
+.    for _var_ in ${PKG_USERS_VARS}
+${_var_}=		${UNPRIVILEGED_USER}
+.    endfor
+.    for _var_ in ${PKG_GROUPS_VARS}
+${_var_}=		${UNPRIVILEGED_GROUP}
+.    endfor
+.  endif
+
 .endif
 
-.if (defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss]))
+.if !empty(_UNPRIVILEGED:Munprivileged)
 # As a regular user, creation of other users and groups won't work, so
 # disable this step by default.
 PKG_CREATE_USERGROUP=	NO
@@ -67,5 +99,4 @@ SU_CMD=			${SH} -c
 
 # Do not attempt to modify /etc/shells as a regular user.
 PKG_REGISTER_SHELLS=	NO
-
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/06/30 15:05:08 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/07/04 20:55:02 jlam Exp $
 #
 
 DISTNAME=		suphp-0.6.0
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+=	--with-apache-user=${APACHE_USER:Q}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/httpd/suphp_log
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-BUILD_DEFS+=		APACHE_USER VARBASE
+PKG_USERS_VARS+=	APACHE_USER
+BUILD_DEFS+=		VARBASE
 
 EGDIR=			${PREFIX}/share/examples/suphp
 CONF_FILES=		${EGDIR}/suphp.conf ${PKG_SYSCONFDIR}/suphp.conf

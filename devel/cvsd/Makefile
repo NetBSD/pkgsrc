@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/17 20:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/04 20:54:37 jlam Exp $
 
 DISTNAME=		cvsd-1.0.13
 CATEGORIES=		devel scm
@@ -24,6 +24,8 @@ CVSD_GROUP?=		cvsd
 PKG_USERS=		${CVSD_USER}:${CVSD_GROUP}
 PKG_GECOS.${CVSD_USER}=	CVS wrapper
 PKG_GROUPS=		${CVSD_GROUP}
+PKG_GROUPS_VARS+=	CVSD_GROUP
+PKG_USERS_VARS+=	CVSD_USER
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

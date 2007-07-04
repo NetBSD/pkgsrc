@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/28 15:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/04 20:55:06 jlam Exp $
 #
 
 DISTNAME=		Zope-3.3.1
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 EXTRACT_USING=		gtar
 .endif
 
-BUILD_DEFS+=		VARBASE ZOPE3_GROUP ZOPE3_USER
+BUILD_DEFS+=		VARBASE
 BUILD_TARGET=		build
 
 RCD_SCRIPTS=		zope3 zss3

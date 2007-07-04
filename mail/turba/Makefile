@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/03/18 12:14:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/04 20:54:47 jlam Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -27,6 +27,8 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 REPLACE_PERL+=	${WRKSRC}/scripts/ldap/addou.pl
 
 PKG_SYSCONFSUBDIR?=	httpd
+
+PKG_USERS_VARS+=	APACHE_USER
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build

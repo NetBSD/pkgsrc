@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2007/03/18 12:38:44 taca Exp $
+# $NetBSD: Makefile,v 1.180 2007/07/04 20:54:58 jlam Exp $
 
 DISTNAME=		openssh-4.6p1
 PKGNAME=		openssh-4.6.1
@@ -30,7 +30,9 @@ CRYPTO=			yes
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
 
-BUILD_DEFS+=		OPENSSH_CHROOT OPENSSH_GROUP OPENSSH_USER
+PKG_GROUPS_VARS+=	OPENSSH_GROUP
+PKG_USERS_VARS+=	OPENSSH_USER
+BUILD_DEFS+=		OPENSSH_CHROOT
 BUILD_DEFS+=		VARBASE
 
 INSTALL_TARGET=		install-nokeys

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2007/04/16 16:10:42 ghen Exp $
+# $NetBSD: Makefile.common,v 1.39 2007/07/04 20:55:00 jlam Exp $
 
 DISTNAME=		bacula-2.0.3
 CATEGORIES=		sysutils
@@ -17,6 +17,9 @@ GNU_CONFIGURE=		yes
 BACULA_GROUP?=		bacula
 BACULA_DIR_USER?=	bacula-dir
 BACULA_SD_USER?=	bacula-sd
+
+PKG_GROUPS_VARS+=	BACULA_GROUP
+PKG_USERS_VARS+=	BACULA_DIR_USER BACULA_SD_USER
 
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run
