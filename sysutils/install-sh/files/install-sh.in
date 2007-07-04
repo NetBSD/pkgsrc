@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: install-sh.in,v 1.2 2007/06/20 16:18:36 jlam Exp $
+# $NetBSD: install-sh.in,v 1.3 2007/07/04 19:21:22 jlam Exp $
 # This script now also installs multiple files, but might choke on installing
 # multiple files with spaces in the file names.
 #
@@ -46,6 +46,7 @@ mkdirprog="${MKDIRPROG-mkdir}"
 transformbasename=""
 transform_arg=""
 instcmd="$mvprog"
+pathcompchmodcmd="$chmodprog @DEFAULT_INSTALL_MODE@"
 chmodcmd="$chmodprog @DEFAULT_INSTALL_MODE@"
 chowncmd=""
 chgrpcmd=""
@@ -202,7 +203,7 @@ while [ $# -ne 0 ] ; do
 		$doit $mkdirprog "${pathcomp}"
         	if [ x"$chowncmd" != x ]; then $doit $chowncmd "${pathcomp}"; else true ; fi &&
         	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "${pathcomp}"; else true ; fi &&
-        	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "${pathcomp}"; else true ; fi
+        	if [ x"$pathcompchmodcmd" != x ]; then $doit $pathcompchmodcmd "${pathcomp}"; else true ; fi
 
 	else
 		true
