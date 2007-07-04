@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/05/20 11:59:51 dsieger Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/07/04 07:39:33 dsieger Exp $
 bin/e16
 bin/edox
 bin/eesh
@@ -12,12 +12,6 @@ share/e16/E-docs/prev1.png
 share/e16/E-docs/prev2.png
 share/e16/E-docs/title.png
 share/e16/config/actionclasses.cfg
-share/e16/config/backup-borders.cfg
-share/e16/config/backup-colormodifiers.cfg
-share/e16/config/backup-cursors.cfg
-share/e16/config/backup-imageclasses.cfg
-share/e16/config/backup-textclasses.cfg
-share/e16/config/backup-tooltips.cfg
 share/e16/config/bindings.cfg
 share/e16/config/definitions
 share/e16/config/e16keyedit.db
