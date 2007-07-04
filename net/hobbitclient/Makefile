@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/05/29 04:58:06 gendalia Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/04 20:54:49 jlam Exp $
 #
 
 DISTNAME=	hobbit-4.2.0
@@ -36,6 +36,9 @@ PKG_USERS=	${BBUSER:Q}:${BBGROUP:Q}
 
 PKG_GECOS.${BBUSER}=	Hobbit monitor
 PKG_HOME.${BBUSER}=	${BBTOPDIR}
+
+PKG_GROUPS_VARS+=	BBGROUP
+PKG_USERS_VARS+=	BBUSER
 
 CONFIGURE_ARGS+="--client"
 

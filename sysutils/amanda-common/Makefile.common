@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2007/01/05 12:47:27 obache Exp $
+# $NetBSD: Makefile.common,v 1.25 2007/07/04 20:54:59 jlam Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -24,8 +24,9 @@ AMANDA_USER?=		backup
 AMANDA_TMP?=		/tmp/amanda
 AMANDA_VAR?=		${VARBASE}/amanda
 
-BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB
-BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR VARBASE
+PKG_GROUPS_VARS+=	AMANDA_GROUP
+PKG_USERS_VARS+=	AMANDA_USER
+BUILD_DEFS+=		AMANDA_SMB AMANDA_TMP AMANDA_VAR VARBASE
 
 USE_LIBTOOL=		yes
 

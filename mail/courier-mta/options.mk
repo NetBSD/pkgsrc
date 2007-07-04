@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/06/19 21:29:10 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2007/07/04 20:54:41 jlam Exp $
 
 # Global and legacy options
 
@@ -99,6 +99,8 @@ CONF_FILES_PERMS+=	${EGDIR}/module.local				\
 COURIER_TRANSPORTS+=	uucp
 PKG_GROUPS+=		${UUCP_GROUP}
 PKG_USERS+=		${UUCP_USER}:${UUCP_GROUP}
+PKG_GROUPS_VARS+=	UUCP_GROUP
+PKG_USERS_VARS+=	UUCP_USER
 PLIST_SRC+=		${PKGDIR}/PLIST.uucp
 
 CONF_FILES_PERMS+=	${EGDIR}/module.uucp				\
