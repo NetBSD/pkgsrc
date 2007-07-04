@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1513 2007/07/03 20:02:11 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1514 2007/07/04 13:55:01 lkundrak Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2781,7 +2781,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/amavisd-new to 2.5.2 [xtraeme 2007-07-03]
 	Updated net/p5-Net-DNS to 0.60 [taca 2007-07-03]
 	Updated sysutils/mklivecd to 0.15.3 [xtraeme 2007-07-03]
-
 	Updated www/curl to 7.16.3 [wiz 2007-07-03]
 	Updated devel/pcre to 7.2 [wiz 2007-07-03]
 	Updated devel/mercurial to 0.9.4 [wiz 2007-07-03]
@@ -2792,3 +2791,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/desktop-file-utils to 0.13 [wiz 2007-07-03]
 	Updated multimedia/xvidcore to 1.1.3 [wiz 2007-07-03]
 	Updated print/gv to 3.6.3 [wiz 2007-07-03]
+	Updated graphics/gimp to 2.2.15nb2 [lkundrak 2007-07-04]
+	Updated graphics/gimp1-base to 1.2.5nb6 [lkundrak 2007-07-04]
