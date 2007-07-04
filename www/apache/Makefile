@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2007/06/28 00:38:00 lkundrak Exp $
+# $NetBSD: Makefile,v 1.191 2007/07/04 20:55:02 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -58,7 +58,8 @@ USE_TOOLS+=		perl
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
-BUILD_DEFS+=		APACHE_USER APACHE_GROUP
+PKG_USERS_VARS+=	APACHE_USER
+PKG_GROUPS_VARS+=	APACHE_GROUP
 
 CONFIGURE_ARGS+=	--server-uid=${APACHE_USER:Q}
 CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP:Q}

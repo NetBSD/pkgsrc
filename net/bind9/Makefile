@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2007/06/12 14:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.90 2007/07/04 20:54:48 jlam Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
@@ -16,7 +16,7 @@ BIND_VERSION=	9.4.1
 BUILD_DEFS+=	USE_INET6
 # No need to set USE_INET6, will auto-detect.
 
-BUILD_DEFS+=	BIND_USER BIND_GROUP BIND_DIR VARBASE
+BUILD_DEFS+=	BIND_DIR VARBASE
 
 USE_LIBTOOL=		yes
 
@@ -28,6 +28,9 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 # use external OpenSSL.  comment out the following line and the buildlink
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE:Q}
+
+PKG_GROUPS_VARS+=	BIND_GROUP
+PKG_USERS_VARS+=	BIND_USER
 
 PKG_GROUPS=	${BIND_GROUP}
 PKG_USERS=	${BIND_USER}:${BIND_GROUP}

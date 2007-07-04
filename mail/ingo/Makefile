@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/18 12:09:33 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/04 20:54:44 jlam Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -32,6 +32,8 @@ SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	ingo.conf.dist
 SUBST_SED.files=	-e "s|@INGODIR@|${INGODIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
+
+PKG_USERS_VARS+=	APACHE_USER
 
 CONF_FILES=		${EGDIR}/ingo.conf ${PKG_SYSCONFDIR}/ingo.conf
 CONF_FILES_PERMS+=	${INGODIR}/config/conf.xml.dist \

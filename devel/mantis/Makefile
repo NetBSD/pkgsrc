@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/06/15 18:08:25 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/07/04 20:54:38 jlam Exp $
 
 DISTNAME=	mantis-1.0.6
 CATEGORIES=	devel www
@@ -26,7 +26,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-jpgraph-[0-9]*:../../graphics/php-jpgraph
 
 APACHE_USER?=	www
 
-BUILD_DEFS+=	APACHE_USER
+PKG_USERS_VARS+=APACHE_USER
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 MANTIS_HOME=	${PREFIX}/share/mantis

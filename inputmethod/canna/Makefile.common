@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2006/07/05 04:48:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/07/04 20:54:39 jlam Exp $
 #
 # Canna common makefile.
 #
@@ -23,6 +23,9 @@ USE_TOOLS+=	itools
 USE_IMAKE=	yes
 CANNA_SPOOL=	${VARBASE}/spool/canna
 CANNA_MODE=	0755
+
+PKG_GROUPS_VARS+=	CANNA_GROUP
+PKG_USERS_VARS+=	CANNA_USER
 
 # XXX IPv6 support.  To be done.
 #BUILD_DEFS+=	USE_INET6

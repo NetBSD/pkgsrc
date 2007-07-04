@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/06/24 20:55:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2007/07/04 20:54:38 jlam Exp $
 #
 
 DISTNAME=	monotone-server-0.35
@@ -24,8 +24,6 @@ PKG_SYSCONFSUBDIR=	monotone-server
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/keys \
 			${MONOTONE_USER} ${MONOTONE_GROUP} 700
 
-BUILD_DEFS+=		MONOTONE_GROUP MONOTONE_USER
-
 EXAMPLEDIR=		${PREFIX}/share/examples/monotone-server
 CONF_FILES_PERMS=	${EXAMPLEDIR}/hooks.conf \
 			${PKG_SYSCONFDIR}/hooks.conf \
@@ -39,6 +37,9 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/write-permissions \
 
 PKG_GROUPS=		${MONOTONE_GROUP}
 PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}
+
+PKG_GROUPS_VARS+=	MONOTONE_GROUP
+PKG_USERS_VARS+=	MONOTONE_USER
 
 .include "../../mk/bsd.prefs.mk"
 

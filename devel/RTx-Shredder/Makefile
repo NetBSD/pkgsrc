@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/01 09:42:13 cube Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/04 20:54:37 jlam Exp $
 #
 
 DISTNAME=	RTx-Shredder-0.03
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 
 .include "../../devel/rt3/dirs.mk"
+
+PKG_USERS_VARS+=	APACHE_USER
 
 OWN_DIRS_PERMS+=	${RT_VAR_DIR}/data/RTx-Shredder ${APACHE_USER}	${APACHE_GROUP} 0770
 PLIST_SUBST+=		RT_SHARE_DIR=share/rt3
