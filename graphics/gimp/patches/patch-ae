@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.6.6.1 2007/07/04 13:17:12 lkundrak Exp $
+
+Fix for CVE-2007-2949 heap overflow from upstream.
+
+--- plug-ins/common/psd.c.orig	2007-07-04 15:11:22.000000000 +0200
++++ plug-ins/common/psd.c
+@@ -1202,6 +1202,12 @@ seek_to_and_unpack_pixeldata(FILE* fd, g
+   width = channel->width;
+   height = channel->height;
+ 
++  if (width > G_MAXINT16 || height > G_MAXINT16)
++    {
++      g_message ("Error: Invalid channel dimensions");
++      gimp_quit ();
++    }
++
+   IFDBG
+     {
+       printf("\t\t\tLayer (%d) Channel (%d:%d) Compression: %d (%s)\n",
