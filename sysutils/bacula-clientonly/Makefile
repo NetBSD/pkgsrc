@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/03 08:18:45 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/04 20:54:59 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
 COMMENT=		The Network Backup Solution (client only)
@@ -12,8 +12,6 @@ FILESDIR=		${.CURDIR}/../../sysutils/bacula/files
 PLIST_SRC=		${.CURDIR}/../../sysutils/bacula/PLIST.common
 
 CONFIGURE_ARGS+=	--enable-client-only
-
-BUILD_DEFS+=		BACULA_GROUP
 
 OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} root ${BACULA_GROUP} 770
 

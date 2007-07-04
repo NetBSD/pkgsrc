@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2007/06/15 18:15:20 jlam Exp $
+# $NetBSD: Makefile,v 1.124 2007/07/04 20:54:55 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -91,7 +91,8 @@ CUPS_GROUP?=		sys
 FILES_SUBST+=		CUPS_USER=${CUPS_USER:Q}
 FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP:Q}
 
-BUILD_DEFS+=		CUPS_USER CUPS_GROUP
+PKG_GROUPS_VARS+=	CUPS_GROUP
+PKG_USERS_VARS+=	CUPS_USER
 
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups

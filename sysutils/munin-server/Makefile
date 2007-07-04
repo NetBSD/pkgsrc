@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/05 14:53:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/04 20:55:00 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S:-server-:_:}
@@ -24,6 +24,9 @@ PERL5_CONFIGURE=NO
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S:_:-:}
 CHECK_PORTABILITY_SKIP+=	node/node.d/*
+
+PKG_GROUPS_VARS+=	MUNIN_GROUP
+PKG_USERS_VARS+=	MUNIN_USER
 
 MUNIN_GROUP?=	munin
 MUNIN_USER?=	munin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/06/15 14:15:40 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2007/07/04 20:54:32 jlam Exp $
 #
 
 DISTNAME=	ircu2.10.12.10
@@ -29,6 +29,9 @@ PKG_SYSCONFSUBDIR=	ircd
 
 IRCD_USER?=		ircd
 IRCD_GROUP?=		ircd
+PKG_USERS_VARS+=	IRCD_USER
+PKG_GROUPS_VARS+=	IRCD_GROUP
+
 DATADIR=		${VARBASE}/ircd
 OWN_DIRS_PERMS=		${DATADIR} ${IRCD_USER} ${IRCD_GROUP} 0700
 EGDIR=			${PREFIX}/share/examples/ircd

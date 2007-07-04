@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/11/24 18:26:06 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2007/07/04 20:55:05 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -14,7 +14,8 @@ COMMENT=	Web proxy with advanced filtering capabilities
 
 PRIVOXY_USER?=		privoxy
 PRIVOXY_GROUP?=		privoxy
-BUILD_DEFS+=		PRIVOXY_USER PRIVOXY_GROUP
+PKG_GROUPS_VARS+=	PRIVOXY_GROUP
+PKG_USERS_VARS+=	PRIVOXY_USER
 
 PKG_SYSCONFSUBDIR?=	privoxy
 

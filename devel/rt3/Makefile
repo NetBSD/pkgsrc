@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/05/19 14:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/07/04 20:54:39 jlam Exp $
 
 DISTNAME=		rt-3.4.5
 PKGREVISION=		4
@@ -107,6 +107,8 @@ NO_BUILD=		yes
 PKG_SYSCONFSUBDIR=	rt3
 
 PKG_GROUPS=		${RT_GROUP}
+PKG_GROUPS_VARS+=	RT_GROUP APACHE_GROUP
+PKG_USERS_VARS+=	APACHE_USER
 
 CONFIGURE_ARGS+=	--enable-layout=pkgsrc
 CONFIGURE_ARGS+=	--with-rt-group=${RT_GROUP:Q}

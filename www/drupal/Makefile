@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/04/09 19:30:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2007/07/04 20:55:04 jlam Exp $
 
 DISTNAME=	drupal-5.1
 CATEGORIES=	www
@@ -14,7 +14,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
 NO_BUILD=	YES
 DRUPAL=		${PREFIX}/share/drupal
 PAX_DIRS=	includes misc modules scripts themes
-BUILD_DEFS+=	APACHE_USER APACHE_GROUP
+
+PKG_GROUPS_VARS+=	APACHE_GROUP
+PKG_USERS_VARS+=	APACHE_USER
 
 OWN_DIRS+=		${DRUPAL}/sites/default
 OWN_DIRS_PERMS+=	${DRUPAL}/files ${APACHE_USER} ${APACHE_GROUP} 0750

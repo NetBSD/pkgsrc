@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/24 19:21:30 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/04 20:54:51 jlam Exp $
 #
 
 DISTNAME=		nrpe-2.5.2
@@ -24,6 +24,9 @@ NAGIOS_GROUP?=		${NAGIOS_USER}
 PKG_GROUPS+=		${NAGIOS_GROUP}
 PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
 PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
+
+PKG_GROUPS_VARS+=	NAGIOS_GROUP
+PKG_USERS_VARS+=	NAGIOS_USER
 
 CONFIGURE_ARGS+=	--with-nrpe-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nrpe-group=${NAGIOS_GROUP:Q}
