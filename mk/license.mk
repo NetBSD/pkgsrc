@@ -1,17 +1,27 @@
-# $NetBSD: license.mk,v 1.1 2007/07/03 05:08:12 rillig Exp $
+# $NetBSD: license.mk,v 1.2 2007/07/05 18:16:47 gdt Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
 #
+# XXX: Some of this content arguably belongs in the pkgsrc guide
+# instead.
+#
 # === User-settable variables ===
 #
 # ACCEPTABLE_LICENSES
-#	The list of licenses that the package builder is willing to
-#	accept.
+#	If a package declares a license and that license is not a
+#	member of the list defined by this variable, pkgsrc will
+#	refuse to build the package.
 #
-#	XXX: We need a similar feature for the _user_ of the packages.
+#	XXX: pkg_install should also check LICENSE and decline to
+#	install if it is not in ACCEPTABLE_LICENSES.
+#
+#	XXX: Perhaps there should be some mechanism to prevent running
+#	programs that are part of packages that declare LICENSEs that
+#	are not in ACCEPTABLE_LICENSES or some per-user variable.
+#	This is surely controversial and requires discussion.
 #
 # === Package-settable variables ===
 #
@@ -22,9 +32,12 @@
 #	cases. Some packages use an OR-combination, while others use an
 #	AND-combination. Currently, pkgsrc can only handle a single
 #	license per package. For now, add a description of the licensing
-#	to ../doc/TODO, section "Licenses of packages".
+#	to ../doc/TODO, section "Licenses of packages".  Note that in
+#	such casesone can place the text of both licenses in
+#	licenses/foo-license and reference it.
 #
-#	Every package needs to specify its license, even if it is open
+#	Every package should specify its license.  (Prior to July 2007,
+#	Open Source and Free software did not have license tags.)
 #	source or free software.
 #
 #	The common licenses are collected in the licenses/ subdirectory
@@ -43,8 +56,16 @@
 # === Predefined variables ===
 #
 # DEFAULT_ACCEPTABLE_LICENSES
-#	The list of all licenses that did not require explicit tagging in
-#	pkgsrc packages before 2007Q3.
+#	This variable contains a list of licenses that before July,
+#	2007 did not require tagging because they were Open Source or
+#	Free.  The intent is to make it contain licenses that are Open
+#	Source or Free and not controversial, so as to provide a
+#	default that is pleasing to a large number of people.
+#
+#	XXX: Explain whether ACCEPTABLE_LICENSES takes on
+#	DEFAULT_ACCEPTABLE_LICENSES at the start of /etc/mk.conf.
+#	Arguably the new tagging rules should not result in a behavior
+#	change.
 #
 # === See also ===
 #
