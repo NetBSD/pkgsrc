@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/03/18 13:19:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/07/05 11:08:08 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1689,6 +1689,9 @@ share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__123.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__124.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__125.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__126.png
+share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__127.png
+share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__128.png
+share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__129.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__13.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__14.png
 share/doc/gtkmm-2.4/docs/reference/html/inherit__graph__15.png
@@ -1884,6 +1887,7 @@ share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_type.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacemembers_vars.html
 share/doc/gtkmm-2.4/docs/reference/html/namespaces.html
 share/doc/gtkmm-2.4/docs/reference/html/namespacesigc.html
+share/doc/gtkmm-2.4/docs/reference/html/namespacestatic_01const_01std.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p10s.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p2s.html
 share/doc/gtkmm-2.4/docs/reference/html/newin2p4s.html
