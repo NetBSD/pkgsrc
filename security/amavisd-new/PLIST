@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/05 15:18:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/07/05 08:36:56 ghen Exp $
 ${MILTER}sbin/amavis
 ${MILTER}sbin/amavis-milter
 sbin/amavisd
+sbin/amavisd-agent
 sbin/amavisd-nanny
 sbin/amavisd-release
 share/doc/amavisd-new/AAAREADME.first
