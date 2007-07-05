@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1516 2007/07/04 19:22:33 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.1517 2007/07/05 08:37:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp1-base to 1.2.5nb6 [lkundrak 2007-07-04]
 	Updated graphics/gimp24 to 2.3.18nb1 [lkundrak 2007-07-04]
 	Updated sysutils/install-sh to 20070704 [jlam 2007-07-04]
+	Updated security/amavisd-new to 2.5.2nb1 [ghen 2007-07-05]
