@@ -1,6 +1,25 @@
-@comment $NetBSD: PLIST,v 1.9 2007/03/01 08:48:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/07/05 23:20:49 rillig Exp $
 bin/mtn
 info/monotone.info
+share/doc/monotone/figures/branch-heads.png
+share/doc/monotone/figures/cert.png
+share/doc/monotone/figures/difference-between-versions.png
+share/doc/monotone/figures/file-id-manifest-id.png
+share/doc/monotone/figures/fork.png
+share/doc/monotone/figures/general-workflow.png
+share/doc/monotone/figures/linear-history.png
+share/doc/monotone/figures/local-workflow.png
+share/doc/monotone/figures/manifest.png
+share/doc/monotone/figures/merge.png
+share/doc/monotone/figures/network-workflow.png
+share/doc/monotone/figures/parent-child-hashes.png
+share/doc/monotone/figures/parent-child-names-hashes.png
+share/doc/monotone/figures/parent-child.png
+share/doc/monotone/figures/revision-chaining.png
+share/doc/monotone/figures/revision.png
+share/doc/monotone/figures/statement.png
+share/doc/monotone/figures/three-versions.png
+share/doc/monotone/figures/two-branches.png
 share/doc/monotone/monotone.html
 share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/es/LC_MESSAGES/monotone.mo
@@ -9,4 +28,5 @@ share/locale/it/LC_MESSAGES/monotone.mo
 share/locale/ja/LC_MESSAGES/monotone.mo
 share/locale/pt_BR/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
+@dirrm share/doc/monotone/figures
 @dirrm share/doc/monotone
