@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/10/13 18:21:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/07/06 18:31:34 drochner Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -22,6 +22,7 @@ include/libgsf-1/gsf/gsf-infile-zip.h
 include/libgsf-1/gsf/gsf-infile.h
 include/libgsf-1/gsf/gsf-input-bzip.h
 include/libgsf-1/gsf/gsf-input-gzip.h
+include/libgsf-1/gsf/gsf-input-http.h
 include/libgsf-1/gsf/gsf-input-impl.h
 include/libgsf-1/gsf/gsf-input-iochannel.h
 include/libgsf-1/gsf/gsf-input-memory.h
@@ -32,6 +33,7 @@ include/libgsf-1/gsf/gsf-input.h
 include/libgsf-1/gsf/gsf-libxml.h
 include/libgsf-1/gsf/gsf-meta-names.h
 include/libgsf-1/gsf/gsf-msole-utils.h
+include/libgsf-1/gsf/gsf-open-pkg-utils.h
 include/libgsf-1/gsf/gsf-opendoc-utils.h
 include/libgsf-1/gsf/gsf-outfile-impl.h
 include/libgsf-1/gsf/gsf-outfile-msole.h
@@ -56,6 +58,7 @@ lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 man/man1/gsf-office-thumbnailer.1
+share/gconf/schemas/gsf-office-thumbnailer.schemas
 share/gtk-doc/html/gsf/GsfClipData.html
 share/gtk-doc/html/gsf/api.html
 share/gtk-doc/html/gsf/dependencies.html
@@ -74,6 +77,7 @@ share/gtk-doc/html/gsf/gsf-Text.html
 share/gtk-doc/html/gsf/gsf-XML-and-libxml.html
 share/gtk-doc/html/gsf/gsf-Zip.html
 share/gtk-doc/html/gsf/gsf-blobs.html
+share/gtk-doc/html/gsf/gsf-index.html
 share/gtk-doc/html/gsf/gsf-memory.html
 share/gtk-doc/html/gsf/gsf-metadata.html
 share/gtk-doc/html/gsf/gsf-users.html
@@ -86,7 +90,6 @@ share/gtk-doc/html/gsf/index.html
 share/gtk-doc/html/gsf/index.sgml
 share/gtk-doc/html/gsf/intro.html
 share/gtk-doc/html/gsf/io.html
-share/gtk-doc/html/gsf/ix01.html
 share/gtk-doc/html/gsf/left.png
 share/gtk-doc/html/gsf/misc.html
 share/gtk-doc/html/gsf/parsers.html
@@ -94,11 +97,11 @@ share/gtk-doc/html/gsf/right.png
 share/gtk-doc/html/gsf/sources.html
 share/gtk-doc/html/gsf/style.css
 share/gtk-doc/html/gsf/up.png
-share/gconf/schemas/gsf-office-thumbnailer.schemas
 share/locale/es/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
+@dirrm share/gtk-doc/html/gsf
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm include/libgsf-1/gsf-win32
 @dirrm include/libgsf-1/gsf-gnome
 @dirrm include/libgsf-1/gsf
 @dirrm include/libgsf-1
-@dirrm share/gtk-doc/html/gsf
