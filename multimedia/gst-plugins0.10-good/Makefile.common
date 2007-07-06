@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2007/01/09 15:16:56 drochner Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/07/06 19:13:13 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	good
-GST_PLUGINS0.10_VER=	0.10.5
+GST_PLUGINS0.10_VER=	0.10.6
 
 # Disable all drivers and features by default.
 .for driver in	aalib \
