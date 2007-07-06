@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6474 2007/07/05 11:09:30 adam Exp $
+$NetBSD: TODO,v 1.6475 2007/07/06 22:04:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -256,11 +256,10 @@ Suggested package updates
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.10
 	o TiffIO-130e
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-5.3.1
+	o abcm2ps-5.4.4
 	o abcmidi-20070318
 	o acme-091
 	o acr-0.5.2
@@ -339,6 +338,7 @@ Suggested package updates
 	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o boehm-gc-7.0
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.1
@@ -354,7 +354,7 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cdrtools-2.01.01.28
+	o cdrtools-2.01.01.29
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cflow-1.2
@@ -428,12 +428,12 @@ Suggested package updates
 	o dwm-4.2
 	o eagle-4.16
 	o easymenu-0.7.2p1
+	o easytag-2.1.1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ed-0.6
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel2-2.18.3
 	o eggdrop-1.6.18
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
@@ -460,9 +460,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o evilwm-1.0.0
-	o evince-0.8.2
 	o evolution-2.10.3
-	o evolution-data-server-1.10.3.1
 	o evolution-exchange-2.10.3
 	o ex-20050325
 	o ezmlm-idx-5.1.0 [schmonz]
@@ -511,6 +509,8 @@ Suggested package updates
 	o gdm-2.18.3
 	o gdsreader-0.3.2
 	o geany-0.11
+	o geda-1.0.1.20070626
+	o gedit-2.18.2
 	o generator-cbiere-0.35r3
 	o gettext-0.16.1
 	o gfract-0.33
@@ -526,6 +526,8 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade-3.3.0
 	o glchess-1.0.5
+	o global-5.6
+	o glpk-4.19
 	o gmime-2.2.9
 	o gmp3info-0.8.5a
 	o gmpc-0.15.1
@@ -541,9 +543,9 @@ Suggested package updates
 	o gnome-session-2.18.3
 	o gnome-speech-0.4.14
 	o gnome-user-docs-2.18.2
-	o gnome2-terminal-2.18.1
 	o gnu-crypto-2.1.0
 	o gnucash-current-2.1.5
+	o gnupg2-2.0.5
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
 	o gnuradio-audio-portaudio-3.0.3
@@ -583,7 +585,6 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-good-0.10.6
 	o gtar-1.18
 	o gtexinfo-4.9
 	o gthumb-2.10.5
@@ -695,6 +696,7 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libelf-0.8.9
 	o libetpan-0.49
+	o libextractor-0.5.18a
 	o libflash-0.4.13
 	o libgda-3.0.1
 	o libggi-2.2.2
@@ -703,7 +705,6 @@ Suggested package updates
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libglade-2.6.1
 	o libglademm-2.6.4
 	o libgnomedb-3.0.0
 	o libgtop-2.14.9
@@ -1005,6 +1006,7 @@ Suggested package updates
 	o poptop-1.3.0
 	o posh-0.5.5
 	o postal-0.66
+	o postgrey-1.28
 	o powermanga-0.80
 	o prelude-lml-0.9.10
 	o profit-2.5.3
@@ -1021,7 +1023,6 @@ Suggested package updates
 	o py-GeoIP-1.2.1
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
-	o py-ORBit-2.14.3
 	o py-Optik-1.4.1
 	o py-Scientific-2.5.5
 	o py-Scientific-doc-2.5.5
@@ -1137,9 +1138,9 @@ Suggested package updates
 	o shorten-3.6.1
 	o siag-3.6.1
 	o sign-1.0.7
-	o silc-client-1.1.1
+	o silc-client-1.1.2
 	o silc-toolkit-1.0 [salo, breaks chat/gaim]
-	o silc-toolkit-1.1.1
+	o silc-toolkit-1.1.2
 	o simh-3.7.0
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
@@ -1151,7 +1152,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-1.4.0.74
 	o smalleiffel-0.90
-	o smalltalk-2.3.5
+	o smalltalk-2.95b
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.1.0
@@ -1181,6 +1182,7 @@ Suggested package updates
 	o sylpheed-claws-2.10.0 [now claws-mail]
 	o sympa-5.3
 	o sysinfo-4.2.2
+	o taskjuggler-2.4.0
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1217,7 +1219,7 @@ Suggested package updates
 	o ttt-1.8.2
 	o tuxpaint-0.9.17
 	o tuxpaint-config-0.0.7
-	o tuxpaint-stamps-20051125
+	o tuxpaint-stamps-20070701
 	o twelf-1.5r1
 	o twolame-0.3.10
 	o txt2html-2.45
@@ -1245,7 +1247,6 @@ Suggested package updates
 	o vobcopy-1.0.2
 	o vp-1.6
 	o vsftpd-2.0.5
-	o vte-0.16.6
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1336,7 +1337,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.36
+	o zile-2.2.37
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.10.3
