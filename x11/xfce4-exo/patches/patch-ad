@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/04/12 09:50:50 martti Exp $
-
---- exo/exo-mount-point.c.orig	2007-01-22 15:32:55.000000000 +0000
-+++ exo/exo-mount-point.c	2007-01-22 16:10:55.000000000 +0000
+--- exo/exo-mount-point.c.orig	2007-01-20 15:58:22.000000000 +0200
++++ exo/exo-mount-point.c	2007-07-06 14:10:50.000000000 +0300
 @@ -25,6 +25,9 @@
  #ifdef HAVE_SYS_TYPES_H
  #include <sys/types.h>
@@ -12,7 +10,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/04/12 09:50:50 martti Exp $
  #ifdef HAVE_SYS_STAT_H
  #include <sys/stat.h>
  #endif
-@@ -250,6 +257,33 @@
+@@ -38,6 +41,7 @@
+ #include <sys/mount.h>
+ #endif
+ #ifdef HAVE_SYS_MNTTAB_H
++#include <stdio.h>
+ #include <sys/mnttab.h>
+ #endif
+ 
+@@ -250,6 +254,33 @@
  
    /* close the file handle */
    fclose (fp);
