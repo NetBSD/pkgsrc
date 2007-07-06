@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/06 13:49:46 xtraeme Exp $
+
+SHA1 (policyd-weight-0.1.14.5.tar.gz) = f913aee3813bdc9f6fd67da1c586e2ea80122fae
+RMD160 (policyd-weight-0.1.14.5.tar.gz) = bb5db4aa41cfcf6282a4d140ba9fd7b67e35e2bf
+Size (policyd-weight-0.1.14.5.tar.gz) = 50043 bytes
