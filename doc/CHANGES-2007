@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1520 2007/07/06 11:04:56 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1521 2007/07/06 13:51:15 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2800,3 +2800,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtkmm to 2.10.10 [adam 2007-07-05]
 	Added misc/vym version 1.8.1 [agc 2007-07-05]
 	Updated net/proftpd to 1.3.1rc3 [martti 2007-07-06]
+	Added mail/policyd-weight version 0.1.14.5 [xtraeme 2007-07-06]
