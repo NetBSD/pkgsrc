@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/04/11 18:01:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/07/06 18:04:24 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
 man/man1/evince.1
@@ -164,6 +164,7 @@ share/locale/nb/LC_MESSAGES/evince.mo
 share/locale/ne/LC_MESSAGES/evince.mo
 share/locale/nl/LC_MESSAGES/evince.mo
 share/locale/nn/LC_MESSAGES/evince.mo
+share/locale/oc/LC_MESSAGES/evince.mo
 share/locale/or/LC_MESSAGES/evince.mo
 share/locale/pa/LC_MESSAGES/evince.mo
 share/locale/pl/LC_MESSAGES/evince.mo
