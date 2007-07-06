@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/07/06 19:20:15 drochner Exp $
+
+--- gst/vmnc/vmncdec.c.orig	2007-06-21 20:45:32.000000000 +0200
++++ gst/vmnc/vmncdec.c
+@@ -993,7 +993,7 @@ vmnc_dec_chain_frame (GstVMncDec * dec, 
+ 
+   if (res < 0) {
+     ret = GST_FLOW_ERROR;
+-    GST_ELEMENT_ERROR (dec, STREAM, DECODE, NULL, ("Couldn't decode packet"));
++    GST_ELEMENT_ERROR (dec, STREAM, DECODE, (NULL), ("Couldn't decode packet"));
+   } else {
+     GST_DEBUG_OBJECT (dec, "read %d bytes of %d", res, len);
+     /* inbuf may be NULL; that's ok */
