@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2005/01/25 22:42:49 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2007/07/06 18:33:10 drochner Exp $
 
---- configure.orig	2004-11-11 12:21:37.000000000 +0100
+--- configure.orig	2007-06-19 10:16:35.000000000 +0200
 +++ configure
-@@ -11071,6 +11071,7 @@ echo "${ECHO_T}$LINGUAS" >&6
+@@ -12985,6 +12985,7 @@ echo "${ECHO_T}$LINGUAS" >&6; }
  
  
  
 +if false; then
          if test -n "$PYTHON"; then
        # If the user set $PYTHON, use it and don't search something else.
-       echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.0" >&5
-@@ -11273,6 +11274,8 @@ echo "${ECHO_T}no" >&6
+       { echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.0" >&5
+@@ -13188,6 +13189,8 @@ echo "${ECHO_T}no" >&6; }
      have_python=false
    fi
  fi
