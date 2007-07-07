@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.2 2007/06/29 22:43:26 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.3 2007/07/07 13:54:36 wiz Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -194,7 +194,7 @@ BEGIN {
 	}
 	sort(top_count, sorted_top_count, "-rn")
 	if (sorted_top_count[0]) {
-		print "    <h2> Most offending build failures </h2>" > html_report	
+		print "    <h2>Packages causing the most breakage</h2>" > html_report	
 		print "    <table>" > html_report
 		print "      <tr>" > html_report
 		print "        <th> Location </th>" > html_report
@@ -214,7 +214,7 @@ BEGIN {
 		print "    <hr />" > html_report
 	}
 
-	print "    <h2> All unsuccesful builds </h2>" > html_report	
+	print "    <h2> All unsuccessful builds </h2>" > html_report	
 
 	print "    <table>" > html_report
 	print "      <tr>" > html_report
