@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.18 2007/01/23 03:27:20 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.19 2007/07/07 15:21:07 wiz Exp $
 
---- configure.in.orig	2006-06-07 01:01:52.000000000 -0400
-+++ configure.in
-@@ -326,7 +326,7 @@ case "$host" in
-     machdep="sparc_mach_dep.lo"
+--- configure.ac.orig	2007-06-30 15:40:15.000000000 +0000
++++ configure.ac
+@@ -399,7 +399,7 @@ case "$host" in
+     machdep="mach_dep.lo sparc_mach_dep.lo"
      AC_DEFINE(SUNOS53_SHARED_LIB)
      ;;
 - sparc*-sun-solaris2.*)
 + sparc*-sun-solaris2*)
-     machdep="sparc_mach_dep.lo"
+     machdep="mach_dep.lo sparc_mach_dep.lo"
      ;;
   ia64-*-*)
