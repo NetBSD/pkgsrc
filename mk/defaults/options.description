@@ -104,7 +104,7 @@ fd-small		Build smaller misc/fd package.
 ffmpeg	
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
-flac	
+flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype	
 ftp			Enable File Transport Protocol (FTP) support.
@@ -373,7 +373,7 @@ w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 w3m-lynx-key		Enable lynx-like key bindings.
 w3m-m17n		Multilingual support.
 w3m-unicode		Use Unicode characters.
-wcalc-gtk1		Use GTK-1.2.x instead of GKT-2.x for gtk-wcalc.
+wavpack			Enable wavpack support.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 wrap	
 wx	
