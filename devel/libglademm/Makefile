@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/09/24 16:48:27 adam Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/07 17:17:35 wiz Exp $
 
-DISTNAME=	libglademm-2.6.3
+DISTNAME=	libglademm-2.6.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libglademm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libglade/libglademm-2.4.pc.in
 GNU_CONFIGURE=		yes
 
+BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.6.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
