@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6480 2007/07/07 15:29:02 wiz Exp $
+$NetBSD: TODO,v 1.6481 2007/07/07 17:18:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -706,7 +706,6 @@ Suggested package updates
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libglademm-2.6.4
 	o libgnomedb-3.0.0
 	o libgtop-2.14.9
 	o libgtop2-2.14.8
