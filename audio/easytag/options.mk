@@ -1,6 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2007/02/27 09:58:49 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/07/07 02:18:12 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag-gtk2
+PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
+# remove after 2007Q3
+PKG_LEGACY_OPTIONS=	${PKG_OPTIONS.easytag-gtk2}
 PKG_SUPPORTED_OPTIONS=	flac mpeg4ip ogg
 PKG_SUGGESTED_OPTIONS=	flac mpeg4ip ogg
 
