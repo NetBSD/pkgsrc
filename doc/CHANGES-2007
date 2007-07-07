@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1523 2007/07/07 15:22:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1524 2007/07/07 15:29:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2803,3 +2803,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/policyd-weight version 0.1.14.5 [xtraeme 2007-07-06]
 	Added audio/easytag-current version 2.1.1 [wiz 2007-07-07]
 	Updated devel/boehm-gc to 7.0 [wiz 2007-07-07]
+	Updated textproc/libxml2 to 2.6.29 [wiz 2007-07-07]
