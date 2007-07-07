@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/07/07 07:47:51 wiz Exp $
+
+--- configure.orig	2007-07-04 18:50:16.000000000 +0000
++++ configure
+@@ -21294,7 +21294,7 @@ _ACEOF
+ 
+     fi
+ 
+-    if test "x$enable_id3v23" == "xyes"; then
++    if test "x$enable_id3v23" = "xyes"; then
+                 echo "$as_me:$LINENO: checking for library containing ID3Tag_Link" >&5
+ echo $ECHO_N "checking for library containing ID3Tag_Link... $ECHO_C" >&6
+ if test "${ac_cv_search_ID3Tag_Link+set}" = set; then
