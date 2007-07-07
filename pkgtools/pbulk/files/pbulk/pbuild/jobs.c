@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.3 2007/07/07 13:54:36 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -312,7 +312,7 @@ mark_initial(void)
 		}
 	}		
 
-	mark_initial_state(log_success, JOB_DONE, "succesful");
+	mark_initial_state(log_success, JOB_DONE, "successful");
 	mark_initial_state(log_failed, JOB_FAILED, "failing");
 }
 
