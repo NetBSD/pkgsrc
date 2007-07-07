@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6478 2007/07/07 15:22:34 wiz Exp $
+$NetBSD: TODO,v 1.6479 2007/07/07 15:25:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,6 @@ Suggested package updates
 	o dwm-4.2
 	o eagle-4.16
 	o easymenu-0.7.2p1
-	o easytag-2.1.1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ed-0.6
