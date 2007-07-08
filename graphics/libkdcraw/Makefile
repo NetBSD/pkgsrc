@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/08 07:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/08 08:13:43 wiz Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.1
@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	libkdcraw/libkdcraw.pc.in
 
 BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.14
 .include "../../graphics/lcms/buildlink3.mk"
