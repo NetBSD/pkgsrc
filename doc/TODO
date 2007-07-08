@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6486 2007/07/08 11:46:45 wiz Exp $
+$NetBSD: TODO,v 1.6487 2007/07/08 18:00:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ Suggested package updates
 	o gnome-speech-0.4.14
 	o gnome-user-docs-2.18.2
 	o gnu-crypto-2.1.0
-	o gnucash-current-2.1.5
 	o gnupg2-2.0.5
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
