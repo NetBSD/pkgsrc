@@ -1,16 +1,12 @@
-$NetBSD: distinfo,v 1.13 2006/05/14 21:16:00 schwarz Exp $
+$NetBSD: distinfo,v 1.14 2007/07/08 10:50:24 wiz Exp $
 
+SHA1 (xv-3.10a-jumbo-patches-20070520.tar.gz) = d00308c1687d9d803d26ef40c73d19a0f593c626
+RMD160 (xv-3.10a-jumbo-patches-20070520.tar.gz) = 23bc07030416ebaca5ce4d223921e33094c37b93
+Size (xv-3.10a-jumbo-patches-20070520.tar.gz) = 1363802 bytes
 SHA1 (xv-3.10a.tar.gz) = 9e6372f154be9e9e355972cbeb91d98d9c342474
 RMD160 (xv-3.10a.tar.gz) = 7d545e0c0e5b0120a7d026ea549cba19a53fbc0d
 Size (xv-3.10a.tar.gz) = 2259124 bytes
-SHA1 (xv-3.10a-jumbo-patches-20050501.tar.bz2) = deb42fc30697312f13fcedb88f10cc3ed0ced8ac
-RMD160 (xv-3.10a-jumbo-patches-20050501.tar.bz2) = d199e7d1b6c5162e0cad09d4118b3735f1d156ef
-Size (xv-3.10a-jumbo-patches-20050501.tar.bz2) = 369886 bytes
-SHA1 (patch-aa) = 9bfd1e6a55766e4c6f60907a5f58a882657dca9b
-SHA1 (patch-ab) = 1be183fb72ba82cc15fdcec6607c1e294e284370
-SHA1 (patch-ac) = cc0da5cefbb4a13b86daaca482c52ece4bc3294c
-SHA1 (patch-ad) = 3a49ca0152f6a7d6cf79348e3b5308da509b63ea
-SHA1 (patch-af) = 1beddc2abe530871fcdbb2cea5682225c194bd4d
-SHA1 (patch-ah) = 830139139ddf49a505786cde8930ba1e9ae006f4
-SHA1 (patch-ai) = 10febc95047fc25a3b93c157eb39ed1ed7a30bc6
-SHA1 (patch-aj) = 7f40c002d8a16b1507c6171db543285447e3cf81
+SHA1 (patch-aa) = bd6ef51bf962e1994e2e47ba5197c9729ec5221a
+SHA1 (patch-ac) = 39933efe8411df805abfac5a1e43f1e5bee2ea8f
+SHA1 (patch-ad) = b0d0d4f4243ceb091e0734c0024c997bdf7e86c7
+SHA1 (patch-af) = c6ede0291556f7739274e8352d6fb626480927e8
