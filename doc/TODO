@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6483 2007/07/08 08:49:13 wiz Exp $
+$NetBSD: TODO,v 1.6484 2007/07/08 09:58:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ Suggested package updates
 	o kdrill-6.5
 	o kid3-0.9
 	o kinput2-3.1
-	o kipi-plugins-0.1.4
 	o kismet-2007.01.1b
 	o kmp-0.5
 	o kmysqladmin-0.7.2
