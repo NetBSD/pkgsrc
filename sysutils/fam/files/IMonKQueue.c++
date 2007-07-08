@@ -1,4 +1,4 @@
-//  $NetBSD: IMonKQueue.c++,v 1.3 2005/01/05 16:21:06 jmmv Exp $
+//  $NetBSD: IMonKQueue.c++,v 1.4 2007/07/08 23:31:34 minskim Exp $
 //
 //  Copyright (c) 2004, 2005 Julio M. Merino Vidal.
 //  
@@ -167,7 +167,16 @@ IMon::imon_open(void)
     // Get the maximum number of files we can open and use it to set a
     // limit of the files we can monitor.
     size_t len = sizeof(max_changes);
+#ifdef HAVE_SYSCTLBYNAME
     if (sysctlbyname("kern.maxfiles", &max_changes, &len, NULL, 0) == -1)
+#else
+    int mib[2];
+
+    mib[0] = CTL_KERN;
+    mib[1] = KERN_MAXFILES;
+
+    if (sysctl(mib, 2, &max_changes, &len, NULL, 0) == -1)
+#endif
         max_changes = 128;
     else
         max_changes /= 2;
