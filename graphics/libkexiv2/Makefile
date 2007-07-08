@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/08 06:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/08 06:46:06 wiz Exp $
 #
 
 DISTNAME=	libkexiv2-0.1.5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kipi.sourceforge.net/
+HOMEPAGE=	http://www.kipi-plugins.org/
 COMMENT=	KDE wrapper for exiv2
 
 GNU_CONFIGURE=	yes
