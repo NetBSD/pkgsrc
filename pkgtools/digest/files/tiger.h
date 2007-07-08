@@ -1,4 +1,4 @@
-/* $NetBSD: tiger.h,v 1.1 2005/03/22 10:16:15 agc Exp $ */
+/* $NetBSD: tiger.h,v 1.2 2007/07/08 05:09:10 minskim Exp $ */
 
 /*
  * Copyright © 2005 Alistair Crooks.  All rights reserved.
@@ -33,6 +33,10 @@
  */
 #ifndef TIGER_H_
 #define TIGER_H_
+
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
 
 typedef struct tiger_context_t {
 	uint64_t	ctx[3];

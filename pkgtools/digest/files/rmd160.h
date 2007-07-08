@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.3 2007/07/03 18:54:04 joerg Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.4 2007/07/08 05:09:09 minskim Exp $	*/
 
 /********************************************************************\
  *
@@ -23,6 +23,10 @@
 
 #ifndef _RMD160_H_
 #define _RMD160_H_
+
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
 
 typedef struct {
 	uint32_t	state[5];	/* state (ABCDE) */

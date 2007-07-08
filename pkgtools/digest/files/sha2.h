@@ -36,6 +36,10 @@
 #ifndef __SHA2_H__
 #define __SHA2_H__
 
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
