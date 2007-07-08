@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2006/03/15 19:27:31 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2007/07/08 10:50:24 wiz Exp $
 
---- vdcomp.c.orig	2006-03-15 11:00:24.000000000 -0800
-+++ vdcomp.c
-@@ -116,7 +116,8 @@
- #  if defined(hp300) || defined(hp800) || defined(NeXT)
- #   include <sys/malloc.h>                /* it's in 'sys' on HPs and NeXT */
- #  else
--#   if !defined(__386BSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
-+#   if !defined(__386BSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__) \
-+       && !defined(__DARWIN__)
-     /*
-      I want to use BSD macro for checking if this OS is *BSD or not,
-      but the macro is defined in <sys/parm.h>, which I don't know all
+--- xvpcd.c.orig	2007-05-14 01:02:13.000000000 +0000
++++ xvpcd.c
+@@ -30,9 +30,6 @@
+ #ifdef HAVE_PCD
+ 
+ #include <memory.h>
+-#ifndef alloca
+-#  include <alloca.h> /* "not in POSIX or SUSv3" according to Linux man page */
+-#endif                /* ...but required for Sun C compiler (alloca = macro) */
+ 
+ #define  TRACE  0
+ #if TRACE

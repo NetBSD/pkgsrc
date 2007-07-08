@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.8 2005/08/10 16:50:18 he Exp $
+$NetBSD: patch-ac,v 1.9 2007/07/08 10:50:25 wiz Exp $
 
---- config.h.orig	2005-07-29 15:11:02.000000000 +0200
+--- config.h.orig	2007-06-08 07:29:49.000000000 +0000
 +++ config.h
-@@ -116,10 +116,9 @@
-  * should not need to be changed
+@@ -113,9 +113,9 @@
   */
  
--/* #define GS_PATH "/usr/local/bin/gs" */
--#define GS_PATH "/usr/bin/gs"
+ /* #define GS_PATH "/usr/local/bin/gs" */
+-#define GS_PATH "gs"
 -/* #define GS_LIB  "."                 */
 -/* #define GS_DEV  "ppmraw"            */
 +#define GS_PATH "@LOCALBASE@/bin/gs"
