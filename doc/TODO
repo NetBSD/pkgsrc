@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6487 2007/07/08 18:00:49 wiz Exp $
+$NetBSD: TODO,v 1.6488 2007/07/08 20:21:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -345,7 +345,6 @@ Suggested package updates
 	o btpd-0.12
 	o bugzilla-3.0
 	o bwidget-1.7.0
-	o bzr-0.17
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cal3d-0.11.0
@@ -1123,7 +1122,6 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scm-5e3
-	o scmgit-1.5.2.2
 	o scons-0.97
 	o scribus-1.3.4
 	o scrollz-1.9.99
