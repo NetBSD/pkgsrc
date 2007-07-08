@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2007/05/21 09:59:56 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/07/08 22:32:15 xtraeme Exp $
 #
 
-DISTNAME=	mailgraph-1.12
-PKGREVISION=	2
+DISTNAME=	mailgraph-1.13
+#PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://people.ee.ethz.ch/~dws/software/mailgraph/pub/ \
-		http://people.ee.ethz.ch/~dws/software/mailgraph/pub/old/
+MASTER_SITES=	http://mailgraph.schweikert.ch/pub/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://people.ee.ethz.ch/~dws/software/mailgraph/
+HOMEPAGE=	http://mailgraph.schweikert.ch/
 COMMENT=	RRDtool frontend for mail statistics
 
 DEPENDS+=	rrdtool>=1:../../databases/rrdtool
