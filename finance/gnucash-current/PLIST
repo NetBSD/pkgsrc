@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/13 22:43:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/08 17:57:35 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -497,6 +497,7 @@ share/gnucash/doc/README.dependencies
 share/gnucash/doc/README.francais
 share/gnucash/doc/README.german
 share/gnucash/doc/README.patches
+share/gnucash/doc/README.win32-bin.txt
 share/gnucash/doc/examples/Money95bank_fr.qif
 share/gnucash/doc/examples/Money95invst_fr.qif
 share/gnucash/doc/examples/Money95mfunds_fr.qif
@@ -660,6 +661,7 @@ share/gnucash/pixmaps/gnc-transfer-16.png
 share/gnucash/pixmaps/gnc-transfer.png
 share/gnucash/pixmaps/gnucash-icon-16x16.png
 share/gnucash/pixmaps/gnucash-icon-32x32.png
+share/gnucash/pixmaps/gnucash-icon-48x48.bmp
 share/gnucash/pixmaps/gnucash-icon-48x48.png
 share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
