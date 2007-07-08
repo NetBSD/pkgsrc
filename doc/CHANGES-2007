@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1530 2007/07/08 12:03:01 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1531 2007/07/08 18:00:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2813,3 +2813,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/xv to 3.10anb13 [wiz 2007-07-08]
 	Updated devel/yasm to 0.6.1 [wiz 2007-07-08]
 	Updated comms/asterisk to 1.2.20 [mjl 2007-07-08]
+	Updated finance/gnucash-current to 2.1.5 [wiz 2007-07-08]
