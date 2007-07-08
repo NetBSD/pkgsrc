@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/04/15 21:46:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/07/08 20:19:57 wiz Exp $
 bin/git
 bin/git-add
 bin/git-add--interactive
@@ -14,6 +14,7 @@ bin/git-blame
 bin/git-branch
 bin/git-bundle
 bin/git-cat-file
+bin/git-check-attr
 bin/git-check-ref-format
 bin/git-checkout
 bin/git-checkout-index
@@ -75,6 +76,7 @@ bin/git-merge-ours
 bin/git-merge-recursive
 bin/git-merge-resolve
 bin/git-merge-stupid
+bin/git-merge-subtree
 bin/git-merge-tree
 bin/git-mergetool
 bin/git-mktag
@@ -154,6 +156,7 @@ man/man1/git-blame.1
 man/man1/git-branch.1
 man/man1/git-bundle.1
 man/man1/git-cat-file.1
+man/man1/git-check-attr.1
 man/man1/git-check-ref-format.1
 man/man1/git-checkout-index.1
 man/man1/git-checkout.1
@@ -272,6 +275,8 @@ man/man1/git-verify-tag.1
 man/man1/git-whatchanged.1
 man/man1/git-write-tree.1
 man/man1/gitk.1
+man/man5/gitattributes.5
+man/man5/gitignore.5
 man/man7/git.7
 share/git-core/templates/description
 share/git-core/templates/hooks/applypatch-msg
@@ -284,6 +289,24 @@ share/git-core/templates/hooks/pre-commit
 share/git-core/templates/hooks/pre-rebase
 share/git-core/templates/hooks/update
 share/git-core/templates/info/exclude
+share/git-gui/lib/blame.tcl
+share/git-gui/lib/branch.tcl
+share/git-gui/lib/browser.tcl
+share/git-gui/lib/class.tcl
+share/git-gui/lib/commit.tcl
+share/git-gui/lib/console.tcl
+share/git-gui/lib/database.tcl
+share/git-gui/lib/diff.tcl
+share/git-gui/lib/error.tcl
+share/git-gui/lib/index.tcl
+share/git-gui/lib/merge.tcl
+share/git-gui/lib/option.tcl
+share/git-gui/lib/remote.tcl
+share/git-gui/lib/shortcut.tcl
+share/git-gui/lib/tclIndex
+share/git-gui/lib/transport.tcl
+@dirrm share/git-gui/lib
+@dirrm share/git-gui
 @dirrm share/git-core/templates/info
 @dirrm share/git-core/templates/hooks
 @exec ${MKDIR} %D/share/git-core/templates/branches
