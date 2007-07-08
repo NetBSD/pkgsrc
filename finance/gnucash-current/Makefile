@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/06/04 19:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/08 17:57:34 wiz Exp $
 #
 
-DISTNAME=		gnucash-2.1.3
+DISTNAME=		gnucash-2.1.5
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -55,15 +55,13 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../misc/goffice0.2/buildlink3.mk"
+.include "../../misc/goffice/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.10.0
 .include "../../print/libgnomeprint/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.10.0
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.3
-.include "../../www/gtkhtml38/buildlink3.mk"
-# using gtkhtml314, it needs goffice>=0.3, but doesn't recognize 0.4
-#.include "../../www/gtkhtml314/buildlink3.mk"
+.include "../../www/gtkhtml314/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
