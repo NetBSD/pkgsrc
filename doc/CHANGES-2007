@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1525 2007/07/07 17:18:03 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1526 2007/07/08 08:49:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2805,3 +2805,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/boehm-gc to 7.0 [wiz 2007-07-07]
 	Updated textproc/libxml2 to 2.6.29 [wiz 2007-07-07]
 	Updated devel/libglademm to 2.6.4 [wiz 2007-07-07]
+	Updated graphics/libkexiv2 to 0.1.5 [wiz 2007-07-08]
+	Added graphics/libkdcraw version 0.1.1 [wiz 2007-07-08]
+	Removed graphics/digikamimageplugins [wiz 2007-07-08]
+	Updated graphics/digikam to 0.9.2 [wiz 2007-07-08]
