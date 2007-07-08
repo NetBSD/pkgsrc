@@ -1,9 +1,9 @@
-$NetBSD: patch-ah,v 1.1 2007/04/26 01:23:49 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.2 2007/07/08 20:19:58 wiz Exp $
 
---- git-gui/Makefile.orig	2007-04-12 01:41:44.000000000 +0000
+--- git-gui/Makefile.orig	2007-07-02 08:11:39.000000000 +0000
 +++ git-gui/Makefile
-@@ -54,8 +54,8 @@ $(patsubst %.sh,%,$(SCRIPT_SH)): GIT-VER
- all:: $(ALL_PROGRAMS)
+@@ -115,8 +115,8 @@ GIT-GUI-VARS: .FORCE-GIT-GUI-VARS
+ all:: $(ALL_PROGRAMS) lib/tclIndex
  
  install: all
 -	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(gitexecdir_SQ)'
@@ -11,5 +11,5 @@ $NetBSD: patch-ah,v 1.1 2007/04/26 01:23:49 dmcmahill Exp $
 +	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
 +	$(BSD_INSTALL_SCRIPT) git-gui '$(DESTDIR_SQ)$(gitexecdir_SQ)'
  	$(foreach p,$(GITGUI_BUILT_INS), rm -f '$(DESTDIR_SQ)$(gitexecdir_SQ)/$p' && ln '$(DESTDIR_SQ)$(gitexecdir_SQ)/git-gui' '$(DESTDIR_SQ)$(gitexecdir_SQ)/$p' ;)
- 
- dist-version:
+ 	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(libdir_SQ)'
+ 	$(INSTALL) -m644 lib/tclIndex '$(DESTDIR_SQ)$(libdir_SQ)'
