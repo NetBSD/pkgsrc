@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1531 2007/07/08 18:00:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1532 2007/07/08 19:22:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/yasm to 0.6.1 [wiz 2007-07-08]
 	Updated comms/asterisk to 1.2.20 [mjl 2007-07-08]
 	Updated finance/gnucash-current to 2.1.5 [wiz 2007-07-08]
+	Added net/urlgfe version 1.0.1 [minskim 2007-07-08]
