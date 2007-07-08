@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/07/08 12:35:10 wiz Exp $
 
 DISTNAME=	miredo-1.0.6
 CATEGORIES=	net
 MASTER_SITES=	http://www.remlab.net/files/miredo/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rpaulo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.remlab.net/miredo/
 COMMENT=	Teredo IPv6 tunneling
 
