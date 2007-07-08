@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 2007/07/08 08:47:26 wiz Exp $
+
+--- digikam/libs/greycstoration/greycstorationiface.cpp.orig	2007-06-13 18:06:04.000000000 +0000
++++ digikam/libs/greycstoration/greycstorationiface.cpp
+@@ -38,7 +38,7 @@
+ 
+ #define cimg_plugin "greycstoration.h"
+ #if defined(sun)         || defined(__sun)      || defined(linux)       || defined(__linux) \
+- || defined(__linux__)   || defined(__CYGWIN__) || defined(BSD)         || defined(__FreeBSD__) \
++ || defined(__linux__)   || defined(__CYGWIN__) || defined(BSD)         || defined(__FreeBSD__) || defined(__NetBSD__)\
+  || defined(__OPENBSD__) || defined(__MACOSX__) || defined(__APPLE__)   || defined(sgi) \
+  || defined(__sgi)
+ #include <pthread.h>
