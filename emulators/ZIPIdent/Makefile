@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/26 00:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/08 09:42:33 wiz Exp $
 #
 
 DISTNAME=		zident28
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ZIPIdent/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/ZIPIdent/ZIPIdent.php
 COMMENT=		Identify arcade ROM sets
 
