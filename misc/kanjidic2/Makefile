@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/09 08:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/08 09:43:49 wiz Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -14,7 +14,7 @@ OMASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.gz
 DISTFILES=	kanjidic2.xml.gz kanjidic_doc.html kanjidic2_ov.html kanjidic2_dtd.gz kanjidic2_xsd.gz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/kanjidic.html
 COMMENT=	Japanese Kanji information
 
