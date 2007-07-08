@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/08 12:35:11 wiz Exp $
 
 DISTNAME=	wpa_supplicant-0.4.9
 PKGNAME=	${DISTNAME:S/supplicant/gui/}
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 
-MAINTAINER=	rpaulo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hostap.epitest.fi/wpa_supplicant/
 COMMENT=	QT GUI for wpa_supplicant(8)
 
