@@ -1,6 +1,6 @@
-$NetBSD: patch-ax,v 1.11 2005/03/01 23:06:55 dmcmahill Exp $
+$NetBSD: patch-ax,v 1.12 2007/07/08 23:31:35 minskim Exp $
 
---- configure.orig	2003-11-26 13:47:26.000000000 -0600
+--- configure.orig	2003-11-26 11:47:26.000000000 -0800
 +++ configure
 @@ -1,6 +1,6 @@
  #! /bin/sh
@@ -160,7 +160,7 @@ $NetBSD: patch-ax,v 1.11 2005/03/01 23:06:55 dmcmahill Exp $
  
  
 -for ac_func in bindresvport _daemonize daemon getgrmember select
-+for ac_func in bindresvport _daemonize daemon getgrmember select unsetenv
++for ac_func in bindresvport _daemonize daemon getgrmember select sysctlbyname unsetenv
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_func" >&5
