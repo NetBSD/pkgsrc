@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2004/12/09 18:45:32 minskim Exp $
+$NetBSD: patch-aa,v 1.9 2007/07/08 23:31:35 minskim Exp $
 
---- configure.ac.orig	2003-11-26 13:47:59.000000000 -0600
+--- configure.ac.orig	2003-11-26 11:47:59.000000000 -0800
 +++ configure.ac
 @@ -31,7 +31,7 @@ AC_CHECK_LIB([rpcsvc], [pmap_set])
  # Checks for header files.
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.8 2004/12/09 18:45:32 minskim Exp $
  AC_FUNC_ERROR_AT_LINE
  AC_FUNC_SELECT_ARGTYPES
 -AC_CHECK_FUNCS([bindresvport _daemonize daemon getgrmember select])
-+AC_CHECK_FUNCS([bindresvport _daemonize daemon getgrmember select unsetenv])
++AC_CHECK_FUNCS([bindresvport _daemonize daemon getgrmember select sysctlbyname unsetenv])
  
  AC_CONFIG_FILES([Makefile
                   src/Makefile
