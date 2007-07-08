@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6489 2007/07/08 20:23:12 smb Exp $
+$NetBSD: TODO,v 1.6490 2007/07/08 20:46:37 smb Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ Suggested package updates
 	o gtkam-0.1.14 [pkg/36317]
 	o gtkhtml314-3.14.3
 	o gtklife-5.1
-	o gtkpod-0.99.8
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
