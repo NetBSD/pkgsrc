@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6481 2007/07/07 17:18:04 wiz Exp $
+$NetBSD: TODO,v 1.6482 2007/07/08 07:30:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -670,6 +670,7 @@ Suggested package updates
 	o kdrill-6.5
 	o kid3-0.9
 	o kinput2-3.1
+	o kipi-plugins-0.1.4
 	o kismet-2007.01.1b
 	o kmp-0.5
 	o kmysqladmin-0.7.2
@@ -1089,7 +1090,7 @@ Suggested package updates
 	o radiance-3.7.2
 	o radiusd-cistron-1.6.8
 	o radmind-1.8.1
-	o raine-0.50.3
+	o raine-0.50.5
 	o randread-0.2
 	o rat-4.2.25
 	o rayshade-4.0.6
