@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/26 00:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/07/08 09:42:33 wiz Exp $
 #
 
 DISTNAME=		dutil231
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatUtil/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/DatUtil/DatUtil.php
 COMMENT=		Create and convert emulator rom checksum files
 
