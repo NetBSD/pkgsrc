@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/26 00:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/08 09:42:33 wiz Exp $
 #
 
 DISTNAME=		mdiff226
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/MAMEDiff/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/MAMEDiff/MAMEDiff.php
 COMMENT=		Compare MAME rom sets of different releases
 

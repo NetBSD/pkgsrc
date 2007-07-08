@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/26 00:00:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/08 09:42:32 wiz Exp $
 #
 
 DISTNAME=		datlib220
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatLib/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/DatLib/DatLib.php
 COMMENT=		Data file library for some emulation tools
 
