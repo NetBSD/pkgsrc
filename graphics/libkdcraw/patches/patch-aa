@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/07/08 07:13:37 wiz Exp $
+
+--- configure.orig	2007-07-08 06:51:18.000000000 +0000
++++ configure
+@@ -29911,14 +29911,14 @@ fi
+ 
+ 
+ 
+-{ echo "$as_me:$LINENO: checking for libjpeg6b" >&5
+-echo $ECHO_N "checking for libjpeg6b... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_jpeg_6b+set}" = set; then
++{ echo "$as_me:$LINENO: checking for libjpeg" >&5
++echo $ECHO_N "checking for libjpeg... $ECHO_C" >&6; }
++if test "${ac_cv_lib_jpeg_+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+ 
+ ac_save_LIBS="$LIBS"
+-LIBS="$all_libraries $USER_LDFLAGS -ljpeg6b -lm"
++LIBS="$all_libraries $USER_LDFLAGS -ljpeg -lm"
+ ac_save_CFLAGS="$CFLAGS"
+ CFLAGS="$CFLAGS $all_includes $USER_INCLUDES"
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -29962,12 +29962,12 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  eval "ac_cv_lib_jpeg_6b=-ljpeg6b"
++  eval "ac_cv_lib_jpeg_=-ljpeg"
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	eval "ac_cv_lib_jpeg_6b=no"
++	eval "ac_cv_lib_jpeg_=no"
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+@@ -29978,10 +29978,10 @@ CFLAGS="$ac_save_CFLAGS"
+ fi
+ 
+ 
+-if eval "test ! \"`echo $ac_cv_lib_jpeg_6b`\" = no"; then
+-  LIBJPEG="$ac_cv_lib_jpeg_6b"
+-  { echo "$as_me:$LINENO: result: $ac_cv_lib_jpeg_6b" >&5
+-echo "${ECHO_T}$ac_cv_lib_jpeg_6b" >&6; }
++if eval "test ! \"`echo $ac_cv_lib_jpeg_`\" = no"; then
++  LIBJPEG="$ac_cv_lib_jpeg_"
++  { echo "$as_me:$LINENO: result: $ac_cv_lib_jpeg_" >&5
++echo "${ECHO_T}$ac_cv_lib_jpeg_" >&6; }
+ else
+   { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+@@ -30102,14 +30102,14 @@ else
+ There is an installation error in jpeg support. You seem to have only one
+ of either the headers _or_ the libraries installed. You may need to either
+ provide correct --with-extra-... options, or the development package of
+-libjpeg6b. You can get a source package of libjpeg from http://www.ijg.org/
++libjpeg. You can get a source package of libjpeg from http://www.ijg.org/
+ Disabling JPEG support.
+ " >&5
+ echo "$as_me: WARNING:
+ There is an installation error in jpeg support. You seem to have only one
+ of either the headers _or_ the libraries installed. You may need to either
+ provide correct --with-extra-... options, or the development package of
+-libjpeg6b. You can get a source package of libjpeg from http://www.ijg.org/
++libjpeg. You can get a source package of libjpeg from http://www.ijg.org/
+ Disabling JPEG support.
+ " >&2;}
+   else
