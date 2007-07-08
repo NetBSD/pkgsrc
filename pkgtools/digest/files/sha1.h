@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.h,v 1.3 2007/07/03 18:54:05 joerg Exp $	*/
+/*	$NetBSD: sha1.h,v 1.4 2007/07/08 05:09:09 minskim Exp $	*/
 
 /*
  * SHA-1 in C
@@ -8,6 +8,10 @@
 
 #ifndef _SYS_SHA1_H_
 #define	_SYS_SHA1_H_
+
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
 
 typedef struct {
 	uint32_t state[5];
