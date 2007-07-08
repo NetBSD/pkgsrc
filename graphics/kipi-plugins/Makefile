@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/07/08 09:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/07/08 10:04:44 wiz Exp $
 
 DISTNAME=	kipi-plugins-0.1.4
 CATEGORIES=	graphics
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/drupal/
 COMMENT=	Kipi (KDE Image Plugin Interface) plugins
-
-DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
 
 USE_TOOLS+=		gmake perl pkg-config msgfmt bash:run
 USE_LANGUAGES=		c c++
