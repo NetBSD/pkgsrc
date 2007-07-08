@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2007/07/04 20:54:34 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/07/08 12:02:18 mjl Exp $
 
-DISTNAME=	asterisk-1.2.19
+DISTNAME=	asterisk-1.2.20
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases/
