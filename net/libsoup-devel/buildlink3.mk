@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2007/06/05 05:36:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/07/09 17:17:54 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSOUP_DEVEL_BUILDLINK3_MK:=	${LIBSOUP_DEVEL_BUILDLINK3_MK}+
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.libsoup-devel?=	../../net/libsoup-devel
 .endif	# LIBSOUP_DEVEL_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
