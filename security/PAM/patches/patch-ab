@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/10/10 03:20:48 ben Exp $
+$NetBSD: patch-ab,v 1.6 2007/07/09 03:51:33 minskim Exp $
 
---- configure.in.orig	2002-07-09 02:17:13.000000000 -0400
+--- configure.in.orig	2002-07-08 23:17:13.000000000 -0700
 +++ configure.in
 @@ -157,6 +157,10 @@ AC_ARG_ENABLE(lckpwdf,
  	WITH_LCKPWDF=no, WITH_LCKPWDF=yes)
@@ -30,7 +30,17 @@ $NetBSD: patch-ab,v 1.5 2006/10/10 03:20:48 ben Exp $
  	HAVE_LIBCRYPT=no)
  AC_SUBST(HAVE_LIBCRYPT)
  AC_CHECK_LIB(util, logwtmp, HAVE_LIBUTIL=yes ; AC_DEFINE(HAVE_LIBUTIL),
-@@ -240,6 +248,13 @@ AC_CHECK_HEADERS(fcntl.h limits.h malloc
+@@ -215,6 +223,9 @@ if test x$HAVE_LIBDB != xyes ; then
+ 	HAVE_LIBDB=no)
+ fi
+ AC_SUBST(HAVE_LIBDB)
++AC_CHECK_LIB(db4, db_create, HAVE_LIBDB4=yes ; AC_DEFINE(HAVE_LIBDB4),
++	HAVE_LIBDB4=no)
++AC_SUBST(HAVE_LIBDB4)
+ AC_CHECK_LIB(fl, yylex, yyterminate, HAVE_LIBFL=yes ; AC_DEFINE(HAVE_LIBFL),
+ 	HAVE_LIBFL=no)
+ AC_SUBST(HAVE_LIBFL)
+@@ -240,6 +251,13 @@ AC_CHECK_HEADERS(fcntl.h limits.h malloc
  dnl Linux wants features.h in some of the source files.
  AC_CHECK_HEADERS(features.h)
  
@@ -44,7 +54,7 @@ $NetBSD: patch-ab,v 1.5 2006/10/10 03:20:48 ben Exp $
  dnl For module/pam_cracklib
  AC_CHECK_HEADERS(crypt.h)
  
-@@ -257,7 +272,7 @@ dnl being found.
+@@ -257,7 +275,7 @@ dnl being found.
  
  dnl Look for cracklib dictionary
  AC_MSG_CHECKING(path to cracklib dictionary)
