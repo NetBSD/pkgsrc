@@ -1,0 +1,51 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+--- fuse_int.c	2007/07/09 18:28:21	1.1
++++ fuse_int.c	2007/07/09 18:35:16
+@@ -21,7 +21,11 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
++#ifdef __linux__
+ #include <asm/fcntl.h>
++#else
++#include <fcntl.h>
++#endif
+ 
+ #include <utime.h>
+ #include <stdlib.h>
+@@ -270,8 +274,13 @@
+ 		fp.unixprivs.uid,&stbuf->st_uid,
+ 		fp.unixprivs.gid,&stbuf->st_gid)) return -EIO;
+ 
++#ifdef __linux__
+ 	stbuf->st_ctim.tv_sec=fp.creation_date;
+ 	stbuf->st_mtim.tv_sec=fp.modification_date;
++#else
++	stbuf->st_ctime=fp.creation_date;
++	stbuf->st_mtime=fp.modification_date;
++#endif
+ 
+ 	if (resource==AFP_RESOURCE_TYPE_PARENT2) {
+ 		stbuf->st_mode |= S_IFDIR;
+@@ -890,7 +899,10 @@
+ 		} 
+ 	}
+ 
+-	if ((fi->flags & O_LARGEFILE) && 
++	if (
++#ifdef __linux__
++		(fi->flags & O_LARGEFILE) &&
++#endif
+ 		(volume->server->using_version->av_number<30)) {
+ 		switch(get_directory_entry(volume,fp->basename,dirid,
+ 			kFPParentDirIDBit|kFPNodeIDBit|
+@@ -2039,7 +2051,7 @@
+ {
+ 	global_volume=vol;
+ 
+-#if FUSE_VERSION < 26
++#if FUSE_USE_VERSION < 26
+ 	return fuse_main(fuseargc, fuseargv, &afp_oper);
+ #else
+ 	return fuse_main(fuseargc, fuseargv, &afp_oper,(void *) vol);
