@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1538 2007/07/08 22:33:05 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1539 2007/07/09 14:29:07 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2820,3 +2820,21 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/libetpan to 0.49 [smb 2007-07-08]
 	Updated audio/gtkpod to 0.99.8 [smb 2007-07-08]
 	Updated mail/mailgraph to 1.13 [xtraeme 2007-07-08]
+	Updated games/prboom to 2.4.7 [drochner 2007-07-08]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.6 [drochner 2007-07-08]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.5 [drochner 2007-07-08]
+	Updated multimedia/gst-plugins0.10-good to 0.10.6 [drochner 2007-07-08]
+	Updated net/py-ORBit to 2.14.3 [drochner 2007-07-08]
+	Updated x11/py-gtk2 to 2.10.5 [drochner 2007-07-08]
+	Updated x11/gnome2-terminal to 2.18.1 [drochner 2007-07-08]
+	Updated x11/vte to 0.16.6 [drochner 2007-07-08]
+	Updated mail/evolution-data-server to 1.10.3.1 [drochner 2007-07-08]
+	Updated devel/libglade2 to 2.6.1 [drochner 2007-07-08]
+	Updated devel/libgsf to 1.14.4 [drochner 2007-07-08]
+	Updated devel/eel2 to 2.18.3 [drochner 2007-07-08]
+	Updated sysutils/dbus-glib to 0.74 [drochner 2007-07-08]
+	Updated graphics/cairo to 1.4.10 [drochner 2007-07-08]
+	Updated graphics/freetype2 to 2.3.5 [drochner 2007-07-08]
+	Updated editors/TeXmacs to 1.0.6.10 [drochner 2007-07-08]
+	Updated print/evince to 0.8.3 [drochner 2007-07-08]
+	Updated net/wireshark to 0.99.6 [drochner 2007-07-08]
