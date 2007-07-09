@@ -1,0 +1,10 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+--- client.c	2007/07/09 18:56:20	1.1
++++ client.c	2007/07/09 18:56:45
+@@ -1,4 +1,5 @@
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <sys/socket.h>
+ #include <sys/stat.h>
+ #include <strings.h>

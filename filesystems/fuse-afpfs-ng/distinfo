@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+SHA1 (afpfs-ng-0.4.1.tar.bz2) = e813aac7b1f7008361c5bd2e1c5e39f3f553f21a
+RMD160 (afpfs-ng-0.4.1.tar.bz2) = 9e4482bf13d319f31bdd7460f6afa5aa95c6fc2c
+Size (afpfs-ng-0.4.1.tar.bz2) = 226349 bytes
+SHA1 (patch-aa) = 0fdb8cd797cf12a4cbec4664372dc54ec0dc65a3
+SHA1 (patch-ab) = 5becc7816a6fb12ff4491f893075a6b6ab487faf
+SHA1 (patch-ac) = 7ad8df6d1890399313c03971624530161c45590a
+SHA1 (patch-ad) = 94b17a236d47cd0b31f1bfd34d0197391555cfc6
+SHA1 (patch-ae) = d2b711db7dd65465c93e8fdc3d0d31b674672be4
+SHA1 (patch-af) = 19f6c5e5665bce3db1104ee04d1e5bb6e51f74d1
+SHA1 (patch-ag) = 2a1cbd0a6a6b323b5f140d4c238d7421b1ecae49
+SHA1 (patch-ah) = 51b24087031441344e9cdda766c582490bfa100b
