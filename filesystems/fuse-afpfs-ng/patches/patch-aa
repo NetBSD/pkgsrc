@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+--- commands.c	2007/07/09 17:42:19	1.1
++++ commands.c	2007/07/09 17:43:06
+@@ -6,7 +6,9 @@
+  */
+ 
+ #include <fuse.h>
++#ifdef __linux__
+ #include <fuse/fuse_opt.h>
++#endif
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
