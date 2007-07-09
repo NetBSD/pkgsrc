@@ -1,7 +1,15 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.1 2007/07/01 00:18:35 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.2 2007/07/09 15:07:52 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
 
 Created pkgsrc-2007Q2 branch [agc 2007-06-30 21:47 GMT]
 
+Pullup ticket 2126 - requested by tnn
+build fix for ncurses
+Pullup ticket 2127 - requested by tnn
+build fix for bootstrap
+Pullup ticket 2128 - requested by joerg
+build fix for p5-GTop
+Pullup ticket 2130 - requested by martti
+bugfix update for vim
