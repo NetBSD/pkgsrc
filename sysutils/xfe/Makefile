@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2007/06/13 20:15:22 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/07/09 20:01:45 xtraeme Exp $
 
 DISTNAME=	xfe-0.99
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roland65.free.fr/xfe/
 COMMENT=	Fast MS-Explorer like filemanager for X
 
