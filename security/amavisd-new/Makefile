@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2007/07/05 08:36:56 ghen Exp $
+# $NetBSD: Makefile,v 1.35 2007/07/09 17:32:35 cube Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
