@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.98 2007/05/30 01:42:59 schmonz Exp $
+# $NetBSD: bootstrap,v 1.98.2.1 2007/07/09 14:10:57 ghen Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -489,6 +489,7 @@ Interix)
 	need_awk=yes
 	need_sed=yes
 	set_opsys=no
+	need_xargs=yes
 	# only used for unprivileged builds
 	groupsprog="id -gn"
 	# for bootstrap only; pkgsrc uses CPPFLAGS
@@ -768,6 +769,13 @@ if [ "$need_mkdir" = "yes" -a -z "$MKDIR" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
 	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
+	need_extras=yes
+fi
+
+if [ "$need_xargs" = "yes" ]; then
+	echo_msg "Installing fixed xargs script"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/xargs-sh $prefix/bin/xargs"
+	echo "TOOLS_PLATFORM.xargs?=		$prefix/bin/xargs" >> ${MKCONF_EXAMPLE}
 	need_extras=yes
 fi
 
