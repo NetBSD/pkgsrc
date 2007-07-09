@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1540 2007/07/09 19:06:15 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1541 2007/07/09 19:29:05 degroote Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/evince to 0.8.3 [drochner 2007-07-08]
 	Updated net/wireshark to 0.99.6 [drochner 2007-07-08]
 	Added filesystems/fuse-afpfs-ng version 0.4.1 [agc 2007-07-09]
+	Added sysutils/wpi-firmware2 2.14.3 [degroote 2007-07-09]
