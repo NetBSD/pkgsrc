@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+--- Makefile.in	2007/07/09 18:46:36	1.1
++++ Makefile.in	2007/07/09 18:48:15
+@@ -139,7 +139,7 @@
+ LIBGCRYPT_LIBS = @LIBGCRYPT_LIBS@
+ LIBOBJS = @LIBOBJS@
+ LIBS = @LIBS@
+-LIBTOOL = @LIBTOOL@
++LIBTOOL = libtool
+ LN_S = @LN_S@
+ LTLIBOBJS = @LTLIBOBJS@
+ MAKEINFO = @MAKEINFO@
