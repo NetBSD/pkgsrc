@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/09 19:16:23 degroote Exp $
+
+SHA1 (iwlwifi-3945-ucode-2.14.3.tgz) = 3f23515ac56de600b1712fdedb49a7e48d8d5202
+RMD160 (iwlwifi-3945-ucode-2.14.3.tgz) = 9d48ad7243e9b9086e006cb74cbb40f00db447f5
+Size (iwlwifi-3945-ucode-2.14.3.tgz) = 65404 bytes
