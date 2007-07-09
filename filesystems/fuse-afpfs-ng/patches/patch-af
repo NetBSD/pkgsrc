@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2007/07/09 19:03:22 agc Exp $
+
+--- resource.c	2007/07/09 18:36:19	1.1
++++ resource.c	2007/07/09 18:37:11
+@@ -1,7 +1,12 @@
+ 
+ #include <strings.h>
+ #include <string.h>
++#ifdef __linux__
+ #include <linux/limits.h>
++#else
++#include <sys/types.h>
++#include <sys/param.h>
++#endif
+ #include "afp.h"
+ 
+ #define appledouble ".AppleDouble"
