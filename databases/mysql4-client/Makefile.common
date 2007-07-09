@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2007/07/04 20:54:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.59 2007/07/09 22:27:36 adrianp Exp $
 
 DISTNAME=		mysql-4.1.22
 CATEGORIES=		databases
@@ -11,6 +11,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 EXTRACT_USING=		pax
 
@@ -62,7 +63,6 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
@@ -114,5 +114,4 @@ SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
 			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scripts=	Fixing scripts.
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
