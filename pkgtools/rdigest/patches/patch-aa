@@ -1,19 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2005/03/28 20:52:55 agc Exp $
+$NetBSD: patch-aa,v 1.3 2007/07/09 15:19:15 joerg Exp $
 
---- Makefile.in.orig	2005-03-28 21:39:38.000000000 +0100
-+++ Makefile.in	2005-03-28 21:41:02.000000000 +0100
-@@ -57,7 +57,7 @@
+--- Makefile.in.orig	2007-07-07 17:26:43.000000000 +0000
++++ Makefile.in
+@@ -56,16 +56,16 @@ missing mkinstalldirs regress.sh
  .c.o:
  	$(COMPILE) -c $< -o $@
  
 -all: digest
 +all: rdigest
- 
- digest-types.h: bits
- 	./bits digest-types.h
-@@ -65,10 +65,10 @@
- bits: bits.o
- 	$(LINK) $(bits_OBJS) $(LIBS)
  
 -digest: $(digest_OBJS)
 +rdigest: $(digest_OBJS)
@@ -23,17 +17,13 @@ $NetBSD: patch-aa,v 1.2 2005/03/28 20:52:55 agc Exp $
 +check: rdigest
  	@SHELL@ $(srcdir)/regress.sh
  
- digest.o: digest-types.h
-@@ -84,7 +84,7 @@
- whirlpool.o: digest-types.h
- 
  clean:
--	rm -f *.o digest bits digest-types.h
-+	rm -f *.o rdigest bits digest-types.h
+-	rm -f *.o digest
++	rm -f *.o rdigest
  
  distclean: clean
  	rm -f Makefile config.h
-@@ -93,18 +93,18 @@
+@@ -74,18 +74,18 @@ distclean: clean
  maintainer-clean: distclean
  	rm -f configure config.h.in
  
