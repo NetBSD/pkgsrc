@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2007/07/09 20:01:44 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.24 2007/07/09 22:34:27 adrianp Exp $
 
 DISTNAME=		mysql-5.0.41
 CATEGORIES=		databases
@@ -11,6 +11,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 EXTRACT_USING=		pax
 
@@ -56,7 +57,6 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib:Q}
 CONFIGURE_ARGS+=	--with-vio
 
@@ -122,5 +122,4 @@ SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
