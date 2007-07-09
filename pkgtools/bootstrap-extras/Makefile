@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/08/24 17:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2.8.1 2007/07/09 14:10:58 ghen Exp $
 
-DISTNAME=	bootstrap-extra-files-20060824
+DISTNAME=	bootstrap-extra-files-20070202
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,6 +30,11 @@ NEED_STRIP.AIX=		# empty
 NEED_STRIP.*=		"@comment "
 PLIST_SUBST+=		NEED_STRIP=${NEED_STRIP}
 
+OPSYSVARS+=		NEED_XARGS
+NEED_XARGS.Interix=	# empty
+NEED_XARGS.*=		"@comment "
+PLIST_SUBST+=		NEED_XARGS=${NEED_XARGS}
+
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
@@ -48,6 +53,11 @@ do-install:
 		${INSTALL_SCRIPT_DIR} ${PREFIX}/bin;			\
 		${INSTALL_SCRIPT} ${WRKSRC}/strip-sh			\
 			${PREFIX}/bin/strip;				\
+	fi
+	if ${TEST} -z ${NEED_XARGS:M*:Q}""; then			\
+		${INSTALL_SCRIPT_DIR} ${PREFIX}/bin;			\
+		${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh			\
+			${PREFIX}/bin/xargs;				\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
