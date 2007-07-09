@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2007/04/09 00:55:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.44 2007/07/09 17:16:39 drochner Exp $
 #
 
 GCONF2_VERSION=		2.18.0.1
@@ -37,4 +37,3 @@ CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
