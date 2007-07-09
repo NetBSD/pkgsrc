@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6491 2007/07/09 14:46:17 taca Exp $
+$NetBSD: TODO,v 1.6492 2007/07/09 20:50:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -223,6 +223,7 @@ Suggested package updates
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
 	o GridSim-3.3
+	o ImageMagick-6.3.4.10
 	o Mesa-7.0
 	o PAM-0.99.7.1
 	o R-2.5.1
@@ -408,11 +409,14 @@ Suggested package updates
 	o devhelp-0.15
 	o devtodo-0.1.19
 	o dhid-5.3
+	o dialog-1.1.20070704
 	o diction-1.10
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.7.0
 	o dircproxy-devel-1.2.0.2
+	o djvulibre-lib-3.5.19
+	o djvulibre-tools-3.5.19
 	o dmidecode-2.9
 	o dnsmasq-2.39
 	o dnstop-20070307
@@ -507,7 +511,7 @@ Suggested package updates
 	o gdm-2.18.3
 	o gdsreader-0.3.2
 	o geany-0.11
-	o geda-1.0.1.20070626
+	o geda-1.1.0.20070705
 	o gedit-2.18.2
 	o generator-cbiere-0.35r3
 	o gettext-0.16.1
@@ -635,6 +639,7 @@ Suggested package updates
 	o instiki-0.11pl1
 	o intercal-0.24
 	o ion3-devel-20070608 [pkg/36108]
+	o ion3-devel-20070708
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -856,6 +861,7 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
+	o p5-Apache-Session-1.83
 	o p5-Apache-Session-Wrapper-0.33
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
@@ -873,6 +879,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
 	o p5-DBIx-ContextualFetch-1.03
+	o p5-DBIx-SearchBuilder-1.49
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
 	o p5-Devel-Profile-1.05
@@ -880,6 +887,7 @@ Suggested package updates
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-File-Copy-Recursive-0.31
+	o p5-File-Remove-0.37
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -912,7 +920,7 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-PathTools-3.24
-	o p5-PerlMagick-6.3.2.9
+	o p5-PerlMagick-6.3.4.10
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
@@ -933,6 +941,7 @@ Suggested package updates
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
 	o p5-XML-RAI-1.04
+	o p5-XML-RSS-1.31
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
 	o p5-perl-ldap-0.34
@@ -1107,7 +1116,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.2
-	o rt3-3.6.3
+	o rt3-3.6.4
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
@@ -1190,6 +1199,7 @@ Suggested package updates
 	o tea-17.0.0
 	o ted-2.17
 	o ted-en-us-2.17
+	o texi2html-1.78
 	o texmaker-1.6
 	o tfmxplay-1.1.6
 	o tile-0.7.4
