@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1539 2007/07/09 14:29:07 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.1540 2007/07/09 19:06:15 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/TeXmacs to 1.0.6.10 [drochner 2007-07-08]
 	Updated print/evince to 0.8.3 [drochner 2007-07-08]
 	Updated net/wireshark to 0.99.6 [drochner 2007-07-08]
+	Added filesystems/fuse-afpfs-ng version 0.4.1 [agc 2007-07-09]
