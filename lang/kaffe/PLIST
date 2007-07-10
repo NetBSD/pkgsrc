@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/05/10 16:46:20 tonio Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/07/10 21:16:43 minskim Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -68,6 +68,10 @@ java/kaffe/license.terms
 man/man1/kaffe.1
 java/kaffe/share/classpath/README
 java/kaffe/share/classpath/tools.zip
+share/locale/de/LC_MESSAGES/kaffe.mo
+share/locale/fr/LC_MESSAGES/kaffe.mo
+share/locale/zh_CN/LC_MESSAGES/kaffe.mo
+share/locale/zh_TW/LC_MESSAGES/kaffe.mo
 @dirrm java/kaffe/share/classpath
 @dirrm java/kaffe/share
 @dirrm java/kaffe/lib/security
