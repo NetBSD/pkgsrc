@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.23 2007/06/26 23:25:56 lkundrak Exp $
+$NetBSD: distinfo,v 1.23.2.1 2007/07/10 12:16:05 ghen Exp $
 
-SHA1 (proftpd-1.3.1rc2.tar.bz2) = 7db6435707983fe8e865064661cedb159ebc1cf6
-RMD160 (proftpd-1.3.1rc2.tar.bz2) = aa928315880cf1e9d1980850ce2bb07193d2ac46
-Size (proftpd-1.3.1rc2.tar.bz2) = 1516464 bytes
+SHA1 (proftpd-1.3.1rc3.tar.bz2) = a752ccc2ea4d7ae6f55ac5486d1ede01f734280c
+RMD160 (proftpd-1.3.1rc3.tar.bz2) = 68cbdd137caa0f7a46be18eb682d5c3c516ca167
+Size (proftpd-1.3.1rc3.tar.bz2) = 1538700 bytes
 SHA1 (patch-aa) = d7ad034e763a2bf729c9af669c3094402bdd03b7
-SHA1 (patch-ab) = 2b6921efa11884286c022a1da7691fc971d65cca
-SHA1 (patch-ac) = a73ceb99485ea16a4b008971cba58204b8d3f90d
-SHA1 (patch-ad) = 17390cac03e1a3fb8d2ce5f854ad9d239eae40fd
-SHA1 (patch-ae) = b7a8ba05a4399438f04d976aa36535e1f02f0c41
-SHA1 (patch-af) = 5f6642a36efe9fdacefed698aba2a86b737dd953
+SHA1 (patch-ab) = f214c7b321028bda1c27d654059b2a1d6aa73cbc
+SHA1 (patch-ac) = be33bb40718c4f5a124e2c80ad5dfe8db28e3af3
