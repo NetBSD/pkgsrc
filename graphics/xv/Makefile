@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2007/07/08 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2007/07/10 22:04:14 wiz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	13
@@ -16,6 +16,7 @@ HOMEPAGE=	http://www.trilon.com/xv/
 # and...	http://www.sonic.net/~roelofs/greg_xv.html
 COMMENT=	X11 program that displays images of various formats
 
+SITES.xv-3.10a-jumbo-patches-20070520.tar.gz=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
 USE_IMAKE=	YES
 USE_TOOLS+=	gzcat tar
 
