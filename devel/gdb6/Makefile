@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/10/18 13:39:07 reed Exp $
+# $NetBSD: Makefile,v 1.20.6.1 2007/07/10 10:01:21 ghen Exp $
 #
 
 DISTNAME=		gdb-6.2.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
