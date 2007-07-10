@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.14.8.1 2007/07/10 09:37:03 ghen Exp $
 
-DISTNAME=	gaim-encryption-2.38
-PKGREVISION=	3
+DISTNAME=	gaim-encryption-2.39
+#PKGREVISION=	3
 CATEGORIES=	chat security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim-encryption/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-encrypt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gaim-encryption.sourceforge.net/
