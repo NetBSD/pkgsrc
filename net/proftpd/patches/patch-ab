@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2007/01/13 09:47:38 martti Exp $
+$NetBSD: patch-ab,v 1.6.4.1 2007/07/10 12:16:05 ghen Exp $
 
---- configure.orig	2007-01-10 04:55:21.000000000 +0000
-+++ configure	2007-01-13 11:42:19.000000000 +0000
-@@ -36772,7 +36772,7 @@
+--- configure.orig	2007-05-23 00:01:32.000000000 +0300
++++ configure	2007-07-06 13:52:59.000000000 +0300
+@@ -37098,7 +37098,7 @@
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/13 09:47:38 martti Exp $
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
-@@ -36780,7 +36780,7 @@
+@@ -37106,7 +37106,7 @@
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
