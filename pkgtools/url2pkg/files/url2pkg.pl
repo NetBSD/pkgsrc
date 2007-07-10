@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.8 2007/03/19 01:38:56 rillig Exp $
+# $NetBSD: url2pkg.pl,v 1.9 2007/07/10 15:27:57 joerg Exp $
 #
 
 use strict;
@@ -272,7 +272,7 @@ sub generate_initial_package($) {
 	$category = $1;
 
 	open(MF, ">", "Makefile") or die;
-	print MF ("# \$NetBSD\$\n");
+	print MF ("# \$NetBSD" . "\$\n");
 	print MF ("#\n");
 	print MF ("\n");
 	print_section(*MF, [
