@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2007/01/13 09:47:38 martti Exp $
+$NetBSD: patch-ac,v 1.8.4.1 2007/07/10 12:16:05 ghen Exp $
 
---- configure.in.orig	2007-01-10 03:45:08.000000000 +0000
-+++ configure.in	2007-01-13 11:43:20.000000000 +0000
-@@ -2009,9 +2009,9 @@
+--- configure.in.orig	2007-05-22 23:54:09.000000000 +0300
++++ configure.in	2007-07-06 13:53:22.000000000 +0300
+@@ -2019,9 +2019,9 @@
  AC_DEFINE_UNQUOTED(PR_CONFIG_DIR, "`eval echo "${sysconfdir}"`")
  AC_DEFINE_UNQUOTED(PR_LIBEXEC_DIR, "`eval echo "${libexecdir}"`")
  AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${datadir}/locale"`")
