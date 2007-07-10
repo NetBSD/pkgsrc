@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.32 2006/07/12 13:29:03 wiz Exp $
+#	$NetBSD: createbuildlink,v 1.33 2007/07/10 15:27:57 joerg Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.32 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.33 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -102,7 +102,7 @@ fi
 ## create sed rules
 ##
 echo  >$sedrules "s|@@CURDIR@@|$CURDIR|g"
-echo >>$sedrules "s|@@ID@@|\$NetBSD\$|g"
+echo >>$sedrules "s|@@ID@@|\$Net""BSD\$|g"
 echo >>$sedrules "s|@@PKGNAME@@|$PKGNAME|g"
 echo >>$sedrules "s|@@PKGNOVER@@|$PKGNOVER|g"
 echo >>$sedrules "s|@@PKGUPPER@@|$PKGUPPER|g"

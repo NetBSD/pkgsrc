@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.711 2007/06/26 06:08:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.712 2007/07/10 15:27:57 joerg Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6576,7 +6576,7 @@ sub checkfile_distinfo($) {
 			if (open(PATCH, "<", $fname)) {
 				my $data = "";
 				foreach my $patchline (<PATCH>) {
-					$data .= $patchline unless $patchline =~ qr"\$NetBSD";
+					$data .= $patchline unless $patchline =~ qr"\$[N]etBSD";
 				}
 				close(PATCH);
 				my $chksum = Digest::SHA1::sha1_hex($data);
