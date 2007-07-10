@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/21 16:39:57 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/10 19:51:22 heinz Exp $
 
 DISTNAME=	swig-1.3.31
 PKGREVISION=	1
@@ -9,7 +9,9 @@ MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator
 
-CONFLICTS=	swig-build-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		swig-build-[0-9]*
 
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
 BUILD_TARGET=		swig
@@ -26,12 +28,12 @@ CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 post-install:
 	cd ${WRKSRC:Q}/Doc/Manual && \
 	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
-		*.png ${PREFIX:Q}/share/doc/swig
+		*.png ${DESTDIR:Q}${PREFIX:Q}/share/doc/swig
 	cd ${WRKSRC:Q}/Examples &&					\
 	${PAX} -wr							\
 		-s ',.*CVS.*,,'						\
 		-s ',.*Makefile\.in$$,,'				\
 		-s ',^test-suite.*,,'					\
-		. ${PREFIX:Q}/share/examples/swig
+		. ${DESTDIR:Q}${PREFIX:Q}/share/examples/swig
 
 .include "../../mk/bsd.pkg.mk"
