@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2006/10/22 08:06:42 rillig Exp $
+$NetBSD: distinfo,v 1.10.6.1 2007/07/10 10:01:25 ghen Exp $
 
 SHA1 (gdb-6.2.1.tar.bz2) = 50cee3887744c4140aafcc0e4eb579d94464dfd7
 RMD160 (gdb-6.2.1.tar.bz2) = 6fe9f3bbef076c55cbcdf05143e7d5f98f61f889
@@ -43,3 +43,5 @@ SHA1 (patch-bk) = 98f836c7007a668b812d119be294842a957cb507
 SHA1 (patch-bl) = 12a9846fc08e8c3110897644d7803f67999b68f8
 SHA1 (patch-bm) = baf198e86cb5e9d8b9f6b0bd6d7ccd1ca61227b4
 SHA1 (patch-bn) = cfeee69148028782b9ab6580f0f619d5f3327325
+SHA1 (patch-bo) = 92221afaa93d9362057783c20100ce7ff1b5df9b
+SHA1 (patch-bp) = bff41b3fb0f5952cbcd37797ec4bb63f6f79da8d
