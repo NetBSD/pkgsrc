@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/07/04 20:54:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/11 19:32:23 adrianp Exp $
 
-DISTNAME=	anope-1.7.18
-CATEGORIES=	net
+DISTNAME=	anope-1.7.19
+CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anope/}
 
 MAINTAINER=	adrianp@NetBSD.org
@@ -65,6 +65,7 @@ post-install:
 	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/listnicks
 	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/services
 	${CHMOD} ${BINMODE} ${PREFIX}/lib/anope/modules/*.so
+	${CHMOD} ${SHAREMODE} ${PREFIX}/lib/anope/languages/*
 	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope
 	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/backups
 	${CHOWN} ${ANOPE_USER} ${PREFIX}/lib/anope/logs
