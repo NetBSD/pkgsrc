@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1543 2007/07/10 21:19:43 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1544 2007/07/11 12:21:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added sysutils/wpi-firmware2 2.14.3 [degroote 2007-07-09]
 	Added devel/quilt version 0.46 [jmmv 2007-07-09]
 	Updated lang/kaffe to 1.1.7nb2 [minskim 2007-07-10]
+	Updated editors/vim-share to 7.1.28 [martti 2007-07-11]
