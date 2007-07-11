@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1545 2007/07/11 14:29:53 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1546 2007/07/11 14:37:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2844,3 +2844,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/kaffe to 1.1.7nb2 [minskim 2007-07-10]
 	Updated editors/vim-share to 7.1.28 [martti 2007-07-11]
 	Updated comms/asterisk to 1.2.21.1 [mjl 2007-07-11]
+	Updated net/libvncserver to 0.9.1 [obache 2007-07-11]
