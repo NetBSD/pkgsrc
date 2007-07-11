@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1549 2007/07/11 19:33:52 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1550 2007/07/11 20:19:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/x11vnc to 0.9.2 [obache 2007-07-11]
 	Updated mail/clamav to 0.91 [xtraeme 2007-07-11]
 	Updated chat/anope to 1.7.19 [adrianp 2007-07-11]
+	Updated security/chkrootkit to 0.47 [adrianp 2007-07-11]
