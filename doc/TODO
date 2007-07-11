@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6493 2007/07/10 22:43:00 wiz Exp $
+$NetBSD: TODO,v 1.6494 2007/07/11 14:10:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -520,6 +520,7 @@ Suggested package updates
 	o ghostscript-8.57
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
+	o gimp-2.2.16
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
 	o gimp-ufraw-0.11 [pkg/36315]
