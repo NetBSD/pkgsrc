@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1544 2007/07/11 12:21:32 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1545 2007/07/11 14:29:53 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/quilt version 0.46 [jmmv 2007-07-09]
 	Updated lang/kaffe to 1.1.7nb2 [minskim 2007-07-10]
 	Updated editors/vim-share to 7.1.28 [martti 2007-07-11]
+	Updated comms/asterisk to 1.2.21.1 [mjl 2007-07-11]
