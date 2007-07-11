@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/07/14 21:41:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/07/11 19:27:18 tron Exp $
 
 DISTNAME=		tnftp-20050625
 SVR4_PKGNAME=		tnftp
@@ -25,3 +25,4 @@ MAKE_ENV.SunOS+=	CPPFLAGS=""
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
+	@${RM} -f ${WRKSRC}/INSTALL
