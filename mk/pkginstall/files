@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.3 2006/12/15 13:15:06 martti Exp $
+# $NetBSD: files,v 1.4 2007/07/12 19:41:46 jlam Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -118,7 +118,7 @@ exitcode=0
 case $ACTION in
 ADD)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read file f_flags f_eg f_mode f_user f_group; do
+	while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
 		[!/]*)	file="${PKG_PREFIX}/$file" ;;
@@ -157,20 +157,10 @@ ADD)
 		else
 			case "$f_flags:$_PKG_CONFIG:$_PKG_RCD_SCRIPTS" in
 			*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
-				case "$printed_header" in
-				yes)	;;
-				*)	printed_header=yes
-					${ECHO} "==========================================================================="
-					${ECHO} "Installing files needed by ${PKGNAME}:"
-					;;
-				esac
 				if ${TEST} -f "$file"; then
-					${ECHO} ""
-					${ECHO} "	$file already exists."
+					${ECHO} "${PKGNAME}: $file already exists"
 				elif ${TEST} -f "$f_eg"; then
-					${ECHO} ""
-					${ECHO} "	$file"
-					${ECHO} "	    [$f_eg]"
+					${ECHO} "${PKGNAME}: copying $f_eg to $file"
 					${CP} $f_eg $file
 					case $f_user in
 					"")	;;
@@ -189,11 +179,6 @@ ADD)
 			esac
 		fi
 	done
-	case "$printed_header" in
-	yes)	${ECHO} ""
-		${ECHO} "==========================================================================="
-		;;
-	esac; }
 	;;
 
 REMOVE)

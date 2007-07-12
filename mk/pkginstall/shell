@@ -1,4 +1,4 @@
-# $NetBSD: shell,v 1.3 2006/07/19 22:26:26 jlam Exp $
+# $NetBSD: shell,v 1.4 2007/07/12 19:41:46 jlam Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #
@@ -62,7 +62,7 @@ exitcode=0
 case $ACTION in
 ADD)
 	${SED} -n "/^\# SHELL: /{s/^\# SHELL: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read shell; do
+	while read shell; do
 		case ${_PKG_REGISTER_SHELLS} in
 		no)	continue ;;
 		esac
@@ -82,31 +82,18 @@ ADD)
 		   ${GREP} "^$shell" $shelldb >/dev/null; then
 			:
 		else
-			case "$printed_header" in
-			yes)	;;
-			*)	printed_header=yes
-				${ECHO} "==========================================================================="
-				${ECHO} "Adding ${PKGNAME} shells to $shelldb:"
-				${ECHO} ""
-				;;
-			esac
-			${ECHO} "	$shell"
+			${ECHO} "${PKGNAME}: adding $shell to $shelldb"
                 	${TOUCH} $shelldb
                 	${CP} $shelldb $shelldb.pkgsrc."$$"
 			{ ${CAT} $shelldb.pkgsrc."$$"; ${ECHO} "$shell"; } > $shelldb
                 	${RM} $shelldb.pkgsrc."$$"
 		fi
 	done
-	case "$printed_header" in
-	yes)	${ECHO} ""
-		${ECHO} "==========================================================================="
-		;;
-	esac; }
 	;;
 
 REMOVE)
 	${SED} -n "/^\# SHELL: /{s/^\# SHELL: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read shell; do
+	while read shell; do
 		case ${_PKG_REGISTER_SHELLS} in
 		no)	continue ;;
 		esac
@@ -123,26 +110,13 @@ REMOVE)
 		shelldb="/etc/shells"
 		if ${TEST} -f "$shelldb" && \
 		   ${GREP} "^$shell" $shelldb >/dev/null; then
-			case "$printed_header" in
-			yes)	;;
-			*)	printed_header=yes
-				${ECHO} "==========================================================================="
-				${ECHO} "Removing ${PKGNAME} shells from $shelldb:"
-				${ECHO} ""
-				;;
-			esac
-			${ECHO} "	$shell"
+			${ECHO} "${PKGNAME}: removing $shell from $shelldb"
                 	${TOUCH} $shelldb
                 	${CP} $shelldb $shelldb.pkgsrc."$$"
 			{ ${GREP} -v "^$shell" $shelldb.pkgsrc."$$" || ${TRUE}; } > $shelldb
                 	${RM} $shelldb.pkgsrc."$$"
 		fi
 	done
-	case "$printed_header" in
-	yes)	${ECHO} ""
-		${ECHO} "==========================================================================="
-		;;
-	esac; }
 	;;
 
 CHECK-ADD)
