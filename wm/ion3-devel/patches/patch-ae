@@ -1,16 +1,12 @@
-$NetBSD: patch-ae,v 1.4 2006/08/14 22:42:04 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2007/07/12 13:54:03 joerg Exp $
 
---- ion/Makefile.orig	2006-05-24 16:23:26.000000000 +0000
-+++ ion/Makefile
-@@ -15,9 +15,10 @@ INCLUDES += $(X11_INCLUDES) 
- INCLUDES += $(LIBMAINLOOP_INCLUDES) $(LIBTU_INCLUDES) $(LIBEXTL_INCLUDES)
- INCLUDES += -I..
- 
--LIBS += $(X11_LIBS) $(XINERAMA_LIBS)
-+LIBS += $(XINERAMA_LIBS) $(X11_LIBS)
+--- ion/Makefile.orig	2007-03-30 12:06:53.097843787 +0200
++++ ion/Makefile	2007-03-30 12:07:12.744676273 +0200
+@@ -22,6 +22,7 @@
+ LIBS += $(X11_LIBS)
  LIBS += $(WHOLEA) $(LIBMAINLOOP_LIBS) $(LIBEXTL_LIBS) $(LIBTU_LIBS) $(NO_WHOLEA)
  LIBS += $(LUA_LIBS) $(DL_LIBS)
 +LIBS += $(INTL_LIBS)
  LIBS += -lm
  
- EXT_OBJS += ../ioncore/ioncore.a
+ ifeq ($(PRELOAD_MODULES),1)
