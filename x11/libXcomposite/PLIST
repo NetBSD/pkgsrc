@@ -1,6 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/15 20:12:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/12 12:30:56 joerg Exp $
 include/X11/extensions/Xcomposite.h
 lib/libXcomposite.la
 lib/pkgconfig/xcomposite.pc
+man/man3/XCompositeCreateRegionFromBorderClip.3
+man/man3/XCompositeGetOverlayWindow.3
+man/man3/XCompositeNameWindowPixmap.3
+man/man3/XCompositeQueryExtension.3
+man/man3/XCompositeQueryVersion.3
+man/man3/XCompositeRedirectSubwindows.3
+man/man3/XCompositeRedirectWindow.3
+man/man3/XCompositeReleaseOverlayWindow.3
+man/man3/XCompositeUnredirectSubwindows.3
+man/man3/XCompositeUnredirectWindow.3
+man/man3/XCompositeVersion.3
+man/man3/Xcomposite.3
 @dirrm include/X11/extensions
-@dirrm include/X11
