@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1551 2007/07/12 12:49:54 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1552 2007/07/12 15:12:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2850,3 +2850,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/anope to 1.7.19 [adrianp 2007-07-11]
 	Updated security/chkrootkit to 0.47 [adrianp 2007-07-11]
 	Updated sysutils/clex to 3.16 [obache 2007-07-12]
+	Updated x11/libXcomposite to 0.3.2 [joerg 2007-07-12]
+	Updated fonts/bdftopcf to 1.0.1 [joerg 2007-07-12]
+	Updated x11/inputproto to 1.4.2 [joerg 2007-07-12]
+	Updated x11/libXtst to 1.0.2 [joerg 2007-07-12]
+	Updated wm/ion3-devel to 20070708 [joerg 2007-07-12]
+	Updated x11/xinit to 1.0.4 [joerg 2007-07-12]
+	Updated x11/libX11 to 1.1.2 [joerg 2007-07-12]
+	Updated x11/libXfont to 1.3.0 [joerg 2007-07-12]
+	Updated x11/xrandr to 1.2.1 [joerg 2007-07-12]
