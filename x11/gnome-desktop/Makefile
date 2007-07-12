@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2007/06/05 05:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2007/07/12 19:38:18 drochner Exp $
 #
 
-DISTNAME=		gnome-desktop-2.18.1
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.18.3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
 
