@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1553 2007/07/12 16:23:34 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.1554 2007/07/12 17:13:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xrandr to 1.2.1 [joerg 2007-07-12]
 	Removed www/ap-iasp [jlam 2007-07-12]
 	Removed www/iasp [jlam 2007-07-12]
+	Updated x11/libXi to 1.1.1 [joerg 2007-07-12]
