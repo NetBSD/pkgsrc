@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1 2006/02/11 10:03:48 cube Exp $
+$NetBSD: patch-am,v 1.2 2007/07/12 13:54:04 joerg Exp $
 
---- mod_statusbar/ion-statusd/ion-statusd.c.orig	2005-09-29 10:50:12.000000000 +0200
-+++ mod_statusbar/ion-statusd/ion-statusd.c
+--- mod_statusbar/ion-statusd/ion-statusd.c.orig	2007-03-30 13:27:17.972480286 +0200
++++ mod_statusbar/ion-statusd/ion-statusd.c	2007-03-30 13:27:47.120836168 +0200
 @@ -9,6 +9,8 @@
   * (at your option) any later version.
   */
