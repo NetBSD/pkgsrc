@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/17 18:03:55 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/12 13:40:33 joerg Exp $
 #
 
-DISTNAME=		libXtst-1.0.1
+DISTNAME=		libXtst-1.0.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
