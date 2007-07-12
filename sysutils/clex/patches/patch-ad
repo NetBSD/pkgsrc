@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2006/01/13 15:16:14 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2007/07/12 12:43:21 obache Exp $
 
---- src/exec.c.orig	2006-01-13 14:58:05.000000000 +0000
+--- src/exec.c.orig	2007-04-24 08:59:04.000000000 +0200
 +++ src/exec.c
 @@ -50,8 +50,6 @@
  #include "ustring.h"		/* us_copy() */
@@ -9,5 +9,5 @@ $NetBSD: patch-ad,v 1.1 2006/01/13 15:16:14 joerg Exp $
 -extern int errno;
 -
  #define MAX_SHELL_ARGS	8
- static char *shell_argv[MAX_SHELL_ARGS + 1];
+ static char *shell_argv[MAX_SHELL_ARGS + 2 + 1];
  static int cmd_index;		/* which parameter is the command
