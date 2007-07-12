@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.17 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: configure.mk,v 1.18 2007/07/12 18:59:15 jlam Exp $
 #
 # = Package-settable variables =
 #
@@ -15,6 +15,16 @@
 #
 # CONFIGURE_ARGS is the list of arguments that is passed to the
 #	configure script.
+#
+# INSTALL_SH_OVERRIDE is a list of files relative to WRKSRC which
+#	should be overridden by the install-sh script from
+#	sysutils/install-sh.  If not defined or set to "no", then
+#	no files are overridden.
+#
+#	Possible values: no, defined, undefined.
+#
+#	Default value: defined when GNU_CONFIGURE is defined, undefined
+#	otherwise.
 #
 # OVERRIDE_GNU_CONFIG_SCRIPTS
 #	Whether to override the GNU config.guess and config.sub scripts
@@ -52,6 +62,9 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 .endif
 .if defined(OVERRIDE_GNU_CONFIG_SCRIPTS)
 .  include "${PKGSRCDIR}/mk/configure/config-override.mk"
+.endif
+.if defined(INSTALL_SH_OVERRIDE) && empty(INSTALL_SH_OVERRIDE:M[Nn][Oo])
+.  include "${PKGSRCDIR}/mk/configure/install-sh-override.mk"
 .endif
 .if defined(USE_LIBTOOL)
 .  include "${PKGSRCDIR}/mk/configure/libtool-override.mk"
