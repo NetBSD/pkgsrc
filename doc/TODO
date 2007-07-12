@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6496 2007/07/11 20:19:00 adrianp Exp $
+$NetBSD: TODO,v 1.6497 2007/07/12 12:51:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -368,7 +368,6 @@ Suggested package updates
 	o classpath-0.95
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
-	o clex-3.15
 	o cocoon-2.1.10
 	o connect-1.96
 	o cook-2.28
