@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/16 12:06:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/12 06:11:54 xtraeme Exp $
 #
 
 DISTNAME=	csup-snap-20070216
@@ -17,6 +17,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CFLAGS+=    ${PTHREAD_CFLAGS}
 LDFLAGS+=   ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/csup ${PREFIX}/bin
