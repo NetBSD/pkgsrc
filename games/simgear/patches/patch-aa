@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/07/12 19:56:14 drochner Exp $
+
+--- configure.orig	2007-03-22 21:36:06.000000000 +0100
++++ configure
+@@ -8634,7 +8634,7 @@ fi
+ 
+ esac
+ 
+-if test "$OPENAL_OK" == "no"; then
++if test "$OPENAL_OK" = "no"; then
+     echo
+     echo "You *must* have the openal library installed on your system to build"
+     echo "SimGear!"
