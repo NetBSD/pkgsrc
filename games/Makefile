@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2007/06/16 22:40:38 kristerw Exp $
+# $NetBSD: Makefile,v 1.287 2007/07/12 20:08:14 drochner Exp $
 #
 
 COMMENT=	Games
@@ -74,6 +74,8 @@ SUBDIR+=	fillets-ng-data
 SUBDIR+=	finalbattle
 SUBDIR+=	fire
 SUBDIR+=	fkiss
+SUBDIR+=	flightgear
+SUBDIR+=	flightgear-base
 SUBDIR+=	fltk-sudoku
 SUBDIR+=	foobillard
 SUBDIR+=	fortune-strfile
@@ -201,6 +203,7 @@ SUBDIR+=	scummvm
 SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
 SUBDIR+=	scummvm-tools
+SUBDIR+=	simgear
 SUBDIR+=	sirius
 SUBDIR+=	six
 SUBDIR+=	sjeng
