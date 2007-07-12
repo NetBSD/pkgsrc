@@ -1,4 +1,4 @@
-# $NetBSD: fonts,v 1.4 2007/01/02 11:47:26 joerg Exp $
+# $NetBSD: fonts,v 1.5 2007/07/12 19:41:46 jlam Exp $
 #
 # Generate a +FONTS script that updates font databases for the package.
 #
@@ -56,8 +56,17 @@ case "${PKG_UPDATE_FONTS_DB:-@PKG_UPDATE_FONTS_DB@}" in
 	;;
 esac
 
+case "${FONTS_VERBOSE:-@FONTS_VERBOSE@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	echo="${ECHO}"
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	echo=":"
+	;;
+esac
+
 ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
-{ while read dir font_type; do
+while read dir font_type; do
 	case ${_PKG_UPDATE_FONTS_DB} in
 	no)	continue ;;
 	esac
@@ -66,15 +75,7 @@ ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
 	[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 	esac
 	${TEST} -d "$dir" || continue
-	case "$printed_header" in
-	yes)	;;
-	*)	printed_header=yes
-		${ECHO} "==========================================================================="
-		${ECHO} "Updating font databases in the following directories:"
-		${ECHO} ""
-		;;
-	esac
-	( ${ECHO} "	$dir ($font_type)"
+	( $echo "${PKGNAME}: updating font database in $dir ($font_type)"
 	  cd $dir
 	  update_args=
 	  post_update_cmd=
@@ -96,11 +97,6 @@ ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
 	  ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\.scale" | ${GREP} -v "/fonts\.dir" | ${GREP} -v "/Fontmap" >/dev/null || ${RM} -f fonts.dir fonts.scale Fontmap* encodings.dir > /dev/null
 	)
 done
-case "$printed_header" in
-yes)	${ECHO} ""
-	${ECHO} "==========================================================================="
-	;;
-esac; }
 
 EOF
 	${SED} -n "/^\# FONTS: /p" ${SELF} >> ./+FONTS

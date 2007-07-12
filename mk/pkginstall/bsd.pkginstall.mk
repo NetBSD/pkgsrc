@@ -1,9 +1,21 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.25 2007/06/15 22:04:33 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.26 2007/07/12 19:41:46 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
 # framework, simply set the relevant variables to customize the install
 # scripts to the package.
+#
+# User-settable variables:
+#
+# PKGINSTALL_VERBOSE
+#	A list of scriptlets that will be verbose and output a message
+#	noting the actions taken.
+#
+#	* "all" is a special value that implies all of the other items
+#	* "fonts" for +FONTS
+#	* "info-files" for +INFO_FILES
+#
+#	Default value: "all" for PKG_DEVELOPERs, empty otherwise.
 #
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
@@ -808,6 +820,22 @@ FILES_SUBST+=		PKG_CONFIG_PERMS=${PKG_CONFIG_PERMS:Q}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}
+
+.if defined(PKG_DEVELOPER)
+PKGINSTALL_VERBOSE?=	all
+.else
+PKGINSTALL_VERBOSE?=	# empty
+.endif
+.if !empty(PKGINSTALL_VERBOSE:Mall) || !empty(PKGINSTALL_VERBOSE:Mfonts)
+FILES_SUBST+=		FONTS_VERBOSE=yes
+.else
+FILES_SUBST+=		FONTS_VERBOSE=no
+.endif
+.if !empty(PKGINSTALL_VERBOSE:Mall) || !empty(PKGINSTALL_VERBOSE:Minfo-files)
+FILES_SUBST+=		INFO_FILES_VERBOSE=yes
+.else
+FILES_SUBST+=		INFO_FILES_VERBOSE=no
+.endif
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
