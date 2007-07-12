@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2006/01/13 15:16:14 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2007/07/12 12:43:21 obache Exp $
 
---- src/completion.c.orig	2006-01-13 14:56:31.000000000 +0000
+--- src/completion.c.orig	2007-04-24 08:58:51.000000000 +0200
 +++ src/completion.c
-@@ -115,8 +115,6 @@ static struct {
- static int cc_alloc = 0;	/* max number of candidates in CC_LIST */
- static int cc_max;			/* max number of candidates to present */
+@@ -111,8 +111,6 @@ static int cc_max;			/* max number of ca
+ static FLAG done;			/* done: completion not possible or
+ 							  full (not partial) name was completed */
  
 -extern int errno;
 -

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/01 03:54:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/12 12:43:20 obache Exp $
 #
 
-DISTNAME=		clex-3.14
+DISTNAME=		clex-3.16
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.clex.sk/download/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.clex.sk/download/
 COMMENT=		File manager with a full-screen user interface
 
