@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/05/07 20:13:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/12 13:21:38 joerg Exp $
 #
 
-DISTNAME=		bdftopcf-1.0.0
+DISTNAME=		bdftopcf-1.0.1
 CATEGORIES=		fonts
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
