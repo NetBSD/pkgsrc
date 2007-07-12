@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/04 19:18:12 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/12 18:27:54 jlam Exp $
 
 DISTNAME=	bootstrap-install-sh-0.0
 CATEGORIES=	regress
@@ -109,6 +109,43 @@ test-c4:
 	( ${CMP} -s ${WRKSRC}/c4_file1 ${WRKSRC}/c4_dir/c4_file1 && \
 	  ${CMP} -s ${WRKSRC}/c4_file2 ${WRKSRC}/c4_dir/c4_file2 && \
 	  ${CMP} -s ${WRKSRC}/c4_file3 ${WRKSRC}/c4_dir/c4_file3 ) || exit 1
+
+# copy one existing file to existing file with backup
+regress: test-c5
+test-c5:
+	${ECHO} "Test data 1" > ${WRKSRC}/c5_file1
+	${ECHO} "Test data 2" > ${WRKSRC}/c5_file2
+	${CP} ${WRKSRC}/c5_file2 ${WRKSRC}/c5_file2.backup
+	${INSTALL_SH} -b -c ${WRKSRC}/c5_file1 ${WRKSRC}/c5_file2
+	( ${CMP} ${WRKSRC}/c5_file1 ${WRKSRC}/c5_file2 && \
+	  ${TEST} -f ${WRKSRC}/c5_file2.old && \
+	  ${CMP} ${WRKSRC}/c5_file2.old ${WRKSRC}/c5_file2.backup ) || exit 1
+
+# copy one existing file to existing file with backup and custom suffix
+regress: test-c6
+test-c6:
+	${ECHO} "Test data 1" > ${WRKSRC}/c6_file1
+	${ECHO} "Test data 2" > ${WRKSRC}/c6_file2
+	${CP} ${WRKSRC}/c6_file2 ${WRKSRC}/c6_file2.backup
+	${INSTALL_SH} -B .OLD -c ${WRKSRC}/c6_file1 ${WRKSRC}/c6_file2
+	( ${CMP} ${WRKSRC}/c6_file1 ${WRKSRC}/c6_file2 && \
+	  ${TEST} -f ${WRKSRC}/c6_file2.OLD && \
+	  ${CMP} ${WRKSRC}/c6_file2.OLD ${WRKSRC}/c6_file2.backup ) || exit 1
+
+# copy one existing file to existing file with numbered backup
+regress: test-c7
+test-c7:
+	${ECHO} "Test data 1" > ${WRKSRC}/c7_file1
+	${ECHO} "Test data 2" > ${WRKSRC}/c7_file2
+	${ECHO} "Test data 3" > ${WRKSRC}/c7_file2.backup.0
+	${ECHO} "Test data 4" > ${WRKSRC}/c7_file2.backup.1
+	${ECHO} "Test data 5" > ${WRKSRC}/c7_file2.backup.2
+	${CP} ${WRKSRC}/c7_file2 ${WRKSRC}/c7_file2.backup
+	${INSTALL_SH} -B .backup.%i -c ${WRKSRC}/c7_file1 ${WRKSRC}/c7_file2
+	( ${CMP} ${WRKSRC}/c7_file1 ${WRKSRC}/c7_file2 && \
+	  ${TEST} -f ${WRKSRC}/c7_file2.backup.3 && \
+	  ${CMP} ${WRKSRC}/c7_file2.backup.3 ${WRKSRC}/c7_file2.backup ) || \
+	exit 1
 
 MODES=	0 1 2 3 4 5 6 7
 MODE_0=	---
