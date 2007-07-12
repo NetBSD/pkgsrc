@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: patchdiff.pl,v 1.7 2005/12/13 12:05:08 wiz Exp $
+# $NetBSD: patchdiff.pl,v 1.8 2007/07/12 15:35:43 joerg Exp $
 #
 # patchdiff: compares a set of patches patch-aa, patch-ab, ... in
 #   $WRKDIR/.newpatches in the with another set in patches.
@@ -95,7 +95,7 @@ foreach $patch (keys%new) {
     if (defined($orig{$patch})) {
 #	system("diff",$orig{$patch},$new{$patch});
 	$diff=`diff $orig{$patch} $new{$patch}`;
-	$diff=~s/^\dc\d\n..\$NetBSD.*\$\n---\n..\$NetBSD.*\$\n//m;
+	$diff=~s/^\dc\d\n..\$[N]etBSD.*\$\n---\n..\$[N]etBSD.*\$\n//m;
 	$diff=~s/^\dc\d\n..\+\+\+.*\n---\n..\+\+\+.*\n//m;
 	if ($diff) {
 	     print "Comparing $orig{$patch} to $new{$patch}\n$diff";
