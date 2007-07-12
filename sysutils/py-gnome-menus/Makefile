@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2007/06/05 05:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/12 19:20:34 drochner Exp $
 #
 
-DISTNAME=	gnome-menus-2.18.0
-PKGNAME=	${PYPKGPREFIX}-gnome-menus-2.18.0
-PKGREVISION=	1
+DISTNAME=	gnome-menus-2.18.3
+PKGNAME=	${PYPKGPREFIX}-gnome-menus-2.18.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for gnome-menus
 
@@ -19,7 +18,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-python
 BUILD_DIRS=		python
 INSTALL_DIRS=		python
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
+PYTHON_VERSIONS_ACCEPTED=	24 23
 PY_PATCHPLIST=		yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
