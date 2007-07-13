@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.6 2006/11/03 08:01:04 joerg Exp $
+# $NetBSD: package.mk,v 1.7 2007/07/13 14:42:53 joerg Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -136,4 +136,4 @@ real-package-install:
 
 su-real-package-install:
 	@${PHASE_MSG} "Install binary package of "${PKGNAME:Q}
-	cd ${PREFIX} && ${PKG_ADD} ${PKGFILE}
+	${PKG_ADD} ${PKGFILE}
