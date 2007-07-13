@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/13 02:30:49 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/13 14:58:38 drochner Exp $
 ${PYSITELIB}/_ctypes.so
 ${PYSITELIB}/_ctypes_test.so
 ${PYSITELIB}/ctypes/__init__.py
@@ -45,6 +45,9 @@ ${PYSITELIB}/ctypes/test/test_arrays.py
 ${PYSITELIB}/ctypes/test/test_arrays.pyc
 ${PYSITELIB}/ctypes/test/test_arrays.pyo
 ${PYSITELIB}/ctypes/test/test_arrays.pyo
+${PYSITELIB}/ctypes/test/test_as_parameter.py
+${PYSITELIB}/ctypes/test/test_as_parameter.pyc
+${PYSITELIB}/ctypes/test/test_as_parameter.pyo
 ${PYSITELIB}/ctypes/test/test_bitfields.py
 ${PYSITELIB}/ctypes/test/test_bitfields.pyc
 ${PYSITELIB}/ctypes/test/test_bitfields.pyo
