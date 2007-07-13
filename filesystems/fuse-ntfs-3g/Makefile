@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/05/01 16:17:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/13 10:02:55 xtraeme Exp $
 #
 
-DISTNAME=	ntfs-3g-1.417
+DISTNAME=	ntfs-3g-1.710
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	http://www.ntfs-3g.org/
@@ -14,6 +14,8 @@ COMMENT=	NTFS driver for Linux/FreeBSD/NetBSD with read and write support
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
+
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
