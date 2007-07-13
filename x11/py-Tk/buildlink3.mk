@@ -1,7 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:11:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/07/13 10:42:44 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PYTK_BUILDLINK3_MK:=	${PYTK_BUILDLINK3_MK}+
+
+.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pytk
