@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/10/30 21:38:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/07/13 16:38:50 drochner Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-nature.xml
 share/gnome-background-properties/gnome-tiles.xml
@@ -6,6 +6,7 @@ share/gnome-background-properties/gnome-translucent.xml
 share/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/as/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/be/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/be@latin/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bg/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bn/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-backgrounds.mo
@@ -48,6 +49,7 @@ share/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/nl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/nn/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/oc/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/or/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pa/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pl/LC_MESSAGES/gnome-backgrounds.mo
