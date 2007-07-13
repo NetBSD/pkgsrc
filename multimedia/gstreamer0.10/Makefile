@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/08 12:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/13 17:14:55 drochner Exp $
 #
 
 DISTNAME=		gstreamer-0.10.13
@@ -58,6 +58,5 @@ PLIST_SUBST+=	GSTCHECK="@comment "
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
