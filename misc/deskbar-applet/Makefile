@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/06/05 05:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/07/13 17:12:27 drochner Exp $
 #
 
 DISTNAME=	deskbar-applet-2.18.1
@@ -7,12 +7,12 @@ CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://raphael.slinckx.net/deskbar/
 COMMENT=	Omnipresent, versatile search interface for the GNOME Desktop
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		xdg-1.1 gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
