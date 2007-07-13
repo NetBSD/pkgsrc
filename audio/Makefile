@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2007/07/07 07:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.359 2007/07/13 14:52:07 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -82,6 +82,7 @@ SUBDIR+=	flac123
 SUBDIR+=	flac2mp3
 SUBDIR+=	flite
 SUBDIR+=	fluidsynth
+SUBDIR+=	freealut
 SUBDIR+=	freepats
 SUBDIR+=	freezetag
 SUBDIR+=	gkrellm-volume
