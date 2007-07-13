@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1555 2007/07/12 18:32:49 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.1556 2007/07/13 07:32:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2863,3 +2863,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed www/iasp [jlam 2007-07-12]
 	Updated x11/libXi to 1.1.1 [joerg 2007-07-12]
 	Updated sysutils/install-sh to 20070712 [jlam 2007-07-12]
+	Updated net/py-GeoIP to 1.2.1 [obache 2007-07-13]
