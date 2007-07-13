@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2007/06/05 05:37:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2007/07/13 16:36:25 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GUCHARMAP_BUILDLINK3_MK:=	${GUCHARMAP_BUILDLINK3_MK}+
@@ -21,7 +21,6 @@ BUILDLINK_PKGSRCDIR.gucharmap?=	../../fonts/gucharmap
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
