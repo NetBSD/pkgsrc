@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/13 17:50:11 drochner Exp $
+
+SHA1 (xf86-video-intel-2.1.0.tar.bz2) = 007412d72428e2dbc067a5d6fa00fbcfcc9c99c4
+RMD160 (xf86-video-intel-2.1.0.tar.bz2) = 323f5f5d50d492d1a068b7fad9399920a6998e36
+Size (xf86-video-intel-2.1.0.tar.bz2) = 544558 bytes

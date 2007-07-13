@@ -1,0 +1,11 @@
+This is the video driver for Intel cards for the modular Xorg server.
+Support hardware includes the following chipsets:
+  - i810, i810-dc100, i810e
+  - i815
+  - i830
+  - i845
+  - i852
+  - i855
+  - i915
+  - i945
+  - i965
