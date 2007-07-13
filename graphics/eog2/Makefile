@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/06/15 18:08:06 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2007/07/13 16:24:35 drochner Exp $
 #
 
 DISTNAME=	eog-2.18.2
@@ -30,7 +30,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
