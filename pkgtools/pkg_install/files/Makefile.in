@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.in,v 1.6 2004/08/31 17:40:41 jlam Exp $
+# $NetBSD: Makefile.in,v 1.7 2007/07/14 20:17:06 adrianp Exp $
 
-SUBDIRS=	lib add admin create delete info view
+SUBDIRS=	lib add admin create delete info view audit-packages
 
 all:
 	@for dir in $(SUBDIRS); do \
