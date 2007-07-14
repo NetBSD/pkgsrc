@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2007/06/25 21:35:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.68 2007/07/14 04:35:43 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -36,8 +36,8 @@ _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
 .if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
 DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
-# we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
-DIST_SUBDIR=		.
+# we need to define DIST_SUBDIR because of the inclusion of suse's Makefile.common
+DIST_SUBDIR=		# empty
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
