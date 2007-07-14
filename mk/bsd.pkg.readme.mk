@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.6 2006/10/17 06:28:33 rillig Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.7 2007/07/14 17:17:45 adrianp Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -232,16 +232,33 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF
 SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 .endif
 
+# XXX: The code for the pkg_install<20070714 vulnerability checks are
+# XXX: broken.  It will not find vulnerabilities in any packages that
+# XXX: have complex names in the pkg-vulnerabilties file. 
+# XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
+# XXX: Post pkg_install-20070714 only currently known vulnerabilities are
+# XXX: shown in the generated files for packages.
+#
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
-		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
-			 gsub("\>", "\\&gt;", $$1);			\
-			 printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
-			${PKGVULNDIR}/pkg-vulnerabilities;		\
-	fi
-
+	_INFO_VER=`${PKG_INFO} -V`; 					\
+	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-$$_INFO_VER; then \
+		if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then	\
+			${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
+				 gsub("\>", "\\&gt;", $$1);		\
+			 	printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
+				${PKGVULNDIR}/pkg-vulnerabilities;	\
+		fi; 							\
+	else								\
+		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
+		if [ -f $$_PKGVULNDIR/pkg-vulnerabilities ]; then	\
+			audit-packages ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} |${AWK} \
+				'{ gsub("\<", "\\&lt;", $$2);		\
+				gsub("\>", "\\&gt;", $$2);		\
+				printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, $$8) }'; \
+		fi;							\
+	fi	
 
 # If PACKAGES is set to the default (../../packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory

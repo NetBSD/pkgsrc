@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.68 2007/07/02 14:54:09 joerg Exp $
+# $NetBSD: pre-build,v 1.69 2007/07/14 17:17:45 adrianp Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -18,6 +18,7 @@ fi
 PRUNEDISTFILES=${PRUNEDISTFILES:-"no"}
 PRUNEPACKAGES=${PRUNEPACKAGES:-"yes"}
 PRUNELINKS=${PRUNEPACKAGES:-"yes"}
+PKG_ADMIN="pkg_admin"
 
 PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 
@@ -69,11 +70,20 @@ echo "pre-build> Creating ${BULKFILESDIR} if necessary"
 mkdir -p "${BULKFILESDIR}"
 
 # Make sure the pkg-vulnerabilities file is up to date
+_INFO_VER=`${PKG_INFO} -V`;
 echo "pre-build> Making sure vulnerability-list is upto date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
+	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
        ( cd "${USR_PKGSRC}/security/audit-packages" \
          && ${BMAKE} bulk-install \
          && env PKGVULNDIR="${DISTDIR}" download-vulnerability-list )
+	else
+		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+		download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
+		if [ "x${_PKGVULNDIR}" != "x${DISTDIR}" ]; then
+			cp ${_PKGVULNDIR}/pkg-vulnerabilities ${DISTDIR}
+		fi
+	fi
        echo 'pre-build> done.'
 else
        echo 'pre-build> (skipped)'
@@ -82,7 +92,8 @@ fi
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
 	( cd "$LOCALBASE" && tar cf /tmp/$$.tar \
-		sbin/pkg_add sbin/pkg_admin sbin/pkg_create       \
+		sbin/audit-packages sbin/download-vulnerability-list         \
+		sbin/pkg_add sbin/pkg_admin sbin/pkg_create                  \
 		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm    \
 		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk   \
 		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk               \
@@ -95,17 +106,23 @@ if [ x"$BMAKE" = x"bmake" ]; then
 		share/mk/bsd.sys.mk share/mk/bsd.own.mk                      \
 		bin/bmake bin/ftp bin/digest bin/nawk bin/nbsed              \
 		bin/install-sh bin/pax bin/tar bin/cpio                      \
+		man/cat1/audit-packages.0                                    \
+		man/cat1/download-vulnerability-list.0                       \
 		man/cat1/ftp.1 man/cat1/pax.0                                \
 		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0            \
 		man/cat1/pkg_admin.0 man/cat1/pkg_create.0                   \
 		man/cat1/pkg_delete.0 man/cat1/pkg_info.0                    \
 		man/cat1/pkg_view.0 man/cat1/linkfarm.0                      \
+		man/cat5/audit-packages.conf.0                               \
+		man/man1/audit-packages.1                                    \
+		man/man1/download-vulnerability-list.1                       \
 		man/man1/digest.1 man/man1/pax.1 man/man1/cpio.1             \
 		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1           \
 		man/man1/pkg_admin.1 man/man1/pkg_create.1                   \
 		man/man1/pkg_delete.1 man/man1/pkg_info.1                    \
-		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat7/packages.0  \
-		etc/mk.conf )
+		man/man1/pkg_view.1 man/man1/linkfarm.1                      \
+		man/man5/audit-packages.conf.5 man/cat7/packages.0           \
+		etc/mk.conf share/examples/pkg_install/audit-packages.conf )
 fi
 
 #
