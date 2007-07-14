@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/03 12:46:01 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/14 22:19:49 adrianp Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -113,6 +113,7 @@ share/unrealircd/modules/m_svsmode.so
 share/unrealircd/modules/m_svsmotd.so
 share/unrealircd/modules/m_svsnick.so
 share/unrealircd/modules/m_svsnline.so
+share/unrealircd/modules/m_svsnolag.so
 share/unrealircd/modules/m_svsnoop.so
 share/unrealircd/modules/m_svso.so
 share/unrealircd/modules/m_svspart.so
