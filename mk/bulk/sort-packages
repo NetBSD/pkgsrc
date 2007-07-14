@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.7 2007/03/22 11:43:18 rillig Exp $
+# $NetBSD: sort-packages,v 1.8 2007/07/14 17:17:45 adrianp Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -20,6 +20,7 @@ set -eu
 : ${OUTDIR="/tmp"}
 : ${PKG_SUFX=".tgz"}
 : ${AUDIT_PACKAGES="audit-packages"}
+: ${PKG_ADMIN="pkg_admin"}
 : ${PKG_INFO="pkg_info"}
 
 regular_packages="${OUTDIR}/regular_packages"
@@ -67,13 +68,19 @@ for pkg in *${PKG_SUFX}; do
 		# Check whether the package is vulnerable or not.
 		pkg_prefix="${pkg%%-*}"
 		category="regular"
-		# XXX: The egrep command is only needed here because
-		# audit-packages is so awfully slow.
-		if egrep "^({.*${pkg_prefix}.*}|${pkg_prefix}|{.*}${pkg_prefix})" ${PKGVULNDIR}/pkg-vulnerabilities >/dev/null 4>&1; then
-			vuln=`${AUDIT_PACKAGES} -p "${pkg}"`
-			if [ -n "${vuln}" ]; then
-				category="vulnerable"
+		_INFO_VER=`${PKG_INFO} -V`;
+		if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
+			# XXX: The egrep command is only needed here because
+			# audit-packages before pkg_install-20070714 is so 
+			# awfully slow.
+			if egrep "^({.*${pkg_prefix}.*}|${pkg_prefix}|{.*}${pkg_prefix})" ${PKGVULNDIR}/pkg-vulnerabilities >/dev/null 4>&1; then
+				vuln=`${AUDIT_PACKAGES} -p "${pkg}"`
 			fi
+		else
+			vuln=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -p "${pkg}"`
+		fi
+		if [ -n "${vuln}" ]; then
+			category="vulnerable"
 		fi
 	elif [ "${restricted}" != "unknown" ] && [ "${no_bin_on_ftp}" != "unknown" ]; then
 		category="restricted"
