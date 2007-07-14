@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.25 2007/06/12 09:54:52 obache Exp $
+# $NetBSD: fetch.mk,v 1.26 2007/07/14 05:45:35 obache Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -14,7 +14,7 @@ CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
 .endfor
 
 # List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
-.if defined(DIST_SUBDIR)
+.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
 _CKSUMFILES?=	${CKSUMFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
 _DISTFILES?=	${DISTFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
 _IGNOREFILES?=	${IGNOREFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
@@ -246,7 +246,11 @@ _FETCH_ARGS+=	-f ${DISTINFO_FILE:Q}
 .if !empty(PKG_RESUME_TRANSFERS:M[yY][eE][sS])
 _FETCH_ARGS+=	-r
 .endif
-_FETCH_ARGS+=	-d ${DIST_SUBDIR:U.}
+.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
+_FETCH_ARGS+=	-d ${DIST_SUBDIR}
+.else
+_FETCH_ARGS+=	-d .
+.endif
 
 .PHONY: do-fetch-file
 do-fetch-file: .USE
