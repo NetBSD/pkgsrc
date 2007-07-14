@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2007/06/11 21:16:52 heinz Exp $
+# $NetBSD: Makefile,v 1.517 2007/07/14 22:35:00 kristerw Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -26,7 +26,6 @@ SUBDIR+=	ap-dav
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
 SUBDIR+=	ap-gzip
-SUBDIR+=	ap-iasp
 SUBDIR+=	ap-jk
 SUBDIR+=	ap-layout
 SUBDIR+=	ap-mp3
@@ -130,7 +129,6 @@ SUBDIR+=	htmldoc-x11
 SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
 SUBDIR+=	http_load
-SUBDIR+=	iasp
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
 SUBDIR+=	instiki
