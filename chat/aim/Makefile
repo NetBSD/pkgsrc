@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/14 04:39:17 obache Exp $
 
 DISTNAME=	aim-1.5.286
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://ftp.newaol.com/aimgen/380469/
 EXTRACT_SUFX=	-1.i386.rpm
 
-DIST_SUBDIR=	.
+DIST_SUBDIR=	# empty
 RPMFILES=	${DISTFILES}
 
 MAINTAINER=	fredb@NetBSD.org

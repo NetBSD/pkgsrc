@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/07/14 04:39:17 obache Exp $
 
 DISTNAME=		ymessenger-1.0.4
 CATEGORIES=		chat
@@ -23,7 +23,7 @@ DEPENDS+=		suse_gdk-pixbuf>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gdk-pixbuf
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-DIST_SUBDIR=		.
+DIST_SUBDIR=		# empty
 
 LICENSE=		generic-nonlicense
 RESTRICTED=		Commercial software (no permission to copy is evident).
