@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2007/06/09 19:25:49 jdolecek Exp $
+$NetBSD: distinfo,v 1.22 2007/07/14 04:35:44 obache Exp $
 
-SHA1 (./opera-9.21-20070510.1-static-qt.i386-en.rpm) = 688652ece420a0d4d48147d252fa393c3c9de347
-RMD160 (./opera-9.21-20070510.1-static-qt.i386-en.rpm) = 23a237441cc871cdd45dd5a7aba66166749b45ae
-Size (./opera-9.21-20070510.1-static-qt.i386-en.rpm) = 7280335 bytes
+SHA1 (opera-9.21-20070510.1-static-qt.i386-en.rpm) = 688652ece420a0d4d48147d252fa393c3c9de347
+RMD160 (opera-9.21-20070510.1-static-qt.i386-en.rpm) = 23a237441cc871cdd45dd5a7aba66166749b45ae
+Size (opera-9.21-20070510.1-static-qt.i386-en.rpm) = 7280335 bytes
 SHA1 (opera-9.21-20070510.1-static-qt.i386.freebsd-en.tar.gz) = 110617dfd7915e1a24374ae341a4eccacc7873a6
 RMD160 (opera-9.21-20070510.1-static-qt.i386.freebsd-en.tar.gz) = a006e1e3b9daebd9a35466e272398e63b4eb6d1b
 Size (opera-9.21-20070510.1-static-qt.i386.freebsd-en.tar.gz) = 7224774 bytes
