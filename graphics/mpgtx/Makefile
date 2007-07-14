@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/14 17:06:44 heinz Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpgtx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mpgtx.sourceforge.net/
 COMMENT=	Split and join MPEG files in various ways
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}	\
@@ -21,14 +23,18 @@ MLINKS=		mpgcat.1 mpgjoin.1 mpginfo.1 mpgsplit.1 mpgdemux.1
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mpgtx ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/mpgtx ${DESTDIR:Q}${PREFIX:Q}/bin
 .for f in ${PLINKS}
-	${LN} -f ${PREFIX}/bin/mpgtx ${PREFIX}/bin/${f}
+	${LN} -f ${DESTDIR:Q}${PREFIX:Q}/bin/mpgtx \
+		${DESTDIR:Q}${PREFIX:Q}/bin/${f}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/man/mpgtx.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/man/mpgtx.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
 .for f in ${MLINKS}
-	${LN} -f ${PREFIX}/${PKGMANDIR}/man1/mpgtx.1 ${PREFIX}/${PKGMANDIR}/man1/${f}
+	${LN} -f ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/mpgtx.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1/${f}
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/man/tagmp3.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/man/tagmp3.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
