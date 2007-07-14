@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.26 2007/07/14 05:45:35 obache Exp $
+# $NetBSD: fetch.mk,v 1.27 2007/07/14 05:51:11 obache Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -248,8 +248,6 @@ _FETCH_ARGS+=	-r
 .endif
 .if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
 _FETCH_ARGS+=	-d ${DIST_SUBDIR}
-.else
-_FETCH_ARGS+=	-d .
 .endif
 
 .PHONY: do-fetch-file
