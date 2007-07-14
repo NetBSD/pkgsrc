@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1561 2007/07/14 20:36:58 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1562 2007/07/14 21:53:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated filesystems/fuse-ntfs-3g to 1.710 [xtraeme 2007-07-13]
 	Updated pkgtools/genrpm to 1.1 [agc 2007-07-14]
 	Updated pkgtools/pkg_install to 20070714 [adrianp 2007-07-14]
+	Updated devel/tre to 0.7.5 [adrianp 2007-07-14]
