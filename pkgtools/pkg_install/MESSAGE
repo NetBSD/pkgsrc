@@ -1,0 +1,42 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/07/14 20:17:06 adrianp Exp $
+
+You may wish to have the vulnerabilities file downloaded daily so that
+it remains current.  This may be done by adding an appropriate entry
+to a users crontab(5) entry.  For example the entry
+
+# download vulnerabilities file
+0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
+
+will update the vulnerability list every day at 3AM. You may wish to do
+this more often than once a day.
+
+In addition, you may wish to run the package audit from the daily
+security script.  This may be accomplished by adding the following
+lines to /etc/security.local
+
+if [ -x ${PREFIX}/sbin/audit-packages ]; then
+        ${PREFIX}/sbin/audit-packages
+fi
+
+Alternatively this can also be acomplished by adding an entry to a users
+crontab(5) file. e.g.:
+
+# run audit-packages
+0 3 * * * ${PREFIX}/sbin/audit-packages
+
+audit-packages and/or download-vulnerability-list need not be run by
+the root user.  They will function as an unpriveleged user just so
+long as the user chosen has permmission to write the pkg-vulnerabilites
+to ${PKGVULNDIR}.
+
+A sample audit-packages.conf has been installed to:
+
+	${EGDIR}/audit-packages.conf
+
+You may want to customise this file and copy it to /etc/audit-packages.conf.
+If you want to use signature verification you will need to install GnuPG and
+set the path for GPG appropriately in your audit-packages.conf.  See
+audit-packages.conf(5) and audit-packages(8) for further information.
+
+===========================================================================

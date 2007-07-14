@@ -1,4 +1,4 @@
-# $NetBSD: README,v 1.7 2005/05/30 13:23:31 wiz Exp $
+# $NetBSD: README,v 1.8 2007/07/14 20:17:07 adrianp Exp $
 # Original from FreeBSD, no rcs id.
 
 This is the pkg_install suite of tools for doing maintainance of
@@ -12,7 +12,8 @@ of dozen features on top.  Whee! :-)
 
 In another round of enhancements, NetBSD changes were added by
 Alistair Crooks, Hubert Feyrer, Thorsten Frueauf, Rene Hexel,
-Christian E. Hopps, Thomas Klausner, Johnny Lam, and Matthias Scheler.
+Christian E. Hopps, Thomas Klausner, Johnny Lam, Matthias Scheler and
+Adrian Portelli.
 
 When making snapshots, please modify PKGTOOLS_VERSION in lib/version.h
 to that day's date.

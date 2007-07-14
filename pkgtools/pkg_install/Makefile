@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2007/07/10 15:19:18 joerg Exp $
+# $NetBSD: Makefile,v 1.132 2007/07/14 20:17:06 adrianp Exp $
 
 # Notes to package maintainers:
 #
@@ -17,13 +17,15 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
+CONFLICTS+=		audit-packages-[0-9]*
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
 CONFIGURE_ARGS+=	--with-ftp="\"${FETCH_CMD}"\"
 CONFIGURE_ARGS+=	--with-mtree="\"${MTREE}"\"
 CONFIGURE_ARGS+=	--with-pax="\"${PAX}"\"
 CONFIGURE_ARGS+=	--with-tar="\"${TAR}"\"
-USE_TOOLS+=		mtree pax tar
+USE_TOOLS+=		mtree pax tar gzcat
 
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
@@ -48,6 +50,8 @@ USE_NATIVE_GCC=		yes
 PKG_DELETE=		${WRKSRC}/delete/pkg_delete
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
+CPPFLAGS+=		-DSYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
@@ -55,6 +59,7 @@ MAKE_ENV+=		OPSYS=${OPSYS:Q}
 PKG_DBDIR?=		/var/db/pkg
 PKG_INFO=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_INFO_CMD}
 PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_ADMIN_CMD}
+EGDIR=			${PREFIX}/share/examples/pkg_install
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
 
@@ -63,11 +68,31 @@ INSTALL_SRC=		${PKGDIR}/INSTALL
 FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
 			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}		\
 			MKDIR=${MKDIR:Q}
+MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
+			EGDIR=${EGDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
+
+# Make sure download-vulnerability-list.sh picks up the right tools
+# in the right directories.
+#
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Fixing paths in scripts.
+SUBST_FILES.paths=	audit-packages/download-vulnerability-list.sh.in
+SUBST_FILES.paths+=	audit-packages/audit-packages.1.in
+SUBST_FILES.paths+=	audit-packages/audit-packages.cat1.in
+SUBST_FILES.paths+=	audit-packages/audit-packages.conf.5.in
+SUBST_FILES.paths+=	audit-packages/audit-packages.conf.cat5.in
+SUBST_FILES.paths+=	audit-packages/audit-packages.conf.in
+SUBST_FILES.paths+=	audit-packages/download-vulnerability-list.1.in
+SUBST_FILES.paths+=	audit-packages/download-vulnerability-list.cat1.in
+SUBST_SED.paths=	-e 's,@gzcat@,${GZCAT},g'
+SUBST_SED.paths+=	-e 's,@sysconfdir@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@prefix@/bin/gpg,${PREFIX}/bin/gpg,g'
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
