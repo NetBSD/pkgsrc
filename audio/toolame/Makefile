@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:28:58 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/07/14 19:12:22 heinz Exp $
 #
 
 DISTNAME=	toolame-02l
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/toolame/
 COMMENT=	Optimized MPEG 1/2 layer 2 audio encoder
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 
 TOOLAME_ARCH?=
@@ -22,9 +24,9 @@ INSTALLATION_DIRS=	bin
 
 TOOLAME_HTMLFILES= changes.html default.html psycho.html readme.html vbr.html
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/toolame
-	cd ${WRKSRC}/html; ${INSTALL_DATA} ${TOOLAME_HTMLFILES} \
-		${PREFIX}/share/doc/html/toolame
-	${INSTALL_PROGRAM} ${WRKSRC}/toolame ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/share/doc/html/toolame
+	cd ${WRKSRC:Q}/html; ${INSTALL_DATA} ${TOOLAME_HTMLFILES} \
+		${DESTDIR:Q}${PREFIX:Q}/share/doc/html/toolame
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/toolame ${DESTDIR:Q}${PREFIX:Q}/bin
 
 .include "../../mk/bsd.pkg.mk"
