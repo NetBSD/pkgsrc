@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1562 2007/07/14 21:53:47 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1563 2007/07/14 22:07:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/genrpm to 1.1 [agc 2007-07-14]
 	Updated pkgtools/pkg_install to 20070714 [adrianp 2007-07-14]
 	Updated devel/tre to 0.7.5 [adrianp 2007-07-14]
+	Updated net/libcares to 1.4.0 [adrianp 2007-07-14]
