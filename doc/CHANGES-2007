@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1565 2007/07/14 22:59:32 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1566 2007/07/15 19:23:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2873,3 +2873,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libcares to 1.4.0 [adrianp 2007-07-14]
 	Updated chat/unrealircd to 3.2.7 [adrianp 2007-07-14]
 	Updated pkgtools/pkg_install to 20070715 [joerg 2007-07-14]
+	Updated databases/mysql5-client to 5.0.45 [tron 2007-07-15]
+	Updated databases/mysql5-server to 5.0.45 [tron 2007-07-15]
