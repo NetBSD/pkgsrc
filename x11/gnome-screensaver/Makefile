@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/13 17:38:44 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2007/07/15 21:44:41 rillig Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.18.2
@@ -27,10 +27,10 @@ PKG_SUPPORTED_OPTIONS=	pam
 . include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pam
 . include "../../mk/bsd.prefs.mk"
-. if ${OPSYS} == "NetBSD"
+.  if ${OPSYS} == "NetBSD"
 # needed to read shadow passwords
 DEPENDS+=	pam-pwauth_suid-*:../../security/pam-pwauth_suid
-. endif
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-pam
 .endif
