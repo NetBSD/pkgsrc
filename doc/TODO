@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6498 2007/07/12 15:12:26 joerg Exp $
+$NetBSD: TODO,v 1.6499 2007/07/15 19:43:15 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1289,7 +1289,6 @@ Suggested package updates
 	o xeukleides-1.0.1
 	o xf86-input-keyboard-1.2.0
 	o xfstt-1.7
-	o xine-ui-0.99.5
 	o xisp-2.7p4
 	o xkbset-0.5
 	o xli-2006.11.10
