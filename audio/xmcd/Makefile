@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2007/06/15 14:47:06 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2007/07/15 22:09:35 rillig Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	9
@@ -40,17 +40,16 @@ SPECIAL_PERMS=	${ARCHBIN}/cda ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${ARCHBIN}/xmcd ${SETUID_ROOT_PERMS}
 
 CFILES=		common.cfg device.cfg wwwwarp.cfg
-.for FILE in ${CFILES}
+.for f in ${CFILES}
 CONF_FILES+=	${XMCDDIR}/config/${FILE}.dist ${XMCDDIR}/config/${FILE}
 .endfor
 REQD_DIRS=	${XMCDDIR} ${XMCDDIR}/cdinfo ${XMCDDIR}/config ${XMCDDIR}/discog
 
-pre-configure:
-	cd ${WRKSRC} && \
-	for f in libdi_d/config.sh misc_d/start.sh install.sh; do \
-		${SED} -e "s/@MACHINE_ARCH@/${MACHINE_ARCH}/" $$f > $$f.new; \
-		${MV} -f $$f.new $$f; \
-	done
+SUBST_CLASSES+=		xmcd
+SUBST_STAGE.xmcd=	pre-configure
+SUBST_MESSAGE.xmcd=	Replacing MACHINE_ARCH
+SUBST_FILES.xmcd=	libdi_d/config.sh misc_d/start.sh install.sh
+SUBST_VARS.xmcd=	MACHINE_ARCH
 
 post-install:
 	if [ -n "${_STRIPFLAG_INSTALL}" ]; then				\
