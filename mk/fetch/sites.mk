@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.30 2007/06/11 08:17:54 obache Exp $
+# $NetBSD: sites.mk,v 1.31 2007/07/15 09:53:38 heinz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -95,27 +95,26 @@ MASTER_SITE_KDE+=	\
 	ftp://mirrors.dotsrc.org/kde/stable/ \
 	ftp://ftp.fi.muni.cz/pub/kde/stable/
 
+# see http://sourceforge.net/project/mirror_picker.php
 MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://dfn.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
-	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
+	http://superb-east.dl.sourceforge.net/sourceforge/ \
+	http://superb-west.dl.sourceforge.net/sourceforge/ \
 	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://voxel.dl.sourceforge.net/sourceforge/
-#	http://belnet.dl.sourceforge.net/sourceforge/
-#	http://citkit.dl.sourceforge.net/sourceforge/
-#	ftp://ftp2.sourceforge.net/pub/sourceforge/
-#	ftp://ftp.tuwien.ac.at/linux/sourceforge/
-#	http://sf.gds.tuwien.ac.at/
+	http://umn.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://download.sourceforge.jp/ \
