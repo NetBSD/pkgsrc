@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/07/15 22:09:35 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2007/07/15 22:56:22 rillig Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	9
@@ -41,7 +41,7 @@ SPECIAL_PERMS+=	${ARCHBIN}/xmcd ${SETUID_ROOT_PERMS}
 
 CFILES=		common.cfg device.cfg wwwwarp.cfg
 .for f in ${CFILES}
-CONF_FILES+=	${XMCDDIR}/config/${FILE}.dist ${XMCDDIR}/config/${FILE}
+CONF_FILES+=	${XMCDDIR}/config/${f}.dist ${XMCDDIR}/config/${f}
 .endfor
 REQD_DIRS=	${XMCDDIR} ${XMCDDIR}/cdinfo ${XMCDDIR}/config ${XMCDDIR}/discog
 
