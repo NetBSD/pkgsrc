@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2006/04/09 07:26:52 xtraeme Exp $
+$NetBSD: patch-aa,v 1.6 2007/07/15 19:41:28 xtraeme Exp $
 
---- doc/man/Makefile.in.orig	2006-04-08 21:22:54.000000000 +0200
-+++ doc/man/Makefile.in	2006-04-08 21:23:16.000000000 +0200
-@@ -280,7 +280,7 @@
- target_cpu = @target_cpu@
- target_os = @target_os@
- target_vendor = @target_vendor@
+--- doc/man/Makefile.in.orig	2007-07-15 21:13:56.000000000 +0200
++++ doc/man/Makefile.in	2007-07-15 21:14:08.000000000 +0200
+@@ -246,7 +246,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -SUBDIRS = fr es en pl de
 +SUBDIRS = en
  all: all-recursive
