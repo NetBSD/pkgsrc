@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/02/17 22:48:16 salo Exp $
+# $NetBSD: Makefile,v 1.35 2007/07/15 19:41:28 xtraeme Exp $
 #
 
-DISTNAME=		xine-ui-0.99.4
-PKGREVISION=		8
+DISTNAME=		xine-ui-0.99.5
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -13,13 +12,15 @@ COMMENT=		Skinned xlib-based xine GUI
 BUILDLINK_API_DEPENDS.curl+=	curl>7.10.2
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt pkg-config
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	yes
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
