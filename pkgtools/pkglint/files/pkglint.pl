@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.712 2007/07/10 15:27:57 joerg Exp $
+# $NetBSD: pkglint.pl,v 1.713 2007/07/15 22:13:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1294,7 +1294,7 @@ use enum qw(:SUBST_ ID CLASS STAGE MESSAGE FILES SED VARS FILTER_CMD);
 
 sub new($) {
 	my ($class) = @_;
-	my ($self) = ([undef, undef, undef, undef, [], [], undef, undef]);
+	my ($self) = ([undef, undef, undef, undef, [], [], [], undef]);
 	bless($self, $class);
 	return $self;
 }
@@ -1304,19 +1304,21 @@ sub subst_stage($)		{ return shift(@_)->[SUBST_STAGE]; }
 sub subst_message($)		{ return shift(@_)->[SUBST_MESSAGE]; }
 sub subst_files($)		{ return shift(@_)->[SUBST_FILES]; }
 sub subst_sed($)		{ return shift(@_)->[SUBST_SED]; }
+sub subst_vars($)		{ return shift(@_)->[SUBST_VARS]; }
 sub subst_filter_cmd($)		{ return shift(@_)->[SUBST_FILTER_CMD]; }
 sub subst_id($)			{ return shift(@_)->[SUBST_ID]; }
 
 sub init($) {
 	my ($self) = @_;
 
+	$self->[SUBST_ID] = undef;
 	$self->[SUBST_CLASS] = undef;
 	$self->[SUBST_STAGE] = undef;
 	$self->[SUBST_MESSAGE] = undef;
 	$self->[SUBST_FILES] = [];
 	$self->[SUBST_SED] = [];
+	$self->[SUBST_VARS] = [];
 	$self->[SUBST_FILTER_CMD] = undef;
-	$self->[SUBST_ID] = undef;
 }
 
 sub check_end($$) {
@@ -1333,8 +1335,8 @@ sub check_end($$) {
 	if (@{$self->subst_files} == 0) {
 		$line->log_warning("Incomplete SUBST block: SUBST_FILES missing.");
 	}
-	if (@{$self->subst_sed} == 0 && !defined($self->subst_filter_cmd)) {
-		$line->log_warning("Incomplete SUBST block: SUBST_SED missing.");
+	if (@{$self->subst_sed} == 0 && @{$self->subst_vars} == 0 && !defined($self->subst_filter_cmd)) {
+		$line->log_warning("Incomplete SUBST block: SUBST_SED or SUBST_VARS missing.");
 	}
 	$self->init();
 }
@@ -1345,7 +1347,7 @@ sub is_complete($) {
 	return false unless defined($self->subst_id);
 	return false unless defined($self->subst_class);
 	return false unless defined($self->subst_files);
-	return false unless defined($self->subst_sed);
+	return false if @{$self->subst_sed} == 0 && @{$self->subst_vars} == 0;
 	return true;
 }
 
@@ -1372,7 +1374,7 @@ sub check_varassign($$$$$) {
 
 	$id = $self->subst_id;
 
-	if ($varname =~ qr"^(SUBST_(?:STAGE|MESSAGE|FILES|SED|FILTER_CMD))\.([\-\w_]+)$") {
+	if ($varname =~ qr"^(SUBST_(?:STAGE|MESSAGE|FILES|SED|VARS|FILTER_CMD))\.([\-\w_]+)$") {
 		($varbase, $varparam) = ($1, $2);
 
 		if (!defined($id)) {
@@ -1440,6 +1442,14 @@ sub check_varassign($$$$$) {
 		} else {
 			$self->[SUBST_FILTER_CMD] = $value;
 		}
+
+	} elsif ($varbase eq "SUBST_VARS") {
+		if (@{$self->subst_vars} > 0) {
+			if ($op ne "+=") {
+				$line->log_warning("All but the first SUBST_VARS line should use the \"+=\" operator.");
+			}
+		}
+		push(@{$self->subst_vars}, $value);
 
 	} else {
 		$line->log_warning("Foreign variable in SUBST block.");
