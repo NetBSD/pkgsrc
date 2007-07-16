@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1567 2007/07/15 19:43:15 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1568 2007/07/16 06:45:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/mysql5-client to 5.0.45 [tron 2007-07-15]
 	Updated databases/mysql5-server to 5.0.45 [tron 2007-07-15]
 	Updated multimedia/xine-ui to 0.99.5 [xtraeme 2007-07-15]
+	Updated mail/dovecot to 1.0.2 [xtraeme 2007-07-16]
