@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1569 2007/07/16 08:56:09 rh Exp $
+$NetBSD: CHANGES-2007,v 1.1570 2007/07/16 20:36:00 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/xine-ui to 0.99.5 [xtraeme 2007-07-15]
 	Updated mail/dovecot to 1.0.2 [xtraeme 2007-07-16]
 	Updated games/cgoban-java to 3.3.18 [rh 2007-07-16]
+	Updated pkgtools/pbulk to 0.6 [joerg 2007-07-16]
