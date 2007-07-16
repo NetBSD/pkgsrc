@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/07/16 10:12:46 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/07/16 11:20:31 drochner Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -138,15 +138,10 @@ share/xine/visuals/default.avi
 @dirrm share/xine/oxine
 @dirrm share/xine/desktop
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/48x48
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/32x32
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/22x22
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/16x16
-@dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/xitk
 @dirrm share/doc/xine-ui

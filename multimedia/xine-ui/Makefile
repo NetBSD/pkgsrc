@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/07/16 10:12:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.37 2007/07/16 11:20:31 drochner Exp $
 #
 
 DISTNAME=		xine-ui-0.99.5
@@ -25,6 +25,7 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
