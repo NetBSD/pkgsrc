@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/07/15 19:41:28 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/07/16 10:12:46 xtraeme Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -137,7 +137,6 @@ share/xine/visuals/default.avi
 @dirrm share/xine/skins
 @dirrm share/xine/oxine
 @dirrm share/xine/desktop
-@dirrm share/xine
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/icons/hicolor/48x48
