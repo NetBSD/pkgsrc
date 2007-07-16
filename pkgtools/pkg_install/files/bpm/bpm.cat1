@@ -1,7 +1,7 @@
 BPM(1)                  NetBSD General Commands Manual                  BPM(1)
 
 NNAAMMEE
-     bbppmm - menu-based binary package manager
+     bbppmm -- menu-based binary package manager
 
 SSYYNNOOPPSSIISS
      bbppmm [--hhnnVVvv] [--bb _b_a_s_e_U_R_L] [--mm _m_a_c_h_i_n_e] [--rr _r_e_l_e_a_s_e] [--ww _s_e_c_o_n_d_s]
@@ -58,4 +58,4 @@ SSEEEE AALLSSOO
 AAUUTTHHOORRSS
      The bbppmm utility was written by Alistair Crooks <agc@NetBSD.org>.
 
-NetBSD 2.0                     December 21, 2003                    NetBSD 2.0
+NetBSD 4.0                     December 21, 2003                    NetBSD 4.0
