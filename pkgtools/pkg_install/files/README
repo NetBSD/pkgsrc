@@ -1,4 +1,4 @@
-# $NetBSD: README,v 1.8 2007/07/14 20:17:07 adrianp Exp $
+# $NetBSD: README,v 1.9 2007/07/16 09:57:56 joerg Exp $
 # Original from FreeBSD, no rcs id.
 
 This is the pkg_install suite of tools for doing maintainance of
@@ -18,5 +18,4 @@ Adrian Portelli.
 When making snapshots, please modify PKGTOOLS_VERSION in lib/version.h
 to that day's date.
 
-src/usr.sbin/pkg_install is the canonical location for these sources.
-Any changes should be made here first, then merged over to pkgsrc.
+pkgsrc/pkgtools/pkg_install is the canonical location for these sources.

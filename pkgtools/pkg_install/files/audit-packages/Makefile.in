@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.1 2007/07/14 20:17:08 adrianp Exp $
+# $NetBSD: Makefile.in,v 1.2 2007/07/16 09:57:57 joerg Exp $
 
 prefix = @prefix@
 exec_prefix = @exec_prefix@
@@ -25,7 +25,8 @@ do_subst = 	sed -e 's,_pkgdbdir_,$(pkgdbdir),g' \
 CC = @CC@
 CCLD= $(CC)
 LIBS= -linstall @LIBS@
-CPPFLAGS= @CPPFLAGS@ -DHOST=\"$(CANONICAL_HOST)\" -DPKGSRC -I. -I../lib
+CPPFLAGS=	@CPPFLAGS@ -I. -I../lib -DHOST=\"$(CANONICAL_HOST)\" -DPKGSRC
+CPPFLAGS+=	-DPREFIX=\"$(prefix)\" -DSYSCONFDIR=\"$(sysconfdir)\"
 DEFS= @DEFS@
 CFLAGS= @CFLAGS@ -Wall
 LDFLAGS= @LDFLAGS@ -L../lib
@@ -60,12 +61,12 @@ clean:
 	rm -f *.o audit-packages
 
 install:
-	$(INSTALL) -m 755 -d $(sbindir)
-	$(INSTALL) -m 755 -d $(man1dir)
-	$(INSTALL) -m 755 -d $(man5dir)
-	$(INSTALL) -m 755 -d $(cat1dir)
-	$(INSTALL) -m 755 -d $(cat5dir)
-	$(INSTALL) -m 755 -d $(sharedir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(sbindir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(man1dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(man5dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(cat5dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(sharedir)
 
 	$(INSTALL_PROGRAM) audit-packages $(DESTDIR)$(sbindir)/audit-packages
 	$(INSTALL_SCRIPT) download-vulnerability-list.sh \

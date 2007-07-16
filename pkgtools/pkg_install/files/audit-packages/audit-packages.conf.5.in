@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.conf.5.in,v 1.1 2007/07/14 20:17:09 adrianp Exp $
+.\" $NetBSD: audit-packages.conf.5.in,v 1.2 2007/07/16 09:57:57 joerg Exp $
 .\"
 .\" Copyright (c) 2007 Adrian Portelli.  All rights reserved.
 .\"
@@ -103,7 +103,7 @@ vulnerability.
 .Sh SEE ALSO
 .Xr pkg_info 1 ,
 .Xr mk.conf 5 ,
-.Xr packages 7 ,
+.Xr pkgsrc 7 ,
 .Xr audit-packages 8 and
 .%T "Documentation on the NetBSD Package System"
 .Sh HISTORY

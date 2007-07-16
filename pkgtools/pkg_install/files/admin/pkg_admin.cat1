@@ -143,7 +143,7 @@ FFIILLEESS
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1), pkg_view(1),
-     packages(7)
+     pkgsrc(7)
 
 HHIISSTTOORRYY
      The ppkkgg__aaddmmiinn command first appeared in NetBSD 1.4.
@@ -151,4 +151,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 3.0                     November 1, 2005                     NetBSD 3.0
+NetBSD 4.0                       March 2, 2007                      NetBSD 4.0

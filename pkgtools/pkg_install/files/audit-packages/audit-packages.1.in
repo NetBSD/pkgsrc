@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.1.in,v 1.1 2007/07/14 20:17:08 adrianp Exp $
+.\" $NetBSD: audit-packages.1.in,v 1.2 2007/07/16 09:57:57 joerg Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -317,7 +317,7 @@ FETCH_PROTO="http"
 .Xr pkg_info 1 ,
 .Xr audit-packages.conf 5 ,
 .Xr mk.conf 5 ,
-.Xr packages 7 ,
+.Xr pkgsrc 7 ,
 .%T "Documentation on the NetBSD Package System"
 .Sh HISTORY
 The

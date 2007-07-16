@@ -157,7 +157,7 @@ EENNVVIIRROONNMMEENNTT
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_create(1), pkg_info(1), mktemp(3),
-     packages(7), mtree(8)
+     pkgsrc(7), mtree(8)
 
 AAUUTTHHOORRSS
      Jordan Hubbard
@@ -168,4 +168,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, recursive "down"
              delete, etc.
 
-NetBSD 3.0                     February 4, 2005                     NetBSD 3.0
+NetBSD 4.0                       March 2, 2007                      NetBSD 4.0

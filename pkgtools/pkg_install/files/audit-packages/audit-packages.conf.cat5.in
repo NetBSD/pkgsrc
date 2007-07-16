@@ -56,7 +56,7 @@ FFIILLEESS
      @sysconfdir@/audit-packages.conf
 
 SSEEEE AALLSSOO
-     pkg_info(1), mk.conf(5), packages(7), audit-packages(8) and _D_o_c_u_m_e_n_t_a_t_i_o_n
+     pkg_info(1), mk.conf(5), pkgsrc(7), audit-packages(8) and _D_o_c_u_m_e_n_t_a_t_i_o_n
      _o_n _t_h_e _N_e_t_B_S_D _P_a_c_k_a_g_e _S_y_s_t_e_m
 
 HHIISSTTOORRYY
@@ -67,4 +67,4 @@ HHIISSTTOORRYY
      ing signatures on downloaded files.  The original idea came from Roland
      Dowdeswell and Bill Sommerfeld.
 
-NetBSD 3.1                       July 07, 2007                      NetBSD 3.1
+NetBSD 4.0                       July 07, 2007                      NetBSD 4.0
