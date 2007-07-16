@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 21:34:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/16 16:06:31 drochner Exp $
 bin/${PKGNAME}
 bin/gnumeric
 bin/ssconvert
@@ -200,8 +200,8 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.4.0/plugins/gnumeric/gnumeric.la
-lib/goffice/0.4.0/plugins/gnumeric/plugin.xml
+lib/goffice/0.4.1/plugins/gnumeric/gnumeric.la
+lib/goffice/0.4.1/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.7.pc
 man/man1/gnumeric.1
@@ -854,7 +854,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/gnome/help/gnumeric
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/goffice/0.4.0/plugins/gnumeric
+@dirrm lib/goffice/0.4.1/plugins/gnumeric
 @comment in goffice: @dirrm lib/goffice/0.4.0/plugins
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/uihello
