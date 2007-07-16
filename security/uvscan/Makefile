@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2006/11/12 02:27:39 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/07/16 20:18:58 njoly Exp $
 
-DISTNAME=		vlnx440e
-PKGNAME=		uvscan-4.40
-PKGREVISION=		1
+DISTNAME=		vlp4510e
+PKGNAME=		uvscan-5.10
 CATEGORIES=		security
-MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v4.40/
+MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v5.10/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -88,7 +87,7 @@ do-install:
 		fi;							\
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in contact.txt e4400upg.pdf license.txt ; do		\
+	for file in contact.txt e5100upg.pdf license.txt ; do		\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
