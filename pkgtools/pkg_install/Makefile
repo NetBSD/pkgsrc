@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2007/07/14 20:17:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.133 2007/07/16 13:23:02 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -16,6 +16,8 @@ DISTFILES=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		audit-packages-[0-9]*
 
