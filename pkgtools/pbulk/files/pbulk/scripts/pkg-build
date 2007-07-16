@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+# $NetBSD: pkg-build,v 1.2 2007/07/16 19:25:25 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -42,7 +42,7 @@ run_make() {
 		BATCH=1 \
 		DEPENDS_TARGET=/nonexistent \
 		${MAKE_FLAGS} \
-		WRKLOG=${bulkdir}/${pkgname}/work.log
+		WRKLOG=${bulklog}/${pkgname}/work.log
 
 }
 
@@ -73,30 +73,30 @@ rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
 [ -n "${bootstrapkit}" ] &&  tar xzf ${bootstrapkit} -C /
 
 # Output directory
-mkdir -p ${bulkdir}/${pkgname}
+mkdir -p ${bulklog}/${pkgname}
 
 # Go to target directory
 cd ${pkgsrc}/${pkgdir}
 # Clean build area, just in case
-${make} clean > ${bulkdir}/${pkgname}/pre-clean.log 2>&1
+${make} clean > ${bulklog}/${pkgname}/pre-clean.log 2>&1
 # Install all dependencies the package said it would need
 if [ ! -z "$dependencies" ]; then
-	PKG_PATH=${packages}/All ${pkg_add} $dependencies > ${bulkdir}/${pkgname}/depends.log 2>&1
+	PKG_PATH=${packages}/All ${pkg_add} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
 fi
 # Build package, create a separate log file for each major phase
-run_make checksum  > ${bulkdir}/${pkgname}/checksum.log 2>&1 || cleanup
-run_make configure  > ${bulkdir}/${pkgname}/configure.log 2>&1 || cleanup
-run_make all  > ${bulkdir}/${pkgname}/build.log 2>&1 || cleanup
-run_make install  > ${bulkdir}/${pkgname}/install.log 2>&1 || cleanup
-run_make package  > ${bulkdir}/${pkgname}/package.log 2>&1 || cleanup
+run_make checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
+run_make configure  > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
+run_make all  > ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
+run_make install  > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
+run_make package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 # Clean build area
-${make} clean > ${bulkdir}/${pkgname}/clean.log 2>&1
+${make} clean > ${bulklog}/${pkgname}/clean.log 2>&1
 # Test uninstall rules
-${pkg_delete} ${pkgname} > ${bulkdir}/${pkgname}/deinstall.log 2>&1
+${pkg_delete} ${pkgname} > ${bulklog}/${pkgname}/deinstall.log 2>&1
 
 # Comment the following out if you want to test all deinstall scripts.
 # This is quite expensive and mostly redundant, so it is disabled by default.
 #${pkg_delete} -r \* > /dev/null 2>&1 || true
 
 # Cleanup build logs on success
-rm -R ${bulkdir}/${pkgname}
+rm -R ${bulklog}/${pkgname}
