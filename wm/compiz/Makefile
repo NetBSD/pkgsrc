@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/06/05 05:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/16 09:39:20 drochner Exp $
 #
 
 DISTNAME=	compiz-0.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
@@ -51,6 +51,10 @@ PLIST_SUBST+=		KDE=""
 .else
 PLIST_SUBST+=		KDE="@comment "
 .endif
+
+# While we don't use threads, we link against libpthread because
+# some plugins do it.
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
