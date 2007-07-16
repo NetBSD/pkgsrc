@@ -121,11 +121,11 @@ OOPPTTIIOONNSS
              form of @@bbllddddeepp directives.
 
      --TT _b_u_i_l_d_p_k_g_s
-             This is assumed to be a whitespace separated list of package
-             names.  The exact versions of the packages referred to in the
-             _b_u_i_l_d_p_k_g_s list will be added to the packing list in the form of
-             @@bbllddddeepp directives.  This directives are stored after those cre-
-             ated by the --PP option.
+             The exact versions of the packages referred to in the _b_u_i_l_d_p_k_g_s
+             list will be added to the packing list in the form of @@bbllddddeepp
+             directives.  This directives are stored after those created by
+             the --PP option.  _b_u_i_l_d_p_k_g_s is assumed to be a whitespace separated
+             list of package names.
 
      --pp _p_r_e_f_i_x
              Set _p_r_e_f_i_x as the initial directory (base) to start from in
@@ -280,7 +280,7 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_delete(1), pkg_info(1), sysconf(3),
-     packages(7)
+     pkgsrc(7)
 
 HHIISSTTOORRYY
      The ppkkgg__ccrreeaattee command first appeared in FreeBSD.
@@ -301,4 +301,4 @@ BBUUGGSS
      invocations due to exec argument-space limitations (this depends on the
      value returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 4.0                       March 8, 2007                      NetBSD 4.0
+NetBSD 4.0                       May 19, 2007                       NetBSD 4.0
