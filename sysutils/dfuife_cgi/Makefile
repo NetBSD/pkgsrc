@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/04/10 15:38:42 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/16 21:38:39 joerg Exp $
 #
 
 DISTNAME=	dfuife_cgi-1.4
 CATEGORIES=	sysutils www
-MASTER_SITES=	ftp://packages.stura.uni-rostock.de/bsdinstaller/distfiles/
+MASTER_SITES=	http://www.pkgsrc-box.org/bsdinstaller/distfiles/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.bsdinstaller.com/
