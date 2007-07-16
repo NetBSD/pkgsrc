@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/04/10 14:53:44 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/16 21:38:39 joerg Exp $
 #
 
 DISTNAME=	libaura-3.1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://packages.stura.uni-rostock.de/bsdinstaller/distfiles/
+MASTER_SITES=	http://www.pkgsrc-box.org/bsdinstaller/distfiles/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.bsdinstaller.com/
