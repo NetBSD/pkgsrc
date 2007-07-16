@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+# $NetBSD: scan,v 1.2 2007/07/16 19:25:25 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -52,6 +52,7 @@ if [ -z "${limited_list}" ]; then
 	${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve.log
 else
 	initial=1
+	mkdir -p ${loc}
 	cp "${limited_list}" ${loc}/missing
 
 	while [ -s ${loc}/missing ]; do
