@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1911 2007/05/09 23:33:51 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1912 2007/07/16 20:51:07 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -595,7 +595,7 @@ ${WRKDIR}:
 # Create a symlink from ${WRKDIR} to the package directory if
 # CREATE_WRKDIR_SYMLINK is "yes".
 #
-CREATE_WRKDIR_SYMLINK?=	yes
+CREATE_WRKDIR_SYMLINK?=	no
 
 .if defined(WRKOBJDIR) && !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
