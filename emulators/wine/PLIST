@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2007/07/01 10:04:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2007/07/17 12:29:16 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -132,6 +132,7 @@ include/wine/windows/dde.h
 include/wine/windows/ddeml.h
 include/wine/windows/ddk/compstui.h
 include/wine/windows/ddk/hidsdi.h
+include/wine/windows/ddk/imm.h
 include/wine/windows/ddk/ntddcdvd.h
 include/wine/windows/ddk/ntddser.h
 include/wine/windows/ddk/ntddtape.h
@@ -497,6 +498,7 @@ lib/wine/cryptnet.dll.so
 lib/wine/ctl3d.dll16
 lib/wine/ctl3d32.dll.so
 lib/wine/ctl3dv2.dll16
+lib/wine/d3d10.dll.so
 lib/wine/d3d8.dll.so
 lib/wine/d3d9.dll.so
 lib/wine/d3dim.dll.so
@@ -645,6 +647,7 @@ lib/wine/liboledlg.def
 lib/wine/libolepro32.def
 lib/wine/libolesvr32.def
 ${WINE_OPENGL}lib/wine/libopengl32.def
+lib/wine/libpdh.def
 lib/wine/libpowrprof.def
 lib/wine/libpsapi.def
 lib/wine/libquartz.def
