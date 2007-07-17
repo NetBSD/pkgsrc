@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2007/01/24 12:57:58 joerg Exp $
+# $NetBSD: Makefile,v 1.104 2007/07/17 19:09:01 drochner Exp $
 #
 
 COMMENT=	Fonts
@@ -73,6 +73,7 @@ SUBDIR+=	font-isas-misc
 SUBDIR+=	font-jis-misc
 SUBDIR+=	font-misc-misc
 SUBDIR+=	font-mutt-misc
+SUBDIR+=	font-sony-misc
 SUBDIR+=	font-util
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
