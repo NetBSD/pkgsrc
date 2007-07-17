@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/07/17 19:18:44 drochner Exp $
+
+--- fifo.cpp.orig	2007-07-17 14:50:26.000000000 +0200
++++ fifo.cpp
+@@ -306,10 +306,14 @@ int sleep_until_start_request_or_inactiv
+ 	   to.tv_sec, to.tv_nsec,
+ 	   ts.tv_sec, ts.tv_nsec);
+       
+-      while ((err = sem_timedwait(&my_sem_start_is_required, &ts)) == -1 
+-	     && errno == EINTR)
++      while ((err = sem_trywait(&my_sem_start_is_required)) == -1 
++	     && (errno == EINTR || errno == EAGAIN))
+ 	{
+-	      continue;
++		struct timespec help;
++		clock_gettime2(&help);
++		if (timespeccmp(&help, &ts, >=))
++			break;
++		sched_yield();
+ 	}
+       
+       assert (gettimeofday(&tv, NULL) != -1);
