@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/07/17 18:53:54 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2007/07/17 20:58:09 joerg Exp $
 
 DISTNAME=	ghostscript-8.57
 CATEGORIES=	print
@@ -15,8 +15,10 @@ CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
+
+REPLACE_PERL+=		lib/fixmswrd.pl
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
