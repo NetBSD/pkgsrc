@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/04/12 22:43:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/07/17 10:41:20 drochner Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -274,7 +274,6 @@ share/gok/gl/text-operations.kbd
 share/gok/gl/valuator.kbd
 share/gok/glade/gok.glade2
 share/gok/gok-controls.kbd
-share/gok/gok.png
 share/gok/gok.rc
 share/gok/goklogo.png
 share/gok/goksound1.wav
@@ -489,6 +488,16 @@ share/gok/nl/quit.kbd
 share/gok/nl/text-operations.kbd
 share/gok/nl/valuator.kbd
 share/gok/numberpad.kbd
+share/gok/oc/gok-controls.kbd
+share/gok/oc/hide.kbd
+share/gok/oc/launcher.kbd
+share/gok/oc/main.kbd
+share/gok/oc/mouse.kbd
+share/gok/oc/move-resize.kbd
+share/gok/oc/numberpad.kbd
+share/gok/oc/quit.kbd
+share/gok/oc/text-operations.kbd
+share/gok/oc/valuator.kbd
 share/gok/or/gok-controls.kbd
 share/gok/or/hide.kbd
 share/gok/or/launcher.kbd
@@ -770,6 +779,7 @@ share/gtk-doc/html/gok/left.png
 share/gtk-doc/html/gok/right.png
 share/gtk-doc/html/gok/style.css
 share/gtk-doc/html/gok/up.png
+share/icons/hicolor/48x48/apps/gok.png
 share/locale/am/LC_MESSAGES/gok.mo
 share/locale/ang/LC_MESSAGES/gok.mo
 share/locale/ar/LC_MESSAGES/gok.mo
@@ -815,6 +825,7 @@ share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nb/LC_MESSAGES/gok.mo
 share/locale/ne/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
+share/locale/oc/LC_MESSAGES/gok.mo
 share/locale/or/LC_MESSAGES/gok.mo
 share/locale/pa/LC_MESSAGES/gok.mo
 share/locale/pl/LC_MESSAGES/gok.mo
@@ -841,6 +852,8 @@ share/pixmaps/gok.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gok
 @comment in scrollkeeper: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gtk-doc/html/gok
 @dirrm share/gok/zh_TW
 @dirrm share/gok/zh_HK
@@ -863,6 +876,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/pl
 @dirrm share/gok/pa
 @dirrm share/gok/or
+@dirrm share/gok/oc
 @dirrm share/gok/nl
 @dirrm share/gok/ne
 @dirrm share/gok/nb
