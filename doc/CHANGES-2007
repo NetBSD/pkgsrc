@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1576 2007/07/17 15:11:25 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1577 2007/07/17 15:26:43 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2911,3 +2911,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/libxslt to 1.1.21 [drochner 2007-07-17]
 	Updated emulators/wine to 0.9.41 [adam 2007-07-17]
 	Updated graphics/gimp to 2.2.17 [adam 2007-07-17]
+	Updated devel/p5-Data-UUID to 0.14.8 [mjl 2007-07-17]
