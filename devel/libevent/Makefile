@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/04/25 16:38:37 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/17 10:56:07 tnn Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -21,13 +21,14 @@ TEST_TARGET=	verify
 
 LIBS.SunOS+=	-lnsl -lresolv
 
-# Solaris doesn't have u_intX_t types in <inttypes.h>.
-CFLAGS.SunOS+=	-Du_int8_t=uint8_t
-CFLAGS.SunOS+=	-Du_int16_t=uint16_t
-CFLAGS.SunOS+=	-Du_int32_t=uint32_t
-
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
+
+# Solaris and HPUX don't have u_intX_t types in <inttypes.h>.
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX"
+CFLAGS+=	-Du_int8_t=uint8_t
+CFLAGS+=	-Du_int16_t=uint16_t
+CFLAGS+=	-Du_int32_t=uint32_t
+
 SUBST_CLASSES+=		inttypes
 SUBST_STAGE.inttypes=	post-patch
 SUBST_FILES.inttypes=	event.h
