@@ -1,4 +1,4 @@
-/* $NetBSD: netaddr.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: netaddr.c,v 1.3 2007/07/17 12:09:29 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -70,7 +70,7 @@ parse_sockaddr_in(const char *str, struct sockaddr_in *addr)
 		return -1;
 	addr->sin_port = htons((in_port_t)tmp);
 	addr->sin_addr = in;
-#if !defined(__sun)
+#if !defined(__sun) && !defined(__hpux)
 	addr->sin_len = sizeof(*addr);
 #endif
 	addr->sin_family = AF_INET;
