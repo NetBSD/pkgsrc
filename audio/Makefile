@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2007/07/13 14:52:07 drochner Exp $
+# $NetBSD: Makefile,v 1.360 2007/07/17 19:25:56 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -48,6 +48,7 @@ SUBDIR+=	easytag-current
 SUBDIR+=	eawpatches
 SUBDIR+=	emixer
 SUBDIR+=	esound
+SUBDIR+=	espeak
 SUBDIR+=	exaile
 SUBDIR+=	faac
 SUBDIR+=	faad2
@@ -92,6 +93,7 @@ SUBDIR+=	gmp3info
 SUBDIR+=	gmpc
 SUBDIR+=	gnome-audio
 SUBDIR+=	gnome-speech
+SUBDIR+=	gnome-speech-espeak
 SUBDIR+=	gnome-vfs2-cdda
 SUBDIR+=	gogo
 SUBDIR+=	goom
