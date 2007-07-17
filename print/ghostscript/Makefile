@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/07/01 20:56:27 markd Exp $
+# $NetBSD: Makefile,v 1.30 2007/07/17 18:53:54 drochner Exp $
 
-DISTNAME=	ghostscript-8.54-gpl
-PKGNAME=	ghostscript-8.54
-PKGREVISION=	4
+DISTNAME=	ghostscript-8.57
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,13 +37,14 @@ SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
-	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
+#	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
 	${MV} ${WRKSRC}/libpng ${WRKSRC}/libpng.dontuse
-	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
+#	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
 
 .include "options.mk"
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
+# pkgsrc jasper is too new
+#.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
