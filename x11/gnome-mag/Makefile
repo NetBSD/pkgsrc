@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2007/04/13 17:36:58 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/07/17 10:48:32 drochner Exp $
 #
 
-DISTNAME=		gnome-mag-0.14.3
+DISTNAME=		gnome-mag-0.14.6
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mag/0.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,4 +30,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
