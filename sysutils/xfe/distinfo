@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2007/06/13 20:32:37 joerg Exp $
+$NetBSD: distinfo,v 1.9 2007/07/17 20:23:29 xtraeme Exp $
 
-SHA1 (xfe-0.99.tar.gz) = 60707a6751e3d3290d307e184b82e1079a9a0174
-RMD160 (xfe-0.99.tar.gz) = 6e187be524a12ecd07924453d099968391a7baae
-Size (xfe-0.99.tar.gz) = 2230460 bytes
+SHA1 (xfe-1.00.tar.gz) = 864dc02f7e8c4bed410d61872f71833636fc33e1
+RMD160 (xfe-1.00.tar.gz) = eecc306f623e53dc480c989437f6a85fd37ff53b
+Size (xfe-1.00.tar.gz) = 2828942 bytes
 SHA1 (patch-ac) = 001140df584ef01d52e0737a57e0babbc574a0b4
