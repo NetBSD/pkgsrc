@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1 2007/07/17 19:21:51 drochner Exp $
+
+--- drivers/espeak/Makefile.in.orig	2007-07-09 15:20:12.000000000 +0200
++++ drivers/espeak/Makefile.in
+@@ -59,7 +59,6 @@ espeak_synthesis_driver_OBJECTS =  \
+ espeak_synthesis_driver_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
+ espeak_synthesis_driver_DEPENDENCIES =  \
+-	$(top_builddir)/gnome-speech/libgnomespeech.la \
+ 	$(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+@@ -274,13 +273,13 @@ INCLUDES = -I$(top_srcdir)          \
+ 	-I$(top_srcdir)/gnome-speech\
+ 	$(gnome_speech_CFLAGS) \
+ 	$(WARN_CFLAGS) \
+-	-I$(espeak_INCLUDES)
++	-I$(espeak_INCLUDES) -I ${LOCALBASE}/include/gnome-speech-1.0
+ 
+-LDADD = $(top_builddir)/gnome-speech/libgnomespeech.la 	\
++LDADD = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lgnomespeech	\
+ 	$(gnome_speech_LIBS)	\
+-	-L$(espeak_LIBDIR)	\
++	$(espeak_LIBS)	\
+ 	-lespeak \
+-	-lstdc++
++	-lstdc++ -lm
+ 
+ espeak_synthesis_driver_SOURCES = \
+ 	espeaksynthesisdriver.c \
