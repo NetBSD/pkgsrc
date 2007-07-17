@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/04/19 16:11:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/17 09:31:53 joerg Exp $
 
 CATEGORIES=		multimedia www
 PKGREVISION=		2
@@ -33,7 +33,7 @@ DISTNAME=		install_flash_player_7_${DISTUNAME}_sparc
 WRKNAME=		install_flash_player_7_${DISTUNAME}
 .else
 # Defaults so lintpkgsrc is happy
-FLASH_VERS=		5.0
+FLASH_VERS=		5.0.47
 DISTNAME=		flash_player
 .endif
 PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
