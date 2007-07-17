@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/26 11:44:27 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/07/17 09:54:36 drochner Exp $
 info/guile-library.info
 share/guile/site/config/load.scm
 share/guile/site/container/delay-tree.scm
@@ -69,4 +69,3 @@ share/guile/site/unit-test.scm
 @dirrm share/guile/site/debugging
 @dirrm share/guile/site/container
 @dirrm share/guile/site/config
-@unexec ${RMDIR} %D/share/guile/site 2>/dev/null || ${TRUE}
