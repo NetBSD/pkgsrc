@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2007/02/22 19:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/07/17 10:35:55 drochner Exp $
 
-DISTNAME=	lm1009
-PKGNAME=	mng-1.0.9
-PKGREVISION=	1
+DISTNAME=	libmng-1.0.10
+PKGNAME=	mng-1.0.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/} \
 		http://www.3-t.com/libmng/download/ \
 		http://www.libmng.com/download/
-# this is just a workaround because the 1.0.9 tar.gz is broken
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
@@ -22,10 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake
-
-# only needed as long as we use the zip distfile
-EXTRACT_OPTS_ZIP?=	-aqo
-WRKSRC=			${WRKDIR}/libmng
 
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}
