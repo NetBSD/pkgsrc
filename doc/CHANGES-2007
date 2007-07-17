@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1578 2007/07/17 20:24:13 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1579 2007/07/17 23:26:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2913,3 +2913,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp to 2.2.17 [adam 2007-07-17]
 	Updated devel/p5-Data-UUID to 0.14.8 [mjl 2007-07-17]
 	Updated sysutils/xfe to 1.00 [xtraeme 2007-07-17]
+	Updated devel/fromcvs to 0.0.0.103 [wiz 2007-07-17]
