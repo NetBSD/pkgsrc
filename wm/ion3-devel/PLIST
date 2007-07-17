@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/07/12 13:54:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/17 20:20:08 joerg Exp $
 bin/ion3
 bin/pwm3
 lib/ion3/bin/ion-completefile
@@ -74,6 +74,7 @@ share/ion3/welcome.fi.txt
 share/ion3/welcome.txt
 share/locale/cs/LC_MESSAGES/ion3.mo
 share/locale/fi/LC_MESSAGES/ion3.mo
+share/locale/fr/LC_MESSAGES/ion3.mo
 @dirrm share/ion3
 @dirrm share/examples/ion3
 @dirrm share/doc/ion3
