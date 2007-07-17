@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1571 2007/07/16 23:49:47 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.1572 2007/07/17 06:54:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2880,3 +2880,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/cgoban-java to 3.3.18 [rh 2007-07-16]
 	Updated pkgtools/pbulk to 0.6 [joerg 2007-07-16]
 	Updated print/tex-IEEEtran to 1.7 [minskim 2007-07-16]
+	Updated mail/clamav to 0.91.1 [martti 2007-07-17]
