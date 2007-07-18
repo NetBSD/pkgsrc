@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/07/18 02:47:02 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2007/07/18 02:48:35 tnn Exp $
 
 DISTNAME=	ghostscript-8.57
 CATEGORIES=	print
@@ -37,7 +37,7 @@ SUBST_FILES.resdir=	lib/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
 .if ${OPSYS} == "HPUX"
-CONFIGURE_ENV+=	ac_cv_func_fopen64=no
+CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 .endif
 
 post-extract:
