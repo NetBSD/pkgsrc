@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2007/02/22 19:27:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/07/18 11:25:19 tnn Exp $
 
-DISTNAME=	coreutils-5.2.1
-PKGREVISION=	2
+DISTNAME=	coreutils-6.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/coreutils/
 COMMENT=	GNU basic file, shell and text manipulation utilities
 
@@ -15,26 +14,30 @@ NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		msgfmt perl
+USE_TOOLS+=		msgfmt msgmerge perl xgettext
 USE_PKGLOCALEDIR=	YES
 
 INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 
-SUBST_CLASSES+=		root
-SUBST_MESSAGE.root=	Fixing hardcoded root.
-SUBST_STAGE.root=	post-patch
-SUBST_FILES.root=	src/Makefile.in
-SUBST_SED.root=		-e 's, root , ${ROOT_USER} ,g'
-
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ENV+=		ac_list_mounted_fs=found
+.endif
 
 # Exclude programs from PLIST which aren't built on a platform.
 .if ${OPSYS} == "Interix"
 PLIST_SUBST+=		COREUTILS_HAVE_HOSTID="@comment "
 .else
 PLIST_SUBST+=		COREUTILS_HAVE_HOSTID=""
+.endif
+
+# XXX - this hack is bound to cause fallout on some platform at some point.
+# How can we determine the API version of the builtin gettext?
+.if ${OPSYS} != "Linux"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
 
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
