@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1583 2007/07/18 18:23:46 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.1584 2007/07/18 18:45:36 degroote Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/gnome-speech to 0.4.15 [drochner 2007-07-18]
 	Updated www/gtkhtml314 to 3.14.3 [drochner 2007-07-18]
 	Updated misc/gnome-user-docs to 2.18.2 [drochner 2007-07-18]
+	Updated sysutils/wpi-firmware2 to 2.14.4 [degroote 2007-07-18]
