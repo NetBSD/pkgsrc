@@ -1,4 +1,4 @@
-# $NetBSD: install,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: install,v 1.2 2007/07/18 18:01:03 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -41,6 +41,11 @@ PRE-INSTALL)
         ;;
 
 POST-INSTALL)
+	#
+	# Rebuild the system run-time library search path database.
+	#
+	${TEST} ! -x ./+SHLIBS ||
+		./+SHLIBS ADD ${PKG_METADATA_DIR}
 	#
 	# Copy configuration/support files into place.
 	#
