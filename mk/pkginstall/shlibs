@@ -1,4 +1,4 @@
-# $NetBSD: shlibs,v 1.1 2007/07/18 18:01:03 jlam Exp $
+# $NetBSD: shlibs,v 1.2 2007/07/18 18:43:05 jlam Exp $
 #
 # Generate a +SHLIBS script that updates the system run-time library
 # search paths database for the package.
@@ -21,6 +21,7 @@ ECHO="@ECHO@"
 PWD_CMD="@PWD_CMD@"
 
 SELF=$0
+ACTION=$1
 
 CURDIR=`${PWD_CMD}`
 PKG_METADATA_DIR="${1-${CURDIR}}"
