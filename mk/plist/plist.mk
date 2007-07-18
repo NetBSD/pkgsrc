@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.25 2007/06/09 11:02:23 rillig Exp $
+# $NetBSD: plist.mk,v 1.26 2007/07/18 14:12:30 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -37,26 +37,25 @@ PLIST_TYPE?=	static
 
 ######################################################################
 
-.if !defined(PLIST_SRC)
-.  if exists(${PKGDIR}/PLIST.common)
-PLIST_SRC+=	${PKGDIR}/PLIST.common
-.  endif
-.  if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC+=	${PKGDIR}/PLIST.${OPSYS}
-.  endif
-.  if exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-PLIST_SRC+=	${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  endif
-.  if exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
-PLIST_SRC+=	${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  endif
-.  if exists(${PKGDIR}/PLIST)
-PLIST_SRC+=	${PKGDIR}/PLIST
-.  endif
-.  if exists(${PKGDIR}/PLIST.common_end)
-PLIST_SRC+=	${PKGDIR}/PLIST.common_end
-.  endif
-.endif # !PLIST_SRC
+.if exists(${PKGDIR}/PLIST.common)
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.common
+.endif
+.if exists(${PKGDIR}/PLIST.${OPSYS})
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${OPSYS}
+.endif
+.if exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.endif
+.if exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.endif
+.if exists(${PKGDIR}/PLIST)
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST
+.endif
+.if exists(${PKGDIR}/PLIST.common_end)
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.common_end
+.endif
+PLIST_SRC?=		${PLIST_SRC_DFLT}
 
 # This is the path to the generated PLIST file.
 PLIST=		${WRKDIR}/.PLIST
