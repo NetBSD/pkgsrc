@@ -1,4 +1,4 @@
-# $NetBSD: shlibs,v 1.4 2007/07/18 18:53:18 jlam Exp $
+# $NetBSD: shlibs,v 1.5 2007/07/18 18:55:56 jlam Exp $
 #
 # Generate a +SHLIBS script that updates the system run-time library
 # search paths database for the package.
@@ -33,12 +33,12 @@ exitcode=0
 case $ACTION in
 ADD)
 	${ECHO} "${PKGNAME}: rebuilding run-time library search paths database"
-	( @LDCONFIG_ADD_CMD@ ) >/dev/null 1>&2 || ${TRUE}
+	( @LDCONFIG_ADD_CMD@ ) >/dev/null 2>&1 || ${TRUE}
 	;;
 
 REMOVE)
 	${ECHO} "${PKGNAME}: rebuilding run-time library search paths database"
-	( @LDCONFIG_REMOVE_CMD@ ) >/dev/null 1>&2 || ${TRUE}
+	( @LDCONFIG_REMOVE_CMD@ ) >/dev/null 2>&1 || ${TRUE}
 	;;
 esac
 exit $exitcode
