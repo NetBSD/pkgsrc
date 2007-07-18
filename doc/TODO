@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6502 2007/07/17 23:43:10 wiz Exp $
+$NetBSD: TODO,v 1.6503 2007/07/18 11:29:53 tnn Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o cocoon-2.1.10
 	o connect-1.96
 	o cook-2.28
-	o coreutils-6.9
 	o courier-authlib-0.59
 	o courier-imap-4.1.2
 	o courier-mta-0.56
