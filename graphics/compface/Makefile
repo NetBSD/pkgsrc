@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/03/08 19:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/18 20:08:41 joerg Exp $
 
 DISTNAME=	compface-1.5.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.xemacs.org/pub/xemacs/aux/
 
@@ -10,7 +11,7 @@ COMMENT=	48x48x1 image compression and decompression (X-face utility)
 
 CONFLICTS=	faces-[0-9]*
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM:Q}
 CONFIGURE_ENV+=		INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT:Q}
