@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2007/07/18 12:45:40 jmmv Exp $
+
+--- calendar/libedata-cal/Makefile.in.orig	2007-07-17 13:01:35.000000000 +0200
++++ calendar/libedata-cal/Makefile.in
+@@ -63,9 +63,7 @@ am__DEPENDENCIES_1 =
+ libedata_cal_1_2_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	$(top_builddir)/calendar/libecal/libecal-1.2.la \
+ 	$(top_builddir)/libedataserver/libedataserver-1.2.la
+-am__objects_1 = Evolution-DataServer-Calendar-common.lo \
+-	Evolution-DataServer-Calendar-skels.lo \
+-	Evolution-DataServer-Calendar-stubs.lo
++am__objects_1 =
+ am_libedata_cal_1_2_la_OBJECTS = $(am__objects_1) e-cal-backend.lo \
+ 	e-cal-backend-cache.lo e-cal-backend-factory.lo \
+ 	e-cal-backend-sexp.lo e-cal-backend-sync.lo \
