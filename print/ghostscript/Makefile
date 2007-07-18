@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/07/17 20:58:09 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/07/18 02:47:02 tnn Exp $
 
 DISTNAME=	ghostscript-8.57
 CATEGORIES=	print
@@ -35,6 +35,10 @@ SUBST_STAGE.resdir=	post-extract
 SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	lib/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
+
+.if ${OPSYS} == "HPUX"
+CONFIGURE_ENV+=	ac_cv_func_fopen64=no
+.endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
