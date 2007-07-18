@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6503 2007/07/18 11:29:53 tnn Exp $
+$NetBSD: TODO,v 1.6504 2007/07/18 20:01:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,7 @@ Suggested package updates
 	o btpd-0.12
 	o bugzilla-3.0
 	o bwidget-1.7.0
+	o bzr-0.18
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cal3d-0.11.0
@@ -626,7 +627,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.04.1
 	o hesiod-3.1.0
-	o heyu-2.0.0
+	o heyu-2.0.1
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -1089,6 +1090,7 @@ Suggested package updates
 	o py-setuptools-0.6c5
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
+	o py-sqlite2-2.3.5
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-2.4.0
@@ -1343,7 +1345,7 @@ Suggested package updates
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33
 	o xrn-9.02
-	o xscreensaver-5.02
+	o xscreensaver-5.03
 	o xskat-4.0
 	o xsoldier-1.4
 	o xterm-227
@@ -1360,7 +1362,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.38
+	o zile-2.2.39
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
