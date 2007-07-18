@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2005/03/21 14:44:08 tv Exp $
+$NetBSD: patch-ad,v 1.2 2007/07/18 11:25:20 tnn Exp $
 
---- src/su.c.orig	Wed Jan 21 17:27:02 2004
+--- src/su.c.orig	2007-03-18 22:36:43.000000000 +0100
 +++ src/su.c
-@@ -141,6 +141,12 @@
+@@ -119,6 +119,12 @@
  /* The user to become if none is specified.  */
  #define DEFAULT_USER "root"
  
@@ -13,23 +13,23 @@ $NetBSD: patch-ad,v 1.1 2005/03/21 14:44:08 tv Exp $
 +#endif
 +
  char *crypt ();
- char *getpass ();
  char *getusershell ();
-@@ -291,9 +297,13 @@ correct_password (const struct passwd *p
+ void endusershell ();
+@@ -245,9 +251,13 @@ correct_password (const struct passwd *p
        error (0, 0, _("getpass: cannot open /dev/tty"));
-       return 0;
+       return false;
      }
 +#ifdef __INTERIX
 +  return setuser (pw->pw_name, unencrypted, SU_CHECK) == 0;
 +#else
    encrypted = crypt (unencrypted, correct);
    memset (unencrypted, 0, strlen (unencrypted));
-   return strcmp (encrypted, correct) == 0;
+   return STREQ (encrypted, correct);
 +#endif
  }
  
  /* Update `environ' for the new shell based on PW, with SHELL being
-@@ -343,6 +353,9 @@ modify_environment (const struct passwd 
+@@ -297,6 +307,9 @@ modify_environment (const struct passwd 
  static void
  change_identity (const struct passwd *pw)
  {
@@ -39,7 +39,7 @@ $NetBSD: patch-ad,v 1.1 2005/03/21 14:44:08 tv Exp $
  #ifdef HAVE_INITGROUPS
    errno = 0;
    if (initgroups (pw->pw_name, pw->pw_gid) == -1)
-@@ -353,6 +366,7 @@ change_identity (const struct passwd *pw
+@@ -307,6 +320,7 @@ change_identity (const struct passwd *pw
      error (EXIT_FAIL, errno, _("cannot set group id"));
    if (setuid (pw->pw_uid))
      error (EXIT_FAIL, errno, _("cannot set user id"));

@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.1 2005/03/21 14:44:08 tv Exp $
+$NetBSD: patch-ai,v 1.2 2007/07/18 11:25:21 tnn Exp $
 
---- src/sync.c.orig	Wed Jan 21 17:27:02 2004
+--- src/sync.c.orig	2007-03-18 22:36:43.000000000 +0100
 +++ src/sync.c
-@@ -70,6 +70,8 @@ main (int argc, char **argv)
-   if (1 < argc)
+@@ -73,6 +73,8 @@ main (int argc, char **argv)
+   if (optind < argc)
      error (0, 0, _("ignoring all arguments"));
  
 +#if HAVE_SYNC
