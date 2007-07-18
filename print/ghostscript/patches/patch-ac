@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.5 2007/07/18 02:47:02 tnn Exp $
+
+--- src/gpmisc.c.orig	2007-07-18 04:37:50.000000000 +0200
++++ src/gpmisc.c
+@@ -93,7 +93,7 @@ gp_fopentemp_generic(const char *fname, 
+      * fdopen as (char *), rather than following the POSIX.1 standard,
+      * which defines it as (const char *).  Patch this here.
+      */
+-#if defined (O_LARGEFILE)
++#if defined (HAVE_FILE64)
+     file = (b64 ? fdopen64 : fdopen)(fildes, (char *)mode); /* still really const */
+ #else
+     file = fdopen(fildes, (char *)mode); /* still really const */
