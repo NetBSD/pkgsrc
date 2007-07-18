@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1912 2007/07/16 20:51:07 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1913 2007/07/18 18:01:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -354,9 +354,6 @@ OVERRIDE_DIRDEPTH?=	2
 #
 .include "${.PARSEDIR}/alternatives.mk"
 
-# INSTALL/DEINSTALL script framework
-.include "${.PARSEDIR}/pkginstall/bsd.pkginstall.mk"
-
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
 _PKGSRC_IN?=		===${SMART_MESSAGES:D> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===}
@@ -440,6 +437,18 @@ USE_TOOLS+=	tee tsort
 
 # Tools
 .include "${.PARSEDIR}/tools/bsd.tools.mk"
+
+# SHLIB_TYPE
+# 	The type of shared library supported by the platform.
+#
+SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
+_SHLIB_TYPE_cmd=	\
+	${SETENV} ECHO=${TOOLS_ECHO:Q} FILE_CMD=${TOOLS_FILE_CMD:Q}	\
+		TEST=${TOOLS_TEST:Q} PKG_INFO_CMD=${PKG_INFO_CMD:Q}	\
+	${SH} ${PKGSRCDIR}/mk/scripts/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
+
+# INSTALL/DEINSTALL script framework
+.include "${.PARSEDIR}/pkginstall/bsd.pkginstall.mk"
 
 # Barrier
 .include "${.PARSEDIR}/bsd.pkg.barrier.mk"
