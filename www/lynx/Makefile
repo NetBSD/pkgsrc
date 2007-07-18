@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2007/05/17 17:26:31 gdt Exp $
+# $NetBSD: Makefile,v 1.100 2007/07/18 20:25:27 joerg Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -40,8 +40,8 @@ CONF_FILES+=		share/examples/lynx/lynx.cfg ${PKG_SYSCONFDIR}/lynx.cfg
 CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
 
 # But no dependency on Perl.
-REPLACE_PERL+=		samples/mailto-form.pl
-CHECK_FILES_SKIP+=	samples/mailto-form.pl
+REPLACE_PERL+=			samples/mailto-form.pl
+CHECK_INTERPRETER_SKIP+=	share/lynx/lynx_doc/samples/mailto-form.pl
 
 .include "options.mk"
 
