@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6504 2007/07/18 20:01:39 wiz Exp $
+$NetBSD: TODO,v 1.6505 2007/07/18 23:05:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -229,7 +229,6 @@ Suggested package updates
 	o R-2.5.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
-	o R-ISwR-1.0.6
 	o R-Matrix-0.9975.11
 	o R-PHYLOGR-1.0.4
 	o R-R2HTML-1.58
@@ -256,10 +255,6 @@ Suggested package updates
 	o R-wle-0.9.3
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
-	o SDL_image-1.2.6
-	o SDL_mixer-1.2.8
-	o SDL_net-1.2.7
-	o SDL_ttf-2.0.9
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-75
@@ -402,7 +397,6 @@ Suggested package updates
 	o cyrus-imapd-2.3.8
 	o dar-2.3.4
 	o darts-0.31
-	o dasher-4.4.2
 	o dbench-3.04
 	o dbmail-2.2.4
 	o dbxml-2.1.8
@@ -413,7 +407,6 @@ Suggested package updates
 	o dejavu-ttf-2.18
 	o delegate-9.3.2
 	o devIL-1.6.7
-	o devhelp-0.15
 	o devtodo-0.1.19
 	o dhid-5.3
 	o dialog-1.1.20070704
@@ -458,8 +451,6 @@ Suggested package updates
 	o enlightenment-0.16.8.7
 	o enscript-1.6.4
 	o epic4-2.6
-	o epiphany-2.18.3
-	o epiphany-extensions-2.18.2
 	o epstool-3.08
 	o eric3-4.0.0 [now called eric4]
 	o erlang-11.3
@@ -473,7 +464,6 @@ Suggested package updates
 	o evolution-2.10.3
 	o evolution-exchange-2.10.3
 	o ex-20050325
-	o exiv2-0.15
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -482,7 +472,6 @@ Suggested package updates
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
-	o file-roller-2.18.4
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.31
@@ -523,12 +512,10 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.11
 	o geda-1.1.1.20070708
-	o gedit-2.18.2
 	o generator-cbiere-0.35r3
 	o gettext-0.16.1
 	o gfract-0.33
 	o ggiterm-0.7.1
-	o ghostscript-8.57
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.0.10
@@ -541,21 +528,12 @@ Suggested package updates
 	o glchess-1.0.5
 	o global-5.6
 	o glpk-4.19
-	o gmime-2.2.9
 	o gmp3info-0.8.5a
 	o gmpc-0.15.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.1.7
-	o gnome-desktop-2.18.3
 	o gnome-games-2.18.2.1
-	o gnome-mag-0.14.5
-	o gnome-menus-2.18.3
-	o gnome-panel-2.18.3
-	o gnome-screensaver-2.18.2
-	o gnome-session-2.18.3
-	o gnome-speech-0.4.14
-	o gnome-user-docs-2.18.2
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.0
 	o gnupg2-2.0.5
@@ -578,9 +556,7 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice-0.4.1
 	o gogo-3.11p1
-	o gok-1.2.5
 	o gossip-0.26
 	o gourmet-0.13.3
 	o gpaint-0.3.1
@@ -601,14 +577,11 @@ Suggested package updates
 	o gss-0.0.22
 	o gtar-1.18
 	o gtexinfo-4.9
-	o gthumb-2.10.5
 	o gtick-0.3.13
 	o gtk-gnutella-0.96.4
 	o gtk-systrace-20030623
-	o gtk2-engines-2.10.2
 	o gtk2-sharp-2.10.1
 	o gtkam-0.1.14 [pkg/36317]
-	o gtkhtml314-3.14.3
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -744,7 +717,6 @@ Suggested package updates
 	o libxml++2-2.18.1
 	o licq-1.3.4
 	o licq-core-1.3.0
-	o liferea-1.2.19
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
 	o links-gui-2.1.0.29
@@ -777,7 +749,6 @@ Suggested package updates
 	o memtestplus-1.70
 	o mergeant-0.66
 	o mesure-0.7.2
-	o metacity-2.18.5
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o micq-0.5.4.2
@@ -791,7 +762,6 @@ Suggested package updates
 	o mkvtoolnix-2.0.2
 	o mlview-0.9.0
 	o mmg-2.0.2
-	o mng-1.0.10
 	o moc-2.4.2
 	o molden-4.5
 	o mono-1.2.4
@@ -820,7 +790,6 @@ Suggested package updates
 	o nano-1.2.5 [pkg/32859|pkg/34511]
 	o nano-2.0.6
 	o nap-1.5.3
-	o nautilus-2.18.3
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o ncview-1.93b
 	o ne-2.01
@@ -1008,7 +977,6 @@ Suggested package updates
 	o pioneers-0.10.2
 	o pircbot-1.4.4
 	o pkg_select-20051209
-	o plib-1.8.4
 	o pload-0.9.5
 	o plone-2.5.3
 	o ploticus-2.33
@@ -1045,7 +1013,6 @@ Suggested package updates
 	o pwlib-1.10.7
 	o pxe-1.4.2
 	o py-FourSuite-1.0.2
-	o py-GeoIP-1.2.1
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
 	o py-Optik-1.4.1
@@ -1063,7 +1030,6 @@ Suggested package updates
 	o py-gnome2-extras-2.14.3
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-gtk2-2.10.6
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3
@@ -1303,7 +1269,6 @@ Suggested package updates
 	o xblast-2.10.4
 	o xchat-2.8.4
 	o xcircuit-3.6.85
-	o xcompmgr-1.1.3
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
