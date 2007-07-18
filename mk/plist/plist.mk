@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.26 2007/07/18 14:12:30 jlam Exp $
+# $NetBSD: plist.mk,v 1.27 2007/07/18 18:01:03 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -156,13 +156,6 @@ _SHLIB_AWKFILE.aixlib=	${.CURDIR}/../../mk/plist/shlib-none.awk
 _SHLIB_AWKFILE.a.out=	${.CURDIR}/../../mk/plist/shlib-aout.awk
 _SHLIB_AWKFILE.dylib=	${.CURDIR}/../../mk/plist/shlib-dylib.awk
 _SHLIB_AWKFILE.none=	${.CURDIR}/../../mk/plist/shlib-none.awk
-
-# SHLIB_TYPE is the type of shared library supported by the platform.
-SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
-_SHLIB_TYPE_cmd=							\
-	${SETENV} ECHO=${TOOLS_ECHO:Q} FILE_CMD=${TOOLS_FILE_CMD:Q}	\
-		TEST=${TOOLS_TEST:Q} PKG_INFO_CMD=${PKG_INFO_CMD:Q}	\
-	${SH} ${.CURDIR}/../../mk/plist/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
 
 ######################################################################
 
