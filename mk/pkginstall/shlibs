@@ -1,0 +1,49 @@
+# $NetBSD: shlibs,v 1.1 2007/07/18 18:01:03 jlam Exp $
+#
+# Generate a +SHLIBS script that updates the system run-time library
+# search paths database for the package.
+#
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+SHLIBS)
+	${CAT} > ./+SHLIBS << 'EOF'
+#!@SH@
+#
+# +SHLIBS - system run-time library search paths database management script
+#
+# Usage: ./+SHLIBS ADD|REMOVE [metadatadir]
+#
+# This scripts rebuilds the system database of run-time library search
+# paths so that the system can find the shared libraries of the package
+# associated with <metadatadir>.
+#
+
+ECHO="@ECHO@"
+PWD_CMD="@PWD_CMD@"
+
+SELF=$0
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${1-${CURDIR}}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+exitcode=0
+case $ACTION in
+ADD)
+	${ECHO} "${PKGNAME}: rebuilding run-time library search paths database"
+	@LDCONFIG_ADD_CMD@
+	;;
+
+REMOVE)
+	${ECHO} "${PKGNAME}: rebuilding run-time library search paths database"
+	@LDCONFIG_REMOVE_CMD@
+	;;
+esac
+exit $exitcode
+
+EOF
+	${SED} -n "/^\# SHLIBS: /p" ${SELF} >> ./+SHLIBS
+	${CHMOD} +x ./+SHLIBS
+	;;
+esac
+
