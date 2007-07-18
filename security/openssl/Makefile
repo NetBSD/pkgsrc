@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2007/05/03 14:23:42 tron Exp $
+# $NetBSD: Makefile,v 1.126 2007/07/18 13:11:15 tron Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -24,7 +24,7 @@ MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
 .  endif
 .endif
 
-PKGREVISION=	3
+PKGREVISION=	4
 SVR4_PKGNAME=	ossl
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -47,7 +47,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	shared
+CONFIGURE_ARGS+=	shared threads
 
 .if ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
