@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gnomecanvas,v 1.1 2007/06/09 13:17:18 wiz Exp $
+@comment $NetBSD: PLIST.gnomecanvas,v 1.2 2007/07/18 13:10:44 jmmv Exp $
 lib/ocaml/lablgtk2/gnoCanvas.cmi
 lib/ocaml/lablgtk2/gnoCanvas.cmx
 lib/ocaml/lablgtk2/gnoCanvas.ml
@@ -17,5 +17,5 @@ lib/ocaml/lablgtk2/panel.cmi
 lib/ocaml/lablgtk2/panel.cmx
 lib/ocaml/lablgtk2/panel.ml
 lib/ocaml/lablgtk2/panel_tags.h
-lib/ocaml/stublibs/dlllablgnomecanvas.so
-lib/ocaml/stublibs/dlllablpanel.so
+${HAVE_STUBS}lib/ocaml/stublibs/dlllablgnomecanvas.so
+${HAVE_STUBS}lib/ocaml/stublibs/dlllablpanel.so
