@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1586 2007/07/19 09:41:42 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.1587 2007/07/19 18:21:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2942,3 +2942,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wpi-firmware2 to 2.14.4 [degroote 2007-07-18]
 	Updated chat/centericq to 4.21.0nb5 [lkundrak 2007-07-19]
 	Updated comms/asterisk to 1.2.22 [mjl 2007-07-19]
+	Updated www/firefox-bin to 2.0.0.5 [xtraeme 2007-07-19]
