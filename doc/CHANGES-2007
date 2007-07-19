@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1593 2007/07/19 21:49:52 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1594 2007/07/19 21:51:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2951,3 +2951,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtk2 to 2.10.14 [wiz 2007-07-19]
 	Updated www/links to 2.1.0.29 [wiz 2007-07-19]
 	Updated www/links-gui to 2.1.0.29 [wiz 2007-07-19]
+	Updated misc/cksfv to 1.3.11 [wiz 2007-07-19]
