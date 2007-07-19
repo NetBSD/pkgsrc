@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/17 19:18:44 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/19 21:29:33 wiz Exp $
 #
 
 DISTNAME=	espeak-1.28-source
@@ -14,6 +14,8 @@ COMMENT=	Speech synthesizer
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/espeak-1.28-source/src
+
+#LICENSE=	GPLv3
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/espeak ${PREFIX}/bin
