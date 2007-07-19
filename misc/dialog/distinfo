@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2007/06/12 22:25:39 wiz Exp $
+$NetBSD: distinfo,v 1.19 2007/07/19 21:53:11 wiz Exp $
 
-SHA1 (dialog-1.1-20070604.tgz) = 761a1de17a0608ced9f8a9c185820387082ec398
-RMD160 (dialog-1.1-20070604.tgz) = 06bee856154f8c8804c9a8fc6f04df5e5b4a2cb4
-Size (dialog-1.1-20070604.tgz) = 365939 bytes
+SHA1 (dialog-1.1-20070704.tgz) = af12f3d9872e1fd85cd7e9529335269648dd21c2
+RMD160 (dialog-1.1-20070704.tgz) = 88487908ffd621a567d8ab6a601526b34411048e
+Size (dialog-1.1-20070704.tgz) = 367588 bytes
