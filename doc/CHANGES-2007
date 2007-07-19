@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1587 2007/07/19 18:21:58 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1588 2007/07/19 19:10:48 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2943,3 +2943,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/centericq to 4.21.0nb5 [lkundrak 2007-07-19]
 	Updated comms/asterisk to 1.2.22 [mjl 2007-07-19]
 	Updated www/firefox-bin to 2.0.0.5 [xtraeme 2007-07-19]
+	Updated www/opera to 9.22 [xtraeme 2007-07-19]
