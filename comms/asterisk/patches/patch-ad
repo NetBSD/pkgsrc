@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
+$NetBSD: patch-ad,v 1.7 2007/07/19 09:39:57 mjl Exp $
 
---- channels/Makefile.orig	2007-03-26 12:21:56.000000000 +0200
-+++ channels/Makefile	2007-04-26 11:23:18.000000000 +0200
+--- channels/Makefile.orig	2007-07-11 19:15:11.000000000 +0200
++++ channels/Makefile	2007-07-19 11:17:12.000000000 +0200
 @@ -24,12 +24,13 @@
  endif
  
@@ -17,12 +17,16 @@ $NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
  endif
  
  ifeq (${OSARCH},Linux)
-@@ -76,43 +77,43 @@
+@@ -76,7 +77,7 @@
  endif
  
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
 -  CHANNEL_LIBS+=chan_phone.so
 +#  CHANNEL_LIBS+=chan_phone.so
+ endif
+ 
+ ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/compiler.h),)
+@@ -84,39 +85,39 @@
  endif
  
  ifneq ($(wildcard h323/libchanh323.a),)
@@ -73,7 +77,7 @@ $NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
  endif
  
  ifndef WITHOUT_ZAPTEL
-@@ -128,10 +129,10 @@
+@@ -132,10 +133,10 @@
  endif
  endif # WITHOUT_ZAPTEL
  
@@ -88,7 +92,7 @@ $NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
  
  CFLAGS+=-DCRYPTO
  
-@@ -143,9 +144,9 @@
+@@ -147,9 +148,9 @@
  
  ZAPDIR=/usr/lib
  
@@ -101,7 +105,7 @@ $NetBSD: patch-ad,v 1.6 2007/04/26 09:43:15 mjl Exp $
  
  ifndef OPENH323DIR
    OPENH323DIR=$(HOME)/openh323
-@@ -171,13 +172,13 @@
+@@ -175,13 +176,13 @@
    include .depend
  endif
  
