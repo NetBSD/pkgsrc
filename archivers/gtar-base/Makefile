@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/12/06 22:49:10 schwarz Exp $
+# $NetBSD: Makefile,v 1.57 2007/07/19 14:54:04 joerg Exp $
 
 DISTNAME=	tar-1.15.1
 PKGNAME=	gtar-base-1.15.1
@@ -13,6 +13,7 @@ COMMENT=	The GNU tape archiver with remote magnetic tape support
 
 CONFLICTS=	gcpio-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		msgfmt
@@ -58,10 +59,10 @@ PLIST_SUBST+=		IF_LIBEXEC_RMT="@comment "
 .endif
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
-		${PREFIX}/${PKGMANDIR}/man1/${GTAR_PROGRAM_PREFIX}tar.1
+	${INSTALL_MAN} ${FILESDIR}/gtar.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GTAR_PROGRAM_PREFIX}tar.1
 .if ${GTAR_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${PREFIX}/bin/"gtar"
+	${LN} -sf ${DESTDIR}${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
 .endif
 
 .include "../../mk/bsd.prefs.mk"
