@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2007/05/24 21:51:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.48 2007/07/19 22:13:43 wiz Exp $
 
-DISTNAME=	m4-1.4.9
-PKGREVISION=	1
+DISTNAME=	m4-1.4.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=m4/}
 
@@ -14,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
+#LICENSE=		GPLv3
 
 TEST_TARGET=		check
 
