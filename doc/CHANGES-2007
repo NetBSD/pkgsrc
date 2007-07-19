@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1599 2007/07/19 22:18:23 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1600 2007/07/19 22:41:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/curl to 7.16.4 [wiz 2007-07-19]
 	Updated devel/m4 to 1.4.10 [wiz 2007-07-19]
 	Updated devel/tailor to 0.9.29 [wiz 2007-07-19]
+	Updated devel/libgsf to 1.14.5 [wiz 2007-07-19]
