@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/04/08 18:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/19 21:51:10 wiz Exp $
 #
 
-DISTNAME=	cksfv-1.3.10
+DISTNAME=	cksfv-1.3.11
 CATEGORIES=	misc
 MASTER_SITES=	http://zakalwe.fi/~shd/foss/cksfv/files/ \
 		http://zakalwe.fi/~shd/foss/cksfv/files/devel/
