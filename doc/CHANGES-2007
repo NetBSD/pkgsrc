@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1600 2007/07/19 22:41:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1601 2007/07/19 22:49:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2958,3 +2958,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/m4 to 1.4.10 [wiz 2007-07-19]
 	Updated devel/tailor to 0.9.29 [wiz 2007-07-19]
 	Updated devel/libgsf to 1.14.5 [wiz 2007-07-19]
+	Updated graphics/djvulibre-lib to 3.5.19 [wiz 2007-07-19]
+	Updated graphics/djvulibre-tools to 3.5.19 [wiz 2007-07-19]
