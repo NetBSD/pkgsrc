@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6506 2007/07/19 02:21:45 taca Exp $
+$NetBSD: TODO,v 1.6507 2007/07/19 19:36:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ Suggested package updates
 	o gnome-build-0.1.7
 	o gnome-games-2.18.2.1
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.0
 	o gnupg2-2.0.5
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
