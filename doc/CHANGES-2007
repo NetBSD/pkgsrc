@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1592 2007/07/19 21:44:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1593 2007/07/19 21:49:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2949,3 +2949,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/gnucash to 2.2.0 [wiz 2007-07-19]
 	Updated devel/glib2 to 2.12.13 [wiz 2007-07-19]
 	Updated x11/gtk2 to 2.10.14 [wiz 2007-07-19]
+	Updated www/links to 2.1.0.29 [wiz 2007-07-19]
+	Updated www/links-gui to 2.1.0.29 [wiz 2007-07-19]
