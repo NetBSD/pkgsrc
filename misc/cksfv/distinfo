@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2007/04/08 18:07:52 wiz Exp $
+$NetBSD: distinfo,v 1.18 2007/07/19 21:51:10 wiz Exp $
 
-SHA1 (cksfv-1.3.10.tar.bz2) = a1985402f05e4876edb9402ece40b77ddda48fb7
-RMD160 (cksfv-1.3.10.tar.bz2) = 4eda850bef5a0f795f4507cef55863473f08bfea
-Size (cksfv-1.3.10.tar.bz2) = 26677 bytes
+SHA1 (cksfv-1.3.11.tar.bz2) = b184c13243b83dc51b458f519c6c2d4cb1abc506
+RMD160 (cksfv-1.3.11.tar.bz2) = ef0374cd334cbc68e2637530a8076a95a26891b7
+Size (cksfv-1.3.11.tar.bz2) = 26473 bytes
 SHA1 (patch-aa) = e520d00296ab1461084c87582a6d2c7201e25b8a
