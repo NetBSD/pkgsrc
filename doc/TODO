@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6508 2007/07/19 19:43:30 wiz Exp $
+$NetBSD: TODO,v 1.6509 2007/07/19 19:47:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ Suggested package updates
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.31
 	o firefox-2.0.0.5
-	o firefox-bin-2.0.0.5
 	o firefox-bin-flash-9.0.48.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
