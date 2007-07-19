@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1585 2007/07/19 00:47:44 lkundrak Exp $
+$NetBSD: CHANGES-2007,v 1.1586 2007/07/19 09:41:42 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/gnome-user-docs to 2.18.2 [drochner 2007-07-18]
 	Updated sysutils/wpi-firmware2 to 2.14.4 [degroote 2007-07-18]
 	Updated chat/centericq to 4.21.0nb5 [lkundrak 2007-07-19]
+	Updated comms/asterisk to 1.2.22 [mjl 2007-07-19]
