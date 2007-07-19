@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/07/06 18:31:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/07/19 22:40:30 wiz Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -58,7 +58,7 @@ lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 man/man1/gsf-office-thumbnailer.1
-share/gconf/schemas/gsf-office-thumbnailer.schemas
+man/man1/gsf.1
 share/gtk-doc/html/gsf/GsfClipData.html
 share/gtk-doc/html/gsf/api.html
 share/gtk-doc/html/gsf/dependencies.html
