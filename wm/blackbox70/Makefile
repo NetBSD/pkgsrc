@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:27:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/19 10:01:10 joerg Exp $
 #
 
 DISTNAME=	blackbox-0.70.1
 PKGNAME=	blackbox70-0.70.1
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
@@ -19,6 +20,7 @@ USE_TOOLS+=	pkg-config
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
