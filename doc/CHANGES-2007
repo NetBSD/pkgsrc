@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1596 2007/07/19 21:56:50 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1597 2007/07/19 22:09:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2954,3 +2954,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/cksfv to 1.3.11 [wiz 2007-07-19]
 	Updated misc/dialog to 1.1.20070704 [wiz 2007-07-19]
 	Updated textproc/p5-XML-LibXML-Iterator to 1.02 [seb 2007-07-19]
+	Updated www/curl to 7.16.4 [wiz 2007-07-19]
