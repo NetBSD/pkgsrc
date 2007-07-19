@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6518 2007/07/19 22:41:07 wiz Exp $
+$NetBSD: TODO,v 1.6519 2007/07/19 22:49:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,8 +412,6 @@ Suggested package updates
 	o dinotrace-mode-9.3e
 	o dirac-0.7.0
 	o dircproxy-devel-1.2.0.2
-	o djvulibre-lib-3.5.19
-	o djvulibre-tools-3.5.19
 	o dmidecode-2.9
 	o dnsmasq-2.39
 	o dnstop-20070307
