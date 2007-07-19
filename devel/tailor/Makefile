@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/05/03 12:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/19 14:48:21 obache Exp $
 #
 
 DISTNAME=		tailor-0.9.28
@@ -6,7 +6,7 @@ CATEGORIES=		devel scm
 MASTER_SITES=		http://darcs.arstecnica.it/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.darcs.net/DarcsWiki/Tailor
+HOMEPAGE=		http://wiki.darcs.net/DarcsWiki/Tailor
 COMMENT=		Tool to migrate changesets between various version control systems
 
 PYDISTUTILSPKG=		yes
