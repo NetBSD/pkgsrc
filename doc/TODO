@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6516 2007/07/19 22:14:13 wiz Exp $
+$NetBSD: TODO,v 1.6517 2007/07/19 22:18:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1172,7 +1172,6 @@ Suggested package updates
 	o sylpheed-claws-2.10.0 [now claws-mail]
 	o sympa-5.3
 	o sysinfo-4.2.2
-	o tailor-0.9.29
 	o taskjuggler-2.4.0
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
