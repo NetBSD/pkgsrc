@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1589 2007/07/19 19:36:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1590 2007/07/19 19:38:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2945,4 +2945,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox-bin to 2.0.0.5 [xtraeme 2007-07-19]
 	Updated www/opera to 9.22 [xtraeme 2007-07-19]
 	Removed finance/gnucash-current [wiz 2007-07-19]
+	Removed devel/g-wrap196 [wiz 2007-07-19]
 	Updated finance/gnucash to 2.2.0 [wiz 2007-07-19]
