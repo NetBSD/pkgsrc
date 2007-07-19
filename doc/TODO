@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6507 2007/07/19 19:36:38 wiz Exp $
+$NetBSD: TODO,v 1.6508 2007/07/19 19:43:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,13 +427,13 @@ Suggested package updates
 	o dvdrip-0.98.6
 	o dvdstyler-1.5
 	o dvipng-1.9
-	o dwm-4.2
+	o dwm-4.3
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o easytag-current-2.1.2
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-0.6
+	o ed-0.7
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.0.15
@@ -475,6 +475,8 @@ Suggested package updates
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.31
+	o firefox-2.0.0.5
+	o firefox-bin-2.0.0.5
 	o firefox-bin-flash-9.0.48.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
@@ -526,6 +528,7 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade-3.3.0
 	o glchess-1.0.5
+	o glib2-2.12.13
 	o global-5.6
 	o glpk-4.19
 	o gmp3info-0.8.5a
@@ -579,6 +582,7 @@ Suggested package updates
 	o gtick-0.3.13
 	o gtk-gnutella-0.96.4
 	o gtk-systrace-20030623
+	o gtk2+-2.10.14
 	o gtk2-sharp-2.10.1
 	o gtkam-0.1.14 [pkg/36317]
 	o gtklife-5.1
@@ -753,6 +757,7 @@ Suggested package updates
 	o micq-0.5.4.2
 	o milter-greylist-3.1.7
 	o mimedefang-2.62
+	o mined-2000.14
 	o minivmac-2.6.1
 	o mirmon-1.37
 	o mk-files-20061230
@@ -1186,7 +1191,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.0.1
+	o tea-17.0.2
 	o ted-2.17
 	o ted-en-us-2.17
 	o texi2html-1.78
