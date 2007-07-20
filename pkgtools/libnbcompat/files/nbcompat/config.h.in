@@ -6,7 +6,7 @@
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
 
-/* Define to 1 if you have the `snprintf' function. */
+/* Define to 1 if you have the `asprintf' function. */
 #undef HAVE_ASPRINTF
 
 /* Define to 1 if you have the <assert.h> header file. */
@@ -202,6 +202,9 @@
 /* Define to 1 if the `SHA1*' functions are built into the library. */
 #undef HAVE_NBCOMPAT_SHA1
 
+/* Define to 1 if the `SHA2*' functions are built into the library. */
+#undef HAVE_NBCOMPAT_SHA2
+
 /* Define to 1 if the `vis' function is built into the library. */
 #undef HAVE_NBCOMPAT_VIS
 
@@ -259,6 +262,9 @@
 
 /* Define to 1 if you have the <sha1.h> header file. */
 #undef HAVE_SHA1_H
+
+/* Define to 1 if you have the <sha2.h> header file. */
+#undef HAVE_SHA2_H
 
 /* Define to 1 if you have the <signal.h> header file. */
 #undef HAVE_SIGNAL_H
@@ -488,7 +494,7 @@
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
-/* The size of a `off_t', as computed by sizeof. */
+/* The size of `off_t', as computed by sizeof. */
 #undef SIZEOF_OFF_T
 
 /* Define to 1 if you have the ANSI C header files. */
@@ -507,7 +513,7 @@
 /* Define to rpl_malloc if the replacement function should be used. */
 #undef malloc
 
-/* Define to `unsigned' if <sys/types.h> does not define. */
+/* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
 
 
