@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.47 2007/04/20 14:25:13 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.48 2007/07/20 22:22:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.47 2007/04/20 14:25:13 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.48 2007/07/20 22:22:52 joerg Exp $");
 #endif
 #endif
 
@@ -583,7 +583,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 							
 							/* 
 							 * step into pkg2chk, read it's +CONTENTS file and see if
-							 * all @pkgdep lines agree with PkgName (using pmatch()) 
+							 * all @pkgdep lines agree with PkgName (using pkg_match()) 
 							 */
 							snprintf(depC, sizeof(depC), "%s/%s/%s", dbdir, pkg2chk, CONTENTS_FNAME);
 							depf = fopen(depC , "r");
@@ -630,7 +630,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 								}
 								if (strcmp(base_new, base_exist) == 0) {
 									/* Same pkg, so do the interesting compare */
-									if (pmatch(depp->name, PkgName)) {
+									if (pkg_match(depp->name, PkgName)) {
 										if (Verbose)
 											printf("@pkgdep check: %s is ok for %s (in %s pkg)\n",
 											       PkgName, depp->name, pkg2chk);
