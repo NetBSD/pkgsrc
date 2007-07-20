@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/02/19 11:19:48 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/07/20 01:05:11 tnn Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -33,6 +33,12 @@ PLIST_SRC+=		PLIST
 PLIST_SUBST+=	GNU_PREFIX="g"
 .else
 PLIST_SUBST+=	GNU_PREFIX=""
+.endif
+
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "HPUX"
+PLIST_SUBST+=	GNU_PREFIX_TMAC="g"
+.else
+PLIST_SUBST+=	GNU_PREFIX_TMAC=""
 .endif
 
 .if ${OPSYS} == "IRIX"
