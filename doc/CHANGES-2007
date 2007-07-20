@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1603 2007/07/19 23:38:35 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1604 2007/07/20 00:34:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2962,3 +2962,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/djvulibre-tools to 3.5.19 [wiz 2007-07-19]
 	Updated www/swiggle to 0.4 [xtraeme 2007-07-19]
 	Added devel/p5-Config-Std version 0.0.4 [seb 2007-07-19]
+	Updated pkgtools/libnbcompat to 20070720 [tnn 2007-07-20]
