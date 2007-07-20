@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1913 2007/07/18 18:01:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1914 2007/07/20 14:25:03 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -835,4 +835,5 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .if make(help)
 .  include "${.PARSEDIR}/help/help.mk"
 .endif
+.include "${.PARSEDIR}/misc/warnings.mk"
 .include "${.PARSEDIR}/misc/can-be-built-here.mk"
