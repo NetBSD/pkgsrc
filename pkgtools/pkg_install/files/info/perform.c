@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.30 2007/03/11 22:05:03 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.31 2007/07/20 22:22:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.30 2007/03/11 22:05:03 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.31 2007/07/20 22:22:52 joerg Exp $");
 #endif
 #endif
 
@@ -334,7 +334,7 @@ bail:
  * Function to be called for pkgs found
  */
 static int
-foundpkg(const char *found, void *vp)
+foundpkg(const char *pattern, const char *found, void *vp)
 {
 	char *data = vp;
 	char buf[MaxPathSize+1];

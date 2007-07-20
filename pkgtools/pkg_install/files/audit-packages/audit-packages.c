@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.1 2007/07/14 20:17:08 adrianp Exp $ */
+/* $NetBSD: audit-packages.c,v 1.2 2007/07/20 22:22:52 joerg Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -105,7 +105,7 @@ Boolean eol = FALSE;				/* don't check eol */
 int main(int, char **);
 void *safe_calloc(size_t, size_t);
 char *ap_fixpkgname(char *);
-static int foundpkg(const char *, void *);
+static int foundpkg(const char *, const char *, void *);
 static int checkforpkg(char *);
 void usage(void);
 int dvl(void);
@@ -460,12 +460,12 @@ main(int argc, char **argv)
 			/*
 			 * if we're checking for just one package (i.e.
 			 * check_one) regardless if it's installed or not
-			 * (i.e. -n and -p) then use pmatch
+			 * (i.e. -n and -p) then use pkg_match
 			 * to see if we have a hit using pattern
 			 * matching.
 			 */
 
-			if ((pmatch(pv_entry[0], one_package)) == 1) {
+			if ((pkg_match(pv_entry[0], one_package)) == 1) {
 
 				/* flag to indicate we have found something */
 				vuln_found = TRUE;
@@ -645,7 +645,7 @@ get_confvalues(void)
 
 /* called by checkforpkg to see if a package exists */
 static int
-foundpkg(const char *found, void *vp)
+foundpkg(const char *pattern, const char *found, void *vp)
 {
 	char *data = vp;
 	char *buf;

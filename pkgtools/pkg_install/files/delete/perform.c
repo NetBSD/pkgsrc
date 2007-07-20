@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.16 2005/05/30 13:23:31 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.17 2007/07/20 22:22:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.16 2005/05/30 13:23:31 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.17 2007/07/20 22:22:52 joerg Exp $");
 #endif
 #endif
 
@@ -83,7 +83,7 @@ static int require_find_recursive_down(lpkg_t *, package_t *);
 static int require_find(char *, rec_find_t);
 static int require_delete(char *, int);
 static void require_print(void);
-static int undepend(const char *, void *);
+static int undepend(const char *, const char *, void *);
 
 static char LogDir[MaxPathSize];
 static char linebuf[MaxPathSize];
@@ -118,7 +118,7 @@ cleanup(int sig)
  * findmatchingname(), deppkgname is expanded from a (possible) pattern.
  */
 static int
-undepend(const char *deppkgname, void *vp)
+undepend(const char *pattern, const char *deppkgname, void *vp)
 {
 	char   *pkg2delname = vp;
 	char    fname[MaxPathSize], ftmp[MaxPathSize];
