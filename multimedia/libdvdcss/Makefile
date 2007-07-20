@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/11/03 06:55:40 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/20 11:49:32 tnn Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -24,8 +24,13 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-# Do *not* add INTERACTIVE_STATE=fetch.  The fetch state is not
-# interactive if LIBDVDCSS_MASTER_SITES is defined.
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}) && !defined(LIBDVDCSS_MASTER_SITES)
+PKG_FAIL_REASON+=	"Please define LIBDVDCSS_MASTER_SITES in mk.conf."
+PKG_FAIL_REASON+=	"Alternatively you may download '${DISTNAME}${EXTRACT_SUFX}' manually"
+PKG_FAIL_REASON+=	"to ${DISTDIR}."
+.endif
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
