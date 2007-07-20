@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.55 2007/06/25 21:35:05 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.56 2007/07/20 00:21:02 tnn Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -377,6 +377,36 @@ dnl		support because we don't know how to display it.
 		AC_REPLACE_FUNCS(strtoll)
 	fi
 
+fi
+
+
+dnl	Check if vsnprintf returns the number of bytes that would have been
+dnl	written, had the buffer been large enough.
+
+AC_MSG_CHECKING(if vsnprintf is standards compliant)
+have_std_vsnprintf=no
+AC_TRY_RUN([
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+void dotest(char *fmt, ...) {
+	char buf[3];
+	va_list ap;
+	va_start(ap, fmt);
+	exit(snprintf(buf, 3, fmt, ap) == 4 ? 0 : 1);
+}
+int main() {
+	dotest("test");
+}
+], [
+	AC_MSG_RESULT(yes)
+	have_std_vsnprintf=yes
+], [
+	AC_MSG_RESULT(no)
+], [:])
+
+if test $have_std_vsnprintf = no; then
+	AC_LIBOBJ(snprintf)
 fi
 
 AC_CHECK_DECLS([optind, optreset], [:], [:], [
