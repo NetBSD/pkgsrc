@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/24 16:49:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/07/20 01:05:11 tnn Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -332,7 +332,7 @@ share/groff/${PKGVERSION}/tmac/X.tmac
 share/groff/${PKGVERSION}/tmac/Xps.tmac
 share/groff/${PKGVERSION}/tmac/a4.tmac
 share/groff/${PKGVERSION}/tmac/an-old.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}an.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}an.tmac
 share/groff/${PKGVERSION}/tmac/andoc.tmac
 share/groff/${PKGVERSION}/tmac/composite.tmac
 share/groff/${PKGVERSION}/tmac/cp1047.tmac
@@ -353,7 +353,7 @@ share/groff/${PKGVERSION}/tmac/latin2.tmac
 share/groff/${PKGVERSION}/tmac/latin9.tmac
 share/groff/${PKGVERSION}/tmac/lbp.tmac
 share/groff/${PKGVERSION}/tmac/lj4.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}m.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}m.tmac
 share/groff/${PKGVERSION}/tmac/man.tmac
 share/groff/${PKGVERSION}/tmac/mandoc.tmac
 share/groff/${PKGVERSION}/tmac/mdoc.tmac
@@ -362,7 +362,7 @@ share/groff/${PKGVERSION}/tmac/mdoc/doc-ditroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-nroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-syms
 share/groff/${PKGVERSION}/tmac/me.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}mm.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}mm.tmac
 share/groff/${PKGVERSION}/tmac/mm/0.MT
 share/groff/${PKGVERSION}/tmac/mm/4.MT
 share/groff/${PKGVERSION}/tmac/mm/5.MT
@@ -370,10 +370,10 @@ share/groff/${PKGVERSION}/tmac/mm/locale
 share/groff/${PKGVERSION}/tmac/mm/ms.cov
 share/groff/${PKGVERSION}/tmac/mm/se_locale
 share/groff/${PKGVERSION}/tmac/mm/se_ms.cov
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}mmse.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}mmse.tmac
 share/groff/${PKGVERSION}/tmac/mom.tmac
 share/groff/${PKGVERSION}/tmac/ms.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}mse.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}mse.tmac
 share/groff/${PKGVERSION}/tmac/om.tmac
 share/groff/${PKGVERSION}/tmac/papersize.tmac
 share/groff/${PKGVERSION}/tmac/pdfmark.tmac
@@ -382,7 +382,7 @@ share/groff/${PKGVERSION}/tmac/ps.tmac
 share/groff/${PKGVERSION}/tmac/psatk.tmac
 share/groff/${PKGVERSION}/tmac/psold.tmac
 share/groff/${PKGVERSION}/tmac/pspic.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX}s.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}s.tmac
 share/groff/${PKGVERSION}/tmac/safer.tmac
 share/groff/${PKGVERSION}/tmac/spdf.tmac
 share/groff/${PKGVERSION}/tmac/trace.tmac
