@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/01/07 09:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/20 12:41:29 tnn Exp $
 #
 
-DISTNAME=	coreutils-5.2.1
+DISTNAME=	coreutils-6.9
 PKGNAME=	${DISTNAME:S/coreutils/gnuls/}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +19,17 @@ PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ENV+=		ac_list_mounted_fs=found
+.endif
+
+.if ${OPSYS} != "Linux"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
+.endif
+CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dircolors \
