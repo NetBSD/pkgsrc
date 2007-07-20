@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.3 2007/07/06 01:22:40 rillig Exp $
+# $NetBSD: license.mk,v 1.4 2007/07/20 13:05:28 gdt Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
@@ -44,27 +44,26 @@
 #	Every package should specify its license.  (Prior to July 2007,
 #	Open Source and Free software did not have license tags.)
 #
-#	The common licenses are collected in the licenses/ subdirectory
-#	of pkgsrc. Additionally, the following licenses are valid:
+#	Licenses are collected in the licenses/ subdirectory of
+#	pkgsrc.  For open source license, we generally use the same
+#	names as either the Open Source Initiative or the Free
+#	Software Foundation, choosing a name to reduce confusion.
+#	Open source and free licenses do not have a -license suffix,
+#	and non-free licenses do.
 #
-#	* GPL2: The GNU General Public License, Version 2
-#	* LGPL2: The GNU Library General Public License, Version 2
-#	* BSD-3: The license from UCB without the advertising clause
-#	* BSD-4: The license from UCB including the advertising clause
-#	* Apache-2.0: Apache License, Version 2.0
-#	* CDDL: Common Development and Distribution License, Version 1.0
-#
-#	TODO:
-#	* GPL3
+#	http://opensource.org/licenses/category
+#	http://www.fsf.org/licensing/licenses/index_html
 #
 # === Predefined variables ===
 #
 # DEFAULT_ACCEPTABLE_LICENSES
-#	The list of licenses that before July,
-#	2007 did not require tagging because they were Open Source or
-#	Free.  The intent is to make it contain licenses that are Open
-#	Source or Free and not controversial, so as to provide a
-#	default that is pleasing to a large number of people.
+#	The list of licenses that before July, 2007 did not require
+#	tagging because they were Open Source or Free.  The intent is
+#	to make it contain licenses that are Open Source or Free and
+#	not controversial, so as to provide a default that almost all
+#	people find acceptable.  (Many people will want to add more
+#	licenses to ACCEPTABLE_LICENSES; the point is to have a
+#	default that very few people want to shrink.)
 #
 # === See also ===
 #
@@ -76,4 +75,18 @@ PKG_FAIL_REASON+=	"[license.mk] Every package must define a license"
 LICENSE?=		unknown
 .endif
 
-DEFAULT_ACCEPTABLE_LICENSES=	GPL2 LGPL2 BSD-3 BSD-4 Apache-2.0 CDDL
+# TODO: Determine whether GPLv3 should be included (and therefore if
+# there should be a "widely accepted" test in addition to open
+# source/free).  Perhaps wait until OSI decides whether or not to
+# approve GPLv3 as open source.
+
+# This list is not complete.  Free and Open Source licenses should be
+# added to the list as they are added to pkgsrc.
+
+DEFAULT_ACCEPTABLE_LICENSES= \
+	public-domain \
+	gnu-gpl-v2 gnu-lgpl-v2 \
+	original-bsd modified-bsd \
+	x11 \
+	apache-2.0 \
+	cddl-1.0
