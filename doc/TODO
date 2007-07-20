@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6520 2007/07/20 15:47:06 tron Exp $
+$NetBSD: TODO,v 1.6521 2007/07/20 17:46:57 adam Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o aspell-ukrainian-1.3.3
 	o asterisk-1.4.2
 	o astyle-1.15.3
-	o atari800-2.0.3
 	o autoconvert-0.3.16
 	o autogen-5.9.1
 	o avcheck-0.91
