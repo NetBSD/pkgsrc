@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.252 2007/07/17 09:20:18 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.253 2007/07/20 22:40:56 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -520,14 +520,6 @@ USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
 		sed:pkgsrc tr:pkgsrc uname:pkgsrc
 
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
-
-.if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
-PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
-PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
-PKG_FAIL_REASON+=	'${LOCALBASE}/bsd directory.'
-PKG_FAIL_REASON+=	'See http://mail-index.NetBSD.org/tech-pkg/2004/02/14/0004.html'
-PKG_FAIL_REASON+=	'for more details.'
-.endif
 
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 .if !defined(_PKGSRCDIR)
