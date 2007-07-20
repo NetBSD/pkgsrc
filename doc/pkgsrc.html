@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>The pkgsrc guide</title>
-<link rel="stylesheet" href="/NetBSD.css" type="text/css">
+<link rel="stylesheet" href="/global.css" type="text/css">
 <meta name="generator" content="DocBook XSL Stylesheets VX.X.X">
 <meta name="description" content="pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure.">
 </head>
@@ -963,6 +963,23 @@ release=pkgsrc
     <code class="prompt">$</code> <strong class="userinput"><code>CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</code></strong>
     <code class="prompt">$</code> <strong class="userinput"><code>CVS_RSH="ssh"</code></strong>
     <code class="prompt">$</code> <strong class="userinput"><code>export CVSROOT CVS_RSH</code></strong>
+</pre>
+<p>By default, cvs doesn't do things like most people would
+	expect it to do, and this is unlikely to change. But there is a
+	way to convince cvs, by creating a file called
+	<code class="filename">.cvsrc</code> in your home directory and saving
+	the following lines to it. This file will save you lots of
+	headache and some bug reports, so we strongly recommend it. You
+	can find an explanation of this file in the CVS
+	documentation.</p>
+<pre class="programlisting">
+# recommended CVS configuration file from the pkgsrc guide
+checkout -P
+update -d
+release -d
+diff -up
+cvs -q -z3
+rdiff -u
 </pre>
 <p>Then, you change to the directory where you want to have
 	your copy of pkgsrc. In most cases this is
@@ -4498,6 +4515,8 @@ converters    games         mbone         print         x11
   maintainer.  This benefits non-pkgsrc users of the package,
   and usually makes it possible to remove the patch in future
   version.</p>
+<p>The file names of the patch files are usually of the form
+  <code class="filename">patch-<em class="replaceable"><code>[a-z][a-z]</code></em></code>.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -7516,7 +7535,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2707841"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id2708068"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7526,7 +7545,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2707850"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id2708077"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7537,7 +7556,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2707861"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id2708088"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9519,7 +9538,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2713470"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713629"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9535,7 +9554,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2713509"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2713804"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9553,7 +9572,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2713549"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2713845"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9571,7 +9590,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2713589"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2713884"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9584,7 +9603,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2713677"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2713905"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9600,7 +9619,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2713707"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2713934"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9624,7 +9643,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2713784"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2714011"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9649,7 +9668,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2713822"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2714050"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9697,7 +9716,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2713953"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2714180"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10931,10 +10950,10 @@ source packages</h2></div></div></div>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="filename">pkgsrc/doc/pkgsrc.txt</code></p></li>
 <li><p><code class="filename">pkgsrc/doc/pkgsrc.html</code></p></li>
-<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/</a></p></li>
-<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf</a>:
+<li><p><a href="http://www.NetBSD.org/docs/pkgsrc/" target="_top">http://www.NetBSD.org/docs/pkgsrc/</a></p></li>
+<li><p><a href="http://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf" target="_top">http://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf</a>:
 	The PDF version of the pkgsrc guide.</p></li>
-<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps</a>:
+<li><p><a href="http://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps" target="_top">http://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps</a>:
 	PostScript version of the pkgsrc guide.</p></li>
 </ul></div>
 </div>
