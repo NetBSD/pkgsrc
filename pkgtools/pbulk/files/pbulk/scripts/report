@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: report,v 1.2 2007/07/16 20:35:04 joerg Exp $
+# $NetBSD: report,v 1.3 2007/07/20 19:39:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -51,23 +51,24 @@ fi
 
 while read line; do
 	case "${line}" in
-	BUILD_START=*)
-		build_start=${line#BUILD_START=}
+	BUILD_START_ISO=*)
+		build_start_iso=${line#BUILD_START_ISO=}
+		;;
+	BUILD_START_DIR=*)
+		build_start_iso=${line#BUILD_START_DIR=}
 		;;
 	PLATFORM=*)
 		platform=${line#PLATFORM=}
 	esac
 done < ${loc}/status
 
-if [ -z "${build_start}" ]; then
+if [ -z "${build_start_iso}" ] || [ -z "${build_start_dir}" ]; then
 	echo "Could not find start time of build."
 	exit 1
 fi
 
 echo "Sending report mail..."
-formatted_start=`date -r ${build_start} "+%F %R"`
-report_dir=`date -r ${build_start} "+%Y%m%d.%H%M"`
-cat ${loc}/report.txt | ${mail} -s "${report_subject_prefix} ${platform} ${formatted_start}" ${report_recipient}
+cat ${loc}/report.txt | ${mail} -s "${report_subject_prefix} ${platform} ${build_start_iso}" ${report_recipient}
 
 cd ${bulklog}
 echo "Uploading report..."
@@ -100,4 +101,4 @@ echo "Uploading report..."
 		[ -f "$file" ] && echo "+ $file"
 	done
 	echo "- *"
-} | ${rsync} --exclude-from=- ${report_rsync_args} . ${report_rsync_target}/${report_dir}
+} | ${rsync} --exclude-from=- ${report_rsync_args} . ${report_rsync_target}/${build_start_dir}

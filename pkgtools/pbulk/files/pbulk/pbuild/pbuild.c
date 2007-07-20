@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
+/* $NetBSD: pbuild.c,v 1.3 2007/07/20 19:39:34 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -72,6 +72,8 @@ main(int argc, char **argv)
 	const char *start_script;
 	struct sigaction sa;
 	int ch, modes;
+
+	setprogname("pbulk-build");
 
 	client_port = NULL;
 	master_port = NULL;

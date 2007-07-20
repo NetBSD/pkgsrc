@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.2 2007/06/29 22:43:26 joerg Exp $
+# $NetBSD: create-report-txt.awk,v 1.3 2007/07/20 19:39:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -45,13 +45,6 @@ function sort(ARRAY, INDICES, OPTIONS, i, idx, sort_cmd) {
 	system("rm " tmp_sort)
 }
 
-function format_time(FORMAT, TIME, format_cmd) {
-	format_cmd = sprintf("date -r %d \"+%s\"", TIME, FORMAT)
-	format_cmd | getline
-	close format_cmd
-	return $0
-}
-
 BEGIN {
 	meta_dir = ARGV[1]
 	report_file = meta_dir "/report"
@@ -71,10 +64,12 @@ BEGIN {
 			pkgsrc_platform = substr($0, 10)
 		else if ($0 ~ "^COMPILER=")
 			pkgsrc_compiler = substr($0, 10)
-		else if ($0 ~ "^BUILD_START=")
-			pkgsrc_build_start = substr($0, 13)
-		else if ($0 ~ "^BUILD_END=")
-			pkgsrc_build_end = substr($0, 11)
+		else if ($0 ~ "^BUILD_START_ISO=")
+			pkgsrc_build_start_iso = substr($0, 17)
+		else if ($0 ~ "^BUILD_START_DIR=")
+			pkgsrc_build_start_dir = substr($0, 17)
+		else if ($0 ~ "^BUILD_END_ISO=")
+			pkgsrc_build_end_iso = substr($0, 14)
 		else if ($0 ~ "^BASE_URL=")
 			pkgsrc_base_url = substr($0, 10)
 	}
@@ -129,10 +124,10 @@ BEGIN {
 	print pkgsrc_platform > txt_report
 	print "Compiler: " pkgsrc_compiler > txt_report
 	print "" > txt_report	
-	print "Build start: " format_time("%F %R", pkgsrc_build_start) > txt_report
-	print "Build end:   " format_time("%F %R", pkgsrc_build_end) > txt_report
+	print "Build start: " pkgsrc_build_start_iso > txt_report
+	print "Build end:   " pkgsrc_build_end_iso > txt_report
 	print "" > txt_report
-	report_base_url = pkgsrc_base_url format_time("/%Y%m%d.%H%M", pkgsrc_build_start)
+	report_base_url = pkgsrc_base_url pkgsrc_build_start_dir
 	print "Full report: " report_base_url "/meta/report.html" > txt_report
 	print "Machine readable version: " report_base_url "/meta/report.bz2" > txt_report
 	print "" > txt_report

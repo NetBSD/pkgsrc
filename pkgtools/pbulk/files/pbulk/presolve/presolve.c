@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
+/* $NetBSD: presolve.c,v 1.3 2007/07/20 19:39:34 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -83,6 +83,8 @@ main(int argc, char **argv)
 {
 	size_t i;
 	int ch, ret;
+
+	setprogname("pbulk-resolve");
 
 	while ((ch = getopt(argc, argv, "i:v")) != -1) {
 		switch (ch) {
