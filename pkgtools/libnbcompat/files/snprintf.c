@@ -1,4 +1,4 @@
-/*	$NetBSD: snprintf.c,v 1.4 2007/07/19 22:06:43 tnn Exp $	*/
+/*	$NetBSD: snprintf.c,v 1.5 2007/07/20 00:11:25 tnn Exp $	*/
 
 /*-
  * Copyright (c) 2007 The NetBSD Foundation, Inc.
@@ -45,6 +45,8 @@
 #include <stdarg.h>
 #endif
 
+#define MIN(a, b) ((a)<(b)?(a):(b))
+
 int
 snprintf(char *str, size_t size, const char *format, ...)
 {
@@ -83,10 +85,11 @@ vsnprintf(char *str, size_t size, const char *format, va_list ap)
 	}
 
 	vsprintf(p, format, ap);
-
-	memcpy(str, p, len < size ? len : size);
-	if (len < size)
-		str[len] = 0;
+	
+	if (size > 0) {
+		memcpy(str, p, MIN(len, size));
+		str[MIN(len, size - 1)] = 0;
+	}
 
 	if (p != buf)
 		free(p);
