@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.5 2007/06/12 03:02:35 dmcmahill Exp $
+$NetBSD: patch-ak,v 1.6 2007/07/20 00:09:23 gdt Exp $
 
 Avoid lots of errors like this on NetBSD/alpha:
 test-conversion.c:32: warning: long long int format, scm_t_intmax arg (arg 4)
 which in turn causes the build to fail since guile uses -Wall -Werror.
 
---- test-suite/standalone/test-conversion.c.orig	2006-07-29 18:00:18.000000000 +0000
+--- test-suite/standalone/test-conversion.c.orig	2007-05-09 16:22:03.000000000 -0400
 +++ test-suite/standalone/test-conversion.c
 @@ -29,7 +29,7 @@ test_1 (const char *str, scm_t_intmax mi
    if (r != result)
