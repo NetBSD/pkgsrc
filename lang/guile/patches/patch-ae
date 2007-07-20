@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.12 2007/06/12 03:02:34 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.13 2007/07/20 00:09:22 gdt Exp $
 
 support for NetBSD/alpha, NetBSD/sparc64, and NetBSD/x86_64
 
---- libguile/gc_os_dep.c.orig	2006-04-15 23:34:26.000000000 +0000
+--- libguile/gc_os_dep.c.orig	2007-05-09 16:22:03.000000000 -0400
 +++ libguile/gc_os_dep.c
 @@ -110,6 +110,11 @@ typedef int GC_bool;
  #    define OPENBSD
