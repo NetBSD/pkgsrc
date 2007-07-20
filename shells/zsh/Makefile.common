@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2007/04/16 19:01:28 joerg Exp $
+# $NetBSD: Makefile.common,v 1.39 2007/07/20 16:36:59 joerg Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -57,7 +57,8 @@ PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .  else
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/zsh
 
-.    if ${OPSYS} == "Linux" || ${OPSYS} == "IRIX" || ${OPSYS} == "OpenBSD"
+.    if ${OPSYS} == "Linux" || ${OPSYS} == "IRIX" || ${OPSYS} == "OpenBSD" || \
+    ${OPSYS} == "FreeBSD"
 PLIST_SRC+=	${PKGDIR}/PLIST.terminfo
 .    elif ${OPSYS} == "Interix" || ${OPSYS} == "DragonFly"
 PLIST_SRC+=	${PKGDIR}/PLIST.terminfo ${PKGDIR}/PLIST.shlibs
