@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: build,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+# $NetBSD: build,v 1.2 2007/07/20 19:39:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -48,7 +48,7 @@ case "${master_mode}" in
 	;;
 esac
 
-echo "BUILD_END=`date +%s`" >> ${loc}/status
+date '+BUILD_END_ISO=%Y-%m-%d %H:%M' >> ${loc}/status
 
 echo "Building pkg_summary..."
 cd ${packages}/All

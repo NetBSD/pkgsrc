@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.2 2007/06/25 21:38:46 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.3 2007/07/20 19:39:34 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -73,6 +73,8 @@ main(int argc, char **argv)
 	const char *client_port = NULL, *master_port = NULL, *start_script = NULL;
 	int ch, limited_scan;
 	struct sigaction sa;
+
+	setprogname("pbulk-scan");
 
 	limited_scan = 0;
 

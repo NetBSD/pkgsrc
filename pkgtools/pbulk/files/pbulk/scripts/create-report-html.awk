@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.3 2007/07/07 13:54:36 wiz Exp $
+# $NetBSD: create-report-html.awk,v 1.4 2007/07/20 19:39:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -101,13 +101,6 @@ function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
 	print "</tr>" > html_report
 }
 
-function format_time(FORMAT, TIME, format_cmd) {
-	format_cmd = sprintf("date -r %d \"+%s\"", TIME, FORMAT)
-	format_cmd | getline
-	close format_cmd
-	return $0
-}
-
 BEGIN {
 	meta_dir = ARGV[1]
 	log_dir = ARGV[2]
@@ -127,10 +120,10 @@ BEGIN {
 			pkgsrc_platform = substr($0, 10)
 		else if ($0 ~ "^COMPILER=")
 			pkgsrc_compiler = substr($0, 10)
-		else if ($0 ~ "^BUILD_START=")
-			pkgsrc_build_start = substr($0, 13)
-		else if ($0 ~ "^BUILD_END=")
-			pkgsrc_build_end = substr($0, 11)
+		else if ($0 ~ "^BUILD_START_ISO=")
+			pkgsrc_build_start_iso = substr($0, 17)
+		else if ($0 ~ "^BUILD_END_ISO=")
+			pkgsrc_build_end_iso = substr($0, 14)
 		else if ($0 ~ "^BASE_URL=")
 			pkgsrc_base_url = substr($0, 10)
 	}
@@ -167,12 +160,12 @@ BEGIN {
 	print "<html>" > html_report
 	print "  <head>" > html_report
 	printf("    <title> pkgsrc bulk build for %s from %s</title>\n",
-	    pkgsrc_platform, format_time("%F %R")) > html_report
+	    pkgsrc_platform, pkgsrc_build_start_iso) > html_report
 	print "  </head>" > html_report
 	print "  <body>" > html_report
 	printf("    <h1> pkgsrc bulk build for %s</h1>\n", pkgsrc_platform) > html_report
-	printf("    <h2> Build start: %s</h2>\n", format_time("%F %R", pkgsrc_build_start)) > html_report
-	printf("    <h2> Build end: %s</h2>\n", format_time("%F %R", pkgsrc_build_end)) > html_report
+	printf("    <h2> Build start: %s</h2>\n", pkgsrc_build_start_iso) > html_report
+	printf("    <h2> Build end: %s</h2>\n", pkgsrc_build_end_iso)) > html_report
 	print "    <hr />" > html_report
 
 	all_pkgs = pkgs_done + pkgs_failed + pkgs_prefailed + pkgs_indirect_failed + pkgs_indirect_prefailed
