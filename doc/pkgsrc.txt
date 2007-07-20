@@ -854,6 +854,21 @@ Or, the same for the bourne shell:
     $ CVS_RSH="ssh"
     $ export CVSROOT CVS_RSH
 
+By default, cvs doesn't do things like most people would expect it to do, and
+this is unlikely to change. But there is a way to convince cvs, by creating a
+file called .cvsrc in your home directory and saving the following lines to it.
+This file will save you lots of headache and some bug reports, so we strongly
+recommend it. You can find an explanation of this file in the CVS
+documentation.
+
+# recommended CVS configuration file from the pkgsrc guide
+checkout -P
+update -d
+release -d
+diff -up
+cvs -q -z3
+rdiff -u
+
 Then, you change to the directory where you want to have your copy of pkgsrc.
 In most cases this is /usr. In that directory you run the checkout command,
 which is cvs -q checkout -P pkgsrc for the current branch and cvs -q checkout
@@ -1433,7 +1448,6 @@ with the OpenBSD userland tools. There are several steps:
     .endif
 
 
-
 3.3.7. Solaris
 
 Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a
@@ -1852,7 +1866,6 @@ added to help with this.
     % make show-var VARNAME=LOCALBASE
     /usr/pkg
     %
-
 
 
 If you want to install a binary package that you've either created yourself
@@ -3797,6 +3810,8 @@ enforcing pkgsrc's view of where man pages should go), send the patch as a bug
 report to the maintainer. This benefits non-pkgsrc users of the package, and
 usually makes it possible to remove the patch in future version.
 
+The file names of the patch files are usually of the form patch-[a-z][a-z].
+
 10.3.3. Sources where the patch files come from
 
 If you want to share patches between multiple packages in pkgsrc, e.g. because
@@ -3850,12 +3865,10 @@ Table 10.1. Patching examples
 |configure|netbsd*) have_kvm=yes ;;  |AC_CHECK_LIB(kvm, kvm_open, have_kvm=yes, have_kvm=no)|
 |script   |*)       have_kvm=no  ;;  |                                                      |
 |         |esac                      |                                                      |
-|         |                          |                                                      |
 |---------+--------------------------+------------------------------------------------------|
-|         |#if defined(__NetBSD__)   |#if defined(HAVE_SYS_EVENT_H)                         |
-|C source |#  include <sys/event.h>  |#  include <sys/event.h>                              |
-|file     |#endif                    |#endif                                                |
-|         |                          |                                                      |
+|C source |#if defined(__NetBSD__)   |#if defined(HAVE_SYS_EVENT_H)                         |
+|file     |#  include <sys/event.h>  |#  include <sys/event.h>                              |
+|         |#endif                    |#endif                                                |
 |---------+--------------------------+------------------------------------------------------|
 |         |int                       |int                                                   |
 |         |monitor_file(...)         |monitor_file(...)                                     |
@@ -3867,7 +3880,6 @@ Table 10.1. Patching examples
 |         |        ...               |        ...                                           |
 |         |#endif                    |#endif                                                |
 |         |}                         |}                                                     |
-|         |                          |                                                      |
 +-------------------------------------------------------------------------------------------+
 
 
@@ -5065,7 +5077,6 @@ In order to provide system startup scripts, the package has to:
     extension, to the RCD_SCRIPTS variable. Continuing the previous example:
 
     RCD_SCRIPTS+=   cupsd
-
 
 Once this is done, pkginstall will do the following steps for each script in an
 automated fashion:
@@ -8026,7 +8037,6 @@ the minimum required tools:
 
     CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
 
-
 GNOME uses multiple shared directories and files under the installation prefix
 to maintain databases. In this context, shared means that those exact same
 directories and files are used among several different packages, leading to
@@ -8947,13 +8957,13 @@ files are created from it:
 
   * pkgsrc/doc/pkgsrc.html
 
-  * http://www.NetBSD.org/Documentation/pkgsrc/
+  * http://www.NetBSD.org/docs/pkgsrc/
 
-  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf: The PDF version of
-    the pkgsrc guide.
+  * http://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf: The PDF version of the pkgsrc
+    guide.
 
-  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps: PostScript version of
-    the pkgsrc guide.
+  * http://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps: PostScript version of the
+    pkgsrc guide.
 
 D.2. Procedure
 
