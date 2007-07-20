@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2007/06/05 05:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2007/07/20 12:11:21 drochner Exp $
 #
 
-DISTNAME=	gdm-2.18.1
-PKGREVISION=	2
+DISTNAME=	gdm-2.18.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -72,7 +71,9 @@ SUBST_FILES.desktop+=	config/gdm.conf.in
 SUBST_SED.desktop=	-e 's/^_//g'
 SUBST_SED.desktop+=	-e 's|^User=gdm$$|User=${GDMOWN}|g'
 SUBST_SED.desktop+=	-e 's|^Group=gdm$$|Group=${GDMGRP}|g'
-SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=@EXPANDED_PIXMAPDIR@/NetBSD.xpm|g'
+.if ${OPSYS} == "NetBSD"
+SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=${PREFIX}/share/pixmaps/NetBSD.xpm|g'
+.endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r now|g'
 SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
