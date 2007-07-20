@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.4 2007/07/20 13:05:28 gdt Exp $
+# $NetBSD: license.mk,v 1.5 2007/07/20 14:21:26 rillig Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
@@ -70,11 +70,6 @@
 #	../doc/TODO, section "Licenses of packages"
 #
 
-.if defined(AFTER_2007Q3) && !defined(LICENSE)
-PKG_FAIL_REASON+=	"[license.mk] Every package must define a license"
-LICENSE?=		unknown
-.endif
-
 # TODO: Determine whether GPLv3 should be included (and therefore if
 # there should be a "widely accepted" test in addition to open
 # source/free).  Perhaps wait until OSI decides whether or not to
@@ -90,3 +85,25 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	x11 \
 	apache-2.0 \
 	cddl-1.0
+
+.if !defined(LICENSE)
+.  if defined(AFTER_2007Q3)
+LICENSE?=		unknown
+PKG_FAIL_REASON+=	"[license.mk] Every package must define a LICENSE."
+.  else
+WARNINGS+=		"[license.mk] Every package should define a LICENSE."
+.  endif
+
+.else
+
+.  if defined(ACCEPTABLE_LICENSES) && !empty(ACCEPTABLE_LICENSES:M${LICENSE})
+_ACCEPTABLE=	yes
+.  endif
+
+.  if !defined(_ACCEPTABLE)
+PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
+	 "    To view the license, enter \"${MAKE} show-license\"." \
+	 "    To indicate acceptance, add this line to your mk.conf:" \
+	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
+.  endif
+.endif
