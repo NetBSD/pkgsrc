@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.25 2007/07/16 09:57:59 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.26 2007/07/20 22:22:53 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -284,7 +284,7 @@ typedef struct _lpkg_head_t lpkg_head_t;
 
 /* Type of function to be handed to findmatchingname; return value of this
  * is currently ignored */
-typedef int (*matchfn) (const char *, void *);
+typedef int (*matchfn) (const char *, const char *, void *);
 
 /* This structure describes a pipe to a child process */
 typedef struct {
@@ -335,16 +335,17 @@ void    str_lowercase(unsigned char *);
 const char *basename_of(const char *);
 const char *dirname_of(const char *);
 const char *suffix_of(const char *);
-int     pmatch(const char *, const char *);
+int     pkg_match(const char *, const char *);
+int	pkg_order(const char *, const char *, const char *);
 int     findmatchingname(const char *, const char *, matchfn, void *); /* doesn't really belong to "strings" */
 char   *findbestmatchingname(const char *, const char *);	/* neither */
 int     ispkgpattern(const char *);
 void	strip_txz(char *, char *, const char *);
 
 /* callback functions for findmatchingname */
-int     findbestmatchingname_fn(const char *, void *);	/* neither */
-int     note_whats_installed(const char *, void *);
-int     add_to_list_fn(const char *, void *);
+int     findbestmatchingname_fn(const char *, const char *, void *);	/* neither */
+int     note_whats_installed(const char *, const char *, void *);
+int     add_to_list_fn(const char *, const char *, void *);
 
 
 /* File */
