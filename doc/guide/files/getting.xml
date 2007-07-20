@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.19 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.20 2007/07/20 15:18:46 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -88,6 +88,25 @@ release=pkgsrc
     &uprompt; <userinput>CVS_RSH="ssh"</userinput>
     &uprompt; <userinput>export CVSROOT CVS_RSH</userinput>
 </screen>
+
+	<para>By default, cvs doesn't do things like most people would
+	expect it to do, and this is unlikely to change. But there is a
+	way to convince cvs, by creating a file called
+	<filename>.cvsrc</filename> in your home directory and saving
+	the following lines to it. This file will save you lots of
+	headache and some bug reports, so we strongly recommend it. You
+	can find an explanation of this file in the CVS
+	documentation.</para>
+
+<programlisting>
+# recommended CVS configuration file from the pkgsrc guide
+checkout -P
+update -d
+release -d
+diff -up
+cvs -q -z3
+rdiff -u
+</programlisting>
 
 	<para>Then, you change to the directory where you want to have
 	your copy of pkgsrc. In most cases this is
