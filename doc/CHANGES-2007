@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1605 2007/07/20 12:42:49 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1606 2007/07/20 15:47:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2964,3 +2964,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Config-Std version 0.0.4 [seb 2007-07-19]
 	Updated pkgtools/libnbcompat to 20070720 [tnn 2007-07-20]
 	Updated misc/gnuls to 6.9 [tnn 2007-07-20]
+	Updated chat/xchat to 2.8.4 [tron 2007-07-20]
+	Updated chat/xchat-perl to 2.8.4 [tron 2007-07-20]
+	Updated chat/xchat-python to 2.8.4 [tron 2007-07-20]
