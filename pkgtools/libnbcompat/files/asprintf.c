@@ -1,4 +1,4 @@
-/* $NetBSD: asprintf.c,v 1.1 2007/06/25 21:35:04 joerg Exp $ */
+/* $NetBSD: asprintf.c,v 1.2 2007/07/20 00:10:06 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -81,18 +81,18 @@ vasprintf(char **ret, const char *fmt, va_list ap)
 	}
 
 	len = (size_t)retval + 1;
-	new_buf = realloc(buf, len);
-	if (new_buf == NULL) {
-		free(buf);
+	free(buf);
+	buf = malloc(len);
+	if (buf == NULL) {
 		*ret = NULL;
 		return -1;
 	}
 	retval = vsnprintf(buf, len, fmt, ap);
 	if (retval != len - 1) {
-		free(new_buf);
+		free(buf);
 		*ret = NULL;
 		return -1;
 	}
-	*ret = new_buf;
+	*ret = buf;
 	return retval;
 }
