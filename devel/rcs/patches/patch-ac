@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/09/02 09:42:57 martti Exp $
+$NetBSD: patch-ac,v 1.2 2007/07/21 12:13:05 tnn Exp $
 
---- src/conf.sh.orig	2003-09-02 12:35:32.000000000 +0300
-+++ src/conf.sh	2003-09-02 12:38:46.000000000 +0300
-@@ -73,17 +73,6 @@
+--- src/conf.sh.orig	1995-06-16 08:19:24.000000000 +0200
++++ src/conf.sh
+@@ -73,17 +73,6 @@ case `echo -n` in
  	ech='echo -n' dots='... '
  esac
  
@@ -20,3 +20,12 @@ $NetBSD: patch-ac,v 1.1 2003/09/02 09:42:57 martti Exp $
  $ech >&3 "$0: testing compiler for plausibility $dots"
  echo 'main() { return 0; }' >a.c
  rm -f a.exe a.out || exit
+@@ -1012,6 +1001,8 @@ cp a.c a.d || exit
+ sleep 2
+ has_map_fd=? has_mmap=? has_madvise=? mmap_signal=
+ case `(uname -s -r -v) 2>/dev/null` in
++'Interix'*) ;;
++	# Attempting to run the mmap test makes conf.sh exit with error 1.
+ 'HP-UX '[A-Z].08.07*) ;;
+ 	# mmap can crash the OS under HP-UX 8.07, so don't even test for it.
+ 'HP-UX '[A-Z].09.*) ;;
