@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6522 2007/07/20 22:54:46 wiz Exp $
+$NetBSD: TODO,v 1.6523 2007/07/21 22:05:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,6 +255,11 @@ Suggested package updates
 	o R-wle-0.9.3
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
+	o SDL-1.2.12
+	o SDL_image-1.2.6
+	o SDL_mixer-1.2.8
+	o SDL_net-1.2.7
+	o SDL_ttf-2.0.9
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-75
@@ -354,7 +359,7 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cdrtools-2.01.01.30
+	o cdrtools-2.01.01.31
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cflow-1.2
