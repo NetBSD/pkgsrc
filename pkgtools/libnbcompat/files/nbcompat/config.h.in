@@ -425,6 +425,9 @@
 /* Define to 1 if the system has the type `uint8_t'. */
 #undef HAVE_UINT8_T
 
+/* Define to 1 if the system has the type `uintptr_t'. */
+#undef HAVE_UINTPTR_T
+
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
@@ -515,6 +518,10 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
+
+/* Define to the type of an unsigned integer type wide enough to hold a
+   pointer, if such a type exists, and if the system does not define it. */
+#undef uintptr_t
 
 
 /* NBCOMPAT template section follows. */
