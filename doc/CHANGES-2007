@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1610 2007/07/21 14:41:31 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1611 2007/07/21 22:23:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Downgraded devel/m4 to 1.4.9nb1 [wiz 2007-07-21]
 	Updated archivers/p7zip to 4.49 [adam 2007-07-21]
 	Updated pkgtools/libnbcompat to 20070721 [tnn 2007-07-21]
+	Updated devel/guile-lib to 0.1.4 [gdt 2007-07-21]
