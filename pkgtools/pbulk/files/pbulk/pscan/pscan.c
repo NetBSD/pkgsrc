@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.3 2007/07/20 19:39:34 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.4 2007/07/21 15:12:06 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -103,7 +103,9 @@ main(int argc, char **argv)
 		}
 	}
 
+#if !defined(__INTERIX)
 	sa.sa_sigaction = NULL;
+#endif
 	sa.sa_handler = SIG_IGN;
 	sa.sa_flags = 0;
 	(void)sigemptyset(&sa.sa_mask);
