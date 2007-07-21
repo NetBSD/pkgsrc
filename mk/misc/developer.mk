@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.6 2007/04/01 21:14:27 wiz Exp $
+# $NetBSD: developer.mk,v 1.7 2007/07/21 22:31:02 gdt Exp $
 #
 # Public targets for developers:
 #
@@ -64,7 +64,9 @@ _CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
 _CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:sh}]
 _CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
 
-_CCE_CHANGES=	${PKGSRCDIR}/doc/CHANGES-${_CYEAR_cmd:sh}
+_CCE_CHANGES_DIR=	${PKGSRCDIR}/doc/
+_CCE_CHANGES_BASE=	CHANGES-${_CYEAR_cmd:sh}
+_CCE_CHANGES=	${_CCE_CHANGES_DIR}/${_CCE_CHANGES_BASE}
 
 .PHONY: changes-entry
 changes-entry: ce-error-check
@@ -72,11 +74,12 @@ changes-entry: ce-error-check
 
 commit-changes-entry cce: .PHONY ce-error-check
 	@${STEP_MSG} "Updating ${PKGSRC_CHANGES:T}"
-	${RUN} cd ${PKGSRCDIR}/doc && cvs update ${_CCE_CHANGES:T}
+	${RUN} cd ${_CCE_CHANGES_DIR} && cvs update ${_CCE_CHANGES:T}
+	${RUN} cd ${_CCE_CHANGES_DIR} && test -w ${_CCE_CHANGES:T} || cvs edit ${_CCE_CHANGES:T}
 	@${STEP_MSG} "Adding the change"
 	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${_CCE_CHANGES}
 	@${STEP_MSG} "Committing the change"
-	${RUN} cd ${PKGSRCDIR}/doc && cvs commit -m ${_CE_MSG1:Q} ${_CCE_CHANGES:T}
+	${RUN} cd ${_CCE_CHANGES_DIR} && cvs commit -m ${_CE_MSG1:Q} ${_CCE_CHANGES:T}
 
 ce-error-check:
 .if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
