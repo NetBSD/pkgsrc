@@ -86,6 +86,12 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/mount.h sys/param.h \
 AC_CHECK_FUNCS([chflags dbopen __db185_open tgetent vfork])
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
+dnl Check for types
+AC_TYPE_UINT8_T
+AC_TYPE_UINT16_T
+AC_TYPE_UINT32_T
+AC_TYPE_UINT64_T
+
 need_priu64=no
 AC_MSG_CHECKING([for a working PRIu64])
 AC_LANG_PUSH([C])
