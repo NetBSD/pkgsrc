@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2007/07/19 21:25:46 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2007/07/21 21:56:07 wiz Exp $
 
 DISTNAME=		glib-2.12.13
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.12/ \
 			${MASTER_SITE_GNOME:=sources/glib/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
 COMMENT=		Some useful routines for C programming (glib2)
 
