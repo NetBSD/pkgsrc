@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/03/20 15:42:50 drochner Exp $
+# $NetBSD: Makefile,v 1.62 2007/07/21 21:56:07 wiz Exp $
 #
 
 DISTNAME=		atk-1.18.0
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.18/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Set of interfaces for accessibility
 
