@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/06/14 09:33:14 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2007/07/21 20:30:03 snj Exp $
 
 DISTNAME=	openbox-3.4.2
 CATEGORIES=	wm x11
@@ -6,7 +6,7 @@ MASTER_SITES=	http://icculus.org/openbox/releases/
 # PR pkg/36489
 MASTER_SITES+=	http://offload1.icculus.org/openbox/releases/
 
-MAINTAINER=	snj@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/
 COMMENT=	Standards compliant, light-weight and extensible window manager
 
