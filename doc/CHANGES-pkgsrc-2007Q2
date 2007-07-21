@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.2 2007/07/09 15:07:52 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.3 2007/07/21 01:19:38 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -13,3 +13,5 @@ Pullup ticket 2128 - requested by joerg
 build fix for p5-GTop
 Pullup ticket 2130 - requested by martti
 bugfix update for vim
+Pullup ticket 2142 - requested by joerg
+remove PKG_TOOLS_PREFIX handling from bootstrap tools
