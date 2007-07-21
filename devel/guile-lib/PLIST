@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/07/17 09:54:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/21 16:29:44 gdt Exp $
 info/guile-library.info
 share/guile/site/config/load.scm
 share/guile/site/container/delay-tree.scm
@@ -12,12 +12,14 @@ share/guile/site/io/string.scm
 share/guile/site/logging/logger.scm
 share/guile/site/logging/port-log.scm
 share/guile/site/logging/rotating-log.scm
+share/guile/site/match-bind.scm
 share/guile/site/math/minima.scm
 share/guile/site/math/primes.scm
 share/guile/site/math/rationalize.scm
 share/guile/site/md5.scm
 share/guile/site/os/process.scm
 share/guile/site/scheme/documentation.scm
+share/guile/site/scheme/kwargs.scm
 share/guile/site/scheme/session.scm
 share/guile/site/search/basic.scm
 share/guile/site/srfi/srfi-34.scm
@@ -52,6 +54,7 @@ share/guile/site/texinfo/reflection.scm
 share/guile/site/texinfo/serialize.scm
 share/guile/site/text/parse-lalr.scm
 share/guile/site/unit-test.scm
+@dirrm share/guile/site/text
 @dirrm share/guile/site/texinfo
 @dirrm share/guile/site/term
 @dirrm share/guile/site/sxml/upstream
