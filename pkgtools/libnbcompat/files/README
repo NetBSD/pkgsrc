@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.17 2007/07/20 00:32:02 tnn Exp $
+$NetBSD: README,v 1.18 2007/07/21 14:39:25 tnn Exp $
 
  0 Introduction
  ==============
@@ -74,10 +74,11 @@ on the following operating systems:
 	NetBSD-3.0-i386			<rillig@NetBSD.org>
 	IRIX-6.5-mips			<rillig@NetBSD.org>
 
-libnbcompat-20070720 has been tested to build and install correctly
+libnbcompat-20070721 has been tested to build and install correctly
 on the following operating systems:
 
 	HPUX-11.11-hppa			<tnn@NetBSD.org>
+	Interix-3.5-i586		<tnn@NetBSD.org>
 
  3 Usage
  =======
