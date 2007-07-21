@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/07/14 20:11:10 jlam Exp $#
+# $NetBSD: Makefile.common,v 1.2.8.1 2007/07/21 01:19:08 salo Exp $#
 #
 # This Makefile fragment is included by:
 #
@@ -6,7 +6,7 @@
 #	pkgsrc/sysutils/mtree/Makefile
 #
 
-DISTNAME=		mtree-20040722
+DISTNAME=		mtree-20070710
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
