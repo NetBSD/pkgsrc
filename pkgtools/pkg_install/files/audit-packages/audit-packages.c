@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.2 2007/07/20 22:22:52 joerg Exp $ */
+/* $NetBSD: audit-packages.c,v 1.3 2007/07/21 10:21:04 adrianp Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -40,6 +40,9 @@
 #include <limits.h>
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
+#endif
+#ifdef HAVE_INTTYPES_H
+#include <stdint.h>
 #endif
 #include <err.h>
 #include <string.h>
@@ -293,10 +296,6 @@ main(int argc, char **argv)
 		}
 	}
 
-	/* tell the user where we are reading the config file from */
-	if (verbose >= 1)
-		fprintf(stderr, "Reading settings from: %s\n", conf_file);
-
 	/* get the config file values */
 	retval = get_confvalues();
 
@@ -308,7 +307,12 @@ main(int argc, char **argv)
 		fprintf(stderr, "debug2: Using PKGDB_DIR: %s\n", _pkgdb_getPKGDB_DIR());
 		fprintf(stderr, "debug2: Using pkg-vulnerabilities file: %s\n", pvfile);
 		fprintf(stderr, "debug2: Using verify tool: %s\n", verify_bin);
-		fprintf(stderr, "debug2: Using ignore directives: %s\n", ignore);
+
+		if (ignore != NULL) {
+			fprintf(stderr, "debug2: Using ignore directives: %s\n", ignore);
+		} else {
+			fprintf(stderr, "debug2: No ignore directives found.\n");
+		}
 	}
 
 	/* now that we have read in the config file we can show the info */
@@ -325,14 +329,14 @@ main(int argc, char **argv)
 			exit(EXIT_FAILURE);
 	}
 
-	/* check for an old vulnerabilities file if we're being verbose */
-	if ((verbose >= 1) && (download == FALSE))
-		old_pvfile();
-
 	/* open pvfile */
 	if ((pv = fopen(pvfile, "r")) == NULL) {
 		errx(EXIT_FAILURE, "Unable to open: %s", pvfile);
 	}
+
+	/* check for an old vulnerabilities file if we're being verbose */
+	if ((verbose >= 1) && (download == FALSE))
+		old_pvfile();
 
 	/* check the #FORMAT from the pkg-vulnerabilities file */
 	pv_format(pv);
@@ -600,9 +604,12 @@ get_confvalues(void)
 	char *retval = NULL;
 
 	if ((conf = fopen(conf_file, "r")) == NULL) {
-		if (verbose >= 1)
-			fprintf(stderr, "Unable to open specified configuration file: %s\n", conf_file);
+		if (verbose >= 2)
+			fprintf(stderr, "debug2: No configuration file found.\n");
 		return 0;
+	} else {
+		if (verbose >= 1)
+			fprintf(stderr, "Using configuration file: %s\n", conf_file);
 	}
 
 	line = safe_calloc(MAXLINELEN, sizeof(char));
@@ -756,7 +763,8 @@ void
 old_pvfile(void)
 {
 	float t_diff;
-	int long t_current, t_pvfile;
+	int long t_current;
+	time_t t_pvfile;
 	struct stat pvstat;
 	struct timeval now_time = {0, 0};
 
@@ -768,7 +776,7 @@ old_pvfile(void)
 	} else {
 		/* difference between the file and now */
 		t_current = now_time.tv_sec;
-		t_pvfile = pvstat.st_ctimespec.tv_sec;
+		t_pvfile = pvstat.st_ctime;
 		t_diff = (((((float) t_current - (float) t_pvfile) / 60) / 60) / 24);
 
 		if (t_diff >= 7)
