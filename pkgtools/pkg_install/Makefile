@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2007/03/11 22:05:03 joerg Exp $
+# $NetBSD: Makefile,v 1.130.4.1 2007/07/21 01:19:08 salo Exp $
 
 # Notes to package maintainers:
 #
@@ -66,24 +66,8 @@ FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
-
-# XXX This breaks for those who set their own LOCALBASE to "/usr" and also
-# XXX set PKGMANDIR to be other than "share/man".
-# XXX
-.if !empty(PKG_TOOLS_PREFIX:M/usr)
-PKGMANDIR=		share/man
-.endif
-
-# If ${PKG_TOOLS_PREFIX} doesn't match ${LOCALBASE}, then don't run
-# check-files since it's likely ${PKG_TOOLS_PREFIX} contains directories
-# that shouldn't be checked.
-#
-.if ${PKG_TOOLS_PREFIX} != ${LOCALBASE}
-CHECK_FILES_SUPPORTED=	no
-.endif
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -99,5 +83,3 @@ update:
 
 .include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
-
-PREFIX:=	${PKG_TOOLS_PREFIX}
