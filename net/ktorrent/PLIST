@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/06/21 19:32:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/22 08:38:57 abs Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -12,6 +12,7 @@ lib/kde3/ktrssfeedplugin.la
 lib/kde3/ktscanfolderplugin.la
 lib/kde3/ktschedulerplugin.la
 lib/kde3/ktsearchplugin.la
+lib/kde3/ktstatsplugin.la
 lib/kde3/ktupnpplugin.la
 lib/kde3/ktwebinterfaceplugin.la
 lib/libktorrent.la
@@ -356,6 +357,7 @@ share/kde/config.kcfg/ktrssfeedplugin.kcfg
 share/kde/config.kcfg/ktscanfolderplugin.kcfg
 share/kde/config.kcfg/ktschedulerplugin.kcfg
 share/kde/config.kcfg/ktsearchplugin.kcfg
+share/kde/config.kcfg/ktstatsplugin.kcfg
 share/kde/config.kcfg/ktupnpplugin.kcfg
 share/kde/config.kcfg/ktwebinterfaceplugin.kcfg
 share/kde/services/ktinfowidgetplugin.desktop
@@ -366,6 +368,7 @@ share/kde/services/ktrssfeedplugin.desktop
 share/kde/services/ktscanfolderplugin.desktop
 share/kde/services/ktschedulerplugin.desktop
 share/kde/services/ktsearchplugin.desktop
+share/kde/services/ktstatsplugin.desktop
 share/kde/services/ktupnpplugin.desktop
 share/kde/services/ktwebinterfaceplugin.desktop
 share/kde/services/ktzeroconfplugin.desktop
@@ -382,21 +385,15 @@ share/locale/el/LC_MESSAGES/ktorrent.mo
 share/locale/en_GB/LC_MESSAGES/ktorrent.mo
 share/locale/es/LC_MESSAGES/ktorrent.mo
 share/locale/et/LC_MESSAGES/ktorrent.mo
-share/locale/eu/LC_MESSAGES/ktorrent.mo
 share/locale/fa/LC_MESSAGES/ktorrent.mo
-share/locale/fi/LC_MESSAGES/ktorrent.mo
 share/locale/fr/LC_MESSAGES/ktorrent.mo
-share/locale/ga/LC_MESSAGES/ktorrent.mo
 share/locale/gl/LC_MESSAGES/ktorrent.mo
-share/locale/hr/LC_MESSAGES/ktorrent.mo
 share/locale/hu/LC_MESSAGES/ktorrent.mo
 share/locale/it/LC_MESSAGES/ktorrent.mo
 share/locale/ja/LC_MESSAGES/ktorrent.mo
-share/locale/km/LC_MESSAGES/ktorrent.mo
+share/locale/ka/LC_MESSAGES/ktorrent.mo
 share/locale/lt/LC_MESSAGES/ktorrent.mo
-share/locale/mk/LC_MESSAGES/ktorrent.mo
 share/locale/ms/LC_MESSAGES/ktorrent.mo
-share/locale/nb/LC_MESSAGES/ktorrent.mo
 share/locale/nds/LC_MESSAGES/ktorrent.mo
 share/locale/nl/LC_MESSAGES/ktorrent.mo
 share/locale/pa/LC_MESSAGES/ktorrent.mo
