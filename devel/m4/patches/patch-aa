@@ -1,20 +1,18 @@
-$NetBSD: patch-aa,v 1.6 2007/07/20 22:52:44 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2007/07/22 06:34:41 wiz Exp $
 
-avoid the following incorrect behaviour.
+From Eric Blake -- will be in m4-1.4.11.
 
-% echo "eval(-2/2)" | gm4 -
-2147483647
-
-has been reported on bug-m4@gnu.org
-
---- src/eval.c.orig	2007-01-09 16:12:43.000000000 +0000
-+++ src/eval.c
-@@ -721,7 +721,7 @@ mult_term (eval_token et, int32_t *v1)
- 	    /* Avoid the x86 SIGFPE on INT_MIN / -1.  */
- 	    *v1 = (int32_t) -(uint32_t) *v1;
- 	  else
--	    *v1 = (int32_t) ((uint32_t) *v1 / (uint32_t) v2);
-+	    *v1 = *v1 / v2;
- 	  break;
+--- src/output.c.orig	2007-07-05 03:56:06.000000000 +0000
++++ src/output.c
+@@ -252,6 +252,11 @@ m4_tmpopen (int divnum)
+   else if (set_cloexec_flag (fileno (file), true) != 0)
+     M4ERROR ((warning_status, errno,
+ 	      "Warning: cannot protect diversion across forks"));
++  /* POSIX states that it is undefined whether an append stream starts
++     at offset 0 or at the end.  We want the beginning.  */
++  else if (fseeko (file, 0, SEEK_SET) != 0)
++    M4ERROR ((EXIT_FAILURE, errno,
++	      "cannot seek to beginning of diversion"));
+   return file;
+ }
  
- 	case MODULO:
