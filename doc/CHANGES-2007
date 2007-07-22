@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1613 2007/07/22 06:35:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1614 2007/07/22 08:40:31 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/guile-lib to 0.1.4 [gdt 2007-07-21]
 	Updated lang/guile to 1.8.2 [gdt 2007-07-21]
 	Updated devel/m4 to 1.4.10nb1 [wiz 2007-07-22]
+	Updated net/ktorrent to 2.2 [abs 2007-07-22]
