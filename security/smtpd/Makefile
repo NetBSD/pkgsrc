@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/22 19:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/22 22:26:04 adrianp Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -7,7 +7,7 @@ CATEGORIES=	mail security
 MASTER_SITES=	http://www.netsw.org/net/ip/firewall/proxy/smtpd/
 
 PATCHFILES=	patch-smtpd-2.0-RBL.gz
-PATCH_SITES=	http://web.rge.com/pub/security/smtpd/
+PATCH_SITES=	ftp://ftp.42.org/pub/OLD/p/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # "Obtuse smtpd hasn't been developed further since 1997."
