@@ -1,4 +1,4 @@
-/*	NetBSD: getaddrinfo.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	$NetBSD: getaddrinfo.c,v 1.1.1.3 2007/07/22 05:19:01 lukem Exp $	*/
 /*	from	?	*/
 
 /*
@@ -225,7 +225,7 @@ do { \
 #define MATCH(x, y, w) \
 	((x) == (y) || (/*CONSTCOND*/(w) && ((x) == ANY || (y) == ANY)))
 
-char *
+const char *
 gai_strerror(int ecode)
 {
 	if (ecode < 0 || ecode > EAI_MAX)
@@ -571,14 +571,14 @@ explore_fqdn(const struct addrinfo *pai, const char *hostname,
 	hp = getipnodebyname(hostname, pai->ai_family,
 	    pai->ai_flags & AI_ADDRCONFIG, &h_error);
 #else
-#if HAVE_GETHOSTBYNAME2
+#if defined(HAVE_GETHOSTBYNAME2)
 	hp = gethostbyname2(hostname, pai->ai_family);
 #else
 	if (pai->ai_family != AF_INET)
 		return 0;
 	hp = gethostbyname(hostname);
-#endif /*HAVE_GETHOSTBYNAME2*/
-#if HAVE_H_ERRNO
+#endif /* defined(HAVE_GETHOSTBYNAME2) */
+#if defined(HAVE_H_ERRNO)
 	h_error = h_errno;
 #else
 	h_error = EINVAL;
@@ -919,7 +919,7 @@ get_ai(const struct addrinfo *pai, const struct afd *afd, const char *addr)
 	memcpy(ai, pai, sizeof(struct addrinfo));
 	ai->ai_addr = (struct sockaddr *)(void *)(ai + 1);
 	memset(ai->ai_addr, 0, (size_t)afd->a_socklen);
-#if HAVE_SOCKADDR_SA_LEN
+#if defined(HAVE_STRUCT_SOCKADDR_SA_LEN)
 	ai->ai_addr->sa_len = afd->a_socklen;
 #endif
 	ai->ai_addrlen = afd->a_socklen;

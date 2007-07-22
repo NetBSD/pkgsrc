@@ -1,4 +1,4 @@
-/*	NetBSD: getnameinfo.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
+/*	$NetBSD: getnameinfo.c,v 1.1.1.4 2007/07/22 05:19:01 lukem Exp $	*/
 /*	from	?	*/
 
 /*
@@ -103,7 +103,7 @@ getnameinfo(const struct sockaddr *sa, socklen_t salen,
 	if (sa == NULL)
 		return ENI_NOSOCKET;
 
-#if HAVE_SOCKADDR_SA_LEN
+#if defined(HAVE_STRUCT_SOCKADDR_SA_LEN)
 	if (sa->sa_len != salen)
 		return ENI_SALEN;
 #endif
