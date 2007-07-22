@@ -1,4 +1,4 @@
-/*	NetBSD: fgetln.c,v 1.2 2003/02/28 10:44:46 lukem Exp	*/
+/*	$NetBSD: fgetln.c,v 1.1.1.3 2007/07/22 11:36:31 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -15,11 +15,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *        This product includes software developed by the NetBSD
- *        Foundation, Inc. and its contributors.
- * 4. Neither the name of The NetBSD Foundation nor the names of its
+ * 3. Neither the name of The NetBSD Foundation nor the names of its
  *    contributors may be used to endorse or promote products derived
  *    from this software without specific prior written permission.
  *
@@ -56,8 +52,8 @@ fgetln(fp, len)
 
 	if (fgets(buf, bufsiz, fp) == NULL)
 		return NULL;
-	*len = 0;
 
+	*len = 0;
 	while ((ptr = strchr(&buf[*len], '\n')) == NULL) {
 		size_t nbufsiz = bufsiz + BUFSIZ;
 		char *nbuf = realloc(buf, nbufsiz);

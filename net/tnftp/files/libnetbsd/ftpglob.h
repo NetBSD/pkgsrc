@@ -1,5 +1,5 @@
-/*	NetBSD: ftpglob.h,v 1.3 2005/05/16 05:45:40 lukem Exp	*/
-/*	from	NetBSD: glob.h,v 1.19 2005/02/03 04:39:32 perry Exp	*/
+/* $NetBSD: ftpglob.h,v 1.1.1.4 2007/07/22 11:41:57 lukem Exp $ */
+/* from NetBSD: glob.h,v 1.21 2006/03/26 18:11:22 christos Exp */
 
 /*
  * Copyright (c) 1989, 1993
@@ -38,10 +38,17 @@
 #ifndef _GLOB_H_
 #define	_GLOB_H_
 
+#ifndef __gl_size_t
+#define __gl_size_t	size_t
+#endif
+#ifndef __gl_stat_t
+#define __gl_stat_t	struct stat
+#endif
+
 typedef struct {
-	int gl_pathc;		/* Count of total paths so far. */
-	int gl_matchc;		/* Count of paths matching pattern. */
-	int gl_offs;		/* Reserved at beginning of gl_pathv. */
+	__gl_size_t gl_pathc;	/* Count of total paths so far. */
+	__gl_size_t gl_matchc;	/* Count of paths matching pattern. */
+	__gl_size_t gl_offs;	/* Reserved at beginning of gl_pathv. */
 	int gl_flags;		/* Copy of flags parameter to glob. */
 	char **gl_pathv;	/* List of paths matching pattern. */
 				/* Copy of errfunc parameter to glob. */
@@ -55,8 +62,8 @@ typedef struct {
 	void (*gl_closedir)(void *);
 	struct dirent *(*gl_readdir)(void *);	
 	void *(*gl_opendir)(const char *);
-	int (*gl_lstat)(const char *, struct stat *);
-	int (*gl_stat)(const char *, struct stat *);
+	int (*gl_lstat)(const char *, __gl_stat_t *);
+	int (*gl_stat)(const char *, __gl_stat_t *);
 } glob_t;
 
 #define	GLOB_APPEND	0x0001	/* Append to output from previous call. */
