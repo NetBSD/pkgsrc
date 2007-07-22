@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2007/06/21 19:32:55 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2007/07/22 08:38:58 abs Exp $
 
---- libktorrent/net/socket.cpp.orig	2007-02-04 13:22:44.000000000 +0000
+--- libktorrent/net/socket.cpp.orig	2007-07-02 17:48:46.000000000 +0100
 +++ libktorrent/net/socket.cpp
 @@ -38,7 +38,7 @@
  #include <sys/filio.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2007/06/21 19:32:55 wiz Exp $
  		int val = 1; 
  		if (setsockopt(m_fd,SOL_SOCKET,SO_NOSIGPIPE,&val,sizeof(int)) < 0)
  		{
-@@ -73,7 +73,7 @@ namespace net
+@@ -74,7 +74,7 @@ namespace net
  			Out(SYS_GEN|LOG_IMPORTANT) << QString("Cannot create socket : %1").arg(strerror(errno)) << endl;
  		}
  		m_fd = fd;

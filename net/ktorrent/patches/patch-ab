@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2007/07/22 08:38:58 abs Exp $
+
+--- plugins/stats/ChartDrawer.cc.orig	2007-07-18 15:37:03.000000000 +0100
++++ plugins/stats/ChartDrawer.cc
+@@ -272,6 +272,8 @@ void ChartDrawer::AddValue(const size_t 
+ 	
+ #ifdef USE_SOLARIS
+ 	if(isnand(val) || (isinf(val)))
++#elif defined(Q_OS_NETBSD)
++ 	if(isnan(val) || isinf(val))
+ #else
+  	if(std::isnan(val) || (std::isinf(val)))
+ #endif
