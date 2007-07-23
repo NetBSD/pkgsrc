@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.193 2007/06/06 09:29:53 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.194 2007/07/23 13:22:11 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -654,11 +654,17 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)/usr\(/lib/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g"
+
+.if ${X11_TYPE} != "modular"
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g" \
-	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g" \
+	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${X11BASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}\\2,g"
+.endif
+
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g" \
 	-e "/^dependency_libs=/s,\([${_BLNK_SEP}]\)${LOCALBASE}\(/[^${_BLNK_SEP}]*lib[^/${_BLNK_SEP}]*\.la[${_BLNK_SEP}]\),\\1${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}\\2,g"
+
 #
 # Modify the dependency_libs line by removing -L/usr/lib, which is implied.
 #
@@ -681,8 +687,12 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 # Unmangle.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^dependency_libs=/s,${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}},${BUILDLINK_DIR},g" \
+	-e "/^dependency_libs=/s,${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}},${BUILDLINK_DIR},g"
+
+.if ${X11_TYPE} != "modular"
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}},${BUILDLINK_X11_DIR},g"
+.endif
 #
 # Modify the dependency_libs line by cleaning up any leading and trailing
 # whitespace.
@@ -699,8 +709,14 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^libdir=/s,/usr\(/lib/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^libdir=/s,${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g" \
+	-e "/^libdir=/s,${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
+
+.    if ${X11_TYPE} == "modular"
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
+	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g"
+.    endif
+
+_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^libdir=/s,${LOCALBASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
 .  endif
 .endfor
@@ -795,7 +811,9 @@ _BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib}
 
 _BLNK_MANGLE_DIRS=	# empty
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
+.if ${X11_TYPE} != "modular"
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
+.endif
 _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 _BLNK_MANGLE_DIRS+=	${_BLNK_PASSTHRU_RPATHDIRS}
@@ -822,7 +840,9 @@ _BLNK_PROTECT_DIRS=	# empty
 _BLNK_UNPROTECT_DIRS=	# empty
 
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
+.if ${X11_TYPE} != "modular"
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
+.endif
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
 _BLNK_PROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 
@@ -837,7 +857,9 @@ _BLNK_UNPROTECT_DIRS+=	${X11BASE}
 .endif
 _BLNK_UNPROTECT_DIRS+=	${_BLNK_PASSTHRU_DIRS}
 _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
+.if ${X11_TYPE} != "modular"
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
+.endif
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 
 # Resolve some important directories to their phyiscal paths as symlinks
