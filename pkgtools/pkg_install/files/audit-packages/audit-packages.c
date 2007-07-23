@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.4 2007/07/22 13:22:21 tnn Exp $ */
+/* $NetBSD: audit-packages.c,v 1.5 2007/07/23 12:29:32 adrianp Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -35,6 +35,7 @@
 #include "config.h"
 #endif
 
+#include <nbcompat.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -44,7 +45,9 @@
 #ifdef HAVE_INTTYPES_H
 #include <stdint.h>
 #endif
-#include <err.h>
+#ifdef HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
