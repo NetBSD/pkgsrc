@@ -1,5 +1,5 @@
-/*	NetBSD: glob.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
-/*	from	NetBSD: __glob13.c,v 1.25 2003/08/07 16:42:45 agc Exp	*/
+/* $NetBSD: glob.c,v 1.1.1.4 2007/07/23 11:45:51 lukem Exp $ */
+/* from	NetBSD: glob.c,v 1.16 2006/03/26 18:11:22 christos Exp */
 
 /*
  * Copyright (c) 1989, 1993
@@ -77,7 +77,7 @@
 #define	SLASH		'/'
 #define	COMMA		','
 
-#ifndef DEBUG
+#ifndef USE_8BIT_CHARS
 
 #define	M_QUOTE		0x8000
 #define	M_PROTECT	0x4000
@@ -88,10 +88,10 @@ typedef unsigned short Char;
 
 #else
 
-#define	M_QUOTE		0x80
-#define	M_PROTECT	0x40
-#define	M_MASK		0xff
-#define	M_ASCII		0x7f
+#define	M_QUOTE		(Char)0x80
+#define	M_PROTECT	(Char)0x40
+#define	M_MASK		(Char)0xff
+#define	M_ASCII		(Char)0x7f
 
 typedef char Char;
 
@@ -111,10 +111,10 @@ typedef char Char;
 
 static int	 compare(const void *, const void *);
 static int	 g_Ctoc(const Char *, char *, size_t);
-static int	 g_lstat(Char *, struct stat *, glob_t *);
+static int	 g_lstat(Char *, __gl_stat_t *, glob_t *);
 static DIR	*g_opendir(Char *, glob_t *);
 static Char	*g_strchr(const Char *, int);
-static int	 g_stat(Char *, struct stat *, glob_t *);
+static int	 g_stat(Char *, __gl_stat_t *, glob_t *);
 static int	 glob0(const Char *, glob_t *);
 static int	 glob1(Char *, glob_t *, size_t *);
 static int	 glob2(Char *, Char *, Char *, Char *, glob_t *, size_t *);
@@ -388,11 +388,11 @@ static int
 glob0(const Char *pattern, glob_t *pglob)
 {
 	const Char *qpatnext;
-	int c, error, oldpathc;
+	int c, error;
+	__gl_size_t oldpathc;
 	Char *bufnext, patbuf[MAXPATHLEN+1];
-	size_t limit;
+	size_t limit = 0;
 
-	limit = 0;
 	if ((qpatnext = globtilde(pattern, patbuf, sizeof(patbuf),
 	    pglob)) == NULL)
 		return GLOB_ABEND;
@@ -497,7 +497,9 @@ glob1(Char *pattern, glob_t *pglob, size_t *limit)
 	 * we save one character so that we can use ptr >= limit,
 	 * in the general case when we are appending non nul chars only.
 	 */
-	return(glob2(pathbuf, pathbuf, pathbuf + sizeof(pathbuf) - 1, pattern,
+	return(glob2(pathbuf, pathbuf,
+		     pathbuf + (sizeof(pathbuf) / sizeof(*pathbuf)) - 1,
+		     pattern,
 	    pglob, limit));
 }
 
@@ -510,7 +512,7 @@ static int
 glob2(Char *pathbuf, Char *pathend, Char *pathlim,
 	Char *pattern, glob_t *pglob, size_t *limit)
 {
-	struct stat sb;
+	__gl_stat_t sb;
 	Char *p, *q;
 	int anymeta;
 
@@ -687,8 +689,7 @@ static int
 globextend(const Char *path, glob_t *pglob, size_t *limit)
 {
 	char **pathv;
-	int i;
-	size_t newsize, len;
+	size_t i, newsize, len;
 	char *copy;
 	const Char *p;
 
@@ -701,7 +702,7 @@ globextend(const Char *path, glob_t *pglob, size_t *limit)
 	if (pglob->gl_pathv == NULL && pglob->gl_offs > 0) {
 		/* first time around -- clear initial gl_offs items */
 		pathv += pglob->gl_offs;
-		for (i = pglob->gl_offs; --i >= 0; )
+		for (i = pglob->gl_offs + 1; --i > 0; )
 			*--pathv = NULL;
 	}
 	pglob->gl_pathv = pathv;
@@ -782,7 +783,7 @@ match(Char *name, Char *pat, Char *patend)
 void
 globfree(glob_t *pglob)
 {
-	int i;
+	size_t i;
 	char **pp;
 
 	if (pglob->gl_pathv != NULL) {
@@ -815,7 +816,7 @@ g_opendir(Char *str, glob_t *pglob)
 }
 
 static int
-g_lstat(Char *fn, struct stat *sb, glob_t *pglob)
+g_lstat(Char *fn, __gl_stat_t *sb, glob_t *pglob)
 {
 	char buf[MAXPATHLEN];
 
@@ -827,7 +828,7 @@ g_lstat(Char *fn, struct stat *sb, glob_t *pglob)
 }
 
 static int
-g_stat(Char *fn, struct stat *sb, glob_t *pglob)
+g_stat(Char *fn, __gl_stat_t *sb, glob_t *pglob)
 {
 	char buf[MAXPATHLEN];
 

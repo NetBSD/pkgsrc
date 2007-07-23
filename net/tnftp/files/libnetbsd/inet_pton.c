@@ -1,5 +1,5 @@
-/*	NetBSD: inet_pton.c,v 1.5 2005/06/01 11:48:49 lukem Exp	*/
-/*	from	NetBSD: inet_pton.c,v 1.2 2004/05/20 23:12:33 christos Exp	*/
+/* $NetBSD: inet_pton.c,v 1.1.1.4 2007/07/23 11:45:52 lukem Exp $ */
+/* from	NetBSD: inet_pton.c,v 1.3 2006/09/26 05:59:18 lukem Exp */
 
 /*
  * Copyright (c) 2004 by Internet Systems Consortium, Inc. ("ISC")
@@ -20,20 +20,17 @@
 
 #include "tnftp.h"
 
-#if HAVE_ARPA_NAMESER_H
-#include <arpa/nameser.h>
+#if defined(HAVE_ARPA_NAMESER_H)
+# include <arpa/nameser.h>
 #endif
-
-#ifndef NS_INADDRSZ
-#define	NS_INADDRSZ	4
+#if !defined(NS_INADDRSZ)
+# define NS_INADDRSZ	4
 #endif
-
-#ifndef NS_IN6ADDRSZ
-#define	NS_IN6ADDRSZ	16
+#if !defined(NS_IN6ADDRSZ)
+# define NS_IN6ADDRSZ	16
 #endif
-
-#ifndef NS_INT16SZ
-#define	NS_INT16SZ	2
+#if !defined(NS_INT16SZ)
+# define NS_INT16SZ	2
 #endif
 
 /*
@@ -44,7 +41,7 @@
 static int	inet_pton4(const char *src, unsigned char *dst, int pton);
 #ifdef INET6
 static int	inet_pton6(const char *src, unsigned char *dst);
-#endif
+#endif /* INET6 */
 
 /* int
  * inet_pton(af, src, dst)
@@ -67,7 +64,7 @@ inet_pton(int af, const char *src, void *dst)
 #ifdef INET6
 	case AF_INET6:
 		return (inet_pton6(src, dst));
-#endif
+#endif /* INET6 */
 	default:
 		errno = EAFNOSUPPORT;
 		return (-1);
@@ -94,7 +91,7 @@ inet_pton4(const char *src, unsigned char *dst, int pton)
 	int n;
 	unsigned char c;
 	unsigned int parts[4];
-	unsigned int *pp = parts;
+	register unsigned int *pp = parts;
 
 	c = *src;
 	for (;;) {
@@ -249,7 +246,7 @@ inet_pton6(const char *src, unsigned char *dst)
 				continue;
 			} else if (*src == '\0')
 				return (0);
-			if (tp + INT16SZ > endp)
+			if (tp + NS_INT16SZ > endp)
 				return (0);
 			*tp++ = (unsigned char) (val >> 8) & 0xff;
 			*tp++ = (unsigned char) val & 0xff;
@@ -292,4 +289,4 @@ inet_pton6(const char *src, unsigned char *dst)
 	memcpy(dst, tmp, NS_IN6ADDRSZ);
 	return (1);
 }
-#endif
+#endif /* INET6 */

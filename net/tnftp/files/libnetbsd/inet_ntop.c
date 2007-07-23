@@ -1,5 +1,5 @@
-/*	NetBSD: inet_ntop.c,v 1.6 2005/06/01 11:48:49 lukem Exp	*/
-/*	from	NetBSD: inet_ntop.c,v 1.2 2004/05/20 23:12:33 christos Exp	*/
+/* $NetBSD: inet_ntop.c,v 1.1.1.4 2007/07/23 11:45:51 lukem Exp $ */
+/* from	NetBSD: inet_ntop.c,v 1.3 2006/05/10 21:53:15 mrg Exp */
 
 /*
  * Copyright (c) 2004 by Internet Systems Consortium, Inc. ("ISC")
@@ -20,16 +20,17 @@
 
 #include "tnftp.h"
 
-#if HAVE_ARPA_NAMESER_H
-#include <arpa/nameser.h>
+#if defined(HAVE_ARPA_NAMESER_H)
+# include <arpa/nameser.h>
 #endif
-
-#ifndef NS_IN6ADDRSZ
-#define	NS_IN6ADDRSZ	16
+#if !defined(NS_INADDRSZ)
+# define NS_INADDRSZ	4
 #endif
-
-#ifndef NS_INT16SZ
-#define	NS_INT16SZ	2
+#if !defined(NS_IN6ADDRSZ)
+# define NS_IN6ADDRSZ	16
+#endif
+#if !defined(NS_INT16SZ)
+# define NS_INT16SZ	2
 #endif
 
 /*
@@ -38,7 +39,9 @@
  */
 
 static const char *inet_ntop4(const unsigned char *src, char *dst, socklen_t size);
+#ifdef INET6
 static const char *inet_ntop6(const unsigned char *src, char *dst, socklen_t size);
+#endif /* INET6 */
 
 /* char *
  * inet_ntop(af, src, dst, size)
@@ -58,7 +61,7 @@ inet_ntop(int af, const void *src, char *dst, socklen_t size)
 #ifdef INET6
 	case AF_INET6:
 		return (inet_ntop6(src, dst, size));
-#endif
+#endif /* INET6 */
 	default:
 		errno = EAFNOSUPPORT;
 		return (NULL);
@@ -127,6 +130,8 @@ inet_ntop6(const unsigned char *src, char *dst, socklen_t size)
 		words[i / 2] |= (src[i] << ((1 - (i % 2)) << 3));
 	best.base = -1;
 	cur.base = -1;
+	best.len = -1;	/* XXX gcc */
+	cur.len = -1;	/* XXX gcc */
 	for (i = 0; i < (NS_IN6ADDRSZ / NS_INT16SZ); i++) {
 		if (words[i] == 0) {
 			if (cur.base == -1)
@@ -203,4 +208,4 @@ inet_ntop6(const unsigned char *src, char *dst, socklen_t size)
 	strlcpy(dst, tmp, size);
 	return (dst);
 }
-#endif
+#endif /* INET6 */
