@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2006/11/28 18:02:34 wennmach Exp $
+$NetBSD: distinfo,v 1.15 2007/07/23 11:56:05 wennmach Exp $
 
 SHA1 (GMT4.1.4/GMT4.1.4_man.tar.bz2) = bd07c5675a2dfbba9f8d05864a1bf563c042e5dc
 RMD160 (GMT4.1.4/GMT4.1.4_man.tar.bz2) = 42927181461b35294a8702499d2a66501555dc8b
@@ -23,7 +23,7 @@ RMD160 (GMT4.1.4/GMT4.1.4_tut.tar.bz2) = 381d56369b0f6e38b7cb06e8f543808ad483821
 Size (GMT4.1.4/GMT4.1.4_tut.tar.bz2) = 988854 bytes
 SHA1 (GMT4.1.4/GMT4.1.4_web.tar.bz2) = d0d179905ce82494c2eb5a3556de4ce95d58bcf3
 RMD160 (GMT4.1.4/GMT4.1.4_web.tar.bz2) = 067a25e0999039d51f0084e21c2f8c0970f37cea
-Size (GMT4.1.4/GMT4.1.4_web.tar.bz2) = 1644571 bytes
+Size (GMT4.1.4/GMT4.1.4_web.tar.bz2) = 2482915 bytes
 SHA1 (GMT4.1.4/GMT4.1_coast.tar.bz2) = 685c6e260dbfb85a803675b42cc33c895a58ce3c
 RMD160 (GMT4.1.4/GMT4.1_coast.tar.bz2) = e78d2a2add8761d567e14e087488bb33756a02ed
 Size (GMT4.1.4/GMT4.1_coast.tar.bz2) = 3660521 bytes
