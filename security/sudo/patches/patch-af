@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.14 2005/10/10 17:48:09 joerg Exp $
+/* $NetBSD: patch-af,v 1.15 2007/07/23 16:38:36 tls Exp $ */
 
---- configure.in.orig	2004-11-25 18:31:20.000000000 +0100
-+++ configure.in	2005-05-11 14:23:01.000000000 +0200
-@@ -118,7 +118,6 @@
+--- configure.in.orig	2007-07-16 22:51:21.000000000 -0400
++++ configure.in	2007-07-23 11:15:42.000000000 -0400
+@@ -123,7 +123,6 @@
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.14 2005/10/10 17:48:09 joerg Exp $
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -244,6 +243,19 @@
+@@ -246,6 +245,19 @@
  		;;
  esac])
  
@@ -30,20 +30,52 @@ $NetBSD: patch-af,v 1.14 2005/10/10 17:48:09 joerg Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes)	;;
-@@ -1513,7 +1525,7 @@
- 		    esac
+@@ -1466,7 +1478,7 @@
+ 		    AC_CHECK_FUNCS(auth_challenge, [with_bsdauth=maybe])
  		fi
  		;;
 -    *-*-freebsd*)
 +    *-*-freebsd*|*-*-dragonfly*)
  		# FreeBSD has a real setreuid(2) starting with 2.1 and
  		# backported to 2.0.5.  We just take 2.1 and above...
- 		case "`echo $host_os | sed 's/^freebsd\([[0-9\.]]*\).*$/\1/'`" in
-@@ -1894,6 +1906,7 @@
- 	    AC_MSG_RESULT(yes)
- 	    AC_DEFINE(HAVE_HEIMDAL)
- 	    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -ldes -lcom_err -lasn1"
-+	    AC_CHECK_LIB(crypto, main, [SUDO_LIBS="${SUDO_LIBS} -lcrypto"])
- 	    AC_CHECK_LIB(roken, main, [SUDO_LIBS="${SUDO_LIBS} -lroken"])
- 	], [
- 	    AC_MSG_RESULT(no)
+ 		case "$OSREV" in
+@@ -1482,6 +1494,8 @@
+ 		fi
+ 		: ${with_pam='maybe'}
+ 		: ${with_logincap='maybe'}
++		# We really want libutil.
++		SUDO_LIBS="${SUDO_LIBS} -lutil"
+ 		;;
+     *-*-*openbsd*)
+ 		# OpenBSD has a real setreuid(2) starting with 3.3 but
+@@ -1515,10 +1529,12 @@
+ 		: ${with_logincap='maybe'}
+ 		dnl future versions of NetBSD (> 2.0) may include pam
+ 		: ${with_pam='maybe'}
++		# We really want libutil.
++		SUDO_LIBS="${SUDO_LIBS} -lutil"
+ 		;;
+     *-*-dragonfly*)
+ 		if test "$with_skey" = "yes"; then
+-		     SUDO_LIBS="${SUDO_LIBS} -lmd"
++		     SUDO_LIBS="${SUDO_LIBS} -lutil -lmd"
+ 		fi
+ 		if test "$CHECKSHADOW" = "true"; then
+ 		    CHECKSHADOW="false"
+@@ -1895,16 +1911,6 @@
+ fi
+ 
+ dnl
+-dnl Some systems put login_cap(3) in libutil
+-dnl
+-if test "$with_logincap" = "yes"; then
+-    case "$OS" in
+-	freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
+-	;;
+-    esac
+-fi
+-
+-dnl
+ dnl PAM support.  Systems that might support PAM set with_pam=maybe
+ dnl and we do that actual tests here.
+ dnl

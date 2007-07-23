@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2006/05/31 18:22:26 ghen Exp $
+# $NetBSD: options.mk,v 1.12 2007/07/23 16:38:36 tls Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
@@ -14,6 +14,8 @@ PKG_SUGGESTED_OPTIONS=	skey
 .  include "../../mk/pam.buildlink3.mk"
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-pam
+.else
+CONFIGURE_ARGS+=	--without-pam
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
