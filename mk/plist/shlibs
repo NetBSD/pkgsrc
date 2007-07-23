@@ -1,4 +1,4 @@
-# $NetBSD: shlibs,v 1.5 2007/07/18 18:55:56 jlam Exp $
+# $NetBSD: shlibs,v 1.1 2007/07/23 15:23:48 jlam Exp $
 #
 # Generate a +SHLIBS script that updates the system run-time library
 # search paths database for the package.
