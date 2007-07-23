@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.27 2007/07/18 18:01:03 jlam Exp $
+# $NetBSD: plist.mk,v 1.28 2007/07/23 15:23:48 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -157,6 +157,13 @@ _SHLIB_AWKFILE.a.out=	${.CURDIR}/../../mk/plist/shlib-aout.awk
 _SHLIB_AWKFILE.dylib=	${.CURDIR}/../../mk/plist/shlib-dylib.awk
 _SHLIB_AWKFILE.none=	${.CURDIR}/../../mk/plist/shlib-none.awk
 
+# SHLIB_TYPE is the type of shared library supported by the platform.
+SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
+_SHLIB_TYPE_cmd=							\
+	${SETENV} ECHO=${TOOLS_ECHO:Q} FILE_CMD=${TOOLS_FILE_CMD:Q}	\
+		TEST=${TOOLS_TEST:Q} PKG_INFO_CMD=${PKG_INFO_CMD:Q}	\
+	${SH} ${.CURDIR}/../../mk/scripts/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
+
 ######################################################################
 
 # GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
@@ -251,3 +258,33 @@ INFO_FILES_cmd=								\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |		\
 	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif
+
+# LDCONFIG_ADD_CMD
+# LDCONFIG_REMOVE_CMD
+#	Command-line to be invoked to update the system run-time library
+#	search paths database when adding and removing a package.
+#
+#	Default value: ${LDCONFIG}
+#
+LDCONFIG_ADD_CMD?=		${_LDCONFIG_ADD_CMD.${OPSYS}}
+LDCONFIG_REMOVE_CMD?=		${_LDCONFIG_REMOVE_CMD.${OPSYS}}
+_LDCONFIG_ADD_CMD.${OPSYS}?=	${LDCONFIG}
+_LDCONFIG_REMOVE_CMD.${OPSYS}?=	${LDCONFIG}
+FILES_SUBST+=			LDCONFIG_ADD_CMD=${LDCONFIG_ADD_CMD:Q}
+FILES_SUBST+=			LDCONFIG_REMOVE_CMD=${LDCONFIG_REMOVE_CMD:Q}
+
+.if ${SHLIB_TYPE} == "a.out"
+RUN_LDCONFIG?=	yes
+.else
+RUN_LDCONFIG?=	no
+.endif
+
+_INSTALL_SHLIBS_FILE=		${_PKGINSTALL_DIR}/shlibs
+.if !empty(RUN_LDCONFIG:M[Yy][Ee][Ss])
+_INSTALL_UNPACK_TMPL+=		${_INSTALL_SHLIBS_FILE}
+.endif
+
+${_INSTALL_SHLIBS_FILE}: ../../mk/plist/shlibs
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shlibs > ${.TARGET}

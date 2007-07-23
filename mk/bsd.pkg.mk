@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1914 2007/07/20 14:25:03 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1915 2007/07/23 15:23:46 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -432,23 +432,14 @@ USE_TOOLS+=	expr
 USE_TOOLS+=	tee tsort
 .endif
 
+# INSTALL/DEINSTALL script framework
+.include "${.PARSEDIR}/pkginstall/bsd.pkginstall.mk"
+
 # Locking
 .include "${.PARSEDIR}/internal/locking.mk"
 
 # Tools
 .include "${.PARSEDIR}/tools/bsd.tools.mk"
-
-# SHLIB_TYPE
-# 	The type of shared library supported by the platform.
-#
-SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
-_SHLIB_TYPE_cmd=	\
-	${SETENV} ECHO=${TOOLS_ECHO:Q} FILE_CMD=${TOOLS_FILE_CMD:Q}	\
-		TEST=${TOOLS_TEST:Q} PKG_INFO_CMD=${PKG_INFO_CMD:Q}	\
-	${SH} ${PKGSRCDIR}/mk/scripts/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
-
-# INSTALL/DEINSTALL script framework
-.include "${.PARSEDIR}/pkginstall/bsd.pkginstall.mk"
 
 # Barrier
 .include "${.PARSEDIR}/bsd.pkg.barrier.mk"
