@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.27 2007/07/18 18:01:02 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.28 2007/07/23 15:23:47 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -685,36 +685,6 @@ ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
-
-# LDCONFIG_ADD_CMD
-# LDCONFIG_REMOVE_CMD
-#	Command-line to be invoked to update the system run-time library
-#	search paths database when adding and removing a package.
-#
-#	Default value: ${LDCONFIG}
-#
-LDCONFIG_ADD_CMD?=		${_LDCONFIG_ADD_CMD.${OPSYS}}
-LDCONFIG_REMOVE_CMD?=		${_LDCONFIG_REMOVE_CMD.${OPSYS}}
-_LDCONFIG_ADD_CMD.${OPSYS}?=	${LDCONFIG}
-_LDCONFIG_REMOVE_CMD.${OPSYS}?=	${LDCONFIG}
-FILES_SUBST+=			LDCONFIG_ADD_CMD=${LDCONFIG_ADD_CMD:Q}
-FILES_SUBST+=			LDCONFIG_REMOVE_CMD=${LDCONFIG_REMOVE_CMD:Q}
-
-.if ${SHLIB_TYPE} == "a.out"
-RUN_LDCONFIG?=	yes
-.else
-RUN_LDCONFIG?=	no
-.endif
-
-_INSTALL_SHLIBS_FILE=		${_PKGINSTALL_DIR}/shlibs
-.if !empty(RUN_LDCONFIG:M[Yy][Ee][Ss])
-_INSTALL_UNPACK_TMPL+=		${_INSTALL_SHLIBS_FILE}
-.endif
-
-${_INSTALL_SHLIBS_FILE}: ../../mk/pkginstall/shlibs
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shlibs > ${.TARGET}
 
 # FONTS_DIRS.<type> are lists of directories in which the font databases
 #	are updated.  If this is non-empty, then the appropriate tools is
