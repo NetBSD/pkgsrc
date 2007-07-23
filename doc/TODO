@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6525 2007/07/23 17:05:17 tls Exp $
+$NetBSD: TODO,v 1.6526 2007/07/23 23:46:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -277,6 +277,7 @@ Suggested package updates
 	o alee-ttf-11.2
 	o algae-4.3.6
 	o aliados-0.2.0
+	o allegro-4.2.2
 	o amanda-2.5.2p1
 	o amanda-client-2.5.0
 	o amanda-common-2.5.0
@@ -284,7 +285,7 @@ Suggested package updates
 	o amanda-server-2.5.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-9.54
-	o anthy-8700b
+	o anthy-9100 [pkg/36675]
 	o anjuta-2.2.0
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -353,6 +354,7 @@ Suggested package updates
 	o bzr-0.18
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
+	o cairomm-1.4.2
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
@@ -420,6 +422,7 @@ Suggested package updates
 	o dnsmasq-2.39
 	o dnstop-20070307
 	o dnstracer-1.8
+	o docbook-xsl-1.73.0
 	o doxygen-1.5.2
 	o dpkg-1.13.25
 	o drscheme-370
@@ -451,7 +454,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o epic4-2.6
 	o epstool-3.08
-	o eric3-4.0.0 [now called eric4]
+	o eric3-4.0.1 [now called eric4]
 	o erlang-11.3
 	o erlang-doc-11.3
 	o erlang-man-11.3
@@ -499,7 +502,7 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.10
-	o gcc-4.2.0
+	o gcc-4.2.1
 	o gcc-ssp-3.4.4
 	o gcin-1.3.4
 	o gcombust-0.1.55
@@ -521,6 +524,7 @@ Suggested package updates
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
 	o gimp-ufraw-0.11 [pkg/36315]
+	o gkrellm-2.3.0
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
@@ -528,6 +532,7 @@ Suggested package updates
 	o glchess-1.0.5
 	o global-5.6
 	o glpk-4.19
+	o gmime-2.2.10
 	o gmp3info-0.8.5a
 	o gmpc-0.15.1
 	o gnet1-1.1.9
@@ -610,7 +615,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-5.1.5
+	o hylafax-5.1.6
 	o i2ocfg-1.1
 	o ical-2.3.2
 	o icdprog-0.5
@@ -619,7 +624,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ikiwiki-1.47
-	o imap-uw-2006j1
+	o imap-uw-2006j2
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
 	o instiki-0.11pl1
@@ -649,6 +654,7 @@ Suggested package updates
 	o jigdo-0.7.3
 	o jools-1.0
 	o jwhois-4.0
+	o k3b-1.0.3
 	o kadu-0.5.0
 	o kapooka-0.3
 	o kazehakase-0.4.6
@@ -817,7 +823,7 @@ Suggested package updates
 	o ntp4-4.2.4
 	o nulib2-220
 	o nut-12.0 [pkg/34466]
-	o nut-12.5
+	o nut-12.6
 	o nxtvepg-2.7.7
 	o objc-3.2.8
 	o ocaml-3.10.0
@@ -854,6 +860,7 @@ Suggested package updates
 	o p5-CGI-Application-4.06
 	o p5-CGI-Minimal-1.25
 	o p5-Cache-Memcached-1.15
+	o p5-Class-Autouse-1.28
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
@@ -916,7 +923,7 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
-	o p5-Test-Inline-2.204
+	o p5-Test-Inline-2.205
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
@@ -925,10 +932,12 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
+	o p5-Want-0.15
 	o p5-XML-RAI-1.04
 	o p5-XML-RSS-1.31
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
+	o p5-libwww-5.806
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
@@ -962,6 +971,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
+	o phpmyadmin-2.10.3
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -970,7 +980,7 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
 	o pinfo-0.6.9
-	o pioneers-0.10.2
+	o pioneers-0.11.1
 	o pircbot-1.4.4
 	o pkg_select-20051209
 	o pload-0.9.5
@@ -1164,10 +1174,12 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
+	o sudo-1.6.9
 	o sunbird-0.5
 	o suse_base-10.2
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
+	o sylpheed-2.4.4
 	o sylpheed-claws-2.10.0 [now claws-mail]
 	o sympa-5.3
 	o sysinfo-4.2.2
@@ -1176,7 +1188,7 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.0.1
+	o tcpreplay-3.1.1
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1240,7 +1252,7 @@ Suggested package updates
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
-	o wcalc-2.2.2
+	o wcalc-2.3
 	o wdm-1.28
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
@@ -1307,7 +1319,7 @@ Suggested package updates
 	o xscreensaver-5.03
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-227
+	o xterm-228
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
