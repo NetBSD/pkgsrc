@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/05/27 03:22:32 reed Exp $
+# $NetBSD: Makefile,v 1.41 2007/07/24 13:46:45 joerg Exp $
 
 DISTNAME=	dillo-0.8.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,9 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-dlgui
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+REPLACE_PERL+=	dpid/dpidc
+USE_TOOLS+=	perl:run
 
 EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc.default ${PKG_SYSCONFDIR}/dillorc
