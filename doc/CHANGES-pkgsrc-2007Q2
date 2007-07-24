@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.3 2007/07/21 01:19:38 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.4 2007/07/24 21:29:42 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -13,5 +13,15 @@ Pullup ticket 2128 - requested by joerg
 build fix for p5-GTop
 Pullup ticket 2130 - requested by martti
 bugfix update for vim
+Pullup ticket 2131 - requested by lkundrak
+security update for flac123
+Pullup ticket 2133 - requested by lkundrak
+security update for gaim-encryption
+Pullup ticket 2134 - requested by lkundrak
+security fix for gdb
+Pullup ticket 2135 - requested by tron
+security update for phpmyadmin
+Pullup ticket 2138 - requested by taca
+security update for p5-Net-DNS
 Pullup ticket 2142 - requested by joerg
 remove PKG_TOOLS_PREFIX handling from bootstrap tools
