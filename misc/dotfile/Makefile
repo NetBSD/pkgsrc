@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/12/01 20:41:22 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2007/07/24 13:58:35 joerg Exp $
 
 DISTNAME=	dotfile-2.4.1
 PKGREVISION=	2
@@ -22,11 +22,12 @@ GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
 
+INSTALLATION_DIRS=	bin share/doc/${PKGNAME_NOREV}
+
 pre-install:
 	rm -f ${WRKSRC}/Generator/makeHelp.orig
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME_NOREV}
 	cd ${WRKSRC:Q}/Doc && ${PAX} -rw . ${PREFIX}/share/doc/${PKGNAME_NOREV}
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
