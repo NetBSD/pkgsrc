@@ -83,6 +83,7 @@ elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
 elinks-root-exec	Allow elinks to run as root.
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
+epoll
 esound			Enable support for the Enlightment Sound Daemon.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
@@ -156,6 +157,12 @@ imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 imlib2-amd64		Enable amd64 speedups.
 inet6			Enable support for IPv6.
+inspircd-remoteinet6	Enable remote includes over IPv6.
+inspircd-sqlauth	Enable connections to be tied into a database table.
+inspircd-sqllog		Enable logging of network-wide data for your network into a database.
+inspircd-sqloper	Enable storage of oper credentials in an SQL table.
+inspircd-sqlutils	Enable developer utilities which allow certain other SQL modules to be implemented easily.
+inspircd-ziplinks	Compress data before transmitting it between servers.
 iodbc			Enable ODBC support via iODBC.
 ipa-memfunc-debug	Enable ipa_memfunc debugging.
 ipa-without-autorules	Disable dynamic rules support.
