@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6526 2007/07/23 23:46:59 wiz Exp $
+$NetBSD: TODO,v 1.6527 2007/07/24 18:27:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1128,6 +1128,7 @@ Suggested package updates
 	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
+	o seamonkey-1.1.3
 	o sendfile-20010424
 	o ser-0.9.6
 	o sharity-3.3
@@ -1199,6 +1200,7 @@ Suggested package updates
 	o texi2html-1.78
 	o texmaker-1.6
 	o tfmxplay-1.1.6
+	o thunderbird-2.0.0.5
 	o tile-0.7.4
 	o tileworld-1.3.0
 	o tinyproxy-1.7.0
@@ -1210,7 +1212,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o tor-0.1.2.14
+	o tor-0.1.2.15
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
