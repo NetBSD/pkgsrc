@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 21:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/24 17:23:34 jschauma Exp $
 
-DISTNAME=	ipcalc-0.40
+DISTNAME=	ipcalc-0.41
 CATEGORIES=	net
 MASTER_SITES=	http://jodies.de/ipcalc-archive/
 
