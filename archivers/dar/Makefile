@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/03/18 04:36:23 dsainty Exp $
+# $NetBSD: Makefile,v 1.26 2007/07/24 14:23:26 joerg Exp $
 
 DISTNAME=	dar-2.3.3
 CATEGORIES=	archivers sysutils
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-upx
 CONFIGURE_ARGS+=	--enable-examples
 CONFIGURE_ARGS+=	doxygen=no
 
+CHECK_INTERPRETER_SKIP+=	share/dar/samples
 REPLACE_PERL+=		doc/samples/dar_backup
 REPLACE_BASH+=		doc/samples/*.bash doc/samples/clust*.sh
 # No extra dependencies, since these are only examples.
