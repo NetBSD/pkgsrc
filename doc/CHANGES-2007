@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1616 2007/07/24 20:17:01 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1617 2007/07/25 00:11:22 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2977,3 +2977,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/ktorrent to 2.2 [abs 2007-07-22]
 	Updated security/sudo to 1.6.9 [tls 2007-07-23]
 	Added chat/inspircd version 1.1.10 [adrianp 2007-07-24]
+	Added games/velena version 1.0 [roland 2007-07-25]
