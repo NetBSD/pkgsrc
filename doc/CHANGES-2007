@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1619 2007/07/25 10:55:19 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1620 2007/07/25 15:57:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2981,3 +2981,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/k3b to 1.0.3 [markd 2007-07-25]
 	Updated chat/konversation to 1.0.1nb4 [markd 2007-07-25]
 	Updated www/lighttpd to 1.4.16 [joerg 2007-07-25]
+	Updated x11/libXcomposite to 0.4.0 [joerg 2007-07-25]
+	Updated x11/compositeproto to 0.4 [joerg 2007-07-25]
