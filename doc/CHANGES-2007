@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1620 2007/07/25 15:57:59 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1621 2007/07/25 16:43:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2983,3 +2983,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/lighttpd to 1.4.16 [joerg 2007-07-25]
 	Updated x11/libXcomposite to 0.4.0 [joerg 2007-07-25]
 	Updated x11/compositeproto to 0.4 [joerg 2007-07-25]
+	Updated mail/sylpheed to 2.4.4 [xtraeme 2007-07-25]
