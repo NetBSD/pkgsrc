@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6529 2007/07/25 16:43:10 xtraeme Exp $
+$NetBSD: TODO,v 1.6530 2007/07/25 23:14:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ Suggested package updates
 	o bmon-2.1.0
 	o bos-2.0.1
 	o boson-0.13
-	o botan-1.6.1
+	o botan-1.6.3
 	o btpd-0.12
 	o bugzilla-3.0
 	o bwidget-1.7.0
@@ -540,6 +540,7 @@ Suggested package updates
 	o gnome-build-0.1.7
 	o gnome-games-2.18.2.1
 	o gnu-crypto-2.1.0
+	o gnumeric-current-1.7.11
 	o gnupg2-2.0.5
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
@@ -560,6 +561,7 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
+	o goffice-0.4.2
 	o gogo-3.11p1
 	o gossip-0.26
 	o gourmet-0.13.3
@@ -686,6 +688,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libelf-0.8.9
+	o libetpan-0.50
 	o libextractor-0.5.18a
 	o libflash-0.4.13
 	o libgda-3.0.1
@@ -710,6 +713,7 @@ Suggested package updates
 	o libopensync-0.30
 	o libosip-3.0.2
 	o libprelude-0.9.14
+	o librsvg-2.18.0
 	o libshout-2.2.2
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -897,6 +901,7 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MP3-Info-1.22
+	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
@@ -1037,7 +1042,7 @@ Suggested package updates
 	o py-gnutls-0.2.1
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
-	o py-ldap-2.3
+	o py-ldap-2.3.1
 	o py-libxml2-2.6.28
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.17
