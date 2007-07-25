@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6527 2007/07/24 18:27:37 wiz Exp $
+$NetBSD: TODO,v 1.6528 2007/07/25 02:53:59 markd Exp $
 
 Suggested new packages
 ======================
@@ -654,7 +654,6 @@ Suggested package updates
 	o jigdo-0.7.3
 	o jools-1.0
 	o jwhois-4.0
-	o k3b-1.0.3
 	o kadu-0.5.0
 	o kapooka-0.3
 	o kazehakase-0.4.6
