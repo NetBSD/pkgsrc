@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/25 00:11:10 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/25 00:19:33 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -11,7 +11,10 @@ MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.ce.unipr.it/~gbe/
 COMMENT=	Perfect-play engine for connect four
 
-#LICENSE=	public-domain
+LICENSE=		public-domain
+RESTRICTED=		You must not charge a fee for this software nor for any derived work in which this software is included.
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_OPTS_ZIP=	-LLaqo
 WRKSRC=			${WRKDIR}
