@@ -447,7 +447,7 @@
 <dt><span class="sect1"><a href="#ftp-distfiles">C.2. <code class="filename">distfiles</code>: The distributed source files</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages*</code>: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-source">C.6. <code class="filename">current</code>,
 <code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
@@ -10849,7 +10849,7 @@ Registering depends:.
 <dt><span class="sect1"><a href="#ftp-distfiles">C.2. <code class="filename">distfiles</code>: The distributed source files</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages*</code>: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-source">C.6. <code class="filename">current</code>,
 <code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
@@ -10893,20 +10893,26 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-packages"></a>C.5. <code class="filename">packages*</code>: Binary packages</h2></div></div></div>
-<p>These directories contain binary packages. Those
-	directories that have a branch name
-	(200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em>)
-	contain packages from that particular branch. The directory
-	<code class="filename">packages</code> contains binary packages from
-	pkgsrc-current. (However, this does not necessarily mean that
-	the packages are still current anymore.)</p>
-<p>Below the <code class="filename">packages*</code> directories are
-	directories that distinguish the packages by operating system
-	and version, the next directory level specifies the hardware
-	architecture.</p>
-<p>In each of the platform-specific directories, there is a
-	whole binary packages collection. It has a directory called
+<a name="ftp-packages"></a>C.5. <code class="filename">packages</code>: Binary packages</h2></div></div></div>
+<p>This directory contains binary packages for the various
+	platforms that are supported by pkgsrc.
+	Each subdirectory is of the form <em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>OSVERSION_TAG</code></em>. The meaning of these variables is:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="varname">OPSYS</code> is the name of the operating system for which the packages have been built,</p></li>
+<li><p><code class="varname">ARCH</code> is the hardware architecture,</p></li>
+<li><p><code class="varname">OSVERSION</code> is the version of the operating system,</p></li>
+<li><p><code class="varname">TAG</code> is either <code class="literal">200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code> for a stable branch, or <code class="literal">head</code> for packages built from the HEAD branch.</p></li>
+</ul></div>
+<p>The rationale for exactly this scheme is that the pkgsrc users looking for binary packages
+	can quickly click through the directories on the
+	server and find the best binary packages for their machines. Since they
+	usually know the operating system and the hardware architecture, OPSYS
+	and ARCH are placed first. After these choices, they can select the
+	best combination of OSVERSION and TAG together, since it is usually the
+	case that packages stay compatible between different version of the
+	operating system.</p>
+<p>In each of these directories, there is a
+	whole binary packages collection for a specific platform. It has a directory called
 	<code class="filename">All</code> which contains all binary packages.
 	Besides that, there are various category directories that
 	contain symbolic links to the real binary packages.</p>
