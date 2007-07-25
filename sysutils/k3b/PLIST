@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/03/18 13:25:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/07/25 02:33:03 markd Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -355,6 +355,8 @@ share/kde/apps/konqsidebartng/virtual_folders/services/videodvd.desktop
 share/kde/apps/konqueror/servicemenus/k3b_audiocd_rip.desktop
 share/kde/apps/konqueror/servicemenus/k3b_cd_copy.desktop
 share/kde/apps/konqueror/servicemenus/k3b_dvd_copy.desktop
+share/kde/apps/konqueror/servicemenus/k3b_handle_empty_cd.desktop
+share/kde/apps/konqueror/servicemenus/k3b_handle_empty_dvd.desktop
 share/kde/apps/konqueror/servicemenus/k3b_videodvd_rip.desktop
 share/kde/mimelnk/application/x-k3b.desktop
 share/kde/services/kfile_k3b.desktop
