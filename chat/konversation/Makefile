@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2007/01/26 03:49:32 markd Exp $
+# $NetBSD: Makefile,v 1.12 2007/07/25 02:44:10 markd Exp $
 #
 
 DISTNAME=	konversation-1.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat kde
 MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +27,12 @@ REPLACE_PERL+=		konversation/src/konversation-0.19-appearance.pl \
 			konversation/src/konversation-0.20-quickbuttons.pl
 REPLACE_BASH+=		konversation/scripts/mail
 USE_TOOLS+=		bash:run
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+DEPENDS+=		psmisc>=20.1:../../sysutils/psmisc
+.endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
