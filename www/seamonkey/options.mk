@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/06/16 01:14:48 dmcmahill Exp $
+# $NetBSD: options.mk,v 1.6 2007/07/25 13:13:09 gdt Exp $
 
 PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
 PKG_SUPPORTED_OPTIONS	= debug
@@ -31,7 +31,11 @@ CONFIGURE_ARGS+=	--enable-single-profile
 # See http://www.mozilla.org/foundation/trademarks/
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
-RESTRICTED=		Cannot redistribute builds with Official Branding at this moment, we need permission of The Mozilla Foundation for this.
+# XXX LICENSE=?
+# Does enabling official branding make the package non-Free?
+# Mozilla claims no: http://www.mozilla.org/foundation/trademarks/faq.html
+# The resulting binary package cannot be distributed, which seems non-Free.
+RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .endif
