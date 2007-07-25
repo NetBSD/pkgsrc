@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1621 2007/07/25 16:43:10 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1622 2007/07/25 17:15:24 he Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2984,3 +2984,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/libXcomposite to 0.4.0 [joerg 2007-07-25]
 	Updated x11/compositeproto to 0.4 [joerg 2007-07-25]
 	Updated mail/sylpheed to 2.4.4 [xtraeme 2007-07-25]
+	Updated textproc/po4a to 0.23nb3 [he 2007-07-25]
