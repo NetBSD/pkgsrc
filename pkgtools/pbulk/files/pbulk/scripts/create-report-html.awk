@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.5 2007/07/25 11:07:28 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.6 2007/07/25 15:12:53 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -123,9 +123,7 @@ BEGIN {
 		else if ($0 ~ "^BUILD_START_ISO=")
 			pkgsrc_build_start_iso = substr($0, 17)
 		else if ($0 ~ "^BUILD_END_ISO=")
-			pkgsrc_build_end_iso = substr($0, 14)
-		else if ($0 ~ "^BASE_URL=")
-			pkgsrc_base_url = substr($0, 10)
+			pkgsrc_build_end_iso = substr($0, 15)
 	}
 	close status_file
 
