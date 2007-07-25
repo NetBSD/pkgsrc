@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.19 2007/07/16 09:57:56 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.20 2007/07/25 15:01:46 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -446,31 +446,6 @@ is not present in the packing list,
 then it is used as a guide for moving (or copying, as necessary) files from
 the staging area into their final locations.
 .It
-If the package contains an
-.Ar mtreefile
-file (see
-.Xr pkg_create 1 ) ,
-then mtree is invoked as:
-.Bd -filled -offset indent -compact
-.Cm mtree
-.Fl u
-.Fl f
-.Ar mtreefile
-.Fl d
-.Fl e
-.Fl p
-.Pa prefix
-.Ed
-where
-.Pa prefix
-is either the prefix specified with the
-.Fl p
-flag or, if no
-.Fl p
-flag was specified, the name of the first directory named by a
-.Cm @cwd
-directive within this package.
-.It
 If an
 .Ar install
 script exists for the package, it is executed with the following arguments:
@@ -636,8 +611,7 @@ package and running it after every
 .Xr pkg_info 1 ,
 .Xr mktemp 3 ,
 .Xr sysconf 3 ,
-.Xr pkgsrc 7 ,
-.Xr mtree 8
+.Xr pkgsrc 7
 .Sh AUTHORS
 .Bl -tag -width indent -compact
 .It "Jordan Hubbard"
