@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/25 00:11:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/25 22:55:35 rillig Exp $
 bin/velena
 share/doc/velena/README
+share/velena/white_ob.cn4
