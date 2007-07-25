@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
+$NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
 
---- xbattbar.c.orig	2001-02-02 16:25:29.000000000 +1100
-+++ xbattbar.c	2003-11-10 17:50:08.000000000 +1100
+--- xbattbar.c.orig	2001-02-02 06:25:29.000000000 +0100
++++ xbattbar.c	2007-07-25 17:03:43.000000000 +0200
 @@ -27,6 +27,14 @@
  
  #include <sys/types.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -583,39 +591,174 @@
+@@ -583,27 +591,161 @@
  #define _PATH_APM_CTLDEV       "/dev/apmctl"
  #define _PATH_APM_NORMAL       "/dev/apm"
  
@@ -89,10 +89,6 @@ $NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
  {
         int fd, r, p;
         struct apm_power_info info;
--
--       if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
--               fprintf(stderr, "xbattbar: cannot open apm device\n");
--               exit(1);
 +       int acpi;
 +       size_t ns;
 +       size_t cc;
@@ -107,22 +103,20 @@ $NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
 +	       fd = open(apmdev, O_RDONLY);
 +	       acpi = 1;
 +#endif
-        }
--
--       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
--               fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
++       }
 +       if (fd < 0) {
 +               fprintf(stderr, "xbattbar: cannot open %s device\n", apmdev);
-                exit(1);
-        }
++               exit(1);
++       }
  
--       close(fd);
+-       if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
+-               fprintf(stderr, "xbattbar: cannot open apm device\n");
 +       if (acpi) {
 +#ifdef HAVE_NETBSD_ACPI
 +		if ((ns = numsensors(fd)) == 0) {
 +		       fprintf(stderr, "xbattbar: no sensors found\n");
-+		       exit(1);
-+		}
+                exit(1);
+        }
 +		if (first) {
 +			cetds = (int *)malloc(ns * sizeof(int));
 +			etds = (envsys_tre_data_t *)malloc(ns * sizeof(envsys_tre_data_t));
@@ -132,36 +126,28 @@ $NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
 +				err(1, "Out of memory");
 +			}
 +		}
- 
--       ++elapsed_time;
++
 +		fillsensors(fd, etds, ebis, ns);
  
--       /* get current remoain */
--       if (info.battery_life > 100) {
--               /* some APM BIOSes return values slightly > 100 */
--               r = 100;
 +#endif
-        } else {
--               r = info.battery_life;
++       } else {
 +
 +	       memset(&info, 0, sizeof(info));
-+	       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
-+		       fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
-+		       exit(1);
-+	       }
+        if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
+                fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
+                exit(1);
         }
++       }
  
--       /* get AC-line status */
--       if (info.ac_state == APM_AC_ON) {
--               p = APM_AC_ON;
-+       close(fd);
-+
-+       ++elapsed_time;
-+
+        close(fd);
+ 
+        ++elapsed_time;
+ 
+-       /* get current remoain */
 +       if (acpi) {
 +#ifdef HAVE_NETBSD_ACPI
 +		int32_t rtot = 0, maxtot = 0;
-+		p = APM_AC_ON;
++		p = APM_AC_OFF;
 +		for (i = 0 ; i < ns ; i++) {
 +			if ((etds[i].validflags & ENVSYS_FCURVALID) == 0)
 +				continue;
@@ -185,28 +171,22 @@ $NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
 +			if (ebis[i].units == ENVSYS_INDICATOR &&
 +			    etds[i].cur.data_s &&
 +			    strncmp(ebis[i].desc, "acpibat", 7) == 0 &&
-+			    strcmp(&ebis[i].desc[cc - 11], "discharging") == 0) {
-+				p = APM_AC_OFF;
++			    strcmp(&ebis[i].desc[cc - 8], "charging") == 0) {
++				p = APM_AC_ON;
 +			}
 +		}
 +		r = (rtot * 100.0) / maxtot;
 +#endif
-        } else {
--               p = APM_AC_OFF;
++       } else {
 +	       /* get current remain */
-+	       if (info.battery_life > 100) {
-+		       /* some APM BIOSes return values slightly > 100 */
-+		       r = 100;
-+	       } else {
-+		       r = info.battery_life;
-+	       }
-+
-+	       /* get AC-line status */
-+	       if (info.ac_state == APM_AC_ON) {
-+		       p = APM_AC_ON;
-+	       } else {
-+		       p = APM_AC_OFF;
-+	       }
+        if (info.battery_life > 100) {
+                /* some APM BIOSes return values slightly > 100 */
+                r = 100;
+@@ -617,6 +759,7 @@
+        } else {
+                p = APM_AC_OFF;
         }
++       }
  
         if (first || ac_line != p || battery_level != r) {
+                first = 0;
