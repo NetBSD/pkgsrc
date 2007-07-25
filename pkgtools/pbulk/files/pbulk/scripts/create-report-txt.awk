@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.3 2007/07/20 19:39:34 joerg Exp $
+# $NetBSD: create-report-txt.awk,v 1.4 2007/07/25 15:12:53 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -69,7 +69,7 @@ BEGIN {
 		else if ($0 ~ "^BUILD_START_DIR=")
 			pkgsrc_build_start_dir = substr($0, 17)
 		else if ($0 ~ "^BUILD_END_ISO=")
-			pkgsrc_build_end_iso = substr($0, 14)
+			pkgsrc_build_end_iso = substr($0, 15)
 		else if ($0 ~ "^BASE_URL=")
 			pkgsrc_base_url = substr($0, 10)
 	}
@@ -127,7 +127,7 @@ BEGIN {
 	print "Build start: " pkgsrc_build_start_iso > txt_report
 	print "Build end:   " pkgsrc_build_end_iso > txt_report
 	print "" > txt_report
-	report_base_url = pkgsrc_base_url pkgsrc_build_start_dir
+	report_base_url = pkgsrc_base_url "/" pkgsrc_build_start_dir
 	print "Full report: " report_base_url "/meta/report.html" > txt_report
 	print "Machine readable version: " report_base_url "/meta/report.bz2" > txt_report
 	print "" > txt_report
