@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/07/25 00:19:33 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/25 22:55:35 rillig Exp $
 #
 
 DISTNAME=	veleng10
 PKGNAME=	velena-1.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.ce.unipr.it/~gbe/
 EXTRACT_SUFX=	.zip
@@ -21,8 +22,14 @@ WRKSRC=			${WRKDIR}
 MAKE_FILE=		makefile
 INSTALLATION_DIRS_FROM_PLIST=	yes
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_FILES.path=	connect4.h
+SUBST_SED.path=		-e 's,"white_ob.cn4","${PREFIX}/share/velena/white_ob.cn4",'
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/veleng ${DESTDIR}${PREFIX}/bin/velena
 	${INSTALL_DATA} ${WRKSRC}/readme ${DESTDIR}${PREFIX}/share/doc/velena/README
+	${INSTALL_DATA} ${WRKSRC}/white_ob.cn4 ${DESTDIR}${PREFIX}/share/velena/.
 
 .include "../../mk/bsd.pkg.mk"
