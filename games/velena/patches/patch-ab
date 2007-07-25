@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/07/25 00:11:10 rillig Exp $
+
+--- cmdline.c.orig	2007-07-25 01:53:41.000000000 +0200
++++ cmdline.c	2007-07-25 01:54:04.000000000 +0200
+@@ -51,7 +51,8 @@ void command_line_input(struct board *bo
+ 
+      do {
+         printf(">");   // Waiting for the user to enter the string
+-        gets(st);
++        if (fgets(st, sizeof(st), stdin) == NULL)
++            break;
+ 
+         if(st[0]=='q') flag = 0;   // if the string begins with 'q' we quit.
+         else {        
