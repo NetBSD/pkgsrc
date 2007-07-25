@@ -157,7 +157,7 @@ EENNVVIIRROONNMMEENNTT
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_create(1), pkg_info(1), mktemp(3),
-     pkgsrc(7), mtree(8)
+     pkgsrc(7)
 
 AAUUTTHHOORRSS
      Jordan Hubbard

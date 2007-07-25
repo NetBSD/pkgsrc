@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_create.1,v 1.9 2007/05/19 14:42:10 wiz Exp $
+.\" $NetBSD: pkg_create.1,v 1.10 2007/07/25 15:01:46 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -59,9 +59,6 @@
 .Ek
 .Bk -words
 .Op Fl L Ar SrcDir
-.Ek
-.Bk -words
-.Op Fl m Ar mtreefile
 .Ek
 .Bk -words
 .Op Fl n Ar preserve-file
@@ -206,24 +203,6 @@ and
 .Xr symlink 2
 to remove and re-link
 any symbolic links which are targeted at full path names.
-.It Fl m Ar mtreefile
-Run
-.Xr mtree 8
-with input from mtreefile before the package is installed.
-Mtree is invoked as
-.Cm mtree
-.Fl u
-.Fl f
-.Ar mtreefile
-.Fl d
-.Fl e
-.Fl p
-.Pa prefix ,
-where
-.Pa prefix
-is the name of the first directory named by a
-.Cm @cwd
-directive.
 .It Fl n Ar preserve-file
 The file is used to denote that the package should not be deleted.
 This is intended for use where the deletion of packages may present
@@ -469,17 +448,6 @@ directives are used, the directories are removed in the order specified.
 The
 .Pa name
 directory will not be removed unless it is empty.
-.It Cm @mtree Ar name
-Declare
-.Pa name
-as an
-.Xr mtree 8
-input file to be used at install time (see
-.Fl m
-above).
-Only the first
-.Cm @mtree
-directive is honored.
 .It Cm @display Ar name
 Declare
 .Pa name

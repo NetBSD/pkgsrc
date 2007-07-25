@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.12 2007/04/16 12:55:35 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.13 2007/07/25 15:01:46 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.12 2007/04/16 12:55:35 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.13 2007/07/25 15:01:46 joerg Exp $");
 #endif
 #endif
 
@@ -102,9 +102,6 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	}
 	if (Display) {
 		fprintf(totar, "%s\n", DISPLAY_FNAME);
-	}
-	if (Mtree) {
-		fprintf(totar, "%s\n", MTREE_FNAME);
 	}
 	if (BuildVersion) {
 		(void) fprintf(totar, "%s\n", BUILD_VERSION_FNAME);
@@ -364,12 +361,6 @@ pkg_perform(lpkg_head_t *pkgs)
 		add_plist(&plist, PLIST_IGNORE, NULL);
 		add_plist(&plist, PLIST_FILE, DISPLAY_FNAME);
 		add_plist(&plist, PLIST_DISPLAY, DISPLAY_FNAME);
-	}
-	if (Mtree) {
-		copy_file(Home, Mtree, MTREE_FNAME);
-		add_plist(&plist, PLIST_IGNORE, NULL);
-		add_plist(&plist, PLIST_FILE, MTREE_FNAME);
-		add_plist(&plist, PLIST_MTREE, MTREE_FNAME);
 	}
 	if (BuildVersion) {
 		copy_file(Home, BuildVersion, BUILD_VERSION_FNAME);
