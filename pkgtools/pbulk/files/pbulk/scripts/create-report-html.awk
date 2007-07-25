@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.4 2007/07/20 19:39:34 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.5 2007/07/25 11:07:28 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -165,7 +165,7 @@ BEGIN {
 	print "  <body>" > html_report
 	printf("    <h1> pkgsrc bulk build for %s</h1>\n", pkgsrc_platform) > html_report
 	printf("    <h2> Build start: %s</h2>\n", pkgsrc_build_start_iso) > html_report
-	printf("    <h2> Build end: %s</h2>\n", pkgsrc_build_end_iso)) > html_report
+	printf("    <h2> Build end: %s</h2>\n", pkgsrc_build_end_iso) > html_report
 	print "    <hr />" > html_report
 
 	all_pkgs = pkgs_done + pkgs_failed + pkgs_prefailed + pkgs_indirect_failed + pkgs_indirect_prefailed
