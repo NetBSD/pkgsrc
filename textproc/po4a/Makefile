@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/06/29 22:57:02 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/25 17:13:58 he Exp $
 #
 
 DISTNAME=		po4a-0.23
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		http://alioth.debian.org/download.php/1317/
 
@@ -21,6 +21,8 @@ PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/po4a/.packlist
 REPLACE_PERL=		msguntypot po4a po4a-gettextize po4a-normalize \
 			po4a-translate po4a-updatepo
+
+MAKE_ENV+=		COLUMNS=76
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
