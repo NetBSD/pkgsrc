@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2007/07/16 13:23:02 joerg Exp $
+# $NetBSD: Makefile,v 1.134 2007/07/25 15:01:45 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -13,7 +13,7 @@ CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 
@@ -24,10 +24,9 @@ CONFLICTS+=		audit-packages-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
 CONFIGURE_ARGS+=	--with-ftp="\"${FETCH_CMD}"\"
-CONFIGURE_ARGS+=	--with-mtree="\"${MTREE}"\"
 CONFIGURE_ARGS+=	--with-pax="\"${PAX}"\"
 CONFIGURE_ARGS+=	--with-tar="\"${TAR}"\"
-USE_TOOLS+=		mtree pax tar gzcat
+USE_TOOLS+=		pax:run tar:run gzcat:run
 
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\

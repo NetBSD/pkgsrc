@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([pkg_install], [20070416], [grant@NetBSD.org])
+AC_INIT([pkg_install], [20070725], [joerg@NetBSD.org])
 AC_CONFIG_SRCDIR([lib/plist.c])
 AC_CONFIG_HEADER(lib/config.h)
 
@@ -60,12 +60,6 @@ AC_ARG_WITH(pax,
 [ pax="$with_pax" ],
 [ pax='$(prefix)/bin/pax' ])
 AC_SUBST(pax)
-
-AC_ARG_WITH(mtree,
-[  --with-mtree=path       Path to mtree (PREFIX/sbin/mtree)],
-[ mtree="$with_mtree" ],
-[ mtree='$(sbindir)/mtree' ])
-AC_SUBST(mtree)
 
 dnl Checks for libraries.
 AC_CHECK_LIB(db, __db185_open, , AC_SEARCH_LIBS(dbopen, [db db1]))
