@@ -433,7 +433,7 @@ C. Directory layout of the pkgsrc FTP server
     C.2. distfiles: The distributed source files
     C.3. iso: Currently empty
     C.4. misc: Miscellaneous things
-    C.5. packages*: Binary packages
+    C.5. packages: Binary packages
     C.6. current, pkgsrc-200xQy: source packages
 
 D. Editing guidelines for the pkgsrc guide
@@ -8878,7 +8878,7 @@ C.1. bootstrap-pkgsrc: Bootstrap kits
 C.2. distfiles: The distributed source files
 C.3. iso: Currently empty
 C.4. misc: Miscellaneous things
-C.5. packages*: Binary packages
+C.5. packages: Binary packages
 C.6. current, pkgsrc-200xQy: source packages
 
 As in other big projects, the directory layout of pkgsrc is quite complex for
@@ -8910,21 +8910,34 @@ C.4. misc: Miscellaneous things
 This directory contains things that individual pkgsrc developers find worth
 publishing.
 
-C.5. packages*: Binary packages
+C.5. packages: Binary packages
 
-These directories contain binary packages. Those directories that have a branch
-name (200xQy) contain packages from that particular branch. The directory
-packages contains binary packages from pkgsrc-current. (However, this does not
-necessarily mean that the packages are still current anymore.)
+This directory contains binary packages for the various platforms that are
+supported by pkgsrc. Each subdirectory is of the form OPSYS/ARCH/OSVERSION_TAG.
+The meaning of these variables is:
 
-Below the packages* directories are directories that distinguish the packages
-by operating system and version, the next directory level specifies the
-hardware architecture.
+  * OPSYS is the name of the operating system for which the packages have been
+    built,
 
-In each of the platform-specific directories, there is a whole binary packages
-collection. It has a directory called All which contains all binary packages.
-Besides that, there are various category directories that contain symbolic
-links to the real binary packages.
+  * ARCH is the hardware architecture,
+
+  * OSVERSION is the version of the operating system,
+
+  * TAG is either 200xQy for a stable branch, or head for packages built from
+    the HEAD branch.
+
+The rationale for exactly this scheme is that the pkgsrc users looking for
+binary packages can quickly click through the directories on the server and
+find the best binary packages for their machines. Since they usually know the
+operating system and the hardware architecture, OPSYS and ARCH are placed
+first. After these choices, they can select the best combination of OSVERSION
+and TAG together, since it is usually the case that packages stay compatible
+between different version of the operating system.
+
+In each of these directories, there is a whole binary packages collection for a
+specific platform. It has a directory called All which contains all binary
+packages. Besides that, there are various category directories that contain
+symbolic links to the real binary packages.
 
 C.6. current, pkgsrc-200xQy: source packages
 
