@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1624 2007/07/26 05:39:24 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1625 2007/07/26 06:37:54 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/SDL_mixer to 1.2.8 [wiz 2007-07-26]
 	Updated net/SDL_net to 1.2.7 [wiz 2007-07-26]
 	Updated devel/SDL_ttf to 2.0.9 [wiz 2007-07-26]
+	Updated archivers/pbzip2 to 1.0.2 [roland 2007-07-26]
