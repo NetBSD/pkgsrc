@@ -28,10 +28,10 @@ WWAARRNNIINNGG
      _s_i_g_n_a_t_u_r_e_s _p_r_o_v_i_d_e_d _w_h_e_r_e _p_o_s_s_i_b_l_e _(_s_e_e _t_h_e --ss _o_p_t_i_o_n_)_, _o_r_, _f_a_i_l_i_n_g _t_h_a_t_,
      _u_s_e _t_h_e --MM _f_l_a_g _t_o _e_x_t_r_a_c_t _t_h_e _p_a_c_k_a_g_e _f_i_l_e_, _a_n_d _i_n_s_p_e_c_t _i_t_s _c_o_n_t_e_n_t_s _a_n_d
      _s_c_r_i_p_t_s _t_o _e_n_s_u_r_e _i_t _p_o_s_e_s _n_o _d_a_n_g_e_r _t_o _y_o_u_r _s_y_s_t_e_m_'_s _i_n_t_e_g_r_i_t_y_.  _P_a_y
-     _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L_, _+_D_E_I_N_S_T_A_L_L_, _+_R_E_Q_U_I_R_E_, _o_r
-     _+_M_T_R_E_E___D_I_R_S _f_i_l_e_s_, _a_n_d _i_n_s_p_e_c_t _t_h_e _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k
-     _f_o_r _s_e_t_u_i_d_)_, @@ddiirrrrmm_, @@eexxeecc_, _a_n_d @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e
-     pkg_info(_1) _c_o_m_m_a_n_d _t_o _e_x_a_m_i_n_e _t_h_e _p_a_c_k_a_g_e _f_i_l_e_.
+     _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L _o_r _+_D_E_I_N_S_T_A_L_L _f_i_l_e_s_, _a_n_d _i_n_s_p_e_c_t _t_h_e
+     _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k _f_o_r _s_e_t_u_i_d_)_, @@ddiirrrrmm_, @@eexxeecc_, _a_n_d
+     @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e pkg_info(_1) _c_o_m_m_a_n_d _t_o _e_x_a_m_i_n_e _t_h_e
+     _p_a_c_k_a_g_e _f_i_l_e_.
 
 OOPPTTIIOONNSS
      The following command line arguments are supported:
@@ -55,12 +55,11 @@ OOPPTTIIOONNSS
              removed.
 
      --ff      Force installation to proceed even if prerequisite packages are
-             not installed or the requirements script fails.  Although ppkkgg__aadddd
-             will still try to find and auto-install missing prerequisite
-             packages, a failure to find one will not be fatal.  This flag
-             also overrides the fatal error when the operating system or
-             architecture the package was built on differ from that of the
-             host.
+             not installed or the install script fails.  Although ppkkgg__aadddd will
+             still try to find and auto-install missing prerequisite packages,
+             a failure to find one will not be fatal.  This flag also over-
+             rides the fatal error when the operating system or architecture
+             the package was built on differ from that of the host.
 
      --II      If an installation script exists for a given package, do not exe-
              cute it.
@@ -226,20 +225,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 age was built with ABI dependency recommendations ignored, a
                 warning will be issued.
 
-           8.   If the package contains a _r_e_q_u_i_r_e script (see pkg_create(1)),
-                it is executed with the following arguments:
-
-                _p_k_g_-_n_a_m_e      The name of the package being installed
-
-                IINNSSTTAALLLL       Keyword denoting to the script that it is to run
-                              an installation requirements check.  (The key-
-                              word is useful only to scripts which serve mul-
-                              tiple functions).
-
-                If the _r_e_q_u_i_r_e script exits with a non-zero status code, the
-                installation is terminated.
-
-           9.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
+           8.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
                 the following arguments:
 
                 _p_k_g_-_n_a_m_e      The name of the package being installed.
@@ -251,12 +237,12 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 If the _i_n_s_t_a_l_l script exits with a non-zero status code, the
                 installation is terminated.
 
-           10.  If @@ooppttiioonn eexxttrraacctt--iinn--ppllaaccee is not present in the packing
+           9.   If @@ooppttiioonn eexxttrraacctt--iinn--ppllaaccee is not present in the packing
                 list, then it is used as a guide for moving (or copying, as
                 necessary) files from the staging area into their final loca-
                 tions.
 
-           11.  If an _i_n_s_t_a_l_l script exists for the package, it is executed
+           10.  If an _i_n_s_t_a_l_l script exists for the package, it is executed
                 with the following arguments:
 
                 _p_k_g___n_a_m_e      The name of the package being installed.
@@ -265,7 +251,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                               any actions needed after the package has been
                               installed.
 
-           12.  After installation is complete, a copy of the packing list,
+           11.  After installation is complete, a copy of the packing list,
                 _d_e_i_n_s_t_a_l_l script, description, and display files are copied
                 into _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_> for subsequent possible use by
                 pkg_delete(1).  Any package dependencies are recorded in the
@@ -273,24 +259,23 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 an alternate package database directory is specified, then it
                 overrides the _/_v_a_r_/_d_b_/_p_k_g path shown above).
 
-           13.  If the package is a depoted package, then add it to the
+           12.  If the package is a depoted package, then add it to the
                 default view.
 
-           14.  The staging area is deleted and the program terminates.
+           13.  The staging area is deleted and the program terminates.
 
-           15.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
+           14.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
                 that was moved aside before upgrading was started is now moved
                 back into place.
 
-     The _i_n_s_t_a_l_l and _r_e_q_u_i_r_e scripts are called with the environment variable
-     PKG_PREFIX set to the installation prefix (see the --pp option above).
-     This allows a package author to write a script that reliably performs
-     some action on the directory where the package is installed, even if the
-     user might change it with the --pp flag to ppkkgg__aadddd.  The scripts are also
-     called with the PKG_METADATA_DIR environment variable set to the location
-     of the _+_* meta-data files, and with the PKG_REFCOUNT_DBDIR environment
-     variable set to the location of the package reference counts database
-     directory.
+     The _i_n_s_t_a_l_l script is called with the environment variable PKG_PREFIX set
+     to the installation prefix (see the --pp option above).  This allows a
+     package author to write a script that reliably performs some action on
+     the directory where the package is installed, even if the user might
+     change it with the --pp flag to ppkkgg__aadddd.  The scripts are also called with
+     the PKG_METADATA_DIR environment variable set to the location of the _+_*
+     meta-data files, and with the PKG_REFCOUNT_DBDIR environment variable set
+     to the location of the package reference counts database directory.
 
 EENNVVIIRROONNMMEENNTT
      LOCALBASE   This is the location of the _v_i_e_w_b_a_s_e directory in which all

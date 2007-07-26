@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.20 2007/07/25 15:01:46 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.21 2007/07/26 11:30:55 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -65,11 +65,9 @@ option), or, failing that, use the
 flag to extract the package file, and inspect its contents and scripts
 to ensure it poses no danger to your system's integrity.
 Pay particular attention to any
-.Pa +INSTALL ,
-.Pa +DEINSTALL ,
-.Pa +REQUIRE ,
+.Pa +INSTALL
 or
-.Pa +MTREE_DIRS
+.Pa +DEINSTALL
 files, and inspect the
 .Pa +CONTENTS
 file for
@@ -118,7 +116,7 @@ after it had already been automatically installed, the mark is
 removed.
 .It Fl f
 Force installation to proceed even if prerequisite packages are not
-installed or the requirements script fails.
+installed or the install script fails.
 Although
 .Nm
 will still try to find and auto-install missing prerequisite packages,
@@ -407,24 +405,6 @@ is then checked for
 If the package was built with ABI dependency recommendations ignored,
 a warning will be issued.
 .It
-If the package contains a
-.Ar require
-script (see
-.Xr pkg_create 1 ) ,
-it is executed with the following arguments:
-.Bl -tag -width indentindent
-.It Ar pkg-name
-The name of the package being installed
-.It Cm INSTALL
-Keyword denoting to the script that it is to run an installation requirements
-check.
-(The keyword is useful only to scripts which serve multiple functions).
-.El
-.Pp
-If the
-.Ar require
-script exits with a non-zero status code, the installation is terminated.
-.It
 If the package contains an
 .Ar install
 script, it is executed with the following arguments:
@@ -483,9 +463,7 @@ back into place.
 .Pp
 The
 .Ar install
-and
-.Ar require
-scripts are called with the environment variable
+script is called with the environment variable
 .Ev PKG_PREFIX
 set to the installation prefix (see the
 .Fl p

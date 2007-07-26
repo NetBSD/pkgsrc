@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.11 2006/07/11 07:45:40 rillig Exp $ */
+/* $NetBSD: info.h,v 1.12 2007/07/26 11:30:55 joerg Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -38,7 +38,6 @@
 #define SHOW_PLIST		0x00004
 #define SHOW_INSTALL		0x00008
 #define SHOW_DEINSTALL		0x00010
-#define SHOW_REQUIRE		0x00020
 #define SHOW_PREFIX		0x00040
 #define SHOW_INDEX		0x00080
 #define SHOW_FILES		0x00100
