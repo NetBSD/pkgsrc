@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/02/26 11:55:18 obache Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/26 12:21:40 obache Exp $
 #
 
-DISTNAME=	ipa-2.0.3
+DISTNAME=	ipa-2.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://ipa-system.sourceforge.net/ \
 		http://www.mirrors.wiretapped.net/security/network-monitoring/ipa/ \
