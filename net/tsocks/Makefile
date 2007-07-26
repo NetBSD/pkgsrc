@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/09/17 11:45:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2007/07/26 12:27:18 rillig Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tsocks/}
 
@@ -28,8 +28,6 @@ SUBST_SED.tsocks=	-e "s|@SH@|${SH}|g" -e "s|@PREFIX@|${PREFIX}|g"
 post-extract:
 	${RM} -f ${WRKSRC}/config.cache
 	${CP} ${FILESDIR}/tsocks.sh ${WRKSRC}/tsocks
-
-post-configure: subst-tsocks
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tsocks ${PREFIX}/bin
