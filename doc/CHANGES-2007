@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1629 2007/07/26 12:30:30 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1630 2007/07/26 17:08:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3000,3 +3000,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/ipa to 2.0.4 [obache 2007-07-26]
 	Updated mail/thunderbird to 2.0.0.5 [ghen 2007-07-26]
 	Updated mail/thunderbird-gtk1 to 2.0.0.5 [ghen 2007-07-26]
+	Updated pkgtools/pkglint to 4.78 [abs 2007-07-26]
