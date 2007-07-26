@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1623 2007/07/25 23:41:27 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1624 2007/07/26 05:39:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -2986,3 +2986,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed to 2.4.4 [xtraeme 2007-07-25]
 	Updated textproc/po4a to 0.23nb3 [he 2007-07-25]
 	Updated devel/SDL to 1.2.12 [wiz 2007-07-25]
+	Updated graphics/SDL_image to 1.2.6 [wiz 2007-07-25]
+	Updated audio/SDL_mixer to 1.2.8 [wiz 2007-07-26]
+	Updated net/SDL_net to 1.2.7 [wiz 2007-07-26]
+	Updated devel/SDL_ttf to 2.0.9 [wiz 2007-07-26]
