@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.113 2006/10/23 09:19:32 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.114 2007/07/26 17:07:59 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -476,8 +476,7 @@ sub get_default_makefile_vars() {
         $default_vars->{OPSYS},
         $default_vars->{OS_VERSION},
         $default_vars->{MACHINE}
-      )
-      = (split);
+    ) = (split);
     if ( !$default_vars->{MACHINE} ) {
         die('Unable to extract machine from uname');
     }
@@ -868,8 +867,7 @@ sub parse_makefile_pkgsrc($) {
 
         # invoke make here as a last resort
         my ($pkgsrcdir) = ( $file =~ m:(/.*)/: );
-        my $pid =
-          open3( \*WTR, \*RDR, \*ERR,
+        my $pid = open3( \*WTR, \*RDR, \*ERR,
             "cd $pkgsrcdir ; ${conf_make} show-vars VARNAMES=PKGNAME" );
         if ( !$pid ) {
             warn "$file: Unable to run make: $!";
@@ -1283,7 +1281,7 @@ sub parse_eval_make_false($$) {
     my ( $false, $test );
 
     $false = 0;
-    $test  = parse_expand_vars_dumb( $line, $vars );
+    $test = parse_expand_vars_dumb( $line, $vars );
 
     # XXX This is _so_ wrong - need to parse this correctly
     $test =~ s/""/\r/g;
@@ -1294,21 +1292,42 @@ sub parse_eval_make_false($$) {
 
     # XXX Could do something with target
     while ( $test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/ ) {
-        my $var = $${vars}{$2};
+        my $testname = $1;
+        my $varname  = $2;
+        my $var;
+
+        # Implement (some of) make's :M modifier
+        if ( $varname =~ /^([^:]+):M(.+)$/ ) {
+            $varname = $1;
+            my $match = $2;
+
+            $var = $${vars}{$varname};
+            $var = parse_expand_vars( $var, $vars ) if defined $var;
+
+            $match =~ s/([.+])/\\$1/g;
+            $match =~ s/\*/.*/g;
+            $match =~ s/\?/./g;
+            $match = '^' . $match . '$';
+            $var = ( $var =~ /$match/ ) if defined $var;
+        }
+        else {
+            $var = $${vars}{$varname};
+            $var = parse_expand_vars( $var, $vars ) if defined $var;
+        }
 
         if ( defined $var && $var eq $magic_undefined ) {
             $var = undef;
         }
 
-        if ( $1 eq 'exists' ) {
-            $_ = ( -e $2 ) ? 1 : 0;
+        if ( $testname eq 'exists' ) {
+            $_ = ( -e $varname ) ? 1 : 0;
 
         }
-        elsif ( $1 eq 'defined' ) {
+        elsif ( $testname eq 'defined' ) {
             $_ = defined($var) ? 1 : 0;
 
         }
-        elsif ( $1 eq 'empty' ) {
+        elsif ( $testname eq 'empty' ) {
             $_ = ( ( not defined($var) or ( length($var) == 0 ) ) ? 1 : 0 );
 
         }
@@ -1316,7 +1335,7 @@ sub parse_eval_make_false($$) {
             $_ = 0;
         }
 
-        $test =~ s/$1\s*\([^()]+\)/$_/;
+        $test =~ s/$testname\s*\([^()]+\)/$_/;
         debug("conditional: update to $test\n");
     }
 
