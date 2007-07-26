@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.49 2007/07/25 15:01:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.50 2007/07/26 11:30:55 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.49 2007/07/25 15:01:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.50 2007/07/26 11:30:55 joerg Exp $");
 #endif
 #endif
 
@@ -823,22 +823,6 @@ ignore_replace_depends_check:
 	if (errc != 0)
 		goto bomb;
 
-	/* Look for the requirements file */
-	if (fexists(REQUIRE_FNAME)) {
-		warnx("package %s uses obsoleted require scripts", PkgName);
-		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
-		if (Verbose)
-			printf("Running requirements file first for %s.\n", PkgName);
-		if (!Fake && fexec("./" REQUIRE_FNAME, PkgName, "INSTALL", NULL)) {
-			warnx("package %s fails requirements %s", pkg,
-			    Force ? "installing anyway" : "- not installed");
-			if (!Force) {
-				errc = 1;
-				goto success;	/* close enough for government work */
-			}
-		}
-	}
-	
 	/* If we're really installing, and have an installation file, run it */
 	if (!NoInstall && fexists(INSTALL_FNAME)) {
 		(void) fexec(CHMOD_CMD, "+x", INSTALL_FNAME, NULL);	/* make sure */

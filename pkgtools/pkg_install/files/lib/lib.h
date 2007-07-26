@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.27 2007/07/25 15:01:47 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.28 2007/07/26 11:30:56 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -143,7 +143,6 @@ enum {
 #define DESC_FNAME		"+DESC"
 #define INSTALL_FNAME		"+INSTALL"
 #define DEINSTALL_FNAME		"+DEINSTALL"
-#define REQUIRE_FNAME		"+REQUIRE"
 #define REQUIRED_BY_FNAME	"+REQUIRED_BY"
 #define DISPLAY_FNAME		"+DISPLAY"
 #define MTREE_FNAME		"+MTREE_DIRS"

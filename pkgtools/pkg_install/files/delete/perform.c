@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.17 2007/07/20 22:22:52 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.18 2007/07/26 11:30:55 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.17 2007/07/20 22:22:52 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.18 2007/07/26 11:30:55 joerg Exp $");
 #endif
 #endif
 
@@ -740,17 +740,6 @@ pkg_do(char *pkg)
 	}
 	setenv(PKG_PREFIX_VNAME, p->name, 1);
 	setenv(PKG_METADATA_DIR_VNAME, LogDir, 1);
-	if (fexists(REQUIRE_FNAME)) {
-		if (Verbose)
-			printf("Executing 'require' script.\n");
-		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
-		if (fexec("./" REQUIRE_FNAME, pkg, "DEINSTALL", NULL)) {
-			warnx("package %s fails requirements %s", pkg,
-			    Force ? "" : "- not deleted");
-			if (!Force)
-				return 1;
-		}
-	}
 	/*
 	 * Ensure that we don't do VIEW-DEINSTALL action for old packages
 	 * or for the package in its depot directory.
