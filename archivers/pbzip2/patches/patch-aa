@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2007/07/26 06:37:30 rillig Exp $
+
+--- pbzip2.cpp.orig	2007-07-26 02:08:16.000000000 +0200
++++ pbzip2.cpp	2007-07-26 08:31:38.000000000 +0200
+@@ -129,7 +129,7 @@
+ #endif
+ 
+ #ifdef WIN32
+-#define PATH_SEP	'\'
++#define PATH_SEP	'\\'
+ #define usleep(x) Sleep(x/1000)
+ #define LOW_DWORD(x)  ((*(LARGE_INTEGER *)&x).LowPart)
+ #define HIGH_DWORD(x) ((*(LARGE_INTEGER *)&x).HighPart)
