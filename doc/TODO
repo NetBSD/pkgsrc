@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6531 2007/07/25 23:41:27 wiz Exp $
+$NetBSD: TODO,v 1.6532 2007/07/26 05:39:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,10 +255,6 @@ Suggested package updates
 	o R-wle-0.9.3
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
-	o SDL_image-1.2.6
-	o SDL_mixer-1.2.8
-	o SDL_net-1.2.7
-	o SDL_ttf-2.0.9
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-75
