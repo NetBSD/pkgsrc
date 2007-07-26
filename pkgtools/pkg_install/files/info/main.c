@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.16 2006/06/27 23:36:14 hubertf Exp $	*/
+/*	$NetBSD: main.c,v 1.17 2007/07/26 11:30:56 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.16 2006/06/27 23:36:14 hubertf Exp $");
+__RCSID("$NetBSD: main.c,v 1.17 2007/07/26 11:30:56 joerg Exp $");
 #endif
 #endif
 
@@ -50,7 +50,7 @@ __RCSID("$NetBSD: main.c,v 1.16 2006/06/27 23:36:14 hubertf Exp $");
 #include "lib.h"
 #include "info.h"
 
-static const char Options[] = ".aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSuvVX";
+static const char Options[] = ".aBbcDde:fFhIiK:kLl:mNnpQ:qRsSuvVX";
 
 int     Flags = 0;
 enum which Which = WHICH_LIST;
@@ -177,10 +177,6 @@ main(int argc, char **argv)
 			Flags |= SHOW_REQBY;
 			break;
 
-		case 'r':
-			Flags |= SHOW_REQUIRE;
-			break;
-
 		case 's':
 			Flags |= SHOW_PKG_SIZE;
 			break;
@@ -197,7 +193,7 @@ main(int argc, char **argv)
 			Verbose = TRUE;
 			/* Reasonable definition of 'everything' */
 			Flags = SHOW_COMMENT | SHOW_DESC | SHOW_PLIST | SHOW_INSTALL |
-			    SHOW_DEINSTALL | SHOW_REQUIRE | SHOW_DISPLAY | SHOW_MTREE |
+			    SHOW_DEINSTALL | SHOW_DISPLAY | SHOW_MTREE |
 			    SHOW_REQBY | SHOW_BLD_DEPENDS | SHOW_DEPENDS | SHOW_PKG_SIZE | SHOW_ALL_SIZE;
 			break;
 
