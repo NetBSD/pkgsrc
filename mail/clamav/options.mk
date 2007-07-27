@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/05/31 05:26:46 martti Exp $
+# $NetBSD: options.mk,v 1.2.2.1 2007/07/27 23:06:55 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
-PKG_SUPPORTED_OPTIONS=	curl milter clamav-experimental
-PKG_SUGGESTED_OPTIONS=	curl
+PKG_SUPPORTED_OPTIONS=	milter clamav-experimental
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,14 +18,6 @@ CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
 CONFIGURE_ENV+=		ac_cv_header_libmilter_mfapi_h=no
 PLIST_SUBST+=		MILTER="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mcurl)
-.  include "../../www/curl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libcurl
-BUILDLINK_API_DEPENDS.curl+=curl>=7.10.0
-.else
-CONFIGURE_ARGS+=	--without-libcurl
 .endif
 
 .if !empty(PKG_OPTIONS:Mclamav-experimental)
