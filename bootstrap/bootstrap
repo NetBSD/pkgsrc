@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.100 2007/07/02 14:59:19 joerg Exp $
+# $NetBSD: bootstrap,v 1.101 2007/07/27 10:43:24 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -184,13 +184,13 @@ opsys_finish()
 	case "$opsys" in
 	IRIX)
 		if [ ! -z "$imakeopts" ]; then
-			echo "IMAKEOPTS+=		$imakeopts" >> ${MKCONF_EXAMPLE}
+			echo "IMAKEOPTS+=		$imakeopts" >> ${TARGET_MKCONF}
 		fi
 		if [ `uname -r` -lt 6 ]; then
 		        echo_msg "Installing fake ldd script"
         		run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/fakeldd $prefix/sbin"
 			need_extras=yes
-			echo "LDD=			$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
+			echo "LDD=			$prefix/sbin/fakeldd" >> ${TARGET_MKCONF}
 		fi
 		;;
 	esac
@@ -232,6 +232,18 @@ mkdir_p()
 	for dir in $@; do
 		run_cmd "$install_sh -d -o $user -g $group $dir"
 	done
+}
+
+mkdir_p_early()
+{
+	if [ ! -d "$1" ]; then
+		if mkdir -p "$1"; then
+			:
+		else
+			echo_msg "mkdir $1 exited with status $?"
+			die "aborted."
+		fi
+	fi
 }
 
 copy_src()
@@ -513,6 +525,12 @@ OSF1)
 	;;
 esac
 
+if [ -z "$fetch_cmd" ]; then
+	need_ftp=yes
+else
+	need_ftp=no
+fi
+
 # If "--full" is specified, then install all of the platform-independent
 # bootstrap software.
 #
@@ -522,6 +540,7 @@ yes)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
+	need_ftp=yes
 	;;
 esac
 
@@ -568,15 +587,7 @@ check_prog sedprog sed
 check_prog shprog sh
 check_prog whoamiprog whoami
 
-
-if [ ! -d ${wrkdir} ]; then
-	if mkdir ${wrkdir}; then
-		:
-	else
-		echo "Could not create the working directory \"${wrkdir}\". Try $0 -h.";
-		exit 1
-	fi
-fi
+mkdir_p_early ${wrkdir}
 if touch ${wrkdir}/.writeable; then
 	:
 else
@@ -606,10 +617,12 @@ if [ "$compiler" = "" ] && [ x"$check_compiler" = x"yes" ]; then
 	fi
 fi
 
+mkdir_p_early ${wrkdir}/bin
+
 # build install-sh
-run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' $pkgsrcdir/sysutils/install-sh/files/install-sh.in > $wrkdir/install-sh"
-run_cmd "$chmodprog +x $wrkdir/install-sh"
-install_sh="$shprog $wrkdir/install-sh"
+run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' $pkgsrcdir/sysutils/install-sh/files/install-sh.in > $wrkdir/bin/install-sh"
+run_cmd "$chmodprog +x $wrkdir/bin/install-sh"
+install_sh="$shprog $wrkdir/bin/install-sh"
 
 is_root
 if [ $? = 1 ]; then
@@ -671,240 +684,251 @@ if [ x"$needfnmatchh" = x"yes" ]; then
 fi
 
 # set up an example mk.conf file
-MKCONF_EXAMPLE=${wrkdir}/mk.conf.example
-export MKCONF_EXAMPLE
-echo_msg "Creating mk.conf.example in ${wrkdir}"
-echo "# Example ${sysconfdir}/mk.conf file produced by bootstrap-pkgsrc" > ${MKCONF_EXAMPLE}
-echo "# `date`" >> ${MKCONF_EXAMPLE}
-echo "" >> ${MKCONF_EXAMPLE}
-echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> ${MKCONF_EXAMPLE}
-echo "" >> ${MKCONF_EXAMPLE}
+TARGET_MKCONF=${wrkdir}/mk.conf.example
+echo_msg "Creating default mk.conf. in ${wrkdir}"
+echo "# Example ${sysconfdir}/mk.conf file produced by bootstrap-pkgsrc" > ${TARGET_MKCONF}
+echo "# `date`" >> ${TARGET_MKCONF}
+echo "" >> ${TARGET_MKCONF}
+echo ".ifdef BSD_PKG_MK	# begin pkgsrc settings" >> ${TARGET_MKCONF}
+echo "" >> ${TARGET_MKCONF}
 
 # IRIX64 needs to be set to IRIX, for example
 if [ "$set_opsys" = "yes" ]; then
-	echo "OPSYS=			$opsys" >> ${MKCONF_EXAMPLE}
+	echo "OPSYS=			$opsys" >> ${TARGET_MKCONF}
 fi
 
 if [ ! -z "$abi" ]; then
-	echo "ABI=			$abi" >> ${MKCONF_EXAMPLE}
+	echo "ABI=			$abi" >> ${TARGET_MKCONF}
 fi
 if [ "$compiler" != "" ]; then
-	echo "PKGSRC_COMPILER=	$compiler" >> ${MKCONF_EXAMPLE}
+	echo "PKGSRC_COMPILER=	$compiler" >> ${TARGET_MKCONF}
 fi
 
 # enable unprivileged builds if not root
 if [ "$ignoreusercheck" = "yes" ]; then
-	echo "UNPRIVILEGED=		yes" >> ${MKCONF_EXAMPLE}
+	echo "UNPRIVILEGED=		yes" >> ${TARGET_MKCONF}
 fi
 
 # save environment in example mk.conf
-echo "PKG_DBDIR=		$pkgdbdir" >> ${MKCONF_EXAMPLE}
-echo "LOCALBASE=		$prefix" >> ${MKCONF_EXAMPLE}
-echo "VARBASE=		$varbase" >> ${MKCONF_EXAMPLE}
+echo "PKG_DBDIR=		$pkgdbdir" >> ${TARGET_MKCONF}
+echo "LOCALBASE=		$prefix" >> ${TARGET_MKCONF}
+echo "VARBASE=		$varbase" >> ${TARGET_MKCONF}
 if [ "${sysconfdir}" != "${prefix}/etc" ]; then
-	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${MKCONF_EXAMPLE}
+	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${TARGET_MKCONF}
 fi
-echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${MKCONF_EXAMPLE}
-echo "PKGMANDIR=		$pkgmandir" >> ${MKCONF_EXAMPLE}
-echo "" >> ${MKCONF_EXAMPLE}
+echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${TARGET_MKCONF}
+echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
+echo "" >> ${TARGET_MKCONF}
 
-# create directories
-mkdir_p $prefix $pkgdbdir $prefix/sbin
-mkdir_p $mandir/man1 $mandir/cat1
-mkdir_p $mandir/man8 $mandir/cat8
+cp ${TARGET_MKCONF} $wrkdir/mk.conf
+BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
 
-# bootstrap make and *.mk files
-mkdir_p $prefix/share/mk $prefix/lib
-copy_src $pkgsrcdir/pkgtools/bootstrap-mk-files/files mk-files
+# sbin is used by pkg_install, share/mk by bootstrap-mk-files
+mkdir_p $wrkdir/sbin $wrkdir/share/mk
+mkdir_p_early ${wrkdir}
 
-(
-cd ${wrkdir}/mk-files
-for file in bsd.* sys.mk; do
-	[ ! -f mods/$opsys.$file ] ||
-	run_cmd "$cpprog mods/$opsys.$file $file"
-done
-if [ -f mods/$opsys.own.mk.in ]; then
-	own_mk=mods/$opsys.own.mk.in
-else
-	own_mk=mods/bsd.own.mk.in
-fi
-run_cmd "$sedprog -e 's|@ROOT_GROUP@|'$root_group'|g;s|@ROOT_USER@|'$root_user'|g;s|@SYSCONFDIR@|'$sysconfdir'|g' $own_mk > bsd.own.mk"
-run_cmd "$cpprog bsd.* sys.mk $prefix/share/mk"
-)
-	
 if [ "$need_bsd_install" = "yes" ]; then
-	echo_msg "Installing BSD compatible install script"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
-	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.install?=	$wrkdir/bin/install-sh" >> ${BOOTSTRAP_MKCONF}
 fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/strip-sh $prefix/bin/strip"
-	echo "TOOLS_PLATFORM.strip?=		$prefix/bin/strip" >> ${MKCONF_EXAMPLE}
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/strip-sh $wrkdir/bin/strip"
+	echo "TOOLS_PLATFORM.strip?=		$prefix/bin/strip" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.strip?=		$wrkdir/bin/strip" >> ${BOOTSTRAP_MKCONF}
 	need_extras=yes
 fi
 
 if [ "$need_mkdir" = "yes" -a -z "$MKDIR" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/mkdir-sh $prefix/bin/mkdir-sh"
-	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/mkdir-sh $wrkdir/bin/mkdir-sh"
+	echo "TOOLS_PLATFORM.mkdir?=		$prefix/bin/mkdir-sh -p" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.mkdir?=		$wrkdir/bin/mkdir-sh -p" >> ${BOOTSTRAP_MKCONF}
 	need_extras=yes
 fi
 
 if [ "$need_xargs" = "yes" ]; then
 	echo_msg "Installing fixed xargs script"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/xargs-sh $prefix/bin/xargs"
-	echo "TOOLS_PLATFORM.xargs?=		$prefix/bin/xargs" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.xargs?=		$prefix/bin/xargs" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.xargs?=		$wrkdir/bin/xargs" >> ${BOOTSTRAP_MKCONF}
 	need_extras=yes
 fi
 
-echo_msg "Installing bmake"
-copy_src $pkgsrcdir/devel/bmake/files bmake
-run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk" $bmakexargs)"
-run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
-run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/bmake/bmake.1 $mandir/man1/bmake.1"
+echo_msg "Bootstrapping mk-files"
+run_cmd "(cd ${pkgsrcdir}/pkgtools/bootstrap-mk-files/files && env CP=${cpprog} \
+ OPSYS=${opsys} MK_DST=${wrkdir}/share/mk ROOT_GROUP=${root_group} \
+ROOT_USER=${root_user} SED=${sedprog} SYSCONFDIR=${sysconfdir} \
+$shprog ./bootstrap.sh)"
 
-bmake="$prefix/bin/bmake $make_quiet_flags"
+echo_msg "Bootstrapping bmake"
+copy_src $pkgsrcdir/devel/bmake/files bmake
+run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o $opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
+run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $wrkdir/bin/bmake"
+
+bmake="$wrkdir/bin/bmake $make_quiet_flags"
 
 # bootstrap awk if necessary
 case "$need_awk" in
-yes)	echo_msg "Installing awk"
+yes)	echo_msg "Bootstrapping awk"
 	copy_src $pkgsrcdir/lang/nawk/files awk
 	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
 	run_cmd "(cd $wrkdir/awk && $bmake -f Makefile CC=\"${CC}\" CFLAGS=\"${CFLAGS}\")"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $prefix/bin/nawk"
-	run_cmd "$install_sh -c -o $user -g $group -m 644 $wrkdir/awk/nawk.1 $mandir/man1/nawk.1"
-	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${MKCONF_EXAMPLE}
-	BSTRAP_ENV="AWK=\"$prefix/bin/nawk\" $BSTRAP_ENV"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/awk/a.out $wrkdir/bin/nawk"
+	echo "TOOLS_PLATFORM.awk?=		$prefix/bin/nawk" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.awk?=		$wrkdir/bin/nawk" >> ${BOOTSTRAP_MKCONF}
 	;;
 esac
 
 # bootstrap sed if necessary
 case "$need_sed" in
-yes)	echo_msg "Installing sed"
+yes)	echo_msg "Bootstrapping sed"
 	copy_src $pkgsrcdir/textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake && $bmake install)"
-	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
-	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake)"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/sed/sed $wrkdir/bin/sed"
+	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
 	;;
 esac
 
-if [ -z "$fetch_cmd" ]; then
-	need_ftp=yes
-else
-	need_ftp=no
-fi
-
-case "$need_ftp" in
-yes)	# bootstrap tnftp
-	fetch_cmd="$prefix/bin/ftp"
-	case "$DEBIAN" in
-	yes)
-		LIBS="-lncurses"
-		;;
-	esac
-	echo_msg "Installing tnftp"
-	copy_src $pkgsrcdir/net/tnftp/files tnftp
-	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV CPPFLAGS=\"$CPPFLAGS $tnftpxflags\" $shprog ./configure $configure_quiet_flags --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $sedprog -e 's|-ledit|../libedit/libedit.a|' < src/Makefile > src/Makefile.tmp && mv src/Makefile.tmp src/Makefile && $bmake && (cd src && $bmake install))"
-	;;
-esac
-
-pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
-
-FETCH_CMD="$fetch_cmd"
-export FETCH_CMD
-echo "FETCH_CMD=			$fetch_cmd" >> ${MKCONF_EXAMPLE}
-
-# we often need NetBSD's pax as well, nowadays, to make binary packages
 case "$need_pax" in
-yes)	echo_msg "Installing pax"
-	copy_src $pkgsrcdir/archivers/pax/files pax
-	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && $bmake install)"
-	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${MKCONF_EXAMPLE}
-	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
+yes)
+	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${BOOTSTRAP_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${BOOTSTRAP_MKCONF}
 	;;
 *)
-	pkg_install_args="$pkg_install_args --with-pax=$paxprog --with-tar=$tarprog"
+	echo "TOOLS_PLATFORM.pax?=		$paxprog" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.pax?=		$paxprog" >> ${BOOTSTRAP_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$tarprog" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$tarprog" >> ${BOOTSTRAP_MKCONF}
 	;;
 esac
 
+
 # bootstrap pkg_install
-echo_msg "Installing pkgtools"
+echo_msg "Bootstrapping pkgtools"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
-run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake && $bmake install)"
+run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
+CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' \
+LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' \
+LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C \
+--prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir \
+--mandir=$mandir $pkg_install_args && $bmake)"
+run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
+run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/create/pkg_create $wrkdir/sbin/pkg_create"
+run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/info/pkg_info $wrkdir/sbin/pkg_info"
+echo "PKG_ADMIN_CMD?=			$wrkdir/sbin/pkg_admin" >> ${BOOTSTRAP_MKCONF}
+echo "PKG_CREATE_CMD?=			$wrkdir/sbin/pkg_create" >> ${BOOTSTRAP_MKCONF}
+echo "PKG_INFO_CMD?=			$wrkdir/sbin/pkg_info" >> ${BOOTSTRAP_MKCONF}
+
+echo "FETCH_CMD=		$fetch_cmd" >> ${TARGET_MKCONF}
+
+MAKECONF=$wrkdir/mk.conf
+export MAKECONF
 
 # On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
 # whose echo(1) is not POSIX-compliant.
 dash_echo_test=`echo "\\100"`
 if [ "$dash_echo_test" = "@" ]; then
-	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${BOOTSTRAP_MKCONF}
 fi
 
 # preserve compiler and tool environment variables settings
-test -z "$CP" || echo "TOOLS_PLATFORM.cp?=		$CP" >> ${MKCONF_EXAMPLE}
-test -z "$GREP" || echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${MKCONF_EXAMPLE}
-test -z "$ID" || echo "TOOLS_PLATFORM.id?=		$ID" >> ${MKCONF_EXAMPLE}
-test -z "$MKDIR" || echo "TOOLS_PLATFORM.mkdir?=		$MKDIR" >> ${MKCONF_EXAMPLE}
-test -z "$TEST" || echo "TOOLS_PLATFORM.test?=		$TEST" >> ${MKCONF_EXAMPLE}
-test -z "$TOUCH" || echo "TOOLS_PLATFORM.touch?=		$TOUCH" >> ${MKCONF_EXAMPLE}
-test -z "$XARGS" || echo "TOOLS_PLATFORM.xargs?=		$XARGS" >> ${MKCONF_EXAMPLE}
-test -z "$CFLAGS" || (
-	echo "CFLAGS+=		$CFLAGS" >> ${MKCONF_EXAMPLE}
-	echo "DBG=			# prevent DBG from adding default optimizer flags" >> ${MKCONF_EXAMPLE}
-)
-test -z "$CPPFLAGS" || echo "CPPFLAGS+=		$CPPFLAGS" >> ${MKCONF_EXAMPLE}
-test -z "$LDFLAGS" || echo "LDFLAGS+=		$LDFLAGS" >> ${MKCONF_EXAMPLE}
+if test -n "$CP"; then
+	echo "TOOLS_PLATFORM.cp?=		$CP" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.cp?=		$CP" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$GREP"; then
+	echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$ID"; then
+	echo "TOOLS_PLATFORM.id?=		$ID" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.id?=		$ID" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$MKDIR"; then
+	echo "TOOLS_PLATFORM.mkdir?=		$MKDIR" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.mkdir?=		$MKDIR" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$TEST"; then
+	echo "TOOLS_PLATFORM.test?=		$TEST" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.test?=		$TEST" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$TOUCH"; then
+	echo "TOOLS_PLATFORM.touch?=		$TOUCH" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.touch?=		$TOUCH" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$XARGS"; then
+	echo "TOOLS_PLATFORM.xargs?=		$XARGS" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.xargs?=		$XARGS" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$CFLAGS"; then
+	echo "CFLAGS+=		$CFLAGS" >> ${TARGET_MKCONF}
+	echo "CFLAGS+=		$CFLAGS" >> ${BOOTSTRAP_MKCONF}
+	echo "DBG=			# prevent DBG from adding default optimizer flags" >> ${TARGET_MKCONF}
+	echo "DBG=			# prevent DBG from adding default optimizer flags" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$CPPFLAGS"; then
+	echo "CPPFLAGS+=		$CPPFLAGS" >> ${TARGET_MKCONF}
+	echo "CPPFLAGS+=		$CPPFLAGS" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$LDFLAGS"; then
+	echo "LDFLAGS+=		$LDFLAGS" >> ${TARGET_MKCONF}
+	echo "LDFLAGS+=		$LDFLAGS" >> ${BOOTSTRAP_MKCONF}
+fi
 
 # opsys specific fiddling
 opsys_finish
 
-echo "" >> ${MKCONF_EXAMPLE}
-echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
+echo "WRKOBJDIR=		${wrkdir}/wrk" >> ${BOOTSTRAP_MKCONF}
+
+echo "" >> ${TARGET_MKCONF}
+echo "" >> ${BOOTSTRAP_MKCONF}
+echo ".endif			# end pkgsrc settings" >> ${TARGET_MKCONF}
+echo ".endif			# end pkgsrc settings" >> ${BOOTSTRAP_MKCONF}
 
 # register packages
 # usage: register_package <packagedirectory> [additional arguments]
-register_package() {
-	run_cmd "(cd $pkgsrcdir/$1 && $bmake -DPKG_PRESERVE MAKECONF=${MKCONF_EXAMPLE} WRKOBJDIR=${wrkobjdir} ${2-} bootstrap-register)"
+build_package() {
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
 
-echo_msg "Registering installed packages"
-register_package "pkgtools/bootstrap-mk-files"
-register_package "devel/bmake"
+echo_msg "Installing packages"
+build_package "pkgtools/bootstrap-mk-files"
+build_package "devel/bmake"
 case "$need_awk" in
-yes)	register_package "lang/nawk";;
+yes)	build_package "lang/nawk";;
 esac
 case "$need_sed" in
-yes)	register_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
+yes)	build_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
 esac
 case "$need_bsd_install" in
-yes)	register_package "sysutils/install-sh";;
+yes)	build_package "sysutils/install-sh";;
 esac
 case "$need_extras" in
-yes)	register_package "pkgtools/bootstrap-extras";;
+yes)	build_package "pkgtools/bootstrap-extras";;
 esac
 case "$need_ftp" in
-yes)	register_package "pkgtools/tnftp";;
+yes)	build_package "pkgtools/tnftp";;
 esac
 case "$need_pax" in
-yes)	register_package "pkgtools/pax";;
+yes)	build_package "pkgtools/pax";;
 esac
-register_package "pkgtools/pkg_install"
+build_package "pkgtools/pkg_install"
 
 etc_mk_conf="$sysconfdir/mk.conf"
 
 # Install the example mk.conf so that it is used, but only if it doesn't
-# exist yet.
-#
-# Note: I can remember that there had been some reason why this step
-# should be left out, but I can't recall it. So if you remove this code,
-# please document the reason here.
+# exist yet. This can happen with non-default sysconfdir settings.
 mkdir_p "$sysconfdir"
 if [ ! -f "$etc_mk_conf" ]; then
-	cp "$MKCONF_EXAMPLE" "$etc_mk_conf"
-	MKCONF_EXAMPLE="$etc_mk_conf"
+	cp "$TARGET_MKCONF" "$etc_mk_conf"
+	TARGET_MKCONF="$etc_mk_conf"
 fi
 
 hline="==========================================================================="
@@ -917,9 +941,9 @@ echo ""
 echo "An example mk.conf file with the settings you provided to \"bootstrap\""
 echo "has been created for you. It can be found in:"
 echo ""
-echo "      ${MKCONF_EXAMPLE}"
+echo "      ${TARGET_MKCONF}"
 echo ""
-if [ "$MKCONF_EXAMPLE" != "$etc_mk_conf" ]; then
+if [ "$TARGET_MKCONF" != "$etc_mk_conf" ]; then
 	echo "Please copy it to $etc_mk_conf to use it."
 	echo ""
 fi
