@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.15.4.1 2007/07/27 23:06:55 ghen Exp $
+
+Fix for https://wwws.clamav.net/bugzilla/show_bug.cgi?id=580
+
+--- libclamav/htmlnorm.c.orig	2007-07-18 05:42:18.000000000 +0300
++++ libclamav/htmlnorm.c	2007-07-18 05:42:39.000000000 +0300
+@@ -1190,7 +1190,7 @@
+ 							html_output_str(file_buff_o2, buff, strlen(buff));
+ 						}
+ 					} else
+-							html_output_c(file_buff_o1, file_buff_o2, tolower(value));
++							html_output_c(file_buff_o1, file_buff_o2, tolower(value&0xff));
+ 					state = next_state;
+ 					next_state = HTML_BAD_STATE;
+ 					ptr++;
