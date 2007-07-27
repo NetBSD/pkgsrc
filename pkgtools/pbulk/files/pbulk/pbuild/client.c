@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: client.c,v 1.3 2007/07/27 09:59:36 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -103,7 +103,7 @@ loop:
 		begin = build_info + 8;
 		if ((end = strchr(begin, '\n')) == NULL)
 			err(1, "Inconsistent build info from server");
-		printf("Building package %.*s", (int)(end - begin), begin);
+		printf("Building package %.*s\n", (int)(end - begin), begin);
 		fflush(stdout);
 	}
 
