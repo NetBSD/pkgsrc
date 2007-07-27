@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/07 15:03:46 joerg Exp $
+$NetBSD: distinfo,v 1.2 2007/07/27 20:57:37 joerg Exp $
 
 SHA1 (beforelight-1.0.2.tar.bz2) = 25d3ef4ccf1d48bdc1f32add5440deb2b8c29cee
 RMD160 (beforelight-1.0.2.tar.bz2) = 4511095923e7239bdfdd03742aa7eafd4331f138
 Size (beforelight-1.0.2.tar.bz2) = 85526 bytes
+SHA1 (patch-aa) = ee1d3bb44a54f00ffa4336fd7dbe2b73c06905ea
+SHA1 (patch-ab) = 00de149e0321550e208c00a4b4774771054760f1
