@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.5 2006/09/10 16:39:31 tron Exp $
+# $NetBSD: imake-check.mk,v 1.6 2007/07/27 17:44:43 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,12 +58,15 @@
 #
 
 .for _pair_ in ${BUILTIN_IMAKE_CHECK}
+.  if ${X11_TYPE} == "modular"
+BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}=	no
+.  else
 USE_TOOLS+=	cat:pkgsrc echo:pkgsrc grep:pkgsrc mkdir:pkgsrc		\
 		rm:pkgsrc test:pkgsrc
 USE_TOOLS+=	imake:pkgsrc ${IMAKE_TOOLS:S/$/:pkgsrc/}	# XXX
 IMAKE?=		${X11BASE}/bin/imake				# XXX
 
-.  if !defined(BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//})
+.    if !defined(BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//})
 BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}!=				\
 	if ${SETENV} CAT=${CAT:Q} ECHO=${ECHO:Q} GREP=${GREP:Q}		\
 		IMAKE=${IMAKE:Q} IMAKE_MAKE=${IMAKE_MAKE:Q}		\
@@ -77,6 +80,7 @@ BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}!=				\
 	else								\
 		${ECHO} no;						\
 	fi
-.  endif
+.    endif
 MAKEVARS+=	BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}
+.  endif
 .endfor
