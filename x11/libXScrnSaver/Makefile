@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/27 12:23:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/27 20:39:11 joerg Exp $
 #
 
 DISTNAME=		libXScrnSaver-1.1.2
@@ -18,6 +18,12 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xscrnsaver.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
