@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.4 2007/07/24 21:29:42 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.5 2007/07/27 23:09:13 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -25,3 +25,9 @@ Pullup ticket 2138 - requested by taca
 security update for p5-Net-DNS
 Pullup ticket 2142 - requested by joerg
 remove PKG_TOOLS_PREFIX handling from bootstrap tools
+Pullup ticket 2144 - requested by lkundrak
+security fix for libarchive
+Pullup ticket 2151 - requested by joerg
+security update for lighttpd
+Pullup ticket 2147 - requested by martti
+latest update for clamav
