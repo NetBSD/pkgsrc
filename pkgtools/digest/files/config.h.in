@@ -25,9 +25,6 @@
 /* Define to 1 if you have the <locale.h> header file. */
 #undef HAVE_LOCALE_H
 
-/* Define to 1 if you have the <machine/endian.h> header file. */
-#undef HAVE_MACHINE_ENDIAN_H
-
 /* Define to 1 if you have the `memcpy' function. */
 #undef HAVE_MEMCPY
 
@@ -55,17 +52,8 @@
 /* Define to 1 if you have the <string.h> header file. */
 #undef HAVE_STRING_H
 
-/* Define to 1 if you have the <sys/bitypes.h> header file. */
-#undef HAVE_SYS_BITYPES_H
-
-/* Define to 1 if you have the <sys/byteorder.h> header file. */
-#undef HAVE_SYS_BYTEORDER_H
-
 /* Define to 1 if you have the <sys/cdefs.h> header file. */
 #undef HAVE_SYS_CDEFS_H
-
-/* Define to 1 if you have the <sys/endian.h> header file. */
-#undef HAVE_SYS_ENDIAN_H
 
 /* Define to 1 if you have the <sys/file.h> header file. */
 #undef HAVE_SYS_FILE_H
@@ -105,6 +93,10 @@
 
 /* Define to 1 if strerror_r returns char *. */
 #undef STRERROR_R_CHAR_P
+
+/* Define to 1 if your processor stores words with the most significant byte
+   first (like Motorola and SPARC, unlike Intel and VAX). */
+#undef WORDS_BIGENDIAN
 
 /* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
    <pthread.h>, or <semaphore.h> is not used. If the typedef was allowed, the
@@ -194,38 +186,6 @@
 
 #ifdef HAVE_SYS_PARAM_H
 #include <sys/param.h>
-#endif
-
-#ifdef HAVE_SYS_ENDIAN_H
-#include <sys/endian.h>
-#endif
-
-#ifdef HAVE_MACHINE_ENDIAN_H
-#include <machine/endian.h>
-#endif
-
-#ifdef HAVE_SYS_BYTEORDER_H
-#include <sys/byteorder.h>
-#endif
-
-#ifndef LITTLE_ENDIAN
-# define LITTLE_ENDIAN 1234
-#endif
-
-#ifndef BIG_ENDIAN
-# define BIG_ENDIAN    4321
-#endif
-
-#ifndef BYTE_ORDER
-# if defined(_BIG_ENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# elif defined(_LITTE_ENDIAN)
-#  define BYTE_ORDER LITTLE_ENDIAN
-# elif defined(WORDS_BIGENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# else 
-#  define BYTE_ORDER LITTLE_ENDIAN
-# endif
 #endif
 
 #if defined(HAVE_MEMSET)

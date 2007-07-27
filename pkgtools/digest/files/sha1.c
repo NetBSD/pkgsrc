@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.6 2007/07/03 18:54:04 joerg Exp $	*/
+/*	$NetBSD: sha1.c,v 1.7 2007/07/27 17:08:27 joerg Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -51,7 +51,7 @@
  * blk0() and blk() perform the initial expand.
  * I got the idea of expanding during the round function from SSLeay
  */
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 # define blk0(i) (block->l[i] = (rol(block->l[i],24)&0xFF00FF00) \
     |(rol(block->l[i],8)&0x00FF00FF))
 #else

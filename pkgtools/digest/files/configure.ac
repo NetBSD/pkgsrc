@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.9 2007/07/03 18:54:03 joerg Exp $
+dnl $Id: configure.ac,v 1.10 2007/07/27 17:08:27 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsd-digest],[20070703],[agc@netbsd.org])
@@ -24,14 +24,15 @@ AC_SUBST(AUTOHEADER)
 
 dnl Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([errno.h fcntl.h inttypes.h locale.h machine/endian.h])
-AC_CHECK_HEADERS([stdlib.h sys/bitypes.h sys/byteorder.h sys/cdefs.h])
-AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/param.h])
+AC_CHECK_HEADERS([errno.h fcntl.h inttypes.h locale.h stdlib.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/param.h])
 
 AC_TYPE_UINT8_T
 AC_TYPE_UINT16_T
 AC_TYPE_UINT32_T
 AC_TYPE_UINT64_T
+
+AC_C_BIGENDIAN
 
 # Checks for library functions.
 AC_FUNC_STRERROR_R
@@ -95,38 +96,6 @@ AH_BOTTOM([
 
 #ifdef HAVE_SYS_PARAM_H
 #include <sys/param.h>
-#endif
-
-#ifdef HAVE_SYS_ENDIAN_H
-#include <sys/endian.h>
-#endif
-
-#ifdef HAVE_MACHINE_ENDIAN_H
-#include <machine/endian.h>
-#endif
-
-#ifdef HAVE_SYS_BYTEORDER_H
-#include <sys/byteorder.h>
-#endif
-
-#ifndef LITTLE_ENDIAN
-# define LITTLE_ENDIAN 1234
-#endif
-
-#ifndef BIG_ENDIAN
-# define BIG_ENDIAN    4321
-#endif
-
-#ifndef BYTE_ORDER
-# if defined(_BIG_ENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# elif defined(_LITTE_ENDIAN)
-#  define BYTE_ORDER LITTLE_ENDIAN
-# elif defined(WORDS_BIGENDIAN)
-#  define BYTE_ORDER BIG_ENDIAN
-# else 
-#  define BYTE_ORDER LITTLE_ENDIAN
-# endif
 #endif
 
 #if defined(HAVE_MEMSET)

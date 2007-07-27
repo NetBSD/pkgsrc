@@ -65,36 +65,6 @@
 
 
 /*** SHA-256/384/512 Machine Architecture Definitions *****************/
-/*
- * BYTE_ORDER NOTE:
- *
- * Please make sure that your system defines BYTE_ORDER.  If your
- * architecture is little-endian, make sure it also defines
- * LITTLE_ENDIAN and that the two (BYTE_ORDER and LITTLE_ENDIAN) are
- * equivilent.
- *
- * If your system does not define the above, then you can do so by
- * hand like this:
- *
- *   #define LITTLE_ENDIAN 1234
- *   #define BIG_ENDIAN    4321
- *
- * And for little-endian machines, add:
- *
- *   #define BYTE_ORDER LITTLE_ENDIAN 
- *
- * Or for big-endian machines:
- *
- *   #define BYTE_ORDER BIG_ENDIAN
- *
- * The FreeBSD machine this was written on defines BYTE_ORDER
- * appropriately by including <sys/types.h> (which in turn includes
- * <machine/endian.h> where the appropriate definitions are actually
- * made).
- */
-#if !defined(BYTE_ORDER) || (BYTE_ORDER != LITTLE_ENDIAN && BYTE_ORDER != BIG_ENDIAN)
-#error Define BYTE_ORDER to be equal to either LITTLE_ENDIAN or BIG_ENDIAN
-#endif
 
 /*** SHA-256/384/512 Various Length Definitions ***********************/
 /* NOTE: Most of these are in sha2.h */
@@ -104,7 +74,7 @@
 
 
 /*** ENDIAN REVERSAL MACROS *******************************************/
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 #define REVERSE32(w,x)	{ \
 	sha2_word32 tmp = (w); \
 	tmp = (tmp >> 16) | (tmp << 16); \
@@ -118,7 +88,7 @@
 	(x) = ((tmp & 0xffff0000ffff0000ULL) >> 16) | \
 	      ((tmp & 0x0000ffff0000ffffULL) << 16); \
 }
-#endif /* BYTE_ORDER == LITTLE_ENDIAN */
+#endif /* WORDS_BIGENDIAN */
 
 /*
  * Macro for incrementally adding the unsigned 64-bit integer n to the
@@ -319,7 +289,7 @@ void SHA256_Init(SHA256_CTX* context) {
 
 /* Unrolled SHA-256 round macros: */
 
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 
 #define ROUND256_0_TO_15(a,b,c,d,e,f,g,h)	\
 	REVERSE32(*data++, W256[j]); \
@@ -330,7 +300,7 @@ void SHA256_Init(SHA256_CTX* context) {
 	j++
 
 
-#else /* BYTE_ORDER == LITTLE_ENDIAN */
+#else /* WORDS__BIGENDIAN */
 
 #define ROUND256_0_TO_15(a,b,c,d,e,f,g,h)	\
 	T1 = (h) + Sigma1_256(e) + Ch((e), (f), (g)) + \
@@ -339,7 +309,7 @@ void SHA256_Init(SHA256_CTX* context) {
 	(h) = T1 + Sigma0_256(a) + Maj((a), (b), (c)); \
 	j++
 
-#endif /* BYTE_ORDER == LITTLE_ENDIAN */
+#endif /* WORDS_BIGENDIAN */
 
 #define ROUND256(a,b,c,d,e,f,g,h)	\
 	s0 = W256[(j+1)&0x0f]; \
@@ -429,15 +399,15 @@ void SHA256_Transform(SHA256_CTX* context, const sha2_word32* data) {
 
 	j = 0;
 	do {
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		/* Copy data while converting to host byte order */
 		REVERSE32(*data++,W256[j]);
 		/* Apply the SHA-256 compression function to update a..h */
 		T1 = h + Sigma1_256(e) + Ch(e, f, g) + K256[j] + W256[j];
-#else /* BYTE_ORDER == LITTLE_ENDIAN */
+#else /* WORDS_BIGENDIAN */
 		/* Apply the SHA-256 compression function to update a..h with copy */
 		T1 = h + Sigma1_256(e) + Ch(e, f, g) + K256[j] + (W256[j] = *data++);
-#endif /* BYTE_ORDER == LITTLE_ENDIAN */
+#endif /* WORDS_BIGENDIAN */
 		T2 = Sigma0_256(a) + Maj(a, b, c);
 		h = g;
 		g = f;
@@ -548,7 +518,7 @@ void SHA256_Final(sha2_byte digest[], SHA256_CTX* context) {
 	/* If no digest buffer is passed, we don't bother doing this: */
 	if (digest != (sha2_byte*)0) {
 		usedspace = (context->bitcount >> 3) % SHA256_BLOCK_LENGTH;
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		/* Convert FROM host byte order */
 		REVERSE64(context->bitcount,context->bitcount);
 #endif
@@ -582,7 +552,7 @@ void SHA256_Final(sha2_byte digest[], SHA256_CTX* context) {
 		/* Final transform: */
 		SHA256_Transform(context, (sha2_word32*)context->buffer);
 
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		{
 			/* Convert TO host byte order */
 			int	j;
@@ -614,7 +584,7 @@ void SHA512_Init(SHA512_CTX* context) {
 #ifdef SHA2_UNROLL_TRANSFORM
 
 /* Unrolled SHA-512 round macros: */
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 
 #define ROUND512_0_TO_15(a,b,c,d,e,f,g,h)	\
 	REVERSE64(*data++, W512[j]); \
@@ -625,7 +595,7 @@ void SHA512_Init(SHA512_CTX* context) {
 	j++
 
 
-#else /* BYTE_ORDER == LITTLE_ENDIAN */
+#else /* !WORDS_BIGENDIAN */
 
 #define ROUND512_0_TO_15(a,b,c,d,e,f,g,h)	\
 	T1 = (h) + Sigma1_512(e) + Ch((e), (f), (g)) + \
@@ -634,7 +604,7 @@ void SHA512_Init(SHA512_CTX* context) {
 	(h) = T1 + Sigma0_512(a) + Maj((a), (b), (c)); \
 	j++
 
-#endif /* BYTE_ORDER == LITTLE_ENDIAN */
+#endif /* WORDS_BIGENDIAN */
 
 #define ROUND512(a,b,c,d,e,f,g,h)	\
 	s0 = W512[(j+1)&0x0f]; \
@@ -719,15 +689,15 @@ void SHA512_Transform(SHA512_CTX* context, const sha2_word64* data) {
 
 	j = 0;
 	do {
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		/* Convert TO host byte order */
 		REVERSE64(*data++, W512[j]);
 		/* Apply the SHA-512 compression function to update a..h */
 		T1 = h + Sigma1_512(e) + Ch(e, f, g) + K512[j] + W512[j];
-#else /* BYTE_ORDER == LITTLE_ENDIAN */
+#else
 		/* Apply the SHA-512 compression function to update a..h with copy */
 		T1 = h + Sigma1_512(e) + Ch(e, f, g) + K512[j] + (W512[j] = *data++);
-#endif /* BYTE_ORDER == LITTLE_ENDIAN */
+#endif /* WORDS_BIGENDIAN */
 		T2 = Sigma0_512(a) + Maj(a, b, c);
 		h = g;
 		g = f;
@@ -832,7 +802,7 @@ void SHA512_Last(SHA512_CTX* context) {
 	unsigned int	usedspace;
 
 	usedspace = (context->bitcount[0] >> 3) % SHA512_BLOCK_LENGTH;
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 	/* Convert FROM host byte order */
 	REVERSE64(context->bitcount[0],context->bitcount[0]);
 	REVERSE64(context->bitcount[1],context->bitcount[1]);
@@ -880,7 +850,7 @@ void SHA512_Final(sha2_byte digest[], SHA512_CTX* context) {
 		SHA512_Last(context);
 
 		/* Save the hash data for output: */
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		{
 			/* Convert TO host byte order */
 			int	j;
@@ -924,7 +894,7 @@ void SHA384_Final(sha2_byte digest[], SHA384_CTX* context) {
 		SHA512_Last((SHA512_CTX*)context);
 
 		/* Save the hash data for output: */
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 		{
 			/* Convert TO host byte order */
 			int	j;
