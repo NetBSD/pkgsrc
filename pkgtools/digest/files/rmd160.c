@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.4 2007/07/03 18:54:04 joerg Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.5 2007/07/27 17:08:27 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -23,7 +23,7 @@
 #endif
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.4 2007/07/03 18:54:04 joerg Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.5 2007/07/27 17:08:27 joerg Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -365,7 +365,7 @@ RMD160Update(RMD160_CTX *context, const u_char *data, uint32_t nbytes)
 	uint32_t X[16];
 	uint32_t ofs = 0;
 	uint32_t i;
-#if BYTE_ORDER != LITTLE_ENDIAN
+#ifdef WORDS_BIGENDIAN
 	uint32_t j;
 #endif
 
@@ -389,7 +389,7 @@ RMD160Update(RMD160_CTX *context, const u_char *data, uint32_t nbytes)
                 /* process first block */
                 ofs = 64 - context->buflen;
                 (void)memcpy(context->bbuffer + context->buflen, data, ofs);
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
                 (void)memcpy(X, context->bbuffer, sizeof(X));
 #else
                 for (j=0; j < 16; j++)
@@ -400,7 +400,7 @@ RMD160Update(RMD160_CTX *context, const u_char *data, uint32_t nbytes)
 
                 /* process remaining complete blocks */
                 for (i = 0; i < (nbytes >> 6); i++) {
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
                         (void)memcpy(X, data + (64 * i) + ofs, sizeof(X));
 #else
                         for (j=0; j < 16; j++)
@@ -424,7 +424,7 @@ RMD160Final(u_char digest[20], RMD160_CTX *context)
 {
 	uint32_t i;
 	uint32_t X[16];
-#if BYTE_ORDER != LITTLE_ENDIAN
+#ifdef WORDS_BIGENDIAN
 	uint32_t j;
 #endif
 
@@ -436,7 +436,7 @@ RMD160Final(u_char digest[20], RMD160_CTX *context)
 
 	ZEROIZE(context->bbuffer + context->buflen + 1,
 		63 - context->buflen);
-#if BYTE_ORDER == LITTLE_ENDIAN
+#ifndef WORDS_BIGENDIAN
 	(void)memcpy(X, context->bbuffer, sizeof(X));
 #else
 	for (j=0; j < 16; j++)
