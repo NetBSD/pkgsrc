@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.195 2007/07/23 15:25:20 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.196 2007/07/27 13:15:41 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -604,10 +604,6 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		if [ ! -f "$$src" ]; then					\
 			msg="$$src: not found";				\
 		else							\
-			: "Legacy: Can be removed after 2007Q2.";	\
-			if [ ${BUILDLINK_TRANSFORM.${_pkg_}:Q}"" ]; then \
-				${FAIL_MSG} "[bsd.buildlink3.mk] BUILDLINK_TRANSFORM.${_pkg_} is obsolete. Use BUILDLINK_FNAME_TRANSFORM.${_pkg_} instead."; \
-			fi;						\
 			if [ -z "${BUILDLINK_FNAME_TRANSFORM.${_pkg_}:Q}" ]; then \
 				dest="$$buildlink_dir/$$file";		\
 				msg="$$src";				\
