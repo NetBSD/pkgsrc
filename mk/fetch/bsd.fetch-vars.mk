@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.6 2006/07/27 07:41:40 rillig Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.7 2007/07/27 14:24:53 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -28,9 +28,12 @@ _DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 
 # "Failover" fetching requires the digest tool to compute checksums to
-# verify any fetched files.
+# verify any fetched files.  But if no checksumming is requested, don't
+# add it.
 #
+.if defined(FAILOVER_FETCH) && !defined(NO_CHECKSUM)
 USE_TOOLS+=		${FAILOVER_FETCH:Ddigest\:bootstrap}
+.endif
 
 # When mirroring distfiles which others may fetch, only fetch the
 # distfiles if it is allowed to be re-distributed freely.  Also,
