@@ -661,7 +661,7 @@ TIGERUpdate(tiger_context_t *tp, const uint8_t *data, uint32_t len)
 	uint8_t		 temp[64];
 
 	for (i = len; i >= 64; i -= 64) {
-#if BYTE_ORDER == BIG_ENDIAN
+#ifdef WORDS_BIGENDIAN
 		for (j = 0; j < 64; j++) {
 			temp[j ^ 7] = ((uint8_t *) str)[j];
 		}
@@ -672,7 +672,7 @@ TIGERUpdate(tiger_context_t *tp, const uint8_t *data, uint32_t len)
 		str += 8;
 	}
 
-#if BYTE_ORDER == BIG_ENDIAN
+#ifdef WORDS_BIGENDIAN
 	for (j = 0; j < i; j++) {
 		temp[j ^ 7] = ((uint8_t *) str)[j];
 	}
