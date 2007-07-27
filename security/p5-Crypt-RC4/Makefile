@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/27 23:10:37 seb Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/27 23:24:17 seb Exp $
 #
 
 DISTNAME=	Crypt-RC4-2.02
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Crypt-RC4/
 COMMENT=	Perl5 module for the "alleged" RC4 encryption algorithm
 
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Crypt/RC4/.packlist
 
 .include "../../lang/perl5/module.mk"
