@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1644 2007/07/28 13:58:10 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1645 2007/07/28 14:00:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added chat/pidgin version 2.0.1nb1 [gdt 2007-07-28]
 	Added chat/finch version 2.0.1 [gdt 2007-07-28]
 	Updated converters/skf to 1.95.1 [obache 2007-07-28]
+	Updated devel/pango to 1.16.5 [wiz 2007-07-28]
