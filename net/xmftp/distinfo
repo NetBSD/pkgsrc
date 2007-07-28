@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2006/05/10 06:40:59 minskim Exp $
+$NetBSD: distinfo,v 1.4 2007/07/28 01:30:01 joerg Exp $
 
 SHA1 (xmftp-1.0.4.tar.gz) = c39b14cabced594a045def93e363a9a6eb069b0b
 RMD160 (xmftp-1.0.4.tar.gz) = 0d31d84430292d71951df78770552be61eb199a3
@@ -11,3 +11,15 @@ SHA1 (patch-ae) = 1a863ac53ffa46e838f2f88029b6ab26847f96b2
 SHA1 (patch-af) = 79fdee0097ee8c83b6e698ac7325382bceb7ab04
 SHA1 (patch-ag) = 570e386f033eabb995d3c792263cfacce5669fef
 SHA1 (patch-ah) = a23cd827cf8f185714229ab6ae022c4a81732162
+SHA1 (patch-ai) = 42980a251eaeb3cbb70fa3a353121cbc302c187d
+SHA1 (patch-aj) = 393a0bd00cbc21a2caeb83a4abbc438224d500a3
+SHA1 (patch-ak) = 08148bf4494aff1de04a3030200e29a9ffdb6f77
+SHA1 (patch-al) = d790a38b65d0f16ab9efe02a31066f8e711c8e9a
+SHA1 (patch-am) = b1d4bd60a5f4551cd872974c11a30b4a920364c1
+SHA1 (patch-an) = 30a9cd1eb517cb429eba6aaff95ed0510ab6fb39
+SHA1 (patch-ao) = 2caba269693fe622885552199509599274511b51
+SHA1 (patch-ap) = 10bcf3e3f85b256e7a6673f882c7435a3fb7cc56
+SHA1 (patch-aq) = 3c0644b1760a92b0e999c47ab7af3b31ecce829c
+SHA1 (patch-ar) = 9da710fbe33b95cf6cee20bceff873b55daa5bc3
+SHA1 (patch-as) = c1d1120bd466b4574dd2631a97e9c1288e6bfa67
+SHA1 (patch-at) = f4ec23e8c3fda4e2f84e063d73c117211c29e0bd
