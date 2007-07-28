@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/29 00:15:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/28 11:06:36 gdt Exp $
 bin/epsg-load
-share/doc/epsg/G7-1.pdf
-share/doc/epsg/G7-2.pdf
 share/doc/epsg/epsg-v${VERS}_Readme.pdf
 share/epsg/EPSG_v${VERS}.mdb_Data_MySQL.sql
 share/epsg/EPSG_v${VERS}.mdb_Data_PostgreSQL.sql
