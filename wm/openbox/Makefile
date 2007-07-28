@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2007/07/21 21:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/07/28 08:46:27 wiz Exp $
 
-DISTNAME=	openbox-3.4.2
+DISTNAME=	openbox-3.4.3
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 # PR pkg/36489
@@ -38,9 +38,9 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-# disabled by default in 3.3 because "it doesn't seem to work well"
-#.include "../../x11/startup-notification/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
