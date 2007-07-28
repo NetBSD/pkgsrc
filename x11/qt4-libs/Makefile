@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/04/06 12:48:37 markd Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/28 07:37:51 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 BUILD_TARGET=		sub-src
@@ -32,7 +31,7 @@ do-install:
 .for lib in Qt3Support QtCore QtGui QtNetwork QtOpenGL QtSql QtSvg QtXml
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${QTPREFIX}/lib/
-	${INSTALL_DATA} ${WRKSRC}/lib/${lib}.pc ${PREFIX}/lib/pkgconfig/
+	${INSTALL_DATA} ${WRKSRC}/lib/pkgconfig/${lib}.pc ${PREFIX}/lib/pkgconfig/
 .endfor
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/accessible
