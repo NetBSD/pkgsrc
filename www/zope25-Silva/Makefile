@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:31:05 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/07/28 00:23:13 joerg Exp $
 
 DISTNAME=	Silva-0.9.2.2
 PKGNAME=	zope25-Silva-0.9.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/infrae/Silva/
 EXTRACT_SUFX=	.tgz
@@ -20,6 +20,8 @@ DEPENDS+=	zope25-XMLWidgets-[0-9]*:../../www/zope25-XMLWidgets
 DEPENDS+=	zope25-FileSystemSite>=1.2:../../www/zope25-FileSystemSite
 
 PRODNAMES=	Silva SilvaMetadata ProxyIndex Annotations
+
+REPLACE_PYTHON+=	${WRKDIR}/Silva/utils/ZPTPrettyPrinter.py
 
 .include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"
