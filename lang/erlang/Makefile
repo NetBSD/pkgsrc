@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/02/26 15:47:43 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2007/07/28 14:27:10 obache Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -34,5 +34,4 @@ PLIST_SRC+=		PLIST.common_end
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
