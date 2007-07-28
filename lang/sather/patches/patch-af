@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2004/08/27 18:52:00 jlam Exp $
+$NetBSD: patch-af,v 1.5 2007/07/28 13:10:59 wiz Exp $
 
 --- Boot/sacomp.code/Makefile.orig	Thu Nov  4 08:04:49 1999
 +++ Boot/sacomp.code/Makefile
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.4 2004/08/27 18:52:00 jlam Exp $
  SHOME  =../..
 -CFLAGS = -I.  -O2  -I../System/Common
 -CC     =gcc 
-+CFLAGS = -I. @CFLAGS@ -I../System/Common -I@GC_PREFIX@/include
++CFLAGS = -I. @CFLAGS@ -I../System/Common -I@GC_PREFIX@/include/gc
 +CC     = @CC@
  HDR    =sather.h tags.h
 -LIBS   = -lgc -lm
