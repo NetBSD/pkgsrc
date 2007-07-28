@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2006/06/14 09:07:45 rillig Exp $
+$NetBSD: patch-al,v 1.2 2007/07/28 01:42:50 joerg Exp $
 
---- memory.c.orig	2006-06-15 07:57:40.000000000 +0200
-+++ memory.c	2006-06-15 08:35:53.000000000 +0200
+--- memory.c.orig	1999-09-06 15:38:10.000000000 +0000
++++ memory.c
 @@ -1,11 +1,14 @@
 +#if !defined(USE_VARARGS)
 +#include <stdarg.h>
@@ -11,7 +11,8 @@ $NetBSD: patch-al,v 1.1 2006/06/14 09:07:45 rillig Exp $
 +
  #include <string.h>
  #include <limits.h>
- #include <malloc.h>
+-#include <malloc.h>
++#include <stdlib.h>
  #ifndef XFRACT
  #include <io.h>
 -#include <stdarg.h>
