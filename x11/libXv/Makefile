@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/23 13:44:08 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/28 00:48:10 joerg Exp $
 #
 
 DISTNAME=		libXv-1.0.3
@@ -17,6 +17,12 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	xv.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
