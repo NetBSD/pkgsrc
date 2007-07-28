@@ -1,58 +1,60 @@
-# $NetBSD: Makefile.versions,v 1.4 2007/07/08 14:12:13 uebayasi Exp $
+# $NetBSD: Makefile.versions,v 1.5 2007/07/28 14:27:10 obache Exp $
 
-ERLANG_VERSION=			11.0
-DIST_VERSION=			R11B-0
+ERLANG_VERSION=			11.5
+DIST_VERSION=			R11B-5
 
 _VERSIONS= \
-	appmon			2.1.6 \
-	asn1			1.4.4.10 \
-	compiler		4.4 \
-	cosEvent		2.1 \
-	cosEventDomain		1.1 \
-	cosFileTransfer		1.1.2 \
-	cosNotification		1.1.3 \
-	cosProperty		1.1.1 \
-	cosTime			1.1 \
-	cosTransactions		1.2 \
-	crypto			1.5 \
-	debugger		3.1 \
-	dialyzer		1.4.1 \
-	edoc			0.6.9 \
-	erl_interface		3.5.5 \
-	erts			5.5 \
-	esdl			0.95.0630 \
-	et			1.0 \
-	gs			1.5.5 \
-	hipe			3.5.5 \
-	ic			4.2.11 \
-	inets			4.7.4 \
-	inviso			0.1 \
+	appmon			2.1.9 \
+	asn1			1.4.5 \
+	compiler		4.4.5 \
+	cosEvent		2.1.1 \
+	cosEventDomain		1.1.1 \
+	cosFileTransfer		1.1.3 \
+	cosNotification		1.1.5 \
+	cosProperty		1.1.4 \
+	cosTime			1.1.1 \
+	cosTransactions		1.2.2 \
+	crypto			1.5.1.1 \
+	debugger		3.1.1.1 \
+	dialyzer		1.7.0 \
+	docbuilder		0.9 \
+	edoc			0.7.3 \
+	erl_interface		3.5.5.3 \
+	erts			5.5.5 \
+	et			1.0.0.1 \
+	gs			1.5.7 \
+	hipe			3.6.3 \
+	ic			4.2.13 \
+	inets			4.7.16 \
+	inviso			0.4 \
 	jinterface		1.3 \
-	kernel			2.11 \
-	megaco			3.3.5 \
-	mnemosyne		1.2.6 \
-	mnesia			4.3.1 \
-	mnesia_session		1.1.6 \
-	odbc			2.0.6 \
-	observer		0.9.7 \
-	orber			3.6.3 \
-	os_mon			2.1 \
-	otp_mibs		1.0.4 \
-	parsetools		1.4 \
-	pman			2.5.2 \
-	runtime_tools		1.6 \
-	sasl			2.1.2 \
-	snmp			4.7.4 \
-	ssh			0.9.2 \
-	ssl			3.0.12 \
-	stdlib			1.14 \
-	syntax_tools		1.5.0 \
-	toolbar			1.3 \
-	tools			2.5 \
-	tv			2.1.3 \
-	webtool			0.8.3 \
-	xmerl			1.0.5
+	kernel			2.11.5 \
+	megaco			3.6.0.1 \
+	mnemosyne		1.2.7.1 \
+	mnesia			4.3.5 \
+	mnesia_session		1.1.6.1 \
+	observer		0.9.7.4 \
+	odbc			2.0.8 \
+	orber			3.6.6 \
+	os_mon			2.1.2.1 \
+	otp_mibs		1.0.4.1 \
+	parsetools		1.4.1.1 \
+	pman			2.6 \
+	runtime_tools		1.6.6 \
+	sasl			2.1.5.1 \
+	snmp			4.9.3 \
+	ssh			0.9.9.1 \
+	ssl			3.1.1.1 \
+	stdlib			1.14.5 \
+	syntax_tools		1.5.3 \
+	toolbar			1.3.0.1 \
+	tools			2.5.5 \
+	tv			2.1.4.1 \
+	typer			0.1.0.1 \
+	webtool			0.8.3.1 \
+	xmerl			1.1.4
 
 .for name version in ${_VERSIONS}
+VERSION.${name}=${version}
 PLIST_SUBST+=	VERSION.${name}=${version}
 .endfor

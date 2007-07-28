@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.4 2006/08/17 16:16:30 ghen Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5 2007/07/28 14:27:10 obache Exp $
 @dirrm lib/erlang/usr/lib
 @dirrm lib/erlang/usr/include/obsolete
 @dirrm lib/erlang/usr/include
@@ -18,6 +18,9 @@
 @dirrm lib/erlang/lib/webtool-${VERSION.webtool}/priv
 @dirrm lib/erlang/lib/webtool-${VERSION.webtool}/ebin
 @dirrm lib/erlang/lib/webtool-${VERSION.webtool}
+@dirrm lib/erlang/lib/typer-${VERSION.typer}/src
+@dirrm lib/erlang/lib/typer-${VERSION.typer}/ebin
+@dirrm lib/erlang/lib/typer-${VERSION.typer}
 @dirrm lib/erlang/lib/tv-${VERSION.tv}/src
 @dirrm lib/erlang/lib/tv-${VERSION.tv}/priv
 @dirrm lib/erlang/lib/tv-${VERSION.tv}/ebin
@@ -34,6 +37,7 @@
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}/ebin
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/src
+@dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/examples
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/ebin
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}
 @dirrm lib/erlang/lib/stdlib-${VERSION.stdlib}/src
@@ -42,7 +46,6 @@
 @dirrm lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin
 @dirrm lib/erlang/lib/stdlib-${VERSION.stdlib}
 @dirrm lib/erlang/lib/ssl-${VERSION.ssl}/src
-@dirrm lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj
 @dirrm lib/erlang/lib/ssl-${VERSION.ssl}/priv/bin
 @dirrm lib/erlang/lib/ssl-${VERSION.ssl}/priv
 @dirrm lib/erlang/lib/ssl-${VERSION.ssl}/pkix
@@ -123,6 +126,7 @@
 @dirrm lib/erlang/lib/otp_mibs-${VERSION.otp_mibs}
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/src
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/mibs
+@dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/v1
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs
@@ -171,6 +175,7 @@
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/flex
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/engine
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/binary
+@dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/app
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/priv/lib
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/priv
@@ -244,6 +249,7 @@
 @dirrm lib/erlang/lib/hipe-${VERSION.hipe}/cerl
 @dirrm lib/erlang/lib/hipe-${VERSION.hipe}
 @dirrm lib/erlang/lib/gs-${VERSION.gs}/src
+@dirrm lib/erlang/lib/gs-${VERSION.gs}/priv/bitmap
 @dirrm lib/erlang/lib/gs-${VERSION.gs}/priv
 @dirrm lib/erlang/lib/gs-${VERSION.gs}/examples/src
 @dirrm lib/erlang/lib/gs-${VERSION.gs}/examples/ebin
@@ -283,8 +289,14 @@
 @dirrm lib/erlang/lib/erl_interface-${VERSION.erl_interface}
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}/src
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}/priv
+@dirrm lib/erlang/lib/edoc-${VERSION.edoc}/include
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}/ebin
 @dirrm lib/erlang/lib/edoc-${VERSION.edoc}
+@dirrm lib/erlang/lib/docbuilder-${VERSION.docbuilder}/src
+@dirrm lib/erlang/lib/docbuilder-${VERSION.docbuilder}/etc
+@dirrm lib/erlang/lib/docbuilder-${VERSION.docbuilder}/ebin
+@dirrm lib/erlang/lib/docbuilder-${VERSION.docbuilder}/dtd
+@dirrm lib/erlang/lib/docbuilder-${VERSION.docbuilder}
 @dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src
 @dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/plt
 @dirrm lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin
@@ -294,9 +306,7 @@
 @dirrm lib/erlang/lib/debugger-${VERSION.debugger}/ebin
 @dirrm lib/erlang/lib/debugger-${VERSION.debugger}
 @dirrm lib/erlang/lib/crypto-${VERSION.crypto}/src
-@exec ${MKDIR} %D/lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj
 @dirrm lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj
-@exec ${MKDIR} %D/lib/erlang/lib/crypto-${VERSION.crypto}/priv/lib
 @dirrm lib/erlang/lib/crypto-${VERSION.crypto}/priv/lib
 @dirrm lib/erlang/lib/crypto-${VERSION.crypto}/priv
 @dirrm lib/erlang/lib/crypto-${VERSION.crypto}/ebin

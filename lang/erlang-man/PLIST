@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/17 16:16:30 ghen Exp $
-lib/erlang/man/man1/driver_entry.1
+@comment $NetBSD: PLIST,v 1.3 2007/07/28 14:27:11 obache Exp $
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
 lib/erlang/man/man1/erl_call.1
-lib/erlang/man/man1/erl_driver.1
 lib/erlang/man/man1/erlc.1
 lib/erlang/man/man1/erlsrv.1
+lib/erlang/man/man1/escript.1
 lib/erlang/man/man1/run_erl.1
 lib/erlang/man/man1/start.1
 lib/erlang/man/man1/start_erl.1
@@ -84,6 +83,7 @@ lib/erlang/man/man3/appmon.3
 lib/erlang/man/man3/asn1ct.3
 lib/erlang/man/man3/asn1rt.3
 lib/erlang/man/man3/auth.3
+lib/erlang/man/man3/base64.3
 lib/erlang/man/man3/beam_lib.3
 lib/erlang/man/man3/c.3
 lib/erlang/man/man3/calendar.3
@@ -112,13 +112,26 @@ lib/erlang/man/man3/digraph.3
 lib/erlang/man/man3/digraph_utils.3
 lib/erlang/man/man3/disk_log.3
 lib/erlang/man/man3/disksup.3
+lib/erlang/man/man3/docb_gen.3
+lib/erlang/man/man3/docb_transform.3
+lib/erlang/man/man3/docb_xml_check.3
+lib/erlang/man/man3/driver_entry.3
+lib/erlang/man/man3/edoc.3
+lib/erlang/man/man3/edoc_doclet.3
+lib/erlang/man/man3/edoc_extract.3
+lib/erlang/man/man3/edoc_layout.3
+lib/erlang/man/man3/edoc_lib.3
+lib/erlang/man/man3/edoc_run.3
 lib/erlang/man/man3/ei.3
 lib/erlang/man/man3/ei_connect.3
 lib/erlang/man/man3/epp.3
+lib/erlang/man/man3/epp_dodger.3
 lib/erlang/man/man3/eprof.3
 lib/erlang/man/man3/erl_boot_server.3
+lib/erlang/man/man3/erl_comment_scan.3
 lib/erlang/man/man3/erl_connect.3
 lib/erlang/man/man3/erl_ddll.3
+lib/erlang/man/man3/erl_driver.3
 lib/erlang/man/man3/erl_error.3
 lib/erlang/man/man3/erl_eterm.3
 lib/erlang/man/man3/erl_eval.3
@@ -132,15 +145,21 @@ lib/erlang/man/man3/erl_malloc.3
 lib/erlang/man/man3/erl_marshal.3
 lib/erlang/man/man3/erl_parse.3
 lib/erlang/man/man3/erl_pp.3
+lib/erlang/man/man3/erl_prettypr.3
 lib/erlang/man/man3/erl_prim_loader.3
+lib/erlang/man/man3/erl_recomment.3
 lib/erlang/man/man3/erl_scan.3
 lib/erlang/man/man3/erl_set_memory_block.3
+lib/erlang/man/man3/erl_syntax.3
+lib/erlang/man/man3/erl_syntax_lib.3
 lib/erlang/man/man3/erl_tar.3
+lib/erlang/man/man3/erl_tidy.3
 lib/erlang/man/man3/erlang.3
 lib/erlang/man/man3/erlang_mode.3
 lib/erlang/man/man3/error_handler.3
 lib/erlang/man/man3/error_logger.3
 lib/erlang/man/man3/erts_alloc.3
+lib/erlang/man/man3/erts_alloc_config.3
 lib/erlang/man/man3/et.3
 lib/erlang/man/man3/et_collector.3
 lib/erlang/man/man3/et_selector.3
@@ -158,6 +177,7 @@ lib/erlang/man/man3/gb_sets.3
 lib/erlang/man/man3/gb_trees.3
 lib/erlang/man/man3/gen_event.3
 lib/erlang/man/man3/gen_fsm.3
+lib/erlang/man/man3/gen_sctp.3
 lib/erlang/man/man3/gen_server.3
 lib/erlang/man/man3/gen_tcp.3
 lib/erlang/man/man3/gen_udp.3
@@ -166,7 +186,6 @@ lib/erlang/man/man3/global_group.3
 lib/erlang/man/man3/gs.3
 lib/erlang/man/man3/heart.3
 lib/erlang/man/man3/http.3
-lib/erlang/man/man3/http_base_64.3
 lib/erlang/man/man3/httpd.3
 lib/erlang/man/man3/httpd_conf.3
 lib/erlang/man/man3/httpd_socket.3
@@ -175,6 +194,7 @@ lib/erlang/man/man3/i.3
 lib/erlang/man/man3/ic.3
 lib/erlang/man/man3/ic_c_protocol.3
 lib/erlang/man/man3/ic_clib.3
+lib/erlang/man/man3/igor.3
 lib/erlang/man/man3/inet.3
 lib/erlang/man/man3/init.3
 lib/erlang/man/man3/instrument.3
@@ -185,6 +205,7 @@ lib/erlang/man/man3/inviso_as_lib.3
 lib/erlang/man/man3/inviso_lfm.3
 lib/erlang/man/man3/inviso_lfm_tpfreader.3
 lib/erlang/man/man3/inviso_rt.3
+lib/erlang/man/man3/inviso_rt_meta.3
 lib/erlang/man/man3/io.3
 lib/erlang/man/man3/io_lib.3
 lib/erlang/man/man3/lib.3
@@ -197,6 +218,7 @@ lib/erlang/man/man3/math.3
 lib/erlang/man/man3/megaco.3
 lib/erlang/man/man3/megaco_codec_meas.3
 lib/erlang/man/man3/megaco_codec_transform.3
+lib/erlang/man/man3/megaco_edist_compress.3
 lib/erlang/man/man3/megaco_encoder.3
 lib/erlang/man/man3/megaco_flex_scanner.3
 lib/erlang/man/man3/megaco_tcp.3
@@ -236,6 +258,7 @@ lib/erlang/man/man3/pg.3
 lib/erlang/man/man3/pg2.3
 lib/erlang/man/man3/pman.3
 lib/erlang/man/man3/pool.3
+lib/erlang/man/man3/prettypr.3
 lib/erlang/man/man3/proc_lib.3
 lib/erlang/man/man3/proplists.3
 lib/erlang/man/man3/qlc.3
@@ -263,6 +286,7 @@ lib/erlang/man/man3/snmp_target_mib.3
 lib/erlang/man/man3/snmp_user_based_sm_mib.3
 lib/erlang/man/man3/snmp_view_based_acm_mib.3
 lib/erlang/man/man3/snmpa.3
+lib/erlang/man/man3/snmpa_conf.3
 lib/erlang/man/man3/snmpa_error.3
 lib/erlang/man/man3/snmpa_error_io.3
 lib/erlang/man/man3/snmpa_error_logger.3
@@ -274,6 +298,7 @@ lib/erlang/man/man3/snmpa_notification_filter.3
 lib/erlang/man/man3/snmpa_supervisor.3
 lib/erlang/man/man3/snmpc.3
 lib/erlang/man/man3/snmpm.3
+lib/erlang/man/man3/snmpm_conf.3
 lib/erlang/man/man3/snmpm_mpd.3
 lib/erlang/man/man3/snmpm_network_interface.3
 lib/erlang/man/man3/snmpm_user.3
@@ -308,6 +333,7 @@ lib/erlang/man/man3/xmerl_eventp.3
 lib/erlang/man/man3/xmerl_scan.3
 lib/erlang/man/man3/xmerl_xpath.3
 lib/erlang/man/man3/xmerl_xs.3
+lib/erlang/man/man3/xmerl_xsd.3
 lib/erlang/man/man3/xref.3
 lib/erlang/man/man3/yecc.3
 lib/erlang/man/man3/zip.3
@@ -319,6 +345,7 @@ lib/erlang/man/man4/rel.4
 lib/erlang/man/man4/relup.4
 lib/erlang/man/man4/script.4
 lib/erlang/man/man6/crypto.6
+lib/erlang/man/man6/docbuilder.6
 lib/erlang/man/man6/kernel.6
 lib/erlang/man/man6/observer.6
 lib/erlang/man/man6/runtime_tools.6
