@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1642 2007/07/28 11:44:57 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1643 2007/07/28 12:19:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3019,3 +3019,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated geography/epsg to 6.13 [gdt 2007-07-28]
 	Add geography/epsg-docs version 20070716 [gdt 2007-07-28]
 	Updated net/bind9 to 9.4.1-P1 [adrianp 2007-07-28]
+	Added chat/libpurple version 2.0.1 [gdt 2007-07-28]
+	Added chat/pidgin version 2.0.1nb1 [gdt 2007-07-28]
+	Added chat/finch version 2.0.1 [gdt 2007-07-28]
