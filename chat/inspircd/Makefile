@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/24 20:13:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/28 22:52:15 adrianp Exp $
 #
 
 DISTNAME=	InspIRCd-1.1.10
 PKGNAME=	${DISTNAME:S/InspIRCd/inspircd/}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.inspircd.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.inspircd.org/
 COMMENT=	Modular C++ IRC Daemon
 
-USE_TOOLS+=		perl:build gmake
+USE_TOOLS+=		perl:build gmake pkg-config
 REPLACE_PERL+=		.inspircd.inc configure
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/InspIRCd/inspircd/}
@@ -44,12 +45,6 @@ PKG_USERS=		${INSPIRCD_USER:Q}:${INSPIRCD_GROUP:Q}
 
 PKG_GECOS.${INSPIRCD_USER}=	InspIRCd user
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	docs/inspircd.conf.example
-SUBST_SED.conf+=	-e "s|/path/to/inspircd.pid|${VARBASE}/run/inspircd/inspircd.pid|g"
-SUBST_MESSAGE.conf=	Fixing configuration files.
-
 CONFIGURE_ARGS+=	--disable-interactive
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/share/inspircd
 CONFIGURE_ARGS+=	--config-dir=${PKG_SYSCONFDIR}
@@ -69,6 +64,12 @@ CONFIGURE_ARGS+=	--with-away-length=${INSP_MAXAWAY:Q}
 CONFIGURE_ARGS+=	--with-max-modes=${INSP_MAXMODES:Q}
 
 .include "options.mk"
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	docs/inspircd.conf.example
+SUBST_SED.conf+=	-e "s|/path/to/inspircd.pid|${VARBASE}/run/inspircd/inspircd.pid|g"
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
 BUILD_DEFS+=		INSP_NICLEN INSP_CHANLEN INSPIRCD_USER INSPIRCD_GROUP
 BUILD_DEFS+=		INSP_MAXCLI INSP_MAXIDENT INSP_MAXQUIT INSP_MAXTOPIC
@@ -93,8 +94,19 @@ INSP_MAXGECOS?=		128
 INSP_MAXAWAY?=		200
 INSP_MAXMODES?=		20
 
+CHECK_BUILTIN.openssl:=yes
+.include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=no
+
 post-extract:
 	${MV} ${WRKDIR}/inspircd ${WRKDIR}/${DISTNAME:S/InspIRCd/inspircd/}
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+	${CP} ${FILESDIR}/openssl.pc ${WRKSRC}
+SUBST_FILES.conf+=	openssl.pc
+SUBST_SED.conf+=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g"
+SUBST_SED.conf+=	-e "s|@SSLVER@|${BUILTIN_VERSION.openssl}|g"
+CONFIGURE_ENV+=	PKG_CONFIG_PATH=${WRKSRC:Q}
+.endif
 
 pre-configure:
 .if defined(MODULES)
@@ -102,7 +114,7 @@ pre-configure:
 	${CP} ${EXTRA}/${f} ${WRKSRC}/src/modules/${f}
 .  endfor
 .endif
-.if defined(HEADER)
+.if defined(HEADERS)
 .  for f in ${HEADERS}
 	${CP} ${EXTRA}/${f} ${WRKSRC}/src/modules/${f}
 .  endfor
