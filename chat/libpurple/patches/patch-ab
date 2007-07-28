@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+
+  We need definitions of NGROUPS, MAXLOGNAME, MAXCOMLEN on NetBSD.
+
+--- libpurple/nat-pmp.c.orig	2007-05-28 05:43:18.000000000 +0200
++++ libpurple/nat-pmp.c
+@@ -34,6 +34,10 @@
+ #include "signals.h"
+ #include "network.h"
+ 
++#ifdef HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
++
+ #ifdef HAVE_SYS_SYSCTL_H
+ #include <sys/sysctl.h>
+ #endif

@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/07/28 12:10:45 gdt Exp $
+
+  HAVE_SYS_PARAM_H was missing, see patch for configure.ac.
+
+--- config.h.in.orig	2007-05-25 18:28:50.000000000 +0200
++++ config.h.in
+@@ -39,6 +39,10 @@
+ /* Define to 1 if you have the `dcgettext' function. */
+ #undef HAVE_DCGETTEXT
+ 
++/* Define to 1 if you have the declaration of `tzname', and to 0 if you don't.
++   */
++#undef HAVE_DECL_TZNAME
++
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 
+@@ -255,6 +259,9 @@
+ /* Define to 1 if you have the <sys/msgbuf.h> header file. */
+ #undef HAVE_SYS_MSGBUF_H
+ 
++/* Define to 1 if you have the <sys/param.h> header file. */
++#undef HAVE_SYS_PARAM_H
++
+ /* Define to 1 if you have the <sys/select.h> header file. */
+ #undef HAVE_SYS_SELECT_H
+ 
+@@ -350,7 +357,7 @@
+ /* Define as the return type of signal handlers (`int' or `void'). */
+ #undef RETSIGTYPE
+ 
+-/* The size of a `time_t', as computed by sizeof. */
++/* The size of `time_t', as computed by sizeof. */
+ #undef SIZEOF_TIME_T
+ 
+ /* Loads static protocol plugin module initialization functions. */
