@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2007/03/18 17:34:41 adam Exp $
+$NetBSD: patch-aj,v 1.2 2007/07/28 07:37:51 adam Exp $
 
 --- mkspecs/netbsd-g++/qplatformdefs.h.orig	2006-11-27 17:26:42.000000000 +0000
 +++ mkspecs/netbsd-g++/qplatformdefs.h
@@ -26,22 +26,3 @@ $NetBSD: patch-aj,v 1.1 2007/03/18 17:34:41 adam Exp $
  
 -
  #endif // QPLATFORMDEFS_H
---- src/corelib/io/qsettings.cpp.orig	2006-11-27 17:26:06.000000000 +0000
-+++ src/corelib/io/qsettings.cpp
-@@ -105,9 +105,16 @@ inline bool qt_isEvilFsTypeName(const ch
- 
- static bool isLikelyToBeNfs(int handle)
- {
-+#ifdef QT_STATVFS
-+    struct statvfs buf;
-+    if (fstatvfs(handle, &buf) != 0)
-+        return false;
-+#else
-     struct statfs buf;
-     if (fstatfs(handle, &buf) != 0)
-         return false;
-+#endif
-+
-     return qt_isEvilFsTypeName(buf.f_fstypename);
- }
- 
