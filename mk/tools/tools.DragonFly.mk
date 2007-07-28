@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.30 2007/06/19 17:01:12 joerg Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.31 2007/07/28 01:19:07 joerg Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -79,7 +79,7 @@ TOOLS_PLATFORM.tail?=		/usr/bin/tail
 TOOLS_PLATFORM.tar?=		/usr/bin/tar
 TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
 TOOLS_PLATFORM.tee?=		/usr/bin/tee
-TOOLS_PLATFORM.test?=		/bin/test
+TOOLS_PLATFORM.test?=		test
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		/usr/bin/true
