@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/04/06 06:22:56 reed Exp $
+# $NetBSD: Makefile,v 1.14 2007/07/28 00:31:14 joerg Exp $
 
 DISTNAME=	EasyImage15
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	zope25-EasyImage-1.5
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/regebro/easyimage/
@@ -16,6 +16,7 @@ COMMENT=	Image extension for Zope
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 
 post-extract:
+	${FIND} ${WRKSRC} -type f | ${XARGS} ${CHMOD} -R go-w
 	${RM} -r ${WRKSRC}/easyimage/cvs ${WRKSRC}/easyimage/icons/cvs \
 		${WRKSRC}/easyimage/dtml/cvs
 	${MV} ${WRKSRC}/easyimage ${WRKSRC}/EasyImage
