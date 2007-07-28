@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/28 12:32:17 gdt Exp $
 #
 
 PKGNAME=	libpurple-${VERSION}
@@ -7,7 +7,7 @@ COMMENT=	Multi-protocol Instant Messaging client backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include		"../../wip/libpurple/Makefile.common"
+.include		"../../chat/libpurple/Makefile.common"
 
 # for the pidgin intltool, see TODO
 DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
