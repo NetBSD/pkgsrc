@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1637 2007/07/28 07:59:16 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1638 2007/07/28 08:26:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3011,3 +3011,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt4-pgsql to 4.3.0 [adam 2007-07-28]
 	Updated misc/goffice to 0.4.2 [wiz 2007-07-28]
 	Updated audio/libvorbis to 1.2.0 [wiz 2007-07-28]
+	Added textproc/p5-Text-PDF version 0.29a [seb 2007-07-28]
