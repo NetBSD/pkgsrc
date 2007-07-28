@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/07/28 08:59:46 wiz Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PROG_GLIB_CONFIG=${GLIB_CONFIG:Q}
 
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.boehm-gc}/include/gc
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.rsaref}/include/rsaref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libwww}/include/w3c-libwww
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.tcl}/include/tcl
