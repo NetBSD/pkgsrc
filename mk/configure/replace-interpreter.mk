@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.6 2007/03/08 23:58:20 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.7 2007/07/28 00:42:33 joerg Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -7,6 +7,7 @@
 #
 # REPLACE_AWK
 # REPLACE_BASH
+# REPLACE_KSH
 # REPLACE_PERL
 # REPLACE_PYTHON
 # REPLACE_SH
@@ -41,6 +42,7 @@ do-configure-pre-hook: replace-interpreter
 REPLACE_INTERPRETER?=	# none
 REPLACE_AWK?=	# none
 REPLACE_BASH?=	# none
+REPLACE_KSH?=	# none
 REPLACE_PERL?=	# none
 REPLACE_SH?=	# none
 
@@ -56,6 +58,13 @@ REPLACE_INTERPRETER+=	sys-bash
 REPLACE.sys-bash.old=	.*sh
 REPLACE.sys-bash.new=	${BASH}
 REPLACE_FILES.sys-bash=	${REPLACE_BASH}
+.endif
+
+.if !empty(REPLACE_KSH:M*)
+REPLACE_INTERPRETER+=	sys-ksh
+REPLACE.sys-ksh.old=	[^[:space:]]*sh
+REPLACE.sys-ksh.new=	${TOOLS_PATH.ksh}
+REPLACE_FILES.sys-ksh=	${REPLACE_KSH}
 .endif
 
 .if !empty(REPLACE_PERL:M*)
