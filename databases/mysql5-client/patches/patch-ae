@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.8 2007/05/21 04:40:00 xtraeme Exp $
+$NetBSD: patch-ae,v 1.8.2.1 2007/07/28 16:46:38 ghen Exp $
 
---- scripts/Makefile.in.orig	2007-05-21 04:54:42.000000000 +0200
-+++ scripts/Makefile.in	2007-05-21 04:55:14.000000000 +0200
-@@ -355,13 +355,12 @@
- yassl_libs = @yassl_libs@
- yassl_taocrypt_extra_cxxflags = @yassl_taocrypt_extra_cxxflags@
- zlib_dir = @zlib_dir@
+--- scripts/Makefile.in.orig	2007-07-04 14:10:00.000000000 +0100
++++ scripts/Makefile.in	2007-07-15 17:24:02.000000000 +0100
+@@ -377,13 +377,12 @@
+ BUILT_SOURCES = mysql_fix_privilege_tables.sql \
+ 		mysql_fix_privilege_tables_sql.c
+ 
 -bin_SCRIPTS = @server_scripts@ \
-+bin_SCRIPTS =  \
++bin_SCRIPTS = \
  			msql2mysql \
  			mysql_config \
  			mysql_fix_privilege_tables \
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.8 2007/05/21 04:40:00 xtraeme Exp $
  			mysql_zap \
  			mysqlaccess \
  			mysqlbug \
-@@ -372,7 +371,6 @@
+@@ -394,7 +393,6 @@
  			mysql_explain_log \
  			mysql_tableinfo \
  			mysql_upgrade_shell \
