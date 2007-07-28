@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.4 2007/07/25 15:12:53 joerg Exp $
+# $NetBSD: create-report-txt.awk,v 1.5 2007/07/28 07:26:26 wiz Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -133,10 +133,10 @@ BEGIN {
 	print "" > txt_report
 	all_pkgs = pkgs_done + pkgs_failed + pkgs_prefailed + pkgs_indirect_failed + pkgs_indirect_prefailed
 	printf "Total number of packages:      %5d\n", all_pkgs > txt_report
-	printf "  Succesfully built:           %5d\n", pkgs_done > txt_report
+	printf "  Successfully built:          %5d\n", pkgs_done > txt_report
 	printf "  Failed to build:             %5d\n", pkgs_failed > txt_report
 	printf "  Depending on failed package: %5d\n", pkgs_indirect_failed > txt_report
-	printf "  Explictly broken or masked:  %5d\n", pkgs_prefailed > txt_report
+	printf "  Explicitly broken or masked: %5d\n", pkgs_prefailed > txt_report
 	printf "  Depending on masked package: %5d\n", pkgs_indirect_prefailed > txt_report
 	print "" > txt_report
 
@@ -146,7 +146,7 @@ BEGIN {
 	}
 	sort(top_count, sorted_top_count, "-rn")
 	if (sorted_top_count[0]) {
-		print "Most offending build failures" > txt_report
+		print "Packages breaking the most other packages" > txt_report
 		print "" > txt_report
 		print "Package                               Breaks Maintainer" > txt_report
 		print "-------------------------------------------------------------------------" > txt_report
