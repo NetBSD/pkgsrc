@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6538 2007/07/28 07:59:17 wiz Exp $
+$NetBSD: TODO,v 1.6539 2007/07/28 08:53:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o GridSim-3.3
 	o ImageMagick-6.3.5.0
 	o Mesa-7.0
-	o ORBit2-2.14.8
 	o PAM-0.99.7.1
 	o R-2.5.1
 	o R-CGIwithR-0.72
@@ -589,7 +588,6 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o guile-1.8.2
 	o guile-gnome-2.15.90
 	o guile-gtk-2.0
 	o gwave-20031224
@@ -832,7 +830,6 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openbox-3.4.3
 	o openh323-1.19.1
 	o openldap-2.3.35
 	o openldap-client-2.3.35
@@ -937,7 +934,6 @@ Suggested package updates
 	o p5-XML-RSS-1.31
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
-	o p5-libwww-5.806
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
