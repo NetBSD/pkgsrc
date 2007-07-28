@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/12 19:56:14 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/28 15:51:24 drochner Exp $
 #
 
 DISTNAME=		SimGear-0.3.10
@@ -17,6 +17,7 @@ USE_LANGUAGES=		c c++
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.plib+= plib>=1.8.4
 .include "../../games/plib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
