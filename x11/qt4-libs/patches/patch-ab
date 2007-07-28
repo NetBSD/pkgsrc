@@ -1,16 +1,76 @@
-$NetBSD: patch-ab,v 1.3 2007/03/18 17:34:41 adam Exp $
+$NetBSD: patch-ab,v 1.4 2007/07/28 07:37:51 adam Exp $
 
---- src/gui/painting/painting.pri.orig	2007-02-21 10:58:43.000000000 +0100
+--- src/gui/painting/painting.pri.orig	2007-05-25 15:24:11.000000000 +0200
 +++ src/gui/painting/painting.pri
-@@ -137,9 +137,9 @@ x11|embedded {
- mac {
+@@ -177,11 +177,11 @@ mac {
  
- } else:sse|win32-g++ {
--    sse_compiler.commands = $$QMAKE_CXX -c -msse $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
-+    sse_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c -msse $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.o
-     sse_compiler.dependency_type = TYPE_C
--    sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
-+    sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
-     sse_compiler.input = SSE_SOURCES
-     sse_compiler.variable_out = OBJECTS
-     sse_compiler.name = compiling[sse] ${QMAKE_FILE_IN}
+     win32-g++|!win32:!*-icc* {
+         mmx {
+-            mmx_compiler.commands = $$QMAKE_CXX -c
++            mmx_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             mmx_compiler.commands += -mmmx
+             mmx_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             mmx_compiler.dependency_type = TYPE_C
+-            mmx_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            mmx_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             mmx_compiler.input = MMX_SOURCES
+             mmx_compiler.variable_out = OBJECTS
+             mmx_compiler.name = compiling[mmx] ${QMAKE_FILE_IN}
+@@ -194,13 +194,13 @@ mac {
+             }
+         }
+         3dnow {
+-            3dnow_compiler.commands = $$QMAKE_CXX -c
++            3dnow_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             3dnow_compiler.commands += -m3dnow
+             mmx: 3dnow_compiler.commands += -mmmx
+             sse: 3dnow_compiler.commands += -msse
+             3dnow_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             3dnow_compiler.dependency_type = TYPE_C
+-            3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             3dnow_compiler.input = 3DNOW_SOURCES
+             3dnow_compiler.variable_out = OBJECTS
+             3dnow_compiler.name = compiling[3dnow] ${QMAKE_FILE_IN}
+@@ -208,11 +208,11 @@ mac {
+             QMAKE_EXTRA_COMPILERS += 3dnow_compiler
+         }
+         sse {
+-            sse_compiler.commands = $$QMAKE_CXX -c
++            sse_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             sse_compiler.commands += -msse
+             sse_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             sse_compiler.dependency_type = TYPE_C
+-            sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            sse_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             sse_compiler.input = SSE_SOURCES
+             sse_compiler.variable_out = OBJECTS
+             sse_compiler.name = compiling[sse] ${QMAKE_FILE_IN}
+@@ -220,11 +220,11 @@ mac {
+             QMAKE_EXTRA_COMPILERS += sse_compiler
+         }
+         sse2 {
+-            sse2_compiler.commands = $$QMAKE_CXX -c
++            sse2_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             sse2_compiler.commands += -msse2
+             sse2_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             sse2_compiler.dependency_type = TYPE_C
+-            sse2_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            sse2_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             sse2_compiler.input = SSE2_SOURCES
+             sse2_compiler.variable_out = OBJECTS
+             sse2_compiler.name = compiling[sse2] ${QMAKE_FILE_IN}
+@@ -232,11 +232,11 @@ mac {
+             QMAKE_EXTRA_COMPILERS += sse2_compiler
+         }
+         iwmmxt {
+-            iwmmxt_compiler.commands = $$QMAKE_CXX -c
++            iwmmxt_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             iwmmxt_compiler.commands += -mcpu=iwmmxt
+             iwmmxt_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             iwmmxt_compiler.dependency_type = TYPE_C
+-            iwmmxt_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            iwmmxt_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             iwmmxt_compiler.input = IWMMXT_SOURCES
+             iwmmxt_compiler.variable_out = OBJECTS
+             iwmmxt_compiler.name = compiling[iwmmxt] ${QMAKE_FILE_IN}
