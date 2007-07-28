@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1639 2007/07/28 08:53:10 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1640 2007/07/28 09:58:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3015,3 +3015,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/openbox to 3.4.3 [wiz 2007-07-28]
 	Updated www/p5-libwww to 5.806 [wiz 2007-07-28]
 	Added textproc/p5-Text-PDF version 0.29a [seb 2007-07-28]
+	Added textproc/p5-CAM-PDF version 1.10 [seb 2007-07-28]
