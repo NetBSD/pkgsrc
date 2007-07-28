@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6541 2007/07/28 14:00:00 wiz Exp $
+$NetBSD: TODO,v 1.6542 2007/07/28 14:30:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -451,9 +451,6 @@ Suggested package updates
 	o epic4-2.6
 	o epstool-3.08
 	o eric3-4.0.1 [now called eric4]
-	o erlang-11.3
-	o erlang-doc-11.3
-	o erlang-man-11.3
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
