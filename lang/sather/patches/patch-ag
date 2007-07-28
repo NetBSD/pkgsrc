@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2004/08/27 18:52:00 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2007/07/28 13:10:59 wiz Exp $
 
 --- System/Common/CONFIG.proto.orig	Wed Nov  3 18:48:17 1999
 +++ System/Common/CONFIG.proto
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.4 2004/08/27 18:52:00 jlam Exp $
 -GC_LINK:		"-lgc";
 +VERSION:		"1.2.1";
 +C_COMPILER:		"@CC@";
-+CC_OPTIONS:		"-I@GC_PREFIX@/include";
++CC_OPTIONS:		"-I@GC_PREFIX@/include/gc";
 +GC_LINK:		"-L@GC_PREFIX@/lib @COMPILER_RPATH_FLAG@@GC_PREFIX@/lib -lgc";
  LINK_OPTIONS:		"-lm";
 -MAKE_COMMAND:		"make";
