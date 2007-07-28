@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/05/21 04:39:59 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2007/07/28 16:46:37 ghen Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -31,6 +31,7 @@ include/mysql/keycache.h
 include/mysql/m_ctype.h
 include/mysql/m_string.h
 include/mysql/my_alloc.h
+include/mysql/my_attribute.h
 include/mysql/my_config.h
 include/mysql/my_dbug.h
 include/mysql/my_dir.h
