@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2007/03/18 17:34:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/07/28 07:37:52 adam Exp $
+lib/pkgconfig/QtScript.pc
 lib/pkgconfig/QtTest.pc
 qt4/bin/assistant
 qt4/bin/designer
@@ -22,6 +23,7 @@ qt4/include/QtDesigner/QDesignerContainerExtension
 qt4/include/QtDesigner/QDesignerCustomWidgetCollectionInterface
 qt4/include/QtDesigner/QDesignerCustomWidgetInterface
 qt4/include/QtDesigner/QDesignerDnDItemInterface
+qt4/include/QtDesigner/QDesignerDynamicPropertySheetExtension
 qt4/include/QtDesigner/QDesignerExportWidget
 qt4/include/QtDesigner/QDesignerExtraInfoExtension
 qt4/include/QtDesigner/QDesignerFormEditorInterface
@@ -31,14 +33,17 @@ qt4/include/QtDesigner/QDesignerFormWindowInterface
 qt4/include/QtDesigner/QDesignerFormWindowManagerInterface
 qt4/include/QtDesigner/QDesignerFormWindowToolInterface
 qt4/include/QtDesigner/QDesignerIconCacheInterface
+qt4/include/QtDesigner/QDesignerIntegrationInterface
 qt4/include/QtDesigner/QDesignerLanguageExtension
 qt4/include/QtDesigner/QDesignerLayoutDecorationExtension
 qt4/include/QtDesigner/QDesignerMemberSheetExtension
 qt4/include/QtDesigner/QDesignerMetaDataBaseInterface
 qt4/include/QtDesigner/QDesignerMetaDataBaseItemInterface
 qt4/include/QtDesigner/QDesignerObjectInspectorInterface
+qt4/include/QtDesigner/QDesignerPromotionInterface
 qt4/include/QtDesigner/QDesignerPropertyEditorInterface
 qt4/include/QtDesigner/QDesignerPropertySheetExtension
+qt4/include/QtDesigner/QDesignerResourceBrowserInterface
 qt4/include/QtDesigner/QDesignerTaskMenuExtension
 qt4/include/QtDesigner/QDesignerWidgetBoxInterface
 qt4/include/QtDesigner/QDesignerWidgetDataBaseInterface
@@ -59,16 +64,20 @@ qt4/include/QtDesigner/abstractformwindowcursor.h
 qt4/include/QtDesigner/abstractformwindowmanager.h
 qt4/include/QtDesigner/abstractformwindowtool.h
 qt4/include/QtDesigner/abstracticoncache.h
+qt4/include/QtDesigner/abstractintegration.h
 qt4/include/QtDesigner/abstractlanguage.h
 qt4/include/QtDesigner/abstractmetadatabase.h
 qt4/include/QtDesigner/abstractobjectinspector.h
+qt4/include/QtDesigner/abstractpromotioninterface.h
 qt4/include/QtDesigner/abstractpropertyeditor.h
+qt4/include/QtDesigner/abstractresourcebrowser.h
 qt4/include/QtDesigner/abstractwidgetbox.h
 qt4/include/QtDesigner/abstractwidgetdatabase.h
 qt4/include/QtDesigner/abstractwidgetfactory.h
 qt4/include/QtDesigner/container.h
 qt4/include/QtDesigner/customwidget.h
 qt4/include/QtDesigner/default_extensionfactory.h
+qt4/include/QtDesigner/dynamicpropertysheet.h
 qt4/include/QtDesigner/extension.h
 qt4/include/QtDesigner/extension_global.h
 qt4/include/QtDesigner/extrainfo.h
@@ -115,6 +124,7 @@ qt4/include/QtTest/qtestsystem.h
 qt4/lib/libQtAssistantClient.la
 qt4/lib/libQtDesigner.la
 qt4/lib/libQtDesignerComponents.la
+qt4/lib/libQtScript.la
 qt4/lib/libQtTest.la
 qt4/mkspecs/aix-g++-64/qmake.conf
 qt4/mkspecs/aix-g++-64/qplatformdefs.h
@@ -126,6 +136,8 @@ qt4/mkspecs/aix-xlc/qmake.conf
 qt4/mkspecs/aix-xlc/qplatformdefs.h
 qt4/mkspecs/common/g++.conf
 qt4/mkspecs/common/linux.conf
+qt4/mkspecs/common/mac-g++.conf
+qt4/mkspecs/common/mac.conf
 qt4/mkspecs/common/qmake.conf
 qt4/mkspecs/common/unix.conf
 qt4/mkspecs/darwin-g++/qmake.conf
@@ -140,14 +152,19 @@ qt4/mkspecs/features/default_pre.prf
 qt4/mkspecs/features/designer.prf
 qt4/mkspecs/features/dll.prf
 qt4/mkspecs/features/exclusive_builds.prf
+qt4/mkspecs/features/incredibuild_xge.prf
+qt4/mkspecs/features/lex.prf
 qt4/mkspecs/features/link_pkgconfig.prf
 qt4/mkspecs/features/mac/default_post.prf
 qt4/mkspecs/features/mac/default_pre.prf
+qt4/mkspecs/features/mac/dwarf2.prf
 qt4/mkspecs/features/mac/objective_c.prf
 qt4/mkspecs/features/mac/ppc.prf
+qt4/mkspecs/features/mac/ppc64.prf
 qt4/mkspecs/features/mac/rez.prf
 qt4/mkspecs/features/mac/sdk.prf
 qt4/mkspecs/features/mac/x86.prf
+qt4/mkspecs/features/mac/x86_64.prf
 qt4/mkspecs/features/moc.prf
 qt4/mkspecs/features/qdbus.prf
 qt4/mkspecs/features/qmake.conf
@@ -167,6 +184,7 @@ qt4/mkspecs/features/static_and_shared.prf
 qt4/mkspecs/features/staticlib.prf
 qt4/mkspecs/features/uic.prf
 qt4/mkspecs/features/uitools.prf
+qt4/mkspecs/features/unix/bsymbolic_functions.prf
 qt4/mkspecs/features/unix/dylib.prf
 qt4/mkspecs/features/unix/hide_symbols.prf
 qt4/mkspecs/features/unix/largefile.prf
@@ -197,6 +215,7 @@ qt4/mkspecs/features/win32/stl_off.prf
 qt4/mkspecs/features/win32/thread.prf
 qt4/mkspecs/features/win32/thread_off.prf
 qt4/mkspecs/features/win32/windows.prf
+qt4/mkspecs/features/yacc.prf
 qt4/mkspecs/freebsd-g++/qmake.conf
 qt4/mkspecs/freebsd-g++/qplatformdefs.h
 qt4/mkspecs/freebsd-g++34/qmake.conf
@@ -241,12 +260,14 @@ qt4/mkspecs/linux-g++-64/qmake.conf
 qt4/mkspecs/linux-g++-64/qplatformdefs.h
 qt4/mkspecs/linux-g++/qmake.conf
 qt4/mkspecs/linux-g++/qplatformdefs.h
+qt4/mkspecs/linux-icc-64/qmake.conf
+qt4/mkspecs/linux-icc-64/qplatformdefs.h
 qt4/mkspecs/linux-icc/qmake.conf
 qt4/mkspecs/linux-icc/qplatformdefs.h
 qt4/mkspecs/linux-kcc/qmake.conf
 qt4/mkspecs/linux-kcc/qplatformdefs.h
-qt4/mkspecs/linux-lsb/qmake.conf
-qt4/mkspecs/linux-lsb/qplatformdefs.h
+qt4/mkspecs/linux-lsb-g++/qmake.conf
+qt4/mkspecs/linux-lsb-g++/qplatformdefs.h
 qt4/mkspecs/linux-pgcc/qmake.conf
 qt4/mkspecs/linux-pgcc/qplatformdefs.h
 qt4/mkspecs/lynxos-g++/qmake.conf
@@ -283,6 +304,8 @@ qt4/mkspecs/qws/linux-generic-g++/qmake.conf
 qt4/mkspecs/qws/linux-generic-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-ipaq-g++/qmake.conf
 qt4/mkspecs/qws/linux-ipaq-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-lsb-g++/qmake.conf
+qt4/mkspecs/qws/linux-lsb-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-mips-g++/qmake.conf
 qt4/mkspecs/qws/linux-mips-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-sharp-g++/qmake.conf
@@ -326,6 +349,7 @@ qt4/phrasebooks/finnish.qph
 qt4/phrasebooks/french.qph
 qt4/phrasebooks/german.qph
 qt4/phrasebooks/italian.qph
+qt4/phrasebooks/japanese.qph
 qt4/phrasebooks/norwegian.qph
 qt4/phrasebooks/russian.qph
 qt4/phrasebooks/spanish.qph
@@ -351,6 +375,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/qws/linux-x86-g++
 @dirrm qt4/mkspecs/qws/linux-sharp-g++
 @dirrm qt4/mkspecs/qws/linux-mips-g++
+@dirrm qt4/mkspecs/qws/linux-lsb-g++
 @dirrm qt4/mkspecs/qws/linux-ipaq-g++
 @dirrm qt4/mkspecs/qws/linux-generic-g++
 @dirrm qt4/mkspecs/qws/linux-generic-g++-32
@@ -367,8 +392,9 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/macx-g++
 @dirrm qt4/mkspecs/lynxos-g++
 @dirrm qt4/mkspecs/linux-pgcc
-@dirrm qt4/mkspecs/linux-lsb
+@dirrm qt4/mkspecs/linux-lsb-g++
 @dirrm qt4/mkspecs/linux-kcc
+@dirrm qt4/mkspecs/linux-icc-64
 @dirrm qt4/mkspecs/linux-icc
 @dirrm qt4/mkspecs/linux-g++-64
 @dirrm qt4/mkspecs/linux-g++-32
