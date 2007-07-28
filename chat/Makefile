@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2007/07/24 20:14:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.124 2007/07/28 12:25:15 gdt Exp $
 #
 
 COMMENT=	Communication programs
@@ -22,6 +22,7 @@ SUBDIR+=	ekg
 SUBDIR+=	emech
 SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
+SUBDIR+=	finch
 SUBDIR+=	fisg
 SUBDIR+=	fugu
 SUBDIR+=	gaim
@@ -56,6 +57,7 @@ SUBDIR+=	kmess
 SUBDIR+=	konversation
 SUBDIR+=	libirc
 SUBDIR+=	libotr
+SUBDIR+=	libpurple
 SUBDIR+=	libtlen
 SUBDIR+=	licq-core
 SUBDIR+=	licq-gui-console
@@ -74,6 +76,7 @@ SUBDIR+=	p5-Net-ICQ2000
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-POE-Component-IRC
 SUBDIR+=	p5-POE-Filter-IRCD
+SUBDIR+=	pidgin
 SUBDIR+=	pircbot
 SUBDIR+=	psi
 SUBDIR+=	quirc
