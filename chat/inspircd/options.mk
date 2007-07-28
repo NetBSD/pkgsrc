@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/07/24 20:13:19 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2007/07/28 22:52:15 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inspircd
 
 PKG_SUPPORTED_OPTIONS=	inet6 ssl gnutls kqueue epoll inspircd-remoteinet6
-PKG_SUPPORTED_OPTIONS+=	pcre inspircd-ziplinks mysql pgsql inspircd-sqlauth
-PKG_SUPPORTED_OPTIONS+=	inspircd-sqllog inspircd-sqloper inspircd-sqlutils
+PKG_SUPPORTED_OPTIONS+=	pcre inspircd-ziplinks inspircd-sqlauth
+PKG_SUPPORTED_OPTIONS+=	inspircd-sqllog inspircd-sqloper
 PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 ### Dependency notes:
 ###
 ### sql 	= mysql, pgsql, sqlite3
-### sqlutils 	= sqlutils
+### sqlutils 	= m_sqlutils.cpp m_sqlutils.h
 ###
 ### sqloper 	needs sql sqlutils
 ### sqllog	needs sql
@@ -60,7 +60,9 @@ CONFIGURE_ARGS+=	--disable-remote-ipv6
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 .	include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 CONFIGURE_ARGS+=	--enable-openssl
+MODULES+=		m_ssl_openssl.cpp
 .endif
 
 ###
@@ -70,6 +72,7 @@ CONFIGURE_ARGS+=	--enable-openssl
 .if !empty(PKG_OPTIONS:Mgnutls)
 .	include "../../security/gnutls/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gnutls
+MODULES+=		m_ssl_gnutls.cpp
 .endif
 
 ###
@@ -94,8 +97,8 @@ MODULES+=		m_filter_pcre.cpp
 ###
 .if !empty(PKG_OPTIONS:Minspircd-sqlauth)
 INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqlauth.cpp
-PKG_SUGGESTED_OPTIONS+=	inspircd-sqlutils
+MODULES+=		m_sqlauth.cpp m_sqlutils.cpp
+HEADERS+=		m_sqlutils.h
 .endif
 
 ###
@@ -111,16 +114,7 @@ MODULES+=		m_sqllog.cpp
 ###
 .if !empty(PKG_OPTIONS:Minspircd-sqloper)
 INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqloper.cpp
-PKG_SUGGESTED_OPTIONS+=	inspircd-sqlutils
-.endif
-
-###
-### SQL utilities
-###
-.if !empty(PKG_OPTIONS:Minspircd-sqlutils)
-INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqlutils.cpp
+MODULES+=		m_sqloper.cpp m_sqlutils.cpp
 HEADERS+=		m_sqlutils.h
 .endif
 
@@ -137,11 +131,11 @@ BUILD_DEFS+=		INSPIRCD_STORAGE_DRIVER
 .	include "../../mk/mysql.buildlink3.mk"
 MODULES+=		m_mysql.cpp
 HEADERS+=		m_sqlv2.h
-.  elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
+.  elif !empty(INSPIRCD_STORAGE_DRIVER:Mpgsql)
 .	include "../../mk/pgsql.buildlink3.mk"
 MODULES+=		m_pgsql.cpp
 HEADERS+=		m_sqlv2.h
-.  elif !empty(DSPAM_STORAGE_DRIVER:Msqlite3)
+.  elif !empty(INSPIRCD_STORAGE_DRIVER:Msqlite3)
 .	include "../../databases/sqlite3/buildlink3.mk"
 MODULES+=		m_sqlite3.cpp
 HEADERS+=		m_sqlv2.h
