@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/02/22 19:01:28 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/07/28 00:43:22 joerg Exp $
 
 DISTNAME=	xteddy-2.0.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11 games
 MASTER_SITES=	http://staffwww.itn.liu.se/~stegu/xteddy/
 
@@ -13,10 +13,9 @@ CONFLICTS+=	xteddy-1.*
 
 GNU_CONFIGURE=	yes
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	/bin/ksh
-REPLACE_FILES.bash=	xtoys
+USE_TOOLS+=	ksh:run
+
+REPLACE_KSH+=	xtoys
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
