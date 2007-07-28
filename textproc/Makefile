@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2007/07/28 08:25:31 seb Exp $
+# $NetBSD: Makefile,v 1.377 2007/07/28 09:57:16 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -150,6 +150,7 @@ SUBDIR+=	nxml-mode
 SUBDIR+=	o3read
 SUBDIR+=	openjade
 SUBDIR+=	opensp
+SUBDIR+=	p5-CAM-PDF
 SUBDIR+=	p5-Convert-ASCII-Armour
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Convert-BER
