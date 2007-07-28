@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/03/23 20:04:13 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2007/07/28 19:29:57 tnn Exp $
 #
 
 DISTNAME=	gpgme-1.1.4
@@ -60,6 +60,12 @@ BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg2}/bin/gpgsm
 .else
 CONFIGURE_ARGS+=	--without-gpgsm
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "HPUX"
+CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"
