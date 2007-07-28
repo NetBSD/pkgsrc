@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1633 2007/07/27 23:13:08 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1634 2007/07/28 01:03:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.51 [adam 2007-07-27]
 	Updated www/drupal to 5.2 [adrianp 2007-07-27]
 	Added security/p5-Crypt-RC4 version 2.02 [seb 2007-07-27]
+	Updated graphics/tesseract to 2.00 [wiz 2007-07-28]
