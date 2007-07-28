@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/28 00:55:33 joerg Exp $
 #
 
 DISTNAME=	xwud-1.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Display XWD X Window Dump image file
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
