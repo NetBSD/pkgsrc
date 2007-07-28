@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+
+  sys/param.h is required for definitions of NGROUPS, MAXLOGNAME, etc.
+  Without this, lookup of sys/sysctl.h on NetBSD (and maybe other *BSD
+  systems) does not work correctly.
+  Those preprocessor symbols are also needed during the build.
+
+--- configure.ac.orig	2007-05-25 18:28:21.000000000 +0200
++++ configure.ac
+@@ -1917,8 +1917,13 @@ AC_CHECK_FUNCS(memcpy memmove random str
+ AC_CHECK_HEADERS(malloc.h paths.h sgtty.h stdarg.h sys/cdefs.h)
+ AC_CHECK_HEADERS(sys/file.h sys/filio.h sys/ioctl.h sys/msgbuf.h)
+ AC_CHECK_HEADERS(sys/select.h sys/uio.h sys/utsname.h sys/wait.h)
+-AC_CHECK_HEADERS(termios.h)
+-AC_CHECK_HEADERS(sys/sysctl.h sys/socket.h)
++AC_CHECK_HEADERS(sys/socket.h termios.h)
++AC_CHECK_HEADERS_ONCE(sys/param.h)
++AC_CHECK_HEADERS(sys/sysctl.h, [], [],
++[#ifdef HAVE_SYS_PARAM_H
++# include <sys/param.h>
++# endif
++])
+ AC_VAR_TIMEZONE_EXTERNALS
+ 
+ AC_CACHE_CHECK(for tm_gmtoff in struct tm, ac_cv_struct_tm_gmtoff,
