@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/07/28 12:10:45 gdt Exp $
+
+  man pages for pidgin or finch only in the respective packages
+
+--- doc/Makefile.in.orig	2007-06-03 14:36:13.000000000 +0200
++++ doc/Makefile.in
+@@ -386,7 +386,8 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-man_MANS = pidgin.1 finch.1
++@ENABLE_GTK_TRUE@man_MANS = pidgin.1
++@ENABLE_GNT_TRUE@man_MANS += finch.1
+ EXTRA_DIST = \
+ 	C-HOWTO.dox \
+ 	PERL-HOWTO.dox \
