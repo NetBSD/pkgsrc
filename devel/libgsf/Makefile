@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2007/07/19 22:40:29 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2007/07/28 14:42:17 drochner Exp $
 #
 
 DISTNAME=	libgsf-1.14.5
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,9 @@ PKGCONFIG_OVERRIDE=	libgsf-1.pc.in
 PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 
 CONFIGURE_ARGS+=	--without-python
+
+# XXX workaround for missing substitution in configure
+MAKE_ENV+=	GCONF2_SCHEMAS_DIR=${GCONF2_SCHEMAS_DIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
