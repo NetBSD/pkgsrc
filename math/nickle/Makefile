@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/07/17 19:46:30 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/28 07:26:08 wiz Exp $
 #
 
 DISTNAME=	nickle-2.58
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 
-MAINTAINER=	pkgsrc_users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nickle.org/
 COMMENT=	Desk calculator language
 
