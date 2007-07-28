@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/17 19:10:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/28 15:25:02 drochner Exp $
 #
 
 DISTNAME=	libsexymm-0.1.9
@@ -12,7 +12,7 @@ COMMENT=	C++ bindings for libsexy
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libsexy/libsexymm.pc.in
 
