@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1634 2007/07/28 01:03:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1635 2007/07/28 07:41:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3005,3 +3005,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/drupal to 5.2 [adrianp 2007-07-27]
 	Added security/p5-Crypt-RC4 version 2.02 [seb 2007-07-27]
 	Updated graphics/tesseract to 2.00 [wiz 2007-07-28]
+	Updated x11/qt4-libs to 4.3.0 [adam 2007-07-28]
+	Updated x11/qt4-tools to 4.3.0 [adam 2007-07-28]
+	Updated x11/qt4-docs to 4.3.0 [adam 2007-07-28]
+	Updated x11/qt4-pgsql to 4.3.0 [adam 2007-07-28]
