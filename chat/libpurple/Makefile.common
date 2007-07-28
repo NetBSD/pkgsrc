@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/07/28 12:32:17 gdt Exp $
 #
 
 VERSION=	2.0.1
@@ -17,5 +17,5 @@ USE_TOOLS+=		pkg-config gmake perl:run
 USE_LANGUAGES+=		c
 USE_PKGLOCALEDIR=	yes
 
-PATCHDIR=               ${.CURDIR}/../../wip/libpurple/patches
-DISTINFO_FILE?=		${.CURDIR}/../../wip/libpurple/distinfo
+PATCHDIR=               ${.CURDIR}/../../chat/libpurple/patches
+DISTINFO_FILE?=		${.CURDIR}/../../chat/libpurple/distinfo
