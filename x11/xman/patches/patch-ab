@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2007/07/28 00:10:37 joerg Exp $
+
+--- configure.orig	2007-07-28 02:06:24.000000000 +0200
++++ configure
+@@ -3460,8 +3460,8 @@ echo "$as_me: error: No suitable version
+    { (exit 1); exit 1; }; }
+ 	fi
+ 
+-
+ # Check for man page config files
++if test x"$MANCONF" = x; then
+ echo "$as_me:$LINENO: checking for /etc/man.conf" >&5
+ echo $ECHO_N "checking for /etc/man.conf... $ECHO_C" >&6
+ if test "${ac_cv_file__etc_man_conf+set}" = set; then
+@@ -3527,6 +3527,7 @@ fi
+ 
+ fi
+ 
++fi
+ 
+ if test x$MANCONF != x ; then
+ 

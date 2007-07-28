@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/28 00:10:36 joerg Exp $
 #
 
 DISTNAME=		xman-1.0.2
@@ -16,6 +16,12 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	MANCONF=/etc/man.conf
+.endif
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
