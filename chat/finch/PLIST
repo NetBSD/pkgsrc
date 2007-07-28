@@ -1,0 +1,52 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/28 12:13:33 gdt Exp $
+bin/finch
+include/finch/finch.h
+include/finch/gntaccount.h
+include/finch/gntblist.h
+include/finch/gntconn.h
+include/finch/gntconv.h
+include/finch/gntdebug.h
+include/finch/gntft.h
+include/finch/gntidle.h
+include/finch/gntnotify.h
+include/finch/gntplugin.h
+include/finch/gntpounce.h
+include/finch/gntprefs.h
+include/finch/gntrequest.h
+include/finch/gntstatus.h
+include/finch/gntui.h
+include/gnt/gnt.h
+include/gnt/gntbindable.h
+include/gnt/gntbox.h
+include/gnt/gntbutton.h
+include/gnt/gntcheckbox.h
+include/gnt/gntclipboard.h
+include/gnt/gntcolors.h
+include/gnt/gntcombobox.h
+include/gnt/gntentry.h
+include/gnt/gntfilesel.h
+include/gnt/gntkeys.h
+include/gnt/gntlabel.h
+include/gnt/gntline.h
+include/gnt/gntmarshal.h
+include/gnt/gntmenu.h
+include/gnt/gntmenuitem.h
+include/gnt/gntmenuitemcheck.h
+include/gnt/gntstyle.h
+include/gnt/gnttextview.h
+include/gnt/gnttree.h
+include/gnt/gntutils.h
+include/gnt/gntwidget.h
+include/gnt/gntwindow.h
+include/gnt/gntwm.h
+lib/finch/gntclipboard.la
+lib/finch/gntgf.la
+lib/finch/gnthistory.la
+lib/finch/gntlastlog.la
+lib/finch/s.la
+lib/libgnt.la
+lib/pkgconfig/gnt.pc
+man/man1/finch.1
+@dirrm include/finch
+@dirrm include/gnt
+@dirrm lib/finch
