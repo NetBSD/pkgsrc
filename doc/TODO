@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6542 2007/07/28 14:30:30 obache Exp $
+$NetBSD: TODO,v 1.6543 2007/07/28 14:49:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -346,7 +346,6 @@ Suggested package updates
 	o btpd-0.12
 	o bugzilla-3.0
 	o bwidget-1.7.0
-	o bzr-0.18
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
 	o cairomm-1.4.2
