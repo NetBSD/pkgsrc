@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/07/29 05:19:25 jlam Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
 PKGNAME=	et-2.56
-PKGREVISION=     1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/et/linux/
 EXTRACT_SUFX=	.run
@@ -12,19 +12,15 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Wolfenstein: Enemy Territory for Linux
 
-NO_BUILD=	yes
-ONLY_FOR_PLATFORM=	*-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
 
 USE_TOOLS+=	gtar
-ETDIR=		${PREFIX}/lib/lokigames/et
 EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
 		-C ${WRKSRC}
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-.endif
+ETDIR=		${PREFIX}/lib/lokigames/et
+BUILD_DIRS=	# empty
 
 INSTALLATION_DIRS=	bin
 

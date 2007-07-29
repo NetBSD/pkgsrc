@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/07/29 05:19:25 jlam Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -16,17 +16,11 @@ EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 			${GZCAT} | ${PAX} -O -r
 USE_TOOLS+=	gzcat pax
 
-ONLY_FOR_PLATFORM=*-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
 
 WRKSRC=		${WRKDIR}
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-.if (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
-.endif
+BUILD_DIRS=	# empty
 
 BINNAME=	maj_demo
 LGP_PATH=	${PREFIX}/lib/lgp
@@ -49,5 +43,4 @@ do-install:
 		quests ${MAJ_PATH}
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST_rpmfix.i386,v 1.2 2006/05/28 17:41:18 rillig Exp $
-/usr/lib/libslang.so.1

@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.22 2007/07/02 14:03:40 joerg Exp $
+# $NetBSD: NetBSD.mk,v 1.23 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -60,6 +60,16 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANINSTALL?=	maninstall catinstall
+
+_OPSYS_EMULDIR.freebsd=		/emul/freebsd
+_OPSYS_EMULDIR.hpux=		/emul/hpux
+_OPSYS_EMULDIR.irix=		/emul/irix
+_OPSYS_EMULDIR.linux=		/emul/linux
+_OPSYS_EMULDIR.linux32=		/emul/linux32
+_OPSYS_EMULDIR.osf1=		/emul/osf1
+_OPSYS_EMULDIR.solaris=		/emul/svr4
+_OPSYS_EMULDIR.solaris32=	/emul/svr4_32
+_OPSYS_EMULDIR.sunos=		/emul/sunos
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

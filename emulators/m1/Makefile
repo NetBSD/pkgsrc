@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/15 13:31:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2007/07/29 05:18:37 jlam Exp $
 
 DISTNAME=	m1074b2-lnx
 PKGNAME=	m1-0.7.4c
@@ -12,16 +11,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.emuhype.com/index.phtml?s=misc&ss=index
 COMMENT=	Arcade video and pinball game sound emulator (Linux binary)
 
-.include "../../emulators/suse_linux/Makefile.application"
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat
 
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-WRKSRC=		${WRKDIR}/m1-0.7.4
-NO_BUILD=	yes
+WRKSRC=			${WRKDIR}/m1-0.7.4
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	bin
 
