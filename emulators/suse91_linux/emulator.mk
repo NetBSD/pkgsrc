@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.1 2007/07/29 05:19:17 jlam Exp $
+# $NetBSD: emulator.mk,v 1.2 2007/07/29 08:55:39 jlam Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -42,6 +42,6 @@ DEPENDS_suse-9.1.x11?=		suse_x11${_SUSE_VERSION_REQD}:../../emulators/suse91_x11
 .if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
 .  for _mod_ in ${_LINUX_MODULES}
 DEPENDS_suse-9.1.${_mod_}:=	\
-	${DEPENDS_suse-9.1.${_mod_}:S/^suse_/suse32_/}
+	${DEPENDS_suse-9.1.${_mod_}:S/^suse_/suse32_/:S/suse91_/&32_/}
 .  endfor
 .endif
