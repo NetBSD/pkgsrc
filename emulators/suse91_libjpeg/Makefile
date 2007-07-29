@@ -1,25 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2006/06/30 15:37:22 salo Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/29 05:19:14 jlam Exp $
 
-DISTNAME=		suse_libjpeg-${SUSE_VERSION}
-PKGREVISION=		3
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE91}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_libjpeg-${SUSE_VERSION}
+PKGREVISION=	4
+CATEGORIES=	emulators
 
-MAINTAINER=		jdolecek@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for the JPEG library
+MAINTAINER=	jdolecek@NetBSD.org
+COMMENT=	Linux compatibility package for JPEG
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse91_base
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-LIBTOOLIZE_PLIST=	NO
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+EMUL_MODULES.linux=	base
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

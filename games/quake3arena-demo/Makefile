@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/04 21:29:43 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/07/29 05:19:25 jlam Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	3
@@ -14,29 +14,18 @@ COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
 CONFLICTS=	quake3arena-[0-9]*
 
-.include "../../mk/bsd.prefs.mk"
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base x11 glx
 
-.if ${OPSYS} != "Linux"
-DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
-.include "../../emulators/suse_linux/Makefile.application"
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
-
-NO_CONFIGURE=	yes
-EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
-								${GTAR} xzf -
 USE_TOOLS+=	gtar
-
-ONLY_FOR_PLATFORM=*-*-i386
+EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} |	\
+		${GTAR} xzf -
 
 DISTBINNAME=	q3demo
 BINNAME=	quake3arena-demo
 
-WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	lokigames
+WRKSRC=		${WRKDIR}
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
 

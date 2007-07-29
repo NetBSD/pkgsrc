@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/29 05:19:51 jlam Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -11,28 +11,21 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://opensource.adaptec.com/
 COMMENT=		Adaptec Storage Management software
 
-BUILD_DEPENDS+=		rpm>=2.5.4:../../misc/rpm
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+BUILD_DEPENDS+=		rpm>=2.5.4:../../misc/rpm
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat x11
+
 WRKSRC=			${WRKDIR}/sm_linux_v314_install
-_STRIPFLAG_INSTALL=	# defined
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
 INTERACTIVE_STAGE=	fetch
+_STRIPFLAG_INSTALL=	# defined
+BUILD_DIRS=		# empty
 
 DOWNLOAD=		http://www.adaptec.com/worldwide/support/driverdetail.html?cat=%2fOperating+System%2fLinux&filekey=sm_linux_v314_install.rpm
 

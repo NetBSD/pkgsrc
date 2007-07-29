@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/07/29 05:19:26 jlam Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -20,22 +20,14 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-NO_CONFIGURE=	yes
+USE_TOOLS+=		gtar
 
-PLIST_SRC=	${WRKDIR}/PLIST.src
-GAMES_DIR=	share/games
-MESSAGE_SUBST+=	GAMES_DIR=${GAMES_DIR}
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat x11
 
-USE_TOOLS+=	gtar
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
+PLIST_SRC=		${WRKDIR}/PLIST.src
+GAMES_DIR=		share/games
+MESSAGE_SUBST+=		GAMES_DIR=${GAMES_DIR}
 
 INSTALLATION_DIRS=	bin
 
@@ -66,5 +58,4 @@ do-install:
 	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
 	@${CHMOD} 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,5 @@
-Linux compatibility package based on the SuSE Linux distribution, take a
-look at "http://www.suse.com/" for more information about it.
+Linux compatibility package based on the SuSE Linux distribution.
+Please visit http://www.suse.com/ for more information about SuSE
+Linux.
 
-This package includes the glibc locale files.
+This package contains the glibc2 locale files.

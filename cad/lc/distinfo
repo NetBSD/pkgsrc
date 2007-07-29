@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2007/02/24 00:17:58 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2007/07/29 05:18:37 jlam Exp $
 
 SHA1 (lc-2.10/lc_amd64_lx24.tar.gz) = c750c470ca43047fa0ccb1029bdfc08874214491
 RMD160 (lc-2.10/lc_amd64_lx24.tar.gz) = a03c53018827e13167a26f27926ebe2b3bbf5846
@@ -12,9 +12,6 @@ Size (lc-2.10/lc_irix.tar.gz) = 2658949 bytes
 SHA1 (lc-2.10/lc_irix64.tar.gz) = cc616e039fe33e39b75680029f34730efda47494
 RMD160 (lc-2.10/lc_irix64.tar.gz) = 1b72abfae4da8ec8f3e22ee6b9e027d8cc0c60d0
 Size (lc-2.10/lc_irix64.tar.gz) = 2864612 bytes
-SHA1 (lc-2.10/lc_linux_motif1.tar.gz) = 7f46aa7846466649a57addde5ce30d6989353664
-RMD160 (lc-2.10/lc_linux_motif1.tar.gz) = ed2e7caad443dfaebc3df37765b5a563843e6653
-Size (lc-2.10/lc_linux_motif1.tar.gz) = 3020285 bytes
 SHA1 (lc-2.10/lc_linux_motif3.tar.gz) = e750aa83d3bd681abd96934fa8dcea2cf9050643
 RMD160 (lc-2.10/lc_linux_motif3.tar.gz) = 9a552a217bc743bd872ac475e26207bdb1708851
 Size (lc-2.10/lc_linux_motif3.tar.gz) = 8773141 bytes

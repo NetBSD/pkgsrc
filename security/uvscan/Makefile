@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/07/16 20:18:58 njoly Exp $
+# $NetBSD: Makefile,v 1.43 2007/07/29 05:19:50 jlam Exp $
 
 DISTNAME=		vlp4510e
 PKGNAME=		uvscan-5.10
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v5.10/
 EXTRACT_SUFX=		.tar.Z
@@ -12,23 +13,18 @@ COMMENT=		Evaluation version of a DOS/Windows file virus scanner
 
 CONFLICTS=		uvscan-dat-[0-9]*
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-WRKSRC=			${WRKDIR}
-NO_BUILD=		yes
-NO_CONFIGURE=		yes
 LICENSE=		uvscan-license
 RESTRICTED=		restrictive 30 day evaluation license
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat
+
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
 DOCDIR=			${PREFIX}/share/doc/uvscan
 EGDATDIR=		${PREFIX}/share/examples/uvscan
@@ -48,35 +44,22 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin
 USE_TOOLS+=		gtar:run
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/update_dat
-SUBST_SED.paths+=	-e 's,@UVSCANDIR@,${UVSCANDIR},g'
-SUBST_SED.paths+=	-e 's,@DATFILES@,${DATFILES},g'
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CP@,${CP},g'
-SUBST_SED.paths+=	-e 's,@BASENAME@,${BASENAME},g'
-SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g' -e 's,@GREP@,${GREP},g'
-SUBST_SED.paths+=	-e 's,@GTAR@,${GTAR},g' -e 's,@MKDIR@,${MKDIR},g'
-SUBST_SED.paths+=	-e 's,@MV@,${MV},g' -e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
+SUBST_FILES.paths=	update_dat.sh uvscan.sh
+SUBST_VARS.paths=	AWK BASENAME CP DATFILES ECHO GTAR MKDIR MV	\
+			PREFIX RM SED UVSCAN
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
-	${CP} ${FILESDIR}/update_dat.sh ${WRKDIR}/update_dat
+	${CP} ${FILESDIR}/update_dat.sh ${WRKSRC}/update_dat.sh
+	${CP} ${FILESDIR}/uvscan.sh ${WRKSRC}/uvscan.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/update_dat.sh ${PREFIX}/sbin/update_dat
 	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${UVSCANDIR}
-	${RM} -f ${PREFIX}/bin/uvscan
-	${LN} -sf ../${UVSCANDIR:S/${PREFIX}\///}/uvscan ${PREFIX}/bin/uvscan
+	${INSTALL_SCRIPT} ${WRKSRC}/uvscan.sh ${PREFIX}/bin/uvscan
 	${INSTALL_DATA} ${WRKSRC}/liblnxfv.so.4 ${UVSCANDIR}
-	${RM} -f ${UVSCANDIR}/liblnxfv.so
 	${LN} -s liblnxfv.so.4 ${UVSCANDIR}/liblnxfv.so
-	${INSTALL_DATA_DIR} ${PREFIX}/emul/linux/usr/local/lib
-	for file in liblnxfv.so.4 liblnxfv.so; do			\
-		${RM} -f ${PREFIX}/emul/linux/usr/local/lib/$${file};	\
-		${LN} -s ${UVSCANDIR}/$${file}				\
-			${PREFIX}/emul/linux/usr/local/lib;		\
-	done
 	for file in license.dat messages.dat; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${UVSCANDIR};	\
 	done

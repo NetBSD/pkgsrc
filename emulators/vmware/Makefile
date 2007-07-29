@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/03/21 16:15:58 tron Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/29 05:19:24 jlam Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -17,16 +17,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vmware.com/
 COMMENT=	VMware 2.x emulator
 
-CONFLICTS=	vmware-3*
-
 DEPENDS+=	vmware-module-1.*:../../emulators/vmware-module
-DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 
 LICENSE=	vmware-license
 
-WRKSRC=		${WRKDIR}/vmware-distrib
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	vmware
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+WRKSRC=			${WRKDIR}/vmware-distrib
 
 # We could install it into /etc/vmware, but that would mean we install
 # it somewhere out of ${PREFIX}, which is not a good idea, and the linux
@@ -82,5 +80,4 @@ post-install:
 	${ECHO} "vmnet1.HostOnlyNetMask = \"255.255.255.0\"";		\
 	) > ${VMWARE_CFG_DIR}/config
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

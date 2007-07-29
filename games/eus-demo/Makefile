@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/29 05:19:25 jlam Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -12,23 +12,12 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/products/eus/
 COMMENT=	Eric's Ultimate Solitaire (linux demo)
 
-WRKSRC=			${WRKDIR}/${WRKNAME}
-NO_CONFIGURE=		yes
-
 # Someone needs to look at alpha, powerpc and sparc compat_linux
-ONLY_FOR_PLATFORM=*-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
 
-.if (${MACHINE_ARCH} == "i386")
-BINTYPE=	x86/glibc-2.1
-
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-.elif (${MACHINE_ARCH} == "alpha")
-BINTYPE=	alpha/glibc-2.1
-.elif (${MACHINE_ARCH} == "powerpc")
-BINTYPE=	ppc/glibc-2.1
-.elif (${MACHINE_ARCH} == "sparc64")
-BINTYPE=	sparc64/glibc-2.1
-.endif
+WRKSRC=		${WRKDIR}/${WRKNAME}
+BUILD_DIRS=	# empty
 
 WRKNAME=	eus_demo
 DISTBINNAME=	EricsSolitaireDemo
@@ -37,6 +26,12 @@ BINNAME=	eus-demo
 DIST_SUBDIR=	lokigames
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
+
+BINTYPE.i386=		x86/glibc-2.1
+BINTYPE.alpha=		alpha/glibc-2.1
+BINTYPE.powerpc=	ppc/glibc-2.1
+BINTYPE.sparc64=	sparc64/glibc-2.1
+BINTYPE=		${BINTYPE.${EMUL_ARCH}}
 
 INSTALLATION_DIRS=	bin
 
@@ -55,5 +50,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
 	cd ${WRKSRC} && ${PAX} -rw [Eai-p]* sounds ${LIBDIR}
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

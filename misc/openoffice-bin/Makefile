@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2007/02/27 13:52:04 hira Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/29 05:19:35 jlam Exp $
 
+DISTNAME=		openoffice-bin	# overridden below
 PKGNAME=		openoffice-bin-${OO_VER}
 PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		openoffice-linux-112-services.rdb.bz2
-SITES.openoffice-linux-112-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+SITES.openoffice-linux-112-services.rdb.bz2=	\
+			http://www.fs.tum.de/~mrauch/OpenOffice/download/ \
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}	\
 			openoffice-linux-112-services.rdb.bz2
@@ -15,57 +17,50 @@ MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 
-OO_VER=			1.1.5
-PLIST_SUBST+=		VER=${OO_VER:Q}
-MESSAGE_SUBST+=		VER=${OO_VER}
-
-NO_BUILD=		yes
-NO_CONFIGURE=		yes
-
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
 CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+OO_VER=			1.1.5
+PLIST_SUBST+=		VER=${OO_VER:Q}
+MESSAGE_SUBST+=		VER=${OO_VER}
+
 # Install fails with "_sys_thread_create() failed, errno = 14"
-#ONLY_FOR_PLATFORM+=	NetBSD-1.6*-sparc* NetBSD-[2-9]*-sparc*
-ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
-ONLY_FOR_PLATFORM+=	SunOS-*-*
+NOT_FOR_PLATFORM+=	NetBSD-*-sparc*
 
 TEMP?=			${WRKDIR}
-CHECK_SHLIBS_SUPPORTED=	no
+BUILD_DIRS=		# empty
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
+EMUL_MODULES.linux=	compat x11
+SUSE_VERSION_REQD=	7.3
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-
-.  if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
-.    if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
-.    endif
-DISTNAME=	OOo_${OO_VER}_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
-.  elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
-.  endif
-
-.elif ${OPSYS} == "Linux" && ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
-
-.elif ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
-DISTNAME=	OOo_${OO_VER}_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
-.  elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_${OO_VER}_Solarisx86_install
-WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_x86_install
-.  endif
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTNAME=		OOo_${OO_VER}_LinuxIntel_install
+.elif ${EMUL_PLATFORM} == "solaris-i386"
+DISTNAME=		OOo_${OO_VER}_Solarisx86_install
+WRKSRC=			${WRKDIR}/OOo_${OO_VER}_Solaris_x86_install
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
+DISTNAME=		OOo_${OO_VER}_SolarisSparc_install
+WRKSRC=			${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
 .endif
 
-DISTNAME?=	OOo_${OO_VER}_LinuxIntel_install
-
 INSTALLATION_DIRS=	bin
+
+.if ${OPSYS} == "NetBSD"
+.PHONY: check-proc-cmdline
+pre-install: check-proc-cmdline
+check-proc-cmdline:
+	if ${TEST} ! -f /proc/curproc/cmdline &&			\
+	   ${TEST} ! -f ${OPSYS_EMULDIR}/proc/curproc/cmdline; then	\
+		${ECHO} "Please mount ${OPSYS_EMULDIR}/proc or /proc";	\
+		exit 1;							\
+	fi
+.endif
 
 pre-install:
 	${CP} ${WRKSRC}/setup.ins ${WRKSRC}/setup.ins.orig
@@ -89,25 +84,5 @@ do-install:
 .for i in scalc sdraw simpress swriter
 	${LN} -sf ${PREFIX}/OpenOffice.org${OO_VER}/program/${i} ${PREFIX}/bin/${i}
 .endfor
-
-# everything specific to your OS/Arch goes into its own Makefile
-
-.if exists(Makefile.${OPSYS}.${MACHINE_ARCH})
-.  include "Makefile.${OPSYS}.${MACHINE_ARCH}"
-.endif
-
-.if defined(DISTNAME)
-.  if ${DISTNAME} == "OOo_${OO_VER}_SolarisSparc_install"
-PLIST_SRC=	${PKGDIR}/PLIST.SolarisSparc
-.  elif ${DISTNAME} == "OOo_${OO_VER}_Solarisx86_install"
-PLIST_SRC=	${PKGDIR}/PLIST.SolarisIntel
-.  elif ${DISTNAME} == "OOo_${OO_VER}_LinuxIntel_install"
-PLIST_SRC=	${PKGDIR}/PLIST.LinuxIntel
-.  else
-PKG_FAIL_REASON= '${PKGNAME}:  cannot figure out which PLIST to use'
-.  endif
-.else
-DISTNAME=	# Dummy to prevent error from missing DISTNAME
-.endif
 
 .include "../../mk/bsd.pkg.mk"

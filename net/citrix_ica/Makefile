@@ -1,46 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2007/07/03 13:31:31 sborrill Exp $
-#
+# $NetBSD: Makefile,v 1.36 2007/07/29 05:19:46 jlam Exp $
 
-# A default so lintpkgsrc is happy, overridden below
-DISTNAME=	citrix
-PKGNAME=	citrix_ica-10.6.115659
+DISTNAME=	citrix_ica-10.6.115659
 CATEGORIES=	net
-MASTER_SITES=	http://download2.citrix.com/FILES/en/products/Linux10/
+MASTER_SITES=	# empty
 
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://www.citrix.com/English/SS/downloads/downloads.asp?dID=2755
 COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
-
-.include "../../mk/bsd.prefs.mk"
-
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
-ONLY_FOR_PLATFORM+=	DragonFly-*-i386
-
-.if ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "i386"
-DISTNAME=	en.linuxx86
-PKGNAME=	citrix_ica-10.6.115659
-.  elif ${MACHINE_ARCH} == "sparc"
-DISTNAME=	en.solaris
-PKGNAME=	citrix_ica-8.46.110465
-MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
-EXTRACT_SUFX=	.tar.Z
-.  endif
-.elif ${OPSYS} == "SunOS"
-DISTNAME=	en.solaris
-PKGNAME=	citrix_ica-8.46.110465
-MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
-EXTRACT_SUFX=	.tar.Z
-.elif ${OPSYS} == "Linux" || ${OPSYS} == "DragonFly"
-DISTNAME=	en.linuxx86
-PKGNAME=	citrix_ica-10.0.110003
-.endif
-
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${MACHINE_ARCH} == "i386"
-DEPENDS+=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=        suse_openmotif>=6.4:../../emulators/${SUSE_DIR_PREFIX}_openmotif
-DEPENDS+=        suse_locale>=6.4:../../emulators/${SUSE_DIR_PREFIX}_locale
-.endif
 
 LICENSE=		citrix_ica-license
 RESTRICTED=		License prohibits redistribution
@@ -49,17 +15,28 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	solaris-sparc
+EMUL_MODULES.linux=	locale motif x11
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTNAME=	en.linuxx86
+PKGNAME=	citrix_ica-10.6.115659
+MASTER_SITES=	http://download2.citrix.com/FILES/en/products/Linux10/
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
+DISTNAME=	en.solaris
+PKGNAME=	citrix_ica-8.46.110465
+MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
+EXTRACT_SUFX=	.tar.Z
+.endif
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 CDIR=		${PREFIX}/lib/ICAClient
 USE_TOOLS+=	patch
-
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
-.  if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON+=	"${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
-.  endif
-.endif
 
 INSTALLATION_DIRS=	bin
 
@@ -78,7 +55,14 @@ do-build:
 		> ${WRKSRC}/wfica.x
 
 pre-install:
-	if [ -d "${CDIR}" ]; then                                      \
+	${RUN} if [ `${ID} -u` != 0 ]; then				\
+		${ECHO} "";                                             \
+		${ECHO} "*** ${PKGNAME} must be installed with"		\
+			"superuser privileges ***";			\
+		${ECHO} "";                                             \
+		${FALSE};						\
+	fi
+	${RUN} if [ -d "${CDIR}" ]; then				\
 		${ECHO} "";                                             \
 		${ECHO} "*** Please remove ${CDIR} and try again ***";  \
 		${ECHO} "";                                             \
@@ -92,9 +76,5 @@ do-install:
 	${SED} "s#/usr/lib/ICAClient#${CDIR}#g" \
 		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
-
-.if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${MACHINE_ARCH} == "i386"
-.  include "../../emulators/suse_linux/Makefile.application"
-.endif
 
 .include "../../mk/bsd.pkg.mk"

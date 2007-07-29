@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/03/25 14:45:19 tron Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/29 05:19:25 jlam Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -10,12 +10,6 @@ MASTER_SITES=	http://download3.vmware.com/software/wkst/ \
 		http://vmware-heva.www.conxion.com/software/ \
 		ftp://mirror.aarnet.edu.au/pub/vmware/software/
 
-MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE=	http://www.vmware.com/
-COMMENT=	VMware emulator 3.x
-
-CONFLICTS=	vmware-2.*
-
 # Binary patch to fix an problem with the nice(3) interface in an
 # newer glibc (>= v2.3.3)
 VMWARE_BIN_PATCH=	vmware-any-any-update99
@@ -24,16 +18,22 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${VMWARE_BIN_PATCH}.tar.gz
 SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/obsolete/
 
+MAINTAINER=	jdolecek@NetBSD.org
+HOMEPAGE=	http://www.vmware.com/
+COMMENT=	VMware emulator 3.x
+
 DEPENDS+=	vmware-module>=3.2.1.8:../../emulators/vmware-module3
-DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 
 LICENSE=	vmware-license
 
-WRKSRC=		${WRKDIR}/vmware-distrib
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	vmware
+SUSE_VERSION_REQD=	6.4nb1
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+WRKSRC=			${WRKDIR}/vmware-distrib
+
 # There is a kernel bug in NetBSD 3.0 for vmware.
-NOT_FOR_PLATFORM=	NetBSD-3.0*-i386
+NOT_FOR_PLATFORM=	NetBSD-3.0*-*
 
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -45,8 +45,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 # emulation has a fallbackmode to look into ${PREFIX}/emul/linux/etc,
 # so use this way.
 VMWARE_CFG_DIR=		${PREFIX}/emul/linux/etc/vmware
-
-.include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -110,5 +108,4 @@ post-install:
 	${ECHO} "xkeymap.usekeycodeMapIfXFree86 = true";		\
 	) > ${VMWARE_CFG_DIR}/config
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

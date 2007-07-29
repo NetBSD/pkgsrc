@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/07/29 05:19:26 jlam Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -11,28 +11,23 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Return to Castle Wolfenstein for Linux
 
-ONLY_FOR_PLATFORM=	*-*-i386
-NOT_FOR_PLATFORM=	NetBSD-*-*
-
-NO_BUILD=		yes
-RTCWDIR=		${PREFIX}/lib/lokigames/rtcw
 RESTRICTED=		Size; the data set is much too big
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-EXTRACT_CMD=	${SED} '1,178d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
-		    -C ${WRKSRC}
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
+
+# This package needs DRI support.
+NOT_FOR_PLATFORM=	NetBSD-*-*
+
+BUILD_DIRS=	# empty
+RTCWDIR=	${PREFIX}/lib/lokigames/rtcw
 USE_TOOLS+=	gtar
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-.include "../../emulators/suse_linux/Makefile.application"
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
+EXTRACT_CMD=	${SED} '1,178d' ${DOWNLOADED_DISTFILE} |		\
+		${GTAR} xzf - -C ${WRKSRC}
 
 pre-extract:
 	${MKDIR} ${WRKSRC}

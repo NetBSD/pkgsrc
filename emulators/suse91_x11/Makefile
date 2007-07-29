@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.11 2006/06/30 15:37:22 salo Exp $
+# $NetBSD: Makefile,v 1.12 2007/07/29 05:19:23 jlam Exp $
 
-DISTNAME=		suse_x11-${SUSE_VERSION}
-PKGREVISION=		6
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE91}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_x11-${SUSE_VERSION}
+PKGREVISION=	7
+CATEGORIES=	emulators
+DISTFILES=	XFree86-libs-4.3.99.902-43.42.5.${SUSE_ARCH}.rpm
 
-MAINTAINER=		tron@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for X11 binaries
+MAINTAINER=	tron@NetBSD.org
+COMMENT=	Linux compatibility package for X11
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse91_base
+EMUL_MODULES.linux=	base
 
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
-
-.include "../../mk/bsd.prefs.mk"
+# These symlinks are managed by ldconfig(8).
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libFS.so.6
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libGLw.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libI810XvMC.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libVncExt.so.2
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXRes.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXfontcache.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXinerama.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXss.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXvMC.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libXxf86rush.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libfontenc.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libxkbfile.so.1
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/X11R6/${LINUX_LIBSUBDIR}/libxkbui.so.1
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

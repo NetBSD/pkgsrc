@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/29 05:19:26 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -13,10 +13,9 @@ COMMENT=	Quake III Arena Dedicated Server for Linux
 
 .include "../../games/quake3server/Makefile.common"
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
-USE_TOOLS+=		gtar
-
+USE_TOOLS+=	gtar
 EXTRACT_CMD=	${SED} '1,265d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf -
+
 WRKSRC=		${WRKDIR}
 BASEDOCDIR=	${PREFIX}/share/doc/lokigames/quake3server
 RCD_SCRIPTS=	quake3server

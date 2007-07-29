@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1915 2007/07/23 15:23:46 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1916 2007/07/29 05:19:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -28,6 +28,10 @@ PKG_FAIL_REASON+=	"[bsd.pkg.mk] Run \"${MAKE} help topic=make_jobs\" to get some
 
 # Include any preferences, if not already included, and common definitions
 .include "${.PARSEDIR}/bsd.prefs.mk"
+
+.if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
+.  include "${.PARSEDIR}/emulator/emulator.mk"
+.endif
 
 .include "${.PARSEDIR}/flavor/bsd.flavor-vars.mk"
 .include "${.PARSEDIR}/check/bsd.check-vars.mk"

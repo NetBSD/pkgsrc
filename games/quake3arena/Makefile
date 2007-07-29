@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/02/19 18:48:59 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2007/07/29 05:19:26 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -14,17 +14,11 @@ COMMENT=	Quake 3 Arena -- first person shooter (binary only, no data files)
 
 CONFLICTS=	quake3arena-demo-[0-9]*
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
-.endif
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base x11 glx
 
 NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no
-NO_CONFIGURE=	yes
 
 USE_TOOLS+=	gtar gunzip tail
 
@@ -32,10 +26,6 @@ USE_TOOLS+=	gtar gunzip tail
 # number that's taken from the distfile itself.
 #
 EXTRACT_CMD=	tail +266 ${DOWNLOADED_DISTFILE} | gunzip | gtar -xf -
-
-.if !make(fetch)
-ONLY_FOR_PLATFORM=*-*-i386
-.endif
 
 DISTBINNAME=	quake3.x86
 BINNAME=	quake3arena
@@ -63,9 +53,10 @@ do-install:
 
 	cd ${WRKSRC} && ${PAX} -rw baseq3 ${LIBDIR}
 
-.if ${OPSYS} == "FreeBSD"
+# Some platforms, e.g. FreeBSD, need to "brand" the ELF binaries to
+# the correct type.
+#
 post-install:
-	${BRANDELF} -t Linux ${LIBDIR}/${BINNAME}
-.endif
+	${BRANDELF:D${BRANDELF} -t Linux ${PREFIX}/bin/${BINNAME}:U${TRUE}}
 
 .include "../../mk/bsd.pkg.mk"

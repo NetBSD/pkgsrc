@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2007/01/11 11:52:17 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/29 05:19:50 jlam Exp $
 
-DISTNAME=	acroread7	# Overridden below
+DISTNAME=	acroread7	# overridden below
 PKGNAME=	acroread7-7.0.9
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.9/enu/
@@ -22,28 +22,19 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 LICENSE=		adobe-acrobat-license
 
 WRKSRC=			${WRKDIR}/AdobeReader
-CHECK_SHLIBS_SUPPORTED=	NO
-NO_BUILD=		YES
+BUILD_DIRS=		# empty
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat cups gtk2 locale
+SUSE_VERSION_REQD=	10.0
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=	*-*-i386
-
-# Default (overridden below)
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTNAME=	AdobeReader_enu-7.0.9-1.i386
+PLATFORM=	intellinux
+.else
 PLATFORM=	unknown
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-. if (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_gtk2>=10.0:../../emulators/${SUSE_DIR_PREFIX}_gtk2
-DEPENDS+=	suse_libcups>=10.0:../../emulators/${SUSE_DIR_PREFIX}_libcups
-DEPENDS+=	suse_locale>=10.0:../../emulators/${SUSE_DIR_PREFIX}_locale
-DEPENDS+=	suse_compat>=10.0:../../emulators/${SUSE_DIR_PREFIX}_compat
-DISTNAME=	AdobeReader_enu-7.0.9-1.i386
-PLATFORM=	intellinux
-.endif
-.elif ${OPSYS} == "Linux"
-DISTNAME=	AdobeReader_enu-7.0.9-1.i386
-PLATFORM=	intellinux
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
@@ -51,8 +42,8 @@ PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
 # Additional directories to search for fonts
-BUILD_DEFS+=	ACROREAD_FONTPATH
-ACROREAD_FONTPATH?= ${PREFIX}/lib/X11/fonts/TTF
+BUILD_DEFS+=		ACROREAD_FONTPATH
+ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
 
 INSTALLATION_DIRS=	bin
 
@@ -75,8 +66,4 @@ post-install:
 	${LN} -sf ${PREFIX}/bin/acroread7 ${PREFIX}/bin/acroread
 	${RM} ${PREFIX}/Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
 
-# do not include the linux stuff if we are, for example, on a Solaris box
-. if (${MACHINE_ARCH} == "i386")
-.include "../../emulators/suse_linux/Makefile.application"
-.endif
 .include "../../mk/bsd.pkg.mk"

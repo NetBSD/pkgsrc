@@ -1,42 +1,30 @@
-# $NetBSD: Makefile,v 1.6 2006/06/30 15:38:00 salo Exp $
-#
+# $NetBSD: Makefile,v 1.7 2007/07/29 05:19:35 jlam Exp $
 
-DISTNAME=	suse-9.1
-PKGREVISION=	3
+DISTNAME=	suse-${SUSE_VERSION}
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs emulators
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	jdolecek@NetBSD.org
-COMMENT=	Provides a SuSE-based Linux binary emulation environment
+COMMENT=	SUSE-based Linux binary emulation environment
 
-# This list should contain all suse91_* packages.
-#
-DEPENDS+=	suse_base-9.1{,nb*}:../../emulators/suse91_base
-DEPENDS+=	suse_aspell-9.1{,nb*}:../../emulators/suse91_aspell
-DEPENDS+=	suse_compat-9.1{,nb*}:../../emulators/suse91_compat
-DEPENDS+=	suse_expat-9.1{,nb*}:../../emulators/suse91_expat
-DEPENDS+=	suse_fontconfig-9.1{,nb*}:../../emulators/suse91_fontconfig
-DEPENDS+=	suse_freetype2-9.1{,nb*}:../../emulators/suse91_freetype2
-DEPENDS+=	suse_gdk-pixbuf-9.1{,nb*}:../../emulators/suse91_gdk-pixbuf
-DEPENDS+=	suse_glx-9.1{,nb*}:../../emulators/suse91_glx
-DEPENDS+=	suse_gtk-9.1{,nb*}:../../emulators/suse91_gtk
-DEPENDS+=	suse_gtk2-9.1{,nb*}:../../emulators/suse91_gtk2
-DEPENDS+=	suse_libjpeg-9.1{,nb*}:../../emulators/suse91_libjpeg
-DEPENDS+=	suse_libpng-9.1{,nb*}:../../emulators/suse91_libpng
-DEPENDS+=	suse_libtiff-9.1{,nb*}:../../emulators/suse91_libtiff
-DEPENDS+=	suse_locale-9.1{,nb*}:../../emulators/suse91_locale
-DEPENDS+=	suse_openmotif-9.1{,nb*}:../../emulators/suse91_openmotif
-DEPENDS+=	suse_slang-9.1{,nb*}:../../emulators/suse91_slang
-DEPENDS+=	suse_vmware-9.1{,nb*}:../../emulators/suse91_vmware
-DEPENDS+=	suse_x11-9.1{,nb*}:../../emulators/suse91_x11
+.include "../../emulators/suse91_linux/Makefile.common"
 
-EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
 
 do-install:	# empty
+
+EMUL_MODULES.linux=	aspell base compat expat fontconfig freetype2	\
+			gdk-pixbuf glx gtk gtk2 jpeg locale motif png	\
+			slang tiff x11
+
+.if ${EMUL_PLATFORM} == "linux-i386"
+EMUL_MODULES.linux+=	vmware
+.endif
+
+EMUL_PKG_FMT=		plain
 
 .include "../../mk/bsd.pkg.mk"

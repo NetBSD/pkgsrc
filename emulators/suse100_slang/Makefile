@@ -1,27 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2007/04/19 15:30:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/29 05:18:58 jlam Exp $
 
-DISTNAME=		suse_slang-${SUSE_VERSION}
-PKGREVISION=		2
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_slang-${SUSE_VERSION}
+PKGREVISION=	3
+CATEGORIES=	emulators
+DISTFILES=	slang-1.4.9-127.${SUSE_ARCH}.rpm
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for slang library
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Linux compatibility package for S-Lang
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse100_base
+EMUL_MODULES.linux=	base
 
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
-
-SUSE_INCLUDE_MAKEFILE_ARCH=	yes
+# This symlink is managed by ldconfig(8).
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/${LINUX_LIBSUBDIR}/libslang.so.1
 
 post-install:
-	cd ${PREFIX}/${EMULSUBDIR}/usr/lib &&  \
-		${LN} -sf libslang-utf8.so.1 libslang.so.1
+	cd ${EMULDIR}/usr/lib && ${LN} -fs libslang-utf8.so.1 libslang.so.1
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2007/07/29 05:19:25 jlam Exp $
 #
 
 DISTNAME=		xyame038
@@ -11,17 +11,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.geocities.co.jp/Stylish/2068/yame.html
 COMMENT=		Multi-system emulator (Gameboy, NES, and PC-Engine)
 
-.include "../../emulators/suse_linux/Makefile.application"
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
 
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
-WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-
-ONLY_FOR_PLATFORM+=	*-*-i386
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:

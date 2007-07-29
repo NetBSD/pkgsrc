@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.7 2007/01/07 09:13:53 rillig Exp $
+#	$NetBSD: Makefile,v 1.8 2007/07/29 05:18:37 jlam Exp $
 
 DISTNAME=		ski-0.9.81-l6-i686
 PKGNAME=		ski-0.9.81.6
@@ -15,17 +15,14 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-ONLY_FOR_PLATFORM=	*-*-i386
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
 
 WRKSRC=			${WRKDIR}
-INTERACTIVE_STAGE=	fetch extract
-NO_BUILD=		YES
+INTERACTIVE_STAGE=	fetch
+BUILD_DIRS=		# none
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 lib/X11/app-defaults
 
 DOWNLOAD=		http://www.hpl.hp.com/research/linux/ski/download.php
 
@@ -38,7 +35,9 @@ FETCH_MESSAGE=								\
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/nue/usr/bin/*ski* ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKDIR}/nue/usr/X11R6/lib/X11/app-defaults/XSki ${PREFIX}/lib/X11/app-defaults/XSki
+	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1		\
+		${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/nue/usr/X11R6/lib/X11/app-defaults/XSki \
+		${PREFIX}/lib/X11/app-defaults/XSki
 
 .include "../../mk/bsd.pkg.mk"

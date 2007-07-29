@@ -1,26 +1,14 @@
-# $NetBSD: Makefile.common,v 1.18 2007/02/22 19:27:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2007/07/29 05:19:52 jlam Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
 CATEGORIES=		www graphics
-MASTER_SITES=		http://download.macromedia.com/get/flashplayer/current/
+MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.flash.com/
 
-ONLY_FOR_PLATFORM=	*-*-i386
-
 DIST_SUBDIR=		flash/${FLASH_VERS}
-
-.include "../../mk/bsd.prefs.mk"
-
-SUB=			english/${DISTUNAME}/${FLASH_VERS}
-
-FLASH_VERS=		9.0r31
-DISTUNAME=		linux
-WRKNAME=		install_flash_player_9_${DISTUNAME}
-
-DISTINFO_FILE=		${.CURDIR}/../../www/firefox-bin-flash/distinfo
 
 LICENSE=		flash-license
 RESTRICTED=		Redistribution not permitted
@@ -29,9 +17,19 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-CHECK_SHLIBS_SUPPORTED=	no
+EMUL_PLATFORMS=		linux-i386
+
+.include "../../mk/bsd.prefs.mk"
+
+SUB=			english/${DISTUNAME}/${FLASH_VERS}
+
+FLASH_VERS=		9.0r48
+DISTUNAME=		linux
+WRKNAME=		install_flash_player_9_${DISTUNAME}
+
+DISTINFO_FILE=		${.CURDIR}/../../www/firefox-bin-flash/distinfo
+
+BUILD_DIRS=		# empty
 CRYPTO=			yes
 
 MOZ_NAME?=		firefox-linux

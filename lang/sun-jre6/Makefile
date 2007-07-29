@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/26 20:35:33 tv Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/29 05:19:32 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -19,29 +19,21 @@ REQD_DIRS+=	${JAVA_HOME}/lib/images
 REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
 REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
-.include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386"
-DIST_ARCH=	i586
-.sinclude "sfiles-i386.mk"
-.endif
+.include "../../lang/sun-jre6/Makefile.common"
+
+.sinclude "sfiles-${EMUL_ARCH}.mk"
 
 .for FILE in ${SFILES}
 CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
+CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre6
 PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
-
-HEADER_TEMPLATES+=	${WRKDIR}/HEADER.tmpl
-INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
-FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
-FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-
-CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-6.zip
@@ -59,7 +51,6 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${WRKDIR}/HEADER.tmpl
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
@@ -80,4 +71,4 @@ makesfiles:
 		-name \*.cfg -o -name \*.security |			\
 	${SED} 's/^/SFILES+=	/' >> ${PKGDIR}/sfiles-${MACHINE_ARCH}.mk
 
-.include "../../lang/sun-jre6/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

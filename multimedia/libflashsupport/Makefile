@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/06/15 20:10:41 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.6 2007/07/29 05:19:45 jlam Exp $
 
 PKGNAME=	libflashsupport-1.0.2098
 DISTNAME=	libflashsupport-1-0-2098-i586
@@ -12,28 +11,18 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://labs.adobe.com/wiki/index.php/Flash_Player:Additional_Interface_Support_for_Linux
 COMMENT=	Additional Interface Support for Linux Flash Player
 
-USE_LANGUAGES=	# none
-NO_BUILD=	YES
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base openssl
+SUSE_VERSION_REQD=	9.1
 
-BUILD_DEPENDS+= rpm2pkg>=1.2:../../pkgtools/rpm2pkg
-RPM2PKG=        ${PREFIX}/sbin/rpm2pkg
-RPM2PKGARGS=	-d ${WRKDIR} -s 3 ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+EMUL_PKG_FMT=		rpm
+RPM2PKG_STRIP=		3
+RPM2PKG_PLIST=		# empty
 
-SUSE_COMPAT32=	yes
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_base>=9.1:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=		suse_openssl>=9.1:../../emulators/${SUSE_DIR_PREFIX}_openssl
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	share/doc
-
-PLIST_SUBST=	EMULSUBDIR=${EMULSUBDIR}
-
-do-extract:
-	${RPM2PKG} ${RPM2PKGARGS}
 
 do-install:
 	${INSTALL_LIB} ${WRKDIR}/libflashsupport.so \
@@ -41,5 +30,4 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/doc/libflashsupport-1.0/README \
 		${PREFIX}/share/doc/libflashsupport.README
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

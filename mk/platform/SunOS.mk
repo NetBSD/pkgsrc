@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.29 2007/07/02 14:03:41 joerg Exp $
+# $NetBSD: SunOS.mk,v 1.30 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -47,6 +47,10 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall
+
+_OPSYS_EMULDIR.solaris=		# empty
+_OPSYS_EMULDIR.solaris32=	# empty
+_OPSYS_EMULDIR.sunos=		# empty
 
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard

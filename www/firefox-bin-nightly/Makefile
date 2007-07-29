@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/09/24 16:42:56 salo Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/29 05:19:53 jlam Exp $
 
 MOZILLA=	firefox
 
 HOMEPAGE=	http://www.mozilla.org/projects/firefox/
 COMMENT=	Lightweight gecko-based web browser (nightly binary pkg)
 
-# see Makefile.NetBSD.i386.
-ONLY_FOR_PLATFORM+=	Linux-*-i386
-ONLY_FOR_PLATFORM+=	SunOS-5.[89]*-sparc
+EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 
 .include "../../www/seamonkey-bin-nightly/Makefile.common"
