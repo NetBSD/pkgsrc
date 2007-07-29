@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1647 2007/07/28 14:49:49 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1648 2007/07/29 07:02:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/erlang-doc to 11.5 [obache 2007-07-28]
 	Updated lang/erlang-man to 11.5 [obache 2007-07-28]
 	Updated devel/bzr to 0.18 [wiz 2007-07-28]
+	Added net/spreadlogd version 2.0.0 [obache 2007-07-29]
