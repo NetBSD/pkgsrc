@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.255 2007/07/29 13:17:57 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.256 2007/07/29 18:27:05 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -32,6 +32,9 @@ _MAKE:=	${MAKE}
 _MAKE:=	${_dir_}/${MAKE}
 .      endif
 .    endif
+.  if empty(_MAKE:M/*) && defined(PWD) && exists(${PWD}/${MAKE})
+_MAKE:=	${_PWD_}/${MAKE}
+.  endif
 .  endfor
 .  if !empty(_MAKE:M/*)
 MAKEFLAGS+=	_MAKE=${_MAKE:Q}
