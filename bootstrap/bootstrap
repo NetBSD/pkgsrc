@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.101 2007/07/27 10:43:24 joerg Exp $
+# $NetBSD: bootstrap,v 1.102 2007/07/29 17:09:47 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -70,6 +70,7 @@ usage="Usage: $0 "'
     [ --unprivileged | --ignore-user-check ]
     [ --preserve-path ]
     [ --compiler <compiler> ]
+    [ --mk-fragment <mk.conf> ]
     [ --full ]
     [ --quiet ]
     [ --help ]'
@@ -275,6 +276,7 @@ varbase=
 full=no
 compiler=""
 quiet=no
+mk_fragment=
 
 while [ $# -gt 0 ]; do
 	case $1 in
@@ -297,6 +299,10 @@ while [ $# -gt 0 ]; do
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--unprivileged | --ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
+	--mk-fragment=*)
+			mk_fragment=`get_optarg "$1"` ;;
+	--mk-fragment)
+			mk_fragment="$2"; shift ;;
 	--full)		full=yes ;;
 	--quiet)	quiet=yes ;;
 	--help)		echo "$usage"; exit ;;
@@ -889,6 +895,10 @@ echo "WRKOBJDIR=		${wrkdir}/wrk" >> ${BOOTSTRAP_MKCONF}
 
 echo "" >> ${TARGET_MKCONF}
 echo "" >> ${BOOTSTRAP_MKCONF}
+if test -n "${mk_fragment}"; then
+	cat "${mk_fragment}" >> ${TARGET_MKCONF}
+	echo "" >> ${TARGET_MKCONF}
+fi
 echo ".endif			# end pkgsrc settings" >> ${TARGET_MKCONF}
 echo ".endif			# end pkgsrc settings" >> ${BOOTSTRAP_MKCONF}
 
