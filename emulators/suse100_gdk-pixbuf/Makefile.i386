@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.i386,v 1.2 2006/06/06 14:53:06 salo Exp $
-
-RPMFILES=		gdk-pixbuf-0.22.0-72.3.${SUSE_ARCH}.rpm

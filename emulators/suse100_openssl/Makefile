@@ -1,22 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2007/04/19 15:30:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/29 05:18:57 jlam Exp $
 
-DISTNAME=		suse_openssl-${SUSE_VERSION}
-PKGREVISION=		3
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_openssl-${SUSE_VERSION}
+PKGREVISION=	4
+CATEGORIES=	emulators
+DISTFILES=	openssl-0.9.7g-2.12.${SUSE_ARCH}.rpm
 
-MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for the OpenSSL library
+MAINTAINER=	markd@NetBSD.org
+COMMENT=	Linux compatibility package for OpenSSL
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse100_base
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-SUSE_INCLUDE_MAKEFILE_ARCH=	yes
+EMUL_MODULES.linux=	base
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

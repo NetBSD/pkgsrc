@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2007/05/04 04:53:31 markd Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/29 05:19:28 jlam Exp $
 
-DISTNAME=	jdk-6u1-linux-i586
+DISTNAME=	jdk-6u1-linux-${DIST_ARCH}
 PKGNAME=	sun-jdk6-6.0.1
 MASTER_SITES=	# empty
 
@@ -9,10 +9,11 @@ SHORT_NAME=	JDK
 
 DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre6
 
-CHECK_SHLIBS=	no	# One of the demos is broken.
 WRKSRC=		${WRKDIR}/jdk1.6.0_01
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
+
+.include "../../lang/sun-jre6/Makefile.common"
 
 # Remove parts that are in common with the JRE
 #
@@ -27,4 +28,4 @@ post-extract:
 	done
 	${LN} -sf . ${WRKSRC}/jre
 
-.include "../../lang/sun-jre6/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
