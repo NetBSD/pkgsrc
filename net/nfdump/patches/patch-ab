@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/07/29 21:33:42 seb Exp $
+
+There is nothing really useful in flow-tools' ftbuild.h.
+
+--- ft2nfdump.c.orig	2006-07-14 06:09:03.000000000 +0000
++++ ft2nfdump.c
+@@ -64,7 +64,7 @@
+ #endif
+ 
+ #include "version.h"
+-#include "ftbuild.h"
++/* #include "ftbuild.h" */
+ #include "nf_common.h"
+ #include "nffile.h"
+ #include "launch.h"
