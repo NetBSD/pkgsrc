@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/03/24 19:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/07/29 14:33:12 joerg Exp $
 
 DISTNAME=	nn-6.7.3
 CATEGORIES=	news
@@ -20,9 +20,9 @@ SFILE=		s-linux.h
 SFILE=		s-netbsd.h
 .endif
 
-.if ${LOWER_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386"
 MFILE=		m-i80386.h
-.elif ${LOWER_ARCH} == "mipseb"
+.elif ${MACHINE_ARCH} == "mipseb"
 MFILE=         m-mipsel.h
 .else
 MFILE=		m-${LOWER_ARCH}.h
