@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/29 05:19:35 jlam Exp $
 #
 
 DISTNAME=		words-1.97-linux
@@ -11,14 +11,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://users.erols.com/whitaker/wordslux.htm
 COMMENT=		Latin-to-English dictionary program (Linux binary)
 
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
+
 WRKSRC=			${WRKDIR}/words-1.97
-NO_CONFIGURE=	YES
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
-.endif
-
 INSTALLATION_DIRS=	bin libexec
 
 do-build:
@@ -38,5 +34,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/latin-words
 .endfor
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

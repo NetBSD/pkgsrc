@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/07/01 20:34:11 salo Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/07/29 05:20:00 jlam Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -6,26 +6,27 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 DEPENDS+=		opera>=7.0:../../www/opera
-DEPENDS+=		suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-*-i386
-PLATFORM=		intellinux
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	motif
+SUSE_VERSION_REQD=	7.3
+
+ACRO_PLATFORM=		intellinux
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
-NO_BUILD=		YES
+BUILD_DIRS=		# empty
 
-PLIST_SRC=		../../www/opera-acroread/PLIST
-PLIST_SUBST+=		ACROREAD=${ACROREAD:Q}
-PLIST_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR:Q}
-PLIST_SUBST+=		PLATFORM=${PLATFORM:Q}
-NS_PLUGINS_DIR=		${PREFIX}/emul/linux/usr/lib/opera/plugins
+PLIST_SRC=		${PKGSRCDIR}/www/opera-acroread/PLIST
 
-do-install:
-	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${LN} -s ${PREFIX}/${ACROREAD}/${ACRO_SUBDIR}/${PLATFORM}/nppdf.so \
-		${NS_PLUGINS_DIR}/nppdf.so
+FILES_SUBST+=		ACROREAD=${ACROREAD:Q}
+FILES_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR:Q}
+FILES_SUBST+=		ACRO_PLATFORM=${ACRO_PLATFORM:Q}
 
-.include "../../emulators/suse_linux/Makefile.application"
-.include "../../mk/bsd.pkg.mk"
+DEINSTALL_TEMPLATES+=	${PKGSRCDIR}/www/opera-acroread/DEINSTALL
+INSTALL_TEMPLATES+=	${PKGSRCDIR}/www/opera-acroread/INSTALL
+
+INSTALLATION_DIRS+=	${EMULDIR}/usr/lib/opera/plugins
+
+do-install:	# nothing

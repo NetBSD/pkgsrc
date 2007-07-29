@@ -1,87 +1,70 @@
-# $NetBSD: Makefile.common,v 1.16 2007/01/23 16:54:59 joerg Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/07/29 05:19:17 jlam Exp $
 
-.include "../../emulators/suse91_linux/vars.mk"
-.include "../../emulators/suse91_linux/arch.mk"
+SUSE_PKG=		yes
+SUSE_VERSION=		9.1
+SUSE_VERSION_REQD=	${SUSE_VERSION}
 
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
-			NetBSD-[4-9]*-x86_64 FreeBSD-*-i386 \
-			DragonFly-*-i386
+EMUL_PLATFORMS?=	linux-i386 linux-x86_64
 
-_SUSE_FTP_SUBDIR=	suse/discontinued/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/
-_SUSE_FTP_SUBDIR_UPD=	suse/discontinued/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/
+.include "../../mk/bsd.prefs.mk"
 
-MASTER_SITE_SUSE91?=	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR} \
-			ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
-			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR} \
-			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-			ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR} \
-			ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-			ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR} \
-			ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR_UPD} \
-			ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR:C/^suse/suse\/pub/} \
-			ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR_UPD:C/^suse/suse\/pub/}
+# The SuSE 10.x Linux packages are only usable on the following platforms.
+ONLY_FOR_PLATFORM+=	DragonFly-*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
 
+# _SUSE_ARCH.* is a table of ${EMUL_ARCH} to SuSE architectures.
+_SUSE_ARCH.${EMUL_ARCH}=	${EMUL_ARCH}
+_SUSE_ARCH.i386=		i586
+_SUSE_ARCH=			${_SUSE_ARCH.${EMUL_ARCH}}
+SUSE_ARCH=			${_SUSE_ARCH}
+
+_SUSE_FTP_SUBDIR=	suse/discontinued/${MACHINE_ARCH}/9.1/suse/${SUSE_ARCH}/
+_SUSE_FTP_SUBDIR_UPD=	suse/discontinued/${MACHINE_ARCH}/update/9.1/rpm/${SUSE_ARCH}/
+
+MASTER_SITE_SUSE_${SUSE_VERSION}=	\
+	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR} \
+	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR} \
+	ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR} \
+	ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR} \
+	ftp://mirror.mcs.anl.gov/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR:C/^suse/suse\/pub/} \
+	ftp://ftp.sh.cvut.cz/MIRRORS/${_SUSE_FTP_SUBDIR_UPD:C/^suse/suse\/pub/}
+
+MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
 
+HOMEPAGE?=		http://www.suse.com/
+
 WRKSRC?=		${WRKDIR}
+BUILD_DIRS?=		# empty
 MANCOMPRESSED?=		yes
 
-EMULSUBDIR=		emul/linux
-EMULDIR=		${PREFIX}/${EMULSUBDIR}
+EMUL_PKG_FMT?=		rpm
+RPM2PKG_PREFIX?=	${PREFIX}
+RPM2PKG_SUBPREFIX?=	${EMULSUBDIR}
+RPM2PKG_STAGE?=		do-install
 
-# Set location of OPSYS-specific emulation directory
-.if ${OPSYS} == "NetBSD"
-OPSYS_EMULDIR=		/${EMULSUBDIR}
-.elif (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly")
-OPSYS_EMULDIR=		/compat/${EMULSUBDIR:T}
+.if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
+PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
+COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
+LINUX_BASE=		linux32
 .else
-OPSYS_EMULDIR=		/${EMULSUBDIR}
+LINUX_BASE=		linux
 .endif
-FILES_SUBST+=		OPSYS_EMULDIR=${OPSYS_EMULDIR:Q}
+PLIST_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
+FILES_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
 
-RPM2PKG=		${PREFIX}/sbin/rpm2pkg
-BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
+LINUX_LIBSUBDIR?=	lib
+PLIST_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
+FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 
-BUILD_DEFS+=		RPMFILES
-.if defined(RPMIGNOREPATH)
-BUILD_DEFS+=		RPMIGNOREPATH
-.endif
-
-# The SuSE Linux packages have circular dependencies.
-LDD?=			${TRUE}
-
-RPM2PKGSTRIP?=		1
-RPM2PKGARGS?=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-.if empty(RPM2PKGSTRIP:M0)
-RPM2PKGARGS+=		-s ${RPM2PKGSTRIP}
-.endif
-.for TEMP in ${RPMIGNOREPATH}
-RPM2PKGARGS+=		-i ${TEMP}
-.endfor
-.for TEMP in ${RPMFILES}
-RPM2PKGARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
-.endfor
-
-.if !target(do-install)
-do-install:
-	@if [ -f ${PKGDIR}/PLIST ]; then \
-	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
-	else \
-	  ${RM} -f ${PLIST_SRC}; \
-	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
-	fi
-	@if [ -f ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} ]; then \
-	    ${SED} -e 's,^/,${EMULSUBDIR}/,' ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} >> ${PLIST_SRC}; \
-	fi
-	${RPM2PKG} ${RPM2PKGARGS}
-	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
-	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
-	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
-	  ${MV} -f ${PLIST_SRC} ${PLIST_SRC}.old; \
-	  ${GREP} -v '^@dirrm' ${PLIST_SRC}.old >${PLIST_SRC} || ${TRUE}; \
-	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
-	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
-	  ${GREP} '^@dirrm' ${PLIST_SRC}.old >>${PLIST_SRC} || ${TRUE}; \
-	  ${RM} -f ${PLIST_SRC}.old; \
-	fi
-.endif
+# Include an "override" SuSE-specific and architecture-specific
+# Makefile fragment if it exists.
+#
+.sinclude "suse.${EMUL_ARCH}.mk"

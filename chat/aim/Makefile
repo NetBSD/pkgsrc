@@ -1,44 +1,47 @@
-# $NetBSD: Makefile,v 1.16 2007/07/14 04:39:17 obache Exp $
+# $NetBSD: Makefile,v 1.17 2007/07/29 05:18:37 jlam Exp $
 
-DISTNAME=	aim-1.5.286
+DISTNAME=	aim-1.5.286-1.i386
+PKGNAME=	aim-1.5.286
 PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://ftp.newaol.com/aimgen/380469/
-EXTRACT_SUFX=	-1.i386.rpm
-
-DIST_SUBDIR=	# empty
-RPMFILES=	${DISTFILES}
+EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.aim.com/
 COMMENT=	AOL Instant Messenger (SM)
 
-BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base compat x11 gtk
 
-do-install:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${LOCALBASE}/sbin/rpm2pkg -d ${PREFIX} -f ${PLIST_SRC} \
-	        -p ${EMULSUBDIR} ${DISTDIR}/${DISTFILES}
-	${LN} -fs ../${EMULSUBDIR}/usr/bin/aim ${PREFIX}/bin/aim
+.include "../../mk/bsd.prefs.mk"
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_compat>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_gtk>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_gtk
+# This package installs from an RPM directly into "/usr" on a Linux
+# system, which can't be managed by pkgsrc unless ${LOCALBASE} == "/usr".
+#
+.if (${OPSYS} == "Linux") && (${LOCALBASE} != "/usr")
+NOT_FOR_PLATFORMS=	Linux-*-*
 .endif
 
-ONLY_FOR_PLATFORM= *-*-i386
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
-WRKSRC=		${WRKDIR}
-NO_BUILD=	YES
-
-EXTRACT_ONLY=	# nothing
-PLIST_SRC=	${WRKDIR}/PLIST.rpm
-PLIST_SUBST+=	EMULSUBDIR=${EMULSUBDIR:Q}
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+.if (${OPSYS} == "Linux") && (${LOCALBASE} == "/usr")
+RPM2PKG_STRIP=		1
+.else
+RPM2PKG_STRIP=		0
+.endif
+RPM2PKG_STAGE=		do-install
 
 INSTALLATION_DIRS=	bin
+
+.if ${OPSYS} != "Linux"
+post-install:
+	${LN} -fs ${EMULDIR}/usr/bin/aim ${PREFIX}/bin/aim
+	${ECHO} "bin/aim" >> ${RPM2PKG_PLIST}
+.endif
 
 .include "../../mk/bsd.pkg.mk"

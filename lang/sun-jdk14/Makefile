@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2007/04/21 20:40:52 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2007/07/29 05:19:28 jlam Exp $
 
-DISTNAME=	j2sdk-1_4_2_14-linux-i586
+DISTNAME=	j2sdk-1_4_2_14-linux-${DIST_ARCH}
 PKGNAME=	sun-jdk14-2.14
 MASTER_SITES=	# empty
 
@@ -13,6 +13,8 @@ DEPENDS+=	sun-jre14>=2.9:../../lang/sun-jre14
 WRKSRC=		${WRKDIR}/j2sdk1.4.2_14
 JAVA_WRAPPERS+=	appletviewer extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
+
+.include "../../lang/sun-jre14/Makefile.common"
 
 # Remove parts that are in common with the JRE
 #
@@ -27,4 +29,4 @@ post-extract:
 	done
 	${LN} -sf . ${WRKSRC}/jre
 
-.include "../../lang/sun-jre14/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

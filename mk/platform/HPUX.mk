@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.5 2007/04/29 11:54:25 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.6 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -39,6 +39,8 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	1
 IMAKE_MANINSTALL?=	maninstall catinstall
+
+_OPSYS_EMULDIR.hpux=	# empty
 
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

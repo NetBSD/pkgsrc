@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/10/14 08:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/07/29 05:19:50 jlam Exp $
 
-DISTNAME=	acroread5	# Overridden below
+DISTNAME=	acroread5	# overridden below
 PKGNAME=	acroread5-5.10
 PKGREVISION=	4
 CATEGORIES=	print
@@ -23,40 +23,22 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 LICENSE=		adobe-acrobat-license
 
 WRKSRC=			${WRKDIR}/installers
-CHECK_SHLIBS_SUPPORTED=	no
-NO_BUILD=		yes
+BUILD_DIRS=		# empty
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	solaris-sparc
+EMUL_MODULES.linux=	x11
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc*
-
-# Default (overridden below)
+.if ${EMUL_PLATFORM} == "linux-i386"
+DISTNAME=	linux-5010
+PLATFORM=	intellinux
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
+DISTNAME=	solaris-5010
+PLATFORM=	sparcsolaris
+.else
 PLATFORM=	unknown
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-. if (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-DISTNAME=	linux-5010
-PLATFORM=	intellinux
-. elif (${MACHINE_ARCH} == "sparc")
-.  if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
-.  endif
-DISTNAME=	solaris-5010
-PLATFORM=	sparcsolaris
-. elif (${MACHINE_ARCH} == "sparc64")
-.  if !exists(/emul/svr4_32/usr/lib/ld.so)
-PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4_32(8)'
-.  endif
-DISTNAME=	solaris-5010
-PLATFORM=	sparcsolaris
-. endif
-.elif ${OPSYS} == "Linux"
-DISTNAME=	linux-5010
-PLATFORM=	intellinux
-.elif ${OPSYS} == "SunOS"
-DISTNAME=	solaris-5010
-PLATFORM=	sparcsolaris
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
@@ -79,8 +61,4 @@ post-install:
 	@${ECHO_MSG} "${PREFIX}/Acrobat5/Reader/license.txt"
 	${LN} -sf ${PREFIX}/bin/acroread5 ${PREFIX}/bin/acroread
 
-# do not include the linux stuff if we are, for example, on a Solaris box
-. if (${MACHINE_ARCH} == "i386")
-.include "../../emulators/suse_linux/Makefile.application"
-.endif
 .include "../../mk/bsd.pkg.mk"

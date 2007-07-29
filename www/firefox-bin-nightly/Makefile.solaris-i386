@@ -1,0 +1,9 @@
+# $NetBSD: Makefile.solaris-i386,v 1.1 2007/07/29 05:19:54 jlam Exp $
+
+SOLARIS_VERSION_REQD?=	11
+
+DISTNAME=	firefox-3.0a7pre.en-US.solaris11-i386
+EXTRACT_SUFX=	.tar.bz2
+
+MOZ_GTK2=	yes
+MOZ_PLATFORM=	solaris

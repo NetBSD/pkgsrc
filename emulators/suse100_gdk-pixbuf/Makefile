@@ -1,22 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2007/04/19 15:30:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/29 05:18:44 jlam Exp $
 
-DISTNAME=		suse_gdk-pixbuf-${SUSE_VERSION}
-PKGREVISION=		2
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_gdk-pixbuf-${SUSE_VERSION}
+PKGREVISION=	3
+CATEGORIES=	emulators
+DISTFILES=	gdk-pixbuf-0.22.0-72.3.${SUSE_ARCH}.rpm
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for gdk-pixbuf binaries
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Linux compatibility package for gdk-pixbuf
 
-DEPENDS+=		suse_gtk-${SUSE_VERSION}{,nb*}:../../emulators/suse100_gtk
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-SUSE_INCLUDE_MAKEFILE_ARCH=	yes
+EMUL_MODULES.linux=	gtk
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

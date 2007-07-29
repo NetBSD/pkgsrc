@@ -1,13 +1,31 @@
 #!/bin/sh
 #
-# $NetBSD: linux-mkpwd.sh,v 1.1.1.1 2004/07/13 10:31:14 tron Exp $
+# $NetBSD: linux-mkpwd.sh,v 1.2 2007/07/29 05:19:05 jlam Exp $
+#
+
+######################################################################
+#
+# NAME
+#	@LINUX_BASE@-mkpwd -- create passwd/group files for COMPAT_LINUX
+#
+# SYNOPSYS
+#	@LINUX_BASE@-mkpwd
+#
+# DESCRIPTION
+#	@LINUX_BASE@-mkpwd creates passwd and group files and databases
+#	for a COMPAT_LINUX installation based on the files found in
+#	/etc, e.g. /etc/passwd, /etc/master.passwd, /etc/group, etc.
+#
+######################################################################
 
 SRCDIR=/etc
-DESTDIR=@@EMULDIR@@/etc
+DESTDIR=@EMULDIR@/etc
+
+[ -d $DESTDIR ] || exit 1
 
 umask 22
 cd $DESTDIR
-cp $SRCDIR/passwd .
+cp -f $SRCDIR/passwd .
 sed s/^wheel:/root:/ <$SRCDIR/group >group
 
 umask 77

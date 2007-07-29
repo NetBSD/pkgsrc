@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/15 16:27:54 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/29 05:19:27 jlam Exp $
 #
 
 DISTNAME=		PanoTools
@@ -11,16 +11,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.path.unimelb.edu.au/~dersch/
 COMMENT=		View, create, edit, and remap panoramic images
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 DragonFly-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base jpeg png tiff
 
 WRKSRC=			${WRKDIR}/PTLinux
+BUILD_DIRS=		# empty
 USE_JAVA=		run
-NO_BUILD=		YES
-
-.include "../../mk/bsd.prefs.mk"
 
 PKG_JVM?=		sun-jdk
 PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
+
 INSTALLATION_DIRS=	bin lib
 
 do-install:
@@ -63,23 +63,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Helpers/Templates/${hlp}		\
 		${PREFIX}/share/PanoTools/Templates
 .endfor
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if ${OPSYS} != "Linux"
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
-DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libpng
-DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/${SUSE_DIR_PREFIX}_libtiff
-
-EMULSUBDIR=		emul/linux
-LDD=			${EMULDIR}/usr/bin/ldd
-.else
-EMULSUBDIR=
-.endif
-
-EMULDIR=		${PREFIX}/${EMULSUBDIR}
-PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

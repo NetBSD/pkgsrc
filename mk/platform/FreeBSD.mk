@@ -1,7 +1,8 @@
-# $NetBSD: FreeBSD.mk,v 1.20 2007/07/02 14:03:40 joerg Exp $
+# $NetBSD: FreeBSD.mk,v 1.21 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
+BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
 ECHO_N?=	${ECHO} -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
@@ -44,6 +45,9 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
+
+_OPSYS_EMULDIR.freebsd=	# empty
+_OPSYS_EMULDIR.linux=	/compat/linux
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/07/29 05:19:47 jlam Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -12,28 +12,18 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.overnet.com/
 COMMENT=	Peer-to-peer file sharing client (binary pkg)
 
-BUILD_DEPENDS+=	rpm2pkg-[0-9]*:../../pkgtools/rpm2pkg
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat
 
-WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
-EVAL_PREFIX=	RPM2PKGDIR=rpm2pkg
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PLIST=		# empty
+RPM2PKG_STRIP=		0
+RUN_LDCONFIG=		no
 
 INSTALLATION_DIRS=	bin
-
-do-extract:
-	${RPM2PKGDIR}/sbin/rpm2pkg -d ${WRKDIR}				\
-		${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/usr/bin/overnetclc ${PREFIX}/bin

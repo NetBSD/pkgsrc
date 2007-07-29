@@ -1,4 +1,0 @@
-# $NetBSD: Makefile.powerpc,v 1.1 2006/04/18 09:29:47 salo Exp $
-
-RPMFILES=		openmotif-libs-2.2.3-13.${SUSE_ARCH}.rpm \
-			openmotif21-libs-2.1.30MLI4-128.${SUSE_ARCH}.rpm

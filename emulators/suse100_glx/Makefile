@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2007/04/19 15:30:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/29 05:18:45 jlam Exp $
 
-DISTNAME=		suse_glx-${SUSE_VERSION}
-PKGREVISION=		2
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_glx-${SUSE_VERSION}
+PKGREVISION=	3
+CATEGORIES=	emulators
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for the GL library
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Linux compatibility package for OpenGL/Mesa
 
-DEPENDS+=		suse_x11-${SUSE_VERSION}{,nb*}:../../emulators/suse100_x11
+EMUL_MODULES.linux=	x11
 
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-LIBTOOLIZE_PLIST=	NO
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-SUSE_INCLUDE_MAKEFILE_ARCH=	yes
+# This symlink is managed by ldconfig(8).
+CHECK_FILES_SKIP+=	${EMULDIR}/usr/${LINUX_LIBSUBDIR}/libglide.so.3
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

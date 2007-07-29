@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/29 05:18:36 jlam Exp $
 #
 
 DISTNAME=	linunace25
@@ -11,23 +11,15 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 
-ONLY_FOR_PLATFORM=	*-*-i386
-
 RESTRICTED=		Only original file distribution.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=		${WRKDIR}
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base compat
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-.endif
-
-NO_BUILD=	YES
-NO_CONFIGURE=	YES
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	bin
 
@@ -36,5 +28,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unace-bin
 	${INSTALL_DATA} ${WRKSRC}/licence ${PREFIX}/share/doc/unace-bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

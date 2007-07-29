@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2007/07/16 20:18:58 njoly Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/07/29 05:19:50 jlam Exp $
 bin/uvscan
-emul/linux/usr/local/lib/liblnxfv.so
-emul/linux/usr/local/lib/liblnxfv.so.4
 libexec/uvscan/uvscan
 libexec/uvscan/liblnxfv.so
 libexec/uvscan/liblnxfv.so.4
@@ -15,6 +13,5 @@ share/doc/uvscan/license.txt
 share/examples/uvscan/clean.dat
 share/examples/uvscan/names.dat
 share/examples/uvscan/scan.dat
-@dirrm emul/linux/usr/local/lib
 @dirrm share/doc/uvscan
 @dirrm share/examples/uvscan

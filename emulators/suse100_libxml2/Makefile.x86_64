@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.x86_64,v 1.1.1.1 2006/06/13 11:30:48 salo Exp $
-
-RPMFILES=		libxml2-2.6.20-4.${SUSE_ARCH}.rpm

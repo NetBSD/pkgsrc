@@ -1,7 +1,0 @@
-# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2006/03/30 19:18:20 ghen Exp $
-
-DISTNAME=		${MOZILLA}-${MOZ_DISTVER}.en-US.linux-i686
-MOZ_DISTDIR=		releases/${MOZ_DIR}
-MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/seamonkey/${MOZ_DISTDIR}/
-
-MOZ_PLATFORM=		linux

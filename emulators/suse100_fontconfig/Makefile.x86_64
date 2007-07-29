@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.x86_64,v 1.2 2006/06/06 14:53:06 salo Exp $
-
-RPMFILES=		fontconfig-2.3.2.20050721-10.2.${SUSE_ARCH}.rpm

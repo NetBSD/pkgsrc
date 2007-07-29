@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/06 16:33:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/29 05:19:27 jlam Exp $
 #
 
 DISTNAME=		mit-scheme-7.7.1-ix86-gnu-linux
@@ -10,7 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/mit-scheme/
 COMMENT=		MIT/GNU Scheme (Linux binary)
 
-DEPENDS+=		suse_base>=6.0:../../emulators/${SUSE_DIR_PREFIX}_base
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin libexec
@@ -29,5 +30,4 @@ do-install:
 	cd ${WRKSRC}/lib && ${PAX} -rw mit-scheme ${PREFIX}/lib
 	${RMDIR} ${PREFIX}/lib/mit-scheme/lib
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

@@ -1,25 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2006/06/30 15:37:22 salo Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/29 05:19:07 jlam Exp $
 
-DISTNAME=		suse_fontconfig-${SUSE_VERSION}
-PKGREVISION=		2
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE91}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_fontconfig-${SUSE_VERSION}
+PKGREVISION=	3
+CATEGORIES=	emulators
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for fontconfig binaries
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	Linux compatibility package for fontconfig
 
-DEPENDS+=		suse_expat-${SUSE_VERSION}{,nb*}:../../emulators/suse91_expat
-DEPENDS+=		suse_freetype2-${SUSE_VERSION}{,nb*}:../../emulators/suse91_freetype2
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+EMUL_MODULES.linux=	expat freetype2
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

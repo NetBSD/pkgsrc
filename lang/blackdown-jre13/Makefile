@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/18 22:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/07/29 05:19:27 jlam Exp $
 #
 
 BD_BASENAME=	j2re
@@ -7,13 +7,15 @@ PKGNAME=	blackdown-jre13-1
 PKGREVISION=	2
 COMMENT=	Blackdown's Java(tm) Runtime Environment 1.3.1
 
-.if ${MACHINE_ARCH} == "arm"
-DISTNAME=	${BD_BASENAME}-${RELVERSION}-RC1-linux-arm
-.endif
+EMUL_PLATFORMS=	linux-arm
 
 .include "../../lang/blackdown-jre13/Makefile.common"
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-arm Linux-*-arm
+.if ${BLACKDOWN_ARCH} == "arm"
+BLACKDOWN_REL=	rc1
+DISTNAME=	${BD_BASENAME}-${RELVERSION}-RC1-linux-arm
+EXTRACT_SUFX=	.tar.bz2
+.endif
 
 PLIST_SRC=	${PKGDIR}/PLIST
 .if ${BLACKDOWN_ARCH} == "i386"

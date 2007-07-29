@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/04 20:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/29 05:19:47 jlam Exp $
 
 PKGNAME=		teamspeak-server-2.0.23.15
 DISTNAME=		ts2_server_rc2_20201
@@ -14,25 +14,18 @@ MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://www.goteamspeak.com/
 COMMENT=		Teamspeak group VoIP server
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_base
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-RCD_SCRIPTS=		teamspeak
-NO_CONFIGURE=		yes
-USE_LANGUAGES=
-
-PLIST_SRC=		${WRKDIR}/PLIST
-
 RESTRICTED=             Redistribution to third parties is expressly prohibited
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
 LICENSE=		teamspeak-license-200700213
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
+
+RCD_SCRIPTS=		teamspeak
+
+PLIST_SRC=		${WRKDIR}/PLIST
 
 WRKSRC=		${WRKDIR}/tss2_rc2
 EGDIR=		${PREFIX}/share/examples

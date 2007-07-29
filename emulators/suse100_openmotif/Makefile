@@ -1,22 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2007/04/19 15:30:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/29 05:18:56 jlam Exp $
 
-DISTNAME=		suse_openmotif-${SUSE_VERSION}
-PKGREVISION=		1
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_openmotif-${SUSE_VERSION}
+PKGREVISION=	2
+CATEGORIES=	emulators
 
-MAINTAINER=		tron@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for the Motif library
+MAINTAINER=	tron@NetBSD.org
+COMMENT=	Linux compatibility package for OpenMotif
 
-DEPENDS+=		suse_x11-${SUSE_VERSION}{,nb*}:../../emulators/suse100_x11
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-SUSE_INCLUDE_MAKEFILE_ARCH=	yes
+EMUL_MODULES.linux=	x11
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

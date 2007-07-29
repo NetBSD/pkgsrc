@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/04/21 20:40:52 rillig Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/07/29 05:19:29 jlam Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -188,8 +188,8 @@ java/sun-1.4/lib/plugin.jar
 java/sun-1.4/lib/psfont.properties.ja.default
 java/sun-1.4/lib/psfontj2d.properties.default
 java/sun-1.4/lib/rt.jar
-@SUN_JRE14_USE_JCE@java/sun-1.4/lib/security/COPYRIGHT.html
-@SUN_JRE14_USE_JCE@java/sun-1.4/lib/security/README.txt
+${SUN_JRE14_USE_JCE}java/sun-1.4/lib/security/COPYRIGHT.html
+${SUN_JRE14_USE_JCE}java/sun-1.4/lib/security/README.txt
 java/sun-1.4/lib/security/US_export_policy.jar
 java/sun-1.4/lib/security/cacerts
 java/sun-1.4/lib/security/java.policy

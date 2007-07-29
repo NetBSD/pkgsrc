@@ -1,29 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2007/07/14 04:39:17 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/29 05:18:37 jlam Exp $
 
-DISTNAME=		ymessenger-1.0.4
+DISTNAME=		rh9.ymessenger-1.0.4-1.i386
+PKGNAME=		ymessenger-1.0.4
 CATEGORIES=		chat
 MASTER_SITES=		http://download.yahoo.com/dl/unix/
-DISTFILES=		rh9.${DISTNAME}-1.i386.rpm
+EXTRACT_SUFX=		.rpm
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://messenger.yahoo.com/
 COMMENT=		Yahoo! instant messaging client
-
-RPMFILES=		${DISTFILES}
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-EMULSUBDIR=		emul/linux
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=		suse_gtk>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gtk
-DEPENDS+=		suse_gdk-pixbuf>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gdk-pixbuf
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-DIST_SUBDIR=		# empty
 
 LICENSE=		generic-nonlicense
 RESTRICTED=		Commercial software (no permission to copy is evident).
@@ -32,15 +17,24 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-EXTRACT_ONLY=		# empty
-NO_BUILD=		yes
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	compat gtk gdk-pixbuf
 
-EMUL_YMESSENGER=	${PREFIX}/${EMULSUBDIR}/opt/ymessenger/bin/ymessenger
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
+
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+RPM2PKG_STAGE=		do-install
+RPMIGNOREFILES=		./usr
+
+EMUL_YMESSENGER=	${EMULDIR}/opt/ymessenger/bin/ymessenger
 YMESSENGER=		${PREFIX}/bin/ymessenger
+
 post-install:
-	${SED} '1 s,bin,${EMULSUBDIR}/bin,' < ${EMUL_YMESSENGER} > ${YMESSENGER}
+	${SED} '1 s,bin,${EMULSUBDIRSLASH}bin,'				\
+		${EMUL_YMESSENGER} > ${YMESSENGER}
 	${CHMOD} 755 ${YMESSENGER}
 
 .include "../../mk/bsd.pkg.mk"

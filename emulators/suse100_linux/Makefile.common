@@ -1,18 +1,32 @@
-# $NetBSD: Makefile.common,v 1.15 2007/05/04 23:46:56 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.16 2007/07/29 05:18:54 jlam Exp $
 
-.include "../../emulators/suse100_linux/vars.mk"
-.include "../../emulators/suse100_linux/compat32.mk"
-.include "../../emulators/suse100_linux/arch.mk"
+SUSE_PKG=		yes
+SUSE_VERSION=		10.0
+SUSE_VERSION_REQD=	${SUSE_VERSION}
 
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386 NetBSD-3.99*-x86_64 \
-			NetBSD-[2-9]*-powerpc \
-			NetBSD-[4-9]*-x86_64 FreeBSD-*-i386 \
-			DragonFly-*-i386
+EMUL_PLATFORMS?=	linux-i386 linux-powerpc linux-x86_64
+
+.include "../../mk/bsd.prefs.mk"
+
+# The SuSE 10.x Linux packages are only usable on the following platforms.
+ONLY_FOR_PLATFORM+=	DragonFly-*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
+
+# _SUSE_ARCH.* is a table of ${EMUL_ARCH} to SuSE architectures.
+_SUSE_ARCH.${EMUL_ARCH}=	${EMUL_ARCH}
+_SUSE_ARCH.i386=		i586
+_SUSE_ARCH.powerpc=		ppc
+_SUSE_ARCH=			${_SUSE_ARCH.${EMUL_ARCH}}
+SUSE_ARCH=			${_SUSE_ARCH}
 
 _SUSE_FTP_SUBDIR=	distribution/SL-${SUSE_VERSION}-OSS/inst-source/suse/${SUSE_ARCH}/
-_SUSE_FTP_SUBDIR_UPD=	suse/${SUSE_ARCH_DIR}/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/
+_SUSE_FTP_SUBDIR_UPD=	suse/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/
 
-MASTER_SITE_SUSE100?= \
+MASTER_SITE_SUSE_${SUSE_VERSION}=	\
 	ftp://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
 	http://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
 	ftp://suse.inode.at/pub/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/ \
@@ -25,106 +39,35 @@ MASTER_SITE_SUSE100?= \
 	ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
 	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD}
 
-.ifndef SUSE_COMPAT32
+MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
-.endif
+
+HOMEPAGE?=		http://www.suse.com/
 
 WRKSRC?=		${WRKDIR}
+BUILD_DIRS?=		# empty
 MANCOMPRESSED?=		yes
 
-# Don't check any script interpreter, as long as nobody complains.
-CHECK_INTERPRETER_SKIP=	*
+EMUL_PKG_FMT?=		rpm
+RPM2PKG_PREFIX?=	${PREFIX}
+RPM2PKG_SUBPREFIX?=	${EMULSUBDIR}
+RPM2PKG_STAGE?=		do-install
 
-OPSYS_EMULSUBDIR=	linux${SUSE_COMPAT32_SUFFIX}
-EMULSUBDIR=		emul/linux${SUSE_COMPAT32_SUFFIX}
-EMULDIR=		${PREFIX}/${EMULSUBDIR}
-
-# Set location of OPSYS-specific emulation directory
-.if ${OPSYS} == "NetBSD"
-.  ifndef SUSE_COMPAT32
-OPSYS_EMULDIR=		/${EMULSUBDIR}
-.  else
-OPSYS_EMULDIR=		${EMULSUBDIR}
-.  endif
-.elif (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly")
-OPSYS_EMULDIR=		/compat/${EMULSUBDIR:T}
+.if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
+PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
+COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
+LINUX_BASE=		linux32
 .else
-OPSYS_EMULDIR=		/${EMULSUBDIR}
+LINUX_BASE=		linux
 .endif
-FILES_SUBST+=		OPSYS_EMULDIR=${OPSYS_EMULDIR:Q} \
-			OPSYS_EMULSUBDIR=${OPSYS_EMULSUBDIR:Q}
+PLIST_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
+FILES_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
 
-.ifdef SUSE_COMPAT32
-PLIST_SUBST+=		${FILES_SUBST}
-.endif
+LINUX_LIBSUBDIR?=	lib
+PLIST_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
+FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 
-RPM2PKG=		${PREFIX}/sbin/rpm2pkg
-BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
-
-BUILD_DEFS+=		RPMFILES
-.if defined(RPMIGNOREPATH)
-BUILD_DEFS+=		RPMIGNOREPATH
-.endif
-
-# The SuSE Linux packages have circular dependencies.
-LDD?=			${TRUE}
-
-.ifndef SUSE_COMPAT32
-RPM2PKGSTRIP?=		1
-RPM2PKGARGS?=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
-.  if empty(RPM2PKGSTRIP:M0)
-RPM2PKGARGS+=		-s ${RPM2PKGSTRIP}
-.  endif
-.  for TEMP in ${RPMIGNOREPATH}
-RPM2PKGARGS+=		-i ${TEMP}
-.  endfor
-.  for TEMP in ${RPMFILES}
-RPM2PKGARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
-.  endfor
-.endif
-
-# regenerate distinfo for all platforms supported by the suse100_* packages
-suse100-distinfo:
-	( ${ECHO} '$$'NetBSD'$$';			\
-	${ECHO} '';					\
-	MACHINE_ARCH=i386 ${MAKE} distinfo 1>&2;	\
-		${GREP} rpm distinfo;			\
-	MACHINE_ARCH=powerpc ${MAKE} distinfo 1>&2;	\
-		${GREP} rpm distinfo;			\
-	MACHINE_ARCH=x86_64 ${MAKE} distinfo 1>&2;	\
-		${GREP} rpm distinfo;			\
-	) > distinfo.new
-	${MV} -f distinfo.new distinfo
-
-.ifdef SUSE_COMPAT32_SUFFIX
-LOCAL_ARCH=	i386
-.else
-LOCAL_ARCH=	${MACHINE_ARCH}
-.endif
-
-.if empty(${.CURDIR:Msuse100_base}) && !defined(SUSE_COMPAT32)
-.  if !target(do-install)
-do-install:
-	@if [ -f ${PKGDIR}/PLIST ]; then \
-	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
-	else \
-	  ${RM} -f ${PLIST_SRC}; \
-	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
-	fi
-	@if [ -f ${PKGDIR}/PLIST_rpmfix.${LOCAL_ARCH} ]; then \
-	    ${SED} -e 's,^/,${EMULSUBDIR}/,' \
-	    	${PKGDIR}/PLIST_rpmfix.${LOCAL_ARCH} >> ${PLIST_SRC}; \
-	fi
-	${RPM2PKG} ${RPM2PKGARGS}
-	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
-	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
-	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
-	  ${MV} -f ${PLIST_SRC} ${PLIST_SRC}.old; \
-	  ${GREP} -v '^@dirrm' ${PLIST_SRC}.old >${PLIST_SRC} || ${TRUE}; \
-	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
-	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
-	  ${GREP} '^@dirrm' ${PLIST_SRC}.old >>${PLIST_SRC} || ${TRUE}; \
-	  ${RM} -f ${PLIST_SRC}.old; \
-	fi
-.  endif
-.endif
+# Include an "override" SuSE-specific and architecture-specific
+# Makefile fragment if it exists.
+#
+.sinclude "suse.${EMUL_ARCH}.mk"

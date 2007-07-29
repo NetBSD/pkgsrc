@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/07/29 05:18:36 jlam Exp $
 #
 
 DISTNAME=		eagle-lin-eng-4.14
@@ -12,14 +12,6 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		Easy to use printed circuit board editor
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
 RESTRICTED=		Redistribution not permitted
 LICENSE=		fee-based-commercial-use
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -27,7 +19,10 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-NO_BUILD=		YES
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
+
+BUILD_DIRS=		# empty
 INSTALLATION_DIRS=	bin
 
 do-configure:

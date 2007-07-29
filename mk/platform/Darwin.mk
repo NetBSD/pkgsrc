@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.23 2007/07/02 14:03:37 joerg Exp $
+# $NetBSD: Darwin.mk,v 1.24 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -54,6 +54,8 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
+
+_OPSYS_EMULDIR.darwin=	# empty
 
 .if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2007/02/22 19:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2007/07/29 05:19:47 jlam Exp $
 
-DISTNAME=	acroread	# Overridden below
+DISTNAME=	acroread	# overridden below
 PKGNAME=	acroread-4.05
 PKGREVISION=	5
 CATEGORIES=	print
@@ -11,63 +11,45 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
 
-RESTRICTED=	Original installer required to redistribute.
+RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-LICENSE=	adobe-acrobat-license
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+LICENSE=		adobe-acrobat-license
 
-CHECK_SHLIBS_SUPPORTED=	no
-NO_BUILD=		yes
+BUILD_DIRS=		# empty
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS+=	osf1-alpha
+EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
+EMUL_MODULES.linux=	x11
 
 .include "../../mk/bsd.prefs.mk"
 
-# Default (should be overridden below)
-PLATFORM=	unknown
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-1.4[L-Z]-sparc \
-			NetBSD-1.[5-9]*-sparc NetBSD-[2-9]*-sparc \
-			SunOS-*-* DragonFly-*-i386
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-. if (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+.if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=	linux-ar-405
 PLATFORM=	intellinux
 WRKSRC=		${WRKDIR}/ILINXR.install
-. elif (${MACHINE_ARCH} == "alpha")
-.  if !exists(/emul/osf1/sbin/loader)
-PKG_FAIL_REASON+=	'${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)'
-.  endif
+.elif ${EMUL_PLATFORM} == "osf1-alpha"
 DISTNAME=	fdec-rs-405
 PLATFORM=	alphaosf
 WRKSRC=		${WRKDIR}/AOSFRS.install
-. elif (${MACHINE_ARCH} == "sparc")
-.  if !exists(/emul/svr4/usr/lib/ld.so)
-PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
-.  endif
-DISTNAME=	sunsparc-rs-405
-WRKSRC=		${WRKDIR}/SSOLRS.install
-PLATFORM=	sparcsolaris
-. endif
-.include "../../emulators/suse_linux/Makefile.application"
-.elif ${OPSYS} == "SunOS"
-. if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+.elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=	sunx86-ar-405
 WRKSRC=		${WRKDIR}/SS86RS.install
 PLATFORM=	intelsolaris
-. else
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
-. endif # i86pc
-
-# Solaris sparc + x86:
 PREPEND_PATH+=	/bin		# for "ed"
+
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
-.endif # SunOS
+.else
+PLATFORM=	unknown
+.endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 
@@ -101,8 +83,3 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-bla:
-	@echo OPSYS=${OPSYS}
-	@echo MACHINE_ARCH=${MACHINE_ARCH}
-	@echo PLATFORM=${PLATFORM}

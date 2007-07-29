@@ -1,6 +1,0 @@
-# $NetBSD: Makefile.Linux.i386,v 1.2 2006/09/24 16:42:56 salo Exp $
-
-DISTNAME=	${MOZILLA}-3.0a1.en-US.linux-i686
-EXTRACT_SUFX=	.tar.bz2
-MOZ_PLATFORM=	linux
-MOZ_GTK2=	yes

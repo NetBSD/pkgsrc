@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/29 05:19:59 jlam Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -10,23 +10,22 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://fredrik.hubbe.net/plugger.html
 COMMENT=		Streaming multimedia plugin for Netscape
 
+CONFLICTS+=		plugger-[0-9]*	# obsolete all-in-one plugger package
+
 BINNAME?=		common
 
 .if ${BINNAME} != common
 DEPENDS+=		${BINNAME}-[0-9]*:../../www/${BINNAME}
+NSNAME!=		${PKG_INFO} -e ${BINNAME} || ${ECHO}
 MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//:S/4.80/4.8/}
 PLIST_SUBST+=		MOZILLA_HOME=${MOZILLA_HOME:S/${PREFIX}\///}
-.else
-DEPENDS+=		suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
-CONFLICTS+=		plugger-[0-9]*	# obsolete all-in-one plugger package
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base
 
 WRKSRC=			${WRKDIR}/${PLUGGERFULL}
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+BUILD_DIRS=		# empty
 
 PLUGGERFULL=		${DISTNAME:C/-linux-x86-glibc//}
 PLUGGERVERS=		${PLUGGERFULL:C/.*-//}
@@ -38,21 +37,21 @@ PLIST_SUBST+=		NS_PLUGINS_DIR=${NS_PLUGINS_DIR:S/${PREFIX}\///}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man7
 
-do-install:
-.if ${BINNAME} != common
-	cd ${WRKSRC}; ${INSTALL_DATA} pluggerrc ${MOZILLA_HOME}/pluggerrc
-.else
+.PHONY: do-install-common do-install-pluggerrc
+do-install-common:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} plugger.so ${NS_PLUGINS_DIR}
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} plugger-4.0 ${PREFIX}/bin
 	cd ${WRKSRC}; ${INSTALL_DATA} plugger.7 ${PREFIX}/${PKGMANDIR}/man7
 	cd ${WRKSRC}; ${INSTALL_DATA} README COPYING ${DOCDIR}
-.endif
 
-.include "../../emulators/suse_linux/Makefile.application"
+do-install-pluggerrc:
+	cd ${WRKSRC}; ${INSTALL_DATA} pluggerrc ${MOZILLA_HOME}/pluggerrc
 
-.if ${BINNAME} != common
-NSNAME!=	${PKG_INFO} -e ${BINNAME} || ${ECHO}
+.if ${BINNAME} == "common"
+do-install: do-install-common
+.else
+do-install: do-install-common
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.1 2004/03/16 14:34:39 grant Exp $
-
-DISTNAME=	${MOZILLA}-sparc-sun-solaris2.8
-
-MOZ_PLATFORM=	solaris
