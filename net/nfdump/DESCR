@@ -1,0 +1,9 @@
+The nfdump tools collect and process netflow data on the command line.
+Nfdump tools:
+nfcapd     - netflow collector daemon
+nfdump     - netflow dump
+nfprofile  - netflow profiler
+nfreplay   - netflow replay
+nfclean.pl - cleanup old data - installed as example
+ft2nfdump  - read flow-tools format - optional tool
+sfcapd     - sflow collector daemon - optional tool

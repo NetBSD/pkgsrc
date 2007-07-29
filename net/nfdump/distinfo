@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/29 21:33:42 seb Exp $
+
+SHA1 (nfdump-1.5.2.tar.gz) = 180a3b8b2315b5c4d0beb07e5b17817f4bdbb454
+RMD160 (nfdump-1.5.2.tar.gz) = 0fac8ba1dc75163b7d906453581e345e037b3730
+Size (nfdump-1.5.2.tar.gz) = 224287 bytes
+SHA1 (patch-aa) = eb506648e2539092a51df964cd8096b74b4b940d
+SHA1 (patch-ab) = 3b5a57e3384208d5aee2a6741d664ec5b31640ab
+SHA1 (patch-ac) = bba19ce3e28b0d74d06ae694790e7aaeb73bfc6b
+SHA1 (patch-ad) = e9aee08cb58dd541c2d2ca23c0a544f8c8645421
