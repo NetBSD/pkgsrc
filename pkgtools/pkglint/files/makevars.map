@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.164 2007/07/15 22:11:03 rillig Exp $
+# $NetBSD: makevars.map,v 1.165 2007/07/29 01:32:47 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -612,6 +612,7 @@ REPLACE_EMACS		List of Pathmask
 REPLACE_FILES.*		List of Pathmask [m:as,c:as]
 REPLACE_INTERPRETER	List of Identifier [m:a,c:a]
 REPLACE_PERL		List of Pathmask [$package_list]
+REPLACE_PYTHON		List of Pathmask [$package_list]
 REPLACE_SH		List of Pathmask [$package_list]
 REQD_DIRS		List of Pathname [$package_list]
 REQD_DIRS_PERMS		List of ShellWord [$package_list]
