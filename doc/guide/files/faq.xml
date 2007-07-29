@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.34 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.35 2007/07/29 15:09:35 joerg Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -289,36 +289,20 @@ FETCH_OUTPUT_ARGS=     -O
 
 <!-- ================================================================== -->
 
-<sect1 id="XFree86-from-pkgsrc">
-<title>How can I install/use XFree86 from pkgsrc?</title>
-
-<para>If you want to use XFree86 from pkgsrc instead of your system's own
-X11 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>,
-...), you will have to add the following line into
-<filename>/etc/mk.conf</filename>:</para>
-
-<programlisting>
-X11_TYPE=XFree86
-</programlisting>
-
-</sect1>
-
-<!-- ================================================================== -->
-
 <sect1 id="x.org-from-pkgsrc">
-<title>How can I install/use X.org from pkgsrc?</title>
+<title>How can I install/use modular X.org from pkgsrc?</title>
 
-<para>If you want to use X.org from pkgsrc instead of your system's own X11
+<para>If you want to use modular X.org from pkgsrc instead of your system's own X11
 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>, ...)
 you will have to add the following line into
 <filename>/etc/mk.conf</filename>:</para>
 
 <programlisting>
-X11_TYPE=xorg
+X11_TYPE=modular
 </programlisting>
 
-<note><para>The DragonFly operating system defaults to using
-this X.org X11 implementation from pkgsrc.</para></note>
+<note><para>The DragonFly operating system defaults to using modular X.org from pkgsrc.
+</para></note>
 
 </sect1>
 
