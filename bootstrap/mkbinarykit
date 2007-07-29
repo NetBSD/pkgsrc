@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.23 2007/05/27 19:55:58 schmonz Exp $
+# $NetBSD: mkbinarykit,v 1.24 2007/07/29 17:09:52 joerg Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -52,7 +52,7 @@ die()
 usage="Usage: $0 "'
 	[ --force ] [ --targetdir=<tar target dir> ] [ --mkconf=<target> ]
 	[ --no-build ] [ --workdir=<work dir> ] [ bootstrap script arguments ]
-	[ --fetch-cmd=<ftp command> ]'
+	[ --fetch-cmd=<ftp command> ] [ --mk-fragment=<mk.conf> ]'
 
 opsys=`uname -s | tr -d /-`
 osrev=`uname -r`
@@ -63,6 +63,7 @@ prefix=/usr/pkg
 sysconfdir=$prefix/etc
 pkgdbdir=/var/db/pkg
 mkfile=
+mk_fragment=
 ignorecasecheck=no
 ignoreusercheck=no
 force=no
@@ -133,6 +134,8 @@ while [ $# -gt 0 ]; do
 	--prefix=*)	prefix=`echo $1 | $sedprog -e 's|--prefix=||'` ;;
 	--fetch-cmd=*)	fetch_cmd="$1" ;;
 	--mkconf=*)	mkfile=`echo $1 | $sedprog -e 's|--mkconf=||'` ;;
+	--mk-fragment=*)
+			mk_fragment="$1" ;;
 	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
@@ -162,6 +165,9 @@ if [ "$build" != "no" ]; then
 	bootstrap_flags="--prefix=$prefix --pkgdbdir=$pkgdbdir --workdir=$wrkdir $fetch_cmd"
 	if [ "$ignorecasecheck" = "yes" ]; then
 	bootstrap_flags="$bootstrap_flags --ignore-case-check"
+	fi
+	if [ -n "${mk_fragment}" ]; then
+	bootstrap_flags="$bootstrap_flags ${mk_fragment}"
 	fi
 
 	if [ "$ignoreusercheck" = "yes" ]; then
