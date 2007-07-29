@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/25 22:55:35 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/29 01:35:57 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -26,6 +26,11 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	connect4.h
 SUBST_SED.path=		-e 's,"white_ob.cn4","${PREFIX}/share/velena/white_ob.cn4",'
+
+SUBST_CLASSES+=		ansi-c
+SUBST_STAGE.ansi-c=	pre-configure
+SUBST_FILES.ansi-c=	*.c *.h
+SUBST_SED.ansi-c=	-e 's,<malloc\.h>,<stdlib.h>,'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/veleng ${DESTDIR}${PREFIX}/bin/velena
