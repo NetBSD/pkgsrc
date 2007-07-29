@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/18 21:12:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/29 05:19:27 jlam Exp $
 bin/cgc
 include/Cg/cg.h
 include/Cg/cgContextManager.h
@@ -14,10 +14,10 @@ include/Cg/cg_profiles.h
 include/CgFX/ICgFX.h
 include/CgFX/ICgFXEffect.h
 include/CgFX/cgfx_stddefs.h
-lib/libCg.so
-lib/libCgFX.so
-lib/libCgFXGL.so
-lib/libCgGL.so
+${EMULSUBDIRSLASH}lib/libCg.so
+${EMULSUBDIRSLASH}lib/libCgFX.so
+${EMULSUBDIRSLASH}lib/libCgFXGL.so
+${EMULSUBDIRSLASH}lib/libCgGL.so
 man/man3/cgCompileProgram.3
 man/man3/cgConnectParameter.3
 man/man3/cgCopyProgram.3

@@ -1,0 +1,7 @@
+# $NetBSD: DEINSTALL,v 1.1 2007/07/29 05:19:30 jlam Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} -f @JAVA_HOME@/lib/@MACHINE_ARCH@/client/classes.jsa
+	;;
+esac

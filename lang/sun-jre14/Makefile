@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2007/06/22 11:21:23 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/07/29 05:19:29 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	j2re-1_4_2_14-linux-i586
+DISTNAME=	j2re-1_4_2_14-linux-${DIST_ARCH}
 PKGNAME=	sun-jre14-2.14
 PKGREVISION=	1
 MASTER_SITES=	# empty
@@ -14,6 +14,9 @@ SHORT=		JRE
 WRKSRC=		${WRKDIR}/j2re1.4.2_14
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
+
+.include "../../lang/sun-jre14/Makefile.common"
+
 REQD_DIRS=	${JAVA_HOME}
 REQD_DIRS+=	${JAVA_HOME}/lib
 REQD_DIRS+=	${JAVA_HOME}/lib/applet
@@ -42,10 +45,21 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip
+PLIST_SUBST+=	SUN_JRE14_USE_JCE=""
+
+END_MESSAGE=								\
+	""								\
+	"The file jce_policy-1_4_2.zip must be fetched into:"		\
+	"    ${DISTDIR}/jce_policy-1_4_2.zip"				\
+	""								\
+	"Under 'Other Downloads' / 'Java Cryptography Extension'"	\
+	"click 'Download' and choose the .zip file."
+.else
+PLIST_SUBST+=	SUN_JRE14_USE_JCE="@comment "
 .endif
 
 post-extract:
-	cd ${WRKSRC} && chmod -R go-w .
+	cd ${WRKSRC} && ${CHMOD} -R go-w .
 
 do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
@@ -55,9 +69,6 @@ do-configure:
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
-	${SED} 's/@SUN_JRE14_USE_JCE@//' ${PKGDIR}/PLIST > ${PLIST_SRC}
-.else
-	${SED} '/@SUN_JRE14_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .endif
 
-.include "../../lang/sun-jre14/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/28 07:54:05 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/29 05:19:47 jlam Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -12,29 +12,17 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_glx-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_glx
-DEPENDS+=	suse_fontconfig-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_fontconfig
-DEPENDS+=	suse_freetype2-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_freetype2
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
-
-ONLY_FOR_PLATFORM=	*-*-i386
-
-NO_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
 RESTRICTED=		Redistribution not allowed yet.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 LICENSE=		skype-license
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base fontconfig freetype2 glx x11
+
+USE_DIRS+=		xdg-1.1
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 DATADIR=		${PREFIX}/share/skype
 DOCDIR=			${PREFIX}/share/doc/skype
