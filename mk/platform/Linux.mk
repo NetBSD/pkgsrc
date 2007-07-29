@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.28 2007/07/02 14:03:40 joerg Exp $
+# $NetBSD: Linux.mk,v 1.29 2007/07/29 05:19:44 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -46,8 +46,11 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
-
 IMAKE_TOOLS=		gmake	# extra tools required when we use imake
+
+_OPSYS_EMULDIR.linux=	# empty
+_OPSYS_EMULDIR.linux32=	# empty
+
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else

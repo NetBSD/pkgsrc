@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/07/29 05:19:47 jlam Exp $
 #
 
 DISTNAME=	donkey
@@ -12,23 +12,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.edonkey2000.com/
 COMMENT=	Yet another P2P file sharing tool
 
-ONLY_FOR_PLATFORM=	*-*-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base compat
 
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
-DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
-.endif
-
-WRKSRC=		${WRKDIR}
-NO_BUILD=	YES
-NO_CONFIGURE=	YES
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

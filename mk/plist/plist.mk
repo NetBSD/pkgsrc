@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.29 2007/07/27 18:37:35 jlam Exp $
+# $NetBSD: plist.mk,v 1.30 2007/07/29 05:19:44 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -48,6 +48,9 @@ PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .endif
 .if exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
 PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.endif
+.if defined(EMUL_PLATFORM) && exists(${PKGDIR}/PLIST.${EMUL_PLATFORM})
+PLIST_SRC_DFLT+=	${PKGDIR}/PLIST.${EMUL_PLATFORM}
 .endif
 .if exists(${PKGDIR}/PLIST)
 PLIST_SRC_DFLT+=	${PKGDIR}/PLIST
