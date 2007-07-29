@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2007/07/08 19:21:59 minskim Exp $
+# $NetBSD: Makefile,v 1.674 2007/07/29 07:00:59 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -425,6 +425,7 @@ SUBDIR+=	solaris-tap
 SUBDIR+=	speedtouch
 SUBDIR+=	spegla
 SUBDIR+=	spread
+SUBDIR+=	spreadlogd
 SUBDIR+=	srsh
 SUBDIR+=	ssync
 SUBDIR+=	stripes
