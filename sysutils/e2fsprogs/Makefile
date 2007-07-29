@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/06/20 19:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/07/29 16:17:12 joerg Exp $
 #
 
 DISTNAME=	e2fsprogs-1.39
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo
