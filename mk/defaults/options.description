@@ -244,6 +244,8 @@ nas			Enable usage of the Network Audio System.
 native	
 ncurses			Enable ncurses support.
 ncursesw		Enable wide character ncurses support.
+nfdump-ftconv		Build the flow-tools to nfdump converter
+nfdump-sflow		Build sflow collector sfcpad
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
