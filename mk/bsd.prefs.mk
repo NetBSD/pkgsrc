@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.254 2007/07/29 05:19:41 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.255 2007/07/29 13:17:57 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -331,12 +331,6 @@ SHAREMODE?=		${DOCMODE}
 	@${ECHO_MSG} "depending on your needs. See the pkg system documentation for more info."
 	@${FALSE}
 .endif
-
-# Preload all default values for CFLAGS, LDFLAGS, etc. before bsd.pkg.mk
-# or a pkg Makefile modifies them.
-# The file <sys.mk> includes the mk.conf file indirectly, so here is the
-# point where the user settings are loaded.
-.include <sys.mk>
 
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
