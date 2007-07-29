@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1650 2007/07/29 12:43:06 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1651 2007/07/29 17:39:27 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Return-Value version 1.302 [adrianp 2007-07-29]
 	Added mail/p5-Email-Date version 1.03 [adrianp 2007-07-29]
 	Added mail/p5-Email-Simple-Creator version 1.4 [adrianp 2007-07-29]
+	Updated archivers/libarchive to 2.2.5 [joerg 2007-07-29]
