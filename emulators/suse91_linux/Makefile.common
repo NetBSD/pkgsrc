@@ -1,19 +1,24 @@
-# $NetBSD: Makefile.common,v 1.17 2007/07/29 05:19:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/07/29 08:55:39 jlam Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		9.1
 SUSE_VERSION_REQD=	${SUSE_VERSION}
 
-EMUL_PLATFORMS?=	linux-i386 linux-x86_64
-
-.include "../../mk/bsd.prefs.mk"
-
 # The SuSE 10.x Linux packages are only usable on the following platforms.
+.if defined(SUSE_COMPAT32)
+EMUL_PLATFORMS?=	linux-i386
+ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
+.else
+EMUL_PLATFORMS?=	linux-i386 linux-x86_64
 ONLY_FOR_PLATFORM+=	DragonFly-*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
+.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 # _SUSE_ARCH.* is a table of ${EMUL_ARCH} to SuSE architectures.
 _SUSE_ARCH.${EMUL_ARCH}=	${EMUL_ARCH}
@@ -50,6 +55,11 @@ RPM2PKG_PREFIX?=	${PREFIX}
 RPM2PKG_SUBPREFIX?=	${EMULSUBDIR}
 RPM2PKG_STAGE?=		do-install
 
+SUSE_PKGSRCDIR=		${.CURDIR}/../${.CURDIR:T:S/_32_/_/}
+FILESDIR=		${SUSE_PKGSRCDIR}/files
+PATCHDIR=		${SUSE_PKGSRCDIR}/patches
+PKGDIR=			${SUSE_PKGSRCDIR}
+
 .if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
 PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
 COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
@@ -67,4 +77,4 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 # Include an "override" SuSE-specific and architecture-specific
 # Makefile fragment if it exists.
 #
-.sinclude "suse.${EMUL_ARCH}.mk"
+.sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
