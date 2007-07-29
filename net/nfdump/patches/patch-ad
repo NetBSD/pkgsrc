@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/07/29 21:33:42 seb Exp $
+
+--- Makefile.in.orig	2006-05-21 16:30:10.000000000 +0000
++++ Makefile.in
+@@ -98,13 +98,13 @@ install: $(OBJECTS)
+ 	test -d $(PREFIX)/bin || install -d -o root -g bin -m 755 $(PREFIX)/bin
+ 	test -d $(MANDIR) || install -d -o root -g bin -m 755 $(MANDIR)
+ 	test -d $(MANDIR)/man1 || install -d -o root -g bin -m 755 $(MANDIR)/man1
++	test -d $(EGDIR)/man1 || install -d -o root -g bin -m 755 $(MANDIR)/man1
+ 	for file in $(OBJECTS); do \
+ 		if [ -f $$file.1 ]; then \
+ 			$(INSTALL) -o root -g bin -m 755 $$file $(PREFIX)/bin ; \
+ 			$(INSTALL) -o root -g bin -m 644 $$file.1 $(MANDIR)/man1 ; \
+ 		fi \
+ 	done;
+-	test -f $(PREFIX)/bin/nfclean.pl || $(INSTALL) -o root -g bin -m 755 nfclean.pl $(PREFIX)/bin
+ 
+ uninstall:
+ 	for file in $(OBJECTS); do \
+@@ -113,7 +113,6 @@ uninstall:
+ 			/bin/rm -f  $(MANDIR)/man1/$$file.1 ; \
+ 		fi \
+ 	done;
+-	/bin/rm -f  $(PREFIX)/bin/nfclean.pl
+ 
+ test: nftest
+ 	./test.sh
