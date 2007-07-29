@@ -1,24 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2006/06/30 15:37:22 salo Exp $
+# $NetBSD: Makefile,v 1.11 2007/07/29 05:19:02 jlam Exp $
 
-DISTNAME=		suse_aspell-${SUSE_VERSION}
-PKGREVISION=		3
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE91}
-DISTFILES=		${RPMFILES}
+DISTNAME=	suse_aspell-${SUSE_VERSION}
+PKGREVISION=	4
+CATEGORIES=	emulators
+DISTFILES=	aspell-0.50.5-38.4.${SUSE_ARCH}.rpm
 
-MAINTAINER=		jdolecek@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for Aspell library
+MAINTAINER=	jdolecek@NetBSD.org
+COMMENT=	Linux compatibility package for aspell
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse91_base
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
+EMUL_MODULES.linux=	base
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

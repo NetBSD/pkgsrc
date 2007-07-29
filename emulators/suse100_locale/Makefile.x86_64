@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.x86_64,v 1.1.1.1 2006/03/13 10:25:35 tonio Exp $
-
-RPMFILES=		glibc-locale-2.3.5-40.${SUSE_ARCH}.rpm
