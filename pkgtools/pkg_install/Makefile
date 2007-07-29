@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2007/07/25 15:01:45 joerg Exp $
+# $NetBSD: Makefile,v 1.135 2007/07/29 14:06:44 adrianp Exp $
 
 # Notes to package maintainers:
 #
@@ -77,23 +77,14 @@ MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
-# Make sure download-vulnerability-list.sh picks up the right tools
-# in the right directories.
+# Make sure the audit-packages files pick up the right tools in the right
+# places.
 #
 SUBST_CLASSES=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths in scripts.
-SUBST_FILES.paths=	audit-packages/download-vulnerability-list.sh.in
-SUBST_FILES.paths+=	audit-packages/audit-packages.1.in
-SUBST_FILES.paths+=	audit-packages/audit-packages.cat1.in
-SUBST_FILES.paths+=	audit-packages/audit-packages.conf.5.in
-SUBST_FILES.paths+=	audit-packages/audit-packages.conf.cat5.in
-SUBST_FILES.paths+=	audit-packages/audit-packages.conf.in
-SUBST_FILES.paths+=	audit-packages/download-vulnerability-list.1.in
-SUBST_FILES.paths+=	audit-packages/download-vulnerability-list.cat1.in
-SUBST_SED.paths=	-e 's,@gzcat@,${GZCAT},g'
-SUBST_SED.paths+=	-e 's,@sysconfdir@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@prefix@/bin/gpg,${PREFIX}/bin/gpg,g'
+SUBST_FILES.paths=	audit-packages/Makefile.in
+SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
