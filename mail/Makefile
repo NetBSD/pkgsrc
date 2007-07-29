@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2007/07/06 13:51:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.322 2007/07/29 12:28:34 adrianp Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -123,10 +123,19 @@ SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
 SUBDIR+=	p5-Email-Abstract
+SUBDIR+=	p5-Email-Address
+SUBDIR+=	p5-Email-Date
+SUBDIR+=	p5-Email-MessageID
+SUBDIR+=	p5-Email-MIME-Attachment-Stripper
 SUBDIR+=	p5-Email-MIME
 SUBDIR+=	p5-Email-MIME-ContentType
+SUBDIR+=	p5-Email-MIME-Creator
 SUBDIR+=	p5-Email-MIME-Encodings
+SUBDIR+=	p5-Email-MIME-Modifier
+SUBDIR+=	p5-Email-Reply
+SUBDIR+=	p5-Email-Send
 SUBDIR+=	p5-Email-Simple
+SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Email-Valid
 SUBDIR+=	p5-GMail-IMAPD
 SUBDIR+=	p5-IMAP-Admin
