@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2007/07/29 14:06:44 adrianp Exp $
+# $NetBSD: Makefile,v 1.136 2007/07/29 17:39:31 seb Exp $
 
 # Notes to package maintainers:
 #
@@ -58,8 +58,8 @@ MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 PKG_DBDIR?=		/var/db/pkg
-PKG_INFO=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_INFO_CMD}
-PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_ADMIN_CMD}
+PKG_INFO=		${PKG_INFO_CMD} -K ${PKG_DBDIR:Q}
+PKG_ADMIN=		${PKG_ADMIN_CMD} -K ${PKG_DBDIR:Q}
 EGDIR=			${PREFIX}/share/examples/pkg_install
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
