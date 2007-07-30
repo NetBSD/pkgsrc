@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.12 2007/07/26 11:30:55 joerg Exp $ */
+/* $NetBSD: info.h,v 1.13 2007/07/30 07:16:21 joerg Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -79,5 +79,7 @@ extern void show_depends(char *, package_t *);
 extern void show_bld_depends(char *, package_t *);
 extern void show_index(char *, char *, char *);
 extern void show_summary(package_t *, const char *);
+
+int     pkg_perform(lpkg_head_t *);
 
 #endif				/* _INST_INFO_H_INCLUDE */
