@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.13 2007/07/25 15:01:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.14 2007/07/30 07:25:11 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.13 2007/07/25 15:01:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.14 2007/07/30 07:25:11 joerg Exp $");
 #endif
 #endif
 
@@ -198,18 +198,13 @@ cleanup(int sig)
 }
 
 int
-pkg_perform(lpkg_head_t *pkgs)
+pkg_perform(const char *pkg)
 {
-	const char *pkg;
 	char   *cp;
 	FILE   *pkg_in, *fp;
 	package_t plist;
 	char   *suffix;		/* What we tack on to the end of the finished package */
-	lpkg_t *lpp;
 	char    installed[MaxPathSize];
-
-	lpp = TAILQ_FIRST(pkgs);
-	pkg = lpp->lp_name;	/* Only one arg to create */
 
 	/* Preliminary setup */
 	sanity_check();
