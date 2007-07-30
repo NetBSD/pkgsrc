@@ -1,8 +1,8 @@
-/* $NetBSD: patch-ag,v 1.7 2007/07/23 16:38:36 tls Exp $ */
+$NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
 
---- configure.orig	2007-07-16 22:47:55.000000000 -0400
-+++ configure	2007-07-23 11:16:44.000000000 -0400
-@@ -561,7 +561,7 @@
+--- configure.orig	2007-07-17 02:47:55.000000000 +0000
++++ configure
+@@ -561,7 +561,7 @@ do
        *=*) ac_optarg=`echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"`;;
        *) ac_optarg=yes ;;
      esac
@@ -11,7 +11,7 @@
  
    -exec-prefix | --exec_prefix | --exec-prefix | --exec-prefi \
    | --exec-pref | --exec-pre | --exec-pr | --exec-p | --exec- \
-@@ -743,7 +743,7 @@
+@@ -743,7 +743,7 @@ do
        *=*) ac_optarg=`echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"`;;
        *) ac_optarg=yes ;;
      esac
@@ -20,7 +20,7 @@
  
    -without-* | --without-*)
      ac_package=`expr "x$ac_option" : 'x-*without-\(.*\)'`
-@@ -968,7 +968,7 @@
+@@ -968,7 +968,7 @@ Fine tuning of the installation director
    --sbindir=DIR          system admin executables [EPREFIX/sbin]
    --libexecdir=DIR       program executables [EPREFIX/libexec]
    --datadir=DIR          read-only architecture-independent data [PREFIX/share]
@@ -29,7 +29,7 @@
    --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
    --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1032,6 +1032,7 @@
+@@ -1032,6 +1032,7 @@ Optional Packages:
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -37,7 +37,7 @@
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -1310,7 +1311,7 @@
+@@ -1310,7 +1311,7 @@ do
  	  -* ) ac_must_keep_next=true ;;
  	esac
        fi
@@ -46,7 +46,7 @@
        # Get rid of the leading space.
        ac_sep=" "
        ;;
-@@ -1634,7 +1635,6 @@
+@@ -1634,7 +1635,6 @@ shadow_libs_optional=
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -54,7 +54,7 @@
  
  
  
-@@ -1826,6 +1826,23 @@
+@@ -1826,6 +1826,23 @@ esac
  fi;
  
  
@@ -78,90 +78,43 @@
  # Check whether --with-passwd or --without-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval="$with_passwd"
-@@ -7066,7 +7083,7 @@
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 7069 "configure"
-+#line 7086 "configure"
- #include "confdefs.h"
+@@ -5335,7 +5352,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
  
- #if HAVE_DLFCN_H
-@@ -7164,7 +7181,7 @@
-   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
-   lt_status=$lt_dlunknown
-   cat > conftest.$ac_ext <<_LT_EOF
--#line 7167 "configure"
-+#line 7184 "configure"
- #include "confdefs.h"
- 
- #if HAVE_DLFCN_H
-@@ -7313,7 +7330,7 @@
+-  netbsd* | freebsd* | openbsd* | darwin* )
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
+@@ -5477,7 +5494,7 @@ darwin* | rhapsody*)
+   lt_cv_deplibs_check_method=pass_all
    ;;
- *-*-irix6*)
-   # Find out which ABI we are using.
--  $ECHO '#line 7316 "configure"' > conftest.$ac_ext
-+  $ECHO '#line 7333 "configure"' > conftest.$ac_ext
-   if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-   (eval $ac_compile) 2>&5
-   ac_status=$?
-@@ -7964,11 +7981,11 @@
-    -e 's:.*FLAGS}? :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:7967: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:7984: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:7971: \$? = $ac_status" >&5
-+   echo "$as_me:7988: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings
-@@ -8239,11 +8256,11 @@
-    -e 's:.*FLAGS}? :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8242: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8259: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>conftest.err)
-    ac_status=$?
-    cat conftest.err >&5
--   echo "$as_me:8246: \$? = $ac_status" >&5
-+   echo "$as_me:8263: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s "$ac_outfile"; then
-      # The compiler can only warn and ignore the option if not recognized
-      # So say no if there are warnings
-@@ -8336,11 +8353,11 @@
-    -e 's:.*FLAGS}? :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8339: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8356: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:8343: \$? = $ac_status" >&5
-+   echo "$as_me:8360: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -8390,11 +8407,11 @@
-    -e 's:.*FLAGS}? :&$lt_compiler_flag :; t' \
-    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
-    -e 's:$: $lt_compiler_flag:'`
--   (eval echo "\"\$as_me:8393: $lt_compile\"" >&5)
-+   (eval echo "\"\$as_me:8410: $lt_compile\"" >&5)
-    (eval "$lt_compile" 2>out/conftest.err)
-    ac_status=$?
-    cat out/conftest.err >&5
--   echo "$as_me:8397: \$? = $ac_status" >&5
-+   echo "$as_me:8414: \$? = $ac_status" >&5
-    if (exit $ac_status) && test -s out/conftest2.$ac_objext
-    then
-      # The compiler can only warn and ignore the option if not recognized
-@@ -11372,7 +11389,7 @@
+ 
+-freebsd* | kfreebsd*-gnu)
++freebsd* | kfreebsd*-gnu | dragonfly*)
+   if $ECHO __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+     case $host_cpu in
+     i*86 )
+@@ -9003,7 +9020,7 @@ if test -z "$aix_libpath"; then aix_libp
+       ;;
+ 
+     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+-    freebsd* | kfreebsd*-gnu)
++    freebsd* | kfreebsd*-gnu | dragonfly*)
+       archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
+       hardcode_libdir_flag_spec='-R$libdir'
+       hardcode_direct=yes
+@@ -9787,7 +9804,7 @@ kfreebsd*-gnu)
+   dynamic_linker='GNU ld.so'
+   ;;
+ 
+-freebsd*)
++freebsd* | dragonfly*)
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || $ECHO aout`
+   version_type=freebsd-$objformat
+   case $version_type in
+@@ -11372,7 +11389,7 @@ done
  
  		fi
  		;;
@@ -170,7 +123,7 @@
  		# FreeBSD has a real setreuid(2) starting with 2.1 and
  		# backported to 2.0.5.  We just take 2.1 and above...
  		case "$OSREV" in
-@@ -11388,6 +11405,8 @@
+@@ -11388,6 +11405,8 @@ done
  		fi
  		: ${with_pam='maybe'}
  		: ${with_logincap='maybe'}
@@ -179,7 +132,7 @@
  		;;
      *-*-*openbsd*)
  		# OpenBSD has a real setreuid(2) starting with 3.3 but
-@@ -11420,10 +11439,12 @@
+@@ -11420,10 +11439,12 @@ done
  		fi
  		: ${with_logincap='maybe'}
  				: ${with_pam='maybe'}
@@ -193,7 +146,7 @@
  		fi
  		if test "$CHECKSHADOW" = "true"; then
  		    CHECKSHADOW="false"
-@@ -17731,7 +17752,7 @@
+@@ -17731,7 +17752,7 @@ else
  echo "$as_me: WARNING: unable to find socket() trying -lsocket -lnsl" >&2;}
  echo "$as_me:$LINENO: checking for socket in -lsocket" >&5
  echo $ECHO_N "checking for socket in -lsocket... $ECHO_C" >&6
@@ -202,7 +155,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -17780,20 +17801,20 @@
+@@ -17780,20 +17801,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -228,7 +181,7 @@
    NET_LIBS="${NET_LIBS} -lsocket -lnsl"; LIBS="${LIBS} -lsocket -lnsl"
  fi
  
-@@ -18127,7 +18148,7 @@
+@@ -18127,7 +18148,7 @@ else
  echo "$as_me: WARNING: unable to find inet_addr() trying -lsocket -lnsl" >&2;}
  echo "$as_me:$LINENO: checking for inet_addr in -lsocket" >&5
  echo $ECHO_N "checking for inet_addr in -lsocket... $ECHO_C" >&6
@@ -237,7 +190,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -18176,20 +18197,20 @@
+@@ -18176,20 +18197,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -263,7 +216,7 @@
    NET_LIBS="${NET_LIBS} -lsocket -lnsl"; LIBS="${LIBS} -lsocket -lnsl"
  fi
  
-@@ -19511,10 +19532,9 @@
+@@ -19511,10 +19532,9 @@ echo "${ECHO_T}no" >&6
  
  fi
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -276,7 +229,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -19557,27 +19577,26 @@
+@@ -19557,27 +19577,26 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -311,7 +264,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -19620,20 +19639,20 @@
+@@ -19620,20 +19639,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -337,7 +290,7 @@
    K4LIBS="-lkrb4 $K4LIBS"
  else
    K4LIBS="-lkrb $K4LIBS"
-@@ -20102,13 +20121,6 @@
+@@ -20102,13 +20121,6 @@ done
      LIBS="$_LIBS"
  fi
  
@@ -351,7 +304,7 @@
  if test ${with_pam-'no'} != "no"; then
                  echo "$as_me:$LINENO: checking for main in -ldl" >&5
  echo $ECHO_N "checking for main in -ldl... $ECHO_C" >&6
-@@ -21724,7 +21736,7 @@
+@@ -21724,7 +21736,7 @@ if test ${with_SecurID-'no'} != "no"; th
      #
      echo "$as_me:$LINENO: checking for SD_Init in -laceclnt" >&5
  echo $ECHO_N "checking for SD_Init in -laceclnt... $ECHO_C" >&6
@@ -360,7 +313,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -21776,20 +21788,20 @@
+@@ -21776,20 +21788,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
