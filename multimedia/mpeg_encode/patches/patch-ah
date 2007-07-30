@@ -1,18 +1,17 @@
-$NetBSD: patch-ah,v 1.1 2005/10/05 11:45:46 salo Exp $
+$NetBSD: patch-ah,v 1.2 2007/07/30 10:25:42 joerg Exp $
 
-Fix for SA17008, from Gentoo.
-
---- ../convert/eyuvtojpeg.c.orig	1995-04-14 23:16:52.000000000 +0200
-+++ ../convert/eyuvtojpeg.c	2005-10-05 13:20:02.000000000 +0200
-@@ -24,6 +24,7 @@
+--- ../convert/eyuvtojpeg.c.orig	1995-04-14 21:16:52.000000000 +0000
++++ ../convert/eyuvtojpeg.c
+@@ -24,7 +24,7 @@
   *==============*/
  #include <stdio.h>
  #include <stdlib.h>
+-#include <malloc.h>
 +#include <unistd.h>
- #include <malloc.h>
  
  typedef unsigned char uint8;
-@@ -46,8 +47,9 @@
+ 
+@@ -46,8 +46,9 @@ void AllocYCC(void);
  void	main(int argc, char **argv)
  {
      FILE *fpointer;
@@ -24,7 +23,7 @@ Fix for SA17008, from Gentoo.
  
      if ((strcmp(argv[1],"-?") == 0) ||
  	(strcmp(argv[1],"-h") == 0) ||
-@@ -98,13 +100,16 @@
+@@ -98,13 +99,16 @@ void	main(int argc, char **argv)
      YUVtoPPM();
  
      fprintf(stdout, "Writing PPM\n");
