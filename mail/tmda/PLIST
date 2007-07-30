@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/02/26 03:44:21 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/07/30 04:25:50 schmonz Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -32,6 +32,16 @@ ${PYSITELIB}/TMDA/MessageLogger.py
 ${PYSITELIB}/TMDA/MessageLogger.pyc
 ${PYSITELIB}/TMDA/Pending.py
 ${PYSITELIB}/TMDA/Pending.pyc
+${PYSITELIB}/TMDA/Queue/MaildirQueue.py
+${PYSITELIB}/TMDA/Queue/MaildirQueue.pyc
+${PYSITELIB}/TMDA/Queue/OriginalQueue.py
+${PYSITELIB}/TMDA/Queue/OriginalQueue.pyc
+${PYSITELIB}/TMDA/Queue/Queue.py
+${PYSITELIB}/TMDA/Queue/Queue.pyc
+${PYSITELIB}/TMDA/Queue/Util.py
+${PYSITELIB}/TMDA/Queue/Util.pyc
+${PYSITELIB}/TMDA/Queue/__init__.py
+${PYSITELIB}/TMDA/Queue/__init__.pyc
 ${PYSITELIB}/TMDA/SMTP.py
 ${PYSITELIB}/TMDA/SMTP.pyc
 ${PYSITELIB}/TMDA/Util.py
@@ -385,6 +395,7 @@ share/examples/rc.d/tofmipd
 @dirrm ${EGDIR}/dot-tmda/filters
 @dirrm ${EGDIR}/dot-tmda
 @dirrm ${EGDIR}
+@dirrm ${PYSITELIB}/TMDA/Queue
 @dirrm ${PYSITELIB}/TMDA/pythonlib/email/mime
 @dirrm ${PYSITELIB}/TMDA/pythonlib/email
 @dirrm ${PYSITELIB}/TMDA/pythonlib
