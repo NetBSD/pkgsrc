@@ -1,4 +1,4 @@
-/* $NetBSD: create.h,v 1.7 2007/07/30 07:16:21 joerg Exp $ */
+/* $NetBSD: create.h,v 1.8 2007/07/30 07:25:10 joerg Exp $ */
 
 /* from FreeBSD Id: create.h,v 1.13 1997/10/08 07:46:19 charnier Exp */
 
@@ -53,6 +53,6 @@ extern int create_views;
 void    check_list(char *, package_t *, const char *);
 void    copy_plist(char *, package_t *);
 
-int     pkg_perform(lpkg_head_t *);
+int     pkg_perform(const char *);
 
 #endif				/* _INST_CREATE_H_INCLUDE */
