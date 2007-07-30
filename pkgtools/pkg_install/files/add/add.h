@@ -1,4 +1,4 @@
-/* $NetBSD: add.h,v 1.6 2005/11/22 15:44:59 ben Exp $ */
+/* $NetBSD: add.h,v 1.7 2007/07/30 07:16:21 joerg Exp $ */
 
 /* from FreeBSD Id: add.h,v 1.8 1997/02/22 16:09:15 peter Exp  */
 
@@ -49,5 +49,7 @@ extern add_mode_t AddMode;
 int     make_hierarchy(char *);
 int     extract_plist(char *, package_t *);
 void    apply_perms(char *, char **, int);
+
+int     pkg_perform(lpkg_head_t *);
 
 #endif				/* _INST_ADD_H_INCLUDE */
