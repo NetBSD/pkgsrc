@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/07/03 18:08:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/07/30 18:59:29 wiz Exp $
 bin/wesnoth
 man/cs/man6/wesnoth.6
 man/de/man6/wesnoth.6
@@ -4516,6 +4516,14 @@ share/wesnoth/images/units/human-outlaws/trapper-attack2.png
 share/wesnoth/images/units/human-outlaws/trapper-attack3.png
 share/wesnoth/images/units/human-outlaws/trapper-bow-defend.png
 share/wesnoth/images/units/human-outlaws/trapper-defend.png
+share/wesnoth/images/units/human-outlaws/trapper-die-1.png
+share/wesnoth/images/units/human-outlaws/trapper-die-2.png
+share/wesnoth/images/units/human-outlaws/trapper-die-3.png
+share/wesnoth/images/units/human-outlaws/trapper-die-4.png
+share/wesnoth/images/units/human-outlaws/trapper-die-5.png
+share/wesnoth/images/units/human-outlaws/trapper-die-6.png
+share/wesnoth/images/units/human-outlaws/trapper-die-7.png
+share/wesnoth/images/units/human-outlaws/trapper-die-8.png
 share/wesnoth/images/units/human-outlaws/trapper.png
 share/wesnoth/images/units/merfolk/diviner-defend.png
 share/wesnoth/images/units/merfolk/diviner-magic1.png
