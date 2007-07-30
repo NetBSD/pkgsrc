@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1656 2007/07/30 14:24:59 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1657 2007/07/30 19:01:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3048,3 +3048,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/tmda to 1.1.11nb2 [schmonz 2007-07-30]
 	Updated pkgtools/pkg_install to 20070730 [joerg 2007-07-30]
 	Updated wm/openbox to 3.4.3nb1 [tnn 2007-07-30]
+	Updated emulators/DatLib to 2.21 [wiz 2007-07-30]
+	Updated emulators/DatUtil to 2.32 [wiz 2007-07-30]
+	Updated audio/easytag-current to 2.1.2 [wiz 2007-07-30]
+	Updated textproc/texi2html to 1.78 [wiz 2007-07-30]
+	Updated games/wesnoth to 1.2.6 [wiz 2007-07-30]
