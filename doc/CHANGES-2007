@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1657 2007/07/30 19:01:40 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1658 2007/07/30 22:02:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3053,3 +3053,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/easytag-current to 2.1.2 [wiz 2007-07-30]
 	Updated textproc/texi2html to 1.78 [wiz 2007-07-30]
 	Updated games/wesnoth to 1.2.6 [wiz 2007-07-30]
+	Updated chat/inspircd to 1.1.11 [adrianp 2007-07-30]
