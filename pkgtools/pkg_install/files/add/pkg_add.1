@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.21 2007/07/26 11:30:55 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.22 2007/07/30 08:09:15 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -25,7 +25,7 @@
 .Nd a utility for installing and upgrading software package distributions
 .Sh SYNOPSIS
 .Nm
-.Op Fl AfILMnRSuVv
+.Op Fl AfILnRuVv
 .Op Fl K Ar pkg_dbdir
 .Op Fl p Ar prefix
 .Op Fl s Ar verification-type
@@ -136,28 +136,6 @@ if it's set, otherwise it defaults to
 .Pa /var/db/pkg .
 .It Fl L
 Don't add the package to any views after installation.
-.It Fl M
-Run in
-.Cm MASTER
-mode.
-This is a very specialized mode for running
-.Nm
-and is meant to be run in conjunction with
-.Cm SLAVE
-mode.
-When run in this mode,
-.Nm
-does no work beyond extracting the package into a temporary staging
-area (see the
-.Fl t
-option), reading in the packing list, and then dumping it (prefaced by
-the current staging area) to stdout where it may be filtered by a
-program such as
-.Xr sed 1 .
-When used in conjunction with
-.Cm SLAVE
-mode, it allows you to make radical changes to the package structure
-before acting on its contents.
 .It Fl n
 Don't actually install a package, just report the steps that
 would be taken if it was.
@@ -173,37 +151,13 @@ directive will be replaced, since
 .Nm
 has no way of knowing which directory settings are relative and
 which are absolute.
-It is rare in any case to see more than one directory transition made,
-but when such does happen and you wish to have control over *all* directory
-transitions, then you may then wish to look into the use of
-.Cm MASTER
-and
-.Cm SLAVE
-modes (see the
-.Fl M
-and
-.Fl S
-options).
+Only one directory transition is supported and the second one is expected to go
+into
+.Ar pkgdb .
 .It Fl R
 Do not record the installation of a package.
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
-.It Fl S
-Run in
-.Cm SLAVE
-mode.
-This is a very specialized mode for running
-.Nm
-and is meant to be run in conjunction with
-.Cm MASTER
-mode.
-When run in this mode,
-.Nm
-expects the release contents to be already extracted and waiting
-in the staging area, the location of which is read as a string
-from stdin.
-The complete packing list is also read from stdin,
-and the contents then acted on as normal.
 .It Fl s Ar verification-type
 Use a callout to an external program to verify the binary package
 being installed against an existing detached signature file.
