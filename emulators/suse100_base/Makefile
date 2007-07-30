@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/07/29 05:18:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/07/30 14:42:43 jlam Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 
 MAINTAINER=	tonio@NetBSD.org
