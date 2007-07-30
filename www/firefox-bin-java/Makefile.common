@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/05/29 14:04:04 tron Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/07/30 16:00:35 jlam Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.2
 CATEGORIES=		www lang
@@ -10,12 +10,17 @@ COMMENT?=		Java Run Time Environment (JRE) 1.5 plugin for firefox-bin
 
 DEPENDS+=		sun-jre15-[0-9]*:../../lang/sun-jre15
 
-ONLY_FOR_PLATFORM=	Linux-*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+EMUL_PLATFORMS=		linux-i386
 
+# XXX
+# XXX There is a bug where we depend on sun-jre15 and get the x86_64
+# XXX version of sun-jre15, but we need the i386 version instead.
+# XXX
+NOT_FOR_PLATFORM=	*-*-x86_64
+
+NO_CHECKSUM=		yes
 WRKSRC=			${WRKDIR}
-NO_CHECKSUM=		YES
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+BUILD_DIRS=		# empty
 
 MOZ_NAME?=		firefox-linux
 MOZ_BIN?=		${MOZ_NAME:S/linux/bin/}
