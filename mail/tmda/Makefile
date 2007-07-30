@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2007/02/27 00:18:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2007/07/30 04:25:50 schmonz Exp $
 #
 
 DISTNAME=	tmda-1.1.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.sourceforge.net/ftp/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
@@ -45,8 +45,9 @@ SUBST_STAGE.etc=	do-configure
 SUBST_FILES.etc=	bin/tmda-ofmipd TMDA/Auth.py TMDA/Defaults.py
 SUBST_SED.etc=		-e 's|/etc|${PKG_SYSCONFDIR}|g'
 
-INSTALLATION_DIRS=	bin ${SHAREDIR} ${DOCDIR} ${HTMLDIR}
-INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/pythonlib/email/mime ${EGDIR}
+INSTALLATION_DIRS=	bin ${SHAREDIR} ${DOCDIR} ${HTMLDIR} ${EGDIR}
+INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/pythonlib/email/mime
+INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/Queue
 
 post-extract:
 	rm ${WRKSRC}/doc/html/error.log
@@ -68,6 +69,8 @@ do-install:
 		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email
 	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/pythonlib/email/mime/*.py* \
 		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
+	${INSTALL_SCRIPT} ${WRKSRC}/TMDA/Queue/*.py* \
+		${PREFIX}/${PYSITELIB}/TMDA/Queue
 
 	${INSTALL_DATA} ${WRKSRC}/templates/*.txt ${PREFIX}/${SHAREDIR}
 
