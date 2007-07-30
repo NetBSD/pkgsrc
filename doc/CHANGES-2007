@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1655 2007/07/30 08:10:31 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1656 2007/07/30 14:24:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/libxml++2 to 2.18.1 [obache 2007-07-30]
 	Updated mail/tmda to 1.1.11nb2 [schmonz 2007-07-30]
 	Updated pkgtools/pkg_install to 20070730 [joerg 2007-07-30]
+	Updated wm/openbox to 3.4.3nb1 [tnn 2007-07-30]
