@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/31 17:05:31 sketch Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/30 16:12:57 jlam Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
 PKGREVISION=		4
@@ -12,12 +12,11 @@ COMMENT=		RealAudio and RealVideo player plugin for firefox-bin
 DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 DEPENDS+=		RealPlayerGold-[0-9]*:../../multimedia/RealPlayerGold
 
-ONLY_FOR_PLATFORM=	*-*-i386
+EMUL_PLATFORMS=		linux-i386
 
+NO_CHECKSUM=		yes
 WRKSRC=			${WRKDIR}
-NO_CHECKSUM=		YES
-NO_CONFIGURE=		YES
-NO_BUILD=		YES
+BUILD_DIRS=		# empty
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 PLUGIN_SOURCE=		${PREFIX}/lib/RealPlayer/mozilla/nphelix.so
