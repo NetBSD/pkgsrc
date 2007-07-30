@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/24 20:13:19 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/30 22:00:00 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -120,6 +120,7 @@ share/inspircd/modules/m_chgident.so
 share/inspircd/modules/m_chgname.so
 share/inspircd/modules/m_cloaking.so
 share/inspircd/modules/m_clones.so
+share/inspircd/modules/m_close.so
 share/inspircd/modules/m_conn_join.so
 share/inspircd/modules/m_conn_umodes.so
 share/inspircd/modules/m_conn_waitpong.so
