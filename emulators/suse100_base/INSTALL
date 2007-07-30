@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.6 2007/07/30 00:01:05 jlam Exp $
+# $NetBSD: INSTALL,v 1.7 2007/07/30 14:42:43 jlam Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -21,6 +21,7 @@ UNPACK,|UNPACK,+ROOT_ACTIONS)
 CAT="@CAT@"
 CHMOD="@CHMOD@"
 CP="@CP@"
+DIRNAME="@DIRNAME@"
 ECHO="@ECHO@"
 ID="@ID@"
 LN="@LN@"
