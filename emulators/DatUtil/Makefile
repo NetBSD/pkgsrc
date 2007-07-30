@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2007/07/08 09:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/07/30 18:55:51 wiz Exp $
 #
 
-DISTNAME=		dutil231
-PKGNAME=		DatUtil-2.31
+DISTNAME=		dutil232
+PKGNAME=		DatUtil-2.32
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatUtil/
 EXTRACT_SUFX=		.zip
@@ -28,5 +28,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/DatUtil
 
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.DatLib+=	DatLib>=2.21
 .include "../../emulators/DatLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
