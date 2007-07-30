@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/07/29 05:19:47 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/30 19:20:29 wiz Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -19,7 +19,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 LICENSE=		skype-license
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base fontconfig freetype2 glx x11
+EMUL_MODULES.linux=	base compat fontconfig freetype2 glx x11
 
 USE_DIRS+=		xdg-1.1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
