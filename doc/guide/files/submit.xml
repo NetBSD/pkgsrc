@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.17 2007/06/01 11:07:26 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.18 2007/07/30 21:13:01 kano Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -26,7 +26,7 @@
 	Finally, send this package to the pkgsrc bug tracking system,
 	either with the &man.send-pr.1; command, or if you don't have
 	that, go to the web page
-	<ulink url="http://www.NetBSD.org/Misc/send-pr.html"/>,
+	<ulink url="http://www.NetBSD.org/support/send-pr.html"/>,
 	which contains some instructions and a link to a form, where you
 	can submit packages.</para>
 
