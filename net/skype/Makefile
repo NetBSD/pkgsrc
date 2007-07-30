@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/07/30 19:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/30 19:38:19 gdt Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -12,11 +12,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
 
-RESTRICTED=		Redistribution not allowed yet.
+LICENSE=		skype-license
+RESTRICTED=		Complex terms for redistribution.
+NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-LICENSE=		skype-license
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base compat fontconfig freetype2 glx x11
