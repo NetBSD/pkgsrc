@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.28 2007/07/26 11:30:56 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.29 2007/07/30 07:16:21 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -404,9 +404,6 @@ void	_pkgdb_setPKGDB_DIR(const char *);
 lpkg_t *alloc_lpkg(const char *);
 lpkg_t *find_on_queue(lpkg_head_t *, const char *);
 void    free_lpkg(lpkg_t *);
-
-/* For all */
-int     pkg_perform(lpkg_head_t *);
 
 /* Externs */
 extern Boolean Verbose;
