@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.256 2007/07/29 18:27:05 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.257 2007/07/30 14:07:07 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -120,7 +120,7 @@ LOWER_OPSYS?=		darwin
 LOWER_ARCH!=		${UNAME} -p
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
-LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
+LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
 LOWER_VENDOR?=		apple
 
 .elif ${OPSYS} == "DragonFly"
@@ -141,7 +141,7 @@ MACHINE_ARCH=		x86_64
 MACHINE_ARCH=		${LOWER_ARCH}
 .  endif
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
-LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -c -1
+LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
 .  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
 .  endif
