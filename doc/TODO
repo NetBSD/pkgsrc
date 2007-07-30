@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6546 2007/07/30 19:01:41 wiz Exp $
+$NetBSD: TODO,v 1.6547 2007/07/30 23:19:08 taca Exp $
 
 Suggested new packages
 ======================
@@ -1168,7 +1168,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
-	o sudo-1.6.9p1
+	o sudo-1.6.9p2
 	o sunbird-0.5 [ghen]
 	o suse_base-10.2
 	o swfdec-0.4.3
