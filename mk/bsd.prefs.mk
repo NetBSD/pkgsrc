@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.257 2007/07/30 14:07:07 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.258 2007/07/30 14:10:36 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -106,7 +106,7 @@ _OS_VERSION!=		/usr/bin/oslevel
 .  else
 _OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
 .  endif
-OS_VERSION!=		echo ${_OS_VERSION} | sed -e 's,\([0-9]*\.[0-9]*\).*,\1,'
+OS_VERSION=		${_OS_VERSION:C/\([0-9]*\.[0-9]*\).*/\1/}
 LOWER_OS_VERSION=	${OS_VERSION}
 LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
 LOWER_OPSYS?=		aix
