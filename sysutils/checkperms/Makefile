@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/07/03 14:04:17 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/07/30 10:18:32 joerg Exp $
 #
 
 DISTNAME=	checkperms-1.7
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.schlechte-software.de/checkperms/
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.schlechte-software.de/checkperms/
 COMMENT=	Check and correct file permissions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
