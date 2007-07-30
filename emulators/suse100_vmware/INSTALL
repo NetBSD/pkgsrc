@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2007/07/29 05:19:00 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2007/07/30 00:01:05 jlam Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -43,7 +43,7 @@ PKG_METADATA_DIR="${2-${CURDIR}}"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
 : ${PKG_PREFIX=@PREFIX@}
 
-ROOT_ACTIONS_COOKIE="${PKG_METADATA_DIR}/+ROOT_ACTIONS_done"
+ROOT_ACTIONS_COOKIE="./+ROOT_ACTIONS_done"
 EUID=`${ID} -u`
 
 exitcode=0
