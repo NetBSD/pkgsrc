@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.50 2007/07/26 11:30:55 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.51 2007/07/30 08:09:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.50 2007/07/26 11:30:55 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.51 2007/07/30 08:09:14 joerg Exp $");
 #endif
 #endif
 
@@ -376,13 +376,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		/* Check for sanity */
 		if (sanity_check(pkg))
 			goto bomb;
-
-		/* If we're running in MASTER mode, just output the plist and return */
-		if (AddMode == MASTER) {
-			printf("%s\n", where_playpen());
-			write_plist(&Plist, stdout, NULL);
-			return 0;
-		}
 	}
 
 	/* Read the OS, version and architecture from BUILD_INFO file */
@@ -1053,16 +1046,12 @@ pkg_perform(lpkg_head_t *pkgs)
 
 	TAILQ_INIT(&files);
 
-	if (AddMode == SLAVE)
-		err_cnt = pkg_do(NULL, NULL);
-	else {
-		while ((lpp = TAILQ_FIRST(pkgs)) != NULL) {
-			path_prepend_from_pkgname(lpp->lp_name);
-			err_cnt += pkg_do(lpp->lp_name, pkgs);
-			path_prepend_clear();
-			TAILQ_REMOVE(pkgs, lpp, lp_link);
-			free_lpkg(lpp);
-		}
+	while ((lpp = TAILQ_FIRST(pkgs)) != NULL) {
+		path_prepend_from_pkgname(lpp->lp_name);
+		err_cnt += pkg_do(lpp->lp_name, pkgs);
+		path_prepend_clear();
+		TAILQ_REMOVE(pkgs, lpp, lp_link);
+		free_lpkg(lpp);
 	}
 	
 	ftp_stop();

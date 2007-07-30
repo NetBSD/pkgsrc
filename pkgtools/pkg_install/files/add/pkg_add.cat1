@@ -5,7 +5,7 @@ NNAAMMEE
      tributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--AAffIILLMMnnRRSSuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
+     ppkkgg__aadddd [--AAffIILLnnRRuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
              [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
              [[ftp|http]://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
@@ -72,16 +72,6 @@ OOPPTTIIOONNSS
 
      --LL      Don't add the package to any views after installation.
 
-     --MM      Run in MMAASSTTEERR mode.  This is a very specialized mode for running
-             ppkkgg__aadddd and is meant to be run in conjunction with SSLLAAVVEE mode.
-             When run in this mode, ppkkgg__aadddd does no work beyond extracting the
-             package into a temporary staging area (see the --tt option), read-
-             ing in the packing list, and then dumping it (prefaced by the
-             current staging area) to stdout where it may be filtered by a
-             program such as sed(1).  When used in conjunction with SSLLAAVVEE
-             mode, it allows you to make radical changes to the package struc-
-             ture before acting on its contents.
-
      --nn      Don't actually install a package, just report the steps that
              would be taken if it was.
 
@@ -90,23 +80,13 @@ OOPPTTIIOONNSS
              package.  If a package has set its default directory, it will be
              overridden by this flag.  Note that only the first @@ccwwdd directive
              will be replaced, since ppkkgg__aadddd has no way of knowing which
-             directory settings are relative and which are absolute.  It is
-             rare in any case to see more than one directory transition made,
-             but when such does happen and you wish to have control over *all*
-             directory transitions, then you may then wish to look into the
-             use of MMAASSTTEERR and SSLLAAVVEE modes (see the --MM and --SS options).
+             directory settings are relative and which are absolute.  Only one
+             directory transition is supported and the second one is expected
+             to go into _p_k_g_d_b.
 
      --RR      Do not record the installation of a package.  This means that you
              cannot deinstall it later, so only use this option if you know
              what you are doing!
-
-     --SS      Run in SSLLAAVVEE mode.  This is a very specialized mode for running
-             ppkkgg__aadddd and is meant to be run in conjunction with MMAASSTTEERR mode.
-             When run in this mode, ppkkgg__aadddd expects the release contents to be
-             already extracted and waiting in the staging area, the location
-             of which is read as a string from stdin.  The complete packing
-             list is also read from stdin, and the contents then acted on as
-             normal.
 
      --ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e
              Use a callout to an external program to verify the binary package
