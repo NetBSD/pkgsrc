@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/07/28 14:27:10 obache Exp $
+# $NetBSD: Makefile,v 1.30 2007/07/30 07:15:36 joerg Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -24,6 +24,12 @@ SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
 PLIST_SRC=		PLIST.common
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-sctp
+.endif
 
 .include "options.mk"
 
