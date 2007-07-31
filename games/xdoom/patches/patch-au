@@ -1,16 +1,16 @@
-$NetBSD: patch-au,v 1.1 2000/02/03 16:01:15 abs Exp $
+$NetBSD: patch-au,v 1.2 2007/07/31 10:12:00 joerg Exp $
 
---- linuxdoom-1.10/w_wad.c.orig	Mon Dec 22 21:05:36 1997
-+++ linuxdoom-1.10/w_wad.c	Thu Feb  3 01:34:02 2000
-@@ -34,7 +34,11 @@
- #include <malloc.h>
+--- linuxdoom-1.10/w_wad.c.orig	1997-12-22 21:05:36.000000000 +0000
++++ linuxdoom-1.10/w_wad.c
+@@ -31,10 +31,9 @@ rcsid[] = "$Id: w_wad.c,v 1.5 1997/02/03
+ #include <sys/types.h>
+ #include <string.h>
+ #include <unistd.h>
+-#include <malloc.h>
  #include <fcntl.h>
  #include <sys/stat.h>
-+#if 0
- #include <alloca.h>
-+#else
+-#include <alloca.h>
 +#include <stdlib.h>
-+#endif
  #define O_BINARY		0
  #endif
  
