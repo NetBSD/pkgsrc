@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.6 2006/10/18 19:18:12 ben Exp $
+# $NetBSD: extract,v 1.7 2007/07/31 17:42:40 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,6 +88,7 @@
 #	EXTRACT_OPTS_LHA
 #	EXTRACT_OPTS_PAX
 #	EXTRACT_OPTS_RAR
+#	EXTRACT_OPTS_RPM
 #	EXTRACT_OPTS_TAR
 #	EXTRACT_OPTS_ZIP
 #	EXTRACT_OPTS_ZOO
@@ -110,6 +111,7 @@ set -u		# treat undefined variables as errors
 : ${MKDIR:=mkdir}
 : ${PAX:=pax}
 : ${RM:=rm}
+: ${RPM2PKG:=rpm2pkg}
 : ${SH:=sh}
 : ${TAR:=tar}
 : ${TEST:=test}
@@ -208,6 +210,7 @@ case "$distfile" in
 		_format=compressed ;;
 *.zoo)		_format=zoo ;;
 *.rar)		_format=rar ;;
+*.rpm)		_format=rpm ;;
 *.bin)		_format=jre-bin ;;
 *.gem)		_format=gem ;;
 *)		_format=none ;;
@@ -317,6 +320,11 @@ zoo)
 rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
 	${UNRAR} x ${EXTRACT_OPTS_RAR} "$distfile" ${1+"$@"}
+	;;
+
+rpm)
+	: ${EXTRACT_OPTS_RPM=}
+	${RPM2PKG} -d . ${EXTRACT_OPTS_RPM} "$distfile" ${1+"$@"}
 	;;
 
 jre-bin)
