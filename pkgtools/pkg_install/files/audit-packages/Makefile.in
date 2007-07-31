@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.3 2007/07/29 14:06:44 adrianp Exp $
+# $NetBSD: Makefile.in,v 1.4 2007/07/31 13:32:04 joerg Exp $
 
 prefix = @prefix@
 exec_prefix = @exec_prefix@
@@ -23,7 +23,7 @@ LIBS= -linstall @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I../lib -DHOST=\"$(CANONICAL_HOST)\" -DPKGSRC
 CPPFLAGS+=	-DPREFIX=\"$(prefix)\" -DSYSCONFDIR=\"$(sysconfdir)\"
 DEFS= @DEFS@
-CFLAGS= @CFLAGS@ -Wall
+CFLAGS= @CFLAGS@
 LDFLAGS= @LDFLAGS@ -L../lib
 SUBST_FILES= audit-packages.conf.5 audit-packages.conf.cat5 audit-packages.conf download-vulnerability-list.sh
 
