@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/07/30 04:25:50 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/07/31 04:44:01 schmonz Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -232,6 +232,7 @@ ${HTMLDIR}/SlideShowHandOutTemplate.html
 ${HTMLDIR}/SlideShowTemplate.html
 ${HTMLDIR}/SlideTemplate.html
 ${HTMLDIR}/SpamAssassin.html
+${HTMLDIR}/SquirrelMail.html
 ${HTMLDIR}/SyntaxReference.html
 ${HTMLDIR}/SystemInfo.html
 ${HTMLDIR}/SystemPagesGroup.html
@@ -253,6 +254,7 @@ ${HTMLDIR}/TmdaFingerprint.html
 ${HTMLDIR}/TmdaHashCashHowto.html
 ${HTMLDIR}/TmdaHistory.html
 ${HTMLDIR}/TmdaHowtos.html
+${HTMLDIR}/TmdaI18n.html
 ${HTMLDIR}/TmdaInUse.html
 ${HTMLDIR}/TmdaInstall.html
 ${HTMLDIR}/TmdaInstallation.html
