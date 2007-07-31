@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/10/15 18:04:20 rh Exp $
+$NetBSD: patch-ac,v 1.2 2007/07/31 10:17:38 joerg Exp $
 
---- xbreaky.snd.c.orig	Thu May 11 10:13:45 2000
+--- xbreaky.snd.c.orig	2000-05-11 08:13:45.000000000 +0000
 +++ xbreaky.snd.c
+@@ -20,7 +20,7 @@
+  */
+ 
+ #include <stdio.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <getopt.h>
 @@ -28,11 +28,19 @@
  #include <string.h>
  #include <strings.h>
@@ -22,7 +31,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/10/15 18:04:20 rh Exp $
  #define RAWFILESDIR PREFIX"/share/games/xbreaky"
  
  int timelimit = 0, dsp_speed = DEFAULT_DSP_SPEED, dsp_stereo = 0;
-@@ -53,7 +61,6 @@
+@@ -53,7 +61,6 @@ int main (int argc, char *argv[])
    char k;
  
    signal(SIGTERM, quit);   
@@ -30,7 +39,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/10/15 18:04:20 rh Exp $
    audio = open (AUDIO, O_WRONLY, 0);
    if (audio == -1)
    {
-@@ -101,7 +108,7 @@
+@@ -101,7 +108,7 @@ int main (int argc, char *argv[])
     }
     if(i!=-1)  
     { 

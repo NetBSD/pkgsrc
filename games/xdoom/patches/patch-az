@@ -1,8 +1,16 @@
-$NetBSD: patch-az,v 1.1 2000/02/03 16:01:16 abs Exp $
+$NetBSD: patch-az,v 1.2 2007/07/31 10:12:00 joerg Exp $
 
---- sndserv/wadread.c.orig	Thu Jan 30 19:54:23 1997
-+++ sndserv/wadread.c	Thu Feb  3 01:34:06 2000
-@@ -94,12 +94,7 @@
+--- sndserv/wadread.c.orig	1997-01-30 19:54:23.000000000 +0000
++++ sndserv/wadread.c
+@@ -39,7 +39,6 @@ static const char rcsid[] = "$Id: wadrea
+ 
+ 
+ 
+-#include <malloc.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <stdio.h>
+@@ -94,12 +93,7 @@ void**		lumpcache;
  // Something new.
  // This version of w_wad.c does handle endianess.
  //
@@ -16,15 +24,15 @@ $NetBSD: patch-az,v 1.1 2000/02/03 16:01:16 abs Exp $
  
  #define LONG(x) ((long)SwapLONG((unsigned long) (x)))
  #define SHORT(x) ((short)SwapSHORT((unsigned short) (x)))
-@@ -118,6 +113,11 @@
-     return
+@@ -119,6 +113,11 @@ unsigned short SwapSHORT(unsigned short 
  	(x>>8) | (x<<8);
  }
-+
+ 
 +#else
 +
 +#define LONG(x) (x)
 +#define SHORT(x) (x)
- 
++
  #endif
+ 
  
