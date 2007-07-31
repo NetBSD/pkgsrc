@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1661 2007/07/31 09:29:30 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1662 2007/07/31 10:07:38 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3057,3 +3057,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/openssh to 4.6.1nb1 [taca 2007-07-31]
 	Updated mail/tmda to 1.1.12 [schmonz 2007-07-31]
 	Updated emulators/wine to 0.9.42 [adam 2007-07-31]
+	Updated www/firefox to 2.0.0.6 [ghen 2007-07-31]
+	Updated www/firefox-bin to 2.0.0.6 [ghen 2007-07-31]
+	Updated www/firefox-gtk1 to 2.0.0.6 [ghen 2007-07-31]
