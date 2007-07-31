@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.13 2007/07/02 14:54:21 joerg Exp $
+# $NetBSD: print-plist.mk,v 1.14 2007/07/31 19:51:01 jlam Exp $
 
 ###
 ### Automatic PLIST generation
@@ -13,25 +13,30 @@
 ###  - make print-PLIST | brain >PLIST
 ###
 
-_PRINT_PLIST_AWK_SUBST={						\
+_PRINT_PLIST_AWK_SUBST={
+.if !defined(EMUL_PLATFORMS)
+_PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${OPSYS}/, "$${OPSYS}");					\
 	gsub(/${OS_VERSION:S/./\./g}/, "$${OS_VERSION}");		\
 	gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");	\
 	gsub(/${MACHINE_ARCH}/, "$${MACHINE_ARCH}");			\
 	gsub(/${MACHINE_GNU_ARCH}/, "$${MACHINE_GNU_ARCH}");
-.if !empty(LOWER_VENDOR)
-_PRINT_PLIST_AWK_SUBST+=	gsub(/${LOWER_VENDOR}/, "$${LOWER_VENDOR}");
-.endif
+.  if !empty(LOWER_VENDOR)
+_PRINT_PLIST_AWK_SUBST+=						\
+	gsub(/${LOWER_VENDOR}/, "$${LOWER_VENDOR}");
+.  endif
 _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");	\
-	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");			\
+	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");
+.endif
+_PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
 	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
 	gsub(/^${PKGLOCALEDIR}\/locale/, "share/locale");		\
 	gsub(/^@dirrm ${PKGLOCALEDIR}\/locale/, "@dirrm share/locale");	\
 	gsub("^${PKGINFODIR}\/", "info/");				\
-	gsub("^${PKGMANDIR}\/", "man/");				\
-}
+	gsub("^${PKGMANDIR}\/", "man/");
+_PRINT_PLIST_AWK_SUBST+=}
 
 _PRINT_PLIST_AWK_IGNORE=	($$0 ~ /^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}\//)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /emul\/linux\/proc/)
