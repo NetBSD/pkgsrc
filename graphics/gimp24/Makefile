@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/07/04 15:19:51 lkundrak Exp $
+# $NetBSD: Makefile,v 1.46 2007/07/31 13:22:01 gdt Exp $
 
 DISTNAME=	gimp-2.3.18
 PKGREVISION=	1
@@ -13,6 +13,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
 COMMENT=	Image manipulation program similar to Photoshop[tm]
+
+# libgimpthumb Makefile.am has issues (2.3.18):
+# http://bugzilla.gnome.org/show_bug.cgi?id=462130
+MAKE_JOBS_SAFE=		no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
