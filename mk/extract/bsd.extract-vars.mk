@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.6 2006/10/15 01:56:06 minskim Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.7 2007/07/31 17:42:40 jlam Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -64,6 +64,9 @@ USE_TOOLS+=	unzoo
 .endif
 .if !empty(EXTRACT_ONLY:M*.rar)
 USE_TOOLS+=	unrar
+.endif
+.if !empty(EXTRACT_ONLY:M*.rpm)
+USE_TOOLS+=	rpm2pkg
 .endif
 .if !empty(EXTRACT_ONLY:M*.gem)
 USE_TOOLS+=	gem
