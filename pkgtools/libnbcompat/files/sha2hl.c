@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.6 2007/05/07 16:38:47 joerg Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.7 2007/07/31 13:17:34 joerg Exp $	 */
 
 /*
  * sha2hl.c
@@ -71,7 +71,7 @@ static const char sha2_hex_digits[] = "0123456789abcdef";
 char           *
 SHA256_File(char *filename, char *buf)
 {
-	u_char          buffer[BUFSIZ * 20];
+	unsigned char          buffer[BUFSIZ * 20];
 	SHA256_CTX      ctx;
 	int             fd, num, oerrno;
 
@@ -94,10 +94,10 @@ SHA256_File(char *filename, char *buf)
 
 
 char           *
-SHA256_End(SHA256_CTX *ctx, u_char *buffer)
+SHA256_End(SHA256_CTX *ctx, unsigned char *buffer)
 {
-	u_char          digest[SHA256_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	unsigned char          digest[SHA256_DIGEST_LENGTH], *d = digest;
+	unsigned char	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -120,7 +120,7 @@ SHA256_End(SHA256_CTX *ctx, u_char *buffer)
 }
 
 char           *
-SHA256_Data(const uint8_t * data, size_t len, u_char *digest)
+SHA256_Data(const uint8_t * data, size_t len, unsigned char *digest)
 {
 	SHA256_CTX      ctx;
 
@@ -133,7 +133,7 @@ char           *
 SHA384_File(char *filename, char *buf)
 {
 	SHA384_CTX      ctx;
-	u_char          buffer[BUFSIZ * 20];
+	unsigned char          buffer[BUFSIZ * 20];
 	int             fd, num, oerrno;
 
 	_DIAGASSERT(filename != NULL);
@@ -156,8 +156,8 @@ SHA384_File(char *filename, char *buf)
 char           *
 SHA384_End(SHA384_CTX * ctx, char buffer[])
 {
-	u_char          digest[SHA384_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	unsigned char          digest[SHA384_DIGEST_LENGTH], *d = digest;
+	unsigned char	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -193,7 +193,7 @@ char           *
 SHA512_File(char *filename, char *buf)
 {
 	SHA512_CTX      ctx;
-	u_char          buffer[BUFSIZ * 20];
+	unsigned char          buffer[BUFSIZ * 20];
 	int             fd, num, oerrno;
 
 	_DIAGASSERT(filename != NULL);
@@ -216,8 +216,8 @@ SHA512_File(char *filename, char *buf)
 char           *
 SHA512_End(SHA512_CTX * ctx, char buffer[])
 {
-	u_char          digest[SHA512_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	unsigned char          digest[SHA512_DIGEST_LENGTH], *d = digest;
+	unsigned char	       *ret;
 	int             i;
 
 	/* Sanity check: */
