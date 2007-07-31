@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1658 2007/07/30 22:02:07 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1659 2007/07/31 02:30:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3054,3 +3054,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/texi2html to 1.78 [wiz 2007-07-30]
 	Updated games/wesnoth to 1.2.6 [wiz 2007-07-30]
 	Updated chat/inspircd to 1.1.11 [adrianp 2007-07-30]
+	Updated security/openssh to 4.6.1nb1 [taca 2007-07-31]
