@@ -1,4 +1,4 @@
-/*	$NetBSD: fts.h,v 1.4 2004/08/16 17:24:57 jlam Exp $	*/
+/*	$NetBSD: fts.h,v 1.5 2007/07/31 13:17:34 joerg Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -41,8 +41,8 @@ typedef struct {
 	dev_t fts_dev;			/* starting device # */
 	char *fts_path;			/* path for this descent */
 	int fts_rfd;			/* fd for root */
-	u_int fts_pathlen;		/* sizeof(path) */
-	u_int fts_nitems;		/* elements in the sort array */
+	unsigned int fts_pathlen;		/* sizeof(path) */
+	unsigned int fts_nitems;		/* elements in the sort array */
 	int (*fts_compar)		/* compare function */
 	    (const struct _ftsent **, const struct _ftsent **);
 
@@ -71,8 +71,8 @@ typedef struct _ftsent {
 	char *fts_path;			/* root path */
 	int fts_errno;			/* errno for this node */
 	int fts_symfd;			/* fd for symlink */
-	u_short fts_pathlen;		/* strlen(fts_path) */
-	u_short fts_namelen;		/* strlen(fts_name) */
+	unsigned short fts_pathlen;		/* strlen(fts_path) */
+	unsigned short fts_namelen;		/* strlen(fts_name) */
 
 	ino_t fts_ino;			/* inode */
 	dev_t fts_dev;			/* device */
@@ -100,18 +100,18 @@ typedef struct _ftsent {
 #define	FTS_SL		12		/* symbolic link */
 #define	FTS_SLNONE	13		/* symbolic link without target */
 #define	FTS_W		14		/* whiteout object */
-	u_short fts_info;		/* user flags for FTSENT structure */
+	unsigned short fts_info;		/* user flags for FTSENT structure */
 
 #define	FTS_DONTCHDIR	 0x01		/* don't chdir .. to the parent */
 #define	FTS_SYMFOLLOW	 0x02		/* followed a symlink to get here */
 #define	FTS_ISW		 0x04		/* this is a whiteout object */
-	u_short fts_flags;		/* private flags for FTSENT structure */
+	unsigned short fts_flags;		/* private flags for FTSENT structure */
 
 #define	FTS_AGAIN	 1		/* read node again */
 #define	FTS_FOLLOW	 2		/* follow symbolic link */
 #define	FTS_NOINSTR	 3		/* no instructions */
 #define	FTS_SKIP	 4		/* discard node */
-	u_short fts_instr;		/* fts_set() instructions */
+	unsigned short fts_instr;		/* fts_set() instructions */
 
 	struct stat *fts_statp;		/* stat(2) information */
 	char fts_name[1];		/* file name */
