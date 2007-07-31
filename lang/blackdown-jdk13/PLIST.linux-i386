@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i386,v 1.2 2004/07/01 10:56:11 wiz Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.1 2007/07/31 19:19:56 jlam Exp $
 java/blackdown-1.3.1/demo/jfc/SwingSet2/resources/ant.html
 java/blackdown-1.3.1/demo/jfc/SwingSet2/resources/bug.html
 java/blackdown-1.3.1/demo/jfc/SwingSet2/resources/images/About.jpg
