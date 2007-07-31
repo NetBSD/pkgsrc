@@ -1,4 +1,4 @@
-/*	$NetBSD: setmode.c,v 1.9 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: setmode.c,v 1.10 2007/07/31 13:17:33 joerg Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993, 1994
@@ -38,7 +38,7 @@
 #if 0
 static char sccsid[] = "@(#)setmode.c	8.2 (Berkeley) 3/25/94";
 #else
-__RCSID("$NetBSD: setmode.c,v 1.9 2004/08/23 03:32:12 jlam Exp $");
+__RCSID("$NetBSD: setmode.c,v 1.10 2007/07/31 13:17:33 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -85,7 +85,7 @@ typedef struct bitcmd {
 #define	CMD2_OBITS	0x08
 #define	CMD2_UBITS	0x10
 
-static BITCMD	*addcmd __P((BITCMD *, int, int, int, u_int));
+static BITCMD	*addcmd __P((BITCMD *, int, int, int, unsigned int));
 static void	 compress_mode __P((BITCMD *));
 #ifdef SETMODE_DEBUG
 static void	 dumpmode __P((BITCMD *));
@@ -219,7 +219,7 @@ setmode(p)
 
 	setlen = SET_LEN + 2;
 	
-	if ((set = malloc((u_int)(sizeof(BITCMD) * setlen))) == NULL)
+	if ((set = malloc((unsigned int)(sizeof(BITCMD) * setlen))) == NULL)
 		return (NULL);
 	saveset = set;
 	endset = set + (setlen - 2);
@@ -369,7 +369,7 @@ addcmd(set, op, who, oparg, mask)
 	BITCMD *set;
 	int oparg, who;
 	int op;
-	u_int mask;
+	unsigned int mask;
 {
 
 	_DIAGASSERT(set != NULL);
