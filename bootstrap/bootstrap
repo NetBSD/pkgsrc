@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.102 2007/07/29 17:09:47 joerg Exp $
+# $NetBSD: bootstrap,v 1.103 2007/07/31 14:31:27 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -831,7 +831,9 @@ echo "PKG_ADMIN_CMD?=			$wrkdir/sbin/pkg_admin" >> ${BOOTSTRAP_MKCONF}
 echo "PKG_CREATE_CMD?=			$wrkdir/sbin/pkg_create" >> ${BOOTSTRAP_MKCONF}
 echo "PKG_INFO_CMD?=			$wrkdir/sbin/pkg_info" >> ${BOOTSTRAP_MKCONF}
 
-echo "FETCH_CMD=		$fetch_cmd" >> ${TARGET_MKCONF}
+if [ -n "${fetch_cmd}" ]; then
+	echo "FETCH_CMD=		$fetch_cmd" >> ${TARGET_MKCONF}
+fi
 
 MAKECONF=$wrkdir/mk.conf
 export MAKECONF
