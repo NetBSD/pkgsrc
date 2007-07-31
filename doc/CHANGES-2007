@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1660 2007/07/31 04:44:11 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1661 2007/07/31 09:29:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3056,3 +3056,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/inspircd to 1.1.11 [adrianp 2007-07-30]
 	Updated security/openssh to 4.6.1nb1 [taca 2007-07-31]
 	Updated mail/tmda to 1.1.12 [schmonz 2007-07-31]
+	Updated emulators/wine to 0.9.42 [adam 2007-07-31]
