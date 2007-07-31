@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/09/09 02:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/07/31 11:03:48 joerg Exp $
 
 DISTNAME=	yodl-1.31.18
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.lilypond.org/pub/yodl/development/
 
@@ -13,6 +13,11 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	bison flex gmake
 MAKE_FILE=	GNUmakefile
 CONFIGURE_ENV+=	ILDFLAGS=${LDFLAGS:Q}
+
+SUBST_CLASSES+=		python
+SUBST_FILES.python=	scripts/yodl2texinfo-post.py
+SUBST_SED.python+=	-e 's,@PYTHON@,${PYTHONBIN},g'
+SUBST_STAGE.python=	pre-configure
 
 .include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
