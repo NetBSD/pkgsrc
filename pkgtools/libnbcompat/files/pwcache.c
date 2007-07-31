@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.c,v 1.8 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: pwcache.c,v 1.9 2007/07/31 13:17:33 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -82,7 +82,7 @@
 #if 0
 static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: pwcache.c,v 1.8 2004/08/23 03:32:12 jlam Exp $");
+__RCSID("$NetBSD: pwcache.c,v 1.9 2007/07/31 13:17:33 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -155,17 +155,17 @@ static	int	usrtb_fail;	/* usrtb_start() failed ? */
 static	int	grptb_fail;	/* grptb_start() failed ? */
 
 
-static	u_int	st_hash(const char *, size_t, int);
+static	unsigned int	st_hash(const char *, size_t, int);
 static	int	uidtb_start(void);
 static	int	gidtb_start(void);
 static	int	usrtb_start(void);
 static	int	grptb_start(void);
 
 
-static u_int
+static unsigned int
 st_hash(const char *name, size_t len, int tabsz)
 {
-	u_int key = 0;
+	unsigned int key = 0;
 
 	_DIAGASSERT(name != NULL);
 
