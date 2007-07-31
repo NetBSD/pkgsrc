@@ -97,8 +97,8 @@ char *SHA512_File(char *, char *);
 void SHA256_Init(SHA256_CTX *);
 void SHA256_Update(SHA256_CTX*, const u_int8_t*, size_t);
 void SHA256_Final(u_int8_t[SHA256_DIGEST_LENGTH], SHA256_CTX*);
-char* SHA256_End(SHA256_CTX*, u_char *);
-char* SHA256_Data(const u_int8_t*, size_t, u_char *);
+char* SHA256_End(SHA256_CTX*, unsigned char *);
+char* SHA256_Data(const u_int8_t*, size_t, unsigned char *);
 char *SHA256_File(char *, char *);
 
 void SHA384_Init(SHA384_CTX*);

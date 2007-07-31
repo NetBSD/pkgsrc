@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: sha1.c,v 1.7 2007/07/31 13:17:33 joerg Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -82,8 +82,8 @@ __weak_alias(SHA1Final,_SHA1Final)
 #endif
 
 typedef union {
-    u_char c[64];
-    u_int l[16];
+    unsigned char c[64];
+    unsigned int l[16];
 } CHAR64LONG16;
 
 /* old sparc64 gcc could not compile this */
@@ -150,7 +150,7 @@ do_R4(u_int32_t *a, u_int32_t *b, u_int32_t *c, u_int32_t *d, u_int32_t *e, CHAR
  */
 void SHA1Transform(state, buffer)
     u_int32_t state[5];
-    const u_char buffer[64];
+    const unsigned char buffer[64];
 {
     u_int32_t a, b, c, d, e;
     CHAR64LONG16 *block;
@@ -241,10 +241,10 @@ void SHA1Init(context)
  */
 void SHA1Update(context, data, len)
     SHA1_CTX *context;
-    const u_char *data;
-    u_int len;
+    const unsigned char *data;
+    unsigned int len;
 {
-    u_int i, j;
+    unsigned int i, j;
 
     _DIAGASSERT(context != 0);
     _DIAGASSERT(data != 0);
@@ -270,27 +270,27 @@ void SHA1Update(context, data, len)
  * Add padding and return the message digest.
  */
 void SHA1Final(digest, context)
-    u_char digest[20];
+    unsigned char digest[20];
     SHA1_CTX* context;
 {
-    u_int i;
-    u_char finalcount[8];
+    unsigned int i;
+    unsigned char finalcount[8];
 
     _DIAGASSERT(digest != 0);
     _DIAGASSERT(context != 0);
 
     for (i = 0; i < 8; i++) {
-	finalcount[i] = (u_char)((context->count[(i >= 4 ? 0 : 1)]
+	finalcount[i] = (unsigned char)((context->count[(i >= 4 ? 0 : 1)]
 	 >> ((3-(i & 3)) * 8) ) & 255);	 /* Endian independent */
     }
-    SHA1Update(context, (u_char *)"\200", 1);
+    SHA1Update(context, (unsigned char *)"\200", 1);
     while ((context->count[0] & 504) != 448)
-	SHA1Update(context, (u_char *)"\0", 1);
+	SHA1Update(context, (unsigned char *)"\0", 1);
     SHA1Update(context, finalcount, 8);  /* Should cause a SHA1Transform() */
 
     if (digest) {
 	for (i = 0; i < 20; i++)
-	    digest[i] = (u_char)
+	    digest[i] = (unsigned char)
 		((context->state[i>>2] >> ((3-(i & 3)) * 8) ) & 255);
     }
 }

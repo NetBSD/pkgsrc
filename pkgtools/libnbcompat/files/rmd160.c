@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: rmd160.c,v 1.7 2007/07/31 13:17:33 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -25,7 +25,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: rmd160.c,v 1.6 2004/08/23 03:32:12 jlam Exp $");
+__RCSID("$NetBSD: rmd160.c,v 1.7 2007/07/31 13:17:33 joerg Exp $");
 #endif	/* not lint */
 
 /* header files */
@@ -364,7 +364,7 @@ RMD160Transform(u_int32_t state[5], const u_int32_t block[16])
 /********************************************************************/
 
 void
-RMD160Update(RMD160_CTX *context, const u_char *data, u_int32_t nbytes)
+RMD160Update(RMD160_CTX *context, const unsigned char *data, u_int32_t nbytes)
 {
 	u_int32_t X[16];
 	u_int32_t ofs = 0;
@@ -424,7 +424,7 @@ RMD160Update(RMD160_CTX *context, const u_char *data, u_int32_t nbytes)
 /********************************************************************/
 
 void
-RMD160Final(u_char digest[20], RMD160_CTX *context)
+RMD160Final(unsigned char digest[20], RMD160_CTX *context)
 {
 	u_int32_t i;
 	u_int32_t X[16];
@@ -436,7 +436,7 @@ RMD160Final(u_char digest[20], RMD160_CTX *context)
 	_DIAGASSERT(context != NULL);
 
 	/* append the bit m_n == 1 */
-	context->bbuffer[context->buflen] = (u_char)'\200';
+	context->bbuffer[context->buflen] = (unsigned char)'\200';
 
 	ZEROIZE(context->bbuffer + context->buflen + 1,
 		63 - context->buflen);
