@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1662 2007/07/31 10:07:38 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1663 2007/07/31 14:28:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox to 2.0.0.6 [ghen 2007-07-31]
 	Updated www/firefox-bin to 2.0.0.6 [ghen 2007-07-31]
 	Updated www/firefox-gtk1 to 2.0.0.6 [ghen 2007-07-31]
+	Updated emulators/dosbox to 0.71 [xtraeme 2007-07-31]
