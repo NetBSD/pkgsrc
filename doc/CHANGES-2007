@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1659 2007/07/31 02:30:26 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1660 2007/07/31 04:44:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/wesnoth to 1.2.6 [wiz 2007-07-30]
 	Updated chat/inspircd to 1.1.11 [adrianp 2007-07-30]
 	Updated security/openssh to 4.6.1nb1 [taca 2007-07-31]
+	Updated mail/tmda to 1.1.12 [schmonz 2007-07-31]
