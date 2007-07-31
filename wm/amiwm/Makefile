@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:27:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/31 10:35:09 joerg Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
 PKGNAME=	amiwm-0.20p48
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 
@@ -15,6 +15,9 @@ LICENSE=	amiwm-license
 RESTRICTED=	Restrictive copyright (non-commerical use only)
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+USE_TOOLS+=	ksh:run
+REPLACE_KSH=	Xsession.in Xsession2.in
 
 .include "../../mk/bsd.prefs.mk"
 
