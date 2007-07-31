@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2007/07/30 04:25:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2007/07/31 04:44:01 schmonz Exp $
 #
 
-DISTNAME=	tmda-1.1.11
-PKGREVISION=	2
+DISTNAME=	tmda-1.1.12
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.sourceforge.net/ftp/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
@@ -48,6 +47,8 @@ SUBST_SED.etc=		-e 's|/etc|${PKG_SYSCONFDIR}|g'
 INSTALLATION_DIRS=	bin ${SHAREDIR} ${DOCDIR} ${HTMLDIR} ${EGDIR}
 INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/pythonlib/email/mime
 INSTALLATION_DIRS+=	${PYSITELIB}/TMDA/Queue
+
+.include "options.mk"
 
 post-extract:
 	rm ${WRKSRC}/doc/html/error.log
