@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/12 15:01:59 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/01 16:46:16 joerg Exp $
 #
 
 DISTNAME=		libX11-1.1.2
@@ -27,6 +27,10 @@ PKGCONFIG_OVERRIDE+=	x11.pc.in
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
+
+.if defined(USE_CROSS_COMPILE) && !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
 .endif
 
 .include "../../x11/bigreqsproto/buildlink3.mk"

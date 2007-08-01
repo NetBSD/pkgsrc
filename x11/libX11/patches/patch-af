@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1 2007/08/01 16:48:42 joerg Exp $
+
+--- src/Makefile.am.orig	2006-10-07 01:40:27.000000000 +0200
++++ src/Makefile.am
+@@ -408,11 +408,17 @@ endif LINT
+ 
+ KEYSYMDEF=@KEYSYMDEF@
+ 
++if CROSS_COMPILING
++MAKEKEYS=	$(top_builddir)/src/util/xmakekeys
++else
++MAKEKEYS=	$(top_builddir)/src/util/makekeys
++endif
++
+ ks_tables.h: $(KEYSYMDEF) $(top_builddir)/src/util/makekeys$(EXEEXT)
+-	$(top_builddir)/src/util/makekeys < $(KEYSYMDEF) > ks_tables_h
++	$(MAKEKEYS) < $(KEYSYMDEF) > ks_tables_h
+ 	mv ks_tables_h $@
+ 
+ $(top_builddir)/src/util/makekeys$(EXEEXT): force
+-	cd util; $(MAKE)
++	cd util && $(MAKE)
+ 
+ force:
