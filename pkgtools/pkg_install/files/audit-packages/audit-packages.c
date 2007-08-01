@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.6 2007/07/26 11:27:58 joerg Exp $ */
+/* $NetBSD: audit-packages.c,v 1.7 2007/08/01 23:58:15 taca Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -42,7 +42,7 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#ifdef HAVE_INTTYPES_H
+#ifdef HAVE_STDINT_H
 #include <stdint.h>
 #endif
 #if defined(HAVE_ERR_H) || !defined(PKGSRC)
