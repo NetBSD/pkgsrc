@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2007/01/11 11:25:57 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2007/08/01 16:33:39 joerg Exp $
 
 DISTNAME=	fontconfig-2.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -67,6 +67,13 @@ MAKE_DIRS+=	${VARBASE}/cache
 LIBS+=		${BUILDLINK_LDADD.iconv}
 
 TEST_TARGET=	check
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+.endif
+
+pre-configure:
+	echo '#define FC_ARCHITECTURE "@host_cpu@"' > ${WRKSRC}/fc-arch/fcarch.h.in
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
