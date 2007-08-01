@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.27 2007/07/14 05:51:11 obache Exp $
+# $NetBSD: fetch.mk,v 1.28 2007/08/01 15:24:51 jlam Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -293,6 +293,8 @@ do-fetch-file: .USE
 .if defined(NO_SRC_ON_FTP)
 mirror-distfiles:
 	@${DO_NADA}
+.elif defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
+mirror-distfiles: emul-fetch
 .else
 mirror-distfiles: fetch
 .endif
