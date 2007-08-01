@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.23 2007/07/29 05:19:44 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.24 2007/08/01 15:17:56 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -61,6 +61,7 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANINSTALL?=	maninstall catinstall
 
+_OPSYS_EMULDIR.darwin=		/emul/darwin
 _OPSYS_EMULDIR.freebsd=		/emul/freebsd
 _OPSYS_EMULDIR.hpux=		/emul/hpux
 _OPSYS_EMULDIR.irix=		/emul/irix
