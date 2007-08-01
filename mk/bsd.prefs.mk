@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.258 2007/07/30 14:10:36 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.259 2007/08/01 12:21:56 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -250,6 +250,9 @@ MAKE_ENV+=		USETOOLS=no
 .if ${OPSYS} == "Darwin"
 OBJECT_FMT?=		Mach-O
 .endif
+
+# Provide PKGPATH early on so that mk.conf can use it.
+PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 
 # Load the settings from MAKECONF, which is /etc/mk.conf by default.
 .include <bsd.own.mk>
@@ -518,7 +521,6 @@ USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
 
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
 
-PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 .if !defined(_PKGSRCDIR)
 _PKGSRCDIR!=		cd ${_PKGSRC_TOPDIR} && ${PWD_CMD}
 MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
