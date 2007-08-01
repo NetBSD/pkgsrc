@@ -1,0 +1,3 @@
+#if !defined(@select@) && defined(__hpux)
+@include <sys/time.h>
+#endif

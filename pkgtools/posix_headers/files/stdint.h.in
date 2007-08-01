@@ -1,0 +1,8 @@
+#ifndef @have_stdint@
+#ifdef @have_inttypes@
+@include <inttypes.h>
+#endif
+@ifndef UINT_FAST32_MAX
+@define UINT_FAST32_MAX 0xffffffffU
+@endif
+#endif
