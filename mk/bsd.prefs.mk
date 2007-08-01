@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.259 2007/08/01 12:21:56 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.260 2007/08/01 16:14:17 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -88,7 +88,8 @@ GNU_ARCH.m68000?=	m68010
 GNU_ARCH.mips?=		mipsel
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
-MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
+NATIVE_MACHINE_GNU_ARCH?=	${GNU_ARCH.${NATIVE_MACHINE_ARCH}:U${NATIVE_MACHINE_ARCH}}
+MACHINE_GNU_ARCH?=		${GNU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
 
 .if ${OPSYS} == "NetBSD"
 LOWER_OPSYS?=		netbsd
@@ -232,11 +233,17 @@ OS_VERSION:=		${OS_VERSION}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
 
-LOWER_VENDOR?=		# empty ("arch--opsys")
-LOWER_ARCH?=		${MACHINE_GNU_ARCH}
+LOWER_VENDOR?=			# empty ("arch--opsys")
+LOWER_ARCH?=			${MACHINE_GNU_ARCH}
+# Expand now as MACHINE_ARCH can be overriden in mk.conf and
+# LOWER_ARCH is typically derived from it.
+NATIVE_LOWER_ARCH:=		${LOWER_ARCH}
+NATIVE_MACHINE_ARCH:=		${MACHINE_ARCH}
 
-MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+NATIVE_MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${NATIVE_MACHINE_ARCH}
+MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
+NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+MACHINE_GNU_PLATFORM?=		${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 
 # Needed to prevent an "install:" target from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
