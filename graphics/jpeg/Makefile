@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/06/05 22:07:25 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2007/08/01 11:47:15 obache Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -31,7 +31,7 @@ post-extract:
 	${CP} ${FILESDIR}/jpegexiforient.c ${WRKSRC}
 
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/exifautotran ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${FILESDIR}/exifautotran ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jpeg
 	${INSTALL_DATA} ${WRKSRC}/*.doc ${DESTDIR}${PREFIX}/share/doc/jpeg
 	${INSTALL_DATA} ${WRKSRC}/jpegint.h ${DESTDIR}${PREFIX}/include
