@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2007/08/01 20:51:45 joerg Exp $
+
+--- alloc.h.orig	2007-08-01 20:33:48.000000000 +0000
++++ alloc.h
+@@ -44,19 +44,7 @@
+ # include <calc/have_memmv.h>
+ #endif
+ 
+-#ifdef HAVE_MALLOC_H
+-# include <malloc.h>
+-#else
+-#if defined(FORCE_STDC) || (defined(__STDC__) && __STDC__ != 0) || defined(__cplusplus)
+-   extern void *malloc();
+-   extern void *realloc();
+-   extern void free();
+-# else
+-   extern char *malloc();
+-   extern char *realloc();
+-   extern void free();
+-# endif
+-#endif
++#include <stdlib.h>
+ 
+ #ifdef HAVE_STRING_H
+ # include <string.h>
