@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.1 2007/07/29 05:19:42 jlam Exp $
+# $NetBSD: emulator-vars.mk,v 1.2 2007/08/01 15:20:10 jlam Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATORMS is defined
 # and non-empty.
@@ -66,15 +66,11 @@
 # _EMUL_MACHINE_PLATFORM
 #	An "opsys-arch" pair that describes the "native" platform.
 #
-# _EMUL_OPSYSES
-#	A list of supported binary emulations.
-#
 # _EMUL_PREFER.*
 #	A table that maps ${_EMUL_MACHINE_PLATFORM} to a list of
 #	platforms to try to emulate on the native platform, excluding
 #	itself.
 #
-_EMUL_OPSYSES+=		bsdi
 _EMUL_OPSYS.HPUX=	hpux
 _EMUL_OPSYS.IRIX=	irix
 _EMUL_OPSYS.OSF1=	osf1
@@ -90,16 +86,6 @@ _EMUL_OPSYS=		${LOWER_OPSYS}
 .endif
 
 _EMUL_MACHINE_PLATFORM=	${_EMUL_OPSYS}-${MACHINE_ARCH}
-
-_EMUL_OPSYSES+=		darwin
-_EMUL_OPSYSES+=		freebsd
-_EMUL_OPSYSES+=		hpux
-_EMUL_OPSYSES+=		irix
-_EMUL_OPSYSES+=		linux
-_EMUL_OPSYSES+=		netbsd
-_EMUL_OPSYSES+=		osf1
-_EMUL_OPSYSES+=		sunos
-_EMUL_OPSYSES+=		solaris
 
 _EMUL_PREFER.netbsd-alpha=	osf1-alpha linux-alpha
 _EMUL_PREFER.netbsd-arm=	linux-arm
