@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1665 2007/08/01 01:42:39 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1666 2007/08/01 10:57:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp24 to 2.3.19 [adam 2007-07-31]
 	Updated lang/php5 to 5.2.3nb3 [taca 2007-08-01]
 	Updated www/php4 to 4.4.7nb1 [taca 2007-08-01]
+	Updated mail/dovecot to 1.0.3 [ghen 2007-08-01]
