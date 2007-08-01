@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.2 2007/07/27 14:20:20 tnn Exp $
+# $NetBSD: inplace.mk,v 1.3 2007/08/01 18:16:38 joerg Exp $
 #
 # This Makefile fragment builds a working copy of libnbcompat inside
 # ${WRKDIR} and adds the appropriate paths to CPPFLAGS and LDFLAGS.
@@ -17,6 +17,11 @@ libnbcompat-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
 
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+NBCOMPAT_CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
+.endif
+NBCOMPAT_CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+
 pre-configure: libnbcompat-build
 libnbcompat-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
@@ -24,4 +29,5 @@ libnbcompat-build:
 		AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}"		\
 		CPPFLAGS="${CPPFLAGS:M*}"				\
 		${CONFIGURE_ENV:NLIBS=*} ${CONFIG_SHELL}		\
-		${CONFIGURE_SCRIPT} && ${MAKE_PROGRAM}
+		${CONFIGURE_SCRIPT} ${NBCOMPAT_CONFIGURE_ARGS} &&	\
+		${MAKE_PROGRAM}
