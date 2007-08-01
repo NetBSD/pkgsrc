@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/03 13:35:49 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/01 16:52:48 joerg Exp $
 #
 
 DISTNAME=		libXt-1.0.5
@@ -25,6 +25,10 @@ PKGCONFIG_OVERRIDE+=	xt.pc.in
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
 .endif
 
 .include "../../x11/libSM/buildlink3.mk"
