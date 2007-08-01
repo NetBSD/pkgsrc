@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.24 2007/07/29 17:09:52 joerg Exp $
+# $NetBSD: mkbinarykit,v 1.25 2007/08/01 14:03:49 joerg Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -62,6 +62,7 @@ date=`date +%Y%m%d`
 prefix=/usr/pkg
 sysconfdir=$prefix/etc
 pkgdbdir=/var/db/pkg
+compiler=
 mkfile=
 mk_fragment=
 ignorecasecheck=no
@@ -136,6 +137,7 @@ while [ $# -gt 0 ]; do
 	--mkconf=*)	mkfile=`echo $1 | $sedprog -e 's|--mkconf=||'` ;;
 	--mk-fragment=*)
 			mk_fragment="$1" ;;
+	--compiler=*)	compiler="$1" ;;
 	--pkgdbdir=*)	pkgdbdir=`echo $1 | $sedprog -e 's|--pkgdbdir=||'` ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
@@ -168,6 +170,9 @@ if [ "$build" != "no" ]; then
 	fi
 	if [ -n "${mk_fragment}" ]; then
 	bootstrap_flags="$bootstrap_flags ${mk_fragment}"
+	fi
+	if [ -n "${compiler}" ]; then
+	bootstrap_flags="$bootstrap_flags ${compiler}"
 	fi
 
 	if [ "$ignoreusercheck" = "yes" ]; then
