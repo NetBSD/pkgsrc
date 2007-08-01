@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/02 10:05:55 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/01 16:28:08 jlam Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 PKGREVISION=	2
@@ -13,33 +13,30 @@ DISTFILES=	org.opendarwin.Libsystem-6.6.2-4.fat.rpm \
 		org.opendarwin.XFree86-6.6.2-4.${DARWIN_ARCH}.rpm
 
 MAINTAINER=	abacau@yahoo.com.au
-HOMEPAGE=	http://www.opendarwin.org/
 COMMENT=	Darwin compatibility libraries (including X11)
 
-BUILD_DEPENDS+=	rpm2pkg>=1.3:../../pkgtools/rpm2pkg
+# The opendarwin.org domain is completely gone.  MASTER_SITES should
+# probably point to ${MASTER_SITE_LOCAL} instead.  I also think the ppc
+# XFree86 RPM is no longer available anywhere.
+#
+#HOMEPAGE=	http://www.opendarwin.org/
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386 \
+EMUL_PLATFORMS=		darwin-i386 darwin-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386		\
 			NetBSD-[2-9]*-powerpc NetBSD-[2-9]*-i386
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+DARWIN_PKG=		yes
+DARWIN_ARCH=		${MACHINE_ARCH:C/powerpc/ppc/}
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
-DARWIN_ARCH=	${MACHINE_ARCH:C/powerpc/ppc/}
-
-RPM2PKG=	rpm2pkg
-RPMARGS=	-d ${PREFIX} -f ${WRKDIR}/PLIST_RPM2PKG -p emul/darwin	\
-		-i ./Developer -i ./usr/X11R6/lib/X11/doc/html		\
-		-i ./usr/share/man -i ./usr/include -i ./usr/X11R6/man	\
-		-i ./usr/X11R6/include -i ./usr/local/include		\
-		-i ./usr/local/man					\
-		${DISTFILES:S/^/${DISTDIR}\//}
-
-EXTRACT_ONLY=	# empty
-NO_BUILD=	yes
-
-do-install:
-	${RM} -f ${WRKDIR}/PLIST_RPM2PKG
-	${RPM2PKG} ${RPMARGS}
-	${SED} -e 's|^\./||' -e 's|/\./|/|g' -e 's|//*|/|g'		\
-		${WRKDIR}/PLIST_RPM2PKG > ${PLIST_SRC}
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+RPM2PKG_STAGE=		do-install
+RPMIGNOREPATH=		./Developer ./usr/X11R6/lib/X11/doc/html	\
+			./usr/share/man ./usr/include ./usr/X11R6/man	\
+			./usr/X11R6/include ./usr/local/include		\
+			./usr/local/man
 
 .include "../../mk/bsd.pkg.mk"
