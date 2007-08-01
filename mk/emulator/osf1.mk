@@ -1,4 +1,4 @@
-# $NetBSD: osf1.mk,v 1.1 2007/07/29 05:19:43 jlam Exp $
+# $NetBSD: osf1.mk,v 1.2 2007/08/01 17:19:23 jlam Exp $
 #
 # OSF/1 (Tru64) binary emulation framework
 #
@@ -6,7 +6,7 @@
 .if !empty(OPSYS:MOSF*)
 EMUL_TYPE.osf1?=	native
 .else
-EMUL_TYPE.osf1?=	builtin
+EMUL_TYPE.osf1?=	netscape
 .endif
 EMUL_MODULES.osf1?=	# empty
 
@@ -22,6 +22,7 @@ OPSYS_EMULDIR=		${_OPSYS_EMULDIR.osf1}
 #
 _EMUL_TYPES=		builtin
 _EMUL_TYPES+=		native
+_EMUL_TYPES+=		netscape
 _EMUL_TYPE?=		${EMUL_TYPE.osf1}
 
 _EMUL_MODULES=		# empty
