@@ -1,0 +1,63 @@
+$NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
+
+--- configure.orig	2007-06-04 06:44:39.000000000 +0200
++++ configure
+@@ -924,6 +924,8 @@ XKB_FALSE
+ XKBPROTO_CFLAGS
+ XKBPROTO_LIBS
+ XKBPROTO_REQUIRES
++CROSS_COMPILING_TRUE
++CROSS_COMPILING_FALSE
+ LINT
+ LINT_FLAGS
+ LINT_TRUE
+@@ -23199,6 +23201,17 @@ fi
+ 
+ 
+ 
++if  test $cross_compiling = yes ; then
++  CROSS_COMPILING_TRUE=
++  CROSS_COMPILING_FALSE='#'
++else
++  CROSS_COMPILING_TRUE='#'
++  CROSS_COMPILING_FALSE=
++fi
++
++
++
++
+ for ac_header in stdlib.h unistd.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+@@ -24299,6 +24312,13 @@ echo "$as_me: error: conditional \"XKB\"
+ Usually this means the macro was only invoked conditionally." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++if test -z "${CROSS_COMPILING_TRUE}" && test -z "${CROSS_COMPILING_FALSE}"; then
++  { { echo "$as_me:$LINENO: error: conditional \"CROSS_COMPILING\" was never defined.
++Usually this means the macro was only invoked conditionally." >&5
++echo "$as_me: error: conditional \"CROSS_COMPILING\" was never defined.
++Usually this means the macro was only invoked conditionally." >&2;}
++   { (exit 1); exit 1; }; }
++fi
+ if test -z "${LINT_TRUE}" && test -z "${LINT_FALSE}"; then
+   { { echo "$as_me:$LINENO: error: conditional \"LINT\" was never defined.
+ Usually this means the macro was only invoked conditionally." >&5
+@@ -25112,6 +25132,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
+ XKBPROTO_CFLAGS!$XKBPROTO_CFLAGS$ac_delim
+ XKBPROTO_LIBS!$XKBPROTO_LIBS$ac_delim
+ XKBPROTO_REQUIRES!$XKBPROTO_REQUIRES$ac_delim
++CROSS_COMPILING_TRUE!$CROSS_COMPILING_TRUE$ac_delim
++CROSS_COMPILING_FALSE!$CROSS_COMPILING_FALSE$ac_delim
+ LINT!$LINT$ac_delim
+ LINT_FLAGS!$LINT_FLAGS$ac_delim
+ LINT_TRUE!$LINT_TRUE$ac_delim
+@@ -25133,7 +25155,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 77; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 79; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
