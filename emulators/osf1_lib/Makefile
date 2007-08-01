@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/07/02 10:06:43 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/08/01 17:19:22 jlam Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.digital.com/pub/DEC/Linux-Alpha-Tools/netscape/
 EXTRACT_SUFX=	.rpm
@@ -11,37 +11,24 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.support.compaq.com/alpha-tools/software/index.html
 COMMENT=	DEC/Compaq OSF-1/Tru64 compatibility package for netscape
 
-RPM2PKG=	${LOCALBASE}/sbin/rpm2pkg
-BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
-
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha
-
 RESTRICTED=		COMPAQ Licensed Software
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+EMUL_PLATFORMS=		osf1-alpha
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha
+
+OSF1_PKG=		yes
 WRKSRC=			${WRKDIR}
-EMULSUBDIR=		emul/osf1
-EMULDIR=		${PREFIX}/${EMULSUBDIR}
+BUILD_DIRS=		# empty
 
-EXTRACT_ONLY=	# empty
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+RPM2PKG_STAGE=		do-install
+RPMIGNOREPATH=		usr/bin usr/lib
 
-RPMARGS=	-i usr/lib -i usr/bin ${DISTDIR}/${DISTFILES}
-
-CHECK_SHLIBS_SUPPORTED=	no
-
-.include "../../mk/x11.buildlink3.mk"
-
-do-install:
-	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
-	${INSTALL_DATA_DIR} ${EMULDIR}
-	${RPM2PKG} -d ${PREFIX} -p ${EMULSUBDIR} ${RPMARGS}
-	${TOUCH} ${EMULDIR}/etc/hosts
-	cd ${EMULDIR} && ${MKDIR} usr/lib/X11
-	cd ${EMULDIR}/usr/lib/X11 && ${LN} -fs ${X11BASE}/lib/X11/locale .
-
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
