@@ -1,0 +1,5 @@
+#if !defined(@strtoll@) || defined(__hpux)
+@include <inttypes.h>
+@define strtoll __strtoll
+@define strtoull __strtoull
+#endif
