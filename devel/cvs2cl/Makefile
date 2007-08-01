@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/17 20:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/01 20:54:16 joerg Exp $
 #
 
 DISTNAME=	cvs2cl-2.59
@@ -13,6 +13,8 @@ COMMENT=	CVS-log-message-to-ChangeLog conversion script
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 USE_TOOLS+=	perl
+
+CHECK_INTERPRETER_SKIP=	share/cvs/contrib
 
 INSTALLATION_DIRS=	bin
 
