@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/03/04 21:30:50 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2007/08/01 19:50:29 joerg Exp $
 #
 
 DISTNAME=	XML-Node-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5xno
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://belmont-shores.ics.uci.edu/pub/ \
@@ -16,6 +16,8 @@ COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 DEPENDS+=	p5-XML-Parser-2.*:../../textproc/p5-XML-Parser
 
 PERL5_PACKLIST=		auto/XML/Node/.packlist
+
+REPLACE_PERL=	parse-orders.pl parse-foo.pl parse-testsuite.pl
 
 post-install:
 	${INSTALL_DATA} \
