@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2007/08/01 21:53:16 joerg Exp $
+
+--- jam.h.orig	2007-08-01 21:32:10.000000000 +0000
++++ jam.h
+@@ -379,19 +379,7 @@
+ # include <memory.h>
+ # endif
+ 
+-# ifndef OS_ULTRIX
+ # include <stdlib.h>
+-# endif
+-
+-# if !defined(OS_BSDI) && \
+-     !defined(OS_FREEBSD) && \
+-     !defined(OS_NEXT) && \
+-     !defined(OS_MACHTEN) && \
+-     !defined(OS_MACOSX) && \
+-     !defined(OS_RHAPSODY) && \
+-     !defined(OS_MVS)
+-# include <malloc.h>
+-# endif
+ 
+ # endif 
+ 
