@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/05/27 09:49:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/01 21:07:16 joerg Exp $
 #
 
 DISTNAME=	cvs-1.11.21
@@ -13,6 +13,8 @@ COMMENT=	Concurrent Versions System
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
+
+CHECK_INTERPRETER_SKIP=	share/cvs/contrib
 
 .include "options.mk"
 
