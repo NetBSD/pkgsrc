@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2006/07/19 19:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/08/02 15:03:10 taca Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
 PKGNAME=		chasen-base-${CHASEN_VERSION}
-PKGREVISION=		2
 CATEGORIES=		japanese textproc
-MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/chasen/
-
-PATCHFILES=		chasen-2.3.3.20030821.patch \
-			chasen-2.3.3.20030822.patch
-PATCH_SITES=		${MASTER_SITES}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=chasen-legacy/26168/}
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://chasen.aist-nara.ac.jp/
+HOMEPAGE=		http://chasen-legacy.sourceforge.jp/
 COMMENT=		ChaSen, Japanese Morphological Analysis System
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-OWN_DIRS=		${CHASEN_DICDIR}
+OWN_DIRS=		${PREFIX}/${CHASEN_DICDIR}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../textproc/chasen/Makefile.common"
 .include "../../converters/libiconv/buildlink3.mk"
