@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2007/07/28 12:25:15 gdt Exp $
+# $NetBSD: Makefile,v 1.125 2007/08/02 11:42:57 gdt Exp $
 #
 
 COMMENT=	Communication programs
@@ -77,6 +77,7 @@ SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-POE-Component-IRC
 SUBDIR+=	p5-POE-Filter-IRCD
 SUBDIR+=	pidgin
+SUBDIR+=	pidgin-otr
 SUBDIR+=	pircbot
 SUBDIR+=	psi
 SUBDIR+=	quirc
