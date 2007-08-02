@@ -1,11 +1,15 @@
-# $NetBSD: Makefile.common,v 1.6 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2007/08/02 15:03:09 taca Exp $
 #
 
-CHASEN_VERSION=		2.3.3
+CHASEN_VERSION=		2.4.1
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	chasen
-CHASEN_DICDIR?=		${PREFIX}/share/chasen/dic
+CHASEN_DIR?=		share/chasen
+CHASEN_DICDIR?=		${CHASEN_DIR}/dic
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-			--with-dicdir=${CHASEN_DICDIR:Q}
+			--with-dicdir=${PREFIX}/${CHASEN_DICDIR:Q}
+
+PLIST_SUBST+=		CHASEN_DIR=${CHASEN_DIR:Q} \
+			CHASEN_DICDIR=${CHASEN_DICDIR:Q}
