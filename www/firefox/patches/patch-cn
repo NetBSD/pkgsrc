@@ -1,6 +1,6 @@
-$NetBSD: patch-cn,v 1.4 2007/05/31 07:25:09 ghen Exp $
+$NetBSD: patch-cn,v 1.4.2.1 2007/08/02 22:42:52 salo Exp $
 
---- extensions/transformiix/source/xpath/XFormsFunctionCall.cpp.orig	2007-04-27 03:08:49.000000000 +0200
+--- extensions/transformiix/source/xpath/XFormsFunctionCall.cpp.orig	2007-06-24 02:00:32.000000000 +0200
 +++ extensions/transformiix/source/xpath/XFormsFunctionCall.cpp
 @@ -104,7 +104,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
          res = (res/i);
@@ -26,7 +26,7 @@ $NetBSD: patch-cn,v 1.4 2007/05/31 07:25:09 ghen Exp $
        PRInt32 index = 0;
 -      double res = Double::NaN;
 +      double res = Double::NaN();
-       rv = xformsService->GetRepeatIndexById(mResolverNode, indexId, &index);
+       rv = xformsService->GetRepeatIndexById(mNode, indexId, &index);
        NS_ENSURE_SUCCESS(rv, rv);
  
 @@ -344,7 +344,7 @@ XFormsFunctionCall::evaluate(txIEvalCont
