@@ -1,6 +1,16 @@
--$NetBSD: patch-ae,v 1.6 2006/12/23 20:53:42 jdc Exp $
---- libavcodec/Makefile.orig	2004-06-18 14:11:15.000000000 +0100
-+++ libavcodec/Makefile	2006-12-18 16:06:24.000000000 +0000
+-$NetBSD: patch-ae,v 1.7 2007/08/02 21:48:34 dbj Exp $
+
+--- libavcodec/Makefile.orig	2004-06-18 06:11:15.000000000 -0700
++++ libavcodec/Makefile	2007-08-02 10:50:10.000000000 -0700
+@@ -7,7 +7,7 @@ include ../config.mak
+ VPATH=$(SRC_PATH)/libavcodec
+ 
+ # NOTE: -I.. is needed to include config.h
+-CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
++CFLAGS=$(SHCFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
+ 
+ OBJS= common.o utils.o mem.o allcodecs.o \
+       mpegvideo.o jrevdct.o jfdctfst.o jfdctint.o\
 @@ -165,7 +165,7 @@ endif
  ifeq ($(TARGET_ARCH_SPARC),yes)
  OBJS+=sparc/dsputil_vis.o
