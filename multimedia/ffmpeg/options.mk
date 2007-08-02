@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/08/02 21:51:52 dbj Exp $
+# $NetBSD: options.mk,v 1.6 2007/08/02 21:53:05 dbj Exp $
 
 # Global and legacy options
 
@@ -90,7 +90,8 @@ CONFIGURE_ARGS+=  --disable-faac
 
 .if !empty(PKG_OPTIONS:Ma52)
 CONFIGURE_ARGS+=  --enable-a52
-.include "../../audio/liba52/buildlink3.mk"
+# XXX this pkg currently compiles its own liba52 into libavcodec
+#.include "../../audio/liba52/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=  --disable-a52
 .endif
