@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.27 2007/07/26 12:29:34 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.28 2007/08/02 08:48:29 ghen Exp $
 
 MOZILLA_BIN=		thunderbird-bin
-MOZ_VER=		2.0.0.5
+MOZ_VER=		2.0.0.6
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		thunderbird-${MOZ_VER}-source
 CATEGORIES=		mail
