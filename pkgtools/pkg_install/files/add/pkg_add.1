@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.22 2007/07/30 08:09:15 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.23 2007/08/02 23:30:20 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -247,7 +247,7 @@ URL pointing at a file available on an ftp or web site.
 Thus you may extract files directly from their anonymous ftp or WWW
 locations (e.g.,
 .Nm
-ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/shells/bash-3.0nb1.tgz
+ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/shells/bash-3.2.9.tgz
 or
 .Nm
 http://www.example.org/packages/screen-4.0.tbz).
@@ -506,9 +506,9 @@ a URL.
 The URL can be put into an environment variable,
 .Ev PKG_PATH .
 .Bd -literal
-# pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/firefox-1.0.3.tgz
+# pkg_add -v ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/firefox-2.0.0.4.tgz
 
-# export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All
+# export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/
 # pkg_add -v firefox
 .Ed
 .Pp
@@ -526,7 +526,7 @@ directory to your
 .Ev PKG_PATH
 like this:
 .Bd -literal
-# export PKG_PATH="ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/vulnerable"
+# export PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/;ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/vulnerable/"
 .Ed
 .Pp
 (The quotes are needed because semicolon
