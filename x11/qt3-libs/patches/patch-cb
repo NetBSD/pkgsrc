@@ -1,0 +1,49 @@
+$NetBSD: patch-cb,v 1.1.2.2 2007/08/02 07:29:27 ghen Exp $
+
+--- src/sql/qdatatable.cpp	Mon Jul 16 10:45:03 CEST 2007
++++ src/sql/qdatatable.cpp	Mon Jul 16 10:45:03 CEST 2007
+
+@@ -1043,8 +1043,8 @@
+ 	return FALSE;
+     if ( !sqlCursor()->canInsert() ) {
+ #ifdef QT_CHECK_RANGE
+-	qWarning("QDataTable::insertCurrent: insert not allowed for " +
+-		 sqlCursor()->name() );
++	qWarning("QDataTable::insertCurrent: insert not allowed for %s",
++		 sqlCursor()->name().latin1() );
+ #endif
+ 	endInsert();
+ 	return FALSE;
+@@ -1117,16 +1117,16 @@
+ 	return FALSE;
+     if ( sqlCursor()->primaryIndex().count() == 0 ) {
+ #ifdef QT_CHECK_RANGE
+-	qWarning("QDataTable::updateCurrent: no primary index for " +
+-		 sqlCursor()->name() );
++	qWarning("QDataTable::updateCurrent: no primary index for %s",
++		 sqlCursor()->name().latin1() );
+ #endif
+ 	endUpdate();
+ 	return FALSE;
+     }
+     if ( !sqlCursor()->canUpdate() ) {
+ #ifdef QT_CHECK_RANGE
+-	qWarning("QDataTable::updateCurrent: updates not allowed for " +
+-		 sqlCursor()->name() );
++	qWarning("QDataTable::updateCurrent: updates not allowed for %s",
++		 sqlCursor()->name().latin1() );
+ #endif
+ 	endUpdate();
+ 	return FALSE;
+@@ -1191,8 +1191,8 @@
+ 	return FALSE;
+     if ( sqlCursor()->primaryIndex().count() == 0 ) {
+ #ifdef QT_CHECK_RANGE
+-	qWarning("QDataTable::deleteCurrent: no primary index " +
+-		 sqlCursor()->name() );
++	qWarning("QDataTable::deleteCurrent: no primary index %s",
++		 sqlCursor()->name().latin1() );
+ #endif
+ 	return FALSE;
+     }
+
