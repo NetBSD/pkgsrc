@@ -1,4 +1,4 @@
-/*	$NetBSD: md5.h,v 1.4 2007/07/08 05:09:09 minskim Exp $	*/
+/*	$NetBSD: md5.h,v 1.5 2007/08/02 13:54:34 joerg Exp $	*/
 
 /*
  * This file is derived from the RSA Data Security, Inc. MD5 Message-Digest
@@ -31,6 +31,10 @@
 
 #ifndef _SYS_MD5_H_
 #define _SYS_MD5_H_
+
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>

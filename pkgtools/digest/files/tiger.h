@@ -1,4 +1,4 @@
-/* $NetBSD: tiger.h,v 1.2 2007/07/08 05:09:10 minskim Exp $ */
+/* $NetBSD: tiger.h,v 1.3 2007/08/02 13:54:34 joerg Exp $ */
 
 /*
  * Copyright © 2005 Alistair Crooks.  All rights reserved.
@@ -33,6 +33,10 @@
  */
 #ifndef TIGER_H_
 #define TIGER_H_
+
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>

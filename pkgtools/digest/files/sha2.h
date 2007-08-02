@@ -36,6 +36,10 @@
 #ifndef __SHA2_H__
 #define __SHA2_H__
 
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
+
 #ifdef HAVE_STDINT_H
 #include <stdint.h>
 #endif
