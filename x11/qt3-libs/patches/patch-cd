@@ -1,0 +1,15 @@
+$NetBSD: patch-cd,v 1.1.2.2 2007/08/02 07:29:28 ghen Exp $
+
+--- src/sql/qsqlindex.cpp	Mon Jul 16 10:45:03 CEST 2007
++++ src/sql/qsqlindex.cpp	Mon Jul 16 10:45:03 CEST 2007
+
+@@ -273,7 +273,7 @@
+ 	if ( field )
+ 	    newSort.append( *field, desc );
+ 	else
+-	    qWarning( "QSqlIndex::fromStringList: unknown field: '" + f + "'" );
++	    qWarning( "QSqlIndex::fromStringList: unknown field: '%s'", f.latin1());
+     }
+     return newSort;
+ }
+

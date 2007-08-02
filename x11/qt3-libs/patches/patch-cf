@@ -1,0 +1,15 @@
+$NetBSD: patch-cf,v 1.1.2.2 2007/08/02 07:29:29 ghen Exp $
+
+--- src/tools/qglobal.cpp	Mon Jul 16 10:45:03 CEST 2007
++++ src/tools/qglobal.cpp	Mon Jul 16 10:45:03 CEST 2007
+
+@@ -680,7 +680,7 @@
+     if ( code != -1 )
+ 	qWarning( "%s\n\tError code %d - %s", msg, code, strerror( code ) );
+     else
+-	qWarning( msg );
++	qWarning( "%s", msg );
+ #endif
+ #else
+     Q_UNUSED( msg );
+
