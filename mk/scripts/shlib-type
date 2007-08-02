@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $NetBSD: shlib-type,v 1.1 2007/07/18 18:01:03 jlam Exp $
+# $NetBSD: shlib-type,v 1.2 2007/08/02 15:46:33 jlam Exp $
 #
 # This code is derived from software contributed to The NetBSD Foundation
 # by Alistair Crooks.
@@ -11,41 +11,37 @@
 # format (either ELF or a.out).
 #
 
-: ${ECHO=echo}
-: ${FILE_CMD=file}
-: ${TEST=test}
-: ${PKG_INFO_CMD=/usr/sbin/pkg_info}
+if [ -z "${FILE_CMD}" ]; then
+	FILE_CMD=file
+fi
+if [ -z "${PKG_INFO_CMD}" ]; then
+	PKG_INFO_CMD=/usr/sbin/pkg_info
+fi
 
-self="${0##*/}"
-
-usage() {
-	${ECHO} 1>&2 "usage: $self libformat"
-}
-
-${TEST} $# -gt 0 || { usage; exit 1; }
+if [ $# -eq 0 ]; then
+	echo 1>&2 "usage: shlib-type libformat"
+	exit 1
+fi
 
 sotype=none
 case "$1" in
 ELF/a.out)
-	case "${PKG_INFO_CMD}" in
-	/*)	;;
-	*)	PKG_INFO_CMD="/usr/sbin/pkg_info"
-	esac
-	if ${TEST} -f ${PKG_INFO_CMD}; then
-		case `${FILE_CMD} ${PKG_INFO_CMD}` in
-		*ELF*dynamically*)	sotype="ELF" ;;
-		*shared*library*)	sotype="a.out" ;;
-		*dynamically*)		sotype="a.out" ;;
-		esac
+	if [ -f "${PKG_INFO_CMD}" ]; then
+		output=`${FILE_CMD} ${PKG_INFO_CMD} 2>/dev/null`
 	else
-		# "pkg_info" is missing so just guess "ELF.
-		sotype="ELF"
+		output=
 	fi
+	case "$output" in
+	*ELF*dynamically*)	sotype="ELF" ;;
+	*shared*library*)	sotype="a.out" ;;
+	*dynamically*)		sotype="a.out" ;;
+	*)			sotype="ELF" ;;		# guess "ELF"
+	esac
 	;;
 *)
 	sotype="$1"
 	;;
 esac
-${ECHO} $sotype
+echo $sotype
 
 exit 0
