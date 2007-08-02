@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2007/08/02 13:22:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/02 15:07:27 joerg Exp $
 #
-# Replacement Makefile for bzip2.
+# Replacement Makefile for zlib.
 #
 
 OBJS=	adler32.o compress.o crc32.o deflate.o gzio.o \
