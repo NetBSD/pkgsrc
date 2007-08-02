@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.196 2007/07/27 13:15:41 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.197 2007/08/02 18:19:31 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -600,7 +600,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
 	${_BLNK_FILES_CMD.${_pkg_}} |					\
 	while read file; do						\
-		src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";		\
+		src="${_CROSS_DESTDIR}${BUILDLINK_PREFIX.${_pkg_}}/$$file";		\
 		if [ ! -f "$$src" ]; then					\
 			msg="$$src: not found";				\
 		else							\
