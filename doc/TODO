@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6556 2007/08/02 15:49:23 taca Exp $
+$NetBSD: TODO,v 1.6557 2007/08/02 16:08:31 taca Exp $
 
 Suggested new packages
 ======================
@@ -1170,7 +1170,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
-	o sudo-1.6.9p2
+	o sudo-1.6.9p3
 	o sun-jdk15-5.0.12
 	o sun-jre15-5.0.12
 	o sunbird-0.5 [ghen]
