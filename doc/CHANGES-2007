@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1681 2007/08/02 17:29:50 he Exp $
+$NetBSD: CHANGES-2007,v 1.1682 2007/08/02 21:39:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3069,6 +3069,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/fontconfig to 2.4.2nb3 [joerg 2007-08-01]
 	Updated x11/xplanet to 1.2.0nb5 [tron 2007-08-01]
 	Updated x11/qt3-libs to 3.3.8nb3 [tron 2007-08-01]
+	Updated pkgtools/posix_headers to 0.5 [tnn 2007-08-01]
 	Updated graphics/ruby-RMagick to 1.15.8 [obache 2007-08-02]
 	Updated mail/thunderbird to 2.0.0.6 [ghen 2007-08-02]
 	Updated mail/thunderbird-gtk1 to 2.0.0.6 [ghen 2007-08-02]
@@ -3084,3 +3085,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tcpdump to 3.9.7 [taca 2007-08-02]
 	Updated www/squid to 2.6.14 [taca 2007-08-02]
 	Added security/py-denyhosts version 2.6 [he 2007-08-02]
+	Updated graphics/imlib2 to 1.3.0nb1 [tnn 2007-08-02]
