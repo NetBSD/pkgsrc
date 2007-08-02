@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.16 2007/05/28 11:07:00 martti Exp $
+# $NetBSD: mkreadme,v 1.17 2007/08/02 22:42:05 adrianp Exp $
 #
 # Script for README.html generation
 #
@@ -286,7 +286,8 @@ echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
     for v in CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR DISTDIR \
-	FTP_PKG_URL_HOST FTP_PKG_URL_DIR PACKAGES PKG_INFO PKG_SUFX
+	FTP_PKG_URL_HOST FTP_PKG_URL_DIR PACKAGES PKG_INFO PKG_SUFX PKG_ADMIN \
+	AUDIT_PACKAGES_FLAGS PKGVULNDIR PKGTOOLS_VERSION
     do
 	val=`${BMAKE} show-var VARNAME=${v}`
 	if [ $? != 0 ]; then
@@ -302,11 +303,18 @@ else
     exit 1
 fi
 
-# this needs to happen here as DISTDIR has not been populated until this
-# stage (see above)
-if [ "x$pv" = "xdefault" ]; then
-    PVDIR=$DISTDIR
+# this needs to happen here as the variables referenced have not been 
+# populated until this stage (see above)
+#
+if [ "$pv" = "default" ]; then
+    if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then
+        PVDIR=$PKGVULNDIR
+    else
+	PVDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+    fi
 fi
+	echo "---->  PVDIR=\"${PVDIR}\""
+
 
 ######################################################################
 #
