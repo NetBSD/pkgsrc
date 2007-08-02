@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6557 2007/08/02 16:08:31 taca Exp $
+$NetBSD: TODO,v 1.6558 2007/08/02 22:36:44 jlam Exp $
 
 Suggested new packages
 ======================
@@ -373,9 +373,10 @@ Suggested package updates
 	o cocoon-2.1.10
 	o connect-1.96
 	o cook-2.28
-	o courier-authlib-0.59
+	o courier-authlib-0.59.3
 	o courier-imap-4.1.2
-	o courier-mta-0.56
+	o courier-maildir-0.56.0
+	o courier-mta-0.56.0
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -731,6 +732,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
 	o mail-notification-4.1
+	o maildrop-2.0.4
 	o mailfront-1.10 [pkg/34765]
 	o mailscanner-4.54.6
 	o maketool-0.8.4
@@ -1162,6 +1164,7 @@ Suggested package updates
 	o squeak-3.9.8
 	o squidGuard-1.2.1
 	o squirrelmail-decode-1.2
+	o sqwebmail-5.1.6
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
