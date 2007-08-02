@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2007/03/14 16:10:43 yyamano Exp $
+$NetBSD: patch-af,v 1.2 2007/08/02 21:35:14 tnn Exp $
 
 --- configure.orig	2006-09-29 03:02:33.000000000 +0900
 +++ configure
@@ -10,12 +10,3 @@ $NetBSD: patch-af,v 1.1 2007/03/14 16:10:43 yyamano Exp $
  esac
  
  # Check whether --enable-mmx was given.
-@@ -25410,6 +25411,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
