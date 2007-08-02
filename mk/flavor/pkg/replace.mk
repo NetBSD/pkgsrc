@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.8 2007/03/17 17:17:33 rillig Exp $
+# $NetBSD: replace.mk,v 1.9 2007/08/02 23:00:18 jlam Exp $
 #
 
 # _flavor-replace:
@@ -15,6 +15,7 @@
 _flavor-replace: \
 	replace-tarup \
 	replace-names \
+	replace-preserve-installed-info \
 	replace-preserve-required-by \
 	deinstall \
 	install-clean \
@@ -30,6 +31,7 @@ _flavor-replace: \
 #
 _flavor-undo-replace: \
 	undo-replace-check \
+	replace-preserve-installed-info \
 	replace-preserve-required-by \
 	deinstall \
 	undo-replace-install \
@@ -37,6 +39,7 @@ _flavor-undo-replace: \
 	replace-clean \
 	.PHONY
 
+_INSTALLED_INFO_FILE=	${PKG_DB_TMPDIR}/+INSTALLED_INFO
 _REQUIRED_BY_FILE=	${PKG_DB_TMPDIR}/+REQUIRED_BY
 
 _COOKIE.replace=	${WRKDIR}/.replace_done
@@ -99,6 +102,21 @@ replace-names: .PHONY
 	${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
+
+######################################################################
+### replace-preserve-installed-info (PRIVATE)
+######################################################################
+### replace-preserve-installed-info saves and removes the +INSTALLED_INFO
+### file from the installed package.
+###
+replace-preserve-installed-info: .PHONY
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
+	${STEP_MSG} "Preserving existing +INSTALLED_INFO file.";	\
+	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
+	installed_info="${_PKG_DBDIR}/$$oldname/+INSTALLED_INFO";	\
+	${TEST} ! -f "$$installed_info" ||				\
+	${MV} $$installed_info ${_INSTALLED_INFO_FILE}
 
 ######################################################################
 ### replace-preserve-required-by (PRIVATE)
