@@ -1,23 +1,35 @@
-# $NetBSD: Makefile,v 1.37 2007/06/08 18:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/08/02 13:22:20 joerg Exp $
 
 DISTNAME=	zlib-1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.gzip.org/zlib/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.zlib.net/
 COMMENT=	General purpose data compression library
+
+DISTFILES=	# empty
+EXTRACT_ONLY=	# empty
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
-HAS_CONFIGURE=		yes
+
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
 
-MAKE_ENV+=	PKGSRC_LDFLAGS=${LDFLAGS:Q}
+.include "../../mk/bsd.prefs.mk"
 
-TEST_TARGET=	check
+CFLAGS+=		${CPPFLAGS}
+
+do-extract:
+	${CP} -r ${FILESDIR} ${WRKSRC}
+
+do-install:
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libz.la ${DESTDIR}${PREFIX}/lib
+	${INSTALL_MAN} ${WRKSRC}/zlib.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKSRC}/zconf.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/zlib.h ${DESTDIR}${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
