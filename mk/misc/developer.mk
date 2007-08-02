@@ -1,9 +1,12 @@
-# $NetBSD: developer.mk,v 1.8 2007/07/28 12:23:17 gdt Exp $
+# $NetBSD: developer.mk,v 1.9 2007/08/02 11:52:14 gdt Exp $
 #
 # Public targets for developers:
 #
-# changes-entry:
+# changes-entry-noupdate:
 #	Appends a correctly-formatted entry to the pkgsrc CHANGES file.
+#	The CHANGES file is presumed to be up to date and writable.
+#	Note that the first assumption is often wrong and that the
+#	second is wrong for those that set CVSREAD.
 #
 #	Command-line variables:
 #
@@ -29,10 +32,12 @@
 #		% cd /usr/pkgsrc/category/package
 #		% make changes-entry CTYPE=Added
 #
-# commit-changes-entry:
-# cce:
-#	Like the above, plus the CHANGES file is committed.
+# changes-entry:
+#	Like changes-entry-noupdate, plus the CHANGES file is updated,
+#	and if not writable, "cvs edit" is done.
 #
+# commit-changes-entry cce:
+#	Like changes-entry, plus the CHANGES file is committed.
 
 CTYPE?=			Updated
 NETBSD_LOGIN_NAME?=	${_NETBSD_LOGIN_NAME_cmd:sh}
@@ -67,21 +72,33 @@ _CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
 _CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:sh}]
 _CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
 
-.PHONY: changes-entry
-changes-entry: ce-error-check
+# Targets for the update, add, commit elementary operations.
+changes-entry-update: .PHONY ce-error-check
 	@${STEP_MSG} "Updating ${PKGSRC_CHANGES:T}"
 	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs update ${PKGSRC_CHANGES:T}
 	${RUN} cd ${PKGSRC_CHANGES_DIR} && test -w ${PKGSRC_CHANGES:T} || cvs edit ${PKGSRC_CHANGES:T}
+
+changes-entry-add: .PHONY ce-error-check
 	@${STEP_MSG} "Adding the change"
 	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${PKGSRC_CHANGES}
 
-commit-changes-entry cce: .PHONY ce-error-check changes-entry
+changes-entry-commit: .PHONY ce-error-check
 	@${STEP_MSG} "Committing the change"
 	${RUN} cd ${PKGSRC_CHANGES_DIR} && cvs commit -m ${_CE_MSG1:Q} ${PKGSRC_CHANGES:T}
 
-ce-error-check:
+ce-error-check: .PHONY
 .if defined(_CE_ERRORS) && !empty(_CE_ERRORS:M*)
 	${RUN} for msg in ${_CE_ERRORS}; do ${ERROR_MSG} "$$msg"; done; exit 1
 .else
 	@${DO_NADA}
 .endif
+
+# Public targets
+changes-entry-noupdate: .PHONY ce-error-check changes-entry-add
+	@${DO_NADA}
+
+changes-entry: .PHONY ce-error-check changes-entry-update changes-entry-add
+	@${DO_NADA}
+
+commit-changes-entry cce: .PHONY ce-error-check changes-entry-update changes-entry-add changes-entry-commit
+	@${DO_NADA}
