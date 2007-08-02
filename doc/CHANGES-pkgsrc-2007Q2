@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.7 2007/07/28 22:39:23 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.8 2007/08/02 07:29:59 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -35,3 +35,5 @@ Pullup ticket 2146 - requested by tron
 security update for mysql5
 Pullup ticket 2136 - requested by lkundrak
 security fix for gimp
+Pullup ticket 2155 - requested by tron
+security fix for qt3-libs
