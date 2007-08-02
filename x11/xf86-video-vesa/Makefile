@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/03/20 15:04:29 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/02 14:15:18 sborrill Exp $
 #
 
 DISTNAME=	xf86-video-vesa-1.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
