@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2007/02/25 07:34:45 taca Exp $
+# $NetBSD: options.mk,v 1.13 2007/08/02 15:45:10 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
-PKG_SUPPORTED_OPTIONS=	aufs carp icmp pam-helper snmp ssl unlinkd
+PKG_SUPPORTED_OPTIONS=	aufs carp coss icmp pam-helper snmp ssl unlinkd
 #
 # most of options are enabled by default except aufs.  aufs backend isn't
 # tested well.
@@ -93,6 +93,13 @@ CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
 SQUID_BACKENDS+=	aufs
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mcoss)
+SQUID_BACKENDS+=	coss
+.if empty(PKG_OPTIONS:Maufs)
+PKG_FAIL_REASON+=	"The option needs aufs option, too."
+.endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdiskd)

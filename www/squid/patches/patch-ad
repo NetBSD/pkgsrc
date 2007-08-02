@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.10 2007/05/13 16:45:44 taca Exp $
+$NetBSD: patch-ad,v 1.11 2007/08/02 15:45:10 taca Exp $
 
---- errors/Makefile.in.orig	2006-11-05 08:19:47.000000000 +0900
+--- errors/Makefile.in.orig	2007-06-23 09:14:40.000000000 +0900
 +++ errors/Makefile.in
-@@ -229,7 +229,7 @@ sbindir = @sbindir@
+@@ -231,7 +231,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
