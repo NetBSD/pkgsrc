@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.260 2007/08/01 16:14:17 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.261 2007/08/02 18:19:31 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -398,6 +398,28 @@ _MAKE_INSTALL_AS_ROOT?=	yes
 # Whether to run the install target as root.
 _MAKE_PACKAGE_AS_ROOT?=	yes
 # Whether to run the package target as root.
+
+# When cross-compilation support is requested, the following options
+# must be specified as well or guessable:
+# - MACHINE_ARCH is set to TARGET_ARCH if set.
+# - CROSS_DESTDIR is guessed from MAKEOBJDIR and MACHINE_ARCH.
+# - PKG_DBDIR is expanded and prefixed with CROSS_DESTDIR
+# - DESTDIR support is required
+#
+# _CROSS_DESTDIR is set for internal use to avoid conditionalising
+# the use.
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if defined(TARGET_ARCH)
+MACHINE_ARCH=	${TARGET_ARCH}
+.  endif
+CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
+.  if !exists(${CROSS_DESTDIR}/usr/include/stddef.h)
+PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
+.  else
+_CROSS_DESTDIR=	${CROSS_DESTDIR}
+.  endif
+.endif
 
 PKG_INSTALLATION_TYPES?= overwrite
 # This is a whitespace-separated list of installation types supported

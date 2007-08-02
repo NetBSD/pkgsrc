@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.9 2007/03/09 03:28:58 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.10 2007/08/02 18:19:32 joerg Exp $
 #
 
 # This file provides the following targets:
@@ -36,7 +36,11 @@ bin-install: \
 	do-bin-install \
 	do-bin-install-from-source
 
+.  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+do-bin-install: su-do-bin-install
+.  else
 do-bin-install: su-target
+.  endif
 	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
 
 su-do-bin-install: \
