@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/07/28 01:37:23 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/02 22:07:32 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGREVISION=	4
@@ -19,8 +19,6 @@ DEPENDS+=	maildrop>=2.0.2:../../mail/maildrop
 USE_TOOLS+=		gmake openssl:run perl:run
 USE_LANGUAGES=		c c++
 
-PKGNAME=		${DISTNAME:S/-/-mta-/}
-# PKGNAME is a parameter to the following file.
 .include "Makefile.common"
 
 PLIST_SRC+=		${PKGDIR}/PLIST

@@ -1,13 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2007/07/04 20:54:41 jlam Exp $
-#
-# Package Makefiles should include this file after setting PKGNAME and
-# PKG_SUPPORTED_OPTIONS.
+# $NetBSD: Makefile.common,v 1.5 2007/08/02 22:07:32 jlam Exp $
 
 COURIER_VERSION=	0.53.2
-
-.if !defined(PKGNAME)
-PKG_FAIL_REASON+=	"[courier/Makefile.common] PKGNAME must be set."
-.endif
 
 .include "../../mk/bsd.prefs.mk"
 

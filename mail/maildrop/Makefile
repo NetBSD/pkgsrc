@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/06/15 18:20:06 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2007/08/02 22:07:32 jlam Exp $
 
 DISTNAME=	maildrop-2.0.2
 CATEGORIES=	security
@@ -16,11 +16,10 @@ DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.maildrop
 PKG_SUPPORTED_OPTIONS=	authlib
 PKG_SUGGESTED_OPTIONS=	authlib
 
-# PKGNAME is a parameter to the following file.
-PKGNAME=	${DISTNAME}
 .include "../../mail/courier-mta/Makefile.common"
 
 # These are the users that may invoke maildrop with the "-d user"
