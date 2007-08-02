@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1677 2007/08/02 15:06:08 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1678 2007/08/02 15:11:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3079,3 +3079,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/darts to 0.31 [taca 2007-08-02]
 	Updated textproc/chasen-base to 2.4.1 [taca 2007-08-02]
 	Updated textproc/chasen to 2.4.1 [taca 2007-08-02]
+	Updated www/ap-php to 5.2.3nb1 [taca 2007-08-02]
