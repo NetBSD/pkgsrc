@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1672 2007/08/02 08:50:19 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1673 2007/08/02 11:20:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3072,3 +3072,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.8 [obache 2007-08-02]
 	Updated mail/thunderbird to 2.0.0.6 [ghen 2007-08-02]
 	Updated mail/thunderbird-gtk1 to 2.0.0.6 [ghen 2007-08-02]
+	Updated devel/cpuflags to 1.07 [abs 2007-08-02]
