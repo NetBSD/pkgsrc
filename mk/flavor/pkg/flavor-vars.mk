@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.3 2007/01/05 17:54:02 rillig Exp $
+# $NetBSD: flavor-vars.mk,v 1.4 2007/08/02 18:19:32 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -22,9 +22,9 @@ PKG_DBDIR?=		/var/db/pkg
 # packages.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_PKG_DBDIR=		${PKG_DBDIR}
+_PKG_DBDIR=		${_CROSS_DESTDIR}${PKG_DBDIR}
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PKG_DBDIR=		${DEPOTBASE}
+_PKG_DBDIR=		${_CROSS_DESTDIR}${DEPOTBASE}
 .endif
 
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
