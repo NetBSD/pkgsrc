@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1679 2007/08/02 15:18:49 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1680 2007/08/02 15:46:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3082,3 +3082,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ap-php to 5.2.3nb1 [taca 2007-08-02]
 	Updated net/libpcap to 0.9.7 [taca 2007-08-02]
 	Updated net/tcpdump to 3.9.7 [taca 2007-08-02]
+	Updated www/squid to 2.6.14 [taca 2007-08-02]
