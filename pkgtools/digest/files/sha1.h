@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.h,v 1.4 2007/07/08 05:09:09 minskim Exp $	*/
+/*	$NetBSD: sha1.h,v 1.5 2007/08/02 13:54:34 joerg Exp $	*/
 
 /*
  * SHA-1 in C
@@ -8,6 +8,10 @@
 
 #ifndef _SYS_SHA1_H_
 #define	_SYS_SHA1_H_
+
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>
