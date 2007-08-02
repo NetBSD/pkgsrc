@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.90 2007/02/10 08:59:07 rillig Exp $
+# $NetBSD: gcc.mk,v 1.91 2007/08/02 18:19:32 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -353,33 +353,36 @@ _GCCBINDIR=	${_GCC_PREFIX}bin
 .elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _GCCBINDIR=	${_CC:H}
 .endif
-.if exists(${_GCCBINDIR}/gcc)
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+_GCC_BIN_PREFIX=	${MACHINE_GNU_PLATFORM}-
+.endif
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gcc)
 _GCC_VARS+=	CC
-_GCC_CC=	${_GCC_DIR}/bin/gcc
+_GCC_CC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gcc
 _ALIASES.CC=	cc gcc
-CCPATH=		${_GCCBINDIR}/gcc
+CCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}gcc
 PKG_CC:=	${_GCC_CC}
 .endif
-.if exists(${_GCCBINDIR}/cpp)
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}cpp)
 _GCC_VARS+=	CPP
-_GCC_CPP=	${_GCC_DIR}/bin/cpp
+_GCC_CPP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}cpp
 _ALIASES.CPP=	cpp
-CPPPATH=	${_GCCBINDIR}/cpp
+CPPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}cpp
 PKG_CPP:=	${_GCC_CPP}
 .endif
-.if exists(${_GCCBINDIR}/g++)
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}g++)
 _GCC_VARS+=	CXX
-_GCC_CXX=	${_GCC_DIR}/bin/g++
+_GCC_CXX=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}g++
 _ALIASES.CXX=	c++ g++
-CXXPATH=	${_GCCBINDIR}/g++
+CXXPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}g++
 PKG_CXX:=	${_GCC_CXX}
 .endif
-.if exists(${_GCCBINDIR}/g77)
+.if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77)
 _GCC_VARS+=	FC
-_GCC_FC=	${_GCC_DIR}/bin/g77
+_GCC_FC=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}g77
 _ALIASES.FC=	f77 g77
-FCPATH=		${_GCCBINDIR}/g77
-F77PATH=	${_GCCBINDIR}/g77
+FCPATH=		${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
+F77PATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}g77
 PKG_FC:=	${_GCC_FC}
 .endif
 _COMPILER_STRIP_VARS+=	${_GCC_VARS}
