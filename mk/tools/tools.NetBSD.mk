@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.35 2007/06/19 17:01:13 joerg Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.36 2007/08/02 18:19:32 joerg Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -45,7 +45,11 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.ident?=		/usr/bin/ident
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.install?=	/usr/bin/install
+.else
+TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
+.endif
 .if exists(/usr/bin/install-info)
 TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
 .endif
@@ -84,7 +88,12 @@ TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
+.else
+TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
+.endif
+
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
 .if exists(/bin/tar)
 TOOLS_PLATFORM.tar?=		/bin/tar
@@ -104,3 +113,15 @@ TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 .endif
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.for _t_ in ar as ld nm objdump ranlib strip
+TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
+	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
+TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
+.endfor
+
+NATIVE_CC:=	/usr/bin/cc
+CC=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-gcc
+
+.endif

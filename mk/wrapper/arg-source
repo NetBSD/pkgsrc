@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.12 2007/02/23 00:31:29 rillig Exp $
+# $NetBSD: arg-source,v 1.13 2007/08/02 18:19:32 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -158,6 +158,14 @@ while $test $# -gt 0; do
 			$debug_log $wrapperlog "    (arg-source) push: -Wl,$nextarg"
 			;;
 		esac
+		;;
+	##############################################################
+	# Remember whether running the linker is desired.
+	##############################################################
+	-c|-S|-E)
+		dont_link=yes
+		append_queue argbuf "$arg"
+		$debug_log $wrapperlog "    (arg-source) push: $arg"
 		;;
 	##############################################################
 	# For everything else, just queue it up.

@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.7 2007/07/13 14:42:53 joerg Exp $
+# $NetBSD: package.mk,v 1.8 2007/08/02 18:19:32 joerg Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -128,7 +128,11 @@ package-install: barrier
 .endif
 
 .if ${_USE_DESTDIR} != "no"
+.  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+real-package-install: su-real-package-install
+.  else
 real-package-install: su-target
+.  endif
 .else
 real-package-install:
 	@${DO_NADA}
@@ -136,4 +140,12 @@ real-package-install:
 
 su-real-package-install:
 	@${PHASE_MSG} "Install binary package of "${PKGNAME:Q}
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
+	${PKG_ADD} -f -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	@${ECHO} "Fixing recorded cwd..."
+	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
+	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
+.else
 	${PKG_ADD} ${PKGFILE}
+.endif
