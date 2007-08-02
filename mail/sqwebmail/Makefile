@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/06/15 18:30:31 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2007/08/02 22:07:32 jlam Exp $
 
 DISTNAME=	sqwebmail-5.1.2
 PKGREVISION=	1
@@ -17,7 +17,8 @@ USE_TOOLS+=		env gmake gzip:run perl:run
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-PKG_SUPPORTED_OPTIONS+=	fam
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sqwebmail
+PKG_SUPPORTED_OPTIONS=	fam
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,8 +26,6 @@ PKG_SUPPORTED_OPTIONS+=	fam
 .  include "../../mk/fam.buildlink3.mk"
 .endif
 
-# PKGNAME is a parameter to the following file.
-PKGNAME=		${DISTNAME}
 .include "../../mail/courier-mta/Makefile.common"
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
