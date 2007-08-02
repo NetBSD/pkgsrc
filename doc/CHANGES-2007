@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1670 2007/08/01 20:51:50 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1671 2007/08/02 00:46:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3069,3 +3069,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated fonts/fontconfig to 2.4.2nb3 [joerg 2007-08-01]
 	Updated x11/xplanet to 1.2.0nb5 [tron 2007-08-01]
 	Updated x11/qt3-libs to 3.3.8nb3 [tron 2007-08-01]
+	Updated graphics/ruby-RMagick to 1.15.8 [obache 2007-08-02]
