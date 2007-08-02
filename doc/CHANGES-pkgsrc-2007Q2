@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.8 2007/08/02 07:29:59 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.9 2007/08/02 22:44:16 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -37,3 +37,5 @@ Pullup ticket 2136 - requested by lkundrak
 security fix for gimp
 Pullup ticket 2155 - requested by tron
 security fix for qt3-libs
+Pullup ticket 2154 - requested by ghen
+security update for firefox
