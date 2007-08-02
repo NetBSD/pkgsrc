@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.4 2007/07/08 05:09:09 minskim Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.5 2007/08/02 13:54:34 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -23,6 +23,10 @@
 
 #ifndef _RMD160_H_
 #define _RMD160_H_
+
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#endif
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>
