@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1680 2007/08/02 15:46:35 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1681 2007/08/02 17:29:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3083,3 +3083,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libpcap to 0.9.7 [taca 2007-08-02]
 	Updated net/tcpdump to 3.9.7 [taca 2007-08-02]
 	Updated www/squid to 2.6.14 [taca 2007-08-02]
+	Added security/py-denyhosts version 2.6 [he 2007-08-02]
