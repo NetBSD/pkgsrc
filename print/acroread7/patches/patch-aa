@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/09/06 13:04:58 hira Exp $
+$NetBSD: patch-aa,v 1.5 2007/08/02 22:53:16 wiz Exp $
 
 --- INSTALL.orig	2006-05-23 10:33:34.000000000 +0900
 +++ INSTALL	2006-09-06 21:23:16.000000000 +0900
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.4 2006/09/06 13:04:58 hira Exp $
 +  NetBSD | DragonFly)
 +    MachArch=`uname -p`
 +    case "$MachArch" in
-+      i386)
++      i386|x86_64)
 +        ReadDefaultNum="$ReadIntelLinuxNum"
 +        DefaultName="Intel/Linux"
 +        ;;
