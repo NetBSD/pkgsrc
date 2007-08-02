@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/13 14:44:31 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/02 11:26:28 gdt Exp $
 bin/otr_mackey
 bin/otr_modify
 bin/otr_parse
@@ -15,6 +15,7 @@ include/libotr/privkey-t.h
 include/libotr/privkey.h
 include/libotr/proto.h
 include/libotr/serial.h
+include/libotr/sm.h
 include/libotr/tlv.h
 include/libotr/userstate.h
 include/libotr/version.h
