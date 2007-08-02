@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/29 05:19:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/02 17:55:17 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -28,7 +28,7 @@ CONF_FILES=	# empty
 CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
-CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
+CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${EMUL_ARCH}/client/classes.jsa
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre6
 PKG_SUPPORTED_OPTIONS=	sun-jre-jce
