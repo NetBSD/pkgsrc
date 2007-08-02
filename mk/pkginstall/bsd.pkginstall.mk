@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.29 2007/07/27 18:37:35 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.30 2007/08/02 16:00:33 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -700,8 +700,8 @@ ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 #
 SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
 _SHLIB_TYPE_cmd=							\
-	${SETENV} PKG_INFO_CMD=${PKG_INFO_CMD:Q}			\
-	${SH} ${.CURDIR}/../../mk/scripts/shlib-type ${_OPSYS_SHLIB_TYPE:Q}
+	sh ${.CURDIR}/../../mk/scripts/shlib-type			\
+		${_OPSYS_SHLIB_TYPE:Q} ${PKG_INFO_CMD:Q}
 
 LDCONFIG_ADD_CMD?=		${_LDCONFIG_ADD_CMD.${OPSYS}}
 LDCONFIG_REMOVE_CMD?=		${_LDCONFIG_REMOVE_CMD.${OPSYS}}
