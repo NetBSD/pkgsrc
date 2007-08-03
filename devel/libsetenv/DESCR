@@ -1,0 +1,2 @@
+libsetenv provides implementations of setenv(3) and unsetenv(3) for
+platforms that lack them.
