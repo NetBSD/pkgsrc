@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/07/30 13:58:28 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2007/08/03 21:51:03 tnn Exp $
 
 DISTNAME=	openbox-3.4.3
 PKGREVISION=	1
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE=	parser/obparser-3.0.pc.in
 PKGCONFIG_OVERRIDE+=	render/obrender-3.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+LDFLAGS+=		${BUILDLINK_LDADD.libsetenv}
 PKG_SYSCONFSUBDIR=	xdg
 OWN_DIRS=		${PKG_SYSCONFDIR}
 OWN_DIRS+=		${PKG_SYSCONFDIR}/openbox
@@ -35,6 +36,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libsetenv/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
