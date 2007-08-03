@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/07/26 20:00:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/08/03 17:03:29 obache Exp $
 bin/dmail
 bin/mailutil
 bin/mlock
@@ -50,7 +50,6 @@ share/doc/imap-uw/bugs.txt
 share/doc/imap-uw/calendar.txt
 share/doc/imap-uw/commndmt.txt
 share/doc/imap-uw/draft/README
-share/doc/imap-uw/draft/compare.txt
 share/doc/imap-uw/draft/i18n.txt
 share/doc/imap-uw/draft/sort.txt
 share/doc/imap-uw/drivers.txt
@@ -59,13 +58,13 @@ share/doc/imap-uw/imaprc.txt
 share/doc/imap-uw/internal.txt
 share/doc/imap-uw/locking.txt
 share/doc/imap-uw/md5.txt
+share/doc/imap-uw/mixfmt.txt
 share/doc/imap-uw/naming.txt
-share/doc/imap-uw/rfc/rfc1731.txt
+share/doc/imap-uw/rfc/README
 share/doc/imap-uw/rfc/rfc1732.txt
 share/doc/imap-uw/rfc/rfc1733.txt
 share/doc/imap-uw/rfc/rfc2061.txt
 share/doc/imap-uw/rfc/rfc2062.txt
-share/doc/imap-uw/rfc/rfc2086.txt
 share/doc/imap-uw/rfc/rfc2087.txt
 share/doc/imap-uw/rfc/rfc2088.txt
 share/doc/imap-uw/rfc/rfc2177.txt
@@ -74,12 +73,7 @@ share/doc/imap-uw/rfc/rfc2192.txt
 share/doc/imap-uw/rfc/rfc2193.txt
 share/doc/imap-uw/rfc/rfc2195.txt
 share/doc/imap-uw/rfc/rfc2221.txt
-share/doc/imap-uw/rfc/rfc2222.txt
-share/doc/imap-uw/rfc/rfc2234.txt
-share/doc/imap-uw/rfc/rfc2245.txt
 share/doc/imap-uw/rfc/rfc2342.txt
-share/doc/imap-uw/rfc/rfc2359.txt
-share/doc/imap-uw/rfc/rfc2595.txt
 share/doc/imap-uw/rfc/rfc2683.txt
 share/doc/imap-uw/rfc/rfc2971.txt
 share/doc/imap-uw/rfc/rfc3348.txt
@@ -89,6 +83,21 @@ share/doc/imap-uw/rfc/rfc3503.txt
 share/doc/imap-uw/rfc/rfc3516.txt
 share/doc/imap-uw/rfc/rfc3656.txt
 share/doc/imap-uw/rfc/rfc3691.txt
+share/doc/imap-uw/rfc/rfc4234.txt
+share/doc/imap-uw/rfc/rfc4314.txt
+share/doc/imap-uw/rfc/rfc4315.txt
+share/doc/imap-uw/rfc/rfc4422.txt
+share/doc/imap-uw/rfc/rfc4466.txt
+share/doc/imap-uw/rfc/rfc4467.txt
+share/doc/imap-uw/rfc/rfc4468.txt
+share/doc/imap-uw/rfc/rfc4469.txt
+share/doc/imap-uw/rfc/rfc4505.txt
+share/doc/imap-uw/rfc/rfc4549.txt
+share/doc/imap-uw/rfc/rfc4551.txt
+share/doc/imap-uw/rfc/rfc4616.txt
+share/doc/imap-uw/rfc/rfc4731.txt
+share/doc/imap-uw/rfc/rfc4752.txt
+share/doc/imap-uw/rfc/rfc4790.txt
 @dirrm share/doc/imap-uw/rfc
 @dirrm share/doc/imap-uw/draft
 @dirrm share/doc/imap-uw

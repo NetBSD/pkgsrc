@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2005/12/03 00:52:55 joerg Exp $
+$NetBSD: patch-ay,v 1.2 2007/08/03 17:03:31 obache Exp $
 
---- src/ipopd/ipop2d.c.orig	2005-12-03 00:45:23.000000000 +0000
+--- src/ipopd/ipop2d.c.orig	2007-05-21 23:24:01.000000000 +0000
 +++ src/ipopd/ipop2d.c
-@@ -24,7 +24,6 @@
+@@ -32,7 +32,6 @@
  #include <stdio.h>
  #include <ctype.h>
  #include <errno.h>
