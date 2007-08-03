@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2007/07/29 05:19:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/03 16:51:10 abs Exp $
 
-PKGNAME=		teamspeak-server-2.0.23.15
-DISTNAME=		ts2_server_rc2_20201
+ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202319/ts2_server_rc2_202319.tar.bz2
+
+PKGNAME=		teamspeak-server-2.0.23.19
+DISTNAME=		ts2_server_rc2_202319
 CATEGORIES=		net audio
-MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/
-SITES.server_linux=	ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202315/
+MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202319/
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} server_linux
-DIST_SUBDIR=		teamspeak
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+# EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://www.goteamspeak.com/
@@ -63,7 +62,7 @@ do-build:
 	      ${WRKSRC}/Manual/_TeamSpeak_RC2_Server_manual-1.png
 
 do-install:
-	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/server_linux ${LIB_DIR}/teamspeak-server
+	${INSTALL_PROGRAM} ${WRKSRC}/server_linux ${LIB_DIR}/teamspeak-server
 	${INSTALL_LIB} ${WRKSRC}/*.so* ${LIB_DIR}
 	${INSTALL_SCRIPT} -m 644 ${FILESDIR}/teamspeak.sh ${PREFIX}/share/examples/rc.d/teamspeak
 	for d in httpdocs tcpquerydocs mysql_sql sqlite_sql ; do \
@@ -72,7 +71,6 @@ do-install:
 	${FIND} ${SHARE_DIR}/$$d -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE};\
 	done
 	${INSTALL_DATA} -m 644 ${WRKSRC}/Manual/* ${DOC_DIR}/Manual
-	${INSTALL_DATA} -m 644 ${WRKSRC}/changelog.txt ${DOC_DIR}
 	${INSTALL_DATA} -m 644 ${WRKSRC}/manual.html ${DOC_DIR}
 	${INSTALL_DATA} -m 644 ${WRKSRC}/README ${DOC_DIR}
 	${INSTALL_DATA} -m 644 ${WRKSRC}/INSTALL ${DOC_DIR}
