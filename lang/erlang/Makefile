@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/07/30 07:15:36 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/08/03 11:01:37 obache Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION}
 PKGNAME=		erlang-${ERLANG_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -36,6 +37,12 @@ CONFIGURE_ARGS+=	--disable-sctp
 PLIST_SRC+=		PLIST.common_end
 
 .include "Makefile.versions"
+
+post-install:
+	chmod -R go-w ${PREFIX}/lib/erlang/lib/kernel-${VERSION.kernel}/examples
+	chmod -R go-w ${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
+	rm ${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
+	rm ${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

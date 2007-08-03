@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2007/07/28 14:27:10 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2007/08/03 11:01:37 obache Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -2714,9 +2714,7 @@ lib/erlang/lib/observer-${VERSION.observer}/ebin/ttb.beam
 lib/erlang/lib/observer-${VERSION.observer}/ebin/ttb_et.beam
 lib/erlang/lib/observer-${VERSION.observer}/include/etop.hrl
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop
-lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/getop
-lib/erlang/lib/observer-${VERSION.observer}/priv/bin/getop.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer.tool
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer/collapsd.gif
 lib/erlang/lib/observer-${VERSION.observer}/priv/crashdump_viewer/exploded.gif
@@ -3851,7 +3849,6 @@ lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.appup
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.beam
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool_sup.beam
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/start_webtool
-lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/start_webtool.bat
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/conf/mime.types
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/doc/index.html
 lib/erlang/lib/webtool-${VERSION.webtool}/priv/root/doc/start_info.html
