@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2007/07/05 23:20:49 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/08/03 18:01:23 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.35
-PKGREVISION=	2
+DISTNAME=	monotone-0.36
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.35/
+MASTER_SITES=	http://monotone.ca/downloads/0.36/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -34,7 +33,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-install:
-	cd ${WRKSRC} && pax -wr figures/*.png ${DESTDIR}${PREFIX}/share/doc/monotone
+	cd ${WRKSRC} && pax -rw -pp -pm figures/*.png \
+	    ${DESTDIR}${PREFIX}/share/doc/monotone
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
