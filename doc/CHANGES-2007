@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1685 2007/08/03 03:21:21 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1686 2007/08/03 07:00:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/claws-mail-smime version 0.7.1 [smb 2007-08-02]
 	Added mail/claws-mail-spamassassin version 2.10.0 [smb 2007-08-02]
 	Added mail/claws-mail-trayicon version 2.10.0 [smb 2007-08-02]
+	Added devel/p5-Class-XML version 0.06 [seb 2007-08-03]
