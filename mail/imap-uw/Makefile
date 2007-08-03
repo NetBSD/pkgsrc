@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.117 2007/08/03 17:03:29 obache Exp $
+# $NetBSD: Makefile,v 1.118 2007/08/03 17:12:00 jwise Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
 # but not running Kerberos before committing the changes.
+#
+# NOTE ALSO:
+# The most common reason to install this package is as a prerequisite for pine.
+# If you upgrade this package, you *must* test mail/pine with the new version.
 
 DISTNAME=	imap-2006j2
 PKGNAME=	${DISTNAME:S/-/-uw-/}
