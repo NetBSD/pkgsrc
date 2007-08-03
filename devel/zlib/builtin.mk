@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2006/04/06 06:21:57 reed Exp $
+# $NetBSD: builtin.mk,v 1.6 2007/08/03 11:53:27 joerg Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -34,24 +34,10 @@ BUILTIN_VERSION.zlib!=							\
 		}							\
 	' ${H_ZLIB:Q}
 #
-# If the built-in zlib is 1.1.4, then check whether it has the security
-# fix for CAN-2003-0107, which was a buffer overflow in the gzprintf
-# function.  If it does, then treat it as the equivalent of zlib-1.1.4nb1.
-#
-BUILTIN_CAN_2003_0107_FIX=	NetBSD-1.3[I-Z]*-* NetBSD-1.[456]*-*	\
-				NetBSD-[2-9]*-* NetBSD-1[0-9]*-*
-#
-# XXX These patterns for {Free,Open}BSD are too permissive, but I'm not
-# XXX sure which versions of those OSes provide secure versions of
-# XXX zlib-1.1.4.
-#
-BUILTIN_CAN_2003_0107_FIX+=	FreeBSD-*-* OpenBSD-*-*
+# If the built-in zlib is 1.1.4, assume that it has the fix for
+# CAN-2003-0107.
 .  if ${BUILTIN_VERSION.zlib} == "1.1.4"
-.    for _pattern_ in ${BUILTIN_CAN_2003_0107_FIX}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILTIN_VERSION.zlib=	1.1.4nb1
-.      endif
-.    endfor
 .  endif
 BUILTIN_PKG.zlib=	zlib-${BUILTIN_VERSION.zlib}
 .endif
