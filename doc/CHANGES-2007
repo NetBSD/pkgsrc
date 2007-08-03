@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1684 2007/08/03 02:34:35 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1685 2007/08/03 03:21:21 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3089,9 +3089,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_rolling-replace to 0.5 [tnn 2007-08-03]
 	Added mail/claws-mail version 2.10.0 [smb 2007-08-02]
 	Added mail/claws-mail-bogofilter version 2.10.0 [smb 2007-08-02]
-	Added mail/claws-mail-clamav-plugin version 2.10.0 [smb 2007-08-02]
+	Added mail/claws-mail-clamav version 2.10.0 [smb 2007-08-02]
 	Added mail/claws-mail-dillo-viewer version 2.10.0 [smb 2007-08-02]
-	Added mail/claws-mail-gtkhtml2_viewer version 0.15.1 [smb 2007-08-02]
+	Added mail/claws-mail-gtkhtml version 0.15.1 [smb 2007-08-02]
 	Added mail/claws-mail-newmail version 0.0.10 [smb 2007-08-02]
 	Added mail/claws-mail-notification version 0.11 [smb 2007-08-02]
 	Added mail/claws-mail-pdf_viewer version 0.5 [smb 2007-08-02]
