@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 2005/12/03 00:52:54 joerg Exp $
+$NetBSD: patch-as,v 1.2 2007/08/03 17:03:31 obache Exp $
 
---- src/osdep/unix/tenex.c.orig	2005-12-03 00:01:26.000000000 +0000
+--- src/osdep/unix/tenex.c.orig	2007-06-18 20:20:42.000000000 +0000
 +++ src/osdep/unix/tenex.c
-@@ -34,7 +34,6 @@
+@@ -42,7 +42,6 @@
  #include <stdio.h>
  #include <ctype.h>
  #include <errno.h>
