@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_create.1,v 1.10 2007/07/25 15:01:46 joerg Exp $
+.\" $NetBSD: pkg_create.1,v 1.11 2007/08/03 13:15:59 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -44,6 +44,8 @@
 .Ek
 .Bk -words
 .Op Fl D Ar displayfile
+.Bk -words
+.Op Fl g Ar group
 .Ek
 .Bk -words
 .Op Fl I Ar realprefix
@@ -81,6 +83,8 @@
 .Bk -words
 .Op Fl t Ar template
 .Ek
+.Bk -words
+.Op Fl u Ar owner
 .Bk -words
 .Fl c Ar comment
 .Ek
@@ -166,6 +170,10 @@ if
 is a
 .Cm -
 (dash).
+.It Fl g Ar group
+Make
+.Ar group
+the default group ownership instead of extracting it from the file system.
 .It Fl I Ar realprefix
 Provide the real prefix, as opposed to the staging prefix, for use in
 staged installations of packages.
@@ -283,6 +291,10 @@ characters for
 to fill in with a unique ID.
 .It Fl U
 Do not update the package file database with any file information.
+.It Fl u Ar owner
+Make
+.Ar owner
+the default owner instead of extracting it from the file system.
 .It Fl V
 Print version number and exit.
 .It Fl v
