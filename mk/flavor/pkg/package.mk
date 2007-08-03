@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.8 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: package.mk,v 1.9 2007/08/03 14:03:40 joerg Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -33,6 +33,9 @@ _PKG_ARGS_PACKAGE+=	${_PKG_CREATE_ARGS}
 _PKG_ARGS_PACKAGE+=	-p ${PREFIX}
 .else
 _PKG_ARGS_PACKAGE+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
+.  if ${_USE_DESTDIR} == "user-destdir"
+_PKG_ARGS_PACKAGE+=	-u ${REAL_ROOT_USER} -g ${REAL_ROOT_GROUP}
+.  endif
 .endif
 _PKG_ARGS_PACKAGE+=	-L ${DESTDIR}${PREFIX}			# @src ...
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"

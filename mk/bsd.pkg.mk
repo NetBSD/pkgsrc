@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1916 2007/07/29 05:19:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1917 2007/08/03 14:03:39 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -105,6 +105,10 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 
 # Latest versions of tools required for correct pkgsrc operation.
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20051103}
+.if ${_USE_DESTDIR} == "user-destdir" && ${PKGTOOLS_REQD} < 20070802
+PKGTOOLS_REQD=	20070802
+.endif
+
 
 ##### Transform USE_* into dependencies
 
