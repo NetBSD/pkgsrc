@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.6 2007/08/03 22:57:07 joerg Exp $
+
+--- providers/sqlite/sqlite-src/fts1_tokenizer1.c.orig	2007-08-03 21:57:15.000000000 +0000
++++ providers/sqlite/sqlite-src/fts1_tokenizer1.c
+@@ -18,11 +18,7 @@
+ 
+ 
+ #include <assert.h>
+-#if !defined(__APPLE__)
+-#include <malloc.h>
+-#else
+ #include <stdlib.h>
+-#endif
+ #include <stdio.h>
+ #include <string.h>
+ #include <ctype.h>
