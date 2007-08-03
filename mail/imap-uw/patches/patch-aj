@@ -1,20 +1,20 @@
-$NetBSD: patch-aj,v 1.12 2006/07/26 20:00:27 jlam Exp $
+$NetBSD: patch-aj,v 1.13 2007/08/03 17:03:30 obache Exp $
 
---- src/osdep/unix/Makefile.gss.orig	2003-03-04 22:29:59.000000000 -0500
+--- src/osdep/unix/Makefile.gss.orig	2007-04-05 02:20:04.000000000 +0000
 +++ src/osdep/unix/Makefile.gss
-@@ -21,11 +21,13 @@
- # Extended flags needed for additional authenticators.  You may need to modify.
- 
+@@ -29,11 +29,13 @@
  GSSDIR=/usr/local
--GSSCFLAGS= -I$(GSSDIR)/include -DGSS_C_NT_HOSTBASED_SERVICE=gss_nt_service_name
-+GSSCFLAGS= -I$(GSSDIR)/include -I$(GSSDIR)/include/krb5
- GSSOLDLDFLAGS= -L$(GSSDIR)/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err
- GSSNEWLDFLAGS= -L$(GSSDIR)/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
+ GSSINCLUDE=$(GSSDIR)/include
+ GSSLIB=$(GSSDIR)/lib
+-GSSCFLAGS= -I$(GSSINCLUDE) -DGSS_C_NT_HOSTBASED_SERVICE=gss_nt_service_name -DKRB5_DEPRECATED=1
++GSSCFLAGS= -I$(GSSINCLUDE) -I$(GSSDIR)/include/krb5 -DKRB5_DEPRECATED=1
+ GSSOLDLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err
+ GSSNEWLDFLAGS= -L$(GSSLIB) -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
  
  gss:	# GSSAPI Kerberos V flags
  	echo $(GSSCFLAGS) >> OSCFLAGS
--	sh -c '(test -f $(GSSDIR)/lib/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' >> LDFLAGS
-+	sh -c '(test -f $(GSSDIR)/lib/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' > LDFLAGS.gss1
+-	sh -c '(test -f $(GSSLIB)/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' >> LDFLAGS
++	sh -c '(test -f $(GSSLIB)/libk5crypto.a) && echo $(GSSNEWLDFLAGS) || echo $(GSSOLDLDFLAGS)' >> LDFLAGS.gss1
 +	sh -c '(test -z "$(KRB5_CONFIG)") || $(KRB5_CONFIG) --libs gssapi' > LDFLAGS.gss2
 +	sh -c '(test -z "$(KRB5_CONFIG)") && cat LDFLAGS.gss1 || cat LDFLAGS.gss2' >> LDFLAGS
  	echo "#include \"kerb_mit.c\"" >> auths.c

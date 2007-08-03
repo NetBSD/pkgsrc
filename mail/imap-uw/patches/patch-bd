@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 2005/12/03 00:52:55 joerg Exp $
+$NetBSD: patch-bd,v 1.2 2007/08/03 17:03:32 obache Exp $
 
---- src/dmail/dmail.c.orig	2005-12-03 00:47:14.000000000 +0000
+--- src/dmail/dmail.c.orig	2007-06-18 23:34:41.000000000 +0000
 +++ src/dmail/dmail.c
-@@ -21,7 +21,6 @@
+@@ -29,7 +29,6 @@
  #include <stdio.h>
  #include <pwd.h>
  #include <errno.h>

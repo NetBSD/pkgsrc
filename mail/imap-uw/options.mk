@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/07/26 20:00:27 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2007/08/03 17:03:29 obache Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,9 +26,9 @@ PKG_SUPPORTED_OPTIONS+=	kerberos
 ### Support both IPv6 and IPv4 connections.
 ###
 .if !empty(PKG_OPTIONS:Minet6)
-MAKE_FLAGS+=	IP=6
+MAKE_FLAGS+=	IP6=6
 .else
-MAKE_FLAGS+=	IP=4
+MAKE_FLAGS+=	IP6=4
 .endif
 
 ###

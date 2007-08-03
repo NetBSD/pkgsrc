@@ -1,23 +1,23 @@
-$NetBSD: patch-ak,v 1.2 2005/08/12 19:47:17 tv Exp $
+$NetBSD: patch-ak,v 1.3 2007/08/03 17:03:30 obache Exp $
 
---- src/osdep/unix/ckp_gss.c.orig	2005-06-05 19:43:50.000000000 -0400
-+++ src/osdep/unix/ckp_gss.c	2005-08-12 15:08:39.000000000 -0400
-@@ -30,6 +30,7 @@
+--- src/osdep/unix/ckp_gss.c.orig	2007-01-16 23:26:49.000000000 +0000
++++ src/osdep/unix/ckp_gss.c
+@@ -38,6 +38,7 @@ struct passwd *checkpw (struct passwd *p
  {
-   char tmp[MAILTMPLEN];
+   char svrnam[MAILTMPLEN],cltnam[MAILTMPLEN];
    krb5_context ctx;
 +  krb5_error error;
    krb5_timestamp now;
    krb5_principal service;
-   krb5_creds *crd = (krb5_creds *) memset (fs_get (sizeof (krb5_creds)),0,
-@@ -39,7 +40,9 @@
- 				/* make service name */
-     sprintf (tmp,"%s@%s",(char *) mail_parameters (NIL,GET_SERVICENAME,NIL),
- 	     tcp_serverhost ());
+   krb5_ccache ccache;
+@@ -54,7 +55,9 @@ struct passwd *checkpw (struct passwd *p
+ 				/* make client name with principal */
+     sprintf (cltnam,"%.80s/%.80s",pw->pw_name,
+ 	     (char *) mail_parameters (NIL,GET_SERVICENAME,NIL));
 -    krb5_init_context (&ctx);	/* get a context */
 +    error = krb5_init_context (&ctx);	/* get a context */
 +    if (error)
 +      return NIL;
  				/* get time, client and server principals */
      if (!krb5_timeofday (ctx,&now) &&
- 	!krb5_parse_name (ctx,pw->pw_name,&crd->client) &&
+ 	/* Normally, kerb_cp_svr_name (defined/set in env_unix.c) is NIL, so

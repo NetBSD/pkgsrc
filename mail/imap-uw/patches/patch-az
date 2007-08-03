@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.1 2005/12/03 00:52:55 joerg Exp $
+$NetBSD: patch-az,v 1.2 2007/08/03 17:03:31 obache Exp $
 
---- src/tmail/tmail.c.orig	2005-12-03 00:46:07.000000000 +0000
+--- src/tmail/tmail.c.orig	2007-05-21 23:26:20.000000000 +0000
 +++ src/tmail/tmail.c
-@@ -21,7 +21,6 @@
+@@ -29,7 +29,6 @@
  #include <stdio.h>
  #include <pwd.h>
  #include <errno.h>

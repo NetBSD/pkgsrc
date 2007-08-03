@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.6 2006/07/26 20:00:27 jlam Exp $
+$NetBSD: patch-af,v 1.7 2007/08/03 17:03:30 obache Exp $
 
---- src/osdep/unix/kerb_mit.c.orig	2003-10-17 12:39:42.000000000 -0400
+--- src/osdep/unix/kerb_mit.c.orig	2006-08-31 01:40:15.000000000 +0000
 +++ src/osdep/unix/kerb_mit.c
-@@ -18,9 +18,15 @@
-  * CPYRIGHT, included with this Distribution.
+@@ -26,9 +26,15 @@
+  * Last Edited:	30 August 2006
   */
  
 +#ifdef HEIMDAL_KRB5
 +#include <gssapi/gssapi.h>
 +#include <krb5/krb5.h>
-+#define gss_nt_service_name    GSS_C_NT_HOSTBASED_SERVICE
++#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
 +#else
  #define PROTOTYPE(x) x
  #include <gssapi/gssapi_generic.h>
