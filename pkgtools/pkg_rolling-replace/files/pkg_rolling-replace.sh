@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.10 2007/06/29 17:16:24 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.11 2007/08/03 00:55:09 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -120,7 +120,7 @@ check_packages_mismatched()
 {
     pkg_chk -u -q | while read line; do
         # duplicate output of pkg_chk to stderr (bypass $(...) or `...`)
-        echo "${OPC} $line" > /dev/stderr
+        echo "${OPC} $line" 1>&2
 	# Look for the first thing that looks like pkg-version rather
 	# than category/pkg and remove the version.
         for word in $line; do
