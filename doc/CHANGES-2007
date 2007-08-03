@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1691 2007/08/03 21:45:43 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1692 2007/08/03 22:40:29 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/monotone-server to 0.36 [jmmv 2007-08-03]
 	Updated pkgtools/digest to 20070803 [tnn 2007-08-03]
 	Added devel/libsetenv version 0.1 [tnn 2007-08-03]
+	Updated comms/asterisk to 1.2.23 [mjl 2007-08-03]
