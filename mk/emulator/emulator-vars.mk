@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.3 2007/08/01 16:28:09 jlam Exp $
+# $NetBSD: emulator-vars.mk,v 1.4 2007/08/03 23:16:02 ghen Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATORMS is defined
 # and non-empty.
@@ -99,6 +99,8 @@ _EMUL_PREFER.netbsd-sparc=	sunos-sparc
 _EMUL_PREFER.netbsd-sparc=	solaris-sparc sunos-sparc
 .endif
 _EMUL_PREFER.netbsd-x86_64=	linux-x86_64 linux-i386
+
+_EMUL_PREFER.dragonfly-i386=	linux-i386
 
 _EMUL_PREFER.solaris-sparc64=	solaris-sparc
 _EMUL_PREFER.solaris-x86_64=	solaris-i386
