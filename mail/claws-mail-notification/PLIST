@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:51 smb Exp $
+lib/claws-mail/plugins/notification_plugin.la
+share/locale/ca/LC_MESSAGES/notification_plugin.mo
+share/locale/cs/LC_MESSAGES/notification_plugin.mo
+share/locale/hu/LC_MESSAGES/notification_plugin.mo
+share/locale/pt_BR/LC_MESSAGES/notification_plugin.mo
+share/locale/zh_CN/LC_MESSAGES/notification_plugin.mo
+@dirrm lib/claws-mail/plugins
