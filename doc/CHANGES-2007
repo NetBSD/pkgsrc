@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1689 2007/08/03 17:04:32 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1690 2007/08/03 18:02:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3106,3 +3106,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/erlang to 11.5nb1 [obache 2007-08-03]
 	Updated net/teamspeak-server to 2.0.23.19 [abs 2007-08-03]
 	Updated mail/imap-uw to 2006j2 [obache 2007-08-03]
+	Updated devel/monotone to 0.36 [jmmv 2007-08-03]
+	Updated devel/monotone-server to 0.36 [jmmv 2007-08-03]
