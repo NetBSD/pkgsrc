@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.10 2007/07/27 17:08:27 joerg Exp $
+dnl $Id: configure.ac,v 1.11 2007/08/03 21:42:04 tnn Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nbsd-digest],[20070703],[agc@netbsd.org])
+AC_INIT([nbsd-digest],[20070803],[agc@netbsd.org])
 AC_CONFIG_SRCDIR([digest.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
