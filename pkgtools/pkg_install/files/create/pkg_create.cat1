@@ -300,4 +300,4 @@ BBUUGGSS
      invocations due to exec argument-space limitations (this depends on the
      value returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 4.0                       May 19, 2007                       NetBSD 4.0
+NetBSD 4.0                      August 2, 2007                      NetBSD 4.0
