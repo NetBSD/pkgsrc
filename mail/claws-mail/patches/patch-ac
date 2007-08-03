@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2007/08/03 02:34:37 smb Exp $
+
+--- src/prefs_common.h.orig	2007-08-01 18:42:50.000000000 -0400
++++ src/prefs_common.h	2007-08-01 18:43:04.000000000 -0400
+@@ -313,7 +313,6 @@
+ 
+ 	GList *mime_open_cmd_history;
+ 
+-#if USE_GPGME
+ 	/* Privacy */
+ 	gboolean auto_check_signatures;
+ 	gboolean gpg_signature_popup;
+@@ -321,7 +320,6 @@
+ 	gint store_passphrase_timeout;
+ 	gboolean passphrase_grab;
+ 	gboolean gpg_warning;
+-#endif /* USE_GPGME */
+ 
+ 	/* Addressbook */
+ 	gboolean addressbook_use_editaddress_dialog;
