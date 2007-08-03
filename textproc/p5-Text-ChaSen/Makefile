@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/10 18:05:51 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/03 01:32:16 taca Exp $
 
 DISTNAME=		Text-ChaSen-1.03
 PKGNAME=		p5-${DISTNAME}
@@ -15,6 +15,7 @@ HOMEPAGE=		http://www.daionet.gr.jp/~knok/chasen/
 COMMENT=		Perl5 module to use ChaSen
 
 USE_LANGUAGES=		c c++
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/ChaSen/.packlist
 
