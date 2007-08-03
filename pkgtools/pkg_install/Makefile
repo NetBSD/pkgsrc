@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2007/07/29 17:39:31 seb Exp $
+# $NetBSD: Makefile,v 1.137 2007/08/03 13:15:58 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -86,8 +86,61 @@ SUBST_MESSAGE.paths=	Fixing paths in scripts.
 SUBST_FILES.paths=	audit-packages/Makefile.in
 SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
 
+.include "../../archivers/bzip2/builtin.mk"
+.include "../../archivers/libarchive/builtin.mk"
+.include "../../devel/zlib/builtin.mk"
+
+USE_BUILTIN.bzip2=	no
+USE_BUILTIN.zlib=	no
+
+.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS]) || \
+    empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+USE_BUILTIN.libarchive=	no
+.endif
+
+FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
+FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
+FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
+
+.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+CPPFLAGS+=	-I${WRKDIR}/bzip2
+LDFLAGS+=	-L${WRKDIR}/bzip2
+.endif
+.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+CPPFLAGS+=	-I${WRKDIR}/zlib
+LDFLAGS+=	-L${WRKDIR}/zlib
+.endif
+.if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
+LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
+.endif
+
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
+.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+	@${CP} -R ${FILESDIR.bzip2} ${WRKDIR}/bzip2
+.endif
+.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+	@${CP} -R ${FILESDIR.zlib} ${WRKDIR}/zlib
+.endif
+.if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+	@${CP} -R ${FILESDIR.libarchive} ${WRKDIR}/libarchive
+.endif
+
+pre-configure:
+.if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
+	cd ${WRKDIR}/bzip2 && ${BUILD_MAKE_CMD} libbz2.a
+.endif
+.if empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+	cd ${WRKDIR}/zlib && ${BUILD_MAKE_CMD} libz.a
+.endif
+.if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
+	cd ${WRKDIR}/libarchive &&					\
+	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+		./configure --disable-shared --disable-bsdtar
+	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
+.endif
 
 # XXX Reverse the order that update does things since
 # XXX we need pkg_delete built before we can deinstall.

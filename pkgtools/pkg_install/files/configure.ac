@@ -61,6 +61,12 @@ AC_ARG_WITH(pax,
 [ pax='$(prefix)/bin/pax' ])
 AC_SUBST(pax)
 
+AC_ARG_ENABLE([bootstrap],
+    [AS_HELP_STRING([--enable-bootstrap], [build minimal version of pkg_install])],
+    [bootstrap=yes], [bootstrap=])
+
+AC_SUBST(bootstrap)
+
 dnl Checks for libraries.
 AC_CHECK_LIB(db, __db185_open, , AC_SEARCH_LIBS(dbopen, [db db1]))
 AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses])
