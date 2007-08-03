@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2007/08/03 02:34:38 smb Exp $
+
+--- src/toolbar.c.orig	2007-08-02 04:10:24.000000000 -0400
++++ src/toolbar.c	2007-08-02 04:10:58.000000000 -0400
+@@ -427,9 +427,7 @@
+ 		{ A_FORWARD,       STOCK_PIXMAP_MAIL_FORWARD,         _("Forward") },
+ 		{ A_SEPARATOR,     0,                                 ("")         },
+ 		{ A_TRASH,         STOCK_PIXMAP_TRASH,                _("Trash")   },
+-#if (defined(USE_SPAMASSASSIN_PLUGIN) || defined(USE_BOGOFILTER_PLUGIN))
+ 		{ A_LEARN_SPAM,	   STOCK_PIXMAP_SPAM_BTN,             _("Spam")    },
+-#endif
+ 		{ A_SEPARATOR,     0,                                 ("")         },
+ 		{ A_GOTO_NEXT,     STOCK_PIXMAP_DOWN_ARROW,           _("Next")    }
+ 	};
+@@ -525,9 +523,7 @@
+ 		{ A_FORWARD,       STOCK_PIXMAP_MAIL_FORWARD,         _("Forward") },
+ 		{ A_SEPARATOR,     0,                                 ("")         },
+ 		{ A_TRASH,         STOCK_PIXMAP_TRASH,                _("Trash")   },
+-#if (defined(USE_SPAMASSASSIN_PLUGIN) || defined(USE_BOGOFILTER_PLUGIN))
+ 		{ A_LEARN_SPAM,	   STOCK_PIXMAP_SPAM_BTN,             _("Spam")    },
+-#endif
+ 		{ A_GOTO_NEXT,     STOCK_PIXMAP_DOWN_ARROW,           _("Next")    }
+ #ifdef MAEMO
+ 		,
