@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.322 2007/07/29 12:28:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.323 2007/08/03 03:47:58 smb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -18,6 +18,23 @@ SUBDIR+=	bogofilter
 SUBDIR+=	bulk_mailer
 SUBDIR+=	clamav
 SUBDIR+=	clamsmtp
+SUBDIR+=	claws-mail
+SUBDIR+=	claws-mail-bogofilter
+SUBDIR+=	claws-mail-clamav
+SUBDIR+=	claws-mail-dillo-viewer
+SUBDIR+=	claws-mail-gtkhtml
+SUBDIR+=	claws-mail-newmail
+SUBDIR+=	claws-mail-notification
+SUBDIR+=	claws-mail-pdf_viewer
+SUBDIR+=	claws-mail-perl
+SUBDIR+=	claws-mail-pgp
+SUBDIR+=	claws-mail-pgpcore
+SUBDIR+=	claws-mail-pgpinline
+SUBDIR+=	claws-mail-pgpmime
+SUBDIR+=	claws-mail-smime
+SUBDIR+=	claws-mail-spamassassin
+SUBDIR+=	claws-mail-trayicon
+SUBDIR+=	claws-mail-vcalendar
 SUBDIR+=	columba
 SUBDIR+=	coolmail
 SUBDIR+=	courier-analog
