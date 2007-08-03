@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.103 2007/07/31 14:31:27 joerg Exp $
+# $NetBSD: bootstrap,v 1.104 2007/08/03 11:54:31 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -822,8 +822,8 @@ run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
 CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' \
 LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' \
 LIBS='-lnbcompat' $shprog ./configure $configure_quiet_flags -C \
---prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir \
---mandir=$mandir $pkg_install_args && $bmake)"
+--enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
+--with-pkgdbdir=$pkgdbdir --mandir=$mandir $pkg_install_args && $bmake)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/create/pkg_create $wrkdir/sbin/pkg_create"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/info/pkg_info $wrkdir/sbin/pkg_info"
