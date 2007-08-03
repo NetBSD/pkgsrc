@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2007/08/03 13:15:58 joerg Exp $
+# $NetBSD: Makefile,v 1.138 2007/08/03 15:12:43 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -89,9 +89,6 @@ SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
-
-USE_BUILTIN.bzip2=	no
-USE_BUILTIN.zlib=	no
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS]) || \
     empty(USE_BUILTIN.zlib:M[yY][eE][sS])
