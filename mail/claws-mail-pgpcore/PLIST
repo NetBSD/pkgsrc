@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:55 smb Exp $
+include/claws-mail/plugins/pgpcore/passphrase.h
+include/claws-mail/plugins/pgpcore/pgp_viewer.h
+include/claws-mail/plugins/pgpcore/prefs_gpg.h
+include/claws-mail/plugins/pgpcore/select-keys.h
+include/claws-mail/plugins/pgpcore/sgpgme.h
+lib/claws-mail/plugins/pgpcore.la
+@dirrm lib/claws-mail/plugins
+@dirrm include/claws-mail/plugins/pgpcore
+@dirrm include/claws-mail/plugins
+@dirrm include/claws-mail
