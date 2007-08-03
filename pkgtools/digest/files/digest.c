@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.12 2007/07/03 18:54:03 joerg Exp $ */
+/*	$NetBSD: digest.c,v 1.13 2007/08/03 17:10:07 tnn Exp $ */
 
 /*
  * Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
@@ -37,7 +37,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001-2005 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.12 2007/07/03 18:54:03 joerg Exp $");
+__RCSID("$NetBSD: digest.c,v 1.13 2007/08/03 17:10:07 tnn Exp $");
 #endif
 
 
@@ -105,7 +105,7 @@ static alg_t algorithms[] = {
 	{ "SHA512",	SHA512_DIGEST_LENGTH,
 	  (HASH_init) SHA512_Init,	(HASH_update) SHA512_Update,
 	  (HASH_end) SHA512_End,	(HASH_file) SHA512_File },
-	{ "TIGER",	20,
+	{ "TIGER",	24,
 	  (HASH_init) TIGERInit,	(HASH_update) TIGERUpdate,
 	  (HASH_end) TIGEREnd,		(HASH_file) TIGERFile },
 	{ "WHIRLPOOL",	WHIRLPOOL_DIGEST_BYTES,
