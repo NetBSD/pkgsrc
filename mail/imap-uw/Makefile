@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.116 2007/03/21 19:39:08 jwise Exp $
+# $NetBSD: Makefile,v 1.117 2007/08/03 17:03:29 obache Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system with Kerberos libraries
 # but not running Kerberos before committing the changes.
 
-DISTNAME=	imap-2004g
+DISTNAME=	imap-2006j2
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -22,6 +21,8 @@ MAKE_ENV+=		LTCOMPILE="libtool --mode=compile"
 MAKE_ENV+=		LTLINK="libtool --mode=link"
 LTINSTALL_PROGRAM=	${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_PROGRAM}
 LTINSTALL_LIB=		${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_LIB}
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/2$//}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,7 +60,7 @@ BUILD_DEFS+=			IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_MAILSPOOLHOME
 CCLIENT_LIB=		libc-client.la
 CCLIENT_PICLIB=		libc-client_pic.a
 CCLIENT_MAJOR=		4
-CCLIENT_MINOR=		3
+CCLIENT_MINOR=		4
 MAKE_ENV+=		CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
 MAKE_ENV+=		CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 
