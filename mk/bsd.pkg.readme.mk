@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.7 2007/07/14 17:17:45 adrianp Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.8 2007/08/04 11:23:56 adrianp Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -242,8 +242,7 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	_INFO_VER=`${PKG_INFO} -V`; 					\
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-$$_INFO_VER; then \
+	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then \
 		if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then	\
 			${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
 				 gsub("\>", "\\&gt;", $$1);		\
@@ -280,6 +279,11 @@ README.html: .PRECIOUS
 		esac;							\
 		cd ${.CURDIR} ;						\
 	fi;								\
+	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then \
+		_PVDIR=${PKGVULNDIR};					\
+	else								\
+		_PVDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
+	fi; \
 	${AWK} -f ../../mk/scripts/genreadme.awk \
 		builddependsfile=/dev/null \
 		dependsfile=/dev/null \
@@ -292,6 +296,7 @@ README.html: .PRECIOUS
 		PKG_SUFX=${PKG_SUFX:Q} \
 		PKG_URL=${PKG_URL:Q} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||:Q} \
+		PVDIR=$$_PVDIR \
 		SED=${SED:Q} \
 		SETENV=${SETENV:Q} \
 		SORT=${SORT:Q} \
