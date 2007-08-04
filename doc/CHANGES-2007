@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1700 2007/08/04 14:19:15 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1701 2007/08/04 16:32:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3125,3 +3125,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/rpc2 to 2.6 [gdt 2007-08-04]
 	Updated math/gnumeric to 1.6.3nb8 [obache 2007-08-04]
 	Updated math/gnumeric-current to 1.7.10nb4 [obache 2007-08-04]
+	Updated graphics/rabbit to 0.5.3 [obache 2007-08-04]
