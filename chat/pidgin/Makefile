@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/28 12:12:33 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/04 14:01:38 tnn Exp $
 #
 
 PKGNAME=		pidgin-${VERSION}
@@ -7,7 +7,7 @@ PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include		"../../chat/libpurple/Makefile.common"  
+.include		"../../chat/libpurple/Makefile.common"
 
 USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		msgfmt
@@ -30,7 +30,7 @@ CHECK_WRKREF_SKIP=	bin/pidgin
 pre-build:
 	# XXX Find a cleaner way.
 	${TEST} -r ${WRKSRC}/libpurple/libpurple.la || \
-	  ${LN} -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
+	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
