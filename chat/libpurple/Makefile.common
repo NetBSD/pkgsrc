@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2007/07/28 12:32:17 gdt Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/08/04 14:01:52 tnn Exp $
 #
 
 VERSION=	2.0.1
@@ -14,8 +14,7 @@ COMMENT=	Multi-protocol Instant Messaging client GTK frontend
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake perl:run
-USE_LANGUAGES+=		c
 USE_PKGLOCALEDIR=	yes
 
-PATCHDIR=               ${.CURDIR}/../../chat/libpurple/patches
+PATCHDIR=		${.CURDIR}/../../chat/libpurple/patches
 DISTINFO_FILE?=		${.CURDIR}/../../chat/libpurple/distinfo
