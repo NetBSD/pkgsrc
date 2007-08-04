@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/07/17 19:18:44 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/04 12:52:57 joerg Exp $
 
---- event.cpp.orig	2007-07-17 14:24:45.000000000 +0200
+--- event.cpp.orig	2007-07-16 17:54:23.000000000 +0000
 +++ event.cpp
-@@ -398,10 +398,14 @@ ENTER("sleep_until_timeout_or_stop_reque
+@@ -40,6 +40,12 @@
+ //>
+ //<decls and function prototypes
+ 
++#ifndef timespeccmp
++#define	timespeccmp(tvp, uvp, cmp)					\
++	(((tvp)->tv_sec == (uvp)->tv_sec) ?				\
++	    ((tvp)->tv_nsec cmp (uvp)->tv_nsec) :			\
++	    ((tvp)->tv_sec cmp (uvp)->tv_sec))
++#endif
+ 
+ // my_mutex: protects my_thread_is_talking, 
+ static pthread_mutex_t my_mutex;
+@@ -398,10 +404,14 @@ ENTER("sleep_until_timeout_or_stop_reque
         to.tv_sec, to.tv_nsec,
         ts.tv_sec, ts.tv_nsec);
  
