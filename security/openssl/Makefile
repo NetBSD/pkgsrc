@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2007/07/18 13:11:15 tron Exp $
+# $NetBSD: Makefile,v 1.127 2007/08/04 14:29:43 tnn Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -77,6 +77,14 @@ CONFIGURE_ARGS+=	irix64-mips4-gcc
 CONFIGURE_ARGS+=	irix64-mips4-cc
 .    endif
 .  endif
+.elif ${OPSYS} == "OSF1"
+PLIST_OPSYS=		PLIST.osf1
+CONFIGURE_SCRIPT=	./Configure
+.  if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	alpha-gcc-rpath
+.  else
+CONFIGURE_ARGS+=	alpha-cc-rpath
+.  endif
 .elif ${OPSYS} == "Darwin"
 .include "../../mk/dlopen.buildlink3.mk"
 
@@ -93,7 +101,7 @@ SUBST_SED.dl=		-e "s,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS} ,g"
 CONFIGURE_ARGS+=	${CFLAGS} ${LDFLAGS}
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
 
-PLIST_OPSYS=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
+PLIST_OPSYS?=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
 .if exists(${PLIST_OPSYS})
 PLIST_SHLIB=		${PLIST_OPSYS}
 .else
