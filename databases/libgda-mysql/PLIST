@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/26 11:02:12 dillo Exp $
-lib/libgda-2.99/providers/libgda-mysql.la
-share/libgda/mysql_specs_add_column.xml
-share/libgda/mysql_specs_create_db.xml
-share/libgda/mysql_specs_create_index.xml
-share/libgda/mysql_specs_create_table.xml
-share/libgda/mysql_specs_drop_column.xml
-share/libgda/mysql_specs_drop_db.xml
-share/libgda/mysql_specs_drop_index.xml
-share/libgda/mysql_specs_drop_table.xml
-share/libgda/mysql_specs_dsn.xml
-share/libgda/mysql_specs_rename_table.xml
-@comment in libgda: @dirrm share/libgda
-@comment in libgda: @dirrm lib/libgda-1.9/providers
+@comment $NetBSD: PLIST,v 1.2 2007/08/04 11:13:40 obache Exp $
+lib/libgda-3.0/providers/libgda-mysql.la
+lib/pkgconfig/libgda-mysql-3.0.pc
+share/libgda-3.0/mysql_specs_add_column.xml
+share/libgda-3.0/mysql_specs_create_db.xml
+share/libgda-3.0/mysql_specs_create_index.xml
+share/libgda-3.0/mysql_specs_create_table.xml
+share/libgda-3.0/mysql_specs_drop_column.xml
+share/libgda-3.0/mysql_specs_drop_db.xml
+share/libgda-3.0/mysql_specs_drop_index.xml
+share/libgda-3.0/mysql_specs_drop_table.xml
+share/libgda-3.0/mysql_specs_dsn.xml
+share/libgda-3.0/mysql_specs_rename_table.xml
+@comment in libgda: @dirrm share/libgda-3.0
+@comment in libgda: @dirrm lib/libgda-3.0/providers
