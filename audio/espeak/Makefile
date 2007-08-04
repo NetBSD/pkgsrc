@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/19 21:29:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/04 12:52:56 joerg Exp $
 #
 
 DISTNAME=	espeak-1.28-source
@@ -27,4 +27,5 @@ do-install:
 	${CP} -r ${WRKDIR}/espeak-1.28-source/espeak-data ${PREFIX}/share
 
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

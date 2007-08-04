@@ -1,8 +1,21 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/07/17 19:18:44 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2007/08/04 12:52:57 joerg Exp $
 
---- fifo.cpp.orig	2007-07-17 14:50:26.000000000 +0200
+--- fifo.cpp.orig	2007-07-16 17:54:23.000000000 +0000
 +++ fifo.cpp
-@@ -306,10 +306,14 @@ int sleep_until_start_request_or_inactiv
+@@ -39,6 +39,12 @@
+ #include "wave.h"
+ #include "debug.h"
+ 
++#ifndef timespeccmp
++#define	timespeccmp(tvp, uvp, cmp)					\
++	(((tvp)->tv_sec == (uvp)->tv_sec) ?				\
++	    ((tvp)->tv_nsec cmp (uvp)->tv_nsec) :			\
++	    ((tvp)->tv_sec cmp (uvp)->tv_sec))
++#endif
+ 
+ //>
+ //<decls and function prototypes
+@@ -306,10 +312,14 @@ int sleep_until_start_request_or_inactiv
  	   to.tv_sec, to.tv_nsec,
  	   ts.tv_sec, ts.tv_nsec);
        
