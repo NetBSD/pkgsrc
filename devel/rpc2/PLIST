@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2007/04/12 17:26:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/08/04 14:02:10 gdt Exp $
 bin/rp2gen
 include/rpc2/errors.h
-include/rpc2/errorsdefs.h
 include/rpc2/multi.h
 include/rpc2/rpc2.h
 include/rpc2/rpc2_addrinfo.h
