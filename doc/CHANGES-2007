@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1694 2007/08/04 11:15:44 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1695 2007/08/04 11:24:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3117,3 +3117,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/libgda to 3.0.1 [obache 2007-08-04]
 	Updated databases/libgda-mysql to 3.0.1 [obache 2007-08-04]
 	Updated databases/libgda-postgres to 3.0.1 [obache 2007-08-04]
+	Updated databases/libgnomedb to 3.0.0 [obache 2007-08-04]
