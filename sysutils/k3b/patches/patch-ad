@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2007/07/25 02:33:03 markd Exp $
+$NetBSD: patch-ad,v 1.5 2007/08/04 23:21:11 markd Exp $
 
---- libk3bdevice/k3bdevicemanager.cpp.orig	2007-07-23 23:18:12.000000000 +1200
+--- libk3bdevice/k3bdevicemanager.cpp.orig	2007-07-22 07:53:25.000000000 +1200
 +++ libk3bdevice/k3bdevicemanager.cpp
 @@ -99,6 +99,7 @@ typedef unsigned char u8;
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.4 2007/07/25 02:33:03 markd Exp $
  #endif
  
  
-@@ -324,14 +325,7 @@ void K3bDevice::DeviceManager::NetBSDDev
+@@ -324,13 +325,9 @@ void K3bDevice::DeviceManager::NetBSDDev
  
    int   i;
  
@@ -21,8 +21,9 @@ $NetBSD: patch-ad,v 1.4 2007/07/25 02:33:03 markd Exp $
 -  static const char slicename = 'd';
 -#else
 -  static const char slicename = 'c';
--#endif
-+  static char slicename = 'a' + getrawpartition();
++  static char slicename = 'a';
++#ifdef Q_OS_NETBSD
++  slicename += getrawpartition();
+ #endif
  
    char devicename[11]; // /dev/rcdXd + trailing zero
- 
