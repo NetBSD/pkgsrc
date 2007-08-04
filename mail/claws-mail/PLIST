@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:40 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/04 22:06:30 wiz Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -224,6 +224,7 @@ share/doc/claws-mail/manual/pl/claws-mail-manual.pdf
 share/doc/claws-mail/manual/pl/claws-mail-manual.ps
 share/doc/claws-mail/manual/pl/claws-mail-manual.txt
 share/examples/claws-mail/mime.types
+share/icons/hicolor/48x48/apps/claws-mail.png
 share/locale/bg/LC_MESSAGES/claws-mail.mo
 share/locale/ca/LC_MESSAGES/claws-mail.mo
 share/locale/cs/LC_MESSAGES/claws-mail.mo
