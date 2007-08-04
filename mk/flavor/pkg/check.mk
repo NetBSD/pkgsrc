@@ -1,4 +1,4 @@
-# $NetBSD: check.mk,v 1.4 2007/07/14 17:17:46 adrianp Exp $
+# $NetBSD: check.mk,v 1.5 2007/08/04 11:21:08 adrianp Exp $
 #
 
 # _flavor-check-vulnerable:
@@ -11,8 +11,7 @@
 #
 _flavor-check-vulnerable: .PHONY
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	_INFO_VER=`${PKG_INFO} -V`;					\
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-$$_INFO_VER; then \
+	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then \
 		vulnfile=${PKGVULNDIR:Q}/pkg-vulnerabilities;		\
 		if ${TEST} ! -f "$$vulnfile"; then			\
 			${PHASE_MSG} "Skipping vulnerability checks.";	\
