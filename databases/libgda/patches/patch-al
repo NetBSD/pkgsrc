@@ -1,23 +1,23 @@
-$NetBSD: patch-al,v 1.1 2007/01/26 11:00:00 dillo Exp $
+$NetBSD: patch-al,v 1.2 2007/08/04 11:13:40 obache Exp $
 
---- providers/mysql/Makefile.in.orig	2006-12-22 15:01:57.000000000 +0100
+--- providers/mysql/Makefile.in.orig	2007-05-09 21:57:21.000000000 +0000
 +++ providers/mysql/Makefile.in
-@@ -55,8 +55,7 @@ am__installdirs = "$(DESTDIR)$(providerd
+@@ -57,8 +57,7 @@ am__installdirs = "$(DESTDIR)$(providerd
  providerLTLIBRARIES_INSTALL = $(INSTALL)
  LTLIBRARIES = $(provider_LTLIBRARIES)
  am__DEPENDENCIES_1 =
--libgda_mysql_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
--	$(top_builddir)/libgda/libgda-3.0.la $(am__DEPENDENCIES_1)
-+libgda_mysql_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+-libgda_mysql_la_DEPENDENCIES = $(top_builddir)/libgda/libgda-3.0.la \
+-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
++libgda_mysql_la_DEPENDENCIES = $(top_builddir)/libgda/libgda-3.0.la 
  am_libgda_mysql_la_OBJECTS = gda-mysql-ddl.lo gda-mysql-provider.lo \
  	gda-mysql-recordset.lo libmain.lo utils.lo
  libgda_mysql_la_OBJECTS = $(am_libgda_mysql_la_OBJECTS)
-@@ -364,7 +363,7 @@ libgda_mysql_la_SOURCES = \
- libgda_mysql_la_LDFLAGS = -export-dynamic -module -avoid-version
+@@ -361,7 +360,7 @@ libgda_mysql_la_SOURCES = \
+ 
+ libgda_mysql_la_LDFLAGS = -export-dynamic -module -avoid-version $(NO_UNDEFINED)
  libgda_mysql_la_LIBADD = \
- 	$(LIBGDA_LIBS) \
 -	$(top_builddir)/libgda/libgda-3.0.la \
-+	-lgda-3.0 \
++	 -lgda-3.0 \
+ 	$(LIBGDA_LIBS) \
  	$(MYSQL_LIBS)
  
- xmldir = $(datadir)/libgda
