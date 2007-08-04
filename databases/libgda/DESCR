@@ -6,7 +6,7 @@ data.  It is defined by a set of CORBA interfaces as generic as possible
 can be accessed through them.
 
   Libgda is an interface to the GDA architecture, providing a nice wrapper
-around the CORBA interfaces, for both the client and the server parts.  It
+around the CORBA interfaces, both for the client and the server parts.  It
 also provides a bunch of tools to help you both in the development and
 management of your data sources, all done through the GDA model's set of
 CORBA interfaces.
