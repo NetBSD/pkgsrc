@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/04 13:30:25 joerg Exp $
 
-  sys/param.h is required for definitions of NGROUPS, MAXLOGNAME, etc.
-  Without this, lookup of sys/sysctl.h on NetBSD (and maybe other *BSD
-  systems) does not work correctly.
-  Those preprocessor symbols are also needed during the build.
-
---- configure.ac.orig	2007-05-25 18:28:21.000000000 +0200
+--- configure.ac.orig	2007-05-25 16:28:21.000000000 +0000
 +++ configure.ac
+@@ -683,7 +683,7 @@ else
+ 	if test "$ac_silc_libs" != "no"; then
+ 		SILC_LIBS="-L$ac_silc_libs"
+ 	fi
+-	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient -lpthread $LIBDL"
++	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBDL"
+ 	AC_CHECK_LIB(silcclient, silc_client_init, [silcclient=yes], , $SILC_LIBS)
+ fi
+ AC_SUBST(SILC_LIBS)
 @@ -1917,8 +1917,13 @@ AC_CHECK_FUNCS(memcpy memmove random str
  AC_CHECK_HEADERS(malloc.h paths.h sgtty.h stdarg.h sys/cdefs.h)
  AC_CHECK_HEADERS(sys/file.h sys/filio.h sys/ioctl.h sys/msgbuf.h)

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/07/28 12:10:43 gdt Exp $
+# $NetBSD: options.mk,v 1.2 2007/08/04 13:30:25 joerg Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		gnutls silc perl tcl debug dbus
@@ -27,6 +27,7 @@ PLIST_SUBST+=		SILC=
 CONFIGURE_ARGS+= --with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
 CONFIGURE_ARGS+= --with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
 . include "../../devel/silc-toolkit/buildlink3.mk"
+. include "../../mk/pthread.buildlink3.mk"
 .else
 PLIST_SUBST+=		SILC="@comment "
 CONFIGURE_ARGS+=	--disable-silc
