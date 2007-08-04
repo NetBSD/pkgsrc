@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2007/06/05 05:37:13 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2007/08/04 11:23:32 obache Exp $
 #
 
-DISTNAME=		libgnomedb-2.99.2
-PKGREVISION=		2
+DISTNAME=		libgnomedb-3.0.0
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/2.99/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomedb/3.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,18 +16,18 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-PKGCONFIG_OVERRIDE=	libgnomedb-3.0.pc.in
+PKGCONFIG_OVERRIDE=	libgnomedb-3.0.pc.in libgnomedb-extra-3.0.pc.in \
+			libgnomedb-graph-3.0.pc.in
 
-GCONF2_SCHEMAS=		libgnomedb.schemas
+GCONF2_SCHEMAS=		libgnomedb-3.0.schemas
 
+BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.0.0
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
