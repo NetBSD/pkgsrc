@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.8 2007/01/18 10:51:48 rillig Exp $
+# $NetBSD: fetch,v 1.9 2007/08/04 15:00:29 obache Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -171,12 +171,6 @@ if ${TEST} -n "$distinfo" && ${TEST} ! -f "$distinfo"; then
 	exit 1
 fi
 
-${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
-if ${TEST} ! -w $fetchdir; then
-	${ECHO} 1>&2 "$self: Cannot write to `cd $fetchdir && pwd`"
-	exit 1
-fi
-
 # Compute the expected size of the fetched file.
 distsize=
 distunits=
@@ -221,6 +215,12 @@ verify_file() {
 #
 if verify_file $path; then
 	exit 0
+fi
+
+${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
+if ${TEST} ! -w $fetchdir; then
+	${ECHO} 1>&2 "$self: Cannot write to `cd $fetchdir && pwd`"
+	exit 1
 fi
 
 # Set the name of the output file.  In the "resume" case, we initialize
