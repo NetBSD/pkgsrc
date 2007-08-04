@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.48 2007/04/04 13:30:26 obache Exp $
+# $NetBSD: Makefile.common,v 1.49 2007/08/04 11:13:37 obache Exp $
 #
 
-DISTNAME=		libgda-2.99.2
+DISTNAME=		libgda-3.0.1
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/2.99/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/3.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -27,6 +27,13 @@ CONFIGURE_ARGS+=	--without-mysql
 CONFIGURE_ARGS+=	--without-postgres
 .endif
 
+SUBST_CLASSES+=		malloc_h
+SUBST_STAGE.malloc_h=	pre-configure
+SUBST_MESSAGE.malloc_h=	Don't use malloc.h, use stdlib.h.
+SUBST_FILES.malloc_h=	providers/sqlite/sqlite-src/fts1.c
+SUBST_FILES.malloc_h+=	providers/sqlite/sqlite-src/fts1_porter.c
+SUBST_FILES.malloc_h+=	providers/sqlite/sqlite-src/fts1_tokenizer1.c
+SUBST_SED.malloc_h+=	-e 's|<malloc.h>|<stdlib.h>|'
 
 .if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
@@ -41,10 +48,8 @@ SUBST_FILES.libs=	providers/${LIBGDA_PROVIDER}/Makefile.in
 SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-3.0.la|${BUILDLINK_PREFIX.libgda}/lib/libgda-3.0.la|'
 
 .include "../../databases/libgda/buildlink3.mk"
-.endif
-
+.else
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
+.endif
