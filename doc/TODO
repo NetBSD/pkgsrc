@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6561 2007/08/04 11:15:44 obache Exp $
+$NetBSD: TODO,v 1.6562 2007/08/04 11:28:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -688,7 +688,6 @@ Suggested package updates
 	o libgii-1.0.2
 	o libgiigic-1.1.2
 	o libglade2-2.6.2
-	o libgnomedb-3.0.0
 	o libgtop2-2.14.9
 	o libhydrogen-0.9.2
 	o libidn-1.0
@@ -742,7 +741,6 @@ Suggested package updates
 	o mathomatic-12.7.3
 	o md-whois-4.7.20
 	o memtestplus-1.70
-	o mergeant-0.66
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
