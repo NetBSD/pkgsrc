@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6560 2007/08/03 17:05:07 obache Exp $
+$NetBSD: TODO,v 1.6561 2007/08/04 11:15:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -681,7 +681,6 @@ Suggested package updates
 	o libevent-1.3c
 	o libextractor-0.5.18a
 	o libflash-0.4.13
-	o libgda-3.0.1
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2

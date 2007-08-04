@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1693 2007/08/04 09:37:10 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.1694 2007/08/04 11:15:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3114,3 +3114,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-prewikka to 0.9.12.1 [shannonjr 2007-08-04]
 	Updated security/prelude-lml to 0.9.10 [shannonjr 2007-08-04]
 	Updated security/prelude-manager to 0.9.9 [shannonjr 2007-08-04]
+	Updated databases/libgda to 3.0.1 [obache 2007-08-04]
+	Updated databases/libgda-mysql to 3.0.1 [obache 2007-08-04]
+	Updated databases/libgda-postgres to 3.0.1 [obache 2007-08-04]
