@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2007/08/04 00:02:36 joerg Exp $
+
+--- src/script/qscriptlexer.cpp.orig	2007-08-03 23:04:51.000000000 +0000
++++ src/script/qscriptlexer.cpp
+@@ -683,7 +683,7 @@ int QScript::Lexer::lex()
+ 
+     double dval = 0;
+     if (state == Number) {
+-#if defined(Q_WS_WIN) || defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_CC_HPACC) || defined(Q_OS_AIX) || defined(Q_OS_OPENBSD)
++#if defined(Q_WS_WIN) || defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_CC_HPACC) || defined(Q_OS_AIX) || defined(Q_OS_OPENBSD) || defined(__DragonFly__)
+         // ### This may cause autotest failure, but that's just plain weird...
+         dval = strtod(buffer8, 0L);
+ #else
