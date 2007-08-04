@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:39 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/04 22:06:54 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,8 +9,6 @@ COMMENT=	X based e-mail and netnews client
 
 USE_TOOLS+=		msgfmt
 PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
-
-
 
 PKG_SYSCONFSUBDIR=	claws-mail
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

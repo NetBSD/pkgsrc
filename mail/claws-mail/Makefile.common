@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2007/08/03 02:34:39 smb Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/08/04 22:06:54 wiz Exp $
 
 DISTNAME=	claws-mail-${CLAWS_VERSION}
 CATEGORIES=	mail news x11
@@ -9,7 +9,6 @@ HOMEPAGE=	http://claws-mail.org/
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/claws-mail/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/claws-mail/patches
-
 
 # for SMTP, POP3 and IMAP over SSL
 # set these just in case we don't have a pkg-config file for openssl
@@ -57,5 +56,4 @@ CONFIGURE_ARGS+=	--disable-bogofilter-plugin
 CONFIGURE_ARGS+=	--disable-spamassassin-plugin
 
 .include "../../mail/claws-mail/Makefile.vers"
-
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
