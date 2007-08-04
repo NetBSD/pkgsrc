@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/06/01 00:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/08/04 12:00:02 shannonjr Exp $
 #
 
-DISTNAME=		gnupg-2.0.4
+DISTNAME=		gnupg-2.0.5
 PKGNAME=		${DISTNAME:S/gnupg/gnupg2/}
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -9,8 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		pth-2.0.7.tar.gz
 SITES.pth-2.0.7.tar.gz=	${MASTER_SITE_GNU:=pth/}
-DISTFILES+=		libassuan-1.0.1.tar.bz2
-SITES.libassuan-1.0.1.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
+DISTFILES+=		libassuan-1.0.2.tar.bz2
+SITES.libassuan-1.0.2.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
@@ -26,6 +26,7 @@ USE_TOOLS+=		automake
 USE_TOOLS+=		gettext
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+#LICENSE=		GPLv3
 
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--without-included-gettext
@@ -62,14 +63,14 @@ pre-configure:
 	cd  ${WRKDIR}/pth-2.0.7 && \
 	./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && \
 	${MAKE} install
-	cd  ${WRKDIR}/libassuan-1.0.1 && \
+	cd  ${WRKDIR}/libassuan-1.0.2 && \
 	${SETENV} ${CONFIGURE_ENV} ./autogen.sh && \
 	${SETENV} ${CONFIGURE_ENV} ./configure --enable-maintainer-mode --prefix=${WRKDIR}/libassuan --with-pth-prefix=${WRKDIR}/pth && \
 	${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} install
 	cd  ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./autogen.sh
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
-BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.0
+BUILDLINK_API_DEPENDS.libksba+=		libksba>=1.0.2
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
