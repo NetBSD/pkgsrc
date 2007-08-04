@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/01/21 19:16:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/08/04 11:26:32 obache Exp $
 bin/mergeant
 lib/bonobo/servers/GNOME_Mergeant.server
 share/application-registry/mergeant.applications
@@ -11,6 +11,7 @@ share/locale/ca/LC_MESSAGES/mergeant.mo
 share/locale/cs/LC_MESSAGES/mergeant.mo
 share/locale/da/LC_MESSAGES/mergeant.mo
 share/locale/de/LC_MESSAGES/mergeant.mo
+share/locale/dz/LC_MESSAGES/mergeant.mo
 share/locale/el/LC_MESSAGES/mergeant.mo
 share/locale/en_CA/LC_MESSAGES/mergeant.mo
 share/locale/en_GB/LC_MESSAGES/mergeant.mo
@@ -35,6 +36,7 @@ share/locale/pt_BR/LC_MESSAGES/mergeant.mo
 share/locale/ru/LC_MESSAGES/mergeant.mo
 share/locale/rw/LC_MESSAGES/mergeant.mo
 share/locale/sk/LC_MESSAGES/mergeant.mo
+share/locale/sl/LC_MESSAGES/mergeant.mo
 share/locale/sq/LC_MESSAGES/mergeant.mo
 share/locale/sr/LC_MESSAGES/mergeant.mo
 share/locale/sr@Latn/LC_MESSAGES/mergeant.mo
