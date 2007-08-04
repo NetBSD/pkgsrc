@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2007/01/21 19:14:20 wiz Exp $
+$NetBSD: patch-ad,v 1.8 2007/08/04 11:13:38 obache Exp $
 
---- configure.orig	2006-12-22 14:01:49.000000000 +0000
+--- configure.orig	2007-05-04 21:42:33.000000000 +0000
 +++ configure
-@@ -25993,6 +25993,8 @@ else
+@@ -25228,6 +25228,8 @@ else
    BUILD_CONFIG_TOOL_TRUE='#'
    BUILD_CONFIG_TOOL_FALSE=
  fi
