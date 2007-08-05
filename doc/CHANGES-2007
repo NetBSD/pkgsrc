@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1707 2007/08/05 13:58:05 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1708 2007/08/05 18:42:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/p5-Template-Multilingual version 0.09 [obache 2007-08-05]
 	Updated security/EasyPG to 0.0.14.nb1 [jnemeth 2007-08-05]
 	Updated devel/p5-Module-CoreList to 2.12 [seb 2007-08-05]
+	Updated mail/imap-uw to 2006j2nb2 [tron 2007-08-05]
