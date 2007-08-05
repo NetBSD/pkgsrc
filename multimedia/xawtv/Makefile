@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/02/02 14:55:37 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/08/05 15:04:38 joerg Exp $
 #
 
 DISTNAME=	xawtv-3.95
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dl.bytesex.org/releases/xawtv/
 
@@ -12,7 +12,9 @@ COMMENT=	TV application for Brooktree 848 compatible cards
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl bash:run
+
+REPLACE_BASH=		scripts/subtitles
 
 CONFIGURE_ARGS+=	--disable-aalib
 CONFIGURE_ARGS+=	--disable-motif
