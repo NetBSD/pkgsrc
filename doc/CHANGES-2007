@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1702 2007/08/05 02:36:12 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1703 2007/08/05 04:59:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3127,3 +3127,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/gnumeric-current to 1.7.10nb4 [obache 2007-08-04]
 	Updated graphics/rabbit to 0.5.3 [obache 2007-08-04]
 	Updated x11/xf86-video-nv to 2.1.2 [joerg 2007-08-05]
+	Updated mail/imap-uw to 2006j2nb1 [obache 2007-08-05]
+	Updated mail/mailsync to 5.2.1nb2 [obache 2007-08-05]
+	Updated mail/php-imap to 5.2.3nb1 [obache 2007-08-05]
+	Updated mail/pine to 4.64nb2 [obache 2007-08-05]
+	Updated mail/prayer to 1.0.18nb1 [obache 2007-08-05]
