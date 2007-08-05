@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1711 2007/08/05 22:40:35 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1712 2007/08/05 23:46:29 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3146,3 +3146,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/imap-uw to 2006j2nb2 [tron 2007-08-05]
 	Updated fonts/font-util to 1.0.1nb1 [joerg 2007-08-05]
 	Updated sysutils/gamin to 0.1.9 [tnn 2007-08-05]
+	Updated x11/modular-xorg-server to 1.3.0.0 [joerg 2007-08-05]
+	Updated x11/xf86-input-mouse to 1.2.2 [joerg 2007-08-05]
+	Updated x11/xf86-input-keyboard to 1.2.0 [joerg 2007-08-05]
