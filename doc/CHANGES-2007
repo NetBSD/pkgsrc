@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1705 2007/08/05 05:58:11 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1706 2007/08/05 08:39:56 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3134,3 +3134,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/prayer to 1.0.18nb1 [obache 2007-08-05]
 	Updated devel/doxymacs to 1.8.0 [dsainty 2007-08-05]
 	Added www/p5-Template-Multilingual version 0.09 [obache 2007-08-05]
+	Updated security/EasyPG to 0.0.14.nb1 [jnemeth 2007-08-05]
