@@ -33,7 +33,7 @@ file created in (a). Compress the tarball with gzip.
 (c)
 Edit /usr/pkg_bulk/etc/pbulk.conf:
 - For NetBSD:
-  - pkg_install_prefix should /usr.
+  - pkg_install_prefix should be /usr.
   - bootstrapkit should be empty.
 - For non-NetBSD:
   - pkg_install_prefix should /usr/pkg_bulk.
@@ -68,6 +68,5 @@ X11_TYPE=	modular
 
 _ACCEPTABLE=			yes
 ALLOW_VULNERABLE_PACKAGES=	yes
-SKIP_AUDIT_packages=		yes
 
 PKG_DEVELOPER?= yes
