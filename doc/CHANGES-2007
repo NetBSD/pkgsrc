@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1708 2007/08/05 18:42:06 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1709 2007/08/05 19:21:30 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/EasyPG to 0.0.14.nb1 [jnemeth 2007-08-05]
 	Updated devel/p5-Module-CoreList to 2.12 [seb 2007-08-05]
 	Updated mail/imap-uw to 2006j2nb2 [tron 2007-08-05]
+	Updated fonts/font-util to 1.0.1nb1 [joerg 2007-08-05]
