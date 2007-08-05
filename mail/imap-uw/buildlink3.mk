@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/26 20:00:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/08/05 04:51:34 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}imap-uw
 
 .if !empty(IMAP_UW_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004
-BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2004enb1
+BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2006j2nb1
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 .endif	# IMAP_UW_BUILDLINK3_MK
 
