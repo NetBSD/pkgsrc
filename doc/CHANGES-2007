@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1703 2007/08/05 04:59:53 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1704 2007/08/05 05:21:19 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/php-imap to 5.2.3nb1 [obache 2007-08-05]
 	Updated mail/pine to 4.64nb2 [obache 2007-08-05]
 	Updated mail/prayer to 1.0.18nb1 [obache 2007-08-05]
+	Updated devel/doxymacs to 1.8.0 [dsainty 2007-08-05]
