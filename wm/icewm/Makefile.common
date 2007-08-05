@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2007/06/15 17:43:40 joerg Exp $
+# $NetBSD: Makefile.common,v 1.59 2007/08/05 16:03:38 obache Exp $
 
 DISTNAME=		icewm-1.2.27
 CATEGORIES=		x11 wm
@@ -35,6 +35,15 @@ PKG_SYSCONFSUBDIR=	icewm
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CXXFLAGS+=		-DSTART_PIXMAP="\"bsd-daemon.xpm\""
+.endif
+
+.if ${OPSYS} == "NetBSD" && (!exists(/usr/include/machine/apmvar.h) || \
+	(${MACHINE_ARCH} == "sparc64" && !exists(/usr/include/sparc/apmvar.h)))
+SUBST_CLASSES+=		apm
+SUBST_STAGE.apm=	post-configure
+SUBST_FILES.apm=	src/config.h
+SUBST_SED.apm=		-e 's,define CONFIG_APPLET_APM 1,undef CONFIG_APPLET_APM,'
+SUBST_MESSAGE.apm=	Disable APM applet.
 .endif
 
 .if ${OPSYS} == "NetBSD"
