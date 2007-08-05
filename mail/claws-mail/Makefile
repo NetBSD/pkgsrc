@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/04 22:06:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/05 01:25:44 smb Exp $
 
 .include "Makefile.common"
 
@@ -6,6 +6,9 @@
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
+PKGREVISION=	1
+
+CONFLICTS+=	sylpheed-claws-[0-9]*
 
 USE_TOOLS+=		msgfmt
 PKGCONFIG_OVERRIDE+=	claws-mail.pc.in
