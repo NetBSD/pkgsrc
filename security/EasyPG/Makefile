@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/07/31 12:32:43 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/05 08:38:26 jnemeth Exp $
 
 DISTNAME=	epg-0.0.14
+PKGREVISION=	1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/epg/EasyPG/}
 CATEGORIES=	security mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=epg/26512/}
@@ -11,6 +12,8 @@ COMMENT=	GnuPG interface for emacs
 
 GNU_CONFIGURE=	YES
 MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX:Q}
+
+INFO_FILES=	# PLIST
 
 # per README: GnuPG 1.4.3
 DEPENDS+=	gnupg>=1.4.3:../../security/gnupg
