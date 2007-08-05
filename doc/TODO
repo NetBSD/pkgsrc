@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6562 2007/08/04 11:28:36 obache Exp $
+$NetBSD: TODO,v 1.6563 2007/08/05 20:05:43 tnn Exp $
 
 Suggested new packages
 ======================
@@ -487,7 +487,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o gaim-icb-20070203
-	o gamin-0.1.8
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.10
