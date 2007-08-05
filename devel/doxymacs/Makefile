@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/08/05 05:01:03 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/05 05:19:19 dsainty Exp $
 #
 
-DISTNAME=	doxymacs-1.7.0
+DISTNAME=	doxymacs-1.8.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=doxymacs/}
