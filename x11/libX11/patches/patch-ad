@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2007/08/01 16:48:41 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2007/08/05 22:39:38 joerg Exp $
 
---- src/util/Makefile.am.orig	2006-10-04 19:43:17.000000000 +0200
+--- src/util/Makefile.am.orig	2007-05-16 17:34:44.000000000 +0200
 +++ src/util/Makefile.am
 @@ -1,11 +1,15 @@
  # $XdotOrg: lib/X11/src/util/Makefile.am,v 1.4 2006-02-19 02:14:12 jamey Exp $
