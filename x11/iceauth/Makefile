@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/05/07 20:13:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/05 21:15:45 joerg Exp $
 #
 
-DISTNAME=		iceauth-1.0.1
+DISTNAME=		iceauth-1.0.2
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
