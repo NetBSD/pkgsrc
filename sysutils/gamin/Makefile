@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/08/05 20:03:35 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/05 20:16:46 tnn Exp $
 
 DISTNAME=	gamin-0.1.9
 CATEGORIES=	sysutils
@@ -26,12 +26,6 @@ SUBST_MESSAGE.sysconfdir=fixing up sysconfdir
 SUBST_STAGE.sysconfdir=	pre-configure
 SUBST_FILES.sysconfdir=	doc/config.html doc/gamin.html server/gam_conf.c
 SUBST_SED.sysconfdir=	-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
-
-SUBST_CLASSES+=		versioning
-SUBST_MESSAGE.versioning=removing GNU ld(1) --version-script flag
-SUBST_STAGE.versioning=	pre-configure
-SUBST_FILES.versioning=	libgamin/Makefile.in
-SUBST_SED.versioning=	-e 's|-Wl,--version-script.*sym.version||g'
 
 .include "../../devel/glib2/buildlink3.mk"
 
