@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2007/08/05 22:39:38 joerg Exp $
 
---- configure.orig	2007-06-04 06:44:39.000000000 +0200
+--- configure.orig	2007-08-06 00:08:02.000000000 +0200
 +++ configure
-@@ -924,6 +924,8 @@ XKB_FALSE
+@@ -926,6 +926,8 @@ XKB_FALSE
  XKBPROTO_CFLAGS
  XKBPROTO_LIBS
  XKBPROTO_REQUIRES
@@ -11,11 +11,11 @@ $NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
  LINT
  LINT_FLAGS
  LINT_TRUE
-@@ -23199,6 +23201,17 @@ fi
+@@ -23423,6 +23425,15 @@ else
+ fi
  
  
- 
-+if  test $cross_compiling = yes ; then
++ if  test $cross_compiling = yes ; then
 +  CROSS_COMPILING_TRUE=
 +  CROSS_COMPILING_FALSE='#'
 +else
@@ -24,12 +24,10 @@ $NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
 +fi
 +
 +
-+
-+
+ 
+ 
  for ac_header in stdlib.h unistd.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
-@@ -24299,6 +24312,13 @@ echo "$as_me: error: conditional \"XKB\"
+@@ -24523,6 +24534,13 @@ echo "$as_me: error: conditional \"XKB\"
  Usually this means the macro was only invoked conditionally." >&2;}
     { (exit 1); exit 1; }; }
  fi
@@ -43,7 +41,7 @@ $NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
  if test -z "${LINT_TRUE}" && test -z "${LINT_FALSE}"; then
    { { echo "$as_me:$LINENO: error: conditional \"LINT\" was never defined.
  Usually this means the macro was only invoked conditionally." >&5
-@@ -25112,6 +25132,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
+@@ -25339,6 +25357,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
  XKBPROTO_CFLAGS!$XKBPROTO_CFLAGS$ac_delim
  XKBPROTO_LIBS!$XKBPROTO_LIBS$ac_delim
  XKBPROTO_REQUIRES!$XKBPROTO_REQUIRES$ac_delim
@@ -52,12 +50,12 @@ $NetBSD: patch-ac,v 1.1 2007/08/01 16:48:41 joerg Exp $
  LINT!$LINT$ac_delim
  LINT_FLAGS!$LINT_FLAGS$ac_delim
  LINT_TRUE!$LINT_TRUE$ac_delim
-@@ -25133,7 +25155,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+@@ -25360,7 +25380,7 @@ LIBOBJS!$LIBOBJS$ac_delim
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 77; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 79; then
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 79; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 81; then
      break
    elif $ac_last_try; then
      { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
