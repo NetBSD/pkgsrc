@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/07/14 20:17:06 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2007/08/05 17:21:50 adrianp Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -34,7 +34,8 @@ A sample audit-packages.conf has been installed to:
 
 	${EGDIR}/audit-packages.conf
 
-You may want to customise this file and copy it to /etc/audit-packages.conf.
+You may want to customise this file and copy it to 
+${PKG_SYSCONFDIR}/audit-packages.conf.
 If you want to use signature verification you will need to install GnuPG and
 set the path for GPG appropriately in your audit-packages.conf.  See
 audit-packages.conf(5) and audit-packages(8) for further information.
