@@ -1,4 +1,4 @@
-/*	$NetBSD: opattern.c,v 1.1 2007/07/20 22:22:53 joerg Exp $	*/
+/*	$NetBSD: opattern.c,v 1.2 2007/08/05 14:58:49 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: opattern.c,v 1.1 2007/07/20 22:22:53 joerg Exp $");
+__RCSID("$NetBSD: opattern.c,v 1.2 2007/08/05 14:58:49 joerg Exp $");
 #endif
 #endif
 
@@ -149,8 +149,19 @@ pkg_match(const char *pattern, const char *pkg)
 int
 pkg_order(const char *pattern, const char *first_pkg, const char *second_pkg)
 {
-	const char *first_version = strrchr(first_pkg, '/');
-	const char *second_version = strrchr(second_pkg, '/');
+	const char *first_version;
+	const char *second_version;
+
+	if (first_pkg == NULL && second_pkg == NULL)
+		return 0;
+
+	if (first_pkg == NULL)
+		return pkg_match(pattern, second_pkg) ? 2 : 0;
+	if (second_pkg == NULL)
+		return pkg_match(pattern, first_pkg) ? 1 : 0;
+
+	first_version = strrchr(second_pkg, '-');
+	second_version = strrchr(first_pkg, '-');
 
 	if (first_version == NULL || !pkg_match(pattern, first_pkg))
 		return pkg_match(pattern, second_pkg) ? 2 : 0;
