@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.12 2007/04/11 13:12:15 tnn Exp $
+# $NetBSD: tools.OSF1.mk,v 1.13 2007/08/05 12:38:22 tnn Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 
@@ -22,7 +22,7 @@ TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/usr/bin/grep -F
-TOOLS_PLATFORM.file?=		/usr/bin/file
+TOOLS_PLATFORM.file?=		/usr/bin/printf "%s: text\n"
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
