@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.4 2007/07/21 15:29:50 tnn Exp $ */
+/* $NetBSD: pbuild.c,v 1.5 2007/08/05 14:15:55 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -138,7 +138,7 @@ main(int argc, char **argv)
 		stat_mode(stat_port);
 	}
 
-	if (master_mode == NULL) {
+	if (master_port == NULL) {
 		build_cmd = strrchr(build_path, '/');
 		if (build_cmd == NULL)
 			build_cmd = build_path;
