@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.104 2007/08/03 11:54:31 joerg Exp $
+# $NetBSD: bootstrap,v 1.105 2007/08/05 16:12:15 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -757,7 +757,7 @@ fi
 
 if [ "$need_xargs" = "yes" ]; then
 	echo_msg "Installing fixed xargs script"
-	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/xargs-sh $prefix/bin/xargs"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $pkgsrcdir/pkgtools/bootstrap-extras/files/xargs-sh $wrkdir/bin/xargs"
 	echo "TOOLS_PLATFORM.xargs?=		$prefix/bin/xargs" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.xargs?=		$wrkdir/bin/xargs" >> ${BOOTSTRAP_MKCONF}
 	need_extras=yes
