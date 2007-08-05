@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/08/03 17:03:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/08/05 04:51:34 obache Exp $
 bin/dmail
 bin/mailutil
 bin/mlock
@@ -24,6 +24,7 @@ include/c-client/rfc822.h
 include/c-client/smtp.h
 include/c-client/tcp.h
 include/c-client/utf8.h
+include/c-client/utf8aux.h
 lib/libc-client.la
 lib/libc-client_pic.a
 libexec/imapd
