@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.517 2007/07/14 22:35:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.518 2007/08/05 05:57:09 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -264,6 +264,7 @@ SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-SVN-Web
 SUBDIR+=	p5-Template-Extract
 SUBDIR+=	p5-Template-Generate
+SUBDIR+=	p5-Template-Multilingual
 SUBDIR+=	p5-Template-Stash-EscapeHTML
 SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-Test-WWW-Mechanize
