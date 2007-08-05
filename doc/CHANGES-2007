@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1704 2007/08/05 05:21:19 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.1705 2007/08/05 05:58:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3133,3 +3133,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/pine to 4.64nb2 [obache 2007-08-05]
 	Updated mail/prayer to 1.0.18nb1 [obache 2007-08-05]
 	Updated devel/doxymacs to 1.8.0 [dsainty 2007-08-05]
+	Added www/p5-Template-Multilingual version 0.09 [obache 2007-08-05]
