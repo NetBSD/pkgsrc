@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/17 19:03:16 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/05 19:07:54 joerg Exp $
 #
 
 DISTNAME=	orca-2.18.1
@@ -12,7 +12,7 @@ COMMENT=	Screen reader
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config gmake
+USE_TOOLS+=	intltool pkg-config gmake msgfmt
 USE_DIRS+=	xdg-1.1
 
 PYTHON_VERSIONS_ACCEPTED= 24
