@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/07/27 09:59:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/05 12:30:10 tnn Exp $
 
 DISTNAME=	pbulk-0.10
 CATEGORIES=	pkgtools
@@ -19,8 +19,8 @@ USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
 		mail:run
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
-SUBST_CLASSES+=	tools
-SUBST_STAGE.tools=	pre-configure
+SUBST_CLASSES+=		tools
+SUBST_STAGE.tools=	post-patch
 SUBST_MESSAGE.tools=	Fixing references to tools
 SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/bulkbuild scripts/client-clean \
