@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+$NetBSD: distinfo,v 1.2 2007/08/05 19:15:47 joerg Exp $
 
 SHA1 (dvdisaster-0.70.4.tar.bz2) = 0ab5fe59d4c91e77c2f73b389485d0f5443d8873
 RMD160 (dvdisaster-0.70.4.tar.bz2) = 917457581309db33aef5ceddc7dddbd2ef084497
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 3cf91a78105fac99e176fa261b10989a9c9956b6
 SHA1 (patch-ae) = 9386da56b3668141eed764714a1d07a7bb1700c4
 SHA1 (patch-af) = 33069cda271d85634189b712a1361ed2232dc804
 SHA1 (patch-ag) = 3dad3065b93817f091dea422787192e02e0e52d8
+SHA1 (patch-ah) = 9cb1e03dc8c13e560a2f862811a4e828563db112
