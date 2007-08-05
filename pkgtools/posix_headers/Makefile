@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/01 21:33:40 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/05 11:10:11 tnn Exp $
 
 DISTNAME=		posix_headers-0.5
 CATEGORIES=		pkgtools
@@ -23,8 +23,8 @@ do-extract:
 
 do-build:
 	cd ${WRKSRC} && ./make.sh
-	find ${WRKSRC} -name "*.h" | sed s,${WRKSRC}/,, > ${WRKSRC}/hfiles
-	cat ${WRKSRC}/hfiles | sed s,^,include/, > ${PLIST_SRC}
+	find ${WRKSRC} -name "*.h" | sed 's,${WRKSRC}/,,' > ${WRKSRC}/hfiles
+	cat ${WRKSRC}/hfiles | sed 's,^,include/,' > ${PLIST_SRC}
 
 do-install:
 	for f in `cat ${WRKSRC}/hfiles`; do \
