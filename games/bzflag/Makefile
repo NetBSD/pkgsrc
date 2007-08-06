@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/08/06 22:41:06 xtraeme Exp $
 
-DISTNAME=	bzflag-2.0.2.20050318
-PKGNAME=	${DISTNAME:S/.20050318//}
-PKGREVISION=	4
+DISTNAME=	bzflag-2.0.8
+#PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
@@ -13,6 +12,7 @@ COMMENT=	OpenGL tank game
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 USE_NCURSES=	# resize_term()
 
 .include "../../mk/bsd.prefs.mk"
