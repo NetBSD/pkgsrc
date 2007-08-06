@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2007/08/03 00:55:08 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2007/08/06 15:07:56 tnn Exp $
 
-DISTNAME=	pkg_rolling-replace-0.5
+DISTNAME=	pkg_rolling-replace-0.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,11 +22,13 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
-SUBST_CLASSES+=		makepath
-SUBST_STAGE.makepath=	pre-configure
-SUBST_MESSAGE.makepath=	Fixing path to ${MAKE}.
-SUBST_FILES.makepath=	pkg_rolling-replace.sh
-SUBST_SED.makepath=	-e 's,@MAKE@,${MAKE},g'
+PKG_CHK?=		${PREFIX}/sbin/pkg_chk
+
+SUBST_CLASSES+=		tools
+SUBST_STAGE.tools=	pre-configure
+SUBST_MESSAGE.tools=	Substituting tool locations.
+SUBST_FILES.tools=	pkg_rolling-replace.sh
+SUBST_VARS.tools=	PKG_INFO_CMD PKG_ADMIN MAKE PKG_CHK
 
 SUBST_CLASSES+=		makeconf
 SUBST_STAGE.makeconf=	pre-configure

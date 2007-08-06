@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.11 2007/08/03 00:55:09 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.12 2007/08/06 15:07:56 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -64,12 +64,14 @@
 # Substituted by pkgsrc at pre-configure time.
 MAKE="@MAKE@"
 
-test -z "$PKG_DBDIR" && PKG_DBDIR=/var/db/pkg
 test -z "$MAKECONF" && MAKECONF="@MAKECONF@"
 test -f "$MAKECONF" && test -z "$PKGSRCDIR" && PKGSRCDIR="` \
     printf '.include "%s"\n_print_pkgsrcdir:\n\t@echo "${PKGSRCDIR}"\n' \
     "$MAKECONF" | "$MAKE" -f - BSD_PKG_MK=1 _print_pkgsrcdir`"
 test -z "$PKGSRCDIR" && PKGSRCDIR=/usr/pkgsrc
+test -z "$PKG_CHK" && PKG_CHK="@PKG_CHK@"
+test -z "$PKG_INFO" && PKG_INFO="@PKG_INFO_CMD@"
+test -z "$PKG_ADMIN" && PKG_ADMIN="@PKG_ADMIN@"
 
 unset PKG_PATH || true  #or pkgsrc makefiles will complain
 
@@ -118,7 +120,7 @@ OPC='rr>' # continuation
 # supported.  Newer versions may or may not work (patches welcome).
 check_packages_mismatched()
 {
-    pkg_chk -u -q | while read line; do
+    ${PKG_CHK} -u -q | while read line; do
         # duplicate output of pkg_chk to stderr (bypass $(...) or `...`)
         echo "${OPC} $line" 1>&2
 	# Look for the first thing that looks like pkg-version rather
@@ -137,8 +139,8 @@ check_packages_mismatched()
 check_packages_w_flag()
 {
     _flag=$1; shift
-    for pkgver in $(pkg_info -e '*'); do
-        if pkg_info -Bq $pkgver \
+    for pkgver in $(${PKG_INFO} -e '*'); do
+        if ${PKG_INFO} -Bq $pkgver \
                 | egrep "^$_flag=[Yy][Ee][Ss]" > /dev/null; then
             echo $pkgver | sed 's/-[0-9][^-]*$//'
         fi
@@ -148,11 +150,11 @@ check_packages_w_flag()
 # echo dep->pkg edges for all installed packages
 depgraph_installed()
 {
-    for pkgver in $(pkg_info -e '*'); do
+    for pkgver in $(${PKG_INFO} -e '*'); do
         pkg=$(echo $pkgver | sed 's/-[0-9][^-]*$//')
 	# Include $pkg as a node without dependencies in case it has none.
         echo $pkg $pkg
-        for depver in $(pkg_info -Nq $pkg); do
+        for depver in $(${PKG_INFO} -Nq $pkg); do
             dep=$(echo $depver | sed 's/-[0-9][^-]*$//')
             echo $dep $pkg
         done
@@ -301,7 +303,7 @@ while [ -n "$REPLACE_TODO" ]; do
             break;
         fi
     done
-    pkgdir=$(pkg_info -Bq $pkg | awk -F= '/PKGPATH=/{print $2}')
+    pkgdir=$(${PKG_INFO} -Bq $pkg | awk -F= '/PKGPATH=/{print $2}')
     echo "${OPI} Selecting $pkg ($pkgdir) as next package to replace"
     sleep 1
 
@@ -328,7 +330,7 @@ while [ -n "$REPLACE_TODO" ]; do
 
     if ! is_member $pkg $DEPENDS_CHECKED; then
 	echo "${OPI} Checking if $pkg has new depends..."
-	OLD_DEPENDS=$(pkg_info -Nq $pkg | sed 's/-[0-9][^-]*$//')
+	OLD_DEPENDS=$(${PKG_INFO} -Nq $pkg | sed 's/-[0-9][^-]*$//')
 	NEW_DEPENDS=
 	cd "$PKGSRCDIR/$pkgdir"
 	bdeps=$(${MAKE} show-depends VARNAME=BUILD_DEPENDS)
@@ -351,14 +353,20 @@ while [ -n "$REPLACE_TODO" ]; do
     fi
 
     # Do make replace, with clean before, and package and clean afterwards.
-    echo "${OPI} Replacing $(pkg_info -e $pkg)"
+    echo "${OPI} Replacing $(${PKG_INFO} -e $pkg)"
     FAIL=
+    cmd="cd \"$PKGSRCDIR/$pkgdir\" \
+	    && ${MAKE} clean && ${MAKE} replace \
+	    && ([ -z \"$(${PKG_INFO} -Q unsafe_depends $pkg)\" ] \
+		|| ${PKG_ADMIN} unset unsafe_depends $pkg) \
+	    && ([ -z \"$(${PKG_INFO} -Q rebuild $pkg)\" ] \
+		|| ${PKG_ADMIN} unset rebuild $pkg) \
+	    && ${MAKE} package && ${MAKE} clean \
+	    || FAIL=1"
     if [ -z "$opt_n" ]; then
-	cd "$PKGSRCDIR/$pkgdir" \
-	    && ${MAKE} clean && ${MAKE} replace && ${MAKE} package && ${MAKE} clean \
-	    || FAIL=1
+	eval "$cmd"
     else
-	echo "cd $PKGSRCDIR/$pkgdir && ${MAKE} clean && ${MAKE} replace && ${MAKE} package && ${MAKE} clean"
+	echo "$cmd"
     fi
     if [ -n "$FAIL" ]; then
         echo "*** 'make replace' failed for package $pkg."
