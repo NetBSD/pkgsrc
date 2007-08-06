@@ -1,4 +1,4 @@
-/*	NetBSD: filecomplete.h,v 1.1.1.1 2005/05/31 01:53:11 lukem Exp	*/
+/*	$NetBSD: filecomplete.h,v 1.1.1.2 2007/08/06 16:48:57 lukem Exp $	*/
 /*	from	NetBSD: filecomplete.h,v 1.2 2005/05/07 16:28:32 dsl Exp	*/
 
 /*-
