@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.2.2 2007/08/06 21:13:14 ghen Exp $
+
+Fix for CVE-2007-3806.
+
+--- ext/standard/dir.c.orig	2007-02-25 02:16:23.000000000 +0900
++++ ext/standard/dir.c
+@@ -395,6 +395,7 @@ PHP_FUNCTION(glob)
+ 	} 
+ #endif
+ 
++	memset(&globbuf, 0, sizeof(glob_t));
+ 	globbuf.gl_offs = 0;
+ 	if (0 != (ret = glob(pattern, flags & GLOB_FLAGMASK, NULL, &globbuf))) {
+ #ifdef GLOB_NOMATCH
