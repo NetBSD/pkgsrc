@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1714 2007/08/06 08:52:16 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1715 2007/08/06 10:03:12 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3156,3 +3156,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/claws-mail-mailmbox version 1.13.1 [smb 2007-08-05]
 	Added mail/claws-mail-rssyl version 0.14 [smb 2007-08-05]
 	Updated www/firefox-bin to 2.0.0.6nb1 [tron 2007-08-06]
+	Updated wm/ion3-devel to 20070720 [ghen 2007-08-06]
+	Updated x11/rxvt-unicode to 8.3 [ghen 2007-08-06]
