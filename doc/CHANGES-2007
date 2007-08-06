@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1725 2007/08/06 21:41:21 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1726 2007/08/06 22:42:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3177,3 +3177,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/claws-mail-gtkhtml to 0.15.1 [smb 2007-08-06]
 	Updated mail/claws-mail-vcalendar to 1.96 [smb 2007-08-06]
 	Updated mail/claws-mail-rssyl to 0.14 [smb 2007-08-06]
+	Updated games/bzflag to 2.0.8 [xtraeme 2007-08-06]
