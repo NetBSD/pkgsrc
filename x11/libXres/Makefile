@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/23 14:33:30 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/06 14:05:21 joerg Exp $
 #
 
 DISTNAME=		libXres-1.0.3
@@ -17,6 +17,12 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xres.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
