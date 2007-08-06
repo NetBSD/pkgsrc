@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/07/29 05:20:04 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/08/06 08:51:40 tron Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -14,6 +14,13 @@ USE_LANGUAGES=		# empty
 FILESDIR=		${.CURDIR}/../../www/seamonkey-bin/files
 MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
 
+.include "../../mk/bsd.prefs.mk"
+
+# Include Makefile.${EMUL_PLATFORM} to get definitions for DISTNAME,
+# MOZ_PLATFORM and MOZ_GTK2.
+#
+.sinclude "${.CURDIR}/Makefile.${EMUL_PLATFORM}"
+
 .if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 EMUL_MODULES.linux=	compat gtk2 locale
 SUSE_VERSION_REQD=	9.1
@@ -22,8 +29,6 @@ EMUL_MODULES.linux=	compat gtk
 SUSE_VERSION_REQD=	7.3
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
 .if !empty(EMUL_DISTRO:Mnative-*)
 .  if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 DEPENDS+=		gtk2+>=2.2:../../x11/gtk2
@@ -31,11 +36,6 @@ DEPENDS+=		gtk2+>=2.2:../../x11/gtk2
 DEPENDS+=		gtk2+>=1.2:../../x11/gtk
 .  endif
 .endif
-
-# Include Makefile.${EMUL_PLATFORM} to get definitions for DISTNAME
-# and MOZ_PLATFORM.
-#
-.sinclude "${.CURDIR}/Makefile.${EMUL_PLATFORM}"
 
 MOZILLA_SHORT=		${MOZILLA}
 MOZ_DIR?=		${MOZ_VER}
