@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2007/08/04 12:16:44 smb Exp $
+# $NetBSD: Makefile,v 1.325 2007/08/06 00:33:05 smb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -19,10 +19,15 @@ SUBDIR+=	bulk_mailer
 SUBDIR+=	clamav
 SUBDIR+=	clamsmtp
 SUBDIR+=	claws-mail
+SUBDIR+=	claws-mail-attachwarner
+SUBDIR+=	claws-mail-attremover
 SUBDIR+=	claws-mail-bogofilter
+SUBDIR+=	claws-mail-cachesaver
 SUBDIR+=	claws-mail-clamav
 SUBDIR+=	claws-mail-dillo-viewer
+SUBDIR+=	claws-mail-fetchinfo
 SUBDIR+=	claws-mail-gtkhtml
+SUBDIR+=	claws-mail-mailmbox
 SUBDIR+=	claws-mail-newmail
 SUBDIR+=	claws-mail-notification
 SUBDIR+=	claws-mail-pdf_viewer
@@ -30,6 +35,7 @@ SUBDIR+=	claws-mail-pgp
 SUBDIR+=	claws-mail-pgpcore
 SUBDIR+=	claws-mail-pgpinline
 SUBDIR+=	claws-mail-pgpmime
+SUBDIR+=	claws-mail-rssyl
 SUBDIR+=	claws-mail-smime
 SUBDIR+=	claws-mail-spamassassin
 SUBDIR+=	claws-mail-trayicon
