@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/15 14:03:57 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/06 12:31:25 gdt Exp $
 bin/au
 bin/cfs
 bin/clog
@@ -9,6 +9,7 @@ bin/cpasswd
 bin/ctokens
 bin/cunlog
 bin/filerepair
+bin/gcodacon
 bin/getvolinfo
 bin/hoard
 bin/mkcodabf
@@ -21,7 +22,6 @@ bin/rpc2ping
 bin/rvmsizer
 bin/smon2
 bin/spy
-bin/vcodacon
 bin/xaskuser
 bin/xfrepair
 etc/coda/realms
@@ -74,7 +74,6 @@ sbin/backup
 sbin/backup.sh
 sbin/bldvldb.sh
 sbin/coda-server-logrotate
-sbin/coda-setup-ports
 sbin/codaconfedit
 sbin/codadump2tar
 sbin/codasrv
@@ -93,6 +92,7 @@ sbin/purgevol_rep
 sbin/readdump
 sbin/startserver
 sbin/tape.pl
+sbin/tokentool
 sbin/updateclnt
 sbin/updatefetch
 sbin/updatesrv
