@@ -1,4 +1,183 @@
-NetBSD: ChangeLog,v 1.30 2005/06/25 06:27:32 lukem Exp
+$NetBSD: ChangeLog,v 1.1.1.7 2007/08/06 04:58:04 lukem Exp $
+
+Mon Aug  6 04:55:19 UTC 2007	lukem
+
+	* Release as "tnftp 20070806"
+
+	* Add a NEWS file.
+
+	* Reduce differences between NetBSD-ftp and local copy.
+
+	* Merge NetBSD ftp from 20070605 to 20070722.
+	  Changes:
+		- Document about:ftp and about:version.
+
+	* Add autoconf check for (Dante) SOCKS5.
+	  (Needs run-time testing and more portability testing.)
+
+Mon Jul 23 11:44:42 UTC 2007	lukem
+
+	* Don't use non-standard: u_char u_short u_int.
+	  Use uint32_t instead of u_int32_t.
+
+	* Consistently use AS_CASE() and AS_IF() in configure.ac.
+
+	* Don't use defined() with HAVE_DECL_xxx.
+	  Use `LL' instead of `L' suffix for fallback
+	  defines of LLONG_MIN and LLONG_MAX.
+
+Sun Jul 22 12:00:17 UTC 2007	lukem
+
+	* Include <arpa/nameser.h> if available, and provide fallback #defines.
+
+	* Sync with lib/libc/inet/inet_pton.c 1.3:
+		* Sync to bind 9.3.x version
+		* Update ISC copyright
+		* Fix some lint
+
+	* Sync with lib/libc/inet/inet_ntop.c 1.3:
+		* Sync to bind 9.3.x version
+		* Update ISC copyright
+		* Use socklen_t instead of size_t
+		* Use snprintf() instead of SPRINTF()
+		* Improve detection of various boundary conditions
+
+	* Sync to NetBSD glob.h 1.21, glob.c 1.16:
+		* Standards compliance fix
+		* De-lint
+		* Don't overflow when DEBUG is defined.
+
+        * Sync fgetln.c to tools/compat/fgetln.c 1.7:
+		* Clause 3 removal.
+
+	* Sync to config.guess 2007-07-22, config.sub 2007-06-28.
+
+	* Consistency tweaks in configure help strings.
+
+	* Add check for struct sockaddr.sa_len.
+	  Change tests for HAVE_foo to defined(HAVE_foo).
+	  Replace HAVE_SOCKADDR_SA_LEN with HAVE_STRUCT_SOCKADDR_SA_LEN.
+
+	* Remove pretence of supporting SOCKS for now;
+	  no test system is available, and the old
+	  autoconf 2.13 support wasn't upgraded to 2.61.
+	  
+	* configure.ac style consistency tweaks.
+	  Move autoconf aux files from ./ to build-aux/
+
+	* Remove duplicate HAVE_STRERROR replacement in tnftp.h.
+
+Thu Jun  7 04:47:47 UTC 2007	lukem
+
+	* Merge NetBSD ftp from 20070510 to 20070605.  Changes:
+		- Enforce restriction that (http) proxied URL fetchs don't
+		  support being restarted at this time.
+		  Addresses NetBSD Problem Report 28697.
+		- Display times in RFC2822 form rather than using ctime(3),
+		  since the former is more explicit about the timezone offset.
+		- main: call tzset() to ensure TZ is setup for other <time.h>
+		  functions.
+		- remotemodtime(): use strptime() to parse the reply.
+		- fetch_url(): ensure struct tm is zeroed before calling
+		  strptime().
+		- Modify parse_url() to consistently strip the leading `/'
+		  off ftp URLs.
+		  Fixes NetBSD Problem Report 17617.
+		- Use 'RFCnnnn' (with leading 0) instead of 'RFC nnnn', to be
+		  consistent with the style in the RFC index.
+		- Refer to RFC3916 instead of 1738 or 2732.
+		- Expand the list of supported RFCs in ftp(1) to contain the
+		  document name as well.
+
+Fri May 11 04:39:55 UTC 2007	lukem
+
+	* Update INSTALL and COPYING.
+
+	* Rename HAVE_QUAD_SUPPORT to HAVE_PRINTF_LONG_LONG, and only
+	  require support for 'long long' in that check rather than
+	  needing sizeof(off_t)>=8, as some systems have a separate
+	  off64_t when Large File Support is enabled.
+
+	* config.guess: treat 'i86xen:SunOS:5.*' as 'i86pc:SunOS:5.*'
+
+Thu May 10 15:23:33 UTC 2007	lukem
+
+	* Remove checks for util.h and libutil.h, and replacement for
+	  fparseln(), since fparseln() isn't used any more.
+
+	* Merge NetBSD ftp from 20070418 to 20070510.  Changes:
+		- Switch from fparseln() to the internal getline() when
+		  parsing HTTP headers.  Makes ftp a bit more portable
+		  (not needing fparseln()) at the expense of not supporting
+		  arbitrary long header lines, which I'm not concerned about
+		  because we don't support header line continuation either...
+		- Replace references from draft-ietf-ftpext-mlst-NN to RFC 3659.
+		- Fix misplaced const.
+		- Implement copy_bytes() to copy bytes from one fd to another
+		  via the provided buffer, with optional rate-limiting and
+		  hash-mark printing, using one loop and handle short writes.
+		  Refactor sendrequest() and recvrequest() to use copy_data().
+		  Addresses NetBSD Problem Report 15943.
+
+Wed May  9 05:24:55 UTC 2007	lukem
+
+	* Fix typo in poll()-based implementation of usleep() replacement.
+
+Wed May  9 04:58:50 UTC 2007	lukem
+
+	* Rename configure.in to configure.ac, as the latter is the
+	  preferred name in autoconf 2.61.
+
+	* Convert from autoconf 2.13 to 2.61:
+	  * Use a consistent quoting mechanism.
+	  * Use modern autoconf macros, #define names, etc.
+	  * Search for more header files, and only #include if found.
+	  * Remove old-style config.h.in generation.
+	  This may fix various tests on platforms such as FreeBSD and OS X.
+
+	* Add -Wl,-search_paths_first to LDFLAGS on OS X (Darwin) if the
+	  linker supports it.  This is needed so we use our libedit
+	  rather than the system one.
+
+	XXX: SOCKS support is currently disabled until I update the
+	     autoconf support.
+
+Mon Apr 23 06:04:26 UTC 2007	lukem
+
+	* Merge NetBSD ftp from 20050610 to 20070418.  Changes:
+		- Add '-s srcaddr'.
+		- Use IEC 60027-2 2^N based "KiB", "MiB" (etc) instead of
+		  10^n "KB", "MB", ...
+		- Recognize 307 redirect code.
+		- Suppress printing non-COMPLETE reply strings when EPSV/EPRT
+		  fails and we fall-back to PASV/PORT.  Should fix a problem
+		  with the emacs ftp wrapper.
+		- Fix display of 'Continue with <cmd>' messages.
+		- Prevent segfaults in .netrc parsing.
+		- Flush stdout before each command; ftp as slave process on
+		  a pipe should work.
+		- getpass() can return NULL in some implementations; cope.
+		- Support '-q quittime' when waiting for server replies.
+		- Various spelling & grammatical fixes in the manual.
+		- Plug some memory leaks.
+		- If a file upload (via -u) fails, return an non-zero exit
+		  value based on the index of the file that caused the
+		  problem (a la auto-fetch retrieval).
+		- Coverity fixes for CIDs: 873 874 875 1447 1448 2194 2195 3610
+		- Don't remove trailing character during auth_url()
+		- Fix progressbar display on narrow terminals (<43 columns)
+
+Fri Mar 16 06:00:14 UTC 2007	lukem
+
+	* Change the return value of the replacement gai_strerror()
+	  from "char *" to "const char *", to match the current
+	  standards.
+	  Problem noted by Thomas Klausner.
+
+Thu Oct 26 07:24:22 UTC 2006	lukem
+
+	* Correctly parse "AM" and "PM" in the replacement strptime().
+	  Problem noted by Kathryn Hogg.
 
 Sat Jun 25 06:27:00 UTC 2005	lukem
 
