@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/08/05 23:30:19 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/06 11:09:39 xtraeme Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -48,7 +48,7 @@ post-extract:
 PLIST_SUBST+=		USE_DRI=""
 .else
 CONFIGURE_ARGS+=	--disable-glx
-PLIST_SUBST+=		USE_DRI"@comment "
+PLIST_SUBST+=		USE_DRI="@comment "
 .endif
 
 BUILD_DEFS+=		VARBASE
