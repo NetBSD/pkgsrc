@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.879 2007/08/03 21:42:46 tnn Exp $
+# $NetBSD: Makefile,v 1.880 2007/08/06 20:30:30 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -537,6 +537,7 @@ SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Perl6-Export
+SUBDIR+=	p5-Perl6-Export-Attrs
 SUBDIR+=	p5-Perl6-Slurp
 SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
