@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/06 14:56:33 tron Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 15:56:09 joerg Exp $
 
 DISTNAME=	xdm-1.1.4
 PKGREVISION=	2
@@ -27,6 +27,10 @@ RCD_SCRIPTS=	xdm
 
 .if !empty(CC_VERSION:Mgcc-[3-4]*)
 CFLAGS+=	-fno-strict-aliasing
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
 .endif
 
 .include "../../x11/libXaw/buildlink3.mk"
