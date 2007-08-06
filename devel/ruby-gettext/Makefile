@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/05/26 12:10:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/06 15:42:30 obache Exp $
 
-DISTNAME=	ruby-gettext-package-1.9.0
+DISTNAME=	ruby-gettext-package-1.10.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/ruby-(.*)-package/\1/}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16681/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/22478/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://gettext.rubyforge.org/
