@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1727 2007/08/06 22:54:34 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1728 2007/08/06 23:39:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/claws-mail-rssyl to 0.14 [smb 2007-08-06]
 	Updated games/bzflag to 2.0.8 [xtraeme 2007-08-06]
 	Updated textproc/p5-XML-LibXML-Iterator to 1.03 [seb 2007-08-06]
+	Updated devel/ruby-rcsparse to 0.0.0.41 [wiz 2007-08-06]
