@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/17 20:20:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/08/06 09:52:31 ghen Exp $
 bin/ion3
 bin/pwm3
 lib/ion3/bin/ion-completefile
@@ -15,8 +15,8 @@ lib/ion3/lc/ioncore_wd.lc
 lib/ion3/lc/ioncore_winprops.lc
 lib/ion3/lc/mod_dock.lc
 lib/ion3/lc/mod_menu.lc
-lib/ion3/lc/mod_query_chdir.lc
 lib/ion3/lc/mod_query.lc
+lib/ion3/lc/mod_query_chdir.lc
 lib/ion3/lc/mod_sm.lc
 lib/ion3/lc/mod_sp.lc
 lib/ion3/lc/mod_statusbar.lc
@@ -44,8 +44,8 @@ share/doc/ion3/README
 share/doc/ion3/RELNOTES
 share/examples/ion3/cfg_defaults.lua
 share/examples/ion3/cfg_dock.lua
-share/examples/ion3/cfg_ioncore.lua
 share/examples/ion3/cfg_ion.lua
+share/examples/ion3/cfg_ioncore.lua
 share/examples/ion3/cfg_kludges.lua
 share/examples/ion3/cfg_layouts.lua
 share/examples/ion3/cfg_menu.lua
