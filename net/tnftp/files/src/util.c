@@ -1,8 +1,8 @@
-/*	NetBSD: util.c,v 1.14 2005/06/10 04:05:01 lukem Exp	*/
-/*	from	NetBSD: util.c,v 1.129 2005/06/10 00:18:47 lukem Exp	*/
+/*	$NetBSD: util.c,v 1.1.1.6 2007/08/06 04:33:24 lukem Exp $	*/
+/*	from	NetBSD: util.c,v 1.143 2007/05/24 05:05:19 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2007 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -70,11 +70,43 @@
  * SUCH DAMAGE.
  */
 
+#include "tnftp.h"
+
+#if 0	/* tnftp */
+
+#include <sys/cdefs.h>
+#ifndef lint
+__RCSID(" NetBSD: util.c,v 1.143 2007/05/24 05:05:19 lukem Exp  ");
+#endif /* not lint */
+
 /*
  * FTP User Program -- Misc support routines
  */
+#include <sys/param.h>
+#include <sys/socket.h>
+#include <sys/ioctl.h>
+#include <sys/time.h>
+#include <netinet/in.h>
+#include <arpa/ftp.h>
 
-#include "tnftp.h"
+#include <ctype.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <glob.h>
+#include <signal.h>
+#include <libgen.h>
+#include <limits.h>
+#include <netdb.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <termios.h>
+#include <time.h>
+#include <tzfile.h>
+#include <unistd.h>
+
+#endif	/* tnftp */
 
 #include "ftp_var.h"
 
@@ -99,7 +131,7 @@ setpeer(int argc, char *argv[])
 		(void)another(&argc, &argv, "to");
 	if (argc < 2 || argc > 3) {
  usage:
-		fprintf(ttyout, "usage: %s host-name [port]\n", argv[0]);
+		UPRINTF("usage: %s host-name [port]\n", argv[0]);
 		code = -1;
 		return;
 	}
@@ -112,7 +144,7 @@ setpeer(int argc, char *argv[])
 
 	if (gatemode) {
 		if (gateserver == NULL || *gateserver == '\0')
-			errx(1, "gateserver not defined (shouldn't happen)");
+			errx(1, "main: gateserver not defined");
 		host = hookup(gateserver, port);
 	} else
 		host = hookup(argv[1], port);
@@ -150,7 +182,7 @@ parse_feat(const char *line)
 
 			/*
 			 * work-around broken ProFTPd servers that can't
-			 * even obey RFC 2389.
+			 * even obey RFC2389.
 			 */
 	while (*line && isspace((int)*line))
 		line++;
@@ -177,7 +209,7 @@ getremoteinfo(void)
 	int overbose, i;
 
 	overbose = verbose;
-	if (debug == 0)
+	if (ftp_debug == 0)
 		verbose = -1;
 
 			/* determine remote system type */
@@ -243,7 +275,8 @@ getremoteinfo(void)
 		features[FEAT_FEAT] = 1;
 	} else
 		features[FEAT_FEAT] = 0;
-	if (debug) {
+#ifndef NO_DEBUG
+	if (ftp_debug) {
 #define DEBUG_FEAT(x) fprintf(ttyout, "features[" #x "] = %d\n", features[(x)])
 		DEBUG_FEAT(FEAT_FEAT);
 		DEBUG_FEAT(FEAT_MDTM);
@@ -253,6 +286,7 @@ getremoteinfo(void)
 		DEBUG_FEAT(FEAT_TVFS);
 #undef DEBUG_FEAT
 	}
+#endif
 	reply_callback = NULL;
 
 	verbose = overbose;
@@ -352,29 +386,29 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 {
 	char tmp[80];
 	char *user, *pass, *acct, *p;
+	char emptypass[] = "";
 	const char *errormsg;
 	int n, aflag, rval, nlen;
 
 	aflag = rval = 0;
 	user = pass = acct = NULL;
 	if (luser)
-		user = xstrdup(luser);
+		user = ftp_strdup(luser);
 	if (lpass)
-		pass = xstrdup(lpass);
+		pass = ftp_strdup(lpass);
 
-	if (debug)
-		fprintf(ttyout, "ftp_login: user `%s' pass `%s' host `%s'\n",
-		    user ? user : "<null>", pass ? pass : "<null>",
-		    host ? host : "<null>");
+	DPRINTF("ftp_login: user `%s' pass `%s' host `%s'\n",
+	    user ? user : "<null>", pass ? pass : "<null>",
+	    host ? host : "<null>");
 
 	/*
 	 * Set up arguments for an anonymous FTP session, if necessary.
 	 */
 	if (anonftp) {
 		FREEPTR(user);
-		user = xstrdup("anonymous");	/* as per RFC 1635 */
+		user = ftp_strdup("anonymous");	/* as per RFC1635 */
 		FREEPTR(pass);
-		pass = xstrdup(getoptionvalue("anonpass"));
+		pass = ftp_strdup(getoptionvalue("anonpass"));
 	}
 
 	if (ruserpass(host, &user, &pass, &acct) < 0) {
@@ -394,9 +428,9 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 			code = -1;
 			goto cleanup_ftp_login;
 		} else if (nlen == 0) {
-			user = xstrdup(localname);
+			user = ftp_strdup(localname);
 		} else {
-			user = xstrdup(tmp);
+			user = ftp_strdup(tmp);
 		}
 	}
 
@@ -405,7 +439,7 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 		size_t len;
 
 		len = strlen(user) + 1 + strlen(host) + 1;
-		nuser = xmalloc(len);
+		nuser = ftp_malloc(len);
 		(void)strlcpy(nuser, user, len);
 		(void)strlcat(nuser, "@",  len);
 		(void)strlcat(nuser, host, len);
@@ -417,7 +451,9 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 	if (n == CONTINUE) {
 		if (pass == NULL) {
 			p = getpass("Password: ");
-			pass = xstrdup(p);
+			if (p == NULL)
+				p = emptypass;
+			pass = ftp_strdup(p);
 			memset(p, 0, strlen(p));
 		}
 		n = command("PASS %s", pass);
@@ -427,11 +463,13 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 		aflag++;
 		if (acct == NULL) {
 			p = getpass("Account: ");
-			acct = xstrdup(p);
+			if (p == NULL)
+				p = emptypass;
+			acct = ftp_strdup(p);
 			memset(p, 0, strlen(p));
 		}
 		if (acct[0] == '\0') {
-			warnx("Login failed.");
+			warnx("Login failed");
 			goto cleanup_ftp_login;
 		}
 		n = command("ACCT %s", acct);
@@ -439,11 +477,11 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 	}
 	if ((n != COMPLETE) ||
 	    (!aflag && acct != NULL && command("ACCT %s", acct) != COMPLETE)) {
-		warnx("Login failed.");
+		warnx("Login failed");
 		goto cleanup_ftp_login;
 	}
 	rval = 1;
-	username = xstrdup(user);
+	username = ftp_strdup(user);
 	if (proxy)
 		goto cleanup_ftp_login;
 
@@ -466,7 +504,7 @@ ftp_login(const char *host, const char *luser, const char *lpass)
 		memset(pass, 0, strlen(pass));
 	FREEPTR(pass);
 	if (acct != NULL)
-		memset(acct, 0, strlen(pass));
+		memset(acct, 0, strlen(acct));
 	FREEPTR(acct);
 	return (rval);
 }
@@ -546,7 +584,7 @@ remglob(char *argv[], int doswitch, const char **errbuf)
 			(void)strlcat(temp, "/", sizeof(temp));
 		(void)strlcat(temp, TMPFILE, sizeof(temp));
 		if ((fd = mkstemp(temp)) < 0) {
-			warn("unable to create temporary file %s", temp);
+			warn("Unable to create temporary file `%s'", temp);
 			return (NULL);
 		}
 		close(fd);
@@ -573,12 +611,10 @@ remglob(char *argv[], int doswitch, const char **errbuf)
 		(void)unlink(temp);
 		if (ftemp == NULL) {
 			if (errbuf == NULL)
-				fputs(
-				    "can't find list of remote files, oops.\n",
-				    ttyout);
+				warnx("Can't find list of remote files");
 			else
 				*errbuf =
-				    "can't find list of remote files, oops.";
+				    "Can't find list of remote files";
 			return (NULL);
 		}
 	}
@@ -607,16 +643,16 @@ globulize(const char *pattern)
 	char *p;
 
 	if (!doglob)
-		return (xstrdup(pattern));
+		return (ftp_strdup(pattern));
 
 	flags = GLOB_BRACE|GLOB_NOCHECK|GLOB_TILDE;
 	memset(&gl, 0, sizeof(gl));
 	if (glob(pattern, flags, NULL, &gl) || gl.gl_pathc == 0) {
-		warnx("%s: not found", pattern);
+		warnx("Glob pattern `%s' not found", pattern);
 		globfree(&gl);
 		return (NULL);
 	}
-	p = xstrdup(gl.gl_pathv[0]);
+	p = ftp_strdup(gl.gl_pathv[0]);
 	globfree(&gl);
 	return (p);
 }
@@ -632,7 +668,7 @@ remotesize(const char *file, int noisy)
 
 	overbose = verbose;
 	size = -1;
-	if (debug == 0)
+	if (ftp_debug == 0)
 		verbose = -1;
 	if (! features[FEAT_SIZE]) {
 		if (noisy)
@@ -654,7 +690,7 @@ remotesize(const char *file, int noisy)
 	} else {
 		if (r == ERROR && code == 500 && features[FEAT_SIZE] == -1)
 			features[FEAT_SIZE] = 0;
-		if (noisy && debug == 0) {
+		if (noisy && ftp_debug == 0) {
 			fputs(reply_string, ttyout);
 			putc('\n', ttyout);
 		}
@@ -676,7 +712,7 @@ remotemodtime(const char *file, int noisy)
 	overbose = verbose;
 	ocode = code;
 	rtime = -1;
-	if (debug == 0)
+	if (ftp_debug == 0)
 		verbose = -1;
 	if (! features[FEAT_MDTM]) {
 		if (noisy)
@@ -688,7 +724,6 @@ remotemodtime(const char *file, int noisy)
 	if (r == COMPLETE) {
 		struct tm timebuf;
 		char *timestr, *frac;
-		int yy, mo, day, hour, min, sec;
 
 		/*
 		 * time-val = 14DIGIT [ "." 1*DIGIT ]
@@ -720,33 +755,28 @@ remotemodtime(const char *file, int noisy)
 			timestr[1] = '0';
 			fprintf(ttyout, "Converted to `%s'\n", timestr);
 		}
+		memset(&timebuf, 0, sizeof(timebuf));
 		if (strlen(timestr) != 14 ||
-		    sscanf(timestr, "%04d%02d%02d%02d%02d%02d",
-			&yy, &mo, &day, &hour, &min, &sec) != 6) {
+		    (strptime(timestr, "%Y%m%d%H%M%S", &timebuf) == NULL)) {
  bad_parse_time:
 			fprintf(ttyout, "Can't parse time `%s'.\n", timestr);
 			goto cleanup_parse_time;
 		}
-		memset(&timebuf, 0, sizeof(timebuf));
-		timebuf.tm_sec = sec;
-		timebuf.tm_min = min;
-		timebuf.tm_hour = hour;
-		timebuf.tm_mday = day;
-		timebuf.tm_mon = mo - 1;
-		timebuf.tm_year = yy - TM_YEAR_BASE;
 		timebuf.tm_isdst = -1;
 		rtime = timegm(&timebuf);
 		if (rtime == -1) {
-			if (noisy || debug != 0)
+			if (noisy || ftp_debug != 0)
 				goto bad_parse_time;
 			else
 				goto cleanup_parse_time;
-		} else if (debug)
-			fprintf(ttyout, "parsed date as: %s", ctime(&rtime));
+		} else
+			DPRINTF("parsed date `%s' as " LLF ", %s",
+			    timestr, (LLT)rtime,
+			    rfc2822time(localtime(&rtime)));
 	} else {
 		if (r == ERROR && code == 500 && features[FEAT_MDTM] == -1)
 			features[FEAT_MDTM] = 0;
-		if (noisy && debug == 0) {
+		if (noisy && ftp_debug == 0) {
 			fputs(reply_string, ttyout);
 			putc('\n', ttyout);
 		}
@@ -759,6 +789,21 @@ remotemodtime(const char *file, int noisy)
 }
 
 /*
+ * Format tm in an RFC2822 compatible manner, with a trailing \n.
+ * Returns a pointer to a static string containing the result.
+ */
+const char *
+rfc2822time(const struct tm *tm)
+{
+	static char result[50];
+
+	if (strftime(result, sizeof(result),
+	    "%a, %d %b %Y %H:%M:%S %z\n", tm) == 0)
+		errx(1, "Can't convert RFC2822 time: buffer too small");
+	return result;
+}
+
+/*
  * Update global `localcwd', which contains the state of the local cwd
  */
 void
@@ -767,8 +812,7 @@ updatelocalcwd(void)
 
 	if (getcwd(localcwd, sizeof(localcwd)) == NULL)
 		localcwd[0] = '\0';
-	if (debug)
-		fprintf(ttyout, "got localcwd as `%s'\n", localcwd);
+	DPRINTF("got localcwd as `%s'\n", localcwd);
 }
 
 /*
@@ -782,7 +826,7 @@ updateremotecwd(void)
 
 	overbose = verbose;
 	ocode = code;
-	if (debug == 0)
+	if (ftp_debug == 0)
 		verbose = -1;
 	if (command("PWD") != COMPLETE)
 		goto badremotecwd;
@@ -800,8 +844,7 @@ updateremotecwd(void)
 		remotecwd[i] = *cp;
 	}
 	remotecwd[i] = '\0';
-	if (debug)
-		fprintf(ttyout, "got remotecwd as `%s'\n", remotecwd);
+	DPRINTF("got remotecwd as `%s'\n", remotecwd);
 	goto cleanupremotecwd;
  badremotecwd:
 	remotecwd[0]='\0';
@@ -821,7 +864,7 @@ fileindir(const char *file, const char *dir)
 	char	realdir[PATH_MAX+1];
 	size_t	dirlen;
 
-		 			/* determine parent directory of file */
+					/* determine parent directory of file */
 	(void)strlcpy(parentdirbuf, file, sizeof(parentdirbuf));
 	parentdir = dirname(parentdirbuf);
 	if (strcmp(parentdir, ".") == 0)
@@ -878,10 +921,12 @@ list_vertical(StringList *sl)
 				putc('\n', ttyout);
 				break;
 			}
-			w = strlen(p);
-			while (w < width) {
-				w = (w + 8) &~ 7;
-				(void)putc('\t', ttyout);
+			if (p) {
+				w = strlen(p);
+				while (w < width) {
+					w = (w + 8) &~ 7;
+					(void)putc('\t', ttyout);
+				}
 			}
 		}
 	}
@@ -1026,11 +1071,11 @@ setupsockbufsize(int sock)
 
 	if (setsockopt(sock, SOL_SOCKET, SO_SNDBUF,
 	    (void *)&sndbuf_size, sizeof(sndbuf_size)) == -1)
-		warn("unable to set sndbuf size %d", sndbuf_size);
+		warn("Unable to set sndbuf size %d", sndbuf_size);
 
 	if (setsockopt(sock, SOL_SOCKET, SO_RCVBUF,
 	    (void *)&rcvbuf_size, sizeof(rcvbuf_size)) == -1)
-		warn("unable to set rcvbuf size %d", rcvbuf_size);
+		warn("Unable to set rcvbuf size %d", rcvbuf_size);
 }
 
 /*
@@ -1186,7 +1231,7 @@ parseport(const char *port, int defport)
 	long	 nport;
 	char	*p, *ep;
 
-	p = xstrdup(port);
+	p = ftp_strdup(port);
 	nport = strtol(p, &ep, 10);
 	if (*ep != '\0' && ep == p) {
 		struct servent	*svp;
@@ -1229,8 +1274,7 @@ isipv6addr(const char *addr)
 		rv = 1;
 		freeaddrinfo(res);
 	}
-	if (debug)
-		fprintf(ttyout, "isipv6addr: got %d for %s\n", rv, addr);
+	DPRINTF("isipv6addr: got %d for %s\n", rv, addr);
 #endif
 	return (rv == 1) ? 1 : 0;
 }
@@ -1285,29 +1329,65 @@ getline(FILE *stream, char *buf, size_t buflen, const char **errormsg)
 	return len;
 }
 
-
 /*
- * Internal version of connect(2); sets socket buffer sizes first and
+ * Internal version of connect(2); sets socket buffer sizes,
+ * binds to a specific local address (if set), and
  * supports a connection timeout using a non-blocking connect(2) with
  * a poll(2).
  * Socket fcntl flags are temporarily updated to include O_NONBLOCK;
  * these will not be reverted on connection failure.
- * Returns -1 upon failure (with errno set to the problem), or 0 on success.
+ * Returns 0 on success, or -1 upon failure (with an appropriate
+ * error message displayed.)
  */
 int
-xconnect(int sock, const struct sockaddr *name, socklen_t namelen)
+ftp_connect(int sock, const struct sockaddr *name, socklen_t namelen)
 {
 	int		flags, rv, timeout, error;
 	socklen_t	slen;
 	struct timeval	endtime, now, td;
 	struct pollfd	pfd[1];
+	char		hname[NI_MAXHOST];
 
 	setupsockbufsize(sock);
+	if (getnameinfo(name, namelen,
+	    hname, sizeof(hname), NULL, 0, NI_NUMERICHOST) != 0)
+		strlcpy(hname, "?", sizeof(hname));
 
-	if ((flags = fcntl(sock, F_GETFL, 0)) == -1)
-		return -1;			/* get current socket flags  */
-	if (fcntl(sock, F_SETFL, flags | O_NONBLOCK) == -1)
-		return -1;			/* set non-blocking connect */
+	if (bindai != NULL) {			/* bind to specific addr */
+		struct addrinfo *ai;
+
+		for (ai = bindai; ai != NULL; ai = ai->ai_next) {
+			if (ai->ai_family == name->sa_family)
+				break;
+		}
+		if (ai == NULL)
+			ai = bindai;
+		if (bind(sock, ai->ai_addr, ai->ai_addrlen) == -1) {
+			char	bname[NI_MAXHOST];
+			int	saveerr;
+
+			saveerr = errno;
+			if (getnameinfo(ai->ai_addr, ai->ai_addrlen,
+			    bname, sizeof(bname), NULL, 0, NI_NUMERICHOST) != 0)
+				strlcpy(bname, "?", sizeof(bname));
+			errno = saveerr;
+			warn("Can't bind to `%s'", bname);
+			return -1;
+		}
+	}
+
+						/* save current socket flags */
+	if ((flags = fcntl(sock, F_GETFL, 0)) == -1) {
+		warn("Can't %s socket flags for connect to `%s'",
+		    "save", hname);
+		return -1;
+	}
+						/* set non-blocking connect */
+	if (fcntl(sock, F_SETFL, flags | O_NONBLOCK) == -1) {
+		warn("Can't set socket non-blocking for connect to `%s'",
+		    hname);
+		return -1;
+	}
 
 	/* NOTE: we now must restore socket flags on successful exit */
 
@@ -1321,8 +1401,11 @@ xconnect(int sock, const struct sockaddr *name, socklen_t namelen)
 
 	rv = connect(sock, name, namelen);	/* inititate the connection */
 	if (rv == -1) {				/* connection error */
-		if (errno != EINPROGRESS)	/* error isn't "please wait" */
+		if (errno != EINPROGRESS) {	/* error isn't "please wait" */
+ connecterror:
+			warn("Can't connect to `%s'", hname);
 			return -1;
+		}
 
 						/* connect EINPROGRESS; wait */
 		do {
@@ -1336,34 +1419,39 @@ xconnect(int sock, const struct sockaddr *name, socklen_t namelen)
 				timeout = INFTIM;
 			}
 			pfd[0].revents = 0;
-			rv = xpoll(pfd, 1, timeout);
+			rv = ftp_poll(pfd, 1, timeout);
 						/* loop until poll ! EINTR */
 		} while (rv == -1 && errno == EINTR);
 
 		if (rv == 0) {			/* poll (connect) timed out */
 			errno = ETIMEDOUT;
-			return -1;
+			goto connecterror;
 		}
 
 		if (rv == -1) {			/* poll error */
-			return -1;
+			goto connecterror;
 		} else if (pfd[0].revents & (POLLIN|POLLOUT)) {
 			slen = sizeof(error);	/* OK, or pending error */
 			if (getsockopt(sock, SOL_SOCKET, SO_ERROR,
-			    &error, &slen) == -1)
-				return -1;	/* Solaris pending error */
-			if (error != 0) {
+			    &error, &slen) == -1) {
+						/* Solaris pending error */
+				goto connecterror;
+			} else if (error != 0) {
 				errno = error;	/* BSD pending error */
-				return -1;
+				goto connecterror;
 			}
 		} else {
 			errno = EBADF;		/* this shouldn't happen ... */
-			return -1;
+			goto connecterror;
 		}
 	}
 
-	if (fcntl(sock, F_SETFL, flags) == -1)	/* restore socket flags */
+	if (fcntl(sock, F_SETFL, flags) == -1) {
+						/* restore socket flags */
+		warn("Can't %s socket flags for connect to `%s'",
+		    "restore", hname);
 		return -1;
+	}
 	return 0;
 }
 
@@ -1371,7 +1459,7 @@ xconnect(int sock, const struct sockaddr *name, socklen_t namelen)
  * Internal version of listen(2); sets socket buffer sizes first.
  */
 int
-xlisten(int sock, int backlog)
+ftp_listen(int sock, int backlog)
 {
 
 	setupsockbufsize(sock);
@@ -1383,12 +1471,13 @@ xlisten(int sock, int backlog)
  * on platforms without the former.
  */
 int
-xpoll(struct pollfd *fds, int nfds, int timeout)
+ftp_poll(struct pollfd *fds, int nfds, int timeout)
 {
-#if HAVE_POLL
+#if defined(HAVE_POLL)
 	return poll(fds, nfds, timeout);
 
-#elif HAVE_SELECT	/* implement poll(2) using select(2) */
+#elif defined(HAVE_SELECT)
+		/* implement poll(2) using select(2) */
 	fd_set		rset, wset, xset;
 	const int	rsetflags = POLLIN | POLLRDNORM;
 	const int	wsetflags = POLLOUT | POLLWRNORM;
@@ -1449,7 +1538,7 @@ xpoll(struct pollfd *fds, int nfds, int timeout)
  * malloc() with inbuilt error checking
  */
 void *
-xmalloc(size_t size)
+ftp_malloc(size_t size)
 {
 	void *p;
 
@@ -1463,7 +1552,7 @@ xmalloc(size_t size)
  * sl_init() with inbuilt error checking
  */
 StringList *
-xsl_init(void)
+ftp_sl_init(void)
 {
 	StringList *p;
 
@@ -1477,7 +1566,7 @@ xsl_init(void)
  * sl_add() with inbuilt error checking
  */
 void
-xsl_add(StringList *sl, char *i)
+ftp_sl_add(StringList *sl, char *i)
 {
 
 	if (sl_add(sl, i) == -1)
@@ -1488,12 +1577,12 @@ xsl_add(StringList *sl, char *i)
  * strdup() with inbuilt error checking
  */
 char *
-xstrdup(const char *str)
+ftp_strdup(const char *str)
 {
 	char *s;
 
 	if (str == NULL)
-		errx(1, "xstrdup() called with NULL argument");
+		errx(1, "ftp_strdup: called with NULL argument");
 	s = strdup(str);
 	if (s == NULL)
 		err(1, "Unable to allocate memory for string copy");

@@ -1,8 +1,8 @@
-/*	NetBSD: fetch.c,v 1.11 2005/06/10 04:05:01 lukem Exp	*/
-/*	from	NetBSD: fetch.c,v 1.162 2005/06/10 00:18:46 lukem Exp	*/
+/*	$NetBSD: fetch.c,v 1.1.1.5 2007/08/06 04:33:23 lukem Exp $	*/
+/*	from	NetBSD: fetch.c,v 1.180 2007/06/05 00:31:20 lukem Exp	*/
 
 /*-
- * Copyright (c) 1997-2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2007 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -40,11 +40,42 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "tnftp.h"
+
+#if 0	/* tnftp */
+
+#include <sys/cdefs.h>
+#ifndef lint
+__RCSID(" NetBSD: fetch.c,v 1.180 2007/06/05 00:31:20 lukem Exp  ");
+#endif /* not lint */
+
 /*
  * FTP User Program -- Command line file retrieval
  */
 
-#include "tnftp.h"
+#include <sys/types.h>
+#include <sys/param.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+
+#include <netinet/in.h>
+
+#include <arpa/ftp.h>
+#include <arpa/inet.h>
+
+#include <ctype.h>
+#include <err.h>
+#include <errno.h>
+#include <netdb.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <time.h>
+
+#endif	/* tnftp */
 
 #include "ftp_var.h"
 #include "version.h"
@@ -88,7 +119,7 @@ static int	redirect_loop;
  * Determine if token is the next word in buf (case insensitive).
  * If so, advance buf past the token and any trailing LWS, and
  * return a pointer to the token (in buf).  Otherwise, return NULL.
- * token may be preceeded by LWS.
+ * token may be preceded by LWS.
  * token must be followed by LWS or NUL.  (I.e, don't partial match).
  */
 static const char *
@@ -134,11 +165,10 @@ auth_url(const char *challenge, char **response, const char *guser,
 	cp = challenge;
 	scheme = "Basic";	/* only support Basic authentication */
 
-	if (debug)
-		fprintf(ttyout, "auth_url: challenge `%s'\n", challenge);
+	DPRINTF("auth_url: challenge `%s'\n", challenge);
 
 	if (! match_token(&cp, scheme)) {
-		warnx("Unsupported authentication challenge - `%s'",
+		warnx("Unsupported authentication challenge `%s'",
 		    challenge);
 		goto cleanup_auth_url;
 	}
@@ -147,7 +177,7 @@ auth_url(const char *challenge, char **response, const char *guser,
 	if (STRNEQUAL(cp, REALM))
 		cp += sizeof(REALM) - 1;
 	else {
-		warnx("Unsupported authentication challenge - `%s'",
+		warnx("Unsupported authentication challenge `%s'",
 		    challenge);
 		goto cleanup_auth_url;
 	}
@@ -155,10 +185,10 @@ auth_url(const char *challenge, char **response, const char *guser,
 	if ((ep = strchr(cp, '\"')) != NULL) {
 		size_t len = ep - cp;
 
-		realm = (char *)xmalloc(len + 1);
+		realm = (char *)ftp_malloc(len + 1);
 		(void)strlcpy(realm, cp, len + 1);
 	} else {
-		warnx("Unsupported authentication challenge - `%s'",
+		warnx("Unsupported authentication challenge `%s'",
 		    challenge);
 		goto cleanup_auth_url;
 	}
@@ -173,15 +203,19 @@ auth_url(const char *challenge, char **response, const char *guser,
 			warnx("%s; can't authenticate", errormsg);
 			goto cleanup_auth_url;
 		}
-		user[strlen(user) - 1] = '\0';
 	}
 	if (gpass != NULL)
 		pass = (char *)gpass;
-	else
+	else {
 		pass = getpass("Password: ");
+		if (pass == NULL) {
+			warnx("Can't read password");
+			goto cleanup_auth_url;
+		}
+	}
 
 	clen = strlen(user) + strlen(pass) + 2;	/* user + ":" + pass + "\0" */
-	clear = (char *)xmalloc(clen);
+	clear = (char *)ftp_malloc(clen);
 	(void)strlcpy(clear, user, clen);
 	(void)strlcat(clear, ":", clen);
 	(void)strlcat(clear, pass, clen);
@@ -190,7 +224,7 @@ auth_url(const char *challenge, char **response, const char *guser,
 
 						/* scheme + " " + enc + "\0" */
 	rlen = strlen(scheme) + 1 + (clen + 2) * 4 / 3 + 1;
-	*response = (char *)xmalloc(rlen);
+	*response = (char *)ftp_malloc(rlen);
 	(void)strlcpy(*response, scheme, rlen);
 	len = strlcat(*response, " ", rlen);
 			/* use  `clen - 1'  to not encode the trailing NUL */
@@ -259,7 +293,7 @@ url_decode(char *url)
 
 
 /*
- * Parse URL of form:
+ * Parse URL of form (per RFC3986):
  *	<type>://[<user>[:<password>]@]<host>[:<port>][/<path>]
  * Returns -1 if a parse error occurred, otherwise 0.
  * It's the caller's responsibility to url_decode() the returned
@@ -269,12 +303,9 @@ url_decode(char *url)
  * malloc(3)ed strings of the relevant section, and port to
  * the number given, or ftpport if ftp://, or httpport if http://.
  *
- * If <host> is surrounded by `[' and ']', it's parsed as an
- * IPv6 address (as per RFC 2732).
- *
- * XXX: this is not totally RFC 1738 compliant; <path> will have the
+ * XXX: this is not totally RFC3986 compliant; <path> will have the
  * leading `/' unless it's an ftp:// URL, as this makes things easier
- * for file:// and http:// URLs. ftp:// URLs have the `/' between the
+ * for file:// and http:// URLs.  ftp:// URLs have the `/' between the
  * host and the URL-path removed, but any additional leading slashes
  * in the URL-path are retained (because they imply that we should
  * later do "CWD" with a null argument).
@@ -282,11 +313,14 @@ url_decode(char *url)
  * Examples:
  *	 input URL			 output path
  *	 ---------			 -----------
- *	"ftp://host"			NULL
- *	"http://host/"			NULL
+ *	"http://host"			"/"
+ *	"http://host/"			"/"
+ *	"http://host/path"		"/path"
  *	"file://host/dir/file"		"dir/file"
+ *	"ftp://host"			""
  *	"ftp://host/"			""
- *	"ftp://host//"			NULL
+ *	"ftp://host//"			"/"
+ *	"ftp://host/dir/file"		"dir/file"
  *	"ftp://host//dir/file"		"/dir/file"
  */
 static int
@@ -341,14 +375,14 @@ parse_url(const char *url, const char *desc, url_t *type,
 			/* find [user[:pass]@]host[:port] */
 	ep = strchr(url, '/');
 	if (ep == NULL)
-		thost = xstrdup(url);
+		thost = ftp_strdup(url);
 	else {
 		len = ep - url;
-		thost = (char *)xmalloc(len + 1);
+		thost = (char *)ftp_malloc(len + 1);
 		(void)strlcpy(thost, url, len + 1);
 		if (*type == FTP_URL_T)	/* skip first / for ftp URLs */
 			ep++;
-		*path = xstrdup(ep);
+		*path = ftp_strdup(ep);
 	}
 
 	cp = strchr(thost, '@');	/* look for user[:pass]@ in URLs */
@@ -357,11 +391,11 @@ parse_url(const char *url, const char *desc, url_t *type,
 			anonftp = 0;	/* disable anonftp */
 		*user = thost;
 		*cp = '\0';
-		thost = xstrdup(cp + 1);
+		thost = ftp_strdup(cp + 1);
 		cp = strchr(*user, ':');
 		if (cp != NULL) {
 			*cp = '\0';
-			*pass = xstrdup(cp + 1);
+			*pass = ftp_strdup(cp + 1);
 		}
 		url_decode(*user);
 		if (*pass)
@@ -371,7 +405,7 @@ parse_url(const char *url, const char *desc, url_t *type,
 #ifdef INET6
 			/*
 			 * Check if thost is an encoded IPv6 address, as per
-			 * RFC 2732:
+			 * RFC3986:
 			 *	`[' ipv6-address ']'
 			 */
 	if (*thost == '[') {
@@ -397,8 +431,8 @@ parse_url(const char *url, const char *desc, url_t *type,
 			cp = NULL;
 	} else
 #endif /* INET6 */
-	    if ((cp = strchr(thost, ':')) != NULL)
-		*cp++ =  '\0';
+		if ((cp = strchr(thost, ':')) != NULL)
+			*cp++ =  '\0';
 	*host = thost;
 
 			/* look for [:port] */
@@ -416,17 +450,19 @@ parse_url(const char *url, const char *desc, url_t *type,
 	}
 
 	if (tport != NULL)
-		*port = xstrdup(tport);
-	if (*path == NULL)
-		*path = xstrdup("/");
+		*port = ftp_strdup(tport);
+	if (*path == NULL) {
+		const char *emptypath = "/";
+		if (*type == FTP_URL_T)	/* skip first / for ftp URLs */
+			emptypath++;
+		*path = ftp_strdup(emptypath);
+	}
 
-	if (debug)
-		fprintf(ttyout,
-		    "parse_url: user `%s' pass `%s' host %s port %s(%d) "
-		    "path `%s'\n",
-		    *user ? *user : "<null>", *pass ? *pass : "<null>",
-		    *host ? *host : "<null>", *port ? *port : "<null>",
-		    *portnum ? *portnum : -1, *path ? *path : "<null>");
+	DPRINTF("parse_url: user `%s' pass `%s' host %s port %s(%d) "
+	    "path `%s'\n",
+	    *user ? *user : "<null>", *pass ? *pass : "<null>",
+	    *host ? *host : "<null>", *port ? *port : "<null>",
+	    *portnum ? *portnum : -1, *path ? *path : "<null>");
 
 	return (0);
 }
@@ -447,21 +483,32 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 	struct addrinfo		hints, *res, *res0 = NULL;
 	int			error;
 	char			hbuf[NI_MAXHOST];
-	volatile sigfunc	oldintr, oldintp;
-	volatile int		s;
+	sigfunc volatile	oldintr;
+	sigfunc volatile	oldintp;
+	int volatile		s;
 	struct stat		sb;
-	int			ischunked, isproxy, rval, hcode;
+	int volatile		ischunked;
+	int volatile		isproxy;
+	int volatile		rval;
+	int volatile		hcode;
 	size_t			len;
 	static size_t		bufsize;
 	static char		*xferbuf;
 	const char		*cp, *token;
-	char			*ep, *buf, *savefile;
-	char			*auth, *location, *message;
-	char			*user, *pass, *host, *port, *path, *decodedpath;
+	char			*ep;
+	char			buf[FTPBUFLEN];
+	const char		*errormsg;
+	char			*volatile savefile;
+	char			*volatile auth;
+	char			*volatile location;
+	char			*volatile message;
+	char			*user, *pass, *host, *port, *path;
+	char			*volatile decodedpath;
 	char			*puser, *ppass, *useragent;
 	off_t			hashbytes, rangestart, rangeend, entitylen;
-	int			 (*closefunc)(FILE *);
-	FILE			*fin, *fout;
+	int			(*volatile closefunc)(FILE *);
+	FILE			*volatile fin;
+	FILE			*volatile fout;
 	time_t			mtime;
 	url_t			urltype;
 	in_port_t		portnum;
@@ -470,27 +517,11 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 	closefunc = NULL;
 	fin = fout = NULL;
 	s = -1;
-	buf = savefile = NULL;
+	savefile = NULL;
 	auth = location = message = NULL;
 	ischunked = isproxy = hcode = 0;
 	rval = 1;
 	user = pass = host = path = decodedpath = puser = ppass = NULL;
-
-#ifdef __GNUC__			/* shut up gcc warnings */
-	(void)&closefunc;
-	(void)&fin;
-	(void)&fout;
-	(void)&buf;
-	(void)&savefile;
-	(void)&rval;
-	(void)&isproxy;
-	(void)&hcode;
-	(void)&ischunked;
-	(void)&message;
-	(void)&location;
-	(void)&auth;
-	(void)&decodedpath;
-#endif
 
 	if (parse_url(url, "URL", &urltype, &user, &pass, &host, &port,
 	    &portnum, &path) == -1)
@@ -513,29 +544,28 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		}
 	}
 
-	decodedpath = xstrdup(path);
+	decodedpath = ftp_strdup(path);
 	url_decode(decodedpath);
 
 	if (outfile)
-		savefile = xstrdup(outfile);
+		savefile = ftp_strdup(outfile);
 	else {
 		cp = strrchr(decodedpath, '/');		/* find savefile */
 		if (cp != NULL)
-			savefile = xstrdup(cp + 1);
+			savefile = ftp_strdup(cp + 1);
 		else
-			savefile = xstrdup(decodedpath);
+			savefile = ftp_strdup(decodedpath);
 	}
 	if (EMPTYSTRING(savefile)) {
 		if (urltype == FTP_URL_T) {
 			rval = fetch_ftp(url);
 			goto cleanup_fetch_url;
 		}
-		warnx("no file after directory (you must specify an "
+		warnx("No file after directory (you must specify an "
 		    "output file) `%s'", url);
 		goto cleanup_fetch_url;
 	} else {
-		if (debug)
-			fprintf(ttyout, "savefile `%s'\n", savefile);
+		DPRINTF("savefile `%s'\n", savefile);
 	}
 
 	restart_point = 0;
@@ -551,7 +581,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		direction = "copied";
 		fin = fopen(decodedpath, "r");
 		if (fin == NULL) {
-			warn("Cannot open file `%s'", decodedpath);
+			warn("Can't open `%s'", decodedpath);
 			goto cleanup_fetch_url;
 		}
 		if (fstat(fileno(fin), &sb) == 0) {
@@ -560,7 +590,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		}
 		if (restart_point) {
 			if (lseek(fileno(fin), restart_point, SEEK_SET) < 0) {
-				warn("Can't lseek to restart `%s'",
+				warn("Can't seek to restart `%s'",
 				    decodedpath);
 				goto cleanup_fetch_url;
 			}
@@ -593,13 +623,13 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				/* check URL against list of no_proxied sites */
 			no_proxy = getoptionvalue("no_proxy");
 			if (! EMPTYSTRING(no_proxy)) {
-				char *np, *np_copy;
+				char *np, *np_copy, *np_iter;
 				long np_port;
 				size_t hlen, plen;
 
-				np_copy = xstrdup(no_proxy);
+				np_iter = np_copy = ftp_strdup(no_proxy);
 				hlen = strlen(host);
-				while ((cp = strsep(&np_copy, " ,")) != NULL) {
+				while ((cp = strsep(&np_iter, " ,")) != NULL) {
 					if (*cp == '\0')
 						continue;
 					if ((np = strrchr(cp, ':')) != NULL) {
@@ -628,6 +658,11 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 			}
 
 			if (isproxy) {
+				if (restart_point) {
+					warnx("Can't restart via proxy URL `%s'",
+					    proxyenv);
+					goto cleanup_fetch_url;
+				}
 				if (parse_url(proxyenv, "proxy URL", &purltype,
 				    &puser, &ppass, &phost, &pport, &portnum,
 				    &ppath) == -1)
@@ -661,7 +696,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				FREEPTR(port);
 				port = pport;
 				FREEPTR(path);
-				path = xstrdup(url);
+				path = ftp_strdup(url);
 				FREEPTR(ppath);
 			}
 		} /* ! EMPTYSTRING(proxyenv) */
@@ -673,7 +708,9 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		hints.ai_protocol = 0;
 		error = getaddrinfo(host, NULL, &hints, &res0);
 		if (error) {
-			warnx("%s: %s", host, gai_strerror(error));
+			warnx("Can't lookup `%s': %s", host,
+			    (error == EAI_SYSTEM) ? strerror(errno)
+						  : gai_strerror(error));
 			goto cleanup_fetch_url;
 		}
 		if (res0->ai_canonname)
@@ -681,13 +718,10 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 
 		s = -1;
 		for (res = res0; res; res = res->ai_next) {
-			/*
-			 * see comment in hookup()
-			 */
 			ai_unmapped(res);
 			if (getnameinfo(res->ai_addr, res->ai_addrlen,
 			    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST) != 0)
-				strlcpy(hbuf, "invalid", sizeof(hbuf));
+				strlcpy(hbuf, "?", sizeof(hbuf));
 
 			if (verbose && res0->ai_next) {
 				fprintf(ttyout, "Trying %s...\n", hbuf);
@@ -698,12 +732,13 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 			s = socket(res->ai_family, SOCK_STREAM,
 			    res->ai_protocol);
 			if (s < 0) {
-				warn("Can't create socket");
+				warn(
+				  "Can't create socket for connection to `%s'",
+				    hbuf);
 				continue;
 			}
 
-			if (xconnect(s, res->ai_addr, res->ai_addrlen) < 0) {
-				warn("Connect to address `%s'", hbuf);
+			if (ftp_connect(s, res->ai_addr, res->ai_addrlen) < 0) {
 				close(s);
 				s = -1;
 				continue;
@@ -714,7 +749,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		}
 
 		if (s < 0) {
-			warn("Can't connect to %s", host);
+			warnx("Can't connect to `%s'", host);
 			goto cleanup_fetch_url;
 		}
 
@@ -745,7 +780,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				 * strip off IPv6 scope identifier, since it is
 				 * local to the node
 				 */
-				h = xstrdup(host);
+				h = ftp_strdup(host);
 				if (isipv6addr(h) &&
 				    (p = strchr(h, '%')) != NULL) {
 					*p = '\0';
@@ -804,14 +839,16 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		}
 
 				/* Read the response */
-		if ((buf = fparseln(fin, &len, NULL, "\0\0\0", 0)) == NULL) {
-			warn("Receiving HTTP reply");
+		len = getline(fin, buf, sizeof(buf), &errormsg);
+		if (len < 0) {
+			if (*errormsg == '\n')
+				errormsg++;
+			warnx("Receiving HTTP reply: %s", errormsg);
 			goto cleanup_fetch_url;
 		}
 		while (len > 0 && (ISLWS(buf[len-1])))
 			buf[--len] = '\0';
-		if (debug)
-			fprintf(ttyout, "received `%s'\n", buf);
+		DPRINTF("received `%s'\n", buf);
 
 				/* Determine HTTP response code */
 		cp = strchr(buf, ' ');
@@ -822,22 +859,22 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		hcode = strtol(cp, &ep, 10);
 		if (*ep != '\0' && !isspace((unsigned char)*ep))
 			goto improper;
-		message = xstrdup(cp);
+		message = ftp_strdup(cp);
 
 				/* Read the rest of the header. */
 		while (1) {
-			FREEPTR(buf);
-			if ((buf = fparseln(fin, &len, NULL, "\0\0\0", 0))
-			    == NULL) {
-				warn("Receiving HTTP reply");
+			len = getline(fin, buf, sizeof(buf), &errormsg);
+			if (len < 0) {
+				if (*errormsg == '\n')
+					errormsg++;
+				warnx("Receiving HTTP reply: %s", errormsg);
 				goto cleanup_fetch_url;
 			}
 			while (len > 0 && (ISLWS(buf[len-1])))
 				buf[--len] = '\0';
 			if (len == 0)
 				break;
-			if (debug)
-				fprintf(ttyout, "received `%s'\n", buf);
+			DPRINTF("received `%s'\n", buf);
 
 		/*
 		 * Look for some headers
@@ -849,10 +886,8 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				filesize = STRTOLL(cp, &ep, 10);
 				if (filesize < 0 || *ep != '\0')
 					goto improper;
-				if (debug)
-					fprintf(ttyout,
-					    "parsed len as: " LLF "\n",
-					    (LLT)filesize);
+				DPRINTF("parsed len as: " LLF "\n",
+				    (LLT)filesize);
 
 			} else if (match_token(&cp, "Content-Range:")) {
 				if (! match_token(&cp, "bytes"))
@@ -884,7 +919,8 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				if (*cp != '\0')
 					goto improper;
 
-				if (debug) {
+#ifndef NO_DEBUG
+				if (ftp_debug) {
 					fprintf(ttyout, "parsed range as: ");
 					if (rangestart == -1)
 						fprintf(ttyout, "*");
@@ -894,6 +930,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 						    (LLT)rangeend);
 					fprintf(ttyout, "/" LLF "\n", (LLT)entitylen);
 				}
+#endif
 				if (! restart_point) {
 					warnx(
 				    "Received unexpected Content-Range header");
@@ -904,11 +941,12 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				struct tm parsed;
 				char *t;
 
-							/* RFC 1123 */
+				memset(&parsed, 0, sizeof(parsed));
+							/* RFC1123 */
 				if ((t = strptime(cp,
 						"%a, %d %b %Y %H:%M:%S GMT",
 						&parsed))
-							/* RFC 850 */
+							/* RFC0850 */
 				    || (t = strptime(cp,
 						"%a, %d-%b-%y %H:%M:%S GMT",
 						&parsed))
@@ -919,55 +957,49 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 					parsed.tm_isdst = -1;
 					if (*t == '\0')
 						mtime = timegm(&parsed);
-					if (debug && mtime != -1) {
+#ifndef NO_DEBUG
+					if (ftp_debug && mtime != -1) {
 						fprintf(ttyout,
 						    "parsed date as: %s",
-						    ctime(&mtime));
+						rfc2822time(localtime(&mtime)));
 					}
+#endif
 				}
 
 			} else if (match_token(&cp, "Location:")) {
-				location = xstrdup(cp);
-				if (debug)
-					fprintf(ttyout,
-					    "parsed location as `%s'\n", cp);
+				location = ftp_strdup(cp);
+				DPRINTF("parsed location as `%s'\n", cp);
 
 			} else if (match_token(&cp, "Transfer-Encoding:")) {
 				if (match_token(&cp, "binary")) {
 					warnx(
-			"Bogus transfer encoding - `binary' (fetching anyway)");
+			"Bogus transfer encoding `binary' (fetching anyway)");
 					continue;
 				}
 				if (! (token = match_token(&cp, "chunked"))) {
 					warnx(
-				    "Unsupported transfer encoding - `%s'",
+				    "Unsupported transfer encoding `%s'",
 					    token);
 					goto cleanup_fetch_url;
 				}
 				ischunked++;
-				if (debug)
-					fprintf(ttyout,
-					    "using chunked encoding\n");
+				DPRINTF("using chunked encoding\n");
 
 			} else if (match_token(&cp, "Proxy-Authenticate:")
 				|| match_token(&cp, "WWW-Authenticate:")) {
 				if (! (token = match_token(&cp, "Basic"))) {
-					if (debug)
-						fprintf(ttyout,
+					DPRINTF(
 				"skipping unknown auth scheme `%s'\n",
 						    token);
 					continue;
 				}
 				FREEPTR(auth);
-				auth = xstrdup(token);
-				if (debug)
-					fprintf(ttyout,
-					    "parsed auth as `%s'\n", cp);
+				auth = ftp_strdup(token);
+				DPRINTF("parsed auth as `%s'\n", cp);
 			}
 
 		}
 				/* finished parsing header */
-		FREEPTR(buf);
 
 		switch (hcode) {
 		case 200:
@@ -983,6 +1015,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		case 302:
 		case 303:
 		case 305:
+		case 307:
 			if (EMPTYSTRING(location)) {
 				warnx(
 				"No redirection Location provided by server");
@@ -1054,7 +1087,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 #endif
 		default:
 			if (message)
-				warnx("Error retrieving file - `%s'", message);
+				warnx("Error retrieving file `%s'", message);
 			else
 				warnx("Unknown error retrieving file");
 			goto cleanup_fetch_url;
@@ -1068,7 +1101,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		oldintp = xsignal(SIGPIPE, SIG_IGN);
 		fout = popen(savefile + 1, "w");
 		if (fout == NULL) {
-			warn("Can't run `%s'", savefile + 1);
+			warn("Can't execute `%s'", savefile + 1);
 			goto cleanup_fetch_url;
 		}
 		closefunc = pclose;
@@ -1110,7 +1143,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		if (xferbuf)
 			(void)free(xferbuf);
 		bufsize = rcvbuf_size;
-		xferbuf = xmalloc(bufsize);
+		xferbuf = ftp_malloc(bufsize);
 	}
 
 	bytes = 0;
@@ -1142,9 +1175,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 				warnx("Unexpected data following chunksize");
 				goto cleanup_fetch_url;
 			}
-			if (debug)
-				fprintf(ttyout, "got chunksize of " LLF "\n",
-				    (LLT)chunksize);
+			DPRINTF("got chunksize of " LLF "\n", (LLT)chunksize);
 			if (chunksize == 0)
 				break;
 		}
@@ -1229,7 +1260,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		if (utimes(savefile, tval) == -1) {
 			fprintf(ttyout,
 			    "Can't change modification time to %s",
-			    asctime(localtime(&mtime)));
+			    rfc2822time(localtime(&mtime)));
 		}
 	}
 	if (bytes > 0)
@@ -1268,7 +1299,6 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 	if (ppass != NULL)
 		memset(ppass, 0, strlen(ppass));
 	FREEPTR(ppass);
-	FREEPTR(buf);
 	FREEPTR(auth);
 	FREEPTR(location);
 	FREEPTR(message);
@@ -1344,18 +1374,18 @@ fetch_ftp(const char *url)
 		}
 	} else {			/* classic style `[user@]host:[file]' */
 		urltype = CLASSIC_URL_T;
-		host = xstrdup(url);
+		host = ftp_strdup(url);
 		cp = strchr(host, '@');
 		if (cp != NULL) {
 			*cp = '\0';
 			user = host;
 			anonftp = 0;	/* disable anonftp */
-			host = xstrdup(cp + 1);
+			host = ftp_strdup(cp + 1);
 		}
 		cp = strchr(host, ':');
 		if (cp != NULL) {
 			*cp = '\0';
-			path = xstrdup(cp + 1);
+			path = ftp_strdup(cp + 1);
 		}
 	}
 	if (EMPTYSTRING(host))
@@ -1403,14 +1433,12 @@ fetch_ftp(const char *url)
 		url_decode(file);
 		/* but still don't url_decode(dir) */
 	}
-	if (debug)
-		fprintf(ttyout,
-		    "fetch_ftp: user `%s' pass `%s' host %s port %s "
-		    "path `%s' dir `%s' file `%s'\n",
-		    user ? user : "<null>", pass ? pass : "<null>",
-		    host ? host : "<null>", port ? port : "<null>",
-		    path ? path : "<null>",
-		    dir ? dir : "<null>", file ? file : "<null>");
+	DPRINTF("fetch_ftp: user `%s' pass `%s' host %s port %s "
+	    "path `%s' dir `%s' file `%s'\n",
+	    user ? user : "<null>", pass ? pass : "<null>",
+	    host ? host : "<null>", port ? port : "<null>",
+	    path ? path : "<null>",
+	    dir ? dir : "<null>", file ? file : "<null>");
 
 	dirhasglob = filehasglob = 0;
 	if (doglob && urltype == CLASSIC_URL_T) {
@@ -1472,12 +1500,12 @@ fetch_ftp(const char *url)
 		 * directories in one step.
 		 *
 		 * If we are dealing with an `ftp://host/path' URL
-		 * (urltype is FTP_URL_T), then RFC 1738 says we need to
+		 * (urltype is FTP_URL_T), then RFC3986 says we need to
 		 * send a separate CWD command for each unescaped "/"
 		 * in the path, and we have to interpret %hex escaping
 		 * *after* we find the slashes.  It's possible to get
 		 * empty components here, (from multiple adjacent
-		 * slashes in the path) and RFC 1738 says that we should
+		 * slashes in the path) and RFC3986 says that we should
 		 * still do `CWD ' (with a null argument) in such cases.
 		 *
 		 * Many ftp servers don't support `CWD ', so if there's an
@@ -1535,10 +1563,9 @@ fetch_ftp(const char *url)
 				url_decode(dir);
 			} else
 				nextpart = NULL;
-			if (debug)
-				fprintf(ttyout, "dir `%s', nextpart `%s'\n",
-				    dir ? dir : "<null>",
-				    nextpart ? nextpart : "<null>");
+			DPRINTF("dir `%s', nextpart `%s'\n",
+			    dir ? dir : "<null>",
+			    nextpart ? nextpart : "<null>");
 			if (urltype == FTP_URL_T || *dir != '\0') {
 				xargv[0] = "cd";
 				xargv[1] = dir;
@@ -1550,8 +1577,8 @@ fetch_ftp(const char *url)
 						fprintf(stderr,
 "\n"
 "ftp: The `CWD ' command (without a directory), which is required by\n"
-"     RFC 1738 to support the empty directory in the URL pathname (`//'),\n"
-"     conflicts with the server's conformance to RFC 959.\n"
+"     RFC3986 to support the empty directory in the URL pathname (`//'),\n"
+"     conflicts with the server's conformance to RFC0959.\n"
 "     Try the same URL without the `//' in the URL pathname.\n"
 "\n");
 					goto cleanup_fetch_ftp;
@@ -1610,6 +1637,7 @@ fetch_ftp(const char *url)
 		rval = 0;
 
  cleanup_fetch_ftp:
+	FREEPTR(port);
 	FREEPTR(host);
 	FREEPTR(path);
 	FREEPTR(user);
@@ -1742,11 +1770,19 @@ auto_fetch(int argc, char *argv[])
 }
 
 
+/*
+ * Upload multiple files from the command line.
+ *
+ * If an error occurs the return value will be the offset+1 in
+ * argv[] of the file that caused a problem (i.e, argv[x]
+ * returns x+1)
+ * Otherwise, 0 is returned if all files uploaded successfully.
+ */
 int
 auto_put(int argc, char **argv, const char *uploadserver)
 {
 	char	*uargv[4], *path, *pathsep;
-	int	 uargc, rval;
+	int	 uargc, rval, argpos;
 	size_t	 len;
 
 	uargc = 0;
@@ -1756,10 +1792,9 @@ auto_put(int argc, char **argv, const char *uploadserver)
 	pathsep = NULL;
 	rval = 1;
 
-	if (debug)
-		fprintf(ttyout, "auto_put: target `%s'\n", uploadserver);
+	DPRINTF("auto_put: target `%s'\n", uploadserver);
 
-	path = xstrdup(uploadserver);
+	path = ftp_strdup(uploadserver);
 	len = strlen(path);
 	if (path[len - 1] != '/' && path[len - 1] != ':') {
 			/*
@@ -1768,7 +1803,7 @@ auto_put(int argc, char **argv, const char *uploadserver)
 		if (argc > 1) {		/* more than one file to upload */
 			len = strlen(uploadserver) + 2;	/* path + "/" + "\0" */
 			free(path);
-			path = (char *)xmalloc(len);
+			path = (char *)ftp_malloc(len);
 			(void)strlcpy(path, uploadserver, len);
 			(void)strlcat(path, "/", len);
 		} else {		/* single file to upload */
@@ -1781,38 +1816,44 @@ auto_put(int argc, char **argv, const char *uploadserver)
 					goto cleanup_auto_put;
 				}
 				pathsep++;
-				uargv[2] = xstrdup(pathsep);
+				uargv[2] = ftp_strdup(pathsep);
 				pathsep[0] = '/';
 			} else
-				uargv[2] = xstrdup(pathsep + 1);
+				uargv[2] = ftp_strdup(pathsep + 1);
 			pathsep[1] = '\0';
 			uargc++;
 		}
 	}
-	if (debug)
-		fprintf(ttyout, "auto_put: URL `%s' argv[2] `%s'\n",
-		    path, uargv[2] ? uargv[2] : "<null>");
+	DPRINTF("auto_put: URL `%s' argv[2] `%s'\n",
+	    path, uargv[2] ? uargv[2] : "<null>");
 
 			/* connect and cwd */
 	rval = auto_fetch(1, &path);
-	free(path);
 	if(rval >= 0)
 		goto cleanup_auto_put;
 
+	rval = 0;
+
+			/* target filename provided; upload 1 file */
 			/* XXX : is this the best way? */
 	if (uargc == 3) {
 		uargv[1] = argv[0];
 		put(uargc, uargv);
-		goto cleanup_auto_put;
+		if ((code / 100) != COMPLETE)
+			rval = 1;
+	} else {	/* otherwise a target dir: upload all files to it */
+		for(argpos = 0; argv[argpos] != NULL; argpos++) {
+			uargv[1] = argv[argpos];
+			mput(uargc, uargv);
+			if ((code / 100) != COMPLETE) {
+				rval = argpos + 1;
+				break;
+			}
+		}
 	}
-
-	for(; argv[0] != NULL; argv++) {
-		uargv[1] = argv[0];
-		mput(uargc, uargv);
-	}
-	rval = 0;
 
  cleanup_auto_put:
+	free(path);
 	FREEPTR(uargv[2]);
 	return (rval);
 }

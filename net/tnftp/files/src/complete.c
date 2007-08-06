@@ -1,5 +1,5 @@
-/*	NetBSD: complete.c,v 1.6 2005/06/10 04:05:01 lukem Exp	*/
-/*	from	NetBSD: complete.c,v 1.40 2005/06/09 16:38:29 lukem Exp	*/
+/*	$NetBSD: complete.c,v 1.1.1.4 2007/08/06 04:33:23 lukem Exp $	*/
+/*	from	NetBSD: complete.c,v 1.42 2007/04/17 05:52:03 lukem Exp	*/
 
 /*-
  * Copyright (c) 1997-2000,2005 The NetBSD Foundation, Inc.
@@ -37,11 +37,29 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "tnftp.h"
+
+#if 0	/* tnftp */
+
+#include <sys/cdefs.h>
+#ifndef lint
+__RCSID(" NetBSD: complete.c,v 1.42 2007/04/17 05:52:03 lukem Exp  ");
+#endif /* not lint */
+
 /*
  * FTP user program - command and file completion routines
  */
 
-#include "tnftp.h"
+#include <sys/stat.h>
+
+#include <ctype.h>
+#include <err.h>
+#include <dirent.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#endif	/* tnftp */
 
 #include "ftp_var.h"
 
@@ -132,14 +150,14 @@ complete_command(char *word, int list)
 	size_t wordlen;
 	unsigned char rv;
 
-	words = xsl_init();
+	words = ftp_sl_init();
 	wordlen = strlen(word);
 
 	for (c = cmdtab; c->c_name != NULL; c++) {
 		if (wordlen > strlen(c->c_name))
 			continue;
 		if (strncmp(word, c->c_name, wordlen) == 0)
-			xsl_add(words, c->c_name);
+			ftp_sl_add(words, c->c_name);
 	}
 
 	rv = complete_ambiguous(word, list, words);
@@ -189,7 +207,7 @@ complete_local(char *word, int list)
 	if ((dd = opendir(dir)) == NULL)
 		return (CC_ERROR);
 
-	words = xsl_init();
+	words = ftp_sl_init();
 	len = strlen(file);
 
 	for (dp = readdir(dd); dp != NULL; dp = readdir(dd)) {
@@ -206,8 +224,8 @@ complete_local(char *word, int list)
 		if (strncmp(file, dp->d_name, len) == 0) {
 			char *tcp;
 
-			tcp = xstrdup(dp->d_name);
-			xsl_add(words, tcp);
+			tcp = ftp_strdup(dp->d_name);
+			ftp_sl_add(words, tcp);
 		}
 	}
 	closedir(dd);
@@ -244,14 +262,14 @@ complete_option(char *word, int list)
 	size_t wordlen;
 	unsigned char rv;
 
-	words = xsl_init();
+	words = ftp_sl_init();
 	wordlen = strlen(word);
 
 	for (o = optiontab; o->name != NULL; o++) {
 		if (wordlen > strlen(o->name))
 			continue;
 		if (strncmp(word, o->name, wordlen) == 0)
-			xsl_add(words, o->name);
+			ftp_sl_add(words, o->name);
 	}
 
 	rv = complete_ambiguous(word, list, words);
@@ -297,7 +315,7 @@ complete_remote(char *word, int list)
 
 		if (dirlist != NULL)
 			sl_free(dirlist, 1);
-		dirlist = xsl_init();
+		dirlist = ftp_sl_init();
 
 		mflag = 1;
 		emesg = NULL;
@@ -315,8 +333,8 @@ complete_remote(char *word, int list)
 				tcp++;
 			else
 				tcp = cp;
-			tcp = xstrdup(tcp);
-			xsl_add(dirlist, tcp);
+			tcp = ftp_strdup(tcp);
+			ftp_sl_add(dirlist, tcp);
 		}
 		if (emesg != NULL) {
 			fprintf(ttyout, "\n%s\n", emesg);
@@ -326,13 +344,13 @@ complete_remote(char *word, int list)
 		dirchange = 0;
 	}
 
-	words = xsl_init();
+	words = ftp_sl_init();
 	for (i = 0; i < dirlist->sl_cur; i++) {
 		cp = dirlist->sl_str[i];
 		if (strlen(file) > strlen(cp))
 			continue;
 		if (strncmp(file, cp, strlen(file)) == 0)
-			xsl_add(words, cp);
+			ftp_sl_add(words, cp);
 	}
 	rv = complete_ambiguous(file, list, words);
 	sl_free(words, 0);
@@ -415,7 +433,8 @@ complete(EditLine *el, int ch)
 			}
 			return (complete_remote(word, dolist));
 		default:
-			errx(1, "unknown complete type `%c'", cmpltype);
+			errx(1, "complete: unknown complete type `%c'",
+			    cmpltype);
 			return (CC_ERROR);
 	}
 	/* NOTREACHED */

@@ -1,4 +1,4 @@
-/*	NetBSD: progressbar.h,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
+/*	$NetBSD: progressbar.h,v 1.1.1.4 2007/08/06 04:33:24 lukem Exp $	*/
 /*	from	NetBSD: progressbar.h,v 1.5 2005/02/10 16:00:38 jmc Exp	*/
 
 /*-
@@ -91,19 +91,19 @@ void	ptransfer(int);
 # define ULLFP(x)	"%" x "lu"
 # define ULLT		unsigned long
 #else
-#if HAVE_PRINTF_QD
+#if defined(HAVE_PRINTF_QD)
 # define LLF		"%qd"
 # define LLFP(x)	"%" x "qd"
 # define LLT		long long
 # define ULLF		"%qu"
 # define ULLFP(x)	"%" x "qu"
 # define ULLT		unsigned long long
-#else
+#else /* !defined(HAVE_PRINTF_QD) */
 # define LLF		"%lld"
 # define LLFP(x)	"%" x "lld"
 # define LLT		long long
 # define ULLF		"%llu"
 # define ULLFP(x)	"%" x "llu"
 # define ULLT		unsigned long long
-#endif
+#endif /* !defined(HAVE_PRINTF_QD) */
 #endif

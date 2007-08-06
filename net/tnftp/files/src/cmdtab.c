@@ -1,5 +1,5 @@
-/*	NetBSD: cmdtab.c,v 1.7 2005/06/10 04:05:01 lukem Exp	*/
-/*	from	NetBSD: cmdtab.c,v 1.45 2005/06/09 16:38:29 lukem Exp	*/
+/*	$NetBSD: cmdtab.c,v 1.1.1.5 2007/08/06 04:33:23 lukem Exp $	*/
+/*	from	NetBSD: cmdtab.c,v 1.47 2007/04/11 04:40:19 lukem Exp	*/
 
 /*-
  * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
@@ -67,6 +67,21 @@
  */
 
 #include "tnftp.h"
+
+#if 0	/* tnftp */
+
+#include <sys/cdefs.h>
+#ifndef lint
+#if 0
+static char sccsid[] = "@(#)cmdtab.c	8.4 (Berkeley) 10/9/94";
+#else
+__RCSID(" NetBSD: cmdtab.c,v 1.47 2007/04/11 04:40:19 lukem Exp  ");
+#endif
+#endif /* not lint */
+
+#include <stdio.h>
+
+#endif	/* tnftp */
 
 #include "ftp_var.h"
 

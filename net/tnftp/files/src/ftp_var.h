@@ -1,8 +1,8 @@
-/*	NetBSD: ftp_var.h,v 1.5 2005/05/11 02:41:28 lukem Exp	*/
-/*	from	NetBSD: ftp_var.h,v 1.71 2005/04/11 01:49:31 lukem Exp	*/
+/*	$NetBSD: ftp_var.h,v 1.1.1.4 2007/08/06 04:33:23 lukem Exp $	*/
+/*	from	NetBSD: ftp_var.h,v 1.75 2007/07/22 05:02:50 lukem Exp	*/
 
 /*-
- * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2007 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -108,6 +108,20 @@
 #define	NO_PROGRESS
 #endif
 
+#if 0	/* tnftp */
+
+#include <sys/param.h>
+
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include <poll.h>
+
+#include <setjmp.h>
+#include <stringlist.h>
+
+#endif	/* tnftp */
+
 #ifndef NO_EDITCOMPLETE
 #include <histedit.h>
 #endif /* !NO_EDITCOMPLETE */
@@ -201,7 +215,7 @@ GLOBAL	int	sendport;	/* use PORT/LPRT cmd for each data connection */
 GLOBAL	int	connected;	/* 1 = connected to server, -1 = logged in */
 GLOBAL	int	interactive;	/* interactively prompt on m* cmds */
 GLOBAL	int	confirmrest;	/* confirm rest of current m* cmd */
-GLOBAL	int	debug;		/* debugging level */
+GLOBAL	int	ftp_debug;	/* debugging level */
 GLOBAL	int	bell;		/* ring bell on cmd completion */
 GLOBAL	int	doglob;		/* glob local file names */
 GLOBAL	int	autologin;	/* establish user account on connection */
@@ -270,6 +284,7 @@ GLOBAL	sa_family_t family;	/* address family to use for connections */
 GLOBAL	char	*ftpport;	/* port number to use for FTP connections */
 GLOBAL	char	*httpport;	/* port number to use for HTTP connections */
 GLOBAL	char	*gateport;	/* port number to use for gateftp connections */
+GLOBAL	struct addrinfo *bindai; /* local address to bind as */
 
 GLOBAL	char   *outfile;	/* filename to output URLs to */
 GLOBAL	int	restartautofetch; /* restart auto-fetch */
@@ -318,11 +333,26 @@ extern	struct option	optiontab[];
 #define	FREEPTR(x)	if ((x) != NULL) { free(x); (x) = NULL; }
 
 #ifdef BSD4_4
-# define HAVE_SOCKADDR_SA_LEN	1
+# define HAVE_STRUCT_SOCKADDR_SA_LEN	1
 #endif
 
 #ifdef NO_LONG_LONG
 # define STRTOLL(x,y,z)	strtol(x,y,z)
 #else
 # define STRTOLL(x,y,z)	strtoll(x,y,z)
+#endif
+
+#ifdef NO_DEBUG
+#define DPRINTF(...)
+#define DWARN(...)
+#else
+#define DPRINTF(...)	if (ftp_debug) (void)fprintf(ttyout, __VA_ARGS__)
+#define DWARN(...) if (ftp_debug) warn(__VA_ARGS__)
+#endif
+
+#ifdef NO_USAGE
+void xusage(void);
+#define UPRINTF(...)	xusage()
+#else
+#define UPRINTF(...)	(void)fprintf(ttyout, __VA_ARGS__)
 #endif

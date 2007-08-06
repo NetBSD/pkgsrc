@@ -1,7 +1,7 @@
-.\" 	NetBSD: ftp.1,v 1.7 2005/05/11 02:41:28 lukem Exp
-.\" 	from	NetBSD: ftp.1,v 1.109 2005/02/20 20:54:01 wiz Exp
+.\" 	$NetBSD: ftp.1,v 1.1.1.4 2007/08/06 04:33:23 lukem Exp $
+.\" 	from	NetBSD: ftp.1,v 1.119 2007/07/18 06:40:01 lukem Exp
 .\"
-.\" Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
+.\" Copyright (c) 1996-2007 The NetBSD Foundation, Inc.
 .\" All rights reserved.
 .\"
 .\" This code is derived from software contributed to The NetBSD Foundation
@@ -65,7 +65,7 @@
 .\"
 .\"	@(#)ftp.1	8.3 (Berkeley) 10/9/94
 .\"
-.Dd January 15, 2005
+.Dd July 18, 2007
 .Dt FTP 1
 .Os
 .Sh NAME
@@ -87,6 +87,7 @@ Internet file transfer program
 .Bk -words
 .Op Fl q Ar quittime
 .Ek
+.Op Fl s Ar srcaddr
 .Bk -words
 .Op Fl r Ar retry
 .Ek
@@ -180,7 +181,7 @@ below for more information.
 .Pp
 Options may be specified at the command line, or to the
 command interpreter.
-.Bl -tag -width "port   "
+.Bl -tag -width Fl
 .It Fl 4
 Forces
 .Nm
@@ -273,16 +274,20 @@ if the server does not support passive connections.
 .It Fl P Ar port
 Sets the port number to
 .Ar port .
-.It Fl r Ar wait
-Retry the connection attempt if it failed, pausing for
-.Ar wait
-seconds.
 .It Fl q Ar quittime
 Quit if the connection has stalled for
 .Ar quittime
 seconds.
+.It Fl r Ar wait
+Retry the connection attempt if it failed, pausing for
+.Ar wait
+seconds.
 .It Fl R
 Restart all non-proxied auto-fetches.
+.It Fl s Ar srcaddr
+Uses
+.Ar srcaddr
+as the local IP address for all connections.
 .It Fl t
 Enables packet tracing.
 .It Xo
@@ -352,8 +357,8 @@ is awaiting commands from the user the prompt
 is provided to the user.
 The following commands are recognized
 by
-.Nm ftp  :
-.Bl -tag -width Fl
+.Nm ftp :
+.Bl -tag -width Ic
 .It Ic \&! Op Ar command Op Ar args
 Invoke an interactive shell on the local machine.
 If there are arguments, the first is taken to be a command to execute
@@ -456,10 +461,10 @@ when an ascii type transfer is made, these linefeeds may be
 distinguished from a record delimiter only when
 .Ic \&cr
 is off.
-.It Ic debug Op Ar debug-value
+.It Ic ftp_debug Op Ar ftp_debug-value
 Toggle debugging mode.
 If an optional
-.Ar debug-value
+.Ar ftp_debug-value
 is specified it is used to set the debugging level.
 When debugging is on,
 .Nm
@@ -614,8 +619,9 @@ transferring a
 .Xr tar 1
 archive of the subtree (in binary mode).
 .It Ic hash Op Ar size
-Toggle hash-sign (``#'') printing for each data block
-transferred.
+Toggle hash-sign
+.Pq Sq #
+printing for each data block transferred.
 The size of a data block defaults to 1024 bytes.
 This can be changed by specifying
 .Ar size
@@ -664,24 +670,49 @@ A synonym for
 Define a macro.
 Subsequent lines are stored as the macro
 .Ar macro-name  ;
-a null line (consecutive newline characters
-in a file or
-carriage returns from the terminal) terminates macro input mode.
+a null line (consecutive newline characters in a file or carriage
+returns from the terminal) terminates macro input mode.
 There is a limit of 16 macros and 4096 total characters in all
 defined macros.
-Macros remain defined until a
+Macro names can be a maximum of 8 characters.
+Macros are only applicable to the current session they are
+defined within (or if defined outside a session, to the session
+invoked with the next
+.Ic open
+command), and remain defined until a
 .Ic close
 command is executed.
-The macro processor interprets `$' and `\e' as special characters.
-A `$' followed by a number (or numbers) is replaced by the
+To invoke a macro, use the
+.Ic $
+command (see above).
+.Pp
+The macro processor interprets
+.Sq $
+and
+.Sq \e
+as special characters.
+A
+.Sq $
+followed by a number (or numbers) is replaced by the
 corresponding argument on the macro invocation command line.
-A `$' followed by an `i' signals that macro processor that the
-executing macro is to be looped.
-On the first pass `$i' is
-replaced by the first argument on the macro invocation command line,
-on the second pass it is replaced by the second argument, and so on.
-A `\e' followed by any character is replaced by that character.
-Use the `\e' to prevent special treatment of the `$'.
+A
+.Sq $
+followed by an
+.Sq i
+signals the macro processor that the executing macro is to be
+looped.
+On the first pass
+.Dq $i
+is replaced by the first argument on the macro invocation command
+line, on the second pass it is replaced by the second argument,
+and so on.
+A
+.Sq \e
+followed by any character is replaced by that character.
+Use the
+.Sq \e
+to prevent special treatment of the
+.Sq $ .
 .It Ic mdelete Op Ar remote-files
 Delete the
 .Ar remote-files
@@ -757,7 +788,9 @@ The default (and only supported)
 mode is
 .Dq stream .
 .It Ic modtime Ar remote-file
-Show the last modification time of the file on the remote machine.
+Show the last modification time of the file on the remote machine, in
+.Li RFC2822
+format.
 .It Ic more Ar file
 A synonym for
 .Ic page .
@@ -824,9 +857,18 @@ and
 .Ic case
 settings).
 Variable templating is accomplished by including the
-sequences `$1', `$2', ..., `$9' in
+sequences
+.Dq $1 ,
+.Dq $2 ,
+\&...
+.Dq $9
+in
 .Ar inpattern .
-Use `\\' to prevent this special treatment of the `$' character.
+Use
+.Sq \e
+to prevent this special treatment of the
+.Sq $
+character.
 All other characters are treated literally, and are used to determine the
 .Ic nmap
 .Op Ar inpattern
@@ -838,13 +880,19 @@ $1.$2 and the remote file name "mydata.data", $1 would have the value
 The
 .Ar outpattern
 determines the resulting mapped filename.
-The sequences `$1', `$2', ...., `$9' are replaced by any value resulting
-from the
+The sequences
+.Dq $1 ,
+.Dq $2 ,
+\&...
+.Dq $9
+are replaced by any value resulting from the
 .Ar inpattern
 template.
-The sequence `$0' is replace by the original filename.
+The sequence
+.Dq $0
+is replaced by the original filename.
 Additionally, the sequence
-.Ql Op Ar seq1 , Ar seq2
+.Dq Op Ar seq1 , Ar seq2
 is replaced by
 .Op Ar seq1
 if
@@ -863,9 +911,18 @@ the output filename "myfile.data" for input filenames "myfile.data" and
 "myfile.myfile" for the input filename ".myfile".
 Spaces may be included in
 .Ar outpattern  ,
-as in the example: `nmap $1 sed "s/  *$//" \*[Gt] $1' .
-Use the `\e' character to prevent special treatment
-of the `$','[',']', and `,' characters.
+as in the example:
+.Dl nmap $1 sed "s/  *$//" \*[Gt] $1
+Use the
+.Sq \e
+character to prevent special treatment
+of the
+.Sq $ ,
+.Sq \&[ ,
+.Sq \&] ,
+and
+.Sq \&,
+characters.
 .It Ic ntrans Op Ar inchars Op Ar outchars
 Set or unset the filename character translation mechanism.
 If no arguments are specified, the filename character
@@ -953,7 +1010,7 @@ traffic.
 servers are required to support the
 .Dv PASV
 command by
-.Li RFC 1123 ,
+.Li RFC1123 ,
 some do not.)
 .It Ic pdir Op Ar remote-path
 Perform
@@ -1440,7 +1497,9 @@ A synonym for
 .El
 .Pp
 Command arguments which have embedded spaces may be quoted with
-quote `"' marks.
+quote
+.Sq \&"
+marks.
 .Pp
 Commands which toggle settings can take an explicit
 .Ic on
@@ -1566,7 +1625,7 @@ ascii or binary (respectively).
 The default transfer type is binary.
 .Pp
 In order to be compliant with
-.Li RFC 1738 ,
+.Li RFC3986 ,
 .Nm
 interprets the
 .Ar path
@@ -1619,7 +1678,7 @@ Any
 .Sq Li \&% Ns Ar XX
 codes
 (per
-.Li RFC 1738 )
+.Li RFC3986 )
 within the path components are decoded, with
 .Ar XX
 representing a character code in hexadecimal.
@@ -1744,6 +1803,26 @@ is in the URL, use them for the first attempt to authenticate.
 A local URL, copied from
 .Pa / Ns Ar path
 on the local host.
+.\" about:
+.It Xo
+.Sm off
+.Li about:
+.Ar topic
+.Sm on
+.Xc
+Display information regarding
+.Ar topic ;
+no file is retrieved for this auto-fetched element.
+Supported values include:
+.Bl -tag -width "about:version"
+.It Li about:ftp
+Information about
+.Nm ftp .
+.It Li about:version
+The version of
+.Nm ftp .
+Useful to provide when reporting problems.
+.El
 .El
 .Pp
 Unless noted otherwise above, and
@@ -1869,11 +1948,12 @@ A particularly
 useful example of this mechanism is:
 .Dq Li dir \&"\&" \&|more .
 .It
-Failing the above checks, if ``globbing'' is enabled,
-local file names are expanded
-according to the rules used in the
+Failing the above checks, if
+.Dq globbing
+is enabled, local file names are expanded according to the rules
+used in the
 .Xr csh  1  ;
-c.f. the
+see the
 .Ic glob
 command.
 If the
@@ -2039,6 +2119,20 @@ next
 .Pa .netrc
 line and continue until a blank line (consecutive new-line
 characters) is encountered.
+Like the other tokens in the
+.Pa .netrc
+file, a
+.Ic macdef
+is applicable only to the
+.Ic machine
+definition preceding it.
+A
+.Ic macdef
+entry cannot be utilized by multiple
+.Ic machine
+definitions; rather, it must be defined following each
+.Ic machine
+it is intended to be used with.
 If a macro named
 .Ic init
 is defined, it is automatically executed as the last step in the
@@ -2249,7 +2343,7 @@ URL characters are required in the username or password
 or
 .Sq / ) ,
 encode them with
-.Li RFC 1738
+.Li RFC3986
 .Sq Li \&% Ns Ar XX
 encoding.
 .Pp
@@ -2292,16 +2386,27 @@ for an example of how to make this automatic.
 .Xr ftpd 8
 .Sh STANDARDS
 .Nm
-attempts to be compliant with
-.Li RFC 959 ,
-.Li RFC 1123 ,
-.Li RFC 1738 ,
-.Li RFC 2068 ,
-.Li RFC 2389 ,
-.Li RFC 2428 ,
-.Li RFC 2732 ,
-and
-.Cm draft-ietf-ftpext-mlst-11 .
+attempts to be compliant with:
+.Bl -tag -offset indent -width 8n
+.It Li RFC0959
+.Em File Transfer Protocol
+.It Li RFC1123
+.Em Requirements for Internet Hosts - Application and Support
+.It Li RFC1635
+.Em How to Use Anonymous FTP
+.It Li RFC2389
+.Em Feature negotiation mechanism for the File Transfer Protocol
+.It Li RFC2428
+.Em FTP Extensions for IPv6 and NATs
+.It Li RFC2616
+.Em Hypertext Transfer Protocol -- HTTP/1.1
+.It Li RFC2822
+.Em Internet Message Format
+.It Li RFC3659
+.Em Extensions to FTP
+.It Li RFC3986
+.Em Uniform Resource Identifier (URI)
+.El
 .Sh HISTORY
 The
 .Nm

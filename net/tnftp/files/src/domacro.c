@@ -1,5 +1,5 @@
-/*	NetBSD: domacro.c,v 1.5 2005/06/09 16:47:50 lukem Exp	*/
-/*	from	NetBSD: domacro.c,v 1.20 2003/08/07 11:13:53 agc Exp	*/
+/*	$NetBSD: domacro.c,v 1.1.1.5 2007/08/06 04:33:23 lukem Exp $	*/
+/*	from	NetBSD: domacro.c,v 1.21 2005/06/29 02:31:19 christos Exp	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994
@@ -32,6 +32,23 @@
 
 #include "tnftp.h"
 
+#if 0	/* tnftp */
+
+#include <sys/cdefs.h>
+#ifndef lint
+#if 0
+static char sccsid[] = "@(#)domacro.c	8.3 (Berkeley) 4/2/94";
+#else
+__RCSID(" NetBSD: domacro.c,v 1.21 2005/06/29 02:31:19 christos Exp  ");
+#endif
+#endif /* not lint */
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+#endif	/* tnftp */
+
 #include "ftp_var.h"
 
 void
@@ -43,7 +60,7 @@ domacro(int argc, char *argv[])
 
 	if ((argc == 0 && argv != NULL) ||
 	    (argc < 2 && !another(&argc, &argv, "macro name"))) {
-		fprintf(ttyout, "usage: %s macro_name [args]\n", argv[0]);
+		UPRINTF("usage: %s macro_name [args]\n", argv[0]);
 		code = -1;
 		return;
 	}
