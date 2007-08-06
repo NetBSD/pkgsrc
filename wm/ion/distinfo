@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2006/08/14 22:40:53 wiz Exp $
+$NetBSD: distinfo,v 1.18 2007/08/06 18:16:06 jlam Exp $
 
 SHA1 (ion-2-20040729.tar.gz) = 92329a392de13dfb79ecd236eeb121a7045327e5
 RMD160 (ion-2-20040729.tar.gz) = a32053c744cc130d9feb07f64bf3fef6cb4fa0c7
@@ -10,7 +10,7 @@ SHA1 (patch-ad) = e5c10cf264e1b43144af7dec64c11c588e6384dc
 SHA1 (patch-ae) = 403325bab7298e88232872275287fbde102cd5a3
 SHA1 (patch-af) = aa1871320528f4e3d51686b977e37022cd10c9e5
 SHA1 (patch-ag) = 9dfe4f3b703fc130d4a16a4141b8c815fab0564a
-SHA1 (patch-ah) = 82e21bce3d4bc0456a9f194f9d7e6d09e1418014
+SHA1 (patch-ah) = f9ae94e9b8240417e7b80c42e8cbedf79676abbc
 SHA1 (patch-ai) = 0bcc1fd90f3e68fe869458387ab91fdb70393748
 SHA1 (patch-aj) = a0a78f7e3f7e6109db80b6da81293a5abefb09c0
 SHA1 (patch-ak) = f2a8f6cb99e69b539d5f1085c638e5ea20fac6e6
