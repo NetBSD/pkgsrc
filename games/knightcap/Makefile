@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/02 17:34:18 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/08/06 16:43:35 joerg Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		Chess engine with 3D OpenGL-rendered chessboard
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=		KnightCap
 
 WRKSRC=			${WRKDIR}/Export
@@ -20,13 +22,11 @@ MAKE_ENV+=		DEFINES=${DEFINES:Q}
 DEFINES=		-DTB_DIR=\"${TBDIR:Q}\"
 
 TBDIR=			${PREFIX}/share/egtb
-DOCDIR=			${PREFIX}/share/doc/knightcap
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/knightcap
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/KnightCap ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/KnightCap ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/knightcap
 
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
