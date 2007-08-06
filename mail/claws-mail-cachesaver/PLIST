@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2007/08/06 00:33:07 smb Exp $
+lib/claws-mail/plugins/cachesaver.la
+@dirrm lib/claws-mail/plugins
