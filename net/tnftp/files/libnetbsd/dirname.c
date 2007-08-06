@@ -1,4 +1,4 @@
-/*	NetBSD: dirname.c,v 1.1 2005/06/01 15:07:55 lukem Exp	*/
+/*	$NetBSD: dirname.c,v 1.1.1.2 2007/08/06 16:48:57 lukem Exp $	*/
 /*	from	NetBSD: dirname.c,v 1.7 2002/10/17 11:36:39 tron Exp	*/
 
 /*-
