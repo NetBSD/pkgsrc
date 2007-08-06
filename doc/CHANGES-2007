@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1717 2007/08/06 14:59:20 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1718 2007/08/06 15:29:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/rxvt-unicode to 8.3 [ghen 2007-08-06]
 	Updated net/coda to 6.9.2 [gdt 2007-08-06]
 	Added x11/xdm version 1.1.4nb2 [tron 2007-08-06]
+	Updated textproc/p5-XML-LibXML-Iterator to 1.02nb1 [seb 2007-08-06]
