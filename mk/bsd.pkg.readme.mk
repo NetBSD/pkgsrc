@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.9 2007/08/05 19:13:02 adrianp Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.10 2007/08/06 02:36:24 adrianp Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -252,7 +252,7 @@ show-vulnerabilities-html:
 	else								\
 		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
 		if [ -f $$_PKGVULNDIR/pkg-vulnerabilities ]; then	\
-			audit-packages ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} |${AWK} \
+			audit-packages ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} 2>&1| ${AWK} \
 				'{ gsub("\<", "\\&lt;", $$2);		\
 				gsub("\>", "\\&gt;", $$2);		\
 				printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, $$8) }'; \
