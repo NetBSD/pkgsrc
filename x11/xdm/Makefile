@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/08/06 15:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/06 16:43:40 tron Exp $
 
 DISTNAME=	xdm-1.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
