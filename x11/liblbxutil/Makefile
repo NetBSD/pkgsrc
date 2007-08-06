@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/14 15:27:49 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 11:49:50 joerg Exp $
 #
 
 DISTNAME=		liblbxutil-1.0.1
@@ -16,6 +16,12 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/lbxutil.pc.in
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
