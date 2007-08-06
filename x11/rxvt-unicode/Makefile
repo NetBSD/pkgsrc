@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/01/30 20:41:32 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/06 10:02:27 ghen Exp $
 #
 
-DISTNAME=		rxvt-unicode-8.1
+DISTNAME=		rxvt-unicode-8.3
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/ \
 			http://dist.schmorp.de/rxvt-unicode/Attic/
