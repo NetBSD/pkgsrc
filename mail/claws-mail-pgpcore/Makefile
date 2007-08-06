@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:54 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 21:41:22 smb Exp $
 #
 
 PLUGIN_NAME=	pgpcore
@@ -6,6 +6,9 @@ PLUGIN_NAME=	pgpcore
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Handles core PGP functions
+PKGREVISION=	1
+
+PLIST_SRC+=	PLIST
 
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin

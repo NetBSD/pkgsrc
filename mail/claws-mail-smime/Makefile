@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:57 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 21:41:22 smb Exp $
 
 DISTNAME=smime-0.7.1
 PKGNAME=claws-mail-smime-0.7.1
@@ -7,8 +7,10 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	This plugin handles S/MIME signed and/or encrypted mails
+PKGREVISION=	1
 
 DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+PLIST_SRC+=	PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
