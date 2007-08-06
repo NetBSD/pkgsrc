@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2007/07/17 20:20:08 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/06 09:52:31 ghen Exp $
 #
 
-DISTNAME=	ion-3rc-20070708
-PKGNAME=	${DISTNAME:S/-3ds-/3-/}
-PKGREVISION=	1
-CATEGORIES=	wm x11
-MASTER_SITES=	http://modeemi.fi/~tuomov/dl/
+DISTNAME=		ion-3rc-20070720
+PKGNAME=		${DISTNAME:S/-3rc-/3-/}
+CATEGORIES=		wm x11
+MASTER_SITES=		http://modeemi.fi/~tuomov/dl/
+MASTER_SITES+=		${MASTER_SITE_FREEBSD_LOCAL:=philip/}
 
-MAINTAINER=	philip@FreeBSD.org
-HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
-COMMENT=	Keyboard friendly tiling window manager
+MAINTAINER=		philip@FreeBSD.org
+HOMEPAGE=		http://modeemi.fi/~tuomov/ion/
+COMMENT=		Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -38,6 +38,12 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+MAKE_ENV+=		PKGSRC_LIBRT=-lrt
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
