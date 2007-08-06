@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/14 09:56:50 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 14:08:47 joerg Exp $
 #
 
 DISTNAME=		libXvMC-1.0.4
@@ -17,6 +17,12 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xvmc.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
