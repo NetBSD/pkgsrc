@@ -1,78 +1,140 @@
-/*	NetBSD: tnftp.h,v 1.21 2005/06/25 06:27:32 lukem Exp	*/
+/*	$NetBSD: tnftp.h,v 1.1.1.7 2007/08/06 01:54:38 lukem Exp $	*/
 
-#define	FTP_PRODUCT	"tnftp"
-#define	FTP_VERSION	"20050625"
+#define	FTP_PRODUCT	PACKAGE_NAME
+#define	FTP_VERSION	PACKAGE_VERSION
 
 #include "config.h"
 
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
-
-#include <netinet/in.h>
-#include <netinet/in_systm.h>
-#include <netinet/ip.h>
-
-#include <arpa/ftp.h>
-#include <arpa/inet.h>
-
+#include <stdio.h>
 #include <ctype.h>
 #include <errno.h>
-#include <fcntl.h>
-#include <limits.h>
-#ifdef HAVE_RFC2553_NETDB
-#include <netdb.h>
-#else
-#define getaddrinfo non_rfc2553_getaddrinfo
-#include <netdb.h>
-#undef getaddrinfo
-#endif
-#include <pwd.h>
-#include <setjmp.h>
-#include <signal.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <termios.h>
-#include <unistd.h>
 
-#if HAVE_POLL
-/* we use poll */
-#elif HAVE_SELECT
-/* we use select */
-#else /* ! HAVE_POLL && ! HAVE_SELECT */
-# error "no poll() or select() found"
+#if defined(HAVE_SYS_TYPES_H)
+# include <sys/types.h>
 #endif
-
-#if HAVE_POLL_H
+#if defined(STDC_HEADERS)
+# include <stdarg.h>
+# include <stdlib.h>
+# include <string.h>
+#endif
+#if defined(HAVE_LIBGEN_H)
+# include <libgen.h>
+#endif
+#if defined(HAVE_UNISTD_H)
+# include <unistd.h>
+#endif
+#if defined(HAVE_POLL_H)
 # include <poll.h>
-#elif HAVE_SYS_POLL_H
+#elif defined(HAVE_SYS_POLL_H)
 # include <sys/poll.h>
 #endif
-#ifndef POLLIN
+#if defined(HAVE_SYS_SOCKET_H)
+# include <sys/socket.h>
+#endif
+#if defined(HAVE_NETINET_IN_H)
+# include <netinet/in.h>
+#endif
+#if defined(HAVE_NETINET_IN_SYSTM_H)
+# include <netinet/in_systm.h>
+#endif
+#if defined(HAVE_NETINET_IP_H)
+# include <netinet/ip.h>
+#endif
+#if defined(HAVE_NETDB_H)
+# if HAVE_DECL_AI_NUMERICHOST
+#  include <netdb.h>
+# else	/* !HAVE_DECL_AI_NUMERICHOST */
+#  define getaddrinfo non_rfc2553_getaddrinfo
+#  include <netdb.h>
+#  undef getaddrinfo
+# endif	/* !HAVE_DECL_AI_NUMERICHOST */
+#endif
+#if defined(HAVE_ARPA_INET_H)
+# include <arpa/inet.h>
+#endif
+#if defined(HAVE_DIRENT_H)
+# include <dirent.h>
+#else
+# define dirent direct
+# if defined(HAVE_SYS_NDIR_H)
+#  include <sys/ndir.h>
+# endif
+# if defined(HAVE_SYS_DIR_H)
+#  include <sys/dir.h>
+# endif
+# if defined(HAVE_NDIR_H)
+#  include <ndir.h>
+# endif
+#endif
+
+#if defined(HAVE_SYS_IOCTL_H)
+# include <sys/ioctl.h>
+#endif
+#if defined(HAVE_SYS_PARAM_H)
+# include <sys/param.h>
+#endif
+#if defined(HAVE_SYS_STAT_H)
+# include <sys/stat.h>
+#endif
+#if defined(HAVE_SYS_SYSLIMITS_H)
+# include <sys/syslimits.h>
+#endif
+#if defined(HAVE_SYS_WAIT_H)
+# include <sys/wait.h>
+#endif
+
+#if defined(HAVE_ARPA_FTP_H)
+# include <arpa/ftp.h>
+#endif
+
+#if defined(HAVE_FCNTL_H)
+# include <fcntl.h>
+#endif
+#if defined(HAVE_LIMITS_H)
+# include <limits.h>
+#endif
+#if defined(HAVE_PWD_H)
+# include <pwd.h>
+#endif
+#if defined(HAVE_SETJMP_H)
+# include <setjmp.h>
+#endif
+#if defined(HAVE_SIGNAL_H)
+# include <signal.h>
+#endif
+#if defined(HAVE_STDDEF_H)
+# include <stddef.h>
+#endif
+#if defined(HAVE_TERMIOS_H)
+# include <termios.h>
+#endif
+
+#if defined(HAVE_POLL)
+/* we use poll */
+#elif defined(HAVE_SELECT)
+/* we use select */
+#else /* !defined(HAVE_POLL) && !defined(HAVE_SELECT) */
+# error "no poll() or select() found"
+#endif
+#if !defined(POLLIN)
 # define POLLIN		0x0001
 #endif
-#ifndef POLLOUT
+#if !defined(POLLOUT)
 # define POLLOUT	0x0004
 #endif
-#ifndef POLLRDNORM
+#if !defined(POLLRDNORM)
 # define POLLRDNORM	0x0040
 #endif
-#ifndef POLLWRNORM
+#if !defined(POLLWRNORM)
 # define POLLWRNORM	POLLOUT
 #endif
-#ifndef POLLRDBAND
+#if !defined(POLLRDBAND)
 # define POLLRDBAND	0x0080
 #endif
-#ifndef INFTIM
+#if !defined(INFTIM)
 # define INFTIM -1
 #endif
-#if ! HAVE_STRUCT_POLLFD
+#if !defined(HAVE_STRUCT_POLLFD)
 struct pollfd {
 	int	fd;
 	short	events;
@@ -80,58 +142,35 @@ struct pollfd {
 };
 #endif
 
-#if HAVE_DIRENT_H
-# include <dirent.h>
-#else
-# define dirent direct
-# if HAVE_SYS_NDIR_H
-#  include <sys/ndir.h>
-# endif
-# if HAVE_SYS_DIR_H
-#  include <sys/dir.h>
-# endif
-# if HAVE_NDIR_H
-#  include <ndir.h>
-# endif
-#endif
-
-#if TIME_WITH_SYS_TIME
+#if defined(TIME_WITH_SYS_TIME)
 # include <sys/time.h>
 # include <time.h>
 #else
-# if HAVE_SYS_TIME_H
+# if defined(HAVE_SYS_TIME_H)
 #  include <sys/time.h>
 # else
 #  include <time.h>
 # endif
 #endif
 
-#if HAVE_SYS_SYSLIMITS_H
-# include <sys/syslimits.h>
-#endif
-
-#if HAVE_ERR_H
+#if defined(HAVE_ERR_H)
 # include <err.h>
 #endif
 
-#if USE_GLOB_H		/* not set by configure; used by other build systems */
+#if defined(USE_GLOB_H)	/* not set by configure; used by other build systems */
 # include <glob.h>
 #else
 # include "ftpglob.h"
 #endif
 
-#if HAVE_LIBGEN_H
-# include <libgen.h>
-#endif
-
-#if HAVE_PATHS_H
+#if defined(HAVE_PATHS_H)
 # include <paths.h>
 #endif
-#ifndef _PATH_BSHELL
-#define _PATH_BSHELL	"/bin/sh"
+#if !defined(_PATH_BSHELL)
+# define _PATH_BSHELL	"/bin/sh"
 #endif
-#ifndef _PATH_TMP
-#define _PATH_TMP	"/tmp/"
+#if !defined(_PATH_TMP)
+# define _PATH_TMP	"/tmp/"
 #endif
 
 typedef struct _stringlist {
@@ -145,7 +184,7 @@ int	 sl_add(StringList *, char *);
 void	 sl_free(StringList *, int);
 char	*sl_find(StringList *, char *);
 
-#if HAVE_TERMCAP_H
+#if defined(HAVE_TERMCAP_H)
 # include <termcap.h>
 #else
 int	 tgetent(char *, const char *);
@@ -154,15 +193,7 @@ int	 tgetflag(const char *);
 int	 tgetnum(const char *);
 char	*tgoto(const char *, int, int);
 void	 tputs(const char *, int, int (*)(int));
-#endif
-
-#if HAVE_UTIL_H
-# include <util.h>
-#endif
-
-#if HAVE_LIBUTIL_H
-# include <libutil.h>
-#endif
+#endif /* !HAVE_TERMCAP_H */
 
 #if defined(HAVE_VIS_H) && defined(HAVE_STRVIS) && defined(HAVE_STRUNVIS)
 # include <vis.h>
@@ -170,24 +201,25 @@ void	 tputs(const char *, int, int (*)(int));
 # include "ftpvis.h"
 #endif
 
-#if ! HAVE_IN_PORT_T
+#if !defined(HAVE_IN_PORT_T)
 typedef unsigned short in_port_t;
 #endif
 
-#if ! HAVE_SA_FAMILY_T
+#if !defined(HAVE_SA_FAMILY_T)
 typedef unsigned short sa_family_t;
 #endif
 
-#if ! HAVE_SOCKLEN_T
+#if !defined(HAVE_SOCKLEN_T)
 typedef unsigned int socklen_t;
 #endif
 
-#if HAVE_AF_INET6 && HAVE_SOCKADDR_IN6 && HAVE_NS_IN6ADDRSZ
+#if HAVE_DECL_AF_INET6 \
+    && defined(HAVE_STRUCT_SOCKADDR_IN6) \
+    && HAVE_DECL_NS_IN6ADDRSZ
 # define INET6
 #endif
 
-
-#if ! HAVE_RFC2553_NETDB
+#if !HAVE_DECL_AI_NUMERICHOST
 
 				/* RFC 2553 */
 #undef	EAI_ADDRFAMILY
@@ -260,10 +292,11 @@ typedef unsigned int socklen_t;
 #undef	AI_V4MAPPED
 #define	AI_V4MAPPED	0x00000800 /* accept IPv4-mapped IPv6 address */
 
-#endif /* ! HAVE_RFC2553_NETDB */
+#endif /* !HAVE_DECL_AI_NUMERICHOST */
 
 
-#if ! HAVE_RFC2553_NETDB && ! HAVE_ADDRINFO
+#if !HAVE_DECL_AI_NUMERICHOST && !defined(HAVE_STRUCT_ADDRINFO) \
+    && !defined(USE_SOCKS)
 
 struct addrinfo {
 	int		ai_flags;	/* AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST */
@@ -281,156 +314,143 @@ int	getaddrinfo(const char *, const char *,
 int	getnameinfo(const struct sockaddr *, socklen_t,
 	    char *, size_t, char *, size_t, int);
 void	freeaddrinfo(struct addrinfo *);
-char   *gai_strerror(int);
+const char *gai_strerror(int);
 
-#endif /* ! HAVE_RFC2553_NETDB && ! HAVE_ADDRINFO */
+#endif /* !HAVE_DECL_AI_NUMERICHOST && !defined(HAVE_STRUCT_ADDRINFO) \
+	&& !defined(USE_SOCKS) */
 
-
-#if ! HAVE_D_NAMLEN
+#if !defined(HAVE_STRUCT_DIRENT_D_NAMLEN)
 # define DIRENT_MISSING_D_NAMLEN
 #endif
 
-#if ! HAVE_H_ERRNO_D
+#if !HAVE_DECL_H_ERRNO
 extern int	h_errno;
 #endif
 #define HAVE_H_ERRNO	1		/* XXX: an assumption for now... */
 
-#if ! HAVE_FCLOSE_D
+#if !HAVE_DECL_FCLOSE
 int	fclose(FILE *);
 #endif
 
-#if ! HAVE_GETPASS_D
+#if !HAVE_DECL_GETPASS
 char	*getpass(const char *);
 #endif
 
-#if ! HAVE_OPTARG_D
+#if !HAVE_DECL_OPTARG
 extern char    *optarg;
 #endif
 
-#if ! HAVE_OPTIND_D
+#if !HAVE_DECL_OPTIND
 extern int	optind;
 #endif
 
-#if ! HAVE_PCLOSE_D
+#if !HAVE_DECL_PCLOSE
 int	pclose(FILE *);
 #endif
 
-#if ! HAVE_DIRNAME_D
+#if !HAVE_DECL_DIRNAME
 char	*dirname(char *);
 #endif
 
-#if ! HAVE_ERR
+#if !defined(HAVE_ERR)
 void	err(int, const char *, ...);
 void	errx(int, const char *, ...);
 void	warn(const char *, ...);
 void	warnx(const char *, ...);
 #endif
 
-#if ! HAVE_FGETLN
+#if !defined(HAVE_FGETLN)
 char   *fgetln(FILE *, size_t *);
 #endif
 
-#if ! HAVE_FSEEKO
+#if !defined(HAVE_FSEEKO)
 int	fseeko(FILE *, off_t, int);
 #endif
 
-#if ! HAVE_FPARSELN
-# define FPARSELN_UNESCESC	0x01
-# define FPARSELN_UNESCCONT	0x02
-# define FPARSELN_UNESCCOMM	0x04
-# define FPARSELN_UNESCREST	0x08
-# define FPARSELN_UNESCALL	0x0f
-char   *fparseln(FILE *, size_t *, size_t *, const char[3], int);
-#endif
-
-#if ! HAVE_INET_NTOP
+#if !defined(HAVE_INET_NTOP)
 const char *inet_ntop(int, const void *, char *, socklen_t);
 #endif
 
-#if ! HAVE_INET_PTON
+#if !defined(HAVE_INET_PTON)
 int inet_pton(int, const char *, void *);
 #endif
 
-#if ! HAVE_MKSTEMP
+#if !defined(HAVE_MKSTEMP)
 int	mkstemp(char *);
 #endif
 
-#if ! HAVE_SETPROGNAME
+#if !defined(HAVE_SETPROGNAME)
 const char *getprogname(void);
 void	setprogname(const char *);
 #endif
 
-#if ! HAVE_SNPRINTF
+#if !defined(HAVE_SNPRINTF)
 int	snprintf(char *, size_t, const char *, ...);
 #endif
 
-#if ! HAVE_STRDUP
+#if !defined(HAVE_STRDUP)
 char   *strdup(const char *);
 #endif
 
-#if ! HAVE_STRERROR
+#if !defined(HAVE_STRERROR)
 char   *strerror(int);
 #endif
 
-#if ! HAVE_STRPTIME || ! HAVE_STRPTIME_D
+#if !defined(HAVE_STRPTIME) || !HAVE_DECL_STRPTIME
 char   *strptime(const char *, const char *, struct tm *);
 #endif
 
-#if HAVE_QUAD_SUPPORT
-# if ! HAVE_STRTOLL && HAVE_LONG_LONG
+#if defined(HAVE_PRINTF_LONG_LONG) && defined(HAVE_LONG_LONG_INT)
+# if !defined(HAVE_STRTOLL)
 long long strtoll(const char *, char **, int);
-#  if ! defined(LLONG_MIN)
-#   define LLONG_MIN	(-0x7fffffffffffffffL-1)
-#  endif
-#  if ! defined(LLONG_MAX)
-#   define LLONG_MAX	(0x7fffffffffffffffL)
-#  endif
 # endif
-#else	/* ! HAVE_QUAD_SUPPORT */
+# if !defined(LLONG_MIN)
+#  define LLONG_MIN	(-0x7fffffffffffffffLL-1)
+# endif
+# if !defined(LLONG_MAX)
+#  define LLONG_MAX	(0x7fffffffffffffffLL)
+# endif
+#else  /* !(defined(HAVE_PRINTF_LONG_LONG) && defined(HAVE_LONG_LONG_INT)) */
 # define NO_LONG_LONG	1
-#endif	/* ! HAVE_QUAD_SUPPORT */
+#endif /* !(defined(HAVE_PRINTF_LONG_LONG) && defined(HAVE_LONG_LONG_INT)) */
 
-#if ! HAVE_TIMEGM
+#if !defined(HAVE_TIMEGM)
 time_t	timegm(struct tm *);
 #endif
 
-#if ! HAVE_HSTRERROR
-char   *strerror(int);
-#endif
-
-#if ! HAVE_STRLCAT
+#if !defined(HAVE_STRLCAT)
 size_t	strlcat(char *, const char *, size_t);
 #endif
 
-#if ! HAVE_STRLCPY
+#if !defined(HAVE_STRLCPY)
 size_t	strlcpy(char *, const char *, size_t);
 #endif
 
-#if ! HAVE_STRSEP
+#if !defined(HAVE_STRSEP)
 char   *strsep(char **stringp, const char *delim);
 #endif
 
-#if ! HAVE_UTIMES
+#if !defined(HAVE_UTIMES)
 int utimes(const char *, const struct timeval *);
 #endif
 
-#if ! HAVE_MEMMOVE
+#if !defined(HAVE_MEMMOVE)
 # define memmove(a,b,c)	bcopy((b),(a),(c))
 	/* XXX: add others #defines for borken systems? */
 #endif
 
-#if HAVE_GETPASSPHRASE
+#if defined(HAVE_GETPASSPHRASE)
 # define getpass getpassphrase
 #endif
 
-#if ! defined(MIN)
+#if !defined(MIN)
 # define MIN(a, b)	((a) < (b) ? (a) : (b))
 #endif
-#if ! defined(MAX)
+#if !defined(MAX)
 # define MAX(a, b)	((a) < (b) ? (b) : (a))
 #endif
 
-#if ! defined(timersub)
+#if !defined(timersub)
 # define timersub(tvp, uvp, vvp)					\
 	do {								\
 		(vvp)->tv_sec = (tvp)->tv_sec - (uvp)->tv_sec;		\
@@ -442,7 +462,7 @@ int utimes(const char *, const struct timeval *);
 	} while (0)
 #endif
 
-#if ! defined(S_ISLNK)
+#if !defined(S_ISLNK)
 # define S_ISLNK(m)	((m & S_IFMT) == S_IFLNK)
 #endif
 
@@ -450,3 +470,28 @@ int utimes(const char *, const struct timeval *);
 #define	SECSPERHOUR	3600
 #define	SECSPERDAY	86400
 #define	TM_YEAR_BASE	1900
+
+#if defined(USE_SOCKS)		/* (Dante) SOCKS5 */
+#define connect		Rconnect
+#define bind		Rbind
+#define getsockname	Rgetsockname
+#define getpeername	Rgetpeername
+#define accept		Raccept
+#define rresvport	Rrresvport
+#define bindresvport	Rbindresvport
+#define gethostbyname	Rgethostbyname
+#define gethostbyname2	Rgethostbyname2
+#define sendto		Rsendto
+#define recvfrom	Rrecvfrom
+#define recvfrom	Rrecvfrom
+#define write		Rwrite
+#define writev		Rwritev
+#define send		Rsend
+#define sendmsg		Rsendmsg
+#define read		Rread
+#define readv		Rreadv
+#define recv		Rrecv
+#define recvmsg		Rrecvmsg
+#define getaddrinfo	Rgetaddrinfo
+#define getipnodebyname	Rgetipnodebyname
+#endif /* defined(USE_SOCKS) */
