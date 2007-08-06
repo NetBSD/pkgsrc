@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1724 2007/08/06 20:32:36 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1725 2007/08/06 21:41:21 smb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3166,3 +3166,14 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_rolling-replace to 0.6 [tnn 2007-08-06]
 	Updated wm/3ddesktop to 0.2.9 [xtraeme 2007-08-06]
 	Added devel/p5-Perl6-Export-Attrs version 0.0.3 [seb 2007-08-06]
+	Updated mail/claws-mail-bogofilter to 2.10.0  [smb 2007-08-06]
+	Updated mail/claws-mail-smime to 0.7.1 [smb 2007-08-06]
+	Updated mail/claws-mail-pgpinline to 2.10.0 [smb 2007-08-06]
+	Updated mail/claws-mail-pgpmime to 2.10.0 [smb 2007-08-06]
+	Updated mail/claws-mail-notification to 0.11 [smb 2007-08-06]
+	Updated mail/claws-mail-pgpcore to 2.10.0 [smb 2007-08-06]
+	Updated mail/claws-mail-pdf_viewer to 0.5 [smb 2007-08-06]
+	Updated mail/claws-mail-attachwarner to 0.2.7 [smb 2007-08-06]
+	Updated mail/claws-mail-gtkhtml to 0.15.1 [smb 2007-08-06]
+	Updated mail/claws-mail-vcalendar to 1.96 [smb 2007-08-06]
+	Updated mail/claws-mail-rssyl to 0.14 [smb 2007-08-06]

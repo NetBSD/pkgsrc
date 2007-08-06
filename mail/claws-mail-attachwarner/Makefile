@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/06 00:33:05 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 21:41:21 smb Exp $
 #
 
 DISTNAME=attachwarner-0.2.7
@@ -8,6 +8,9 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Warns if a message mentions an attachment without attaching files
+PKGREVISION=	1
+
+PLIST_SRC+=	PLIST
 
 DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
 
