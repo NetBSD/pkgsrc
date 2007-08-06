@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/26 06:21:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/06 15:42:30 obache Exp $
 bin/rgettext
 bin/rmsgfmt
 bin/rmsgmerge
@@ -21,6 +21,7 @@ ${RUBY_SITELIBDIR}/gettext/parser/glade.rb
 ${RUBY_SITELIBDIR}/gettext/parser/ruby.rb
 ${RUBY_SITELIBDIR}/gettext/poparser.rb
 ${RUBY_SITELIBDIR}/gettext/rails.rb
+${RUBY_SITELIBDIR}/gettext/rails_compat.rb
 ${RUBY_SITELIBDIR}/gettext/rgettext.rb
 ${RUBY_SITELIBDIR}/gettext/rmsgfmt.rb
 ${RUBY_SITELIBDIR}/gettext/rmsgmerge.rb
@@ -30,6 +31,8 @@ ${RUBY_SITELIBDIR}/gettext/textdomainmanager.rb
 ${RUBY_SITELIBDIR}/gettext/utils.rb
 ${RUBY_SITELIBDIR}/gettext/version.rb
 ${RUBY_SITEARCHLIBDIR}/locale_system.${RUBY_DLEXT}
+share/locale/bs/LC_MESSAGES/rails.mo
+share/locale/bs/LC_MESSAGES/rgettext.mo
 share/locale/ca/LC_MESSAGES/rails.mo
 share/locale/ca/LC_MESSAGES/rgettext.mo
 share/locale/cs/LC_MESSAGES/rails.mo
@@ -45,12 +48,16 @@ share/locale/es/LC_MESSAGES/rgettext.mo
 share/locale/et/LC_MESSAGES/rails.mo
 share/locale/fr/LC_MESSAGES/rails.mo
 share/locale/fr/LC_MESSAGES/rgettext.mo
+share/locale/hr/LC_MESSAGES/rails.mo
+share/locale/hr/LC_MESSAGES/rgettext.mo
 share/locale/it/LC_MESSAGES/rails.mo
 share/locale/it/LC_MESSAGES/rgettext.mo
 share/locale/ja/LC_MESSAGES/rails.mo
 share/locale/ja/LC_MESSAGES/rgettext.mo
 share/locale/ko/LC_MESSAGES/rails.mo
 share/locale/ko/LC_MESSAGES/rgettext.mo
+share/locale/nb/LC_MESSAGES/rails.mo
+share/locale/nb/LC_MESSAGES/rgettext.mo
 share/locale/nl/LC_MESSAGES/rails.mo
 share/locale/nl/LC_MESSAGES/rgettext.mo
 share/locale/pt_BR/LC_MESSAGES/rails.mo
@@ -58,6 +65,8 @@ share/locale/pt_BR/LC_MESSAGES/rgettext.mo
 share/locale/ru/LC_MESSAGES/rails.mo
 share/locale/ru/LC_MESSAGES/rgettext.mo
 share/locale/sv/LC_MESSAGES/rgettext.mo
+share/locale/vi/LC_MESSAGES/rails.mo
+share/locale/vi/LC_MESSAGES/rgettext.mo
 share/locale/zh/LC_MESSAGES/rails.mo
 share/locale/zh/LC_MESSAGES/rgettext.mo
 share/locale/zh_TW/LC_MESSAGES/rails.mo
