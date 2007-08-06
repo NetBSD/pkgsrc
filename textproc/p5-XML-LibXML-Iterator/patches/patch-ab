@@ -1,0 +1,63 @@
+$NetBSD: patch-ab,v 1.1 2007/08/06 15:28:04 seb Exp $
+
+--- t/03list.t.orig	2007-06-23 13:33:50.000000000 +0000
++++ t/03list.t
+@@ -1,7 +1,7 @@
+ use Test;
+ 
+ 
+-BEGIN { plan tests => 7; }
++BEGIN { plan tests => 8; }
+ 
+ use XML::LibXML;
+ use XML::LibXML::NodeList::Iterator;
+@@ -257,3 +257,49 @@ sub t05_run_iterate {
+     return 1;
+ }
+ ok(t05_run_iterate());
++
++package MyFilter;
++use base qw(XML::NodeFilter);
++use XML::NodeFilter qw(:results);
++use UNIVERSAL;
++
++sub accept_node {
++    my $self = shift;
++    my $node = shift;
++    if (!UNIVERSAL::isa($node, 'XML::LibXML::Element')) {
++        die "invalid node in MyFilter::accept_node()";
++    }
++    return FILTER_DECLINED;
++}
++
++package main;
++
++sub t08_last_with_filter {
++    my $doc = XML::LibXML->new->parse_string( $xmlstr );
++    
++    unless ( defined $doc ) {
++        print "# XML string was not parsed properly\n";
++        return 0;
++    }
++
++    my $nodelist = $doc->findnodes( '//*' );
++    my $iterator = XML::LibXML::NodeList::Iterator->new( $nodelist ); 
++    $iterator->add_filter( MyFilter->new() );
++
++    $iterator->last();
++
++    unless ( defined $iterator->current() ) {
++        print "# there is no last node\n";
++        return 0;
++    }
++    
++    unless ( $iterator->current()->nodeName() eq "D" ) {
++        print "# expected nodeName 'D' received '"
++            . $iterator->current()->nodeName()
++            . "'\n";
++        return 0;
++    }
++
++    return 1;
++}
++ok(t08_last_with_filter());
