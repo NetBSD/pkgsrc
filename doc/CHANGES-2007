@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1730 2007/08/07 05:44:39 lukem Exp $
+$NetBSD: CHANGES-2007,v 1.1731 2007/08/07 05:59:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3182,3 +3182,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ruby-rcsparse to 0.0.0.41 [wiz 2007-08-06]
 	Updated audio/gtkpod to 0.99.8nb1 [smb 2007-08-06]
 	Updated net/tnftp to 20070806 [lukem 2007-08-07]
+	Updated net/mldonkey to 2.9.0 [wiz 2007-08-07]
+	Updated net/mldonkey-gui to 2.9.0 [wiz 2007-08-07]
