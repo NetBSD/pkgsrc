@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/06/21 18:16:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/07 19:26:22 he Exp $
 
 DISTNAME=	cdrtools-2.01.01a27
 PKGNAME=	cdrtools-2.01.01.27
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
+HOMEPAGE=	http://cdrecord.berlios.de/old/private/cdrecord.html
 COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs
 
 CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]*
