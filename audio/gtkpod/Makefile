@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2007/07/08 20:46:37 smb Exp $
+# $NetBSD: Makefile,v 1.17 2007/08/07 00:06:32 smb Exp $
 #
 
 DISTNAME=	gtkpod-0.99.8
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
+PKGREVISION=	1
 
 PATCHFILES=	gtkpod-0.99.8_libgpod-0.4.2.diff
 PATCH_SITES=	http://ftp.osuosl.org/pub/gentoo/distfiles/
@@ -20,6 +21,16 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt perl:run pkg-config
 
 REPLACE_PERL+=		scripts/mab2vcard
+
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${PREFIX}/bin/bash
+REPLACE_FILES.bash=	scripts/sync-knotes.sh
+
+REPLACE_PYTHON+=	scripts/sync-palm-jppy.py
+.include "../../lang/python/application.mk"
+
+DEPENDS+=		bash>=3.2.9:../../shells/bash
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.0
 BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.4.2
