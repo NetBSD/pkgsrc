@@ -1,4 +1,4 @@
-/*	$NetBSD: tnftp.h,v 1.11 2007/08/07 02:06:56 lukem Exp $	*/
+/*	$NetBSD: tnftp.h,v 1.12 2007/08/07 03:37:53 lukem Exp $	*/
 
 #define	FTP_PRODUCT	PACKAGE_NAME
 #define	FTP_VERSION	PACKAGE_VERSION
@@ -215,10 +215,6 @@ typedef int socklen_t;
 #else
 typedef unsigned int socklen_t;
 #endif
-#endif
-
-#ifdef UINT32_T /* needed for example on IRIX 5 */
-typedef unsigned UINT32_T uint32_t;
 #endif
 
 #if HAVE_DECL_AF_INET6 \
