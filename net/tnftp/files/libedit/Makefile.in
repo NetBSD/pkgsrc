@@ -1,4 +1,4 @@
-#	NetBSD: Makefile.in,v 1.4 2005/06/10 04:36:12 lukem Exp
+#	$NetBSD: Makefile.in,v 1.4 2007/08/07 02:06:56 lukem Exp $
 #
 
 srcdir	= @srcdir@
