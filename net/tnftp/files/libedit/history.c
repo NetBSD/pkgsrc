@@ -1,4 +1,4 @@
-/*	NetBSD: history.c,v 1.5 2005/06/09 16:48:58 lukem Exp	*/
+/*	$NetBSD: history.c,v 1.4 2007/08/07 02:06:57 lukem Exp $	*/
 /*	from	NetBSD: history.c,v 1.28 2004/11/27 18:31:45 christos Exp	*/
 
 /*-
