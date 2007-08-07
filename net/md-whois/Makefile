@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:10:26 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/08/07 21:48:39 taca Exp $
 #
 # todo: set location of [md-]whois.conf and fix in man page too
 # todo: build and install the po/ files and add to PLIST
@@ -7,7 +7,6 @@
 
 DISTNAME=	whois_${VERSION}
 PKGNAME=	md-whois-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/whois/}
 
@@ -15,15 +14,17 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.linux.it/~md/software/
 COMMENT=	Improved whois client
 
-VERSION=	4.7.2
+VERSION=	4.7.22
 
 WRKSRC=		${WRKDIR}/whois-${VERSION}
 USE_TOOLS+=	gmake perl
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/whois ${PREFIX}/bin/md-whois
-	${INSTALL_MAN} ${WRKSRC}/whois.1 ${PREFIX}/${PKGMANDIR}/man1/md-whois.1
+	${INSTALL_PROGRAM} ${WRKSRC}/whois ${DESTDIR}${PREFIX}/bin/md-whois
+	${INSTALL_MAN} ${WRKSRC}/whois.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/md-whois.1
 
 .include "../../mk/bsd.pkg.mk"
