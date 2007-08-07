@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/03/02 09:15:24 njoly Exp $
+# $NetBSD: Makefile,v 1.38 2007/08/07 21:42:55 taca Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
@@ -26,7 +26,7 @@ WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_TOOLS+=		perl:run
 
-FPVER=			4.6.7
+FPVER=			4.6.8
 DATDIR=			${PREFIX}/share/fprot-workstation-bin
 DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
 FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
@@ -39,24 +39,24 @@ REQD_DIRS+=		${FPDIR}
 
 .if ${OPSYS} == "NetBSD"
 MASTER_SITES=		http://files.f-prot.com/files/bsd-x86/
-DISTNAME=		fp-netbsd-ws-${FPVER}
+DISTNAME=		fp-netbsd-ws
 .endif
 
 .if ${OPSYS} == "Linux"
 MASTER_SITES=		http://files.f-prot.com/files/linux-x86/
-DISTNAME=		fp-linux-ws-${FPVER}
+DISTNAME=		fp-linux-ws
 .endif
 
 .if ${OPSYS} == "SunOS"
 MASTER_SITES=		http://files.f-prot.com/files/solaris-sparc/
-DISTNAME=		fp-solaris-sparc-ws-${FPVER}
+DISTNAME=		fp-solaris-sparc-ws
 .endif
 
 .if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
 DEPENDS+=	netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
 .endif
 
-DIST_SUBDIR=		${PKGBASE}-20061204
+DIST_SUBDIR=		${PKGBASE}-20070806
 
 SUBST_CLASSES+=		f-prot
 SUBST_MESSAGE.f-prot=	Configuring f-prot location.
