@@ -1,4 +1,4 @@
-/*	NetBSD: strvis.c,v 1.8 2005/06/01 11:48:49 lukem Exp	*/
+/*	$NetBSD: strvis.c,v 1.4 2007/08/07 02:07:01 lukem Exp $	*/
 /*	from	NetBSD: vis.c,v 1.33 2005/05/28 13:11:14 lukem Exp	*/
 
 /*-

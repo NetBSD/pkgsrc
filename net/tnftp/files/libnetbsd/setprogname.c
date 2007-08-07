@@ -1,4 +1,4 @@
-/*	NetBSD: setprogname.c,v 1.3 2005/05/11 01:01:56 lukem Exp	*/
+/*	$NetBSD: setprogname.c,v 1.3 2007/08/07 02:07:00 lukem Exp $	*/
 /*	from	NetBSD: setprogname.c,v 1.3 2002/01/31 19:21:58 tv Exp	*/
 
 /*-

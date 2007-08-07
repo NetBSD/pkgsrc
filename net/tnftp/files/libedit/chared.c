@@ -1,4 +1,4 @@
-/*	NetBSD: chared.c,v 1.6 2005/06/09 16:48:57 lukem Exp	*/
+/*	$NetBSD: chared.c,v 1.4 2007/08/07 02:06:56 lukem Exp $	*/
 /*	from	NetBSD: chared.c,v 1.22 2004/08/13 12:10:38 mycroft Exp	*/
 
 /*-
