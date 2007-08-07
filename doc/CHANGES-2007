@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1735 2007/08/07 12:35:41 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1736 2007/08/07 19:38:38 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3186,3 +3186,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/intltool to 0.36.0 [wiz 2007-08-07]
 	Updated www/p5-libwww to 5.807 [wiz 2007-08-07]
 	Added mail/policyd version 1.81 [ghen 2007-08-07]
+	Updated shells/mksh to 30 [jlam 2007-08-07]
