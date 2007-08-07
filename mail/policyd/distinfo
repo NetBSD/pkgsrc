@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/08/07 12:34:56 ghen Exp $
+
+SHA1 (policyd-1.81.tar.gz) = acb6a34826995be04d66d50a93e379823c929ec6
+RMD160 (policyd-1.81.tar.gz) = e25798338d7ff082e32ec5288e721ed7c75235c3
+Size (policyd-1.81.tar.gz) = 68309 bytes
+SHA1 (patch-aa) = f1be4bf5f101e15d8f73b05a73fdd1ca324b72eb
+SHA1 (patch-ab) = 9ef169a450d316c5f9f6b863fa5d618c77636738
