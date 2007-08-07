@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2007/08/06 00:33:05 smb Exp $
+# $NetBSD: Makefile,v 1.326 2007/08/07 12:40:37 ghen Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -199,6 +199,7 @@ SUBDIR+=	pfqueue
 SUBDIR+=	php-imap
 SUBDIR+=	pine
 SUBDIR+=	pine-pgp-filters
+SUBDIR+=	policyd
 SUBDIR+=	policyd-weight
 SUBDIR+=	popa3d
 SUBDIR+=	poppassd
