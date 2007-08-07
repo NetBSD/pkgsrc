@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2.2.2 2007/08/07 05:00:19 lukem Exp $
+# $NetBSD: Makefile,v 1.2.2.3 2007/08/07 05:04:14 lukem Exp $
 #
 # This version of tnftp installs into ${PKG_TOOLS_BIN}.
 #
 
 .include "../../net/tnftp/Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 NO_PKGTOOLS_REQD_CHECK=	yes
