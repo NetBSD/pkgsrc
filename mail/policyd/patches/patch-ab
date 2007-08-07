@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/08/07 12:34:56 ghen Exp $
+
+--- Makefile.orig	2007-07-11 09:06:23.000000000 +0200
++++ Makefile
+@@ -14,6 +14,8 @@ lib += -L/usr/pkg/lib/mysql
+ # os x
+ lib += -L/usr/local/mysql
+ 
++inc  = -I${MYSQL_PREFIX}/include/mysql
++lib  = -L${MYSQL_PREFIX}/lib/mysql -Wl,-R${MYSQL_PREFIX}/lib/mysql
+ 
+ CC       := gcc
+ CPPFLAGS := -O $(inc)
