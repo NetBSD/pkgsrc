@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/02/26 18:14:06 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/07 16:20:25 jlam Exp $
 
 DISTNAME=	xf86-video-i810-1.7.4
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
+
+CONFLICTS+=	xf86-video-intel-[0-9]*
 
 MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg Intel video driver
