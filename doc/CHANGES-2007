@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1731 2007/08/07 05:59:50 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1732 2007/08/07 06:10:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3184,3 +3184,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tnftp to 20070806 [lukem 2007-08-07]
 	Updated net/mldonkey to 2.9.0 [wiz 2007-08-07]
 	Updated net/mldonkey-gui to 2.9.0 [wiz 2007-08-07]
+	Updated textproc/intltool to 0.36.0 [wiz 2007-08-07]
