@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6567 2007/08/07 06:10:31 wiz Exp $
+$NetBSD: TODO,v 1.6568 2007/08/07 06:17:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -932,7 +932,6 @@ Suggested package updates
 	o p5-XML-RSS-1.31
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
-	o p5-libwww-5.807
 	o p5-perl-ldap-0.34
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
