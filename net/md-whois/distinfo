@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/04/11 17:39:22 reed Exp $
+$NetBSD: distinfo,v 1.8 2007/08/07 21:48:40 taca Exp $
 
-SHA1 (whois_4.7.2.tar.gz) = 5094cdc4e8b35041ba12eca404abd2f18d6bb55b
-RMD160 (whois_4.7.2.tar.gz) = 4a934d19e3f30dfcd94c5ab54bc4c211cc530cf1
-Size (whois_4.7.2.tar.gz) = 53267 bytes
+SHA1 (whois_4.7.22.tar.gz) = fcf7d35b188fba56fbefba2e1fd5b94dc516f0ae
+RMD160 (whois_4.7.22.tar.gz) = da2ff389d641aec45960bc152d15d6c09d419e9f
+Size (whois_4.7.22.tar.gz) = 60511 bytes
