@@ -1,4 +1,4 @@
-/*	NetBSD: sl_init.c,v 1.4 2005/05/16 06:37:47 lukem Exp	*/
+/*	$NetBSD: sl_init.c,v 1.4 2007/08/07 02:07:00 lukem Exp $	*/
 /*	from	NetBSD: stringlist.c,v 1.10 2000/01/25 16:24:40 enami Exp	*/
 
 /*-

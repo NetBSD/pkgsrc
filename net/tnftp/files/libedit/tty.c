@@ -1,4 +1,4 @@
-/*	NetBSD: tty.c,v 1.7 2005/06/09 16:48:58 lukem Exp	*/
+/*	$NetBSD: tty.c,v 1.4 2007/08/07 02:06:58 lukem Exp $	*/
 /*	from	NetBSD: tty.c,v 1.22 2005/05/29 03:55:37 christos Exp	*/
 
 /*-

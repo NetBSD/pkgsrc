@@ -1,4 +1,4 @@
-/*	NetBSD: map.c,v 1.5 2005/06/09 16:48:58 lukem Exp	*/
+/*	$NetBSD: map.c,v 1.4 2007/08/07 02:06:57 lukem Exp $	*/
 /*	from	NetBSD: map.c,v 1.20 2004/08/13 12:10:39 mycroft Exp	*/
 
 /*-

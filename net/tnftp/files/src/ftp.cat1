@@ -5,7 +5,7 @@ NNAAMMEE
 
 SSYYNNOOPPSSIISS
      ffttpp [--4466AAaaddeeffggiinnppRRttvvVV] [--NN _n_e_t_r_c] [--oo _o_u_t_p_u_t] [--PP _p_o_r_t] [--qq _q_u_i_t_t_i_m_e]
-         [--rr _r_e_t_r_y] [--TT _d_i_r,_m_a_x[,_i_n_c]] [[_u_s_e_r@]_h_o_s_t [_p_o_r_t]]
+         [--ss _s_r_c_a_d_d_r] [--rr _r_e_t_r_y] [--TT _d_i_r,_m_a_x[,_i_n_c]] [[_u_s_e_r@]_h_o_s_t [_p_o_r_t]]
          [[_u_s_e_r@]_h_o_s_t:[_p_a_t_h][/]] [file:///_p_a_t_h]
          [ftp://[_u_s_e_r[:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t]/_p_a_t_h[/][;type=_X]]
          [http://[_u_s_e_r[:_p_a_s_s_w_o_r_d]@]_h_o_s_t[:_p_o_r_t]/_p_a_t_h] [_._._.]
@@ -23,88 +23,92 @@ DDEESSCCRRIIPPTTIIOONN
      Options may be specified at the command line, or to the command inter-
      preter.
 
-     --44       Forces ffttpp to only use IPv4 addresses.
+     --44          Forces ffttpp to only use IPv4 addresses.
 
-     --66       Forces ffttpp to only use IPv6 addresses.
+     --66          Forces ffttpp to only use IPv6 addresses.
 
-     --AA       Force active mode ftp.  By default, ffttpp will try to use passive
-              mode ftp and fall back to active mode if passive is not sup-
-              ported by the server.  This option causes ffttpp to always use an
-              active connection.  It is only useful for connecting to very old
-              servers that do not implement passive mode properly.
+     --AA          Force active mode ftp.  By default, ffttpp will try to use pas-
+                 sive mode ftp and fall back to active mode if passive is not
+                 supported by the server.  This option causes ffttpp to always
+                 use an active connection.  It is only useful for connecting
+                 to very old servers that do not implement passive mode prop-
+                 erly.
 
-     --aa       Causes ffttpp to bypass normal login procedure, and use an anony-
-              mous login instead.
+     --aa          Causes ffttpp to bypass normal login procedure, and use an
+                 anonymous login instead.
 
-     --dd       Enables debugging.
+     --dd          Enables debugging.
 
-     --ee       Disables command line editing.  This is useful for Emacs ange-
-              ftp mode.
+     --ee          Disables command line editing.  This is useful for Emacs
+                 ange-ftp mode.
 
-     --ff       Forces a cache reload for transfers that go through the FTP or
-              HTTP proxies.
+     --ff          Forces a cache reload for transfers that go through the FTP
+                 or HTTP proxies.
 
-     --gg       Disables file name globbing.
+     --gg          Disables file name globbing.
 
-     --ii       Turns off interactive prompting during multiple file transfers.
+     --ii          Turns off interactive prompting during multiple file trans-
+                 fers.
 
-     --nn       Restrains ffttpp from attempting ``auto-login'' upon initial con-
-              nection for non auto-fetch transfers.  If auto-login is enabled,
-              ffttpp will check the _._n_e_t_r_c (see below) file in the user's home
-              directory for an entry describing an account on the remote
-              machine.  If no entry exists, ffttpp will prompt for the remote
-              machine login name (default is the user identity on the local
-              machine), and, if necessary, prompt for a password and an
-              account with which to login.  To override the auto-login for
-              auto-fetch transfers, specify the username (and optionally,
-              password) as appropriate.
+     --nn          Restrains ffttpp from attempting ``auto-login'' upon initial
+                 connection for non auto-fetch transfers.  If auto-login is
+                 enabled, ffttpp will check the _._n_e_t_r_c (see below) file in the
+                 user's home directory for an entry describing an account on
+                 the remote machine.  If no entry exists, ffttpp will prompt for
+                 the remote machine login name (default is the user identity
+                 on the local machine), and, if necessary, prompt for a pass-
+                 word and an account with which to login.  To override the
+                 auto-login for auto-fetch transfers, specify the username
+                 (and optionally, password) as appropriate.
 
-     --NN _n_e_t_r_c
-              Use _n_e_t_r_c instead of _~_/_._n_e_t_r_c.  Refer to _T_H_E _._n_e_t_r_c _F_I_L_E for
-              more information.
+     --NN _n_e_t_r_c    Use _n_e_t_r_c instead of _~_/_._n_e_t_r_c.  Refer to _T_H_E _._n_e_t_r_c _F_I_L_E for
+                 more information.
 
-     --oo _o_u_t_p_u_t
-              When auto-fetching files, save the contents in _o_u_t_p_u_t.  _o_u_t_p_u_t
-              is parsed according to the _F_I_L_E _N_A_M_I_N_G _C_O_N_V_E_N_T_I_O_N_S below.  If
-              _o_u_t_p_u_t is not `-' or doesn't start with `|', then only the first
-              file specified will be retrieved into _o_u_t_p_u_t; all other files
-              will be retrieved into the basename of their remote name.
+     --oo _o_u_t_p_u_t   When auto-fetching files, save the contents in _o_u_t_p_u_t.
+                 _o_u_t_p_u_t is parsed according to the _F_I_L_E _N_A_M_I_N_G _C_O_N_V_E_N_T_I_O_N_S
+                 below.  If _o_u_t_p_u_t is not `-' or doesn't start with `|', then
+                 only the first file specified will be retrieved into _o_u_t_p_u_t;
+                 all other files will be retrieved into the basename of their
+                 remote name.
 
-     --pp       Enable passive mode operation for use behind connection filter-
-              ing firewalls.  This option has been deprecated as ffttpp now tries
-              to use passive mode by default, falling back to active mode if
-              the server does not support passive connections.
+     --pp          Enable passive mode operation for use behind connection fil-
+                 tering firewalls.  This option has been deprecated as ffttpp now
+                 tries to use passive mode by default, falling back to active
+                 mode if the server does not support passive connections.
 
-     --PP _p_o_r_t  Sets the port number to _p_o_r_t.
-
-     --rr _w_a_i_t  Retry the connection attempt if it failed, pausing for _w_a_i_t sec-
-              onds.
+     --PP _p_o_r_t     Sets the port number to _p_o_r_t.
 
      --qq _q_u_i_t_t_i_m_e
-              Quit if the connection has stalled for _q_u_i_t_t_i_m_e seconds.
+                 Quit if the connection has stalled for _q_u_i_t_t_i_m_e seconds.
 
-     --RR       Restart all non-proxied auto-fetches.
+     --rr _w_a_i_t     Retry the connection attempt if it failed, pausing for _w_a_i_t
+                 seconds.
 
-     --tt       Enables packet tracing.
+     --RR          Restart all non-proxied auto-fetches.
+
+     --ss _s_r_c_a_d_d_r  Uses _s_r_c_a_d_d_r as the local IP address for all connections.
+
+     --tt          Enables packet tracing.
 
      --TT _d_i_r_e_c_t_i_o_n,_m_a_x_i_m_u_m[,_i_n_c_r_e_m_e_n_t]
-              Set the maximum transfer rate for _d_i_r_e_c_t_i_o_n to _m_a_x_i_m_u_m
-              bytes/second, and if specified, the increment to _i_n_c_r_e_m_e_n_t
-              bytes/second.  Refer to rraattee for more information.
+                 Set the maximum transfer rate for _d_i_r_e_c_t_i_o_n to _m_a_x_i_m_u_m
+                 bytes/second, and if specified, the increment to _i_n_c_r_e_m_e_n_t
+                 bytes/second.  Refer to rraattee for more information.
 
      --uu _U_R_L _f_i_l_e [...]
-              Upload files on the command line to _U_R_L where _U_R_L is one of the
-              ftp URL types as supported by auto-fetch (with an optional tar-
-              get filename for single file uploads), and _f_i_l_e is one or more
-              local files to be uploaded.
+                 Upload files on the command line to _U_R_L where _U_R_L is one of
+                 the ftp URL types as supported by auto-fetch (with an
+                 optional target filename for single file uploads), and _f_i_l_e
+                 is one or more local files to be uploaded.
 
-     --vv       Enable vveerrbboossee and pprrooggrreessss.  This is the default if output is
-              to a terminal (and in the case of pprrooggrreessss, ffttpp is the fore-
-              ground process).  Forces ffttpp to show all responses from the
-              remote server, as well as report on data transfer statistics.
+     --vv          Enable vveerrbboossee and pprrooggrreessss.  This is the default if output
+                 is to a terminal (and in the case of pprrooggrreessss, ffttpp is the
+                 foreground process).  Forces ffttpp to show all responses from
+                 the remote server, as well as report on data transfer statis-
+                 tics.
 
-     --VV       Disable vveerrbboossee and pprrooggrreessss, overriding the default of enabled
-              when output is to a terminal.
+     --VV          Disable vveerrbboossee and pprrooggrreessss, overriding the default of
+                 enabled when output is to a terminal.
 
      The client host with which ffttpp is to communicate may be specified on the
      command line.  If this is done, ffttpp will immediately attempt to establish
@@ -177,11 +181,11 @@ DDEESSCCRRIIPPTTIIOONN
                  may be distinguished from a record delimiter only when ccrr is
                  off.
 
-     ddeebbuugg [_d_e_b_u_g_-_v_a_l_u_e]
-                 Toggle debugging mode.  If an optional _d_e_b_u_g_-_v_a_l_u_e is speci-
-                 fied it is used to set the debugging level.  When debugging
-                 is on, ffttpp prints each command sent to the remote machine,
-                 preceded by the string `-->'
+     ffttpp__ddeebbuugg [_f_t_p___d_e_b_u_g_-_v_a_l_u_e]
+                 Toggle debugging mode.  If an optional _f_t_p___d_e_b_u_g_-_v_a_l_u_e is
+                 specified it is used to set the debugging level.  When debug-
+                 ging is on, ffttpp prints each command sent to the remote
+                 machine, preceded by the string `-->'
 
      ddeelleettee _r_e_m_o_t_e_-_f_i_l_e
                  Delete the file _r_e_m_o_t_e_-_f_i_l_e on the remote machine.
@@ -260,7 +264,7 @@ DDEESSCCRRIIPPTTIIOONN
                  tree (in binary mode).
 
      hhaasshh [_s_i_z_e]
-                 Toggle hash-sign (``#'') printing for each data block trans-
+                 Toggle hash-sign (`#') printing for each data block trans-
                  ferred.  The size of a data block defaults to 1024 bytes.
                  This can be changed by specifying _s_i_z_e in bytes.  Enabling
                  hhaasshh disables pprrooggrreessss.
@@ -297,18 +301,23 @@ DDEESSCCRRIIPPTTIIOONN
                  _m_a_c_r_o_-_n_a_m_e; a null line (consecutive newline characters in a
                  file or carriage returns from the terminal) terminates macro
                  input mode.  There is a limit of 16 macros and 4096 total
-                 characters in all defined macros.  Macros remain defined
-                 until a cclloossee command is executed.  The macro processor
-                 interprets `$' and `\' as special characters.  A `$' followed
-                 by a number (or numbers) is replaced by the corresponding
-                 argument on the macro invocation command line.  A `$' fol-
-                 lowed by an `i' signals that macro processor that the execut-
-                 ing macro is to be looped.  On the first pass `$i' is
-                 replaced by the first argument on the macro invocation com-
-                 mand line, on the second pass it is replaced by the second
-                 argument, and so on.  A `\' followed by any character is
-                 replaced by that character.  Use the `\' to prevent special
-                 treatment of the `$'.
+                 characters in all defined macros.  Macro names can be a maxi-
+                 mum of 8 characters.  Macros are only applicable to the cur-
+                 rent session they are defined within (or if defined outside a
+                 session, to the session invoked with the next ooppeenn command),
+                 and remain defined until a cclloossee command is executed.  To
+                 invoke a macro, use the $$ command (see above).
+
+                 The macro processor interprets `$' and `\' as special charac-
+                 ters.  A `$' followed by a number (or numbers) is replaced by
+                 the corresponding argument on the macro invocation command
+                 line.  A `$' followed by an `i' signals the macro processor
+                 that the executing macro is to be looped.  On the first pass
+                 ``$i'' is replaced by the first argument on the macro invoca-
+                 tion command line, on the second pass it is replaced by the
+                 second argument, and so on.  A `\' followed by any character
+                 is replaced by that character.  Use the `\' to prevent spe-
+                 cial treatment of the `$'.
 
      mmddeelleettee [_r_e_m_o_t_e_-_f_i_l_e_s]
                  Delete the _r_e_m_o_t_e_-_f_i_l_e_s on the remote machine.
@@ -356,7 +365,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      mmooddttiimmee _r_e_m_o_t_e_-_f_i_l_e
                  Show the last modification time of the file on the remote
-                 machine.
+                 machine, in RFC2822 format.
 
      mmoorree _f_i_l_e   A synonym for ppaaggee.
 
@@ -396,19 +405,19 @@ DDEESSCCRRIIPPTTIIOONN
                  [_I_n_p_a_t_t_e_r_n] is a template for incoming filenames (which may
                  have already been processed according to the nnttrraannss and ccaassee
                  settings).  Variable templating is accomplished by including
-                 the sequences `$1', `$2', ..., `$9' in _i_n_p_a_t_t_e_r_n.  Use `\' to
-                 prevent this special treatment of the `$' character.  All
-                 other characters are treated literally, and are used to
+                 the sequences ``$1'', ``$2'', ...  ``$9'' in _i_n_p_a_t_t_e_r_n.  Use
+                 `\' to prevent this special treatment of the `$' character.
+                 All other characters are treated literally, and are used to
                  determine the nnmmaapp [_i_n_p_a_t_t_e_r_n] variable values.  For example,
                  given _i_n_p_a_t_t_e_r_n $1.$2 and the remote file name "mydata.data",
                  $1 would have the value "mydata", and $2 would have the value
                  "data".  The _o_u_t_p_a_t_t_e_r_n determines the resulting mapped file-
-                 name.  The sequences `$1', `$2', ...., `$9' are replaced by
-                 any value resulting from the _i_n_p_a_t_t_e_r_n template.  The
-                 sequence `$0' is replace by the original filename.  Addition-
-                 ally, the sequence `[_s_e_q_1, _s_e_q_2]' is replaced by [_s_e_q_1] if
-                 _s_e_q_1 is not a null string; otherwise it is replaced by _s_e_q_2.
-                 For example, the command
+                 name.  The sequences ``$1'', ``$2'', ...  ``$9'' are replaced
+                 by any value resulting from the _i_n_p_a_t_t_e_r_n template.  The
+                 sequence ``$0'' is replaced by the original filename.  Addi-
+                 tionally, the sequence ``[_s_e_q_1, _s_e_q_2]'' is replaced by [_s_e_q_1]
+                 if _s_e_q_1 is not a null string; otherwise it is replaced by
+                 _s_e_q_2.  For example, the command
 
                        nmap $1.$2.$3 [$1,$2].[$2,file]
 
@@ -416,9 +425,10 @@ DDEESSCCRRIIPPTTIIOONN
                  names "myfile.data" and "myfile.data.old", "myfile.file" for
                  the input filename "myfile", and "myfile.myfile" for the
                  input filename ".myfile".  Spaces may be included in
-                 _o_u_t_p_a_t_t_e_r_n, as in the example: `nmap $1 sed "s/  *$//" > $1'
-                 .  Use the `\' character to prevent special treatment of the
-                 `$','[',']', and `,' characters.
+                 _o_u_t_p_a_t_t_e_r_n, as in the example:
+                       nmap $1 sed s/  *$// > $1
+                 Use the `\' character to prevent special treatment of the
+                 `$', `[', `]', and `,' characters.
 
      nnttrraannss [_i_n_c_h_a_r_s [_o_u_t_c_h_a_r_s]]
                  Set or unset the filename character translation mechanism.
@@ -459,7 +469,7 @@ DDEESSCCRRIIPPTTIIOONN
                  who connects back to it.  Passive mode is useful when using
                  ffttpp through a gateway router or host that controls the direc-
                  tionality of traffic.  (Note that though FTP servers are
-                 required to support the PASV command by RFC 1123, some do
+                 required to support the PASV command by RFC1123, some do
                  not.)
 
      ppddiirr [_r_e_m_o_t_e_-_p_a_t_h]
@@ -770,8 +780,8 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
            fer type will take place as ascii or binary (respectively).  The
            default transfer type is binary.
 
-           In order to be compliant with RFC 1738, ffttpp interprets the _p_a_t_h
-           part of an ``ftp://'' auto-fetch URL as follows:
+           In order to be compliant with RFC3986, ffttpp interprets the _p_a_t_h part
+           of an ``ftp://'' auto-fetch URL as follows:
 
            ++oo   The `/' immediately after the _h_o_s_t[:_p_o_r_t] is interpreted as a
                separator before the _p_a_t_h, and not as part of the _p_a_t_h itself.
@@ -786,7 +796,7 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
                the equivalent of a ccdd command without a directory name.  This
                is unlikely to be useful.
 
-           ++oo   Any `%_X_X' codes (per RFC 1738) within the path components are
+           ++oo   Any `%_X_X' codes (per RFC3986) within the path components are
                decoded, with _X_X representing a character code in hexadecimal.
                This decoding takes place after the _p_a_t_h has been split into
                components, but before each component is used in the equivalent
@@ -838,6 +848,15 @@ AAUUTTOO--FFEETTCCHHIINNGG FFIILLEESS
 
      file:///_p_a_t_h
            A local URL, copied from _/_p_a_t_h on the local host.
+
+     about:_t_o_p_i_c
+           Display information regarding _t_o_p_i_c; no file is retrieved for this
+           auto-fetched element.  Supported values include:
+
+           about:ftp      Information about ffttpp.
+
+           about:version  The version of ffttpp.  Useful to provide when report-
+                          ing problems.
 
      Unless noted otherwise above, and --oo _o_u_t_p_u_t is not given, the file is
      stored in the current directory as the basename(1) of _p_a_t_h.  Note that if
@@ -898,7 +917,7 @@ FFIILLEE NNAAMMIINNGG CCOONNVVEENNTTIIOONNSS
           example of this mechanism is: ``dir "" |more''.
 
      3.   Failing the above checks, if ``globbing'' is enabled, local file
-          names are expanded according to the rules used in the csh(1); c.f.
+          names are expanded according to the rules used in the csh(1); see
           the gglloobb command.  If the ffttpp command expects a single local file
           (e.g.  ppuutt), only the first filename generated by the "globbing"
           operation is used.
@@ -973,8 +992,13 @@ TTHHEE ..nneettrrcc FFIILLEE
                mand functions.  A macro is defined with the specified name;
                its contents begin with the next _._n_e_t_r_c line and continue until
                a blank line (consecutive new-line characters) is encountered.
-               If a macro named iinniitt is defined, it is automatically executed
-               as the last step in the auto-login process.  For example,
+               Like the other tokens in the _._n_e_t_r_c file, a mmaaccddeeff is applica-
+               ble only to the mmaacchhiinnee definition preceding it.  A mmaaccddeeff
+               entry cannot be utilized by multiple mmaacchhiinnee definitions;
+               rather, it must be defined following each mmaacchhiinnee it is
+               intended to be used with.  If a macro named iinniitt is defined, it
+               is automatically executed as the last step in the auto-login
+               process.  For example,
 
                      default
                      macdef init
@@ -1074,8 +1098,8 @@ EENNVVIIRROONNMMEENNTT
                     used in the first attempt to authenticate to the proxy.
 
                     If ``unsafe'' URL characters are required in the username
-                    or password (for example `@' or `/'), encode them with RFC
-                    1738 `%_X_X' encoding.
+                    or password (for example `@' or `/'), encode them with
+                    RFC3986 `%_X_X' encoding.
 
                     Note that the use of a username and password in ftp_proxy
                     and http_proxy may be incompatible with other programs
@@ -1104,8 +1128,26 @@ SSEEEE AALLSSOO
      getservbyname(3), editrc(5), services(5), ftpd(8)
 
 SSTTAANNDDAARRDDSS
-     ffttpp attempts to be compliant with RFC 959, RFC 1123, RFC 1738, RFC 2068,
-     RFC 2389, RFC 2428, RFC 2732, and ddrraafftt--iieettff--ffttppeexxtt--mmllsstt--1111.
+     ffttpp attempts to be compliant with:
+
+           RFC0959   _F_i_l_e _T_r_a_n_s_f_e_r _P_r_o_t_o_c_o_l
+
+           RFC1123   _R_e_q_u_i_r_e_m_e_n_t_s _f_o_r _I_n_t_e_r_n_e_t _H_o_s_t_s _- _A_p_p_l_i_c_a_t_i_o_n _a_n_d _S_u_p_p_o_r_t
+
+           RFC1635   _H_o_w _t_o _U_s_e _A_n_o_n_y_m_o_u_s _F_T_P
+
+           RFC2389   _F_e_a_t_u_r_e _n_e_g_o_t_i_a_t_i_o_n _m_e_c_h_a_n_i_s_m _f_o_r _t_h_e _F_i_l_e _T_r_a_n_s_f_e_r
+                     _P_r_o_t_o_c_o_l
+
+           RFC2428   _F_T_P _E_x_t_e_n_s_i_o_n_s _f_o_r _I_P_v_6 _a_n_d _N_A_T_s
+
+           RFC2616   _H_y_p_e_r_t_e_x_t _T_r_a_n_s_f_e_r _P_r_o_t_o_c_o_l _-_- _H_T_T_P_/_1_._1
+
+           RFC2822   _I_n_t_e_r_n_e_t _M_e_s_s_a_g_e _F_o_r_m_a_t
+
+           RFC3659   _E_x_t_e_n_s_i_o_n_s _t_o _F_T_P
+
+           RFC3986   _U_n_i_f_o_r_m _R_e_s_o_u_r_c_e _I_d_e_n_t_i_f_i_e_r _(_U_R_I_)
 
 HHIISSTTOORRYY
      The ffttpp command appeared in 4.2BSD.
@@ -1138,4 +1180,4 @@ BBUUGGSS
      uses a SIIT translator for IPv6-to-IPv4 translation, ffttpp is unable to
      support your configuration.
 
-NetBSD 3.0_BETA                January 15, 2005                NetBSD 3.0_BETA
+NetBSD 3.1.1                     July 18, 2007                    NetBSD 3.1.1
