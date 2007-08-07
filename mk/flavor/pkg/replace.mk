@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.9 2007/08/02 23:00:18 jlam Exp $
+# $NetBSD: replace.mk,v 1.10 2007/08/07 22:27:12 gdt Exp $
 #
 
 # _flavor-replace:
@@ -137,14 +137,17 @@ replace-preserve-required-by: .PHONY
 ### replace-fixup-required-by (PRIVATE)
 ######################################################################
 ### replace-fixup-required-by fixes the +CONTENTS files of dependent
-### packages to refer to the replacement package.
-###
+### packages to refer to the replacement package.  It also removes
+### unsafe_depends* and rebuild tags from this package.
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	set -e;								\
 	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
 	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
+	for var in unsafe_depends rebuild; do				\
+		${PKG_ADMIN} unset $$var ${PKGBASE};			\
+	done;								\
 	${TEST} -f ${_REQUIRED_BY_FILE} || exit 0;			\
 	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
