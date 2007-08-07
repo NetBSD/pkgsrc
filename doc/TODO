@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6566 2007/08/07 06:01:27 wiz Exp $
+$NetBSD: TODO,v 1.6567 2007/08/07 06:10:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -620,7 +620,6 @@ Suggested package updates
 	o imapsync-1.217
 	o instiki-0.11pl1
 	o intercal-0.24
-	o intltool-0.36.0
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
