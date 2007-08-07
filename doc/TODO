@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6565 2007/08/07 05:59:50 wiz Exp $
+$NetBSD: TODO,v 1.6566 2007/08/07 06:01:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ Suggested package updates
 	o doxygen-1.5.3
 	o dpkg-1.13.25
 	o drscheme-370
-	o drupal-5.2
 	o dvdrip-0.98.7
 	o dvdstyler-1.5
 	o dvipng-1.9
@@ -469,7 +468,6 @@ Suggested package updates
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.31
-	o firefox-2.0.0.6
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
@@ -534,7 +532,6 @@ Suggested package updates
 	o gnome-speech-0.4.16
 	o gnu-crypto-2.1.0
 	o gnumeric-current-1.7.11
-	o gnupg2-2.0.5
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
 	o gnuradio-audio-portaudio-3.0.3
@@ -673,7 +670,6 @@ Suggested package updates
 	o leafpad-0.8.11
 	o lft-2.5 [at http://pwhois.org/]
 	o libFoundation-1.1.3
-	o libarchive-2.1.10
 	o libassuan-1.0.1
 	o libast-0.7
 	o libcdio-0.78.2
@@ -943,7 +939,6 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
-	o pbzip2-1.0.1
 	o pcal-4.8
 	o pciids-20070322
 	o pciutils-2.2.0
@@ -1009,7 +1004,6 @@ Suggested package updates
 	o postfix-2.4.5
 	o postgrey-1.28
 	o powermanga-0.80
-	o prelude-lml-0.9.10
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1286,7 +1280,6 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
-	o xf86-input-keyboard-1.2.0
 	o xfstt-1.7
 	o xisp-2.7p4
 	o xkbset-0.5
