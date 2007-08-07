@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2007/07/29 05:20:00 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2007/08/07 21:37:24 jlam Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
 MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
@@ -53,12 +54,16 @@ RPM2PKG_PREFIX=		${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STAGE=		do-install
 
-do-build:
-	${SED} -e 's#@EMULDIR@#${EMULDIR}#g'				\
-		${FILESDIR}/opera.sh > ${WRKDIR}/opera
+SUBST_CLASSES+=		opera-sh
+SUBST_STAGE.opera-sh=	post-build
+SUBST_FILES.opera-sh=	opera.sh
+SUBST_VARS.opera-sh=	CMP EMULDIR MKDIR MV RM SED SH
+
+post-extract:
+	${CP} ${FILESDIR}/opera.sh ${WRKSRC}
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/opera.sh ${PREFIX}/bin/opera
 	${LN} -fs ${EMULDIR}/usr/share/man/man1/opera.1			\
 		${PREFIX}/${PKGMANDIR}/man1
 	${ECHO} "bin/opera" >> ${RPM2PKG_PLIST}
