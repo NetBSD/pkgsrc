@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1737 2007/08/07 21:26:49 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1738 2007/08/07 21:43:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3188,3 +3188,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/policyd version 1.81 [ghen 2007-08-07]
 	Updated shells/mksh to 30 [jlam 2007-08-07]
 	Updated devel/p5-Devel-Symdump to 2.0700 [seb 2007-08-07]
+	Updated security/fprot-workstation-bin to 4.6.8 [taca 2007-08-07]
