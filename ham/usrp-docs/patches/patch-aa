@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/13 18:08:57 wulf Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/08 03:26:11 wulf Exp $
 
---- usrp/doc/Makefile.in.orig	2006-11-12 03:38:18.000000000 +1030
-+++ usrp/doc/Makefile.in	2006-11-12 03:38:30.000000000 +1030
-@@ -307,7 +307,7 @@
- build_vendor = @build_vendor@
- datadir = @datadir@
- datarootdir = @datarootdir@
--docdir = $(prefix)/share/doc/@PACKAGE@-@VERSION@
-+docdir = $(prefix)/share/doc/@PACKAGE@-@VERSION@/usrp
- dvidir = @dvidir@
- enable_dot = @enable_dot@
- enable_html_docs = @enable_html_docs@
+--- usrp/doc/Makefile.am.orig	2007-07-31 12:41:46.000000000 +0930
++++ usrp/doc/Makefile.am	2007-07-31 12:41:16.000000000 +0930
+@@ -25,7 +25,7 @@
+ SUBDIRS = other
+ 
+ man3dir = $(mandir)/man3
+-docdir  = $(prefix)/share/doc/@PACKAGE@-@VERSION@
++docdir  = $(prefix)/share/doc/@PACKAGE@-@VERSION@/usrp
+ 
+ EXTRA_DIST = 			\
+ 	Doxyfile.in		\
