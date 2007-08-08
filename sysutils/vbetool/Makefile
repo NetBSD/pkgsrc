@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/08 12:36:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/08 15:55:28 xtraeme Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
@@ -19,13 +19,8 @@ CONFIGURE_ARGS=	--with-x86emu
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "i386"
-LIBS.NetBSD+=	-li386
-.  else
-LIBS.NetBSD+=	-lx86_64
-.  endif
-.endif
+# This gives us libi386 and libx86_64.
+LIBS.NetBSD+=	-l${MACHINE_ARCH}
 
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
