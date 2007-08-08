@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2007/08/08 21:44:14 joerg Exp $
 
---- xclock.c.orig	1995-05-22 13:47:42.000000000 +0200
+--- xclock.c.orig	1995-05-22 13:47:42.000000000 +0000
 +++ xclock.c
-@@ -264,10 +264,29 @@ static Boolean	showSecondHand = False;	 
+@@ -17,9 +17,7 @@
+  *      1990
+  */
+ #include <stdio.h>
+-#ifndef VMS
+-#include <malloc.h>
+-#endif
++#include <stdlib.h>
+ #include <math.h>
+ #include <pwd.h>
+ #include <unistd.h>
+@@ -264,10 +262,29 @@ static Boolean	showSecondHand = False;	 
  
  static Boolean	iconified = False;	   /*  Clock iconified?		*/
  
@@ -36,7 +47,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  main(argc, argv)
      int 	argc;
-@@ -281,7 +300,6 @@ main(argc, argv)
+@@ -281,7 +298,6 @@ main(argc, argv)
      XGCValues	gcv;
      u_long 	valueMask;
      XmFontList	fontList = (XmFontList)NULL;
@@ -44,7 +55,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
      
      static XtResource	resources[] = {
-@@ -351,7 +369,7 @@ main(argc, argv)
+@@ -351,7 +367,7 @@ main(argc, argv)
  
  	{ "mode", "Mode", XtRString, sizeof(char *),
  	    XtOffset(ApplicationDataPtr, modeString),
@@ -53,7 +64,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  	{ "help", "Help", XtRBoolean, sizeof(Boolean),
  	    XtOffset(ApplicationDataPtr, help),
-@@ -391,7 +409,6 @@ main(argc, argv)
+@@ -391,7 +407,6 @@ main(argc, argv)
  	{ "-help",        "*help",         XrmoptionNoArg,  (XtPointer)"on" },
      };
      
@@ -61,7 +72,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
      
  
      /* 
-@@ -403,7 +420,7 @@ main(argc, argv)
+@@ -403,7 +418,7 @@ main(argc, argv)
      /*
       *  Open up the system
       */
@@ -70,7 +81,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  			       (XrmOptionDescList)(&options[0]),
  			       XtNumber(options),
  			       (unsigned int *)&argc, argv, NULL,
-@@ -418,7 +435,6 @@ main(argc, argv)
+@@ -418,7 +433,6 @@ main(argc, argv)
       *  Print help message and exit if asked
       */
      if (appData.help) {
@@ -78,7 +89,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  	Syntax(argv[0]);
      }
-@@ -568,7 +584,6 @@ main(argc, argv)
+@@ -568,7 +582,6 @@ main(argc, argv)
  	    time_t	timeValue;
  	    int		stringDir;
  	    XCharStruct	xCharStr;
@@ -86,7 +97,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  	    /*
  	     *  Padding is around time text
-@@ -794,7 +809,6 @@ main(argc, argv)
+@@ -794,7 +807,6 @@ main(argc, argv)
       *  Create cat pixmaps, etc. if in CAT_CLOCK mode
       */
      if (clockMode == CAT_CLOCK) {
@@ -94,7 +105,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  	
  	InitializeCat(appData.catColor,
  		      appData.detailColor,
-@@ -806,9 +820,6 @@ main(argc, argv)
+@@ -806,9 +818,6 @@ main(argc, argv)
       *  Finally, install necessary callbacks
       */
      {
@@ -104,7 +115,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  	
  	XtAddCallback(canvas, XmNexposeCallback, HandleExpose, NULL);
  	XtAddCallback(canvas, XmNresizeCallback, HandleResize, NULL);
-@@ -1191,7 +1202,6 @@ static void DrawLine(blankLength, length
+@@ -1191,7 +1200,6 @@ static void DrawLine(blankLength, length
      double 	fractionOfACircle;
  {
      double 		angle, cosAngle, sinAngle;
@@ -112,7 +123,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
      /*
       *  A full circle is 2 M_PI radians.
-@@ -1288,7 +1298,6 @@ static void DrawSecond(length, width, of
+@@ -1288,7 +1296,6 @@ static void DrawSecond(length, width, of
      double 	ms, mc, ws, wc;
      int 	mid;
      int 	x, y;
@@ -120,7 +131,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
      
      /*
       *  A full circle is 2 PI radians.
-@@ -1477,8 +1486,6 @@ static void InitializeCat(catColor, deta
+@@ -1477,8 +1484,6 @@ static void InitializeCat(catColor, deta
      XGCValues 		gcv;
      unsigned long 	valueMask;
      GC			gc1, gc2;
@@ -129,7 +140,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  
      catPix = XCreatePixmap(dpy, root, winWidth, winHeight,
-@@ -1562,8 +1569,6 @@ static void InitializeCat(catColor, deta
+@@ -1562,8 +1567,6 @@ static void InitializeCat(catColor, deta
      eyePixmap  = (Pixmap *)malloc((appData.nTails + 1) * sizeof(Pixmap));
  
      for (i = 0; i <= appData.nTails; i++) {
@@ -138,7 +149,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
  	tailPixmap[i] = CreateTailPixmap(i * M_PI/(appData.nTails));
  	eyePixmap[i]  = CreateEyePixmap(i * M_PI/(appData.nTails));
-@@ -1934,7 +1939,6 @@ static XtCallbackProc HandleExpose(w, cl
+@@ -1934,7 +1937,6 @@ static XtCallbackProc HandleExpose(w, cl
      XtPointer			clientData;
      XmDrawingAreaCallbackStruct	*callData;
  {
@@ -146,7 +157,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/23 20:17:47 drochner Exp $
  
      /*
       *  Ignore if more expose events for this window in the queue
-@@ -2180,13 +2184,6 @@ static XtCallbackProc HandleInput(w, cli
+@@ -2180,13 +2182,6 @@ static XtCallbackProc HandleInput(w, cli
      			ackW, rereadW, editW, exitW;
      static Widget	sepW1, sepW2;
  
