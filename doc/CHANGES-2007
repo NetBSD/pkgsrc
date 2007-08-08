@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1739 2007/08/07 21:49:29 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1740 2007/08/08 03:32:03 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3190,3 +3190,19 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Devel-Symdump to 2.0700 [seb 2007-08-07]
 	Updated security/fprot-workstation-bin to 4.6.8 [taca 2007-08-07]
 	Updated net/md-whois to 4.7.22 [taca 2007-08-07]
+	Updated ham/gnuradio-audio-jack to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-audio-oss to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-audio-portaudio to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-core to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-core-docs to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-examples to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-gsm to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-howto to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-radio-astronomy to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-trellis to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-usrp to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-video-sdl to 3.0.4 [wulf 2007-08-08]
+	Updated ham/gnuradio-wxgui to 3.0.4 [wulf 2007-08-08]
+	Updated ham/usrp to 3.0.4 [wulf 2007-08-08]
+	Updated ham/usrp-docs to 3.0.4 [wulf 2007-08-08]
+	Updated meta-pkgs/gnuradio to 3.0.4 [wulf 2007-08-08]
