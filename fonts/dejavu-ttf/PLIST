@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/10 08:08:09 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/08/08 12:18:51 obache Exp $
 lib/X11/fonts/TTF/DejaVuSans-Bold.ttf
 lib/X11/fonts/TTF/DejaVuSans-BoldOblique.ttf
 lib/X11/fonts/TTF/DejaVuSans-ExtraLight.ttf
@@ -13,12 +13,12 @@ lib/X11/fonts/TTF/DejaVuSansMono-BoldOblique.ttf
 lib/X11/fonts/TTF/DejaVuSansMono-Oblique.ttf
 lib/X11/fonts/TTF/DejaVuSansMono.ttf
 lib/X11/fonts/TTF/DejaVuSerif-Bold.ttf
-lib/X11/fonts/TTF/DejaVuSerif-BoldOblique.ttf
-lib/X11/fonts/TTF/DejaVuSerif-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSerif-BoldItalic.ttf
+lib/X11/fonts/TTF/DejaVuSerif-Italic.ttf
 lib/X11/fonts/TTF/DejaVuSerif.ttf
 lib/X11/fonts/TTF/DejaVuSerifCondensed-Bold.ttf
-lib/X11/fonts/TTF/DejaVuSerifCondensed-BoldOblique.ttf
-lib/X11/fonts/TTF/DejaVuSerifCondensed-Oblique.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed-BoldItalic.ttf
+lib/X11/fonts/TTF/DejaVuSerifCondensed-Italic.ttf
 lib/X11/fonts/TTF/DejaVuSerifCondensed.ttf
 share/doc/dejavu-ttf/AUTHORS
 share/doc/dejavu-ttf/BUGS
