@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.7 2007/08/08 11:28:04 tnn Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.8 2007/08/08 22:00:40 wiz Exp $
 .Dd August 8, 2007
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -24,7 +24,8 @@ Whenever
 is run on a package, all installed packages
 that depend on it are marked with the
 .Dq unsafe_depends_strict=YES
-flag. If the version of the replaced package has changed, this indicates
+flag.
+If the version of the replaced package has changed, this indicates
 that it may no longer be ABI-compatible so
 .Dq unsafe_depends=YES
 is also set for all packages that depend on it.
@@ -73,13 +74,15 @@ marked unsafe after each
 .It Fl r
 Just replace packages, do not build binary packages.
 .It Fl s
-Enable strict mode. This makes
+Enable strict mode.
+This makes
 .Nm
-Look at 
+look at
 .Dq unsafe_depends_strict
 tags instead of
 .Dq unsafe_depends
-tags. This will replace packages more aggressively and can be used to solve
+tags.
+This will replace packages more aggressively and can be used to solve
 shared library problems.
 .It Fl u
 Use
@@ -122,7 +125,11 @@ If not set in environment then defaults to
 with initial idea and many suggestions from
 .An Greg Troxel
 .Aq gdt@ir.bbn.com .
-The options -s and -r were added by
+The options
+.Fl s
+and
+.Fl r
+were added by
 .An Tobias Nygren
 .Aq tnn@NetBSD.org .
 .Sh BUGS
