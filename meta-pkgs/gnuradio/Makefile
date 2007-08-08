@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/05/17 12:49:34 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/08 02:55:13 wulf Exp $
 
 .include	"../../meta-pkgs/gnuradio/Makefile.version"
 
 DISTNAME=       gnuradio-${VERSION}
-CATEGORIES=	meta-pkgs ham gnuradio
+CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 PKGREVISION=	1
@@ -11,6 +11,8 @@ PKGREVISION=	1
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnuradio/
 COMMENT=	"meta-package" for GNU Radio
+
+.include "options.mk"
 
 DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
 DEPENDS+=	gnuradio-core-docs-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core-docs
@@ -25,8 +27,10 @@ DEPENDS+=	gnuradio-wxgui-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-wxgui
 DEPENDS+=	gnuradio-examples-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-examples
 DEPENDS+=	gnuradio-video-sdl-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-video-sdl
 DEPENDS+=	gnuradio-trellis-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-trellis
+.if !empty(PKG_OPTIONS:Mgnuradio-radio-astronomy)
 # Omit gnuradio-radio-astronomy because it has a RESTRICTED dependency.
-# DEPENDS+=	gnuradio-radio-astronomy-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-radio-astronomy
+DEPENDS+=	gnuradio-radio-astronomy-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-radio-astronomy
+.endif
 DEPENDS+=	gnuradio-howto-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-howto
 
 EXTRACT_ONLY=	# empty
