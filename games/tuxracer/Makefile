@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/29 17:01:21 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2007/08/08 17:21:15 joerg Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -13,6 +13,7 @@ HOMEPAGE=	http://tuxracer.sourceforge.net/
 COMMENT=	3D penguin racing game using OpenGL
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
@@ -22,15 +23,17 @@ CONFIGURE_ARGS+=	--with-tcl-libs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 USE_LANGUAGES=	c c++
 
+INSTALLATION_DIRS=	share/doc/html/tuxracer share/examples/tuxracer \
+			share/tuxracer
+
 post-install:
-	@-${MKDIR} ${PREFIX}/share/doc/html/tuxracer ${PREFIX}/share/examples/tuxracer ${PREFIX}/share/tuxracer
 	cd ${WRKSRC}/html && \
-		${PAX} -rw . ${PREFIX}/share/doc/html/tuxracer/
+		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/doc/html/tuxracer/
 	cd ${WRKSRC}/contrib && \
-		${PAX} -rw . ${PREFIX}/share/examples/tuxracer/
+		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/examples/tuxracer/
 	cd ${WRKDIR}/${PKGBASE}-data-${PKGVERSION:C/nb[0-9]*$//} && \
-		${PAX} -rw . ${PREFIX}/share/tuxracer/
-	cd ${PREFIX}/share/tuxracer && \
+		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/tuxracer/
+	cd ${DESTDIR}${PREFIX}/share/tuxracer && \
 		${FIND} . -type f -exec ${CHMOD} 444 {} \;
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
