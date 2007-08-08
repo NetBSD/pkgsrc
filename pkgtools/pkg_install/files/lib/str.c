@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.19 2007/07/20 22:22:53 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.20 2007/08/08 22:33:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.19 2007/07/20 22:22:53 joerg Exp $");
+__RCSID("$NetBSD: str.c,v 1.20 2007/08/08 22:33:39 joerg Exp $");
 #endif
 #endif
 
@@ -300,36 +300,4 @@ strip_txz(char *buf, char *sfx, const char *fname)
 
 	/* not found */
 	memcpy(buf, fname, len+1);
-}
-
-/*
- * Called to see if pkg is already installed as some other version, 
- * note found version in "note".
- */
-int
-note_whats_installed(const char *pattern, const char *found, void *vp)
-{
-	char *note = vp;
-
-	(void) strlcpy(note, found, MaxPathSize);
-	return 0;
-}
-
-/*
- * alloc lpkg for pkg and add it to list.
- */
-int
-add_to_list_fn(const char *pattern, const char *pkg, void *vp)
-{
-	lpkg_head_t *pkgs = vp;
-	lpkg_t *lpp;
-	char fn[MaxPathSize];
-
-	snprintf(fn, sizeof(fn), "%s/%s", _pkgdb_getPKGDB_DIR(), pkg);
-	if (isdir(fn) || islinktodir(fn)) {
-		lpp = alloc_lpkg(pkg);
-		TAILQ_INSERT_TAIL(pkgs, lpp, lp_link);
-	}
-
-	return 0;
 }

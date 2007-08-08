@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.32 2007/07/26 11:30:56 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.33 2007/08/08 22:33:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.32 2007/07/26 11:30:56 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.33 2007/08/08 22:33:39 joerg Exp $");
 #endif
 #endif
 
@@ -179,21 +179,16 @@ pkg_do(char *pkg)
 		(void) snprintf(log_dir, sizeof(log_dir), "%s/%s",
 		    _pkgdb_getPKGDB_DIR(), pkg);
 		if (!fexists(log_dir) || !(isdir(log_dir) || islinktodir(log_dir))) {
-			{
-				/* Check if the given package name matches
-				 * something with 'pkg-[0-9]*' */
-				char    try[MaxPathSize];
-				snprintf(try, MaxPathSize, "%s-[0-9]*", pkg);
-				if (findmatchingname(_pkgdb_getPKGDB_DIR(), try,
-					add_to_list_fn, &pkgs) > 0) {
-					return 0;	/* we've just appended some names to the pkgs list,
-							 * they will be processed after this package. */
-				}
+			switch (add_installed_pkgs_by_basename(pkg, &pkgs)) {
+			case 1:
+				return 0;
+			case 0:
+				/* No match */
+				warnx("can't find package `%s'", pkg);
+				return 1;
+			case -1:
+				errx(EXIT_FAILURE, "Error during search in pkgdb for %s", pkg);
 			}
-
-			/* No match */
-			warnx("can't find package `%s'", pkg);
-			return 1;
 		}
 		if (chdir(log_dir) == FAIL) {
 			warnx("can't change directory to '%s'!", log_dir);
@@ -322,63 +317,34 @@ bail:
 }
 
 /*
- * Function to be called for pkgs found
- */
-static int
-foundpkg(const char *pattern, const char *found, void *vp)
-{
-	char *data = vp;
-	char buf[MaxPathSize+1];
-
-	/* we only want to display this if it really is a directory */
-	snprintf(buf, sizeof(buf), "%s/%s", data, found);
-	if (!(isdir(buf) || islinktodir(buf))) {
-		/* return value seems to be ignored for now */
-		return -1;
-	}
-
-	if (!Quiet) {
-		printf("%s\n", found);
-	}
-
-	return 0;
-}
-
-/*
  * Check if a package "pkgspec" (which can be a pattern) is installed.
  * dbdir contains the return value of _pkgdb_getPKGDB_DIR(), for reading only.
  * Return 0 if found, 1 otherwise (indicating an error).
  */
 static int
-CheckForPkg(char *pkgspec, char *dbdir)
+CheckForPkg(const char *pkgname)
 {
-	char    buf[MaxPathSize];
-	int     error;
+	char *best_installed;
 
-	if (strpbrk(pkgspec, "<>[]?*{")) {
-		/* expensive (pattern) match */
-		error = findmatchingname(dbdir, pkgspec, foundpkg, dbdir);
-		if (error == -1)
-			return 1;
-		else
-			return !error;
+	best_installed = find_best_matching_installed_pkg(pkgname);
+	if (best_installed == NULL && !ispkgpattern(pkgname)) {
+		char *pattern;
+
+		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
+			errx(EXIT_FAILURE, "asprintf failed");
+
+		pkgname = find_best_matching_installed_pkg(pattern);
+		free(pattern);
 	}
-	/* simple match */
-	(void) snprintf(buf, sizeof(buf), "%s/%s", dbdir, pkgspec);
-	error = !(isdir(buf) || islinktodir(buf));
-	if (!error && !Quiet) {
-		printf("%s\n", pkgspec);
-	}
-	if (error) {
-		/* found nothing - try 'pkg-[0-9]*' */
-		
-		char    try[MaxPathSize];
-		snprintf(try, MaxPathSize, "%s-[0-9]*", pkgspec);
-		if (findmatchingname(dbdir, try, foundpkg, dbdir) > 0) {
-			error = 0;
-		}
-	}
-	return error;
+
+	if (best_installed == NULL)
+		return 1;
+
+	if (!Quiet)
+		printf("%s\n", best_installed);
+
+	free(best_installed);
+	return 0;
 }
 
 void
@@ -404,7 +370,7 @@ pkg_perform(lpkg_head_t *pkghead)
 
 	/* Overriding action? */
 	if (CheckPkg) {
-		err_cnt += CheckForPkg(CheckPkg, dbdir);
+		err_cnt += CheckForPkg(CheckPkg);
 	} else if (Which != WHICH_LIST) {
 		if (!(isdir(dbdir) || islinktodir(dbdir)))
 			return 1;

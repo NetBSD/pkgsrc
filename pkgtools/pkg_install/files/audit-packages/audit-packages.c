@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.7 2007/08/01 23:58:15 taca Exp $ */
+/* $NetBSD: audit-packages.c,v 1.8 2007/08/08 22:33:39 joerg Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -113,8 +113,7 @@ Boolean eol = FALSE;				/* don't check eol */
 int main(int, char **);
 void *safe_calloc(size_t, size_t);
 char *ap_fixpkgname(char *);
-static int foundpkg(const char *, const char *, void *);
-static int checkforpkg(char *);
+static int checkforpkg(const char *);
 void usage(void);
 int dvl(void);
 void old_pvfile(void);
@@ -655,75 +654,21 @@ get_confvalues(void)
 	return 0;
 }
 
-/* called by checkforpkg to see if a package exists */
-static int
-foundpkg(const char *pattern, const char *found, void *vp)
-{
-	char *data = vp;
-	char *buf;
-	int retval = 0;
-
-	buf = safe_calloc(PATH_MAX, sizeof(char));
-
-	/* we only want to display this if it really is a directory */
-	retval = snprintf(buf, PATH_MAX, "%s/%s", data, found);
-
-	if (retval < 0 || retval >= PATH_MAX)
-		return 0;
-
-	if (!(isdir(buf) || islinktodir(buf)))
-		return -1;	/* return value seems to be ignored for now */
-
-	pkgname = ap_fixpkgname(buf);
-	free(buf);
-
-	return 0;
-}
-
 /* check to see if a package exists */
 static int
-checkforpkg(char *one_package)
+checkforpkg(const char *one_package)
 {
-	char *dbdir = NULL;
-	int retval;
-	char *buf = NULL;
-	char *try = NULL;
+	pkgname = find_best_matching_installed_pkg(one_package);
+	if (pkgname == NULL && !ispkgpattern(one_package)) {
+		char *pattern;
 
-	dbdir = _pkgdb_getPKGDB_DIR();
+		if (asprintf(&pattern, "%s-[0-9]*", one_package) == -1)
+			errx(EXIT_FAILURE, "asprintf failed");
 
-	/* expensive (pattern) match */
-	if (strpbrk(one_package, "<>[]?*{")) {
-		retval = findmatchingname(dbdir, one_package, foundpkg, dbdir);
-
-		if (retval == -1) {
-			return 1;
-		} else {
-			return !retval;
-		}
+		pkgname = find_best_matching_installed_pkg(pattern);
+		free(pattern);
 	}
-
-	buf = safe_calloc(PATH_MAX, sizeof(char));
-
-	/* simple match */
-	(void) snprintf(buf, PATH_MAX, "%s/%s", dbdir, one_package);
-	retval = !(isdir(buf) || islinktodir(buf));
-
-	pkgname = ap_fixpkgname(buf);
-
-	if (retval == 1) {
-
-		/* found nothing - try 'pkg-[0-9]*' */
-		try = safe_calloc(PATH_MAX, sizeof(char));
-
-		snprintf(try, PATH_MAX, "%s-[0-9]*", one_package);
-		if (findmatchingname(dbdir, try, foundpkg, dbdir) > 0)
-			retval = 0;
-	}
-
-	free(buf);
-	free(try);
-
-	return retval;
+	return pkgname == NULL ? 1 : 0;
 }
 
 /* usage message for this program */
