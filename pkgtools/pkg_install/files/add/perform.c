@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.51 2007/07/30 08:09:14 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.52 2007/08/08 22:33:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.51 2007/07/30 08:09:14 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.52 2007/08/08 22:33:38 joerg Exp $");
 #endif
 #endif
 
@@ -524,7 +524,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 		if ((s = strrchr(PkgName, '-')) != NULL) {
 			char    buf[MaxPathSize];
-			char    installed[MaxPathSize];
+			char *best_installed;
 
 			/*
 			 * See if the pkg is already installed. If so, we might
@@ -532,18 +532,19 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			 */
 			(void) snprintf(buf, sizeof(buf), "%.*s[0-9]*",
 				(int)(s - PkgName) + 1, PkgName);
-			if (findmatchingname(dbdir, buf, note_whats_installed, installed) > 0) {
+			best_installed = find_best_matching_installed_pkg(buf);
+			if (best_installed) {
 				if (Replace && !Fake) {
 					/* XXX Should list the steps in Fake mode */
 					snprintf(replace_from, sizeof(replace_from), "%s/%s/" REQUIRED_BY_FNAME,
-						 dbdir, installed);
+						 dbdir, best_installed);
 					snprintf(replace_via, sizeof(replace_via), "%s/.%s." REQUIRED_BY_FNAME,
-						 dbdir, installed);
+						 dbdir, best_installed);
 					snprintf(replace_to, sizeof(replace_to), "%s/%s/" REQUIRED_BY_FNAME,
 						 dbdir, PkgName);
 
 					if (Verbose)
-						printf("Upgrading %s to %s.\n", installed, PkgName);
+						printf("Upgrading %s to %s.\n", best_installed, PkgName);
 
 					if (fexists(replace_from)) {  /* Are there any dependencies? */
 					  	/*
@@ -658,30 +659,34 @@ ignore_replace_depends_check:
 						printf("%s/pkg_delete -K %s '%s'\n",
 							BINDIR,
 							dbdir,
-							installed);
+							best_installed);
 					}
-					fexec(BINDIR "/pkg_delete", "-K", dbdir, installed, NULL);
+					fexec(BINDIR "/pkg_delete", "-K", dbdir, best_installed, NULL);
 				} else if (!is_depoted_pkg) {
-					warnx("other version '%s' already installed", installed);
+					warnx("other version '%s' already installed", best_installed);
 
 					errc = 1;
 					goto success;	/* close enough for government work */
 				}
+				free(best_installed);
 			}
 		}
 	}
 
 	/* See if there are conflicting packages installed */
 	for (p = Plist.head; p; p = p->next) {
-		char    installed[MaxPathSize];
+		char *best_installed;
 
 		if (p->type != PLIST_PKGCFL)
 			continue;
 		if (Verbose)
 			printf("Package `%s' conflicts with `%s'.\n", PkgName, p->name);
-		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) > 0) {
+		best_installed = find_best_matching_installed_pkg(p->name);
+		if (best_installed) {
 			warnx("Conflicting package `%s'installed, please use\n"
-			      "\t\"pkg_delete %s\" first to remove it!", installed, installed);
+			      "\t\"pkg_delete %s\" first to remove it!",
+			      best_installed, best_installed);
+			free(best_installed);
 			++errc;
 		}
 	}
@@ -691,13 +696,14 @@ ignore_replace_depends_check:
 	 */
 	err_prescan=0;
 	for (p = Plist.head; p; p = p->next) {
-		char installed[MaxPathSize];
+		char *best_installed;
 		
 		if (p->type != PLIST_PKGDEP)
 			continue;
 		if (Verbose)
 			printf("Depends pre-scan: `%s' required.\n", p->name);
-		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) <= 0) {
+		best_installed = find_best_matching_installed_pkg(p->name);
+		if (best_installed == NULL) {
 			/* 
 			 * required pkg not found. look if it's available with a more liberal
 			 * pattern. If so, this will lead to problems later (check on "some
@@ -729,8 +735,8 @@ ignore_replace_depends_check:
 				(void) snprintf(buf, sizeof(buf),
 				    skip ? "%.*s[0-9]*" : "%.*s-[0-9]*",
 				    (int)(s - p->name) + skip, p->name);
-				if (findmatchingname(dbdir, buf, note_whats_installed, installed) > 0)
-				{
+				best_installed = find_best_matching_installed_pkg(buf);
+				if (best_installed) {
 					int done = 0;
 
 					if (Replace > 1)
@@ -752,15 +758,18 @@ ignore_replace_depends_check:
 					if (!done)
 					{
 						warnx("pkg `%s' required, but `%s' found installed.",
-							  p->name, installed);
+							  p->name, best_installed);
 						if (Force) {
 							warnx("Proceeding anyway.");
 						} else {
 							err_prescan++;
 						}
 					}
+					free(best_installed);
 				}
 			}
+		} else {
+			free(best_installed);
 		}
 	}
 	if (err_prescan > 0) {
@@ -772,7 +781,7 @@ ignore_replace_depends_check:
 
 	/* Now check the packing list for dependencies */
 	for (exact = NULL, p = Plist.head; p; p = p->next) {
-		char    installed[MaxPathSize];
+		char *best_installed;
 
 		if (p->type == PLIST_BLDDEP) {
 			exact = p->name;
@@ -785,7 +794,9 @@ ignore_replace_depends_check:
 		if (Verbose)
 			printf("Package `%s' depends on `%s'.\n", PkgName, p->name);
 
-		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) != 1) {
+		best_installed = find_best_matching_installed_pkg(p->name);
+
+		if (best_installed == NULL) {
 			/* required pkg not found - need to pull in */
 
 			if (Fake) {
@@ -808,8 +819,10 @@ ignore_replace_depends_check:
 					errc += errc0;
 				}
 			}
-		} else if (Verbose) {
-			printf(" - %s already installed.\n", installed);
+		} else {
+			if (Verbose)
+				printf(" - %s already installed.\n", best_installed);
+			free(best_installed);
 		}
 	}
 
@@ -910,17 +923,14 @@ ignore_replace_depends_check:
 			    basename_of(p->name));
 			if (ispkgpattern(p->name)) {
 				char   *s;
-				s = findbestmatchingname(dirname_of(contents),
-				    basename_of(contents));
-				if (s != NULL) {
-					char   *t;
-					t = strrchr(contents, '/');
-					strcpy(t + 1, s);
-					free(s);
-				} else {
+
+				s = find_best_matching_installed_pkg(p->name);
+
+				if (s == NULL)
 					errx(EXIT_FAILURE, "Where did our dependency go?!");
-					/* this shouldn't happen... X-) */
-				}
+
+				(void) snprintf(contents, sizeof(contents), "%s/%s", dbdir, s);
+				free(s);
 			}
 			strlcat(contents, "/", sizeof(contents));
 			strlcat(contents, REQUIRED_BY_FNAME, sizeof(contents));
