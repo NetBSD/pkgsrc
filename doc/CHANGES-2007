@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1749 2007/08/08 22:34:39 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1750 2007/08/08 23:22:35 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3215,3 +3215,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/ghostscript to 8.60 [joerg 2007-08-08]
 	Updated textproc/intltool to 0.36.0nb1 [wiz 2007-08-08]
 	Updated pkgtools/pkg_install to 20070808 [joerg 2007-08-08]
+	Updated misc/mttail to 1.1.1 [zuntum 2007-08-09]
