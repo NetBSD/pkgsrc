@@ -1,13 +1,18 @@
-$NetBSD: patch-bb,v 1.4 2006/01/13 00:13:54 joerg Exp $
+$NetBSD: patch-bb,v 1.5 2007/08/08 20:40:20 joerg Exp $
 
---- src_sound/dsp_mixxer.c.orig	1998-06-22 05:41:31.000000000 -0500
+--- src_sound/dsp_mixxer.c.orig	1998-06-22 10:41:31.000000000 +0000
 +++ src_sound/dsp_mixxer.c
-@@ -19,10 +19,10 @@
+@@ -15,14 +15,14 @@
+ ***************************************************************************/
+ #include <stdio.h>
+ #include <math.h>
+-#include <malloc.h>
++#include <stdlib.h>
  #include <unistd.h>
  #include <fcntl.h>
  #include <sys/ioctl.h>
 -#ifdef Linux
-+#if defined(Linux) || defined( FreeBSD) || defined(__DragonFly__)
++#if defined(Linux) || defined(__FreeBSD__) || defined(__DragonFly__)
   #include <sys/soundcard.h>
 -#elif FreeBSD
 - #include <machine/soundcard.h>
