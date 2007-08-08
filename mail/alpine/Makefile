@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/07/02 09:38:34 abs Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/08 16:05:57 abs Exp $
 #
 
 DISTNAME=	alpine-0.999
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-ssl-dir=${SSLBASE:Q}
+CONFIGURE_ARGS+= --with-system-pinerc=${PKG_SYSCONFDIR}/pine.conf
+CONFIGURE_ARGS+= --with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
+
 USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS=	bin ${PKMANDIR}/man1
