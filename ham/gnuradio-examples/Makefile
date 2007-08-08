@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/11/13 17:17:33 wulf Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/08 03:10:17 wulf Exp $
 
 PKGNAME=	gnuradio-examples-${VERSION}
 COMMENT=	GUI framework for GNU Radio based on wxPython
@@ -19,6 +19,7 @@ PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/audio_play.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/audio_to_file.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/dial_squelch.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/dial_tone.py
+PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/dialtone_v.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/mono_tone.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/multi_tone.py
 PYTHON_PATCH_SCRIPTS+=	gnuradio-examples/python/audio/spectrum_inversion.py
