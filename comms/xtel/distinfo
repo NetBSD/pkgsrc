@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/01/02 16:17:09 joerg Exp $
+$NetBSD: distinfo,v 1.5 2007/08/08 16:50:26 joerg Exp $
 
 SHA1 (xtel-3.3.0.tar.gz) = 7ee5a5afa20bea46e08c346605c53cdd32d69dc9
 RMD160 (xtel-3.3.0.tar.gz) = 0ba51e9129b24db33ac96cff23ffc88d3f13b653
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 95cd5a8c3e421d711f9fd0ad502aa33e92273e0f
 SHA1 (patch-ae) = ece76180605a5310044ff06506fd298f3dde3234
 SHA1 (patch-af) = c52f5b39da50c350ac3ce929b3f77eafdce4942c
 SHA1 (patch-ag) = 6addd47ca368ed78011162b0b843124329909fc1
+SHA1 (patch-ah) = 18f454bba7898a4d80f68215e7b6995d2ba26a71
