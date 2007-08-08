@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.21 2007/07/20 22:22:52 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.22 2007/08/08 22:33:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.21 2007/07/20 22:22:52 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.22 2007/08/08 22:33:38 joerg Exp $");
 #endif
 
 /*
@@ -83,7 +83,7 @@ int     pkgcnt;
 
 static int	quiet;
 
-static int checkpattern_fn(const char *, const char *, void *);
+static int checkpattern_fn(const char *, void *);
 static void set_unset_variable(char **, Boolean);
 
 /* print usage message and exit */
@@ -414,9 +414,9 @@ checkall(void)
 }
 
 static int
-checkpattern_fn(const char *pattern, const char *pkg, void *vp)
+checkpattern_fn(const char *pkg, void *vp)
 {
-	int     rc;
+	int *got_match, rc;
 
 	rc = chdir(pkg);
 	if (rc == -1)
@@ -428,6 +428,9 @@ checkpattern_fn(const char *pattern, const char *pkg, void *vp)
 	}
 
 	chdir("..");
+
+	got_match = vp;
+	*got_match = 1;
 
 	return 0;
 }
@@ -551,32 +554,26 @@ main(int argc, char *argv[])
 				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
 			while (*argv != NULL) {
-				if (ispkgpattern(*argv)) {
-					if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, checkpattern_fn, NULL) <= 0)
+				int got_match;
+
+				got_match = 0;
+				if (match_installed_pkgs(*argv, checkpattern_fn, &got_match) == -1)
+					errx(EXIT_FAILURE, "Cannot process pkdbdb");
+				if (got_match == 0) {
+					char *pattern;
+
+					if (ispkgpattern(*argv))
 						errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
-				} else {
-					rc = chdir(*argv);
-					if (rc == -1) {
-						/* found nothing - try 'pkg-[0-9]*' */
-						char try[MaxPathSize];
-					
-						snprintf(try, sizeof(try), "%s-[0-9]*", *argv);
-						if (findmatchingname(_pkgdb_getPKGDB_DIR(), try,
-								     checkpattern_fn, NULL) <= 0) {
 
-							errx(EXIT_FAILURE, "cannot find package %s", *argv);
-						} else {
-							/* nothing to do - all the work is/was
-							 * done in checkpattern_fn() */
-						}
-					} else {
-						check1pkg(*argv);
-						if (!quiet) {
-							printf(".");
-						}
+					if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
+						errx(EXIT_FAILURE, "asprintf failed");
 
-						chdir("..");
-					}
+					if (match_installed_pkgs(*argv, checkpattern_fn, &got_match) == -1)
+						errx(EXIT_FAILURE, "Cannot process pkdbdb");
+
+					if (got_match == 0)
+						errx(EXIT_FAILURE, "cannot find package %s", *argv);
+					free(pattern);
 				}
 
 				argv++;
@@ -751,32 +748,36 @@ main(int argc, char *argv[])
 	return 0;
 }
 
-struct varval {
-    char *variable;
-    char *value;
+struct set_installed_info_arg {
+	char *variable;
+	char *value;
+	int got_match;
 };
 
 static int
-set_installed_info_var(const char *pattern, const char *name, void *ud)
+set_installed_info_var(const char *name, void *cookie)
 {
-	char filename[BUFSIZ];
-	struct varval *varval;
+	struct set_installed_info_arg *arg = cookie;
+	char *filename;
+	int retval;
 
-	varval = ud;
+	if (asprintf(&filename, "%s/%s", name, INSTALLED_INFO_FNAME) == -1)
+		errx(EXIT_FAILURE, "asprintf failed");
 
-	(void)snprintf(filename, sizeof(filename), "%s/%s", name,
-		       INSTALLED_INFO_FNAME);
+	retval = var_set(filename, arg->variable, arg->value);
 
-	return var_set(filename, varval->variable, varval->value);
+	free(filename);
+
+	return retval;
 }
 
 static void
 set_unset_variable(char **argv, Boolean unset)
 {
-	struct varval varval;
-	int ret = 0;
+	struct set_installed_info_arg arg;
 	char *eq;
 	char *variable;
+	int ret = 0;
 
 	if (argv[0] == NULL || argv[1] == NULL)
 		usage();
@@ -784,8 +785,8 @@ set_unset_variable(char **argv, Boolean unset)
 	variable = NULL;
 
 	if (unset) {
-		varval.variable = argv[0];
-		varval.value = NULL;
+		arg.variable = argv[0];
+		arg.value = NULL;
 	} else {	
 		eq = NULL;
 		if ((eq=strchr(argv[0], '=')) == NULL)
@@ -794,46 +795,46 @@ set_unset_variable(char **argv, Boolean unset)
 		variable = malloc(eq-argv[0]+1);
 		strlcpy(variable, argv[0], eq-argv[0]+1);
 		
-		varval.variable = variable;
-		varval.value = eq+1;
+		arg.variable = variable;
+		arg.value = eq+1;
 		
 		if (strcmp(variable, AUTOMATIC_VARNAME) == 0 &&
-		    strcasecmp(varval.value, "yes") != 0 &&
-		    strcasecmp(varval.value, "no") != 0) {
+		    strcasecmp(arg.value, "yes") != 0 &&
+		    strcasecmp(arg.value, "no") != 0) {
 			errx(EXIT_FAILURE,
 			     "unknown value `%s' for " AUTOMATIC_VARNAME,
-			     varval.value);
+			     arg.value);
 		}
 	}
-	if (strcspn(varval.variable, "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-	    != strlen(varval.variable)) {
+	if (strpbrk(arg.variable, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") != NULL) {
 		free(variable);
 		errx(EXIT_FAILURE,
 		     "variable name must not contain uppercase letters");
 	}
 
-	chdir(_pkgdb_getPKGDB_DIR());
 	argv++;
 	while (*argv != NULL) {
-		if (ispkgpattern(*argv)) {
-			if (findmatchingname(_pkgdb_getPKGDB_DIR(),
-					     *argv, set_installed_info_var,
-					     &varval) <= 0) {
+		arg.got_match = 0;
+		if (match_installed_pkgs(*argv, set_installed_info_var, &arg) == -1)
+			errx(EXIT_FAILURE, "Cannot process pkdbdb");
+		if (arg.got_match == 0) {
+			char *pattern;
+
+			if (ispkgpattern(*argv)) {
 				warnx("no matching pkg for `%s'", *argv);
 				ret++;
-			}
-		} else if (isdir(*argv) || islinktodir(*argv))
-			set_installed_info_var(NULL, *argv, &varval);
-		else {
-			/* try 'pkg-[0-9]*' */
-			char try[MaxPathSize];
+			} else {
+				if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
+					errx(EXIT_FAILURE, "asprintf failed");
 
-			snprintf(try, sizeof(try), "%s-[0-9]*", *argv);
-			if (findmatchingname(_pkgdb_getPKGDB_DIR(),
-					     try, set_installed_info_var,
-					     &varval) <= 0) {
-				warnx("cannot find package %s", *argv);
-				ret++;
+				if (match_installed_pkgs(*argv, set_installed_info_var, &arg) == -1)
+					errx(EXIT_FAILURE, "Cannot process pkdbdb");
+
+				if (arg.got_match == 0) {
+					warnx("cannot find package %s", *argv);
+					++ret;
+				}
+				free(pattern);
 			}
 		}
 
