@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/08 12:36:37 xtraeme Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
@@ -10,14 +10,22 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.srcf.ucam.org/~mjg59/vbetool/
 COMMENT=	Run real-mode video BIOS code to alter hardware state
 
-ONLY_FOR_PLATFORM+=	Linux-*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM+=	Linux-*-i386 NetBSD-*-i386 NetBSD-*-x86_64
 
 WRKSRC=		${WRKDIR}/vbetool-0.7
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-x86emu
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "i386"
 LIBS.NetBSD+=	-li386
+.  else
+LIBS.NetBSD+=	-lx86_64
+.  endif
+.endif
 
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
