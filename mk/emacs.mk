@@ -1,10 +1,10 @@
-# $NetBSD: emacs.mk,v 1.41 2007/06/30 05:13:24 joerg Exp $
+# $NetBSD: emacs.mk,v 1.42 2007/08/08 08:12:12 dsainty Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
 # Note to users:
 #
-#	* Users choose one favoriate Emacs version (default GNU Emacs 21).
+#	* Users choose one favourite Emacs version (default GNU Emacs 21).
 #
 #	* Emacs Lisp files are installed...
 #	  	GNU emacs
@@ -38,7 +38,7 @@
 #
 #	EMACS_TYPE
 #		Description:
-#			The user's favoriate Emacs version.
+#			The user's favourite Emacs version.
 #		Possible values:
 #			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
 #		Default value:
@@ -121,7 +121,7 @@
 #		Description:
 #			Emacs minor version.
 #		Possible values:
-#			<interger>
+#			<integer>
 #
 # Variables provided in ELPs' PLIST:
 #
@@ -161,7 +161,7 @@
 #			"@comment" depending on the Emacs version; when
 #			"emacs21" is used, ${FOR_emacs} and ${FOR_emacs21}
 #			become "" (empty), and other macros become
-#			"@comment"; thie means that only the PLIST lines
+#			"@comment"; this means that only the PLIST lines
 #			prefixed by ${FOR_emacs} and ${FOR_emacs21} are
 #			valid.
 #		Possible values:
