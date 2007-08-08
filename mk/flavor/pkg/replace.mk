@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.13 2007/08/08 11:35:16 tnn Exp $
+# $NetBSD: replace.mk,v 1.14 2007/08/08 16:39:05 jlam Exp $
 #
 
 # _flavor-replace:
@@ -154,6 +154,7 @@ replace-fixup-required-by: .PHONY
 	${CAT} ${_REQUIRED_BY_FILE} |					\
 	while read pkg; do						\
 		case $$pkg in						\
+		"")	continue ;;					\
 		/*)	pkgdir="$$pkg" ;;				\
 		*)	pkgdir="${_PKG_DBDIR}/$$pkg" ;;			\
 		esac;							\
