@@ -1,8 +1,20 @@
-$NetBSD: patch-ai,v 1.2 2007/04/28 15:20:43 reed Exp $
+$NetBSD: patch-ai,v 1.3 2007/08/08 21:07:49 joerg Exp $
 
---- holiday.c.orig	2005-01-09 03:44:34.000000000 -0600
-+++ holiday.c	2007-04-26 09:22:32.000000000 -0500
-@@ -52,7 +52,7 @@
+--- holiday.c.orig	2005-01-09 09:44:34.000000000 +0000
++++ holiday.c
+@@ -20,11 +20,6 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <time.h>
+-#ifndef NEWSOS4
+-#ifndef STDLIBMALLOC
+-#include <malloc.h>
+-#endif
+-#endif
+ #ifdef CPP_PATH
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -52,7 +47,7 @@ static int calc_pascha(int);
  extern int yyparse(void);
  
  
