@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/11/13 16:59:22 wulf Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/08/08 03:05:05 wulf Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNURADIO_CORE_BUILDLINK3_MK:=	${GNURADIO_CORE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnuradio-core
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnuradio-core
 
 .if ${GNURADIO_CORE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.0.2
+BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.0.4
 BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 BUILDLINK_CPPFLAGS.gnuradio-core+=    -I${BUILDLINK_PREFIX.gnuradio-core}/include/gnuradio
 .endif	# GNURADIO_CORE_BUILDLINK3_MK
