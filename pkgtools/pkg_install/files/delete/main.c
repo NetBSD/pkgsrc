@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.17 2006/04/04 06:27:13 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.18 2007/08/08 22:33:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.17 2006/04/04 06:27:13 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.18 2007/08/08 22:33:39 joerg Exp $");
 #endif
 #endif
 
@@ -160,7 +160,7 @@ main(int argc, char **argv)
 			lpp = alloc_lpkg(s);
 			TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 		} else if (ispkgpattern(*argv)) {
-			switch(findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs)) {
+			switch (add_installed_pkgs_by_pattern(*argv, &pkgs)) {
 			case 0:
 				errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 			case -1:
