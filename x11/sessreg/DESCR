@@ -1,0 +1,2 @@
+Sessreg is a simple program to manage utmp/wtmp entries for
+xdm sessions and other clients not started from init.
