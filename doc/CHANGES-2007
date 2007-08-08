@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1740 2007/08/08 03:32:03 wulf Exp $
+$NetBSD: CHANGES-2007,v 1.1741 2007/08/08 12:01:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3206,3 +3206,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated ham/usrp to 3.0.4 [wulf 2007-08-08]
 	Updated ham/usrp-docs to 3.0.4 [wulf 2007-08-08]
 	Updated meta-pkgs/gnuradio to 3.0.4 [wulf 2007-08-08]
+	Added sysutils/vbetool version 0.7.1 [xtraeme 2007-08-08]
