@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2006/08/07 14:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/08 12:18:51 obache Exp $
 #
 
-DISTNAME=	dejavu-ttf-2.8
+DISTNAME=	dejavu-ttf-2.19
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jakollasch@keymaster.madscientistresearch.net
+MAINTAINER=	jakllsch@kollasch.net
 HOMEPAGE=	http://dejavu.sourceforge.net/
 COMMENT=	DejaVu family of TrueType fonts
 
