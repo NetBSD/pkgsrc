@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.2 2007/07/31 19:31:17 jlam Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.3 2007/08/08 16:59:11 abs Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -43,6 +43,7 @@ java/sun-1.5/lib/cmm/PYCC.pf
 java/sun-1.5/lib/cmm/sRGB.pf
 java/sun-1.5/lib/content-types.properties.default
 java/sun-1.5/lib/deploy.jar
+java/sun-1.5/lib/deploy/ffjcext.zip
 java/sun-1.5/lib/ext/dnsns.jar
 java/sun-1.5/lib/ext/localedata.jar
 java/sun-1.5/lib/ext/sunjce_provider.jar
@@ -196,7 +197,7 @@ java/sun-1.5/lib/zi/Africa/Abidjan
 java/sun-1.5/lib/zi/Africa/Accra
 java/sun-1.5/lib/zi/Africa/Addis_Ababa
 java/sun-1.5/lib/zi/Africa/Algiers
-java/sun-1.5/lib/zi/Africa/Asmera
+java/sun-1.5/lib/zi/Africa/Asmara
 java/sun-1.5/lib/zi/Africa/Bamako
 java/sun-1.5/lib/zi/Africa/Bangui
 java/sun-1.5/lib/zi/Africa/Banjul
@@ -308,6 +309,7 @@ java/sun-1.5/lib/zi/America/Indiana/Marengo
 java/sun-1.5/lib/zi/America/Indiana/Petersburg
 java/sun-1.5/lib/zi/America/Indiana/Vevay
 java/sun-1.5/lib/zi/America/Indiana/Vincennes
+java/sun-1.5/lib/zi/America/Indiana/Winamac
 java/sun-1.5/lib/zi/America/Inuvik
 java/sun-1.5/lib/zi/America/Iqaluit
 java/sun-1.5/lib/zi/America/Jamaica
@@ -350,6 +352,7 @@ java/sun-1.5/lib/zi/America/Rainy_River
 java/sun-1.5/lib/zi/America/Rankin_Inlet
 java/sun-1.5/lib/zi/America/Recife
 java/sun-1.5/lib/zi/America/Regina
+java/sun-1.5/lib/zi/America/Resolute
 java/sun-1.5/lib/zi/America/Rio_Branco
 java/sun-1.5/lib/zi/America/Santiago
 java/sun-1.5/lib/zi/America/Santo_Domingo
@@ -463,7 +466,7 @@ java/sun-1.5/lib/zi/Atlantic/Azores
 java/sun-1.5/lib/zi/Atlantic/Bermuda
 java/sun-1.5/lib/zi/Atlantic/Canary
 java/sun-1.5/lib/zi/Atlantic/Cape_Verde
-java/sun-1.5/lib/zi/Atlantic/Faeroe
+java/sun-1.5/lib/zi/Atlantic/Faroe
 java/sun-1.5/lib/zi/Atlantic/Madeira
 java/sun-1.5/lib/zi/Atlantic/Reykjavik
 java/sun-1.5/lib/zi/Atlantic/South_Georgia
@@ -474,6 +477,7 @@ java/sun-1.5/lib/zi/Australia/Brisbane
 java/sun-1.5/lib/zi/Australia/Broken_Hill
 java/sun-1.5/lib/zi/Australia/Currie
 java/sun-1.5/lib/zi/Australia/Darwin
+java/sun-1.5/lib/zi/Australia/Eucla
 java/sun-1.5/lib/zi/Australia/Hobart
 java/sun-1.5/lib/zi/Australia/Lindeman
 java/sun-1.5/lib/zi/Australia/Lord_Howe
