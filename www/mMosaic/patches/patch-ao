@@ -1,13 +1,17 @@
-$NetBSD: patch-ao,v 1.1 2006/10/06 19:15:09 schwarz Exp $
+$NetBSD: patch-ao,v 1.2 2007/08/08 20:20:07 joerg Exp $
 
---- src/proxy-dialogs.c.orig	2006-10-04 22:04:00.000000000 +0200
-+++ src/proxy-dialogs.c	2006-10-04 22:04:28.000000000 +0200
-@@ -19,7 +19,7 @@
+--- src/proxy-dialogs.c.orig	2000-12-08 16:11:08.000000000 +0000
++++ src/proxy-dialogs.c
+@@ -17,11 +17,7 @@
+ #include <Xm/Label.h>
+ #include <Xm/MessageB.h>
  
- #ifdef __bsdi__
- #include <sys/malloc.h>
+-#ifdef __bsdi__
+-#include <sys/malloc.h>
 -#else
-+#elif !defined(__APPLE__)
- #include <malloc.h>
- #endif
+-#include <malloc.h>
+-#endif
++#include <stdlib.h>
  #include <string.h>
+ #include <assert.h>
+ 
