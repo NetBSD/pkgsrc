@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.17 2007/07/26 11:30:56 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.18 2007/08/08 22:33:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.17 2007/07/26 11:30:56 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.18 2007/08/08 22:33:39 joerg Exp $");
 #endif
 #endif
 
@@ -282,8 +282,12 @@ main(int argc, char **argv)
 				errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 		} else {
 			if (ispkgpattern(*argv)) {
-				if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs) <= 0)
+				switch (add_installed_pkgs_by_pattern(*argv, &pkgs)) {
+				case 0:
 					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
+				case -1:
+					errx(EXIT_FAILURE, "Error during search in pkgdb for %s", *argv);
+				}
 			} else {
 				char   *dbdir;
 
