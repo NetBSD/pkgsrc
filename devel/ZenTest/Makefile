@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/11 07:59:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/08 16:13:46 joerg Exp $
 
 DISTNAME=	ZenTest-3.6.0
 CATEGORIES=	devel ruby
+PKGREVISION=	1
 MASTER_SITES=	http://rubyforge.org/frs/download.php/21081/
 EXTRACT_SUFX=	.tgz
 
@@ -12,7 +13,7 @@ COMMENT=	Testing utilities for Ruby
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-REPLACE_RUBY=	bin/*
+REPLACE_RUBY=	bin/* lib/autotest/menu.rb
 
 INSTALLATION_DIRS=	bin
 
