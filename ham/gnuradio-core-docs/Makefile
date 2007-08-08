@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2007/02/20 09:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/08 03:07:45 wulf Exp $
 
 PKGNAME=	gnuradio-core-docs-${VERSION}
-PKGREVISION=	1
 COMMENT=	GNU Radio core module documentation
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
 USE_TOOLS=	make pkg-config
 CONFIGURE_ARGS+=--enable-doxygen
+
+BUILD_DEPENDS+=doxygen>=1.4.7:../../devel/doxygen
 
 do-build:
 	cd ${WRKSRC}/gnuradio-core/doc && make
