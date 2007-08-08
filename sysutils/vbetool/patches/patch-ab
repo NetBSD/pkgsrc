@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2007/08/08 12:36:38 xtraeme Exp $
 
---- vbetool.c.orig	2007-08-08 13:30:13.000000000 +0200
-+++ vbetool.c	2007-08-08 13:32:10.000000000 +0200
+--- vbetool.c.orig	2006-07-26 03:27:21.000000000 +0200
++++ vbetool.c	2007-08-08 14:27:44.000000000 +0200
 @@ -8,19 +8,26 @@
  version 2
  */
@@ -30,12 +30,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
  #include "include/lrmi.h"
  #include "vbetool.h"
  
-@@ -42,8 +49,12 @@
+@@ -42,8 +49,16 @@
  		exit(1);
  	}
  	
 +#ifdef __NetBSD__
++# ifdef __i386__
 +	i386_iopl(3);
++# else
++	x86_64_iopl(3);
++# endif
 +#else
  	ioperm(0, 1024, 1);
  	iopl(3);
@@ -43,7 +47,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
  	
  	pacc = pci_alloc();
  	pacc->numeric_ids = 1;
-@@ -256,7 +267,9 @@
+@@ -256,7 +271,9 @@
  
  	LRMI_free_real(data);
  
@@ -53,7 +57,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
  
  }
  
-@@ -476,7 +489,9 @@
+@@ -476,7 +493,9 @@
  		return 11;
  	}
  
