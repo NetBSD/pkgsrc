@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.12 2007/08/08 02:07:27 gdt Exp $
+# $NetBSD: replace.mk,v 1.13 2007/08/08 11:35:16 tnn Exp $
 #
 
 # _flavor-replace:
@@ -180,7 +180,7 @@ replace-fixup-required-by: .PHONY
 replace-fixup-installed-info: .PHONY
 	@${STEP_MSG} "Removing unsafe_depends tag."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for var in unsafe_depends rebuild; do				\
+	for var in unsafe_depends unsafe_depends_strict rebuild; do				\
 		${TEST} ! -f ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO || \
 		${PKG_ADMIN} unset $$var ${PKGBASE};			\
 	done
