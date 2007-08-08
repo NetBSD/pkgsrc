@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/11/13 17:17:33 wulf Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/08/08 03:10:17 wulf Exp $
 share/examples/gnuradio/python/apps/README
 share/examples/gnuradio/python/apps/hf_explorer/README
 share/examples/gnuradio/python/apps/hf_explorer/hfx2.py
@@ -27,12 +27,12 @@ share/examples/gnuradio/python/audio/spectrum_inversion.py
 share/examples/gnuradio/python/audio/test_resampler.py
 share/examples/gnuradio/python/channel-coding/README
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn1o2_128.fsm
-share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_4_msb.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn1o2_16.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn1o2_4.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn1o2_8.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_16.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_4.fsm
+share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_4_msb.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_4_msbG.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o3_8.fsm
 share/examples/gnuradio/python/channel-coding/fsm_files/awgn2o4_4.fsm
@@ -76,7 +76,6 @@ share/examples/gnuradio/python/networking/measurement_slave.py
 share/examples/gnuradio/python/usrp/am_rcv.py
 share/examples/gnuradio/python/usrp/ayfabtu.py
 share/examples/gnuradio/python/usrp/benchmark_usb.py
-share/examples/gnuradio/python/usrp/dsb_tx.py
 share/examples/gnuradio/python/usrp/flexrf_debug.py
 share/examples/gnuradio/python/usrp/flexrf_siggen.py
 share/examples/gnuradio/python/usrp/fm_tx4.py
