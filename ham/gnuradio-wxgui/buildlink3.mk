@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/11/13 17:45:09 wulf Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/08/08 03:23:20 wulf Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNURADIO_WXGUI_BUILDLINK3_MK:=	${GNURADIO_WXGUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnuradio-wxgui
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnuradio-wxgui
 
 .if ${GNURADIO_WXGUI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.gnuradio-wxgui+=	gnuradio-wxgui>=3.0.1
+BUILDLINK_API_DEPENDS.gnuradio-wxgui+=	gnuradio-wxgui>=3.0.4
 BUILDLINK_PKGSRCDIR.gnuradio-wxgui?=	../../ham/gnuradio-wxgui
 .endif	# GNURADIO_WXGUI_BUILDLINK3_MK
 
