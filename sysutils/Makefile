@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.406 2007/07/09 19:24:46 degroote Exp $
+# $NetBSD: Makefile,v 1.407 2007/08/08 12:01:51 xtraeme Exp $
 #
 
 COMMENT=	System utilities
@@ -258,6 +258,7 @@ SUBDIR+=	usbutil
 SUBDIR+=	user
 SUBDIR+=	user_darwin
 SUBDIR+=	user_interix
+SUBDIR+=	vbetool
 SUBDIR+=	vcdimager
 SUBDIR+=	vcdimager-devel
 SUBDIR+=	vidc-tools
