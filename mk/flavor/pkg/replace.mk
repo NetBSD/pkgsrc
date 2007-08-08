@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.10 2007/08/07 22:27:12 gdt Exp $
+# $NetBSD: replace.mk,v 1.11 2007/08/08 01:44:24 gdt Exp $
 #
 
 # _flavor-replace:
@@ -21,6 +21,7 @@ _flavor-replace: \
 	install-clean \
 	install \
 	replace-fixup-required-by \
+	replace-fixup-installed-info \
 	.PHONY
 
 # _flavor-undo-replace:
@@ -137,17 +138,13 @@ replace-preserve-required-by: .PHONY
 ### replace-fixup-required-by (PRIVATE)
 ######################################################################
 ### replace-fixup-required-by fixes the +CONTENTS files of dependent
-### packages to refer to the replacement package.  It also removes
-### unsafe_depends* and rebuild tags from this package.
+### packages to refer to the replacement package.
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	set -e;								\
 	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
 	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
-	for var in unsafe_depends rebuild; do				\
-		${PKG_ADMIN} unset $$var ${PKGBASE};			\
-	done;								\
 	${TEST} -f ${_REQUIRED_BY_FILE} || exit 0;			\
 	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
@@ -166,6 +163,20 @@ replace-fixup-required-by: .PHONY
 			$$contents > $$newcontents;			\
 		${MV} -f $$newcontents $$contents;			\
 		${PKG_ADMIN} set unsafe_depends=YES $$pkg;		\
+	done
+
+######################################################################
+### replace-fixup-installed-info (PRIVATE)
+######################################################################
+### replace-fixup-installed-info removes unsafe_depends* and rebuild
+### tags from this package.
+### XXX pkg_admin should not complain on unset with no +INSTALLED_INFO.
+replace-fixup-installed-info: .PHONY
+	@${STEP_MSG} "Removing unsafe_depends tag."
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for var in unsafe_depends rebuild; do				\
+		${TEST} ! -f ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO || \
+		${PKG_ADMIN} unset $$var ${PKGBASE};			\
 	done
 
 ######################################################################
