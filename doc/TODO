@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6572 2007/08/08 12:22:16 obache Exp $
+$NetBSD: TODO,v 1.6573 2007/08/08 17:39:35 jlam Exp $
 
 Suggested new packages
 ======================
@@ -1449,6 +1449,3 @@ Suggested cleanups in pkgsrc
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
-
-	o Change 'make replace' to preserve the "automatic" variable.
-	  Currently the "automatic=yes" property is removed.
