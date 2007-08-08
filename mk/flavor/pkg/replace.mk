@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.11 2007/08/08 01:44:24 gdt Exp $
+# $NetBSD: replace.mk,v 1.12 2007/08/08 02:07:27 gdt Exp $
 #
 
 # _flavor-replace:
@@ -138,7 +138,10 @@ replace-preserve-required-by: .PHONY
 ### replace-fixup-required-by (PRIVATE)
 ######################################################################
 ### replace-fixup-required-by fixes the +CONTENTS files of dependent
-### packages to refer to the replacement package.
+### packages to refer to the replacement package.  It also sets the
+### unsafe_depends_strict tag on each dependent package, and sets the
+### unsafe_depends tag if the replaced package has a different version.
+### XXX Only set unsafe_depends if there is an ABI change.
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -162,7 +165,10 @@ replace-fixup-required-by: .PHONY
 			{ print }'					\
 			$$contents > $$newcontents;			\
 		${MV} -f $$newcontents $$contents;			\
-		${PKG_ADMIN} set unsafe_depends=YES $$pkg;		\
+		${PKG_ADMIN} set unsafe_depends_strict=YES $$pkg;	\
+		if ${TEST} "$$oldname" != "$$newname"; then		\
+			${PKG_ADMIN} set unsafe_depends=YES $$pkg;	\
+		fi;							\
 	done
 
 ######################################################################
