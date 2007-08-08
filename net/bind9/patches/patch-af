@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2006/08/17 14:14:18 taca Exp $
+$NetBSD: patch-af,v 1.7 2007/08/08 18:32:46 reed Exp $
 
 --- lib/bind/configure.in.orig	2005-10-14 10:38:46.000000000 +0900
 +++ lib/bind/configure.in
@@ -31,7 +31,7 @@ $NetBSD: patch-af,v 1.6 2006/08/17 14:14:18 taca Exp $
  	*-bsdi[2345]*)	have_minimum_ifreq=yes;;
  	*-darwin*)	have_minimum_ifreq=yes;;
  	*-freebsd*)	have_minimum_ifreq=yes;;
-+	*-drgonfly*)	have_minimum_ifreq=yes;;
++	*-dragonfly*)	have_minimum_ifreq=yes;;
  	*-lynxos*)	have_minimum_ifreq=yes;;
  	*-netbsd*)	have_minimum_ifreq=yes;;
  	*-next*)	have_minimum_ifreq=yes;;
