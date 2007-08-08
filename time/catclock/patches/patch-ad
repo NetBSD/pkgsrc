@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2007/02/23 20:17:47 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2007/08/08 21:44:14 joerg Exp $
 
---- alarm.c.orig	2007-02-23 18:00:04.000000000 +0100
+--- alarm.c.orig	1995-05-21 16:07:00.000000000 +0000
 +++ alarm.c
-@@ -92,7 +92,9 @@ extern GC 	gc;
+@@ -1,7 +1,5 @@
+ #include <stdio.h>
+-#ifndef VMS
+-#include <malloc.h>
+-#endif
++#include <stdlib.h>
+ 
+ #include <signal.h>
+ #ifndef VMS
+@@ -92,7 +90,9 @@ extern GC 	gc;
  
  static XmFontList xmFontList;
  
@@ -13,7 +22,7 @@ $NetBSD: patch-ad,v 1.1 2007/02/23 20:17:47 drochner Exp $
  
  void InitBellAlarm(win, width, height, fontInfo, fontList, fg, bg, state, on)
      Window 	win;
-@@ -159,7 +161,6 @@ void DrawBell(flash)
+@@ -159,7 +159,6 @@ void DrawBell(flash)
  		   bell_width, bell_height,
  		   bellX, bellY, 0x1);
      } else {
@@ -21,7 +30,7 @@ $NetBSD: patch-ad,v 1.1 2007/02/23 20:17:47 drochner Exp $
  	
  	HideBell();
      }
-@@ -181,7 +182,6 @@ static void AlarmAnnounce()
+@@ -181,7 +180,6 @@ static void AlarmAnnounce()
      int 		i, w;
      char 		buf[BUFSIZ];
      struct itimerval 	tv;
@@ -29,7 +38,7 @@ $NetBSD: patch-ad,v 1.1 2007/02/23 20:17:47 drochner Exp $
      
      strcpy(buf, nextAlarm.alarmAnnounce ? nextAlarm.alarmAnnounce : "alarm");
      strcat(buf, " ... ");
-@@ -442,7 +442,6 @@ void SetAlarm(file)
+@@ -442,7 +440,6 @@ void SetAlarm(file)
  
  static void ResetAlarm()
  {
