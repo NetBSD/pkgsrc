@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.1 2002/05/08 15:42:03 jschauma Exp $
+$NetBSD: patch-ad,v 1.2 2007/08/08 19:48:13 joerg Exp $
 
---- A+/joos.y.orig	Thu Aug  5 12:42:37 1999
-+++ A+/joos.y	Wed May  8 11:24:41 2002
-@@ -347,7 +347,7 @@
+--- A+/joos.y.orig	1999-08-05 16:42:37.000000000 +0000
++++ A+/joos.y
+@@ -14,7 +14,7 @@
+  
+ #include <stdio.h>
+ #include <string.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include "tree.h"
+ 
+ extern CLASSFILE *theclassfile;
+@@ -347,7 +347,7 @@ forstatement : tFOR '(' statementexpress
                                   makeSTATEMENTexp($7)
                               )
                           )
@@ -11,7 +20,7 @@ $NetBSD: patch-ad,v 1.1 2002/05/08 15:42:03 jschauma Exp $
                 }
  ;
  
-@@ -361,7 +361,7 @@
+@@ -361,7 +361,7 @@ forstatementnoshortif : tFOR '(' stateme
                                   makeSTATEMENTexp($7)
                               )
                           )
@@ -20,7 +29,7 @@ $NetBSD: patch-ad,v 1.1 2002/05/08 15:42:03 jschauma Exp $
                 }
  ;
   
-@@ -469,6 +469,7 @@
+@@ -469,6 +469,7 @@ unaryexpressionnotminus : 
                    {$$ = makeEXPnot($2);}
                  | castexpression
                    {$$ = $1;}
