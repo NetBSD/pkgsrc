@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2007/08/01 20:51:23 tron Exp $
+# $NetBSD: Makefile,v 1.65 2007/08/08 17:10:29 joerg Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 PKGREVISION=	3
@@ -6,6 +6,8 @@ MAINTAINER=	adam@NetBSD.org
 COMMENT=	C++ X GUI toolkit
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
@@ -29,21 +31,18 @@ UNLIMIT_RESOURCES=	datasize
 
 BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
 
+INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/include/private
+INSTALLATION_DIRS+=	${QTPREFIX}/lib ${QTPREFIX}/plugins/imageformats
+INSTALLATION_DIRS+=	lib/pkgconfig
+
 do-install:
-	${INSTALL_DATA_DIR} ${QTPREFIX}
-	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin/
-	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/lib/libqt-mt.la ${QTPREFIX}/lib/
-	${INSTALL_DATA_DIR} ${QTPREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/*.h ${QTPREFIX}/include/
-	${INSTALL_DATA_DIR} ${QTPREFIX}/include/private
-	${INSTALL_DATA} ${WRKSRC}/include/private/*.h ${QTPREFIX}/include/private/
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/imageformats
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats/
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats/
-	${INSTALL_DATA} ${WRKSRC}/lib/qt-mt.pc ${PREFIX}/lib/pkgconfig/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${DESTDIR}${QTPREFIX}/bin
+	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/lib/libqt-mt.la ${DESTDIR}${QTPREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/include/*.h ${DESTDIR}${QTPREFIX}/include/
+	${INSTALL_DATA} ${WRKSRC}/include/private/*.h ${DESTDIR}${QTPREFIX}/include/private
+	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
+	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
+	${INSTALL_DATA} ${WRKSRC}/lib/qt-mt.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
 SUBST_CLASSES+=		socklen
