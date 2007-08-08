@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.12 2007/08/06 15:07:56 tnn Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.13 2007/08/08 11:28:04 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -71,7 +71,6 @@ test -f "$MAKECONF" && test -z "$PKGSRCDIR" && PKGSRCDIR="` \
 test -z "$PKGSRCDIR" && PKGSRCDIR=/usr/pkgsrc
 test -z "$PKG_CHK" && PKG_CHK="@PKG_CHK@"
 test -z "$PKG_INFO" && PKG_INFO="@PKG_INFO_CMD@"
-test -z "$PKG_ADMIN" && PKG_ADMIN="@PKG_ADMIN@"
 
 unset PKG_PATH || true  #or pkgsrc makefiles will complain
 
@@ -80,6 +79,8 @@ usage()
     echo "Usage: pkg_rolling-replace [opts]
         -h         This help
         -n         Don't actually do make replace
+        -r         Just replace, don't create binary packages
+        -s         Replace even if the ABIs are still compatible ("strict")
         -u         Update mismatched packages
         -v         Verbose
         -x <pkg>   exclude <pkg> from update check
@@ -227,6 +228,14 @@ vsleep()
     fi
 }
 
+abort()
+{
+	echo "*** $1"
+	echo "*** Please read the errors listed above, fix the problem,"
+	echo "*** then re-run pkg_rolling-replace to continue."
+	exit 1
+}
+
 ######################################################################
 ##
 ## main()
@@ -234,7 +243,7 @@ vsleep()
 
 EXCLUDE=
 
-args=$(getopt hnuvx: $*)
+args=$(getopt hnursvx: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
@@ -243,6 +252,8 @@ while [ $# -gt 0 ]; do
     case "$1" in
         -h) opt_h=1 ;;
         -n) opt_n=1 ;;
+        -r) opt_r=1 ;;
+        -s) opt_s=1 ;;
         -u) opt_u=1 ;;
         -v) opt_v=1 ;;
         -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
@@ -253,6 +264,12 @@ done
 
 if [ -n "$opt_h" ]; then
     usage
+fi
+
+if [ -n "$opt_s" ]; then
+    UNSAFE_VAR=unsafe_depends_strict
+else
+    UNSAFE_VAR=unsafe_depends
 fi
 
 MISMATCH_TODO=
@@ -267,8 +284,8 @@ fi
 echo "${OPI} Checking for rebuild-requested installed packages (rebuild=YES)"
 REBUILD_TODO=$(check_packages_w_flag 'rebuild')
 
-echo "${OPI} Checking for unsafe installed packages (unsafe_depends=YES)"
-UNSAFE_TODO=$(check_packages_w_flag 'unsafe_depends')
+echo "${OPI} Checking for unsafe installed packages (${UNSAFE_VAR}=YES)"
+UNSAFE_TODO=$(check_packages_w_flag ${UNSAFE_VAR})
 
 # DEPGRAPH_INSTALLED is rebuilt each round.  DEPGRAPH_SRC will collect
 # edges that we discover using 'make show-depends', but that weren't
@@ -354,25 +371,31 @@ while [ -n "$REPLACE_TODO" ]; do
 
     # Do make replace, with clean before, and package and clean afterwards.
     echo "${OPI} Replacing $(${PKG_INFO} -e $pkg)"
-    FAIL=
-    cmd="cd \"$PKGSRCDIR/$pkgdir\" \
-	    && ${MAKE} clean && ${MAKE} replace \
-	    && ([ -z \"$(${PKG_INFO} -Q unsafe_depends $pkg)\" ] \
-		|| ${PKG_ADMIN} unset unsafe_depends $pkg) \
-	    && ([ -z \"$(${PKG_INFO} -Q rebuild $pkg)\" ] \
-		|| ${PKG_ADMIN} unset rebuild $pkg) \
-	    && ${MAKE} package && ${MAKE} clean \
-	    || FAIL=1"
-    if [ -z "$opt_n" ]; then
-	eval "$cmd"
+    fail=
+    cmd="cd \"$PKGSRCDIR/$pkgdir\" && ${MAKE} clean && ${MAKE} replace || fail=1"
+    if [ -n "$opt_n" ]; then
+	echo "${OPI} Would run: $cmd"
     else
-	echo "$cmd"
+	eval "$cmd"
+    	[ -z "$fail" ] || abort "'make replace' failed for package $pkg."
     fi
-    if [ -n "$FAIL" ]; then
-        echo "*** 'make replace' failed for package $pkg."
-        echo "*** Please read the errors listed above, fix the problem,"
-        echo "*** then re-run pkg_rolling-replace to continue."
-        exit 1
+    if [ -z "$opt_n" ]; then
+	[ -z "$(${PKG_INFO} -Q unsafe_depends_strict $pkg)" ] || \
+	    abort "package $pkg still has unsafe_depends_strict."
+	[ -z "$(${PKG_INFO} -Q unsafe_depends $pkg)" ] || \
+	    abort "package $pkg still has unsafe_depends."
+	[ -z "$(${PKG_INFO} -Q rebuild $pkg)" ] || \
+	    abort "package $pkg is still requested to be rebuilt."
+    fi
+    if [ -z "$opt_r" ]; then
+	echo "${OPI} Packaging $(${PKG_INFO} -e $pkg)"
+	    cmd="${MAKE} package && ${MAKE} clean || fail=1"
+	if [ -n "$opt_n" ]; then
+	    echo "${OPI} Would run: $cmd"
+	else
+	    eval "$cmd"
+    	    [ -z "$fail" ] || abort "'make package' failed for package $pkg."
+	fi
     fi
     sleep 1
 
@@ -381,7 +404,7 @@ while [ -n "$REPLACE_TODO" ]; do
     REBUILD_TODO=$(exclude $pkg --from $REBUILD_TODO)
     UNSAFE_TODO=$(exclude $pkg --from $UNSAFE_TODO)
 
-    echo "${OPI} Re-checking for unsafe installed packages (unsafe_depends=YES)"
+    echo "${OPI} Re-checking for unsafe installed packages (${UNSAFE_VAR}=YES)"
     if [ -n "$opt_n" ]; then
 	# With -n, the replace didn't happen, and thus the packages that would
 	# have been marked unsafe_depends=YES were not.  Add the set that
@@ -391,7 +414,7 @@ while [ -n "$REPLACE_TODO" ]; do
             $(who_requires $pkg --in-graph $DEPGRAPH_INSTALLED))
         sleep 1
     else
-        UNSAFE_TODO=$(check_packages_w_flag 'unsafe_depends')
+        UNSAFE_TODO=$(check_packages_w_flag ${UNSAFE_VAR})
     fi
 
     verbose "${OPI} Packages to rebuild:"
