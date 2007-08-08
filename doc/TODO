@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6571 2007/08/08 12:19:54 obache Exp $
+$NetBSD: TODO,v 1.6572 2007/08/08 12:22:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ Suggested package updates
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
-	o cyrus-imapd-2.3.8
 	o dar-2.3.4
 	o dbench-3.04
 	o dbmail-2.2.4
