@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/08/08 12:00:34 xtraeme Exp $
+
+--- vbetool.c.orig	2007-08-08 13:30:13.000000000 +0200
++++ vbetool.c	2007-08-08 13:32:10.000000000 +0200
+@@ -8,19 +8,26 @@
+ version 2
+ */
+ 
+-#include <pci/pci.h>
+ #include <assert.h>
++#include <pciutils/pci.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+ #include <sys/types.h>
++#ifdef __linux__
+ #include <sys/io.h>
+ #include <sys/kd.h>
++#endif
+ #include <sys/stat.h>
+ #include <errno.h>
+ 
++#ifdef __NetBSD__
++#include <machine/sysarch.h>
++#include <machine/pio.h>
++#endif
++
+ #include "include/lrmi.h"
+ #include "vbetool.h"
+ 
+@@ -42,8 +49,12 @@
+ 		exit(1);
+ 	}
+ 	
++#ifdef __NetBSD__
++	i386_iopl(3);
++#else
+ 	ioperm(0, 1024, 1);
+ 	iopl(3);
++#endif
+ 	
+ 	pacc = pci_alloc();
+ 	pacc->numeric_ids = 1;
+@@ -256,7 +267,9 @@
+ 
+ 	LRMI_free_real(data);
+ 
++#ifdef __linux__
+ 	ioctl(0, KDSETMODE, KD_TEXT);
++#endif
+ 
+ }
+ 
+@@ -476,7 +489,9 @@
+ 		return 11;
+ 	}
+ 
++#ifdef __linux__
+ 	ioctl(0, KDSETMODE, KD_GRAPHICS);
++#endif
+ 	return 0;
+ }
+ 
