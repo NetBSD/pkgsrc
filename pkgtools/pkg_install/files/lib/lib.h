@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.30 2007/08/03 13:16:00 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.31 2007/08/08 22:33:39 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -335,9 +335,18 @@ void	strip_txz(char *, char *, const char *);
 
 /* callback functions for findmatchingname */
 int     findbestmatchingname_fn(const char *, const char *, void *);	/* neither */
-int     note_whats_installed(const char *, const char *, void *);
-int     add_to_list_fn(const char *, const char *, void *);
 
+/* Iterator functions */
+int	iterate_pkg_generic_src(int (*)(const char *, void *), void *,
+				const char *(*)(void *),void *);
+int	iterate_local_pkg_dir(const char *, int (*)(const char *, void *),
+			      void *);
+int	iterate_pkg_db(int (*)(const char *, void *), void *);
+
+int	add_installed_pkgs_by_basename(const char *, lpkg_head_t *);
+int	add_installed_pkgs_by_pattern(const char *, lpkg_head_t *);
+char	*find_best_matching_installed_pkg(const char *);
+int	match_installed_pkgs(const char *, int (*)(const char *, void *), void *);
 
 /* File */
 Boolean fexists(const char *);
