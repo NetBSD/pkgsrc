@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2007/01/30 20:53:23 tv Exp $
+$NetBSD: distinfo,v 1.17 2007/08/08 17:22:45 joerg Exp $
 
 SHA1 (glitz-0.5.6.tar.gz) = 81604bf02ceda85ea32b52423f78a883aaec6dc6
 RMD160 (glitz-0.5.6.tar.gz) = 547ef1be273856942e0fa36c097c4acb367336b2
 Size (glitz-0.5.6.tar.gz) = 459224 bytes
 SHA1 (patch-aa) = d725f03f96082b6d9b31c608a0e4c1beb71e87f1
 SHA1 (patch-ab) = 1eb96f935320fb1046276c3417ca041b633ef068
+SHA1 (patch-ac) = 2533ff8c396559b50950cb508a148ba1a5d91a69
