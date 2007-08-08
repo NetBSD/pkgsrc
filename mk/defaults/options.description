@@ -121,6 +121,7 @@ glpk
 gnome	
 gnupg	
 gnuplot	
+gnuradio-radio-astronomy
 gnutls			Enable GNU TLS support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
