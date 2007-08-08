@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/07/17 18:53:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/08/08 20:09:05 joerg Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -97,7 +97,6 @@ share/doc/ghostscript/Install.htm
 share/doc/ghostscript/Issues.htm
 share/doc/ghostscript/Language.htm
 share/doc/ghostscript/Lib.htm
-share/doc/ghostscript/Maintain.htm
 share/doc/ghostscript/Make.htm
 share/doc/ghostscript/News.htm
 share/doc/ghostscript/Projects.htm
@@ -378,6 +377,24 @@ share/ghostscript/${PKGVERSION}/lib/Fontmap
 share/ghostscript/${PKGVERSION}/lib/Fontmap.GS
 share/ghostscript/${PKGVERSION}/lib/PDFA_def.ps
 share/ghostscript/${PKGVERSION}/lib/PDFX_def.ps
+share/ghostscript/${PKGVERSION}/lib/PM760p.upp
+share/ghostscript/${PKGVERSION}/lib/PM760pl.upp
+share/ghostscript/${PKGVERSION}/lib/PM820p.upp
+share/ghostscript/${PKGVERSION}/lib/PM820pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stc670p.upp
+share/ghostscript/${PKGVERSION}/lib/Stc670pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stc680p.upp
+share/ghostscript/${PKGVERSION}/lib/Stc680pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stc740p.upp
+share/ghostscript/${PKGVERSION}/lib/Stc740pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stc760p.upp
+share/ghostscript/${PKGVERSION}/lib/Stc760pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stc777p.upp
+share/ghostscript/${PKGVERSION}/lib/Stc777pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stp720p.upp
+share/ghostscript/${PKGVERSION}/lib/Stp720pl.upp
+share/ghostscript/${PKGVERSION}/lib/Stp870p.upp
+share/ghostscript/${PKGVERSION}/lib/Stp870pl.upp
 share/ghostscript/${PKGVERSION}/lib/acctest.ps
 share/ghostscript/${PKGVERSION}/lib/addxchar.ps
 share/ghostscript/${PKGVERSION}/lib/align.ps
@@ -389,6 +406,8 @@ share/ghostscript/${PKGVERSION}/lib/bj8oh06n.upp
 share/ghostscript/${PKGVERSION}/lib/bj8pa06n.upp
 share/ghostscript/${PKGVERSION}/lib/bj8pp12f.upp
 share/ghostscript/${PKGVERSION}/lib/bj8ts06n.upp
+share/ghostscript/${PKGVERSION}/lib/bjc6000a1.upp
+share/ghostscript/${PKGVERSION}/lib/bjc6000b1.upp
 share/ghostscript/${PKGVERSION}/lib/bjc610a0.upp
 share/ghostscript/${PKGVERSION}/lib/bjc610a1.upp
 share/ghostscript/${PKGVERSION}/lib/bjc610a2.upp
@@ -414,10 +433,13 @@ share/ghostscript/${PKGVERSION}/lib/cdj690ec.upp
 share/ghostscript/${PKGVERSION}/lib/cid2code.ps
 share/ghostscript/${PKGVERSION}/lib/cidfmap
 share/ghostscript/${PKGVERSION}/lib/decrypt.ps
+share/ghostscript/${PKGVERSION}/lib/dmp_init.ps
+share/ghostscript/${PKGVERSION}/lib/dmp_site.ps
 share/ghostscript/${PKGVERSION}/lib/dnj750c.upp
 share/ghostscript/${PKGVERSION}/lib/dnj750m.upp
 share/ghostscript/${PKGVERSION}/lib/docie.ps
 share/ghostscript/${PKGVERSION}/lib/dumphint.ps
+share/ghostscript/${PKGVERSION}/lib/escp_24.src
 share/ghostscript/${PKGVERSION}/lib/font2c.ps
 share/ghostscript/${PKGVERSION}/lib/font2pcl.ps
 share/ghostscript/${PKGVERSION}/lib/ghostpdf.ppd
@@ -550,8 +572,12 @@ share/ghostscript/${PKGVERSION}/lib/ras32.upp
 share/ghostscript/${PKGVERSION}/lib/ras4.upp
 share/ghostscript/${PKGVERSION}/lib/ras8m.upp
 share/ghostscript/${PKGVERSION}/lib/rollconv.ps
+share/ghostscript/${PKGVERSION}/lib/s400a1.upp
+share/ghostscript/${PKGVERSION}/lib/s400b1.upp
+share/ghostscript/${PKGVERSION}/lib/sharp.upp
 share/ghostscript/${PKGVERSION}/lib/showchar.ps
 share/ghostscript/${PKGVERSION}/lib/showpage.ps
+share/ghostscript/${PKGVERSION}/lib/sipixa6.upp
 share/ghostscript/${PKGVERSION}/lib/st640ih.upp
 share/ghostscript/${PKGVERSION}/lib/st640ihg.upp
 share/ghostscript/${PKGVERSION}/lib/st640p.upp
@@ -573,6 +599,7 @@ share/ghostscript/${PKGVERSION}/lib/stc600ih.upp
 share/ghostscript/${PKGVERSION}/lib/stc600p.upp
 share/ghostscript/${PKGVERSION}/lib/stc600pl.upp
 share/ghostscript/${PKGVERSION}/lib/stc640p.upp
+share/ghostscript/${PKGVERSION}/lib/stc740ih.upp
 share/ghostscript/${PKGVERSION}/lib/stc800ih.upp
 share/ghostscript/${PKGVERSION}/lib/stc800p.upp
 share/ghostscript/${PKGVERSION}/lib/stc800pl.upp
@@ -608,5 +635,6 @@ share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/Resource/CMap
 @dirrm share/ghostscript/${PKGVERSION}/Resource
 @dirrm share/ghostscript/${PKGVERSION}
+@dirrm share/ghostscript
 @dirrm share/examples/ghostscript
 @dirrm share/doc/ghostscript
