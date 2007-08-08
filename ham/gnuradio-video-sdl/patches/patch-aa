@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/08/08 03:22:05 wulf Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/08 14:48:11 wulf Exp $
 
 --- Makefile.common.orig	2007-08-08 04:40:14.000000000 +0930
 +++ Makefile.common	2007-08-08 04:40:47.000000000 +0930
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1 2007/08/08 03:22:05 wulf Exp $
  USRP_INCLUDES = -I$(top_srcdir)/usrp/host/lib \
  		-I$(top_srcdir)/usrp/firmware/include
 -USRP_LA = $(top_builddir)/usrp/host/lib/libusrp.la
-+USRP_LA = -libusrp
++USRP_LA = -lusrp
  
  # This used to be set in configure.ac but is now defined here for all 
  # Makefiles when this fragment is included.
