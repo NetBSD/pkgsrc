@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6570 2007/08/07 21:56:21 wiz Exp $
+$NetBSD: TODO,v 1.6571 2007/08/08 12:19:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o dctc-0.85.9
 	o dd_rescue-1.13
 	o defendguin-0.0.11
-	o dejavu-ttf-2.18
 	o delegate-9.3.2
 	o devIL-1.6.7
 	o devtodo-0.1.19
