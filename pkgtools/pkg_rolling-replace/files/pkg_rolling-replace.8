@@ -1,5 +1,5 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.6 2007/08/07 20:46:43 wiz Exp $
-.Dd May 11, 2007
+.\" $NetBSD: pkg_rolling-replace.8,v 1.7 2007/08/08 11:28:04 tnn Exp $
+.Dd August 8, 2007
 .Dt PKG_ROLLING-REPLACE 8
 .Os
 .Sh NAME
@@ -7,17 +7,15 @@
 .Nd rebuild or update packages using 'make replace' in tsorted order
 .Sh SYNOPSIS
 .Nm
-.Op Fl hnuv
+.Op Fl hnrsuv
 .Op Fl x Ar pkgs
 .Sh DESCRIPTION
 .Nm
 runs
 .Dq make replace
-on packages that have been marked with the
-.Dq unsafe_depends=YES
-flag or the
-.Dq rebuild=YES
-flag, optionally replacing any outdated packages (as reported by
+on packages that have been marked to have unsafe dependencies or have
+been marked to be rebuilt.
+Optionally it can replace any outdated packages (as reported by
 .Xr pkg_chk 8 )
 as well.
 .Pp
@@ -25,9 +23,11 @@ Whenever
 .Dq make replace
 is run on a package, all installed packages
 that depend on it are marked with the
+.Dq unsafe_depends_strict=YES
+flag. If the version of the replaced package has changed, this indicates
+that it may no longer be ABI-compatible so
 .Dq unsafe_depends=YES
-flag, which indicates that they may no longer be ABI-compatible
-with the replaced package.
+is also set for all packages that depend on it.
 Running
 .Nm
 with no arguments will restore such packages to a safe state by
@@ -70,6 +70,17 @@ or change any flags on installed packages.
 This option attempts to calculate the new packages that would be
 marked unsafe after each
 .Dq make replace .
+.It Fl r
+Just replace packages, do not build binary packages.
+.It Fl s
+Enable strict mode. This makes
+.Nm
+Look at 
+.Dq unsafe_depends_strict
+tags instead of
+.Dq unsafe_depends
+tags. This will replace packages more aggressively and can be used to solve
+shared library problems.
 .It Fl u
 Use
 .Xl pkg_chk 8
@@ -111,6 +122,9 @@ If not set in environment then defaults to
 with initial idea and many suggestions from
 .An Greg Troxel
 .Aq gdt@ir.bbn.com .
+The options -s and -r were added by
+.An Tobias Nygren
+.Aq tnn@NetBSD.org .
 .Sh BUGS
 .Nm
 does not run fully automatically when any significant number of
