@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/08/08 12:36:38 xtraeme Exp $
+$NetBSD: patch-ab,v 1.3 2007/08/08 17:12:44 xtraeme Exp $
 
 --- vbetool.c.orig	2006-07-26 03:27:21.000000000 +0200
-+++ vbetool.c	2007-08-08 14:27:44.000000000 +0200
-@@ -8,19 +8,26 @@
++++ vbetool.c	2007-08-08 19:07:18.000000000 +0200
+@@ -8,19 +8,29 @@
  version 2
  */
  
@@ -27,10 +27,13 @@ $NetBSD: patch-ab,v 1.2 2007/08/08 12:36:38 xtraeme Exp $
 +#include <machine/pio.h>
 +#endif
 +
++/* out* arguments are swapped between NetBSD and linux */
++#define __outb(v, p)	outb((p), (v))
++
  #include "include/lrmi.h"
  #include "vbetool.h"
  
-@@ -42,8 +49,16 @@
+@@ -42,8 +52,16 @@
  		exit(1);
  	}
  	
@@ -47,7 +50,7 @@ $NetBSD: patch-ab,v 1.2 2007/08/08 12:36:38 xtraeme Exp $
  	
  	pacc = pci_alloc();
  	pacc->numeric_ids = 1;
-@@ -256,7 +271,9 @@
+@@ -256,7 +274,9 @@
  
  	LRMI_free_real(data);
  
@@ -57,13 +60,37 @@ $NetBSD: patch-ab,v 1.2 2007/08/08 12:36:38 xtraeme Exp $
  
  }
  
-@@ -476,7 +493,9 @@
+@@ -476,23 +496,25 @@
  		return 11;
  	}
  
 +#ifdef __linux__
  	ioctl(0, KDSETMODE, KD_GRAPHICS);
 +#endif
+ 	return 0;
+ }
+ 
+ int enable_vga() {
+-	outb(0x03 | inb(0x3CC),  0x3C2);
+-	outb(0x01 | inb(0x3C3),  0x3C3);
+-	outb(0x08 | inb(0x46e8), 0x46e8);
+-	outb(0x01 | inb(0x102),  0x102);
++	__outb(0x03 | inb(0x3CC),  0x3C2);
++	__outb(0x01 | inb(0x3C3),  0x3C3);
++	__outb(0x08 | inb(0x46e8), 0x46e8);
++	__outb(0x01 | inb(0x102),  0x102);
+ 	return 0;
+ }
+ 
+ int disable_vga() {
+-	outb(~0x03 & inb(0x3CC),  0x3C2);
+-	outb(~0x01 & inb(0x3C3),  0x3C3);
+-	outb(~0x08 & inb(0x46e8), 0x46e8);
+-	outb(~0x01 & inb(0x102),  0x102);
++	__outb(~0x03 & inb(0x3CC),  0x3C2);
++	__outb(~0x01 & inb(0x3C3),  0x3C3);
++	__outb(~0x08 & inb(0x46e8), 0x46e8);
++	__outb(~0x01 & inb(0x102),  0x102);
  	return 0;
  }
  
