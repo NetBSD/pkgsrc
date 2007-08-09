@@ -1,17 +1,26 @@
-$NetBSD: patch-aa,v 1.6 2007/06/21 15:52:16 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2007/08/09 13:03:21 joerg Exp $
 
---- configure.orig	2006-11-19 08:46:47.000000000 -0500
+--- configure.orig	2007-04-15 16:51:12.000000000 -0400
 +++ configure
+@@ -907,7 +907,7 @@ Optional Packages:
+   --without-openssl       disable OpenSSL support
+   --with-openssl=DIR    enable OpenSSL support (default)
+   --with-x                use the X Window System
+-  --with-libiconv=DIR     search for libiconv in DIR/include and DIR/lib
++  --with-libiconv-prefix=DIR     search for libiconv in DIR/include and DIR/lib
+ 
+ Some influential environment variables:
+   CC          C compiler command
 @@ -2959,7 +2959,7 @@ _ACEOF
  
  
  		echo > config.asciidoc-unsafe.txt
--		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt >&/dev/null; then
-+		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt 1>/dev/null 2>&1; then
+-		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt >/dev/null 2>/dev/null; then
++		if "$ASCIIDOC" --unsafe config.asciidoc-unsafe.txt >/dev/null 2>&1 > /dev/null; then
  			ASCIIDOC_FLAGS=--unsafe
  		fi
  		rm config.asciidoc-unsafe.*
-@@ -17578,7 +17578,7 @@ if test -z "$disable_lua"; then
+@@ -17564,7 +17564,7 @@ if test -z "$disable_lua"; then
  	for luadir in "$withval" "" /usr /usr/local; do
  		for suffix in "" 50 51; do
  			if test "$cf_result" = no; then
@@ -20,22 +29,19 @@ $NetBSD: patch-aa,v 1.6 2007/06/21 15:52:16 jlam Exp $
  
  				if test ! -z "$luadir"; then
  					LUA_LIBS="-L$luadir/lib $LUA_LIBS"
-@@ -17602,10 +17602,10 @@ int
- main ()
- {
- 	lua_State *L = lua_open();
--						lua_baselibopen(L);
--						lua_mathlibopen(L);
--						lua_strlibopen(L);
--						lua_tablibopen(L);
-+						luaopen_base(L);
-+						luaopen_math(L);
-+						luaopen_string(L);
-+						luaopen_table(L);
- 						lua_pushboolean(L, 1);
- 						lua_close(L);
-   ;
-@@ -23243,7 +23243,7 @@ _ACEOF
+@@ -20479,9 +20479,9 @@ done
+ 
+ 
+ 
+-# Check whether --with-libiconv or --without-libiconv was given.
++# Check whether --with-libiconv-prefix or --without-libiconv-prefix was given.
+ if test "${with_libiconv+set}" = set; then
+-  withval="$with_libiconv"
++  withval="$with_libiconv_prefix"
+ 
+     for dir in `echo "$withval" | tr : ' '`; do
+       if test -d $dir/include; then CPPFLAGS="$CPPFLAGS -I$dir/include"; fi
+@@ -23231,7 +23231,7 @@ _ACEOF
  
  
  # Create LIBDIR #define for config.h
