@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/08/09 13:29:02 joerg Exp $
 
 DISTNAME=	pkg_tarup-1.6.6
 CATEGORIES=	pkgtools
@@ -7,6 +7,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Generates binary package(s) from installed pkg(s)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -48,8 +50,8 @@ do-configure:
 			> ${WRKSRC}/pkg_tarup.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup_all ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pkg_tarup.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup_all ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pkg_tarup.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
