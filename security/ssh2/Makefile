@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/06/08 15:24:58 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2007/08/09 20:15:38 tnn Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -27,9 +27,8 @@ PATCHDIR=		${.CURDIR}/../../security/ssh2/patches
 FILESDIR=		${.CURDIR}/../../security/ssh2/files
 PLIST_SRC=		${.CURDIR}/../../security/ssh2/PLIST
 
-.include "options.mk"
-
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 LICENSE=		ssh-communications-security-license
 RESTRICTED=		Reciprocal grant required for derivative works.  Non-comercial use restrictions on some systems.
