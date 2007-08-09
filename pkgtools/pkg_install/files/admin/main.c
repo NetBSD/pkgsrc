@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.22 2007/08/08 22:33:38 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.23 2007/08/09 23:54:17 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.22 2007/08/08 22:33:38 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.23 2007/08/09 23:54:17 joerg Exp $");
 #endif
 
 /*
@@ -761,7 +761,8 @@ set_installed_info_var(const char *name, void *cookie)
 	char *filename;
 	int retval;
 
-	if (asprintf(&filename, "%s/%s", name, INSTALLED_INFO_FNAME) == -1)
+	if (asprintf(&filename, "%s/%s/%s", _pkgdb_getPKGDB_DIR(), name,
+		     INSTALLED_INFO_FNAME) == -1)
 		errx(EXIT_FAILURE, "asprintf failed");
 
 	retval = var_set(filename, arg->variable, arg->value);
