@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.15 2007/08/09 23:06:42 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.16 2007/08/09 23:54:17 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.15 2007/08/09 23:06:42 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.16 2007/08/09 23:54:17 joerg Exp $");
 #endif
 #endif
 
@@ -137,9 +137,13 @@ show_file(const char *pkg, const char *title, const char *fname, Boolean separat
 }
 
 void
-show_var(const char *fname, const char *variable)
+show_var(const char *pkg, const char *fname, const char *variable)
 {
 	char   *value;
+	char    filename[BUFSIZ];
+
+	(void)snprintf(filename, sizeof(filename), "%s/%s/%s",
+	    _pkgdb_getPKGDB_DIR(), pkg, fname);
 
 	if ((value=var_get(fname, variable)) != NULL) {
 	    (void) printf("%s\n", value);
