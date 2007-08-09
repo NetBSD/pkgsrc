@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.35 2007/08/09 23:06:42 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.36 2007/08/09 23:18:30 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.35 2007/08/09 23:06:42 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.36 2007/08/09 23:18:30 joerg Exp $");
 #endif
 #endif
 
@@ -354,51 +354,37 @@ cleanup(int sig)
 	exit(1);
 }
 
+static int
+perform_single_pkg(const char *pkg, void *cookie)
+{
+	int *err_cnt = cookie;
+
+	if (Which == WHICH_ALL || !is_automatic_installed(pkg))
+		*err_cnt += pkg_do(pkg);
+
+	return 0;
+}
+
 int
 pkg_perform(lpkg_head_t *pkghead)
 {
-	struct dirent *dp;
-	char   *dbdir;
-	DIR    *dirp;
 	int     err_cnt = 0;
 
 	signal(SIGINT, cleanup);
 
 	TAILQ_INIT(&files);
 
-	dbdir = _pkgdb_getPKGDB_DIR();
-
 	/* Overriding action? */
 	if (CheckPkg) {
 		err_cnt += CheckForPkg(CheckPkg);
 	} else if (Which != WHICH_LIST) {
-		if (!(isdir(dbdir) || islinktodir(dbdir)))
-			return 1;
-
 		if (File2Pkg) {
 			/* Show all files with the package they belong to */
-			pkgdb_dump();
+			if (pkgdb_dump() == -1)
+				err_cnt = 1;
 		} else {
-			/* Show all packages with description */
-			if ((dirp = opendir(dbdir)) != (DIR *) NULL) {
-				while ((dp = readdir(dirp)) != (struct dirent *) NULL) {
-					char    tmp2[MaxPathSize];
-
-					if (strcmp(dp->d_name, ".") == 0 ||
-					    strcmp(dp->d_name, "..") == 0)
-						continue;
-
-					(void) snprintf(tmp2, sizeof(tmp2), "%s/%s",
-					    dbdir, dp->d_name);
-					if (isfile(tmp2))
-						continue;
-
-					if (Which == WHICH_ALL
-					    || !is_automatic_installed(tmp2))
-						err_cnt += pkg_do(dp->d_name);
-				}
-				(void) closedir(dirp);
-			}
+			if (iterate_pkg_db(perform_single_pkg, &err_cnt) == -1)
+				err_cnt = 1;
 		}
 	} else {
 		/* Show info on individual pkg(s) */
