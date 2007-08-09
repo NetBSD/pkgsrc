@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/03/23 20:47:56 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2007/08/09 18:14:19 joerg Exp $
 
 DISTNAME=	Imaging-1.1.6
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.6
@@ -9,15 +9,17 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.pythonware.com/products/pil/
 COMMENT=	PIL, the Python Imaging Library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	python
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
 
+INSTALLATION_DIRS=	${PYINC}/PIL
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${PYINC}/PIL
-	(cd ${WRKSRC}/libImaging; ${INSTALL_DATA} \
-		ImPlatform.h Imaging.h \
-		${PREFIX}/${PYINC}/PIL )
+	${INSTALL_DATA} ${WRKSRC}/libImaging/ImPlatform.h ${DESTDIR}${PREFIX}/${PYINC}/PIL
+	${INSTALL_DATA} ${WRKSRC}/libImaging/Imaging.h ${DESTDIR}${PREFIX}/${PYINC}/PIL
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
