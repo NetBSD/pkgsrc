@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.15 2006/10/09 12:50:38 joerg Exp $
+# $NetBSD: extension.mk,v 1.16 2007/08/09 13:24:12 joerg Exp $
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
@@ -21,7 +21,7 @@ PYSETUP?=		setup.py
 PYSETUPBUILDARGS?=	#empty
 PYSETUPINSTALLARGS?=	#empty
 PYSETUPOPTARGS?=	-c -O1
-_PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS}
+_PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
 .if ${_USE_DESTDIR} != "no"
 _PYSETUPINSTALLARGS+=	--root=${DESTDIR:Q}
 .endif
