@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.34 2007/08/09 12:53:35 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.35 2007/08/09 23:06:42 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.34 2007/08/09 12:53:35 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.35 2007/08/09 23:06:42 joerg Exp $");
 #endif
 #endif
 
@@ -66,7 +66,7 @@ static char *Home;
 static lfile_head_t files;
 
 static int
-pkg_do(char *pkg)
+pkg_do(const char *pkg)
 {
 	Boolean installed = FALSE, isTMP = FALSE;
 	char    log_dir[MaxPathSize];

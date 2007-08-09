@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.14 2007/04/20 14:25:13 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.15 2007/08/09 23:06:42 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.14 2007/04/20 14:25:13 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.15 2007/08/09 23:06:42 joerg Exp $");
 #endif
 #endif
 
@@ -110,7 +110,7 @@ static const show_t showv[] = {
 static int print_file_as_var(const char *, const char *);
 
 void
-show_file(char *pkg, char *title, char *fname, Boolean separator)
+show_file(const char *pkg, const char *title, const char *fname, Boolean separator)
 {
 	FILE   *fp;
 	char    line[1024];
@@ -148,7 +148,7 @@ show_var(const char *fname, const char *variable)
 }
 
 void
-show_index(char *pkg, char *title, char *fname)
+show_index(const char *pkg, const char *title, const char *fname)
 {
 	FILE   *fp;
 	char   *line;
@@ -178,7 +178,7 @@ show_index(char *pkg, char *title, char *fname)
  * Show a packing list item type.  If type is PLIST_SHOW_ALL, show all
  */
 void
-show_plist(char *title, package_t *plist, pl_ent_t type)
+show_plist(const char *title, package_t *plist, pl_ent_t type)
 {
 	plist_t *p;
 	Boolean ign;
@@ -239,7 +239,7 @@ show_plist(char *title, package_t *plist, pl_ent_t type)
  * Show all files in the packing list (except ignored ones)
  */
 void
-show_files(char *title, package_t *plist)
+show_files(const char *title, package_t *plist)
 {
 	plist_t *p;
 	Boolean ign;
@@ -273,7 +273,7 @@ show_files(char *title, package_t *plist)
  * Show dependencies (packages this pkg requires)
  */
 void
-show_depends(char *title, package_t *plist)
+show_depends(const char *title, package_t *plist)
 {
 	plist_t *p;
 	int     nodepends;
@@ -311,7 +311,7 @@ show_depends(char *title, package_t *plist)
  * Show exact dependencies (packages this pkg was built with)
  */
 void
-show_bld_depends(char *title, package_t *plist)
+show_bld_depends(const char *title, package_t *plist)
 {
 	plist_t *p;
 	int     nodepends;
