@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 19:01:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/09 13:31:52 joerg Exp $
 #
 
-DISTNAME=	flup-r2030
-PKGNAME=	${PYPKGPREFIX}-flup-2030
-PKGREVISION=	2
+DISTNAME=	flup-r2311
+PKGNAME=	${PYPKGPREFIX}-flup-2311
+EGG_NAME=	flup-0.5
 CATEGORIES=	www python
 MASTER_SITES=	http://www.saddi.com/software/flup/dist/
 
@@ -11,17 +11,9 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://trac.saddi.com/flup
 COMMENT=	WSGI support modules
 
-PKG_DESTDIR_SUPPORT=	# empty
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py-setuptools
-CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
+WRKSRC=		${WRKDIR}/${EGG_NAME}
 
-PYDISTUTILSPKG=	yes
-PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=	24
-
-FILES_SUBST+=	PY_MANAGE_EGGS=${PREFIX}/bin/${PYPKGPREFIX}-manage-eggs
-FILES_SUBST+=	FLUPEGG=${PREFIX}/${PYSITELIB}/flup-0.5-py2.4.egg
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
