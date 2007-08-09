@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/08/06 11:09:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/09 18:49:31 joerg Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -85,7 +86,6 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
-.include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
