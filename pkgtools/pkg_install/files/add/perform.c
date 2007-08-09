@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.53 2007/08/09 23:18:30 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.54 2007/08/09 23:32:59 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.53 2007/08/09 23:18:30 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.54 2007/08/09 23:32:59 joerg Exp $");
 #endif
 #endif
 
@@ -224,7 +224,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	plist_t *p;
 	struct stat sb;
 	struct utsname host_uname;
-	int     inPlace;
 	int	rc;
 	uint64_t needed;
 	Boolean	is_depoted_pkg = FALSE;
@@ -236,7 +235,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	LogDir[0] = '\0';
 	strlcpy(playpen, FirstPen, sizeof(playpen));
 	memset(buildinfo, '\0', sizeof(buildinfo));
-	inPlace = 0;
 
 	umask(DEF_UMASK);
 
@@ -322,31 +320,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		fclose(cfile);
 
 		if (!IS_URL(pkg)) {
-			/* Extract directly rather than moving?  Oh goodie! */
-			if (find_plist_option(&Plist, "extract-in-place")) {
-				if (Verbose)
-					printf("Doing in-place extraction for %s\n", pkg);
-				p = find_plist(&Plist, PLIST_CWD);
-				if (p) {
-					if (!(isdir(p->name) || islinktodir(p->name)) && !Fake) {
-						if (Verbose)
-							printf("Desired prefix of %s does not exist, creating.\n", p->name);
-						(void) fexec("mkdir", "-p", p->name, NULL);
-					}
-					if (chdir(p->name) == -1) {
-						warn("unable to change directory to `%s'", p->name);
-						goto bomb;
-					}
-					where_to = p->name;
-					inPlace = 1;
-				} else {
-					warnx(
-					    "no prefix specified in `%s' - this is a bad package!",
-					    pkg);
-					goto bomb;
-				}
-			}
-
 			/*
 			 * Apply a crude heuristic to see how much space the package will
 			 * take up once it's unpacked.  I've noticed that most packages
@@ -354,17 +327,13 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			 */
 
 			needed = 4 * (uint64_t) sb.st_size;
-			if (!inPlace && min_free(playpen) < needed) {
+			if (min_free(playpen) < needed) {
 				warnx("projected size of %" MY_PRIu64 " bytes exceeds available free space\n"
 				    "in %s. Please set your PKG_TMPDIR variable to point\n"
 				    "to a location with more free space and try again.",
 					needed, playpen);
 				goto bomb;
 			}
-
-			/* If this is a direct extract and we didn't want it, stop now */
-			if (inPlace && Fake)
-				goto success;
 
 			/* Finally unpack the whole mess */
 			if (unpack(pkg, NULL)) {
@@ -846,7 +815,7 @@ ignore_replace_depends_check:
 	 * We need to reset the package dbdir so that extract_plist()
 	 * updates the correct pkgdb.byfile.db database.
 	 */
-	if (!inPlace && !Fake) {
+	if (!Fake) {
 		_pkgdb_setPKGDB_DIR(dbdir);
 		if (!extract_plist(".", &Plist)) {
 			errc = 1;
