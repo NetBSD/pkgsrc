@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.13 2007/07/30 07:16:21 joerg Exp $ */
+/* $NetBSD: info.h,v 1.14 2007/08/09 23:06:42 joerg Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -71,13 +71,13 @@ extern char *CheckPkg;
 extern size_t termwidth;
 extern lpkg_head_t pkgs;
 
-extern void show_file(char *, char *, char *, Boolean);
+extern void show_file(const char *, const char *, const char *, Boolean);
 extern void show_var(const char *, const char *);
-extern void show_plist(char *, package_t *, pl_ent_t);
-extern void show_files(char *, package_t *);
-extern void show_depends(char *, package_t *);
-extern void show_bld_depends(char *, package_t *);
-extern void show_index(char *, char *, char *);
+extern void show_plist(const char *, package_t *, pl_ent_t);
+extern void show_files(const char *, package_t *);
+extern void show_depends(const char *, package_t *);
+extern void show_bld_depends(const char *, package_t *);
+extern void show_index(const char *, const char *, const char *);
 extern void show_summary(package_t *, const char *);
 
 int     pkg_perform(lpkg_head_t *);
