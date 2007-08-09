@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1753 2007/08/09 04:10:22 simonb Exp $
+$NetBSD: CHANGES-2007,v 1.1754 2007/08/09 11:52:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3218,3 +3218,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/mtail to 1.1.1 [zuntum 2007-08-09]
 	Updated audio/mpc to 0.12.1 [simonb 2007-08-09]
 	Updated audio/musicpd to 0.13.0 [simonb 2007-08-09]
+	Updated pkgtools/pkg_rolling-replace to 0.10 [tnn 2007-08-08]
+	Updated net/Transmission to 0.80 [tnn 2007-08-09]
