@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2007/08/03 20:02:30 joerg Exp $
+$NetBSD: patch-ac,v 1.7 2007/08/09 18:52:38 tnn Exp $
 
 --- src/gpmisc.c.orig	2007-07-18 04:37:50.000000000 +0200
 +++ src/gpmisc.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.6 2007/08/03 20:02:30 joerg Exp $
       * which defines it as (const char *).  Patch this here.
       */
 -#if defined (O_LARGEFILE)
-+#if defined (HAVE_FILE64) && !defined(_AIX)
++#if 0
      file = (b64 ? fdopen64 : fdopen)(fildes, (char *)mode); /* still really const */
  #else
      file = fdopen(fildes, (char *)mode); /* still really const */
