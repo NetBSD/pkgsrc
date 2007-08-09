@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1760 2007/08/09 21:45:17 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1761 2007/08/09 22:56:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -737,6 +737,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/slib to 3a4 [drochner 2007-02-08]
 	Updated security/amavisd-new to 2.4.5 [obache 2007-02-09]
 	Updatec cad/pcb to 20070208p1 [dmcmahill 2007-02-09]
+	Added audio/bmpx version 0.36.1 [drochner 2007-02-09]
 	Added x11/xwud version 1.0.1 [reed 2007-02-10]
 	Updated net/samba to 3.0.24 [tron 2007-02-11]
 	Updated net/mrtg to 2.15.1 [martti 2007-02-15]
