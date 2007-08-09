@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1751 2007/08/09 02:51:51 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1752 2007/08/09 04:05:28 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/intltool to 0.36.0nb1 [wiz 2007-08-08]
 	Updated pkgtools/pkg_install to 20070808 [joerg 2007-08-08]
 	Updated misc/mtail to 1.1.1 [zuntum 2007-08-09]
+	Updated audio/mpc to 0.12.1 [simonb 2007-08-09]
