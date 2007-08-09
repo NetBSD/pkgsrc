@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/02/19 20:55:51 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/09 14:05:29 joerg Exp $
 
-DISTNAME=	Django-0.95.1
-PKGNAME=	${PYPKGPREFIX}-django-0.95.1
-PKGREVISION=	1
+DISTNAME=	Django-0.96
+PKGNAME=	${PYPKGPREFIX}-django-0.96
 CATEGORIES=	www python
-MASTER_SITES=	http://media.djangoproject.com/releases/0.95/
+MASTER_SITES=	http://media.djangoproject.com/releases/0.96/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
@@ -15,15 +14,9 @@ PYBINMODULE=	# yes
 PYTHON_VERSIONS_ACCEPTED=	24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-PKG_DESTDIR_SUPPORT=	# empty
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
-
-CHECK_FILES_SKIP+=	${PREFIX}/${PYSITELIB}/easy-install.pth
-
-FILES_SUBST+=	PY_MANAGE_EGGS=${PREFIX}/bin/${PYPKGPREFIX}-manage-eggs
-FILES_SUBST+=	DJANGOEGG=${PREFIX}/${PYSITELIB}/Django-0.95-py2.4.egg
 
 .include "options.mk"
 
