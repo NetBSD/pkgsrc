@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6576 2007/08/09 11:52:48 tnn Exp $
+$NetBSD: TODO,v 1.6577 2007/08/09 22:56:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -342,6 +342,7 @@ Suggested package updates
 	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bmpx-0.40.0
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.3
@@ -371,6 +372,7 @@ Suggested package updates
 	o classpath-0.95
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
+	o cmake-2.4.7
 	o cocoon-2.1.10
 	o connect-1.96
 	o cook-2.28
@@ -418,6 +420,7 @@ Suggested package updates
 	o docbook-xsl-1.73.0
 	o doxygen-1.5.3
 	o dpkg-1.13.25
+	o dropbear-0.50
 	o drscheme-370
 	o dvdrip-0.98.7
 	o dvdstyler-1.5
@@ -501,6 +504,7 @@ Suggested package updates
 	o geany-0.11
 	o geda-1.1.1.20070708
 	o generator-cbiere-0.35r3
+	o getmail-4.7.6
 	o gettext-0.16.1
 	o gfract-0.33
 	o ggiterm-0.7.1
@@ -1002,6 +1006,7 @@ Suggested package updates
 	o postfix-2.4.5
 	o postgrey-1.28
 	o powermanga-0.80
+	o prelude-lml-0.9.10.1
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1074,6 +1079,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-libs-4.3.1
 	o quagga-devel-0.99.6
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -1103,7 +1109,7 @@ Suggested package updates
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rpm-4.2
+	o rpm-4.4.2.1
 	o rt3-3.6.4
 	o rtcw-1.41.3
 	o rtorrent-0.7.6
