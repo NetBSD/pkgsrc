@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/13 20:25:22 markd Exp $
+# $NetBSD: Makefile,v 1.15 2007/08/09 18:42:51 joerg Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -11,6 +11,8 @@ COMMENT=		PDF rendering library (QT wrapper)
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-qt.pc.in
 
 INCS=-I. -I.. -I../poppler `pkg-config poppler --cflags` -I${QTDIR}/include
+
+INSTALLATION_DIRS+=	lib include/poppler lib/pkgconfig
 
 do-build:
 	(cd ${WRKSRC}/qt; \
@@ -25,13 +27,13 @@ do-build:
 	${WRKSRC}/poppler-qt.pc.in > ${WRKSRC}/poppler-qt.pc
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/qt/libpoppler-qt.la ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/qt/poppler-qt.h ${PREFIX}/include/poppler
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/qt/libpoppler-qt.la ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/qt/poppler-qt.h ${DESTDIR}${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/qt/poppler-page-transition.h \
-		${PREFIX}/include/poppler
+		${DESTDIR}${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/qt/poppler-link-qt3.h \
-		${PREFIX}/include/poppler
-	${INSTALL_DATA} ${WRKSRC}/poppler-qt.pc ${PREFIX}/lib/pkgconfig
+		${DESTDIR}${PREFIX}/include/poppler
+	${INSTALL_DATA} ${WRKSRC}/poppler-qt.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
