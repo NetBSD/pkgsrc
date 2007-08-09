@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/07/06 18:09:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/08/09 19:16:24 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -25,6 +25,7 @@ libexec/TeXmacs/bin/tm_mupad
 libexec/TeXmacs/bin/tm_mupad_help
 libexec/TeXmacs/bin/tm_octave
 libexec/TeXmacs/bin/tm_python
+libexec/TeXmacs/bin/tm_r
 libexec/TeXmacs/bin/tm_reduce
 libexec/TeXmacs/bin/tm_shell
 libexec/TeXmacs/bin/tm_xypic
