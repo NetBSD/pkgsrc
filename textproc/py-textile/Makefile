@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/04 12:06:00 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/09 13:29:33 joerg Exp $
 #
 
 DISTNAME=		textile-2
@@ -10,6 +10,8 @@ MASTER_SITES=		http://dealmeida.net/code/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dealmeida.net/projects/textile/
 COMMENT=		XHTML generator using a simple markup
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 NO_CONFIGURE=		yes
