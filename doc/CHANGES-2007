@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1759 2007/08/09 18:28:24 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1760 2007/08/09 21:45:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/elinks to 0.11.2nb1 [joerg 2007-08-09]
 	Added chat/pidgin-icb version 20070505 [tnn 2007-08-09]
 	Added mail/claws-mail-vcalendar version 1.96 [smb 2007-08-09]
+	Added filesystems/fuse-wikipediafs version 0.3 [agc 2007-08-09]
