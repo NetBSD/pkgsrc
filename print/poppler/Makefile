@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/08/02 14:41:18 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2007/08/09 18:42:51 joerg Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -14,7 +14,7 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-splash.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.in
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS+=	share/doc/poppler
+INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # TODO: Later add an option to choose Splash versus Cairo backend.
@@ -38,9 +38,8 @@ CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/poppler
-	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/poppler/
-	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${PREFIX}/share/doc/poppler/
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/poppler/
+	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${DESTDIR}${PREFIX}/share/doc/poppler/
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
