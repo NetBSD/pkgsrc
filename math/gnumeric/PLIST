@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2006/04/17 07:07:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.30 2007/08/09 16:18:16 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -41,11 +41,6 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gdaif/gdaif.la
-lib/gnumeric/${PKGVERSION}/plugins/gdaif/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/gnomedb.la
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/ui.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -742,8 +737,6 @@ ${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-db
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/gdaif
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-random
