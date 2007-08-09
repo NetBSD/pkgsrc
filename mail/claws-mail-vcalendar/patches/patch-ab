@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/08/09 18:28:25 smb Exp $
+
+--- /usr/pkgsrc/mail/claws-mail-vcalendar/work/vcalendar-1.96/libical/libical/Makefile.in.orig	2007-07-03 05:13:41.000000000 -0400
++++ /usr/pkgsrc/mail/claws-mail-vcalendar/work/vcalendar-1.96/libical/libical/Makefile.in	2007-08-09 12:09:42.000000000 -0400
+@@ -324,7 +324,7 @@
+ 	vsnprintf.c		\
+ 	icallangbind.h		
+ 
+-libicalincludedir = $(includedir)
++libicalincludedir = $(includedir)/@PACKAGE@/plugins
+ libicalinclude_HEADERS = ical.h 
+ 
+ # ORDERING OF HEADERS IS SIGNIFICANT. Don't change this ordering. It
