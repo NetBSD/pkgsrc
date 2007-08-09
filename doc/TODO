@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6575 2007/08/08 22:20:44 wiz Exp $
+$NetBSD: TODO,v 1.6576 2007/08/09 11:52:48 tnn Exp $
 
 Suggested new packages
 ======================
@@ -257,7 +257,6 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.3
 	o TiffIO-130e
-	o Transmission-0.80
 	o YoSucker-75
 	o aap-0.144
 	o abcm2ps-5.5.1
