@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/08/04 11:13:37 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/08/09 19:07:38 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGDA_BUILDLINK3_MK:=	${LIBGDA_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/libgda-3.0\/providers$$/ \
 				{ print "@comment in libgda: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/libgda$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm share\/libgda-3.0$$/ \
 				{ print "@comment in libgda: " $$0; next; }
 .endif	# LIBGDA_BUILDLINK3_MK
 
