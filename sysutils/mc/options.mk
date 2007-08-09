@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2007/02/15 10:00:08 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2007/08/09 19:28:24 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
@@ -63,10 +63,10 @@ CONFIGURE_ARGS+=	--without-vfs
 ### X11 support allows better key handling (detection of the Alt, Ctrl,
 ### Shift modifiers) and mouse support.
 .if !empty(PKG_OPTIONS:Mx11)
-CONFIGURE_ARGS+=	--with-x
-.  include "../../mk/x11.buildlink3.mk"
+CONFIGURE_ARGS+=		--with-x
+.include "../../x11/libXt/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=		--without-x
 .endif
 
 ### The Midnight Commander can use three different screen libraries to
