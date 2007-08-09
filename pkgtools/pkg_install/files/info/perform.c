@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.33 2007/08/08 22:33:39 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.34 2007/08/09 12:53:35 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.33 2007/08/08 22:33:39 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.34 2007/08/09 12:53:35 joerg Exp $");
 #endif
 #endif
 
@@ -333,7 +333,7 @@ CheckForPkg(const char *pkgname)
 		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
 			errx(EXIT_FAILURE, "asprintf failed");
 
-		pkgname = find_best_matching_installed_pkg(pattern);
+		best_installed = find_best_matching_installed_pkg(pattern);
 		free(pattern);
 	}
 
