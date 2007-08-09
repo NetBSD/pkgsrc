@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2007/07/04 20:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2007/08/09 19:33:58 drochner Exp $
 #
 
-DISTNAME=		tor-0.1.1.26
-PKGREVISION=		2
+DISTNAME=		tor-0.1.2.16
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
@@ -31,6 +30,7 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0755
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-libevent-dir=${LOCALBASE}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
