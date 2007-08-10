@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/08/02 22:07:32 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/10 17:57:03 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
-PKGREVISION=	4
+PKGNAME=	${DISTNAME:S/-/-mta-/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +13,8 @@ COMMENT=	Courier mail transport agent
 HOMEPAGE=	http://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
-DEPENDS+=	couriertcpd>=${COURIER_VERSION}nb2:../../net/couriertcpd
-DEPENDS+=	maildrop>=2.0.2:../../mail/maildrop
+DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
+DEPENDS+=	maildrop>=2.0.4:../../mail/maildrop
 
 USE_TOOLS+=		gmake openssl:run perl:run
 USE_LANGUAGES=		c c++
@@ -69,7 +69,8 @@ SUBST_STAGE.courier=	pre-configure
 
 SUBST_CLASSES+=		perms
 SUBST_FILES.perms=	courier/perms.sh.in
-SUBST_SED.perms+=	-e "s,@ROOT_USER@,"${ROOT_USER:Q}",g"		\
+SUBST_SED.perms+=	-e "s,@REAL_ROOT_USER@,"${REAL_ROOT_USER:Q}",g"	\
+			-e "s,@ROOT_USER@,"${ROOT_USER:Q}",g"		\
 			-e "s,@ROOT_GROUP@,"${ROOT_GROUP:Q}",g"
 SUBST_STAGE.perms=	pre-configure
 
@@ -87,14 +88,12 @@ post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-build:
-	${CAT} /dev/null > ${WRKDIR}/locallowercase
-	${ECHO} ${PREFIX:Q}"/bin/maildrop" > ${WRKDIR}/maildropfilter
+	${TOUCH} ${WRKDIR}/locallowercase
 
 post-install:
-	cd ${WRKSRC}/courier &&						\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-permissions
+	cd ${WRKSRC}/courier && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-permissions
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/locallowercase ${EGDIR}/locallowercase
-	${INSTALL_DATA} ${WRKDIR}/maildropfilter ${EGDIR}/maildropfilter
 
 .include "../../mk/bsd.pkg.mk"

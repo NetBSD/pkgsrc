@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierd.sh,v 1.3 2006/06/17 19:38:43 jlam Exp $
+# $NetBSD: courierd.sh,v 1.4 2007/08/10 17:57:04 jlam Exp $
 #
 # Courier core processes 
 #
 # PROVIDE: courierd
-# REQUIRE: courierfilter courierldapaliasd
+# REQUIRE: authdaemond courierfilter @COURIERLDAPALIASD@
 # KEYWORD: shutdown
 
 . /etc/rc.subr
@@ -15,12 +15,13 @@ rcvar=${name}
 command="@PREFIX@/sbin/${name}"
 ctl_command="@PREFIX@/sbin/courier"
 
-restart_cmd="courierd_doit restart"
-start_precmd="courierd_prestart"
-start_cmd="courierd_doit start"
-stop_cmd="courierd_doit stop"
+restart_cmd="${name}_doit restart"
+start_precmd="${name}_prestart"
+start_cmd="${name}_doit start"
+stop_cmd="${name}_doit stop"
 
-mkdir_perms() {
+mkdir_perms()
+{
 	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir
@@ -28,7 +29,8 @@ mkdir_perms() {
 	@CHMOD@ $mode $dir
 }
 
-courierd_prestart() {
+courierd_prestart()
+{
 	# Courier mail submission directories
 	mkdir_perms @COURIER_STATEDIR@/msgq \
 			@COURIER_USER@ @COURIER_GROUP@ 0750

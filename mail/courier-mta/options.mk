@@ -1,12 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2007/07/04 20:54:41 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2007/08/10 17:57:03 jlam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-mta
 PKG_SUPPORTED_OPTIONS=	courier-dsn courier-esmtp courier-local		\
 			courier-uucp ldap
-PKG_SUGGESTED_OPTIONS=	courier-dsn courier-esmtp courier-local		\
-			courier-uucp
+PKG_SUGGESTED_OPTIONS=	courier-dsn courier-esmtp courier-local
 
 .include "../../mk/bsd.options.mk"
 
@@ -120,11 +119,13 @@ PKG_FAIL_REASON+=	"[courier/options.mk] No mail transports specified."
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldapaliasd
 PLIST_SRC+=		${PKGDIR}/PLIST.ldap
+FILES_SUBST+=		COURIERLDAPALIASD=courierldapaliasd
 
 RCD_SCRIPTS+=		courierldapaliasd
 CONF_FILES_PERMS+=	${EGDIR}/ldapaliasrc.dist			\
 			${PKG_SYSCONFDIR}/ldapaliasrc			\
 				${COURIER_USER} ${COURIER_GROUP} 0640
 .else
+FILES_SUBST+=		COURIERLDAPALIASD=
 CONFIGURE_ARGS+=	--without-ldapaliasd
 .endif

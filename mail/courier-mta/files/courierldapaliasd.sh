@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierldapaliasd.sh,v 1.3 2006/06/17 19:38:43 jlam Exp $
+# $NetBSD: courierldapaliasd.sh,v 1.4 2007/08/10 17:57:04 jlam Exp $
 #
 # Courier LDAP mail aliasing daemon
 #
@@ -16,12 +16,13 @@ command="@PREFIX@/sbin/${name}"
 pidfile="@COURIER_STATEDIR@/tmp/ldapaliasd.pid"
 required_files="@PKG_SYSCONFDIR@/ldapaliasrc"
 
-restart_cmd="courierldapaliasd_doit restart"
-start_precmd="courierldapaliasd_prestart"
-start_cmd="courierldapaliasd_doit start"
-stop_cmd="courierldapaliasd_doit stop"
+restart_cmd="${name}_doit restart"
+start_precmd="${name}_prestart"
+start_cmd="${name}_doit start"
+stop_cmd="${name}_doit stop"
 
-mkdir_perms() {
+mkdir_perms()
+{
 	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir

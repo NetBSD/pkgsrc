@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courier.sh,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: courier.sh,v 1.2 2007/08/10 17:57:04 jlam Exp $
 #
 # KEYWORD: nostart
 #
@@ -42,7 +42,7 @@ reverse_commands()
 
 COMMAND_LIST=
 COMMAND_LIST="$COMMAND_LIST courierfilter"
-COMMAND_LIST="$COMMAND_LIST courierldapaliasd"
+COMMAND_LIST="$COMMAND_LIST @COURIERLDAPALIASD@"
 COMMAND_LIST="$COMMAND_LIST courierd"
 COMMAND_LIST="$COMMAND_LIST courieresmtp"
 COMMAND_LIST="$COMMAND_LIST courieresmtpmsa"
@@ -52,6 +52,7 @@ COMMAND_LIST="$COMMAND_LIST courierimaps"
 COMMAND_LIST="$COMMAND_LIST courierpop"
 COMMAND_LIST="$COMMAND_LIST courierpops"
 COMMAND_LIST="$COMMAND_LIST sqwebmail"
+COMMAND_LIST="$COMMAND_LIST webmlm"
 
 name="courier"
 start_cmd="forward_commands"

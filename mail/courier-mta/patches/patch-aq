@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.1 2007/08/10 17:57:06 jlam Exp $
+
+--- courier/webmlmdsublist.C.orig	2007-06-15 22:21:24.000000000 -0400
++++ courier/webmlmdsublist.C
+@@ -319,7 +319,7 @@ static void dodel(WSubList &sub_list)
+ 
+ 	unsubscribe.mk_received_header();
+ 
+-	FILE *fp=unsubscribe.stdin();
++	FILE *fp=unsubscribe.standard_input();
+ 
+ 	fprintf(fp,
+ 		"Subject: admin unsubscribe\n"
+@@ -578,7 +578,7 @@ HANDLER("SUBINFO", emit_subinfo)
+ 
+ 	char linebuf[256];
+ 
+-	while (fgets(linebuf, sizeof(linebuf), subinfo.stdout()))
++	while (fgets(linebuf, sizeof(linebuf), subinfo.standard_output()))
+ 	{
+ 		std::cout << webmlmd::html_escape(linebuf);
+ 	}
