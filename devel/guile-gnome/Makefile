@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/08/10 21:10:34 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/10 22:24:21 gdt Exp $
 
 DISTNAME=	guile-gnome-platform-2.15.93
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-platform/
 
@@ -15,7 +16,7 @@ MAKE_JOBS_SAFE=		NO
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo pkg-config
 USE_LIBTOOL=		YES
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 # XXX This should arguably be split into separate packages.
 
@@ -28,6 +29,8 @@ INFO_FILES=		# PLIST
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/guile-cairo/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
