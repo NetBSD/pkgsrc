@@ -1,20 +1,21 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierldapaliasd.sh,v 1.4 2007/08/10 17:57:04 jlam Exp $
+# $NetBSD: webmlm.sh,v 1.1 2007/08/10 17:57:04 jlam Exp $
 #
-# Courier LDAP mail aliasing daemon
+# Courier mailing list management daemon
 #
-# PROVIDE: courierldapaliasd
+# PROVIDE: webmlm
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
 . /etc/rc.subr
 
-name="courierldapaliasd"
+name="webmlm"
 rcvar=${name}
-command="@PREFIX@/sbin/${name}"
-pidfile="@COURIER_STATEDIR@/tmp/ldapaliasd.pid"
-required_files="@PKG_SYSCONFDIR@/ldapaliasrc"
+command="@PREFIX@/sbin/courierlogger"
+ctl_command="@PREFIX@/bin/webmlmd.rc"
+pidfile="@COURIER_STATEDIR@/webmlm.pid"
+required_files="@PKG_SYSCONFDIR@/webmlmrc"
 
 restart_cmd="${name}_doit restart"
 start_precmd="${name}_prestart"
@@ -30,19 +31,19 @@ mkdir_perms()
 	@CHMOD@ $mode $dir
 }
 
-courierldapaliasd_prestart()
+webmlmd_prestart()
 {
 	@MKDIR@ @COURIER_STATEDIR@
-	mkdir_perms @COURIER_STATEDIR@/tmp \
-			@COURIER_USER@ @COURIER_GROUP@ 0770
+	mkdir_perms @COURIER_STATEDIR@/webmlm \
+			@COURIER_USER@ @COURIER_GROUP@ 0755
 }
 
-courierldapaliasd_doit()
+webmlm_doit()
 {
 	action=$1
 
 	case $action in
-	restart|start)
+        restart|start)
 		for f in $required_files; do
 			if [ ! -r "$f" ]; then
 				@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
@@ -59,7 +60,7 @@ courierldapaliasd_doit()
 		;;
 	esac
 
-	${command} $action
+	${ctl_command} @PREFIX@/bin/webmlmd $action
 }
 
 load_rc_config $name

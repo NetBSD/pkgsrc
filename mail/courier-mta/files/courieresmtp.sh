@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courieresmtp.sh,v 1.2 2006/06/17 19:26:48 jlam Exp $
+# $NetBSD: courieresmtp.sh,v 1.3 2007/08/10 17:57:04 jlam Exp $
 #
 # Courier ESMTP services daemon
 #
@@ -17,8 +17,8 @@ ctl_command="@PREFIX@/sbin/esmtpd"
 pidfile="@VARBASE@/run/esmtp.pid"
 required_files="@PKG_SYSCONFDIR@/esmtpd @PKG_SYSCONFDIR@/esmtpd-ssl"
 
-start_cmd="courieresmtp_doit start"
-stop_cmd="courieresmtp_doit stop"
+start_cmd="${name}_doit start"
+stop_cmd="${name}_doit stop"
 
 courieresmtp_doit()
 {

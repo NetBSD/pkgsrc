@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/09 22:12:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/08/10 17:57:03 jlam Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -7,15 +7,18 @@ bin/mailq
 bin/rmail
 bin/sendmail
 bin/testmxlookup
+bin/webmlmd
+bin/webmlmd.rc
 libexec/courier/aliascombine
 libexec/courier/aliascreate
 libexec/courier/aliasexp
-libexec/courier/cgi-bin/courierwebadmin
 libexec/courier/courierd
 libexec/courier/filters/dupfilter
 libexec/courier/filters/perlfilter
 libexec/courier/submit
 libexec/courier/submitmkdir
+libexec/courier/webmail/webadmin
+libexec/courier/webmail/webmlm
 man/man1/cancelmsg.1
 man/man1/couriermlm.1
 man/man1/dot-forward.1
@@ -43,7 +46,6 @@ man/man8/makepercentrelay.8
 man/man8/makesmtpaccess-msa.8
 man/man8/makesmtpaccess.8
 man/man8/mkesmtpdcert.8
-man/man8/pop3d.8
 man/man8/submit.8
 sbin/aliaslookup
 sbin/courier
@@ -51,8 +53,8 @@ sbin/courierfilter
 sbin/filterctl
 sbin/makealiases
 sbin/makehosteddomains
-sbin/showconfig
-sbin/showmodules
+sbin/courier-showconfig
+sbin/courier-showmodules
 share/courier/courierctl.start
 share/courier/couriermlm/adminrequest.tmpl
 share/courier/couriermlm/confsubj.tmpl
@@ -65,16 +67,18 @@ share/courier/couriermlm/idxheaderhtml.tmpl
 share/courier/couriermlm/idxheadertxt.tmpl
 share/courier/couriermlm/idxsubject.tmpl
 share/courier/couriermlm/modrejbody.tmpl
-share/courier/couriermlm/modreject.tmpl
 share/courier/couriermlm/modrejheader.tmpl
 share/courier/couriermlm/modsubject.tmpl
 share/courier/couriermlm/modtext.tmpl
 share/courier/couriermlm/modtext2.tmpl
+share/courier/couriermlm/style.css.tmpl
 share/courier/couriermlm/sub.tmpl
 share/courier/couriermlm/sub2.tmpl
 share/courier/couriermlm/sub3.tmpl
 share/courier/couriermlm/sub4.tmpl
 share/courier/couriermlm/sub5.tmpl
+share/courier/couriermlm/suback.tmpl
+share/courier/couriermlm/subjrequest.tmpl
 share/courier/couriermlm/subreportfooter.tmpl
 share/courier/couriermlm/subreporthdr.tmpl
 share/courier/couriermlm/subreporthdr1.tmpl
@@ -87,6 +91,21 @@ share/courier/couriermlm/warn1headers.tmpl
 share/courier/couriermlm/warn1text.tmpl
 share/courier/couriermlm/warn1text2.tmpl
 share/courier/couriermlm/warn2msg.tmpl
+share/courier/couriermlm/webmlm.tmpl
+share/courier/couriermlm/webmlm.tmpl.html
+share/courier/couriermlm/webmlmconfirm.html
+share/courier/couriermlm/webmlmerror.tmpl.html
+share/courier/couriermlm/webmlmidx.html
+share/courier/couriermlm/webmlmlistadmin.tmpl.html
+share/courier/couriermlm/webmlmlistadminmod.tmpl.html
+share/courier/couriermlm/webmlmlistadminpw.tmpl.html
+share/courier/couriermlm/webmlmlistindex.tmpl.html
+share/courier/couriermlm/webmlmnotprocessed.html
+share/courier/couriermlm/webmlmpleasewait.tmpl.html
+share/courier/couriermlm/webmlmprocessed.html
+share/courier/couriermlm/webmlmrequestreceived.tmpl.html
+share/courier/couriermlm/webmlmsubinfo.tmpl.html
+share/courier/couriermlm/webmlmsublist.tmpl.html
 share/courier/courierwebadmin/admin-00machine.html
 share/courier/courierwebadmin/admin-00machine.pl
 share/courier/courierwebadmin/admin-05local.html
@@ -154,7 +173,6 @@ share/doc/courier/cvs.html
 share/doc/courier/documentation.html
 share/doc/courier/dot-courier.html
 share/doc/courier/dot-forward.html
-share/doc/courier/download.php
 share/doc/courier/draft-varshavchik-exdata-smtpext.txt
 share/doc/courier/draft-varshavchik-security-smtpext.txt
 share/doc/courier/draft-varshavchik-verp-smtpext.txt
@@ -205,6 +223,7 @@ share/examples/courier/rfcerr2046.txt
 share/examples/courier/rfcerr2047.txt
 share/examples/courier/rfcerrheader.txt
 share/examples/courier/smtpaccess/default
+share/examples/courier/webmlmrc.dist
 share/examples/rc.d/courier
 share/examples/rc.d/courierd
 share/examples/rc.d/courierfilter

@@ -1,13 +1,18 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2007/08/10 17:57:04 jlam Exp $
 
---- courier/filters/Makefile.in.orig	2006-01-29 12:33:24.000000000 -0500
+--- courier/filters/Makefile.in.orig	2007-02-25 23:21:06.000000000 -0500
 +++ courier/filters/Makefile.in
-@@ -234,7 +234,7 @@ htmldocdir = @datadir@/htmldoc
+@@ -229,11 +229,12 @@ SUBDIRS = libfilter perlfilter
+ CLEANFILES = $(htmldoc_DATA) $(man_MANS) filtersocketdir.h filteractivedir.h \
+ 	pidfile.h permissions.dat
+ 
++pkglibexecdir = $(libexecdir)/courier
+ htmldocdir = @datadir@/htmldoc
  htmldoc_DATA = courierfilter.html courierperlfilter.html dupfilter.html
  databindir = $(datadir)
  databin_SCRIPTS = filterctl
 -filterbindir = $(libexecdir)/filters
-+filterbindir = $(libexecdir)/courier/filters
++filterbindir = $(pkglibexecdir)/filters
  filtersocketdir = $(localstatedir)/filters
  allfiltersocketdir = $(localstatedir)/allfilters
  filterconfdir = $(sysconfdir)/filters

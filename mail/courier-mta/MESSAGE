@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2007/08/10 17:57:03 jlam Exp $
 
 It is recommended that Courier-MTA be installed together with Courier-IMAP
 and SqWebMail -- together, they form an integrated mail/groupware
@@ -10,11 +10,11 @@ through a web CGI application.
 There are two things which must be done to make the Courier ``webadmin''
 CGI application accessible through your HTTP server:
 
-  (1) Copy the ``courierwebadmin'' CGI binary to the appropriate place in
-      your HTTP document root, e.g. ${PREFIX}/libexec/cgi-bin, then
-      Courier webadmin would be accessible through:
+  (1) Copy the ``webadmin'' CGI binary to the appropriate place in
+      your HTTP document root, e.g. ${PREFIX}/libexec/cgi-bin.  The
+      Courier webadmin would be accessible through, e.g.:
 
-        http://your.domain.com/cgi-bin/courierwebadmin
+        http://your.domain.com/cgi-bin/webadmin
 
   (2) Install a password to protect the ``webadmin'' CGI application by
       creating a one-line file containing the plaintext password at:
@@ -23,5 +23,12 @@ CGI application accessible through your HTTP server:
 
       This file should be owned by ${COURIER_USER}:${COURIER_GROUP} with
       read-only permissions restricted to the owner (mode 0400).
+
+Courier mailing lists may be managed through the ``webmlm'' CGI
+application.  Copy the ``webmlm'' CGI binary to the appropriate place
+in your HTTP document root, e.g. ${PREFIX}/libexc/cgi-bin.  The Courier
+webmlm would be accessible through, e.g.:
+
+        http://your.domain.com/cgi-bin/webmlm
 
 ===========================================================================

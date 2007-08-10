@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.3 2007/06/15 18:29:06 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.4 2007/08/10 17:57:03 jlam Exp $
 
 # Convenience definition used below for a file or directory owned by the
 # courier user and group.
@@ -7,7 +7,7 @@ COURIER_OWNED=		${COURIER_USER} ${COURIER_GROUP}
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR}			\
 			${LIBEXECDIR} ${LIBEXECDIR}/modules
-REQD_DIRS_PERMS+=	${LIBEXECDIR}/cgi-bin				\
+REQD_DIRS_PERMS+=	${LIBEXECDIR}/webmail				\
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
 
@@ -38,12 +38,17 @@ OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webadmin/removed		\
 							${COURIER_OWNED} 0700
 
 ###
+### Courier webmlmd directories
+###
+OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webmlm	${COURIER_OWNED} 0755
+
+###
 ### Courier setuid and setgid binaries
 ###
 SPECIAL_PERMS+=		bin/cancelmsg			${COURIER_OWNED} 6555
 SPECIAL_PERMS+=		bin/mailq			${COURIER_OWNED} 2555
 SPECIAL_PERMS+=		bin/sendmail			${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=		libexec/courier/cgi-bin/courierwebadmin		\
+SPECIAL_PERMS+=		libexec/courier/webmail/webadmin		\
 							${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		libexec/courier/submitmkdir	${COURIER_OWNED} 4550
 
