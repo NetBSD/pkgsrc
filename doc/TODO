@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6582 2007/08/10 23:29:36 tnn Exp $
+$NetBSD: TODO,v 1.6583 2007/08/10 23:32:42 gdt Exp $
 
 Suggested new packages
 ======================
@@ -507,8 +507,6 @@ Suggested package updates
 	o gifsicle-1.48
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
-	o gimp-ufraw-0.11 [pkg/36315]
-	o gimp-ufraw-0.12
 	o gkrellm-2.3.0
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
