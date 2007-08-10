@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2007/08/10 15:00:12 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2007/08/10 17:57:09 jlam Exp $
 
-DISTNAME=	maildrop-2.0.2
+DISTNAME=	maildrop-2.0.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 
 USE_TOOLS+=		gmake perl
+USE_TOOLS+=		cat:run		# used by makedat(1)
 USE_LANGUAGES=		c c++
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.maildrop
@@ -26,8 +27,10 @@ PKG_SUGGESTED_OPTIONS=	authlib
 # These are the users that may invoke maildrop with the "-d user"
 # argument (mailbox delivery mode).
 #
-MAILDROP_TRUSTED_USERS?=	${ROOT_USER} ${COURIER_USER} qmaild
+MAILDROP_TRUSTED_USERS?=	${REAL_ROOT_USER} ${COURIER_USER} qmaild
 
+CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-maildirquota
 CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER:Q}
@@ -43,7 +46,10 @@ CONFIGURE_ARGS+=	--enable-authlib
 CONFIGURE_ARGS+=	--disable-authlib
 .endif
 
-REQD_DIRS=	${DOCDIR}
+INSTALL_AM_MAKEFLAGS+=	htmldir=${DOCDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
+
+REQD_DIRS=	${DATADIR} ${DOCDIR} ${LIBEXECDIR}
 
 # Note special permissions for some binaries.  These are set to match
 # the defaults from a courier-mta installation.
