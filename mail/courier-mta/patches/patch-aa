@@ -1,53 +1,62 @@
-$NetBSD: patch-aa,v 1.2 2006/06/09 22:12:18 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2007/08/10 17:57:04 jlam Exp $
 
---- courier/Makefile.in.orig	2006-06-09 14:58:20.000000000 -0400
+--- courier/Makefile.in.orig	2007-06-23 07:56:06.000000000 -0400
 +++ courier/Makefile.in
-@@ -52,17 +52,17 @@ build_triplet = @build@
+@@ -50,18 +50,18 @@ build_triplet = @build@
  host_triplet = @host@
  target_triplet = @target@
  pkglibexec_PROGRAMS = aliasexp$(EXEEXT) aliascombine$(EXEEXT) \
 -	aliascreate$(EXEEXT) sqwebmaild$(EXEEXT) submit$(EXEEXT) \
--	@EXTRAPKGLIB@ $(am__empty)
--webmail_PROGRAMS = webmail$(EXEEXT)
 +	aliascreate$(EXEEXT) submit$(EXEEXT) \
-+	$(am__empty)
-+webmail_PROGRAMS = 
+ 	@EXTRAPKGLIB@ $(am__empty)
+-webmail_PROGRAMS = webmail$(EXEEXT) webmlm$(EXEEXT)
++webmail_PROGRAMS = webmlm$(EXEEXT)
  EXTRA_PROGRAMS = courierldapaliasd$(EXEEXT)
  bin_PROGRAMS = cancelmsg$(EXEEXT) mailq$(EXEEXT) sendmail$(EXEEXT) \
  	testmxlookup$(EXEEXT) dotforward$(EXEEXT) couriermlm$(EXEEXT) \
--	courier-config$(EXEEXT) @couriertls@ @EXTRABIN@
-+	courier-config$(EXEEXT)
- sbin_PROGRAMS = courier$(EXEEXT) showconfig$(EXEEXT) \
- 	showmodules$(EXEEXT) aliaslookup$(EXEEXT) @COURIERLDAPALIASD@ \
--	@EXTRASBIN@ $(am__empty)
+-	webmlmd$(EXEEXT) courier-config$(EXEEXT) @couriertls@ \
++	webmlmd$(EXEEXT) courier-config$(EXEEXT) \
+ 	@EXTRABIN@ $(am__empty)
+-sbin_PROGRAMS = courier$(EXEEXT) showconfig$(EXEEXT) \
+-	showmodules$(EXEEXT) aliaslookup$(EXEEXT) @COURIERLDAPALIASD@ \
++sbin_PROGRAMS = courier$(EXEEXT) courier-showconfig$(EXEEXT) \
++	courier-showmodules$(EXEEXT) aliaslookup$(EXEEXT) @COURIERLDAPALIASD@ \
+ 	@EXTRASBIN@ $(am__empty)
 -cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@
-+	$(am__empty)
-+cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT)
++cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@ 
  DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
  	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
  	$(srcdir)/courier.h.in $(srcdir)/courierctl.start.in \
-@@ -402,7 +402,7 @@ RFCERRTXTIN = rfcerrheader.txt
+@@ -420,7 +420,7 @@ BUILT_SOURCES = prefix.h exec_prefix.h s
+ 	uidgid.h configargs.h sort.h webmlmdhandlerslist.H
+ RFCERRTXTIN = rfcerrheader.txt
  RFCERRTXTNOIN = rfcerr2045.txt rfcerr2046.txt rfcerr2047.txt
- extrapkglib = makedatprog courierpop3login pcpd
+-extrapkglib = makedatprog courierpop3login pcpd
++extrapkglib = 
  pkglibexecdir = $(libexecdir)/courier
--webmaildir = $(libexecdir)/courier/webmail
-+webmaildir = $(pkglibexecdir)/cgi-bin
+ webmaildir = $(libexecdir)/courier/webmail
  webmail_SOURCES = 
- sqwebmaild_SOURCES = 
+@@ -428,22 +428,19 @@ sqwebmaild_SOURCES = 
  
-@@ -413,16 +413,14 @@ extrabin = maildrop lockmail reformail r
+ # Don't forget to change perms.sh.in, if webmailimagedir moves.
+ webmailimagedir = $(datadir)/sqwebmail/images
+-extrabin = maildrop lockmail reformail reformime mailbot mimegpg \
+-	imapd makemime deliverquota maildirmake maildiracl maildirkw
++extrabin = 
  
- extrasbin = couriertcpd$(EXEEXT)
- sbinscripts = sharedindexsplit sharedindexinstall webmaild
--sbin_SCRIPTS = @SBINSCRIPTS@
-+sbin_SCRIPTS = 
+ bin_SCRIPTS = webmlmd.rc
+-extrasbin = couriertcpd$(EXEEXT)
+-sbinscripts = sharedindexsplit sharedindexinstall webmaild
++extrasbin = 
++sbinscripts = 
+ sbin_SCRIPTS = @SBINSCRIPTS@
  EXTRA_SCRIPTS = 
 -sysconf_DATA = pop3d.authpam imapd.authpam webmail.authpam imapd.cnf pop3d.cnf \
 +sysconf_DATA = \
  	courierd.dist @LDAPALIASRC@ \
 -	imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
--	quotawarnmsg.example $(RFCERRTXTNOIN) $(RFCERRTXTIN)
-+	$(RFCERRTXTNOIN) $(RFCERRTXTIN)
+-	quotawarnmsg.example $(RFCERRTXTNOIN) $(RFCERRTXTIN) webmlmrc.dist
++	$(RFCERRTXTNOIN) $(RFCERRTXTIN) webmlmrc.dist
  
  databindir = $(datadir)
 -databin_SCRIPTS = courierctl.start makedat makealiases makehosteddomains \
@@ -55,8 +64,30 @@ $NetBSD: patch-aa,v 1.2 2006/06/09 22:12:18 jlam Exp $
 +databin_SCRIPTS = courierctl.start makealiases makehosteddomains
  
  mlmdatadir = $(datadir)/couriermlm
- mlmdata_DATA = adminrequest.tmpl confsubj.tmpl digestsubj.tmpl fetch.tmpl \
-@@ -1673,27 +1671,10 @@ install-exec-hook:
+ mlmdata_DATA = \
+@@ -499,7 +496,7 @@ mlmdata_DATA = \
+ 	webmlmsublist.tmpl.html \
+ 	webmlm.tmpl.html
+ 
+-extracmdlib = courierpop3d imaplogin
++extracmdlib = 
+ cmdlibdir = @libexecdir@/courier
+ 
+ # Subdirectories
+@@ -1652,6 +1649,12 @@ couriertls$(EXEEXT): ../tcpd/couriertls$
+ courierpop3login$(EXEEXT): ../imap/pop3login$(EXEEXT)
+ 	cp -f ../imap/pop3login$(EXEEXT) courierpop3login$(EXEEXT)
+ 
++courier-showconfig$(EXEEXT): showconfig$(EXEEXT)
++	cp -f showconfig$(EXEEXT) courier-showconfig$(EXEEXT)
++
++courier-showmodules$(EXEEXT): showmodules$(EXEEXT)
++	cp -f showmodules$(EXEEXT) courier-showmodules$(EXEEXT)
++
+ sort.h:
+ 	echo '#define SORT "$(SORT)"' >sort.h
+ 
+@@ -1813,33 +1816,16 @@ install-exec-hook:
  		$(localstatedir)/track\
  		$(localstatedir)/msgs $(localstatedir)/msgq ; do \
  			$(mkinstalldirs) $(DESTDIR)$$d || :; done
@@ -77,16 +108,22 @@ $NetBSD: patch-aa,v 1.2 2006/06/09 22:12:18 jlam Exp $
  		; do rm -f $(DESTDIR)$(sbindir)/$$f ; \
  		$(LN_S) $(datadir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
 -	rm -f $(DESTDIR)$(sbindir)/webgpg ; $(LN_S) $(datadir)/sqwebmail/webgpg $(DESTDIR)$(sbindir)/webgpg
--	$(INSTALL_PROGRAM) ../webadmin/webadmin $(DESTDIR)$(webmaildir)/webadmin
+ 	$(INSTALL_PROGRAM) ../webadmin/webadmin $(DESTDIR)$(webmaildir)/webadmin
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared.tmp
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared.tmp
-+	$(INSTALL_PROGRAM) ../webadmin/webadmin $(DESTDIR)$(webmaildir)/courierwebadmin
  
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/aliases
-@@ -1711,10 +1692,6 @@ install-data-hook:
+ 	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/smtpaccess
+-	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/aliasdir
+ 	echo @MAILDROP@ >$(DESTDIR)$(sysconfdir)/maildrop
++	echo @MAILDROP@ >$(DESTDIR)$(sysconfdir)/maildropfilter
+ 	test -f $(DESTDIR)$(sysconfdir)/enablefiltering && exit 0; \
+ 		echo esmtp >$(DESTDIR)$(sysconfdir)/enablefiltering
+ 	test -f $(DESTDIR)$(sysconfdir)/aliases/system && exit 0; \
+@@ -1851,10 +1837,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8

@@ -1,0 +1,42 @@
+$NetBSD: patch-an,v 1.1 2007/08/10 17:57:05 jlam Exp $
+
+--- courier/webmlmd.C.orig	2007-06-15 22:21:24.000000000 -0400
++++ courier/webmlmd.C
+@@ -953,10 +953,10 @@ static void sendsubunsub(std::string ext
+ 
+ 	if (ctlmsg.start(ext, address, "ctlmsg"))
+ 	{
+-		FILE *stdin=ctlmsg.stdin();
++		FILE *standard_input=ctlmsg.standard_input();
+ 
+ 		ctlmsg.mk_received_header();
+-		fprintf(stdin, "\nSubscription request received.\n");
++		fprintf(standard_input, "\nSubscription request received.\n");
+ 
+ 		if (ctlmsg.wait())
+ 		{
+@@ -1100,10 +1100,10 @@ static void listrequest2(std::string lis
+ 			if (confirm.start(method + "-" + token, "",
+ 					  "ctlmsg"))
+ 			{
+-				FILE *stdin=confirm.stdin();
++				FILE *standard_input=confirm.standard_input();
+ 
+ 				confirm.mk_received_header();
+-				fprintf(stdin,
++				fprintf(standard_input,
+ 					"Subject: yes -- confirmed by WebMLM\n"
+ 					"\n"
+ 					"Confirmed\n");
+@@ -1117,9 +1117,9 @@ static void listrequest2(std::string lis
+ 				char buf[1024];
+ 				bool isfirst=true;
+ 
+-				FILE *stdout=confirm.stdout();
++				FILE *standard_output=confirm.standard_output();
+ 
+-				while (fgets(buf, sizeof(buf), stdout))
++				while (fgets(buf, sizeof(buf), standard_output))
+ 				{
+ 					if (isfirst)
+ 					{
