@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2007/08/02 22:07:32 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2007/08/10 17:56:57 jlam Exp $
 
-DISTNAME=	courier-imap-4.1.1
-PKGREVISION=	3
+DISTNAME=	courier-imap-4.1.3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -51,12 +50,6 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
 			${COURIER_FILE_PERMS}
 .endfor
 RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
-
-SUBST_CLASSES+=		bdb
-SUBST_MESSAGE.bdb=	Configuring to use $(BDB_LIBS)
-SUBST_STAGE.bdb=	post-patch
-SUBST_FILES.bdb=	configure bdbobj/configure.in bdbobj/configure
-SUBST_SED.bdb=		-e "s,-ldb,${BDB_LIBS},g"
 
 SUBST_CLASSES+=		courier
 SUBST_FILES.courier=	imap/imapd-ssl.dist.in imap/imapd.8.in		\
