@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.38 2007/08/10 15:37:51 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.39 2007/08/10 21:43:58 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.38 2007/08/10 15:37:51 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.39 2007/08/10 21:43:58 joerg Exp $");
 #endif
 #endif
 
@@ -372,9 +372,9 @@ CheckForPkg(const char *pkgname)
 	}
 
 	if (arg.got_match)
+		return 0;
+	else
 		return 1;
-
-	return 0;
 }
 
 void
