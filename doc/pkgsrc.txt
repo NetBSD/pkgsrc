@@ -94,14 +94,15 @@ I. The pkgsrc user's guide
 
         5.1. General configuration
         5.2. Variables affecting the build process
-        5.3. Selecting and configuring the compiler
+        5.3. Variables affecting the installion process
+        5.4. Selecting and configuring the compiler
 
-            5.3.1. Selecting the compiler
-            5.3.2. Additional flags to the compiler (CFLAGS)
-            5.3.3. Additional flags to the linker (LDFLAGS)
+            5.4.1. Selecting the compiler
+            5.4.2. Additional flags to the compiler (CFLAGS)
+            5.4.3. Additional flags to the linker (LDFLAGS)
 
-        5.4. Developer/advanced settings
-        5.5. Selecting Build Options
+        5.5. Developer/advanced settings
+        5.6. Selecting Build Options
 
     6. Creating binary packages
 
@@ -134,20 +135,19 @@ I. The pkgsrc user's guide
         8.3. Utilities for package management (pkgtools)
         8.4. How to use pkgsrc as non-root
         8.5. How to resume transfers when fetching distfiles?
-        8.6. How can I install/use XFree86 from pkgsrc?
-        8.7. How can I install/use X.org from pkgsrc?
-        8.8. How to fetch files from behind a firewall
-        8.9. How do I tell make fetch to do passive FTP?
-        8.10. How to fetch all distfiles at once
-        8.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
+        8.6. How can I install/use modular X.org from pkgsrc?
+        8.7. How to fetch files from behind a firewall
+        8.8. How do I tell make fetch to do passive FTP?
+        8.9. How to fetch all distfiles at once
+        8.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
             mean?
-        8.12. What does "Could not find bsd.own.mk" mean?
-        8.13. Using 'sudo' with pkgsrc
-        8.14. How do I change the location of configuration files?
-        8.15. Automated security checks
-        8.16. Why do some packages ignore my CFLAGS?
-        8.17. A package does not build. What shall I do?
-        8.18. What does "Makefile appears to contain unresolved cvs/rcs/???
+        8.11. What does "Could not find bsd.own.mk" mean?
+        8.12. Using 'sudo' with pkgsrc
+        8.13. How do I change the location of configuration files?
+        8.14. Automated security checks
+        8.15. Why do some packages ignore my CFLAGS?
+        8.16. A package does not build. What shall I do?
+        8.17. What does "Makefile appears to contain unresolved cvs/rcs/???
             merge conflicts" mean?
 
 II. The pkgsrc developer's guide
@@ -338,22 +338,23 @@ II. The pkgsrc developer's guide
             18.6.1. Creating needed directories
             18.6.2. Where to install documentation
             18.6.3. Installing highscore files
-            18.6.4. Packages with hardcoded paths to other interpreters
-            18.6.5. Packages installing perl modules
-            18.6.6. Packages installing info files
-            18.6.7. Packages installing man pages
-            18.6.8. Packages installing GConf2 data files
-            18.6.9. Packages installing scrollkeeper data files
-            18.6.10. Packages installing X11 fonts
-            18.6.11. Packages installing GTK2 modules
-            18.6.12. Packages installing SGML or XML data
-            18.6.13. Packages installing extensions to the MIME database
-            18.6.14. Packages using intltool
-            18.6.15. Packages installing startup scripts
-            18.6.16. Packages installing TeX modules
-            18.6.17. Packages supporting running binaries in emulation
-            18.6.18. Packages installing hicolor theme icons
-            18.6.19. Packages installing desktop files
+            18.6.4. Adding DESTDIR support to packages
+            18.6.5. Packages with hardcoded paths to other interpreters
+            18.6.6. Packages installing perl modules
+            18.6.7. Packages installing info files
+            18.6.8. Packages installing man pages
+            18.6.9. Packages installing GConf2 data files
+            18.6.10. Packages installing scrollkeeper data files
+            18.6.11. Packages installing X11 fonts
+            18.6.12. Packages installing GTK2 modules
+            18.6.13. Packages installing SGML or XML data
+            18.6.14. Packages installing extensions to the MIME database
+            18.6.15. Packages using intltool
+            18.6.16. Packages installing startup scripts
+            18.6.17. Packages installing TeX modules
+            18.6.18. Packages supporting running binaries in emulation
+            18.6.19. Packages installing hicolor theme icons
+            18.6.20. Packages installing desktop files
 
         18.7. Marking packages as having problems
 
@@ -724,14 +725,15 @@ Table of Contents
 
     5.1. General configuration
     5.2. Variables affecting the build process
-    5.3. Selecting and configuring the compiler
+    5.3. Variables affecting the installion process
+    5.4. Selecting and configuring the compiler
 
-        5.3.1. Selecting the compiler
-        5.3.2. Additional flags to the compiler (CFLAGS)
-        5.3.3. Additional flags to the linker (LDFLAGS)
+        5.4.1. Selecting the compiler
+        5.4.2. Additional flags to the compiler (CFLAGS)
+        5.4.3. Additional flags to the linker (LDFLAGS)
 
-    5.4. Developer/advanced settings
-    5.5. Selecting Build Options
+    5.5. Developer/advanced settings
+    5.6. Selecting Build Options
 
 6. Creating binary packages
 
@@ -764,19 +766,18 @@ Table of Contents
     8.3. Utilities for package management (pkgtools)
     8.4. How to use pkgsrc as non-root
     8.5. How to resume transfers when fetching distfiles?
-    8.6. How can I install/use XFree86 from pkgsrc?
-    8.7. How can I install/use X.org from pkgsrc?
-    8.8. How to fetch files from behind a firewall
-    8.9. How do I tell make fetch to do passive FTP?
-    8.10. How to fetch all distfiles at once
-    8.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-    8.12. What does "Could not find bsd.own.mk" mean?
-    8.13. Using 'sudo' with pkgsrc
-    8.14. How do I change the location of configuration files?
-    8.15. Automated security checks
-    8.16. Why do some packages ignore my CFLAGS?
-    8.17. A package does not build. What shall I do?
-    8.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+    8.6. How can I install/use modular X.org from pkgsrc?
+    8.7. How to fetch files from behind a firewall
+    8.8. How do I tell make fetch to do passive FTP?
+    8.9. How to fetch all distfiles at once
+    8.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+    8.11. What does "Could not find bsd.own.mk" mean?
+    8.12. Using 'sudo' with pkgsrc
+    8.13. How do I change the location of configuration files?
+    8.14. Automated security checks
+    8.15. Why do some packages ignore my CFLAGS?
+    8.16. A package does not build. What shall I do?
+    8.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
         conflicts" mean?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
@@ -863,9 +864,9 @@ documentation.
 
 # recommended CVS configuration file from the pkgsrc guide
 checkout -P
-update -d
+update -dP
 release -d
-diff -up
+diff -upN
 cvs -q -z3
 rdiff -u
 
@@ -1891,14 +1892,15 @@ Table of Contents
 
 5.1. General configuration
 5.2. Variables affecting the build process
-5.3. Selecting and configuring the compiler
+5.3. Variables affecting the installion process
+5.4. Selecting and configuring the compiler
 
-    5.3.1. Selecting the compiler
-    5.3.2. Additional flags to the compiler (CFLAGS)
-    5.3.3. Additional flags to the linker (LDFLAGS)
+    5.4.1. Selecting the compiler
+    5.4.2. Additional flags to the compiler (CFLAGS)
+    5.4.3. Additional flags to the linker (LDFLAGS)
 
-5.4. Developer/advanced settings
-5.5. Selecting Build Options
+5.5. Developer/advanced settings
+5.6. Selecting Build Options
 
 The whole pkgsrc system is configured in a single file, usually called mk.conf.
 In which directory pkgsrc looks for that file depends on the installation. On
@@ -1979,9 +1981,34 @@ XXX
     package is created for them. You can set this variable to package to
     automatically create binary packages after installing dependencies.
 
-5.3. Selecting and configuring the compiler
+5.3. Variables affecting the installion process
 
-5.3.1. Selecting the compiler
+A growing number of packages support installation into a subdirectory of
+WRKDIR. This allows a package to be built, before the actual filesystem is
+touched. DESTDIR support exists in two variations:
+
+  * Basic DESTDIR support means that the package installation and packaging is
+    still run as root.
+
+  * Full DESTDIR support can run the complete build, installation and packaging
+    as normal user. Root privileges are only needed to add packages.
+
+To use the DESTDIR support, set either USE_DESTDIR=yes to use the basic support
+for packages that offer it or USE_DESTDIR=full to get the full support with
+fallback to basic support. USE_DESTDIR=full needs pkgtools/pkg_install version
+20070802 (or newer). It might become the default DESTDIR support later.
+
+DESTDIR support changes the behaviour of various targets slightly. To install a
+package after building it, use package-install. package and install don't do
+that any longer. package-install can be used as DEPENDS_TARGET. bin-install
+will ask for the root password to install the package and fail, package-install
+will ask again.
+
+With basic DESTDIR support, make clean needs to be run as root.
+
+5.4. Selecting and configuring the compiler
+
+5.4.1. Selecting the compiler
 
 By default, pkgsrc will use GCC to build packages. This may be overridden by
 setting the following variables in /etc/mk.conf:
@@ -2014,7 +2041,7 @@ GCC_REQD:
     the system GCC doesn't satisfy this requirement, then pkgsrc will build and
     install one of the GCC packages to use instead.
 
-5.3.2. Additional flags to the compiler (CFLAGS)
+5.4.2. Additional flags to the compiler (CFLAGS)
 
 If you wish to set the CFLAGS variable, please make sure to use the += operator
 instead of the = operator:
@@ -2025,7 +2052,7 @@ Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
 
-5.3.3. Additional flags to the linker (LDFLAGS)
+5.4.3. Additional flags to the linker (LDFLAGS)
 
 If you want to pass flags to the linker, both in the configure step and the
 build step, you can do this in two ways. Either set LDFLAGS or LIBS. The
@@ -2037,7 +2064,7 @@ settings, use the += operator:
 
 LDFLAGS+=        -your -linkerflags
 
-5.4. Developer/advanced settings
+5.5. Developer/advanced settings
 
 XXX
 
@@ -2055,7 +2082,7 @@ XXX
     their invocation, and their actual execution progress with set -x will be
     displayed.
 
-5.5. Selecting Build Options
+5.6. Selecting Build Options
 
 Some packages have build time options, usually to select between different
 dependencies, enable optional support for big dependencies or enable
@@ -2708,19 +2735,18 @@ Table of Contents
 8.3. Utilities for package management (pkgtools)
 8.4. How to use pkgsrc as non-root
 8.5. How to resume transfers when fetching distfiles?
-8.6. How can I install/use XFree86 from pkgsrc?
-8.7. How can I install/use X.org from pkgsrc?
-8.8. How to fetch files from behind a firewall
-8.9. How do I tell make fetch to do passive FTP?
-8.10. How to fetch all distfiles at once
-8.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-8.12. What does "Could not find bsd.own.mk" mean?
-8.13. Using 'sudo' with pkgsrc
-8.14. How do I change the location of configuration files?
-8.15. Automated security checks
-8.16. Why do some packages ignore my CFLAGS?
-8.17. A package does not build. What shall I do?
-8.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+8.6. How can I install/use modular X.org from pkgsrc?
+8.7. How to fetch files from behind a firewall
+8.8. How do I tell make fetch to do passive FTP?
+8.9. How to fetch all distfiles at once
+8.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+8.11. What does "Could not find bsd.own.mk" mean?
+8.12. Using 'sudo' with pkgsrc
+8.13. How do I change the location of configuration files?
+8.14. Automated security checks
+8.15. Why do some packages ignore my CFLAGS?
+8.16. A package does not build. What shall I do?
+8.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
     conflicts" mean?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
@@ -2863,28 +2889,19 @@ FETCH_BEFORE_ARGS=     --passive-ftp
 FETCH_RESUME_ARGS=     -c
 FETCH_OUTPUT_ARGS=     -O
 
-8.6. How can I install/use XFree86 from pkgsrc?
+8.6. How can I install/use modular X.org from pkgsrc?
 
-If you want to use XFree86 from pkgsrc instead of your system's own X11 (/usr/
-X11R6, /usr/openwin, ...), you will have to add the following line into /etc/
-mk.conf:
+If you want to use modular X.org from pkgsrc instead of your system's own X11
+(/usr/X11R6, /usr/openwin, ...) you will have to add the following line into /
+etc/mk.conf:
 
-X11_TYPE=XFree86
-
-8.7. How can I install/use X.org from pkgsrc?
-
-If you want to use X.org from pkgsrc instead of your system's own X11 (/usr/
-X11R6, /usr/openwin, ...) you will have to add the following line into /etc/
-mk.conf:
-
-X11_TYPE=xorg
+X11_TYPE=modular
 
 Note
 
-The DragonFly operating system defaults to using this X.org X11 implementation
-from pkgsrc.
+The DragonFly operating system defaults to using modular X.org from pkgsrc.
 
-8.8. How to fetch files from behind a firewall
+8.7. How to fetch files from behind a firewall
 
 If you are sitting behind a firewall which does not allow direct connections to
 Internet hosts (i.e. non-NAT), you may specify the relevant proxy hosts. This
@@ -2895,7 +2912,7 @@ the proxy port number. So the proxy environment variables are:
 ftp_proxy=ftp://orpheus.amdahl.com:80/
 http_proxy=http://orpheus.amdahl.com:80/
 
-8.9. How do I tell make fetch to do passive FTP?
+8.8. How do I tell make fetch to do passive FTP?
 
 This depends on which utility is used to retrieve distfiles. From bsd.pkg.mk,
 FETCH_CMD is assigned the first available command from the following list:
@@ -2912,7 +2929,7 @@ following to your /etc/mk.conf file: PASSIVE_FETCH=1.
 Having that option present will prevent /usr/bin/ftp from falling back to
 active transfers.
 
-8.10. How to fetch all distfiles at once
+8.9. How to fetch all distfiles at once
 
 You would like to download all the distfiles in a single batch from work or
 university, where you can't run a make fetch. There is an archive of distfiles
@@ -2947,7 +2964,7 @@ everything by running:
 
 % make fetch NO_SKIP=yes
 
-8.11. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
+8.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
 
 When compiling the pkgtools/pkg_install package, you get the error from make
 that it doesn't know how to make /usr/share/tmac/tmac.andoc? This indicates
@@ -2957,7 +2974,7 @@ distribution on your machine. It is recommended to do that to format man pages.
 In the case of the pkgtools/pkg_install package, you can get away with setting
 NOMAN=YES either in the environment or in /etc/mk.conf.
 
-8.12. What does "Could not find bsd.own.mk" mean?
+8.11. What does "Could not find bsd.own.mk" mean?
 
 You didn't install the compiler set, comp.tgz, when you installed your NetBSD
 machine. Please get and install it, by extracting it in /:
@@ -2968,7 +2985,7 @@ machine. Please get and install it, by extracting it in /:
 comp.tgz is part of every NetBSD release. Get the one that corresponds to your
 release (determine via uname -r).
 
-8.13. Using 'sudo' with pkgsrc
+8.12. Using 'sudo' with pkgsrc
 
 When installing packages as non-root user and using the just-in-time su(1)
 feature of pkgsrc, it can become annoying to type in the root password for each
@@ -2981,7 +2998,7 @@ binary package or from security/sudo) and then put the following into your /etc
 SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
 .endif
 
-8.14. How do I change the location of configuration files?
+8.13. How do I change the location of configuration files?
 
 As the system administrator, you can choose where configuration files are
 installed. The default settings make all these files go into ${PREFIX}/etc or
@@ -3001,7 +3018,7 @@ of PKGBASE.
 Note that after changing these settings, you must rebuild and reinstall any
 affected packages.
 
-8.15. Automated security checks
+8.14. Automated security checks
 
 Please be aware that there can often be bugs in third-party software, and some
 of these bugs can leave a machine vulnerable to exploitation by attackers. In
@@ -3031,7 +3048,7 @@ If this package is installed, pkgsrc builds will use it to perform a security
 check before building any package. See Section 5.2, "Variables affecting the
 build process" for ways to control this check.
 
-8.16. Why do some packages ignore my CFLAGS?
+8.15. Why do some packages ignore my CFLAGS?
 
 When you add your own preferences to the CFLAGS variable in your mk.conf, these
 flags are passed in environment variables to the ./configure scripts and to
@@ -3045,7 +3062,7 @@ Usually you can remove these lines. But be aware that some "smart" programmers
 write so bad code that it only works for the specific combination of CFLAGS
 they have chosen.
 
-8.17. A package does not build. What shall I do?
+8.16. A package does not build. What shall I do?
 
  1. Make sure that your copy of pkgsrc is consistent. A case that occurs often
     is that people only update pkgsrc in parts, because of performance reasons.
@@ -3061,7 +3078,7 @@ they have chosen.
 
  4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
-8.18. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
+8.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
 conflicts" mean?
 
 You have modified a file from pkgsrc, and someone else has modified that same
@@ -3267,22 +3284,23 @@ Table of Contents
         18.6.1. Creating needed directories
         18.6.2. Where to install documentation
         18.6.3. Installing highscore files
-        18.6.4. Packages with hardcoded paths to other interpreters
-        18.6.5. Packages installing perl modules
-        18.6.6. Packages installing info files
-        18.6.7. Packages installing man pages
-        18.6.8. Packages installing GConf2 data files
-        18.6.9. Packages installing scrollkeeper data files
-        18.6.10. Packages installing X11 fonts
-        18.6.11. Packages installing GTK2 modules
-        18.6.12. Packages installing SGML or XML data
-        18.6.13. Packages installing extensions to the MIME database
-        18.6.14. Packages using intltool
-        18.6.15. Packages installing startup scripts
-        18.6.16. Packages installing TeX modules
-        18.6.17. Packages supporting running binaries in emulation
-        18.6.18. Packages installing hicolor theme icons
-        18.6.19. Packages installing desktop files
+        18.6.4. Adding DESTDIR support to packages
+        18.6.5. Packages with hardcoded paths to other interpreters
+        18.6.6. Packages installing perl modules
+        18.6.7. Packages installing info files
+        18.6.8. Packages installing man pages
+        18.6.9. Packages installing GConf2 data files
+        18.6.10. Packages installing scrollkeeper data files
+        18.6.11. Packages installing X11 fonts
+        18.6.12. Packages installing GTK2 modules
+        18.6.13. Packages installing SGML or XML data
+        18.6.14. Packages installing extensions to the MIME database
+        18.6.15. Packages using intltool
+        18.6.16. Packages installing startup scripts
+        18.6.17. Packages installing TeX modules
+        18.6.18. Packages supporting running binaries in emulation
+        18.6.19. Packages installing hicolor theme icons
+        18.6.20. Packages installing desktop files
 
     18.7. Marking packages as having problems
 
@@ -3727,7 +3745,7 @@ Please pay attention to the following gotchas:
 
   * Replace /usr/local with "${PREFIX}" in all files (see patches, below).
 
-  * If the package installs any info files, see Section 18.6.6, "Packages
+  * If the package installs any info files, see Section 18.6.7, "Packages
     installing info files".
 
 10.2. distinfo
@@ -6284,22 +6302,23 @@ Table of Contents
     18.6.1. Creating needed directories
     18.6.2. Where to install documentation
     18.6.3. Installing highscore files
-    18.6.4. Packages with hardcoded paths to other interpreters
-    18.6.5. Packages installing perl modules
-    18.6.6. Packages installing info files
-    18.6.7. Packages installing man pages
-    18.6.8. Packages installing GConf2 data files
-    18.6.9. Packages installing scrollkeeper data files
-    18.6.10. Packages installing X11 fonts
-    18.6.11. Packages installing GTK2 modules
-    18.6.12. Packages installing SGML or XML data
-    18.6.13. Packages installing extensions to the MIME database
-    18.6.14. Packages using intltool
-    18.6.15. Packages installing startup scripts
-    18.6.16. Packages installing TeX modules
-    18.6.17. Packages supporting running binaries in emulation
-    18.6.18. Packages installing hicolor theme icons
-    18.6.19. Packages installing desktop files
+    18.6.4. Adding DESTDIR support to packages
+    18.6.5. Packages with hardcoded paths to other interpreters
+    18.6.6. Packages installing perl modules
+    18.6.7. Packages installing info files
+    18.6.8. Packages installing man pages
+    18.6.9. Packages installing GConf2 data files
+    18.6.10. Packages installing scrollkeeper data files
+    18.6.11. Packages installing X11 fonts
+    18.6.12. Packages installing GTK2 modules
+    18.6.13. Packages installing SGML or XML data
+    18.6.14. Packages installing extensions to the MIME database
+    18.6.15. Packages using intltool
+    18.6.16. Packages installing startup scripts
+    18.6.17. Packages installing TeX modules
+    18.6.18. Packages supporting running binaries in emulation
+    18.6.19. Packages installing hicolor theme icons
+    18.6.20. Packages installing desktop files
 
 18.7. Marking packages as having problems
 
@@ -7038,7 +7057,7 @@ full path to the perl executable.
 If a particular version of perl is needed, set the PERL5_REQD variable to the
 version number. The default is "5.0".
 
-See Section 18.6.5, "Packages installing perl modules" for information about
+See Section 18.6.6, "Packages installing perl modules" for information about
 handling perl modules.
 
 18.4.4. Other programming languages
@@ -7229,7 +7248,20 @@ SETGIDGAME=YES will set all the other variables accordingly.
 A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
-18.6.4. Packages with hardcoded paths to other interpreters
+18.6.4. Adding DESTDIR support to packages
+
+  * All installation operations have to be prefixed with ${DESTDIR}.
+
+  * automake gets this DESTDIR mostly right automatically. Many manual rules
+    and pre/post-install often are incorrect; fix them.
+
+  * If files are installed with special owner/group either use @owner/@group in
+    the PLIST (preferred) or use SPECIAL_PERMS (discouraged). Note that @owner/
+    @group are sticky during install, keep this in mind.
+
+  * In general, packages should support UNPRIVILEGED to be able to use DESTDIR.
+
+18.6.5. Packages with hardcoded paths to other interpreters
 
 Your package may also contain scripts with hardcoded paths to other
 interpreters besides (or as well as) perl. To correct the full pathname to the
@@ -7247,7 +7279,7 @@ Note
 
 Before March 2006, these variables were called _REPLACE.* and _REPLACE_FILES.*.
 
-18.6.5. Packages installing perl modules
+18.6.6. Packages installing perl modules
 
 Makefiles of packages providing perl5 modules should include the Makefile
 fragment ../../lang/perl5/module.mk. It provides a do-configure target for the
@@ -7268,7 +7300,7 @@ three locations in which perl5 modules may be installed, and may be used by
 perl5 packages that don't have a packlist. These three variables are also
 substituted for in the PLIST.
 
-18.6.6. Packages installing info files
+18.6.7. Packages installing info files
 
 Some packages install info files or use the "makeinfo" or "install-info"
 commands. INFO_FILES should be defined in the package Makefile so that INSTALL
@@ -7303,7 +7335,7 @@ message. The script overriding makeinfo logs a message and according to the
 value of TEXINFO_REQD either runs the appropriate makeinfo command or exit on
 error.
 
-18.6.7. Packages installing man pages
+18.6.8. Packages installing man pages
 
 All packages that install manual pages should install them into the same
 directory, so that there is one common place to look for them. In pkgsrc, this
@@ -7331,7 +7363,7 @@ use of --mandir, you can set GNU_CONFIGURE_MANDIR as needed.
 See Section 12.5, "Man page compression" for information on installation of
 compressed manual pages.
 
-18.6.8. Packages installing GConf2 data files
+18.6.9. Packages installing GConf2 data files
 
 If a package installs .schemas or .entries files, used by GConf2, you need to
 take some extra steps to make sure they get registered in the database:
@@ -7347,7 +7379,7 @@ take some extra steps to make sure they get registered in the database:
     manually patch the package.
 
  3. Check the PLIST and remove any entries under the etc/gconf directory, as
-    they will be handled automatically. See Section 8.14, "How do I change the
+    they will be handled automatically. See Section 8.13, "How do I change the
     location of configuration files?" for more information.
 
  4. Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
@@ -7358,7 +7390,7 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-18.6.9. Packages installing scrollkeeper data files
+18.6.10. Packages installing scrollkeeper data files
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
@@ -7374,7 +7406,7 @@ extra steps to make sure they get registered in the database:
  3. Remove the share/omf directory from the PLIST. It will be handled by
     scrollkeeper.
 
-18.6.10. Packages installing X11 fonts
+18.6.11. Packages installing X11 fonts
 
 If a package installs font files, you will need to rebuild the fonts database
 in the directory where they get installed at installation and deinstallation
@@ -7388,7 +7420,7 @@ Note that you should not create new directories for fonts; instead use the
 standard ones to avoid that the user needs to manually configure his X server
 to find them.
 
-18.6.11. Packages installing GTK2 modules
+18.6.12. Packages installing GTK2 modules
 
 If a package installs GTK2 immodules or loaders, you need to take some extra
 steps to get them registered in the GTK2 database properly:
@@ -7411,7 +7443,7 @@ steps to get them registered in the GTK2 database properly:
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
 
-18.6.12. Packages installing SGML or XML data
+18.6.13. Packages installing SGML or XML data
 
 If a package installs SGML or XML data files that need to be registered in
 system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
@@ -7437,7 +7469,7 @@ extra steps:
     (specifically, arguments recognized by the 'add' action). Note that you
     will normally not use this variable.
 
-18.6.13. Packages installing extensions to the MIME database
+18.6.14. Packages installing extensions to the MIME database
 
 If a package provides extensions to the MIME database by installing .xml files
 inside ${PREFIX}/share/mime/packages, you need to take some extra steps to
@@ -7458,7 +7490,7 @@ ensure that the database is kept consistent with respect to these new files:
  3. Remove any share/mime/* directories from the PLIST. They will be handled by
     the shared-mime-info package.
 
-18.6.14. Packages using intltool
+18.6.15. Packages using intltool
 
 If a package uses intltool during its build, add intltool to the USE_TOOLS,
 which forces it to use the intltool package provided by pkgsrc, instead of the
@@ -7468,7 +7500,7 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
-18.6.15. Packages installing startup scripts
+18.6.16. Packages installing startup scripts
 
 If a package contains a rc.d script, it won't be copied into the startup
 directory by default, but you can enable it, by adding the option
@@ -7476,7 +7508,7 @@ PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
 etc/rc.d when a package is installed, and it will automatically remove the
 scripts when the package is deinstalled.
 
-18.6.16. Packages installing TeX modules
+18.6.17. Packages installing TeX modules
 
 If a package installs TeX packages into the texmf tree, the ls-R database of
 the tree needs to be updated.
@@ -7502,7 +7534,7 @@ into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
 
-18.6.17. Packages supporting running binaries in emulation
+18.6.18. Packages supporting running binaries in emulation
 
 There are some packages that provide libraries and executables for running
 binaries from a one operating system on a different one (if the latter supports
@@ -7516,7 +7548,7 @@ linker. Since the standard dynamic linker is run, this fails for emulation
 packages, because the libraries used by the emulation are not in the standard
 directories.
 
-18.6.18. Packages installing hicolor theme icons
+18.6.19. Packages installing hicolor theme icons
 
 If a package installs images under the share/icons/hicolor and/or updates the
 share/icons/hicolor/icon-theme.cache database, you need to take some extra
@@ -7533,7 +7565,7 @@ that the cache database is rebuilt:
 The best way to verify that the PLIST is correct with respect to the last two
 points is to regenerate it using make print-PLIST.
 
-18.6.19. Packages installing desktop files
+18.6.20. Packages installing desktop files
 
 If a package installs .desktop files under share/applications and these include
 MIME information, you need to take extra steps to ensure that they are
@@ -7676,8 +7708,8 @@ Chapter 19, Debugging and the rest of this document. Next, generate an
 uuencoded gzipped tar(1) archive that contains all files that make up the
 package. Finally, send this package to the pkgsrc bug tracking system, either
 with the send-pr(1) command, or if you don't have that, go to the web page
-http://www.NetBSD.org/Misc/send-pr.html, which contains some instructions and a
-link to a form, where you can submit packages.
+http://www.NetBSD.org/support/send-pr.html, which contains some instructions
+and a link to a form, where you can submit packages.
 
 In the form of the problem report, the category should be "pkg", the synopsis
 should include the package name and version number, and the description field
@@ -8055,19 +8087,19 @@ Table 22.1. PLIST handling for GNOME packages
 +-----------------------------------------------------------------------------+
 |             If the package...             |             Then...             |
 |-------------------------------------------+---------------------------------|
-|                                           |See Section 18.6.9, "Packages    |
+|                                           |See Section 18.6.10, "Packages   |
 |Installs OMF files under share/omf.        |installing scrollkeeper data     |
 |                                           |files".                          |
 |-------------------------------------------+---------------------------------|
-|Installs icons under the share/icons/      |See Section 18.6.18, "Packages   |
+|Installs icons under the share/icons/      |See Section 18.6.19, "Packages   |
 |hicolor hierarchy or updates share/icons/  |installing hicolor theme icons". |
 |hicolor/icon-theme.cache.                  |                                 |
 |-------------------------------------------+---------------------------------|
-|                                           |See Section 18.6.13, "Packages   |
+|                                           |See Section 18.6.14, "Packages   |
 |Installs files under share/mime/packages.  |installing extensions to the MIME|
 |                                           |database".                       |
 |-------------------------------------------+---------------------------------|
-|Installs .desktop files under share/       |See Section 18.6.19, "Packages   |
+|Installs .desktop files under share/       |See Section 18.6.20, "Packages   |
 |applications and these include MIME        |installing desktop files".       |
 |information.                               |                                 |
 +-----------------------------------------------------------------------------+
