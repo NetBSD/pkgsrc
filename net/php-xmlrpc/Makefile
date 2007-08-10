@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/10 16:41:51 joerg Exp $
 
 MODNAME=		xmlrpc
 CATEGORIES+=		net
@@ -31,9 +31,8 @@ CHECK_BUILTIN.iconv:=	yes
 .include "../../converters/libiconv/builtin.mk"
 CHECK_BUILTIN.iconv:=	no
 
-.if !empty(USE_BUILTIN.iconv:M[nN][oO]) || \
-    !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--with-iconv-dir=shared,${BUILDLINK_PREFIX.iconv}
+.if !empty(USE_BUILTIN.iconv:M[nN][oO])
+CONFIGURE_ARGS+=	--with-iconv-dir=${BUILDLINK_PREFIX.iconv}
 .else
 CONFIGURE_ARGS+=	--with-iconv-dir
 .endif
