@@ -113,14 +113,15 @@
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">6. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -152,20 +153,19 @@
 <dt><span class="sect1"><a href="#faq-pkgtools">8.3. Utilities for package management (pkgtools)</a></span></dt>
 <dt><span class="sect1"><a href="#non-root-pkgsrc">8.4. How to use pkgsrc as non-root</a></span></dt>
 <dt><span class="sect1"><a href="#resume-transfers">8.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#XFree86-from-pkgsrc">8.6. How can I install/use XFree86 from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.7. How can I install/use X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">8.8. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">8.9. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">8.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">8.11. What does &#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">8.7. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">8.8. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">8.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">8.10. What does &#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.12. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">8.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">8.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">8.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">8.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">8.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">8.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -347,23 +347,24 @@
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
 <dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">18.6.7. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">18.6.8. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.9. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">18.6.10. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">18.6.11. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">18.6.12. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">18.6.13. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">18.6.14. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">18.6.15. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">18.6.16. Packages installing TeX modules</a></span></dt>
-<dt><span class="sect2"><a href="#emulation-packages">18.6.17. Packages supporting running binaries in
+<dt><span class="sect2"><a href="#destdir-support">18.6.4. Adding DESTDIR support to packages</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">18.6.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">18.6.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">18.6.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">18.6.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">18.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">18.6.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">18.6.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">18.6.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">18.6.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">18.6.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">18.6.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">18.6.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#emulation-packages">18.6.18. Packages supporting running binaries in
     emulation</a></span></dt>
-<dt><span class="sect2"><a href="#hicolor-theme">18.6.18. Packages installing hicolor theme icons</a></span></dt>
-<dt><span class="sect2"><a href="#desktop-files">18.6.19. Packages installing desktop files</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">18.6.19. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">18.6.20. Packages installing desktop files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#punting">18.7. Marking packages as having problems</a></span></dt>
 </dl></dd>
@@ -553,14 +554,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&mdash; That means, if a package contains bugs, it's better to find
+&#8212; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&mdash; Like NetBSD has been ported to many hardware architectures,
+&#8212; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -815,14 +816,15 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">6. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -854,20 +856,19 @@ minutes!</p>
 <dt><span class="sect1"><a href="#faq-pkgtools">8.3. Utilities for package management (pkgtools)</a></span></dt>
 <dt><span class="sect1"><a href="#non-root-pkgsrc">8.4. How to use pkgsrc as non-root</a></span></dt>
 <dt><span class="sect1"><a href="#resume-transfers">8.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#XFree86-from-pkgsrc">8.6. How can I install/use XFree86 from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.7. How can I install/use X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">8.8. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">8.9. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">8.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">8.11. What does &#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">8.7. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">8.8. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">8.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">8.10. What does &#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.12. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">8.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">8.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">8.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">8.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">8.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">8.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -975,9 +976,9 @@ release=pkgsrc
 <pre class="programlisting">
 # recommended CVS configuration file from the pkgsrc guide
 checkout -P
-update -d
+update -dP
 release -d
-diff -up
+diff -upN
 cvs -q -z3
 rdiff -u
 </pre>
@@ -2304,14 +2305,15 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#selecting-the-compiler">5.3.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
 </dl>
 </div>
 <p>The whole pkgsrc system is configured in a single file, usually
@@ -2399,7 +2401,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &mdash; it is an internal definition which refers to the
+	    &#8212; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2421,10 +2423,42 @@ works.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="conf.compiler"></a>5.3. Selecting and configuring the compiler</h2></div></div></div>
+<a name="variables-affecting-installation"></a>5.3. Variables affecting the installion process</h2></div></div></div>
+<p>A growing number of packages support installation into a
+    subdirectory of <code class="varname">WRKDIR</code>. This allows a package
+    to be built, before the actual filesystem is touched. DESTDIR
+    support exists in two variations:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Basic DESTDIR support means that the package
+      installation and packaging is still run as
+      root.</p></li>
+<li><p>Full DESTDIR support can run the complete build,
+      installation and packaging as normal user. Root privileges are
+      only needed to add packages.</p></li>
+</ul></div>
+<p>To use the DESTDIR support, set either
+    <code class="varname">USE_DESTDIR=yes</code> to use the basic support for
+    packages that offer it or <code class="varname">USE_DESTDIR=full</code> to
+    get the full support with fallback to basic
+    support. <code class="varname">USE_DESTDIR=full</code> needs <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a> version 20070802 (or
+    newer). It might become the default DESTDIR support later.</p>
+<p>DESTDIR support changes the behaviour of various targets
+    slightly. To install a package after building it, use
+    <code class="literal">package-install</code>. <code class="literal">package</code> and
+    <code class="literal">install</code> don't do that any
+    longer. <code class="literal">package-install</code> can be used as
+    <code class="varname">DEPENDS_TARGET</code>.  <code class="literal">bin-install</code>
+    will ask for the root password to install the package and fail,
+    <code class="literal">package-install</code> will ask again.</p>
+<p>With basic DESTDIR support, <strong class="userinput"><code>make
+    clean</code></strong> needs to be run as root.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="conf.compiler"></a>5.4. Selecting and configuring the compiler</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="selecting-the-compiler"></a>5.3.1. Selecting the compiler</h3></div></div></div>
+<a name="selecting-the-compiler"></a>5.4.1. Selecting the compiler</h3></div></div></div>
 <p>By default, pkgsrc will use GCC to build packages.  This may be
     overridden by setting the following variables in /etc/mk.conf:</p>
 <div class="variablelist"><dl>
@@ -2467,7 +2501,7 @@ works.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.cflags"></a>5.3.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
+<a name="conf.cflags"></a>5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
 <p>If you wish to set the <code class="varname">CFLAGS</code> variable,
 	please make sure to use the <code class="literal">+=</code> operator
 	instead of the <code class="literal">=</code> operator:</p>
@@ -2482,7 +2516,7 @@ CFLAGS+=        -your -flags
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conf.ldflags"></a>5.3.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
+<a name="conf.ldflags"></a>5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</h3></div></div></div>
 <p>If you want to pass flags to the linker, both in the configure
 step and the build step, you can do this in two ways.  Either set
 <code class="varname">LDFLAGS</code> or <code class="varname">LIBS</code>.  The difference
@@ -2500,7 +2534,7 @@ LDFLAGS+=        -your -linkerflags
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="developer-advanced-settings"></a>5.4. Developer/advanced settings</h2></div></div></div>
+<a name="developer-advanced-settings"></a>5.5. Developer/advanced settings</h2></div></div></div>
 <p>XXX
       </p>
 <div class="itemizedlist"><ul type="disc">
@@ -2532,7 +2566,7 @@ LDFLAGS+=        -your -linkerflags
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="selecting-build-options"></a>5.5. Selecting Build Options</h2></div></div></div>
+<a name="selecting-build-options"></a>5.6. Selecting Build Options</h2></div></div></div>
 <p>Some packages have build time options, usually to select
     between different dependencies, enable optional support for big
     dependencies or enable experimental features.</p>
@@ -2918,7 +2952,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -3256,20 +3290,19 @@ currently running.</p></dd>
 <dt><span class="sect1"><a href="#faq-pkgtools">8.3. Utilities for package management (pkgtools)</a></span></dt>
 <dt><span class="sect1"><a href="#non-root-pkgsrc">8.4. How to use pkgsrc as non-root</a></span></dt>
 <dt><span class="sect1"><a href="#resume-transfers">8.5. How to resume transfers when fetching distfiles?</a></span></dt>
-<dt><span class="sect1"><a href="#XFree86-from-pkgsrc">8.6. How can I install/use XFree86 from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.7. How can I install/use X.org from pkgsrc?</a></span></dt>
-<dt><span class="sect1"><a href="#fetch-behind-firewall">8.8. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">8.9. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
-<dt><span class="sect1"><a href="#fetching-all-distfiles">8.10. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">8.11. What does &#8220;<span class="quote">Don't know how to make
+<dt><span class="sect1"><a href="#x.org-from-pkgsrc">8.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
+<dt><span class="sect1"><a href="#fetch-behind-firewall">8.7. How to fetch files from behind a firewall</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">8.8. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#fetching-all-distfiles">8.9. How to fetch all distfiles at once</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">8.10. What does &#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.12. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.13. Using 'sudo' with pkgsrc</a></span></dt>
-<dt><span class="sect1"><a href="#faq.conf">8.14. How do I change the location of configuration files?</a></span></dt>
-<dt><span class="sect1"><a href="#audit-packages">8.15. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-fail">8.17. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">8.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">8.12. Using 'sudo' with pkgsrc</a></span></dt>
+<dt><span class="sect1"><a href="#faq.conf">8.13. How do I change the location of configuration files?</a></span></dt>
+<dt><span class="sect1"><a href="#audit-packages">8.14. Automated security checks</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">8.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">8.16. A package does not build.  What shall I do?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">8.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -3280,7 +3313,7 @@ it contains items for both pkgsrc users and developers.</p>
 <a name="mailing-list-pointers"></a>8.1. Are there any mailing lists for pkg-related discussion?</h2></div></div></div>
 <p>The following mailing lists may be of interest to pkgsrc users:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-users" target="_top">pkgsrc-users</a>:
+<li><p><a href="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-users" target="_top">pkgsrc-users</a>:
 	  This is a general purpose list for most issues regarding
 	  pkgsrc, regardless of platform, e.g. soliciting user help
 	  for pkgsrc configuration, unexpected build failures, using
@@ -3289,10 +3322,10 @@ it contains items for both pkgsrc users and developers.</p>
 	  proposals for changes that impact the pkgsrc user community,
 	  e.g. major infrastructure changes, new features, package
 	  removals, etc., may also be posted.</p></li>
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bulk" target="_top">pkgsrc-bulk</a>:
+<li><p><a href="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-bulk" target="_top">pkgsrc-bulk</a>:
 	  A list where the results of pkgsrc bulk builds are sent and
 	  discussed.</p></li>
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-changes" target="_top">pkgsrc-changes</a>:
+<li><p><a href="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-changes" target="_top">pkgsrc-changes</a>:
 	  This list is for those who are interested in getting a
 	  commit message for every change committed to pkgsrc. It is
 	  also available in digest form, meaning one daily message
@@ -3437,34 +3470,23 @@ FETCH_OUTPUT_ARGS=     -O
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="XFree86-from-pkgsrc"></a>8.6. How can I install/use XFree86 from pkgsrc?</h2></div></div></div>
-<p>If you want to use XFree86 from pkgsrc instead of your system's own
-X11 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openwin</code>,
-...), you will have to add the following line into
-<code class="filename">/etc/mk.conf</code>:</p>
-<pre class="programlisting">
-X11_TYPE=XFree86
-</pre>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="x.org-from-pkgsrc"></a>8.7. How can I install/use X.org from pkgsrc?</h2></div></div></div>
-<p>If you want to use X.org from pkgsrc instead of your system's own X11
+<a name="x.org-from-pkgsrc"></a>8.6. How can I install/use modular X.org from pkgsrc?</h2></div></div></div>
+<p>If you want to use modular X.org from pkgsrc instead of your system's own X11
 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openwin</code>, ...)
 you will have to add the following line into
 <code class="filename">/etc/mk.conf</code>:</p>
 <pre class="programlisting">
-X11_TYPE=xorg
+X11_TYPE=modular
 </pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>The DragonFly operating system defaults to using
-this X.org X11 implementation from pkgsrc.</p>
+<p>The DragonFly operating system defaults to using modular X.org from pkgsrc.
+</p>
 </div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fetch-behind-firewall"></a>8.8. How to fetch files from behind a firewall</h2></div></div></div>
+<a name="fetch-behind-firewall"></a>8.7. How to fetch files from behind a firewall</h2></div></div></div>
 <p>If you are sitting behind a firewall which does not allow direct
 connections to Internet hosts (i.e. non-NAT), you may specify the
 relevant proxy hosts.  This is done using an environment variable in the
@@ -3479,7 +3501,7 @@ http_proxy=http://orpheus.amdahl.com:80/
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="passive-ftp"></a>8.9. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</h2></div></div></div>
+<a name="passive-ftp"></a>8.8. How do I tell <span><strong class="command">make fetch</strong></span> to do passive FTP?</h2></div></div></div>
 <p>This depends on which utility is used to retrieve distfiles.  From
 <code class="filename">bsd.pkg.mk</code>, <code class="varname">FETCH_CMD</code> is assigned
 the first available command from the following list:</p>
@@ -3499,7 +3521,7 @@ transfers.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fetching-all-distfiles"></a>8.10. How to fetch all distfiles at once</h2></div></div></div>
+<a name="fetching-all-distfiles"></a>8.9. How to fetch all distfiles at once</h2></div></div></div>
 <p>You would like to download all the distfiles in a single batch
 from work or university, where you can't run a <span><strong class="command">make
 fetch</strong></span>.  There is an archive of distfiles on <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/" target="_top">ftp.NetBSD.org</a>,
@@ -3531,7 +3553,7 @@ by running:</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="tmac.andoc-missing"></a>8.11. What does &#8220;<span class="quote">Don't know how to make
+<a name="tmac.andoc-missing"></a>8.10. What does &#8220;<span class="quote">Don't know how to make
 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</h2></div></div></div>
 <p>When compiling the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a>
 package, you get the error from make that it doesn't know how to make
@@ -3545,7 +3567,7 @@ environment or in <code class="filename">/etc/mk.conf</code>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="bsd.own.mk-missing"></a>8.12. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</h2></div></div></div>
+<a name="bsd.own.mk-missing"></a>8.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</h2></div></div></div>
 <p>You didn't install the compiler set, <code class="filename">comp.tgz</code>,
 when you installed your NetBSD machine.  Please get and install it, by
 extracting it in <code class="filename">/</code>:</p>
@@ -3557,7 +3579,7 @@ the one that corresponds to your release (determine via <span><strong class="com
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="using-sudo-with-pkgsrc"></a>8.13. Using 'sudo' with pkgsrc</h2></div></div></div>
+<a name="using-sudo-with-pkgsrc"></a>8.12. Using 'sudo' with pkgsrc</h2></div></div></div>
 <p>When installing packages as non-root user and using the just-in-time
 <a href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
 password for each required package installed.  To avoid this, the sudo
@@ -3575,7 +3597,7 @@ SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="faq.conf"></a>8.14. How do I change the location of configuration files?</h2></div></div></div>
+<a name="faq.conf"></a>8.13. How do I change the location of configuration files?</h2></div></div></div>
 <p>As the system administrator, you can choose where configuration files
 are installed.  The default settings make all these files go into
 <code class="filename">${PREFIX}/etc</code> or some of its subdirectories; this may
@@ -3597,7 +3619,7 @@ reinstall any affected packages.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="audit-packages"></a>8.15. Automated security checks</h2></div></div></div>
+<a name="audit-packages"></a>8.14. Automated security checks</h2></div></div></div>
 <p>Please be aware that there can often be bugs in third-party software,
 and some of these bugs can leave a machine vulnerable to exploitation by
 attackers.  In an effort to lessen the exposure, the NetBSD packages team
@@ -3631,7 +3653,7 @@ check.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ufaq-cflags"></a>8.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</h2></div></div></div>
+<a name="ufaq-cflags"></a>8.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</h2></div></div></div>
 <p>When you add your own preferences to the
 	<code class="varname">CFLAGS</code> variable in your
 	<code class="filename">mk.conf</code>, these flags are passed in
@@ -3653,7 +3675,7 @@ check.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ufaq-fail"></a>8.17. A package does not build.  What shall I do?</h2></div></div></div>
+<a name="ufaq-fail"></a>8.16. A package does not build.  What shall I do?</h2></div></div></div>
 <div class="procedure"><ol type="1">
 <li><p>Make sure that your copy of pkgsrc is consistent. A
 	case that occurs often is that people only update pkgsrc in
@@ -3674,7 +3696,7 @@ check.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="faq.rcs-conflicts"></a>8.18. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</h2></div></div></div>
+<a name="faq.rcs-conflicts"></a>8.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</h2></div></div></div>
 <p>You have modified a file from pkgsrc, and someone else has
 modified that same file afterwards in the CVS repository. Both changes
 are in the same region of the file, so when you updated pkgsrc, the
@@ -3876,23 +3898,24 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
 <dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">18.6.7. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">18.6.8. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.9. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">18.6.10. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">18.6.11. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">18.6.12. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">18.6.13. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">18.6.14. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">18.6.15. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">18.6.16. Packages installing TeX modules</a></span></dt>
-<dt><span class="sect2"><a href="#emulation-packages">18.6.17. Packages supporting running binaries in
+<dt><span class="sect2"><a href="#destdir-support">18.6.4. Adding DESTDIR support to packages</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">18.6.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">18.6.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">18.6.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">18.6.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">18.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">18.6.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">18.6.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">18.6.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">18.6.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">18.6.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">18.6.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">18.6.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#emulation-packages">18.6.18. Packages supporting running binaries in
     emulation</a></span></dt>
-<dt><span class="sect2"><a href="#hicolor-theme">18.6.18. Packages installing hicolor theme icons</a></span></dt>
-<dt><span class="sect2"><a href="#desktop-files">18.6.19. Packages installing desktop files</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">18.6.19. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">18.6.20. Packages installing desktop files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#punting">18.7. Marking packages as having problems</a></span></dt>
 </dl></dd>
@@ -4417,7 +4440,7 @@ converters    games         mbone         print         x11
 <li><p>Replace <code class="filename">/usr/local</code> with
       &#8220;<span class="quote">${PREFIX}</span>&#8221; in all files (see patches,
       below).</p></li>
-<li><p>If the package installs any info files, see <a href="#faq.info-files" title="18.6.6. Packages installing info files">Section 18.6.6, &#8220;Packages installing info files&#8221;</a>.</p></li>
+<li><p>If the package installs any info files, see <a href="#faq.info-files" title="18.6.7. Packages installing info files">Section 18.6.7, &#8220;Packages installing info files&#8221;</a>.</p></li>
 </ul></div>
 </div>
 <div class="sect1" lang="en">
@@ -4557,7 +4580,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &mdash;
+      kqueue support, add a check that detects kqueue itself &#8212;
       yes, this generally involves patching the
       <span><strong class="command">configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4928,7 +4951,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -7535,7 +7558,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2708068"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id455178"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7545,7 +7568,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2708077"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id455188"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7556,7 +7579,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2708088"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id455197"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7623,23 +7646,24 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#install-scripts">18.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">18.6.2. Where to install documentation</a></span></dt>
 <dt><span class="sect2"><a href="#installing-score-files">18.6.3. Installing highscore files</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">18.6.4. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">18.6.5. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">18.6.6. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">18.6.7. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">18.6.8. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.9. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">18.6.10. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">18.6.11. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">18.6.12. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">18.6.13. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">18.6.14. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">18.6.15. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">18.6.16. Packages installing TeX modules</a></span></dt>
-<dt><span class="sect2"><a href="#emulation-packages">18.6.17. Packages supporting running binaries in
+<dt><span class="sect2"><a href="#destdir-support">18.6.4. Adding DESTDIR support to packages</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">18.6.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">18.6.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">18.6.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">18.6.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">18.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">18.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">18.6.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">18.6.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">18.6.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">18.6.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">18.6.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">18.6.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">18.6.17. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#emulation-packages">18.6.18. Packages supporting running binaries in
     emulation</a></span></dt>
-<dt><span class="sect2"><a href="#hicolor-theme">18.6.18. Packages installing hicolor theme icons</a></span></dt>
-<dt><span class="sect2"><a href="#desktop-files">18.6.19. Packages installing desktop files</a></span></dt>
+<dt><span class="sect2"><a href="#hicolor-theme">18.6.19. Packages installing hicolor theme icons</a></span></dt>
+<dt><span class="sect2"><a href="#desktop-files">18.6.20. Packages installing desktop files</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#punting">18.7. Marking packages as having problems</a></span></dt>
 </dl>
@@ -8524,7 +8548,7 @@ pre-configure:
 <p>If a particular version of perl is needed, set the
     <code class="varname">PERL5_REQD</code> variable to the version number.  The
     default is &#8220;<span class="quote">5.0</span>&#8221;.</p>
-<p>See <a href="#perl-modules" title="18.6.5. Packages installing perl modules">Section 18.6.5, &#8220;Packages installing perl modules&#8221;</a> for information
+<p>See <a href="#perl-modules" title="18.6.6. Packages installing perl modules">Section 18.6.6, &#8220;Packages installing perl modules&#8221;</a> for information
     about handling perl modules.</p>
 </div>
 <div class="sect2" lang="en">
@@ -8800,7 +8824,26 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="hardcoded-paths"></a>18.6.4. Packages with hardcoded paths to other interpreters</h3></div></div></div>
+<a name="destdir-support"></a>18.6.4. Adding DESTDIR support to packages</h3></div></div></div>
+<div class="itemizedlist"><ul type="disc">
+<li><p>All installation operations have to be prefixed with
+      <code class="filename">${DESTDIR}</code>.</p></li>
+<li><p>automake gets this DESTDIR mostly right
+      automatically. Many manual rules and pre/post-install often are
+      incorrect; fix them.</p></li>
+<li><p>If files are installed with special owner/group
+      either use @owner/@group in the <code class="filename">PLIST</code>
+      (preferred) or use <code class="varname">SPECIAL_PERMS</code>
+      (discouraged). Note that @owner/@group are sticky during
+      install, keep this in mind.</p></li>
+<li><p>In general, packages should support
+      <code class="varname">UNPRIVILEGED</code> to be able to use
+      DESTDIR.</p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="hardcoded-paths"></a>18.6.5. Packages with hardcoded paths to other interpreters</h3></div></div></div>
 <p>Your package may also contain scripts with hardcoded paths to
       other interpreters besides (or as well as) perl.  To correct the
       full pathname to the script interpreter, you need to set the
@@ -8822,7 +8865,7 @@ REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="perl-modules"></a>18.6.5. Packages installing perl modules</h3></div></div></div>
+<a name="perl-modules"></a>18.6.6. Packages installing perl modules</h3></div></div></div>
 <p>Makefiles of packages providing perl5 modules should include
     the Makefile fragment
     <code class="filename">../../lang/perl5/module.mk</code>.  It provides a
@@ -8851,7 +8894,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="faq.info-files"></a>18.6.6. Packages installing info files</h3></div></div></div>
+<a name="faq.info-files"></a>18.6.7. Packages installing info files</h3></div></div></div>
 <p>Some packages install info files or use the
     &#8220;<span class="quote">makeinfo</span>&#8221;  or &#8220;<span class="quote">install-info</span>&#8221;
     commands.  <code class="varname">INFO_FILES</code> should be defined in
@@ -8898,7 +8941,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="manpages"></a>18.6.7. Packages installing man pages</h3></div></div></div>
+<a name="manpages"></a>18.6.8. Packages installing man pages</h3></div></div></div>
 <p>All packages that install manual pages should install them
     into the same directory, so that there is one common place to look
     for them. In pkgsrc, this place is
@@ -8935,7 +8978,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="gconf2-data-files"></a>18.6.8. Packages installing GConf2 data files</h3></div></div></div>
+<a name="gconf2-data-files"></a>18.6.9. Packages installing GConf2 data files</h3></div></div></div>
 <p>If a package installs <code class="filename">.schemas</code> or
     <code class="filename">.entries</code> files, used by GConf2,
     you need to take some extra steps to make sure they get registered
@@ -8955,7 +8998,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 	need to manually patch the package.</p></li>
 <li><p>Check the PLIST and remove any entries under the etc/gconf
 	directory, as they will be handled automatically.  See
-	<a href="#faq.conf" title="8.14. How do I change the location of configuration files?">Section 8.14, &#8220;How do I change the location of configuration files?&#8221;</a> for more information.</p></li>
+	<a href="#faq.conf" title="8.13. How do I change the location of configuration files?">Section 8.13, &#8220;How do I change the location of configuration files?&#8221;</a> for more information.</p></li>
 <li><p>Define the <code class="varname">GCONF2_SCHEMAS</code> variable in
 	your <code class="filename">Makefile</code> with a list of all
 	<code class="filename">.schemas</code> files installed by the package, if
@@ -8969,7 +9012,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="scrollkeeper-data-files"></a>18.6.9. Packages installing scrollkeeper data files</h3></div></div></div>
+<a name="scrollkeeper-data-files"></a>18.6.10. Packages installing scrollkeeper data files</h3></div></div></div>
 <p>If a package installs <code class="filename">.omf</code> files, used by
     scrollkeeper, you need to take some extra steps to make sure they
     get registered in the database:</p>
@@ -8989,7 +9032,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="x11-fonts"></a>18.6.10. Packages installing X11 fonts</h3></div></div></div>
+<a name="x11-fonts"></a>18.6.11. Packages installing X11 fonts</h3></div></div></div>
 <p>If a package installs font files, you will need to rebuild
     the fonts database in the directory where they get installed at
     installation and deinstallation time.  This can be automatically
@@ -9006,7 +9049,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="gtk2-modules"></a>18.6.11. Packages installing GTK2 modules</h3></div></div></div>
+<a name="gtk2-modules"></a>18.6.12. Packages installing GTK2 modules</h3></div></div></div>
 <p>If a package installs GTK2 immodules or loaders, you need to
     take some extra steps to get them registered in the GTK2 database
     properly:</p>
@@ -9034,7 +9077,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="sgml-xml-data"></a>18.6.12. Packages installing SGML or XML data</h3></div></div></div>
+<a name="sgml-xml-data"></a>18.6.13. Packages installing SGML or XML data</h3></div></div></div>
 <p>If a package installs SGML or XML data files that need to be
     registered in system-wide catalogs (like DTDs, sub-catalogs,
     etc.), you need to take some extra steps:</p>
@@ -9062,7 +9105,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="mime-database"></a>18.6.13. Packages installing extensions to the MIME database</h3></div></div></div>
+<a name="mime-database"></a>18.6.14. Packages installing extensions to the MIME database</h3></div></div></div>
 <p>If a package provides extensions to the MIME database by
     installing <code class="filename">.xml</code> files inside
     <code class="filename">${PREFIX}/share/mime/packages</code>, you
@@ -9092,7 +9135,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="intltool"></a>18.6.14. Packages using intltool</h3></div></div></div>
+<a name="intltool"></a>18.6.15. Packages using intltool</h3></div></div></div>
 <p>If a package uses intltool during its build, add
     <code class="literal">intltool</code> to the <code class="varname">USE_TOOLS</code>,
     which forces it to use the intltool package provided by pkgsrc,
@@ -9103,7 +9146,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="startup-scripts"></a>18.6.15. Packages installing startup scripts</h3></div></div></div>
+<a name="startup-scripts"></a>18.6.16. Packages installing startup scripts</h3></div></div></div>
 <p>If a package contains a rc.d script, it won't be copied into
     the startup directory by default, but you can enable it, by adding
     the option <code class="varname">PKG_RCD_SCRIPTS=YES</code> in
@@ -9114,7 +9157,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="tex-packages"></a>18.6.16. Packages installing TeX modules</h3></div></div></div>
+<a name="tex-packages"></a>18.6.17. Packages installing TeX modules</h3></div></div></div>
 <p>If a package installs TeX packages into the texmf tree,
     the <code class="filename">ls-R</code> database of the tree needs to be
     updated.</p>
@@ -9152,7 +9195,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="emulation-packages"></a>18.6.17. Packages supporting running binaries in
+<a name="emulation-packages"></a>18.6.18. Packages supporting running binaries in
     emulation</h3></div></div></div>
 <p>There are some packages that provide libraries and
     executables for running binaries from a one operating system
@@ -9169,7 +9212,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="hicolor-theme"></a>18.6.18. Packages installing hicolor theme icons</h3></div></div></div>
+<a name="hicolor-theme"></a>18.6.19. Packages installing hicolor theme icons</h3></div></div></div>
 <p>If a package installs images under the
     <code class="filename">share/icons/hicolor</code> and/or updates the
     <code class="filename">share/icons/hicolor/icon-theme.cache</code>
@@ -9191,7 +9234,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="desktop-files"></a>18.6.19. Packages installing desktop files</h3></div></div></div>
+<a name="desktop-files"></a>18.6.20. Packages installing desktop files</h3></div></div></div>
 <p>If a package installs <code class="filename">.desktop</code> files
       under <code class="filename">share/applications</code> and these include
       MIME information, you need to take extra steps to ensure that they
@@ -9353,7 +9396,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 	Finally, send this package to the pkgsrc bug tracking system,
 	either with the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> command, or if you don't have
 	that, go to the web page
-	<a href="http://www.NetBSD.org/Misc/send-pr.html" target="_top">http://www.NetBSD.org/Misc/send-pr.html</a>,
+	<a href="http://www.NetBSD.org/support/send-pr.html" target="_top">http://www.NetBSD.org/support/send-pr.html</a>,
 	which contains some instructions and a link to a form, where you
 	can submit packages.</p>
 <p>In the form of the problem report, the category should be
@@ -9538,7 +9581,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2713629"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id460078"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9554,7 +9597,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2713804"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id460113"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9572,7 +9615,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2713845"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id460151"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9590,7 +9633,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2713884"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id460224"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9603,7 +9646,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2713905"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id460243"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9619,7 +9662,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2713934"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id460273"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9643,7 +9686,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2714011"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id460348"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9651,7 +9694,7 @@ do?</a>
 <tr class="answer">
 <td align="left" valign="top"></td>
 <td align="left" valign="top"><div class="variablelist"><dl>
-<dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
+<dt><span class="term"><a href="http://www.NetBSD.org/mailinglists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
 <dd><p>This is a list for technical discussions related
 	to pkgsrc development, e.g. soliciting feedback for changes to
 	pkgsrc infrastructure, proposed new features, questions related
@@ -9659,7 +9702,7 @@ do?</a>
 	package, patches that affect many packages, help requests moved
 	from pkgsrc-users when an infrastructure bug is found,
 	etc.</p></dd>
-<dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a></span></dt>
+<dt><span class="term"><a href="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a></span></dt>
 <dd><p>All bug reports in category "pkg" sent with
 	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
 	directly; use one of the other mailing
@@ -9668,7 +9711,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2714050"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id460384"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9716,7 +9759,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2714180"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id460445"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9732,7 +9775,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &mdash; it contains a list of suggested new packages and a list of
+    &#8212; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -9899,24 +9942,24 @@ solution is given.  After applying the solution be sure to
 <tbody>
 <tr>
 <td>Installs OMF files under <code class="filename">share/omf</code>.</td>
-<td>See <a href="#scrollkeeper-data-files" title="18.6.9. Packages installing scrollkeeper data files">Section 18.6.9, &#8220;Packages installing scrollkeeper data files&#8221;</a>.</td>
+<td>See <a href="#scrollkeeper-data-files" title="18.6.10. Packages installing scrollkeeper data files">Section 18.6.10, &#8220;Packages installing scrollkeeper data files&#8221;</a>.</td>
 </tr>
 <tr>
 <td>Installs icons under the
         <code class="filename">share/icons/hicolor</code> hierarchy or updates
         <code class="filename">share/icons/hicolor/icon-theme.cache</code>.</td>
-<td>See <a href="#hicolor-theme" title="18.6.18. Packages installing hicolor theme icons">Section 18.6.18, &#8220;Packages installing hicolor theme icons&#8221;</a>.</td>
+<td>See <a href="#hicolor-theme" title="18.6.19. Packages installing hicolor theme icons">Section 18.6.19, &#8220;Packages installing hicolor theme icons&#8221;</a>.</td>
 </tr>
 <tr>
 <td>Installs files under
         <code class="filename">share/mime/packages</code>.</td>
-<td>See <a href="#mime-database" title="18.6.13. Packages installing extensions to the MIME database">Section 18.6.13, &#8220;Packages installing extensions to the MIME database&#8221;</a>.</td>
+<td>See <a href="#mime-database" title="18.6.14. Packages installing extensions to the MIME database">Section 18.6.14, &#8220;Packages installing extensions to the MIME database&#8221;</a>.</td>
 </tr>
 <tr>
 <td>Installs <code class="filename">.desktop</code> files under
         <code class="filename">share/applications</code> and these include MIME
         information.</td>
-<td>See <a href="#desktop-files" title="18.6.19. Packages installing desktop files">Section 18.6.19, &#8220;Packages installing desktop files&#8221;</a>.</td>
+<td>See <a href="#desktop-files" title="18.6.20. Packages installing desktop files">Section 18.6.20, &#8220;Packages installing desktop files&#8221;</a>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -10250,8 +10293,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>23.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&mdash;after
-	inclusion&mdash;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&#8212;after
+	inclusion&#8212;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
