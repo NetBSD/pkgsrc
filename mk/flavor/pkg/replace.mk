@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.14 2007/08/08 16:39:05 jlam Exp $
+# $NetBSD: replace.mk,v 1.15 2007/08/10 17:57:28 gdt Exp $
 #
 
 # _flavor-replace:
@@ -40,8 +40,8 @@ _flavor-undo-replace: \
 	replace-clean \
 	.PHONY
 
-_INSTALLED_INFO_FILE=	${PKG_DB_TMPDIR}/+INSTALLED_INFO
-_REQUIRED_BY_FILE=	${PKG_DB_TMPDIR}/+REQUIRED_BY
+_INSTALLED_INFO_FILE=	${WRKDIR}/.replace-+INSTALLED_INFO
+_REQUIRED_BY_FILE=	${WRKDIR}/.replace-+REQUIRED_BY
 
 _COOKIE.replace=	${WRKDIR}/.replace_done
 _REPLACE_OLDNAME_FILE=	${WRKDIR}/.replace_oldname
@@ -138,9 +138,11 @@ replace-preserve-required-by: .PHONY
 ### replace-fixup-required-by (PRIVATE)
 ######################################################################
 ### replace-fixup-required-by fixes the +CONTENTS files of dependent
-### packages to refer to the replacement package.  It also sets the
+### packages to refer to the replacement package, and puts the
+### +REQUIRED_BY file back into place.  It also sets the
 ### unsafe_depends_strict tag on each dependent package, and sets the
-### unsafe_depends tag if the replaced package has a different version.
+### unsafe_depends tag if the replaced package has a different
+### version.
 ### XXX Only set unsafe_depends if there is an ABI change.
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
@@ -170,7 +172,8 @@ replace-fixup-required-by: .PHONY
 		if ${TEST} "$$oldname" != "$$newname"; then		\
 			${PKG_ADMIN} set unsafe_depends=YES $$pkg;	\
 		fi;							\
-	done
+	done;								\
+	${MV} ${_REQUIRED_BY_FILE} ${_PKG_DBDIR}/${PKGNAME}/+REQUIRED_BY
 
 ######################################################################
 ### replace-fixup-installed-info (PRIVATE)
@@ -181,7 +184,9 @@ replace-fixup-required-by: .PHONY
 replace-fixup-installed-info: .PHONY
 	@${STEP_MSG} "Removing unsafe_depends tag."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for var in unsafe_depends unsafe_depends_strict rebuild; do				\
+	${TEST} ! -f ${_INSTALLED_INFO_FILE} ||
+	${MV} ${_INSTALLED_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO; \
+	for var in unsafe_depends unsafe_depends_strict rebuild; do	\
 		${TEST} ! -f ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO || \
 		${PKG_ADMIN} unset $$var ${PKGBASE};			\
 	done
