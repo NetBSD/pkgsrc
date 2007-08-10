@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1917 2007/08/03 14:03:39 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1918 2007/08/10 13:09:52 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -544,9 +544,17 @@ PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
 _ACCEPTABLE=	yes
 .    endif	# ACCEPTABLE_LICENSES
 .    if !defined(_ACCEPTABLE)
+.      if defined(MAKECONF)
+_MAKECONF?=	${MAKECONF}
+.      elif ${OPSYS} == "NetBSD" && ${MAKE} != "${PREFIX}/bin/bmake"
+_MAKECONF?=     /etc/mk.conf
+.      else
+_MAKECONF?=	${PREFIX}/etc/mk.conf
+.  endif
+
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
 	 "    To view the license, enter \"${MAKE} show-license\"." \
-	 "    To indicate acceptance, add this line to your /etc/mk.conf:" \
+	 "    To indicate acceptance, add this line to ${_MAKECONF}:" \
 	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
 .    endif	# _ACCEPTABLE
 .  endif	# LICENSE
