@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.8 2007/08/08 22:33:39 joerg Exp $ */
+/* $NetBSD: audit-packages.c,v 1.9 2007/08/10 22:50:46 adrianp Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -109,6 +109,7 @@ char *pkgname;					/* package name in msg */
 /* program defaults */
 int verbose = 0;				/* be quiet */
 Boolean eol = FALSE;				/* don't check eol */
+Boolean quiet = FALSE;				/* display full data */
 
 int main(int, char **);
 void *safe_calloc(size_t, size_t);
@@ -183,7 +184,7 @@ main(int argc, char **argv)
 
 	opterr = 0;
 
-	while ((ch = getopt(argc, argv, ":dveK:n:h:g:c:p:st:Q:V")) != -1) {
+	while ((ch = getopt(argc, argv, ":dveqK:n:h:g:c:p:st:Q:V")) != -1) {
 
 		switch (ch) {
 
@@ -223,6 +224,10 @@ main(int argc, char **argv)
 			one_package = optarg;
 			check_one = TRUE;
 			pkg_installed = TRUE;
+			break;
+		
+		case 'q':
+			quiet = TRUE;
 			break;
 
 		case 's':
@@ -675,9 +680,10 @@ checkforpkg(const char *one_package)
 void
 usage(void)
 {
-	fprintf(stderr, "Usage: %s [-desVv] [-c config_file] [-g file] [-h file] [-K pkg_dbdir] [-n package] [-p package] [-Q varname ] [-t type]\n", program_name);
+	fprintf(stderr, "Usage: %s [-deqsVv] [-c config_file] [-g file] [-h file] [-K pkg_dbdir] [-n package] [-p package] [-Q varname ] [-t type]\n", program_name);
 	fprintf(stderr, "\t-d : Run the download-vulnerability-list script before anything else.\n");
 	fprintf(stderr, "\t-e : Check for end-of-life (eol) packages.\n");
+	fprintf(stderr, "\t-q : Be quiet and just dump the detected vulnerable package names.\n");
 	fprintf(stderr, "\t-s : Verify the signature of the pkg-vulnerabilities file.\n");
 	fprintf(stderr, "\t-V : Display version and exit.\n");
 	fprintf(stderr, "\t-v : Be more verbose. Specify multiple -v flags to increase verbosity.\n");
@@ -768,7 +774,7 @@ pv_format(FILE * pv)
 			format_found = 1;
 
 			if (verbose >= 3)
-				fprintf(stdout, "debug3: File format detected: %s\n", line);
+				fprintf(stderr, "debug3: File format detected: %s\n", line);
 
 			break;
 		}
@@ -945,7 +951,11 @@ pv_message(char *pv_entry[])
 	/* deal with eol'ed packages */
 	if (strcmp(pv_entry[1], "eol") == 0) {
 		if (eol == TRUE) {
-			fprintf(stderr, "Package %s has reached end-of-life (eol), see %s/eol-packages\n", pv_entry[0], EOL_URL);
+			if (quiet == FALSE) {
+				fprintf(stdout, "Package %s has reached end-of-life (eol), see %s/eol-packages\n", pv_entry[0], EOL_URL);
+			} else {
+				fprintf(stdout, "%s\n", pv_entry[0]);
+			}
 		}
 	} else {
 		/* return that we found a vulnerable package */
@@ -955,7 +965,11 @@ pv_message(char *pv_entry[])
 		if (pkgname == NULL)
 			pkgname = pv_entry[0];
 
-		fprintf(stderr, "Package %s has a %s vulnerability, see %s\n", pkgname, pv_entry[1], pv_entry[2]);
+		if (quiet == FALSE) {	
+			fprintf(stdout, "Package %s has a %s vulnerability, see %s\n", pkgname, pv_entry[1], pv_entry[2]);
+		} else {
+			fprintf(stdout, "%s\n", pkgname);
+		}
 	}
 
 	return retval;
