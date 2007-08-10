@@ -13,3 +13,6 @@ The GdkPixBuf library provides a number of features:
 	* Image loading facilities.
 	* Rendering of a GdkPixBuf into various formats:
 	  drawables (windows, pixmaps), GdkRGB buffers.
+
+This is the gtk 1 version of gdk-pixbuf, which is obsolete.  It is
+included natively in gtk2+.
