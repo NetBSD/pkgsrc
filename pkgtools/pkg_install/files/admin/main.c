@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.23 2007/08/09 23:54:17 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.24 2007/08/10 00:03:51 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.23 2007/08/09 23:54:17 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.24 2007/08/10 00:03:51 joerg Exp $");
 #endif
 
 /*
@@ -768,6 +768,7 @@ set_installed_info_var(const char *name, void *cookie)
 	retval = var_set(filename, arg->variable, arg->value);
 
 	free(filename);
+	arg->got_match = 1;
 
 	return retval;
 }
