@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2007/08/02 22:07:32 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2007/08/10 17:57:13 jlam Exp $
 
-DISTNAME=	sqwebmail-5.1.2
-PKGREVISION=	1
+DISTNAME=	sqwebmail-5.1.6
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -55,7 +54,7 @@ CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 
-CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/courier/cgi-bin
+CONFIGURE_ARGS+=	--enable-cgibindir=${LIBEXECDIR:Q}/webmail
 CONFIGURE_ARGS+=	--enable-https=auto
 CONFIGURE_ARGS+=	--enable-imagedir=${SQWEBMAIL_IMAGEDIR:Q}
 CONFIGURE_ARGS+=	--enable-imageurl=${SQWEBMAIL_IMAGEURL:Q}
@@ -63,17 +62,17 @@ CONFIGURE_ARGS+=	--enable-mimetypes=${MIME_TYPES:Q}
 CONFIGURE_ARGS+=	--with-cachedir=${SQWEBMAIL_CACHEDIR:Q}
 CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-calendardir=${SQWEBMAIL_CALENDARDIR:Q}
-CONFIGURE_ARGS+=	--with-ispell="${LOCALBASE}/bin/ispell"
+CONFIGURE_ARGS+=	--with-ispell="${PREFIX}/bin/ispell"
 CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP:Q}
-CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
+CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_PATH.gzip:Q}
-CONFIGURE_ENV+=		GPG="${LOCALBASE}/bin/gpg"
-CONFIGURE_ENV+=		ldapsearch="${LOCALBASE}/bin/ldapsearch"
+CONFIGURE_ENV+=		GPG=${PREFIX:Q}/bin/gpg
+CONFIGURE_ENV+=		ldapsearch=${PREFIX:Q}/bin/ldapsearch
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
-REQD_DIRS_PERMS+=	${LIBEXECDIR}/cgi-bin				\
+REQD_DIRS_PERMS+=	${LIBEXECDIR}/webmail				\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 MAKE_DIRS+=		${VARBASE}/run ${LOCALSTATEDIR}
 OWN_DIRS+=		${SQWEBMAIL_STATEDIR}
@@ -111,10 +110,10 @@ post-build:
 	${ECHO} "local" > ${WRKDIR}/calendarmode
 
 # The sqwebmail install target incorrectly overwrites the mode on
-# cgi-bin directory, so fix it back to the right value.
+# the webmail directory, so fix it back to the right value.
 #
 fix-perms:
-	${CHMOD} 0700 ${LIBEXECDIR}/cgi-bin
+	${CHMOD} 0700 ${LIBEXECDIR}/webmail
 
 post-install: fix-perms
 	${LN} -s ${PREFIX}/share/courier/sqwebmail/webgpg ${PREFIX}/sbin

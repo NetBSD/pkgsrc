@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2006/04/28 18:16:25 jlam Exp $
+$NetBSD: MESSAGE,v 1.8 2007/08/10 17:57:13 jlam Exp $
 
 You must create a cron job that runs at regular intervals (one hour is
 fine) that executes the following Perl script to clean the SqWebMail
@@ -10,11 +10,11 @@ user cache:
 There are two things which must be done to make SqWebMail accessible
 through your HTTP server:
 
-  (1) Copy the ``sqwebmail'' CGI binary to the appropriate place in your
-      HTTP document root, e.g. ${PREFIX}/libexec/cgi-bin, then Maildir
-      accounts would be accessible through:
+  (1) Copy the ``webmail'' CGI binary to the appropriate place in your
+      HTTP document root, e.g. ${PREFIX}/libexec/cgi-bin.  Maildir
+      accounts would be accessible through, e.g.:
 
-        http://your.domain.com/cgi-bin/sqwebmail
+        http://your.domain.com/cgi-bin/webmail
 
   (2) Make URLs with path ``${IMAGEURL}/'' resolve to the images located
       in the ${IMAGEDIR} directory.

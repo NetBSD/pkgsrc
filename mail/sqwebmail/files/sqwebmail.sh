@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.7 2006/11/20 11:45:14 cube Exp $
+# $NetBSD: sqwebmail.sh,v 1.8 2007/08/10 17:57:14 jlam Exp $
 #
 # Courier SqWebMail services daemon
 #
@@ -17,11 +17,12 @@ ctl_command="@PREFIX@/sbin/sqwebmaild"
 pidfile="@VARBASE@/run/sqwebmaild.pid"
 required_files="@PKG_SYSCONFDIR@/calendarmode @PKG_SYSCONFDIR@/sqwebmaild"
 
-start_precmd="sqwebmail_prestart"
-start_cmd="sqwebmail_doit start"
-stop_cmd="sqwebmail_doit stop"
+start_precmd="${name}_prestart"
+start_cmd="${name}_doit start"
+stop_cmd="${name}_doit stop"
 
-mkdir_perms() {
+mkdir_perms()
+{
 	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir
