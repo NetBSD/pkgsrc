@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1770 2007/08/10 23:22:42 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.1771 2007/08/10 23:38:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3247,3 +3247,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/guile-cairo to 1.4.0 [gdt 2007-08-10]
 	Updated games/openttd to 0.5.2 [tnn 2007-08-10]
 	Updated graphics/gimp-ufraw to 0.12.1 [gdt 2007-08-10]
+	Updated net/net-snmp to 5.4nb2 [seb 2007-08-10]
