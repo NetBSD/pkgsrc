@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/10 21:10:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/10 22:24:21 gdt Exp $
 bin/guile-gnome-0
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-0/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -15,26 +15,29 @@ include/guile-gnome-0/guile-gnome-gobject/gutil.h
 include/guile-gnome-0/guile-gnome-gobject/gvalue.h
 info/guile-gnome-tutorial.info
 lib/guile-gnome-0/libgw-guile-gnome-atk.la
+lib/guile-gnome-0/libgw-guile-gnome-cairo.la
 lib/guile-gnome-0/libgw-guile-gnome-canvas.la
 lib/guile-gnome-0/libgw-guile-gnome-corba.la
 lib/guile-gnome-0/libgw-guile-gnome-gconf.la
-@comment lib/guile-gnome-0/libgw-guile-gnome-gdk.la
+lib/guile-gnome-0/libgw-guile-gnome-gdk.la
 lib/guile-gnome-0/libgw-guile-gnome-glib.la
 lib/guile-gnome-0/libgw-guile-gnome-gnome-vfs.la
 lib/guile-gnome-0/libgw-guile-gnome-gobject.la
-@comment lib/guile-gnome-0/libgw-guile-gnome-gtk.la
+lib/guile-gnome-0/libgw-guile-gnome-gtk.la
 lib/guile-gnome-0/libgw-guile-gnome-libglade.la
 lib/guile-gnome-0/libgw-guile-gnome-libgnome.la
 lib/guile-gnome-0/libgw-guile-gnome-libgnomeui.la
 lib/guile-gnome-0/libgw-guile-gnome-pango.la
+lib/guile-gnome-0/libgw-guile-gnome-pangocairo.la
 lib/libguile-gnome-corba-0.la
 lib/libguile-gnome-gobject-0.la
 lib/orbit-2.0/Foo_module.la
 lib/pkgconfig/guile-gnome-defs-0.pc
 lib/pkgconfig/guile-gnome-glib-0.pc
-@comment lib/pkgconfig/guile-gnome-gtk-0.pc
+lib/pkgconfig/guile-gnome-gtk-0.pc
 lib/pkgconfig/guile-gnome-libgnomeui-0.pc
 share/guile-gnome-0/gnome/atk.scm
+share/guile-gnome-0/gnome/cairo.scm
 share/guile-gnome-0/gnome/canvas.scm
 share/guile-gnome-0/gnome/contrib/delay-tree-model.scm
 share/guile-gnome-0/gnome/contrib/filtered-list.scm
@@ -62,7 +65,6 @@ share/guile-gnome-0/gnome/defs/glib-types.defs
 share/guile-gnome-0/gnome/defs/glib.defs
 share/guile-gnome-0/gnome/defs/gnome-vfs-types.defs
 share/guile-gnome-0/gnome/defs/gnome-vfs.defs
-@comment share/guile-gnome-0/gnome/defs/gnome.defs
 share/guile-gnome-0/gnome/defs/gtk-extrafuncs.defs
 share/guile-gnome-0/gnome/defs/gtk-types.defs
 share/guile-gnome-0/gnome/defs/gtk.defs
@@ -110,19 +112,21 @@ share/guile-gnome-0/gnome/gobject/gvalue.scm
 share/guile-gnome-0/gnome/gobject/gw-spec-utils.scm
 share/guile-gnome-0/gnome/gobject/gw-utils.scm
 share/guile-gnome-0/gnome/gobject/utils.scm
-@comment share/guile-gnome-0/gnome/gtk.scm
+share/guile-gnome-0/gnome/gtk.scm
 share/guile-gnome-0/gnome/gtk/gdk-event.scm
 share/guile-gnome-0/gnome/gtk/graphical-repl.scm
 share/guile-gnome-0/gnome/gw/atk-spec.scm
 share/guile-gnome-0/gnome/gw/atk.scm
+share/guile-gnome-0/gnome/gw/cairo-spec.scm
+share/guile-gnome-0/gnome/gw/cairo.scm
 share/guile-gnome-0/gnome/gw/canvas-spec.scm
 share/guile-gnome-0/gnome/gw/canvas.scm
 share/guile-gnome-0/gnome/gw/corba-spec.scm
 share/guile-gnome-0/gnome/gw/corba.scm
 share/guile-gnome-0/gnome/gw/gconf-spec.scm
 share/guile-gnome-0/gnome/gw/gconf.scm
-@comment share/guile-gnome-0/gnome/gw/gdk-spec.scm
-@comment share/guile-gnome-0/gnome/gw/gdk.scm
+share/guile-gnome-0/gnome/gw/gdk-spec.scm
+share/guile-gnome-0/gnome/gw/gdk.scm
 share/guile-gnome-0/gnome/gw/generics.scm
 share/guile-gnome-0/gnome/gw/glib-spec.scm
 share/guile-gnome-0/gnome/gw/glib.scm
@@ -130,8 +134,8 @@ share/guile-gnome-0/gnome/gw/gnome-vfs-spec.scm
 share/guile-gnome-0/gnome/gw/gnome-vfs.scm
 share/guile-gnome-0/gnome/gw/gobject-spec.scm
 share/guile-gnome-0/gnome/gw/gobject.scm
-@comment share/guile-gnome-0/gnome/gw/gtk-spec.scm
-@comment share/guile-gnome-0/gnome/gw/gtk.scm
+share/guile-gnome-0/gnome/gw/gtk-spec.scm
+share/guile-gnome-0/gnome/gw/gtk.scm
 share/guile-gnome-0/gnome/gw/libglade-spec.scm
 share/guile-gnome-0/gnome/gw/libglade.scm
 share/guile-gnome-0/gnome/gw/libgnome-spec.scm
@@ -140,6 +144,8 @@ share/guile-gnome-0/gnome/gw/libgnomeui-spec.scm
 share/guile-gnome-0/gnome/gw/libgnomeui.scm
 share/guile-gnome-0/gnome/gw/pango-spec.scm
 share/guile-gnome-0/gnome/gw/pango.scm
+share/guile-gnome-0/gnome/gw/pangocairo-spec.scm
+share/guile-gnome-0/gnome/gw/pangocairo.scm
 share/guile-gnome-0/gnome/gw/support/defs.scm
 share/guile-gnome-0/gnome/gw/support/g-wrap.scm
 share/guile-gnome-0/gnome/gw/support/genwrite.scm
