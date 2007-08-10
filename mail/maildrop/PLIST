@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/28 18:14:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/08/10 17:57:09 jlam Exp $
 bin/lockmail
 bin/mailbot
 bin/maildrop
+bin/makedat
 bin/makemime
 bin/reformail
 bin/reformime
+libexec/courier/makedatprog
 man/man1/lockmail.1
 man/man1/mailbot.1
 man/man1/maildrop.1
@@ -15,6 +17,7 @@ man/man1/reformime.1
 man/man7/maildropex.7
 man/man7/maildropfilter.7
 man/man7/maildropgdbm.7
+share/courier/makedat
 share/doc/courier/README.postfix
 share/doc/courier/lockmail.html
 share/doc/courier/mailbot.html
