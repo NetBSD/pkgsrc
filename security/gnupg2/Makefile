@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/08/04 12:00:02 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/10 15:46:23 gdt Exp $
 #
 
 DISTNAME=		gnupg-2.0.5
@@ -17,6 +17,10 @@ HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
 COMMENT=		GNUpg with OpenPGP and S/MIME capabilities
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+# ../licommon/libcommon.a
+# reported upstream, should be fixed in 2.0.6
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
