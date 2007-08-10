@@ -5,7 +5,7 @@ NNAAMMEE
      installed packages
 
 SSYYNNOOPPSSIISS
-     aauuddiitt--ppaacckkaaggeess [--ddeessVVvv] [--cc _c_o_n_f_i_g___f_i_l_e] [--gg _f_i_l_e] [--hh _f_i_l_e]
+     aauuddiitt--ppaacckkaaggeess [--ddeeqqssVVvv] [--cc _c_o_n_f_i_g___f_i_l_e] [--gg _f_i_l_e] [--hh _f_i_l_e]
                     [--KK _p_k_g___d_b_d_i_r] [--nn _p_a_c_k_a_g_e] [--pp _p_a_c_k_a_g_e] [--QQ _v_a_r_n_a_m_e]
                     [--tt _t_y_p_e]
      ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt [--hhss] [--cc _c_o_n_f_i_g___f_i_l_e]
@@ -42,6 +42,10 @@ DDEESSCCRRIIPPTTIIOONN
      --QQ _v_a_r_n_a_m_e        Display the current value of _v_a_r_n_a_m_e and exit.  Cur-
                        rently supported _v_a_r_n_a_m_e are GPG, PKGVULNDIR, and
                        IGNORE_URLS.
+
+     --qq                Be ``quiet'' in emitting report headers and such, just
+                       dump the raw info (basically, assume a non-human read-
+                       ing).
 
      --ss                Verify the signature of the current _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
                        file.  The key used to sign the file is available from:
@@ -90,6 +94,11 @@ DDEESSCCRRIIPPTTIIOONN
      is compressed using gzip(1).  The compression tool used can set in
      audit-packages.conf(5).  Currently only gzcat(1) and bzcat(1) are sup-
      ported.
+
+     aauuddiitt--ppaacckkaaggeess and/or ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt need not be run by the
+     root user.  They will function as an unpriveleged user just so long as
+     the user chosen has permmission to write the downloded _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_e_s
+     file to the location specified in audit-packages.conf(5).
 
      Each line lists the package and vulnerable versions, the type of exploit,
      and an Internet address for further information:
@@ -187,4 +196,4 @@ HHIISSTTOORRYY
      signatures on downloaded files.  The original idea came from Roland
      Dowdeswell and Bill Sommerfeld.
 
-NetBSD 4.0                      August 10, 2007                     NetBSD 4.0
+NetBSD 3.1                      August 10, 2007                     NetBSD 3.1
