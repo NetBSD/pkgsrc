@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1767 2007/08/10 21:11:08 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.1768 2007/08/10 21:21:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added meta-pkgs/courier version 0.56.0 [jlam 2007-08-10]
 	Updated chat/xchat to 2.8.4nb1 [tron 2007-08-10]
 	Updated devel/guile-gnome to 2.15.93 [gdt 2007-08-10]
+	Updated graphics/guile-cairo to 1.4.0 [gdt 2007-08-10]
