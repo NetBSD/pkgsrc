@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.51 2007/06/19 17:01:31 joerg Exp $
+# $NetBSD: defaults.mk,v 1.52 2007/08/10 03:46:10 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -119,6 +119,7 @@ _TOOLS_VARNAME.printf=		PRINTF
 _TOOLS_VARNAME.pwd=		PWD_CMD
 _TOOLS_VARNAME.rm=		RM
 _TOOLS_VARNAME.rmdir=		RMDIR
+_TOOLS_VARNAME.rpm2pkg=		RPM2PKG
 _TOOLS_VARNAME.sed=		SED
 _TOOLS_VARNAME.sh=		SH
 _TOOLS_VARNAME.shlock=		SHLOCK
@@ -152,6 +153,7 @@ _TOOLS_VARNAME.yacc=		YACC
 _TOOLS_VARNAME_GNU.awk=		AWK
 _TOOLS_VARNAME_GNU.bison-yacc=	YACC
 _TOOLS_VARNAME_GNU.byacc=	YACC
+_TOOLS_VARNAME_GNU.cat=		CAT ac_cv_path_CAT
 _TOOLS_VARNAME_GNU.chmod=	CHMOD
 _TOOLS_VARNAME_GNU.cmp=		CMP
 _TOOLS_VARNAME_GNU.cp=		CP
