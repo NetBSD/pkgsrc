@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/10 21:22:40 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/10 22:47:29 gdt Exp $
 #
 
 DISTNAME=	guile-cairo-1.4.0
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://download.gna.org/guile-cairo/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://download.gna.org/guile-cairo/
+HOMEPAGE=	http://home.gna.org/guile-cairo/
 COMMENT=	Guile wrapper for cairo
 
 GNU_CONFIGURE=	yes
