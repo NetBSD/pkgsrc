@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2006/11/24 15:38:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/08/10 23:10:38 gdt Exp $
 bin/ufraw
 bin/ufraw-batch
 lib/gimp/2.0/plug-ins/ufraw-gimp
 man/man1/ufraw.1
 share/applications/ufraw.desktop
 share/gconf/schemas/ufraw.schemas
+share/locale/da/LC_MESSAGES/ufraw.mo
+share/locale/ja/LC_MESSAGES/ufraw.mo
 share/locale/fr/LC_MESSAGES/ufraw.mo
+share/locale/pt/LC_MESSAGES/ufraw.mo
 share/locale/ru/LC_MESSAGES/ufraw.mo
-share/mime/packages/ufraw-mime.xml
 share/pixmaps/ufraw.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in shared-mime-info: @dirrm share/mime/packages
