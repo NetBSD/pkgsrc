@@ -1,11 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2007/02/05 12:06:16 adam Exp $
+$NetBSD: patch-aa,v 1.7 2007/08/10 23:37:02 seb Exp $
 
---- agent/mibgroup/host/hr_filesys.c.orig	2006-08-06 02:01:01.000000000 +0200
+--- agent/mibgroup/host/hr_filesys.c.orig	2006-08-06 00:01:01.000000000 +0000
 +++ agent/mibgroup/host/hr_filesys.c
-@@ -93,6 +93,7 @@ struct mnttab  *HRFS_entry = &HRFS_entry
+@@ -93,6 +93,11 @@ struct mnttab  *HRFS_entry = &HRFS_entry
  
  #elif defined(HAVE_STATVFS) && defined(__NetBSD__)
  
++#if !defined(MFSNAMELEN) && defined(_VFS_NAMELEN)
++#define MFSNAMELEN _VFS_NAMELEN
++#endif
++
 +#define getfsstat getvfsstat
  static struct statvfs	*fsstats = NULL;
  struct statvfs		*HRFS_entry;
