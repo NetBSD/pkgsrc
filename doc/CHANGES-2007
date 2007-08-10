@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1766 2007/08/10 19:10:24 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1767 2007/08/10 21:11:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/courier-authlib to 0.59.3 [jlam 2007-08-10]
 	Added meta-pkgs/courier version 0.56.0 [jlam 2007-08-10]
 	Updated chat/xchat to 2.8.4nb1 [tron 2007-08-10]
+	Updated devel/guile-gnome to 2.15.93 [gdt 2007-08-10]
