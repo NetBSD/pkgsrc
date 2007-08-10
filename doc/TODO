@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6579 2007/08/10 18:24:12 jlam Exp $
+$NetBSD: TODO,v 1.6580 2007/08/10 22:27:18 gdt Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o guile-gnome-2.15.90
 	o guile-gtk-2.0
 	o gwave-20031224
 	o gworkspace-0.8.5
