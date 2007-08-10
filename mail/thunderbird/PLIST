@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/06/15 08:55:29 ghen Exp $
+@comment $NetBSD: PLIST,v 1.22.2.1 2007/08/10 01:40:48 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2261,6 +2261,7 @@ include/${MOZILLA}/system-pref/nsSystemPrefService.h
 include/${MOZILLA}/toolkitcomps/nsICommandLine.h
 include/${MOZILLA}/toolkitcomps/nsICommandLineHandler.h
 include/${MOZILLA}/toolkitcomps/nsICommandLineRunner.h
+include/${MOZILLA}/toolkitcomps/nsICommandLineValidator.h
 include/${MOZILLA}/toolkitcomps/nsIRemoteService.h
 include/${MOZILLA}/toolkitcomps/nsToolkitCompsCID.h
 include/${MOZILLA}/transformiix/nsIXFormsUtilityService.h
@@ -2539,6 +2540,7 @@ include/${MOZILLA}/xpcom/nsIEnumerator.h
 include/${MOZILLA}/xpcom/nsIEnvironment.h
 include/${MOZILLA}/xpcom/nsIErrorService.h
 include/${MOZILLA}/xpcom/nsIEventQueue.h
+include/${MOZILLA}/xpcom/nsIEventQueueListener.h
 include/${MOZILLA}/xpcom/nsIEventQueueService.h
 include/${MOZILLA}/xpcom/nsIEventTarget.h
 include/${MOZILLA}/xpcom/nsIException.h
