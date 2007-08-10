@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.13 2007/08/10 21:18:31 joerg Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.14 2007/08/10 22:39:13 gdt Exp $
 .\"
 .\" Copyright (c) 1999-2002 Hubert Feyrer.  All rights reserved.
 .\"
@@ -198,9 +198,10 @@ Needs to be run as root.
 .It Cm rebuild-tree
 Rebuild the +REQUIRED_BY files from scratch by reresolving all dependencies.
 .Pp
-This option is intended to be used for fixing the state after forced
-removal or additions of packages like done by
-.Cm make replace .
+This option is intended to be used for fixing inconsistencies between
+the records of depending and depended-on packages, such as can arise
+by the use of
+.Cm pkg_delete -f .
 .It Cm set Ar variable=value pkg ...
 Set variable with information about the installed package.
 Use
