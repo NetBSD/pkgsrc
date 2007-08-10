@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.10 2007/05/22 16:17:16 joerg Exp $
+# $NetBSD: install.mk,v 1.11 2007/08/10 04:00:43 jlam Exp $
 #
 # _flavor-check-conflicts:
 #	Checks for conflicts between the package and installed packages.
@@ -14,6 +14,9 @@
 # _flavor-register:
 #	Populates the package database with the appropriate entries to
 #	register the package as being installed on the system.
+#
+# _flavor-install-clean:
+#	Removes the state files from the run of an ``install'' target.
 #
 
 _flavor-check-conflicts: .PHONY error-check
@@ -66,3 +69,5 @@ _flavor-register: .PHONY generate-metadata ${_RDEPENDS_FILE}
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${_FULL_DEPENDS_CMD} |		\
 		${SORT} -u | ${_REGISTER_DEPENDENCIES} ${PKGNAME}
+
+_flavor-install-clean: .PHONY clean-metadata
