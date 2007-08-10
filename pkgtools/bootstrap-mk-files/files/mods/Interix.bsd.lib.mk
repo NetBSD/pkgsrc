@@ -1,4 +1,4 @@
-#	$NetBSD: Interix.bsd.lib.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: Interix.bsd.lib.mk,v 1.2 2007/08/10 13:04:13 joerg Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -117,7 +117,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.c:Q} ${.IMPSRC}
 	@${COMPILE.c} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -127,7 +127,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.c:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.c} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -137,7 +137,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.c:Q} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.c} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -150,7 +150,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.cc:Q} ${.IMPSRC}
 	@${COMPILE.cc} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -160,7 +160,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.cc:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.cc} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -170,7 +170,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.cc:Q} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.cc} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -180,7 +180,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.f:Q} ${.IMPSRC}
 	@${COMPILE.f} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -190,7 +190,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.f:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.f} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -200,7 +200,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.f:Q} ${FPICFLAGS} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.f} ${FPICFLAGS} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -213,7 +213,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.m:Q} ${.IMPSRC}
 	@${COMPILE.m} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -223,7 +223,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.m:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.m} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -233,26 +233,26 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.m:Q} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.m} ${CPICFLAGS} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
 .S.o .s.o:
 	@echo ${COMPILE.S:Q} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC}
 	@${COMPILE.S} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 
 .S.po .s.po:
 	@echo ${COMPILE.S:Q} -DGPROF -DPROF ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.S} -DGPROF -DPROF ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 
 .S.so .s.so:
 	@echo ${COMPILE.S:Q} ${CAPICFLAGS} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.S} ${CAPICFLAGS} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -x -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 
 .if ${MKPIC} == "no" || (defined(LDSTATIC) && ${LDSTATIC} != "") \
