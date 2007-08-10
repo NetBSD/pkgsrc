@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.1.in,v 1.4 2007/08/10 01:11:05 wiz Exp $
+.\" $NetBSD: audit-packages.1.in,v 1.5 2007/08/10 22:50:46 adrianp Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -39,7 +39,7 @@
 .Nd show vulnerabilities in installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl desVv
+.Op Fl deqsVv
 .Op Fl c Ar config_file
 .Op Fl g Ar file
 .Op Fl h Ar file
@@ -102,6 +102,9 @@ are
 .Dv PKGVULNDIR ,
 and
 .Dv IGNORE_URLS .
+.It Fl q
+Be ``quiet'' in emitting report headers and such, just dump the
+raw info (basically, assume a non-human reading).
 .It Fl s
 Verify the signature of the current
 .Pa pkg-vulnerabilities
@@ -183,6 +186,16 @@ Currently only
 and
 .Xr bzcat 1
 are supported.
+.Pp
+.Nm audit-packages 
+and/or 
+.Nm download-vulnerability-list 
+need not be run by the root user.  They will function as an unpriveleged 
+user just so long as the user chosen has permmission to write the 
+downloded 
+.Pa pkg-vulnerabilites 
+file to the location specified in 
+.Xr audit-packages.conf 5 .
 .Pp
 Each line lists the package and vulnerable versions, the type of exploit,
 and an Internet address for further information:
