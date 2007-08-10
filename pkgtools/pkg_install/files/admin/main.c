@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.24 2007/08/10 00:03:51 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.25 2007/08/10 21:18:31 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.24 2007/08/10 00:03:51 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.25 2007/08/10 21:18:31 joerg Exp $");
 #endif
 
 /*
@@ -450,6 +450,90 @@ lsbasepattern_fn(const char *pattern, const char *pkg, void *vp)
 	return 0;
 }
 
+static int
+remove_required_by(const char *pkgname, void *cookie)
+{
+	char *path;
+
+	if (asprintf(&path, "%s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgname,
+		     REQUIRED_BY_FNAME) == -1)
+		errx(EXIT_FAILURE, "asprintf failed");
+
+	if (unlink(path) == -1 && errno != ENOENT)
+		err(EXIT_FAILURE, "Cannot remove %s", path);
+
+	free(path);
+
+	return 0;
+}
+
+static void
+add_required_by(const char *pattern, const char *required_by)
+{
+	char *best_installed, *path;
+	int fd;
+	size_t len;
+
+	best_installed = find_best_matching_installed_pkg(pattern);
+	if (best_installed == NULL) {
+		warnx("Dependency %s of %s unresolved", pattern, required_by);
+		return;
+	}
+
+	if (asprintf(&path, "%s/%s/%s", _pkgdb_getPKGDB_DIR(), best_installed,
+		     REQUIRED_BY_FNAME) == -1)
+		errx(EXIT_FAILURE, "asprintf failed");
+	free(best_installed);
+
+	if ((fd = open(path, O_WRONLY | O_APPEND | O_CREAT, 0644)) == -1)
+		errx(EXIT_FAILURE, "Cannot write to %s", path);
+	free(path);
+	
+	len = strlen(required_by);
+	if (write(fd, required_by, len) != len ||
+	    write(fd, "\n", 1) != 1 ||
+	    close(fd) == -1)
+		errx(EXIT_FAILURE, "Cannot write to %s", path);
+}
+
+
+static int
+add_depends_of(const char *pkgname, void *cookie)
+{
+	FILE *fp;
+	plist_t *p;
+	package_t plist;
+	char *path;
+
+	if (asprintf(&path, "%s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgname,
+		     CONTENTS_FNAME) == -1)
+		errx(EXIT_FAILURE, "asprintf failed");
+	if ((fp = fopen(path, "r")) == NULL)
+		errx(EXIT_FAILURE, "Cannot read %s of package %s",
+		    CONTENTS_FNAME, pkgname);
+	free(path);
+	read_plist(&plist, fp);
+	fclose(fp);
+
+	for (p = plist.head; p; p = p->next) {
+		if (p->type == PLIST_PKGDEP)
+			add_required_by(p->name, pkgname);
+	}
+
+	free_plist(&plist);	
+
+	return 0;
+}
+
+static void
+rebuild_tree(void)
+{
+	if (iterate_pkg_db(remove_required_by, NULL) == -1)
+		errx(EXIT_FAILURE, "cannot iterate pkgdb");
+	if (iterate_pkg_db(add_depends_of, NULL) == -1)
+		errx(EXIT_FAILURE, "cannot iterate pkgdb");
+}
+
 int 
 main(int argc, char *argv[])
 {
@@ -535,6 +619,12 @@ main(int argc, char *argv[])
 	} else if (strcasecmp(argv[0], "rebuild") == 0) {
 
 		rebuild();
+		printf("Done.\n");
+
+	  
+	} else if (strcasecmp(argv[0], "rebuild-tree") == 0) {
+
+		rebuild_tree();
 		printf("Done.\n");
 
 	} else if (strcasecmp(argv[0], "check") == 0) {
