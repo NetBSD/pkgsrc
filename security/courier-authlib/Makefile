@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/07/02 10:34:55 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/10 17:57:21 jlam Exp $
 
 .include "Makefile.common"
 
-DISTNAME=	courier-authlib-0.58
-PKGREVISION=	3
+DISTNAME=	courier-authlib-0.59.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,9 +35,10 @@ OWN_DIRS_PERMS=		${AUTHDAEMONVAR} ${COURIER_USER} ${COURIER_GROUP} 0750
 FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR:Q}
 
 # Expect is used to change the password from within the courier webmail
-# application (sqwebmail).
+# application (sqwebmail).  Assume that it's installed in the same prefix
+# as courier-authlib.
 #
-CONFIGURE_ENV+=		EXPECT=${LOCALBASE:Q}/bin/expect
+CONFIGURE_ENV+=		EXPECT=${PREFIX:Q}/bin/expect
 
 AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
@@ -90,7 +90,6 @@ post-install: ${POST_INSTALL_TARGETS}
 
 post-install-common:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/makedat/makedat ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}
@@ -102,5 +101,4 @@ post-install-authdaemon:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authdaemonrc.dist
 	${CHMOD} ${SHAREMODE} ${EGDIR}/authdaemonrc.dist
 
-.include "../../lang/tcl-expect/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
