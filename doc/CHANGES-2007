@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1763 2007/08/10 04:28:08 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1764 2007/08/10 09:24:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3231,3 +3231,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-wikipediafs version 0.3 [agc 2007-08-09]
 	Updated comms/asterisk to 1.2.24 [mjl 2007-08-10]
 	Updated graphics/ruby-RMagick to 1.15.9 [obache 2007-08-10]
+	Updated www/seamonkey to 1.1.4 [ghen 2007-08-10]
+	Updated www/seamonkey-bin to 1.1.4 [ghen 2007-08-10]
+	Updated www/seamonkey-gtk1 to 1.1.4 [ghen 2007-08-10]
