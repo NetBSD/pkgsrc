@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/09 21:42:52 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/10 11:04:25 agc Exp $
 #
 
 DISTNAME=	wikipediafs-0.3
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wikipediafs.sourceforge.net/
 COMMENT=	FUSE filesystem for acecssing the wikipedia
 
-NO_BUILD=	yes
 PYTHON_VERSIONS_ACCEPTED=	24
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
@@ -28,12 +27,6 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py install
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-PRIVILEGED_STAGES+=	clean
-.endif
 
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 
