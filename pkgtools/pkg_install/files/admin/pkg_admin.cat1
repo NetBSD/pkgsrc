@@ -125,9 +125,9 @@ OOPPTTIIOONNSS
              Rebuild the +REQUIRED_BY files from scratch by reresolving all
              dependencies.
 
-             This option is intended to be used for fixing the state after
-             forced removal or additions of packages like done by mmaakkee
-             rreeppllaaccee.
+             This option is intended to be used for fixing inconsistencies
+             between the records of depending and depended-on packages, such
+             as can arise by the use of ppkkgg__ddeelleettee --ff.
 
      sseett _v_a_r_i_a_b_l_e_=_v_a_l_u_e _p_k_g _._._.
              Set variable with information about the installed package.  Use
