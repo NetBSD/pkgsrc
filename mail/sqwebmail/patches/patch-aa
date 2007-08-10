@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2006/01/03 05:59:12 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2007/08/10 17:57:14 jlam Exp $
 
---- Makefile.in.orig	2005-12-25 17:02:47.000000000 -0500
+--- Makefile.in.orig	2007-04-22 14:40:39.000000000 -0400
 +++ Makefile.in
-@@ -237,19 +237,18 @@ EXTRA_DIST = INSTALL.html README NEWS RE
- 	pgpkeys.txt
+@@ -239,18 +239,18 @@ EXTRA_DIST = INSTALL.html README NEWS RE
  
  scriptbindir = $(sbindir)
--scriptbin_SCRIPTS = \
+ scriptbin_SCRIPTS = \
 -	sharedindexinstall sharedindexsplit
-+scriptbin_SCRIPTS = sqwebmaild.rc
++	webmaild.rc
  
 -pkglibPROGRAMS = maildirmake deliverquota reformime makemime pcpd
 -pkglibexecdir = $(libexecdir)/sqwebmail
@@ -21,10 +20,29 @@ $NetBSD: patch-aa,v 1.7 2006/01/03 05:59:12 jlam Exp $
  
  pkgman8dir = @mandir@/man8
 -pkgman8_DATA = deliverquota.8
-+pkgman8_DATA =
++pkgman8_DATA = 
  pkgman1dir = @mandir@/man1
 -pkgman1_DATA = maildirmake.1
-+pkgman1_DATA =
- @HAVE_HTMLPAGES_TRUE@NEWS_SOURCE = html/main.html
++pkgman1_DATA = 
+ @HAVE_HTMLPAGES_TRUE@NEWS_SOURCE = html/index2.html
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+@@ -823,6 +823,9 @@ uninstall-info: uninstall-info-recursive
+ sqwebmaild.dist: sqwebmail/sqwebmaild.dist
+ 	cp sqwebmail/sqwebmaild.dist .
+ 
++webmaild.rc: sqwebmaild.rc
++	cp sqwebmaild.rc webmaild.rc
++
+ pcpd: pcp/pcpd
+ 	cp pcp/pcpd .
+ 
+@@ -858,7 +861,7 @@ install-exec-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(cgibindir)
+ 	test -w $(DESTDIR)$(cgibindir) || exit 0; \
+ 		$(INSTALL_PROGRAM) sqwebmail/sqwebmail \
+-			$(DESTDIR)$(cgibindir)/sqwebmail
++			$(DESTDIR)$(cgibindir)/webmail
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
+ 	$(INSTALL_PROGRAM) sqwebmail/sqwebmaild $(DESTDIR)$(pkglibexecdir)/sqwebmaild
+ 
