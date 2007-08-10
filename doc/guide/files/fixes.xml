@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.87 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.88 2007/08/10 00:51:51 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1334,6 +1334,30 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     access permissions but rely on <varname>INSTALL_GAME</varname> and
     <varname>INSTALL_GAME_DATA</varname> to set these
     correctly.</para>
+  </sect2>
+
+  <sect2 id="destdir-support">
+    <title>Adding DESTDIR support to packages</title>
+
+    <itemizedlist>
+      <listitem><para>All installation operations have to be prefixed with
+      <filename>${DESTDIR}</filename>.</para></listitem>
+
+      <listitem><para>automake gets this DESTDIR mostly right
+      automatically. Many manual rules and pre/post-install often are
+      incorrect; fix them.</para></listitem>
+
+      <listitem><para>If files are installed with special owner/group
+      either use @owner/@group in the <filename>PLIST</filename>
+      (preferred) or use <varname>SPECIAL_PERMS</varname>
+      (discouraged). Note that @owner/@group are sticky during
+      install, keep this in mind.</para></listitem>
+
+      <listitem><para>In general, packages should support
+      <varname>UNPRIVILEGED</varname> to be able to use
+      DESTDIR.</para></listitem>
+
+    </itemizedlist>
   </sect2>
 
 
