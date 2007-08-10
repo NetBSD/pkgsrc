@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.37 2007/08/09 23:54:17 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.38 2007/08/10 15:37:51 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.37 2007/08/09 23:54:17 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.38 2007/08/10 15:37:51 joerg Exp $");
 #endif
 #endif
 
@@ -316,34 +316,64 @@ bail:
 	return code;
 }
 
+struct print_matching_arg {
+	const char *pattern;
+	int got_match;
+};
+
+static int
+print_matching_pkg(const char *pkgname, void *cookie)
+{
+	struct print_matching_arg *arg= cookie;
+
+	if (pkg_match(arg->pattern, pkgname)) {
+		if (!Quiet)
+			puts(pkgname);
+		arg->got_match = 1;
+	}
+
+	return 0;
+}
+
 /*
- * Check if a package "pkgspec" (which can be a pattern) is installed.
- * dbdir contains the return value of _pkgdb_getPKGDB_DIR(), for reading only.
- * Return 0 if found, 1 otherwise (indicating an error).
+ * Returns 0 if at least one package matching pkgname.
+ * Returns 1 otherwise.
+ *
+ * If -q was not specified, print all matching packages to stdout.
  */
 static int
 CheckForPkg(const char *pkgname)
 {
-	char *best_installed;
+	struct print_matching_arg arg;
 
-	best_installed = find_best_matching_installed_pkg(pkgname);
-	if (best_installed == NULL && !ispkgpattern(pkgname)) {
+	arg.pattern = pkgname;
+	arg.got_match = 0;
+
+	if (iterate_pkg_db(print_matching_pkg, &arg) == -1) {
+		warnx("cannot iterate pkgdb");
+		return 1;
+	}
+
+	if (arg.got_match == 0 && !ispkgpattern(pkgname)) {
 		char *pattern;
 
 		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
 			errx(EXIT_FAILURE, "asprintf failed");
 
-		best_installed = find_best_matching_installed_pkg(pattern);
+		arg.pattern = pattern;
+		arg.got_match = 0;
+
+		if (iterate_pkg_db(print_matching_pkg, &arg) == -1) {
+			free(pattern);
+			warnx("cannot iterate pkgdb");
+			return 1;
+		}
 		free(pattern);
 	}
 
-	if (best_installed == NULL)
+	if (arg.got_match)
 		return 1;
 
-	if (!Quiet)
-		printf("%s\n", best_installed);
-
-	free(best_installed);
 	return 0;
 }
 
