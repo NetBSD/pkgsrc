@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/06/07 13:01:34 pooka Exp $
+# $NetBSD: Makefile,v 1.19 2007/08/10 08:25:58 pooka Exp $
 
 DISTNAME=		mz-360-src-unix
 PKGNAME=		mzscheme-360
@@ -19,6 +19,7 @@ CONFIGURE_SCRIPT=	./configure
 # causes the build to use libtool
 CONFIGURE_ARGS=		--enable-shared
 USE_LIBTOOL=		yes
+MAKE_JOBS_SAFE=		no
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i386
