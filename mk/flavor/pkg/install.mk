@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.11 2007/08/10 04:00:43 jlam Exp $
+# $NetBSD: install.mk,v 1.12 2007/08/10 04:03:23 jlam Exp $
 #
 # _flavor-check-conflicts:
 #	Checks for conflicts between the package and installed packages.
@@ -57,7 +57,7 @@ _REGISTER_DEPENDENCIES=							\
 		AWK=${TOOLS_AWK:Q}					\
 	${SH} ${PKGSRCDIR}/mk/flavor/pkg/register-dependencies
 
-_flavor-register: .PHONY generate-metadata ${_RDEPENDS_FILE}
+_flavor-register: .PHONY _flavor-generate-metadata ${_RDEPENDS_FILE}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
@@ -70,4 +70,4 @@ _flavor-register: .PHONY generate-metadata ${_RDEPENDS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${_FULL_DEPENDS_CMD} |		\
 		${SORT} -u | ${_REGISTER_DEPENDENCIES} ${PKGNAME}
 
-_flavor-install-clean: .PHONY clean-metadata
+_flavor-install-clean: .PHONY _flavor-clean-metadata
