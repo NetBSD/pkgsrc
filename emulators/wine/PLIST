@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2007/07/31 09:28:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.67 2007/08/11 11:06:09 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -104,6 +104,7 @@ include/wine/windows/commdlg.h
 include/wine/windows/compobj.h
 include/wine/windows/control.h
 include/wine/windows/control.idl
+include/wine/windows/cor.h
 include/wine/windows/cpl.h
 include/wine/windows/custcntl.h
 include/wine/windows/cvconst.h
@@ -181,6 +182,7 @@ include/wine/windows/dsgetdc.h
 include/wine/windows/dshow.h
 include/wine/windows/dsound.h
 include/wine/windows/dsrole.h
+include/wine/windows/dwmapi.h
 include/wine/windows/dxdiag.h
 include/wine/windows/dxerr8.h
 include/wine/windows/dxerr9.h
@@ -200,9 +202,11 @@ include/wine/windows/exdispid.h
 include/wine/windows/fci.h
 include/wine/windows/fdi.h
 include/wine/windows/gdiplus.h
+include/wine/windows/gdipluscolormatrix.h
 include/wine/windows/gdiplusenums.h
 include/wine/windows/gdiplusflat.h
 include/wine/windows/gdiplusgpstubs.h
+include/wine/windows/gdiplusimaging.h
 include/wine/windows/gdiplusinit.h
 include/wine/windows/gdiplusmem.h
 include/wine/windows/gdiplusmetaheader.h
@@ -246,11 +250,14 @@ include/wine/windows/lmmsg.h
 include/wine/windows/lmserver.h
 include/wine/windows/lmshare.h
 include/wine/windows/lmstats.h
+include/wine/windows/lmuse.h
+include/wine/windows/lmuseflg.h
 include/wine/windows/lmwksta.h
 include/wine/windows/lzexpand.h
 include/wine/windows/mapi.h
 include/wine/windows/mapicode.h
 include/wine/windows/mapidefs.h
+include/wine/windows/mapiform.h
 include/wine/windows/mapiguid.h
 include/wine/windows/mapitags.h
 include/wine/windows/mapiutil.h
@@ -276,6 +283,8 @@ include/wine/windows/msacm.h
 include/wine/windows/msacmdlg.h
 include/wine/windows/msacmdrv.h
 include/wine/windows/mscat.h
+include/wine/windows/mscoree.h
+include/wine/windows/mscoree.idl
 include/wine/windows/mshtmcid.h
 include/wine/windows/mshtmdid.h
 include/wine/windows/mshtmhst.h
@@ -284,6 +293,8 @@ include/wine/windows/mshtml.h
 include/wine/windows/mshtml.idl
 include/wine/windows/msi.h
 include/wine/windows/msidefs.h
+include/wine/windows/msinkaut.h
+include/wine/windows/msinkaut.idl
 include/wine/windows/msiquery.h
 include/wine/windows/mssip.h
 include/wine/windows/mswsock.h
@@ -411,6 +422,7 @@ include/wine/windows/urlhist.h
 include/wine/windows/urlhist.idl
 include/wine/windows/urlmon.h
 include/wine/windows/urlmon.idl
+include/wine/windows/userenv.h
 include/wine/windows/usp10.h
 include/wine/windows/uuids.h
 include/wine/windows/uxtheme.h
@@ -429,6 +441,7 @@ include/wine/windows/windowsx.h
 include/wine/windows/winerror.h
 include/wine/windows/wingdi.h
 include/wine/windows/wininet.h
+include/wine/windows/winineti.h
 include/wine/windows/winioctl.h
 include/wine/windows/winldap.h
 include/wine/windows/winnetwk.h
@@ -437,7 +450,6 @@ include/wine/windows/winnls32.h
 include/wine/windows/winnt.h
 include/wine/windows/winperf.h
 include/wine/windows/winreg.h
-include/wine/windows/winres.h
 include/wine/windows/winresrc.h
 include/wine/windows/winscard.h
 include/wine/windows/winsmcrd.h
@@ -538,6 +550,7 @@ lib/wine/dplayx.dll.so
 lib/wine/dpnaddr.dll.so
 lib/wine/dpnet.dll.so
 lib/wine/dpnhpast.dll.so
+lib/wine/dpnlobby.dll.so
 lib/wine/dsound.dll.so
 lib/wine/dswave.dll.so
 lib/wine/dwmapi.dll.so
@@ -545,6 +558,7 @@ lib/wine/dxdiagn.dll.so
 lib/wine/eject.exe.so
 lib/wine/expand.exe.so
 lib/wine/explorer.exe.so
+lib/wine/faultrep.dll.so
 lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
 lib/wine/gdiplus.dll.so
@@ -566,6 +580,7 @@ lib/wine/imagehlp.dll.so
 lib/wine/imm.dll16
 lib/wine/imm32.dll.so
 lib/wine/infosoft.dll.so
+lib/wine/inkobj.dll.so
 lib/wine/inseng.dll.so
 lib/wine/iphlpapi.dll.so
 lib/wine/itss.dll.so
@@ -731,6 +746,7 @@ lib/wine/msdmo.dll.so
 lib/wine/msftedit.dll.so
 lib/wine/msg711.acm.so
 lib/wine/mshtml.dll.so
+lib/wine/mshtml.tlb.so
 lib/wine/msi.dll.so
 lib/wine/msiexec.exe.so
 lib/wine/msimg32.dll.so
@@ -883,6 +899,7 @@ lib/wine/winex11.drv.so
 lib/wine/wing.dll16
 lib/wine/wing32.dll.so
 lib/wine/winhelp.exe.so
+lib/wine/winhttp.dll.so
 lib/wine/wininet.dll.so
 lib/wine/winmm.dll.so
 lib/wine/winnls.dll16
@@ -899,6 +916,7 @@ lib/wine/wnaspi32.dll.so
 lib/wine/wordpad.exe.so
 lib/wine/wow32.dll.so
 lib/wine/wprocs.dll16
+lib/wine/write.exe.so
 lib/wine/ws2_32.dll.so
 lib/wine/wsock32.dll.so
 lib/wine/wtsapi32.dll.so
