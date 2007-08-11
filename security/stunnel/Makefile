@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2007/01/23 21:53:58 smb Exp $
+# $NetBSD: Makefile,v 1.60 2007/08/11 14:41:36 schmonz Exp $
 
 DISTNAME=		stunnel-4.20
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -28,18 +28,9 @@ RCD_SCRIPTS=		stunnel
 REPLACE_PERL+=		src/stunnel3.in
 USE_TOOLS+=		perl:run
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--with-threads=fork
-.else
-CONFIGURE_ARGS+=	--with-threads=pthread
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS} ${PTHREAD_CFLAGS}" \
-			LDFLAGS="${LDFLAGS} ${PTHREAD_LIBS}"
-.endif
+.include "options.mk"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
