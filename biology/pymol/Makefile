@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/02/15 22:37:05 perry Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/11 18:13:13 joerg Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	pymol-0.98
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tgz
@@ -11,12 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pymol.sourceforge.net/
 COMMENT=	Molecular Visualization System
 
-PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUP=	setup.py
+
+REPLACE_PYTHON=	test/cyg test/run test/show test/win.py
 
 post-install:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup2.py
@@ -38,5 +40,6 @@ post-install:
 # However, the package seems to link with "glut" and not with "freeglut",
 # and no other pkgsrc packages seem to use freeglut.
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
