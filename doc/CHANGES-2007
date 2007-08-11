@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1777 2007/08/11 14:41:51 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1778 2007/08/11 14:53:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3255,3 +3255,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/wine to 0.9.43 [adam 2007-08-11]
 	Updated net/net-snmp to 5.4.1 [adam 2007-08-11]
 	Updated security/stunnel to 4.20nb2 [schmonz 2007-08-11]
+	Updated mail/tmda to 1.1.12nb1 [schmonz 2007-08-11]
