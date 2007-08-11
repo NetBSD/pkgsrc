@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/12/27 18:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/11 15:22:31 joerg Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
-PKGREVISION=		9
+PKGREVISION=		10
 GS_VERS=		6.01
 CATEGORIES=		print
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
@@ -176,6 +176,7 @@ FPU_TYPE?=		1
 MAKE_FLAGS+=		FPU_TYPE=${FPU_TYPE:Q}
 
 PLIST_SUBST+=		GS_VERS=${GS_VERS}vflib
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		lib/fixmswrd.pl
 
 GSDATADIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
