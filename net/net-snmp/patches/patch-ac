@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
+$NetBSD: patch-ac,v 1.6 2007/08/11 11:05:56 adam Exp $
 
---- configure.in.orig	2006-11-24 17:53:18.000000000 +0000
+--- configure.in.orig	2007-08-11 12:17:24.000000000 +0200
 +++ configure.in
-@@ -2670,6 +2670,8 @@ elif test "x$askedpkcs" = "xyes"; then
-     AC_CHECK_LIB(pkcs11, C_Initialize)
- fi
+@@ -2678,6 +2678,8 @@ AC_CHECK_LIB(kstat, kstat_lookup,
+         AC_DEFINE(HAVE_LIBKSTAT, 1, [Define to 1 if you have the `kstat' library (-lkstat).])
+         LNETSNMPLIBS="${LNETSNMPLIBS} -lkstat")
  
 +AC_CHECK_LIB(des, des_cbc_encrypt)
 +
  # Check for libraries that the agent needs
  # saving old libraries
  NONAGENTLIBS=$LIBS
-@@ -3347,6 +3349,12 @@ AC_CHECK_HEADERS(netinet/ip6.h netinet6/
+@@ -3406,6 +3408,12 @@ AC_CHECK_HEADERS(netinet/ip6.h netinet6/
  #if HAVE_NETINET_IP6_H
  #include <netinet/ip6.h>
  #endif
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  ]])
  # DYNAMIC MODULE SUPPORT
  AC_CHECK_HEADERS(dlfcn.h)
-@@ -3732,7 +3740,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -3800,7 +3808,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3744,7 +3754,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -3812,7 +3822,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -44,7 +44,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3780,7 +3792,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -3848,7 +3860,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -54,7 +54,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3798,7 +3812,9 @@ AC_TRY_COMPILE([
+@@ -3866,7 +3880,9 @@ AC_TRY_COMPILE([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -64,7 +64,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3822,7 +3838,9 @@ AC_TRY_COMPILE([
+@@ -3890,7 +3906,9 @@ AC_TRY_COMPILE([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -74,7 +74,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3879,7 +3897,9 @@ AC_TRY_COMPILE([
+@@ -3947,7 +3965,9 @@ AC_TRY_COMPILE([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -84,7 +84,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3903,7 +3923,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -3985,7 +4005,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -94,7 +94,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3916,7 +3938,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -3998,7 +4020,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -104,7 +104,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3929,7 +3953,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -4011,7 +4035,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
@@ -114,7 +114,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/20 13:55:28 seb Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
-@@ -3942,7 +3968,9 @@ AC_CHECK_STRUCT_FOR([
+@@ -4024,7 +4050,9 @@ AC_CHECK_STRUCT_FOR([
  #endif
  #include <sys/types.h>
  #define KERNEL
