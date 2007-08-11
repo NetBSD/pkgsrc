@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1774 2007/08/11 07:27:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1775 2007/08/11 07:48:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/getmail to 4.7.6 [schmonz 2007-08-11]
 	Added geography/libdrg version 0.0.81 [gdt 2007-08-11]
 	Updated devel/fromcvs to 0.0.0.105 [wiz 2007-08-11]
+	Updated wm/openbox to 3.4.4 [wiz 2007-08-11]
