@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2007/08/11 21:33:37 reed Exp $
 #
 
 .include "./Makefile.common"
@@ -19,5 +19,6 @@ CONFIGURE_ARGS+=	--with-extra-prefix=${BUILDLINK_PREFIX.qt3-libs} \
 # didn't link with pthread during the configure check.
 CONFIGURE_ENV+=		qt_cv_libname=-lqt-mt
 
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
