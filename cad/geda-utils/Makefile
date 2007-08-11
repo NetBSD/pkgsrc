@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/05/31 12:48:33 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.43 2007/08/11 15:09:16 joerg Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
+PKGREVISION=		1
 CATEGORIES=		cad
 
 MAINTAINER=		dmcmahill@NetBSD.org
@@ -22,33 +23,24 @@ USE_TOOLS+=		gawk:run lex perl:run pkg-config
 
 # for gnet_hier_verilog.sh.  It looks to be fairly bash
 # dependent
-DEPENDS+=		bash-[0-9]*:../../shells/bash
+USE_TOOLS+=		bash:run
 
 # let (f)lex rebuild this file.  The distributed one doesn't
 # always work.
 post-patch:
 	${RM} -f ${WRKSRC}/src/olib.c
 
-EVAL_PREFIX+=		PYDIR=python
-
-REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	.*/bin/python
-REPLACE.python.new=	${PYDIR}/bin/python
-REPLACE_FILES.python=	scripts/tragesym
-
-EVAL_PREFIX+=		BASHDIR=bash
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	.*/bin/bash
-REPLACE.bash.new=	${BASHDIR}/bin/bash
-REPLACE_FILES.bash=	scripts/gnet_hier_verilog.sh
-
+REPLACE_BASH=		scripts/gnet_hier_verilog.sh
+REPLACE_PYTHON=		scripts/tragesym
 REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/gschupdate \
 			scripts/gsymfix.pl \
 			scripts/gsymupdate \
+			scripts/pcb_backannotate \
 			scripts/refdes_renum \
 			scripts/sarlacc_sym
 
 .include "../../cad/libgeda/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
