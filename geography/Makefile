@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/07/28 11:10:05 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/11 02:54:08 gdt Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -12,6 +12,7 @@ SUBDIR+=	gpsd
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpspoint
 SUBDIR+=	gpsutils
+SUBDIR+=	libdrg
 SUBDIR+=	mapserver
 SUBDIR+=	postgresql81-postgis
 SUBDIR+=	proj-swig
