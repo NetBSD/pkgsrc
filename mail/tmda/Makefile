@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/07/31 04:44:01 schmonz Exp $
+# $NetBSD: Makefile,v 1.41 2007/08/11 14:52:54 schmonz Exp $
 #
 
 DISTNAME=	tmda-1.1.12
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.sourceforge.net/ftp/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/
@@ -11,12 +12,12 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
 
-PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	${TMDA_PROGRAMS}
+PY_PATCHPLIST=		yes
+PYCOMPILEALL=		${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 PKG_GROUPS=		tofmipd
 PKG_USERS=		tofmipd:tofmipd
@@ -91,7 +92,10 @@ do-install:
 	cp -Rp ${WRKSRC}/doc/html/* ${PREFIX}/${HTMLDIR}
 
 post-install:
-	${PREFIX}/bin/tmda-ofmipd -V >/dev/null 2>&1
+	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/TMDA \
+		${PREFIX}/${PYSITELIB}/TMDA/Queue \
+		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email \
+		${PREFIX}/${PYSITELIB}/TMDA/pythonlib/email/mime
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
