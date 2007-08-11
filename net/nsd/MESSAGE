@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/11/05 21:27:53 joerg Exp $
+$NetBSD: MESSAGE,v 1.2 2007/08/11 23:48:40 joerg Exp $
 
-The default location of the NSD database has moved to
-${VARBASE}/db/nsd.db. This location can be overriden by -f for nsd
-and in ${SYSCONFDIR}/nsd/nsdc.conf for nsdc.
+The configuration format of nsd has changed between 2.x and 3.x.
+A sample Python script to help migrating the old nsd.zones format
+into the new nsd.conf can be found in share/examples/nsd.
+
 ===========================================================================
