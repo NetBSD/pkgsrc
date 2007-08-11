@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1772 2007/08/11 01:00:51 schmonz Exp $
+$NetBSD: CHANGES-2007,v 1.1773 2007/08/11 02:53:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3249,3 +3249,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp-ufraw to 0.12.1 [gdt 2007-08-10]
 	Updated net/net-snmp to 5.4nb2 [seb 2007-08-10]
 	Updated mail/getmail to 4.7.6 [schmonz 2007-08-11]
+	Added geography/libdrg version 0.0.81 [gdt 2007-08-11]
