@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.91 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: gcc.mk,v 1.92 2007/08/11 17:31:22 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -48,7 +48,7 @@ MAKEFLAGS+=	_CC=${_CC:Q}
 
 .if !defined(_GCC_VERSION)
 _GCC_VERSION_STRING!=	\
-	( ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) 2>/dev/null || ${ECHO} 0
+	( ${SETENV} ${ALL_ENV} ${_CC} -v 2>&1 | ${GREP} 'gcc version' ) 2>/dev/null || ${ECHO} 0
 .  if !empty(_GCC_VERSION_STRING:Megcs*)
 _GCC_VERSION=	2.8.1		# egcs is considered to be gcc-2.8.1.
 .  elif !empty(_GCC_VERSION_STRING:Mgcc*)
