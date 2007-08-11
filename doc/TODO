@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6585 2007/08/11 07:55:34 wiz Exp $
+$NetBSD: TODO,v 1.6586 2007/08/11 11:08:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -781,7 +781,6 @@ Suggested package updates
 	o neon-0.26.4
 	o nessus-3.0.4
 	o nessus-core-2.3.1
-	o net-snmp-5.4.1
 	o netcdf-3.6.2
 	o netperf-2.4.1
 	o netpipe-3.6.2

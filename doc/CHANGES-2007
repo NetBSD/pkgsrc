@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1775 2007/08/11 07:48:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1776 2007/08/11 11:08:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3252,3 +3252,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added geography/libdrg version 0.0.81 [gdt 2007-08-11]
 	Updated devel/fromcvs to 0.0.0.105 [wiz 2007-08-11]
 	Updated wm/openbox to 3.4.4 [wiz 2007-08-11]
+	Updated emulators/wine to 0.9.43 [adam 2007-08-11]
+	Updated net/net-snmp to 5.4.1 [adam 2007-08-11]
