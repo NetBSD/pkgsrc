@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2006/07/03 13:33:59 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/08/11 23:48:40 joerg Exp $
 
-DISTNAME=	nsd-2.3.5
+DISTNAME=	nsd-3.0.5
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -8,14 +8,18 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/nsd/index.html
 COMMENT=	Authoritative-only DNS server
 
-BUILD_DEFS+=	USE_INET6
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEFS+=	USE_INET6 VARBASE
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
+PKG_SYSCONFSUBDIR=	nsd
+
+CONFIGURE_ARGS+=--with-configdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=--enable-bind8-stats
 CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 .if !defined(USE_INET6)
@@ -23,29 +27,26 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd.pid
-CONFIGURE_ARGS+=--with-user=nsd
+CONFIGURE_ARGS+=--with-user=${NSD_USER}
 CONFIGURE_ARGS+=--with-dbfile=${VARBASE}/db/nsd.db
+CONFIGURE_ARGS+=--with-difffile=${VARBASE}/db/nsd-ixfr.db
+CONFIGURE_ARGS+=--with-xfrdfile=${VARBASE}/db/nsd-xfrd.state
 CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 RCD_SCRIPTS=	nsd
-FILES_SUBST+=	NSDDB=${VARBASE}/db/nsd.db
 
-PKG_GROUPS?=	nsd
-PKG_USERS?=	nsd:nsd
+NSD_USER?=	nsd
+NSD_GROUP?=	nsd
 
-.for _file_ in nsd.zones nsdc.conf
-CONF_FILES+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/nsd/${_file_}
-.endfor
+PKG_GROUPS=	${NSD_GROUP}
+PKG_USERS=	${NSD_USER}:${NSD_GROUP}
+
+CONF_FILES+=	share/examples/nsd/nsd.conf ${PKG_SYSCONFDIR}/nsd.conf
+
+INSTALLATION_DIRS=	share/examples/nsd
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nsd
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nsd/contrib
-.for FILE in README RELNOTES DIFFERENCES LICENSE NSD-DATABASE TODO
-	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/share/nsd
-.endfor
-.for FILE in README build-nsdzones.pl build-nsdzones.pl.README example-plugin.c
-	${INSTALL_DATA} ${WRKSRC}/contrib/${FILE} ${PREFIX}/share/nsd/contrib
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/contrib/nsd.zones2nsd.conf ${DESTDIR}${PREFIX}/share/examples/nsd
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
