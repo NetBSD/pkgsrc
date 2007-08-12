@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1779 2007/08/11 21:35:58 reed Exp $
+$NetBSD: CHANGES-2007,v 1.1780 2007/08/12 00:24:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3257,3 +3257,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/stunnel to 4.20nb2 [schmonz 2007-08-11]
 	Updated mail/tmda to 1.1.12nb1 [schmonz 2007-08-11]
 	Updated editors/lyx-qt to 1.4.5.1 [reed 2007-08-11]
+	Updated net/nsd to 3.0.5 [joerg 2007-08-11]
