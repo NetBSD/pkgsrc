@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2007/08/08 02:55:13 wulf Exp $
+# $NetBSD: Makefile.common,v 1.10 2007/08/12 08:30:01 wulf Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=        --sysconfdir=${PREFIX}/share/examples
 CONFIGURE_ARGS+=        --disable-all-components
 
 pre-configure:
+.if  empty(PKGNAME:Mgnuradio-howto-*)
 	cd ${WRKSRC} && ./bootstrap
+.endif
 
 .include "../../mk/bsd.prefs.mk"
