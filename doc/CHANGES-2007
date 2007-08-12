@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1786 2007/08/12 15:17:43 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1787 2007/08/12 19:52:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3265,7 +3265,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/cairomm to 1.4.4 [adam 2007-08-12]
 	Updated x11/gtkmm to 2.10.11 [adam 2007-08-12]
 	Updated graphics/Mesa to 7.0.1 [adam 2007-08-12]
-	Updated graphics/MesaLibs to 7.0.1 [adam 2007-08-12]
+	Updated graphics/MesaLib to 7.0.1 [adam 2007-08-12]
 	Updated graphics/MesaDemos to 7.0.1 [adam 2007-08-12]
 	Updated graphics/glu to 7.0.1 [adam 2007-08-12]
 	Updated graphics/glut to 7.0.1 [adam 2007-08-12]
