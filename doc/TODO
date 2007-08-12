@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6588 2007/08/11 21:35:59 reed Exp $
+$NetBSD: TODO,v 1.6589 2007/08/12 00:24:08 joerg Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ Suggested package updates
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3
 	o nsca-1.2.0
-	o nsd-3.0.5
 	o nslint-2.1a7
 	o nss_ldap-255
 	o ntp-4.2.4p3
