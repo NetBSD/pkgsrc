@@ -68,6 +68,7 @@ iterate_pkg_generic_src(int (*matchiter)(const char *, void *),
 struct pkg_dir_iter_arg {
 	DIR *dirp;
 	int filter_suffix;
+	int allow_nonfiles;
 };
 
 static const char *
@@ -79,7 +80,8 @@ pkg_dir_iter(void *cookie)
 
 	while ((dp = readdir(arg->dirp)) != NULL) {
 #if defined(DT_UNKNOWN) && defined(DT_DIR)
-		if (dp->d_type != DT_UNKNOWN && dp->d_type != DT_REG)
+		if (arg->allow_nonfiles == 0 &&
+		    dp->d_type != DT_UNKNOWN && dp->d_type != DT_REG)
 			continue;
 #endif
 		len = strlen(dp->d_name);
@@ -98,7 +100,7 @@ pkg_dir_iter(void *cookie)
  * Call matchiter for every package in the directory.
  */
 int
-iterate_local_pkg_dir(const char *dir, int filter_suffix,
+iterate_local_pkg_dir(const char *dir, int filter_suffix, int allow_nonfiles,
     int (*matchiter)(const char *, void *), void *cookie)
 {
 	struct pkg_dir_iter_arg arg;
@@ -108,6 +110,7 @@ iterate_local_pkg_dir(const char *dir, int filter_suffix,
 		return -1;
 
 	arg.filter_suffix = filter_suffix;
+	arg.allow_nonfiles = allow_nonfiles;
 	retval = iterate_pkg_generic_src(matchiter, cookie, pkg_dir_iter, &arg);
 
 	if (closedir(arg.dirp) == -1)
@@ -403,7 +406,7 @@ match_best_file(const char *filename, void *cookie)
  * If no package matched the pattern or an error occured, return NULL.
  */
 char *
-find_best_matching_file(const char *dir, const char *pattern, int filter_suffix)
+find_best_matching_file(const char *dir, const char *pattern, int filter_suffix, int allow_nonfiles)
 {
 	struct best_file_match_arg arg;
 
@@ -412,7 +415,7 @@ find_best_matching_file(const char *dir, const char *pattern, int filter_suffix)
 	arg.best_current_match = NULL;
 	arg.best_current_match_filtered = NULL;
 
-	if (iterate_local_pkg_dir(dir, filter_suffix, match_best_file, &arg) == -1) {
+	if (iterate_local_pkg_dir(dir, filter_suffix, allow_nonfiles, match_best_file, &arg) == -1) {
 		warnx("could not process directory");
 		return NULL;
 	}
@@ -472,7 +475,7 @@ match_file_and_call(const char *filename, void *cookie)
  * callback returned otherwise.
  */
 int
-match_local_files(const char *dir, int filter_suffix, const char *pattern,
+match_local_files(const char *dir, int filter_suffix, int allow_nonfiles, const char *pattern,
     int (*cb)(const char *, void *), void *cookie)
 {
 	struct call_matching_file_arg arg;
@@ -482,5 +485,5 @@ match_local_files(const char *dir, int filter_suffix, const char *pattern,
 	arg.cookie = cookie;
 	arg.filter_suffix = filter_suffix;
 
-	return iterate_local_pkg_dir(dir, filter_suffix, match_file_and_call, &arg);
+	return iterate_local_pkg_dir(dir, filter_suffix, allow_nonfiles, match_file_and_call, &arg);
 }
