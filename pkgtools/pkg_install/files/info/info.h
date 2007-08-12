@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.15 2007/08/09 23:54:17 joerg Exp $ */
+/* $NetBSD: info.h,v 1.16 2007/08/12 22:09:02 joerg Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -67,9 +67,11 @@ extern char *InfoPrefix;
 extern char *BuildInfoVariable;
 extern char PlayPen[];
 extern size_t PlayPenSize;
-extern char *CheckPkg;
 extern size_t termwidth;
 extern lpkg_head_t pkgs;
+
+int CheckForPkg(const char *);
+int CheckForBestPkg(const char *);
 
 extern void show_file(const char *, const char *, const char *, Boolean);
 extern void show_var(const char *, const char *, const char *);

@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.39 2007/08/10 21:43:58 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.40 2007/08/12 22:09:02 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.39 2007/08/10 21:43:58 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.40 2007/08/12 22:09:02 joerg Exp $");
 #endif
 #endif
 
@@ -341,7 +341,7 @@ print_matching_pkg(const char *pkgname, void *cookie)
  *
  * If -q was not specified, print all matching packages to stdout.
  */
-static int
+int
 CheckForPkg(const char *pkgname)
 {
 	struct print_matching_arg arg;
@@ -377,6 +377,37 @@ CheckForPkg(const char *pkgname)
 		return 1;
 }
 
+/*
+ * Returns 0 if at least one package matching pkgname.
+ * Returns 1 otherwise.
+ *
+ * If -q was not specified, print best match to stdout.
+ */
+int
+CheckForBestPkg(const char *pkgname)
+{
+	char *pattern, *best_match;
+
+	best_match = find_best_matching_installed_pkg(pkgname);
+	if (best_match == NULL) {
+		if (ispkgpattern(pkgname))
+			return 1;
+
+		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
+			errx(EXIT_FAILURE, "asprintf failed");
+
+		best_match = find_best_matching_installed_pkg(pattern);
+		free(pattern);
+	}
+
+	if (best_match == NULL)
+		return 1;
+	if (!Quiet)
+		puts(best_match);
+	free(best_match);
+	return 0;
+}
+
 void
 cleanup(int sig)
 {
@@ -404,10 +435,7 @@ pkg_perform(lpkg_head_t *pkghead)
 
 	TAILQ_INIT(&files);
 
-	/* Overriding action? */
-	if (CheckPkg) {
-		err_cnt += CheckForPkg(CheckPkg);
-	} else if (Which != WHICH_LIST) {
+	if (Which != WHICH_LIST) {
 		if (File2Pkg) {
 			/* Show all files with the package they belong to */
 			if (pkgdb_dump() == -1)
