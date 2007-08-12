@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1780 2007/08/12 00:24:08 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1781 2007/08/12 01:15:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3258,3 +3258,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/tmda to 1.1.12nb1 [schmonz 2007-08-11]
 	Updated editors/lyx-qt to 1.4.5.1 [reed 2007-08-11]
 	Updated net/nsd to 3.0.5 [joerg 2007-08-11]
+	Updated net/maradns to 1.2.12.06 [joerg 2007-08-12]
