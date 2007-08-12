@@ -65,14 +65,19 @@ iterate_pkg_generic_src(int (*matchiter)(const char *, void *),
 	return retval;
 }
 
+struct pkg_dir_iter_arg {
+	DIR *dirp;
+	int filter_suffix;
+};
+
 static const char *
 pkg_dir_iter(void *cookie)
 {
-	DIR *dirp = cookie;
+	struct pkg_dir_iter_arg *arg = cookie;
 	struct dirent *dp;
 	size_t len;
 
-	while ((dp = readdir(dirp)) != NULL) {
+	while ((dp = readdir(arg->dirp)) != NULL) {
 #if defined(DT_UNKNOWN) && defined(DT_DIR)
 		if (dp->d_type != DT_UNKNOWN && dp->d_type != DT_REG)
 			continue;
@@ -81,7 +86,8 @@ pkg_dir_iter(void *cookie)
 		/* .tbz or .tgz suffix length + some prefix*/
 		if (len < 5)
 			continue;
-		if (memcmp(dp->d_name + len - 4, ".tgz", 4) == 0 ||
+		if (arg->filter_suffix == 0 ||
+		    memcmp(dp->d_name + len - 4, ".tgz", 4) == 0 ||
 		    memcmp(dp->d_name + len - 4, ".tbz", 4) == 0)
 			return dp->d_name;
 	}
@@ -92,18 +98,19 @@ pkg_dir_iter(void *cookie)
  * Call matchiter for every package in the directory.
  */
 int
-iterate_local_pkg_dir(const char *dir, int (*matchiter)(const char *, void *),
-    void *cookie)
+iterate_local_pkg_dir(const char *dir, int filter_suffix,
+    int (*matchiter)(const char *, void *), void *cookie)
 {
-	DIR *dirp;
+	struct pkg_dir_iter_arg arg;
 	int retval;
 
-	if ((dirp = opendir(dir)) == NULL)
+	if ((arg.dirp = opendir(dir)) == NULL)
 		return -1;
 
-	retval = iterate_pkg_generic_src(matchiter, cookie, pkg_dir_iter, dirp);
+	arg.filter_suffix = filter_suffix;
+	retval = iterate_pkg_generic_src(matchiter, cookie, pkg_dir_iter, &arg);
 
-	if (closedir(dirp) == -1)
+	if (closedir(arg.dirp) == -1)
 		return -1;
 	return retval;
 }
@@ -325,4 +332,155 @@ match_installed_pkgs(const char *pattern, int (*cb)(const char *, void *),
 	arg.cookie = cookie;
 
 	return iterate_pkg_db(match_and_call, &arg);
+}
+
+struct best_file_match_arg {
+	const char *pattern;
+	char *best_current_match_filtered;
+	char *best_current_match;
+	int filter_suffix;
+};
+
+static int
+match_best_file(const char *filename, void *cookie)
+{
+	struct best_file_match_arg *arg = cookie;
+	const char *active_filename;
+	char *filtered_filename;
+
+	if (arg->filter_suffix) {
+		size_t len;
+
+		len = strlen(filename);
+		if (len < 5 ||
+		    (memcmp(filename + len - 4, ".tgz", 4) != 0 &&
+		     memcmp(filename + len - 4, ".tbz", 4) != 0)) {
+			warnx("filename %s does not contain a recognized suffix", filename);
+			return -1;
+		}
+		if ((filtered_filename = malloc(len - 4 + 1)) == NULL)
+			err(EXIT_FAILURE, "malloc failed");
+		memcpy(filtered_filename, filename, len - 4);
+		filtered_filename[len - 4] = '\0';
+		active_filename = filtered_filename;
+	} else {
+		filtered_filename = NULL;
+		active_filename = filename;
+	}
+
+	switch (pkg_order(arg->pattern, active_filename, arg->best_current_match_filtered)) {
+	case 0:
+	case 2:
+		/*
+		 * Either current package doesn't match or
+		 * the older match is better. Nothing to do.
+		 */
+		free(filtered_filename);
+		return 0;
+	case 1:
+		/* Current package is better, remember it. */
+		free(arg->best_current_match);
+		free(arg->best_current_match_filtered);
+		if ((arg->best_current_match = strdup(filename)) == NULL) {
+			arg->best_current_match_filtered = NULL;
+			free(filtered_filename);
+			return -1;
+		}
+		if (filtered_filename != NULL)
+			arg->best_current_match_filtered = filtered_filename;
+		else if ((arg->best_current_match_filtered = strdup(active_filename)) == NULL) {
+			free(arg->best_current_match);
+			return -1;
+		}
+		return 0;
+	default:
+		return -1;
+	}
+}
+
+/*
+ * Returns a copy of the name of best matching file.
+ * If no package matched the pattern or an error occured, return NULL.
+ */
+char *
+find_best_matching_file(const char *dir, const char *pattern, int filter_suffix)
+{
+	struct best_file_match_arg arg;
+
+	arg.filter_suffix = filter_suffix;
+	arg.pattern = pattern;
+	arg.best_current_match = NULL;
+	arg.best_current_match_filtered = NULL;
+
+	if (iterate_local_pkg_dir(dir, filter_suffix, match_best_file, &arg) == -1) {
+		warnx("could not process directory");
+		return NULL;
+	}
+	free(arg.best_current_match_filtered);
+
+	return arg.best_current_match;
+}
+
+struct call_matching_file_arg {
+	const char *pattern;
+	int (*call_fn)(const char *pkg, void *cookie);
+	void *cookie;
+	int filter_suffix;
+};
+
+static int
+match_file_and_call(const char *filename, void *cookie)
+{
+	struct call_matching_file_arg *arg = cookie;
+	const char *active_filename;
+	char *filtered_filename;
+	int ret;
+
+	if (arg->filter_suffix) {
+		size_t len;
+
+		len = strlen(filename);
+		if (len < 5 ||
+		    (memcmp(filename + len - 4, ".tgz", 4) != 0 &&
+		     memcmp(filename + len - 4, ".tbz", 4) != 0)) {
+			warnx("filename %s does not contain a recognized suffix", filename);
+			return -1;
+		}
+		if ((filtered_filename = malloc(len - 4 + 1)) == NULL)
+			err(EXIT_FAILURE, "malloc failed");
+		memcpy(filtered_filename, filename, len - 4);
+		filtered_filename[len - 4] = '\0';
+		active_filename = filtered_filename;
+	} else {
+		filtered_filename = NULL;
+		active_filename = filename;
+	}
+
+	ret = pkg_match(arg->pattern, active_filename);
+	free(filtered_filename);
+
+	if (ret == 1)
+		return (*arg->call_fn)(filename, arg->cookie);
+	else 
+		return 0;
+}
+
+/*
+ * Find all packages that match the given pattern and call the function
+ * for each of them. Iteration stops if the callback return non-0.
+ * Returns -1 on error, 0 if the iteration finished or whatever the
+ * callback returned otherwise.
+ */
+int
+match_local_files(const char *dir, int filter_suffix, const char *pattern,
+    int (*cb)(const char *, void *), void *cookie)
+{
+	struct call_matching_file_arg arg;
+
+	arg.pattern = pattern;
+	arg.call_fn = cb;
+	arg.cookie = cookie;
+	arg.filter_suffix = filter_suffix;
+
+	return iterate_local_pkg_dir(dir, filter_suffix, match_file_and_call, &arg);
 }
