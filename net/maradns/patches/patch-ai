@@ -1,13 +1,23 @@
-$NetBSD: patch-ai,v 1.1 2005/05/13 13:25:55 salo Exp $
+$NetBSD: patch-ai,v 1.2 2007/08/12 01:14:31 joerg Exp $
 
---- tuzona/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
-+++ tuzona/Makefile	2005-05-13 14:57:53.000000000 +0200
-@@ -6,7 +6,7 @@
- OBJECTS=$(JOBJS) $(MJOBJS) $(DOBJECTS) $(POBJECTS) $(SOBJECTS)
- EXECS=getzone zoneserver
+--- dns/Makefile.recursive.orig	2007-08-12 00:46:35.000000000 +0000
++++ dns/Makefile.recursive
+@@ -12,14 +12,14 @@ clean:
+ 	rm -f Queries.o Compress.o bobbit.o Decompress.o
  
--FLAGS = -g -O2 -Wall $(DEBUG)
-+FLAGS = -g -O2 -Wall $(DEBUG) $(CFLAGS) $(LDFLAGS)
- #FLAGS = -g $(DEBUG)
+ Queries.o: Queries.c ../libs/JsStr.h ../libs/MaraHash.h ../MaraDns.h
+-	$(CC) -c $(FLAGS) -o Queries.o Queries.c 
++	$(CC) ${CFLAGS} -c $(FLAGS) -o Queries.o Queries.c 
  
- all: $(EXECS)
+ Compress.o: Compress.c ../libs/JsStr.h ../libs/MaraHash.h ../MaraDns.h
+-	$(CC) -c $(FLAGS) -o Compress.o Compress.c 
++	$(CC) ${CFLAGS} -c $(FLAGS) -o Compress.o Compress.c 
+ 
+ Decompress.o: Decompress.c ../libs/JsStr.h ../libs/MaraHash.h ../MaraDns.h
+-	$(CC) -c $(FLAGS) -o Decompress.o Decompress.c 
++	$(CC) ${CFLAGS} -c $(FLAGS) -o Decompress.o Decompress.c 
+ 
+ bobbit.o: bobbit.c ../libs/JsStr.h ../libs/MaraHash.h ../MaraDns.h
+-	$(CC) -c $(FLAGS) -o bobbit.o bobbit.c 
++	$(CC) ${CFLAGS} -c $(FLAGS) -o bobbit.o bobbit.c 
+ 
