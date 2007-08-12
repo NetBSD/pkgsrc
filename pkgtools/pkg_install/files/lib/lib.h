@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.33 2007/08/12 16:47:18 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.34 2007/08/12 18:54:09 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -330,16 +330,16 @@ void	strip_txz(char *, char *, const char *);
 /* Iterator functions */
 int	iterate_pkg_generic_src(int (*)(const char *, void *), void *,
 				const char *(*)(void *),void *);
-int	iterate_local_pkg_dir(const char *, int, int (*)(const char *, void *),
+int	iterate_local_pkg_dir(const char *, int, int, int (*)(const char *, void *),
 			      void *);
 int	iterate_pkg_db(int (*)(const char *, void *), void *);
 
 int	add_installed_pkgs_by_basename(const char *, lpkg_head_t *);
 int	add_installed_pkgs_by_pattern(const char *, lpkg_head_t *);
 char	*find_best_matching_installed_pkg(const char *);
-char	*find_best_matching_file(const char *, const char *, int);
+char	*find_best_matching_file(const char *, const char *, int, int);
 int	match_installed_pkgs(const char *, int (*)(const char *, void *), void *);
-int	match_local_files(const char *, int, const char *, int (*cb)(const char *, void *), void *);
+int	match_local_files(const char *, int, int, const char *, int (*cb)(const char *, void *), void *);
 
 /* File */
 Boolean fexists(const char *);

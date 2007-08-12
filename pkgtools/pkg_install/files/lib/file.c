@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.20 2007/08/12 16:47:17 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.21 2007/08/12 18:54:09 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.20 2007/08/12 16:47:17 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.21 2007/08/12 18:54:09 joerg Exp $");
 #endif
 #endif
 
@@ -324,7 +324,7 @@ resolvepattern1(const char *name)
 		return tmp;    /* return expanded URL w/ corrent pkg */
 	}
 	else if (ispkgpattern(name)) {
-		cp = find_best_matching_file(dirname_of(name), basename_of(name), 1);
+		cp = find_best_matching_file(dirname_of(name), basename_of(name), 1, 0);
 		if (cp) {
 			snprintf(tmp, sizeof(tmp), "%s/%s", dirname_of(name), cp);
 			free(cp);
