@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.4 2007/03/19 16:47:43 reed Exp $
+# $NetBSD: Makefile.lib,v 1.5 2007/08/12 15:14:47 adam Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -45,7 +45,7 @@ BUILD_TARGET=		pkgsrc
 .PHONY: Mesa-install-libs
 pre-install: Mesa-install-libs
 Mesa-install-libs:
-	@${TEST} -z ${INSTLIBS:M*:Q}"" || ${ECHO_MSG} "Installing libraries."
+	${TEST} -z ${INSTLIBS:M*:Q}"" || ${ECHO_MSG} "Installing libraries."
 	@for lib in "" ${INSTLIBS}; do					\
 		${TEST} -n "$$lib" || continue;				\
 		${SETENV} ${MAKE_ENV}					\
