@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6589 2007/08/12 00:24:08 joerg Exp $
+$NetBSD: TODO,v 1.6590 2007/08/12 10:27:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -815,7 +815,6 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openbox-3.4.4
 	o openh323-1.19.1
 	o openldap-2.3.35
 	o openldap-client-2.3.35
