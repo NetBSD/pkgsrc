@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/06/05 05:37:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/12 23:13:06 wiz Exp $
 #
 
-DISTNAME=	bmpx-0.36.1
-PKGREVISION=	4
+DISTNAME=	bmpx-0.40.1
 CATEGORIES=	audio
-MASTER_SITES=	http://files.beep-media-player.org/releases/0.36/
+MASTER_SITES=	http://files.beep-media-player.org/releases/0.40/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,58 +15,35 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2 kde3-1.0
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-CONFIGURE_ARGS+=	--enable-mp4v2
-CONFIGURE_ARGS+=	--with-mp4v2-dir=${LOCALBASE}
 CONFIGURE_ENV+=		BOOST_REGEX_LIBS=-lboost_regex-mt
 CPPFLAGS+=		-I${LOCALBASE}/include/cdparanoia
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
-.endif
-
-.if ${OPSYS} != "DragonFly"
-SQLITE_PTHREAD=	${PTHREAD_LIBS} ${PTHREAD_LDFLAGS}
-MAKE_ENV+=	SQLITE_PTHREAD=${SQLITE_PTHREAD:Q}
-.endif
-
-BUILDLINK_API_DEPENDS.cairomm+=		cairomm>=0.6.0
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.10.0
-BUILDLINK_API_DEPENDS.glibmm+=		glibmm>=2.8.3
-BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.1
-BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.9
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.4.0
-BUILDLINK_API_DEPENDS.gtkmm+=		gtkmm>=2.8.0
-BUILDLINK_API_DEPENDS.libglademm+=	libglademm>=2.6.0
-BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6nb1
-BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.1
-BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
-BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
-
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/libofa/buildlink3.mk"
+BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glibmm+=		glibmm>=2.8.3
 .include "../../devel/glibmm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libglademm+=	libglademm>=2.6.0
 .include "../../devel/libglademm/buildlink3.mk"
-.include "../../graphics/cairomm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.14.0
+.include "../../devel/libsexymm/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
-.include "../../multimedia/libmp4v2/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtkmm+=		gtkmm>=2.10.0
 .include "../../x11/gtkmm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../x11/startup-notification/buildlink3.mk"
-.include "../../mk/fam.buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.9
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.11
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
