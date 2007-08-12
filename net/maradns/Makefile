@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.18 2007/03/24 19:21:29 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/08/12 01:14:30 joerg Exp $
 
-DISTNAME=	maradns-1.0.39
+DISTNAME=	maradns-1.2.12.06
 CATEGORIES=	net
-MASTER_SITES=	http://www.maradns.org/download/1.0/
+MASTER_SITES=	http://www.maradns.org/download/1.2/${DISTNAME:S/maradns-//}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.maradns.org/
 COMMENT=	Secure DNS server for *NIX systems
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 HAS_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
-MAKE_ENV+=		LANGUAGE="en"
+MAKE_ENV+=		LANGUAGE="en" PKGMANDIR=${PKGMANDIR:Q}
 
-EGDIR=		${PREFIX}/share/examples/maradns
-CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
-			share/examples
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
+			${PKGMANDIR}/man8 sbin share/examples
 
 .include "../../mk/pthread.buildlink3.mk"
 LDFLAGS+=	${PTHREAD_LIBS}
@@ -29,7 +28,6 @@ post-patch:
 	@${MV} ${WRKSRC}/parse/ParseMaraRc.sed ${WRKSRC}/parse/ParseMaraRc.c
 
 post-install:
-	@${MV} ${PREFIX}/share/doc/maradns/examples \
-		${PREFIX}/share/examples/maradns
+	cd ${DESTDIR}${PREFIX}/share/doc/maradns && ${MV} examples ../../examples/maradns
 
 .include "../../mk/bsd.pkg.mk"
