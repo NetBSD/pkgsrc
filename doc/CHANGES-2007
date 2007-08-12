@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1782 2007/08/12 03:06:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1783 2007/08/12 03:07:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nsd to 3.0.5 [joerg 2007-08-11]
 	Updated net/maradns to 1.2.12.06 [joerg 2007-08-12]
 	Updated lang/spidermonkey to 1.60 [wiz 2007-08-12]
+	Updated www/serf to 0.1.2 [wiz 2007-08-12]
