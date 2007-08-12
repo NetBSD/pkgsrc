@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2007/08/11 11:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.63 2007/08/12 13:36:36 joerg Exp $
 
 DISTNAME=	net-snmp-5.4.1
 CATEGORIES=	net
@@ -113,7 +113,6 @@ REPLACE_FILES.bash=	local/mib2c-update
 INSTALLATION_DIRS+=	share/examples/net-snmp
 
 post-extract:
-	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/include/net-snmp/system
 .if ${OPSYS} == "DragonFly"
 	cp ${FILESDIR}/cpu_dragonfly.c ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
 .endif
