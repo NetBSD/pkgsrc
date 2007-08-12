@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2006/12/03 10:11:50 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2007/08/12 03:04:33 wiz Exp $
 
---- Makefile.ref.orig	2003-11-15 01:10:55.000000000 +0100
-+++ Makefile.ref	2006-12-03 11:01:14.000000000 +0100
-@@ -55,8 +55,6 @@
+--- Makefile.ref.orig	2006-08-21 14:58:45.000000000 -0400
++++ Makefile.ref
+@@ -55,8 +55,6 @@ include config.mk
  
  ifdef USE_MSVC
  OTHER_LIBS += fdlibm/$(OBJDIR)/fdlibm.lib
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2006/12/03 10:11:50 xtraeme Exp $
  endif
  
  ifdef JS_THREADSAFE
-@@ -80,7 +78,8 @@
+@@ -80,7 +78,8 @@ endif
  #
  # XCFLAGS may be set in the environment or on the gmake command line
  #
@@ -21,7 +21,7 @@ $NetBSD: patch-ae,v 1.1 2006/12/03 10:11:50 xtraeme Exp $
  
  LDFLAGS		= $(XLDFLAGS)
  
-@@ -241,12 +240,9 @@
+@@ -248,12 +247,9 @@ JS_CFILES =		\
  	prmjtime.c	\
  	$(NULL)
  
@@ -34,7 +34,7 @@ $NetBSD: patch-ae,v 1.1 2006/12/03 10:11:50 xtraeme Exp $
  endif
  JSMATH_PRELINK	= $(OBJDIR)/jsmathtemp.o
  # Flag for incremental linking
-@@ -300,9 +296,9 @@
+@@ -307,9 +303,9 @@ ifdef USE_MSVC
  $(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
  	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
  else
