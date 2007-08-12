@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.27 2007/08/12 17:51:36 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.28 2007/08/12 18:54:08 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.27 2007/08/12 17:51:36 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.28 2007/08/12 18:54:08 joerg Exp $");
 #endif
 
 /*
@@ -708,9 +708,9 @@ main(int argc, char *argv[])
 				err(EXIT_FAILURE, "getcwd");
 
 			if (show_basename_only)
-				rc = match_local_files(cwd, use_default_sfx, basep, lsbasepattern, NULL);
+				rc = match_local_files(cwd, use_default_sfx, 1, basep, lsbasepattern, NULL);
 			else
-				rc = match_local_files(cwd, use_default_sfx, basep, lspattern, cwd);
+				rc = match_local_files(cwd, use_default_sfx, 1, basep, lspattern, cwd);
 			if (rc == -1)
 				errx(EXIT_FAILURE, "Error from match_local_files(\"%s\", \"%s\", ...)",
 				     cwd, basep);
@@ -746,7 +746,7 @@ main(int argc, char *argv[])
 			if (getcwd(cwd, sizeof(cwd)) == NULL)
 				err(EXIT_FAILURE, "getcwd");
 
-			p = find_best_matching_file(cwd, basep, use_default_sfx);
+			p = find_best_matching_file(cwd, basep, use_default_sfx, 1);
 
 			if (p) {
 				if (show_basename_only)
