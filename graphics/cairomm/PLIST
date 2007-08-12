@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/06 19:56:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/12 12:24:34 adam Exp $
 include/cairomm-1.0/cairomm/cairomm.h
 include/cairomm-1.0/cairomm/context.h
 include/cairomm-1.0/cairomm/enums.h
@@ -7,6 +7,7 @@ include/cairomm-1.0/cairomm/fontface.h
 include/cairomm-1.0/cairomm/fontoptions.h
 include/cairomm-1.0/cairomm/path.h
 include/cairomm-1.0/cairomm/pattern.h
+include/cairomm-1.0/cairomm/quartz_surface.h
 include/cairomm-1.0/cairomm/refptr.h
 include/cairomm-1.0/cairomm/scaledfont.h
 include/cairomm-1.0/cairomm/surface.h
