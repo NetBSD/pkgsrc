@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1 2007/01/24 19:35:26 rillig Exp $
+$NetBSD: patch-af,v 1.2 2007/08/12 03:04:33 wiz Exp $
 
 Only define JS_USE_FDLIBM_MATH if the user (generally) or pkgsrc (in
 this case) hasn't decided.
 
---- jslibmath.h.orig	2003-11-15 01:10:57.000000000 +0100
-+++ jslibmath.h	2007-01-24 20:38:03.000000000 +0100
+--- jslibmath.h.orig	2005-04-29 09:33:47.000000000 -0400
++++ jslibmath.h
 @@ -54,6 +54,7 @@
   * by default since there can be problems with endian-ness and such.
   */
