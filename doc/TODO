@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6590 2007/08/12 10:27:03 wiz Exp $
+$NetBSD: TODO,v 1.6591 2007/08/12 12:25:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -350,7 +350,6 @@ Suggested package updates
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.5
-	o cairomm-1.4.2
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
