@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.26 2007/08/12 16:47:17 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.27 2007/08/12 17:51:36 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.26 2007/08/12 16:47:17 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.27 2007/08/12 17:51:36 joerg Exp $");
 #endif
 
 /*
@@ -713,7 +713,7 @@ main(int argc, char *argv[])
 				rc = match_local_files(cwd, use_default_sfx, basep, lspattern, cwd);
 			if (rc == -1)
 				errx(EXIT_FAILURE, "Error from match_local_files(\"%s\", \"%s\", ...)",
-				     cwd, base);
+				     cwd, basep);
 
 			argv++;
 		}
