@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1787 2007/08/12 19:52:34 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1788 2007/08/12 23:13:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3270,3 +3270,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/glu to 7.0.1 [adam 2007-08-12]
 	Updated graphics/glut to 7.0.1 [adam 2007-08-12]
 	Updated graphics/glx-utils to 7.0.1 [adam 2007-08-12]
+	Updated audio/bmpx to 0.40.1 [wiz 2007-08-12]
