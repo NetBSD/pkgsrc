@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1784 2007/08/12 09:30:30 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1785 2007/08/12 12:25:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3262,3 +3262,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/spidermonkey to 1.60 [wiz 2007-08-12]
 	Updated www/serf to 0.1.2 [wiz 2007-08-12]
 	Moved biology/pymol to biology/py-mol [wiz 2007-08-12]
+	Updated graphics/cairomm to 1.4.4 [adam 2007-08-12]
+	Updated x11/gtkmm to 2.10.11 [adam 2007-08-12]
