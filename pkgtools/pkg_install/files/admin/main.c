@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.25 2007/08/10 21:18:31 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.26 2007/08/12 16:47:17 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.25 2007/08/10 21:18:31 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.26 2007/08/12 16:47:17 joerg Exp $");
 #endif
 
 /*
@@ -436,17 +436,17 @@ checkpattern_fn(const char *pkg, void *vp)
 }
 
 static int
-lspattern_fn(const char *pattern, const char *pkg, void *vp)
+lspattern(const char *pkg, void *vp)
 {
-	char *data = vp;
-	printf("%s/%s\n", data, pkg);
+	const char *dir = vp;
+	printf("%s/%s\n", dir, pkg);
 	return 0;
 }
 
 static int
-lsbasepattern_fn(const char *pattern, const char *pkg, void *vp)
+lsbasepattern(const char *pkg, void *vp)
 {
-	printf("%s\n", pkg);
+	puts(pkg);
 	return 0;
 }
 
@@ -695,11 +695,9 @@ main(int argc, char *argv[])
 			int     rc;
 			const char *basep, *dir;
 			char cwd[MaxPathSize];
-			char base[MaxPathSize];
 
 			dir = lsdirp ? lsdirp : dirname_of(*argv);
 			basep = basename_of(*argv);
-			snprintf(base, sizeof(base), "%s%s", basep, sfx);
 
 			fchdir(saved_wd);
 			rc = chdir(dir);
@@ -710,11 +708,11 @@ main(int argc, char *argv[])
 				err(EXIT_FAILURE, "getcwd");
 
 			if (show_basename_only)
-				rc = findmatchingname(cwd, base, lsbasepattern_fn, cwd);
+				rc = match_local_files(cwd, use_default_sfx, basep, lsbasepattern, NULL);
 			else
-				rc = findmatchingname(cwd, base, lspattern_fn, cwd);
+				rc = match_local_files(cwd, use_default_sfx, basep, lspattern, cwd);
 			if (rc == -1)
-				errx(EXIT_FAILURE, "Error in findmatchingname(\"%s\", \"%s\", ...)",
+				errx(EXIT_FAILURE, "Error from match_local_files(\"%s\", \"%s\", ...)",
 				     cwd, base);
 
 			argv++;
@@ -734,24 +732,22 @@ main(int argc, char *argv[])
 
 		while (*argv != NULL) {
 			/* args specified */
-			int     rc;
 			const char *basep, *dir;
 			char cwd[MaxPathSize];
-			char base[MaxPathSize];
 			char *p;
 
 			dir = lsdirp ? lsdirp : dirname_of(*argv);
 			basep = basename_of(*argv);
-			snprintf(base, sizeof(base), "%s%s", basep, sfx);
 
 			fchdir(saved_wd);
-			rc = chdir(dir);
-			if (rc == -1)
+			if (chdir(dir) == -1)
 				err(EXIT_FAILURE, "Cannot chdir to %s", dir);
 
 			if (getcwd(cwd, sizeof(cwd)) == NULL)
 				err(EXIT_FAILURE, "getcwd");
-			p = findbestmatchingname(cwd, base);
+
+			p = find_best_matching_file(cwd, basep, use_default_sfx);
+
 			if (p) {
 				if (show_basename_only)
 					printf("%s\n", p);
