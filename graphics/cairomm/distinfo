@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/03/18 12:30:23 adam Exp $
+$NetBSD: distinfo,v 1.3 2007/08/12 12:24:34 adam Exp $
 
-SHA1 (cairomm-1.2.4.tar.gz) = dca12f7d4f90812a9cc1c85dcc5652ec24c5eeef
-RMD160 (cairomm-1.2.4.tar.gz) = 1e7b84c77a2144f8665195e07f6bd52337794233
-Size (cairomm-1.2.4.tar.gz) = 580871 bytes
+SHA1 (cairomm-1.4.4.tar.gz) = 5e0411a67d8f427a7fb514f27b8d15298f6dffe6
+RMD160 (cairomm-1.4.4.tar.gz) = 42f9320a102a4a61029d6099aade6550befefca9
+Size (cairomm-1.4.4.tar.gz) = 677392 bytes
