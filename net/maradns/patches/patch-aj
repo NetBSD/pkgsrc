@@ -1,30 +1,27 @@
-$NetBSD: patch-aj,v 1.1 2005/05/13 13:25:55 salo Exp $
+$NetBSD: patch-aj,v 1.2 2007/08/12 01:14:31 joerg Exp $
 
---- parse/Makefile.orig	2003-08-02 21:39:36.000000000 +0200
-+++ parse/Makefile	2005-05-13 15:02:44.000000000 +0200
-@@ -5,10 +5,12 @@
- OBJECTS=$(JOBJS) $(MJOBJS) $(POBJECTS) $(DOBJECTS)
- EXECS=parsetest parsetest2
+--- tools/Makefile.orig	2006-01-02 16:59:33.000000000 +0000
++++ tools/Makefile
+@@ -18,17 +18,17 @@ clean:
+ 	rm -f core $(EXECS) *.exe
  
--FLAGS = -g -O2 -Wall $(DEBUG)
-+FLAGS = -g -O2 -Wall $(DEBUG) $(CFLAGS)
- #FLAGS = -g $(DEBUG)
+ askmara: askmara.c askmara_labels_en.h $(OBJECTS) $(Q) $(OUTOBJ)
+-	$(CC) $(FLAGS) -o askmara askmara.c $(OBJECTS) $(Q) $(OUTOBJ)
++	$(CC) ${CFLAGS} ${LDFLAGS} $(FLAGS) -o askmara askmara.c $(OBJECTS) $(Q) $(OUTOBJ)
  
--all: $(EXECS)
-+all: $(POBJECTS)
-+
-+test: $(EXECS)
+ askmara-tcp: askmara-tcp.c askmara_labels_en.h $(OBJECTS) $(ROBJECTS) $(POBJECTS)
+-	$(CC) $(FLAGS) -o askmara-tcp askmara-tcp.c $(OBJECTS) $(ROBJECTS) $(POBJECTS)
++	$(CC) ${CFLAGS} ${LDFLAGS} $(FLAGS) -o askmara-tcp askmara-tcp.c $(OBJECTS) $(ROBJECTS) $(POBJECTS)
  
- clean:
- 	rm -f $(POBJECTS) core $(EXECS) 
-@@ -26,8 +28,8 @@
- 	$(CC) -c $(FLAGS) -o ParseIpAcl.o ParseIpAcl.c
+ benchmark: benchmark.c askmara_labels_en.h $(OBJECTS) $(POBJECTS)
+-	$(CC) $(FLAGS) -o benchmark benchmark.c $(OBJECTS) $(POBJECTS)
++	$(CC) ${CFLAGS} ${LDFLAGS} $(FLAGS) -o benchmark benchmark.c $(OBJECTS) $(POBJECTS)
  
- parsetest: parsetest.c $(OBJECTS) 
--	$(CC) $(FLAGS) -o parsetest parsetest.c $(OBJECTS) 
-+	$(CC) $(FLAGS) -o parsetest parsetest.c $(OBJECTS) $(LDFLAGS)
+ duende: duende.c 
+-	$(CC) $(FLAGS) -o duende duende.c
++	$(CC) ${CFLAGS} ${LDFLAGS} $(FLAGS) -o duende duende.c
  
- parsetest2: parsetest2.c $(OBJECTS) 
--	$(CC) $(FLAGS) -o parsetest2 parsetest2.c $(OBJECTS) 
-+	$(CC) $(FLAGS) -o parsetest2 parsetest2.c $(OBJECTS) $(LDFLAGS)
+ strip.control: strip.control.c
+-	$(CC) $(FLAGS) -o strip.control strip.control.c
++	$(CC) ${CFLAGS} ${LDFLAGS} $(FLAGS) -o strip.control strip.control.c
  
