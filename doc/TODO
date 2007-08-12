@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6591 2007/08/12 12:25:09 adam Exp $
+$NetBSD: TODO,v 1.6592 2007/08/12 15:17:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -224,7 +224,6 @@ Suggested package updates
 	o Gorm-1.2.1
 	o GridSim-3.3
 	o ImageMagick-6.3.5.4
-	o Mesa-7.0
 	o PAM-0.99.7.1
 	o R-2.5.1
 	o R-CGIwithR-0.72
