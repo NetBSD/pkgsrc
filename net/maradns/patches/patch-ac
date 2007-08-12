@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2003/11/14 21:19:03 cube Exp $
+$NetBSD: patch-ac,v 1.2 2007/08/12 01:14:31 joerg Exp $
 
---- build/install.locations.orig	2002-05-05 14:11:47.000000000 +0200
-+++ build/install.locations
-@@ -33,7 +33,7 @@ MAN5="$PREFIX/man/man5/"
- # The directory to put man pages which describe the server programs
- MAN8="$PREFIX/man/man8/"
- # The directory to put a copy of the MaraDNS documents on the system
--DOCS="$PREFIX/doc/maradns-$VERSION"
-+DOCS="$PREFIX/share/doc/maradns"
+--- configure.orig	2007-08-12 02:10:48.000000000 +0200
++++ configure
+@@ -150,7 +150,7 @@ else
+ 	echo \(if you typed in \"make\" before, just type it again\)
+ 	echo
+ 	echo THIS PORT HAS NOT BEEN TESTED\; USE AT YOUR OWN RISK
+-	EXITCODE=1
++	EXITCODE=0
+ fi
  
- # Mandrake does not have a /usr/local/man.  Ugh.
- # As a result, we need the following kludge to get this to
+ # Set up recursive and authoritative name serving
