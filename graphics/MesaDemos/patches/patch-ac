@@ -1,8 +1,12 @@
-$NetBSD: patch-ac,v 1.9 2006/01/19 12:53:17 adam Exp $
+$NetBSD: patch-ac,v 1.10 2007/08/12 15:14:47 adam Exp $
 
---- Makefile.orig	2005-11-29 23:38:49.000000000 +0100
+--- Makefile.orig	2007-08-03 21:31:28.000000000 +0200
 +++ Makefile
-@@ -2,7 +2,7 @@
+@@ -1,10 +1,10 @@
+ # Top-level Mesa makefile
+ 
+-SHELL = /bin/bash
++SHELL = /bin/sh
  
  TOP = .
  
@@ -11,11 +15,11 @@ $NetBSD: patch-ac,v 1.9 2006/01/19 12:53:17 adam Exp $
  
  
  default: $(TOP)/configs/current
-@@ -117,6 +117,7 @@ linux-x86-xcb \
+@@ -137,6 +137,7 @@ linux-x86-64-static \
  linux-x86-glide \
  linux-x86-static \
  netbsd \
 +pkgsrc \
  openbsd \
  osf1 \
- solaris-x86 \
+ osf1-static \

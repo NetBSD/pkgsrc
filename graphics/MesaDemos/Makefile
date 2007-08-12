@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/12/27 13:37:38 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/08/12 15:14:47 adam Exp $
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
 COMMENT=	OpenGL examples and Demos
@@ -18,19 +18,19 @@ MAKE_FLAGS+=	LIB_DEP=""
 .include "../../graphics/Mesa/buildlink3.mk"
 
 pre-build:
-	cd ${WRKSRC} && ${RM} -fr src
+	cd ${WRKSRC} && rm -fr src
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-	cd ${WRKSRC}/progs && ${PAX}		\
+	cd ${WRKSRC}/progs && pax	\
 		-s ',^./.*Makefile.*,,'	\
-		-s ',^./CVS.*,,'		\
-		-s ',^./.*\.o$$,,'		\
-		-s ',^./\.libs.*,,'		\
-		-s ',^./\.deps.*,,'		\
-		-s ',^./.*\.orig$$,,'		\
+		-s ',^./CVS.*,,'	\
+		-s ',^./.*\.o$$,,'	\
+		-s ',^./\.libs.*,,'	\
+		-s ',^./\.deps.*,,'	\
+		-s ',^./.*\.orig$$,,'	\
 		-rw . ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}
+	chmod -R a+rX ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}
 
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

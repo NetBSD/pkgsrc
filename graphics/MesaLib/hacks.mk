@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2006/10/01 20:31:13 schwarz Exp $
+# $NetBSD: hacks.mk,v 1.2 2007/08/12 15:14:48 adam Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -10,7 +10,7 @@ MESALIBS_HACKS_MK=	# defined
 .if ${LOWER_OPSYS} == "irix5.3"
 PKG_HACKS+=		sys_types_h-inttypes_h-conflict
 post-wrapper:
-		${MKDIR} ${BUILDLINK_DIR}/include/sys && ${GREP} -v '^typedef.*[^u_]int[12368]*_t;' /usr/include/sys/types.h > ${BUILDLINK_DIR}/include/sys/types.h
+		mkdir ${BUILDLINK_DIR}/include/sys && grep -v '^typedef.*[^u_]int[12368]*_t;' /usr/include/sys/types.h > ${BUILDLINK_DIR}/include/sys/types.h
 # should match int8_t, int16_t, and int32_t (only)
 .endif
 
