@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1785 2007/08/12 12:25:09 adam Exp $
+$NetBSD: CHANGES-2007,v 1.1786 2007/08/12 15:17:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3264,3 +3264,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Moved biology/pymol to biology/py-mol [wiz 2007-08-12]
 	Updated graphics/cairomm to 1.4.4 [adam 2007-08-12]
 	Updated x11/gtkmm to 2.10.11 [adam 2007-08-12]
+	Updated graphics/Mesa to 7.0.1 [adam 2007-08-12]
+	Updated graphics/MesaLibs to 7.0.1 [adam 2007-08-12]
+	Updated graphics/MesaDemos to 7.0.1 [adam 2007-08-12]
+	Updated graphics/glu to 7.0.1 [adam 2007-08-12]
+	Updated graphics/glut to 7.0.1 [adam 2007-08-12]
+	Updated graphics/glx-utils to 7.0.1 [adam 2007-08-12]
