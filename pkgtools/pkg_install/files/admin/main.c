@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.28 2007/08/12 18:54:08 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.29 2007/08/12 22:09:02 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.28 2007/08/12 18:54:08 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.29 2007/08/12 22:09:02 joerg Exp $");
 #endif
 
 /*
@@ -658,7 +658,7 @@ main(int argc, char *argv[])
 					if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
 						errx(EXIT_FAILURE, "asprintf failed");
 
-					if (match_installed_pkgs(*argv, checkpattern_fn, &got_match) == -1)
+					if (match_installed_pkgs(pattern, checkpattern_fn, &got_match) == -1)
 						errx(EXIT_FAILURE, "Cannot process pkdbdb");
 
 					if (got_match == 0)
@@ -915,7 +915,7 @@ set_unset_variable(char **argv, Boolean unset)
 				if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
 					errx(EXIT_FAILURE, "asprintf failed");
 
-				if (match_installed_pkgs(*argv, set_installed_info_var, &arg) == -1)
+				if (match_installed_pkgs(pattern, set_installed_info_var, &arg) == -1)
 					errx(EXIT_FAILURE, "Cannot process pkdbdb");
 
 				if (arg.got_match == 0) {
