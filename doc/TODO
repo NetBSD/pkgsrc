@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6595 2007/08/13 07:07:17 martti Exp $
+$NetBSD: TODO,v 1.6596 2007/08/13 14:22:32 tnn Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ Suggested package updates
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
-	o pidgin-2.1.0
 	o piewm-1.04
 	o pim6dd-20040819a
 	o pim6sd-20040824a
