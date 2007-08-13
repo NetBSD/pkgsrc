@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2007/08/02 15:45:09 taca Exp $
+# $NetBSD: Makefile,v 1.195 2007/08/13 13:04:11 rillig Exp $
 
 DISTNAME=	squid-2.6.STABLE14
 PKGNAME=	${DISTNAME:S/STABLE//}
@@ -96,6 +96,8 @@ SUBST_STAGE.confs=	pre-configure
 SUBST_FILES.confs=	src/cf.data.pre
 SUBST_SED.confs=	-e "s/@USER@/${SQUID_USER}/"
 SUBST_MESSAGE.confs=	Fixing configuration files.
+
+CHECK_PORTABILITY_SKIP+=	icons/icons.shar
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/squid
