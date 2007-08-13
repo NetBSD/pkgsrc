@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.18 2006/08/02 02:25:46 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.19 2007/08/13 05:01:18 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -43,7 +43,7 @@ DJB_CONFIG_CMDS?=	${DO_NADA}
 .if !empty(DJB_RESTRICTED:M[yY][eE][sS])
 LICENSE=		djb-nonlicense
 
-RESTRICTED=		"modified source and binaries may not be distributed"
+RESTRICTED=		modified source and binaries may not be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .endif
