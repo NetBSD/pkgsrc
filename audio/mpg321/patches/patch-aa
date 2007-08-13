@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/01/07 16:54:12 tron Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/13 06:31:37 rillig Exp $
 
---- mpg321.c.orig	Sun Mar 24 06:49:20 2002
-+++ mpg321.c	Wed Jan  7 17:47:33 2004
-@@ -188,7 +188,7 @@
+--- mpg321.c.orig	2002-03-24 06:49:20.000000000 +0100
++++ mpg321.c	2007-06-15 14:26:24.000000000 +0200
+@@ -188,7 +188,7 @@ static int show_id3(struct id3_tag const
              
              else
              {
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2004/01/07 16:54:12 tron Exp $
                  free(names[i]);
              }
          }
-@@ -203,7 +203,7 @@
+@@ -203,7 +203,7 @@ static int show_id3(struct id3_tag const
              if (!names[i])  {
                  fprintf (stderr, emptystring);
              }   else    {
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.1 2004/01/07 16:54:12 tron Exp $
                  free (names[i]);
              }
              if (i%2) fprintf (stderr, "\n");
+@@ -435,6 +435,8 @@ int main(int argc, char *argv[])
+                 mpg321_error(currentfile);
+                 continue;
+             }
++
++	    (void)close(fd);
+             
+             playbuf.frames[0] = playbuf.buf;
+             
