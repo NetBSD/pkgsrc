@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.1 2007/08/13 06:03:46 rillig Exp $
+# $NetBSD: common.mk,v 1.2 2007/08/13 08:45:17 rillig Exp $
 #
 # This file contains the definitions that are used in all directories of
 # pkgsrc -- the top-level, the categories and the packages themselves.
@@ -37,7 +37,7 @@ _PKG_SILENT=		# empty
 .endif
 
 .if ${PKG_DEBUG_LEVEL} > 1
-_PKG_DEBUG=		set -x;
+_PKG_DEBUG=		: commands for target ${.TARGET:Q}; set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
