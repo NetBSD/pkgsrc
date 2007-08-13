@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/06/07 12:37:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/13 05:38:02 rillig Exp $
 
 DISTNAME=		ncmpc-0.11.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://hem.bredband.net/kaw/ncmpc/files/ \
 			http://mercury.chem.pitt.edu/~shank/
