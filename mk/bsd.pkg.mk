@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1919 2007/08/13 05:22:37 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1920 2007/08/13 05:24:26 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -836,7 +836,7 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .  include "${.PARSEDIR}/misc/developer.mk"
 .endif
 .include "${.PARSEDIR}/misc/show.mk"
-.if make(debug) || make(build-env)
+.if make(debug)
 .  include "${.PARSEDIR}/bsd.pkg.debug.mk"
 .endif
 .if make(help)
