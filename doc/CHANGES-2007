@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1792 2007/08/13 11:18:28 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1793 2007/08/13 14:22:32 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3282,3 +3282,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Downgraded graphics/glx-utils to 6.4.2 [seb 2007-08-13]
 	Downgraded graphics/MesaDemos to 6.4.2 [seb 2007-08-13]
 	Downgraded graphics/Mesa to 6.4.2 [seb 2007-08-13]
+	Updated chat/libpurple to 2.1.0 [tnn 2007-08-13]
+	Updated chat/pidgin to 2.1.0 [tnn 2007-08-13]
+	Updated chat/finch to 2.1.0 [tnn 2007-08-13]
