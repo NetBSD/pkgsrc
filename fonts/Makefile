@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2007/07/17 19:09:01 drochner Exp $
+# $NetBSD: Makefile,v 1.105 2007/08/13 08:12:46 rillig Exp $
 #
 
 COMMENT=	Fonts
@@ -151,4 +151,4 @@ SUBDIR+=	xorg-fontsTruetype
 SUBDIR+=	xorg-fontsType1
 SUBDIR+=	xorg-fontserver
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

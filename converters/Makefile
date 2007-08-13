@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2007/05/29 01:06:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.90 2007/08/13 08:12:43 rillig Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -75,4 +75,4 @@ SUBDIR+=	xlhtml
 SUBDIR+=	xlreader
 SUBDIR+=	yencode
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

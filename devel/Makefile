@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.880 2007/08/06 20:30:30 seb Exp $
+# $NetBSD: Makefile,v 1.881 2007/08/13 08:12:45 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -794,4 +794,4 @@ SUBDIR+=	yasm
 SUBDIR+=	z80-asm
 SUBDIR+=	zlib
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

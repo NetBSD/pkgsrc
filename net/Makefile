@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2007/07/29 21:36:10 seb Exp $
+# $NetBSD: Makefile,v 1.676 2007/08/13 08:12:48 rillig Exp $
 #
 
 COMMENT=	Networking tools
@@ -520,4 +520,4 @@ SUBDIR+=	yougrabber
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

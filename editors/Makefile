@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2007/06/11 13:40:39 markd Exp $
+# $NetBSD: Makefile,v 1.120 2007/08/13 08:12:45 rillig Exp $
 #
 
 COMMENT=	Editors
@@ -113,4 +113,4 @@ SUBDIR+=	xwpe
 SUBDIR+=	yudit
 SUBDIR+=	zile
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
