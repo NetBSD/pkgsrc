@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.261 2007/08/02 18:19:31 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.262 2007/08/13 07:42:10 rillig Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -26,15 +26,16 @@ PATH=/bin:/usr/bin:/sbin:/usr/sbin
 # Expand MAKE to a full path.
 .if !defined(_MAKE)
 _MAKE:=	${MAKE}
+# allow for MAKE=./make and similar.
+.  if empty(_MAKE:M/*) && !empty(_MAKE:M*/*) && defined(PWD) && exists(${PWD}/${MAKE})
+_MAKE:=	${PWD}/${MAKE}
+.  endif
 .  for _dir_ in ${PATH:C/\:/ /g}
 .    if empty(_MAKE:M/*)
 .      if exists(${_dir_}/${MAKE})
 _MAKE:=	${_dir_}/${MAKE}
 .      endif
 .    endif
-.  if empty(_MAKE:M/*) && defined(PWD) && exists(${PWD}/${MAKE})
-_MAKE:=	${_PWD_}/${MAKE}
-.  endif
 .  endfor
 .  if !empty(_MAKE:M/*)
 MAKEFLAGS+=	_MAKE=${_MAKE:Q}
