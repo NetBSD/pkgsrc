@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2007/06/30 01:01:12 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/08/13 12:40:58 jlam Exp $
 
 DISTNAME=	emacs-20.7
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/} \
 		${MASTER_SITE_LOCAL}
@@ -28,8 +28,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 GNU_ARCH.mipsbe= mips
 
-BUILD_DEFS+=	USE_INET6 EMACS_USE_POP
-
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-20.7
@@ -54,33 +52,8 @@ LDFLAGS+=	-Wl,-z,nocombreloc
 CPPFLAGS+=	-DDFLY_PRE_17_CRT
 .endif
 
-EMACS_USE_POP?=	yes
-.if (defined(EMACS_USE_POP) && \
-    (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
-CONFIGURE_ARGS+=--with-pop
-.endif
+.include "options.mk"
 
-.if defined(EMACS_USE_X)
-.include "../../mk/x11.buildlink3.mk"
-BUILD_DEFS+=		EMACS_USE_X EMACS_USE_X_TOOLKIT
-CONFIGURE_ARGS+=	--with-x=yes
-.if defined(EMACS_USE_X_TOOLKIT)
-CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT:Q}
-.if ${EMACS_USE_X_TOOLKIT} == "lucid" || ${EMACS_USE_X_TOOLKIT} == "athena"
-.include "../../mk/xaw.buildlink3.mk"
-.elif ${EMACS_USE_X_TOOLKIT} == "motif"
-.include "../../mk/motif.buildlink3.mk"
-.endif
-.endif
-.else
-CONFIGURE_ARGS+=	--with-x=no
-.endif	# EMACS_USE_X
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=--with-ipv6
-.else
-CONFIGURE_ARGS+=--without-ipv6
-.endif
 MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL:Q}
 
 .include "../../mk/compiler.mk"
