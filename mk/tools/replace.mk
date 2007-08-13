@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.194 2007/07/31 17:42:40 jlam Exp $
+# $NetBSD: replace.mk,v 1.195 2007/08/13 02:30:04 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -642,7 +642,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.rpm2pkg=
 TOOLS_DEPENDS.rpm2pkg?=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 TOOLS_CREATE+=			rpm2pkg
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.rpm2pkg=rpm2pkg
-TOOLS_PATH.rpm2pkg=		${TOOLS_PREFIX.rpm2pkg}/bin/rpm2pkg
+TOOLS_PATH.rpm2pkg=		${TOOLS_PREFIX.rpm2pkg}/sbin/rpm2pkg
 .  endif
 .endif
 
