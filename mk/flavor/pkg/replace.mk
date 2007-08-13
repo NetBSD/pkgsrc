@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.16 2007/08/11 14:18:05 gdt Exp $
+# $NetBSD: replace.mk,v 1.17 2007/08/13 08:33:45 rillig Exp $
 #
 
 # _flavor-replace:
@@ -47,6 +47,11 @@ _COOKIE.replace=	${WRKDIR}/.replace_done
 _REPLACE_OLDNAME_FILE=	${WRKDIR}/.replace_oldname
 _REPLACE_NEWNAME_FILE=	${WRKDIR}/.replace_newname
 
+_REPLACE_OLDNAME_CMD=	\
+	[ -f ${_REPLACE_OLDNAME_FILE} ] \
+	|| ${FAIL_MSG} "[${.TARGET}] ${_REPLACE_OLDNAME_FILE}: File not found"; \
+	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`
+
 ######################################################################
 ### undo-replace-check (PRIVATE)
 ######################################################################
@@ -54,10 +59,8 @@ _REPLACE_NEWNAME_FILE=	${WRKDIR}/.replace_newname
 ### action performed that can be undone.
 ###
 undo-replace-check: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} ! -f ${_COOKIE.replace} || exit 0;			\
-	${ERROR_MSG} "No replacement to undo!";				\
-	exit 1
+	${RUN} [ -f ${_COOKIE.replace} ] \
+	|| ${FAIL_MSG} "No replacement to undo!"
 
 ######################################################################
 ### replace-tarup (PRIVATE)
@@ -66,11 +69,8 @@ undo-replace-check: .PHONY
 ### package using pkg_tarup.
 ###
 replace-tarup: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ! -x ${_PKG_TARUP_CMD:Q}; then			\
-		${ERROR_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";	\
-		exit 1;							\
-	fi;								\
+	${RUN} [ -x ${_PKG_TARUP_CMD:Q} ] \
+	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${WRKDIR}					\
 		${_PKG_TARUP_CMD} ${PKGBASE}
@@ -83,10 +83,8 @@ replace-tarup: .PHONY
 ###
 undo-replace-install: .PHONY
 	@${PHASE_MSG} "Re-adding ${PKGNAME} from saved tar-up package."
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
-	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
-	${ECHO} "Running ${PKG_ADD} ${WRKDIR}/$${oldname}${PKG_SUFX}";	\
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
+	${ECHO} "Installing saved package ${WRKDIR}/$${oldname}${PKG_SUFX}"; \
 	${PKG_ADD} ${WRKDIR}/$${oldname}${PKG_SUFX}
 
 ######################################################################
@@ -97,12 +95,9 @@ undo-replace-install: .PHONY
 ### targets.
 ###
 replace-names: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} > ${_REPLACE_OLDNAME_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
+	${RUN} ${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} > ${_REPLACE_OLDNAME_FILE}
+	${RUN} ${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
+	${RUN} ${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
 
 ######################################################################
 ### replace-preserve-installed-info (PRIVATE)
@@ -111,10 +106,8 @@ replace-names: .PHONY
 ### file from the installed package.
 ###
 replace-preserve-installed-info: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${STEP_MSG} "Preserving existing +INSTALLED_INFO file.";	\
-	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	installed_info="${_PKG_DBDIR}/$$oldname/+INSTALLED_INFO";	\
 	${TEST} ! -f "$$installed_info" ||				\
 	${MV} $$installed_info ${_INSTALLED_INFO_FILE}
@@ -126,10 +119,8 @@ replace-preserve-installed-info: .PHONY
 ### file from the installed package.
 ###
 replace-preserve-required-by: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${STEP_MSG} "Preserving existing +REQUIRED_BY file.";		\
-	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	required_by="${_PKG_DBDIR}/$$oldname/+REQUIRED_BY";		\
 	${TEST} ! -f "$$required_by" ||					\
 	${MV} $$required_by ${_REQUIRED_BY_FILE}
@@ -146,12 +137,9 @@ replace-preserve-required-by: .PHONY
 ### XXX Only set unsafe_depends if there is an ABI change.
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -e;								\
-	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
 	${TEST} -f ${_REQUIRED_BY_FILE} || exit 0;			\
-	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
 	${CAT} ${_REQUIRED_BY_FILE} |					\
 	while read pkg; do						\
@@ -183,8 +171,7 @@ replace-fixup-required-by: .PHONY
 ### XXX pkg_admin should not complain on unset with no +INSTALLED_INFO.
 replace-fixup-installed-info: .PHONY
 	@${STEP_MSG} "Removing unsafe_depends tag."
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} ! -f ${_INSTALLED_INFO_FILE} ||				\
+	${RUN} [ ! -f ${_INSTALLED_INFO_FILE} ] ||			\
 	${MV} ${_INSTALLED_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO; \
 	for var in unsafe_depends unsafe_depends_strict rebuild; do	\
 		${TEST} ! -f ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO || \
@@ -198,14 +185,10 @@ replace-fixup-installed-info: .PHONY
 ### that it may be re-invoked.
 ###
 replace-clean: .PHONY
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
-	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
+	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${RM} -f ${WRKDIR}/$$oldname${PKG_SUFX}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
+	${RUN} [ -f ${_REPLACE_NEWNAME_FILE} ] || exit 0;		\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
 	${RM} -f ${WRKDIR}/$$newname${PKG_SUFX}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${_REPLACE_OLDNAME_FILE} ${_REPLACE_NEWNAME_FILE}	\
-		${_COOKIE.replace}
+	${RUN} ${RM} -f ${_REPLACE_OLDNAME_FILE}			\
+		 ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
