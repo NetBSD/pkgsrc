@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2007/08/13 05:32:11 dan Exp $
+# $NetBSD: options.mk,v 1.4 2007/08/13 22:18:58 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		gnutls sametime silc perl tcl debug dbus
-PKG_SUGGESTED_OPTIONS+=		gnutls silc
+PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus
+PKG_SUGGESTED_OPTIONS+=		gnutls
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,24 +20,6 @@ CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
 CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 
 .  include "../../devel/nss/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Msametime)
-PLIST_SUBST+=		SAMETIME=
-. include "../../chat/meanwhile/buildlink3.mk"
-.else
-PLIST_SUBST+=		SAMETIME="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Msilc)
-PLIST_SUBST+=		SILC=
-CONFIGURE_ARGS+= --with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
-CONFIGURE_ARGS+= --with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
-. include "../../devel/silc-toolkit/buildlink3.mk"
-. include "../../mk/pthread.buildlink3.mk"
-.else
-PLIST_SUBST+=		SILC="@comment "
-CONFIGURE_ARGS+=	--disable-silc
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
