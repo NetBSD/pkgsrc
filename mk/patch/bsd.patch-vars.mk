@@ -1,10 +1,10 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.4 2007/05/25 14:21:32 rillig Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.5 2007/08/13 09:22:21 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
 # bsd.patch.mk is included.
 #
-# The following variables may be set in a package Makefile:
+# Package-settable variables:
 #
 #    PATCHFILES is a list of distribution patches relative to
 #	${_DISTDIR} that are applied first to the package.
@@ -13,7 +13,7 @@
 #	This defaults to the "patches" subdirectory of the package
 #	directory.
 #
-# The following variables may be set by the user:
+# User-settable variables:
 #
 #    LOCALPATCHES is the location of local patches that are maintained
 #	in a directory tree reflecting the same hierarchy as the pkgsrc
@@ -25,29 +25,22 @@
 # The default PATCHDIR is currently set in bsd.prefs.mk
 #PATCHDIR?=	${.CURDIR}/patches
 
-.if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
-    (defined(PATCHDIR) && exists(${PATCHDIR})) || \
-    (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
+PATCHFILES?=	# none
+
+pkgsrc_patches=	${:!echo ${PATCHDIR}/patch-*!:N*\*}
+local_patches=	${:!echo ${LOCALPATCHES}/${PKGPATH}/*!:N*/CVS:N*/\*}
+
+.if !empty(PATCHFILES) || !empty(pkgsrc_patches) || !empty(local_patches)
 USE_TOOLS+=	patch
 .endif
-
-# Just testing whether the directories exist or not is not enough.
-# There may be directories that are empty except for the CVS metafiles.
-# This complicated test is necessary to not record pkgtools/digest
-# as a dependency for devel/bmake.
-.if (defined(PATCHDIR) && exists(${PATCHDIR})) || \
-    (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
-_patches!=	echo ${PATCHDIR}/* ${LOCALPATCHES}/${PKGPATH}/*
-_patches:=	${_patches:N*/CVS:N*/\*}
-.  if !empty(_patches)
+.if !empty(PATCHFILES) || !empty(pkgsrc_patches)
 USE_TOOLS+=	digest:bootstrap
-.  endif
 .endif
 
 # These tools are used to output the contents of the distribution patches
 # to stdout.
 #
-.if defined(PATCHFILES)
+.if !empty(PATCHFILES)
 USE_TOOLS+=	cat
 .  if !empty(PATCHFILES:M*.Z) || !empty(PATCHFILES:M*.gz)
 USE_TOOLS+=	gzcat
