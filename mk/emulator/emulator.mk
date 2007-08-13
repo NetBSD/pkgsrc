@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.2 2007/07/31 20:02:48 jlam Exp $
+# $NetBSD: emulator.mk,v 1.3 2007/08/13 15:17:09 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -103,7 +103,7 @@ EMUL_PKG_FMT?=		plain
 emul-fetch:
 .for _platform_ in ${EMUL_PLATFORMS}
 	${RUN} ${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes			\
-		EMUL_PLATFORM=${_platform_}
+		_BOOTSTRAP_VERBOSE= EMUL_PLATFORM=${_platform_}
 .endfor
 
 .PHONY: emul-distinfo
