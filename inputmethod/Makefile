@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/03 17:23:18 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/13 08:12:47 rillig Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -40,4 +40,4 @@ SUBDIR+=	uim
 SUBDIR+=	unicon-im
 SUBDIR+=	xcin
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
