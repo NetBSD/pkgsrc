@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.54 2007/08/09 23:32:59 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.55 2007/08/13 19:13:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.54 2007/08/09 23:32:59 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.55 2007/08/13 19:13:14 joerg Exp $");
 #endif
 #endif
 
@@ -238,20 +238,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 	umask(DEF_UMASK);
 
-	/* Are we coming in for a second pass, everything already extracted?
-	 * (Slave mode) */
-	if (!pkg) {
-		fgets(playpen, MaxPathSize, stdin);
-		playpen[strlen(playpen) - 1] = '\0';	/* remove newline! */
-		if (chdir(playpen) == FAIL) {
-			warnx("add in SLAVE mode can't chdir to %s", playpen);
-			return 1;
-		}
-		read_plist(&Plist, stdin);
-		where_to = playpen;
-	}
-	/* Nope - do it now */
-	else {
+	{
 		const char *tmppkg;
 
 		tmppkg = fileFindByPath(pkg);

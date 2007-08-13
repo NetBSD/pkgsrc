@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.11 2007/07/30 08:09:14 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.12 2007/08/13 19:13:13 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.11 2007/07/30 08:09:14 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.12 2007/08/13 19:13:13 joerg Exp $");
 #endif
 #endif
 
@@ -162,8 +162,14 @@ main(int argc, char **argv)
 	path_create(getenv("PKG_PATH"));
 	TAILQ_INIT(&pkgs);
 
+	if (argc == 0) {
+		/* If no packages, yelp */
+		warnx("missing package name(s)");
+		usage();
+	}
+
 	/* Get all the remaining package names, if any */
-	for (ch = 0; *argv; ch++, argv++) {
+	for (; argc > 0; --argc, ++argv) {
 		lpkg_t *lpp;
 
 		if (IS_STDIN(*argv))
@@ -172,11 +178,6 @@ main(int argc, char **argv)
 			lpp = alloc_lpkg(*argv);
 
 		TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
-	}
-
-	if (!ch) {
-		/* If no packages, yelp */
-		warnx("missing package name(s)"), usage();
 	}
 	
 	/* Increase # of max. open file descriptors as high as possible */
