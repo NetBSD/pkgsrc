@@ -1,27 +1,26 @@
-# $NetBSD: options.mk,v 1.2 2007/08/13 12:40:57 jlam Exp $
+# $NetBSD: options.mk,v 1.1 2007/08/13 12:40:58 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
-PKG_SUPPORTED_OPTIONS+=		nox11	# OBSOLETE; remove after pkgsrc-2007Q4
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw
+PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif xaw
 PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### OBSOLETE section.  Should be removed after pkgsrc-2007Q4.
-### The "nox11" option implies removing all of the "x11"-related options.
+### Treat "emacs-xaw3d" as a special case of "xaw".
 ###
-.if !empty(PKG_OPTIONS:Mnox11)
-PKG_OPTIONS:=		${PKG_OPTIONS:Nx11:Ngtk:Nmotif:Nxaw}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated option nox11 used, use option -x11 instead."
+.if !empty(PKG_OPTIONS:Memacs-xaw3d)
+XAW_TYPE=		3d
+PKG_OPTIONS:=		${PKG_OPTIONS:Nemacs-xaw3d}
+PKG_OPTIONS+=		xaw
 .endif
 
 ###
 ### Any of the "toolkit" options implies "x11".
 ###
-.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw)
+.if !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw)
 .  if empty(PKG_OPTIONS:Mx11)
 PKG_OPTIONS+=		x11
 .  endif
@@ -31,7 +30,7 @@ PKG_OPTIONS+=		x11
 ### Default to using the Xaw X11 toolkit if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-.  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
+.  if empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
 PKG_OPTIONS+=		xaw
 .  endif
 .endif
@@ -62,14 +61,6 @@ CONFIGURE_ARGS+=	--without-png
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xpm
-.endif
-
-###
-### Support using Motif X11 widgets.
-###
-.if !empty(PKG_OPTIONS:Mgtk)
-.  include "../../x11/gtk2/buildlink3.mk
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
 .endif
 
 ###

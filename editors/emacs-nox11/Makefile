@@ -1,19 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2007/06/11 13:57:21 markd Exp $
+# $NetBSD: Makefile,v 1.27 2007/08/13 12:40:57 jlam Exp $
 
-DISTNAME=	emacs-${EMACSVERSION}
 PKGNAME=	emacs-nox11-${EMACSVERSION}
-CATEGORIES=	editors
-COMMENT=	GNU editing macros (editor) - non X11 version
-
-.include "../../editors/emacs/Makefile.common"
+COMMENT_EXTRA=	: non-X11 version
 
 CONFLICTS+=	emacs-[0-9]*
 
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-xpm
-CONFIGURE_ARGS+=	--without-jpeg
-CONFIGURE_ARGS+=	--without-tiff
-CONFIGURE_ARGS+=	--without-gif
-CONFIGURE_ARGS+=	--without-png
+.include "../../mk/bsd.prefs.mk"
 
-.include "../../mk/bsd.pkg.mk"
+# Forcibly remove any "x11" options.
+PKG_OPTIONS.emacs+=	-x11 -gtk -motif -xaw
+
+.include "../../editors/emacs/Makefile"
