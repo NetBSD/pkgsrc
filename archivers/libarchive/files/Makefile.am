@@ -28,10 +28,9 @@ distclean-local:
 	-rm -rf autom4te.cache/
 	-rm -f *~
 
+# Always build libarchive, regardless
 lib_LTLIBRARIES=	libarchive.la
-if BUILD_BSDTAR
-bin_PROGRAMS=	bsdtar
-endif
+bin_PROGRAMS=	$(bsdtar_programs)
 check_PROGRAMS= libarchive_test
 dist_man_MANS=$(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS)
 TESTS= libarchive_test
@@ -206,13 +205,21 @@ bsdtar_DEPENDENCIES = libarchive.la		\
 		libarchive/archive_entry.h	\
 		libarchive/archive.h
 
+if STATIC_BSDTAR
+bsdtar_static=-static
+else
+bsdtar_static=
+endif
+
 bsdtar_LDADD= libarchive.la
 bsdtar_CPPFLAGS=-I$(top_builddir)/libarchive
-# Link libarchive statically...
-bsdtar_dist_man_MANS=	tar/bsdtar.1
+bsdtar_LDFLAGS= $(bsdtar_static) -I$(destdir)/libarchive
 
-if STATIC_BSDTAR
-bsdtar_LDFLAGS= -static -I$(destdir)/libarchive
+if BUILD_BSDTAR
+bsdtar_dist_man_MANS=	tar/bsdtar.1
+bsdtar_programs=bsdtar
 else
-bsdtar_LDFLAGS=	-I$(destdir)/libarchive
+bsdtar_dist_man_MANS=
+bsdtar_programs=
 endif
+
