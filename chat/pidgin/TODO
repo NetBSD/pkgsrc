@@ -1,5 +1,7 @@
 + Builds and installs. Works so with IRC.
 
+- Remove silc and sametime options from libpurple and instead provide plugin
+  packages e.g. chat/pidgin-silc or chat/libpurple-silc
 - does not install pidgin.1 in doc/Makefile. Why? finch does it.
 - options.mk: is this sufficient?
 - gstreamer should be a suggested option
