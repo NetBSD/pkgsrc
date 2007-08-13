@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.31 2007/08/02 11:20:16 abs Exp $
+# $Id: optimize_gcc.mk,v 1.32 2007/08/13 10:31:06 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -31,6 +31,9 @@ PKG_EXCLUDE_OMIT_FRAME_POINTER+=mail/thunderbird15 mail/thunderbird15-gtk1
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=lang/ruby18-base        # NetBSD i386/3.0
 
 PKG_EXCLUDE_INLINE_FUNCTIONS+=emulators/qemu net/userppp multimedia/vlc
+
+# binutils-2.17, Linux 2.6.21.5 i686, gcc-4.1.3
+PKG_EXCLUDE_INLINE_FUNCTIONS+=cross/binutils devel/binutils
 
 # v1.0, NetBSD i386/2.0
 PKG_EXCLUDE_FAST_MATH+=www/firefox www/firefox-gtk1
