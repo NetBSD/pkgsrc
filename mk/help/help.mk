@@ -1,13 +1,10 @@
-# $NetBSD: help.mk,v 1.9 2007/05/24 05:33:49 rillig Exp $
+# $NetBSD: help.mk,v 1.10 2007/08/13 05:58:44 rillig Exp $
 #
 
 # This is the integrated pkgsrc online help system. To query for the
 # meaning of a variable, run "make help TOPIC=VARNAME". All variables from
 # certain pkgsrc Makefile fragments that have inline comments are eligible
 # for querying.
-
-.if !defined(_PKGSRC_HELP_MK)
-_PKGSRC_HELP_MK=	# defined
 
 _HELP_FILES=		Makefile
 _HELP_FILES+=		mk/*.mk mk/*/*.mk mk/*/*/*.mk
@@ -39,6 +36,4 @@ help:
 .else
 	${RUN} cd ${PKGSRCDIR};						\
 	env TOPIC=${TOPIC:Q} ${AWK} -f ${PKGSRCDIR}/mk/help/help.awk ${_HELP_FILES}
-.endif
-
 .endif
