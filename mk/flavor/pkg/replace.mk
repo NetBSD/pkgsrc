@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.17 2007/08/13 08:33:45 rillig Exp $
+# $NetBSD: replace.mk,v 1.18 2007/08/13 14:18:23 gdt Exp $
 #
 
 # _flavor-replace:
@@ -51,6 +51,11 @@ _REPLACE_OLDNAME_CMD=	\
 	[ -f ${_REPLACE_OLDNAME_FILE} ] \
 	|| ${FAIL_MSG} "[${.TARGET}] ${_REPLACE_OLDNAME_FILE}: File not found"; \
 	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`
+
+_REPLACE_NEWNAME_CMD=	\
+	[ -f ${_REPLACE_NEWNAME_FILE} ] \
+	|| ${FAIL_MSG} "[${.TARGET}] ${_REPLACE_NEWNAME_FILE}: File not found"; \
+	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`
 
 ######################################################################
 ### undo-replace-check (PRIVATE)
@@ -106,8 +111,8 @@ replace-names: .PHONY
 ### file from the installed package.
 ###
 replace-preserve-installed-info: .PHONY
+	@${STEP_MSG} "Preserving existing +INSTALLED_INFO file."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
-	${STEP_MSG} "Preserving existing +INSTALLED_INFO file.";	\
 	installed_info="${_PKG_DBDIR}/$$oldname/+INSTALLED_INFO";	\
 	${TEST} ! -f "$$installed_info" ||				\
 	${MV} $$installed_info ${_INSTALLED_INFO_FILE}
@@ -119,8 +124,8 @@ replace-preserve-installed-info: .PHONY
 ### file from the installed package.
 ###
 replace-preserve-required-by: .PHONY
+	@${STEP_MSG} "Preserving existing +REQUIRED_BY file."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
-	${STEP_MSG} "Preserving existing +REQUIRED_BY file.";		\
 	required_by="${_PKG_DBDIR}/$$oldname/+REQUIRED_BY";		\
 	${TEST} ! -f "$$required_by" ||					\
 	${MV} $$required_by ${_REQUIRED_BY_FILE}
@@ -138,9 +143,8 @@ replace-preserve-required-by: .PHONY
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
-	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
+	${_REPLACE_NEWNAME_CMD};					\
 	${TEST} -f ${_REQUIRED_BY_FILE} || exit 0;			\
-	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
 	${CAT} ${_REQUIRED_BY_FILE} |					\
 	while read pkg; do						\
 		case $$pkg in						\
@@ -161,7 +165,7 @@ replace-fixup-required-by: .PHONY
 			${PKG_ADMIN} set unsafe_depends=YES $$pkg;	\
 		fi;							\
 	done;								\
-	${MV} ${_REQUIRED_BY_FILE} ${_PKG_DBDIR}/${PKGNAME}/+REQUIRED_BY
+	${MV} ${_REQUIRED_BY_FILE} ${_PKG_DBDIR}/$$newname/+REQUIRED_BY
 
 ######################################################################
 ### replace-fixup-installed-info (PRIVATE)
@@ -170,12 +174,13 @@ replace-fixup-required-by: .PHONY
 ### tags from this package.
 ### XXX pkg_admin should not complain on unset with no +INSTALLED_INFO.
 replace-fixup-installed-info: .PHONY
-	@${STEP_MSG} "Removing unsafe_depends tag."
-	${RUN} [ ! -f ${_INSTALLED_INFO_FILE} ] ||			\
-	${MV} ${_INSTALLED_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO; \
+	@${STEP_MSG} "Removing unsafe_depends and rebuild tags."
+	${RUN} ${_REPLACE_NEWNAME_CMD};					\
+	[ ! -f ${_INSTALLED_INFO_FILE} ] ||			\
+	${MV} ${_INSTALLED_INFO_FILE} ${_PKG_DBDIR}/$$newname/+INSTALLED_INFO; \
 	for var in unsafe_depends unsafe_depends_strict rebuild; do	\
-		${TEST} ! -f ${_PKG_DBDIR}/${PKGNAME}/+INSTALLED_INFO || \
-		${PKG_ADMIN} unset $$var ${PKGBASE};			\
+		${TEST} ! -f ${_PKG_DBDIR}/$$newname/+INSTALLED_INFO || \
+		${PKG_ADMIN} unset $$var $$newname;			\
 	done
 
 ######################################################################
@@ -186,9 +191,8 @@ replace-fixup-installed-info: .PHONY
 ###
 replace-clean: .PHONY
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
-	${RM} -f ${WRKDIR}/$$oldname${PKG_SUFX}
-	${RUN} [ -f ${_REPLACE_NEWNAME_FILE} ] || exit 0;		\
-	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
-	${RM} -f ${WRKDIR}/$$newname${PKG_SUFX}
-	${RUN} ${RM} -f ${_REPLACE_OLDNAME_FILE}			\
-		 ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
+	${_REPLACE_NEWNAME_CMD};					\
+	${RM} -f ${WRKDIR}/$$oldname${PKG_SUFX};			\
+	${RM} -f ${WRKDIR}/$$newname${PKG_SUFX};			\
+	${RM} -f ${_REPLACE_OLDNAME_FILE} ${_REPLACE_NEWNAME_FILE}	\
+		${_COOKIE.replace}
