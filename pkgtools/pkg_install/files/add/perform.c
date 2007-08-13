@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.55 2007/08/13 19:13:14 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.56 2007/08/13 19:15:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.55 2007/08/13 19:13:14 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.56 2007/08/13 19:15:37 joerg Exp $");
 #endif
 #endif
 
@@ -219,6 +219,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	char   *where_to;
 	char   dbdir[MaxPathSize];
 	const char *exact;
+	const char *tmppkg;
 	FILE   *cfile;
 	int     errc, err_prescan;
 	plist_t *p;
@@ -238,101 +239,97 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 
 	umask(DEF_UMASK);
 
-	{
-		const char *tmppkg;
-
-		tmppkg = fileFindByPath(pkg);
-		if (tmppkg == NULL) {
-			warnx("no pkg found for '%s', sorry.", pkg);
-			return 1;
-		}
-
-		pkg = tmppkg;
-
-		if (IS_URL(pkg)) {
-			Home = fileGetURL(pkg);
-			if (Home == NULL) {
-				warnx("unable to fetch `%s' by URL", pkg);
-			}
-			where_to = Home;
-
-			/* make sure the pkg is verified */
-			if (!verify(pkg)) {
-				warnx("Package %s will not be extracted", pkg);
-				goto bomb;
-			}
-		} else { /* local */
-			if (!IS_STDIN(pkg)) {
-			        /* not stdin */
-				if (!ispkgpattern(pkg)) {
-					if (stat(pkg, &sb) == FAIL) {
-						warnx("can't stat package file '%s'", pkg);
-						goto bomb;
-					}
-					/* make sure the pkg is verified */
-					if (!verify(pkg)) {
-						warnx("Package %s will not be extracted", pkg);
-						goto bomb;
-					}
-				}
-				LFILE_ADD(&files, lfp, CONTENTS_FNAME);
-			} else {
-			        /* some values for stdin */
-				sb.st_size = 100000;	/* Make up a plausible average size */
-			}
-			Home = make_playpen(playpen, sizeof(playpen), sb.st_size * 4);
-			if (!Home)
-				warnx("unable to make playpen for %ld bytes",
-				      (long) (sb.st_size * 4));
-			where_to = Home;
-			result = unpack(pkg, &files);
-			while ((lfp = TAILQ_FIRST(&files)) != NULL) {
-				TAILQ_REMOVE(&files, lfp, lf_link);
-				free(lfp);
-			}
-			if (result) {
-				warnx("unable to extract table of contents file from `%s' - not a package?",
-				      pkg);
-				goto bomb;
-			}
-		}
-
-		cfile = fopen(CONTENTS_FNAME, "r");
-		if (!cfile) {
-			warnx("unable to open table of contents file `%s' - not a package?",
-			      CONTENTS_FNAME);
-			goto bomb;
-		}
-		read_plist(&Plist, cfile);
-		fclose(cfile);
-
-		if (!IS_URL(pkg)) {
-			/*
-			 * Apply a crude heuristic to see how much space the package will
-			 * take up once it's unpacked.  I've noticed that most packages
-			 * compress an average of 75%, so multiply by 4 for good measure.
-			 */
-
-			needed = 4 * (uint64_t) sb.st_size;
-			if (min_free(playpen) < needed) {
-				warnx("projected size of %" MY_PRIu64 " bytes exceeds available free space\n"
-				    "in %s. Please set your PKG_TMPDIR variable to point\n"
-				    "to a location with more free space and try again.",
-					needed, playpen);
-				goto bomb;
-			}
-
-			/* Finally unpack the whole mess */
-			if (unpack(pkg, NULL)) {
-				warnx("unable to extract `%s'!", pkg);
-				goto bomb;
-			}
-		}
-
-		/* Check for sanity */
-		if (sanity_check(pkg))
-			goto bomb;
+	tmppkg = fileFindByPath(pkg);
+	if (tmppkg == NULL) {
+		warnx("no pkg found for '%s', sorry.", pkg);
+		return 1;
 	}
+
+	pkg = tmppkg;
+
+	if (IS_URL(pkg)) {
+		Home = fileGetURL(pkg);
+		if (Home == NULL) {
+			warnx("unable to fetch `%s' by URL", pkg);
+		}
+		where_to = Home;
+
+		/* make sure the pkg is verified */
+		if (!verify(pkg)) {
+			warnx("Package %s will not be extracted", pkg);
+			goto bomb;
+		}
+	} else { /* local */
+		if (!IS_STDIN(pkg)) {
+		        /* not stdin */
+			if (!ispkgpattern(pkg)) {
+				if (stat(pkg, &sb) == FAIL) {
+					warnx("can't stat package file '%s'", pkg);
+					goto bomb;
+				}
+				/* make sure the pkg is verified */
+				if (!verify(pkg)) {
+					warnx("Package %s will not be extracted", pkg);
+					goto bomb;
+				}
+			}
+			LFILE_ADD(&files, lfp, CONTENTS_FNAME);
+		} else {
+		        /* some values for stdin */
+			sb.st_size = 100000;	/* Make up a plausible average size */
+		}
+		Home = make_playpen(playpen, sizeof(playpen), sb.st_size * 4);
+		if (!Home)
+			warnx("unable to make playpen for %ld bytes",
+			      (long) (sb.st_size * 4));
+		where_to = Home;
+		result = unpack(pkg, &files);
+		while ((lfp = TAILQ_FIRST(&files)) != NULL) {
+			TAILQ_REMOVE(&files, lfp, lf_link);
+			free(lfp);
+		}
+		if (result) {
+			warnx("unable to extract table of contents file from `%s' - not a package?",
+			      pkg);
+			goto bomb;
+		}
+	}
+
+	cfile = fopen(CONTENTS_FNAME, "r");
+	if (!cfile) {
+		warnx("unable to open table of contents file `%s' - not a package?",
+		      CONTENTS_FNAME);
+		goto bomb;
+	}
+	read_plist(&Plist, cfile);
+	fclose(cfile);
+
+	if (!IS_URL(pkg)) {
+		/*
+		 * Apply a crude heuristic to see how much space the package will
+		 * take up once it's unpacked.  I've noticed that most packages
+		 * compress an average of 75%, so multiply by 4 for good measure.
+		 */
+
+		needed = 4 * (uint64_t) sb.st_size;
+		if (min_free(playpen) < needed) {
+			warnx("projected size of %" MY_PRIu64 " bytes exceeds available free space\n"
+			    "in %s. Please set your PKG_TMPDIR variable to point\n"
+			    "to a location with more free space and try again.",
+				needed, playpen);
+			goto bomb;
+		}
+
+		/* Finally unpack the whole mess */
+		if (unpack(pkg, NULL)) {
+			warnx("unable to extract `%s'!", pkg);
+			goto bomb;
+		}
+	}
+
+	/* Check for sanity */
+	if (sanity_check(pkg))
+		goto bomb;
 
 	/* Read the OS, version and architecture from BUILD_INFO file */
 	if (!read_buildinfo(buildinfo)) {
