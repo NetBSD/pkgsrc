@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.11 2007/08/10 01:41:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.12 2007/08/13 13:27:53 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -45,3 +45,11 @@ Pullup tickets 2161-2163 - requested by taca
 security fix for php
 Pullup ticket 2156 - requested by ghen
 security update for thunderbird
+Pullup ticket 2164 - requested by taca
+security update for libpcap
+Pullup ticket 2165 - requested by taca
+security update for tcpdump
+Pullup ticket 2174 - requested by markd
+security fix for kdegraphics
+Pullup ticket 2175 - requested by markd
+security fix for koffice
