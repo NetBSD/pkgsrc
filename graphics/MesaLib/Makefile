@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/08/12 15:14:47 adam Exp $
+# $NetBSD: Makefile,v 1.54 2007/08/13 11:18:39 seb Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
+PKGREVISION=	3
 COMMENT=	Graphics library similar to SGI's OpenGL
 
 .include "../../graphics/Mesa/Makefile.lib"
@@ -25,7 +26,7 @@ PTHREAD_STUBLIB= # provided by libc
 PKGSRC_MAKE_ENV+=	PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 
 pre-build:
-	cd ${WRKSRC} && rm -fr src/glu src/glut progs
+	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL

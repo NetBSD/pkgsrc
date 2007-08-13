@@ -1,8 +1,11 @@
-$NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
+$NetBSD: patch-al,v 1.3 2007/08/13 11:18:47 seb Exp $
 
---- src/mesa/drivers/x11/xm_tri.c.orig	2007-06-22 00:10:54.000000000 +0200
-+++ src/mesa/drivers/x11/xm_tri.c
-@@ -66,7 +66,7 @@
+Declarations inside of macros are evil. Even more if they are not preceded
+by an additional opening brace.
+
+--- src/mesa/drivers/x11/xm_tri.c.orig	Tue Jan 31 22:16:56 2006
++++ src/mesa/drivers/x11/xm_tri.c	Tue Jan 31 22:30:15 2006
+@@ -64,7 +64,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
  
@@ -11,7 +14,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     GLuint i;							\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -82,7 +82,7 @@
+@@ -80,7 +80,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -20,7 +23,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  
  #include "swrast/s_tritemp.h"
  
-@@ -102,7 +102,7 @@
+@@ -99,7 +99,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -29,43 +32,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
        const DEPTH_TYPE z = FixedToDepth(span.z);		\
-@@ -117,7 +117,7 @@
-       span.blue += span.blueStep;				\
-       span.alpha += span.alphaStep;				\
-       span.z += span.zStep;					\
--   }
-+   } }
- 
- #include "swrast/s_tritemp.h"
- 
-@@ -137,7 +137,7 @@
- #define SETUP_CODE						\
-    GET_XRB(xrb);
- 
--#define RENDER_SPAN( span )					\
-+#define RENDER_SPAN( span ) {					\
-    GLuint i;							\
-    for (i = 0; i < span.end; i++) {				\
-       const DEPTH_TYPE z = FixedToDepth(span.z);		\
-@@ -152,7 +152,7 @@
-       span.blue += span.blueStep;				\
-       span.alpha += span.alphaStep;				\
-       span.z += span.zStep;					\
--   }
-+   } }
- 
- #include "swrast/s_tritemp.h"
- 
-@@ -171,7 +171,7 @@
- #define SETUP_CODE						\
-    GET_XRB(xrb);
- 
--#define RENDER_SPAN( span )					\
-+#define RENDER_SPAN( span ) {					\
-    GLuint i;							\
-    for (i = 0; i < span.end; i++) {				\
-       const DEPTH_TYPE z = FixedToDepth(span.z);		\
-@@ -184,7 +184,7 @@
+@@ -112,7 +112,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -74,16 +41,52 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  
  #include "swrast/s_tritemp.h"
  
-@@ -202,7 +202,7 @@
+@@ -131,7 +131,7 @@
+ #define SETUP_CODE						\
+    GET_XRB(xrb);
+ 
+-#define RENDER_SPAN( span )					\
++#define RENDER_SPAN( span ) {					\
+    GLuint i;							\
+    for (i = 0; i < span.end; i++) {				\
+       const DEPTH_TYPE z = FixedToDepth(span.z);		\
+@@ -144,7 +144,7 @@
+       span.green += span.greenStep;				\
+       span.blue += span.blueStep;				\
+       span.z += span.zStep;					\
+-   }
++   } }
+ 
+ #include "swrast/s_tritemp.h"
+ 
+@@ -163,7 +163,7 @@
+ #define SETUP_CODE						\
+    GET_XRB(xrb);
+ 
+-#define RENDER_SPAN( span )					\
++#define RENDER_SPAN( span ) {					\
+    GLuint i;							\
+    for (i = 0; i < span.end; i++) {				\
+       const DEPTH_TYPE z = FixedToDepth(span.z);		\
+@@ -176,7 +176,7 @@
+       span.green += span.greenStep;				\
+       span.blue += span.blueStep;				\
+       span.z += span.zStep;					\
+-   }
++   } }
+ 
+ #include "swrast/s_tritemp.h"
+ 
+@@ -194,7 +194,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
 -#define RENDER_SPAN( span ) 					\
-+#define RENDER_SPAN( span ) {					\
++#define RENDER_SPAN( span )  {					\
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
        const DEPTH_TYPE z = FixedToDepth(span.z);		\
-@@ -217,7 +217,7 @@
+@@ -209,7 +209,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -92,7 +95,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -232,7 +232,7 @@
+@@ -224,7 +224,7 @@
  #define SETUP_CODE						\
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
@@ -101,7 +104,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -248,7 +248,7 @@
+@@ -240,7 +240,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -110,7 +113,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -265,7 +265,7 @@
+@@ -257,7 +257,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -119,7 +122,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
        const DEPTH_TYPE z = FixedToDepth(span.z);		\
-@@ -278,7 +278,7 @@
+@@ -270,7 +270,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -128,7 +131,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -296,7 +296,7 @@
+@@ -288,7 +288,7 @@
  #define SETUP_CODE						\
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
@@ -137,7 +140,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -310,7 +310,7 @@
+@@ -302,7 +302,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -146,7 +149,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -327,7 +327,7 @@
+@@ -319,7 +319,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -155,7 +158,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     XDITHER_SETUP(y);						\
-@@ -342,7 +342,7 @@
+@@ -334,7 +334,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -164,7 +167,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -357,7 +357,7 @@
+@@ -349,7 +349,7 @@
  #define SETUP_CODE						\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -173,7 +176,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     XDITHER_SETUP(y);						\
-@@ -373,7 +373,7 @@
+@@ -365,7 +365,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -182,7 +185,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -390,7 +390,7 @@
+@@ -382,7 +382,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -191,7 +194,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     LOOKUP_SETUP;						\
     for (i = 0; i < span.end; i++) {				\
-@@ -404,7 +404,7 @@
+@@ -396,7 +396,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -200,7 +203,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -422,7 +422,7 @@
+@@ -414,7 +414,7 @@
  #define SETUP_CODE						\
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
@@ -209,7 +212,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -436,7 +436,7 @@
+@@ -428,7 +428,7 @@
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
        span.z += span.zStep;					\
@@ -218,7 +221,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -453,7 +453,7 @@
+@@ -445,7 +445,7 @@
     XMesaImage *img = xrb->ximage;				\
     unsigned long pixel;						\
     PACK_TRUECOLOR(pixel, v2->color[0], v2->color[1], v2->color[2]);
@@ -227,7 +230,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -463,7 +463,7 @@
+@@ -455,7 +455,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -236,16 +239,16 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
+@@ -472,7 +472,7 @@
+ #define SETUP_CODE					\
+    GET_XRB(xrb);					\
+    GLuint p = PACK_8B8G8R( v2->color[0], v2->color[1], v2->color[2] );
+-#define RENDER_SPAN( span )				\
++#define RENDER_SPAN( span ) {				\
+    GLuint i;						\
+    for (i = 0; i < span.end; i++) {			\
+       const DEPTH_TYPE z = FixedToDepth(span.z);	\
 @@ -481,7 +481,7 @@
-    GET_XRB(xrb);					\
-    GLuint p = PACK_8A8B8G8R( v2->color[0], v2->color[1],\
-                              v2->color[2], v2->color[3]);
--#define RENDER_SPAN( span )				\
-+#define RENDER_SPAN( span ) {				\
-    GLuint i;						\
-    for (i = 0; i < span.end; i++) {			\
-       const DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -490,7 +490,7 @@
           zRow[i] = z;					\
        }							\
        span.z += span.zStep;				\
@@ -254,16 +257,16 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -508,7 +508,7 @@
+@@ -498,7 +498,7 @@
+ #define SETUP_CODE					\
     GET_XRB(xrb);					\
-    GLuint p = PACK_8A8R8G8B(v2->color[0], v2->color[1],	\
-                             v2->color[2], v2->color[3]);
+    GLuint p = PACK_8R8G8B( v2->color[0], v2->color[1], v2->color[2] );
 -#define RENDER_SPAN( span )				\
 +#define RENDER_SPAN( span ) {				\
     GLuint i;						\
     for (i = 0; i < span.end; i++) {			\
        const DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -517,7 +517,7 @@
+@@ -507,7 +507,7 @@
           zRow[i] = z;					\
        }							\
        span.z += span.zStep;				\
@@ -272,7 +275,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -534,7 +534,7 @@
+@@ -524,7 +524,7 @@
  #define SETUP_CODE					\
     GET_XRB(xrb);					\
     GLuint p = PACK_8R8G8B( v2->color[0], v2->color[1], v2->color[2] );
@@ -281,7 +284,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;					\
     for (i = 0; i < span.end; i++) {		\
        DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -543,7 +543,7 @@
+@@ -533,7 +533,7 @@
           zRow[i] = z;				\
        }						\
        span.z += span.zStep;			\
@@ -290,7 +293,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  
  #include "swrast/s_tritemp.h"
  
-@@ -561,7 +561,7 @@
+@@ -551,7 +551,7 @@
  #define SETUP_CODE					\
     GET_XRB(xrb);					\
     const GLubyte *color = v2->color;
@@ -299,7 +302,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;						\
     for (i = 0; i < span.end; i++) {			\
        const DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -573,7 +573,7 @@
+@@ -563,7 +563,7 @@
           zRow[i] = z;					\
        }							\
        span.z += span.zStep;				\
@@ -308,7 +311,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -588,7 +588,7 @@
+@@ -578,7 +578,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -317,7 +320,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -601,7 +601,7 @@
+@@ -591,7 +591,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -326,7 +329,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -618,7 +618,7 @@
+@@ -608,7 +608,7 @@
  #define SETUP_CODE					\
     GET_XRB(xrb);					\
     GLushort p = PACK_5R6G5B( v2->color[0], v2->color[1], v2->color[2] );
@@ -335,7 +338,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;						\
     for (i = 0; i < span.end; i++) {			\
        const DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -627,7 +627,7 @@
+@@ -617,7 +617,7 @@
           zRow[i] = z;					\
        }							\
        span.z += span.zStep;				\
@@ -344,7 +347,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -645,7 +645,7 @@
+@@ -635,7 +635,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     const GLubyte *color = v2->color;
@@ -353,7 +356,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -656,7 +656,7 @@
+@@ -646,7 +646,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -362,7 +365,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -673,7 +673,7 @@
+@@ -663,7 +663,7 @@
  #define SETUP_CODE						\
     GET_XRB(xrb);						\
     FLAT_DITHER_SETUP( v2->color[0], v2->color[1], v2->color[2] );
@@ -371,7 +374,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);			\
     FLAT_DITHER_ROW_SETUP(YFLIP(xrb, y));			\
-@@ -684,7 +684,7 @@
+@@ -674,7 +674,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -380,7 +383,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -699,7 +699,7 @@
+@@ -689,7 +689,7 @@
     GET_XRB(xrb);					\
     XMesaImage *img = xrb->ximage;		\
     FLAT_DITHER_SETUP( v2->color[0], v2->color[1], v2->color[2] );
@@ -389,7 +392,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     FLAT_DITHER_ROW_SETUP(y);					\
-@@ -711,7 +711,7 @@
+@@ -701,7 +701,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -398,7 +401,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -731,7 +731,7 @@
+@@ -721,7 +721,7 @@
     GLubyte r = v2->color[0];					\
     GLubyte g = v2->color[1];					\
     GLubyte b = v2->color[2];
@@ -407,7 +410,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -741,7 +741,7 @@
+@@ -731,7 +731,7 @@
           zRow[i] = z;						\
        }								\
        span.z += span.zStep;					\
@@ -416,7 +419,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -762,7 +762,7 @@
+@@ -752,7 +752,7 @@
     GLubyte g = v2->color[1];				\
     GLubyte b = v2->color[2];				\
     GLubyte p = LOOKUP(r,g,b);
@@ -425,7 +428,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;						\
     for (i = 0; i < span.end; i++) {			\
        const DEPTH_TYPE z = FixedToDepth(span.z);	\
-@@ -771,7 +771,7 @@
+@@ -761,7 +761,7 @@
           zRow[i] = z;					\
        }							\
        span.z += span.zStep;				\
@@ -434,7 +437,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -785,7 +785,7 @@
+@@ -775,7 +775,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -443,7 +446,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -796,7 +796,7 @@
+@@ -786,7 +786,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -452,7 +455,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -812,7 +812,7 @@
+@@ -801,7 +801,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -460,35 +463,17 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
 +#define RENDER_SPAN( span ) {					\
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
-       pRow[i] = PACK_8A8B8G8R(FixedToInt(span.red),		\
-@@ -822,7 +822,7 @@
+       pRow[i] = PACK_8B8G8R(FixedToInt(span.red),		\
+@@ -809,7 +809,7 @@
+       span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
-       span.alpha += span.alphaStep;				\
 -   }
 +   } }
  #include "swrast/s_tritemp.h"
  
  
-@@ -838,7 +838,7 @@
- #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
- #define SETUP_CODE						\
-    GET_XRB(xrb);
--#define RENDER_SPAN( span )					\
-+#define RENDER_SPAN( span ) {					\
-    GLuint i;							\
-    for (i = 0; i < span.end; i++) {				\
-       pRow[i] = PACK_8A8R8G8B(FixedToInt(span.red),		\
-@@ -848,7 +848,7 @@
-       span.green += span.greenStep;				\
-       span.blue += span.blueStep;				\
-       span.alpha += span.alphaStep;				\
--   }
-+   } }
- #include "swrast/s_tritemp.h"
- 
- 
-@@ -863,7 +863,7 @@
+@@ -824,7 +824,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -497,7 +482,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
        pRow[i] = PACK_8R8G8B(FixedToInt(span.red),		\
-@@ -871,7 +871,7 @@
+@@ -832,7 +832,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -506,7 +491,25 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -886,7 +886,7 @@
+@@ -847,7 +847,7 @@
+ #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
+ #define SETUP_CODE						\
+    GET_XRB(xrb);
+-#define RENDER_SPAN( span )					\
++#define RENDER_SPAN( span ) {					\
+    GLuint i;							\
+    for (i = 0; i < span.end; i++) {				\
+       pRow[i] = PACK_8R8G8B(FixedToInt(span.red),		\
+@@ -855,7 +855,7 @@
+       span.red += span.redStep;					\
+       span.green += span.greenStep;				\
+       span.blue += span.blueStep;				\
+-   }
++   } }
+ #include "swrast/s_tritemp.h"
+ 
+ 
+@@ -870,7 +870,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE					\
     GET_XRB(xrb);
@@ -515,7 +518,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;						\
     PIXEL_TYPE *pixel = pRow;				\
     for (i = 0; i < span.end; i++, pixel++) {		\
-@@ -896,7 +896,7 @@
+@@ -880,7 +880,7 @@
        span.red += span.redStep;				\
        span.green += span.greenStep;			\
        span.blue += span.blueStep;			\
@@ -524,7 +527,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -910,7 +910,7 @@
+@@ -894,7 +894,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -533,7 +536,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -921,7 +921,7 @@
+@@ -905,7 +905,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -542,7 +545,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -936,7 +936,7 @@
+@@ -920,7 +920,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -551,7 +554,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     for (i = 0; i < span.end; i++) {				\
        pRow[i] = (PIXEL_TYPE) PACK_5R6G5B(FixedToInt(span.red),	\
-@@ -944,7 +944,7 @@
+@@ -928,7 +928,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -560,7 +563,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -960,7 +960,7 @@
+@@ -944,7 +944,7 @@
  #define SETUP_CODE						\
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
@@ -569,7 +572,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -969,7 +969,7 @@
+@@ -953,7 +953,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -578,7 +581,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -984,7 +984,7 @@
+@@ -968,7 +968,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -587,7 +590,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     XDITHER_SETUP(y);						\
-@@ -994,7 +994,7 @@
+@@ -978,7 +978,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -596,7 +599,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1007,7 +1007,7 @@
+@@ -991,7 +991,7 @@
  #define SETUP_CODE						\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -605,7 +608,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     XDITHER_SETUP(y);						\
-@@ -1018,7 +1018,7 @@
+@@ -1002,7 +1002,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -614,7 +617,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1033,7 +1033,7 @@
+@@ -1017,7 +1017,7 @@
  #define BYTES_PER_ROW (xrb->ximage->bytes_per_line)
  #define SETUP_CODE						\
     GET_XRB(xrb);
@@ -623,7 +626,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     LOOKUP_SETUP;						\
     for (i = 0; i < span.end; i++) {				\
-@@ -1042,7 +1042,7 @@
+@@ -1026,7 +1026,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -632,7 +635,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1058,7 +1058,7 @@
+@@ -1042,7 +1042,7 @@
  #define SETUP_CODE						\
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);
@@ -641,7 +644,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -1067,7 +1067,7 @@
+@@ -1051,7 +1051,7 @@
        span.red += span.redStep;					\
        span.green += span.greenStep;				\
        span.blue += span.blueStep;				\
@@ -650,7 +653,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1082,12 +1082,12 @@
+@@ -1066,12 +1066,12 @@
     XMesaImage *img = xrb->ximage;				\
     unsigned long pixel;						\
     PACK_TRUECOLOR(pixel, v2->color[0], v2->color[1], v2->color[2]);
@@ -665,7 +668,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1103,11 +1103,11 @@
+@@ -1087,11 +1087,11 @@
     GET_XRB(xrb);					\
     unsigned long p = PACK_8B8G8R( v2->color[0],		\
  		 v2->color[1], v2->color[2] );
@@ -679,7 +682,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1123,11 +1123,11 @@
+@@ -1107,11 +1107,11 @@
     GET_XRB(xrb);					\
     unsigned long p = PACK_8R8G8B( v2->color[0],		\
  		 v2->color[1], v2->color[2] );
@@ -693,7 +696,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1143,11 +1143,11 @@
+@@ -1127,11 +1127,11 @@
     GET_XRB(xrb);					\
     unsigned long p = PACK_8R8G8B( v2->color[0],		\
  		 v2->color[1], v2->color[2] );
@@ -707,7 +710,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1162,14 +1162,14 @@
+@@ -1146,14 +1146,14 @@
  #define SETUP_CODE					\
     GET_XRB(xrb);					\
     const GLubyte *color = v2->color;
@@ -724,7 +727,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1182,7 +1182,7 @@
+@@ -1166,7 +1166,7 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;
@@ -733,7 +736,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
     GLuint i;							\
     GLint x = span.x, y = YFLIP(xrb, span.y);	\
     for (i = 0; i < span.end; i++, x++) {			\
-@@ -1190,7 +1190,7 @@
+@@ -1174,7 +1174,7 @@
        PACK_TRUEDITHER(p, x, y, v2->color[0],			\
                 v2->color[1], v2->color[2] );			\
        XMesaPutPixel(img, x, y, p);				\
@@ -742,7 +745,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1206,11 +1206,11 @@
+@@ -1190,11 +1190,11 @@
     GET_XRB(xrb);					\
     unsigned long p = PACK_5R6G5B( v2->color[0],		\
  		 v2->color[1], v2->color[2] );
@@ -756,7 +759,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1226,13 +1226,13 @@
+@@ -1210,13 +1210,13 @@
     XMesaContext xmesa = XMESA_CONTEXT(ctx);			\
     GET_XRB(xrb);						\
     const GLubyte *color = v2->color;
@@ -772,7 +775,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1247,13 +1247,13 @@
+@@ -1231,13 +1231,13 @@
  #define SETUP_CODE						\
     GET_XRB(xrb);						\
     FLAT_DITHER_SETUP( v2->color[0], v2->color[1], v2->color[2] );
@@ -788,7 +791,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1266,14 +1266,14 @@
+@@ -1250,14 +1250,14 @@
     GET_XRB(xrb);						\
     XMesaImage *img = xrb->ximage;				\
     FLAT_DITHER_SETUP( v2->color[0], v2->color[1], v2->color[2] );
@@ -805,7 +808,7 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1291,12 +1291,12 @@
+@@ -1275,12 +1275,12 @@
     GLubyte r = v2->color[0];					\
     GLubyte g = v2->color[1];					\
     GLubyte b = v2->color[2];
@@ -820,12 +823,12 @@ $NetBSD: patch-al,v 1.2 2007/08/12 15:14:48 adam Exp $
  #include "swrast/s_tritemp.h"
  
  
-@@ -1315,11 +1315,11 @@
+@@ -1299,11 +1299,11 @@
     GLubyte g = v2->color[1];				\
     GLubyte b = v2->color[2];				\
     GLubyte p = LOOKUP(r,g,b);
 -#define RENDER_SPAN( span )         	 		\
-+#define RENDER_SPAN( span ) {         	 		\
++#define RENDER_SPAN( span ) {        	 		\
     GLuint i;						\
     for (i = 0; i < span.end; i++) {			\
        pRow[i] = (PIXEL_TYPE) p;				\
