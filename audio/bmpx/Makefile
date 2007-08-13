@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/12 23:13:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/13 12:06:40 drochner Exp $
 #
 
 DISTNAME=	bmpx-0.40.1
@@ -19,6 +19,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ENV+=		BOOST_REGEX_LIBS=-lboost_regex-mt
+# the following is a fix for nonsense in the configure script
+CONFIGURE_ENV+=		SQL3PATH=${BUILDLINK_PREFIX.sqlite3}
 CPPFLAGS+=		-I${LOCALBASE}/include/cdparanoia
 
 .include "../../audio/cdparanoia/buildlink3.mk"
@@ -34,6 +36,7 @@ BUILDLINK_API_DEPENDS.libglademm+=	libglademm>=2.6.0
 BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.14.0
 .include "../../devel/libsexymm/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"

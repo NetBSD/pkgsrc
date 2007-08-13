@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/12 23:13:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/13 12:06:40 drochner Exp $
 bin/beep-media-player-2
 bin/bmp-enqueue-files-2.0
 bin/bmp-enqueue-uris-2.0
@@ -275,9 +275,8 @@ share/locale/ru/LC_MESSAGES/bmpx.mo
 share/locale/sv/LC_MESSAGES/bmpx.mo
 share/locale/th_TH/LC_MESSAGES/bmpx.mo
 share/locale/zh_CN/LC_MESSAGES/bmpx.mo
-@dirrm share/locale/th_TH/LC_MESSAGES
-@dirrm share/locale/th_TH
-@dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/bmpx/images
 @dirrm share/doc/bmpx
 @comment in dbus: @dirrm share/dbus-1/services

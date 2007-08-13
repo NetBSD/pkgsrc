@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/08/12 23:13:06 wiz Exp $
+$NetBSD: distinfo,v 1.4 2007/08/13 12:06:40 drochner Exp $
 
 SHA1 (bmpx-0.40.1.tar.bz2) = c2d69fd8909d1d7a69ff13eee149084da9b802f0
 RMD160 (bmpx-0.40.1.tar.bz2) = 8d00392449ad4602e380c9f78cb12c4077db9eec
 Size (bmpx-0.40.1.tar.bz2) = 1793356 bytes
+SHA1 (patch-aa) = b4a761b618aa976945c6983e752389cc226b1cbb
