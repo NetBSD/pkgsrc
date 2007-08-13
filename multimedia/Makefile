@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2007/04/27 11:21:47 martti Exp $
+# $NetBSD: Makefile,v 1.108 2007/08/13 08:12:48 rillig Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -115,4 +115,4 @@ SUBDIR+=	xine-ui
 SUBDIR+=	xvid4conf
 SUBDIR+=	xvidcore
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

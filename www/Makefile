@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.518 2007/08/05 05:57:09 obache Exp $
+# $NetBSD: Makefile,v 1.519 2007/08/13 08:12:49 rillig Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -407,4 +407,4 @@ SUBDIR+=	zope29
 SUBDIR+=	zope3
 SUBDIR+=	zopeedit
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
