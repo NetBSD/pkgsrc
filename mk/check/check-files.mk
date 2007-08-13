@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.16 2007/03/16 10:29:22 rillig Exp $
+# $NetBSD: check-files.mk,v 1.17 2007/08/13 05:05:11 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -50,6 +50,8 @@ CHECK_FILES_SKIP+=	${PERL5_INSTALLARCHLIB}/perllocal.pod
 #
 CHECK_FILES_SKIP+=	${PREFIX}/lib/R/doc/html/packages.html
 CHECK_FILES_SKIP+=	${PREFIX}/lib/R/doc/html/search/index.txt
+
+CHECK_FILES_SKIP+=	${PKG_DBDIR}/.*
 
 # We don't care about what's under /proc in Linux emulation, which is
 # just holds run-time generated data.
