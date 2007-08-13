@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/08/04 13:30:25 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2007/08/13 05:32:11 dan Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		gnutls silc perl tcl debug dbus
+PKG_SUPPORTED_OPTIONS+=		gnutls sametime silc perl tcl debug dbus
 PKG_SUGGESTED_OPTIONS+=		gnutls silc
 
 .include "../../mk/bsd.options.mk"
@@ -20,6 +20,13 @@ CONFIGURE_ARGS+= --with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
 CONFIGURE_ARGS+= --with-nss-libs=${BUILDLINK_PREFIX.nss}/lib/nss
 
 .  include "../../devel/nss/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msametime)
+PLIST_SUBST+=		SAMETIME=
+. include "../../chat/meanwhile/buildlink3.mk"
+.else
+PLIST_SUBST+=		SAMETIME="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Msilc)
