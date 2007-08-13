@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.105 2007/08/05 16:12:15 tnn Exp $
+# $NetBSD: bootstrap,v 1.106 2007/08/13 22:48:59 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -839,7 +839,7 @@ MAKECONF=$wrkdir/mk.conf
 export MAKECONF
 
 # On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
-# whose echo(1) is not POSIX-compliant.
+# whose echo(1) is not BSD-compatible.
 dash_echo_test=`echo "\\100"`
 if [ "$dash_echo_test" = "@" ]; then
 	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${TARGET_MKCONF}
