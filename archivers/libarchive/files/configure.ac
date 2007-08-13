@@ -55,9 +55,13 @@ AC_PROG_YACC
 AC_PROG_LIBTOOL
 AC_CHECK_TOOL([STRIP],[strip])
 
+# Default is to build bsdtar, but allow people to override that.
 AC_ARG_ENABLE([bsdtar],
-	[AS_HELP_STRING([--disable-bsdtar], [disable build of bsdtar])],
-	[], [])
+	[AS_HELP_STRING([--enable-bsdtar], [enable build of bsdtar (default)])
+	AS_HELP_STRING([--enable-bsdtar=static], [force static build of bsdtar])
+	AS_HELP_STRING([--enable-bsdtar=shared], [force dynamic build of bsdtar])
+AS_HELP_STRING([--disable-bsdtar], [disable build of bsdtar])],
+	[], [enable_bsdtar=yes])
 
 case "$enable_bsdtar" in
 yes)
@@ -69,12 +73,16 @@ yes)
 	build_bsdtar=yes
 
 	;;
-shared)
+dynamic|shared)
 	if test "$enable_shared" = "no"; then
 		AC_MSG_FAILURE([Shared linking of bsdtar requires shared libarchive])
 	fi
 	build_bsdtar=yes
 	static_bsdtar=no
+	;;
+static)
+	build_bsdtar=yes
+	static_bsdtar=yes
 	;;
 no)
 	build_bsdtar=no
@@ -127,76 +135,27 @@ AC_C_CONST
 AC_TYPE_UID_T
 AC_TYPE_MODE_T
 # AC_TYPE_OFF_T defaults to "long", which limits us to 4GB files on
-# most systems...
-AC_CHECK_TYPE(off_t, [int64_t])
+# most systems... default to "long long" instead.
+AC_CHECK_TYPE(off_t, [long long])
 AC_TYPE_SIZE_T
 AC_CHECK_TYPE(id_t, [unsigned long])
 AC_CHECK_TYPE(uintptr_t, [unsigned int])
 AC_CHECK_MEMBERS([struct stat.st_rdev])
 AC_CHECK_MEMBERS([struct tm.tm_gmtoff])
 # Check for high-resolution timestamps in struct stat
-AC_CHECK_MEMBERS([struct stat.st_mtimespec.tv_nsec, struct stat.st_mtim.tv_nsec])
-
-#
-# We need int64_t
-#
-AC_CHECK_TYPE(int64_t)
-#
-# If int64_t isn't defined, define it in terms of some other 64-bit type.
-#
-if test "$ac_cv_type_int64_t" != yes; then
-  AC_CHECK_TYPE(_int64_t,
-	[AC_DEFINE([int64_t], [_int64_t],
-              [Define int64_t to a valid signed 64-bit type, if necessary.])])
-  if test "$ac_cv_type__int64_t" != yes; then
-    AC_CHECK_TYPE(__int64_t,
-        [AC_DEFINE([int64_t], [__int64_t],
-	      [Define int64_t to a valid signed 64-bit type, if necessary.])])
-    if test "$ac_cv_type___int64_t" != yes; then
-      AC_CHECK_TYPE(long long,
-	  [AC_DEFINE([int64_t], [long long],
-	      [Define int64_t to a valid signed 64-bit type, if necessary.])])
-    fi
-  fi
-fi
-
-#
-# We need uint64_t
-#
-AC_CHECK_TYPE(uint64_t)
-#
-# If uint64_t isn't defined, define it in terms of some other 64-bit type.
-#
-if test "$ac_cv_type_uint64_t" != yes; then
-  AC_CHECK_TYPE(u_int64_t,
-     [AC_DEFINE([uint64_t], [u_int64_t],
-                [Define uint64_t to an unsigned 64-bit type, if necessary.])])
-  if test "$ac_cv_type_u_int64_t" != yes; then
-    AC_CHECK_TYPE(_uint64_t,
-       [AC_DEFINE([uint64_t], [_uint64_t],
-                 [Define uint64_t to an unsigned 64-bit type, if necessary.])])
-    if test "$ac_cv_type__uint64_t" != yes; then
-      AC_CHECK_TYPE(__uint64_t,
-         [AC_DEFINE([uint64_t], [__uint64_t],
-                 [Define uint64_t to an unsigned 64-bit type, if necessary.])])
-      if test "$ac_cv_type___uint64_t" != yes; then
-        AC_CHECK_TYPE(unsigned long long,
-	   [AC_DEFINE([uint64_t], [unsigned long long],
-                 [Define uint64_t to an unsigned 64-bit type, if necessary.])])
-      fi
-    fi
-  fi
-fi
-
-# We need uintmax_t and intmax_t
-# Define them in terms of uint64_t and int64_t if appropriate.
-AC_CHECK_TYPE(uintmax_t, [uint64_t])
-AC_CHECK_TYPE(intmax_t, [int64_t])
-
+AC_CHECK_MEMBERS([struct stat.st_mtimespec.tv_nsec])
+AC_CHECK_MEMBERS([struct stat.st_mtim.tv_nsec])
 
 # If you have uintmax_t, we assume printf supports %ju
 # If you have unsigned long long, we assume printf supports %llu
+# TODO: Check for %ju and %llu support directly.
 AC_CHECK_TYPES([uintmax_t, unsigned long long])
+
+# We need int64_t, uint64_t, intmax_t, and uintmax_t
+AC_TYPE_INTMAX_T
+AC_TYPE_INT64_T
+AC_TYPE_UINTMAX_T
+AC_TYPE_UINT64_T
 
 # TODO: If any of these are missing, define them right here.
 AC_CHECK_DECLS([SIZE_MAX, INT64_MAX, INT64_MIN, UINT64_MAX, UINT32_MAX])
@@ -226,7 +185,7 @@ AC_CHECK_FUNCS([ftruncate getopt_long getxattr])
 AC_CHECK_FUNCS([lchflags lchmod lchown])
 AC_CHECK_FUNCS([lgetxattr listxattr llistxattr fsetxattr lsetxattr])
 AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo])
-AC_CHECK_FUNCS([nl_langinfo poll reallocf select setlocale])
+AC_CHECK_FUNCS([nl_langinfo poll select setlocale])
 AC_CHECK_FUNCS([strchr strdup strerror strrchr timegm utime utimes])
 AC_CHECK_FUNCS([wcscpy wcslen wmemcmp wmemcpy])
 
@@ -306,5 +265,9 @@ AC_CHECK_DECL([ACL_USER],
 
 # Additional requirements
 AC_SYS_LARGEFILE
+
+# Interix doesn't provide optarg and optind
+AC_CHECK_DECLS([optarg])
+AC_CHECK_DECLS([optind])
 
 AC_OUTPUT
