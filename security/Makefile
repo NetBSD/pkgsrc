@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2007/08/02 17:28:45 he Exp $
+# $NetBSD: Makefile,v 1.302 2007/08/13 08:12:49 rillig Exp $
 #
 
 COMMENT=	Security tools
@@ -271,4 +271,4 @@ SUBDIR+=	xmlsec1
 SUBDIR+=	yafic
 SUBDIR+=	zebedee
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

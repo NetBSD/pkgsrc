@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/06 22:58:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/13 08:12:44 rillig Exp $
 #
 
 COMMENT=	Tools for cross-building pkgsrc
@@ -12,4 +12,4 @@ SUBDIR+=	crosspkg-netbsd1-netwinder
 SUBDIR+=	crosspkg-netbsd1-shark
 SUBDIR+=	kwacross-netbsd1-arm
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

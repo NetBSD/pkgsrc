@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2007/06/19 19:51:35 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2007/08/13 08:12:48 rillig Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -53,4 +53,4 @@ SUBDIR+=	verifypc
 SUBDIR+=	x11-links
 SUBDIR+=	xpkgwedge
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

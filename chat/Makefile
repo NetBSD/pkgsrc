@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2007/08/09 15:10:12 tnn Exp $
+# $NetBSD: Makefile,v 1.127 2007/08/13 08:12:43 rillig Exp $
 #
 
 COMMENT=	Communication programs
@@ -111,4 +111,4 @@ SUBDIR+=	zephyr
 SUBDIR+=	zephyr-mode
 SUBDIR+=	zircon
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/08/12 03:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/08/13 08:12:42 rillig Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -28,4 +28,4 @@ SUBDIR+=	sewer
 SUBDIR+=	stride
 SUBDIR+=	xylem
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

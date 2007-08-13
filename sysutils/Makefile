@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.407 2007/08/08 12:01:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.408 2007/08/13 08:12:49 rillig Exp $
 #
 
 COMMENT=	System utilities
@@ -355,4 +355,4 @@ SUBDIR+=	xraidadmin
 SUBDIR+=	xuvmstat
 SUBDIR+=	zidrav
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

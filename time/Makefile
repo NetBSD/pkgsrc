@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/07/02 18:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2007/08/13 08:12:49 rillig Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -101,4 +101,4 @@ SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xtimer
 SUBDIR+=	xtu
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"

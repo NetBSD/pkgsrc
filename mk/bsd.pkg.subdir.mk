@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.67 2007/08/13 06:03:46 rillig Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.68 2007/08/13 08:12:51 rillig Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -120,46 +120,6 @@ README=	../templates/README.category
 .endif
 
 HTMLIFY=	${SED} -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
-
-.if !target(README.html)
-.PHONY: README.html
-README.html: .PRECIOUS
-	@> $@.tmp
-.for entry in ${SUBDIR}
-.if defined(PKGSRCTOP)
-	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
-	@${ECHO} `cd ${entry} && ${RECURSIVE_MAKE} ${MAKEFLAGS} show-comment | ${HTMLIFY}` >> $@.tmp
-.else
-	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${RECURSIVE_MAKE} ${MAKEFLAGS} make-readme-html-help`" >> $@.tmp
-.endif
-.endfor
-	@${SORT} -t '>' +3 -4 $@.tmp > $@.tmp2
-	@${AWK} '{ ++n } END { print n }' < $@.tmp2 > $@.tmp4
-.if exists(${.CURDIR}/DESCR)
-	@${HTMLIFY} ${.CURDIR}/DESCR > $@.tmp3
-.else
-	@> $@.tmp3
-.endif
-	@${CAT} ${README} | \
-		${SED} -e 's/%%CATEGORY%%/'"`${BASENAME} ${.CURDIR}`"'/g' \
-			-e '/%%NUMITEMS%%/r$@.tmp4' \
-			-e '/%%NUMITEMS%%/d' \
-			-e '/%%DESCR%%/r$@.tmp3' \
-			-e '/%%DESCR%%/d' \
-			-e '/%%SUBDIR%%/r$@.tmp2' \
-			-e '/%%SUBDIR%%/d' \
-		> $@.tmp5
-	@if [ -f $@ ] && ${CMP} -s $@.tmp5 $@ ; then \
-		${RM} $@.tmp5 ; \
-	else \
-		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
-		${MV} $@.tmp5 $@ ; \
-	fi
-	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
-.for subdir in ${SUBDIR}
-	@cd ${subdir} && ${RECURSIVE_MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
-.endfor
-.endif
 
 show-comment:
 	@if [ ${COMMENT:Q}"" ]; then					\

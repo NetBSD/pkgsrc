@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/03/05 16:01:58 rmind Exp $
+# $NetBSD: Makefile,v 1.42 2007/08/13 08:12:42 rillig Exp $
 #
 
 COMMENT=	Benchmarking tools
@@ -42,4 +42,4 @@ SUBDIR+=	whetstone
 SUBDIR+=	xengine
 SUBDIR+=	zelibm
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
