@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1920 2007/08/13 05:24:26 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1921 2007/08/13 06:03:46 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -19,15 +19,7 @@
 #    build
 #
 
-.MAIN: all
-
-.if defined(.MAKEFLAGS) && !empty(.MAKEFLAGS:M-j*)
-PKG_FAIL_REASON+=	"[bsd.pkg.mk] pkgsrc does not support parallel make for the infrastructure."
-PKG_FAIL_REASON+=	"[bsd.pkg.mk] Run \"${MAKE} help topic=make_jobs\" to get some parallelism."
-.endif
-
-# Include any preferences, if not already included, and common definitions
-.include "${.PARSEDIR}/bsd.prefs.mk"
+.include "${.PARSEDIR}/misc/common.mk"
 
 .if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
 .  include "${.PARSEDIR}/emulator/emulator.mk"
@@ -263,31 +255,6 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 LIBABISUFFIX?=
 
 TOUCH_FLAGS?=		-f
-
-# Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
-# 0 == normal, default, quiet operation
-# 1 == all shell commands echoed before invocation
-# 2 == shell "set -x" operation
-PKG_DEBUG_LEVEL?=	0
-_PKG_SILENT=		@
-_PKG_DEBUG=		# empty
-_PKG_DEBUG_SCRIPT=	${SH}
-
-.if ${PKG_DEBUG_LEVEL} > 0
-_PKG_SILENT=		# empty
-.endif
-
-.if ${PKG_DEBUG_LEVEL} > 1
-_PKG_DEBUG=		set -x;
-_PKG_DEBUG_SCRIPT=	${SH} -x
-.endif
-
-# This variable can be prepended to all shell commands that should not
-# be printed by default, but when PKGSRC_DEBUG_LEVEL is non-zero.
-# It also re-adds the error checking that has been removed in 2004 to
-# make bmake conform to POSIX.
-#
-RUN=			${_PKG_SILENT}${_PKG_DEBUG} set -e;
 
 # A few aliases for *-install targets
 INSTALL=		${TOOLS_INSTALL}	# XXX override sys.mk
@@ -838,9 +805,6 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 .include "${.PARSEDIR}/misc/show.mk"
 .if make(debug)
 .  include "${.PARSEDIR}/bsd.pkg.debug.mk"
-.endif
-.if make(help)
-.  include "${.PARSEDIR}/help/help.mk"
 .endif
 .include "${.PARSEDIR}/misc/warnings.mk"
 .include "${.PARSEDIR}/misc/can-be-built-here.mk"

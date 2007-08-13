@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.66 2007/05/09 23:33:52 joerg Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.67 2007/08/13 06:03:46 rillig Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -26,18 +26,7 @@
 #	mirror-distfiles, bulk-install, bulk-package, ${PKG_MISC_TARGETS}
 #
 
-# Pull in stuff from mk.conf - need to check two places as this may be
-# called from pkgsrc or from pkgsrc/category.
-.if exists(${.CURDIR}/mk/bsd.prefs.mk)
-.include "${.CURDIR}/mk/bsd.prefs.mk"
-.else
-.if exists(${.CURDIR}/../mk/bsd.prefs.mk)
-.include "${.CURDIR}/../mk/bsd.prefs.mk"
-.endif	# exists(${.CURDIR}/../mk/bsd.prefs.mk)
-.endif	# exists(${.CURDIR}/mk/bsd.prefs.mk)
-
-
-.MAIN: all
+.include "${.PARSEDIR}/misc/common.mk"
 
 AWK?=		/usr/bin/awk
 CAT?=		/bin/cat
