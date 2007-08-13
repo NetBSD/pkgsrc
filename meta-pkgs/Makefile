@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/08/10 17:57:24 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/08/13 08:12:47 rillig Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -33,4 +33,4 @@ SUBDIR+=	xfce4
 SUBDIR+=	xfce4-extras
 SUBDIR+=	xorg
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
