@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/08/02 13:43:32 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/13 12:42:06 tnn Exp $
 #
 
-PKGNAME=	libpurple-${VERSION}
-PKGREVISION=	1
-
+PKGNAME=	libpurple-${PIDGIN_VERSION}
 COMMENT=	Multi-protocol Instant Messaging client backend
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -29,6 +27,8 @@ CONFIGURE_ARGS+=	--disable-gtkui
 CONFIGURE_ARGS+=	--disable-consoleui
 
 .include "options.mk"
+
+BUILD_DIRS=	m4macros libpurple po
 
 ## #post-build:
 ## #	cp ${WRKSRC}/libpurple/gconf/purple.schemas ${WRKSRC}/purple.schemas
