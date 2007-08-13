@@ -1,16 +1,34 @@
-# $NetBSD: bsd.prefs.mk,v 1.262 2007/08/13 07:42:10 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.263 2007/08/13 09:03:41 rillig Exp $
 #
-# Make file, included to get the site preferences, if any.  Should
-# only be included by package Makefiles before any .if defined()
-# statements or modifications to "passed" variables (CFLAGS, LDFLAGS, ...),
-# to make sure any variables defined in /etc/mk.conf, $MAKECONF, or
-# the system defaults (sys.mk and bsd.own.mk) are used.
-
-# Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
-
-# Some variables defined here:
-# OPSYS
-# The operating system name, as returned by ``uname -s''.
+# This file includes the mk.conf file, which contains the user settings.
+#
+# Packages should include this file before any of the .if directives, as
+# well as before modifying variables like CFLAGS, LDFLAGS, and so on.
+# Otherwise the behavior may be unexpected.
+#
+# When mk.conf is included by this file, the following variables are
+# defined:
+#
+# ACCEPTABLE_LICENSES
+#	This variable is set to the list of Open Source licenses. See
+#	mk/license.mk for details.
+#
+# MACHINE_PLATFORM
+#	The platform for which the packages are built. It has the form
+#	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}.
+#
+# NATIVE_MACHINE_PLATFORM
+#	The platform on which the packages are built. This is usually
+#	the same as ${MACHINE_PLATFORM}, but can be different when
+#	cross-building packages.
+#
+# PKGPATH
+#	The path of the package, relative to the pkgsrc top-level
+#	directory. Typical values look like editors/emacs or
+#	misc/openoffice-bin.
+#
+# Keywords: mk.conf user
+#
 
 .if !defined(BSD_PKG_MK)
 
@@ -49,14 +67,6 @@ UNAME=/usr/bin/uname
 UNAME=/bin/uname
 .else
 UNAME=echo Unknown
-.endif
-
-.if exists(/usr/bin/cut)
-CUT=/usr/bin/cut
-.elif exists(/bin/cut)
-CUT=/bin/cut
-.else
-CUT=echo Unknown
 .endif
 
 .if !defined(OPSYS)
@@ -259,6 +269,9 @@ MAKE_ENV+=		USETOOLS=no
 OBJECT_FMT?=		Mach-O
 .endif
 
+# 2007Q3: uncomment this
+#ACCEPTABLE_LICENSES?=	${DEFAULT_ACCEPTABLE_LICENSES}
+
 # Provide PKGPATH early on so that mk.conf can use it.
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 
@@ -317,9 +330,7 @@ _PKGSRC_TOPDIR=	${.CURDIR}/../..
 .endif
 
 # include the defaults file
-.if exists(${_PKGSRC_TOPDIR}/mk/defaults/mk.conf)
-.  include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
-.endif
+.include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF" && \
@@ -530,6 +541,7 @@ COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 
 # WHOLE_ARCHIVE_FLAG and NO_WHOLE_ARCHIVE_FLAG publically export the
 # linker flags to extract all symbols from a static archive.
+#
 WHOLE_ARCHIVE_FLAG?=	${_OPSYS_WHOLE_ARCHIVE_FLAG}
 NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
 
