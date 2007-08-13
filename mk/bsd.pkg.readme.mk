@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.11 2007/08/06 19:28:17 adrianp Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.12 2007/08/13 09:45:49 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -37,9 +37,7 @@
 # This variable is passed down via build-depends-list and run-depends-list
 PACKAGE_NAME_TYPE?=	name
 
-_HTML_PKGNAME=		${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}
-_HTML_PKGPATH=		${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}
-_HTML_PKGLINK=		<a href="../../${_HTML_PKGPATH}/README.html">${_HTML_PKGNAME}</a>
+_HTML_PKGLINK=		<a href="../../${PKGPATH}/README.html">${PKGNAME}</a>
 
 .PHONY: package-name
 .if !target(package-name)
@@ -56,7 +54,7 @@ package-name:
 .PHONY: make-readme-html-help
 .if !target(make-readme-html-help)
 make-readme-html-help:
-	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:Q}
+	@${ECHO} '${PKGNAME}</a>: <TD>'${COMMENT:Q}
 .endif # !target(make-readme-html-help)
 
 # Show (non-recursively) all the packages this package depends on.
