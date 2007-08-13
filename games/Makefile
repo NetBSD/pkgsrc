@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2007/07/25 22:57:43 rillig Exp $
+# $NetBSD: Makefile,v 1.289 2007/08/13 08:12:46 rillig Exp $
 #
 
 COMMENT=	Games
@@ -278,4 +278,4 @@ SUBDIR+=	xzip
 SUBDIR+=	zombies
 SUBDIR+=	zoom
 
-.include "../mk/bsd.pkg.subdir.mk"
+.include "../mk/misc/category.mk"
