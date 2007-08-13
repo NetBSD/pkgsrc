@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.6 2007/06/18 07:21:09 rillig Exp $
+# $NetBSD: phpversion.mk,v 1.7 2007/08/13 14:46:30 ghen Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages.
@@ -10,7 +10,7 @@
 #	the package.
 #
 #	Possible: 4 5
-#	Default: 4
+#	Default: 5
 #
 # === Package-settable variables ===
 #
