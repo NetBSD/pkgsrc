@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2007/01/16 23:27:48 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2007/08/13 23:10:04 salo Exp $
 #
 
 DISTNAME=		wxGTK-2.6.3
@@ -41,11 +41,6 @@ PLIST_SUBST+=		BUILDTYPE=ansi
 CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=		gawk:pkgsrc
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
