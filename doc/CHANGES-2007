@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1794 2007/08/13 16:45:12 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1795 2007/08/13 18:25:41 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin to 2.1.0 [tnn 2007-08-13]
 	Updated chat/finch to 2.1.0 [tnn 2007-08-13]
 	Updated lang/mono to 1.1.13.8.1nb2 [taca 2007-08-13]
+	Updated archivers/libarchive to 2.2.6 [joerg 2007-08-13]
