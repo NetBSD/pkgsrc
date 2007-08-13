@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.713 2007/07/15 22:13:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.714 2007/08/13 08:08:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3071,6 +3071,16 @@ sub lines_log_warning($$$) {
 	}
 }
 
+# Checks if the current line ($lines->{${$lineno_ref}}) matches the
+# regular expression, and if it does, increments ${${lineno_ref}}.
+# @param $lines
+#	The lines that are checked.
+# @param $lineno_ref
+#	A reference to the line number, an integer variable.
+# @param $regex
+#	The regular expression to be checked.
+# @return
+#	The result of the regular expression match or false.
 sub expect($$$) {
 	my ($lines, $lineno_ref, $regex) = @_;
 	my $lineno = ${$lineno_ref};
@@ -7767,20 +7777,12 @@ sub checkdir_category() {
 		}
 	}
 
-	# Then we need an empty line
-	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		$lineno++;
-	} else {
-		$lines->[$lineno]->log_error("Empty line expected.");
-	}
+	expect_empty_line($lines, \$lineno);
 
 	# And, last but not least, the .include line
 	my $final_line = ".include \"../mk/bsd.pkg.subdir.mk\"";
-	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq $final_line) {
-		$lineno++;
-	} else {
-		$lines->[$lineno]->log_error("Expected this: ${final_line}.");
-	}
+	expect($lines, \$lineno, qr"\Q$final_line\E")
+	|| expect_text($lines, \$lineno, ".include \"../mk/misc/category.mk\"");
 
 	if ($lineno <= $#{$lines}) {
 		$lines->[$lineno]->log_error("The file should end here.");
