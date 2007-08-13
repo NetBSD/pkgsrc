@@ -1,13 +1,10 @@
-# $NetBSD: bsd.build-vars.mk,v 1.4 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: bsd.build-vars.mk,v 1.5 2007/08/13 12:03:10 rillig Exp $
+#
+# Package-settable variables:
 #
 # BUILD_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
 #	are assumed to be relative to ${WRKSRC}.
-#
-# MAKE_PROGRAM is the path to the make executable that is run to
-#	process the source makefiles.  This is always overridden by
-#	the tools framework in pkgsrc/mk/tools/make.mk, but we provide
-#	a default here for documentation purposes.
 #
 # MAKE_ENV is the shell environment that is exported to the make
 #	process.
@@ -18,13 +15,17 @@
 #	executable.  If the path is relative, then it is assumed to
 #	be relative to each directory listed in BUILD_DIRS.
 #
+# System-provided variables:
+#
+# MAKE_PROGRAM is the path to the make executable that is run to
+#	process the source makefiles. See mk/tools/make.mk.
+#
 
 _VARGROUPS+=		build-vars
 _USER_VARS.build-vars=	# none
 _PKG_VARS.build-vars=	BUILD_DIRS MAKE_ENV MAKE_PROGRAM MAKE_FLAGS MAKE_FILE NO_BUILD
 
 BUILD_DIRS?=	${CONFIGURE_DIRS}
-MAKE_PROGRAM?=	${MAKE}
 MAKE_ENV?=	# empty
 MAKE_FLAGS?=	# empty
 MAKE_FILE?=	Makefile
