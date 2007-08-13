@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1 2007/08/13 13:57:47 tnn Exp $
+
+--- finch/libgnt/wms/s.c.orig	2007-06-23 05:06:32.000000000 +0200
++++ finch/libgnt/wms/s.c
+@@ -15,10 +15,10 @@
+ 
+ #define TYPE_S				(s_get_gtype())
+ 
+-typedef struct _S
++typedef struct _Sfoo
+ {
+ 	GntWM inherit;
+-} S;
++} Sfoo;
+ 
+ typedef struct _SClass
+ {
+@@ -205,7 +205,7 @@ GType s_get_gtype(void)
+ 			(GClassInitFunc)s_class_init,
+ 			NULL,
+ 			NULL,                   /* class_data		*/
+-			sizeof(S),
++			sizeof(Sfoo),
+ 			0,                      /* n_preallocs		*/
+ 			NULL,	            /* instance_init	*/
+ 			NULL
