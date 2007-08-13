@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1918 2007/08/10 13:09:52 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1919 2007/08/13 05:22:37 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -271,7 +271,7 @@ TOUCH_FLAGS?=		-f
 PKG_DEBUG_LEVEL?=	0
 _PKG_SILENT=		@
 _PKG_DEBUG=		# empty
-_PKG_DEBUG_SCRIPT=	# empty
+_PKG_DEBUG_SCRIPT=	${SH}
 
 .if ${PKG_DEBUG_LEVEL} > 0
 _PKG_SILENT=		# empty
