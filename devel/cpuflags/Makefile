@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2007/08/02 11:20:16 abs Exp $
+# $NetBSD: Makefile,v 1.112 2007/08/13 10:31:06 abs Exp $
 #
 
-DISTNAME=	cpuflags-1.08
+DISTNAME=	cpuflags-1.09
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty

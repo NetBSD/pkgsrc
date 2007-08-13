@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1790 2007/08/13 07:07:16 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1791 2007/08/13 10:31:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3275,3 +3275,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.1.32 [martti 2007-08-13]
 	Updated mail/postfix to 2.4.5 [martti 2007-08-13]
 	Updated mail/postfix-current to 2.5-20070731 [martti 2007-08-13]
+	Updated devel/cpuflags to 1.09 [abs 2007-08-13]
