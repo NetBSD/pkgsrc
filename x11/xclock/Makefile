@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/17 18:40:59 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/14 13:14:05 joerg Exp $
 #
 
 DISTNAME=	xclock-1.0.2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+CONFIGURE_ENV+=	APP_MAN_SUFFIX=1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
