@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.6 2007/08/14 07:54:22 rillig Exp $
+# $NetBSD: license.mk,v 1.7 2007/08/14 15:23:53 gdt Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
@@ -97,7 +97,7 @@ WARNINGS+=		"[license.mk] Every package should define a LICENSE."
 .else
 
 # Note: some bulk builders rely on the fact that they can set
-# _ACCEPTABLE to accept all licenses. Inform them when you intend to
+# _ACCEPTABLE to bypass license checks.  Inform them when you intend to
 # remove this variable.
 .  if defined(ACCEPTABLE_LICENSES) && !empty(ACCEPTABLE_LICENSES:M${LICENSE})
 _ACCEPTABLE=	yes
