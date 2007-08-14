@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.881 2007/08/13 08:12:45 rillig Exp $
+# $NetBSD: Makefile,v 1.882 2007/08/14 00:12:54 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -378,6 +378,7 @@ SUBDIR+=	p5-Carp-Assert-More
 SUBDIR+=	p5-Carp-Clan
 SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Accessor-Chained
+SUBDIR+=	p5-Class-Adapter
 SUBDIR+=	p5-Class-Autouse
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
