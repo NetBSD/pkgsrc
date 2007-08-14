@@ -5,8 +5,8 @@ NNAAMMEE
      tributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--AAffIILLnnRRuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e]
-             [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
+     ppkkgg__aadddd [--AAffIILLnnRRuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e] [--pp _p_r_e_f_i_x]
+             [--ss _v_e_r_i_f_i_c_a_t_i_o_n_-_t_y_p_e] [--tt _t_e_m_p_l_a_t_e] [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
              [[ftp|http]://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
 DDEESSCCRRIIPPTTIIOONN
@@ -71,6 +71,8 @@ OOPPTTIIOONNSS
              otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --LL      Don't add the package to any views after installation.
+
+     --mm      Override the machine architecture returned by uname with _m_a_c_h_i_n_e.
 
      --nn      Don't actually install a package, just report the steps that
              would be taken if it was.
