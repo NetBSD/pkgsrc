@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1797 2007/08/14 00:14:18 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1798 2007/08/14 01:19:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3290,3 +3290,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/libpurple to 2.1.0nb1 [tnn 2007-08-13]
 	Added chat/pidgin-sametime version 2.1.0 [tnn 2007-08-13]
 	Added devel/p5-Class-Adapter version 1.03 [seb 2007-08-14]
+	Added chat/pidgin-silc version 2.1.0 [tnn 2007-08-14]
