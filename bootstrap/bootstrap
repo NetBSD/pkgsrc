@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.106 2007/08/13 22:48:59 rillig Exp $
+# $NetBSD: bootstrap,v 1.107 2007/08/14 00:26:58 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -37,7 +37,7 @@
 
 # the following environment variables are honored:
 # compiler/linker flags: CFLAGS, CPPFLAGS, LDFLAGS
-# tools: CP, GREP, ID, MKDIR, TEST, TOUCH, XARGS
+# tools: CP, GREP, ID, MKDIR, SH, TEST, TOUCH, XARGS
 
 
 BOOTSTRAP_VERSION=20060721
@@ -260,6 +260,20 @@ get_optarg()
 {
 	expr "x$1" : "x[^=]*=\\(.*\\)"
 }
+
+bootstrap_sh=${SH-/bin/sh}
+bootstrap_sh_set=${SH+set}
+
+# On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
+# whose echo(1) is not BSD-compatible.
+dash_echo_test=`$bootstrap_sh -c 'echo "\\100"'`
+if [ "$dash_echo_test" = "@" ]; then
+	{ echo "ERROR: Your shell's echo command is not BSD-compatible."
+	  echo "ERROR: Please select another shell by setting the environment"
+	  echo "ERROR: variable SH."
+	} 1>&2
+	exit 1;
+fi
 
 build_start=`date`
 echo_msg "bootstrap command: $0 $@"
@@ -838,12 +852,9 @@ fi
 MAKECONF=$wrkdir/mk.conf
 export MAKECONF
 
-# On some newer Ubuntu installations, /bin/sh is a symlink to /bin/dash,
-# whose echo(1) is not BSD-compatible.
-dash_echo_test=`echo "\\100"`
-if [ "$dash_echo_test" = "@" ]; then
-	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.sh?=		/bin/bash	# instead of /bin/sh" >> ${BOOTSTRAP_MKCONF}
+if [ "$bootstrap_sh_set" = "set" ]; then
+	echo "TOOLS_PLATFORM.sh?=		${bootstrap_sh}" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=		${bootstrap_sh}" >> ${BOOTSTRAP_MKCONF}
 fi
 
 # preserve compiler and tool environment variables settings
