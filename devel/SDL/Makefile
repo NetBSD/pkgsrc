@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2007/07/25 23:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2007/08/14 14:08:13 tron Exp $
 
 DISTNAME=	SDL-1.2.12
 CATEGORIES=	devel games
@@ -25,7 +25,6 @@ CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS"
-.  include "../../devel/binutils/buildlink3.mk"
 BUILD_DEPENDS+=		yasm>=0.6.0:../../devel/yasm
 NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
