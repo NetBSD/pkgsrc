@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.92 2007/05/06 21:41:30 christos Exp $
+# $NetBSD: Makefile,v 1.93 2007/08/14 19:59:17 veego Exp $
 #
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
@@ -34,6 +35,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .if ${OPSYS} == "NetBSD"
 REAL_GROUP=		-g kmem
+CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
 .elif ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
 .endif
