@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: epsg-load,v 1.3 2007/07/28 11:06:36 gdt Exp $
+# $NetBSD: epsg-load,v 1.4 2007/08/14 17:19:20 joerg Exp $
 
 # epsg - import EPSG data into a relational database
 
@@ -31,6 +31,8 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+set -e	# exit on error
 
 HOST=
 PORT=
