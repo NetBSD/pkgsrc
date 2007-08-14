@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.25 2007/08/10 04:03:23 jlam Exp $
+# $NetBSD: metadata.mk,v 1.26 2007/08/14 21:32:17 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -399,8 +399,9 @@ _flavor-generate-metadata: ${_METADATA_TARGETS}
 ### _flavor-clean-metadata (PRIVATE)
 ######################################################################
 ### _flavor-clean-metadata is a convenience target for removing the
-### meta-data directory.
+### package meta-data files.  This is essentially the reverse action
+### of _flavor-generate-metadata.
 ###
 .PHONY: _flavor-clean-metadata
 _flavor-clean-metadata:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${PKG_DB_TMPDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_METADATA_TARGETS}
