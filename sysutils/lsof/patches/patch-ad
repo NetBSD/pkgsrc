@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
+$NetBSD: patch-ad,v 1.13 2007/08/14 19:59:18 veego Exp $
 
---- dialects/n+obsd/dnode.c.orig	2007-04-24 12:22:06.000000000 -0400
-+++ dialects/n+obsd/dnode.c	2007-05-06 16:43:51.000000000 -0400
+--- dialects/n+obsd/dnode.c.orig	2007-04-24 18:22:06.000000000 +0200
++++ dialects/n+obsd/dnode.c	2007-08-11 19:46:43.000000000 +0200
 @@ -38,6 +38,9 @@
  
  #include "lsof.h"
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
  
  #if	defined(HAS_DINODE_U)
  #define	DINODE_U	dinode_u
-@@ -194,7 +197,9 @@
+@@ -194,12 +197,17 @@
  	unsigned char ns;
  	unsigned char rdevs;
  	char *ep, *ty;
@@ -21,8 +21,37 @@ $NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
 +#endif
  	struct inode i;
  	struct mfsnode m;
++#if	defined(HASTMPFS)
++	struct tmpfs_node tmp;
++#endif	/* defined(HASTMPFS) */
  	struct nfsnode n;
-@@ -619,6 +624,7 @@
+ 	enum nodetype {NONODE, CDFSNODE, DOSNODE, EXT2NODE, FDESCNODE, INODE,
+-		KERNFSNODE, MFSNODE, NFSNODE, PFSNODE, PTYFSNODE} nty;
++		KERNFSNODE, MFSNODE, NFSNODE, PFSNODE, PTYFSNODE, TMPFSNODE} nty;
+ 	enum vtype type;
+ 	struct vnode *v, vb;
+ 	struct l_vfs *vfs;
+@@ -471,6 +479,19 @@
+ 	    nty = MFSNODE;
+ 	    break;
+ 
++#if	defined(HASTMPFS)
++	case VT_TMPFS:
++	    if (!v->v_data
++	    ||  kread((KA_T)v->v_data, (char *)&tmp, sizeof(tmp))) {
++		(void) snpf(Namech, Namechl, "can't read tmpfs_node at: %s",
++		    print_kptr((KA_T)v->v_data, (char *)NULL, 0));
++		enter_nm(Namech);
++		return;
++	    }
++	    nty = TMPFSNODE;
++	    break;
++#endif	/* defined(HASTMPFS) */
++
+ #if	defined(HASMSDOSFS)
+ 	case VT_MSDOSFS:
+ 	    if (!v->v_data
+@@ -619,6 +640,7 @@
  
  	    }
  
@@ -30,7 +59,7 @@ $NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
  	    if ((lff = i.i_lockf)) {
  
  	    /*
-@@ -667,6 +673,7 @@
+@@ -667,6 +689,7 @@
  		    break;
  		} while ((lfp = lf.lf_next) && lfp != lff);
  	    }
@@ -38,3 +67,41 @@ $NetBSD: patch-ad,v 1.12 2007/05/06 21:41:30 christos Exp $
  	    break;
  	default:
  	    if (v->v_type == VBAD || v->v_type == VNON)
+@@ -900,6 +923,13 @@
+ 	    break;
+ #endif	/* defined(HASPTYFS) */
+ 
++#if	defined(HASTMPFS)
++	case TMPFSNODE:
++	    Lf->inode = (INODETYPE)tmp.tn_id;
++	    Lf->inp_ty = 1;
++	    break;
++#endif	/* defined(HASTMPFS) */
++
+ 	}
+ 
+ /*
+@@ -1019,6 +1049,13 @@
+ 			Lf->sz_def = 1;
+ 			break;
+ 
++#if	defined(HASTMPFS)
++		    case TMPFSNODE:
++			Lf->sz = (SZOFFTYPE)tmp.tn_size;
++			Lf->sz_def = 1;
++			break;
++#endif	/* defined(HASTMPFS) */
++
+ #if	defined(HASEXT2FS)
+ 		    case EXT2NODE:
+ # if	defined(HASI_E2FS_PTR)
+@@ -1221,6 +1258,9 @@
+ 	    Lf->dev_def = Lf->rdev_def = 0;
+ 	    (void) snpf(Namech, Namechl, "%#x", m.mfs_baseoff);
+ 	    enter_dev_ch("memory");
++	} else if (nty == TMPFSNODE) {
++	    Lf->dev_def = Lf->rdev_def = 0;
++	    enter_dev_ch("memory");
+ 	}
+ 
+ #if	defined(HASPROCFS)
