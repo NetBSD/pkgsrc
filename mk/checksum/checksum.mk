@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.4 2007/03/07 01:06:11 rillig Exp $
+# $NetBSD: checksum.mk,v 1.5 2007/08/14 19:08:18 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -40,39 +40,51 @@ ${_COOKIE.checksum}:
 	fi
 .endfor
 
-makesum:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+_DISTINFO_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q}	\
+			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}		\
+		${AWK} -f ${PKGSRCDIR}/mk/checksum/distinfo.awk --
+
+.if exists(${DISTDIR})
+_DISTINFO_ARGS_COMMON+=	-d ${DISTDIR}
+.endif
+.if exists(${DISTINFO_FILE})
+_DISTINFO_ARGS_COMMON+=	-f ${DISTINFO_FILE}
+.endif
+.if defined(_DIGEST_ALGORITHMS) && !empty(_DIGEST_ALGORITHMS)
+_DISTINFO_ARGS_COMMON+=	${_DIGEST_ALGORITHMS:S/^/-a /}
+.endif
+.if defined(_PATCH_DIGEST_ALGORITHMS) && !empty(_PATCH_DIGEST_ALGORITHMS)
+_DISTINFO_ARGS_COMMON+=	${_PATCH_DIGEST_ALGORITHMS:S/^/-p /}
+.endif
+
+.if defined(_CKSUMFILES) && !empty(_CKSUMFILES)
+_DISTINFO_ARGS_DISTSUM+=	${_CKSUMFILES:S/^/-c /}
+.endif
+.if defined(_IGNOREFILES) && !empty(_IGNOREFILES)
+_DISTINFO_ARGS_DISTSUM+=	${_IGNOREFILES:S/^/-i /}
+.endif
+
+_DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/patch-*
+
+distinfo:
+	${RUN}set -e;							\
 	newfile=${DISTINFO_FILE}.$$$$;					\
-	if ${TEST} -f ${DISTINFO_FILE}; then				\
-		{ ${GREP} '^.NetBSD' ${DISTINFO_FILE} ||		\
-		  ${ECHO} "$$""NetBSD""$$"; } > $$newfile;		\
+	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
+		${_DISTINFO_ARGS_DISTSUM}				\
+		${_DISTINFO_ARGS_PATCHSUM} > $$newfile;			\
+	then								\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo: unchanged.";			\
 	else								\
-		${ECHO} "$$""NetBSD""$$" > $$newfile;			\
-	fi;								\
-	${ECHO} "" >> $$newfile;					\
-	cd ${DISTDIR};							\
-	for sumfile in "" ${_CKSUMFILES}; do				\
-		${TEST} -n "$$sumfile" || continue;			\
-		for a in "" ${_DIGEST_ALGORITHMS}; do			\
-			${TEST} -n "$$a" || continue;			\
-			${TOOLS_DIGEST} $$a $$sumfile >> $$newfile;	\
-		done;							\
-		${WC} -c $$sumfile |					\
-		${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }'	\
-			>> $$newfile;					\
-	done;								\
-	for ignore in "" ${_IGNOREFILES}; do				\
-		${TEST} -n "$$ignore" || continue;			\
-		for a in "" ${_DIGEST_ALGORITHMS}; do			\
-			${TEST} -n "$$a" || continue;			\
-			${ECHO} "$$a ($$ignore) = IGNORE" >> $$newfile;	\
-		done;							\
-	done;								\
-	if ${TEST} -f ${DISTINFO_FILE}; then				\
-		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }'	\
-			< ${DISTINFO_FILE} >> $$newfile;		\
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
+		${MV} -f $$newfile ${DISTINFO_FILE};			\
+	fi
+
+makesum:
+	${RUN}set -e;							\
+	newfile=${DISTINFO_FILE}.$$$$;					\
+	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
+		${_DISTINFO_ARGS_DISTSUM} > $$newfile;			\
+	then								\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
 	else								\
@@ -80,31 +92,13 @@ makesum:
 	fi
 
 makepatchsum:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN}set -e;							\
 	newfile=${DISTINFO_FILE}.$$$$;					\
-	if ${TEST} -f ${DISTINFO_FILE}; then				\
-		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }'	\
-			< ${DISTINFO_FILE} >> $$newfile;		\
-	else								\
-		${ECHO} "$$""NetBSD""$$" > $$newfile;			\
-		${ECHO} "" >> $$newfile;				\
-	fi;								\
-	if ${TEST} -d ${PATCHDIR}; then					\
-		( cd ${PATCHDIR};					\
-		  for sumfile in "" patch-*; do				\
-			case "$$sumfile" in				\
-			""|"patch-*") continue ;;			\
-			patch-local-*|*.orig|*.rej|*~) continue ;;	\
-			esac;						\
-			for a in "" ${_PATCH_DIGEST_ALGORITHMS}; do	\
-				${TEST} -n "$$a" || continue;		\
-				${ECHO} "$$a ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${TOOLS_DIGEST} $$a`" >> $$newfile; \
-			done;						\
-		  done );						\
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
+	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
+		${_DISTINFO_ARGS_PATCHSUM} > $$newfile;			\
+	then								\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
 	else								\
-		${MV} $$newfile ${DISTINFO_FILE};			\
+		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
