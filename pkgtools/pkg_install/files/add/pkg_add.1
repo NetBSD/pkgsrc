@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.25 2007/08/09 23:32:59 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.26 2007/08/14 22:47:52 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -27,6 +27,7 @@
 .Nm
 .Op Fl AfILnRuVv
 .Op Fl K Ar pkg_dbdir
+.Op Fl m Ar machine
 .Op Fl p Ar prefix
 .Op Fl s Ar verification-type
 .Op Fl t Ar template
@@ -136,6 +137,9 @@ if it's set, otherwise it defaults to
 .Pa /var/db/pkg .
 .It Fl L
 Don't add the package to any views after installation.
+.It Fl m
+Override the machine architecture returned by uname with
+.Ar machine .
 .It Fl n
 Don't actually install a package, just report the steps that
 would be taken if it was.
