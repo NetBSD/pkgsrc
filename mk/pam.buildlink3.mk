@@ -1,24 +1,36 @@
-# $NetBSD: pam.buildlink3.mk,v 1.8 2006/11/04 22:18:58 rillig Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.9 2007/08/14 17:48:53 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
-# require a PAM implementation.  pam.buildlink3.mk will:
+# require a PAM implementation.
 #
-#	* set PAMBASE to the base directory of the PAM files;
-#	* set PAM_TYPE to the PAM implementation used.
+# User-settable variables:
 #
-# There are two variables that can be used to tweak the selection of
-# the PAM implementation:
+# PAM_DEFAULT
+#	The preferred PAM implementation.
 #
-# PAM_DEFAULT is a user-settable variable whose value is the default
-#	PAM implementation to use.
+#	Possible: linux-pam openpam solaris-pam
+#	Default: (from the base system, fallback: linux-pam)
 #
-# PAM_ACCEPTED is a package-settable list of PAM implementations
-#	that may be used by the package.
+# Package-settable variables:
+#
+# PAM_ACCEPTED
+#	The PAM implementations that this package can use.
+#
+#	Possible: (see PAM_DEFAULT)
+#	Default: all
+#
+# System-provided variables:
+#
+# PAM_TYPE
+#	The PAM implementation that will be used for this package.
+#
+# PAMBASE
+#	The directory where the PAM implementation is installed.
 #
 
 PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "${.PARSEDIR}/bsd.fast.prefs.mk"
 
 .if !empty(PAM_BUILDLINK3_MK:M+)
 #
