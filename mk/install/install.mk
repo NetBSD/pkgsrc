@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.45 2007/08/14 23:58:24 joerg Exp $
+# $NetBSD: install.mk,v 1.46 2007/08/14 23:59:25 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -336,12 +336,3 @@ privileged-install-hook: .PHONY
 ###
 install-clean: .PHONY package-clean check-clean _flavor-install-clean
 	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install} ${_DEPENDS_PLIST}
-
-######################################################################
-### bootstrap-register (PUBLIC)
-######################################################################
-### bootstrap-register registers "bootstrap" packages that are installed
-### by the pkgsrc/bootstrap/bootstrap script.
-###
-bootstrap-register: .PHONY _flavor-register clean
-	@${DO_NADA}
