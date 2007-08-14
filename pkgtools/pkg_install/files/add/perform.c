@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.56 2007/08/13 19:15:37 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.57 2007/08/14 22:47:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.56 2007/08/13 19:15:37 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.57 2007/08/14 22:47:52 joerg Exp $");
 #endif
 #endif
 
@@ -366,21 +366,23 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		}
 
 		if (status == Good) {
+			const char *effective_arch;
+
+			if (OverrideMachine != NULL)
+				effective_arch = OverrideMachine;
+			else
+				effective_arch = MACHINE_ARCH;
+
 			/* If either the OS or arch are different, bomb */
-			if (strcmp(OPSYS_NAME, buildinfo[BI_OPSYS]) != 0 ||
-			    strcmp(MACHINE_ARCH, buildinfo[BI_MACHINE_ARCH]) != 0) {
+			if (strcmp(OPSYS_NAME, buildinfo[BI_OPSYS]) != 0)
 				status = Fatal;
-			}
+			if (strcmp(effective_arch, buildinfo[BI_MACHINE_ARCH]) != 0)
+				status = Fatal;
 
 			/* If OS and arch are the same, warn if version differs */
-			if (strcmp(OPSYS_NAME, buildinfo[BI_OPSYS]) == 0 &&
-			    strcmp(MACHINE_ARCH, buildinfo[BI_MACHINE_ARCH]) == 0) {
-				if (strcmp(host_uname.release, buildinfo[BI_OS_VERSION]) != 0) {
-					status = Warning;
-				}
-			} else {
-				status = Fatal;
-			}
+			if (status == Good &&
+			    strcmp(host_uname.release, buildinfo[BI_OS_VERSION]) != 0)
+				status = Warning;
 
 			if (status != Good) {
 				warnx("Warning: package `%s' was built for a different version of the OS:", pkg);
@@ -389,7 +391,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 				    buildinfo[BI_MACHINE_ARCH],
 				    buildinfo[BI_OS_VERSION],
 				    OPSYS_NAME,
-				    MACHINE_ARCH,
+				    effective_arch,
 				    host_uname.release);
 			}
 		}
