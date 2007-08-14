@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: distinfo.awk,v 1.1 2007/08/14 19:08:18 jlam Exp $
+# $NetBSD: distinfo.awk,v 1.2 2007/08/14 19:19:01 jlam Exp $
 #
 # Copyright (c) 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,7 @@
 #
 #	For example:
 #
-#	$NetBSD: distinfo.awk,v 1.1 2007/08/14 19:08:18 jlam Exp $
+#	$NetBSD: distinfo.awk,v 1.2 2007/08/14 19:19:01 jlam Exp $
 #
 #	SHA1 (make-3.81.tar.gz) = cd4fa5a3184176492bf0799593a8f250a728210c
 #	RMD160 (make-3.81.tar.gz) = a713a72875cb9a29568677c98022465c6f55cbbf
@@ -270,7 +270,7 @@ function header() {
 			return
 		}
 	}
-	lines[L++] = "$NetBSD: distinfo.awk,v 1.1 2007/08/14 19:08:18 jlam Exp $"
+	lines[L++] = "$" "NetBSD" "$"
 	lines[L++] = ""
 }
 
@@ -280,7 +280,7 @@ function header() {
 ###
 function is_patch(file) {
 	if (file ~ /^patch-local-|[.]orig$|[.]rej$|~$/) return 0
-	if (file ~ /^patch-.*/) return 1
+	if (file ~ /^patch-/) return 1
 	return 0
 }
 
