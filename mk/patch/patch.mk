@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.12 2007/08/14 13:21:57 rillig Exp $
+# $NetBSD: patch.mk,v 1.13 2007/08/14 21:25:10 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -261,6 +261,11 @@ _PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
 _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
 .endif
 
+_CHECKSUM_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}	\
+			ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}		\
+			TEST=${TOOLS_TEST:Q}				\
+		${SH} ${PKGSRCDIR}/mk/checksum/checksum
+
 pkgsrc-patch-message:
 	@${STEP_MSG} "Applying pkgsrc patches for ${PKGNAME}"
 
@@ -287,22 +292,20 @@ do-pkgsrc-patch:
 				patch_warning "Ignoring patch file $$i: distinfo not found"; \
 				continue;				\
 			fi;						\
-			filename=`${BASENAME} $$i`;			\
-			algsum=`${AWK} '(NF == 4) && ($$2 == "('$$filename')") && ($$3 == "=") {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
-			if ${TEST} -z "$$algsum"; then			\
-				patch_warning "Ignoring patch file $$i: no checksum found"; \
-				continue;				\
+			${ECHO_PATCH_MSG} "Verifying $$i";		\
+			if ${_CHECKSUM_CMD} ${DISTINFO_FILE} $$i >/dev/null 2>&1; then	\
+				cksum_result=0;				\
+			else						\
+				cksum_result=$$?;			\
 			fi;						\
-			set -- $$algsum;				\
-			alg="$$1";					\
-			recorded="$$2";					\
-			calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${TOOLS_DIGEST} $$alg`; \
-			${ECHO_PATCH_MSG} "Verifying $$filename (using digest algorithm $$alg)"; \
-			if ${TEST} "$$calcsum" != "$$recorded"; then	\
-				patch_warning "Ignoring patch file $$i: invalid checksum"; \
+			case "$$cksum_result" in			\
+			0)	;;					\
+			2)	patch_warning "Ignoring patch file $$i: no checksum found"; \
+				continue ;;				\
+			1)	patch_warning "Ignoring patch file $$i: invalid checksum"; \
 				fail="$$fail $$i";			\
-				continue;				\
-			fi;						\
+				continue ;;				\
+			esac;						\
 			;;						\
 		esac;							\
 		${ECHO_PATCH_MSG} "Applying pkgsrc patch $$i";		\
