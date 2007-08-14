@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.44 2007/08/10 04:00:43 jlam Exp $
+# $NetBSD: install.mk,v 1.45 2007/08/14 23:58:24 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -168,6 +168,8 @@ _INSTALL_ALL_TARGETS+=		post-install-script
 .endif
 .if ${_USE_DESTDIR} == "no"
 _INSTALL_ALL_TARGETS+=		_flavor-register
+.else
+_INSTALL_ALL_TARGETS+=		_flavor-generate-metadata
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
 .if ${_USE_DESTDIR} != "user-destdir"
@@ -333,7 +335,7 @@ privileged-install-hook: .PHONY
 ### later phases so that the "install" target may be re-invoked.
 ###
 install-clean: .PHONY package-clean check-clean _flavor-install-clean
-	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install}
+	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install} ${_DEPENDS_PLIST}
 
 ######################################################################
 ### bootstrap-register (PUBLIC)
