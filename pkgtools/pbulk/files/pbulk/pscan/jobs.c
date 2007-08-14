@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.3 2007/06/25 21:38:46 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.4 2007/08/14 13:15:58 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -214,16 +214,20 @@ write_single_job(int fd, const char *begin_entry, struct scan_job *job)
 			output[0].iov_base = UNCONST(begin_entry);
 			expected = output[0].iov_len =
 			    end_line + 1 - begin_entry;
-				output[1].iov_base = UNCONST("PKG_LOCATION=");
+
+			output[1].iov_base = UNCONST("PKG_LOCATION=");
 			output[1].iov_len = strlen(output[1].iov_base);
 			expected += output[1].iov_len;
-				output[2].iov_base = job->pkg_location;
+
+			output[2].iov_base = job->pkg_location;
 			output[2].iov_len = strlen(output[2].iov_base);
 			expected += output[2].iov_len;
-				output[3].iov_base = UNCONST("\n");
+
+			output[3].iov_base = UNCONST("\n");
 			output[3].iov_len = 1;
 			expected += output[3].iov_len;
-				output[4].iov_base = UNCONST(end_line + 1);
+
+			output[4].iov_base = UNCONST(end_line + 1);
 			output[4].iov_len = end_entry - end_line - 1;
 			expected += output[4].iov_len;
 
