@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2007/08/13 23:02:41 tnn Exp $
+# $NetBSD: Makefile,v 1.129 2007/08/14 01:19:30 tnn Exp $
 #
 
 COMMENT=	Communication programs
@@ -80,6 +80,7 @@ SUBDIR+=	pidgin
 SUBDIR+=	pidgin-icb
 SUBDIR+=	pidgin-otr
 SUBDIR+=	pidgin-sametime
+SUBDIR+=	pidgin-silc
 SUBDIR+=	pircbot
 SUBDIR+=	psi
 SUBDIR+=	quirc
