@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/08/13 16:55:20 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/08/14 21:34:36 joerg Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
-USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-dri
 
@@ -44,8 +43,6 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 # the newer ones.
 #BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
-post-extract:
-	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 PLIST_SUBST+=		USE_DRI=""
 .else
 CONFIGURE_ARGS+=	--disable-glx
@@ -62,6 +59,12 @@ DEPENDS+=		xkbdata-[0-9]*:../../x11/xkbdata
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
+
+post-extract:
+	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
+.if !empty(PKG_OPTIONS:Mdri)
+	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
+.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
