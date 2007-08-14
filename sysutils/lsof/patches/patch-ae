@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.10 2006/08/01 12:29:59 tron Exp $
+$NetBSD: patch-ae,v 1.11 2007/08/14 19:59:18 veego Exp $
 
---- dialects/n+obsd/dmnt.c.orig	2005-08-08 20:53:31.000000000 +0100
-+++ dialects/n+obsd/dmnt.c	2006-08-01 13:25:57.000000000 +0100
+--- dialects/n+obsd/dmnt.c.orig	2005-08-08 21:53:31.000000000 +0200
++++ dialects/n+obsd/dmnt.c	2007-08-11 14:43:05.000000000 +0200
 @@ -45,6 +45,15 @@
  #include <sys/statvfs.h>
  #endif  /* defined(NETBSDV) && defined(HASSTATVFS) */
@@ -18,3 +18,16 @@ $NetBSD: patch-ae,v 1.10 2006/08/01 12:29:59 tron Exp $
  #include "lsof.h"
  
  
+@@ -94,7 +103,12 @@
+ 	for (; n; n--, mb++) {
+ 	    if (mb->f_fstypename[0] == '\0')
+ 		continue;
++#if defined(NETBSDV) && __NetBSD_Version__ >= 499002500
++	    /* MFSNAMELEN was removed from the kernel source after 4.99.24 */
++	    mb->f_fstypename[sizeof(mb->f_fstypename) - 1] = '\0';
++#else
+ 	    mb->f_fstypename[MFSNAMELEN - 1] = '\0';
++#endif
+ 	/*
+ 	 * Interpolate a possible symbolic directory link.
+ 	 */
