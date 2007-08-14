@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/07/28 11:06:36 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/14 17:19:20 joerg Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
 PKGNAME=		epsg-6.13
+PKGREVISION=		1
 VERS=			6_13
 CATEGORIES=		geography databases
 MASTER_SITES+=		http://www.epsg.org/databases/
@@ -13,6 +14,8 @@ DIST_SUBDIR=		epsg-${VERS}
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG geodetic parameters database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Don't make filenames lowercase.
 EXTRACT_OPTS_ZIP=	-aqo
@@ -26,6 +29,8 @@ NO_BUILD=		yes
 BINDIR=			${PREFIX}/bin
 DOCDIR=			${PREFIX}/share/doc/epsg
 EPSGDIR=		${PREFIX}/share/epsg
+
+INSTALLATION_DIRS=	${BINDIR} ${DOCDIR} ${EPSGDIR}
 
 MESSAGE_SUBST+=		BINDIR=${BINDIR:Q}
 MESSAGE_SUBST+=		EPSGDIR=${EPSGDIR:Q}
@@ -50,13 +55,11 @@ post-extract:
 	${CP} ${FILESDIR}/epsg-load ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EPSGDIR}
-	${INSTALL_DATA} ${WRKSRC}/epsg-v${VERS}_Readme.pdf ${DOCDIR:Q}
-	${INSTALL_SCRIPT} ${WRKSRC}/epsg-load ${BINDIR}
+	${INSTALL_DATA} ${WRKSRC}/epsg-v${VERS}_Readme.pdf ${DESTDIR}${DOCDIR:Q}
+	${INSTALL_SCRIPT} ${WRKSRC}/epsg-load ${DESTDIR}${BINDIR}
 .for d in pgsql mysql
 .for f in ${DATAFILES.${d}}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EPSGDIR:Q}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EPSGDIR:Q}/${f}
 .endfor
 .endfor
 
