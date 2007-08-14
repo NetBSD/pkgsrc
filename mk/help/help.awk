@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.15 2007/06/04 08:11:07 rillig Exp $
+# $NetBSD: help.awk,v 1.16 2007/08/14 18:04:16 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -99,8 +99,13 @@ $1 ~ /:$/ && $2 == ".PHONY" {
 # Everything else is assumed to belong to the explaining text.
 #
 NF >= 1 {
-	w1 = ($1 == tolower($1)) ? toupper($1) : $1;
-	w2 = ($2 == tolower($2)) ? toupper($2) : $2;
+	# Reduce FOO.<param> and FOO.${param} to FOO.
+	w1 = gensub(/\.[<$].*[>}]$/, "", "g", $1);
+	w2 = gensub(/\.[<$].*[>}]$/, "", "g", $2);
+
+	# Convert all-lowercase words to all-uppercase.
+	w1 = (w1 == tolower(w1)) ? toupper(w1) : w1;
+	w2 = (w2 == tolower(w2)) ? toupper(w2) : w2;
 
 	this_line_is_definition = (w1 == toupper($1)) && (w2 == toupper($2));
 
