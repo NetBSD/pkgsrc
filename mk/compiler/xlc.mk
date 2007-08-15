@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.14 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: xlc.mk,v 1.15 2007/08/15 21:26:28 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,17 @@ COMPILER_XLC_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-XLCBASE?=	/opt/ibmcmp/vacpp/6.0
+.if !defined(XLCBASE)
+.  if exists(/usr/vacpp/README)
+XLCBASE=	/usr/vacpp
+.  elif exists(/usr/vac/README)
+XLCBASE=	/usr/vac
+.  elif exists(/opt/ibmcmp/vacpp/6.0/README)
+XLCBASE=	/opt/ibmcmp/vacpp/6.0
+.  else
+PKG_FAIL_REASON+=	"Cannot determine XLCBASE."
+.  endif
+.endif
 
 # LANGUAGES.<compiler> is the list of supported languages by the
 # compiler.
@@ -73,6 +83,8 @@ CXXPATH=		${XLCBASE}/bin/xlc++
 PKG_CXX:=		${_XLC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
+_COMPILER_RPATH_FLAG=	-Wl,-R
+_LINKER_RPATH_FLAG=	-R
 
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
