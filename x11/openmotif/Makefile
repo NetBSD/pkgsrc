@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/12/15 19:13:22 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2007/08/15 19:26:39 joerg Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -50,6 +50,14 @@ SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g'
 SUBST_SED.man_rename+=		-e 's: Object.3: XObject.3:g'
 SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_func_setpgrp_void=no
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_FLAGS+=	CROSS_COMPILING=yes CC_FOR_BUILD=${NATIVE_CC:Q} \
+    CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
+.endif
 
 # 1) Fix the man pages to refer to the correct sections.
 # 2) Change references to {Core,Object,Shell}.3 to X{Core,Object,Shell}.3 to
