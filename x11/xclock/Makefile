@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/08/14 13:14:05 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/15 22:17:59 joerg Exp $
 #
 
-DISTNAME=	xclock-1.0.2
+DISTNAME=	xclock-1.0.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ENV+=	APP_MAN_SUFFIX=1
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
