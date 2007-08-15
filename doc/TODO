@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6596 2007/08/13 14:22:32 tnn Exp $
+$NetBSD: TODO,v 1.6597 2007/08/15 02:08:00 markd Exp $
 
 Suggested new packages
 ======================
@@ -1110,6 +1110,7 @@ Suggested package updates
 	o seamonkey-1.1.4
 	o sendfile-20010424
 	o ser-0.9.6
+	o sge-6.1.2
 	o sharity-3.3
 	o sharity-light-1.3
 	o shc-3.8
