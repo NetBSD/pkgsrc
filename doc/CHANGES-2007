@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1801 2007/08/15 03:23:24 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1802 2007/08/15 03:54:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3294,3 +3294,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/lsof to 4.78nb1 [veego 2007-08-14]
 	Updated parallel/sge to 6.0.11 [markd 2007-08-15]
 	Updated sysutils/krusader to 1.80.0 [markd 2007-08-15]
+	Updated devel/kscope to 1.5.0 [markd 2007-08-15]
