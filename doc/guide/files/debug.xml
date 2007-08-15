@@ -1,4 +1,4 @@
-<!-- $NetBSD: debug.xml,v 1.6 2006/12/03 01:03:38 kano Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.7 2007/08/15 06:33:44 rillig Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
@@ -10,8 +10,7 @@
 
   <itemizedlist>
     <listitem>
-      <para>Be sure to set <varname>PKG_DEVELOPER=1</varname> in
-      <filename>/etc/mk.conf</filename></para>
+      <para>Be sure to set <varname>PKG_DEVELOPER=yes</varname> in &mk.conf;.</para>
     </listitem>
 
     <listitem>

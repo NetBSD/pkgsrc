@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.29 2006/12/15 13:22:14 martti Exp $ -->
+<!-- $NetBSD: using.xml,v 1.30 2007/08/15 06:33:46 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -250,7 +250,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
   <para>The default <emphasis>prefix</emphasis> for installed packages
   is <filename>/usr/pkg</filename>. If you wish to change this, you
   should do so by setting <varname>LOCALBASE</varname> in
-  <filename>mk.conf</filename>. You should not try to use multiple
+  &mk.conf;. You should not try to use multiple
   different <varname>LOCALBASE</varname> definitions on the same
   system (inside a chroot is an exception). </para>
 
@@ -283,7 +283,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     you don't need to connect. If the distfiles are on CD-ROM, you can
     mount the CD-ROM on <filename>/cdrom</filename> and add:
     <screen>DISTDIR=/cdrom/pkgsrc/distfiles</screen>
-    to your <filename>mk.conf</filename>.</para>
+    to your &mk.conf;.</para>
 
     <para>By default a list of distribution sites will be randomly
     intermixed to prevent huge load on servers which holding popular
@@ -307,7 +307,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 
     <para>You can change these settings either in your shell's environment, or,
     if you want to keep the settings, by editing the
-    <filename>/etc/mk.conf</filename> file,
+    &mk.conf; file,
     and adding the definitions there.</para>
 
     <para>
@@ -400,12 +400,12 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     package system and whatever else may have been installed
     there.</para>
 
-    <para>Some packages look in <filename>/etc/mk.conf</filename> to
+    <para>Some packages look in &mk.conf; to
     alter some configuration options at build time.  Have a look at
     <filename>pkgsrc/mk/defaults/mk.conf</filename> to get an overview
     of what will be set there by default.  Environment variables such
     as <varname>LOCALBASE</varname> can be set in
-    <filename>/etc/mk.conf</filename> to save having to remember to
+    &mk.conf; to save having to remember to
     set them each time you want to use pkgsrc.</para>
 
     <para>Occasionally, people want to <quote>look under the

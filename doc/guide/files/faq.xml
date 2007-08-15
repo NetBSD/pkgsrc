@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.36 2007/07/30 21:13:00 kano Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.37 2007/08/15 06:33:44 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -264,7 +264,7 @@ that allow finer tuning of the tree layout.</para>
 <para>By default, resuming transfers in pkgsrc is disabled, but you can
 enable this feature by adding the option
 <varname>PKG_RESUME_TRANSFERS=YES</varname> into
-<filename>/etc/mk.conf</filename>.  If, during a fetch step, an incomplete
+&mk.conf;.  If, during a fetch step, an incomplete
 distfile is found, pkgsrc will try to resume it.</para>
 
 <para>You can also
@@ -295,7 +295,7 @@ FETCH_OUTPUT_ARGS=     -O
 <para>If you want to use modular X.org from pkgsrc instead of your system's own X11
 (<filename>/usr/X11R6</filename>, <filename>/usr/openwin</filename>, ...)
 you will have to add the following line into
-<filename>/etc/mk.conf</filename>:</para>
+&mk.conf;:</para>
 
 <programlisting>
 X11_TYPE=modular
@@ -348,7 +348,7 @@ the first available command from the following list:</para>
 <filename>/usr/bin/ftp</filename>, which automatically tries passive
 connections first, and falls back to active connections if the server
 refuses to do passive.  For the other tools, add the following to your
-<filename>/etc/mk.conf</filename> file:
+&mk.conf; file:
 <varname>PASSIVE_FETCH=1</varname>.</para>
 
 <para>Having that option present will prevent
@@ -420,7 +420,7 @@ that to format man pages.</para>
 <para>In the case of the <filename
   role="pkg">pkgtools/pkg_install</filename> package, you
 can get away with setting <varname>NOMAN=YES</varname> either in the
-environment or in <filename>/etc/mk.conf</filename>.</para>
+environment or in &mk.conf;.</para>
 
 </sect1>
 
@@ -453,7 +453,7 @@ password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
 <filename role="pkg">security/sudo</filename>) and then put the
-following into your <filename>/etc/mk.conf</filename>, somewhere
+following into your &mk.conf;, somewhere
 <emphasis>after</emphasis> the definition of the
 <varname>LOCALBASE</varname> variable:</para>
 
@@ -479,7 +479,7 @@ configuration of the provided packages).</para>
 
 <para>In order to change the defaults, you can modify the
 <varname>PKG_SYSCONFBASE</varname> variable (in
-<filename>/etc/mk.conf</filename>) to point to your preferred configuration
+&mk.conf;) to point to your preferred configuration
 directory; some common examples include <filename>/etc</filename> or
 <filename>/etc/pkg</filename>.</para>
 
@@ -549,7 +549,7 @@ check.</para>
 
 	<para>When you add your own preferences to the
 	<varname>CFLAGS</varname> variable in your
-	<filename>mk.conf</filename>, these flags are passed in
+	&mk.conf;, these flags are passed in
 	environment variables to the <filename>./configure</filename>
 	scripts and to &man.make.1;. Some package authors ignore the
 	<varname>CFLAGS</varname> from the environment variable by

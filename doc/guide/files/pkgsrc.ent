@@ -1,0 +1,7 @@
+<!-- $NetBSD: pkgsrc.ent,v 1.1 2007/08/15 06:33:46 rillig Exp $ -->
+
+<!--
+	Entities that can (and should) be used in the pkgsrc guide.
+-->
+
+<!ENTITY mk.conf "<link linkend='mk.conf'><filename>mk.conf</filename></link>">

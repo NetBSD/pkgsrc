@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.7 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.8 2007/08/15 06:33:45 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -242,11 +242,8 @@ CFLAGS+=                -Wall
 	<varname>MACHINE_ARCH</varname>.</para>
 
 	<para>Then, the user settings are loaded from the file specified
-	in <varname>MAKECONF</varname>. If the bmake command from pkgsrc
-	is used, <varname>MAKECONF</varname> defaults to
-	<filename><replaceable>${prefix}</replaceable>/etc/mk.conf</filename>.
-	With the native &man.make.1; command on NetBSD, it defaults to
-	<filename>/etc/mk.conf</filename>. After that, those variables
+	in <varname>MAKECONF</varname>, which is usually &mk.conf;.
+	After that, those variables
 	that have not been overridden by the user are loaded from
 	<filename>mk/defaults/mk.conf</filename>.</para>
 

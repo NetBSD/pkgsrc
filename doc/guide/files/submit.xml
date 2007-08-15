@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.18 2007/07/30 21:13:01 kano Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.19 2007/08/15 06:33:46 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -80,7 +80,7 @@
   For new packages, or package moves or removals, set the
   <varname>CTYPE</varname> variable on the command line to "Added",
   "Moved", or "Removed".  You can set <varname>NETBSD_LOGIN_NAME</varname>
-  in <filename>/etc/mk.conf</filename> if your local login name is
+  in &mk.conf; if your local login name is
   not the same as your NetBSD login name. Don't forget to commit
   the changes to <filename>pkgsrc/doc/CHANGES-<replaceable>YYYY</replaceable></filename>!</para>
 </sect1>
