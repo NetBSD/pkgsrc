@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.3 2007/07/07 13:54:36 wiz Exp $ */
+/* $NetBSD: jobs.c,v 1.4 2007/08/15 20:52:02 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -426,7 +426,7 @@ process_job(struct build_job *job, enum job_state state, int log_state)
 			free(buf);
 		}
 		if (verbosity >= 1)
-			ts_printf("Failed to build of %s\n", job->pkgname);
+			ts_printf("Failed build of %s\n", job->pkgname);
 		/* FALLTHROUGH */
 	case JOB_INDIRECT_FAILED:
 		recursive_mark_broken(job, JOB_INDIRECT_FAILED);
