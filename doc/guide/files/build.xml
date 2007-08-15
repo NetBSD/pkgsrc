@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.46 2007/06/01 11:07:24 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.47 2007/08/15 06:33:44 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -909,7 +909,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  fail!</para>
 
 	  <para>The following variables can be used either on the
-	  command line or in <filename>/etc/mk.conf</filename> to
+	  command line or in &mk.conf; to
 	  alter the behaviour of <command>make
 	  update</command>:</para>
 
@@ -1012,9 +1012,8 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  </screen>
 
 	  <para>The following variables can be used either on the
-	  command line or in <filename>/etc/mk.conf</filename> to
-	  alter the behaviour of <command>make
-	  clean-update</command>:</para>
+	  command line or in &mk.conf; to alter the behaviour of
+	  <command>make clean-update</command>:</para>
 
 	  <variablelist>
 	    <varlistentry>
@@ -1213,8 +1212,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <para>After a package is installed, check all its
 	  binaries and (on ELF platforms) shared libraries to see
 	  if they find the shared libs they need.  Run by default
-	  if <varname>PKG_DEVELOPER</varname> is set in
-	  <filename>/etc/mk.conf</filename>.</para>
+	  if <varname>PKG_DEVELOPER</varname> is set in &mk.conf;.</para>
 	</listitem>
       </varlistentry>
 
