@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.35 2007/08/15 01:49:02 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.36 2007/08/15 02:08:40 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -402,6 +402,8 @@ char   *pkgdb_refcount_dir(void);
 char   *_pkgdb_getPKGDB_FILE(char *, unsigned);
 const char *_pkgdb_getPKGDB_DIR(void);
 void	_pkgdb_setPKGDB_DIR(const char *);
+
+char   *pkgdb_pkg_file(const char *, const char *);
 
 /* List of packages functions */
 lpkg_t *alloc_lpkg(const char *);
