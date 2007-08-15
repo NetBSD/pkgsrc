@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1799 2007/08/14 19:59:43 veego Exp $
+$NetBSD: CHANGES-2007,v 1.1800 2007/08/15 02:05:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3292,3 +3292,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/p5-Class-Adapter version 1.03 [seb 2007-08-14]
 	Added chat/pidgin-silc version 2.1.0 [tnn 2007-08-14]
 	Updated sysutils/lsof to 4.78nb1 [veego 2007-08-14]
+	Updated parallel/sge to 6.0.11 [markd 2007-08-15]
