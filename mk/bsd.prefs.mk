@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.263 2007/08/13 09:03:41 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.264 2007/08/15 13:25:47 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -332,20 +332,6 @@ _PKGSRC_TOPDIR=	${.CURDIR}/../..
 # include the defaults file
 .include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 
-.if ${OPSYS} == "NetBSD"
-.  if ${OBJECT_FMT} == "ELF" && \
-   (${MACHINE_GNU_ARCH} == "arm" || \
-    ${MACHINE_ARCH} == "i386" || \
-    ${MACHINE_ARCH} == "m68k" || \
-    ${MACHINE_ARCH} == "m68000" || \
-    ${MACHINE_GNU_ARCH} == "sh" || \
-    ${MACHINE_GNU_ARCH} == "shle" || \
-    ${MACHINE_ARCH} == "sparc" || \
-    ${MACHINE_ARCH} == "vax")
-APPEND_ELF=		elf
-.  endif
-.endif
-
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
@@ -430,6 +416,21 @@ CROSS_DESTDIR?=	${MAKEOBJDIR}/destdir.${MACHINE_ARCH}
 PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
 .  else
 _CROSS_DESTDIR=	${CROSS_DESTDIR}
+.  endif
+.endif
+
+# Depends on MACHINE_ARCH override above
+.if ${OPSYS} == "NetBSD"
+.  if ${OBJECT_FMT} == "ELF" && \
+   (${MACHINE_GNU_ARCH} == "arm" || \
+    ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "m68000" || \
+    ${MACHINE_GNU_ARCH} == "sh" || \
+    ${MACHINE_GNU_ARCH} == "shle" || \
+    ${MACHINE_ARCH} == "sparc" || \
+    ${MACHINE_ARCH} == "vax")
+APPEND_ELF=		elf
 .  endif
 .endif
 
