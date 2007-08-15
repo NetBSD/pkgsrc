@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.11 2007/08/14 21:25:09 jlam Exp $
+# $NetBSD: checksum,v 1.12 2007/08/15 13:56:24 jlam Exp $
 #
 # Copyright (c) 2006, 2007 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,10 +47,7 @@
 #
 # DESCRIPTION
 #	checksum will verify the checksums in the distinfo file for each
-#	of the files specified.  If the file is a patch (named patch-*),
-#	then strip out any lines containing NetBSD RCS ID tags before
-#	computing the checksum for comparison the one in the distinfo
-#	file.
+#	of the files specified.
 #
 #	The checksum utility exits with one of the following values:
 #
@@ -64,6 +61,11 @@
 #
 # OPTIONS
 #	-a algorithm	Only verify checksums for the specified algorithm.
+#
+#	-p		The specified files are patches, so strip out any
+#			lines containing NetBSD RCS ID tags before
+#			computing the checksums for verification.
+#
 #	-s suffix	Strip the specified suffix from the file names
 #			when searching for the checksum.
 #
@@ -80,15 +82,17 @@ set -e		# exit on errors
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-a algorithm] [-s suffix] distinfo [file ...]"
+	${ECHO} 1>&2 "usage: $self [-a algorithm] [-p] [-s suffix] distinfo [file ...]"
 }
 
 # Process optional arguments
 algorithm=
+patch=
 suffix=
 while ${TEST} $# -gt 0; do
 	case "$1" in
 	-a)	algorithm="$2"; shift 2 ;;
+	-p)	patch=yes; shift ;;
 	-s)	suffix="$2"; shift 2 ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
@@ -149,9 +153,7 @@ fi
 
 	for file in $files; do
 		sfile="${file%$suffix}"
-		case $file in
-		patch-*|*/patch-*)	sfile="${sfile##*/}" ;;
-		esac
+		${TEST} -z "$patch" || sfile="${sfile##*/}"
 		${TEST} "$d_file" = "($sfile)" || continue
 
 		case "$files_left" in
@@ -174,14 +176,11 @@ fi
 			${ECHO} 1>&2 "$self: $file does not exist"
 			exit 128
 		fi
-		case $file in
-		patch-*|*/patch-*)
-			checksum=`${SED} -e '/[$]NetBSD.*/d' $file | ${DIGEST} $d_alg`
-			;;
-		*)
+		if ${TEST} -z "$patch"; then
 			checksum=`${DIGEST} $d_alg < $file`
-			;;
-		esac
+		else
+			checksum=`${SED} -e '/[$]NetBSD.*/d' $file | ${DIGEST} $d_alg`
+		fi
 		if ${TEST} "$d_checksum" = "$checksum"; then
 			${ECHO} "=> Checksum $d_alg OK for $sfile"
 		else
