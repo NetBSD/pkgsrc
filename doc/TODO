@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6599 2007/08/15 04:18:04 markd Exp $
+$NetBSD: TODO,v 1.6600 2007/08/15 04:52:30 markd Exp $
 
 Suggested new packages
 ======================
@@ -735,7 +735,6 @@ Suggested package updates
 	o mgetty+sendfax-1.1.35
 	o micq-0.5.4.2
 	o milter-greylist-3.1.7
-	o mimedefang-2.62
 	o mined-2000.14
 	o minivmac-2.6.1
 	o mirmon-1.37
