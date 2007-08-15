@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/04/10 19:10:54 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/15 18:16:35 joerg Exp $
 
 DISTNAME=	xf86-video-ati-6.6.3
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg ATI video driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
