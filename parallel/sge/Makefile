@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2007/07/04 20:54:55 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/08/15 02:03:05 markd Exp $
 #
 
-PKGNAME=		sge-6.0.8
-PKGREVISION=		2
-DISTNAME=		sge-V60u8_TAG-src
+PKGNAME=		sge-6.0.11
+DISTNAME=		sge-V60u11_TAG-src
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		# empty
-#MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/78/
+MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/142/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gridengine.sunsource.net/
 COMMENT=		Sun Grid Engine distributed resource management system
-DOWNLOAD=		http://gridengine.sunsource.net/servlets/ProjectDocumentList
-
-INTERACTIVE_STAGE=	fetch
 
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 
@@ -24,17 +19,10 @@ WRKSRC=			${WRKDIR}/gridengine
 CFLAGS+=		-D${UPPER_OPSYS}
 CONFIGURE_ENV+=		REMOTE=sge
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--with-grd=${SGE_BUILDARCH:Q}
+CONFIGURE_ARGS+=	--with-sge=${SGE_BUILDARCH:Q}
 PLIST_SUBST+=		SGE_ARCH=${SGE_ARCH:Q}
 MESSAGE_SUBST+=		SGE_ROOT=${SGE_ROOT}
 MAKE_ENV+=		PERL5=${PERL5:Q}
-
-FETCH_MESSAGE=		" The file ${DISTNAME}${EXTRACT_SUFX} containing the"
-FETCH_MESSAGE+=		" Grid Engine source snapshot must be fetched into:"
-FETCH_MESSAGE+=		""
-FETCH_MESSAGE+=		"	${DISTDIR}"
-FETCH_MESSAGE+=		" from:"
-FETCH_MESSAGE+=		"	${DOWNLOAD}"
 
 SGE_USER?=		sgeadmin
 SGE_GROUP?=		sgeadmin
@@ -60,6 +48,7 @@ UPPER_OPSYS_cmd=	${ECHO} "${OPSYS}" | ${TR} a-z A-Z
 UPPER_OPSYS=		${UPPER_OPSYS_cmd:sh}
 
 .if ${OPSYS} == "NetBSD"
+AIMK+=			-DFD_SETSIZE=2048
 SGE_ARCH=		nbsd-${MACHINE_ARCH}
 SGE_BUILDARCH_cmd=	${ECHO} "${OPSYS}_${MACHINE_ARCH}" | ${TR} a-z A-Z
 .elif ${OPSYS} == "FreeBSD"
