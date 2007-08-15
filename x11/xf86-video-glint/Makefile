@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 15:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/15 20:05:01 joerg Exp $
 #
 
 DISTNAME=	xf86-video-glint-1.1.1
@@ -10,6 +10,8 @@ MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg GLINT/Permedia video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 USE_LIBTOOL=    yes
 GNU_CONFIGURE=  yes
