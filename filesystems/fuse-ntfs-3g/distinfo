@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2007/07/13 10:02:55 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2007/08/15 13:53:57 xtraeme Exp $
 
-SHA1 (ntfs-3g-1.710.tgz) = d30ed61c895c5bc6f5459165f0dd23d1b938d8e9
-RMD160 (ntfs-3g-1.710.tgz) = 5af53c0e8465177665335853f327b2307f92d062
-Size (ntfs-3g-1.710.tgz) = 580731 bytes
+SHA1 (ntfs-3g-1.810.tgz) = f86fbe98e573c4d3c34007c9de2b8c1519b6f544
+RMD160 (ntfs-3g-1.810.tgz) = 2e12d21ca8f36c92ceae28b0846ebd0e6f7ca2ba
+Size (ntfs-3g-1.810.tgz) = 582428 bytes
 SHA1 (patch-ab) = 37d7aa735d99d1d6d5cc6210894ec0252a7836fc
