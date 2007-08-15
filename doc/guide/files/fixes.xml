@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.88 2007/08/10 00:51:51 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.89 2007/08/15 06:33:45 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -17,11 +17,11 @@
   </sect2>
 
   <sect2 id="pulling-vars-from-etc-mk.conf">
-    <title>How to pull in user-settable variables from <filename>mk.conf</filename></title>
+    <title>How to pull in user-settable variables from &mk.conf;</title>
 
     <para>The pkgsrc user can configure pkgsrc by overriding several
     variables in the file pointed to by <varname>MAKECONF</varname>,
-    which is <filename>/etc/mk.conf</filename> by default. When you
+    which is &mk.conf; by default. When you
     want to use those variables in the preprocessor directives of
     &man.make.1; (for example <literal>.if</literal> or
     <literal>.for</literal>), you need to include the file
@@ -165,7 +165,7 @@ LICENSE=        xv-license
 
     <para>The license can be viewed with <command>make
     show-license</command>, and if the user so chooses, the line
-    printed above can be added to <filename>/etc/mk.conf</filename> to
+    printed above can be added to &mk.conf; to
     convey to pkgsrc that it should not in the future fail because of
     that license:</para>
 
@@ -1762,7 +1762,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     <para>If a package contains a rc.d script, it won't be copied into
     the startup directory by default, but you can enable it, by adding
     the option <varname>PKG_RCD_SCRIPTS=YES</varname> in
-    <filename>/etc/mk.conf</filename>. This option will copy the scripts
+    &mk.conf;. This option will copy the scripts
     into <filename>/etc/rc.d</filename> when a package is installed, and
     it will automatically remove the scripts when the package is
     deinstalled.</para>
