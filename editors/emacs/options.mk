@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/08/13 12:40:57 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2007/08/15 23:03:04 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--without-xpm
 ### Support using Motif X11 widgets.
 ###
 .if !empty(PKG_OPTIONS:Mgtk)
-.  include "../../x11/gtk2/buildlink3.mk
+.  include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk
 .endif
 
