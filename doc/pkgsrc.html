@@ -30,8 +30,8 @@
         The pkgsrc Developers
       </h3>
 </div></div>
-<div><p class="copyright">Copyright © 1994-2006 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.24 2006/11/11 05:39:09 rillig Exp $</p></div>
+<div><p class="copyright">Copyright © 1994-2007 The NetBSD Foundation, Inc</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.25 2007/08/15 06:32:38 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -554,14 +554,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&#8212; That means, if a package contains bugs, it's better to find
+&mdash; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&#8212; Like NetBSD has been ported to many hardware architectures,
+&mdash; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -1421,7 +1421,7 @@ file and inspect the contents before extracting it.
 <code class="prompt">#</code> <strong class="userinput"><code>mv pkg_info pkg_info.orig</code></strong>
 	  </pre>
 </li>
-<li><p>An example <code class="filename">/etc/mk.conf</code> file will be placed in
+<li><p>An example <a href="#mk.conf"><code class="filename">mk.conf</code></a> file will be placed in
 	  <code class="filename">/etc/mk.conf.example</code> file
 	  when you use the bootstrap script.</p></li>
 </ol></div>
@@ -1619,7 +1619,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	with.</p>
 <p>Therefore, please make sure that you have no conflicting
       <code class="varname">CFLAGS</code> in your environment or the
-      <code class="filename">/etc/mk.conf</code>.  Particularly, make sure that you do not
+      <a href="#mk.conf"><code class="filename">mk.conf</code></a>.  Particularly, make sure that you do not
       try to link n32 object files with lib64 or vice versa.  Check your
       <code class="filename">/etc/compiler.defaults</code>!</p>
 <p>If you have the actual pkgsrc tree mounted via NFS from a different host,
@@ -1638,7 +1638,7 @@ PKGSRC_COMPILER=        mipspro
       </pre>
 <p>
 
-      in <code class="filename">/etc/mk.conf</code>.  Otherwise, pkgsrc will assume you
+      in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.  Otherwise, pkgsrc will assume you
       are using gcc and may end up passing invalid flags to the compiler.  Note that
       bootstrap should create an appropriate <code class="filename">mk.conf.example</code> by
       default.</p>
@@ -1675,7 +1675,7 @@ ac_cv___attribute__=yes ./bootstrap
       overridden so that __attribute__ is assumed supported by the
       compiler.</p>
 <p>After bootstrapping, you should set <code class="varname">PKGSRC_COMPILER</code>
-      in <code class="filename">/etc/mk.conf</code>:</p>
+      in <a href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
 <pre class="programlisting">
 PKGSRC_COMPILER=        icc
       </pre>
@@ -1683,7 +1683,7 @@ PKGSRC_COMPILER=        icc
       <code class="filename">/opt/intel_cc_80</code>, which
       is also the pkgsrc default. If you have installed it into a different
       directory, set <code class="varname">ICCBASE</code> in
-      <code class="filename">/etc/mk.conf</code>:</p>
+      <a href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
 <pre class="programlisting">
 ICCBASE=                /opt/icc
       </pre>
@@ -1722,10 +1722,10 @@ ICCBASE=                /opt/icc
 	  </pre>
 </li>
 <li>
-<p>An example <code class="filename">/etc/mk.conf</code> file will be placed in
+<p>An example <a href="#mk.conf"><code class="filename">mk.conf</code></a> file will be placed in
 	  <code class="filename">/etc/mk.conf.example</code> file
 	  when you use the bootstrap script. OpenBSD's make program uses
-	  <code class="filename">/etc/mk.conf</code>
+	  <a href="#mk.conf"><code class="filename">mk.conf</code></a>
 	  as well. You can work around this by enclosing all the pkgsrc-specific parts
 	  of the file with:</p>
 <pre class="programlisting">
@@ -1786,7 +1786,7 @@ ICCBASE=                /opt/icc
 	  - Sun WorkShop Compilers common components</p></li>
 </ul></div>
 <p>You should set the following variables in your
-	<code class="filename">mk.conf</code> file:</p>
+	<a href="#mk.conf"><code class="filename">mk.conf</code></a> file:</p>
 <pre class="programlisting">
 CC=     cc
 CXX=    CC
@@ -1804,8 +1804,7 @@ CXXCPP= CC -E
 <div class="titlepage"><div><div><h4 class="title">
 <a name="solaris-sunpro-64"></a>3.3.7.3. Building 64-bit binaries with SunPro</h4></div></div></div>
 <p>To build 64-bit packages, you just need to have the
-	following lines in your <code class="filename">mk.conf</code>
-	file:</p>
+	following lines in your <a href="#mk.conf"><code class="filename">mk.conf</code></a> file:</p>
 <pre class="programlisting">
 PKGSRC_COMPILER=        sunpro
 ABI=                    64
@@ -1824,7 +1823,7 @@ ABI=                    64
       <code class="filename">/bin/ksh</code> crashes with a segmentation fault.
       The workaround is to use another shell for the configure
       scripts, for example by installing <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a> and adding the following lines
-      to your <code class="filename">mk.conf</code>:</p>
+      to your <a href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
 <pre class="programlisting">
 CONFIG_SHELL=   ${LOCALBASE}/bin/bash
 WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
@@ -2100,7 +2099,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <p>The default <span class="emphasis"><em>prefix</em></span> for installed packages
   is <code class="filename">/usr/pkg</code>. If you wish to change this, you
   should do so by setting <code class="varname">LOCALBASE</code> in
-  <code class="filename">mk.conf</code>. You should not try to use multiple
+  <a href="#mk.conf"><code class="filename">mk.conf</code></a>. You should not try to use multiple
   different <code class="varname">LOCALBASE</code> definitions on the same
   system (inside a chroot is an exception). </p>
 <p>The rest of this chapter assumes that the package is already
@@ -2129,7 +2128,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     </p>
 <pre class="screen">DISTDIR=/cdrom/pkgsrc/distfiles</pre>
 <p>
-    to your <code class="filename">mk.conf</code>.</p>
+    to your <a href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
 <p>By default a list of distribution sites will be randomly
     intermixed to prevent huge load on servers which holding popular
     packages (for example, SourceForge.net mirrors). Thus, every
@@ -2150,7 +2149,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     time.</p>
 <p>You can change these settings either in your shell's environment, or,
     if you want to keep the settings, by editing the
-    <code class="filename">/etc/mk.conf</code> file,
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a> file,
     and adding the definitions there.</p>
 <p>
       If a package depends on many other packages (such as
@@ -2238,12 +2237,12 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     conflicts between programs and other files installed by the
     package system and whatever else may have been installed
     there.</p>
-<p>Some packages look in <code class="filename">/etc/mk.conf</code> to
+<p>Some packages look in <a href="#mk.conf"><code class="filename">mk.conf</code></a> to
     alter some configuration options at build time.  Have a look at
     <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to get an overview
     of what will be set there by default.  Environment variables such
     as <code class="varname">LOCALBASE</code> can be set in
-    <code class="filename">/etc/mk.conf</code> to save having to remember to
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a> to save having to remember to
     set them each time you want to use pkgsrc.</p>
 <p>Occasionally, people want to &#8220;<span class="quote">look under the
     covers</span>&#8221; to see what is going on when a package is building
@@ -2316,7 +2315,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
 </dl>
 </div>
-<p>The whole pkgsrc system is configured in a single file, usually
+<a name="mk.conf"></a><p>The whole pkgsrc system is configured in a single file, usually
 called <code class="filename">mk.conf</code>. In which directory pkgsrc looks for
 that file depends on the installation. On NetBSD, when you use
 <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
@@ -2401,7 +2400,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2409,7 +2408,7 @@ works.</p>
 	    See <a href="#components.patches" title="10.3. patches/*">Section 10.3, &#8220;patches/*&#8221;</a> for more
 	    information.</p></li>
 <li><p><code class="varname">PKGMAKECONF</code>: Location of
-	    the <code class="filename">mk.conf</code> file used by a package's
+	    the <a href="#mk.conf"><code class="filename">mk.conf</code></a> file used by a package's
 	    BSD-style Makefile. If this is not set,
 	    <code class="varname">MAKECONF</code> is set to
 	    <code class="filename">/dev/null</code> to avoid picking up
@@ -2587,7 +2586,7 @@ LDFLAGS+=        -your -linkerflags
     These options are currently enabled: mozilla ssl
 </pre>
 <p>The following variables can be defined in
-    <code class="filename">/etc/mk.conf</code> to select which options to
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a> to select which options to
     enable for a package: <code class="varname">PKG_DEFAULT_OPTIONS</code>,
     which can be used to select or disable options for all packages
     that support them, and
@@ -2597,7 +2596,7 @@ LDFLAGS+=        -your -linkerflags
     these variables are selected, options preceded by &#8220;<span class="quote">-</span>&#8221;
     are disabled. A few examples:</p>
 <pre class="screen">
-<code class="prompt">$</code> <span><strong class="command">grep "PKG.*OPTION" /etc/mk.conf</strong></span>
+<code class="prompt">$</code> <span><strong class="command">grep "PKG.*OPTION" <a href="#mk.conf"><code class="filename">mk.conf</code></a></strong></span>
 PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </pre>
@@ -2621,12 +2620,12 @@ PKG_OPTIONS.apache=     suexec </pre>
 <p>Before the options framework was introduced, build options
     were selected by setting a variable (often named
     <code class="varname">USE_<em class="replaceable"><code>FOO</code></em></code>) in
-    <code class="filename">/etc/mk.conf</code> for each option.  To ease
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a> for each option.  To ease
     transition to the options framework for the user, these legacy
     variables are converted to the appropriate options setting
     (<code class="varname">PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em></code>)
     automatically.  A warning is issued to prompt the user to update
-    <code class="filename">/etc/mk.conf</code> to use the options framework
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a> to use the options framework
     directly.  Support for the legacy variables will be removed
     eventually.</p>
 </div>
@@ -2718,14 +2717,14 @@ PKG_OPTIONS.apache=     suexec </pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="binary.mk.conf"></a>6.3.1.2. /etc/mk.conf</h4></div></div></div>
-<p>You may want to set variables in
-	<code class="filename">/etc/mk.conf</code>.
+<a name="binary.mk.conf"></a>6.3.1.2. <a href="#mk.conf"><code class="filename">mk.conf</code></a>
+</h4></div></div></div>
+<p>You may want to set variables in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.
 	Look at <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for
 	details of the default settings. You will want to ensure that
 	<code class="varname">ACCEPTABLE_LICENSES</code> meet your local policy.
 	As used in this example, <code class="varname">_ACCEPTABLE=yes</code>
-	accepts <span class="emphasis"><em>all</em></span> licenses.</p>
+	completely bypasses the license check.</p>
 <pre class="programlisting">
 PACKAGES?=      ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
 WRKOBJDIR?=     /usr/tmp/pkgsrc   # build here instead of in pkgsrc
@@ -2952,7 +2951,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -2978,7 +2977,7 @@ fi
 	  <code class="filename">/usr/sandbox/usr/pkgsrc/packages</code> and
 	  <code class="filename">.../distfiles</code> point somewhere
 	  appropriate. NFS- and/or nullfs-mounts may come in handy!</p></li>
-<li><p>Edit <code class="filename">/etc/mk.conf</code>, see <a href="#binary.mk.conf" title="6.3.1.2. /etc/mk.conf">Section 6.3.1.2, &#8220;/etc/mk.conf&#8221;</a>.</p></li>
+<li><p>Edit <a href="#mk.conf"><code class="filename">mk.conf</code></a>, see <a href="#binary.mk.conf" title="6.3.1.2. mk.conf">Section 6.3.1.2, &#8220;<code class="filename">mk.conf</code>&#8221;</a>.</p></li>
 <li><p>Adjust <code class="filename">mk/bulk/build.conf</code> to suit your needs.</p></li>
 </ol></div>
 <p>When the chroot sandbox is set up, you can start
@@ -3000,7 +2999,7 @@ fi
       pkgsrc, the <code class="filename">pkgsrc/mk/bulk/build</code> script
       may be used to build a subset of the packages contained in
       pkgsrc.  By setting <code class="varname">SPECIFIC_PKGS</code>
-      in <code class="filename">/etc/mk.conf</code>, the variables</p>
+      in <a href="#mk.conf"><code class="filename">mk.conf</code></a>, the variables</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>SITE_SPECIFIC_PKGS</p></li>
 <li><p>HOST_SPECIFIC_PKGS</p></li>
@@ -3189,7 +3188,7 @@ games, network daemons) need write access to it during normal
 operation.</p></li>
 <li><p><code class="varname">PKG_SYSCONFDIR</code> corresponds to
 <code class="filename">/etc</code> in the base system. It contains configuration
-files of the packages, as well as pkgsrc's <code class="filename">mk.conf</code>
+files of the packages, as well as pkgsrc's <a href="#mk.conf"><code class="filename">mk.conf</code></a>
 itself.</p></li>
 </ul></div>
 <div class="sect1" lang="en">
@@ -3450,7 +3449,7 @@ that allow finer tuning of the tree layout.</p>
 <p>By default, resuming transfers in pkgsrc is disabled, but you can
 enable this feature by adding the option
 <code class="varname">PKG_RESUME_TRANSFERS=YES</code> into
-<code class="filename">/etc/mk.conf</code>.  If, during a fetch step, an incomplete
+<a href="#mk.conf"><code class="filename">mk.conf</code></a>.  If, during a fetch step, an incomplete
 distfile is found, pkgsrc will try to resume it.</p>
 <p>You can also
 use a different program than the default <a href="http://netbsd.gw.com/cgi-bin/man-cgi?ftp+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> by changing the
@@ -3474,7 +3473,7 @@ FETCH_OUTPUT_ARGS=     -O
 <p>If you want to use modular X.org from pkgsrc instead of your system's own X11
 (<code class="filename">/usr/X11R6</code>, <code class="filename">/usr/openwin</code>, ...)
 you will have to add the following line into
-<code class="filename">/etc/mk.conf</code>:</p>
+<a href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
 <pre class="programlisting">
 X11_TYPE=modular
 </pre>
@@ -3513,7 +3512,7 @@ the first available command from the following list:</p>
 <code class="filename">/usr/bin/ftp</code>, which automatically tries passive
 connections first, and falls back to active connections if the server
 refuses to do passive.  For the other tools, add the following to your
-<code class="filename">/etc/mk.conf</code> file:
+<a href="#mk.conf"><code class="filename">mk.conf</code></a> file:
 <code class="varname">PASSIVE_FETCH=1</code>.</p>
 <p>Having that option present will prevent
 <code class="filename">/usr/bin/ftp</code> from falling back to active
@@ -3563,7 +3562,7 @@ the NetBSD base distribution on your machine.  It is recommended to do
 that to format man pages.</p>
 <p>In the case of the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a> package, you
 can get away with setting <code class="varname">NOMAN=YES</code> either in the
-environment or in <code class="filename">/etc/mk.conf</code>.</p>
+environment or in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -3586,7 +3585,7 @@ password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
 <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/sudo/README.html" target="_top"><code class="filename">security/sudo</code></a>) and then put the
-following into your <code class="filename">/etc/mk.conf</code>, somewhere
+following into your <a href="#mk.conf"><code class="filename">mk.conf</code></a>, somewhere
 <span class="emphasis"><em>after</em></span> the definition of the
 <code class="varname">LOCALBASE</code> variable:</p>
 <pre class="programlisting">
@@ -3606,7 +3605,7 @@ NFS-exported <code class="varname">PREFIX</code> with a need of per-machine
 configuration of the provided packages).</p>
 <p>In order to change the defaults, you can modify the
 <code class="varname">PKG_SYSCONFBASE</code> variable (in
-<code class="filename">/etc/mk.conf</code>) to point to your preferred configuration
+<a href="#mk.conf"><code class="filename">mk.conf</code></a>) to point to your preferred configuration
 directory; some common examples include <code class="filename">/etc</code> or
 <code class="filename">/etc/pkg</code>.</p>
 <p>Furthermore, you can change this value on a per-package basis by
@@ -3656,7 +3655,7 @@ check.</p>
 <a name="ufaq-cflags"></a>8.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</h2></div></div></div>
 <p>When you add your own preferences to the
 	<code class="varname">CFLAGS</code> variable in your
-	<code class="filename">mk.conf</code>, these flags are passed in
+	<a href="#mk.conf"><code class="filename">mk.conf</code></a>, these flags are passed in
 	environment variables to the <code class="filename">./configure</code>
 	scripts and to <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>. Some package authors ignore the
 	<code class="varname">CFLAGS</code> from the environment variable by
@@ -4424,7 +4423,7 @@ converters    games         mbone         print         x11
       other variables handle common cases of setting
       <code class="varname">WRKDIR_BASENAME</code> individually. If
       <code class="varname">OBJHOSTNAME</code> is defined in
-      <code class="filename">/etc/mk.conf</code>, the first component of
+      <a href="#mk.conf"><code class="filename">mk.conf</code></a>, the first component of
       the host's name is attached to the directory name. If
       <code class="varname">OBJMACHINE</code> is defined, the platform name
       is attached, which might look like
@@ -4580,7 +4579,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &#8212;
+      kqueue support, add a check that detects kqueue itself &mdash;
       yes, this generally involves patching the
       <span><strong class="command">configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4951,7 +4950,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -6283,7 +6282,7 @@ apply.</p>
 <p>Global default options are listed in
 <code class="varname">PKG_DEFAULT_OPTIONS</code>, which is a list of the options
 that should be built into every package if that option is supported.
-This variable should be set in <code class="filename">/etc/mk.conf</code>.</p>
+This variable should be set in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6378,7 +6377,7 @@ build options which are enabled by default.</p></li>
 <li><p><code class="varname">PKG_OPTIONS_LEGACY_VARS</code> is a list
 of
 &#8220;<span class="quote"><em class="replaceable"><code>USE_VARIABLE</code></em>:<em class="replaceable"><code>option</code></em></span>&#8221;
-pairs that map legacy <code class="filename">/etc/mk.conf</code> variables to
+pairs that map legacy <a href="#mk.conf"><code class="filename">mk.conf</code></a> variables to
 their option counterparts.  Pairs should be added with
 &#8220;<span class="quote">+=</span>&#8221; to keep the listing of global legacy variables.  A
 warning will be issued if the user uses a legacy
@@ -7194,7 +7193,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <span><strong class="command">make update</strong></span> will most certainly
 	  fail!</p>
 <p>The following variables can be used either on the
-	  command line or in <code class="filename">/etc/mk.conf</code> to
+	  command line or in <a href="#mk.conf"><code class="filename">mk.conf</code></a> to
 	  alter the behaviour of <span><strong class="command">make
 	  update</strong></span>:</p>
 <div class="variablelist"><dl>
@@ -7266,9 +7265,8 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <code class="prompt">#</code> <strong class="userinput"><code>make update</code></strong>
 	  </pre>
 <p>The following variables can be used either on the
-	  command line or in <code class="filename">/etc/mk.conf</code> to
-	  alter the behaviour of <span><strong class="command">make
-	  clean-update</strong></span>:</p>
+	  command line or in <a href="#mk.conf"><code class="filename">mk.conf</code></a> to alter the behaviour of
+	  <span><strong class="command">make clean-update</strong></span>:</p>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="varname">CLEAR_DIRLIST</code></span></dt>
 <dd><p>After <span><strong class="command">make clean</strong></span>, do not
@@ -7395,8 +7393,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <dd><p>After a package is installed, check all its
 	  binaries and (on ELF platforms) shared libraries to see
 	  if they find the shared libs they need.  Run by default
-	  if <code class="varname">PKG_DEVELOPER</code> is set in
-	  <code class="filename">/etc/mk.conf</code>.</p></dd>
+	  if <code class="varname">PKG_DEVELOPER</code> is set in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.</p></dd>
 <dt><span class="term">print-PLIST</span></dt>
 <dd>
 <p>After a &#8220;<span class="quote">make install</span>&#8221; from a new or
@@ -7558,7 +7555,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id455178"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id2708318"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7568,7 +7565,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id455188"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id2708328"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7579,7 +7576,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id455197"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id2708339"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7682,11 +7679,11 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="pulling-vars-from-etc-mk.conf"></a>18.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code>
+<a name="pulling-vars-from-etc-mk.conf"></a>18.1.2. How to pull in user-settable variables from <a href="#mk.conf"><code class="filename">mk.conf</code></a>
 </h3></div></div></div>
 <p>The pkgsrc user can configure pkgsrc by overriding several
     variables in the file pointed to by <code class="varname">MAKECONF</code>,
-    which is <code class="filename">/etc/mk.conf</code> by default. When you
+    which is <a href="#mk.conf"><code class="filename">mk.conf</code></a> by default. When you
     want to use those variables in the preprocessor directives of
     <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
     <code class="literal">.for</code>), you need to include the file
@@ -7799,7 +7796,7 @@ LICENSE=        xv-license
     </pre>
 <p>The license can be viewed with <span><strong class="command">make
     show-license</strong></span>, and if the user so chooses, the line
-    printed above can be added to <code class="filename">/etc/mk.conf</code> to
+    printed above can be added to <a href="#mk.conf"><code class="filename">mk.conf</code></a> to
     convey to pkgsrc that it should not in the future fail because of
     that license:</p>
 <pre class="programlisting">
@@ -9150,7 +9147,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 <p>If a package contains a rc.d script, it won't be copied into
     the startup directory by default, but you can enable it, by adding
     the option <code class="varname">PKG_RCD_SCRIPTS=YES</code> in
-    <code class="filename">/etc/mk.conf</code>. This option will copy the scripts
+    <a href="#mk.conf"><code class="filename">mk.conf</code></a>. This option will copy the scripts
     into <code class="filename">/etc/rc.d</code> when a package is installed, and
     it will automatically remove the scripts when the package is
     deinstalled.</p>
@@ -9286,8 +9283,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   this is basically the same as what was explained in the previous
   sections, only with some debugging aids.</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p>Be sure to set <code class="varname">PKG_DEVELOPER=1</code> in
-      <code class="filename">/etc/mk.conf</code></p></li>
+<li><p>Be sure to set <code class="varname">PKG_DEVELOPER=yes</code> in <a href="#mk.conf"><code class="filename">mk.conf</code></a>.</p></li>
 <li>
 <p>Install <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/url2pkg/README.html" target="_top"><code class="filename">pkgtools/url2pkg</code></a>,
       create a directory for a new package, change into it, then run
@@ -9442,7 +9438,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
   For new packages, or package moves or removals, set the
   <code class="varname">CTYPE</code> variable on the command line to "Added",
   "Moved", or "Removed".  You can set <code class="varname">NETBSD_LOGIN_NAME</code>
-  in <code class="filename">/etc/mk.conf</code> if your local login name is
+  in <a href="#mk.conf"><code class="filename">mk.conf</code></a> if your local login name is
   not the same as your NetBSD login name. Don't forget to commit
   the changes to <code class="filename">pkgsrc/doc/CHANGES-<em class="replaceable"><code>YYYY</code></em></code>!</p>
 </div>
@@ -9581,7 +9577,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id460078"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2714146"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9597,7 +9593,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id460113"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2714184"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9615,7 +9611,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id460151"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2714225"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9633,7 +9629,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id460224"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2714264"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9646,7 +9642,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id460243"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2714353"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9662,7 +9658,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id460273"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2714382"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9686,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id460348"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2714459"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9711,7 +9707,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id460384"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2714498"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9759,7 +9755,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id460445"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2714628"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9775,7 +9771,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &#8212; it contains a list of suggested new packages and a list of
+    &mdash; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10293,8 +10289,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>23.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -10358,11 +10354,8 @@ CFLAGS+=                -Wall
 	<code class="varname">OPSYS</code>, <code class="varname">OS_VERSION</code> and
 	<code class="varname">MACHINE_ARCH</code>.</p>
 <p>Then, the user settings are loaded from the file specified
-	in <code class="varname">MAKECONF</code>. If the bmake command from pkgsrc
-	is used, <code class="varname">MAKECONF</code> defaults to
-	<code class="filename"><em class="replaceable"><code>${prefix}</code></em>/etc/mk.conf</code>.
-	With the native <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command on NetBSD, it defaults to
-	<code class="filename">/etc/mk.conf</code>. After that, those variables
+	in <code class="varname">MAKECONF</code>, which is usually <a href="#mk.conf"><code class="filename">mk.conf</code></a>.
+	After that, those variables
 	that have not been overridden by the user are loaded from
 	<code class="filename">mk/defaults/mk.conf</code>.</p>
 <p>After the user settings, the system settings and platform
