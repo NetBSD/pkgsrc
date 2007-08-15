@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.13 2007/08/14 21:25:10 jlam Exp $
+# $NetBSD: patch.mk,v 1.14 2007/08/15 13:56:25 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -261,11 +261,6 @@ _PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
 _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
 .endif
 
-_CHECKSUM_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}	\
-			ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}		\
-			TEST=${TOOLS_TEST:Q}				\
-		${SH} ${PKGSRCDIR}/mk/checksum/checksum
-
 pkgsrc-patch-message:
 	@${STEP_MSG} "Applying pkgsrc patches for ${PKGNAME}"
 
@@ -293,7 +288,7 @@ do-pkgsrc-patch:
 				continue;				\
 			fi;						\
 			${ECHO_PATCH_MSG} "Verifying $$i";		\
-			if ${_CHECKSUM_CMD} ${DISTINFO_FILE} $$i >/dev/null 2>&1; then	\
+			if ${_CHECKSUM_CMD} -p ${DISTINFO_FILE} $$i >/dev/null 2>&1; then	\
 				cksum_result=0;				\
 			else						\
 				cksum_result=$$?;			\
