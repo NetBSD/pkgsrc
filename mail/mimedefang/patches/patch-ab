@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2007/03/14 11:21:33 markd Exp $
+$NetBSD: patch-ab,v 1.6 2007/08/15 04:50:40 markd Exp $
 
---- Makefile.in.orig	2007-01-20 07:42:17.000000000 +1300
+--- Makefile.in.orig	2007-08-14 01:50:18.000000000 +1200
 +++ Makefile.in
-@@ -136,7 +136,7 @@ mimedefang-multiplexor.o: mimedefang-mul
+@@ -137,7 +137,7 @@ mimedefang-multiplexor.o: mimedefang-mul
  	@CC@ @CFLAGS@ $(DEFS) $(MINCLUDE) -c -o mimedefang-multiplexor.o mimedefang-multiplexor.c
  
- mimedefang: mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o
--	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o @LIBMILTERDIR@ -lmilter @LIBS@
-+	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o @LDFLAGS@ @LIBMILTERDIR@ -lmilter @LIBS@
+ mimedefang: mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o milter_cap.o
+-	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o milter_cap.o @LIBMILTERDIR@ -lmilter @LIBS@
++	@CC@ @CFLAGS@ @PTHREAD_FLAG@ -o mimedefang mimedefang.o drop_privs_threaded.o utils.o rm_r.o syslog-fac.o dynbuf.o milter_cap.o @LDFLAGS@ @LIBMILTERDIR@ -lmilter @LIBS@
  	-test "$(DONT_STRIP)" != "1" && strip mimedefang
  
  mimedefang.o: mimedefang.c mimedefang.h
