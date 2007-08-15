@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 03:49:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/08/15 03:52:16 markd Exp $
 bin/kscope
 share/doc/kde/HTML/en/kscope/about.docbook
 share/doc/kde/HTML/en/kscope/autocomp_dlg.png
@@ -34,6 +34,7 @@ share/icons/locolor/32x32/apps/kscope.png
 share/kde/applnk/Development/kscope.desktop
 share/kde/apps/kscope/kscope_config
 share/kde/apps/kscope/kscopeui.rc
+share/kde/apps/kscope/pics/bookmark.png
 share/kde/apps/kscope/pics/call_graph.png
 share/kde/apps/kscope/pics/called_tree.png
 share/kde/apps/kscope/pics/calling_tree.png
