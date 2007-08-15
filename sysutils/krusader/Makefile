@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/26 04:34:53 markd Exp $
+# $NetBSD: Makefile,v 1.17 2007/08/15 03:20:59 markd Exp $
 #
 
-DISTNAME=	krusader-1.70.1
-PKGREVISION=	2
+DISTNAME=	krusader-1.80.0
 CATEGORIES=	kde sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 

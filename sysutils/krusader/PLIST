@@ -1,36 +1,88 @@
-@comment $NetBSD: PLIST,v 1.9 2007/01/26 04:34:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/08/15 03:20:59 markd Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
+lib/kde3/kio_virt.la
 man/man1/krusader.1
+share/applications/kde/krusader.desktop
+share/applications/kde/krusader_root-mode.desktop
+share/doc/kde/HTML/en/krusader/actionman.png
+share/doc/kde/HTML/en/krusader/archives.docbook
 share/doc/kde/HTML/en/krusader/bookmanadd.png
 share/doc/kde/HTML/en/krusader/bookmanedit.png
+share/doc/kde/HTML/en/krusader/bookmarks.docbook
+share/doc/kde/HTML/en/krusader/checksum.docbook
 share/doc/kde/HTML/en/krusader/cmdline.png
 share/doc/kde/HTML/en/krusader/commands.docbook
 share/doc/kde/HTML/en/krusader/common
+share/doc/kde/HTML/en/krusader/compare.docbook
+share/doc/kde/HTML/en/krusader/configuration-files.docbook
 share/doc/kde/HTML/en/krusader/credits.docbook
+share/doc/kde/HTML/en/krusader/diskusage.docbook
+share/doc/kde/HTML/en/krusader/editors-note.docbook
 share/doc/kde/HTML/en/krusader/faq.docbook
+share/doc/kde/HTML/en/krusader/features.docbook
 share/doc/kde/HTML/en/krusader/fnkeys.png
+share/doc/kde/HTML/en/krusader/glossary.docbook
+share/doc/kde/HTML/en/krusader/help.docbook
 share/doc/kde/HTML/en/krusader/index.cache.bz2
 share/doc/kde/HTML/en/krusader/index.docbook
 share/doc/kde/HTML/en/krusader/installation.docbook
 share/doc/kde/HTML/en/krusader/introduction.docbook
+share/doc/kde/HTML/en/krusader/java.docbook
+share/doc/kde/HTML/en/krusader/keyboard.docbook
 share/doc/kde/HTML/en/krusader/kgstartup.png
 share/doc/kde/HTML/en/krusader/konfigurator.docbook
 share/doc/kde/HTML/en/krusader/krusader-tools.docbook
 share/doc/kde/HTML/en/krusader/krusader1.png
 share/doc/kde/HTML/en/krusader/krusader_title.png
 share/doc/kde/HTML/en/krusader/listpanel.png
+share/doc/kde/HTML/en/krusader/locate.docbook
 share/doc/kde/HTML/en/krusader/mainwindow.png
+share/doc/kde/HTML/en/krusader/more.docbook
+share/doc/kde/HTML/en/krusader/mount.docbook
 share/doc/kde/HTML/en/krusader/mountman.png
-share/doc/kde/HTML/en/krusader/remoteman.png
+share/doc/kde/HTML/en/krusader/mouse.docbook
+share/doc/kde/HTML/en/krusader/occupied-space.docbook
+share/doc/kde/HTML/en/krusader/profiles.docbook
+share/doc/kde/HTML/en/krusader/release-overview.docbook
+share/doc/kde/HTML/en/krusader/remote-connections.docbook
+share/doc/kde/HTML/en/krusader/search.docbook
 share/doc/kde/HTML/en/krusader/search_advanced.png
 share/doc/kde/HTML/en/krusader/search_general.png
+share/doc/kde/HTML/en/krusader/splitter.docbook
 share/doc/kde/HTML/en/krusader/syncdir.png
+share/doc/kde/HTML/en/krusader/synchronizer.docbook
 share/doc/kde/HTML/en/krusader/tabbed_browsing.png
 share/doc/kde/HTML/en/krusader/terminalEmu.png
 share/doc/kde/HTML/en/krusader/toolbar.png
+share/doc/kde/HTML/en/krusader/user-interface.docbook
+share/doc/kde/HTML/en/krusader/useraction-xml.docbook
+share/doc/kde/HTML/en/krusader/useractions.docbook
 share/doc/kde/HTML/en/krusader/using-krusader.docbook
+share/doc/kde/HTML/en/krusader/vfs.docbook
+share/doc/kde/HTML/en/krusader/viewer-editor.docbook
+share/doc/kde/HTML/ru/krusader/commands.docbook
+share/doc/kde/HTML/ru/krusader/common
+share/doc/kde/HTML/ru/krusader/configuration-files.docbook
+share/doc/kde/HTML/ru/krusader/credits.docbook
+share/doc/kde/HTML/ru/krusader/editors-note.docbook
+share/doc/kde/HTML/ru/krusader/faq.docbook
+share/doc/kde/HTML/ru/krusader/features.docbook
+share/doc/kde/HTML/ru/krusader/glossary.docbook
+share/doc/kde/HTML/ru/krusader/help.docbook
+share/doc/kde/HTML/ru/krusader/index.cache.bz2
+share/doc/kde/HTML/ru/krusader/index.docbook
+share/doc/kde/HTML/ru/krusader/installation.docbook
+share/doc/kde/HTML/ru/krusader/introduction.docbook
+share/doc/kde/HTML/ru/krusader/keyboard.docbook
+share/doc/kde/HTML/ru/krusader/konfigurator.docbook
+share/doc/kde/HTML/ru/krusader/krusader-tools.docbook
+share/doc/kde/HTML/ru/krusader/mouse.docbook
+share/doc/kde/HTML/ru/krusader/release-overview.docbook
+share/doc/kde/HTML/ru/krusader/user-interface.docbook
+share/doc/kde/HTML/ru/krusader/useraction-xml.docbook
+share/doc/kde/HTML/ru/krusader/using-krusader.docbook
 share/icons/crystalsvg/16x16/apps/krusader_blue.png
 share/icons/crystalsvg/16x16/apps/krusader_red.png
 share/icons/crystalsvg/16x16/apps/krusader_root.png
@@ -58,8 +110,6 @@ share/icons/crystalsvg/64x64/apps/krusader_user.png
 share/icons/locolor/16x16/apps/krusader.png
 share/icons/locolor/32x32/apps/krusader.png
 share/icons/locolor/32x32/apps/krusader2.png
-share/kde/applnk/krusader.desktop
-share/kde/applnk/krusader_root-mode.desktop
 share/kde/apps/konqueror/servicemenus/isoservice.desktop
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_addbookmark.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_arc_pack.png
@@ -71,6 +121,7 @@ share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_calc.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_combine.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_compare.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_comparedirs.png
+share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_diskusage.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_ftp_connect.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_ftp_disconnect.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_ftp_new.png
@@ -104,6 +155,7 @@ share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_calc.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_combine.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_compare.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_comparedirs.png
+share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_diskusage.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_ftp_connect.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_ftp_disconnect.png
 share/kde/apps/krusader/icons/crystalsvg/22x22/actions/kr_ftp_new.png
@@ -132,6 +184,7 @@ share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_combine.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_compare.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_comparedirs.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_dependencies.png
+share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_diskusage.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_ftp_connect.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_ftp_disconnect.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_ftp_new.png
@@ -158,10 +211,11 @@ share/kde/apps/krusader/splash.png
 share/kde/apps/krusader/total_commander.color
 share/kde/apps/krusader/total_commander.keymap
 share/kde/apps/krusader/total_commander.keymap.info
-share/kde/apps/krusader/useractions.xml
+share/kde/apps/krusader/useraction_examples.xml
 share/kde/config/kio_isorc
 share/kde/services/iso.protocol
 share/kde/services/krarc.protocol
+share/kde/services/virt.protocol
 share/locale/bg/LC_MESSAGES/krusader.mo
 share/locale/bs/LC_MESSAGES/krusader.mo
 share/locale/ca/LC_MESSAGES/krusader.mo
@@ -188,6 +242,7 @@ share/locale/sv/LC_MESSAGES/krusader.mo
 share/locale/tr/LC_MESSAGES/krusader.mo
 share/locale/uk/LC_MESSAGES/krusader.mo
 share/locale/zh_CN/LC_MESSAGES/krusader.mo
+@comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/krusader/icons/crystalsvg/32x32/apps
 @dirrm share/kde/apps/krusader/icons/crystalsvg/32x32/actions
@@ -202,9 +257,7 @@ share/locale/zh_CN/LC_MESSAGES/krusader.mo
 @dirrm share/kde/apps/krusader
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Applications
 @comment in kde: @dirrm share/kde/applnk
-@comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/icons/locolor/16x16/apps
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
@@ -212,6 +265,9 @@ share/locale/zh_CN/LC_MESSAGES/krusader.mo
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
+@dirrm share/doc/kde/HTML/ru/krusader
+@comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/krusader
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
