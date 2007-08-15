@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/10 13:46:55 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/15 13:43:00 joerg Exp $
 #
 
 DISTNAME=		xmag-1.0.1
@@ -12,6 +12,7 @@ COMMENT=		Magnify parts of the screen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
