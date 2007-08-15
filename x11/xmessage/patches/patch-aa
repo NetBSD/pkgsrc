@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2007/08/15 21:57:09 joerg Exp $
+
+--- xmessage.c.orig	2007-08-15 23:47:23.000000000 +0200
++++ xmessage.c
+@@ -170,6 +170,11 @@ detab (char **messagep, int *lengthp)
+       n++;
+ 
+   /* length increases by at most seven extra spaces for each tab */
++  if (n >= (INT_MAX - *lengthp - 1) / 7) {
++    fprintf (stderr, "%s: integer overflow, terminating\n", ProgramName);
++    exit (1);
++  }
++
+   psize = *lengthp + n*7 + 1;
+   p = XtMalloc (psize);
+ 
