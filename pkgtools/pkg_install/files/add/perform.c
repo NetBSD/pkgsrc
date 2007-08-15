@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.58 2007/08/15 01:16:27 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.59 2007/08/15 01:21:46 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.58 2007/08/15 01:16:27 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.59 2007/08/15 01:21:46 joerg Exp $");
 #endif
 #endif
 
@@ -589,7 +589,12 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	}
 
 	/* Protect against old packages with bogus @name fields */
-	PkgName = (p = find_plist(&Plist, PLIST_NAME)) ? p->name : "anonymous";
+	p = find_plist(&Plist, PLIST_NAME);
+	if (p->name == NULL) {
+		warnx("PLIST contains no @name field");
+		goto bomb;
+	}
+	PkgName = p->name;
 
 	if (fexists(VIEWS_FNAME))
 		is_depoted_pkg = TRUE;
