@@ -1,22 +1,20 @@
-$NetBSD: patch-aa,v 1.8 2007/06/10 21:55:39 tonio Exp $
+$NetBSD: patch-aa,v 1.9 2007/08/15 21:22:55 seb Exp $
 
---- Makefile.orig	2007-02-14 02:08:35.000000000 +0100
+--- Makefile.orig	2007-06-30 20:38:47.000000000 +0000
 +++ Makefile
-@@ -1,18 +1,11 @@
+@@ -1,7 +1,7 @@
 -DESTDIR = /usr/local
 -BINDIR = /usr/local/bin
 -SHAREDIR = /usr/local/share/imapfilter
 -MANDIR = /usr/local/man
--
--INCDIRS = -I/usr/local/include
--LIBDIRS = -L/usr/local/lib
--
--MYCFLAGS = -Wall -g
--MYLDFLAGS = 
 +DESTDIR = $(PREFIX)
 +BINDIR = $(PREFIX)/bin
 +SHAREDIR = $(PREFIX)/share/imapfilter
 +MANDIR = $(PREFIX)/$(PKGMANDIR)
+ 
+ INCDIRS = -I/usr/local/include
+ LIBDIRS = -L/usr/local/lib
+@@ -11,8 +11,7 @@ MYLDFLAGS = 
  
  DEFS = -DMAKEFILE_SHAREDIR='"$(SHAREDIR)"'
  
@@ -24,9 +22,9 @@ $NetBSD: patch-aa,v 1.8 2007/06/10 21:55:39 tonio Exp $
 -LDFLAGS = $(MYLDFLAGS) $(LIBDIRS)
 +CFLAGS+= $(DEFS)
  
- LIBS = -lm -llua -lssl -lcrypto -lpcre
+ LIBS = -lm -llua -lpcre -lssl -lcrypto
  
-@@ -31,7 +24,7 @@ OBJ = auth.o buffer.o cert.o core.o file
+@@ -37,7 +36,7 @@ OBJ = auth.o buffer.o cert.o core.o file
  all: $(BIN)
  
  $(BIN): $(OBJ)
@@ -35,19 +33,31 @@ $NetBSD: patch-aa,v 1.8 2007/06/10 21:55:39 tonio Exp $
  
  $(OBJ): imapfilter.h
  buffer.o imap.o imapfilter.o namespace.o request.o response.o: buffer.h
-@@ -43,21 +36,16 @@ auth.o cert.o imap.o imapfilter.o log.o 
+@@ -49,33 +48,22 @@ auth.o cert.o imap.o imapfilter.o log.o 
  imapfilter.o: version.h
  
  install: $(BIN)
 -	if test ! -d $(BINDIR); then mkdir -p $(BINDIR); fi
 -	cp -f $(BIN) $(BINDIR) && chmod 0755 $(BINDIR)/$(BIN)
 -	if test ! -d $(SHAREDIR); then mkdir -p $(SHAREDIR); fi
--	cp -f $(INTERFACE_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(INTERFACE_LUA)
--	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
+-	cp -f $(COMMON_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(COMMON_LUA)
+-	cp -f $(SET_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(SET_LUA)
 -	cp -f $(REGEX_LUA) $(SHAREDIR) && \
 -		chmod 0644 $(SHAREDIR)/$(REGEX_LUA)
+-	cp -f $(ACCOUNT_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(ACCOUNT_LUA)
+-	cp -f $(MAILBOX_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(MAILBOX_LUA)
+-	cp -f $(MESSAGE_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(MESSAGE_LUA)
+-	cp -f $(OPTIONS_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(OPTIONS_LUA)
+-	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
+-	cp -f $(DEPRECATED_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(DEPRECATED_LUA)
 -	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
 -	cp -f $(MAN_BIN) $(MANDIR)/man1 && \
 -		chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
@@ -57,9 +67,15 @@ $NetBSD: patch-aa,v 1.8 2007/06/10 21:55:39 tonio Exp $
 +	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)/$(BIN)
 +	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)
-+	$(BSD_INSTALL_DATA) $(INTERFACE_LUA) $(SHAREDIR)/$(INTERFACE_LUA)
++	$(BSD_INSTALL_DATA) $(COMMON_LUA) $(SHAREDIR)/$(COMMON_LUA)
++	$(BSD_INSTALL_DATA) $(SET_LUA) $(SHAREDIR)/$(SET_LUA)
++	$(BSD_INSTALL_DATA) $(REGEX_LUA) $(SHAREDIR)/$(REGEX_LUA)
++	$(BSD_INSTALL_DATA) $(ACCOUNT_LUA) $(SHAREDIR)/$(ACCOUNT_LUA)
++	$(BSD_INSTALL_DATA) $(MAILBOX_LUA) $(SHAREDIR)/$(MAILBOX_LUA)
++	$(BSD_INSTALL_DATA) $(MESSAGE_LUA) $(SHAREDIR)/$(MESSAGE_LUA)
++	$(BSD_INSTALL_DATA) $(OPTIONS_LUA) $(SHAREDIR)/$(OPTIONS_LUA)
 +	$(BSD_INSTALL_DATA) $(AUXILIARY_LUA) $(SHAREDIR)/$(AUXILIARY_LUA)
-+	$(BSD_INSTALL_DATA) $(AUXILIARY_LUA) $(SHAREDIR)/$(REGEX_LUA)
++	$(BSD_INSTALL_DATA) $(DEPRECATED_LUA) $(SHAREDIR)/$(DEPRECATED_LUA)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
 +	$(BSD_INSTALL_MAN) $(MAN_BIN) $(MANDIR)/man1/$(MAN_BIN)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man5
