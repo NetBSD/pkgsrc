@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
+$NetBSD: patch-aa,v 1.34 2007/08/15 22:09:13 tnn Exp $
 
---- configure.orig	2007-03-09 05:04:21.000000000 +0100
+--- configure.orig	2007-08-04 04:41:45.000000000 +0200
 +++ configure
-@@ -925,6 +925,7 @@ G_MODULE_PLUGIN_LIBS
+@@ -929,6 +929,7 @@ G_MODULE_PLUGIN_LIBS
  G_MODULE_LDFLAGS
  G_MODULE_HAVE_DLERROR
  G_MODULE_BROKEN_RTLD_GLOBAL
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
  G_MODULE_NEED_USCORE
  GLIB_DEBUG_FLAGS
  GSPAWN
-@@ -35674,6 +35675,7 @@ else
+@@ -36706,6 +36707,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -18,12 +18,12 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -36411,6 +36413,72 @@ echo "${ECHO_T}$glib_cv_rtldglobal_broke
- 	else
-   		G_MODULE_BROKEN_RTLD_GLOBAL=0
- 	fi
-+	echo "$as_me:$LINENO: checking for dlopen(NULL, 0) brokenness" >&5
-+echo $ECHO_N "checking for dlopen(NULL, 0) brokenness... $ECHO_C" >&6
+@@ -37629,6 +37631,84 @@ fi
+ 
+ 	LIBS="$LIBS_orig"
+ fi
++	{ echo "$as_me:$LINENO: checking for dlopen(NULL, 0) brokenness" >&5
++echo $ECHO_N "checking for dlopen(NULL, 0) brokenness... $ECHO_C" >&6; }
 +if test "${glib_cv_dlopennull_broken+set}" = set; then
 +  echo $ECHO_N "(cached) $ECHO_C" >&6
 +else
@@ -38,6 +38,7 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
 +cat >>conftest.$ac_ext <<_ACEOF
 +/* end confdefs.h.  */
 +
++#include <stdio.h>
 +#include <dlfcn.h>
 +#ifndef RTLD_GLOBAL
 +#  define RTLD_GLOBAL 0
@@ -55,15 +56,25 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
 +    handle = dlsym (handle, "gettext");
 +    return handle == NULL;
 +}
++
 +_ACEOF
 +rm -f conftest$ac_exeext
-+if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
-+  (eval $ac_link) 2>&5
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>&5
 +  ac_status=$?
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
 +  ac_status=$?
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); }; }; then
@@ -76,22 +87,32 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
 +( exit $ac_status )
 +glib_cv_dlopennull_broken=yes
 +fi
-+rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
++rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
 +fi
-+		rm -f plugin.c plugin.o plugin.lo
++
++
 +
 +fi
-+echo "$as_me:$LINENO: result: $glib_cv_dlopennull_broken" >&5
-+echo "${ECHO_T}$glib_cv_dlopennull_broken" >&6
-+	if test "x$glib_cv_dlopennull_broken" = "xyes"; then
-+  		G_MODULE_BROKEN_DLOPEN_NULL=1
++{ echo "$as_me:$LINENO: result: $glib_cv_dlopennull_broken" >&5
++echo "${ECHO_T}$glib_cv_dlopennull_broken" >&6; }
++	if test "xglib_cv_dlopennull_broken$" = "xyes"; then
++		G_MODULE_BROKEN_DLOPEN_NULL=1
 +	else
-+  		G_MODULE_BROKEN_DLOPEN_NULL=0
++		G_MODULE_BROKEN_DLOPEN_NULL=0
 +	fi
- 	{ echo "$as_me:$LINENO: checking for preceeding underscore in symbols" >&5
- echo $ECHO_N "checking for preceeding underscore in symbols... $ECHO_C" >&6; }
- if test "${glib_cv_uscore+set}" = set; then
-@@ -37040,126 +37108,8 @@ if test x"$have_threads" != xno; then
+ if test -z "$G_MODULE_IMPL"; then
+ 	G_MODULE_IMPL=0
+         G_MODULE_SUPPORTED=false
+@@ -37665,6 +37745,8 @@ fi
+ 
+ 
+ 
++
++
+ { echo "$as_me:$LINENO: checking for gspawn implementation" >&5
+ echo $ECHO_N "checking for gspawn implementation... $ECHO_C" >&6; }
+ case "$host" in
+@@ -38063,126 +38145,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -215,12 +236,12 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
 -	     break;
 -          fi
 -        done
-+	 G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+	 G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
++	G_THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++	G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
           ;;
      esac
    fi
-@@ -39483,6 +39433,10 @@ case $host in
+@@ -40506,6 +40470,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -231,7 +252,7 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
  esac
  
  
-@@ -44671,6 +44625,7 @@ G_MODULE_PLUGIN_LIBS!$G_MODULE_PLUGIN_LI
+@@ -46139,6 +46107,7 @@ G_MODULE_PLUGIN_LIBS!$G_MODULE_PLUGIN_LI
  G_MODULE_LDFLAGS!$G_MODULE_LDFLAGS$ac_delim
  G_MODULE_HAVE_DLERROR!$G_MODULE_HAVE_DLERROR$ac_delim
  G_MODULE_BROKEN_RTLD_GLOBAL!$G_MODULE_BROKEN_RTLD_GLOBAL$ac_delim
@@ -239,12 +260,28 @@ $NetBSD: patch-aa,v 1.33 2007/03/20 15:33:59 drochner Exp $
  G_MODULE_NEED_USCORE!$G_MODULE_NEED_USCORE$ac_delim
  GLIB_DEBUG_FLAGS!$GLIB_DEBUG_FLAGS$ac_delim
  GSPAWN!$GSPAWN$ac_delim
-@@ -44696,7 +44651,7 @@ GTK_DOC_USE_LIBTOOL_TRUE!$GTK_DOC_USE_LI
- GTK_DOC_USE_LIBTOOL_FALSE!$GTK_DOC_USE_LIBTOOL_FALSE$ac_delim
+@@ -46157,7 +46126,6 @@ ENABLE_REGEX_TRUE!$ENABLE_REGEX_TRUE$ac_
+ ENABLE_REGEX_FALSE!$ENABLE_REGEX_FALSE$ac_delim
+ USE_SYSTEM_PCRE_TRUE!$USE_SYSTEM_PCRE_TRUE$ac_delim
+ USE_SYSTEM_PCRE_FALSE!$USE_SYSTEM_PCRE_FALSE$ac_delim
+-PCRE_CFLAGS!$PCRE_CFLAGS$ac_delim
  _ACEOF
  
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 98; then
+   if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
+@@ -46199,6 +46167,7 @@ _ACEOF
+ ac_delim='%!_!# '
+ for ac_last_try in false false false false false :; do
+   cat >conf$$subs.sed <<_ACEOF
++PCRE_CFLAGS!$PCRE_CFLAGS$ac_delim
+ PCRE_LIBS!$PCRE_LIBS$ac_delim
+ PCRE_WARN_CFLAGS!$PCRE_WARN_CFLAGS$ac_delim
+ G_LIBS_EXTRA!$G_LIBS_EXTRA$ac_delim
+@@ -46219,7 +46188,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 18; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 19; then
      break
    elif $ac_last_try; then
      { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
