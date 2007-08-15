@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.29 2007/08/12 22:09:02 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.30 2007/08/15 01:49:02 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.29 2007/08/12 22:09:02 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.30 2007/08/15 01:49:02 joerg Exp $");
 #endif
 
 /*
@@ -230,7 +230,8 @@ add1pkg(const char *pkgdir)
 	plist_t	       *p;
 	package_t	Plist;
 	char 		contents[MaxPathSize];
-	char	       *PkgDBDir, *PkgName, *dirp;
+	const char	*PkgDBDir;
+	char *PkgName, *dirp;
 	char 		file[MaxPathSize];
 	char		dir[MaxPathSize];
 	int		cnt = 0;
@@ -323,7 +324,7 @@ rebuild(void)
 {
 	DIR	       *dp;
 	struct dirent  *de;
-	char	       *PkgDBDir;
+	const char     *PkgDBDir;
 	char		cachename[MaxPathSize];
 
 	pkgcnt = 0;
