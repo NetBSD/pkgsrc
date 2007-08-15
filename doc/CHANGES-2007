@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1808 2007/08/15 21:24:43 seb Exp $
+$NetBSD: CHANGES-2007,v 1.1809 2007/08/15 22:28:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3301,3 +3301,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/rpc2 to 2.6.1 [gdt 2007-08-15]
 	Updated devel/p5-Class-Inspector to 1.17 [seb 2007-08-15]
 	Updated mail/imapfilter to 2.0.3 [seb 2007-08-15]
+	Updated x11/xgamma to 1.0.2 [joerg 2007-08-15]
+	Updated x11/xman to 1.0.3 [joerg 2007-08-15]
+	Updated x11/xmessage to 1.0.2 [joerg 2007-08-15]
+	Updated x11/xprop to 1.0.3 [joerg 2007-08-15]
+	Updated x11/xmodmap to 1.0.3 [joerg 2007-08-15]
+	Updated x11/xsetroot to 1.0.2 [joerg 2007-08-15]
+	Updated x11/xclock to 1.0.3 [joerg 2007-08-15]
+	Updated x11/xf86-video-intel to 2.1.1 [joerg 2007-08-15]
+	Added archivers/bsdtar version 2.2.6 [joerg 2007-08-15]
