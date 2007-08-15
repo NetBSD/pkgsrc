@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6597 2007/08/15 02:08:00 markd Exp $
+$NetBSD: TODO,v 1.6598 2007/08/15 03:54:24 markd Exp $
 
 Suggested new packages
 ======================
@@ -646,7 +646,6 @@ Suggested package updates
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
 	o kphotobook-0.0.7
-	o kscope-1.6.0
 	o ksi-3.4.2
 	o kye-0.9.3
 	o lapack-20070226
