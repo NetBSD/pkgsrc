@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.117 2007/07/21 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2007/08/15 22:09:13 tnn Exp $
 
-DISTNAME=		glib-2.12.13
+# When updating glib2, please apply patch-ak to configure.in
+# Then run a matching version of autoconf to regen patch-aa.
+DISTNAME=		glib-2.14.0
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.12/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/pub/glib/2.12/ \
-			${MASTER_SITE_GNOME:=sources/glib/2.12/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.14/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/pub/glib/2.14/ \
+			${MASTER_SITE_GNOME:=sources/glib/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
