@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.21 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.22 2007/08/15 06:33:45 rillig Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.56 -->
 
@@ -20,7 +20,7 @@ apply.</para>
 <para>Global default options are listed in
 <varname>PKG_DEFAULT_OPTIONS</varname>, which is a list of the options
 that should be built into every package if that option is supported.
-This variable should be set in <filename>/etc/mk.conf</filename>.</para>
+This variable should be set in &mk.conf;.</para>
 
 </sect1>
 
@@ -127,7 +127,7 @@ build options which are enabled by default.</para></listitem>
 <listitem><para><varname>PKG_OPTIONS_LEGACY_VARS</varname> is a list
 of
 <quote><replaceable>USE_VARIABLE</replaceable>:<replaceable>option</replaceable></quote>
-pairs that map legacy <filename>/etc/mk.conf</filename> variables to
+pairs that map legacy &mk.conf; variables to
 their option counterparts.  Pairs should be added with
 <quote>+=</quote> to keep the listing of global legacy variables.  A
 warning will be issued if the user uses a legacy
