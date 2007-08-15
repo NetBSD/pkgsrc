@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2007/03/20 15:33:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.37 2007/08/15 22:09:13 tnn Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -42,7 +42,9 @@ include/glib/glib-2.0/glib/gqsort.h
 include/glib/glib-2.0/glib/gquark.h
 include/glib/glib-2.0/glib/gqueue.h
 include/glib/glib-2.0/glib/grand.h
+include/glib/glib-2.0/glib/gregex.h
 include/glib/glib-2.0/glib/grel.h
+include/glib/glib-2.0/glib/gsequence.h
 include/glib/glib-2.0/glib/gscanner.h
 include/glib/glib-2.0/glib/gshell.h
 include/glib/glib-2.0/glib/gslice.h
@@ -135,10 +137,12 @@ share/gtk-doc/html/glib/glib-Miscellaneous-Macros.html
 share/gtk-doc/html/glib/glib-Miscellaneous-Utility-Functions.html
 share/gtk-doc/html/glib/glib-N-ary-Trees.html
 share/gtk-doc/html/glib/glib-Numerical-Definitions.html
+share/gtk-doc/html/glib/glib-Perl-compatible-regular-expressions.html
 share/gtk-doc/html/glib/glib-Pointer-Arrays.html
 share/gtk-doc/html/glib/glib-Quarks.html
 share/gtk-doc/html/glib/glib-Random-Numbers.html
 share/gtk-doc/html/glib/glib-Relations-and-Tuples.html
+share/gtk-doc/html/glib/glib-Sequences.html
 share/gtk-doc/html/glib/glib-Shell-related-Utilities.html
 share/gtk-doc/html/glib/glib-Simple-XML-Subset-Parser.html
 share/gtk-doc/html/glib/glib-Singly-Linked-Lists.html
@@ -166,6 +170,7 @@ share/gtk-doc/html/glib/glib-data-types.html
 share/gtk-doc/html/glib/glib-fundamentals.html
 share/gtk-doc/html/glib/glib-gettextize.html
 share/gtk-doc/html/glib/glib-resources.html
+share/gtk-doc/html/glib/glib-regex-syntax.html
 share/gtk-doc/html/glib/glib-running.html
 share/gtk-doc/html/glib/glib-utilities.html
 share/gtk-doc/html/glib/glib.devhelp
@@ -182,6 +187,7 @@ share/gtk-doc/html/glib/ix05.html
 share/gtk-doc/html/glib/ix06.html
 share/gtk-doc/html/glib/ix07.html
 share/gtk-doc/html/glib/ix08.html
+share/gtk-doc/html/glib/ix09.html
 share/gtk-doc/html/glib/left.png
 share/gtk-doc/html/glib/mainloop-states.gif
 share/gtk-doc/html/glib/right.png
@@ -190,13 +196,13 @@ share/gtk-doc/html/glib/tools.html
 share/gtk-doc/html/glib/up.png
 share/gtk-doc/html/gobject/GTypeModule.html
 share/gtk-doc/html/gobject/GTypePlugin.html
-share/gtk-doc/html/gobject/ch01.html
 share/gtk-doc/html/gobject/ch01s02.html
-share/gtk-doc/html/gobject/ch02.html
 share/gtk-doc/html/gobject/ch06s03.html
 share/gtk-doc/html/gobject/ch07s02.html
 share/gtk-doc/html/gobject/ch07s03.html
+share/gtk-doc/html/gobject/chapter-intro.html
 share/gtk-doc/html/gobject/chapter-gobject.html
+share/gtk-doc/html/gobject/chapter-gtype.html
 share/gtk-doc/html/gobject/chapter-signal.html
 share/gtk-doc/html/gobject/glib-genmarshal.html
 share/gtk-doc/html/gobject/glib-mkenums.html
@@ -242,6 +248,7 @@ share/gtk-doc/html/gobject/ix05.html
 share/gtk-doc/html/gobject/ix06.html
 share/gtk-doc/html/gobject/ix07.html
 share/gtk-doc/html/gobject/ix08.html
+share/gtk-doc/html/gobject/ix09.html
 share/gtk-doc/html/gobject/left.png
 share/gtk-doc/html/gobject/pr01.html
 share/gtk-doc/html/gobject/pt01.html
@@ -259,6 +266,7 @@ share/gtk-doc/html/gobject/tools-refdb.html
 share/gtk-doc/html/gobject/up.png
 share/locale/am/LC_MESSAGES/glib20.mo
 share/locale/ar/LC_MESSAGES/glib20.mo
+share/locale/as/LC_MESSAGES/glib20.mo
 share/locale/az/LC_MESSAGES/glib20.mo
 share/locale/be/LC_MESSAGES/glib20.mo
 share/locale/be@latin/LC_MESSAGES/glib20.mo
@@ -295,10 +303,12 @@ share/locale/is/LC_MESSAGES/glib20.mo
 share/locale/it/LC_MESSAGES/glib20.mo
 share/locale/ja/LC_MESSAGES/glib20.mo
 share/locale/ka/LC_MESSAGES/glib20.mo
+share/locale/kn/LC_MESSAGES/glib20.mo
 share/locale/ko/LC_MESSAGES/glib20.mo
 share/locale/ku/LC_MESSAGES/glib20.mo
 share/locale/lt/LC_MESSAGES/glib20.mo
 share/locale/lv/LC_MESSAGES/glib20.mo
+share/locale/mg/LC_MESSAGES/glib20.mo
 share/locale/mk/LC_MESSAGES/glib20.mo
 share/locale/ml/LC_MESSAGES/glib20.mo
 share/locale/mn/LC_MESSAGES/glib20.mo
