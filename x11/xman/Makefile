@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/07/28 00:10:36 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/15 21:45:51 joerg Exp $
 #
 
-DISTNAME=		xman-1.0.2
+DISTNAME=		xman-1.0.3
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
