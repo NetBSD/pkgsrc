@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1800 2007/08/15 02:05:43 markd Exp $
+$NetBSD: CHANGES-2007,v 1.1801 2007/08/15 03:23:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3293,3 +3293,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added chat/pidgin-silc version 2.1.0 [tnn 2007-08-14]
 	Updated sysutils/lsof to 4.78nb1 [veego 2007-08-14]
 	Updated parallel/sge to 6.0.11 [markd 2007-08-15]
+	Updated sysutils/krusader to 1.80.0 [markd 2007-08-15]
