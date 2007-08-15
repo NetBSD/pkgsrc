@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1805 2007/08/15 13:54:50 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1806 2007/08/15 14:58:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/cups to 1.2.12 [markd 2007-08-15]
 	Updated mail/mimedefang to 2.63 [markd 2007-08-15]
 	Updated filesystems/fuse-ntfs-3g to 1.810 [xtraeme 2007-08-15]
+	Updated devel/rpc2 to 2.6.1 [gdt 2007-08-15]
