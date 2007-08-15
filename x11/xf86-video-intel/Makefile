@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/07 16:20:26 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/15 19:09:50 joerg Exp $
 
 DISTNAME=	xf86-video-intel-2.1.0
 CATEGORIES=	x11
@@ -10,6 +10,10 @@ CONFLICTS+=	xf86-video-i810-[0-9]*
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Intel video driver
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
