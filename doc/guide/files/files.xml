@@ -1,4 +1,4 @@
-<!-- $NetBSD: files.xml,v 1.5 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: files.xml,v 1.6 2007/08/15 06:33:45 rillig Exp $ -->
 
 <chapter id="files">
 <title>Directory layout of the installed files</title>
@@ -53,7 +53,7 @@ operation.</para></listitem>
 
 <listitem><para><varname>PKG_SYSCONFDIR</varname> corresponds to
 <filename>/etc</filename> in the base system. It contains configuration
-files of the packages, as well as pkgsrc's <filename>mk.conf</filename>
+files of the packages, as well as pkgsrc's &mk.conf;
 itself.</para></listitem>
 
 </itemizedlist>

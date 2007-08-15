@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.55 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.56 2007/08/15 06:33:46 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -378,7 +378,7 @@ file and inspect the contents before extracting it.
 	</listitem>
 
 	<listitem>
-	  <para>An example <filename>/etc/mk.conf</filename> file will be placed in
+	  <para>An example &mk.conf; file will be placed in
 	  <filename>/etc/mk.conf.example</filename> file
 	  when you use the bootstrap script.</para>
 	</listitem>
@@ -606,7 +606,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 
       <para>Therefore, please make sure that you have no conflicting
       <varname>CFLAGS</varname> in your environment or the
-      <filename>/etc/mk.conf</filename>.  Particularly, make sure that you do not
+      &mk.conf;.  Particularly, make sure that you do not
       try to link n32 object files with lib64 or vice versa.  Check your
       <filename>/etc/compiler.defaults</filename>!</para>
 
@@ -626,7 +626,7 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 PKGSRC_COMPILER=        mipspro
       </programlisting>
 
-      in <filename>/etc/mk.conf</filename>.  Otherwise, pkgsrc will assume you
+      in &mk.conf;.  Otherwise, pkgsrc will assume you
       are using gcc and may end up passing invalid flags to the compiler.  Note that
       bootstrap should create an appropriate <filename>mk.conf.example</filename> by
       default.</para>
@@ -670,7 +670,7 @@ ac_cv___attribute__=yes ./bootstrap
       compiler.</para>
 
       <para>After bootstrapping, you should set <varname>PKGSRC_COMPILER</varname>
-      in <filename>/etc/mk.conf</filename>:</para>
+      in &mk.conf;:</para>
 
       <programlisting>
 PKGSRC_COMPILER=        icc
@@ -680,7 +680,7 @@ PKGSRC_COMPILER=        icc
       <filename>/opt/intel_cc_80</filename>, which
       is also the pkgsrc default. If you have installed it into a different
       directory, set <varname>ICCBASE</varname> in
-      <filename>/etc/mk.conf</filename>:</para>
+      &mk.conf;:</para>
 
       <programlisting>
 ICCBASE=                /opt/icc
@@ -731,10 +731,10 @@ ICCBASE=                /opt/icc
 	</listitem>
 
 	<listitem>
-	  <para>An example <filename>/etc/mk.conf</filename> file will be placed in
+	  <para>An example &mk.conf; file will be placed in
 	  <filename>/etc/mk.conf.example</filename> file
 	  when you use the bootstrap script. OpenBSD's make program uses
-	  <filename>/etc/mk.conf</filename>
+	  &mk.conf;
 	  as well. You can work around this by enclosing all the pkgsrc-specific parts
 	  of the file with:</para>
 
@@ -808,7 +808,7 @@ ICCBASE=                /opt/icc
 	</itemizedlist>
 
 	<para>You should set the following variables in your
-	<filename>mk.conf</filename> file:</para>
+	&mk.conf; file:</para>
 
 <programlisting>
 CC=     cc
@@ -826,8 +826,7 @@ CXXCPP= CC -E
 	<title>Building 64-bit binaries with SunPro</title>
 
 	<para>To build 64-bit packages, you just need to have the
-	following lines in your <filename>mk.conf</filename>
-	file:</para>
+	following lines in your &mk.conf; file:</para>
 
 <programlisting>
 PKGSRC_COMPILER=        sunpro
@@ -846,7 +845,7 @@ ABI=                    64
       The workaround is to use another shell for the configure
       scripts, for example by installing <filename
       role="pkg">shells/bash</filename> and adding the following lines
-      to your <filename>mk.conf</filename>:</para>
+      to your &mk.conf;:</para>
 
       <programlisting>
 CONFIG_SHELL=   ${LOCALBASE}/bin/bash

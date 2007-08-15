@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.36 2007/06/15 10:26:53 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.37 2007/08/15 06:33:44 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -145,7 +145,7 @@ converters    games         mbone         print         x11
       other variables handle common cases of setting
       <varname>WRKDIR_BASENAME</varname> individually. If
       <varname>OBJHOSTNAME</varname> is defined in
-      <filename>/etc/mk.conf</filename>, the first component of
+      &mk.conf;, the first component of
       the host's name is attached to the directory name. If
       <varname>OBJMACHINE</varname> is defined, the platform name
       is attached, which might look like
