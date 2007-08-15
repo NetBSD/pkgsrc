@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/21 00:20:17 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/15 17:50:09 joerg Exp $
 #
 
 DISTNAME=	xf86-video-via-0.2.2
@@ -10,6 +10,8 @@ MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg VIA unichrome video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 USE_LIBTOOL=    yes
 GNU_CONFIGURE=  yes
