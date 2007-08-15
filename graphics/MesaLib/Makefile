@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/08/13 11:18:39 seb Exp $
+# $NetBSD: Makefile,v 1.55 2007/08/15 15:56:12 joerg Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
 PKGREVISION=	3
@@ -24,6 +24,15 @@ PTHREAD_STUBLIB= "-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpthstub"
 PTHREAD_STUBLIB= # provided by libc
 .endif
 PKGSRC_MAKE_ENV+=	PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_ENV+=	CROSS_COMPILING=yes
+.endif
+
+post-extract:
+	${CP} ${FILESDIR}/gen_matypes.awk ${WRKSRC}/src/mesa/x86
+	${CP} ${FILESDIR}/gen_matypes.sh ${WRKSRC}/src/mesa/x86
+	${CHMOD} a+x ${WRKSRC}/src/mesa/x86/gen_matypes.sh
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
