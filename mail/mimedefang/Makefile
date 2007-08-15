@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2007/07/04 20:54:45 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2007/08/15 04:50:39 markd Exp $
 
-DISTNAME=		mimedefang-2.61
+DISTNAME=		mimedefang-2.63
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
