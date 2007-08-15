@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/19 11:51:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/15 02:03:06 markd Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -89,6 +89,9 @@ sge/catman/cat/cat3/drmaa_get_contact.3
 sge/catman/cat/cat3/drmaa_get_next_attr_name.3
 sge/catman/cat/cat3/drmaa_get_next_attr_value.3
 sge/catman/cat/cat3/drmaa_get_next_job_id.3
+sge/catman/cat/cat3/drmaa_get_num_attr_names.3
+sge/catman/cat/cat3/drmaa_get_num_attr_values.3
+sge/catman/cat/cat3/drmaa_get_num_job_ids.3
 sge/catman/cat/cat3/drmaa_get_vector_attribute.3
 sge/catman/cat/cat3/drmaa_get_vector_attribute_names.3
 sge/catman/cat/cat3/drmaa_init.3
@@ -139,6 +142,7 @@ sge/catman/cat/cat5/sgepasswd.5
 sge/catman/cat/cat5/share_tree.5
 sge/catman/cat/cat5/user.5
 sge/catman/cat/cat5/usermapping.5
+sge/catman/cat/cat8/SGE_Helper_Service.exe.8
 sge/catman/cat/cat8/sge_execd.8
 sge/catman/cat/cat8/sge_qmaster.8
 sge/catman/cat/cat8/sge_schedd.8
@@ -162,6 +166,7 @@ sge/ckpt/sx6_ckpt_command
 sge/ckpt/sx6_clean_command
 sge/ckpt/sx6_migration_command
 sge/ckpt/sx6_restart_command
+sge/doc/README-ARCo.txt
 sge/doc/README-Autoinstall.txt
 sge/doc/README-DRMAA.txt
 sge/doc/arc_depend_irix.asc
@@ -194,6 +199,8 @@ sge/install_execd
 sge/install_qmaster
 sge/lib/${SGE_ARCH}/libXltree.so
 sge/lib/${SGE_ARCH}/libdrmaa.so
+sge/lib/${SGE_ARCH}/libdrmaa.so.0.95
+sge/lib/${SGE_ARCH}/libdrmaa.so.1.0
 sge/lib/${SGE_ARCH}/libspoolb.so
 sge/lib/${SGE_ARCH}/libspoolc.so
 sge/man/man1/gethostbyaddr.1
@@ -238,6 +245,9 @@ sge/man/man3/drmaa_get_contact.3
 sge/man/man3/drmaa_get_next_attr_name.3
 sge/man/man3/drmaa_get_next_attr_value.3
 sge/man/man3/drmaa_get_next_job_id.3
+sge/man/man3/drmaa_get_num_attr_names.3
+sge/man/man3/drmaa_get_num_attr_values.3
+sge/man/man3/drmaa_get_num_job_ids.3
 sge/man/man3/drmaa_get_vector_attribute.3
 sge/man/man3/drmaa_get_vector_attribute_names.3
 sge/man/man3/drmaa_init.3
@@ -288,6 +298,7 @@ sge/man/man5/sgepasswd.5
 sge/man/man5/share_tree.5
 sge/man/man5/user.5
 sge/man/man5/usermapping.5
+sge/man/man8/SGE_Helper_Service.exe.8
 sge/man/man8/sge_execd.8
 sge/man/man8/sge_qmaster.8
 sge/man/man8/sge_schedd.8
@@ -449,7 +460,6 @@ sge/qmon/PIXMAPS/xterm.xpm
 sge/qmon/Qmon
 sge/qmon/qmon_help.ad
 sge/util/arch
-sge/util/arch.orig
 sge/util/arch_variables
 sge/util/arch_variables.orig
 sge/util/bdb_checkpoint.sh
@@ -540,10 +550,6 @@ sge/util/resources/pe/make.sge_pqs_api
 sge/util/resources/schemas/qstat/detailed_job_info.xsd
 sge/util/resources/schemas/qstat/message.xsd
 sge/util/resources/schemas/qstat/qstat.xsd
-sge/util/resources/spooling/disable_history.sql
-sge/util/resources/spooling/history.sh
-sge/util/resources/spooling/init_postgres.sh
-sge/util/resources/spooling/init_postgres.sql
 sge/util/resources/starter_methods/settaskid.sh
 sge/util/resources/usersets/deadlineusers
 sge/util/resources/usersets/defaultdepartment
@@ -553,7 +559,6 @@ sge/util/sgeCA/sge_ca
 sge/util/sgeCA/sge_ssl.cnf
 sge/util/sgeCA/sge_ssl_template.cnf
 sge/util/sge_aliases
-sge/util/sge_log_tee
 sge/util/sge_request
 sge/util/sgeremoterun
 sge/utilbin/${SGE_ARCH}/adminrun
@@ -595,7 +600,6 @@ sge/utilbin/${SGE_ARCH}/uidgid
 @dirrm sge/util/sgeCA
 @dirrm sge/util/resources/usersets
 @dirrm sge/util/resources/starter_methods
-@dirrm sge/util/resources/spooling
 @dirrm sge/util/resources/schemas/qstat
 @dirrm sge/util/resources/schemas
 @dirrm sge/util/resources/pe
