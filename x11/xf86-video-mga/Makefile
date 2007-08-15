@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 15:43:42 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/15 18:23:57 joerg Exp $
 #
 
 DISTNAME=	xf86-video-mga-1.4.6.1
@@ -10,6 +10,8 @@ MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg Matrox video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 USE_LIBTOOL=    yes
 GNU_CONFIGURE=  yes
