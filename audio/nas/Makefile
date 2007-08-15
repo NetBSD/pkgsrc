@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.75 2007/05/05 21:31:09 markd Exp $
+# $NetBSD: Makefile,v 1.76 2007/08/15 08:12:17 markd Exp $
 
 DISTNAME=	nas-1.9.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	audio
-MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
-		ftp://ftp.uni-duisburg.de/Sound/NAS/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nas/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://radscan.com/nas.html
+HOMEPAGE=	http://nas.sourceforge.net
 COMMENT=	Network Audio System
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
