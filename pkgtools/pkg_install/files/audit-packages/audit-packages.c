@@ -1,4 +1,4 @@
-/* $NetBSD: audit-packages.c,v 1.9 2007/08/10 22:50:46 adrianp Exp $ */
+/* $NetBSD: audit-packages.c,v 1.10 2007/08/15 01:49:02 joerg Exp $ */
 
 /*
  * Copyright (c) 2007 Adrian Portelli <adrianp@NetBSD.org>.
@@ -126,10 +126,10 @@ int check_sig(char *);
 int pv_message(char *[]);
 int ap_ignore(char *[]);
 void show_info(char *);
-void set_pvfile(char *);
+void set_pvfile(const char *);
 char *clean_conf(char *);
 int get_confvalues(void);
-char *safe_strdup(char *);
+char *safe_strdup(const char *);
 
 /*
  * TODO:
@@ -1035,7 +1035,7 @@ show_info(char *varname)
 
 /* set the location for the pkg-vulnerabilities file */
 void
-set_pvfile(char *vuln_dir)
+set_pvfile(const char *vuln_dir)
 {
 	char *pvloc = NULL;
 	size_t retval;
@@ -1053,7 +1053,7 @@ set_pvfile(char *vuln_dir)
 
 /* duplicate a string and check the return value */
 char *
-safe_strdup(char *dupe)
+safe_strdup(const char *dupe)
 {
 	char *retval;
 
