@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/03/20 16:03:59 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/15 18:19:07 joerg Exp $
 
---- configure.orig	2007-03-20 16:50:47.000000000 +0100
+--- configure.orig	2006-04-08 03:21:31.000000000 +0200
 +++ configure
 @@ -20137,59 +20137,7 @@ _ACEOF
  
@@ -62,3 +62,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/03/20 16:03:59 joerg Exp $
  
  if test x$HAVE_INB = xyes; then
    BUILD_UTILS_TRUE=
+@@ -20329,16 +20277,8 @@ echo $ECHO_N "checking for $prefix/share
+ if eval "test \"\${$as_ac_File+set}\" = set"; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+-  test "$cross_compiling" = yes &&
+-  { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
+-echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
+-   { (exit 1); exit 1; }; }
+-if test -r "$prefix/share/X11/sgml/defs.ent"; then
+-  eval "$as_ac_File=yes"
+-else
+   eval "$as_ac_File=no"
+ fi
+-fi
+ echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_File'}'`" >&5
+ echo "${ECHO_T}`eval echo '${'$as_ac_File'}'`" >&6
+ if test `eval echo '${'$as_ac_File'}'` = yes; then
