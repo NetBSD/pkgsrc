@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/08/07 16:20:25 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/15 19:44:55 joerg Exp $
 
 DISTNAME=	xf86-video-i810-1.7.4
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ MAINTAINER=	joerg@NetBSD.org
 COMMENT=	Modular Xorg Intel video driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--enable-dri
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
