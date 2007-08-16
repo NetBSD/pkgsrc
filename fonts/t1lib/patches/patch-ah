@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2007/08/16 03:25:05 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2007/08/16 13:12:37 joerg Exp $
 
 --- configure.orig	2007-08-16 05:17:41.000000000 +0200
 +++ configure
@@ -196,7 +196,7 @@ $NetBSD: patch-ah,v 1.1 2007/08/16 03:25:05 joerg Exp $
 +if [ $ac_cv_sizeof_long = 8 ]; then
    T1_AA_TYPE64="-DT1_AA_TYPE64=long"
 +elif [ $ac_cv_sizeof_long_long = 8 ]; then
-+  T1_AA_TYPE64="-DT1_AA_TYPE64=long long"
++  T1_AA_TYPE64='-DT1_AA_TYPE64="long long"'
  else
 -  T1_AA_TYPE64=
 +    echo "No 64 bit type found"
