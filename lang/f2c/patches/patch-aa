@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2007/03/17 16:10:13 rillig Exp $
+$NetBSD: patch-aa,v 1.17 2007/08/16 00:31:22 joerg Exp $
 
 --- Makefile.orig	Tue Sep 14 16:47:52 2004
 +++ Makefile
@@ -30,19 +30,19 @@ $NetBSD: patch-aa,v 1.16 2007/03/17 16:10:13 rillig Exp $
 +
 +
 +install::
-+	-@mkdir -p ${PREFIX}/bin
-+	${BSD_INSTALL_PROGRAM} ./src/f2c ${PREFIX}/bin
-+	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${PREFIX}/bin
-+	-@mkdir -p ${PREFIX}/lib
-+	@cd libI77 && ${MAKE} install LIBDIR=${PREFIX}/lib
-+	@cd libF77 && ${MAKE} install LIBDIR=${PREFIX}/lib
-+	-@mkdir -p ${PREFIX}/include
-+	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
-+	-@mkdir -p ${PREFIX}/share/doc/f2c
-+	${BSD_INSTALL_DATA} ./f2c.ps ${PREFIX}/share/doc/f2c
-+	${BSD_INSTALL_DATA} ./changes ${PREFIX}/share/doc/f2c
-+	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/${PKGMANDIR}/man1
-+	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/${PKGMANDIR}/cat1
++	-@mkdir -p ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} ./src/f2c ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${DESTDIR}${PREFIX}/bin
++	-@mkdir -p ${DESTDIR}${PREFIX}/lib
++	@cd libI77 && ${MAKE} install LIBDIR=${DESTDIR}${PREFIX}/lib
++	@cd libF77 && ${MAKE} install LIBDIR=${DESTDIR}${PREFIX}/lib
++	-@mkdir -p ${DESTDIR}${PREFIX}/include
++	${BSD_INSTALL_DATA} ./f2c.h ${DESTDIR}${PREFIX}/include
++	-@mkdir -p ${DESTDIR}${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_DATA} ./f2c.ps ${DESTDIR}${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_DATA} ./changes ${DESTDIR}${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_MAN} ./f2c.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	${BSD_INSTALL_MAN} ./f2c.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 +
 +f2c-f77: ${F2C_F77_IN}  f2c hello.f
 +	./src/f2c -Aw8 -Nn802 -Nx400 hello.f
