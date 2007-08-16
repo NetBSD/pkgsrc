@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2007/08/15 22:09:13 tnn Exp $
+# $NetBSD: Makefile,v 1.119 2007/08/16 17:28:18 tron Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -11,7 +11,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.14/ \
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
+HOMEPAGE=		http://developer.gnome.org/doc/API/2.0/glib/glib.html
 COMMENT=		Some useful routines for C programming (glib2)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
