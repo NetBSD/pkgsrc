@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/08/16 09:27:05 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2007/08/16 12:50:34 joerg Exp $
 
 DISTNAME=	pbulk-0.12
 PKGREVISION=	1
@@ -59,6 +59,10 @@ USE_BUILTIN.libevent = no
 .if ${OPSYS} == "SunOS"
 LDADD+=		-lsocket -lresolv
 MAKE_ENV+=	LDADD=${LDADD:Q}
+.endif
+
+.if ${OPSYS} == "Linux"
+CPPFLAGS+=	-D_GNU_SOURCE
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
