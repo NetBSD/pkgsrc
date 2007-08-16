@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.6 2007/08/15 13:56:24 jlam Exp $
+# $NetBSD: checksum.mk,v 1.7 2007/08/16 16:29:27 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -66,6 +66,7 @@ _DISTINFO_ARGS_DISTSUM+=	${_IGNOREFILES:S/^/-i /}
 .endif
 
 _DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/patch-*
+_DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/emul-*-patch-*
 
 distinfo:
 	${RUN}set -e;							\
