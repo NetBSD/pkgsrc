@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1813 2007/08/16 01:47:10 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1814 2007/08/16 09:27:04 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3315,3 +3315,14 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xf86-video-nv to 2.1.3 [joerg 2007-08-16]
 	Updated www/swish-e to 2.4.5 [joerg 2007-08-16]
 	Added meta-pkgs/modular-xorg-libs version 1.0 [joerg 2007-08-16]
+	Updated devel/libevent to 1.3d [tnn 2007-08-16]
+	Updated devel/memcached to 1.2.1nb2 [tnn 2007-08-16]
+	Updated net/btpd to 0.11nb4 [tnn 2007-08-16]
+	Updated net/tor to 0.1.2.16nb1 [tnn 2007-08-16]
+	Updated net/Transmission to 0.80nb3 [tnn 2007-08-16]
+	Updated net/spreadlogd to 2.0.0nb1 [tnn 2007-08-16]
+	Updated pkgtools/pbulk to 0.12nb1 [tnn 2007-08-16]
+	Updated security/fragroute to 1.2nb6 [tnn 2007-08-16]
+	Updated security/honeyd to 1.5bnb3 [tnn 2007-08-16]
+	Updated security/honeyd-arpd to 0.2nb7 [tnn 2007-08-16]
+	Updated security/scanssh to 2.1nb5 [tnn 2007-08-16]
