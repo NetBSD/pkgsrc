@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.31 2007/08/16 09:10:51 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.32 2007/08/16 09:25:16 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -35,7 +35,7 @@ and you can still use binary packages from someone else.</para>
     <para>To install binary packages, you first need to know from where
     to get them. The first place where you should look is on the main
     pkgsrc FTP server in the directory <ulink
-    url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
+    url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
     <para>This directory contains binary packages for multiple
     platforms. First, select your operating system. (Ignore the
