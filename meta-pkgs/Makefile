@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/08/13 08:12:47 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2007/08/16 01:46:23 joerg Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -17,6 +17,7 @@ SUBDIR+=	matchbox
 SUBDIR+=	modular-xorg-apps
 SUBDIR+=	modular-xorg-drivers
 SUBDIR+=	modular-xorg-fonts
+SUBDIR+=	modular-xorg-libs
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
