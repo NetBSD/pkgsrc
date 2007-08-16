@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.6 2007/07/25 15:12:53 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.7 2007/08/16 13:02:05 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -35,13 +35,13 @@ function sort(ARRAY, INDICES, OPTIONS, i, idx, sort_cmd) {
 
 	for (idx in ARRAY)
 		print idx | sort_cmd
-	close sort_cmd
+	close(sort_cmd)
 	i = 0
 	while ((getline < tmp_sort) > 0) {
 		INDICES[i] = $0
 		++i
 	}
-	close tmp_sort
+	close(tmp_sort)
 	system("rm " tmp_sort)
 }
 
@@ -78,7 +78,7 @@ function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
 			else if ($0 == "deinstall.log")
 				has_deinstall = 1
 		}
-		close cmd
+		close(cmd)
 	}
 	print "<tr class=\"" status[PKGNAME] "\">" > html_report
 	print "<td>" location[PKGNAME] "</td>" > html_report
@@ -125,7 +125,7 @@ BEGIN {
 		else if ($0 ~ "^BUILD_END_ISO=")
 			pkgsrc_build_end_iso = substr($0, 15)
 	}
-	close status_file
+	close(status_file)
 
 	while ((getline < report_file) > 0) {
 		if ($0 ~ "^PKGNAME=")
