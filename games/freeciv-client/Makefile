@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2007/03/18 13:12:14 adam Exp $
+# $NetBSD: Makefile,v 1.33 2007/08/16 22:59:08 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 COMMENT=	Freeciv client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 DEPENDS+=	freeciv-sounds>=3.0:../../games/freeciv-sounds
