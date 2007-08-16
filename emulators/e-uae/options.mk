@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/01/24 20:21:46 adam Exp $
+# $NetBSD: options.mk,v 1.2 2007/08/16 22:23:46 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e-uae
 PKG_SUPPORTED_OPTIONS=	gtk sdl x11
@@ -17,5 +17,15 @@ CONFIGURE_ARGS+=	--with-sdl --with-sdl-gfx
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode
-.include "../../mk/x11.buildlink3.mk"
+
+BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .endif
