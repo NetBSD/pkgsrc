@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.128 2007/08/09 19:39:16 drochner Exp $
+# $NetBSD: Makefile,v 1.129 2007/08/16 12:47:03 obache Exp $
 #
 
 DISTNAME=	gdm-2.18.4
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -134,6 +135,13 @@ PLIST_SUBST+=		DMX=""
 PLIST_SUBST+=		DMX="@comment "
 .endif
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
+
+.if exists(/usr/include/linux/vt.h)
+PLIST_SUBST+=		GDMOPEN=""
+.else
+PLIST_SUBST+=		GDMOPEN="@comment "
+.endif
+PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
