@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1810 2007/08/15 22:37:56 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1811 2007/08/16 00:15:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3311,3 +3311,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xf86-video-intel to 2.1.1 [joerg 2007-08-15]
 	Added archivers/bsdtar version 2.2.6 [joerg 2007-08-15]
 	Updated devel/glib2 to 2.14.0 [tnn 2007-08-15]
+	Updated www/swish-e to 2.4.5 [joerg 2007-08-16]
