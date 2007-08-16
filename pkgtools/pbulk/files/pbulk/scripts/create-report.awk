@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report.awk,v 1.2 2007/06/29 22:43:26 joerg Exp $
+# $NetBSD: create-report.awk,v 1.3 2007/08/16 13:02:05 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -89,5 +89,5 @@ BEGIN {
 			print "RESTRICTED_SUBSET=no" > full_pbuild_file
 		print "BUILD_STATUS=" status[p] > full_pbuild_file
 	}
-	close full_pbuild_file
+	close(full_pbuild_file)
 }
