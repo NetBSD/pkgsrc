@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.7 2007/07/27 14:24:53 joerg Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.8 2007/08/16 07:42:53 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -20,12 +20,19 @@
 #
 #    DISTFILES is the list of distribution files that are fetched.
 #
+# System-provided variables:
+#
+# DEFAULT_DISTFILES
+#	The default value for DISTFILES. This can be used when you need
+#	more than the usual distfiles.
+#
 
 # The default DISTDIR is currently set in bsd.prefs.mk.
 #DISTDIR?=               ${PKGSRCDIR}/distfiles
 
 _DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
-DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
+DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES?=		${DEFAULT_DISTFILES}
 
 # "Failover" fetching requires the digest tool to compute checksums to
 # verify any fetched files.  But if no checksumming is requested, don't
