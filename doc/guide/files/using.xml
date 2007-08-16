@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.30 2007/08/15 06:33:46 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.31 2007/08/16 09:10:51 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -13,22 +13,13 @@ and you can still use binary packages from someone else.</para>
 <sect1 id="using-pkg">
   <title>Using binary packages</title>
 
-  <para>To use binary packages, you need some tools to manage
-  them. On NetBSD, these tools are already installed. On all other
-  operating systems, you need to install them first. For the
-  following platforms, prebuilt versions of the package tools
-  are available and can simply be downloaded and unpacked in the
-  <filename>/</filename> directory:</para>
-
-  <informaltable id="binary-bootstrap-kits">
-    <tgroup cols="2">
-      <thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
-      <tbody>
-	<row><entry>Solaris 9</entry><entry><filename>ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
-	<row><entry>Solaris 10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
-      </tbody>
-    </tgroup>
-  </informaltable>
+  <para>To use binary packages, you need some tools to manage them. On
+  NetBSD, these tools are already installed. On all other operating
+  systems, you need to install them first. For some platforms, these
+  tools are already packages in an archive, ready to be extracted in the
+  <filename>/</filename> directory. They can be found in the <ulink
+  url="ftp://ftp.NetBSD.org/pub/pkgsrc/bootstrap-pkgsrc"><filename>bootstrap-pkgsrc</filename></ulink>
+  directory of the FTP server.</para>
 
   <para>These pre-built package tools use
   <filename>/usr/pkg</filename> for the base directory, and
@@ -41,34 +32,21 @@ and you can still use binary packages from someone else.</para>
   <sect2 id="finding-binary-packages">
     <title>Finding binary packages</title>
 
-    <para>To install binary packages, you first need to know from
-    where to get them. You can get them on CD-ROMs, DVDs, or via FTP
-    or HTTP.</para>
+    <para>To install binary packages, you first need to know from where
+    to get them. The first place where you should look is on the main
+    pkgsrc FTP server in the directory <ulink
+    url="ftp://ftp.NetBSD.org/pub/pkgsrc/packages"><filename>/pub/pkgsrc/packages</filename></ulink>.</para>
 
-    <para>The binary packages can be found at the following
-    locations.</para>
-
-    <informaltable id="binary-packages">
-      <tgroup cols="2">
-	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
-	<tbody>
-	  <row><entry>NetBSD</entry><entry><filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/</filename></entry></row>
-	  <row><entry>Solaris 9</entry><entry><filename>ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</filename></entry></row>
-	  <row><entry>Solaris 10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/</filename></entry></row>
-	</tbody>
-      </tgroup>
-    </informaltable>
-
-    <para>Most of these directories contain binary packages for
-    multiple platforms. Select the appropriate subdirectories,
-    according to your machine architecture and operating system,
-    until you find a directory called <filename>All</filename>. This
-    directory contains all the binary packages. Further, there are
-    subdirectories for categories that contain symbolic links that
-    point to the actual binary package in
-    <filename>../All</filename>. This directory layout is used for
-    all package repositories, no matter if they are accessed via
-    HTTP, FTP, NFS, CD-ROM, or the local filesystem.</para>
+    <para>This directory contains binary packages for multiple
+    platforms. First, select your operating system. (Ignore the
+    directories with version numbers attached to it, they just exist for
+    legacy reasons.) Then, select your hardware architecture, and in the
+    third step, the OS version and the <quote>version</quote> of pkgsrc.
+    This directory contains a subdirectory called
+    <filename>All</filename>, where (almost) all binary packages are
+    stored. Almost, because vulnerable packages are moved to the
+    <filename>vulnerable</filename> directory so they don't get
+    installed accidentally.</para>
 
   </sect2>
   <sect2 id="installing-binary-packages">
@@ -84,7 +62,7 @@ and you can still use binary packages from someone else.</para>
     packages via FTP prior to installation, you can do this
     automatically by giving <command>pkg_add</command> an FTP URL:</para>
 
-    <screen>&rprompt; <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</userinput></screen>
+    <screen>&rprompt; <userinput>pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/<replaceable>package</replaceable></userinput></screen>
 
     <para>Note that any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
