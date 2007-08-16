@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/04/17 01:04:44 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/16 00:42:20 joerg Exp $
 #
 
 DISTNAME=		gdal-1.4.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.gdal.org/dl/
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 
@@ -43,12 +45,14 @@ CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 CONFIGURE_ARGS+=	--with-xerces
-CONFIGURE_ARGS+=	--with-xerces-inc=${PREFIX:Q}/include
-CONFIGURE_ARGS+=	--with-xerces-lib=-L${PREFIX:Q}/lib\ -lxerces-c
+CONFIGURE_ARGS+=	--with-xerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
+CONFIGURE_ARGS+=	--with-xerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
 CONFIGURE_ARGS+=	--with-geos
 CONFIGURE_ARGS+=	--without-python
 
 CHECK_PORTABILITY_SKIP+=	mkbindist.sh
+
+INSTALLATION_DIRS=	bin include lib man/man1 share/gdal
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
