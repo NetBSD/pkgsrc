@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2007/08/09 18:28:24 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/16 23:14:17 smb Exp $
 #
 
 DISTNAME=vcalendar-1.96
 PKGNAME=claws-mail-vcalendar-1.96
 CATEGORIES=mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Enable vCalendar message handling
