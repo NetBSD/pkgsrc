@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.16 2007/08/01 16:57:15 joerg Exp $
+$NetBSD: distinfo,v 1.17 2007/08/16 08:59:46 tnn Exp $
 
-SHA1 (libevent-1.3b.tar.gz) = 41e2b71bcb51df4ef1563a11e8a726ecfd3907c1
-RMD160 (libevent-1.3b.tar.gz) = c414b66757ddfdbb7d1f516efe948c52a8012735
-Size (libevent-1.3b.tar.gz) = 445461 bytes
+SHA1 (libevent-1.3d.tar.gz) = 591b3c43652e1b88511d1022b296cf214b37644b
+RMD160 (libevent-1.3d.tar.gz) = 1eae8acefba6d09b4f7f5c99f9469c881dc5426a
+Size (libevent-1.3d.tar.gz) = 441883 bytes
 SHA1 (patch-aa) = 08a7dd87194730b0d3294deee7feb196e22c1b77
-SHA1 (patch-ab) = 95e52acf92cc1d16a9a585ab9548059ccf5179a3
-SHA1 (patch-ac) = a0ac74f38f2fddefddd87f7b37f266905850133f
 SHA1 (patch-ad) = c842811d0b8e3f843a2f363dd2d11ec784fb8264
