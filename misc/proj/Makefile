@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/12/15 18:15:00 dsainty Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/16 00:18:31 joerg Exp $
 
 DISTNAME=		proj-4.5.0
 PKGREVISION=		1
@@ -10,6 +10,8 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} proj-datumgrid-1.3${EXTRACT_SUFX}
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.remotesensing.org/proj/
 COMMENT=		Cartographic projection software
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
