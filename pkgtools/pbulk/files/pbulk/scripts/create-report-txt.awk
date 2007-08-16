@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.5 2007/07/28 07:26:26 wiz Exp $
+# $NetBSD: create-report-txt.awk,v 1.6 2007/08/16 13:02:05 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -35,13 +35,13 @@ function sort(ARRAY, INDICES, OPTIONS, i, idx, sort_cmd) {
 
 	for (idx in ARRAY)
 		print idx | sort_cmd
-	close sort_cmd
+	close(sort_cmd)
 	i = 0
 	while ((getline < tmp_sort) > 0) {
 		INDICES[i] = $0
 		++i
 	}
-	close tmp_sort
+	close(tmp_sort)
 	system("rm " tmp_sort)
 }
 
@@ -73,7 +73,7 @@ BEGIN {
 		else if ($0 ~ "^BASE_URL=")
 			pkgsrc_base_url = substr($0, 10)
 	}
-	close status_file
+	close(status_file)
 
 	while ((getline < report_file) > 0) {
 		if ($0 ~ "^PKGNAME=")
@@ -188,5 +188,5 @@ BEGIN {
 				printf "    %- 33s % 6d %s\n", p, depth[p], maintainer[p] > txt_report
 		}
 	}
-	close txt_report
+	close(txt_report)
 }
