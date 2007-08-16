@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/08/22 16:30:46 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/08/16 00:15:56 joerg Exp $
 #
 
 DISTNAME=	xerces-c-src_2_7_0
@@ -12,6 +12,7 @@ HOMEPAGE=	http://xml.apache.org/xerces-c/
 COMMENT=	Validating C++ XML parser with DOM and SAX support
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/xercesc
 USE_TOOLS+=		gmake
@@ -60,6 +61,6 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dom/impl/*.hpp \
-		${PREFIX}/include/xercesc/dom/impl
+		${DESTDIR}${PREFIX}/include/xercesc/dom/impl
 
 .include "../../mk/bsd.pkg.mk"
