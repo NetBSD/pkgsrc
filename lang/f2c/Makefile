@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/06/17 21:24:41 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2007/08/16 00:31:21 joerg Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	9
@@ -22,6 +22,8 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/f2c/index.html
 COMMENT=	Fortran to C compiler including a script to emulate f77
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	egcs-current-19980608
 
 F2CMAJOR=	0
@@ -35,6 +37,8 @@ MAKE_ENV+=	SCRIPT_SHELL=${TOOLS_PLATFORM.sh:Q}
 WRKSRC=		${WRKDIR}/f2c
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gunzip
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
 # work around a problem gunzipping 00lastchange.gz with
 # some versions of zlib found on NetBSD and also Gentoo
