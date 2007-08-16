@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 11:57:12 wiz Exp $
-
-SHA1 (compat14-crypto-i386-1.4.3.1.tar.gz) = 2b35c35de47b8c0be42813cb6e56e154e98ebfd5
-RMD160 (compat14-crypto-i386-1.4.3.1.tar.gz) = 5a28f1c5218eccd925bba73b7c9a1a2d3fd6c2b8
-Size (compat14-crypto-i386-1.4.3.1.tar.gz) = 1729167 bytes
-SHA1 (compat14-crypto-sparc-1.4.3.1.tar.gz) = 41d5937f5e1f40193c6363a9978fe6373d43e679
-RMD160 (compat14-crypto-sparc-1.4.3.1.tar.gz) = bbe9bcbf05328cb9829d192ef6a0be1479b9cdbe
-Size (compat14-crypto-sparc-1.4.3.1.tar.gz) = 1921545 bytes
