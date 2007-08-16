@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/08/05 02:35:04 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/16 00:48:35 joerg Exp $
 
-DISTNAME=	xf86-video-nv-2.1.2
+DISTNAME=	xf86-video-nv-2.1.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
