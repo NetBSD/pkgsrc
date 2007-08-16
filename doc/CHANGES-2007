@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1814 2007/08/16 09:27:04 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1815 2007/08/16 09:52:31 he Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3326,3 +3326,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/honeyd to 1.5bnb3 [tnn 2007-08-16]
 	Updated security/honeyd-arpd to 0.2nb7 [tnn 2007-08-16]
 	Updated security/scanssh to 2.1nb5 [tnn 2007-08-16]
+	Updated www/p5-Apache-Session-Wrapper to 0.33 [he 2007-08-16]
