@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.14 2007/08/15 13:56:25 jlam Exp $
+# $NetBSD: patch.mk,v 1.15 2007/08/16 16:29:27 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -256,6 +256,9 @@ do-distribution-patch:
 
 .if defined(PATCHDIR) && exists(${PATCHDIR})
 _PKGSRC_PATCHES+=	${PATCHDIR}/patch-*
+.  if defined(EMUL_PLATFORM)
+_PKGSRC_PATCHES+=	${PATCHDIR}/emul-${EMUL_PLATFORM}-patch-*
+.  endif
 .endif
 .if defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH})
 _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
@@ -282,7 +285,7 @@ do-pkgsrc-patch:
 			;;						\
 		${PATCHDIR}/patch-local-*) 				\
 			;;						\
-		${PATCHDIR}/patch-*) 					\
+		${PATCHDIR}/patch-*|${PATCHDIR}/emul-*-patch-*)		\
 			if ${TEST} ! -f ${DISTINFO_FILE:Q}; then	\
 				patch_warning "Ignoring patch file $$i: distinfo not found"; \
 				continue;				\
