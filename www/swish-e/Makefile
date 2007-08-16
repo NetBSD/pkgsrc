@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2007/02/22 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/08/16 00:14:42 joerg Exp $
 
-DISTNAME=	swish-e-2.4.3
-PKGREVISION=	# empty
+DISTNAME=	swish-e-2.4.5
 CATEGORIES=	www textproc
 MASTER_SITES=	http://swish-e.org/distribution/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swish-e.org/
 COMMENT=	Simple web indexing for humans - enhanced
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -18,14 +19,6 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=	LIBSWISH_E="@comment "
-.else
-PLIST_SUBST+=	LIBSWISH_E=
-.endif
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
