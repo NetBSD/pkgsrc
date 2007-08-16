@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.37 2007/08/15 13:24:14 joerg Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.38 2007/08/16 03:09:38 joerg Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -121,6 +121,8 @@ TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
 .endfor
 
+TOOLS_PATH.ar?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ar
+TOOLS_CREATE+=			ar
 TOOLS_PATH.ranlib?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ranlib
 TOOLS_CREATE+=			ranlib
 
