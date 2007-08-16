@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/07/17 10:56:07 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/16 08:59:43 tnn Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -7,7 +7,7 @@
 # from being ABI compatible across releases until this is fixed.
 # [tvierling 20070210]
 
-DISTNAME=	libevent-1.3b
+DISTNAME=	libevent-1.3d
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 
@@ -18,8 +18,12 @@ COMMENT=	Asynchronous event notification library
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	verify
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LIBS.SunOS+=	-lnsl -lresolv
+
+# XXX helps build, but needs more testing
+#CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
 
 .include "../../mk/bsd.prefs.mk"
 
