@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/08/16 22:39:14 joerg Exp $
 #
 
 DISTNAME=	pload-0.9.4
@@ -11,11 +11,13 @@ HOMEPAGE=	http://web.archive.org/web/20050305142516/http://www.engr.utk.edu/~mds
 COMMENT=	PPP monitor for X11, monitoring totals and current in/out rates
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	imake
 USE_X11BASE=	YES
 INSTALL_TARGET=	install install.man
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
