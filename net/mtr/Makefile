@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/01/07 09:14:04 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2007/08/16 23:12:20 joerg Exp $
 
 DISTNAME=	mtr-0.72
 CATEGORIES=	net
@@ -9,10 +9,11 @@ HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 
 .include "options.mk"
 
@@ -22,10 +23,9 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
-	${INSTALL} -c -s -m 4755 -o ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC}/mtr ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr
+	${INSTALL} -c -s -m 4755 -o ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC}/mtr ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
