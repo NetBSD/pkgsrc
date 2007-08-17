@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/10/15 23:07:21 tonio Exp $
+# $NetBSD: options.mk,v 1.2 2007/08/17 22:27:15 joerg Exp $
 
 # Global and legacy options
 
@@ -12,7 +12,6 @@ PKG_SUGGESTED_OPTIONS=
 ### x11 support
 ###
 .if !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mmotif)
-.  include "../../mk/x11.buildlink3.mk"
 PLIST_SUBST+= WITHX11=""
 .  if !empty(PKG_OPTIONS:Mxaw)
 PLIST_SUBST+= WITHXAW=""
