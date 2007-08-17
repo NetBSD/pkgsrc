@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2007/06/21 13:48:27 tnn Exp $
+$NetBSD: patch-ac,v 1.3 2007/08/17 23:24:12 tnn Exp $
 
 --- src/makefile.bsd.orig	2006-10-18 00:00:00.000000000 +0200
 +++ src/makefile.bsd
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.2 2007/06/21 13:48:27 tnn Exp $
  
  # directories for target "make install"
 -prefix	= $(root)/usr
-+prefix	= ${PREFIX}
++prefix	= ${DESTDIR}${PREFIX}
  bindir	= $(prefix)/bin
 -mandir	= $(prefix)/share/man
 +mandir	= $(prefix)/${PKGMANDIR}
