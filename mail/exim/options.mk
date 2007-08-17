@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2007/05/18 14:24:17 abs Exp $
+# $NetBSD: options.mk,v 1.13 2007/08/17 22:55:52 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
@@ -38,7 +38,7 @@ LOCAL_MAKEFILE_OPTIONS+=SUPPORT_MBX=yes
 LOCAL_MAKEFILE_OPTIONS+=EXIM_MONITOR=eximon.bin
 LOCAL_MAKEFILE_OPTIONS+=X11=${X11BASE}
 PLIST_SRC+=${PKGDIR}/PLIST.eximon
-.  include "../../mk/x11.buildlink3.mk"
+.  include "../../x11/libXaw/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-content-scan)
