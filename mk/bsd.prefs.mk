@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.264 2007/08/15 13:25:47 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.265 2007/08/17 20:27:30 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -497,16 +497,7 @@ USE_XPKGWEDGE=	no
 USE_XPKGWEDGE?=	yes
 .endif
 
-# Default installation prefix for meta-pkgs/xorg.
-.if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-X11ROOT_PREFIX?=	xorg
-.else
-X11ROOT_PREFIX?=	# empty
-.endif
-
-.if ${X11_TYPE} == "xorg"
-X11BASE?=		${LOCALBASE}/${X11ROOT_PREFIX}
-.elif ${X11_TYPE} == "modular"
+.if ${X11_TYPE} == "modular"
 X11BASE=		${LOCALBASE}
 .endif
 
