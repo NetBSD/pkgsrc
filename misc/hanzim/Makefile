@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/17 22:38:01 joerg Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -21,9 +21,9 @@ BUILD_TARGET=	hanzim
 #MAKE_ENV+=	SHELL=${SH:Q} LC_CTYPE=en_US.ISO8859-1
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 pre-install:
 	@if ${TEST} -z "$$DISPLAY"; then				\
