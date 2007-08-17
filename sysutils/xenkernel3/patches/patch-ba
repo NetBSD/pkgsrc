@@ -1,0 +1,14 @@
+$NetBSD: patch-ba,v 1.1 2007/08/17 17:26:04 bouyer Exp $
+
+--- xen/arch/x86/domain_build.c.orig	2007-08-16 21:34:39.000000000 +0200
++++ xen/arch/x86/domain_build.c	2007-08-16 21:43:18.000000000 +0200
+@@ -312,6 +312,9 @@
+            parms.pae       ? ", PAE"  : "",
+            elf_msb(&elf)   ? "msb"    : "lsb",
+            elf.pstart, elf.pend);
++    if ( elf.bsd_symtab_pstart )
++        printk(" Dom0 symbol map 0x%" PRIx64 " -> 0x%" PRIx64 "\n",
++               elf.bsd_symtab_pstart, elf.bsd_symtab_pend);
+ 
+     if ( !compatible )
+     {
