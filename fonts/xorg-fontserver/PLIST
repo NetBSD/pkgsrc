@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 21:53:58 joerg Exp $
-${X11ROOT_PREFIX}/bin/xfs
-${X11ROOT_PREFIX}/lib/X11/fs/config
-${X11ROOT_PREFIX}/${MAN_DIR}/xfs.${MAN_SUFFIX}
-@dirrm ${X11ROOT_PREFIX}/lib/X11/fs
