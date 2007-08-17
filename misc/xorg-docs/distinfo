@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
-
-SHA1 (X11R6.9.0-src1.tar.gz) = a6c077ed8fdeee5fe1956a427c4cb0bc266e1bef
-RMD160 (X11R6.9.0-src1.tar.gz) = d12270a4f41a3ceee4bfd5da22d387a3aa707df8
-Size (X11R6.9.0-src1.tar.gz) = 33460996 bytes
-SHA1 (X11R6.9.0-src6.tar.gz) = afe5bd48ce6a3907bb1c8bb37b343c72348355ae
-RMD160 (X11R6.9.0-src6.tar.gz) = 59c325e2dc9e171ae00dfba528217a705bf5f951
-Size (X11R6.9.0-src6.tar.gz) = 3193662 bytes
