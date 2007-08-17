@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink3.mk,v 1.7 2006/12/01 13:05:53 joerg Exp $
+# $NetBSD: x11.buildlink3.mk,v 1.8 2007/08/17 20:27:30 joerg Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require an X11 distribution.  x11.buildlink3.mk will include the
@@ -18,9 +18,9 @@ USE_X11=	yes
 # Sanity checks.
 #
 
-.  if ${X11_TYPE} != "native" && ${X11_TYPE} != "xorg"
+.  if ${X11_TYPE} != "native" 
 _WRONG_X11_TYPE:=	${X11_TYPE}
-PKG_FAIL_REASON+=	"[x11.version.mk] X11_TYPE must either be \"xorg\" or \"native\", but not \"${_WRONG_X11_TYPE:Q}\"."
+PKG_FAIL_REASON+=	"Do not include x11.version.mk for X11_TYPE != \"native\"."
 X11_TYPE:=		native
 X11BASE:=		/usr
 .  endif
