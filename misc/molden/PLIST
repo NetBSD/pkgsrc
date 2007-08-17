@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 19:15:48 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/17 21:38:23 joerg Exp $
 bin/molden
 share/molden/doc/figures.ps.Z
 share/molden/doc/manual.ps.Z
 share/molden/doc/manual.txt.Z
 share/molden/test/adf.molf
+share/molden/test/ambfor_amber.xyz
+share/molden/test/ambfor_gaff.xyz
 share/molden/test/ampac.arc
 share/molden/test/ampac.test
 share/molden/test/bucky.xyz
 share/molden/test/chemx.test
 share/molden/test/complex2.out
+share/molden/test/cpeptide.gro
 share/molden/test/esp.test
 share/molden/test/esp.txt
 share/molden/test/esp.xyz
@@ -28,6 +31,8 @@ share/molden/test/molden.ogl
 share/molden/test/mopac.freq
 share/molden/test/mopac.test
 share/molden/test/pdb.test
+share/molden/test/pdb.test.omap
+share/molden/test/qchem.test
 share/molden/test/reacpth.xyz
 share/molden/test/shelx.ins
 share/molden/test/surface.molf
