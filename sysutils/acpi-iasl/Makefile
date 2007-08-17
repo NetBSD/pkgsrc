@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/26 16:24:53 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/17 20:14:55 joerg Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPI_IASL_VERSION}
@@ -13,6 +13,7 @@ COMMENT=	Compiler of Intel ACPI CA - Unix Build Environment
 ACPI_IASL_VERSION=	20060217
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin share/doc/acpi-iasl
 
@@ -23,9 +24,9 @@ do-build:
 	@cd ${WRKSRC}/tools/acpisrc && ${MAKE_PROGRAM}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/compiler/iasl ${PREFIX}/bin/acpi-iasl
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpisrc/acpisrc ${PREFIX}/bin/acpisrc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/acpi-iasl
-	${INSTALL_DATA} ${FILESDIR}/LICENSE ${PREFIX}/share/doc/acpi-iasl
+	${INSTALL_PROGRAM} ${WRKSRC}/compiler/iasl ${DESTDIR}${PREFIX}/bin/acpi-iasl
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/acpisrc/acpisrc ${DESTDIR}${PREFIX}/bin/acpisrc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/acpi-iasl
+	${INSTALL_DATA} ${FILESDIR}/LICENSE ${DESTDIR}${PREFIX}/share/doc/acpi-iasl
 
 .include "../../mk/bsd.pkg.mk"
