@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1819 2007/08/17 02:46:29 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1820 2007/08/17 03:23:02 smb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed emulators/compat14-crypto [jlam 2007-08-16]
 	Updated mail/claws-mail-vcalendar to 1.96nb1 [smb 2007-08-16]
 	Updated mail/claws-mail-newmail to 0.0.10nb1 [smb 2007-08-16]
+	Updated mail/claws-mail to 2.10.0nb2 [smb 2007-08-16]
