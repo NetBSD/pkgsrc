@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2005/04/04 08:56:18 adam Exp $
+$NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
 
---- configure.orig	2005-02-28 22:10:33.000000000 +0000
+--- configure.orig	2005-02-28 23:10:33.000000000 +0100
 +++ configure
 @@ -5938,7 +5938,7 @@ if [ $host_os3 = hpux ] ; then
  fi
@@ -29,10 +29,12 @@ $NetBSD: patch-ab,v 1.8 2005/04/04 08:56:18 adam Exp $
    # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
    # check for ICE first), but we must link in the order -lSM -lICE or
    # we get undefined symbols.  So assume we have SM if we have ICE.
-@@ -7738,6 +7738,8 @@ if test X$use_floppyd = Xyes; then
+@@ -7737,7 +7737,9 @@ if test X$use_floppyd = Xyes; then
+ 	exit 1
      fi
      FLOPPYD="floppyd floppyd_installtest"
-     BINFLOPPYD="\$(bindir)/floppyd \$(bindir)/floppyd_installtest"
+-    BINFLOPPYD="\$(bindir)/floppyd \$(bindir)/floppyd_installtest"
++    BINFLOPPYD="\${DESTDIR}\$(bindir)/floppyd \${DESTDIR}\$(bindir)/floppyd_installtest"
 +    MANFLOPPYD="floppyd.1"
 +    MANFLOPPYD_INSTTEST="floppyd_installtest.1"
  
@@ -47,7 +49,7 @@ $NetBSD: patch-ab,v 1.8 2005/04/04 08:56:18 adam Exp $
  fi
  
  
-@@ -8401,6 +8405,8 @@ s,@X_LIBS@,$X_LIBS,;t t
+@@ -8401,6 +8407,8 @@ s,@X_LIBS@,$X_LIBS,;t t
  s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
  s,@FLOPPYD@,$FLOPPYD,;t t
  s,@BINFLOPPYD@,$BINFLOPPYD,;t t
