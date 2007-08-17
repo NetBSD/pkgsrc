@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2007/08/13 08:12:46 rillig Exp $
+# $NetBSD: Makefile,v 1.106 2007/08/17 20:25:03 joerg Exp $
 #
 
 COMMENT=	Fonts
@@ -142,13 +142,5 @@ SUBDIR+=	vera-ttf
 SUBDIR+=	vfontcap-kochi
 SUBDIR+=	watanabe_vfont
 SUBDIR+=	xmbdfed
-SUBDIR+=	xorg-fonts100dpi
-SUBDIR+=	xorg-fonts75dpi
-SUBDIR+=	xorg-fontsCyrillic
-SUBDIR+=	xorg-fontsEncodings
-SUBDIR+=	xorg-fontsMisc
-SUBDIR+=	xorg-fontsTruetype
-SUBDIR+=	xorg-fontsType1
-SUBDIR+=	xorg-fontserver
 
 .include "../mk/misc/category.mk"
