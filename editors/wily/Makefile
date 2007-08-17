@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/08/17 23:46:17 agc Exp $
 #
 
 DISTNAME=	wily-0.13.41
@@ -13,6 +13,7 @@ COMMENT=	Unix/X11 clone of the Plan9 acme editor/environment
 
 GNU_CONFIGURE=	yes
 CONFIGURE_HAS_MANDIR=	no
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	libXgFonts>=1.0nb1:../../fonts/Xg
 
