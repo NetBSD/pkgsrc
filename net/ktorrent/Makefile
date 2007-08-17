@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2007/07/31 12:30:16 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/17 16:05:48 abs Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
-PKGREVISION=	1
 CATEGORIES=	net kde
 MASTER_SITES=	http://ktorrent.org/downloads/${KTORRENT_VER}/
 
-KTORRENT_VER=	2.2
+KTORRENT_VER=	2.2.1
 
 MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://ktorrent.org/
@@ -15,7 +14,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt pkg-config bash:run perl:run
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		
 
 REPLACE_BASH=	scripts/ktshell
 
