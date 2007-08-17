@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2007/06/16 10:44:57 agc Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/17 22:41:48 agc Exp $
 
-DISTNAME=	netbsd-iscsi-20070615
+DISTNAME=	netbsd-iscsi-20070815
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
@@ -13,12 +13,14 @@ CONFIGURE_DIRS=	src
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin share/doc/iscsi
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/iscsi-target ${PREFIX}/sbin/iscsi-target
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/iscsi-harness ${PREFIX}/sbin/iscsi-harness
-	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${PREFIX}/share/doc/iscsi/FAQ
-	${INSTALL_MAN} ${WRKSRC}/src/iscsi-target.8 ${PREFIX}/${PKGMANDIR}/man8/iscsi-target.8
-	${INSTALL_MAN} ${WRKSRC}/src/targets.5 ${PREFIX}/${PKGMANDIR}/man5/targets.5
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/iscsi-target ${DESTDIR}${PREFIX}/sbin/iscsi-target
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/iscsi-harness ${DESTDIR}${PREFIX}/sbin/iscsi-harness
+	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${DESTDIR}${PREFIX}/share/doc/iscsi/FAQ
+	${INSTALL_MAN} ${WRKSRC}/src/iscsi-target.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/iscsi-target.8
+	${INSTALL_MAN} ${WRKSRC}/src/targets.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/targets.5
 
 .include "../../mk/pthread.buildlink3.mk"
 
