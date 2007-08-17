@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/05/28 20:14:00 heinz Exp $
+# $NetBSD: Makefile,v 1.49 2007/08/17 22:33:35 joerg Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -48,5 +48,6 @@ post-install:
 	    find share/doc/urt share/examples/urt -type f -print | xargs chmod 444
 
 .include "../../graphics/netpbm/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
