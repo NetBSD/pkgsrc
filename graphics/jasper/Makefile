@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/08/12 21:53:42 salo Exp $
+# $NetBSD: Makefile,v 1.27 2007/08/17 22:18:15 joerg Exp $
 
 DISTNAME=	jasper-1.900.1
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.ece.uvic.ca/~mdadams/jasper/
 COMMENT=	Software-based reference implementation of the JPEG-2000 codec
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
@@ -20,9 +21,8 @@ CONFIGURE_ARGS+=	--enable-shared --without-x --disable-opengl
 INSTALLATION_DIRS+=	share/doc/jasper
 
 post-install:
-.for doc in jasper jpeg2000
-	${INSTALL_DATA} ${WRKSRC}/doc/${doc}.pdf ${PREFIX}/share/doc/jasper
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/doc/jasper.pdf ${DESTDIR}${PREFIX}/share/doc/jasper
+	${INSTALL_DATA} ${WRKSRC}/doc/jpeg2000.pdf ${DESTDIR}${PREFIX}/share/doc/jasper
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
