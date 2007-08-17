@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1824 2007/08/17 20:26:18 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1825 2007/08/17 21:40:31 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3349,3 +3349,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed fonts/xorg-fontserver [joerg 2007-08-17]
 	Removed meta-pkgs/xorg [joerg 2007-08-17]
 	Removed misc/xorg-docs [joerg 2007-08-17]
+	Updated misc/molden to 4.6 [joerg 2007-08-17]
