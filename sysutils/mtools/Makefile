@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/07 19:54:17 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/08/17 20:55:34 joerg Exp $
 
 DISTNAME=	mtools-3.9.10
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
 COMMENT=	FAT (MS-DOS, Atari) disk access tools
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
 GNU_CONFIGURE=		YES
@@ -19,7 +21,9 @@ INFO_FILES=		# PLIST
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(MTOOLS_ENABLE_FLOPPYD) && !empty(MTOOLS_ENABLE_FLOPPYD:M[Yy][Ee][Ss])
-.include "../../mk/x11.buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 CPPFLAGS+=		-I${X11BASE}/include
 CONFIGURE_ARGS+=	--enable-floppyd
 PLIST_SUBST+=		NOFLOPPYD=
