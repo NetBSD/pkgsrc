@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1821 2007/08/17 11:30:02 he Exp $
+$NetBSD: CHANGES-2007,v 1.1822 2007/08/17 16:06:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/claws-mail-newmail to 0.0.10nb1 [smb 2007-08-16]
 	Updated mail/claws-mail to 2.10.0nb2 [smb 2007-08-16]
 	Added misc/p5-Geo-Coordinates-UTM version 0.06 [he 2007-08-17]
+	Updated net/ktorrent to version 2.2.1 [abs 2007-08-17]
