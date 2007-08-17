@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.195 2007/08/13 02:30:04 jlam Exp $
+# $NetBSD: replace.mk,v 1.196 2007/08/17 20:27:32 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -988,10 +988,11 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 
 # For modular Xorg, these are individual packages.
 #
-.if ${X11_TYPE} == "modular"
 .if !defined(TOOLS_IGNORE.iceauth) && !empty(_USE_TOOLS:Miceauth)
 .  if !empty(PKGPATH:Mx11/iceauth)
 MAKEFLAGS+=		TOOLS_IGNORE.iceauth=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/iceauth
 .  else
 TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.iceauth=iceauth
@@ -1003,6 +1004,8 @@ TOOLS_CREATE.iceauth=		iceauth
 .if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
 .  if !empty(PKGPATH:Mfonts/mkfontdir)
 MAKEFLAGS+=		TOOLS_IGNORE.mkfontdir=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/mkfontdir
 .  else
 TOOLS_DEPENDS.mkfontdir?=	mkfontdir-[0-9]*:../../fonts/mkfontdir
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontdir=mkfontdir
@@ -1014,6 +1017,8 @@ TOOLS_CREATE.mkfontdir=		mkfontdir
 .if !defined(TOOLS_IGNORE.mkfontscale) && !empty(_USE_TOOLS:Mmkfontscale)
 .  if !empty(PKGPATH:Mfonts/mkfontscale)
 MAKEFLAGS+=		TOOLS_IGNORE.mkfontscale=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/mkfontscale
 .  else
 TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontscale=mkfontscale
@@ -1025,6 +1030,8 @@ TOOLS_CREATE.mkfontscale=	mkfontscale
 .if !defined(TOOLS_IGNORE.bdftopcf) && !empty(_USE_TOOLS:Mbdftopcf)
 .  if !empty(PKGPATH:Mfonts/bdftopcf)
 MAKEFLAGS+=		TOOLS_IGNORE.bdftopcf=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/bdftopcf
 .  else
 TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=bdftopcf
@@ -1036,6 +1043,8 @@ TOOLS_CREATE.bdftopcf=		bdftopcf
 .if !defined(TOOLS_IGNORE.ucs2any) && !empty(_USE_TOOLS:Mucs2any)
 .  if !empty(PKGPATH:Mfonts/font-util)
 MAKEFLAGS+=		TOOLS_IGNORE.ucs2any=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/ucs2any
 .  else
 TOOLS_DEPENDS.ucs2any?=		font-util-[0-9]*:../../fonts/font-util
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ucs2any=ucs2any
@@ -1047,6 +1056,8 @@ TOOLS_CREATE.ucs2any=		ucs2any
 .if !defined(TOOLS_IGNORE.bdftruncate) && !empty(_USE_TOOLS:Mbdftruncate)
 .  if !empty(PKGPATH:Mfonts/font-util)
 MAKEFLAGS+=		TOOLS_IGNORE.bdftruncate=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/bdftruncate
 .  else
 TOOLS_DEPENDS.bdftruncate?=	font-util-[0-9]*:../../fonts/font-util
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftruncate=bdftruncate
@@ -1058,6 +1069,8 @@ TOOLS_CREATE.bdftruncate=	bdftruncate
 .if !defined(TOOLS_IGNORE.xauth) && !empty(_USE_TOOLS:Mxauth)
 .  if !empty(PKGPATH:Mx11/xauth)
 MAKEFLAGS+=		TOOLS_IGNORE.xauth=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/xauth
 .  else
 TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xauth=xauth
@@ -1069,6 +1082,8 @@ TOOLS_CREATE.xauth=		xauth
 .if !defined(TOOLS_IGNORE.xinit) && !empty(_USE_TOOLS:Mxinit)
 .  if !empty(PKGPATH:Mx11/xinit)
 MAKEFLAGS+=		TOOLS_IGNORE.xinit=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/xinit
 .  else
 TOOLS_DEPENDS.xinit?=		xinit-[0-9]*:../../x11/xinit
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xinit=xinit
@@ -1080,38 +1095,14 @@ TOOLS_CREATE.xinit=		xinit
 .if !defined(TOOLS_IGNORE.xmessage) && !empty(_USE_TOOLS:Mxmessage)
 .  if !empty(PKGPATH:Mx11/xmessage)
 MAKEFLAGS+=		TOOLS_IGNORE.xmessage=
+.  elif !empty(X11_TYPE:Mnative)
+TOOLS_PATH.${_t_}=	${X11BASE}/bin/xmessage
 .  else
 TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmessage=xmessage
 TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
 TOOLS_CREATE.xmessage=		xmessage
 .   endif
-.endif
-
-.endif
-
-# Otherwise these tools are all supplied by an X11 clients package if there is no
-# native tool available.
-#
-.if ${X11_TYPE} != "modular"
-_TOOLS.x11-clients=	bdftopcf iceauth mkfontdir mkfontscale xauth xinit xmessage
-
-.for _t_ in ${_TOOLS.x11-clients}
-.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mx11/xorg-clients)
-MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_CREATE+=		${_t_}
-.      if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.${_t_}?=	xorg-clients>=6.8:../../x11/xorg-clients
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-clients
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
-.      else # !empty(X11_TYPE:Mnative)
-TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
-.      endif
-.    endif
-.  endif
-.endfor
 .endif
 
 ######################################################################
@@ -1132,10 +1123,6 @@ TOOLS_CREATE+=		${_t_}
 TOOLS_DEPENDS.${_t_}?=	nbitools>=6.3nb4:../../devel/nbitools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=nbitools
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
-.      elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.${_t_}?=	xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=xorg-imake
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
 .      elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
 TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
@@ -1157,10 +1144,6 @@ TOOLS_CREATE+=		makedepend
 TOOLS_DEPENDS.makedepend?=	nbitools>=6.3nb4:../../devel/nbitools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=nbitools
 TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/libexec/itools/makedepend
-.    elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
-TOOLS_DEPENDS.makedepend?=	xorg-imake>=6.8:../../x11/xorg-imake
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=xorg-imake
-TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/${X11ROOT_PREFIX}/bin/makedepend
 .    elif defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
 TOOLS_DEPENDS.makedepend?=	makedepend-[0-9]*:../../devel/makedepend
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=makedepend
