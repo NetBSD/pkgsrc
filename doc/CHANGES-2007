@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1826 2007/08/17 22:43:10 agc Exp $
+$NetBSD: CHANGES-2007,v 1.1827 2007/08/17 23:25:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3351,3 +3351,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed misc/xorg-docs [joerg 2007-08-17]
 	Updated misc/molden to 4.6 [joerg 2007-08-17]
 	Updated devel/netbsd-iscsi to 20070815 [agc 2007-08-17]
+	Updated editors/mined to 2000.14 [tnn 2007-08-17]
