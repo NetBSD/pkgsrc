@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:51:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/08/18 14:26:59 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/termios.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/termios.rb
 ${RUBY_DOCDIR}/termios/ChangeLog
 ${RUBY_DOCDIR}/termios/README
 ${RUBY_DOCDIR}/termios/TODO.ja
