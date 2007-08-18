@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.107 2007/08/14 00:26:58 rillig Exp $
+# $NetBSD: bootstrap,v 1.108 2007/08/18 11:01:28 schwarz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -740,8 +740,8 @@ echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${TARGET_MKCONF}
 echo "PKGMANDIR=		$pkgmandir" >> ${TARGET_MKCONF}
 echo "" >> ${TARGET_MKCONF}
 
-cp ${TARGET_MKCONF} $wrkdir/mk.conf
 BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
+cp ${TARGET_MKCONF} ${BOOTSTRAP_MKCONF}
 
 # sbin is used by pkg_install, share/mk by bootstrap-mk-files
 mkdir_p $wrkdir/sbin $wrkdir/share/mk
@@ -888,17 +888,14 @@ if test -n "$XARGS"; then
 fi
 if test -n "$CFLAGS"; then
 	echo "CFLAGS+=		$CFLAGS" >> ${TARGET_MKCONF}
-	echo "CFLAGS+=		$CFLAGS" >> ${BOOTSTRAP_MKCONF}
 	echo "DBG=			# prevent DBG from adding default optimizer flags" >> ${TARGET_MKCONF}
 	echo "DBG=			# prevent DBG from adding default optimizer flags" >> ${BOOTSTRAP_MKCONF}
 fi
 if test -n "$CPPFLAGS"; then
 	echo "CPPFLAGS+=		$CPPFLAGS" >> ${TARGET_MKCONF}
-	echo "CPPFLAGS+=		$CPPFLAGS" >> ${BOOTSTRAP_MKCONF}
 fi
 if test -n "$LDFLAGS"; then
 	echo "LDFLAGS+=		$LDFLAGS" >> ${TARGET_MKCONF}
-	echo "LDFLAGS+=		$LDFLAGS" >> ${BOOTSTRAP_MKCONF}
 fi
 
 # opsys specific fiddling
