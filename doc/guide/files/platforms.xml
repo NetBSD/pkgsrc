@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.56 2007/08/15 06:33:46 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.57 2007/08/18 07:13:07 weinem Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -303,6 +303,12 @@ file and inspect the contents before extracting it.
 
 	<para>Allow suid:</para>
 	<screen>&rprompt; <userinput>sudo mount -u -o suid /Volumes/NetBSD</userinput></screen>
+
+	<para>Changing the build directory:</para>
+	<para>After bootstrapping you need to change the default package build directory to somewhere outside the disk image so it doesn't get filled up in the process of building packages. Add something like that to <filename>mk.conf</filename>.</para>
+	<programlisting>
+	  WRKOBJDIR?=		/tmp/pkgsrc         # build here instead of in pkgsrc
+	</programlisting>
       </sect3>
 
       <sect3 id="platform.osx-part">
