@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/06/24 05:34:42 taca Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/18 14:30:52 taca Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -16,4 +16,11 @@ EMACS_VERSIONS_ACCEPTED= emacs21 emacs21nox emacs20 emacs22
 EMACS_MODULES+=	leim
 
 .include "../../mk/emacs.mk"
+
+.if !empty(_EMACS_TYPE:Nxemacs*) && ${EMACS_VERSION_MAJOR} >= 21
+PLIST_SUBST+=	HAVE_JISX0213=	# empty
+.else
+PLIST_SUBST+=	HAVE_JISX0213="@comment "
+.endif
+
 .include "../../mk/bsd.pkg.mk"
