@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/08/07 19:38:11 jlam Exp $
+$NetBSD: distinfo,v 1.5 2007/08/18 16:47:48 rillig Exp $
 
-MD5 (mksh-R30.cpio.gz) = 184a63aa5b1450581dc463148f3d245e
-RMD160 (mksh-R30.cpio.gz) = a23a1df6d7158e78283422d64db19a15f10e81b8
 SHA1 (mksh-R30.cpio.gz) = 2784ffb60e53d0739b06512f1642d867ccd23319
-SHA256 (mksh-R30.cpio.gz) = c03b06a85401a2dada6a9c8f7141e54d4160025b0b4e508b8507a358a61a9dc2
+RMD160 (mksh-R30.cpio.gz) = a23a1df6d7158e78283422d64db19a15f10e81b8
 Size (mksh-R30.cpio.gz) = 245700 bytes
-TIGER (mksh-R30.cpio.gz) = e5e8cdd8edc7530a8b486c5fc00b551aafe396954c147a95
