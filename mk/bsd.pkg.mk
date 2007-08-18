@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1921 2007/08/13 06:03:46 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1922 2007/08/18 00:30:21 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -480,6 +480,12 @@ PATH=	${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 #
 # Don't build a package if it's broken.
 ################################################################
+.if ${X11_TYPE} == "xorg"
+PKG_FAIL_REASON+=	"Support for X11_TYPE=xorg was removed."
+PKG_FAIL_REASON+=	"Please switch to X11_TYPE=modular."
+X11_TYPE:=		native
+X11BASE:=		/usr
+.endif
 
 .if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
