@@ -1099,6 +1099,15 @@ Allow suid:
 
 # sudo mount -u -o suid /Volumes/NetBSD
 
+Changing the build directory:
+
+After bootstrapping you need to change the default package build directory to
+somewhere outside the disk image so it doesn't get filled up in the process of
+building packages. Add something like that to mk.conf.
+
+          WRKOBJDIR?=           /tmp/pkgsrc         # build here instead of in pkgsrc
+
+
 3.3.1.2. Using a UFS or HFSX partition
 
 By default, /usr will be on your root file system, normally HFS+. It is
@@ -1564,17 +1573,9 @@ packages from someone else.
 
 To use binary packages, you need some tools to manage them. On NetBSD, these
 tools are already installed. On all other operating systems, you need to
-install them first. For the following platforms, prebuilt versions of the
-package tools are available and can simply be downloaded and unpacked in the /
-directory:
-
-+------------------------------------------------------------------------+
-| Platform |                             URL                             |
-|----------+-------------------------------------------------------------|
-|Solaris 9 |ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/|
-|----------+-------------------------------------------------------------|
-|Solaris 10|http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/      |
-+------------------------------------------------------------------------+
+install them first. For some platforms, these tools are already packages in an
+archive, ready to be extracted in the / directory. They can be found in the
+bootstrap-pkgsrc directory of the FTP server.
 
 These pre-built package tools use /usr/pkg for the base directory, and /var/db/
 pkg for the database of installed packages. If you cannot use these directories
@@ -1584,29 +1585,17 @@ pkgsrc".
 
 4.1.1. Finding binary packages
 
-To install binary packages, you first need to know from where to get them. You
-can get them on CD-ROMs, DVDs, or via FTP or HTTP.
+To install binary packages, you first need to know from where to get them. The
+first place where you should look is on the main pkgsrc FTP server in the
+directory /pub/pkgsrc/packages.
 
-The binary packages can be found at the following locations.
-
-+-------------------------------------------------------+
-| Platform |                    URL                     |
-|----------+--------------------------------------------|
-|NetBSD    |ftp://ftp.NetBSD.org/pub/NetBSD/packages/   |
-|----------+--------------------------------------------|
-|Solaris 9 |ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/|
-|----------+--------------------------------------------|
-|Solaris 10|http://public.enst.fr/pkgsrc/packages/      |
-+-------------------------------------------------------+
-
-Most of these directories contain binary packages for multiple platforms.
-Select the appropriate subdirectories, according to your machine architecture
-and operating system, until you find a directory called All. This directory
-contains all the binary packages. Further, there are subdirectories for
-categories that contain symbolic links that point to the actual binary package
-in ../All. This directory layout is used for all package repositories, no
-matter if they are accessed via HTTP, FTP, NFS, CD-ROM, or the local
-filesystem.
+This directory contains binary packages for multiple platforms. First, select
+your operating system. (Ignore the directories with version numbers attached to
+it, they just exist for legacy reasons.) Then, select your hardware
+architecture, and in the third step, the OS version and the "version" of
+pkgsrc. This directory contains a subdirectory called All, where (almost) all
+binary packages are stored. Almost, because vulnerable packages are moved to
+the vulnerable directory so they don't get installed accidentally.
 
 4.1.2. Installing binary packages
 
@@ -1619,7 +1608,7 @@ If you have FTP access and you don't want to download the packages via FTP
 prior to installation, you can do this automatically by giving pkg_add an FTP
 URL:
 
-# pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All/package
+# pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/OPSYS/ARCH/VERSIONS/All/package
 
 Note that any prerequisite packages needed to run the package in question will
 be installed, too, assuming they are present where you install from.

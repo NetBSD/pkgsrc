@@ -554,14 +554,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&mdash; That means, if a package contains bugs, it's better to find
+&#8212; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&mdash; Like NetBSD has been ported to many hardware architectures,
+&#8212; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -1362,6 +1362,11 @@ file and inspect the contents before extracting it.
 </div>
 <p>Allow suid:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid /Volumes/NetBSD</code></strong></pre>
+<p>Changing the build directory:</p>
+<p>After bootstrapping you need to change the default package build directory to somewhere outside the disk image so it doesn't get filled up in the process of building packages. Add something like that to <code class="filename">mk.conf</code>.</p>
+<pre class="programlisting">
+	  WRKOBJDIR?=		/tmp/pkgsrc         # build here instead of in pkgsrc
+	</pre>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
@@ -1867,34 +1872,12 @@ and you can still use binary packages from someone else.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-pkg"></a>4.1. Using binary packages</h2></div></div></div>
-<p>To use binary packages, you need some tools to manage
-  them. On NetBSD, these tools are already installed. On all other
-  operating systems, you need to install them first. For the
-  following platforms, prebuilt versions of the package tools
-  are available and can simply be downloaded and unpacked in the
-  <code class="filename">/</code> directory:</p>
-<div class="informaltable">
-<a name="binary-bootstrap-kits"></a><table border="1">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead><tr>
-<th>Platform</th>
-<th>URL</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Solaris 9</td>
-<td><code class="filename">ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/</code></td>
-</tr>
-<tr>
-<td>Solaris 10</td>
-<td><code class="filename">http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</code></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>To use binary packages, you need some tools to manage them. On
+  NetBSD, these tools are already installed. On all other operating
+  systems, you need to install them first. For some platforms, these
+  tools are already packages in an archive, ready to be extracted in the
+  <code class="filename">/</code> directory. They can be found in the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/bootstrap-pkgsrc" target="_top"><code class="filename">bootstrap-pkgsrc</code></a>
+  directory of the FTP server.</p>
 <p>These pre-built package tools use
   <code class="filename">/usr/pkg</code> for the base directory, and
   <code class="filename">/var/db/pkg</code> for the database of installed
@@ -1904,47 +1887,19 @@ and you can still use binary packages from someone else.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="finding-binary-packages"></a>4.1.1. Finding binary packages</h3></div></div></div>
-<p>To install binary packages, you first need to know from
-    where to get them. You can get them on CD-ROMs, DVDs, or via FTP
-    or HTTP.</p>
-<p>The binary packages can be found at the following
-    locations.</p>
-<div class="informaltable">
-<a name="binary-packages"></a><table border="1">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead><tr>
-<th>Platform</th>
-<th>URL</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>NetBSD</td>
-<td><code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/</code></td>
-</tr>
-<tr>
-<td>Solaris 9</td>
-<td><code class="filename">ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</code></td>
-</tr>
-<tr>
-<td>Solaris 10</td>
-<td><code class="filename">http://public.enst.fr/pkgsrc/packages/</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Most of these directories contain binary packages for
-    multiple platforms. Select the appropriate subdirectories,
-    according to your machine architecture and operating system,
-    until you find a directory called <code class="filename">All</code>. This
-    directory contains all the binary packages. Further, there are
-    subdirectories for categories that contain symbolic links that
-    point to the actual binary package in
-    <code class="filename">../All</code>. This directory layout is used for
-    all package repositories, no matter if they are accessed via
-    HTTP, FTP, NFS, CD-ROM, or the local filesystem.</p>
+<p>To install binary packages, you first need to know from where
+    to get them. The first place where you should look is on the main
+    pkgsrc FTP server in the directory <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/" target="_top"><code class="filename">/pub/pkgsrc/packages</code></a>.</p>
+<p>This directory contains binary packages for multiple
+    platforms. First, select your operating system. (Ignore the
+    directories with version numbers attached to it, they just exist for
+    legacy reasons.) Then, select your hardware architecture, and in the
+    third step, the OS version and the &#8220;<span class="quote">version</span>&#8221; of pkgsrc.
+    This directory contains a subdirectory called
+    <code class="filename">All</code>, where (almost) all binary packages are
+    stored. Almost, because vulnerable packages are moved to the
+    <code class="filename">vulnerable</code> directory so they don't get
+    installed accidentally.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -1956,7 +1911,7 @@ and you can still use binary packages from someone else.</p>
 <p>If you have FTP access and you don't want to download the
     packages via FTP prior to installation, you can do this
     automatically by giving <span><strong class="command">pkg_add</strong></span> an FTP URL:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package</code></strong></pre>
+<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>VERSIONS</code></em>/All/<em class="replaceable"><code>package</code></em></code></strong></pre>
 <p>Note that any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
     present where you install from.</p>
@@ -2400,7 +2355,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &mdash; it is an internal definition which refers to the
+	    &#8212; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2951,7 +2906,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -4579,7 +4534,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &mdash;
+      kqueue support, add a check that detects kqueue itself &#8212;
       yes, this generally involves patching the
       <span><strong class="command">configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4950,7 +4905,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -7555,7 +7510,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2708318"></a><b>17.4.1.</b>
+<a name="tools.new"></a><a name="id2707918"></a><b>17.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7565,7 +7520,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2708328"></a><b>17.4.2.</b>
+<a name="tools.listall"></a><a name="id2707928"></a><b>17.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7576,7 +7531,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2708339"></a><b>17.4.3.</b>
+<a name="tools.used"></a><a name="id2708007"></a><b>17.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9577,7 +9532,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2714146"></a><b>21.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713609"></a><b>21.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9593,7 +9548,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2714184"></a><b>21.2.</b>
+<a name="devfaq.make"></a><a name="id2713648"></a><b>21.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9611,7 +9566,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2714225"></a><b>21.3.</b>
+<a name="devfaq.cc"></a><a name="id2713688"></a><b>21.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9629,7 +9584,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2714264"></a><b>21.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2713728"></a><b>21.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9642,7 +9597,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2714353"></a><b>21.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2713816"></a><b>21.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9658,7 +9613,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2714382"></a><b>21.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2713846"></a><b>21.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9682,7 +9637,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2714459"></a><b>21.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2713923"></a><b>21.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9707,7 +9662,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2714498"></a><b>21.8.</b>
+<a name="devfaq.documentation"></a><a name="id2713961"></a><b>21.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9755,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2714628"></a><b>21.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2714160"></a><b>21.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9771,7 +9726,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &mdash; it contains a list of suggested new packages and a list of
+    &#8212; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10289,8 +10244,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>23.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&mdash;after
-	inclusion&mdash;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&#8212;after
+	inclusion&#8212;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
