@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.3 2007/08/08 16:59:11 abs Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.4 2007/08/18 17:31:51 veego Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -733,6 +733,7 @@ java/sun-1.5/plugin/i386/ns7/libjavaplugin_oji.so
 @dirrm java/sun-1.5/lib/i386
 @dirrm java/sun-1.5/lib/fonts
 @dirrm java/sun-1.5/lib/ext
+@dirrm java/sun-1.5/lib/deploy
 @dirrm java/sun-1.5/lib/cmm
 @dirrm java/sun-1.5/lib/audio
 @exec ${MKDIR} %D/java/sun-1.5/lib/applet
