@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6602 2007/08/16 09:27:03 tnn Exp $
+$NetBSD: TODO,v 1.6603 2007/08/18 17:41:01 veego Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ Suggested package updates
 	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seamonkey-1.1.4
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
@@ -1153,9 +1152,6 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
-	o sudo-1.6.9p3
-	o sun-jdk15-5.0.12
-	o sun-jre15-5.0.12
 	o sunbird-0.5 [ghen]
 	o suse_base-10.2
 	o svk-2.0.2
@@ -1288,7 +1284,6 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorp-1.4
 	o xpad-2.12
-	o xpdf-3.02pl1
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrestop-0.4
