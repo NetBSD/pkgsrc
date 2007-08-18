@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/07/28 08:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/08/18 09:59:48 plunky Exp $
 #
 
 DISTNAME=		ORBit2-2.14.8
@@ -24,6 +24,17 @@ GNU_CONFIGURE=		YES
 #TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ORBit2
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CPPFLAGS+=		-DINET6
+.endif
 
 PKGCONFIG_OVERRIDE=	ORBit-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	ORBit-CosNaming-2.0.pc.in
