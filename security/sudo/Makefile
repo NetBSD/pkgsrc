@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2007/07/27 17:28:48 gdt Exp $
+# $NetBSD: Makefile,v 1.96 2007/08/18 15:09:11 taca Exp $
 #
 
-DISTNAME=		sudo-1.6.9
+DISTNAME=		sudo-1.6.9p4
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -20,10 +20,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ENV+=		NROFFPROG=${CAT} # to always install man instead of cat
+# to always install man instead of cat
+CONFIGURE_ENV+=		NROFFPROG=${CAT:Q}
 CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
 CONFIGURE_ARGS+=	--disable-root-mailer

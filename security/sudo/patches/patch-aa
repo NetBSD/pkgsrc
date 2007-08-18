@@ -1,4 +1,4 @@
-/* $NetBSD: patch-aa,v 1.14 2007/07/23 16:38:36 tls Exp $ */
+$NetBSD: patch-aa,v 1.15 2007/08/18 15:09:13 taca Exp $
 
 --- Makefile.in.orig	2007-07-16 22:53:18.000000000 -0400
 +++ Makefile.in	2007-07-23 05:50:01.000000000 -0400
