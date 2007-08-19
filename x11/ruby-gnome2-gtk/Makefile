@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/29 06:42:34 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/19 03:01:23 taca Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk-${VERSION}
@@ -14,6 +14,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 
 USE_TOOLS+=		pkg-config
+DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
