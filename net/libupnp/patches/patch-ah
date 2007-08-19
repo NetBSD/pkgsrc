@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2007/06/12 21:59:32 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2007/08/19 01:36:23 obache Exp $
 
---- threadutil/inc/ithread.h.orig	2007-06-12 21:46:07.000000000 +0000
+--- threadutil/inc/ithread.h.orig	2007-05-25 14:39:38.000000000 +0000
 +++ threadutil/inc/ithread.h
-@@ -51,7 +51,7 @@ extern "C" {
+@@ -45,7 +45,7 @@ extern "C" {
  #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
  #endif
  
