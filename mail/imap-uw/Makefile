@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2007/08/05 18:41:52 tron Exp $
+# $NetBSD: Makefile,v 1.121 2007/08/19 05:42:35 obache Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -11,7 +11,7 @@
 
 DISTNAME=	imap-2006j2
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -39,7 +39,14 @@ BUILD_TARGET.Linux=	lnp
 .else
 BUILD_TARGET.Linux=	slx
 .endif
+.if ${OPSYS} == Darwin
+LDFLAGS+=		-flat_namespace
+.   if exists(/usr/include/pam/pam_appl.h)
+BUILD_TARGET.Darwin=	oxp
+.   else
 BUILD_TARGET.Darwin=	osx
+.   endif
+.endif
 .if ${OPSYS} == "IRIX"
 .  if ${OS_VERSION} >= 6.5
 BUILD_TARGET.IRIX=	sg6
