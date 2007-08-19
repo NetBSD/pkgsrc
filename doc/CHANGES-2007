@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1833 2007/08/19 01:36:40 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1834 2007/08/19 05:43:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/seahorse to 1.0.1nb2 [obache 2007-08-18]
 	Updated lang/sun-jre15 to 5.0.11nb1 [veego 2007-08-18]
 	Updated net/libupnp to 1.6.0 [obache 2007-08-19]
+	Updated mail/imap-uw to 2006j2nb3 [obache 2007-08-19]
