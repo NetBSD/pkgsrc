@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1837 2007/08/19 17:33:55 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1838 2007/08/19 18:10:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3368,3 +3368,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-Mail-DKIM to 0.28 [heinz 2007-08-19]
 	Updated archivers/p5-Archive-Tar to 1.34 [heinz 2007-08-19]
 	Updated net/p5-Net-OpenID-Consumer to 0.14 [heinz 2007-08-19]
+	Updated net/libtorrent to 0.11.6 [tron 2007-08-19]
+	Updated net/rtorrent to 0.7.6 [tron 2007-08-19]
