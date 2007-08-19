@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/08/19 03:01:23 taca Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/19 14:42:35 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of GTK+-2.x
 CATEGORIES=		x11
 
@@ -18,6 +19,6 @@ DISTINFO_FILE?=		${.CURDIR}/distinfo
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/ruby-rcairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
