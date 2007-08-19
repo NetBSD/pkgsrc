@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1832 2007/08/18 17:33:23 veego Exp $
+$NetBSD: CHANGES-2007,v 1.1833 2007/08/19 01:36:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3358,3 +3358,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-denyhosts to 2.6nb1 [taca 2007-08-18]
 	Updated security/seahorse to 1.0.1nb2 [obache 2007-08-18]
 	Updated lang/sun-jre15 to 5.0.11nb1 [veego 2007-08-18]
+	Updated net/libupnp to 1.6.0 [obache 2007-08-19]
