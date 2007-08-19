@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/06/20 12:54:48 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/19 15:16:11 heinz Exp $
 
 --- src/freetype/SVGCanvasTextFreetype.cpp.orig	2006-06-20 12:31:40.000000000 +0000
 +++ src/freetype/SVGCanvasTextFreetype.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1 2006/06/20 12:54:48 joerg Exp $
    }
  }
  
-+#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR >= 2
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR > 2
 +gint moveto(const FT_Vector* to, gpointer data)
 +#else
  gint moveto(FT_Vector* to, gpointer data)
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1 2006/06/20 12:54:48 joerg Exp $
    return 0;
  }
  
-+#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR >= 2
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR > 2
 +static gint lineto (const FT_Vector* to, gpointer data)
 +#else
  static gint lineto (FT_Vector* to, gpointer data)
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.1 2006/06/20 12:54:48 joerg Exp $
    return 0;
  }
  
-+#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR >= 2
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR > 2
 +static gint conicto(const FT_Vector* ftcontrol, const FT_Vector* to, gpointer data)
 +#else
  static gint conicto(FT_Vector* ftcontrol, FT_Vector* to, gpointer data)
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.1 2006/06/20 12:54:48 joerg Exp $
    return 0;
  }
  
-+#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR >= 2
++#if (FREETYPE_MAJOR == 2 && FREETYPE_MINOR >= 2) || FREETYPE_MAJOR > 2
 +static gint cubicto(const FT_Vector* ftcontrol1, const FT_Vector* ftcontrol2,
 + const FT_Vector* to, gpointer data)
 +#else
