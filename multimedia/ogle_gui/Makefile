@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/05/20 15:02:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/08/19 06:27:10 veego Exp $
 
 DISTNAME=	ogle_gui-0.9.2
 PKGREVISION=	7
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--enable-gtk2
 
 GCC_REQD+=		2.95.3
 
-.include "../../devel/binutils/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../multimedia/ogle/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
