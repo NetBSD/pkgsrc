@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1835 2007/08/19 10:56:30 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1836 2007/08/19 14:44:47 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3361,3 +3361,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libupnp to 1.6.0 [obache 2007-08-19]
 	Updated mail/imap-uw to 2006j2nb3 [obache 2007-08-19]
 	Updated graphics/gtkam to 0.1.14 [obache 2007-08-19]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.16.0nb1 [obache 2007-08-19]
+	Updated graphics/ruby-gnome2-rsvg to 0.16.0nb2 [obache 2007-08-19]
+	Updated devel/ruby-gnome2-pango to 0.16.0nb1 [obache 2007-08-19]
+	Updated x11/ruby-gnome2-gtk to 0.16.0nb1 [obache 2007-08-19]
