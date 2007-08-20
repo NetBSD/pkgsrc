@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1849 2007/08/20 21:09:02 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1850 2007/08/20 21:37:48 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/memcached to 1.2.2 [abs 2007-08-20]
 	Updated net/snort to 2.7.0.1 [adrianp 2007-08-20]
 	Updated net/tcpreplay to 3.1.1 [adrianp 2007-08-20]
+	Added devel/bazaar version 0.90rc1 [agc 2007-08-20]
