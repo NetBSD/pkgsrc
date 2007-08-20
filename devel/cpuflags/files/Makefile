@@ -1,12 +1,13 @@
-# $Id: Makefile,v 1.7 2006/02/09 13:45:04 abs Exp $
+# $Id: Makefile,v 1.8 2007/08/20 11:21:20 abs Exp $
 
-VERSION=0.98
+VERSION=1.10
 
 PREFIX?=/usr/local
 OPSYS?=`uname`
 
 MANDIR?=${PREFIX}/man/man1
-MKDIR?=${PREFIX}/share/mk
+SUBRDIR?=${PREFIX}/share/cpuflags
+SHAREMKDIR?=${PREFIX}/share/mk
 BINDIR?=${PREFIX}/bin
 INSTALL?=install
 SED?=sed
@@ -14,19 +15,21 @@ SED?=sed
 all:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' cpuflags.1 > cpuflags.1.out
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' cpuflags.mk > cpuflags.mk.out
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' cpuflags.sh > cpuflags.sh.out
 	
 clean:
-	rm -rf *.out out
+	rm -rf *.out DIST
 
 install:
-	mkdir -p ${BINDIR} ${MANDIR}	${MKDIR}
-	${INSTALL} cpuflags.${OPSYS}	${BINDIR}/cpuflags
+	mkdir -p ${BINDIR} ${MANDIR} ${SHAREMKDIR} ${SUBRDIR}
+	${INSTALL} cpuflags.sh.out	${BINDIR}/cpuflags
 	${INSTALL} cpuflags.1.out	${MANDIR}/cpuflags.1
-	${INSTALL} optimize_gcc.mk	${MKDIR}/optimize_gcc.mk
-	${INSTALL} cpuflags.mk.out	${MKDIR}/cpuflags.mk
+	${INSTALL} optimize_gcc.mk	${SHAREMKDIR}/optimize_gcc.mk
+	${INSTALL} cpuflags.mk.out	${SHAREMKDIR}/cpuflags.mk
+	${INSTALL} subr_*		${SUBRDIR}
 
 dist:
-	mkdir -p out/cpuflags-${VERSION}
-	cp Makefile *.* out/cpuflags-${VERSION}
-	(cd out;pax -w cpuflags-${VERSION} | bzip2 -9 > cpuflags-${VERSION}.tbz)
-	rm -rf out/cpuflags-${VERSION}
+	mkdir -p DIST/cpuflags-${VERSION}
+	cp Makefile [a-z]* DIST/cpuflags-${VERSION}
+	(cd DIST;pax -w cpuflags-${VERSION}|bzip2 -9 > cpuflags-${VERSION}.tbz)
+	rm -rf DIST/cpuflags-${VERSION}
