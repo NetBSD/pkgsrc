@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/08/20 21:35:08 agc Exp $
+
+--- contrib/fortune	2007/08/19 23:00:20	1.1
++++ contrib/fortune	2007/08/19 23:00:57
+@@ -3,14 +3,14 @@
+ # Put this on your $BZRPATH to use it to demonstrate bzr external plugins
+ 
+ 
+-if [ x$1 == x--bzr-usage ]
++if [ x$1 = x--bzr-usage ]
+ then
+     # options
+     echo ""
+     # arguments
+     echo ""
+     exit 0
+-elif [ x$1 == x--bzr-help ]
++elif [ x$1 = x--bzr-help ]
+ then
+     echo "display a fortune cookie"
+     echo 
