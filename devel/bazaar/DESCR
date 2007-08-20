@@ -1,0 +1,14 @@
+Bazaar gives you fast, distributed revision control that "Just Works",
+supporting renames of files and directories smoothly.  Bazaar is
+designed to maximise the level of community participation in your
+project.
+
+Bazaar branches can be published on any web server, and uploaded over
+sftp, ftp, or rsync.  If you want the fastest possible network
+performance, there is a smart server.  Bazaar supports flexible work
+models:  centralized like cvs or svn, commit offline, enforced code
+review when desired, and automatic regression testing.  Decentralized
+revision control systems give people the ability to collaborate more
+efficiently over the internet using the bazaar development model.
+When you use Bazaar, you can commit to your own local branches of your
+favourite free software projects without needing special permission.
