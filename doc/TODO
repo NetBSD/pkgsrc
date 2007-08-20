@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6608 2007/08/20 06:25:09 martti Exp $
+$NetBSD: TODO,v 1.6609 2007/08/20 12:39:34 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
-	o dar-2.3.4
 	o dbench-3.04
 	o dbmail-2.2.4
 	o dbxml-2.1.8

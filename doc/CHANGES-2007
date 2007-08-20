@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1844 2007/08/20 12:02:10 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.1845 2007/08/20 12:39:34 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3377,3 +3377,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/cpuflags to 1.10 [abs 2007-08-20]
 	Updated devel/cpuflags to 1.11 [abs 2007-08-20]
 	Added devel/atf version 0.1 [jmmv 2007-08-20]
+	Updated archivers/dar to 2.3.4 [dsainty 2007-08-20]
