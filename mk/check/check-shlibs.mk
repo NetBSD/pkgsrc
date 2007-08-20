@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.11 2007/04/14 14:17:49 tnn Exp $
+# $NetBSD: check-shlibs.mk,v 1.12 2007/08/20 11:04:03 joerg Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -38,6 +38,28 @@ _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST}
 privileged-install-hook: _check-shlibs
 .endif
 
+.if !empty(USE_CHECK_SHLIBS_ELF:M[yY][eE][sS])
+CHECK_SHLIBS_ELF=	${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
+CHECK_SHLIBS_ELF_ENV=	PLATFORM_RPATH=/usr/lib
+CHECK_SHLIBS_ELF_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
+CHECK_SHLIBS_ELF_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
+CHECK_SHLIBS_ELF_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
+CHECK_SHLIBS_ELF_ENV+=	DEPENDS_FILE=${_RDEPENDS_FILE:Q}
+.if ${_USE_DESTDIR} != "no"
+CHECK_SHLIBS_ELF_ENV+=	DESTDIR=${DESTDIR:Q}
+.endif
+CHECK_SHLIBS_ELF_ENV+=	WRKDIR=${WRKDIR:Q}
+
+_check-shlibs: error-check .PHONY
+	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
+	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${DESTDIR:Q}${PREFIX:Q};					\
+	${_CHECK_SHLIBS_FILELIST_CMD} |					\
+	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
+	${SETENV} ${CHECK_SHLIBS_ELF_ENV} ${AWK} -f ${CHECK_SHLIBS_ELF} > ${ERROR_DIR}/${.TARGET}
+
+.else
 _check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
@@ -63,3 +85,4 @@ _check-shlibs: error-check .PHONY
 		${ECHO} "    Please fix the package (add -Wl,-R.../lib in the right places)!"; \
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
 	fi
+.endif
