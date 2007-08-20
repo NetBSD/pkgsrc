@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1847 2007/08/20 17:03:37 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1848 2007/08/20 20:30:11 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3380,3 +3380,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/dar to 2.3.4 [dsainty 2007-08-20]
 	Updated net/skype to 1.4.0.99nb1 [roland 2007-08-20]
 	Updated devel/memcached to 1.2.2 [abs 2007-08-20]
+	Updated net/snort to 2.7.0.1 [adrianp 2007-08-20]
