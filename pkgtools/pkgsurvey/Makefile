@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/20 21:42:26 agc Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
@@ -16,10 +16,13 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${SED} -e 's|\$${PKG_INFO}|${PKG_INFO}|'			\
 		-e 's|\$${UNAME}|${UNAME}|g'				\
-		${FILESDIR}/pkgsurvey.sh > ${PREFIX}/bin/pkgsurvey
-	${CHMOD} 755 ${PREFIX}/bin/pkgsurvey
+		${FILESDIR}/pkgsurvey.sh > ${DESTDIR}${PREFIX}/bin/pkgsurvey
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/pkgsurvey
 
 .include "../../mk/bsd.pkg.mk"
