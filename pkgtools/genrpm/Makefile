@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/14 14:51:19 agc Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/20 21:44:03 agc Exp $
 
 DISTNAME=	genrpm-1.1
 CATEGORIES=	pkgtools
@@ -13,6 +13,8 @@ DEPENDS+=	pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
@@ -34,8 +36,11 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/genrpm ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/genrpm.0 ${PREFIX}/${PKGMANDIR}/cat8
-	${INSTALL_MAN} ${WRKSRC}/genrpm.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_SCRIPT} ${WRKSRC}/genrpm ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/genrpm.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8
+	${INSTALL_MAN} ${WRKSRC}/genrpm.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
