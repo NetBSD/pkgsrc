@@ -1,6 +1,6 @@
 #! @SH@
 
-# $NetBSD: genrpm,v 1.2 2007/07/14 14:51:19 agc Exp $
+# $NetBSD: genrpm,v 1.3 2007/08/20 21:44:03 agc Exp $
 
 #
 # Copyright © 2005,2007 Alistair Crooks.  All rights reserved.
@@ -31,7 +31,7 @@
 
 # small shell script to convert from an installed NetBSD package to an rpm
 #
-# Usage: pkg2rpm [--distdir=distdir] [--objdir=objdir] [--rpmdir=rpmdir] [--srpmdir=srpmdir] [--sign] [-s] [-v] pkgname
+# Usage: genrpm [--distdir=distdir] [--objdir=objdir] [--rpmdir=rpmdir] [--srpmdir=srpmdir] [--sign] [-s] [-v] pkgname
 
 # find a program and set a global variable with its path
 check_prog()
@@ -138,10 +138,21 @@ safemkdir ${rpmdir}
 safemkdir ${rpmdir}/${arch}
 safemkdir ${srpmdir}
 
-(cd $redhatdir && ${ln_cmd} -s $objdir/rpm BUILD)
-(cd $redhatdir && ${ln_cmd} -s $rpmdir RPMS)
-(cd $redhatdir && ${ln_cmd} -s $srpmdir SRPMS)
-(cd $redhatdir && ${ln_cmd} -s $objdir/rpm/SOURCES SOURCES)
+if [ ! -e ${redhatdir}/BUILD ]; then
+	(cd $redhatdir && ${ln_cmd} -s $objdir/rpm BUILD)
+fi
+
+if [ ! -e ${redhatdir}/RPMS ]; then
+	(cd $redhatdir && ${ln_cmd} -s $rpmdir RPMS)
+fi
+
+if [ ! -e ${redhatdir}/SRPMS ]; then
+	(cd $redhatdir && ${ln_cmd} -s $srpmdir SRPMS)
+fi
+
+if [ ! -e ${redhatdir}/SOURCES ]; then
+	(cd $redhatdir && ${ln_cmd} -s $objdir/rpm/SOURCES SOURCES)
+fi
 
 # check that we have required packages installed
 for p in $reqpkgs; do
@@ -207,7 +218,7 @@ while [ $# -gt 0 ]; do
 		echo "Release: %{release}" >> $specfile
 		echo "Copyright: unknown" >> $specfile
 		echo "URL: `${pkg_info_cmd} -d $name | ${awk_cmd} 'BEGIN { homepage=\"http://www.pkgsrc.org\"; }/^Homepage:/ { getline; homepage=$0 } END { print homepage }'`" >> $specfile
-		echo "Packager: Alistair Crooks <genrpm@alistaircrooks.com>" >> $specfile
+		echo "Packager: Alistair Crooks <agc@pkgsrc.org>" >> $specfile
 		echo "Distribution: ${DISTRIBUTION}" >> $specfile
 		echo "Vendor: ${DISTVENDOR}" >> $specfile
 		echo "Prefix: ${pkgprefix}" >> $specfile
