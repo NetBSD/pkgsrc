@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1841 2007/08/20 07:32:32 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1842 2007/08/20 11:25:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3374,3 +3374,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/squirrelmail-decode to 1.2 [martti 2007-08-20]
 	Updated mail/policyd to 1.82 [ghen 2007-08-20]
 	Updated security/py-denyhosts to 2.6nb2 [taca 2007-08-20]
+	Updated devel/cpuflags to 1.10 [abs 2007-08-20]
