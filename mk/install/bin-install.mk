@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.10 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: bin-install.mk,v 1.11 2007/08/20 10:59:05 joerg Exp $
 #
 
 # This file provides the following targets:
@@ -55,6 +55,30 @@ release-bin-install-lock: \
 	release-localbase-lock
 
 locked-su-do-bin-install:
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+	${RUN} \
+	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;	\
+	if [ "$$found" != "" ]; then					\
+		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
+		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
+		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
+		exit 1;							\
+	fi
+	${RUN} \
+	rel=${_SHORT_UNAME_R:Q};					\
+	arch=${MACHINE_ARCH:Q};						\
+	pkgpath=${PKGREPOSITORY:Q};					\
+	for i in ${BINPKG_SITES}; do					\
+		pkgpath="$$pkgpath;$$i/All";				\
+	done;								\
+	${STEP_MSG} "Installing ${PKGNAME} from $$pkgpath";		\
+	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
+		${ECHO} "Fixing recorded cwd...";			\
+		${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp; \
+		${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS; \
+		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
+	fi
+.else
 	${RUN} \
 	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;	\
 	if [ "$$found" != "" ]; then					\
@@ -74,6 +98,7 @@ locked-su-do-bin-install:
 	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
 		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
 	fi
+.endif
 
 do-bin-install-from-source:
 	${RUN} ${PKG_INFO} -qe ${PKGNAME} || {				\
