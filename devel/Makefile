@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.883 2007/08/20 12:00:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.884 2007/08/20 21:36:15 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -52,6 +52,7 @@ SUBDIR+=	automake
 SUBDIR+=	automake14
 SUBDIR+=	avl
 SUBDIR+=	avltree
+SUBDIR+=	bazaar
 SUBDIR+=	bcc
 SUBDIR+=	bglibs
 SUBDIR+=	binutils
