@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/08/18 15:10:38 taca Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/20 07:31:38 taca Exp $
 #
 
 VER=		2.6
 DISTNAME=	DenyHosts-${VER}
 PKGNAME=	${PYPKGPREFIX}-denyhosts-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 
@@ -19,6 +19,8 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 
 CONF_FILES+=	${PREFIX}/share/denyhosts/denyhosts.cfg-dist \
 		${PREFIX}/etc/denyhosts.conf
+
+FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
 SUBST_CLASSES+=	cf
 SUBST_STAGE.cf= post-configure
