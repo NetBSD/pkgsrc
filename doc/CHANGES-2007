@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1840 2007/08/20 07:30:57 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1841 2007/08/20 07:32:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.1.83 [martti 2007-08-20]
 	Updated mail/squirrelmail-decode to 1.2 [martti 2007-08-20]
 	Updated mail/policyd to 1.82 [ghen 2007-08-20]
+	Updated security/py-denyhosts to 2.6nb2 [taca 2007-08-20]
