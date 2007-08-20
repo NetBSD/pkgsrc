@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1843 2007/08/20 11:35:15 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1844 2007/08/20 12:02:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3376,3 +3376,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-denyhosts to 2.6nb2 [taca 2007-08-20]
 	Updated devel/cpuflags to 1.10 [abs 2007-08-20]
 	Updated devel/cpuflags to 1.11 [abs 2007-08-20]
+	Added devel/atf version 0.1 [jmmv 2007-08-20]
