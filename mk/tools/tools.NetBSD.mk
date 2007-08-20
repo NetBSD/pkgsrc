@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.38 2007/08/16 03:09:38 joerg Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.39 2007/08/20 11:00:33 joerg Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -79,6 +79,11 @@ TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
+.else
+TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
+.endif
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
@@ -115,7 +120,7 @@ TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.for _t_ in ar as ld nm objdump ranlib strip
+.for _t_ in ar as ld nm objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
 TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
