@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.14 2007/07/31 19:51:01 jlam Exp $
+# $NetBSD: print-plist.mk,v 1.15 2007/08/20 10:59:53 joerg Exp $
 
 ###
 ### Automatic PLIST generation
@@ -95,10 +95,17 @@ _PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
 # XXX will fail for data files that were copied using tar (e.g. emacs)!
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
+.if ${_USE_DESTDIR} == "no"
 _PRINT_PLIST_FILES_CMD=	\
 	${FIND} ${DESTDIR}${PREFIX}/. -xdev -newer ${_COOKIE.extract} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
 	${FIND} ${DESTDIR}${PREFIX}/. -xdev -newer ${_COOKIE.extract} -type d -print
+.else
+_PRINT_PLIST_FILES_CMD=	\
+	${FIND} ${DESTDIR}${PREFIX}/. \! -type d -print
+_PRINT_PLIST_DIRS_CMD=	\
+	${FIND} ${DESTDIR}${PREFIX}/. -type d -print
+.endif
 
 .if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
