@@ -1,0 +1,81 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/20 11:59:17 jmmv Exp $
+bin/atf-compile
+bin/atf-config
+bin/atf-report
+bin/atf-run
+include/atf.hpp
+include/atf/application.hpp
+include/atf/atffile.hpp
+include/atf/config.hpp
+include/atf/env.hpp
+include/atf/exceptions.hpp
+include/atf/expand.hpp
+include/atf/formats.hpp
+include/atf/fs.hpp
+include/atf/io.hpp
+include/atf/serial.hpp
+include/atf/tests.hpp
+include/atf/text.hpp
+include/atf/ui.hpp
+include/atf/user.hpp
+lib/libatf.a
+libexec/atf-cleanup
+libexec/atf-format
+man/man1/atf-cleanup.1
+man/man1/atf-compile.1
+man/man1/atf-config.1
+man/man1/atf-format.1
+man/man1/atf-report.1
+man/man1/atf-run.1
+man/man1/atf-test-program.1
+man/man4/atf-test-case.4
+man/man5/atf-formats.5
+man/man7/atf.7
+share/atf/atf.footer.subr
+share/atf/atf.header.subr
+share/atf/atf.init.subr
+share/doc/atf/AUTHORS
+share/doc/atf/COPYING
+share/doc/atf/NEWS
+share/doc/atf/README
+share/doc/atf/ROADMAP
+tests/atf/Atffile
+tests/atf/sh_interface/Atffile
+tests/atf/sh_interface/t_atf_check
+tests/atf/sh_interface/t_config
+tests/atf/sh_interface/t_normalize
+tests/atf/sh_interface/t_tc
+tests/atf/test_programs/Atffile
+tests/atf/test_programs/h_cpp
+tests/atf/test_programs/h_sh
+tests/atf/test_programs/t_config
+tests/atf/test_programs/t_env
+tests/atf/test_programs/t_fork
+tests/atf/test_programs/t_meta_data
+tests/atf/test_programs/t_srcdir
+tests/atf/tools/Atffile
+tests/atf/tools/t_atf_cleanup
+tests/atf/tools/t_atf_compile
+tests/atf/tools/t_atf_config
+tests/atf/tools/t_atf_report
+tests/atf/tools/t_atf_run
+tests/atf/units/Atffile
+tests/atf/units/t_config
+tests/atf/units/t_env
+tests/atf/units/t_expand
+tests/atf/units/t_formats
+tests/atf/units/t_fs
+tests/atf/units/t_io
+tests/atf/units/t_serial
+tests/atf/units/t_tests
+tests/atf/units/t_text
+tests/atf/units/t_user
+@dirrm tests/atf/units
+@dirrm tests/atf/tools
+@dirrm tests/atf/test_programs
+@dirrm tests/atf/sh_interface
+@dirrm tests/atf
+@dirrm tests
+@dirrm share/doc/atf
+@dirrm share/atf
+@dirrm include/atf
