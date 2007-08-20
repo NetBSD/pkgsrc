@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1846 2007/08/20 13:30:29 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.1847 2007/08/20 17:03:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3379,3 +3379,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/atf version 0.1 [jmmv 2007-08-20]
 	Updated archivers/dar to 2.3.4 [dsainty 2007-08-20]
 	Updated net/skype to 1.4.0.99nb1 [roland 2007-08-20]
+	Updated devel/memcached to 1.2.2 [abs 2007-08-20]
