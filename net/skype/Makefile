@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/08/20 13:29:52 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/08/20 23:14:01 rillig Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.99
@@ -7,6 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
+# see https://developer.skype.com/LinuxSkype/ReleaseNotes for changes
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
