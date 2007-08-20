@@ -1,71 +1,34 @@
-#!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.11 2007/03/21 15:05:08 abs Exp $
-PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
-AWK=nawk
-
-display_hw_details()
+# Return gcc version string
+gcc_ver()
     {
-    echo "  OS      : '`uname`'"
-    echo "  arch    : '$hw_arch'"
-    echo "  psrinfo : '$hw_psrinfo'"
+    gcc=$1
+    ${gcc} -dumpversion | $SED -e 's/^[^0-9\.]\{1,\}//' -e 's/[^0-9\.]\{1,\}$//'
     }
 
-hw_arch=`/usr/bin/uname -m`
-hw_psrinfo=`psrinfo -v | $AWK 'NR==3{print}'` # Just gets the first CPU
+gcc_ser()
+    {
+    gcc=$1
+    gcc_ver $gcc | $AWK -F. '{ print ($1*1000+$2)}'
+    }
 
-case $hw_arch in
-    sun4c | sun4 )		FLAGS='-mcpu=cypress' ;;
-    sun4m )			FLAGS='-mcpu=supersparc' ;;
-    sun4u )			FLAGS='-mcpu=v9' ;;
-    i86pc )
-	case "$hw_psrinfo" in
-	    *AMD\ Opteron\(tm\)*)	FLAGS="-mcpu=opteron"	;;
-	esac
-	;;
-esac
-
-############
-# Everything from this point common between all cpuflags variants.
-
-if [ "$1" = -v ] ; then
+gcc_fixup_arch_flags()
+    {
+    gcc=$1
     shift
-    opt_v=1
-fi
-if [ -n "$1" ]; then
-    CC=$1
-else
-    CC=gcc
-fi
+    gcc_arch_flags="$*"
 
-if [ -n "$opt_v" ] ; then
-    if [ -n "$FLAGS" ]; then
-	echo "CPUFLAGS=$FLAGS"
-    elif [ -z "$NONE" ] ; then
-	echo "CPUFLAGS=Unknown"
-    else
-	echo "CPUFLAGS=None"
-    fi
-    display_hw_details
-    exit
-fi
-if [ -z "$FLAGS" -a -z "$NONE" ] ; then
-    echo 'Unknown machine - please send details to abs@absd.org'	>&2
-    display_hw_details							>&2
-fi
+    # Fixup options for older gccs.
+    # Entries can be recursive - eg:
+    #   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
+    #
+    # The format of table is
+    #   gcc_version_in_which_option_was_introduced	new_option  old_option
 
-# Fixup options for older gccs.
-# Entries can be recursive - eg:
-#   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
-#
-# The format of table is
-#   gcc_version_in_which_option_was_introduced	new_option  old_option
-
-if [ -n "$FLAGS" ]; then
-    gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
-    FLAGS=`$AWK -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+    $AWK -F: -v "flags=$gcc_arch_flags" -v "gcc_ver=$(gcc_ver $gcc)" '
 	{ if (gcc_ver < $1){map[$2] = ""$3} }
-	END { while (flags in map) {flags = map[flags]} print flags }
+	END { FS=" "; split(flags,ar); for (af in ar) { flag=ar[af];
+	 while (flag in map) {flag = map[flag]} print flag }}
 	' <<EOD
 2.90:-march=i386:-mno-486
 2.90:-march=i486:-m486
@@ -107,6 +70,7 @@ if [ -n "$FLAGS" ]; then
 3.1:-mcpu=7400:-mcpu=750
 3.1:-mcpu=7450:-mcpu=750
 3.1:-mfpmath=sse:
+3.1:-mmmx:
 3.1:-msse2:
 3.1:-msse:
 3.1:-mtune=r2000:-cpu=r2000
@@ -133,10 +97,8 @@ if [ -n "$FLAGS" ]; then
 3.4:-march=pentium3m:-march=pentium3
 3.4:-march=pentium4m:-march=pentium4
 3.4:-march=prescott:-march=pentium4
+3.4:-msse3:
+4.2:-m3dnow:
+4.2:-march=native:
 EOD
-`
-fi
-
-echo $FLAGS
-
-exit 0
+    }

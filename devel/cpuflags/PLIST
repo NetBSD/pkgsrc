@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/29 11:45:50 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/20 11:21:20 abs Exp $
 bin/cpuflags
 man/man1/cpuflags.1
+share/cpuflags/subr_Linux
+share/cpuflags/subr_NetBSD
+share/cpuflags/subr_SunOS
+share/cpuflags/subr_gcc
 share/mk/cpuflags.mk
 share/mk/optimize_gcc.mk
+@dirrm share/cpuflags
