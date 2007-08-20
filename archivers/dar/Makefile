@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2007/07/24 14:23:26 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2007/08/20 12:36:24 dsainty Exp $
 
-DISTNAME=	dar-2.3.3
+DISTNAME=	dar-2.3.4
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
@@ -21,14 +21,18 @@ CONFIGURE_ARGS+=	--disable-upx
 CONFIGURE_ARGS+=	--enable-examples
 CONFIGURE_ARGS+=	doxygen=no
 
+# Since these are only examples, avoid the dependencies on Bash and
+# Perl.  Unfortunately the interpeter replacements won't work unless
+# we USE_TOOLS the two interpreters, so the samples are left as is.
 CHECK_INTERPRETER_SKIP+=	share/dar/samples
-REPLACE_PERL+=		doc/samples/dar_backup
-REPLACE_BASH+=		doc/samples/*.bash doc/samples/clust*.sh
-# No extra dependencies, since these are only examples.
+#USE_TOOLS+=		bash:run perl:run
+#REPLACE_PERL+=		doc/samples/dar_backup
+#REPLACE_BASH+=		doc/samples/*.bash doc/samples/clust*.sh
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dar
-PKG_SUPPORTED_OPTIONS=	dar-int32 dar-int64
-PKG_SUGGESTED_OPTIONS=
+PKG_OPTIONS_VAR=		PKG_OPTIONS.dar
+PKG_OPTIONS_OPTIONAL_GROUPS+=	int
+PKG_OPTIONS_GROUP.int=		dar-int32 dar-int64
+PKG_SUGGESTED_OPTIONS+=		dar-int64
 
 .include "../../mk/bsd.options.mk"
 
