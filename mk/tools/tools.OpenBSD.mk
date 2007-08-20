@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.30 2007/06/25 10:53:21 joerg Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.31 2007/08/20 11:00:33 joerg Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -67,6 +67,7 @@ TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
+TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
