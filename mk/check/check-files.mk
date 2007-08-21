@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.17 2007/08/13 05:05:11 rillig Exp $
+# $NetBSD: check-files.mk,v 1.18 2007/08/21 21:44:23 jlam Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -261,7 +261,7 @@ ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 	${DIFF} -u ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^-[^-]' | ${SED} "s|^-||" |				\
 	while read file; do						\
-		${TEST} -f "$$file" || ${ECHO} "$$file";		\
+		${TEST} -f "$$file" -o -h "$$file" || ${ECHO} "$$file";	\
 	done > ${.TARGET}
 
 ${_CHECK_FILES_MISSING_REAL}: ${_CHECK_FILES_MISSING}
@@ -283,7 +283,7 @@ ${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 	${DIFF} -u  ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^+[^+]' | ${SED} "s|^+||" |				\
 	while read file; do						\
-		${TEST} ! -f "$$file" || ${ECHO} "$$file";		\
+		${TEST} ! -f "$$file" -a ! -h "$$file" || ${ECHO} "$$file"; \
 	done > ${.TARGET}
 
 ${_CHECK_FILES_ERRMSG.prefix}:						\
