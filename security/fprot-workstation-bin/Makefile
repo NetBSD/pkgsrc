@@ -1,90 +1,56 @@
-# $NetBSD: Makefile,v 1.38 2007/08/07 21:42:55 taca Exp $
+# $NetBSD: Makefile,v 1.39 2007/08/21 23:14:45 jlam Exp $
 
-DISTNAME=		#defined
+DISTNAME=		fprot-workstation-bin	# overridden below
 PKGNAME=		fprot-workstation-bin-${FPVER}
 CATEGORIES=		security
+MASTER_SITES=		# empty
+DIST_SUBDIR=		${PKGBASE}-20070806
+FPVER=			4.6.8
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.f-prot.com/products/home_use/bsd/
+HOMEPAGE=		http://www.f-prot.com/products/home_use/
 COMMENT=		F-prot antivirus for home users
 
-DEPENDS+=		p5-libwww>=5.69:../../www/p5-libwww
-DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-
-PKG_INSTALLATION_TYPES= overwrite pkgviews
-
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-[2-9]*-x86_64 \
-			Linux-*-i386 SunOS-*-sparc
+LICENSE=		fprot-workstation-license
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-LICENSE=		fprot-workstation-license
 
-WRKSRC=			${WRKDIR}/f-prot
-NO_BUILD=		yes
-USE_TOOLS+=		perl:run
+DEPENDS+=		p5-libwww>=5.69:../../www/p5-libwww
 
-FPVER=			4.6.8
-DATDIR=			${PREFIX}/share/fprot-workstation-bin
-DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
-FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
-CONF_FILES=		${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
-CONF_FILES+=		${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
-CONF_FILES+=		${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
-REQD_DIRS+=		${FPDIR}
+USE_TOOLS+=		perl:run unzip:run
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
+#EMUL_PLATFORMS+=	linux-i386
+EMUL_PLATFORMS+=	netbsd-i386
+#EMUL_PLATFORMS+=	solaris-i386
+#EMUL_PLATFORMS+=	solaris-sparc
+EMUL_MODULES.linux=	base
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-MASTER_SITES=		http://files.f-prot.com/files/bsd-x86/
-DISTNAME=		fp-netbsd-ws
-.endif
-
-.if ${OPSYS} == "Linux"
+# This following section should be split out into Makefile.${EMUL_PLATFORM}
+# files and the appropriate build and installation code added.
+#
+.if ${EMUL_PLATFORM} == "linux-i386"
 MASTER_SITES=		http://files.f-prot.com/files/linux-x86/
 DISTNAME=		fp-linux-ws
-.endif
-
-.if ${OPSYS} == "SunOS"
+.elif ${EMUL_PLATFORM} == "solaris-i386"
+MASTER_SITES=		http://files.f-prot.com/files/solaris-i386/
+DISTNAME=		fp-solaris-i386-ws
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
 MASTER_SITES=		http://files.f-prot.com/files/solaris-sparc/
 DISTNAME=		fp-solaris-sparc-ws
 .endif
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
-DEPENDS+=	netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
+.if exists(Makefile.${EMUL_PLATFORM})
+.  include "Makefile.${EMUL_PLATFORM}"
+.else
+NO_BUILD=	yes
+do-install:	# nothing
 .endif
-
-DIST_SUBDIR=		${PKGBASE}-20070806
-
-SUBST_CLASSES+=		f-prot
-SUBST_MESSAGE.f-prot=	Configuring f-prot location.
-SUBST_STAGE.f-prot=	post-patch
-SUBST_FILES.f-prot=	f-prot.sh
-SUBST_SED.f-prot=	-e "s,^exec \`.*\`,exec ${FPDIR}/f-prot,g"
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Configuring default paths.
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	tools/check-updates.pl
-SUBST_SED.paths=	-e "s,XXXFPDIRXXX,${FPDIR},"
-SUBST_SED.paths+=	-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/f-prot.sh ${PREFIX}/bin/f-prot
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/check-updates.pl ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/man_pages/check-updates.pl.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/man_pages/f-prot.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DATDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.DEF ${DATDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE* ${WRKSRC}/README ${WRKSRC}/CHANGES \
-		${WRKSRC}/doc_ws/* ${DOCDIR}
-	${INSTALL_PROGRAM_DIR} ${FPDIR}
-	${INSTALL_DATA} ${WRKSRC}/ENGLISH.TX0 ${FPDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/f-prot ${FPDIR}
 
 .include "../../mk/bsd.pkg.mk"
