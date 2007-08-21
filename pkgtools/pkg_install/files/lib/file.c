@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.21 2007/08/12 18:54:09 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.22 2007/08/21 07:11:42 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.21 2007/08/12 18:54:09 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.22 2007/08/21 07:11:42 joerg Exp $");
 #endif
 #endif
 
@@ -369,7 +369,7 @@ resolvepattern(const char *name)
 		return cp;
 
 	/* add version number wildcard and try */
-	snprintf(tmp, sizeof(tmp), "%s-[0-9]*.t[bg]z", name);
+	snprintf(tmp, sizeof(tmp), "%s-[0-9]*", name);
 	return resolvepattern1(tmp);
 }
 
