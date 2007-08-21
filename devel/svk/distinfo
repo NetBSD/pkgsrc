@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2007/06/02 11:36:50 bad Exp $
+$NetBSD: distinfo,v 1.12 2007/08/21 09:49:07 bad Exp $
 
-SHA1 (SVK-v2.0.1.tar.gz) = 5d2d4b21f24c9fb36a241ac1dec91ac0a85f2acf
-RMD160 (SVK-v2.0.1.tar.gz) = c6d530595f14e13177ca40d0215c092846474f29
-Size (SVK-v2.0.1.tar.gz) = 436832 bytes
+SHA1 (SVK-v2.0.2.tar.gz) = 8d691c6e6b914e5b8e71ba75dee60b61fe90e54f
+RMD160 (SVK-v2.0.2.tar.gz) = 5eeaa465355cd3026f7230b120d83051705fc86d
+Size (SVK-v2.0.2.tar.gz) = 445041 bytes
