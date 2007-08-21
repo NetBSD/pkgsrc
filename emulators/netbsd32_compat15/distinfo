@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 12:01:21 wiz Exp $
-
-SHA1 (compat15-sparc.tar.gz) = 1abd33e4de7127e27da0b64d915cb7ba53cff2a9
-RMD160 (compat15-sparc.tar.gz) = bfa676c116947596019d1cfa9a132502e8248193
-Size (compat15-sparc.tar.gz) = 2562164 bytes
