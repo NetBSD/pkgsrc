@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2007/08/21 22:49:13 jlam Exp $
+
+DISTNAME=		compat15-extras		# overridden below
+NETBSD_VERSION=		1.5
+
+HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.5/index.html
+COMMENT=		Additional shared libraries for NetBSD 1.5 compatibility
+
+EMUL_PLATFORMS=		netbsd-i386 netbsd-sparc
+
+.include "../../emulators/compat_netbsd/Makefile.common"
+
+DISTNAME=		compat15-extras-${EMUL_ARCH}-1.5.3
+
+# This package should only be installed for COMPAT_NETBSD32 emulation
+# on machines running NetBSD-1.5.
+#
+.if defined(NETBSD_COMPAT32)
+ACCEPTABLE_NETBSD=	NetBSD-1.4[A-Z]* NetBSD-1.5 NetBSD-1.5.*
+.else
+NOT_FOR_PLATFORM=	NetBSD-*-${MACHINE_ARCH}
+.endif
+
+.include "../../mk/bsd.pkg.mk"

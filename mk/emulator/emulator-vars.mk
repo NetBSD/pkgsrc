@@ -1,6 +1,6 @@
-# $NetBSD: emulator-vars.mk,v 1.4 2007/08/03 23:16:02 ghen Exp $
+# $NetBSD: emulator-vars.mk,v 1.5 2007/08/21 22:49:33 jlam Exp $
 #
-# This file is included by bsd.prefs.mk only if EMUL_PLATORMS is defined
+# This file is included by bsd.prefs.mk only if EMUL_PLATFORMS is defined
 # and non-empty.
 #
 # User-settable variables:
@@ -92,13 +92,13 @@ _EMUL_PREFER.netbsd-arm=	linux-arm
 _EMUL_PREFER.netbsd-i386=	linux-i386 freebsd-i386 solaris-i386 darwin-i386
 _EMUL_PREFER.netbsd-m68k=	sunos-m68k linux-m68k
 _EMUL_PREFER.netbsd-powerpc=	linux-powerpc darwin-powerpc
-_EMUL_PREFER.netbsd-sparc64=	solaris-sparc64 solaris-sparc sunos-sparc
+_EMUL_PREFER.netbsd-sparc64=	netbsd-sparc solaris-sparc64 solaris-sparc sunos-sparc
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.*-sparc*)
 _EMUL_PREFER.netbsd-sparc=	sunos-sparc
 .else
 _EMUL_PREFER.netbsd-sparc=	solaris-sparc sunos-sparc
 .endif
-_EMUL_PREFER.netbsd-x86_64=	linux-x86_64 linux-i386
+_EMUL_PREFER.netbsd-x86_64=	netbsd-i386 linux-x86_64 linux-i386
 
 _EMUL_PREFER.dragonfly-i386=	linux-i386
 
