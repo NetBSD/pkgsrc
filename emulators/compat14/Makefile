@@ -1,59 +1,53 @@
-# $NetBSD: Makefile,v 1.20 2007/08/16 14:00:12 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.21 2007/08/21 22:49:08 jlam Exp $
 
-DISTNAME=		compat14-crypto-${MACHINE_ARCH}-${VERSION}
-PKGNAME=		compat14-${VERSION}
-PKGREVISION=		1
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+DISTNAME=		compat14	# overridden below
+NETBSD_VERSION=		1.4
+PKGREVISION=		2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+CONFLICTS=		compat14-crypto-[0-9]*
+
 HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.4/index.html
-COMMENT=		Shared libraries for NetBSD 1.4 (and earlier) compatibility
+COMMENT=		Shared libraries for NetBSD 1.4 compatibility
 
-VERSION=		1.4.3.1
+EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386 netbsd-m68k	\
+			netbsd-mipsel netbsd-ns32k netbsd-powerpc	\
+			netbsd-sparc netbsd-vax
 
-CONFLICTS=		compat14-[0-9]*
+ONLY_FOR_PLATFORM=	NetBSD-1.4[A-Z]*-* NetBSD-1.[5-9]*-*		\
+			NetBSD-[2-9]*-* NetBSD-[1-9][0-9]*-*
 
-ONLY_FOR_PLATFORM=	NetBSD-*-sparc NetBSD-*-i386
-NOT_FOR_PLATFORM=	NetBSD-1.3*-* NetBSD-1.4*-*
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+.include "../../emulators/compat_netbsd/Makefile.common"
 
-CRYPTO=			YES
-
-CHECK_SHLIBS_SUPPORTED=	no
-BUILD_DIRS=		# empty
-
-FILES_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR:Q}
-FILES_SUBST+=		COMPAT_XLIBDIR=${COMPAT_XLIBDIR:Q}
-FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-FILES_SUBST+=		OBJECT_FMT=${OBJECT_FMT:Q}
-FILES_SUBST+=		LDCONFIG=${LDCONFIG:Q}
-
-.include "../../mk/bsd.prefs.mk"
-
-# This installs in /usr (or /emul/aout/usr) to avoid dynamic linker annoyances
-.if ${OBJECT_FMT} == "ELF" && \
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc")
-EMULSUBDIR=		emul/aout
-COMPAT_LIBDIR=		${EMULSUBDIR}/usr/lib
-COMPAT_XLIBDIR=		${EMULSUBDIR}/usr/X11R6/lib
-.elif ${OPSYS} == "NetBSD"
-LOCALBASE=		/usr
-COMPAT_LIBDIR=		lib
-COMPAT_XLIBDIR=		X11R6/lib
+.if (${EMUL_PLATFORM} == "netbsd-ns32k")
+DISTNAME=		compat14-${EMUL_ARCH}-1.4.2
+.elif (${EMUL_PLATFORM} == "netbsd-i386") || \
+      (${EMUL_PLATFORM} == "netbsd-sparc")
+DISTNAME=		compat14-${EMUL_ARCH}-1.4.3.1
+.else
+DISTNAME=		compat14-${EMUL_ARCH}-1.4.3
 .endif
 
-PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR:Q} COMPAT_XLIBDIR=${COMPAT_XLIBDIR:Q}
+# For COMPAT_NETBSD32, we need to depend on the compat15 package to supply
+# /usr/libexec/ld.so (either directly or indirectly) so that the a.out
+# shared libraries can be used.
+#
+.if ((${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")) || \
+    ((${EMUL_ARCH} == "sparc") && (${MACHINE_ARCH} == "sparc64"))
+DEPENDS+=	netbsd32_compat15>=1.5:../../emulators/netbsd32_compat15
 
-# note that the INSTALL_DATA for the lib*.so symlinks will copy the file, not the symlink.
-# FIXME.
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_LIBDIR}
-	${INSTALL_DATA} ${WRKDIR}/lib/lib*.so* ${PREFIX}/${COMPAT_LIBDIR}
-	if [ -d ${WRKDIR}/X11R6/lib ]; then \
-		${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_XLIBDIR}; \
-		${INSTALL_DATA} ${WRKDIR}/X11R6/lib/lib*.so* ${PREFIX}/${COMPAT_XLIBDIR}; \
-	fi
+# i386 and sparc switched from a.out to ELF after NetBSD-1.4, and
+# they don't need any other packages to supply missing a.out shared
+# libraries.
+#
+.elif (${EMUL_ARCH} == "i386") || (${EMUL_ARCH} == "sparc")
+#DEPENDS+=	# no additional dependencies
+#
+# We need to depend on the compat15 package to supply shared libraries
+# missing from compat14 on NetBSD>1.5.
+#
+.elif empty(OS_VERSION:M0.[0-9]*) && empty(OS_VERSION:M1.[0-4]*) && \
+      empty(OS_VERSION:M1.5) && empty(OS_VERSION:M1.5.*)
+DEPENDS+=	compat15>=1.5:../../emulators/compat15
+.endif
 
 .include "../../mk/bsd.pkg.mk"

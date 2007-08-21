@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.sparc64,v 1.1 2005/02/21 21:18:28 veego Exp $
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libPEX5.so.6
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libPEX5.so.6.0
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libX11.so.6.1
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libXIE.so.6
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libXIE.so.6.0
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libXext.so.6.3
-${COMPAT_EMULSUBDIR}/usr/X11R6/lib/libXmu.so.6.0

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:25 zuntum Exp $
-${COMPAT_LIBDIR}/libedit.so.1.0
-${COMPAT_LIBDIR}/libg++.so.4.0
-${COMPAT_LIBDIR}/libstdc++.so.0.1
-${COMPAT_LIBDIR}/libutil.so.4.2
