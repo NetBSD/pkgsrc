@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/01/26 04:48:26 ben Exp $
+$NetBSD: emul-netbsd-i386-patch-aa,v 1.1 2007/08/21 23:14:46 jlam Exp $
 
 --- tools/check-updates.pl.orig	2006-01-05 11:55:12.000000000 +0000
 +++ tools/check-updates.pl
