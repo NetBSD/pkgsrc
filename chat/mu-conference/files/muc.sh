@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: muc.sh,v 1.2 2004/07/08 22:26:04 abs Exp $
+# $NetBSD: muc.sh,v 1.3 2007/08/21 15:30:32 abs Exp $
 #
 # PROVIDE: muc
 # REQUIRE: DAEMON
@@ -14,8 +14,9 @@ rcvar=$name
 command="@PREFIX@/bin/mu-conference"
 required_files="@PKG_SYSCONFDIR@/${name}-jcr.xml"
 extra_commands="reload"
+muc_user="@JABBERD_USER@"
 command_args="-c ${required_files} > /dev/null 2>&1 &"
-pidfile="@JABBERD_PIDDIR@/${name}.pid"
+pidfile="@JABBERD_PIDDIR@/`basename ${command}`.pid"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 
