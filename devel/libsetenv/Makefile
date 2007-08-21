@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/03 21:30:59 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/21 16:31:51 tnn Exp $
 #
 
 DISTNAME=	libsetenv-0.1
@@ -13,6 +13,8 @@ COMMENT=	Library that provides setenv(3) and unsetenv(3) implementations
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+NOT_FOR_PLATFORM=	DragonFly-*-* Darwin-*-*
 
 do-extract:
 	cp -R ${FILESDIR} ${WRKSRC}
