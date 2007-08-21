@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1851 2007/08/21 09:50:33 bad Exp $
+$NetBSD: CHANGES-2007,v 1.1852 2007/08/21 15:44:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tcpreplay to 3.1.1 [adrianp 2007-08-20]
 	Added devel/bazaar version 0.90rc1 [agc 2007-08-20]
 	Updated devel/svk to 2.0.2 [bad 2007-08-21]
+	Updated devel/cpuflags to 1.12  [abs 2007-08-21]
