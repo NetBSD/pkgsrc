@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1853 2007/08/21 22:49:02 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.1854 2007/08/22 01:19:28 smb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added emulators/netbsd32_compat20-extras version 2.1 [jlam 2007-08-21]
 	Added emulators/netbsd32_compat30 version 3.1 [jlam 2007-08-21]
 	Added emulators/netbsd32_compat30-extras version 3.1 [jlam 2007-08-21]
+	Added fonts/inconsolata version 20070821 [smb 2007-08-21]
