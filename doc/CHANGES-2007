@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1855 2007/08/22 02:04:26 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1856 2007/08/22 08:04:01 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added emulators/netbsd32_compat30-extras version 3.1 [jlam 2007-08-21]
 	Added fonts/inconsolata version 20070821 [smb 2007-08-21]
 	Removed fonts/inconsolata [smb 2007-08-21]
+	Updated mail/clamav to 0.91.2 [martti 2007-08-22]
