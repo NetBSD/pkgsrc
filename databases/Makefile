@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2007/08/13 08:12:44 rillig Exp $
+# $NetBSD: Makefile,v 1.233 2007/08/22 17:34:38 tron Exp $
 #
 
 COMMENT=	Databases
@@ -205,6 +205,7 @@ SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
 SUBDIR+=	xsqlmenu
+SUBDIR+=	yap2lc
 SUBDIR+=	yasql
 
 .include "../mk/misc/category.mk"
