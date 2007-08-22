@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.5 2007/08/21 22:49:33 jlam Exp $
+# $NetBSD: emulator-vars.mk,v 1.6 2007/08/22 14:47:10 jlam Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATFORMS is defined
 # and non-empty.
@@ -41,22 +41,6 @@
 #	The operating system being emulated, e.g. linux.  If the
 #	package isn't supported on this machine, then its value is
 #	"none".
-#
-# EMUL_DISTRO
-#	The distribution of the emulated operating system being used,
-#	e.g. native-linux, suse-10.0, etc.  If the package isn't
-#	supported on this machine, then its value is "none".
-#
-# EMULDIR
-#	Convenience variable that expands to ${PREFIX}/${EMULSUBDIR}
-#
-# EMULSUBDIR
-#       Path relative to ${PREFIX} where the files and directories
-#       are located, e.g. emul/linux.
-#
-# OPSYS_EMULDIR
-#       Path through which the platform expects to find a "chroot"
-#       installation of the files and directories, e.g. /emul/linux.
 #
 
 # _EMUL_OPSYS
@@ -121,24 +105,10 @@ EMUL_PLATFORM?=		${_platform_}
 .endfor
 EMUL_PLATFORM?=		none
 
-# _EMUL_RUN_LDCONFIG
-#	This is YesNo variable that is modified by makefiles in the
-#	emulator framework.  This is used as the default value of
-#	RUN_LDCONFIG by any package that uses the emulator framework.
-#	
-#	Default value: no
-#
-_EMUL_RUN_LDCONFIG=	no
-
 .if ${EMUL_PLATFORM} == "none"
 EMUL_ARCH?=		none
 EMUL_OPSYS?=		none
-EMUL_DISTRO?=		none
-EMULSUBDIR?=		# empty
-EMULDIR?=		${PREFIX}
-OPSYS_EMULDIR?=		# empty
 .else
 EMUL_ARCH?=		${EMUL_PLATFORM:C/.*-//}
 EMUL_OPSYS?=		${EMUL_PLATFORM:C/-.*//}
-.  include "../../mk/emulator/${EMUL_OPSYS}.mk"
 .endif
