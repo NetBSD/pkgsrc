@@ -1,6 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2007/08/22 15:24:31 mishka Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/08/22 15:46:49 mishka Exp $
 
-DISTNAME=	rus-ispell-0.99g4
+RUS_ISPELL_VERSION=	0.99g4
+
+DISTNAME=	rus-ispell-${RUS_ISPELL_VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://scon155.phys.msu.su/pub/russian/ispell/
 
