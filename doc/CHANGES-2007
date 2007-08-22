@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1860 2007/08/22 15:31:31 mishka Exp $
+$NetBSD: CHANGES-2007,v 1.1861 2007/08/22 16:43:31 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3413,3 +3413,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/inconsolata version 20070822 [smb 2007-08-22]
 	Updated textproc/ispell-russian to 0.99g4 [mishka 2007-08-22]
 	Updated textproc/ispell-russian-io to 0.99g4 [mishka 2007-08-22]
+	Removed archivers/rar-bin [jlam 2007-08-22]
