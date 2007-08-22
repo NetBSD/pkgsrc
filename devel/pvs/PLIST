@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/20 18:15:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/08/22 17:28:09 jlam Exp $
 bin/pvs
 pvs/README
-pvs/bin/ix86-redhat5/runtime/file_utils.so
-pvs/bin/ix86-redhat5/runtime/files.bu
-pvs/bin/ix86-redhat5/runtime/libacl623.so
-pvs/bin/ix86-redhat5/runtime/mu.so
-pvs/bin/ix86-redhat5/runtime/pvs-allegro6.2
-pvs/bin/ix86-redhat5/runtime/pvs-allegro6.dxl
-pvs/bin/ix86-redhat5/runtime/pvs-allegro6.lic
-pvs/bin/ix86-redhat5/runtime/ws1s.so
 pvs/bin/pvs-platform
 pvs/bin/relocate
 pvs/bin/tarmail
@@ -541,8 +533,6 @@ pvs/wish/sequent.xbm
 @dirrm pvs/emacs
 @dirrm pvs/doc/release-notes
 @dirrm pvs/doc
-@dirrm pvs/bin/ix86-redhat5/runtime
-@dirrm pvs/bin/ix86-redhat5
 @dirrm pvs/bin
 @exec ${MKDIR} %D/pvs/Examples
 @dirrm pvs/Examples
