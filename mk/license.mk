@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.7 2007/08/14 15:23:53 gdt Exp $
+# $NetBSD: license.mk,v 1.8 2007/08/22 16:29:15 gdt Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
@@ -57,30 +57,31 @@
 # === Predefined variables ===
 #
 # DEFAULT_ACCEPTABLE_LICENSES
-#	The list of licenses that before July, 2007 did not require
-#	tagging because they were Open Source or Free.  The intent is
-#	to make it contain licenses that are Open Source or Free and
-#	not controversial, so as to provide a default that almost all
-#	people find acceptable.  (Many people will want to add more
-#	licenses to ACCEPTABLE_LICENSES; the point is to have a
-#	default that very few people want to shrink.)
+#	The list of licenses that will be the default value of
+#	ACCEPTABLE_LICENSES.  Adapting the longstanding policy of Open
+#	Source or Free licenses not requiring tags, it should contain
+#	all licenses that are Open Source or Free, so as to provide
+#	the most expansive default that almost all people find
+#	acceptable.  (Many people will want to add more licenses to
+#	ACCEPTABLE_LICENSES; the point is to have a default that very
+#	few people want to shrink.)
 #
 # === See also ===
 #
 #	../doc/TODO, section "Licenses of packages"
 #
 
-# TODO: Determine whether GPLv3 should be included (and therefore if
-# there should be a "widely accepted" test in addition to open
-# source/free).  Perhaps wait until OSI decides whether or not to
-# approve GPLv3 as open source.
-
 # This list is not complete.  Free and Open Source licenses should be
 # added to the list as they are added to pkgsrc.
+
+# XXX Surely we will encounter licenses that clearly are Free, but
+# which have not been formally approved.  These licenses, if added,
+# should be somehow marked.
 
 DEFAULT_ACCEPTABLE_LICENSES= \
 	public-domain \
 	gnu-gpl-v2 gnu-lgpl-v2 \
+	gnu-gpl-v3 gnu-lgpl-v3 \
 	original-bsd modified-bsd \
 	x11 \
 	apache-2.0 \
