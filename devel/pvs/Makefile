@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/02/22 19:26:24 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/08/22 17:28:09 jlam Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -13,50 +13,37 @@ DISTFILES=		${DISTNAME}-${MAINFILEEXT}${EXTRACT_SUFX} \
 			pvs-${VERSION}-system${EXTRACT_SUFX} \
 			pvs-${VERSION}-libraries${EXTRACT_SUFX}
 
+LICENSE=		pvs-license
+# not quite sure about this, but to be on the safe side:
+RESTRICTED=		Redistribution not permitted - see ${HOMEPAGE}license.html
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 
 DEPENDS+=		tk>=8.0:../../x11/tk
 
+EMUL_PLATFORMS+=	linux-i386 solaris-sparc
+
 WRKSRC=			${WRKDIR}
 VERSION=		3.2
-NO_BUILD=		yes
-CHECK_SHLIBS_SUPPORTED=	no
 INFO_FILES=		# PLIST
 TEX_ACCEPTED=		teTeX3
 
-LICENSE=	pvs-license
-# not quite sure about this, but to be on the safe side:
-RESTRICTED=	Redistribution not permitted - see ${HOMEPAGE}license.html
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-
-ONLY_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-[2-9]*-* Linux-*-* SunOS-*-*
-ONLY_FOR_PLATFORM+=	DragonFly-*-*
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc") || ${OPSYS} != "SunOS"
-MAINFILEEXT=		linux
-.else
-MAINFILEEXT=		solaris
-.endif
-
-.if ${OPSYS} == "NetBSD"
-MESSAGE_SRC=		${FILESDIR}/MESSAGE
-.endif
+MESSAGE_SRC=		${PKGDIR}/MESSAGE.${EMUL_PLATFORM}
+MAINFILEEXT=		${EMUL_OPSYS}
 
 INSTALLATION_DIRS=	bin
 
-post-patch:
-	${SED} -e "s|@PREFIX@|${PREFIX}|" ${WRKSRC}/pvs > \
-		${WRKSRC}/pvs.tmp
-	${MV} ${WRKSRC}/pvs.tmp ${WRKSRC}/pvs
-	${RM} ${WRKSRC}/pvs.orig
-	${RM} ${WRKSRC}/doc/release-notes/pvs-release-notes.info.orig
+do-build:
+	${SED} -e "s|@PREFIX@|${PREFIX}|" ${WRKSRC}/pvs > ${WRKSRC}/pvs.tmp
+	${MV} -f ${WRKSRC}/pvs.tmp ${WRKSRC}/pvs
+	${RM} -f ${WRKSRC}/pvs.orig
+	${RM} -f ${WRKSRC}/doc/release-notes/pvs-release-notes.info.orig
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pvs ${PREFIX}/bin/pvs
