@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2004/01/23 15:02:07 agc Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/22 15:24:31 mishka Exp $
 
-PKGNAME=	ispell-russian-0.99f5
+PKGNAME=	ispell-russian-0.99g4
 
 .include "../../textproc/ispell-russian/Makefile.common"
