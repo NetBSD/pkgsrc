@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/07/29 05:19:22 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/22 02:19:15 jlam Exp $
 
 DISTNAME=	suse_vmware-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 DISTFILES=	grep-2.5.1-416.${SUSE_ARCH}.rpm
 
