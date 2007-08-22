@@ -1,6 +1,6 @@
-# $Id: Makefile,v 1.10 2007/08/21 15:43:46 abs Exp $
+# $Id: Makefile,v 1.11 2007/08/22 11:50:18 tron Exp $
 
-VERSION=1.12
+VERSION=1.13
 
 PREFIX?=/usr/local
 OPSYS?=`uname`
@@ -9,7 +9,9 @@ MANDIR?=${PREFIX}/man/man1
 SUBRDIR?=${PREFIX}/share/cpuflags
 SHAREMKDIR?=${PREFIX}/share/mk
 BINDIR?=${PREFIX}/bin
-INSTALL?=install
+BSD_INSTALL_DATA?=install
+BSD_INSTALL_MAN?=install
+BSD_INSTALL_SCRIPT?=install
 SED?=sed
 
 all:
@@ -22,11 +24,11 @@ clean:
 
 install:
 	mkdir -p ${BINDIR} ${MANDIR} ${SHAREMKDIR} ${SUBRDIR}
-	${INSTALL} cpuflags.sh.out	${BINDIR}/cpuflags
-	${INSTALL} cpuflags.1.out	${MANDIR}/cpuflags.1
-	${INSTALL} optimize_gcc.mk	${SHAREMKDIR}/optimize_gcc.mk
-	${INSTALL} cpuflags.mk.out	${SHAREMKDIR}/cpuflags.mk
-	${INSTALL} subr_*		${SUBRDIR}
+	${BSD_INSTALL_SCRIPT} cpuflags.sh.out	${BINDIR}/cpuflags
+	${BSD_INSTALL_MAN} cpuflags.1.out	${MANDIR}/cpuflags.1
+	${BSD_INSTALL_DATA} optimize_gcc.mk	${SHAREMKDIR}/optimize_gcc.mk
+	${BSD_INSTALL_DATA} cpuflags.mk.out	${SHAREMKDIR}/cpuflags.mk
+	${BSD_INSTALL_DATA} subr_*		${SUBRDIR}
 
 dist:
 	mkdir -p DIST/cpuflags-${VERSION}
