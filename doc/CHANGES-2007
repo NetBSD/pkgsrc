@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1856 2007/08/22 08:04:01 martti Exp $
+$NetBSD: CHANGES-2007,v 1.1857 2007/08/22 11:50:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3408,3 +3408,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/inconsolata version 20070821 [smb 2007-08-21]
 	Removed fonts/inconsolata [smb 2007-08-21]
 	Updated mail/clamav to 0.91.2 [martti 2007-08-22]
+	Updated devel/cpuflags to 1.13 [tron 2007-08-22]
