@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.39 2007/08/22 18:35:30 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/08/22 18:36:09 jlam Exp $
 
 DISTNAME=	zlib-1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.gzip.org/zlib/
+DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.zlib.net/
 COMMENT=	General purpose data compression library
 
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CHECKSUM=		yes
+EXTRACT_ONLY=		# empty
 USE_LIBTOOL=		yes
 
-INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
-
-.include "../../mk/bsd.prefs.mk"
-
 CFLAGS+=		${CPPFLAGS}
+
+INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
