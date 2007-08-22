@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/22 18:09:12 jlam Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://motoyuki.bsdclub.org/data/NetBSD/CVSup/i386/
 EXTRACT_SUFX=	.tgz
@@ -10,15 +11,19 @@ MAINTAINER=	motoyuki@bsdclub.org
 HOMEPAGE=	http://www.cvsup.org/
 COMMENT=	cvsup GUI client
 
-DEPENDS+=	cvsup-bin-[0-9]*:../../devel/cvsup-bin
+CVSUP_VERSION=	${DISTNAME:S/cvsup-gui-static-//}
 
-WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-# remove on next update -- see PR 25255 for details
-DIST_SUBDIR=	cvsup-i386-1.6
+DEPENDS+=	cvsup-bin>=${CVSUP_VERSION}:../../devel/cvsup-bin
 
-ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
+EMUL_PLATFORMS=		netbsd-i386
+NETBSD_VERSION_REQD=	1.5
+
+# XXX Remove the following line on next update; see PR 25255 for details
+DIST_SUBDIR=		cvsup-i386-1.6
+
+WRKSRC=			${WRKDIR}
+NO_CONFIGURE=		yes
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	bin
 
