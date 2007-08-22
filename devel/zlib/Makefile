@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/08/02 13:22:20 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2007/08/22 18:35:30 jlam Exp $
 
 DISTNAME=	zlib-1.2.3
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ EXTRACT_ONLY=	# empty
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+NO_CHECKSUM=		yes
 USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
