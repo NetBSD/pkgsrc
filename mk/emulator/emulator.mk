@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.3 2007/08/13 15:17:09 jlam Exp $
+# $NetBSD: emulator.mk,v 1.4 2007/08/22 14:47:10 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -16,6 +16,22 @@
 #	Default value: plain
 #
 # Variables defined by this file:
+#
+# EMUL_DISTRO
+#	The distribution of the emulated operating system being used,
+#	e.g. native-linux, suse-10.0, etc.  If the package isn't
+#	supported on this machine, then its value is "none".
+#
+# EMULDIR
+#	Convenience variable that expands to ${PREFIX}/${EMULSUBDIR}
+#
+# EMULSUBDIR
+#	Path relative to ${PREFIX} where the files and directories
+#	are located, e.g. emul/linux.
+#
+# OPSYS_EMULDIR
+#	Path through which the platform expects to find a "chroot"
+#	installation of the files and directories, e.g. /emul/linux.
 #
 # EMULSUBDIRSLASH
 #	Expands to either ${EMULSUBDIR}/lib or just lib depending on
@@ -36,6 +52,25 @@
 #	of the ``emul-fetch'' target.
 #
 
+.if empty(EMUL_PLATFORMS:M${EMUL_PLATFORM})
+PKG_FAIL_REASON+=	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+.endif
+
+.if ${EMUL_PLATFORM} == "none"
+EMUL_DISTRO?=		none
+EMULSUBDIR?=		# empty
+EMULDIR?=		${PREFIX}
+OPSYS_EMULDIR?=		# empty
+.else
+#
+# The ${EMUL_OPSYS}.mk file included here should define the following
+# variables either directly or indirectly:
+#
+#	EMUL_DISTRO, EMULSUBDIR, EMULDIR, OPSYS_EMULDIR
+#
+.  include "../../mk/emulator/${EMUL_OPSYS}.mk"
+.endif
+
 # If we're doing true binary emulation, then file paths found in the
 # package's binaries, libraries and scripts won't necessarily match the
 # actual paths on the file system, so skip some path checks that are
@@ -51,6 +86,14 @@ CHECK_INTERPRETER_SKIP=		*
 #
 CHECK_PORTABILITY_SKIP=		*
 
+# _EMUL_RUN_LDCONFIG
+#	This is YesNo variable that is modified by makefiles in the
+#	emulator framework.  This is used as the default value of
+#	RUN_LDCONFIG by any package that uses the emulator framework.
+#
+#	Default value: no
+#
+_EMUL_RUN_LDCONFIG?=	no
 RUN_LDCONFIG?=		${_EMUL_RUN_LDCONFIG}
 
 FILES_SUBST+=		EMUL_PLATFORM=${EMUL_PLATFORM:Q}
@@ -72,10 +115,6 @@ PLIST_SUBST+=		OPSYS_EMULDIR=${OPSYS_EMULDIR:Q}
 EMULSUBDIRSLASH=	${EMULSUBDIR:S/$/\//:C/^\/$//}
 FILES_SUBST+=		EMULSUBDIRSLASH=${EMULSUBDIRSLASH:Q}
 PLIST_SUBST+=		EMULSUBDIRSLASH=${EMULSUBDIRSLASH:Q}
-
-.if empty(EMUL_PLATFORMS:M${EMUL_PLATFORM})
-PKG_FAIL_REASON+=	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
-.endif
 
 # Add dependencies for each "module" that the package requests in
 # EMUL_MODULES.${EMUL_OPSYS}.
