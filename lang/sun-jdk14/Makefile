@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/07/29 05:19:28 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2007/08/22 14:03:47 jlam Exp $
 
 DISTNAME=	j2sdk-1_4_2_14-linux-${DIST_ARCH}
 PKGNAME=	sun-jdk14-2.14
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.4.2
