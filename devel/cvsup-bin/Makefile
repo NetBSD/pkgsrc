@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/17 20:59:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/22 18:09:12 jlam Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -10,29 +10,32 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~jdp/
 COMMENT=	cvsup daemon and client
 
-WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
-# remove on next update -- see PR 25255 for details
-DIST_SUBDIR=	cvsup-i386-1.6
-
 CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*
+
+EMUL_PLATFORMS=		netbsd-i386
+NETBSD_VERSION_REQD=	1.5
+
+# XXX Remove the following line on the next update; see PR 25255 for details
+DIST_SUBDIR=		cvsup-i386-1.6
+
+WRKSRC=			${WRKDIR}
+NO_CONFIGURE=		yes
+BUILD_DIRS=		# empty
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 sbin
 
 do-install:
-	for i in cvpasswd cvsup ; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin/$$i ${PREFIX}/bin; \
+	cd ${WRKSRC} && for i in cvpasswd cvsup ; do \
+		${INSTALL_PROGRAM} bin/$$i ${PREFIX}/bin; \
 	done
-	for i in cvsupd; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/sbin/$$i ${PREFIX}/sbin; \
+	cd ${WRKSRC} && for i in cvsupd; do \
+		${INSTALL_PROGRAM} sbin/$$i ${PREFIX}/sbin; \
 	done
-	for i in cvpasswd.1 cvsup.1; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man1/$$i ${PREFIX}/${PKGMANDIR}/man1; \
+	cd ${WRKSRC} && for i in cvpasswd.1 cvsup.1; do \
+		${INSTALL_MAN} man/man1/$$i ${PREFIX}/${PKGMANDIR}/man1; \
 	done
-	for i in cvsupd.8; do \
-		${INSTALL_MAN} ${WRKSRC}/man/man8/$$i ${PREFIX}/${PKGMANDIR}/man8; \
+	cd ${WRKSRC} && for i in cvsupd.8; do \
+		${INSTALL_MAN} man/man8/$$i ${PREFIX}/${PKGMANDIR}/man8; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup
 	${INSTALL_DATA} ${WRKSRC}/share/doc/cvsup/License \
