@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2007/02/16 14:40:41 xtraeme Exp $
+$NetBSD: patch-af,v 1.4 2007/08/22 08:02:58 martti Exp $
 
---- database/Makefile.in.orig	2007-02-16 15:27:18.000000000 +0100
-+++ database/Makefile.in	2007-02-16 15:28:06.000000000 +0100
-@@ -359,17 +359,6 @@
+--- database/Makefile.in.orig	2007-08-20 22:48:18.000000000 +0000
++++ database/Makefile.in	2007-08-22 10:57:32.000000000 +0000
+@@ -360,17 +360,6 @@
  	$(mkinstalldirs) $(DESTDIR)$(DBINST)
  	@test -f $(DESTDIR)$(DBINST)/main.cvd || test -d $(DESTDIR)$(DBINST)/main.inc || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST)
  	@test -f $(DESTDIR)$(DBINST)/daily.cvd || test -d $(DESTDIR)$(DBINST)/daily.inc || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST)
