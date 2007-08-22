@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2007/07/29 05:19:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.34 2007/08/22 14:03:48 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -20,10 +20,7 @@ EMUL_PLATFORMS=		linux-i386
 
 .include "../../mk/bsd.prefs.mk"
 
-EMUL_MODULES.linux=	locale x11
-.if !empty(EMUL_DISTRO:Msuse-[0-9].*)
-EMUL_MODULES.linux+=	compat
-.endif
+EMUL_MODULES.linux=	compat locale x11
 
 DIST_ARCH.i386=		i586
 .if defined(DIST_ARCH.${EMUL_ARCH})
