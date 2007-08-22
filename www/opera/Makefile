@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2007/08/22 14:49:25 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2007/08/22 14:51:03 jlam Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=		1
@@ -23,7 +23,6 @@ EMUL_PLATFORMS+=	solaris-sparc
 
 EMUL_MODULES.linux=	x11
 SUSE_VERSION_REQD=	7.3
-SOLARIS_VERSION_REQD=	8
 
 USE_LANGUAGES=		# empty
 BUILD_DIRS=		# empty
@@ -84,6 +83,7 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 ONLY_FOR_PLATFORM+=	SunOS-*-sparc*
 EXTRACT_SUFX=		.tar.bz2
+SOLARIS_VERSION_REQD=	8
 OPERA_ARCH=		-sol8-sparc
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/sparc/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
