@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2007/05/07 14:14:06 hauke Exp $
+$NetBSD: patch-ab,v 1.7 2007/08/23 14:10:29 hauke Exp $
 
---- ra.sh.orig	2007-02-27 16:20:09.000000000 +0100
+--- ra.sh.orig	2007-06-18 23:01:07.000000000 +0200
 +++ ra.sh
 @@ -29,7 +29,7 @@ TLSLEVEL="_RADMIND_AUTHLEVEL"
  EDITOR=${EDITOR:-vi}
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2007/05/07 14:14:06 hauke Exp $
  FSDIFFROOT="."
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
  CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
-@@ -39,7 +39,7 @@ VERSION=_RADMIND_VERSION
+@@ -40,7 +40,7 @@ VERSION=_RADMIND_VERSION
  PREAPPLY="_RADMIND_PREAPPLY"
  POSTAPPLY="_RADMIND_POSTAPPLY"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2007/05/07 14:14:06 hauke Exp $
  RETRY=10
  
  MKTEMP="_RADMIND_MKTEMP"
-@@ -55,14 +55,6 @@ fi
+@@ -56,14 +56,6 @@ fi
  LTMP="${RASHTMP}/lapply.out"
  FTMP="${RASHTMP}/fsdiff.out"
  
@@ -33,5 +33,5 @@ $NetBSD: patch-ab,v 1.6 2007/05/07 14:14:06 hauke Exp $
 -fi
 -
  Yn() {
-     echo -n "$*" "[Yn] "
+     $ECHO -n "$*" "[Yn] "
      read ans
