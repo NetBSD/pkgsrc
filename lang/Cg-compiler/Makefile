@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/07/29 05:19:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/23 18:20:31 jlam Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -13,7 +13,7 @@ COMMENT=	NVIDIA Cg Compiler for Linux
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty

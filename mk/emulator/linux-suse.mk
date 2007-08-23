@@ -1,9 +1,12 @@
-# $NetBSD: linux-suse.mk,v 1.1 2007/07/29 05:19:42 jlam Exp $
+# $NetBSD: linux-suse.mk,v 1.2 2007/08/23 18:20:32 jlam Exp $
 #
 # SuSE Linux
 #
 
 # Most Linux software only need suse>=6.4.
+.for _version_ in ${EMUL_REQD:Msuse>=*:S/suse>=//}
+SUSE_VERSION_REQD?=	${_version_}
+.endfor
 SUSE_VERSION_REQD?=	6.4
 
 # When building the SuSE packages, force the Linux type to be the specific
