@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/23 19:36:00 jlam Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -11,27 +11,20 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.distributed.net/rc5/
 COMMENT=		Binaries for taking part in the rc5des challenge
 
-WRKSRC=			${WRKDIR}/RC5
+EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386
+EMUL_MODULES.netbsd=	base
 
-# This package requires emulators/compat12,compat13 and compat14
-# but only if we aren't running the relevant release natively.
 .include "../../mk/bsd.prefs.mk"
-RELEASE!= ${ECHO} ${OS_VERSION} | ${AWK} -F. '{print $$1*100+$$2}'
-.if ${RELEASE}>104
-DEPENDS+=		compat14-[0-9]*:../../emulators/compat14
-.if ${RELEASE}>103
-DEPENDS+=		compat13-[0-9]*:../../emulators/compat13
-.if ${RELEASE}>102
-DEPENDS+=		compat12-[0-9]*:../../emulators/compat12
-.endif
-.endif
-.endif
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
-			NetBSD-*-i386
+.if ${EMUL_PLATFORM} == "netbsd-i386"
+EMUL_REQD=		netbsd>=1.2
+.else
+EMUL_REQD=		netbsd>=1.3
+.endif
 
 CRYPTO=			yes
 NO_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/RC5
 
 # agc - this is commented out until I can test that it works.
 #post-patch:
