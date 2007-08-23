@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6610 2007/08/23 07:23:18 wiz Exp $
+$NetBSD: TODO,v 1.6611 2007/08/23 09:55:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -552,7 +552,7 @@ Suggested package updates
 	o gperf-3.0.3
 	o gperiodic-2.0.10
 	o gpsdrive-2.09
-	o gq-1.2.0
+	o gq-1.2.2
 	o grace-5.1.21
 	o gramofile-1.6P
 	o grap-1.40
@@ -971,6 +971,7 @@ Suggested package updates
 	o pircbot-1.4.4
 	o pkg_select-20051209
 	o pload-0.9.5
+	o plone-2.5.3
 	o plone-3.0
 	o ploticus-2.33
 	o ploticus-examples-230
