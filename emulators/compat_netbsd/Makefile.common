@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2007/08/21 22:49:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/08/23 15:59:33 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -42,6 +42,8 @@ NETBSD_BASE=		# empty
 BUILD_DIRS=		# empty
 MAKE_DIRS+=		${EMULDIR}
 ELF_SYMLINKS_DATA=	${WRKDIR}/.symlinks-data
+
+.include "../../mk/emulator/emulator-opsys.mk"
 
 #
 # PLISTs are composed from the following bits, in order:

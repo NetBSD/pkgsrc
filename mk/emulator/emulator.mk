@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.4 2007/08/22 14:47:10 jlam Exp $
+# $NetBSD: emulator.mk,v 1.5 2007/08/23 15:59:34 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -16,22 +16,6 @@
 #	Default value: plain
 #
 # Variables defined by this file:
-#
-# EMUL_DISTRO
-#	The distribution of the emulated operating system being used,
-#	e.g. native-linux, suse-10.0, etc.  If the package isn't
-#	supported on this machine, then its value is "none".
-#
-# EMULDIR
-#	Convenience variable that expands to ${PREFIX}/${EMULSUBDIR}
-#
-# EMULSUBDIR
-#	Path relative to ${PREFIX} where the files and directories
-#	are located, e.g. emul/linux.
-#
-# OPSYS_EMULDIR
-#	Path through which the platform expects to find a "chroot"
-#	installation of the files and directories, e.g. /emul/linux.
 #
 # EMULSUBDIRSLASH
 #	Expands to either ${EMULSUBDIR}/lib or just lib depending on
@@ -52,24 +36,7 @@
 #	of the ``emul-fetch'' target.
 #
 
-.if empty(EMUL_PLATFORMS:M${EMUL_PLATFORM})
-PKG_FAIL_REASON+=	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
-.endif
-
-.if ${EMUL_PLATFORM} == "none"
-EMUL_DISTRO?=		none
-EMULSUBDIR?=		# empty
-EMULDIR?=		${PREFIX}
-OPSYS_EMULDIR?=		# empty
-.else
-#
-# The ${EMUL_OPSYS}.mk file included here should define the following
-# variables either directly or indirectly:
-#
-#	EMUL_DISTRO, EMULSUBDIR, EMULDIR, OPSYS_EMULDIR
-#
-.  include "../../mk/emulator/${EMUL_OPSYS}.mk"
-.endif
+.include "${.PARSEDIR}/emulator-opsys.mk"
 
 # If we're doing true binary emulation, then file paths found in the
 # package's binaries, libraries and scripts won't necessarily match the
