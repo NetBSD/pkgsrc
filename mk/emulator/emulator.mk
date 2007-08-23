@@ -1,8 +1,12 @@
-# $NetBSD: emulator.mk,v 1.7 2007/08/23 17:39:47 jlam Exp $
+# $NetBSD: emulator.mk,v 1.8 2007/08/23 18:20:36 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
 # Package-settable variables:
+#
+# EMUL_REQD
+#	List of required versions for different emulation types, e.g
+#	suse>=10.0, netbsd>=1.2, etc.
 #
 # EMUL_MODULES.${EMUL_OPSYS}
 #	List of modules of ${EMUL_OPSYS} that are used by the package.
