@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/20 22:15:08 mjf Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/23 09:38:15 joerg Exp $
 
 DISTNAME=	bzr-0.90rc1
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bazaar-vcs.org/
 COMMENT=	Yet another distributed Version Control System
 
-DEPENDS+=       ${PYPKGPREFIX}-expat:../../textproc/py-expat 
+DEPENDS+=       ${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat 
 PYTHON_VERSIONS_ACCEPTED=	24
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
