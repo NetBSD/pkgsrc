@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.328 2007/08/13 08:12:47 rillig Exp $
+# $NetBSD: Makefile,v 1.329 2007/08/23 10:50:03 jnemeth Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -40,6 +40,7 @@ SUBDIR+=	claws-mail-smime
 SUBDIR+=	claws-mail-spamassassin
 SUBDIR+=	claws-mail-synce
 SUBDIR+=	claws-mail-trayicon
+SUBDIR+=	claws-mail-vcalendar
 SUBDIR+=	columba
 SUBDIR+=	coolmail
 SUBDIR+=	courier-analog
@@ -147,13 +148,13 @@ SUBDIR+=	offlineimap
 SUBDIR+=	p5-Email-Abstract
 SUBDIR+=	p5-Email-Address
 SUBDIR+=	p5-Email-Date
-SUBDIR+=	p5-Email-MessageID
-SUBDIR+=	p5-Email-MIME-Attachment-Stripper
 SUBDIR+=	p5-Email-MIME
+SUBDIR+=	p5-Email-MIME-Attachment-Stripper
 SUBDIR+=	p5-Email-MIME-ContentType
 SUBDIR+=	p5-Email-MIME-Creator
 SUBDIR+=	p5-Email-MIME-Encodings
 SUBDIR+=	p5-Email-MIME-Modifier
+SUBDIR+=	p5-Email-MessageID
 SUBDIR+=	p5-Email-Reply
 SUBDIR+=	p5-Email-Send
 SUBDIR+=	p5-Email-Simple
