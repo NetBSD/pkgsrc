@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/10/05 02:49:30 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2007/08/23 14:10:29 hauke Exp $
 
---- Makefile.in.orig	2006-05-24 19:45:15.000000000 +0200
-+++ Makefile.in	2006-10-05 04:45:05.000000000 +0200
-@@ -236,6 +236,8 @@ rash : FRC
+--- Makefile.in.orig	2007-06-18 23:02:05.000000000 +0200
++++ Makefile.in
+@@ -253,6 +253,8 @@ rash : FRC
  	    -e 's@_RADMIND_MAIL_DOMAIN@${RADMIND_MAIL_DOMAIN}@g' \
  	    -e 's@_RADMIND_COMMANDFILE@${COMMANDFILE}@g' \
  	    -e 's@_RADMIND_VERSION@$(shell cat VERSION)@g' \
 +	    -e 's@_PKG_SYSCONFDIR@${PKG_SYSCONFDIR}@g' \
 +	    -e 's@_LOCALBASE@${LOCALBASE}@g' \
+ 	    -e 's@_RADMIND_ECHO_PATH@${ECHO}@g' \
  	    ${srcdir}/ra.sh > tmp/ra.sh; 
  
- man : FRC
