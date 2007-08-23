@@ -1,4 +1,4 @@
-# $NetBSD: freebsd.mk,v 1.1 2007/07/29 05:19:42 jlam Exp $
+# $NetBSD: freebsd.mk,v 1.2 2007/08/23 17:39:47 jlam Exp $
 #
 # FreeBSD binary emulation framework
 #
@@ -33,7 +33,7 @@ EMUL_DISTRO=		native-freebsd		# native FreeBSD installation
 EMULDIR=		${PREFIX}
 EMULSUBDIR=		# empty
 .else
-.  include "${PKGSRCDIR}/mk/emulator/freebsd-${_EMUL_TYPE}.mk"
+.  include "${.PARSEDIR}/freebsd-${_EMUL_TYPE}.mk"
 .endif
 
 .if (${_EMUL_TYPE} == "builtin") || (${_EMUL_TYPE} == "native")

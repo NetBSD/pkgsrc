@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.6 2007/08/23 17:31:46 jlam Exp $
+# $NetBSD: emulator.mk,v 1.7 2007/08/23 17:39:47 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -136,7 +136,7 @@ _EMUL_PKG_FMTS+=	rpm
 
 EMUL_PKG_FMT?=		plain
 
-.include "${PKGSRCDIR}/mk/emulator/pkg-${EMUL_PKG_FMT}.mk"
+.include "${.PARSEDIR}/pkg-${EMUL_PKG_FMT}.mk"
 
 .PHONY: emul-fetch
 emul-fetch:
