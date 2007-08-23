@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2007/08/20 21:36:15 agc Exp $
+# $NetBSD: Makefile,v 1.885 2007/08/23 10:41:46 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -178,8 +178,8 @@ SUBDIR+=	gflib
 SUBDIR+=	giblib
 SUBDIR+=	gindent
 SUBDIR+=	glade
-SUBDIR+=	glade3
 SUBDIR+=	glade-gnome
+SUBDIR+=	glade3
 SUBDIR+=	glib
 SUBDIR+=	glib2
 SUBDIR+=	glibmm
@@ -400,8 +400,8 @@ SUBDIR+=	p5-Class-Singleton
 SUBDIR+=	p5-Class-Std
 SUBDIR+=	p5-Class-Trigger
 SUBDIR+=	p5-Class-WhiteHole
-SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Class-XML
+SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Clone
 SUBDIR+=	p5-Clone-PP
 SUBDIR+=	p5-Compress-Raw-Zlib
@@ -552,10 +552,10 @@ SUBDIR+=	p5-Proc-ProcessTable
 SUBDIR+=	p5-Proc-Simple
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
-SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-Regexp-Assemble
 SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Shellish
+SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-Rose-Object
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SVN-Mirror
