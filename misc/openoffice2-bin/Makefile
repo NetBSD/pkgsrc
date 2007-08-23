@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2007/08/23 18:20:32 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2007/08/23 20:38:03 jlam Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 
@@ -36,7 +37,7 @@ EMUL_REQD=		suse>=7.3
 EMUL_PKG_FMT=		rpm
 RPMFILES=		${WRKSRC}/RPMS/*.rpm
 RPM2PKG_PREFIX=		${PREFIX}
-RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+RPM2PKG_SUBPREFIX=	# empty
 RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
 
