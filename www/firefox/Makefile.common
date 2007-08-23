@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2007/06/18 21:33:32 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.23 2007/08/23 20:27:19 heinz Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -201,7 +201,7 @@ do-install:
 	${SETENV} ${SCRIPTS_ENV} DESTDIR=${DESTDIR} ${SH} ${FILESDIR:Q}/moz-install
 
 post-install:
-	${FIND} ${PREFIX}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
+	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
 
 .include "../../mk/pthread.buildlink3.mk"
 
