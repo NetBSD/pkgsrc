@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2007/08/21 22:49:03 jlam Exp $
+# $NetBSD: Makefile,v 1.164 2007/08/23 10:44:57 jnemeth Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -176,7 +176,6 @@ SUBDIR+=	suse91_openmotif
 SUBDIR+=	suse91_slang
 SUBDIR+=	suse91_vmware
 SUBDIR+=	suse91_x11
-#SUBDIR+=	suse_linux		# only contains Makefile fragments
 SUBDIR+=	swarm
 SUBDIR+=	tme
 SUBDIR+=	tuxnes
