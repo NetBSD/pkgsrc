@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1864 2007/08/23 09:41:07 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1865 2007/08/23 13:52:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3418,3 +3418,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed misc/xorg-dirs [joerg 2007-08-23]
 	Updated x11/xfce4-terminal to 0.2.6nb1 [martti 2007-08-23]
 	Updated editors/vim-share to 7.1.87 [martti 2007-08-23]
+	Updated net/rsync to 2.6.9nb1 [tron 2007-08-23]
