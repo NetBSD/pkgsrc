@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/16 00:14:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/08/23 09:56:55 joerg Exp $
 bin/swish-config
 bin/swish-e
 bin/swish-filter-test
@@ -38,7 +38,6 @@ man/man1/swish-e.1
 share/doc/swish-e/INSTALL
 share/doc/swish-e/README
 share/doc/swish-e/README.cvs
-share/doc/swish-e/examples/filters/README
 share/doc/swish-e/html/api.html
 share/doc/swish-e/html/changes.html
 share/doc/swish-e/html/filter.html
@@ -78,6 +77,7 @@ share/examples/swish-e/example7.config
 share/examples/swish-e/example8.config
 share/examples/swish-e/example9.config
 share/examples/swish-e/example9.pl
+share/examples/swish-e/filters/README
 share/examples/swish-e/filter-bin/README
 share/examples/swish-e/filter-bin/_binfilter.sh
 share/examples/swish-e/filter-bin/_pdf2html.pl
@@ -107,10 +107,10 @@ share/swish-e/templates/style.css
 @dirrm share/examples/swish-e/stopwords
 @dirrm share/examples/swish-e/prog-bin
 @dirrm share/examples/swish-e/filter-bin
+@dirrm share/examples/swish-e/filters
 @dirrm share/examples/swish-e
 @dirrm share/doc/swish-e/pod
 @dirrm share/doc/swish-e/html
-@dirrm share/doc/swish-e/examples/filters
 @dirrm share/doc/swish-e/examples
 @dirrm share/doc/swish-e
 @dirrm lib/swish-e/perl/SWISH/Filters
