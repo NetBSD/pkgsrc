@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6611 2007/08/23 09:55:11 taca Exp $
+$NetBSD: TODO,v 1.6612 2007/08/23 14:11:53 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1076,7 +1076,6 @@ Suggested package updates
 	o qwt-0.4.0
 	o radiance-3.7.2
 	o radiusd-cistron-1.6.8
-	o radmind-1.8.1
 	o raine-0.50.5
 	o randread-0.2
 	o rat-4.2.25
