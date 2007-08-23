@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.6 2007/08/22 14:47:10 jlam Exp $
+# $NetBSD: emulator-vars.mk,v 1.7 2007/08/23 13:43:57 jlam Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATFORMS is defined
 # and non-empty.
@@ -41,6 +41,10 @@
 #	The operating system being emulated, e.g. linux.  If the
 #	package isn't supported on this machine, then its value is
 #	"none".
+#
+# EMUL_IS_NATIVE
+#	Whether or not the operating system being emulated matches the
+#	native operating system.  It is either defined or undefined.
 #
 
 # _EMUL_OPSYS
@@ -111,4 +115,8 @@ EMUL_OPSYS?=		none
 .else
 EMUL_ARCH?=		${EMUL_PLATFORM:C/.*-//}
 EMUL_OPSYS?=		${EMUL_PLATFORM:C/-.*//}
+.endif
+
+.if ${_EMUL_OPSYS} == ${EMUL_OPSYS}
+EMUL_IS_NATIVE=		defined
 .endif
