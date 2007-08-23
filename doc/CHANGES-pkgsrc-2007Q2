@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.12 2007/08/13 13:27:53 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.13 2007/08/23 14:19:32 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -53,3 +53,5 @@ Pullup ticket 2174 - requested by markd
 security fix for kdegraphics
 Pullup ticket 2175 - requested by markd
 security fix for koffice
+Pullup ticket 2179 - requested by tron
+security fix for rsync
