@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/07/29 05:19:40 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/08/23 18:20:32 jlam Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
@@ -31,7 +31,7 @@ PLIST_SRC+=		${WRKDIR}/PLIST
 EMUL_PLATFORMS=		linux-i386
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
 EMUL_MODULES.linux=	compat freetype2 x11
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 
 EMUL_PKG_FMT=		rpm
 RPMFILES=		${WRKSRC}/RPMS/*.rpm

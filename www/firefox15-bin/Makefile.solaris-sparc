@@ -1,17 +1,13 @@
-# $NetBSD: Makefile.solaris-sparc,v 1.1 2007/07/29 05:19:57 jlam Exp $
-
-.if (${OPSYS} == "SunOS") && !empty(OS_VERSION:M5.1[0-9]*)
-SOLARIS_VERSION_REQD?=	10
-.else 
-SOLARIS_VERSION_REQD?=	8
-.endif
+# $NetBSD: Makefile.solaris-sparc,v 1.2 2007/08/23 18:20:34 jlam Exp $
 
 # Use the Solaris 8 binaries if we're not running at least Solaris 10.
-.if !empty(SOLARIS_VERSION_REQD:M1[0-9]*)
+.if (${OPSYS} == "SunOS") && !empty(OS_VERSION:M5.1[0-9]*)
 DISTNAME=	firefox-${MOZ_DISTVER}.en-US.solaris10-respin-sparc
+EMUL_REQD=	solaris>=10
 MOZ_GTK2=	yes
-.else
+.else 
 DISTNAME=	firefox-${MOZ_DISTVER}.en-US.solaris8-respin-sparc-gtk1
+EMUL_REQD=	solaris>=8
 .endif
 
 EXTRACT_SUFX=	.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: netbsd-compat.mk,v 1.1 2007/08/21 22:49:33 jlam Exp $
+# $NetBSD: netbsd-compat.mk,v 1.2 2007/08/23 18:20:32 jlam Exp $
 #
 # COMPAT_* for NetBSD -- see options(4).
 #
@@ -15,6 +15,10 @@ NATIVE_EXEC_FMT=	${_NATIVE_EXEC_FMT_cmd:sh}
 _NATIVE_EXEC_FMT_cmd=	sh ${.CURDIR}/../../mk/scripts/shlib-type	\
 				${_OPSYS_SHLIB_TYPE:Q} ${MAKE:Q}
 
+# Most NetBSD (i386) software need netbsd>=1.6
+.for _version_ in ${EMUL_REQD:Mnetbsd>=*:S/netbsd>=//}
+NETBSD_VERSION_REQD?=	${_version_}
+.endfor
 NETBSD_VERSION_REQD?=	1.6
 
 # When building a NetBSD "compat" package, force the NetBSD type to be

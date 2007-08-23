@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2007/08/23 13:43:57 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2007/08/23 18:20:35 jlam Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -23,10 +23,10 @@ MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
 
 .if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 EMUL_MODULES.linux=	compat gtk2 locale
-SUSE_VERSION_REQD=	9.1
+EMUL_REQD=		suse>=9.1
 .else
 EMUL_MODULES.linux=	compat gtk
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 .endif
 
 .if defined(EMUL_IS_NATIVE)

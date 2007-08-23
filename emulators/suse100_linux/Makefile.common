@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.17 2007/07/29 08:55:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/08/23 18:20:31 jlam Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
-SUSE_VERSION_REQD=	${SUSE_VERSION}
+EMUL_REQD=		suse>=${SUSE_VERSION}
 
 # The SuSE 10.x Linux packages are only usable on the following platforms.
 .if defined(SUSE_COMPAT32)
