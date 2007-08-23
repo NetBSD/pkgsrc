@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6612 2007/08/23 14:11:53 hauke Exp $
+$NetBSD: TODO,v 1.6613 2007/08/23 21:32:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,7 @@ Suggested package updates
 	o TiffIO-130e
 	o YoSucker-75
 	o aap-0.144
-	o abcm2ps-5.5.1
+	o abcm2ps-5.5.2
 	o abcmidi-20070318
 	o acme-091
 	o acr-0.5.2
@@ -349,7 +349,7 @@ Suggested package updates
 	o bugzilla-3.0
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
-	o cadaver-0.22.5
+	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.1.8
@@ -497,7 +497,7 @@ Suggested package updates
 	o gdl-0.7.5
 	o gdsreader-0.3.2
 	o geany-0.11
-	o geda-1.1.1.20070708
+	o geda-1.1.2.20070818
 	o generator-cbiere-0.35r3
 	o gettext-0.16.1
 	o gfract-0.33
@@ -559,7 +559,7 @@ Suggested package updates
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
-	o gsasl-0.2.20
+	o gsasl-0.2.21
 	o gsed-4.1.6
 	o gsharutils-4.7
 	o gsm-1.0.12
@@ -741,7 +741,7 @@ Suggested package updates
 	o micq-0.5.4.2
 	o milter-greylist-3.1.7
 	o mined-2000.14
-	o minivmac-2.6.1
+	o minivmac-2.8.2
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
@@ -1083,7 +1083,7 @@ Suggested package updates
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o regionset-0.2
-	o remind-3.1.0
+	o remind-3.1.1
 	o rep-gtk-0.18
 	o replex-0.1.6.7
 	o resize_image-0.7
