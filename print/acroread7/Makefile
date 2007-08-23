@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/29 05:19:50 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/08/23 18:20:33 jlam Exp $
 
 DISTNAME=	acroread7	# overridden below
 PKGNAME=	acroread7-7.0.9
@@ -26,7 +26,7 @@ BUILD_DIRS=		# empty
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat cups gtk2 locale
-SUSE_VERSION_REQD=	10.0
+EMUL_REQD=		suse>=10.0
 
 .include "../../mk/bsd.prefs.mk"
 

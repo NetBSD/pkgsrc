@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/29 05:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/08/23 18:20:31 jlam Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -28,7 +28,7 @@ LICENSE=	vmware-license
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	vmware
-SUSE_VERSION_REQD=	6.4nb1
+EMUL_REQD=		suse>=6.4nb1
 
 WRKSRC=			${WRKDIR}/vmware-distrib
 

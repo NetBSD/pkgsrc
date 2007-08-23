@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.netbsd-i386,v 1.1 2007/08/22 16:43:34 jlam Exp $
+# $NetBSD: Makefile.netbsd-i386,v 1.2 2007/08/23 18:20:30 jlam Exp $
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02
 MASTER_SITES=		ftp://ftp.elf.stuba.sk/pub/pc/pack/
 EXTRACT_SUFX=		.sfx
 
-NETBSD_VERSION_REQD=	1.2
+EMUL_REQD=		netbsd>=1.2
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		exec "$$extract_file" >/dev/null
