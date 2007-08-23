@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/08/23 18:20:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/08/23 20:11:53 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -71,7 +71,7 @@ NATIVE_EXEC_FMT=	${_NATIVE_EXEC_FMT_cmd:sh}
 _NATIVE_EXEC_FMT_cmd=	sh ${.CURDIR}/../../mk/scripts/shlib-type	\
 				${_OPSYS_SHLIB_TYPE:Q} ${MAKE:Q}
 
-.include "${PKGSRCDIR}/emulators/${DISTNAME:S/-*//}/emulator.mk"
+.include "${PKGSRCDIR}/emulators/${DISTNAME:C/-.*//}/emulator.mk"
 
 #
 # Different combinations of the native executable format and the emulated
