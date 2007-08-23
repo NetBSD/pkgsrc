@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/08/22 14:51:03 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2007/08/23 18:20:35 jlam Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=		1
@@ -22,7 +22,7 @@ EMUL_PLATFORMS+=	linux-i386
 EMUL_PLATFORMS+=	solaris-sparc
 
 EMUL_MODULES.linux=	x11
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 
 USE_LANGUAGES=		# empty
 BUILD_DIRS=		# empty

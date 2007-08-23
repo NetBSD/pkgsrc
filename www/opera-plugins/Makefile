@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/07/29 05:20:00 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/23 18:20:35 jlam Exp $
 
 DISTNAME=	opera-plugins-1.0
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	ns-flash>=5.0.47:../../multimedia/ns-flash
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	motif
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES

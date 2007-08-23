@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2007/07/29 05:20:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/08/23 18:20:34 jlam Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -9,7 +9,7 @@ DEPENDS+=		opera>=7.0:../../www/opera
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	motif
-SUSE_VERSION_REQD=	7.3
+EMUL_REQD=		suse>=7.3
 
 ACRO_PLATFORM=		intellinux
 
