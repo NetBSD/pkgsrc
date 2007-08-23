@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.7 2007/07/30 14:42:43 jlam Exp $
+# $NetBSD: INSTALL,v 1.8 2007/08/23 21:50:23 jlam Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -57,9 +57,10 @@ ADD,0)
 		${CP} /dev/MAKEDEV ${EMULDIR}/dev
 	${TEST} ! -f /dev/MAKEDEV.subr ||
 		${CP} /dev/MAKEDEV.subr ${EMULDIR}/dev
-	( cd ${EMULDIR}/dev &&
-	  ${SH} ./MAKEDEV std audio &&
-	  ${LN} -fs sound dsp )
+	${TEST} ! -f ${EMULDIR}/dev/MAKEDEV ||
+		( cd ${EMULDIR}/dev &&
+		  ${SH} ./MAKEDEV std audio &&
+		  ${LN} -fs sound dsp )
 
 	# Create the appropriate symlink so that the kernel will
 	# find the installed files.
