@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/08/23 15:38:53 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2007/08/23 17:10:39 abs Exp $
 #
 
 DISTNAME=	dvdrip-0.98.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia x11 sysutils
 MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
 
@@ -25,10 +25,6 @@ DEPENDS+=	p5-Gtk2-Ex-FormFactory>=0.65:../../x11/p5-Gtk2-Ex-FormFactory
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_ARCH:Mi386)
-DEPENDS+=	{rar,rar-bin}-[0-9]*:../../archivers/rar
-.endif
-
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.0
 
 USE_PKGLOCALEDIR=	YES
@@ -42,6 +38,10 @@ SUBST_FILES.fping+=	lib/Video/DVDRip/Cluster/Master.pm
 SUBST_SED.fping=	-e "s|/usr/sbin/fping|${LOCALBASE}/sbin/fping|g"
 SUBST_MESSAGE.fping=	Fixing hardcoded path.
 
+# Currently the only option is the i386 rar binary
+.if !empty(MACHINE_ARCH:Mi386)
+.include "options.mk"
+.endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
