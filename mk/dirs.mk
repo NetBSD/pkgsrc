@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.11 2007/01/26 02:33:31 markd Exp $
+# $NetBSD: dirs.mk,v 1.12 2007/08/23 09:49:18 joerg Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -12,7 +12,6 @@ _USE_THEME_DIRS=	# empty
 _USE_XDG_DIRS=		# empty
 _USE_XDG_X11_DIRS=	# empty
 _USE_XFREE86_DIRS=	# empty
-_USE_XORG_DIRS=		# empty
 
 .for dir in ${USE_DIRS}
 pkg:=			${dir:C/-[^-]*$//}
@@ -33,8 +32,6 @@ _USE_XDG_DIRS:=		${ver}
 .  elif ${pkg} == "xdg-x11" && ${_USE_XDG_X11_DIRS} < ${ver} && \
 	defined(USE_X11BASE)
 _USE_XDG_X11_DIRS:=	${ver}
-.  elif ${pkg} == "xorg" && ${_USE_XORG_DIRS} < ${ver}
-_USE_XORG_DIRS:=	${ver}
 .  endif
 
 .endfor
@@ -68,10 +65,6 @@ _USE_XORG_DIRS:=	${ver}
 
 .if !empty(_USE_XDG_X11_DIRS)
 .  include "../../misc/xdg-x11-dirs/dirs.mk"
-.endif
-
-.if !empty(_USE_XORG_DIRS)
-.  include "../../misc/xorg-dirs/dirs.mk"
 .endif
 
 .endif # !defined(DIRS_MK)
