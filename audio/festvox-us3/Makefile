@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/06/08 18:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/08/23 21:08:20 joerg Exp $
 
 DISTNAME=	festvox_us3
 PKGNAME=	festvox-us3-1.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 
@@ -13,8 +13,8 @@ COMMENT=	MBROLA based American English male voice for festival
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 DEPENDS+=	festlex-cmu>=1.4.0:../../audio/festlex-cmu
-DEPENDS+=	mbrola-301hnb1:../../audio/mbrola
-DEPENDS+=	mbrolavox-us3-990208nb1:../../audio/mbrolavox-us3
+DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
+DEPENDS+=	mbrolavox-us3-990208{,nb[0-9]*}:../../audio/mbrolavox-us3
 
 LICENSE=	no-commercial-use
 
