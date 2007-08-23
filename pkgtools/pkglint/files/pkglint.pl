@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.714 2007/08/13 08:08:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.715 2007/08/23 09:47:37 joerg Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2615,7 +2615,6 @@ sub load_shared_dirs() {
 		misc/gnome-dirs misc/gnome1-dirs misc/gnome2-dirs
 		misc/theme-dirs
 		misc/xdg-dirs misc/xdg-x11-dirs
-		misc/xorg-dirs
 		print/texmf-dirs) {
 
 		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
