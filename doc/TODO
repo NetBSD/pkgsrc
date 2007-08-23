@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6609 2007/08/20 12:39:34 dsainty Exp $
+$NetBSD: TODO,v 1.6610 2007/08/23 07:23:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -277,6 +277,7 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
+	o amarok-1.4.7
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-9.54
 	o angband-3.0.9
@@ -306,7 +307,7 @@ Suggested package updates
 	o asapm-3.1
 	o ascii-3.8
 	o aspell-danish-1.6.7
-	o aspell-faroese-0.2.28
+	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
 	o asterisk-1.4.2
@@ -336,6 +337,7 @@ Suggested package updates
 	o biew-5.6.4
 	o bind-8.4.7
 	o bioperl-1.5.0
+	o bitlbee-1.0.4
 	o bittorrent-5.0.5
 	o blender-2.44
 	o blur6ex-0.3.462
@@ -354,7 +356,7 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
-	o cdrtools-2.01.01.32
+	o cdrtools-2.01.01.34
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cflow-1.2
@@ -372,7 +374,7 @@ Suggested package updates
 	o cmake-2.4.7
 	o cocoon-2.1.10
 	o connect-1.96
-	o cook-2.28
+	o cook-2.30
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -405,15 +407,17 @@ Suggested package updates
 	o dinotrace-mode-9.3e
 	o dirac-0.7.0
 	o dircproxy-devel-1.2.0.2
+	o djvulibre-lib-4.1.2
+	o djvulibre-tools-4.1.2
 	o dmidecode-2.9
 	o dnsmasq-2.39
 	o dnstop-20070307
 	o dnstracer-1.8
-	o docbook-xsl-1.73.0
+	o docbook-xsl-1.73.1
 	o doxygen-1.5.3
 	o dpkg-1.13.25
 	o dropbear-0.50
-	o drscheme-370
+	o drscheme-371
 	o dvdrip-0.98.8
 	o dvdstyler-1.5
 	o dvipng-1.9
@@ -422,7 +426,7 @@ Suggested package updates
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-0.7
+	o ed-0.8
 	o ede-1.1
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.0.15
@@ -481,7 +485,7 @@ Suggested package updates
 	o gaim-icb-20070203
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.8.10
+	o gauche-0.8.11
 	o gcc-4.2.1
 	o gcc-ssp-3.4.4
 	o gcin-1.3.4
@@ -519,7 +523,9 @@ Suggested package updates
 	o gnome-games-2.18.2.1
 	o gnome-speech-0.4.16
 	o gnu-crypto-2.1.0
+	o gnucash-2.2.1
 	o gnumeric-current-1.7.11
+	o gnupg2-2.0.6
 	o gnuradio-audio-jack-3.0.3
 	o gnuradio-audio-oss-3.0.3
 	o gnuradio-audio-portaudio-3.0.3
@@ -562,7 +568,7 @@ Suggested package updates
 	o gstreamer0.10-0.10.14
 	o gtar-1.18
 	o gtexinfo-4.9
-	o gtick-0.3.13
+	o gtick-0.4.1
 	o gtk-gnutella-0.96.4
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.10.1
@@ -611,7 +617,7 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o irrd-2.3.3
+	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
 	o ispell-gaeilge-4.1
@@ -689,7 +695,9 @@ Suggested package updates
 	o libopensync-0.30
 	o libosip-3.0.2
 	o libprelude-0.9.14
+	o libpreludedb-0.9.13
 	o librsvg-2.18.0
+	o librsvg2-2.18.1
 	o libshout-2.2.2
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -700,6 +708,7 @@ Suggested package updates
 	o licq-core-1.3.0
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
+	o links-gui-2.1.0.30
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o loudmouth-1.2.3
@@ -723,7 +732,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
-	o mathomatic-12.7.3
+	o mathomatic-12.7.5
 	o md-whois-4.7.20
 	o memtestplus-1.70
 	o mesure-0.7.2
@@ -737,7 +746,7 @@ Suggested package updates
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mksh-30
-	o mkvtoolnix-2.0.2
+	o mkvtoolnix-2.1.0
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.3
@@ -814,6 +823,7 @@ Suggested package updates
 	o openmotif-2.3
 	o openpam-20050616
 	o openssl-0.9.8e (in wip/)
+	o opera-9.23
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
@@ -836,6 +846,7 @@ Suggested package updates
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
+	o p5-Class-ReturnValue-0.54
 	o p5-Class-Trigger-0.11
 	o p5-Crypt-CBC-2.22
 	o p5-Curses-1.15
@@ -899,7 +910,7 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
-	o p5-Test-Inline-2.205
+	o p5-Test-Inline-2.207
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
@@ -918,6 +929,7 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.18.0
 	o pari-2.1.7
 	o pcal-4.8
 	o pciids-20070322
@@ -946,7 +958,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.10.3
+	o phpmyadmin-2.11.0
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -959,7 +971,7 @@ Suggested package updates
 	o pircbot-1.4.4
 	o pkg_select-20051209
 	o pload-0.9.5
-	o plone-2.5.3
+	o plone-3.0
 	o ploticus-2.33
 	o ploticus-examples-230
 	o plotutils-2.5
@@ -972,6 +984,7 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
+	o png-1.2.19
 	o pngcheck-2.3.0
 	o po4a-0.29
 	o poedit-1.3.7
@@ -1070,6 +1083,7 @@ Suggested package updates
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o regionset-0.2
+	o remind-3.1.0
 	o rep-gtk-0.18
 	o replex-0.1.6.7
 	o resize_image-0.7
@@ -1145,7 +1159,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
-	o stella-2.3.5
+	o stella-2.4
 	o stellarium-0.9.0
 	o stlport-4.6.2
 	o stratagus-2.2.2
@@ -1241,6 +1255,7 @@ Suggested package updates
 	o wwwoffle-2.9c
 	o wxGTK-2.8.4
 	o wxRemind-0.9.11
+	o wyrd-1.4.3
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xalan-c-1.10.0
@@ -1307,7 +1322,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.40
+	o zile-2.2.41
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
