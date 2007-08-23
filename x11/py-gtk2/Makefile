@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/07/13 10:45:55 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2007/08/23 21:17:37 heinz Exp $
 #
 
 DISTNAME=	pygtk-2.10.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for GTK+2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 
