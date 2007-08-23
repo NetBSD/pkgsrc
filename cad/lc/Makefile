@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/07/29 05:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/23 18:20:30 jlam Exp $
 
 DISTNAME=	lc	# overridden below
 PKGNAME=	lc-2.10
@@ -26,7 +26,7 @@ EMUL_PLATFORMS=		irix-mipsel irix-mipsel64
 EMUL_PLATFORMS+=	linux-i386 linux-x86_64
 EMUL_PLATFORMS+=	solaris-sparc
 EMUL_MODULES.linux=	motif x11
-SUSE_VERSION_REQD=	9.1
+EMUL_REQD=		suse>=9.1
 
 .include "../../mk/bsd.prefs.mk"
 

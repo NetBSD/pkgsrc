@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/29 05:19:45 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/23 18:20:33 jlam Exp $
 
 PKGNAME=	libflashsupport-1.0.2098
 DISTNAME=	libflashsupport-1-0-2098-i586
@@ -13,7 +13,7 @@ COMMENT=	Additional Interface Support for Linux Flash Player
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base openssl
-SUSE_VERSION_REQD=	9.1
+EMUL_REQD=		suse>=9.1
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_STRIP=		3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/07/29 05:19:45 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/08/23 18:20:33 jlam Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -27,7 +27,7 @@ CRYPTO=			yes
 EMUL_PLATFORMS=		linux-i386
 EMUL_PLATFORMS+=	solaris-sparc
 EMUL_MODULES.linux=	compat gtk2 x11
-SUSE_VERSION_REQD=	9.0
+EMUL_REQD=		suse>=9.0
 
 .include "../../mk/bsd.prefs.mk"
 
