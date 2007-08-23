@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1862 2007/08/22 17:36:58 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1863 2007/08/23 09:30:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3415,3 +3415,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ispell-russian-io to 0.99g4 [mishka 2007-08-22]
 	Removed archivers/rar-bin [jlam 2007-08-22]
 	Added databases/yap2lc version 0.5.9 [tron 2007-08-22]
+	Updated x11/xfce4-terminal to 0.2.6nb1 [martti 2007-08-23]
+	Updated editors/vim-share to 7.1.87 [martti 2007-08-23]
