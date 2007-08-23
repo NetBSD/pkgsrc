@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2007/08/06 08:51:40 tron Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/08/23 13:43:57 jlam Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -29,7 +29,7 @@ EMUL_MODULES.linux=	compat gtk
 SUSE_VERSION_REQD=	7.3
 .endif
 
-.if !empty(EMUL_DISTRO:Mnative-*)
+.if defined(EMUL_IS_NATIVE)
 .  if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 DEPENDS+=		gtk2+>=2.2:../../x11/gtk2
 .  else
@@ -98,7 +98,7 @@ do-install:
 # builds typically want exactly 'libgtk-1.2.so.0', etc. symlink them
 # into the mozilla directory.
 post-install:
-.if !empty(EMUL_DISTRO:Mnative-*)
+.if defined(EMUL_IS_NATIVE)
 .  if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 	@cd ${MOZILLA_LIB} && \
 	${LN} -s ${PREFIX}/lib/libatk-1.0.*so* .;			\
