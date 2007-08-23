@@ -1,4 +1,4 @@
-# $NetBSD: netbsd.mk,v 1.1 2007/08/21 22:49:33 jlam Exp $
+# $NetBSD: netbsd.mk,v 1.2 2007/08/23 17:39:47 jlam Exp $
 #
 # NetBSD binary emulation framework
 #
@@ -35,7 +35,7 @@ EMUL_DISTRO=		native-netbsd		# native NetBSD
 EMULDIR=		${PREFIX}
 EMULSUBDIR=		# empty
 .else
-.  include "${PKGSRCDIR}/mk/emulator/netbsd-${_EMUL_TYPE}.mk"
+.  include "${.PARSEDIR}/netbsd-${_EMUL_TYPE}.mk"
 .endif
 
 .if (${_EMUL_TYPE} == "builtin") || (${_EMUL_TYPE} == "native")
