@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.11 2007/08/20 10:59:05 joerg Exp $
+# $NetBSD: bin-install.mk,v 1.12 2007/08/23 08:59:24 joerg Exp $
 #
 
 # This file provides the following targets:
@@ -95,7 +95,7 @@ locked-su-do-bin-install:
 		pkgpath="$$pkgpath;$$i/All";				\
 	done;								\
 	${STEP_MSG} "Installing ${PKGNAME} from $$pkgpath";		\
-	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
+	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}; then \
 		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
 	fi
 .endif
