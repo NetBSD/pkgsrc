@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/04/02 07:38:00 obache Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/23 20:50:52 heinz Exp $
 #
 
 DISTNAME=		pycairo-1.4.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://cairographics.org/releases/
 MAINTAINER=		leuzi@trash.net
 HOMEPAGE=		http://cairographics.org/pycairo/
 COMMENT=		Python bindings for cairo
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
