@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/08/23 20:43:42 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/24 11:18:26 jlam Exp $
 
 DISTNAME=	suse_fontconfig-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
