@@ -1,14 +1,10 @@
-# $NetBSD: checksum.mk,v 1.7 2007/08/16 16:29:27 jlam Exp $
+# $NetBSD: checksum.mk,v 1.8 2007/08/24 03:11:01 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
 
 _DIGEST_ALGORITHMS?=		SHA1 RMD160
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
-
-# Some developers want to check the distfiles' checksums every time
-# a public make target is called. They may set this variable to "yes".
-DO_CHECKSUM_REPEATEDLY?=	no
 
 # These variables are set by pkgsrc/mk/fetch/fetch.mk.
 #_CKSUMFILES?=	# empty
@@ -20,19 +16,30 @@ _CHECKSUM_CMD=								\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
-_COOKIE.checksum=	${WRKDIR}/.checksum_done
+# _COOKIE.checksum
+#       The file whose presence determines whether or not the checksum
+#	process is run.
+#
+#	This is not a traditional cookie file.  We do not actually
+#	wish to create a cookie file for the completion of the checksum
+#	phase because we want to be able to detect if any of the files
+#	have changed right up until the distfiles are extracted.
+#	Therefore, we use the presence of the cookie file from the
+#	"extract" phase to determine whether we need to continue to
+#	verify checksums.
+#
+#	_COOKIE.extract is defined in pkgsrc/mk/extract/extract.mk.
+#
+_COOKIE.checksum=	${_COOKIE.extract}
 
-.PHONY: checksum
-checksum: ${_COOKIE.checksum}
-${_COOKIE.checksum}:
+checksum: do-checksum
+checksum: 
 .for _alg_ in ${_DIGEST_ALGORITHMS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} set -e;							\
+	${TEST} ! -f ${_COOKIE.checksum} || exit 0;			\
 	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -a ${_alg_:Q}		\
 		${DISTINFO_FILE} ${_CKSUMFILES}; then			\
-		if [ ${DO_CHECKSUM_REPEATEDLY} = no ]; then		\
-			${MKDIR} ${.TARGET:H};				\
-			${ECHO} ${PKGNAME} > ${.TARGET};		\
-		fi;							\
+		${TRUE};						\
 	else								\
 		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
 		${ERROR_MSG} "are up to date.  If you want to override this check, type"; \
