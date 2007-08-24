@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/08/23 20:42:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/24 09:57:42 tron Exp $
 
 DISTNAME=	suse_fontconfig-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
 DISTFILES=	fontconfig-2.3.2.20050721-10.2.${SUSE_ARCH}.rpm
 
@@ -11,6 +11,8 @@ COMMENT=	Linux compatibility package for fontconfig
 EMUL_MODULES.linux=	expat freetype2
 
 .include "../../emulators/suse100_linux/Makefile.common"
+
+PLIST_SRC=	${PKGDIR}/PLIST ${RPM2PKG_PLIST}
 
 do-build:
 	${SETENV} LOCALBASE=${LOCALBASE:Q} X11PREFIX=${X11PREFIX:Q}	\
