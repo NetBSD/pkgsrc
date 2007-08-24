@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1868 2007/08/24 09:59:16 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1869 2007/08/24 14:54:32 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3421,3 +3421,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/rsync to 2.6.9nb1 [tron 2007-08-23]
 	Updated sysutils/radmind to 1.9 [hauke 2007-08-23]
 	Updated emulators/suse100_fontconfig to 10.0nb5 [tron 2007-08-24]
+	Updated mail/thunderbird15 to 1.5.0.13 [ghen 2007-08-24]
+	Updated mail/thunderbird15-gtk1 to 1.5.0.13 [ghen 2007-08-24]
