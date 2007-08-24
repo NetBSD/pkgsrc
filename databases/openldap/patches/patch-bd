@@ -1,0 +1,64 @@
+--- configure.in.orig	2007-08-24 05:32:07.000000000 +0200
++++ configure.in	2007-08-24 05:34:02.000000000 +0200
+@@ -350,8 +350,9 @@
+ 	proxycache \
+ 	refint \
+ 	retcode \
+ 	rwm \
++	smbk5pwd \
+ 	syncprov \
+ 	translucent \
+ 	unique \
+ 	valsort"
+@@ -382,8 +383,10 @@
+ OL_ARG_ENABLE(retcode,[    --enable-retcode	  Return Code testing overlay],
+ 	no, [no yes mod], ol_enable_overlays)
+ OL_ARG_ENABLE(rwm,[    --enable-rwm       	  Rewrite/Remap overlay],
+ 	no, [no yes mod], ol_enable_overlays)
++OL_ARG_ENABLE(smbk5pwd,[    --enable-smbk5pwd	  smbk5pwd overlay],
++	yes, [no yes mod], ol_enable_overlays)
+ OL_ARG_ENABLE(syncprov,[    --enable-syncprov	  Syncrepl Provider overlay],
+ 	yes, [no yes mod], ol_enable_overlays)
+ OL_ARG_ENABLE(translucent,[    --enable-translucent  Translucent Proxy overlay],
+ 	no, [no yes mod], ol_enable_overlays)
+@@ -627,8 +630,9 @@
+ BUILD_PROXYCACHE=no
+ BUILD_REFINT=no
+ BUILD_RETCODE=no
+ BUILD_RWM=no
++BUILD_SMBK5PWD=no
+ BUILD_SYNCPROV=no
+ BUILD_TRANSLUCENT=no
+ BUILD_UNIQUE=no
+ BUILD_VALSORT=no
+@@ -2981,8 +2985,20 @@
+ 	fi
+ 	AC_DEFINE_UNQUOTED(SLAPD_OVER_RWM,$MFLAG,[define for Rewrite/Remap overlay])
+ fi
+ 
++if test "$ol_enable_smbk5pwd" != no ; then
++	BUILD_SMBK5PWD=$ol_enable_smbk5pwd
++	if test "$ol_enable_smbk5pwd" = mod ; then
++		MFLAG=SLAPD_MOD_DYNAMIC
++		SLAPD_DYNAMIC_OVERLAYS="$SLAPD_DYNAMIC_OVERLAYS smbk5pwd.la"
++	else
++		MFLAG=SLAPD_MOD_STATIC
++		SLAPD_STATIC_OVERLAYS="$SLAPD_STATIC_OVERLAYS smbk5pwd.o"
++	fi
++	AC_DEFINE_UNQUOTED(SLAPD_OVER_SMBK5PWD,$MFLAG,[define for smbk5pwd overlay])
++fi
++
+ if test "$ol_enable_syncprov" != no ; then
+ 	BUILD_SYNCPROV=$ol_enable_syncprov
+ 	if test "$ol_enable_syncprov" = mod ; then
+ 		MFLAG=SLAPD_MOD_DYNAMIC
+@@ -3099,8 +3115,9 @@
+   AC_SUBST(BUILD_PROXYCACHE)
+   AC_SUBST(BUILD_REFINT)
+   AC_SUBST(BUILD_RETCODE)
+   AC_SUBST(BUILD_RWM)
++  AC_SUBST(BUILD_SMBK5PWD)
+   AC_SUBST(BUILD_SYNCPROV)
+   AC_SUBST(BUILD_TRANSLUCENT)
+   AC_SUBST(BUILD_UNIQUE)
+   AC_SUBST(BUILD_VALSORT)

@@ -1,0 +1,14 @@
+--- include/portable.hin.orig	2007-08-24 18:05:46.000000000 +0200
++++ include/portable.hin	2007-08-24 18:06:10.000000000 +0200
+@@ -1001,8 +1001,11 @@
+ 
+ /* define for Rewrite/Remap overlay */
+ #undef SLAPD_OVER_RWM
+ 
++/* define for smbk5pwd overlay */
++#undef SLAPD_OVER_SMBK5PWD
++
+ /* define for Syncrepl Provider overlay */
+ #undef SLAPD_OVER_SYNCPROV
+ 
+ /* define for Translucent Proxy overlay */
