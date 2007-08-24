@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1866 2007/08/23 14:24:56 hauke Exp $
+$NetBSD: CHANGES-2007,v 1.1867 2007/08/24 09:58:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/rsync to 2.6.9nb1 [tron 2007-08-23]
 	Updated sysutils/radmind to 1.9 [hauke 2007-08-23]
 
+	Updated emulators/suse100_fontconfig to 10.0nb5 [tron 2007-08-24]
