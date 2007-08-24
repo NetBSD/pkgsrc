@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/08/02 13:04:41 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2007/08/24 02:42:50 jlam Exp $
 #
 
 DISTNAME=	bzip2-1.0.4
@@ -15,6 +15,7 @@ EXTRACT_ONLY=	# empty
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+NO_CHECKSUM=		yes
 USE_LIBTOOL=		yes
 
 .include "../../mk/compiler.mk"
