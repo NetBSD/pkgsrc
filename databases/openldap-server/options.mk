@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2007/03/15 14:28:57 manu Exp $
+# $NetBSD: options.mk,v 1.4 2007/08/24 19:06:51 manu Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6
+PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
 PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 PKG_SUGGESTED_OPTIONS=	bdb
@@ -85,3 +85,17 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
+
+###
+### smbk5pwd support (sync samba and kerberos passwords on password changes)
+###
+
+.if !empty(PKG_OPTIONS:Msmbk5pwd)
+CONFIGURE_ARGS+=	--enable-smbk5pwd
+LDFLAGS+=-ldes
+LDFLAGS+=-lkrb5
+LDFLAGS+=-lkadm5srv
+LDFLAGS+=-lhdb
+. include "../../mk/krb5.buildlink3.mk"
+.endif
+
