@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1871 2007/08/24 19:14:26 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.1872 2007/08/24 19:30:23 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3420,8 +3420,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.1.87 [martti 2007-08-23]
 	Updated net/rsync to 2.6.9nb1 [tron 2007-08-23]
 	Updated sysutils/radmind to 1.9 [hauke 2007-08-23]
+	Added misc/rlwrap version 0.28 [heinz 2007-08-24]
 	Updated emulators/suse100_fontconfig to 10.0nb5 [tron 2007-08-24]
 	Updated mail/thunderbird15 to 1.5.0.13 [ghen 2007-08-24]
 	Updated mail/thunderbird15-gtk1 to 1.5.0.13 [ghen 2007-08-24]
+	Updated devel/re2c to 0.12.3 [heinz 2007-08-24]
 	Updated net/Transmission to 0.81 [tnn 2007-08-24]
 	Updated databases/openldap-server to 2.3.32nb1 [manu 2007-08-24]
+	Updated net/p5-Net-DNS to 0.61 [heinz 2007-08-24]
