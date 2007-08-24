@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.8 2007/08/24 03:11:01 jlam Exp $
+# $NetBSD: checksum.mk,v 1.9 2007/08/24 03:12:33 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -33,7 +33,7 @@ _CHECKSUM_CMD=								\
 _COOKIE.checksum=	${_COOKIE.extract}
 
 checksum: do-checksum
-checksum: 
+do-checksum: 
 .for _alg_ in ${_DIGEST_ALGORITHMS}
 	${RUN} set -e;							\
 	${TEST} ! -f ${_COOKIE.checksum} || exit 0;			\
