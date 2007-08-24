@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.9 2007/08/24 03:12:33 jlam Exp $
+# $NetBSD: checksum.mk,v 1.10 2007/08/24 03:30:54 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -34,11 +34,9 @@ _COOKIE.checksum=	${_COOKIE.extract}
 
 checksum: do-checksum
 do-checksum: 
-.for _alg_ in ${_DIGEST_ALGORITHMS}
 	${RUN} set -e;							\
 	${TEST} ! -f ${_COOKIE.checksum} || exit 0;			\
-	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -a ${_alg_:Q}		\
-		${DISTINFO_FILE} ${_CKSUMFILES}; then			\
+	if cd ${DISTDIR} && ${_CHECKSUM_CMD} ${DISTINFO_FILE} ${_CKSUMFILES}; then \
 		${TRUE};						\
 	else								\
 		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
@@ -46,7 +44,6 @@ do-checksum:
 		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 		exit 1;							\
 	fi
-.endfor
 
 _DISTINFO_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q}	\
 			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}		\
