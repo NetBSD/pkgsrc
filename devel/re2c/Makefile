@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/05/06 09:56:14 heinz Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/24 14:56:13 heinz Exp $
 
-DISTNAME=	re2c-0.12.0
+DISTNAME=	re2c-0.12.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=re2c/}
 
