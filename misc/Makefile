@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2007/08/23 09:42:06 joerg Exp $
+# $NetBSD: Makefile,v 1.286 2007/08/24 09:57:43 heinz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -167,6 +167,7 @@ SUBDIR+=	pyqt_memaid
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	reed
+SUBDIR+=	rlwrap
 SUBDIR+=	root
 SUBDIR+=	root-tail
 SUBDIR+=	routeplanner-cli
