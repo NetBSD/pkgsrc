@@ -1,0 +1,24 @@
+--- servers/slapd/overlays/Makefile.in.orig	2007-08-24 05:35:05.000000000 +0200
++++ servers/slapd/overlays/Makefile.in	2007-08-24 05:35:38.000000000 +0200
+@@ -24,8 +24,9 @@
+ 	ppolicy.c \
+ 	refint.c \
+ 	retcode.c \
+ 	rwm.c rwmconf.c rwmdn.c rwmmap.c \
++	smbk5pwd.c \
+ 	syncprov.c \
+ 	translucent.c \
+ 	unique.c \
+ 	valsort.c
+@@ -92,8 +93,11 @@
+ 
+ rwm.la : rwm.lo rwmconf.lo rwmdn.lo rwmmap.lo
+ 	$(LTLINK_MOD) -module -o $@ rwm.lo rwmconf.lo rwmdn.lo rwmmap.lo version.lo $(LINK_LIBS)
+ 
++smbk5pwd.la : smbk5pwd.lo
++	$(LTLINK_MOD) -module -o $@ smbk5pwd.lo version.lo $(LINK_LIBS)
++
+ syncprov.la : syncprov.lo
+ 	$(LTLINK_MOD) -module -o $@ syncprov.lo version.lo $(LINK_LIBS)
+ 
+ translucent.la : translucent.lo
