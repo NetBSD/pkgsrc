@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2007/08/05 16:03:38 obache Exp $
+# $NetBSD: Makefile.common,v 1.60 2007/08/25 15:41:32 obache Exp $
 
 DISTNAME=		icewm-1.2.27
 CATEGORIES=		x11 wm
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--enable-gradients
 CONFIGURE_ARGS+=	--enable-antialiasing
 
 USE_LANGUAGES=		c c++
+
+PKG_SYSCONFSUBDIR=	icewm
 
 .include "../../mk/bsd.prefs.mk"
 
