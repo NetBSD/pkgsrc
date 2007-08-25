@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/10/02 11:13:22 ghen Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/08/25 15:41:32 obache Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -390,5 +390,3 @@ share/locale/zh_TW/LC_MESSAGES/icewm.mo
 @dirrm share/icewm
 @dirrm share/doc/icewm/html
 @dirrm share/doc/icewm
-@exec ${MKDIR} %D/etc/icewm
-@dirrm etc/icewm
