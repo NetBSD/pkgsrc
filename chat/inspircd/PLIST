@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/30 22:00:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/25 09:21:15 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -155,6 +155,7 @@ share/inspircd/modules/m_md5.so
 share/inspircd/modules/m_messageflood.so
 share/inspircd/modules/m_namesx.so
 share/inspircd/modules/m_nicklock.so
+share/inspircd/modules/m_nickflood.so
 share/inspircd/modules/m_noctcp.so
 share/inspircd/modules/m_noinvite.so
 share/inspircd/modules/m_nokicks.so
@@ -175,7 +176,6 @@ share/inspircd/modules/m_remove.so
 share/inspircd/modules/m_restrictbanned.so
 share/inspircd/modules/m_restrictchans.so
 share/inspircd/modules/m_restrictmsg.so
-share/inspircd/modules/m_rpc_json.so
 share/inspircd/modules/m_safelist.so
 share/inspircd/modules/m_sajoin.so
 share/inspircd/modules/m_samode.so
