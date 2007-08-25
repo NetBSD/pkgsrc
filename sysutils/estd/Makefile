@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/04/30 09:54:15 tron Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/25 10:00:53 taca Exp $
 
 DISTNAME=	estd-r5
 PKGNAME=	estd-0.5
@@ -18,6 +18,7 @@ ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
 			NetBSD-[4-9]*-x86_64 DragonFly-*-i386
 
 RCD_SCRIPTS=		estd
+RCD_SCRIPT_SRC.estd=	${WRKSRC}/estd.sh
 
 SUBST_CLASSES+=		rc.d
 SUBST_STAGE.rc.d=	do-configure
