@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1877 2007/08/25 09:51:35 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1878 2007/08/25 14:00:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3433,3 +3433,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/userppp to 001107nb2 [obache 2007-08-25]
 	Updated chat/inspircd to 1.1.2 [adrianp 2008-08-25]
 	Updated devel/bugzilla to 2.22.3 [adrianp 2008-08-25]
+	Updated security/libident to 0.32 [obache 2007-08-25]
