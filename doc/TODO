@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6614 2007/08/25 04:29:03 obache Exp $
+$NetBSD: TODO,v 1.6615 2007/08/25 06:40:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -346,7 +346,7 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.3
 	o btpd-0.12
-	o bugzilla-3.0
+	o bugzilla-3.0.1
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -391,6 +391,7 @@ Suggested package updates
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
+	o dar-2.3.5
 	o dbench-3.04
 	o dbmail-2.2.4
 	o dbxml-2.1.8
@@ -421,7 +422,7 @@ Suggested package updates
 	o dvdrip-0.98.8
 	o dvdstyler-1.5
 	o dvipng-1.9
-	o dwm-4.3
+	o dwm-4.4
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -693,7 +694,7 @@ Suggested package updates
 	o libnids-1.21
 	o libole2-2.2.8
 	o libopensync-0.30
-	o libprelude-0.9.14
+	o libprelude-0.9.15
 	o libpreludedb-0.9.13
 	o librsvg-2.18.0
 	o librsvg2-2.18.1
@@ -1143,7 +1144,7 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.1.0
-	o snd-9.2
+	o snd-9.3
 	o snes9x-1.51
 	o solfege-3.8.1
 	o sope-4.5.9
@@ -1180,7 +1181,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.1.4
+	o tea-17.2.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o texmaker-1.6
@@ -1196,6 +1197,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o totem-2.18.3
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trafshow-5.2.3
