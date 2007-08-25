@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6613 2007/08/23 21:32:56 wiz Exp $
+$NetBSD: TODO,v 1.6614 2007/08/25 04:29:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ Suggested package updates
 	o libnids-1.21
 	o libole2-2.2.8
 	o libopensync-0.30
-	o libosip-3.0.2
 	o libprelude-0.9.14
 	o libpreludedb-0.9.13
 	o librsvg-2.18.0

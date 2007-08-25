@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1872 2007/08/24 19:30:23 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.1873 2007/08/25 04:29:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3428,3 +3428,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/Transmission to 0.81 [tnn 2007-08-24]
 	Updated databases/openldap-server to 2.3.32nb1 [manu 2007-08-24]
 	Updated net/p5-Net-DNS to 0.61 [heinz 2007-08-24]
+	Updated devel/libosip to 3.0.3 [obache 2007-08-25]
+	Updated net/partysip to 2.2.3nb1 [obache 2007-08-25]
