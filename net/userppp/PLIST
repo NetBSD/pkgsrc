@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/14 12:12:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/25 09:00:45 obache Exp $
 man/cat8/ppp.0
 man/cat8/pppctl.0
 man/man8/ppp.8
@@ -21,5 +21,4 @@ share/examples/ppp/ppp.linkup.span-isp.working
 share/examples/ppp/ppp.secret.sample
 share/examples/ppp/ppp.secret.span-isp
 share/examples/ppp/ppp.secret.span-isp.working
-@unexec ${RMDIR} %D/etc/ppp >/dev/null 2>&1 || ${TRUE}
 @dirrm share/examples/ppp
