@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk.in,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: bsd.own.mk.in,v 1.2 2007/08/25 09:33:57 rillig Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -129,8 +129,10 @@ OBJECT_FMT?=ELF
 OBJECT_FMT?=a.out
 .endif
 
+.if ${CC:M*gcc*} != ""
 .if ${MACHINE_ARCH} == "x86_64"
 CFLAGS+=-Wno-format -fno-builtin
+.endif
 .endif
 
 # Location of the file that contains the major and minor numbers of the
