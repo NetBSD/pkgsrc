@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/11 18:16:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/08/25 02:49:12 obache Exp $
 include/osip2/osip.h
 include/osip2/osip_condv.h
 include/osip2/osip_dialog.h
 include/osip2/osip_fifo.h
 include/osip2/osip_mt.h
-include/osip2/osip_negotiation.h
 include/osip2/osip_time.h
 include/osipparser2/headers/osip_accept.h
 include/osipparser2/headers/osip_accept_encoding.h
@@ -41,7 +40,6 @@ include/osipparser2/osip_md5.h
 include/osipparser2/osip_message.h
 include/osipparser2/osip_parser.h
 include/osipparser2/osip_port.h
-include/osipparser2/osip_rfc3264.h
 include/osipparser2/osip_uri.h
 include/osipparser2/sdp_message.h
 lib/libosip2.la
