@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1873 2007/08/25 04:29:03 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1874 2007/08/25 09:02:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3430,3 +3430,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/p5-Net-DNS to 0.61 [heinz 2007-08-24]
 	Updated devel/libosip to 3.0.3 [obache 2007-08-25]
 	Updated net/partysip to 2.2.3nb1 [obache 2007-08-25]
+	Updated net/userppp to 001107nb2 [obache 2007-08-25]
