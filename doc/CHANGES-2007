@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1874 2007/08/25 09:02:59 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1875 2007/08/25 09:22:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3431,3 +3431,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libosip to 3.0.3 [obache 2007-08-25]
 	Updated net/partysip to 2.2.3nb1 [obache 2007-08-25]
 	Updated net/userppp to 001107nb2 [obache 2007-08-25]
+	Updated chat/inspircd to 1.1.2 [adrianp 2008-08-25]
