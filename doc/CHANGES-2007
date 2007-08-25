@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1875 2007/08/25 09:22:24 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1876 2007/08/25 09:51:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3432,3 +3432,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/partysip to 2.2.3nb1 [obache 2007-08-25]
 	Updated net/userppp to 001107nb2 [obache 2007-08-25]
 	Updated chat/inspircd to 1.1.2 [adrianp 2008-08-25]
+	Updated devel/bugzilla ro 2.22.3 [adrianp 2008-08-25]
