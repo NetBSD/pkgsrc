@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1879 2007/08/25 15:42:26 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1880 2007/08/26 01:27:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/libident to 0.32 [obache 2007-08-25]
 	Updated wm/icewm to 1.2.27nb1 [obache 2007-08-25]
 	Updated wm/icewm-imlib to 1.2.27nb1 [obache 2007-08-25]
+	Updated graphics/rabbit to 0.5.3nb1 [obache 2007-08-26]
