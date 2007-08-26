@@ -1,28 +1,28 @@
-# $NetBSD: options.mk,v 1.6 2006/05/26 20:53:00 heinz Exp $
+# $NetBSD: options.mk,v 1.7 2007/08/26 17:26:51 heinz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
-PKG_SUPPORTED_OPTIONS=	\
-			online-tests \
-			spamassassin-perl-warnings \
-			spamassassin-taint-checks \
-			spamassassin-test-awl-sql \
-			spamassassin-test-bayes-sql \
-			spamassassin-test-prefork \
-			ssl
-PKG_OPTIONS_LEGACY_OPTS+= \
-			awl-sql-tests:spamassassin-test-awl-sql \
-			bayes-sql-tests:spamassassin-test-bayes-sql \
-			net-tests:online-tests \
-			perl-taint-checks:spamassassin-taint-checks \
-			perl-warnings:spamassassin-perl-warnings \
-			spamassassin-test-net:online-tests
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUPPORTED_OPTIONS+=	online-tests
+PKG_SUPPORTED_OPTIONS+=	spamassassin-perl-warnings
+PKG_SUPPORTED_OPTIONS+=	spamassassin-taint-checks
+PKG_SUPPORTED_OPTIONS+=	spamassassin-test-awl-sql
+PKG_SUPPORTED_OPTIONS+=	spamassassin-test-bayes-sql
+PKG_SUPPORTED_OPTIONS+=	spamassassin-test-prefork
+PKG_SUPPORTED_OPTIONS+=	ssl
+
+PKG_OPTIONS_LEGACY_OPTS+=	awl-sql-tests:spamassassin-test-awl-sql
+PKG_OPTIONS_LEGACY_OPTS+=	bayes-sql-tests:spamassassin-test-bayes-sql
+PKG_OPTIONS_LEGACY_OPTS+=	net-tests:online-tests
+PKG_OPTIONS_LEGACY_OPTS+=	perl-taint-checks:spamassassin-taint-checks
+PKG_OPTIONS_LEGACY_OPTS+=	perl-warnings:spamassassin-perl-warnings
+PKG_OPTIONS_LEGACY_OPTS+=	spamassassin-test-net:online-tests
 
 #
 # Default options
 #
-PKG_SUGGESTED_OPTIONS=	spamassassin-taint-checks \
-			spamassassin-perl-warnings \
-			ssl
+PKG_SUGGESTED_OPTIONS=	inet6 spamassassin-taint-checks
+PKG_SUGGESTED_OPTIONS+=	spamassassin-perl-warnings ssl
+
 .include "../../mk/bsd.options.mk"
 
 #
@@ -106,4 +106,11 @@ MAKE_PARAMS+=		ENABLE_SSL=yes
 .else
 CONFIGURE_ARGS+=	--disable-ssl
 MAKE_PARAMS+=		ENABLE_SSL=no
+.endif
+
+#
+# Be prepared for IPv6 nameservers
+#
+.if !empty(PKG_OPTIONS:Minet6)
+DEPENDS+=		p5-INET6-[0-9]*:../../net/p5-INET6
 .endif
