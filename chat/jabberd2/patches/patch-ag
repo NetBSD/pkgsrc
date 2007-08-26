@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2007/05/26 11:50:13 xtraeme Exp $
+$NetBSD: patch-ag,v 1.5 2007/08/26 09:10:54 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2007-05-26 12:07:39.000000000 +0200
-+++ etc/c2s.xml.in	2007-05-26 12:09:13.000000000 +0200
+--- etc/c2s.xml.in.orig	2007-08-26 10:52:06.000000000 +0200
++++ etc/c2s.xml.in	2007-08-26 10:53:53.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
         scripts) -->
 -  <pidfile>@localstatedir@/jabberd/pid/c2s.pid</pidfile>
-+  <pidfile>@PIDDIR@/c2s.pid</pidfile>
++       <pidfile>@PIDDIR@/c2s.pid</pidfile>
  
    <!-- Router connection configuration -->
    <router>
@@ -29,16 +29,7 @@ $NetBSD: patch-ag,v 1.4 2007/05/26 11:50:13 xtraeme Exp $
      -->
    </log>
  
-@@ -109,7 +109,7 @@
-     <id register-enable='true'>localhost</id>
-     <!-- or
-     <id realm='company'
--        pemfile='/usr/local/etc/jabberd/server.pem'
-+	pemfile='@SSLCERTS@/server.pem'
-         verify-mode='7'
-         require-starttls='true'
-         register-enable='true'
-@@ -142,7 +142,7 @@
+@@ -147,7 +147,7 @@
           If this is commented out, clients will not be offered
           the STARTTLS stream extension -->
      <!--
@@ -47,23 +38,7 @@ $NetBSD: patch-ag,v 1.4 2007/05/26 11:50:13 xtraeme Exp $
      -->
  
      <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
-@@ -339,7 +339,7 @@
-     <!-- Berkeley DB module configuration -->
-     <db>
-       <!-- Directory to store database files under -->
--      <path>@localstatedir@/jabberd/db</path>
-+      <path>@DBDIR@</path>
-       
-       <!-- Synchronize the database to disk after each write. If you
-            disable this, database accesses may be faster, but data may
-@@ -403,13 +403,13 @@
-     <!-- Pipe module configuration -->
-     <pipe>
-       <!-- Program to execute -->
--      <exec>@bindir@/pipe-auth.pl</exec>
-+      <exec>@BINDIR@/pipe-auth.pl</exec>
-     </pipe>
- 
+@@ -362,7 +362,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -72,3 +47,21 @@ $NetBSD: patch-ag,v 1.4 2007/05/26 11:50:13 xtraeme Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
+@@ -376,7 +376,7 @@
+     <!-- Berkeley DB module configuration -->
+     <db>
+       <!-- Directory to store database files under -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@DBDIR@</path>
+       
+       <!-- Synchronize the database to disk after each write. If you
+            disable this, database accesses may be faster, but data may
+@@ -440,7 +440,7 @@
+     <!-- Pipe module configuration -->
+     <pipe>
+       <!-- Program to execute -->
+-      <exec>@bindir@/pipe-auth.pl</exec>
++      <exec>@BINDIR@/pipe-auth.pl</exec>
+     </pipe>
+ 
+   </authreg>

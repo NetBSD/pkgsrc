@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/08/01 21:45:30 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/08/26 09:10:54 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.1.8
-PKGREVISION=		1
+DISTNAME=		jabberd-2.1.14
+#PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -40,7 +40,7 @@ REPLACE_PERL+=		tools/*.pl
 
 JABBERD_DBDIR?=		${VARBASE}/db/jabberd
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE JABBERD_USER JABBERD_GROUP
 BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR JABBERD_DBDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
@@ -79,13 +79,13 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 
 post-extract:
 .for f in ${FILES}
-	${MV} ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
+	mv ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
-	${MV} ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
+	mv ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 
 pre-configure:
 .for f in ${FILES} jabberd.cfg
-	${SED}								\
+	sed								\
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
 		-e "s|@LOGDIR@|${JABBERD_LOGDIR}|g"			\
