@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2007/07/31 14:27:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2007/08/27 06:37:01 xtraeme Exp $
 
-DISTNAME=	dosbox-0.71
+DISTNAME=	dosbox-0.72
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
@@ -9,7 +9,6 @@ HOMEPAGE=	http://dosbox.sourceforge.net/
 COMMENT=	Multi-platform DOS emulator using SDL
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf
 GNU_CONFIGURE=		yes
 CPPFLAGS.SunOS+=	-DDISABLE_JOYSTICK
 INSTALLATION_DIRS=	share/doc/dosbox
@@ -18,9 +17,6 @@ SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	docs/dosbox.1
 SUBST_SED.fixme=	-e s,/usr/share/,${PREFIX}/share/,g
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dosbox
