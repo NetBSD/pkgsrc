@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.4 2007/08/18 17:31:51 veego Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.5 2007/08/27 21:51:23 jlam Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -88,6 +88,7 @@ java/sun-1.5/lib/i386/gtkhelper
 java/sun-1.5/lib/i386/headless/libmawt.so
 java/sun-1.5/lib/i386/jvm.cfg.default
 java/sun-1.5/lib/i386/libJdbcOdbc.so
+${LIBX11}java/sun-1.5/lib/i386/libX11.so.6
 java/sun-1.5/lib/i386/libawt.so
 java/sun-1.5/lib/i386/libcmm.so
 java/sun-1.5/lib/i386/libdcpr.so

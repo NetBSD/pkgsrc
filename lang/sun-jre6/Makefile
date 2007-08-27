@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2007/08/22 14:03:49 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/27 21:51:24 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	jre-6u1-linux-${DIST_ARCH}
 PKGNAME=	sun-jre6-6.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	# empty
 
 DOWNLOAD_NAME=	Java Runtime Environment (JRE) 6u1
@@ -41,6 +41,35 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-6.zip
 PLIST_SUBST+=	SUN_JRE6_USE_JCE=""
 .else
 PLIST_SUBST+=	SUN_JRE6_USE_JCE="@comment "
+.endif
+
+# Some of the binaries require libX11, so ensure that requirement is
+# satisfied when the package is installed on the native OS.
+#
+.if defined(EMUL_IS_NATIVE)
+.  if ${X11_TYPE} == "native"
+.    if ${EMUL_ARCH} == "x86_64"
+LIBX11=		${X11PREFIX}/lib64/libX11.so.6
+.    else
+LIBX11=		${X11PREFIX}/lib/libX11.so.6
+.    endif
+.    if !exists(${LIBX11})
+PKG_FAIL_REASON+=	"${LIBX11} does not exist.  Please install the" \
+			"X11 library packages for your system."
+.    endif
+.  else
+.    include "../../x11/libX11/buildlink3.mk"
+LIBX11=		${X11PREFIX}/lib/libX11.so.6
+.  endif
+
+PLIST_SUBST+=		LIBX11=
+
+.PHONY: create-library-symlinks
+post-install: create-library-symlinks
+create-library-symlinks:
+	${RUN}${LN} -fs ${LIBX11} ${JAVA_HOME}/lib/${EMUL_ARCH}
+.else
+PLIST_SUBST+=		LIBX11="@comment "
 .endif
 
 post-extract:
