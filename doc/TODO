@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6616 2007/08/27 17:53:48 adrianp Exp $
+$NetBSD: TODO,v 1.6617 2007/08/27 23:18:22 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1404,9 +1404,13 @@ Suggested pkgsrc enhancements
 	  to be used for packages like x11/openmotif that set
 	  NO_*_ON_* for non-open-source systems.
 
-	o Make "pkg_install -u" preserve the automatic tag, clear the
-	  unsafe_depends* and rebuild tags, and set unsafe_depends* on
-	  depending packages, following the behavior of make replace.
+	o Make "pkg_install -u" clear the unsafe_depends* and rebuild
+	  tags, and set unsafe_depends* on depending packages,
+	  following the behavior of make replace.
+
+	o Figure out a way to have "pkg_install -u", probably with a
+	  flag, preserve the value of the automatic tag.  We do not
+	  have consensus on the right behavior.
 
 Suggested other platform enhancements
 =====================================
