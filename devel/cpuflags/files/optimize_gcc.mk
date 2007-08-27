@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.33 2007/08/20 11:34:05 abs Exp $
+# $Id: optimize_gcc.mk,v 1.34 2007/08/27 10:08:29 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -48,7 +48,7 @@ PKG_EXCLUDE_FAST_MATH+=x11/qt3-libs
 # -----------------------------------------------------------------------------
 # Assign default flags, then remove values based on settings above
 #
-COPT_FLAGS=-finline-functions -fomit-frame-pointer -ffast-math 
+COPT_FLAGS=-finline-functions -fomit-frame-pointer -ffast-math
 
 .if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGPATH})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
