@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1881 2007/08/26 09:11:44 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1882 2007/08/27 06:37:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3438,3 +3438,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/icewm-imlib to 1.2.27nb1 [obache 2007-08-25]
 	Updated graphics/rabbit to 0.5.3nb1 [obache 2007-08-26]
 	Updated chat/jabberd2 to 2.1.14 [xtraeme 2007-08-26]
+	Updated emulators/dosbox to 0.72 [xtraeme 2007-08-27]
