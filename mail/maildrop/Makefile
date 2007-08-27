@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2007/08/10 17:57:09 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2007/08/27 22:33:19 jlam Exp $
 
 DISTNAME=	maildrop-2.0.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
