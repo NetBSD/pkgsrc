@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.5 2007/08/26 09:10:54 xtraeme Exp $
+$NetBSD: patch-ag,v 1.6 2007/08/27 08:41:06 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2007-08-26 10:52:06.000000000 +0200
-+++ etc/c2s.xml.in	2007-08-26 10:53:53.000000000 +0200
+--- etc/c2s.xml.in.orig	2007-08-14 00:29:45.000000000 +0200
++++ etc/c2s.xml.in	2007-08-27 10:31:18.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -29,6 +29,15 @@ $NetBSD: patch-ag,v 1.5 2007/08/26 09:10:54 xtraeme Exp $
      -->
    </log>
  
+@@ -113,7 +113,7 @@
+     <id register-enable='true'>localhost</id>
+     <!-- or
+     <id realm='company'
+-        pemfile='@sysconfdir@/server.pem'
++        pemfile='@SSLCERTS@/server.pem'
+         verify-mode='7'
+         require-starttls='true'
+         register-enable='true'
 @@ -147,7 +147,7 @@
           If this is commented out, clients will not be offered
           the STARTTLS stream extension -->
