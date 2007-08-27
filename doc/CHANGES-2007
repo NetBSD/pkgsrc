@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1886 2007/08/27 17:44:34 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1887 2007/08/27 17:53:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3444,3 +3444,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_chk to 1.86 [abs 2007-08-27]
 	Updated devel/cpuflags to 1.15 [tron 2007-08-27]
 	Updated mail/p5-Email-Send to 2.185 [adrianp 2007-08-27]
+	Added devel/bugzilla3 version 3.0.1 [adrianp 2007-08-27]
