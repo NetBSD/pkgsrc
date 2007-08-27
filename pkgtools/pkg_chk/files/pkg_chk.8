@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.24 2006/10/02 07:33:38 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.25 2007/08/27 15:28:54 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -57,7 +57,6 @@ Use the
 .Pa pkgchk.conf
 file
 .Sq Ar conf .
-
 .It Fl D Ar tags
 Add the comma separated list of tags to those checked when parsing
 .Pa pkgchk.conf .
@@ -84,8 +83,8 @@ Redirect the output for all commands run into the logfile
 Should be specified as a full pathname.
 On any error the tail end of the logfile will be displayed.
 .It Fl l
-List the filename for all binary packages (including the exact dependencies
-against which each package was built) based on
+List the filename for all binary packages (including best dependencies) based
+on
 .Pa pkgchk.conf .
 Will abort if a binary package is missing.
 This can be used (in conjunction with
