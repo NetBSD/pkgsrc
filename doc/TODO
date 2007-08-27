@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6615 2007/08/25 06:40:39 wiz Exp $
+$NetBSD: TODO,v 1.6616 2007/08/27 17:53:48 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -346,7 +346,6 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.3
 	o btpd-0.12
-	o bugzilla-3.0.1
 	o bwidget-1.7.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
