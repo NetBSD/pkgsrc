@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1883 2007/08/27 10:42:04 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1884 2007/08/27 15:30:33 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated emulators/dosbox to 0.72 [xtraeme 2007-08-27]
 	Updated mail/dovecot to 1.0.3nb1 [ghen 2007-08-27]
 	Added mail/dovecot-sieve version 1.0.2 [ghen 2007-08-27]
+	Updated pkgtools/pkg_chk to 1.86 [abs 2007-08-27]

@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.49 2007/06/19 13:45:50 joerg Exp $
+# $Id: pkg_chk.sh,v 1.50 2007/08/27 15:28:54 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -40,8 +40,10 @@ check_packages_installed()
 
 	if [ -n "$opt_B" ];then
 	    extract_pkg_vars $pkgdir PKGNAME FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
-	else
+	elif [ -n "$opt_s" ] ; then
 	    extract_pkg_vars $pkgdir PKGNAME
+	else
+	    PKGNAME=`pkgdir2pkgname $pkgdir`
 	fi
 	if [ -z "$PKGNAME" ]; then
 	    MISS_DONE=$MISS_DONE" "$pkgdir
@@ -137,26 +139,14 @@ extract_pkg_vars()
     PKGDIR=$1
     PKGNAME=
     shift;
-    if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	for pkg in $PKGDB ; do
-	    case $pkg in
-		"$PKGDIR:"*)
-		    PKGNAME=`echo $pkg| ${SED} 's/[^:]*://'`
-		    return;
-		;;
-	    esac
-	done
-	msg "WARNING: No binary package for $PKGDIR"
-    else
-	if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
-	    msg "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
-	    return
-	fi
-	cd $PKGSRCDIR/$PKGDIR
-	extract_make_vars Makefile "$@"
-	if [ -z "$PKGNAME" ]; then
-	    fatal "Unable to extract PKGNAME for $pkgdir"
-	fi
+    if [ ! -f $PKGSRCDIR/$pkgdir/Makefile ];then
+	msg "WARNING: No $pkgdir/Makefile - package moved or obsolete?"
+	return
+    fi
+    cd $PKGSRCDIR/$PKGDIR
+    extract_make_vars Makefile "$@"
+    if [ -z "$PKGNAME" ]; then
+	fatal "Unable to extract PKGNAME for $pkgdir"
     fi
     }
 
@@ -176,7 +166,7 @@ extract_variables()
 	extract_make_vars Makefile \
 		AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
 		PKGCHK_TAGS PKGCHK_UPDATE_CONF PKG_ADD PKG_DBDIR PKG_DELETE \
-		PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
+		PKG_ADMIN PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
 	fi
@@ -254,59 +244,87 @@ get_build_ver()
     cat $MY_TMPFILE
     }
 
+# Given a binary package filename as the first argumennt, return a list
+# of exact package versions against which it was built and on which it
+# depends
+#
+list_dependencies()
+    {
+    ${PKG_INFO} -. -q -n $1 | ${GREP} .. || true
+    }
+
+# Pass a list of pkgdirs, outputs a tsorted list including any dependencies
+#
 list_packages()
     {
-    # DEPCHECKLIST contains packages for which binary packages are known to
-    # exist, but now need to be checked for packages on which they depend
-    DEPCHECKLIST=' '
+    # Convert passed in list of pkgdirs to a list of binary package files
+    pkglist=''
     for pkgdir in $* ; do
-	extract_pkg_vars $pkgdir PKGNAME
-	if [ -z "$PKGNAME" ]; then
+	pkgname=`pkgdir2pkgname $pkgdir`
+	if [ -z "$pkgname" ]; then
+	    fatal_later "$pkgdir - Unable to extract pkgname"
 	    continue
 	fi
-	if is_binary_available $PKGNAME; then
-	    :
+	if is_binary_available $pkgname ; then
+	    pkglist="$pkglist $pkgname$PKG_SUFX"
 	else
-	    fatal_later "$PKGNAME - binary package missing"
-	    continue
+	    fatal_later "$pkgname - no binary package found"
 	fi
-	verbose "$PKGNAME$PKG_SUFX: found"
-	DEPCHECKLIST="$DEPCHECKLIST$PKGNAME ";
     done
 
-    PAIRLIST=
-    PKGLIST=' '
-    while [ "$DEPCHECKLIST" != ' ' ]; do
-	NEXTCHECK=' '
-	for pkg in $DEPCHECKLIST ; do
-	    DEPLIST="$(${PKG_INFO} -. -q -N $PACKAGES/$pkg$PKG_SUFX | ${GREP} .. || true)"
-	    if [ -z "$DEPLIST" ] ; then
-		PAIRLIST="${PAIRLIST}$pkg$PKG_SUFX $pkg$PKG_SUFX\n"
+    # Variables used in this loop:
+    # pkglist: Current list of binary package files to check for dependencies
+    # next_pkglist: List of binary package files to check after pkglist
+    # pairlist: completed list of package + dependency for use in tsort
+    while [ -n "$pkglist" ] ; do
+	verbose "pkglist: $pkglist"
+	for pkg in $pkglist ; do
+	    set -o noglob
+	    deplist="$(list_dependencies $PACKAGES/$pkg)"
+	    verbose "$pkg: dependencies - `echo $deplist`" 
+	    if [ -n "$deplist" ] ; then
+		for depmatch in $deplist ; do
+		    dep=`${PKG_ADMIN} -b -d $PACKAGES lsbest "$depmatch"`
+		    if [ -z "$dep" ] ; then
+			fatal_later "$depmatch: dependency missing for $pkg"
+		    else
+			pairlist="$pairlist$dep $pkg\n"
+			case $dep_cache in 
+			    *" $dep "*)
+				# depmatch_cache is a quick cache of already
+				verbose "$pkg: $deplist - cached"
+				;;
+			    *)
+				next_pkglist="$next_pkglist $dep"
+				dep_cache="$dep_cache $dep "
+				;;
+			esac
+		    fi
+		done
+	    else
+		pairlist="$pairlist$pkg $pkg\n"
 	    fi
-	    for dep in $DEPLIST ; do
-		if is_binary_available $dep; then
-		    :
-		else
-		    fatal_later "$dep$PKG_SUFX - dependency missing for $pkg"
-		    break
-		fi
-		PAIRLIST="${PAIRLIST}$dep$PKG_SUFX $pkg$PKG_SUFX\n"
-		case "$PKGLIST$DEPCHECKLIST$NEXTCHECK" in
-		    *" $dep "*)
-			verbose "$pkg: Duplicate depend $dep"
-			;;
-		    *)
-			NEXTCHECK=" $dep$NEXTCHECK"
-			verbose "$pkg: Add depend $dep"
-			;;
-		esac
-	    done
-	    PKGLIST="$pkg $PKGLIST"
+	    set +o noglob
 	done
-	DEPCHECKLIST="$NEXTCHECK"
+	pkglist="$next_pkglist"
+	next_pkglist=
     done
     fatal_later_check
-    printf "$PAIRLIST" | ${TSORT}
+    printf "$pairlist" | ${TSORT}
+    }
+
+pkgdir2pkgname()
+    {
+    pkgdir=$1
+    for pkgline in $PKGDB ; do
+	case $pkgline in
+	    "$pkgdir:"*)
+		echo $pkgline | ${SED} 's/[^:]*://'
+		return;
+	    ;;
+	esac
+    done
+    msg "WARNING: No binary package for $pkgdir"
     }
 
 pkgdirs_from_conf()
@@ -694,6 +712,7 @@ test -n "$ID"         || ID="@ID@"
 test -n "$MAKE"       || MAKE="@MAKE@"
 test -n "$MAKECONF"   || MAKECONF="@MAKECONF@"
 test -n "$PKG_ADD"    || PKG_ADD="@PKG_ADD@"
+test -n "$PKG_ADMIN"  || PKG_ADMIN="@PKG_ADMIN@"
 test -n "$PKG_DBDIR"  || PKG_DBDIR="@PKG_DBDIR@"
 test -n "$PKG_DELETE" || PKG_DELETE="@PKG_DELETE@"
 test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
