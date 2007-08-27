@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.sh,v 1.1 2007/08/20 11:21:21 abs Exp $
+# $NetBSD: cpuflags.sh,v 1.2 2007/08/27 10:08:29 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 include()
@@ -17,9 +17,10 @@ include()
 verbose()
     {
     [ -n "$opt_v" ] && echo $* >&2
+    return 0
     }
 
-UNAME=$(uname)
+UNAME=`uname`
 
 if [ "$1" = -v ] ; then
     shift
@@ -45,19 +46,31 @@ include subr_${UNAME}
 #
 include subr_gcc
 
+# native arch
+M_ARCH_NATIVE='-march=native'
+
 # Determine the flags for this OS/machine
 extract_hw_details
-if [ $(gcc_ser $CC) -gt 4002 ] ; then
-    ARCH='-march=native'
+if [ `gcc_ser $CC` -gt 4002 ] ; then
+    ARCH="$M_ARCH_NATIVE"
 else
-    ARCH=$(determine_arch)
+    ARCH=`determine_arch`
 fi
-FEATURES=$(determine_features)
+FEATURES=`determine_features`
+
+test "x$ARCH" != "x$M_ARCH_NATIVE" &&	# gcc have not autodetection
+    case "$hw_machine_arch" in		# all known x86 mnemonics
+    i386|i486|i586|i686|x86_64|amd64|i86pc)
+	include subr_x86	# this provides flags_fixup_x86arch()
+	echo $FEATURES
+	l_arch=`flags_fixup_x86arch "$ARCH" "$FEATURES"`
+	test -n "$l_arch" && ARCH="-march=$l_arch"
+    esac
 
 # Fixup any flags which are too new for our gcc version
 #
-CPUFLAGS="$(gcc_fixup_arch_flags $CC $ARCH $FEATURES)"
-CPUFLAGS="$(echo $CPUFLAGS)"
+CPUFLAGS=`gcc_fixup_arch_flags $CC $ARCH $FEATURES`
+CPUFLAGS=`echo $CPUFLAGS`
 
 if [ -n "$opt_v" ] ; then
     if [ -n "$NOARCH" ] ; then
@@ -70,7 +83,7 @@ if [ -n "$opt_v" ] ; then
 ARCH            : $ARCH
 FEATURES        : $FEATURES
 CPUFLAGS        : $CPUFLAGS
-GCC version     : $(gcc_ver $CC)
+GCC version     : `gcc_ver $CC`
 END
     display_hw_details
     exit;
