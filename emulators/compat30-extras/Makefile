@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/21 22:49:23 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/27 21:44:37 jlam Exp $
 
 DISTNAME=		compat30-extras		# overridden below
 NETBSD_VERSION=		3.0
@@ -22,7 +22,7 @@ ACCEPTABLE_NETBSD=	NetBSD-2.99.* NetBSD-3.[0-9]			\
 .else
 ACCEPTABLE_NETBSD=	NetBSD-3.99.* NetBSD-4.[0-9]			\
 			NetBSD-4.[1-8][0-9].* NetBSD-4.9[0-8].*
-ONLY_FOR_PLATFORM=	${ACCEPTABLE_OPSYS:S/$/-vax/}
+ONLY_FOR_PLATFORM=	${ACCEPTABLE_NETBSD:S/$/-vax/}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
