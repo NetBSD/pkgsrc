@@ -1,4 +1,4 @@
-# $NetBSD: subr_x86,v 1.1 2007/08/27 10:08:30 abs Exp $
+# $NetBSD: subr_x86,v 1.2 2007/08/27 10:09:22 abs Exp $
 
 flags_fixup_x86arch()
     {
@@ -9,7 +9,6 @@ flags_fixup_x86arch()
     # The format of table is
     # feature:lowend_arch:fix_arch
     #
-    echo $AWK -v "arch=${arch#-march=}" -v "features=$features" >&2
     $AWK -v "arch=${arch#-march=}" -v "features=$features" '
 	BEGIN { split(features,ar); FS=":" }
 	{ for (af in ar)
