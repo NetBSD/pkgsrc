@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2007/08/22 11:50:18 tron Exp $
+# $NetBSD: Makefile,v 1.117 2007/08/27 10:08:29 abs Exp $
 
-DISTNAME=	cpuflags-1.13
+DISTNAME=	cpuflags-1.14
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Determine compiler flags to best target current cpu
 
-ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-*
 
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	yes
