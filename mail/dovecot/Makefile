@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.100 2007/08/01 10:56:24 ghen Exp $
+# $NetBSD: Makefile,v 1.101 2007/08/27 10:38:50 ghen Exp $
 
 DISTNAME=		dovecot-1.0.3
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/1.0/
 
@@ -18,6 +19,7 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR:Q}
+CONFIGURE_ARGS+=	--enable-header-install
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -54,6 +56,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert.sh ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/lib/liblib.a ${DESTDIR}${PREFIX}/lib/dovecot
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
