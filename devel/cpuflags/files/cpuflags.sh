@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.sh,v 1.2 2007/08/27 10:08:29 abs Exp $
+# $NetBSD: cpuflags.sh,v 1.3 2007/08/27 10:09:22 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 include()
@@ -62,7 +62,6 @@ test "x$ARCH" != "x$M_ARCH_NATIVE" &&	# gcc have not autodetection
     case "$hw_machine_arch" in		# all known x86 mnemonics
     i386|i486|i586|i686|x86_64|amd64|i86pc)
 	include subr_x86	# this provides flags_fixup_x86arch()
-	echo $FEATURES
 	l_arch=`flags_fixup_x86arch "$ARCH" "$FEATURES"`
 	test -n "$l_arch" && ARCH="-march=$l_arch"
     esac
