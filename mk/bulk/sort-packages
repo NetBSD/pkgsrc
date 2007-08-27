@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.9 2007/08/06 02:43:34 adrianp Exp $
+# $NetBSD: sort-packages,v 1.10 2007/08/27 15:38:08 adrianp Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -77,7 +77,7 @@ for pkg in *${PKG_SUFX}; do
 				vuln=`${AUDIT_PACKAGES} -p "${pkg}"`
 			fi
 		else
-			vuln=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -p "${pkg}" 2>&1`
+			vuln=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -p "${pkg}"`
 		fi
 		if [ -n "${vuln}" ]; then
 			category="vulnerable"
