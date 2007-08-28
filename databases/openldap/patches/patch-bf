@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.2 2007/08/28 14:08:22 tron Exp $
+$NetBSD: patch-bf,v 1.3 2007/08/28 14:33:27 tron Exp $
 
 --- configure.orig	2007-08-24 06:20:33.000000000 +0200
 +++ configure	2007-08-24 06:23:02.000000000 +0200
@@ -38,11 +38,11 @@ $NetBSD: patch-bf,v 1.2 2007/08/28 14:08:22 tron Exp $
  fi;
  # end --enable-rwm
  
-+# OpenLDAP --enable-smvk5pwd
++# OpenLDAP --enable-smbk5pwd
 +
-+	# Check whether --enable-smvk5pwd or --disable-smvk5pwd was given.
-+if test "${enable_smvk5pwd+set}" = set; then
-+  enableval="$enable_smvk5pwd"
++	# Check whether --enable-smbk5pwd or --disable-smbk5pwd was given.
++if test "${enable_smbk5pwd+set}" = set; then
++  enableval="$enable_smbk5pwd"
 +
 +	ol_arg=invalid
 +	for ol_val in no yes mod ; do
@@ -51,16 +51,16 @@ $NetBSD: patch-bf,v 1.2 2007/08/28 14:08:22 tron Exp $
 +		fi
 +	done
 +	if test "$ol_arg" = "invalid" ; then
-+		{ { echo "$as_me:$LINENO: error: bad value $enableval for --enable-smvk5pwd" >&5
-+echo "$as_me: error: bad value $enableval for --enable-smvk5pwd" >&2;}
++		{ { echo "$as_me:$LINENO: error: bad value $enableval for --enable-smbk5pwd" >&5
++echo "$as_me: error: bad value $enableval for --enable-smbk5pwd" >&2;}
 +   { (exit 1); exit 1; }; }
 +	fi
-+	ol_enable_smvk5pwd="$ol_arg"
++	ol_enable_smbk5pwd="$ol_arg"
 +
 +else
-+  	ol_enable_smvk5pwd=${ol_enable_overlays:-yes}
++  	ol_enable_smbk5pwd=${ol_enable_overlays:-yes}
 +fi;
-+# end --enable-smvk5pwd
++# end --enable-smbk5pwd
 +
  # OpenLDAP --enable-syncprov
  
