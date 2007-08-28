@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6617 2007/08/27 23:18:22 gdt Exp $
+$NetBSD: TODO,v 1.6618 2007/08/28 16:06:25 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ Suggested package updates
 	o openmotif-2.3
 	o openpam-20050616
 	o openssl-0.9.8e (in wip/)
-	o opera-9.23
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
