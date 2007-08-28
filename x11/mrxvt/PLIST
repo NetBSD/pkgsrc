@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/09 23:14:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/28 14:57:16 tnn Exp $
 bin/mrxvt
 man/man1/mrxvt.1
+share/doc/mrxvt/etc/XTerm.ad
+share/doc/mrxvt/etc/mrxvt.terminfo
+share/doc/mrxvt/etc/rxvt.termcap
+share/doc/mrxvt/etc/rxvt.terminfo
 share/doc/mrxvt/README.greek.bz2
 share/doc/mrxvt/README.menu.bz2
 share/doc/mrxvt/README.xvt.bz2
@@ -22,6 +26,7 @@ share/pixmaps/mrxvt-root.png
 share/pixmaps/mrxvt-root.xpm
 share/pixmaps/mrxvt.png
 share/pixmaps/mrxvt.xpm
+@dirrm share/doc/mrxvt/etc
 @dirrm share/doc/mrxvt/scripts
 @dirrm share/doc/mrxvt
 @dirrm share/examples/mrxvt
