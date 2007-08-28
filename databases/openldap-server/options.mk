@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/08/24 19:06:51 manu Exp $
+# $NetBSD: options.mk,v 1.5 2007/08/28 14:33:27 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd
@@ -97,5 +97,6 @@ LDFLAGS+=-lkrb5
 LDFLAGS+=-lkadm5srv
 LDFLAGS+=-lhdb
 . include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-smbk5pwd
 .endif
-
