@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/08/28 14:57:15 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/28 15:39:19 tnn Exp $
 #
 
 DISTNAME=	mrxvt-0.5.3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://materm.sourceforge.net/
 COMMENT=	Multi-tabbed terminal emulator with Xft support
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
@@ -18,6 +19,11 @@ CONFIGURE_ARGS+=	--enable-xft
 CONFIGURE_ARGS+=	--enable-text-shadow
 CONFIGURE_ARGS+=	--enable-24bits
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "HPUX"
+CONFIGURE_ARGS+=	--disable-lastlog --disable-utmp --disable-wtmp
+.endif
 
 EGDIR=			${PREFIX}/share/examples
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/mrxvt
@@ -37,7 +43,7 @@ CONFIGURE_ARGS+=--enable-ttygid
 SPECIAL_PERMS=	${PREFIX}/bin/mrxvt ${SETUID_ROOT_PERMS}
 .endif
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+BUILDLINK_DEPMETHOD.libXt+=	build
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
