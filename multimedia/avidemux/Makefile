@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/06/07 21:20:08 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2007/08/28 21:43:35 jlam Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -23,15 +23,13 @@ LIBS+=			${LIBOSSAUDIO}
 
 CONFIGURE_ENV+=		X11_LDFLAGS=${X11_LDFLAGS:Q}
 CONFIGURE_ENV+=		ac_cv_path_ART_CONFIG=no
-CONFIGURE_ARGS+=	--without-newfaad
-CONFIGURE_ARGS+=	--disable-faad # Dolby doesn't allow binary distribution
 CONFIGURE_ARGS+=	\
 	--with-jsapi-include=${BUILDLINK_PREFIX.spidermonkey}/include
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avidemux
-PKG_SUPPORTED_OPTIONS=	# generally, none
+PKG_SUPPORTED_OPTIONS=	faad
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+=	mmx
 .endif
@@ -46,6 +44,18 @@ CONFIGURE_ENV+=		CCAS=${CC}
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mfaad)
+.  include "../../audio/faad2/buildlink3.mk"
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.faad2}/include/faad2
+CONFIGURE_ARGS+=	--with-faad2
+RESTRICTED=		Dolby doesn't allow binary distributions (FAAD)
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+.else
+CONFIGURE_ARGS+=	--without-newfaad
+CONFIGURE_ARGS+=	--disable-faad
+.endif
 
 .if empty(PKG_OPTIONS:Mmmx)
 CONFIGURE_ARGS+=	--disable-mmx
