@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1887 2007/08/27 17:53:47 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1888 2007/08/28 00:32:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3431,8 +3431,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libosip to 3.0.3 [obache 2007-08-25]
 	Updated net/partysip to 2.2.3nb1 [obache 2007-08-25]
 	Updated net/userppp to 001107nb2 [obache 2007-08-25]
-	Updated chat/inspircd to 1.1.2 [adrianp 2008-08-25]
-	Updated devel/bugzilla to 2.22.3 [adrianp 2008-08-25]
+	Updated chat/inspircd to 1.1.2 [adrianp 2007-08-25]
+	Updated devel/bugzilla to 2.22.3 [adrianp 2007-08-25]
 	Updated security/libident to 0.32 [obache 2007-08-25]
 	Updated wm/icewm to 1.2.27nb1 [obache 2007-08-25]
 	Updated wm/icewm-imlib to 1.2.27nb1 [obache 2007-08-25]
