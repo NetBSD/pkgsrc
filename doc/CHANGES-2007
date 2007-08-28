@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1888 2007/08/28 00:32:25 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1889 2007/08/28 15:05:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/cpuflags to 1.15 [tron 2007-08-27]
 	Updated mail/p5-Email-Send to 2.185 [adrianp 2007-08-27]
 	Added devel/bugzilla3 version 3.0.1 [adrianp 2007-08-27]
+	Updated x11/mrxvt to 0.5.3 [tnn 2007-08-28]
