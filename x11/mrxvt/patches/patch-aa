@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2007/05/09 23:14:41 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/28 14:57:16 tnn Exp $
 
---- src/init.c.orig	2006-10-01 23:50:37.000000000 +0200
-+++ src/init.c
-@@ -41,7 +41,7 @@
- # define DEBUG_X
- #else
- # define DEBUG_LEVEL	0
--# define DEBUG_X
-+# undef DEBUG_X
- #endif
+--- configure.orig	2007-03-08 02:13:18.000000000 +0100
++++ configure
+@@ -3351,7 +3351,7 @@ if test "${enable_use_fifo+set}" = set; 
  
- #if DEBUG_LEVEL
+ fi
+ 
+-if test "x$use_fifo" == "xyes"; then
++if test "x$use_fifo" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define USE_FIFO
