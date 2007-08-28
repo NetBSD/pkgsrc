@@ -1,3 +1,5 @@
+$NetBSD: patch-be,v 1.2 2007/08/28 14:08:22 tron Exp $
+
 --- servers/slapd/overlays/Makefile.in.orig	2007-08-24 05:35:05.000000000 +0200
 +++ servers/slapd/overlays/Makefile.in	2007-08-24 05:35:38.000000000 +0200
 @@ -24,8 +24,9 @@
