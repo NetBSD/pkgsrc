@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2007/05/10 00:44:38 tnn Exp $
+$NetBSD: distinfo,v 1.4 2007/08/28 14:57:16 tnn Exp $
 
-SHA1 (mrxvt-0.5.2.tar.gz) = a8fba2500b1edfabdd794e899b74666b2d909692
-RMD160 (mrxvt-0.5.2.tar.gz) = 85ccf709be85dc91374b1c6c893059155ab5c26f
-Size (mrxvt-0.5.2.tar.gz) = 559242 bytes
-SHA1 (patch-aa) = bb665893ce02548636cf29e938f22ea6521d7a35
+SHA1 (mrxvt-0.5.3.tar.gz) = 442006f1d797ea5464c5c49d26d0cdecf79160f4
+RMD160 (mrxvt-0.5.3.tar.gz) = 76fbbd5ba20215dd7785eafa07dae909029194ec
+Size (mrxvt-0.5.3.tar.gz) = 592897 bytes
+SHA1 (patch-aa) = 1be43fde59a351f6cb0af899f4b524ded320071c
 SHA1 (patch-ab) = 071b06c1a6fa3e894ed6fc5e13b67aa2ab0f2ee0
