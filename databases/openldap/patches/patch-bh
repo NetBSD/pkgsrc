@@ -1,3 +1,5 @@
+$NetBSD: patch-bh,v 1.2 2007/08/28 14:08:22 tron Exp $
+
 --- include/portable.hin.orig	2007-08-24 18:05:46.000000000 +0200
 +++ include/portable.hin	2007-08-24 18:06:10.000000000 +0200
 @@ -1001,8 +1001,11 @@
