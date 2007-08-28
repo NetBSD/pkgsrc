@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1890 2007/08/28 16:06:25 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1891 2007/08/28 23:59:40 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3447,3 +3447,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/bugzilla3 version 3.0.1 [adrianp 2007-08-27]
 	Updated x11/mrxvt to 0.5.3 [tnn 2007-08-28]
 	Updated www/opera to 9.23 [xtraeme 2007-08-28]
+	Updated www/apache2 to 2.0.59nb7 [jnemeth 2007-08-28]
+	Updated www/apache22 to 2.2.4nb7 [jnemeth 2007-08-28]
