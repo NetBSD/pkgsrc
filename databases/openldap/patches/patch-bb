@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 2007/08/28 14:08:22 tron Exp $
+
 --- contrib/slapd-modules/smbk5pwd/smbk5pwd.c.orig	2007-08-24 18:52:03.000000000 +0200
 +++ contrib/slapd-modules/smbk5pwd/smbk5pwd.c	2007-08-24 18:52:18.000000000 +0200
 @@ -32,8 +32,12 @@
