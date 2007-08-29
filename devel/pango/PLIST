@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2007/04/10 23:15:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2007/08/29 22:38:37 wiz Exp $
 bin/pango-querymodules
 ${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -15,6 +15,7 @@ include/pango-1.0/pango/pango-glyph-item.h
 include/pango-1.0/pango/pango-glyph.h
 include/pango-1.0/pango/pango-gravity.h
 include/pango-1.0/pango/pango-item.h
+include/pango-1.0/pango/pango-language.h
 include/pango-1.0/pango/pango-layout.h
 include/pango-1.0/pango/pango-matrix.h
 include/pango-1.0/pango/pango-modules.h
@@ -64,19 +65,21 @@ share/gtk-doc/html/pango/PangoFcDecoder.html
 share/gtk-doc/html/pango/PangoFcFont.html
 share/gtk-doc/html/pango/PangoFcFontMap.html
 share/gtk-doc/html/pango/PangoMarkupFormat.html
+share/gtk-doc/html/pango/PangoRenderer.html
 share/gtk-doc/html/pango/home.png
+share/gtk-doc/html/pango/index-1.10.html
+share/gtk-doc/html/pango/index-1.12.html
+share/gtk-doc/html/pango/index-1.14.html
+share/gtk-doc/html/pango/index-1.16.html
+share/gtk-doc/html/pango/index-1.18.html
+share/gtk-doc/html/pango/index-1.2.html
+share/gtk-doc/html/pango/index-1.4.html
+share/gtk-doc/html/pango/index-1.6.html
+share/gtk-doc/html/pango/index-1.8.html
+share/gtk-doc/html/pango/index-all.html
+share/gtk-doc/html/pango/index-deprecated.html
 share/gtk-doc/html/pango/index.html
 share/gtk-doc/html/pango/index.sgml
-share/gtk-doc/html/pango/ix01.html
-share/gtk-doc/html/pango/ix02.html
-share/gtk-doc/html/pango/ix03.html
-share/gtk-doc/html/pango/ix04.html
-share/gtk-doc/html/pango/ix05.html
-share/gtk-doc/html/pango/ix06.html
-share/gtk-doc/html/pango/ix07.html
-share/gtk-doc/html/pango/ix08.html
-share/gtk-doc/html/pango/ix09.html
-share/gtk-doc/html/pango/ix10.html
 share/gtk-doc/html/pango/layout.gif
 share/gtk-doc/html/pango/left.png
 share/gtk-doc/html/pango/lowlevel.html
@@ -91,7 +94,6 @@ share/gtk-doc/html/pango/pango-Layout-Objects.html
 share/gtk-doc/html/pango/pango-Miscellaneous-Utilities.html
 share/gtk-doc/html/pango/pango-Modules.html
 share/gtk-doc/html/pango/pango-OpenType-Font-Handling.html
-share/gtk-doc/html/pango/pango-PangoRenderer.html
 share/gtk-doc/html/pango/pango-Scripts.html
 share/gtk-doc/html/pango/pango-Tab-Stops.html
 share/gtk-doc/html/pango/pango-Text-Attributes.html

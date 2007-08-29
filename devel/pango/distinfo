@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2007/07/28 13:59:14 wiz Exp $
+$NetBSD: distinfo,v 1.56 2007/08/29 22:38:37 wiz Exp $
 
-SHA1 (pango-1.16.5.tar.bz2) = a23899b16a95294dfa739825c81f3858787127e8
-RMD160 (pango-1.16.5.tar.bz2) = 98f38b2f8062e8f11e95a22824fa8c89664ffbb3
-Size (pango-1.16.5.tar.bz2) = 1345977 bytes
+SHA1 (pango-1.18.1.tar.bz2) = e3e86be65ca957c1a1a9bf14f2e12ba6b9c92f3d
+RMD160 (pango-1.18.1.tar.bz2) = 046c653848d759b6c2304275bc62dd3169b4f48d
+Size (pango-1.18.1.tar.bz2) = 1390639 bytes
