@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/01 12:33:51 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/29 23:07:48 wiz Exp $
 bin/stg
 ${PYSITELIB}/stgit/basedir.py
 ${PYSITELIB}/stgit/basedir.pyc
@@ -27,6 +27,9 @@ ${PYSITELIB}/stgit/commands/commit.pyo
 ${PYSITELIB}/stgit/commands/common.py
 ${PYSITELIB}/stgit/commands/common.pyc
 ${PYSITELIB}/stgit/commands/common.pyo
+${PYSITELIB}/stgit/commands/copy.py
+${PYSITELIB}/stgit/commands/copy.pyc
+${PYSITELIB}/stgit/commands/copy.pyo
 ${PYSITELIB}/stgit/commands/delete.py
 ${PYSITELIB}/stgit/commands/delete.pyc
 ${PYSITELIB}/stgit/commands/delete.pyo
@@ -108,6 +111,9 @@ ${PYSITELIB}/stgit/commands/series.pyo
 ${PYSITELIB}/stgit/commands/show.py
 ${PYSITELIB}/stgit/commands/show.pyc
 ${PYSITELIB}/stgit/commands/show.pyo
+${PYSITELIB}/stgit/commands/sink.py
+${PYSITELIB}/stgit/commands/sink.pyc
+${PYSITELIB}/stgit/commands/sink.pyo
 ${PYSITELIB}/stgit/commands/status.py
 ${PYSITELIB}/stgit/commands/status.pyc
 ${PYSITELIB}/stgit/commands/status.pyo
@@ -161,9 +167,10 @@ share/stgit/examples/patchdescr.tmpl
 share/stgit/templates/covermail.tmpl
 share/stgit/templates/patchexport.tmpl
 share/stgit/templates/patchmail.tmpl
-@comment @dirrm share/stgit/templates
-@comment @dirrm share/stgit/examples
-@comment @dirrm share/stgit/contrib
-@comment @dirrm share/stgit
-@comment @dirrm ${PYSITELIB}/stgit/commands
-@comment @dirrm ${PYSITELIB}/stgit
+@dirrm share/stgit/templates
+@dirrm share/stgit/examples
+@dirrm share/stgit/contrib
+@dirrm share/stgit
+@dirrm share/doc/stgit
+@dirrm ${PYSITELIB}/stgit/commands
+@dirrm ${PYSITELIB}/stgit
