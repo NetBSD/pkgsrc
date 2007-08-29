@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.61 2007/08/14 19:03:25 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.62 2007/08/29 15:59:52 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -386,11 +386,9 @@ show-options:
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting PKG_DEFAULT_OPTIONS"
 	@${ECHO} "or "${PKG_OPTIONS_VAR:Q}"."
-	@set -- dummy ${PKG_OPTIONS_DEPRECATED_WARNINGS}; \
-	if ${TEST} $$# -gt 1; then ${ECHO}; fi; \
-	for l; \
-	do \
-		if ${TEST} "$$l" = "dummy"; then continue; fi; \
+	@set args ${PKG_OPTIONS_DEPRECATED_WARNINGS}; shift; \
+	[ $$# -eq 0 ] || ${ECHO}; \
+	for l in "$$@"; do \
 		${ECHO} "$$l"; \
 	done
 
@@ -418,11 +416,9 @@ supported-options-message:
 .    else
 	@${ECHO} "	${PKG_OPTIONS_VAR} = "${${PKG_OPTIONS_VAR}:Q}
 .    endif
-	@set -- dummy ${PKG_OPTIONS_DEPRECATED_WARNINGS}; \
-	if ${TEST} $$# -gt 1; then ${ECHO}; fi; \
-	for l; \
-	do \
-		if ${TEST} "$$l" = "dummy"; then continue; fi; \
+	@set args ${PKG_OPTIONS_DEPRECATED_WARNINGS}; shift; \
+	[ $$# -eq 0 ] || ${ECHO}; \
+	for l in "$$@"; do \
 		${ECHO} "$$l"; \
 	done
 	@${ECHO} ""
