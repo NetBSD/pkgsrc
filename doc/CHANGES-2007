@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1891 2007/08/28 23:59:40 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1892 2007/08/29 01:58:57 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3449,3 +3449,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/opera to 9.23 [xtraeme 2007-08-28]
 	Updated www/apache2 to 2.0.59nb7 [jnemeth 2007-08-28]
 	Updated www/apache22 to 2.2.4nb7 [jnemeth 2007-08-28]
+	Updated print/latex-mk to 1.9.1 [dmcmahill 2007-08-28]
