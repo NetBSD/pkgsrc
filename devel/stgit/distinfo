@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/01 12:33:51 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2007/08/29 23:07:48 wiz Exp $
 
-SHA1 (stgit-0.12.1.tar.gz) = 6832ed2a83425896202eee9efda2aa9e26a961d2
-RMD160 (stgit-0.12.1.tar.gz) = 2341874abeed04d3ff050bf888d5112918db3ac2
-Size (stgit-0.12.1.tar.gz) = 115793 bytes
+SHA1 (stgit-0.13.tar.gz) = 0a2d7b8e5fc09f3ea7f62dbcd57881ea51d7595a
+RMD160 (stgit-0.13.tar.gz) = aba40517731b63e20645cd9596d96b7ca5943ab7
+Size (stgit-0.13.tar.gz) = 187604 bytes
