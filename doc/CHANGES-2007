@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1895 2007/08/29 20:49:17 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1896 2007/08/29 20:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/py-swish-e version 0.5 [joerg 2007-08-29]
 	Updated www/links to 2.1.0.30 [wiz 2007-08-29]
 	Updated www/links-gui to 2.1.0.30 [wiz 2007-08-29]
+	Updated graphics/png to 1.2.19 [wiz 2007-08-29]
