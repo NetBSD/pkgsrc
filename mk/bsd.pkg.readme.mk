@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.12 2007/08/13 09:45:49 rillig Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.13 2007/08/29 23:26:30 adrianp Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -235,7 +235,7 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 # XXX: have complex names in the pkg-vulnerabilties file. 
 # XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
 # XXX: Post pkg_install-20070714 only currently known vulnerabilities are
-# XXX: shown in the generated files for packages.
+# XXX: shown in the generated README.html files for packages.
 #
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
@@ -299,6 +299,7 @@ README.html: .PRECIOUS
 		PKG_URL=${PKG_URL:Q} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||:Q} \
 		PVDIR=$$_PVDIR \
+		PKGTOOLS_VER=${PKGTOOLS_VERSION} \
 		SED=${SED:Q} \
 		SETENV=${SETENV:Q} \
 		SORT=${SORT:Q} \
