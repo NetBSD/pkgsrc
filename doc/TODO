@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6630 2007/08/29 23:19:42 wiz Exp $
+$NetBSD: TODO,v 1.6631 2007/08/29 23:20:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -529,19 +529,6 @@ Suggested package updates
 	o gnome-speech-0.4.16
 	o gnu-crypto-2.1.0
 	o gnumeric-current-1.7.11
-	o gnuradio-audio-jack-3.0.3
-	o gnuradio-audio-oss-3.0.3
-	o gnuradio-audio-portaudio-3.0.3
-	o gnuradio-core-3.0.3
-	o gnuradio-core-docs-3.0.3
-	o gnuradio-examples-3.0.3
-	o gnuradio-gsm-3.0.3
-	o gnuradio-howto-3.0.3
-	o gnuradio-radio-astronomy-3.0.3
-	o gnuradio-trellis-3.0.3
-	o gnuradio-usrp-3.0.3
-	o gnuradio-video-sdl-3.0.3
-	o gnuradio-wxgui-3.0.3
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
