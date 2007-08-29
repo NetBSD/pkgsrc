@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.27 2007/05/28 11:07:00 martti Exp $
+# $NetBSD: genreadme.awk,v 1.28 2007/08/29 23:26:30 adrianp Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -372,8 +372,15 @@ END {
 			if (debug) printf("wrote = %d entries to \"%s\"\n",
 					  i-1, htmldeps_file);
 
+# XXX: The code for the pkg_install<20070714 vulnerability checks are
+# XXX: broken.  It will not find vulnerabilities in any packages that
+# XXX: have complex names in the pkg-vulnerabilties file.
+# XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
+# XXX: Post pkg_install-20070714 only currently known vulnerabilities are
+# XXX: shown in the generated README.html files for packages.
+
 			vul = "";
-			if (have_vfile) {
+			if (have_vfile && PKGTOOLS_VER < 20070714) {
 				i = 1;
 				pkgbase = pkgdir2name[toppkg];
 				gsub(/-[^-]*$/, "", pkgbase);
@@ -403,6 +410,26 @@ END {
 				}
 			}
 
+			if (have_vfile && PKGTOOLS_VER >= 20070714) {
+				pkg = pkgdir2name[toppkg];
+
+				if (debug) {
+				  printf("Checking for %s (%s) vulnerabilities\n",
+					 toppkg, pkg);
+				}
+
+				cmd = sprintf("audit-packages -n %s", pkg);
+				while (cmd | getline vuln_entry) {
+					split(vuln_entry, entry, " ");
+					vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",
+						  vul, pkg, entry[8], entry[5]);
+				}
+				close(cmd);
+
+				if ( vul == "" ){
+					vul="<I>(no vulnerabilities known)</I>";
+				}
+			}
 
 			if (debug) {
 			  printf("Checking for binary package with lookup_cache( %s)\n",
