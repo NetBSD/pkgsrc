@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6623 2007/08/29 20:59:02 wiz Exp $
+$NetBSD: TODO,v 1.6624 2007/08/29 21:03:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -935,7 +935,6 @@ Suggested package updates
 	o pango-1.18.0
 	o pari-2.1.7
 	o pcal-4.8
-	o pcre-7.3
 	o pciids-20070322
 	o pciutils-2.2.0
 	o pdmenu-1.2.87
