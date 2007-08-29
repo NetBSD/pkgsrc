@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6619 2007/08/28 17:27:52 tnn Exp $
+$NetBSD: TODO,v 1.6620 2007/08/29 06:40:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,7 @@ Suggested package updates
 	o adocman-0.13
 	o adtool-1.3
 	o aewm++-1.0.27
-	o afterstep-2.2.6
+	o afterstep-2.2.7
 	o album-4.01
 	o alee-ttf-11.2
 	o algae-4.3.6
@@ -355,13 +355,14 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddb-1.5.2
 	o cddbd-1.5.2
+	o cdlabelgen-4.0.0
 	o cdrtools-2.01.01.34
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.4
-	o chemtool-1.6.10
+	o chemtool-1.6.11
 	o cherokee-0.5.6
 	o chrony-1.21
 	o cint-5.16
@@ -403,6 +404,7 @@ Suggested package updates
 	o devtodo-0.1.19
 	o dhid-5.3
 	o diction-1.10
+	o diffstat-1.44
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.7.0
@@ -490,6 +492,7 @@ Suggested package updates
 	o gcc-ssp-3.4.4
 	o gcin-1.3.4
 	o gcombust-0.1.55
+	o gconf-editor-2.18.2
 	o gcpio-2.7
 	o gdal-1.4.1
 	o gdb6-6.6
@@ -511,9 +514,10 @@ Suggested package updates
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade-3.3.0
+	o glade3-3.3.4
 	o glchess-1.0.5
 	o global-5.6
-	o glpk-4.20
+	o glpk-4.21
 	o gmime-2.2.10
 	o gmp3info-0.8.5a
 	o gmpc-0.15.1
@@ -521,6 +525,7 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-build-0.1.7
 	o gnome-games-2.18.2.1
+	o gnome-mag-0.14.7
 	o gnome-speech-0.4.16
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.1
@@ -589,7 +594,7 @@ Suggested package updates
 	o heimdal-1.0.1
 	o hercules-3.04.1
 	o hesiod-3.1.0
-	o heyu-2.0.1
+	o heyu-2.1.0
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -703,6 +708,7 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.24
+	o libxml2-2.6.30
 	o licq-1.3.4
 	o licq-core-1.3.0
 	o lilypond-2.10.20
@@ -779,7 +785,7 @@ Suggested package updates
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.26.4
+	o neon-0.27.0
 	o nessus-3.0.4
 	o nessus-core-2.3.1
 	o netcdf-3.6.2
@@ -844,7 +850,7 @@ Suggested package updates
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
-	o p5-Class-ReturnValue-0.54
+	o p5-Class-ReturnValue-0.55
 	o p5-Class-Trigger-0.11
 	o p5-Crypt-CBC-2.22
 	o p5-Curses-1.15
@@ -1121,6 +1127,7 @@ Suggested package updates
 	o sharity-3.3
 	o sharity-light-1.3
 	o shc-3.8
+	o shmux-1.0.1
 	o shntool-3.0.3
 	o shorten-3.6.1
 	o siag-3.6.1
@@ -1175,7 +1182,7 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.1.1
+	o tcpreplay-3.2
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1246,6 +1253,7 @@ Suggested package updates
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
 	o windowlab-1.34
+	o wine-0.9.44
 	o wmii-3.5.1
 	o wml-2.0.11
 	o wmweather-2.4.4
@@ -1272,6 +1280,7 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xfstt-1.7
+	o xhippo-3.5
 	o xisp-2.7p4
 	o xkbset-0.5
 	o xli-2006.11.10
