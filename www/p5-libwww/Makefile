@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2007/08/07 06:15:46 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2007/08/29 23:21:49 wiz Exp $
 
-DISTNAME=	libwww-perl-5.807
+DISTNAME=	libwww-perl-5.808
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
