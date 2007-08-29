@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2007/02/01 18:01:39 drochner Exp $
+$NetBSD: patch-aa,v 1.18 2007/08/29 23:26:45 wiz Exp $
 
---- doc/Makefile.in.orig	2007-01-17 15:42:16.000000000 +0100
+--- doc/Makefile.in.orig	2007-08-23 11:22:57.000000000 -0400
 +++ doc/Makefile.in
 @@ -211,7 +211,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
