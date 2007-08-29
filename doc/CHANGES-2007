@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1902 2007/08/29 23:19:42 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1903 2007/08/29 23:22:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/gnucash to 2.2.1 [wiz 2007-08-29]
 	Updated devel/stgit to 0.13 [wiz 2007-08-29]
 	Updated security/gnupg2 to 2.0.6 [wiz 2007-08-29]
+	Updated www/p5-libwww to 5.808 [wiz 2007-08-29]
