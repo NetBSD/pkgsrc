@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/08/23 14:10:29 hauke Exp $
+# $NetBSD: Makefile,v 1.15 2007/08/29 13:52:43 hauke Exp $
 #
 
 DISTNAME=	radmind-1.9.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=radmind/}
 
@@ -13,7 +14,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-radminddir=${RADMINDDIR}
 CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
-USE_TOOLS+=		diff
+# XXX configure script checks for path to echo, which pkgsrc does not
+# provide, so we need to side-step {echopath}.
+CONFIGURE_ENV+= 	ac_cv_path_echopath=${TOOLS_ECHO:Q}
 
 BUILD_TARGET=		all man rash
 RADMINDDIR=		${VARBASE}/radmind
