@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/08/10 15:46:23 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/29 23:19:06 wiz Exp $
 #
 
-DISTNAME=		gnupg-2.0.5
+DISTNAME=		gnupg-2.0.6
 PKGNAME=		${DISTNAME:S/gnupg/gnupg2/}
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -41,24 +41,7 @@ CONFIGURE_ENV+=		gnupg_cv_pth_is_sane=yes
 
 TEST_TARGET=		check
 
-# XXX It looks like that gpgsm support could be split into its own package,
-# according to the configure script.  If that's true, this use of the options
-# framework is incorrect and should be fixed.
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
-PKG_SUPPORTED_OPTIONS=	gpgsm
-.include "../../mk/bsd.options.mk"
-
-## If no options are specified, only gpg-agent is built. This
-## is sufficient for OpenPGP/MIME support in Kmail
-## SMIME support is provided by gpgsm. This support is
-## in the alpha stage of development.
-PLIST_SRC=	${.CURDIR}/PLIST
-.if empty(PKG_OPTIONS:Mgpgsm)
-CONFIGURE_ARGS+=	--enable-agent-only
-.else
-PLIST_SRC+=	${.CURDIR}/PLIST.gpgsm
-.  include "../../security/dirmngr/buildlink3.mk"
-.endif
+.include "options.mk"
 
 # We are building a static pth library and linking against it
 # While this is not very satisfying, gpgme hangs in it's gpgsm tests if we depend on the shared (pkgsrc) pth library

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/17 12:13:11 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/08/29 23:19:06 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUPG2_BUILDLINK3_MK:=	${GNUPG2_BUILDLINK3_MK}+
@@ -15,6 +15,17 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnupg2
 BUILDLINK_API_DEPENDS.gnupg2+=	gnupg2>=2.0.0
 BUILDLINK_PKGSRCDIR.gnupg2?=	../../security/gnupg2
 BUILDLINK_PREFIX.gnupg2?=	${LOCALBASE}
+
+pkgbase:=	gnupg2
+.include "../../mk/pkg-build-options.mk"
+
+.   if !empty(PKG_BUILD_OPTIONS.gnupg2:Midea)
+pkgbase:=	libgcrypt
+.   	include "../../mk/pkg-build-options.mk"
+.   	if empty(PKG_BUILD_OPTIONS.libgcrypt:Midea)
+PKGSRC_MAKE_ENV+=	PKG_OPTIONS.libgcrypt+=	idea
+.   	endif
+.   endif
 .endif	# GNUPG2_BUILDLINK3_MK
 
 .include "../../security/libgpg-error/buildlink3.mk"
