@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2007/08/10 22:42:13 joerg Exp $
+# $NetBSD: Makefile,v 1.141 2007/08/29 15:42:39 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -20,10 +20,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		audit-packages-[0-9]*
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
-CONFIGURE_ARGS+=	--with-ftp="\"${FETCH_CMD}"\"
-CONFIGURE_ARGS+=	--with-pax="\"${PAX}"\"
-CONFIGURE_ARGS+=	--with-tar="\"${TAR}"\"
+CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD:Q}
+CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
+CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
 USE_TOOLS+=		pax:run tar:run gzcat:run
 
 # The following tools are needed by pkg_view and linkfarm.
@@ -52,8 +53,6 @@ CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
 
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
-CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
-CPPFLAGS+=		-DSYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
