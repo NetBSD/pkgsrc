@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/11/18 21:46:44 ghen Exp $
+# $NetBSD: Makefile,v 1.26 2007/08/30 16:35:54 joerg Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
 MAINTAINER=	rasputnik@hellooperator.net
@@ -11,6 +11,8 @@ COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
+
+REPLACE_SH=	tools/po/make*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.1.2:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.2:../../devel/php-gettext
