@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2007/04/15 19:13:08 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2007/08/30 12:22:59 wiz Exp $
 #
 
-DISTNAME=		vice-1.21
+DISTNAME=		vice-1.22
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/
@@ -36,22 +36,6 @@ REQD_DIRS+=		${PREFIX}/share/vice
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=	--without-oss
 .endif
-
-# These changes are rather common, so sed instead of patch:
-post-patch:
-	set -e;								\
-	for file in `${FIND} ${WRKSRC} -name Makefile.in -print`	\
-			${WRKSRC}/src/arch/unix/archdep.h; do		\
-		sed  -e "s|/lib/vice/doc|/share/doc/vice|g"		\
-			-e "s|/lib/vice|/share/vice|g"			\
-			-e "/^pkglibdir/s|(libdir)|(datadir)|g"		\
-			"$$file" > "$$file".new;			\
-		if cmp -s "$$file" "$$file".new; then			\
-			rm -f "$$file".new;				\
-		else							\
-			mv -f "$$file".new "$$file";			\
-		fi;							\
-	done
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
