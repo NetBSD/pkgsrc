@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2007/08/23 09:56:55 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/08/30 20:01:08 joerg Exp $
 
 DISTNAME=	swish-e-2.4.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www textproc
 MASTER_SITES=	http://swish-e.org/distribution/
 
@@ -19,7 +19,8 @@ CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	prog-bin/*.pl conf/*.pl filter-bin/*.pl html/*.pl
+REPLACE_PERL=	prog-bin/*.pl conf/*.pl filter-bin/*.pl
+REPLACE_PERL+=	src/swishspider
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
