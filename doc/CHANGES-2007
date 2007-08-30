@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1910 2007/08/30 06:20:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1911 2007/08/30 06:36:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3470,3 +3470,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/gnumeric-current to 1.7.11 [wiz 2007-08-30]
 	Updated security/p5-IO-Socket-SSL to 1.08 [wiz 2007-08-30]
 	Updated print/libgnomeprint to 2.18.1 [wiz 2007-08-30]
+	Updated graphics/librsvg2 to 2.18.1 [wiz 2007-08-30]
