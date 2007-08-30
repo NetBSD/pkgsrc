@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/08/30 15:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2007/08/30 15:57:10 wiz Exp $
 
 DISTNAME=	librsvg-2.18.2
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -26,18 +26,16 @@ TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-tags=
+CONFIGURE_ARGS+=	--disable-mozilla-plugin
 
 GTK2_LOADERS=		yes
-
-SUBST_CLASSES+=		tabs
-SUBST_STAGE.tabs=	post-patch
-SUBST_MESSAGE.tabs=	Removing tabs from librsvg.def
-SUBST_FILES.tabs=	librsvg.def
-SUBST_FILTER_CMD.tabs=	${TR} -d '\t'
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.11.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+
+post-install:
+	-rmdir -p ${PREFIX}/lib/mozilla/plugins
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
