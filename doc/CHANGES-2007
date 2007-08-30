@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1915 2007/08/30 10:52:03 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1916 2007/08/30 12:23:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3475,3 +3475,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/docbook-xsl to 1.73.1 [wiz 2007-08-30]
 	Updated mail/fetchyahoo to 2.11.0 [obache 2007-08-30]
 	Updated chat/centerim to 4.22.1nb1 [jnemeth 2007-08-30]
+	Updated multimedia/gstreamer0.10 to 0.10.14 [wiz 2007-08-30]
+	Updated multimedia/gst-plugins0.10-base to 0.10.14 [wiz 2007-08-30]
+	Updated emulators/vice to 1.22 [wiz 2007-08-30]
