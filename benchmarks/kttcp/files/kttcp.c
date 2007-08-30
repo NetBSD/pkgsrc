@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.5 2002/07/11 23:32:35 simonb Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.6 2007/08/30 09:23:31 rillig Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -105,7 +105,7 @@ main(int argc, char *argv[])
 	int bufsize;
 	int ai_flag;
 	char *host;
-	char *portstr;
+	const char *portstr;
 	struct kttcp_io_args kio;
 	struct addrinfo hints, *addr, *res;
 	struct sockaddr_storage ss;
