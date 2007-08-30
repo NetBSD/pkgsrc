@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/06 06:21:41 reed Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/30 16:32:29 joerg Exp $
 #
 
 DISTNAME=	DBI-Shell-11.93
@@ -20,6 +20,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_PACKLIST=		auto/DBI/Shell/.packlist
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.37
+
+REPLACE_PERL+=	lib/DBI/Shell/SQLMinus.pm
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
