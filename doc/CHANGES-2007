@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1906 2007/08/30 00:02:03 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1907 2007/08/30 00:49:59 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/libxslt to 1.1.22 [wiz 2007-08-29]
 	Updated devel/scmgit to 1.5.2.5 [wiz 2007-08-29]
 	Updated audio/amarok to 1.4.7 [wiz 2007-08-30]
+	Added chat/centerim version 4.22.1 [jnemeth 2007-08-30]
