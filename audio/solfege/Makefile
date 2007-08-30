@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/06/20 18:45:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/30 15:46:20 joerg Exp $
 #
 
 DISTNAME=		solfege-3.8.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 
@@ -21,7 +21,9 @@ CONFIGURE_ARGS+=	--disable-oss-sound
 CONFIGURE_ARGS+=	--disable-pygtk-test
 CONFIGURE_ARGS+=	--enable-docbook-stylesheet=${LOCALBASE}/share/xsl/docbook/html/chunk.xsl
 
-USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt
+USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt bash:run
+
+REPLACE_BASH=		lesson-files/bin/csound-play-harmonic-interval.sh
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
