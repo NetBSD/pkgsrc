@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2006/03/20 04:09:37 jlam Exp $
+$NetBSD: patch-ab,v 1.10 2007/08/30 16:29:57 joerg Exp $
 
---- Makefile.orig	2004-07-24 14:53:47.000000000 -0400
+--- Makefile.orig	2004-07-24 18:53:47.000000000 +0000
 +++ Makefile
 @@ -4,8 +4,8 @@
  #
@@ -42,7 +42,13 @@ $NetBSD: patch-ab,v 1.9 2006/03/20 04:09:37 jlam Exp $
  #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
  #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
  #INSTALL=/usr/bin/X11/bsdinst -c -o bin 	# IRIX
-@@ -258,7 +258,7 @@ PERL="/usr/bin/perl -w"
+@@ -253,12 +253,12 @@ AWK=awk
+ # and the "tkperl" frontends without PERL, so don't worry if you don't
+ # have it.
+ # If you specify command line arguments (-w), don't forget the quotes!
+-PERL="/usr/bin/perl -w"
++PERL="${PERL5} -w"
+ #
  # If you have Perl with TK extentions, define it here. This may be the
  # same as PERL=... above, or different, if you have TkPerl statically
  # linked.
