@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2007/08/30 06:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2007/08/30 06:42:43 wiz Exp $
 
 DISTNAME=	librsvg-2.18.1
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -21,6 +21,8 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
+
+TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-tags=
