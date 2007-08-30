@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/06/08 12:57:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/08/30 12:21:51 wiz Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -16,6 +16,8 @@ include/gstreamer-0.10/gst/base/gsttypefindhelper.h
 ${GSTCHECK}include/gstreamer-0.10/gst/check/gstbufferstraw.h
 ${GSTCHECK}include/gstreamer-0.10/gst/check/gstcheck.h
 include/gstreamer-0.10/gst/controller/gstcontroller.h
+include/gstreamer-0.10/gst/controller/gstcontrolsource.h
+include/gstreamer-0.10/gst/controller/gstinterpolationcontrolsource.h
 include/gstreamer-0.10/gst/dataprotocol/dataprotocol.h
 include/gstreamer-0.10/gst/glib-compat.h
 include/gstreamer-0.10/gst/gst.h
@@ -47,6 +49,7 @@ include/gstreamer-0.10/gst/gstminiobject.h
 include/gstreamer-0.10/gst/gstobject.h
 include/gstreamer-0.10/gst/gstpad.h
 include/gstreamer-0.10/gst/gstpadtemplate.h
+include/gstreamer-0.10/gst/gstparamspecs.h
 include/gstreamer-0.10/gst/gstparse.h
 include/gstreamer-0.10/gst/gstpipeline.h
 include/gstreamer-0.10/gst/gstplugin.h
@@ -154,7 +157,9 @@ share/gtk-doc/html/gstreamer-libs-0.10/GstBaseSink.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstBaseSrc.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstBaseTransform.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstCollectPads.html
+share/gtk-doc/html/gstreamer-libs-0.10/GstControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstController.html
+share/gtk-doc/html/gstreamer-libs-0.10/GstInterpolationControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstPushSrc.html
 share/gtk-doc/html/gstreamer-libs-0.10/api-index.html
 share/gtk-doc/html/gstreamer-libs-0.10/gdp-header.png
@@ -186,6 +191,7 @@ share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-0.10.devhelp
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-capsfilter.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fakesink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fakesrc.html
+share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fdsink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fdsrc.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesrc.html
@@ -206,6 +212,7 @@ share/locale/cs/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/da/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/de/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/fi/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/fr/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/it/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/nb/LC_MESSAGES/gstreamer-0.10.mo
