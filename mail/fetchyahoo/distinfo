@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/13 15:38:52 obache Exp $
+$NetBSD: distinfo,v 1.2 2007/08/30 08:05:26 obache Exp $
 
-SHA1 (fetchyahoo-2.10.6.tar.gz) = 460c4806abb455fbc058fdeff76e2324a7ba983c
-RMD160 (fetchyahoo-2.10.6.tar.gz) = 51a11fcff0273870d1eedb4167b9b3480e6dd9f0
-Size (fetchyahoo-2.10.6.tar.gz) = 43670 bytes
+SHA1 (fetchyahoo-2.11.0.tar.gz) = 5d6f69ea22697f672db3d596edb1835a9a566c1a
+RMD160 (fetchyahoo-2.11.0.tar.gz) = 032405fc54f097ca5daff1f1226633c743ba2ddb
+Size (fetchyahoo-2.11.0.tar.gz) = 45524 bytes
