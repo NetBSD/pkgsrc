@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/06/08 18:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/30 19:29:15 joerg Exp $
 
 DISTNAME=	libstatgrab-0.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp2.uk.i-scream.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
@@ -15,8 +15,11 @@ COMMENT=	Provides a useful interface to system statistics
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config perl:run
 PKGCONFIG_OVERRIDE=	libstatgrab.pc.in
+
+REPLACE_PERL+=	src/statgrab/statgrab-make-mrtg-config.in
+REPLACE_PERL+=	src/statgrab/statgrab-make-mrtg-index.in
 
 CONFIGURE_ARGS+=	--disable-examples
 
