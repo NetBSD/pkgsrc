@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/26 21:04:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/30 15:46:55 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -22,6 +22,8 @@ USE_TOOLS+=		pkg-config mkdirhier
 # sigsegfaults in 0.2.0 because of:
 # sorry, but the bug with strtof has come, please report..
 CONFIGURE_ARGS+=	--disable-dancingparticles
+CONFIGURE_ARGS+= 	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+= 	--x-libraries=${X11BASE}/lib
 
 # install unnecessarily installed files
 post-install:
@@ -34,4 +36,8 @@ post-install:
 .include "../../x11/libXext/buildlink3.mk"
 # currently not useful, since libgdkpixbuf plugin is not configurable
 #.include "../../x11/gtk2/buildlink3.mk"
+
+# required for libGl check
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
