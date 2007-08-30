@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6635 2007/08/30 06:12:50 wiz Exp $
+$NetBSD: TODO,v 1.6636 2007/08/30 06:20:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -668,7 +668,6 @@ Suggested package updates
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libgnomeprint-2.18.1
 	o libgtop2-2.14.9
 	o libhydrogen-0.9.2
 	o libidn-1.0
