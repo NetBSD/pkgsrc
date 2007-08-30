@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/08/20 12:36:24 dsainty Exp $
+# $NetBSD: Makefile,v 1.28 2007/08/30 13:54:23 joerg Exp $
 
 DISTNAME=	dar-2.3.4
 CATEGORIES=	archivers sysutils
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	doxygen=no
 # Since these are only examples, avoid the dependencies on Bash and
 # Perl.  Unfortunately the interpeter replacements won't work unless
 # we USE_TOOLS the two interpreters, so the samples are left as is.
-CHECK_INTERPRETER_SKIP+=	share/dar/samples
+CHECK_INTERPRETER_SKIP+=	share/dar/samples/*
 #USE_TOOLS+=		bash:run perl:run
 #REPLACE_PERL+=		doc/samples/dar_backup
 #REPLACE_BASH+=		doc/samples/*.bash doc/samples/clust*.sh
