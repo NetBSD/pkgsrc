@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:55 agc Exp $
+$NetBSD: patch-aa,v 1.3 2007/08/30 14:12:38 joerg Exp $
 
---- install.sh.orig	Sat Dec 21 21:49:54 1996
-+++ install.sh	Fri Apr 18 15:12:25 1997
-@@ -37,11 +37,25 @@
+--- install.sh.orig	1996-12-22 03:49:54.000000000 +0000
++++ install.sh
+@@ -37,11 +37,25 @@ id=`id`
  # Set up access defaults.
  DIRPERM=755
  FILEPERM=644
@@ -30,7 +30,25 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:35:55 agc Exp $
  
  USERS=100
  LINES=1024
-@@ -202,28 +216,12 @@
+@@ -94,7 +108,7 @@ logerr()
+ getstr()
+ {
+ 	$ECHO "$* \c"
+-	read ANS
++	ANS=
+ 	if [ -n "$ANS" ]
+ 	then
+ 		return 0
+@@ -113,7 +127,7 @@ getyn()
+ 	while :
+ 	do
+ 		$ECHO "$*? [${YNDEF}] \c"
+-		read ANS
++		ANS=
+ 		if [ -n "$ANS" ]
+ 		then
+ 			case $ANS in
+@@ -202,28 +216,12 @@ instfile()
  			rm -f $2
  		fi
  
@@ -60,7 +78,16 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:35:55 agc Exp $
  		return 0
  	else
  		$ECHO "\t$2 NOT installed"
-@@ -624,7 +622,7 @@
+@@ -588,7 +586,7 @@ fi
+ 
+ $ECHO "permissions:  default connect nopost noupdate noget" >> access
+ 
+-YNDEF=y
++YNDEF=n
+ if getyn "Do you want to create the motd file now"
+ then
+ 	if [ "$EDITOR" = "" ]
+@@ -624,7 +622,7 @@ makedir $WORKDIR $DPERM $OWNID $GRPID
  $ECHO "\nInstalling cddbd files..."
  
  # Binaries
@@ -69,3 +96,12 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:35:55 agc Exp $
  
  # Configuration files
  instfile access `cat .accessfile`/access $FPERM $OWNID $GRPID
+@@ -635,7 +633,7 @@ then
+ 	instfile motd $MOTD $FPERM $OWNID $GRPID
+ fi
+ 
+-YNDEF=y
++YNDEF=n
+ if getyn "\nDo you want to create the fuzzy matching hash file now"
+ then
+ 	$ECHO "\nPlease wait while the hash file is created."
