@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2007/06/08 12:58:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/08/30 12:22:22 wiz Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	base
-GST_PLUGINS0.10_VER=	0.10.13
+GST_PLUGINS0.10_VER=	0.10.14
 
 # Disable all drivers and features by default.
 .for driver in	alsa \
