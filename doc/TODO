@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6641 2007/08/30 20:20:22 wiz Exp $
+$NetBSD: TODO,v 1.6642 2007/08/30 20:40:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,7 +409,7 @@ Suggested package updates
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
 	o dmidecode-2.9
-	o dnsmasq-2.39
+	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
 	o doxygen-1.5.3
@@ -1146,6 +1146,7 @@ Suggested package updates
 	o swi-prolog-5.6.31
 	o sympa-5.3
 	o sysinfo-4.2.2
+	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
@@ -1229,7 +1230,7 @@ Suggested package updates
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9c
 	o wxGTK-2.8.4
-	o wxRemind-0.9.11
+	o wxRemind-0.9.13
 	o wyrd-1.4.3
 	o x264-devel-20070324
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
