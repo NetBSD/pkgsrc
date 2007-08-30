@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/01/20 17:11:52 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/08/30 20:19:45 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.anthy
 PKG_SUPPORTED_OPTIONS=	anthy-2ch-dict anthy-okinawa-dict
@@ -16,7 +16,7 @@ SITES.2ch.t+=	http://omaemona.sourceforge.net/packages/Zisyo/
 .endif
 
 .if !empty(PKG_OPTIONS:Manthy-okinawa-dict)
-OKIDIC_VERSION=			okinawa-20060917
+OKIDIC_VERSION=			okinawa-20070717
 DISTFILES+=			${OKIDIC_VERSION}.t
 SITES.${OKIDIC_VERSION}.t+=	http://www.ofug.net/~yamajun/files/
 .endif
