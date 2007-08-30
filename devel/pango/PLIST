@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/08/29 22:38:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/08/30 07:18:53 obache Exp $
 bin/pango-querymodules
 ${X11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -26,6 +26,7 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
+${CARBON}include/pango-1.0/pango/pangoatsui.h
 include/pango-1.0/pango/pangocairo.h
 include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
