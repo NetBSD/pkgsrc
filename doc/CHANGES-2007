@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1907 2007/08/30 00:49:59 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1908 2007/08/30 06:11:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/scmgit to 1.5.2.5 [wiz 2007-08-29]
 	Updated audio/amarok to 1.4.7 [wiz 2007-08-30]
 	Added chat/centerim version 4.22.1 [jnemeth 2007-08-30]
+	Updated math/gnumeric-current to 1.7.11 [wiz 2007-08-30]
