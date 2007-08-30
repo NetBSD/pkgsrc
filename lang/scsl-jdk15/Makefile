@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/18 08:51:10 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/30 17:52:48 jlam Exp $
 
 DISTNAME=	jdk-${DIST_VER}-${DIST_ARCH}
 PKGNAME=	scsl-jdk15-${PKG_VER}
@@ -11,6 +11,8 @@ DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/:C/p.*$/p/}*:../../lang/scsl-jre15
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./g:C/-.*$//}
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
+
+.include "../../lang/scsl-jre15/Makefile.common"
 
 # Remove parts that are in common with the JRE
 #
@@ -28,4 +30,4 @@ post-extract:
 	${RM} -f ${WRKSRC}/jre
 	${LN} -s . ${WRKSRC}/jre
 
-.include "../../lang/scsl-jre15/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

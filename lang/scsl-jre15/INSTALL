@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.tmpl,v 1.1 2006/05/15 19:44:07 tv Exp $
+# $NetBSD: INSTALL,v 1.1 2007/08/30 17:52:49 jlam Exp $
 
 case ${STAGE} in
 POST-INSTALL)

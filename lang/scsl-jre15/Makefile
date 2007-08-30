@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/06/18 08:45:56 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/30 17:52:50 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	jre-${DIST_VER}-${DIST_ARCH}
 PKGNAME=	scsl-jre15-${PKG_VER}
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 SHORT_NAME=	JRE
@@ -18,23 +19,21 @@ REQD_DIRS+=	${JAVA_HOME}/lib/images
 REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
 REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
+
+.include "../../lang/scsl-jre15/Makefile.common"
+
 .sinclude "sfiles.mk"
-.for f in ${SFILES}
-CONF_FILES+=	${JAVA_HOME}/lib/${f}.default ${JAVA_HOME}/lib/${f}
+
+.for FILE in ${SFILES}
+CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
+
+CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scsl-jre15
 PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
-
-HEADER_TEMPLATES+=	${WRKDIR}/HEADER.tmpl
-INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
-FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
-FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-
-CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
@@ -43,17 +42,40 @@ PLIST_SUBST+=	SCSL_JRE15_USE_JCE=""
 PLIST_SUBST+=	SCSL_JRE15_USE_JCE="@comment "
 .endif
 
+# Some of the binaries require libX11, so ensure that requirement is
+# satisfied when the package is installed on the native OS.
+#
+.if defined(EMUL_IS_NATIVE)
+.  if ${X11_TYPE} == "native"
+LIBX11=		${X11PREFIX}/lib/libX11.so.6
+.    if !exists(${LIBX11})
+PKG_FAIL_REASON+=	"${LIBX11} does not exist.  Please install the" \
+			"X11 library packages for your system."
+.    endif
+.  else
+.    include "../../x11/libX11/buildlink3.mk"
+LIBX11=		${X11PREFIX}/lib/libX11.so.6
+.  endif
+
+PLIST_SUBST+=		LIBX11=
+
+.PHONY: create-library-symlinks
+post-install: create-library-symlinks
+create-library-symlinks:
+	${RUN}${LN} -fs ${LIBX11} ${JAVA_HOME}/lib/${EMUL_ARCH}
+.else
+PLIST_SUBST+=		LIBX11="@comment "
+.endif
+
 post-extract:
 	${MKDIR} ${WRKSRC}/.systemPrefs
 	${TOUCH} ${WRKSRC}/.systemPrefs/.system.lock
 	${TOUCH} ${WRKSRC}/.systemPrefs/.systemRootModFile
 
 do-configure:
-	set -e;								\
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f "$$file" "$$file".default;			\
 	done
-	@${ECHO} "CONF_FILES="${CONF_FILES:Q:Q} >${WRKDIR}/HEADER.tmpl
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
@@ -75,4 +97,4 @@ makesfiles:
 		-name \*.cfg -o -name \*.security |			\
 	${SED} 's/^/SFILES+=	/' >>${PKGDIR}/sfiles.mk
 
-.include "../../lang/scsl-jre15/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

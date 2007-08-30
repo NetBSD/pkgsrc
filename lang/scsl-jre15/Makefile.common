@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/04/26 20:14:29 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/08/30 17:52:50 jlam Exp $
 
 DIST_VER=	1_5_0-p3-bin-duh1
 PKG_VER=	${DIST_VER:S/_/./g:S/-p/p/:S/-bin-duh/./}
@@ -19,11 +19,14 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
-INTERACTIVE_STAGE=	fetch
-
-ONLY_FOR_PLATFORM=	NetBSD-[2-9].*-i386
+EMUL_PLATFORMS=		netbsd-i386
+EMUL_REQD=		netbsd>=2.0
+EMUL_MODULES.netbsd=	base
 
 .include "../../mk/bsd.prefs.mk"
+
+INTERACTIVE_STAGE=	fetch
+BUILD_DIRS=		# empty
 
 JAVA_HOME=	${LOCALBASE}/java/scsl-1.5
 JAVA_NAME=	scsl15
@@ -36,8 +39,6 @@ MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
 # new class sharing in J2SE 5.0... -tvierling
 EXTRACT_ENV+=	UNPACK200_FLAGS=-Htrue
 
-NO_MTREE=	yes	# since we change PREFIX
-
 FETCH_MESSAGE=	"The file ${DISTNAME}${EXTRACT_SUFX} containing"
 FETCH_MESSAGE+=	"${DOWNLOAD_NAME} must be fetched into:"
 FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
@@ -47,11 +48,8 @@ FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	"Click ${SHORT_NAME} in the ${OPSYS}/${MACHINE_ARCH} row for version ${DIST_VER:S/_/./g:S/-bin-/-/},"
 FETCH_MESSAGE+=	"then read and accept the license to start the download."
 
-do-build:	# nothing
-
 do-install:
 	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
 	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
 
 .include "../../mk/java-env.mk"
-.include "../../mk/bsd.pkg.mk"
