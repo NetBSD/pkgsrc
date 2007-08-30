@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/08/10 17:57:21 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/08/30 20:11:08 jlam Exp $
 
 .include "Makefile.common"
 
@@ -39,6 +39,7 @@ FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR:Q}
 # as courier-authlib.
 #
 CONFIGURE_ENV+=		EXPECT=${PREFIX:Q}/bin/expect
+CHECK_INTERPRETER_SKIP=	libexec/courier-authlib/authsystem.passwd
 
 AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
