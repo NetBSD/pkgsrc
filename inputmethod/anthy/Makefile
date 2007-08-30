@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/20 17:11:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/08/30 20:19:45 wiz Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -25,13 +25,13 @@ post-patch:
 .if !empty(PKG_OPTIONS:Manthy-2ch-dict)
 	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkworddic
 	# Don't change "\n".
-	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/placename.t\na\nread @top_srcdir@/mkworddic/2ch.t\n.\nw\n" | \
+	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/base.t\na\nread @top_srcdir@/mkworddic/2ch.t\n.\nw\n" | \
 	ed -s ${WRKSRC}/mkworddic/dict.args.in
 .endif
 .if !empty(PKG_OPTIONS:Manthy-okinawa-dict)
 	${CP} ${DISTDIR}/${OKIDIC_VERSION}.t ${WRKSRC}/mkworddic/okinawa.t
 	# Don't change "\n".
-	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/placename.t\na\nread @top_srcdir@/mkworddic/okinawa.t\n.\nw\n" | \
+	@${PRINTF} "/read @top_srcdir@\\\\/mkworddic\\\\/base.t\na\nread @top_srcdir@/mkworddic/okinawa.t\n.\nw\n" | \
 	ed -s ${WRKSRC}/mkworddic/dict.args.in
 .endif
 
