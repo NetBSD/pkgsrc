@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/08/13 14:20:21 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/30 17:24:06 gdt Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
+PKGREVISION=	1
 
 COMMENT=	Multi-protocol Instant Messaging client console frontend
 
@@ -40,6 +41,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/finch.1 ${DESTDIR:Q}${PREFIX:Q}/man/man1
 
 .include "../../chat/libpurple/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
