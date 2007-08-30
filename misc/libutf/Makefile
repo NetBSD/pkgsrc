@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/26 21:13:01 agc Exp $
+# $NetBSD: Makefile,v 1.21 2007/08/30 23:05:14 agc Exp $
 #
 
 DISTNAME=	libutf-3.0
@@ -12,6 +12,7 @@ COMMENT=	UTF-8 character set support library, including regular expressions
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 BUILD_TARGET=	tst
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
