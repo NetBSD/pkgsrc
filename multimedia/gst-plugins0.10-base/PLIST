@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/06/08 12:58:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/08/30 12:22:23 wiz Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -39,6 +39,17 @@ include/gstreamer-0.10/gst/rtp/gstbasertpdepayload.h
 include/gstreamer-0.10/gst/rtp/gstbasertppayload.h
 include/gstreamer-0.10/gst/rtp/gstrtcpbuffer.h
 include/gstreamer-0.10/gst/rtp/gstrtpbuffer.h
+include/gstreamer-0.10/gst/rtsp/gstrtsp-enumtypes.h
+include/gstreamer-0.10/gst/rtsp/gstrtspbase64.h
+include/gstreamer-0.10/gst/rtsp/gstrtspconnection.h
+include/gstreamer-0.10/gst/rtsp/gstrtspdefs.h
+include/gstreamer-0.10/gst/rtsp/gstrtspextension.h
+include/gstreamer-0.10/gst/rtsp/gstrtspmessage.h
+include/gstreamer-0.10/gst/rtsp/gstrtsprange.h
+include/gstreamer-0.10/gst/rtsp/gstrtsptransport.h
+include/gstreamer-0.10/gst/rtsp/gstrtspurl.h
+include/gstreamer-0.10/gst/sdp/gstsdp.h
+include/gstreamer-0.10/gst/sdp/gstsdpmessage.h
 include/gstreamer-0.10/gst/tag/tag.h
 include/gstreamer-0.10/gst/video/gstvideofilter.h
 include/gstreamer-0.10/gst/video/gstvideosink.h
@@ -69,6 +80,8 @@ lib/libgstnetbuffer-0.10.la
 lib/libgstpbutils-0.10.la
 lib/libgstriff-0.10.la
 lib/libgstrtp-0.10.la
+lib/libgstrtsp-0.10.la
+lib/libgstsdp-0.10.la
 lib/libgsttag-0.10.la
 lib/libgstvideo-0.10.la
 lib/pkgconfig/gstreamer-plugins-base-0.10.pc
@@ -107,6 +120,14 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstr
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstringbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtcpbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtpbuffer.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspbase64.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspconnection.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspdefs.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspmessage.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtsprange.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtsptransport.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspurl.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstsdpmessage.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttag.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagid3.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagvorbis.html
@@ -128,6 +149,8 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-netbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-plugins-base.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-riff.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-rtp.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-rtsp.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-sdp.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-tag.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-video.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/index.html
@@ -153,6 +176,8 @@ share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 @comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
 @dirrm include/gstreamer-0.10/gst/video
 @dirrm include/gstreamer-0.10/gst/tag
+@dirrm include/gstreamer-0.10/gst/sdp
+@dirrm include/gstreamer-0.10/gst/rtsp
 @dirrm include/gstreamer-0.10/gst/rtp
 @dirrm include/gstreamer-0.10/gst/riff
 @dirrm include/gstreamer-0.10/gst/pbutils
