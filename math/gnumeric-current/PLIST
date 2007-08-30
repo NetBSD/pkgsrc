@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/07/28 14:56:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/08/30 06:10:26 wiz Exp $
 bin/${PKGNAME}
 bin/gnumeric
 bin/ssconvert
@@ -30,14 +30,14 @@ include/libspreadsheet-1-7/func.h
 include/libspreadsheet-1-7/gnm-datetime.h
 include/libspreadsheet-1-7/gnm-format.h
 include/libspreadsheet-1-7/gnm-graph-window.h
+include/libspreadsheet-1-7/gnm-pane-impl.h
+include/libspreadsheet-1-7/gnm-pane.h
 include/libspreadsheet-1-7/gnm-plugin.h
 include/libspreadsheet-1-7/gnm-so-filled.h
 include/libspreadsheet-1-7/gnm-so-line.h
 include/libspreadsheet-1-7/gnm-so-polygon.h
 include/libspreadsheet-1-7/gnm-style-impl.h
-include/libspreadsheet-1-7/gnumeric-canvas.h
 include/libspreadsheet-1-7/gnumeric-gconf.h
-include/libspreadsheet-1-7/gnumeric-pane.h
 include/libspreadsheet-1-7/gnumeric-simple-canvas.h
 include/libspreadsheet-1-7/gnumeric.h
 include/libspreadsheet-1-7/graph.h
@@ -164,11 +164,6 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gdaif/gdaif.la
-lib/gnumeric/${PKGVERSION}/plugins/gdaif/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/gnomedb.la
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/gnome-db/ui.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -200,8 +195,6 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
-lib/goffice/0.4.2/plugins/gnumeric/gnumeric.la
-lib/goffice/0.4.2/plugins/gnumeric/plugin.xml
 lib/libspreadsheet.la
 lib/pkgconfig/libspreadsheet-1.7.pc
 man/man1/gnumeric.1
@@ -235,6 +228,7 @@ share/gnome/help/gnumeric/C/data-delete.xml
 share/gnome/help/gnumeric/C/data-entry-advanced.xml
 share/gnome/help/gnumeric/C/data-entry-external.xml
 share/gnome/help/gnumeric/C/data-entry.xml
+share/gnome/help/gnumeric/C/data-filter.xml
 share/gnome/help/gnumeric/C/data-format.xml
 share/gnome/help/gnumeric/C/data-generate.xml
 share/gnome/help/gnumeric/C/data-insert.xml
@@ -612,7 +606,6 @@ share/gnome/help/gnumeric/C/welcome.xml
 share/gnome/help/gnumeric/C/workbooks.xml
 share/gnome/help/gnumeric/C/worksheets.xml
 share/gnumeric/${PKGVERSION}/GNOME_Gnumeric-gtk.xml
-share/gnumeric/${PKGVERSION}/Gnumeric-embed.xml
 share/gnumeric/${PKGVERSION}/autoformat-templates/3D/.category
 share/gnumeric/${PKGVERSION}/autoformat-templates/3D/autoformat.3D.button.xml
 share/gnumeric/${PKGVERSION}/autoformat-templates/3D/autoformat.3D.list.xml
@@ -854,8 +847,6 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/gnome/help/gnumeric
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/goffice/0.4.2/plugins/gnumeric
-@comment in goffice: @dirrm lib/goffice/0.4.2/plugins
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/uihello
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sylk
@@ -871,8 +862,6 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-db
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/gdaif
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-tsa
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
