@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2007/08/29 22:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2007/08/30 06:18:46 obache Exp $
 
 DISTNAME=		pango-1.18.1
 CATEGORIES=		devel fonts
@@ -40,7 +40,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.2
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
 
