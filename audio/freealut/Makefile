@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/13 14:50:17 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/30 15:16:11 joerg Exp $
 #
 
 DISTNAME=	freealut-1.1.0
@@ -14,5 +14,6 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	admin/pkgconfig/freealut.pc.in
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
