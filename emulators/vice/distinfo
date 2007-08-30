@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.30 2007/04/15 19:13:08 wiz Exp $
+$NetBSD: distinfo,v 1.31 2007/08/30 12:23:00 wiz Exp $
 
-SHA1 (vice-1.21.tar.gz) = a4915ae85dc562208bed5766d2c17481244b157d
-RMD160 (vice-1.21.tar.gz) = 1384cb4d80be6801de603c0424b3a5e5dd18de15
-Size (vice-1.21.tar.gz) = 5725833 bytes
-SHA1 (patch-aa) = d773e84bef7bc735e765c8f0f8f086f5daee8493
-SHA1 (patch-ab) = 12657561998b724c39699c380290e7333365d300
-SHA1 (patch-ac) = 32d10e8d63e0031a099062e34cd918531aae5692
-SHA1 (patch-ad) = eb6cfb24cd81b15aeb0a9d3b75291aee6267beea
+SHA1 (vice-1.22.tar.gz) = 55e0047824f64173539e03ddd2d5ab51cd581fbb
+RMD160 (vice-1.22.tar.gz) = ca93fc424e617e38f27e288ebcdfbab2aa3659db
+Size (vice-1.22.tar.gz) = 6088483 bytes
 SHA1 (patch-af) = 524913b7bc753dafde909bb26ace8f0500be14d5
-SHA1 (patch-ag) = 293114fe28b7b3832ad0087d89da1d1a37066bbc
