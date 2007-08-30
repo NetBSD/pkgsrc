@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1913 2007/08/30 07:00:14 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1914 2007/08/30 08:05:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/librsvg2 to 2.18.1 [wiz 2007-08-30]
 	Updated devel/libidn to 1.0 [wiz 2007-08-30]
 	Updated textproc/docbook-xsl to 1.73.1 [wiz 2007-08-30]
+	Updated mail/fetchyahoo to 2.11.0 [obache 2007-08-30]
