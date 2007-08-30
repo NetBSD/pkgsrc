@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.15 2007/08/15 21:26:28 joerg Exp $
+# $NetBSD: xlc.mk,v 1.16 2007/08/30 21:47:29 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -87,7 +87,7 @@ _COMPILER_RPATH_FLAG=	-Wl,-R
 _LINKER_RPATH_FLAG=	-R
 
 .if exists(${CCPATH})
-CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
+CC_VERSION_STRING!=	${CCPATH} -qversion 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
 CC_VERSION=		${CC_VERSION_STRING}
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
