@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/30 14:12:38 joerg Exp $
 bin/cddbd
 share/xmcd/cddbd/access
-share/xmcd/cddbd/motd
 share/xmcd/cddbd/sites
 @dirrm share/xmcd/cddbd
 @dirrm share/xmcd
