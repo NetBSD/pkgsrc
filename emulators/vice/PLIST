@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/04/15 19:13:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/08/30 12:22:59 wiz Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -35,6 +35,7 @@ share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
 share/doc/vice/iec-bus.txt
 share/doc/vice/index.html
+share/doc/vice/macosx.html
 share/doc/vice/mon.txt
 share/doc/vice/new.gif
 share/doc/vice/openGLsync-howto.txt
@@ -65,6 +66,7 @@ share/locale/it/LC_MESSAGES/vice.mo
 share/locale/nl/LC_MESSAGES/vice.mo
 share/locale/pl/LC_MESSAGES/vice.mo
 share/locale/sv/LC_MESSAGES/vice.mo
+share/vice/C128/ROdflt.vkm
 share/vice/C128/amiga_pos.vkm
 share/vice/C128/amiga_sym.vkm
 share/vice/C128/basic64
@@ -94,6 +96,8 @@ share/vice/C128/kernalit
 share/vice/C128/kernalno
 share/vice/C128/kernalse
 share/vice/C128/os2.vkm
+share/vice/C128/osx_pos.vkm
+share/vice/C128/osx_sym.vkm
 share/vice/C128/pc64.vpl
 share/vice/C128/vdc_deft.vpl
 share/vice/C128/vice.vpl
@@ -101,6 +105,7 @@ share/vice/C128/win_pos.vkm
 share/vice/C128/win_sym.vkm
 share/vice/C128/x11_pos.vkm
 share/vice/C128/x11_sym.vkm
+share/vice/C64/ROdflt.vkm
 share/vice/C64/amiga_pos.vkm
 share/vice/C64/amiga_sym.vkm
 share/vice/C64/basic
@@ -120,6 +125,8 @@ share/vice/C64/godot.vpl
 share/vice/C64/kernal
 share/vice/C64/os2.vkm
 share/vice/C64/os2_sym.vkm
+share/vice/C64/osx_pos.vkm
+share/vice/C64/osx_sym.vkm
 share/vice/C64/pc64.vpl
 share/vice/C64/vice.vpl
 share/vice/C64/win_pos.vkm
@@ -127,6 +134,7 @@ share/vice/C64/win_sym_de.vkm
 share/vice/C64/win_sym_us.vkm
 share/vice/C64/x11_pos.vkm
 share/vice/C64/x11_sym.vkm
+share/vice/CBM-II/ROdflt.vkm
 share/vice/CBM-II/amber.vpl
 share/vice/CBM-II/amiga_bukp.vkm
 share/vice/CBM-II/amiga_buks.vkm
@@ -172,6 +180,8 @@ share/vice/DRIVES/dos2031
 share/vice/DRIVES/dos2040
 share/vice/DRIVES/dos3040
 share/vice/DRIVES/dos4040
+share/vice/PET/RObusi.vkm
+share/vice/PET/ROgrph.vkm
 share/vice/PET/amber.vpl
 share/vice/PET/amiga_bgrs.vkm
 share/vice/PET/amiga_buks.vkm
@@ -211,6 +221,7 @@ share/vice/PET/x11_bgrs.vkm
 share/vice/PET/x11_buks.vkm
 share/vice/PLUS4/3plus1hi
 share/vice/PLUS4/3plus1lo
+share/vice/PLUS4/ROdflt.vkm
 share/vice/PLUS4/amiga_pos.vkm
 share/vice/PLUS4/amiga_sym.vkm
 share/vice/PLUS4/basic
@@ -232,6 +243,7 @@ share/vice/PRINTER/mps801
 share/vice/PRINTER/mps803
 share/vice/PRINTER/mps803.vpl
 share/vice/PRINTER/nl10-cbm
+share/vice/VIC20/ROdflt.vkm
 share/vice/VIC20/amiga_pos.vkm
 share/vice/VIC20/amiga_sym.vkm
 share/vice/VIC20/basic
