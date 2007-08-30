@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/21 16:31:51 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/30 19:10:46 joerg Exp $
 #
 
 DISTNAME=	libsetenv-0.1
@@ -14,7 +14,11 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-NOT_FOR_PLATFORM=	DragonFly-*-* Darwin-*-*
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+CFLAGS+=	-D_POSIX_SOURCE
+.endif
 
 do-extract:
 	cp -R ${FILESDIR} ${WRKSRC}
