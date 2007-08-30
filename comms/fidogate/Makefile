@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/03/24 19:21:19 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2007/08/30 16:22:00 joerg Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -17,6 +17,7 @@ BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 EGDIR=		${PREFIX}/share/examples/fidogate
 CONF_FILES=	${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
 RCD_SCRIPTS=	fidogate
+RCD_SCRIPT_SRC.fidogate=	${WRKSRC}/scripts/maintenance/rc.fidogate
 INFO_FILES=	# PLIST
 
 PKG_GROUPS=	news
@@ -57,8 +58,6 @@ post-install:
 		${INSTALL_DATA} $$f ${PREFIX}/share/examples/fidogate/$$f; done
 	cd ${WRKSRC}/sendmail/mailer && ${INSTALL_DATA} ffx.m4 ftn.m4 \
 		${PREFIX}/share/fidogate/sendmail/mailer
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/maintenance/rc.fidogate \
-		${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/fidogate
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${PREFIX}/share/doc/fidogate
 	${INSTALL_DATA} ${WRKSRC}/fidogate.conf ${EGDIR}
 
