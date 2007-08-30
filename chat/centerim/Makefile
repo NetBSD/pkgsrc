@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/30 00:47:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/30 00:51:42 jnemeth Exp $
 #
 
 DISTNAME=	centerim-4.22.1
@@ -25,6 +25,7 @@ REPLACE_PERL=		misc/cicqconv
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
 INCOMPAT_CURSES+=	NetBSD-2.*-* NetBSD-3.*-*	# see PR 29060
+INCOMPAT_CURSES+=	NetBSD-4.*-*
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
