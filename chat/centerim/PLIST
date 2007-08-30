@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/30 00:47:01 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/30 10:50:55 jnemeth Exp $
 bin/centerim
 bin/cicqconv
 man/man1/centerim.1
@@ -25,4 +25,4 @@ share/locale/ru/LC_MESSAGES/centerim.mo
 share/locale/sv/LC_MESSAGES/centerim.mo
 share/locale/uk/LC_MESSAGES/centerim.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/centerim.mo
-@dirrm share/centericq
+@dirrm share/centerim
