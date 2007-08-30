@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/06/08 18:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/08/30 16:58:19 joerg Exp $
 #
 
 DISTNAME=	gobo15
 PKGNAME=	gobo-eiffel-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.eiffel.com/pub/shelf/bezault/
 EXTRACT_SUFX=	.zip
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gobosoft.com/
 COMMENT=	Portable Eiffel structure libraries and tools
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DEPENDS+=	smalleiffel-0.77:../../lang/smalleiffel
 
 EXTRACT_OPTS_ZIP=	-uLa
@@ -19,10 +21,15 @@ EXTRACT_OPTS_ZIP=	-uLa
 WRKSRC=		${WRKDIR}
 GOBO=		${PREFIX}/share/gobo-eiffel
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	bin share/gogo-eiffel share/doc/gogo-eiffel
+INSTALLATION_DIRS+=	share/examples/gobo-eiffel
 
 post-extract:
 	${RM} -rf ${WRKSRC}/bin
+	for dir in doc example library; do 				\
+	${FIND} ${WRKSRC}/$$dir ! -type d | ${XARGS} ${CHMOD} 644;	\
+	${FIND} ${WRKSRC}/$$dir -type d | ${XARGS} ${CHMOD} 755;	\
+	done
 
 pre-build:
 	for file in `${FIND} ${WRKSRC} -name "se.sh" -print`; do \
@@ -45,17 +52,14 @@ pre-install:
 	done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/gelex/a.out ${PREFIX}/bin/gelex
-	${INSTALL_PROGRAM} ${WRKSRC}/src/gepp/a.out ${PREFIX}/bin/gepp
-	${INSTALL_PROGRAM} ${WRKSRC}/src/geyacc/a.out ${PREFIX}/bin/geyacc
-	${INSTALL_DATA_DIR} ${GOBO}
-	cd ${WRKSRC}; ${PAX} -rw library ${GOBO}
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${GOBO}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gobo-eiffel
-	cd ${WRKSRC}/doc; ${PAX} -rw * ${PREFIX}/share/doc/gobo-eiffel
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/gobo-eiffel
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gobo-eiffel
-	cd ${WRKSRC}/example; ${PAX} -rw * ${PREFIX}/share/examples/gobo-eiffel
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/gobo-eiffel
+	${INSTALL_PROGRAM} ${WRKSRC}/src/gelex/a.out ${DESTDIR}${PREFIX}/bin/gelex
+	${INSTALL_PROGRAM} ${WRKSRC}/src/gepp/a.out ${DESTDIR}${PREFIX}/bin/gepp
+	${INSTALL_PROGRAM} ${WRKSRC}/src/geyacc/a.out ${DESTDIR}${PREFIX}/bin/geyacc
+	cd ${WRKSRC}; ${PAX} -rw library ${DESTDIR}${GOBO}
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${GOBO}
+	cd ${WRKSRC}/doc; ${PAX} -rw * ${DESTDIR}${PREFIX}/share/doc/gobo-eiffel
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/doc/gobo-eiffel
+	cd ${WRKSRC}/example; ${PAX} -rw * ${DESTDIR}${PREFIX}/share/examples/gobo-eiffel
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/examples/gobo-eiffel
 
 .include "../../mk/bsd.pkg.mk"
