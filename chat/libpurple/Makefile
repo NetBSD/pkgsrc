@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/08/13 22:55:23 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/30 17:13:15 gdt Exp $
 #
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
 COMMENT=	Multi-protocol Instant Messaging client backend
-PKGREVISION=	1
+PKGREVISION=	2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,6 +38,7 @@ BUILD_DIRS=	m4macros libpurple po
 # XXX On NetBSD 3.0: iconv: iconv_open(UTF-8, tis-620): Invalid argument
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
