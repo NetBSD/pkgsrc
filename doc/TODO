@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6643 2007/08/31 06:07:40 wiz Exp $
+$NetBSD: TODO,v 1.6644 2007/08/31 08:33:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,6 @@ Suggested package updates
 	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
-	o docbook-xsl-1.73.2
 	o doxygen-1.5.3
 	o dpkg-1.13.25
 	o dropbear-0.50
