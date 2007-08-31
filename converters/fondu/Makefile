@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:49 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/31 10:47:35 agc Exp $
 #
 
 DISTNAME=	fondu_src-030428
-CATEGORIES=	converters print
+PKGNAME=	fondu-030428
+CATEGORIES=	converters print fonts
 MASTER_SITES=	http://fondu.sourceforge.net/
 EXTRACT_SUFX=	.tgz
 
@@ -12,21 +13,14 @@ COMMENT=	Utility to convert between Mac fonts and UNIX fonts
 
 WRKSRC=		${WRKDIR}/fondu
 GNU_CONFIGURE=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fondu ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/dfont2res ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/frombin ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tobin ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/showfond ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/ufond ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/fondu.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/dfont2res.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/frombin.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/tobin.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/showfond.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/ufond.1 ${PREFIX}/${PKGMANDIR}/man1
+	for f in fondu dfont2res frombin tobin showfond ufond; do	\
+		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin; \
+		${INSTALL_MAN} ${WRKSRC}/$$f.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
