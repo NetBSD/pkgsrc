@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:08 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/08/31 10:32:49 drochner Exp $
 
-DISTNAME=	mp3info-0.8.4
+DISTNAME=	mp3info-0.8.5a
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/ \
 		${MASTER_SITE_SUNSITE:=apps/sound/mp3-utils/mp3info/}
@@ -18,6 +17,6 @@ CONFLICTS=	mp3info-[0-9]*
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
