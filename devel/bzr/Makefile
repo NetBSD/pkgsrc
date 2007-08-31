@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/07/28 14:48:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/08/31 20:26:55 agc Exp $
 #
 
 DISTNAME=		bzr-0.18
@@ -7,7 +7,7 @@ MASTER_SITES=		http://bazaar-vcs.org/releases/src/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bazaar-vcs.org/
-COMMENT=		Open source distributed version control system
+COMMENT=		Bazaar open source distributed version control system
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
@@ -25,8 +25,8 @@ DEPENDS+=		${PYPKGPREFIX}-medusa>=0:../../net/py-medusa
 .endif
 
 SUBST_CLASSES+=			python
-SUBST_MESSAGE.python+=		Fix python path for test case.
-SUBST_STAGE.python+=		post-extract
+SUBST_MESSAGE.python=		Fix python path for test case.
+SUBST_STAGE.python=		post-extract
 SUBST_FILES.python+=		Makefile
 SUBST_SED.python+=		-e 's,python ,${PYTHONBIN} ,'
 
