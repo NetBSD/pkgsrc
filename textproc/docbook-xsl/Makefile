@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/08/30 06:59:42 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/08/31 08:32:57 wiz Exp $
 #
 
-DISTNAME=	docbook-xsl-1.73.1
+DISTNAME=	docbook-xsl-1.73.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
