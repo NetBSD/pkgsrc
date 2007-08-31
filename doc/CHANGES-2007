@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1919 2007/08/31 08:33:44 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1920 2007/08/31 09:22:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3481,3 +3481,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/librsvg2 to 2.18.2 [wiz 2007-08-30]
 	Updated inputmethod/anthy to 9100 [wiz 2007-08-30]
 	Updated textproc/docbook-xsl to 1.73.2 [wiz 2007-08-31]
+	Updated mail/postgrey to 1.30 [martti 2007-08-31]
