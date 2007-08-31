@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.6 2007/08/14 19:08:18 jlam Exp $
+# $NetBSD: bsd.checksum.mk,v 1.7 2007/08/31 16:30:11 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -7,7 +7,12 @@
 #
 # checksum:
 #	Check that the distfiles have the correct checksums. If they
-#	aren't yet fetched, fetch them.
+#	aren't yet fetched, fetch them.  This target can be run at
+#	any time and is meant to be run by the user.
+#
+# checksum-phase:
+#	Same as "checksum" but is meant to run automatically by pkgsrc.
+#	This target does not run after the "extract" phase is complete.
 #
 # Public targets for pkgsrc developers:
 #
@@ -31,14 +36,15 @@
 #	Default value: undefined
 #
 
-.PHONY: checksum makesum makepatchsum mps mdi makedistinfo distinfo
+.PHONY: checksum checksum-phase
+.PHONY: makesum makepatchsum mps mdi makedistinfo distinfo
 
-checksum distinfo makesum: fetch
+checksum checksum-phase distinfo makesum: fetch
 makedistinfo mdi: distinfo
 mps: makepatchsum
 
 .if defined(NO_CHECKSUM)
-checksum makesum makepatchsum mps mdi makedistinfo distinfo:
+checksum checksum-phase makesum makepatchsum mps mdi makedistinfo distinfo:
 	@${DO_NADA}
 .else
 .  include "${PKGSRCDIR}/mk/checksum/checksum.mk"
