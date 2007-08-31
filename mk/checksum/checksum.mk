@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.10 2007/08/24 03:30:54 jlam Exp $
+# $NetBSD: checksum.mk,v 1.11 2007/08/31 16:30:11 jlam Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -9,12 +9,6 @@ _PATCH_DIGEST_ALGORITHMS?=	SHA1
 # These variables are set by pkgsrc/mk/fetch/fetch.mk.
 #_CKSUMFILES?=	# empty
 #_IGNOREFILES?=	# empty
-
-_CHECKSUM_CMD=								\
-	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}		\
-		ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}			\
-		TEST=${TOOLS_TEST:Q}					\
-	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
 # _COOKIE.checksum
 #       The file whose presence determines whether or not the checksum
@@ -32,10 +26,17 @@ _CHECKSUM_CMD=								\
 #
 _COOKIE.checksum=	${_COOKIE.extract}
 
-checksum: do-checksum
-do-checksum: 
+_CHECKSUM_CMD=								\
+	${SETENV} DIGEST=${TOOLS_DIGEST:Q} CAT=${TOOLS_CAT:Q}		\
+		ECHO=${TOOLS_ECHO:Q} SED=${TOOLS_SED:Q}			\
+		TEST=${TOOLS_TEST:Q}					\
+	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
+
+checksum checksum-phase: 
 	${RUN} set -e;							\
-	${TEST} ! -f ${_COOKIE.checksum} || exit 0;			\
+	case ${.TARGET:Q} in						\
+	*-phase)	${TEST} ! -f ${_COOKIE.checksum} || exit 0 ;;	\
+	esac;								\
 	if cd ${DISTDIR} && ${_CHECKSUM_CMD} ${DISTINFO_FILE} ${_CKSUMFILES}; then \
 		${TRUE};						\
 	else								\
