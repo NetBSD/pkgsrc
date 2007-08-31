@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/08/17 03:23:02 smb Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/31 11:04:18 drochner Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
-PKGREVISION=	2
+PKGREVISION=	3
 
 CONFLICTS+=	sylpheed-claws-[0-9]*
 
