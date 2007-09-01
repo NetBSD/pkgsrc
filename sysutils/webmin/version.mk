@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.2 2007/06/07 15:13:47 obache Exp $
+# $NetBSD: version.mk,v 1.3 2007/09/01 06:34:59 obache Exp $
 
-WBM_VERSION=	1.350
+WBM_VERSION=	1.360
