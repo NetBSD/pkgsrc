@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/07 15:13:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:05 obache Exp $
 share/examples/webmin/net/config
 share/webmin/net/CHANGELOG
 share/webmin/net/acl_security.pl
@@ -99,6 +99,7 @@ share/webmin/net/net-lib.pl
 share/webmin/net/netbsd-lib.pl
 share/webmin/net/open-linux-lib.pl
 share/webmin/net/openbsd-lib.pl
+share/webmin/net/openmamba-linux-lib.pl
 share/webmin/net/rbac-mapping
 share/webmin/net/rc.inet1
 share/webmin/net/redhat-linux-lib.pl

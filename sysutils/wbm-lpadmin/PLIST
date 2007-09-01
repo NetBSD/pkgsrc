@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:04 obache Exp $
 share/examples/webmin/lpadmin/config
 share/webmin/lpadmin/CHANGELOG
 share/webmin/lpadmin/acl_security.pl
@@ -34,6 +34,7 @@ share/webmin/lpadmin/config-netbsd
 share/webmin/lpadmin/config-open-linux
 share/webmin/lpadmin/config-open-linux-3.1e
 share/webmin/lpadmin/config-openbsd
+share/webmin/lpadmin/config-openmamba-linux
 share/webmin/lpadmin/config-redhat-linux
 share/webmin/lpadmin/config-redhat-linux-7.0
 share/webmin/lpadmin/config-redhat-linux-7.1

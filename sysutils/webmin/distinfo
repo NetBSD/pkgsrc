@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.13 2007/06/07 15:13:46 obache Exp $
+$NetBSD: distinfo,v 1.14 2007/09/01 06:34:59 obache Exp $
 
-SHA1 (webmin-1.350.tar.gz) = 9834fce7db5fa3ba6709dcbbac9c812da6883895
-RMD160 (webmin-1.350.tar.gz) = a2bb929f3ee67a8240697f82a86595d6b415d067
-Size (webmin-1.350.tar.gz) = 12832134 bytes
+SHA1 (webmin-1.360.tar.gz) = 4839649cc95b7e02c03bcb0430830c089e502525
+RMD160 (webmin-1.360.tar.gz) = fb78e341c9c7561d84a81609ba66e1acd2aaa734
+Size (webmin-1.360.tar.gz) = 13057731 bytes
 SHA1 (patch-aa) = 75b5fe5c5f0a0f83db32e47a3d9bbe277c51decb
 SHA1 (patch-ab) = fa07200462df76af23b9952739388053940c6743
-SHA1 (patch-ad) = ab3975853a0c4815a6c9d0a66bc64ce5018d2301
-SHA1 (patch-ae) = dc32ccf318777410f5cb702ccefb88b0f87fa209
+SHA1 (patch-ad) = 7c7b87f2c5e637eaa4567a2ba4207605e236372c
+SHA1 (patch-ae) = 16583d392d44176e8175e7637851d000ca2ecb9d
 SHA1 (patch-af) = 24f130a985ab7d3bdfc7db8d82114e8b107f1574
 SHA1 (patch-ag) = 4a2ba61d26a3f3a9bb0e1a22a8afb65d66e43746
-SHA1 (patch-ah) = 90617e16d08ccad3925d95c60fbe4002c770069b
-SHA1 (patch-ai) = 196df511dbf8e6d80bedd496f5494b13c7625a3b
+SHA1 (patch-ah) = 9cf6fc0d420535697eac2c32a29701fc095ef67f
+SHA1 (patch-ai) = 14accea4c38882933da3b565fe51adec06db1878
