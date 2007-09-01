@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/07 15:13:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:05 obache Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -9,6 +9,7 @@ share/webmin/mailboxes/config.info
 share/webmin/mailboxes/config.info.ca
 share/webmin/mailboxes/config.info.de
 share/webmin/mailboxes/config_info.pl
+share/webmin/mailboxes/config.info.fi
 share/webmin/mailboxes/defaultacl
 share/webmin/mailboxes/delete_all.cgi
 share/webmin/mailboxes/delete_mail.cgi
@@ -29,6 +30,7 @@ share/webmin/mailboxes/lang/ca
 share/webmin/mailboxes/lang/de
 share/webmin/mailboxes/lang/en
 share/webmin/mailboxes/lang/es
+share/webmin/mailboxes/lang/fi
 share/webmin/mailboxes/lang/fr
 share/webmin/mailboxes/lang/it
 share/webmin/mailboxes/lang/ja_JP.UTF-8

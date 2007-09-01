@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:03 obache Exp $
 share/examples/webmin/htaccess-htpasswd/config
 share/webmin/htaccess-htpasswd/CHANGELOG
 share/webmin/htaccess-htpasswd/acl_security.pl
@@ -8,6 +8,7 @@ share/webmin/htaccess-htpasswd/config.info
 share/webmin/htaccess-htpasswd/config.info.ca
 share/webmin/htaccess-htpasswd/config.info.de
 share/webmin/htaccess-htpasswd/config.info.es
+share/webmin/htaccess-htpasswd/config.info.fi
 share/webmin/htaccess-htpasswd/config.info.fr
 share/webmin/htaccess-htpasswd/config.info.hu
 share/webmin/htaccess-htpasswd/config.info.ms
@@ -28,6 +29,7 @@ share/webmin/htaccess-htpasswd/lang/ca
 share/webmin/htaccess-htpasswd/lang/de
 share/webmin/htaccess-htpasswd/lang/en
 share/webmin/htaccess-htpasswd/lang/es
+share/webmin/htaccess-htpasswd/lang/fi
 share/webmin/htaccess-htpasswd/lang/fr
 share/webmin/htaccess-htpasswd/lang/hu
 share/webmin/htaccess-htpasswd/lang/ms

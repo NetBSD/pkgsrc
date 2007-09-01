@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:41:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/01 06:35:06 obache Exp $
 share/examples/webmin/openslp/config
 share/webmin/openslp/README
 share/webmin/openslp/backup_config.pl
@@ -8,6 +8,7 @@ share/webmin/openslp/config-coherent-linux
 share/webmin/openslp/config-mandrake-linux
 share/webmin/openslp/config-msc-linux
 share/webmin/openslp/config-open-linux
+share/webmin/openslp/config-openmamba-linux
 share/webmin/openslp/config-redhat-linux
 share/webmin/openslp/config-suse-linux
 share/webmin/openslp/config-trustix-linux

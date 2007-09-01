@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/06/07 15:13:46 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/09/01 06:34:59 obache Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -227,6 +227,7 @@ share/webmin/config-msc-linux
 share/webmin/config-netbsd
 share/webmin/config-open-linux
 share/webmin/config-openbsd
+share/webmin/config-openmamba-linux
 share/webmin/config-openserver
 share/webmin/config-osf1
 share/webmin/config-redhat-linux
@@ -263,6 +264,7 @@ share/webmin/cron/config-msc-linux
 share/webmin/cron/config-netbsd
 share/webmin/cron/config-open-linux
 share/webmin/cron/config-openbsd
+share/webmin/cron/config-openmamba-linux
 share/webmin/cron/config-openserver
 share/webmin/cron/config-osf1
 share/webmin/cron/config-redhat-linux
@@ -451,6 +453,7 @@ share/webmin/init/config-msc-linux
 share/webmin/init/config-netbsd
 share/webmin/init/config-open-linux
 share/webmin/init/config-openbsd
+share/webmin/init/config-openmamba-linux
 share/webmin/init/config-openserver
 share/webmin/init/config-osf1
 share/webmin/init/config-redhat-linux
@@ -483,6 +486,7 @@ share/webmin/init/config.info.zh_CN
 share/webmin/init/config.info.zh_CN.UTF-8
 share/webmin/init/config.info.zh_TW.Big5
 share/webmin/init/config.info.zh_TW.UTF-8
+share/webmin/init/create-boot.pl
 share/webmin/init/defaultacl
 share/webmin/init/delboot.pl
 share/webmin/init/delete_action.cgi
@@ -656,6 +660,7 @@ share/webmin/lang/de
 share/webmin/lang/en
 share/webmin/lang/es
 share/webmin/lang/fa
+share/webmin/lang/fi
 share/webmin/lang/fr
 share/webmin/lang/he
 share/webmin/lang/hu
@@ -707,6 +712,7 @@ share/webmin/man/config-netbsd
 share/webmin/man/config-open-linux
 share/webmin/man/config-open-linux-3.1e
 share/webmin/man/config-openbsd
+share/webmin/man/config-openmamba-linux
 share/webmin/man/config-openserver
 share/webmin/man/config-osf1
 share/webmin/man/config-redhat-linux
@@ -1247,6 +1253,7 @@ share/webmin/webmin/config.info.nl
 share/webmin/webmin/config.info.sk
 share/webmin/webmin/config.info.tr
 share/webmin/webmin/cpan_modules.pl
+share/webmin/webmin/clear_blocked.cgi
 share/webmin/webmin/delete_cache.cgi
 share/webmin/webmin/delete_mod.cgi
 share/webmin/webmin/download_cert.cgi
@@ -1255,6 +1262,7 @@ share/webmin/webmin/edit_advanced.cgi
 share/webmin/webmin/edit_anon.cgi
 share/webmin/webmin/edit_assignment.cgi
 share/webmin/webmin/edit_bind.cgi
+share/webmin/webmin/edit_blocked.cgi
 share/webmin/webmin/edit_ca.cgi
 share/webmin/webmin/edit_categories.cgi
 share/webmin/webmin/edit_descs.cgi
@@ -1283,6 +1291,7 @@ share/webmin/webmin/images/advanced.gif
 share/webmin/webmin/images/anon.gif
 share/webmin/webmin/images/assignment.gif
 share/webmin/webmin/images/bind.gif
+share/webmin/webmin/images/blocked.gif
 share/webmin/webmin/images/ca.gif
 share/webmin/webmin/images/categories.gif
 share/webmin/webmin/images/descs.gif

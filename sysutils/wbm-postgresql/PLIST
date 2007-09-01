@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/05/12 00:17:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:06 obache Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -10,11 +10,13 @@ share/webmin/postgresql/config
 share/webmin/postgresql/config-cobalt-linux
 share/webmin/postgresql/config-coherent-linux
 share/webmin/postgresql/config-debian-linux
+share/webmin/postgresql/config-debian-linux-4.0-*
 share/webmin/postgresql/config-freebsd
 share/webmin/postgresql/config-gentoo-linux
 share/webmin/postgresql/config-mandrake-linux
 share/webmin/postgresql/config-msc-linux
 share/webmin/postgresql/config-netbsd
+share/webmin/postgresql/config-openmamba-linux
 share/webmin/postgresql/config-redhat-linux
 share/webmin/postgresql/config-redhat-linux-10.0-*
 share/webmin/postgresql/config-redhat-linux-7.0-7.2

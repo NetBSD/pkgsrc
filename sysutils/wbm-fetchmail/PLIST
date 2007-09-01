@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:03 obache Exp $
 share/examples/webmin/fetchmail/config
 share/webmin/fetchmail/CHANGELOG
 share/webmin/fetchmail/acl_security.pl
@@ -14,6 +14,7 @@ share/webmin/fetchmail/config-gentoo-linux
 share/webmin/fetchmail/config-mandrake-linux
 share/webmin/fetchmail/config-msc-linux
 share/webmin/fetchmail/config-open-linux
+share/webmin/fetchmail/config-openmamba-linux
 share/webmin/fetchmail/config-redhat-linux
 share/webmin/fetchmail/config-slackware-linux
 share/webmin/fetchmail/config-sol-linux
