@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2007/06/07 15:13:54 obache Exp $
+$NetBSD: patch-ab,v 1.4 2007/09/01 06:35:04 obache Exp $
 
---- ipfilter/module.info.orig	2007-06-01 01:23:19.000000000 +0000
+--- ipfilter/module.info.orig	2007-08-02 20:49:05.000000000 +0000
 +++ ipfilter/module.info
 @@ -1,7 +1,7 @@
  category=net
  longdesc=Configure a firewall using the IPFilter package, by creating and editing rules.
- depends=net 1.350
+ depends=net 1.360
 -os_support=solaris {&has_command("ipf")}
 +os_support=netbsd solaris {&has_command("ipf")}
  desc=IPFilter Firewall
- version=1.350
+ version=1.360
  desc_ca=Tallafocs IPFIlter

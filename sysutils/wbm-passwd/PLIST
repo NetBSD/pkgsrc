@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:06 obache Exp $
 share/examples/webmin/passwd/config
 share/webmin/passwd/CHANGELOG
 share/webmin/passwd/acl_security.pl
 share/webmin/passwd/change-passwd.pl
 share/webmin/passwd/config
+share/webmin/passwd/config-openmamba-linux
 share/webmin/passwd/config.info
 share/webmin/passwd/config.info.af
 share/webmin/passwd/config.info.ca
@@ -11,6 +12,7 @@ share/webmin/passwd/config.info.cz
 share/webmin/passwd/config.info.de
 share/webmin/passwd/config.info.es
 share/webmin/passwd/config.info.fa
+share/webmin/passwd/config.info.fi
 share/webmin/passwd/config.info.fr
 share/webmin/passwd/config.info.hu
 share/webmin/passwd/config.info.ms
@@ -35,6 +37,7 @@ share/webmin/passwd/lang/de
 share/webmin/passwd/lang/en
 share/webmin/passwd/lang/es
 share/webmin/passwd/lang/fa
+share/webmin/passwd/lang/fi
 share/webmin/passwd/lang/fr
 share/webmin/passwd/lang/hu
 share/webmin/passwd/lang/it
