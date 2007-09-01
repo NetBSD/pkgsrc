@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2007/04/21 05:22:58 obache Exp $
+$NetBSD: patch-ad,v 1.4 2007/09/01 06:35:00 obache Exp $
 
---- os_list.txt.orig	2007-04-09 05:00:00.000000000 +0000
+--- os_list.txt.orig	2007-08-02 20:46:22.000000000 +0000
 +++ os_list.txt
-@@ -225,18 +225,14 @@ Caixa Magica			10.0	suse-linux	9.2	`cat 
+@@ -234,18 +234,14 @@ openmamba Linux			$1	openmamba-linux	$1	
  # All FreeBSD versions
  FreeBSD				$1	freebsd		$1	$uname =~ /FreeBSD.*?\s([0-9\.]+)/i
  
