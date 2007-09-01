@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/07 15:13:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/09/01 06:35:00 obache Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -37,6 +37,7 @@ share/webmin/apache/config-open-linux-2.4
 share/webmin/apache/config-open-linux-2.5
 share/webmin/apache/config-open-linux-3.1e
 share/webmin/apache/config-openbsd
+share/webmin/apache/config-openmamba-linux
 share/webmin/apache/config-openserver
 share/webmin/apache/config-osf1
 share/webmin/apache/config-redhat-linux
@@ -45,8 +46,9 @@ share/webmin/apache/config-redhat-linux-8.0
 share/webmin/apache/config-redhat-linux-8.1
 share/webmin/apache/config-redhat-linux-9.0-*
 share/webmin/apache/config-slackware-linux
+share/webmin/apache/config-slackware-linux-12.0-*
 share/webmin/apache/config-slackware-linux-7.0-7.1
-share/webmin/apache/config-slackware-linux-8.0-*
+share/webmin/apache/config-slackware-linux-8.0-11.0
 share/webmin/apache/config-sol-linux
 share/webmin/apache/config-solaris
 share/webmin/apache/config-solaris-10-*
@@ -102,6 +104,7 @@ share/webmin/apache/edit_files.cgi
 share/webmin/apache/edit_global.cgi
 share/webmin/apache/edit_gmime_type.cgi
 share/webmin/apache/edit_htaccess.cgi
+share/webmin/apache/edit_mods.cgi
 share/webmin/apache/edit_virt.cgi
 share/webmin/apache/feedback_files.pl
 share/webmin/apache/files_index.cgi
@@ -114,6 +117,7 @@ share/webmin/apache/images/dir.gif
 share/webmin/apache/images/doc.gif
 share/webmin/apache/images/edit.gif
 share/webmin/apache/images/icon.gif
+share/webmin/apache/images/mods.gif
 share/webmin/apache/images/recon.gif
 share/webmin/apache/images/show.gif
 share/webmin/apache/images/smallicon.gif
@@ -247,6 +251,7 @@ share/webmin/apache/save_files.cgi
 share/webmin/apache/save_global.cgi
 share/webmin/apache/save_gmime_type.cgi
 share/webmin/apache/save_htaccess.cgi
+share/webmin/apache/save_mods.cgi
 share/webmin/apache/save_sync.cgi
 share/webmin/apache/save_virt.cgi
 share/webmin/apache/save_vserv.cgi
