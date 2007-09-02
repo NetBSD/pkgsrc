@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2007/06/29 20:22:46 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2007/09/02 13:19:21 joerg Exp $
 #
 
 DISTNAME=	feh-1.3.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://linuxbrit.co.uk/downloads/
 
@@ -13,8 +13,11 @@ COMMENT=	Advanced image viewer
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	YES
-
 CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,
+
+USE_TOOLS+=	bash:run perl:run
+
+REPLACE_BASH=		cam/gen_cam_menu.sh
 REPLACE_PERL=		cam/cam
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
