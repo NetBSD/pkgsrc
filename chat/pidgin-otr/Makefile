@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/30 18:11:36 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/02 11:07:40 joerg Exp $
 
 VERSION=	3.1.0
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cypherpunks.ca/otr/
 COMMENT=	Plugin for pidgin to add OTR (Off-The-Record) encryption
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config perl intltool
+USE_TOOLS+=	pkg-config perl intltool msgfmt
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
