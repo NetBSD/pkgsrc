@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/02 11:45:31 joerg Exp $
 #
 
 DISTNAME=		aranym-0.8.9beta
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aranym/}
 
@@ -10,12 +10,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
 
-USE_TOOLS+=		gmake makedepend
+USE_TOOLS+=		gmake makedepend bash:run
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/Unix
 USE_TOOLS+=		gzip
 MANCOMPRESSED=		yes
+
+REPLACE_BASH+=		${WRKSRC}/../../tools/arabridge
 
 BUILD_TARGET=		# void
 
