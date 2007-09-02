@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1923 2007/09/01 22:37:34 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.1924 2007/09/02 11:46:32 kei Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3525,3 +3525,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-tunnel to 1.360 [obache 2007-09-01]
 	Updated sysutils/wbm-useradmin to 1.360 [obache 2007-09-01]
 	Added net/nipper version 0.10.5 [adrianp 2007-09-01]
+	Updated games/netmaj to 2.0.7nb1 [kei 2007-09-02]
