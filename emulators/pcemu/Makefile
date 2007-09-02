@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/02/19 17:52:53 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/02 12:10:03 joerg Exp $
 
 DISTNAME=	pcemu1.01alpha
 PKGNAME=	pcemu-1.01a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/ \
 		ftp://ftp.interface-business.de/pub/outgoing/ \
