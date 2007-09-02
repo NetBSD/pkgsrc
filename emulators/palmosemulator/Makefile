@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/09/02 12:06:18 joerg Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
 PKGNAME=	palmosemulator-${POSE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.palmos.com/dev/tools/emulator/sources/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -12,6 +12,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.palmos.com/dev/tools/emulator/
 COMMENT=	Palm OS Emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 POSE_VERSION=	3.5
 
@@ -33,28 +35,28 @@ CONFIGURE_DIRS=	${POSE_BUILD_DIR}
 BUILD_DIRS=	${POSE_BUILD_DIR}
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake perl:run
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_PREFIX.fltk}
 CONFIGURE_ENV+=		PACKAGE_SKINS_DIR=${POSE_SKINS_DIR:Q}
 
+REPLACE_PERL=	Scripting/Perl/*.pl
+
 # Assumes too much about how to build va_list's from scratch
 NOT_FOR_PLATFORM=	*-*-powerpc
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${POSE_SHARE_DIR}/docs ${POSE_SHARE_DIR}/scripting
+INSTALLATION_DIRS+=	${POSE_SHARE_DIR}/prc ${POSE_SKINS_DIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${POSE_BUILD_DIR}/pose ${PREFIX}/bin/pose
-	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}
-	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/docs
-	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/scripting
+	${INSTALL_PROGRAM} ${POSE_BUILD_DIR}/pose ${DESTDIR}${PREFIX}/bin/pose
 	${FIND} ${WRKSRC}/Docs -type f -print | \
 		while read i; do \
-			${INSTALL_DATA} "$$i" ${POSE_SHARE_DIR}/docs; \
+			${INSTALL_DATA} "$$i" ${DESTDIR}${POSE_SHARE_DIR}/docs; \
 		done
 	for lang in Python Perl; do \
-		ddir="${POSE_SHARE_DIR}/scripting/$$lang"; \
+		ddir=${DESTDIR}${POSE_SHARE_DIR}/scripting/$$lang; \
 		${INSTALL_SCRIPT_DIR} "$$ddir"; \
 		${FIND} "${WRKSRC}/Scripting/$$lang" -type f -print | \
 		while read i; do \
@@ -64,13 +66,11 @@ do-install:
 			esac; \
 		done; \
 	done
-	${INSTALL_DATA} ${WRKSRC_SKINS}/ReadMe.txt ${POSE_SHARE_DIR}/docs/ReadMe_skins.txt
-	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/prc
-	${INSTALL_DATA} ${WRKSRC}/ROMTransfer/Source/ROM_Transfer.prc ${POSE_SHARE_DIR}/prc
-	${INSTALL_DATA_DIR} ${POSE_SKINS_DIR}
+	${INSTALL_DATA} ${WRKSRC_SKINS}/ReadMe.txt ${DESTDIR}${POSE_SHARE_DIR}/docs/ReadMe_skins.txt
+	${INSTALL_DATA} ${WRKSRC}/ROMTransfer/Source/ROM_Transfer.prc ${DESTDIR}${POSE_SHARE_DIR}/prc
 	${FIND} ${WRKSRC_SKINS} \( -name "*.skin" -o -name "*.jpg" \) -print |\
 		while read i; do \
-			${INSTALL_DATA} "$$i" ${POSE_SKINS_DIR}; \
+			${INSTALL_DATA} "$$i" ${DESTDIR}${POSE_SKINS_DIR}; \
 		done
 
 .include "../../graphics/jpeg/buildlink3.mk"
