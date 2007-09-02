@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1925 2007/09/02 13:05:48 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1926 2007/09/02 21:15:09 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3530,3 +3530,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/openldap-client to 2.3.38 [ghen 2007-09-02]
 	Updated databases/openldap-doc to 2.3.38 [ghen 2007-09-02]
 	Updated databases/openldap-server to 2.3.38 [ghen 2007-09-02]
+	Updated lang/php5 to 5.2.4 [jdolecek 2007-09-02]
