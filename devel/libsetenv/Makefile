@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/08/30 19:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/02 10:37:04 joerg Exp $
 #
 
 DISTNAME=	libsetenv-0.1
@@ -13,6 +13,8 @@ COMMENT=	Library that provides setenv(3) and unsetenv(3) implementations
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+INSTALLATION_DIRS=	include lib
 
 .include "../../mk/bsd.prefs.mk"
 
