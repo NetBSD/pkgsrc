@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/05 06:53:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/02 12:33:13 joerg Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -29,13 +29,11 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/rc.d
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/bin/${BINARY:Q} ${PREFIX:Q}/bin/tetrix
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.conf ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.secure ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.motd ${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.pmotd ${SHAREDIR:Q}
-	${INSTALL_SCRIPT} ${FILESDIR:Q}/tetrinetx ${PREFIX:Q}/share/examples/rc.d/
 
 .include "../../net/adns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
