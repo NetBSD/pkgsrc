@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/07/28 07:37:51 adam Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/02 14:48:57 joerg Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
+PKGREVISION=	1
 
 BUILD_TARGET=		sub-src
 INSTALL_TARGET=		install_flat_headers install_targ_headers
@@ -22,13 +23,13 @@ do-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/uic3 ${QTPREFIX}/bin/
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
-.for incl in corelib gui network opengl qt3support sql svg xml
+.for incl in corelib gui network opengl qt3support sql svg xml script
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${INSTALL_TARGET}
 .endfor
 	cd ${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
 	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
-.for lib in Qt3Support QtCore QtGui QtNetwork QtOpenGL QtSql QtSvg QtXml
+.for lib in Qt3Support QtCore QtGui QtNetwork QtOpenGL QtSql QtSvg QtXml QtScript
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${QTPREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/lib/pkgconfig/${lib}.pc ${PREFIX}/lib/pkgconfig/
