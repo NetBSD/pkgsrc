@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6646 2007/09/01 06:35:48 obache Exp $
+$NetBSD: TODO,v 1.6647 2007/09/02 13:06:19 ghen Exp $
 
 Suggested new packages
 ======================
@@ -798,8 +798,6 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openh323-1.19.1
-	o openldap-2.3.35
-	o openldap-client-2.3.35
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openpam-20050616
