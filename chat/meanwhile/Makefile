@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/13 05:29:27 dan Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/02 11:16:53 joerg Exp $
 #
 
 DISTNAME=	meanwhile-1.0.2
@@ -14,6 +14,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+= --disable-doxygen
+
+CHECK_WRKREF_SKIP+=	share/doc/meanwhile-doc-1.0.2/samples/build
 
 PKGCONFIG_OVERRIDE+=	meanwhile.pc.in
 
