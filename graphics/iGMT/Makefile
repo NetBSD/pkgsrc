@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/02/20 00:50:55 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/02 13:33:44 joerg Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.gfz-potsdam.de/pb1/op/igmt/
 
@@ -19,10 +19,13 @@ DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		yes
 
-USE_TOOLS+=		gs:run
+USE_TOOLS+=		gs:run ksh:run
 GMT_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		GMT_PREFIX=GMT
 EVAL_PREFIX+=		TK_PREFIX=tk
+
+REPLACE_KSH=		igmt igmt_helper* img2latlongrd.batch
+
 INSTALLATION_DIRS=	bin
 
 do-configure:
