@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.5 2005/10/26 15:08:13 jlam Exp $
+$NetBSD: patch-ag,v 1.6 2007/09/02 13:02:37 ghen Exp $
 
---- servers/slapd/Makefile.in.orig	2005-09-27 20:30:30.000000000 -0400
+--- servers/slapd/Makefile.in.orig	2007-02-14 16:59:43.000000000 +0100
 +++ servers/slapd/Makefile.in
 @@ -76,6 +76,10 @@ XLIBS = $(SLAPD_STATIC_DEPENDS) $(SLAPD_
  XXLIBS = $(SLAPD_LIBS) $(SECURITY_LIBS) $(LUTIL_LIBS)
- XXXLIBS = $(LTHREAD_LIBS) $(SLAPI_LIBS) $(MODULES_LIBS)
+ XXXLIBS = $(LTHREAD_LIBS) $(SLAPI_LIBS)
  
 +AC_CFLAGS += $(DL_CFLAGS)
 +AC_LDFLAGS += $(DL_LDFLAGS)
