@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/10/22 00:59:45 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2007/09/02 12:10:03 joerg Exp $
 
 --- Makefile.orig	Wed Jun 22 10:29:06 1994
 +++ Makefile
@@ -43,10 +43,10 @@ $NetBSD: patch-aa,v 1.4 2006/10/22 00:59:45 rillig Exp $
 +		${LOCALPREFIX}/lib/pcemu/font \
 +		${LOCALPREFIX}/lib/pcemu/C \
 +		${LOCALPREFIX}/bin
-+	install -c -s pcemu ${LOCALPREFIX}/bin/
-+	install -c -m 666 bootstrap/display.bin \
++	${BSD_INSTALL_PROGRAM} pcemu ${LOCALPREFIX}/bin/
++	${BSD_INSTALL_DATA} bootstrap/display.bin \
 +		${LOCALPREFIX}/lib/pcemu/DriveA
-+	install -c -m 644 BUGS CHANGES README TODO  bootstrap/README.BSD     \
++	${BSD_INSTALL_DATA} BUGS CHANGES README TODO  bootstrap/README.BSD     \
 +		programs/lredir.readme \
 +		${LOCALPREFIX}/lib/pcemu/doc/
 +	rm -f ${LOCALPREFIX}/lib/pcemu/doc/report.ps.gz
@@ -54,6 +54,6 @@ $NetBSD: patch-aa,v 1.4 2006/10/22 00:59:45 rillig Exp $
 +	rm -f ${LOCALPREFIX}/lib/pcemu/font/vga.pcf.Z
 +	bdftopcf vga.bdf | compress > ${LOCALPREFIX}/lib/pcemu/font/vga.pcf.Z
 +	mkfontdir ${LOCALPREFIX}/lib/pcemu/font
-+	install -c -m 644 programs/vga50.com programs/config.sys \
++	${BSD_INSTALL_DATA} programs/vga50.com programs/config.sys \
 +		programs/dumpdisk.exe programs/lredir.exe programs/emufs.sys \
 +		${LOCALPREFIX}/lib/pcemu/C
