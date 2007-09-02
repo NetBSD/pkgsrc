@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/08/10 23:10:38 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/02 14:02:57 joerg Exp $
 
 DISTNAME=		ufraw-0.12.1
 PKGNAME=		gimp-${DISTNAME}
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--enable-mime
 
 GCONF2_SCHEMAS=		ufraw.schemas
 
+PTHREAD_AUTO_VARS=	yes
+
 # This package uses too much C99 code to be patched.
 GCC_REQD+=		3.0
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
@@ -33,4 +35,5 @@ BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
