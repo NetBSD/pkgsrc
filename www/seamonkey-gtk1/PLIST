@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/05/31 12:29:39 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2007/09/03 23:48:59 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2738,6 +2738,7 @@ include/${MOZILLA}/xpcom/nsIEnumerator.h
 include/${MOZILLA}/xpcom/nsIEnvironment.h
 include/${MOZILLA}/xpcom/nsIErrorService.h
 include/${MOZILLA}/xpcom/nsIEventQueue.h
+include/${MOZILLA}/xpcom/nsIEventQueueListener.h
 include/${MOZILLA}/xpcom/nsIEventQueueService.h
 include/${MOZILLA}/xpcom/nsIEventTarget.h
 include/${MOZILLA}/xpcom/nsIException.h
