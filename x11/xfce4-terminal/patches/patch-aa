@@ -1,0 +1,214 @@
+$NetBSD: patch-aa,v 1.1.2.2 2007/09/03 12:53:34 ghen Exp $
+
+Patch for http://bugzilla.xfce.org/show_bug.cgi?id=3383
+
+--- helpers/balsa.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/balsa.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=balsa
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B -m "mailto:%u"
++X-Terminal-Command=%B -m mailto:%u
+
+--- helpers/epiphany.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/epiphany.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=epiphany;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B "%u"
++X-Terminal-Command=%B %u
+
+--- helpers/evolution.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/evolution.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=evolution-2.2;evolution-2.0;evolution-1.6;evolution-1.5;evolution-1.4;evolution;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B "mailto:%u"
++X-Terminal-Command=%B mailto:%u
+
+--- helpers/exo-open-browser.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/exo-open-browser.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=exo-open
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B --launch WebBrowser "%u"
++X-Terminal-Command=%B --launch WebBrowser %u
+
+--- helpers/exo-open-mailer.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/exo-open-mailer.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=exo-open
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B --launch MailReader "%u"
++X-Terminal-Command=%B --launch MailReader %u
+
+--- helpers/firefox.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/firefox.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=firefox;firefox-gtk2;firefox-gtk;mozilla-firefox;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B -remote "openURL(%u)" || %B "%u"
++X-Terminal-Command=%B -remote openURL\(%u\) || %B %u
+
+--- helpers/galeon.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/galeon.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=galeon;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B "%u"
++X-Terminal-Command=%B %u
+
+--- helpers/kmail.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/kmail.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=kmail;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B "%u"
++X-Terminal-Command=%B %u
+
+--- helpers/konqueror.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/konqueror.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,6 +5,6 @@
+ Type=Application
+ X-Terminal-Binaries=konqueror;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B "%u"
++X-Terminal-Command=%B %u
+ 
+ 
+
+--- helpers/lynx.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/lynx.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=lynx;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=Terminal -x %B "%u"
++X-Terminal-Command=Terminal -x %B %u
+
+--- helpers/mozilla-browser.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/mozilla-browser.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=mozilla;mozilla-gtk2;mozilla-gtk;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B -remote "openURL(%u,new-window)" || %B "%u"
++X-Terminal-Command=%B -remote openURL\(%u,new-window\) || %B %u
+
+--- helpers/mozilla-mailer.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/mozilla-mailer.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=mozilla;mozilla-gtk2;mozilla-gtk;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B -remote "mailto(%u)" || %B -compose "mailto:%u"
++X-Terminal-Command=%B -remote mailto\(%u\) || %B -compose mailto:%u
+
+--- helpers/mutt.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/mutt.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=mutt;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=Terminal -x %B "%u"
++X-Terminal-Command=Terminal -x %B %u
+
+--- helpers/opera-browser.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/opera-browser.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=opera;
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B -remote "openURL(%u,new-window)" || %B "%u"
++X-Terminal-Command=%B -remote openURL\(%u,new-window\) || %B %u
+
+--- helpers/opera-mailer.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/opera-mailer.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=opera;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B -remote "openURL(mailto:%u)" || %B "mailto:%u"
++X-Terminal-Command=%B -remote openURL\(mailto:%u\) || %B mailto:%u
+
+--- helpers/sensible-browser.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/sensible-browser.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=sensible-browser
+ X-Terminal-Category=WebBrowser
+-X-Terminal-Command=%B "%u"
++X-Terminal-Command=%B %u
+
+--- helpers/sylpheed-claws.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/sylpheed-claws.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -7,4 +7,4 @@
+ StartupNotify=true
+ X-Terminal-Binaries=sylpheed-claws;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B --compose "%u"
++X-Terminal-Command=%B --compose %u
+
+--- helpers/thunderbird.desktop.in	2007-01-20 16:30:46.000000000 +0200
++++ Terminal-0.2.6.patched/helpers/thunderbird.desktop.in	2007-08-14 09:12:57.000000000 +0300
+@@ -5,4 +5,4 @@
+ Type=Application
+ X-Terminal-Binaries=thunderbird;thunderbird-gtk2;thunderbird-gtk;mozilla-thunderbird;
+ X-Terminal-Category=MailReader
+-X-Terminal-Command=%B -remote "mailto(%u)" || %B -compose "mailto:%u"
++X-Terminal-Command=%B -remote mailto\(%u\) || %B -compose mailto:%u
+
+--- terminal/terminal-helper.c	2007-01-20 16:30:51.000000000 +0200
++++ Terminal-0.2.6.patched/terminal/terminal-helper.c	2007-08-14 09:17:20.000000000 +0300
+@@ -349,6 +349,8 @@
+   gchar       *argv[4];
+   gchar       *command;
+   gchar       *t;
++  gchar       *escaped;
++  gchar       **parts;
+   guint        n;
+ 
+   g_return_if_fail (TERMINAL_IS_HELPER (helper));
+@@ -359,6 +361,12 @@
+     if (s[0] == '%' && g_ascii_tolower (s[1]) == 'u')
+       ++n;
+ 
++  parts = g_strsplit (uri, "$", 0);
++
++  escaped = g_shell_quote (g_strjoinv("\$", parts));
++
++  g_strfreev (parts);
++
+   if (n > 0)
+     {
+       command = g_new (gchar, strlen (helper->command) + n * strlen (uri) + 1);
+@@ -366,7 +374,7 @@
+         {
+           if (s[0] == '%' && g_ascii_tolower (s[1]) == 'u')
+             {
+-              for (u = uri; *u != '\0'; )
++              for (u = escaped; *u != '\0'; )
+                 *t++ = *u++;
+               s += 2;
+             }
+@@ -379,9 +387,11 @@
+     }
+   else
+     {
+-      command = g_strconcat (helper->command, " ", uri, NULL);
++      command = g_strconcat (helper->command, " ", escaped, NULL);
+     }
+ 
++  g_free (escaped);
++
+   argv[0] = "/bin/sh";
+   argv[1] = "-c";
+   argv[2] = command;
