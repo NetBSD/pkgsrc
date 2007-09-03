@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/31 13:04:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/09/03 13:43:40 shannonjr Exp $
 bin/libprelude-config
 bin/prelude-adduser
+bin/prelude-admin
 include/libprelude/common.h
 include/libprelude/daemonize.h
 include/libprelude/idmef-additional-data.h
@@ -98,10 +99,7 @@ share/doc/libprelude/pt04.html
 share/doc/libprelude/right.png
 share/doc/libprelude/style.css
 share/doc/libprelude/up.png
-share/examples/libprelude/client.conf
-share/examples/libprelude/global.conf
-share/examples/libprelude/idmef-client.conf
-share/examples/libprelude/tls.conf
+man/man1/prelude-admin.1
 @dirrm share/examples/libprelude
 @dirrm share/doc/libprelude
 @dirrm include/libprelude
