@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/08/20 23:14:01 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/03 21:50:47 wiz Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.99
-PKGNAME=		${DISTNAME:S/_staticQT//}
+PKGNAME=		${DISTNAME:S/_static//}
 PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
