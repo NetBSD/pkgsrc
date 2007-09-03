@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1930 2007/09/03 13:56:37 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.1931 2007/09/03 17:01:00 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3537,3 +3537,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/prelude-pflogger version 0.9.0 [shannonjr 2007-09-03]
 	Updated security/libprelude to 0.9.15.1 [shannonjr 2007-09-03]
 	Updated security/prelude-lml to 0.9.10.1 [shannonjr 2007-09-03]
+	Updated www/liferea to 1.2.23 [drochner 2007-09-03]
+	Updated time/cairo-clock to 0.3.3 [drochner 2007-09-03]
+	Updated graphics/gthumb to 2.10.6 [drochner 2007-09-03]
+	Updated math/maxima to 5.13.0 [drochner 2007-09-03]
+	Updated math/calcoo to 1.3.18 [drochner 2007-09-03]
+	Updated x11/qt4 to 4.3.1 [drochner 2007-09-03]
+	Updated audio/exaile to 0.2.12 [drochner 2007-09-03]
+	Updated sysutils/py-dbus to 0.82.2 [drochner 2007-09-03]
+	Updated multimedia/py-gstreamer0.10 to 0.10.8 [drochner 2007-09-03]
+	Updated mail/sylpheed to 2.4.5 [drochner 2007-09-03]
+	Updated audio/mp3check to 0.8.3 [drochner 2007-09-03]
+	Updated audio/gmp3info to 0.8.5a [drochner 2007-09-03]
