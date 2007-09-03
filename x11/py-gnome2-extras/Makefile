@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2007/06/05 05:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/03 09:39:57 drochner Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,9 +17,14 @@ USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-extras-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 
 PYTHON_VERSIONS_ACCEPTED=	24
+
+SUBST_CLASSES+=	ffhome
+SUBST_STAGE.ffhome=	pre-configure
+SUBST_FILES.ffhome=	gtkmozembed/gtkmozembedmodule.c
+SUBST_VARS.ffhome=	LOCALBASE
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
@@ -27,9 +32,9 @@ PYTHON_VERSIONS_ACCEPTED=	24
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-# XXX optional? or firefox?
 # seamonkey untested.
 #.include "../../www/seamonkey/buildlink3.mk"
+.include "../../www/firefox/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
 # needs older version than is in pkgsrc
