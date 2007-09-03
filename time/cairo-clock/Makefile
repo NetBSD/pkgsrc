@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2007/06/05 05:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/03 16:28:37 drochner Exp $
 #
 
-DISTNAME=	cairo-clock-0.3.2
-PKGREVISION=	1
+DISTNAME=	cairo-clock_0.3.3-1
+PKGNAME=	cairo-clock-0.3.3
 CATEGORIES=	time
 MASTER_SITES=	http://macslow.thepimp.net/projects/cairo-clock/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://macslow.thepimp.net/?page_id=23
 COMMENT=	Analog clock drawn with vector-graphics
 
+WRKSRC=		${WRKDIR}/cairo-clock-0.3.3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
