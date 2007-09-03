@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/18 22:28:01 drochner Exp $
+$NetBSD: distinfo,v 1.2 2007/09/03 16:28:37 drochner Exp $
 
-SHA1 (cairo-clock-0.3.2.tar.bz2) = 87c3921ff7939ddfe022af01260e2406ebd6bb31
-RMD160 (cairo-clock-0.3.2.tar.bz2) = fd880dbe0d8b6be6f2769d781b17f6d96b8b4f69
-Size (cairo-clock-0.3.2.tar.bz2) = 718103 bytes
-SHA1 (patch-aa) = 193bc0baea8a8c9a687dfa43cd1d31f974973b94
-SHA1 (patch-ab) = 4a369b110e21420d1622c61d60912ae0c5888291
+SHA1 (cairo-clock_0.3.3-1.tar.gz) = 921c1f6468c913ebbd692aeb5f2dde58be6b4006
+RMD160 (cairo-clock_0.3.3-1.tar.gz) = c5fa101a51884a04ade0185672276d5a828063f8
+Size (cairo-clock_0.3.3-1.tar.gz) = 1248398 bytes
+SHA1 (patch-ab) = 4f5b453c7a2edfeb79a84a17b31ec46630c3539c
