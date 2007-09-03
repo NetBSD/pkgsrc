@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2007/07/04 20:54:57 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/03 13:43:40 shannonjr Exp $
 #
-DISTNAME=		libprelude-0.9.14
-PKGREVISION=		1
+DISTNAME=		libprelude-0.9.15.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
@@ -39,10 +38,17 @@ PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
-CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/client.conf
-CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/global.conf
-CONF_FILES+=	${PREFIX}/share/examples/libprelude/idmef-client.conf ${PKG_SYSCONFDIR}/idmef-client.conf
-CONF_FILES+=	${PREFIX}/share/examples/libprelude/tls.conf ${PKG_SYSCONFDIR}/tls.conf
+REQD_DIRS=	${PREFIX}/share/examples/libprelude
+
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/default/client.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/default/global.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/idmef-client.conf ${PKG_SYSCONFDIR}/default/idmef-client.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/tls.conf ${PKG_SYSCONFDIR}/default/tls.conf
+
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	post-patch
+SUBST_FILES.make=	Makefile.in
+SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
 
 post-install:
 	chown -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
