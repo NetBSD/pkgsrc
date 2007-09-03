@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/07/17 19:50:50 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/03 16:08:47 drochner Exp $
 #
 
-DISTNAME=		maxima-5.12.0
+DISTNAME=		maxima-5.13.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 
@@ -17,5 +17,6 @@ CONFIGURE_ARGS+=	--enable-clisp
 USE_TOOLS+=		perl
 
 INFO_FILES=		# PLIST
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
