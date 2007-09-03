@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/09/03 13:50:49 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2007/09/03 14:44:25 shannonjr Exp $
 
 --- Makefile.am.orig	2005-09-18 08:30:01.000000000 -0600
 +++ Makefile.am
@@ -17,10 +17,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/09/03 13:50:49 shannonjr Exp $
 -        else    												\
 -		$(INSTALL) -d -m 700 $(DESTDIR)$(configdir);							\
 -                $(INSTALL) -m 600 $(top_srcdir)/prelude-pflogger.conf $(DESTDIR)$(configdir)/;                  \
-+	$(INSTALL) -m 644 $(top_srcdir)/prelude-pflogger.conf @EGDIR@/;			\
-+	@if ! test -f $(configdir)/prelude-pflogger.conf; then				\
-+		$(INSTALL) -d -m 755 $(configdir);					\
-+                $(INSTALL) -m 644 $(top_srcdir)/prelude-pflogger.conf $(configdir)/;	\
++	$(INSTALL) -m 644 $(top_srcdir)/prelude-pflogger.conf /usr/pkg/share/examples/prelude-pflogger/;
++	@if test \! -f $(DESTDIR)$(configdir)/prelude-pflogger.conf; then			\
++		$(INSTALL) -d -m 755 $(configdir);						\
++                $(INSTALL) -m 644 $(top_srcdir)/prelude-pflogger.conf $(DESTDIR)$(configdir)/;	\
          fi
  
  uninstall-local:
