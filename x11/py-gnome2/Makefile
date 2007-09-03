@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/06/05 05:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/09/03 09:51:55 drochner Exp $
 #
 
 DISTNAME=	gnome-python-2.18.2
@@ -17,7 +17,7 @@ USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
 
 PYTHON_VERSIONS_ACCEPTED=	24
 
