@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/09/03 09:35:19 drochner Exp $
-lib/pkgconfig/QtScript.pc
+@comment $NetBSD: PLIST,v 1.8 2007/09/03 20:27:20 drochner Exp $
 lib/pkgconfig/QtTest.pc
 qt4/bin/assistant
 qt4/bin/designer
@@ -124,7 +123,6 @@ qt4/include/QtTest/qtestsystem.h
 qt4/lib/libQtAssistantClient.la
 qt4/lib/libQtDesigner.la
 qt4/lib/libQtDesignerComponents.la
-qt4/lib/libQtScript.la
 qt4/lib/libQtTest.la
 qt4/mkspecs/aix-g++-64/qmake.conf
 qt4/mkspecs/aix-g++-64/qplatformdefs.h
