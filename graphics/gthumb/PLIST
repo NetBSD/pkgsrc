@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2007/04/11 18:08:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/09/03 16:11:06 drochner Exp $
 bin/gthumb
+lib/bonobo/servers/GNOME_GThumb.server
 lib/gthumb/modules/libduplicates.la
 lib/gthumb/modules/libjpegtran.la
 lib/gthumb/modules/libphotoimporter.la
@@ -16,6 +17,11 @@ share/gnome/help/gthumb/C/figures/nav-button.png
 share/gnome/help/gthumb/C/figures/preferences.png
 share/gnome/help/gthumb/C/gthumb.xml
 share/gnome/help/gthumb/C/legal.xml
+share/gnome/help/gthumb/es/figures/comment.png
+share/gnome/help/gthumb/es/figures/main-win.png
+share/gnome/help/gthumb/es/figures/nav-button.png
+share/gnome/help/gthumb/es/figures/preferences.png
+share/gnome/help/gthumb/es/gthumb.xml
 share/gnome/help/gthumb/sv/figures/comment.png
 share/gnome/help/gthumb/sv/figures/main-win.png
 share/gnome/help/gthumb/sv/figures/nav-button.png
@@ -164,6 +170,7 @@ share/locale/zh_CN/LC_MESSAGES/gthumb.mo
 share/locale/zh_HK/LC_MESSAGES/gthumb.mo
 share/locale/zh_TW/LC_MESSAGES/gthumb.mo
 share/omf/gthumb/gthumb-C.omf
+share/omf/gthumb/gthumb-es.omf
 share/omf/gthumb/gthumb-sv.omf
 @dirrm share/omf/gthumb
 @comment in scrollkeeper: @dirrm share/omf
@@ -180,6 +187,8 @@ share/omf/gthumb/gthumb-sv.omf
 @dirrm share/gthumb
 @dirrm share/gnome/help/gthumb/sv/figures
 @dirrm share/gnome/help/gthumb/sv
+@dirrm share/gnome/help/gthumb/es/figures
+@dirrm share/gnome/help/gthumb/es
 @dirrm share/gnome/help/gthumb/C/figures
 @dirrm share/gnome/help/gthumb/C
 @dirrm share/gnome/help/gthumb
@@ -188,3 +197,4 @@ share/omf/gthumb/gthumb-sv.omf
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gthumb/modules
 @dirrm lib/gthumb
+@comment in libbonobo: @dirrm lib/bonobo/servers
