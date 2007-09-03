@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/07/28 07:37:52 adam Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/03 20:27:20 drochner Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -33,11 +33,10 @@ do-install:
 		${MAKE_PROGRAM} install_designer_headers
 	cd ${WRKSRC}/tools/qtestlib/src && env ${MAKE_ENV} \
 		${MAKE_PROGRAM} install_qtestlib_headers
-.for lib in QtAssistantClient QtDesigner QtDesignerComponents QtScript QtTest
+.for lib in QtAssistantClient QtDesigner QtDesignerComponents QtTest
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${QTPREFIX}/lib/
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/lib/pkgconfig/QtScript.pc ${PREFIX}/lib/pkgconfig/
 	${INSTALL_DATA} ${WRKSRC}/lib/pkgconfig/QtTest.pc ${PREFIX}/lib/pkgconfig/
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/designer
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
