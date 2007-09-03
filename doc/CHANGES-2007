@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1929 2007/09/03 13:37:19 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1930 2007/09/03 13:56:37 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3534,3 +3534,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated finance/gnucash-docs to 2.2.0 [wiz 2007-09-02]
 	Updated lang/php5 to 5.2.4nb1 [tron 2007-09-03]
 	Updated lang/smalltalk to 2.3.5 [obache 2007-09-03]
+	Added security/prelude-pflogger version 0.9.0 [shannonjr 2007-09-03]
+	Updated security/libprelude to 0.9.15.1 [shannonjr 2007-09-03]
+	Updated security/prelude-lml to 0.9.10.1 [shannonjr 2007-09-03]
