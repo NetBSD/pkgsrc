@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/08/04 09:29:29 shannonjr Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/03 13:46:04 shannonjr Exp $
 #
 
-DISTNAME=		prelude-lml-0.9.10
+DISTNAME=		prelude-lml-0.9.10.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 RCD_SCRIPTS=		preludelml
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
+BUILD_DEFS+=		VARBASE
 PRELUDE_LML_PID_DIR=	${VARBASE}/run/prelude-lml
 PRELUDE_HOME=		${VARBASE}/prelude-lml
 
@@ -65,7 +66,7 @@ CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf 
 	selinux.rules sendmail.rules shadow-utils.rules single.rules \
 	squid.rules ssh.rules sudo.rules tripwire.rules vigor.rules \
 	vpopmail.rules webmin.rules wu-ftp.rules zywall.rules zyxel.rules
-CONF_FILES+=	${EGDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q}
+CONF_FILES+=	${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
 .endfor
 
 pre-patch:
