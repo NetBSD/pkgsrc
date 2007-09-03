@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1928 2007/09/03 12:15:57 tron Exp $
+$NetBSD: CHANGES-2007,v 1.1929 2007/09/03 13:37:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3533,3 +3533,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/php5 to 5.2.4 [jdolecek 2007-09-02]
 	Updated finance/gnucash-docs to 2.2.0 [wiz 2007-09-02]
 	Updated lang/php5 to 5.2.4nb1 [tron 2007-09-03]
+	Updated lang/smalltalk to 2.3.5 [obache 2007-09-03]
