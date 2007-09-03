@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2007/09/02 21:12:40 jdolecek Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/03 11:48:44 tron Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
+PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -30,6 +31,7 @@ CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 
+CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 MAKE_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
 
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
