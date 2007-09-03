@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2007/08/13 08:12:49 rillig Exp $
+# $NetBSD: Makefile,v 1.303 2007/09/03 13:52:13 shannonjr Exp $
 #
 
 COMMENT=	Security tools
@@ -206,6 +206,7 @@ SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
+SUBDIR+=	prelude-pflogger
 SUBDIR+=	priv
 SUBDIR+=	prngd
 SUBDIR+=	pscan
