@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6649 2007/09/02 22:23:07 xtraeme Exp $
+$NetBSD: TODO,v 1.6650 2007/09/03 06:58:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -1117,7 +1117,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-1.4.0.94
 	o smalleiffel-0.90
-	o smalltalk-2.95b
+	o smalltalk-2.3.5
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.2
