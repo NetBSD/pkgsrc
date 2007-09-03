@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2007/09/03 09:35:17 drochner Exp $
+
+--- ./src/corelib/codecs/qiconvcodec.cpp.orig	2007-08-07 15:08:39.000000000 +0200
++++ ./src/corelib/codecs/qiconvcodec.cpp
+@@ -44,7 +44,7 @@
+ 
+ // unistd.h is needed for the _XOPEN_UNIX macro
+ #include <unistd.h>
+-#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD)
+ #  include <langinfo.h>
+ #endif
+ 
+@@ -244,7 +244,7 @@ iconv_t QIconvCodec::createIconv_t(const
+     char *codeset = 0;
+ #endif
+ 
+-#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD)
+     if (cd == (iconv_t) -1) {
+         codeset = nl_langinfo(CODESET);
+         if (codeset)

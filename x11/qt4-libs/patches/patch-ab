@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/07/28 07:37:51 adam Exp $
+$NetBSD: patch-ab,v 1.5 2007/09/03 09:35:16 drochner Exp $
 
---- src/gui/painting/painting.pri.orig	2007-05-25 15:24:11.000000000 +0200
+--- src/gui/painting/painting.pri.orig	2007-08-07 15:08:41.000000000 +0200
 +++ src/gui/painting/painting.pri
-@@ -177,11 +177,11 @@ mac {
+@@ -182,11 +182,11 @@ mac {
  
      win32-g++|!win32:!*-icc* {
          mmx {
@@ -16,24 +16,35 @@ $NetBSD: patch-ab,v 1.4 2007/07/28 07:37:51 adam Exp $
              mmx_compiler.input = MMX_SOURCES
              mmx_compiler.variable_out = OBJECTS
              mmx_compiler.name = compiling[mmx] ${QMAKE_FILE_IN}
-@@ -194,13 +194,13 @@ mac {
-             }
+@@ -194,22 +194,22 @@ mac {
+             QMAKE_EXTRA_COMPILERS += mmx_compiler
          }
          3dnow {
--            3dnow_compiler.commands = $$QMAKE_CXX -c
-+            3dnow_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
-             3dnow_compiler.commands += -m3dnow
-             mmx: 3dnow_compiler.commands += -mmmx
-             sse: 3dnow_compiler.commands += -msse
-             3dnow_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
-             3dnow_compiler.dependency_type = TYPE_C
--            3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
-+            3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
-             3dnow_compiler.input = 3DNOW_SOURCES
-             3dnow_compiler.variable_out = OBJECTS
-             3dnow_compiler.name = compiling[3dnow] ${QMAKE_FILE_IN}
-@@ -208,11 +208,11 @@ mac {
-             QMAKE_EXTRA_COMPILERS += 3dnow_compiler
+-            mmx3dnow_compiler.commands = $$QMAKE_CXX -c
++            mmx3dnow_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+             mmx3dnow_compiler.commands += -m3dnow -mmmx
+             mmx3dnow_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+             mmx3dnow_compiler.dependency_type = TYPE_C
+-            mmx3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++            mmx3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+             mmx3dnow_compiler.input = MMX3DNOW_SOURCES
+             mmx3dnow_compiler.variable_out = OBJECTS
+             mmx3dnow_compiler.name = compiling[mmx3dnow] ${QMAKE_FILE_IN}
+             silent:mmx3dnow_compiler.commands = @echo compiling[mmx3dnow] ${QMAKE_FILE_IN} && $$mmx3dnow_compiler.commands
+             QMAKE_EXTRA_COMPILERS += mmx3dnow_compiler
+ 	    sse {
+-                sse3dnow_compiler.commands = $$QMAKE_CXX -c
++                sse3dnow_compiler.commands = ${LIBTOOL} --mode=compile $$QMAKE_CXX -c
+                 sse3dnow_compiler.commands += -m3dnow -msse
+                 sse3dnow_compiler.commands += $(CXXFLAGS) $(INCPATH) ${QMAKE_FILE_IN} -o ${QMAKE_FILE_OUT}
+                 sse3dnow_compiler.dependency_type = TYPE_C
+-                sse3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}$${first(QMAKE_EXT_OBJ)}
++                sse3dnow_compiler.output = ${QMAKE_VAR_OBJECTS_DIR}${QMAKE_FILE_BASE}.lo
+                 sse3dnow_compiler.input = SSE3DNOW_SOURCES
+                 sse3dnow_compiler.variable_out = OBJECTS
+                 sse3dnow_compiler.name = compiling[sse3dnow] ${QMAKE_FILE_IN}
+@@ -218,11 +218,11 @@ mac {
+ 	    }
          }
          sse {
 -            sse_compiler.commands = $$QMAKE_CXX -c
@@ -46,7 +57,7 @@ $NetBSD: patch-ab,v 1.4 2007/07/28 07:37:51 adam Exp $
              sse_compiler.input = SSE_SOURCES
              sse_compiler.variable_out = OBJECTS
              sse_compiler.name = compiling[sse] ${QMAKE_FILE_IN}
-@@ -220,11 +220,11 @@ mac {
+@@ -230,11 +230,11 @@ mac {
              QMAKE_EXTRA_COMPILERS += sse_compiler
          }
          sse2 {
@@ -60,7 +71,7 @@ $NetBSD: patch-ab,v 1.4 2007/07/28 07:37:51 adam Exp $
              sse2_compiler.input = SSE2_SOURCES
              sse2_compiler.variable_out = OBJECTS
              sse2_compiler.name = compiling[sse2] ${QMAKE_FILE_IN}
-@@ -232,11 +232,11 @@ mac {
+@@ -242,11 +242,11 @@ mac {
              QMAKE_EXTRA_COMPILERS += sse2_compiler
          }
          iwmmxt {
