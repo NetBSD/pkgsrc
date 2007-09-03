@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/09/03 13:36:28 obache Exp $
 
-DISTNAME=	smalltalk-2.1.9
-PKGREVISION=	3
+DISTNAME=	smalltalk-2.3.5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
@@ -26,8 +25,16 @@ CONFIGURE_ARGS+=	--without-emacs
 #CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 TEST_TARGET=		check
+
+post-extract:
+	sed -e "s/long double/double/g" -e "s/1.0L/1.0/g" -e  "s/0.0L/0.0/g" \
+	-e "s/LDBL_EPSILON/DBL_EPSILON/g" -e "s/truncl/trunc/g" \
+	${WRKSRC:Q}/lib-src/truncl.c > ${WRKSRC:Q}/lib-src/trunc.c
+	sed -e "s/long double/float/g" -e "s/1.0L/1.0F/g" -e  "s/0.0L/0.0F/g" \
+	-e "s/LDBL_EPSILON/FLT_EPSILON/g" -e "s/truncl/truncf/g" \
+	${WRKSRC}/lib-src/truncl.c > ${WRKSRC}/lib-src/truncf.c
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
@@ -35,6 +42,7 @@ TEST_TARGET=		check
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
