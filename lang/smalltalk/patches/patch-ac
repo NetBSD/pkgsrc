@@ -1,31 +1,31 @@
-$NetBSD: patch-ac,v 1.1 2007/03/07 18:37:33 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2007/09/03 13:36:30 obache Exp $
 
---- sigsegv/configure.orig	2007-03-07 18:05:18.000000000 +0000
+--- sigsegv/configure.orig	2007-05-12 10:11:26.000000000 +0000
 +++ sigsegv/configure
-@@ -10099,7 +10099,7 @@ _ACEOF
-     # List of signals that are sent when an invalid virtual memory address
-     # is accessed, or when the stack overflows.
-     case "$host_os" in
--      sunos4* | freebsd* | openbsd* | netbsd*)
-+      sunos4* | freebsd* | openbsd* | netbsd* | dragonfly*)
-         CFG_SIGNALS=signals-bsd.h ;;
-       hpux*)
-         CFG_SIGNALS=signals-hpux.h ;;
-@@ -12711,7 +12711,7 @@ echo "${ECHO_T}$sv_cv_fault_hurd" >&6
-     fi
-     if test "$CFG_FAULT" = fault-none.h && test "$sv_cv_fault_bsd" = yes; then
-       case "$host_os" in
--        freebsd*)
-+        freebsd* | dragonfly*)
-           case "$host_cpu" in
-             i?86 | x86_64)
-               CFG_FAULT=fault-freebsd-i386.h
-@@ -13784,7 +13784,7 @@ echo "${ECHO_T}$sv_cv_procfsvma" >&6
-     case "$host_os" in
-       darwin*|macos*) CFG_STACKVMA=stackvma-mach.c ;;
-       linux*) CFG_STACKVMA=stackvma-linux.c ;;
--      freebsd*) CFG_STACKVMA=stackvma-freebsd.c ;;
-+      freebsd*|dragonfly*) CFG_STACKVMA=stackvma-freebsd.c ;;
-       beos*) CFG_STACKVMA=stackvma-beos.c ;;
-     esac
-   fi
+@@ -9581,7 +9581,7 @@ done
+ 
+ 
+ case "$host_os" in
+-  sunos4* | freebsd* | openbsd* | netbsd*)
++  sunos4* | freebsd* | openbsd* | netbsd* | dragonfly*)
+     CFG_SIGNALS=signals-bsd.h ;;
+   hpux*)
+     CFG_SIGNALS=signals-hpux.h ;;
+@@ -13464,7 +13464,7 @@ if test -z "$CFG_FAULT" && test "$sv_cv_
+ fi
+ if test -z "$CFG_FAULT" && test "$sv_cv_fault_bsd" = yes; then
+   case "$host_os" in
+-    freebsd*)
++    freebsd* | dragonfly*)
+       case "$host_cpu" in
+         i?86 | x86_64)
+           CFG_FAULT=fault-freebsd-i386.h
+@@ -13942,7 +13942,7 @@ if test $sv_cv_procfsvma = yes; then
+ else
+   case "$host_os" in
+     linux*) CFG_STACKVMA=stackvma-linux.c ;;
+-    freebsd*) CFG_STACKVMA=stackvma-freebsd.c ;;
++    freebsd*|dragonfly*) CFG_STACKVMA=stackvma-freebsd.c ;;
+     beos*) CFG_STACKVMA=stackvma-beos.c ;;
+     macos* | darwin*) CFG_STACKVMA=stackvma-mach.c ;;
+   esac
