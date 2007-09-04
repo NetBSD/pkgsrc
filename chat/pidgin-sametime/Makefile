@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/13 22:52:20 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/04 19:09:22 joerg Exp $
 #
 
 PKGNAME=		pidgin-sametime-${PIDGIN_VERSION}
@@ -7,6 +7,8 @@ COMMENT=		Lotus Sametime plugin for the Pidgin instant messenger
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../chat/libpurple/Makefile.common"
+
+USE_TOOLS+=		msgfmt
 
 CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--disable-gtkui

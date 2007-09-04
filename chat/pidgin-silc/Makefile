@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/14 01:16:26 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/04 19:09:48 joerg Exp $
 #
 
 PKGNAME=		pidgin-silc-${PIDGIN_VERSION}
@@ -11,6 +11,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--disable-gtkui
 CONFIGURE_ARGS+=	--disable-consoleui
+
+USE_TOOLS+=		msgfmt
 
 BUILD_DIRS=		libpurple/protocols/silc
 
