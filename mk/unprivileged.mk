@@ -1,21 +1,99 @@
-# $NetBSD: unprivileged.mk,v 1.12 2007/07/04 20:54:48 jlam Exp $
+# $NetBSD: unprivileged.mk,v 1.13 2007/09/04 08:42:30 rillig Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
 # pkgsrc infrastructure.
 #
-# The following variables may be set by the pkgsrc user in mk.conf:
+# === User-settable variables ===
 #
-# UNPRIVILEGED		: YesNo (default: undefined)
-#	If set to 'yes', enable unprivileged builds.
+# UNPRIVILEGED
+#	Whether to build packages as unprivileged user.
 #
-# UNPRIVILEGED_GROUP	: Groupname (default: the current group)
-#	Specifies the group name (or gid) that will be used to install
+#	Default: (undefined)
+#	Possible: yes no
+#
+# UNPRIVILEGED_USER
+#	The user name (or numeric uid) that will be used to install
 #	files.
 #
-# UNPRIVILEGED_USER	: Username (default: the current user)
-#	Specifies the user name (or uid) that will be used to install
+#	Default: The user building the package
+#
+# UNPRIVILEGED_GROUP
+#	The group name (or numeric gid) that will be used to install
 #	files.
+#
+#	Default: The primary group of the user building the package
+#
+# === Package-settable variables ===
+#
+# PKG_USERS_VARS
+#	A list of variables that hold bare user names, e.g APACHE_USER, etc.
+#
+# PKG_GROUPS_VARS
+#	A list of variables that hold bare group names, e.g UUCP_GROUP, etc.
+#
+# XXX: How can the user say that some of the packages shouldn't override
+# the user and group names?
+#
+# === System-defined variables ===
+#
+# REAL_ROOT_USER
+#	The name of an omnipotent user account on the system.
+#
+#	XXX: Why do we have this variable when it is set to ${ROOT_USER}
+#	anyway for unprivileged builds? Shouldn't packages that require
+#	such a user just fail in unprivileged mode?
+#	(See NOT_FOR_UNPRIVILEGED.)
+#
+# REAL_ROOT_GROUP
+#	The primary group of the REAL_ROOT_USER.
+#
+# ROOT_USER
+#	XXX: ???
+#
+# ROOT_GROUP
+#	The primary group of the ROOT_USER.
+#
+# BINOWN, BINGRP, GAMEOWN, GAMEGRP, MANOWN, MANGRP, SHAREOWN, SHAREGRP,
+# DOCOWN, DOCGRP, BINMODE, NONBINMODE
+#	Ownership and permissions of the various types of files that are
+#	installed by the packages.
+#
+#	XXX: What do we need all these different variables for? Wouldn't
+#	it be ok to install all files as ROOT_USER:ROOT_GROUP?
+#
+# PKG_CREATE_USERGROUP
+#	Since an unprivileged user normally cannot create other users
+#	and groups, this pkgsrc feature is disabled.
+#
+#	XXX: This setting should be moved into pkg_add.
+#
+# PKG_REGISTER_SHELLS
+#	Since an unprivileged user normally cannot add entries to
+#	/etc/shells, this pkgsrc feature is disabled.
+#
+#	XXX: See PKG_CREATE_USERGROUP
+#
+# TOOLS_PLATFORM.chown, TOOLS_PLATFORM.chgrp
+#	These tools cannot be used in their full extent by unprivileged
+#	users.
+#
+#	XXX: chgrp may work for some groups.
+#
+# Keywords: unprivileged root override
+#
+
+_VARGROUPS+=			unprivileged
+_USER_VARS.unprivileged= \
+	UNPRIVILEGED UNPRIVILEGED_GROUP UNPRIVILEGED_USER
+_PKG_VARS.unprivileged=	\
+	PKG_USER_VARS PKG_GROUP_VARS
+_SYS_VARS.unprivileged= \
+	REAL_ROOT_USER REAL_ROOT_GROUP ROOT_USER ROOT_GROUP \
+	BINOWN BINGRP GAMEOWN GAMEGRP MANOWN MANGRP SHAREOWN SHAREGRP DOCOWN DOCGRP \
+	BINMODE NONBINMODE \
+	PKG_CREATE_USERGROUP PKG_REGISTER_SHELLS \
+	TOOLS_PLATFORM.chgrp TOOLS_PLATFORM.chown SU_CMD
 
 _UNPRIVILEGED=		# empty
 .if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
@@ -66,12 +144,6 @@ NONBINMODE=		644
 .  if !empty(_UNPRIVILEGED:Munprivileged) && empty(_UNPRIVILEGED:Muser-destdir)
 # Only do the following for unprivileged, normal builds.
 
-# PKG_USERS_VARS is a list of variables that hold bare user names, e.g
-#	APACHE_USER, etc.
-#
-# PKG_GROUPS_VARS is a list of variables that hold bare group names, e.g
-#	UUCP_GROUP, etc.
-#
 PKG_USERS_VARS?=	# empty
 PKG_GROUPS_VARS?=	# empty
 BUILD_DEFS+=		${PKG_USERS_VARS} ${PKG_GROUPS_VARS}
