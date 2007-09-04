@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.14 2007/09/03 23:50:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.15 2007/09/04 01:36:19 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -57,3 +57,5 @@ Pullup ticket 2179 - requested by tron
 security fix for rsync
 Pullup ticket 2176 - requested by ghen
 security update for seamonkey
+Pullup ticket 2180 - requested by ghen
+security update for thunderbird15
