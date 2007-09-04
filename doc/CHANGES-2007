@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1932 2007/09/04 07:38:36 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1933 2007/09/04 11:57:46 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3550,3 +3550,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/mp3check to 0.8.3 [drochner 2007-09-03]
 	Updated audio/gmp3info to 0.8.5a [drochner 2007-09-03]
 	Added games/singularity version 0.26a [wiz 2007-09-04]
+	Updated sysutils/radmind to 1.10 [hauke 2007-09-04]
