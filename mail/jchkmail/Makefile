@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:27 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/04 20:40:43 joerg Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
@@ -26,6 +26,7 @@ CONF_FILES+=		${EGDIR}/j-host-access ${PKG_SYSCONFDIR}/j-host-access
 CONF_FILES+=		${EGDIR}/j-user-access ${PKG_SYSCONFDIR}/j-user-access
 CONF_FILES+=		${EGDIR}/j-regex ${PKG_SYSCONFDIR}/j-regex
 RCD_SCRIPTS=		jchkmail
+RCD_SCRIPT_SRC.jchkmail=	${WRKSRC}/bin/jchkmail.init
 
 PTHREAD_AUTO_VARS=	yes
 
