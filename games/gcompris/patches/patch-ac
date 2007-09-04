@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/09/04 21:46:32 drochner Exp $
+
+--- src/boards/chess_notation.c.orig	2007-09-04 13:32:59.000000000 +0200
++++ src/boards/chess_notation.c
+@@ -204,7 +204,7 @@ piece_to_ascii (int piece)
+   if(WPIECE(piece))
+     return piece_to_ascii_full[i];
+   else
+-    return tolower(piece_to_ascii_full[i]);
++    return tolower((unsigned char)piece_to_ascii_full[i]);
+ 
+   g_assert_not_reached ();
+   
