@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.15 2007/09/04 01:36:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.16 2007/09/04 12:48:26 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -55,7 +55,11 @@ Pullup ticket 2175 - requested by markd
 security fix for koffice
 Pullup ticket 2179 - requested by tron
 security fix for rsync
+Pullup ticket 2178 - requested by marrti
+security fix for xfce4-terminal
 Pullup ticket 2176 - requested by ghen
 security update for seamonkey
 Pullup ticket 2180 - requested by ghen
 security update for thunderbird15
+Pullup ticket 2183 - requested by markd
+security fix for konqueror
