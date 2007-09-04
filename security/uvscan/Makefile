@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2007/07/29 05:19:50 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2007/09/04 19:43:15 jlam Exp $
 
 DISTNAME=		vlp4510e
 PKGNAME=		uvscan-5.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v5.10/
 EXTRACT_SUFX=		.tar.Z
@@ -46,7 +46,7 @@ USE_TOOLS+=		gtar:run
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	update_dat.sh uvscan.sh
 SUBST_VARS.paths=	AWK BASENAME CP DATFILES ECHO GTAR MKDIR MV	\
-			PREFIX RM SED UVSCAN
+			PREFIX RM SED UVSCANDIR
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
