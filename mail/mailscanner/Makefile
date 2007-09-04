@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:13:58 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/04 20:54:29 joerg Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
 PKGNAME=		mailscanner-4.30.3.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://www.sng.ecs.soton.ac.uk/mailscanner/files/4/tar/
 
@@ -22,8 +22,10 @@ DEPENDS+=		p5-MIME-tools>=0:../../mail/p5-MIME-tools
 DEPENDS+=		tnef>=1.0:../../mail/tnef
 
 NO_BUILD=		YES
-USE_TOOLS+=		perl:run
-REPLACE_PERL=		bin/MailScanner
+USE_TOOLS+=		perl:run bash:run
+REPLACE_BASH+=		 bin/update_virus_scanners
+REPLACE_PERL+=		bin/MailScanner
+REPLACE_PERL+=		lib/panda-wrapper lib/rav-wrapper lib/*-autoupdate
 
 DOCSDIR=		${LOCALBASE}/share/doc/MailScanner
 EGDIR=			${LOCALBASE}/share/examples/MailScanner
