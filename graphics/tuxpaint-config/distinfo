@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.4 2007/09/04 21:16:06 drochner Exp $
 
-SHA1 (tuxpaint-config-0.0.5.tar.gz) = fc3056b24743377366cef630584cd5cb7262dc55
-RMD160 (tuxpaint-config-0.0.5.tar.gz) = ec73bc7746805aab6dc789c73a35d86d5c498f7b
-Size (tuxpaint-config-0.0.5.tar.gz) = 82736 bytes
-SHA1 (patch-aa) = 033b4cf539b1fff0039575249c402fb3258c321b
+SHA1 (tuxpaint-config-0.0.8.tar.gz) = fadfc473f4b9ecce4584d4ca6ad6387e52eda1aa
+RMD160 (tuxpaint-config-0.0.8.tar.gz) = bce690059ff1a740e1c94779b305b2cdfd1761ea
+Size (tuxpaint-config-0.0.8.tar.gz) = 90683 bytes
+SHA1 (patch-aa) = 6590cfdccf092040b467b0ed17599dafddac0f9a
