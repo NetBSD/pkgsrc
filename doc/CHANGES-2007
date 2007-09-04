@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1931 2007/09/03 17:01:00 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.1932 2007/09/04 07:38:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3549,3 +3549,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sylpheed to 2.4.5 [drochner 2007-09-03]
 	Updated audio/mp3check to 0.8.3 [drochner 2007-09-03]
 	Updated audio/gmp3info to 0.8.5a [drochner 2007-09-03]
+	Added games/singularity version 0.26a [wiz 2007-09-04]
