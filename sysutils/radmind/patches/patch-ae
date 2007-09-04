@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.1 2006/01/13 19:16:06 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2007/09/04 11:55:44 hauke Exp $
 
---- retr.c.orig	2006-01-13 19:04:50.000000000 +0000
+--- retr.c.orig	2007-07-11 05:01:42.000000000 +0200
 +++ retr.c
-@@ -45,7 +45,6 @@ extern int		verbose;
+@@ -47,7 +47,6 @@ extern int		verbose;
  extern int		showprogress;
  extern int		dodots;
  extern int		cksum;
 -extern int		errno;
+ extern int		create_prefix;
  extern SSL_CTX  	*ctx;
  
- /*
