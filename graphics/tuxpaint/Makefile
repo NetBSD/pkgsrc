@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2007/02/22 19:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2007/09/04 21:11:57 drochner Exp $
 #
 
-DISTNAME=	tuxpaint-0.9.14
-PKGREVISION=	9
+DISTNAME=	tuxpaint-0.9.17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
 		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
@@ -23,6 +22,7 @@ CONFLICTS+=		tuxpaint-stamps<2003.12.23
 
 BROKEN_GETTEXT_DETECTION=	yes
 
+PKG_SYSCONFSUBDIR=	tuxpaint
 MAKE_ENV+=		CONFDIR=${PKG_SYSCONFDIR:Q} CP=${CP:Q} CHMOD=${CHMOD:Q}
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
@@ -35,7 +35,6 @@ LIBS+=			-lpng
 
 post-install:
 	-${FIND} ${PREFIX}/share/doc/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
-	-${RMDIR} ${PREFIX}/share/doc/tuxpaint/cz
 	-${FIND} ${PREFIX}/share/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
@@ -45,5 +44,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-
+.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
