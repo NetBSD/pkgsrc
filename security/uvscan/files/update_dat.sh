@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: update_dat.sh,v 1.4 2007/07/29 05:19:50 jlam Exp $
+# $NetBSD: update_dat.sh,v 1.5 2007/09/04 19:43:15 jlam Exp $
 
 UVSCANDIR="@UVSCANDIR@"
 DAT_SITE="http://download.nai.com/products/datfiles/4.x/nai/"
@@ -11,7 +11,6 @@ AWK="@AWK@"
 BASENAME="@BASENAME@"
 CP="@CP@"
 ECHO="@ECHO@"
-GREP="@GREP@"
 GTAR="@GTAR@"
 MKDIR="@MKDIR@"
 MV="@MV@"
