@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/04 20:54:51 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/04 21:08:00 seb Exp $
 #
 
 DISTNAME=		netdisco-0.95_with_mibs
@@ -101,6 +101,7 @@ CONF_FILES+=		${EGDIR:Q}/netdisco-topology.txt ${PKG_SYSCONFDIR:Q}/netdisco-topo
 REQD_DIRS+=		${PREFIX:Q}/netdisco ${EGDIR:Q}
 OWN_DIRS_PERMS+=	${VARBASE:Q}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
 RCD_SCRIPTS=		netdisco
+RCD_SCRIPT_SRC.netdisco=	${WRKSRC:Q}/bin/netdisco_daemon
 
 .include "../../mk/apache.mk"
 
@@ -129,8 +130,6 @@ do-build:
 	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/bin/netdisco_daemon \
-	    ${PREFIX:Q}/${RCD_SCRIPTS_EXAMPLEDIR:Q}/netdisco
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
 	cd ${WRKSRC:Q} && ${PAX} -rw -pp . ${PREFIX:Q}/netdisco
 	${CHOWN} -R ${NETDISCOUSER}:${NETDISCOGROUP} ${PREFIX:Q}/netdisco
