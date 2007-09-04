@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/13 00:03:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/04 19:36:46 joerg Exp $
 bin/six
+share/doc/kde/HTML/en/six/common
 share/doc/kde/HTML/en/six/filter.png
 share/doc/kde/HTML/en/six/index.cache.bz2
 share/doc/kde/HTML/en/six/index.docbook
