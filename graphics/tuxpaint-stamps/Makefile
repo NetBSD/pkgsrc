@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:01:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/04 21:22:05 drochner Exp $
 #
 
-DISTNAME=	tuxpaint-stamps-2004-10-03
-PKGNAME=	tuxpaint-stamps-2004.10.03
-PKGREVISION=	2
+DISTNAME=	tuxpaint-stamps-2007.07.01
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
@@ -12,8 +10,9 @@ HOMEPAGE=	http://www.tuxpaint.org/
 COMMENT=	Rubber stamps for Tux Paint
 
 DEPENDS+=	tuxpaint>=0.9.13:../../graphics/tuxpaint
-
 CONFLICTS+=	tuxpaint<0.9.13
+
+INSTALL_TARGET=	install-all
 
 post-install:
 	-${FIND} ${PREFIX}/share/tuxpaint/stamps -name CVS -exec \
