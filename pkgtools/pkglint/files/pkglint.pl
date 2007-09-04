@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.715 2007/08/23 09:47:37 joerg Exp $
+# $NetBSD: pkglint.pl,v 1.716 2007/09/04 09:34:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2619,7 +2619,7 @@ sub load_shared_dirs() {
 
 		$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "pkg=$pkg");
 		my $dirs_mk = load_lines("$cwd_pkgsrcdir/$pkg/dirs.mk", true);
-		assert(defined($dirs_mk), "$pkg/dirs.mk is not readable.");
+		assert($dirs_mk, "$pkg/dirs.mk is not readable.");
 
 		foreach my $line (@$dirs_mk) {
 			parseline_mk($line);
