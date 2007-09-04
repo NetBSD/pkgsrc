@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1933 2007/09/04 11:57:46 hauke Exp $
+$NetBSD: CHANGES-2007,v 1.1934 2007/09/04 22:47:15 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3551,3 +3551,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/gmp3info to 0.8.5a [drochner 2007-09-03]
 	Added games/singularity version 0.26a [wiz 2007-09-04]
 	Updated sysutils/radmind to 1.10 [hauke 2007-09-04]
+	Updated www/php-apc to 3.0.14 [jdolecek 2007-09-05]
