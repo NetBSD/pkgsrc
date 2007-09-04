@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2007/03/02 23:44:13 tv Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/09/04 21:04:20 joerg Exp $
 #
 
 PERDITION_VERSION=	1.17
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vergenet.net/linux/perdition/
 COMMENT=		IMAP/POP3 proxy redirector (${PERDITION_COMMENT})
 
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
