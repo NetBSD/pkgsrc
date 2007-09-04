@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2007/09/03 11:48:44 tron Exp $
+# $NetBSD: Makefile,v 1.59 2007/09/04 22:12:23 jdolecek Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -42,6 +42,11 @@ SUBST_MESSAGE.cgi=	Fixing CGI path.
 SUBST_STAGE.cgi=	pre-configure
 SUBST_FILES.cgi=	configure
 SUBST_SED.cgi=		-e 's,@CGIDIR@,${CGIDIR},g'
+
+# Make sure modules can link correctly
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR:Q}${CGIDIR:Q}
