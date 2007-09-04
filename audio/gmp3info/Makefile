@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/08/31 10:32:49 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/04 19:08:21 joerg Exp $
 
 DISTNAME=	mp3info-0.8.5a
 PKGNAME=	g${DISTNAME}
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.ibiblio.org/mp3info/
 COMMENT=	Utility to read and modify the ID3 tags of MP3 files
 
 CONFLICTS=	mp3info-[0-9]*
+
+USE_TOOLS+=	pkg-config
 
 # wgetnstr()
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
