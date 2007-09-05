@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6652 2007/09/03 20:32:48 wiz Exp $
+$NetBSD: TODO,v 1.6653 2007/09/05 20:23:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,7 @@ Suggested package updates
 	o cddb-1.5.2
 	o cddbd-1.5.2
 	o cdlabelgen-4.0.0
-	o cdrtools-2.01.01.34
+	o cdrtools-2.01.01.35
 	o cfengine2-2.2.1
 	o cfitsio-3.030
 	o cflow-1.2
@@ -366,6 +366,7 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.95
+	o claws-mail-3.0.0
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o cmake-2.4.7
@@ -522,17 +523,21 @@ Suggested package updates
 	o gnash-0.8.1
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-build-0.1.7
+	o gnome-build-0.2.0
 	o gnome-games-2.18.2.1
 	o gnome-mag-0.14.8
 	o gnome-speech-0.4.16
+	o gnome-vfs-1.14.6
 	o gnu-crypto-2.1.0
+	o gnumeric-1.7.12
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
+	o gnutls-2.0.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
+	o goffice-0.4.3
 	o gogo-3.11p1
 	o gossip-0.26
 	o gourmet-0.13.3
@@ -601,6 +606,7 @@ Suggested package updates
 	o imlib2-1.4.0
 	o instiki-0.11pl1
 	o intercal-0.24
+	o ion3-devel-20070902
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -649,7 +655,7 @@ Suggested package updates
 	o leafnode-1.11.6
 	o leafpad-0.8.11
 	o lft-2.5 [at http://pwhois.org/]
-	o lftp-3.5.13
+	o lftp-3.5.14
 	o libFoundation-1.1.3
 	o libassuan-1.0.1
 	o libast-0.7
@@ -680,7 +686,7 @@ Suggested package updates
 	o libnids-1.21
 	o libole2-2.2.8
 	o libopensync-0.30
-	o libprelude-0.9.15
+	o libprelude-0.9.15.2
 	o libpreludedb-0.9.13
 	o libshout-2.2.2
 	o libssh-0.2
@@ -1164,7 +1170,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.2.0
+	o tea-17.2.1
 	o ted-2.17
 	o ted-en-us-2.17
 	o texmaker-1.6
