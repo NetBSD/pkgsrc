@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/08 12:37:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/05 19:46:55 jdolecek Exp $
 #
 
 DISTNAME=	PEAR-1.5.4
@@ -66,6 +66,7 @@ SUBST_SED.pear+=	-e "s|@SH@|${SH}|g"
 SUBST_MESSAGE.pear=	Fixing pear installation script.
 
 post-extract:
+	${RM} ${WRKSRC}/INSTALL
 	${MKDIR} ${WRKSRC}/install
 	${MKDIR} ${BUNDLE}
 	${CP} ${FILESDIR}/go-pear.php ${WRKSRC}/install
