@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/05 01:06:07 joerg Exp $
 #
 
 DISTNAME=	twelf-1-4
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	4
+PKGNAME=	${EMACS_PKGNAME_PREFIX}twelf-1.4
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
 
