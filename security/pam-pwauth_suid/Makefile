@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/05 20:29:05 drochner Exp $
 
-DISTNAME=	pam-pwauth_suid-1.0
+DISTNAME=	pam-pwauth_suid-1.1
 CATEGORIES=	security
 DISTFILES=	# empty
 
@@ -9,7 +9,10 @@ COMMENT=	PAM authentication module for unprivileged users
 
 NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
-CFLAGS+=	-DPATH_HELPER=\"${PREFIX}/libexec/pwauth_suid_helper\"
+
+HLPDEF+= -DPATH_HELPER=\"${DESTDIR}${PREFIX}/libexec/pwauth_suid_helper\"
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	lib/security libexec
 
@@ -19,13 +22,18 @@ do-extract:
 
 do-build:
 	(cd ${WRKSRC} && \
-	 ${CC} ${CFLAGS} -shared pam_pwauth_suid.c -o pam_pwauth_suid.so.0 && \
+	 ${CC} ${CFLAGS} -c -fPIC ${HLPDEF} pam_pwauth_suid.c && \
+	 ${LD} -shared pam_pwauth_suid.o -o pam_pwauth_suid.so.0 && \
 	 ${CC} ${CFLAGS} pwauth_suid_helper.c -o pwauth_suid_helper -lcrypt)
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/pam_pwauth_suid.so.0 ${PREFIX}/lib/security
-	${INSTALL_PROGRAM} ${WRKSRC}/pwauth_suid_helper ${PREFIX}/libexec
-	${CHMOD} 04555 ${PREFIX}/libexec/pwauth_suid_helper
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/security
+	${INSTALL_DATA} ${WRKSRC}/pam_pwauth_suid.so.0 \
+		${DESTDIR}${PREFIX}/lib/security
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/pwauth_suid_helper \
+		${DESTDIR}${PREFIX}/libexec
+	${CHMOD} 04555 ${DESTDIR}${PREFIX}/libexec/pwauth_suid_helper
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
