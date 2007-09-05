@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2007/09/03 13:43:40 shannonjr Exp $
+$NetBSD: distinfo,v 1.18 2007/09/05 18:58:19 shannonjr Exp $
 
-SHA1 (libprelude-0.9.15.1.tar.gz) = a464ae21e412cecfbc60cd132f4cbcbb6a78d4b7
-RMD160 (libprelude-0.9.15.1.tar.gz) = 12d26f8d133d606e7cef39fdf188e566999f26af
-Size (libprelude-0.9.15.1.tar.gz) = 1944953 bytes
-SHA1 (patch-aa) = 3b668aeed553ce54baf9dd50da1fa71331ff7be7
+SHA1 (libprelude-0.9.15.2.tar.gz) = ee11319f2f526318642900fa27da0c3e4bbdf9bc
+RMD160 (libprelude-0.9.15.2.tar.gz) = c69e21175d60fd6c858935b927d85e6043cbb486
+Size (libprelude-0.9.15.2.tar.gz) = 1949284 bytes
+SHA1 (patch-aa) = c8aff1bce0b649b77554eefca4625f69393ac1c2
 SHA1 (patch-ab) = 3fa1b01b728cd1210cf22717e2f6c81a3d3b70cc

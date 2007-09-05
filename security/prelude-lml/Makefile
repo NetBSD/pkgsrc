@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/09/03 13:46:04 shannonjr Exp $
+# $NetBSD: Makefile,v 1.20 2007/09/05 18:58:41 shannonjr Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.10.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
@@ -33,8 +34,13 @@ BUILD_DEFS+=		VARBASE
 PRELUDE_LML_PID_DIR=	${VARBASE}/run/prelude-lml
 PRELUDE_HOME=		${VARBASE}/prelude-lml
 
-PKG_GROUPS=	${PRELUDE_GROUP}
-PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
+PKG_GROUPS=		${PRELUDE_GROUP}
+PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
+
+EGDIR=			${PREFIX}/share/examples/prelude-lml
+REQD_DIRS=		${EGDIR}
+MAKE_DIRS+=		${VARBASE}/prelude-lml PKG_SYSCONFDIR
+MAKE_DIRS_PERMS+=	${VARBASE}/prelude-lml	${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
@@ -49,23 +55,72 @@ SUBST_FILES.code=	run-prelude-lml.c
 SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	post-patch
+SUBST_FILES.make=	Makefile.in
+SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
+
 PKG_SYSCONFSUBDIR=	prelude-lml
-EGDIR=		share/examples/prelude-lml/
 CONF_FILES_PERMS+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
 			${ROOT_USER} ${ROOT_GROUP} 0644
 CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
 			${ROOT_USER} ${ROOT_GROUP} 0644
-.for f in apc-emu.rules arbor.rules arpwatch.rules checkpoint.rules \
-	cisco-pix.rules cisco-router.rules cisco-vpn.rules clamav.rules \
-	dell-om.rules f5-bigip.rules grsecurity.rules honeyd.rules \
-	httpd.rules ipchains.rules ipfw.rules ipso.rules linksys-wap11.rules \
-	modsecurity.rules ms-sql.rules nagios.rules navce.rules \
-	netapp-ontap.rules netfilter.rules netscreen.rules ntsyslog.rules \
-	openhostapd.rules pam.rules pcanywhere.rules pcre.rules \
-	portsentry.rules postfix.rules proftpd.rules qpopper.rules \
-	selinux.rules sendmail.rules shadow-utils.rules single.rules \
-	squid.rules ssh.rules sudo.rules tripwire.rules vigor.rules \
-	vpopmail.rules webmin.rules wu-ftp.rules zywall.rules zyxel.rules
+
+# From plugins/pcre/ruleset/Makefile.in
+ruleset_DATA = \
+	apc-emu.rules           \
+	arbor.rules             \
+	arpwatch.rules          \
+	bonding.rules           \
+	cacti-thold.rules       \
+	checkpoint.rules        \
+	cisco-asa.rules         \
+	cisco-common.rules      \
+	cisco-css.rules         \
+	cisco-ips.rules         \
+	cisco-router.rules      \
+	cisco-vpn.rules         \
+	clamav.rules            \
+	dell-om.rules           \
+	f5-bigip.rules          \
+	grsecurity.rules        \
+	honeyd.rules            \
+	httpd.rules             \
+	ipchains.rules          \
+	ipfw.rules              \
+	modsecurity.rules       \
+	ms-cluster.rules        \
+	ms-sql.rules            \
+	nagios.rules            \
+	navce.rules             \
+	netapp-ontap.rules      \
+	netfilter.rules         \
+	netscreen.rules         \
+	ntsyslog.rules          \
+	openhostapd.rules       \
+	pam.rules               \
+	pcanywhere.rules        \
+	pcre.rules              \
+	portsentry.rules        \
+	postfix.rules           \
+	proftpd.rules           \
+	qpopper.rules           \
+	selinux.rules           \
+	sendmail.rules          \
+	shadow-utils.rules      \
+	single.rules            \
+	sonicwall.rules         \
+	spamassassin.rules      \
+	squid.rules             \
+	ssh.rules               \
+	sudo.rules              \
+	tripwire.rules          \
+	vigor.rules             \
+	vpopmail.rules          \
+	linksys-wap11.rules     \
+	webmin.rules            \
+	wu-ftp.rules
+.for f in ${ruleset_DATA}
 CONF_FILES+=	${EGDIR}/ruleset/${f:Q} ${PKG_SYSCONFDIR}/ruleset/${f:Q}
 .endfor
 

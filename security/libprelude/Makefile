@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2007/09/03 13:43:40 shannonjr Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/05 18:58:19 shannonjr Exp $
 #
-DISTNAME=		libprelude-0.9.15.1
+DISTNAME=		libprelude-0.9.15.2
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
@@ -38,7 +39,10 @@ PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
-REQD_DIRS=	${PREFIX}/share/examples/libprelude
+EGDIR=		${PREFIX}/share/examples/libprelude
+REQD_DIRS=	${EGDIR}
+MAKE_DIRS=	${PKG_SYSCONFDIR}/default ${PKG_SYSCONFDIR}/profile
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/profile ${ROOT_USER} ${ROOT_GROUP} 0711
 
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/default/client.conf
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/default/global.conf
