@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1936 2007/09/05 13:48:24 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1937 2007/09/05 19:52:46 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3554,3 +3554,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/php-apc to 3.0.14 [jdolecek 2007-09-05]
 	Updated mail/exim-html to 4.67 [roland 2007-09-05]
 	Updated devel/apr to 1.2.9 [xtraeme 2007-09-05]
+	Updated time/pear-Date to 1.4.7 [jdolecek 2007-09-05]
