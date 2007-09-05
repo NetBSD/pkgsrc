@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1 2007/09/05 21:51:22 drochner Exp $
+
+--- guile/src/core.c.orig	2007-09-04 18:11:37.000000000 +0200
++++ guile/src/core.c
+@@ -22,7 +22,7 @@
+ #include <gnutls/gnutls.h>
+ #include <libguile.h>
+ 
+-#include <alloca.h>
++#include <stdlib.h>
+ 
+ #include "enums.h"
+ #include "smobs.h"
+@@ -2380,7 +2380,8 @@ SCM_DEFINE (scm_gnutls_x509_certificate_
+       if (c_oid_actual_len < c_oid_len)					\
+ 	c_oid = scm_realloc (c_oid, c_oid_actual_len);			\
+ 									\
+-      result = scm_take_locale_string (c_oid);				\
++      result = scm_take_locale_stringn (c_oid,				\
++					c_oid_actual_len);		\
+     }									\
+ 									\
+   return result;
