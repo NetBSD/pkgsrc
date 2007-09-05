@@ -1,4 +1,4 @@
-/* $NetBSD: pam_pwauth_suid.c,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $ */
+/* $NetBSD: pam_pwauth_suid.c,v 1.2 2007/09/05 20:29:05 drochner Exp $ */
 
 #include <sys/types.h>
 #include <security/pam_appl.h>
@@ -8,23 +8,32 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <errno.h>
+#include <signal.h>
 
 static int
 askhelper(const char *user, const char *pass)
 {
 	int fd[2];
+	sigset_t chldsig, omask;
 	pid_t pid, rpid;
 	ssize_t res;
 	size_t pwlen;
-	int s;
+	int err, s;
 
 	if (pipe(fd) < 0)
+		return errno;
+
+	/* make sure only we get the exit status of the helper */
+	sigemptyset(&chldsig);
+	sigaddset(&chldsig, SIGCHLD);
+	if (sigprocmask(SIG_BLOCK, &chldsig, &omask) < 0)
 		return errno;
 
 	pid = vfork();
 	switch (pid) {
 		case -1:
-			return errno;
+			err = errno;
+			goto error;
 		case 0: /* child, feed it through its stdin */
 			(void)dup2(fd[0], STDIN_FILENO);
 			(void)close(fd[0]);
@@ -38,18 +47,25 @@ askhelper(const char *user, const char *pass)
 
 	pwlen = strlen(pass);
 	res = write(fd[1], pass, pwlen);
-	if (res != pwlen)
-		return (res == -1 ? errno : EIO);
+	if (res != pwlen) {
+		err = (res == -1 ? errno : EIO);
+		goto error;
+	}
 
 	(void)close(fd[1]); /* now child gets an EOF */
 
 	rpid = waitpid(pid, &s, 0);
+	sigprocmask(SIG_SETMASK, &omask, 0);
 	if (rpid != pid)
 		return errno;
 	if (!WIFEXITED(s) || WEXITSTATUS(s))
 		return EAUTH;
 
 	return 0;
+
+error:
+	sigprocmask(SIG_SETMASK, &omask, 0);
+	return err;
 }
 
 PAM_EXTERN int
