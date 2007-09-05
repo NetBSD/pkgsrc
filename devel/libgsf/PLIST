@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/07/28 14:42:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/09/05 16:44:28 drochner Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -7,6 +7,8 @@ include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-output-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-shared-bonobo-stream.h
+include/libgsf-1/gsf-gvfs/gsf-input-gvfs.h
+include/libgsf-1/gsf-gvfs/gsf-output-gvfs.h
 include/libgsf-1/gsf-win32/gsf-input-win32.h
 include/libgsf-1/gsf-win32/gsf-output-win32.h
 include/libgsf-1/gsf/gsf-blob.h
@@ -99,10 +101,14 @@ share/gtk-doc/html/gsf/sources.html
 share/gtk-doc/html/gsf/style.css
 share/gtk-doc/html/gsf/up.png
 share/locale/es/LC_MESSAGES/libgsf.mo
+share/locale/oc/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
+share/locale/zh_HK/LC_MESSAGES/libgsf.mo
+share/locale/zh_TW/LC_MESSAGES/libgsf.mo
 @dirrm share/gtk-doc/html/gsf
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm include/libgsf-1/gsf-win32
+@dirrm include/libgsf-1/gsf-gvfs
 @dirrm include/libgsf-1/gsf-gnome
 @dirrm include/libgsf-1/gsf
 @dirrm include/libgsf-1
