@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.13 2007/03/16 10:29:22 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.14 2007/09/05 13:34:32 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -14,8 +14,15 @@
 #	* "wrksrc" for WRKSRC
 #	* "work" for WRKDIR
 #	* "wrkobjdir" for WRKOBJDIR
+#	* "extra" for CHECK_WRKREF_EXTRA_DIRS
 #
 #	Default value: "tools" for PKG_DEVELOPERs, "no" otherwise.
+#
+# CHECK_WRKREF_EXTRA_DIRS
+#	A list of additional directories (or other strings) that must
+#	not appear in the installed files. For pbulk builds, the
+#	location where the pbulk tools are installed should be added
+#	here.
 #
 # Package-settable variables:
 #
@@ -41,6 +48,7 @@ _CHECK_WRKREF_DIR.work=		${WRKDIR}
 _CHECK_WRKREF_DIR.tools=	${TOOLS_DIR}
 _CHECK_WRKREF_DIR.wrkobjdir=	${WRKOBJDIR}
 _CHECK_WRKREF_DIR.wrksrc=	${WRKSRC}
+_CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
 
 _CHECK_WRKREF_DIRS=	# none
 .for d in ${CHECK_WRKREF}
