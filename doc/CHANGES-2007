@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1939 2007/09/05 21:17:34 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1940 2007/09/05 21:49:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3558,3 +3558,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.53 [adam 2007-09-05]
 	Removed net/yougrabber [wiz 2007-09-05]
 	Added net/youtube-dl version 20070824 [wiz 2007-09-05]
+	Updated sysutils/dmidecode to 2.9 [xtraeme 2007-09-05]
