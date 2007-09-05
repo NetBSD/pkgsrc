@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/23 15:19:41 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/09/05 19:04:00 shannonjr Exp $
 bin/libpreludedb-config
 bin/preludedb-admin
 include/libpreludedb/preludedb-error.h
@@ -56,6 +56,10 @@ share/libpreludedb/classic/addIndices.sql
 share/libpreludedb/classic/pgsql.sql
 share/libpreludedb/classic/sqlite.sql
 share/libpreludedb/classic/sqlite-update-14-4.sql
+man/man1/preludedb-admin.1
+share/libpreludedb/classic/mysql-update-14-6.sql
+share/libpreludedb/classic/pgsql-update-14-6.sql
+share/libpreludedb/classic/sqlite-update-14-6.sql
 @dirrm share/libpreludedb/classic
 @dirrm share/libpreludedb
 @dirrm share/gtk-doc/html/libpreludedb
