@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/05/12 10:00:35 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/09/05 20:43:41 shannonjr Exp $
 bin/prelude-lml
 include/prelude-lml/prelude-lml.h
 lib/prelude-lml/debug.la
@@ -62,6 +62,10 @@ share/examples/prelude-lml/ruleset/exim.rules
 share/examples/prelude-lml/ruleset/ms-cluster.rules
 share/examples/prelude-lml/ruleset/bonding.rules
 share/examples/prelude-lml/ruleset/cisco-common.rules
+share/examples/libprelude/client.conf
+share/examples/libprelude/global.conf
+share/examples/libprelude/idmef-client.conf
+share/examples/libprelude/tls.conf
 share/examples/rc.d/preludelml
 @dirrm share/examples/prelude-lml/ruleset
 @dirrm share/examples/prelude-lml
