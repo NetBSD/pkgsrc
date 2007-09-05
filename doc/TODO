@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6654 2007/09/05 20:38:30 adam Exp $
+$NetBSD: TODO,v 1.6655 2007/09/05 21:49:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -410,7 +410,6 @@ Suggested package updates
 	o dircproxy-devel-1.2.0.2
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
-	o dmidecode-2.9
 	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
