@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.16 2007/07/02 07:19:03 adam Exp $
+$NetBSD: patch-aa,v 1.17 2007/09/05 20:37:08 adam Exp $
 
---- makefile.machine.orig	2007-07-01 19:02:13.000000000 +0200
+--- makefile.machine.orig	2007-09-01 10:26:00.000000000 +0200
 +++ makefile.machine
-@@ -3,20 +3,20 @@
- # LITTLE_ENDIAN and BIG_ENDIAN are already defined by the system headers
+@@ -2,20 +2,20 @@
+ # makefile for Linux (x86, PPC, alpha ...)
  #
  
 -OPTFLAGS=-O
