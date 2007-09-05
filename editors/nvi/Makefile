@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/06/04 14:45:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/05 23:05:13 wiz Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kotnet.org/~skimo/nvi/devel/
 COMMENT=	Berkeley nvi with additional features
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,5 +39,4 @@ USE_TOOLS+=		sh
 USE_LIBTOOL=		YES
 
 .include "../../databases/db3/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
