@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2007/07/27 13:43:44 adam Exp $
+$NetBSD: distinfo,v 1.29 2007/09/05 20:37:08 adam Exp $
 
-SHA1 (p7zip_4.51_src_all.tar.bz2) = e3708dc69ec44dba554ab15d0cacbc226eae9420
-RMD160 (p7zip_4.51_src_all.tar.bz2) = af57615cc9d951516891a3f52b169f3d7c262650
-Size (p7zip_4.51_src_all.tar.bz2) = 1483484 bytes
-SHA1 (patch-aa) = 5e7d8175440a500642adba3fe0579dd40329e166
-SHA1 (patch-ab) = 98578e58d3abf4e0fe0615f10c563cac78ceb047
+SHA1 (p7zip_4.53_src_all.tar.bz2) = 5776025e49d14f3148d2a9b5d3d067bb19c6d745
+RMD160 (p7zip_4.53_src_all.tar.bz2) = 205b920d1423824e675bfa94290c1410024c37ca
+Size (p7zip_4.53_src_all.tar.bz2) = 1488885 bytes
+SHA1 (patch-aa) = 44db7bc8ce6b03b44fe3aba223396d157b49e845
+SHA1 (patch-ab) = bc7955af7363154e04e1dac1d510c9b22c6fd360
 SHA1 (patch-ac) = ad7be88ca5af55c8c40fdef2a0f9a19cb20db38b
