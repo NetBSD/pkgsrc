@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/03 14:44:25 shannonjr Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/05 18:59:02 shannonjr Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
@@ -21,7 +21,7 @@ PKG_GROUPS_VARS+=	PRELUDE_GROUP
 PKG_USERS_VARS+=	PRELUDE_USER
 
 EGDIR=			${PREFIX}/share/examples/prelude-pflogger
-REQD_DIRS=		${EGDIR}
+REQD_DIRS=		${EGDIR} ${PKG_SYSCONFDIR}
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
