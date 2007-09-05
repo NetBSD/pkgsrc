@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2007/08/13 22:18:58 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2007/09/05 14:31:52 reed Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus
+PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl
 PKG_SUGGESTED_OPTIONS+=		gnutls
 
 .include "../../mk/bsd.options.mk"
@@ -51,7 +51,14 @@ PLIST_SUBST+=		DBUS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+= --enable-debug
+CONFIGURE_ARGS+=	--enable-debug
 .else
-CONFIGURE_ARGS+= --disable-debug
+CONFIGURE_ARGS+=	--disable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Msasl)
+CONFIGURE_ARGS+=	--enable-cyrus-sasl
+.  include "../../security/cyrus-sasl/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-cyrus-sasl
 .endif
