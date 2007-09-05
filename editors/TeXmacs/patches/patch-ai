@@ -1,17 +1,23 @@
-$NetBSD: patch-ai,v 1.4 2007/08/31 10:05:59 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2007/09/05 16:40:35 drochner Exp $
 
---- plugins/maxima/bin/maxima_detect.orig	2007-05-15 19:54:34.000000000 +0200
+--- plugins/maxima/bin/maxima_detect.orig	2007-09-03 16:47:53.000000000 +0200
 +++ plugins/maxima/bin/maxima_detect
-@@ -40,7 +40,7 @@ PATH="/cygdrive/c/Program Files/Maxima-5
- PATH="/cygdrive/c/Program Files/Maxima-5.9.3/bin:$PATH"
- export PATH
+@@ -36,11 +36,11 @@ find_old_help()
+   fi
+ }
  
--MAXIMA=`type -p maxima 2>/dev/null`
-+MAXIMA=`which maxima`
+-if [ $OSTYPE == "cygwin" ] ; then EXT='.bat'; else EXT=''; fi
+-MAXIMA=`type -p maxima$EXT 2>/dev/null`
++if [ x$OSTYPE = x"cygwin" ] ; then EXT='.bat'; else EXT=''; fi
++MAXIMA=`which maxima$EXT`
  if [ $? -eq 0 ]
  then
-   if [ -f "/usr/bin/cygwin1.dll" ]
-@@ -64,9 +64,10 @@ version 5.9.2
+-  if [ $OSTYPE == "cygwin" ]
++  if [ x$OSTYPE = x"cygwin" ]
+   then
+     if [ "$1" ]
+     then
+@@ -61,9 +61,10 @@ version 5.9.2
  version 5.9.3
  version 5.10
  version 5.11
