@@ -41,9 +41,9 @@ catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cgi
-coqide			Enable ide support for coq.
 charset	
 clamav			Enable ClamAV support.
+coqide			Enable ide support for coq.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -146,6 +146,7 @@ hping-suid		Install hping executable setuid root.
 hpn-patch	
 i586-optimized		Optimize for i586 (only).
 iconv	
+icu			Enable icu support.
 id3	
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
@@ -299,9 +300,6 @@ ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samba	
 samplerate		Enable libsamplerate support.
 sane-backends-hp3900	Include HP3900 driver.
-snort-flexresp		Flexible Responses on hostile connection attempts
-snort-flexresp2		NEW Flexible Responses on hostile connection attempts
-snort-prelude		Enable prelude support.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
 scapy-crypto		Add in crypto support
@@ -315,10 +313,13 @@ skey
 slang			Enable S-Lang support.
 slp	
 small-net		Tune for a smaller networks.
-smokeping-speedycgi	Enable SpeedyCGI.
 smime			Enable S/MIME support.
+smokeping-speedycgi	Enable SpeedyCGI.
 sndfile			Enable sndfile support.
 snmp	
+snort-flexresp		Flexible Responses on hostile connection attempts
+snort-flexresp2		NEW Flexible Responses on hostile connection attempts
+snort-prelude		Enable prelude support.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
@@ -341,8 +342,8 @@ suexec
 sun-jre-jce		Use unlimited strength cryptograpy extension.
 svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
-syslogng-spoof		Spoof the original source address of forwarded packets
 syslog			Enable syslog support.
+syslogng-spoof		Spoof the original source address of forwarded packets
 tcpd	
 tcpwrappers	
 tdb	
