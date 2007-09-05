@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2007/09/05 21:51:22 drochner Exp $
+
+--- ./lib/x509/output.c.orig	2007-08-21 23:48:45.000000000 +0200
++++ ./lib/x509/output.c
+@@ -84,7 +84,7 @@ asciiprint (gnutls_string * str, const c
+   size_t j;
+ 
+   for (j = 0; j < len; j++)
+-    if (isprint (data[j]))
++    if (isprint ((unsigned char) data[j]))
+       addf (str, "%c", (unsigned char) data[j]);
+     else
+       addf (str, ".");

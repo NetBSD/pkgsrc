@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2007/06/06 06:23:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2007/09/05 21:51:21 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUTLS_BUILDLINK3_MK:=	${GNUTLS_BUILDLINK3_MK}+
@@ -23,6 +23,6 @@ BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
-#.include "../../security/opencdk/buildlink3.mk"
+.include "../../security/opencdk/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
