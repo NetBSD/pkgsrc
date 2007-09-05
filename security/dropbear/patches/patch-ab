@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2007/03/23 20:07:02 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2007/09/05 21:08:06 drochner Exp $
 
---- options.h.orig	2007-02-22 16:51:35.000000000 +0100
+--- options.h.orig	2007-08-08 17:39:37.000000000 +0200
 +++ options.h
 @@ -132,8 +132,11 @@ etc) slower (perhaps by 50%). Recommende
   * but there's an interface via a PAM module - don't bother using it otherwise.
@@ -15,12 +15,3 @@ $NetBSD: patch-ab,v 1.5 2007/03/23 20:07:02 drochner Exp $
  #define ENABLE_SVR_PUBKEY_AUTH
  
  #define ENABLE_CLI_PASSWORD_AUTH
-@@ -159,7 +162,7 @@ etc) slower (perhaps by 50%). Recommende
-  * however significantly reduce the security of your ssh connections
-  * if the PRNG state becomes guessable - make sure you know what you are
-  * doing if you change this. */
--#define DROPBEAR_RANDOM_DEV "/dev/random"
-+#define DROPBEAR_RANDOM_DEV "/dev/urandom"
- 
- /* prngd must be manually set up to produce output */
- /*#define DROPBEAR_PRNGD_SOCKET "/var/run/dropbear-rng"*/
