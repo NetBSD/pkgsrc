@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/05/05 22:09:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/05 19:51:41 jdolecek Exp $
 
-DISTNAME=	Date-1.4.3
-PKGREVISION=	1
+DISTNAME=	Date-1.4.7
 CATEGORIES=	time
 
 MAINTAINER=	jdolecek@NetBSD.org
