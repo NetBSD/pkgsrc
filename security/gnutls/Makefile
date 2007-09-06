@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/09/05 21:51:21 drochner Exp $
+# $NetBSD: Makefile,v 1.64 2007/09/06 01:12:33 wiz Exp $
 
 DISTNAME=	gnutls-2.0.0
 CATEGORIES=	security devel
@@ -54,6 +54,6 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/opencdk/buildlink3.mk"
-# guile is useful for selftests, but bindings should be seperate pkgs
+# guile is useful for selftests, but bindings should be separate pkgs
 #.include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
