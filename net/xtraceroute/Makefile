@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/10/01 22:36:46 schwarz Exp $
+# $NetBSD: Makefile,v 1.47 2007/09/06 21:51:53 jlam Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -24,10 +24,10 @@ CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE:Q}
 CONFIGURE_ARGS+= --with-lib-MesaGL
 
 .include "../../mk/bsd.prefs.mk"
+
 .if !empty(LOWER_OPSYS:Mirix5*)
-CONFIGURE_ARGS+= --with-traceroute=/usr/etc/traceroute
-# needs snprintf()
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-traceroute=/usr/etc/traceroute
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
 .endif
 
 post-install:
