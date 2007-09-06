@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.109 2007/09/06 19:23:25 joerg Exp $
+# $NetBSD: bootstrap,v 1.110 2007/09/06 20:13:44 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -536,6 +536,16 @@ OSF1)
 	need_awk=yes
 	need_sed=yes
 	set_opsys=no
+	;;
+QNX)
+	root_group=root
+	need_pax=yes
+	need_bsd_install=yes
+	set_opsys=no
+	groupsprog="id -gn"
+	whoamiprog="id -un"
+	fetch_cmd="/usr/bin/ftp"
+	machine_arch=`uname -p | sed -e 's/x86/i386/'`
 	;;
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
