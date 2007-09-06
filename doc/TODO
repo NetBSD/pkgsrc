@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6655 2007/09/05 21:49:46 xtraeme Exp $
+$NetBSD: TODO,v 1.6656 2007/09/06 22:01:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,6 +462,7 @@ Suggested package updates
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
+	o fetchyahoo-2.11.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.2.31
@@ -483,6 +484,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o gaim-icb-20070203
+	o galculator-1.3
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.11
@@ -605,7 +607,6 @@ Suggested package updates
 	o imlib2-1.4.0
 	o instiki-0.11pl1
 	o intercal-0.24
-	o ion3-devel-20070902
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -656,6 +657,7 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.5.14
 	o libFoundation-1.1.3
+	o libarchive-2.2.7
 	o libassuan-1.0.1
 	o libast-0.7
 	o libcdio-0.78.2
@@ -809,6 +811,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openpam-20050616
+	o openssh-4.7p1
 	o openssl-0.9.8e (in wip/)
 	o oregano-0.60.0
 	o oroborus-2.0.18
