@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.10 2006/09/03 12:13:13 obache Exp $	*/
+/*	$NetBSD: pax.h,v 1.11 2007/09/06 20:10:22 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -253,7 +253,12 @@ typedef struct oplist {
 #else
 # define MAJOR(x)	major(x)
 # define MINOR(x)	minor(x)
-# define TODEV(x, y)	makedev((x), (y))
+# ifdef __QNXNTO__
+# include <sys/netmgr.h>
+#  define TODEV(x, y)	makedev(ND_LOCAL_NODE, (x), (y))
+# else
+#  define TODEV(x, y)	makedev((x), (y))
+# endif
 #endif
 
 /*
