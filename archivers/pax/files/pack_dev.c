@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.2 2004/08/21 03:28:56 jlam Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.3 2007/09/06 20:10:22 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -48,7 +48,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.2 2004/08/21 03:28:56 jlam Exp $");
+__RCSID("$NetBSD: pack_dev.c,v 1.3 2007/09/06 20:10:22 joerg Exp $");
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
@@ -75,6 +75,7 @@ __RCSID("$NetBSD: pack_dev.c,v 1.2 2004/08/21 03:28:56 jlam Exp $");
 #endif
 
 #include "pack_dev.h"
+#include "pax.h"
 
 static	pack_t	pack_netbsd;
 static	pack_t	pack_freebsd;
@@ -96,7 +97,7 @@ pack_native(int n, u_long numbers[], const char **error)
 	portdev_t dev = 0;
 
 	if (n == 2) {
-		dev = makedev(numbers[0], numbers[1]);
+		dev = TODEV(numbers[0], numbers[1]);
 		if (major(dev) != numbers[0])
 			*error = iMajorError;
 		else if (minor(dev) != numbers[1])
