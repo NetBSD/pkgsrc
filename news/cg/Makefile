@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/06 21:51:53 jlam Exp $
 #
 
 DISTNAME=	cg-0.4
@@ -14,12 +14,13 @@ USE_TOOLS+=		lex
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs regex.h
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# <regex.h>
 SUBST_CLASSES+=		regex_h
-SUBST_STAGE.regex_h=     post-patch
-SUBST_FILES.regex_h=     checkgroup.c
-SUBST_SED.regex_h=       -e "s,<regex\.h>,<nbcompat/regex.h>,"
+SUBST_STAGE.regex_h=	post-patch
+SUBST_FILES.regex_h=	checkgroup.c
+SUBST_SED.regex_h=	-e "s,<regex\.h>,<nbcompat/regex.h>,"
 .endif
+
 .include "../../mk/bsd.pkg.mk"
