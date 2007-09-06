@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2007/09/06 15:55:06 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/06 16:31:55 jlam Exp $
 
 DISTNAME=	dropbear-0.50
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 
@@ -22,7 +23,12 @@ CONFIGURE_ARGS+=	--enable-pam
 
 MAKEFLAGS+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+
 post-install:
+	${INSTALL_MAN} ${WRKSRC}/dbclient.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/dropbear.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/dropbearkey.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dropbear
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dropbear
 
