@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/07/04 20:54:55 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2007/09/06 21:51:53 jlam Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -70,8 +70,7 @@ post-install:
 			${WRKSRC}/README.FIRST ${PREFIX}/share/doc/leafnode
 
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs snprintf(), vsnprintf()
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# {,v}snprintf()
 .endif
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

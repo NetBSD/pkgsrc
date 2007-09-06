@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/07/19 14:54:04 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/06 21:51:52 jlam Exp $
 
 DISTNAME=	tar-1.15.1
 PKGNAME=	gtar-base-1.15.1
@@ -65,10 +65,8 @@ post-install:
 	${LN} -sf ${DESTDIR}${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
 .endif
 
-.include "../../mk/bsd.prefs.mk"
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs vnsprintf
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# vnsprintf()
 .endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

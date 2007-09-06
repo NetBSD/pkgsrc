@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/06 21:51:53 jlam Exp $
 #
 
 DISTNAME=	incm-0.5
@@ -21,7 +21,7 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Interix"
-.  include "../../pkgtools/libnbcompat/buildlink3.mk" # for utimes()
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# utimes()
 .endif
 
 .include "../../mk/bsd.pkg.mk"
