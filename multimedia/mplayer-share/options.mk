@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2007/07/11 20:39:38 tron Exp $
+# $NetBSD: options.mk,v 1.22 2007/09/06 18:31:00 abs Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -48,7 +48,7 @@ PKG_SUPPORTED_OPTIONS+=	mlib
 PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection xvid
 .endif
 .if ${MACHINE_ARCH} == "i386"
-PKG_SUPPORTED_OPTIONS+= mplayer-win32
+PKG_SUPPORTED_OPTIONS+= mplayer-default-cflags mplayer-win32
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || \
     ${MACHINE_ARCH} == "alpha"
@@ -61,7 +61,7 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 
 .for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
-	    mplayer-runtime-cpudetection mplayer-win32 \
+	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
 	    nas oss png sdl theora vorbis xvid
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
 PKG_SUGGESTED_OPTIONS+=	${_o_}
