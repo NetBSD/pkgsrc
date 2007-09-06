@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2007/06/07 13:19:54 tron Exp $
+# $NetBSD: Makefile,v 1.61 2007/09/06 18:11:57 abs Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 BROKEN_IN=		pkgsrc-2006Q4
 
@@ -79,9 +79,16 @@ do-install:
 	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/.svn
 	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
 
-.include "../../multimedia/mplayer-share/Makefile.depends"
-
+.include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+
+.include "../../multimedia/mplayer-share/Makefile.depends"
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../multimedia/mplayer-share/Makefile.cflags"
