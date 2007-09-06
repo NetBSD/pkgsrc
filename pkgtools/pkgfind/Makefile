@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/05/18 10:03:31 peter Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/06 21:51:54 jlam Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
@@ -37,7 +37,7 @@ SUBST_MESSAGE.path=	Adjusting pkgsrc directory.
 .if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly"
 CFLAGS+=	-DNEED_LIBNBCOMPAT
 LDFLAGS+=	-lnbcompat
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
