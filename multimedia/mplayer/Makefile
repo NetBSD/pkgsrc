@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2007/06/08 10:07:17 tron Exp $
+# $NetBSD: Makefile,v 1.44 2007/09/06 18:11:57 abs Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 
 COMMENT=	Software-only MPEG-1/2/4 video decoder
 
@@ -19,15 +19,18 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/X11R6/include
 
 INSTALLATION_DIRS+=	bin
 
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXv/buildlink3.mk"
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin
+
+.include "../../x11/libXt/buildlink3.mk"
+
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
 .include "../../mk/bsd.pkg.mk"
-
 .include "../../multimedia/mplayer-share/Makefile.cflags"
