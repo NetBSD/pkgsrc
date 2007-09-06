@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.7 2006/10/05 12:56:27 rillig Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.8 2007/09/06 08:24:12 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -125,16 +125,10 @@ update-dirlist:
 
 
 ${_DDIR}: ${_DLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	ddir=`${SED} 's:-[^-]*$$::' ${_DLIST}`;				\
-	${ECHO} >${_DDIR};						\
-	for pkg in $${ddir} ; do					\
-		if ${PKG_INFO} -b "$${pkg}" >/dev/null 2>&1 ; then	\
-			${PKG_INFO} -b "$${pkg}" | ${SED}	-ne	\
-			    's,\([^/]*/[^/]*\)/Makefile:.*,\1,p' | 	\
-			    ${HEAD} -1 >>${_DDIR};			\
-		fi ;							\
-	done
+	${RUN}								\
+	for pkg in `${CAT} ${_DLIST}`; do				\
+		${PKG_INFO} -Q PKGPATH "$${pkg}";			\
+	done >> ${_DDIR}
 
 ${_DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
