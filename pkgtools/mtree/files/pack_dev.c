@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.3 2007/09/06 21:08:08 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -48,7 +48,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.2 2004/08/21 04:10:45 jlam Exp $");
+__RCSID("$NetBSD: pack_dev.c,v 1.3 2007/09/06 21:08:08 joerg Exp $");
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
@@ -73,6 +73,9 @@ __RCSID("$NetBSD: pack_dev.c,v 1.2 2004/08/21 04:10:45 jlam Exp $");
 #if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
+#ifdef __QNXNTO__
+#include <sys/netmgr.h>
+#endif
 
 #include "pack_dev.h"
 
@@ -96,7 +99,11 @@ pack_native(int n, u_long numbers[], const char **error)
 	portdev_t dev = 0;
 
 	if (n == 2) {
+#ifdef __QNXNTO__
+		dev = makedev(ND_LOCAL_NODE, numbers[0], numbers[1]);
+#else
 		dev = makedev(numbers[0], numbers[1]);
+#endif
 		if (major(dev) != numbers[0])
 			*error = iMajorError;
 		else if (minor(dev) != numbers[1])
