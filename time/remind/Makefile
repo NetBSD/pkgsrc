@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/06 21:51:55 jlam Exp $
 #
 
 DISTNAME=	remind-03.00.24
@@ -48,9 +48,9 @@ post-install:
 		${PREFIX}/bin/rem2html
 
 .include "../../mk/bsd.prefs.mk"
+
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs glob.h
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# <glob.h>
 CPPFLAGS+=	-DNBCOMPAT_GLOB_H
 .endif
 

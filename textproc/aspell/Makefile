@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/06/10 16:03:45 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/06 21:51:54 jlam Exp $
 #
 
 DISTNAME=		aspell-0.60.5
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--enable-pkgdatadir=${PREFIX}/share/aspell
 CONFIGURE_ARGS+=	--enable-dict-dir=${PREFIX}/lib/aspell
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 
+.include "../../mk/bsd.prefs.mk"
+
 # Loadable filter currently don't work on NetBSD, see
 # https://sourceforge.net/tracker/?func=detail&atid=100245&aid=1336865&group_id=245
 # Disable dynamic loading of filters until it is fixed.
@@ -51,10 +53,8 @@ NOT_FOR_COMPILER=	xlc
 
 LIBS.SunOS+=		-lm
 
-.include "../../mk/bsd.prefs.mk"
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs vsnprintf() and snprintf()
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+. include "../../pkgtools/libnbcompat/inplace.mk"	# {,v}snprintf()
 CPPFLAGS+=	-DDECLARE_VSNPRINTF -DDECLARE_SNPRINTF
 # IRIX 5 has an older implementation of signal()
 CPPFLAGS+=	-DHAVE_OLD_SIGNAL

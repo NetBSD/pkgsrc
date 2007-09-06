@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2007/08/29 22:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2007/09/06 21:51:54 jlam Exp $
 
 DISTNAME=	libxml2-2.6.30
 CATEGORIES=	textproc
@@ -45,8 +45,7 @@ SUBST_SED.cat=	-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
 SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
 
 .if !empty(LOWER_OPSYS:Mirix5*)
-# needs glob.h
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.  include "../../pkgtools/libnbcompat/inplace.mk"	# <glob.h>
 SUBST_CLASSES+=		glob_h
 SUBST_STAGE.glob_h=	post-patch
 SUBST_FILES.glob_h=	runtest.c
