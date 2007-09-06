@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 16:23:46 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/06 18:54:44 joerg Exp $
 
-DISTNAME=	openpam-20050201
+DISTNAME=	openpam-20050616
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openpam/}
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.openpam.org/
 COMMENT=	Open-source PAM library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	PAM-[0-9]*
 
@@ -27,11 +29,5 @@ post-tools:
 	${ECHO} "#!${TOOLS_SHELL}" > ${TOOLS_DIR}/bin/perl
 	${ECHO} "${TRUE}" >> ${TOOLS_DIR}/bin/perl
 	${CHMOD} +x ${TOOLS_DIR}/bin/perl
-
-# Remove a directory that's created for the sample su application that
-# we don't install.
-#
-post-install:
-	${RMDIR} -p ${PREFIX}/bin 2>/dev/null || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
