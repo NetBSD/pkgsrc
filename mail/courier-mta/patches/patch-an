@@ -1,8 +1,53 @@
-$NetBSD: patch-an,v 1.1 2007/08/10 17:57:05 jlam Exp $
+$NetBSD: patch-an,v 1.2 2007/09/06 04:05:40 jlam Exp $
 
---- courier/webmlmd.C.orig	2007-06-15 22:21:24.000000000 -0400
+--- courier/webmlmd.C.orig	Sat Jun 16 02:21:24 2007
 +++ courier/webmlmd.C
-@@ -953,10 +953,10 @@ static void sendsubunsub(std::string ext
+@@ -22,6 +22,7 @@
+ #include	<string.h>
+ #include	<signal.h>
+ 
++#include	<sys/param.h>
+ #include	<sys/types.h>
+ #include	<sys/stat.h>
+ #include        <sys/socket.h>
+@@ -39,6 +40,12 @@
+ #include	<iostream>
+ #include	<fstream>
+ #include	<sstream>
++#if defined(__FreeBSD_version) && (__FreeBSD_version < 500029)
++#include	<cwchar>
++namespace std {
++	typedef basic_string <wchar_t> wstring;
++}
++#endif
+ #include	<map>
+ 
+ #include	"cmlm.h"
+@@ -606,7 +613,10 @@ HANDLER("ADMINUPDATE", do_admin_update)
+ 	cmdset(args_array, false);
+ 
+ 	{
+-		std::istringstream i(std::string(cgi("optheaderadd")) + "\n");
++		std::string t(cgi("optheaderadd"));
++		t += "\n";
++
++		std::istringstream i(t);
+ 
+ 		std::ofstream ofs(HEADERADD ".new");
+ 
+@@ -623,7 +633,10 @@ HANDLER("ADMINUPDATE", do_admin_update)
+ 	}
+ 
+ 	{
+-		std::istringstream i(std::string(cgi("optheaderdel")) + "\n");
++		std::string t(cgi("optheaderdel"));
++		t += "\n";
++
++		std::istringstream i(t);
+ 
+ 		std::ofstream ofs(HEADERDEL ".new");
+ 
+@@ -953,10 +966,10 @@ static void sendsubunsub(std::string ext
  
  	if (ctlmsg.start(ext, address, "ctlmsg"))
  	{
@@ -15,7 +60,7 @@ $NetBSD: patch-an,v 1.1 2007/08/10 17:57:05 jlam Exp $
  
  		if (ctlmsg.wait())
  		{
-@@ -1100,10 +1100,10 @@ static void listrequest2(std::string lis
+@@ -1100,10 +1113,10 @@ static void listrequest2(std::string lis
  			if (confirm.start(method + "-" + token, "",
  					  "ctlmsg"))
  			{
@@ -28,7 +73,7 @@ $NetBSD: patch-an,v 1.1 2007/08/10 17:57:05 jlam Exp $
  					"Subject: yes -- confirmed by WebMLM\n"
  					"\n"
  					"Confirmed\n");
-@@ -1117,9 +1117,9 @@ static void listrequest2(std::string lis
+@@ -1117,9 +1130,9 @@ static void listrequest2(std::string lis
  				char buf[1024];
  				bool isfirst=true;
  
