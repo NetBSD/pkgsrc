@@ -1,8 +1,18 @@
-$NetBSD: patch-aq,v 1.1 2007/08/10 17:57:06 jlam Exp $
+$NetBSD: patch-aq,v 1.2 2007/09/06 04:05:40 jlam Exp $
 
---- courier/webmlmdsublist.C.orig	2007-06-15 22:21:24.000000000 -0400
+--- courier/webmlmdsublist.C.orig	Sat Jun 16 02:21:24 2007
 +++ courier/webmlmdsublist.C
-@@ -319,7 +319,7 @@ static void dodel(WSubList &sub_list)
+@@ -196,7 +196,8 @@ public:
+ 	std::fstream &getSubListFp() { return sublist; }
+ };
+ 
+-WSubList::WSubList() : sublist(SUBLIST), idxsublist(SUBLIST ".idx"),
++WSubList::WSubList() : sublist(SUBLIST, std::fstream::in|std::fstream::out),
++		       idxsublist(SUBLIST ".idx"),
+ 		       idxEntryCount(0)
+ {
+ }
+@@ -319,7 +320,7 @@ static void dodel(WSubList &sub_list)
  
  	unsubscribe.mk_received_header();
  
@@ -11,7 +21,7 @@ $NetBSD: patch-aq,v 1.1 2007/08/10 17:57:06 jlam Exp $
  
  	fprintf(fp,
  		"Subject: admin unsubscribe\n"
-@@ -578,7 +578,7 @@ HANDLER("SUBINFO", emit_subinfo)
+@@ -578,7 +579,7 @@ HANDLER("SUBINFO", emit_subinfo)
  
  	char linebuf[256];
  
