@@ -1,4 +1,4 @@
-/*	$NetBSD: cdefs.h,v 1.2 2007/05/07 22:19:32 rillig Exp $	*/
+/*	$NetBSD: cdefs.h,v 1.3 2007/09/06 20:25:21 joerg Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993
@@ -73,11 +73,19 @@
 #endif
 
 #if defined(__cplusplus)
-#define	__BEGIN_DECLS	extern "C" {
-#define	__END_DECLS	};
+#  ifndef __BEGIN_DECLS
+#  define __BEGIN_DECLS	extern "C" {
+#  endif
+#  ifndef __END_DECLS
+#  define __END_DECLS	};
+#  endif
 #else
-#define	__BEGIN_DECLS
-#define	__END_DECLS
+#  ifndef __BEGIN_DECLS
+#  define __BEGIN_DECLS
+#  endif
+#  ifndef __END_DECLS
+#  define __END_DECLS
+#  endif
 #endif
 
 /*
