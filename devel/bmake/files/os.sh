@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.1.1.1 2005/12/02 00:02:59 sjg Exp $
+#	$Id: os.sh,v 1.2 2007/09/06 20:25:21 joerg Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -171,6 +171,11 @@ Linux)
 	LOCAL_FS=ext2
 	PS_AXC=axc
 	[ -x /usr/bin/md5sum ] && { MD5=/usr/bin/md5sum; export MD5; }
+	;;
+QNX)
+	case $MACHINE in
+	x86pc)	MACHINE_ARCH=i386;;
+	esac
 	;;
 esac
 
