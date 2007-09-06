@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/23 20:21:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/06 18:54:44 joerg Exp $
 include/security/openpam.h
 include/security/openpam_version.h
 include/security/pam_appl.h
@@ -53,5 +53,6 @@ man/man3/pam_strerror.3
 man/man3/pam_verror.3
 man/man3/pam_vinfo.3
 man/man3/pam_vprompt.3
+man/man5/pam.conf.5
 @dirrm lib/security
 @dirrm include/security
