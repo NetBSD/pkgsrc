@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2007/02/06 19:12:09 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.128 2007/09/06 16:31:38 rillig Exp $
 
 DISTNAME=	perl-5.8.8
 PKGREVISION=	4
@@ -145,6 +145,7 @@ CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
 CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
 CONFIGURE_ARGS+=	-Dsh=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
+CONFIGURE_ARGS+=	-Dperl5=${FALSE}
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
