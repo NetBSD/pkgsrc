@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.4 2007/05/29 19:00:42 schmonz Exp $
+#	$NetBSD: Makefile.in,v 1.5 2007/09/06 19:23:25 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.4 2007/05/29 19:00:42 schmonz Exp $
+#	$Id: Makefile.in,v 1.5 2007/09/06 19:23:25 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -29,7 +29,14 @@ MAKE_VERSION:= bmake-${BMAKE_VERSION} build-${BUILD_DATE}
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
 
-CFLAGS+= @CFLAGS@ -D_PATH_DEFSYSPATH=\"@default_sys_path@\"
+DEFAULT_CSH = @DEFAULT_CSH@
+DEFAULT_KSH = @DEFAULT_KSH@
+DEFAULT_SH = @DEFAULT_SH@
+DEFAULT_SYS_PATH = @DEFAULT_SYS_PATH@
+
+CFLAGS+= @CFLAGS@ -DDEFAULT_CSH=\"${DEFAULT_CSH}\"
+CFLAGS+= -DDEFAULT_KSH=\"${DEFAULT_KSH}\" -DDEFAULT_SH=\"${DEFAULT_SH}\"
+CFLAGS+= -DDEFAULT_SYS_PATH=\"${DEFAULT_SYS_PATH}\"
 CFLAGS+= -I. -I${srcdir} @DEFS@ @CPPFLAGS@ ${XDEFS} -DMAKE_NATIVE
 CFLAGS+= ${CFLAGS_${.TARGET:T}} 
 CFLAGS_main.o= "-DMAKE_VERSION=\"${MAKE_VERSION}\""
