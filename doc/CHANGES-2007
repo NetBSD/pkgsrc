@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1940 2007/09/05 21:49:45 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1941 2007/09/06 10:30:53 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed net/yougrabber [wiz 2007-09-05]
 	Added net/youtube-dl version 20070824 [wiz 2007-09-05]
 	Updated sysutils/dmidecode to 2.9 [xtraeme 2007-09-05]
+	Updated wm/ion3-devel to 20070902 [ghen 2007-09-06]
