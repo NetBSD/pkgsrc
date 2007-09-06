@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $	*/
+/*	$NetBSD: job.c,v 1.5 2007/09/06 19:23:25 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.5 2007/09/06 19:23:25 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.4 2007/03/16 00:51:12 rillig Exp $");
+__RCSID("$NetBSD: job.c,v 1.5 2007/09/06 19:23:25 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -229,7 +229,7 @@ static Shell    shells[] = {
      * however, it is unable to do error control nicely.
      */
 {
-    "csh",
+    DEFAULT_CSH, "csh",
     TRUE, "unset verbose", "set verbose", "unset verbose", 10,
     FALSE, "echo \"%s\"\n", "csh -c \"%s || exit 0\"\n", "", '#',
     "v", "e",
@@ -239,7 +239,7 @@ static Shell    shells[] = {
      * sun UNIX anyway, one can even control error checking.
      */
 {
-    "sh",
+    DEFAULT_SH, "sh",
     FALSE, "", "", "", 0,
     FALSE, "echo \"%s\"\n", "%s\n", "{ %s \n} || exit $?\n", '#',
 #ifdef __NetBSD__
@@ -253,7 +253,7 @@ static Shell    shells[] = {
      * KSH description. 
      */
 {
-    "ksh",
+    DEFAULT_KSH, "ksh",
     TRUE, "set +v", "set -v", "set +v", 6,
     FALSE, "echo \"%s\"\n", "%s\n", "{ %s \n} || exit $?\n", '#',
     "v",
@@ -263,7 +263,7 @@ static Shell    shells[] = {
      * UNKNOWN.
      */
 {
-    NULL,
+    NULL, NULL,
     FALSE, NULL, NULL, NULL, 0,
     FALSE, NULL, NULL, NULL, 0,
     NULL, NULL,
@@ -2694,10 +2694,9 @@ Shell_Init()
 	 * default one... Both the absolute path and the last component
 	 * must be set. The last component is taken from the 'name' field
 	 * of the default shell description pointed-to by commandShell.
-	 * All default shells are located in _PATH_DEFSHELLDIR.
 	 */
 	shellName = commandShell->name;
-	shellPath = str_concat(_PATH_DEFSHELLDIR, shellName, STR_ADDSLASH);
+	shellPath = commandShell->path;
     }
     if (commandShell->exit == NULL) {
 	commandShell->exit = "";

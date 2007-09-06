@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.108 2007/08/18 11:01:28 schwarz Exp $
+# $NetBSD: bootstrap,v 1.109 2007/09/06 19:23:25 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -467,6 +467,9 @@ OpenBSD)
 SunOS)
 	if [ -d "/usr/xpg4/bin" ]; then
 		overpath="/usr/xpg4/bin:$overpath"
+	fi
+	if [ -x "/usr/xpg4/bin" ]; then
+		bmakexargs="$bmakexargs --with-defshell=/usr/xpg4/bin/sh"
 	fi
 	root_group=root
 	need_pax=yes

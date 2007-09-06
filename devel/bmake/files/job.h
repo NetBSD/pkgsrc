@@ -1,4 +1,4 @@
-/*	$NetBSD: job.h,v 1.3 2007/03/16 00:51:12 rillig Exp $	*/
+/*	$NetBSD: job.h,v 1.4 2007/09/06 19:23:26 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -244,6 +244,7 @@ typedef struct Job {
  * echo "%s\n" as a template.
  */
 typedef struct Shell {
+    const char	 *path;
     const char	 *name;		/* the name of the shell. For Bourne and C
 				 * shells, this is used only to find the
 				 * shell description when used as the single
