@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/03/07 19:18:39 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/06 21:29:26 jlam Exp $
 
 DISTNAME=		nbsed-20040821
 PKGREVISION=		1
@@ -15,15 +15,8 @@ NO_MTREE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-transform-name="s,sed,nbsed,"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.else
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
-.endif
-
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
