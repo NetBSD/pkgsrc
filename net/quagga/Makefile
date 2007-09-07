@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/06/05 19:28:25 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/07 22:07:31 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -27,11 +27,11 @@ CONFLICTS+=		zebra-[0-9]*
 PLIST_SRC=		${WRKDIR}/PLIST
 PLIST_CAT=		# empty
 
-INFO_FILES=	# PLIST
+INFO_FILES=		# PLIST
 
-RCD_SCRIPTS=	zebra bgpd ospfd ripd
-PKG_GROUPS=	quagga
-PKG_USERS=	quagga:quagga
+RCD_SCRIPTS=		zebra bgpd ospfd ripd
+PKG_GROUPS=		quagga
+PKG_USERS=		quagga:quagga
 
 # log_syslog.conf is used as a template for each config file
 .for _file_ in vtysh.conf zebra.conf bgpd.conf ospfd.conf ripd.conf
@@ -39,37 +39,7 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
 			${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
 .endfor
 
-BUILD_DEFS+=			USE_ZEBRA_VTYSH USE_ZEBRA_OSPF_OPAQUELSA
-USE_ZEBRA_VTYSH?=		YES
-USE_ZEBRA_OSPF_OPAQUELSA?=	YES
-
-.if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
-USE_GNU_READLINE=	# uses rl_pending_input
-.  include "../../devel/readline/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-vtysh
-PLIST_CAT+=		${PKGDIR}/PLIST.vtysh
-.else
-CONFIGURE_ARGS+=	--disable-vtysh
-.endif
-
-.if defined(USE_ZEBRA_OSPF_OPAQUELSA) && ${USE_ZEBRA_OSPF_OPAQUELSA} == "YES"
-CONFIGURE_ARGS+=	--enable-opaque-lsa
-PLIST_CAT+=		${PKGDIR}/PLIST.opaquelsa
-.endif
-
-BUILD_DEFS+=		USE_INET6
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-PLIST_CAT+=		${PKGDIR}/PLIST.v6
-RCD_SCRIPTS+=		ospf6d ripngd
-.for _file_ in ospf6d.conf ripngd.conf
-CONF_FILES_PERMS+=	${PREFIX}/share/examples/quagga/log_syslog.conf \
-			${PKG_SYSCONFDIR}/${_file_} quagga quagga 0600
-.endfor
-.else
-CONFIGURE_ARGS+=	--disable-ospf6d
-CONFIGURE_ARGS+=	--disable-ripngd
-.endif
+.include "options.mk"
 
 PLIST_CAT+=		${PKGDIR}/PLIST
 
