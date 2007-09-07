@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/09/07 12:43:17 abs Exp $
+
+--- Makefile.PL.orig	2007-05-10 13:59:42.000000000 +0100
++++ Makefile.PL
+@@ -31,5 +31,5 @@ feature 'JSON::Syck',
+ build_requires 'Test::More' => '0';
+ no_index 'directory'        => 'ex';
+ 
+-auto_install;
++# auto_install;
+ WriteAll;
