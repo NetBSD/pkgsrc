@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1953 2007/09/07 16:11:51 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1954 2007/09/07 16:44:44 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3575,7 +3575,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/openssh to 4.7.1 [taca 2007-09-07]
 	Added converters/p5-JSON-Any version 1.08 [abs 2007-09-07]
 	Updated net/ttt to 1.8.2 [obache 2007-09-07]
-	Updated emulator/tme to 0.6 [tsutsui 2007-09-07]
+	Updated emulators/tme to 0.6 [tsutsui 2007-09-07]
 	Updated sysutils/bacula to 2.2.2 [ghen 2007-09-07]
 	Updated sysutils/bacula-clientonly to 2.2.2 [ghen 2007-09-07]
 	Updated sysutils/bacula-gnome-console to 2.2.2nb1 [ghen 2007-09-07]
