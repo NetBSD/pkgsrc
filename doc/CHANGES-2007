@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1944 2007/09/07 12:44:54 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1945 2007/09/07 13:55:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/squid to 2.6.16 [taca 2007-09-07]
 	Updated security/openssh to 4.7.1 [taca 2007-09-07]
 	Added converters/p5-JSON-Any version 1.08 [abs 2007-09-07]
+	Updated net/ttt to 1.8.2 [obache 2007-09-07]
