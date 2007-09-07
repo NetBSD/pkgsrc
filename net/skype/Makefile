@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2007/09/03 21:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/09/07 23:06:13 wiz Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.99
 PKGNAME=		${DISTNAME:S/_static//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +21,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base compat fontconfig freetype2 glx x11
+EMUL_MODULES.linux=	alsa base compat fontconfig freetype2 glx \
+			libsigc++2 resmgr x11
 
 USE_DIRS+=		xdg-1.1
 WRKSRC=			${WRKDIR}/${DISTNAME}
