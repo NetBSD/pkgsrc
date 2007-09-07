@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1951 2007/09/07 15:57:18 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1952 2007/09/07 16:09:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/p5-WWW-Facebook-API version 0.4.7 [abs 2007-09-07]
 	Updated www/ikiwiki to 1.32nb1 [wiz 2007-09-07]
 	Updated net/p5-Net to 1.22 [wiz 2007-09-07]
+	Updated misc/goffice to 0.4.3 [wiz 2007-09-07]
