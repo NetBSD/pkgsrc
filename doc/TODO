@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6658 2007/09/07 15:44:32 wiz Exp $
+$NetBSD: TODO,v 1.6659 2007/09/07 15:47:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -1197,7 +1197,6 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o ttt-1.8.2 [pkg/36943]
 	o tuxpaint-0.9.17
 	o tuxpaint-config-0.0.7
 	o tuxpaint-stamps-20070701
