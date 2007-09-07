@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.12 2007/09/07 11:14:10 rillig Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.13 2007/09/07 16:47:05 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -44,24 +44,22 @@ CLEAR_DIRLIST?=	NO
 update:
 	@${PHASE_MSG} "Resuming update for ${PKGNAME}"
 .  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
 .  endif
 .else
 RESUMEUPDATE?=	NO
 CLEAR_DIRLIST?=	YES
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
 .  if ${UPDATE_TARGET} != "replace"
-	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
+	${RUN} if ${PKG_INFO} -qe ${PKGBASE}; then			\
 		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
 		|| (${RM} ${_DDIR} && ${FALSE});			\
 	fi
 .  endif
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES DEPENDS_TARGET=${DEPENDS_TARGET:Q}
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES DEPENDS_TARGET=${DEPENDS_TARGET:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${_DDIR} ] || for dep in `${CAT} ${_DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
@@ -78,14 +76,13 @@ update:
 		fi) ;							\
 	done
 .if ${NOCLEAN} == "NO"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
 .endif
 
 
 .PHONY: clean-update
 clean-update:
-	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${_DDIR} ] ; then					\
 		for dep in `${CAT} ${_DDIR}` ; do			\
@@ -97,10 +94,9 @@ clean-update:
 		done ;							\
 	fi
 .if ${CLEAR_DIRLIST} != "NO"
-	${_PKG_SILENT}${_PKG_DEBUG}${RECURSIVE_MAKE} ${MAKEFLAGS} clean
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${RECURSIVE_MAKE} ${MAKEFLAGS} clean update-dirlist DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
+	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean update-dirlist DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
 	@${WARNING_MSG} "preserved leftover directory list.  Your next"
 	@${WARNING_MSG} "\`\`${MAKE} update'' may fail.  It is advised to use"
 	@${WARNING_MSG} "\`\`${MAKE} update REINSTALL=YES'' instead!"
@@ -111,15 +107,15 @@ clean-update:
 
 .PHONY: update-dirlist
 update-dirlist:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
+	${RUN} ${MKDIR} -p ${WRKDIR}
 .if defined(PKGLIST)
 .  for __tmp__ in ${PKGLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${_DLIST} "${__tmp__}"
+	${RUN} ${ECHO} >>${_DLIST} "${__tmp__}"
 .  endfor
 .endif
 .if defined(DIRLIST)
 .  for __tmp__ in ${DIRLIST}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${_DDIR} "${__tmp__}"
+	${RUN} ${ECHO} >>${_DDIR} "${__tmp__}"
 .  endfor
 .endif
 
@@ -131,8 +127,8 @@ ${_DDIR}: ${_DLIST}
 # Note that "pkg_info -qR" wouldn't work here, since it lists only the
 # packages that require this package directly.
 ${_DLIST}: ${WRKDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | 			\
-		${GREP} '^	' |					\
-		${AWK} '{ l[NR]=$$0 } END { for (i=NR;i>0;--i) print l[i] }' \
-	|| ${TRUE}; } > ${_DLIST}
+	${RUN}								\
+	${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1				\
+	| ${GREP} '^	'						\
+	| ${AWK} '{ l[NR]=$$0 } END { for (i=NR;i>0;--i) print l[i] }'	\
+	> ${_DLIST}
