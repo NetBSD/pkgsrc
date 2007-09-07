@@ -1,0 +1,12 @@
+$NetBSD: patch-cy,v 1.1 2007/09/07 21:26:32 spz Exp $
+
+--- src/irr/irr.hh.orig	2006-06-08 17:16:26.000000000 +0200
++++ src/irr/irr.hh
+@@ -59,6 +59,7 @@
+ #include "gnug++/SetOfUInt.hh"
+ #include "gnu/prefixranges.hh"
+ #include "rpsl/prefix.hh"
++#include "rpsl/rpsl_asnum.hh"
+ #include "classes.hh"
+ 
+ class AutNum;
