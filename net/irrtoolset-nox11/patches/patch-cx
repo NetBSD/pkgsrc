@@ -1,0 +1,40 @@
+$NetBSD: patch-cx,v 1.1 2007/09/07 21:26:32 spz Exp $
+
+--- src/irr/irr.cc.orig	2006-10-01 13:23:32.000000000 +0200
++++ src/irr/irr.cc
+@@ -312,7 +312,7 @@ const AutNum *IRR::getAutNum(ASt as) {
+    AutNum *result = NULL;
+ 
+    if (! AutNumCache.query(as, result)) {
+-      sprintf(buffer, "AS%d", as);
++      asnum_string(buffer, as);
+       if (getAutNum(buffer, text, len)) {
+ 	 Buffer b(text, len);
+ 	 result = new AutNum(b);
+@@ -365,7 +365,7 @@ void IRR::getRoute(Route *&route, Prefix
+    char *text;
+    int  len;
+ 
+-   sprintf(buffer, "AS%d", as);
++   asnum_string(buffer, as);
+    if (getRoute(rt->get_text(), buffer, text, len)) {
+       Buffer b(text, len);
+       route = new Route(b);
+@@ -379,7 +379,7 @@ void IRR::getRoute(Route *&route, char *
+   char *text;
+   int  len;
+ 
+-  sprintf(buffer, "AS%d", as);
++  asnum_string(buffer, as);
+   if (getRoute(rt, buffer, text, len)) {
+      Buffer b(text, len);
+      route = new Route(b);
+@@ -419,7 +419,7 @@ const MPPrefixRanges *IRR::expandAS(ASt 
+       // we insert the set to the cache before expanding
+       // this is needed to avoid recursion if sets are recursively defined
+       expandASCache.add(as, result);
+-      sprintf(buffer, "AS%d", as);
++      asnum_string(buffer, as);
+       if (!expandAS(buffer, result)) {
+    expandASCache.nullify(as);
+   delete result;
