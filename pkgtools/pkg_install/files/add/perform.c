@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.59 2007/08/15 01:21:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.60 2007/09/07 15:45:14 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.59 2007/08/15 01:21:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.60 2007/09/07 15:45:14 rillig Exp $");
 #endif
 #endif
 
@@ -855,7 +855,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	if (!NoRecord && !Fake) {
 		char    contents[MaxPathSize];
 
-#ifndef __INTERIX
+#if !defined(__INTERIX) && !defined(UNPRIVILEGED)
 		if (getuid() != 0)
 			warnx("not running as root - trying to record install anyway");
 #endif
