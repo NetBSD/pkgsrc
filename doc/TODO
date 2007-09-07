@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6657 2007/09/07 10:43:59 taca Exp $
+$NetBSD: TODO,v 1.6658 2007/09/07 15:44:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,7 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o baci-20040415
-	o bacula-2.2.1
+	o bacula-2.2.2
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa2-2.4.16
@@ -723,7 +723,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.2.12.04
 	o matchbox-panel-0.9.3
-	o mathomatic-12.7.5
+	o mathomatic-12.7.6
 	o md-whois-4.7.20
 	o memtestplus-1.70
 	o mesure-0.7.2
@@ -756,7 +756,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.45
 	o mserv-devel-0.41
 	o msf-2.7
-	o msmtp-1.4.13
+	o msmtp-1.4.13 [pkg/36939]
 	o mtail-1.1.1 [pkg/34512]
 	o mtools-3.9.11
 	o multitail-5.2.0
@@ -1129,6 +1129,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-1.4.0.94
 	o smalleiffel-0.90
+	o smalltalk-2.3.6
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.2
@@ -1152,6 +1153,7 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
+	o sudo-1.6.9p5
 	o sunbird-0.5 [ghen]
 	o suse_base-10.2
 	o svk-2.0.2
@@ -1195,7 +1197,7 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o ttt-1.8.2
+	o ttt-1.8.2 [pkg/36943]
 	o tuxpaint-0.9.17
 	o tuxpaint-config-0.0.7
 	o tuxpaint-stamps-20070701
@@ -1232,6 +1234,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.3
 	o wdm-1.28
+	o weechat-0.2.6
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
