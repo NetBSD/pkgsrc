@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/09/06 18:11:57 abs Exp $
+# $NetBSD: Makefile,v 1.45 2007/09/07 10:06:22 tron Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	8
@@ -26,7 +26,9 @@ do-install:
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
+.if ${X11_TYPE} == "modular"
 .include "../../x11/libXvMC/buildlink3.mk"
+.endif
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 
