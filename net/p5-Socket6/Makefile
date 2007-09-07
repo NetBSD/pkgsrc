@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/11/05 17:31:10 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/07 22:12:19 jlam Exp $
 #
 
 DISTNAME=		Socket6-0.19
@@ -16,8 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Socket6/.packlist
 
-# supports IPv6 (actually, af independent)
-BUILD_DEFS+=		USE_INET6
+# supports IPv6 (actually, AF-independent)
+BUILD_DEFS+=		IPV6_READY
 
 MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
 

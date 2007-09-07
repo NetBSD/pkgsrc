@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/07 22:12:23 jlam Exp $
 
 DISTNAME=	socket-1.1
 CATEGORIES=	sysutils net
@@ -9,13 +9,15 @@ COMMENT=	Create tcp socket and connect to stdin/out
 
 MAKE_ENV+=	INSTALLBASE=${PREFIX:Q}
 
-BUILD_DEFS+=	USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.socket
+PKG_SUPPORTED_OPTIONS=	inet6
 
-# to get USE_INET6
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
 
-# IPv6 support
-.if defined(USE_INET6) && ${USE_INET6} == YES
+###
+### IPv6 support
+###
+.if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	SWITCHES="-DUSE_INET6 -DHAVE_SYS_PARAM_H -Wall"
 .else
 MAKE_ENV+=	SWITCHES="-DHAVE_SYS_PARAM_H -Wall"

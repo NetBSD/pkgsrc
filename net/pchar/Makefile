@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:05 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2007/09/07 22:12:19 jlam Exp $
 
 DISTNAME=		pchar-1.5
 CATEGORIES=		net
@@ -11,17 +11,17 @@ COMMENT=		Tool for measuring Internet path characteristics
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
-BUILD_DEFS+=		USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pchar
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.include "../../net/net-snmp/buildlink3.mk"
-
+.  include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 LIBS+=			-lsnmp -lcrypto -ldes
 .endif

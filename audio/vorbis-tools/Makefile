@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/06/08 17:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2007/09/07 22:12:10 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.1.1
 PKGREVISION=	5
@@ -11,8 +11,7 @@ COMMENT=	Ogg Vorbis encoder and player
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# list it into IPv6-ready packages
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 
 CONFLICTS=	vorbis-[0-9]*
 

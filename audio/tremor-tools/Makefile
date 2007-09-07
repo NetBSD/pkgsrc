@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/11/19 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/07 22:12:10 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -10,8 +10,7 @@ MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://www.vorbis.com/
 COMMENT=	Ogg Vorbis encoder and player
 
-# list it into IPv6-ready packages
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 
 CONFLICTS=	vorbis-[0-9]*
 

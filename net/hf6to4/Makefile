@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:14:02 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/07 22:12:17 jlam Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -15,7 +15,11 @@ WRKSRC=			${WRKDIR}
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 
-# This pkg doesn't regard USE_INET6 (leave this comment for README-IPv6.html!)
+# This package does not set or evaluate IPV6_READY, but it should still
+# be listed in README-IPv6.html.
+#
+BUILD_DEFS+=	IPV6_READY
+
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes

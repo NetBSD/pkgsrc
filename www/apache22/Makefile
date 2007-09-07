@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/08/28 23:56:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/07 22:12:24 jlam Exp $
 
 .include "Makefile.common"
 
@@ -11,7 +11,7 @@ COMMENT=	Apache HTTP (Web) server, version 2
 
 CONFLICTS=	apache-{,*ssl}-[0-9]* apache6-[0-9]*
 
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
 
 USE_TOOLS+=		perl perl:run pkg-config

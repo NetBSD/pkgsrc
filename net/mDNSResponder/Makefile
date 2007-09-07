@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/07 22:12:18 jlam Exp $
 
 DISTNAME=	mDNSResponder-108
 PKGREVISION=	1
@@ -58,8 +58,12 @@ MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDF
 MAKE_ENV+=	EXTRA_LIBS=
 .endif
 
-BUILD_DEFS+=	USE_INET6
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mDNSResponder
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	HAVE_IPV6=1
 .endif
 

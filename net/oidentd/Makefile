@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/07 22:12:18 jlam Exp $
 
 DISTNAME=	oidentd-2.0.7
 PKGREVISION=	4
@@ -14,10 +14,14 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 RCD_SCRIPTS=		oidentd
 OSVERSION_SPECIFIC=	YES
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.oidentd
+PKG_SUPPORTED_OPTIONS=	inet6
 
-BUILD_DEFS+=	USE_INET6
-.if defined(USE_INET6) && ${USE_INET6} != "YES"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 

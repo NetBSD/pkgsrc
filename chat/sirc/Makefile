@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:13:49 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/07 22:12:11 jlam Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	2
@@ -16,8 +16,8 @@ DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-# supports IPv6 (actually, af independent)
-BUILD_DEFS+=	USE_INET6
+# supports IPv6 (actually, AF-independent)
+BUILD_DEFS+=	IPV6_READY
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 USE_TOOLS+=	perl:run

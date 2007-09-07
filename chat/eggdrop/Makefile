@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/05/22 16:47:04 lkundrak Exp $
+# $NetBSD: Makefile,v 1.27 2007/09/07 22:12:10 jlam Exp $
 
 DISTNAME=	eggdrop1.6.17
 PKGNAME=	eggdrop-1.6.17
@@ -12,13 +12,15 @@ HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
 GNU_CONFIGURE=		yes
-BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.eggdrop
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 PLIST_SUBST+=		NOIPV6="@comment "
 .else
@@ -82,7 +84,7 @@ do-install-modules:
 		compress.so console.so ctcp.so filesys.so irc.so notes.so \
 		seen.so server.so share.so transfer.so uptime.so wire.so \
 		${PREFIX}/lib/eggdrop
-.if !defined(USE_INET6) || empty(USE_INET6:M[Yy][Ee][Ss])
+.if empty(PKG_OPTIONS:Minet6)
 	cd ${WRKSRC} && ${INSTALL_DATA} dns.so ${PREFIX}/lib/eggdrop
 .endif
 	cd ${WRKSRC}/src/mod && ${FIND} . -name "*.lang" -exec ${INSTALL_DATA} "{}" \

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.php,v 1.37 2007/05/05 21:35:05 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.38 2007/09/07 22:12:26 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
 # revision of the core PHP interpreter package
 DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
-
-BUILD_DEFS+=		USE_INET6
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
