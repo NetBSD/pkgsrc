@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/07/01 10:12:02 adam Exp $
+# $NetBSD: Makefile,v 1.51 2007/09/07 16:53:16 adam Exp $
 
 DISTNAME=	scummvm-0.10.0
 CATEGORIES=	games
@@ -16,6 +16,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 UNLIMIT_RESOURCES=	datasize
 
 .include "options.mk"
@@ -23,5 +24,6 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
