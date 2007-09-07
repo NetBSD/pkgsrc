@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/07 22:12:22 jlam Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -14,9 +14,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=	yes
 
-BUILD_DEFS+=		USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.tcp_wrappers
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
 
 BUILD_TARGET.${OPSYS}?=	generic		# good luck!
 BUILD_TARGET.Darwin=	netbsd
@@ -29,7 +30,7 @@ BUILD_TARGET.SunOS=	sunos5
 BUILD_TARGET.IRIX=	${LOWER_OPSYS:C|\..*||}
 BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
+.if !empty(PKG_OPTIONS:Minet6)
 .  if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 MAKE_ENV+=	IPV6="-DHAVE_IPV6 -DUSE_GETHOSTBYNAME2"
 .  elif ${OPSYS} != "Linux"

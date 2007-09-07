@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/04/11 18:43:29 minskim Exp $
+# $NetBSD: Makefile,v 1.48 2007/09/07 22:12:14 jlam Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -13,13 +13,15 @@ COMMENT=	MBone Session Directory
 WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CRYPTO=		yes
 USE_TOOLS+=	gmake
+HAS_CONFIGURE=	yes
 
-BUILD_DEFS+=		USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sdr
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CONFIGURE_ARGS+= --enable-ipv6
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if exists(/usr/include/sys/inttypes.h)
@@ -40,11 +42,12 @@ post-patch:
 	${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/../src/sdr.tcl.in >	\
 		${WRKSRC}/../src/sdr.tcl
 
-do-configure:
-	cd ${WRKSRC} ; ${SH} ./configure
 .if ${OPSYS} == "SunOS"
+post-configure:
 	# Untested for sdr 3.0 !!!
-	${CAT} ${WRKSRC}/sdr/solaris/Makefile.solaris ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/solaris/Makefile
+	${CAT}	${WRKSRC}/sdr/solaris/Makefile.solaris			\
+		${WRKSRC}/sdr/src/Makefile.template			\
+		> ${WRKSRC}/sdr/solaris/Makefile
 .endif
 
 do-install:
