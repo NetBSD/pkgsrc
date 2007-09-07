@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1956 2007/09/07 20:59:34 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1957 2007/09/07 23:07:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3588,3 +3588,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/desktop-file-utils to 0.14 [wiz 2007-09-07]
 	Added www/pound version 2.3.2 [jlam 2007-09-07]
 	Added misc/softmaker-office-demo version 2006 [wiz 2007-09-07]
+	Added emulators/suse100_alsa version 10.0 [wiz 2007-09-07]
+	Added emulators/suse100_libsigc++2 version 10.0 [wiz 2007-09-07]
+	Added emulators/suse100_resmgr version 10.0 [wiz 2007-09-07]
+	Added emulators/suse100_32_alsa version 10.0 [wiz 2007-09-07]
+	Added emulators/suse100_32_libsigc++2 version 10.0 [wiz 2007-09-07]
+	Added emulators/suse100_32_resmgr version 10.0 [wiz 2007-09-07]
+	Updated net/skype to 1.4.0.99nb2 [wiz 2007-09-07]
