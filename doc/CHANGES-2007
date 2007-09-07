@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1948 2007/09/07 15:32:46 abs Exp $
+$NetBSD: CHANGES-2007,v 1.1949 2007/09/07 15:38:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/bacula-tray-monitor to 2.2.2 [ghen 2007-09-07]
 	Updated sysutils/bacula-wx-console to 2.2.2 [ghen 2007-09-07]
 	Added www/p5-WWW-Facebook-API version 0.4.7 [abs 2007-09-07]
+	Updated www/ikiwiki to 1.32nb1 [wiz 2007-09-07]
