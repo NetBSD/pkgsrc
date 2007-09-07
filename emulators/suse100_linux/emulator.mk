@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.3 2007/07/30 13:38:41 jlam Exp $
+# $NetBSD: emulator.mk,v 1.4 2007/09/07 23:04:55 wiz Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -20,6 +20,7 @@ _SUSE_VERSION_REQD=	>=${SUSE_VERSION_REQD}
 .endif
 
 # DEPENDS_suse-10.0.* maps Linux "modules" to SuSE package dependencies.
+DEPENDS_suse-10.0.alsa?=	suse_alsa${_SUSE_VERSION_REQD}:../../emulators/suse100_alsa
 DEPENDS_suse-10.0.aspell?=	suse_aspell${_SUSE_VERSION_REQD}:../../emulators/suse100_aspell
 DEPENDS_suse-10.0.base?=	suse_base${_SUSE_VERSION_REQD}:../../emulators/suse100_base
 DEPENDS_suse-10.0.compat?=	suse_compat${_SUSE_VERSION_REQD}:../../emulators/suse100_compat
@@ -32,10 +33,12 @@ DEPENDS_suse-10.0.glx?=	suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse100_gl
 DEPENDS_suse-10.0.gtk?=	suse_gtk${_SUSE_VERSION_REQD}:../../emulators/suse100_gtk
 DEPENDS_suse-10.0.gtk2?=	suse_gtk2${_SUSE_VERSION_REQD}:../../emulators/suse100_gtk2
 DEPENDS_suse-10.0.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse100_libjpeg
+DEPENDS_suse-10.0.libsigc++2?=	suse_libsigc++2${_SUSE_VERSION_REQD}:../../emulators/suse100_libsigc++2
 DEPENDS_suse-10.0.locale?=	suse_locale${_SUSE_VERSION_REQD}:../../emulators/suse100_locale
 DEPENDS_suse-10.0.motif?=	suse_openmotif${_SUSE_VERSION_REQD}:../../emulators/suse100_openmotif
 DEPENDS_suse-10.0.openssl?=	suse_openssl${_SUSE_VERSION_REQD}:../../emulators/suse100_openssl
 DEPENDS_suse-10.0.png?=	suse_libpng${_SUSE_VERSION_REQD}:../../emulators/suse100_libpng
+DEPENDS_suse-10.0.resmgr?=	suse_resmgr${_SUSE_VERSION_REQD}:../../emulators/suse100_resmgr
 DEPENDS_suse-10.0.slang?=	suse_slang${_SUSE_VERSION_REQD}:../../emulators/suse100_slang
 DEPENDS_suse-10.0.tiff?=	suse_libtiff${_SUSE_VERSION_REQD}:../../emulators/suse100_libtiff
 DEPENDS_suse-10.0.vmware?=	suse_vmware${_SUSE_VERSION_REQD}:../../emulators/suse100_vmware
