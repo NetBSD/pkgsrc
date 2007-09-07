@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6656 2007/09/06 22:01:44 wiz Exp $
+$NetBSD: TODO,v 1.6657 2007/09/07 10:43:59 taca Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openpam-20050616
-	o openssh-4.7p1
 	o openssl-0.9.8e (in wip/)
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -1215,6 +1214,7 @@ Suggested package updates
 	o usrp-3.0.3
 	o usrp-docs-3.0.3
 	o valgrind-3.2.3
+	o varnish-1.1.1
 	o vera-1.17
 	o vfu-4.03
 	o vifm-0.3a
