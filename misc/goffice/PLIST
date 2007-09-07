@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/05 15:55:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/09/07 16:08:53 wiz Exp $
 include/libgoffice-0.4/goffice/app/error-info.h
 include/libgoffice-0.4/goffice/app/file.h
 include/libgoffice-0.4/goffice/app/go-cmd-context-impl.h
@@ -188,6 +188,7 @@ share/goffice/${PKGVERSION}/glade/gog-object-prefs.glade
 share/goffice/${PKGVERSION}/glade/gog-plot-prefs.glade
 share/goffice/${PKGVERSION}/glade/gog-reg-curve-prefs.glade
 share/goffice/${PKGVERSION}/glade/gog-reg-eqn-prefs.glade
+share/goffice/${PKGVERSION}/glade/gog-series-prefs.glade
 share/goffice/${PKGVERSION}/glade/gog-style-prefs.glade
 share/goffice/${PKGVERSION}/patterns/svg-patterns.xml
 share/locale/am/LC_MESSAGES/goffice-${PKGVERSION}.mo
@@ -219,6 +220,7 @@ share/locale/ms/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/nb/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/nl/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/nn/LC_MESSAGES/goffice-${PKGVERSION}.mo
+share/locale/oc/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/pl/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/pt/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/pt_BR/LC_MESSAGES/goffice-${PKGVERSION}.mo
