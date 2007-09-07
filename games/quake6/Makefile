@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/02/20 12:40:14 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/07 22:12:11 jlam Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -19,17 +19,13 @@ post-extract:
 	cd ${WRKSRC}; ${RM} config.cache
 
 USE_TOOLS+=	gmake
+USE_FEATURES=	inet6
 GNU_CONFIGURE=	yes
 
-# This pkg can be built on USE_INET6 platform only
-BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
-.if !(defined(USE_INET6) && ${USE_INET6} == "YES")
-PKG_FAIL_REASON+=	"${PKGNAME} requires IPv6 support"
-.endif
 
 # "bindir" setting is very non-standard for GNU autoconf
-CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
+CONFIGURE_ARGS+=	--disable-asmopt --bindir=/bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

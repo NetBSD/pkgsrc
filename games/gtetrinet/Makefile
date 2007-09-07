@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/06/05 05:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/07 22:12:11 jlam Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.11
@@ -15,14 +15,15 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
-BUILD_DEFS+=		USE_INET6
 MAKE_FLAGS+=		gamesdir=${PREFIX}/bin
 MAKE_FLAGS+=		schemadir=${PREFIX}/share/gconf/schemas
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gtetrinet
+PKG_SUPPORTED_OPTIONS=	inet6
 
-# IPv6 support
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 

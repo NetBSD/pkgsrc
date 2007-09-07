@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.17 2007/08/02 22:42:05 adrianp Exp $
+# $NetBSD: mkreadme,v 1.18 2007/09/07 22:12:16 jlam Exp $
 #
 # Script for README.html generation
 #
@@ -471,7 +471,7 @@ echo " "
 cd ${PKGSRCDIR}
 ipv6=${TMPDIR}/ipv6pkgs
 ipv6_entries=${TMPDIR}/ipv6_entries
-${GREP} -l -e '^BUILD_DEFS.*=.*USE_INET6' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' */*/Makefile */*/options.mk | ${SED} -e 's;Makefile;;g' -e 's;options.mk;;g' > $ipv6
+${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' */*/Makefile */*/options.mk | ${SED} -e 's;Makefile;;g' -e 's;options.mk;;g' > $ipv6
 ${FGREP} -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
 ${SED} \
     -e "/%%TRS%%/r${ipv6_entries}" \
