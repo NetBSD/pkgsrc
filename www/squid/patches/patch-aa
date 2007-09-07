@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.21 2007/08/02 15:45:10 taca Exp $
+$NetBSD: patch-aa,v 1.22 2007/09/07 10:39:35 taca Exp $
 
---- src/Makefile.in.orig	2007-06-23 09:14:56.000000000 +0900
+--- src/Makefile.in.orig	2007-08-12 21:41:07.000000000 +0900
 +++ src/Makefile.in
-@@ -622,14 +622,14 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+@@ -628,14 +628,14 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
  DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.21 2007/08/02 15:45:10 taca Exp $
  DEFAULT_HOSTS = @OPT_DEFAULT_HOSTS@
  
  # Don't automatically uninstall config files
-@@ -877,20 +877,20 @@ distclean-compile:
+@@ -883,20 +883,20 @@ distclean-compile:
  uninstall-info-am:
  install-dataDATA: $(data_DATA)
  	@$(NORMAL_INSTALL)
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.21 2007/08/02 15:45:10 taca Exp $
  	done
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
-@@ -1143,8 +1143,7 @@ info-am:
+@@ -1149,8 +1149,7 @@ info-am:
  
  install-data-am: install-data-local install-dataDATA
  
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.21 2007/08/02 15:45:10 taca Exp $
  
  install-info: install-info-recursive
  
-@@ -1171,7 +1170,7 @@ ps-am:
+@@ -1177,7 +1176,7 @@ ps-am:
  
  uninstall-am: uninstall-dataDATA uninstall-info-am \
  	uninstall-libexecPROGRAMS uninstall-local \
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.21 2007/08/02 15:45:10 taca Exp $
  
  uninstall-info: uninstall-info-recursive
  
-@@ -1255,20 +1254,7 @@ repl_modules.c: repl_modules.sh Makefile
+@@ -1261,20 +1260,7 @@ repl_modules.c: repl_modules.sh Makefile
  auth_modules.c: auth_modules.sh Makefile
  	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
  

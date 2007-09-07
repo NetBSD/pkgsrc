@@ -1,22 +1,23 @@
-$NetBSD: distinfo,v 1.133 2007/08/02 15:45:09 taca Exp $
+$NetBSD: distinfo,v 1.134 2007/09/07 10:39:35 taca Exp $
 
-SHA1 (squid-2.6.STABLE14.tar.bz2) = ff4801955707ff8a6bba69275951071d6ce55d33
-RMD160 (squid-2.6.STABLE14.tar.bz2) = 40037786e6b6af40904aa8d4252eb7234046687c
-Size (squid-2.6.STABLE14.tar.bz2) = 1291509 bytes
-SHA1 (patch-aa) = 9aa971e21de833b13f81ef04939c5e29e03e2e37
-SHA1 (patch-ab) = 28e7bf58edbcd504bc4c780370a7bd402e66c6b0
+SHA1 (squid-2.6.STABLE16.tar.bz2) = 3140c0df8bad7cf3350bd4a02f4ac9582e6c4406
+RMD160 (squid-2.6.STABLE16.tar.bz2) = 6383461c25f786e6497300b26ca5908ad0279ec7
+Size (squid-2.6.STABLE16.tar.bz2) = 1293078 bytes
+SHA1 (patch-aa) = 06712292968ae808494007a722da5710660d0fec
+SHA1 (patch-ab) = 42c3f2daa2294d346358c199a0c53d849d8b1c74
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
-SHA1 (patch-ad) = 2a09337fdf74b855a21cb41636d28f018cd1218b
-SHA1 (patch-ae) = d01c35059f34c4c0fa2cae547ddffbc635d6af94
+SHA1 (patch-ad) = 8975f707dd46832011d618b5a1f623df88171f36
+SHA1 (patch-ae) = fb32c403e3613595931abf7f7a8ce7cfd86d72a7
 SHA1 (patch-af) = a78e762c1ad928eef66b12395d48bc69542e32d9
 SHA1 (patch-aj) = fab8076c24a4e134b193fcdacc5240dfe7aa5504
-SHA1 (patch-ak) = 60e199e591dc6c4e2a93e67ba53b8cf75ae49631
+SHA1 (patch-ak) = 6df607714a7a043997ece1a56e43b326876f3d22
 SHA1 (patch-al) = d0a3b639147842ca5d07114b561d2431d8800971
-SHA1 (patch-an) = cb2ced35d368a33cdd6c51bdd0f02b4383f0ada6
-SHA1 (patch-ap) = 636475a33d69589485704fb99315862c52552323
-SHA1 (patch-ar) = 39a8d47d5a4d9cb325e58fb81eb20d2d7745a38c
-SHA1 (patch-as) = b1e7c6c8ab7f36a4a772b327dac58ba5a1edbf39
+SHA1 (patch-an) = 2027360a5ae2e24802719d4fe8801b0eeeb8a681
+SHA1 (patch-ap) = 20eec1bcc0a12e3ea47fda7a6ff14d781c0334c5
+SHA1 (patch-ar) = 985c192662d41264012a76248e9bea0662cec8f5
+SHA1 (patch-as) = e09a5703cdc7343259c07e599c933a613172a9b3
 SHA1 (patch-at) = 7ce72c964345203876d56d003353a5213c327252
-SHA1 (patch-au) = db41c3fc1b7ec6dd020559aa767d488738cd4747
+SHA1 (patch-au) = 25f6c7e366e7dca2aeb55312bd2ccf51d7a7b725
+SHA1 (patch-av) = 135cac28713b806af4cd9011a0a8cf9c88b929d0
 SHA1 (patch-bb) = 6711186c3e3e7992f9874eb47df7c0d3690649c2
 SHA1 (patch-bc) = 0b87eb5f4ccc06a0e59ed298fc3203b1b2641969
