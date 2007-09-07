@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1954 2007/09/07 16:44:44 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.1955 2007/09/07 19:09:47 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3586,3 +3586,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/p5-Net to 1.22 [wiz 2007-09-07]
 	Updated misc/goffice to 0.4.3 [wiz 2007-09-07]
 	Updated sysutils/desktop-file-utils to 0.14 [wiz 2007-09-07]
+	Added www/pound version 2.3.2 [jlam 2007-09-07]
