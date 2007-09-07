@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/07 20:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/07 21:05:39 wiz Exp $
 #
 
 DISTNAME=	ofl06trial
@@ -10,6 +10,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.softmaker.net/
 COMMENT=	SoftMaker Office (TextMaker and PlanMaker) demo version (Linux binary)
+
+RESTRICTED=		Demo version, license unclear.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/officetrial
 USE_LANGUAGES=	# none
