@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1942 2007/09/06 19:08:26 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.1943 2007/09/07 10:42:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3561,3 +3561,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/dmidecode to 2.9 [xtraeme 2007-09-05]
 	Updated wm/ion3-devel to 20070902 [ghen 2007-09-06]
 	Updated security/openpam to 20050616 [joerg 2007-09-06]
+	Updated www/squid to 2.6.16 [taca 2007-09-07]
+	Updated security/openssh to 4.7.1 [taca 2007-09-07]
