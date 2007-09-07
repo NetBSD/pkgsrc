@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/08/09 20:15:38 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/07 22:12:22 jlam Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -17,7 +17,7 @@ CONFLICTS+=		openssh+gssapi-[0-9]* ssh2-nox11-[0-9]*
 
 GNU_CONFIGURE=		YES
 
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		IPV6_READY
 
 CRYPTO=			YES
 PKG_SYSCONFSUBDIR=	ssh2

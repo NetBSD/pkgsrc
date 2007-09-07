@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/05 07:09:58 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/07 22:12:12 jlam Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -16,7 +16,7 @@ COMMENT=	Dictionary server for Simple Kana-Kanji conversion programs
 
 WRKSRC=			${WRKDIR}/skk-9.6
 
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 
 DIST_SUBDIR=	skk
 

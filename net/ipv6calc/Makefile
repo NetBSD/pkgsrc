@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/08/28 22:02:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.33 2007/09/07 22:12:17 jlam Exp $
 #
 
 DISTNAME=	ipv6calc-0.61.0
@@ -9,8 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.deepspace6.net/projects/ipv6calc.html
 COMMENT=	Manipulates IPv6 addresses
 
-# This package does not set or evaluate USE_INET6, but it should still
+# This package does not set or evaluate IPV6_READY, but it should still
 # be listed in README-IPv6.html. Leave this comment here to make it so!
+#
+BUILD_DEFS+=	IPV6_READY
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

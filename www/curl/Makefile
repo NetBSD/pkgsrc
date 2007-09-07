@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/07/19 21:58:17 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2007/09/07 22:12:24 jlam Exp $
 
 DISTNAME=	curl-7.16.4
 CATEGORIES=	www
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # list it into IPv6-ready packages
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
