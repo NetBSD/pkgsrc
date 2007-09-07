@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/03/24 19:21:29 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/07 22:12:18 jlam Exp $
 
 DISTNAME=	irrd2.2.8
 PKGNAME=	irrd-2.2.8
@@ -20,15 +20,23 @@ USE_TOOLS+=		automake flex perl:run
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
-#PTHREAD_AUTO_VARS=	yes
-#PTHREAD_OPTS+=		require
+PKG_OPTIONS_VAR=	PKG_OPTIONS.irrd
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-thread
 
-BUILD_DEFS+=		USE_INET6
+#PTHREAD_AUTO_VARS=	yes
+#PTHREAD_OPTS+=		require
+#.include "../../mk/pthread.buildlink3.mk"
 
-#CPPFLAGS+=		-I${LOCALBASE}/include
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 REPLACE_PERL+=		programs/irrdcacher/irrdcacher
 REPLACE_PERL+=		programs/irrdcacher/ripe2rpsl
@@ -44,14 +52,4 @@ post-install:
 	${INSTALL_SCRIPT} irrdcacher ${PREFIX}/sbin && \
 	${INSTALL_SCRIPT} ripe2rpsl ${PREFIX}/sbin
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-# default
-# CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-#.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

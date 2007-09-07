@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/07/04 20:54:57 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/07 22:12:22 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -35,7 +35,7 @@ CRYPTO=			yes
 KERBEROS=		yes
 
 # retain the following line, for IPv6-ready pkgsrc webpage
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		IPV6_READY
 #BUILD_DEFS+=		KERBEROS
 
 .include "../../mk/bsd.prefs.mk"
