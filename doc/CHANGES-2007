@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1949 2007/09/07 15:38:28 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1950 2007/09/07 15:52:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3551,6 +3551,16 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/gmp3info to 0.8.5a [drochner 2007-09-03]
 	Added games/singularity version 0.26a [wiz 2007-09-04]
 	Updated sysutils/radmind to 1.10 [hauke 2007-09-04]
+	Updated graphics/tuxpaint to 0.9.17 [drochner 2007-09-04]
+	Updated graphics/tuxpaint-config to 0.8 [drochner 2007-09-04]
+	Updated graphics/tuxpaint-stamps to 2007.07.01 [drochner 2007-09-04]
+	Added games/gcompris to 8.3.3 [drochner 2007-09-04]
+	Added misc/goffice0.5 to 0.5.0 [drochner 2007-09-04]
+	Updated editors/TeXmacs to 1.0.6.11 [drochner 2007-09-04]
+	Updated finance/libofx to 0.8.3 [drochner 2007-09-04]
+	Updated devel/libgsf to 1.14.6 [drochner 2007-09-04]
+	Updated security/dropbear to 0.50 [drochner 2007-09-04]
+	Updated security/gnutls to 2.0.0 [drochner 2007-09-04]
 	Updated www/php-apc to 3.0.14 [jdolecek 2007-09-05]
 	Updated mail/exim-html to 4.67 [roland 2007-09-05]
 	Updated devel/apr to 1.2.9 [xtraeme 2007-09-05]
