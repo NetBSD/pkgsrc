@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/02/22 19:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/09/07 22:12:20 jlam Exp $
 
 DISTNAME=	trafshow-5.2.1
 PKGREVISION=	1
@@ -13,11 +13,12 @@ COMMENT=	Full screen visualization of the network traffic
 BUILD_TARGET=	trafshow
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.trafshow
+PKG_SUPPORTED_OPTIONS=	inet6
 
-BUILD_DEFS+=	USE_INET6
+.include "../../mk/bsd.options.mk"
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.if !empty(PKG_OPTIONS:Minet6)
 CPPFLAGS+=	-DINET6
 .endif
 

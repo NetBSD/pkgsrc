@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/07 22:12:19 jlam Exp $
 #
 
 DISTNAME=	ripe-whois-3.1.1v6
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/whois-3.1.1v6
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	perl
 MAKE_ENV+=	PERL5=${PERL5:Q}
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
 
 ASCII_DOC=		ripe-223.txt
 PS_DOC=			ripe-223.ps

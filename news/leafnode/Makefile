@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/07 22:12:21 jlam Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -32,7 +32,6 @@ PKG_SHELL.${LEAFNODE_USER}=	${SH}
 
 PKG_GROUPS_VARS+=	LEAFNODE_GROUP
 PKG_USERS_VARS+=	LEAFNODE_USER
-BUILD_DEFS+=		USE_INET6
 
 FILES_SUBST+=		LEAFNODE_SPOOL=${LEAFNODE_SPOOL:Q}
 FILES_SUBST+=		LEAFNODE_CONFDIR=${LEAFNODE_CONFDIR:Q}
@@ -48,9 +47,12 @@ CONFIGURE_ARGS+=	--with-user=${LEAFNODE_USER:Q}
 CONFIGURE_ARGS+=	--with-group=${LEAFNODE_GROUP:Q}
 USE_TOOLS+=		gmake
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.leafnode
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--with-ipv6
 .else
 CONFIGURE_ARGS+=	--without-ipv6

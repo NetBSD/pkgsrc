@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/08/11 23:48:40 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/07 22:12:18 jlam Exp $
 
 DISTNAME=	nsd-3.0.5
 CATEGORIES=	net
@@ -10,10 +10,12 @@ COMMENT=	Authoritative-only DNS server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEFS+=	USE_INET6 VARBASE
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nsd
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
 
 GNU_CONFIGURE=	yes
 
@@ -22,7 +24,9 @@ PKG_SYSCONFSUBDIR=	nsd
 CONFIGURE_ARGS+=--with-configdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=--enable-bind8-stats
 CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-.if !defined(USE_INET6)
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=--enable-ipv6
+.else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 

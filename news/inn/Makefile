@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2007/07/04 20:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.85 2007/09/07 22:12:20 jlam Exp $
 
 DISTNAME=		inn-2.4.3
 PKGREVISION=		1
@@ -14,7 +14,7 @@ COMMENT=		The public release of InterNet News (INN)
 CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
 .include "Makefile.common"
-BUILD_DEFS+=		USE_INET6
+
 BUILD_DEFS+=		INN_DATA_DIR
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR:Q}
 
@@ -81,10 +81,6 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 RCD_SCRIPTS=		innd
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail

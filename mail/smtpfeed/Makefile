@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/02/22 19:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/07 22:12:13 jlam Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -16,10 +16,10 @@ COMMENT=	SMTP Fast Exploding External Deliverer for Sendmail
 # require sendmail from pkgsrc.
 #DEPENDS+=	sendmail>=8.9.3:../../mail/sendmail
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec
 # configure tries to be clever, so force our setting
-CONFIGURE_ENV+=	my_cv_path_lib_exec=${PREFIX:Q}/libexec
+CONFIGURE_ENV+=		my_cv_path_lib_exec=${PREFIX:Q}/libexec
 # use bind8?
 #CONFIGURE_ARGS+=	--with-bind8
 
@@ -27,15 +27,16 @@ DOCS=	COPYRIGHT FEATURES FEATURES.j FYI FYI.j INSTALL INSTALL.j \
 	ML-ADMIN ML-ADMIN.j OPTIONS OPTIONS.j README README.j \
 	RELEASE.NOTE SIGNAL SIGNAL.j TODO
 
-BUILD_DEFS+=	USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.smtpfeed
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8 share/doc/smtpfeed
-
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=--enable-ipv6
-.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${PREFIX}/${PKGMANDIR}/man8

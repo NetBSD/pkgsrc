@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.2 2007/01/07 00:57:36 rillig Exp $
+# $NetBSD: toplevel.mk,v 1.3 2007/09/07 22:12:15 jlam Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -156,7 +156,7 @@ readme-ipv6:
 	fi
 
 README-IPv6.html:
-	@${GREP} -l -e '^BUILD_DEFS.*=.*USE_INET6' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' \
+	@${GREP} -l -e '^BUILD_DEFS.*=.*IPV6_READY' -e '^PKG_SUPPORTED_OPTIONS.*=.*inet6' -e '^USE_FEATURES.*=.*inet6' \
 		 */*/Makefile */*/options.mk \
 	 | ${SED} -e s,Makefile,, -e s,options.mk,, >$@.pkgs
 	@${FGREP} -f $@.pkgs README-all.html | ${SORT} -t/ +1 >$@.trs

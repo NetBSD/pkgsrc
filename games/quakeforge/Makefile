@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/06/30 19:16:26 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/07 22:12:12 jlam Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		7
@@ -23,10 +23,14 @@ SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	libs/audio/targets/snd_oss.c
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
-BUILD_DEFS+=		USE_INET6
+PKG_OPTIONS_VAR=	PKG_OPTIONS.quakeforge
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.include "../../mk/bsd.prefs.mk"
-.if !(defined(USE_INET6) && ${USE_INET6} == "YES")
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--with-ipv6
+.else
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
 

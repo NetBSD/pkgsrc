@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/03/21 13:18:45 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/07 22:12:22 jlam Exp $
 #
 
 DISTNAME=	putty-0.59
@@ -15,13 +15,16 @@ BUILD_DIRS=	${WRKSRC}/unix
 MAKE_FILE=	Makefile.gtk
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.putty
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
 
 .if empty(OPSYS:MLinux)
 CFLAGS+=	-DHAVE_NO_SETRESUID
 .endif
 
-.if !empty(USE_INET6:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Minet6)
 CFLAGS+=	-DIPV6
 .endif
 

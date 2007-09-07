@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/02/22 19:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/07 22:12:13 jlam Exp $
 
 DISTNAME=	nail-11.25
 CATEGORIES=	mail
@@ -9,15 +9,14 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://nail.sourceforge.net/
 COMMENT=	BSD mail utility with MIME extensions
 
-BUILD_DEFS+=	USE_INET6
-
 MAKE_ENV+=	"SYSCONFDIR=${PKG_SYSCONFDIR}"
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nail
+PKG_SUPPORTED_OPTIONS=	inet6
 
-# IPv6 support
-#
-.if ${USE_INET6} == "YES"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	"IPv6=-DHAVE_IPv6_FUNCS"
 .endif
 

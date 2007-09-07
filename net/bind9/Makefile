@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2007/08/08 18:32:46 reed Exp $
+# $NetBSD: Makefile,v 1.94 2007/09/07 22:12:16 jlam Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P1/pl1/}
@@ -14,12 +14,11 @@ BIND_VERSION=	9.4.1-P1
 
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=	USE_INET6
-# No need to set USE_INET6, will auto-detect.
+BUILD_DEFS+=	IPV6_READY
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
-USE_LIBTOOL=		yes
+USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-libtool=yes \
@@ -46,10 +45,10 @@ FILES_SUBST+=	BIND_GROUP=${BIND_GROUP:Q} BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
 MESSAGE_SUBST+=	BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 
 # include/isc/ipv6.h is installed on non-ipv6 platforms
-.if defined(USE_INET6) && (${USE_INET6} == "YES")
-PLIST_SUBST+=	IPV6H="@comment "
-.else
+.if !empty(MISSING_FEATURES:Minet6)
 PLIST_SUBST+=	IPV6H=
+.else
+PLIST_SUBST+=	IPV6H="@comment "
 .endif
 
 PLIST_SRC=	${WRKDIR}/PLIST

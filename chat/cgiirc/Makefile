@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/30 10:06:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/07 22:12:10 jlam Exp $
 
 DISTNAME=	cgiirc-0.5.9
 PKGREVISION=	1
@@ -12,16 +12,17 @@ COMMENT=	Access IRC from a web browser
 USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
-BUILD_DEFS+=	USE_INET6
-
 CONF_FILES=	${PREFIX}/share/examples/cgiirc/cgiirc.conf \
 			${PKG_SYSCONFDIR}/cgiirc.conf
 CONF_FILES+=	${PREFIX}/share/examples/cgiirc/cgiirc.config \
 			${CGIIRC}/cgiirc.config
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cgiirc
+PKG_SUPPORTED_OPTIONS=	inet6
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
 DEPENDS+=	p5-INET6-[0-9]*:../../net/p5-INET6
 .endif
 

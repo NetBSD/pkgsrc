@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2007/07/04 20:54:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/09/07 22:12:12 jlam Exp $
 #
 # Canna common makefile.
 #
@@ -26,16 +26,6 @@ CANNA_MODE=	0755
 
 PKG_GROUPS_VARS+=	CANNA_GROUP
 PKG_USERS_VARS+=	CANNA_USER
-
-# XXX IPv6 support.  To be done.
-#BUILD_DEFS+=	USE_INET6
-#.include "../../mk/bsd.prefs.mk"
-#.if 0	# defined(USE_INET6) && ${USE_INET6} == "YES"
-#INET6=		-DINET6
-#.else
-#INET6=		# empty
-#.endif
-#MAKE_ENV+=	INET6=${INET6}
 
 CANNA_ENV=	CANNA_USER=${CANNA_USER}				\
 		CANNA_GROUP=${CANNA_GROUP}				\

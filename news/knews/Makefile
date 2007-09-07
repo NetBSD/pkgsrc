@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/02/15 14:44:49 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/07 22:12:21 jlam Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -14,9 +14,14 @@ CONFLICTS=	knews-1.0b0
 
 USE_IMAKE=	YES
 
-BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE USE_INET6
+BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
 
 .include "../../mk/bsd.prefs.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.knews
+PKG_SUPPORTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
 
 # Set KNEWS_DOMAIN_NAME to a string appended to the "From:" header or
 # KNEWS_DOMAIN_FILE to a file from which the domain name will be read.
@@ -37,7 +42,7 @@ post-patch:
 	${ECHO} >>${WRKSRC}/configure.h \
 	"#define DOMAIN_NAME \"${KNEWS_DOMAIN_NAME}\""
 .endif
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if !empty(PKG_OPTIONS:Minet6)
 	${ECHO} >>${WRKSRC}/configure.h "#define USE_INET6 YES"
 .endif
 
