@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6662 2007/09/07 16:09:58 wiz Exp $
+$NetBSD: TODO,v 1.6663 2007/09/07 16:11:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ Suggested package updates
 	o dd_rescue-1.13
 	o defendguin-0.0.11
 	o delegate-9.3.2
-	o desktop-file-utils-0.14
 	o devIL-1.6.7
 	o devtodo-0.1.19
 	o dhid-5.3
