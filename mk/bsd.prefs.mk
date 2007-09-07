@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.265 2007/08/17 20:27:30 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.266 2007/09/07 21:55:44 jlam Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -618,6 +618,9 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 .if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
 .  include "${PKGSRCDIR}/mk/emulator/emulator-vars.mk"
 .endif
+
+# System features framework
+.include "${PKGSRCDIR}/mk/features/features-vars.mk"
 
 # Package system flavor definitions
 .include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
