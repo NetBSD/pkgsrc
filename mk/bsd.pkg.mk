@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1923 2007/09/07 15:51:53 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1924 2007/09/07 21:55:44 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -24,6 +24,8 @@
 .if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
 .  include "${.PARSEDIR}/emulator/emulator.mk"
 .endif
+
+.include "${.PARSEDIR}/features/features.mk"
 
 .include "${.PARSEDIR}/flavor/bsd.flavor-vars.mk"
 .include "${.PARSEDIR}/check/bsd.check-vars.mk"
