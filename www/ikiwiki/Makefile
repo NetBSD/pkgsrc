@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/13 01:25:25 dan Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/07 15:37:34 wiz Exp $
 #
 
 DISTNAME=	ikiwiki_1.32
 PKGNAME=	ikiwiki-1.32
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -29,7 +30,7 @@ DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 .if !empty(PKG_OPTIONS:Msvn)
-DEPENDS+=	subversion-[0-9]*:../../devel/subversion
+DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3m)
@@ -57,6 +58,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ikiwiki/templates
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ikiwiki/basewiki
 	cd ${WRKSRC} && pax -rwvpp templates basewiki ${PREFIX}/share/ikiwiki/
+	${CHMOD} 644 ${PREFIX}/share/ikiwiki/basewiki/favicon.ico
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ikiwiki
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ikiwiki/html
