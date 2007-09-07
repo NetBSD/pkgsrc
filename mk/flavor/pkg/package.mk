@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.10 2007/08/15 13:20:57 joerg Exp $
+# $NetBSD: package.mk,v 1.11 2007/09/07 17:01:10 rillig Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -13,12 +13,8 @@ PKGREPOSITORYSUBDIR?=	All
 ###
 .PHONY: package-check-installed
 package-check-installed:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${PKG_INFO} -qe ${PKGNAME};					\
-	if ${TEST} $$? -ne 0; then					\
-		${ERROR_MSG} "${PKGNAME} is not installed.";		\
-		exit 1;							\
-	fi
+	${RUN} ${PKG_INFO} -qe ${PKGNAME} \
+	|| ${FAIL_MSG} "${PKGNAME} is not installed."
 
 ######################################################################
 ### package-create (PRIVATE, pkgsrc/mk/package/package.mk)
@@ -43,9 +39,8 @@ _PKG_ARGS_PACKAGE+=	-E
 .endif
 
 ${PKGFILE}: ${_CONTENTS_TARGETS}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	${PKG_CREATE} ${_PKG_ARGS_PACKAGE} ${.TARGET} || {		\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} ${PKG_CREATE} ${_PKG_ARGS_PACKAGE} ${.TARGET} || {	\
 		exitcode=$$?;						\
 		${ERROR_MSG} "${PKG_CREATE:T} failed ($$exitcode)";	\
 		${RM} -f ${.TARGET};					\
@@ -60,7 +55,7 @@ ${PKGFILE}: ${_CONTENTS_TARGETS}
 ###
 .PHONY: package-remove
 package-remove:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
+	${RUN} ${RM} -f ${PKGFILE}
 
 ######################################################################
 ### package-links (PRIVATE)
@@ -70,14 +65,11 @@ package-remove:
 ###
 package-links: delete-package-links
 .for _dir_ in ${CATEGORIES:S/^/${PACKAGES}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_dir_:Q}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ! -d ${_dir_:Q}; then				\
-		${ERROR_MSG} "Can't create directory "${_dir_:Q}".";	\
-		exit 1;							\
-	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_dir_:Q}/${PKGFILE:T}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGFILE:T} ${_dir_:Q}
+	${RUN} ${MKDIR} ${_dir_:Q}
+	${RUN} [ -d ${_dir_:Q} ]					\
+	|| ${FAIL_MSG} "Can't create directory "${_dir_:Q}"."
+	${RUN} ${RM} -f ${_dir_:Q}/${PKGFILE:T}
+	${RUN} ${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGFILE:T} ${_dir_:Q}
 .endfor
 
 ######################################################################
@@ -87,9 +79,8 @@ package-links: delete-package-links
 ### the non-primary categories to which the package belongs.
 ###
 delete-package-links:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PACKAGES} -type l -name ${PKGFILE:T} -print |		\
-	${XARGS} ${RM} -f
+	${RUN} ${FIND} ${PACKAGES} -type l -name ${PKGFILE:T} -print	\
+	| ${XARGS} ${RM} -f
 
 ######################################################################
 ### tarup (PUBLIC)
@@ -109,8 +100,7 @@ tarup: package-remove tarup-pkg package-links
 ### using "pkg_tarup".
 ###
 tarup-pkg:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -x ${_PKG_TARUP_CMD} || exit 1;				\
+	${RUN} [ -x ${_PKG_TARUP_CMD} ] || exit 1;			\
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${PKGREPOSITORY}				\
 		${_PKG_TARUP_CMD} ${PKGNAME}
