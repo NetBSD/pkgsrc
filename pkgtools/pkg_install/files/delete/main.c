@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.19 2007/08/15 01:49:02 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.20 2007/09/07 15:45:15 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.19 2007/08/15 01:49:02 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.20 2007/09/07 15:45:15 rillig Exp $");
 #endif
 #endif
 
@@ -190,7 +190,7 @@ main(int argc, char **argv)
 		warnx("missing package name(s)");
 		usage();
 	}
-#ifndef __INTERIX
+#if !defined(__INTERIX) && !defined(UNPRIVILEGED)
 	if (!Fake && Verbose && getuid() != 0) {
 		warnx("not running as root - trying to delete anyways");
 	}
