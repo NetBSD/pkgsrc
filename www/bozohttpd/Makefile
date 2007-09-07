@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/05/24 14:00:38 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/07 22:12:24 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-20060517
@@ -10,29 +10,26 @@ MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://www.eterna.com.au/bozohttpd/
 COMMENT=	Bozotic HTTP server; small and secure
 
-BUILD_DEFS+=	USE_INET6
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
-PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
-
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CPPFLAGS+=	-DINET6
-.endif
-CPPFLAGS+=	-Wno-error
-MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/${PKGMANDIR}
+PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd inet6
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mbozohttpd-do-htpasswd)
 CPPFLAGS+=	-DDO_HTPASSWD
 .endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CPPFLAGS+=	-DINET6
+.endif
+
+CPPFLAGS+=	-Wno-error
+MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/${PKGMANDIR}
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
