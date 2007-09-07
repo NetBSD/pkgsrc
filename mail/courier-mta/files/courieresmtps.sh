@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courieresmtps.sh,v 1.3 2007/08/10 17:57:04 jlam Exp $
+# $NetBSD: courieresmtps.sh,v 1.4 2007/09/07 14:18:11 jlam Exp $
 #
 # Courier ESMTP/SSL services daemon
 #
@@ -41,7 +41,7 @@ courieresmtps_doit()
 			return 1
 		fi
 		if [ ! -f "$f" ] &&
-		   [ "$f" = "@PKG_SYSCONFDIR@/esmtpd.pem ]; then
+		   [ "$f" = "@PKG_SYSCONFDIR@/esmtpd.pem" ]; then
 			@ECHO@ "Generating ESMTP SSL certificate in $f."
 			@PREFIX@/sbin/mkesmtpdcert >/dev/null 2>&1
 		fi
