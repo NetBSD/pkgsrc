@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6660 2007/09/07 15:53:57 wiz Exp $
+$NetBSD: TODO,v 1.6661 2007/09/07 15:57:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -858,7 +858,6 @@ Suggested package updates
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
-	o p5-Net-1.22
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
