@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/07 12:43:17 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/07 12:54:45 abs Exp $
 
 DISTNAME=		JSON-Any-1.08
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,8 @@ COMMENT=		Wrapper Class for the various JSON classes
 
 PERL5_PACKLIST=		auto/JSON/Any/.packlist
 
-# Do not install any specific JSON converter - let user decide
-# DEPENDS+=		p5-JSON-[0-9]*:../../converters/p5-JSON
+# May need to revisit this when multiple JSON converters in pkgsrc
+DEPENDS+=		p5-JSON-[0-9]*:../../converters/p5-JSON
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
