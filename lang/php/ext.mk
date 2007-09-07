@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.17 2007/06/11 17:59:23 heinz Exp $
+# $NetBSD: ext.mk,v 1.18 2007/09/07 13:26:20 tnn Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -61,6 +61,12 @@ MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE
 .endif
 
+.if ${OBJECT_FMT} == "SOM"
+SHLIB_SUFFIX=		sl
+.else
+SHLIB_SUFFIX=		so
+.endif
+
 pre-configure:	phpize-module
 
 phpize-module:
@@ -80,7 +86,7 @@ do-install: do-module-install
 
 do-module-install:
 	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/${PHP_EXTENSION_DIR}
-	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.so \
+	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.${SHLIB_SUFFIX} \
 		${DESTDIR:Q}${PREFIX:Q}/${PHP_EXTENSION_DIR}
 
 .if defined(USE_PHP_EXT_PATCHES)
