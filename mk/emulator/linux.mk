@@ -1,4 +1,4 @@
-# $NetBSD: linux.mk,v 1.2 2007/08/23 17:39:47 jlam Exp $
+# $NetBSD: linux.mk,v 1.3 2007/09/07 23:04:55 wiz Exp $
 #
 # Linux binary emulation framework
 #
@@ -37,7 +37,8 @@ _EMUL_TYPE?=		suse
 .endif
 _EMUL_TYPE?=		${EMUL_TYPE.linux}
 
-_EMUL_MODULES=		aspell
+_EMUL_MODULES=		alsa
+_EMUL_MODULES+=		aspell
 _EMUL_MODULES+=		base
 _EMUL_MODULES+=		compat
 _EMUL_MODULES+=		cups
@@ -49,10 +50,12 @@ _EMUL_MODULES+=		glx
 _EMUL_MODULES+=		gtk
 _EMUL_MODULES+=		gtk2
 _EMUL_MODULES+=		jpeg
+_EMUL_MODULES+=		libsigc++2
 _EMUL_MODULES+=		locale
 _EMUL_MODULES+=		motif
 _EMUL_MODULES+=		openssl
 _EMUL_MODULES+=		png
+_EMUL_MODULES+=		resmgr
 _EMUL_MODULES+=		slang
 _EMUL_MODULES+=		tiff
 _EMUL_MODULES+=		vmware
