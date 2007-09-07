@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1922 2007/08/18 00:30:21 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1923 2007/09/07 15:51:53 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -801,7 +801,7 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
 
-.if make(pbulk-index) || make(pbulk-index-item)
+.if make(pbulk-index) || make(pbulk-index-item) || make(pbulk-save-wrkdir)
 .include "${.PARSEDIR}/pbulk/pbulk-index.mk"
 .endif
 
