@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.14 2007/08/02 15:45:10 taca Exp $
+$NetBSD: patch-an,v 1.15 2007/09/07 10:39:36 taca Exp $
 
---- configure.in.orig	2007-07-15 23:21:59.000000000 +0900
+--- configure.in.orig	2007-08-31 23:55:13.000000000 +0900
 +++ configure.in
 @@ -1609,11 +1609,13 @@ AC_CHECK_HEADERS(
  	linux/netfilter_ipv4.h \
