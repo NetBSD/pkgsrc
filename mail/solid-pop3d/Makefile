@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:30:02 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/07 22:07:31 jlam Exp $
 
 DISTNAME=		solid-pop3d-0.15
 CATEGORIES=		mail
@@ -11,38 +11,17 @@ COMMENT=		Flexible POP3 server
 EGDIR=			${PREFIX}/share/examples/spop3d
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
-PLIST_SRC=
-EXAMPLES=
+PLIST_SRC=		# empty
+EXAMPLES=		# empty
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-logextend
+CONFIGURE_ARGS+=	--enable-statistics
 
-CONFIGURE_ARGS+=	--enable-logextend	\
-			--enable-statistics
+.include "options.mk"
 
-BUILD_DEFS+=		USE_INET6
-
-.if defined(SPOP3D_ENABLE_APOP)
-CONFIGURE_ARGS+=	--enable-apop
-PLIST_SRC+=		${.CURDIR}/PLIST.apop
-.endif
-
-.if defined(SPOP3D_ENABLE_STANDALONE)
-CONFIGURE_ARGS+=	--enable-standalone
-CONFIGURE_ARGS+=	--enable-connect
-.endif
-
-.if defined(SPOP3D_ENABLE_ALIASES)
-CONFIGURE_ARGS+=	--enable-mapping
-CONFIGURE_ARGS+=	--enable-nonip
-.endif
-
-.if defined(USE_INET6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
+PLIST_SRC+=		${PKGDIR}/PLIST
 EXAMPLES+=		config.example
-
-PLIST_SRC+=		${.CURDIR}/PLIST
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
