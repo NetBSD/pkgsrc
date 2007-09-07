@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2007/08/23 10:44:57 jnemeth Exp $
+# $NetBSD: Makefile,v 1.165 2007/09/07 22:56:23 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -96,6 +96,7 @@ SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
 SUBDIR+=	spim
 SUBDIR+=	stella
+SUBDIR+=	suse100_32_alsa
 SUBDIR+=	suse100_32_aspell
 SUBDIR+=	suse100_32_base
 SUBDIR+=	suse100_32_compat
@@ -109,14 +110,17 @@ SUBDIR+=	suse100_32_gtk2
 SUBDIR+=	suse100_32_libcups
 SUBDIR+=	suse100_32_libjpeg
 SUBDIR+=	suse100_32_libpng
+SUBDIR+=	suse100_32_libsigc++2
 SUBDIR+=	suse100_32_libtiff
 SUBDIR+=	suse100_32_libxml2
 SUBDIR+=	suse100_32_locale
 SUBDIR+=	suse100_32_openmotif
 SUBDIR+=	suse100_32_openssl
+SUBDIR+=	suse100_32_resmgr
 SUBDIR+=	suse100_32_slang
 SUBDIR+=	suse100_32_vmware
 SUBDIR+=	suse100_32_x11
+SUBDIR+=	suse100_alsa
 SUBDIR+=	suse100_aspell
 SUBDIR+=	suse100_base
 SUBDIR+=	suse100_compat
@@ -130,12 +134,14 @@ SUBDIR+=	suse100_gtk2
 SUBDIR+=	suse100_libcups
 SUBDIR+=	suse100_libjpeg
 SUBDIR+=	suse100_libpng
+SUBDIR+=	suse100_libsigc++2
 SUBDIR+=	suse100_libtiff
 SUBDIR+=	suse100_libxml2
 #SUBDIR+=	suse100_linux		# only contains Makefile fragments
 SUBDIR+=	suse100_locale
 SUBDIR+=	suse100_openmotif
 SUBDIR+=	suse100_openssl
+SUBDIR+=	suse100_resmgr
 SUBDIR+=	suse100_slang
 SUBDIR+=	suse100_vmware
 SUBDIR+=	suse100_x11
