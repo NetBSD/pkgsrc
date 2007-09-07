@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1946 2007/09/07 14:15:26 tsutsui Exp $
+$NetBSD: CHANGES-2007,v 1.1947 2007/09/07 15:17:44 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3566,3 +3566,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Added converters/p5-JSON-Any version 1.08 [abs 2007-09-07]
 	Updated net/ttt to 1.8.2 [obache 2007-09-07]
 	Updated emulator/tme to 0.6 [tsutsui 2007-09-07]
+	Updated sysutils/bacula to 2.2.2 [ghen 2007-09-07]
+	Updated sysutils/bacula-clientonly to 2.2.2 [ghen 2007-09-07]
+	Updated sysutils/bacula-gnome-console to 2.2.2nb1 [ghen 2007-09-07]
+	Updated sysutils/bacula-tray-monitor to 2.2.2 [ghen 2007-09-07]
+	Updated sysutils/bacula-wx-console to 2.2.2 [ghen 2007-09-07]
