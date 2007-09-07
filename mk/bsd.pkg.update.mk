@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.11 2007/09/07 10:57:35 obache Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.12 2007/09/07 11:14:10 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -128,6 +128,8 @@ ${_DDIR}: ${_DLIST}
 	${RUN} pkgs=`${CAT} ${_DLIST}`;					\
 	if [ "$$pkgs" ]; then ${PKG_INFO} -Q PKGPATH $$pkgs; fi > ${_DDIR}
 
+# Note that "pkg_info -qR" wouldn't work here, since it lists only the
+# packages that require this package directly.
 ${_DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | 			\
