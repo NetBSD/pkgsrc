@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1957 2007/09/07 23:07:59 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1958 2007/09/07 23:14:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3595,3 +3595,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added emulators/suse100_32_libsigc++2 version 10.0 [wiz 2007-09-07]
 	Added emulators/suse100_32_resmgr version 10.0 [wiz 2007-09-07]
 	Updated net/skype to 1.4.0.99nb2 [wiz 2007-09-07]
+	Updated devel/apr0 to 0.9.16.2.0.61 [root 2007-09-07]
+	Updated www/apache2 to 2.0.61 [root 2007-09-07]
