@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/06 21:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/08 21:58:01 jlam Exp $
 #
 
 DISTNAME=	remind-03.00.24
@@ -12,6 +12,7 @@ COMMENT=	Calendar/alarm program with interpreted input language
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
+USE_FEATURES=	glob
 
 REPLACE_PERL=	www/rem2html
 
@@ -46,12 +47,5 @@ post-install:
 			${PREFIX}/share/doc/remind
 	${INSTALL_SCRIPT} ${WRKSRC}/www/rem2html \
 		${PREFIX}/bin/rem2html
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# <glob.h>
-CPPFLAGS+=	-DNBCOMPAT_GLOB_H
-.endif
 
 .include "../../mk/bsd.pkg.mk"
