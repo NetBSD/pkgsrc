@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.16 2007/04/10 03:44:34 rillig Exp $
+# $NetBSD: transform-gcc,v 1.17 2007/09/08 13:37:51 rillig Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -36,6 +36,7 @@ case $arg in
 -fno-strict-aliasing	|\
 -fomit-frame-pointer	|\
 -fPIC			|\
+-fpic			|\
 -fpcc-struct-return	|\
 -freg-struct-return	|\
 -fsigned-char		|\
