@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.522 2007/09/07 19:09:48 jlam Exp $
+# $NetBSD: Makefile,v 1.523 2007/09/08 18:44:48 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -196,6 +196,7 @@ SUBDIR+=	p5-CGI-Kwiki
 SUBDIR+=	p5-CGI-Minimal
 SUBDIR+=	p5-CGI-Session
 SUBDIR+=	p5-CGI_Lite
+SUBDIR+=	p5-CSS
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-HTML-Clean
@@ -219,6 +220,7 @@ SUBDIR+=	p5-HTML-TableExtract
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
 SUBDIR+=	p5-HTML-Tree
+SUBDIR+=	p5-HTML-WikiConverter
 SUBDIR+=	p5-HTMLObject
 SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
