@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2007/03/28 11:06:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.92 2007/09/08 13:44:48 rillig Exp $
 
 DISTNAME=		R-2.4.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -16,7 +16,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_TARGET=		check
-USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed xmkmf
+USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed unzip:run xmkmf
 USE_GNU_READLINE=	yes		# uses callback interface
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
@@ -50,6 +50,7 @@ CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD:Q}
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED:Q}
 CONFIGURE_ENV+=		ac_cv_path_R_GZIPCMD=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=		ac_cv_path_R_UNZIPCMD=${TOOLS_PATH.unzip}
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
 # been installed SHAREMODE
