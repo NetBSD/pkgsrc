@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/09/07 22:12:21 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/08 21:57:58 jlam Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -39,6 +39,8 @@ FILES_SUBST+=		LEAFNODE_LOCKDIR=${LEAFNODE_LOCKDIR:Q}
 FILES_SUBST+=		LEAFNODE_HOME=${LEAFNODE_HOME:Q}
 MESSAGE_SUBST+=		LEAFNODE_CONFDIR=${LEAFNODE_CONFDIR}
 
+USE_FEATURES=		snprintf vsnprintf
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-spooldir=${LEAFNODE_SPOOL:Q}
 CONFIGURE_ARGS+=	--with-lockfile=${LEAFNODE_LOCKDIR}/fetchnews.lck
@@ -71,8 +73,5 @@ post-install:
 			${WRKSRC}/README-daemontools			\
 			${WRKSRC}/README.FIRST ${PREFIX}/share/doc/leafnode
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# {,v}snprintf()
-.endif
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

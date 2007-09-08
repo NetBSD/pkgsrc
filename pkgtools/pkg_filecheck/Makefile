@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2007/09/08 21:57:59 jlam Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.4
@@ -12,6 +12,7 @@ COMMENT=		Check for files not owned by any package
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
+USE_FEATURES=	fts_open
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
@@ -23,8 +24,6 @@ CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-
-.include "../../mk/bdb.buildlink3.mk"
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	builddb.pl builddb.1 pkg_filecheck.conf
@@ -57,11 +56,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
-.include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "NetBSD"
-CPPFLAGS+=	-DUSE_LIBNBCOMPAT
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.endif
-
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

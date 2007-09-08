@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/09/06 21:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/08 21:58:02 jlam Exp $
 
 DISTNAME=	mini_httpd-1.19
 PKGREVISION=	3
@@ -11,6 +11,8 @@ COMMENT=	Small, forking webserver with IPv6 and SSL support
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
+USE_FEATURES=	snprintf
+
 MAKE_ENV+=	PKG_CFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
@@ -20,6 +22,8 @@ LDFLAGS+=	-lssl -lcrypto -lcrypt
 .if ${OPSYS} != "IRIX"
 LDFLAGS+=	-lutil
 .endif
+
+MAKE_ENV+=	LDLIBS=${LIBS:Q}
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
 
@@ -35,9 +39,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/${PKGMANDIR}/man1/mhtpasswd.1
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
-MAKE_ENV+=	LDLIBS=${LIBS:Q}
-.endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

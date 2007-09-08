@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/09/06 21:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/08 21:58:02 jlam Exp $
 
 DISTNAME=	xsnow-1.42
 PKGREVISION=	2
@@ -9,12 +9,12 @@ MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.euronet.nl/~rja/Xsnow/
 COMMENT=	Create a snowy and Santa-y desktop
 
+USE_FEATURES=	snprintf
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
+.if !empty(MISSING_FEATURES:Msnprintf)
 IMAKEOPTS+=	-DExtraLibraries=${LIBS:Q}
 .endif
 

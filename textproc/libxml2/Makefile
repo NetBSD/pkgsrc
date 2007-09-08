@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.89 2007/09/08 21:58:00 jlam Exp $
 
 DISTNAME=	libxml2-2.6.30
 CATEGORIES=	textproc
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
+USE_FEATURES=		glob
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libxml-2.0.pc.in
 
@@ -44,13 +45,6 @@ SUBST_FILES.cat=	catalog.c xmlcatalog.c
 SUBST_SED.cat=	-e "s,@@SGML_DEFAULT_CATALOG@@,${SGML_DEFAULT_CATALOG},g"
 SUBST_SED.cat+=	-e "s,@@XML_DEFAULT_CATALOG@@,${XML_DEFAULT_CATALOG},g"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# <glob.h>
-SUBST_CLASSES+=		glob_h
-SUBST_STAGE.glob_h=	post-patch
-SUBST_FILES.glob_h=	runtest.c
-SUBST_SED.glob_h=	-e "s,<glob\.h>,<nbcompat/glob.h>,"
-.endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"

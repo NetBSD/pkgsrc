@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2007/09/08 21:58:00 jlam Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -16,6 +16,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 USE_TOOLS+=		perl:run sed:run awk:run
+USE_FEATURES=		getopt_long
 
 INFO_FILES=		YES
 
@@ -47,10 +48,6 @@ PLIST_SUBST+=	GNU_PREFIX_TMAC=""
 PLIST_SUBST+=	GNU_PREFIX_AN_TMAC="g"
 .else
 PLIST_SUBST+=	GNU_PREFIX_AN_TMAC=""
-.endif
-
-.if ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# getopt_long()
 .endif
 
 BUILD_DEFS+=	PAPERSIZE

@@ -1,20 +1,19 @@
-# $NetBSD: inplace.mk,v 1.4 2007/08/02 07:22:31 tron Exp $
+# $NetBSD: inplace.mk,v 1.5 2007/09/08 21:57:59 jlam Exp $
 #
 # This Makefile fragment builds a working copy of libnbcompat inside
-# ${WRKDIR} and adds the appropriate paths to CPPFLAGS and LDFLAGS.
-# This can be used in place of libnbcompat/buildlink3.mk where it is
-# included by a bootstrap package Makefile.
+# ${WRKDIR}.
+#
 
 .include "../../mk/bsd.prefs.mk"
 
 LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
 LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
 
-CPPFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
-LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
-LIBS+=			-lnbcompat
+CPPFLAGS.nbcompat=	-DHAVE_NBCOMPAT_H=1 -I${LIBNBCOMPAT_SRCDIR}
+LDFLAGS.nbcompat=	-L${LIBNBCOMPAT_SRCDIR}
+LDADD.nbcompat=		-lnbcompat
 
-do-extract: libnbcompat-extract
+post-extract: libnbcompat-extract
 libnbcompat-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
