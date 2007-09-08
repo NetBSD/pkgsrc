@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.111 2007/09/07 15:45:14 rillig Exp $
+# $NetBSD: bootstrap,v 1.112 2007/09/08 09:58:14 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -788,10 +788,6 @@ if [ "$need_xargs" = "yes" ]; then
 	echo "TOOLS_PLATFORM.xargs?=		$prefix/bin/xargs" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.xargs?=		$wrkdir/bin/xargs" >> ${BOOTSTRAP_MKCONF}
 	need_extras=yes
-fi
-
-if [ "$ignoreusercheck" = "yes" ]; then
-	echo "CPPFLAGS+=			-DUNPRIVILEGED" >> ${BOOTSTRAP_MKCONF}
 fi
 
 echo_msg "Bootstrapping mk-files"
