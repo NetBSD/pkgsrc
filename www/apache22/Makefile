@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2007/09/08 11:02:07 tron Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/08 18:48:18 rillig Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -20,6 +21,7 @@ CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--enable-so
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
+CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
