@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/07 15:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/08 17:27:11 wiz Exp $
 #
 
 DISTNAME=	ikiwiki_1.32
@@ -8,7 +8,7 @@ CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
 MAINTAINER=	dan@NetBSD.org
-HOMEPAGE=	http://ikiwiki.kitenet.net/
+HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
 
 
