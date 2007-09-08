@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.1 2007/09/07 21:55:47 jlam Exp $
+# $NetBSD: features.mk,v 1.2 2007/09/08 04:54:12 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -29,7 +29,16 @@ FEATURE_CPPFLAGS=	# empty
 FEATURE_LDFLAGS=	# empty
 FEATURE_LIBS=		# empty
 
+CPPFLAGS+=		${FEATURE_CPPFLAGS}
+LDFLAGS+=		${FEATURE_LDFLAGS}
+LIBS+=			${FEATURE_LIBS}
+
+_FEATURE_USE_NBCOMPAT?=	no
 .  if !empty(MISSING_FEATURES:Merr) || \
+      !empty(MISSING_FEATURES:Mfts_close) || \
+      !empty(MISSING_FEATURES:Mfts_open) || \
+      !empty(MISSING_FEATURES:Mfts_read) || \
+      !empty(MISSING_FEATURES:Mfts_set) || \
       !empty(MISSING_FEATURES:Mgetopt_long) || \
       !empty(MISSING_FEATURES:Mglob) || \
       !empty(MISSING_FEATURES:Mnbcompat) || \
@@ -38,13 +47,41 @@ FEATURE_LIBS=		# empty
       !empty(MISSING_FEATURES:Mutimes) || \
       !empty(MISSING_FEATURES:Mvsnprintf) || \
       !empty(MISSING_FEATURES:Mwarn)
-_FEATURE_NEED_NBCOMPAT=		yes
+_FEATURE_USE_NBCOMPAT=	yes
 .  endif
-_FEATURE_NEED_NBCOMPAT?=	no
 
-.  if ${_FEATURE_NEED_NBCOMPAT} == "yes"
+.  if ${_FEATURE_USE_NBCOMPAT} == "yes"
 .    include "${PKGSRCDIR}/pkgtools/libnbcompat/inplace.mk"
+FEATURE_CPPFLAGS+=	${CPPFLAGS.nbcompat}
+FEATURE_LDFLAGS+=	${LDFLAGS.nbcompat}
 FEATURE_LIBS+=		${LDADD.nbcompat}
 .  endif
+
+.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && \
+      (!empty(MISSING_FEATURES:Mfts_close) || \
+       !empty(MISSING_FEATURES:Mfts_open) || \
+       !empty(MISSING_FEATURES:Mfts_read) || \
+       !empty(MISSING_FEATURES:Mfts_set))
+BUILDLINK_TARGETS+=	features-fts-h
+.  endif
+.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mglob)
+BUILDLINK_TARGETS+=	features-glob-h
+.  endif
+.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mregex)
+BUILDLINK_TARGETS+=	features-regex-h
+.  endif
+
+.  for _file_ in fts.h glob.h regex.h
+.PHONY: features-${_file_:S/./-/}
+features-${_file_:S/./-/}:
+	${RUN}set -e;							\
+	nbcompat_header=${LIBNBCOMPAT_SRCDIR:Q}/nbcompat/${_file_:Q};	\
+	header=${BUILDLINK_DIR:Q}/include/${_file_:Q};			\
+	if ${TEST} ! -f "$$header" -a -f "$$nbcompat_header"; then	\
+		${ECHO_BUILDLINK_MSG} "Creating $$header.";		\
+		${MKDIR} `${DIRNAME} "$$header"`;			\
+		${LN} -s "$$nbcompat_header" "$$header";		\
+	fi
+.  endfor
 
 .endif	# MISSING_FEATURES
