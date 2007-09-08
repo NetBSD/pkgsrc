@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.4 2007/09/08 05:04:37 jlam Exp $
+# $NetBSD: features-vars.mk,v 1.5 2007/09/08 05:06:40 jlam Exp $
 #
 # This file is include by bsd.prefs.mk.
 #
@@ -69,7 +69,7 @@ MISSING_FEATURES+=	${_feature_}
 .  endif
 .endfor
 
-.for _feature_ in regex
+.for _feature_ in regcomp
 .  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
 .    if !exists(/usr/include/regex.h)
 MISSING_FEATURES+=	${_feature_}
