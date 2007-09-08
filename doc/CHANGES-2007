@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1966 2007/09/08 12:06:19 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1967 2007/09/08 12:26:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3605,3 +3605,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/apache22 to 2.2.6 [tron 2007-09-08]
 	Added multimedia/subtitleeditor version 0.13.6 [wiz 2007-09-08]
 	Added net/fpdns version 0.9.1 [wiz 2007-09-08]
+	Added mail/libsieve version 2.2.5 [obache 2007-09-08]
