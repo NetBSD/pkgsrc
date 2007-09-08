@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2007/09/05 21:17:03 wiz Exp $
+# $NetBSD: Makefile,v 1.679 2007/09/08 12:05:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -100,6 +100,7 @@ SUBDIR+=	flan
 SUBDIR+=	flodo
 SUBDIR+=	flow-tools
 SUBDIR+=	fmirror
+SUBDIR+=	fpdns
 SUBDIR+=	fping
 SUBDIR+=	fping6
 SUBDIR+=	freenet-tools
