@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/04/05 16:41:34 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/08 08:05:22 obache Exp $
 
-DISTNAME=	msmtp-1.4.5
+DISTNAME=	msmtp-1.4.13
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ COMMENT=	SMTP plugin for MUAs
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -18,7 +19,7 @@ EGDIR=		${PREFIX}/share/examples/msmtp
 CONF_FILES=	${EGDIR}/msmtprc-user.example \
 		${PKG_SYSCONFDIR}/msmtprc
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Interix"
@@ -31,4 +32,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-user.example ${EGDIR}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
