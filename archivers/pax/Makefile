@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/08 21:57:58 jlam Exp $
+
+USE_FEATURES=	nbcompat
 
 .include "Makefile.common"
 
@@ -13,5 +15,4 @@ CONFLICTS+=	gcpio-[0-9]*
 CONFLICTS+=	gtar-base-[0-9]*
 .endif
 
-.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"

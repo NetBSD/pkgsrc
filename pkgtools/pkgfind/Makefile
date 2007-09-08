@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/08 21:57:59 jlam Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
@@ -13,13 +13,16 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
+USE_FEATURES=	err getprogname setprogname snprintf warn
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
-	${LINK.c} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
+	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o ${WRKSRC}/pkgfind	\
+		${WRKSRC}/pkgfind.c ${LIBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
@@ -30,14 +33,5 @@ SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pkgfind.c pkgfind.1
 SUBST_SED.path=		-e "s,/usr/pkgsrc,${PKGSRCDIR},g"
 SUBST_MESSAGE.path=	Adjusting pkgsrc directory.
-
-.include "../../mk/bsd.prefs.mk"
-
-# need err(1), warn(1), set/getprogname(1)
-.if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly"
-CFLAGS+=	-DNEED_LIBNBCOMPAT
-LDFLAGS+=	-lnbcompat
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
