@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/08 21:57:59 jlam Exp $
 #
 
 DISTNAME=	suck-4.3.2
@@ -13,8 +13,8 @@ HOMEPAGE=	http://home.comcast.net/~bobyetman/
 COMMENT=	Feed a local news server without a dedicated newsfeed
 
 GNU_CONFIGURE=	yes
+USE_FEATURES=	snprintf
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 post-patch:
@@ -27,8 +27,5 @@ post-install:
 	${CP} ${WRKSRC}/sample/* ${PREFIX}/share/examples/suck
 	${CHMOD} 644 ${PREFIX}/share/examples/suck/*
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
-.endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

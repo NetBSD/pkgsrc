@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/08 21:57:58 jlam Exp $
 #
 
 DISTNAME=	incm-0.5
@@ -11,17 +11,12 @@ COMMENT=	Tool to get mail from mbox file or maildir
 
 CONFLICTS=	mew-[0-9]*
 
+USE_FEATURES=	utimes
 GNU_CONFIGURE=	YES
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/incm ${PREFIX}/bin/
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# utimes()
-.endif
 
 .include "../../mk/bsd.pkg.mk"

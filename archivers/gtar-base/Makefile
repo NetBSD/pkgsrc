@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2007/09/06 21:51:52 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2007/09/08 21:57:57 jlam Exp $
 
 DISTNAME=	tar-1.15.1
 PKGNAME=	gtar-base-1.15.1
@@ -16,6 +16,7 @@ CONFLICTS=	gcpio-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_FEATURES=		snprintf
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -65,8 +66,5 @@ post-install:
 	${LN} -sf ${DESTDIR}${GTAR_PROGRAM_PREFIX}tar ${DESTDIR}${PREFIX}/bin/"gtar"
 .endif
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# vnsprintf()
-.endif
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

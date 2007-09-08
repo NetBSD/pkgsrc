@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/06 21:29:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/08 21:58:00 jlam Exp $
 #
 
 DISTNAME=		rcorder-20031013
@@ -12,9 +12,9 @@ COMMENT=		Print a dependency ordering of interdependent files
 
 NO_CHECKSUM=		yes
 GNU_CONFIGURE=		yes
+USE_FEATURES=		nbcompat
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
-.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"

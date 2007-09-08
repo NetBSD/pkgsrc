@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.155 2007/09/08 21:57:58 jlam Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -15,6 +15,7 @@ MAKE_JOBS_SAFE=	no
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	bash:run gmake lex perl
+USE_FEATURES=	snprintf
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
@@ -64,10 +65,6 @@ MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 
 .if ${PKGSRC_COMPILER} == "ido"
 CPPFLAGS+=	-DSGI_IDO_CC
-.endif
-
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
 .endif
 
 .include "../../graphics/jasper/buildlink3.mk"

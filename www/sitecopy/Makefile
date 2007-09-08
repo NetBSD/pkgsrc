@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/09/06 21:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/08 21:58:02 jlam Exp $
 
 DISTNAME=		sitecopy-0.16.2
 CATEGORIES=		www
@@ -8,6 +8,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		Utility for synchronizing remote and local web sites
 
+USE_FEATURES=		getopt_long
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 
@@ -25,10 +26,6 @@ CFLAGS+=		-I.
 pre-build:
 	${RM} -f ${WRKSRC:Q}/fnmatch.h
 	${LN} -sf ${WRKSRC:Q}/lib/fnmatch.h ${WRKSRC:Q}/fnmatch.h
-
-.if !exists(/usr/include/getopt.h)
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
