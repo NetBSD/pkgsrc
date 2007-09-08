@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/08 21:57:13 jlam Exp $
 
 DISTNAME=	nologinmsg-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -9,26 +9,22 @@ MAINTAINER=	cjep@NetBSD.org
 #HOMEPAGE=
 COMMENT=	More functional native binary replacement for /sbin/nologin
 
+USE_FEATURES=	getprogname
+
 SUBST_CLASSES+=		nlm
 SUBST_STAGE.nlm=	pre-configure
 SUBST_FILES.nlm=	nologinmsg.8 pathnames.h
 SUBST_SED.nlm=		-e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g'
 
-LIBS.Linux+=	-lnbcompat
-LIBS.IRIX+=	-lnbcompat
-MAKE_FLAGS+=	LDADD=${LIBS:M*:Q}
-MAKE_FLAGS+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
-MAKE_FLAGS+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
+do-build:
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} -I. ${LDFLAGS}	\
+		-o nologinmsg nologinmsg.c ${LIBS}
 
-.include "../../mk/bsd.prefs.mk"
-# XXX: ${OPSYS} != "NetBSD" ?
-.if ${OPSYS} == "Linux" || ${OPSYS} == "IRIX" || ${OPSYS} == "Interix"
-MAKE_FLAGS+=	NOMAN=YES
-CFLAGS+=	-D__LIBNBCOMPAT
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.endif
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/nologinmsg ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/nologinmsg.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/sysexits/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
