@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2007/09/07 22:12:24 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2007/09/08 01:44:51 jlam Exp $
 #
 
 DISTNAME=	bozohttpd-20060517
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +13,7 @@ COMMENT=	Bozotic HTTP server; small and secure
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
+MAKE_FILE=		Makefile.boot
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
 PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd inet6
@@ -28,18 +28,17 @@ CPPFLAGS+=	-DDO_HTPASSWD
 CPPFLAGS+=	-DINET6
 .endif
 
-CPPFLAGS+=	-Wno-error
-MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/${PKGMANDIR}
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing paths in manual page.
+SUBST_STAGE.paths=	pre-build
+SUBST_FILES.paths=	bozohttpd.8
+SUBST_SED.paths=	-e "s|/usr/pkg/|"${PREFIX:Q}"/|g"
 
-INSTALLATION_DIRS=	libexec ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bozohttpd ${PREFIX}/libexec
+	${INSTALL_MAN} ${WRKSRC}/bozohttpd.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../security/openssl/buildlink3.mk"
-
-pre-build:
-	cd ${WRKSRC}; for file in bozohttpd.8; do			\
-		${SED}	-e "s|/usr/pkg/|${PREFIX}/|g"			\
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-
 .include "../../mk/bsd.pkg.mk"
