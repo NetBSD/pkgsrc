@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.2 2007/09/08 04:54:12 jlam Exp $
+# $NetBSD: features.mk,v 1.3 2007/09/08 05:06:40 jlam Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -42,7 +42,7 @@ _FEATURE_USE_NBCOMPAT?=	no
       !empty(MISSING_FEATURES:Mgetopt_long) || \
       !empty(MISSING_FEATURES:Mglob) || \
       !empty(MISSING_FEATURES:Mnbcompat) || \
-      !empty(MISSING_FEATURES:Mregex) || \
+      !empty(MISSING_FEATURES:Mregcomp) || \
       !empty(MISSING_FEATURES:Msnprintf) || \
       !empty(MISSING_FEATURES:Mutimes) || \
       !empty(MISSING_FEATURES:Mvsnprintf) || \
@@ -67,7 +67,7 @@ BUILDLINK_TARGETS+=	features-fts-h
 .  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mglob)
 BUILDLINK_TARGETS+=	features-glob-h
 .  endif
-.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mregex)
+.  if (${_FEATURE_USE_NBCOMPAT} == "yes") && !empty(MISSING_FEATURES:Mregcomp)
 BUILDLINK_TARGETS+=	features-regex-h
 .  endif
 
