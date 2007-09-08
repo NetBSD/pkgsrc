@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.2 2007/09/08 04:54:12 jlam Exp $
+# $NetBSD: features-vars.mk,v 1.3 2007/09/08 05:03:52 jlam Exp $
 #
 # This file is include by bsd.prefs.mk.
 #
@@ -45,11 +45,13 @@ MISSING_FEATURES+=	${_feature_}
 .  endif
 .endfor
 
-.if defined(USE_FEATURES) && !empty(USE_FEATURES:Mgetopt_long)
-.  if !exists(/usr/include/getopt.h)
-MISSING_FEATURES+=	getopt_long
+.for _feature_ in getopt_long
+.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.    if !exists(/usr/include/getopt.h)
+MISSING_FEATURES+=	${_feature_}
+.    endif
 .  endif
-.endif
+.endfor
 
 .for _feature_ in getprogname setprogname
 .  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
@@ -59,31 +61,37 @@ MISSING_FEATURES+=	${_feature_}
 .  endif
 .endfor
 
-.if defined(USE_FEATURES) && !empty(USE_FEATURES:Mglob)
-.  if !exists(/usr/include/glob.h)
-MISSING_FEATURES+=	glob
-.  endif
-.endif
-
-.if defined(USE_FEATURES) && !empty(USE_FEATURES:Mregex)
-.  if !exists(/usr/include/regex.h)
-MISSING_FEATURES+=	regex
-.  endif
-.endif
-
-.for _feature_ in snprintf vsnprintf
+.for _feature_ in glob
 .  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
-.    if !empty(LOWER_OPSYS:Mirix5*)
-MISSING_FEATURES+=	snprintf
+.    if !exists(/usr/include/glob.h)
+MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
 .endfor
 
-.if defined(USE_FEATURES) && !empty(USE_FEATURES:Mutimes)
-.  if ${OPSYS} == "Interix"
-MISSING_FEATURES+=	utimes
+.for _feature_ in regex
+.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.    if !exists(/usr/include/regex.h)
+MISSING_FEATURES+=	${_feature_}
+.    endif
 .  endif
-.endif
+.endfor
+
+.for _feature_ in snprintf vsnprintf
+.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.    if !empty(LOWER_OPSYS:Mirix5*)
+MISSING_FEATURES+=	${_feature_}
+.    endif
+.  endif
+.endfor
+
+.for _feature_ in utimes
+.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.    if ${OPSYS} == "Interix"
+MISSING_FEATURES+=	${_feature_}
+.    endif
+.  endif
+.endfor
 
 .if defined(USE_FEATURES) && !empty(USE_FEATURES:Mnbcompat)
 MISSING_FEATURES+=	nbcompat
