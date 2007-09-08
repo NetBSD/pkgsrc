@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/01/13 21:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/08 20:35:08 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
 PKGREVISION=	2
