@@ -38,7 +38,7 @@
 #include <sys/param.h>
 #include <sys/stat.h>
 
-#ifdef NEED_LIBNBCOMPAT
+#if HAVE_NBCOMPAT_H
 #include <nbcompat.h>
 #else
 #include <err.h>
