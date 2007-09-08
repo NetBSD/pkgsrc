@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2007/08/13 08:12:48 rillig Exp $
+# $NetBSD: Makefile,v 1.109 2007/09/08 11:35:56 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -96,6 +96,7 @@ SUBDIR+=	replex
 SUBDIR+=	ruby-ming
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg-xmms
+SUBDIR+=	subtitleeditor
 SUBDIR+=	swfdec
 SUBDIR+=	swfdec-gtk2
 SUBDIR+=	totem
