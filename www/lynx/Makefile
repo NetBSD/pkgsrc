@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2007/07/18 20:25:27 joerg Exp $
+# $NetBSD: Makefile,v 1.101 2007/09/08 18:22:38 rillig Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -8,6 +8,7 @@
 
 DISTNAME=	lynx2.8.6rel.5
 PKGNAME=	lynx-2.8.6.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
 		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${SUBDIR:Q}/ \
@@ -34,7 +35,8 @@ INSTALL_TARGET=		install-full
 MAKE_FILE=		makefile
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_GZIP_CMD:Q}
-USE_TOOLS+=		gzip msgfmt
+CONFIGURE_ENV+=		UNZIP=${TOOLS_PATH.unzip:Q}
+USE_TOOLS+=		gzip msgfmt unzip:run
 
 CONF_FILES+=		share/examples/lynx/lynx.cfg ${PKG_SYSCONFDIR}/lynx.cfg
 CONF_FILES+=		share/examples/lynx/lynx.lss ${PKG_SYSCONFDIR}/lynx.lss
