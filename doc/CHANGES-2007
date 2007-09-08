@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1959 2007/09/08 08:05:51 obache Exp $
+$NetBSD: CHANGES-2007,v 1.1960 2007/09/08 08:15:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/apr0 to 0.9.16.2.0.61 [root 2007-09-07]
 	Updated www/apache2 to 2.0.61 [root 2007-09-07]
 	Updated mail/msmtp to 1.4.13 [obache 2007-09-08]
+	Updated devel/libgsf to 1.14.7 [wiz 2007-09-08]
