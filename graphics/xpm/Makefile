@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/09/06 21:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2007/09/08 21:57:58 jlam Exp $
 
 DISTNAME=	xpm-3.4k
 PKGREVISION=	7
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=		libXpm-[0-9]*
 
+USE_FEATURES=	snprintf
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -26,13 +27,12 @@ post-install:
 .endif
 
 .if !empty(LOWER_OPSYS:Mirix5*)
-SUBST_CLASSES+=	sodots
+SUBST_CLASSES+=		sodots
 SUBST_STAGE.sodots=	post-configure
 SUBST_FILES.sodots=	lib/Makefile
 SUBST_SED.sodots=	-e 's,\.so$$(SOXPMLIBREV),.so.$$(SOXPMLIBREV),g'
 
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
-IMAKEOPTS+=	-DExtraLibraries=-lnbcompat
+IMAKEOPTS+=	-DExtraLibraries=${LIBS:Q}
 IMAKEOPTS+=	-DInstallCmd=${INSTALL:Q}
 
 post-configure:

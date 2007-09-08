@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2007/08/29 15:42:39 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2007/09/08 21:57:59 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -30,6 +30,8 @@ USE_TOOLS+=		pax:run tar:run gzcat:run
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
 			sed sort touch
+
+USE_FEATURES=		nbcompat
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
@@ -148,5 +150,4 @@ update:
 	${MAKE} ${UPDATE_TARGET}
 	${MAKE} clean
 
-.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
