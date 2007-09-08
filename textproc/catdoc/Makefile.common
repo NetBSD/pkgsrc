@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/09/06 21:51:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/09/08 21:58:00 jlam Exp $
 #
 
 DISTNAME=	catdoc-0.94.2
@@ -12,18 +12,9 @@ COMMENT=	Converts MS Word, Excel and Powerpoint files to plain text
 DISTINFO_FILE=		${.CURDIR}/../../textproc/catdoc/distinfo
 PATCHDIR=		${.CURDIR}/../../textproc/catdoc/patches
 
-GNU_CONFIGURE=		yes
+USE_FEATURES=		glob nbcompat
 
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
 
 CPPFLAGS+=		-Dunix -D__unix
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(LOWER_OPSYS:Mirix5*)
-. include "../../pkgtools/libnbcompat/inplace.mk"	# <glob.h>
-SUBST_CLASSES+=		glob_h
-SUBST_STAGE.glob_h=	post-patch
-SUBST_FILES.glob_h=	src/fileutil.c
-SUBST_SED.glob_h=	-e "s,<glob\.h>,<nbcompat/glob.h>,"
-.endif

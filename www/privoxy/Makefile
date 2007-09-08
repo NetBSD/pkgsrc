@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/09/06 21:51:55 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/09/08 21:58:02 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -29,6 +29,7 @@ CPPFLAGS+=		-Dunix
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
 
+USE_FEATURES=		snprintf
 USE_TOOLS+=		autoconf213 gmake mktemp
 MAKE_FILE=		GNUmakefile
 
@@ -66,9 +67,6 @@ post-install:
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${EGDIR}
 	${CHMOD} -R a+r ${EGDIR}
 
-.if !empty(LOWER_OPSYS:Mirix5*)
-.  include "../../pkgtools/libnbcompat/inplace.mk"	# snprintf()
-.endif
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

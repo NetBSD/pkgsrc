@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/08/16 13:02:05 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/08 21:57:59 jlam Exp $
 
 DISTNAME=	pbulk-0.13
 CATEGORIES=	pkgtools
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/pbulk
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 
+USE_FEATURES=	nbcompat
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
 		mail:run tar:run
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
@@ -65,5 +66,4 @@ CPPFLAGS+=	-D_GNU_SOURCE
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
-.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
