@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2007/08/08 17:10:29 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2007/09/08 13:45:31 wiz Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	C++ X GUI toolkit
 
@@ -34,6 +34,8 @@ BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
 INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/include/private
 INSTALLATION_DIRS+=	${QTPREFIX}/lib ${QTPREFIX}/plugins/imageformats
 INSTALLATION_DIRS+=	lib/pkgconfig
+
+PKGCONFIG_OVERRIDE=	lib/qt-mt.pc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${DESTDIR}${QTPREFIX}/bin
