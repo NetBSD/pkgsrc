@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/03/23 10:54:52 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2007/09/09 19:57:23 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX:Q}
 ###
 .if !empty(PKG_OPTIONS:Msnort-prelude)
 .include "../../security/libprelude/buildlink3.mk"
-.include "../../security/libpreludedb/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-prelude
 .endif
 
