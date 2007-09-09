@@ -1,0 +1,15 @@
+$NetBSD: patch-dg,v 1.1 2007/09/09 14:17:13 taca Exp $
+
+This is a fix for ruby-1.8.6 patchlevel 36.
+
+--- lib/base64.rb.orig	2007-02-27 20:51:55.000000000 +0900
++++ lib/base64.rb
+@@ -110,7 +110,7 @@ module Base64
+   #    UnVieQ==
+ 
+   def b64encode(bin, len = 60)
+-    encode64(bin).scan(/.{1,#{len}}/o) do
++    encode64(bin).scan(/.{1,#{len}}/) do
+       print $&, "\n"
+     end
+   end 
