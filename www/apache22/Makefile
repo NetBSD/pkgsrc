@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/09/08 18:48:18 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/09/09 08:12:58 rillig Exp $
 
 .include "Makefile.common"
 
@@ -264,6 +264,6 @@ post-install:
 		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
 	done
 
-	${CHMOD} -w ${PREFIX}/sbin/suexec
+	[ ! -f ${PREFIX}/sbin/suexec ] || ${CHMOD} -w ${PREFIX}/sbin/suexec
 
 .include "../../mk/bsd.pkg.mk"
