@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/04 07:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/09 17:04:32 wiz Exp $
 #
 
 DISTNAME=		singularity_0.26a
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		http://www.emhsoft.com/singularity/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.emhsoft.com/singularity/
 COMMENT=		Endgame: Singularity game
 
