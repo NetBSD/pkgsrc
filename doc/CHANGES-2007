@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1973 2007/09/09 12:55:45 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1974 2007/09/09 14:37:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3612,3 +3612,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/png to 1.2.20 [wiz 2007-09-09]
 	Updated mail/dovecot to 1.0.5 [ghen 2007-09-09]
 	Updated security/sudo to 1.6.9p5 [taca 2007-09-09]
+	Updated lang/ruby18-base to 1.8.6.36 [taca 2007-09-09]
+	Updated databases/ruby-gdbm to 1.8.6.36 [taca 2007-09-09]
+	Updated devel/ruby-curses to 1.8.6.36 [taca 2007-09-09]
+	Updated devel/ruby-readline to 1.8.6.36 [taca 2007-09-09]
+	Updated x11/ruby-tk to 1.8.6.36 [taca 2007-09-09]
+	Updated lang/ruby18 to 1.8.6.36 [taca 2007-09-09]
+	Updated lang/ruby to 1.8.6.36 [taca 2007-09-09]
+	Updated devel/ruby-mode to 1.8.6.36 [taca 2007-09-09]
