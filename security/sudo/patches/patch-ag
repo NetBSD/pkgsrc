@@ -1,35 +1,17 @@
-$NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
+$NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
 
---- configure.orig	2007-07-17 02:47:55.000000000 +0000
+--- configure.orig	2007-09-07 01:21:13.000000000 +0900
 +++ configure
-@@ -561,7 +561,7 @@ do
-       *=*) ac_optarg=`echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"`;;
-       *) ac_optarg=yes ;;
-     esac
--    eval enable_$ac_feature='$ac_optarg' ;;
-+    eval "enable_$ac_feature='$ac_optarg'" ;;
- 
-   -exec-prefix | --exec_prefix | --exec-prefix | --exec-prefi \
-   | --exec-pref | --exec-pre | --exec-pr | --exec-p | --exec- \
-@@ -743,7 +743,7 @@ do
-       *=*) ac_optarg=`echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"`;;
-       *) ac_optarg=yes ;;
-     esac
--    eval with_$ac_package='$ac_optarg' ;;
-+    eval "with_$ac_package='$ac_optarg'" ;;
- 
-   -without-* | --without-*)
-     ac_package=`expr "x$ac_option" : 'x-*without-\(.*\)'`
-@@ -968,7 +968,7 @@ Fine tuning of the installation director
+@@ -1436,7 +1436,7 @@ Fine tuning of the installation director
+   --bindir=DIR           user executables [EPREFIX/bin]
    --sbindir=DIR          system admin executables [EPREFIX/sbin]
    --libexecdir=DIR       program executables [EPREFIX/libexec]
-   --datadir=DIR          read-only architecture-independent data [PREFIX/share]
--  --sysconfdir=DIR       read-only single-machine data [/etc]
+-  --sysconfdir=DIR       read-only single-machine data [etc]
 +  --sysconfdir=DIR       read-only single-machine data [PREFIX/etc]
    --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
    --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1032,6 +1032,7 @@ Optional Packages:
+@@ -1505,6 +1505,7 @@ Optional Packages:
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -37,16 +19,7 @@ $NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -1310,7 +1311,7 @@ do
- 	  -* ) ac_must_keep_next=true ;;
- 	esac
-       fi
--      ac_configure_args="$ac_configure_args$ac_sep\"$ac_arg\""
-+      ac_configure_args="$ac_configure_args$ac_sep'$ac_arg'"
-       # Get rid of the leading space.
-       ac_sep=" "
-       ;;
-@@ -1634,7 +1635,6 @@ shadow_libs_optional=
+@@ -2118,7 +2119,6 @@ shadow_libs_optional=
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -54,8 +27,8 @@ $NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
  
  
  
-@@ -1826,6 +1826,23 @@ esac
- fi;
+@@ -2310,6 +2310,23 @@ fi
+ 
  
  
 +# Check whether --with-nbsdops or --without-nbsdops was given.
@@ -75,46 +48,10 @@ $NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
 +fi;
 +
 +
- # Check whether --with-passwd or --without-passwd was given.
+ # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then
-   withval="$with_passwd"
-@@ -5335,7 +5352,7 @@ else
-     lt_cv_sys_max_cmd_len=8192;
-     ;;
- 
--  netbsd* | freebsd* | openbsd* | darwin* )
-+  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
-     # This has been around since 386BSD, at least.  Likely further.
-     if test -x /sbin/sysctl; then
-       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -5477,7 +5494,7 @@ darwin* | rhapsody*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
--freebsd* | kfreebsd*-gnu)
-+freebsd* | kfreebsd*-gnu | dragonfly*)
-   if $ECHO __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
-     case $host_cpu in
-     i*86 )
-@@ -9003,7 +9020,7 @@ if test -z "$aix_libpath"; then aix_libp
-       ;;
- 
-     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--    freebsd* | kfreebsd*-gnu)
-+    freebsd* | kfreebsd*-gnu | dragonfly*)
-       archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-       hardcode_libdir_flag_spec='-R$libdir'
-       hardcode_direct=yes
-@@ -9787,7 +9804,7 @@ kfreebsd*-gnu)
-   dynamic_linker='GNU ld.so'
-   ;;
- 
--freebsd*)
-+freebsd* | dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || $ECHO aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -11372,7 +11389,7 @@ done
+   withval=$with_passwd; case $with_passwd in
+@@ -11981,7 +11998,7 @@ done
  
  		fi
  		;;
@@ -123,19 +60,19 @@ $NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
  		# FreeBSD has a real setreuid(2) starting with 2.1 and
  		# backported to 2.0.5.  We just take 2.1 and above...
  		case "$OSREV" in
-@@ -11388,6 +11405,8 @@ done
- 		fi
- 		: ${with_pam='maybe'}
+@@ -11995,6 +12012,8 @@ done
+ 		CHECKSHADOW="false"
+ 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		: ${with_logincap='maybe'}
 +		# We really want libutil.
 +		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		;;
      *-*-*openbsd*)
  		# OpenBSD has a real setreuid(2) starting with 3.3 but
-@@ -11420,10 +11439,12 @@ done
- 		fi
+@@ -12023,10 +12042,12 @@ done
+ 		CHECKSHADOW="false"
+ 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		: ${with_logincap='maybe'}
- 				: ${with_pam='maybe'}
 +		# We really want libutil.
 +		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		;;
@@ -144,198 +81,5 @@ $NetBSD: patch-ag,v 1.8 2007/07/30 08:41:20 joerg Exp $
 -		     SUDO_LIBS="${SUDO_LIBS} -lmd"
 +		     SUDO_LIBS="${SUDO_LIBS} -lutil -lmd"
  		fi
- 		if test "$CHECKSHADOW" = "true"; then
- 		    CHECKSHADOW="false"
-@@ -17731,7 +17752,7 @@ else
- echo "$as_me: WARNING: unable to find socket() trying -lsocket -lnsl" >&2;}
- echo "$as_me:$LINENO: checking for socket in -lsocket" >&5
- echo $ECHO_N "checking for socket in -lsocket... $ECHO_C" >&6
--if test "${ac_cv_lib_socket_socket_lnsl+set}" = set; then
-+if test "${ac_cv_lib_socket_socket+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -17780,20 +17801,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_socket_socket_lnsl=yes
-+  ac_cv_lib_socket_socket=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_socket_socket_lnsl=no
-+ac_cv_lib_socket_socket=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_socket_socket_lnsl" >&5
--echo "${ECHO_T}$ac_cv_lib_socket_socket_lnsl" >&6
--if test $ac_cv_lib_socket_socket_lnsl = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_socket_socket" >&5
-+echo "${ECHO_T}$ac_cv_lib_socket_socket" >&6
-+if test $ac_cv_lib_socket_socket = yes; then
-   NET_LIBS="${NET_LIBS} -lsocket -lnsl"; LIBS="${LIBS} -lsocket -lnsl"
- fi
- 
-@@ -18127,7 +18148,7 @@ else
- echo "$as_me: WARNING: unable to find inet_addr() trying -lsocket -lnsl" >&2;}
- echo "$as_me:$LINENO: checking for inet_addr in -lsocket" >&5
- echo $ECHO_N "checking for inet_addr in -lsocket... $ECHO_C" >&6
--if test "${ac_cv_lib_socket_inet_addr_lnsl+set}" = set; then
-+if test "${ac_cv_lib_socket_inet_addr+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -18176,20 +18197,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_socket_inet_addr_lnsl=yes
-+  ac_cv_lib_socket_inet_addr=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_socket_inet_addr_lnsl=no
-+ac_cv_lib_socket_inet_addr=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_socket_inet_addr_lnsl" >&5
--echo "${ECHO_T}$ac_cv_lib_socket_inet_addr_lnsl" >&6
--if test $ac_cv_lib_socket_inet_addr_lnsl = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_socket_inet_addr" >&5
-+echo "${ECHO_T}$ac_cv_lib_socket_inet_addr" >&6
-+if test $ac_cv_lib_socket_inet_addr = yes; then
-   NET_LIBS="${NET_LIBS} -lsocket -lnsl"; LIBS="${LIBS} -lsocket -lnsl"
- fi
- 
-@@ -19511,10 +19532,9 @@ echo "${ECHO_T}no" >&6
- 
- fi
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
--                as_ac_Lib=`echo "ac_cv_lib_krb_main$K4LIBS" | $as_tr_sh`
--echo "$as_me:$LINENO: checking for main in -lkrb" >&5
-+                echo "$as_me:$LINENO: checking for main in -lkrb" >&5
- echo $ECHO_N "checking for main in -lkrb... $ECHO_C" >&6
--if eval "test \"\${$as_ac_Lib+set}\" = set"; then
-+if test "${ac_cv_lib_krb_main+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -19557,27 +19577,26 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  eval "$as_ac_Lib=yes"
-+  ac_cv_lib_krb_main=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--eval "$as_ac_Lib=no"
-+ac_cv_lib_krb_main=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Lib'}'`" >&5
--echo "${ECHO_T}`eval echo '${'$as_ac_Lib'}'`" >&6
--if test `eval echo '${'$as_ac_Lib'}'` = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_krb_main" >&5
-+echo "${ECHO_T}$ac_cv_lib_krb_main" >&6
-+if test $ac_cv_lib_krb_main = yes; then
-   K4LIBS="-lkrb $K4LIBS"
- else
- 
--	as_ac_Lib=`echo "ac_cv_lib_krb4_main$K4LIBS" | $as_tr_sh`
--echo "$as_me:$LINENO: checking for main in -lkrb4" >&5
-+	echo "$as_me:$LINENO: checking for main in -lkrb4" >&5
- echo $ECHO_N "checking for main in -lkrb4... $ECHO_C" >&6
--if eval "test \"\${$as_ac_Lib+set}\" = set"; then
-+if test "${ac_cv_lib_krb4_main+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -19620,20 +19639,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  eval "$as_ac_Lib=yes"
-+  ac_cv_lib_krb4_main=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--eval "$as_ac_Lib=no"
-+ac_cv_lib_krb4_main=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Lib'}'`" >&5
--echo "${ECHO_T}`eval echo '${'$as_ac_Lib'}'`" >&6
--if test `eval echo '${'$as_ac_Lib'}'` = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_krb4_main" >&5
-+echo "${ECHO_T}$ac_cv_lib_krb4_main" >&6
-+if test $ac_cv_lib_krb4_main = yes; then
-   K4LIBS="-lkrb4 $K4LIBS"
- else
-   K4LIBS="-lkrb $K4LIBS"
-@@ -20102,13 +20121,6 @@ done
-     LIBS="$_LIBS"
- fi
- 
--if test "$with_logincap" = "yes"; then
--    case "$OS" in
--	freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
--	;;
--    esac
--fi
--
- if test ${with_pam-'no'} != "no"; then
-                 echo "$as_me:$LINENO: checking for main in -ldl" >&5
- echo $ECHO_N "checking for main in -ldl... $ECHO_C" >&6
-@@ -21724,7 +21736,7 @@ if test ${with_SecurID-'no'} != "no"; th
-     #
-     echo "$as_me:$LINENO: checking for SD_Init in -laceclnt" >&5
- echo $ECHO_N "checking for SD_Init in -laceclnt... $ECHO_C" >&6
--if test "${ac_cv_lib_aceclnt_SD_Init_______lpthread_______+set}" = set; then
-+if test "${ac_cv_lib_aceclnt_SD_Init+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -21776,20 +21788,20 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_aceclnt_SD_Init_______lpthread_______=yes
-+  ac_cv_lib_aceclnt_SD_Init=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_aceclnt_SD_Init_______lpthread_______=no
-+ac_cv_lib_aceclnt_SD_Init=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_aceclnt_SD_Init_______lpthread_______" >&5
--echo "${ECHO_T}$ac_cv_lib_aceclnt_SD_Init_______lpthread_______" >&6
--if test $ac_cv_lib_aceclnt_SD_Init_______lpthread_______ = yes; then
-+echo "$as_me:$LINENO: result: $ac_cv_lib_aceclnt_SD_Init" >&5
-+echo "${ECHO_T}$ac_cv_lib_aceclnt_SD_Init" >&6
-+if test $ac_cv_lib_aceclnt_SD_Init = yes; then
- 
- 
- if test X"$AUTH_EXCL" != X""; then
+ 		CHECKSHADOW="false"
+ 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
