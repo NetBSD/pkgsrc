@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1974 2007/09/09 14:37:41 taca Exp $
+$NetBSD: CHANGES-2007,v 1.1975 2007/09/09 17:07:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/ruby18 to 1.8.6.36 [taca 2007-09-09]
 	Updated lang/ruby to 1.8.6.36 [taca 2007-09-09]
 	Updated devel/ruby-mode to 1.8.6.36 [taca 2007-09-09]
+	Updated www/nspluginwrapper to 0.9.91.5 [xtraeme 2007-09-09]
