@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/09/08 21:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/09 02:12:49 jlam Exp $
 
 DISTNAME=	mini_httpd-1.19
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/mini_httpd/
 
@@ -13,31 +13,21 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_FEATURES=	snprintf
 
-MAKE_ENV+=	PKG_CFLAGS=${CFLAGS:M*:Q}
+MAKE_ENV+=	PKG_CFLAGS=${CFLAGS:Q}
+MAKE_ENV+=	PKG_LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=	PKG_LIBS=${LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-LDFLAGS+=	-lssl -lcrypto -lcrypt
-
-.if ${OPSYS} != "IRIX"
-LDFLAGS+=	-lutil
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	SYSV_LIBS="-lnsl -lsocket"
 .endif
 
-MAKE_ENV+=	LDLIBS=${LIBS:Q}
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man8 sbin
-
-do-install:
-	for FILE in mini_httpd.8 htpasswd.1; do \
-		${MV} -f ${WRKSRC}/$${FILE} ${WRKSRC}/$${FILE}.bak; \
-		${SED} -e 's/\([^.]\)htpasswd/\1mhtpasswd/g' \
-			-e 's/^htpasswd/m&/' \
-			${WRKSRC}/$${FILE}.bak > ${WRKSRC}/$${FILE}; \
-	done
-	${INSTALL_PROGRAM} ${WRKSRC}/mini_httpd ${PREFIX}/sbin/
-	${INSTALL_PROGRAM} ${WRKSRC}/htpasswd ${PREFIX}/sbin/mhtpasswd
-	${INSTALL_MAN} ${WRKSRC}/mini_httpd.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_MAN} ${WRKSRC}/htpasswd.1 ${PREFIX}/${PKGMANDIR}/man1/mhtpasswd.1
+SUBST_CLASSES=		htpasswd
+SUBST_MESSAGE.htpasswd=	Fix name of (m)htpasswd in manual pages.
+SUBST_STAGE.htpasswd=	pre-build
+SUBST_FILES.htpasswd=	htpasswd.1 mini_httpd.8
+SUBST_SED.htpasswd=	-e 's/\([^.]\)htpasswd/\1mhtpasswd/g' -e 's/^htpasswd/m&/'
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
