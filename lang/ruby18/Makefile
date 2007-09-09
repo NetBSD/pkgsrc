@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2007/03/15 16:44:15 taca Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/09 14:31:45 taca Exp $
 #
 
-DISTNAME=	${RUBY_DISTNAME}
+DISTNAME=	# empty
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
-MASTER_SITES=	${MASTER_SITE_RUBY}
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
