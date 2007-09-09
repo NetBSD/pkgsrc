@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.9 2007/08/02 11:52:14 gdt Exp $
+# $NetBSD: developer.mk,v 1.10 2007/09/09 22:57:04 gdt Exp $
 #
 # Public targets for developers:
 #
@@ -71,6 +71,13 @@ _CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
 .endif
 _CE_MSG2=	[${NETBSD_LOGIN_NAME} ${_CDATE_cmd:sh}]
 _CE_MSG=	${_CE_MSG1} ${_CE_MSG2}
+
+# XXX Accumulate commit message during each operation, so that a final
+# commit operation will have a sensible message with all of the
+# previous operations.
+
+# XXX Fail if uid is 0, or perhaps != CVS meta files owner, to catch
+# the case of invoking these targets as root.
 
 # Targets for the update, add, commit elementary operations.
 changes-entry-update: .PHONY ce-error-check
