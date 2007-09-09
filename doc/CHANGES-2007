@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1970 2007/09/08 18:45:12 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.1971 2007/09/09 10:29:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/netbsd-iscsi to 20070908 [agc 2007-09-08]
 	Added www/p5-CSS version 1.07 [wiz 2007-09-08]
 	Added www/p5-HTML-WikiConverter version 0.61 [wiz 2007-09-08]
+	Updated graphics/png to 1.2.20 [wiz 2007-09-09]
