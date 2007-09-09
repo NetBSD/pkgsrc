@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/09 12:39:55 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/09 08:01:45 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -12,8 +12,8 @@ COMMENT=	Test whether the TOOLS do what I expect
 
 NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
-REGRESS_TESTS=	awk sed sh sort tr
-USE_TOOLS+=	awk sed sh sort tr
+REGRESS_TESTS=	awk sed sh sort tar tr
+USE_TOOLS+=	awk sed sh sort tar tr
 
 do-build:
 .for t in ${REGRESS_TESTS}
