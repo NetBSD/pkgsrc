@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1972 2007/09/09 11:43:45 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1973 2007/09/09 12:55:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/p5-HTML-WikiConverter version 0.61 [wiz 2007-09-08]
 	Updated graphics/png to 1.2.20 [wiz 2007-09-09]
 	Updated mail/dovecot to 1.0.5 [ghen 2007-09-09]
+	Updated security/sudo to 1.6.9p5 [taca 2007-09-09]
