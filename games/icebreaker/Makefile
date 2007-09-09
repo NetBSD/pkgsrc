@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2007/09/09 16:59:19 wiz Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://mattdm.org/icebreaker/1.9.x/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mattdm.org/icebreaker/
 COMMENT=	Penguin capturing simulation
 
