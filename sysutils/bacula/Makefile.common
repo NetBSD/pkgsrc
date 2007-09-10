@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.40 2007/09/07 15:15:34 ghen Exp $
+# $NetBSD: Makefile.common,v 1.41 2007/09/10 16:44:02 ghen Exp $
 
-DISTNAME=		bacula-2.2.2
+DISTNAME=		bacula-2.2.3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
