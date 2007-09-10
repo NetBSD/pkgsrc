@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1987 2007/09/10 16:44:30 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.1988 2007/09/10 19:10:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3634,3 +3634,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/libmms version 0.3 [xtraeme 2007-09-10]
 	Added multimedia/libnms version 0.6.0 [xtraeme 2007-09-10]
 	Updated sysutils/bacula to 2.2.3 [ghen 2007-09-10]
+	Updated net/bind8 to 8.4.7pl1 [adrianp 2007-09-10]
