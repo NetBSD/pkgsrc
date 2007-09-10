@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 09:13:51 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/10 15:19:16 xtraeme Exp $
 #
 
-DISTNAME=		uno_v28
-PKGNAME=		uno-2.8
-PKGREVISION=		1
+DISTNAME=		uno_v212
+PKGNAME=		uno-2.12
+#PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://spinroot.com/uno/
 
@@ -11,7 +11,7 @@ MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://spinroot.com/uno/
 COMMENT=		Tool for source code analysis
 
-WRKSRC=			${WRKDIR}/Uno/src
+WRKSRC=			${WRKDIR}/uno/src
 MAKE_FILE=		makefile
 
 USE_TOOLS+=		bison
@@ -27,11 +27,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/uno_local ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/uno_global ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_long.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_man.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_manpage.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/Uno/doc/uno_short.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_MAN} ${WRKDIR}/Uno/doc/uno.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_long.pdf ${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_man.pdf ${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_manpage.pdf ${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_short.pdf ${PREFIX}/share/doc/uno
+	${INSTALL_MAN} ${WRKDIR}/uno/doc/uno.1 ${PREFIX}/${PKGMANDIR}/man1
 
 USE_TOOLS+=	bison gmake flex
 
