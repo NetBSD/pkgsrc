@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.2.2.1 2007/09/10 20:13:32 ghen Exp $
+
+--- src/etag.c.orig	Mon Aug 27 21:54:45 2007
++++ src/etag.c
+@@ -1,5 +1,15 @@
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <string.h>
+-#include <stdint.h>
++
++#ifdef HAVE_STDINT_H
++# include <stdint.h>
++#endif
++#ifdef HAVE_INTTYPES_H
++# include <inttypes.h>
++#endif
+ 
+ #include "buffer.h"
+ #include "etag.h"
