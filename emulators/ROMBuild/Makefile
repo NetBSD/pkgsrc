@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/07/08 09:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/10 09:06:36 wiz Exp $
 #
 
-DISTNAME=		rbuild28
-PKGNAME=		ROMBuild-2.8
+DISTNAME=		rbuild29
+PKGNAME=		ROMBuild-2.9
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/ROMBuild/
 EXTRACT_SUFX=		.zip
