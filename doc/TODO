@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6672 2007/09/09 19:31:23 xtraeme Exp $
+$NetBSD: TODO,v 1.6673 2007/09/10 06:11:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -526,9 +526,7 @@ Suggested package updates
 	o gnome-games-2.18.2.1
 	o gnome-mag-0.14.8
 	o gnome-speech-0.4.16
-	o gnome-vfs-1.14.6
 	o gnu-crypto-2.1.0
-	o gnumeric-1.7.12
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
