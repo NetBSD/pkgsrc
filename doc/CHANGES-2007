@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1986 2007/09/10 16:28:01 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1987 2007/09/10 16:44:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3633,3 +3633,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added audio/adplug version 2.1 [xtraeme 2007-09-10]
 	Added net/libmms version 0.3 [xtraeme 2007-09-10]
 	Added multimedia/libnms version 0.6.0 [xtraeme 2007-09-10]
+	Updated sysutils/bacula to 2.2.3 [ghen 2007-09-10]
