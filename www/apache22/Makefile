@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/06/28 01:20:52 lkundrak Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2007/09/10 20:57:49 ghen Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	6
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -263,5 +262,7 @@ post-install:
 	for file in ${FIX_MAN_PERMS}; do \
 		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
 	done
+
+	[ ! -f ${PREFIX}/sbin/suexec ] || ${CHMOD} -w ${PREFIX}/sbin/suexec
 
 .include "../../mk/bsd.pkg.mk"
