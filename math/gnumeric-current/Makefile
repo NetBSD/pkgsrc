@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/08/30 06:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/10 06:06:53 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.7.11
+DISTNAME=		gnumeric-1.7.12
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -41,8 +41,8 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.2
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice+= goffice>=0.4.2
-.include "../../misc/goffice/buildlink3.mk"
+BUILDLINK_API_DEPENDS.goffice+= goffice>=0.5.0
+.include "../../misc/goffice0.5/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
