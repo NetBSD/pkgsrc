@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.6.1 2007/09/10 20:57:50 ghen Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -130,6 +130,7 @@ share/httpd/htdocs/apache_pb22.png
 share/httpd/htdocs/apache_pb22_ani.gif
 share/httpd/htdocs/index.html
 share/httpd/icons/README
+share/httpd/icons/README.html
 share/httpd/icons/a.gif
 share/httpd/icons/a.png
 share/httpd/icons/alert.black.gif
@@ -257,7 +258,6 @@ share/httpd/icons/screw2.gif
 share/httpd/icons/screw2.png
 share/httpd/icons/script.gif
 share/httpd/icons/script.png
-share/httpd/icons/small/README.txt
 share/httpd/icons/small/back.gif
 share/httpd/icons/small/back.png
 share/httpd/icons/small/binary.gif
@@ -405,24 +405,8 @@ share/httpd/manual/env.html
 share/httpd/manual/env.html.en
 share/httpd/manual/env.html.ja.euc-jp
 share/httpd/manual/env.html.ko.euc-kr
-share/httpd/manual/faq/all_in_one.html
-share/httpd/manual/faq/all_in_one.html.en
-share/httpd/manual/faq/all_in_one.html.ja.euc-jp
-share/httpd/manual/faq/all_in_one.html.ko.euc-kr
-share/httpd/manual/faq/background.html
-share/httpd/manual/faq/background.html.en
-share/httpd/manual/faq/error.html
-share/httpd/manual/faq/error.html.en
-share/httpd/manual/faq/error.html.ja.euc-jp
-share/httpd/manual/faq/error.html.ko.euc-kr
 share/httpd/manual/faq/index.html
 share/httpd/manual/faq/index.html.en
-share/httpd/manual/faq/index.html.ja.euc-jp
-share/httpd/manual/faq/index.html.ko.euc-kr
-share/httpd/manual/faq/support.html
-share/httpd/manual/faq/support.html.en
-share/httpd/manual/faq/support.html.ja.euc-jp
-share/httpd/manual/faq/support.html.ko.euc-kr
 share/httpd/manual/filter.html
 share/httpd/manual/filter.html.en
 share/httpd/manual/filter.html.es
@@ -437,6 +421,7 @@ share/httpd/manual/glossary.html.ko.euc-kr
 share/httpd/manual/handler.html
 share/httpd/manual/handler.html.en
 share/httpd/manual/handler.html.es
+share/httpd/manual/handler.html.fr
 share/httpd/manual/handler.html.ja.euc-jp
 share/httpd/manual/handler.html.ko.euc-kr
 share/httpd/manual/handler.html.ru.koi8-r
@@ -514,6 +499,7 @@ share/httpd/manual/install.html.ko.euc-kr
 share/httpd/manual/invoking.html
 share/httpd/manual/invoking.html.de
 share/httpd/manual/invoking.html.en
+share/httpd/manual/invoking.html.fr
 share/httpd/manual/invoking.html.es
 share/httpd/manual/invoking.html.ja.euc-jp
 share/httpd/manual/invoking.html.ko.euc-kr
@@ -842,6 +828,7 @@ share/httpd/manual/mod/worker.html.ja.euc-jp
 share/httpd/manual/mpm.html
 share/httpd/manual/mpm.html.de
 share/httpd/manual/mpm.html.en
+share/httpd/manual/mpm.html.fr
 share/httpd/manual/mpm.html.es
 share/httpd/manual/mpm.html.ja.euc-jp
 share/httpd/manual/mpm.html.ko.euc-kr
@@ -855,6 +842,7 @@ share/httpd/manual/new_features_2_0.html.pt-br
 share/httpd/manual/new_features_2_0.html.ru.koi8-r
 share/httpd/manual/new_features_2_2.html
 share/httpd/manual/new_features_2_2.html.en
+share/httpd/manual/new_features_2_2.html.fr
 share/httpd/manual/new_features_2_2.html.ko.euc-kr
 share/httpd/manual/new_features_2_2.html.pt-br
 share/httpd/manual/platform/ebcdic.html
@@ -960,6 +948,7 @@ share/httpd/manual/ssl/ssl_intro.html
 share/httpd/manual/ssl/ssl_intro.html.en
 share/httpd/manual/ssl/ssl_intro.html.ja.euc-jp
 share/httpd/manual/stopping.html
+share/httpd/manual/stopping.html.fr
 share/httpd/manual/stopping.html.de
 share/httpd/manual/stopping.html.en
 share/httpd/manual/stopping.html.es
