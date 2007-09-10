@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2007/09/04 20:05:48 abs Exp $
+# $NetBSD: Makefile,v 1.48 2007/09/10 12:18:13 abs Exp $
 #
 
 DISTNAME=		qemu-0.9.0
-#PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 
@@ -46,7 +45,7 @@ REPLACE_PERL+=		texi2pod.pl
 
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
-BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu rm:-msse2
+BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu rm:-msse rm:-msse2
 
 # Does not build with the stack protector
 .if ${OPSYS} == "DragonFly"
