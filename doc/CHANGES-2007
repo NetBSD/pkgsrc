@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1976 2007/09/09 19:31:22 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1977 2007/09/10 06:11:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3622,3 +3622,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ruby-mode to 1.8.6.36 [taca 2007-09-09]
 	Updated www/nspluginwrapper to 0.9.91.5 [xtraeme 2007-09-09]
 	Updated multimedia/mplayer-plugin-firefox to 3.45 [xtraeme 2007-09-09]
+	Updated math/gnumeric-current to 1.7.12 [wiz 2007-09-10]
