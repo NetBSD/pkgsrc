@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.6 2007/06/28 01:20:52 lkundrak Exp $
+$NetBSD: distinfo,v 1.6.2.1 2007/09/10 20:57:50 ghen Exp $
 
-SHA1 (httpd-2.2.4.tar.bz2) = 64ceae373434a986dc99b8ed953afa0d4fad85ce
-RMD160 (httpd-2.2.4.tar.bz2) = bb6e8a7447fa8e8f629010f30b548068de518523
-Size (httpd-2.2.4.tar.bz2) = 4930375 bytes
-SHA1 (patch-aa) = 233dbabda2bd830c6f0664c42e192e4acd2aff4c
-SHA1 (patch-ab) = b8586dea7600febbadbbad5089300336ea695ffb
+SHA1 (httpd-2.2.6.tar.bz2) = e6ef926ecd1f9a412af8c266239f0a6f58c63854
+RMD160 (httpd-2.2.6.tar.bz2) = 5ae895c6898213e1e3b7e7b02cdfcbe5b36a108f
+Size (httpd-2.2.6.tar.bz2) = 4717066 bytes
+SHA1 (patch-aa) = ae5b34058fc6455cfa9e3d52a50829155ce2eb11
 SHA1 (patch-ac) = 515043b5c215d49fe8f6d3191b502c978e2a2dad
 SHA1 (patch-ad) = 088d6ff0e7a8acfe70b4f85a6ce58d42c935fd13
 SHA1 (patch-ae) = 86b307d6eefef232b6223afc3f69e64be40bd913
@@ -12,11 +11,6 @@ SHA1 (patch-ag) = 78dcb023f524ef65928b529320932c9664ec0d01
 SHA1 (patch-ai) = 4ebc3bd580a298973928eb6d13d2ce745eac0312
 SHA1 (patch-al) = 56b9f5c2f6fd01fe5067f9210e328cbf674c68f1
 SHA1 (patch-am) = ab4a2f7e5a1a3064e908b61157e7fd349c0b0c08
-SHA1 (patch-an) = 1d02b10e92ad1f613b17b6ebc812d8931b54d3da
-SHA1 (patch-ao) = 85e38b6415ade9b328800b7bf15b9741758d455c
-SHA1 (patch-ap) = 9a25ce74bd355d9eeb2a885f65e19a3ba473ce77
 SHA1 (patch-aq) = 27a0093fc75dcafc673abc25e9ebe80167f52ac1
-SHA1 (patch-ar) = 536fb47cf750a316c773b1d3153cba52c3fac37c
 SHA1 (patch-as) = 7880eae75b702563bff8bca833ca81fb3dc4444c
-SHA1 (patch-at) = 114a55493527a87bada21ee192828b5188a5cddd
 SHA1 (patch-au) = d4c623bb953ac45cb4c8d95fc1d3c2788452d9a1
