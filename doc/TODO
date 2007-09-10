@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6676 2007/09/10 15:20:32 xtraeme Exp $
+$NetBSD: TODO,v 1.6677 2007/09/10 19:12:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,7 @@ Suggested package updates
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
 	o GridSim-3.3
-	o ImageMagick-6.3.5.4
+	o ImageMagick-6.3.5.8
 	o PAM-0.99.7.1
 	o R-2.5.1
 	o R-CGIwithR-0.72
@@ -528,6 +528,7 @@ Suggested package updates
 	o gnome-mag-0.14.8
 	o gnome-speech-0.4.16
 	o gnu-crypto-2.1.0
+	o gnupg2-2.0.7
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
@@ -554,7 +555,7 @@ Suggested package updates
 	o gsm-1.0.12
 	o gss-0.0.22
 	o gtar-1.18
-	o gtexinfo-4.9
+	o gtexinfo-4.11
 	o gtick-0.4.1
 	o gtk-gnutella-0.96.4
 	o gtk-systrace-20030623
@@ -867,7 +868,7 @@ Suggested package updates
 	o p5-PV-1.5
 	o p5-PathTools-3.24
 	o p5-Perl-Tidy-20070801
-	o p5-PerlMagick-6.3.5.4
+	o p5-PerlMagick-6.3.5.8
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
