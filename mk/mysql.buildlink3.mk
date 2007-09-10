@@ -1,7 +1,32 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.6 2006/11/18 08:29:13 rillig Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.7 2007/09/10 07:18:32 rillig Exp $
+#
+# This file is included by packages that require some version of the
+# MySQL database client.
+#
+# === User-settable variables ===
+#
+# MYSQL_VERSION_DEFAULT
+#	The preferred MySQL version.
+#
+#	Possible: 50 41
+#	Default: 50
+#
+# === Package-settable variables ===
+#
+# MYSQL_VERSIONS_ACCEPTED
+#	The list of MySQL versions that the package accepts.
+#
+#	Possible: (see MYSQL_VERSION_DEFAULT)
+#	Default: (all)
+#
 
 .if !defined(MYSQL_VERSION_MK)
 MYSQL_VERSION_MK=	# defined
+
+_VARGROUPS+=		mysql
+_USER_VARS.mysql=	MYSQL_VERSION_DEFAULT
+_PKG_VARS.mysql=	MYSQL_VERSIONS_ACCEPTED
+_SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 
 .include "../../mk/bsd.prefs.mk"
 
