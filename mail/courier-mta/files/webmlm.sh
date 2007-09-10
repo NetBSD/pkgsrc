@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: webmlm.sh,v 1.1 2007/08/10 17:57:04 jlam Exp $
+# $NetBSD: webmlm.sh,v 1.2 2007/09/10 17:00:38 jlam Exp $
 #
 # Courier mailing list management daemon
 #
@@ -31,7 +31,7 @@ mkdir_perms()
 	@CHMOD@ $mode $dir
 }
 
-webmlmd_prestart()
+webmlm_prestart()
 {
 	@MKDIR@ @COURIER_STATEDIR@
 	mkdir_perms @COURIER_STATEDIR@/webmlm \
@@ -41,6 +41,9 @@ webmlmd_prestart()
 webmlm_doit()
 {
 	action=$1
+
+	. @PKG_SYSCONFDIR@/webmlmrc
+	@TEST@ -n "$LISTS" || return 0
 
 	case $action in
         restart|start)
@@ -60,7 +63,8 @@ webmlm_doit()
 		;;
 	esac
 
-	${ctl_command} @PREFIX@/bin/webmlmd $action
+	${ctl_command} @PREFIX@/bin/webmlmd $action \
+		@PKG_SYSCONFDIR@/webmlmrc
 }
 
 load_rc_config $name
