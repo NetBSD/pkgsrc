@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.18 2007/09/10 20:13:55 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.19 2007/09/10 20:58:22 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -67,3 +67,5 @@ Pullup ticket 2184 - requested by tron
 security update for apache2
 Pullup ticket 2187 - requested by jlam
 security update for lighttpd
+Pullup ticket 2185 - requested by tron
+security update for apache22
