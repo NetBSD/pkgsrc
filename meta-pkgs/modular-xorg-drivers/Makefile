@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/06/11 09:27:33 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/10 04:06:45 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs drivers x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/drivers
 DISTFILES=	# empty
@@ -34,8 +35,8 @@ DEPENDS+=	xf86-video-cyrix-[0-9]*:../../x11/xf86-video-cyrix
 DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
-DEPENDS+=	xf86-video-i810-[0-9]*:../../x11/xf86-video-i810
 DEPENDS+=	xf86-video-imstt-[0-9]*:../../x11/xf86-video-imstt
+DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-nsc-[0-9]*:../../x11/xf86-video-nsc
