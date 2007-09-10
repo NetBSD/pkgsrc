@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.3 2005/11/04 19:36:01 rillig Exp $
+$NetBSD: patch-ai,v 1.4 2007/09/10 19:05:01 adrianp Exp $
 
---- src/port/solaris/Makefile.set.orig	Mon Jun 24 00:33:16 2002
+--- src/port/solaris/Makefile.set.orig	2007-09-10 19:46:51.000000000 +0100
 +++ src/port/solaris/Makefile.set
 @@ -1,12 +1,14 @@
  'CC=gcc'
- 'CDEBUG=-g -O2'
+ 'CDEBUG=-g -O2 -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat'
 -'DESTBIN=/usr/local/bin'
 -'DESTSBIN=/usr/local/sbin'
 -'DESTEXEC=/usr/local/sbin'

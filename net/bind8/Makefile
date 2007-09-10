@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2006/10/04 21:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/10 19:05:01 adrianp Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
-PKGREVISION=	1
+PKGNAME=	${DISTNAME}pl1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind8/src/${BIND_VERSION}/
 DISTFILES=	bind-src.tar.gz bind-doc.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +11,12 @@ HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
 WRKSRC=		${WRKDIR}
-BIND_VERSION=	8.4.6
+BIND_VERSION=	8.4.7
 DIST_SUBDIR=	bind/${BIND_VERSION}
+
+PATCH_SITES=		${MASTER_SITES:S/8.4.7/8.4.7-P1/}
+PATCHFILES=		8.4.7-p1.patch
+PATCH_DIST_STRIP=	-p1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -38,5 +42,6 @@ post-extract:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bind8
 	cd ${WRKSRC}/doc/html && ${PAX} -rw * ${PREFIX}/share/doc/html/bind8
+	${CHMOD} ${DOCMODE} ${PREFIX}/share/doc/html/bind8/*.html
 
 .include "../../mk/bsd.pkg.mk"
