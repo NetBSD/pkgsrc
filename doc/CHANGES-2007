@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1983 2007/09/10 15:51:57 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.1984 2007/09/10 16:03:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3630,3 +3630,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/uno to 2.12 [xtraeme 2007-09-10]
 	Added devel/libmcs version 0.4.1 [xtraeme 2007-09-10]
 	Added devel/libbinio version 1.4 [xtraeme 2007-09-10]
+	Added audio/adplug version 2.1 [xtraeme 2007-09-10]
