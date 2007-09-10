@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.888 2007/09/10 15:33:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.889 2007/09/10 15:51:58 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -242,6 +242,7 @@ SUBDIR+=	libargparse
 SUBDIR+=	libast
 SUBDIR+=	libaura
 SUBDIR+=	libbegemot
+SUBDIR+=	libbinio
 SUBDIR+=	libbonobo
 SUBDIR+=	libbonoboui
 SUBDIR+=	libcfg+
