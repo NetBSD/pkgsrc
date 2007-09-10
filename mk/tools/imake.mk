@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.18 2006/07/05 04:32:10 jlam Exp $
+# $NetBSD: imake.mk,v 1.19 2007/09/10 06:36:25 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,6 +58,18 @@
 # This file needs to be included before replace.mk as it modifies the
 # USE_TOOLS variables that are used by replace.mk.
 #
+
+# These variables do not belong only to this file, but this seemed the
+# best place for this paragraph.
+_VARGROUPS+=		imake
+_USER_VARS.imake=	# none
+_PKG_VARS.imake=	IMAKEOPTS XMKMF_FLAGS USE_IMAKE
+_SYS_VARS.imake=	IMAKE_TOOLS IMAKE IMAKE_MANINSTALL ${_PSU_VARS.imake}
+_PSU_VARS.imake=	IMAKE_MAN_SOURCE_PATH IMAKE_MAN_DIR IMAKE_LIBMAN_DIR \
+	IMAKE_KERNMAN_DIR IMAKE_FILEMAN_DIR IMAKE_GAMEMAN_DIR \
+	IMAKE_MISCMAN_DIR IMAKE_MAN_SUFFIX IMAKE_LIBMAN_SUFFIX \
+	IMAKE_KERNMAN_SUFFIX IMAKE_FILEMAN_SUFFIX IMAKE_GAMEMAN_SUFFIX \
+	IMAKE_MISCMAN_SUFFIX IMAKE_MANNEWSUFFIX
 
 .if defined(USE_IMAKE)
 USE_TOOLS+=	imake xmkmf
