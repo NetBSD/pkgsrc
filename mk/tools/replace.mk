@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.196 2007/08/17 20:27:32 joerg Exp $
+# $NetBSD: replace.mk,v 1.197 2007/09/10 07:00:37 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -141,43 +141,23 @@ _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BUILD_DEPENDS
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	DEPENDS
 .endfor
 
-.if !empty(_USE_TOOLS:Mbison-yacc)	# bison-yacc > yacc
-.  if defined(_TOOLS_DEPMETHOD.bison-yacc) && \
-      (${_TOOLS_DEPMETHOD.bison-yacc} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.yacc)
-_TOOLS_DEPMETHOD.bison-yacc=	${_TOOLS_DEPMETHOD.yacc}
-.  endif
-.endif
-.if !empty(_USE_TOOLS:Mflex)		# flex > lex
-.  if (${_TOOLS_DEPMETHOD.flex} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.lex)
-_TOOLS_DEPMETHOD.flex=		${_TOOLS_DEPMETHOD.lex}
-.  endif
-.endif
-.if !empty(_USE_TOOLS:Mgawk)		# gawk > awk
-.  if (${_TOOLS_DEPMETHOD.gawk} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.awk)
-_TOOLS_DEPMETHOD.gawk=		${_TOOLS_DEPMETHOD.awk}
-.  endif
-.endif
-.if !empty(_USE_TOOLS:Mgm4)		# gm4 > m4
-.  if (${_TOOLS_DEPMETHOD.gm4} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.m4)
-_TOOLS_DEPMETHOD.gm4=		${_TOOLS_DEPMETHOD.m4}
-.  endif
-.endif
-.if !empty(_USE_TOOLS:Mgsed)		# gsed > sed
-.  if (${_TOOLS_DEPMETHOD.gsed} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.sed)
-_TOOLS_DEPMETHOD.gsed=		${_TOOLS_DEPMETHOD.sed}
-.  endif
-.endif
-.if !empty(_USE_TOOLS:Mgsoelim)		# gsoelim > soelim
-.  if (${_TOOLS_DEPMETHOD.gsoelim} == "BUILD_DEPENDS") && \
-      defined(_TOOLS_DEPMETHOD.soelim)
-_TOOLS_DEPMETHOD.gsoelim=	${_TOOLS_DEPMETHOD.soelim}
-.  endif
-.endif
+.for pair in \
+	bison-yacc:yacc \
+	flex:lex \
+	gawk:awk \
+	gm4:m4 \
+	gsed:sed \
+	gsoelim:soelim
+.  for first in ${pair:C/:.*//}
+.    for second in ${pair:C/.*://}
+.      if !empty(_USE_TOOLS:M${first})
+.        if (${_TOOLS_DEPMETHOD.${first}} == "BUILD_DEPENDS") && defined(_TOOLS_DEPMETHOD.${second})
+_TOOLS_DEPMETHOD.${first}=	${_TOOLS_DEPMETHOD.${second}}
+.        endif
+.      endif
+.    endfor
+.  endfor
+.endfor
 
 ######################################################################
 
