@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/12/15 22:19:19 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/09/10 15:19:16 xtraeme Exp $
 
---- c_gram.y.orig	2005-12-15 22:13:27.000000000 +0000
-+++ c_gram.y
-@@ -40,7 +40,7 @@ int  yydebug = 1;
+--- c_gram.y.orig	2007-09-10 17:10:42.000000000 +0200
++++ c_gram.y	2007-09-10 17:10:51.000000000 +0200
+@@ -41,7 +41,7 @@
  
  int structfieldflag;
  
