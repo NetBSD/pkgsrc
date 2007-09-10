@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2007/09/08 12:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.680 2007/09/10 16:18:26 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -177,6 +177,7 @@ SUBDIR+=	libares
 SUBDIR+=	libcares
 SUBDIR+=	libdnet
 SUBDIR+=	liblive
+SUBDIR+=	libmms
 SUBDIR+=	libnids
 SUBDIR+=	libpcap
 SUBDIR+=	libradius
