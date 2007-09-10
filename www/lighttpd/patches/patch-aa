@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.6.2.1 2007/09/10 20:13:31 ghen Exp $
+
+--- configure.orig	Sun Sep  9 19:55:31 2007
++++ configure
+@@ -28161,10 +28161,6 @@ fi
+ 
+ 
+ 
+-if test "${GCC}" = "yes"; then
+-       CFLAGS="${CFLAGS} -Wall -W -Wshadow -pedantic -std=gnu99"
+-fi
+-
+ LIGHTTPD_VERSION_ID=`echo $PACKAGE_VERSION | $AWK -F '.' '{print "(" $1 " << 16 | " $2 " << 8 | " $3 ")"}'`
+ 
+ cat >>confdefs.h <<_ACEOF
