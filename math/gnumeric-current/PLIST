@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/30 06:10:26 wiz Exp $
-bin/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.5 2007/09/10 06:06:53 wiz Exp $
 bin/gnumeric
+bin/${PKGNAME}
 bin/ssconvert
 bin/ssindex
 include/libspreadsheet-1-7/application.h
@@ -111,13 +111,11 @@ include/libspreadsheet-1-7/symbol.h
 include/libspreadsheet-1-7/validation-combo.h
 include/libspreadsheet-1-7/validation.h
 include/libspreadsheet-1-7/value.h
+include/libspreadsheet-1-7/wbc-gtk-impl.h
 include/libspreadsheet-1-7/wbc-gtk.h
 include/libspreadsheet-1-7/workbook-cmd-format.h
-include/libspreadsheet-1-7/workbook-control-gui-priv.h
-include/libspreadsheet-1-7/workbook-control-gui.h
 include/libspreadsheet-1-7/workbook-control-priv.h
 include/libspreadsheet-1-7/workbook-control.h
-include/libspreadsheet-1-7/workbook-edit.h
 include/libspreadsheet-1-7/workbook-priv.h
 include/libspreadsheet-1-7/workbook-view.h
 include/libspreadsheet-1-7/workbook.h
@@ -758,6 +756,8 @@ share/locale/lt/LC_MESSAGES/gnumeric-functions.mo
 share/locale/lt/LC_MESSAGES/gnumeric.mo
 share/locale/lv/LC_MESSAGES/gnumeric-functions.mo
 share/locale/lv/LC_MESSAGES/gnumeric.mo
+share/locale/mk/LC_MESSAGES/gnumeric-functions.mo
+share/locale/mk/LC_MESSAGES/gnumeric.mo
 share/locale/ml/LC_MESSAGES/gnumeric-functions.mo
 share/locale/ml/LC_MESSAGES/gnumeric.mo
 share/locale/mr/LC_MESSAGES/gnumeric-functions.mo
@@ -766,6 +766,8 @@ share/locale/ms/LC_MESSAGES/gnumeric-functions.mo
 share/locale/ms/LC_MESSAGES/gnumeric.mo
 share/locale/nb/LC_MESSAGES/gnumeric-functions.mo
 share/locale/nb/LC_MESSAGES/gnumeric.mo
+share/locale/ne/LC_MESSAGES/gnumeric-functions.mo
+share/locale/ne/LC_MESSAGES/gnumeric.mo
 share/locale/nl/LC_MESSAGES/gnumeric-functions.mo
 share/locale/nl/LC_MESSAGES/gnumeric.mo
 share/locale/nn/LC_MESSAGES/gnumeric-functions.mo
