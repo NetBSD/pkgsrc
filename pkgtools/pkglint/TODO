@@ -1,17 +1,13 @@
-$NetBSD: TODO,v 1.58 2007/05/29 01:35:05 schmonz Exp $
+$NetBSD: TODO,v 1.59 2007/09/10 07:38:46 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
 
 * fix false positive warnings
-* ONLY_FOR_PLATFORM => NOT_FOR_PLATFORM
-* check for direct use of user names and group names
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
 * record with each substring its source location to be able to make
   even more precise diagnostics
-* check whether CONFIG* override match, e.g. CONFIGURE_DIRS most likely
-  needs matching CONFIG_GUESS_OVERRIDE and CONFIG_SUB_OVERRIDE as well
 * Many of the checking routines need some context to provide better
   warnings. For example, checkline_foo() may need to know what has
   happened in the file before that line.
@@ -28,9 +24,4 @@ include the name of an example package where a warning should occur.
   problem ==> use of ${APPEND_ELF}
 * Packages including lang/python/extension.mk must follow the Python version
   scheme. Enforcing PYPKGPREFIX for those is most likely a good idea.
-* pkglint ist momentan zufrieden mit wip/gdal-docs, obwohl das Makefile
-  gdal-1.3.1 will, aber das distinfo noch die Checksum von 1.2.6 hat.
-  Magst vielleicht einen Test einbauen, der schaut, ob die zusammenpassen?
-* Complain about configure patches with ": Avoid regenerating within pkgsrc" chunks
 * Check for parallel files/dirs whose names differ only in case.
-* Check for German text in pkgtools/pkglint/TODO.
