@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/08/16 09:27:05 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2007/09/11 15:26:14 obache Exp $
 #
 
 DISTNAME=		tor-0.1.2.16
@@ -24,6 +24,7 @@ PKG_GROUPS_VARS+=	TOR_GROUP
 PKG_USERS_VARS+=	TOR_USER
 
 RCD_SCRIPTS=		tor
+RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
 PKG_GROUPS=		${TOR_GROUP}
 PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
@@ -43,15 +44,6 @@ FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
 
 CHECK_PORTABILITY_SKIP+=contrib/*
 
-post-patch:
-	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'		\
-		-e 's|@PREFIX@|${PREFIX}|g' 				\
-		-e 's|@PKG_HOME@|${PKG_HOME}|g'				\
-		-e 's|@TOR_USER@|${TOR_USER}|g'				\
-		-e 's|@TOR_GROUP@|${TOR_GROUP}|g'			\
-		-e 's|@RCD_SCRIPTS_SHELL@|'${RCD_SCRIPTS_SHELL:Q}'|g'	\
-		${FILESDIR}/tor.in > ${WRKSRC}/tor.pkgsrc.rc
-
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
@@ -60,7 +52,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.1a
 # XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
