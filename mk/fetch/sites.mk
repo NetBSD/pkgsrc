@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.32 2007/08/19 19:16:58 heinz Exp $
+# $NetBSD: sites.mk,v 1.33 2007/09/11 17:22:18 xtraeme Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -97,7 +97,6 @@ MASTER_SITE_KDE+=	\
 
 # see http://sourceforge.net/project/mirror_picker.php
 MASTER_SITE_SOURCEFORGE+=	\
-	http://belnet.dl.sourceforge.net/sourceforge/ \
 	http://dfn.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
@@ -114,7 +113,8 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://umn.dl.sourceforge.net/sourceforge/
+	http://umn.dl.sourceforge.net/sourceforge/ \
+	http://belnet.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://download.sourceforge.jp/ \
