@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.62 2007/09/11 12:33:13 rillig Exp $	*/
+/*	$NetBSD: perform.c,v 1.63 2007/09/11 13:39:05 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.62 2007/09/11 12:33:13 rillig Exp $");
+__RCSID("$NetBSD: perform.c,v 1.63 2007/09/11 13:39:05 rillig Exp $");
 #endif
 #endif
 
@@ -385,7 +385,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	char    replace_to[MaxPathSize];
 	char   *buildinfo[BI_ENUM_COUNT];
 	int	replacing = 0;
-	char   *where_to;
 	char   dbdir[MaxPathSize];
 	const char *exact;
 	const char *tmppkg;
@@ -421,7 +420,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		if (Home == NULL) {
 			warnx("unable to fetch `%s' by URL", pkg);
 		}
-		where_to = Home;
 
 		/* make sure the pkg is verified */
 		if (!verify(pkg)) {
@@ -451,7 +449,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 		if (!Home)
 			warnx("unable to make playpen for %ld bytes",
 			      (long) (sb.st_size * 4));
-		where_to = Home;
 		result = unpack(pkg, &files);
 		while ((lfp = TAILQ_FIRST(&files)) != NULL) {
 			TAILQ_REMOVE(&files, lfp, lf_link);
