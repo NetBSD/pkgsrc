@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.717 2007/09/04 09:44:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.718 2007/09/11 22:01:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3398,8 +3398,15 @@ sub parseline_mk($) {
 sub parselines_mk($) {
 	my ($lines) = @_;
 
+	assert(defined($pkgctx_varuse), "pkgctx_varuse must be defined.");
 	foreach my $line (@{$lines}) {
 		parseline_mk($line);
+		if ($line->has("is_varassign") && $line->get("varcanon") eq "SUBST_VARS.*") {
+			foreach my $svar (split(/\s+/, $line->get("value"))) {
+				$pkgctx_varuse->{$svar} = true;
+				$opt_debug_misc and $line->log_debug("varuse $svar");
+			}
+		}
 	}
 }
 
@@ -3962,7 +3969,7 @@ sub checkline_mk_varuse($$$$) {
 		}
 	}
 
-	if ($context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
+	if ($opt_warn_quoting and $context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
 
 		# In GNU configure scripts, a few variables need to be
 		# passed through the :M* operator before they reach the
