@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.3 2007/09/06 19:23:25 joerg Exp $
+dnl	$Id: configure.in,v 1.4 2007/09/11 14:13:52 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -28,7 +28,7 @@ no)    ;;
 	esac
        ;;
 esac])
-AC_DEFINE_UNQUOTED(DEFSHELL, ${DEFSHELL:}, Shell spec to use by default)
+AC_DEFINE_UNQUOTED(DEFSHELL, ${DEFSHELL}, Shell spec to use by default)
 AC_SUBST(DEFAULT_CSH)
 AC_SUBST(DEFAULT_KSH)
 AC_SUBST(DEFAULT_SH)
