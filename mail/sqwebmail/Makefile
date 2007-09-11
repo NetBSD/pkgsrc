@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2007/09/11 04:44:18 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2007/09/11 17:50:14 jlam Exp $
 
 DISTNAME=	sqwebmail-5.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -70,7 +70,6 @@ CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_PATH.gzip:Q}
 CONFIGURE_ENV+=		GPG=${PREFIX:Q}/bin/gpg
-CONFIGURE_ENV+=		ldapsearch=${PREFIX:Q}/bin/ldapsearch
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
 REQD_DIRS_PERMS+=	${LIBEXECDIR}/webmail				\
@@ -92,7 +91,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
 			${PKG_SYSCONFDIR}/${_file_:S/.dist$//}		\
 			${COURIER_FILE_PERMS}
 .endfor
-.for _file_ in cleancache.pl ldapsearch sendit.sh
+.for _file_ in cleancache.pl sendit.sh
 CONF_FILES_PERMS+=	${PREFIX}/share/courier/sqwebmail/${_file_}	\
 			${PKG_SYSCONFDIR}/${_file_}			\
 			${COURIER_SCRIPT_PERMS}
