@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.1 2007/08/20 11:21:21 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.2 2007/09/11 05:03:30 bjs Exp $
 
 AWK=awk
 SED=sed
@@ -204,7 +204,7 @@ determine_features()
     {
     FEATURES=
     case $hw_machine_arch in
-	i386 | x86_64)
+	i386)
 	    if [ "$(sysctl -n machdep.sse2)" = 1 ] ; then
 		FEATURES="-mfpmath=sse -msse2"
 	    elif [ "$(sysctl -n machdep.sse)" = 1 ] ; then
