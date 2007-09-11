@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.8 2007/08/10 17:57:14 jlam Exp $
+$NetBSD: patch-ad,v 1.9 2007/09/11 17:50:14 jlam Exp $
 
 --- sqwebmail/Makefile.in.orig	2007-04-22 14:18:04.000000000 -0400
 +++ sqwebmail/Makefile.in
@@ -20,15 +20,6 @@ $NetBSD: patch-ad,v 1.8 2007/08/10 17:57:14 jlam Exp $
  		; then \
  		echo '#define HOSTNAMEFILE "$(sysconfdir)/defaultdomain"' >>htmllibdir.h \
  		; echo '#define MAKEMIME "$(bindir)/makemime"' >>htmllibdir.h \
-@@ -1008,7 +1008,7 @@ htmllibdir.h: config.status
- 		; echo '#define MAKEMIME "$(pkglibexecdir)/makemime"' >>htmllibdir.h \
- 		; fi
- 	echo '#define LDAPADDRESSBOOK "$(sysconfdir)/ldapaddressbook"' >>htmllibdir.h
--	echo '#define LDAPSEARCH "$(scriptdir)/ldapsearch"' >>htmllibdir.h
-+	echo '#define LDAPSEARCH "$(sysconfdir)/ldapsearch"' >>htmllibdir.h
- 	echo '#define AUTHCHARSET "$(sysconfdir)/authcharset"' >>htmllibdir.h
- 
- ldapsearch: ../ldapaddressbook/ldapsearch
 @@ -1036,9 +1036,6 @@ install-perms-cache:
  	@echo "@cachedir@ 700 @cacheowner@ bin" >>permissions.dat
  
