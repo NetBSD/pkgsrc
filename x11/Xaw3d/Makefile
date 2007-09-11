@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2007/09/11 23:49:39 smb Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.visi.com/users/hawkeyd/X/
 
