@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.5 2007/09/10 16:06:27 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.6 2007/09/11 02:35:04 jlam Exp $
 
 # Convenience definition used below for a file or directory owned by the
 # courier user and group.
@@ -31,10 +31,10 @@ OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/track	${COURIER_OWNED} 0755
 ###
 ### Courier webadmin directories
 ###
-OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webadmin	${COURIER_OWNED} 0700
-OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webadmin/added		\
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/webadmin	${COURIER_OWNED} 0700
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/webadmin/added		\
 							${COURIER_OWNED} 0700
-OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webadmin/removed		\
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/webadmin/removed		\
 							${COURIER_OWNED} 0700
 
 ###
