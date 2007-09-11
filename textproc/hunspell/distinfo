@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/09/11 17:40:29 wiz Exp $
+
+SHA1 (hunspell-1.1.12-2.tar.gz) = 2bd8ff433f5d4d4901fc6592f7f340013017acf5
+RMD160 (hunspell-1.1.12-2.tar.gz) = 15250b47b2ef3f867fa6f114e1f5b09933474764
+Size (hunspell-1.1.12-2.tar.gz) = 731022 bytes
