@@ -1,4 +1,4 @@
-/*	$NetBSD: extract.c,v 1.15 2007/04/16 12:55:35 joerg Exp $	*/
+/*	$NetBSD: extract.c,v 1.16 2007/09/11 13:46:10 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.15 2007/04/16 12:55:35 joerg Exp $");
+__RCSID("$NetBSD: extract.c,v 1.16 2007/09/11 13:46:10 rillig Exp $");
 #endif
 #endif
 
@@ -256,16 +256,15 @@ extract_plist(char *home, package_t *pkg)
 						 * that would probably affect too much code I prefer
 						 * not to touch - HF */
 						
-						char   *s, t[MaxPathSize], *u;
+						char   *s, t[MaxPathSize];
 						int     rc;
 
 						LFILE_ADD(&files, lfp, p->name);
 						LFILE_ADD(&perms, lfp, p->name);
 						if (p->name[0] == '/')
-							u = p->name;
+							errx(EXIT_FAILURE, "File names must not be absolute (%s).", p->name);
 						else {
 							(void) snprintf(t, sizeof(t), "%s/%s", Directory, p->name);
-							u = t;
 						}
 
 						s = pkgdb_retrieve(t);
