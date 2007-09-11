@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2007/09/11 15:26:14 obache Exp $
+# $NetBSD: Makefile,v 1.46 2007/09/11 15:53:57 obache Exp $
 #
 
-DISTNAME=		tor-0.1.2.16
-PKGREVISION=		1
+DISTNAME=		tor-0.1.2.17
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
@@ -16,9 +15,14 @@ USE_LANGUAGES+=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ENV+=		CPP=${CPP:Q}
+
+TEST_TARGET=		check
+
 TOR_USER?=		tor
 TOR_GROUP?=		tor
-PKG_HOME?=		/var/chroot/tor
+PKG_HOME?=		${VARBASE}/chroot/tor
+BUILD_DEFS+=		VARBASE
 
 PKG_GROUPS_VARS+=	TOR_GROUP
 PKG_USERS_VARS+=	TOR_USER
@@ -51,12 +55,8 @@ post-install:
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
-	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.1a
-# XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
-# libevent, so we need to force use of the pkgsrc one
-USE_BUILTIN.libevent=	no
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
