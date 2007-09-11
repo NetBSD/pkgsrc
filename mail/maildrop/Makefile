@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2007/08/27 22:33:19 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2007/09/11 04:33:37 jlam Exp $
 
 DISTNAME=	maildrop-2.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +33,7 @@ MAILDROP_TRUSTED_USERS?=	${REAL_ROOT_USER} ${COURIER_USER} qmaild
 CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR:Q}/makedatprog
 CONFIGURE_ARGS+=	--enable-maildirquota
 CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP:Q}
