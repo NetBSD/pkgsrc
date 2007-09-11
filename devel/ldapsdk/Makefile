@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/03/01 17:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/11 21:05:36 rillig Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -24,6 +24,8 @@ MAKE_ENV+=	MOZ_LDAP_SDK=1
 MAKE_FILE=	directory/ldapsdk.mk
 BUILD_TARGET=	build
 
+INSTALLATION_DIRS_FROM_PLIST=	yes
+
 post-extract:
 	${LN} -s FreeBSD.mk ${WRKSRC}/config/DragonFly.mk
 
@@ -32,11 +34,8 @@ do-configure:
 	${ECHO} "EGDIR=${EGDIR}" >> ${WRKSRC}/config/rules.mk
 
 do-install:
-	cd ${WRKSRC}/dist && \
-	for i in disptmpl.h lber.h ldap.h srchpref.h; \
-	do \
-        	${INSTALL_DATA} public/ldap/$$i ${PREFIX}/include; \
-	done
+	cd ${WRKSRC}/dist/public/ldap \
+	&& ${INSTALL_DATA} disptmpl.h lber.h ldap.h srchpref.h ${PREFIX}/include
 	#
 	# XXX kludge
 	#
