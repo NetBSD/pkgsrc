@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.13 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: arg-source,v 1.14 2007/09/11 08:33:11 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,7 +52,7 @@ while $test $# -gt 0; do
 	##############################################################
 	# Merge "-I /dir" into a single "-I/dir".  Same for -L, -R.
 	##############################################################
-	-[ILR])
+	-[DILR])
 		nextarg="$1"; shift
 		case "$nextarg" in
 		-*) msg_log $wrapperlog "WARNING: [arg-source] An $arg option must not be followed by another option, $nextarg." ;;
