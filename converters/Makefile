@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2007/09/07 12:43:40 abs Exp $
+# $NetBSD: Makefile,v 1.92 2007/09/11 16:59:54 abs Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -36,6 +36,7 @@ SUBDIR+=	p5-Convert-TNEF
 SUBDIR+=	p5-Convert-UUlib
 SUBDIR+=	p5-JSON
 SUBDIR+=	p5-JSON-Any
+SUBDIR+=	p5-JSON-XS
 SUBDIR+=	p5-Jcode
 SUBDIR+=	p5-MIME-Base32
 SUBDIR+=	p5-MIME-Base64
