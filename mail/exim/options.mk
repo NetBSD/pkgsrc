@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2007/08/17 22:55:52 joerg Exp $
+# $NetBSD: options.mk,v 1.14 2007/09/11 18:16:01 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
@@ -115,6 +115,8 @@ LOCAL_MAKEFILE_OPTIONS+=TRANSPORT_LMTP=yes
 
 .if !empty(PKG_OPTIONS:Minet6)
 LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=YES
+.else
+LOCAL_MAKEFILE_OPTIONS+=HAVE_IPV6=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mgdbm)
