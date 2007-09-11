@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.267 2007/09/07 22:12:14 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.268 2007/09/11 18:16:38 abs Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -465,7 +465,7 @@ IPV6_READY=		NO
 # XXX
 # XXX Retain the following until USE_INET6 has been purged from pkgsrc-wip.
 # XXX
-USE_INET6=		${IPV6_READY}
+USE_INET6?=		${IPV6_READY}
 
 LOCALBASE?=		/usr/pkg
 X11_TYPE?=		native
