@@ -1,4 +1,4 @@
-# $NetBSD: distname.help,v 1.1 2007/02/06 20:03:30 rillig Exp $
+# $NetBSD: distname.help,v 1.2 2007/09/11 21:21:33 rillig Exp $
 #
 # DISTNAME
 #	Every package definition should start with the definition of this
@@ -19,8 +19,13 @@
 #	value changes over time.
 #
 #	When the variable is defined by the package, it should consist
-#	of the package name and version, as released upstream. The "nb"
-#	part is specified by another variable, PKGREVISION.
+#	of the package name (PKGBASE) and version. The version is a list
+#	of numbers, separated by either a dot or one of the keywords
+#	"alpha", "beta", "pre", "rc" (release candidate),
+#	"pl" (patch level).
+#
+#	The "nb" part, which is often seen in package names, is not
+#	specified with PKGNAME, but with PKGREVISION.
 #
 #	Later, in bsd.pkg.mk, the "nb" part is added to PKGNAME, so when
 #	it is used in the package, its value may differ. The package
