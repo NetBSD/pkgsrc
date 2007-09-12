@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.1995 2007/09/11 23:49:39 smb Exp $
+$NetBSD: CHANGES-2007,v 1.1996 2007/09/12 04:15:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3644,3 +3644,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/hunspell-en_GB version 20061130 [wiz 2007-09-11]
 	Added textproc/hunspell-en_US version 20060207 [wiz 2007-09-11]
 	Updated x11/Xaw3d to 1.5Enb3 [smb 2007-09-11]
+	Updated converters/p5-JSON to 1.14 [obache 2007-09-12]
