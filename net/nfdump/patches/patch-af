@@ -1,38 +1,37 @@
-$NetBSD: patch-af,v 1.1 2007/08/12 13:57:36 joerg Exp $
+$NetBSD: patch-af,v 1.2 2007/09/12 07:33:42 seb Exp $
 
---- sfcapd.c.orig	2007-08-12 13:30:13.000000000 +0000
+--- sfcapd.c.orig	2007-08-24 12:32:34.000000000 +0000
 +++ sfcapd.c
-@@ -60,6 +60,7 @@
+@@ -63,6 +63,7 @@
  #include <sys/mman.h>
  #include <string.h>
  #include <dirent.h>
 +#include <limits.h>
  
- #include "config.h"
- 
-@@ -454,7 +455,11 @@ int main(int argc, char **argv) {
+ #if 0
+ #include "pcap_reader.h"
+@@ -626,7 +627,11 @@ int main(int argc, char **argv) {
   
  char	*bindhost, *filter, *datadir, pidstr[32], *lauch_process;
  char	*userid, *groupid, *checkptr, *listenport, *mcastgroup;
--char	pidfile[MAXNAMLEN];
 +#ifdef PATH_MAX
 +char	pidfile[PATH_MAX];
 +#else
-+char	pidfile[MAXPATHLEN];
+ char	pidfile[MAXPATHLEN];
 +#endif
  struct stat fstat;
  srecord_t	*commbuff;
- struct sigaction act;
-@@ -530,18 +535,20 @@ pid_t	pid;
+ dirstat_t 	*dirstat;
+@@ -712,18 +717,21 @@ char	c;
  				break;
  			case 'P':
  				if ( optarg[0] == '/' ) { 	// absolute path given
--					strncpy(pidfile, optarg, MAXNAMLEN-1);
+-					strncpy(pidfile, optarg, MAXPATHLEN-1);
 +					strncpy(pidfile, optarg, sizeof(pidfile));
-+					pidfile[sizeof(pidfile) - 1] = '\0'
++					pidfile[sizeof(pidfile) - 1] = 0;
  				} else {					// path relative to current working directory
 +#ifdef PATH_MAX
-+					char tmp[PATH_MAX]
++					char tmp[PATH_MAX];
 +#else
  					char tmp[MAXPATHLEN];
 -					if ( !getcwd(tmp, MAXPATHLEN-1) ) {
@@ -41,12 +40,12 @@ $NetBSD: patch-af,v 1.1 2007/08/12 13:57:36 joerg Exp $
  						fprintf(stderr, "Failed to get current working directory: %s\n", strerror(errno));
  						exit(255);
  					}
--					tmp[MAXPATHLEN-1] = 0;
+ 					tmp[MAXPATHLEN-1] = 0;
 -					snprintf(pidfile, MAXPATHLEN - 1 - strlen(tmp), "%s/%s", tmp, optarg);
 +					snprintf(pidfile, sizeof(pidfile), "%s/%s", tmp, optarg);
  				}
 -				// pidfile now absolute path
--				pidfile[MAXNAMLEN-1] = 0;
+-				pidfile[MAXPATHLEN-1] = 0;
  				break;
- 			case 'r':
- 				report_sequence = 1;
+ 			case 'R': {
+ 				char *p = strchr(optarg, '/');
