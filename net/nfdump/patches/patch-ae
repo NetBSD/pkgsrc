@@ -1,33 +1,32 @@
-$NetBSD: patch-ae,v 1.1 2007/08/12 13:57:35 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2007/09/12 07:33:41 seb Exp $
 
---- nfcapd.c.orig	2007-08-12 13:25:39.000000000 +0000
+--- nfcapd.c.orig	2007-08-24 12:32:34.000000000 +0000
 +++ nfcapd.c
-@@ -71,6 +71,7 @@
+@@ -74,6 +74,7 @@
  #include <sys/mman.h>
  #include <string.h>
  #include <dirent.h>
 +#include <limits.h>
  
- #include "config.h"
- 
-@@ -511,7 +512,11 @@ int main(int argc, char **argv) {
+ #if 0
+ #include "pcap_reader.h"
+@@ -688,7 +689,11 @@ int main(int argc, char **argv) {
   
  char	*bindhost, *filter, *datadir, pidstr[32], *lauch_process;
  char	*userid, *groupid, *checkptr, *listenport, *mcastgroup;
--char	pidfile[MAXNAMLEN];
 +#ifdef PATH_MAX
 +char	pidfile[PATH_MAX];
 +#else
-+char	pidfile[MAXPATHLEN];
+ char	pidfile[MAXPATHLEN];
 +#endif
  struct stat fstat;
  srecord_t	*commbuff;
- struct sigaction act;
-@@ -587,18 +592,20 @@ pid_t	pid;
+ dirstat_t 	*dirstat;
+@@ -776,18 +781,20 @@ char	c;
  				break;
  			case 'P':
  				if ( optarg[0] == '/' ) { 	// absolute path given
--					strncpy(pidfile, optarg, MAXNAMLEN-1);
+-					strncpy(pidfile, optarg, MAXPATHLEN-1);
 +					strncpy(pidfile, optarg, sizeof(pidfile));
 +					pidfile[sizeof(pidfile) - 1] = 0;
  				} else {					// path relative to current working directory
@@ -46,7 +45,7 @@ $NetBSD: patch-ae,v 1.1 2007/08/12 13:57:35 joerg Exp $
 +					snprintf(pidfile, sizeof(pidfile), "%s/%s", tmp, optarg);
  				}
 -				// pidfile now absolute path
--				pidfile[MAXNAMLEN-1] = 0;
+-				pidfile[MAXPATHLEN-1] = 0;
  				break;
- 			case 'r':
- 				report_sequence = 1;
+ 			case 'R': {
+ 				char *p = strchr(optarg, '/');
