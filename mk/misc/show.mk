@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.6 2007/05/07 09:35:53 rillig Exp $
+# $NetBSD: show.mk,v 1.7 2007/09/12 10:08:38 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -70,14 +70,43 @@ build-defs-message: show-build-defs .PHONY
 #	Prints a list of (hopefully) all pkgsrc variables that are visible
 #	to the user or the package developer. It is intended to give
 #	interested parties a better insight into the inner workings of
-#	pkgsrc.
+#	pkgsrc. Each variable name is prefixed with a "category":
+#
+#		* "usr" for user-settable variables,
+#		* "pkg" for package-settable variables,
+#		* "sys" for system-defined variables.
 #
 # Keywords: debug show _vargroups
 #
 
+# The following types of variables are categorized:
+#
+# _USER_VARS.*
+#	Variables that can be set by the user and whose primary file is
+#	this file.
+#
+# _PKG_VARS.*
+#	Variables that can be set by the package and whose primary file
+#	is this file.
+#
+# _SYS_VARS.*
+#	Variables that are defined by this file and that are intended to
+#	be used by packages.
+#
+# _DEF_VARS.*
+#	All variables that are defined by this file, whether internal or
+#	not, primary or not.
+#
+# _USE_VARS.*
+#	All variables that are used by this file, whether internal or
+#	not, primary or not.
+#
+_SHOW_ALL_CATEGORIES=	_USER_VARS _PKG_VARS _SYS_VARS _USE_VARS _DEF_VARS
 _LABEL._USER_VARS=	usr
 _LABEL._PKG_VARS=	pkg
 _LABEL._SYS_VARS=	sys
+_LABEL._USE_VARS=	use
+_LABEL._DEF_VARS=	def
 
 show-all: .PHONY
 .for g in ${_VARGROUPS:O:u}
@@ -86,7 +115,7 @@ show-all: show-all-${g}
 
 show-all-${g}: .PHONY
 	@echo "${g}:"
-.  for c in _USER_VARS _PKG_VARS _SYS_VARS
+.  for c in ${_SHOW_ALL_CATEGORIES}
 .    for v in ${${c}.${g}}
 .      if defined(${v})
 # Be careful not to evaluate variables too early. Some may use the :sh
