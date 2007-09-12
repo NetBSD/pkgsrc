@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/08/24 16:43:28 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/12 07:08:22 bjs Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,7 +33,7 @@ SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 MESA_SRC=		${WRKDIR}/Mesa-6.5.2
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
-.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "sparc64" || \
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
     ${MACHINE_ARCH} == "alpha"
 GLX_DEFINES+=		-D__GLX_ALIGN64
 .endif
