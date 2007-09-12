@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/08/12 13:57:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/12 07:33:30 seb Exp $
 #
 
-DISTNAME=	nfdump-1.5.2
-PKGREVISION=	1
+DISTNAME=	nfdump-1.5.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfdump/}
 
@@ -14,7 +13,7 @@ GNU_CONFIGURE=	yes
 TEST_TARGET=	test
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nfdump
-PKG_SUPPORTED_OPTIONS=	nfdump-ftconv nfdump-sflow
+PKG_SUPPORTED_OPTIONS=	nfdump-ftconv nfdump-sflow nfdump-nfprofile
 .include "../../mk/bsd.options.mk"
 
 PLIST_SRC=		${PKGDIR}/PLIST
@@ -31,11 +30,10 @@ CONFIGURE_ARGS+=	--enable-sflow
 PLIST_SRC+=		${PKGDIR}/PLIST.sflow
 .endif
 
-EGDIR=			${PREFIX}/share/examples/nfdump
-INSTALLATION_DIRS=	share/examples/nfdump
-REPLACE_PERL+=		nfclean.pl
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/nfclean.pl ${EGDIR}/nfclean.pl
+.if !empty(PKG_OPTIONS:Mnfdump-nfprofile)
+CONFIGURE_ARGS+=	--enable-nfprofile
+PLIST_SRC+=		${PKGDIR}/PLIST.nfprofile
+.  include "../../databases/rrdtool/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
