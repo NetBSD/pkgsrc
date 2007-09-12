@@ -1,4 +1,4 @@
-# $NetBSD: notonly.help,v 1.1 2007/09/12 09:55:37 rillig Exp $
+# $NetBSD: notonly.help,v 1.2 2007/09/12 09:59:44 rillig Exp $
 
 # === Package-settable variables ===
 #
@@ -15,4 +15,8 @@
 #
 # Platforms are triples of OPSYS, OS_VERSION and MACHINE_ARCH, separated
 # by dashes. Each of the components may be the wildcard "*".
+#
+# Whenever you use these variables in a package Makefile, add a comment
+# nearby _why_ you are restricting the list of platforms. Otherwise
+# these restrictions may be quickly removed by other developers.
 #
