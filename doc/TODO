@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6679 2007/09/11 17:46:09 wiz Exp $
+$NetBSD: TODO,v 1.6680 2007/09/13 21:16:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,10 +395,11 @@ Suggested package updates
 	o dbmail-2.2.4
 	o dbxml-2.1.8
 	o dc_gui2-0.80
+	o dcraw-8.77 [pkg/36976]
 	o dctc-0.85.9
 	o dd_rescue-1.13
 	o defendguin-0.0.11
-	o delegate-9.3.2
+	o delegate-9.7.0
 	o devIL-1.6.7
 	o devhelp-0.16
 	o devtodo-0.1.19
@@ -730,7 +731,7 @@ Suggested package updates
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
-	o mksh-31
+	o mksh-31.2
 	o mkvtoolnix-2.1.0
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -1040,6 +1041,7 @@ Suggested package updates
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
 	o qt4-libs-4.3.1
+	o quagga-0.99.9
 	o quagga-devel-0.99.6
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -1053,7 +1055,7 @@ Suggested package updates
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o regionset-0.2
-	o remind-3.1.1
+	o remind-3.1.2
 	o rep-gtk-0.18
 	o replex-0.1.6.7
 	o resize_image-0.7
@@ -1125,6 +1127,7 @@ Suggested package updates
 	o spamassassin-3.2.3
 	o spcaview-20060501
 	o spim-7.3
+	o sqlite3-3.4.2
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
 	o squidGuard-1.2.1
