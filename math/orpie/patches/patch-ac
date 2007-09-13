@@ -1,20 +1,14 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+$NetBSD: patch-ac,v 1.2 2007/09/13 12:10:40 tnn Exp $
 
---- Makefile.in.orig	2005-10-30 03:50:43.000000000 +0100
+--- Makefile.in.orig	2007-09-13 08:35:16.000000000 +0200
 +++ Makefile.in
-@@ -148,13 +148,8 @@ version.ml: Makefile
- 
- install-indep: 
- 	mkdir -p $(BINDIR)
--	if test "$(prefix)" = "/usr"; then \
--		mkdir -p $(DESTDIR)/etc; \
--  	install -m 644 orpierc $(DESTDIR)/etc; \
--	else \
--		mkdir -p $(DESTDIR)/$(prefix)/etc; \
--		install -m 644 orpierc $(DESTDIR)/$(prefix)/etc; \
--	fi
-+		mkdir -p $(DESTDIR)/$(prefix)/share/examples/orpie; \
-+		install -m 644 orpierc $(DESTDIR)/$(prefix)/share/examples/orpie; \
+@@ -151,7 +151,8 @@ install-indep: 
+ 	mkdir -p $(DESTDIR)/$(sysconfdir)
  	mkdir -p $(MANDIR)/man1
  	mkdir -p $(MANDIR)/man5
+-	install -m 644 orpierc $(DESTDIR)/$(sysconfdir)
++	mkdir -p $(DESTDIR)$(PREFIX)/share/examples/orpie
++	install -m 644 orpierc $(DESTDIR)$(PREFIX)/share/examples/orpie
  	install -m 644 doc/orpie.1 $(MANDIR)/man1/orpie.1
+ 	install -m 644 doc/orpie-curses-keys.1 $(MANDIR)/man1/orpie-curses-keys.1
+ 	install -m 644 doc/orpierc.5 $(MANDIR)/man5/orpierc.5
