@@ -1,16 +1,31 @@
-# $NetBSD: options.mk,v 1.6 2007/01/30 07:11:46 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2007/09/13 23:14:41 wiz Exp $
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.tin
-PKG_SUPPORTED_OPTIONS=	curses icu inet6 tin-use-inn-spool
+PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
+PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
+PKG_OPTIONS_REQUIRED_GROUPS=	display
+PKG_OPTIONS_GROUP.display=	curses ncurses ncursesw
+PKG_SUGGESTED_OPTIONS=		curses
 # untested
 #PKG_SUPPORTED_OPTIONS+=	socks
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcurses)
+.  include "../../mk/curses.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-screen=curses
+CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
+.endif
+
+.if !empty(PKG_OPTIONS:Mncurses)
+.  include "../../devel/ncurses/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-screen=ncurses
+CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncurses}
+.endif
+
+.if !empty(PKG_OPTIONS:Mncursesw)
+.  include "../../devel/ncursesw/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-screen=ncursesw
+CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.ncursesw}
 .endif
 
 .if !empty(PKG_OPTIONS:Micu)
