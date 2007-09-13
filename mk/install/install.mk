@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.46 2007/08/14 23:59:25 joerg Exp $
+# $NetBSD: install.mk,v 1.47 2007/09/13 09:44:58 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -19,6 +19,20 @@
 # unprivileged-install-hook:
 #	This hook is placed _before_ switching to privileged mode
 #	in order to install the package.
+#
+# === Package-settable variables ===
+#
+# INSTALLATION_DIRS
+#	A list of directories that should be created at the very
+#	beginning of the install phase. These directories are relative
+#	to ${PREFIX}. As a convenience, a leading man/ is transformed
+#	to ${PKGMANDIR}, to save package authors from typing too much.
+#
+# INSTALLATION_DIRS_FROM_PLIST
+#	In most (or even all?) cases the PLIST files in the package
+#	directory already contain all directories that are needed.
+#	When this variable is set to "yes", all directories mentioned
+#	in the PLIST files will be created like in INSTALLATION_DIRS.
 #
 
 ######################################################################
@@ -231,7 +245,7 @@ install-makedirs:
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
 	@${STEP_MSG} "Creating installation directories"
 	${RUN}								\
-	for dir in ${INSTALLATION_DIRS}; do				\
+	for dir in ${INSTALLATION_DIRS:C,^man/,${PKGMANDIR}/,}; do	\
 		case "$$dir" in						\
 		${PREFIX}/*)						\
 			dir=`${ECHO} "$$dir" | ${SED} "s|^${PREFIX}/||"` ;; \
