@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/02/09 23:53:05 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/09/13 02:24:51 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
@@ -7,7 +7,6 @@ man/man1/pcb.1
 share/pcb/CreateLibrary.sh
 share/pcb/CreateLibraryContents.sh
 share/pcb/ListLibraryContents.sh
-share/pcb/Pcb
 share/pcb/QueryLibrary.sh
 share/pcb/default_font
 share/pcb/examples/LED
@@ -16,6 +15,7 @@ share/pcb/examples/LED2
 share/pcb/examples/libraries/example.inc
 share/pcb/examples/libraries/example.list
 share/pcb/examples/libraries/example.m4
+share/pcb/gpcb-menu.res
 share/pcb/m4/TTL_74xx_DIL.m4
 share/pcb/m4/amp.inc
 share/pcb/m4/amp.list
@@ -27,6 +27,9 @@ share/pcb/m4/bga.inc
 share/pcb/m4/bourns.inc
 share/pcb/m4/bourns.list
 share/pcb/m4/bourns.m4
+share/pcb/m4/candk.inc
+share/pcb/m4/candk.list
+share/pcb/m4/candk.m4
 share/pcb/m4/common.m4
 share/pcb/m4/connector.inc
 share/pcb/m4/connector.list
@@ -56,6 +59,12 @@ share/pcb/m4/minicircuits.inc
 share/pcb/m4/minicircuits.list
 share/pcb/m4/minicircuits.m4
 share/pcb/m4/misc.inc
+share/pcb/m4/nichicon.inc
+share/pcb/m4/nichicon.list
+share/pcb/m4/nichicon.m4
+share/pcb/m4/optek.inc
+share/pcb/m4/optek.list
+share/pcb/m4/optek.m4
 share/pcb/m4/optical.list
 share/pcb/m4/optical.m4
 share/pcb/m4/panasonic.inc
@@ -102,6 +111,7 @@ share/pcb/newlib/electro-optics/IRF_optical_switch
 share/pcb/newlib/headers/0.1_inch_10pin
 share/pcb/newlib/headers/0.1_inch_2pin
 share/pcb/newlib/headers/2mm_8pin_header
+share/pcb/newlib/keystone/KEYSTONE_1062.fp
 share/pcb/newlib/msp430/MSP430F1121
 share/pcb/newlib/msp430/MSP430F1121+jtag
 share/pcb/newlib/not_vetted_ingo/pc104+.ele
@@ -174,6 +184,13 @@ share/pcb/pcblib-newlib/bourns/BOURNS_3224X.fp
 share/pcb/pcblib-newlib/bourns/BOURNS_3224X.png
 share/pcb/pcblib-newlib/bourns/index.html
 share/pcb/pcblib-newlib/broken.html
+share/pcb/pcblib-newlib/candk/CANDK_ES01MSABE.fp
+share/pcb/pcblib-newlib/candk/CANDK_ES01MSABE.png
+share/pcb/pcblib-newlib/candk/CANDK_ES02MSABE.fp
+share/pcb/pcblib-newlib/candk/CANDK_ES02MSABE.png
+share/pcb/pcblib-newlib/candk/CANDK_ES03MSABE.fp
+share/pcb/pcblib-newlib/candk/CANDK_ES03MSABE.png
+share/pcb/pcblib-newlib/candk/index.html
 share/pcb/pcblib-newlib/connector/1.fp
 share/pcb/pcblib-newlib/connector/1.png
 share/pcb/pcblib-newlib/connector/10.fp
@@ -1715,6 +1732,28 @@ share/pcb/pcblib-newlib/minicircuits/MINICIRCUITS_CD637.png
 share/pcb/pcblib-newlib/minicircuits/MINICIRCUITS_KK81.fp
 share/pcb/pcblib-newlib/minicircuits/MINICIRCUITS_KK81.png
 share/pcb/pcblib-newlib/minicircuits/index.html
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_10_10.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_10_10.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_3_5p4.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_3_5p4.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_4_5p4.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_4_5p4.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_5_5p4.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_5_5p4.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_5p4.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_5p4.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_5p8.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_5p8.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_7p7.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_6p3_7p7.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_8_10.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_8_10.png
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_8_5p4.fp
+share/pcb/pcblib-newlib/nichicon/NICHICON_WT_CAP_8_5p4.png
+share/pcb/pcblib-newlib/nichicon/index.html
+share/pcb/pcblib-newlib/optek/OPTEK_OVSRWACR6.fp
+share/pcb/pcblib-newlib/optek/OPTEK_OVSRWACR6.png
+share/pcb/pcblib-newlib/optek/index.html
 share/pcb/pcblib-newlib/optical/6N136.fp
 share/pcb/pcblib-newlib/optical/6N136.png
 share/pcb/pcblib-newlib/optical/6N137.fp
@@ -1779,6 +1818,8 @@ share/pcb/tutorial/tut1.pcb
 @dirrm share/pcb/pcblib-newlib/pci
 @dirrm share/pcb/pcblib-newlib/panasonic
 @dirrm share/pcb/pcblib-newlib/optical
+@dirrm share/pcb/pcblib-newlib/optek
+@dirrm share/pcb/pcblib-newlib/nichicon
 @dirrm share/pcb/pcblib-newlib/minicircuits
 @dirrm share/pcb/pcblib-newlib/johnstech
 @dirrm share/pcb/pcblib-newlib/gtag
@@ -1787,18 +1828,18 @@ share/pcb/tutorial/tut1.pcb
 @dirrm share/pcb/pcblib-newlib/cts
 @dirrm share/pcb/pcblib-newlib/crystal
 @dirrm share/pcb/pcblib-newlib/connector
+@dirrm share/pcb/pcblib-newlib/candk
 @dirrm share/pcb/pcblib-newlib/bourns
 @dirrm share/pcb/pcblib-newlib/amphenol
 @dirrm share/pcb/pcblib-newlib/amp
 @dirrm share/pcb/pcblib-newlib
-@dirrm share/pcb/newlib/toko
 @dirrm share/pcb/newlib/tests
 @dirrm share/pcb/newlib/sockets
 @dirrm share/pcb/newlib/not_vetted_ingo
 @dirrm share/pcb/newlib/msp430
+@dirrm share/pcb/newlib/keystone
 @dirrm share/pcb/newlib/headers
 @dirrm share/pcb/newlib/electro-optics
-@dirrm share/pcb/newlib/cypress
 @dirrm share/pcb/newlib/crystal
 @dirrm share/pcb/newlib/connectors
 @dirrm share/pcb/newlib/burr-brown
