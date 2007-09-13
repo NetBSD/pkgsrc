@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/07/14 22:19:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/13 19:24:13 adrianp Exp $
 
 DISTNAME=	Unreal3.2.7
 PKGNAME=	unrealircd-3.2.7
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://unrealircd.icedslash.com/ \
 		http://www.blurryfox.com/unreal/ \
@@ -20,7 +21,7 @@ CARES_NEEDED=	1.4.0
 
 CHECK_PORTABILITY_SKIP=	update
 
-BUILDLINK_API_DEPENDS.tre+=		tre-${TRE_NEEDED}
+BUILDLINK_API_DEPENDS.tre+=		tre-${TRE_NEEDED}{,nb*}
 BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
 
 .include "../../mk/bsd.prefs.mk"
