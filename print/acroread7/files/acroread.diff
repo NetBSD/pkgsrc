@@ -1,4 +1,4 @@
-$NetBSD: acroread.diff,v 1.4 2006/06/13 14:04:35 salo Exp $
+$NetBSD: acroread.diff,v 1.5 2007/09/13 20:19:09 wiz Exp $
 
 --- acroread.orig	2006-05-23 01:33:35.000000000 +0000
 +++ acroread	2006-06-13 13:55:00.000000000 +0000
@@ -49,7 +49,7 @@ $NetBSD: acroread.diff,v 1.4 2006/06/13 14:04:35 salo Exp $
 +  NetBSD | DragonFly)
 +    machine_type=`uname -p`
 +    case "$machine_type" in
-+      i386)
++      i386|x86_64)
 +        ACRO_CONFIG=intellinux
 +        export ACRO_CONFIG
 +        ;;
