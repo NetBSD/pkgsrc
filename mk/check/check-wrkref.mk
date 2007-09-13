@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.14 2007/09/05 13:34:32 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.15 2007/09/13 09:52:46 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -14,6 +14,7 @@
 #	* "wrksrc" for WRKSRC
 #	* "work" for WRKDIR
 #	* "wrkobjdir" for WRKOBJDIR
+#	* "pkgsrc" for PKGSRCDIR
 #	* "extra" for CHECK_WRKREF_EXTRA_DIRS
 #
 #	Default value: "tools" for PKG_DEVELOPERs, "no" otherwise.
@@ -48,6 +49,7 @@ _CHECK_WRKREF_DIR.work=		${WRKDIR}
 _CHECK_WRKREF_DIR.tools=	${TOOLS_DIR}
 _CHECK_WRKREF_DIR.wrkobjdir=	${WRKOBJDIR}
 _CHECK_WRKREF_DIR.wrksrc=	${WRKSRC}
+_CHECK_WRKREF_DIR.pkgsrc=	${PKGSRCDIR}
 _CHECK_WRKREF_DIR.extra=	${CHECK_WRKREF_EXTRA_DIRS}
 
 _CHECK_WRKREF_DIRS=	# none
