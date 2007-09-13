@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2000 2007/09/13 02:26:10 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.2001 2007/09/13 10:12:26 gson Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3649,3 +3649,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nfdump to 1.5.5 [seb 2007-09-12]
 	Updated sysutils/xfe to 1.04 [xtraeme 2007-09-12]
 	Updated cad/pcb to 20070912 [dmcmahill 2007-09-12]
+	Added math/dieharder version 2.24.4 [gson 2007-09-13]
