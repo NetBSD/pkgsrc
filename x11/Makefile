@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2007/09/03 09:35:15 drochner Exp $
+# $NetBSD: Makefile,v 1.521 2007/09/14 00:28:54 simonb Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -444,6 +444,7 @@ SUBDIR+=	xlockmore
 SUBDIR+=	xlockmore-lite
 SUBDIR+=	xlogo
 SUBDIR+=	xlogout
+SUBDIR+=	xlsclients
 SUBDIR+=	xlupe
 SUBDIR+=	xmag
 SUBDIR+=	xman
