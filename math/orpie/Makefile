@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/09/13 12:10:39 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/14 12:48:50 tnn Exp $
 #
 
-DISTNAME=	orpie-1.5.0
+DISTNAME=	orpie-1.5.1
 CATEGORIES=	math
 MASTER_SITES=	http://www.eecs.umich.edu/~pelzlpj/orpie/
 
