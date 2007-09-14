@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2005/06/07 00:59:49 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2007/09/14 15:34:10 adam Exp $
 
 --- otherlibs/dbm/cldbm.c.orig	2003-07-08 08:50:31.000000000 -0500
 +++ otherlibs/dbm/cldbm.c
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.4 2005/06/07 00:59:49 minskim Exp $
 -#ifdef DBM_USES_GDBM_NDBM
 -#include <gdbm-ndbm.h>
 +#ifdef DBM_USES_DB
-+#include <db.h>
++#include <ndbm.h>
  #else
  #include <ndbm.h>
  #endif

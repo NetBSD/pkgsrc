@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-ac,v 1.5 2007/09/14 15:34:10 adam Exp $
 
---- asmcomp/power/emit.mlp.orig	2004-10-14 15:39:35.000000000 +0100
-+++ asmcomp/power/emit.mlp	2004-10-14 15:41:11.000000000 +0100
-@@ -793,6 +793,30 @@
+--- asmcomp/power/emit.mlp.orig	2007-05-10 18:41:12.000000000 +0200
++++ asmcomp/power/emit.mlp
+@@ -825,6 +825,30 @@ let rec emit_all i =
        emit_instr i None;
        emit_all i.next
  
