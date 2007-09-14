@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.44 2007/06/18 23:42:00 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2007/09/14 15:04:48 tnn Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
-PKGREVISION=		1
-SF_VERS=		1.3
+SF_VERS=		1.3.1
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 
 MAINTAINER=		tnn@NetBSD.org
-HOMEPAGE=		http://sawmill.sourceforge.net/
+HOMEPAGE=		http://sawfish.wikia.com/
 COMMENT=		Extensible window manager that is fully configurable in Lisp
 
 DEPENDS+=		rep-gtk2>=0.18:../../x11/rep-gtk2
@@ -21,9 +20,11 @@ MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 MAKE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 GNU_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	./autogen.sh
 CONFIGURE_ARGS+=	--disable-themer
 
-USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
+PKG_DESTDIR_SUPPORT=	user-destdir
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config autoconf automake
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
