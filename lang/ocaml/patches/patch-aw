@@ -1,6 +1,6 @@
-$NetBSD: patch-aw,v 1.5 2006/10/03 21:06:25 adam Exp $
+$NetBSD: patch-aw,v 1.6 2007/09/14 15:34:12 adam Exp $
 
---- ocamldoc/Makefile.orig	2006-08-10 14:45:09.000000000 +0200
+--- ocamldoc/Makefile.orig	2007-09-02 08:28:20.000000000 +0200
 +++ ocamldoc/Makefile
 @@ -258,24 +258,24 @@ odoc_see_lexer.ml: odoc_see_lexer.mll
  # Installation targets
@@ -19,7 +19,7 @@ $NetBSD: patch-aw,v 1.5 2006/10/03 21:06:25 adam Exp $
 +	${BSD_INSTALL_DATA} ocamldoc.hva *.cmi $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
 +	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
  	if test -d $(INSTALL_MANODIR); then : ; else $(MKDIR) $(INSTALL_MANODIR); fi
--	$(CP) stdlib_man/* $(INSTALL_MANODIR)
+-	if test -d stdlib_man; then $(CP) stdlib_man/* $(INSTALL_MANODIR); else : ; fi
 +	${BSD_INSTALL_MAN} stdlib_man/* $(INSTALL_MANODIR)
  
  installopt:

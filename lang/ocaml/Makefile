@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/12/01 04:12:20 minskim Exp $
+# $NetBSD: Makefile,v 1.54 2007/09/14 15:34:09 adam Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,8 @@ BUILD_TARGET=		world
 ###
 
 # Stub libraries for functions missing from base system.
-.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || ${OPSYS} == "DragonFly" || \
+    ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
 PLIST_SRC+=	${PKGDIR}/PLIST.stub
 .endif
 

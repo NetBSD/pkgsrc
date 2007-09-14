@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.1 2004/04/22 09:18:40 tron Exp $
+$NetBSD: patch-az,v 1.2 2007/09/14 15:34:12 adam Exp $
 
---- otherlibs/dynlink/Makefile.orig	Sun Jan 20 16:12:28 2002
-+++ otherlibs/dynlink/Makefile	Thu Apr 22 10:34:37 2004
-@@ -38,7 +38,7 @@
+--- otherlibs/dynlink/Makefile.orig	2006-09-19 14:41:33.000000000 +0200
++++ otherlibs/dynlink/Makefile
+@@ -53,7 +53,7 @@ extract_crc: dynlink.cma extract_crc.cmo
  	$(CAMLC) $(COMPFLAGS) -o extract_crc dynlink.cma extract_crc.cmo
  
  install:

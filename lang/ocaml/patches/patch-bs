@@ -1,6 +1,6 @@
-$NetBSD: patch-bs,v 1.4 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-bs,v 1.5 2007/09/14 15:34:12 adam Exp $
 
---- tools/Makefile.orig	2005-11-17 15:26:37.000000000 +0100
+--- tools/Makefile.orig	2007-02-07 11:31:36.000000000 +0100
 +++ tools/Makefile
 @@ -49,9 +49,9 @@ clean::
  	rm -f ocamldep.opt
@@ -36,8 +36,8 @@ $NetBSD: patch-bs,v 1.4 2006/01/16 09:41:48 adam Exp $
  
  clean::
  	rm -f ocamlmktop
-@@ -92,7 +92,7 @@ ocamlmklib: ocamlmklib.cmo
- 	$(CAMLC) $(LINKFLAGS) -o ocamlmklib ocamlmklib.cmo
+@@ -97,7 +97,7 @@ myocamlbuild_config.ml: ../config/Makefi
+ 	cp ../myocamlbuild_config.ml .
  
  install::
 -	cp ocamlmklib $(BINDIR)/ocamlmklib
@@ -45,7 +45,7 @@ $NetBSD: patch-bs,v 1.4 2006/01/16 09:41:48 adam Exp $
  
  clean::
  	rm -f ocamlmklib
-@@ -141,7 +141,7 @@ lexer301.ml: lexer301.mll
+@@ -146,7 +146,7 @@ lexer301.ml: lexer301.mll
  	$(CAMLLEX) lexer301.mll
  
  install::
@@ -54,7 +54,7 @@ $NetBSD: patch-bs,v 1.4 2006/01/16 09:41:48 adam Exp $
  
  clean::
  	rm -f scrapelabels lexer301.ml
-@@ -157,7 +157,7 @@ addlabels: addlabels.ml
+@@ -162,7 +162,7 @@ addlabels: addlabels.ml
  		$(ADDLABELS_IMPORTS) addlabels.ml
  
  install::
