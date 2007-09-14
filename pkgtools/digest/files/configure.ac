@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.11 2007/08/03 21:42:04 tnn Exp $
+dnl $Id: configure.ac,v 1.12 2007/09/14 08:12:29 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsd-digest],[20070803],[agc@netbsd.org])
@@ -40,18 +40,20 @@ AC_FUNC_VPRINTF
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 #
 AH_BOTTOM([
-
-#ifndef HAVE___ATTRIBUTE__
-# define __attribute__(x)
-#endif
-
 #ifdef HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
-#ifndef __IDSTRING
+#if defined(__GNUC__) && !defined(__IDSTRING)
+#if (__GNUC__ == 2 && __GNUC_MINOR >= 7) || (__GNUC__ > 2)
 # define __IDSTRING(name,string) \
        static const char name[] __attribute__((__unused__)) = string
+#endif
+#endif
+
+#ifndef __IDSTRING
+# define __IDSTRING(name,string) \
+       static const char name[] = string
 #endif
 
 #ifndef  __RCSID
