@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/05/09 10:09:45 tnn Exp $
+$NetBSD: patch-aa,v 1.6 2007/09/14 15:04:49 tnn Exp $
 
---- configure.orig	2003-03-25 09:30:27.000000000 +0100
-+++ configure
-@@ -643,7 +643,7 @@ esac
+--- configure.in.orig	2007-09-14 16:36:00.000000000 +0200
++++ configure.in
+@@ -58,7 +58,7 @@ esac
  
  sawfishdir='${datadir}/sawfish'
  lispdir='${sawfishdir}/${version}/lisp'
@@ -10,31 +10,31 @@ $NetBSD: patch-aa,v 1.5 2007/05/09 10:09:45 tnn Exp $
 +localedir='${prefix}/${PKGLOCALEDIR}/locale'
  sawfishexecdir='${libexecdir}/sawfish/${version}/${host_type}'
  
- # Extract the first word of "gcc", so it can be a program name with args.
-@@ -2688,7 +2688,7 @@ cat >conftest <<EOF
+ dnl Checks for programs.
+@@ -159,7 +159,7 @@ cat >conftest <<EOF
    (error
      (throw 'quit 1)))
  EOF
 -if REP_GTK_DONT_INITIALIZE=1 rep ./conftest 2>&5; then
 +if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep ./conftest 2>&5; then
-   echo "$ac_t""yes" 1>&6
+   AC_MSG_RESULT([yes])
  else
-   echo "$ac_t""no" 1>&6
-@@ -3387,7 +3387,7 @@ fi
+   AC_MSG_RESULT([no])
+@@ -264,7 +264,7 @@ AC_ARG_ENABLE(themer,
  if test "$enable_themer" = yes; then
-     echo $ac_n "checking for rep-gtk libglade wrapper""... $ac_c" 1>&6
- echo "configure:3390: checking for rep-gtk libglade wrapper" >&5
+   dnl configure redirects &5 to config.log
+   AC_MSG_CHECKING([for rep-gtk libglade wrapper])
 -  if REP_GTK_DONT_INITIALIZE=1 rep --batch -l gui.gtk.libglade 2>&5; then 
 +  if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep --batch -l gui.gtk.libglade 2>&5; then 
-     echo "$ac_t""yes" 1>&6
+     AC_MSG_RESULT([yes])
      add_subdir "themer"
    else 
-@@ -3408,7 +3408,7 @@ fi
+@@ -280,7 +280,7 @@ AC_ARG_ENABLE(gnome-widgets,
+ 
  if test "$enable_gnome_widgets" != "no"; then
-   echo $ac_n "checking for rep-gtk GNOME wrappers""... $ac_c" 1>&6
- echo "configure:3411: checking for rep-gtk GNOME wrappers" >&5
+   AC_MSG_CHECKING([for rep-gtk GNOME wrappers])
 -  if REP_GTK_DONT_INITIALIZE=1 rep --batch -l gui.gtk-2.gnome-ui 2>&5; then 
 +  if env REP_GTK_DONT_INITIALIZE=1 ${REP_ENV_PKGSRC} rep --batch -l gui.gtk-2.gnome-ui 2>&5; then 
-     echo "$ac_t""yes" 1>&6
+     AC_MSG_RESULT([yes])
      REP_GTK_GNOME=yes
    else 
