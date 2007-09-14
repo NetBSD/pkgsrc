@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.889 2007/09/10 15:51:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.890 2007/09/14 20:51:42 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -274,9 +274,9 @@ SUBDIR+=	libjit
 SUBDIR+=	libjudy
 SUBDIR+=	libltdl
 SUBDIR+=	libmatchbox
+SUBDIR+=	libmcs
 SUBDIR+=	libmemcache
 SUBDIR+=	libmemmgr
-SUBDIR+=	libmcs
 SUBDIR+=	libmimedir
 SUBDIR+=	libmm
 SUBDIR+=	libnet10
