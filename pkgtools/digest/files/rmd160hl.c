@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160hl.c,v 1.4 2007/07/03 18:54:04 joerg Exp $	*/
+/*	$NetBSD: rmd160hl.c,v 1.5 2007/09/14 08:12:29 joerg Exp $	*/
 
 /* rmd160hl.c
  * ----------------------------------------------------------------------------
@@ -16,7 +16,7 @@
 #endif
 
 #ifndef lint
-__RCSID("$NetBSD: rmd160hl.c,v 1.4 2007/07/03 18:54:04 joerg Exp $");
+__RCSID("$NetBSD: rmd160hl.c,v 1.5 2007/09/14 08:12:29 joerg Exp $");
 #endif	/* not lint */
 
 
@@ -53,7 +53,7 @@ RMD160End(RMD160_CTX *ctx, char *buf)
 {
     int i;
     char *p = buf;
-    u_char digest[20];
+    uint8_t digest[20];
     static const char hex[]="0123456789abcdef";
 
     _DIAGASSERT(ctx != NULL);
@@ -74,7 +74,7 @@ RMD160End(RMD160_CTX *ctx, char *buf)
 char *
 RMD160File(char *filename, char *buf)
 {
-    u_char buffer[BUFSIZ];
+    uint8_t buffer[BUFSIZ];
     RMD160_CTX ctx;
     int fd, num, oerrno;
 
@@ -96,7 +96,7 @@ RMD160File(char *filename, char *buf)
 }
 
 char *
-RMD160Data(const u_char *data, size_t len, char *buf)
+RMD160Data(const uint8_t *data, size_t len, char *buf)
 {
     RMD160_CTX ctx;
 
