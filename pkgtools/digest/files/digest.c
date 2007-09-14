@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.13 2007/08/03 17:10:07 tnn Exp $ */
+/*	$NetBSD: digest.c,v 1.14 2007/09/14 08:12:29 joerg Exp $ */
 
 /*
  * Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
@@ -37,7 +37,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001-2005 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.13 2007/08/03 17:10:07 tnn Exp $");
+__RCSID("$NetBSD: digest.c,v 1.14 2007/09/14 08:12:29 joerg Exp $");
 #endif
 
 
@@ -138,7 +138,7 @@ digest_file(char *fn, alg_t *alg)
         if (fn == NULL) {
 		(*alg->hash_init)(&alg->hash_ctx);
                 while ((cc = read(STDIN_FILENO, in, sizeof(in))) > 0) {
-			(*alg->hash_update)(&alg->hash_ctx, (u_char *)in,
+			(*alg->hash_update)(&alg->hash_ctx, (uint8_t *)in,
 					    (unsigned) cc);
 		}
 		(void) printf("%s\n", (*alg->hash_end)(&alg->hash_ctx, digest));

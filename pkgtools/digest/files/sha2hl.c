@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.5 2007/07/03 18:54:05 joerg Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.6 2007/09/14 08:12:30 joerg Exp $	 */
 
 /*
  * sha2hl.c
@@ -45,7 +45,7 @@
 #endif
 
 #ifndef lint
-__RCSID("$NetBSD: sha2hl.c,v 1.5 2007/07/03 18:54:05 joerg Exp $");
+__RCSID("$NetBSD: sha2hl.c,v 1.6 2007/09/14 08:12:30 joerg Exp $");
 #endif				/* not lint */
 
 
@@ -81,7 +81,7 @@ static const char sha2_hex_digits[] = "0123456789abcdef";
 char           *
 SHA256_File(char *filename, char *buf)
 {
-	u_char          buffer[BUFSIZ * 20];
+	uint8_t         buffer[BUFSIZ * 20];
 	SHA256_CTX      ctx;
 	int             fd, num, oerrno;
 
@@ -104,10 +104,10 @@ SHA256_File(char *filename, char *buf)
 
 
 char           *
-SHA256_End(SHA256_CTX *ctx, u_char *buffer)
+SHA256_End(SHA256_CTX *ctx, uint8_t *buffer)
 {
-	u_char          digest[SHA256_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	uint8_t         digest[SHA256_DIGEST_LENGTH], *d = digest;
+	uint8_t	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -130,7 +130,7 @@ SHA256_End(SHA256_CTX *ctx, u_char *buffer)
 }
 
 char           *
-SHA256_Data(const sha2_byte * data, size_t len, u_char *digest)
+SHA256_Data(const sha2_byte * data, size_t len, uint8_t *digest)
 {
 	SHA256_CTX      ctx;
 
@@ -143,7 +143,7 @@ char           *
 SHA384_File(char *filename, char *buf)
 {
 	SHA384_CTX      ctx;
-	u_char          buffer[BUFSIZ * 20];
+	uint8_t         buffer[BUFSIZ * 20];
 	int             fd, num, oerrno;
 
 	_DIAGASSERT(filename != NULL);
@@ -166,8 +166,8 @@ SHA384_File(char *filename, char *buf)
 char           *
 SHA384_End(SHA384_CTX * ctx, char buffer[])
 {
-	u_char          digest[SHA384_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	uint8_t         digest[SHA384_DIGEST_LENGTH], *d = digest;
+	uint8_t	       *ret;
 	int             i;
 
 	/* Sanity check: */
@@ -203,7 +203,7 @@ char           *
 SHA512_File(char *filename, char *buf)
 {
 	SHA512_CTX      ctx;
-	u_char          buffer[BUFSIZ * 20];
+	uint8_t         buffer[BUFSIZ * 20];
 	int             fd, num, oerrno;
 
 	_DIAGASSERT(filename != NULL);
@@ -226,8 +226,8 @@ SHA512_File(char *filename, char *buf)
 char           *
 SHA512_End(SHA512_CTX * ctx, char buffer[])
 {
-	u_char          digest[SHA512_DIGEST_LENGTH], *d = digest;
-	u_char	       *ret;
+	uint8_t         digest[SHA512_DIGEST_LENGTH], *d = digest;
+	uint8_t	       *ret;
 	int             i;
 
 	/* Sanity check: */
