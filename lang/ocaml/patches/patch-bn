@@ -1,6 +1,6 @@
-$NetBSD: patch-bn,v 1.3 2005/03/24 11:32:50 adam Exp $
+$NetBSD: patch-bn,v 1.4 2007/09/14 15:34:12 adam Exp $
 
---- otherlibs/str/Makefile.orig	2002-12-09 14:05:18.000000000 +0000
+--- otherlibs/str/Makefile.orig	2007-01-29 13:11:16.000000000 +0100
 +++ otherlibs/str/Makefile
 @@ -19,7 +19,7 @@ include ../../config/Makefile
  
@@ -10,7 +10,7 @@ $NetBSD: patch-bn,v 1.3 2005/03/24 11:32:50 adam Exp $
 +CFLAGS+=-I../../byterun $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS)
  CAMLC=../../ocamlcomp.sh
  CAMLOPT=../../ocamlcompopt.sh
- COMPFLAGS=-warn-error A
+ COMPFLAGS=-warn-error A -g
 @@ -48,13 +48,13 @@ clean: partialclean
  	rm -f *.a *.so *.o
  
