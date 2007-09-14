@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2005 2007/09/14 08:56:56 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2006 2007/09/14 14:28:32 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3655,3 +3655,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated print/acroread7 to 7.0.9nb1 [wiz 2007-09-13]
 	Added x11/xlsclients version 1.0.1 [simonb 2007-09-14]
 	Updated filesystems/fuse-ntfs-3g to 1.913 [xtraeme 2007-09-14]
+	Removed mail/sylpheed-claws [reed 2007-09-14]
+	Removed mail/sylpheed-claws-dillo-viewer [reed 2007-09-14]
+	Removed mail/sylpheed-claws-ghostscript-viewer [reed 2007-09-14]
+	Removed mail/sylpheed-claws-image-viewer [reed 2007-09-14]
+	Removed mail/sylpheed-claws-trayicon [reed 2007-09-14]
