@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/26 19:55:28 pooka Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/14 08:55:49 xtraeme Exp $
 bin/mount.ntfs-3g
 bin/ntfs-3g
 man/man8/ntfs-3g.8
@@ -20,7 +20,6 @@ include/ntfs-3g/index.h
 include/ntfs-3g/inode.h
 include/ntfs-3g/layout.h
 include/ntfs-3g/lcnalloc.h
-include/ntfs-3g/list.h
 include/ntfs-3g/logfile.h
 include/ntfs-3g/logging.h
 include/ntfs-3g/mft.h
