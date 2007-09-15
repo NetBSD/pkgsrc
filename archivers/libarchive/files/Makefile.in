@@ -34,7 +34,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = $(am__EXEEXT_1)
+bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2)
 check_PROGRAMS = libarchive_test$(EXEEXT)
 TESTS = libarchive_test$(EXEEXT)
 subdir = .
@@ -92,6 +92,7 @@ am_libarchive_la_OBJECTS =  \
 	libarchive/libarchive_la-archive_read_support_format_cpio.lo \
 	libarchive/libarchive_la-archive_read_support_format_empty.lo \
 	libarchive/libarchive_la-archive_read_support_format_iso9660.lo \
+	libarchive/libarchive_la-archive_read_support_format_mtree.lo \
 	libarchive/libarchive_la-archive_read_support_format_tar.lo \
 	libarchive/libarchive_la-archive_read_support_format_zip.lo \
 	libarchive/libarchive_la-archive_string.lo \
@@ -123,8 +124,15 @@ libarchive_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(libarchive_la_LDFLAGS) $(LDFLAGS) -o $@
 @BUILD_BSDTAR_TRUE@am__EXEEXT_1 = bsdtar$(EXEEXT)
+@BUILD_BSDCPIO_TRUE@am__EXEEXT_2 = bsdcpio$(EXEEXT)
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
+am_bsdcpio_OBJECTS = cpio/bsdcpio-cpio.$(OBJEXT) \
+	cpio/bsdcpio-util.$(OBJEXT)
+bsdcpio_OBJECTS = $(am_bsdcpio_OBJECTS)
+bsdcpio_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(bsdcpio_LDFLAGS) \
+	$(LDFLAGS) -o $@
 am_bsdtar_OBJECTS = tar/bsdtar-bsdtar.$(OBJEXT) \
 	tar/bsdtar-getdate.$(OBJEXT) tar/bsdtar-matching.$(OBJEXT) \
 	tar/bsdtar-read.$(OBJEXT) tar/bsdtar-tree.$(OBJEXT) \
@@ -156,6 +164,7 @@ am__objects_1 =  \
 	libarchive/libarchive_test-archive_read_support_format_cpio.$(OBJEXT) \
 	libarchive/libarchive_test-archive_read_support_format_empty.$(OBJEXT) \
 	libarchive/libarchive_test-archive_read_support_format_iso9660.$(OBJEXT) \
+	libarchive/libarchive_test-archive_read_support_format_mtree.$(OBJEXT) \
 	libarchive/libarchive_test-archive_read_support_format_tar.$(OBJEXT) \
 	libarchive/libarchive_test-archive_read_support_format_zip.$(OBJEXT) \
 	libarchive/libarchive_test-archive_string.$(OBJEXT) \
@@ -206,6 +215,7 @@ am_libarchive_test_OBJECTS = $(am__objects_1) \
 	libarchive/test/libarchive_test-test_read_format_gtar_sparse.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_format_iso_gz.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_format_isorr_bz2.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_read_format_mtree.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_format_pax_bz2.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_format_tar.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_format_tbz.$(OBJEXT) \
@@ -246,10 +256,10 @@ YACCCOMPILE = $(YACC) $(YFLAGS) $(AM_YFLAGS)
 LTYACCCOMPILE = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=compile $(YACC) $(YFLAGS) $(AM_YFLAGS)
 YLWRAP = $(top_srcdir)/config.aux/ylwrap
-SOURCES = $(libarchive_la_SOURCES) $(bsdtar_SOURCES) \
-	$(libarchive_test_SOURCES)
-DIST_SOURCES = $(libarchive_la_SOURCES) $(bsdtar_SOURCES) \
-	$(libarchive_test_SOURCES)
+SOURCES = $(libarchive_la_SOURCES) $(bsdcpio_SOURCES) \
+	$(bsdtar_SOURCES) $(libarchive_test_SOURCES)
+DIST_SOURCES = $(libarchive_la_SOURCES) $(bsdcpio_SOURCES) \
+	$(bsdtar_SOURCES) $(libarchive_test_SOURCES)
 man1dir = $(mandir)/man1
 man3dir = $(mandir)/man3
 man5dir = $(mandir)/man5
@@ -394,13 +404,12 @@ EXTRA_DIST = version				\
 	examples				\
 	libarchive/test/list.h			\
 	tar/test				\
-	tar/getdate.c				\
-	cpio
+	tar/getdate.c
 
 
 # Always build libarchive, regardless
 lib_LTLIBRARIES = libarchive.la
-dist_man_MANS = $(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS)
+dist_man_MANS = $(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS) $(bsdcpio_dist_man_MANS)
 
 #
 # Libarchive headers, source, etc.
@@ -438,6 +447,7 @@ libarchive_la_SOURCES = \
 	libarchive/archive_read_support_format_cpio.c		\
 	libarchive/archive_read_support_format_empty.c		\
 	libarchive/archive_read_support_format_iso9660.c	\
+	libarchive/archive_read_support_format_mtree.c		\
 	libarchive/archive_read_support_format_tar.c		\
 	libarchive/archive_read_support_format_zip.c		\
 	libarchive/archive_string.c				\
@@ -518,6 +528,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_gtar_sparse.c		\
 	libarchive/test/test_read_format_iso_gz.c		\
 	libarchive/test/test_read_format_isorr_bz2.c		\
+	libarchive/test/test_read_format_mtree.c		\
 	libarchive/test/test_read_format_pax_bz2.c		\
 	libarchive/test/test_read_format_tar.c			\
 	libarchive/test/test_read_format_tbz.c			\
@@ -567,12 +578,36 @@ bsdtar_DEPENDENCIES = libarchive.la		\
 @STATIC_BSDTAR_FALSE@bsdtar_static = 
 @STATIC_BSDTAR_TRUE@bsdtar_static = -static
 bsdtar_LDADD = libarchive.la
-bsdtar_CPPFLAGS = -I$(top_builddir)/libarchive
-bsdtar_LDFLAGS = $(bsdtar_static) -I$(destdir)/libarchive
+bsdtar_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdtar_LDFLAGS = $(bsdtar_static)
 @BUILD_BSDTAR_FALSE@bsdtar_dist_man_MANS = 
 @BUILD_BSDTAR_TRUE@bsdtar_dist_man_MANS = tar/bsdtar.1
 @BUILD_BSDTAR_FALSE@bsdtar_programs = 
 @BUILD_BSDTAR_TRUE@bsdtar_programs = bsdtar
+
+#
+#
+# bsdcpio source, docs, etc.
+#
+#
+bsdcpio_SOURCES = \
+		cpio/cpio.c		\
+		cpio/cpio.h		\
+		cpio/cpio_platform.h	\
+		cpio/util.c
+
+bsdcpio_DEPENDENCIES = libarchive.la		\
+		libarchive/archive_entry.h	\
+		libarchive/archive.h
+
+bsdcpio_static = -static
+bsdcpio_LDADD = libarchive.la
+bsdcpio_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdcpio_LDFLAGS = $(bsdcpio_static)
+@BUILD_BSDCPIO_FALSE@bsdcpio_dist_man_MANS = 
+@BUILD_BSDCPIO_TRUE@bsdcpio_dist_man_MANS = cpio/bsdcpio.1
+@BUILD_BSDCPIO_FALSE@bsdcpio_programs = 
+@BUILD_BSDCPIO_TRUE@bsdcpio_programs = bsdcpio
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -727,6 +762,9 @@ libarchive/libarchive_la-archive_read_support_format_empty.lo:  \
 libarchive/libarchive_la-archive_read_support_format_iso9660.lo:  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/libarchive_la-archive_read_support_format_mtree.lo:  \
+	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_la-archive_read_support_format_tar.lo:  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -839,6 +877,19 @@ clean-checkPROGRAMS:
 	  echo " rm -f $$p $$f"; \
 	  rm -f $$p $$f ; \
 	done
+cpio/$(am__dirstamp):
+	@$(MKDIR_P) cpio
+	@: > cpio/$(am__dirstamp)
+cpio/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) cpio/$(DEPDIR)
+	@: > cpio/$(DEPDIR)/$(am__dirstamp)
+cpio/bsdcpio-cpio.$(OBJEXT): cpio/$(am__dirstamp) \
+	cpio/$(DEPDIR)/$(am__dirstamp)
+cpio/bsdcpio-util.$(OBJEXT): cpio/$(am__dirstamp) \
+	cpio/$(DEPDIR)/$(am__dirstamp)
+bsdcpio$(EXEEXT): $(bsdcpio_OBJECTS) $(bsdcpio_DEPENDENCIES) 
+	@rm -f bsdcpio$(EXEEXT)
+	$(bsdcpio_LINK) $(bsdcpio_OBJECTS) $(bsdcpio_LDADD) $(LIBS)
 tar/$(am__dirstamp):
 	@$(MKDIR_P) tar
 	@: > tar/$(am__dirstamp)
@@ -926,6 +977,9 @@ libarchive/libarchive_test-archive_read_support_format_empty.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_test-archive_read_support_format_iso9660.$(OBJEXT):  \
+	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/libarchive_test-archive_read_support_format_mtree.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_test-archive_read_support_format_tar.$(OBJEXT):  \
@@ -1081,6 +1135,9 @@ libarchive/test/libarchive_test-test_read_format_iso_gz.$(OBJEXT):  \
 libarchive/test/libarchive_test-test_read_format_isorr_bz2.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_read_format_mtree.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_read_format_pax_bz2.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -1153,6 +1210,8 @@ libarchive_test$(EXEEXT): $(libarchive_test_OBJECTS) $(libarchive_test_DEPENDENC
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
+	-rm -f cpio/bsdcpio-cpio.$(OBJEXT)
+	-rm -f cpio/bsdcpio-util.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_check_magic.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_check_magic.lo
 	-rm -f libarchive/libarchive_la-archive_entry.$(OBJEXT)
@@ -1197,6 +1256,8 @@ mostlyclean-compile:
 	-rm -f libarchive/libarchive_la-archive_read_support_format_empty.lo
 	-rm -f libarchive/libarchive_la-archive_read_support_format_iso9660.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_read_support_format_iso9660.lo
+	-rm -f libarchive/libarchive_la-archive_read_support_format_mtree.$(OBJEXT)
+	-rm -f libarchive/libarchive_la-archive_read_support_format_mtree.lo
 	-rm -f libarchive/libarchive_la-archive_read_support_format_tar.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_read_support_format_tar.lo
 	-rm -f libarchive/libarchive_la-archive_read_support_format_zip.$(OBJEXT)
@@ -1271,6 +1332,7 @@ mostlyclean-compile:
 	-rm -f libarchive/libarchive_test-archive_read_support_format_cpio.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_read_support_format_empty.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_read_support_format_iso9660.$(OBJEXT)
+	-rm -f libarchive/libarchive_test-archive_read_support_format_mtree.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_read_support_format_tar.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_read_support_format_zip.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_string.$(OBJEXT)
@@ -1320,6 +1382,7 @@ mostlyclean-compile:
 	-rm -f libarchive/test/libarchive_test-test_read_format_gtar_sparse.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_format_iso_gz.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_format_isorr_bz2.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_read_format_mtree.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_format_pax_bz2.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_format_tar.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_format_tbz.$(OBJEXT)
@@ -1353,6 +1416,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-cpio.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-util.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_check_magic.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_entry.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_entry_copy_stat.Plo@am__quote@
@@ -1375,6 +1440,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_cpio.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_empty.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_iso9660.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_mtree.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_tar.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_zip.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_string.Plo@am__quote@
@@ -1423,6 +1489,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_cpio.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_empty.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_iso9660.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_tar.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_zip.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_string.Po@am__quote@
@@ -1472,6 +1539,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_gtar_sparse.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_iso_gz.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_isorr_bz2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_pax_bz2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_tar.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_tbz.Po@am__quote@
@@ -1680,6 +1748,13 @@ libarchive/libarchive_la-archive_read_support_format_iso9660.lo: libarchive/arch
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_la-archive_read_support_format_iso9660.lo `test -f 'libarchive/archive_read_support_format_iso9660.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_iso9660.c
 
+libarchive/libarchive_la-archive_read_support_format_mtree.lo: libarchive/archive_read_support_format_mtree.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_la-archive_read_support_format_mtree.lo -MD -MP -MF libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_mtree.Tpo -c -o libarchive/libarchive_la-archive_read_support_format_mtree.lo `test -f 'libarchive/archive_read_support_format_mtree.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_mtree.c
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_mtree.Tpo libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_mtree.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_read_support_format_mtree.c' object='libarchive/libarchive_la-archive_read_support_format_mtree.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_la-archive_read_support_format_mtree.lo `test -f 'libarchive/archive_read_support_format_mtree.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_mtree.c
+
 libarchive/libarchive_la-archive_read_support_format_tar.lo: libarchive/archive_read_support_format_tar.c
 @am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_la-archive_read_support_format_tar.lo -MD -MP -MF libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_tar.Tpo -c -o libarchive/libarchive_la-archive_read_support_format_tar.lo `test -f 'libarchive/archive_read_support_format_tar.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_tar.c
 @am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_tar.Tpo libarchive/$(DEPDIR)/libarchive_la-archive_read_support_format_tar.Plo
@@ -1861,6 +1936,34 @@ libarchive/libarchive_la-filter_fork.lo: libarchive/filter_fork.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/filter_fork.c' object='libarchive/libarchive_la-filter_fork.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_la-filter_fork.lo `test -f 'libarchive/filter_fork.c' || echo '$(srcdir)/'`libarchive/filter_fork.c
+
+cpio/bsdcpio-cpio.o: cpio/cpio.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-cpio.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-cpio.Tpo -c -o cpio/bsdcpio-cpio.o `test -f 'cpio/cpio.c' || echo '$(srcdir)/'`cpio/cpio.c
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-cpio.Tpo cpio/$(DEPDIR)/bsdcpio-cpio.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/cpio.c' object='cpio/bsdcpio-cpio.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-cpio.o `test -f 'cpio/cpio.c' || echo '$(srcdir)/'`cpio/cpio.c
+
+cpio/bsdcpio-cpio.obj: cpio/cpio.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-cpio.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-cpio.Tpo -c -o cpio/bsdcpio-cpio.obj `if test -f 'cpio/cpio.c'; then $(CYGPATH_W) 'cpio/cpio.c'; else $(CYGPATH_W) '$(srcdir)/cpio/cpio.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-cpio.Tpo cpio/$(DEPDIR)/bsdcpio-cpio.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/cpio.c' object='cpio/bsdcpio-cpio.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-cpio.obj `if test -f 'cpio/cpio.c'; then $(CYGPATH_W) 'cpio/cpio.c'; else $(CYGPATH_W) '$(srcdir)/cpio/cpio.c'; fi`
+
+cpio/bsdcpio-util.o: cpio/util.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-util.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-util.Tpo -c -o cpio/bsdcpio-util.o `test -f 'cpio/util.c' || echo '$(srcdir)/'`cpio/util.c
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-util.Tpo cpio/$(DEPDIR)/bsdcpio-util.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/util.c' object='cpio/bsdcpio-util.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-util.o `test -f 'cpio/util.c' || echo '$(srcdir)/'`cpio/util.c
+
+cpio/bsdcpio-util.obj: cpio/util.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-util.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-util.Tpo -c -o cpio/bsdcpio-util.obj `if test -f 'cpio/util.c'; then $(CYGPATH_W) 'cpio/util.c'; else $(CYGPATH_W) '$(srcdir)/cpio/util.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-util.Tpo cpio/$(DEPDIR)/bsdcpio-util.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/util.c' object='cpio/bsdcpio-util.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-util.obj `if test -f 'cpio/util.c'; then $(CYGPATH_W) 'cpio/util.c'; else $(CYGPATH_W) '$(srcdir)/cpio/util.c'; fi`
 
 tar/bsdtar-bsdtar.o: tar/bsdtar.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/bsdtar-bsdtar.o -MD -MP -MF tar/$(DEPDIR)/bsdtar-bsdtar.Tpo -c -o tar/bsdtar-bsdtar.o `test -f 'tar/bsdtar.c' || echo '$(srcdir)/'`tar/bsdtar.c
@@ -2267,6 +2370,20 @@ libarchive/libarchive_test-archive_read_support_format_iso9660.obj: libarchive/a
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_read_support_format_iso9660.c' object='libarchive/libarchive_test-archive_read_support_format_iso9660.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_read_support_format_iso9660.obj `if test -f 'libarchive/archive_read_support_format_iso9660.c'; then $(CYGPATH_W) 'libarchive/archive_read_support_format_iso9660.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_read_support_format_iso9660.c'; fi`
+
+libarchive/libarchive_test-archive_read_support_format_mtree.o: libarchive/archive_read_support_format_mtree.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_read_support_format_mtree.o -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Tpo -c -o libarchive/libarchive_test-archive_read_support_format_mtree.o `test -f 'libarchive/archive_read_support_format_mtree.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_mtree.c
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Tpo libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_read_support_format_mtree.c' object='libarchive/libarchive_test-archive_read_support_format_mtree.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_read_support_format_mtree.o `test -f 'libarchive/archive_read_support_format_mtree.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_mtree.c
+
+libarchive/libarchive_test-archive_read_support_format_mtree.obj: libarchive/archive_read_support_format_mtree.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_read_support_format_mtree.obj -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Tpo -c -o libarchive/libarchive_test-archive_read_support_format_mtree.obj `if test -f 'libarchive/archive_read_support_format_mtree.c'; then $(CYGPATH_W) 'libarchive/archive_read_support_format_mtree.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_read_support_format_mtree.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Tpo libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_mtree.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_read_support_format_mtree.c' object='libarchive/libarchive_test-archive_read_support_format_mtree.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_read_support_format_mtree.obj `if test -f 'libarchive/archive_read_support_format_mtree.c'; then $(CYGPATH_W) 'libarchive/archive_read_support_format_mtree.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_read_support_format_mtree.c'; fi`
 
 libarchive/libarchive_test-archive_read_support_format_tar.o: libarchive/archive_read_support_format_tar.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_read_support_format_tar.o -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_read_support_format_tar.Tpo -c -o libarchive/libarchive_test-archive_read_support_format_tar.o `test -f 'libarchive/archive_read_support_format_tar.c' || echo '$(srcdir)/'`libarchive/archive_read_support_format_tar.c
@@ -2953,6 +3070,20 @@ libarchive/test/libarchive_test-test_read_format_isorr_bz2.obj: libarchive/test/
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_read_format_isorr_bz2.c' object='libarchive/test/libarchive_test-test_read_format_isorr_bz2.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_read_format_isorr_bz2.obj `if test -f 'libarchive/test/test_read_format_isorr_bz2.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_isorr_bz2.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_isorr_bz2.c'; fi`
+
+libarchive/test/libarchive_test-test_read_format_mtree.o: libarchive/test/test_read_format_mtree.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_read_format_mtree.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Tpo -c -o libarchive/test/libarchive_test-test_read_format_mtree.o `test -f 'libarchive/test/test_read_format_mtree.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_mtree.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_read_format_mtree.c' object='libarchive/test/libarchive_test-test_read_format_mtree.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_read_format_mtree.o `test -f 'libarchive/test/test_read_format_mtree.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_mtree.c
+
+libarchive/test/libarchive_test-test_read_format_mtree.obj: libarchive/test/test_read_format_mtree.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_read_format_mtree.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Tpo -c -o libarchive/test/libarchive_test-test_read_format_mtree.obj `if test -f 'libarchive/test/test_read_format_mtree.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_mtree.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_mtree.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_mtree.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_read_format_mtree.c' object='libarchive/test/libarchive_test-test_read_format_mtree.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_read_format_mtree.obj `if test -f 'libarchive/test/test_read_format_mtree.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_mtree.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_mtree.c'; fi`
 
 libarchive/test/libarchive_test-test_read_format_pax_bz2.o: libarchive/test/test_read_format_pax_bz2.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_read_format_pax_bz2.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_read_format_pax_bz2.Tpo -c -o libarchive/test/libarchive_test-test_read_format_pax_bz2.o `test -f 'libarchive/test/test_read_format_pax_bz2.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_pax_bz2.c
@@ -3727,6 +3858,8 @@ clean-generic:
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
+	-rm -f cpio/$(DEPDIR)/$(am__dirstamp)
+	-rm -f cpio/$(am__dirstamp)
 	-rm -f libarchive/$(DEPDIR)/$(am__dirstamp)
 	-rm -f libarchive/$(am__dirstamp)
 	-rm -f libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -3746,7 +3879,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
+	-rm -rf cpio/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-libtool distclean-local distclean-tags
@@ -3783,7 +3916,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
+	-rm -rf cpio/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

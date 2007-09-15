@@ -93,7 +93,26 @@ no)
 	;;
 esac
 
+# Default is not to build bsdcpio
+AC_ARG_ENABLE([bsdcpio],
+	[AS_HELP_STRING([--enable-bsdcpio], [enable build of bsdcpio])
+AS_HELP_STRING([--disable-bsdcpio], [disable build of bsdcpio (default)])],
+	[], [enable_bsdcpio=no])
+
+case "$enable_bsdcpio" in
+yes)
+	build_bsdcpio=yes
+	;;
+no)
+	build_bsdcpio=no
+	;;
+*)
+	AC_MSG_FAILURE([Unsupported value for --enable-bsdcpio])
+	;;
+esac
+
 AM_CONDITIONAL([BUILD_BSDTAR], [ test "$build_bsdtar" = yes ])
+AM_CONDITIONAL([BUILD_BSDCPIO], [ test "$build_bsdcpio" = yes ])
 AM_CONDITIONAL([STATIC_BSDTAR], [ test "$static_bsdtar" = yes ])
 
 # Checks for header files.
@@ -114,7 +133,7 @@ AC_CHECK_HEADER(inttypes.h,
 	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,[''])])
 AC_CHECK_HEADERS([locale.h paths.h poll.h pwd.h stdarg.h])
 AC_CHECK_HEADERS([stdint.h stdlib.h string.h sys/acl.h sys/ioctl.h])
-AC_CHECK_HEADERS([sys/param.h sys/select.h sys/time.h])
+AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/time.h])
 AC_CHECK_HEADERS([time.h unistd.h utime.h wchar.h zlib.h])
 
 # Checks for libraries.
