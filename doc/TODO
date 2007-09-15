@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6683 2007/09/15 09:00:47 wiz Exp $
+$NetBSD: TODO,v 1.6684 2007/09/15 09:30:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o cstream-2.7.3
 	o cuetools-1.3.1
 	o cups-1.3.0
-	o curl-7.17.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.0.0
 	o cweb-3.64a
@@ -693,7 +692,6 @@ Suggested package updates
 	o libprelude-0.9.15.2
 	o libpreludedb-0.9.13
 	o libshout-2.2.2
-	o libsigc++2-2.0.18
 	o libssh-0.2
 	o libstatgrab-0.15
 	o libstree-0.4.2
@@ -903,7 +901,6 @@ Suggested package updates
 	o p5-Want-0.15
 	o p5-XML-RAI-1.04
 	o p5-XML-RSS-1.31
-	o p5-XML-SAX-0.16
 	o p5-XML-Simple-2.18
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
@@ -1133,7 +1130,6 @@ Suggested package updates
 	o spamdyke-3.0.1
 	o spcaview-20060501
 	o spim-7.3
-	o sqlite3-3.4.2
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
 	o squidGuard-1.2.1
