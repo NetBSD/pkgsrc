@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2013 2007/09/15 11:51:59 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.2014 2007/09/15 12:04:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added lang/pcc version 0.9.8 [agc 2007-09-15]
 	Updated devel/apel to 10.7nb1 [wiz 2007-09-15]
 	Updated archivers/libarchive to 2.2.8 [joerg 2007-09-15]
+	Updated x11/qt3-libs to 3.3.8nb5 [tron 2007-09-15]
