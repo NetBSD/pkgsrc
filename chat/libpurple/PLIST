@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/13 22:18:58 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/09/15 14:55:02 tnn Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
 include/libpurple/buddyicon.h
+include/libpurple/certificate.h
 include/libpurple/cipher.h
 include/libpurple/circbuffer.h
 include/libpurple/cmds.h
@@ -61,6 +62,7 @@ lib/purple-2/libirc.la
 lib/purple-2/libjabber.la
 lib/purple-2/libmsn.la
 lib/purple-2/libnovell.la
+lib/purple-2/libmyspace.la
 lib/purple-2/liboscar.la
 lib/purple-2/libqq.la
 lib/purple-2/libsimple.la
@@ -81,6 +83,7 @@ share/locale/af/LC_MESSAGES/pidgin.mo
 share/locale/am/LC_MESSAGES/pidgin.mo
 share/locale/ar/LC_MESSAGES/pidgin.mo
 share/locale/az/LC_MESSAGES/pidgin.mo
+share/locale/be@latin/LC_MESSAGES/pidgin.mo
 share/locale/bg/LC_MESSAGES/pidgin.mo
 share/locale/bn/LC_MESSAGES/pidgin.mo
 share/locale/bs/LC_MESSAGES/pidgin.mo
@@ -143,6 +146,15 @@ share/locale/xh/LC_MESSAGES/pidgin.mo
 share/locale/zh_CN/LC_MESSAGES/pidgin.mo
 share/locale/zh_HK/LC_MESSAGES/pidgin.mo
 share/locale/zh_TW/LC_MESSAGES/pidgin.mo
+share/purple/ca-certs/Equifax_Secure_CA.pem
+share/purple/ca-certs/GTE_CyberTrust_Global_Root.pem
+share/purple/ca-certs/Verisign_Class3_Primary_CA.pem
+share/purple/ca-certs/Verisign_RSA_Secure_Server_CA.pem
+share/sounds/purple/alert.wav
+share/sounds/purple/login.wav
+share/sounds/purple/logout.wav
+share/sounds/purple/receive.wav
+share/sounds/purple/send.wav
 ${DBUS}bin/purple-client-example
 ${DBUS}bin/purple-remote
 ${DBUS}bin/purple-send
@@ -157,3 +169,6 @@ ${DBUS}lib/libpurple-client.la
 ${DBUS}lib/purple-2/dbus-example.la
 @dirrm lib/purple-2
 @dirrm include/libpurple
+@dirrm share/purple/ca-certs
+@dirrm share/purple
+@dirrm share/sounds/purple

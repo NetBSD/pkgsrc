@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/13 13:22:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/15 14:55:02 tnn Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -8,6 +8,7 @@ include/pidgin/gtkcellrendererexpander.h
 include/pidgin/gtkcellrendererprogress.h
 include/pidgin/gtkcellview.h
 include/pidgin/gtkcellviewmenuitem.h
+include/pidgin/gtkcertmgr.h
 include/pidgin/gtkconn.h
 include/pidgin/gtkconv.h
 include/pidgin/gtkconvwin.h
@@ -64,6 +65,7 @@ lib/pidgin/timestamp_format.la
 lib/pidgin/xmppconsole.la
 lib/pkgconfig/pidgin.pc
 share/icons/hicolor/16x16/apps/pidgin.png
+share/icons/hicolor/22x22/apps/pidgin.png
 share/icons/hicolor/24x24/apps/pidgin.png
 share/icons/hicolor/32x32/apps/pidgin.png
 share/icons/hicolor/48x48/apps/pidgin.png
@@ -88,6 +90,7 @@ share/pixmaps/pidgin/arrow-left.xpm
 share/pixmaps/pidgin/arrow-right.xpm
 share/pixmaps/pidgin/arrow-up.xpm
 share/pixmaps/pidgin/buttons/edit.png
+share/pixmaps/pidgin/buttons/info.png
 share/pixmaps/pidgin/buttons/pause.png
 share/pixmaps/pidgin/dialogs/16/auth.png
 share/pixmaps/pidgin/dialogs/16/error.png
@@ -138,6 +141,7 @@ share/pixmaps/pidgin/emotes/default/bomb.png
 share/pixmaps/pidgin/emotes/default/bowl.png
 share/pixmaps/pidgin/emotes/default/boy.png
 share/pixmaps/pidgin/emotes/default/brb.png
+share/pixmaps/pidgin/emotes/default/bulgy-eyes.png
 share/pixmaps/pidgin/emotes/default/bye.png
 share/pixmaps/pidgin/emotes/default/cake.png
 share/pixmaps/pidgin/emotes/default/call-me.png
@@ -162,6 +166,7 @@ share/pixmaps/pidgin/emotes/default/crying.png
 share/pixmaps/pidgin/emotes/default/curl-lip.png
 share/pixmaps/pidgin/emotes/default/curse.png
 share/pixmaps/pidgin/emotes/default/cute.png
+share/pixmaps/pidgin/emotes/default/cyclops.png
 share/pixmaps/pidgin/emotes/default/dance.png
 share/pixmaps/pidgin/emotes/default/dazed.png
 share/pixmaps/pidgin/emotes/default/desire.png
@@ -198,25 +203,31 @@ share/pixmaps/pidgin/emotes/default/handshake.png
 share/pixmaps/pidgin/emotes/default/highfive.png
 share/pixmaps/pidgin/emotes/default/hug-left.png
 share/pixmaps/pidgin/emotes/default/hug-right.png
-share/pixmaps/pidgin/emotes/default/hungry.png
 share/pixmaps/pidgin/emotes/default/hypnotized.png
 share/pixmaps/pidgin/emotes/default/in-love.png
 share/pixmaps/pidgin/emotes/default/island.png
 share/pixmaps/pidgin/emotes/default/jump.png
 share/pixmaps/pidgin/emotes/default/kiss.png
+share/pixmaps/pidgin/emotes/default/kissed.png
+share/pixmaps/pidgin/emotes/default/kissing.png
 share/pixmaps/pidgin/emotes/default/knife.png
 share/pixmaps/pidgin/emotes/default/lamp.png
 share/pixmaps/pidgin/emotes/default/lashes.png
 share/pixmaps/pidgin/emotes/default/laugh.png
 share/pixmaps/pidgin/emotes/default/liquor.png
+share/pixmaps/pidgin/emotes/default/loser.png
 share/pixmaps/pidgin/emotes/default/love-over.png
 share/pixmaps/pidgin/emotes/default/love.png
 share/pixmaps/pidgin/emotes/default/lying.png
 share/pixmaps/pidgin/emotes/default/mad-tongue.png
 share/pixmaps/pidgin/emotes/default/mail.png
+share/pixmaps/pidgin/emotes/default/male-fighter1.png
+share/pixmaps/pidgin/emotes/default/male-fighter2.png
 share/pixmaps/pidgin/emotes/default/mean.png
 share/pixmaps/pidgin/emotes/default/meeting.png
+share/pixmaps/pidgin/emotes/default/messed.png
 share/pixmaps/pidgin/emotes/default/mobile.png
+share/pixmaps/pidgin/emotes/default/mohawk.png
 share/pixmaps/pidgin/emotes/default/moneymouth.png
 share/pixmaps/pidgin/emotes/default/monkey.png
 share/pixmaps/pidgin/emotes/default/moon.png
@@ -224,6 +235,7 @@ share/pixmaps/pidgin/emotes/default/msn-away.png
 share/pixmaps/pidgin/emotes/default/msn-busy.png
 share/pixmaps/pidgin/emotes/default/msn.png
 share/pixmaps/pidgin/emotes/default/msn_online.png
+share/pixmaps/pidgin/emotes/default/music.png
 share/pixmaps/pidgin/emotes/default/musical-note.png
 share/pixmaps/pidgin/emotes/default/nailbiting.png
 share/pixmaps/pidgin/emotes/default/neutral.png
@@ -233,6 +245,7 @@ share/pixmaps/pidgin/emotes/default/peace.png
 share/pixmaps/pidgin/emotes/default/phone.png
 share/pixmaps/pidgin/emotes/default/pig.png
 share/pixmaps/pidgin/emotes/default/pill.png
+share/pixmaps/pidgin/emotes/default/pirate.png
 share/pixmaps/pidgin/emotes/default/pissed-off.png
 share/pixmaps/pidgin/emotes/default/pizza.png
 share/pixmaps/pidgin/emotes/default/plate.png
@@ -258,8 +271,10 @@ share/pixmaps/pidgin/emotes/default/shock.png
 share/pixmaps/pidgin/emotes/default/shout.png
 share/pixmaps/pidgin/emotes/default/shut-mouth.png
 share/pixmaps/pidgin/emotes/default/sick.png
+share/pixmaps/pidgin/emotes/default/sidefrown.png
 share/pixmaps/pidgin/emotes/default/sigarette.png
 share/pixmaps/pidgin/emotes/default/silly.png
+share/pixmaps/pidgin/emotes/default/sinister.png
 share/pixmaps/pidgin/emotes/default/skeleton.png
 share/pixmaps/pidgin/emotes/default/skywalker.png
 share/pixmaps/pidgin/emotes/default/sleepy.png
@@ -273,9 +288,11 @@ share/pixmaps/pidgin/emotes/default/soccerball.png
 share/pixmaps/pidgin/emotes/default/soldier.png
 share/pixmaps/pidgin/emotes/default/star.png
 share/pixmaps/pidgin/emotes/default/starving.png
+share/pixmaps/pidgin/emotes/default/stop.png
 share/pixmaps/pidgin/emotes/default/struggle.png
 share/pixmaps/pidgin/emotes/default/sun.png
 share/pixmaps/pidgin/emotes/default/sweat.png
+share/pixmaps/pidgin/emotes/default/talktohand.png
 share/pixmaps/pidgin/emotes/default/teeth.png
 share/pixmaps/pidgin/emotes/default/terror.png
 share/pixmaps/pidgin/emotes/default/theme
@@ -291,6 +308,7 @@ share/pixmaps/pidgin/emotes/default/vampire.png
 share/pixmaps/pidgin/emotes/default/victory.png
 share/pixmaps/pidgin/emotes/default/waiting.png
 share/pixmaps/pidgin/emotes/default/watermelon.png
+share/pixmaps/pidgin/emotes/default/waving.png
 share/pixmaps/pidgin/emotes/default/weep.png
 share/pixmaps/pidgin/emotes/default/wilt.png
 share/pixmaps/pidgin/emotes/default/wink.png
@@ -308,6 +326,7 @@ share/pixmaps/pidgin/protocols/16/irc.png
 share/pixmaps/pidgin/protocols/16/jabber.png
 share/pixmaps/pidgin/protocols/16/meanwhile.png
 share/pixmaps/pidgin/protocols/16/msn.png
+share/pixmaps/pidgin/protocols/16/myspace.png
 share/pixmaps/pidgin/protocols/16/novell.png
 share/pixmaps/pidgin/protocols/16/qq.png
 share/pixmaps/pidgin/protocols/16/silc.png
@@ -323,6 +342,7 @@ share/pixmaps/pidgin/protocols/22/irc.png
 share/pixmaps/pidgin/protocols/22/jabber.png
 share/pixmaps/pidgin/protocols/22/meanwhile.png
 share/pixmaps/pidgin/protocols/22/msn.png
+share/pixmaps/pidgin/protocols/22/myspace.png
 share/pixmaps/pidgin/protocols/22/novell.png
 share/pixmaps/pidgin/protocols/22/qq.png
 share/pixmaps/pidgin/protocols/22/silc.png
@@ -337,12 +357,22 @@ share/pixmaps/pidgin/protocols/48/irc.png
 share/pixmaps/pidgin/protocols/48/jabber.png
 share/pixmaps/pidgin/protocols/48/meanwhile.png
 share/pixmaps/pidgin/protocols/48/msn.png
+share/pixmaps/pidgin/protocols/48/myspace.png
 share/pixmaps/pidgin/protocols/48/novell.png
 share/pixmaps/pidgin/protocols/48/qq.png
 share/pixmaps/pidgin/protocols/48/silc.png
 share/pixmaps/pidgin/protocols/48/simple.png
 share/pixmaps/pidgin/protocols/48/yahoo.png
 share/pixmaps/pidgin/protocols/48/zephyr.png
+share/pixmaps/pidgin/status/11/available.png
+share/pixmaps/pidgin/status/11/away.png
+share/pixmaps/pidgin/status/11/busy.png
+share/pixmaps/pidgin/status/11/chat.png
+share/pixmaps/pidgin/status/11/extended-away.png
+share/pixmaps/pidgin/status/11/invisible.png
+share/pixmaps/pidgin/status/11/offline.png
+share/pixmaps/pidgin/status/11/person.png
+share/pixmaps/pidgin/status/11/rtl/extended-away.png
 share/pixmaps/pidgin/status/16/available.png
 share/pixmaps/pidgin/status/16/away.png
 share/pixmaps/pidgin/status/16/busy.png
@@ -351,10 +381,11 @@ share/pixmaps/pidgin/status/16/extended-away.png
 share/pixmaps/pidgin/status/16/invisible.png
 share/pixmaps/pidgin/status/16/log-in.png
 share/pixmaps/pidgin/status/16/log-out.png
-share/pixmaps/pidgin/status/16/message-pending.png
 share/pixmaps/pidgin/status/16/offline.png
 share/pixmaps/pidgin/status/16/person.png
 share/pixmaps/pidgin/status/16/rtl/extended-away.png
+share/pixmaps/pidgin/status/16/rtl/log-in.png
+share/pixmaps/pidgin/status/16/rtl/log-out.png
 share/pixmaps/pidgin/status/22/available.png
 share/pixmaps/pidgin/status/22/away.png
 share/pixmaps/pidgin/status/22/busy.png
@@ -366,6 +397,8 @@ share/pixmaps/pidgin/status/22/log-out.png
 share/pixmaps/pidgin/status/22/offline.png
 share/pixmaps/pidgin/status/22/person.png
 share/pixmaps/pidgin/status/22/rtl/extended-away.png
+share/pixmaps/pidgin/status/22/rtl/log-in.png
+share/pixmaps/pidgin/status/22/rtl/log-out.png
 share/pixmaps/pidgin/status/32/available.png
 share/pixmaps/pidgin/status/32/away.png
 share/pixmaps/pidgin/status/32/busy.png
@@ -376,6 +409,8 @@ share/pixmaps/pidgin/status/32/log-in.png
 share/pixmaps/pidgin/status/32/log-out.png
 share/pixmaps/pidgin/status/32/offline.png
 share/pixmaps/pidgin/status/32/person.png
+share/pixmaps/pidgin/status/32/rtl/log-in.png
+share/pixmaps/pidgin/status/32/rtl/log-out.png
 share/pixmaps/pidgin/status/32/rtl/extended-away.png
 share/pixmaps/pidgin/status/48/available.png
 share/pixmaps/pidgin/status/48/away.png
@@ -535,12 +570,6 @@ share/pixmaps/purple/buddy_icons/qq/qq_96.png
 share/pixmaps/purple/buddy_icons/qq/qq_97.png
 share/pixmaps/purple/buddy_icons/qq/qq_98.png
 share/pixmaps/purple/buddy_icons/qq/qq_99.png
-share/sounds/pidgin/alert.wav
-share/sounds/pidgin/login.wav
-share/sounds/pidgin/logout.wav
-share/sounds/pidgin/receive.wav
-share/sounds/pidgin/send.wav
-@dirrm share/sounds/pidgin
 @dirrm share/pixmaps/purple/buddy_icons/qq
 @dirrm share/pixmaps/purple/buddy_icons
 @dirrm share/pixmaps/pidgin/tray/48
@@ -559,6 +588,8 @@ share/sounds/pidgin/send.wav
 @dirrm share/pixmaps/pidgin/status/22
 @dirrm share/pixmaps/pidgin/status/16/rtl
 @dirrm share/pixmaps/pidgin/status/16
+@dirrm share/pixmaps/pidgin/status/11/rtl
+@dirrm share/pixmaps/pidgin/status/11
 @dirrm share/pixmaps/pidgin/status
 @dirrm share/pixmaps/pidgin/protocols/48
 @dirrm share/pixmaps/pidgin/protocols/22

@@ -1,8 +1,28 @@
-$NetBSD: patch-aa,v 1.5 2007/08/30 16:08:03 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2007/09/15 14:55:02 tnn Exp $
 
---- configure.orig	2007-08-30 15:40:54.000000000 +0000
+--- configure.orig	2007-09-14 09:31:39.000000000 +0200
 +++ configure
-@@ -28183,7 +28183,7 @@ if test "${ac_cv_lib_panel_update_panels
+@@ -20053,6 +20053,11 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
+ 
+ 
+ 
++INTLTOOL_EXTRACT=intltool-extract
++INTLTOOL_MERGE=intltool-merge
++INTLTOOL_UPDATE=intltool-update
++# disable pidgin's builtin intltool
++if test -n ""; then
+ # Use the tools built into the package, not the ones that are installed.
+ INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
+ 
+@@ -20123,6 +20128,7 @@ echo "$as_me: error: XML::Parser perl mo
+    { (exit 1); exit 1; }; }
+    fi
+ fi
++fi # pkgsrc
+ 
+ # Substitute ALL_LINGUAS so we can use it in po/Makefile
+ 
+@@ -28428,7 +28434,7 @@ if test "${ac_cv_lib_panel_update_panels
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2007/08/30 16:08:03 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28239,7 +28239,7 @@ fi
+@@ -28484,7 +28490,7 @@ fi
  { echo "$as_me:$LINENO: result: $ac_cv_lib_panel_update_panels" >&5
  echo "${ECHO_T}$ac_cv_lib_panel_update_panels" >&6; }
  if test $ac_cv_lib_panel_update_panels = yes; then
