@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/26 15:43:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/15 07:35:38 adam Exp $
 bin/ntop
 lib/libicmpPlugin-${PKGVERSION}.so
 lib/libicmpPlugin.a
@@ -6,7 +6,6 @@ lib/libicmpPlugin.so
 lib/liblastSeenPlugin-${PKGVERSION}.so
 lib/liblastSeenPlugin.a
 lib/liblastSeenPlugin.so
-lib/libmyrrd.la
 lib/libnetflowPlugin-${PKGVERSION}.so
 lib/libnetflowPlugin.a
 lib/libnetflowPlugin.so
@@ -15,28 +14,49 @@ lib/libntopreport.la
 lib/libpdaPlugin-${PKGVERSION}.so
 lib/libpdaPlugin.a
 lib/libpdaPlugin.so
+lib/libremotePlugin-3.3.so
+lib/libremotePlugin.a
+lib/libremotePlugin.so
 lib/librrdPlugin-${PKGVERSION}.so
 lib/librrdPlugin.a
 lib/librrdPlugin.so
 lib/libsflowPlugin-${PKGVERSION}.so
 lib/libsflowPlugin.a
 lib/libsflowPlugin.so
-lib/libsnmpPlugin-${PKGVERSION}.so
-lib/libsnmpPlugin.a
-lib/libsnmpPlugin.so
-lib/libxmldumpPlugin-${PKGVERSION}.so
-lib/libxmldumpPlugin.a
-lib/libxmldumpPlugin.so
 lib/ntop/plugins/icmpPlugin.so
 lib/ntop/plugins/lastSeenPlugin.so
 lib/ntop/plugins/netflowPlugin.so
 lib/ntop/plugins/pdaPlugin.so
+lib/ntop/plugins/remotePlugin.so
 lib/ntop/plugins/rrdPlugin.so
 lib/ntop/plugins/sflowPlugin.so
-lib/ntop/plugins/snmpPlugin.so
-lib/ntop/plugins/xmldumpPlugin.so
 man/man8/ntop.8
 share/ntop/html/JSCookMenu.js
+share/ntop/html/MochiKit/Async.js
+share/ntop/html/MochiKit/Base.js
+share/ntop/html/MochiKit/Color.js
+share/ntop/html/MochiKit/DOM.js
+share/ntop/html/MochiKit/DateTime.js
+share/ntop/html/MochiKit/Format.js
+share/ntop/html/MochiKit/Iter.js
+share/ntop/html/MochiKit/Logging.js
+share/ntop/html/MochiKit/LoggingPane.js
+share/ntop/html/MochiKit/MochiKit.js
+share/ntop/html/MochiKit/MockDOM.js
+share/ntop/html/MochiKit/Signal.js
+share/ntop/html/MochiKit/Test.js
+share/ntop/html/MochiKit/Visual.js
+share/ntop/html/MochiKit/__package__.js
+share/ntop/html/PlotKit/Base.js
+share/ntop/html/PlotKit/Canvas.js
+share/ntop/html/PlotKit/EasyPlot.js
+share/ntop/html/PlotKit/Layout.js
+share/ntop/html/PlotKit/PlotKit.js
+share/ntop/html/PlotKit/PlotKit_Packed.js
+share/ntop/html/PlotKit/SVG.js
+share/ntop/html/PlotKit/SweetCanvas.js
+share/ntop/html/PlotKit/SweetSVG.js
+share/ntop/html/PlotKit/excanvas.js
 share/ntop/html/Risk_high.gif
 share/ntop/html/Risk_low.gif
 share/ntop/html/Risk_medium.gif
@@ -45,8 +65,9 @@ share/ntop/html/antenna.gif
 share/ntop/html/arrow.gif
 share/ntop/html/arrow_down.gif
 share/ntop/html/arrow_up.gif
+share/ntop/html/autosuggest.css
+share/ntop/html/autosuggest.js
 share/ntop/html/back.gif
-share/ntop/html/bar.gif
 share/ntop/html/bg_line.gif
 share/ntop/html/black.gif
 share/ntop/html/blank.gif
@@ -55,22 +76,28 @@ share/ntop/html/bridge.gif
 share/ntop/html/brocade.gif
 share/ntop/html/bug.png
 share/ntop/html/bulb.gif
+share/ntop/html/calendar-setup.js
+share/ntop/html/calendar.gif
+share/ntop/html/calendar.js
 share/ntop/html/card.gif
 share/ntop/html/child.gif
 share/ntop/html/clear.gif
 share/ntop/html/clock.gif
 share/ntop/html/collapsed.gif
-share/ntop/html/copyright.png
 share/ntop/html/corner.gif
 share/ntop/html/deleteURL.gif
 share/ntop/html/deleteUser.gif
 share/ntop/html/disk.gif
 share/ntop/html/dns.gif
+share/ntop/html/domLib.js
+share/ntop/html/domTT.js
 share/ntop/html/download.gif
 share/ntop/html/dump.html
+share/ntop/html/edit.gif
 share/ntop/html/emulex.gif
 share/ntop/html/error.gif
 share/ntop/html/expanded.gif
+share/ntop/html/external.png
 share/ntop/html/faq.html
 share/ntop/html/favicon.ico
 share/ntop/html/fback.gif
@@ -81,21 +108,33 @@ share/ntop/html/gauge.jpg
 share/ntop/html/gaugeR.jpg
 share/ntop/html/gaugeS.jpg
 share/ntop/html/graph.gif
+share/ntop/html/graph_zoom.gif
 share/ntop/html/gray_bg.gif
 share/ntop/html/help.html
 share/ntop/html/help.png
 share/ntop/html/hostSortNote.html
+share/ntop/html/img_inquisitor/as_pointer.gif
+share/ntop/html/img_inquisitor/hl_corner_bl.gif
+share/ntop/html/img_inquisitor/hl_corner_br.gif
+share/ntop/html/img_inquisitor/hl_corner_tl.gif
+share/ntop/html/img_inquisitor/hl_corner_tr.gif
+share/ntop/html/img_inquisitor/ul_corner_bl.gif
+share/ntop/html/img_inquisitor/ul_corner_br.gif
+share/ntop/html/img_inquisitor/ul_corner_tl.gif
+share/ntop/html/img_inquisitor/ul_corner_tr.gif
 share/ntop/html/info.gif
 share/ntop/html/initiator.gif
+share/ntop/html/jscalendar/calendar-load.js
+share/ntop/html/jscalendar/calendar-setup.js
+share/ntop/html/jscalendar/calendar.js
+share/ntop/html/jscalendar/lang/calendar-en.js
 share/ntop/html/lock.png
 share/ntop/html/mail.gif
 share/ntop/html/major.gif
 share/ntop/html/marchio_unipi_pant541_144.gif
-share/ntop/html/menubar.png
-share/ntop/html/menubar_j.png
-share/ntop/html/menuline.png
+share/ntop/html/marker.gif
+share/ntop/html/marker.png
 share/ntop/html/minor.gif
-share/ntop/html/modifyUser.gif
 share/ntop/html/multihomed.gif
 share/ntop/html/multivlaned.gif
 share/ntop/html/nboxLogo.gif
@@ -106,12 +145,12 @@ share/ntop/html/ntopdump.dtd
 share/ntop/html/ntophelp.html
 share/ntop/html/p2p.gif
 share/ntop/html/phone.gif
-share/ntop/html/pie-error.png
 share/ntop/html/printer.gif
 share/ntop/html/privacyNotice.html
 share/ntop/html/question.gif
 share/ntop/html/router.gif
 share/ntop/html/seagate.gif
+share/ntop/html/skype.gif
 share/ntop/html/spacer.gif
 share/ntop/html/statsicons/flags/ad.gif
 share/ntop/html/statsicons/flags/ae.gif
@@ -363,6 +402,7 @@ share/ntop/html/warning.gif
 share/ntop/html/web.gif
 share/ntop/html/wheel.gif
 share/ntop/html/white_bg.gif
+share/ntop/html/zoom.js
 share/ntop/ntop/etter.finger.os.gz
 share/ntop/ntop/ntop-cert.pem
 share/ntop/ntop/oui.txt.gz
@@ -372,6 +412,11 @@ share/ntop/ntop/specialMAC.txt.gz
 @dirrm share/ntop/html/statsicons/os
 @dirrm share/ntop/html/statsicons/flags
 @dirrm share/ntop/html/statsicons
+@dirrm share/ntop/html/jscalendar/lang
+@dirrm share/ntop/html/jscalendar
+@dirrm share/ntop/html/img_inquisitor
+@dirrm share/ntop/html/PlotKit
+@dirrm share/ntop/html/MochiKit
 @dirrm share/ntop/html
 @dirrm share/ntop
 @dirrm lib/plugins
