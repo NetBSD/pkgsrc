@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2016 2007/09/15 14:45:14 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2017 2007/09/15 14:56:57 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3677,3 +3677,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libtool-base to 1.5.24 [joerg 2007-09-15]
 	Updated devel/libtool-info to 1.5.24 [joerg 2007-09-15]
 	Updated textproc/p5-XML-SAX to 0.16nb1 [wiz 2007-09-15]
+	Updated chat/libpurple to 2.2.0 [tnn 2007-09-15]
+	Updated chat/pidgin to 2.2.0 [tnn 2007-09-15]
+	Updated chat/pidgin-sametime to 2.2.0 [tnn 2007-09-15]
+	Updated chat/pidgin-silc to 2.2.0 [tnn 2007-09-15]
+	Updated chat/finch to 2.2.0 [tnn 2007-09-15]
