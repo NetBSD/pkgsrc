@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/15 09:19:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/15 14:44:51 wiz Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/XML/SAX/ParserDetails.ini
+@comment Make sure it's gone.
 @unexec ${RM} %D/${PERL5_SUB_INSTALLVENDORLIB}/XML/SAX/ParserDetails.ini 2>/dev/null || ${TRUE}
