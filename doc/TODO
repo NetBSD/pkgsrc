@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6684 2007/09/15 09:30:16 wiz Exp $
+$NetBSD: TODO,v 1.6685 2007/09/15 10:58:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -966,7 +966,7 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.3.7
 	o polsms-2.1.0
-	o poppler-0.6
+	o poppler-0.6 [evince needs poppler<=0.5.9]
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
