@@ -1,1 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/15 09:43:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/15 10:02:06 agc Exp $
+bin/pcc
+libexec/ccom
+libexec/cpp
