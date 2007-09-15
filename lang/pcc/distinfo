@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/09/15 09:43:32 agc Exp $
+
+SHA1 (pcc-0.9.8/pcc-current.tgz) = a3162c1139b865d2f9ce50f0dd161ee4061f2460
+RMD160 (pcc-0.9.8/pcc-current.tgz) = 92fa1c920458fa5ccabe76f427ec48296effad27
+Size (pcc-0.9.8/pcc-current.tgz) = 299675 bytes
