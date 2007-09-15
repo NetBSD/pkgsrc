@@ -9,8 +9,7 @@ EXTRA_DIST= version				\
 	examples				\
 	libarchive/test/list.h			\
 	tar/test				\
-	tar/getdate.c				\
-	cpio
+	tar/getdate.c
 
 # Clean out some unneeded files and directories
 # that get picked up as part of the directories in EXTRA_DIST above.
@@ -30,9 +29,9 @@ distclean-local:
 
 # Always build libarchive, regardless
 lib_LTLIBRARIES=	libarchive.la
-bin_PROGRAMS=	$(bsdtar_programs)
+bin_PROGRAMS=	$(bsdtar_programs) $(bsdcpio_programs)
 check_PROGRAMS= libarchive_test
-dist_man_MANS=$(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS)
+dist_man_MANS=$(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS) $(bsdcpio_dist_man_MANS)
 TESTS= libarchive_test
 
 #
@@ -73,6 +72,7 @@ libarchive_la_SOURCES=						\
 	libarchive/archive_read_support_format_cpio.c		\
 	libarchive/archive_read_support_format_empty.c		\
 	libarchive/archive_read_support_format_iso9660.c	\
+	libarchive/archive_read_support_format_mtree.c		\
 	libarchive/archive_read_support_format_tar.c		\
 	libarchive/archive_read_support_format_zip.c		\
 	libarchive/archive_string.c				\
@@ -152,6 +152,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_read_format_gtar_sparse.c		\
 	libarchive/test/test_read_format_iso_gz.c		\
 	libarchive/test/test_read_format_isorr_bz2.c		\
+	libarchive/test/test_read_format_mtree.c		\
 	libarchive/test/test_read_format_pax_bz2.c		\
 	libarchive/test/test_read_format_tar.c			\
 	libarchive/test/test_read_format_tbz.c			\
@@ -212,8 +213,8 @@ bsdtar_static=
 endif
 
 bsdtar_LDADD= libarchive.la
-bsdtar_CPPFLAGS=-I$(top_builddir)/libarchive
-bsdtar_LDFLAGS= $(bsdtar_static) -I$(destdir)/libarchive
+bsdtar_CPPFLAGS=-I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdtar_LDFLAGS= $(bsdtar_static)
 
 if BUILD_BSDTAR
 bsdtar_dist_man_MANS=	tar/bsdtar.1
@@ -221,5 +222,35 @@ bsdtar_programs=bsdtar
 else
 bsdtar_dist_man_MANS=
 bsdtar_programs=
+endif
+
+
+#
+#
+# bsdcpio source, docs, etc.
+#
+#
+
+bsdcpio_SOURCES=			\
+		cpio/cpio.c		\
+		cpio/cpio.h		\
+		cpio/cpio_platform.h	\
+		cpio/util.c
+
+bsdcpio_DEPENDENCIES = libarchive.la		\
+		libarchive/archive_entry.h	\
+		libarchive/archive.h
+
+bsdcpio_static= -static
+bsdcpio_LDADD= libarchive.la
+bsdcpio_CPPFLAGS=-I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdcpio_LDFLAGS= $(bsdcpio_static)
+
+if BUILD_BSDCPIO
+bsdcpio_dist_man_MANS=	cpio/bsdcpio.1
+bsdcpio_programs=bsdcpio
+else
+bsdcpio_dist_man_MANS=
+bsdcpio_programs=
 endif
 
