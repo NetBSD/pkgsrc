@@ -1,46 +1,31 @@
-$NetBSD: patch-ab,v 1.11 2005/11/18 13:03:53 rillig Exp $
+$NetBSD: patch-ab,v 1.12 2007/09/15 07:35:38 adam Exp $
 
-The "gcc -o /dev/null" led to /dev/null be unlinked on Solaris.
-
-This patch does not affect the build and is only intended to be reported
-upstream.
-
---- configure.in.orig	Thu Oct 20 22:07:37 2005
-+++ configure.in	Fri Nov 18 13:56:53 2005
-@@ -715,8 +715,8 @@ AC_ARG_ENABLE(i18n,
+--- configure.in.orig	2007-06-09 23:30:00.000000000 +0200
++++ configure.in
+@@ -432,6 +432,15 @@ case "${target}:${CC}" in
+         echo "* This appears to be ${DEFINEOS} (release not checked)"
+       ;;
  
- AC_ARG_ENABLE(jumbo-frames,
-               [  --enable-jumbo-frames       Enable Jumbo (9K) Ethernet frames [[default=disabled]]],
--              ac_enable_jumbo-frames="yes",
--              ac_enable_jumbo-frames="no")
-+              ac_enable_jumbo_frames="yes",
-+              ac_enable_jumbo_frames="no")
- 
- AC_ARG_ENABLE(ipv6,
-               [  --disable-ipv6              use IPv6 [[default=enabled]]],
-@@ -1988,16 +1988,12 @@ AC_CHECK_FUNCS([uname])
- dnl> Test for strtok_r (we have our own defn if it's not available)C_CHECK_FUNCS([strtok_r])
- AC_CHECK_FUNCS([strtok_r])
- 
--case "${CC}" in
--  *gcc* )
-     dnl> Check if malloc.h has mallinfo...
-     AC_MSG_CHECKING([for mallinfo in malloc.h])
-     AC_LANG_CONFTEST(
-     [AC_LANG_PROGRAM([[#include <malloc.h>]],
-                      [[struct mallinfo memStats = mallinfo();]])])
--    gcc conftest.c -o /dev/null > /dev/null 2> /dev/null
--    rc=$?
--    if test ".${rc}" = ".0"; then
-+    if (eval "$ac_link"); then
-         AC_MSG_RESULT(yes)
-         AC_DEFINE_UNQUOTED(HAVE_MALLINFO_MALLOC_H,
-                                1,
-@@ -2005,7 +2001,6 @@ case "${CC}" in
-     else
-         AC_MSG_RESULT(no)
-     fi
--esac
- 
- NTOPCONFIGDEBUG_SETTINGS([After all tests])
- 
++    *-*-netbsd*:* )
++	DEFINEOS="NETBSD"
++        echo "* This appears to be ${DEFINEOS}"
++      ;;
++    *-*-openbsd*:* )
++	DEFINEOS="OPENBSD"
++        echo "* This appears to be ${DEFINEOS}"
++      ;;
++
+     * )
+         echo "* ${target} is an unknown/unsupported OS"
+         echo "*"
+@@ -577,8 +586,8 @@ dnl> user defined directory passed as op
+ dnl>
+ if test ".${PCAP_ROOT}" != .; then
+   if test -d $PCAP_ROOT &&
+-     test -r $PCAP_ROOT/libpcap.a &&
+-     test -r $PCAP_ROOT/pcap.h; then
++     test -r $PCAP_ROOT/lib/libpcap.a &&
++     test -r $PCAP_ROOT/include/pcap.h; then
+        PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
+        CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
+        INCS="${INCS} -I$PCAP_ROOT"
