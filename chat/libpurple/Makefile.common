@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2007/08/13 12:42:06 tnn Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/09/15 14:55:01 tnn Exp $
 #
 
-PIDGIN_VERSION=	2.1.0
+PIDGIN_VERSION=	2.2.0
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.pidgin.im/
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake perl:run
+USE_TOOLS+=		pkg-config gmake
 USE_PKGLOCALEDIR=	yes
 
 PATCHDIR=		${.CURDIR}/../../chat/libpurple/patches
