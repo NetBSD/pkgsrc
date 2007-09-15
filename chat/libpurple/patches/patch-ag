@@ -1,26 +1,17 @@
-$NetBSD: patch-ag,v 1.1 2007/08/13 13:57:47 tnn Exp $
+$NetBSD: patch-ag,v 1.2 2007/09/15 14:55:02 tnn Exp $
 
---- finch/libgnt/wms/s.c.orig	2007-06-23 05:06:32.000000000 +0200
-+++ finch/libgnt/wms/s.c
-@@ -15,10 +15,10 @@
+  The default rule has a broken syntax for some reason, when not using
+  the intltool that comes bundled with pidgin.
+
+--- libpurple/gconf/Makefile.in.orig	2007-09-15 15:41:50.000000000 +0200
++++ libpurple/gconf/Makefile.in
+@@ -593,7 +593,8 @@ uninstall-am: uninstall-info-am uninstal
+ 	ps ps-am uninstall uninstall-am uninstall-info-am \
+ 	uninstall-schemaDATA
  
- #define TYPE_S				(s_get_gtype())
+-@INTLTOOL_SCHEMAS_RULE@
++%.schemas:   %.schemas.in
++	LC_ALL=C intltool-merge -s -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
  
--typedef struct _S
-+typedef struct _Sfoo
- {
- 	GntWM inherit;
--} S;
-+} Sfoo;
- 
- typedef struct _SClass
- {
-@@ -205,7 +205,7 @@ GType s_get_gtype(void)
- 			(GClassInitFunc)s_class_init,
- 			NULL,
- 			NULL,                   /* class_data		*/
--			sizeof(S),
-+			sizeof(Sfoo),
- 			0,                      /* n_preallocs		*/
- 			NULL,	            /* instance_init	*/
- 			NULL
+ @GCONF_SCHEMAS_INSTALL_TRUE@install-data-local:
+ @GCONF_SCHEMAS_INSTALL_TRUE@	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(schema_DATA) 2>&1 | \
