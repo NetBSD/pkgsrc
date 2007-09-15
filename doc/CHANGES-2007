@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2012 2007/09/15 11:30:06 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2013 2007/09/15 11:51:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3671,3 +3671,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/curl to 7.17.0 [wiz 2007-09-15]
 	Added lang/pcc version 0.9.8 [agc 2007-09-15]
 	Updated devel/apel to 10.7nb1 [wiz 2007-09-15]
+	Updated archivers/libarchive to 2.2.8 [joerg 2007-09-15]
