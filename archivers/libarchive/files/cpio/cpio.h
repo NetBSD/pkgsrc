@@ -49,9 +49,14 @@ struct cpio {
 	int		  extract_flags; /* Flags for extract operation */
 	char		  symlink_mode; /* H or L, per BSD conventions */
 	const char	 *compress_program;
+	int		  option_atime_restore; /* -a */
 	int		  option_null; /* -0 --null */
 	int		  option_list; /* -t */
 	int		  option_link; /* -l */
+	int		  option_rename; /* -r */
+	char		 *pass_destdir;
+	size_t		  pass_destpath_alloc;
+	char		 *pass_destpath;
 
 	/* If >= 0, then close this when done. */
 	int		  fd;
