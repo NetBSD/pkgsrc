@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/30 17:52:50 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/15 10:59:40 obache Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -47,7 +47,7 @@ PLIST_SUBST+=	SCSL_JRE15_USE_JCE="@comment "
 #
 .if defined(EMUL_IS_NATIVE)
 .  if ${X11_TYPE} == "native"
-LIBX11=		${X11PREFIX}/lib/libX11.so.6
+LIBX11=		${X11BASE}/lib/libX11.so.6
 .    if !exists(${LIBX11})
 PKG_FAIL_REASON+=	"${LIBX11} does not exist.  Please install the" \
 			"X11 library packages for your system."
