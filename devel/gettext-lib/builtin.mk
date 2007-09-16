@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.33 2006/07/20 20:02:23 jlam Exp $
+# $NetBSD: builtin.mk,v 1.34 2007/09/16 17:34:32 joerg Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -125,40 +125,11 @@ BUILDLINK_TRANSFORM+=	rm:-lintl
 ######################################################################
 .  if !empty(USE_BUILTIN.gettext:M[nN][oO])
 _BLTN_LIBINTL=		-lintl
-#
-# Determine if we need to include the libiconv buildlink3.mk file.
-# Since we're using the pkgsrc gettext, the only time we don't need
-# iconv is if an already-installed gettext-lib package satisfied all
-# of the gettext dependencies but is <0.11.5nb1.
-#
-_BLTN_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
-.    if !defined(_BLTN_GETTEXT_NEEDS_ICONV)
-_BLTN_GETTEXT_NEEDS_ICONV?=	no
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
-.        if !empty(_BLTN_GETTEXT_NEEDS_ICONV:M[nN][oO])
-_BLTN_GETTEXT_NEEDS_ICONV!=						\
-	pkg=`${PKG_BEST_EXISTS} ${_dep_:Q}`;				\
-	if ${TEST} -z "$$pkg"; then					\
-		${ECHO} yes;						\
-	elif ${PKG_ADMIN} pmatch ${_BLTN_GETTEXT_ICONV_DEPENDS:Q} "$$pkg"; then \
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.        endif
-.      endfor
-.    endif
-MAKEVARS+=	_BLTN_GETTEXT_NEEDS_ICONV
-
-.    if !empty(_BLTN_GETTEXT_NEEDS_ICONV:M[yY][eE][sS])
-.      for _mkfile_ in buildlink3.mk builtin.mk
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-.        sinclude "../../converters/libiconv/${_mkfile_}"
+.  include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
-.      endfor
 BUILDLINK_API_DEPENDS.gettext+=	${_BLTN_GETTEXT_ICONV_DEPENDS}
 _BLTN_LIBINTL+=			${BUILDLINK_LDADD.iconv}
-.    endif
 .  endif
 
 BUILDLINK_LDADD.gettext?=	${_BLTN_LIBINTL}
