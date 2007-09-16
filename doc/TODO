@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6688 2007/09/16 14:05:33 obache Exp $
+$NetBSD: TODO,v 1.6689 2007/09/16 16:54:06 minskim Exp $
 
 Suggested new packages
 ======================
@@ -728,7 +728,6 @@ Suggested package updates
 	o manedit-0.8.1
 	o mapserver-4.2.5
 	o matchbox-panel-0.9.3
-	o mathomatic-12.7.6
 	o mcrypt-2.6.6
 	o memtestplus-1.70
 	o mesure-0.7.2
