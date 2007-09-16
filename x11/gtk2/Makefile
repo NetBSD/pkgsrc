@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.143 2007/07/21 21:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2007/09/16 19:53:26 wiz Exp $
 
-DISTNAME=		gtk+-2.10.14
+DISTNAME=		gtk+-2.12.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.10/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.12/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.12/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,12 +17,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		gtk2-engines<2.6.0
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.0
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.13.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.13.5
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.17.3
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 
