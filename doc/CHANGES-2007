@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2017 2007/09/15 14:56:57 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2018 2007/09/16 07:34:47 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-sametime to 2.2.0 [tnn 2007-09-15]
 	Updated chat/pidgin-silc to 2.2.0 [tnn 2007-09-15]
 	Updated chat/finch to 2.2.0 [tnn 2007-09-15]
+	Updated archivers/dar to 2.3.5 [dsainty 2007-09-16]
