@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/09/07 22:07:32 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2007/09/16 13:57:14 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quagga
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-ripngd
 .endif
 
 ###
-### ???
+### Include 'vtysh' program.
 ###
 .if !empty(PKG_OPTIONS:Mquagga-vtysh)
 USE_GNU_READLINE=	# uses rl_pending_input
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
 ###
-### ???
+### Include Opaque LSA support in OSPF (RFC2370).
 ###
 .if !empty(PKG_OPTIONS:Mquagga-ospf-opaque-lsa)
 CONFIGURE_ARGS+=	--enable-opaque-lsa
