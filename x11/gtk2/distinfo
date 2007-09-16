@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.87 2007/07/19 21:43:35 wiz Exp $
+$NetBSD: distinfo,v 1.88 2007/09/16 19:53:26 wiz Exp $
 
-SHA1 (gtk+-2.10.14.tar.bz2) = 78b819814d52caa66739ab64611e41f35e5b48c3
-RMD160 (gtk+-2.10.14.tar.bz2) = 234d7240732b28a31a260aa9e04c34fc502acbf4
-Size (gtk+-2.10.14.tar.bz2) = 15172170 bytes
-SHA1 (patch-aa) = 7efcbf733e3459fd3853c0d49842136b434ca983
-SHA1 (patch-ab) = b36f9e74e5c9ecc7617bc659b72822e52451a3ae
-SHA1 (patch-ac) = 59c1f7bfb0db4a38f943d389f8d5a649f4d1a0f3
+SHA1 (gtk+-2.12.0.tar.bz2) = f5ecbf73a789a8880a6b2e15279267bb113980e2
+RMD160 (gtk+-2.12.0.tar.bz2) = 226c8f38eb7895d63f81feb60152db1ca3599628
+Size (gtk+-2.12.0.tar.bz2) = 15732170 bytes
+SHA1 (patch-aa) = 507f43c8257607c3ddb194015cc67c5b166a5047
+SHA1 (patch-ac) = 9582cc72149a5746fd63d6b29c332e6835ec66bc
 SHA1 (patch-ad) = f38270c343961be2892d8f2b2f89a67d21f0dc15
-SHA1 (patch-ae) = 3c99f3ded9b82e4eff440b014ef034f8dc7aae79
-SHA1 (patch-ai) = c54cd41297cae98355cc9cb61a762463bac43902
+SHA1 (patch-ae) = b56b3f65186919fb1e458cce0c5bdef676c9bdf8
+SHA1 (patch-ai) = 203d7e91ef7c8cdaa7660ed3a0d500876c537d44

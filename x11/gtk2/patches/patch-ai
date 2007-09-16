@@ -1,8 +1,17 @@
-$NetBSD: patch-ai,v 1.18 2007/01/06 15:13:15 wiz Exp $
+$NetBSD: patch-ai,v 1.19 2007/09/16 19:53:27 wiz Exp $
 
---- configure.orig	2006-09-05 04:40:15.000000000 +0200
+--- configure.orig	2007-09-13 20:47:55.000000000 +0000
 +++ configure
-@@ -32042,6 +32042,9 @@ _ACEOF
+@@ -4652,7 +4652,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
+ 
+-if test "$OBJC" == "yes"; then
++if test "$OBJC" = "yes"; then
+   HAVE_OBJC_TRUE=
+   HAVE_OBJC_FALSE='#'
+ else
+@@ -35379,6 +35379,9 @@ fi
  fi
  
  
