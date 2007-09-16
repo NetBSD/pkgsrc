@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2007/09/11 18:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.382 2007/09/16 10:31:49 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -69,6 +69,7 @@ SUBDIR+=	dtdparse
 SUBDIR+=	eb
 SUBDIR+=	eblook
 SUBDIR+=	emacs-dict-client
+SUBDIR+=	emacs-muse
 SUBDIR+=	enca
 SUBDIR+=	enchant
 SUBDIR+=	expat
