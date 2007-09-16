@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/06/16 09:36:04 taca Exp $
+# $NetBSD: Makefile,v 1.28 2007/09/16 10:32:29 obache Exp $
 #
 
 DISTNAME=	bkpupsd-2.2.1
@@ -32,6 +32,7 @@ EGDIR=		${PREFIX}/share/examples/bkpupsd
 CONF_FILES=	${EGDIR}/upstab ${PKG_SYSCONFDIR}/upstab
 
 RCD_SCRIPTS=	bkpupsd
+RCD_SCRIPT_SRC.bkpupsd=	# need to avoid automatic handling
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
