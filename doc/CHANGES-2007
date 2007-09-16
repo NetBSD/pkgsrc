@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2021 2007/09/16 15:44:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2022 2007/09/16 15:59:27 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3438,6 +3438,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/icewm-imlib to 1.2.27nb1 [obache 2007-08-25]
 	Updated graphics/rabbit to 0.5.3nb1 [obache 2007-08-26]
 	Updated chat/jabberd2 to 2.1.14 [xtraeme 2007-08-26]
+	Updated mail/spamassassin to 3.2.3 [heinz 2007-08-26]
 	Updated emulators/dosbox to 0.72 [xtraeme 2007-08-27]
 	Updated mail/dovecot to 1.0.3nb1 [ghen 2007-08-27]
 	Added mail/dovecot-sieve version 1.0.2 [ghen 2007-08-27]
@@ -3686,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/emacs-muse version 3.11 [wiz 2007-09-16]
 	Updated graphics/dcraw to 8.77 [obache 2007-09-16]
 	Added fonts/liberation-ttf version 0.2 [wiz 2007-09-16]
+	Added net/microdc2 version 0.15.6 [heinz 2007-09-16]
