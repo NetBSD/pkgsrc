@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.31 2007/08/23 12:30:30 joerg Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.32 2007/09/16 14:40:57 heinz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -166,7 +166,7 @@ _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME:Q}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
 
-# Interix is very special in that users are groups cannot have the
+# Interix is very special in that users and groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
 # some specific package defaults.  If we get here and there's still a
 # conflict, add a breakage indicator to make sure the package won't
@@ -378,7 +378,7 @@ ${_INSTALL_PERMS_FILE}: ../../mk/pkginstall/perms
 #	however, all files listed in REQD_FILES_PERMS should be under
 #	${PREFIX}.
 #
-# RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
+# RCD_SCRIPTS lists the basenames of the rc.d scripts.  They are
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
 #	the scripts will be copied into ${RCD_SCRIPTS_DIR} with
 #	${RCD_SCRIPTS_MODE} permissions.
