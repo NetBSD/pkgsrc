@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6687 2007/09/16 09:41:50 wiz Exp $
+$NetBSD: TODO,v 1.6688 2007/09/16 14:05:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,6 @@ Suggested package updates
 	o dbmail-2.2.4
 	o dbxml-2.1.8
 	o dc_gui2-0.80
-	o dcraw-8.77 [pkg/36976]
 	o dctc-0.85.9
 	o dd_rescue-1.13
 	o defendguin-0.0.11
