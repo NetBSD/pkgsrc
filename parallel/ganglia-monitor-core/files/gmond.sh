@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gmond.in,v 1.1.1.1 2005/02/07 14:33:22 jschauma Exp $
+# $NetBSD: gmond.sh,v 1.1 2007/09/16 10:29:53 joerg Exp $
 #
 # PROVIDE: gmond
 # REQUIRE: DAEMON
