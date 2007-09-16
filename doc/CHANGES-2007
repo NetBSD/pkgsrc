@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2025 2007/09/16 19:54:51 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2026 2007/09/16 22:55:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/mathomatic to 12.7.6 [minskim 2007-09-16]
 	Added misc/kchmviewer version 3.1 [wiz 2007-09-16]
 	Updated x11/gtk2 to 2.12.0 [wiz 2007-09-16]
+	Added devel/p5-Object-InsideOut version 3.25 [seb 2007-09-16]
