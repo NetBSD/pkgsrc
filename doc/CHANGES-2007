@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2022 2007/09/16 15:59:27 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.2023 2007/09/16 16:54:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/dcraw to 8.77 [obache 2007-09-16]
 	Added fonts/liberation-ttf version 0.2 [wiz 2007-09-16]
 	Added net/microdc2 version 0.15.6 [heinz 2007-09-16]
+	Updated math/mathomatic to 12.7.6 [minskim 2007-09-16]
