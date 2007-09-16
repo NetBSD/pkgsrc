@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.14 2007/05/29 09:58:59 obache Exp $
+$NetBSD: patch-ac,v 1.15 2007/09/16 19:53:27 wiz Exp $
 
---- gdk/quartz/gdkevents-quartz.c.orig	2007-05-02 16:27:34.000000000 +0000
+--- gdk/quartz/gdkevents-quartz.c.orig	2007-09-13 20:36:07.000000000 +0000
 +++ gdk/quartz/gdkevents-quartz.c
-@@ -1581,6 +1581,23 @@ gdk_flush (void)
+@@ -1859,6 +1859,23 @@ gdk_add_client_message_filter (GdkAtom  
    /* Not supported. */
  }
  
