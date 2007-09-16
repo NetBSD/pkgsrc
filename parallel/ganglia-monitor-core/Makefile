@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/08 12:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/16 10:29:52 joerg Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -26,8 +26,6 @@ PATCH_ETC=		mans/gmetad.1 mans/gmond.1			\
 			gmond/cmdline.c gmond/g25_config.h		\
 			ganglia.html
 
-PATCH_RCS=		gmond gmetad
-
 EGDIR=			${PREFIX}/share/examples/ganglia
 CONF_FILES=		${EGDIR}/gmond.conf ${PKG_SYSCONFDIR}/gmond.conf
 CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
@@ -47,12 +45,6 @@ post-patch:
 		${WRKSRC}/${pfile} > ${WRKSRC}/${pfile}.tmp &&		\
 		${MV}  ${WRKSRC}/${pfile}.tmp ${WRKSRC}/${pfile}
 .endfor
-.for pfile in ${PATCH_RCS}
-	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'		\
-		-e 's|@PREFIX@|${PREFIX}|g'				\
-		-e 's|@RCD_SCRIPTS_SHELL@|${RCD_SCRIPTS_SHELL}|g'	\
-		${FILESDIR}/${pfile}.in > ${WRKSRC}/${pfile}.sh
-.endfor
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${PREFIX}/${PKGMANDIR}/man1/
@@ -62,9 +54,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${EGDIR}/
 	${PREFIX}/sbin/gmond -t > ${EGDIR}/gmond.conf
-	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/gmond.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmond
-	${INSTALL_DATA} ${WRKSRC}/gmetad.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmetad
 
 BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55nb3
 
