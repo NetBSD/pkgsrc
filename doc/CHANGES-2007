@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2020 2007/09/16 13:33:03 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2021 2007/09/16 15:44:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3685,3 +3685,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/dar to 2.3.5 [dsainty 2007-09-16]
 	Added textproc/emacs-muse version 3.11 [wiz 2007-09-16]
 	Updated graphics/dcraw to 8.77 [obache 2007-09-16]
+	Added fonts/liberation-ttf version 0.2 [wiz 2007-09-16]
