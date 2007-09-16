@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/08/31 12:05:43 dsainty Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/16 07:33:15 dsainty Exp $
 
-DISTNAME=	dar-2.3.4
+DISTNAME=	dar-2.3.5
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
