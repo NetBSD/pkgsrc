@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.14 2007/05/29 09:58:59 obache Exp $
+$NetBSD: patch-ae,v 1.15 2007/09/16 19:53:27 wiz Exp $
 
---- gdk/quartz/gdkselection-quartz.c.orig	2007-05-02 16:27:34.000000000 +0000
+--- gdk/quartz/gdkselection-quartz.c.orig	2007-09-13 20:36:07.000000000 +0000
 +++ gdk/quartz/gdkselection-quartz.c
-@@ -122,6 +122,12 @@ gdk_utf8_to_compound_text_for_display (G
-   return 0;
+@@ -131,6 +131,12 @@ gdk_free_text_list (gchar **list)
+   g_free (list);
  }
  
 +void
