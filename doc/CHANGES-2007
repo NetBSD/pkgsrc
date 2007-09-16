@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2018 2007/09/16 07:34:47 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.2019 2007/09/16 10:33:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3683,3 +3683,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-silc to 2.2.0 [tnn 2007-09-15]
 	Updated chat/finch to 2.2.0 [tnn 2007-09-15]
 	Updated archivers/dar to 2.3.5 [dsainty 2007-09-16]
+	Added textproc/emacs-muse version 3.11 [wiz 2007-09-16]
