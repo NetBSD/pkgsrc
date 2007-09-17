@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2006/12/15 20:33:06 joerg Exp $
+# $NetBSD: options.mk,v 1.5 2007/09/17 06:36:21 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xterm
-PKG_SUPPORTED_OPTIONS=	xterm-luit freetype
+PKG_SUPPORTED_OPTIONS=	pcre xterm-luit freetype xterm-toolbar
 PKG_OPTIONS_OPTIONAL_GROUPS=	color
 PKG_OPTIONS_GROUP.color=	xterm-88color xterm-256color
-PKG_SUGGESTED_OPTIONS=	xterm-256color xterm-luit
+PKG_SUGGESTED_OPTIONS=	xterm-256color xterm-luit xterm-toolbar
 
 .include "../../mk/bsd.options.mk"
 
@@ -26,3 +26,11 @@ CONFIGURE_ARGS+= --enable-freetype
 .include "../../x11/libXft/buildlink3.mk"
 .endif
 
+.if !empty(PKG_OPTIONS:Mxterm-toolbar)
+CONFIGURE_ARGS+= --enable-toolbar
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre)
+CONFIGURE_ARGS+= --with-pcre
+.  include "../../devel/pcre/buildlink3.mk"
+.endif
