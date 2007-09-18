@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2030 2007/09/18 05:33:20 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2031 2007/09/18 05:38:33 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3695,14 +3695,14 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xterm to 229 [bjs 2007-09-17]
 	Updated mail/claws-mail to 3.0.1 [smb 2007-09-17]
 	Updated mail/claws-mail-rssyl to 0.15 [smb 2007-09-17]
-	Updated mail/claws-mail-gtkhtml2_viewer to 0.15.2 [smb 2007-09-17]
+	Updated mail/claws-mail-gtkhtml to 0.15.2 [smb 2007-09-17]
 	Updated mail/claws-mail-attachwarner to 0.2.8 [smb 2007-09-17]
-	Updated mail/claws-mail-att_remover to 1.0.7 [smb 2007-09-17]
+	Updated mail/claws-mail-attremover to 1.0.7 [smb 2007-09-17]
 	Updated mail/claws-mail-bogofilter to 3.0.1 [smb 2007-09-17]
 	Updated mail/claws-mail-cachesaver to 0.10.6 [smb 2007-09-17]
-	Updated mail/claws-mail-clamav-plugin to 3.0.1 [smb 2007-09-17]
+	Updated mail/claws-mail-clamav to 3.0.1 [smb 2007-09-17]
 	Updated mail/claws-mail-dillo-viewer to 3.0.1 [smb 2007-09-17]
-	Updated mail/claws-mail-fetchinfo-plugin to 0.4.20 [smb 2007-09-17]
+	Updated mail/claws-mail-fetchinfo to 0.4.20 [smb 2007-09-17]
 	Updated mail/claws-mail-mailmbox to 1.14 [smb 2007-09-17]
 	Updated mail/claws-mail-newmail to 0.0.11 [smb 2007-09-17]
 	Updated mail/claws-mail-notification to 0.12.1 [smb 2007-09-17]
@@ -3713,9 +3713,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/claws-mail-pgp to 3.0.1 [smb 2007-09-17]
 	Updated mail/claws-mail-smime to 0.7.2 [smb 2007-09-17]
 	Updated mail/claws-mail-spamassassin to 3.0.1 [smb 2007-09-17]
-	Updated mail/claws-mail-synce_plugin to 0.7.2 [smb 2007-09-17]
+	Updated mail/claws-mail-synce to 0.7.2 [smb 2007-09-17]
 	Updated mail/claws-mail-trayicon to 3.0.1 [smb 2007-09-17]
 	Updated mail/claws-mail-vcalendar to 1.98 [smb 2007-09-17]
-	Added mail/claws-mail-spam_report version 0.2 [smb 2007-09-17]
+	Added mail/claws-mail-spamreport version 0.2 [smb 2007-09-17]
 	Updated graphics/ruby-RMagick to 1.15.10 [obache 2007-09-18]
 	Updated editors/vim-share to 7.1.116 [martti 2007-09-18]
