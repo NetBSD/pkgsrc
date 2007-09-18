@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:42 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 03:17:26 smb Exp $
 #
 
 PLUGIN_NAME=	bogofilter
@@ -9,9 +9,9 @@ COMMENT=	Enables the scanning of incoming mail using Bogofilter
 
 CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
 
-DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
 DEPENDS+=	bogofilter>=1.0.3nb1:../../mail/bogofilter
 
+.include "../../mail/claws-mail/Makefile.vers"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

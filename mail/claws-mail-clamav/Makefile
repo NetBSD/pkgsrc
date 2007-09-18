@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:43 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 03:17:26 smb Exp $
 #
 
 PLUGIN_NAME=	clamav_plugin
@@ -13,9 +13,10 @@ CONFIGURE_ARGS+=	--enable-clamav-plugin
 
 USE_LANGUAGES=	c
 
-DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
 DEPENDS+=	clamav>=0.91.1nb1:../../mail/clamav
 
+.include "../../mail/claws-mail/Makefile.vers"
 .include "../../mail/clamav/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
