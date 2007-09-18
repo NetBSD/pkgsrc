@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2037 2007/09/18 21:19:33 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2038 2007/09/18 21:20:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-IO-Socket-SSL to 1.09 [wiz 2007-09-18]
 	Updated devel/p5-Test-Simple to 0.71 [wiz 2007-09-18]
 	Updated textproc/p5-XML-Simple to 2.18 [wiz 2007-09-18]
+	Updated shells/bash to 3.2.25 [wiz 2007-09-18]
