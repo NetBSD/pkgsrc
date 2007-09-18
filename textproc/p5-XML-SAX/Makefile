@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/09/15 14:44:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/18 21:06:14 heinz Exp $
 
 DISTNAME=	XML-SAX-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -18,13 +18,16 @@ DEPENDS+=	p5-XML-NamespaceSupport>=0.03:../../textproc/p5-XML-NamespaceSupport
 #DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 
 MAKE_ENV=	SKIP_SAX_INSTALL=yes
+EGSUBDIR=	share/examples/p5-XML-SAX
+CONF_FILES=	${EGSUBDIR}/ParserDetails.ini \
+			${PERL5_INSTALLVENDORLIB}/XML/SAX/ParserDetails.ini
 
 PERL5_PACKLIST=	auto/XML/SAX/.packlist
 
-FILES_SUBST+=	PERL5_INSTALLVENDORLIB=${PERL5_INSTALLVENDORLIB:Q}
+INSTALLATION_DIRS+=	${EGSUBDIR}
 
 post-install:
-	${ECHO} > ${DESTDIR:Q}${PERL5_INSTALLVENDORLIB}/XML/SAX/ParserDetails.ini
+	${ECHO} > ${DESTDIR:Q}${PREFIX:Q}/${EGSUBDIR}/ParserDetails.ini
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
