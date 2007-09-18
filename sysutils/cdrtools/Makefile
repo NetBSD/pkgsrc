@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/08/07 19:26:22 he Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/18 23:07:26 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a27
-PKGNAME=	cdrtools-2.01.01.27
-PKGREVISION=	1
+DISTNAME=	cdrtools-2.01.01a35
+PKGNAME=	cdrtools-2.01.01.35
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,6 +29,7 @@ MAKE_ENV+=	ARCH=""
 MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:Q}
+MAKE_ENV+=	INS_BASE=${PREFIX:Q}
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
@@ -48,7 +48,10 @@ MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
 MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF:Q}
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	bin lib/siconv ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 \
+			share/doc/cdrtools/cdda2wav \
+			share/doc/cdrtools/cdrecord \
+			share/doc/cdrtools/mkisofs
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
@@ -81,23 +84,35 @@ post-build:
 	done
 
 do-install:
-	cd ${WRKSRC}/cdda2wav;						\
-		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${DESTDIR}${PREFIX}/bin;	\
-		${INSTALL_MAN} cdda2wav.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	cd ${WRKSRC}/cdrecord;						\
-		${INSTALL_PROGRAM} OBJ/*/cdrecord ${DESTDIR}${PREFIX}/bin;	\
-		${INSTALL_MAN} cdrecord.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	cd ${WRKSRC}/mkisofs;						\
-		${INSTALL_PROGRAM} OBJ/*/mkisofs ${DESTDIR}${PREFIX}/bin;		\
-		${INSTALL_MAN} mkisofs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	for program in btcflash cdda2wav cdrecord mkhybrid mkisofs 	\
+		readcd scgcheck scgskeleton; do				\
+	cd ${WRKSRC}/$${program};					\
+		${INSTALL_PROGRAM} OBJ/*/$${program} 			\
+			${DESTDIR}${PREFIX}/bin;			\
+	done
+	for program in btcflash cdda2wav cdrecord readcd scgcheck; do	\
+		${INSTALL_MAN} ${WRKSRC}/$${program}/$${program}.1 	\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;		\
+	done
+	for program in mkhybrid mkisofs; do				\
+		${INSTALL_MAN} ${WRKSRC}/$${program}/$${program}.8 	\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8;		\
+	done
 	cd ${WRKSRC}/mkisofs/diag;					\
-		for f in devdump isodump isoinfo isovfy; do		\
-			${INSTALL_PROGRAM} OBJ/*/$$f ${DESTDIR}${PREFIX}/bin;	\
-			${INSTALL_MAN} isoinfo.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
+		for f in devdump isodebug isodump isoinfo isovfy; do	\
+			${INSTALL_PROGRAM} OBJ/*/$$f ${DESTDIR}${PREFIX}/bin; \
+			${INSTALL_MAN} $$f.8 \
+				${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
-	cd ${WRKSRC}/readcd;						\
-		${INSTALL_PROGRAM} OBJ/*/readcd ${DESTDIR}${PREFIX}/bin;		\
-		${INSTALL_MAN} readcd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/libsiconv/tables/[cik]* \
+		${PREFIX}/lib/siconv
+	${RM} ${PREFIX}/lib/siconv/*mk
+	${INSTALL_DATA} ${WRKSRC}/cdda2wav/README* \
+		${PREFIX}/share/doc/cdrtools/cdda2wav
+	${INSTALL_DATA} ${WRKSRC}/cdrecord/README* \
+		${PREFIX}/share/doc/cdrtools/cdrecord
+	${INSTALL_DATA} ${WRKSRC}/mkisofs/README* \
+		${PREFIX}/share/doc/cdrtools/mkisofs
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

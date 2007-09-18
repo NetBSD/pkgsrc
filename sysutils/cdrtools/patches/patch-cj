@@ -1,11 +1,11 @@
-$NetBSD: patch-cj,v 1.2 2007/03/16 22:04:55 bad Exp $
+$NetBSD: patch-cj,v 1.3 2007/09/18 23:07:27 wiz Exp $
 
 isoinfo extracts files at the painful rate of 1 sector at a time.  This patch
 speeds up file extraction significantly by using a much larger buffer.
 
---- mkisofs/diag/isoinfo.c.orig	2006-10-19 12:31:36.000000000 +0200
+--- mkisofs/diag/isoinfo.c.orig	2007-07-29 22:33:21.000000000 +0000
 +++ mkisofs/diag/isoinfo.c
-@@ -649,7 +649,7 @@ extract_file(idr)
+@@ -648,7 +648,7 @@ extract_file(idr)
  	struct iso_directory_record *idr;
  {
  	int		extent, len, tlen;
@@ -14,7 +14,7 @@ speeds up file extraction significantly by using a much larger buffer.
  
  #if	defined(__CYGWIN32__) || defined(__CYGWIN__) || defined(__EMX__) || defined(__DJGPP__)
  	setmode(fileno(stdout), O_BINARY);
-@@ -659,16 +659,15 @@ extract_file(idr)
+@@ -658,16 +658,15 @@ extract_file(idr)
  	len = isonum_733((unsigned char *)idr->size);
  
  	while (len > 0) {
