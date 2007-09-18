@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.84 2007/08/16 18:11:44 tnn Exp $
+$NetBSD: distinfo,v 1.85 2007/09/18 17:37:02 tnn Exp $
 
-SHA1 (glib-2.14.0.tar.bz2) = a0ebfd3e170b3c47af44453b8861d3caceb9b7c4
-RMD160 (glib-2.14.0.tar.bz2) = b929764eaac40afc0064424f094cd6d8a76dfcf4
-Size (glib-2.14.0.tar.bz2) = 3304745 bytes
-SHA1 (patch-aa) = e313f298388abba710a2b085bf6c78b915a305c0
+SHA1 (glib-2.14.1.tar.bz2) = ef9ff562aa7766b0081d37e3ce685843e796c0f8
+RMD160 (glib-2.14.1.tar.bz2) = 9a0ac925dd42a423a72c86653faa1043ee740afc
+Size (glib-2.14.1.tar.bz2) = 3337370 bytes
+SHA1 (patch-aa) = 8acedc299708d0640959840be0b435daa62e292c
 SHA1 (patch-ab) = a765c6e43856ce858f23f237ffd5b48cb6d029e6
 SHA1 (patch-ac) = 43a30df9822e90e0f84df4458cc20de286509961
 SHA1 (patch-ad) = c926d96bdc9ddf4f434fc57af0adbe11002cffc3
@@ -13,4 +13,3 @@ SHA1 (patch-ah) = 8b65c137b07659351b97089c10db0dac61f04905
 SHA1 (patch-ai) = baf3466a38ed09e956c4e8423a64415395690de7
 SHA1 (patch-aj) = a8c4e79113828e6dadf0b158777bb860aa44de3e
 SHA1 (patch-ak) = 86ead0dc2836ee2ced420cca62e2f116ece316aa
-SHA1 (patch-al) = 2cea566231c2dd1367fc898e616386e274bb9c1d
