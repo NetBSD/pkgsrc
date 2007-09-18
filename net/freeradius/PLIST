@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/04/14 10:16:48 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/09/18 22:15:07 adrianp Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -76,6 +76,8 @@ lib/rlm_sql_log-${RADVER}.la
 lib/rlm_sql_log.la
 lib/rlm_sqlcounter-${RADVER}.la
 lib/rlm_sqlcounter.la
+lib/rlm_sqlippool-${RADVER}.la
+lib/rlm_sqlippool.la
 lib/rlm_unix-${RADVER}.la
 lib/rlm_unix.la
 man/man1/radclient.1
@@ -147,6 +149,7 @@ share/doc/freeradius/examples/mysql.sql
 share/doc/freeradius/examples/openldap.schema
 share/doc/freeradius/examples/oracle.sql
 share/doc/freeradius/examples/postgresql.sql
+share/doc/freeradius/examples/postgresql.sql.extra
 share/doc/freeradius/load-balance.txt
 share/doc/freeradius/module_interface
 share/doc/freeradius/mssql

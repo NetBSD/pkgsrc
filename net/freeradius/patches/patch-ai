@@ -1,12 +1,11 @@
-$NetBSD: patch-ai,v 1.9 2007/02/17 18:36:23 adrianp Exp $
+$NetBSD: patch-ai,v 1.10 2007/09/18 22:15:08 adrianp Exp $
 
---- configure.orig	2007-01-04 23:42:11.000000000 +0000
+--- configure.orig	2007-07-21 15:01:34.000000000 +0100
 +++ configure
-@@ -19990,14 +19990,13 @@ fi
- 
+@@ -20022,13 +20022,13 @@ fi
  done
  
--
+ 
 -  { echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
 -echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
 +  { echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
@@ -20,7 +19,7 @@ $NetBSD: patch-ai,v 1.9 2007/02/17 18:36:23 adrianp Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -20054,7 +20053,7 @@ fi
+@@ -20085,7 +20085,7 @@ fi
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
  if test $ac_cv_lib_pthread_pthread_create = yes; then
     CFLAGS="$CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
@@ -29,7 +28,7 @@ $NetBSD: patch-ai,v 1.9 2007/02/17 18:36:23 adrianp Exp $
  else
    { echo "$as_me:$LINENO: checking for pthread_create in -lc_r" >&5
  echo $ECHO_N "checking for pthread_create in -lc_r... $ECHO_C" >&6; }
-@@ -20163,7 +20162,7 @@ return sem_init ();
+@@ -20194,7 +20194,7 @@ return sem_init ();
    return 0;
  }
  _ACEOF
@@ -38,21 +37,21 @@ $NetBSD: patch-ai,v 1.9 2007/02/17 18:36:23 adrianp Exp $
    if test -z "$ac_lib"; then
      ac_res="none required"
    else
-@@ -20520,7 +20519,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
+@@ -20552,7 +20552,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lssl  $LIBS"
-+LIBS="-lssl -lcrypto $LIBS"
++LIBS="-lssl -lcrypto  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -23588,7 +23587,7 @@ gethostbyaddrrstyle=""
+@@ -23623,7 +23623,7 @@ gethostbyaddrrstyle=""
  { echo "$as_me:$LINENO: checking gethostbyaddr_r() syntax" >&5
  echo $ECHO_N "checking gethostbyaddr_r() syntax... $ECHO_C" >&6; }
  case "$host" in
 -*-freebsd*)
 +*-freebsd* | *-dragonfly*)
- 	cat >>confdefs.h <<\_ACEOF
- #define GETHOSTBYADDRRSTYLE BSDSTYLE
- _ACEOF
+ 	{ echo "$as_me:$LINENO: checking whether gethostbyaddr_r is declared" >&5
+ echo $ECHO_N "checking whether gethostbyaddr_r is declared... $ECHO_C" >&6; }
+ if test "${ac_cv_have_decl_gethostbyaddr_r+set}" = set; then
