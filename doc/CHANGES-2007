@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2032 2007/09/18 10:45:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2033 2007/09/18 12:37:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3720,3 +3720,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.10 [obache 2007-09-18]
 	Updated editors/vim-share to 7.1.116 [martti 2007-09-18]
 	Updated x11/gtk2 to 2.12.0nb1 [wiz 2007-09-18]
+	Updated net/libtorrent to 0.11.7 [tron 2007-09-18]
+	Updated net/rtorrent to 0.7.7 [tron 2007-09-18]
