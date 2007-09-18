@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2007/07/21 21:56:07 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2007/09/18 21:16:34 wiz Exp $
 #
 
-DISTNAME=		atk-1.18.0
+DISTNAME=		atk-1.20.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 # glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.5.7
 
 SUBST_CLASSES+=		loc
 SUBST_STAGE.loc=	pre-configure
