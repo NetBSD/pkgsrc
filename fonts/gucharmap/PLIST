@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/04/11 18:10:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/09/18 19:19:57 drochner Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -24,9 +24,9 @@ share/gnome/help/gucharmap/C/legal.xml
 share/gnome/help/gucharmap/bg/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/bg/figures/gucharmap_window.png
 share/gnome/help/gucharmap/bg/gucharmap.xml
+share/gnome/help/gucharmap/de/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/de/figures/gucharmap_window.png
 share/gnome/help/gucharmap/de/gucharmap.xml
-share/gnome/help/gucharmap/de/legal.xml
 share/gnome/help/gucharmap/en_GB/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/en_GB/figures/gucharmap_window.png
 share/gnome/help/gucharmap/en_GB/gucharmap.xml
@@ -48,6 +48,9 @@ share/gnome/help/gucharmap/ja/legal.xml
 share/gnome/help/gucharmap/ko/figures/gucharmap_window.png
 share/gnome/help/gucharmap/ko/gucharmap.xml
 share/gnome/help/gucharmap/ko/legal.xml
+share/gnome/help/gucharmap/oc/figures/gucharmap_start_window.png
+share/gnome/help/gucharmap/oc/figures/gucharmap_window.png
+share/gnome/help/gucharmap/oc/gucharmap.xml
 share/gnome/help/gucharmap/ru/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/ru/figures/gucharmap_window.png
 share/gnome/help/gucharmap/ru/gucharmap.xml
@@ -109,6 +112,7 @@ share/locale/nb/LC_MESSAGES/gucharmap.mo
 share/locale/ne/LC_MESSAGES/gucharmap.mo
 share/locale/nl/LC_MESSAGES/gucharmap.mo
 share/locale/nn/LC_MESSAGES/gucharmap.mo
+share/locale/oc/LC_MESSAGES/gucharmap.mo
 share/locale/or/LC_MESSAGES/gucharmap.mo
 share/locale/pa/LC_MESSAGES/gucharmap.mo
 share/locale/pl/LC_MESSAGES/gucharmap.mo
@@ -117,6 +121,7 @@ share/locale/pt_BR/LC_MESSAGES/gucharmap.mo
 share/locale/ro/LC_MESSAGES/gucharmap.mo
 share/locale/ru/LC_MESSAGES/gucharmap.mo
 share/locale/rw/LC_MESSAGES/gucharmap.mo
+share/locale/si/LC_MESSAGES/gucharmap.mo
 share/locale/sk/LC_MESSAGES/gucharmap.mo
 share/locale/sl/LC_MESSAGES/gucharmap.mo
 share/locale/sq/LC_MESSAGES/gucharmap.mo
@@ -143,6 +148,7 @@ share/omf/gucharmap/gucharmap-fr.omf
 share/omf/gucharmap/gucharmap-it.omf
 share/omf/gucharmap/gucharmap-ja.omf
 share/omf/gucharmap/gucharmap-ko.omf
+share/omf/gucharmap/gucharmap-oc.omf
 share/omf/gucharmap/gucharmap-ru.omf
 share/omf/gucharmap/gucharmap-sv.omf
 share/omf/gucharmap/gucharmap-zh_CN.omf
@@ -159,6 +165,8 @@ share/omf/gucharmap/gucharmap-zh_TW.omf
 @dirrm share/gnome/help/gucharmap/sv
 @dirrm share/gnome/help/gucharmap/ru/figures
 @dirrm share/gnome/help/gucharmap/ru
+@dirrm share/gnome/help/gucharmap/oc/figures
+@dirrm share/gnome/help/gucharmap/oc
 @dirrm share/gnome/help/gucharmap/ko/figures
 @dirrm share/gnome/help/gucharmap/ko
 @dirrm share/gnome/help/gucharmap/ja/figures
