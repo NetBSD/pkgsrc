@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/06/22 21:23:28 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/18 18:58:08 drochner Exp $
 
-DISTNAME=	hdf5-1.6.5
-PKGREVISION=	2
+DISTNAME=	hdf5-1.6.6
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.5/src/
+MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
@@ -21,6 +20,8 @@ TEST_TARGET=		check
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
 
 .include "options.mk"
+
+INSTALL_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 
 post-extract:
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
