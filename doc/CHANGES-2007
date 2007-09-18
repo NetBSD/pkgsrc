@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2038 2007/09/18 21:20:40 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2039 2007/09/18 22:10:56 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3723,7 +3723,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libtorrent to 0.11.7 [tron 2007-09-18]
 	Updated net/rtorrent to 0.7.7 [tron 2007-09-18]
 	Updated devel/glib2 to 2.14.1 [tnn 2007-09-18]
+	Updated net/microdc2 to 0.15.6nb1 [heinz 2007-09-18]
 	Updated net/httping to 1.2.5 [adrianp 2007-09-18]
+	Updated textproc/p5-XML-SAX to 0.16nb2 [heinz 2007-09-18]
 	Updated devel/atk to 1.20.0 [wiz 2007-09-18]
 	Updated devel/gail to 1.20.0 [wiz 2007-09-18]
 	Updated security/p5-IO-Socket-SSL to 1.09 [wiz 2007-09-18]
