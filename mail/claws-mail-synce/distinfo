@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/08/08 13:22:30 smb Exp $
+$NetBSD: distinfo,v 1.2 2007/09/18 03:17:32 smb Exp $
 
-SHA1 (synce_plugin-0.7.1.tar.gz) = f7af69bc665ad96b8085e9ccce10398676d54233
-RMD160 (synce_plugin-0.7.1.tar.gz) = 3c906e7395713cc31add23c7360985a76a23c0ff
-Size (synce_plugin-0.7.1.tar.gz) = 333513 bytes
+SHA1 (synce_plugin-0.7.2.tar.gz) = 570dbd2dbbc08c85e8aea1d1ed3bd5bdbf8a32f5
+RMD160 (synce_plugin-0.7.2.tar.gz) = a9f3b28b02e400bd5d09e342120bf29c95adc69d
+Size (synce_plugin-0.7.2.tar.gz) = 334142 bytes

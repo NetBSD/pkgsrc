@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:35:00 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 03:17:32 smb Exp $
 #
 
 PLUGIN_NAME=	trayicon
@@ -9,8 +9,9 @@ COMMENT=	Places an icon in the system tray for new mail
 
 CONFIGURE_ARGS+=	--enable-trayicon-plugin
 
-DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
 
+.include "../../mail/claws-mail/Makefile.vers"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

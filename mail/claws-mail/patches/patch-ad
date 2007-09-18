@@ -1,24 +1,26 @@
-$NetBSD: patch-ad,v 1.1 2007/08/03 02:34:38 smb Exp $
+$NetBSD: patch-ad,v 1.2 2007/09/18 03:17:25 smb Exp $
 
---- src/toolbar.c.orig	2007-08-02 04:10:24.000000000 -0400
-+++ src/toolbar.c	2007-08-02 04:10:58.000000000 -0400
-@@ -427,9 +427,7 @@
- 		{ A_FORWARD,       STOCK_PIXMAP_MAIL_FORWARD,         _("Forward") },
+--- src/toolbar.c.orig	2007-09-06 17:09:58.000000000 -0400
++++ src/toolbar.c	2007-09-06 17:10:26.000000000 -0400
+@@ -430,10 +430,8 @@
  		{ A_SEPARATOR,     0,                                 ("")         },
  		{ A_TRASH,         STOCK_PIXMAP_TRASH,                _("Trash")   },
+ #ifndef MAEMO
 -#if (defined(USE_SPAMASSASSIN_PLUGIN) || defined(USE_BOGOFILTER_PLUGIN))
  		{ A_LEARN_SPAM,	   STOCK_PIXMAP_SPAM_BTN,             _("Spam")    },
+ #endif
 -#endif
  		{ A_SEPARATOR,     0,                                 ("")         },
  		{ A_GOTO_NEXT,     STOCK_PIXMAP_DOWN_ARROW,           _("Next")    }
  	};
-@@ -525,9 +523,7 @@
- 		{ A_FORWARD,       STOCK_PIXMAP_MAIL_FORWARD,         _("Forward") },
+@@ -533,10 +531,8 @@
  		{ A_SEPARATOR,     0,                                 ("")         },
  		{ A_TRASH,         STOCK_PIXMAP_TRASH,                _("Trash")   },
+ #ifndef MAEMO
 -#if (defined(USE_SPAMASSASSIN_PLUGIN) || defined(USE_BOGOFILTER_PLUGIN))
  		{ A_LEARN_SPAM,	   STOCK_PIXMAP_SPAM_BTN,             _("Spam")    },
+ #endif
 -#endif
  		{ A_GOTO_NEXT,     STOCK_PIXMAP_DOWN_ARROW,           _("Next")    }
- #ifdef MAEMO
- 		,
+ 	};
+ 	

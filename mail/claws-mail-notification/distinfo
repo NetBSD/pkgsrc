@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/08/03 02:34:50 smb Exp $
+$NetBSD: distinfo,v 1.2 2007/09/18 03:17:28 smb Exp $
 
-SHA1 (notification_plugin-0.11.tar.gz) = 694ac3b7ad85a7a411cb82fadb1eb070180df012
-RMD160 (notification_plugin-0.11.tar.gz) = 24df62b7304e65d88cbd6bdd94b990462b6bf13a
-Size (notification_plugin-0.11.tar.gz) = 436031 bytes
+SHA1 (notification_plugin-0.12.1.tar.gz) = 7555653e1d95b27249dc965cebdb062d3df6fbb0
+RMD160 (notification_plugin-0.12.1.tar.gz) = c7749010d445f3340e814412fb832e94ebe71602
+Size (notification_plugin-0.12.1.tar.gz) = 458955 bytes

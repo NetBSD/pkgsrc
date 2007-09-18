@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:53 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 03:17:29 smb Exp $
 #
 .include "../../mail/claws-mail/Makefile.vers"
 
@@ -10,9 +10,9 @@ DISTFILES=	# empy
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Metapackage for the PGP plug-in for Claws-mail
 
-DEPENDS+=	claws-mail-pgpcore>=${CLAWS_VERSION}:../../mail/claws-mail-pgpcore
-DEPENDS+=	claws-mail-pgpmime>=${CLAWS_VERSION}:../../mail/claws-mail-pgpmime
-DEPENDS+=	claws-mail-pgpinline>=${CLAWS_VERSION}:../../mail/claws-mail-pgpinline
+DEPENDS+=	claws-mail-pgpcore-${CLAWS_VERSION}:../../mail/claws-mail-pgpcore
+DEPENDS+=	claws-mail-pgpmime-${CLAWS_VERSION}:../../mail/claws-mail-pgpmime
+DEPENDS+=	claws-mail-pgpinline-${CLAWS_VERSION}:../../mail/claws-mail-pgpinline
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
