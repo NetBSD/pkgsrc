@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2039 2007/09/18 22:10:56 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.2040 2007/09/18 22:17:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3732,3 +3732,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-Simple to 0.71 [wiz 2007-09-18]
 	Updated textproc/p5-XML-Simple to 2.18 [wiz 2007-09-18]
 	Updated shells/bash to 3.2.25 [wiz 2007-09-18]
+	Updated net/freeradius to 1.1.7 [adrianp 2007-09-18]
