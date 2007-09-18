@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2034 2007/09/18 16:51:00 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.2035 2007/09/18 17:37:57 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3722,3 +3722,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtk2 to 2.12.0nb1 [wiz 2007-09-18]
 	Updated net/libtorrent to 0.11.7 [tron 2007-09-18]
 	Updated net/rtorrent to 0.7.7 [tron 2007-09-18]
+	Updated devel/glib2 to 2.14.1 [tnn 2007-09-18]
