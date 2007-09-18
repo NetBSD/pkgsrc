@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/02/22 19:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/09/18 19:44:40 heinz Exp $
 #
 
 DISTNAME=	uudeview-0.5.20
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	uulib
@@ -27,14 +29,16 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/man3
 
 do-install:
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/uulib/libuu.la ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include
+	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/uulib/libuu.la \
+		${DESTDIR:Q}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${DESTDIR:Q}${PREFIX}/include
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' \
 		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
-	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/${PKGMANDIR}/man3
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uulib
+	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${DESTDIR:Q}${PREFIX}/${PKGMANDIR}/man3
+	@${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX}/share/doc/uulib
 .for docfile in ${DOCFILES}
-	@${INSTALL_MAN} ${WRKSRC}/${docfile} ${PREFIX}/share/doc/uulib
+	@${INSTALL_MAN} ${WRKSRC}/${docfile} \
+		${DESTDIR:Q}${PREFIX}/share/doc/uulib
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
