@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/08/03 02:34:52 smb Exp $
+$NetBSD: distinfo,v 1.2 2007/09/18 03:17:29 smb Exp $
 
-SHA1 (pdf_viewer-0.5.tar.gz) = d1191d90e9a86708508ebebfb9a69004530d7bf1
-RMD160 (pdf_viewer-0.5.tar.gz) = 65bf8df2dfabc21aa39ee7e72a56fb8b8b6ec51b
-Size (pdf_viewer-0.5.tar.gz) = 396385 bytes
+SHA1 (pdf_viewer-0.6.tar.gz) = 54313c7782a002fcf188b0ab8097fc096ff95148
+RMD160 (pdf_viewer-0.6.tar.gz) = 0872158bfd778c5e370d2a7164c1406b9a299086
+Size (pdf_viewer-0.6.tar.gz) = 403190 bytes

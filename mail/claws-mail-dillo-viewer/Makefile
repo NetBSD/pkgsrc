@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/03 02:34:45 smb Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 03:17:27 smb Exp $
 #
 
 PLUGIN_NAME=	dillo_viewer
@@ -9,9 +9,10 @@ COMMENT=	Plugin to use the Dillo web browser for html rendering
 
 CONFIGURE_ARGS+=	--enable-dillo_viewer-plugin
 
-DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
 DEPENDS+=	dillo>=0.8.6nb2:../../www/dillo
 
+.include "../../mail/claws-mail/Makefile.vers"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

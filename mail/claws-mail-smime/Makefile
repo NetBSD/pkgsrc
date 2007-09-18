@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2007/08/06 21:41:22 smb Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/18 03:17:30 smb Exp $
 
-DISTNAME=smime-0.7.1
-PKGNAME=claws-mail-smime-0.7.1
+DISTNAME=smime-0.7.2
+PKGNAME=claws-mail-smime-0.7.2
 CATEGORIES=mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	This plugin handles S/MIME signed and/or encrypted mails
-PKGREVISION=	1
 
-DEPENDS+=	claws-mail>=2.10.0:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
 PLIST_SRC+=	PLIST
 
 .include "../../mk/bsd.prefs.mk"
@@ -19,6 +18,7 @@ USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c
 
+.include "../../mail/claws-mail/Makefile.vers"
 .include "../../mail/claws-mail/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
