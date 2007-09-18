@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2007/09/18 19:40:19 drochner Exp $
 
---- Makefile.orig	2006-05-19 16:00:01.000000000 +0200
+--- Makefile.orig	2007-09-02 09:19:49.000000000 +0200
 +++ Makefile
-@@ -571,7 +571,7 @@ HAVE_UNUSED=
+@@ -584,7 +584,7 @@ HAVE_UNUSED=
  
  #INCDIR= /usr/local/include
  #INCDIR= /dev/env/DJDIR/include
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  
  # Where to install calc realted things
  #
-@@ -598,15 +598,15 @@ INCDIR= /usr/include
+@@ -611,15 +611,15 @@ INCDIR= /usr/include
  #
  #BINDIR= /usr/local/bin
  #BINDIR= /dev/env/DJDIR/bin
@@ -28,9 +28,9 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
 -CALC_SHAREDIR= /usr/share/calc
 +CALC_SHAREDIR= ${PREFIX}/share/calc
  
- #CALC_INCDIR= /usr/local/include/calc
- #CALC_INCDIR= /dev/env/DJDIR/include/calc
-@@ -680,7 +680,7 @@ T=
+ # NOTE: Do not set CALC_INCDIR to /usr/include or /usr/local/include!!!
+ #	Always be sure that the CALC_INCDIR path ends in /calc to avoid
+@@ -697,7 +697,7 @@ T=
  #MANDIR=
  #MANDIR= /usr/local/man/man1
  #MANDIR= /usr/man/man1
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  #MANDIR= /dev/env/DJDIR/man/man1
  #MANDIR= /usr/man/u_man/man1
  #MANDIR= /usr/contrib/man/man1
-@@ -691,7 +691,7 @@ MANDIR= /usr/share/man/man1
+@@ -708,7 +708,7 @@ MANDIR= /usr/share/man/man1
  #
  # Use CATDIR= to disable installation of the calc cat (formatted) page.
  #
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  #CATDIR= /usr/local/man/cat1
  #CATDIR= /usr/local/catman/cat1
  #CATDIR= /usr/man/cat1
-@@ -712,9 +712,9 @@ MANEXT= 1
+@@ -729,9 +729,9 @@ MANEXT= 1
  #
  # This is ignored if CATDIR is empty.
  #
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  #CATEXT= l
  
  # how to format a man page
-@@ -740,8 +740,8 @@ CATEXT= 1
+@@ -757,8 +757,8 @@ CATEXT= 1
  # and CATDIR to empty and ignore the NROFF, NROFF_ARG and MANMAKE
  # lines below.
  #
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  #NROFF= groff
  NROFF_ARG= -man
  #NROFF_ARG= -mandoc
-@@ -785,10 +785,10 @@ CALCRC= ${CALC_SHAREDIR}/startup:~/.calc
+@@ -802,10 +802,10 @@ CALCRC= ${CALC_SHAREDIR}/startup:~/.calc
  #
  # If in doubt, set USE_READLINE, READLINE_LIB and READLINE_INCLUDE to nothing.
  #
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
  #READLINE_LIB= -lreadline -lhistory -lncurses
  #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory -lncurses
  #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory -lncurses
-@@ -834,7 +834,7 @@ CALCPAGER= less
+@@ -853,7 +853,7 @@ CALCPAGER= less
  #
  #DEBUG= -O3
  #DEBUG= -O3 -g
@@ -93,18 +93,43 @@ $NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
 +#DEBUG= -O3 -g3
  #DEBUG= -O3 -ipa
  #DEBUG= -O3 -g3 -ipa
+ 
+@@ -1254,7 +1254,7 @@ endif
+ # NOTE: This is the default generic host target.  Used when no other
+ #	host target matches.
+ 
+-ifeq ($(target),)
++ifeq ($(target),pkgsrc)
  #
-@@ -1007,10 +1007,10 @@ CCWERR=
- CCOPT= ${DEBUG} ${NO_SHARED}
- CCMISC=
+ BLD_TYPE= calc-static-only
  #
--CFLAGS= -DCALC_SRC ${CCWARN} ${CCOPT} ${CCMISC}
--ICFLAGS= -DCALC_SRC ${CCWARN} ${CCMISC}
-+CFLAGS= -DCALC_SRC ${CCWARN} ${CCOPT} ${CCMISC} ${CPPFLAGS}
-+ICFLAGS= -DCALC_SRC ${CCWARN} ${CCMISC} ${CPPFLAGS}
+@@ -1296,7 +1296,7 @@ ICFLAGS= ${COMMON_CFLAGS} ${CC_STATIC}
+ else
+ ICFLAGS= ${COMMON_CFLAGS} ${CC_SHARE}
+ endif
+-CFLAGS= ${ICFLAGS} ${CCOPT}
++CFLAGS= ${ICFLAGS} ${CCOPT} ${CPPFLAGS}
+ 
+ # Required flags to link files for calc
  #
--LDFLAGS= ${NO_SHARED} ${LD_NO_SHARED}
-+LDFLAGS+= ${NO_SHARED} ${LD_NO_SHARED}
- ILDFLAGS=
+@@ -1304,7 +1304,7 @@ CFLAGS= ${ICFLAGS} ${CCOPT}
+ # LDFLAGS for ${CC} in linking calc progs other than intermediate progs
  #
- LCC= gcc
+ ILDFLAGS= ${COMMON_LDFLAGS}
+-LDFLAGS= ${LD_DEBUG} ${ILDFLAGS}
++LDFLAGS+= ${LD_DEBUG} ${ILDFLAGS}
+ 
+ #endif	/* end of skip for non-Gnu makefiles */
+ 
+@@ -4192,9 +4192,9 @@ install: custom/Makefile ${LIB_H_SRC} ${
+ 	${Q}# NOTE: The this makefile installs libcustcalc${LIB_EXT_VERS}
+ 	${Q}#       because we only want to perform one ${LDCONFIG} for both
+ 	${Q}#       libcalc${LIB_EXT_VERS} and libcustcalc${LIB_EXT_VERS}.
+-	-${Q} if ${CMP} -s libcalc${LIB_EXT_VERS} \
++	-${Q} if true ${CMP} -s libcalc${LIB_EXT_VERS} \
+ 		     ${T}${LIBDIR}/libcalc${LIB_EXT_VERS} && \
+-	   ${CMP} -s custom/libcustcalc${LIB_EXT_VERS} \
++	   true ${CMP} -s custom/libcustcalc${LIB_EXT_VERS} \
+ 		     ${T}${LIBDIR}/libcustcalc${LIB_EXT_VERS}; then \
+ 	    ${TRUE}; \
+ 	else \
