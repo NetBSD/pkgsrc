@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2031 2007/09/18 05:38:33 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.2032 2007/09/18 10:45:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3719,3 +3719,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/claws-mail-spamreport version 0.2 [smb 2007-09-17]
 	Updated graphics/ruby-RMagick to 1.15.10 [obache 2007-09-18]
 	Updated editors/vim-share to 7.1.116 [martti 2007-09-18]
+	Updated x11/gtk2 to 2.12.0nb1 [wiz 2007-09-18]
