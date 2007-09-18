@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2007/08/08 21:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/09/18 20:22:13 drochner Exp $
 #
 
-DISTNAME=		intltool-0.36.0
-PKGREVISION=		1
+DISTNAME=		intltool-0.36.2
 CATEGORIES=		textproc devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/intltool/0.36/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +20,7 @@ CONFLICTS=		xml-i18n-tools-[0-9]*
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
 CHECK_INTERPRETER_SKIP=	share/intltool/*.in
+TEST_TARGET=		check
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
