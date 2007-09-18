@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2033 2007/09/18 12:37:10 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2034 2007/09/18 16:51:00 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3675,7 +3675,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/libarchive to 2.2.8 [joerg 2007-09-15]
 	Updated x11/qt3-libs to 3.3.8nb5 [tron 2007-09-15]
 	Updated devel/libtool to 1.5.24 [joerg 2007-09-15]
-	Updated devel/libtool-base to 1.5.24 [joerg 2007-09-15]
+	Updated devel/libtool-base to 1.5.24nb4 [joerg 2007-09-15]
 	Updated devel/libtool-info to 1.5.24 [joerg 2007-09-15]
 	Updated textproc/p5-XML-SAX to 0.16nb1 [wiz 2007-09-15]
 	Updated chat/libpurple to 2.2.0 [tnn 2007-09-15]
