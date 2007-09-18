@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6690 2007/09/16 19:54:52 wiz Exp $
+$NetBSD: TODO,v 1.6691 2007/09/18 03:17:33 smb Exp $
 
 Suggested new packages
 ======================
@@ -370,7 +370,6 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.95
-	o claws-mail-3.0.0
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o cmake-2.4.7
