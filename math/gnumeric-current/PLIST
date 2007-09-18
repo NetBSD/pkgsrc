@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/10 06:06:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/18 20:13:15 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -162,6 +162,9 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/glossary-po-header
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/gnome_glossary.py
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -180,6 +183,11 @@ lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
 lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plan_perfect.la
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/py_func.py
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/python_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/ui-console-menu.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/qpro.la
 lib/gnumeric/${PKGVERSION}/plugins/sample_datasource/plugin.xml
@@ -831,7 +839,6 @@ share/pixmaps/win32-gnumeric.ico
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnumeric
 @comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnumeric/${PKGVERSION}/templates
 @dirrm share/gnumeric/${PKGVERSION}/idl
 @dirrm share/gnumeric/${PKGVERSION}/glade
@@ -847,6 +854,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/gnome/help/gnumeric/C/figures
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/xbase
@@ -855,6 +863,8 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sc
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/python-loader
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/py-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plan_perfect
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
@@ -864,6 +874,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-tsa
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
