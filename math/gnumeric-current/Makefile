@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/09/10 06:06:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/18 20:13:14 drochner Exp $
 #
 
 DISTNAME=		gnumeric-1.7.12
+PKGREVISION=		1
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,12 +21,11 @@ GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 PKGCONFIG_OVERRIDE=	libspreadsheet-1.7.pc.in
 
-# XXX: link test against libpython fails
-#CONFIGURE_ARGS+=	--with-python
-#CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-#PYTHON_VERSIONS_ACCEPTED=	24 23
-#.include "../../lang/python/application.mk"
-#.include "../../x11/py-gtk2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-python
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+PYTHON_VERSIONS_ACCEPTED=	24 23
+.include "../../lang/python/application.mk"
+.include "../../devel/py-gobject/buildlink3.mk"
 
 # XXX: that version's not in pkgsrc yet
 #BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.1.1
@@ -41,7 +41,6 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.2
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_API_DEPENDS.goffice+= goffice>=0.5.0
 .include "../../misc/goffice0.5/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
