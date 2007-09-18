@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/09/18 03:17:24 smb Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/09/18 06:40:36 wiz Exp $
 
 DISTNAME=	claws-mail-${CLAWS_VERSION}
 CATEGORIES=	mail news x11
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 # Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
+
+#LICENSE=	gplv3
 
 CONFIGURE_ARGS+=        --enable-aspell
 CONFIGURE_ARGS+=	--enable-nls
