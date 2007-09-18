@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/16 15:53:12 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/18 19:59:38 heinz Exp $
 #
 
 DISTNAME=	microdc2-0.15.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://corsair626.no-ip.org/microdc/
 
@@ -22,7 +23,7 @@ USE_TOOLS+=		ln msgfmt msgmerge
 
 post-install:
 	cd ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1 && \
-		ln microdc.1 microdc2.1
+		ln -s microdc.1 microdc2.1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
