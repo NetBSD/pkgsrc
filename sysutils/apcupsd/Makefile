@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/06/19 22:22:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.53 2007/09/18 19:24:07 bouyer Exp $
 
 DISTNAME=		apcupsd-3.14.1
 PKGREVISION=		2
@@ -67,7 +67,7 @@ CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${ROOT_USER}
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
-RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/distributions/netbsd/apcupsd
+RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/netbsd/apcupsd
 
 EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
@@ -105,8 +105,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/platforms/${file} \
 		${PREFIX}/share/examples/apcupsd
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/platforms/netbsd/apcupsd \
-	    ${PREFIX}/share/examples/rc.d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/apcupsd
 .for file in ${HTMLDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/home-page/${file} \
