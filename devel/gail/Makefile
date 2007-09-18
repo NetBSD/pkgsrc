@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2007/03/21 22:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2007/09/18 21:16:55 wiz Exp $
 #
 
-DISTNAME=	gail-1.18.0
+DISTNAME=	gail-1.20.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -25,7 +25,7 @@ BUILDLINK_API_DEPENDS.atk=	atk>=1.13.0
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
+#.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
