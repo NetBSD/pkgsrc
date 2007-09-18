@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.61 2007/06/09 18:44:37 rillig Exp $
+# $NetBSD: compiler.mk,v 1.62 2007/09/18 01:51:10 reed Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -20,6 +20,7 @@
 #		hp		HP-UX C/aC++ compilers
 #		mipspro		Silicon Graphics, Inc. MIPSpro (n32/n64)
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
+#		pcc		Portable C Compiler
 #		sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 #				ONE Studio
 #		xlc		IBM's XL C/C++ compiler suite (Darwin/MacOSX)
@@ -86,7 +87,7 @@ USE_LANGUAGES+=	c
 _USE_PKGSRC_GCC=	yes
 .endif
 
-_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode sunpro xlc hp
+_COMPILERS=		ccc gcc icc ido mipspro mipspro-ucode sunpro xlc hp pcc
 _PSEUDO_COMPILERS=	ccache distcc f2c
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
