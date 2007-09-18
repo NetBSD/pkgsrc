@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:59 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/09/18 20:15:58 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MPFR_BUILDLINK3_MK:=	${MPFR_BUILDLINK3_MK}+
@@ -13,7 +13,6 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}mpfr
 
 .if !empty(MPFR_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.0.3
-BUILDLINK_DEPMETHOD.mpfr?=	build
 BUILDLINK_PKGSRCDIR.mpfr?=	../../math/mpfr
 .endif	# MPFR_BUILDLINK3_MK
 
