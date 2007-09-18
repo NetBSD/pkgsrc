@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/07/13 16:32:32 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2007/09/18 19:23:01 drochner Exp $
 
-DISTNAME=		devhelp-0.15
+DISTNAME=		devhelp-0.16
 CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.15/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.16/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
