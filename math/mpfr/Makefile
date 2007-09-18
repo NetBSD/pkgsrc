@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/03/31 23:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/18 20:15:57 drochner Exp $
 #
 
-DISTNAME=		mpfr-2.2.0
+DISTNAME=		mpfr-2.3.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/mpfr-current/
-
-DIST_SUBDIR=		mpfr-2.2.0-060221
-PATCH_SITES=		http://www.mpfr.org/mpfr-current/
-PATCHFILES=		patches
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
