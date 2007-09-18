@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.3 2006/10/22 11:18:10 wiz Exp $
+$NetBSD: patch-af,v 1.4 2007/09/18 21:20:12 wiz Exp $
 
---- builtins/printf.def.orig	2006-09-18 12:48:42.000000000 +0000
+--- builtins/printf.def.orig	2007-09-18 15:24:09.000000000 +0000
 +++ builtins/printf.def
-@@ -64,6 +64,11 @@ $END
- #include "bashgetopt.h"
- #include "common.h"
+@@ -74,6 +74,11 @@ $END
+ #  undef PRIdMAX
+ #endif
  
 +#if defined (_AIX) && !defined (_AIX51)
 +   /* AIX defines do not work.  Undefine them.  */
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.3 2006/10/22 11:18:10 wiz Exp $
  #if !defined (PRIdMAX)
  #  if HAVE_LONG_LONG
  #    define PRIdMAX	"lld"
-@@ -71,6 +76,13 @@ $END
+@@ -81,6 +86,13 @@ $END
  #    define PRIdMAX	"ld"
  #  endif
  #endif
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.3 2006/10/22 11:18:10 wiz Exp $
  
  #if !defined (errno)
  extern int errno;
-@@ -452,7 +464,11 @@ printf_builtin (list)
+@@ -466,7 +478,11 @@ printf_builtin (list)
  		p = pp = getintmax ();
  		if (p != pp)
  		  {
@@ -40,7 +40,7 @@ $NetBSD: patch-af,v 1.3 2006/10/22 11:18:10 wiz Exp $
  		    PF (f, pp);
  		  }
  		else
-@@ -479,7 +495,11 @@ printf_builtin (list)
+@@ -493,7 +509,11 @@ printf_builtin (list)
  		p = pp = getuintmax ();
  		if (p != pp)
  		  {
