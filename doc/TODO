@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6692 2007/09/18 10:45:41 wiz Exp $
+$NetBSD: TODO,v 1.6693 2007/09/18 21:19:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o at-spi-1.20.0
 	o aterm-1.0.1
-	o atk-1.20.0
 	o autoconvert-0.3.16
 	o autogen-5.9.1
 	o avcheck-0.91
@@ -498,7 +497,6 @@ Suggested package updates
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o gail-1.20.0
 	o gaim-icb-20070203
 	o galculator-1.3
 	o gap-4r4p9
@@ -536,7 +534,6 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade3-3.4.0
 	o glchess-1.0.5
-	o glib2-2.14.1
 	o glibmm-2.14.0
 	o global-5.6
 	o glpk-4.21
@@ -640,7 +637,6 @@ Suggested package updates
 	o imlib2-1.4.0
 	o instiki-0.11pl1
 	o intercal-0.24
-	o intltool-0.36.2
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
