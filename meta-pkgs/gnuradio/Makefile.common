@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/08/12 08:30:01 wulf Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/09/18 06:41:30 wiz Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -22,6 +22,8 @@ BUILD_DEPENDS+=doxygen>=1.5.1:../../devel/doxygen
 
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	24 23
+
+#LICENSE=	gplv3
 
 EGDIR=		${PREFIX}/share/examples/gnuradio/conf.d
 PKG_SYSCONFSUBDIR=gnuradio/conf.d
