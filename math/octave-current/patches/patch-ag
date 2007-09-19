@@ -1,10 +1,19 @@
-$NetBSD: patch-ag,v 1.15 2006/01/06 22:41:48 adam Exp $
+$NetBSD: patch-ag,v 1.16 2007/09/19 18:09:17 drochner Exp $
 
---- src/Makefile.in.orig	2005-11-11 20:48:04.000000000 +0100
+--- src/Makefile.in.orig	2007-09-17 22:47:41.000000000 +0200
 +++ src/Makefile.in
-@@ -291,8 +291,9 @@ libraries: $(LIBRARIES)
+@@ -191,7 +191,7 @@ BUILT_EXTRAS := graphics.h mxarray.h
  
- liboctinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
+ EXTRAS := ov-base-int.cc ov-base-mat.cc ov-base-scalar.cc
+ 
+-EXTRA_OBJECTS := oct-errno.o octave.o builtins.o ops.o
++EXTRA_OBJECTS := oct-errno.o builtins.o ops.o
+ 
+ INCLUDES_FOR_INSTALL := $(INCLUDES) $(EXTRAS) $(BUILT_EXTRAS)
+ 
+@@ -305,8 +305,9 @@ libraries: $(LIBRARIES)
+ 
+ $(LIBPRE)octinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
  	rm -f $@
 -	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $^
 -	$(RANLIB) $@
@@ -12,16 +21,16 @@ $NetBSD: patch-ag,v 1.15 2006/01/06 22:41:48 adam Exp $
 +		$(OBJECTS:.o=.lo) $(XERBLA:.o=.lo) -rpath ${PREFIX}/lib \
 +		-version-info ${version:2.9.%=2:%}
  
- liboctinterp.$(SHLEXT_VER): liboctinterp.$(SHLEXT)
+ $(LIBPRE)octinterp.$(SHLEXT_VER): $(LIBPRE)octinterp.$(SHLEXT)
  	rm -f $@
-@@ -300,12 +301,13 @@ liboctinterp.$(SHLEXT_VER): liboctinterp
+@@ -314,12 +315,13 @@ $(LIBPRE)octinterp.$(SHLEXT_VER): $(LIBP
  
- liboctinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
+ $(LIBPRE)octinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
  	rm -f $@
 -	$(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
 +	${LIBTOOL} --mode=link $(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
  
- stamp-prereq: defaults.h oct-conf.h oct-gperf.h parse.cc lex.cc gplot.cc $(OPT_HANDLERS)
+ stamp-prereq: defaults.h graphics.h oct-conf.h oct-gperf.h parse.cc lex.cc __gnuplot_raw__.cc $(OPT_HANDLERS)
  	touch stamp-prereq
  
  octave$(EXEEXT): stamp-prereq $(LIBRARIES) main.o $(DLD_STATIC_OBJ)
@@ -29,7 +38,7 @@ $NetBSD: patch-ag,v 1.15 2006/01/06 22:41:48 adam Exp $
  	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
  	$(ALL_LDFLAGS) -o $@ \
  	main.o $(DLD_STATIC_OBJ) \
-@@ -392,6 +394,7 @@ install-strip:
+@@ -410,6 +412,7 @@ install-strip:
  install-bin:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
@@ -37,27 +46,23 @@ $NetBSD: patch-ag,v 1.15 2006/01/06 22:41:48 adam Exp $
  	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
  	cd $(DESTDIR)$(bindir) ; $(LN_S) octave-$(version)$(EXEEXT) octave$(EXEEXT)
  .PHONY: install-bin
-@@ -401,9 +404,10 @@ install-oct:
+@@ -420,6 +423,7 @@ install-oct:
  	if [ -n "$(OCT_FILES)" ]; then \
  	  xfiles="$(OCT_FILES)"; \
  	  for f in $$xfiles; do \
 +	    ${LIBTOOL} --mode=install \
  	    $(INSTALL_PROGRAM) $$f $(DESTDIR)$(octfiledir)/$$f; \
  	  done; \
--	  $(srcdir)/mk-pkg-add --prefix $(octfiledir) $(DLD_DEF_FILES) > $(DESTDIR)$(octfiledir)/PKG_ADD
-+	  $(srcdir)/mk-pkg-add --prefix $(octfiledir) $(DLD_DEF_FILES) > $(DESTDIR)$(octfiledir)/PKG_ADD; \
  	fi
- .PHONY: install-oct
- 
-@@ -411,9 +415,8 @@ install-lib:
+@@ -429,9 +433,8 @@ install-lib:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
--	  $(INSTALL_DATA) liboctinterp.$(LIBEXT) \
--	    $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
--	  $(RANLIB) $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
+-	  $(INSTALL_DATA) $(LIBPRE)octinterp.$(LIBEXT) \
+-	    $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
+-	  $(RANLIB) $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(LIBEXT); \
 +	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} liboctinterp.$(LIBEXT) \
-+	    ${PREFIX}/lib; \
++		${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(SHLEXT_VER); \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octinterp.$(SHLEXT_VER); \
