@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.11 2006/07/02 10:43:18 rillig Exp $
+# $NetBSD: module.mk,v 1.12 2007/09/19 17:31:46 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -32,21 +32,18 @@ APACHE_MODULE_SRC?=	*.c
 
 .PHONY: apache-module-build
 apache-module-build:
-	${_PKG_SILENT}${_PKG_DEBUG} \
+	${RUN} \
 	cd ${APACHE_MODULE_SRCDIR} && \
 		${SETENV} PATH=${PATH:Q} \
 		${APXS} ${CPPFLAGS} ${LDFLAGS} \
 			-c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-build: apache-module-build
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 
 .PHONY: apache-module-install
 apache-module-install:
-	${_PKG_SILENT}${PKG_DEBUG}					\
-	cd ${APACHE_MODULE_SRCDIR} && ${APXS} -i ${APACHE_MODULE_NAME}
+	${RUN} cd ${APACHE_MODULE_SRCDIR} && ${APXS} -i ${APACHE_MODULE_NAME}
 
 do-install: apache-module-install
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 
 .endif	# _APACHE_MODULE_MK
