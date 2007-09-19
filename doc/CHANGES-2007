@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2044 2007/09/19 20:11:58 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2045 2007/09/19 21:38:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3771,3 +3771,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/postgresql80-plperl to 8.0.14 [adam 2007-09-19]
 	Updated databases/postgresql80-plpython to 8.0.14 [adam 2007-09-19]
 	Updated databases/postgresql80-pltcl to 8.0.14 [adam 2007-09-19]
+	Updated comms/jpilot to 0.99.9nb1 [wiz 2007-09-19]
