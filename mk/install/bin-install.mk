@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.13 2007/09/19 13:26:19 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.14 2007/09/19 13:32:59 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -67,12 +67,12 @@ locked-su-do-bin-install:
 	${RUN} \
 	rel=${_SHORT_UNAME_R:Q};					\
 	arch=${MACHINE_ARCH:Q};						\
-	pkgpath=${PKGREPOSITORY:Q};					\
+	pkg_path=${PKGREPOSITORY:Q};					\
 	for i in ${BINPKG_SITES}; do					\
-		pkgpath="$$pkgpath;$$i/All";				\
+		pkg_path="$$pkg_path;$$i/All";				\
 	done;								\
-	${STEP_MSG} "Installing ${PKGNAME} from $$pkgpath";		\
-	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
+	${STEP_MSG} "Installing ${PKGNAME} from $$pkg_path";		\
+	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
 		${ECHO} "Fixing recorded cwd...";			\
 		${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp; \
 		${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS; \
@@ -90,13 +90,13 @@ locked-su-do-bin-install:
 	${RUN} \
 	rel=${_SHORT_UNAME_R:Q};					\
 	arch=${MACHINE_ARCH:Q};						\
-	pkgpath=${PKGREPOSITORY:Q};					\
+	pkg_path=${PKGREPOSITORY:Q};					\
 	for i in ${BINPKG_SITES}; do					\
-		pkgpath="$$pkgpath;$$i/All";				\
+		pkg_path="$$pkg_path;$$i/All";				\
 	done;								\
 	pkgpattern=${PKGNAME_REQD:U${PKGNAME}:Q};			\
-	${STEP_MSG} "Installing $$pkgpattern from $$pkgpath";		\
-	if ${SETENV} PKG_PATH="$$pkgpath" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} "$$pkgpattern"; then \
+	${STEP_MSG} "Installing $$pkgpattern from $$pkg_path";		\
+	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} "$$pkgpattern"; then \
 		installed=`${PKG_INFO} -e "$$pkgpattern"`;		\
 		${ECHO} "$$installed successfully installed.";		\
 	fi
