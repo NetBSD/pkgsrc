@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.408 2007/08/13 08:12:49 rillig Exp $
+# $NetBSD: Makefile,v 1.409 2007/09/19 23:34:57 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -107,8 +107,8 @@ SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-pkgview
+SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
-SUBDIR+=	gnome-vfs2
 SUBDIR+=	gnome-vfsmm
 SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnometoaster
