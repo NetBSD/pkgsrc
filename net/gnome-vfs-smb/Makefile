@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/11/24 17:32:08 drochner Exp $
+# $NetBSD: Makefile,v 1.1 2007/09/19 23:34:03 wiz Exp $
 #
 
 GNOME_VFS2_NAME=	smb
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-samba-libs=${BUILDLINK_PREFIX.samba}/lib/samba
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/modules/smb-module.conf ${EGDIR}/modules
 
-.include "../../sysutils/gnome-vfs2/Makefile.common"
+.include "../../sysutils/gnome-vfs/Makefile.common"
 
 .include "../../net/samba/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
