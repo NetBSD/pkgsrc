@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2007/09/10 16:28:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.111 2007/09/19 23:46:06 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -22,7 +22,7 @@ SUBDIR+=	ggrab
 SUBDIR+=	gmencoder
 SUBDIR+=	gmplayer
 SUBDIR+=	gnash
-SUBDIR+=	gnome2-media
+SUBDIR+=	gnome-media
 SUBDIR+=	gopchop
 SUBDIR+=	gst-plugins0.10-bad
 SUBDIR+=	gst-plugins0.10-base

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2007/04/11 18:05:07 drochner Exp $
+$NetBSD: distinfo,v 1.4 2007/09/19 23:46:07 wiz Exp $
 
 SHA1 (gnome-media-2.18.0.tar.bz2) = 954b4d5069e29d60f28f63d3e2b7cd654247948f
 RMD160 (gnome-media-2.18.0.tar.bz2) = 7968d0cd5c00b0b36cbdc9c6c0eb1e5a35936e5f
