@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.16 2007/09/19 08:32:13 rillig Exp $
+# $NetBSD: patch.mk,v 1.17 2007/09/19 08:37:37 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -44,9 +44,9 @@
 #
 
 _VARGROUPS+=		patch
-_USER_VARS.patch=	PATCH_DEBUG PATCH_FUZZ_FACTOR
+_USER_VARS.patch=	PATCH_DEBUG PATCH_FUZZ_FACTOR LOCALPATCHES
 _PKG_VARS.patch=	PATCH_STRIP PATCH_ARGS PATCH_DIST_STRIP		\
-			PATCH_DIST_ARGS PATCH_DIST_CAT
+			PATCH_DIST_ARGS PATCH_DIST_CAT PATCHDIR
 _SYS_VARS.patch=	# none
 
 _PATCH_APPLIED_FILE=	${WRKDIR}/.patch
