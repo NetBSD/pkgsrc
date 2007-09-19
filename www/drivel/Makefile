@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2007/06/05 05:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/19 23:13:33 wiz Exp $
 #
 
 DISTNAME=	drivel-2.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drivel/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +32,7 @@ BUILDLINK_API_DEPENDS.curl+=	curl>=7.14.0nb1
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

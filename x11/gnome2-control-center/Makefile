@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2007/07/25 18:02:32 rillig Exp $
+# $NetBSD: Makefile,v 1.81 2007/09/19 23:13:36 wiz Exp $
 #
 
 DISTNAME=	control-center-2.18.1
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -73,7 +73,7 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
