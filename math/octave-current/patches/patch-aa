@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.16 2006/01/06 22:41:48 adam Exp $
+$NetBSD: patch-aa,v 1.17 2007/09/19 18:09:16 drochner Exp $
 
---- configure.orig	2005-11-11 20:57:06.000000000 +0100
+--- configure.orig	2007-09-17 22:49:11.000000000 +0200
 +++ configure
-@@ -10554,7 +10554,7 @@ if $have_fortran_compiler; then
+@@ -12339,7 +12339,7 @@ if $have_fortran_compiler; then
  %.c : %.f
  
  %.o : %.f
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.16 2006/01/06 22:41:48 adam Exp $
  
  pic/%.o : %.f
  	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
-@@ -14680,7 +14680,7 @@ TEMPLATE_AR='$(AR)'
- TEMPLATE_ARFLAGS="$ARFLAGS"
+@@ -16736,7 +16736,7 @@ OCTAVE_DLL_DEFS=
+ OCTINTERP_DLL_DEFS=
  library_path_var=LD_LIBRARY_PATH
  case "$canonical_host_type" in
--  *-*-386bsd* | *-*-openbsd* | *-*-netbsd*)
-+  *-*-386bsd* | *-*-openbsd* )
+-  *-*-386bsd* | *-*-netbsd*)
++  *-*-386bsd*)
      SH_LD=ld
      SH_LDFLAGS=-Bshareable
    ;;
-@@ -24838,19 +24838,19 @@ case "$canonical_host_type" in
+@@ -27024,19 +27024,19 @@ case "$canonical_host_type" in
      cat << \EOF > $bsd_gcc_kluge_targets_frag
  
  lex.o: lex.cc
@@ -45,14 +45,3 @@ $NetBSD: patch-aa,v 1.16 2006/01/06 22:41:48 adam Exp $
  
  EOF
    ;;
-@@ -24978,9 +24978,9 @@ then
-   rm -rf "$tmp"
- 
- fi
-+SED=$octave_cv_path_sed
- 
- fi
--SED=$octave_cv_path_sed
- 
- echo "$as_me:$LINENO: result: $SED" >&5
- echo "${ECHO_T}$SED" >&6
