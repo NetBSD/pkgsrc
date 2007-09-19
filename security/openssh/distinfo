@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.65 2007/09/19 09:08:05 taca Exp $
+$NetBSD: distinfo,v 1.66 2007/09/19 13:42:02 taca Exp $
 
-SHA1 (openssh-4.7p1-hpn12v18.diff.gz) = 8ab61d12b5bcf70d0ffe9cb1d157136d20ebb22c
-RMD160 (openssh-4.7p1-hpn12v18.diff.gz) = 7b35eb1a3f6f3b703ac7f155f620bff63a900a0e
-Size (openssh-4.7p1-hpn12v18.diff.gz) = 16094 bytes
-SHA1 (openssh-4.7p1.tar.gz) = 58357db9e64ba6382bef3d73d1d386fcdc0508f4
-RMD160 (openssh-4.7p1.tar.gz) = b828e79d3d1a931cb77651ec7d7276cf3ba22d90
-Size (openssh-4.7p1.tar.gz) = 991119 bytes
+SHA1 (openssh-4.7.1-20070919/openssh-4.7p1-hpn12v18.diff.gz) = 8ab61d12b5bcf70d0ffe9cb1d157136d20ebb22c
+RMD160 (openssh-4.7.1-20070919/openssh-4.7p1-hpn12v18.diff.gz) = 7b35eb1a3f6f3b703ac7f155f620bff63a900a0e
+Size (openssh-4.7.1-20070919/openssh-4.7p1-hpn12v18.diff.gz) = 16094 bytes
+SHA1 (openssh-4.7.1-20070919/openssh-4.7p1.tar.gz) = 58357db9e64ba6382bef3d73d1d386fcdc0508f4
+RMD160 (openssh-4.7.1-20070919/openssh-4.7p1.tar.gz) = b828e79d3d1a931cb77651ec7d7276cf3ba22d90
+Size (openssh-4.7.1-20070919/openssh-4.7p1.tar.gz) = 991119 bytes
 SHA1 (patch-aa) = 8b7a16e9a63cfff3b73d70b9cebb6627b96396e0
 SHA1 (patch-ab) = a105c238c8dc774ed6992791b131da56824869e9
 SHA1 (patch-ac) = dfb054ef02fbb5d206f6adaf82944f16da20eaf9
