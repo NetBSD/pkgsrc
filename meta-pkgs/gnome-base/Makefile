@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/09/19 23:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/19 23:57:00 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -75,7 +75,7 @@ DEPENDS+=	gnome-applets>=2.18.0:../../x11/gnome2-applets
 DEPENDS+=	gnome-themes>=2.18.1:../../x11/gnome-themes
 DEPENDS+=	gnome-backgrounds>=2.15.92:../../graphics/gnome-backgrounds
 DEPENDS+=	vte>=0.16.1:../../x11/vte
-DEPENDS+=	gnome2-terminal>=2.18.0:../../x11/gnome2-terminal
+DEPENDS+=	gnome-terminal>=2.18.0:../../x11/gnome-terminal
 DEPENDS+=	gnome-session>=2.18.0:../../x11/gnome-session
 
 EXTRACT_ONLY=	# empty

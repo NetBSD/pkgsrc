@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/03/30 21:18:25 jmmv Exp $
+$NetBSD: patch-ab,v 1.1 2007/09/19 23:57:05 wiz Exp $
 
 --- po/ga.po.orig	2005-09-06 14:30:48.000000000 +0200
 +++ po/ga.po

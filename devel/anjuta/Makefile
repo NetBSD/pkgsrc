@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/09/19 23:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2007/09/19 23:57:00 wiz Exp $
 
 DISTNAME=	anjuta-2.0.2
 PKGREVISION=	6
@@ -13,7 +13,7 @@ DEPENDS+=	autogen-[0-9]*:../../devel/autogen
 DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	glade>=2.6.0:../../devel/glade
-DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
+DEPENDS+=	gnome-terminal>=2.4.2:../../x11/gnome-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
