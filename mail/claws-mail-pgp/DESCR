@@ -1,4 +1,2 @@
-Using Dillo, a very light web browser, the dillo-viewer plugin allows
-Sylpheed-claws to render HTML attachments.  Note that it is done in a somewhat
-secure way, by passing the -s argument to Dillo, which prevents it from making
-any Internet connection.
+This is a meta-package for the three different pieces that
+comprise the Claws-Mail PGP plug-in.
