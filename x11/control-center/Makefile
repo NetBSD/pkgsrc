@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2007/09/19 23:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/19 23:53:48 wiz Exp $
 #
 
 DISTNAME=	control-center-2.18.1
-PKGNAME=	gnome2-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.18/}
@@ -17,6 +16,8 @@ USE_DIRS+=		gnome2-1.6
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
+
+CONFLICTS+=		gnome2-control-center-[0-9]*
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-hal
@@ -40,7 +41,7 @@ GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF2_SCHEMAS+=	themus.schemas
 GCONF2_SCHEMAS+=	fontilus.schemas
 
-EGDIR=			${PREFIX}/share/examples/gnome2-control-center
+EGDIR=			${PREFIX}/share/examples/control-center
 CONF_FILES=		${EGDIR}/theme-method.conf \
 			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/theme-method.conf
 CONF_FILES+=		${EGDIR}/font-method.conf \
