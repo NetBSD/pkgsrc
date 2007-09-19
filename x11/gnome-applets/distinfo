@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2007/09/17 16:21:55 drochner Exp $
+$NetBSD: distinfo,v 1.10 2007/09/20 00:00:02 wiz Exp $
 
 SHA1 (gnome-applets-2.18.0.tar.bz2) = 7bec1f642e827634f74859e81e1502799d3c05a2
 RMD160 (gnome-applets-2.18.0.tar.bz2) = c9a18c717fd01ede9476a70784a8522968e52211

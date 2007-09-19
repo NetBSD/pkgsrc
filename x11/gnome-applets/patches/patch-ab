@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2005/10/12 21:59:10 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2007/09/20 00:00:02 wiz Exp $
 
 --- battstat/properties.c.orig	2005-07-09 07:48:58.000000000 +0200
 +++ battstat/properties.c

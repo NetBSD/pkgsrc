@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/05/31 13:26:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/09/20 00:00:00 wiz Exp $
 ${CPUFREQ}bin/cpufreq-selector
 bin/invest-chart
 include/libgweather/gweather-gconf.h

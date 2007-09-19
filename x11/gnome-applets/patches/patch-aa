@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2005/03/22 16:19:42 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2007/09/20 00:00:02 wiz Exp $
 
 --- battstat/sounds/Makefile.in.orig	2005-03-07 15:02:46.000000000 +0100
 +++ battstat/sounds/Makefile.in
