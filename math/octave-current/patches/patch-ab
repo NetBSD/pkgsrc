@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2005/12/08 14:35:01 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2007/09/19 18:09:16 drochner Exp $
 
---- src/DLD-FUNCTIONS/__glpk__.cc.orig	2005-05-18 12:21:01.000000000 +0000
+--- src/DLD-FUNCTIONS/__glpk__.cc.orig	2007-04-04 05:22:17.000000000 +0200
 +++ src/DLD-FUNCTIONS/__glpk__.cc
 @@ -26,6 +26,7 @@ Software Foundation, Inc., 51 Franklin S
  #endif
@@ -20,4 +20,4 @@ $NetBSD: patch-ab,v 1.5 2005/12/08 14:35:01 joerg Exp $
 +
  #if defined (HAVE_GLPK)
  
- extern "C" {
+ extern "C"

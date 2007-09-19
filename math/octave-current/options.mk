@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.3 2007/09/19 18:09:16 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.octave
-PKG_SUPPORTED_OPTIONS=	glpk hdf5
-PKG_SUGGESTED_OPTIONS=	glpk hdf5
+PKG_SUPPORTED_OPTIONS=	glpk hdf5 pcre qhull
+PKG_SUGGESTED_OPTIONS=	glpk hdf5 pcre qhull
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,4 +16,16 @@ CONFIGURE_ARGS+=	--without-glpk
 .include "../../devel/hdf5/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-hdf5
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre)
+.include "../../devel/pcre/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-pcre
+.endif
+
+.if !empty(PKG_OPTIONS:Mqhull)
+.include "../../math/qhull/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-qhull
 .endif
