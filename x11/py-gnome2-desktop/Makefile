@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/09/19 23:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/19 23:46:05 wiz Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.18.0
@@ -30,7 +30,7 @@ PLIST_SUBST+=	NAUTILUSBURN="@comment "
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../multimedia/totem/buildlink3.mk"
-.include "../../multimedia/gnome2-media/buildlink3.mk"
+.include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
