@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 22:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/19 06:46:52 tron Exp $
 
 DISTNAME=	dtxsession-1.0
 CATEGORIES=	x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sun.com/software/solaris/cde/
 COMMENT=	Launch a X11 session from CDE login service
 
