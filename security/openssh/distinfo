@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.64 2007/09/07 10:41:11 taca Exp $
+$NetBSD: distinfo,v 1.65 2007/09/19 09:08:05 taca Exp $
 
-SHA1 (openssh-4.7p1-hpn12v18.diff.gz) = 6083da9c1d537a2a3bc7f1fa00a99142407a063e
-RMD160 (openssh-4.7p1-hpn12v18.diff.gz) = fec2096269a16e05667f931a073fd13f096742b5
+SHA1 (openssh-4.7p1-hpn12v18.diff.gz) = 8ab61d12b5bcf70d0ffe9cb1d157136d20ebb22c
+RMD160 (openssh-4.7p1-hpn12v18.diff.gz) = 7b35eb1a3f6f3b703ac7f155f620bff63a900a0e
 Size (openssh-4.7p1-hpn12v18.diff.gz) = 16094 bytes
 SHA1 (openssh-4.7p1.tar.gz) = 58357db9e64ba6382bef3d73d1d386fcdc0508f4
 RMD160 (openssh-4.7p1.tar.gz) = b828e79d3d1a931cb77651ec7d7276cf3ba22d90
