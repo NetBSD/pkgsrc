@@ -1,24 +1,24 @@
-# $NetBSD: buildlink3.mk,v 1.28 2007/06/05 05:36:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2007/09/19 23:13:29 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNOME_VFS2_BUILDLINK3_MK:=	${GNOME_VFS2_BUILDLINK3_MK}+
+GNOME_VFS_BUILDLINK3_MK:=	${GNOME_VFS_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnome-vfs2
+BUILDLINK_DEPENDS+=	gnome-vfs
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-vfs2}
-BUILDLINK_PACKAGES+=	gnome-vfs2
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-vfs2
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-vfs}
+BUILDLINK_PACKAGES+=	gnome-vfs
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-vfs
 
-.if !empty(GNOME_VFS2_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.8.0
-BUILDLINK_ABI_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.18.1nb2
-BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
+.if !empty(GNOME_VFS_BUILDLINK3_MK:M+)
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.8.0
+BUILDLINK_ABI_DEPENDS.gnome-vfs+=	gnome-vfs>=2.18.1nb2
+BUILDLINK_PKGSRCDIR.gnome-vfs?=		../../sysutils/gnome-vfs
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules/ \
-				{ print "@comment in gnome-vfs2: " $$0; next; }
-.endif	# GNOME_VFS2_BUILDLINK3_MK
+				{ print "@comment in gnome-vfs: " $$0; next; }
+.endif	# GNOME_VFS_BUILDLINK3_MK
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

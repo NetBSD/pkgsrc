@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2007/07/13 17:25:52 drochner Exp $
+# $NetBSD: Makefile,v 1.81 2007/09/19 23:13:31 wiz Exp $
 #
 
 DISTNAME=		nautilus-2.18.3
+PKGREVISION=		1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +25,7 @@ GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
 BUILDLINK_API_DEPENDS.eel2+=	eel2>=2.15.91
 BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.27
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.14.2
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.14.2
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 
@@ -46,7 +47,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

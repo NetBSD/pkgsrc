@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2007/06/05 05:37:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2007/09/19 23:13:35 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_PANEL_BUILDLINK3_MK:=	${GNOME_PANEL_BUILDLINK3_MK}+
@@ -27,7 +27,7 @@ BUILDLINK_PKGSRCDIR.gnome-panel?=	../../x11/gnome-panel
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

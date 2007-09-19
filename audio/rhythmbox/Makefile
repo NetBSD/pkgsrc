@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2007/06/26 14:47:56 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/19 23:13:12 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-0.9.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -43,7 +43,7 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
