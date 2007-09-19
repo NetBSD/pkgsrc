@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2007/09/19 23:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2007/09/19 23:57:04 wiz Exp $
 #
 
 DISTNAME=		gnome-terminal-2.18.1
-PKGNAME=		${DISTNAME:S/-/2-/}
 PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.18/}
@@ -12,7 +11,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
 
-CONFLICTS=		gnome-core-[0-9]*
+CONFLICTS=		gnome-core-[0-9]* gnome2-terminal-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
