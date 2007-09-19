@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.183 2007/09/07 22:12:21 jlam Exp $
+# $NetBSD: Makefile,v 1.184 2007/09/19 13:42:01 taca Exp $
 
 DISTNAME=		openssh-4.7p1
 PKGNAME=		openssh-4.7.1
+PKGREVISION=		1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -12,6 +13,7 @@ MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
+DIST_SUBDIR=		${PKGBASE}-4.7.1-20070919
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openssh.com/
