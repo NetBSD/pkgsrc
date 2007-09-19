@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2007/09/19 23:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2007/09/19 23:53:47 wiz Exp $
 #
 
 DISTNAME=		gnome-session-2.18.3
@@ -50,7 +50,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
-.include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
