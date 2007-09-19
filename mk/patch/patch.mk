@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.15 2007/08/16 16:29:27 jlam Exp $
+# $NetBSD: patch.mk,v 1.16 2007/09/19 08:32:13 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -42,6 +42,12 @@
 #	fuzz to accept when applying pkgsrc patches.  See the patch(1)
 #	man page for more details.  Defaults to "-F0" for zero fuzz.
 #
+
+_VARGROUPS+=		patch
+_USER_VARS.patch=	PATCH_DEBUG PATCH_FUZZ_FACTOR
+_PKG_VARS.patch=	PATCH_STRIP PATCH_ARGS PATCH_DIST_STRIP		\
+			PATCH_DIST_ARGS PATCH_DIST_CAT
+_SYS_VARS.patch=	# none
 
 _PATCH_APPLIED_FILE=	${WRKDIR}/.patch
 _COOKIE.patch=		${WRKDIR}/.patch_done
