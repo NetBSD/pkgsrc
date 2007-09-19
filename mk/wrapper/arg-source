@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.14 2007/09/11 08:33:11 rillig Exp $
+# $NetBSD: arg-source,v 1.15 2007/09/19 13:08:19 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,6 @@ while $test $# -gt 0; do
 		case "$nextarg" in
 		-*) msg_log $wrapperlog "WARNING: [arg-source] An $arg option must not be followed by another option, $nextarg." ;;
 		esac
-		shquote "$nextarg"; nextarg="$shquoted"
 		append_queue argbuf "$arg$nextarg"
 		$debug_log $wrapperlog "    (arg-source) push: $arg$nextarg"
 		;;
@@ -103,7 +102,6 @@ while $test $# -gt 0; do
 		save_IFS="${IFS}"; IFS=":"
 		for dir in $list; do
 			IFS="${save_IFS}"
-			shquote "$dir"; dir="$shquoted"
 			append_queue argbuf "$R$dir"
 			$debug_log $wrapperlog "    (arg-source) push: $R$dir"
 		done
@@ -128,14 +126,12 @@ while $test $# -gt 0; do
 			save_IFS="${IFS}"; IFS=":"
 			for dir in $nextarg; do
 				IFS="${save_IFS}"
-				shquote "$dir"; dir="$shquoted"
 				append_queue argbuf "$R$dir"
 				$debug_log $wrapperlog "    (arg-source) push: $R$dir"
 			done
 			IFS="${save_IFS}"
 			;;
 		*)
-			shquote "$nextarg"; nextarg="$shquoted"
 			append_queue argbuf "$R$nextarg"
 			$debug_log $wrapperlog "    (arg-source) push: $R$nextarg"
 			;;
@@ -153,7 +149,6 @@ while $test $# -gt 0; do
 			$debug_log $wrapperlog "    (arg-source) push: $nextarg"
 			;;
 		*)
-			shquote "$nextarg"; nextarg="$shquoted"
 			append_queue argbuf "-Wl,$nextarg"
 			$debug_log $wrapperlog "    (arg-source) push: -Wl,$nextarg"
 			;;
