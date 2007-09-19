@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2007/09/19 23:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2007/09/19 23:53:48 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
@@ -105,11 +105,11 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/libxklavier/buildlink3.mk"
-.include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libxklavier/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"

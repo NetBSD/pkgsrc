@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/04/17 15:59:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/09/19 23:53:49 wiz Exp $
 bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
@@ -115,9 +115,9 @@ share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/desktop-directories/font-method.directory
 share/desktop-directories/gnomecc.directory
 share/desktop-directories/theme-method.directory
-share/examples/gnome2-control-center/font-method.conf
-share/examples/gnome2-control-center/gnomecc.menu
-share/examples/gnome2-control-center/theme-method.conf
+share/examples/control-center/font-method.conf
+share/examples/control-center/gnomecc.menu
+share/examples/control-center/theme-method.conf
 share/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas
@@ -263,7 +263,7 @@ share/pixmaps/display-capplet.png
 @dirrm share/gnome/cursor-fonts
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/examples/gnome2-control-center
+@dirrm share/examples/control-center
 @comment in xdg-dirs: @dirrm share/desktop-directories
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm share/control-center/xrdb

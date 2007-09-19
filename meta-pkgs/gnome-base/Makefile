@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/09/19 23:13:22 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/19 23:53:47 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -68,7 +68,7 @@ DEPENDS+=	gst-plugins0.10-good>=0.10.5:../../multimedia/gst-plugins0.10-good
 DEPENDS+=	gst-plugins0.10-esound>=0.10.5:../../audio/gst-plugins0.10-esound
 DEPENDS+=	gst-plugins0.10-oss>=0.10.5:../../audio/gst-plugins0.10-oss
 DEPENDS+=	evolution-data-server>=1.10.1:../../mail/evolution-data-server
-DEPENDS+=	gnome2-control-center>=2.18.1:../../x11/gnome2-control-center
+DEPENDS+=	control-center>=2.18.1:../../x11/control-center
 DEPENDS+=	gnome-panel>=2.18.1:../../x11/gnome-panel
 DEPENDS+=	gucharmap>=1.10.0:../../fonts/gucharmap
 DEPENDS+=	gnome-applets>=2.18.0:../../x11/gnome2-applets
