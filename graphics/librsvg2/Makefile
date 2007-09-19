@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2007/08/30 15:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2007/09/19 23:13:20 wiz Exp $
 
 DISTNAME=	librsvg-2.18.2
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -46,7 +47,7 @@ post-install:
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/modules.mk"
