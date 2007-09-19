@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2005/08/12 15:59:22 jmmv Exp $
+$NetBSD: patch-af,v 1.4 2007/09/19 23:53:51 wiz Exp $
 
 --- capplets/background/Makefile.in.orig	2005-04-04 12:09:16.000000000 +0200
 +++ capplets/background/Makefile.in

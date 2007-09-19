@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2007/09/14 00:28:54 simonb Exp $
+# $NetBSD: Makefile,v 1.522 2007/09/19 23:53:47 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -25,6 +25,7 @@ SUBDIR+=	bitmap
 SUBDIR+=	blt
 SUBDIR+=	bwidget
 SUBDIR+=	compositeproto
+SUBDIR+=	control-center
 SUBDIR+=	damageproto
 SUBDIR+=	desklaunch
 SUBDIR+=	deskmenu
@@ -60,7 +61,6 @@ SUBDIR+=	gnome-session
 SUBDIR+=	gnome-themes
 SUBDIR+=	gnome-themes-extras
 SUBDIR+=	gnome2-applets
-SUBDIR+=	gnome2-control-center
 SUBDIR+=	gnome2-terminal
 SUBDIR+=	gnopernicus
 SUBDIR+=	gnustep-back
