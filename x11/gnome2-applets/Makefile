@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2007/06/05 05:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2007/09/19 23:13:36 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -79,7 +79,7 @@ BUILDLINK_API_DEPENDS.libglade2+=		libglade2>=2.4.0
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.2
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.2
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.16.0
-BUILDLINK_API_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.16.0
+BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.16.0
 BUILDLINK_API_DEPENDS.gnome-panel+=		gnome-panel>=2.13.4
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 
@@ -100,7 +100,7 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

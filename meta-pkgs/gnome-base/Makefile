@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/04/17 17:48:47 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/19 23:13:22 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -35,9 +35,9 @@ DEPENDS+=	GConf2-ui>=2.18.0:../../devel/GConf2-ui
 DEPENDS+=	libbonobo>=2.18.0:../../devel/libbonobo
 DEPENDS+=	libaudiofile>=0.2.6:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.36:../../audio/esound
-DEPENDS+=	gnome-vfs2>=2.18.1:../../sysutils/gnome-vfs2
-DEPENDS+=	gnome-vfs2-cdda>=2.18.1:../../audio/gnome-vfs2-cdda
-DEPENDS+=	gnome-vfs2-smb>=2.18.1:../../net/gnome-vfs2-smb
+DEPENDS+=	gnome-vfs>=2.18.1:../../sysutils/gnome-vfs
+DEPENDS+=	gnome-vfs-cdda>=2.18.1:../../audio/gnome-vfs-cdda
+DEPENDS+=	gnome-vfs-smb>=2.18.1:../../net/gnome-vfs-smb
 DEPENDS+=	libgnome>=2.18.0:../../devel/libgnome
 DEPENDS+=	libglade2>=2.6.0:../../devel/libglade2
 DEPENDS+=	libart2>=2.3.17:../../graphics/libart2

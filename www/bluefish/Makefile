@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2007/06/05 05:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2007/09/19 23:13:32 wiz Exp $
 
 DISTNAME=	bluefish-1.0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://bluefish.mrball.net/stable/source/               \
 		ftp://ftp.ratisbona.com/pub/bluefish/stable/source/     \
@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

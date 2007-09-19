@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2007/07/12 19:38:18 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2007/09/19 23:13:34 wiz Exp $
 #
 
 DISTNAME=		gnome-desktop-2.18.3
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,7 +31,7 @@ post-install:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2007/06/05 05:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2007/09/19 23:13:21 wiz Exp $
 
 DISTNAME=		evolution-2.10.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.10/}
 EXTRACT_SUFX=		.tar.bz2
@@ -132,7 +132,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

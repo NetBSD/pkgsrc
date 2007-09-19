@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2007/06/05 05:37:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2007/09/19 23:13:37 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME2_CONTROL_CENTER_BUILDLINK3_MK:=	${GNOME2_CONTROL_CENTER_BUILDLINK3_MK}+
@@ -25,7 +25,7 @@ BUILDLINK_PKGSRCDIR.gnome2-control-center?=	../../x11/gnome2-control-center
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"

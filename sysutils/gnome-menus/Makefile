@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/07/12 19:30:36 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/19 23:13:28 wiz Exp $
 #
 
 DISTNAME=	gnome-menus-2.18.3
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,10 +40,10 @@ SUBST_SED.paths=	-e 's|/usr/|${PREFIX}/|g'
 SUBST_SED.paths+=	-e 's|/etc/X11/applnk|${PREFIX}/share/kde/applnk/|g'
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

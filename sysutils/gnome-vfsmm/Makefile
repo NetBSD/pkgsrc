@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/06/05 05:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/19 23:13:30 wiz Exp $
 
 DISTNAME=	gnome-vfsmm-2.18.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-vfsmm/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,5 +18,5 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgnomevfs/gnome-vfsmm-2.6.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
