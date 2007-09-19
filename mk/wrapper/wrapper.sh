@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.18 2007/05/19 17:25:56 rillig Exp $
+# $NetBSD: wrapper.sh,v 1.19 2007/09/19 13:02:15 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -85,7 +85,8 @@ yes)	debug_log="msg_log" ;;
 *)	debug_log=":" ;;
 esac
 
-msg_log "$wrapperlog" "[*] $0 $*"
+qcmd="$0"; for arg in ${1+"$@"}; do shquote "$arg"; qcmd="$qcmd $shquoted"; done
+msg_log "$wrapperlog" "[*] $0 $qcmd"
 
 cmd="@WRAPPEE@"
 case "$*" in
@@ -127,7 +128,7 @@ cmd="$cmd $libs"
 
 @_WRAP_ENV@
 
-eval "msg_log \$wrapperlog \"<.>\" $cmd"
+msg_log $wrapperlog "<.>" "$cmd"
 wrapper_result=0
 eval "$cmd" || wrapper_result="$?"
 
