@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2007/04/11 17:48:10 drochner Exp $
+$NetBSD: distinfo,v 1.4 2007/09/19 23:53:49 wiz Exp $
 
 SHA1 (control-center-2.18.1.tar.bz2) = 4325caeb94de9b77cd57fc210f1ba623458a2aa8
 RMD160 (control-center-2.18.1.tar.bz2) = f3980d2348a699f646d87ec27c61f27057594302

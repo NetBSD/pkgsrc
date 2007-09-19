@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2006/09/24 20:00:14 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2007/09/19 23:53:50 wiz Exp $
 
 --- capplets/about-me/gnome-about-me.c.orig	2006-09-24 20:42:14.000000000 +0000
 +++ capplets/about-me/gnome-about-me.c
