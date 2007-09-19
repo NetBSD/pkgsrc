@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2007/06/05 05:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2007/09/19 23:13:15 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.18.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -66,7 +66,7 @@ BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"

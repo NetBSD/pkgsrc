@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2007/09/03 16:11:06 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2007/09/19 23:13:19 wiz Exp $
 
 DISTNAME=		gthumb-2.10.6
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.10/}
 
@@ -35,7 +36,7 @@ BUILDLINK_API_DEPENDS.libglade2+=   libglade2>=2.4.0
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

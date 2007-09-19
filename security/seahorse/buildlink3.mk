@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/06/05 05:37:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/09/19 23:13:27 wiz Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -38,7 +38,7 @@ BUILDLINK_PKGSRCDIR.seahorse?=	../../security/seahorse
 #.include "../../devel/libgnomeui/buildlink3.mk"
 #.include "../../net/libsoup-devel/buildlink3.mk"
 #.include "../../security/gpgme/buildlink3.mk"
-#.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 #.include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2007/07/13 16:24:35 drochner Exp $
+# $NetBSD: Makefile,v 1.75 2007/09/19 23:13:19 wiz Exp $
 #
 
 DISTNAME=	eog-2.18.2
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +39,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
