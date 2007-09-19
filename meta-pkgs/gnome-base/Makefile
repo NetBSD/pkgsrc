@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/09/19 23:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/09/19 23:59:55 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -71,7 +71,7 @@ DEPENDS+=	evolution-data-server>=1.10.1:../../mail/evolution-data-server
 DEPENDS+=	control-center>=2.18.1:../../x11/control-center
 DEPENDS+=	gnome-panel>=2.18.1:../../x11/gnome-panel
 DEPENDS+=	gucharmap>=1.10.0:../../fonts/gucharmap
-DEPENDS+=	gnome-applets>=2.18.0:../../x11/gnome2-applets
+DEPENDS+=	gnome-applets>=2.18.0:../../x11/gnome-applets
 DEPENDS+=	gnome-themes>=2.18.1:../../x11/gnome-themes
 DEPENDS+=	gnome-backgrounds>=2.15.92:../../graphics/gnome-backgrounds
 DEPENDS+=	vte>=0.16.1:../../x11/vte
