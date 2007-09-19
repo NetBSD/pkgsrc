@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.44 2007/04/29 13:09:27 tnn Exp $
+# $NetBSD: Makefile.common,v 1.45 2007/09/19 23:13:28 wiz Exp $
 #
 
-GNOME_VFS2_VERSION=	2.18.1
+GNOME_VFS_VERSION=	2.18.1
 
-DISTNAME=		gnome-vfs-${GNOME_VFS2_VERSION}
-PKGNAME=		${DISTNAME:S/vfs/vfs2/}
+DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.18/}
@@ -14,8 +13,8 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Virtual File System (v2)
 
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/gnome-vfs2/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs2/patches
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/gnome-vfs/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs/patches
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -59,43 +58,45 @@ post-wrapper:
 
 #
 # The following stuff is to allow easy building of modules distributed within
-# gnome-vfs2 as independent packages.
+# gnome-vfs as independent packages.
 #
-# GNOME_VFS2_NAME - Name of the module beeing built.  Will be added to the
+# GNOME_VFS_NAME - Name of the module beeing built.  Will be added to the
 #                   package name, and also used as the library name.
-# GNOME_VFS2_FLAG - Base name of the flag passed to configure to enable the
+# GNOME_VFS_FLAG - Base name of the flag passed to configure to enable the
 #                   module.
 #
-.if defined(GNOME_VFS2_NAME) && !empty(GNOME_VFS2_NAME)
-GNOME_VFS2_FLAG?=	${GNOME_VFS2_NAME}
+.if defined(GNOME_VFS_NAME) && !empty(GNOME_VFS_NAME)
+GNOME_VFS_FLAG?=	${GNOME_VFS_NAME}
 
-PKGNAME:=		${PKGNAME:S/gnome-vfs2/gnome-vfs2-${GNOME_VFS2_NAME}/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS2_FLAG}/--enable-${GNOME_VFS2_FLAG}/}
-COMMENT+=		- ${GNOME_VFS2_NAME} plugin
+PKGNAME:=		${PKGNAME:S/gnome-vfs/gnome-vfs-${GNOME_VFS_NAME}/}
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS_FLAG}/--enable-${GNOME_VFS_FLAG}/}
+COMMENT+=		- ${GNOME_VFS_NAME} plugin
 
-BUILD_TARGET=		lib${GNOME_VFS2_NAME}.la
+CONFLICTS+=		gnome-vfs2-[0-9]*
+
+BUILD_TARGET=		lib${GNOME_VFS_NAME}.la
 BUILD_DIRS=		${WRKSRC}/modules
 
-# Fix paths to already installed libraries (by the gnome-vfs2 package).
+# Fix paths to already installed libraries (by the gnome-vfs package).
 SUBST_CLASSES+=		libs
 SUBST_MESSAGE.libs=	Fixing path to dependent libraries.
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	modules/Makefile.in
-SUBST_SED.libs=		-e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
+SUBST_SED.libs=		-e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs}/lib/libgnomevfs-2.la|g'
 
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=${GNOME_VFS2_VERSION}
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=${GNOME_VFS_VERSION}
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules$$/ \
-				{ print "@comment in gnome-vfs2: " $$0; next; }
+				{ print "@comment in gnome-vfs: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0\/modules$$/ \
-				{ print "@comment in gnome-vfs2: " $$0; next; }
+				{ print "@comment in gnome-vfs: " $$0; next; }
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gnome-vfs-2.0/modules
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=install \
-		${INSTALL_DATA} lib${GNOME_VFS2_NAME}.la \
+		${INSTALL_DATA} lib${GNOME_VFS_NAME}.la \
 			${PREFIX}/lib/gnome-vfs-2.0/modules
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=finish \
 			${PREFIX}/lib/gnome-vfs-2.0/modules

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2007/09/03 09:51:55 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2007/09/19 23:13:38 wiz Exp $
 #
 
 DISTNAME=	gnome-python-2.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,8 +34,8 @@ BUILDLINK_API_DEPENDS.GConf2+=	GConf2>=2.11.1
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pyorbit+=	${PYPKGPREFIX}-ORBit>=2.0.1
 .include "../../net/py-ORBit/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.9.3
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.9.3
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.6.2
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
