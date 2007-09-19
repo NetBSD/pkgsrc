@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/15 18:15:20 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/19 06:20:07 tron Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.katharineosborne.com/wmnet/
 # http://glitchy.net/code/wmnet/wmnet-1.06-ul_fix.diff
 # http://mail.afterstep.org/pipermail/as-users/2004-December/001457.html
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.katharineosborne.com/wmnet/
 COMMENT=	Dockable network monitor
 
