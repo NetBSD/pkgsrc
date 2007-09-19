@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2007/09/19 23:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2007/09/20 00:00:00 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome2-applets
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-applets
 PKG_SUPPORTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
 
