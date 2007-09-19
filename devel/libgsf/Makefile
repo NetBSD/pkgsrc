@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2007/09/08 08:14:27 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/09/19 23:13:17 wiz Exp $
 #
 
 DISTNAME=	libgsf-1.14.7
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/1.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +32,7 @@ GCONF2_SCHEMAS=	gsf-office-thumbnailer.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2007/06/15 18:47:22 drochner Exp $
+# $NetBSD: Makefile.common,v 1.32 2007/09/19 23:13:26 wiz Exp $
 #
 
 DISTNAME=	totem-2.18.2
@@ -28,7 +28,7 @@ GCONF2_SCHEMAS+=	totem-video-thumbnail.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
-BUILDLINK_API_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.8.2
+BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.8.2
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 
 .include "../../devel/GConf2/schemas.mk"
@@ -39,7 +39,7 @@ BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
