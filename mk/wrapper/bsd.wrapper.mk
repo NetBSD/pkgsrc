@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.71 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.72 2007/09/20 18:17:18 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -425,6 +425,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAP_TRANSFORM.${_wrappee_}}
 	${RUN} 								\
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
+	if [ -x "$$wrapper" ]; then ${ECHO_WRAPPER_MSG} "=> $$wrapper already exists. Skipping"; exit 0; fi; \
 	${ECHO_WRAPPER_MSG} "=> Creating ${_wrappee_} wrapper: $$wrapper"; \
         gen_wrapper=yes;						\
 	wrappee="${PKG_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
