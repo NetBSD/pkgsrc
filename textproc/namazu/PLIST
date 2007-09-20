@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/03/15 16:27:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.1 2007/09/20 20:53:31 wiz Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz

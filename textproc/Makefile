@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2007/09/16 10:31:49 wiz Exp $
+# $NetBSD: Makefile,v 1.383 2007/09/20 20:53:30 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -149,7 +149,7 @@ SUBDIR+=	mecab
 SUBDIR+=	mecab-base
 SUBDIR+=	mecab-ipadic
 SUBDIR+=	mecab-jumandic
-SUBDIR+=	namazu2
+SUBDIR+=	namazu
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	nxml-mode
