@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2007/09/19 23:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2007/09/20 00:02:42 wiz Exp $
 #
 
 DISTNAME=		gnome-utils-2.18.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME2 utilities and applications
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
