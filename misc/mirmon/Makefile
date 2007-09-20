@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/21 13:15:22 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/20 08:54:18 rillig Exp $
 #
 
 DISTNAME=		mirmon-1.36
@@ -18,13 +18,13 @@ USE_LANGUAGES=		# empty
 EG_DIR=			${PREFIX}/share/examples/mirmon
 MIRMONDIR=		${PREFIX}/share/mirmon
 
-SUBST_CLASSES+=		mirmon1 mirmon2
-
+SUBST_CLASSES+=		mirmon1
 SUBST_STAGE.mirmon1=	pre-configure
 SUBST_FILES.mirmon1=	mirmon
 SUBST_SED.mirmon1+=	-e s!/etc/!${PKG_SYSCONFDIR}/!g
 SUBST_SED.mirmon1+=	-e s!/sw/!${LOCALBASE}/!g
 
+SUBST_CLASSES+=		mirmon2
 SUBST_STAGE.mirmon2=	pre-configure
 SUBST_FILES.mirmon2=	${WRKDIR}/mirmon.conf
 SUBST_SED.mirmon2+=	-e s!@@MIRMONDIR@@!${MIRMONDIR}!g
@@ -43,7 +43,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${MIRMONDIR}
 	${INSTALL_DATA} ${WRKSRC}/countries.list ${MIRMONDIR}
 	${INSTALL_DATA_DIR} ${MIRMONDIR}/icons
-	cd ${WRKSRC}/icons && \
-	 for f in *; do ${INSTALL_DATA} $${f} ${MIRMONDIR}/icons; done
+	cd ${WRKSRC}/icons && ${INSTALL_DATA} * ${MIRMONDIR}/icons
 
 .include "../../mk/bsd.pkg.mk"
