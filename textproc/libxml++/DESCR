@@ -1,5 +1,4 @@
-This library provides a C++ interface to XML files.  It uses libxml2
-to access the XML files, and in order to configure libxml++ you
-must have both libxml and pkg-config installed.
-
-A newer version of this library is in textproc/libxml++2.
+libxml++ is a C++ wrapper for the libxml XML parser library. It has SAX and
+DOM-like APIs, but does not attempt to conform exactly to the DOM
+specifications because they are not aimed at C++. Its API is much simpler
+than the underlying libxml C API.
