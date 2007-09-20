@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/09/19 23:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/20 20:48:54 wiz Exp $
 #
 
 DISTNAME=	eog-2.18.2
