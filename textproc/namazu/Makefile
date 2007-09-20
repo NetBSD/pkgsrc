@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/06/15 18:17:42 obache Exp $
+# $NetBSD: Makefile,v 1.1 2007/09/20 20:53:31 wiz Exp $
 
 DISTNAME=	namazu-2.0.17
 PKGREVISION=	1
