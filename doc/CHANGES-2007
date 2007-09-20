@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2049 2007/09/20 07:18:54 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2050 2007/09/20 08:18:57 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox to 2.0.0.7 [ghen 2007-09-20]
 	Updated www/firefox-bin to 2.0.0.7 [ghen 2007-09-20]
 	Updated www/firefox-gtk1 to 2.0.0.7 [ghen 2007-09-20]
+	Updated pkgtools/pkg_chk to 1.87 [abs 2007-09-20]
