@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/09/19 23:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2007/09/20 00:02:40 wiz Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -48,7 +48,7 @@ DEPENDS+=	gnome-games>=2.18.1:../../games/gnome2-games
 DEPENDS+=	gnome-media>=2.18.0:../../multimedia/gnome-media
 DEPENDS+=	gnome-netstatus>=2.12.1:../../net/gnome-netstatus
 #DEPENDS+=	gnome2-system-monitor>=2.18.1.1:../../sysutils/gnome2-system-monitor
-DEPENDS+=	gnome-utils>=2.18.1:../../misc/gnome2-utils
+DEPENDS+=	gnome-utils>=2.18.1:../../misc/gnome-utils
 DEPENDS+=	gnome-user-docs>=2.18.1:../../misc/gnome-user-docs
 DEPENDS+=	vino>=2.18.1:../../net/vino
 DEPENDS+=	{totem>=2.18.1,totem-xine>=2.18.1}:../../multimedia/totem
