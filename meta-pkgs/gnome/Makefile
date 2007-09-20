@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2007/09/20 00:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2007/09/20 00:05:51 wiz Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -43,7 +43,7 @@ DEPENDS+=	gedit>=2.18.1:../../editors/gedit
 DEPENDS+=	evince>=0.8.1:../../print/evince
 DEPENDS+=	gok>=1.2.3:../../misc/gok
 DEPENDS+=	gnome-mag>=0.14.3:../../x11/gnome-mag
-DEPENDS+=	gnome-games>=2.18.1:../../games/gnome2-games
+DEPENDS+=	gnome-games>=2.18.1:../../games/gnome-games
 #DEPENDS+=	nautilus-cd-burner>=2.18.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	gnome-media>=2.18.0:../../multimedia/gnome-media
 DEPENDS+=	gnome-netstatus>=2.12.1:../../net/gnome-netstatus
