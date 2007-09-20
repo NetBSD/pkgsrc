@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/09/19 23:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/20 21:37:36 wiz Exp $
 #
 
 DISTNAME=	bmpx-0.40.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://files.beep-media-player.org/releases/0.40/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,9 +34,9 @@ BUILDLINK_API_DEPENDS.glibmm+=		glibmm>=2.8.3
 .include "../../devel/glibmm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libglademm+=	libglademm>=2.6.0
 .include "../../devel/libglademm/buildlink3.mk"
-BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.14.0
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.14.0
 .include "../../devel/libsexymm/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
