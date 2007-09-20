@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2007/09/19 23:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/20 21:12:04 wiz Exp $
 
 DISTNAME=		libgtop-2.14.2
-PKGNAME=		${DISTNAME:S/-/2-/}
 PKGREVISION=		5
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.14/}
@@ -20,6 +19,7 @@ PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
 INFO_FILES=		YES
 TEXINFO_REQD=		4.6
+CONFLICTS+=		libgtop2-[0-9]*
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.

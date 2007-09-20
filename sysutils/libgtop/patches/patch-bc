@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.2 2006/03/30 21:09:48 jmmv Exp $
+$NetBSD: patch-bc,v 1.1 2007/09/20 21:12:13 wiz Exp $
 
 From FreeBSD's GNOME development repository.
 
