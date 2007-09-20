@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2006/02/11 14:17:51 joerg Exp $
+$NetBSD: patch-ak,v 1.1 2007/09/20 20:50:54 wiz Exp $
 
 --- libbalsa/misc.h.orig	2006-02-11 13:54:44.000000000 +0000
 +++ libbalsa/misc.h
