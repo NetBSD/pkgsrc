@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.26 2007/08/14 21:32:17 jlam Exp $
+# $NetBSD: metadata.mk,v 1.27 2007/09/20 18:30:34 rillig Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -13,7 +13,7 @@ PKG_DB_TMPDIR=	${WRKDIR}/.pkgdb
 
 unprivileged-install-hook: ${PKG_DB_TMPDIR}
 ${PKG_DB_TMPDIR}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET}
 
 ######################################################################
 ###
@@ -25,38 +25,29 @@ _BUILD_HOST_cmd=	${UNAME} -a
 _METADATA_TARGETS+=	${_BUILD_INFO_FILE}
 
 ${_BUILD_INFO_FILE}: plist
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${RM} -f ${.TARGET}.tmp
 	${RUN} (${_BUILD_DEFS:NPATH:@v@${ECHO} ${v}=${${v}:Q} ;@})	\
 		> ${.TARGET}.tmp
 .if !empty(USE_LANGUAGES)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "CC_VERSION=${CC_VERSION}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "CC_VERSION=${CC_VERSION}" >> ${.TARGET}.tmp
 .endif
 .if !empty(USE_TOOLS:Mperl\:run)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-        ${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${.TARGET}.tmp
 .endif
 .if !empty(USE_TOOLS:Mgmake)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${.TARGET}.tmp
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "PKGTOOLS_VERSION=${PKGTOOLS_VERSION}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "PKGTOOLS_VERSION=${PKGTOOLS_VERSION}" >> ${.TARGET}.tmp
 .if defined(HOMEPAGE)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "HOMEPAGE=${HOMEPAGE}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "HOMEPAGE=${HOMEPAGE}" >> ${.TARGET}.tmp
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "CATEGORIES=${CATEGORIES}" >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "MAINTAINER=${MAINTAINER}" >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "CATEGORIES=${CATEGORIES}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "MAINTAINER=${MAINTAINER}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
+	${RUN}${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
 .if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	case ${LDD:Q}"" in						\
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'` ;; \
 	*)	ldd=${LDD:Q} ;;						\
@@ -94,7 +85,7 @@ ${_BUILD_INFO_FILE}: plist
 		${ECHO} "REQUIRES=$$req" >> ${.TARGET}.tmp;		\
 	done
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	rm -f ${.TARGET};						\
 	sort ${.TARGET}.tmp > ${.TARGET};				\
 	rm -f ${.TARGET}.tmp
@@ -110,14 +101,14 @@ _BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
 _METADATA_TARGETS+=	${_BUILD_VERSION_FILE}
 
 ${_BUILD_VERSION_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${RM} -f ${.TARGET}.tmp
+	${RUN}								\
 	exec 1>>${.TARGET}.tmp;						\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	exec 1>>${.TARGET}.tmp;						\
 	${TEST} -f ${DISTINFO_FILE:Q} || exit 0;			\
 	${CAT} ${DISTINFO_FILE} |					\
@@ -126,7 +117,7 @@ ${_BUILD_VERSION_FILE}:
 		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
 			${ECHO} "${PATCHDIR}/$$file";			\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	exec 1>>${.TARGET}.tmp;						\
 	${TEST} -d ${PATCHDIR} || exit 0;				\
 	cd ${PATCHDIR}; for f in *; do					\
@@ -135,7 +126,7 @@ ${_BUILD_VERSION_FILE}:
 		patch-*)		${ECHO} "${PATCHDIR}/$$f" ;;	\
 		esac;							\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${CAT} ${.TARGET}.tmp |						\
 	while read file; do						\
 		${GREP} '\$$NetBSD' $$file 2>/dev/null |		\
@@ -157,8 +148,8 @@ _COMMENT_FILE=		${PKG_DB_TMPDIR}/+COMMENT
 _METADATA_TARGETS+=	${_COMMENT_FILE}
 
 ${_COMMENT_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${COMMENT:Q} > ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${ECHO} ${COMMENT:Q} > ${.TARGET}
 
 ######################################################################
 ###
@@ -170,13 +161,13 @@ _DESCR_FILE=		${PKG_DB_TMPDIR}/+DESC
 _METADATA_TARGETS+=	${_DESCR_FILE}
 
 ${_DESCR_FILE}: ${DESCR_SRC}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}${CAT} ${.ALLSRC} > ${.TARGET}
 .if defined(HOMEPAGE)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "Homepage:" >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ""${HOMEPAGE:Q} >> ${.TARGET}
+	${RUN}${ECHO} >> ${.TARGET}
+	${RUN}${ECHO} "Homepage:" >> ${.TARGET}
+	${RUN}${ECHO} ""${HOMEPAGE:Q} >> ${.TARGET}
 .endif
 
 ######################################################################
@@ -223,8 +214,8 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 _MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 
 ${_MESSAGE_FILE}: ${MESSAGE_SRC}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC} |			\
 		${SED} ${_MESSAGE_SUBST_SED} > ${.TARGET}
 
 # Display MESSAGE file and optionally mail the contents to
@@ -238,7 +229,7 @@ install-display-message: ${_MESSAGE_FILE}
 	@${CAT} ${_MESSAGE_FILE}
 	@${ECHO_MSG} ""
 .  if !empty(PKGSRC_MESSAGE_RECIPIENTS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
 	${ECHO} "";							\
 	${ECHO} "Please note the following:";				\
@@ -261,8 +252,8 @@ _PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 _METADATA_TARGETS+=	${_PRESERVE_FILE}
 
 ${_PRESERVE_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${DATE} > ${.TARGET}
 .endif
 
 ######################################################################
@@ -276,8 +267,8 @@ _SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
 _METADATA_TARGETS+=	${_SIZE_ALL_FILE}
 
 ${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}								\
 	${_FULL_DEPENDS_CMD} | ${SORT} -u |				\
 	${XARGS} -n 256 ${PKG_INFO} -qs |				\
 	${AWK} 'BEGIN { s = 0 } /^[0-9]+$$/ { s += $$1 } END { print s }' \
@@ -293,8 +284,8 @@ _SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
 _METADATA_TARGETS+=	${_SIZE_PKG_FILE}
 
 ${_SIZE_PKG_FILE}: plist
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN} \
 	${CAT} ${PLIST} |						\
 	${AWK} 'BEGIN { base = "${PREFIX}/" }				\
 		/^@cwd/ { base = $$2 "/" }				\
@@ -369,9 +360,8 @@ _CONTENTS_TARGETS+=	${_SIZE_ALL_FILE}
 _CONTENTS_TARGETS+=	${_SIZE_PKG_FILE}
 
 ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
 
 ######################################################################
 ### _flavor-generate-metadata (PRIVATE)
@@ -404,4 +394,4 @@ _flavor-generate-metadata: ${_METADATA_TARGETS}
 ###
 .PHONY: _flavor-clean-metadata
 _flavor-clean-metadata:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_METADATA_TARGETS}
+	${RUN}${RM} -f ${_METADATA_TARGETS}
