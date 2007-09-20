@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2006/09/25 15:34:24 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2007/09/20 00:02:44 wiz Exp $
 
 --- baobab/src/baobab-utils.c.orig	2006-08-27 11:10:39.000000000 +0000
 +++ baobab/src/baobab-utils.c
