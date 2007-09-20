@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/09/15 15:09:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/09/20 21:36:56 wiz Exp $
 bin/rsvg
 bin/rsvg-convert
 bin/rsvg-view
