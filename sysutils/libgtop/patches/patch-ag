@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2006/09/22 15:57:47 drochner Exp $
+$NetBSD: patch-ag,v 1.5 2007/09/20 21:12:08 wiz Exp $
 
 --- sysdeps/freebsd/mem.c.orig	2005-12-12 11:09:39.000000000 +0100
 +++ sysdeps/freebsd/mem.c

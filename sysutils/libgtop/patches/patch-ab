@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2007/06/25 21:18:52 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2007/09/20 21:12:06 wiz Exp $
 
 --- sysdeps/freebsd/proctime.c.orig	2006-04-04 20:01:43.000000000 +0000
 +++ sysdeps/freebsd/proctime.c

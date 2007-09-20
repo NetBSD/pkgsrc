@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2006/02/28 23:48:11 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2007/09/20 21:12:07 wiz Exp $
 
 --- sysdeps/common/mountlist.c.orig	2003-10-20 09:29:03.000000000 -0500
 +++ sysdeps/common/mountlist.c
