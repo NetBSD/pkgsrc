@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2007/06/15 18:17:41 obache Exp $
+$NetBSD: MESSAGE,v 1.1 2007/09/20 20:53:30 wiz Exp $
 
-Here is general notes for namazu2 package by pkgsrc.
+Here are general notes for the namazu pkgsrc package.
 
 1. If you customize namazu configuration, please edit "mknmzrc" file
    in ${PKG_SYSCONFDIR} directory.
