@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/09/19 23:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2007/09/20 00:08:09 wiz Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.15.92
-PKGNAME=	${DISTNAME:S/gnome/gnome2/}
 PKGREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.15/}
@@ -17,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf gmake intltool msgfmt pkg-config
+
+CONFLICTS+=		gnome2-system-monitor-[0-9]*
 
 LIBS+=			-lutil
 GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
