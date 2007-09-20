@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2006/02/19 18:12:14 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2007/09/20 20:47:03 wiz Exp $
 
 --- src/arx/libarx/sha256/sha2.cpp.orig	2006-01-30 19:44:39.000000000 +0000
 +++ src/arx/libarx/sha256/sha2.cpp
