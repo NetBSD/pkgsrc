@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2007/09/19 23:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2007/09/20 00:05:57 wiz Exp $
 
 DISTNAME=		gnome-games-2.18.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 # so the following configuration argument is safe.
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
-EGDIR=			${PREFIX}/share/examples/gnome2-games
+EGDIR=			${PREFIX}/share/examples/gnome-games
 CONF_FILES=
 .for conffile in	sound/events/gnibbles.soundlist \
 			sound/events/gnobots2.soundlist \
