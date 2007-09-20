@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/09/15 15:23:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.1 2007/09/20 00:08:10 wiz Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
