@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2007/08/22 17:34:38 tron Exp $
+# $NetBSD: Makefile,v 1.234 2007/09/20 21:29:42 jlam Exp $
 #
 
 COMMENT=	Databases
@@ -144,6 +144,7 @@ SUBDIR+=	postgresql81-pltcl
 SUBDIR+=	postgresql81-server
 SUBDIR+=	postgresql81-tsearch2
 SUBDIR+=	postgresql82
+SUBDIR+=	postgresql82-adminpack
 SUBDIR+=	postgresql82-client
 SUBDIR+=	postgresql82-plperl
 SUBDIR+=	postgresql82-plpython
