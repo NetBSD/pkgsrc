@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2055 2007/09/20 21:29:43 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.2056 2007/09/20 21:38:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3798,3 +3798,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/courier-analog to 0.14 [jlam 2007-09-20]
 	Added security/mozilla-rootcerts version 1.0.20070713 [jlam 2007-09-20]
 	Added databases/postgresql82-adminpack version 8.2.5 [jlam 2007-09-20]
+	Updated devel/atf to 0.2 [jmmv 2007-09-20]
