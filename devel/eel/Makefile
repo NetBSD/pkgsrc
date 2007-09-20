@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2007/09/19 23:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/20 21:21:04 wiz Exp $
 
 DISTNAME=	eel-2.18.3
-PKGNAME=	${DISTNAME:S/-/2-/}
 PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.18/}
@@ -17,6 +16,8 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
+
+CONFLICTS+=		eel2-[0-9]*
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.9.1
