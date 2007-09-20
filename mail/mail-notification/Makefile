@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2007/09/19 23:13:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/09/20 21:21:37 wiz Exp $
 #
 
 DISTNAME=	mail-notification-4.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--disable-sasl
 CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
-.include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/eel/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
