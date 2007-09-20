@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.50 2007/08/27 15:28:54 abs Exp $
+# $Id: pkg_chk.sh,v 1.51 2007/09/20 08:18:13 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -309,7 +309,9 @@ list_packages()
 	pkglist="$next_pkglist"
 	next_pkglist=
     done
-    fatal_later_check
+    if [ -z "$opt_k" ] ; then
+	fatal_later_check
+    fi
     printf "$pairlist" | ${TSORT}
     }
 
@@ -324,7 +326,6 @@ pkgdir2pkgname()
 	    ;;
 	esac
     done
-    msg "WARNING: No binary package for $pkgdir"
     }
 
 pkgdirs_from_conf()
