@@ -1,4 +1,4 @@
-$NetBSD: patch-threewaymerge,v 1.1 2006/04/11 17:38:57 rillig Exp $
+$NetBSD: patch-ae,v 1.1 2007/09/20 20:47:04 wiz Exp $
 
 For some weird reason, g++ 3.3.3 complains about a syntax error here.
 
