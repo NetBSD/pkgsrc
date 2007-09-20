@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/09/19 23:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/20 21:37:39 wiz Exp $
 #
 
 DISTNAME=	gnome-compiz-manager-0.10.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	http://download.gna.org/gcm/gnome-compiz-manager/
 
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	gnome-compiz-manager.pc.in
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.130 2007/09/19 23:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2007/09/20 21:37:40 wiz Exp $
 #
 
 DISTNAME=	gdm-2.18.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -150,7 +150,7 @@ PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

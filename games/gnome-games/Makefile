@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2007/09/20 00:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2007/09/20 21:37:36 wiz Exp $
 
 DISTNAME=		gnome-games-2.18.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -62,7 +62,7 @@ PY_PATCHPLIST=		yes
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
-BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -74,7 +74,7 @@ BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
