@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2056 2007/09/20 21:38:34 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.2057 2007/09/20 21:49:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3799,3 +3799,13 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/mozilla-rootcerts version 1.0.20070713 [jlam 2007-09-20]
 	Added databases/postgresql82-adminpack version 8.2.5 [jlam 2007-09-20]
 	Updated devel/atf to 0.2 [jmmv 2007-09-20]
+	Moved devel/ArX2 to devel/ArX [wiz 2007-09-20]
+	Moved graphics/eog2 to graphics/eog [wiz 2007-09-20]
+	Moved mail/balsa2 to mail/balsa [wiz 2007-09-20]
+	Moved textproc/namazu2 to textproc/namazu [wiz 2007-09-20]
+	Removed x11/gtkglarea2 [wiz 2007-09-20]
+	Renamed textproc/libxml++ to textproc/libxml++1 [wiz 2007-09-20]
+	Renamed textproc/libxml++2 to textproc/libxml++ [wiz 2007-09-20]
+	Renamed sysutils/libgtop2 to sysutils/libgtop [wiz 2007-09-20]
+	Renamed devel/eel2 to devel/eel [wiz 2007-09-20]
+	Renamed graphics/librsvg2 to graphics/librsvg [wiz 2007-09-20]
