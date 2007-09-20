@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.62 2007/09/18 01:51:10 reed Exp $
+# $NetBSD: compiler.mk,v 1.63 2007/09/20 17:28:48 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -69,6 +69,11 @@
 
 .if !defined(BSD_COMPILER_MK)
 BSD_COMPILER_MK=	defined
+
+_VARGROUPS+=		compiler
+_USER_VARS.compiler=	PKGSRC_COMPILER USE_PKGSRC_GCC ABI
+_PKG_VARS.compiler=	USE_LANGUAGES GCC_REQD NOT_FOR_COMPILER ONLY_FOR_COMPILER
+_SYS_VARS.compiler=	CC_VERSION
 
 .include "../../mk/bsd.prefs.mk"
 
