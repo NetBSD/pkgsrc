@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2007/09/20 00:02:42 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2007/09/20 21:12:56 wiz Exp $
 #
 
 DISTNAME=		gnome-utils-2.18.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -50,7 +50,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/libgtop2/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
