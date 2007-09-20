@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.2 2007/04/04 18:53:45 gdt Exp $
+$NetBSD: patch-ao,v 1.3 2007/09/20 21:12:11 wiz Exp $
 
 --- sysdeps/freebsd/procuid.c.orig	2005-12-12 10:09:39.000000000 +0000
 +++ sysdeps/freebsd/procuid.c
