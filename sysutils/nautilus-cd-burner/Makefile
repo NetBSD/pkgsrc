@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2007/09/19 23:13:31 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/20 21:21:36 wiz Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,12 +38,12 @@ CONF_FILES=		${EGDIR}/mapping-modules.conf \
 
 GCONF2_SCHEMAS=		ncb.schemas
 
-BUILDLINK_API_DEPENDS.eel2+=	eel2>=2.13.3
+BUILDLINK_API_DEPENDS.eel+=	eel>=2.13.3
 BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.13.4
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/eel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
