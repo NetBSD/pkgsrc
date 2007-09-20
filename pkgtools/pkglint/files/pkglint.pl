@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.719 2007/09/20 08:39:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.720 2007/09/20 10:38:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1831,7 +1831,6 @@ my $effective_pkgname;		# PKGNAME or DISTNAME from the package Makefile
 my $effective_pkgbase;		# The effective PKGNAME without the version
 my $effective_pkgversion;	# The version part of the effective PKGNAME
 my $effective_pkgname_line;	# The origin of the three effective_* values
-my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
 my $pkgctx_vardef;		# { varname => line }
@@ -2840,6 +2839,7 @@ sub checkperms($) {
 sub resolve_relative_path($$) {
 	my ($relpath, $adjust_depth) = @_;
 
+	my $arg = $relpath;
 	$relpath =~ s,\$\{PKGSRCDIR\},$cur_pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{\.PARSEDIR\},.,;
@@ -2853,6 +2853,7 @@ sub resolve_relative_path($$) {
 		$relpath =~ s,\$\{PKGDIR\},$pkgdir,g;
 	}
 
+	$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "resolve_relative_path: $arg => $relpath");
 	return $relpath;
 }
 
@@ -3016,6 +3017,21 @@ sub var_is_used($) {
 	if (defined($pkgctx_varuse)) {
 		return $pkgctx_varuse->{$varname} if exists($pkgctx_varuse->{$varname});
 		return $pkgctx_varuse->{$varcanon} if exists($pkgctx_varuse->{$varcanon});
+	}
+	return false;
+}
+
+sub var_is_defined($) {
+	my ($varname) = @_;
+	my $varcanon = varname_canon($varname);
+
+	if (defined($mkctx_vardef)) {
+		return $mkctx_vardef->{$varname} if exists($mkctx_vardef->{$varname});
+		return $mkctx_vardef->{$varcanon} if exists($mkctx_vardef->{$varcanon});
+	}
+	if (defined($pkgctx_vardef)) {
+		return $pkgctx_vardef->{$varname} if exists($pkgctx_vardef->{$varname});
+		return $pkgctx_vardef->{$varcanon} if exists($pkgctx_vardef->{$varcanon});
 	}
 	return false;
 }
@@ -3539,7 +3555,7 @@ sub readmakefile($$$$) {
 sub load_package_Makefile($$$) {
 	my ($fname, $ref_whole, $ref_lines) = @_;
 	my ($subr) = "load_package_Makefile";
-	my ($whole, $lines, $all_lines);
+	my ($whole, $lines, $all_lines, $seen_php_pecl_version);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "load_package_Makefile()");
 
@@ -3558,18 +3574,6 @@ sub load_package_Makefile($$$) {
 
 	determine_used_variables($all_lines);
 
-	# HACK
-	if ($whole =~ qr"\nPHPEXT_MK" && $whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
-		$opt_debug_misc and log_debug($fname, NO_LINES, "[hack] USE_PHP_EXT_PATCHES");
-		$whole =~ s,\nPATCHDIR=.*PHPPKGSRCDIR.*,,;
-		$hack_php_patches = true;
-	}
-	# HACK
-	if ($whole =~ qr"\nPECL_VERSION") {
-		$opt_debug_misc and log_debug($fname, NO_LINES, "[hack] PECL_VERSION");
-		$whole =~ s,\nDISTINFO_FILE=.*PHPPKGSRCDIR.*,,;
-	}
-
 	$pkgdir = expand_variable($whole, "PKGDIR");
 	set_default_value(\$pkgdir, ".");
 	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
@@ -3578,6 +3582,15 @@ sub load_package_Makefile($$$) {
 	set_default_value(\$filesdir, "files");
 	$patchdir = expand_variable($whole, "PATCHDIR");
 	set_default_value(\$patchdir, "patches");
+
+	if (var_is_defined("PHPEXT_MK")) {
+		if (!var_is_defined("USE_PHP_EXT_PATCHES")) {
+			$patchdir = "patches";
+		}
+		if (var_is_defined("PECL_VERSION")) {
+			$distinfo_file = "distinfo";
+		}
+	}
 
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] DISTINFO_FILE=$distinfo_file");
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] FILESDIR=$filesdir");
@@ -6626,7 +6639,7 @@ sub checkfile_distinfo($) {
 			}
 		}
 
-		if ($is_patch && defined($patches_dir)) {
+		if ($is_patch && defined($patches_dir) && !(defined($distinfo_file) && $distinfo_file eq "./../../lang/php5/distinfo")) {
 			my $fname = "${current_dir}/${patches_dir}/${chksum_fname}";
 			if ($di_is_committed && !is_committed($fname)) {
 				$line->log_warning("${patches_dir}/${chksum_fname} is registered in distinfo but not added to CVS.");
@@ -6642,7 +6655,7 @@ sub checkfile_distinfo($) {
 				if ($sum ne $chksum) {
 					$line->log_error("${alg} checksum of ${chksum_fname} differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
-			} elsif (!$hack_php_patches) {
+			} elsif (true) {
 				$line->log_warning("${chksum_fname} does not exist.");
 				$line->explain_warning(
 					"All patches that are mentioned in a distinfo file should actually exist.",
@@ -7848,7 +7861,6 @@ sub checkdir_package() {
 	$effective_pkgbase = undef;
 	$effective_pkgversion = undef;
 	$effective_pkgname_line = undef;
-	$hack_php_patches = false;
 	$seen_bsd_prefs_mk = false;
 	$pkgctx_vardef = {%{get_userdefined_variables()}};
 	$pkgctx_varuse = {};
@@ -7918,7 +7930,6 @@ cleanup:
 	$effective_pkgbase = undef;
 	$effective_pkgversion = undef;
 	$effective_pkgname_line = undef;
-	$hack_php_patches = undef;
 	$seen_bsd_prefs_mk = undef;
 	$pkgctx_vardef = undef;
 	$pkgctx_varuse = undef;
