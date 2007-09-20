@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.892 2007/09/19 21:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.893 2007/09/20 21:21:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
 
-SUBDIR+=	ArX2
+SUBDIR+=	ArX
 SUBDIR+=	ExmanIDE
 SUBDIR+=	GConf2
 SUBDIR+=	GConf2-ui
@@ -133,7 +133,7 @@ SUBDIR+=	doxygen
 SUBDIR+=	doxymacs
 SUBDIR+=	eclipse
 SUBDIR+=	edcommon
-SUBDIR+=	eel2
+SUBDIR+=	eel
 SUBDIR+=	eet
 SUBDIR+=	electricfence
 SUBDIR+=	elf
