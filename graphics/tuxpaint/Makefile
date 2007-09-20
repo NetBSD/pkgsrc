@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2007/09/19 23:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/09/20 21:37:38 wiz Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
 		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
@@ -45,7 +45,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
