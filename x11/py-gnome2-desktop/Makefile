@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/09/19 23:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/20 21:12:57 wiz Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +36,7 @@ PLIST_SUBST+=	NAUTILUSBURN="@comment "
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../sysutils/libgtop2/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
