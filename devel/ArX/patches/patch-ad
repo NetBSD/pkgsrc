@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2007/06/30 17:17:34 joerg Exp $
+$NetBSD: patch-ad,v 1.1 2007/09/20 20:47:04 wiz Exp $
 
 --- src/boost/boost/config/select_platform_config.hpp.orig	2007-06-30 15:50:08.000000000 +0000
 +++ src/boost/boost/config/select_platform_config.hpp
