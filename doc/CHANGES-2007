@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2047 2007/09/19 22:07:17 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2048 2007/09/20 00:13:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3775,3 +3775,13 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed devel/libole2 [wiz 2007-09-19]
 	Removed devel/gnome2-libole2 [wiz 2007-09-19]
 	Updated devel/bugzilla3 to 3.0.2 [adrianp 2007-09-19]
+	Renamed sysutils/gnome-vfs2 to sysutils/gnome-vfs [wiz 2007-09-19]
+	Renamed audio/gnome-vfs2-cdda to audio/gnome-vfs-cdda [wiz 2007-09-19]
+	Renamed net/gnome-vfs2-smb to net/gnome-vfs-smb [wiz 2007-09-19]
+	Moved multimedia/gnome2-media to multimedia/gnome-media [wiz 2007-09-19]
+	Renamed x11/gnome2-control-center to x11/control-center [wiz 2007-09-19]
+	Renamed x11/gnome2-terminal to x11/gnome-terminal [wiz 2007-09-19]
+	Moved x11/gnome2-applets to x11/gnome-applets [wiz 2007-09-20]
+	Moved misc/gnome2-utils to misc/gnome-utils [wiz 2007-09-20]
+	Moved games/gnome2-games to games/gnome-games [wiz 2007-09-20]
+	Renamed sysutils/gnome2-system-monitor to sysutils/gnome-system-monitor [wiz 2007-09-20]
