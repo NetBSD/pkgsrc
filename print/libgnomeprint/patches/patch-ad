@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2007/09/20 17:32:49 rillig Exp $
+
+The sunpro compiler is picky about the signedness of pointer targets in
+the ternary operator.
+
+--- gpa-utils.c.orig	Fri Mar  2 23:52:48 2007
++++ gpa-utils.c	Thu Sep 20 19:23:04 2007
+@@ -115,7 +115,7 @@
+ 	}
+ 
+ 	if (strcmp (G_OBJECT_TYPE_NAME (node), "GPAKey") == 0)
+-		g_print (" {%s}", ((GPAKey *) node)->value ? ((GPAKey *) node)->value : "");
++		g_print (" {%s}", ((GPAKey *) node)->value ? (const char *)((GPAKey *) node)->value : "");
+ 	if (strcmp (G_OBJECT_TYPE_NAME (node), "GPAState") == 0)
+ 		g_print (" state: [%s]", ((GPAState *) node)->value);
+ 	if (strcmp (G_OBJECT_TYPE_NAME (node), "GPAOption") == 0) {
