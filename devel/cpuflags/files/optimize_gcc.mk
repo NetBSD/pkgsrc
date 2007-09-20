@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.34 2007/08/27 10:08:29 abs Exp $
+# $Id: optimize_gcc.mk,v 1.35 2007/09/20 10:19:03 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -44,6 +44,9 @@ PKG_EXCLUDE_INLINE_FUNCTIONS+=textproc/aspell
 
 # gcc3.3.3 NetBSD i386/3.0 breaks kde3
 PKG_EXCLUDE_FAST_MATH+=x11/qt3-libs
+
+# gcc4.1.3 NetBSD i386/4.99.29 breaks liboil
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=devel/liboil
 
 # -----------------------------------------------------------------------------
 # Assign default flags, then remove values based on settings above
