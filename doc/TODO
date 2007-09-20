@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6696 2007/09/19 01:29:53 taca Exp $
+$NetBSD: TODO,v 1.6697 2007/09/20 00:13:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,6 +377,7 @@ Suggested package updates
 	o cmake-2.4.7
 	o cocoon-2.1.10
 	o connect-1.96
+	o control-center-2.20.0
 	o cook-2.30
 	o cpio-2.9
 	o cpmtools-2.6
@@ -542,19 +543,18 @@ Suggested package updates
 	o gnash-0.8.1
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.20.0
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
+	o gnome-games-2.20.0
 	o gnome-keyring-2.20.0
 	o gnome-mag-1.14.10
+	o gnome-media-2.20.0
 	o gnome-speech-0.4.16
-	o gnome-vfs2-2.20.0
+	o gnome-system-monitor-2.20.0
+	o gnome-utils-2.20.0
+	o gnome-vfs-2.20.0
 	o gnome-vfsmm-2.20.0
-	o gnome2-applets-2.20.0
-	o gnome2-control-center-2.20.0
-	o gnome2-games-2.20.0
-	o gnome2-media-2.20.0
-	o gnome2-system-monitor-2.20.0
-	o gnome2-utils-2.20.0
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
