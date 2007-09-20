@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/03 12:53:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2007/09/20 21:03:50 wiz Exp $
 
-DISTNAME=		libxml++-1.0.5
-CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libxml++/1.0/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	libxml++-2.18.1
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml++/2.18/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://libxmlplusplus.sourceforge.net/
-COMMENT=		C++ wrapper for the libxml XML parser library
+MAINTAINER=	evaldo@gardenali.biz
+HOMEPAGE=	http://libxmlplusplus.sourceforge.net/
+COMMENT=	C++ wrapper for the libxml XML parser library
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config gmake
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/libxml++-2.6.pc.in
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=	libxml++-1.0.pc.in
+CONFLICTS+=		libxml++2-[0-9]*
 
+.include "../../devel/glibmm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
