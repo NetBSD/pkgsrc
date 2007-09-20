@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/09/19 23:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/20 21:37:36 wiz Exp $
 #
 
 DISTNAME=		kye-0.9.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		http://games.moria.org.uk/kye/
 
@@ -19,5 +19,5 @@ SUBST_SED.prefix=	's|@PREFIX@|${PREFIX}|g'
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

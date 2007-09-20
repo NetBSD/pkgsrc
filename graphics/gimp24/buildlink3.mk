@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/06/05 05:37:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2007/09/20 21:37:35 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp24
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
