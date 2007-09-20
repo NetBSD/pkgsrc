@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/06/15 18:08:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/20 20:48:54 wiz Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/eog-gtk-ui.xml
