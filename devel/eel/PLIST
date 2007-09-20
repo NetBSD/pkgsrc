@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/04/11 17:41:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/20 21:21:04 wiz Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
