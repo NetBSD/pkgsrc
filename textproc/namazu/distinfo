@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2007/03/15 16:27:47 taca Exp $
+$NetBSD: distinfo,v 1.1 2007/09/20 20:53:31 wiz Exp $
 
 SHA1 (namazu-2.0.17.tar.gz) = 7a01d3fd2e5091f39fdd7ff2ce0e5c7204c05faa
 RMD160 (namazu-2.0.17.tar.gz) = f6b85aae280fa6dca38dcf6c4c3427b683610994
