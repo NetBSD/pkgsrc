@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/27 00:42:58 rh Exp $
+$NetBSD: patch-ab,v 1.9 2007/09/20 20:50:51 wiz Exp $
 
 --- src/threads.h.orig	2003-01-25 23:04:31.000000000 +1000
 +++ src/threads.h
