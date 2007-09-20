@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2007/06/15 18:08:07 drochner Exp $
+$NetBSD: distinfo,v 1.4 2007/09/20 20:48:57 wiz Exp $
 
 SHA1 (eog-2.18.2.tar.bz2) = d3fcca9f2a6b72f37d1a5d37561bd0eae54b730e
 RMD160 (eog-2.18.2.tar.bz2) = 9bc5286913e83058cf3b833493f0ed4cb218c1e7
