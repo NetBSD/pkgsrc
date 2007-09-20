@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2007/09/19 22:22:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/09/20 22:51:00 wiz Exp $
 #
 
 GNOME_VFS_VERSION=	2.18.1
@@ -68,7 +68,7 @@ post-wrapper:
 .if defined(GNOME_VFS_NAME) && !empty(GNOME_VFS_NAME)
 GNOME_VFS_FLAG?=	${GNOME_VFS_NAME}
 
-PKGNAME:=		${PKGNAME:S/gnome-vfs/gnome-vfs-${GNOME_VFS_NAME}/}
+PKGNAME:=		${DISTNAME:S/gnome-vfs/gnome-vfs-${GNOME_VFS_NAME}/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS_FLAG}/--enable-${GNOME_VFS_FLAG}/}
 COMMENT+=		- ${GNOME_VFS_NAME} plugin
 
