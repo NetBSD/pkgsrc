@@ -1,4 +1,4 @@
-$NetBSD: patch-bg,v 1.2 2006/06/26 12:14:25 drochner Exp $
+$NetBSD: patch-bg,v 1.1 2007/09/20 21:12:14 wiz Exp $
 
 --- sysdeps/freebsd/prockernel.c.orig	2006-06-13 22:20:53.000000000 +0200
 +++ sysdeps/freebsd/prockernel.c

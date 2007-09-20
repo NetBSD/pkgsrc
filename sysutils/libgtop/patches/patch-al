@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.5 2007/06/25 21:18:52 joerg Exp $
+$NetBSD: patch-al,v 1.5 2007/09/20 21:12:10 wiz Exp $
 
 --- sysdeps/freebsd/procmem.c.orig	2005-12-12 10:09:39.000000000 +0000
 +++ sysdeps/freebsd/procmem.c
