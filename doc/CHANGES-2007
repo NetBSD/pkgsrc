@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2051 2007/09/20 10:20:12 abs Exp $
+$NetBSD: CHANGES-2007,v 1.2052 2007/09/20 13:41:56 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3790,3 +3790,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox-gtk1 to 2.0.0.7 [ghen 2007-09-20]
 	Updated pkgtools/pkg_chk to 1.87 [abs 2007-09-20]
 	Updated devel/cpuflags to 1.17 [abs 2007-09-20]
+	Updated sysutils/bacula to 2.2.4 [ghen 2007-09-20]
+	Updated sysutils/bacula-clientonly to 2.2.4 [ghen 2007-09-20]
+	Updated sysutils/bacula-gnome-console to 2.2.4nb1 [ghen 2007-09-20]
+	Updated sysutils/bacula-tray-monitor to 2.2.4 [ghen 2007-09-20]
+	Updated sysutils/bacula-wx-console to 2.2.4 [ghen 2007-09-20]
