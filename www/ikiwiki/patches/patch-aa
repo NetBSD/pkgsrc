@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/13 01:25:25 dan Exp $
+$NetBSD: patch-aa,v 1.2 2007/09/20 23:49:22 wiz Exp $
 
---- Makefile.PL.orig	2006-10-29 10:04:59.000000000 +1100
-+++ Makefile.PL
-@@ -8,8 +8,6 @@ sub MY::postamble {
+--- Makefile.PL.orig	2007-09-06 13:18:32.000000000 -0500
++++ Makefile.PL	2007-09-06 13:19:50.000000000 -0500
+@@ -8,8 +8,6 @@
  q{
  all:: extra_build
  clean:: extra_clean
@@ -11,22 +11,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/11/13 01:25:25 dan Exp $
  
  VER=$(shell perl -e '$$_=<>;print m/\((.*?)\)/'<debian/changelog)
  
-@@ -30,27 +28,6 @@ extra_clean:
- 	rm -rf html doc/.ikiwiki
+@@ -47,36 +45,6 @@
  	rm -f ikiwiki.man ikiwiki-mass-rebuild.man ikiwiki.out
+ 	$(MAKE) -C po clean
  
 -extra_install:
--	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/templates
--	$(CP) -a templates/* $(DESTDIR)$(PREFIX)/share/ikiwiki/templates
--
--	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/basewiki
--	$(CP) -a basewiki/* $(DESTDIR)$(PREFIX)/share/ikiwiki/basewiki
+-	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki
+-	for dir in `find basewiki templates -follow -type d ! -regex '.*\.svn.*'`; do \
+-		install -d $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
+-		for file in `find $$dir -follow -maxdepth 1 -type f`; do \
+-			install -m 644 $$file $(DESTDIR)$(PREFIX)/share/ikiwiki/$$dir; \
+-		done; \
+-	done
+-	
+-	install -d $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins
+-	for file in `find plugins -maxdepth 1 -type f`; do \
+-		install -m 755 $$file $(DESTDIR)$(PREFIX)/lib/ikiwiki/plugins; \
+-	done; \
 -
 -	install -d $(DESTDIR)$(PREFIX)/share/man/man1
--	install ikiwiki.man $(DESTDIR)$(PREFIX)/share/man/man1/ikiwiki.1
+-	install -m 644 ikiwiki.man $(DESTDIR)$(PREFIX)/share/man/man1/ikiwiki.1
 -	
 -	install -d $(DESTDIR)$(PREFIX)/share/man/man8
--	install ikiwiki-mass-rebuild.man $(DESTDIR)$(PREFIX)/share/man/man8/ikiwiki-mass-rebuild.8
+-	install -m 644 ikiwiki-mass-rebuild.man $(DESTDIR)$(PREFIX)/share/man/man8/ikiwiki-mass-rebuild.8
 -	
 -	install -d $(DESTDIR)$(PREFIX)/sbin
 -	install ikiwiki-mass-rebuild $(DESTDIR)$(PREFIX)/sbin
@@ -36,6 +43,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/11/13 01:25:25 dan Exp $
 -
 -	install -d $(DESTDIR)$(PREFIX)/bin
 -	install ikiwiki.out $(DESTDIR)$(PREFIX)/bin/ikiwiki
+-
+-	$(MAKE) -C po install PREFIX=$(PREFIX)
  }
  }
  
