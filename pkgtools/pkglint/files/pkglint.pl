@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.718 2007/09/11 22:01:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.719 2007/09/20 08:39:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1834,8 +1834,8 @@ my $effective_pkgname_line;	# The origin of the three effective_* values
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
-my $pkgctx_vardef;		# variable name => line of definition
-my $pkgctx_varuse;		# variable name => Boolean
+my $pkgctx_vardef;		# { varname => line }
+my $pkgctx_varuse;		# { varname => line }
 my $pkgctx_bl3;			# buildlink3.mk name => line of inclusion
 my $seen_Makefile_common;	# Does the package have any .includes?
 
@@ -1845,6 +1845,8 @@ my $mkctx_indentations;		# Indentation depth of preprocessing directives
 my $mkctx_target;		# Current make(1) target
 my $mkctx_vardef;		# { varname => line } for all variables that
 				# are defined in the current file
+my $mkctx_varuse;		# { varname => line } for all variables
+				# that are used in the current file
 my $mkctx_build_defs;		# Set of variables that are registered in
 				# BUILD_DEFS, to assure that all user-defined
 				# variables are added to it.
@@ -2988,6 +2990,36 @@ sub varname_param($) {
 	return ($varname =~ qr"^.*?\.(.*)$") ? $2 : undef;
 }
 
+sub use_var($$) {
+	my ($line, $varname) = @_;
+	my $varcanon = varname_canon($varname);
+
+	if (defined($mkctx_varuse)) {
+		$mkctx_varuse->{$varname} = $line;
+		$mkctx_varuse->{$varcanon} = $line;
+	}
+
+	if (defined($pkgctx_varuse)) {
+		$pkgctx_varuse->{$varname} = $line;
+		$pkgctx_varuse->{$varcanon} = $line;
+	}
+}
+
+sub var_is_used($) {
+	my ($varname) = @_;
+	my $varcanon = varname_canon($varname);
+
+	if (defined($mkctx_varuse)) {
+		return $mkctx_varuse->{$varname} if exists($mkctx_varuse->{$varname});
+		return $mkctx_varuse->{$varcanon} if exists($mkctx_varuse->{$varcanon});
+	}
+	if (defined($pkgctx_varuse)) {
+		return $pkgctx_varuse->{$varname} if exists($pkgctx_varuse->{$varname});
+		return $pkgctx_varuse->{$varcanon} if exists($pkgctx_varuse->{$varcanon});
+	}
+	return false;
+}
+
 sub determine_used_variables($) {
 	my ($lines) = @_;
 	my ($rest);
@@ -2996,8 +3028,7 @@ sub determine_used_variables($) {
 		$rest = $line->text;
 		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
 			my ($varname) = ($1);
-			$pkgctx_varuse->{$varname} = $line;
-			$pkgctx_varuse->{varname_canon($varname)} = $line;
+			use_var($line, $varname);
 			$opt_debug_unused and $line->log_debug("Variable ${varname} is used.");
 		}
 	}
@@ -3398,15 +3429,8 @@ sub parseline_mk($) {
 sub parselines_mk($) {
 	my ($lines) = @_;
 
-	assert(defined($pkgctx_varuse), "pkgctx_varuse must be defined.");
 	foreach my $line (@{$lines}) {
 		parseline_mk($line);
-		if ($line->has("is_varassign") && $line->get("varcanon") eq "SUBST_VARS.*") {
-			foreach my $svar (split(/\s+/, $line->get("value"))) {
-				$pkgctx_varuse->{$svar} = true;
-				$opt_debug_misc and $line->log_debug("varuse $svar");
-			}
-		}
 	}
 }
 
@@ -4755,8 +4779,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 	$value_novar = $value;
 	while ($value_novar =~ s/\$\{([^{}]*)\}//g) {
-		my ($pkgctx_varuse) = ($1);
-		if (!$list_context && $pkgctx_varuse =~ qr":Q$") {
+		my ($varuse) = ($1);
+		if (!$list_context && $varuse =~ qr":Q$") {
 			$line->log_warning("The :Q operator should only be used in lists and shell commands.");
 		}
 	}
@@ -5576,13 +5600,11 @@ sub checkline_mk_varassign($$$$$) {
 
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
-	if (defined($pkgctx_varuse)) {
+	if (!var_is_used($varname)) {
 		my $vartypes = get_vartypes_map();
 		my $deprecated = get_deprecated_map();
 
-		if (exists($pkgctx_varuse->{$varname}) || exists($pkgctx_varuse->{$varcanon})) {
-			# Ok
-		} elsif (exists($vartypes->{$varname}) || exists($vartypes->{$varcanon})) {
+		if (exists($vartypes->{$varname}) || exists($vartypes->{$varcanon})) {
 			# Ok
 		} elsif (exists($deprecated->{$varname}) || exists($deprecated->{$varcanon})) {
 			# Ok
@@ -5886,6 +5908,7 @@ sub checklines_mk($) {
 	$mkctx_vardef = {};
 	$mkctx_build_defs = {};
 	$mkctx_tools = {%{get_predefined_tool_names()}};
+	$mkctx_varuse = {};
 
 	foreach my $prefix (qw(pre do post)) {
 		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
@@ -5899,16 +5922,25 @@ sub checklines_mk($) {
 	#
 
 	foreach my $line (@{$lines}) {
-		if ($line->has("is_varassign") && $line->get("varname") eq "BUILD_DEFS") {
+		next unless $line->has("is_varassign");
+		my $varcanon = $line->get("varcanon");
+
+		if ($varcanon eq "BUILD_DEFS" || $varcanon eq "PKG_GROUPS_VARS" || $varcanon eq "PKG_USERS_VARS") {
 			foreach my $varname (split(qr"\s+", $line->get("value"))) {
 				$mkctx_build_defs->{$varname} = true;
 				$opt_debug_misc and $line->log_debug("${varname} is added to BUILD_DEFS.");
 			}
-		}
-		if ($line->has("is_varassign") && $line->get("varname") eq "USE_TOOLS") {
+
+		} elsif ($varcanon eq "USE_TOOLS") {
 			foreach my $tool (split(qr"\s+", $line->get("value"))) {
 				$mkctx_tools->{$tool} = true;
 				$opt_debug_misc and $line->log_debug("${tool} is added to USE_TOOLS.");
+			}
+
+		} elsif ($varcanon eq "SUBST_VARS.*") {
+			foreach my $svar (split(/\s+/, $line->get("value"))) {
+				use_var($svar, varname_canon($svar));
+				$opt_debug_misc and $line->log_debug("varuse $svar");
 			}
 		}
 	}
@@ -6164,6 +6196,7 @@ sub checklines_mk($) {
 	$mkctx_vardef = undef;
 	$mkctx_build_defs = undef;
 	$mkctx_tools = undef;
+	$mkctx_varuse = undef;
 }
 
 sub checklines_buildlink3_inclusion($) {
@@ -6757,7 +6790,7 @@ sub checkfile_package_Makefile($$$) {
 		my $languages_line = $pkgctx_vardef->{"USE_LANGUAGES"};
 		my $value = $languages_line->get("value");
 
-		if ($languages_line->has("comment") && $languages_line->get("comment") =~ qr"(?:^|\s+)c(?:\s+|$)"i) {
+		if ($languages_line->has("comment") && $languages_line->get("comment") =~ qr"\b(?:c|empty|none)\b"i) {
 			# Don't emit a warning, since the comment
 			# probably contains a statement that C is
 			# really not needed.
