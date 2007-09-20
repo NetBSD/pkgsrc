@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/09/19 23:59:55 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/09/20 22:51:38 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -48,8 +48,8 @@ DEPENDS+=	libgnomeui>=2.18.1:../../devel/libgnomeui
 DEPENDS+=	gnome-icon-theme>=2.18.0:../../graphics/gnome-icon-theme
 DEPENDS+=	libgnomeprint>=2.18.0:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.18.0:../../print/libgnomeprintui
-DEPENDS+=	libgtop2>=2.14.2:../../sysutils/libgtop2
-DEPENDS+=	librsvg2>=2.16.0:../../graphics/librsvg2
+DEPENDS+=	libgtop>=2.14.2:../../sysutils/libgtop
+DEPENDS+=	librsvg>=2.16.0:../../graphics/librsvg
 DEPENDS+=	libxklavier>=3.0:../../x11/libxklavier
 DEPENDS+=	libsoup-devel>=2.2.96:../../net/libsoup-devel
 DEPENDS+=	libwnck>=2.18.0:../../devel/libwnck
@@ -59,7 +59,7 @@ DEPENDS+=	gtk2-engines>=2.10.1:../../x11/gtk2-engines
 DEPENDS+=	scrollkeeper>=0.3.14:../../textproc/scrollkeeper
 DEPENDS+=	gnome-desktop>=2.18.1:../../x11/gnome-desktop
 DEPENDS+=	gnome-menus>=2.18.0:../../sysutils/gnome-menus
-DEPENDS+=	eel2>=2.18.0.1:../../devel/eel2
+DEPENDS+=	eel>=2.18.0.1:../../devel/eel
 DEPENDS+=	nautilus>=2.18.1:../../sysutils/nautilus
 DEPENDS+=	metacity>=2.18.2:../../wm/metacity
 DEPENDS+=	gstreamer0.10>=0.10.12:../../multimedia/gstreamer0.10
