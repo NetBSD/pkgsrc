@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2007/09/20 21:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2007/09/20 21:37:35 wiz Exp $
 #
 
 DISTNAME=		nautilus-2.18.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -45,7 +45,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

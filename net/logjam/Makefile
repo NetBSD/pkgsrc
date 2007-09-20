@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/19 23:19:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/20 21:37:38 wiz Exp $
 #
 
 DISTNAME=	logjam-4.5.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://logjam.danga.com/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ USE_TOOLS+=		perl pkg-config intltool msgfmt
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
