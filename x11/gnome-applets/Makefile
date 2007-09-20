@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2007/09/20 00:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2007/09/20 21:12:57 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -101,7 +101,7 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/libgtop2/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
