@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2007/09/19 23:13:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/20 21:36:56 wiz Exp $
 
 DISTNAME=	librsvg-2.18.2
-PKGNAME=	${DISTNAME:S/-/2-/}
 PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.18/}
@@ -13,7 +12,7 @@ COMMENT=	SVG library for GNOME2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=	librsvg2-gtk-[0-9]*
+CONFLICTS+=	librsvg2-gtk-[0-9]* librsvg2-[0-9]*
 MAKE_JOBS_SAFE=	NO
 
 USE_DIRS+=		xdg-1.1
