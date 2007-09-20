@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2048 2007/09/20 00:13:58 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2049 2007/09/20 07:18:54 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3785,3 +3785,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Moved misc/gnome2-utils to misc/gnome-utils [wiz 2007-09-20]
 	Moved games/gnome2-games to games/gnome-games [wiz 2007-09-20]
 	Renamed sysutils/gnome2-system-monitor to sysutils/gnome-system-monitor [wiz 2007-09-20]
+	Updated www/firefox to 2.0.0.7 [ghen 2007-09-20]
+	Updated www/firefox-bin to 2.0.0.7 [ghen 2007-09-20]
+	Updated www/firefox-gtk1 to 2.0.0.7 [ghen 2007-09-20]
