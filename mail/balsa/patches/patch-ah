@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.2 2006/02/08 18:25:24 drochner Exp $
+$NetBSD: patch-ah,v 1.1 2007/09/20 20:50:53 wiz Exp $
 
 --- libbalsa/imap/imap-search.c.orig	2005-06-22 22:08:59.000000000 +0200
 +++ libbalsa/imap/imap-search.c
