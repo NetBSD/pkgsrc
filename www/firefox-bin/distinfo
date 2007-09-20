@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.30 2007/07/31 13:51:22 ghen Exp $
+$NetBSD: distinfo,v 1.31 2007/09/20 07:17:33 ghen Exp $
 
-SHA1 (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-i386-gtk1.tar.bz2) = 722f430d6c21e1d06ccb4bf2e58ec2423ebeba48
-RMD160 (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-i386-gtk1.tar.bz2) = a342e513d0314bacf444967c5b5e1cbd2a00bc69
-Size (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-i386-gtk1.tar.bz2) = 11203830 bytes
-SHA1 (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-respin-sparc-gtk1.tar.bz2) = a34bcb73bbfb3476427ea27ea2ccd6cddffd4981
-RMD160 (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-respin-sparc-gtk1.tar.bz2) = cbee15405c4c0f8ceb805a9da78f75bd1df9454d
-Size (firefox/releases/2.0.0.6/contrib/solaris_tarball/firefox-2.0.0.6.en-US.solaris8-respin-sparc-gtk1.tar.bz2) = 27306 bytes
-SHA1 (firefox/releases/2.0.0.6/linux-i686/en-US/firefox-2.0.0.6.tar.gz) = 02b6a9dcba33f841cf089a1c7961615960512545
-RMD160 (firefox/releases/2.0.0.6/linux-i686/en-US/firefox-2.0.0.6.tar.gz) = 8cad47d2fa04098762a215c14fbc1f91364b2f0c
-Size (firefox/releases/2.0.0.6/linux-i686/en-US/firefox-2.0.0.6.tar.gz) = 9671806 bytes
+SHA1 (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = a5acf3e329549634be8ccf5a435ba563298440d8
+RMD160 (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = b098d2d40e8c899ece96230f0f5b88615c14728b
+Size (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = 9671863 bytes
