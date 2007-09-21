@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 00:17:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/21 16:10:43 wiz Exp $
 #
 
 DISTNAME=	ikiwiki_2.6.1
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -17,25 +18,27 @@ PKG_SUGGESTED_OPTIONS=	# none on by default
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+# http://ikiwiki.info/install/index.html
+# needed dependencies:
 DEPENDS+=	p5-Text-Markdown-[0-9]*:../../textproc/p5-Text-Markdown
-DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
-DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
-DEPENDS+=	p5-CGI-FormBuilder>=3.02.02:../../www/p5-CGI-FormBuilder
-DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
-DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
-DEPENDS+=	p5-Mail-Sendmail-[0-9]*:../../mail/p5-Mail-Sendmail
-DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-
-# XXX: Are the following really needed?
-DEPENDS+=	Markdown>=1.0.1:../../textproc/Markdown
-DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
-DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
-DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
+# used if available:
+DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
+DEPENDS+=	p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
+DEPENDS+=	p5-Mail-Sendmail-[0-9]*:../../mail/p5-Mail-Sendmail
+DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
+DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-RPC-XML-[0-9]*:../../net/p5-RPC-XML
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-XML-Feed-[0-9]*:../../textproc/p5-XML-Feed
+DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
+DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
+
+# for img plugin
+DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 
 .if !empty(PKG_OPTIONS:Msvn)
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
