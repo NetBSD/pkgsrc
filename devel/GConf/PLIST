@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2007/04/09 00:55:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/09/21 12:58:13 wiz Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -17,7 +17,7 @@ lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
 man/man1/gconftool-2.1
 share/aclocal/gconf-2.m4
-share/examples/GConf2/path
+share/examples/GConf/path
 share/gtk-doc/html/gconf/ch01.html
 share/gtk-doc/html/gconf/gconf-GConfClient.html
 share/gtk-doc/html/gconf/gconf-gconf-backend.html
@@ -118,7 +118,7 @@ share/sgml/gconf/gconf-1.0.dtd
 @exec ${MKDIR} %D/share/gconf/schemas
 @dirrm share/gconf/schemas
 @unexec ${RMDIR} -p %D/share/gconf 2>/dev/null || ${TRUE}
-@dirrm share/examples/GConf2
+@dirrm share/examples/GConf
 @dirrm lib/GConf/2
 @unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf

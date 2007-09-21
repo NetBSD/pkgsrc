@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.894 2007/09/21 10:15:40 taca Exp $
+# $NetBSD: Makefile,v 1.895 2007/09/21 12:58:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
 
 SUBDIR+=	ArX
 SUBDIR+=	ExmanIDE
-SUBDIR+=	GConf2
-SUBDIR+=	GConf2-ui
+SUBDIR+=	GConf
+SUBDIR+=	GConf-ui
 SUBDIR+=	Gorm
 SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
@@ -257,7 +257,7 @@ SUBDIR+=	libextractor
 SUBDIR+=	libffi
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgetopt
-SUBDIR+=	libglade2
+SUBDIR+=	libglade
 SUBDIR+=	libglademm
 SUBDIR+=	libgnome
 SUBDIR+=	libgnomemm
@@ -295,7 +295,7 @@ SUBDIR+=	libsetenv
 SUBDIR+=	libsexy
 SUBDIR+=	libsexymm
 SUBDIR+=	libsigc++
-SUBDIR+=	libsigc++2
+SUBDIR+=	libsigc++1
 SUBDIR+=	libsigsegv
 SUBDIR+=	libslang
 SUBDIR+=	libsmi
