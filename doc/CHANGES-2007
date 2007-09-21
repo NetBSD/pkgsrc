@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2063 2007/09/21 13:06:56 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2064 2007/09/21 16:11:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Renamed graphics/libart2 to graphics/libart [wiz 2007-09-21]
 	Renamed x11/lablgtk to x11/lablgtk1 [wiz 2007-09-21]
 	Renamed x11/lablgtk2 to x11/lablgtk [wiz 2007-09-21]
+	Updated www/ikiwiki to 2.6.1nb1 [wiz 2007-09-21]
