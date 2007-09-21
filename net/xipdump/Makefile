@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2007/03/24 19:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2007/09/21 20:03:08 adrianp Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.lse.epita.fr/twiki/pub/Projects/XipDump/
 EXTRACT_SUFX=	.tgz
@@ -16,11 +16,11 @@ PLIST_SRC=	${WRKDIR}/PLIST
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${PREFIX}/include ${LIBNET_CFLAGS_CMD:sh}
-LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lnet
+LIBS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lnet
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man8
 
-LIBNET_CFLAGS_CMD= ${BUILDLINK_PREFIX.libnet10}/bin/libnet10-config --defines
+LIBNET_CFLAGS_CMD=	${PREFIX}/bin/libnet10-config --defines
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -29,6 +29,14 @@ post-build:
 	@${ECHO} "@dirrm share/xipdump/pkt" >> ${PLIST_SRC}
 	@${ECHO} "@dirrm share/xipdump/pkc" >> ${PLIST_SRC}
 	@${ECHO} "@dirrm share/xipdump" >> ${PLIST_SRC}
+
+post-install:
+	${FIND} ${PREFIX}/share/xipdump -name *.pkc | \
+		${XARGS} ${CHMOD} ${DOCMODE}
+	${FIND} ${PREFIX}/share/xipdump -name *.pkt | \
+		${XARGS} ${CHMOD} ${DOCMODE}
+	${CHMOD} ${MANMODE} ${PREFIX}/${PKGMANDIR}/man8/xipdump.8
+	${CHMOD} ${SHAREMODE} ${PREFIX}/lib/X11/app-defaults/Xipdump
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
