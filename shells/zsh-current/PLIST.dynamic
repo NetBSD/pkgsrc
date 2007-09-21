@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.dynamic,v 1.3 2006/03/11 13:20:15 uebayasi Exp $
+@comment $NetBSD: PLIST.dynamic,v 1.4 2007/09/21 13:59:16 uebayasi Exp $
 lib/zsh/${PKGVERSION}/zsh/cap.so
 lib/zsh/${PKGVERSION}/zsh/clone.so
 lib/zsh/${PKGVERSION}/zsh/compctl.so
@@ -77,6 +77,9 @@ share/zsh/${PKGVERSION}/functions/zftransfer
 share/zsh/${PKGVERSION}/functions/zftype
 share/zsh/${PKGVERSION}/functions/zfuget
 share/zsh/${PKGVERSION}/functions/zfuput
+share/zsh/${PKGVERSION}/functions/zsh-newuser-install
+share/zsh/${PKGVERSION}/scripts/newuser
+@dirrm share/zsh/${PKGVERSION}/scripts
 @dirrm lib/zsh/${PKGVERSION}/zsh/net
 @dirrm lib/zsh/${PKGVERSION}/zsh
 @dirrm lib/zsh/${PKGVERSION}
