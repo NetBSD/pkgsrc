@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2007/06/18 21:33:33 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.28 2007/09/21 22:07:54 ghen Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -85,6 +85,9 @@ MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-svg-renderer-libart
+CONFIGURE_ARGS+=	--enable-svg-renderer=cairo
+.include "../../graphics/cairo/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-system-cairo
 .endif
 
 .if defined(BUILD_CALENDAR)
