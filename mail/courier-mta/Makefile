@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/09/21 14:12:19 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/21 22:42:00 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -94,6 +94,9 @@ post-build:
 post-install:
 	cd ${WRKSRC}/courier && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-permissions
+	${CHOWN} ${COURIER_USER}:${COURIER_GROUP} \
+		${DATADIR}/filterctl ${PREFIX}/sbin/courierfilter
+	${CHMOD} 0500 ${DATADIR}/filterctl ${PREFIX}/sbin/courierfilter
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/locallowercase ${EGDIR}/locallowercase
 
