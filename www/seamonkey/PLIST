@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/07/26 08:50:17 ghen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/09/21 22:07:54 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -700,12 +700,6 @@ include/${MOZILLA}/autoconfig/nsIReadConfig.h
 include/${MOZILLA}/bayesflt/nsBayesianFilter.h
 include/${MOZILLA}/bayesflt/nsBayesianFilterCID.h
 include/${MOZILLA}/browser/nsIBrowserInstance.h
-include/${MOZILLA}/cairo/cairo-features.h
-include/${MOZILLA}/cairo/cairo-ft.h
-include/${MOZILLA}/cairo/cairo-rename.h
-include/${MOZILLA}/cairo/cairo-xlib-xrender.h
-include/${MOZILLA}/cairo/cairo-xlib.h
-include/${MOZILLA}/cairo/cairo.h
 include/${MOZILLA}/caps/nsICryptoHash.h
 include/${MOZILLA}/caps/nsIPrincipal.h
 include/${MOZILLA}/caps/nsIScriptSecurityManager.h
@@ -1614,7 +1608,6 @@ include/${MOZILLA}/layout/nsStyleUtil.h
 include/${MOZILLA}/layout/nsTextTransformer.h
 include/${MOZILLA}/layout/nsTreeColFrame.h
 include/${MOZILLA}/layout/nsTreeUtils.h
-include/${MOZILLA}/libpixman/pixman.h
 include/${MOZILLA}/libreg/NSReg.h
 include/${MOZILLA}/libreg/VerReg.h
 include/${MOZILLA}/liveconnect/jsjava.h
@@ -3172,7 +3165,6 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/locale
 @dirrm include/${MOZILLA}/liveconnect
 @dirrm include/${MOZILLA}/libreg
-@dirrm include/${MOZILLA}/libpixman
 @dirrm include/${MOZILLA}/ldap-private
 @dirrm include/${MOZILLA}/ldap
 @dirrm include/${MOZILLA}/layout
@@ -3211,7 +3203,6 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/chrome
 @dirrm include/${MOZILLA}/chardet
 @dirrm include/${MOZILLA}/caps
-@dirrm include/${MOZILLA}/cairo
 @dirrm include/${MOZILLA}/browser
 @dirrm include/${MOZILLA}/bayesflt
 @dirrm include/${MOZILLA}/autoconfig
