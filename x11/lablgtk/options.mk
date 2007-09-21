@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2007/09/20 21:37:42 wiz Exp $
+# $NetBSD: options.mk,v 1.1 2007/09/21 13:00:53 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk2
+PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
 PKG_SUPPORTED_OPTIONS=	glade gnomecanvas svg
 PKG_SUGGESTED_OPTIONS=	gnomecanvas svg
 

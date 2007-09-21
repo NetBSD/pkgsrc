@@ -1,45 +1,38 @@
-# $NetBSD: Makefile,v 1.26 2006/04/06 06:23:01 reed Exp $
+# $NetBSD: Makefile,v 1.27 2007/09/21 13:00:50 wiz Exp $
+#
 
-DISTNAME=	lablgtk-1.2.7
-PKGREVISION=	3
+DISTNAME=	lablgtk-2.6.0
+PKGREVISION=	14
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
-COMMENT=	GTK+ bindings for ocaml
+COMMENT=	GTK+ 2.x bindings for Objective Caml
 
-USE_TOOLS+=	gmake
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+
+BUILD_TARGET=		world
 
 BUILDLINK_DEPMETHOD.ocaml=	full
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.0.5
+
+CONFLICTS=	lablgtk2-2.*
 
 .include "../../mk/bsd.prefs.mk"
 
-# currently ocamlopt is only available on i386, sparc and powerpc.
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc")
-USE_DOTOPT=	YES
+# Stub libraries for functions missing from base system.
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || \
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
+    ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
+PLIST_SUBST+=	HAVE_STUBS=""
 .else
-CAMLOPT=	ocamlc
-MAKE_ENV+=	CAMLOPT=${CAMLOPT:Q}
-PLIST_SRC=	${PKGDIR}/PLIST.noopt
+PLIST_SUBST+=	HAVE_STUBS="@comment "
 .endif
 
-.if ${OPSYS} == "Darwin"
-PLIST_SRC+=	${PKGDIR}/PLIST.stub
-.endif
+.include "options.mk"
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		configure USE_DOTOPT=${USE_DOTOPT} USE_CC=1 CC=${CC}
-
-.if defined(USE_DOTOPT)
-post-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
-		opt
-.endif
-
-.include "../../x11/gtk/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
+.include "../../textproc/gtkspell/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
