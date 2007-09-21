@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/09/17 15:28:03 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/21 14:12:19 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,18 @@ CONFLICTS=	courier-imap<4.11
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.couriertcpd
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--with-ipv6
+.else
+CONFIGURE_ARGS+=	--without-ipv6
+.endif
 
 .include "../../mail/courier-mta/Makefile.common"
 
