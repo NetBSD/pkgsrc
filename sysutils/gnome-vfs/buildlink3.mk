@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2007/09/19 22:22:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2007/09/21 13:04:18 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS_BUILDLINK3_MK:=	${GNOME_VFS_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules/ \
 				{ print "@comment in gnome-vfs: " $$0; next; }
 .endif	# GNOME_VFS_BUILDLINK3_MK
 
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"

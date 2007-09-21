@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2007/02/05 23:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/09/21 13:04:29 wiz Exp $
 
 DISTNAME=		devilspie-0.20.2
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 
@@ -21,7 +22,7 @@ post-install:
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

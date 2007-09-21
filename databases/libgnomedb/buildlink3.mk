@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2007/08/04 11:23:32 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2007/09/21 13:03:32 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEDB_BUILDLINK3_MK:=	${LIBGNOMEDB_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.libgnomedb?=	../../databases/libgnomedb
 
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"

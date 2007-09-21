@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:53 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2007/09/21 13:03:55 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WXSVG_BUILDLINK3_MK:=	${WXSVG_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.wxsvg?=	../../graphics/wxsvg
 .endif	# WXSVG_BUILDLINK3_MK
 
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

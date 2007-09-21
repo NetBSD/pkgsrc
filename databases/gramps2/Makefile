@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/09/19 23:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/21 13:03:31 wiz Exp $
 #
 
 DISTNAME=		gramps-2.2.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED=	24
 
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
-GCONF2_SCHEMAS+=	gramps.schemas
+GCONF_SCHEMAS+=	gramps.schemas
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
@@ -33,7 +33,7 @@ GCONF2_SCHEMAS+=	gramps.schemas
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2007/09/19 23:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/21 13:04:44 wiz Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-extras/2.14/}
 EXTRACT_SUFX=	.tar.bz2

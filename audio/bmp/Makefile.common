@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2007/09/19 23:13:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2007/09/21 13:03:26 wiz Exp $
 #
 
 DISTNAME=	bmp-0.9.7.1
@@ -52,7 +52,7 @@ PKG_SUPPORTED_OPTIONS=	gnome inet6 xmms-eq
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gnome-vfs
-.  include "../../devel/GConf2/buildlink3.mk"
+.  include "../../devel/GConf/buildlink3.mk"
 .  include "../../sysutils/gnome-vfs/buildlink3.mk"
 .endif
 
@@ -91,7 +91,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
