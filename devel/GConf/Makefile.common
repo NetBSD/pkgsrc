@@ -1,25 +1,25 @@
-# $NetBSD: Makefile.common,v 1.44 2007/07/09 17:16:39 drochner Exp $
+# $NetBSD: Makefile.common,v 1.1 2007/09/21 12:58:13 wiz Exp $
 #
 
-GCONF2_VERSION=		2.18.0.1
+GCONF_VERSION=		2.18.0.1
 
-DISTNAME=		GConf-${GCONF2_VERSION}
+DISTNAME=		GConf-${GCONF_VERSION}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.18/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gconf/
-COMMENT=		Configuration database system used by GNOME (v2)
+COMMENT=		Configuration database system used by GNOME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # not ready yet.  .schemas are installed in the depot.
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-DISTINFO_FILE=		${.CURDIR}/../GConf2/distinfo
-FILESDIR=		${.CURDIR}/../GConf2/files
-PATCHDIR=		${.CURDIR}/../GConf2/patches
+DISTINFO_FILE=		${.CURDIR}/../GConf/distinfo
+FILESDIR=		${.CURDIR}/../GConf/files
+PATCHDIR=		${.CURDIR}/../GConf/patches
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
