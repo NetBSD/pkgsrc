@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.4 2007/09/11 14:13:52 joerg Exp $
+dnl	$Id: configure.in,v 1.5 2007/09/21 10:36:34 rillig Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -18,14 +18,9 @@ AC_ARG_WITH(defshell,
 yes)   AC_MSG_ERROR(bad value ${withval} given for bmake DEFSHELL) ;;
 no)    ;;
 *)	case "$with_defshell" in
-	*/csh)
-		# kidding right?
-		DEFSHELL=0
-		DEFAULT_CSH=$with_defshell
-		;;
-	*/sh)  DEFSHELL=1;;
-	*/ksh) DEFSHELL=2;;
-	esac
+	*/csh)	DEFSHELL=0; DEFAULT_CSH=$with_defshell;; # kidding right?
+	*/sh)  DEFSHELL=1; DEFAULT_SH=$with_defshell;;
+	*/ksh) DEFSHELL=2; DEFAULT_KSH=$with_defshell;;
        ;;
 esac])
 AC_DEFINE_UNQUOTED(DEFSHELL, ${DEFSHELL}, Shell spec to use by default)
