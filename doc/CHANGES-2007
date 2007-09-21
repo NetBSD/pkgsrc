@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2077 2007/09/21 19:51:00 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2078 2007/09/21 19:55:31 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3837,3 +3837,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xmag to 1.0.2 [bjs 2007-09-21]
 	Updated x11/xtrans to 1.0.4 [bjs 2007-09-21]
 	Updated x11/xwininfo to 1.0.3 [bjs 2007-09-21]
+	Updated x11/xset to 1.0.3 [bjs 2007-09-21]
+	Updated x11/inputproto to 1.4.2.1 [bjs 2007-09-21]
