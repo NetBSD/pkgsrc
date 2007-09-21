@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2069 2007/09/21 18:36:23 veego Exp $
+$NetBSD: CHANGES-2007,v 1.2070 2007/09/21 18:53:31 veego Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3828,3 +3828,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/beforelight to 1.0.3 [blair 2007-09-21]
 	Updated lang/spidermonkey to 1.60nb1 [blair 2007-09-21]
 	Updated games/pioneers to 0.11.2 [veego 2007-09-21]
+	Updated net/bittornado to 0.3.18 [veego 2007-09-21]
+	Updated net/bittornado-gui to 0.3.18 [veego 2007-09-21]
