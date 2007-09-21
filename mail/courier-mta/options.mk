@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2007/09/07 14:11:20 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2007/09/21 14:12:19 jlam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-mta
 PKG_SUPPORTED_OPTIONS=	courier-dsn courier-esmtp courier-local		\
-			courier-uucp ldap
-PKG_SUGGESTED_OPTIONS=	courier-dsn courier-esmtp courier-local
+			courier-uucp inet6 ldap
+PKG_SUGGESTED_OPTIONS=	courier-dsn courier-esmtp courier-local inet6
 
 .include "../../mk/bsd.options.mk"
 
@@ -109,6 +109,17 @@ CONF_FILES_PERMS+=	${EGDIR}/module.uucp				\
 
 .if empty(COURIER_TRANSPORTS)
 PKG_FAIL_REASON+=	"[courier/options.mk] No mail transports specified."
+.endif
+
+
+######################################################################
+###
+### IPv6 support (used by Courier ESMTP client)
+###
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--with-ipv6
+.else
+CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
 ######################################################################
