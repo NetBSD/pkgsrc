@@ -39,6 +39,12 @@
 /* Define to 1 if you have the <dirent.h> header file. */
 #undef HAVE_DIRENT_H
 
+/* Define if dirfd is either a function or a macro. */
+#undef HAVE_DIRFD
+
+/* Define to 1 if `dd_fd' is member of `DIR'. */
+#undef HAVE_DIR_DD_FD
+
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 #undef HAVE_DOPRNT
 
