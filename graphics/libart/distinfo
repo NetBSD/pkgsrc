@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2007/03/01 18:05:44 drochner Exp $
+$NetBSD: distinfo,v 1.1 2007/09/21 13:00:18 wiz Exp $
 
 SHA1 (libart_lgpl-2.3.19.tar.bz2) = 7f1ff36c91cdc8f14b62acb50836f52a0c735b9e
 RMD160 (libart_lgpl-2.3.19.tar.bz2) = 36dca48e3ddcd7e9d11f79e54dd7007cf97ac079
