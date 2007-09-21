@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/21 05:24:43 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/09/21 13:59:16 uebayasi Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -648,12 +648,9 @@ share/zsh/${PKGVERSION}/functions/zmv
 share/zsh/${PKGVERSION}/functions/zrecompile
 share/zsh/${PKGVERSION}/functions/zsh-mime-handler
 share/zsh/${PKGVERSION}/functions/zsh-mime-setup
-share/zsh/${PKGVERSION}/functions/zsh-newuser-install
 share/zsh/${PKGVERSION}/functions/zstyle+
-share/zsh/${PKGVERSION}/scripts/newuser
 @exec ${MKDIR} %D/share/zsh/site-functions
 @dirrm share/zsh/site-functions
-@dirrm share/zsh/${PKGVERSION}/scripts
 @dirrm share/zsh/${PKGVERSION}/functions
 @dirrm share/zsh/${PKGVERSION}
 @dirrm share/zsh
