@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/09/19 23:13:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:04:25 wiz Exp $
 #
 
 DISTNAME=	planner-0.14.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,13 +21,13 @@ PKGCONFIG_OVERRIDE=	libplanner-1.pc.in
 
 CONFIGURE_ARGS+=	--enable-python=no
 
-GCONF2_SCHEMAS=		planner.schemas
+GCONF_SCHEMAS=		planner.schemas
 
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

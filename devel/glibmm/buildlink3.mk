@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/09/21 13:03:35 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIBMM_BUILDLINK3_MK:=	${GLIBMM_BUILDLINK3_MK}+
@@ -18,6 +18,6 @@ BUILDLINK_PKGSRCDIR.glibmm?=	../../devel/glibmm
 .endif	# GLIBMM_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

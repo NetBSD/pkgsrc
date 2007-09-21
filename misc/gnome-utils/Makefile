@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2007/09/20 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2007/09/21 13:04:00 wiz Exp $
 #
 
 DISTNAME=		gnome-utils-2.18.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,11 +22,11 @@ PKGCONFIG_OVERRIDE+=	gnome-dictionary/libgdict/gdict-1.0-uninstalled.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
-GCONF2_SCHEMAS+=	baobab.schemas
-GCONF2_SCHEMAS+=	gnome-dictionary.schemas
-GCONF2_SCHEMAS+=	gnome-screenshot.schemas
-GCONF2_SCHEMAS+=	gnome-search-tool.schemas
-GCONF2_SCHEMAS+=	logview.schemas
+GCONF_SCHEMAS+=	baobab.schemas
+GCONF_SCHEMAS+=	gnome-dictionary.schemas
+GCONF_SCHEMAS+=	gnome-screenshot.schemas
+GCONF_SCHEMAS+=	gnome-search-tool.schemas
+GCONF_SCHEMAS+=	logview.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.13.4
@@ -38,11 +38,11 @@ BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.7
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

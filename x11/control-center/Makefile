@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2007/09/20 21:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/21 13:04:29 wiz Exp $
 #
 
 DISTNAME=	control-center-2.18.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,13 +33,13 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 INSTALL_MAKE_FLAGS+=	menudir=${PREFIX}/share/examples/${PKGBASE}
 
-GCONF2_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
-GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
-GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
-GCONF2_SCHEMAS+=	control-center.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
-GCONF2_SCHEMAS+=	themus.schemas
-GCONF2_SCHEMAS+=	fontilus.schemas
+GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
+GCONF_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
+GCONF_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
+GCONF_SCHEMAS+=	control-center.schemas
+GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
+GCONF_SCHEMAS+=	themus.schemas
+GCONF_SCHEMAS+=	fontilus.schemas
 
 EGDIR=			${PREFIX}/share/examples/control-center
 CONF_FILES=		${EGDIR}/theme-method.conf \
@@ -57,11 +57,11 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

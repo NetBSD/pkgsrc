@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/09/19 23:13:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/21 13:04:17 wiz Exp $
 
 DISTNAME=	seahorse-1.0.1
 PKGNAME=	seahorse-gedit-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-nautilus
 
-GCONF2_SCHEMAS= 	seahorse-gedit.schemas
+GCONF_SCHEMAS= 	seahorse-gedit.schemas
 
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 
@@ -32,10 +32,10 @@ INSTALL_DIRS=	plugins/gedit
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/seahorse/buildlink3.mk"

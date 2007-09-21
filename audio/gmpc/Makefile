@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2007/09/19 23:13:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/21 13:03:26 wiz Exp $
 #
 
 DISTNAME=		gmpc-0.13.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		http://download.qballcow.nl/programs/gmpc-0.13/
 
@@ -19,7 +19,7 @@ USE_DIRS+=		xdg-1.1
 
 .include "../../audio/libmpd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
