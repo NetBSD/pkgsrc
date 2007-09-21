@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2070 2007/09/21 18:53:31 veego Exp $
+$NetBSD: CHANGES-2007,v 1.2071 2007/09/21 19:12:40 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/pioneers to 0.11.2 [veego 2007-09-21]
 	Updated net/bittornado to 0.3.18 [veego 2007-09-21]
 	Updated net/bittornado-gui to 0.3.18 [veego 2007-09-21]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2007Q3 branch [agc 2007-09-21]
