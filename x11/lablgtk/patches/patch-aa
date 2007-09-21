@@ -1,63 +1,24 @@
-$NetBSD: patch-aa,v 1.5 2005/06/16 13:09:34 hira Exp $
+$NetBSD: patch-aa,v 1.6 2007/09/21 13:00:54 wiz Exp $
 
---- src/Makefile.orig	2003-05-15 16:17:53.000000000 +0200
+--- src/Makefile.orig	2005-10-17 13:52:03.000000000 +0200
 +++ src/Makefile
-@@ -137,32 +137,39 @@ testcc: lablgladecc lablgtktop
- 	rm -f testcc.ml
+@@ -220,7 +220,7 @@ build.ml: Makefile $(CONFIG) build.ml.in
+ 	    -e "s|@GTKLIBS@|$(GTKLIBS)|" < build.ml.in > $@
  
- install:
--	if test -d $(INSTALLDIR); then : ; else mkdir -p $(INSTALLDIR); fi
--	cp $(ALLOBJS:.cmo=.cmi) $(THOBJS:.cmo=.cmi) $(INSTALLDIR)
--	cp -p *.mli $(INSTALLDIR)
--	cp -p $(ALLOBJS:.cmo=.ml) $(ALLTHOBJS:.cmo=.ml) $(INSTALLDIR)
--	cp $(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS) $(INSTALLDIR)
--	cp $(CLIBS) $(INSTALLDIR)
--	cd $(INSTALLDIR) && $(RANLIB) $(CLIBS)
--	cp lablgtktop varcc $(INSTALLDIR)
--	if test -f lablgtktop_t; then cp lablgtktop_t $(INSTALLDIR); fi
--	cp -p *.h $(INSTALLDIR)
-+	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} ${INSTALLDIR}; fi
-+	for F in $(ALLOBJS:.cmo=.cmi) $(THOBJS:.cmo=.cmi) *.mli \
-+		$(ALLOBJS:.cmo=.ml) $(ALLTHOBJS:.cmo=.ml) \
-+		$(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS) $(CLIBS) *.h; \
-+	do \
-+	    ${BSD_INSTALL_DATA} $$F ${INSTALLDIR}; \
-+	done
-+	${BSD_INSTALL_SCRIPT} lablgtktop $(INSTALLDIR)
-+	${BSD_INSTALL_SCRIPT} varcc $(INSTALLDIR)
-+	if test -f lablgtktop_t; then ${BSD_INSTALL_SCRIPT} lablgtktop_t $(INSTALLDIR); fi
- 	if test -f lablgtk.cmxa; then $(MAKE) installopt; fi
-+	${BSD_INSTALL_DATA_DIR} $(DLLDIR)
- 	if test -f dlllablgtk.so; then \
--	   if test -d $(DLLDIR); then : ; else mkdir -p $(DLLDIR); fi; \
--	   cp $(CLIBS:lib%.a=dll%.so) $(DLLDIR) || \
--	   echo "Couldn't install dlls in default location"; \
-+	   for F in $(CLIBS:lib%.a=dll%.so); \
-+	   do \
-+		${BSD_INSTALL_DATA} $$F $(DLLDIR); \
-+	   done; \
- 	fi
--	cp lablgtk $(BINDIR)
-+	${BSD_INSTALL_SCRIPT} lablgtk $(BINDIR)
- 	if test -f lablgladecc; then cp lablgladecc $(BINDIR); fi
+ gdk-pixbuf-mlsource$(XE) : lablgtk.cma gtkInit.cmo gdk-pixbuf-mlsource.ml
+-	$(CAMLC) -o $@ $^
++	$(CAMLC) -I . -o $@ $^
  
- installopt:
--	cp $(MLLIBS:.cma=.cmxa) $(MLLIBS:.cma=.a) $(INSTALLDIR)
--	cd $(INSTALLDIR) && $(RANLIB) $(MLLIBS:.cma=.a)
--	cp $(ALLOBJS:.cmo=.cmx) $(INSTALLDIR)
--	cp $(INITOBJS:.cmo=.o) $(INSTALLDIR)
-+	for F in $(MLLIBS:.cma=.cmxa) $(MLLIBS:.cma=.a) \
-+		$(ALLOBJS:.cmo=.cmx) $(INITOBJS:.cmo=.o); \
-+	do \
-+	    ${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
-+	done
- 	if test -f gtkThread.cmx; then \
--	   cp $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o) $(INSTALLDIR); fi
-+	    for F in $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o); \
-+	    do \
-+		${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
-+	    done; \
-+	fi
- 
- liblablgtk.a: $(COBJS)
- 	$(LIBRARIAN) -o lablgtk $(COBJS) $(GTKLIBS)
+ lablgtkopt:: $(MLLIBS:.cma=.cmxa) $(INITOBJS:.cmo=.cmx)
+ ifeq ($(THREADS_LIB),system)
+@@ -254,9 +254,7 @@ install:
+ 	cp $(CLIBS) "$(INSTALLDIR)"
+ 	cd "$(INSTALLDIR)" && $(RANLIB) $(CLIBS)
+ 	cp varcc$(XE) propcc$(XE) "$(INSTALLDIR)"
+-	if test $(THREADS_LIB) != system || test $(HAS_DLL_SUPPORT) != yes; \
+-	   then cp lablgtktop$(XE) "$(INSTALLDIR)"; \
+-	fi
++	cp lablgtktop$(XE) "$(INSTALLDIR)"
+ 	cp -p *.h "$(INSTALLDIR)"
+ 	@if test -f lablgtk.cmxa; then $(MAKE) installopt; fi
+ 	@if test -f dlllablgtk2$(XS); then $(MAKE) installdll; fi

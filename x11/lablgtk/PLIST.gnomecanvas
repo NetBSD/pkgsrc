@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gnomecanvas,v 1.2 2007/07/18 13:10:44 jmmv Exp $
+@comment $NetBSD: PLIST.gnomecanvas,v 1.1 2007/09/21 13:00:52 wiz Exp $
 lib/ocaml/lablgtk2/gnoCanvas.cmi
 lib/ocaml/lablgtk2/gnoCanvas.cmx
 lib/ocaml/lablgtk2/gnoCanvas.ml
