@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/08/13 08:12:46 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/09/21 05:13:03 martti Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -8,6 +8,7 @@ SUBDIR+=	epsg-docs
 SUBDIR+=	garmin-utils
 SUBDIR+=	gdal-lib
 SUBDIR+=	geos
+SUBDIR+=	gpsbabel
 SUBDIR+=	gpsd
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpspoint
