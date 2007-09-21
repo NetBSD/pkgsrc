@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/09/21 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2007/09/21 14:05:44 wiz Exp $
 #
 
 DISTNAME=	libgsf-1.14.7
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	libgsf-gnome-1.pc.in
 CONFIGURE_ARGS+=	--without-python
 
 # XXX workaround for missing substitution in configure
-MAKE_ENV+=	GCONF_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR}
+MAKE_ENV+=	GCONF2_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR}
 
 GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
 
