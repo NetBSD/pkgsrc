@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/20 23:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/21 00:17:15 wiz Exp $
 #
 
 DISTNAME=	ikiwiki_2.6.1
@@ -17,20 +17,25 @@ PKG_SUGGESTED_OPTIONS=	# none on by default
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-DEPENDS+=	Markdown>=1.0.1:../../textproc/Markdown
-DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-Text-Markdown-[0-9]*:../../textproc/p5-Text-Markdown
+DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
+DEPENDS+=	p5-CGI-FormBuilder>=3.02.02:../../www/p5-CGI-FormBuilder
+DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
-DEPENDS+=	p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
 DEPENDS+=	p5-Mail-Sendmail-[0-9]*:../../mail/p5-Mail-Sendmail
-DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
-DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+
+# XXX: Are the following really needed?
+DEPENDS+=	Markdown>=1.0.1:../../textproc/Markdown
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
-# used by RecentChanges
-DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
+DEPENDS+=	p5-RPC-XML-[0-9]*:../../net/p5-RPC-XML
+DEPENDS+=	p5-XML-Feed-[0-9]*:../../textproc/p5-XML-Feed
 
 .if !empty(PKG_OPTIONS:Msvn)
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
@@ -43,16 +48,13 @@ PLIST_SUBST+=	W3M=""
 PLIST_SUBST+=	W3M="@comment "
 .endif
 
-# optional modules I couldn't find
-#DEPENDS+=	RPC::XML
-#DEPENDS+=	XML::Feed
 
 WRKSRC=		${WRKDIR}/ikiwiki
 PERL5_PACKLIST=	auto/IkiWiki/.packlist
 USE_LANGUAGES=	# none
 USE_TOOLS=	gmake
 
-REPLACE_PERL+=	ikiwiki.pl IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
+REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
 REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild
 REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm
 REPLACE_PERL+=	doc/ikiwiki.setup doc/w3mmode/ikiwiki.setup
