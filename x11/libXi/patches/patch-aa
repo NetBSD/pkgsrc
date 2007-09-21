@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2007/09/21 19:39:11 joerg Exp $
+
+--- src/XStFocus.c.orig	2007-09-21 21:35:50.000000000 +0200
++++ src/XStFocus.c
+@@ -72,8 +72,10 @@ XSetDeviceFocus(dpy, dev, focus, revert_
+     XExtDisplayInfo *info = XInput_find_display(dpy);
+ 
+     LockDisplay(dpy);
+-    if (_XiCheckExtInit(dpy, XInput_Initial_Release, info) == -1)
++    if (_XiCheckExtInit(dpy, XInput_Initial_Release, info) == -1) {
++        UnlockDisplay(dpy);
+ 	return (NoSuchExtension);
++    }
+ 
+     GetReq(SetDeviceFocus, req);
+     req->reqType = info->codes->major_opcode;
