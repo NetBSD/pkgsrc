@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.53 2007/08/09 19:13:29 drochner Exp $
+# $NetBSD: Makefile,v 1.64 2007/09/21 12:58:54 wiz Exp $
 #
 
 DISTNAME=		libglade-2.6.2
-PKGNAME=		${DISTNAME:S/libglade/libglade2/}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://www.jamesh.id.au/software/libglade/
-COMMENT=		Runtime interpreter for GLADE GUI files (v2)
+COMMENT=		Runtime interpreter for GLADE GUI files
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,6 +16,8 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
+
+CONFLICTS+=		libglade-[0-9]*
 
 CONFIGURE_ARGS+=	--without-xml-catalog
 
