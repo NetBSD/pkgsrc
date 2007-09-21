@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.6 2007/09/21 13:34:52 rillig Exp $
+# $NetBSD: pkg-build,v 1.7 2007/09/21 13:42:54 rillig Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -73,10 +73,7 @@ ${pkg_up_to_date_script} ${pkgname} ${dependencies} && exit 0
 
 set -e
 
-# Clean build system first
-rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
-# Install fresh bootstrap state
-[ -n "${bootstrapkit}" ] &&  ${tar} -xzf ${bootstrapkit} -C /
+@PREFIX@/libexec/pbulk/client-clean
 
 # Create the output directory and clean it up
 mkdir -p ${bulklog}/${pkgname}
