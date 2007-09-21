@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:38:02 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2007/09/21 16:53:42 veego Exp $
 
---- Makefile.orig	Wed Oct 11 20:08:29 2000
-+++ Makefile	Wed Nov  1 15:56:37 2000
+--- Makefile.orig	2002-08-20 05:17:53.000000000 +0200
++++ Makefile	2007-05-29 07:22:30.000000000 +0200
 @@ -6,7 +6,7 @@
  # a smaller and thinner font
  #FONT=neep9
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:38:02 jmmv Exp $
 -	$(CC) $(OPT) $(COBJS) -o alevt-cap $(EXPLIBS)
 +	$(CC) $(OPT) $(LDFLAGS) $(COBJS) -o alevt-cap $(EXPLIBS)
  
- font.h: fontsize.h
+ font.o: font1.xbm font2.xbm
  fontsize.h: font1.xbm font2.xbm
 @@ -62,21 +62,21 @@
  	install -m 0755 alevt		${RPM_BUILD_ROOT}/usr/X11R6/bin
