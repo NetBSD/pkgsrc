@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.8 2007/09/14 08:12:29 joerg Exp $	*/
+/*	$NetBSD: sha1.c,v 1.9 2007/09/21 18:44:37 joerg Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -79,7 +79,7 @@ __weak_alias(SHA1Final,_SHA1Final)
 
 typedef union {
     uint8_t c[64];
-    u_int l[16];
+    uint32_t l[16];
 } CHAR64LONG16;
 
 #ifdef __sparc_v9__
@@ -138,7 +138,8 @@ do_R4(uint32_t *a, uint32_t *b, uint32_t *c, uint32_t *d, uint32_t *e, CHAR64LON
 /*
  * Hash a single 512-bit block. This is the core of the algorithm.
  */
-void SHA1Transform(uint32_t state[5], const uint8_t buffer[64])
+void
+SHA1Transform(uint32_t state[5], const uint8_t buffer[64])
 {
     uint32_t a, b, c, d, e;
     CHAR64LONG16 *block;
@@ -208,8 +209,8 @@ void SHA1Transform(uint32_t state[5], const uint8_t buffer[64])
 /*
  * SHA1Init - Initialize new context
  */
-void SHA1Init(context)
-    SHA1_CTX *context;
+void
+SHA1Init(SHA1_CTX *context)
 {
 
     _DIAGASSERT(context != 0);
@@ -227,12 +228,11 @@ void SHA1Init(context)
 /*
  * Run your data through this.
  */
-void SHA1Update(context, data, len)
-    SHA1_CTX *context;
-    const uint8_t *data;
-    u_int len;
+void
+SHA1Update(SHA1_CTX *context, const uint8_t *data, size_t len)
 {
-    u_int i, j;
+    unsigned int i;
+    uint32_t j;
 
     _DIAGASSERT(context != 0);
     _DIAGASSERT(data != 0);
@@ -242,7 +242,8 @@ void SHA1Update(context, data, len)
 	context->count[1] += (len>>29)+1;
     j = (j >> 3) & 63;
     if ((j + len) > 63) {
-	(void)memcpy(&context->buffer[j], data, (i = 64-j));
+	i = 64 - j;
+	(void)memcpy(&context->buffer[j], data, i);
 	SHA1Transform(context->state, context->buffer);
 	for ( ; i + 63 < len; i += 64)
 	    SHA1Transform(context->state, &data[i]);
@@ -257,11 +258,10 @@ void SHA1Update(context, data, len)
 /*
  * Add padding and return the message digest.
  */
-void SHA1Final(digest, context)
-    uint8_t digest[20];
-    SHA1_CTX* context;
+void
+SHA1Final(uint8_t digest[20], SHA1_CTX* context)
 {
-    u_int i;
+    unsigned int i;
     uint8_t finalcount[8];
 
     _DIAGASSERT(digest != 0);
