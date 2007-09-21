@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/09/19 23:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/09/21 13:03:45 wiz Exp $
 #
 
 DISTNAME=	sirius-0.8.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	games gnome
 MASTER_SITES=	http://sirius.bitvis.nu/files/
 
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"

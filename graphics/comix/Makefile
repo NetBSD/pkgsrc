@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/06/01 00:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/21 13:03:47 wiz Exp $
 #
 
 DISTNAME=		comix-3.6.4
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=comix/}
 
@@ -28,7 +29,7 @@ do-install:
 	cd ${WRKSRC} && ${PYTHONBIN} install.py install --installdir ${PREFIX}
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/application.mk"

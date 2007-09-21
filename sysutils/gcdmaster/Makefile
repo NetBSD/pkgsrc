@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2007/09/19 23:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/21 13:04:17 wiz Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
 PKGNAME=	gcdmaster-${CDRDAO_VER}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Gnome UI frontend to cdrdao
 
 DEPENDS+=	cdrdao-${CDRDAO_VER}{,nb*}:../../sysutils/cdrdao
@@ -17,7 +17,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/pixmaps
 USE_TOOLS+=		pkg-config
 INSTALL_DIRS=		xdao
 
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../devel/libgnomeuimm/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

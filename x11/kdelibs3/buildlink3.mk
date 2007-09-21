@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2007/05/30 08:54:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2007/09/21 13:04:43 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -32,7 +32,7 @@ pkgbase := kdelibs
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"

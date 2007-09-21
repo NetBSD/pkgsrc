@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/19 23:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/21 13:04:07 wiz Exp $
 #
 
 USE_LANGUAGES=		c c++
@@ -6,7 +6,7 @@ USE_LANGUAGES=		c c++
 .include "Makefile.common"
 
 COMMENT+=		base plugins
-PKGREVISION=		8
+PKGREVISION=		9
 
 USE_TOOLS+=		perl:run
 
@@ -24,12 +24,12 @@ CONFIGURE_ARGS+=	--enable-xshm
 CONFIGURE_ARGS+=	--enable-xvideo
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/gst-plugins-0.8
 
-GCONF2_SCHEMAS=		gstreamer-0.8.schemas
+GCONF_SCHEMAS=		gstreamer-0.8.schemas
 
 REPLACE_PERL+=		tools/gst-launch-ext-m.m
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

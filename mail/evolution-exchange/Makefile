@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/09/19 23:19:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/21 13:03:57 wiz Exp $
 #
 
 DISTNAME=	evolution-exchange-2.10.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,14 +15,14 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-GCONF2_SCHEMAS=		apps_exchange_addressbook-2.10.schemas
+GCONF_SCHEMAS=		apps_exchange_addressbook-2.10.schemas
 
 .include "../../databases/openldap-client/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../mail/evolution/buildlink3.mk"
