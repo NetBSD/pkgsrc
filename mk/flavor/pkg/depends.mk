@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.38 2007/06/15 10:39:08 rillig Exp $
+# $NetBSD: depends.mk,v 1.39 2007/09/21 07:27:41 rillig Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -60,21 +60,24 @@ _RESOLVE_DEPENDS_CMD=	\
 			" "${BUILD_DEPENDS:Q} \
 			" "${DEPENDS:Q}
 
-# _DEPENDS_INSTALL_CMD expects "$pattern" to hold the dependency pattern
-#	and "$dir" to hold the package directory path associated with
-#	that dependency pattern.
+# _DEPENDS_INSTALL_CMD checks whether the package $pattern is installed,
+#	and installs it if necessary.
+#
+#	@param $pattern The pattern of the package to be installed.
+#	@param $dir The pkgsrc directory from which the package can be
+#		built.
+#	@param $type The dependency type. Can be one of bootstrap,
+#		build, full.
 #
 _DEPENDS_INSTALL_CMD=							\
 	pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;		\
+	case $$type in bootstrap) Type=Bootstrap;; build) Type=Build;; full) Type=Full;; esac; \
 	case "$$pkg" in							\
 	"")								\
-		${STEP_MSG} "Required installed package $$pattern: NOT found"; \
+		${STEP_MSG} "$$Type dependency $$pattern: NOT found";	\
 		target=${DEPENDS_TARGET:Q};				\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
-		if ${TEST} ! -d "$$dir"; then				\
-			${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
-			exit 1;						\
-		fi;							\
+		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
 		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
@@ -99,7 +102,7 @@ _DEPENDS_INSTALL_CMD=							\
 		esac;							\
 		silent=${_BOOTSTRAP_VERBOSE:Dyes};			\
 		if ${TEST} -z "$${silent}"; then			\
-			${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+			${STEP_MSG} "$$Type dependency $$pattern: $$pkg found"; \
 		fi;							\
 		;;							\
 	esac
