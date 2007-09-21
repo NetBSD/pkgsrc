@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.12 2007/09/14 08:12:29 joerg Exp $
+dnl $Id: configure.ac,v 1.13 2007/09/21 18:44:36 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsd-digest],[20070803],[agc@netbsd.org])
@@ -62,14 +62,6 @@ AH_BOTTOM([
 
 #ifndef __COPYRIGHT
 # define __COPYRIGHT(_s) __IDSTRING(copyright,_s)
-#endif
-
-#ifndef __P
-# if defined(__STDC__) || defined(__cplusplus)
-#  define __P(protos)     protos          /* full-blown ANSI C */
-# else
-#  define __P(protos)     ()              /* traditional C preprocessor */
-# endif
 #endif
 
 #ifndef __CONCAT

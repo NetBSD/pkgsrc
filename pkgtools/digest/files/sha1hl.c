@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.6 2007/09/14 08:12:29 joerg Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.7 2007/09/21 18:44:37 joerg Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -33,24 +33,16 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.6 2007/09/14 08:12:29 joerg Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.7 2007/09/21 18:44:37 joerg Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-#if 0
-__weak_alias(SHA1End,_SHA1End)
-__weak_alias(SHA1File,_SHA1File)
-__weak_alias(SHA1Data,_SHA1Data)
-#endif
-
 /* ARGSUSED */
 char *
-SHA1End(ctx, buf)
-    SHA1_CTX *ctx;
-    char *buf;
+SHA1End(SHA1_CTX *ctx, char *buf)
 {
     int i;
     char *p = buf;
@@ -73,13 +65,12 @@ SHA1End(ctx, buf)
 }
 
 char *
-SHA1File (filename, buf)
-    char *filename;
-    char *buf;
+SHA1File(char *filename, char *buf)
 {
     uint8_t buffer[BUFSIZ];
     SHA1_CTX ctx;
-    int fd, num, oerrno;
+    int fd, oerrno;
+    size_t num;
 
     _DIAGASSERT(filename != NULL);
     /* XXX: buf may be NULL ? */
@@ -99,10 +90,7 @@ SHA1File (filename, buf)
 }
 
 char *
-SHA1Data (data, len, buf)
-    const uint8_t *data;
-    size_t len;
-    char *buf;
+SHA1Data(const uint8_t *data, size_t len, char *buf)
 {
     SHA1_CTX ctx;
 

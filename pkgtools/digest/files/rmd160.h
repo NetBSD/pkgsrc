@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.6 2007/09/14 08:12:29 joerg Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.7 2007/09/21 18:44:37 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -42,7 +42,7 @@ typedef struct {
 __BEGIN_DECLS
 void	RMD160Init(RMD160_CTX *);
 void	RMD160Transform(uint32_t[5], const uint32_t[16]);
-void	RMD160Update(RMD160_CTX *, const uint8_t *, uint32_t);
+void	RMD160Update(RMD160_CTX *, const uint8_t *, size_t);
 void	RMD160Final(uint8_t[20], RMD160_CTX *);
 #ifndef	_KERNEL
 char	*RMD160End(RMD160_CTX *, char *);

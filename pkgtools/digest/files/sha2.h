@@ -79,9 +79,6 @@ typedef struct _SHA512_CTX {
 typedef SHA512_CTX SHA384_CTX;
 
 
-/*** SHA-256/384/512 Function Prototypes ******************************/
-#ifndef NOPROTO
-
 void SHA256_Init(SHA256_CTX *);
 void SHA256_Update(SHA256_CTX*, const uint8_t*, size_t);
 void SHA256_Final(uint8_t[SHA256_DIGEST_LENGTH], SHA256_CTX*);
@@ -102,31 +99,6 @@ void SHA512_Final(uint8_t[SHA512_DIGEST_LENGTH], SHA512_CTX*);
 char* SHA512_End(SHA512_CTX*, char[SHA512_DIGEST_STRING_LENGTH]);
 char* SHA512_Data(const uint8_t*, size_t, char[SHA512_DIGEST_STRING_LENGTH]);
 char *SHA512_File(char *, char *);
-
-#else /* NOPROTO */
-
-void SHA256_Init();
-void SHA256_Update();
-void SHA256_Final();
-char* SHA256_End();
-char* SHA256_Data();
-char *SHA256_File();
-
-void SHA384_Init();
-void SHA384_Update();
-void SHA384_Final();
-char* SHA384_End();
-char* SHA384_Data();
-char *SHA384_File();
-
-void SHA512_Init();
-void SHA512_Update();
-void SHA512_Final();
-char* SHA512_End();
-char* SHA512_Data();
-char *SHA512_File();
-
-#endif /* NOPROTO */
 
 #ifdef	__cplusplus
 }
