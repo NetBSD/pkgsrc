@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/08/15 13:43:00 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 19:40:22 bjs Exp $
 #
 
-DISTNAME=		xmag-1.0.1
+DISTNAME=		xmag-1.0.2
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
