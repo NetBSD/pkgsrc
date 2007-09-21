@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/07/12 13:29:54 joerg Exp $
+$NetBSD: distinfo,v 1.5 2007/09/21 19:54:18 bjs Exp $
 
-SHA1 (inputproto-1.4.2.tar.bz2) = db749d46dde0fa84ae68425b6a91470079559c02
-RMD160 (inputproto-1.4.2.tar.bz2) = 685495a234990ff5924d69a74adf7b6200f7cde1
-Size (inputproto-1.4.2.tar.bz2) = 45120 bytes
+SHA1 (inputproto-1.4.2.1.tar.bz2) = b2023ff507fb72b1434d13d913e1f4f0ad3c02ed
+RMD160 (inputproto-1.4.2.1.tar.bz2) = d3b8015450f0689449c16c0d5538df326a6d7d26
+Size (inputproto-1.4.2.1.tar.bz2) = 47663 bytes
