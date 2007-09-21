@@ -1,11 +1,23 @@
 #!@SH@
-# $NetBSD: client-clean,v 1.3 2007/08/15 21:10:55 joerg Exp $
+# $NetBSD: client-clean,v 1.4 2007/09/21 13:42:54 rillig Exp $
 
 . @PBULK_CONFIG@
 
 set -e
 
 # Clean build system first
+chmod -R 700 ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
 rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
+if [ -d "${prefix}" ]; then
+	echo "ERROR: [client-clean] Could not remove $prefix" 1>&2
+	exit 1
+fi
+
 # Install fresh bootstrap state
-[ -z "${bootstrapkit}" ] || ${tar} -xzf ${bootstrapkit} -C /
+if [ -f "${bootstrapkit}" ]; then
+	${tar} -xzf ${bootstrapkit} -C /
+elif [ -d "${bootstrapkit}" ]; then
+	cp -R ${bootstrapkit} ${prefix}
+else
+	# Do nothing
+fi
