@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/09/09 16:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/09/21 13:03:41 wiz Exp $
 
 DISTNAME=	asc-source-1.16.4.0
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,7 +40,7 @@ post-install:
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDLmm/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/libsigc++1/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../x11/paragui/buildlink3.mk"

@@ -189,8 +189,8 @@ klash			Install Konqueror flash plugin.
 kqueue	
 krb4	
 krb5	
-lablgtk			Use lablgtk (GTK1).
-lablgtk2		Use lablgtk2 (GTK2).
+lablgtk1		Use lablgtk1 (GTK1).
+lablgtk			Use lablgtk.
 lame			Use the lame encoder to create MP3 files.
 largefile	
 largescale	

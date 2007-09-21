@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/06/05 05:37:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2007/09/21 13:04:03 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KOFFICE_BUILDLINK3_MK:=	${KOFFICE_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_PKGSRCDIR.koffice?=	../../misc/koffice
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"

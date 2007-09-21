@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2007/09/19 23:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/21 13:03:48 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 USE_DIRS+=	xdg-1.1
 
 .include "options.mk"

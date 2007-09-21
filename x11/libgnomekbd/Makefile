@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/19 23:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/21 13:04:43 wiz Exp $
 #
 
 DISTNAME=	libgnomekbd-2.18.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomekbd/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,16 +21,16 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_DIRS+=	xdg-1.1
 
-GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
+GCONF_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
 PKGCONFIG_OVERRIDE+=	libgnomekbd.pc.in
 PKGCONFIG_OVERRIDE+=	libgnomekbdui.pc.in
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

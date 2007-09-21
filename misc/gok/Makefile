@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2007/09/19 23:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/09/21 13:04:01 wiz Exp $
 #
 
 DISTNAME=		gok-1.2.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	gok-1.0.pc.in
 
-GCONF2_SCHEMAS=		gok.schemas
+GCONF_SCHEMAS=		gok.schemas
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
@@ -28,10 +28,10 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

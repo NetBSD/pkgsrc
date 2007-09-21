@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2007/07/13 17:27:07 drochner Exp $
+# $NetBSD: Makefile,v 1.72 2007/09/21 13:04:26 wiz Exp $
 #
 
 DISTNAME=	metacity-2.18.5
+PKGREVISION=	1
 CATEGORIES=	wm x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +19,7 @@ USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	src/libmetacity-private.pc.in
 
-GCONF2_SCHEMAS=		metacity.schemas
+GCONF_SCHEMAS=		metacity.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,7 +35,7 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.7
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

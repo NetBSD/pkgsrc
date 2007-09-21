@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2007/05/30 07:32:33 martti Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/21 13:03:33 wiz Exp $
 
 DISTNAME=	rrdtool-1.2.23
+PKGREVISION=	1
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -33,7 +34,7 @@ SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

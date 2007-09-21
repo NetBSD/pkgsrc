@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2007/09/19 23:19:13 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/09/21 13:04:30 wiz Exp $
 #
 
 DISTNAME=		gnopernicus-1.1.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/1.1/}
 EXTRACT_SUFX=		.tar.bz2
@@ -51,9 +51,9 @@ CONFIGURE_ARGS+=	--disable-gtk-doc
 
 PKGCONFIG_OVERRIDE+=	gnopernicus-1.0.pc.in
 
-GCONF2_SCHEMAS+=	brlmonitor.schemas
-GCONF2_SCHEMAS+=	gnopernicus.schemas
-GCONF2_SCHEMAS+=	remote.schemas
+GCONF_SCHEMAS+=	brlmonitor.schemas
+GCONF_SCHEMAS+=	gnopernicus.schemas
+GCONF_SCHEMAS+=	remote.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.4.1
 BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.5
@@ -62,9 +62,9 @@ BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.7
 
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

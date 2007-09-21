@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2007/09/20 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/09/21 13:04:29 wiz Exp $
 #
 
 DISTNAME=		gnome-applets-2.18.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,14 +31,14 @@ PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
-GCONF2_SCHEMAS=		charpick.schemas
-GCONF2_SCHEMAS+=	drivemount.schemas
-GCONF2_SCHEMAS+=	geyes.schemas
-#GCONF2_SCHEMAS+=	gswitchit.schemas
-GCONF2_SCHEMAS+=	gweather.schemas
-GCONF2_SCHEMAS+=	mixer.schemas
-GCONF2_SCHEMAS+=	multiload.schemas
-GCONF2_SCHEMAS+=	stickynotes.schemas
+GCONF_SCHEMAS=		charpick.schemas
+GCONF_SCHEMAS+=	drivemount.schemas
+GCONF_SCHEMAS+=	geyes.schemas
+#GCONF_SCHEMAS+=	gswitchit.schemas
+GCONF_SCHEMAS+=	gweather.schemas
+GCONF_SCHEMAS+=	mixer.schemas
+GCONF_SCHEMAS+=	multiload.schemas
+GCONF_SCHEMAS+=	stickynotes.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
     (${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h))
-GCONF2_SCHEMAS+=	battstat.schemas
+GCONF_SCHEMAS+=	battstat.schemas
 PLIST_SUBST+=		BATTSTAT=
 CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
@@ -63,7 +63,7 @@ PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
 PRINT_PLIST_AWK+=	/examples/ { print "$${BATTSTAT}"$$0; next; }
 
 .if ${OPSYS} == "Linux" && exists(/usr/include/cpufreq.h)
-GCONF2_SCHEMAS+=	cpufreq-applet.schemas
+GCONF_SCHEMAS+=	cpufreq-applet.schemas
 PLIST_SUBST+=		CPUFREQ=
 .else
 PLIST_SUBST+=		CPUFREQ="@comment "
@@ -72,10 +72,10 @@ CONFIGURE_ARGS+=	--disable-cpufreq
 
 PRINT_PLIST_AWK+=	/[Cc][Pp][Uu][Ff]req/ { print "$${CPUFREQ}"$$0; next; }
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.6.0
-BUILDLINK_API_DEPENDS.libglade2+=		libglade2>=2.4.0
+BUILDLINK_API_DEPENDS.libglade+=		libglade>=2.4.0
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.2
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.2
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.16.0
@@ -90,7 +90,7 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"

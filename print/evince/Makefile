@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.34 2007/09/19 23:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/21 13:04:14 wiz Exp $
 #
 
 .include "../../print/evince/Makefile.common"
 
 COMMENT=		Document viewer for the GNOME Desktop
-PKGREVISION=		1
+PKGREVISION=		2
 
-GCONF2_SCHEMAS=		evince.schemas
-GCONF2_SCHEMAS+=	evince-thumbnailer.schemas
-GCONF2_SCHEMAS+=	evince-thumbnailer-ps.schemas
+GCONF_SCHEMAS=		evince.schemas
+GCONF_SCHEMAS+=	evince-thumbnailer.schemas
+GCONF_SCHEMAS+=	evince-thumbnailer-ps.schemas
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
 PKG_SUPPORTED_OPTIONS=	dvi djvu
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS=	# none
 .if !empty(PKG_OPTIONS:Mdvi)
 CONFIGURE_ARGS+=	--enable-dvi
 PLIST_SUBST+=		DVI=	# empty
-GCONF2_SCHEMAS+=	evince-thumbnailer-dvi.schemas
+GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
 .include "../../mk/tex.buildlink3.mk"
 .else
 PLIST_SUBST+=		DVI="@comment "
@@ -28,7 +28,7 @@ PLIST_SUBST+=		DVI="@comment "
 .if !empty(PKG_OPTIONS:Mdjvu)
 CONFIGURE_ARGS+=	--enable-djvu
 PLIST_SUBST+=		DJVU=	#empty
-GCONF2_SCHEMAS+=	evince-thumbnailer-djvu.schemas
+GCONF_SCHEMAS+=	evince-thumbnailer-djvu.schemas
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .else
 PLIST_SUBST+=		DJVU="@comment "
@@ -36,7 +36,7 @@ PLIST_SUBST+=		DJVU="@comment "
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

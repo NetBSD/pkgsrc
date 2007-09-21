@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2007/06/05 05:37:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2007/09/21 13:04:23 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_SPELL_BUILDLINK3_MK:=	${GNOME_SPELL_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.gnome-spell?=	../../textproc/gnome-spell
 
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"

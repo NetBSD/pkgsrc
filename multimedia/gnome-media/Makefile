@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/09/20 21:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/21 13:04:06 wiz Exp $
 
 DISTNAME=		gnome-media-2.18.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -27,10 +27,10 @@ CONFIGURE_ENV+=		XGETTEXT=${TOOLS_PATH.xgettext:Q}
 CONFIGURE_ENV+=		CDROM_HOST="bsd"
 .endif
 
-GCONF2_SCHEMAS=		CDDB-Slave2.schemas
-GCONF2_SCHEMAS+=	gnome-audio-profiles.schemas
-GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
-GCONF2_SCHEMAS+=	gnome-volume-control.schemas
+GCONF_SCHEMAS=		CDDB-Slave2.schemas
+GCONF_SCHEMAS+=	gnome-audio-profiles.schemas
+GCONF_SCHEMAS+=	gnome-sound-recorder.schemas
+GCONF_SCHEMAS+=	gnome-volume-control.schemas
 
 BUILDLINK_API_DEPENDS.esound+=			esound>=0.2.23
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
@@ -40,12 +40,12 @@ BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.13.7
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"

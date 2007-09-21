@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/09/19 23:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/21 13:03:38 wiz Exp $
 
 DISTNAME=	libgnomeuimm-2.18.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeuimm/2.18/}
 EXTRACT_SUFX=	.tar.bz2

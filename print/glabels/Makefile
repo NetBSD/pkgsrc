@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2007/09/19 23:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/21 13:04:14 wiz Exp $
 #
 
 DISTNAME=		glabels-2.0.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=glabels/}
 
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

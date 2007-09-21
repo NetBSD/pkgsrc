@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/05/30 08:54:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2007/09/21 13:04:15 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINT_BUILDLINK3_MK:=	${LIBGNOMEPRINT_BUILDLINK3_MK}+
@@ -24,7 +24,7 @@ BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 
 pkgbase := libgnomeprint
 .include "../../mk/pkg-build-options.mk"

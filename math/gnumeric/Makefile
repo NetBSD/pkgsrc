@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.124 2007/09/19 23:19:00 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2007/09/21 13:03:58 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.6.3
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED=	24 23
-GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
+GCONF_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 
 # XXX: link test against libDynaLoader_pic.a fails; bug
@@ -31,14 +31,14 @@ PLIST_SUBST+=	PERL="@comment "
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"

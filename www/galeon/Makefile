@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2007/09/19 23:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2007/09/21 13:04:27 wiz Exp $
 #
 
 DISTNAME=		galeon-2.0.3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galeon/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,13 +22,13 @@ GNU_CONFIGURE=		yes
 
 .include "options.mk"
 
-GCONF2_SCHEMAS=		galeon.schemas
+GCONF_SCHEMAS=		galeon.schemas
 
 EGDIR=			${PREFIX}/share/examples/galeon
 CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/galeon.soundlist
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"

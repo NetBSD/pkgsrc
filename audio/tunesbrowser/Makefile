@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/09/19 23:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/21 13:03:28 wiz Exp $
 #
 
 DISTNAME=		tunesbrowser-0.3.0
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		audio
 MASTER_SITES=		http://craz.net/programs/itunes/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,7 +23,7 @@ BUILDLINK_API_DEPENDS.libopendaap+=	libopendaap>=0.4.0
 
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/gst-plugins0.8-gnomevfs/buildlink3.mk"

@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.89 2007/08/15 06:33:45 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.90 2007/09/21 13:03:39 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1514,21 +1514,21 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 
   </sect2>
 
-  <sect2 id="gconf2-data-files">
-    <title>Packages installing GConf2 data files</title>
+  <sect2 id="gconf-data-files">
+    <title>Packages installing GConf data files</title>
 
     <para>If a package installs <filename>.schemas</filename> or
-    <filename>.entries</filename> files, used by GConf2,
+    <filename>.entries</filename> files, used by GConf,
     you need to take some extra steps to make sure they get registered
     in the database:</para>
 
     <orderedlist>
       <listitem>
-	<para>Include <filename>../../devel/GConf2/schemas.mk</filename>
+	<para>Include <filename>../../devel/GConf/schemas.mk</filename>
 	instead of its <filename>buildlink3.mk</filename> file.  This
-	takes care of rebuilding the GConf2 database at installation and
+	takes care of rebuilding the GConf database at installation and
 	deinstallation time, and tells the package where to install
-	GConf2 data files using some standard configure arguments.  It
+	GConf data files using some standard configure arguments.  It
 	also disallows any access to the database directly from the
 	package.</para>
       </listitem>
@@ -1548,14 +1548,14 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
       </listitem>
 
       <listitem>
-	<para>Define the <varname>GCONF2_SCHEMAS</varname> variable in
+	<para>Define the <varname>GCONF_SCHEMAS</varname> variable in
 	your <filename>Makefile</filename> with a list of all
 	<filename>.schemas</filename> files installed by the package, if
 	any.  Names must not contain any directories in them.</para>
       </listitem>
 
       <listitem>
-	<para>Define the <varname>GCONF2_ENTRIES</varname> variable in
+	<para>Define the <varname>GCONF_ENTRIES</varname> variable in
 	your <filename>Makefile</filename> with a
 	list of all <filename>.entries</filename> files installed by the
 	package, if any. Names must not contain any directories in

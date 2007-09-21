@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/06/05 05:37:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2007/09/21 13:04:07 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GST_PLUGINS0.8_BUILDLINK3_MK:=	${GST_PLUGINS0.8_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.gst-plugins0.8?=	../../multimedia/gst-plugins0.8
 .endif	# GST_PLUGINS0.8_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"

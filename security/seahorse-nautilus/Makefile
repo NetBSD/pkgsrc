@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/09/20 21:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/21 13:04:17 wiz Exp $
 
 DISTNAME=	seahorse-1.0.1
 PKGNAME=	seahorse-nautilus-1.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +30,7 @@ INSTALL_DIRS=	plugins/nautilus-ext
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"

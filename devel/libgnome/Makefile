@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2007/09/19 23:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2007/09/21 13:03:38 wiz Exp $
 #
 
 DISTNAME=	libgnome-2.18.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,23 +36,23 @@ CONF_FILES=	${EGDIR}/sound/events/gnome-2.soundlist \
 CONF_FILES+=	${EGDIR}/sound/events/gtk-events-2.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/gtk-events-2.soundlist
 
-GCONF2_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_accessibility_startup.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_browser.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_help_viewer.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_terminal.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_window_manager.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_background.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_file_views.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_interface.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_lockdown.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_sound.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_applications_at_visual.schemas
+GCONF_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas
+GCONF_SCHEMAS+=	desktop_gnome_accessibility_startup.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_browser.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_help_viewer.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_terminal.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_window_manager.schemas
+GCONF_SCHEMAS+=	desktop_gnome_background.schemas
+GCONF_SCHEMAS+=	desktop_gnome_file_views.schemas
+GCONF_SCHEMAS+=	desktop_gnome_interface.schemas
+GCONF_SCHEMAS+=	desktop_gnome_lockdown.schemas
+GCONF_SCHEMAS+=	desktop_gnome_peripherals_keyboard.schemas
+GCONF_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
+GCONF_SCHEMAS+=	desktop_gnome_sound.schemas
+GCONF_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
+GCONF_SCHEMAS+=	desktop_gnome_typing_break.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
+GCONF_SCHEMAS+=	desktop_gnome_applications_at_visual.schemas
 
 BUILDLINK_API_DEPENDS.audiofile+=	libaudiofile>=0.2.3
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
@@ -62,7 +62,7 @@ BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

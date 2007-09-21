@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/09/15 07:35:37 adam Exp $
+# $NetBSD: Makefile,v 1.47 2007/09/21 13:04:13 wiz Exp $
 
 DISTNAME=	ntop-3.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 

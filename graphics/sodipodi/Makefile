@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/07/11 10:21:16 hira Exp $
+# $NetBSD: Makefile,v 1.37 2007/09/21 13:03:55 wiz Exp $
 #
 
 DISTNAME=	sodipodi-0.34
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
@@ -28,7 +28,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

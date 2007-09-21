@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/17 17:45:07 martti Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:04:22 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,6 +6,7 @@ XFCE4_VERSION=	0.8.0
 
 DISTNAME=	Thunar-${XFCE4_VERSION}
 PKGNAME=	xfce4-thunar-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	Xfce file manager
 
@@ -16,7 +17,7 @@ USE_DIRS+=	xdg-1.2
 PKGCONFIG_OVERRIDE+=	thunar-vfs/thunar-vfs-1.pc.in
 PKGCONFIG_OVERRIDE+=	thunarx/thunarx-1.pc.in
 
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/23 17:07:37 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/21 13:04:21 wiz Exp $
 #
 
 DISTNAME=	notification-daemon-0.3.7
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
-GCONF2_SCHEMAS=	notification-daemon.schemas
+GCONF_SCHEMAS=	notification-daemon.schemas
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR.dbus}/system.d
 CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR}/dbus-1/system.d
 .endif
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"

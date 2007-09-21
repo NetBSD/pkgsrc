@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2007/09/20 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2007/09/21 13:04:30 wiz Exp $
 #
 
 DISTNAME=		gnome-session-2.18.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.18/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -27,7 +27,7 @@ MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
-GCONF2_SCHEMAS=	gnome-session.schemas
+GCONF_SCHEMAS=	gnome-session.schemas
 
 BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
@@ -40,8 +40,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

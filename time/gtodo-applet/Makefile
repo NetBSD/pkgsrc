@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/09/19 23:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/21 13:04:25 wiz Exp $
 #
 
 DISTNAME=	gtodo-applet-0.1
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	time gnome
 MASTER_SITES=	http://download.qballcow.nl/programs/gtodo/
 
@@ -17,8 +17,8 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		YES
 
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

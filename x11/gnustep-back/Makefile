@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2007/01/15 19:21:34 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/21 13:04:31 wiz Exp $
 
 DISTNAME=	gnustep-back-0.11.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -21,7 +21,7 @@ pre-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glitz/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../x11/gnustep-gui/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

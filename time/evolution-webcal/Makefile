@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/09/19 23:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/21 13:04:24 wiz Exp $
 #
 
 DISTNAME=	evolution-webcal-2.10.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-webcal/2.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,9 +16,9 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
-GCONF2_SCHEMAS=		evolution-webcal.schemas
+GCONF_SCHEMAS=		evolution-webcal.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"

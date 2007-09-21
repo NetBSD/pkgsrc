@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2007/09/20 21:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/09/21 13:04:21 wiz Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	modulesconfdir=${PREFIX}/share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules
-INSTALL_MAKE_FLAGS+=	schemadir=${GCONF2_SCHEMAS_DIR}
+INSTALL_MAKE_FLAGS+=	schemadir=${GCONF_SCHEMAS_DIR}
 
 CPPFLAGS+=		-D__unix__
 
@@ -36,16 +36,16 @@ EGDIR=			${PREFIX}/share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules
 CONF_FILES=		${EGDIR}/mapping-modules.conf \
 			${PKG_SYSCONFDIR}/mapping-modules.conf
 
-GCONF2_SCHEMAS=		ncb.schemas
+GCONF_SCHEMAS=		ncb.schemas
 
 BUILDLINK_API_DEPENDS.eel+=	eel>=2.13.3
 BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.13.4
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/eel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/09/20 21:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:04:25 wiz Exp $
 #
 
 DISTNAME=	compiz-0.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +17,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-GCONF2_SCHEMAS+=	gwd.schemas
-GCONF2_SCHEMAS+=	compiz.schemas
+GCONF_SCHEMAS+=	gwd.schemas
+GCONF_SCHEMAS+=	compiz.schemas
 PKGCONFIG_OVERRIDE+=	compiz.pc.in
 PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 
@@ -56,7 +56,7 @@ PLIST_SUBST+=		KDE="@comment "
 # some plugins do it.
 .include "../../mk/pthread.buildlink3.mk"
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

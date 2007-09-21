@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/09/19 23:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/21 13:04:16 wiz Exp $
 #
 
 DISTNAME=	gnome-keyring-manager-2.18.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring-manager/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,13 +17,13 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
-GCONF2_SCHEMAS=		gnome-keyring-manager.schemas
+GCONF_SCHEMAS=		gnome-keyring-manager.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

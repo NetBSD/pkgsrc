@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2007/09/20 21:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/21 13:03:58 wiz Exp $
 #
 
 DISTNAME=	mail-notification-4.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-GCONF2_SCHEMAS=		mail-notification.schemas
+GCONF_SCHEMAS=		mail-notification.schemas
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mail-notification
 PKG_SUPPORTED_OPTIONS=	inet6 sasl ssl
@@ -45,11 +45,11 @@ CONFIGURE_ARGS+=	--disable-ssl
 .endif
 
 .include "../../devel/eel/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

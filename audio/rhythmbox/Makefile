@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2007/09/20 21:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2007/09/21 13:03:27 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-0.9.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,17 +23,17 @@ CONFIGURE_ARGS+=	--without-hal
 CONFIGURE_ARGS+=	--without-ipod
 CONFIGURE_ARGS+=	--disable-python
 
-GCONF2_SCHEMAS=		rhythmbox.schemas
+GCONF_SCHEMAS=		rhythmbox.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.6.0
 BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 
 .include "../../audio/musicbrainz/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

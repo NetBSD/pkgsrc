@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2007/08/08 17:11:33 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2007/09/21 13:04:16 wiz Exp $
 
 DISTNAME=		scribus-1.3.3.9
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,8 +33,8 @@ CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libart2+= libart2>=2.3.19nb1
-.include "../../graphics/libart2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

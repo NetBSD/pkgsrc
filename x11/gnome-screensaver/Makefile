@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/09/19 23:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/21 13:04:30 wiz Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.18.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.18/}
 
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-pam
 
 PKGCONFIG_OVERRIDE=	data/gnome-screensaver.pc.in
 
-GCONF2_SCHEMAS=		gnome-screensaver.schemas
+GCONF_SCHEMAS=		gnome-screensaver.schemas
 
 EGDIR=			${PREFIX}/share/examples/gnome-screensaver
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
@@ -50,7 +50,7 @@ CONF_FILES=		${EGDIR}/xdg/menus/gnome-screensavers.menu \
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.8.0
 BUILDLINK_API_DEPENDS.libexif+=		libexif>=0.6.12
-BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.5.0
+BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.5.0
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}/pam.d
@@ -62,9 +62,9 @@ post-install:
 	${CHMOD} 04555 ${PREFIX}/libexec/gnome-screensaver-dialog
 .endif
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

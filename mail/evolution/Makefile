@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2007/09/19 23:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2007/09/21 13:03:57 wiz Exp $
 
 DISTNAME=		evolution-2.10.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.10/}
 EXTRACT_SUFX=		.tar.bz2
@@ -95,11 +95,11 @@ PLIST_SUBST+=		HAVE_SMIME="@comment "
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF2_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.10.schemas
-GCONF2_SCHEMAS+=	apps_evolution_addressbook-2.10.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar-2.10.schemas
-GCONF2_SCHEMAS+=	apps_evolution_shell-2.10.schemas
-GCONF2_SCHEMAS+=	evolution-mail-2.10.schemas
+GCONF_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.10.schemas
+GCONF_SCHEMAS+=	apps_evolution_addressbook-2.10.schemas
+GCONF_SCHEMAS+=	apps_evolution_calendar-2.10.schemas
+GCONF_SCHEMAS+=	apps_evolution_shell-2.10.schemas
+GCONF_SCHEMAS+=	evolution-mail-2.10.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
@@ -113,13 +113,13 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
 .include "../../databases/openldap-client/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"

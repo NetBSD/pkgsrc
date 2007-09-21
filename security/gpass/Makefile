@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/09/19 23:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/09/21 13:04:16 wiz Exp $
 #
 
 DISTNAME=	gpass-0.4.4
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpass/}
 
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

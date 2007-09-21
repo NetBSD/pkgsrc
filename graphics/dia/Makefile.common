@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2007/04/19 20:14:58 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/09/21 13:03:48 wiz Exp $
 #
 
 DISTNAME=	dia-0.96.1
@@ -37,7 +37,7 @@ BUILDLINK_DEPMETHOD.glib2+=		build
 BUILDLINK_DEPMETHOD.pango+=		build
 BUILDLINK_DEPMETHOD.pkgconfig+=		build
 BUILDLINK_DEPMETHOD.freetype2+=		build
-BUILDLINK_DEPMETHOD.libart2+=		build
+BUILDLINK_DEPMETHOD.libart+=		build
 BUILDLINK_DEPMETHOD.libxml2+=		build
 BUILDLINK_DEPMETHOD.libxslt+=		build
 BUILDLINK_DEPMETHOD.scrollkeeper+=	build
@@ -48,7 +48,7 @@ BUILDLINK_DEPMETHOD.gtk2+=		build
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

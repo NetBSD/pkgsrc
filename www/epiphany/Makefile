@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2007/09/19 23:13:33 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2007/09/21 13:04:26 wiz Exp $
 #
 
 DISTNAME=	epiphany-2.18.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +22,10 @@ PKGCONFIG_OVERRIDE=	data/epiphany-2.16.pc
 
 .include "options.mk"
 
-GCONF2_SCHEMAS=		epiphany.schemas
-GCONF2_SCHEMAS+=	epiphany-fonts.schemas
-GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
-GCONF2_SCHEMAS+=	epiphany-pango.schemas
+GCONF_SCHEMAS=		epiphany.schemas
+GCONF_SCHEMAS+=	epiphany-fonts.schemas
+GCONF_SCHEMAS+=	epiphany-lockdown.schemas
+GCONF_SCHEMAS+=	epiphany-pango.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
@@ -34,11 +34,11 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.14.0
 BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
 BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

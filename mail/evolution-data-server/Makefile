@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2007/09/19 23:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/21 13:03:57 wiz Exp $
 #
 
 DISTNAME=	evolution-data-server-1.10.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -67,11 +67,11 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
