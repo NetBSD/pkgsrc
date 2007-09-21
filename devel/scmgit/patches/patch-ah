@@ -1,23 +1,23 @@
-$NetBSD: patch-ah,v 1.3 2007/09/11 09:23:55 bjs Exp $
+$NetBSD: patch-ah,v 1.4 2007/09/21 23:13:26 bjs Exp $
 
---- git-gui/Makefile.orig	2007-09-02 01:57:44.000000000 -0400
+--- git-gui/Makefile.orig	2007-09-19 14:02:17.000000000 -0400
 +++ git-gui/Makefile
-@@ -31,11 +31,11 @@ ifndef INSTALL
- 	INSTALL = install
- endif
+@@ -34,11 +34,11 @@ endif
+ RM_F      ?= rm -f
+ RMDIR     ?= rmdir
  
 -INSTALL_D0 = $(INSTALL) -d -m755 # space is required here
-+INSTALL_D0 = $(BSD_INSTALL_DATA_DIR) # space is required here
++INSTALL_D0 = ${BSD_INSTALL_DATA_DIR} # space is required here
  INSTALL_D1 =
 -INSTALL_R0 = $(INSTALL) -m644 # space is required here
-+INSTALL_R0 = $(BSD_INSTALL_DATA) # space is required here
++INSTALL_R0 = ${BSD_INSTALL_DATA} # space is required here
  INSTALL_R1 =
 -INSTALL_X0 = $(INSTALL) -m755 # space is required here
-+INSTALL_X0 = $(BSD_INSTALL_SCRIPT) # space is required here
++INSTALL_X0 = ${BSD_INSTALL_SCRIPT} # space is required here
  INSTALL_X1 =
  INSTALL_L0 = rm -f # space is required here
  INSTALL_L1 = && ln # space is required here
-@@ -50,11 +50,11 @@ ifndef V
+@@ -59,11 +59,11 @@ ifndef V
  	QUIET_2DEVNULL = 2>/dev/null
  
  	INSTALL_D0 = dir=
