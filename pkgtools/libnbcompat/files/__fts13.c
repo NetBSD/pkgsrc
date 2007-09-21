@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.8 2007/07/31 13:17:33 joerg Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.9 2007/09/21 19:51:58 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -39,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.8 2007/07/31 13:17:33 joerg Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.9 2007/09/21 19:51:58 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -714,7 +714,12 @@ fts_build(sp, type)
 	 */
 	cderrno = 0;
 	if (nlinks || type == BREAD) {
-		if (fts_safe_changedir(sp, cur, dirfd(dirp), NULL)) {
+#if defined(HAVE_DIRFD)
+		if (fts_safe_changedir(sp, cur, dirfd(dirp), NULL))
+#else
+		if (fts_safe_changedir(sp, cur, -1, cur->fts_accpath))
+#endif
+		{
 			if (nlinks && type == BREAD)
 				cur->fts_errno = errno;
 			cur->fts_flags |= FTS_DONTCHDIR;

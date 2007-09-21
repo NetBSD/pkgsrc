@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.57 2007/07/21 13:57:33 tnn Exp $
+dnl $NetBSD: configure.ac,v 1.58 2007/09/21 19:51:58 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -308,7 +308,7 @@ AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
 	[ #include <sys/statfs.h> ])
 AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
 	[ #include <sys/statfs.h> ])
-AC_CHECK_MEMBERS([struct dirent.d_namlen], [:], [:],
+AC_CHECK_MEMBERS([struct dirent.d_namlen, DIR.dd_fd], [:], [:],
 	[ #include <sys/types.h>
 	  #if HAVE_DIRENT_H
 	  # include <dirent.h>
@@ -324,6 +324,32 @@ AC_CHECK_MEMBERS([struct dirent.d_namlen], [:], [:],
 	  #  include <ndir.h>
 	  # endif
 	  #endif ])
+
+AC_MSG_CHECKING([for dirfd])
+AC_TRY_LINK(
+  [ #include <sys/types.h>
+    #if HAVE_DIRENT_H
+    # include <dirent.h>
+    #else
+    # define dirent direct
+    # if HAVE_SYS_NDIR_H
+    #  include <sys/ndir.h>
+    # endif
+    # if HAVE_SYS_DIR_H
+    #  include <sys/dir.h>
+    # endif
+    # if HAVE_NDIR_H
+    #  include <ndir.h>
+    # endif
+    #endif
+    int dummy_var;
+  ], [ dummy_var = dirfd((DIR *)0) ],
+  [
+	AC_MSG_RESULT(yes)
+	AC_DEFINE([HAVE_DIRFD], [1], [Define if dirfd is either a function or a macro.])
+  ], [	AC_MSG_RESULT(no) ]
+
+)
 
 if test $ac_cv_type_long_long = yes; then
 
