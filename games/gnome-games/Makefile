@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2007/09/20 21:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2007/09/21 13:03:42 wiz Exp $
 
 DISTNAME=		gnome-games-2.18.2.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -36,23 +36,23 @@ CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
-GCONF2_SCHEMAS=		aisleriot.schemas
-GCONF2_SCHEMAS+=	blackjack.schemas
-GCONF2_SCHEMAS+=	glchess.schemas
-GCONF2_SCHEMAS+=	glines.schemas
-GCONF2_SCHEMAS+=	gnect.schemas
-GCONF2_SCHEMAS+=	gnibbles.schemas
-GCONF2_SCHEMAS+=	gnobots2.schemas
-GCONF2_SCHEMAS+=	gnometris.schemas
-GCONF2_SCHEMAS+=	gnomine.schemas
-GCONF2_SCHEMAS+=	gnotski.schemas
-GCONF2_SCHEMAS+=	gnotravex.schemas
-GCONF2_SCHEMAS+=	gnotski.schemas
-GCONF2_SCHEMAS+=	gtali.schemas
-GCONF2_SCHEMAS+=	iagno.schemas
-GCONF2_SCHEMAS+=	libgnomegames.schemas
-GCONF2_SCHEMAS+=	mahjongg.schemas
-GCONF2_SCHEMAS+=	same-gnome.schemas
+GCONF_SCHEMAS=		aisleriot.schemas
+GCONF_SCHEMAS+=	blackjack.schemas
+GCONF_SCHEMAS+=	glchess.schemas
+GCONF_SCHEMAS+=	glines.schemas
+GCONF_SCHEMAS+=	gnect.schemas
+GCONF_SCHEMAS+=	gnibbles.schemas
+GCONF_SCHEMAS+=	gnobots2.schemas
+GCONF_SCHEMAS+=	gnometris.schemas
+GCONF_SCHEMAS+=	gnomine.schemas
+GCONF_SCHEMAS+=	gnotski.schemas
+GCONF_SCHEMAS+=	gnotravex.schemas
+GCONF_SCHEMAS+=	gnotski.schemas
+GCONF_SCHEMAS+=	gtali.schemas
+GCONF_SCHEMAS+=	iagno.schemas
+GCONF_SCHEMAS+=	libgnomegames.schemas
+GCONF_SCHEMAS+=	mahjongg.schemas
+GCONF_SCHEMAS+=	same-gnome.schemas
 
 PYTHON_PATCH_SCRIPTS+=	libgames-support/games-server.py
 PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess
@@ -65,11 +65,11 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

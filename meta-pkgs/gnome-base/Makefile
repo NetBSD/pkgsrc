@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/09/20 22:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/09/21 13:03:59 wiz Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -30,8 +30,8 @@ DEPENDS+=	libIDL>=0.8.8:../../net/libIDL
 DEPENDS+=	ORBit2>=2.14.3:../../net/ORBit2
 DEPENDS+=	libxml2>=2.6.26:../../textproc/libxml2
 DEPENDS+=	libxslt>=1.1.17:../../textproc/libxslt
-DEPENDS+=	GConf2>=2.18.0:../../devel/GConf2
-DEPENDS+=	GConf2-ui>=2.18.0:../../devel/GConf2-ui
+DEPENDS+=	GConf>=2.18.0:../../devel/GConf
+DEPENDS+=	GConf-ui>=2.18.0:../../devel/GConf-ui
 DEPENDS+=	libbonobo>=2.18.0:../../devel/libbonobo
 DEPENDS+=	libaudiofile>=0.2.6:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.36:../../audio/esound
@@ -39,8 +39,8 @@ DEPENDS+=	gnome-vfs>=2.18.1:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-cdda>=2.18.1:../../audio/gnome-vfs-cdda
 DEPENDS+=	gnome-vfs-smb>=2.18.1:../../net/gnome-vfs-smb
 DEPENDS+=	libgnome>=2.18.0:../../devel/libgnome
-DEPENDS+=	libglade2>=2.6.0:../../devel/libglade2
-DEPENDS+=	libart2>=2.3.17:../../graphics/libart2
+DEPENDS+=	libglade>=2.6.0:../../devel/libglade
+DEPENDS+=	libart>=2.3.17:../../graphics/libart
 DEPENDS+=	libgnomecanvas>=2.14.0:../../graphics/libgnomecanvas
 DEPENDS+=	libbonoboui>=2.18.0:../../devel/libbonoboui
 DEPENDS+=	gnome-keyring>=0.8.1:../../security/gnome-keyring

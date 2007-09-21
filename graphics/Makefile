@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.468 2007/09/20 21:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.469 2007/09/21 13:03:45 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -167,7 +167,7 @@ SUBDIR+=	kphotobook
 SUBDIR+=	kphotools
 SUBDIR+=	lcms
 SUBDIR+=	lib3ds
-SUBDIR+=	libart2
+SUBDIR+=	libart
 SUBDIR+=	libcaca
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk

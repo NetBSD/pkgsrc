@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2007/09/18 19:23:01 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2007/09/21 13:03:34 wiz Exp $
 
 DISTNAME=		devhelp-0.16
+PKGREVISION=		1
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.16/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,14 +19,14 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libdevhelp-1.0.pc.in
-GCONF2_SCHEMAS=		devhelp.schemas
+GCONF_SCHEMAS=		devhelp.schemas
 
 .include "options.mk"
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
