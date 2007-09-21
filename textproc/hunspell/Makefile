@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/09/11 18:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 18:40:42 joerg Exp $
 #
 
 DISTNAME=	hunspell-1.1.12-2
 PKGNAME=	${DISTNAME:C/-([0-9]+)$/.\1/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 
@@ -31,5 +32,6 @@ SUBST_SED.paths+=	-e 's,/usr/share/myspell/,${PREFIX}/share/hunspell/,g'
 
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
