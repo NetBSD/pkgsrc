@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/04/12 09:46:28 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/09/21 13:04:22 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_THUNAR_BUILDLINK3_MK:=	${XFCE4_THUNAR_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_API_DEPENDS.xfce4-thunar+=	xfce4-thunar>=0.8.0
 BUILDLINK_PKGSRCDIR.xfce4-thunar?=	../../sysutils/xfce4-thunar
 .endif	# XFCE4_THUNAR_BUILDLINK3_MK
 
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

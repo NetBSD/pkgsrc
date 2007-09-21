@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2007/02/25 15:03:52 tonio Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/21 13:03:56 wiz Exp $
 #
 
 DISTNAME=	coq-8.1
+PKGREVISION=	1
 CATEGORIES=	lang math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/coq/V8.1/
 
@@ -37,7 +38,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	coqide
 .include "../../mk/bsd.options.mk"
 .if !empty(PKG_OPTIONS:Mcoqide)
-.include "../../x11/lablgtk2/buildlink3.mk"
+.include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 PLIST_SUBST+=	WITH_IDE=''
 .else

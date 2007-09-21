@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/09/19 23:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/21 13:03:35 wiz Exp $
 
 DISTNAME=	guile-gnome-platform-2.15.93
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-platform/
 
@@ -22,10 +22,10 @@ INFO_FILES=		YES
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/g-wrap/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/09/20 21:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/21 13:03:28 wiz Exp $
 #
 
 DISTNAME=		sound-juicer-2.14.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		http://www.burtonini.com/computing/
 
@@ -19,11 +19,11 @@ CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 CONFIGURE_ENV+=		GST_INSPECT="${LOCALBASE}/bin/gst-inspect-0.10"
 
-GCONF2_SCHEMAS+=	sound-juicer.schemas
+GCONF_SCHEMAS+=	sound-juicer.schemas
 
 BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.3
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"

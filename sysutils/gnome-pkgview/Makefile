@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/09/19 23:13:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/21 13:04:18 wiz Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/
 
@@ -15,9 +15,9 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 
-GCONF2_SCHEMAS=		gnome-pkgview.schemas
+GCONF_SCHEMAS=		gnome-pkgview.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
