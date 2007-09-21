@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/08/27 17:51:33 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2007/09/21 19:32:54 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
@@ -23,7 +23,7 @@ DEPENDS+=	p5-DBD-mysql>=2.9003:../../databases/p5-DBD-mysql
 DBDRIVER=	mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=1.45:../../databases/p5-DBD-postgresql
-DBDRIVER=	pgsql
+DBDRIVER=	pg
 .endif
 
 ###
