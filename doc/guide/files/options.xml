@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.22 2007/08/15 06:33:45 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.23 2007/09/21 13:28:29 gdt Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.56 -->
 
@@ -13,6 +13,36 @@ possible for the user to specify exactly which sets of options will be
 built into a package or to allow a set of global default options
 apply.</para>
 
+<para>There are two broad classes of behaviors that one might want to
+control via options.  One is whether some particular feature is
+enabled in a program that will be built anway, often by including or
+not including a dependency on some other package.  The other is
+whether or not an additional program will be built as part of the
+package.  Generally, it is better to make a split package for such
+additional programs instead of using options, because it enables
+binary packages to be built which can then be added separately.  For
+example, the foo package might have minimal dependencies (those
+packages without which foo doesn't make sense), and then the foo-gfoo
+package might include the GTK frontend program gfoo.  This is better
+than including a gtk option to foo that adds gfoo, because either that
+option is default, in which case binary users can't get foo without
+gfoo, or not default, in which case they can't get gfoo.  With split
+packages, they can install foo without having GTK, and later decide to
+install gfoo (pulling in GTK at that time).  This is an advantage to
+source users too, avoiding the need for rebuilds.</para>
+
+<para>Plugins with widely varying dependencies should usually be split
+instead of options.</para>
+
+<para>It is often more work to maintain split packages, especially if
+the upstream package does not support this.  The decision of split
+vs. option should be made based on the likelihood that users will want
+or object to the various pieces, the size of the dependencies that are
+included, and the amount of work.</para>
+
+<para>A further consideration is licensing.  Non-free parts, or parts
+that depend on non-free dependencies (especially plugins) should
+almost always be split if feasible.</para>
 
 <sect1 id="global-default-options">
 <title>Global default options</title>
