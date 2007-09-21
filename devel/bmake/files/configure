@@ -1722,14 +1722,9 @@ echo "$as_me: error: bad value ${withval} given for bmake DEFSHELL" >&2;}
    { (exit 1); exit 1; }; } ;;
 no)    ;;
 *)	case "$with_defshell" in
-	*/csh)
-		# kidding right?
-		DEFSHELL=0
-		DEFAULT_CSH=$with_defshell
-		;;
-	*/sh)  DEFSHELL=1;;
-	*/ksh) DEFSHELL=2;;
-	esac
+	*/csh)	DEFSHELL=0; DEFAULT_CSH=$with_defshell;; # kidding right?
+	*/sh)  DEFSHELL=1; DEFAULT_SH=$with_defshell;;
+	*/ksh) DEFSHELL=2; DEFAULT_KSH=$with_defshell;;
        ;;
 esac
 fi
