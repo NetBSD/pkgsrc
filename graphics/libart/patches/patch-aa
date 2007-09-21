@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/03/01 18:05:44 drochner Exp $
+$NetBSD: patch-aa,v 1.1 2007/09/21 13:00:18 wiz Exp $
 
 --- art_misc.h.orig	2007-03-01 18:50:10.000000000 +0100
 +++ art_misc.h
