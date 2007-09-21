@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2067 2007/09/21 18:01:30 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2068 2007/09/21 18:10:55 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3826,3 +3826,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/alevt to 1.6.1 [veego 2007-09-21]
 	Updated x11/xinit to 1.0.7 [blair 2007-09-21]
 	Updated x11/beforelight to 1.0.3 [blair 2007-09-21]
+	Updated lang/spidermonkey to 1.60nb1 [blair 2007-09-21]
