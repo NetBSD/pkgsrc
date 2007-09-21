@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/07/12 14:32:49 joerg Exp $
+$NetBSD: distinfo,v 1.3 2007/09/21 17:52:05 bjs Exp $
 
-SHA1 (xinit-1.0.4.tar.bz2) = cad1f17464f48e3c08f2d76af1206004cbdfa731
-RMD160 (xinit-1.0.4.tar.bz2) = 7a3fd5930dcb88c101842bcf9599de4632d9fed1
-Size (xinit-1.0.4.tar.bz2) = 106555 bytes
+SHA1 (xinit-1.0.7.tar.bz2) = c2fcacba6ea45d5f9118cecc89e9e5fb5b41d7d8
+RMD160 (xinit-1.0.7.tar.bz2) = 1416911d68a9153846b14a3cc199b1b5397d3233
+Size (xinit-1.0.7.tar.bz2) = 110908 bytes
