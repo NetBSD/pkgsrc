@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/09/17 15:28:04 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2007/09/21 14:12:19 jlam Exp $
 
 DISTNAME=	courier-imap-4.1.3
 PKGREVISION=	1
@@ -35,6 +35,15 @@ CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 CONFIGURE_ENV+=		OPENSSL=${TOOLS_OPENSSL:Q}
+
+# The rfc1035 and tcpd bits are built and installed by net/couriertcpd.
+# However, we still need to build in these directories because there
+# are some convenience libraries built and used by other parts of the
+# imap code.  We configure without IPv6 support because those necessary
+# convenience libraries don't have any IPv6 code, and we want to avoid
+# breakage due to IPv6 mis-detection.
+#
+CONFIGURE_ARGS+=	--without-ipv6
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
