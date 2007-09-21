@@ -653,7 +653,7 @@ TIGERInit(tiger_context_t *tp)
 }
 
 void
-TIGERUpdate(tiger_context_t *tp, const uint8_t *data, uint32_t len)
+TIGERUpdate(tiger_context_t *tp, const uint8_t *data, size_t len)
 {
 	const uint64_t	*str = (const uint64_t *)data;
 	uint64_t         i;
@@ -747,7 +747,7 @@ TIGERFile(char *filename, char *buf)
 	tiger_context_t	ctx;
 	uint8_t		buffer[BUFSIZ];
 	int		fd;
-	int		num;
+	ssize_t		num;
 	int		oerrno;
 
 	TIGERInit(&ctx);
