@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.42 2007/07/09 17:16:39 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2007/09/21 12:58:12 wiz Exp $
 #
 
-.include "../../devel/GConf2/Makefile.common"
+.include "../../devel/GConf/Makefile.common"
 
 PKGREVISION=	1
 
-PKGNAME=	${DISTNAME:S/GConf/GConf2/}
-
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	ac_cv_header_ldap_h=no
+
+CONFLICTS+=	GConf-[0-9]*
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/2
 OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.defaults
 OWN_DIRS+=	${PKG_SYSCONFDIR}/gconf.xml.mandatory
 
-EGDIR=		${PREFIX}/share/examples/GConf2
+EGDIR=		${PREFIX}/share/examples/GConf
 CONF_FILES=	${EGDIR}/path ${PKG_SYSCONFDIR}/2/path
 
 PRINT_PLIST_AWK+=	/^@dirrm (include\/gconf|lib\/GConf|share\/gconf)$$/ \
