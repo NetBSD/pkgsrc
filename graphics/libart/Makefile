@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2007/03/01 18:05:44 drochner Exp $
+# $NetBSD: Makefile,v 1.1 2007/09/21 13:00:17 wiz Exp $
 
 DISTNAME=		libart_lgpl-2.3.19
-PKGNAME=		${DISTNAME:S/_lgpl/2/}
+PKGNAME=		${DISTNAME:S/_lgpl//}
 PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libart_lgpl/2.3/}
