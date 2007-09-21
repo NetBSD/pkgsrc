@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/01/28 16:19:17 veego Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/21 18:52:06 veego Exp $
 bin/bt-t-make.py
 bin/btcompletedir.py
 bin/btcopyannounce.py
@@ -78,6 +78,9 @@ ${PYSITELIB}/BitTornado/BT1/makemetafile.pyo
 ${PYSITELIB}/BitTornado/BT1/track.py
 ${PYSITELIB}/BitTornado/BT1/track.pyc
 ${PYSITELIB}/BitTornado/BT1/track.pyo
+${PYSITELIB}/BitTornado/BTcrypto.py
+${PYSITELIB}/BitTornado/BTcrypto.pyc
+${PYSITELIB}/BitTornado/BTcrypto.pyo
 ${PYSITELIB}/BitTornado/ConfigDir.py
 ${PYSITELIB}/BitTornado/ConfigDir.pyc
 ${PYSITELIB}/BitTornado/ConfigDir.pyo
