@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2082 2007/09/21 23:15:20 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2083 2007/09/21 23:16:39 reed Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3841,5 +3841,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/inputproto to 1.4.2.1 [bjs 2007-09-21]
 	Updated net/xipdump to 1.5.4nb3 [adrianp 2007-09-21]
 	Updated www/seamonkey to 1.1.4nb1 [ghen 2007-09-21]
-	Updated lang/pcc to 0.9.8.070920 [reed 2007-09-21]
 	Updated devel/scmgit to 1.5.3.2 [bjs 2007-09-21]
