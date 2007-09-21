@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2079 2007/09/21 20:15:35 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2080 2007/09/21 22:28:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3840,3 +3840,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xset to 1.0.3 [bjs 2007-09-21]
 	Updated x11/inputproto to 1.4.2.1 [bjs 2007-09-21]
 	Updated net/xipdump to 1.5.4nb3 [adrianp 2007-09-21]
+	Updated www/seamonkey to 1.1.4nb1 [ghen 2007-09-21]
