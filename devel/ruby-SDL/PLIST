@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/21 10:14:37 taca Exp $
+${RUBY_SITEARCHLIBDIR}/sdl.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/rubysdl_aliases.rb
+${RUBY_SITELIBDIR}/sdl.rb
+${RUBY_DOCDIR}/doc/sdl/NEWS.en
+${RUBY_DOCDIR}/doc/sdl/README.en
+${RUBY_DOCDIR}/doc/sdl/rubysdl_const_list.txt
+${RUBY_DOCDIR}/doc/sdl/rubysdl_doc.en.html
+${RUBY_DOCDIR}/doc/sdl/rubysdl_doc.en.rd
+${RUBY_DOCDIR}/doc/sdl/ja/NEWS.ja
+${RUBY_DOCDIR}/doc/sdl/ja/README.ja
+${RUBY_DOCDIR}/doc/sdl/ja/rubysdl_doc_old.html
+${RUBY_DOCDIR}/doc/sdl/ja/rubysdl_doc_old.rd
+${RUBY_DOCDIR}/doc/sdl/ja/rubysdl_ref.html
+${RUBY_DOCDIR}/doc/sdl/ja/rubysdl_ref.rd
+${RUBY_DOCDIR}/examples/sdl/aadraw.rb
+${RUBY_DOCDIR}/examples/sdl/alpha.rb
+${RUBY_DOCDIR}/examples/sdl/alphadraw.rb
+${RUBY_DOCDIR}/examples/sdl/bfont.rb
+${RUBY_DOCDIR}/examples/sdl/cdrom.rb
+${RUBY_DOCDIR}/examples/sdl/collision.rb
+${RUBY_DOCDIR}/examples/sdl/cursor.bmp
+${RUBY_DOCDIR}/examples/sdl/cursor.rb
+${RUBY_DOCDIR}/examples/sdl/ellipses.rb
+${RUBY_DOCDIR}/examples/sdl/event2.rb
+${RUBY_DOCDIR}/examples/sdl/font.bmp
+${RUBY_DOCDIR}/examples/sdl/font.rb
+${RUBY_DOCDIR}/examples/sdl/fpstimer.rb
+${RUBY_DOCDIR}/examples/sdl/icon.bmp
+${RUBY_DOCDIR}/examples/sdl/joy2.rb
+${RUBY_DOCDIR}/examples/sdl/kanji.rb
+${RUBY_DOCDIR}/examples/sdl/movesp.rb
+${RUBY_DOCDIR}/examples/sdl/playmod.rb
+${RUBY_DOCDIR}/examples/sdl/plaympeg.rb
+${RUBY_DOCDIR}/examples/sdl/playwave.rb
+${RUBY_DOCDIR}/examples/sdl/randrect.rb
+${RUBY_DOCDIR}/examples/sdl/sample.ttf
+${RUBY_DOCDIR}/examples/sdl/sdlskk.rb
+${RUBY_DOCDIR}/examples/sdl/sgetest.rb
+${RUBY_DOCDIR}/examples/sdl/stetris.rb
+${RUBY_DOCDIR}/examples/sdl/testgl.rb
+${RUBY_DOCDIR}/examples/sdl/testsprite.rb
+${RUBY_DOCDIR}/examples/sdl/transformblit.rb
+@dirrm ${RUBY_DOCDIR}/examples/sdl
+@dirrm ${RUBY_DOCDIR}/doc/sdl/ja
+@dirrm ${RUBY_DOCDIR}/doc/sdl
