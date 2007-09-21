@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.3 2007/08/15 21:10:55 joerg Exp $
+# $NetBSD: pre-build,v 1.4 2007/09/21 13:42:54 rillig Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -37,10 +37,7 @@ set -e
 rm -rf "${bulklog}" || true
 mkdir -p "${bulklog}" "${loc}"
 
-# Clean build system first
-rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
-# Install fresh bootstrap state
-[ -n "${bootstrapkit}" ] && ${tar} -xzf ${bootstrapkit} -C /
+@PREFIX@/libexec/pbulk/client-clean
 
 # Log common settings...
 opsys=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OPSYS`
