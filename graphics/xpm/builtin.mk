@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2007/03/05 04:35:14 dbj Exp $
+# $NetBSD: builtin.mk,v 1.15 2007/09/21 15:17:14 rillig Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -16,7 +16,7 @@ IS_BUILTIN.xpm=		no
 .  if empty(H_XPM:M__nonexistent__)
 .    if !empty(X11BASE:M*openwin) && exists(/usr/sbin/pkgchk)
 IS_BUILTIN.xpm!=							\
-	if /usr/sbin/pkgchk -l SUNWxwinc | ${GREP} -q xpm.h; then	\
+	if /usr/sbin/pkgchk -l SUNWxwinc 2>/dev/null | ${GREP} -q xpm.h; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
