@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2007/09/20 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2007/09/21 13:04:10 wiz Exp $
 #
 
 DISTNAME=		bug-buddy-2.18.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,20 +17,20 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
-GCONF2_SCHEMAS=		bug-buddy.schemas
+GCONF_SCHEMAS=		bug-buddy.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.9.0
 BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.96
 
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"

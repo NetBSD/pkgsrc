@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2007/09/19 23:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/21 13:04:27 wiz Exp $
 #
 
 DISTNAME=	gtkhtml-3.12.3
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml38/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"

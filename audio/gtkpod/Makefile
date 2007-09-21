@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2007/08/07 00:06:32 smb Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/21 13:03:27 wiz Exp $
 #
 
 DISTNAME=	gtkpod-0.99.8
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
-PKGREVISION=	1
 
 PATCHFILES=	gtkpod-0.99.8_libgpod-0.4.2.diff
 PATCH_SITES=	http://ftp.osuosl.org/pub/gentoo/distfiles/
@@ -42,7 +42,7 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.4.2
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

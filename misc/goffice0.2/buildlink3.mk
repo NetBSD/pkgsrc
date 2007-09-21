@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/06/05 05:37:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/09/21 13:04:01 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GOFFICE02_BUILDLINK3_MK:=	${GOFFICE02_BUILDLINK3_MK}+
@@ -17,15 +17,15 @@ BUILDLINK_ABI_DEPENDS.goffice02?=	goffice0.2>=0.2.2nb2
 BUILDLINK_PKGSRCDIR.goffice02?=	../../misc/goffice0.2
 .endif	# GOFFICE02_BUILDLINK3_MK
 
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

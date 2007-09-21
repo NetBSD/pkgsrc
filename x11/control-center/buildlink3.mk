@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2007/09/19 23:53:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/09/21 13:04:29 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 CONTROL_CENTER_BUILDLINK3_MK:=	${CONTROL_CENTER_BUILDLINK3_MK}+
@@ -18,11 +18,11 @@ BUILDLINK_PKGSRCDIR.control-center?=	../../x11/control-center
 .endif	# CONTROL_CENTER_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

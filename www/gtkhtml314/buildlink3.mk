@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/06/05 05:37:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/09/21 13:04:27 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKHTML314_BUILDLINK3_MK:=	${GTKHTML314_BUILDLINK3_MK}+
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.gtkhtml314?=	../../www/gtkhtml314
 # '-lgailutil' in the .la file...  I'm not sure about putting the dependency
 # here.
 .include "../../devel/gail/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 

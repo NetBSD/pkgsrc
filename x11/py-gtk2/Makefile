@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2007/08/23 21:17:37 heinz Exp $
+# $NetBSD: Makefile,v 1.44 2007/09/21 13:04:44 wiz Exp $
 #
 
 DISTNAME=	pygtk-2.10.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,7 +27,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.12.1
 
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

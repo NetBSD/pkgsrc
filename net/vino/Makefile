@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/09/19 23:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/09/21 13:04:14 wiz Exp $
 
 DISTNAME=	vino-2.18.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vino/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,16 +16,16 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 GNU_CONFIGURE=		yes
 
-GCONF2_SCHEMAS=		vino-server.schemas
+GCONF_SCHEMAS=		vino-server.schemas
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "options.mk"
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

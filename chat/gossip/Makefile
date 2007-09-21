@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2007/09/19 23:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2007/09/21 13:03:28 wiz Exp $
 #
 
 DISTNAME=	gossip-0.10.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gossip/0.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-GCONF2_SCHEMAS=		gossip.schemas
+GCONF_SCHEMAS=		gossip.schemas
 
 EGDIR=			${PREFIX}/share/examples/gossip
 CONF_FILES=		${EGDIR}/sound/events/gossip.soundlist \
@@ -30,10 +30,10 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../chat/loudmouth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

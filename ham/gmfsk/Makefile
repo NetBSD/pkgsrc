@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/09/19 23:18:59 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/21 13:03:55 wiz Exp $
 #
 
 DISTNAME=	gmfsk-0.6
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	ham
 MASTER_SITES=	http://gmfsk.connect.fi/
 
@@ -13,11 +13,11 @@ COMMENT=	Multimode HF terminal program
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
-GCONF2_SCHEMAS+=gmfsk.schemas
+GCONF_SCHEMAS+=gmfsk.schemas
 
 CONFIGURE_ARGS+=--enable-hamlib
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"

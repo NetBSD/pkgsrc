@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2007/09/19 23:13:27 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2007/09/21 13:04:16 wiz Exp $
 
 DISTNAME=	seahorse-1.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,14 +36,14 @@ CONFIGURE_ENV+=		SSH_ADD_PATH=${SSH_ADD_PATH:Q}
 CONFIGURE_ENV+=		SSH_KEYGEN_PATH=${SSH_KEYGEN_PATH:Q}
 
 PKGCONFIG_OVERRIDE+=	libcryptui/cryptui.pc.in
-GCONF2_SCHEMAS= 	seahorse.schemas
+GCONF_SCHEMAS= 	seahorse.schemas
 
 BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"

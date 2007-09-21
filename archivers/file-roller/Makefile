@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2007/09/20 21:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2007/09/21 13:03:25 wiz Exp $
 #
 
 DISTNAME=	file-roller-2.18.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,19 +21,19 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
-GCONF2_SCHEMAS=		file-roller.schemas
+GCONF_SCHEMAS=		file-roller.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.10.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
-BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.4.0
+BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

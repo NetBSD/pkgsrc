@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/09/20 21:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:04:31 wiz Exp $
 #
 
 DISTNAME=		gtk-sharp-2.8.2
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11
 MASTER_SITES=		http://go-mono.com/sources/gtk-sharp-2.8/
 
@@ -41,12 +41,12 @@ substpcprefix:
 .include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2006/09/22 07:08:15 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2007/09/21 13:03:33 wiz Exp $
 
 DISTNAME=	gorm-1.1.0
 PKGNAME=	Gorm-1.1.0
+PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 

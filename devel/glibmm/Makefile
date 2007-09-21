@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2007/07/05 10:49:43 adam Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/21 13:03:35 wiz Exp $
 
 DISTNAME=	glibmm-2.12.10
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,5 +22,5 @@ GNU_CONFIGURE=		yes
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

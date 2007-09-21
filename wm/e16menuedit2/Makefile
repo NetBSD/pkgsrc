@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/10/14 05:02:21 obache Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/21 13:04:25 wiz Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.3
+PKGREVISION=		1
 CATEGORIES=		wm x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -24,7 +25,7 @@ pre-configure:
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

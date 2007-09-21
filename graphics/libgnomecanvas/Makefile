@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2006/11/13 21:31:26 drochner Exp $
+# $NetBSD: Makefile,v 1.45 2007/09/21 13:03:51 wiz Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.14.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,8 +21,8 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libgnomecanvas/libgnomecanvas-2.0.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

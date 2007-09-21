@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/09/19 23:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/09/21 13:04:11 wiz Exp $
 #
 
 DISTNAME=	gnome-netstatus-2.12.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,12 +17,12 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-GCONF2_SCHEMAS=		netstatus.schemas
+GCONF_SCHEMAS=		netstatus.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/09/19 23:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2007/09/21 13:03:29 wiz Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.15
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		comms gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 
@@ -22,8 +22,8 @@ CONFIGURE_ARGS+=	--with-pisock=${BUILDLINK_PREFIX.pilot-link-libs}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"

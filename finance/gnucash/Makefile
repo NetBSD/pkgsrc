@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.118 2007/09/19 23:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2007/09/21 13:03:41 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -26,28 +26,28 @@ REPLACE_PERL+=		src/optional/xsl/vcard-gnccustomer.pl
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
-GCONF2_SCHEMAS+=	apps_gnucash_history.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_common.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_print_checks.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_prices.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_warnings.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_reconcile.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_totd.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_general.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_window_pages_account_tree.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
-#GCONF2_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
-GCONF2_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
+GCONF_SCHEMAS+=	apps_gnucash_history.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_common.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_print_checks.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_prices.schemas
+GCONF_SCHEMAS+=	apps_gnucash_warnings.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_reconcile.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_totd.schemas
+GCONF_SCHEMAS+=	apps_gnucash_general.schemas
+GCONF_SCHEMAS+=	apps_gnucash_window_pages_account_tree.schemas
+GCONF_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
+GCONF_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
+#GCONF_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
+GCONF_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.swig+=	swig>=1.3.28
 #.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
 .include "../../devel/pango/buildlink3.mk"

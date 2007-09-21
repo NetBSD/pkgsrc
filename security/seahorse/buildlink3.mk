@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/09/19 23:13:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2007/09/21 13:04:17 wiz Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -34,7 +34,7 @@ BUILDLINK_PKGSRCDIR.seahorse?=	../../security/seahorse
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../databases/gnome-mime-data/buildlink3.mk"
-#.include "../../devel/libglade2/buildlink3.mk"
+#.include "../../devel/libglade/buildlink3.mk"
 #.include "../../devel/libgnomeui/buildlink3.mk"
 #.include "../../net/libsoup-devel/buildlink3.mk"
 #.include "../../security/gpgme/buildlink3.mk"

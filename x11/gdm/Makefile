@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2007/09/20 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2007/09/21 13:04:29 wiz Exp $
 #
 
 DISTNAME=	gdm-2.18.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 DEPENDS+=	zenity>=2.16.0:../../x11/zenity
 
-BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.11
+BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
@@ -145,10 +145,10 @@ PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

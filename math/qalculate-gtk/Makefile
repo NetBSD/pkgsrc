@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/09/19 23:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/21 13:03:59 wiz Exp $
 
 DISTNAME=	qalculate-gtk-0.9.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 pre-configure:
 	cd ${WRKSRC}; autoconf
 
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/06 22:37:59 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/21 13:04:16 wiz Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -59,5 +59,5 @@ post-configure:
 do-install:
 	cd ${WRKSRC} && sh ./Install.sh
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

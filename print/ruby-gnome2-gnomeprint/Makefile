@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/06/09 01:07:13 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:04:15 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomeprint-${VERSION}
 COMMENT=		Ruby binding of libgnomeprint
+PKGREVISION=		1
 CATEGORIES=		print
 
 RUBY_EXTCONF_SUBDIRS=	gnomeprint

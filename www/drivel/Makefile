@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2007/09/19 23:13:33 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2007/09/21 13:04:26 wiz Exp $
 #
 
 DISTNAME=	drivel-2.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drivel/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,16 +18,16 @@ USE_PKGLOCALEDIR=	YES
 
 CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-GCONF2_SCHEMAS=		drivel.schemas
+GCONF_SCHEMAS=		drivel.schemas
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.14.0nb1
 
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"

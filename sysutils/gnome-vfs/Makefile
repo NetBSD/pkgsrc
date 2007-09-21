@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2007/09/19 22:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2007/09/21 13:04:18 wiz Exp $
 
-PKGREVISION=		2
+PKGREVISION=		3
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
 
@@ -9,11 +9,11 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/modules
 EGFILES+=		modules/default-modules.conf
 EGFILES+=		modules/ssl-modules.conf
 
-GCONF2_SCHEMAS=		desktop_default_applications.schemas
-GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
-GCONF2_SCHEMAS+=	system_dns_sd.schemas
-GCONF2_SCHEMAS+=	system_http_proxy.schemas
-GCONF2_SCHEMAS+=	system_smb.schemas
+GCONF_SCHEMAS=		desktop_default_applications.schemas
+GCONF_SCHEMAS+=	desktop_gnome_url_handlers.schemas
+GCONF_SCHEMAS+=	system_dns_sd.schemas
+GCONF_SCHEMAS+=	system_http_proxy.schemas
+GCONF_SCHEMAS+=	system_smb.schemas
 
 LDFLAGS.Darwin+=	-lresolv
 
@@ -25,7 +25,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-fam
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

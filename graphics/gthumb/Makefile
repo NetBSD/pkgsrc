@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/09/19 23:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/21 13:03:50 wiz Exp $
 
 DISTNAME=		gthumb-2.10.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gthumb/2.10/}
 
@@ -15,15 +15,15 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-GCONF2_SCHEMAS+=	gthumb.schemas
-BUILDLINK_API_DEPENDS.libglade2+=   libglade2>=2.4.0
+GCONF_SCHEMAS+=	gthumb.schemas
+BUILDLINK_API_DEPENDS.libglade+=   libglade>=2.4.0
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"

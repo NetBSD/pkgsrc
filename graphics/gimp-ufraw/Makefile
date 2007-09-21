@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/09/20 21:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/09/21 13:03:49 wiz Exp $
 
 DISTNAME=		ufraw-0.12.1
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -19,7 +19,7 @@ USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--enable-mime
 
-GCONF2_SCHEMAS=		ufraw.schemas
+GCONF_SCHEMAS=		ufraw.schemas
 
 PTHREAD_AUTO_VARS=	yes
 
@@ -28,7 +28,7 @@ GCC_REQD+=		3.0
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

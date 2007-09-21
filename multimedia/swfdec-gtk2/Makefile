@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/09/24 15:25:18 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/21 13:04:09 wiz Exp $
 #
 
-PKGREVISION=		9
+PKGREVISION=		10
 
 .include "../../multimedia/swfdec/Makefile.common"
 

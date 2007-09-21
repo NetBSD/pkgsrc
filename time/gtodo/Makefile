@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2007/09/19 23:13:32 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/21 13:04:24 wiz Exp $
 #
 
 DISTNAME=	gtodo-0.14
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	time gnome
 MASTER_SITES=	http://download.qballcow.nl/programs/gtodo/
 
@@ -15,9 +15,9 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
-GCONF2_SCHEMAS=		gtodo.schemas
+GCONF_SCHEMAS=		gtodo.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

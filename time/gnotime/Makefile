@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2007/09/19 23:13:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/21 13:04:24 wiz Exp $
 
 DISTNAME=	gnotime-2.2.1
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 
@@ -15,14 +15,14 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-GCONF2_SCHEMAS=		gnotime.schemas
+GCONF_SCHEMAS=		gnotime.schemas
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

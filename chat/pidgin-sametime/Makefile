@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/04 19:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:03:29 wiz Exp $
 #
 
 PKGNAME=		pidgin-sametime-${PIDGIN_VERSION}
@@ -19,7 +19,7 @@ BUILD_DIRS=		libpurple/protocols/sametime
 .include "../../chat/meanwhile/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/09/18 12:35:12 tron Exp $
+# $NetBSD: Makefile,v 1.23 2007/09/21 13:04:12 wiz Exp $
 
 DISTNAME=	libtorrent-0.11.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -35,5 +36,5 @@ CONFIGURE_ENV+=	OPENSSL_CFLAGS=${OPENSSL_CFLAGS:Q}
 CONFIGURE_ENV+=	OPENSSL_LIBS=${OPENSSL_LIBS:Q}
 .endif
 
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

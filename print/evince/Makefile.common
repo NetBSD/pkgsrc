@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/09/19 23:13:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/09/21 13:04:14 wiz Exp $
 #
 
 DISTNAME=		evince-0.8.3
@@ -32,7 +32,7 @@ BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.3
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"

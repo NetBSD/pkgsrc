@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2007/01/26 04:13:34 markd Exp $
+# $NetBSD: Makefile,v 1.28 2007/09/21 13:03:52 wiz Exp $
 #
 
 DISTNAME=	pixieplus-0.5.4
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.fruitsalad.org/avleeuwen/distfiles/pixieplus/ \
 		http://www.mosfet.org/pixie/

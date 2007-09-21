@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2007/09/19 23:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2007/09/21 13:03:38 wiz Exp $
 #
 
 DISTNAME=	libgnomeui-2.18.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -41,10 +41,10 @@ post-configure:
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

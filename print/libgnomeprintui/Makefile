@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2007/09/18 20:01:40 drochner Exp $
+# $NetBSD: Makefile,v 1.50 2007/09/21 13:04:15 wiz Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.18.1
+PKGREVISION=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.18/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,12 +23,12 @@ PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in
 BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.12.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
