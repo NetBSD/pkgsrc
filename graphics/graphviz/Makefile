@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2007/03/03 16:51:36 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2007/09/21 17:40:38 joerg Exp $
 
 DISTNAME=	graphviz-2.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+= ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
