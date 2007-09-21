@@ -1725,6 +1725,7 @@ no)    ;;
 	*/csh)	DEFSHELL=0; DEFAULT_CSH=$with_defshell;; # kidding right?
 	*/sh)  DEFSHELL=1; DEFAULT_SH=$with_defshell;;
 	*/ksh) DEFSHELL=2; DEFAULT_KSH=$with_defshell;;
+	esac
        ;;
 esac
 fi
