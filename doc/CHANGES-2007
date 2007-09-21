@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2058 2007/09/20 23:50:40 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2059 2007/09/21 00:20:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Renamed devel/eel2 to devel/eel [wiz 2007-09-20]
 	Renamed graphics/librsvg2 to graphics/librsvg [wiz 2007-09-20]
 	Updated www/ikiwiki to 2.6.1 [wiz 2007-09-20]
+	Added textproc/p5-Text-Markdown version 1.0.3 [wiz 2007-09-21]
