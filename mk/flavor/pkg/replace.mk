@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.19 2007/09/21 15:13:55 gdt Exp $
+# $NetBSD: replace.mk,v 1.20 2007/09/22 15:19:47 gdt Exp $
 #
 
 # _flavor-replace:
@@ -74,12 +74,11 @@ undo-replace-check: .PHONY
 ### package using pkg_tarup.
 ###
 replace-tarup: .PHONY
-	${RUN} ${_REPLACE_OLDNAME_CMD}; 				\
-	[ -x ${_PKG_TARUP_CMD:Q} ] 					\
-	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";		\
+	${RUN} [ -x ${_PKG_TARUP_CMD:Q} ] \
+	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${WRKDIR}					\
-		${_PKG_TARUP_CMD} $${oldname}
+		${_PKG_TARUP_CMD} ${PKGBASE}
 
 ######################################################################
 ### undo-replace-install (PRIVATE)
