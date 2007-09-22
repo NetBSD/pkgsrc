@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.20 2007/09/15 17:27:33 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q2,v 1.1.2.21 2007/09/22 18:19:50 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q2 branch:
@@ -71,3 +71,7 @@ Pullup ticket 2185 - requested by tron
 security update for apache22
 Pullup ticket 2189 - requested by tron
 security fix for qt3-libs
+Pullup ticket 2190 - requested by markd
+security fix for kdelibs3
+Pullup ticket 2191 - requested by markd
+security fix for kdebase3
