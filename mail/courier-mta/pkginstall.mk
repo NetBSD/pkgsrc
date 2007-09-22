@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.6 2007/09/11 02:35:04 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.7 2007/09/22 04:42:03 jlam Exp $
 
 # Convenience definition used below for a file or directory owned by the
 # courier user and group.
@@ -9,7 +9,8 @@ REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR}			\
 			${LIBEXECDIR} ${LIBEXECDIR}/modules
 REQD_DIRS_PERMS+=	${LIBEXECDIR}/webmail				\
 				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
-MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
+MAKE_DIRS+=		${COURIER_STATEDIR}
+MAKE_DIRS_PERMS+=	${COURIER_STATEDIR}/tmp		${COURIER_OWNED} 0770
 
 ###
 ### Courier filter directories
@@ -25,7 +26,6 @@ OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/filters	${COURIER_OWNED} 0750
 ###
 OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/msgq	${COURIER_OWNED} 0750
 OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/msgs	${COURIER_OWNED} 0750
-OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/tmp		${COURIER_OWNED} 0770
 OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/track	${COURIER_OWNED} 0755
 
 ###
@@ -36,11 +36,6 @@ OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/webadmin/added		\
 							${COURIER_OWNED} 0700
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/webadmin/removed		\
 							${COURIER_OWNED} 0700
-
-###
-### Courier webmlmd directories
-###
-OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webmlm	${COURIER_OWNED} 0755
 
 ###
 ### Courier setuid and setgid binaries
