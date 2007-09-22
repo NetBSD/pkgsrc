@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2007/09/20 00:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2007/09/22 06:42:52 wiz Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -35,7 +35,7 @@ DEPENDS+=	yelp>=2.18.1:../../misc/yelp
 DEPENDS+=	bug-buddy>=2.18.1:../../net/bug-buddy
 DEPENDS+=	gnome-speech>=0.4.11:../../audio/gnome-speech
 DEPENDS+=	dasher>=4.4.1:../../editors/dasher
-DEPENDS+=	eog>=2.18.1:../../graphics/eog2
+DEPENDS+=	eog>=2.18.1:../../graphics/eog
 DEPENDS+=	file-roller>=2.18.2:../../archivers/file-roller
 DEPENDS+=	gcalctool>=5.9.14:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.18.0:../../editors/gconf-editor
