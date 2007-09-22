@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2007/08/03 18:01:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2007/09/22 17:59:11 jmmv Exp $
 #
 
 DISTNAME=	monotone-0.36
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://monotone.ca/downloads/0.36/
 
@@ -33,6 +34,9 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/monotone
+	cd ${WRKSRC} && pax -rw -pp -pm contrib \
+	    ${DESTDIR}${PREFIX}/share/monotone
 	cd ${WRKSRC} && pax -rw -pp -pm figures/*.png \
 	    ${DESTDIR}${PREFIX}/share/doc/monotone
 
