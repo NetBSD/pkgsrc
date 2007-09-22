@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courieresmtpmsa.sh,v 1.3 2007/08/10 17:57:04 jlam Exp $
+# $NetBSD: courieresmtpmsa.sh,v 1.4 2007/09/22 04:42:03 jlam Exp $
 #
 # Courier ESMTP-MSA (RFC 2476) services daemon
 #
@@ -14,7 +14,7 @@ name="courieresmtpmsa"
 rcvar=${name}
 command="@PREFIX@/sbin/couriertcpd"
 ctl_command="@PREFIX@/sbin/esmtpd-msa"
-pidfile="@VARBASE@/run/esmtpd-msa.pid"
+pidfile="@COURIER_STATEDIR@/tmp/esmtpd-msa.pid"
 required_files="@PKG_SYSCONFDIR@/esmtpd @PKG_SYSCONFDIR@/esmtpd-msa"
 
 start_cmd="${name}_doit start"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2007/09/21 14:12:19 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2007/09/22 04:42:03 jlam Exp $
 
 DISTNAME=	courier-imap-4.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 
 CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER:Q}
-CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
+CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR:Q}/tmp
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 CONFIGURE_ENV+=		OPENSSL=${TOOLS_OPENSSL:Q}
 
@@ -52,6 +52,9 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 FILES_SUBST+=		SSLCERTS=${SSLCERTS:Q}
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
+MAKE_DIRS+=		${COURIER_STATEDIR}
+MAKE_DIRS_PERMS+=	${COURIER_STATEDIR}/tmp				\
+			${COURIER_USER} ${COURIER_GROUP} 0770
 
 .for _file_ in		imapd.cnf imapd.dist imapd-ssl.dist		\
 			pop3d.cnf pop3d.dist pop3d-ssl.dist

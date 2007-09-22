@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2007/09/21 22:42:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/22 04:42:03 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 CONFIGURE_ARGS+=	--with-mailuid=${PKG_UID.${COURIER_USER}}
 CONFIGURE_ARGS+=	--with-mailgid=${PKG_GID.${COURIER_GROUP}}
 CONFIGURE_ARGS+=	--with-paranoid-smtpext
-CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
+CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR:Q}/tmp
 CONFIGURE_ARGS+=	--with-transport=${COURIER_TRANSPORTS:M*:Q}
 CONFIGURE_ARGS+=	--without-certdb
 
