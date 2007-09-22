@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierfilter.sh,v 1.4 2007/08/10 17:57:04 jlam Exp $
+# $NetBSD: courierfilter.sh,v 1.5 2007/09/22 04:42:03 jlam Exp $
 #
 # Courier mail filter daemon
 #
@@ -13,7 +13,7 @@
 name="courierfilter"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/${name}.pid"
+pidfile="@COURIER_STATEDIR@/tmp/${name}.pid"
 
 restart_cmd="${name}_doit restart"
 start_precmd="${name}_prestart"

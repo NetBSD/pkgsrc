@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courieresmtps.sh,v 1.4 2007/09/07 14:18:11 jlam Exp $
+# $NetBSD: courieresmtps.sh,v 1.5 2007/09/22 04:42:03 jlam Exp $
 #
 # Courier ESMTP/SSL services daemon
 #
@@ -14,7 +14,7 @@ name="courieresmtps"
 rcvar=${name}
 command="@PREFIX@/sbin/couriertcpd"
 ctl_command="@PREFIX@/sbin/esmtpd-ssl"
-pidfile="@VARBASE@/run/esmtpd-ssl.pid"
+pidfile="@COURIER_STATEDIR@/tmp/esmtpd-ssl.pid"
 required_files="@PKG_SYSCONFDIR@/esmtpd @PKG_SYSCONFDIR@/esmtpd-ssl"
 
 start_cmd="${name}_doit start"
