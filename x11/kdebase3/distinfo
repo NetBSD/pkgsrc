@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97.2.1 2007/09/04 12:46:46 ghen Exp $
+$NetBSD: distinfo,v 1.97.2.2 2007/09/22 18:19:22 ghen Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -12,9 +12,12 @@ Size (NetBSD-flag-1.0.png) = 4532 bytes
 SHA1 (kdebase-3.5.7.tar.bz2) = 833a35e4bbec2852f0f5267e680590be0c986594
 RMD160 (kdebase-3.5.7.tar.bz2) = f43070b5428c3099c0abceed56041e5b4ff3c656
 Size (kdebase-3.5.7.tar.bz2) = 24395088 bytes
-SHA1 (post-3.5.7-kdebase-konqueror.diff) = 3868392701ebe9fce14567a1f52d458d00f31287
-RMD160 (post-3.5.7-kdebase-konqueror.diff) = bb59c1e78e5709d72b123c5b3b5a538fc09f564e
-Size (post-3.5.7-kdebase-konqueror.diff) = 1901 bytes
+SHA1 (post-3.5.7-kdebase-kdm.diff) = b270a1d5b3980f49a274308bec7fc649be1bd315
+RMD160 (post-3.5.7-kdebase-kdm.diff) = 4322545997610c528e56d6b810ebbda8ff4095d0
+Size (post-3.5.7-kdebase-kdm.diff) = 1605 bytes
+SHA1 (post-3.5.7-kdebase-konqueror-2.diff) = 3868392701ebe9fce14567a1f52d458d00f31287
+RMD160 (post-3.5.7-kdebase-konqueror-2.diff) = bb59c1e78e5709d72b123c5b3b5a538fc09f564e
+Size (post-3.5.7-kdebase-konqueror-2.diff) = 1901 bytes
 SHA1 (patch-aa) = 96c587d930dd9f25ed722e759fb2127a8ec14de4
 SHA1 (patch-ab) = 353de4dfb9f465ad5c3349f65854726fdb52dbed
 SHA1 (patch-ac) = 8be0f15be839f4f01d3e079501b83e27f1fab2eb
