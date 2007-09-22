@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/09/21 15:48:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/09/22 06:15:48 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAIL_BUILDLINK3_MK:=	${GAIL_BUILDLINK3_MK}+
@@ -19,8 +19,6 @@ BUILDLINK_PKGSRCDIR.gail?=	../../devel/gail
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
-#.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
