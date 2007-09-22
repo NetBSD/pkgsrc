@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2086 2007/09/22 17:59:34 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.2087 2007/09/22 18:23:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/checkperms to 1.9 [roland 2007-09-22]
 	Updated www/seamonkey-gtk1 to 1.1.4nb1 [ghen 2007-09-22]
 	Updated devel/monotone to 0.36nb1 [jmmv 2007-09-22]
+	Updated net/synergy to 1.3.1nb3 [minskim 2007-09-22]
