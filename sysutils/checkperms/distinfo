@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/03/19 08:59:17 dsainty Exp $
+$NetBSD: distinfo,v 1.7 2007/09/22 07:49:16 rillig Exp $
 
-SHA1 (checkperms-1.7.tar.gz) = 2b3269bfc1487d2f27c4d05e2f31b24288baa868
-RMD160 (checkperms-1.7.tar.gz) = a1afcbb76cbdb1ff2071df8fc98c5eec58d80668
-Size (checkperms-1.7.tar.gz) = 5472 bytes
+SHA1 (checkperms-1.9.tar.gz) = 3e57271f62b3b2f9230616922d24f44b4d01d66a
+RMD160 (checkperms-1.9.tar.gz) = 73151f97d8ea5b59ebdecf39aade29e0bf2ff3eb
+Size (checkperms-1.9.tar.gz) = 6255 bytes
