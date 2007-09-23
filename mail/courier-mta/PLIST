@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/10 16:32:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/23 01:24:55 jlam Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -28,6 +28,7 @@ man/man1/preline.1
 man/man1/rmail.1
 man/man1/sendmail.1
 man/man1/testmxlookup.1
+man/man1/webmlmd.1
 man/man5/dot-courier.5
 man/man7/localmailfilter.7
 man/man8/aliaslookup.8
@@ -162,6 +163,7 @@ share/doc/courier/aliases.html
 share/doc/courier/bg.gif
 share/doc/courier/cancelmsg.html
 share/doc/courier/changelog.html
+share/doc/courier/chinese_flag.png
 share/doc/courier/courier.html
 share/doc/courier/courierd.html
 share/doc/courier/courierdsn.html
@@ -184,6 +186,7 @@ share/doc/courier/frame.js
 share/doc/courier/header.html
 share/doc/courier/icon.gif
 share/doc/courier/index.html
+share/doc/courier/index2.html
 share/doc/courier/install.html
 share/doc/courier/intro.html
 share/doc/courier/japanese_flag.png
@@ -211,6 +214,7 @@ share/doc/courier/structures.html
 share/doc/courier/style.css
 share/doc/courier/submit.html
 share/doc/courier/testmxlookup.html
+share/doc/courier/webmlmd.html
 share/examples/courier/aliases/system
 share/examples/courier/courierd.dist
 share/examples/courier/enablefiltering
