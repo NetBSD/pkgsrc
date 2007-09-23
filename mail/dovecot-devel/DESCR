@@ -1,3 +1,0 @@
-Dovecot is an open source IMAP and POP3 server, written with security
-primarily in mind.  It supports Maildirs and mbox formats, and has
-complete IMAP4rev1 support, TLS/SSL support, and is IPv6 ready.
