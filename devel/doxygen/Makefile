@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/01/20 14:26:58 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2007/09/23 17:49:08 joerg Exp $
 
 DISTNAME=	doxygen-1.5.1.src
 PKGNAME=	doxygen-1.5.1
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEX_ACCEPTED=	teTeX3
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
@@ -42,6 +44,8 @@ SUBST_MESSAGE.perlbin=	Fixing hardcoded path to the Perl interpreter
 SUBST_FILES.perlbin=	examples/tag.cfg
 SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 
+INSTALL_TARGET=		install install_docs
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "DragonFly"
@@ -50,9 +54,6 @@ CONFIGURE_ARGS+=	-platform freebsd-g++
 
 post-patch:
 	touch ${WRKSRC}/src/doxytag.l
-
-post-install:
-	cd ${WRKSRC} && gmake install_docs
 
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.12nb1
 
