@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 20:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/23 13:22:45 dmcmahill Exp $
 #
 
-DISTNAME=		gtkwave-2.0.0pre5
-PKGREVISION=		1
+DISTNAME=		gtkwave-3.1.1
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/2.0/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkwave/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cs.manchester.ac.uk/apt/projects/tools/gtkwave/
+HOMEPAGE=		http://home.nc.rr.com/gtkwave/
 COMMENT=		Electronic waveform viewer
 
-USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
