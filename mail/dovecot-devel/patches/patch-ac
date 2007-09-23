@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/09/23 14:55:52 ghen Exp $
+
+--- doc/Makefile.in.orig	2007-09-23 15:12:13.000000000 +0200
++++ doc/Makefile.in
+@@ -232,9 +232,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = wiki
+ confdir = $(sysconfdir)
+-conf_DATA = \
+-	dovecot-ldap-example.conf \
+-	dovecot-sql-example.conf
++conf_DATA =
+ 
+ doc_DATA = \
+ 	auth-protocol.txt \
