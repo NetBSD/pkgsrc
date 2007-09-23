@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/09/23 14:55:52 ghen Exp $
+
+--- src/deliver/deliver.c.orig	2006-11-02 21:03:30.000000000 +0100
++++ src/deliver/deliver.c
+@@ -30,7 +30,7 @@
+ 
+ #define DEFAULT_CONFIG_FILE SYSCONFDIR"/dovecot.conf"
+ #define DEFAULT_AUTH_SOCKET_PATH PKG_RUNDIR"/auth-master"
+-#define DEFAULT_SENDMAIL_PATH "/usr/lib/sendmail"
++#define DEFAULT_SENDMAIL_PATH "/usr/sbin/sendmail"
+ #define DEFAULT_ENVELOPE_SENDER "MAILER-DAEMON"
+ 
+ /* After buffer grows larger than this, create a temporary file to /tmp
