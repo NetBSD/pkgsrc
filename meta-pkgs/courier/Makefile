@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/09/22 04:42:04 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/23 01:24:55 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs mail
 MASTER_SITES=	# empty
 DISTFILES=	# empty
