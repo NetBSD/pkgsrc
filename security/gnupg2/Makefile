@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/09/23 12:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/23 12:05:44 wiz Exp $
 #
 
 DISTNAME=		gnupg-2.0.6
@@ -44,7 +44,8 @@ TEST_TARGET=		check
 .include "options.mk"
 
 # We are building a static pth library and linking against it
-# While this is not very satisfying, gpgme hangs in it's gpgsm tests if we depend on the shared (pkgsrc) pth library
+# While this is not very satisfying, gpgme hangs in its gpgsm tests
+# if we depend on the shared (pkgsrc) pth library
 # We are also building libassuan here to get libassuan-pth.
 pre-configure:
 	cd  ${WRKDIR}/pth-2.0.7 && \
