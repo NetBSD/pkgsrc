@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/09/23 14:34:38 obache Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/23 15:30:23 obache Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		5
@@ -20,6 +20,7 @@ UNLIMIT_RESOURCES=	stacksize datasize
 .if (${MACHINE_ARCH} == "sparc")
 CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O0/}
 .endif
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.boehm-gc}/include/gc
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
