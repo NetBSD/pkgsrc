@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2007/09/18 03:17:28 smb Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/23 17:08:02 joerg Exp $
 #
 
-DISTNAME=newmail-0.0.11
-PKGNAME=claws-mail-newmail-0.0.11
-CATEGORIES=mail
+DISTNAME=	newmail-0.0.11
+PKGNAME=	claws-mail-newmail-0.0.11
+PKGREVISION=	1
+CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Write log file info on arriving email
 
-DEPENDS+=	claws-mail-${CLAWS_VERSION}:../../mail/claws-mail
+DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
 
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=             pkg-config
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c
 
 .include "../../mail/claws-mail/Makefile.vers"
