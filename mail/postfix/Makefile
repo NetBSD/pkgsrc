@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2007/08/13 07:05:37 martti Exp $
+# $NetBSD: Makefile,v 1.207 2007/09/23 11:20:48 jlam Exp $
 
 DISTNAME=	postfix-2.4.5
 #PKGREVISION=	1
@@ -41,7 +41,7 @@ CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
 CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
 CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
 CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
-CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/man\"
+CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/${PKGMANDIR}\"
 CCARGS+=	-DDEF_SAMPLE_DIR=\"${EXAMPLEDIR}\"
 CCARGS+=	-DDEF_README_DIR=\"${DOCDIR}\"
 
@@ -66,7 +66,7 @@ SUBST_SED.postfix+=	\
 SUBST_SED.postfix+=	\
 	-e 's|^\(setgid_group\) =.*|\1 = maildrop|'
 SUBST_SED.postfix+=	\
-	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/man|'
+	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/${PKGMANDIR}|'
 SUBST_SED.postfix+=	\
 	-e 's|^\(sample_directory\) =.*|\1 = ${EXAMPLEDIR}|'
 SUBST_SED.postfix+=	\
