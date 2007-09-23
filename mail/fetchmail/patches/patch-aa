@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5.4.1 2007/09/23 14:35:05 ghen Exp $
+
+--- sink.c.orig	2007-03-29 23:45:17.000000000 +0100
++++ sink.c	2007-09-23 13:42:40.000000000 +0100
+@@ -262,7 +262,7 @@
+     const char *md1 = "MAILER-DAEMON", *md2 = "MAILER-DAEMON@";
+ 
+     /* don't bounce in reply to undeliverable bounces */
+-    if (!msg->return_path[0] ||
++    if (!msg || !msg->return_path[0] ||
+ 	strcmp(msg->return_path, "<>") == 0 ||
+ 	strcasecmp(msg->return_path, md1) == 0 ||
+ 	strncasecmp(msg->return_path, md2, strlen(md2)) == 0)
