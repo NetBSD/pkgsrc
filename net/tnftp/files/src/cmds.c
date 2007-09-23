@@ -1,4 +1,4 @@
-/*	$NetBSD: cmds.c,v 1.6 2007/08/07 02:07:01 lukem Exp $	*/
+/*	$NetBSD: cmds.c,v 1.7 2007/09/23 16:47:19 joerg Exp $	*/
 /*	from	NetBSD: cmds.c,v 1.123 2007/05/24 05:05:18 lukem Exp	*/
 
 /*-
@@ -791,10 +791,10 @@ fget(int argc, char *argv[])
 }
 
 const char *
-onoff(int bool)
+onoff(int truth)
 {
 
-	return (bool ? "on" : "off");
+	return (truth ? "on" : "off");
 }
 
 /*
