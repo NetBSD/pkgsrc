@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2007/04/25 18:37:38 tnn Exp $
+# $NetBSD: Makefile,v 1.79 2007/09/23 17:17:12 joerg Exp $
 
 DISTNAME=		lftp-3.5.11
 CATEGORIES=		net
@@ -12,6 +12,7 @@ HOMEPAGE=		http://lftp.yar.ru/
 COMMENT=		Powerful command line file transfer client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
@@ -36,8 +37,7 @@ CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
 INSTALLATION_DIRS=	bin lib/lftp ${PKGMANDIR}/man1 share/examples/lftp share/lftp
 
 post-install: post-install-perl
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/lftp.conf ${EGDIR}/lftp.conf.default
+	${INSTALL_DATA} ${WRKSRC}/lftp.conf ${DESTDIR}${EGDIR}/lftp.conf.default
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
