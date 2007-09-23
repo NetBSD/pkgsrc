@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/08/29 23:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/23 12:02:02 wiz Exp $
 #
 
 DISTNAME=		gnupg-2.0.6
@@ -13,7 +13,7 @@ DISTFILES+=		libassuan-1.0.2.tar.bz2
 SITES.libassuan-1.0.2.tar.bz2=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 
 MAINTAINER=		shannonjr@NetBSD.org
-HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
+HOMEPAGE=		http://www.gnupg.org/
 COMMENT=		GNUpg with OpenPGP and S/MIME capabilities
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
