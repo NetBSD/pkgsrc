@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6705 2007/09/23 14:35:39 obache Exp $
+$NetBSD: TODO,v 1.6706 2007/09/24 18:57:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -348,6 +348,7 @@ Suggested package updates
 	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bmpx-0.40.8
 	o bochs-2.3.5
 	o bos-2.0.1
 	o boson-0.13
@@ -430,7 +431,7 @@ Suggested package updates
 	o dvdrip-0.98.8
 	o dvdstyler-1.5
 	o dvipng-1.9
-	o dwm-4.4
+	o dwm-4.5
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -549,6 +550,7 @@ Suggested package updates
 	o gnome-applets-2.20.0
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
+	o gnome-desktop-2.20.0
 	o gnome-games-2.20.0.1
 	o gnome-keyring-2.20.0
 	o gnome-mag-1.14.10
@@ -567,6 +569,7 @@ Suggested package updates
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
+	o gnutls-2.0.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -659,6 +662,7 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
+	o jabberd2-2.1.16
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
@@ -687,7 +691,7 @@ Suggested package updates
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
-	o leafpad-0.8.11
+	o leafpad-0.8.12
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.5.14
 	o libFoundation-1.1.3
@@ -733,6 +737,7 @@ Suggested package updates
 	o libstatgrab-0.15
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
+	o libtheora-1.0beta1
 	o libtool-1.5.24
 	o libxklavier-3.3
 	o libxml++2-2.20.0
@@ -904,6 +909,7 @@ Suggested package updates
 	o p5-Image-Info-1.26
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
+	o p5-MIME-tools-5.421
 	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
@@ -935,6 +941,7 @@ Suggested package updates
 	o p5-Test-Harness-2.64
 	o p5-Test-Inline-2.207
 	o p5-Test-NoWarnings-0.083
+	o p5-Test-Simple-0.72
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
 	o p5-Test-Warn-0.09
