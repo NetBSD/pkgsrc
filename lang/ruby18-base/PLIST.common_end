@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.4 2007/03/15 16:41:30 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5 2007/09/24 21:58:27 taca Exp $
 @dirrm ${RUBY_LIBDIR}/bigdecimal
 @dirrm ${RUBY_LIBDIR}/cgi/session
 @dirrm ${RUBY_LIBDIR}/cgi
@@ -38,6 +38,7 @@ ${HAS_IO}@dirrm ${RUBY_LIBDIR}/io
 @dirrm ${RUBY_LIBDIR}/rdoc
 @dirrm ${RUBY_LIBDIR}/rexml/dtd
 @dirrm ${RUBY_LIBDIR}/rexml/encodings
+@dirrm ${RUBY_LIBDIR}/rexml/formatters
 @dirrm ${RUBY_LIBDIR}/rexml/light
 @dirrm ${RUBY_LIBDIR}/rexml/parsers
 @dirrm ${RUBY_LIBDIR}/rexml/validation
