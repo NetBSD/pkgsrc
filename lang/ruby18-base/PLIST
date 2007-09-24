@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/03/15 16:41:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/09/24 21:58:27 taca Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -274,6 +274,9 @@ ${RUBY_LIBDIR}/rexml/encodings/US-ASCII.rb
 ${RUBY_LIBDIR}/rexml/encodings/UTF-16.rb
 ${RUBY_LIBDIR}/rexml/encodings/UTF-8.rb
 ${RUBY_LIBDIR}/rexml/entity.rb
+${RUBY_LIBDIR}/rexml/formatters/default.rb
+${RUBY_LIBDIR}/rexml/formatters/pretty.rb
+${RUBY_LIBDIR}/rexml/formatters/transitive.rb
 ${RUBY_LIBDIR}/rexml/functions.rb
 ${RUBY_LIBDIR}/rexml/instruction.rb
 ${RUBY_LIBDIR}/rexml/light/node.rb
