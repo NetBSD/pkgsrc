@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2007/04/26 06:26:27 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.43 2007/09/25 20:05:24 jlam Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -15,9 +15,9 @@ HOMEPAGE=	http://www.sendmail.org/
 
 LICENSE=	sendmail-license
 
-DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail/distinfo
-FILESDIR?=	${.CURDIR}/../../mail/sendmail/files
-PATCHDIR?=	${.CURDIR}/../../mail/sendmail/patches
+DISTINFO_FILE=	${.CURDIR}/../../mail/sendmail/distinfo
+FILESDIR=	${.CURDIR}/../../mail/sendmail/files
+PATCHDIR=	${.CURDIR}/../../mail/sendmail/patches
 
 DIST_VERS=	8.14.1
 
@@ -33,9 +33,6 @@ WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_TOOLS+=	gm4
 MAKE_ENV+=	M4=${TOOLS_M4:Q}
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
-
 .PHONY: make-sendmail-siteconfig
 make-sendmail-siteconfig:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
@@ -43,7 +40,8 @@ make-sendmail-siteconfig:
 
 .if !empty(PKG_OPTIONS:Minet6)
 	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
-.  if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS" && ${OPSYS} != "DragonFly"
+.  if (${OPSYS} != "SunOS") && (${OPSYS} != "BSDOS") && \
+      (${OPSYS} != "DragonFly") && (${OPSYS} != "FreeBSD")
 	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
 .  endif
 .endif
