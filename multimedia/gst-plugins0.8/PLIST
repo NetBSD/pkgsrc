@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/25 10:54:16 hira Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
@@ -163,7 +163,7 @@ share/locale/sv/LC_MESSAGES/gst-plugins-0.8.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-0.8.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-0.8.mo
 share/locale/zh_TW/LC_MESSAGES/gst-plugins-0.8.mo
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in gstreamer0.8: @dirrm lib/gstreamer-0.8
 @dirrm include/gstreamer-0.8/gst/xwindowlistener
 @dirrm include/gstreamer-0.8/gst/xoverlay

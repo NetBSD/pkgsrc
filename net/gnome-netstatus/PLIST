@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/03/24 19:29:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/09/25 10:54:17 hira Exp $
 lib/bonobo/servers/GNOME_NetstatusApplet_Factory.server
 libexec/gnome-netstatus-applet
 share/gconf/schemas/netstatus.schemas
@@ -198,5 +198,5 @@ share/pixmaps/gnome-netstatus-tx.png
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-netstatus
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in libbonobo: @dirrm lib/bonobo/servers
