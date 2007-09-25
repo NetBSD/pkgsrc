@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2007/04/13 17:37:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2007/09/25 10:54:14 hira Exp $
 bin/evolution-2.10
 include/evolution-2.10/addressbook/gui/widgets/eab-config.h
 include/evolution-2.10/addressbook/gui/widgets/eab-menu.h
@@ -1077,7 +1077,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm share/gnome/help/evolution/C
 @dirrm share/gnome/help/evolution
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/evolution/2.10/weather
 @dirrm share/evolution/2.10/views/tasks
 @dirrm share/evolution/2.10/views/memos
