@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6707 2007/09/25 12:58:01 tron Exp $
+$NetBSD: TODO,v 1.6708 2007/09/25 14:00:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,7 @@ Suggested package updates
 	o heimdal-1.0.1 [pkg/37010]
 	o hercules-3.04.1
 	o hesiod-3.1.0
-	o heyu-2.1.0
+	o heyu-2.1.2
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -707,6 +707,7 @@ Suggested package updates
 	o libdvbpsi-0.1.5
 	o libelf-0.8.10
 	o libetpan-0.51
+	o libevent-1.3e
 	o libextractor-0.5.18a
 	o libflash-0.4.13
 	o libggi-2.2.2
