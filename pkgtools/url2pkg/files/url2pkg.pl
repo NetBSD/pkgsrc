@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.9 2007/07/10 15:27:57 joerg Exp $
+# $NetBSD: url2pkg.pl,v 1.10 2007/09/25 13:59:42 wiz Exp $
 #
 
 use strict;
@@ -116,7 +116,7 @@ sub magic_gconf2_schemas() {
 				push(@extra_vars, ["GCONF2_SCHEMAS+", $1]);
 			}
 		}
-		push(@includes, "../../devel/GConf2/schemas.mk");
+		push(@includes, "../../devel/GConf/schemas.mk");
 	}
 }
 
