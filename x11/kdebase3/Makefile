@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2007/09/25 08:31:55 hira Exp $
+# $NetBSD: Makefile,v 1.135 2007/09/25 10:03:54 hira Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	4
@@ -137,7 +137,7 @@ SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
 
 pre-configure:
-	cd ${WRKSRC}/ksysguard/ksysguardd && rm -f DragonFly && ${LN} -s FreeBSD DragonFly
+	cd ${WRKSRC}/ksysguard/ksysguardd && rm -f DragonFly && ln -s FreeBSD DragonFly
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/templates/.source/emptydir
