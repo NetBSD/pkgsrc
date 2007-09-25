@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/16 10:53:11 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/25 08:49:05 hira Exp $
 #
 
 DISTNAME=		xm71010s
@@ -27,7 +27,7 @@ MAKE_FILE=		makefile.x11
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	cd ${WRKDIR} && mv linux/* vm
+	cd ${WRKDIR} && ${MV} linux/* vm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/vm/xm7 ${PREFIX}/bin
