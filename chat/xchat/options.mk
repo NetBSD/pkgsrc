@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2007/08/10 19:14:06 tron Exp $
+# $NetBSD: options.mk,v 1.10 2007/09/25 15:38:54 hira Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,7 +56,7 @@ SUBST_MESSAGE.gconf+=	Disabling schema registration/installation.
 SUBST_SED.gconf+=	-e 's,DO_GCONF_TRUE,DO_GCONF_FALSE,g'
 SUBST_FILES.gconf+=	src/common/dbus/Makefile.in
 USE_DIRS+=		gnome2-1.5
-.	include "../../devel/GConf2/schemas.mk"
+.	include "../../devel/GConf/schemas.mk"
 .	include "../../sysutils/dbus-glib/buildlink3.mk"
 .else
 # We set this to ${FALSE} to avoid detection.
