@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/07/07 18:24:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/09/25 10:47:52 hira Exp $
 bin/nautilus-cd-burner
 include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
@@ -99,5 +99,5 @@ share/nautilus-cd-burner/cdspin8.png
 @dirrm share/examples/nautilus-cd-burner
 @comment in xdg-dirs: @dirrm share/applications
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
-@comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
+@comment in gnome-vfs: @dirrm lib/gnome-vfs-2.0/modules
 @dirrm include/libnautilus-burn
