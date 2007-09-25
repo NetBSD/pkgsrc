@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/09/25 08:31:53 hira Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/25 10:03:52 hira Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -28,7 +28,7 @@ SUBST_SED.buttons=	-e 's+buttons+${PREFIX}/share/craft/buttons+'
 
 post-extract:
 	find ${WRKSRC} -type f -name '*~' -print | xargs rm -f
-	${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
+	ln -fs ${FILESDIR}/Makefile ${WRKSRC}
 	for f in `find ${WRKSRC} -name "*.hc" -type f -print`; do	\
 	  ${ECHO} "" >>$$f;						\
 	done
