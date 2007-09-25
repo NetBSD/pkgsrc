@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2100 2007/09/25 14:00:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2101 2007/09/25 15:20:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ruby-mode to 1.8.6.110 [taca 2007-09-24]
 	Updated devel/nspr to 4.6.7 [bjs 2007-09-25]
 	Updated pkgtools/url2pkg to 2.7 [wiz 2007-09-25]
+	Updated security/gpgme to 1.1.4nb1 [minskim 2007-09-25]
