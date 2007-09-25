@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/19 23:53:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/25 10:47:53 hira Exp $
 bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
@@ -274,7 +274,7 @@ share/pixmaps/display-capplet.png
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/window-manager-settings
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
-@comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
+@comment in gnome-vfs: @dirrm lib/gnome-vfs-2.0/modules
 @dirrm include/gnome-window-settings-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
