@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/06/03 22:57:25 heinz Exp $
+# $NetBSD: Makefile,v 1.25 2007/09/25 08:31:53 hira Exp $
 
 DISTNAME=		flex-2.5.33
 PKGREVISION=		2
@@ -28,7 +28,7 @@ USE_TOOLS+=		gmake	# bmake has problems with the test suite
 .endif
 
 post-install:
-	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ln -s flex flex++
+	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ${LN} -s flex flex++
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

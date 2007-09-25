@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/15 14:55:02 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/25 08:31:53 hira Exp $
 #
 
 PKGNAME=		pidgin-${PIDGIN_VERSION}
@@ -29,7 +29,7 @@ CHECK_WRKREF_SKIP=	bin/pidgin
 pre-build:
 	# XXX Find a cleaner way.
 	${TEST} -r ${WRKSRC}/libpurple/libpurple.la || \
-	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
+	  ${LN} -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

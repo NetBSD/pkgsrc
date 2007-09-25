@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/03 20:27:20 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/25 08:31:55 hira Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -15,9 +15,9 @@ BUILD_QT4=		yes
 UNLIMIT_RESOURCES=	datasize
 
 post-configure:
-	ln -s ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
-	ln -s ${QTPREFIX}/bin/uic ${WRKSRC}/bin/uic
-	ln -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
+	${LN} -s ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
+	${LN} -s ${QTPREFIX}/bin/uic ${WRKSRC}/bin/uic
+	${LN} -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
 
 do-install:
 .for prog in assistant lrelease lupdate qmake qt3to4
