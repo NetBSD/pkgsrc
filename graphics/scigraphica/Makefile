@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/09/21 13:03:55 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/09/25 08:31:54 hira Exp $
 #
 
 DISTNAME=	scigraphica-2.1.0
@@ -26,7 +26,7 @@ USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	yes
 
 pre-configure:
-	ln -s ${PYTHONBIN} ${TOOLS_DIR}/bin/python
+	${LN} -s ${PYTHONBIN} ${TOOLS_DIR}/bin/python
 
 .include "../../lang/python/application.mk"
 .include "../../graphics/libscigraphica/buildlink3.mk"

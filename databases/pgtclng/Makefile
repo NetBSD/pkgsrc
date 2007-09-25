@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/28 12:12:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/25 08:31:53 hira Exp $
 #
 
 VER=		1.5.3
@@ -27,4 +27,4 @@ PGTCLLIBNAME		= libpgtcl${VER:C/\.//g}.so
 .include "../../mk/bsd.pkg.mk"
 
 post-install:
-	cd ${PREFIX}/lib && ln -s pgtcl${VER}/${PGTCLLIBNAME} libpgtcl.so
+	cd ${PREFIX}/lib && ${LN} -s pgtcl${VER}/${PGTCLLIBNAME} libpgtcl.so
