@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.28 2007/05/10 15:42:29 obache Exp $
+# $NetBSD: msgfmt.sh,v 1.29 2007/09/25 10:32:17 hira Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,7 +74,7 @@
 #	multimedia/gmencoder
 #	multimedia/gnome2-media
 #	net/gtk-gnutella
-#	sysutils/gnome-vfs2
+#	sysutils/gnome-vfs
 #	wm/icewm
 #	www/epiphany
 #	x11/matchbox-panel
