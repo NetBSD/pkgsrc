@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.21 2007/03/18 18:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/25 04:18:25 bjs Exp $
 
-DISTNAME=		nspr-4.6.6
+DISTNAME=		nspr-4.6.7
 CATEGORIES=		devel
-MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.6/src/ \
-			ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.6.6/src/
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=/nspr/releases/v4.6.7/src/}
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
 COMMENT=		Platform-neutral API for system level and libc like functions
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub
-CONFIGURE_DIRS=		${WRKSRC}/build
+CONFIGURE_DIRS=		build
 
 USE_TOOLS+=		autoconf213 gmake
 USE_LANGUAGES=		c c++
@@ -23,6 +22,8 @@ CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 
 .include		"../../mk/bsd.prefs.mk"
+
+CFLAGS+=		-D_DONT_CAST_PTHREAD_T	# XXX pthread_t can be 64-bit
 
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so
@@ -90,6 +91,8 @@ CONFIGURE_ARGS+=	--without-pthreads
 .else
 CONFIGURE_ARGS+=	--with-pthreads
 .include "../../mk/pthread.buildlink3.mk"
+# XXX TODO
+#.include "../../mk/resolv.buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
