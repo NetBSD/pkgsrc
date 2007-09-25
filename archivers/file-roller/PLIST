@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/07/13 16:28:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/09/25 10:54:09 hira Exp $
 bin/file-roller
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 libexec/file-roller/isoinfo.sh
@@ -198,7 +198,7 @@ share/omf/file-roller/file-roller-uk.omf
 @dirrm share/gnome/help/file-roller/C
 @dirrm share/gnome/help/file-roller
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/file-roller/icons/hicolor/24x24/actions
 @dirrm share/file-roller/icons/hicolor/24x24
 @dirrm share/file-roller/icons/hicolor/16x16/actions

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/19 23:57:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/25 10:54:24 hira Exp $
 bin/gnome-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
@@ -186,6 +186,6 @@ share/pixmaps/gnome-terminal.png
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-terminal/glade
 @dirrm share/gnome-terminal
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
