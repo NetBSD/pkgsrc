@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2007/04/21 05:40:27 hira Exp $
+# $NetBSD: options.mk,v 1.10 2007/09/25 10:16:08 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
@@ -54,9 +54,9 @@ CONFIGURE_ARGS+=	--disable-cups
 
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
