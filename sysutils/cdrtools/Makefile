@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/09/25 08:49:05 hira Exp $
+# $NetBSD: Makefile,v 1.22 2007/09/25 10:03:54 hira Exp $
 
 DISTNAME=	cdrtools-2.01.01a35
 PKGNAME=	cdrtools-2.01.01.35
@@ -65,14 +65,14 @@ SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
 post-extract:
-	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
-	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
+	ln -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
+	ln -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
 	for suffix in netbsd-cc.rul netbsd-gcc.rul; do			\
 		if [ ! -f ${MACHINE}-$$suffix ]; then			\
-			${LN} -sf i386-$$suffix ${MACHINE}-$$suffix;	\
+			ln -sf i386-$$suffix ${MACHINE}-$$suffix;	\
 		fi;							\
 	done
 

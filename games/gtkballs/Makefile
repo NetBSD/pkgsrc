@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/09/25 08:49:05 hira Exp $
+# $NetBSD: Makefile,v 1.28 2007/09/25 10:07:06 hira Exp $
 
 DISTNAME=	gtkballs-3.1.5
 PKGREVISION=	5
@@ -24,7 +24,7 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/gtkballs-scores \
 			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
-	${MV} ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
+	mv ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6x ${PREFIX}/${PKGMANDIR}/man6/gtkballs.6
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
