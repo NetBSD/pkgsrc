@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/09/25 08:31:53 hira Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/25 10:03:52 hira Exp $
 
 DISTNAME=	freetds-0.63
 PKGREVISION=	4
@@ -38,7 +38,7 @@ PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/.PLIST.doc
 # easily changing the installation directory for the documentation.
 #
 pre-build:
-	cd ${WRKSRC}/doc/doc && ${LN} -s ${PKGNAME_NOREV:Q} ${PKGBASE:Q}
+	cd ${WRKSRC}/doc/doc && ln -s ${PKGNAME_NOREV:Q} ${PKGBASE:Q}
 
 # Dynamically generate PLIST entries for the documentation.  This target
 # may need to be modified for future FreeTDS releases.
