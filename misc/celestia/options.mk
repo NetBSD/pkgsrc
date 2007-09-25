@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/01/26 04:25:46 markd Exp $
+# $NetBSD: options.mk,v 1.3 2007/09/25 10:25:19 hira Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.celestia
 PKG_SUPPORTED_OPTIONS=		# empty
@@ -22,7 +22,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.gtk
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--with-gnome
 PLIST_SRC=		${PKGDIR}/PLIST.gtk
-.  include "../../devel/GConf2/schemas.mk"
+.  include "../../devel/GConf/schemas.mk"
 .  include "../../devel/libgnomeui/buildlink3.mk"
 .  include "../../graphics/gtkglext/buildlink3.mk"
 .endif
