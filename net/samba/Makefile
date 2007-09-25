@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2007/09/25 08:31:54 hira Exp $
+# $NetBSD: Makefile,v 1.174 2007/09/25 10:03:53 hira Exp $
 
 .include "Makefile.mirrors"
 
@@ -140,7 +140,7 @@ install-samba-lib-symlinks:
 .for l in ${SMBLIBS}
 	for v in ${SMBVERSION.${l}}; do					\
 		(cd ${SAMBA_LIBDIR} && rm -f lib${l}.so.$$v &&		\
-			${LN} -s lib${l}.so lib${l}.so.$$v);		\
+			ln -s lib${l}.so lib${l}.so.$$v);		\
 	done
 .endfor
 

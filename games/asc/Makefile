@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/09/25 08:49:05 hira Exp $
+# $NetBSD: Makefile,v 1.39 2007/09/25 10:07:06 hira Exp $
 
 DISTNAME=	asc-source-1.16.4.0
 PKGNAME=	${DISTNAME:S/-source//}
@@ -30,7 +30,7 @@ CPPFLAGS.NetBSD+=	-D_UNICODE_BROKEN_
 UNLIMIT_RESOURCES=	datasize
 
 post-extract:
-	${MV} ${WRKDIR}/*.mp3 ${WRKSRC}/data/music
+	mv ${WRKDIR}/*.mp3 ${WRKSRC}/data/music
 
 # bug in 1.16.4.0, remove on update
 post-install:

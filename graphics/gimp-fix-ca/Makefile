@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/25 08:31:53 hira Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/25 10:03:53 hira Exp $
 #
 
 DISTNAME=		gimp-fix-ca-2.1.0
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
 USE_TOOLS+=		pkg-config
 
 pre-build:
-	${LN} -sf ${LOCALBASE}/bin/gimptool-2.0 \
+	ln -sf ${LOCALBASE}/bin/gimptool-2.0 \
 		${BUILDLINK_DIR}/bin/gimptool
 
 do-build:
