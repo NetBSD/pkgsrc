@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/08/10 19:14:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/09/25 10:54:10 hira Exp $
 bin/xchat
 share/applications/xchat.desktop
 ${GNOME}share/dbus-1/services/org.xchat.service.service
@@ -34,7 +34,7 @@ share/locale/zh_CN/LC_MESSAGES/xchat.mo
 share/locale/zh_TW/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
 @comment in xdg-dirs: @dirrm share/pixmaps
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/doc/xchat
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in dbus: @dirrm share/dbus-1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/25 10:47:53 hira Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/09/25 10:54:22 hira Exp $
 bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
@@ -262,7 +262,7 @@ share/pixmaps/display-capplet.png
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome/cursor-fonts
 @comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/examples/control-center
 @comment in xdg-dirs: @dirrm share/desktop-directories
 @comment in dbus: @dirrm share/dbus-1/services

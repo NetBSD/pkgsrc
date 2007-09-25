@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/10/23 19:36:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/09/25 10:54:16 hira Exp $
 bin/gnome-help
 bin/yelp
 share/applications/yelp.desktop
@@ -121,5 +121,5 @@ share/yelp/yelp.js
 @dirrm share/yelp
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications

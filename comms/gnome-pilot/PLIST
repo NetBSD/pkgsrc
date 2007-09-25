@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/01/26 01:33:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/09/25 10:54:10 hira Exp $
 bin/gnome-pilot-make-password
 bin/gpilot-install-file
 bin/gpilotd-control-applet
@@ -106,7 +106,7 @@ share/pixmaps/syncing_icon.png
 @dirrm share/gnome-pilot/glade
 @dirrm share/gnome-pilot/conduits
 @dirrm share/gnome-pilot
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gnome-pilot/conduits
 @dirrm lib/gnome-pilot
