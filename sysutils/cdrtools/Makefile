@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/09/25 08:31:55 hira Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/25 08:49:05 hira Exp $
 
 DISTNAME=	cdrtools-2.01.01a35
 PKGNAME=	cdrtools-2.01.01.35
@@ -80,7 +80,7 @@ post-build:
 	cd ${WRKSRC};							\
 	for manpage in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do	\
 		tbl $${manpage} > $${manpage}.tmp;			\
-		mv -f $${manpage}.tmp $${manpage};			\
+		${MV} -f $${manpage}.tmp $${manpage};			\
 	done
 
 do-install:
