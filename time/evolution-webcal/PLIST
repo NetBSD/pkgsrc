@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/04/15 08:29:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/09/25 10:54:19 hira Exp $
 libexec/evolution-webcal
 share/gconf/schemas/evolution-webcal.schemas
 share/locale/ar/LC_MESSAGES/evolution-webcal.mo
@@ -68,4 +68,4 @@ share/locale/xh/LC_MESSAGES/evolution-webcal.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-webcal.mo
 share/locale/zh_HK/LC_MESSAGES/evolution-webcal.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-webcal.mo
-@comment in GConf2: @dirrm share/gconf/schemas
+@comment in GConf: @dirrm share/gconf/schemas
