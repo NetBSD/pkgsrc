@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/09/19 19:13:53 adam Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/25 08:31:52 hira Exp $
 
 DISTNAME=	p7zip_4.55_src_all
 PKGNAME=	p7zip-4.55
@@ -55,9 +55,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${PREFIX}/lib/7z
 	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* ${PREFIX}/lib/7z/Codecs
 	${INSTALL_LIB} ${WRKSRC}/bin/Formats/* ${PREFIX}/lib/7z/Formats
-	ln -s ${PREFIX}/lib/7z/7z ${PREFIX}/bin
+	${LN} -s ${PREFIX}/lib/7z/7z ${PREFIX}/bin
 .else
-	ln -s 7za ${PREFIX}/bin/7z
+	${LN} -s 7za ${PREFIX}/bin/7z
 .endif
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/p7zip
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/*.* ${PREFIX}/share/doc/p7zip
