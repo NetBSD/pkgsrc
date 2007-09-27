@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.19 2007/09/12 10:22:53 rillig Exp $
+# $NetBSD: check-files.mk,v 1.20 2007/09/27 13:57:12 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -66,7 +66,9 @@ CHECK_FILES_SKIP+=	${PACKAGES}/.*
 CHECK_FILES_SKIP+=	${DISTDIR}/.*
 
 # For unprivileged builds, VARBASE is below LOCALBASE.
+.if !empty(CHECK_FILES_STRICT:M[Nn][Oo])
 CHECK_FILES_SKIP+=	${VARBASE}/.*
+.endif
 
 # File that are outside of ${PREFIX} in directories we already know we'll
 # be using for mutable data.
