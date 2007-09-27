@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.19 2007/06/19 13:11:01 dmcmahill Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.20 2007/09/27 12:49:14 rillig Exp $
 #
 # Public targets:
 #
@@ -49,7 +49,7 @@ _show-dbginfo-file-versions:
 	  ident=`${SED} -n						\
 	    -e 's,^.*\\([$$]NetBSD:[^$$]*\\$$\\).*,\\1,p'		\
 	    -e 's,^.*\\([$$]Id:[^$$]*\\$$\\).*,\\1,p'			\
-	    "$${fname}"` || continue;					\
+	    "$${fname}" | ${SED} 1q` || continue;			\
 	  case $${ident} in						\
 	  *?*) ${PRINTF} "\\t%s: %s\\n" "$${fname}" "$${ident}";;	\
 	  esac;								\
