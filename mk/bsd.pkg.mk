@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1924 2007/09/07 21:55:44 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1925 2007/09/27 11:19:52 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -620,7 +620,12 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 # reinvoking the make process as root.  It acquires root privileges and
 # invokes a new make process with the target named "su-${.TARGET}".
 #
+# MAKEFLAGS.su-${.TARGET}
+#	The additional flags that are passed to the make process.
+# 
 
+# XXX: Shouldn't the $${PATH} be ${PATH} here? This may be related to
+# PR 34470.
 _ROOT_CMD=	cd ${.CURDIR} &&					\
 		${SETENV} ${PKGSRC_MAKE_ENV}				\
 			PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}		\
