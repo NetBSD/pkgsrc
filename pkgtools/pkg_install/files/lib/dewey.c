@@ -1,4 +1,4 @@
-/* $NetBSD: dewey.c,v 1.7 2007/09/16 19:03:52 joerg Exp $ */
+/* $NetBSD: dewey.c,v 1.8 2007/09/27 13:30:28 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -127,14 +127,17 @@ mkcomponent(arr_t *ap, const char *num)
 	int                 n;
 	const char             *cp;
 
-	if (ap->size == 0) {
-		ap->size = 62;
-		if ((ap->v = malloc(ap->size * sizeof(int))) == NULL)
-			err(EXIT_FAILURE, "mkver malloc failed");
-	} else {
-		ap->size *= 2;
-		if ((ap->v = realloc(ap->v, ap->size * sizeof(int))) == NULL)
-			err(EXIT_FAILURE, "mkver realloc failed");
+	if (ap->c == ap->size) {
+		if (ap->size == 0) {
+			ap->size = 62;
+			if ((ap->v = malloc(ap->size * sizeof(int))) == NULL)
+				err(EXIT_FAILURE, "mkver malloc failed");
+		} else {
+			ap->size *= 2;
+			if ((ap->v = realloc(ap->v, ap->size * sizeof(int)))
+			    == NULL)
+				err(EXIT_FAILURE, "mkver realloc failed");
+		}
 	}
 	if (isdigit((unsigned char)*num)) {
 		for (cp = num, n = 0 ; isdigit((unsigned char)*num) ; num++) {
@@ -159,9 +162,11 @@ mkcomponent(arr_t *ap, const char *num)
 	if (isalpha((unsigned char)*num)) {
 		ap->v[ap->c++] = Dot;
 		cp = strchr(alphas, tolower((unsigned char)*num));
-		ap->size *= 2;
-		if ((ap->v = realloc(ap->v, ap->size * sizeof(int))) == NULL)
-			err(EXIT_FAILURE, "mkver realloc failed");
+		if (ap->c == ap->size) {
+			ap->size *= 2;
+			if ((ap->v = realloc(ap->v, ap->size * sizeof(int))) == NULL)
+				err(EXIT_FAILURE, "mkver realloc failed");
+		}
 		ap->v[ap->c++] = (int)(cp - alphas) + 1;
 		return 1;
 	}
