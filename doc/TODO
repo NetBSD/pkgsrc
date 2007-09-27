@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6708 2007/09/25 14:00:53 wiz Exp $
+$NetBSD: TODO,v 1.6709 2007/09/27 09:08:59 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1431,11 +1431,6 @@ Suggested pkgsrc enhancements
 		- /etc/shells changes (PKG_REGISTER_SHELLS=YES)
 		- pkg-specific rc.d script instructions
 	  (Consider renaming PKGSRC_MESSAGE_RECIPIENTS as well.)
-
-	o Add an install time check that examines installed files for references
-	  to ${WRKDIR}.  In particular this should help catch packages which
-	  pickup the tools directory with AC_PATH_PROG.  This is in a similar
-	  spirit as the runtime path checks which already exist.
 
 	o Use libarchive in pkg_install instead of forking tar or pax.
 	  http://people.freebsd.org/~kientzle/libarchive/
