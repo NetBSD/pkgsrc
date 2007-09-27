@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2007/09/08 21:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.143 2007/09/27 13:30:27 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -137,7 +137,8 @@ pre-configure:
 	cd ${WRKDIR}/libarchive &&					\
 	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
-		./configure --disable-shared --disable-bsdtar
+		./configure --disable-shared --disable-bsdtar		\
+		--disable-dependency-tracking
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 
