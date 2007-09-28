@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
---- linpack.c.orig	Sun Aug 30 11:34:04 1998
-+++ linpack.c	Sun Aug 30 11:40:18 1998
-@@ -48,7 +48,7 @@
+$NetBSD: patch-aa,v 1.2 2007/09/28 13:21:33 drochner Exp $
+
+--- linpack.c.orig	2007-09-02 12:38:13.000000000 +0200
++++ linpack.c
+@@ -48,7 +48,7 @@ You must specify one of -DROLL or -DUNRO
  #include <stdio.h>
  #include <math.h>
  
@@ -10,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
  main ()
  {
-@@ -71,11 +71,11 @@
+@@ -71,11 +71,11 @@ main ()
          matgen(a,lda,n,b,&norma);
          t1 = second();
          dgefa(a,lda,n,ipvt,&info);
@@ -25,7 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
  /*     compute a residual to verify results.  */ 
  
-@@ -108,10 +108,10 @@
+@@ -108,10 +108,10 @@ main ()
  	fprintf(stderr,"      dgefa      dgesl      total       kflops     unit");
  	fprintf(stderr,"      ratio\n");
  
@@ -40,7 +41,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
     	fprintf(stderr," times for array with leading dimension of%5d\n",lda);
  	print_time(0);
-@@ -119,28 +119,28 @@
+@@ -119,28 +119,28 @@ main ()
          matgen(a,lda,n,b,&norma);
          t1 = second();
          dgefa(a,lda,n,ipvt,&info);
@@ -83,7 +84,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
          ntimes = NTIMES;
          tm2 = 0.0;
-@@ -153,19 +153,19 @@
+@@ -153,19 +153,19 @@ main ()
  		dgefa(a,lda,n,ipvt,&info);
  	}
  
@@ -110,7 +111,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
  	print_time(1);
  	print_time(2);
-@@ -174,41 +174,41 @@
+@@ -174,41 +174,41 @@ main ()
          matgen(aa,ldaa,n,b,&norma);
          t1 = second();
          dgefa(aa,ldaa,n,ipvt,&info);
@@ -173,7 +174,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  
  	ntimes = NTIMES;
  	tm2 = 0;
-@@ -219,22 +219,22 @@
+@@ -219,22 +219,22 @@ main ()
  		tm2 = tm2 + second() - tm;
  		dgefa(aa,ldaa,n,ipvt,&info);
  	}
@@ -205,7 +206,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  	kf = (kf > ZERO) ? (kf + .5) : (kf - .5);
  	if (fabs((double)kf) < ONE) 
  		kflops = 0;
-@@ -256,9 +256,9 @@
+@@ -256,9 +256,9 @@ main ()
  print_time (row)
  int row;
  {
@@ -218,7 +219,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 22:29:40 jtb Exp $
  }
        
  /*----------------------*/ 
-@@ -893,8 +893,6 @@
+@@ -885,16 +885,14 @@ function, references to m[i][j] are writ
+ } 
+ 
+ /*----------------------*/ 
+-REAL second()
+-{
+ #include <sys/time.h>
+ #include <sys/resource.h>
+ 
++REAL second()
++{
  struct rusage ru;
  REAL t ;
  
