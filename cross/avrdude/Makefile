@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/12/11 16:26:39 wennmach Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/28 21:11:49 dmcmahill Exp $
 
 DISTNAME=		avrdude-5.2
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		http://download.savannah.gnu.org/releases/avrdude/
 
@@ -16,7 +16,7 @@ TEX_ACCEPTED=		teTeX3
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		makeinfo texi2html
+USE_TOOLS+=		autoconf automake makeinfo texi2html
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf
@@ -25,8 +25,15 @@ CONF_FILES_PERMS=	${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf \
 
 CONFIGURE_ARGS+=	--enable-doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--egconfdir=${EGDIR:Q}
+CONFIGURE_ENV+=		DEFAULT_SER_PORT=${DEFAULT_SERIAL_DEVICE:Q}
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
+
+# The autotools used by this pkg are older than what's in pkgsrc
+# currently.  This makes the diffs huge.
+pre-configure:
+	cd ${WRKSRC} && aclocal
+	cd ${WRKSRC} && automake --add-missing
+	cd ${WRKSRC} && autoconf
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
