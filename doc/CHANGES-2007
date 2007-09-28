@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2101 2007/09/25 15:20:13 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2102 2007/09/28 12:42:47 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3865,3 +3865,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/nspr to 4.6.7 [bjs 2007-09-25]
 	Updated pkgtools/url2pkg to 2.7 [wiz 2007-09-25]
 	Updated security/gpgme to 1.1.4nb1 [minskim 2007-09-25]
+	Updated x11/xlockmore to 5.25 [hubertf 2007-09-28]
