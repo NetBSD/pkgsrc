@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2007/09/29 21:23:12 heinz Exp $
 #
 
 DISTNAME=	wml-2.0.9
@@ -9,6 +9,8 @@ MASTER_SITES=	http://thewml.org/distrib/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://thewml.org/
 COMMENT=	Web Meta Language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Bit-Vector>=5.2:../../devel/p5-Bit-Vector
 DEPENDS+=	p5-Image-Size>=2.6:../../graphics/p5-Image-Size
@@ -44,12 +46,12 @@ pre-configure:
 	done
 
 post-install:
-	cd ${PREFIX}/${PKGMANDIR}/cat1 ; \
+	cd ${DESTDIR:Q}${PREFIX}/${PKGMANDIR}/cat1 ; \
 	for i in wml_aux_tidy wml_aux_txt2html wml_p4_gm4 ; \
 	do \
 	    ${MV} $${i}.1 $${i}.0 ; \
 	done
-	cd ${PREFIX}/${PKGMANDIR}/cat7 ; \
+	cd ${DESTDIR:Q}${PREFIX}/${PKGMANDIR}/cat7 ; \
 	for i in wml_barebone wml_std_css1 wml_std_css2 wml_std_csspos \
 	    wml_std_html20 wml_std_html32 wml_std_html40 wml_std_html401 \
 	    wml_std_wai10 wml_std_xhtml10 ; \
