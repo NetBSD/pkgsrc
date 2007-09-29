@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/29 12:08:20 obache Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
@@ -11,6 +11,7 @@ COMMENT=	Classic twm with virtual desktop support
 
 WRKSRC=		${WRKDIR}/tvtwm
 USE_IMAKE=	YES
+USE_TOOLS+=	lex yacc
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
