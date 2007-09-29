@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/09/24 00:58:30 kim Exp $
+$NetBSD: patch-ab,v 1.2 2007/09/29 21:21:27 heinz Exp $
 
 --- wml_frontend/wml.src.orig	2002-04-20 19:04:28.000000000 -0400
 +++ wml_frontend/wml.src	2004-09-23 19:12:33.000000000 -0400
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.1 2004/09/24 00:58:30 kim Exp $
  
              #   adjust -D options
 -            $reldir = File::PathConvert::abs2rel("$dir", "$src");
-+            $reldir = File::Spec::abs2rel("$dir", "$src");
++            $reldir = File::Spec->abs2rel("$dir", "$src");
              $reldir = "." if $reldir eq '';
              foreach $d (@opt_D) {
                  if ($d =~ m|^([A-Za-z0-9_]+)~(.+)$|) {
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.1 2004/09/24 00:58:30 kim Exp $
  
              #   adjust -I options
 -            $reldir = File::PathConvert::abs2rel("$dir");
-+            $reldir = File::Spec::abs2rel("$dir");
++            $reldir = File::Spec->abs2rel("$dir");
              $reldir = "." if $reldir eq '';
              foreach $path (@opt_I) {
                  if ($path !~ m|^/|) {
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.1 2004/09/24 00:58:30 kim Exp $
      $reldir =~ s,(:?/|^)[^/]+$,,;
      ($cwd = Cwd::cwd) =~ s|/$||;
 -    $reldir = File::PathConvert::abs2rel($cwd, "$cwd/$reldir");
-+    $reldir = File::Spec::abs2rel($cwd, "$cwd/$reldir");
++    $reldir = File::Spec->abs2rel($cwd, "$cwd/$reldir");
      $reldir = "." if $reldir eq '';
  }
  else {
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.1 2004/09/24 00:58:30 kim Exp $
          $src_dirname = $src;
          $src_dirname =~ s|/+[^/]*$||;
 -        $src_dirname = File::PathConvert::realpath("$src_dirname");
-+        $src_dirname = File::Spec::canonpath("$src_dirname");
++        $src_dirname = File::Spec->canonpath("$src_dirname");
      }
      else {
          $src_dirname  = $cwd;
