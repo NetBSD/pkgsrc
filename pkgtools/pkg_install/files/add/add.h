@@ -1,4 +1,4 @@
-/* $NetBSD: add.h,v 1.9 2007/08/14 22:47:51 joerg Exp $ */
+/* $NetBSD: add.h,v 1.10 2007/09/29 13:24:32 rillig Exp $ */
 
 /* from FreeBSD Id: add.h,v 1.8 1997/02/22 16:09:15 peter Exp  */
 
@@ -24,10 +24,6 @@
 
 #ifndef _INST_ADD_H_INCLUDE
 #define _INST_ADD_H_INCLUDE
-
-typedef enum {
-	NORMAL, MASTER, SLAVE
-}       add_mode_t;
 
 extern char *OverrideMachine;
 extern char *Prefix;
