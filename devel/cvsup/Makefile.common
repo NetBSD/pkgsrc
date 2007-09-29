@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/02/17 20:59:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/09/29 12:38:54 rillig Exp $
 
 DISTNAME=	cvsup-snap-16.1h
 CATEGORIES=	devel net scm
@@ -39,6 +39,8 @@ CVSUP_STATIC?=	NO
 M3FLAGS+=	-DSTATIC
 STATIC=		-static
 .endif
+
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 EGDIR=		${PREFIX}/share/examples/cvsup
 
