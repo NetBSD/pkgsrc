@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/29 12:13:02 obache Exp $
 
 DISTNAME=	piewm-1.02
 PKGREVISION=	2
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.crynwr.com/piewm/
 COMMENT=	Minimalist window manager based on tvtwm with pie menus
 
 USE_IMAKE=	yes
+USE_TOOLS+=	lex yacc
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
