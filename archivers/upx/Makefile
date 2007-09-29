@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/26 11:56:40 schwarz Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/29 10:23:08 rillig Exp $
 
 DISTNAME=	upx-1.25-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -16,6 +16,8 @@ USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin
+
+BUILDLINK_TRANSFORM=	rm:-mcpu=i686
 
 do-build:
 	cd ${WRKSRC:Q}/src && ${SETENV} ${MAKE_ENV}			\
