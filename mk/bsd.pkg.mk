@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1925 2007/09/27 11:19:52 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1926 2007/09/29 16:03:28 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -677,11 +677,6 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n.n
 
 .include "${.PARSEDIR}/install/bin-install.mk"
-
-################################################################
-# Everything after here are internal targets and really
-# shouldn't be touched by anybody but the release engineers.
-################################################################
 
 .PHONY: show-pkgtools-version
 .if !target(show-pkgtools-version)
