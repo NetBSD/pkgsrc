@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/09/11 23:49:39 smb Exp $
+# $NetBSD: Makefile,v 1.53 2007/09/29 12:28:36 obache Exp $
 #
 
 DISTNAME=	Xaw3d-1.5E
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 USE_IMAKE=	YES
+USE_TOOLS+=	lex yacc
 PLIST_SRC=	${WRKDIR}/PLIST-src
 
 .include "../../mk/bsd.prefs.mk"
