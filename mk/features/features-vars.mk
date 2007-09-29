@@ -1,6 +1,6 @@
-# $NetBSD: features-vars.mk,v 1.5 2007/09/08 05:06:40 jlam Exp $
+# $NetBSD: features-vars.mk,v 1.6 2007/09/29 13:17:52 rillig Exp $
 #
-# This file is include by bsd.prefs.mk.
+# This file is included by bsd.prefs.mk.
 #
 # Package-settable variables:
 #
