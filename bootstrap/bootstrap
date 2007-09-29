@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.112 2007/09/08 09:58:14 rillig Exp $
+# $NetBSD: bootstrap,v 1.113 2007/09/29 15:50:16 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -663,7 +663,7 @@ if [ $? = 1 ]; then
 	group=$root_group
 else
 	if [ $ignoreusercheck = "no" ]; then
-		die "You must be root to install bootstrap-pkgsrc."
+		die "You must be either root to install bootstrap-pkgsrc or use the --unprivileged option."
 	fi
 
 	user=`$whoamiprog`
