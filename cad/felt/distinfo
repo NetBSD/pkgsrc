@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2007/08/08 19:15:44 joerg Exp $
+$NetBSD: distinfo,v 1.13 2007/09/29 12:08:25 rillig Exp $
 
 SHA1 (felt-3.05.src.tar.gz) = da3e1ced626cc1c65a570d3e6e242252c039c28b
 RMD160 (felt-3.05.src.tar.gz) = 0d2a363a6ef09f3b3a0e2be186c4c051ac1ea19a
@@ -20,3 +20,4 @@ SHA1 (patch-ak) = 58591211dd9a04983613be83b1e479ef9ea833a7
 SHA1 (patch-al) = 1918af0d648ae4f00a720f5402524980588467c8
 SHA1 (patch-am) = cee82a628575135bf8cc45c4737ab679b5cffe72
 SHA1 (patch-an) = 00a2196b96bfe0823ba58bb444576131df398682
+SHA1 (patch-ao) = 749e6edcb0061e39371ef4be668b4523c3e4dd89
