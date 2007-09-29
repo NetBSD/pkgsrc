@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/10/04 21:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/09/29 13:05:32 rillig Exp $
 #
 
 DISTNAME=	papaya-0.1.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
 
@@ -18,7 +18,8 @@ CONFIGURE_ENV+=	gzip_command=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}
 CONFIGURE_ENV+=	tar_command=${TOOLS_TAR:Q}
 CONFIGURE_ENV+=	texi2html_command=${TOOLS_PATH.texi2html:Q}
-USE_TOOLS+=	sh perl:run tar texi2html
+CONFIGURE_ENV+=	gmake_command=${TOOLS_PATH.gmake}
+USE_TOOLS+=	sh perl:run tar texi2html gmake:run gzip:run
 INFO_FILES=	# PLIST
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}
