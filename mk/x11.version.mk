@@ -1,4 +1,4 @@
-# $NetBSD: x11.version.mk,v 1.7 2007/08/17 20:27:31 joerg Exp $
+# $NetBSD: x11.version.mk,v 1.8 2007/09/29 11:03:24 rillig Exp $
 #
 # The following variables may be set in /etc/mk.conf:
 #
@@ -23,6 +23,11 @@
 #    BUILTIN_X11_VERSION.${X11_TYPE} is the version number of the native
 #	X11 distribution detected on the system.
 #
+
+_VARGROUPS+=	x11
+_USER_VARS.x11=	X11_TYPE
+_PKG_VARS.x11=	# none
+_SYS_VARS.x11=	X11_PKGSRCDIR.${X11_TYPE} BUILTIN_X11_TYPE.${X11_TYPE} BUILTIN_X11_VERSION.${X11_TYPE}
 
 X11_PKGSRCDIR.native=	../../pkgtools/x11-links
 
