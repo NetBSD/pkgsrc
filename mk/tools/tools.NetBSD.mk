@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.39 2007/08/20 11:00:33 joerg Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.40 2007/09/30 12:19:12 rillig Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -120,11 +120,11 @@ TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-.for _t_ in ar as ld nm objdump ranlib readelf strip
+.  for _t_ in ar as ld nm objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
 TOOLS_CREATE+=	${MACHINE_GNU_PLATFORM}-${_t_}
-.endfor
+.  endfor
 
 TOOLS_PATH.ar?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ar
 TOOLS_CREATE+=			ar
