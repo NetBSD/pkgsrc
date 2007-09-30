@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 21:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/09/30 17:45:24 wiz Exp $
 
 DISTNAME=	bg5ps-1.3.0
 PKGREVISION=	2
 CATEGORIES=	print converters
 MASTER_SITES=	ftp://freebsd.sinica.edu.tw/pub/keith/
 
-MAINTAINER=	shell@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/
 COMMENT=	Convert Big5/GB encoded files to postscript
 
