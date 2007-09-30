@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2007/09/21 13:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/09/30 12:27:40 hira Exp $
 #
 
 OO_VER=			2.2.1
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -55,7 +55,6 @@ CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--with-system-freetype
-CONFIGURE_ARGS+=	--with-system-libwpd
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
@@ -142,7 +141,6 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
-.include "../../converters/libwpd/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
