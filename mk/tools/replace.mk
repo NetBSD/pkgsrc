@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.198 2007/09/10 07:25:14 rillig Exp $
+# $NetBSD: replace.mk,v 1.199 2007/09/30 12:19:11 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -322,9 +322,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.flex=
 .  elif !empty(_TOOLS_USE_PKGSRC.flex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
 _TOOLS_DEPENDS.flex=		# empty
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
+.    for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
 _TOOLS_DEPENDS.flex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
-.      endfor
+.    endfor
 TOOLS_DEPENDS.flex?=		${_TOOLS_DEPENDS.flex}
 TOOLS_CREATE+=			flex
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.flex=flex
@@ -481,9 +481,9 @@ MAKEFLAGS+=			TOOLS_IGNORE.lex=
 .  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
 _TOOLS_DEPENDS.lex=		# empty
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
+.    for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
 _TOOLS_DEPENDS.lex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
-.      endfor
+.    endfor
 TOOLS_DEPENDS.lex?=		${_TOOLS_DEPENDS.lex}
 TOOLS_CREATE+=			lex
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lex=flex
@@ -998,7 +998,7 @@ TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.iceauth=iceauth
 TOOLS_PATH.iceauth=		${TOOLS_PREFIX.iceauth}/bin/iceauth
 TOOLS_CREATE.iceauth=		iceauth
-.   endif
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.mkfontdir) && !empty(_USE_TOOLS:Mmkfontdir)
@@ -1011,7 +1011,7 @@ TOOLS_DEPENDS.mkfontdir?=	mkfontdir-[0-9]*:../../fonts/mkfontdir
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontdir=mkfontdir
 TOOLS_PATH.mkfontdir=		${TOOLS_PREFIX.mkfontdir}/bin/mkfontdir
 TOOLS_CREATE.mkfontdir=		mkfontdir
-.   endif
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.mkfontscale) && !empty(_USE_TOOLS:Mmkfontscale)
@@ -1076,7 +1076,7 @@ TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xauth=xauth
 TOOLS_PATH.xauth=		${TOOLS_PREFIX.xauth}/bin/xauth
 TOOLS_CREATE.xauth=		xauth
-.   endif
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.xinit) && !empty(_USE_TOOLS:Mxinit)
@@ -1089,7 +1089,7 @@ TOOLS_DEPENDS.xinit?=		xinit-[0-9]*:../../x11/xinit
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xinit=xinit
 TOOLS_PATH.xinit=		${TOOLS_PREFIX.xinit}/bin/xinit
 TOOLS_CREATE.xinit=		xinit
-.   endif
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.xmessage) && !empty(_USE_TOOLS:Mxmessage)
@@ -1102,7 +1102,7 @@ TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmessage=xmessage
 TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
 TOOLS_CREATE.xmessage=		xmessage
-.   endif
+.  endif
 .endif
 
 ######################################################################
@@ -1179,13 +1179,13 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 #####
 ##### Add the dependencies for each pkgsrc-supplied tool.
 #####
-.      if defined(_TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
-.        for _dep_ in ${TOOLS_DEPENDS.${_t_}}
-.          if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
+.    if defined(_TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
+.      for _dep_ in ${TOOLS_DEPENDS.${_t_}}
+.        if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
 ${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
-.          endif
-.        endfor
-.      endif
+.        endif
+.      endfor
+.    endif
 .  elif defined(TOOLS_PLATFORM.${_t_}) && !empty(TOOLS_PLATFORM.${_t_})
 #####
 ##### For each system-supplied tool, break the tool down into a path
