@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2006/07/22 04:46:19 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/30 17:45:25 wiz Exp $
 
 DISTNAME=	cgicc-3.2.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=cgicc/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shell@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/cgicc/cgicc.html
 COMMENT=	C++ compliant CGI applications libraries
 

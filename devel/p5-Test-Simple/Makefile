@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/09/18 21:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/09/30 17:45:23 wiz Exp $
 
 DISTNAME=		Test-Simple-0.71
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		p5tsi
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
-MAINTAINER=		shell@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Simple/
 COMMENT=		Perl5 module with a simple framework for writing tests
 

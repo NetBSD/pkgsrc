@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/06/09 13:18:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/30 17:45:25 wiz Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.55
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5csl
 CATEGORIES=	security perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=	shell@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Crypt-SSLeay/
 COMMENT=	Crypt::SSLeay - OpenSSL glue that provides LWP https support
 
