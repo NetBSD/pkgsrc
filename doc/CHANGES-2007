@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2102 2007/09/28 12:42:47 hubertf Exp $
+$NetBSD: CHANGES-2007,v 1.2103 2007/09/30 04:09:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/url2pkg to 2.7 [wiz 2007-09-25]
 	Updated security/gpgme to 1.1.4nb1 [minskim 2007-09-25]
 	Updated x11/xlockmore to 5.25 [hubertf 2007-09-28]
+	Updated lang/ruby18-base to 1.8.6.110nb1 [taca 2007-09-30]
