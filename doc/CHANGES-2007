@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2104 2007/09/30 12:29:11 hira Exp $
+$NetBSD: CHANGES-2007,v 1.2105 2007/09/30 15:21:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3868,3 +3868,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xlockmore to 5.25 [hubertf 2007-09-28]
 	Updated lang/ruby18-base to 1.8.6.110nb1 [taca 2007-09-30]
 	Updated misc/openoffice2 to 2.2.1nb3 [hira 2007-09-30]
+	Updated chat/libpurple to 2.2.1 [tnn 2007-09-30]
+	Updated chat/pidgin to 2.2.1 [tnn 2007-09-30]
+	Updated chat/pidgin-sametime to 2.2.1 [tnn 2007-09-30]
+	Updated chat/pidgin-silc to 2.2.1 [tnn 2007-09-30]
+	Updated chat/finch to 2.2.1 [tnn 2007-09-30]
