@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6709 2007/09/27 09:08:59 rillig Exp $
+$NetBSD: TODO,v 1.6710 2007/10/01 08:42:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -1183,6 +1183,7 @@ Suggested package updates
 	o smokeping-2.2.4
 	o snd-9.3
 	o snes9x-1.51
+	o snobol-1.1
 	o solfege-3.8.1
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
