@@ -1,27 +1,37 @@
-# $NetBSD: x11.version.mk,v 1.9 2007/09/30 12:25:48 rillig Exp $
+# $NetBSD: x11.version.mk,v 1.10 2007/10/01 07:21:44 rillig Exp $
 #
-# The following variables may be set in /etc/mk.conf:
+# This file must not be included directly.
 #
-#    X11_TYPE sets the X11 distribution used when building X11 packages.
-#	Possible values are "xorg" (use x11/xorg-libs), or "native"
-#	(use the native X11 distribution).
-#	The default X11_TYPE is "native" unless defined for a specific
-#	operating system in mk/platform/${OPSYS}.mk.
+# XXX: How is it used then?
 #
-# The following variables are provided by this file:
+# User-settable variables:
 #
-#    X11_PKGSRCDIR.${X11_TYPE} sets the pkgsrc directory location for
-#	the package which manages/represents ${X11_TYPE}.  It can be
-#	used to find the relevant buildlink3.mk or builtin.mk files.
+# X11_TYPE
+#	The X11 distribution that is used for building X11 packages.
 #
-#    BUILTIN_X11_TYPE.${X11_TYPE} is the X11_TYPE of the native X11
-#	distribution detected on the system.
+#	Possible:
+#	* native: use the native X11 distribution
+#	* modular: use modular Xorg from pkgsrc
 #
-# The following variables may be defined by this file.  These variables
+#	Default: native, unless defined for a specific operating system
+#	in mk/platform/${OPSYS}.mk.
+#
+# Variables provided by this file:
+#
+# X11_PKGSRCDIR.${X11_TYPE}
+#	The directory where the buildlink3.mk or builtin.mk files can
+#	be found for the X11 distribution.
+#
+# BUILTIN_X11_TYPE.${X11_TYPE}
+#	The X11_TYPE of the native X11 distribution detected on the
+#	system.
+#
+# Variables that _may_ be defined by this file.  These variables
 # should be checked to exist before they are used:
 #
-#    BUILTIN_X11_VERSION.${X11_TYPE} is the version number of the native
-#	X11 distribution detected on the system.
+# BUILTIN_X11_VERSION.${X11_TYPE}
+#	The version number of the native X11 distribution detected on
+#	the system.
 #
 
 _VARGROUPS+=	x11
@@ -31,7 +41,4 @@ _SYS_VARS.x11=	X11_PKGSRCDIR.${X11_TYPE} BUILTIN_X11_TYPE.${X11_TYPE} BUILTIN_X1
 
 X11_PKGSRCDIR.native=	../../pkgtools/x11-links
 
-# Makefiles that include this file can access the version of the X11
-# distribution as ${BUILTIN_X11_VERSION.${X11_TYPE}}.
-#
 .include "${X11_PKGSRCDIR.${X11_TYPE}}/version.mk"
