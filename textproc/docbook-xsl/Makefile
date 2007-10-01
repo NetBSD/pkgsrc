@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2007/08/31 08:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2007/10/01 23:39:20 dmcmahill Exp $
 #
 
 DISTNAME=	docbook-xsl-1.73.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +39,10 @@ do-install:
 	    ${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/$$d"; \
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
+	done
+	for f in `${FIND} ${DESTDIR}${XSLDIR} -name \*.orig -print` ; do \
+		${ECHO} "Remove .orig file $$f" ; \
+		${RM} $$f ; \
 	done
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
