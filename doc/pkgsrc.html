@@ -276,6 +276,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
 <dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
+<dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#build">17. The build process</a></span></dt>
 <dd><dl>
@@ -360,7 +361,7 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#perl-modules">19.6.6. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">19.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
 <dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
@@ -3865,6 +3866,7 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
 <dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
+<dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#build">17. The build process</a></span></dt>
 <dd><dl>
@@ -3949,7 +3951,7 @@ anymore, you can remove that file and run <span><strong class="command">cvs -q u
 <dt><span class="sect2"><a href="#perl-modules">19.6.6. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">19.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
 <dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
@@ -5563,7 +5565,7 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="creating-buildlink3.mk"></a>14.2. Writing <code class="filename">buildlink3.mk</code> files</h2></div></div></div>
-<p>A package's <code class="filename">buildlink3.mk</code> file is
+<a name="buildlink3.mk"></a><p>A package's <code class="filename">buildlink3.mk</code> file is
     included by Makefiles to indicate the need to compile and link
     against header files and libraries provided by the package.  A
     <code class="filename">buildlink3.mk</code> file should always provide
@@ -6314,6 +6316,7 @@ environment variable to <code class="literal">NO</code>.</p>
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
 <dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
+<dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl>
 </div>
 <p>Many packages have the ability to be built to support different
@@ -6323,6 +6326,33 @@ determine different ways in which the packages can be built.  It's
 possible for the user to specify exactly which sets of options will be
 built into a package or to allow a set of global default options
 apply.</p>
+<p>There are two broad classes of behaviors that one might want to
+control via options.  One is whether some particular feature is
+enabled in a program that will be built anyway, often by including or
+not including a dependency on some other package.  The other is
+whether or not an additional program will be built as part of the
+package.  Generally, it is better to make a split package for such
+additional programs instead of using options, because it enables
+binary packages to be built which can then be added separately.  For
+example, the foo package might have minimal dependencies (those
+packages without which foo doesn't make sense), and then the foo-gfoo
+package might include the GTK frontend program gfoo.  This is better
+than including a gtk option to foo that adds gfoo, because either that
+option is default, in which case binary users can't get foo without
+gfoo, or not default, in which case they can't get gfoo.  With split
+packages, they can install foo without having GTK, and later decide to
+install gfoo (pulling in GTK at that time).  This is an advantage to
+source users too, avoiding the need for rebuilds.</p>
+<p>Plugins with widely varying dependencies should usually be split
+instead of options.</p>
+<p>It is often more work to maintain split packages, especially if
+the upstream package does not support this.  The decision of split
+vs. option should be made based on the likelihood that users will want
+or object to the various pieces, the size of the dependencies that are
+included, and the amount of work.</p>
+<p>A further consideration is licensing.  Non-free parts, or parts
+that depend on non-free dependencies (especially plugins) should
+almost always be split if feasible.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="global-default-options"></a>16.1. Global default options</h2></div></div></div>
@@ -6493,6 +6523,29 @@ second its description.  The description should be a whole sentence
 (starting with an uppercase letter and ending with a period) that
 describes what enabling the option does.  E. g. &#8220;<span class="quote">Enable ispell
 support.</span>&#8221; The file is sorted by option names.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="option-build"></a>16.4. Determining the options of dependencies</h2></div></div></div>
+<p>When writing <a href="#buildlink3.mk"><code class="filename">buildlink3.mk</code></a> files, it is often necessary to list
+different dependencies based on the options with which the package was
+built. For querying these options, the file
+<code class="filename">pkgsrc/mk/pkg-build-options.mk</code> should be used. A
+typical example looks like this:</p>
+<pre class="programlisting">
+pkgbase := libpurple
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libpurple:Mdbus)
+...
+.endif
+</pre>
+<p>Including <code class="filename">pkg-build-options.mk</code> here will set
+the variable <code class="varname">PKG_BUILD_OPTIONS.libpurple</code> to the build
+options of the libpurple package, which can then be queried like
+<code class="varname">PKG_OPTIONS</code> in the <code class="filename">options.mk</code>
+file. See the file <code class="filename">pkg-build-options.mk</code> for more
+details.</p>
 </div>
 </div>
 <div class="chapter" lang="en">
@@ -7602,7 +7655,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2708056"></a><b>18.4.1.</b>
+<a name="tools.new"></a><a name="id2708188"></a><b>18.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7612,7 +7665,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2708066"></a><b>18.4.2.</b>
+<a name="tools.listall"></a><a name="id2708198"></a><b>18.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7623,7 +7676,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2708145"></a><b>18.4.3.</b>
+<a name="tools.used"></a><a name="id2708209"></a><b>18.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7695,7 +7748,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#perl-modules">19.6.6. Packages installing perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">19.6.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
 <dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
@@ -9022,17 +9075,17 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="gconf2-data-files"></a>19.6.9. Packages installing GConf2 data files</h3></div></div></div>
+<a name="gconf-data-files"></a>19.6.9. Packages installing GConf data files</h3></div></div></div>
 <p>If a package installs <code class="filename">.schemas</code> or
-    <code class="filename">.entries</code> files, used by GConf2,
+    <code class="filename">.entries</code> files, used by GConf,
     you need to take some extra steps to make sure they get registered
     in the database:</p>
 <div class="orderedlist"><ol type="1">
-<li><p>Include <code class="filename">../../devel/GConf2/schemas.mk</code>
+<li><p>Include <code class="filename">../../devel/GConf/schemas.mk</code>
 	instead of its <code class="filename">buildlink3.mk</code> file.  This
-	takes care of rebuilding the GConf2 database at installation and
+	takes care of rebuilding the GConf database at installation and
 	deinstallation time, and tells the package where to install
-	GConf2 data files using some standard configure arguments.  It
+	GConf data files using some standard configure arguments.  It
 	also disallows any access to the database directly from the
 	package.</p></li>
 <li><p>Ensure that the package installs its
@@ -9043,11 +9096,11 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 <li><p>Check the PLIST and remove any entries under the etc/gconf
 	directory, as they will be handled automatically.  See
 	<a href="#faq.conf" title="9.13. How do I change the location of configuration files?">Section 9.13, &#8220;How do I change the location of configuration files?&#8221;</a> for more information.</p></li>
-<li><p>Define the <code class="varname">GCONF2_SCHEMAS</code> variable in
+<li><p>Define the <code class="varname">GCONF_SCHEMAS</code> variable in
 	your <code class="filename">Makefile</code> with a list of all
 	<code class="filename">.schemas</code> files installed by the package, if
 	any.  Names must not contain any directories in them.</p></li>
-<li><p>Define the <code class="varname">GCONF2_ENTRIES</code> variable in
+<li><p>Define the <code class="varname">GCONF_ENTRIES</code> variable in
 	your <code class="filename">Makefile</code> with a
 	list of all <code class="filename">.entries</code> files installed by the
 	package, if any. Names must not contain any directories in
@@ -9624,7 +9677,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2713952"></a><b>22.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713947"></a><b>22.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9640,7 +9693,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2713990"></a><b>22.2.</b>
+<a name="devfaq.make"></a><a name="id2713986"></a><b>22.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9658,7 +9711,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2714030"></a><b>22.3.</b>
+<a name="devfaq.cc"></a><a name="id2714026"></a><b>22.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9676,7 +9729,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2714070"></a><b>22.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2714066"></a><b>22.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9689,7 +9742,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2714090"></a><b>22.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2714086"></a><b>22.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9705,7 +9758,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2714120"></a><b>22.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2714116"></a><b>22.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9729,7 +9782,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2714197"></a><b>22.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2714261"></a><b>22.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9754,7 +9807,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2714304"></a><b>22.8.</b>
+<a name="devfaq.documentation"></a><a name="id2714299"></a><b>22.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9802,7 +9855,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2714365"></a><b>22.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2714361"></a><b>22.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>

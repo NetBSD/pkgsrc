@@ -265,6 +265,7 @@ II. The pkgsrc developer's guide
         16.1. Global default options
         16.2. Converting packages to use bsd.options.mk
         16.3. Option Names
+        16.4. Determining the options of dependencies
 
     17. The build process
 
@@ -352,7 +353,7 @@ II. The pkgsrc developer's guide
             19.6.6. Packages installing perl modules
             19.6.7. Packages installing info files
             19.6.8. Packages installing man pages
-            19.6.9. Packages installing GConf2 data files
+            19.6.9. Packages installing GConf data files
             19.6.10. Packages installing scrollkeeper data files
             19.6.11. Packages installing X11 fonts
             19.6.12. Packages installing GTK2 modules
@@ -3275,6 +3276,7 @@ Table of Contents
     16.1. Global default options
     16.2. Converting packages to use bsd.options.mk
     16.3. Option Names
+    16.4. Determining the options of dependencies
 
 17. The build process
 
@@ -3361,7 +3363,7 @@ Table of Contents
         19.6.6. Packages installing perl modules
         19.6.7. Packages installing info files
         19.6.8. Packages installing man pages
-        19.6.9. Packages installing GConf2 data files
+        19.6.9. Packages installing GConf data files
         19.6.10. Packages installing scrollkeeper data files
         19.6.11. Packages installing X11 fonts
         19.6.12. Packages installing GTK2 modules
@@ -5264,6 +5266,7 @@ Table of Contents
 16.1. Global default options
 16.2. Converting packages to use bsd.options.mk
 16.3. Option Names
+16.4. Determining the options of dependencies
 
 Many packages have the ability to be built to support different sets of
 features. bsd.options.mk is a framework in pkgsrc that provides generic
@@ -5271,6 +5274,34 @@ handling of those options that determine different ways in which the packages
 can be built. It's possible for the user to specify exactly which sets of
 options will be built into a package or to allow a set of global default
 options apply.
+
+There are two broad classes of behaviors that one might want to control via
+options. One is whether some particular feature is enabled in a program that
+will be built anyway, often by including or not including a dependency on some
+other package. The other is whether or not an additional program will be built
+as part of the package. Generally, it is better to make a split package for
+such additional programs instead of using options, because it enables binary
+packages to be built which can then be added separately. For example, the foo
+package might have minimal dependencies (those packages without which foo
+doesn't make sense), and then the foo-gfoo package might include the GTK
+frontend program gfoo. This is better than including a gtk option to foo that
+adds gfoo, because either that option is default, in which case binary users
+can't get foo without gfoo, or not default, in which case they can't get gfoo.
+With split packages, they can install foo without having GTK, and later decide
+to install gfoo (pulling in GTK at that time). This is an advantage to source
+users too, avoiding the need for rebuilds.
+
+Plugins with widely varying dependencies should usually be split instead of
+options.
+
+It is often more work to maintain split packages, especially if the upstream
+package does not support this. The decision of split vs. option should be made
+based on the likelihood that users will want or object to the various pieces,
+the size of the dependencies that are included, and the amount of work.
+
+A further consideration is licensing. Non-free parts, or parts that depend on
+non-free dependencies (especially plugins) should almost always be split if
+feasible.
 
 16.1. Global default options
 
@@ -5416,6 +5447,25 @@ fields, separated by tab. The first field is the option name, the second its
 description. The description should be a whole sentence (starting with an
 uppercase letter and ending with a period) that describes what enabling the
 option does. E. g. "Enable ispell support." The file is sorted by option names.
+
+16.4. Determining the options of dependencies
+
+When writing buildlink3.mk files, it is often necessary to list different
+dependencies based on the options with which the package was built. For
+querying these options, the file pkgsrc/mk/pkg-build-options.mk should be used.
+A typical example looks like this:
+
+pkgbase := libpurple
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libpurple:Mdbus)
+...
+.endif
+
+Including pkg-build-options.mk here will set the variable
+PKG_BUILD_OPTIONS.libpurple to the build options of the libpurple package,
+which can then be queried like PKG_OPTIONS in the options.mk file. See the file
+pkg-build-options.mk for more details.
 
 Chapter 17. The build process
 
@@ -6379,7 +6429,7 @@ Table of Contents
     19.6.6. Packages installing perl modules
     19.6.7. Packages installing info files
     19.6.8. Packages installing man pages
-    19.6.9. Packages installing GConf2 data files
+    19.6.9. Packages installing GConf data files
     19.6.10. Packages installing scrollkeeper data files
     19.6.11. Packages installing X11 fonts
     19.6.12. Packages installing GTK2 modules
@@ -7435,14 +7485,14 @@ use of --mandir, you can set GNU_CONFIGURE_MANDIR as needed.
 See Section 13.5, "Man page compression" for information on installation of
 compressed manual pages.
 
-19.6.9. Packages installing GConf2 data files
+19.6.9. Packages installing GConf data files
 
-If a package installs .schemas or .entries files, used by GConf2, you need to
+If a package installs .schemas or .entries files, used by GConf, you need to
 take some extra steps to make sure they get registered in the database:
 
- 1. Include ../../devel/GConf2/schemas.mk instead of its buildlink3.mk file.
-    This takes care of rebuilding the GConf2 database at installation and
-    deinstallation time, and tells the package where to install GConf2 data
+ 1. Include ../../devel/GConf/schemas.mk instead of its buildlink3.mk file.
+    This takes care of rebuilding the GConf database at installation and
+    deinstallation time, and tells the package where to install GConf data
     files using some standard configure arguments. It also disallows any access
     to the database directly from the package.
 
@@ -7454,11 +7504,11 @@ take some extra steps to make sure they get registered in the database:
     they will be handled automatically. See Section 9.13, "How do I change the
     location of configuration files?" for more information.
 
- 4. Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
+ 4. Define the GCONF_SCHEMAS variable in your Makefile with a list of all
     .schemas files installed by the package, if any. Names must not contain any
     directories in them.
 
- 5. Define the GCONF2_ENTRIES variable in your Makefile with a list of all
+ 5. Define the GCONF_ENTRIES variable in your Makefile with a list of all
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
