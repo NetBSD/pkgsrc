@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.197 2007/08/02 18:19:31 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.198 2007/10/01 06:46:37 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -562,6 +562,7 @@ BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 	${EGREP} '(include.*/|\.h$$|\.idl$$|\.pc$$|/lib[^/]*\.[^/]*$$)'
 .  endif
+# XXX: Why not pkg_info -qL?
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
