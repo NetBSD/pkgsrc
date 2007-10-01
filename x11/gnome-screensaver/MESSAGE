@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2007/01/08 21:48:40 drochner Exp $
+$NetBSD: MESSAGE,v 1.4 2007/10/01 11:28:00 hira Exp $
 
 If gnome-screensaver is built with the "pam" option:
 In order to make unlocking work, you need to add a
@@ -11,6 +11,6 @@ against a shadow password database. Note that use of this module might
 allow programs with your privileges to get a copy of your plaintext
 password as typed in for unlocking.
 
-The "floating feet" animation needs librsvg (from pkgsrc/graphics/librsvg2)
+The "floating feet" animation needs librsvg (from pkgsrc/graphics/librsvg)
 to read its graphics file.
 ===========================================================================
