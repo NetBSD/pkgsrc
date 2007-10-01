@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.52 2007/03/02 06:02:11 wiz Exp $
+# $NetBSD: deprecated.map,v 1.53 2007/10/01 07:51:09 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -133,3 +133,7 @@ BUILDLINK_TRANSFORM.*	Use BUILDLINK_FNAME_TRANSFORM.* instead.
 SCRIPTDIR		You can just remove it.
 NO_PKG_REGISTER		You can just remove it.
 NO_DEPENDS		You can just remove it.
+
+# October 2007
+_PKG_SILENT		Please use RUN instead.
+_PKG_DEBUG		Please use RUN instead.
