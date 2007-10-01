@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.166 2007/07/29 18:41:08 rillig Exp $
+# $NetBSD: makevars.map,v 1.167 2007/10/01 07:51:09 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -676,6 +676,7 @@ USE_DIRS		List of {					\
 				xdg-1.1 xdg-1.2 xdg-1.3 xdg-1.4		\
 				xorg-1.0				\
 			} [m:a,c:a]
+USE_FEATURES		List of Identifier [$package]
 USE_GNU_CONFIGURE_HOST	YesNo [$package]
 USE_GNU_ICONV		Yes [m:s,c:s,o:s]
 USE_GNU_READLINE	Yes [m:s,c:s,o:s]
