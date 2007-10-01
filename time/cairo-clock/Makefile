@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/21 13:04:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/01 03:21:03 joerg Exp $
 #
 
 DISTNAME=	cairo-clock_0.3.3-1
@@ -14,7 +14,7 @@ COMMENT=	Analog clock drawn with vector-graphics
 WRKSRC=		${WRKDIR}/cairo-clock-0.3.3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	intltool pkg-config msgfmt
 USE_DIRS+=	xdg-1.1
 
 .include "../../x11/gtk2/buildlink3.mk"
