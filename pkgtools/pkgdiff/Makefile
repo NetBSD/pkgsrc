@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2006/11/02 18:02:07 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2007/10/01 09:54:32 rillig Exp $
 #
 
 DISTNAME=	pkgdiff-0.119
+PKGREVISION=	1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -30,7 +31,7 @@ BUILD_DEFS+=	MANINSTALL
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 DIFF?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}diff
-MANINSTALL=	none
+MANINSTALL=	catinstall
 .else
 DIFF?=		diff
 .endif
@@ -59,11 +60,7 @@ do-build:
 	${CP} ${FILESDIR}/feedback-patches ${WRKSRC}
 .if !empty(MANINSTALL:Mcatinstall)
 .  for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
-.    if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-	nroff -man ${FILESDIR}/${FILE}.1 >${WRKSRC}/${FILE}.0
-.    else
 	${CP} ${FILESDIR}/${FILE}.0 ${WRKSRC}/${FILE}.0
-.    endif
 .  endfor
 .endif
 
