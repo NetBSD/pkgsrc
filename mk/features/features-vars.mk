@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.6 2007/09/29 13:17:52 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.7 2007/10/01 11:47:00 rillig Exp $
 #
 # This file is included by bsd.prefs.mk.
 #
@@ -6,6 +6,19 @@
 #
 # USE_FEATURES
 #	Lists the system features required by the package.
+#
+#	Possible:
+#	* err: The functions err, verr, errx, verrx.
+#	* warn: The functions warn, vwarn, warnx, vwarnx.
+#	* fts_close, ftp_open, fts_read, fts_set: Functions
+#	  for filesystem traversal.
+#	* getopt_long: The GNU version of getopt.
+#	* getprogname, setprogname
+#	* glob
+#	* regcomp
+#	* snprintf, vsnprintf
+#	* utimes
+#	* nbcompat: All of the above.
 #
 #	Default value: undefined
 #
@@ -16,6 +29,11 @@
 #	current system.  Also includes "inet6" if the system doesn't
 #	support IPv6.
 #
+
+_VARGROUPS+=		features
+_USER_VARS.features=	# none
+_PKG_VARS.features=	USE_FEATURES
+_SYS_VARS.features=	MISSING_FEATURES
 
 MISSING_FEATURES=	# empty
 
