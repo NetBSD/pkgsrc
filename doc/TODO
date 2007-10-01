@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6710 2007/10/01 08:42:30 obache Exp $
+$NetBSD: TODO,v 1.6711 2007/10/01 21:56:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,7 @@ Suggested package updates
 	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
-	o asterisk-1.4.2
+	o asterisk-1.4.11
 	o astyle-1.15.3
 	o at-spi-1.20.0
 	o aterm-1.0.1
@@ -350,13 +350,14 @@ Suggested package updates
 	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bmpx-0.40.8
+	o bmpx-0.40.9
 	o bochs-2.3.5
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.3
 	o btpd-0.12
 	o bwidget-1.7.0
+	o bzr-0.91
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -382,8 +383,10 @@ Suggested package updates
 	o cmake-2.4.7
 	o cocoon-2.1.10
 	o connect-1.96
-	o control-center-2.20.0
+	o control-center-2.20.0.1
 	o cook-2.30
+	o courier-0.57
+	o courier-imap-4.2.0
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -395,12 +398,13 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
-	o cups-1.3.2
+	o cups-1.3.3
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.0.0
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
+	o dar-2.3.6
 	o dasher-4.6.0
 	o dbench-3.04
 	o dbmail-2.2.4
@@ -410,7 +414,7 @@ Suggested package updates
 	o dd_rescue-1.13
 	o defendguin-0.0.11
 	o dejavu-ttf-2.20
-	o delegate-9.7.0
+	o delegate-9.7.2
 	o deskbar-applet-2.20.0
 	o devIL-1.6.7
 	o devhelp-0.16
@@ -461,7 +465,7 @@ Suggested package updates
 	o epiphany-2.20.0
 	o epiphany-extensions-2.20.0
 	o epstool-3.08
-	o eric3-4.0.1 [now called eric4]
+	o eric3-4.0.2 [now called eric4]
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -506,6 +510,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o gaim-icb-20070203
+	o galculator-1.3.1
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.11
@@ -526,7 +531,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.11
 	o geda-1.2.0.20070902
-	o gedit-2.20.0
+	o gedit-2.20.1
 	o generator-cbiere-0.35r3
 	o gettext-0.16.1
 	o gfract-0.33
@@ -581,6 +586,7 @@ Suggested package updates
 	o gpaint-0.3.3
 	o gperf-3.0.3
 	o gperiodic-2.0.10
+	o gpredict-0.9.0
 	o gpsdrive-2.09
 	o gq-1.2.2
 	o grace-5.1.21
@@ -598,6 +604,7 @@ Suggested package updates
 	o gtar-1.18
 	o gtexinfo-4.11
 	o gtick-0.4.1
+	o gtk-doc-1.9
 	o gtk-gnutella-0.96.4
 	o gtk-systrace-20030623
 	o gtk2-engines-2.12.1
@@ -626,6 +633,7 @@ Suggested package updates
 	o heyu-2.1.2
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
+	o horde3-3.1.5
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -642,11 +650,15 @@ Suggested package updates
 	o icon-943
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
+	o ike-2.0.1 [pkg/37032]
 	o ikiwiki-2.8
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
+	o imp-4.1.5
+	o ingo-1.1.4
 	o instiki-0.11pl1
 	o intercal-0.24
+	o ion3-devel-20070927
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -676,6 +688,7 @@ Suggested package updates
 	o kadu-0.5.0
 	o kapooka-0.3
 	o kazehakase-0.4.6
+	o kbarcode-2.0.6
 	o kdrill-6.5
 	o kid3-0.9
 	o kinput2-3.1
@@ -684,8 +697,10 @@ Suggested package updates
 	o kmysqladmin-0.7.2
 	o kodos-2.4.5
 	o kphotobook-0.0.7
+	o kronolith-2.1.6
 	o ksi-3.4.2
 	o kye-0.9.3
+	o lablgtk-2.10.0
 	o lapack-20070226
 	o latd-1.21
 	o lavaps-2.7
@@ -814,7 +829,7 @@ Suggested package updates
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.27.1
+	o neon-0.27.2
 	o nessus-3.0.4
 	o nessus-core-2.3.1
 	o netcdf-3.6.2
@@ -839,7 +854,7 @@ Suggested package updates
 	o ntp4-4.2.4
 	o nulib2-220
 	o nut-12.0 [pkg/34466]
-	o nut-12.7
+	o nut-13.0
 	o nxtvepg-2.7.7
 	o objc-3.2.8
 	o ocamlnet-2.2.4
@@ -912,7 +927,7 @@ Suggested package updates
 	o p5-Image-Info-1.26
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.421
+	o p5-MIME-tools-5.423
 	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
@@ -969,6 +984,7 @@ Suggested package updates
 	o pciutils-2.2.0
 	o pcre-7.4
 	o pdmenu-1.2.87
+	o pear-1.6.2
 	o pear-DB-1.7.10
 	o pear-HTTP_Request-1.4.0
 	o pear-Image_Canvas-0.3.0
@@ -987,6 +1003,7 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.2.4
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
@@ -1080,7 +1097,7 @@ Suggested package updates
 	o py-qt3-base-3.17.3
 	o py-qt3-modules-3.17
 	o py-qt3-qscintilla-3.17
-	o py-qt3-sip-4.7
+	o py-qt3-sip-4.7.1
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
@@ -1181,7 +1198,7 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.2.4
-	o snd-9.3
+	o snd-9.4
 	o snes9x-1.51
 	o snobol-1.1
 	o solfege-3.8.1
@@ -1195,6 +1212,7 @@ Suggested package updates
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8
 	o squidGuard-1.2.1
+	o squirrelmail-1.4.11
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
@@ -1215,6 +1233,7 @@ Suggested package updates
 	o t-prot-2.5
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
+	o tcl-8.4.16
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1224,7 +1243,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.24
+	o tea-17.3.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o texmaker-1.6
@@ -1232,6 +1251,7 @@ Suggested package updates
 	o tile-0.7.4
 	o tileworld-1.3.0
 	o tinyproxy-1.7.0
+	o tk-8.4.16
 	o tk83-8.3.5
 	o tkcvs-8.0.4
 	o tkdiff-4.1.3 [pkg/34440]
@@ -1249,12 +1269,14 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
+	o turba-2.1.5
 	o twelf-1.5r1
 	o twolame-0.3.10
 	o txt2html-2.45
 	o ubs-0.20
 	o ucarp-1.3
 	o ucblogo-5.5
+	o udfclient-0.5.6
 	o uim-1.4.1
 	o unalz-0.61
 	o unix2dos-1.3
@@ -1273,6 +1295,7 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.0.2
 	o vp-1.6
+	o vpnc-0.5.1 [pkg/37046]
 	o vsftpd-2.0.5
 	o vttest-20070304
 	o wMosaic-3.8.22
@@ -1285,7 +1308,7 @@ Suggested package updates
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.45
+	o wine-0.9.46
 	o wmii-3.5.1
 	o wml-2.0.11
 	o wmweather-2.4.4
