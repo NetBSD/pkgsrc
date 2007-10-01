@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.24 2007/06/01 11:07:24 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.25 2007/10/01 22:38:42 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -157,6 +157,8 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
 
   <sect1 id="creating-buildlink3.mk">
     <title>Writing <filename>buildlink3.mk</filename> files</title>
+
+<anchor id="buildlink3.mk"/>
 
     <para>A package's <filename>buildlink3.mk</filename> file is
     included by Makefiles to indicate the need to compile and link

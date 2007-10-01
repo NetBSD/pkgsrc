@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.24 2007/09/22 02:52:48 kano Exp $ -->
+<!-- $NetBSD: options.xml,v 1.25 2007/10/01 22:38:42 rillig Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.56 -->
 
@@ -240,6 +240,33 @@ second its description.  The description should be a whole sentence
 (starting with an uppercase letter and ending with a period) that
 describes what enabling the option does.  E. g. <quote>Enable ispell
 support.</quote> The file is sorted by option names.</para>
+
+</sect1>
+
+<sect1 id="option-build">
+<title>Determining the options of dependencies</title>
+
+<para>When writing &buildlink3.mk; files, it is often necessary to list
+different dependencies based on the options with which the package was
+built. For querying these options, the file
+<filename>pkgsrc/mk/pkg-build-options.mk</filename> should be used. A
+typical example looks like this:</para>
+
+<programlisting>
+pkgbase := libpurple
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libpurple:Mdbus)
+...
+.endif
+</programlisting>
+
+<para>Including <filename>pkg-build-options.mk</filename> here will set
+the variable <varname>PKG_BUILD_OPTIONS.libpurple</varname> to the build
+options of the libpurple package, which can then be queried like
+<varname>PKG_OPTIONS</varname> in the <filename>options.mk</filename>
+file. See the file <filename>pkg-build-options.mk</filename> for more
+details.</para>
 
 </sect1>
 
