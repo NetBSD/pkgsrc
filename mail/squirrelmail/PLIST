@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/05/10 09:24:44 martti Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/10/02 05:28:19 martti Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -56,6 +56,7 @@ share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10a.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
@@ -201,7 +202,6 @@ share/squirrelmail/plugins/administrator/defines.php
 share/squirrelmail/plugins/administrator/index.php
 share/squirrelmail/plugins/administrator/options.php
 share/squirrelmail/plugins/administrator/setup.php
-share/squirrelmail/plugins/bug_report/INSTALL
 share/squirrelmail/plugins/bug_report/README
 share/squirrelmail/plugins/bug_report/bug_report.php
 share/squirrelmail/plugins/bug_report/index.php
@@ -219,7 +219,15 @@ share/squirrelmail/plugins/calendar/setup.php
 share/squirrelmail/plugins/delete_move_next/README
 share/squirrelmail/plugins/delete_move_next/index.php
 share/squirrelmail/plugins/delete_move_next/setup.php
-share/squirrelmail/plugins/filters/CHANGES
+share/squirrelmail/plugins/demo/COPYING
+share/squirrelmail/plugins/demo/INSTALL
+share/squirrelmail/plugins/demo/README
+share/squirrelmail/plugins/demo/demo.php
+share/squirrelmail/plugins/demo/demo.pot
+share/squirrelmail/plugins/demo/functions.php
+share/squirrelmail/plugins/demo/getpot
+share/squirrelmail/plugins/demo/index.php
+share/squirrelmail/plugins/demo/setup.php
 share/squirrelmail/plugins/filters/README
 share/squirrelmail/plugins/filters/bulkquery/INSTALL
 share/squirrelmail/plugins/filters/bulkquery/Makefile
@@ -233,7 +241,7 @@ share/squirrelmail/plugins/filters/index.php
 share/squirrelmail/plugins/filters/options.php
 share/squirrelmail/plugins/filters/setup.php
 share/squirrelmail/plugins/filters/spamoptions.php
-share/squirrelmail/plugins/fortune/INSTALL
+share/squirrelmail/plugins/fortune/README
 share/squirrelmail/plugins/fortune/index.php
 share/squirrelmail/plugins/fortune/setup.php
 share/squirrelmail/plugins/index.php
@@ -310,7 +318,15 @@ share/squirrelmail/plugins/squirrelspell/sqspell_config.php
 share/squirrelmail/plugins/squirrelspell/sqspell_functions.php
 share/squirrelmail/plugins/squirrelspell/sqspell_interface.php
 share/squirrelmail/plugins/squirrelspell/sqspell_options.php
-share/squirrelmail/plugins/translate/INSTALL
+share/squirrelmail/plugins/test/COPYING
+share/squirrelmail/plugins/test/INSTALL
+share/squirrelmail/plugins/test/README
+share/squirrelmail/plugins/test/decodeheader.php
+share/squirrelmail/plugins/test/functions.php
+share/squirrelmail/plugins/test/index.php
+share/squirrelmail/plugins/test/ngettext.php
+share/squirrelmail/plugins/test/setup.php
+share/squirrelmail/plugins/test/test.php
 share/squirrelmail/plugins/translate/README
 share/squirrelmail/plugins/translate/index.php
 share/squirrelmail/plugins/translate/options.php
@@ -433,6 +449,7 @@ share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/src
 @dirrm share/squirrelmail/po
 @dirrm share/squirrelmail/plugins/translate
+@dirrm share/squirrelmail/plugins/test
 @dirrm share/squirrelmail/plugins/squirrelspell/modules
 @dirrm share/squirrelmail/plugins/squirrelspell/js
 @dirrm share/squirrelmail/plugins/squirrelspell/doc
@@ -448,6 +465,7 @@ share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/plugins/fortune
 @dirrm share/squirrelmail/plugins/filters/bulkquery
 @dirrm share/squirrelmail/plugins/filters
+@dirrm share/squirrelmail/plugins/demo
 @dirrm share/squirrelmail/plugins/delete_move_next
 @dirrm share/squirrelmail/plugins/calendar
 @dirrm share/squirrelmail/plugins/bug_report
