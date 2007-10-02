@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/21 16:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/02 22:19:38 reed Exp $
 #
 
 DISTNAME=	ikiwiki_2.6.1
@@ -55,7 +55,7 @@ PLIST_SUBST+=	W3M="@comment "
 WRKSRC=		${WRKDIR}/ikiwiki
 PERL5_PACKLIST=	auto/IkiWiki/.packlist
 USE_LANGUAGES=	# none
-USE_TOOLS=	gmake
+USE_TOOLS=	gmake xgettext
 
 REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
 REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild
