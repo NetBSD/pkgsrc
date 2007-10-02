@@ -1,7 +1,17 @@
-$NetBSD: patch-ai,v 1.2 2004/03/21 10:29:51 seb Exp $
+$NetBSD: patch-ai,v 1.3 2007/10/02 20:23:08 heinz Exp $
 
 --- tftpyale.c.orig	1995-03-20 21:11:11.000000000 +0100
 +++ tftpyale.c
+@@ -2,8 +2,8 @@
+ #include <string.h>
+ #include <syslog.h>
+ #include <ctype.h>
+-#include <arpa/tftp.h>
+ #include <sys/types.h>
++#include <arpa/tftp.h>
+ #include <sys/stat.h>
+ #include <netinet/in.h>
+ #include "tftpyale.h"
 @@ -95,7 +95,7 @@ addFileRestriction (ac, av)
  int	ac;
  char**	av;
