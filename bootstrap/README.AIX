@@ -1,4 +1,4 @@
-$NetBSD: README.AIX,v 1.3 2005/07/29 00:56:24 grant Exp $
+$NetBSD: README.AIX,v 1.4 2007/10/02 18:29:55 heinz Exp $
 
 pkgsrc has been tested on AIX 4.3 and 5.1. It will probably work on
 newer releases also.
@@ -19,9 +19,6 @@ gcc from pkgsrc, lang/gcc3 is recommended.
 
 Post bootstrap setup
 --------------------
-
-Some versions of AIX don't ship with gzip so install it and set
-GUNZIP_CMD and GZCAT in mk.conf as needed.
 
 Here is an example mk.conf:
 
