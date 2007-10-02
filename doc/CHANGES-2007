@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2106 2007/10/02 05:29:05 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2107 2007/10/02 14:12:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-silc to 2.2.1 [tnn 2007-09-30]
 	Updated chat/finch to 2.2.1 [tnn 2007-09-30]
 	Updated mail/squirrelmail to 1.4.11 [martti 2007-10-02]
+	Updated mail/freepops to 0.2.5nb1 [schmonz 2007-10-02]
