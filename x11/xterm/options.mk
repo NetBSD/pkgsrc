@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2007/09/17 06:36:21 bjs Exp $
+# $NetBSD: options.mk,v 1.6 2007/10/02 15:04:53 aymeric Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xterm
 PKG_SUPPORTED_OPTIONS=	pcre xterm-luit freetype xterm-toolbar
 PKG_OPTIONS_OPTIONAL_GROUPS=	color
 PKG_OPTIONS_GROUP.color=	xterm-88color xterm-256color
-PKG_SUGGESTED_OPTIONS=	xterm-256color xterm-luit xterm-toolbar
+PKG_SUGGESTED_OPTIONS=	xterm-256color xterm-luit
 
 .include "../../mk/bsd.options.mk"
 
