@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2007/08/10 23:18:39 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/02 23:05:31 wiz Exp $
 
-DISTNAME=	openttd-0.5.2-source
-PKGNAME=	openttd-0.5.2
+DISTNAME=	openttd-0.5.3-source
+PKGNAME=	openttd-0.5.3
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
 
