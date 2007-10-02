@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/04/23 15:27:16 seb Exp $
+$NetBSD: patch-aa,v 1.3 2007/10/02 20:23:08 heinz Exp $
 
---- Makefile.orig	Fri Oct  7 01:41:10 1994
+--- Makefile.orig	1994-10-07 01:41:10.000000000 +0100
 +++ Makefile
 @@ -2,10 +2,11 @@
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2002/04/23 15:27:16 seb Exp $
 -BINDIR?=${DESTDIR}/usr/libexec
 +ETCDIR=${PKG_SYSCONFDIR}
 +BINDIR=${PREFIX}/libexec
-+MANDIR=${PREFIX}/man
++MANDIR=${PREFIX}/${PKGMANDIR}
  
  CFLAGS+=-DCONFIGFILE='"${ETCDIR}/tftpd.conf"'
  
