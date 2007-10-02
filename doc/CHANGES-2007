@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2108 2007/10/02 15:58:55 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.2109 2007/10/02 23:06:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/squirrelmail to 1.4.11 [martti 2007-10-02]
 	Updated mail/freepops to 0.2.5nb1 [schmonz 2007-10-02]
 	Updated misc/esniper to 2.17.0 [heinz 2007-10-02]
+	Updated games/openttd to 0.5.3 [wiz 2007-10-02]
