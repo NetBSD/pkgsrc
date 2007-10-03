@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/17 16:05:02 taca Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/03 14:45:42 heinz Exp $
 
 DISTNAME=	ncurses-ruby-1.1
 PKGNAME=	${DISTNAME:S/ncurses-ruby/${RUBY_PKGPREFIX}-ncurses/}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/ncurses-ruby/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rasputnik@hellooperator.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
 

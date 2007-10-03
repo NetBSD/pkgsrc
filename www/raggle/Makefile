@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/02/22 20:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/03 14:45:41 heinz Exp $
 
 DISTNAME=	raggle-0.4.4
 PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.raggle.org/files/
 
-MAINTAINER=	rasputnik@hellooperator.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.raggle.org/
 COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
 
