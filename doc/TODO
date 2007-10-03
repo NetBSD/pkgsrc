@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6713 2007/10/02 23:06:10 wiz Exp $
+$NetBSD: TODO,v 1.6714 2007/10/03 18:31:55 bad Exp $
 
 Suggested new packages
 ======================
@@ -412,6 +412,7 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
+	o ddclient-3.7.3
 	o dd_rescue-1.13
 	o defendguin-0.0.11
 	o dejavu-ttf-2.20
