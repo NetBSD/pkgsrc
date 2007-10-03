@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2109 2007/10/02 23:06:16 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2110 2007/10/03 10:25:10 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3879,3 +3879,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/freepops to 0.2.5nb1 [schmonz 2007-10-02]
 	Updated misc/esniper to 2.17.0 [heinz 2007-10-02]
 	Updated games/openttd to 0.5.3 [wiz 2007-10-02]
+	Updated wm/xfce4-wm to 4.4.1nb1 [martti 2007-10-03]
+	Updated x11/xfce4-desktop to 4.4.1nb2 [martti 2007-10-03]
