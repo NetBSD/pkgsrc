@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/12 12:24:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/03 21:13:22 reed Exp $
 
 DISTNAME=	cairomm-1.4.4
 CATEGORIES=	graphics
@@ -18,5 +18,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-docs
 PKGCONFIG_OVERRIDE+=	cairomm-1.0.pc.in
 
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.4
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
