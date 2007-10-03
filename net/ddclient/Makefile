@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/10/03 18:31:19 bad Exp $
 
 DISTNAME=	ddclient-3.6.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +27,7 @@ INSTALLATION_DIRS=	sbin
 do-configure:
 	cd ${WRKSRC}; for f in ddclient; do				\
 		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			-e "s|@VARBASE@|${VARBASE}|g"			\
 			-e "s|@PERL5@|${PERL5}|g"			\
 			$${f} > $${f}.fixed;			\
 		if [ -x $${f} ]; then				\
