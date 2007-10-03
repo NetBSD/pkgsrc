@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2007/08/23 20:38:03 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/10/03 18:49:12 bad Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
-PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 
@@ -16,8 +15,8 @@ CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-OO_VER=			2.2
-OO_RELEASE=		2.2.1
+OO_VER=			2.3
+OO_RELEASE=		2.3.0
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -45,13 +44,13 @@ RUN_LDCONFIG=		no
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=			${WRKDIR}/OOF680_m18_native_packed-1_en-US.9161
+WRKSRC=			${WRKDIR}/OOG680_m5_native_packed-1_en-US.9221
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
-WRKSRC=			${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/packages
+WRKSRC=			${WRKDIR}/OOG680_m5_native_packed-1_en-US.9221/packages
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=		OOo_${OO_RELEASE}_SolarisSparc_install_en-US
-WRKSRC=			${WRKDIR}/OOF680_m14_native_packed-1_en-US.9134/packages
+WRKSRC=			${WRKDIR}/OOG680_m5_native_packed-1_en-US.9221/packages
 .endif
 
 .include "options.mk"
