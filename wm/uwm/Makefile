@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/10/03 07:55:24 obache Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
@@ -12,6 +12,7 @@ COMMENT=	X11R3 window manager
 
 WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 USE_IMAKE=	yes
+USE_TOOLS+=	yacc
 
 post-patch:
 	if [ ! -f ${WRKSRC}/uwm.man.src ]; then			\
