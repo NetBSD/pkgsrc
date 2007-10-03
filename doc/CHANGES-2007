@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2111 2007/10/03 11:04:45 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2112 2007/10/03 23:05:36 bad Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3882,3 +3882,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/xfce4-wm to 4.4.1nb1 [martti 2007-10-03]
 	Updated x11/xfce4-desktop to 4.4.1nb2 [martti 2007-10-03]
 	Updated devel/monotone to 0.36nb2 [bjs 2007-10-03]
+	Updated misc/openoffice2-bin to 2.3.0 [bad 2007-10-03]
