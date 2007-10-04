@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/09/21 13:00:53 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/04 12:06:40 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
 PKG_SUPPORTED_OPTIONS=	glade gnomecanvas svg
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	gnomecanvas svg
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mglade)
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-glade
 PLIST_SRC+=		PLIST.glade
 .else
