@@ -1,10 +1,19 @@
-$NetBSD: patch-am,v 1.1 2007/09/25 04:18:27 bjs Exp $
+$NetBSD: patch-am,v 1.2 2007/10/04 14:18:21 joerg Exp $
 
 Fix another cast of pthread_t.
 
 --- pr/include/private/pprthred.h.orig	2004-04-25 11:00:56.000000000 -0400
 +++ pr/include/private/pprthred.h
-@@ -91,7 +91,11 @@ NSPR_API(void) PR_DetachThread(void);
+@@ -51,6 +51,8 @@
+ #include <os2.h>
+ #endif
+ 
++#include <pthread.h>
++
+ PR_BEGIN_EXTERN_C
+ 
+ /*---------------------------------------------------------------------------
+@@ -91,7 +93,11 @@ NSPR_API(void) PR_DetachThread(void);
  ** Get the id of the named thread. Each thread is assigned a unique id
  ** when it is created or attached.
  */
