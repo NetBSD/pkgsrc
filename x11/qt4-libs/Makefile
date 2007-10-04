@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/09/03 09:35:15 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2007/10/04 20:43:52 joerg Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 BUILD_TARGET=		sub-src
@@ -22,7 +23,8 @@ do-install:
 .for prog in moc rcc uic
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${QTPREFIX}/bin/
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/uic3 ${QTPREFIX}/bin/
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
+	    ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 .for incl in corelib gui network opengl qt3support sql svg xml script
 	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} \
