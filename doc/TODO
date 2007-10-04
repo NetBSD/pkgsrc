@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6714 2007/10/03 18:31:55 bad Exp $
+$NetBSD: TODO,v 1.6715 2007/10/04 13:28:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -1324,6 +1324,7 @@ Suggested package updates
 	o wxGTK-2.8.6
 	o wxRemind-0.9.13
 	o wyrd-1.4.3
+	o x11vnc-0.9.3
 	o x264-devel-20070324
 	o xalan-c-1.10.0
 	o xanalyser-1.30
