@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2007/01/07 12:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2007/10/05 16:31:33 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	1
@@ -18,19 +18,21 @@ BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 OCTAVE_VER=	2.1.73
-CONFLICTS+=	octave-current-*
+CONFLICTS+=	octave-current-[0-9]*
 
 .if (${MACHINE_ARCH} == "arm32")
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 .endif
 
 USE_GNU_READLINE=	yes
+USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
 
 GCC_REQD+=		3.0
-USE_LANGUAGES=		c c++ fortran
+INSTALLATION_DIRS+=	share/doc/octave
+INSTALLATION_DIRS+=	share/octave/${OCTAVE_VER}/doc
 
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with
@@ -42,18 +44,18 @@ CONFIGURE_ARGS+=	--enable-dl
 GNU_PLATFORM_DIR!=	${.CURDIR}/../../mk/gnu-config/config.sub ${MACHINE_GNU_PLATFORM}
 PLIST_SUBST+=	GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR:Q}
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
 		liboctave/liboctave.ps refcard/refcard-a4.ps \
 		refcard/refcard-legal.ps  refcard/refcard-letter.ps
-OCTAVE_HTML=	faq/Octave-FAQ_*.html interpreter/octave_*.html \
-		liboctave/liboctave_*.html
+OCTAVE_HTML=	faq/Octave-FAQ*.html interpreter/octave*.html \
+		liboctave/liboctave*.html
 
 UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
 
 post-extract:
-	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -print | ${XARGS} ${RM} -f
-	${MKDIR} ${WRKSRC}/src/pic
+	find ${WRKSRC}/doc -type f -name '*.info*' -print | xargs rm -f
+	mkdir ${WRKSRC}/src/pic
 
 # substitute in the real path to various bits of the toolchain because
 # mkoctfile will be used potentially by users and it needs to point
@@ -61,14 +63,13 @@ post-extract:
 # fix up the path to sed otherwise we end up with the buildlink directory
 # in mkoctfile
 post-build:
-	${MV} ${WRKSRC}/mkoctfile ${WRKSRC}/mkoctfile.bak
-	${SED} \
-		-e 's;"${CC}";"${CCPATH}";g' \
+	mv ${WRKSRC}/mkoctfile ${WRKSRC}/mkoctfile.bak
+	sed	-e 's;"${CC}";"${CCPATH}";g' \
 		-e 's;"${CXX}";"${CXXPATH}";g' \
 		-e 's;"${FC}";"${FCPATH}";g' \
 		-e 's@^:[ \t]*\$${SED=.*@: \$$\{SED="${SED}"\}@g' \
 		${WRKSRC}/mkoctfile.bak > ${WRKSRC}/mkoctfile
-	${CHMOD} a+x ${WRKSRC}/mkoctfile
+	chmod a+x ${WRKSRC}/mkoctfile
 
 post-install:
 	cd ${WRKSRC}/doc/liboctave;					\
@@ -76,11 +77,9 @@ post-install:
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .for f in ${OCTAVE_DOC}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/octave
 .for f in ${OCTAVE_HTML}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/doc/octave
 .endfor
