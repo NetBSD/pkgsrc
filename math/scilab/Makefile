@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2007/03/23 22:08:55 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.73 2007/10/05 23:15:21 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
+PKGREVISION=	1
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/
@@ -104,6 +105,9 @@ post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.guess
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.sub
+.for __tmp__ in scilab.g scilab.g.in scilab-gtk.g scilab-gtk.g.in
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/scripts/${__tmp__}
+.endfor
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
