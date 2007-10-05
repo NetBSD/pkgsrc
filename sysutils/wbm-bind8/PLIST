@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/01 06:35:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/05 15:47:01 obache Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -202,6 +202,8 @@ share/webmin/bind8/log_parser.pl
 share/webmin/bind8/mass_create.cgi
 share/webmin/bind8/mass_delete.cgi
 share/webmin/bind8/mass_form.cgi
+share/webmin/bind8/mass_rcreate.cgi
+share/webmin/bind8/mass_rcreate_form.cgi
 share/webmin/bind8/mass_update.cgi
 share/webmin/bind8/mass_update_form.cgi
 share/webmin/bind8/master_form.cgi
