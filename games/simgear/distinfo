@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/12 19:56:14 drochner Exp $
+$NetBSD: distinfo,v 1.2 2007/10/05 21:06:00 joerg Exp $
 
 SHA1 (SimGear-0.3.10.tar.gz) = 83e8435b52463fdb2736ccb2f0e42b572528131f
 RMD160 (SimGear-0.3.10.tar.gz) = 11bfb77efab7562f14c9bc0688f99af9a45f4c81
 Size (SimGear-0.3.10.tar.gz) = 752225 bytes
-SHA1 (patch-aa) = 7bfffa44809919a9e8fc8239e8501c5a3d62dd0a
+SHA1 (patch-aa) = a071fdd6efcb1167f1ee9fff440bca5ef97b4640
 SHA1 (patch-ab) = 9df1dbe00731e95e561d9d2e5a3eaaada79693ef
 SHA1 (patch-ac) = 0c3b22ab6cd2e3093e66f2fafd1b2bfcb57fe425
 SHA1 (patch-ad) = ebe7a273a53a527299c44774ee989d99b780c6b0
+SHA1 (patch-ae) = 466b9ec8f8e7e41d389795b6d9f365cf4313ec5f
+SHA1 (patch-af) = 47decffedf577d5b50166eec658c868d38f0c830
