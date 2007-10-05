@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/10/03 11:03:21 bjs Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/10/05 22:41:36 bjs Exp $
 bin/mtn
 info/monotone.info
 share/doc/monotone/figures/branch-heads.png
@@ -52,7 +52,6 @@ share/monotone/contrib/monotone.el
 share/monotone/contrib/monotone.zsh_completion
 share/monotone/contrib/mtbrowse.sh
 share/monotone/contrib/usher.cc
-@dirrm share/monotone/contrib/.deps
 @dirrm share/monotone/contrib
 @dirrm share/monotone
 @dirrm share/doc/monotone/figures
