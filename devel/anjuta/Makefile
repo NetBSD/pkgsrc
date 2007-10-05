@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/09/21 13:03:33 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2007/10/05 22:01:16 joerg Exp $
 
 DISTNAME=	anjuta-2.0.2
 PKGREVISION=	7
@@ -38,6 +38,8 @@ SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
 
 REPLACE_SH+=		scripts/anjuta_import.sh.in
 REPLACE_PERL+=		plugins/tools/scripts/*.pl
+
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 
 .include "../../devel/devhelp/buildlink3.mk"
 .include "../../devel/gdl/buildlink3.mk"
