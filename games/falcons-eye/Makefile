@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/10/05 21:26:26 joerg Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
 PKGNAME=		falcons-eye-1.9.3
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=falconseye/}
 EXTRACT_SUFX=		.zip
@@ -18,10 +18,12 @@ CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 DIST_SUBDIR=		${PKGNAME_NOREV}-20050216-2
 
 WRKSRC=			${WRKDIR}
-USE_TOOLS+=		bison lex
+USE_TOOLS+=		bison lex ksh:run
 MAKE_ENV+=		YACC=${TOOLS_CMDLINE_YACC:Q}
 MAKE_FLAGS+=		GAMEUID=${GAMEOWN}
 MAKE_FLAGS+=		GAMEGRP=${GAMEGRP}
+
+REPLACE_KSH+=		src/fe-config
 
 LIBS.SunOS+=		-lm
 
