@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/06 09:10:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/10/05 16:31:33 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -636,6 +636,7 @@ man/man1/mkoctfile.1
 man/man1/octave-bug.1
 man/man1/octave-config.1
 man/man1/octave.1
+share/doc/octave/Octave-FAQ.html
 share/doc/octave/Octave-FAQ_1.html
 share/doc/octave/Octave-FAQ_10.html
 share/doc/octave/Octave-FAQ_11.html
@@ -652,6 +653,7 @@ share/doc/octave/Octave-FAQ_abt.html
 share/doc/octave/Octave-FAQ_fot.html
 share/doc/octave/Octave-FAQ_ovr.html
 share/doc/octave/Octave-FAQ_toc.html
+share/doc/octave/liboctave.html
 share/doc/octave/liboctave_1.html
 share/doc/octave/liboctave_10.html
 share/doc/octave/liboctave_11.html
@@ -678,6 +680,7 @@ share/doc/octave/liboctave_9.html
 share/doc/octave/liboctave_abt.html
 share/doc/octave/liboctave_ovr.html
 share/doc/octave/liboctave_toc.html
+share/doc/octave/octave.html
 share/doc/octave/octave_1.html
 share/doc/octave/octave_10.html
 share/doc/octave/octave_11.html
