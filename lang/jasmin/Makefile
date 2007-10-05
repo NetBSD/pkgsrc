@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/05 22:57:55 joerg Exp $
 #
 
 DISTNAME=	jasmin-1.06
+PKGREVISION=	1
 CATEGORIES=	lang java
 MASTER_SITES=	http://mrl.nyu.edu/~meyer/jasmin/
 
@@ -21,7 +22,7 @@ post-patch:
 		${SED} -e 's|@PREFIX@|${PREFIX}|g' 			\
 		${WRKSRC}/bin/jasmin.patch > ${WRKSRC}/bin/jasmin && 	\
 		${CHMOD} 755 ${WRKSRC}/bin/jasmin
-	${CHMOD} -R ugo+rX ${WRKSRC}/
+	${CHMOD} -R =urwXgrXorX ${WRKSRC}/
 	${RM} ${WRKSRC}/bin/jasmin.patch
 
 do-install:
