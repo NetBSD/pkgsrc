@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6716 2007/10/05 06:47:57 wiz Exp $
+$NetBSD: TODO,v 1.6717 2007/10/05 15:51:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.3
 	o wdm-1.28
-	o webmin-1.370
 	o weechat-0.2.6
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
