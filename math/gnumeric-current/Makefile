@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:03:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/05 23:27:20 joerg Exp $
 #
 
 DISTNAME=		gnumeric-1.7.12
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		YES
 GCONF_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 PKGCONFIG_OVERRIDE=	libspreadsheet-1.7.pc.in
+
+REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
