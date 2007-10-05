@@ -1,7 +1,104 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/07/12 19:56:14 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/05 21:06:00 joerg Exp $
 
---- configure.orig	2007-03-22 21:36:06.000000000 +0100
+--- configure.orig	2006-04-05 18:25:04.000000000 +0000
 +++ configure
+@@ -5968,13 +5968,13 @@ echo "${ECHO_T}$ac_cv_header_pthread_h" 
+ fi
+ 
+ 
+-echo "$as_me:$LINENO: checking for library containing pthread_exit" >&5
+-echo $ECHO_N "checking for library containing pthread_exit... $ECHO_C" >&6
+-if test "${ac_cv_search_pthread_exit+set}" = set; then
++echo "$as_me:$LINENO: checking for library containing pthread_create" >&5
++echo $ECHO_N "checking for library containing pthread_create... $ECHO_C" >&6
++if test "${ac_cv_search_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_func_search_save_LIBS=$LIBS
+-ac_cv_search_pthread_exit=no
++ac_cv_search_pthread_create=no
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5988,11 +5988,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char pthread_exit ();
++char pthread_create ();
+ int
+ main ()
+ {
+-pthread_exit ();
++pthread_create ();
+   ;
+   return 0;
+ }
+@@ -6019,7 +6019,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_search_pthread_exit="none required"
++  ac_cv_search_pthread_create="none required"
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -6027,7 +6027,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+-if test "$ac_cv_search_pthread_exit" = no; then
++if test "$ac_cv_search_pthread_create" = no; then
+   for ac_lib in pthread c_r; do
+     LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
+     cat >conftest.$ac_ext <<_ACEOF
+@@ -6043,11 +6043,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char pthread_exit ();
++char pthread_create ();
+ int
+ main ()
+ {
+-pthread_exit ();
++pthread_create ();
+   ;
+   return 0;
+ }
+@@ -6074,7 +6074,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_search_pthread_exit="-l$ac_lib"
++  ac_cv_search_pthread_create="-l$ac_lib"
+ break
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -6087,10 +6087,10 @@ rm -f conftest.err conftest.$ac_objext \
+ fi
+ LIBS=$ac_func_search_save_LIBS
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_search_pthread_exit" >&5
+-echo "${ECHO_T}$ac_cv_search_pthread_exit" >&6
+-if test "$ac_cv_search_pthread_exit" != no; then
+-  test "$ac_cv_search_pthread_exit" = "none required" || LIBS="$ac_cv_search_pthread_exit $LIBS"
++echo "$as_me:$LINENO: result: $ac_cv_search_pthread_create" >&5
++echo "${ECHO_T}$ac_cv_search_pthread_create" >&6
++if test "$ac_cv_search_pthread_create" != no; then
++  test "$ac_cv_search_pthread_create" = "none required" || LIBS="$ac_cv_search_pthread_create $LIBS"
+ 
+ fi
+ 
+@@ -6098,7 +6098,7 @@ if test "x$ac_cv_header_pthread_h" = "xy
+     CXXFLAGS="$CXXFLAGS -D_REENTRANT"
+     CFLAGS="$CFLAGS -D_REENTRANT"
+ 
+-  if test "x$ac_cv_search_pthread_exit" = "x-lc_r"; then
++  if test "x$ac_cv_search_pthread_create" = "x-lc_r"; then
+     CXXFLAGS="-pthread $CXXFLAGS"
+     CFLAGS="-pthread $CFLAGS"
+   fi
 @@ -8634,7 +8634,7 @@ fi
  
  esac
