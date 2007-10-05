@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/09/23 13:22:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/05 21:02:02 joerg Exp $
 #
 
 DISTNAME=		gtkwave-3.1.1
@@ -11,6 +11,8 @@ COMMENT=		Electronic waveform viewer
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
