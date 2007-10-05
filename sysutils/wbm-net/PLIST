@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/05 15:47:04 obache Exp $
 share/examples/webmin/net/config
 share/webmin/net/CHANGELOG
 share/webmin/net/acl_security.pl
@@ -110,9 +110,7 @@ share/webmin/net/save_host.cgi
 share/webmin/net/save_ipnode.cgi
 share/webmin/net/save_range.cgi
 share/webmin/net/save_routes.cgi
-share/webmin/net/slackware-linux-10.0-lib.pl
-share/webmin/net/slackware-linux-10.1-lib.pl
-share/webmin/net/slackware-linux-9.1-lib.pl
+share/webmin/net/slackware-linux-9.1-ALL-lib.pl
 share/webmin/net/slackware-linux-lib.pl
 share/webmin/net/solaris-lib.pl
 share/webmin/net/suse-linux-8.0-lib.pl
