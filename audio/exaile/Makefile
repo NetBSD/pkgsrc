@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 13:03:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/05 20:54:42 joerg Exp $
 #
 
 DISTNAME=	exaile_0.2.10
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.exaile.org/
 COMMENT=	Music player
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config gmake intltool
+USE_TOOLS+=		pkg-config gmake intltool msgfmt
 USE_DIRS+=		xdg-1.1
 
 PYTHON_PATCH_SCRIPTS=	exaile.py
