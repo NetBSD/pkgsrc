@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2007/09/21 13:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/05 22:51:05 joerg Exp $
 
 DISTNAME=	kipi-plugins-0.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,8 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
+
+REPLACE_BASH=		kipi-plugins/mpegencoder/images2mpg
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../audio/libgpod/buildlink3.mk"
