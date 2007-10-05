@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/09/09 19:30:07 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/10/05 23:28:07 joerg Exp $
 #
 
 DISTNAME=		mplayerplug-in-3.45
@@ -14,7 +14,7 @@ DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
 
 WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--enable-wmp
