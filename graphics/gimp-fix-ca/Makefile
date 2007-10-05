@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/25 10:03:53 hira Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/05 22:31:43 joerg Exp $
 #
 
 DISTNAME=		gimp-fix-ca-2.1.0
@@ -18,16 +18,20 @@ INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
 
 USE_TOOLS+=		pkg-config
 
+LINK_PTHREAD=		${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+
 pre-build:
 	ln -sf ${LOCALBASE}/bin/gimptool-2.0 \
 		${BUILDLINK_DIR}/bin/gimptool
 
 do-build:
-	cd "${WRKDIR}" && gimptool --build ${DISTNAME}${EXTRACT_SUFX}
+	cd "${WRKDIR}" && \
+	    LIBS=${LINK_PTHREAD:Q} gimptool --build ${DISTNAME}${EXTRACT_SUFX}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} \
 		${PREFIX}/lib/gimp/2.0/plug-ins/fix-ca
 
 .include "../../graphics/gimp/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
