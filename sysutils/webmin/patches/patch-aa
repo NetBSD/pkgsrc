@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2007/04/21 05:22:57 obache Exp $
+$NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
 
---- setup.sh.orig	2007-04-09 05:00:00.000000000 +0000
+--- setup.sh.orig	2007-09-21 21:26:02.000000000 +0000
 +++ setup.sh
 @@ -35,6 +35,11 @@ echo ""
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.5 2007/04/21 05:22:57 obache Exp $
  	if [ "$?" = "0" -a "$config_dir" != "/etc/webmin" ]; then
  		echo "ERROR: Config directory $config_dir is not empty"
  		echo ""
-@@ -522,6 +534,12 @@ else
+@@ -527,6 +539,12 @@ else
  
  	kfile=$config_dir/miniserv.pem
  	openssl version >/dev/null 2>&1
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.5 2007/04/21 05:22:57 obache Exp $
  	if [ "$?" = "0" ]; then
  		# We can generate a new SSL key for this host
  		host=`hostname`
-@@ -728,31 +746,34 @@ EOF
+@@ -733,31 +751,34 @@ EOF
  	echo ""
  fi
  

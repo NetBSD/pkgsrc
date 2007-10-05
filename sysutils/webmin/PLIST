@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/09/01 06:34:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/10/05 15:47:00 obache Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -116,6 +116,7 @@ share/webmin/acl/config.info.fr
 share/webmin/acl/config.info.hu
 share/webmin/acl/config.info.ja_JP.UTF-8
 share/webmin/acl/config.info.ja_JP.euc
+share/webmin/acl/config.info.ko_KR.euc
 share/webmin/acl/config.info.nl
 share/webmin/acl/config.info.no
 share/webmin/acl/config.info.pl
@@ -140,6 +141,7 @@ share/webmin/acl/delete_user.cgi
 share/webmin/acl/delete_users.cgi
 share/webmin/acl/edit_acl.cgi
 share/webmin/acl/edit_group.cgi
+share/webmin/acl/edit_pass.cgi
 share/webmin/acl/edit_rbac.cgi
 share/webmin/acl/edit_sync.cgi
 share/webmin/acl/edit_unix.cgi
@@ -150,6 +152,7 @@ share/webmin/acl/help/ips.da.html
 share/webmin/acl/help/ips.fa.html
 share/webmin/acl/help/ips.fr.html
 share/webmin/acl/help/ips.html
+share/webmin/acl/help/ips.ko_KR.euc.html
 share/webmin/acl/help/ips.sk.html
 share/webmin/acl/hide.cgi
 share/webmin/acl/hide_form.cgi
@@ -157,6 +160,7 @@ share/webmin/acl/images/cert.gif
 share/webmin/acl/images/convert.gif
 share/webmin/acl/images/empty.gif
 share/webmin/acl/images/icon.gif
+share/webmin/acl/images/pass.gif
 share/webmin/acl/images/rbac.gif
 share/webmin/acl/images/sessions.gif
 share/webmin/acl/images/smallicon.gif
@@ -201,6 +205,7 @@ share/webmin/acl/openssl.cnf
 share/webmin/acl/postinstall.pl
 share/webmin/acl/save_acl.cgi
 share/webmin/acl/save_group.cgi
+share/webmin/acl/save_pass.cgi
 share/webmin/acl/save_sync.cgi
 share/webmin/acl/save_unix.cgi
 share/webmin/acl/save_user.cgi
@@ -374,11 +379,14 @@ share/webmin/cron/lang/zh_TW.UTF-8
 share/webmin/cron/log_parser.pl
 share/webmin/cron/module.info
 share/webmin/cron/move.cgi
+share/webmin/cron/postinstall.pl
 share/webmin/cron/range.pl
 share/webmin/cron/rbac-mapping
 share/webmin/cron/save_allow.cgi
 share/webmin/cron/save_cron.cgi
 share/webmin/cron/save_env.cgi
+share/webmin/cron/tempdelete.pl
+share/webmin/cron/uninstall.pl
 share/webmin/cron/useradmin_update.pl
 share/webmin/date_chooser.cgi
 share/webmin/defaultacl
@@ -563,6 +571,7 @@ share/webmin/inittab/config.info.ca
 share/webmin/inittab/config.info.de
 share/webmin/inittab/config.info.es
 share/webmin/inittab/config.info.fr
+share/webmin/inittab/config.info.ko_KR.euc
 share/webmin/inittab/config.info.ms
 share/webmin/inittab/config.info.pl
 share/webmin/inittab/config.info.ru_RU
@@ -1116,6 +1125,7 @@ share/webmin/servers/config.info.de
 share/webmin/servers/config.info.es
 share/webmin/servers/config.info.fr
 share/webmin/servers/config.info.hu
+share/webmin/servers/config.info.ko_KR.euc
 share/webmin/servers/config.info.ms
 share/webmin/servers/config.info.no
 share/webmin/servers/config.info.pl
@@ -1248,6 +1258,7 @@ share/webmin/webmin/config.info.fa
 share/webmin/webmin/config.info.fr
 share/webmin/webmin/config.info.ja_JP.UTF-8
 share/webmin/webmin/config.info.ja_JP.euc
+share/webmin/webmin/config.info.ko_KR.euc
 share/webmin/webmin/config.info.ms
 share/webmin/webmin/config.info.nl
 share/webmin/webmin/config.info.sk
@@ -1379,6 +1390,7 @@ share/webmin/webminlog/config.info.ca
 share/webmin/webminlog/config.info.de
 share/webmin/webminlog/config.info.es
 share/webmin/webminlog/config.info.hu
+share/webmin/webminlog/config.info.ko_KR.euc
 share/webmin/webminlog/config.info.sk
 share/webmin/webminlog/config.info.tr
 share/webmin/webminlog/defaultacl
@@ -1411,6 +1423,7 @@ share/webmin/webminlog/lang/zh_CN
 share/webmin/webminlog/lang/zh_CN.UTF-8
 share/webmin/webminlog/lang/zh_TW.Big5
 share/webmin/webminlog/lang/zh_TW.UTF-8
+share/webmin/webminlog/log_parser.pl
 share/webmin/webminlog/module.info
 share/webmin/webminlog/rollback.cgi
 share/webmin/webminlog/search.cgi

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/05 15:47:05 obache Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -827,6 +827,7 @@ share/webmin/postfix/images/postfinger.gif
 share/webmin/postfix/images/rate.gif
 share/webmin/postfix/images/relocated.gif
 share/webmin/postfix/images/resource.gif
+share/webmin/postfix/images/sasl.gif
 share/webmin/postfix/images/smallicon.gif
 share/webmin/postfix/images/smtp.gif
 share/webmin/postfix/images/smtpd.gif
@@ -869,6 +870,7 @@ share/webmin/postfix/postfix-lib.pl
 share/webmin/postfix/rate.cgi
 share/webmin/postfix/relocated.cgi
 share/webmin/postfix/resource.cgi
+share/webmin/postfix/sasl.cgi
 share/webmin/postfix/save_afile.cgi
 share/webmin/postfix/save_alias.cgi
 share/webmin/postfix/save_ffile.cgi
@@ -885,6 +887,7 @@ share/webmin/postfix/save_opts_relocated.cgi
 share/webmin/postfix/save_opts_transport.cgi
 share/webmin/postfix/save_opts_virtual.cgi
 share/webmin/postfix/save_rfile.cgi
+share/webmin/postfix/save_sasl.cgi
 share/webmin/postfix/smtp.cgi
 share/webmin/postfix/smtpd.cgi
 share/webmin/postfix/start.cgi

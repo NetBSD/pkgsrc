@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/05 15:47:06 obache Exp $
 share/examples/webmin/time/config
 share/webmin/time/CHANGELOG
 share/webmin/time/acl_security.pl
@@ -23,6 +23,7 @@ share/webmin/time/config.info.fr
 share/webmin/time/config.info.hu
 share/webmin/time/config.info.ja_JP.UTF-8
 share/webmin/time/config.info.ja_JP.euc
+share/webmin/time/config.info.ko_KR.euc
 share/webmin/time/config.info.ms
 share/webmin/time/config.info.pl
 share/webmin/time/config.info.ru_RU
@@ -44,6 +45,7 @@ share/webmin/time/help/hardware_time.fa.html
 share/webmin/time/help/hardware_time.fr.html
 share/webmin/time/help/hardware_time.html
 share/webmin/time/help/hardware_time.hu.html
+share/webmin/time/help/hardware_time.ko_KR.euc.html
 share/webmin/time/help/hardware_time.pl.html
 share/webmin/time/help/hardware_time.ru_RU.html
 share/webmin/time/help/hardware_time.ru_SU.html
@@ -58,6 +60,7 @@ share/webmin/time/help/index.fa.html
 share/webmin/time/help/index.fr.html
 share/webmin/time/help/index.html
 share/webmin/time/help/index.hu.html
+share/webmin/time/help/index.ko_KR.euc.html
 share/webmin/time/help/index.pl.html
 share/webmin/time/help/index.ru_RU.html
 share/webmin/time/help/index.ru_SU.html
@@ -72,6 +75,7 @@ share/webmin/time/help/system_time.fa.html
 share/webmin/time/help/system_time.fr.html
 share/webmin/time/help/system_time.html
 share/webmin/time/help/system_time.hu.html
+share/webmin/time/help/system_time.ko_KR.euc.html
 share/webmin/time/help/system_time.pl.html
 share/webmin/time/help/system_time.ru_RU.html
 share/webmin/time/help/system_time.ru_SU.html
@@ -86,6 +90,7 @@ share/webmin/time/help/timeserver.fa.html
 share/webmin/time/help/timeserver.fr.html
 share/webmin/time/help/timeserver.html
 share/webmin/time/help/timeserver.hu.html
+share/webmin/time/help/timeserver.ko_KR.euc.html
 share/webmin/time/help/timeserver.pl.html
 share/webmin/time/help/timeserver.ru_RU.html
 share/webmin/time/help/timeserver.ru_SU.html
