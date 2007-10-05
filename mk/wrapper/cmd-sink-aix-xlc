@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.3 2005/07/23 04:48:12 grant Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.4 2007/10/05 18:19:45 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -69,6 +69,13 @@ done
 # AIX xlc uses -blibpath to set the runtime library search path.
 if $test -n "$blibpath"; then
 	arg="-blibpath:$blibpath"
+	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
+	. $buildcmd
+fi
+# Force dynamic linkage on AIX to get preference of dynamic libraries
+# over library archives.
+if $test "$dont_link" != "yes"; then
+	arg="-brtl"
 	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
 	. $buildcmd
 fi
