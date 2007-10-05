@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.41 2007/05/23 08:42:36 sketch Exp $
+# $NetBSD: sunpro.mk,v 1.42 2007/10/05 22:09:09 rillig Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -16,6 +16,7 @@ COMPILER_SUNPRO_MK=	defined
 SUNWSPROBASE?=		/opt/SUNWspro
 
 # common definitions
+# XXX: should be moved to compiler.mk.
 _COMPILER_TYPE.c=	CC
 _COMPILER_TYPE.c++ =	CXX
 _COMPILER_TYPE.fortran=	FC
@@ -31,12 +32,16 @@ _COMPILER_NAME.fortran=	f77
 #
 LANGUAGES.sunpro=	# empty
 
+# XXX: Should be moved to compiler.mk.
 .for l in ${_COMPILER_LANGS}
 .  for t in ${_COMPILER_TYPE.${l}}
 .    for n in ${_COMPILER_NAME.${l}}
 .      if exists(${SUNWSPROBASE}/bin/${n})
 LANGUAGES.sunpro+=	${l}
 _COMPILER_STRIP_VARS+=	${t}
+# XXX: What is the ${t}PATH variable used for? And why isn't it
+# parameterized as usual? This makes searching for it very difficult.
+# Same for PKG_${t}.
 ${t}PATH=		${SUNWSPROBASE}/bin/${n}
 PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 .      endif
@@ -45,11 +50,13 @@ PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 .endfor
 
 # Turn on C99 support if required
+# XXX: What if a package needs both -- a c89 and a c99 compiler?
 .if !empty(USE_LANGUAGES:Mc99)
 _WRAP_EXTRA_ARGS.CC+=	-xc99
 .endif
 
 # The Solaris linker uses "-R" for rpath directives.
+# XXX: This shouldn't be here, but in platform/SunOS.mk.
 _LINKER_RPATH_FLAG=	-R
 
 # SunPro passes rpath directives to the linker using "-R", however
@@ -64,6 +71,8 @@ _COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
 _COMPILER_ABI_FLAG.64= -xarch=amd64
 .endif
 
+# XXX: What about the versions of the other compilers? Fortran and C++?
+# XXX: should be moved to compiler.mk.
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -V 2>&1 || ${TRUE}
 CC_VERSION!=		${CCPATH} -V 2>&1 | ${GREP} '^cc'
@@ -75,6 +84,7 @@ CC_VERSION?=		cc: Sun C
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
 # ones requested by the package in USE_LANGUAGES.
 #
+# XXX: should be moved to compiler.mk.
 _LANGUAGES.sunpro=	# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
