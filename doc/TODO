@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6715 2007/10/04 13:28:39 obache Exp $
+$NetBSD: TODO,v 1.6716 2007/10/05 06:47:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,7 @@ Suggested package updates
 	o GridSim-3.3
 	o ImageMagick-6.3.5.8
 	o PAM-0.99.7.1
-	o R-2.5.1
+	o R-2.6.0
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-Matrix-0.9975.11
@@ -378,6 +378,7 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.95
+	o claws-mail-3.0.2
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o cmake-2.4.7
@@ -406,6 +407,7 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o dar-2.3.6
+	o darkstat-3.0.707 [pkg/37052]
 	o dasher-4.6.0
 	o dbench-3.04
 	o dbmail-2.2.4
@@ -426,7 +428,7 @@ Suggested package updates
 	o diffstat-1.44
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
-	o dirac-0.7.0
+	o dirac-0.8.0
 	o dircproxy-devel-1.2.0.2
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
@@ -1050,13 +1052,14 @@ Suggested package updates
 	o posh-0.5.5
 	o postal-0.66
 	o powermanga-0.90
+	o prelude-manager-0.9.10
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o pstoedit-3.45
 	o puf-0.93.3
-	o putty-0.60
+	o putty-0.60 [pkg/37056]
 	o puzzle-5.2
 	o pwlib-1.10.10
 	o pxe-1.4.2
@@ -1232,7 +1235,7 @@ Suggested package updates
 	o suse_base-10.2
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
-	o sylpheed-2.4.6
+	o sylpheed-2.4.7
 	o sympa-5.3
 	o sysinfo-4.2.2
 	o t-prot-2.5
@@ -1396,7 +1399,7 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.20.0
-	o zile-2.2.41
+	o zile-2.2.43
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
