@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/05 15:47:05 obache Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -37,6 +37,7 @@ share/webmin/postgresql/config.info.es
 share/webmin/postgresql/config.info.fr
 share/webmin/postgresql/config.info.ja_JP.UTF-8
 share/webmin/postgresql/config.info.ja_JP.euc
+share/webmin/postgresql/config.info.ko_KR.euc
 share/webmin/postgresql/config.info.pl
 share/webmin/postgresql/config.info.ru_RU
 share/webmin/postgresql/config.info.ru_SU

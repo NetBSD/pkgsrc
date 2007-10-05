@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/01 06:35:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/05 15:47:00 obache Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -224,6 +224,7 @@ share/webmin/apache/mod_php3.pl
 share/webmin/apache/mod_php4.pl
 share/webmin/apache/mod_php5.pl
 share/webmin/apache/mod_proxy.pl
+share/webmin/apache/mod_proxy_balancer.pl
 share/webmin/apache/mod_ruby.pl
 share/webmin/apache/mod_setenvif.pl
 share/webmin/apache/mod_speling.pl
