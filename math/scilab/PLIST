@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/03/23 22:08:55 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/10/05 23:15:21 dmcmahill Exp $
 bin/intersci
 bin/intersci-n
 bin/scilab
@@ -10874,10 +10874,6 @@ lib/${PKGNAME}/scripts/Makefile
 lib/${PKGNAME}/scripts/Makefile.in
 lib/${PKGNAME}/scripts/sc_cpp
 lib/${PKGNAME}/scripts/scilab-gcwin32.g
-lib/${PKGNAME}/scripts/scilab-gtk.g
-lib/${PKGNAME}/scripts/scilab-gtk.g.in
-lib/${PKGNAME}/scripts/scilab.g
-lib/${PKGNAME}/scripts/scilab.g.in
 lib/${PKGNAME}/tcl/BWidget-1.7.0/BWman/ArrowButton.html
 lib/${PKGNAME}/tcl/BWidget-1.7.0/BWman/BWidget.html
 lib/${PKGNAME}/tcl/BWidget-1.7.0/BWman/Button.html
