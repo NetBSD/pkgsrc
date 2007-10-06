@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.3 2007/04/21 05:40:27 hira Exp $
+$NetBSD: patch-aj,v 1.4 2007/10/06 20:02:22 hira Exp $
 
---- solenv/inc/unxbsdi2.mk.orig	2006-07-06 07:00:41.000000000 +0900
-+++ solenv/inc/unxbsdi2.mk	2007-04-21 03:20:50.000000000 +0900
+--- solenv/inc/unxbsdi2.mk.orig	2007-03-09 18:07:33.000000000 +0900
++++ solenv/inc/unxbsdi2.mk	2007-09-26 19:56:27.000000000 +0900
 @@ -37,7 +37,7 @@
  ASM=
  AFLAGS=
@@ -20,7 +20,7 @@ $NetBSD: patch-aj,v 1.3 2007/04/21 05:40:27 hira Exp $
  
  # this is a platform with JAVA support
  .IF "$(SOLAR_JAVA)"!=""
-@@ -123,7 +123,8 @@
+@@ -119,7 +119,8 @@
  DYNAMIC		= -Wl,-Bdynamic
  
  # name of linker
@@ -30,7 +30,7 @@ $NetBSD: patch-aj,v 1.3 2007/04/21 05:40:27 hira Exp $
  
  # default linker flags
  LINKFLAGSDEFS*=-z defs
-@@ -141,7 +142,7 @@
+@@ -137,7 +138,7 @@
  LINKFLAGSTACK=
  LINKFLAGSPROF=
  LINKFLAGSDEBUG=-g
@@ -39,30 +39,22 @@ $NetBSD: patch-aj,v 1.3 2007/04/21 05:40:27 hira Exp $
  
  # linker flags for optimization (symbol hashtable)
  # for now, applied to symbol scoped libraries, only
-@@ -159,17 +160,18 @@
+@@ -155,13 +156,14 @@
  STDSLOGUI=
  STDOBJCUI=
  STDSLOCUI=
 +STDOBJVCL=$(L)$/salmain.o
  
  # libraries for linking applications
--STDLIBCUIST=-lm
 -STDLIBGUIMT=-lX11 -lpthread -lm
 -STDLIBCUIMT=-lpthread -lm
--STDLIBGUIST=-lX11 -lm
-+STDLIBCUIST=-lm -lc
 +STDLIBGUIMT=${X11_LDFLAGS} -lX11 -lpthread -lm -lc
 +STDLIBCUIMT=-lpthread -lm -lc
-+STDLIBGUIST=${X11_LDFLAGS} -lX11 -lm -lc
  # libraries for linking shared libraries
 -STDSHLGUIMT=-lX11 -lXext -lpthread -lm
 -STDSHLCUIMT=-lpthread -lm
--STDSHLGUIST=-lX11 -lXext -lm
--STDSHLCUIST=-lm
 +STDSHLGUIMT=${X11_LDFLAGS} -lX11 -lXext -lpthread -lm -lc
 +STDSHLCUIMT=-lpthread -lm -lc
-+STDSHLGUIST=${X11_LDFLAGS} -lX11 -lXext -lm -lc
-+STDSHLCUIST=-lm -lc
  
  LIBSALCPPRT*=-Wl,--whole-archive -lsalcpprt -Wl,--no-whole-archive
  
