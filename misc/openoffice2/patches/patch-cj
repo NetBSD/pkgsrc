@@ -1,7 +1,7 @@
-$NetBSD: patch-cj,v 1.1 2007/04/05 23:26:14 hira Exp $
+$NetBSD: patch-cj,v 1.2 2007/10/06 20:02:23 hira Exp $
 
---- tools/inc/inetdef.hxx.orig	2006-07-19 18:27:54.000000000 +0900
-+++ tools/inc/inetdef.hxx	2007-04-06 08:11:38.000000000 +0900
+--- tools/inc/tools/inetdef.hxx.orig	2007-09-26 17:35:00.000000000 +0900
++++ tools/inc/tools/inetdef.hxx	2007-09-26 17:36:01.000000000 +0900
 @@ -51,11 +51,11 @@
  #elif defined SCO
  #define TOOLS_INETDEF_OS "SCO"

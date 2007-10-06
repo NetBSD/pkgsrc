@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2007/09/30 12:27:40 hira Exp $
+# $NetBSD: Makefile,v 1.25 2007/10/06 20:02:21 hira Exp $
 #
 
-OO_VER=			2.2.1
+OO_VER=			2.3.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -14,9 +13,6 @@ DISTFILES+=		OOo_${OO_VER}_src_binfilter.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 #DISTFILES+=		OOo_${OO_VER}_src_sdk.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
-# Missing file from tarball...
-DISTFILES+=		bridge.h
-SITES.bridge.h=		http://www.openoffice.org/source/browse/%2Acheckout%2A/udk/bridges/inc/bridges/cpp_uno/Attic/
 
 MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -27,9 +23,11 @@ BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 
+DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
+
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOF680_m18
+WRKSRC=			${WRKDIR}/OOG680_m5
 CONFIGURE_DIRS=		config_office
 
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
@@ -54,7 +52,12 @@ CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--with-system-stdlibs
 CONFIGURE_ARGS+=	--with-system-freetype
+CONFIGURE_ARGS+=	--with-system-libxml2
+CONFIGURE_ARGS+=	--with-system-libxslt
+CONFIGURE_ARGS+=	--with-system-python
+CONFIGURE_ARGS+=	--with-system-zlib
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
@@ -81,24 +84,25 @@ PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
 INSTALLATION_DIRS=	bin
 
-OO_UNXNAME=	openoffice.org2.2
+OO_UNXNAME=	openoffice.org2.3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_PKGROOT=	/opt/${OO_UNXNAME}
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
 
 post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/bridge.h		\
-		${WRKSRC}/bridges/inc/bridges/cpp_uno/
+	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
+	mv gcc3_netbsd_intel gcc3_netbsd_intel.orig &&		\
+	cp -Rp gcc3_freebsd_intel gcc3_netbsd_intel
 
 do-build:
 	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
 
 post-build:
 	cd ${WRKDIR} &&						\
-	${RM} -fr opt &&					\
+	rm -fr opt &&						\
 	for l in ${OO_LANGS}; do				\
 		for f in ${OO_PKGPATH:Q}/$${l}/*/*.sw; do	\
-			${TAR} xpfk $$f;			\
+			tar xpfk $$f;				\
 		done;						\
 	done
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
@@ -111,9 +115,9 @@ post-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${OO_RELEASE}
 	cd ${WRKDIR}${OO_PKGROOT} &&				\
-	${TAR} cf - . | ${TAR} Cxpf ${PREFIX}/${OO_RELEASE} -
+	tar cf - . | tar Cxpf ${PREFIX}/${OO_RELEASE} -
 	for f in ${OO_PROGRAMS}; do				\
-		${LN} -sf ${PREFIX}/${OO_RELEASE}/program/$$f	\
+		ln -sf ${PREFIX}/${OO_RELEASE}/program/$$f	\
 			${PREFIX}/bin/$$f;			\
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${PREFIX}/bin
@@ -122,10 +126,10 @@ do-install:
 
 post-install:
 	cd ${PREFIX} &&						\
-	${FIND} ${OO_RELEASE} \! -type d -print |		\
-	${SORT} > ${PLIST_SRC} &&				\
-	${FIND} ${OO_RELEASE} -type d -print | ${SORT} -r |	\
-	${AWK} '{print("@dirrm "$$1)}' >> ${PLIST_SRC}
+	find ${OO_RELEASE} \! -type d -print |			\
+	sort > ${PLIST_SRC} &&					\
+	find ${OO_RELEASE} -type d -print | sort -r |		\
+	awk '{print("@dirrm "$$1)}' >> ${PLIST_SRC}
 	for f in ${OO_PROGRAMS}; do				\
 		${ECHO} bin/$$f >> ${PLIST_SRC};		\
 	done
@@ -141,6 +145,10 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  include "Makefile.${OPSYS}.${ARCH}"
 .endif
 
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
+.include "../../lang/python/application.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
