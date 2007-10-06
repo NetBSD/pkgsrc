@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2007/09/24 22:02:04 taca Exp $
+$NetBSD: distinfo,v 1.10 2007/10/06 06:14:45 taca Exp $
 
-SHA1 (ruby-1.8.6-p110.tar.bz2) = b9c980dabd6c99f3663d463a586b18f2637c9e5b
-RMD160 (ruby-1.8.6-p110.tar.bz2) = 7acff85e7604ec8cb14590967a147dd953079dd6
-Size (ruby-1.8.6-p110.tar.bz2) = 3918377 bytes
+SHA1 (ruby-1.8.6-p111.tar.bz2) = d85d25786e0ce30f8f54f5cfa36968ec0f6b9a5f
+RMD160 (ruby-1.8.6-p111.tar.bz2) = 8ff9b8592a80062742be61b2b4e1158282b61c4b
+Size (ruby-1.8.6-p111.tar.bz2) = 3919396 bytes
