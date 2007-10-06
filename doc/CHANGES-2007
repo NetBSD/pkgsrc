@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2114 2007/10/05 22:45:14 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2115 2007/10/06 06:19:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3925,3 +3925,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-tunnel to 1.370 [obache 2007-10-05]
 	Updated sysutils/wbm-useradmin to 1.370 [obache 2007-10-05]
 	Updated devel/monotone to 0.36nb3 [bjs 2007-10-05]
+	Updated lang/ruby18-base to 1.8.6.111 [taca 2007-10-06]
+	Updated devel/ruby-curses to 1.8.6.111 [taca 2007-10-06]
+	Updated devel/ruby-readline to 1.8.6.111 [taca 2007-10-06]
+	Updated databases/ruby-gdbm to 1.8.6.111 [taca 2007-10-06]
+	Updated x11/ruby-tk to 1.8.6.111 [taca 2007-10-06]
+	Updated lang/ruby18 to 1.8.6.111 [taca 2007-10-06]
+	Updated lang/ruby to 1.8.6.111 [taca 2007-10-06]
+	Updated devel/ruby-mode to 1.8.6.111 [taca 2007-10-06]
