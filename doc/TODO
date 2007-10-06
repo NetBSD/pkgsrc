@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6718 2007/10/05 15:52:46 obache Exp $
+$NetBSD: TODO,v 1.6719 2007/10/06 20:05:41 hira Exp $
 
 Suggested new packages
 ======================
@@ -874,7 +874,6 @@ Suggested package updates
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3
-	o openoffice2-2.3.0
 	o openssl-0.9.8e (in wip/)
 	o orca-2.20.0
 	o oregano-0.60.0
