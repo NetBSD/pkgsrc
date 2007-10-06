@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.10 2007/09/25 10:16:08 hira Exp $
+# $NetBSD: options.mk,v 1.11 2007/10/06 20:02:21 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
 PKG_OPTIONS_REQUIRED_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox # seamonkey firefox-gtk1 seamonkey-gtk1
-OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs cy da de \
-				el en-GB en-ZA eo es et fa fi fr ga gu-IN he \
-				hi-IN hr hu it ja ka km ko ku lt mk ml-IN    \
-				mr-IN nb ne nl nn nr ns or-IN pa-IN pl pt    \
-				pt-BR ru rw sh-YU sk sl sr-CS ss st sv sw-TZ \
-				ta-IN te-IN tg th ti-ER tn tr ts uk ur-IN ve \
-				vi xh zh-CN zh-TW zu
+PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
+# The list from instsetoo_native/util/pack.lst:OpenOfficeLanguagepack.
+OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs da de dz \
+				el en-GB en-ZA es et fi fr ga gl gu he hi-IN \
+				hr hu it ja ka km ko lt mk ml-IN mr-IN nb ne \
+				nl nn nr ns or-IN pa-IN pl pt ru rw sh-YU sk \
+				sl sr-CS ss st sv sw-TZ ta te-IN tg th ti-ER \
+				tr ts uk ur-IN ve vi xh zh-CN zh-TW zu
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
@@ -26,22 +26,22 @@ OO_LANGS+=	${l:S/^lang-//1}
 OO_LANGS?=	en-US
 
 .if !empty(PKG_OPTIONS:Mfirefox)
-CONFIGURE_ARGS+=	--with-system-mozilla --with-firefox
+CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 .include "../../www/firefox/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mfirefox-gtk1)
-CONFIGURE_ARGS+=	--with-system-mozilla --with-firefox
+CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 .include "../../www/firefox-gtk1/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mseamonkey)
-CONFIGURE_ARGS+=	--with-system-mozilla
+CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mseamonkey-gtk1)
-CONFIGURE_ARGS+=	--with-system-mozilla
+CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey-gtk1/buildlink3.mk"
 .endif
 

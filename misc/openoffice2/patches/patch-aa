@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2007/03/12 10:21:20 hira Exp $
+$NetBSD: patch-aa,v 1.4 2007/10/06 20:02:22 hira Exp $
 
---- sal/util/sal_netbsd.map.orig	2007-03-10 18:12:29.000000000 +0900
-+++ sal/util/sal_netbsd.map	2007-03-10 18:24:52.000000000 +0900
-@@ -0,0 +1,568 @@
+--- sal/util/sal_netbsd.map.orig	2007-09-27 06:14:49.000000000 +0900
++++ sal/util/sal_netbsd.map	2007-09-27 08:16:30.000000000 +0900
+@@ -0,0 +1,580 @@
 +UDK_3_0_0 {
 +    global:
 +        GetVersionInfo;
@@ -561,6 +561,18 @@ $NetBSD: patch-aa,v 1.3 2007/03/12 10:21:20 hira Exp $
 +		rtl_cache_alloc;
 +		rtl_cache_free;
 +} UDK_3.4;
++
++UDK_3.6 { # OOo 2.3
++    global:
++        osl_getAsciiFunctionSymbol;
++        osl_getModuleHandle;
++        rtl_uString_intern;
++        rtl_uString_internConvert;
++        rtl_ustr_indexOfAscii_WithLength;
++        rtl_ustr_lastIndexOfAscii_WithLength;
++        rtl_uString_iterateCodePoints;
++        rtl_uString_newFromCodePoints;
++} UDK_3.5;
 +
 +PRIVATE_1.0 {
 +    global:
