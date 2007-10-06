@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2007/10/05 15:47:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/10/06 07:31:41 adam Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
 share/examples/webmin/cron/config
+share/examples/webmin/cron/tempdelete.pl
 share/examples/webmin/init/config
 share/examples/webmin/inittab/config
 share/examples/webmin/install-dir
