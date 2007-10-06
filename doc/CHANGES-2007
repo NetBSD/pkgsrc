@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2115 2007/10/06 06:19:50 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2116 2007/10/06 15:39:21 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3933,3 +3933,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/ruby18 to 1.8.6.111 [taca 2007-10-06]
 	Updated lang/ruby to 1.8.6.111 [taca 2007-10-06]
 	Updated devel/ruby-mode to 1.8.6.111 [taca 2007-10-06]
+	Updated misc/esniper to 2.17.1 [heinz 2007-10-06]
