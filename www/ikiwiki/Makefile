@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/10/02 22:19:38 reed Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/06 00:09:39 joerg Exp $
 #
 
 DISTNAME=	ikiwiki_2.6.1
@@ -61,6 +61,8 @@ REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
 REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild
 REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm
 REPLACE_PERL+=	doc/ikiwiki.setup doc/w3mmode/ikiwiki.setup
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man8
 
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} a+r IkiWiki/Rcs/git.pm \
