@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2007/03/24 19:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2007/10/06 00:16:28 joerg Exp $
 #
 
 DISTNAME=	grail-0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grail/}
 EXTRACT_SUFX=	.tgz
@@ -11,14 +11,17 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://grail.sourceforge.net/
 COMMENT=	Grail(TM) is a web browser written in Python
 
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 GRAILDIR=	share/misc/grail-0.6
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PYTHON_VERSIONS_ACCEPTED= 15
 
+REPLACE_PYTHON=	grsh.py
+
 INSTALLATION_DIRS=	bin share/misc
+
+do-configure:
 
 do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
