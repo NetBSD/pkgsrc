@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.6 2007/04/20 14:44:11 hira Exp $
+$NetBSD: patch-ba,v 1.7 2007/10/06 20:02:22 hira Exp $
 
---- config_office/configure.orig	2007-01-19 22:01:19.000000000 +0900
-+++ config_office/configure	2007-04-20 06:56:17.000000000 +0900
-@@ -2975,11 +2975,11 @@
+--- config_office/configure.orig	2007-08-24 21:31:18.000000000 +0900
++++ config_office/configure	2007-09-27 10:52:53.000000000 +0900
+@@ -3010,11 +3010,11 @@
  		test_cups=no
  		_os=OSF1
  		;;
@@ -16,7 +16,7 @@ $NetBSD: patch-ba,v 1.6 2007/04/20 14:44:11 hira Exp $
  		PTHREAD_CFLAGS="-pthread"
  		PTHREAD_LIBS="-pthread -lpthread"
  		_os=NetBSD
-@@ -8261,7 +8261,7 @@
+@@ -9544,7 +9544,7 @@
           echo "JAVA_HOME was not explicitly informed with --with-jdk-home. the configure script" >> warn
           echo "attempted to find JAVA_HOME automatically, but apparently it failed" >> warn
           echo "in case JAVA_HOME is incorrectly set, some projects with not be built correctly" >> warn
@@ -25,7 +25,41 @@ $NetBSD: patch-ba,v 1.6 2007/04/20 14:44:11 hira Exp $
               echo "e.g. install java-1.4.2-gcj-compat-devel and use --with-jdk-home=/usr/lib/jvm/java-1.4.2-gcj" >> warn
           fi
        fi
-@@ -21383,7 +21383,7 @@
+@@ -12477,7 +12477,7 @@
+ if test -n "$with_system_libxslt" -o -n "$with_system_libs" && \
+    test "$with_system_libxslt" != "no"; then
+     if test -z "$with_system_libxml" -a -z "$with_system_libs" || \
+-      test "$with_system_libxml" == "no"; then
++      test "$with_system_libxml" = "no"; then
+       # somehow AC_MSG_WARN won't work...
+        echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml"
+        echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml" >> warn
+@@ -12487,7 +12487,7 @@
+ if test -n "$with_system_libxml" -o -n "$with_system_libs" && \
+    test "$with_system_libxml" != "no"; then
+     if test -z "$with_system_libxslt" -a -z "$with_system_libs" || \
+-      test "$with_system_libxslt" == "no"; then
++      test "$with_system_libxslt" = "no"; then
+       # somehow AC_MSG_WARN won't work...
+        echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt"
+        echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt" >> warn
+@@ -12970,13 +12970,13 @@
+ 
+ 
+    python_include=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('INCLUDEPY');"`
++   python_ldflags=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('LDFLAGS');"`
+    python_version=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('VERSION');"`
+    PYTHON_CFLAGS="-I$python_include"
+-
+    if test "$_os" = "Darwin"; then
+       PYTHON_LIBS="-framework Python"
+    else
+-      PYTHON_LIBS="-lpython$python_version"
++      PYTHON_LIBS="-lpython$python_version $python_ldflags"
+    fi
+ 
+       save_CPPFLAGS="$CPPFLAGS"
+@@ -22818,7 +22818,7 @@
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"

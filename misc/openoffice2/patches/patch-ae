@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2007/03/04 13:11:18 hira Exp $
+$NetBSD: patch-ae,v 1.3 2007/10/06 20:02:22 hira Exp $
 
---- sal/util/makefile.mk.orig	2007-02-17 17:25:20.000000000 +0900
-+++ sal/util/makefile.mk	2007-02-17 17:26:16.000000000 +0900
-@@ -97,7 +97,11 @@
+--- sal/util/makefile.mk.orig	2007-08-18 02:47:11.000000000 +0900
++++ sal/util/makefile.mk	2007-09-26 17:19:33.000000000 +0900
+@@ -100,7 +100,11 @@
  .ENDIF
  SHL1IMPLIB= i$(TARGET)
  
@@ -14,4 +14,4 @@ $NetBSD: patch-ae,v 1.2 2007/03/04 13:11:18 hira Exp $
 +.ENDIF
  
  .IF "$(GUI)"=="WNT"
- .IF "$(COM)"!="GCC"
+ UWINAPILIB=     $(LB)$/uwinapi.lib
