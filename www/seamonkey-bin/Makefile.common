@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2007/08/23 18:20:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/10/07 19:59:29 dmcmahill Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -33,7 +33,7 @@ EMUL_REQD=		suse>=7.3
 .  if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
 DEPENDS+=		gtk2+>=2.2:../../x11/gtk2
 .  else
-DEPENDS+=		gtk2+>=1.2:../../x11/gtk
+DEPENDS+=		gtk+>=1.2:../../x11/gtk
 .  endif
 .endif
 
