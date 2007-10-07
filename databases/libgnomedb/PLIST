@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/09/25 10:54:10 hira Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/10/07 07:39:52 hira Exp $
 bin/gnome-database-properties-3.0
 bin/gnome-db-browser
 bin/gnome-db-demo
@@ -322,7 +322,7 @@ share/pixmaps/libgnomedb-3.0/gnome-db-within-transaction_24x24.png
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/libgnomedb/plugins
 @dirrm lib/libgnomedb
-@comment in libglade2: @dirrm lib/libglade/2.0
+@comment in libglade: @dirrm lib/libglade/2.0
 @dirrm include/libgnomedb-3.0/libgnomedb/data-entries
 @dirrm include/libgnomedb-3.0/libgnomedb-graph
 @dirrm include/libgnomedb-3.0/libgnomedb-extra
