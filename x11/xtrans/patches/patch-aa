@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/12/15 16:43:57 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/07 12:39:29 joerg Exp $
 
---- Xtranssock.c.orig	2006-12-15 16:31:00.000000000 +0000
+--- Xtranssock.c.orig	2006-09-13 23:06:06.000000000 +0200
 +++ Xtranssock.c
 @@ -53,6 +53,7 @@ from the copyright holders.
   * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
@@ -10,3 +10,15 @@ $NetBSD: patch-aa,v 1.1 2006/12/15 16:43:57 joerg Exp $
  #include <ctype.h>
  #ifdef XTHREADS
  #include <X11/Xthreads.h>
+@@ -286,11 +287,6 @@ static int TRANS(SocketINETClose) (Xtran
+  * that don't have IPv6 support.
+  */
+ #if defined(IPv6) && defined(AF_INET6)
+-static const struct in6_addr local_in6addr_any = IN6ADDR_ANY_INIT;
+-#pragma weak in6addr_any = local_in6addr_any
+-#ifndef __USLC__
+-#pragma weak getaddrinfo
+-#endif
+ static int haveIPv6 = 1;
+ #endif
+ 
