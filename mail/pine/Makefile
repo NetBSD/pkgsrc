@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2007/08/05 04:55:43 obache Exp $
+# $NetBSD: Makefile,v 1.115 2007/10/07 15:49:17 obache Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -57,7 +57,7 @@ PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
 .endif
 
 .if !empty(PKG_OPTIONS:Mfancythreads)
-PATCH_SITES+=		http://www.math.washington.edu/~chappa/pine/patches/pine4.64/
+PATCH_SITES+=		http://staff.washington.edu/chappa/pine/patches/pine4.64/
 PATCHFILES+=		fancy.patch.gz
 PATCH_DIST_STRIP=	-p1
 .endif
