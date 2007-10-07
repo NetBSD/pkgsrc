@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.6 2005/03/24 17:46:01 tv Exp $
+$NetBSD: README,v 1.7 2007/10/07 12:59:13 kano Exp $
 
  0 Package Views
  ===============
@@ -36,7 +36,7 @@ EuroBSDCon in November 2002 that described the work he did on the
 is highly-recommended reading for a more complete understanding of
 package views principles and is available at:
 
-	http://www.NetBSD.org/Documentation/software/pkgviews.pdf
+	http://www.NetBSD.org/docs/software/pkgviews.pdf
 
 Unfortunately, Alistair ran out of time to devote to integrating his
 work into the main pkgsrc branch.  The code he developed languished on

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/01 20:20:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/07 12:59:15 kano Exp $
 #
 
 DISTNAME=	xen-2.0.7-install-x86_32
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cl.cam.ac.uk/Research/SRG/netos/xen/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/Ports/xen/
+HOMEPAGE=	http://www.NetBSD.org/ports/xen/
 COMMENT=	Xen Kernel
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386

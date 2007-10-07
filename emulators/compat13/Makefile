@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2007/08/30 16:54:06 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/10/07 12:59:11 kano Exp $
 
 COMPAT_PKG=		compat13	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.3
 PKGREVISION=		3
 
-HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.3/index.html
+HOMEPAGE=		http://www.NetBSD.org/releases/formal-1.3/index.html
 COMMENT=		Shared libraries for NetBSD 1.3 compatibility
 
 EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386 netbsd-m68k	\

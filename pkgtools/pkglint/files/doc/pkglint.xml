@@ -3,7 +3,7 @@
 	"http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
 	<!ENTITY pkglint "<literal>pkglint</literal>">
-	<!ENTITY pkgsrc-guide "http://www.NetBSD.org/Documentation/pkgsrc">
+	<!ENTITY pkgsrc-guide "http://www.NetBSD.org/docs/pkgsrc">
 
 	<!ENTITY chap.intro SYSTEM "chap.intro.xml">
 	<!ENTITY chap.defs SYSTEM "chap.defs.xml">
@@ -14,7 +14,7 @@
 	<!ENTITY chap.future SYSTEM "chap.future.xml">
 ]>
 
-<!-- $NetBSD: pkglint.xml,v 1.4 2006/11/25 20:27:42 rillig Exp $ -->
+<!-- $NetBSD: pkglint.xml,v 1.5 2007/10/07 12:59:15 kano Exp $ -->
 
 <book>
 <title>Design and implementation of &pkglint;</title>

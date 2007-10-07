@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.22 2006/07/06 21:14:20 jlam Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.23 2007/10/07 12:59:16 kano Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -38,7 +38,7 @@ For a summary on how to use the package collection, go to the
 
 <p>Problem reports, updates or suggestions for this package should be
 reported with
-<a href="http://www.NetBSD.org/Misc/send-pr.html">send-pr.</a></p>
+<a href="http://www.NetBSD.org/support/send-pr.html">send-pr.</a></p>
 
 <P>
 The following security vulnerabilities are known for %%PORT%%
