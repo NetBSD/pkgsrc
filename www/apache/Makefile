@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2007/07/04 20:55:02 jlam Exp $
+# $NetBSD: Makefile,v 1.192 2007/10/07 20:49:57 dmcmahill Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -166,6 +166,18 @@ SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
 SUBST_STAGE.paths=	post-patch
 
+.include "../../mk/bdb.buildlink3.mk"
+SUBST_CLASSES+=         db
+SUBST_STAGE.db=         post-patch
+SUBST_FILES.db=         src/modules/standard/mod_auth_db.module
+SUBST_SED.db+=          -e 's,@DB_LIB@,${BDB_LIBS},g'
+SUBST_SED.db+=          -e 's,@DB_VERSION@,${BDB_TYPE},g'
+.if defined(BDB_BASE) && !empty(BDB_BASE)
+SUBST_SED.db+=          -e 's,@DB_CFLAGS@,-I${BDB_BASE}/include,g'
+.else
+SUBST_SED.db+=          -e 's,@DB_CFLAGS@,,g'
+.endif
+
 REPLACE_PERL=		docs/cgi-examples/printenv
 
 PKG_GROUPS=		${APACHE_GROUP}
@@ -176,7 +188,6 @@ MAKE_ENV+=		FIND=${FIND:Q} CHGRP=${CHGRP:Q}
 
 .include "../../devel/libmm/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 
 post-extract:
