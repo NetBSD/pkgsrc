@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/11/13 21:31:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/10/07 07:39:53 hira Exp $
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-bpath.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-clipgroup.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-line.h
@@ -118,6 +118,6 @@ share/locale/zh_CN/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
 @dirrm share/gtk-doc/html/libgnomecanvas
-@comment in libglade2: @dirrm lib/libglade/2.0
+@comment in libglade: @dirrm lib/libglade/2.0
 @dirrm include/libgnomecanvas-2.0/libgnomecanvas
 @dirrm include/libgnomecanvas-2.0
