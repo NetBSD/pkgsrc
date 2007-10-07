@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2007/08/30 16:54:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2007/10/07 12:59:12 kano Exp $
 
 COMPAT_PKG=		compat16	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.6
 
-HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.6/index.html
+HOMEPAGE=		http://www.NetBSD.org/releases/formal-1.6/index.html
 COMMENT=		Shared libraries for NetBSD 1.6 compatibility
 
 .if defined(NETBSD_COMPAT32)

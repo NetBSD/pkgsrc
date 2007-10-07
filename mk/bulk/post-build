@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.68 2007/01/21 23:42:29 rillig Exp $
+# $NetBSD: post-build,v 1.69 2007/10/07 12:59:13 kano Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -655,7 +655,7 @@ The following cache files were used during the build:
 <!-- <li>See the list of <a href="../index.html">all log files</a>. -->
 <li>Visit the <a href="http://www.NetBSD.org">NetBSD web site</a>.
 <li>Learn more about
-    <a href="http://www.NetBSD.org/Documentation/software/packages.html">
+    <a href="http://www.NetBSD.org/docs/software/packages.html">
     The NetBSD Packages Collection</a>.
 </ul>
 </p>
