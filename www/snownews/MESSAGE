@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2007/10/07 12:59:16 kano Exp $
 
 The NetBSD project provides several RSS feeds of interest to NetBSD users
 and developers. Information on these feeds can be found at:
 
-   http://www.netbsd.org/Changes/rss.html
+   http://www.netbsd.org/changes/rss.html
 ===========================================================================
