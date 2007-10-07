@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/08/30 16:54:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/07 12:59:12 kano Exp $
 
 COMPAT_PKG=		compat16	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.6
 
-HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.6/index.html
+HOMEPAGE=		http://www.NetBSD.org/releases/formal-1.6/index.html
 COMMENT=		Additional shared libraries for NetBSD 1.6 compatibility
 
 EMUL_PLATFORMS=		netbsd-i386 netbsd-sparc
