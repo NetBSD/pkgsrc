@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/25 10:54:16 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/07 07:39:53 hira Exp $
 bin/cddb-slave2-properties
 bin/gnome-audio-profiles-properties
 bin/gnome-sound-recorder
@@ -291,7 +291,7 @@ share/pixmaps/gstreamer-properties.png
 @dirrm share/gnome-media
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
-@comment in libglade2: @dirrm lib/libglade/2.0
+@comment in libglade: @dirrm lib/libglade/2.0
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/gnome-media/profiles
 @dirrm include/gnome-media
