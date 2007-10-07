@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/08/30 16:54:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/07 12:59:13 kano Exp $
 
 COMPAT_PKG=		compat30	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		3.0
 
-HOMEPAGE=		http://www.NetBSD.org/Releases/formal-3.0/index.html
+HOMEPAGE=		http://www.NetBSD.org/releases/formal-3.0/index.html
 COMMENT=		Shared libraries for NetBSD 3.0 compatibility
 
 .if defined(NETBSD_COMPAT32)

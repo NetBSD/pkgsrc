@@ -65,7 +65,7 @@ General information about pkgsrc:
 L<http://www.pkgsrc.org/>
 
 The pkgsrc guide:
-L<http://www.netbsd.org/Documentation/pkgsrc/>
+L<http://www.netbsd.org/docs/pkgsrc/>
 
 =head1 AUTHORS
 
