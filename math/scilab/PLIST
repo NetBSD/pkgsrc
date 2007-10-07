@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/10/05 23:15:21 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/10/07 20:35:04 dmcmahill Exp $
 bin/intersci
 bin/intersci-n
 bin/scilab
@@ -30,7 +30,6 @@ lib/${PKGNAME}/bin/Slatexpr
 lib/${PKGNAME}/bin/Slatexpr2
 lib/${PKGNAME}/bin/Slatexprs
 lib/${PKGNAME}/bin/Slpr
-lib/${PKGNAME}/bin/dold
 lib/${PKGNAME}/bin/f77-linux
 lib/${PKGNAME}/bin/intersci
 lib/${PKGNAME}/bin/intersci-n

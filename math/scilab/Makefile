@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2007/10/05 23:15:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.74 2007/10/07 20:35:04 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/
@@ -102,6 +102,7 @@ post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
 	${LN} -s ${LOCALBASE}/bin/libtool ${PREFIX}/lib/${SCIBASE}/libtool
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/bin/dold
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.guess
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/config.sub
