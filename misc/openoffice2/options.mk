@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.11 2007/10/06 20:02:21 hira Exp $
+# $NetBSD: options.mk,v 1.12 2007/10/08 01:15:01 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
 PKG_OPTIONS_REQUIRED_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
+PKG_OPTIONS_GROUP.browser=	firefox seamonkey ooo-without-browser
+				# firefox-gtk1 seamonkey-gtk1
 # The list from instsetoo_native/util/pack.lst:OpenOfficeLanguagepack.
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs da de dz \
 				el en-GB en-ZA es et fi fr ga gl gu he hi-IN \
@@ -43,6 +44,10 @@ CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .if !empty(PKG_OPTIONS:Mseamonkey-gtk1)
 CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey-gtk1/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mooo-without-browser)
+CONFIGURE_ARGS+=	--disable-mozilla
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)
