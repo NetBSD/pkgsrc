@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.37 2007/08/02 15:15:20 taca Exp $
+# $NetBSD: Makefile,v 1.38 2007/10/08 20:38:17 adam Exp $
 
-DISTNAME=		libpcap-0.9.7
-SVR4_PKGNAME=		lpcap
-CATEGORIES=		net
+DISTNAME=	libpcap-0.9.7
+SVR4_PKGNAME=	lpcap
+CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tcpdump.org/
-COMMENT=		System-independent interface for user-level packet capture
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.tcpdump.org/
+COMMENT=	System-independent interface for user-level packet capture
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gm4 lex
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
