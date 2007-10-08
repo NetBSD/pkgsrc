@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.28 2007/08/02 08:48:29 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.29 2007/10/08 10:13:03 ghen Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		2.0.0.6
@@ -29,6 +29,7 @@ post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \
 	${SETENV} LD_LIBRARY_PATH=.:${PREFIX}/lib MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
 		./${MOZILLA_BIN} -register
+	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
 
 .include "../../mk/bsd.fast.prefs.mk"
 
