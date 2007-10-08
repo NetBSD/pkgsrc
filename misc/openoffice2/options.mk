@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.12 2007/10/08 01:15:01 hira Exp $
+# $NetBSD: options.mk,v 1.13 2007/10/08 07:05:14 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
-PKG_OPTIONS_REQUIRED_GROUPS=	browser
-PKG_OPTIONS_GROUP.browser=	firefox seamonkey ooo-without-browser
-				# firefox-gtk1 seamonkey-gtk1
+PKG_OPTIONS_OPTIONAL_GROUPS=	browser
+PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
 # The list from instsetoo_native/util/pack.lst:OpenOfficeLanguagepack.
 OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs da de dz \
 				el en-GB en-ZA es et fi fr ga gl gu he hi-IN \
@@ -29,24 +28,16 @@ OO_LANGS?=	en-US
 .if !empty(PKG_OPTIONS:Mfirefox)
 CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 .include "../../www/firefox/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mfirefox-gtk1)
-CONFIGURE_ARGS+=	--with-system-mozilla=firefox
-.include "../../www/firefox-gtk1/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mseamonkey)
+.elif !empty(PKG_OPTIONS:Mseamonkey)
 CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mseamonkey-gtk1)
-CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
-.include "../../www/seamonkey-gtk1/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mooo-without-browser)
+#.elif !empty(PKG_OPTIONS:Mfirefox-gtk1)
+#CONFIGURE_ARGS+=	--with-system-mozilla=firefox
+#.include "../../www/firefox-gtk1/buildlink3.mk"
+#.elif !empty(PKG_OPTIONS:Mseamonkey-gtk1)
+#CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
+#.include "../../www/seamonkey-gtk1/buildlink3.mk"
+.else
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
 
