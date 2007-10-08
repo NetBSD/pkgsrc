@@ -1,17 +1,16 @@
-# $NetBSD: DEINSTALL,v 1.5 2007/10/08 08:47:03 obache Exp $
+# $NetBSD: INSTALL,v 1.1 2007/10/08 08:47:05 obache Exp $
 
 case ${STAGE} in
-DEINSTALL)
+POST-INSTALL)
 	WEBMIN_DIR="@WEBMIN_DIR@"
 	WEBMIN_CONFIG="${PKG_SYSCONFDIR}"
 	WEBMIN_VAR="@WEBMIN_VARDIR@"
 	${TEST} ! -f "${WEBMIN_CONFIG}/var-path" ||
 		WEBMIN_VAR=`${CAT} ${WEBMIN_CONFIG}/var-path`
 	export WEBMIN_CONFIG WEBMIN_VAR
-	if ${TEST} -x "${WEBMIN_DIR}/run-uninstalls.pl"; then
+	if ${TEST} -x "${WEBMIN_DIR}/run-postinstalls.pl"; then
 		( cd ${WEBMIN_DIR} &&
-		  ${WEBMIN_DIR}/run-uninstalls.pl @WEBMIN_MINIMAL_MODULES@ )
+		  ${WEBMIN_DIR}/run-postinstalls.pl @WEBMIN_MINIMAL_MODULES@ )
 	fi
-	${RM} -f @PKG_SYSCONFDIR@/module.infos.cache
 	;;
 esac
