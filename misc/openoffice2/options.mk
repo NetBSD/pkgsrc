@@ -1,16 +1,18 @@
-# $NetBSD: options.mk,v 1.13 2007/10/08 07:05:14 hira Exp $
+# $NetBSD: options.mk,v 1.14 2007/10/08 15:06:07 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
-# The list from instsetoo_native/util/pack.lst:OpenOfficeLanguagepack.
-OO_SUPPORTED_LANGUAGES=		en-US af as-IN be-BY bg br bs ca cs da de dz \
-				el en-GB en-ZA es et fi fr ga gl gu he hi-IN \
-				hr hu it ja ka km ko lt mk ml-IN mr-IN nb ne \
-				nl nn nr ns or-IN pa-IN pl pt ru rw sh-YU sk \
-				sl sr-CS ss st sv sw-TZ ta te-IN tg th ti-ER \
-				tr ts uk ur-IN ve vi xh zh-CN zh-TW zu
+# The list from solenv/inc/postset.mk:completelangiso.
+OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
+				cs cy da de dz el en-GB en-US en-ZA eo es et \
+				eu fa fi fr ga gl gu-IN he hi-IN hr hu it ja \
+				ka km kn-IN ko ku lo lt lv mk ms ml-IN mr-IN \
+				ne nb nl nn nr ns or-IN pa-IN pl pt pt-BR ru \
+				rw sk sl sh-YU sr-CS ss st sv sw sw-TZ sx    \
+				te-IN ti-ER ta-IN th tn tr ts tg ur-IN uk ve \
+				vi xh zh-CN zh-TW zu
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
