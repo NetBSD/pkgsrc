@@ -1,4 +1,4 @@
-# $NetBSD: setup-pre.sh,v 1.1 2006/05/16 04:01:28 jlam Exp $
+# $NetBSD: setup-pre.sh,v 1.2 2007/10/08 08:47:09 obache Exp $
 #
 # This shell script is sourced by webmin's setup.sh to provide local
 # overrides and defaults for configuration settings.
@@ -24,5 +24,5 @@ ssl=1			# always use SSL
 atboot=0		# don't auto-configure to run at boot-time
 noperlpath=		# fix up path to perl in scripts
 nouninstall=1		# don't auto-create the uninstall script
-nopostinstalls=1	# don't auto-run the postinstall actions during setup
+nopostinstall=1		# don't auto-run the postinstall actions during setup
 nostart=1		# don't auto-start the webmin server after setup
