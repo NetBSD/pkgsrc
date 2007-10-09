@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/07 12:59:13 kano Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:09 martti Exp $
 
 COMPAT_PKG=		compat30	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		3.0
@@ -33,7 +33,7 @@ COMPAT_VERSION=		3.1
 .if defined(NETBSD_COMPAT32)
 COMPAT_EXTRAS=	# empty
 .  for _netbsd_ in ${ACCEPTABLE_NETBSD}
-COMPAT_EXTRAS=	netbsd32_compat30-extras-${COMPAT_VERSION}{,nb*}:../../emulators/netbsd32_compat30-extras	
+COMPAT_EXTRAS=	netbsd32_compat30-extras-${COMPAT_VERSION}{,nb*}:../../emulators/netbsd32_compat30-extras
 .  endfor
 .  if !empty(COMPAT_EXTRAS)
 DEPENDS+=	${COMPAT_EXTRAS}

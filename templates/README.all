@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.all,v 1.5 2001/01/16 02:37:46 hubertf Exp $ -->
+<!-- $NetBSD: README.all,v 1.6 2007/10/09 19:19:15 martti Exp $ -->
 <html>
 <head>
 <title>All NetBSD Packages</title>
@@ -15,7 +15,7 @@
 The following list contains all
 %%NPKGS%%
 packages currently available
-in the NetBSD Packages Collection, sorted alphabetically. 
+in the NetBSD Packages Collection, sorted alphabetically.
 Please select an entry for more details!
 </p>
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.40 2007/07/25 12:00:21 adrianp Exp $
+# $NetBSD: upload,v 1.41 2007/10/09 19:19:13 martti Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -27,8 +27,8 @@ Usage:  $prog [-c|--config <file>] [-n|--no-upload] [-d|--debug] [-v|--verbose]
 	$prog -h|--help
         $prog -V|--version
 
-    -c | --config <file>               
-			Load the following configuration file instead of 
+    -c | --config <file>
+			Load the following configuration file instead of
 			the default one.
 
     -d|--debug          Preserves some intermediate files to help
@@ -64,8 +64,8 @@ EOF
 
 # print out error message and exit 1
 die () {
-	echo "$0: error:" 1>&2 
-	for i in "$@"; do 
+	echo "$0: error:" 1>&2
+	for i in "$@"; do
 		echo "    $i" 1>&2
 	done
 	exit 1
