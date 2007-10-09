@@ -1,8 +1,17 @@
-$NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
+$NetBSD: patch-ce,v 1.5 2007/10/09 21:26:11 heinz Exp $
 
---- interface/cooked_interface.c.orig	Thu Apr 20 00:41:04 2000
+--- interface/cooked_interface.c.orig	2000-04-20 00:41:04.000000000 +0200
 +++ interface/cooked_interface.c
-@@ -10,9 +10,11 @@
+@@ -1,6 +1,8 @@
+ /******************************************************************
+  * CopyPolicy: GNU Public License 2 applies
+  * Copyright (C) Monty xiphmont@mit.edu
++ * FreeBSD porting (c) 2003
++ *	Simon 'corecode' Schubert <corecode@corecode.ath.cx>
+  *
+  * CDROM code specific to the cooked ioctl interface
+  *
+@@ -10,9 +12,11 @@
  #include "common_interface.h"
  #include "utils.h"
  
@@ -14,7 +23,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
    struct cdrom_tochdr hdr;
    struct cdrom_tocentry entry;
  
-@@ -52,6 +54,45 @@ static int cooked_readtoc (cdrom_drive *
+@@ -52,6 +56,45 @@ static int cooked_readtoc (cdrom_drive *
    d->disc_toc[i].dwStartSector = entry.cdte_addr.lba;
  
    tracks=hdr.cdth_trk1+1;
@@ -60,7 +69,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
    d->cd_extra=FixupTOC(d,tracks);
    return(--tracks);  /* without lead-out */
  }
-@@ -60,10 +101,15 @@ static int cooked_readtoc (cdrom_drive *
+@@ -60,10 +103,15 @@ static int cooked_readtoc (cdrom_drive *
  /* Set operating speed */
  static int cooked_setspeed(cdrom_drive *d, int speed)
  {
@@ -76,7 +85,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
  }
  
  
-@@ -72,6 +118,7 @@ static int cooked_setspeed(cdrom_drive *
+@@ -72,6 +120,7 @@ static int cooked_setspeed(cdrom_drive *
   */
  
  static long cooked_read (cdrom_drive *d, void *p, long begin, long sectors){
@@ -84,7 +93,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
    int retry_count,err;
    struct cdrom_read_audio arg;
    char *buffer=(char *)p;
-@@ -127,7 +174,147 @@ static long cooked_read (cdrom_drive *d,
+@@ -127,7 +176,147 @@ static long cooked_read (cdrom_drive *d,
    } while (err);
    
    return(sectors);
@@ -232,7 +241,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
  
  /* hook */
  static int Dummy (cdrom_drive *d,int Switch){
-@@ -191,8 +378,11 @@ static void check_exceptions(cdrom_drive
+@@ -191,8 +380,11 @@ static void check_exceptions(cdrom_drive
  
  /* set function pointers to use the ioctl routines */
  int cooked_init_drive (cdrom_drive *d){
@@ -245,7 +254,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
    switch(d->drive_type){
    case MATSUSHITA_CDROM_MAJOR:	/* sbpcd 1 */
    case MATSUSHITA_CDROM2_MAJOR:	/* sbpcd 2 */
-@@ -243,6 +433,9 @@ int cooked_init_drive (cdrom_drive *d){
+@@ -243,6 +435,9 @@ int cooked_init_drive (cdrom_drive *d){
    default:
      d->nsectors=40; 
    }
@@ -255,7 +264,7 @@ $NetBSD: patch-ce,v 1.4 2006/11/05 13:45:37 wiz Exp $
    d->enable_cdda = Dummy;
    d->read_audio = cooked_read;
    d->set_speed = cooked_setspeed;
-@@ -255,5 +448,6 @@ int cooked_init_drive (cdrom_drive *d){
+@@ -255,5 +450,6 @@ int cooked_init_drive (cdrom_drive *d){
    if((ret=verify_read_command(d)))return(ret);
    d->error_retry=1;
    return(0);
