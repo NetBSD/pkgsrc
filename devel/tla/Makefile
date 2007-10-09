@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/06/08 18:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/10/09 19:19:09 martti Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -19,7 +19,7 @@ CHECK_PORTABILITY_SKIP+=	\
 	src/tla/tests/changeset-tests/chmod_random \
 	src/tla/tests/changeset-tests/run-spaces-test.sh \
 	src/tla/tests/changeset-tests/run-test.sh
-    
+
 
 REPLACE_BASH+=	src/tla/tests/changeset-tests/chmod_random
 USE_TOOLS+=	bash

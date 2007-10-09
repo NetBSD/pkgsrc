@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink3.mk,v 1.9 2007/10/01 07:21:44 rillig Exp $
+# $NetBSD: x11.buildlink3.mk,v 1.10 2007/10/09 19:19:12 martti Exp $
 #
 # This file should only be included from the buildlink3.mk files from
 # the modular Xorg packages and only in the case that the native X11
@@ -18,7 +18,7 @@ USE_X11=	yes
 # Sanity checks.
 #
 
-.  if ${X11_TYPE} != "native" 
+.  if ${X11_TYPE} != "native"
 _WRONG_X11_TYPE:=	${X11_TYPE}
 PKG_FAIL_REASON+=	"Do not include x11.version.mk for X11_TYPE != \"native\"."
 X11_TYPE:=		native

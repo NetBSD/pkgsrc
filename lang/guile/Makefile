@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/07/20 00:09:21 gdt Exp $
+# $NetBSD: Makefile,v 1.76 2007/10/09 19:19:10 martti Exp $
 
 DISTNAME=		guile-1.8.2
 CATEGORIES=		lang
@@ -18,7 +18,7 @@ PTHREAD_AUTO_VARS=	YES
 INFO_FILES=		# PLIST
 # couldn't figure out how to work around an error on solaris-2.9/sparc with gcc when
 # compiling ${WRKSRC}/libguile/filesys.c.  The warning is that readdir64_r was missing
-# a prototype.  
+# a prototype.
 CONFIGURE_ARGS+=	--disable-error-on-warning
 #CONFIGURE_ARGS+=	--without-threads
 TEST_DIRS=		${WRKSRC}
@@ -33,13 +33,13 @@ OWN_DIRS=		${PREFIX}/share/guile/site
 # up ./strings.h which tries to include scmconfig.h which doesn't exist
 # yet.  While not a clean fix, this seems to work around the problem.
 #
-# 
+#
 # for info on the slib part, see
 # http://lists.gnu.org/archive/html/guile-user/2006-11/msg00035.html
 post-patch:
 	${TOUCH} ${WRKSRC}/libguile/scmconfig.h
 	echo "(define-module (ice-9 slib))" > ${WRKSRC}/ice-9/slib.scm
-	echo "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm 
+	echo "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	ac_cv_type_complex_double=no

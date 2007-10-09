@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/06/27 22:52:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/09 19:19:09 martti Exp $
 #
 
 DISTNAME=		cogito-0.18.2
@@ -13,12 +13,12 @@ COMMENT=		Version control system of the Linux kernel
 
 DEPENDS+=		scmgit-[0-9]*:../../devel/scmgit
 
-USE_TOOLS+=		gmake bash:run fgrep:run grep:run mktemp:run xargs:run 
+USE_TOOLS+=		gmake bash:run fgrep:run grep:run mktemp:run xargs:run
 MAKE_FLAGS+=		prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-# we need gnu-ish versions of these.  In particular, we require 
+# we need gnu-ish versions of these.  In particular, we require
 # that grep accept -q and xargs accept -0
 .if ${OPSYS} == "SunOS"
 

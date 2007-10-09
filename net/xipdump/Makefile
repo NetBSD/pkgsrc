@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/09/21 20:15:10 adrianp Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/09 19:19:14 martti Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -15,7 +15,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CFLAGS+=	-I${PREFIX}/include 
+CFLAGS+=	-I${PREFIX}/include
 LIBS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lnet
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man8
