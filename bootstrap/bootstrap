@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.113 2007/09/29 15:50:16 rillig Exp $
+# $NetBSD: bootstrap,v 1.114 2007/10/09 01:10:19 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -307,7 +307,7 @@ while [ $# -gt 0 ]; do
 	--varbase=*)	varbase=`get_optarg "$1"` ;;
 	--varbase)	varbase="$2"; shift ;;
 	--fetch-cmd=*)	fetch_cmd=`get_optarg "$1"` ;;
-	--fetch-cmd)	fetch_cmd="$a"; shift ;;
+	--fetch-cmd)	fetch_cmd="$2"; shift ;;
 	--compiler=*)	compiler=`get_optarg "$1"` ;;
 	--compiler)	compiler="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
