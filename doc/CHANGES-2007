@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2120 2007/10/08 10:13:56 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2121 2007/10/09 20:18:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-apache to 1.370nb1 [obache 2007-10-08]
 	Updated mail/thunderbird to 2.0.0.6nb1 [ghen 2007-10-08]
 	Updated mail/thunderbird-gtk1 to 2.0.0.6nb1 [ghen 2007-10-08]
+	Updated wm/fluxbox to 1.0.0 [xtraeme 2007-10-09]
