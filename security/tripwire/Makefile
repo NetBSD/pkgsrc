@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/04 21:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/10/09 12:49:23 rillig Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -12,11 +12,12 @@ COMMENT=	File and directory integrity checker
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
 
-
 PKG_SYSCONFSUBDIR=	tripwire
 OWN_DIRS=		${PKG_SYSCONFDIR}/databases
 EGDIR=			${PREFIX}/share/examples/tripwire
 CONF_FILES=		${EGDIR}/tripwire.conf ${PKG_SYSCONFDIR}/tripwire.conf
+
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 post-extract:
 	cd ${WRKDIR} && ${PAX} -O -rf T1.2.tar
@@ -32,8 +33,6 @@ pre-configure:
 PRE_ROOT_CMD=	${CHMOD} -R go+rwx ${WRKDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tripwire
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/designdoc.ps ${PREFIX}/share/doc/tripwire
 	${SED} -e 's|@localbase@|${LOCALBASE}|g' -e 's|@x11base@|${X11BASE}|g' \
 		${FILESDIR}/tw.conf.${LOWER_OPSYS} > ${EGDIR}/tripwire.conf
