@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/20 17:46:03 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/10/09 19:19:14 martti Exp $
 
 DISTNAME=		gofish-1.1
 PKGREVISION=		2
@@ -41,7 +41,7 @@ FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 SUBST_CLASSES+=		user
 SUBST_MESSAGE.user=	Fixing name of gopher user in files.
 SUBST_FILES.user=	gofish.conf
-SUBST_SED.user=		-e "s/;user = gopher/user = ${GOPHER_USER}/g"	
+SUBST_SED.user=		-e "s/;user = gopher/user = ${GOPHER_USER}/g"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gofish

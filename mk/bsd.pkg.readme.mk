@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.13 2007/08/29 23:26:30 adrianp Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.14 2007/10/09 19:19:12 martti Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -232,7 +232,7 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 
 # XXX: The code for the pkg_install<20070714 vulnerability checks are
 # XXX: broken.  It will not find vulnerabilities in any packages that
-# XXX: have complex names in the pkg-vulnerabilties file. 
+# XXX: have complex names in the pkg-vulnerabilties file.
 # XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
 # XXX: Post pkg_install-20070714 only currently known vulnerabilities are
 # XXX: shown in the generated README.html files for packages.
@@ -259,7 +259,7 @@ show-vulnerabilities-html:
 				gsub("\&", "\\&amp;", printurl);	\
 				printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, printurl) }'; \
 		fi;							\
-	fi	
+	fi
 
 # If PACKAGES is set to the default (../../packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory

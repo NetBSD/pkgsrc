@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 18:40:42 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:15 martti Exp $
 #
 
 DISTNAME=	hunspell-1.1.12-2
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	hunspell.pc.in
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing default path to dictionaries.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	man/hunspell.1 man/hu/hunspell.1 src/tools/hunspell.cxx 
+SUBST_FILES.paths=	man/hunspell.1 man/hu/hunspell.1 src/tools/hunspell.cxx
 SUBST_SED.paths+=	-e 's,/usr/share/hunspell,${PREFIX}/share/hunspell,g'
 # Trailing slash important to not change hunspell.cxx
 SUBST_SED.paths+=	-e 's,/usr/share/myspell/,${PREFIX}/share/hunspell/,g'

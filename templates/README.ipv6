@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.ipv6,v 1.4 2005/06/01 19:07:20 wiz Exp $ -->
+<!-- $NetBSD: README.ipv6,v 1.5 2007/10/09 19:19:15 martti Exp $ -->
 <html>
 <head>
 <title>NetBSD: IPv6 enabled Packages</title>
@@ -14,8 +14,8 @@
 <p>
 The following list contains all
 packages currently available
-in the NetBSD Packages Collection, that are known to support 
-IPv6. 
+in the NetBSD Packages Collection, that are known to support
+IPv6.
 Please select an entry for more details!
 </p>
 

@@ -1,7 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.3 2004/01/11 16:45:51 cjep Exp $
+# $NetBSD: DEINSTALL,v 1.4 2007/10/09 19:19:14 martti Exp $
 
 LEAFNODE_CONFDIR=@LEAFNODE_CONFDIR@
-LEAFNODE_SPOOL=@LEAFNODE_SPOOL@ 
+LEAFNODE_SPOOL=@LEAFNODE_SPOOL@
 LEAFNODE_LOCKDIR=@LEAFNODE_LOCKDIR@
 LEAFNODE_HOME=@LEAFNODE_HOME@
 
@@ -12,9 +12,9 @@ case "${STAGE}" in
 
 Note that the leafnode spool, lock and configuration directories
 
-	${LEAFNODE_SPOOL} 
+	${LEAFNODE_SPOOL}
 	${LEAFNODE_LOCKDIR}
-	${LEAFNODE_HOME} 
+	${LEAFNODE_HOME}
     and ${LEAFNODE_CONFDIR}
 
 are NOT deleted during the package deinstallation. Please remove these

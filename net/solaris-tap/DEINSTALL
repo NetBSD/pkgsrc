@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: DEINSTALL,v 1.1.1.1 2007/07/01 00:43:20 tnn Exp $
+# $NetBSD: DEINSTALL,v 1.2 2007/10/09 19:19:14 martti Exp $
 #
 
 cat << EOF
@@ -7,7 +7,7 @@ cat << EOF
 
 Please remember to run:
 
-# /usr/sbin/rem_drv tun 
+# /usr/sbin/rem_drv tun
 # /usr/sbin/rem_drv tap
 
 and remove the tun/tap driver from /usr/kernel/drv if you have copied

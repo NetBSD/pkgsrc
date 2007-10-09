@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.18 2007/09/07 22:12:16 jlam Exp $
+# $NetBSD: mkreadme,v 1.19 2007/10/09 19:19:13 martti Exp $
 #
 # Script for README.html generation
 #
@@ -303,7 +303,7 @@ else
     exit 1
 fi
 
-# this needs to happen here as the variables referenced have not been 
+# this needs to happen here as the variables referenced have not been
 # populated until this stage (see above)
 #
 if [ "$pv" = "default" ]; then

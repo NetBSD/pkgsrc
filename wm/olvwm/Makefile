@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/03/17 00:59:47 reed Exp $
+# $NetBSD: Makefile,v 1.16 2007/10/09 19:19:16 martti Exp $
 #
 
 DISTNAME=	olvwm4.src4
@@ -8,7 +8,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	http://home.nyc.rr.com/twopks/olvwm/
 
 MAINTAINER=	w.wnuk@zodiac.mimuw.edu.pl
-HOMEPAGE=	http://home.nyc.rr.com/twopks/olvwm/ 
+HOMEPAGE=	http://home.nyc.rr.com/twopks/olvwm/
 COMMENT=	Open Look Virtual Window Manager
 
 DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients

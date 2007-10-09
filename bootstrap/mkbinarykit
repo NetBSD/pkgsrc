@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.25 2007/08/01 14:03:49 joerg Exp $
+# $NetBSD: mkbinarykit,v 1.26 2007/10/09 19:19:08 martti Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -35,7 +35,7 @@ mkbinarykit_tar()
 {
 	# in case tar was built by bootstrap
 	PATH="$prefix/bin:$PATH"; export PATH
-	[ ! -d $sysconfdir ] && mkdir -p $sysconfdir 
+	[ ! -d $sysconfdir ] && mkdir -p $sysconfdir
 	cp ${wrkdir}/mk.conf.example $mkfile &&						\
 	cd / && \
 	tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar" \
@@ -73,7 +73,7 @@ fetch_cmd=""
 targetdir=`pwd`
 wrkdir=`pwd`/work		# default: relative to pkgsrc/bootstrap
 
-sedprog="sed" 
+sedprog="sed"
 
 case "$opsys" in
 AIX)
