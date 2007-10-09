@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-cross-gcc,v 1.1 2007/08/02 18:19:33 joerg Exp $
+# $NetBSD: cmd-sink-cross-gcc,v 1.2 2007/10/09 19:19:13 martti Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -35,7 +35,7 @@ if [ "${dont_link}" != yes ]; then
 	$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"
 	. $buildcmd
 
-	# All normal library locations should be checked for 
+	# All normal library locations should be checked for
 	for libdir in /usr/lib @PREFIX@/lib; do
 		arg="-Wl,-rpath-link,@CROSS_DESTDIR@${libdir}"
 		$debug_log $wrapperlog "    (cmd-sink-native-cc) pop: $arg"

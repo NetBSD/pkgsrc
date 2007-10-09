@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/08/17 17:26:03 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:15 martti Exp $
 #
 
 VERSION=	3.1.0
@@ -37,7 +37,7 @@ do-build:
 	cd ${WRKSRC} && ${GMAKE} clean && \
 	    ${GMAKE} XEN_TARGET_X86_PAE=n debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
-	
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/xen3-kernel
 	${INSTALL_DATA} ${WRKDIR}/xen.gz ${PREFIX}/xen3-kernel/xen.gz

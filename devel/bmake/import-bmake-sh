@@ -1,8 +1,8 @@
 :
-# $Id: import-bmake-sh,v 1.1 2005/12/02 00:14:56 sjg Exp $
+# $Id: import-bmake-sh,v 1.2 2007/10/09 19:19:08 martti Exp $
 
 # Nice and simple, but make sure it is done consistently...
-# Simply unpack bmake-<version>.tar.gz 
+# Simply unpack bmake-<version>.tar.gz
 # cd bmake
 # then run this script.
 

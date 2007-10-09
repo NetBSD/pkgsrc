@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/09/13 02:24:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.41 2007/10/09 19:19:08 martti Exp $
 #
 
 DISTNAME=	pcb-20070912
@@ -16,7 +16,7 @@ CONFLICTS+=	pcb-current-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
 # work around a problem where the configure script uses
-# AM_PROG_LEX and follows it with an AC_PATH_PROG to try 
+# AM_PROG_LEX and follows it with an AC_PATH_PROG to try
 # and make sure that lex really does exist.  Unfortunately
 # that test is thrown off by pkgsrc giving a full path for LEX.
 # so, bypass the test and put our desired result directly into the

@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.2 2004/07/31 04:07:03 xtraeme Exp $
+$NetBSD: README.OpenBSD,v 1.3 2007/10/09 19:19:08 martti Exp $
 
 Please read the general README file as well.
 
@@ -18,8 +18,8 @@ good idea to move them out of the way to avoid confusion, e.g.:
 	mv pkg_info pkg_info.orig
 
 3. An example /etc/mk.conf file will be placed in mk.conf.example file
-when you use the bootstrap script. OpenBSD's make program uses /etc/mk.conf 
-as well. You can work around this by enclosing all the pkgsrc specific parts 
+when you use the bootstrap script. OpenBSD's make program uses /etc/mk.conf
+as well. You can work around this by enclosing all the pkgsrc specific parts
 of the mk.conf file with:
 
 .ifdef BSD_PKG_MK

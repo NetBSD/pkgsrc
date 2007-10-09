@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.8 2007/08/23 18:20:36 jlam Exp $
+# $NetBSD: emulator.mk,v 1.9 2007/10/09 19:19:13 martti Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -79,7 +79,7 @@ OPSYS_EMULDIR?=		# empty
 # package's binaries, libraries and scripts won't necessarily match the
 # actual paths on the file system, so skip some path checks that are
 # likely to fail.
-# 
+#
 .if empty(EMUL_DISTRO:Mnative-*)
 CHECK_SHLIBS_SUPPORTED?=	no
 CHECK_INTERPRETER_SKIP=		*

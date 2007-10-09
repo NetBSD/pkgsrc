@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-packages,v 1.10 2007/08/27 15:38:08 adrianp Exp $
+# $NetBSD: sort-packages,v 1.11 2007/10/09 19:19:13 martti Exp $
 
 # This program scans all binary packages in the current directory and
 # creates three lists of files in OUTDIR:
@@ -71,7 +71,7 @@ for pkg in *${PKG_SUFX}; do
 		_INFO_VER=`${PKG_INFO} -V`;
 		if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
 			# XXX: The egrep command is only needed here because
-			# audit-packages before pkg_install-20070714 is so 
+			# audit-packages before pkg_install-20070714 is so
 			# awfully slow.
 			if egrep "^({.*${pkg_prefix}.*}|${pkg_prefix}|{.*}${pkg_prefix})" ${PKGVULNDIR}/pkg-vulnerabilities >/dev/null 4>&1; then
 				vuln=`${AUDIT_PACKAGES} -p "${pkg}"`
