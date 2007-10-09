@@ -1,4 +1,4 @@
-# $NetBSD: emulator-vars.mk,v 1.7 2007/08/23 13:43:57 jlam Exp $
+# $NetBSD: emulator-vars.mk,v 1.8 2007/10/09 20:34:48 rillig Exp $
 #
 # This file is included by bsd.prefs.mk only if EMUL_PLATFORMS is defined
 # and non-empty.
@@ -46,6 +46,11 @@
 #	Whether or not the operating system being emulated matches the
 #	native operating system.  It is either defined or undefined.
 #
+
+_VARGROUPS+=		emulator
+_USER_VARS.emulator=	EMUL_TYPE.${EMUL_OPSYS} EMUL_PLATFORM EMUL_PREFER
+_PKG_VARS.emulator=	EMUL_PLATFORMS
+_SYS_VARS.emulator=	EMUL_ARCH EMUL_OPSYS EMUL_IS_NATIVE
 
 # _EMUL_OPSYS
 #	A table that maps ${OPSYS} to the operating system names
