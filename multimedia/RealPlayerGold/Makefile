@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/29 05:19:45 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2007/10/09 13:11:28 rillig Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -49,7 +49,7 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 # errors vs. out-of-date-pkgsrc errors.
 #
 post-fetch:
-	ver=`file ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${SED} -e 's;.*Player-;;g'  -e 's;-;.;g'` ; \
+	${RUN} ver=`file ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${SED} -e 's;.*Player-;;g'  -e 's;-;.;g'` ; \
 		if [ "$$ver" != "${PKGVER}" ] ; then \
 			${ECHO} "It appears that real.com has made a new version ($$ver) available so this" ; \
 			${ECHO} "package will need updating to work correctly.  That likely the reason for" ; \
