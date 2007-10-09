@@ -1,4 +1,4 @@
-# $NetBSD: pkg-rpm.mk,v 1.1 2007/07/29 05:19:43 jlam Exp $
+# $NetBSD: pkg-rpm.mk,v 1.2 2007/10/09 19:19:13 martti Exp $
 #
 # RPM package format
 #
@@ -10,7 +10,7 @@
 #	this is empty, then no PLIST is created.
 #
 #	Default value: ${WRKDIR}/.PLIST.rpm2pkg
-#	
+#
 # RPM2PKG_PREFIX
 #	This is the directory under which the contents of the RPMs will
 #	be extracted.  This directory is stripped from the paths which
@@ -32,7 +32,7 @@
 #	component of ``./''.
 #
 #	Default value: 1
-#	
+#
 # RPM2PKG_STAGE
 #	Stage at which to run the ``extract-rpm'' target.
 #

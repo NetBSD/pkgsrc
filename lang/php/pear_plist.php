@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.4 2007/04/15 13:46:42 adrianp Exp $
+# $NetBSD: pear_plist.php,v 1.5 2007/10/09 19:19:10 martti Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
@@ -33,7 +33,7 @@ foreach($info['filelist'] as $f => $v) {
 			$prefix = $v['baseinstalldir'] . '/';
 
 			# sometimes the baseinstalldir begins with a slash,
-			# which make the PLIST output to have two instead of 
+			# which make the PLIST output to have two instead of
 			# one.  We fix this here.
 			if ($prefix[0] == '/')
 				$prefix = substr($prefix, 1);

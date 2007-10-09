@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1926 2007/09/29 16:03:28 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1927 2007/10/09 19:19:11 martti Exp $
 #
 # This file is in the public domain.
 #
@@ -622,7 +622,7 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 #
 # MAKEFLAGS.su-${.TARGET}
 #	The additional flags that are passed to the make process.
-# 
+#
 
 # XXX: Shouldn't the $${PATH} be ${PATH} here? This may be related to
 # PR 34470.

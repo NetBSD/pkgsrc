@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1 2006/10/12 13:38:35 joerg Exp $
+# $NetBSD: INSTALL,v 1.2 2007/10/09 19:19:15 martti Exp $
 
 case ${STAGE} in
 POST-INSTALL)
@@ -10,7 +10,7 @@ param_size.hugelatex = 1500
 stack_size.hugelatex = 1500
 hash_extra.hugelatex = 15000
 string_vacancies.hugelatex = 45000
-pool_free.hugelatex = 47500 
+pool_free.hugelatex = 47500
 nest_size.hugelatex = 500
 save_size.hugelatex = 5000
 pool_size.hugelatex = 500000

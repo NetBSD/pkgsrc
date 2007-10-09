@@ -6,7 +6,7 @@ compiler to build. This pkg may also be built using
 lang/gcc3 (which contains Ada).
 
 You can download a pre-built Ada compiler, suitable
-for bootstrapping this package, from: 
+for bootstrapping this package, from:
 
    http://www.johnrshannon.com/NetBSD/ix86/
    http://www.johnrshannon.com/NetBSD/x86_64/
