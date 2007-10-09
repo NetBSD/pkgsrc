@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+$NetBSD: patch-am,v 1.2 2007/10/09 20:17:08 adam Exp $
 
 --- contrib/tsearch2/Makefile.orig	2006-09-11 17:14:46.000000000 +0200
 +++ contrib/tsearch2/Makefile
@@ -28,7 +28,7 @@ $NetBSD: patch-am,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
  endif
  
  
-@@ -40,7 +41,7 @@ $(SUBDIROBJS): $(SUBDIRS:%=%-recursive) 
+@@ -40,10 +41,10 @@ $(SUBDIROBJS): $(SUBDIRS:%=%-recursive) 
  .PHONY: $(SUBDIRS:%=%-recursive)
  
  $(SUBDIRS:%=%-recursive):
@@ -36,4 +36,8 @@ $NetBSD: patch-am,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
 +	$(MAKE) -C $(subst -recursive,,$@) libSUBSYS.la
  
  tsearch2.sql: tsearch.sql.in
- 	sed -e 's,MODULE_PATHNAME,$$libdir/$(MODULE_big),g' $< >$@
+-	sed -e 's,MODULE_PATHNAME,$$libdir/$(MODULE_big),g' $< >$@
++	sed -e 's,MODULE_PATHNAME,$$libdir/lib$(MODULE_big),g' $< >$@
+ 
+ uninstall_tsearch2.sql: untsearch.sql.in
+ 	cp $< $@
