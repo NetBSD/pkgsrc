@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.32 2007/09/16 14:40:57 heinz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.33 2007/10/09 11:31:46 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -727,7 +727,7 @@ ${_INSTALL_SHLIBS_FILE}: ../../mk/pkginstall/shlibs
 	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shlibs > ${.TARGET}
 
 # FONTS_DIRS.<type> are lists of directories in which the font databases
-#	are updated.  If this is non-empty, then the appropriate tools is
+#	are updated.  If this is non-empty, then the appropriate tools are
 #	used to update the fonts database for the font type.  The supported
 #	types are:
 #
