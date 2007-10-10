@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6719 2007/10/06 20:05:41 hira Exp $
+$NetBSD: TODO,v 1.6720 2007/10/10 00:09:48 taca Exp $
 
 Suggested new packages
 ======================
@@ -1209,6 +1209,7 @@ Suggested package updates
 	o snd-9.4
 	o snes9x-1.51
 	o snobol-1.1
+	o snort-2.8.0
 	o solfege-3.8.1
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
@@ -1228,7 +1229,6 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
-	o sudo-1.6.9p5
 	o sunbird-0.5 [ghen]
 	o surfraw-2.2.0 [http://surfraw.alioth.debian.org/]
 	o suse_base-10.2
