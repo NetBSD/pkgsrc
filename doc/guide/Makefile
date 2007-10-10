@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2007/10/10 05:45:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.31 2007/10/10 11:36:11 dmcmahill Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-DISTFILES=		htdocs-share-20070702.tar.gz
+DISTFILES=		htdocs-share-20071010.tar.gz
 
 MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
@@ -140,7 +140,7 @@ detab:
 .PHONY: htdocs-share
 htdocs-share:
 	cd ${HTDOCSDIR}							\
-	&& pax -wz -f ${.CURDIR}/htdocs-share-${PKGVERSION}.tar.gz	\
+	&& ${PAX} -wz -f ${.CURDIR}/htdocs-share-${PKGVERSION}.tar.gz	\
 		-s ',^,htdocs/,'					\
 		global.css share
 
