@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/06/15 17:08:12 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/10 10:20:33 rillig Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -21,11 +21,14 @@ DEPENDS+=	licq-core-[0-9]*:../../chat/licq-core
 PKG_FAIL_REASON+=	"XScrnSaver support is needed"
 .endif
 
+DISTINFO_FILE=		${.CURDIR}/../../chat/licq-core/distinfo
+PATCHDIR=		${.CURDIR}/../../chat/licq-core/patches
+
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
-WRKSRC=			${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
+CONFIGURE_DIRS=		plugins/qt-gui
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
