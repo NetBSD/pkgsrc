@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2006/04/28 11:10:02 joerg Exp $
+$NetBSD: patch-qa,v 1.1 2007/10/10 10:20:32 rillig Exp $
 
---- configure.orig	2006-04-28 10:36:59.000000000 +0000
-+++ configure
+--- plugins/qt-gui/configure.orig	2006-04-28 10:36:59.000000000 +0000
++++ plugins/qt-gui/configure
 @@ -17307,8 +17307,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
      save_LIBS="$LIBS"
  
