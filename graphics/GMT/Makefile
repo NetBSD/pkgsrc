@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/02/15 14:58:19 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/10/10 21:48:42 rillig Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=--disable-mex
 
 BUILD_TARGET=	all suppl
 INSTALL_TARGET= install-all
+LIBS+=		${X11_LDFLAGS} # XXX: LDFLAGS doesn't work
 
 post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/pdf ${WRKSRC}
