@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/24 19:45:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/10/10 05:30:29 dmcmahill Exp $
 bin/jadetex
 bin/pdfjadetex
 man/man1/jadetex.1
@@ -22,5 +22,9 @@ share/texmf/web2c/jadetex.fmt
 share/texmf/web2c/pdfjadetex.fmt
 @dirrm ${PKG_TEXMFPREFIX}/tex/jadetex
 @dirrm share/doc/jadetex
+@exec %D/bin/texconfig rehash
+@unexec %D/bin/texconfig rehash
+@exec %D/bin/mktexlsr
+@unexec %D/bin/mktexlsr
 @unexec ${RMDIR} %D/share/sgml/jade 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/sgml 2>/dev/null || ${TRUE}
