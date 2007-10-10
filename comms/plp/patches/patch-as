@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1 2007/10/10 16:57:25 rillig Exp $
+
+--- utils/bufferstore.h.orig	1999-04-12 21:17:03.000000000 +0000
++++ utils/bufferstore.h	2007-10-10 16:54:33.000000000 +0000
+@@ -2,7 +2,6 @@
+ #define _bufferstore_h
+ 
+ #include "bool.h"
+-class ostream;
+ 
+ class bufferStore {
+ public:
