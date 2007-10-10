@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/09/07 22:12:23 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/10 11:11:35 rillig Exp $
 #
 
 .include "../../sysutils/cfengine2/Makefile.common"
@@ -13,6 +13,7 @@ BUILD_DEFS+=		IPV6_READY
 
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+USE_TOOLS+=		flex
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
