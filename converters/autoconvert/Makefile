@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/10/10 10:29:27 rillig Exp $
 
 DISTNAME=	autoconvert-0.3.13
 PKGREVISION=	2
@@ -11,6 +11,7 @@ COMMENT=	Intelligent Chinese encoding converter
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/autoconvert
