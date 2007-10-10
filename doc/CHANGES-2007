@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2121 2007/10/09 20:18:31 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2122 2007/10/10 00:09:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3941,3 +3941,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/thunderbird to 2.0.0.6nb1 [ghen 2007-10-08]
 	Updated mail/thunderbird-gtk1 to 2.0.0.6nb1 [ghen 2007-10-08]
 	Updated wm/fluxbox to 1.0.0 [xtraeme 2007-10-09]
+	Updated security/sudo to 1.6.9p6 [taca 2007-10-10]
