@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:10:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/10/10 15:20:50 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PWLIB_BUILDLINK3_MK:=	${PWLIB_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pwlib
 
 .if !empty(PWLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pwlib+=	pwlib>=1.8.3nb1
-BUILDLINK_ABI_DEPENDS.pwlib?=	pwlib>=1.8.3nb3
+BUILDLINK_ABI_DEPENDS.pwlib?=	pwlib>=1.8.3nb6
 BUILDLINK_PKGSRCDIR.pwlib?=	../../devel/pwlib
 .endif	# PWLIB_BUILDLINK3_MK
 
