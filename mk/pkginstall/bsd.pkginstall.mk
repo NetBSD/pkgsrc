@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.33 2007/10/09 11:31:46 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.34 2007/10/10 11:42:36 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -357,26 +357,34 @@ ${_INSTALL_PERMS_FILE}: ../../mk/pkginstall/perms
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
-# CONF_FILES are pairs of example and true config files, used much like
-#	MLINKS in the base system.  At post-install time, if the true config
+# CONF_FILES
+# REQD_FILES
+#	Pairs of example and true config files, used much like MLINKS in
+#	the NetBSD base system.  At post-install time, if the true config
 #	file doesn't exist, then the example one is copied into place.  At
 #	deinstall time, the true one is removed if it doesn't differ from the
 #	example one.  REQD_FILES is the same as CONF_FILES but the value
-#	of PKG_CONFIG is ignored; however, all files listed in REQD_FILES
-#	should be under ${PREFIX}.
+#	of PKG_CONFIG is ignored.
+#
+#	However, all files listed in REQD_FILES should be under ${PREFIX}.
+#	(XXX: Why?)
 #
 # CONF_FILES_MODE and REQD_FILES_MODE are the file permissions for the
 # files in CONF_FILES and REQD_FILES, respectively.
 #
-# CONF_FILES_PERMS are lists that look like:
+# CONF_FILES_PERMS
+# REQD_FILES_PERMS
+#	Lists that look like:
 #
 #		example_file config_file user group mode
 #
-#	and works like CONF_FILES, except the config files are owned by
-#	user:group have mode permissions.  REQD_FILES_PERMS is the same
-#	as CONF_FILES_PERMS but the value of PKG_CONFIG is ignored;
-#	however, all files listed in REQD_FILES_PERMS should be under
-#	${PREFIX}.
+#	This works like CONF_FILES and REQD_FILES, except that the config
+#	files are owned by user:group and have mode permissions.
+#	REQD_FILES_PERMS is the same as CONF_FILES_PERMS but the value of
+#	PKG_CONFIG is ignored;
+#
+#	However, all files listed in REQD_FILES_PERMS should be under
+#	${PREFIX}. (XXX: Why?)
 #
 # RCD_SCRIPTS lists the basenames of the rc.d scripts.  They are
 #	expected to be found in ${PREFIX}/share/examples/rc.d, and
@@ -386,6 +394,9 @@ ${_INSTALL_PERMS_FILE}: ../../mk/pkginstall/perms
 # If any file pathnames are relative, then they are taken to be relative
 # to ${PREFIX}.
 #
+# Keywords: etc conf configuration
+#
+
 CONF_FILES?=		# empty
 CONF_FILES_MODE?=	0644
 CONF_FILES_PERMS?=	# empty
