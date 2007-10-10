@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-clean,v 1.5 2007/09/22 00:12:33 rillig Exp $
+# $NetBSD: client-clean,v 1.6 2007/10/10 09:04:21 rillig Exp $
 
 . @PBULK_CONFIG@
 
@@ -14,7 +14,8 @@ rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
 if [ -f "${bootstrapkit}" ]; then
 	${tar} -xzf ${bootstrapkit} -C /
 elif [ -d "${bootstrapkit}" ]; then
-	cp -R ${bootstrapkit} ${prefix}
+	[ -d ${prefix} ] || mkdir ${prefix}
+	cp -R ${bootstrapkit}/* ${prefix}
 else
 	# Do nothing
 fi
