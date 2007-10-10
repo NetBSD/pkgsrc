@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/04/28 04:54:50 minskim Exp $
+$NetBSD: patch-ca,v 1.1 2007/10/10 10:20:32 rillig Exp $
 
---- src/window.cpp.orig	Mon Dec 10 15:05:49 2001
-+++ src/window.cpp
+--- plugins/console/src/window.cpp.orig	Mon Dec 10 15:05:49 2001
++++ plugins/console/src/window.cpp
 @@ -147,7 +147,10 @@ void CWindow::wprintf(char *formatIn, ..
     va_list argp;
     char formatOut[1024], out[1024];

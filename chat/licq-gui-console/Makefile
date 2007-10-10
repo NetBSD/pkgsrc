@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/10/10 10:20:32 rillig Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -14,11 +14,14 @@ COMMENT=	Curses GUI for licq
 
 DEPENDS+=	licq-core-[0-9]*:../../chat/licq-core
 
+DISTINFO_FILE=		${.CURDIR}/../../chat/licq-core/distinfo
+PATCHDIR=		${.CURDIR}/../../chat/licq-core/patches
+
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
-WRKSRC=			${WRKDIR:=/${DISTNAME}/plugins/console}
+CONFIGURE_DIRS=		plugins/console
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
