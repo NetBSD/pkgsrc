@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2007/03/14 17:12:47 yyamano Exp $
+$NetBSD: distinfo,v 1.23 2007/10/10 13:13:47 rillig Exp $
 
 SHA1 (pwlib-v1_8_3-src-tar.gz) = d3a6eff571ebfd37889e75cbaef75983e6119d2e
 RMD160 (pwlib-v1_8_3-src-tar.gz) = 1ce2544ef631c8344543e62988f97022c998bb05
@@ -31,3 +31,6 @@ SHA1 (patch-az) = b82405bea8da7d93d965457f1090e64149e5f561
 SHA1 (patch-ba) = 5695be7e37677e7d4db84bb997404030e8a8523f
 SHA1 (patch-bb) = 03345fade582539c3b7332f14f1956686ad15289
 SHA1 (patch-bd) = 2d2fb1c6772a1e015cc1bceeb27fda39f57f5acc
+SHA1 (patch-ca) = 931083e2254cf8e09d0f95ce01d36e8176efcba5
+SHA1 (patch-cb) = 8d8370a61f7905c4aea30aca9f41b5e9d6e547cc
+SHA1 (patch-cc) = 4d62cba89dea1b522d8a41197ed788da01d2d40b
