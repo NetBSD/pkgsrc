@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6724 2007/10/11 14:21:43 obache Exp $
+$NetBSD: TODO,v 1.6725 2007/10/11 18:15:50 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1232,7 +1232,6 @@ Suggested package updates
 	o suse_base-10.2
 	o swfdec-0.4.3
 	o swi-prolog-5.6.31
-	o sylpheed-2.4.7
 	o sympa-5.3
 	o sysinfo-4.2.2
 	o t-prot-2.5
