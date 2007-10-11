@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/10/11 19:03:38 is Exp $
+# $NetBSD: Makefile,v 1.14 2007/10/11 19:48:11 is Exp $
 
 DISTNAME=	pim6dd-20031021a
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
