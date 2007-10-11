@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2123 2007/10/11 09:09:58 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2124 2007/10/11 09:13:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3943,3 +3943,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/fluxbox to 1.0.0 [xtraeme 2007-10-09]
 	Updated security/sudo to 1.6.9p6 [taca 2007-10-10]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2007Q3 branch [agc 2007-10-11]
+	Updated devel/apr to 1.2.11 [tron 2007-10-11]
+	Updated devel/apr-util to 1.2.10 [tron 2007-10-11]
