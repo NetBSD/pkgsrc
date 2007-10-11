@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2133 2007/10/11 21:28:33 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2134 2007/10/11 21:36:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3958,3 +3958,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/pim6dd to 20031021anb1 [is 2007-10-11]
 	Added news/cleanscore version 0.9.8.1 [is 2007-10-11]
 	Updated wm/wmx to 6.0nb3 [adam 2007-10-11]
+	Updated filesystems/fuse-ntfs-3g to 1.1004 [xtraeme 2007-10-11]
