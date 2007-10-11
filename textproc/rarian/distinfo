@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/10/11 18:43:48 drochner Exp $
+
+SHA1 (rarian-0.6.0.tar.bz2) = 7bf1fce5cc2bfd4584fb776d20d3a379e888b81a
+RMD160 (rarian-0.6.0.tar.bz2) = 167c02f58e493c624d0eedb1137928c7a7cc452a
+Size (rarian-0.6.0.tar.bz2) = 312258 bytes
+SHA1 (patch-aa) = 3b1d8601672cb52ccee9deb240c3cf5e64721b38
