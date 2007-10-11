@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2129 2007/10/11 19:25:15 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2130 2007/10/11 19:28:06 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3951,3 +3951,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/p5-IMAP-Client version 0.13 [tv 2007-10-11]
 	Updated mail/sylpheed to 2.4.7 [xtraeme 2007-10-11]
 	Updated net/nagios-base to 2.5nb2 [ghen 2007-10-11]
+	Added databases/ldapvi version 1.7 [ghen 2007-10-11]
