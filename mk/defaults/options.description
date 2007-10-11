@@ -270,6 +270,7 @@ perf-tuning
 perl	
 pf	
 pgsql			Enable PostgreSQL support.
+pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 plplot	
 png			Enable PNG support.
