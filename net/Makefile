@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.683 2007/10/11 19:03:37 is Exp $
+# $NetBSD: Makefile,v 1.684 2007/10/11 19:36:50 is Exp $
 #
 
 COMMENT=	Networking tools
@@ -433,6 +433,7 @@ SUBDIR+=	spegla
 SUBDIR+=	spread
 SUBDIR+=	spreadlogd
 SUBDIR+=	srsh
+SUBDIR+=	ssmping
 SUBDIR+=	ssync
 SUBDIR+=	stripes
 SUBDIR+=	sup
