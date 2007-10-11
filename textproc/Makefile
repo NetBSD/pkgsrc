@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.385 2007/09/21 00:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.386 2007/10/11 18:45:05 drochner Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -310,6 +310,7 @@ SUBDIR+=	py-yaml
 SUBDIR+=	qprint
 SUBDIR+=	qsubst
 SUBDIR+=	raptor
+SUBDIR+=	rarian
 SUBDIR+=	regexx
 SUBDIR+=	rfcutil
 SUBDIR+=	rman
