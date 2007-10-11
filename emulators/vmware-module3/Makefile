@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/10/11 10:22:56 jnemeth Exp $
 
 DISTNAME=	vmware-netbsd-3.2.1.8
 PKGNAME=	vmware-module-3.2.1.8
@@ -20,6 +20,8 @@ NO_SRC_ON_FTP=		already there
 
 .include "../../mk/bsd.prefs.mk"
 
+INSTALLATION_DIRS= etc/rc.conf.d etc/rc.d lkm
+
 pre-extract:
 .if !exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 	@${ECHO_MSG} "Please set BSDSRCDIR in /etc/mk.conf, pointing it"
@@ -40,8 +42,6 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lkm
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.conf.d
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d
