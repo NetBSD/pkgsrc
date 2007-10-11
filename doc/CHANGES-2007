@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2126 2007/10/11 14:26:05 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.2127 2007/10/11 15:52:27 tv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3947,3 +3947,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/apr-util to 1.2.10 [tron 2007-10-11]
 	Updated x11/x11vnc to 0.9.3 [obache 2007-10-11]
 	Updated graphics/gimp-fix-ca to 3.0.1 [dsainty 2007-10-11]
+	Added mail/p5-URI-imap version 1.01 [tv 2007-10-11]
+	Added mail/p5-IMAP-Client version 0.13 [tv 2007-10-11]
