@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2006/07/10 17:42:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/10/11 18:56:16 drochner Exp $
 bin/update-mime-database
-lib/pkgconfig/shared-mime-info.pc
 man/man1/update-mime-database.1
 share/locale/az/LC_MESSAGES/shared-mime-info.mo
 share/locale/bg/LC_MESSAGES/shared-mime-info.mo
+share/locale/ca/LC_MESSAGES/shared-mime-info.mo
 share/locale/cs/LC_MESSAGES/shared-mime-info.mo
 share/locale/cy/LC_MESSAGES/shared-mime-info.mo
 share/locale/da/LC_MESSAGES/shared-mime-info.mo
@@ -36,4 +36,5 @@ share/locale/vi/LC_MESSAGES/shared-mime-info.mo
 share/locale/zh_CN/LC_MESSAGES/shared-mime-info.mo
 share/locale/zh_TW/LC_MESSAGES/shared-mime-info.mo
 share/mime/packages/freedesktop.org.xml
+share/pkgconfig/shared-mime-info.pc
 @dirrm share/mime/packages
