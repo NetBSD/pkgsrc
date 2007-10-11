@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/08/08 16:05:57 abs Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/11 13:14:48 tv Exp $
 #
 
 DISTNAME=	alpine-0.999
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,16 @@ CONFIGURE_ARGS+= --with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS=	bin ${PKMANDIR}/man1
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.alpine
+PKG_SUPPORTED_OPTIONS=	pinepwd
+PKG_SUGGESTED_OPTIONS=	pinepwd
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpinepwd)
+CONFIGURE_ARGS+= --with-passfile=.pinepwd
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine

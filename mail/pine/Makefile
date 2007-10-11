@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2007/10/07 15:49:17 obache Exp $
+# $NetBSD: Makefile,v 1.116 2007/10/11 13:14:48 tv Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -46,7 +46,8 @@ UNLIMIT_RESOURCES+=	datasize
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pine
-PKG_SUPPORTED_OPTIONS=	ldap fancythreads
+PKG_SUPPORTED_OPTIONS=	ldap fancythreads pinepwd
+PKG_SUGGESTED_OPTIONS=	pinepwd
 
 .include "../../mk/bsd.options.mk"
 
@@ -60,6 +61,10 @@ PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
 PATCH_SITES+=		http://staff.washington.edu/chappa/pine/patches/pine4.64/
 PATCHFILES+=		fancy.patch.gz
 PATCH_DIST_STRIP=	-p1
+.endif
+
+.if !empty(PKG_OPTIONS:Mpinepwd)
+CFLAGS+=		-DPASSFILE=\\\".pinepwd\\\"
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
