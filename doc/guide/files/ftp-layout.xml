@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.8 2007/07/25 17:53:44 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.9 2007/10/11 21:03:39 rillig Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -18,7 +18,8 @@
 
 	<para>For those who only want to manage binary packages on
 	systems other than NetBSD, we provide the package management
-	tools in a separate, small tar file.</para>
+	tools in a separate, small tar file. Please note that most of
+	these files are horribly outdated.</para>
 
 </sect1>
 <sect1 id="ftp-distfiles">
@@ -56,10 +57,29 @@
 	>. The meaning of these variables is:</para>
 
 	<itemizedlist>
-	<listitem><para><varname>OPSYS</varname> is the name of the operating system for which the packages have been built,</para></listitem>
-	<listitem><para><varname>ARCH</varname> is the hardware architecture,</para></listitem>
-	<listitem><para><varname>OSVERSION</varname> is the version of the operating system,</para></listitem>
-	<listitem><para><varname>TAG</varname> is either <literal>200<replaceable>x</replaceable>Q<replaceable>y</replaceable></literal> for a stable branch, or <literal>head</literal> for packages built from the HEAD branch.</para></listitem>
+
+	<listitem><para><varname>OPSYS</varname> is the name of the
+	operating system for which the packages have been
+	built.</para></listitem>
+	
+	<listitem><para><varname>ARCH</varname> is the hardware
+	architecture of the platform for which the packages have been
+	built.</para></listitem>
+
+	<listitem><para><varname>OSVERSION</varname> is the version of
+	the operating system. For version numbers that change often (for
+	example NetBSD-current), the often-changing part should be
+	replaced with an <literal>x</literal>, for example
+	<literal>4.99.x</literal>.</para></listitem>
+
+	<listitem><para><varname>TAG</varname> is either
+	<literal>200<replaceable>x</replaceable>Q<replaceable>y</replaceable></literal>
+	for a stable branch, or <literal>head</literal> for packages
+	built from the HEAD branch. The latter should only be used when
+	the packages are updated on a regular basis. Otherwise the date
+	from checking out pkgsrc should be appended, for example
+	<literal>head_20071015</literal>.</para></listitem>
+
 	</itemizedlist>
 
 	<para>The rationale for exactly this scheme is that the pkgsrc users looking for binary packages
@@ -76,6 +96,15 @@
 	<filename>All</filename> which contains all binary packages.
 	Besides that, there are various category directories that
 	contain symbolic links to the real binary packages.</para>
+
+</sect1>
+<sect1 id="ftp-reports">
+<title><filename>reports</filename>: Bulk build reports</title>
+
+	<para>Here are the reports from bulk builds, for those who want
+	to fix packages that didn't build on some of the platforms. The
+	structure of subdirectories should look like the one in <xref
+	linkend="ftp-packages"/>.</para>
 
 </sect1>
 <sect1 id="ftp-source">
