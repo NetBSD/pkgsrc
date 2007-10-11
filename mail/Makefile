@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2007/10/04 12:08:34 obache Exp $
+# $NetBSD: Makefile,v 1.337 2007/10/11 15:49:55 tv Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -165,6 +165,7 @@ SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Email-Valid
 SUBDIR+=	p5-GMail-IMAPD
 SUBDIR+=	p5-IMAP-Admin
+SUBDIR+=	p5-IMAP-Client
 SUBDIR+=	p5-MIME-Lite
 SUBDIR+=	p5-MIME-Lite-HTML
 SUBDIR+=	p5-MIME-Types
@@ -189,6 +190,7 @@ SUBDIR+=	p5-Net-LMTP
 SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-Sendmail-PMilter
+SUBDIR+=	p5-URI-imap
 SUBDIR+=	p5-User-Identity
 SUBDIR+=	p5-razor-agents
 SUBDIR+=	pear-Mail
