@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2127 2007/10/11 15:52:27 tv Exp $
+$NetBSD: CHANGES-2007,v 1.2128 2007/10/11 18:15:50 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3949,3 +3949,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/gimp-fix-ca to 3.0.1 [dsainty 2007-10-11]
 	Added mail/p5-URI-imap version 1.01 [tv 2007-10-11]
 	Added mail/p5-IMAP-Client version 0.13 [tv 2007-10-11]
+	Updated mail/sylpheed to 2.4.7 [xtraeme 2007-10-11]
