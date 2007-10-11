@@ -458,7 +458,8 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.6. <code class="filename">current</code>,
+<dt><span class="sect1"><a href="#ftp-reports">C.6. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.7. <code class="filename">current</code>,
 <code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
 </dl></dd>
@@ -10986,7 +10987,8 @@ Registering depends:.
 <dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
 <dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.6. <code class="filename">current</code>,
+<dt><span class="sect1"><a href="#ftp-reports">C.6. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.7. <code class="filename">current</code>,
 <code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</a></span></dt>
 </dl>
@@ -11004,7 +11006,8 @@ source packages</a></span></dt>
 <a name="ftp-bootstrap"></a>C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</h2></div></div></div>
 <p>For those who only want to manage binary packages on
 	systems other than NetBSD, we provide the package management
-	tools in a separate, small tar file.</p>
+	tools in a separate, small tar file. Please note that most of
+	these files are horribly outdated.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -11034,10 +11037,24 @@ source packages</a></span></dt>
 	platforms that are supported by pkgsrc.
 	Each subdirectory is of the form <em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>OSVERSION_TAG</code></em>. The meaning of these variables is:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><code class="varname">OPSYS</code> is the name of the operating system for which the packages have been built,</p></li>
-<li><p><code class="varname">ARCH</code> is the hardware architecture,</p></li>
-<li><p><code class="varname">OSVERSION</code> is the version of the operating system,</p></li>
-<li><p><code class="varname">TAG</code> is either <code class="literal">200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code> for a stable branch, or <code class="literal">head</code> for packages built from the HEAD branch.</p></li>
+<li><p><code class="varname">OPSYS</code> is the name of the
+	operating system for which the packages have been
+	built.</p></li>
+<li><p><code class="varname">ARCH</code> is the hardware
+	architecture of the platform for which the packages have been
+	built.</p></li>
+<li><p><code class="varname">OSVERSION</code> is the version of
+	the operating system. For version numbers that change often (for
+	example NetBSD-current), the often-changing part should be
+	replaced with an <code class="literal">x</code>, for example
+	<code class="literal">4.99.x</code>.</p></li>
+<li><p><code class="varname">TAG</code> is either
+	<code class="literal">200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>
+	for a stable branch, or <code class="literal">head</code> for packages
+	built from the HEAD branch. The latter should only be used when
+	the packages are updated on a regular basis. Otherwise the date
+	from checking out pkgsrc should be appended, for example
+	<code class="literal">head_20071015</code>.</p></li>
 </ul></div>
 <p>The rationale for exactly this scheme is that the pkgsrc users looking for binary packages
 	can quickly click through the directories on the
@@ -11055,7 +11072,14 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="ftp-source"></a>C.6. <code class="filename">current</code>,
+<a name="ftp-reports"></a>C.6. <code class="filename">reports</code>: Bulk build reports</h2></div></div></div>
+<p>Here are the reports from bulk builds, for those who want
+	to fix packages that didn't build on some of the platforms. The
+	structure of subdirectories should look like the one in <a href="#ftp-packages" title="C.5. packages: Binary packages">Section C.5, &#8220;<code class="filename">packages</code>: Binary packages&#8221;</a>.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ftp-source"></a>C.7. <code class="filename">current</code>,
 <code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
 source packages</h2></div></div></div>
 <p>These directories contain the &#8220;<span class="quote">real</span>&#8221; pkgsrc,
