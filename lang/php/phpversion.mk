@@ -1,7 +1,8 @@
-# $NetBSD: phpversion.mk,v 1.8 2007/09/20 09:11:07 rillig Exp $
+# $NetBSD: phpversion.mk,v 1.9 2007/10/11 08:51:43 rillig Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
-# the installed packages.
+# the installed packages. It does not add a dependency on the PHP
+# package.
 #
 # === User-settable variables ===
 #
