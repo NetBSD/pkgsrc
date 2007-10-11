@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2007/08/13 08:12:48 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2007/10/11 20:47:06 is Exp $
 #
 
 COMMENT=	Network news
 
 SUBDIR+=	cg
+SUBDIR+=	cleanscore
 SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	leafnode
