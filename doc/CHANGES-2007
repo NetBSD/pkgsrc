@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2124 2007/10/11 09:13:14 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2125 2007/10/11 14:20:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3945,3 +3945,4 @@ Changes to the packages collection and infrastructure in 2007:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2007Q3 branch [agc 2007-10-11]
 	Updated devel/apr to 1.2.11 [tron 2007-10-11]
 	Updated devel/apr-util to 1.2.10 [tron 2007-10-11]
+	Updated x11/x11vnc to 0.9.3 [obache 2007-10-11]
