@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.19 2007/09/20 09:32:15 rillig Exp $
+# $NetBSD: ext.mk,v 1.20 2007/10/11 08:51:11 rillig Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -11,7 +11,8 @@ PHPEXT_MK=	defined
 
 _VARGROUPS+=		phpext
 _USER_VARS.phpext=	# none
-_PKG_VARS.phpext=	MODNAME PECL_VERSION PKGMODNAME MODULESDIR
+_PKG_VARS.phpext=	MODNAME PECL_VERSION PKGMODNAME MODULESDIR \
+			USE_PHP_EXT_PATCHES
 _SYS_VARS.phpext=	DISTINFO_FILE PATCHDIR
 
 .if defined(PECL_VERSION)
