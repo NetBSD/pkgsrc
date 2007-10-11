@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: Makefile.common,v 1.20 2007/10/11 21:26:10 adam Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -12,25 +12,25 @@ CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=	c c++
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-BUILD_TARGET=	depend all
+USE_LANGUAGES=		c c++
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
+BUILD_TARGET=		depend all
 
-DISTINFO_FILE=	${.CURDIR}/../../wm/wmx/distinfo
-PATCHDIR=	${.CURDIR}/../../wm/wmx/patches
-PLIST_SRC=	${.CURDIR}/../../wm/wmx/PLIST
+DISTINFO_FILE=		${.CURDIR}/../../wm/wmx/distinfo
+PATCHDIR=		${.CURDIR}/../../wm/wmx/patches
+PLIST_SRC=		${.CURDIR}/../../wm/wmx/PLIST
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	etc/wmx
+INSTALLATION_DIRS+=	share/doc/wmx
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/wmx
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+BUILDLINK_DEPMETHOD.libXt+=	build
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
