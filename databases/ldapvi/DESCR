@@ -1,0 +1,2 @@
+ldapvi is an interactive LDAP client for Unix terminals. Using it, you can
+update LDAP entries with a text editor.  Think of it as vipw(1) for LDAP.
