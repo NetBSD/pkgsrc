@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6722 2007/10/11 09:13:14 tron Exp $
+$NetBSD: TODO,v 1.6723 2007/10/11 09:39:08 tron Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ Suggested package updates
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o micq-0.5.4.2
-	o milter-greylist-3.1.7
 	o minivmac-2.8.2
 	o mirmon-1.37
 	o mk-files-20061230
