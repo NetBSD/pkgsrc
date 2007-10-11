@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/11 19:14:20 is Exp $
+bin/mtrace6
+bin/mcastread
+bin/mcastsend
+bin/pmsft
+man/man1/mcastread.1
+man/man1/mcastsend.1
+man/man1/pim6stat.1
+man/man1/pmsft.1
+man/man8/mfc.8
+man/man8/mtrace6.8
+man/man8/pim6dd.8
+man/man8/pim6sd.8
+sbin/mfc
+sbin/pim6dd
+sbin/pim6sd
+sbin/pim6stat
+share/examples/mcast-tools/pim6sd.conf.sample
+share/examples/mcast-tools/pim6dd.conf.sample
+share/examples/mcast-tools/mfc.conf.sample
