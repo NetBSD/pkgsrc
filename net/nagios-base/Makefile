@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.12 2007/10/11 19:24:35 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2007/10/12 16:12:05 ghen Exp $
 #
 
-DISTNAME=	nagios-2.5
-PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	2
-CATEGORIES=	net sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagios/}
+DISTNAME=		nagios-2.5
+PKGNAME=		${DISTNAME:S/-/-base-/}
+PKGREVISION=		2
+CATEGORIES=		net sysutils
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nagios.org/
-COMMENT=	Network monitor
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.nagios.org/
+COMMENT=		Network monitor
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../net/nagios-base/Makefile.common"
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib		\
-			--with-gd-inc=${LOCALBASE}/include	\
-			--enable-embedded-perl			\
-			--with-perlcache
+CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-gd-inc=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--enable-embedded-perl
+CONFIGURE_ARGS+=	--with-perlcache
 
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}
@@ -34,31 +34,31 @@ RCD_SCRIPTS+=		nagios
 
 INSTALL_TARGET=		install install-config
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=		VARBASE
 
-PKG_GROUPS+=	${NAGIOS_GROUP}
-PKG_GROUPS+=	${NAGIOSADM_GROUP}
+PKG_GROUPS+=		${NAGIOS_GROUP}
+PKG_GROUPS+=		${NAGIOSADM_GROUP}
 
-PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}
-PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}
+PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
+PKG_USERS+=		${NAGIOSADM_USER}:${NAGIOSADM_GROUP}
 
 PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
 PKG_GECOS.${NAGIOSADM_USER}=	Nagios Administrator
 PKG_HOME.${NAGIOSADM_USER}=	${PKG_SYSCONFDIR}
 PKG_SHELL.${NAGIOSADM_USER}=	${SH}
 
-EGDIR=		${PREFIX}/share/examples/nagios
-EGFILES=	cgi.cfg checkcommands.cfg contactgroups.cfg contacts.cfg	\
-		dependencies.cfg escalations.cfg hostgroups.cfg hosts.cfg	\
-		misccommands.cfg nagios.cfg resource.cfg services.cfg 		\
-		timeperiods.cfg
+EGDIR=			${PREFIX}/share/examples/nagios
+EGFILES=		cgi.cfg checkcommands.cfg contactgroups.cfg contacts.cfg
+EGFILES+=		dependencies.cfg escalations.cfg hostgroups.cfg hosts.cfg
+EGFILES+=		misccommands.cfg nagios.cfg resource.cfg services.cfg
+EGFILES+=		timeperiods.cfg
 
 .for files in ${EGFILES}
-CONF_FILES+=	${EGDIR}/${files}-sample ${PKG_SYSCONFDIR}/${files}
+CONF_FILES+=		${EGDIR}/${files}-sample ${PKG_SYSCONFDIR}/${files}
 .endfor
 CONF_FILES+=		${EGDIR}/nagios.conf ${PKG_SYSCONFDIR}/nagios.conf
 
-NAGIOS_DIRS=	log/nagios log/nagios/archives run/nagios run/nagios/rw
+NAGIOS_DIRS=		log/nagios log/nagios/archives run/nagios run/nagios/rw
 .for dir in ${NAGIOS_DIRS}
 OWN_DIRS_PERMS+=	${VARBASE}/${dir} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 .endfor
