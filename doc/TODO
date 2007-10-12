@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6727 2007/10/11 22:04:13 wiz Exp $
+$NetBSD: TODO,v 1.6728 2007/10/12 18:39:32 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1316,7 +1316,6 @@ Suggested package updates
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.3
 	o wdm-1.28
-	o weechat-0.2.6
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o winbind-3.0.13
