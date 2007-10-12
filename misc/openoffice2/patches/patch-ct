@@ -1,0 +1,21 @@
+$NetBSD: patch-ct,v 1.1 2007/10/12 15:41:43 hira Exp $
+
+--- tools/inc/tools/solar.h.orig	2007-10-10 11:44:00.000000000 +0900
++++ tools/inc/tools/solar.h	2007-10-10 11:44:57.000000000 +0900
+@@ -342,6 +342,7 @@
+ #define SYSTEM_UNXSOGS		31
+ #define SYSTEM_UNXSOGI		32
+ #define SYSTEM_UNXMACXI		33
++#define SYSTEM_UNXBSDX		34
+ #define SYSTEM_WNTGCCI  	99
+ 
+ #if defined WNT
+@@ -395,6 +396,8 @@
+   #define __DLLEXTENSION "mxp.dylib"
+ #elif defined MACOSX && defined X86
+   #define __DLLEXTENSION "mxi.dylib"
++elif defined NETBSD && defined X86_64
++  #define __DLLEXTENSION "bx.so"
+ #else
+   #define __DLLEXTENSION ".so"
+ #endif

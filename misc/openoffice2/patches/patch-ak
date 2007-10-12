@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
+$NetBSD: patch-ak,v 1.6 2007/10/12 15:41:43 hira Exp $
 
---- config_office/set_soenv.in.orig	2007-08-03 22:09:48.000000000 +0900
-+++ config_office/set_soenv.in	2007-10-06 13:09:26.000000000 +0900
+--- config_office/set_soenv.in.orig	2007-08-03 13:09:48.000000000 +0000
++++ config_office/set_soenv.in	2007-10-12 01:59:21.000000000 +0000
 @@ -39,7 +39,7 @@
  #--------------------------------------------------------
  #
@@ -28,7 +28,24 @@ $NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
  $D              = " -D";            # define search path
  $empty          = "";               # used as argument
  $no_stl         = "NO_STLPORT4";    # possible argument
-@@ -296,8 +297,14 @@
+@@ -271,6 +272,16 @@
+       $JRETOOLKITDIR  = '$JAVA_HOME'.$ds."jre".$ds."lib".$ds."i386".$ds."client";
+       $JRETHREADDIR   = '$JAVA_HOME'.$ds."jre".$ds."lib".$ds."i386".$ds."native_threads";
+    }
++   elsif ($platform =~ m/^x86_64/)
++   {  print "Setting NetBSD x86-64 specific values... ";
++      $outfile        = "NetBSDX86-64Env.Set";
++      $CPU            = "X";
++      $CPUNAME        = "X86_64";
++      $OUTPATH        = "unxbsdx";
++      $JRELIBDIR      = '$JAVA_HOME'.$ds."jre".$ds."lib".$ds."i386";
++      $JRETOOLKITDIR  = '$JAVA_HOME'.$ds."jre".$ds."lib".$ds."i386".$ds."client";
++      $JRETHREADDIR   = '$JAVA_HOME'.$ds."jre".$ds."lib".$ds."i386".$ds."native_threads";
++   }
+    elsif ($platform =~ m/^sparc/)
+    {  print "Setting NetBSD Sparc specific values... ";
+       $outfile        = "NetBSDSparcEnv.Set"; 
+@@ -296,8 +307,14 @@
       exit 1;
     }
     #Conditional setting depending on gcc3:
@@ -45,7 +62,7 @@ $NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
     # General NetBSD settings:
        $BIG_SVX        = "TRUE";
        $COM            = "GCC";
-@@ -1243,7 +1250,8 @@
+@@ -1243,7 +1260,8 @@
                          $L.$JRETOOLKITDIR.
                          $L.$JRETHREADDIR.
                          $L_STLPORT_LIB.
@@ -55,7 +72,7 @@ $NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
  }
  elsif ($platform =~ m/linux-gnu|netbasd|osf1|irix|aix|freebsd/)
  {  $SOLARLIB          = $L.$par_dir.$LIB.
-@@ -1400,6 +1408,7 @@
+@@ -1400,6 +1418,7 @@
  
  if ($SYSTEM_PYTHON eq "NO")
  {
@@ -63,7 +80,7 @@ $NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
  	$PYTHONPATH           = '.'.$ps.'$SOLARVER'.$ds.'$INPATH'.$ds.'lib'.$ps.'$SOLARVER'.$ds.'$INPATH'.$ds.'lib'.$ds.'python'.$ps.'$SOLARVER'.$ds.'$INPATH'.$ds.'lib'.$ds.'python'.$ds.'lib-dynload'.$ps.'$SOLARVER'.$ds.'$INPATH'.$ds.'lib'.$ds.'pyuno'.$ps.'$SOLARVER'.$ds.'$INPATH'.$ds.'bin'.$ds.'pyuno';
  	$PYTHONHOME           = '$SOLARVER'.$ds.'$INPATH';
  }
-@@ -1539,6 +1548,8 @@
+@@ -1539,6 +1558,8 @@
  ToFile( "JITC_PROCESSOR_TYPE","6",                 "e" );
  }
  ToFile( "DEFAULT_TO_ENGLISH_FOR_PACKING",  "yes", "e" );
@@ -72,7 +89,7 @@ $NetBSD: patch-ak,v 1.5 2007/10/06 20:02:22 hira Exp $
  ToFile( "ENABLE_GTK",        "@ENABLE_GTK@",       "e" );
  ToFile( "GTK_CFLAGS",        "@GTK_CFLAGS@",       "e" );
  ToFile( "GTK_LIBS",          "@GTK_LIBS@",         "e" );
-@@ -1785,6 +1796,7 @@
+@@ -1785,6 +1806,7 @@
  ToFile( "PKGFORMAT",         "@PKGFORMAT@",        "e" );
  ToFile( "SYSTEM_STDLIBS",    "@SYSTEM_STDLIBS@",   "e" );
  ToFile( "SYSTEM_ZLIB",       "@SYSTEM_ZLIB@",      "e" );
