@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/10/10 11:36:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2007/10/12 01:29:10 dmcmahill Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -40,17 +40,11 @@ _GUIDE_OUTPUTS=		${OUTPUTS}
 
 .include "Makefile.common"
 
-# this hack is needed because otherwise PKGMAKECONF ends up set
-# to /dev/null during the build.  When make is then called recursively
-# with MAKECONF=/dev/null, some older versions fail.
-PKGMAKECONF?=	${WRKDIR}/mk.conf
-
 # The source files are only symlinked into the WRKSRC, so that they can
 # be easily modified, should the "lint" phase fail.
 pre-extract:
 	${MKDIR} ${WRKSRC}
 	${LN} -s ${FILESDIR}/* ${WRKSRC}
-	${TOUCH} ${PKGMAKECONF}
 
 do-build:
 .for _output_ in ${OUTPUTS}
