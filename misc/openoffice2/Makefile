@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/10/06 20:02:21 hira Exp $
+# $NetBSD: Makefile,v 1.26 2007/10/12 15:41:43 hira Exp $
 #
 
 OO_VER=			2.3.0
@@ -45,6 +45,7 @@ CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-x86_64 NetBSD-[2-9]*-x86_64
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
@@ -92,7 +93,8 @@ OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
 post-extract:
 	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
 	mv gcc3_netbsd_intel gcc3_netbsd_intel.orig &&		\
-	cp -Rp gcc3_freebsd_intel gcc3_netbsd_intel
+	cp -Rp gcc3_freebsd_intel gcc3_netbsd_intel &&		\
+	cp -Rp gcc3_freebsd_x86-64 gcc3_netbsd_x86-64
 
 do-build:
 	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
