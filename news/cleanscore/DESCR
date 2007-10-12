@@ -1,0 +1,4 @@
+Cleanscore is a perl-script to remove expired score entries from the
+newsreader slrn's scorefile (usually $HOME/News/Score).
+
+Author: Felix Schueller <fschueller&netcologne.de>
