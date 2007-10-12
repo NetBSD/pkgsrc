@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.168 2007/10/01 11:50:40 rillig Exp $
+# $NetBSD: makevars.map,v 1.169 2007/10/12 07:04:15 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -72,7 +72,7 @@ PREFER_NATIVE_PTHREADS		YesNo [$user]
 LOCALBASE			Pathname [$user]
 CROSSBASE			Pathname [$user]
 VARBASE				Pathname [$user]
-X11_TYPE			{ native xorg } [$user]
+X11_TYPE			{ modular native } [$user]
 X11BASE				Pathname [$user]
 MOTIFBASE			Pathname [$user]
 PKGINFODIR			Pathname [$user]
