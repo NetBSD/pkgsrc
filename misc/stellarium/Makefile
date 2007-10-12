@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/12 16:53:55 drochner Exp $
 
-DISTNAME=	stellarium-0.8.2
-PKGREVISION=	1
+DISTNAME=	stellarium-0.9.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stellarium/}
 
@@ -9,14 +8,24 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.stellarium.org/
 COMMENT=	Generate photorealistic skies with OpenGL
 
-BROKEN_IN=		pkgsrc-2006Q4
-
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
 
-.include "../../devel/SDL/buildlink3.mk"
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+
+CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
+CM_ARGS+= -D CMAKE_INSTALL_PREFIX:PATH=${PREFIX}
+CM_ARGS+= -D FreeType2_INCLUDE_DIR:PATH=${LOCALBASE}/include/freetype2
+CM_ARGS+= -D FreeType2_LIBRARIES:PATH=${LOCALBASE}/lib
+
+do-configure:
+	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} cmake ${CM_ARGS} .)
+
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
