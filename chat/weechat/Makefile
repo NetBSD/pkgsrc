@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/10/12 18:38:41 tonio Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/12 23:06:27 wiz Exp $
 #
 
 DISTNAME=	weechat-0.2.6
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--disable-ruby --disable-perl --disable-aspell
 MAKE_ENV+=		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
 INCOMPAT_CURSES+=	NetBSD-*-*
+
+#LICENSE=		gplv3
 
 .include "options.mk"
 
