@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2136 2007/10/12 01:14:49 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2137 2007/10/12 06:59:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/wmx to 6.0nb3 [adam 2007-10-11]
 	Updated filesystems/fuse-ntfs-3g to 1.1004 [xtraeme 2007-10-11]
 	Updated net/libpcap to 0.9.8 [adam 2007-10-11]
+	Updated sysutils/checkperms to 1.10 [roland 2007-10-12]
