@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2007/07/16 09:39:20 drochner Exp $
+$NetBSD: distinfo,v 1.4 2007/10/12 16:22:24 drochner Exp $
 
 SHA1 (compiz-0.4.0.tar.bz2) = b2eaec6bcb0513dcd7d8c62c45aa84b218c9e7be
 RMD160 (compiz-0.4.0.tar.bz2) = dbfd9874b28bac61954887e33b4cba126acca141
 Size (compiz-0.4.0.tar.bz2) = 900099 bytes
 SHA1 (patch-aa) = 229e308c58cdf1ba916de218475224420324dcf4
+SHA1 (patch-ab) = ae846e1f536c54df3d2cba94b424f0f9ffff7696
