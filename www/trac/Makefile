@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/10/12 12:40:59 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2007/10/12 14:03:48 gdt Exp $
 #
 
 DISTNAME=	trac-0.10.4
@@ -12,7 +12,25 @@ COMMENT=	Subversion repository browser, wiki, and issue tracking system
 
 DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.14:../../www/py-clearsilver
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
-DEPENDS+=	${PYPKGPREFIX}-{PgSQL>=2.4,psycopg>=1.1.14,sqlite>=0.5}:../../databases/py-sqlite
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
+PKG_OPTIONS_REQUIRED_GROUPS=	db
+PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
+PKG_SUGGESTED_OPTIONS=	sqlite
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Msqlite)
+DEPENDS+=	${PYPKGPREFIX}-{sqlite2>=2}:../../databases/py-sqlite2
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+DEPENDS+=	${PYPKGPREFIX}-{PgSQL>=2.4}:../../databases/py-PgSQL
+.endif
+.if !empty(PKG_OPTIONS:Mpsycopg2)
+DEPENDS+=	${PYPKGPREFIX}-{psycopg>=1.1.14}:../../databases/py-psycopg2
+.endif
+# MySQL is sort of supported but not recommended by upstream and hence
+# omitted.
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
