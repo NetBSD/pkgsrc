@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.169 2007/10/12 07:04:15 rillig Exp $
+# $NetBSD: makevars.map,v 1.170 2007/10/12 20:16:01 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -398,7 +398,7 @@ LOWER_OPSYS		Identifier [$system]
 LTCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 MACHINE_ARCH		Identifier [$system]
 MACHINE_GNU_PLATFORM	PlatformTriple [$system]
-MAINTAINER		Mail_Address [m:s,c:ds]
+MAINTAINER		Mail_Address [m:s,c:d]
 MAKE			ShellCommand [$system]
 MAKEFLAGS		List of ShellWord [$package_list]
 MAKEVARS		List of Varname [builtin.mk:a,b:a,h:a]
