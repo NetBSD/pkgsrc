@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2007/10/11 18:45:05 drochner Exp $
+# $NetBSD: Makefile,v 1.387 2007/10/12 17:31:16 drochner Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -149,6 +149,7 @@ SUBDIR+=	mecab
 SUBDIR+=	mecab-base
 SUBDIR+=	mecab-ipadic
 SUBDIR+=	mecab-jumandic
+SUBDIR+=	mxml
 SUBDIR+=	namazu
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
