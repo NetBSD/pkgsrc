@@ -144,13 +144,13 @@ OOPPTTIIOONNSS
      a URL pointing at a file available on an ftp or web site.  Thus you may
      extract files directly from their anonymous ftp or WWW locations (e.g.,
      ppkkgg__aadddd ftp://ftp.NetBSD.org/pub/pkgsrc/pack-
-     ages/NetBSD-3.1/i386/shells/bash-3.2.9.tgz or ppkkgg__aadddd http://www.exam-
-     ple.org/packages/screen-4.0.tbz).  Note:  For ftp transfers, if you wish
-     to use _p_a_s_s_i_v_e _m_o_d_e ftp in such transfers, set the variable _F_T_P___P_A_S_-
-     _S_I_V_E___M_O_D_E to some value in your environment.  Otherwise, the more stan-
-     dard ACTIVE mode may be used.  If ppkkgg__aadddd consistently fails to fetch a
-     package from a site known to work, it may be because you have a firewall
-     that demands the usage of _p_a_s_s_i_v_e _m_o_d_e ftp.
+     ages/NetBSD/i386/3.1_2007Q2/shells/bash-3.2.9.tgz or ppkkgg__aadddd
+     http://www.example.org/packages/screen-4.0.tbz).  Note:  For ftp trans-
+     fers, if you wish to use _p_a_s_s_i_v_e _m_o_d_e ftp in such transfers, set the
+     variable _F_T_P___P_A_S_S_I_V_E___M_O_D_E to some value in your environment.  Otherwise,
+     the more standard ACTIVE mode may be used.  If ppkkgg__aadddd consistently fails
+     to fetch a package from a site known to work, it may be because you have
+     a firewall that demands the usage of _p_a_s_s_i_v_e _m_o_d_e ftp.
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      ppkkgg__aadddd extracts each package's ``packing list'' into a special staging
@@ -300,9 +300,9 @@ EEXXAAMMPPLLEESS
      You can grab a compiled binary package from remote location by specifying
      a URL.  The URL can be put into an environment variable, PKG_PATH.
 
-     # pkg_add -v ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/firefox-2.0.0.4.tgz
+     # pkg_add -v ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/All/firefox-2.0.0.4.tgz
 
-     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/
+     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/All
      # pkg_add -v firefox
 
      Over time, as problems are found in packages, they will be moved from the
@@ -310,7 +310,7 @@ EEXXAAMMPPLLEESS
      vulnerable packages by default (and know what you are doing), you can add
      the _v_u_l_n_e_r_a_b_l_e directory to your PKG_PATH like this:
 
-     # export PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/All/;ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD-3.1/i386/vulnerable/"
+     # export PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/All/;ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/i386/3.1_2007Q2/vulnerable/"
 
      (The quotes are needed because semicolon (`;') is a shell meta-charac-
      ter.)  If you do this, consider installing and using the
