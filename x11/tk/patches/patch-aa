@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
+$NetBSD: patch-aa,v 1.19 2007/10/13 11:41:33 adam Exp $
 
---- unix/Makefile.in.orig	2006-10-19 19:27:34.000000000 +0200
+--- unix/Makefile.in.orig	2007-09-21 19:04:18.000000000 +0200
 +++ unix/Makefile.in
 @@ -94,7 +94,7 @@ HTML_INSTALL_DIR	= $(INSTALL_ROOT)$(HTML
  # The directory containing the Tcl sources and headers appropriate
@@ -48,8 +48,8 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
 +LD			= ${LIBTOOL} --mode=link @CC@ -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
- -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -481,7 +483,7 @@ DEMOPROGS = browse hello ixset rmt rolod
+ -I${UNIX_DIR} -I${GENERIC_DIR} -I${BMAP_DIR} -I${TCL_GENERIC_DIR} \
+@@ -482,7 +484,7 @@ DEMOPROGS = browse hello ixset rmt rolod
  
  all: binaries libraries doc
  
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
  
  libraries:
  
-@@ -493,7 +495,7 @@ doc: $(TOP_DIR)/doc/man.macros
+@@ -494,7 +496,7 @@ doc: $(TOP_DIR)/doc/man.macros
  
  # The following target is configured by autoconf to generate either
  # a shared library or non-shared library for Tk.
@@ -67,7 +67,7 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
  	rm -f $@
  	@MAKE_LIB@
  
-@@ -522,8 +524,8 @@ tkLibObjs:
+@@ -523,8 +525,8 @@ tkLibObjs:
  objs: ${OBJS}
  
  
@@ -78,7 +78,7 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o wish
  
  # Resetting the LIB_RUNTIME_DIR below is required so that
-@@ -536,7 +538,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
+@@ -537,7 +539,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
  	$(MAKE) tktest-real LIB_RUNTIME_DIR=`pwd`:$(TCL_BIN_DIR)
  
  tktest-real:
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o tktest
  
  # FIXME: This xttest rule seems to be broken in a number of ways.
-@@ -544,7 +546,7 @@ tktest-real:
+@@ -545,7 +547,7 @@ tktest-real:
  # lib location logic from tktest, and it is not clear where this
  # test.o object file comes from.
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
@@ -96,7 +96,7 @@ $NetBSD: patch-aa,v 1.18 2006/11/02 17:42:03 adam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -614,7 +616,7 @@ install-strip:
+@@ -615,7 +617,7 @@ install-strip:
  # some ranlibs write to current directory, and this might not always be
  # possible (e.g. if installing as root).
  
