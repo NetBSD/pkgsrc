@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/17 21:45:52 veego Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/10/13 16:27:14 adrianp Exp $
 bin/irssi
 include/irssi/config.h
 include/irssi/irssi-version.h
@@ -68,7 +68,6 @@ include/irssi/src/fe-common/core/module.h
 include/irssi/src/fe-common/core/printtext.h
 include/irssi/src/fe-common/core/themes.h
 include/irssi/src/fe-common/core/translation.h
-include/irssi/src/fe-common/core/utf8.h
 include/irssi/src/fe-common/core/window-activity.h
 include/irssi/src/fe-common/core/window-items.h
 include/irssi/src/fe-common/core/windows-layout.h
@@ -131,6 +130,7 @@ share/doc/irssi/special_vars.txt
 share/doc/irssi/startup-HOWTO.html
 share/examples/irssi/irssi.conf
 share/irssi/config.h
+share/irssi/help/accept
 share/irssi/help/action
 share/irssi/help/admin
 share/irssi/help/alias
