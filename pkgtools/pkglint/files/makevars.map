@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.170 2007/10/12 20:16:01 rillig Exp $
+# $NetBSD: makevars.map,v 1.171 2007/10/13 08:57:09 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -314,6 +314,7 @@ EXTRACT_OPTS_ZIP	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_ZOO	List of ShellWord [m:as,c:as]
 EXTRACT_SUFX		DistSuffix [$package]
 EXTRACT_USING		{ gtar nbtar pax } [$package]
+FAIL_MSG		ShellCommand [$system]
 FAMBASE			Pathname [$system]
 FAM_ACCEPTED		List of { fam gamin } [$package]
 FAM_DEFAULT		{ fam gamin } [$user]
