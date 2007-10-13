@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/10/23 20:03:23 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/13 01:21:19 reed Exp $
 
-DISTNAME=	pwgen-2.05
+DISTNAME=	pwgen-2.06
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pwgen/}
 
