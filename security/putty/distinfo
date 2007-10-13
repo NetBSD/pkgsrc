@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2007/03/17 16:35:05 rillig Exp $
+$NetBSD: distinfo,v 1.7 2007/10/13 09:14:16 obache Exp $
 
-SHA1 (putty-0.59.tar.gz) = 64fcbcd50bc7f204699de415931b3745ceac8c56
-RMD160 (putty-0.59.tar.gz) = dea0c6b3890760617e26d380e500fcc8b898bbeb
-Size (putty-0.59.tar.gz) = 1736071 bytes
-SHA1 (patch-aa) = 3bec8d64a504a887c0ef299aead01c647480313f
+SHA1 (putty-0.60.tar.gz) = 8d99f8f1077b7ab25f014126b5d812a1ad55ce37
+RMD160 (putty-0.60.tar.gz) = 9c56ee4d2d05f5b1079c65f19a5d9d06b596aba3
+Size (putty-0.60.tar.gz) = 1743711 bytes
+SHA1 (patch-aa) = 4949b10698c445fa16a28a8818c7448959f45135
 SHA1 (patch-ac) = 61cc8640417931a04152d4f4a1d6daa420d85496
 SHA1 (patch-ad) = b90f5fc8ebd7bb1227dc18ed93afe104e5e40490
 SHA1 (patch-ae) = 82bd150f0dfb59eda57e4d9bca7abfc8093090a9

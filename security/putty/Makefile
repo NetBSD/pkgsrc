@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2007/09/07 22:12:22 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/10/13 09:14:16 obache Exp $
 #
 
-DISTNAME=	putty-0.59
+DISTNAME=	putty-0.60
 CATEGORIES=	security
-MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.59/
+MASTER_SITES=	http://the.earth.li/~sgtatham/putty/0.60/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
