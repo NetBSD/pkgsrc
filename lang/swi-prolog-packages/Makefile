@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/13 09:39:11 rillig Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -7,8 +7,6 @@ PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Packages for SWI Prolog
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 GNU_CONFIGURE=		yes
 OVERRIDE_DIRDEPTH=	3
@@ -67,6 +65,7 @@ teardownx:
 
 .include "../../lang/swi-prolog-lite/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
