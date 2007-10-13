@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2155 2007/10/13 17:45:47 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2156 2007/10/13 18:36:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3989,3 +3989,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/irssi to 0.8.12 [adrianp 2007-10-13]
 	Updated math/glpk to 4.22 [adam 2007-10-13]
 	Updated sysutils/gnome-vfsmm to 2.20.0 [adam 2007-10-13]
+	Updated graphics/ImageMagick to 6.3.6.1 [adam 2007-10-13]
+	Updated devel/libgnomemm to 2.20.0 [adam 2007-10-13]
+	Updated graphics/libgnomecanvasmm to 2.20.0 [adam 2007-10-13]
+	Updated devel/gperf to 3.0.3 [adam 2007-10-13]
