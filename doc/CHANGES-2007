@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2156 2007/10/13 18:36:46 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2157 2007/10/13 18:41:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3993,3 +3993,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libgnomemm to 2.20.0 [adam 2007-10-13]
 	Updated graphics/libgnomecanvasmm to 2.20.0 [adam 2007-10-13]
 	Updated devel/gperf to 3.0.3 [adam 2007-10-13]
+	Updated devel/libextractor to 0.5.18a [adam 2007-10-13]
