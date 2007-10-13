@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2006/09/19 23:35:07 joerg Exp $
+$NetBSD: patch-am,v 1.2 2007/10/13 18:12:40 rillig Exp $
 
---- src/frontends/controllers/ControlInset.tmpl.orig	2006-09-20 01:05:11.000000000 +0000
-+++ src/frontends/controllers/ControlInset.tmpl
-@@ -10,6 +10,7 @@
+--- src/frontends/controllers/ControlInset.tmpl.orig	2002-01-16 14:47:57.000000000 +0000
++++ src/frontends/controllers/ControlInset.tmpl	2007-10-13 16:02:27.000000000 +0000
+@@ -10,9 +10,11 @@
   * instantiated if this file is #included in the derived classes' .C file.
   */
  
@@ -10,3 +10,7 @@ $NetBSD: patch-am,v 1.1 2006/09/19 23:35:07 joerg Exp $
  #include "ControlInset.h"
  #include "support/LAssert.h"
  #include "debug.h" 
++#include "buffer.h"
+ 
+ 
+ template <class Inset, class Params>
