@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2007/09/08 10:41:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/13 15:06:29 heinz Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INFO_FILES=	yes
 
@@ -26,23 +28,23 @@ post-build:
 
 post-install:
 .if ${OPSYS} == "SunOS"
-	cd ${GCC_ARCHDIR}/include && ${RM} -f fixed
-.if exists(${GCC_ARCHDIR}/include/v7)
-	${RMDIR} ${GCC_ARCHDIR}/include/v7
+	cd ${DESTDIR:Q}${GCC_ARCHDIR}/include && ${RM} -f fixed
+.if exists(${DESTDIR}${GCC_ARCHDIR}/include/v7)
+	${RMDIR} ${DESTDIR:Q}${GCC_ARCHDIR}/include/v7
 .endif
-.if exists(${GCC_ARCHDIR}/include/v9)
-	${RMDIR} ${GCC_ARCHDIR}/include/v9
+.if exists(${DESTDIR}${GCC_ARCHDIR}/include/v9)
+	${RMDIR} ${DESTDIR:Q}${GCC_ARCHDIR}/include/v9
 .endif
 .endif
-	${INSTALL_DATA_DIR} ${GCC_PREFIX}/mk
-	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/c.mk
-	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${GCC_PREFIX}/mk
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${DESTDIR:Q}${GCC_PREFIX}/mk/c.mk
+	${LN} -f ${DESTDIR:Q}${GCC_PREFIX}/bin/gcc ${DESTDIR:Q}${GCC_PREFIX}/bin/cc
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
+	${FIND} ${DESTDIR:Q}${GCC_PREFIX} \( -type f -o -type l \) -print \
+		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g"	\
 		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+	${FIND} ${DESTDIR:Q}${GCC_PREFIX} -type d -print		\
+		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g" \
 		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
