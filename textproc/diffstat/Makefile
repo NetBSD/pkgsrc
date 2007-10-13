@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/10/09 23:09:20 snj Exp $
+# $NetBSD: Makefile,v 1.12 2007/10/13 01:28:12 reed Exp $
 
-DISTNAME=	diffstat-1.43
+DISTNAME=	diffstat-1.45
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://invisible-island.net/diffstat/
 EXTRACT_SUFX=	.tgz
