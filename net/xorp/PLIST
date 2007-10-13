@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/11 21:01:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/10/13 15:15:49 obache Exp $
 xorp/bgp/tools/xorpsh_print_peers
 xorp/bgp/tools/xorpsh_print_routes
 xorp/bgp/xorp_bgp
@@ -25,6 +25,8 @@ xorp/etc/templates/mld.cmds
 xorp/etc/templates/mld.tp
 xorp/etc/templates/ospfv2.cmds
 xorp/etc/templates/ospfv2.tp
+xorp/etc/templates/ospfv3.cmds
+xorp/etc/templates/ospfv3.tp
 xorp/etc/templates/pim.cmds
 xorp/etc/templates/pim6.cmds
 xorp/etc/templates/pimsm4.tp
@@ -75,7 +77,6 @@ xorp/xrl/targets/finder.xrls
 xorp/xrl/targets/finder_client.xrls
 xorp/xrl/targets/mfea.xrls
 xorp/xrl/targets/mld6igmp.xrls
-xorp/xrl/targets/ospf.xrls
 xorp/xrl/targets/ospfv2.xrls
 xorp/xrl/targets/ospfv3.xrls
 xorp/xrl/targets/packet_acl.xrls
