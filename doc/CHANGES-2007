@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2153 2007/10/13 15:28:40 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2154 2007/10/13 16:27:40 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gtkmm to 2.12.1 [adam 2007-10-13]
 	Updated net/xorp to 1.4 [obache 2007-10-13]
 	Updated math/mathomatic to 12.7.7 [minskim 2007-10-13]
+	Updated chat/irssi to 0.8.12 [adrianp 2007-10-13]
