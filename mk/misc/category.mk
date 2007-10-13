@@ -1,9 +1,9 @@
-# $NetBSD: category.mk,v 1.1 2007/08/13 08:12:51 rillig Exp $
+# $NetBSD: category.mk,v 1.2 2007/10/13 11:04:18 dsl Exp $
 #
 # This file contains the variables and targets for category Makefiles.
 #
 
-.include "${.PARSEDIR}/common.mk"
+.include "common.mk"
 
 README.html: .PRECIOUS .PHONY
 	@> $@.tmp
@@ -42,4 +42,4 @@ README.html: .PRECIOUS .PHONY
 	@cd ${subdir} && ${RECURSIVE_MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
 .endfor
 
-.include "${.PARSEDIR}/../bsd.pkg.subdir.mk"
+.include "../bsd.pkg.subdir.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.9 2007/08/14 17:48:53 rillig Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.10 2007/10/13 11:04:16 dsl Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.
@@ -30,7 +30,7 @@
 
 PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
 
-.include "${.PARSEDIR}/bsd.fast.prefs.mk"
+.include "bsd.fast.prefs.mk"
 
 .if !empty(PAM_BUILDLINK3_MK:M+)
 #
