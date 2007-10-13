@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2007/07/28 07:37:51 adam Exp $
+$NetBSD: patch-ag,v 1.6 2007/10/13 12:02:14 adam Exp $
 
---- qmake/project.cpp.orig	2007-05-25 15:24:07.000000000 +0200
+--- qmake/project.cpp.orig	2007-10-01 15:06:01.000000000 +0200
 +++ qmake/project.cpp
-@@ -1586,6 +1586,9 @@ QMakeProject::isActiveConfig(const QStri
+@@ -1601,6 +1601,9 @@ QMakeProject::isActiveConfig(const QStri
      else if(x == "false")
          return false;
  

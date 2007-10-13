@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2007/01/15 19:16:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/10/13 12:02:14 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT4_LIBS_BUILDLINK3_MK:=	${QT4_LIBS_BUILDLINK3_MK}+
@@ -27,11 +27,12 @@ PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
