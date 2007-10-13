@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6733 2007/10/13 15:16:58 obache Exp $
+$NetBSD: TODO,v 1.6734 2007/10/13 17:45:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,6 @@ Suggested package updates
 	o glade3-3.4.0
 	o glchess-1.0.5
 	o global-5.6
-	o glpk-4.22
 	o gmime-2.2.10
 	o gmpc-0.15.1
 	o gnash-0.8.1
@@ -575,7 +574,6 @@ Suggested package updates
 	o gnome-themes-2.20.0
 	o gnome-utils-2.20.0.1
 	o gnome-vfs-2.20.0
-	o gnome-vfsmm-2.20.0
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
