@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2148 2007/10/13 11:48:05 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2149 2007/10/13 12:04:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3973,3 +3973,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/tcl to 8.4.16 [adam 2007-10-13]
 	Updated x11/tk to 8.4.16 [adam 2007-10-13]
 	Updated net/x2vnc to 1.7.2nb1 [tnn 2007-10-13]
+	Updated www/p5-CGI to 3.29 [adam 2007-10-13]
+	Updated textproc/p5-PDF-API2 to 0.65 [adam 2007-10-13]
+	Updated x11/qt4 to 4.3.2 [adam 2007-10-13]
+	Updated x11/qt4-libs to 4.3.2 [adam 2007-10-13]
+	Updated x11/qt4-docs to 4.3.2 [adam 2007-10-13]
+	Updated x11/qt4-tools to 4.3.2 [adam 2007-10-13]
+	Updated x11/qt4-pgsql to 4.3.2 [adam 2007-10-13]
+	Updated x11/qt4-sqlite3 to 4.3.2 [adam 2007-10-13]
