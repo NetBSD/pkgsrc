@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.68 2007/08/13 08:12:51 rillig Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.69 2007/10/13 11:04:16 dsl Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -26,7 +26,7 @@
 #	mirror-distfiles, bulk-install, bulk-package, ${PKG_MISC_TARGETS}
 #
 
-.include "${.PARSEDIR}/misc/common.mk"
+.include "misc/common.mk"
 
 AWK?=		/usr/bin/awk
 CAT?=		/bin/cat

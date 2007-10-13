@@ -1,4 +1,4 @@
-# $NetBSD: solaris.mk,v 1.2 2007/08/23 17:39:47 jlam Exp $
+# $NetBSD: solaris.mk,v 1.3 2007/10/13 11:04:18 dsl Exp $
 #
 # Solaris (SVR4) binary emulation framework
 #
@@ -42,7 +42,7 @@ EMUL_DISTRO=		native-solaris		# native SunOS 5.x
 EMULDIR=		${PREFIX}
 EMULSUBDIR=		# empty
 .else
-.  include "${.PARSEDIR}/solaris-${_EMUL_TYPE}.mk"
+.  include "solaris-${_EMUL_TYPE}.mk"
 .endif
 
 .if (${_EMUL_TYPE} == "builtin") || (${_EMUL_TYPE} == "native")
