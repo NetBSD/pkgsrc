@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2151 2007/10/13 14:20:09 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2152 2007/10/13 15:16:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/rocksndiamonds to 3.2.4 [adam 2007-10-13]
 	Updated devel/glibmm to 2.14.1 [adam 2007-10-13]
 	Updated x11/gtkmm to 2.12.1 [adam 2007-10-13]
+	Updated net/xorp to 1.4 [obache 2007-10-13]
