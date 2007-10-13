@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.16 2007/10/13 17:29:26 rillig Exp $
+# $NetBSD: binpkg-cache,v 1.17 2007/10/13 17:46:12 rillig Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -155,9 +155,7 @@ process_binpkg_dir(){
 		# of date.  Once we implement incremental updates to the cache,
 		# we need to remove the entries but not mark the entire cache as
 		# bad.
-		if test "X${DEBUG}" = "Xyes" ; then
-			echo "      Checking for cache entries with no corresponding pkg."
-		fi
+		$if_debug echo "      Checking for cache entries with no corresponding pkg."
 		# get the list of what pkgs belong in the cache
 		rm -f ${tmpd}/pkg_list ${tmpd}/cache_pkg_list
 		${FIND} ${d}/ -name \*${PKG_SUFX} -print | \
@@ -169,16 +167,12 @@ process_binpkg_dir(){
 			${d}/${cachefile} | ${SORT} > ${tmpd}/cache_pkg_list
 
 		if ${CMP} -s ${tmpd}/pkg_list ${tmpd}/cache_pkg_list ; then
-			if test "X${DEBUG}" = "Xyes" ; then
-				echo "      No extra cache entries in ${d}/${cachefile}"
-			fi
+			$if_debug echo "      No extra cache entries in ${d}/${cachefile}"
 		else
-			if test "X${DEBUG}" = "Xyes" ; then
-				echo "Package list:"
-				cat  ${tmpd}/pkg_list
-				echo "Cache list:"
-				cat ${tmpd}/cache_pkg_list
-			fi
+			$if_debug echo "Package list:"
+			$if_debug cat  ${tmpd}/pkg_list
+			$if_debug echo "Cache list:"
+			$if_debug cat ${tmpd}/cache_pkg_list
 			echo "      Entries found in ${d}/${cachefile} but no packages found"
 			need_update=yes
 		fi
@@ -227,9 +221,7 @@ process_binpkg_dir(){
 		touch ${tmpd}/${summaryfile}
 		for f in ${d}/*${PKG_SUFX} ; do
 			fn=`grep "^${d} " ${all_dirs} | ${AWK} '{print $2}'`"/"`basename ${f}`
-			if test "X${DEBUG}" = "Xyes" ; then
-				echo "     Adding ${fn} (${f}) to the cache"
-			fi
+			$if_debug echo "     Adding ${fn} (${f}) to the cache"
 			echo " " >> ${tmpd}/${cachefile}
 			# stat(1) needs to be added to the bootstrap kit
 			# first if we want to use it here
@@ -237,11 +229,11 @@ process_binpkg_dir(){
 			echo "pkgcache_begin ${fn}" >> ${tmpd}/${cachefile}
 			#echo "pkgcache_mtime=${st_mtime}" >> ${tmpd}/${cachefile}
 
-			if test "X${DEBUG}" = "Xyes" ; then echo "${PKG_INFO} -q -B ${f}" ; fi
+			$if_debug echo "${PKG_INFO} -q -B ${f}"
 			${PKG_INFO} -q -B ${f} >> ${tmpd}/${cachefile}
 
 			if test "${build_summary}" = "yes" ; then
-				if test "X${DEBUG}" = "Xyes" ; then echo "${PKG_INFO} -X ${f}" ; fi
+				$if_debug echo "${PKG_INFO} -X ${f}"
 				${PKG_INFO} -X ${f} >> ${tmpd}/${summaryfile}
 			fi
 			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
@@ -314,7 +306,7 @@ process_cache_files(){
 #
 ######################################################################
 
-DEBUG=no
+if_debug=:		# either ":" or ""
 verbose=no
 force=no
 build_summary=no
@@ -326,7 +318,7 @@ do
 
 		# Turn on debugging
 		-d|--debug)
-			DEBUG=yes
+			if_debug=""
 			verbose=yes
 			shift
 			;;
@@ -360,7 +352,7 @@ do
 			exit 0
 	    		;;
 
-		# Turn on verbose output, but not as noisy as DEBUG
+		# Turn on verbose output, but not as noisy as debug
 		-v|--verbose)
 			verbose=yes
 			shift
@@ -402,17 +394,13 @@ for d in `${FIND} ${PACKAGES}/ -type d -follow -print` ; do
 	echo "${cname} ${rname}" >> ${all_dirs}.tmp
 done
 ${SORT} -u -k1,1 ${all_dirs}.tmp > ${all_dirs}
-if test "X${DEBUG}" = "Xyes" ; then
-	echo "Full directory list:"
-	cat ${all_dirs}.tmp
-	echo "Unique directory list:"
-	cat ${all_dirs}
-fi
+$if_debug echo "Full directory list:"
+$if_debug cat ${all_dirs}.tmp
+$if_debug echo "Unique directory list:"
+$if_debug cat ${all_dirs}
 
 for d in `${AWK} '{print $1}' ${all_dirs}` ; do
-	if test "X${DEBUG}" = "Xyes" ; then
-		echo "${prompt}Processing directory ${d}"
-	fi
+	$if_debug echo "${prompt}Processing directory ${d}"
 	is_pkg_dir=no
 	for f in ${d}/*${PKG_SUFX} ; do
 		if test -f "${f}" -a ! -h "${f}" ; then
@@ -427,9 +415,7 @@ for d in `${AWK} '{print $1}' ${all_dirs}` ; do
 		echo "${prompt}Checking cache in ${d}"
 		process_binpkg_dir
 	else
-		if test "X${DEBUG}" = "Xyes" ; then
-			echo "${prompt}no binary packages in ${d}"
-		fi
+		$if_debug echo "${prompt}no binary packages in ${d}"
 	fi
 
 done
@@ -437,4 +423,3 @@ done
 process_cache_files
 
 clean_and_exit0
-
