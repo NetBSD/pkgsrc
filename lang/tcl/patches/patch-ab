@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
+$NetBSD: patch-ab,v 1.37 2007/10/13 11:41:44 adam Exp $
 
---- unix/configure.orig	2007-05-24 22:40:13.000000000 +0200
+--- unix/configure.orig	2007-09-21 19:07:02.000000000 +0200
 +++ unix/configure
-@@ -2565,12 +2565,13 @@ fi
+@@ -2567,12 +2567,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2989,6 +2990,21 @@ fi
+@@ -2991,6 +2992,21 @@ fi
  		LD_LIBRARY_PATH_VAR="SHLIB_PATH"
  	    fi
  	    ;;
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
  	IRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
  	    SHLIB_SUFFIX=".a"
-@@ -3265,6 +3281,9 @@ fi
+@@ -3267,6 +3283,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*)
@@ -49,7 +49,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -3297,13 +3316,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -3299,13 +3318,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -61,9 +61,9 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
 -		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
- echo "configure:3309: checking for ELF" >&5
+ echo "configure:3311: checking for ELF" >&5
  if eval "test \"`echo '$''{'tcl_cv_ld_elf'+set}'`\" = set"; then
-@@ -3332,6 +3349,9 @@ rm -f conftest*
+@@ -3334,6 +3351,9 @@ rm -f conftest*
  fi
  
  echo "$ac_t""$tcl_cv_ld_elf" 1>&6
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
  		if test $tcl_cv_ld_elf = yes; then
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
  		else
-@@ -3429,7 +3449,7 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
+@@ -3431,7 +3451,7 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -4279,16 +4299,16 @@ fi
+@@ -4291,16 +4311,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -103,7 +103,7 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -9130,7 +9150,7 @@ else
+@@ -9247,7 +9267,7 @@ else
              TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
          fi
          TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -112,18 +112,20 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
      else
          TCL_BUILD_EXP_FILE="lib.exp"
          eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -9161,13 +9181,21 @@ VERSION=${TCL_VERSION}
+@@ -9278,14 +9298,24 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
--    TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks"
-+    TCL_PACKAGE_PATH_ADD="~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks"
+-    test -z "$TCL_PACKAGE_PATH" && \
+-        TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks"
++    test -z "$TCL_PACKAGE_PATH_ADD" && \
++        TCL_PACKAGE_PATH_ADD="~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks"
  elif test "$prefix" != "$exec_prefix"; then
--    TCL_PACKAGE_PATH="${libdir} ${prefix}/lib"
-+    TCL_PACKAGE_PATH_ADD="${libdir} ${prefix}/lib"
+-    TCL_PACKAGE_PATH="${libdir} ${prefix}/lib ${TCL_PACKAGE_PATH}"
++    TCL_PACKAGE_PATH_ADD="${libdir} ${prefix}/lib ${TCL_PACKAGE_PATH}"
  else
--    TCL_PACKAGE_PATH="${prefix}/lib"
-+    TCL_PACKAGE_PATH_ADD="${prefix}/lib"
+-    TCL_PACKAGE_PATH="${prefix}/lib ${TCL_PACKAGE_PATH}"
++    TCL_PACKAGE_PATH_ADD="${prefix}/lib ${TCL_PACKAGE_PATH}"
  fi
  
 +for dir in ${TCL_PACKAGE_PATH_ADD}; do
@@ -133,6 +135,8 @@ $NetBSD: patch-ab,v 1.36 2007/05/31 13:01:53 adam Exp $
 +	TCL_PACKAGE_PATH="${TCL_PACKAGE_PATH} $dir"
 +    fi
 +done
++
++
 +
  #--------------------------------------------------------------------
  #       The statements below define various symbols relating to Tcl

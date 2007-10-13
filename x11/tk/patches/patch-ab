@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
+$NetBSD: patch-ab,v 1.28 2007/10/13 11:41:33 adam Exp $
 
---- unix/configure.orig	2007-05-25 18:09:53.000000000 +0200
+--- unix/configure.orig	2007-09-21 19:04:18.000000000 +0200
 +++ unix/configure
 @@ -2062,12 +2062,13 @@ fi
      # Step 3: set configuration options based on system name and version.
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
  	    LDFLAGS="$LDFLAGS -export-dynamic"
-@@ -3758,7 +3762,7 @@ fi
+@@ -3768,7 +3772,7 @@ fi
  		    ;;
  		IRIX*)
  		    ;;
@@ -59,7 +59,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
  		    ;;
  		Darwin-*)
  		    ;;
-@@ -3776,16 +3780,16 @@ fi
+@@ -3786,16 +3790,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -80,7 +80,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -5336,7 +5340,11 @@ echo "configure:5334: checking for X11 l
+@@ -5346,7 +5350,11 @@ echo "configure:5344: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -93,7 +93,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -5345,7 +5353,11 @@ echo "configure:5334: checking for X11 l
+@@ -5355,7 +5363,11 @@ echo "configure:5344: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -106,7 +106,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -5417,6 +5429,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -5427,6 +5439,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -117,7 +117,7 @@ $NetBSD: patch-ab,v 1.27 2007/05/31 13:02:06 adam Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5951,11 +5967,18 @@ else
+@@ -5965,11 +5981,18 @@ else
      if test "$SHARED_BUILD" = "0" || test "$TCL_NEEDS_EXP_FILE" = "0"; then
          if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
              eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
