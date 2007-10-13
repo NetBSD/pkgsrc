@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2150 2007/10/13 12:59:51 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2151 2007/10/13 14:20:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3982,3 +3982,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt4-pgsql to 4.3.2 [adam 2007-10-13]
 	Updated x11/qt4-sqlite3 to 4.3.2 [adam 2007-10-13]
 	Updated games/rocksndiamonds to 3.2.4 [adam 2007-10-13]
+	Updated devel/glibmm to 2.14.1 [adam 2007-10-13]
+	Updated x11/gtkmm to 2.12.1 [adam 2007-10-13]
