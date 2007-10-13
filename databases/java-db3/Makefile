@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/02/16 10:51:25 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2007/10/13 20:59:49 rillig Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -13,8 +13,6 @@ COMMENT=	Java interface to Sleepycat Software's Berkeley DB version 3
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet
-
-BROKEN_IN=		pkgsrc-2006Q4
 
 DISTINFO_FILE?=		${.CURDIR}/../db3/distinfo
 PATCHDIR?=		${.CURDIR}/../db3/patches
