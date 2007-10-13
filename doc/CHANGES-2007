@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2146 2007/10/13 09:14:36 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2147 2007/10/13 11:42:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3970,3 +3970,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/diffstat to 1.45 [reed 2007-10-13]
 	Updated www/ja-trac to 0.10.4.1nb1 [obache 2007-10-13]
 	Updated security/putty to 0.60 [obache 2007-10-13]
+	Updated lang/tcl to 8.4.16 [adam 2007-10-13]
+	Updated x11/tk to 8.4.16 [adam 2007-10-13]
