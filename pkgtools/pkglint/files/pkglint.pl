@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.720 2007/09/20 10:38:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.721 2007/10/13 08:55:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3602,6 +3602,21 @@ sub load_package_Makefile($$$) {
 	return true;
 }
 
+sub warn_about_PLIST_imake_mannewsuffix($) {
+	my ($line) = @_;
+
+	$line->log_warning("IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.");
+	$line->explain_warning(
+"This is the result of a print-PLIST call that has _not_ been checked",
+"thoroughly by the developer. Please replace the IMAKE_MANNEWSUFFIX with",
+"",
+"\tIMAKE_MAN_SUFFIX for programs,",
+"\tIMAKE_LIBMAN_SUFFIX for library functions,",
+"\tIMAKE_FILEMAN_SUFFIX for file formats,",
+"\tIMAKE_GAMEMAN_SUFFIX for games,",
+"\tIMAKE_MISCMAN_SUFFIX for other man pages.");
+}
+
 #
 # Subroutines to check part of a single line.
 #
@@ -4437,6 +4452,7 @@ sub checkline_mk_shelltext($$) {
 		${DELAYED_ERROR_MSG} ${DELAYED_WARNING_MSG}
 		${DO_NADA}
 		${ECHO} ${ECHO_MSG} ${ECHO_N} ${ERROR_CAT} ${ERROR_MSG}
+		${FAIL_MSG}
 		${PHASE_MSG} ${PRINTF}
 		${SHCOMMENT} ${STEP_MSG}
 		${WARNING_CAT} ${WARNING_MSG}
@@ -7298,7 +7314,7 @@ sub checkfile_PLIST($) {
 		checkline_trailing_whitespace($line);
 
 		# @foo directives.
-		if ($text =~ /^(?:\$\{[\w_]+\})?\@([a-z]+)\s+(.*)/) {
+		if ($text =~ /^(?:\$\{[\w_]+\})?\@([a-z-]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
 			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
@@ -7328,6 +7344,16 @@ sub checkfile_PLIST($) {
 					my $s = join(" or ", map { "\"USE_DIRS+= $_\"" } @ids);
 					$line->log_warning("Please add $s to the package Makefile and remove this line.");
 				}
+			} elsif ($cmd eq "imake-man") {
+				my (@args) = split(/\s+/, $arg);
+				if (@args != 3) {
+					$line->log_warning("Invalid number of arguments for imake-man.");
+				} else {
+					if ($args[2] eq "\${IMAKE_MANNEWSUFFIX}") {
+						warn_about_PLIST_imake_mannewsuffix($line);
+					}
+				}
+
 			} else {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
 			}
@@ -7343,6 +7369,10 @@ sub checkfile_PLIST($) {
 					}
 				}
 				$last_file_seen = $text;
+			}
+
+			if ($basename =~ qr"\$\{IMAKE_MANNEWSUFFIX\}") {
+				warn_about_PLIST_imake_mannewsuffix($line);
 			}
 
 			if ($dirname =~ qr"^bin/") {
