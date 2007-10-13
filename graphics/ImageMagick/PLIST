@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2007/09/24 08:03:23 tron Exp $
+@comment $NetBSD: PLIST,v 1.58 2007/10/13 18:13:31 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -32,6 +32,7 @@ include/magick/PreRvIcccm.h
 include/magick/animate.h
 include/magick/annotate.h
 include/magick/api.h
+include/magick/artifact.h
 include/magick/blob.h
 include/magick/cache-view.h
 include/magick/cache.h
@@ -47,8 +48,8 @@ include/magick/constitute.h
 include/magick/decorate.h
 include/magick/delegate.h
 include/magick/deprecate.h
-include/magick/distort.h
 include/magick/display.h
+include/magick/distort.h
 include/magick/draw.h
 include/magick/effect.h
 include/magick/enhance.h
