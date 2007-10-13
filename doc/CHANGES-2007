@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2152 2007/10/13 15:16:14 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2153 2007/10/13 15:28:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/glibmm to 2.14.1 [adam 2007-10-13]
 	Updated x11/gtkmm to 2.12.1 [adam 2007-10-13]
 	Updated net/xorp to 1.4 [obache 2007-10-13]
+	Updated math/mathomatic to 12.7.7 [minskim 2007-10-13]
