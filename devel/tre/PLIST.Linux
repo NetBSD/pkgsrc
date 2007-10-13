@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2007/10/13 10:52:30 adrianp Exp $
+share/locale/fi/LC_MESSAGES/tre.mo
+share/locale/sv/LC_MESSAGES/tre.mo
