@@ -1,4 +1,4 @@
-# $NetBSD: irix.mk,v 1.2 2007/08/23 17:39:47 jlam Exp $
+# $NetBSD: irix.mk,v 1.3 2007/10/13 11:04:17 dsl Exp $
 #
 # IRIX binary emulation framework
 #
@@ -33,7 +33,7 @@ EMUL_DISTRO=		native-irix	# native IRIX installation
 EMULDIR=		${PREFIX}
 EMULSUBDIR=		# empty
 .else
-.  include "${.PARSEDIR}/irix-${_EMUL_TYPE}.mk"
+.  include "irix-${_EMUL_TYPE}.mk"
 .endif
 
 .if (${_EMUL_TYPE} == "builtin") || (${_EMUL_TYPE} == "native")
