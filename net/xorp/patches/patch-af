@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/12/17 20:20:04 joerg Exp $
+$NetBSD: patch-af,v 1.2 2007/10/13 15:15:52 obache Exp $
 
---- mibs/configure.orig	2006-12-17 19:16:39.000000000 +0000
+--- mibs/configure.orig	2007-03-14 18:59:04.000000000 +0000
 +++ mibs/configure
-@@ -7678,7 +7678,7 @@ echo "${ECHO_T}no" >&6
+@@ -6415,7 +6415,7 @@ echo "${ECHO_T}no" >&6
    done
  
  
@@ -10,4 +10,4 @@ $NetBSD: patch-af,v 1.1 2006/12/17 20:20:04 joerg Exp $
 +					if test "${enable_compiler_pipe}" = "yes" ; then
  		for ac_flag in "-pipe"
    do
-       ac_safe=`echo "$ac_flag" | sed 'y%./+- %__p__%'`
+       ac_safe=xr_check_cflag
