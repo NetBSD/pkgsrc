@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.269 2007/10/05 21:03:39 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.270 2007/10/13 19:38:53 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -177,6 +177,8 @@ LOWER_OPSYS?=		irix${OS_VERSION}
 LOWER_VENDOR?=		sgi
 
 .elif ${OPSYS} == "Linux"
+OS_VERSION:=		${OS_VERSION:C/-.*$//}
+LOWER_OS_VERSION:=	${LOWER_OS_VERSION_CMD:C/-.*$//}
 LOWER_OPSYS?=		linux
 MACHINE_ARCH:=          ${MACHINE_ARCH:C/i.86/i386/}
 MACHINE_ARCH:=		${MACHINE_ARCH:C/ppc/powerpc/}
