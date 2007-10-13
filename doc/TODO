@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6729 2007/10/13 09:15:17 obache Exp $
+$NetBSD: TODO,v 1.6730 2007/10/13 11:42:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -1245,7 +1245,6 @@ Suggested package updates
 	o t-prot-2.5
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
-	o tcl-8.4.16
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1263,7 +1262,6 @@ Suggested package updates
 	o tile-0.7.4
 	o tileworld-1.3.0
 	o tinyproxy-1.7.0
-	o tk-8.4.16
 	o tk83-8.3.5
 	o tkcvs-8.0.4
 	o tkdiff-4.1.3 [pkg/34440]
