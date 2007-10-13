@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.63 2007/10/07 21:48:30 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.64 2007/10/13 11:04:16 dsl Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -157,7 +157,7 @@ _PKG_VARS.options=	PKG_SUPPORTED_OPTIONS PKG_OPTIONS_VAR		\
 	PKG_LEGACY_OPTIONS PKG_OPTIONS_DEPRECATED_WARNINGS
 _SYS_VARS.options=	PKG_OPTIONS
 
-.include "../../mk/bsd.prefs.mk"
+.include "bsd.prefs.mk"
 
 # Define PKG_OPTIONS, no matter if we have an error or not, to suppress
 # further make(1) warnings.
@@ -206,7 +206,7 @@ _PKG_OPTIONS_ALL_SETS+=	${_opt_}
 #
 # include deprecated variable to options mapping
 #
-.include "${.PARSEDIR}/defaults/obsolete.mk"
+.include "defaults/obsolete.mk"
 
 #
 # place options implied by legacy variables in PKG_LEGACY_OPTIONS
