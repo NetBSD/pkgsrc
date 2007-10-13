@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2006/02/24 18:37:20 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2007/10/13 12:36:14 rillig Exp $
 
---- include.h.orig	1995-01-27 07:38:48.000000000 +0000
-+++ include.h
+--- include.h.orig	1995-01-27 08:38:48.000000000 +0100
++++ include.h	2007-10-13 14:34:37.000000000 +0200
 @@ -21,6 +21,7 @@
  
  #include <stdio.h>
@@ -22,9 +22,12 @@ $NetBSD: patch-ab,v 1.4 2006/02/24 18:37:20 joerg Exp $
  #define KANJI 1		/* 1: allow EUC Kanji for str functions */
  
  /* Tee print macro */
-@@ -135,8 +140,19 @@ struct term {			/* atomic formula (liter
+@@ -133,10 +138,21 @@ struct term {			/* atomic formula (liter
+ #define str_value(Term)   ((Term)->tag.s_value)
+ #define filep_value(Term) ((Term)->tag.f_value)
  #define head_of_list(Term) (((struct clause *)Term)->c_form)
- #define tail_of_list(Term) ((struct term *)((struct clause *)Term)->c_link)
+-#define tail_of_list(Term) ((struct term *)((struct clause *)Term)->c_link)
++#define tail_of_list(Term) (*((struct term **)&(((struct clause *)Term)->c_link)))
  
 +#if defined(__linux__)
 +#define is_readable(FP) (!(FP->_flags & _IO_NO_READS))
