@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/13 17:52:18 adam Exp $
 
-DISTNAME=	libglademm-2.6.4
-PKGREVISION=	1
+DISTNAME=	libglademm-2.6.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libglademm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
