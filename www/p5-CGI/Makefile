@@ -1,39 +1,35 @@
-# $NetBSD: Makefile,v 1.41 2007/03/16 20:32:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.42 2007/10/13 11:55:14 adam Exp $
 
-VERS=			3.27
+VERS=		3.29
 DISTNAME=	CGI.pm-${VERS}
 PKGNAME=	p5-CGI-${VERS}
-SVR4_PKGNAME=		p5cgi
-CATEGORIES=		www perl5
-MASTER_SITES+=		${MASTER_SITE_PERL_CPAN:=CGI/}
+SVR4_PKGNAME=	p5cgi
+CATEGORIES=	www perl5
+MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/dist/CGI.pm/
-COMMENT=		Perl5 module for writing forms-based CGI programs
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/CGI.pm/
+COMMENT=	Perl5 module for writing forms-based CGI programs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
+USE_TOOLS+=		perl
 PERL5_PACKLIST=		auto/CGI/.packlist
-HTMLDIR=		${PREFIX}/share/doc/html/p5-CGI
+REPLACE_PERL+=		examples/*.pl
+REPLACE_PERL+=		examples/*.cgi
+
+HTMLDIR=		${PREFIX}/share/doc/p5-CGI
 
 post-build:
-	cd ${WRKSRC}/examples;						\
-	for file in *.cgi *.pl; do					\
-		${SED}	-e "s|^#!/.*|#!${PERL5}|g"			\
-			$${file} > $${file}.tmp;			\
-		${MV} -f $${file}.tmp $${file};				\
-	done;								\
-	${CHMOD} +x *.cgi;						\
-	${PERL5} make_links.pl
+	cd ${WRKSRC}/examples && chmod +x *.cgi && perl make_links.pl
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}/examples
-	cd ${WRKSRC}; ${INSTALL_DATA} *.html ${HTMLDIR}
-	cd ${WRKSRC}/examples;						\
-	${INSTALL_DATA} *.gif *.html *.txt *.xbm ${HTMLDIR}/examples;	\
+	cd ${WRKSRC} && ${INSTALL_DATA} *.html ${HTMLDIR}
+	cd ${WRKSRC}/examples &&					\
+	${INSTALL_DATA} *.gif *.html *.txt *.xbm ${HTMLDIR}/examples &&	\
 	${INSTALL_SCRIPT} *.cgi ${HTMLDIR}/examples
 
 .include "../../lang/perl5/module.mk"
