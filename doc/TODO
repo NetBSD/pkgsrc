@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6740 2007/10/14 08:33:29 adam Exp $
+$NetBSD: TODO,v 1.6741 2007/10/14 12:26:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GeoIP-1.4.2
 	o Gorm-1.2.1
-	o GraphicsMagick-1.1.10
 	o GridSim-3.3
 	o PAM-0.99.7.1
 	o R-2.6.0
