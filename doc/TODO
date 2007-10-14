@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6737 2007/10/13 18:54:36 adam Exp $
+$NetBSD: TODO,v 1.6738 2007/10/14 02:19:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o dar-2.3.6
-	o darkstat-3.0.707 [pkg/37052]
 	o dasher-4.6.0
 	o dbench-3.04
 	o dbmail-2.2.4
