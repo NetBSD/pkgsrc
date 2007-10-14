@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2005/07/13 15:05:55 adam Exp $
+$NetBSD: patch-ad,v 1.6 2007/10/14 07:48:52 adam Exp $
 
---- configure.orig	2005-07-12 21:33:02.000000000 +0000
+--- configure.orig	2007-04-28 22:57:00.000000000 +0200
 +++ configure
-@@ -4312,7 +4312,7 @@ echo "${ECHO_T}yes" >&6
+@@ -5437,7 +5437,7 @@ echo "${ECHO_T}yes" >&6; }
  		# FIXME: -fPIC is required for -shared on many architectures,
  		# so we specify it here, but the right way would probably be to
  		# properly detect whether it is actually required.
@@ -11,11 +11,11 @@ $NetBSD: patch-ad,v 1.5 2005/07/13 15:05:55 adam Exp $
  		LIBS="$PTHREAD_LIBS $LIBS"
  		CC="$PTHREAD_CC"
  
-@@ -4770,7 +4770,6 @@ if test "x$have_openssl" = "xyes"; then
- 	LIBS_LIBGADU="$LIBS_LIBGADU $OPENSSL_LIBS"
- 	CFLAGS="$CFLAGS $OPENSSL_INCLUDES"
- 	CFLAGS_LIBGADU="$CFLAGS_LIBGADU $OPENSSL_INCLUDES"
--	PC_REQUIRES="$PC_REQUIRES openssl"
+@@ -5941,7 +5941,6 @@ if test "x$have_openssl" = "xyes"; then
+ 	if test "x$enable_libgadu_openssl" != "xno"; then
+ 		LIBS_LIBGADU="$LIBS_LIBGADU $OPENSSL_LIBS"
+ 		CFLAGS_LIBGADU="$CFLAGS_LIBGADU $OPENSSL_INCLUDES"
+-		PC_REQUIRES="$PC_REQUIRES openssl"
  
  	sed 's/#undef __GG_LIBGADU_HAVE_OPENSSL/#define __GG_LIBGADU_HAVE_OPENSSL/' < lib/libgadu-config.h > lib/libgadu-config.h-
  	mv -f lib/libgadu-config.h- lib/libgadu-config.h
