@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2005/12/03 15:06:42 salo Exp $
+$NetBSD: patch-ab,v 1.10 2007/10/14 17:50:05 minskim Exp $
 
---- UnAlz.cpp.orig	2005-11-21 14:18:13.000000000 +0100
-+++ UnAlz.cpp	2005-12-03 15:57:40.000000000 +0100
-@@ -1,6 +1,6 @@
- //#include "stdafx.h"
+--- UnAlz.cpp.orig	2007-02-09 21:51:54.000000000 -0800
++++ UnAlz.cpp
+@@ -1,5 +1,5 @@
 -#include "zlib/zlib.h"
 -#include "bzip2/bzlib.h"
 +#include <zlib.h>
@@ -11,19 +10,3 @@ $NetBSD: patch-ab,v 1.9 2005/12/03 15:06:42 salo Exp $
  #include "UnAlz.h"
  
  // utime 함수 처리
-@@ -43,13 +43,13 @@
- //// byte-order : little to host                                        ////
- ////////////////////////////////////////////////////////////////////////////
- 
--#if defined(_WIN32) || defined(__CYGWIN__)		// little to little
-+#if defined(_WIN32) || defined(__CYGWIN__) || defined(__INTERIX) // little to little
- 	inline UINT16	unalz_le16toh(UINT16 a){return a;}
- 	inline UINT32	unalz_le32toh(UINT32 a){return a;}
- 	inline UINT64	unalz_le64toh(UINT64 a){return a;}
- #endif
- 
--#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
- #	include <sys/endian.h>	
- 	inline UINT16	unalz_le16toh(UINT16 a){return le16toh(a);}
- 	inline UINT32	unalz_le32toh(UINT32 a){return le32toh(a);}
