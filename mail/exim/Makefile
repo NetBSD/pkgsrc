@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2007/09/11 18:16:01 abs Exp $
+# $NetBSD: Makefile,v 1.87 2007/10/14 19:14:57 adam Exp $
 
-DISTNAME=	exim-4.67
-PKGREVISION=	1
+DISTNAME=	exim-4.68
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -60,14 +59,14 @@ USE_DB185?=		no
 BDB_ACCEPTED?=		db1 db2 db3 db4
 
 post-extract:
-	${MKDIR} ${WRKSRC}/Local
-	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
-	${CP} ${WRKSRC}/exim_monitor/EDITME ${WRKSRC}/Local/eximon.conf.pkgsrc
-	${CP} ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
+	mkdir ${WRKSRC}/Local
+	cp ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
+	cp ${WRKSRC}/exim_monitor/EDITME ${WRKSRC}/Local/eximon.conf.pkgsrc
+	cp ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
 		${WRKSRC}/OS/
 
 pre-configure:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	sed	-e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 		-e 's:@EXIM_USER@:${EXIM_USER}:' \
 		-e 's:@EXIM_GROUP@:${EXIM_GROUP}:' \
@@ -89,18 +88,18 @@ pre-configure:
 .if !empty(EXIM_MAX_INCLUDE_SIZE)
 	${ECHO} MAX_INCLUDE_SIZE=${EXIM_MAX_INCLUDE_SIZE} >> ${WRKSRC}/Local/Makefile
 .endif
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	sed -e 's:@PREFIX@:${PREFIX}:' \
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 	    < ${WRKSRC}/Local/eximon.conf.pkgsrc \
 	    > ${WRKSRC}/Local/eximon.conf
 # CFLAGS is already set by pkgsrc
-	@for f in ${WRKSRC}/OS/Makefile-*; do \
-		${SED} -e 's/^CFLAGS=.*//' $$f > $$f.subst; \
-		${MV} -f $$f.subst $$f; \
+	for f in ${WRKSRC}/OS/Makefile-*; do \
+		sed -e 's/^CFLAGS=.*//' $$f > $$f.subst; \
+		mv -f $$f.subst $$f; \
 	done
 
 post-build:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	sed -e 's:@PREFIX@:${PREFIX}:' \
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
