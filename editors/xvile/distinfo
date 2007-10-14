@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/09/28 09:44:30 agc Exp $
-
-SHA1 (vile-9.5.tgz) = 3862bf082ccb4afca4d08bc6a26448556200b483
-RMD160 (vile-9.5.tgz) = 3e7f0dd9eb75782c2fb32a92debfb63ae741ae49
-Size (vile-9.5.tgz) = 1656429 bytes
-SHA1 (patch-aa) = cfbefb53eb64535fd0fb6500ec7d84cf9f4c9762
-SHA1 (patch-ab) = 6ec9232a2b42e95f5a2b5c724deb3323d0a63cf3
