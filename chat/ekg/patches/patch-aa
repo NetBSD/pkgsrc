@@ -1,19 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2003/07/22 10:39:41 adam Exp $
+$NetBSD: patch-aa,v 1.8 2007/10/14 07:48:52 adam Exp $
 
---- src/Makefile.in.orig	2003-05-19 15:36:41.000000000 +0200
-+++ src/Makefile.in	2003-07-22 11:09:38.000000000 +0200
-@@ -25,8 +25,8 @@
+--- src/Makefile.in.orig	2007-04-28 22:02:22.000000000 +0200
++++ src/Makefile.in
+@@ -26,9 +26,9 @@ SRCS = $(OBJS:.o=.c) comptime.c
  
  all:	dep ekg @ioctld@
  
--ekg:	$(OBJS) @libgadu_a@
--	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib @lgadu@ @libgadu_a@ $(LDFLAGS) $(LIBS)
-+ekg:	$(OBJS)
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o ekg ../lib/libgadu.la $(OBJS) $(LDFLAGS) $(LIBS)
+-ekg:	$(OBJS) comptime.c @libgadu_a@
++ekg:	$(OBJS) comptime.c
+ 	$(CC) $(CFLAGS) -c -o comptime.o comptime.c
+-	$(CC) $(CFLAGS) -o ekg $(OBJS) comptime.o -L../lib @lgadu@ @libgadu_a@ $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o ekg $(OBJS) comptime.o ../lib/libgadu.la $(LDFLAGS) $(LIBS)
  
  ioctld:	ioctld.c
  	$(CC) $(CFLAGS) ioctld.c -o ioctld $(LIBS) @IOCTLD_OBJS@
-@@ -40,9 +40,8 @@
+@@ -42,9 +42,8 @@ dep:	.depend
  
  install: all install-ekg @install_ioctld@
  
