@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.39 2007/09/21 07:27:41 rillig Exp $
+# $NetBSD: depends.mk,v 1.40 2007/10/14 07:42:31 rillig Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -102,7 +102,7 @@ _DEPENDS_INSTALL_CMD=							\
 		esac;							\
 		silent=${_BOOTSTRAP_VERBOSE:Dyes};			\
 		if ${TEST} -z "$${silent}"; then			\
-			${STEP_MSG} "$$Type dependency $$pattern: $$pkg found"; \
+			${STEP_MSG} "$$Type dependency $$pattern: found $$pkg"; \
 		fi;							\
 		;;							\
 	esac
