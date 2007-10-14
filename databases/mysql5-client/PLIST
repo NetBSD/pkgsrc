@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/10/12 14:32:45 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/10/14 17:43:33 rillig Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -67,6 +67,7 @@ man/man1/mysqlaccess.1
 man/man1/mysqladmin.1
 man/man1/mysqldump.1
 man/man1/mysqlshow.1
+share/doc/mysql/manual.chm
 share/examples/mysql/my-huge.cnf
 share/examples/mysql/my-innodb-heavy-4G.cnf
 share/examples/mysql/my-large.cnf
