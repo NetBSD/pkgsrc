@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/08/08 13:31:06 agc Exp $
+$NetBSD: patch-aa,v 1.8 2007/10/14 04:53:36 obache Exp $
 
---- makefile.in.orig	2003-05-25 20:34:47.000000000 +0100
-+++ makefile.in	2003-08-08 13:58:43.000000000 +0100
-@@ -52,8 +52,8 @@
+--- makefile.in.orig	2007-09-12 08:02:08.000000000 +0200
++++ makefile.in
+@@ -54,8 +54,8 @@ TARGET		= @TARGET@$x
  AWK		= @AWK@
  PERL		= @PERL@
  PERLLIB		= @perl_lib_path@
@@ -13,16 +13,16 @@ $NetBSD: patch-aa,v 1.7 2003/08/08 13:31:06 agc Exp $
  
  prefix		= @prefix@
  exec_prefix	= @exec_prefix@
-@@ -61,7 +61,7 @@
+@@ -63,7 +63,7 @@ exec_prefix	= @exec_prefix@
  manext		= 1
  libdir		= @libdir@
  bindir		= @bindir@
 -datadir		= @datadir@/vile
 +datadir		= @datadir@
+ docdir		= $(datadir)/doc
  perldir		= $(datadir)/perl
  mandir		= @mandir@/man$(manext)
- 
-@@ -356,7 +356,6 @@
+@@ -371,7 +371,6 @@ INSTALL_MACRO_FILES = \
  
  INSTALL_PERL_DIRS = $(PERLDIR) $(PERLDIR)/Vile
  INSTALL_PERL_FILES = \
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.7 2003/08/08 13:31:06 agc Exp $
  	$(PERLDIR)/Breadcrumbs.pm \
  	$(PERLDIR)/CaptHook.pm \
  	$(PERLDIR)/Glob2re.pm \
-@@ -635,7 +634,7 @@
+@@ -661,7 +660,7 @@ $(BINDIR)/$(TARGET):		$(TARGET)
  	$(INSTALL_PROGRAM)	$(TARGET) $@
  
  $(BINDIR)/xshell.sh:		$(srcdir)/xshell.sh
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.7 2003/08/08 13:31:06 agc Exp $
  $(BINDIR)/vileget:		$(srcdir)/perl/vileget
  	$(INSTALL_SCRIPT)	$(srcdir)/perl/vileget $@
  
-@@ -731,6 +730,9 @@
+@@ -782,6 +781,9 @@ $(PERLDIR)/winops.pm:		$(srcdir)/perl/wi
  $(INSTALL_DIRS):
  	$(SHELL) ${srcdir}/mkdirs.sh $@
  
