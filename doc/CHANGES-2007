@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2160 2007/10/13 21:12:03 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2161 2007/10/14 02:18:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3997,3 +3997,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/loudmouth to 1.2.3 [adam 2007-10-13]
 	Updated chat/dircproxy-devel to 1.2.0beta2 [adrianp 2007-10-13]
 	Updated chat/inspircd to 1.1.13 [adrianp 2007-10-13]
+	Updated net/darkstat to 3.0.707 [obache 2007-10-14]
