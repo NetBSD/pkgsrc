@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6743 2007/10/14 17:51:03 minskim Exp $
+$NetBSD: TODO,v 1.6744 2007/10/14 18:12:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,6 +353,7 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.3
 	o btpd-0.12
+	o bug-buddy-2.20.1
 	o bwidget-1.7.0
 	o bzr-0.91
 	o c4-1.10 [schmonz]
@@ -459,7 +460,7 @@ Suggested package updates
 	o eltclsh-1.7
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o enlightenment-0.16.8.9
+	o enlightenment-0.16.8.10
 	o enscript-1.6.4
 	o eog-2.20.0
 	o epic4-2.6
@@ -707,6 +708,7 @@ Suggested package updates
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
 	o leafpad-0.8.12
+	o less-408
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.5.14
 	o libFoundation-1.1.3
@@ -745,6 +747,7 @@ Suggested package updates
 	o libprelude-0.9.16
 	o libpreludedb-0.9.13
 	o libshout-2.2.2
+	o libsoup-2.2.101
 	o libssh-0.2
 	o libstatgrab-0.15
 	o libstree-0.4.2
@@ -1040,7 +1043,6 @@ Suggested package updates
 	o powermanga-0.90
 	o prelude-manager-0.9.10
 	o profit-2.5.3
-	o proftpd-1.3.1
 	o projclock-0.9
 	o proxsmtp-1.6
 	o psmisc-21.9
@@ -1296,6 +1298,7 @@ Suggested package updates
 	o wdm-1.28
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
+	o wesnoth-1.2.7
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wine-0.9.46
