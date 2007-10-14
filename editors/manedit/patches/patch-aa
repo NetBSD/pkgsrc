@@ -1,19 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2002/12/30 00:00:18 kristerw Exp $
---- prochandle.cpp.orig	Sun Dec 29 23:24:30 2002
-+++ prochandle.cpp	Sun Dec 29 23:31:23 2002
-@@ -230,6 +230,7 @@
+$NetBSD: patch-aa,v 1.5 2007/10/14 07:49:54 rillig Exp $
+--- prochandle.cpp.orig	2007-02-11 09:00:00.000000000 +0100
++++ prochandle.cpp	2007-10-14 09:38:21.000000000 +0200
+@@ -270,6 +270,7 @@ char **ExecExplodeCommand(const char *cm
  /*
-  *      Returns true if the process is still running.
+  *	Returns true if the process is still running.
   */
 +#if 0
  int ExecProcessExists(pid_t pid)
  {
-         struct sched_param sp;
-@@ -247,6 +248,7 @@
-         else
-             return(0);
+ #ifdef __linux__
+@@ -294,7 +295,7 @@ int ExecProcessExists(pid_t pid)
+ 	    return(0);
+ #endif
  }
+-
 +#endif
  
- 
  /*
+  *	Returns the CPU load as a coefficient value from 0.0 to 1.0.
