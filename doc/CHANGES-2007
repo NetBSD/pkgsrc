@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2166 2007/10/14 12:25:44 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2167 2007/10/14 13:31:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/kadu to 0.5.0 [adam 2007-10-14]
 	Updated net/gtk-gnutella to 0.96.4 [adam 2007-10-14]
 	Updated graphics/GraphicsMagick to 1.1.10 [obache 2007-10-14]
+	Updated editors/nano to 1.2.5 [obache 2007-10-14]
