@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/10/13 22:14:15 tron Exp $
+# $NetBSD: Makefile,v 1.41 2007/10/14 22:49:43 tron Exp $
 
 DISTNAME=	libpcap-0.9.8
 SVR4_PKGNAME=	lpcap
@@ -21,14 +21,6 @@ GNU_CONFIGURE=		yes
 
 .if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-.if exists(/usr/include/net/pfvar.h) && !exists(/usr/include/net/if_pflog.h)
-SUBST_CLASSES+=		pflog
-SUBST_MESSAGE.pflog=	Disabling pflog(4) support because "net/if_pflog.h" is missing.
-SUBST_STAGE.pflog=	post-configure
-SUBST_FILES.pflog=	config.h
-SUBST_SED.pflog=	-e 's/^\#define.*HAVE_NET_PFVAR_H.*//'
 .endif
 
 post-install:
