@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2007/06/15 14:26:23 darcy Exp $
+$NetBSD: patch-ai,v 1.2 2007/10/14 08:32:20 adam Exp $
 
---- src/ui/gtk/settings.c.orig	2007-06-14 12:07:07.000000000 -0400
+--- src/ui/gtk/settings.c.orig	2007-07-07 06:21:48.000000000 +0200
 +++ src/ui/gtk/settings.c
-@@ -105,7 +105,7 @@ typedef struct prop_map {
+@@ -104,7 +104,7 @@ typedef struct prop_map {
      /*
       * Automatic field filled in by settings_gui_init_prop_map
       */
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.1 2007/06/15 14:26:23 darcy Exp $
      prop_set_stub_t *stub;            /**< property set stub */
      gint *init_list;                  /**< init_list for reverse lookup */
  } prop_map_t;
-@@ -174,7 +174,7 @@ static gchar *prop_to_string(property_t 
+@@ -173,7 +173,7 @@ static gchar *prop_to_string(property_t 
              gm_snprintf(s, sizeof(s), "%u", val);
              break;
          }
