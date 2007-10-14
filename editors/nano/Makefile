@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2007/09/30 17:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2007/10/14 13:30:45 obache Exp $
 
-DISTNAME=	nano-1.2.4
-PKGREVISION=	1
+DISTNAME=	nano-1.2.5
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nano-editor.org/dist/v1.2/
 
@@ -13,7 +12,7 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-multibuffer
