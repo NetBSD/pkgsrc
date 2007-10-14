@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2007/06/15 14:26:23 darcy Exp $
+$NetBSD: patch-ag,v 1.2 2007/10/14 08:32:19 adam Exp $
 
---- src/lib/prop.c.orig	2007-06-14 12:07:07.000000000 -0400
+--- src/lib/prop.c.orig	2007-07-07 06:21:38.000000000 +0200
 +++ src/lib/prop.c
 @@ -466,7 +466,7 @@ prop_get_def(prop_set_t *ps, property_t 
  			sizeof buf->data.ip.value * PROP(ps,p).vector_size);
@@ -68,7 +68,7 @@ $NetBSD: patch-ag,v 1.1 2007/06/15 14:26:23 darcy Exp $
  		g_strlcpy(s, *p->data.string.def ? *p->data.string.def : "", sizeof s);
  		break;
  	case PROP_TYPE_IP:
-@@ -1727,7 +1727,7 @@ prop_save_to_file(prop_set_t *ps, const 
+@@ -1725,7 +1725,7 @@ prop_save_to_file(prop_set_t *ps, const 
  			val = g_strjoinv(",", vbuf);
  			quotes = TRUE;
  			break;
@@ -77,7 +77,7 @@ $NetBSD: patch-ag,v 1.1 2007/06/15 14:26:23 darcy Exp $
  			val = g_strdup(*p->data.string.value);
  			if (
  				(val == NULL && *p->data.string.def != NULL) ||
-@@ -1874,7 +1874,7 @@ prop_set_from_string(prop_set_t *ps, pro
+@@ -1872,7 +1872,7 @@ prop_set_from_string(prop_set_t *ps, pro
  			p->vector_size, vecbuf.timestamp);
  		stub->timestamp.set(prop, vecbuf.timestamp, 0, 0);
  		break;
