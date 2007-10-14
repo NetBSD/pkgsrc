@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2007/08/29 14:42:25 adam Exp $
+# $NetBSD: Makefile,v 1.139 2007/10/14 13:01:05 rillig Exp $
 
 DISTNAME=	wine-0.9.44
 CATEGORIES=	emulators
@@ -16,7 +16,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/W/w/}
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
