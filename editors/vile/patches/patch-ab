@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2002/11/27 10:45:04 agc Exp $
+$NetBSD: patch-ab,v 1.3 2007/10/14 04:53:36 obache Exp $
 
---- filters/makefile.in.orig	Sun Oct 10 21:06:52 1999
-+++ filters/makefile.in	Wed Sep  6 03:52:09 2000
-@@ -38,7 +38,7 @@
+--- filters/makefile.in.orig	2005-06-10 00:53:05.000000000 +0200
++++ filters/makefile.in
+@@ -43,7 +43,7 @@ exec_prefix	= @exec_prefix@
  
  libdir		= @libdir@
  bindir		= @filters_bindir@
