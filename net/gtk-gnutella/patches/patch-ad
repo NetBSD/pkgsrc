@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2007/06/15 14:26:22 darcy Exp $
+$NetBSD: patch-ad,v 1.5 2007/10/14 08:32:19 adam Exp $
 
---- src/if/props.tpl.orig	2007-06-14 12:07:07.000000000 -0400
+--- src/if/props.tpl.orig	2007-07-07 06:21:34.000000000 +0200
 +++ src/if/props.tpl
-@@ -468,7 +468,7 @@ FOR prop =][=
-         (sprintf "%s_choices" (. prop-var-name    ))=];[=
+@@ -510,7 +510,7 @@ FOR prop =][=
+         (sprintf "%s_choices" (. prop-var))=];[=
  
      = string =]
 -    [=(. current-prop)=].type               = PROP_TYPE_STRING;
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 2007/06/15 14:26:22 darcy Exp $
      [=(. current-prop)=].data.string.def    = [=(. prop-def-var)=];
      [=(. current-prop)=].data.string.value  = [=(. prop-var)=];
      if ([=(. current-prop)=].data.string.def) {
-@@ -500,7 +500,7 @@ void
+@@ -542,7 +542,7 @@ void
      }
  
      for (n = 0; n < [=(. prop-num)=]; n ++) {
