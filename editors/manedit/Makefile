@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/01/07 09:13:52 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2007/10/14 07:49:54 rillig Exp $
 #
 
-DISTNAME=	manedit-0.5.6
-PKGREVISION=	4
+DISTNAME=	manedit-0.8.1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://wolfpack.twu.net/users/wolfpack/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,22 +19,19 @@ MAKE_ENV+=	CPP=${CXX:Q}
 # The FreeBSD makefile may be used as "generic UNIX".
 MAKE_FILE=	Makefile.FreeBSD
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man7
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/manedit ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/manview.sh ${PREFIX}/bin/manview
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/manwrap.sh ${PREFIX}/bin/manwrap
-	${INSTALL_DATA_DIR} ${PREFIX}/share/manedit			\
-		${PREFIX}/share/manedit/templates			\
-		${PREFIX}/share/manedit/icons
 	${INSTALL_MAN} ${WRKSRC}/manedit.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/help/manpage_writing_procedures	\
 		${PREFIX}/${PKGMANDIR}/man7/manpage_writing_procedures.7
-	${INSTALL_MAN} ${WRKSRC}/help/manpage_xml_referance		\
+	${INSTALL_MAN} ${WRKSRC}/help/manpage_xml_reference		\
 		${PREFIX}/${PKGMANDIR}/man7/manpage_xml_reference.7
-	cd ${WRKSRC}/templates && ${INSTALL_DATA} api.mpt config.mpt	\
-		intro.mpt program.mpt ${PREFIX}/share/manedit/templates
+	cd ${WRKSRC}/templates && ${INSTALL_DATA} *.mpt			\
+		${PREFIX}/share/manedit/templates
 	cd ${WRKSRC} && ${INSTALL_DATA} manedit.xpm			\
 		${PREFIX}/share/manedit/icons
 
