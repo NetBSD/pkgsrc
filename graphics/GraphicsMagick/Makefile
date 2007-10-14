@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/04/01 01:58:37 obache Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/14 12:25:15 obache Exp $
 #
 
-DISTNAME=	GraphicsMagick-1.1.7
-PKGREVISION=	1
+DISTNAME=	GraphicsMagick-1.1.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/
@@ -15,6 +14,7 @@ COMMENT=	X application for displaying and manipulating images
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config gs
+USE_FEATURES+=	vsnprintf		# optional but recommended for security
 GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
 			Magick++/lib/GraphicsMagick++.pc.in
 
 CONFIGURE_ARGS+=--without-perl
+
+TEST_TARGET=	check
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
