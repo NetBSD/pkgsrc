@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/14 04:53:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/14 06:26:16 obache Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -105,6 +105,16 @@ share/vile/dcl.keywords
 share/vile/def.keywords
 share/vile/diff.keywords
 share/vile/digraphs.rc
+share/vile/doc/Vileserv.doc
+share/vile/doc/config.doc
+share/vile/doc/dir.doc
+share/vile/doc/filters.doc
+share/vile/doc/macros.doc
+share/vile/doc/menus.doc
+share/vile/doc/modes.doc
+share/vile/doc/oleauto.doc
+share/vile/doc/perl.doc
+share/vile/doc/visvile.doc
 share/vile/ecl.keywords
 share/vile/esql.keywords
 share/vile/est.keywords
