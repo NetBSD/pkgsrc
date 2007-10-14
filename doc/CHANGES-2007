@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2164 2007/10/14 07:52:32 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2165 2007/10/14 08:33:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4002,3 +4002,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/manedit to 0.8.1 [roland 2007-10-14]
 	Updated chat/ekg to 1.7 [adam 2007-10-14]
 	Updated chat/kadu to 0.5.0 [adam 2007-10-14]
+	Updated net/gtk-gnutella to 0.96.4 [adam 2007-10-14]
