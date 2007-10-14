@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6738 2007/10/14 02:19:12 obache Exp $
+$NetBSD: TODO,v 1.6739 2007/10/14 07:52:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -687,7 +687,6 @@ Suggested package updates
 	o jigdo-0.7.3
 	o jools-1.0
 	o jwhois-4.0
-	o kadu-0.5.0
 	o kapooka-0.3
 	o kazehakase-0.4.6
 	o kbarcode-2.0.6
