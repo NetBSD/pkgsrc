@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2167 2007/10/14 13:31:10 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2168 2007/10/14 17:51:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/gtk-gnutella to 0.96.4 [adam 2007-10-14]
 	Updated graphics/GraphicsMagick to 1.1.10 [obache 2007-10-14]
 	Updated editors/nano to 1.2.5 [obache 2007-10-14]
+	Updated archivers/unalz to 0.61 [minskim 2007-10-14]
