@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/28 09:44:30 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/14 06:33:17 obache Exp $
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
@@ -13,9 +13,11 @@ libexec/xvile/vile-au3-filt
 libexec/xvile/vile-awk-filt
 libexec/xvile/vile-basic-filt
 libexec/xvile/vile-bat-filt
+libexec/xvile/vile-bnf-filt
 libexec/xvile/vile-c-filt
 libexec/xvile/vile-cfg-filt
 libexec/xvile/vile-crypt
+libexec/xvile/vile-css-filt
 libexec/xvile/vile-cweb-filt
 libexec/xvile/vile-dcl-filt
 libexec/xvile/vile-def-filt
@@ -33,14 +35,18 @@ libexec/xvile/vile-key-filt
 libexec/xvile/vile-latex-filt
 libexec/xvile/vile-lex-filt
 libexec/xvile/vile-lisp-filt
+libexec/xvile/vile-lua-filt
 libexec/xvile/vile-m4-filt
 libexec/xvile/vile-mail-filt
 libexec/xvile/vile-make-filt
 libexec/xvile/vile-manfilt
+libexec/xvile/vile-mcrl-filt
+libexec/xvile/vile-midl-filt
 libexec/xvile/vile-mms-filt
 libexec/xvile/vile-nr-filt
 libexec/xvile/vile-pas-filt
 libexec/xvile/vile-perl-filt
+libexec/xvile/vile-php-filt
 libexec/xvile/vile-pl-filt
 libexec/xvile/vile-pot-filt
 libexec/xvile/vile-ps-filt
@@ -50,6 +56,7 @@ libexec/xvile/vile-rc-filt
 libexec/xvile/vile-rcs-filt
 libexec/xvile/vile-rexx-filt
 libexec/xvile/vile-rpm-filt
+libexec/xvile/vile-rtf-filt
 libexec/xvile/vile-ruby-filt
 libexec/xvile/vile-sccs-filt
 libexec/xvile/vile-sed-filt
@@ -66,6 +73,7 @@ libexec/xvile/vile-ti-filt
 libexec/xvile/vile-txt-filt
 libexec/xvile/vile-vile-filt
 libexec/xvile/vile-vlog-filt
+libexec/xvile/vile-wbt-filt
 libexec/xvile/vile-xml-filt
 libexec/xvile/vile-xres-filt
 libexec/xvile/vile-xs-filt
@@ -85,16 +93,29 @@ share/xvile/au3.keywords
 share/xvile/awk.keywords
 share/xvile/basic.keywords
 share/xvile/bat.keywords
+share/xvile/bnf.keywords
 share/xvile/c.keywords
 share/xvile/color-ls.rc
 share/xvile/cpp.keywords
+share/xvile/cs.keywords
 share/xvile/csh.keywords
+share/xvile/css.keywords
 share/xvile/cweb.keywords
 share/xvile/dates.rc
 share/xvile/dcl.keywords
 share/xvile/def.keywords
 share/xvile/diff.keywords
 share/xvile/digraphs.rc
+share/xvile/doc/Vileserv.doc
+share/xvile/doc/config.doc
+share/xvile/doc/dir.doc
+share/xvile/doc/filters.doc
+share/xvile/doc/macros.doc
+share/xvile/doc/menus.doc
+share/xvile/doc/modes.doc
+share/xvile/doc/oleauto.doc
+share/xvile/doc/perl.doc
+share/xvile/doc/visvile.doc
 share/xvile/ecl.keywords
 share/xvile/esql.keywords
 share/xvile/est.keywords
@@ -111,10 +132,13 @@ share/xvile/latex.keywords
 share/xvile/lex.keywords
 share/xvile/lisp.keywords
 share/xvile/loaderrs.rc
+share/xvile/lua.keywords
 share/xvile/m4.keywords
 share/xvile/mail.keywords
 share/xvile/make.keywords
 share/xvile/manpage.rc
+share/xvile/mcrl.keywords
+share/xvile/midl.keywords
 share/xvile/modes.rc
 share/xvile/nr.keywords
 share/xvile/nsis.keywords
@@ -145,6 +169,7 @@ share/xvile/perl/search.pm
 share/xvile/perl/shell.pm
 share/xvile/perl/spell.pm
 share/xvile/perl/winops.pm
+share/xvile/php.keywords
 share/xvile/pictmode.rc
 share/xvile/pot.keywords
 share/xvile/ps.keywords
@@ -154,6 +179,7 @@ share/xvile/rc.keywords
 share/xvile/rcs.keywords
 share/xvile/rexx.keywords
 share/xvile/rpm.keywords
+share/xvile/rtf.keywords
 share/xvile/sccs.keywords
 share/xvile/search.rc
 share/xvile/sh.keywords
@@ -178,6 +204,7 @@ share/xvile/vilemenu.rc
 share/xvile/vileperl.rc
 share/xvile/vim.keywords
 share/xvile/vlog.keywords
+share/xvile/wbt.keywords
 share/xvile/which.rc
 share/xvile/xml.keywords
 share/xvile/xres.keywords
@@ -185,6 +212,7 @@ share/xvile/xs.keywords
 share/xvile/yacc.keywords
 @dirrm share/xvile/perl/Vile
 @dirrm share/xvile/perl
+@dirrm share/xvile/doc
 @dirrm share/xvile
 @dirrm share/examples/xvile
 @dirrm libexec/xvile
