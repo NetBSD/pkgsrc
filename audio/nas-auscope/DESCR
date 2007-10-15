@@ -1,1 +1,2 @@
-auscope script from the Network Audio System.
+auscope is an audio protocol filter that can be used to view the network
+packets being sent between an audio application and an audio server.
