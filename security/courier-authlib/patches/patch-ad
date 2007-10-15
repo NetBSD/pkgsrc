@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2007/09/05 17:06:55 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2007/10/15 15:37:01 jlam Exp $
 
---- authldaplib.c.orig	2007-01-20 12:03:22.000000000 -0500
+--- authldaplib.c.orig	Sat Jan 20 17:03:22 2007
 +++ authldaplib.c
 @@ -126,7 +126,7 @@ authldap_free_config removed - no longer
  static char **l_get_values(LDAP *ld, LDAPMessage *entry, const char *attribut)
@@ -11,12 +11,12 @@ $NetBSD: patch-ad,v 1.1 2007/09/05 17:06:55 jlam Exp $
  	char **a;
  
  	if (!p)
-@@ -144,8 +144,6 @@ static char **l_get_values(LDAP *ld, LDA
+@@ -143,8 +143,6 @@ static char **l_get_values(LDAP *ld, LDA
+ 		ldap_value_free_len(p);
  		return NULL;
  	}
- 
--	int i;
 -
+-	int i;
+ 
  	for (i=0; i<n; i++)
  	{
- 		if ((a[i]=malloc(p[i]->bv_len+1)) == NULL)
