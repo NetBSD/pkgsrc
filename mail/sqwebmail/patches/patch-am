@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2007/08/10 17:57:14 jlam Exp $
+$NetBSD: patch-am,v 1.2 2007/10/15 15:38:52 jlam Exp $
 
---- pcp/configure.orig	2007-08-09 13:50:02.000000000 -0400
+--- pcp/configure.orig	Sun Jul 22 01:27:29 2007
 +++ pcp/configure
-@@ -26852,14 +26852,15 @@ LIBS="$saveLIBS"
+@@ -28669,14 +28669,15 @@ LIBS="$saveLIBS"
  echo $NETLIBS >pcp.libs
  
  
@@ -19,4 +19,4 @@ $NetBSD: patch-am,v 1.1 2007/08/10 17:57:14 jlam Exp $
 +SENDIT="$sysconfdir/sendit.sh"
  
  
- echo "$as_me:$LINENO: checking for ANSI C header files" >&5
+ { echo "$as_me:$LINENO: checking for ANSI C header files" >&5
