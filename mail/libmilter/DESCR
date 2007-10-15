@@ -3,3 +3,7 @@ programs access to mail messages as they are being processed in order to
 filter meta-information and content.
 
 libmilter provides the implementation of this API.
+
+Note that although the API of this library is fairly stable and
+will most likely only see additions, the interface between this
+library and sendmail is subject to change without notice.
