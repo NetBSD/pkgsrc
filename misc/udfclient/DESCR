@@ -5,3 +5,5 @@ full read and write kernel level implementation.
 UDFclient basically provides a user interface not unlike ftp(1) but always
 fetches and writes files recursively from the disc(s).
 
+See the packages homepage http://www.13thmonkey.org/udfclient for its features
+and history.
