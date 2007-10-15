@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2007/09/23 11:42:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/15 15:37:14 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	11
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,11 +13,12 @@ COMMENT=	Courier mail transport agent
 HOMEPAGE=	http://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
-DEPENDS+=	couriertcpd>=${COURIER_VERSION}nb3:../../net/couriertcpd
-DEPENDS+=	maildrop>=2.0.4:../../mail/maildrop
+DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
+DEPENDS+=	maildrop>=2.0.4nb2:../../mail/maildrop
 
 USE_TOOLS+=		gmake openssl:run perl:run
 USE_LANGUAGES=		c c++
+GCC_REQD+=		3.0	# need Standard C++ Library
 
 .include "Makefile.common"
 
