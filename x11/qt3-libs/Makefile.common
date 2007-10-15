@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2007/07/02 20:06:43 tnn Exp $
+# $NetBSD: Makefile.common,v 1.68 2007/10/15 11:59:49 abs Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -79,8 +79,15 @@ CONFIGURE_ARGS+=	-no-xinerama
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt3
 PKG_SUPPORTED_OPTIONS=	cups debug
+PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	-ipv6
+.else
+CONFIGURE_ARGS+=	-no-ipv6
+.endif
 
 .if !empty(PKG_OPTIONS:Mcups)
 .  include "../../print/cups/buildlink3.mk"
