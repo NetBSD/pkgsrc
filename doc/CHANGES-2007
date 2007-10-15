@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2171 2007/10/15 14:08:31 reinoud Exp $
+$NetBSD: CHANGES-2007,v 1.2172 2007/10/15 15:39:14 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4009,3 +4009,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/dvdstyler to 1.5beta4nb7 [wiz 2007-10-15]
 	Updated www/p5-SVN-Web to 0.53 [minskim 2007-10-15]
 	Updated misc/udfclient to 0.5.6 [reinoud 2007-10-15]
+	Updated security/courier-authlib to 0.60.2 [jlam 2007-10-15]
+	Updated net/couriertcpd to 0.57.1 [jlam 2007-10-15]
+	Updated mail/courier-maildir to 0.57.1 [jlam 2007-10-15]
+	Updated mail/courier-mta to 0.57.1 [jlam 2007-10-15]
+	Updated mail/courier-imap to 4.2.1 [jlam 2007-10-15]
+	Updated mail/sqwebmail to 5.2.0 [jlam 2007-10-15]
+	Updated mail/courier-analog to 0.15 [jlam 2007-10-15]
+	Updated meta-pkgs/courier to 0.57.1 [jlam 2007-10-15]
