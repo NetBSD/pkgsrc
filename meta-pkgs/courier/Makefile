@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/09/23 11:42:44 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/15 15:37:32 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
-PKGREVISION=	7
 CATEGORIES=	meta-pkgs mail
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,16 +12,16 @@ COMMENT=	Meta-package for the Courier mail server suite
 # COURIER_VERSION should match the variable of the same name found in
 # pkgsrc/mail/courier-mta/Makefile.common.
 #
-COURIER_VERSION=	0.56.0
+COURIER_VERSION=	0.57.1
 
 # The following packages are built from the same Courier sources and
 # should match in version number:
 #
 #	net/couriertcpd, mail/courier-maildir, mail/courier-mta
 #
-DEPENDS+=	couriertcpd>=${COURIER_VERSION}nb3:../../net/couriertcpd
+DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
-DEPENDS+=	courier-mta>=${COURIER_VERSION}nb11:../../mail/courier-mta
+DEPENDS+=	courier-mta>=${COURIER_VERSION}:../../mail/courier-mta
 
 # The following packages must be from the same lineage as the version
 # of Courier:
@@ -30,8 +29,13 @@ DEPENDS+=	courier-mta>=${COURIER_VERSION}nb11:../../mail/courier-mta
 #	mail/maildrop, mail/courier-imap, mail/sqwebmail
 #
 DEPENDS+=	maildrop>=2.0.4nb2:../../mail/maildrop
-DEPENDS+=	courier-imap>=4.1.3nb2:../../mail/courier-imap
-DEPENDS+=	sqwebmail>=5.1.6nb4:../../mail/sqwebmail
+DEPENDS+=	courier-imap>=4.2.1:../../mail/courier-imap
+DEPENDS+=	sqwebmail>=5.2.0:../../mail/sqwebmail
+
+# We tack on courier-analog because its version is somewhat tied to the
+# log format of the current Courier release.
+#
+DEPENDS+=	courier-analog>=0.15:../../mail/courier-analog
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
