@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6747 2007/10/15 15:40:10 jlam Exp $
+$NetBSD: TODO,v 1.6748 2007/10/15 17:12:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ Suggested package updates
 	o evolution-exchange-2.12.0
 	o evolution-webcal-2.12.0
 	o ex-20050325
-	o exim-4.68
 	o ezmlm-idx-5.1.0 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
