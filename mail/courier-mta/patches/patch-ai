@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+$NetBSD: patch-ai,v 1.2 2007/10/15 15:37:14 jlam Exp $
 
---- courier/module.local/local.c.orig	2004-10-23 22:02:38.000000000 -0400
+--- courier/module.local/local.c.orig	Sun Oct  7 16:37:52 2007
 +++ courier/module.local/local.c
-@@ -731,6 +731,8 @@ const char *quota;
+@@ -745,6 +745,8 @@ const char *quota;
  					strlen(argv[7])), "SENDER="),
  					argv[7]));
  
