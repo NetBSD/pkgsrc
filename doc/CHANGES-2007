@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2169 2007/10/15 06:12:18 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2170 2007/10/15 06:28:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/nano to 1.2.5 [obache 2007-10-14]
 	Updated archivers/unalz to 0.61 [minskim 2007-10-14]
 	Updated multimedia/dvdstyler to 1.5beta4nb7 [wiz 2007-10-15]
+	Updated www/p5-SVN-Web to 0.53 [minskim 2007-10-15]
