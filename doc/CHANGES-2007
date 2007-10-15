@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2170 2007/10/15 06:28:48 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2171 2007/10/15 14:08:31 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4008,3 +4008,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/unalz to 0.61 [minskim 2007-10-14]
 	Updated multimedia/dvdstyler to 1.5beta4nb7 [wiz 2007-10-15]
 	Updated www/p5-SVN-Web to 0.53 [minskim 2007-10-15]
+	Updated misc/udfclient to 0.5.6 [reinoud 2007-10-15]
