@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2005/10/20 15:55:01 tonio Exp $
+$NetBSD: patch-aa,v 1.9 2007/10/15 09:17:31 rillig Exp $
 
---- util/fluxbox-generate_menu.in.orig	2005-08-25 18:52:50.000000000 +0200
-+++ util/fluxbox-generate_menu.in
+* "grep -q" doesn't work everywhere.
+* Do not use the home directory of the user building the package.
+
+--- util/fluxbox-generate_menu.in.orig	2007-03-19 20:57:15.000000000 +0100
++++ util/fluxbox-generate_menu.in	2007-10-15 11:07:05.000000000 +0200
 @@ -51,7 +51,7 @@ WHOAMI=`whoami`
  [ "$WHOAMI" = root ] && PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
  
@@ -11,7 +14,7 @@ $NetBSD: patch-aa,v 1.8 2005/10/20 15:55:01 tonio Exp $
      PNG_ICONS="yes"
  else
      # better assume to assume "no"
-@@ -343,7 +343,7 @@ searchForIcon(){
+@@ -337,7 +337,7 @@ searchForIcon(){
      # echo "^.${entry_exec}.[[:space:]]*<.*/${icon_base}\....>" 
      if [ -f "$entry_icon" ]; then
      # if icon exists and entry does not already exists, add it
@@ -20,3 +23,12 @@ $NetBSD: patch-aa,v 1.8 2005/10/20 15:55:01 tonio Exp $
              echo -e "\"${entry_exec}\" \t <${entry_icon}>" >> $ICONMAPPING
          else 
              : echo "#    mapping already exists for ${entry_exec}" >> $ICONMAPPING
+@@ -1635,7 +1635,7 @@ append_submenu "${MULTIMEDIAMENU}"
+        append_submenu "${XUTILSMENU}"
+            normal_find xfontsel xman xload xbiff editres viewres xclock \
+                xmag wmagnify gkrellm gkrellm2 vmware portagemaster agave 
+-           find_it xrdb append "[exec] (Reload .Xdefaults) {xrdb -load $HOME/.Xdefaults}"
++           find_it xrdb append "[exec] (Reload .Xdefaults) {xrdb -load \$HOME/.Xdefaults}"
+        append_menu_end
+ append_menu_end
+ 
