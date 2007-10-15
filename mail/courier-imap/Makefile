@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2007/09/22 04:42:03 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2007/10/15 15:37:20 jlam Exp $
 
-DISTNAME=	courier-imap-4.1.3
-PKGREVISION=	2
+DISTNAME=	courier-imap-4.2.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +9,8 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/imap/
 
-DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
-DEPENDS+=	couriertcpd>=0.56.0nb1:../../net/couriertcpd
+DEPENDS+=	courier-maildir>=0.57.1:../../mail/courier-maildir
+DEPENDS+=	couriertcpd>=0.57.1:../../net/couriertcpd
 
 USE_TOOLS+=		env gmake openssl:run perl
 USE_LANGUAGES=		c c++
@@ -47,9 +46,6 @@ CONFIGURE_ARGS+=	--without-ipv6
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
-
-# Used in ${PKGDIR}/INSTALL
-FILES_SUBST+=		SSLCERTS=${SSLCERTS:Q}
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
 MAKE_DIRS+=		${COURIER_STATEDIR}

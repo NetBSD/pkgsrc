@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.7 2006/04/28 18:15:20 jlam Exp $
+$NetBSD: patch-ad,v 1.8 2007/10/15 15:37:21 jlam Exp $
 
---- configure.orig	2006-02-25 12:16:40.000000000 -0500
+--- configure.orig	Sat Sep 29 14:48:19 2007
 +++ configure
-@@ -20892,9 +20892,6 @@ else
-   ac_configure_args="$ac_configure_args --with-authchangepwdir=/var/tmp/dev/null"
- fi;
+@@ -20490,9 +20490,6 @@ else
+ fi
+ 
  
 -INSTALL_DATA='${INSTALL} -m 0600'
 -INSTALL_SCRIPT='${INSTALL}'
