@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2007/10/15 15:37:13 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -87,7 +87,9 @@ DEINSTALL)
 		fi
 	done
 
-	# Unconditionally remove temporary files.
-	${RM} -rf @COURIER_STATEDIR@/tmp/*
+	# Unconditionally remove temporary files, but not directories
+	# which are part of the message queue.
+	#
+	${RM} -f @COURIER_STATEDIR@/tmp/* 2>/dev/null
 	;;
 esac
