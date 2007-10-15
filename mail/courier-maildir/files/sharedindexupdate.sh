@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: sharedindexupdate.sh,v 1.3 2005/02/28 21:18:16 jlam Exp $
+# $NetBSD: sharedindexupdate.sh,v 1.4 2007/10/15 15:37:09 jlam Exp $
 #
 # This script updates the index of shared folders on the system and is
 # only needed if Courier-IMAP or SqWebMail used to serve mail and shared
@@ -16,8 +16,9 @@ sbindir="@PREFIX@/sbin"
 @RM@ -rf $sysconfdir/shared.tmp
 @MKDIR@ $sysconfdir/shared.tmp || exit 1
 
+# split on the first character of the username
 @TEST@ -x $sbindir/authenumerate || exit 1
-$sbindir/authenumerate > $sysconfdir/shared.tmp/.tmplist || exit 1
+$sbindir/authenumerate -s > $sysconfdir/shared.tmp/.tmplist || exit 1
 $sbindir/sharedindexsplit $sysconfdir/shared.tmp 1 < $sysconfdir/shared.tmp/.tmplist || exit 1
 @RM@ -f $sysconfdir/shared.tmp/.tmplist
 $sbindir/sharedindexinstall
