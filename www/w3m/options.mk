@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2007/10/15 15:44:52 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
-PKG_SUPPORTED_OPTIONS=	w3m-lynx-key w3m-m17n w3m-unicode
+PKG_SUPPORTED_OPTIONS=	inet6 w3m-lynx-key w3m-m17n w3m-unicode
 PKG_SUGGESTED_OPTIONS=	w3m-m17n
 
 .if ${_W3M_USE_IMAGE} == "YES"
@@ -28,6 +28,12 @@ PKG_SUGGESTED_OPTIONS+=		w3m-image-gdk-pixbuf
 #
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 .if !empty(PKG_OPTIONS:Mw3m-m17n)
 CONFIGURE_ARGS+=	--enable-m17n
