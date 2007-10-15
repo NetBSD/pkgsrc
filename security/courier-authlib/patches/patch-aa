@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2007/10/15 15:37:01 jlam Exp $
 
---- Makefile.in.orig	2007-04-22 10:54:10.000000000 -0400
+--- Makefile.in.orig	Sat Sep 29 14:43:44 2007
 +++ Makefile.in
-@@ -241,7 +241,7 @@ AR = @AR@
- AUTHPAMCRYPT = @AUTHPAMCRYPT@
- AUTOCONF = @AUTOCONF@
- AUTOHEADER = @AUTOHEADER@
--AUTOMAKE = srcdir=${srcdir} @SHELL@ ${srcdir}/automake.fix @AUTOMAKE@
-+AUTOMAKE = srcdir=${srcdir} $(SHELL) ${srcdir}/automake.fix @AUTOMAKE@
- AWK = @AWK@
- CC = @CC@
- CCDEPMODE = @CCDEPMODE@
-@@ -449,7 +449,7 @@ libcourierauthcommon_la_SOURCES = \
+@@ -491,7 +491,7 @@ libcourierauthcommon_la_SOURCES = \
  
  libcourierauthcommon_la_DEPENDENCIES = libcourierauth.la
  libcourierauthcommon_la_LIBADD = libcourierauth.la
@@ -20,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  libcourierauth_la_SOURCES = authdaemon.c authdaemonlib.c preauthdaemon.c \
  	authmoduser2.c authmoduser3.c debug.c \
  	courierauthdebug.h \
-@@ -601,9 +601,9 @@ authdaemondprog_DEPENDENCIES = libcourie
+@@ -643,9 +643,9 @@ authdaemondprog_DEPENDENCIES = libcourie
  
  authdaemondprog_LDADD = $(LIBLTDL) libcourierauthcommon.la liblock/liblock.la \
  	libhmac/libhmac.la md5/libmd5.la sha1/libsha1.la \
@@ -32,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  authdaemontest_SOURCES = authdaemontest.c
  authdaemontest_DEPENDENCIES = libcourierauthcommon.la
  authdaemontest_LDADD = libcourierauthcommon.la @NETLIBS@
-@@ -1499,19 +1499,19 @@ authvchkpw.lo: authvchkpw.c vpopmail_con
+@@ -1549,19 +1549,19 @@ authvchkpw.lo: authvchkpw.c vpopmail_con
  preauthvchkpw.lo: preauthvchkpw.c vpopmail_config.h
  
  vpopmail_config.h:
@@ -58,7 +49,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  
  @HAVE_AUTHPGSQL_FALSE@install-authpgsqlrc:
  @HAVE_AUTHPGSQL_FALSE@	@:
-@@ -1520,19 +1520,19 @@ authpgsqllib.lo: authpgsqllib.c authpgsq
+@@ -1570,19 +1570,19 @@ authpgsqllib.lo: authpgsqllib.c authpgsq
  @HAVE_AUTHPGSQL_FALSE@	@:
  
  authpgsqlrc.h:
@@ -84,7 +75,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  
  @HAVE_LDAP_FALSE@install-authldaprc:
  @HAVE_LDAP_FALSE@	@:
-@@ -1541,19 +1541,19 @@ authldaplib.lo: authldaplib.c authldaprc
+@@ -1591,19 +1591,19 @@ authldaplib.lo: authldaplib.c authldaprc
  @HAVE_LDAP_FALSE@	@:
  
  authldaprc.h:
@@ -110,7 +101,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  
  @HAVE_AUTHMYSQL_FALSE@install-authmysqlrc:
  @HAVE_AUTHMYSQL_FALSE@	@:
-@@ -1562,27 +1562,27 @@ authmysqllib.lo: authmysqllib.c authmysq
+@@ -1612,27 +1612,27 @@ authmysqllib.lo: authmysqllib.c authmysq
  @HAVE_AUTHMYSQL_FALSE@	@:
  
  authmysqlrc.h:
@@ -147,7 +138,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  	echo "#define AUTHDAEMONPID AUTHDAEMONVAR \"/pid\"" >>authdaemonrc.h
  	echo "#define AUTHDAEMONSOCK AUTHDAEMONVAR \"/socket\"" >>authdaemonrc.h
  	echo "#define AUTHDAEMONLOCK AUTHDAEMONVAR \"/lock\"" >>authdaemonrc.h
-@@ -1600,20 +1600,20 @@ authchangepwdir.h: config.status
+@@ -1650,20 +1650,20 @@ authchangepwdir.h: config.status
  	echo '#define AUTHCHANGEPWDIR "$(pkglibexecdir)"' >authchangepwdir.h
  
  sbindir.h: config.status
@@ -172,7 +163,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  
  dist-hook:
  	for f in $(BUILT1) ; do rm -f $(distdir)/$$f; done
-@@ -1629,10 +1629,10 @@ install-exec-hook:
+@@ -1679,10 +1679,10 @@ install-exec-hook:
  	$(mkinstalldirs) $(DESTDIR)$(sbindir) || :
  	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir) || :
  	$(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) authdaemondprog $(DESTDIR)$(pkglibexecdir)/authdaemond
@@ -187,7 +178,7 @@ $NetBSD: patch-aa,v 1.4 2007/08/10 17:57:21 jlam Exp $
  	test "@LIBAUTHUSERDB@" = "" && exit 0 ;\
  		$(INSTALL_PROGRAM_ENV) $(INSTALL_PROGRAM) makedat/makedatprog \
  				$(DESTDIR)$(pkglibexecdir)/makedatprog ; \
-@@ -1735,13 +1735,13 @@ README_authlib.html: README_authlib.html
+@@ -1785,13 +1785,13 @@ README_authlib.html: README_authlib.html
  authdaemond.o: authdaemonrc.h authdaemond.c
  
  install-migrate: authmigrate
