@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.4 2007/09/21 13:42:54 rillig Exp $
+# $NetBSD: pre-build,v 1.5 2007/10/15 07:26:34 rillig Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -33,6 +33,12 @@
 . @PBULK_CONFIG@
 
 set -e
+
+if [ -d "${bulklog}" ]; then
+	echo "Warning: All log files of the previous pbulk run will be"
+	echo "removed in 5 seconds. If you want to abort, press Ctrl-C."
+	sleep 5
+fi
 
 rm -rf "${bulklog}" || true
 mkdir -p "${bulklog}" "${loc}"
