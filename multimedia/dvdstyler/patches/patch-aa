@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/01/31 02:57:18 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/15 06:07:19 wiz Exp $
 
 --- configure.in.orig	2005-10-19 11:02:58.000000000 +0200
 +++ configure.in	2006-01-31 03:42:46.000000000 +0100
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.1 2006/01/31 02:57:18 xtraeme Exp $
 +	ac_cv_enable_libgnomeui="$enableval", ac_cv_enable_libgnomeui="yes")
 +
 +if test x"$ac_cv_enable_libgnomeui" = x"yes" ; then
-+	PKG_CHECK_MODULES(GNOMEUI2, lignomeui-2.0, GNOME2="-DGNOME2",
++	PKG_CHECK_MODULES(GNOMEUI2, libgnomeui-2.0, GNOME2="-DGNOME2",
      AC_MSG_WARN([libgnomeui will not be used for rendering of thumbnails]))
 +	CXXFLAGS="$CXXFLAGS $GNOME2"
 +	LIBS="$LIBS $GNOMEUI2_LIBS "
