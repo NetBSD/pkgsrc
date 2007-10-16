@@ -1,22 +1,12 @@
-# $NetBSD: options.mk,v 1.4 2007/08/23 13:57:38 obache Exp $
+# $NetBSD: options.mk,v 1.5 2007/10/16 21:33:00 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
-PKG_SUPPORTED_OPTIONS+=		nox11	# OBSOLETE; remove after pkgsrc-2007Q4
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw
 PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
-
-###
-### OBSOLETE section.  Should be removed after pkgsrc-2007Q4.
-### The "nox11" option implies removing all of the "x11"-related options.
-###
-.if !empty(PKG_OPTIONS:Mnox11)
-PKG_OPTIONS:=		${PKG_OPTIONS:Nx11:Ngtk:Nmotif:Nxaw}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated option nox11 used, use option -x11 instead."
-.endif
 
 ###
 ### Any of the "toolkit" options implies "x11".

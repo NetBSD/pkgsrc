@@ -1,28 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2007/08/13 12:40:58 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/16 21:33:00 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		emacs-pop inet6 x11
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	motif xaw
 PKG_SUGGESTED_OPTIONS=		emacs-pop inet6
-
-###
-### OBSOLETE section.  Should be removed after pkgsrc-2007Q4.
-###
-
-PKG_OPTIONS_LEGACY_VARS+=	EMACS_USE_POP:emacs-pop
-PKG_OPTIONS_LEGACY_VARS+=	EMACS_USE_X:x11
-
-.if defined(EMACS_USE_X) && defined(EMACS_USE_X_TOOLKIT)
-.  if (${EMACS_USE_X_TOOLKIT} == "lucid") || \
-      (${EMACS_USE_X_TOOLKIT} == "athena")
-PKG_LEGACY_OPTIONS+=		xaw
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable EMACS_USE_X_TOOLKIT="${EMACS_USE_X_TOOLKIT:Q}" used, use PKG_DEFAULT_OPTIONS+=xaw instead."
-.  elif ${EMACS_USE_X_TOOLKIT} == "motif"
-PKG_LEGACY_OPTIONS+=		motif
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable EMACS_USE_X_TOOLKIT="${EMACS_USE_X_TOOLKIT:Q}" used, use PKG_DEFAULT_OPTIONS+=motif instead."
-.  endif
-.endif
 
 .include "../../mk/bsd.options.mk"
 
