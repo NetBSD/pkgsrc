@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6750 2007/10/16 00:50:12 obache Exp $
+$NetBSD: TODO,v 1.6751 2007/10/16 21:44:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -325,7 +325,7 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o baci-20040415
-	o bacula-2.2.4
+	o bacula-2.2.5
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.4.16
@@ -375,7 +375,7 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o classpath-0.95
+	o classpath-0.96
 	o claws-mail-3.0.2
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
@@ -383,7 +383,7 @@ Suggested package updates
 	o cocoon-2.1.10
 	o compiz-0.6.0
 	o connect-1.96
-	o control-center-2.20.0.1
+	o control-center-2.20.1
 	o cook-2.30
 	o cpio-2.9
 	o cpmtools-2.6
@@ -403,7 +403,7 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o dar-2.3.6
-	o dasher-4.6.0
+	o dasher-4.6.1
 	o dbench-3.04
 	o dbmail-2.2.4
 	o dbxml-2.1.8
@@ -414,7 +414,7 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.20
 	o delegate-9.7.2
-	o deskbar-applet-2.20.0
+	o deskbar-applet-2.20.1
 	o devIL-1.6.7
 	o devhelp-0.16.1
 	o devtodo-0.1.19
@@ -460,7 +460,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.10
 	o enscript-1.6.4
-	o eog-2.20.0
+	o eog-2.20.1
 	o epic4-2.6
 	o epiphany-2.20.0
 	o epiphany-extensions-2.20.0
@@ -471,7 +471,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o evilwm-1.0.0
-	o evince-2.20.0
+	o evince-2.20.1
 	o evolution-2.12.0
 	o evolution-data-server-1.12.0
 	o evolution-exchange-2.12.0
@@ -524,14 +524,15 @@ Suggested package updates
 	o gconfmm-2.20.0
 	o gcpio-2.7
 	o gdal-1.4.1
+	o gdb-6.7
 	o gdb6-6.6
 	o gdeskcal-1.01
 	o gdl-0.7.5
-	o gdm-2.20.0
+	o gdm-2.20.1
 	o gdsreader-0.3.2
 	o geany-0.12
 	o geda-1.2.0.20070902
-	o gedit-2.20.1
+	o gedit-2.20.2
 	o generator-cbiere-0.35r3
 	o genius-1.0.0
 	o gettext-0.16.1
@@ -547,6 +548,7 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade3-3.4.0
 	o glchess-1.0.5
+	o glib2-2.14.2
 	o global-5.6
 	o gmime-2.2.10
 	o gmpc-0.15.1
@@ -557,8 +559,8 @@ Suggested package updates
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
 	o gnome-desktop-2.20.0
-	o gnome-games-2.20.0.1
-	o gnome-keyring-2.20.0
+	o gnome-games-2.20.1
+	o gnome-keyring-2.20.1
 	o gnome-mag-1.14.10
 	o gnome-media-2.20.1
 	o gnome-panel-2.20.0.1
@@ -578,7 +580,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
-	o gok-1.3.6
+	o gok-1.3.7
 	o gossip-0.26
 	o gourmet-0.13.3
 	o gpaint-0.3.3
@@ -600,10 +602,11 @@ Suggested package updates
 	o gss-0.0.22
 	o gtar-1.19
 	o gtexinfo-4.11
+	o gthumb-2.10.7
 	o gtick-0.4.1
 	o gtk-doc-1.9
 	o gtk-systrace-20030623
-	o gtk2-engines-2.12.1
+	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.0
 	o gtklife-5.1
@@ -637,7 +640,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-5.1.8
+	o hylafax-5.1.9
 	o i2ocfg-1.1
 	o ical-2.3.2
 	o icdprog-0.5
@@ -684,6 +687,7 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.4.6
 	o kbarcode-2.0.6
+	o kdelibs3-3.5.8
 	o kdrill-6.5
 	o kid3-0.9
 	o kinput2-3.1
@@ -748,7 +752,7 @@ Suggested package updates
 	o libstatgrab-0.15
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
-	o libtheora-1.0beta1
+	o libtheora-1.0beta2
 	o libtool-1.5.24
 	o libxklavier-3.3
 	o libxml++2-2.20.0
@@ -789,7 +793,7 @@ Suggested package updates
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
-	o mksh-31.2
+	o mksh-31.4
 	o mkvtoolnix-2.1.0
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -804,6 +808,7 @@ Suggested package updates
 	o mpg123-0.66
 	o mpi-ch-1.2.7p1
 	o mpich-1.2.7
+	o mplayer-1.0rc10
 	o mserv-devel-0.41
 	o msf-2.7
 	o mtools-3.9.11
@@ -883,6 +888,7 @@ Suggested package updates
 	o p5-Class-Factory-1.05
 	o p5-Class-ReturnValue-0.55
 	o p5-Class-Trigger-0.11
+	o p5-Config-General-2.34
 	o p5-Crypt-CBC-2.22
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
@@ -912,9 +918,11 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
+	o p5-IO-Socket-SSL-1.11
 	o p5-Ima-DBI-0.34
 	o p5-Image-ExifTool-6.82
 	o p5-Image-Info-1.26
+	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.423
@@ -999,7 +1007,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.1
+	o phpmyadmin-2.11.1.1
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1026,7 +1034,7 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
-	o png-1.2.21
+	o png-1.2.22
 	o pngcheck-2.3.0
 	o po4a-0.29
 	o poedit-1.3.7
@@ -1074,7 +1082,7 @@ Suggested package updates
 	o py-ldap-2.3.1
 	o py-libxml2-2.6.28
 	o py-logging-0.4.9.6
-	o py-m2crypto-0.18
+	o py-m2crypto-0.18.2
 	o py-mad-0.6
 	o py-metakit-2.4.9.6
 	o py-musicbrainz-0.4.1
@@ -1127,9 +1135,9 @@ Suggested package updates
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
 	o regionset-0.2
-	o remind-3.1.2
+	o remind-3.1.3
 	o rep-gtk-0.18
-	o replex-0.1.6.7
+	o replex-0.1.6.8
 	o resize_image-0.7
 	o rhythmbox-0.10.1
 	o rio500-0.8.1
@@ -1144,7 +1152,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.4.2.1
-	o rt3-3.6.4
+	o rt3-3.6.5
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
@@ -1163,7 +1171,7 @@ Suggested package updates
 	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seahorse-2.20
+	o seahorse-2.20.1
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
@@ -1234,7 +1242,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.3.1
+	o tea-17.3.3
 	o ted-2.17
 	o ted-en-us-2.17
 	o texmaker-1.6
@@ -1294,9 +1302,10 @@ Suggested package updates
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o wesnoth-1.2.7
+	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.46
+	o wine-0.9.47
 	o wmii-3.5.1
 	o wml-2.0.11
 	o wmweather-2.4.4
@@ -1374,12 +1383,12 @@ Suggested package updates
 	o yaz-2.1.54
 	o yelp-2.20.0
 	o yodl-2.01.02
-	o youtube-dl-20071009
+	o youtube-dl-20071012
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.20.0
-	o zile-2.2.43
+	o zile-2.2.47
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
