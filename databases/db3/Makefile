@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/04 21:29:08 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2007/10/16 23:48:59 tnn Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--enable-compat185
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h=no
 .endif
 

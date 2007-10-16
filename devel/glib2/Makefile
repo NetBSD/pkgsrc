@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2007/09/22 17:07:29 tnn Exp $
+# $NetBSD: Makefile,v 1.123 2007/10/16 23:49:00 tnn Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -85,7 +85,7 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 CONFIGURE_ARGS+=	--disable-threads
 .else
 .include "../../mk/pthread.buildlink3.mk"
