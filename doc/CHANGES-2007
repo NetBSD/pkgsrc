@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2184 2007/10/16 07:58:41 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2185 2007/10/16 14:08:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4029,3 +4029,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated time/ruby-tzinfo to 0.3.5 [minskim 2007-10-16]
 	Updated chat/irssi-icb to 0.14nb10 [bjs 2007-10-16]
 	Updated devel/scmgit to 1.5.3.4 [bjs 2007-10-16]
+	Updated databases/qdbm to 1.8.76 [obache 2007-10-16]
+	Updated databases/qdbm-cgi to 0.0.1.1.8.76 [obache 2007-10-16]
+	Updated databases/qdbm-plus to 1.0.0.1.8.76 [obache 2007-10-16]
+	Updated databases/java-qdbm to 1.0.0.1.8.76 [obache 2007-10-16]
+	Updated databases/p5-qdbm to 1.0.0.1.8.76 [obache 2007-10-16]
+	Updated databases/ruby-qdbm to 1.0.0.1.8.76 [obache 2007-10-16]
