@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:15 martti Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/16 20:31:57 bouyer Exp $
 #
 
 VERSION=	3.1.0
 DISTNAME=	xen-${VERSION}-src
 PKGNAME=	xenkernel3-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
 		http://bits.xensource.com/oss-xen/release/${VERSION}/src.tgz/
@@ -14,7 +14,7 @@ MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.cl.cam.ac.uk/research/srg/netos/xen/
 COMMENT=	Xen3 Kernel
 
-ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386 Linux-2.[46]*-x86_64 NetBSD-*-x86_64
 CONFLICTS=	xenkernel30-*
 
 
