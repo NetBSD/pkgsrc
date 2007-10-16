@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2007/05/27 13:34:16 tron Exp $
+# $NetBSD: Makefile,v 1.150 2007/10/16 23:48:59 tnn Exp $
 
 DISTNAME=		mutt-1.4.2.3
 CATEGORIES=		mail
@@ -31,7 +31,7 @@ MAKE_ENV+=		CHGRP=${CHGRP:Q}
 CONFIGURE_ARGS+=	--without-wc-funcs
 .endif
 
-.if ${LOWER_OPSYS} == "irix5.3"
+.if !empty(MACHINE_PLATFORM:MIRIX-5.3-*)
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h=no
 .endif
 
