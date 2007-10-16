@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2174 2007/10/16 00:48:35 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2175 2007/10/16 02:57:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/courier-analog to 0.15 [jlam 2007-10-15]
 	Updated meta-pkgs/courier to 0.57.1 [jlam 2007-10-15]
 	Updated sysutils/findutils to 4.2.31 [tnn 2007-10-16]
+	Updated devel/ruby-activesupport to 1.4.4 [minskim 2007-10-16]
