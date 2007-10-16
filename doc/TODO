@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6749 2007/10/16 00:48:34 tnn Exp $
+$NetBSD: TODO,v 1.6750 2007/10/16 00:50:12 obache Exp $
 
 Suggested new packages
 ======================
@@ -831,7 +831,7 @@ Suggested package updates
 	o newt-1.08
 	o ng-1.4.4
 	o ngrep-1.45
-	o nkf-2.07
+	o nkf-2.07 [pkg/37132]
 	o nmh-1.2.1
 	o nomarch-1.4
 	o ns-flash-9.0.64.0
