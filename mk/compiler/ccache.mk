@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.29 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: ccache.mk,v 1.30 2007/10/16 09:33:29 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,29 +35,48 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-# User-settable variables:
+# === User-settable variables ===
+#
+# CCACHE_BASE
+#	The directory where ccache is installed. The build dependency on
+#	devel/ccache is only added when this is ${LOCALBASE}.
+#
+#	Default: ${LOCALBASE}
 #
 # CCACHE_DIR
 #	The directory where the cached compiler results are stored. By
 #	default, they are stored inside WRKDIR, so they are lost after
 #	a "make clean".
 #
+# === Package-settable variables ===
+#
+# IGNORE_CCACHE
+#	Can be set to "yes" for packages that have problems with ccache.
+#
+# Keywords: ccache
+#
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
 
-.include "../../mk/bsd.prefs.mk"
+_VARGROUPS+=		ccache
+_USER_VARS.ccache=	CCACHE_BASE CCACHE_DIR
+_PKG_VARS.ccache=	IGNORE_CCACHE
 
-# User-settable variables
-CCACHE_DIR?=	${WRKDIR}/.ccache
+.include "../bsd.fast.prefs.mk"
 
-.if !empty(PKGPATH:Mdevel/ccache) || !empty(PKGPATH:Mdevel/patch)
-IGNORE_CCACHE=	yes
-MAKEFLAGS+=	IGNORE_CCACHE=yes
+CCACHE_BASE?=	${LOCALBASE}
+CCACHE_DIR?=	${WRKDIR}/.ccache-cache
+
+_USE_CCACHE=	yes
+
+.if ${CCACHE_BASE} == ${LOCALBASE} && (${PKGPATH} == "devel/ccache" || ${PKGPATH} == "devel/patch")
+_USE_CCACHE=	no
+MAKEFLAGS+=	_USE_CCACHE=${_USE_CCACHE}
 .endif
 
 .if defined(IGNORE_CCACHE)
-_USE_CCACHE=	NO
+_USE_CCACHE=	no
 .endif
 
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
@@ -70,18 +89,12 @@ _LANGUAGES.ccache=	# empty
 _LANGUAGES.ccache+=	${LANGUAGES.ccache:M${_lang_}}
 .endfor
 .if empty(_LANGUAGES.ccache)
-_USE_CCACHE=	NO
+_USE_CCACHE=	no
 .endif
 
-.if !defined(_USE_CCACHE)
-_USE_CCACHE=	YES
-.endif
+.if ${_USE_CCACHE} == "yes"
 
-.if !empty(_USE_CCACHE:M[yY][eE][sS])
-EVAL_PREFIX+=		_CCACHEBASE=ccache
-_CCACHEBASE_DEFAULT=	${LOCALBASE}
-
-_CCACHE_DIR=	${CCACHE_DIR}
+_CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_VARS=	# empty
 .  if !empty(_LANGUAGES.ccache:Mc)
 PKG_CC?=	${CC}
@@ -98,22 +111,18 @@ _ALIASES.CXX+=	c++
 PKG_CXX:=	${_CCACHE_CXX}
 .  endif
 
-# Prepend the path the to the compiler to the PATH
-.  if !empty(_LANGUAGES.ccache)
 PREPEND_PATH+=	${_CCACHE_DIR}/bin
-.  endif
 
 # Add the dependency on ccache.
+.  if ${CCACHE_BASE} == ${LOCALBASE}
 BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
+.  endif
 
 # Override the compiler-specific hash with the version string for the
 # compiler.
 #
 PKGSRC_MAKE_ENV+=	CCACHE_HASHCC=${CC_VERSION_STRING:Q}
-
-.  if defined(CCACHE_DIR) && !empty(CCACHE_DIR)
 PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
-.  endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
 .  for _var_ in ${_CCACHE_VARS}
@@ -122,11 +131,11 @@ override-tools: ${_CCACHE_${_var_}}
 ${_CCACHE_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${LN} -fs ${_CCACHEBASE}/bin/ccache ${.TARGET}
+	${LN} -fs ${CCACHE_BASE}/bin/ccache ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${_CCACHEBASE}/bin/ccache ${_alias_};		\
+		${LN} -fs ${CCACHE_BASE}/bin/ccache ${_alias_};		\
 	fi
 .      endfor
 .    endif
