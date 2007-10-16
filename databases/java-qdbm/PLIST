@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/06 12:58:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/10/16 14:06:35 obache Exp $
 lib/libjqdbm.so
 lib/libjqdbm.so.1
 lib/libjqdbm.so.1.0.0
@@ -11,7 +11,6 @@ share/doc/qdbm/java/japidoc/index.html
 share/doc/qdbm/java/japidoc/overview-summary.html
 share/doc/qdbm/java/japidoc/overview-tree.html
 share/doc/qdbm/java/japidoc/package-list
-share/doc/qdbm/java/japidoc/packages.html
 share/doc/qdbm/java/japidoc/qdbm/ADBM.html
 share/doc/qdbm/java/japidoc/qdbm/Curia.html
 share/doc/qdbm/java/japidoc/qdbm/CuriaException.html
