@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2007/10/12 14:32:45 rillig Exp $
+# $NetBSD: Makefile.common,v 1.27 2007/10/16 23:49:00 tnn Exp $
 
 DISTNAME=		mysql-5.0.45
 CATEGORIES=		databases
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
 # libgen is incorrectly detected
 CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
