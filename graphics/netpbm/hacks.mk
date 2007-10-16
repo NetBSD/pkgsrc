@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2006/04/03 16:39:04 tron Exp $
+# $NetBSD: hacks.mk,v 1.6 2007/10/16 23:48:59 tnn Exp $
 
 .if !defined(NETPBM_HACKS_MK)
 NETPBM_HACKS_MK=	# defined
@@ -27,7 +27,7 @@ MAKE_FLAGS+=		INTTYPES_H='<sys/types.h>'
 ### make sys/types.h not conflict with inttypes.h
 ### (issue is specific to IRIX 5.3)
 ###
-.if ${LOWER_OPSYS} == "irix5.3"
+.if !empty(MACHINE_PLATFORM:MIRIX-5.3-*)
 PKG_HACKS+=		sys_types_h-inttypes_h-conflict
 post-wrapper:
 		${MKDIR} ${BUILDLINK_DIR}/include/sys && ${GREP} -v '^typedef.*[^u_]int[12368]*_t;' /usr/include/sys/types.h > ${BUILDLINK_DIR}/include/sys/types.h
