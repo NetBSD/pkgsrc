@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/10/15 08:16:02 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/16 04:33:05 minskim Exp $
 
-DISTNAME=	tzinfo-0.3.2
+DISTNAME=	tzinfo-0.3.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/13799/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/26148/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tzinfo.rubyforge.org/
