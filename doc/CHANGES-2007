@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2176 2007/10/16 03:06:25 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2177 2007/10/16 03:18:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/findutils to 4.2.31 [tnn 2007-10-16]
 	Updated devel/ruby-activesupport to 1.4.4 [minskim 2007-10-16]
 	Updated databases/ruby-activerecord to 1.15.5 [minskim 2007-10-16]
+	Updated www/ruby-actionpack to 1.13.5 [minskim 2007-10-16]
