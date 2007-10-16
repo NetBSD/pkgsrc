@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/05/23 01:16:59 minskim Exp $
+$NetBSD: distinfo,v 1.5 2007/10/16 04:09:04 minskim Exp $
 
-SHA1 (daemons-1.0.6.tgz) = 4c9695055199ca95e3b91420622e6497a55c2008
-RMD160 (daemons-1.0.6.tgz) = a374eb94e2a98648efed5dc5d98600d66db6d385
-Size (daemons-1.0.6.tgz) = 28881 bytes
+SHA1 (daemons-1.0.8.tgz) = abd9e2b503db62120ad7702f0444ba422aa66b3a
+RMD160 (daemons-1.0.8.tgz) = 8754ad810033053d4144a9a01fa58aff06752714
+Size (daemons-1.0.8.tgz) = 27662 bytes
