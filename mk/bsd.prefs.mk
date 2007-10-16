@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.271 2007/10/16 11:34:16 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.272 2007/10/16 11:51:21 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -160,7 +160,8 @@ LOWER_VENDOR?=		pc
 LOWER_VENDOR?=		unknown
 
 .elif ${OPSYS} == "Interix"
-LOWER_OPSYS?=		interix3
+LOWER_OPSYS?=		interix
+LOWER_OPSYS_VERSUFFIX?=	3
 LOWER_VENDOR?=		pc
 .  if exists(/usr/lib/libc.so.3.5)
 OS_VERSION=		3.5
@@ -173,7 +174,8 @@ LOWER_OS_VERSION=	${OS_VERSION}
 
 .elif !empty(OPSYS:MIRIX*)
 LOWER_ARCH!=		${UNAME} -p
-LOWER_OPSYS?=		irix${OS_VERSION}
+LOWER_OPSYS?=		irix
+LOWER_OPSYS_VERSUFFIX?=	${OS_VERSION}
 LOWER_VENDOR?=		sgi
 
 .elif ${OPSYS} == "Linux"
