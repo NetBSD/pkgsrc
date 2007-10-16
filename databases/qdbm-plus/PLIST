@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/03/05 15:56:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/16 14:06:35 obache Exp $
 bin/xcrtest
 bin/xdptest
 bin/xvltest
@@ -72,12 +72,14 @@ share/doc/qdbm/plus/xapidoc/functions_0x76.html
 share/doc/qdbm/plus/xapidoc/functions_0x77.html
 share/doc/qdbm/plus/xapidoc/functions_0x7e.html
 share/doc/qdbm/plus/xapidoc/functions_func.html
+share/doc/qdbm/plus/xapidoc/functions_rela.html
 share/doc/qdbm/plus/xapidoc/functions_vars.html
 share/doc/qdbm/plus/xapidoc/hierarchy.html
 share/doc/qdbm/plus/xapidoc/index.html
 share/doc/qdbm/plus/xapidoc/main.html
 share/doc/qdbm/plus/xapidoc/namespacemembers.html
 share/doc/qdbm/plus/xapidoc/namespacemembers_func.html
+share/doc/qdbm/plus/xapidoc/namespacemembers_vars.html
 share/doc/qdbm/plus/xapidoc/namespaceqdbm.html
 share/doc/qdbm/plus/xapidoc/namespaces.html
 share/doc/qdbm/plus/xapidoc/tab_b.gif
