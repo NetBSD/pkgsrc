@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2186 2007/10/16 17:13:37 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2187 2007/10/16 20:33:31 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4037,3 +4037,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/ruby-qdbm to 1.0.0.1.8.76 [obache 2007-10-16]
 	Updated www/links to 2.1.0.30nb1 [bjs 2007-10-16]
 	Updated www/links-gui to 2.1.0.30nb1 [bjs 2007-10-16]
+	Updated sysutils/xenkernel3 to version 3.1.0nb2 [bouyer 2007-10-16]
