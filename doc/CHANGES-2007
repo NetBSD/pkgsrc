@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2182 2007/10/16 04:34:25 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2183 2007/10/16 05:39:55 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4027,3 +4027,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/rails to 1.2.5 [minskim 2007-10-16]
 	Updated misc/ruby-daemons to 1.0.8 [minskim 2007-10-16]
 	Updated time/ruby-tzinfo to 0.3.5 [minskim 2007-10-16]
+	Updated chat/irssi-icb to 0.14nb10 [bjs 2007-10-16]
