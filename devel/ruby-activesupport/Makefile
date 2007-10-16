@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2007/03/17 10:59:26 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2007/10/16 02:56:02 minskim Exp $
 
-DISTNAME=	activesupport-1.4.2
+DISTNAME=	activesupport-1.4.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/18399/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/26548/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
