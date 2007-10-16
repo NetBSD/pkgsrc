@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2006/11/10 14:44:33 tv Exp $
+# $NetBSD: Makefile,v 1.26 2007/10/16 00:45:52 tnn Exp $
 
-DISTNAME=	findutils-4.1
-PKGREVISION=	6
+DISTNAME=	findutils-4.2.31
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=findutils/}
 
@@ -10,13 +9,11 @@ HOMEPAGE=	http://www.gnu.org/software/findutils/findutils.html
 COMMENT=	The GNU find, xargs and locate utilities
 
 GNU_CONFIGURE=		YES
-CONFIGURE_HAS_INFODIR=	NO
-CONFIGURE_HAS_MANDIR=	NO
-MAKE_FLAGS+=		infodir=${GNU_CONFIGURE_INFODIR:Q}
-MAKE_FLAGS+=		mandir=${GNU_CONFIGURE_MANDIR:Q}
-LDFLAGS.IRIX+=		-lgen
+INFO_FILES=		YES
+PKG_DESTDIR_SUPPORT=	user-destdir
+USE_PKGLOCALEDIR=	YES
 
-INFO_FILES=		# PLIST
+LDFLAGS.IRIX+=		-lgen
 
 .include "../../mk/bsd.prefs.mk"
 
