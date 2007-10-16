@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2179 2007/10/16 03:32:18 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2180 2007/10/16 04:08:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4024,3 +4024,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ruby-actionpack to 1.13.5 [minskim 2007-10-16]
 	Updated mail/ruby-actionmailer to 1.3.5 [minskim 2007-10-16]
 	Updated www/ruby-actionwebservice to 1.2.5 [minskim 2007-10-16]
+	Updated www/rails to 1.2.5 [minskim 2007-10-16]
