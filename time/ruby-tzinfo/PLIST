@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/12 20:51:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/10/16 04:33:05 minskim Exp $
 ${RUBY_SITELIBDIR}/tzinfo.rb
 ${RUBY_SITELIBDIR}/tzinfo/country.rb
 ${RUBY_SITELIBDIR}/tzinfo/country_index_definition.rb
@@ -10,6 +10,7 @@ ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Abidjan.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Accra.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Addis_Ababa.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Algiers.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Asmara.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Asmera.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Bamako.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Africa/Bangui.rb
@@ -129,8 +130,10 @@ ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Indianapolis.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Knox.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Marengo.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Petersburg.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Tell_City.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Vevay.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Vincennes.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indiana/Winamac.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Indianapolis.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Inuvik.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Iqaluit.rb
@@ -179,6 +182,7 @@ ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Rainy_River.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Rankin_Inlet.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Recife.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Regina.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/America/Resolute.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Rio_Branco.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Rosario.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/America/Santiago.rb
@@ -307,6 +311,7 @@ ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Bermuda.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Canary.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Cape_Verde.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Faeroe.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Faroe.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Jan_Mayen.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Madeira.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Atlantic/Reykjavik.rb
@@ -320,6 +325,7 @@ ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Broken_Hill.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Canberra.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Currie.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Darwin.rb
+${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Eucla.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Hobart.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/LHI.rb
 ${RUBY_SITELIBDIR}/tzinfo/definitions/Australia/Lindeman.rb
