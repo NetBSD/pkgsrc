@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/26 01:26:46 markd Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/16 23:56:02 tnn Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -11,7 +11,7 @@ CONFLICTS+=		pilot-link<0.9.5
 MAKE_ENV+=		PILIB="libsock/libpisock.la"
 MAKE_ENV+=		PICCLIB="libcc/libpicc.a"
 
-.if ${LOWER_OPSYS} == "irix5.3"
+.if !empty(MACHINE_PLATFORM:MIRIX-5.3-*)
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h="no"
 .endif
 

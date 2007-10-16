@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2007/09/25 10:03:53 hira Exp $
+# $NetBSD: Makefile,v 1.59 2007/10/16 23:49:00 tnn Exp $
 
 DISTNAME=	xpm-3.4k
 PKGREVISION=	7
@@ -19,14 +19,14 @@ USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
 post-install:
 	cd ${PREFIX}/lib && \
 	rm -f libXpm.so.4 && \
 	ln -s libXpm.so.4.11 libXpm.so.4
 .endif
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 SUBST_CLASSES+=		sodots
 SUBST_STAGE.sodots=	post-configure
 SUBST_FILES.sodots=	lib/Makefile

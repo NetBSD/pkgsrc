@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/10/16 23:49:01 tnn Exp $
 
 DISTNAME=	deliver-2.1.14
 PKGREVISION=	1
@@ -18,7 +18,7 @@ PKG_SUPPORTED_OPTIONS=		deliver-suid
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 CPPFLAGS+=	-DNO_SYS_TIMEB_H
 .endif
 

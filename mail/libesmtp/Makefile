@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/08 18:29:17 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/16 23:49:01 tnn Exp $
 
 DISTNAME=	libesmtp-1.0.4
 CATEGORIES=	mail devel
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-isoc
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(LOWER_OPSYS:Mirix5*)
+.if ${OPSYS} == "IRIX"
 CONFIGURE_ARGS+=	--enable-emulate-getaddrinfo
 .endif
 

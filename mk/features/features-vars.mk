@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.7 2007/10/01 11:47:00 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.8 2007/10/16 23:49:01 tnn Exp $
 #
 # This file is included by bsd.prefs.mk.
 #
@@ -97,7 +97,7 @@ MISSING_FEATURES+=	${_feature_}
 
 .for _feature_ in snprintf vsnprintf
 .  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
-.    if !empty(LOWER_OPSYS:Mirix5*)
+.    if ${OPSYS} == "IRIX"
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
