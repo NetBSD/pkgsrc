@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.29 2007/10/08 10:13:03 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.30 2007/10/16 01:53:28 dmcmahill Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		2.0.0.6
@@ -17,7 +17,6 @@ DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/thunderbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=mail
-CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--enable-debug=-g
 CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
