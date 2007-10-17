@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.63 2007/09/20 17:28:48 rillig Exp $
+# $NetBSD: compiler.mk,v 1.64 2007/10/17 10:43:37 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -75,7 +75,7 @@ _USER_VARS.compiler=	PKGSRC_COMPILER USE_PKGSRC_GCC ABI
 _PKG_VARS.compiler=	USE_LANGUAGES GCC_REQD NOT_FOR_COMPILER ONLY_FOR_COMPILER
 _SYS_VARS.compiler=	CC_VERSION
 
-.include "../../mk/bsd.prefs.mk"
+.include "bsd.fast.prefs.mk"
 
 # Since most packages need a C compiler, this is the default value.
 USE_LANGUAGES?=	c
@@ -135,7 +135,7 @@ _PKGSRC_COMPILER:=	${_COMPILER} ${_PKGSRC_COMPILER}
 _COMPILER_STRIP_VARS=	# empty
 
 .for _compiler_ in ${_PKGSRC_COMPILER}
-.  include "../../mk/compiler/${_compiler_}.mk"
+.  include "compiler/${_compiler_}.mk"
 .endfor
 .undef _compiler_
 

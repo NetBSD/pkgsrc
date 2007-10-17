@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.43 2007/07/02 14:54:09 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.44 2007/10/17 10:43:37 rillig Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -42,7 +42,7 @@ MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
 .if defined(USE_X11BASE) && ${X11_TYPE} != "modular"
-.  include "../../mk/x11.buildlink3.mk"
+.  include "x11.buildlink3.mk"
 .endif
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -78,7 +78,7 @@ BUILD_DEFS+=		KERBEROS
 
 USE_DIRS?=		# empty
 .if !empty(USE_DIRS) && ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  include "../../mk/dirs.mk"
+.  include "dirs.mk"
 .endif
 
 ### USE_LIBTOOL, PKG_[SH]LIBTOOL
