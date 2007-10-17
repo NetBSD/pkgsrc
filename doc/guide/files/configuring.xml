@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.29 2007/08/15 06:33:44 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.30 2007/10/17 14:08:02 kano Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -132,7 +132,7 @@ works.</para>
   </sect1>
 
   <sect1 id="variables-affecting-installation">
-    <title>Variables affecting the installion process</title>
+    <title>Variables affecting the installation process</title>
 
     <para>A growing number of packages support installation into a
     subdirectory of <varname>WRKDIR</varname>. This allows a package
