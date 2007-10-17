@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.272 2007/10/16 11:51:21 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.273 2007/10/17 10:37:43 rillig Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -275,8 +275,7 @@ MAKE_ENV+=		USETOOLS=no
 OBJECT_FMT?=		Mach-O
 .endif
 
-# 2007Q3: uncomment this
-#ACCEPTABLE_LICENSES?=	${DEFAULT_ACCEPTABLE_LICENSES}
+ACCEPTABLE_LICENSES?=	${DEFAULT_ACCEPTABLE_LICENSES}
 
 # Provide PKGPATH early on so that mk.conf can use it.
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
