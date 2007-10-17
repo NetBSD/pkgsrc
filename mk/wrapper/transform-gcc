@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.17 2007/09/08 13:37:51 rillig Exp $
+# $NetBSD: transform-gcc,v 1.18 2007/10/17 07:30:10 is Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -121,6 +121,8 @@ case $arg in
 -fconstant-string-class=* ) transform_pass ;;
 
 # Other compiler's options that have corresponding GCC options.
+-Kpic			|\
+-kPIC			|\
 -KPIC			|\
 -kPIC			) transform_to "-fPIC" ;;
 -mt			) transform_to "-threads" ;;
