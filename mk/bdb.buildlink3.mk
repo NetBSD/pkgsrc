@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.19 2007/01/14 15:00:54 rillig Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.20 2007/10/17 10:43:36 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  It abstracts finding the
@@ -62,7 +62,7 @@
 
 BDB_BUILDLINK3_MK:=	${BDB_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "bsd.fast.prefs.mk"
 
 .if !empty(BDB_BUILDLINK3_MK:M+)
 
@@ -89,7 +89,7 @@ BDB_ACCEPTED?=	${_BDB_PKGS}
 # present, use it, and if not use DBD_DEFAULT.
 #
 CHECK_BUILTIN.db1:=	yes
-.  include "../../mk/db1.builtin.mk"
+.  include "db1.builtin.mk"
 CHECK_BUILTIN.db1:=	no
 .  if defined(IS_BUILTIN.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
 BDB185_DEFAULT?=	db1

@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.15 2007/06/04 08:10:32 rillig Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.16 2007/10/17 10:43:38 rillig Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
@@ -19,11 +19,11 @@
 
 DLOPEN_BUILDLINK3_MK:=	${DLOPEN_BUILDLINK3_MK}+
 
-.include "../../mk/bsd.prefs.mk"
+.include "bsd.fast.prefs.mk"
 
 .if !empty(DLOPEN_BUILDLINK3_MK:M+)
 CHECK_BUILTIN.dl:=	yes
-.include "../../mk/dlopen.builtin.mk"
+.include "dlopen.builtin.mk"
 CHECK_BUILTIN.dl:=	no
 .endif	# DLOPEN_BUILDLINK3_MK
 
