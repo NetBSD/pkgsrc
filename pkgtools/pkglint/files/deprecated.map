@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.53 2007/10/01 07:51:09 rillig Exp $
+# $NetBSD: deprecated.map,v 1.54 2007/10/17 10:50:59 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -135,5 +135,7 @@ NO_PKG_REGISTER		You can just remove it.
 NO_DEPENDS		You can just remove it.
 
 # October 2007
-_PKG_SILENT		Please use RUN instead.
-_PKG_DEBUG		Please use RUN instead.
+_PKG_SILENT		Use RUN instead.
+_PKG_DEBUG		Use RUN instead.
+LICENCE			Use LICENSE instead.
+ACCEPTABLE_LICENCES	Use ACCEPTABLE_LICENSES instead.
