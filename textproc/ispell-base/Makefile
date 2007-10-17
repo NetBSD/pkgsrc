@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/03/24 19:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/10/17 00:00:54 tnn Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -19,7 +19,7 @@ MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(/usr/include/inttypes.h) && ${LOWER_OPSYS} != "irix5.3"
+.if exists(/usr/include/inttypes.h) && !empty(MACHINE_PLATFORM:MIRIX-5.3-*)
 CFLAGS+=	-DHAVE_INTTYPES_H
 .endif
 
