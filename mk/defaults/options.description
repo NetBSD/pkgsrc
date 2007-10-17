@@ -11,6 +11,7 @@ anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
 antialias	
 apop	
+ares			Use the ares library for asynchronous name resolution.
 arping1	
 arping2	
 arts			Use the aRts audio daemon.
@@ -36,6 +37,7 @@ bugzilla-patchviewer	Enable patchiewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2
 canna			Use Canna as Japanese conversion program.
+cares			Use the c-ares library for asynchronous name resolution.
 catalog-mysql		Store Bacula catalog in MySQL database.
 catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
