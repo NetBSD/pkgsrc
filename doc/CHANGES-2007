@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2191 2007/10/17 20:50:50 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2192 2007/10/17 21:39:12 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4048,3 +4048,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/wesnoth to 1.2.7 [wiz 2007-10-17]
 	Updated devel/pcre to 7.4 [wiz 2007-10-17]
 	Updated security/p5-IO-Socket-SSL to 1.11 [wiz 2007-10-17]
+	Added sysutils/open-vm-tools version 2007.09.04.56574 [agc 2007-10-17]
