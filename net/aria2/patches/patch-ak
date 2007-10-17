@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/10/17 09:42:39 bjs Exp $
+
+--- src/MetalinkRequestInfo.cc.orig	2007-09-05 08:40:08.000000000 -0400
++++ src/MetalinkRequestInfo.cc
+@@ -88,6 +88,9 @@ RequestInfos MetalinkRequestInfo::execut
+   RequestInfos nextReqInfos;
+   try {
+     MetalinkerHandle metalinker = proc.parseFile(metalinkFile);
++    if(metalinker->entries.empty()) {
++      throw new DlAbortEx("No file entry found. Probably, the metalink file is not configured properly or broken.");
++    }
+     MetalinkEntries entries =
+       metalinker->queryEntry(op->get(PREF_METALINK_VERSION),
+ 			     op->get(PREF_METALINK_LANGUAGE),
