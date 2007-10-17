@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.114 2007/10/09 01:10:19 rillig Exp $
+# $NetBSD: bootstrap,v 1.115 2007/10/17 02:45:42 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -261,6 +261,26 @@ get_optarg()
 	expr "x$1" : "x[^=]*=\\(.*\\)"
 }
 
+checkarg_sane_absolute_path() {
+	case "$1" in
+	"")	;; # the default value will be used.
+	*[!-A-Za-z0-9_./]*)
+		die "ERROR: Invalid characters in path $1 (from $2)." ;;
+	/*)	;;
+	*)	die "ERROR: The argument to $2 must be an absolute path." ;;
+	esac
+}
+
+checkarg_sane_relative_path() {
+	case "$1" in
+	"")	;; # the default value will be used.
+	*[!-A-Za-z0-9_./]*)
+		die "ERROR: Invalid characters in path $1 (from $2)." ;;
+	/*)	die "ERROR: The argument to $2 must be a relative path." ;;
+	*)	;;
+	esac
+}
+
 bootstrap_sh=${SH-/bin/sh}
 bootstrap_sh_set=${SH+set}
 
@@ -325,6 +345,13 @@ while [ $# -gt 0 ]; do
 	esac
 	shift
 done
+
+checkarg_sane_absolute_path "$wrkdir" "--workdir"
+checkarg_sane_absolute_path "$prefix" "--prefix"
+checkarg_sane_absolute_path "$pkgdbdir" "--pkgdbdir"
+checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
+checkarg_sane_absolute_path "$varbase" "--varbase"
+checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
 
 # set defaults for system locations if not already set by the user
 wrkobjdir=${wrkdir}/pkgsrc
