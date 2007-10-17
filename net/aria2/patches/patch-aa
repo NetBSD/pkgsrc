@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/10/17 09:42:39 bjs Exp $
+
+--- src/DefaultBtProgressInfoFile.cc.orig	2007-09-01 12:10:30.000000000 -0400
++++ src/DefaultBtProgressInfoFile.cc
+@@ -92,7 +92,7 @@ void DefaultBtProgressInfoFile::save() {
+ 			filename.c_str(), strerror(errno));
+   }
+ 
+-  if(rename(filenameTemp.c_str(), filename.c_str()) == -1) {
++  if(!File(filenameTemp).renameTo(filename)) {
+     throw new DlAbortEx(EX_SEGMENT_FILE_WRITE,
+ 			filename.c_str(), strerror(errno));
+   }
