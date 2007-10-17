@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.17 2007/02/15 16:08:20 rillig Exp $
+# $NetBSD: db1.builtin.mk,v 1.18 2007/10/17 10:43:37 rillig Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -11,7 +11,7 @@ BUILTIN_FIND_FILES.H_DB=	/usr/include/db1/db.h /usr/include/db.h
 #
 BUILTIN_FIND_GREP.H_DB=	^\#define.*HASHVERSION.*2$$
 
-.include "../../mk/buildlink3/bsd.builtin.mk"
+.include "buildlink3/bsd.builtin.mk"
 
 ###
 ### Determine if there is a built-in implementation of the package and
