@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/05/03 12:27:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/10/17 20:49:42 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -50,6 +50,7 @@ man/man3/pcreposix.3
 man/man3/pcreprecompile.3
 man/man3/pcresample.3
 man/man3/pcrestack.3
+man/man3/pcresyntax.3
 share/doc/pcre/AUTHORS
 share/doc/pcre/COPYING
 share/doc/pcre/ChangeLog
@@ -93,6 +94,7 @@ share/doc/pcre/html/pcreposix.html
 share/doc/pcre/html/pcreprecompile.html
 share/doc/pcre/html/pcresample.html
 share/doc/pcre/html/pcrestack.html
+share/doc/pcre/html/pcresyntax.html
 share/doc/pcre/html/pcretest.html
 share/doc/pcre/pcre-config.txt
 share/doc/pcre/pcre.txt
