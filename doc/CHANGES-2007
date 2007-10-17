@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2190 2007/10/17 09:46:17 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2191 2007/10/17 20:50:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4041,3 +4041,10 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/youtube-dl to 20071012 [tnn 2007-10-17]
 	Updated devel/nspr to 4.6.7nb1 [bjs 2007-10-17]
 	Added net/aria2 version 0.11.3 [bjs 2007-10-17]
+	Updated audio/easytag-current to 2.1.3 [wiz 2007-10-17]
+	Updated graphics/png to 1.2.22 [wiz 2007-10-17]
+	Updated misc/dialog to 1.1.20070930 [wiz 2007-10-17]
+	Updated multimedia/libtheora to 1.0beta2 [wiz 2007-10-17]
+	Updated games/wesnoth to 1.2.7 [wiz 2007-10-17]
+	Updated devel/pcre to 7.4 [wiz 2007-10-17]
+	Updated security/p5-IO-Socket-SSL to 1.11 [wiz 2007-10-17]
