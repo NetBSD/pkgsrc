@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2187 2007/10/16 20:33:31 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.2188 2007/10/17 06:50:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/links to 2.1.0.30nb1 [bjs 2007-10-16]
 	Updated www/links-gui to 2.1.0.30nb1 [bjs 2007-10-16]
 	Updated sysutils/xenkernel3 to version 3.1.0nb2 [bouyer 2007-10-16]
+	Updated net/youtube-dl to 20071012 [tnn 2007-10-17]
