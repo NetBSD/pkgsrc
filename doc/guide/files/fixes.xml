@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.90 2007/09/21 13:03:39 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.91 2007/10/17 14:08:02 kano Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -346,7 +346,7 @@ BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 DEPENDS+=       xpm-3.4j:../../graphics/xpm
 	</programlisting>
 
-	<para>You can also use wildcards in package dependences:</para>
+	<para>You can also use wildcards in package dependencies:</para>
 
 	<programlisting>
 DEPENDS+=       xpm-[0-9]*:../../graphics/xpm

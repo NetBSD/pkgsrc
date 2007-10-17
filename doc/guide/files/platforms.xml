@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.57 2007/08/18 07:13:07 weinem Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.58 2007/10/17 14:08:02 kano Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -298,7 +298,7 @@ file and inspect the contents before extracting it.
 &rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
 
 	<note>
-	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journalling.</para>
+	  <para>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journaling.</para>
 	</note>
 
 	<para>Allow suid:</para>
