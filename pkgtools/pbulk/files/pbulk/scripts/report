@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: report,v 1.5 2007/09/21 09:08:08 rillig Exp $
+# $NetBSD: report,v 1.6 2007/10/17 20:42:30 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -68,7 +68,7 @@ if [ -z "${build_start_iso}" ] || [ -z "${build_start_dir}" ]; then
 fi
 
 echo "Sending report mail..."
-cat ${loc}/report.txt | ${mail} -s "${report_subject_prefix} ${platform} ${build_start_iso}" ${report_recipient}
+cat ${loc}/report.txt | ${mail} -s "${report_subject_prefix} ${platform} ${build_start_iso}" ${report_recipients}
 
 cd ${bulklog}
 echo "Uploading report..."
