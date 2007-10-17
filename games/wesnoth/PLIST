@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/07/30 18:59:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/10/17 20:48:45 wiz Exp $
 bin/wesnoth
 man/cs/man6/wesnoth.6
 man/de/man6/wesnoth.6
@@ -1212,7 +1212,8 @@ share/wesnoth/data/languages/ro_RO.cfg
 share/wesnoth/data/languages/ru_RU.cfg
 share/wesnoth/data/languages/sk_SK.cfg
 share/wesnoth/data/languages/sl_SI.cfg
-share/wesnoth/data/languages/sr_CS.cfg
+share/wesnoth/data/languages/sr_RS.cfg
+share/wesnoth/data/languages/sr_RS@latin.cfg
 share/wesnoth/data/languages/sv_SE.cfg
 share/wesnoth/data/languages/tl_PH.cfg
 share/wesnoth/data/languages/tr_TR.cfg
@@ -1559,6 +1560,7 @@ share/wesnoth/data/utils.cfg
 share/wesnoth/fonts/COPYING
 share/wesnoth/fonts/DejaVuSans.ttf
 share/wesnoth/fonts/FreeSans.ttf
+share/wesnoth/fonts/sazanami-gothic.ttf
 share/wesnoth/images/attacks/axe-deathblade.png
 share/wesnoth/images/attacks/axe-undead.png
 share/wesnoth/images/attacks/axe.png
@@ -5817,6 +5819,16 @@ share/wesnoth/translations/sr/LC_MESSAGES/wesnoth-tsg.mo
 share/wesnoth/translations/sr/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/sr/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/sr/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/sr@latin/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-editor.mo
 share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-ei.mo
 share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-httt.mo
@@ -5865,6 +5877,8 @@ share/wesnoth/translations/zh_CN/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/tl
 @dirrm share/wesnoth/translations/sv/LC_MESSAGES
 @dirrm share/wesnoth/translations/sv
+@dirrm share/wesnoth/translations/sr@latin/LC_MESSAGES
+@dirrm share/wesnoth/translations/sr@latin
 @dirrm share/wesnoth/translations/sr/LC_MESSAGES
 @dirrm share/wesnoth/translations/sr
 @dirrm share/wesnoth/translations/sl/LC_MESSAGES
