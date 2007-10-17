@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2189 2007/10/17 07:42:01 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2190 2007/10/17 09:46:17 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xenkernel3 to version 3.1.0nb2 [bouyer 2007-10-16]
 	Updated net/youtube-dl to 20071012 [tnn 2007-10-17]
 	Updated devel/nspr to 4.6.7nb1 [bjs 2007-10-17]
+	Added net/aria2 version 0.11.3 [bjs 2007-10-17]
