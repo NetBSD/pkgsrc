@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/17 09:42:39 bjs Exp $
+bin/aria2c
+man/man1/aria2c.1
+share/locale/de/LC_MESSAGES/aria2c.mo
+share/locale/fr/LC_MESSAGES/aria2c.mo
+share/locale/ja/LC_MESSAGES/aria2c.mo
+share/locale/ru/LC_MESSAGES/aria2c.mo

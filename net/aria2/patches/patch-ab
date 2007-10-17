@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/10/17 09:42:39 bjs Exp $
+
+--- src/File.cc.orig	2007-08-28 12:36:33.000000000 -0400
++++ src/File.cc
+@@ -37,6 +37,11 @@
+ #include "a2io.h"
+ #include <libgen.h>
+ 
++#ifdef __MINGW32__
++# define WIN32_LEAN_AND_MEAN
++# include <windows.h>
++#endif // __MINGW32__
++
+ File::File(const string& name):name(name) {}
+ 
+ File::~File() {}
+@@ -140,3 +145,21 @@ bool File::isDir(const string& filename)
+ {
+   return File(filename).isDir();
+ }
++
++bool File::renameTo(const string& dest)
++{
++#ifdef __MINGW32__
++  /* MinGW's rename() doesn't delete an existing destination */
++  if (_access(dest.c_str(), 0) == 0) {
++    if (_unlink(dest.c_str()) != 0) {
++      return false;
++    }
++  }
++#endif // __MINGW32__
++  if(rename(name.c_str(), dest.c_str()) == 0) {
++    name = dest;
++    return true;
++  } else {
++    return false;
++  }
++}

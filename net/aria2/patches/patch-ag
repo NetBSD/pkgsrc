@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/10/17 09:42:39 bjs Exp $
+
+--- test/HttpHeaderProcessorTest.cc.orig	2007-08-28 12:36:33.000000000 -0400
++++ test/HttpHeaderProcessorTest.cc
+@@ -105,7 +105,7 @@ void HttpHeaderProcessorTest::testGetHtt
+   CPPUNIT_ASSERT_EQUAL(string("200"), status);
+   CPPUNIT_ASSERT_EQUAL(string("Mon, 25 Jun 2007 16:04:59 GMT"), header->getFirst("Date"));
+   CPPUNIT_ASSERT_EQUAL(string("Apache/2.2.3 (Debian)"), header->getFirst("Server"));
+-  CPPUNIT_ASSERT_EQUAL(9187LL, header->getFirstAsLLInt("Content-Length"));
++  CPPUNIT_ASSERT_EQUAL((int64_t)9187LL, header->getFirstAsLLInt("Content-Length"));
+   CPPUNIT_ASSERT_EQUAL(string("text/html; charset=UTF-8"), header->getFirst("Content-Type"));
+ }
+ 
