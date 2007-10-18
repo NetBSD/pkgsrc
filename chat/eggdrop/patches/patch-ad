@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2004/12/03 12:15:54 adam Exp $
+$NetBSD: patch-ad,v 1.3 2007/10/18 09:15:34 obache Exp $
 
---- src/mod/filesys.mod/filesys.c.orig	2004-07-02 21:02:02.000000000 +0000
+--- src/mod/filesys.mod/filesys.c.orig	2006-05-29 01:56:08.000000000 +0000
 +++ src/mod/filesys.mod/filesys.c
-@@ -461,7 +461,7 @@ static int do_dcc_send(int idx, char *di
+@@ -464,7 +464,7 @@ static int do_dcc_send(int idx, char *di
    if (at_limit(nick)) {
      char xxx[1024];
  
