@@ -94,7 +94,7 @@ I. The pkgsrc user's guide
 
         5.1. General configuration
         5.2. Variables affecting the build process
-        5.3. Variables affecting the installion process
+        5.3. Variables affecting the installation process
         5.4. Selecting and configuring the compiler
 
             5.4.1. Selecting the compiler
@@ -456,7 +456,6 @@ D. Editing guidelines for the pkgsrc guide
 List of Tables
 
 1.1. Platforms supported by pkgsrc
-3.1. Binary kits and available packages
 11.1. Patching examples
 23.1. PLIST handling for GNOME packages
 
@@ -736,7 +735,7 @@ Table of Contents
 
     5.1. General configuration
     5.2. Variables affecting the build process
-    5.3. Variables affecting the installion process
+    5.3. Variables affecting the installation process
     5.4. Selecting and configuring the compiler
 
         5.4.1. Selecting the compiler
@@ -962,91 +961,7 @@ Table of Contents
 
 3.1. Binary distribution
 
-We provide a bootstrap kit in both source and binary form for other platforms
-than NetBSD, consisting of the pkg administration tools and other tools
-required to use pkgsrc and build packages.
-
-Note
-
-Older binary snapshots are available in the bootstrap-pkgsrc/archive directory
-on ftp.NetBSD.org.
-
-Table 3.1. Binary kits and available packages
-
-+------------------------------------------------------------------------------+
-|             Platform              |Latest snapshot|Binary kit|Binary packages|
-|-----------------------------------+---------------+----------+---------------|
-|Darwin 5.5/powerpc (Mac OS X       |20021209       |binary kit|               |
-|10.1.5)                            |               |          |               |
-|-----------------------------------+---------------+----------+---------------|
-|Darwin 6.6/powerpc (Mac OS X       |20030623       |binary kit|               |
-|10.2.6)                            |               |          |               |
-|-----------------------------------+---------------+----------+---------------|
-|Darwin 7.6/powerpc (Mac OS X       |20041219       |binary kit|binary packages|
-|10.3.6)                            |               |          |               |
-|-----------------------------------+---------------+----------+---------------|
-|Darwin 7.8/powerpc (Mac OS X       |20050320       |binary kit|               |
-|10.3.8)                            |               |          |               |
-|-----------------------------------+---------------+----------+---------------|
-|Darwin 8.1/powerpc (Mac OS X       |20050625       |binary kit|binary packages|
-|10.4.1)                            |               |          |               |
-|-----------------------------------+---------------+----------+---------------|
-|Debian GNU Linux/i386              |20031023       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Fedora Core 2 Linux/i386           |20050618       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Fedora Core 4 Linux/i386           |20060105       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 3.5/i386                   |20030411       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 4.7/i386                   |20021211       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 5.0/i386                   |20030411       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 5.1/i386                   |20030630       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 5.2.1/i386                 |20040227       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|FreeBSD 5.3/i386                   |20050119       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|HP-UX 11.11/hppa                   |20070421       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Interix 3.5                        |20061106       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|IRIX 6.5 n32-bit ABI               |20040911       |binary kit|binary packages|
-|-----------------------------------+---------------+----------+---------------|
-|IRIX 6.5 64-bit ABI                |20040912       |binary kit|binary packages|
-|-----------------------------------+---------------+----------+---------------|
-|OpenBSD 3.2/i386                   |20030420       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|OpenBSD 3.3/i386                   |20030503       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|OpenBSD 3.5/i386                   |20040703       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|OSF1 5.1/alpha                     |20070420       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Slackware Linux 8.1/i386           |20030417       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Slackware Linux 9/i386             |20040703       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Solaris 8/sparc                    |20050220       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Solaris 8/i386                     |20050220       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Solaris 9/sparc                    |20060713       |binary kit|               |
-|-----------------------------------+---------------+----------+---------------|
-|Solaris 9/i386                     |20030411       |binary kit|               |
-+------------------------------------------------------------------------------+
-
-
-Simply download the binary kit for your platform, and extract it into / e.g.
-
-# cd /
-# gzip -c -d /tmp/bootstrap-pkgsrc-SunOS-5.9-sparc-20031023.tar.gz \
-  | tar -xpf -
-
-Of course, as with any binary distributions, you should verify the checksum
-against the SUM or CKSUM file and inspect the contents before extracting it.
+See Section 4.1, "Using binary packages".
 
 3.2. Bootstrapping pkgsrc
 
@@ -1062,11 +977,6 @@ to get pkgsrc before bootstrapping. The given bootstrap command will use the
 defaults of /usr/pkg for the prefix where programs will be installed in, and /
 var/db/pkg for the package database directory where pkgsrc will do its internal
 bookkeeping. However, these can also be set using command-line arguments.
-
-Binary packages for the pkgsrc tools and an initial set of packages is
-available for supported platforms. An up-to-date list of these can be found on
-www.pkgsrc.org. Note that this only works for privileged builds that install
-into /usr/pkg.
 
 Note
 
@@ -1113,7 +1023,7 @@ Note
 darwindiskimage will mount the filesystem nosuid, which will cause problems for
 packages that depend on setgid. In the case of UFS, it will also mount the
 filesystem asynchronous, which is somewhat dangerous according to the mount(8)
-man page. In the case of HFSX, it will disable journalling.
+man page. In the case of HFSX, it will disable journaling.
 
 Allow suid:
 
@@ -1591,17 +1501,20 @@ packages from someone else.
 
 4.1. Using binary packages
 
-To use binary packages, you need some tools to manage them. On NetBSD, these
-tools are already installed. On all other operating systems, you need to
-install them first. For some platforms, these tools are already packages in an
-archive, ready to be extracted in the / directory. They can be found in the
-bootstrap-pkgsrc directory of the FTP server.
+On the ftp.NetBSD.org server and its mirrors, there are collections of binary
+packages, ready to be installed. These binary packages have been built using
+the default settings for the directories, that is:
 
-These pre-built package tools use /usr/pkg for the base directory, and /var/db/
-pkg for the database of installed packages. If you cannot use these directories
-for whatever reasons (maybe because you're not root), you have to build the
-package tools yourself, which is explained in Section 3.2, "Bootstrapping
-pkgsrc".
+  * /usr/pkg for LOCALBASE, where most of the files are installed,
+
+  * /usr/pkg/etc for configuration files,
+
+  * /var for VARBASE, where those files are installed that may change after
+    installation.
+
+If you cannot use these directories for whatever reasons (maybe because you're
+not root), you cannot use these binary packages, but have to build the packages
+yourself, which is explained in Section 3.2, "Bootstrapping pkgsrc".
 
 4.1.1. Finding binary packages
 
@@ -1613,39 +1526,51 @@ This directory contains binary packages for multiple platforms. First, select
 your operating system. (Ignore the directories with version numbers attached to
 it, they just exist for legacy reasons.) Then, select your hardware
 architecture, and in the third step, the OS version and the "version" of
-pkgsrc. This directory contains a subdirectory called All, where (almost) all
-binary packages are stored. Almost, because vulnerable packages are moved to
-the vulnerable directory so they don't get installed accidentally.
+pkgsrc.
+
+In this directory, you often find a file called bootstrap.tar.gz which contains
+the package management tools. If the file is missing, it is likely that your
+operating system already provides those tools. Download the file and extract it
+in the / directory. It will create the directories /usr/pkg (containing the
+tools for managing binary packages) and /var/db/pkg (the database of installed
+packages).
 
 4.1.2. Installing binary packages
 
-If you have the files on a CD-ROM or downloaded them to your hard disk, you can
-install them with the following command (be sure to su to root first):
+In the directory from the last section, there is a subdirectory called All,
+which contains all the binary packages that are available for the platform,
+excluding those that may not be distributed via FTP or CDROM (depending on
+which medium you are using), and the ones that have vulnerabilities and
+therefore are considered insecure to install without thinking before.
 
-# pkg_add /path/to/package.tgz
+To install packages directly from an FTP or HTTP server, run the following
+commands in a Bourne-compatible shell (be sure to su to root first):
 
-If you have FTP access and you don't want to download the packages via FTP
-prior to installation, you can do this automatically by giving pkg_add an FTP
-URL:
+# PATH="/usr/pkg/sbin:$PATH"
+# PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/OPSYS/ARCH/VERSIONS/All"
+# export PATH PKG_PATH
 
-# pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/OPSYS/ARCH/VERSIONS/All/package
+Instead of URLs, you can also use local paths, for example if you are
+installing from a set of CDROMs, DVDs or an NFS-mounted repository. If you want
+to install packages from multiple sources, you can separate them by a semicolon
+in PKG_PATH.
+
+After these preparations, installing a package is very easy:
+
+# pkg_add openoffice2
+# pkg_add kde-3.5.7
+# pkg_add ap2-php5-*
 
 Note that any prerequisite packages needed to run the package in question will
 be installed, too, assuming they are present where you install from.
 
-To save some typing, you can set the PKG_PATH environment variable to a
-semicolon-separated list of paths (including remote URLs); trailing slashes are
-not allowed.
-
-Additionally to the All directory there exists a vulnerable directory to which
-binary packages with known vulnerabilities are moved, since removing them could
-cause missing dependencies. To use these packages, add the vulnerable directory
-to your PKG_PATH. However, you should run security/audit-packages regularly,
-especially after installing new packages, and verify that the vulnerabilities
-are acceptable for your configuration. An example PKG_PATH would be: ftp://
-ftp.NetBSD.org/pub/NetBSD/packages/<OSVERSION>/<ARCH>/All;ftp://ftp.NetBSD.org/
-pub/NetBSD/packages/<OSVERSION>/<ARCH>/vulnerable Please note that semicolon
-(';') is a shell meta-character, so you'll probably have to quote it.
+As mentioned above, packages for which vulnerabilities get known are not stored
+in the All subdirectory. They don't get deleted since that could be very
+frustrating if many other packages depend on it. Instead, they are moved to the
+vulnerable subdirectory. So you may need to add this directory to the PKG_PATH
+variable. However, you should run security/audit-packages regularly, especially
+after installing new packages, and verify that the vulnerabilities are
+acceptable for your configuration.
 
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
@@ -1900,7 +1825,7 @@ Table of Contents
 
 5.1. General configuration
 5.2. Variables affecting the build process
-5.3. Variables affecting the installion process
+5.3. Variables affecting the installation process
 5.4. Selecting and configuring the compiler
 
     5.4.1. Selecting the compiler
@@ -1989,7 +1914,7 @@ XXX
     package is created for them. You can set this variable to package to
     automatically create binary packages after installing dependencies.
 
-5.3. Variables affecting the installion process
+5.3. Variables affecting the installation process
 
 A growing number of packages support installation into a subdirectory of
 WRKDIR. This allows a package to be built, before the actual filesystem is
@@ -6683,7 +6608,7 @@ version numbers recognized by pkg_info(1).
     DEPENDS+=       xpm-3.4j:../../graphics/xpm
 
 
-    You can also use wildcards in package dependences:
+    You can also use wildcards in package dependencies:
 
     DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
 
@@ -9044,9 +8969,10 @@ which are explained below.
 
 C.1. bootstrap-pkgsrc: Bootstrap kits
 
-For those who only want to manage binary packages on systems other than NetBSD,
-we provide the package management tools in a separate, small tar file. Please
-note that most of these files are horribly outdated.
+This directory used to contain binary packages of the package management tools
+for various platforms. For those package collections that need them, they are
+now stored near the binary packages, so you should look in the packages
+directory.
 
 C.2. distfiles: The distributed source files
 
@@ -9072,7 +8998,8 @@ supported by pkgsrc. Each subdirectory is of the form OPSYS/ARCH/OSVERSION_TAG.
 The meaning of these variables is:
 
   * OPSYS is the name of the operating system for which the packages have been
-    built.
+    built. The name is taken from the output of the uname command, so it may
+    differ from the one you are used to hear.
 
   * ARCH is the hardware architecture of the platform for which the packages
     have been built.
