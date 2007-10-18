@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/09/07 22:12:20 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/18 09:32:43 obache Exp $
 
-DISTNAME=	trafshow-5.2.1
-PKGREVISION=	1
+DISTNAME=	trafshow-5.2.3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nsk.su/pub/RinetSoftware/
 EXTRACT_SUFX=	.tgz
@@ -32,7 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.trafshow \
 		${PREFIX}/share/examples/trafshow/trafshow
 
-BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.7
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
 .include "../../net/libpcap/buildlink3.mk"
 
 .include "../../mk/curses.buildlink3.mk"
