@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.52 2007/07/02 14:03:40 joerg Exp $
+# $NetBSD: Interix.mk,v 1.53 2007/10/18 21:52:24 rillig Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -79,9 +79,7 @@ USE_BULK_TIMESTAMPS?=	no
 ###
 
 ECHO_N?=	/bin/printf %s			# does not support "echo -n"
-IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
-PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 SU?=		/bin/su
 TYPE?=		type				# Shell builtin
@@ -91,7 +89,6 @@ GROUPADD?=		${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=	# empty by default
 _USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
 
-CPP_PRECOMP_FLAGS?=	# unset
 CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
@@ -105,8 +102,6 @@ ROOT_CMD?=		${SU} - "$$(id -un ${ROOT_USER})" -c
 ROOT_USER?=		${BINOWN}
 ROOT_GROUP?=		131616 # +Administrators or native language equivalent
 TOUCH_FLAGS?=
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
@@ -180,3 +175,5 @@ _OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
+
+.include "${.PARSEDIR}/defaults.mk"

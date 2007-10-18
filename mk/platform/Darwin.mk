@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.24 2007/07/29 05:19:44 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.25 2007/10/18 21:52:23 rillig Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -7,7 +7,6 @@ CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
 ECHO_N?=	${ECHO} -n
 LDD?=		/usr/bin/otool -L
-IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 # XXX: default from defaults/mk.conf.  Verify/correct for this platform
@@ -22,19 +21,14 @@ IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 .endif
-DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/usr/bin/false
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		/usr/bin/sudo ${SH} -c
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
@@ -106,3 +100,5 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
+
+.include "${.PARSEDIR}/defaults.mk"

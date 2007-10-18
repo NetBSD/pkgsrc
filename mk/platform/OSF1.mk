@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.19 2007/10/16 12:11:25 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.20 2007/10/18 21:52:24 rillig Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -11,8 +11,6 @@
 
 CPP?=		/usr/bin/cpp
 ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
-IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
-PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 STRIP?=		/usr/bin/strip
 SU?=		/usr/bin/su
@@ -21,18 +19,12 @@ TYPE?=		type				# Shell builtin
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd
 
-CPP_PRECOMP_FLAGS?=	# unset
-DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-non_hidden	# add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/etc/nologin
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=		system
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf
 IMAKE_MAN_SOURCE_PATH=	man/cat
@@ -76,3 +68,5 @@ _INCOMPAT_ICONV=   OSF1-*-*
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
+
+.include "${.PARSEDIR}/defaults.mk"

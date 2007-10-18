@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.25 2007/08/21 22:49:33 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.26 2007/10/18 21:52:24 rillig Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -7,8 +7,6 @@
 CPP=		/usr/bin/cpp
 .endif
 ECHO_N?=	${ECHO} -n
-IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
-PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
@@ -22,8 +20,6 @@ GROUPADD?=	${LOCALBASE}/sbin/groupadd
 _USER_DEPENDS=	user>=20000313:../../sysutils/user
 .endif
 
-CPP_PRECOMP_FLAGS?=	# unset
-DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 .else
@@ -31,17 +27,12 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 .endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
-.if exists(${LOCALBASE}/sbin/pkg_info)
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.else
+.if !exists(${LOCALBASE}/sbin/pkg_info) && exists(/usr/sbin/pkg_info)
 PKG_TOOLS_BIN?=		/usr/sbin
 .endif
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf
@@ -101,9 +92,6 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 LINK_ALL_LIBGCC_HACK=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 .endif
 
-_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
-
 .if (${MACHINE_ARCH} == alpha)
 DEFAULT_SERIAL_DEVICE?=	/dev/ttyC0
 SERIAL_DEVICES?=	/dev/ttyC0 \
@@ -156,3 +144,5 @@ GAMEGRP=		games
 GAMEMODE=		2555
 GAMEDIRMODE=		0775
 .endif
+
+.include "${.PARSEDIR}/defaults.mk"
