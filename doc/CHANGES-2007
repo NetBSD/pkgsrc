@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2192 2007/10/17 21:39:12 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2193 2007/10/18 09:15:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4049,3 +4049,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/pcre to 7.4 [wiz 2007-10-17]
 	Updated security/p5-IO-Socket-SSL to 1.11 [wiz 2007-10-17]
 	Added sysutils/open-vm-tools version 2007.09.04.56574 [agc 2007-10-17]
+	Updated chat/eggdrop to 1.6.18 [obache 2007-10-18]
