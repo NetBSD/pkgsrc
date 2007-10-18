@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6753 2007/10/17 20:55:11 wiz Exp $
+$NetBSD: TODO,v 1.6754 2007/10/18 00:16:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -1265,7 +1265,7 @@ Suggested package updates
 	o totem-2.18.3
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trafshow-5.2.3
+	o trafshow-5.2.3 [pkg/37142]
 	o transcode-1.0.4
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
