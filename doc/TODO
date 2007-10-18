@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6754 2007/10/18 00:16:18 obache Exp $
+$NetBSD: TODO,v 1.6755 2007/10/18 09:16:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ Suggested package updates
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eel-2.20.0
 	o efax-gtk-3.0.15
-	o eggdrop-1.6.18
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
