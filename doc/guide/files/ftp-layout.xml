@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.9 2007/10/11 21:03:39 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.10 2007/10/18 23:01:30 rillig Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -16,10 +16,12 @@
 <sect1 id="ftp-bootstrap">
 <title><filename>bootstrap-pkgsrc</filename>: Bootstrap kits</title>
 
-	<para>For those who only want to manage binary packages on
-	systems other than NetBSD, we provide the package management
-	tools in a separate, small tar file. Please note that most of
-	these files are horribly outdated.</para>
+	<para>This directory used to contain binary packages of the
+	package management tools for various platforms. For those
+	package collections that need them, they are now stored near the
+	binary packages, so you should look <link
+	linkend="ftp-packages">in the <filename>packages</filename>
+	directory</link>.</para>
 
 </sect1>
 <sect1 id="ftp-distfiles">
@@ -59,8 +61,10 @@
 	<itemizedlist>
 
 	<listitem><para><varname>OPSYS</varname> is the name of the
-	operating system for which the packages have been
-	built.</para></listitem>
+	operating system for which the packages have been built. The
+	name is taken from the output of the <command>uname</command>
+	command, so it may differ from the one you are used to
+	hear.</para></listitem>
 	
 	<listitem><para><varname>ARCH</varname> is the hardware
 	architecture of the platform for which the packages have been
