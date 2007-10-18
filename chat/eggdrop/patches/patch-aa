@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/12/01 20:42:42 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2007/10/18 09:15:33 obache Exp $
 
---- configure.orig	2004-08-22 22:34:02.000000000 +0000
+--- configure.orig	2006-07-09 23:13:54.000000000 +0000
 +++ configure
 @@ -4924,7 +4924,7 @@ _ACEOF
  
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.4 2005/12/01 20:42:42 joerg Exp $
        # FreeBSD/OpenBSD/NetBSD all support dlopen() and have had plenty of
        # testing with Eggdrop.
        WEIRD_OS="no"
-@@ -5303,10 +5303,16 @@ _ACEOF
-         SHLIB_CC="$CC -PIC"
-       fi
+@@ -5306,10 +5306,16 @@ _ACEOF
+       # Solaris defines (2^31)-1 as the limit for random() rather than RAND_MAX.
+       RANDMAX="0x7FFFFFFF"
      ;;
 -    *BSD)
 +    *BSD | DragonFly)
@@ -22,10 +22,10 @@ $NetBSD: patch-aa,v 1.4 2005/12/01 20:42:42 joerg Exp $
 -      SHLIB_LD="ld -Bshareable -x"
 +      if [ `echo __ELF__ | $CC -E - | grep -v '#'` = 1 ]; then
 +        SHLIB_LD="ld -shared -x"
-+	BEL_MOD_LD="$CC -Wl,-E $LDFLAGS"
++        BEL_MOD_LD="$CC -Wl,-E $LDFLAGS"
 +      else
-+	SHLIB_LD="ld -Bshareable -x"
-+	BEL_MOD_LD="$CC $LDFLAGS"
++        SHLIB_LD="ld -Bshareable -x"
++        BEL_MOD_LD="$CC $LDFLAGS"
 +      fi
      ;;
      Darwin)
