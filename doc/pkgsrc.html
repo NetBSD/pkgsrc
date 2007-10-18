@@ -113,7 +113,7 @@
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installation process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
@@ -475,8 +475,6 @@ source packages</a></span></dt>
 <dl>
 <dt>1.1. <a href="#supported-platforms">Platforms supported by pkgsrc</a>
 </dt>
-<dt>3.1. <a href="#binary-kits">Binary kits and available packages</a>
-</dt>
 <dt>11.1. <a href="#patch-examples">Patching examples</a>
 </dt>
 <dt>23.1. <a href="#plist-handling">PLIST handling for GNOME packages</a>
@@ -826,7 +824,7 @@ minutes!</p>
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installation process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
@@ -1097,218 +1095,7 @@ rdiff -u
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="binarydist"></a>3.1. Binary distribution</h2></div></div></div>
-<p>
-We provide a bootstrap kit in both source and binary form for other
-platforms than NetBSD, consisting of the pkg administration tools and other
-tools required to use pkgsrc and build packages.
-</p>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>
-Older binary snapshots are available in the
-<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/archive/" target="_top">bootstrap-pkgsrc/archive</a>
-directory on ftp.NetBSD.org.</p>
-</div>
-<div class="table">
-<a name="binary-kits"></a><p class="title"><b>Table 3.1. Binary kits and available packages</b></p>
-<div class="table-contents"><table summary="Binary kits and available packages" border="1">
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead><tr>
-<th>Platform</th>
-<th>Latest snapshot</th>
-<th>Binary kit</th>
-<th>Binary packages</th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="osname">Darwin 5.5/powerpc (Mac OS X 10.1.5)</td>
-<td class="date">20021209</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-5.5-powerpc-20021209.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Darwin 6.6/powerpc (Mac OS X 10.2.6)</td>
-<td class="date">20030623</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-6.6-powerpc-20030623.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Darwin 7.6/powerpc (Mac OS X 10.3.6)</td>
-<td class="date">20041219</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.6.0-powerpc-20041219.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-7.6/" target="_top">binary packages</a></td>
-</tr>
-<tr>
-<td class="osname">Darwin 7.8/powerpc (Mac OS X 10.3.8)</td>
-<td class="date">20050320</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-7.8.0-powerpc-20050320.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Darwin 8.1/powerpc (Mac OS X 10.4.1)</td>
-<td class="date">20050625</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Darwin-8.1.0-powerpc-20050625.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/Darwin-8.1/powerpc/current/" target="_top">binary packages</a></td>
-</tr>
-<tr>
-<td class="osname">Debian GNU Linux/i386</td>
-<td class="date">20031023</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-debian-i386-20031023.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Fedora Core 2 Linux/i386</td>
-<td class="date">20050618</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.10-i386-fc2-20050618.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Fedora Core 4 Linux/i386</td>
-<td class="date">20060105</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.6.11-i386-fc4-20060105.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 3.5/i386</td>
-<td class="date">20030411</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-3.5-STABLE-i386-20030411.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 4.7/i386</td>
-<td class="date">20021211</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-4.7-RELEASE-i386-20021211.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 5.0/i386</td>
-<td class="date">20030411</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.0-RELEASE-i386-20030411.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 5.1/i386</td>
-<td class="date">20030630</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.1-RELEASE-i386-20030630.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 5.2.1/i386</td>
-<td class="date">20040227</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.2.1-RELEASE-i386-20040227.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">FreeBSD 5.3/i386</td>
-<td class="date">20050119</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-FreeBSD-5.3-RELEASE-i386-20050119.tar" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">HP-UX 11.11/hppa</td>
-<td class="date">20070421</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-HPUX-B.11.11-hppa-20070421.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Interix 3.5</td>
-<td class="date">20061106</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Interix-3.5-i386-20061106.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">IRIX 6.5 n32-bit ABI</td>
-<td class="date">20040911</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX-6.5-mips-20040911.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/n32/" target="_top">binary packages</a></td>
-</tr>
-<tr>
-<td class="osname">IRIX 6.5 64-bit ABI</td>
-<td class="date">20040912</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-IRIX64-6.5-mips-20040912.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/IRIX-6.5/64/" target="_top">binary packages</a></td>
-</tr>
-<tr>
-<td class="osname">OpenBSD 3.2/i386</td>
-<td class="date">20030420</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.2-i386-20030420.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">OpenBSD 3.3/i386</td>
-<td class="date">20030503</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.3-i386-20030503.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">OpenBSD 3.5/i386</td>
-<td class="date">20040703</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OpenBSD-3.5-i386-20040703.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">OSF1 5.1/alpha</td>
-<td class="date">20070420</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-OSF1-V5.1-alpha-20070420.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Slackware Linux 8.1/i386</td>
-<td class="date">20030417</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.18-slackware-20030417.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Slackware Linux 9/i386</td>
-<td class="date">20040703</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-Linux-2.4.22-i386-slackware9-20040703.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Solaris 8/sparc</td>
-<td class="date">20050220</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-sparc-20050220.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Solaris 8/i386</td>
-<td class="date">20050220</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.8-i386-20050220.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Solaris 9/sparc</td>
-<td class="date">20060713</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-sparc-pkgsrc-2006Q2.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-<tr>
-<td class="osname">Solaris 9/i386</td>
-<td class="date">20030411</td>
-<td class="kit-url"><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/bootstrap-pkgsrc-SunOS-5.9-i386-20030411.tar.gz" target="_top">binary kit</a></td>
-<td class="binary-pkgs-url"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<br class="table-break"><p>
-Simply download the binary kit for your platform, and extract it into
-<code class="filename">/</code> e.g.
-</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>cd /</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>gzip -c -d /tmp/bootstrap-pkgsrc-SunOS-5.9-sparc-20031023.tar.gz \
-  | tar -xpf -</code></strong></pre>
-<p>
-Of course, as with any binary distributions, you should verify the
-checksum against the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/SUM" target="_top">SUM</a>
-or <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/bootstrap-pkgsrc/CKSUM" target="_top">CKSUM</a>
-file and inspect the contents before extracting it.
-</p>
+<p>See <a href="#using-pkg" title="4.1. Using binary packages">Section 4.1, &#8220;Using binary packages&#8221;</a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -1328,11 +1115,6 @@ file and inspect the contents before extracting it.
     directory where pkgsrc will do its internal bookkeeping.
     However, these can also be set using command-line
     arguments.</p>
-<p>Binary packages for the pkgsrc tools and an initial set of packages is
-    available for supported platforms. An up-to-date list of these can be
-    found on <a href="http://www.pkgsrc.org/" target="_top">www.pkgsrc.org</a>.
-    Note that this only works for privileged builds that install
-    into <code class="filename">/usr/pkg</code>.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>The bootstrap installs a <span><strong class="command">bmake</strong></span> tool.
@@ -1376,7 +1158,7 @@ file and inspect the contents before extracting it.
 <code class="prompt">#</code> <strong class="userinput"><code>sudo chown `id -u`:`id -g` /Volumes/NetBSD</code></strong></pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journalling.</p>
+<p>darwindiskimage will mount the filesystem nosuid, which will cause problems for packages that depend on setgid.  In the case of UFS, it will also mount the filesystem asynchronous, which is somewhat dangerous according to the mount(8) man page.  In the case of HFSX, it will disable journaling.</p>
 </div>
 <p>Allow suid:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>sudo mount -u -o suid /Volumes/NetBSD</code></strong></pre>
@@ -1890,18 +1672,18 @@ and you can still use binary packages from someone else.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-pkg"></a>4.1. Using binary packages</h2></div></div></div>
-<p>To use binary packages, you need some tools to manage them. On
-  NetBSD, these tools are already installed. On all other operating
-  systems, you need to install them first. For some platforms, these
-  tools are already packages in an archive, ready to be extracted in the
-  <code class="filename">/</code> directory. They can be found in the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/bootstrap-pkgsrc" target="_top"><code class="filename">bootstrap-pkgsrc</code></a>
-  directory of the FTP server.</p>
-<p>These pre-built package tools use
-  <code class="filename">/usr/pkg</code> for the base directory, and
-  <code class="filename">/var/db/pkg</code> for the database of installed
-  packages. If you cannot use these directories for whatever
-  reasons (maybe because you're not root), you have to build the
-  package tools yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.2. Bootstrapping pkgsrc">Section 3.2, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
+<p>On the <a href="ftp://ftp.NetBSD.org/" target="_top">ftp.NetBSD.org</a>
+  server and its mirrors, there are collections of binary packages,
+  ready to be installed. These binary packages have been built using the
+  default settings for the directories, that is:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="filename">/usr/pkg</code> for <code class="varname">LOCALBASE</code>, where most of the files are installed,</p></li>
+<li><p><code class="filename">/usr/pkg/etc</code> for configuration files,</p></li>
+<li><p><code class="filename">/var</code> for <code class="varname">VARBASE</code>, where those files are installed that may change after installation.</p></li>
+</ul></div>
+<p>If you cannot use these directories for whatever reasons (maybe
+  because you're not root), you cannot use these binary packages, but
+  have to build the packages yourself, which is explained in <a href="#bootstrapping-pkgsrc" title="3.2. Bootstrapping pkgsrc">Section 3.2, &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="finding-binary-packages"></a>4.1.1. Finding binary packages</h3></div></div></div>
@@ -1912,44 +1694,58 @@ and you can still use binary packages from someone else.</p>
     platforms. First, select your operating system. (Ignore the
     directories with version numbers attached to it, they just exist for
     legacy reasons.) Then, select your hardware architecture, and in the
-    third step, the OS version and the &#8220;<span class="quote">version</span>&#8221; of pkgsrc.
-    This directory contains a subdirectory called
-    <code class="filename">All</code>, where (almost) all binary packages are
-    stored. Almost, because vulnerable packages are moved to the
-    <code class="filename">vulnerable</code> directory so they don't get
-    installed accidentally.</p>
+    third step, the OS version and the &#8220;<span class="quote">version</span>&#8221; of pkgsrc.</p>
+<p>In this directory, you often find a file called
+    <code class="filename">bootstrap.tar.gz</code> which contains the package
+    management tools. If the file is missing, it is likely that your
+    operating system already provides those tools. Download the file and
+    extract it in the <code class="filename">/</code> directory. It will create
+    the directories <code class="filename">/usr/pkg</code> (containing the tools
+    for managing binary packages) and <code class="filename">/var/db/pkg</code>
+    (the database of installed packages).</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="installing-binary-packages"></a>4.1.2. Installing binary packages</h3></div></div></div>
-<p>If you have the files on a CD-ROM or downloaded them to
-    your hard disk, you can install them with the following command
-    (be sure to <span><strong class="command">su</strong></span> to root first):</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add /path/to/package.tgz</code></strong></pre>
-<p>If you have FTP access and you don't want to download the
-    packages via FTP prior to installation, you can do this
-    automatically by giving <span><strong class="command">pkg_add</strong></span> an FTP URL:</p>
-<pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>VERSIONS</code></em>/All/<em class="replaceable"><code>package</code></em></code></strong></pre>
+<p>In the directory from the last section, there is a
+    subdirectory called <code class="filename">All</code>, which contains all the
+    binary packages that are available for the platform, excluding those
+    that may not be distributed via FTP or CDROM (depending on which
+    medium you are using), and the ones that have vulnerabilities and
+    therefore are considered insecure to install without thinking
+    before.</p>
+<p>To install packages directly from an FTP or HTTP server, run
+    the following commands in a Bourne-compatible shell (be sure to
+    <span><strong class="command">su</strong></span> to root first):</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>PATH="/usr/pkg/sbin:$PATH"</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>VERSIONS</code></em>/All"</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>export PATH PKG_PATH</code></strong>
+</pre>
+<p>Instead of URLs, you can also use local paths, for example if
+    you are installing from a set of CDROMs, DVDs or an NFS-mounted
+    repository. If you want to install packages from multiple sources,
+    you can separate them by a semicolon in
+    <code class="varname">PKG_PATH</code>.</p>
+<p>After these preparations, installing a package is very
+    easy:</p>
+<pre class="screen">
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_add openoffice2</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_add kde-3.5.7</code></strong>
+<code class="prompt">#</code> <strong class="userinput"><code>pkg_add ap2-php5-*</code></strong>
+</pre>
 <p>Note that any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
     present where you install from.</p>
-<p>To save some typing, you can set the
-    <code class="varname">PKG_PATH</code> environment variable to a semicolon-separated
-    list of paths (including remote URLs); trailing slashes are not allowed.
-    </p>
-<p>Additionally to the <code class="filename">All</code> directory
-    there exists a <code class="filename">vulnerable</code> directory to
-    which binary packages with known vulnerabilities are
-    moved, since removing them could cause missing dependencies. To
-    use these packages, add the <code class="filename">vulnerable</code>
-    directory to your <code class="varname">PKG_PATH</code>. However, you should run
-    <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly,
-    especially after installing new packages, and verify that the
-    vulnerabilities are acceptable for your configuration. An example
-    <code class="varname">PKG_PATH</code> would be:
-    <code class="filename">ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</code>
-    Please note that semicolon (';') is a shell meta-character, so
-    you'll probably have to quote it.</p>
+<p>As mentioned above, packages for which vulnerabilities get
+    known are not stored in the <code class="filename">All</code> subdirectory.
+    They don't get deleted since that could be very frustrating if many
+    other packages depend on it. Instead, they are moved to the
+    <code class="filename">vulnerable</code> subdirectory. So you may need to add
+    this directory to the <code class="varname">PKG_PATH</code> variable. 
+    However, you should run <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly, especially
+    after installing new packages, and verify that the vulnerabilities
+    are acceptable for your configuration.</p>
 <p>After you've installed packages, be sure to have
     <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
     <code class="varname">PATH</code> so you can actually start the just
@@ -2277,7 +2073,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installion process</a></span></dt>
+<dt><span class="sect1"><a href="#variables-affecting-installation">5.3. Variables affecting the installation process</a></span></dt>
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
@@ -2395,7 +2191,7 @@ works.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="variables-affecting-installation"></a>5.3. Variables affecting the installion process</h2></div></div></div>
+<a name="variables-affecting-installation"></a>5.3. Variables affecting the installation process</h2></div></div></div>
 <p>A growing number of packages support installation into a
     subdirectory of <code class="varname">WRKDIR</code>. This allows a package
     to be built, before the actual filesystem is touched. DESTDIR
@@ -7656,7 +7452,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2708188"></a><b>18.4.1.</b>
+<a name="tools.new"></a><a name="id2707293"></a><b>18.4.1.</b>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7666,7 +7462,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2708198"></a><b>18.4.2.</b>
+<a name="tools.listall"></a><a name="id2707303"></a><b>18.4.2.</b>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7677,7 +7473,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2708209"></a><b>18.4.3.</b>
+<a name="tools.used"></a><a name="id2707314"></a><b>18.4.3.</b>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8046,7 +7842,7 @@ BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 <pre class="programlisting">
 DEPENDS+=       xpm-3.4j:../../graphics/xpm
 	</pre>
-<p>You can also use wildcards in package dependences:</p>
+<p>You can also use wildcards in package dependencies:</p>
 <pre class="programlisting">
 DEPENDS+=       xpm-[0-9]*:../../graphics/xpm
 	</pre>
@@ -9678,7 +9474,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2713947"></a><b>22.1.</b>
+<a name="devfaq.makeflags"></a><a name="id2713325"></a><b>22.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9694,7 +9490,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2713986"></a><b>22.2.</b>
+<a name="devfaq.make"></a><a name="id2713364"></a><b>22.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9712,7 +9508,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2714026"></a><b>22.3.</b>
+<a name="devfaq.cc"></a><a name="id2713404"></a><b>22.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9730,7 +9526,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2714066"></a><b>22.4.</b>
+<a name="devfaq.bl3flags"></a><a name="id2713444"></a><b>22.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9743,7 +9539,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2714086"></a><b>22.5.</b>
+<a name="devfaq.bl3prefix"></a><a name="id2713464"></a><b>22.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9759,7 +9555,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2714116"></a><b>22.6.</b>
+<a name="devfaq.master_sites"></a><a name="id2713494"></a><b>22.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9783,7 +9579,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2714261"></a><b>22.7.</b>
+<a name="devfaq.mailinglists"></a><a name="id2713571"></a><b>22.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9808,7 +9604,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2714299"></a><b>22.8.</b>
+<a name="devfaq.documentation"></a><a name="id2713609"></a><b>22.8.</b>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9856,7 +9652,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2714361"></a><b>22.9.</b>
+<a name="devfaq.too-much-time"></a><a name="id2713671"></a><b>22.9.</b>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -11004,10 +10800,11 @@ source packages</a></span></dt>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="ftp-bootstrap"></a>C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</h2></div></div></div>
-<p>For those who only want to manage binary packages on
-	systems other than NetBSD, we provide the package management
-	tools in a separate, small tar file. Please note that most of
-	these files are horribly outdated.</p>
+<p>This directory used to contain binary packages of the
+	package management tools for various platforms. For those
+	package collections that need them, they are now stored near the
+	binary packages, so you should look <a href="#ftp-packages" title="C.5. packages: Binary packages">in the <code class="filename">packages</code>
+	directory</a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -11038,8 +10835,10 @@ source packages</a></span></dt>
 	Each subdirectory is of the form <em class="replaceable"><code>OPSYS</code></em>/<em class="replaceable"><code>ARCH</code></em>/<em class="replaceable"><code>OSVERSION_TAG</code></em>. The meaning of these variables is:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p><code class="varname">OPSYS</code> is the name of the
-	operating system for which the packages have been
-	built.</p></li>
+	operating system for which the packages have been built. The
+	name is taken from the output of the <span><strong class="command">uname</strong></span>
+	command, so it may differ from the one you are used to
+	hear.</p></li>
 <li><p><code class="varname">ARCH</code> is the hardware
 	architecture of the platform for which the packages have been
 	built.</p></li>
