@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.1 2007/05/22 16:47:05 lkundrak Exp $
+$NetBSD: patch-am,v 1.2 2007/10/18 09:15:34 obache Exp $
 
 Fix for http://www.eggheads.org/bugzilla/show_bug.cgi?id=462
 
---- src/mod/server.mod/servmsg.c.orig	2007-05-22 18:29:49.000000000 +0200
+--- src/mod/server.mod/servmsg.c.orig	2006-03-28 02:35:51.000000000 +0000
 +++ src/mod/server.mod/servmsg.c
-@@ -424,7 +424,8 @@ static int gotmsg(char *from, char *msg)
+@@ -461,7 +461,8 @@ static int gotmsg(char *from, char *msg)
    to = newsplit(&msg);
    fixcolon(msg);
    /* Only check if flood-ctcp is active */
