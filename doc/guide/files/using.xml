@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.32 2007/08/16 09:25:16 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.33 2007/10/18 22:44:09 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -13,20 +13,20 @@ and you can still use binary packages from someone else.</para>
 <sect1 id="using-pkg">
   <title>Using binary packages</title>
 
-  <para>To use binary packages, you need some tools to manage them. On
-  NetBSD, these tools are already installed. On all other operating
-  systems, you need to install them first. For some platforms, these
-  tools are already packages in an archive, ready to be extracted in the
-  <filename>/</filename> directory. They can be found in the <ulink
-  url="ftp://ftp.NetBSD.org/pub/pkgsrc/bootstrap-pkgsrc"><filename>bootstrap-pkgsrc</filename></ulink>
-  directory of the FTP server.</para>
+  <para>On the <ulink url="ftp://ftp.NetBSD.org/">ftp.NetBSD.org</ulink>
+  server and its mirrors, there are collections of binary packages,
+  ready to be installed. These binary packages have been built using the
+  default settings for the directories, that is:</para>
 
-  <para>These pre-built package tools use
-  <filename>/usr/pkg</filename> for the base directory, and
-  <filename>/var/db/pkg</filename> for the database of installed
-  packages. If you cannot use these directories for whatever
-  reasons (maybe because you're not root), you have to build the
-  package tools yourself, which is explained in <xref
+  <itemizedlist>
+  <listitem><para><filename>/usr/pkg</filename> for <varname>LOCALBASE</varname>, where most of the files are installed,</para></listitem>
+  <listitem><para><filename>/usr/pkg/etc</filename> for configuration files,</para></listitem>
+  <listitem><para><filename>/var</filename> for <varname>VARBASE</varname>, where those files are installed that may change after installation.</para></listitem>
+  </itemizedlist>
+
+  <para>If you cannot use these directories for whatever reasons (maybe
+  because you're not root), you cannot use these binary packages, but
+  have to build the packages yourself, which is explained in <xref
   linkend="bootstrapping-pkgsrc" />.</para>
 
   <sect2 id="finding-binary-packages">
@@ -41,51 +41,68 @@ and you can still use binary packages from someone else.</para>
     platforms. First, select your operating system. (Ignore the
     directories with version numbers attached to it, they just exist for
     legacy reasons.) Then, select your hardware architecture, and in the
-    third step, the OS version and the <quote>version</quote> of pkgsrc.
-    This directory contains a subdirectory called
-    <filename>All</filename>, where (almost) all binary packages are
-    stored. Almost, because vulnerable packages are moved to the
-    <filename>vulnerable</filename> directory so they don't get
-    installed accidentally.</para>
+    third step, the OS version and the <quote>version</quote> of pkgsrc.</para>
 
+    <para>In this directory, you often find a file called
+    <filename>bootstrap.tar.gz</filename> which contains the package
+    management tools. If the file is missing, it is likely that your
+    operating system already provides those tools. Download the file and
+    extract it in the <filename>/</filename> directory. It will create
+    the directories <filename>/usr/pkg</filename> (containing the tools
+    for managing binary packages) and <filename>/var/db/pkg</filename>
+    (the database of installed packages).</para>
   </sect2>
+
   <sect2 id="installing-binary-packages">
     <title>Installing binary packages</title>
 
-    <para>If you have the files on a CD-ROM or downloaded them to
-    your hard disk, you can install them with the following command
-    (be sure to <command>su</command> to root first):</para>
+    <para>In the directory from the last section, there is a
+    subdirectory called <filename>All</filename>, which contains all the
+    binary packages that are available for the platform, excluding those
+    that may not be distributed via FTP or CDROM (depending on which
+    medium you are using), and the ones that have vulnerabilities and
+    therefore are considered insecure to install without thinking
+    before.</para>
 
-    <screen>&rprompt; <userinput>pkg_add /path/to/package.tgz</userinput></screen>
+    <para>To install packages directly from an FTP or HTTP server, run
+    the following commands in a Bourne-compatible shell (be sure to
+    <command>su</command> to root first):</para>
 
-    <para>If you have FTP access and you don't want to download the
-    packages via FTP prior to installation, you can do this
-    automatically by giving <command>pkg_add</command> an FTP URL:</para>
+<screen>
+&rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
+&rprompt; <userinput>PKG_PATH="ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All"</userinput>
+&rprompt; <userinput>export PATH PKG_PATH</userinput>
+</screen>
 
-    <screen>&rprompt; <userinput>pkg_add ftp://ftp.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/<replaceable>package</replaceable></userinput></screen>
+    <para>Instead of URLs, you can also use local paths, for example if
+    you are installing from a set of CDROMs, DVDs or an NFS-mounted
+    repository. If you want to install packages from multiple sources,
+    you can separate them by a semicolon in
+    <varname>PKG_PATH</varname>.</para>
+
+    <para>After these preparations, installing a package is very
+    easy:</para>
+
+<screen>
+&rprompt; <userinput>pkg_add openoffice2</userinput>
+&rprompt; <userinput>pkg_add kde-3.5.7</userinput>
+&rprompt; <userinput>pkg_add ap2-php5-*</userinput>
+</screen>
 
     <para>Note that any prerequisite packages needed to run the
     package in question will be installed, too, assuming they are
     present where you install from.</para>
 
-    <para>To save some typing, you can set the
-    <varname>PKG_PATH</varname> environment variable to a semicolon-separated
-    list of paths (including remote URLs); trailing slashes are not allowed.
-    </para>
-
-    <para>Additionally to the <filename>All</filename> directory
-    there exists a <filename>vulnerable</filename> directory to
-    which binary packages with known vulnerabilities are
-    moved, since removing them could cause missing dependencies. To
-    use these packages, add the <filename>vulnerable</filename>
-    directory to your <varname>PKG_PATH</varname>. However, you should run
-    <filename role="pkg">security/audit-packages</filename> regularly,
-    especially after installing new packages, and verify that the
-    vulnerabilities are acceptable for your configuration. An example
-    <varname>PKG_PATH</varname> would be:
-    <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</filename>
-    Please note that semicolon (';') is a shell meta-character, so
-    you'll probably have to quote it.</para>
+    <para>As mentioned above, packages for which vulnerabilities get
+    known are not stored in the <filename>All</filename> subdirectory.
+    They don't get deleted since that could be very frustrating if many
+    other packages depend on it. Instead, they are moved to the
+    <filename>vulnerable</filename> subdirectory. So you may need to add
+    this directory to the <varname>PKG_PATH</varname> variable. 
+    However, you should run <filename
+    role="pkg">security/audit-packages</filename> regularly, especially
+    after installing new packages, and verify that the vulnerabilities
+    are acceptable for your configuration.</para>
 
     <para>After you've installed packages, be sure to have
     <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your
