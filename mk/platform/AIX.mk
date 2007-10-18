@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.27 2007/10/09 20:39:39 rillig Exp $
+# $NetBSD: AIX.mk,v 1.28 2007/10/18 21:52:23 rillig Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -16,18 +16,12 @@ STRIP?=     ${LOCALBASE}/bin/strip
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
-CPP_PRECOMP_FLAGS?=	# unset
-DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=		system
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf
@@ -86,3 +80,5 @@ SERIAL_DEVICES?=	/dev/tty0 \
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
+
+.include "${.PARSEDIR}/defaults.mk"
