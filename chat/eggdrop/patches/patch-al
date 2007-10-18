@@ -1,16 +1,16 @@
-$NetBSD: patch-al,v 1.1 2007/05/22 16:47:04 lkundrak Exp $
+$NetBSD: patch-al,v 1.2 2007/10/18 09:15:34 obache Exp $
 
 Fix for http://www.eggheads.org/bugzilla/show_bug.cgi?id=462
 
---- src/mod/irc.mod/chan.c.orig	2007-05-22 18:29:41.000000000 +0200
+--- src/mod/irc.mod/chan.c.orig	2006-03-28 02:35:51.000000000 +0000
 +++ src/mod/irc.mod/chan.c
-@@ -2204,7 +2204,8 @@ static int gotmsg(char *from, char *msg)
-   if (!chan)
-     return 0;                   /* Private msg to an unknown channel?? */
+@@ -2211,7 +2211,8 @@ static int gotmsg(char *from, char *msg)
+     return 0; /* Unknown channel; don't process. */
+ 
    fixcolon(msg);
 -  strcpy(uhost, from);
 +  strncpy(uhost, from, UHOSTMAX);
 +  uhost[UHOSTMAX] = '\0';
    nick = splitnick(&uhost);
+   ignoring = match_ignore(from);
    /* Only check if flood-ctcp is active */
-   if (flud_ctcp_thr && detect_avalanche(msg)) {

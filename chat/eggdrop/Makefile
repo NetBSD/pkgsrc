@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/09/07 22:12:10 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2007/10/18 09:15:33 obache Exp $
 
-DISTNAME=	eggdrop1.6.17
-PKGNAME=	eggdrop-1.6.17
-PKGREVISION=	1
+DISTNAME=	eggdrop1.6.18
+PKGNAME=	eggdrop-1.6.18
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,18 +13,6 @@ COMMENT=	IRC robot with TCL scripting and multi-channel ability
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.eggdrop
-PKG_SUPPORTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-PLIST_SUBST+=		NOIPV6="@comment "
-.else
-PLIST_SUBST+=		NOIPV6=
-.endif
 
 EGDIR=		${PREFIX}/share/examples/eggdrop
 CONF_FILES=	${EGDIR}/eggdrop.conf ${PKG_SYSCONFDIR}/eggdrop.conf
@@ -45,9 +32,9 @@ do-install-program:
 	${INSTALL_MAN} ${WRKSRC}/doc/man1/eggdrop.1 ${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf.dist.new ${EGDIR}/eggdrop.conf
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/eggdrop
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/eggdrop/html
 	cd ${WRKSRC}/doc/html && ${INSTALL_DATA} *.html \
-		${PREFIX}/share/doc/html/eggdrop
+		${PREFIX}/share/doc/eggdrop/html
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/eggdrop
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} BANS BOTNET FIRST-SCRIPT MODULES \
 		PARTYLINE USERS TRICKS TEXT-SUBSTITUTIONS tcl-commands.doc \
@@ -81,12 +68,9 @@ do-install: do-install-modules
 do-install-modules:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/eggdrop
 	cd ${WRKSRC} && ${INSTALL_DATA} assoc.so blowfish.so channels.so \
-		compress.so console.so ctcp.so filesys.so irc.so notes.so \
+		compress.so console.so ctcp.so dns.so filesys.so irc.so notes.so \
 		seen.so server.so share.so transfer.so uptime.so wire.so \
 		${PREFIX}/lib/eggdrop
-.if empty(PKG_OPTIONS:Minet6)
-	cd ${WRKSRC} && ${INSTALL_DATA} dns.so ${PREFIX}/lib/eggdrop
-.endif
 	cd ${WRKSRC}/src/mod && ${FIND} . -name "*.lang" -exec ${INSTALL_DATA} "{}" \
 		${PREFIX}/share/eggdrop/language ";"
 .endif
