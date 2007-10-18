@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.21 2007/07/02 14:03:35 joerg Exp $
+# $NetBSD: BSDOS.mk,v 1.22 2007/10/18 21:52:23 rillig Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -17,8 +17,6 @@ SU?=		/usr/bin/su
 # sh doesn't have built-in type
 TYPE?=		which
 
-CPP_PRECOMP_FLAGS?=	# unset
-DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 .else
@@ -26,13 +24,9 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 .endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
 # XXX: assume NetBSD defaults until somebody determines correct values
@@ -94,3 +88,5 @@ PKG_CREATE_USERGROUP=	NO # until it works
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
+
+.include "${.PARSEDIR}/defaults.mk"
