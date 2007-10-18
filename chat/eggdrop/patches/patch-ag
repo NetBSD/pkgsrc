@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.6 2004/12/03 12:15:54 adam Exp $
+$NetBSD: patch-ag,v 1.7 2007/10/18 09:15:34 obache Exp $
 
---- Makefile.in.orig	2004-07-25 11:17:33.000000000 +0000
+--- Makefile.in.orig	2004-08-28 06:43:21.000000000 +0000
 +++ Makefile.in
 @@ -38,7 +38,7 @@ SHLIB_CC = @SHLIB_CC@
  # Linker
@@ -55,4 +55,4 @@ $NetBSD: patch-ag,v 1.6 2004/12/03 12:15:54 adam Exp $
 +'TCLLIB=$(TCLLIB)' 'TCLLIBFN=$(TCLLIBFN)' 'XREQS=$(XREQS)' 'XLDFLAGS=$(XLDFLAGS)' 'XLIBS=$(XLIBS)' \
  'EGGEXEC=$(EGGEXEC)' 'EGGBUILD=(static debug version)' 'MODOBJS=mod/*.o'
  
- MAKE_DEPEND = $(MAKE) 'MAKE=$(MAKE)' 'CC=$(CC)' 'LD=$(LD)' \
+ MAKE_DEPEND = $(MAKE) 'MAKE=$(MAKE)' 'CC=$(CC)'
