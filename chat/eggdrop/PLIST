@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/04 21:05:04 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/10/18 09:15:33 obache Exp $
 bin/eggdrop
 ${NOPIC}lib/eggdrop/assoc.so
 ${NOPIC}lib/eggdrop/blowfish.so
@@ -6,7 +6,7 @@ ${NOPIC}lib/eggdrop/channels.so
 ${NOPIC}lib/eggdrop/compress.so
 ${NOPIC}lib/eggdrop/console.so
 ${NOPIC}lib/eggdrop/ctcp.so
-${NOIPV6}${NOPIC}lib/eggdrop/dns.so
+${NOPIC}lib/eggdrop/dns.so
 ${NOPIC}lib/eggdrop/filesys.so
 ${NOPIC}lib/eggdrop/irc.so
 ${NOPIC}lib/eggdrop/notes.so
@@ -26,43 +26,43 @@ share/doc/eggdrop/TEXT-SUBSTITUTIONS
 share/doc/eggdrop/TRICKS
 share/doc/eggdrop/USERS
 share/doc/eggdrop/tcl-commands.doc
-share/doc/html/eggdrop/about.html
-share/doc/html/eggdrop/app-problems.html
-share/doc/html/eggdrop/app-textsub.html
-share/doc/html/eggdrop/app-tricks.html
-share/doc/html/eggdrop/app-weird.html
-share/doc/html/eggdrop/authors.html
-share/doc/html/eggdrop/bans.html
-share/doc/html/eggdrop/botnet.html
-share/doc/html/eggdrop/compiling.html
-share/doc/html/eggdrop/egg-core.html
-share/doc/html/eggdrop/faqs.html
-share/doc/html/eggdrop/features.html
-share/doc/html/eggdrop/index.html
-share/doc/html/eggdrop/install.html
-share/doc/html/eggdrop/mod-assoc.html
-share/doc/html/eggdrop/mod-blowfish.html
-share/doc/html/eggdrop/mod-channels.html
-share/doc/html/eggdrop/mod-compress.html
-share/doc/html/eggdrop/mod-console.html
-share/doc/html/eggdrop/mod-ctcp.html
-share/doc/html/eggdrop/mod-dns.html
-share/doc/html/eggdrop/mod-filesys.html
-share/doc/html/eggdrop/mod-irc.html
-share/doc/html/eggdrop/mod-notes.html
-share/doc/html/eggdrop/mod-seen.html
-share/doc/html/eggdrop/mod-server.html
-share/doc/html/eggdrop/mod-share.html
-share/doc/html/eggdrop/mod-uptime.html
-share/doc/html/eggdrop/mod-wire.html
-share/doc/html/eggdrop/mod-woobie.html
-share/doc/html/eggdrop/news.html
-share/doc/html/eggdrop/party.html
-share/doc/html/eggdrop/patch-howto.html
-share/doc/html/eggdrop/readme.html
-share/doc/html/eggdrop/starting.html
-share/doc/html/eggdrop/tcl-commands.html
-share/doc/html/eggdrop/users.html
+share/doc/eggdrop/html/about.html
+share/doc/eggdrop/html/app-problems.html
+share/doc/eggdrop/html/app-textsub.html
+share/doc/eggdrop/html/app-tricks.html
+share/doc/eggdrop/html/app-weird.html
+share/doc/eggdrop/html/authors.html
+share/doc/eggdrop/html/bans.html
+share/doc/eggdrop/html/botnet.html
+share/doc/eggdrop/html/compiling.html
+share/doc/eggdrop/html/egg-core.html
+share/doc/eggdrop/html/faqs.html
+share/doc/eggdrop/html/features.html
+share/doc/eggdrop/html/index.html
+share/doc/eggdrop/html/install.html
+share/doc/eggdrop/html/mod-assoc.html
+share/doc/eggdrop/html/mod-blowfish.html
+share/doc/eggdrop/html/mod-channels.html
+share/doc/eggdrop/html/mod-compress.html
+share/doc/eggdrop/html/mod-console.html
+share/doc/eggdrop/html/mod-ctcp.html
+share/doc/eggdrop/html/mod-dns.html
+share/doc/eggdrop/html/mod-filesys.html
+share/doc/eggdrop/html/mod-irc.html
+share/doc/eggdrop/html/mod-notes.html
+share/doc/eggdrop/html/mod-seen.html
+share/doc/eggdrop/html/mod-server.html
+share/doc/eggdrop/html/mod-share.html
+share/doc/eggdrop/html/mod-uptime.html
+share/doc/eggdrop/html/mod-wire.html
+share/doc/eggdrop/html/mod-woobie.html
+share/doc/eggdrop/html/news.html
+share/doc/eggdrop/html/party.html
+share/doc/eggdrop/html/patch-howto.html
+share/doc/eggdrop/html/readme.html
+share/doc/eggdrop/html/starting.html
+share/doc/eggdrop/html/tcl-commands.html
+share/doc/eggdrop/html/users.html
 share/eggdrop/help/cmds1.help
 share/eggdrop/help/cmds2.help
 share/eggdrop/help/core.help
@@ -125,6 +125,6 @@ share/examples/eggdrop/eggdrop.conf
 @dirrm share/eggdrop/help/msg
 @dirrm share/eggdrop/help
 @dirrm share/eggdrop
-@dirrm share/doc/html/eggdrop
+@dirrm share/doc/eggdrop/html
 @dirrm share/doc/eggdrop
 ${NOPIC}@dirrm lib/eggdrop
