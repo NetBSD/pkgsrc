@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2194 2007/10/18 09:33:02 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2195 2007/10/18 13:01:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4051,3 +4051,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added sysutils/open-vm-tools version 2007.09.04.56574 [agc 2007-10-17]
 	Updated chat/eggdrop to 1.6.18 [obache 2007-10-18]
 	Updated net/trafshow to 5.2.3 [obache 2007-10-18]
+	Updated www/drupal to 5.3 [adrianp 2007-10-18]
