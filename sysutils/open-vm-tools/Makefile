@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/18 23:03:47 tnn Exp $
 
 DISTNAME=	open-vm-tools-2007.09.04-56574
 PKGNAME=	open-vm-tools-2007.09.04.56574
@@ -15,6 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 post-install:
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/guestd/guestd ${PREFIX}/sbin/vmware-guestd
 
 .include "../../security/openssl/buildlink3.mk"
