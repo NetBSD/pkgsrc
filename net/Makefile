@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2007/10/14 17:39:03 heinz Exp $
+# $NetBSD: Makefile,v 1.687 2007/10/19 06:54:33 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -21,6 +21,7 @@ SUBDIR+=	airportmodemutility
 SUBDIR+=	amule
 SUBDIR+=	aoe-vblade
 SUBDIR+=	argus
+SUBDIR+=	aria2
 SUBDIR+=	arla
 SUBDIR+=	arpd
 SUBDIR+=	arping
