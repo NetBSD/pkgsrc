@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.31 2007/10/18 21:52:24 rillig Exp $
+# $NetBSD: SunOS.mk,v 1.32 2007/10/19 13:41:35 rillig Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -11,22 +11,20 @@ PS?=		/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
 
+CPP_PRECOMP_FLAGS?=	# unset
+DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
+NOLOGIN?=		${FALSE}
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
-
-# `ulimit' cannot parse localized messages of "unlimited", so force the
-# language to be "C".
-#
 ULIMIT_CMD_datasize?=	ulimit -d `${SETENV} LC_MESSAGES=C ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
-
 USERADD?=		/usr/sbin/useradd
 
 # imake installs manpages in weird places
@@ -80,6 +78,9 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-z defaultextract
 # incompatible.
 _INCOMPAT_ICONV=	SunOS-*-*
 
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
+
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 
 # check for maximum command line length and set it in configure's environment,
@@ -98,5 +99,3 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
-
-.include "${.PARSEDIR}/defaults.mk"

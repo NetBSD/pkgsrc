@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.25 2007/10/18 21:52:24 rillig Exp $
+# $NetBSD: UnixWare.mk,v 1.26 2007/10/19 13:41:35 rillig Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -11,14 +11,19 @@ PS?=		/usr/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		/usr/bin/type
 
+CPP_PRECOMP_FLAGS?=	# unset
+DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
+NOLOGIN?=		${FALSE}
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
@@ -87,5 +92,3 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
-
-.include "${.PARSEDIR}/defaults.mk"

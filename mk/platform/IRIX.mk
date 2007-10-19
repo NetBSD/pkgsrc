@@ -1,8 +1,9 @@
-# $NetBSD: IRIX.mk,v 1.31 2007/10/18 21:52:24 rillig Exp $
+# $NetBSD: IRIX.mk,v 1.32 2007/10/19 13:41:35 rillig Exp $
 #
 # Variable definitions for the IRIX operating system.
 
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
 IMAKEOPTS+=	-DManUsr=${PREFIX}
 .if empty(OS_VERSION:M6*)
@@ -10,10 +11,13 @@ IMAKEOPTS+=	-DShLibDir=${X11BASE}/lib
 IMAKEOPTS+=	-DOptimizerLevel="${CFLAGS}"
 IMAKEOPTS+=	-DManPath=${PREFIX}/man
 .endif
+PKGLOCALEDIR?=	share
 PS?=		/sbin/ps
 SU?=		/sbin/su
 TYPE?=		/sbin/type
 
+CPP_PRECOMP_FLAGS?=	# unset
+DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
@@ -22,6 +26,8 @@ ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		sys
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
@@ -115,5 +121,3 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysconf ARG_MAX
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
-
-.include "${.PARSEDIR}/defaults.mk"
