@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2007/10/07 19:59:29 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/10/19 10:53:00 ghen Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -61,12 +61,7 @@ MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
 FILES_SUBST+=	MOZILLA=${MOZILLA:Q}
 FILES_SUBST+=	MOZ_EXTRA=${MOZ_EXTRA:Q}
 FILES_SUBST+=	MOZ_PLATFORM=${MOZ_PLATFORM:Q}
-MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-
-.if (${OPSYS} == "NetBSD") && (${EMUL_OPSYS} == "linux")
-MESSAGE_SRC+=	${.CURDIR}/../../www/seamonkey-bin/MESSAGE.compat_linux
-.endif
 
 INSTALLATION_DIRS=	bin
 
