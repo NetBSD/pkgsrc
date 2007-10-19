@@ -1,15 +1,19 @@
-# $NetBSD: FreeBSD.mk,v 1.22 2007/10/18 21:52:23 rillig Exp $
+# $NetBSD: FreeBSD.mk,v 1.23 2007/10/19 13:41:35 rillig Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
 BRANDELF?=	/usr/bin/brandelf		# used by linux compat layer
 ECHO_N?=	${ECHO} -n
+IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
+PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 PW?=		/usr/sbin/pw
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 
+CPP_PRECOMP_FLAGS?=	# unset
+DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 .else
@@ -17,9 +21,13 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 .endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	man/man
@@ -86,5 +94,3 @@ GAMEGRP=		games
 GAMEMODE=		2555
 GAMEDIRMODE=		0775
 .endif
-
-.include "${.PARSEDIR}/defaults.mk"
