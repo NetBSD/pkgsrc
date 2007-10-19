@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2007/05/29 09:03:13 tron Exp $
+$NetBSD: patch-ac,v 1.6 2007/10/19 03:51:51 taca Exp $
 
---- alias.c.orig	2004-12-19 13:51:30.000000000 +0000
-+++ alias.c	2007-05-29 08:58:48.000000000 +0100
+--- alias.c.orig	Sun Dec 19 22:51:30 2004
++++ alias.c
 @@ -13,6 +13,10 @@
  
  #include "anlghea3.h"
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/29 09:03:13 tron Exp $
  /* Throughout this file, to avoid a buffer overflow, we must be careful when we
     do any operation which can increase the length of the name. Such operations
     are thankfully rare, except for user aliases in wildalias().
-@@ -213,7 +217,12 @@
+@@ -213,7 +217,12 @@ logical do_aliasS(char *name) {
    /* DNS lookup */
  
  #ifndef NODNS
@@ -26,14 +26,22 @@ $NetBSD: patch-ac,v 1.5 2007/05/29 09:03:13 tron Exp $
      do_dns(name, NULL, dnslevel);
      len = (int)strlen(name) - 1;
    }
-@@ -605,6 +614,37 @@
+@@ -586,6 +595,10 @@ logical dnsresolve(char *name, choice le
+   volatile logical done = FALSE;
+ #ifndef MAC
+   IN_ADDR_T addr;
++#ifdef IPV6
++    struct addrinfo hints, *res;
++    char host[NI_MAXHOST];
++#endif
+ #ifdef VMS
+   char *addrp;
+ #else
+@@ -605,6 +618,34 @@ logical dnsresolve(char *name, choice le
    done = IpAddr2Name(name);
    /* Doesn't currently include code to use SIGALRM */
  #else
 +#ifdef IPV6
-+    struct addrinfo hints, *res;
-+    char host[NI_MAXHOST];
-+
 +    memset(&hints, 0, sizeof(hints));
 +    hints.ai_flags = AI_NUMERICHOST;
 +    res = NULL;
@@ -64,7 +72,7 @@ $NetBSD: patch-ac,v 1.5 2007/05/29 09:03:13 tron Exp $
    addr = inet_addr(name);
    if (addr != INET_ADDR_ERR) {
      addrp = (char *) &addr;
-@@ -631,6 +671,7 @@
+@@ -631,6 +672,7 @@ logical dnsresolve(char *name, choice le
      }
  #endif
    }
