@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.101 2007/09/25 20:05:23 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2007/10/19 09:11:45 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "options.mk"
 .include "../../mail/sendmail/Makefile.common"
@@ -19,7 +21,7 @@ RCD_SCRIPTS=	sendmail smmsp
 # queue dirs if they are nonempty at deinstall (probably undesirable).
 #
 MAKE_DIRS_PERMS+=	/var/spool/clientmqueue smmsp smmsp 0770
-MAKE_DIRS_PERMS+=	/var/spool/mqueue ${ROOT_USER} ${ROOT_GROUP} 0755
+MAKE_DIRS_PERMS+=	/var/spool/mqueue ${ROOT_USER} ${ROOT_GROUP} 0700
 
 PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
@@ -39,6 +41,9 @@ REPLACE_PERL=		contrib/socketmapClient.pl contrib/socketmapServer.pl
 
 INSTALLATION_DIRS=	bin lib sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${PREFIX}/libexec/sendmail ${SMRSH_CMDDIR}
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/sendmail
+INSTALLATION_DIRS+=	${PREFIX}/share/sendmail ${PREFIX}/share/doc/sendmail
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
@@ -70,32 +75,25 @@ post-build:
 	cp ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 	cp ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
-
 post-install:
-	${INSTALL_DATA_DIR} ${SMRSH_CMDDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sendmail
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sendmail
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sendmail
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
-		${PREFIX}/share/examples/sendmail/
-	cd ${WRKSRC}/cf && pax -rw -pp -pm -s',^.*\.orig$$,,' . ${PREFIX}/share/sendmail
-	chown -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
+		${DESTDIR:Q}${PREFIX}/share/examples/sendmail/
+	cd ${WRKSRC}/cf && pax -rw -pp -pm -s',^.*\.orig$$,,' . ${DESTDIR:Q}${PREFIX}/share/sendmail
+	chown -R ${BINOWN}:${BINGRP} ${DESTDIR:Q}${PREFIX}/share/sendmail
 
 	${INSTALL_DATA} ${WRKSRC}/obj.`${UNAME} -srm | tr \  . | tr \/ - | sed s/sun4./sun4/`/libsm/libsm.a \
-		${PREFIX}/lib
+		${DESTDIR:Q}${PREFIX}/lib
 
 	${INSTALL_DATA} \
 		${WRKSRC}/obj.`${UNAME} -srm | tr \  . | tr \/ - | sed s/sun4./sun4/`/libsmutil/libsmutil.a \
-		${PREFIX}/lib
+		${DESTDIR:Q}${PREFIX}/lib
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/socketmap*.pl \
-		${PREFIX}/share/examples/sendmail/
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sendmail
-	${INSTALL_DATA} ${WRKSRC}/cf/README ${PREFIX}/share/doc/sendmail
-	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${PREFIX}/share/doc/sendmail
-	${INSTALL_DATA} ${WRKSRC}/doc/op/op.me ${PREFIX}/share/doc/sendmail
-	${INSTALL_DATA} ${WRKSRC}/doc/op/op.ps ${PREFIX}/share/doc/sendmail
+		${DESTDIR:Q}${PREFIX}/share/examples/sendmail/
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR:Q}${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/cf/README ${DESTDIR:Q}${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/sendmail/SECURITY ${DESTDIR:Q}${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.me ${DESTDIR:Q}${PREFIX}/share/doc/sendmail
+	${INSTALL_DATA} ${WRKSRC}/doc/op/op.ps ${DESTDIR:Q}${PREFIX}/share/doc/sendmail
 
 .include "../../mk/bsd.pkg.mk"
 
