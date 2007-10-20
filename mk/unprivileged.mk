@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.13 2007/09/04 08:42:30 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.14 2007/10/20 06:57:17 dsainty Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -23,6 +23,16 @@
 #	files.
 #
 #	Default: The primary group of the user building the package
+#
+# UNPRIVILEGED_GROUPS
+#       The group names that can be used to install files.  Where a
+#       per-package custom group is declared that matches a group name
+#       in this variable, it will be left unmodified.  Any per-package
+#       custom group not in this list will be forced to the value of
+#       UNPRIVILEGED_GROUP.
+#
+#       Default: The complete group membership of the user building
+#       the package
 #
 # === Package-settable variables ===
 #
@@ -85,7 +95,7 @@
 
 _VARGROUPS+=			unprivileged
 _USER_VARS.unprivileged= \
-	UNPRIVILEGED UNPRIVILEGED_GROUP UNPRIVILEGED_USER
+	UNPRIVILEGED UNPRIVILEGED_GROUP UNPRIVILEGED_GROUPS UNPRIVILEGED_USER
 _PKG_VARS.unprivileged=	\
 	PKG_USER_VARS PKG_GROUP_VARS
 _SYS_VARS.unprivileged= \
@@ -111,6 +121,9 @@ UNPRIVILEGED_USER!=	${ID} -n -u
 .  endif
 .  if !defined(UNPRIVILEGED_GROUP) || empty(UNPRIVILEGED_GROUP)
 UNPRIVILEGED_GROUP!=	${ID} -n -g
+.  endif
+.  if !defined(UNPRIVILEGED_GROUPS) || empty(UNPRIVILEGED_GROUPS)
+UNPRIVILEGED_GROUPS!=	${ID} -n -G
 .  endif
 
 .  if empty(_UNPRIVILEGED:Munprivileged) && !empty(_UNPRIVILEGED:Muser-destdir)
@@ -148,12 +161,15 @@ PKG_USERS_VARS?=	# empty
 PKG_GROUPS_VARS?=	# empty
 BUILD_DEFS+=		${PKG_USERS_VARS} ${PKG_GROUPS_VARS}
 
-# Override per-package, custom users and groups.
+# Override per-package custom users and groups, except for groups listed
+# in UNPRIVILEGED_GROUPS.
 .    for _var_ in ${PKG_USERS_VARS}
 ${_var_}=		${UNPRIVILEGED_USER}
 .    endfor
 .    for _var_ in ${PKG_GROUPS_VARS}
+.      if empty(UNPRIVILEGED_GROUPS:M${${_var_}})
 ${_var_}=		${UNPRIVILEGED_GROUP}
+.      endif
 .    endfor
 .  endif
 
