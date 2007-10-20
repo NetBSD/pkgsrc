@@ -1,10 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/12/15 16:01:16 martin Exp $
+$NetBSD: MESSAGE,v 1.2 2007/10/20 06:11:24 obache Exp $
 
-If your system does not have a rxvt-unicode termcap entry, you may consider
-setting the X resource
+If your system does not have a rxvt-unicode termcap/terminfo entry, you may
+consider setting the X resource
 
 	URxvt.termName: rxvt
+
+or install termcap/terminfo entry. Here are sample entry files:
+	${PREFIX}/share/examples/rxvt-unicode
 
 or recompile this pkg with the option rxvt-term defined.
 ===========================================================================
