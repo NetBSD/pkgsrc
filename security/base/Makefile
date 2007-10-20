@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/07/04 20:54:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2007/10/20 23:22:08 adrianp Exp $
 #
 
-DISTNAME=	base-1.3.6
+DISTNAME=	base-1.3.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -35,6 +35,8 @@ WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/base_maintenance.pl
+
+SKIP_PORTABILITY_CHECK=	YES
 
 PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER
