@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2197 2007/10/19 11:07:44 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2198 2007/10/20 00:19:34 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4056,3 +4056,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox-bin to 2.0.0.8 [ghen 2007-10-19]
 	Updated www/firefox-gtk1 to 2.0.0.8 [ghen 2007-10-19]
 	Added textproc/jdom version 1.0 [roland 2007-10-19]
+	Updated www/liferea to 1.4.5b [tnn 2007-10-20]
