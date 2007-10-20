@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/05/23 13:59:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/10/20 10:53:31 markd Exp $
 share/locale/uz/LC_MESSAGES/akregator.mo
 share/locale/uz/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/uz/LC_MESSAGES/alsaplayerui.mo
@@ -273,7 +273,6 @@ share/locale/uz/LC_MESSAGES/ksplash.mo
 share/locale/uz/LC_MESSAGES/ksplashthemes.mo
 share/locale/uz/LC_MESSAGES/kstart.mo
 share/locale/uz/LC_MESSAGES/ksvgplugin.mo
-share/locale/uz/LC_MESSAGES/ksync.mo
 share/locale/uz/LC_MESSAGES/ksysguard.mo
 share/locale/uz/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/uz/LC_MESSAGES/ksystraycmd.mo
