@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2007/10/20 10:53:03 markd Exp $
+
+--- messages/kdepim/kdepimwizards.po.orig	2007-10-16 05:23:00.000000000 +1300
++++ messages/kdepim/kdepimwizards.po
+@@ -232,26 +232,6 @@ msgid "Journal"
+ msgstr ""
+ 
+ #: kmailchanges.cpp:139
+-msgid "Calendar"
+-msgstr ""
+-
+-#: kmailchanges.cpp:36
+-msgid "Contacts"
+-msgstr ""
+-
+-#: kmailchanges.cpp:37
+-msgid "Notes"
+-msgstr ""
+-
+-#: kmailchanges.cpp:38
+-msgid "Tasks"
+-msgstr ""
+-
+-#: kmailchanges.cpp:39
+-msgid "Journal"
+-msgstr ""
+-
+-#: kmailchanges.cpp:136
+ msgid "Create Disconnected IMAP Account for KMail"
+ msgstr "ایجاد حساب قطع‌شدۀ IMAP برای KMail"
+ 

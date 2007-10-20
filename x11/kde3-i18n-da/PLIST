@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/05/23 13:59:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/10/20 10:52:53 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -1933,7 +1933,6 @@ share/locale/da/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/da/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/da/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/da/LC_MESSAGES/ksvgplugin.mo
-share/locale/da/LC_MESSAGES/ksync.mo
 share/locale/da/LC_MESSAGES/ksysguard.mo
 share/locale/da/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/da/LC_MESSAGES/ksystraycmd.mo
@@ -2015,7 +2014,6 @@ share/locale/da/LC_MESSAGES/libkscan.mo
 share/locale/da/LC_MESSAGES/libkscreensaver.mo
 share/locale/da/LC_MESSAGES/libksieve.mo
 share/locale/da/LC_MESSAGES/libksirtet.mo
-share/locale/da/LC_MESSAGES/libksync.mo
 share/locale/da/LC_MESSAGES/libtaskbar.mo
 share/locale/da/LC_MESSAGES/libtaskmanager.mo
 share/locale/da/LC_MESSAGES/lockout.mo

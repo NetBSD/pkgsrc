@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/05/23 13:59:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/10/20 10:52:47 markd Exp $
 share/kde/apps/khangman/data/bg/animals.kvtml
 share/kde/apps/khangman/data/bg/easy.kvtml
 share/kde/apps/khangman/data/bg/hard.kvtml
@@ -279,6 +279,7 @@ share/locale/bg/LC_MESSAGES/kio.mo
 share/locale/bg/LC_MESSAGES/kio_audiocd.mo
 share/locale/bg/LC_MESSAGES/kio_finger.mo
 share/locale/bg/LC_MESSAGES/kio_fish.mo
+share/locale/bg/LC_MESSAGES/kio_floppy.mo
 share/locale/bg/LC_MESSAGES/kio_groupwise.mo
 share/locale/bg/LC_MESSAGES/kio_help.mo
 share/locale/bg/LC_MESSAGES/kio_home.mo
@@ -432,7 +433,6 @@ share/locale/bg/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/bg/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/bg/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/bg/LC_MESSAGES/ksvgplugin.mo
-share/locale/bg/LC_MESSAGES/ksync.mo
 share/locale/bg/LC_MESSAGES/ksysguard.mo
 share/locale/bg/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/bg/LC_MESSAGES/ksystraycmd.mo

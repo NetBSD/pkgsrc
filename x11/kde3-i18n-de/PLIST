@@ -1,7 +1,28 @@
-@comment $NetBSD: PLIST,v 1.25 2007/05/23 13:59:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/10/20 10:52:57 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
+share/doc/kde/HTML/de/akregator/add-feed.png
+share/doc/kde/HTML/de/akregator/add-feed2.png
+share/doc/kde/HTML/de/akregator/add-folder.png
+share/doc/kde/HTML/de/akregator/add-folder2.png
+share/doc/kde/HTML/de/akregator/advanced-tab.png
+share/doc/kde/HTML/de/akregator/appearance-tab.png
+share/doc/kde/HTML/de/akregator/archive-tab.png
+share/doc/kde/HTML/de/akregator/browser-tab.png
+share/doc/kde/HTML/de/akregator/common
+share/doc/kde/HTML/de/akregator/general-tab.png
+share/doc/kde/HTML/de/akregator/index.cache.bz2
+share/doc/kde/HTML/de/akregator/index.docbook
+share/doc/kde/HTML/de/akregator/konq.png
+share/doc/kde/HTML/de/akregator/konq2.png
+share/doc/kde/HTML/de/akregator/main-window.png
+share/doc/kde/HTML/de/akregator/main-window2.png
+share/doc/kde/HTML/de/akregator/main-window3.png
+share/doc/kde/HTML/de/akregator/main-window4.png
+share/doc/kde/HTML/de/akregator/quick-filter.png
+share/doc/kde/HTML/de/akregator/rss.png
+share/doc/kde/HTML/de/akregator/rss3.png
 share/doc/kde/HTML/de/amor/common
 share/doc/kde/HTML/de/amor/index.cache.bz2
 share/doc/kde/HTML/de/amor/index.docbook
@@ -1265,6 +1286,10 @@ share/doc/kde/HTML/de/kshisen/common
 share/doc/kde/HTML/de/kshisen/index.cache.bz2
 share/doc/kde/HTML/de/kshisen/index.docbook
 share/doc/kde/HTML/de/kshisen/kshisen-configuration.png
+share/doc/kde/HTML/de/ksig/common
+share/doc/kde/HTML/de/ksig/index.cache.bz2
+share/doc/kde/HTML/de/ksig/index.docbook
+share/doc/kde/HTML/de/ksig/screenshot.png
 share/doc/kde/HTML/de/ksim/common
 share/doc/kde/HTML/de/ksim/index.cache.bz2
 share/doc/kde/HTML/de/ksim/index.docbook
@@ -2426,6 +2451,7 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/ksirtet
 @dirrm share/doc/kde/HTML/de/ksirc
 @dirrm share/doc/kde/HTML/de/ksim
+@dirrm share/doc/kde/HTML/de/ksig
 @dirrm share/doc/kde/HTML/de/kshisen
 @dirrm share/doc/kde/HTML/de/kscd
 @dirrm share/doc/kde/HTML/de/ksame
@@ -2643,5 +2669,6 @@ share/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/artsbuilder
 @dirrm share/doc/kde/HTML/de/ark
 @dirrm share/doc/kde/HTML/de/amor
+@dirrm share/doc/kde/HTML/de/akregator
 @dirrm share/doc/kde/HTML/de/KRegExpEditor
 @comment in kde: @dirrm share/doc/kde/HTML/de

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2007/05/23 13:59:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2007/10/20 10:53:11 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -370,6 +370,9 @@ share/doc/kde/HTML/it/kdesu/common
 share/doc/kde/HTML/it/kdesu/index.cache.bz2
 share/doc/kde/HTML/it/kdesu/index.docbook
 share/doc/kde/HTML/it/kdesu/man-kdesu.1.docbook
+share/doc/kde/HTML/it/kdesvn-build/common
+share/doc/kde/HTML/it/kdesvn-build/index.cache.bz2
+share/doc/kde/HTML/it/kdesvn-build/index.docbook
 share/doc/kde/HTML/it/kdevelop/SF-general.png
 share/doc/kde/HTML/it/kdevelop/SF-indent.png
 share/doc/kde/HTML/it/kdevelop/SF-other.png
@@ -2094,7 +2097,6 @@ share/locale/it/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/it/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/it/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/it/LC_MESSAGES/ksvgplugin.mo
-share/locale/it/LC_MESSAGES/ksync.mo
 share/locale/it/LC_MESSAGES/ksysguard.mo
 share/locale/it/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/it/LC_MESSAGES/ksystraycmd.mo
@@ -2175,7 +2177,6 @@ share/locale/it/LC_MESSAGES/libkscan.mo
 share/locale/it/LC_MESSAGES/libkscreensaver.mo
 share/locale/it/LC_MESSAGES/libksieve.mo
 share/locale/it/LC_MESSAGES/libksirtet.mo
-share/locale/it/LC_MESSAGES/libksync.mo
 share/locale/it/LC_MESSAGES/libtaskbar.mo
 share/locale/it/LC_MESSAGES/libtaskmanager.mo
 share/locale/it/LC_MESSAGES/lockout.mo
@@ -2215,15 +2216,21 @@ share/locale/it/charset
 share/locale/it/entry.desktop
 share/locale/it/flag.png
 @dirrm share/kde/apps/kturtle/examples/it
+@comment in kde: @dirrm share/kde/apps/kturtle/examples
 @comment in kde: @dirrm share/kde/apps/kturtle/data
 @dirrm share/kde/apps/ktuberling/sounds/it
+@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/kde/apps/klettres/it/syllab
 @dirrm share/kde/apps/klettres/it/alpha
 @dirrm share/kde/apps/klettres/it
+@comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/klatin/data/vocabs/it
+@dirrm share/kde/apps/klatin/data/vocabs
 @dirrm share/kde/apps/khangman/data/it
+@comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/kde/apps/kanagram/data/it
+@comment in kde: @dirrm share/kde/apps/kanagram/data
 @dirrm share/doc/kde/HTML/it/xsldbg
 @dirrm share/doc/kde/HTML/it/umbrello
 @dirrm share/doc/kde/HTML/it/superkaramba
@@ -2394,6 +2401,7 @@ share/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kdm
 @dirrm share/doc/kde/HTML/it/kdf
 @dirrm share/doc/kde/HTML/it/kdevelop
+@dirrm share/doc/kde/HTML/it/kdesvn-build
 @dirrm share/doc/kde/HTML/it/kdesu
 @dirrm share/doc/kde/HTML/it/kdeprint
 @dirrm share/doc/kde/HTML/it/kdelibs
@@ -2491,3 +2499,4 @@ share/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/amor
 @dirrm share/doc/kde/HTML/it/akregator
 @dirrm share/doc/kde/HTML/it/KRegExpEditor
+@comment in kde: @dirrm share/doc/kde/HTML/it
