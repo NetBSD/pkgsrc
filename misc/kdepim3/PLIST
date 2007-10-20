@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2007/05/23 13:24:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2007/10/20 10:46:41 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -358,6 +358,7 @@ lib/kde3/plugins/designer/kpartsdesignerplugin.la
 lib/kde3/resourcecalendarexchange.la
 lib/libakregatorprivate.la
 lib/libgpgme++.la
+lib/libgwsoap.la
 lib/libindex.la
 lib/libkabc_groupdav.la
 lib/libkabc_groupwise.la
@@ -919,6 +920,7 @@ share/kde/apps/kconf_update/kmail-3.3-use-ID-for-accounts.pl
 share/kde/apps/kconf_update/kmail-3.3b1-misc.pl
 share/kde/apps/kconf_update/kmail-3.4-misc.pl
 share/kde/apps/kconf_update/kmail-3.4.1-update-status-filters.pl
+share/kde/apps/kconf_update/kmail-3.5-trigger-flag-migration.pl
 share/kde/apps/kconf_update/kmail-pgpidentity.pl
 share/kde/apps/kconf_update/kmail-upd-identities.pl
 share/kde/apps/kconf_update/kmail.upd
@@ -1334,6 +1336,7 @@ share/kde/apps/libical/zoneinfo/America/Indiana/Indianapolis.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Knox.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Marengo.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Petersburg.ics
+share/kde/apps/libical/zoneinfo/America/Indiana/Tell_City.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Vevay.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Vincennes.ics
 share/kde/apps/libical/zoneinfo/America/Indiana/Winamac.ics
@@ -1643,6 +1646,7 @@ share/kde/apps/libkdepim/about/kde_infopage_rtl.css
 share/kde/apps/libkdepim/about/top-left.png
 share/kde/apps/libkdepim/about/top-middle.png
 share/kde/apps/libkholidays/holiday_Suedtirol
+share/kde/apps/libkholidays/holiday_ar
 share/kde/apps/libkholidays/holiday_at
 share/kde/apps/libkholidays/holiday_au
 share/kde/apps/libkholidays/holiday_bavarian
