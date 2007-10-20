@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2007/05/23 12:57:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.40 2007/10/20 10:36:14 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -61,6 +61,7 @@ bin/makekdewidgets
 bin/meinproc
 bin/preparetips
 bin/start_kdeinit
+bin/start_kdeinit_wrapper
 include/arts/artskde.h
 include/arts/kartsdispatcher.h
 include/arts/kartsfloatwatch.h
@@ -641,6 +642,7 @@ include/kstringhandler.h
 include/kstringvalidator.h
 include/kstyle.h
 include/ksvgiconengine.h
+include/kswitchlanguagedialog.h
 include/ksycoca.h
 include/ksycocaentry.h
 include/ksycocatype.h
@@ -3061,6 +3063,8 @@ share/kde/apps/kdeprint/filters/enscript.desktop
 share/kde/apps/kdeprint/filters/enscript.xml
 share/kde/apps/kdeprint/filters/imagetops.desktop
 share/kde/apps/kdeprint/filters/imagetops.xml
+share/kde/apps/kdeprint/filters/pdf2ps.desktop
+share/kde/apps/kdeprint/filters/pdf2ps.xml
 share/kde/apps/kdeprint/filters/pdfwrite.desktop
 share/kde/apps/kdeprint/filters/pdfwrite.xml
 share/kde/apps/kdeprint/filters/poster.desktop
@@ -4960,6 +4964,7 @@ share/kde/mimelnk/application/x-webarchive.desktop
 share/kde/mimelnk/application/x-x509-ca-cert.desktop
 share/kde/mimelnk/application/x-xliff.desktop
 share/kde/mimelnk/application/x-zerosize.desktop
+share/kde/mimelnk/application/x-zip-compressed.desktop
 share/kde/mimelnk/application/x-zip.desktop
 share/kde/mimelnk/application/x-zoo.desktop
 share/kde/mimelnk/application/xhtml+xml.desktop
