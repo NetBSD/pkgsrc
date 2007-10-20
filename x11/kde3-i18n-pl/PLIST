@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/05/23 13:59:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/10/20 10:53:20 markd Exp $
 share/doc/kde/HTML/pl/KRegExpEditor/common
 share/doc/kde/HTML/pl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/pl/KRegExpEditor/index.docbook
@@ -23,6 +23,9 @@ share/doc/kde/HTML/pl/akregator/main-window4.png
 share/doc/kde/HTML/pl/akregator/quick-filter.png
 share/doc/kde/HTML/pl/akregator/rss.png
 share/doc/kde/HTML/pl/akregator/rss3.png
+share/doc/kde/HTML/pl/amor/common
+share/doc/kde/HTML/pl/amor/index.cache.bz2
+share/doc/kde/HTML/pl/amor/index.docbook
 share/doc/kde/HTML/pl/ark/common
 share/doc/kde/HTML/pl/ark/index.cache.bz2
 share/doc/kde/HTML/pl/ark/index.docbook
@@ -86,6 +89,9 @@ share/doc/kde/HTML/pl/kate/part.docbook
 share/doc/kde/HTML/pl/kate/plugins.docbook
 share/doc/kde/HTML/pl/kate/regular-expressions.docbook
 share/doc/kde/HTML/pl/kate/unhighlighted.png
+share/doc/kde/HTML/pl/katomic/common
+share/doc/kde/HTML/pl/katomic/index.cache.bz2
+share/doc/kde/HTML/pl/katomic/index.docbook
 share/doc/kde/HTML/pl/kaudiocreator/common
 share/doc/kde/HTML/pl/kaudiocreator/index.cache.bz2
 share/doc/kde/HTML/pl/kaudiocreator/index.docbook
@@ -95,6 +101,9 @@ share/doc/kde/HTML/pl/kbackgammon/index.docbook
 share/doc/kde/HTML/pl/kbattleship/common
 share/doc/kde/HTML/pl/kbattleship/index.cache.bz2
 share/doc/kde/HTML/pl/kbattleship/index.docbook
+share/doc/kde/HTML/pl/kbounce/common
+share/doc/kde/HTML/pl/kbounce/index.cache.bz2
+share/doc/kde/HTML/pl/kbounce/index.docbook
 share/doc/kde/HTML/pl/kbruch/checked.png
 share/doc/kde/HTML/pl/kbruch/common
 share/doc/kde/HTML/pl/kbruch/compare.png
@@ -590,6 +599,9 @@ share/doc/kde/HTML/pl/kiten/kiten2.png
 share/doc/kde/HTML/pl/kjots/common
 share/doc/kde/HTML/pl/kjots/index.cache.bz2
 share/doc/kde/HTML/pl/kjots/index.docbook
+share/doc/kde/HTML/pl/kjumpingcube/common
+share/doc/kde/HTML/pl/kjumpingcube/index.cache.bz2
+share/doc/kde/HTML/pl/kjumpingcube/index.docbook
 share/doc/kde/HTML/pl/klatin/adjectives.docbook
 share/doc/kde/HTML/pl/klatin/common
 share/doc/kde/HTML/pl/klatin/index.cache.bz2
@@ -610,6 +622,9 @@ share/doc/kde/HTML/pl/klettres/klettres6.png
 share/doc/kde/HTML/pl/klickety/common
 share/doc/kde/HTML/pl/klickety/index.cache.bz2
 share/doc/kde/HTML/pl/klickety/index.docbook
+share/doc/kde/HTML/pl/klines/common
+share/doc/kde/HTML/pl/klines/index.cache.bz2
+share/doc/kde/HTML/pl/klines/index.docbook
 share/doc/kde/HTML/pl/klipper/common
 share/doc/kde/HTML/pl/klipper/index.cache.bz2
 share/doc/kde/HTML/pl/klipper/index.docbook
@@ -788,6 +803,9 @@ share/doc/kde/HTML/pl/kpercentage/install.docbook
 share/doc/kde/HTML/pl/kpercentage/introduction.docbook
 share/doc/kde/HTML/pl/kpercentage/using.docbook
 share/doc/kde/HTML/pl/kpercentage/welcome.png
+share/doc/kde/HTML/pl/kpf/common
+share/doc/kde/HTML/pl/kpf/index.cache.bz2
+share/doc/kde/HTML/pl/kpf/index.docbook
 share/doc/kde/HTML/pl/kppp/accounting.docbook
 share/doc/kde/HTML/pl/kppp/callback.docbook
 share/doc/kde/HTML/pl/kppp/chap.docbook
@@ -1038,6 +1056,9 @@ share/doc/kde/HTML/pl/kwallet/kwalletmanager.png
 share/doc/kde/HTML/pl/kweather/common
 share/doc/kde/HTML/pl/kweather/index.cache.bz2
 share/doc/kde/HTML/pl/kweather/index.docbook
+share/doc/kde/HTML/pl/kwifimanager/common
+share/doc/kde/HTML/pl/kwifimanager/index.cache.bz2
+share/doc/kde/HTML/pl/kwifimanager/index.docbook
 share/doc/kde/HTML/pl/kwin4/common
 share/doc/kde/HTML/pl/kwin4/index.cache.bz2
 share/doc/kde/HTML/pl/kwin4/index.docbook
@@ -1519,7 +1540,6 @@ share/locale/pl/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/pl/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/pl/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/pl/LC_MESSAGES/ksvgplugin.mo
-share/locale/pl/LC_MESSAGES/ksync.mo
 share/locale/pl/LC_MESSAGES/ksysguard.mo
 share/locale/pl/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/pl/LC_MESSAGES/ksystraycmd.mo
@@ -1654,6 +1674,7 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/kwrite
 @dirrm share/doc/kde/HTML/pl/kwordquiz
 @dirrm share/doc/kde/HTML/pl/kwin4
+@dirrm share/doc/kde/HTML/pl/kwifimanager
 @dirrm share/doc/kde/HTML/pl/kweather
 @dirrm share/doc/kde/HTML/pl/kwallet
 @dirrm share/doc/kde/HTML/pl/kvoctrain
@@ -1677,6 +1698,7 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/kreversi
 @dirrm share/doc/kde/HTML/pl/krdc
 @dirrm share/doc/kde/HTML/pl/kppp
+@dirrm share/doc/kde/HTML/pl/kpf
 @dirrm share/doc/kde/HTML/pl/kpercentage
 @dirrm share/doc/kde/HTML/pl/kpdf
 @dirrm share/doc/kde/HTML/pl/kpat
@@ -1712,9 +1734,11 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/kmenuedit
 @dirrm share/doc/kde/HTML/pl/kmail
 @dirrm share/doc/kde/HTML/pl/klipper
+@dirrm share/doc/kde/HTML/pl/klines
 @dirrm share/doc/kde/HTML/pl/klickety
 @dirrm share/doc/kde/HTML/pl/klettres
 @dirrm share/doc/kde/HTML/pl/klatin
+@dirrm share/doc/kde/HTML/pl/kjumpingcube
 @dirrm share/doc/kde/HTML/pl/kjots
 @dirrm share/doc/kde/HTML/pl/kiten
 @dirrm share/doc/kde/HTML/pl/kioslave
@@ -1813,9 +1837,11 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/kcontrol
 @dirrm share/doc/kde/HTML/pl/kcalc
 @dirrm share/doc/kde/HTML/pl/kbruch
+@dirrm share/doc/kde/HTML/pl/kbounce
 @dirrm share/doc/kde/HTML/pl/kbattleship
 @dirrm share/doc/kde/HTML/pl/kbackgammon
 @dirrm share/doc/kde/HTML/pl/kaudiocreator
+@dirrm share/doc/kde/HTML/pl/katomic
 @dirrm share/doc/kde/HTML/pl/kate-plugins
 @dirrm share/doc/kde/HTML/pl/kate
 @dirrm share/doc/kde/HTML/pl/kappfinder
@@ -1825,6 +1851,7 @@ share/locale/pl/flag.png
 @comment in kde: @dirrm share/doc/kde/HTML/pl/common
 @dirrm share/doc/kde/HTML/pl/blinken
 @dirrm share/doc/kde/HTML/pl/ark
+@dirrm share/doc/kde/HTML/pl/amor
 @dirrm share/doc/kde/HTML/pl/akregator
 @dirrm share/doc/kde/HTML/pl/KRegExpEditor
 @comment in kde: @dirrm share/doc/kde/HTML/pl
