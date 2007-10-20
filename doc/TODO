@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6757 2007/10/20 05:58:52 taca Exp $
+$NetBSD: TODO,v 1.6758 2007/10/20 10:58:01 markd Exp $
 
 Suggested new packages
 ======================
@@ -693,7 +693,6 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.4.6
 	o kbarcode-2.0.6
-	o kdelibs3-3.5.8
 	o kdrill-6.5
 	o kid3-0.9
 	o kinput2-3.1
