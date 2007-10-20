@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/05/23 13:59:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/10/20 10:53:30 markd Exp $
 share/doc/kde/HTML/tr/common/gpl-translated.html
 share/doc/kde/HTML/tr/common/kde-localised.css
 share/doc/kde/HTML/tr/khelpcenter/common
@@ -500,7 +500,6 @@ share/locale/tr/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/tr/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/tr/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/tr/LC_MESSAGES/ksvgplugin.mo
-share/locale/tr/LC_MESSAGES/ksync.mo
 share/locale/tr/LC_MESSAGES/ksysguard.mo
 share/locale/tr/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/tr/LC_MESSAGES/ksystraycmd.mo

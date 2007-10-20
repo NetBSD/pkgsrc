@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/05/23 13:59:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2007/10/20 10:53:18 markd Exp $
 share/doc/kde/HTML/nl/KRegExpEditor/common
 share/doc/kde/HTML/nl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/nl/KRegExpEditor/index.docbook
@@ -402,6 +402,9 @@ share/doc/kde/HTML/nl/kghostview/index.docbook
 share/doc/kde/HTML/nl/kgoldrunner/common
 share/doc/kde/HTML/nl/kgoldrunner/index.cache.bz2
 share/doc/kde/HTML/nl/kgoldrunner/index.docbook
+share/doc/kde/HTML/nl/kgpg/common
+share/doc/kde/HTML/nl/kgpg/index.cache.bz2
+share/doc/kde/HTML/nl/kgpg/index.docbook
 share/doc/kde/HTML/nl/khangman/common
 share/doc/kde/HTML/nl/khangman/index.cache.bz2
 share/doc/kde/HTML/nl/khangman/index.docbook
@@ -1774,7 +1777,6 @@ share/locale/nl/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/nl/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/nl/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/nl/LC_MESSAGES/ksvgplugin.mo
-share/locale/nl/LC_MESSAGES/ksync.mo
 share/locale/nl/LC_MESSAGES/ksysguard.mo
 share/locale/nl/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/nl/LC_MESSAGES/ksystraycmd.mo
@@ -2038,6 +2040,7 @@ share/locale/nl/flag.png
 @dirrm share/doc/kde/HTML/nl/khelpcenter/faq
 @dirrm share/doc/kde/HTML/nl/khelpcenter
 @dirrm share/doc/kde/HTML/nl/khangman
+@dirrm share/doc/kde/HTML/nl/kgpg
 @dirrm share/doc/kde/HTML/nl/kgoldrunner
 @dirrm share/doc/kde/HTML/nl/kghostview
 @dirrm share/doc/kde/HTML/nl/kget

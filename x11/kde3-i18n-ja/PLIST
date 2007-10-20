@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/05/23 13:59:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/10/20 10:53:12 markd Exp $
 share/doc/kde/HTML/ja/common/fdl-translated.html
 share/doc/kde/HTML/ja/common/gpl-translated.html
 share/doc/kde/HTML/ja/common/kde-localised.css
@@ -124,6 +124,15 @@ share/doc/kde/HTML/ja/kcontrol/useragent/index.docbook
 share/doc/kde/HTML/ja/kcontrol/windowmanagement/common
 share/doc/kde/HTML/ja/kcontrol/windowmanagement/index.cache.bz2
 share/doc/kde/HTML/ja/kcontrol/windowmanagement/index.docbook
+share/doc/kde/HTML/ja/kgpg/common
+share/doc/kde/HTML/ja/kgpg/editor.png
+share/doc/kde/HTML/ja/kgpg/index.cache.bz2
+share/doc/kde/HTML/ja/kgpg/index.docbook
+share/doc/kde/HTML/ja/kgpg/keygen.png
+share/doc/kde/HTML/ja/kgpg/keymanage.png
+share/doc/kde/HTML/ja/kgpg/keys.png
+share/doc/kde/HTML/ja/kgpg/kicker.png
+share/doc/kde/HTML/ja/kgpg/options.png
 share/doc/kde/HTML/ja/khelpcenter/common
 share/doc/kde/HTML/ja/khelpcenter/contact.docbook
 share/doc/kde/HTML/ja/khelpcenter/faq/about.docbook
@@ -174,6 +183,10 @@ share/doc/kde/HTML/ja/kinfocenter/usb/index.docbook
 share/doc/kde/HTML/ja/kinfocenter/xserver/common
 share/doc/kde/HTML/ja/kinfocenter/xserver/index.cache.bz2
 share/doc/kde/HTML/ja/kinfocenter/xserver/index.docbook
+share/doc/kde/HTML/ja/kshisen/common
+share/doc/kde/HTML/ja/kshisen/index.cache.bz2
+share/doc/kde/HTML/ja/kshisen/index.docbook
+share/doc/kde/HTML/ja/kshisen/kshisen-configuration.png
 share/locale/ja/LC_MESSAGES/akregator.mo
 share/locale/ja/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/ja/LC_MESSAGES/alsaplayerui.mo
@@ -611,7 +624,6 @@ share/locale/ja/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/ja/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/ja/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/ja/LC_MESSAGES/ksvgplugin.mo
-share/locale/ja/LC_MESSAGES/ksync.mo
 share/locale/ja/LC_MESSAGES/ksysguard.mo
 share/locale/ja/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/ja/LC_MESSAGES/ksystraycmd.mo
@@ -692,7 +704,6 @@ share/locale/ja/LC_MESSAGES/libkscan.mo
 share/locale/ja/LC_MESSAGES/libkscreensaver.mo
 share/locale/ja/LC_MESSAGES/libksieve.mo
 share/locale/ja/LC_MESSAGES/libksirtet.mo
-share/locale/ja/LC_MESSAGES/libksync.mo
 share/locale/ja/LC_MESSAGES/libtaskbar.mo
 share/locale/ja/LC_MESSAGES/libtaskmanager.mo
 share/locale/ja/LC_MESSAGES/lockout.mo
@@ -731,6 +742,7 @@ share/locale/ja/LC_MESSAGES/webarchiver.mo
 share/locale/ja/charset
 share/locale/ja/entry.desktop
 share/locale/ja/flag.png
+@dirrm share/doc/kde/HTML/ja/kshisen
 @dirrm share/doc/kde/HTML/ja/kinfocenter/xserver
 @dirrm share/doc/kde/HTML/ja/kinfocenter/usb
 @dirrm share/doc/kde/HTML/ja/kinfocenter/sound
@@ -747,6 +759,7 @@ share/locale/ja/flag.png
 @dirrm share/doc/kde/HTML/ja/kinfocenter
 @dirrm share/doc/kde/HTML/ja/khelpcenter/faq
 @dirrm share/doc/kde/HTML/ja/khelpcenter
+@dirrm share/doc/kde/HTML/ja/kgpg
 @dirrm share/doc/kde/HTML/ja/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/ja/kcontrol/useragent
 @dirrm share/doc/kde/HTML/ja/kcontrol/spellchecking

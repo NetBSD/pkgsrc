@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2007/10/20 10:53:14 markd Exp $
+
+--- messages/kdebase/kcmfonts.po.orig	2007-10-16 06:43:31.000000000 +1300
++++ messages/kdebase/kcmfonts.po
+@@ -232,14 +232,6 @@ msgstr "살짝"
+ msgid "Full"
+ msgstr "완전히"
+ 
+-#~ msgctxt "Font role"
+-#~ msgid "%1: "
+-#~ msgstr "%1: "
+-
+-#~ msgctxt "Force fonts DPI"
+-#~ msgid "Disabled"
+-#~ msgstr "사용 안함"
+-
+ #~ msgid ""
+ #~ "<p>Some changes such as DPI will only affect newly started applications.</"
+ #~ "p>"

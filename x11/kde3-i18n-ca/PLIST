@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/05/23 13:59:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/10/20 10:52:50 markd Exp $
 share/doc/kde/HTML/ca/amor/common
 share/doc/kde/HTML/ca/amor/index.cache.bz2
 share/doc/kde/HTML/ca/amor/index.docbook
@@ -885,12 +885,42 @@ share/doc/kde/HTML/ca/scripts/man-swappo.1.docbook
 share/doc/kde/HTML/ca/scripts/man-transxx.1.docbook
 share/doc/kde/HTML/ca/scripts/man-xml2pot.1.docbook
 share/doc/kde/HTML/ca/scripts/man-zonetab2pot.1.docbook
+share/kde/apps/kanagram/data/ca/animals_pri.kvtml
+share/kde/apps/kanagram/data/ca/biografies_sec.kvtml
+share/kde/apps/kanagram/data/ca/capitals_del_mon_sec.kvtml
+share/kde/apps/kanagram/data/ca/comarques_sec.kvtml
+share/kde/apps/kanagram/data/ca/divises_sec.kvtml
+share/kde/apps/kanagram/data/ca/espai_pri.kvtml
+share/kde/apps/kanagram/data/ca/esports_sec.kvtml
+share/kde/apps/kanagram/data/ca/fruites_pri.kvtml
+share/kde/apps/kanagram/data/ca/informatica_pri.kvtml
+share/kde/apps/kanagram/data/ca/invents_sec.kvtml
+share/kde/apps/kanagram/data/ca/objectes_pri.kvtml
+share/kde/apps/kanagram/data/ca/professions_pri.kvtml
+share/kde/apps/kanagram/data/ca/provincies_sec.kvtml
+share/kde/apps/kanagram/data/ca/transports_pri.kvtml
+share/kde/apps/kanagram/data/ca/verdures_pri.kvtml
+share/kde/apps/kanagram/data/ca/vestit_pri.kvtml
 share/kde/apps/katepart/syntax/logohighlightstyle.ca.xml
 share/kde/apps/khangman/ca.txt
 share/kde/apps/khangman/data/ca/animals.kvtml
 share/kde/apps/khangman/data/ca/easy.kvtml
 share/kde/apps/khangman/data/ca/hard.kvtml
 share/kde/apps/khangman/data/ca/medium.kvtml
+share/kde/apps/klatin/data/vocabs/ca/A.kvtml
+share/kde/apps/klatin/data/vocabs/ca/BC.kvtml
+share/kde/apps/klatin/data/vocabs/ca/D.kvtml
+share/kde/apps/klatin/data/vocabs/ca/EF.kvtml
+share/kde/apps/klatin/data/vocabs/ca/GHI1.kvtml
+share/kde/apps/klatin/data/vocabs/ca/I2L.kvtml
+share/kde/apps/klatin/data/vocabs/ca/M.kvtml
+share/kde/apps/klatin/data/vocabs/ca/N.kvtml
+share/kde/apps/klatin/data/vocabs/ca/OP1.kvtml
+share/kde/apps/klatin/data/vocabs/ca/P2.kvtml
+share/kde/apps/klatin/data/vocabs/ca/QR.kvtml
+share/kde/apps/klatin/data/vocabs/ca/S.kvtml
+share/kde/apps/klatin/data/vocabs/ca/TU.kvtml
+share/kde/apps/klatin/data/vocabs/ca/V.kvtml
 share/kde/apps/kturtle/data/logokeywords.ca.xml
 share/kde/apps/kturtle/examples/ca/aprenquadrats.logo
 share/kde/apps/kturtle/examples/ca/colorspaper.logo
@@ -1339,7 +1369,6 @@ share/locale/ca/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/ca/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/ca/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/ca/LC_MESSAGES/ksvgplugin.mo
-share/locale/ca/LC_MESSAGES/ksync.mo
 share/locale/ca/LC_MESSAGES/ksysguard.mo
 share/locale/ca/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/ca/LC_MESSAGES/ksystraycmd.mo
@@ -1420,7 +1449,6 @@ share/locale/ca/LC_MESSAGES/libkscan.mo
 share/locale/ca/LC_MESSAGES/libkscreensaver.mo
 share/locale/ca/LC_MESSAGES/libksieve.mo
 share/locale/ca/LC_MESSAGES/libksirtet.mo
-share/locale/ca/LC_MESSAGES/libksync.mo
 share/locale/ca/LC_MESSAGES/libtaskbar.mo
 share/locale/ca/LC_MESSAGES/libtaskmanager.mo
 share/locale/ca/LC_MESSAGES/lockout.mo
@@ -1462,10 +1490,13 @@ share/locale/ca/flag.png
 @dirrm share/kde/apps/kturtle/examples/ca
 @comment in kde: @dirrm share/kde/apps/kturtle/examples
 @comment in kde: @dirrm share/kde/apps/kturtle/data
+@dirrm share/kde/apps/klatin/data/vocabs/ca
 @dirrm share/kde/apps/khangman/data/ca
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/khangman
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
+@dirrm share/kde/apps/kanagram/data/ca
+@comment in kde: @dirrm share/kde/apps/kanagram/data
 @dirrm share/doc/kde/HTML/ca/scripts
 @dirrm share/doc/kde/HTML/ca/quanta
 @dirrm share/doc/kde/HTML/ca/lilo-config
