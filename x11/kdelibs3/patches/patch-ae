@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
+$NetBSD: patch-ae,v 1.11 2007/10/20 10:36:15 markd Exp $
 
---- configure.orig	2007-05-17 19:11:02.000000000 +1200
+--- configure.orig	2007-10-09 03:42:25.000000000 +1300
 +++ configure
-@@ -8906,7 +8906,7 @@ darwin* | rhapsody*)
+@@ -8315,7 +8315,7 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      case $host_cpu in
      i*86 )
-@@ -11845,7 +11845,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -11114,7 +11114,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
        archive_cmds='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -12410,7 +12410,7 @@ kfreebsd*-gnu*)
+@@ -11679,7 +11679,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -14870,7 +14870,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -13995,7 +13995,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -38,7 +38,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -15581,7 +15581,7 @@ echo $ECHO_N "checking for $compiler opt
+@@ -14706,7 +14706,7 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -47,7 +47,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
  	# FreeBSD uses GNU C++
  	;;
        hpux9* | hpux10* | hpux11*)
-@@ -16183,7 +16183,7 @@ kfreebsd*-gnu*)
+@@ -15308,7 +15308,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -18816,7 +18816,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -17797,7 +17797,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -65,7 +65,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
        archive_cmds_F77='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec_F77='-R$libdir'
        hardcode_direct_F77=yes
-@@ -19381,7 +19381,7 @@ kfreebsd*-gnu*)
+@@ -18362,7 +18362,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -21136,7 +21136,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -20085,7 +20085,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -83,7 +83,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
        archive_cmds_GCJ='$CC -shared -o $lib $compiler_flags $libobjs $deplibs'
        hardcode_libdir_flag_spec_GCJ='-R$libdir'
        hardcode_direct_GCJ=yes
-@@ -21701,7 +21701,7 @@ kfreebsd*-gnu*)
+@@ -20650,7 +20650,7 @@ kfreebsd*-gnu*)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -92,16 +92,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -25104,7 +25104,7 @@ else
- 	linux*)
- 	  libltdl_cv_sys_dlopen_deplibs=yes
- 	  ;;
--	netbsd*|openbsd*|freebsd*)
-+	netbsd*|openbsd*|freebsd*|dragonfly*)
- 	  libltdl_cv_sys_dlopen_deplibs=yes
- 	  ;;
- 	solaris*)
-@@ -49611,7 +49611,7 @@ echo "$as_me: error: Fast malloc is not 
+@@ -45210,7 +45210,7 @@ echo "$as_me: error: Fast malloc is not 
      esac
      case $target_os in
          linux*) ;;
@@ -110,7 +101,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
          *)
              if test "$kde_fast_malloc" = "notgiven"; then
                  kde_fast_malloc=no
-@@ -56253,7 +56253,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
+@@ -51069,7 +51069,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
        gssapi_flavor=HEIMDAL
      fi
    else
@@ -119,7 +110,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
  
  gssapi_incdir=NO
  for i in $search_incs;
-@@ -56296,7 +56296,7 @@ done
+@@ -51112,7 +51112,7 @@ done
              GSSAPI_LIBS="-L$gssapi_libdir "
              test "$USE_RPATH" = yes && GSSAPI_RPATH="-R $gssapi_libdir"
            fi
@@ -128,7 +119,7 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
            with_gssapi=FOUND
            gssapi_flavor=HEIMDAL
            break
-@@ -56340,7 +56340,7 @@ echo "${ECHO_T}searched but not found" >
+@@ -51156,7 +51156,7 @@ echo "${ECHO_T}searched but not found" >
        GSSAPI_LIBS="${GSSAPI_LIBS}-lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err ${LIBRESOLV}"
      else
        gssapi_flavor=HEIMDAL
@@ -137,29 +128,3 @@ $NetBSD: patch-ae,v 1.10 2007/05/23 12:57:45 markd Exp $
      fi
    fi
    if test "x$gssapi_flavor" = "xMIT" ; then
-@@ -56720,10 +56720,11 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <math.h>
-+float f;
- int
- main ()
- {
--float f = 0.0; isnan(f)
-+return isnan(f)
-   ;
-   return 0;
- }
-@@ -56794,10 +56795,11 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <math.h>
-+float f;
- int
- main ()
- {
--float f = 0.0; isinf(f)
-+return isinf(f)
-   ;
-   return 0;
- }
