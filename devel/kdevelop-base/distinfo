@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.32 2007/05/23 13:52:58 markd Exp $
+$NetBSD: distinfo,v 1.33 2007/10/20 10:51:41 markd Exp $
 
-SHA1 (kdevelop-3.4.1.tar.bz2) = 5862f03aa4111b1288fc3c1cc926bc7aa582179c
-RMD160 (kdevelop-3.4.1.tar.bz2) = c24ee5a999334345c521ddd70f51b8d2e4aa38d6
-Size (kdevelop-3.4.1.tar.bz2) = 9368912 bytes
+SHA1 (kdevelop-3.5.0.tar.bz2) = e46eb17bcf83e9a31c120bd6b872347b7a606dcf
+RMD160 (kdevelop-3.5.0.tar.bz2) = fad1adda009eaa7fc6a6533a6bf211e3f1fa23fa
+Size (kdevelop-3.5.0.tar.bz2) = 9415312 bytes
 SHA1 (patch-aa) = ea4ceb43d826297610b19c1cd2c538fa486b2b22
 SHA1 (patch-ab) = 19d7b806fd3a5cd0c6cee76f434ea965ad3f01a9
 SHA1 (patch-ag) = 6ab90c041962bf999f3cfb2a704e91e2a2f205ba
 SHA1 (patch-ah) = fec4ba7d20ca75c2a4dc5942270cab899776a741
 SHA1 (patch-ai) = fa0b9b7bc82c9cf2e8ac32e873e7efd06bb75599
-SHA1 (patch-aj) = 649ea2804c81e177c8c7d1fa52120c803d9068f3
-SHA1 (patch-ak) = 5c9e8c75b294218ecfd8ffc745784a2d54077a9b
