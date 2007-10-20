@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/08/06 10:02:27 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/10/20 06:11:25 obache Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -27,7 +27,9 @@ man/man1/urxvtd.1
 ${PERL}man/man3/urxvtperl.3
 man/man7/urxvt.7
 share/doc/rxvt-unicode/README.FAQ
-share/terminfo/r/rxvt-unicode
+share/examples/rxvt-unicode/rxvt-unicode.termcap
+share/examples/rxvt-unicode/rxvt-unicode.terminfo
 @dirrm share/doc/rxvt-unicode
+@dirrm share/examples/rxvt-unicode
 ${PERL}@dirrm lib/urxvt/perl
 ${PERL}@dirrm lib/urxvt
