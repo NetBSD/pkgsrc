@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2007/06/23 21:41:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2007/10/20 10:40:23 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -52,6 +52,7 @@ include/kopete/kopetepassword.h
 include/kopete/kopetepasswordedaccount.h
 include/kopete/kopetepicture.h
 include/kopete/kopeteplugin.h
+include/kopete/kopetepluginmanager.h
 include/kopete/kopeteprefs.h
 include/kopete/kopeteprotocol.h
 include/kopete/kopetesimplemessagehandler.h
