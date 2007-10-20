@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2007/09/21 13:04:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/10/20 10:53:13 markd Exp $
 
 DISTNAME=	kde-i18n-ko-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_KDE_I18N}
 
@@ -18,6 +17,19 @@ SUBST_STAGE.common=	post-patch
 SUBST_MESSAGE.common=	Fix common documentation path.
 SUBST_FILES.common=	docs/common/Makefile.in
 SUBST_SED.common=	-e s:/docs/common:/common:
+
+SUBST_CLASSES+=		msgctxt
+SUBST_STAGE.msgctxt=	post-patch
+SUBST_MESSAGE.msgctxt=	Delete msgctxt lines.
+SUBST_FILES.msgctxt=	messages/kdenetwork/krfb.po \
+			messages/kdenetwork/knewsticker.po \
+			messages/kdebase/kcmicons.po \
+			messages/kdebase/drkonqi.po \
+			messages/kdebase/filetypes.po \
+			messages/kdebase/kcmcgi.po \
+			messages/kdebase/kcmbackground.po \
+			messages/kdebase/kcmcomponentchooser.po
+SUBST_SED.msgctxt=	-e "/ msgctxt /d"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

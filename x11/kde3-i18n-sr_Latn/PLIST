@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/05/23 13:59:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/10/20 10:53:27 markd Exp $
 share/kde/apps/katepart/syntax/logohighlightstyle.sr@Latn.xml
 share/kde/apps/khangman/data/sr@Latn/animals.kvtml
 share/kde/apps/khangman/data/sr@Latn/easy.kvtml
@@ -462,7 +462,6 @@ share/locale/sr@Latn/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/sr@Latn/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/sr@Latn/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/sr@Latn/LC_MESSAGES/ksvgplugin.mo
-share/locale/sr@Latn/LC_MESSAGES/ksync.mo
 share/locale/sr@Latn/LC_MESSAGES/ksysguard.mo
 share/locale/sr@Latn/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/sr@Latn/LC_MESSAGES/ksystraycmd.mo

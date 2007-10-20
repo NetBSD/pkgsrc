@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/05/23 13:59:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/10/20 10:53:23 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -1670,7 +1670,6 @@ share/locale/ru/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/ru/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/ru/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/ru/LC_MESSAGES/ksvgplugin.mo
-share/locale/ru/LC_MESSAGES/ksync.mo
 share/locale/ru/LC_MESSAGES/ksysguard.mo
 share/locale/ru/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/ru/LC_MESSAGES/ksystraycmd.mo

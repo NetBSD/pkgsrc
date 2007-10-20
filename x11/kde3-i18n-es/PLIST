@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/05/23 13:59:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/10/20 10:53:00 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altn.png
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychar.png
@@ -635,6 +635,9 @@ share/doc/kde/HTML/es/kdcop/common
 share/doc/kde/HTML/es/kdcop/index.cache.bz2
 share/doc/kde/HTML/es/kdcop/index.docbook
 share/doc/kde/HTML/es/kde_app_devel/appwizard.png
+share/doc/kde/HTML/es/kde_app_devel/common
+share/doc/kde/HTML/es/kde_app_devel/index.cache.bz2
+share/doc/kde/HTML/es/kde_app_devel/index.docbook
 share/doc/kde/HTML/es/kde_app_devel/kscribblefiles.png
 share/doc/kde/HTML/es/kdearch/affine-general.png
 share/doc/kde/HTML/es/kdearch/affine-rotate.png
@@ -646,6 +649,9 @@ share/doc/kde/HTML/es/kdearch/canvas.png
 share/doc/kde/HTML/es/kdearch/capflat.png
 share/doc/kde/HTML/es/kdearch/capround.png
 share/doc/kde/HTML/es/kdearch/capsquare.png
+share/doc/kde/HTML/es/kdearch/common
+share/doc/kde/HTML/es/kdearch/index.cache.bz2
+share/doc/kde/HTML/es/kdearch/index.docbook
 share/doc/kde/HTML/es/kdearch/joinbevel.png
 share/doc/kde/HTML/es/kdearch/joinmiter.png
 share/doc/kde/HTML/es/kdearch/joinround.png
@@ -748,6 +754,7 @@ share/doc/kde/HTML/es/kdevelop/automake-target-popup.png
 share/doc/kde/HTML/es/kdevelop/automakemanager.png
 share/doc/kde/HTML/es/kdevelop/class-browsers.docbook
 share/doc/kde/HTML/es/kdevelop/classview.png
+share/doc/kde/HTML/es/kdevelop/commands.docbook
 share/doc/kde/HTML/es/kdevelop/configure-adddialog-baselibs.png
 share/doc/kde/HTML/es/kdevelop/configure-doctree-textsearch.png
 share/doc/kde/HTML/es/kdevelop/configure-docu-chm.png
@@ -778,16 +785,20 @@ share/doc/kde/HTML/es/kdevelop/folded-tabs.png
 share/doc/kde/HTML/es/kdevelop/getting-started.docbook
 share/doc/kde/HTML/es/kdevelop/kdevelop-ideal-mode-0.png
 share/doc/kde/HTML/es/kdevelop/kdevelop-ideal-mode.png
+share/doc/kde/HTML/es/kdevelop/kdevelop-install.docbook
 share/doc/kde/HTML/es/kdevelop/kdevelop-mdi-mode.png
 share/doc/kde/HTML/es/kdevelop/kdevelop-scripting.docbook
+share/doc/kde/HTML/es/kdevelop/kdevelop-survey.docbook
 share/doc/kde/HTML/es/kdevelop/kdevelop-tabbed-mode.png
 share/doc/kde/HTML/es/kdevelop/kdevelop-toplevel-mode.png
 share/doc/kde/HTML/es/kdevelop/nutshell.docbook
 share/doc/kde/HTML/es/kdevelop/project-advanced.docbook
+share/doc/kde/HTML/es/kdevelop/project-management.docbook
 share/doc/kde/HTML/es/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/es/kdevelop/select-user-interface.png
 share/doc/kde/HTML/es/kdevelop/survey-manual.docbook
 share/doc/kde/HTML/es/kdevelop/tip.database
+share/doc/kde/HTML/es/kdevelop/unixdev.docbook
 share/doc/kde/HTML/es/kdf/common
 share/doc/kde/HTML/es/kdf/index.cache.bz2
 share/doc/kde/HTML/es/kdf/index.docbook
@@ -3168,7 +3179,6 @@ share/locale/es/LC_MESSAGES/kstyle_keramik_config.mo
 share/locale/es/LC_MESSAGES/kstyle_phase_config.mo
 share/locale/es/LC_MESSAGES/kstyle_plastik_config.mo
 share/locale/es/LC_MESSAGES/ksvgplugin.mo
-share/locale/es/LC_MESSAGES/ksync.mo
 share/locale/es/LC_MESSAGES/ksysguard.mo
 share/locale/es/LC_MESSAGES/ksystemtrayapplet.mo
 share/locale/es/LC_MESSAGES/ksystraycmd.mo
@@ -3249,7 +3259,6 @@ share/locale/es/LC_MESSAGES/libkscan.mo
 share/locale/es/LC_MESSAGES/libkscreensaver.mo
 share/locale/es/LC_MESSAGES/libksieve.mo
 share/locale/es/LC_MESSAGES/libksirtet.mo
-share/locale/es/LC_MESSAGES/libksync.mo
 share/locale/es/LC_MESSAGES/libtaskbar.mo
 share/locale/es/LC_MESSAGES/libtaskmanager.mo
 share/locale/es/LC_MESSAGES/lockout.mo
