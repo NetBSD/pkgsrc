@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/05/23 13:45:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/10/20 10:50:37 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -740,6 +740,7 @@ share/kde/apps/umbrello/headings/heading.ads
 share/kde/apps/umbrello/headings/heading.as
 share/kde/apps/umbrello/headings/heading.cpp
 share/kde/apps/umbrello/headings/heading.cs
+share/kde/apps/umbrello/headings/heading.d
 share/kde/apps/umbrello/headings/heading.h
 share/kde/apps/umbrello/headings/heading.idl
 share/kde/apps/umbrello/headings/heading.java
