@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:25 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/20 10:43:11 adrianp Exp $
 #
 
 DISTNAME=	mknmz-wwwoffle-0.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese www
 MASTER_SITES=	http://www.naney.org/comp/distrib/mknmz-wwwoffle/archive/
 
@@ -10,7 +10,7 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.naney.org/comp/distrib/mknmz-wwwoffle/index.html
 COMMENT=	Full text indexing and searching system for wwwoffle's cache directory
 
-DEPENDS+=	namazu>=2.0.5:../../textproc/namazu2
+DEPENDS+=	namazu>=2.0.5:../../textproc/namazu
 DEPENDS+=	wwwoffle>=2.6:../../www/wwwoffle
 
 USE_TOOLS+=	perl:run
