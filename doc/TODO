@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6756 2007/10/18 09:33:23 obache Exp $
+$NetBSD: TODO,v 1.6757 2007/10/20 05:58:52 taca Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,7 @@ Suggested package updates
 	o dd_rescue-1.13
 	o defendguin-0.0.11
 	o dejavu-ttf-2.20
-	o delegate-9.7.2
+	o delegate-9.7.4
 	o deskbar-applet-2.20.1
 	o devIL-1.6.7
 	o devhelp-0.16.1
