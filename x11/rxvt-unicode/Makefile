@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/10/05 16:11:17 dillo Exp $
+# $NetBSD: Makefile,v 1.20 2007/10/20 06:11:25 obache Exp $
 #
 
 DISTNAME=		rxvt-unicode-8.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/ \
 			http://dist.schmorp.de/rxvt-unicode/Attic/
@@ -20,10 +21,15 @@ CONFIGURE_ARGS+=	--enable-transparency	\
 			--enable-xpm-background	\
 			--enable-xgetdefault	\
 			--enable-24bit
+CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rxvt-unicode
 	${INSTALL_DATA} ${WRKSRC}/README.FAQ ${PREFIX}/share/doc/rxvt-unicode
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rxvt-unicode
+.for t in rxvt-unicode.termcap rxvt-unicode.terminfo
+	${INSTALL_DATA} ${WRKSRC}/doc/etc/${t} ${PREFIX}/share/examples/rxvt-unicode
+.endfor
 
 .include "options.mk"
 
