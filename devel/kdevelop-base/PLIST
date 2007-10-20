@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/05/23 13:52:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/10/20 10:51:40 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -46,6 +46,7 @@ include/kdevelop/interfaces/extensions/kdevappfrontend.h
 include/kdevelop/interfaces/extensions/kdevcreatefile.h
 include/kdevelop/interfaces/extensions/kdevdifffrontend.h
 include/kdevelop/interfaces/extensions/kdevmakefrontend.h
+include/kdevelop/interfaces/extensions/kdevquickopen.h
 include/kdevelop/interfaces/extensions/kdevsourceformatter.h
 include/kdevelop/interfaces/extensions/kdevversioncontrol.h
 include/kdevelop/interfaces/extras/kdevcompileroptions.h
@@ -419,6 +420,8 @@ share/kde/apps/kdevantproject/kdevantproject.rc
 share/kde/apps/kdevappoutputview/kdevmakeview.rc
 share/kde/apps/kdevappwizard/adahello.png
 share/kde/apps/kdevappwizard/adahello.tar.gz
+share/kde/apps/kdevappwizard/automakeempty.png
+share/kde/apps/kdevappwizard/automakeempty.tar.gz
 share/kde/apps/kdevappwizard/bashhello.png
 share/kde/apps/kdevappwizard/bashhello.tar.gz
 share/kde/apps/kdevappwizard/chello.png
@@ -511,6 +514,8 @@ share/kde/apps/kdevappwizard/kcmodule.png
 share/kde/apps/kdevappwizard/kcmodule.tar.gz
 share/kde/apps/kdevappwizard/kconfig35.png
 share/kde/apps/kdevappwizard/kconfig35.tar.gz
+share/kde/apps/kdevappwizard/kde4app.png
+share/kde/apps/kdevappwizard/kde4app.tar.gz
 share/kde/apps/kdevappwizard/kdedcop.png
 share/kde/apps/kdevappwizard/kdedcop.tar.gz
 share/kde/apps/kdevappwizard/kdevappwizard.rc
@@ -550,6 +555,8 @@ share/kde/apps/kdevappwizard/kxt.png
 share/kde/apps/kdevappwizard/kxt.tar.gz
 share/kde/apps/kdevappwizard/kxtruby.png
 share/kde/apps/kdevappwizard/kxtruby.tar.gz
+share/kde/apps/kdevappwizard/makefileempty.png
+share/kde/apps/kdevappwizard/makefileempty.tar.gz
 share/kde/apps/kdevappwizard/noatunui.png
 share/kde/apps/kdevappwizard/noatunui.tar.gz
 share/kde/apps/kdevappwizard/noatunvisual.png
@@ -580,12 +587,16 @@ share/kde/apps/kdevappwizard/pytk.png
 share/kde/apps/kdevappwizard/pytk.tar.gz
 share/kde/apps/kdevappwizard/qmakeapp.png
 share/kde/apps/kdevappwizard/qmakeapp.tar.gz
+share/kde/apps/kdevappwizard/qmakeempty.png
+share/kde/apps/kdevappwizard/qmakeempty.tar.gz
 share/kde/apps/kdevappwizard/qmakesimple.png
 share/kde/apps/kdevappwizard/qmakesimple.tar.gz
 share/kde/apps/kdevappwizard/qt4hello.png
 share/kde/apps/kdevappwizard/qt4hello.tar.gz
 share/kde/apps/kdevappwizard/qt4makeapp.png
 share/kde/apps/kdevappwizard/qt4makeapp.tar.gz
+share/kde/apps/kdevappwizard/qtopia4app.png
+share/kde/apps/kdevappwizard/qtopia4app.tar.gz
 share/kde/apps/kdevappwizard/qtopiaapp.png
 share/kde/apps/kdevappwizard/qtopiaapp.tar.gz
 share/kde/apps/kdevappwizard/qtruby.png
@@ -639,6 +650,7 @@ share/kde/apps/kdevappwizard/template-common/wx-Makefile.cvs
 share/kde/apps/kdevappwizard/template-common/wx-configure.in
 share/kde/apps/kdevappwizard/template-common/wxwidgets.tar.gz
 share/kde/apps/kdevappwizard/templates/adahello.kdevtemplate
+share/kde/apps/kdevappwizard/templates/automakeempty.kdevtemplate
 share/kde/apps/kdevappwizard/templates/bashhello.kdevtemplate
 share/kde/apps/kdevappwizard/templates/chello.kdevtemplate
 share/kde/apps/kdevappwizard/templates/chellogba.kdevtemplate
@@ -665,6 +677,7 @@ share/kde/apps/kdevappwizard/templates/kateplugin.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kateplugin2.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kcmodule.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kconfig35.kdevtemplate
+share/kde/apps/kdevappwizard/templates/kde4app.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kdedcop.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kdevlang.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kdevpart.kdevtemplate
@@ -684,6 +697,7 @@ share/kde/apps/kdevappwizard/templates/kscons_kxt.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kscreensaver.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kxt.kdevtemplate
 share/kde/apps/kdevappwizard/templates/kxtruby.kdevtemplate
+share/kde/apps/kdevappwizard/templates/makefileempty.kdevtemplate
 share/kde/apps/kdevappwizard/templates/noatunui.kdevtemplate
 share/kde/apps/kdevappwizard/templates/noatunvisual.kdevtemplate
 share/kde/apps/kdevappwizard/templates/opieapp.kdevtemplate
@@ -699,9 +713,11 @@ share/kde/apps/kdevappwizard/templates/pyqt.kdevtemplate
 share/kde/apps/kdevappwizard/templates/pythonhello.kdevtemplate
 share/kde/apps/kdevappwizard/templates/pytk.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qmakeapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qmakeempty.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qmakesimple.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qt4hello.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qt4makeapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qtopia4app.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtopiaapp.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtruby.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtrubyapp.kdevtemplate
@@ -1361,6 +1377,7 @@ share/kde/servicetypes/kdevelopmakefrontend.desktop
 share/kde/servicetypes/kdeveloppcsimporter.desktop
 share/kde/servicetypes/kdevelopplugin.desktop
 share/kde/servicetypes/kdevelopproject.desktop
+share/kde/servicetypes/kdevelopquickopen.desktop
 share/kde/servicetypes/kdevelopsourceformatter.desktop
 share/kde/servicetypes/kdevelopvcsintegrator.desktop
 share/kde/servicetypes/kdevelopversioncontrol.desktop
