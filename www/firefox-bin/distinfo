@@ -1,21 +1,17 @@
-$NetBSD: distinfo,v 1.34 2007/10/19 19:47:43 ghen Exp $
+$NetBSD: distinfo,v 1.35 2007/10/20 10:42:36 ghen Exp $
 
 SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 58495ecd499efd69c25fcff26d8d50d307382a36
 RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 12025ab2f5a01dc19e538f578037b3dfcf8ac223
 Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 27258 bytes
-
 SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 619f687740dd4710c66dc23d5dd45917d39de7ef
 RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 553fa2ea79e3b77c9358b62551b9b908fd10c3b5
 Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 27267 bytes
-
 SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 8b92d36408828b7a324fb9545a77624ce8bf7857
 RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 6633aeca93fee425f7087201ddd1eb8922e88896
 Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 11896427 
-
 SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 9c4f5b5ccb002b58fd2046cae45706e6d19bf9c1
 RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 18c14763a1966f642a8937ff5a348a6868a0f659
 Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 13363688 
-
 SHA1 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = f22c615a73fa1eb11a1a9237646ae86a81007da3
 RMD160 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 7a4a3a088090f6f3d3622294e092c1a58f427c69
 Size (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 9674559 bytes
