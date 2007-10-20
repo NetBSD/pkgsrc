@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.7 2005/05/31 14:04:13 markd Exp $
+$NetBSD: patch-ai,v 1.8 2007/10/20 10:34:15 markd Exp $
 
---- flow/gsl/Makefile.in.orig	2005-05-24 03:36:50.000000000 +1200
+--- flow/gsl/Makefile.in.orig	2007-10-09 03:17:56.000000000 +1300
 +++ flow/gsl/Makefile.in
-@@ -98,7 +98,7 @@ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=c
- 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
- 	$(AM_CFLAGS) $(CFLAGS)
+@@ -100,7 +100,7 @@ LTCOMPILE = $(LIBTOOL) --tag=CC $(AM_LIB
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
--LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
-+LINK = $(LIBTOOL) --tag=CC --mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) \
- 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+-	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
++	--mode=link $(CXXLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
