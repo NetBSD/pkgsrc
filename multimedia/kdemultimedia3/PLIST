@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/05/23 13:16:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/10/20 10:41:20 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -705,6 +705,7 @@ share/kde/apps/juk/jukui-rtl.rc
 share/kde/apps/juk/jukui.rc
 share/kde/apps/juk/pics/playing.png
 share/kde/apps/juk/pics/splash.png
+share/kde/apps/juk/pics/yahoo_credit.png
 share/kde/apps/kaboodle/icons/crystalsvg/16x16/actions/kaboodleloop.png
 share/kde/apps/kaboodle/icons/crystalsvg/22x22/actions/kaboodleloop.png
 share/kde/apps/kaboodle/kaboodlepartui.rc

@@ -1,129 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
+$NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
 
---- configure.orig	2007-05-14 23:37:28.000000000 +1200
+--- configure.orig	2007-10-09 03:27:15.000000000 +1300
 +++ configure
-@@ -31831,31 +31831,13 @@ fi
- 
-                 LIBPTHREAD=""
- 
--  if test -n "$PTHREAD_LIBS"; then
--    if test "x$PTHREAD_LIBS" = "x-pthread" ; then
--      LIBPTHREAD="PTHREAD"
--    else
--      PTHREAD_LIBS_save="$PTHREAD_LIBS"
--      PTHREAD_LIBS=`echo "$PTHREAD_LIBS_save" | sed -e 's,^-l,,g'`
--      { echo "$as_me:$LINENO: checking for pthread_create in $PTHREAD_LIBS" >&5
--echo $ECHO_N "checking for pthread_create in $PTHREAD_LIBS... $ECHO_C" >&6; }
--
--     kde_save_LDFLAGS="$LDFLAGS"
--          kde_save_LIBS="$LIBS"
--     LDFLAGS="$LDFLAGS $all_libraries"
--     case $host_os in
--      aix*) LDFLAGS="-brtl $LDFLAGS"
--	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
--	;;
--     esac
--     as_ac_Lib=`echo "ac_cv_lib_$PTHREAD_LIBS''_pthread_create" | $as_tr_sh`
--{ echo "$as_me:$LINENO: checking for pthread_create in -l$PTHREAD_LIBS" >&5
--echo $ECHO_N "checking for pthread_create in -l$PTHREAD_LIBS... $ECHO_C" >&6; }
--if { as_var=$as_ac_Lib; eval "test \"\${$as_var+set}\" = set"; }; then
-+{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
-+echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
-+if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-l$PTHREAD_LIBS  $LIBS"
-+LIBS="-lpthread  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -31912,40 +31894,27 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  eval "$as_ac_Lib=yes"
-+  ac_cv_lib_pthread_pthread_create=yes
-+  LIBPTHREAD="-lpthread"
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--	eval "$as_ac_Lib=no"
-+	ac_cv_lib_pthread_pthread_create=no
- fi
- 
- rm -f core conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--ac_res=`eval echo '${'$as_ac_Lib'}'`
--	       { echo "$as_me:$LINENO: result: $ac_res" >&5
--echo "${ECHO_T}$ac_res" >&6; }
--if test `eval echo '${'$as_ac_Lib'}'` = yes; then
--  LIBPTHREAD="$PTHREAD_LIBS_save"
--fi
--
--     LDFLAGS="$kde_save_LDFLAGS"
--     LIBS="$kde_save_LIBS"
--
--      PTHREAD_LIBS="$PTHREAD_LIBS_save"
--    fi
--  fi
-+echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
-+echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
- 
-     if test -z "$LIBPTHREAD"; then
--    { echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
--echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
--if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
--else
-+    { echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_create in  ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -32003,6 +31972,7 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
-   ac_cv_lib_pthread_pthread_create=yes
-+  LIBPTHREAD="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
-@@ -32013,13 +31983,9 @@ fi
- rm -f core conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
--fi
-+
- { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
--if test $ac_cv_lib_pthread_pthread_create = yes; then
--  LIBPTHREAD="-lpthread"
--fi
--
-   fi
- 
-     if test -z "$LIBPTHREAD" ; then
-@@ -32094,12 +32060,6 @@ rm -f core conftest.err conftest.$ac_obj
-     LIBS=$kde_safe_libs
-   fi
- 
--    if test "x$LIBPTHREAD" = "xPTHREAD" ; then
--    LIBPTHREAD=""
--  fi
--
--
--
- 
-       USE_THREADS=""
-       if test -z "$LIBPTHREAD"; then
-@@ -37849,7 +37809,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
+@@ -34934,7 +34910,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -132,7 +11,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -37929,7 +37889,7 @@ fi
+@@ -34998,7 +34974,7 @@ fi
  
    if test "x$have_ossaudio" = xyes; then
      # for kmix/ and akode/
@@ -141,7 +20,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    fi
  
  
-@@ -38593,7 +38553,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35571,7 +35547,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -150,7 +29,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -38650,7 +38610,7 @@ _ACEOF
+@@ -35611,7 +35587,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -159,7 +38,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -38758,7 +38718,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35712,7 +35688,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -168,7 +47,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  
  int
  main ()
-@@ -40910,7 +40870,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
+@@ -37701,7 +37677,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetTRMC
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -177,7 +56,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -41967,13 +41927,13 @@ if test $ac_cv_header_FLAC_metadata_h = 
+@@ -38572,13 +38548,13 @@ if test $ac_cv_header_FLAC_metadata_h = 
  	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
  	;;
       esac
@@ -195,7 +74,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -41987,11 +41947,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -38592,11 +38568,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -209,10 +88,10 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    ;
    return 0;
  }
-@@ -42030,21 +41990,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -38619,21 +38595,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
 -  ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single=yes
 +  ac_cv_lib_FLAC_FLAC__stream_decoder_process_single=yes
  else
@@ -223,7 +102,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
 +	ac_cv_lib_FLAC_FLAC__stream_decoder_process_single=no
  fi
  
- rm -f core conftest.err conftest.$ac_objext \
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
        conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
@@ -236,7 +115,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    have_libFLAC=yes
  fi
  
-@@ -42262,9 +42222,9 @@ if test $ac_cv_header_OggFLAC_seekable_s
+@@ -38827,9 +38803,9 @@ if test $ac_cv_header_OggFLAC_seekable_s
  	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
  	;;
       esac
@@ -249,7 +128,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -42282,11 +42242,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -38847,11 +38823,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -263,10 +142,10 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    ;
    return 0;
  }
-@@ -42325,21 +42285,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -38874,21 +38850,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
 -  ac_cv_lib_OggFLAC_OggFLAC__seekable_stream_decoder_process_single=yes
 +  ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single=yes
  else
@@ -277,7 +156,7 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
 +	ac_cv_lib_OggFLAC_OggFLAC__stream_decoder_process_single=no
  fi
  
- rm -f core conftest.err conftest.$ac_objext \
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
        conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
@@ -290,203 +169,76 @@ $NetBSD: patch-aa,v 1.12 2007/05/23 13:16:11 markd Exp $
    have_libOggFLAC=yes
  fi
  
-@@ -44456,8 +44416,23 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -40652,7 +40628,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
  
--                x11_dga2=yes
--
-+ 	lib=Xxf86dga
-+ 	shared_lib_found=no
-+ 	for i in ${LDFLAGS}; do
-+ 		case "$i" in
-+ 		-L*)
-+ 			dir=`echo $i | sed "s,^-L,,"`
-+ 			if [ -e $dir/lib${lib}.so ] ||
-+ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+ 				shared_lib_found=yes
-+ 				break;
-+ 			fi
-+ 		esac
-+ 	done
-+ 	if [ "$shared_lib_found" = "yes" ]; then
-+ 		x11_dga2=yes
-+ 	fi
-+   
++	lib=Xxf86dga
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
+                 x11_dga2=yes
++	fi
+ 
  else
    echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
-@@ -44534,7 +44509,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -40713,7 +40704,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
  
-+       lib=Xv
-+       shared_lib_found=no
-+      for i in ${LDFLAGS}; do
-+                case "$i" in
-+               -L*)
-+                       dir=`echo $i | sed "s,^-L,,"`
-+                       if [ -e $dir/lib${lib}.so ] ||
-+                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+                               shared_lib_found=yes
-+                               break;
-+                       fi
-+               esac
-+        done
-+       if [ "$shared_lib_found" = "yes" ]; then
++	lib=Xv
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
                  x11_xv=yes
-+       fi
++	fi
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -44612,7 +44602,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
+@@ -40774,7 +40780,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
  
-+       lib=Xxf86vm
-+       shared_lib_found=no
-+       for i in ${LDFLAGS}; do
-+                case "$i" in
-+               -L*)
-+                       dir=`echo $i | sed "s,^-L,,"`
-+                       if [ -e $dir/lib${lib}.so ] ||
-+                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+                               shared_lib_found=yes
-+                               break;
-+                       fi
-+               esac
-+       done
-+       if [ "$shared_lib_found" = "yes" ]; then
++	lib=Xxf86vm
++	shared_lib_found=no
++	for i in ${LDFLAGS}; do
++		case "$i" in
++		-L*)
++			dir=`echo $i | sed "s,^-L,,"`
++			if [ -e $dir/lib${lib}.so ] ||
++			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++				shared_lib_found=yes
++				break;
++			fi
++		esac
++	done
++	if [ "$shared_lib_found" = "yes" ]; then
                  x11_xvidmode=yes
-+       fi
++	fi
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -44686,6 +44691,9 @@ case "$OS_TYPE" in
-   SunOS)
-     kde_mpeglib_compiles=yes
-     ;;
-+  DragonFly)
-+    kde_mpeglib_compiles=yes
-+    ;;
-   *)
-     { echo "$as_me:$LINENO: result: *** We disable mpeglib for this platform ***" >&5
- echo "${ECHO_T}*** We disable mpeglib for this platform ***" >&6; }
-@@ -44695,33 +44703,13 @@ esac
- 
- 
- 
--                LIBPTHREAD=""
--
--  if test -n "$PTHREAD_LIBS"; then
--    if test "x$PTHREAD_LIBS" = "x-pthread" ; then
--      LIBPTHREAD="PTHREAD"
--    else
--      PTHREAD_LIBS_save="$PTHREAD_LIBS"
--      PTHREAD_LIBS=`echo "$PTHREAD_LIBS_save" | sed -e 's,^-l,,g'`
--      { echo "$as_me:$LINENO: checking for pthread_create in $PTHREAD_LIBS" >&5
--echo $ECHO_N "checking for pthread_create in $PTHREAD_LIBS... $ECHO_C" >&6; }
--
--     kde_save_LDFLAGS="$LDFLAGS"
--          kde_save_LIBS="$LIBS"
--     LDFLAGS="$LDFLAGS $all_libraries"
--     case $host_os in
--      aix*) LDFLAGS="-brtl $LDFLAGS"
--	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
--	;;
--     esac
--     as_ac_Lib=`echo "ac_cv_lib_$PTHREAD_LIBS''_pthread_create" | $as_tr_sh`
--{ echo "$as_me:$LINENO: checking for pthread_create in -l$PTHREAD_LIBS" >&5
--echo $ECHO_N "checking for pthread_create in -l$PTHREAD_LIBS... $ECHO_C" >&6; }
--if { as_var=$as_ac_Lib; eval "test \"\${$as_var+set}\" = set"; }; then
-+{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
-+echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
-+if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-l$PTHREAD_LIBS  $LIBS"
-+LIBS="-lpthread  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -44778,31 +44766,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  eval "$as_ac_Lib=yes"
-+  ac_cv_lib_pthread_pthread_create=yes
-+  LIBPTHREAD="-lpthread"
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--	eval "$as_ac_Lib=no"
-+	 ac_cv_lib_pthread_pthread_create=no
- fi
- 
- rm -f core conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
--ac_res=`eval echo '${'$as_ac_Lib'}'`
--	       { echo "$as_me:$LINENO: result: $ac_res" >&5
--echo "${ECHO_T}$ac_res" >&6; }
--if test `eval echo '${'$as_ac_Lib'}'` = yes; then
--  LIBPTHREAD="$PTHREAD_LIBS_save"
--fi
--
--     LDFLAGS="$kde_save_LDFLAGS"
--     LIBS="$kde_save_LIBS"
--
--      PTHREAD_LIBS="$PTHREAD_LIBS_save"
--    fi
--  fi
-+echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
-+echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
- 
-     if test -z "$LIBPTHREAD"; then
-     { echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
-@@ -44869,6 +44847,7 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
-   ac_cv_lib_pthread_pthread_create=yes
-+  LIBPTHREAD="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
-@@ -44882,10 +44861,6 @@ LIBS=$ac_check_lib_save_LIBS
- fi
- { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
--if test $ac_cv_lib_pthread_pthread_create = yes; then
--  LIBPTHREAD="-lpthread"
--fi
--
-   fi
- 
-     if test -z "$LIBPTHREAD" ; then
-@@ -44960,10 +44935,6 @@ rm -f core conftest.err conftest.$ac_obj
-     LIBS=$kde_safe_libs
-   fi
- 
--    if test "x$LIBPTHREAD" = "xPTHREAD" ; then
--    LIBPTHREAD=""
--  fi
--
- 
- 
- case "$OS_TYPE" in
-@@ -44985,7 +44956,7 @@ _ACEOF
- 
-     ;;
- 
--  FreeBSD)
-+  FreeBSD | DragonFly)
-     OS_TYPE="BSD"
- 
- cat >>confdefs.h <<\_ACEOF
-@@ -49549,11 +49522,6 @@ done # for ac_tag
+@@ -45675,11 +45668,6 @@ done # for ac_tag
  
  { (exit 0); exit 0; }
  _ACEOF

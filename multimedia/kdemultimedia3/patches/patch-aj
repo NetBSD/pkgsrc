@@ -1,9 +1,18 @@
-$NetBSD: patch-aj,v 1.3 2006/01/20 03:51:25 joerg Exp $
+$NetBSD: patch-aj,v 1.4 2007/10/20 10:41:21 markd Exp $
 
---- oggvorbis_artsplugin/oggPlayObject_impl.h.orig	2005-11-15 11:27:27.000000000 +0000
-+++ oggvorbis_artsplugin/oggPlayObject_impl.h
-@@ -3,3 +3,3 @@
+--- kioslave/audiocd/plugins/lame/encoderlame.cpp.orig	2007-10-08 22:48:54.000000000 +1300
++++ kioslave/audiocd/plugins/lame/encoderlame.cpp
+@@ -17,7 +17,13 @@
+ */
  
--#if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)
-+#if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED) || defined(__DragonFly__)
- /* union semun is defined by including <sys/sem.h> */
+ #include <config.h>
++#ifdef HAVE_MACHINE_ENDIAN_H
++#include <machine/endian.h>
++#define __BYTE_ORDER _BYTE_ORDER
++#define __LITTLE_ENDIAN _LITTLE_ENDIAN
++#else
+ #include <endian.h>
++#endif
+ #include "encoderlame.h"
+ #include "encoderlameconfig.h"
+ #include "audiocd_lame_encoder.h"
