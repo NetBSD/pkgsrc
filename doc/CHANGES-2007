@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2204 2007/10/21 13:54:07 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2205 2007/10/21 17:53:20 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/snort to 2.8.0 [adrianp 2007-10-21]
 	Updated databases/palm-db-tools to 0.3.6nb1 [dsainty 2007-10-21]
 	Added security/keepassx version 0.2.2 [adrianp 2007-10-21]
+	Updated security/openssl to 0.9.7inb5 [adrianp 2007-10-21]
