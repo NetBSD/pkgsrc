@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/05/25 18:02:45 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2007/10/21 01:18:36 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -13,10 +13,10 @@ PKG_SUGGESTED_OPTIONS=		x11
 
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
-CONFIGURE_ENV+=		ENABLE_CUPS=yes
 PLIST_SUBST+=		CUPS=
 .else
 PLIST_SUBST+=		CUPS="@comment "
+CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
