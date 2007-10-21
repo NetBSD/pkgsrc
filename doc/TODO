@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6760 2007/10/21 11:06:01 wiz Exp $
+$NetBSD: TODO,v 1.6761 2007/10/21 23:43:08 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1383,7 +1383,6 @@ Suggested package updates
 	o xzip-182
 	o yacas-1.2.0
 	o yafc-1.1
-	o yasm-0.6.2
 	o yaz-2.1.54
 	o yelp-2.20.0
 	o yodl-2.01.02
