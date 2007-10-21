@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/02/17 19:08:06 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.25 2007/10/21 00:22:53 adrianp Exp $
 bin/snort
 lib/snort_dynamicengine/libsf_engine.la
 lib/snort_dynamicpreprocessor/libsf_dcerpc_preproc.la
@@ -7,7 +7,9 @@ lib/snort_dynamicpreprocessor/libsf_ftptelnet_preproc.la
 lib/snort_dynamicpreprocessor/libsf_smtp_preproc.la
 lib/snort_dynamicpreprocessor/libsf_ssh_preproc.la
 man/man8/snort.8
+share/doc/snort/AUTHORS
 share/doc/snort/BUGS
+share/doc/snort/CREDITS
 share/doc/snort/INSTALL
 share/doc/snort/NEWS
 share/doc/snort/PROBLEMS
@@ -26,6 +28,7 @@ share/doc/snort/README.asn1
 share/doc/snort/README.csv
 share/doc/snort/README.database
 share/doc/snort/README.dcerpc
+share/doc/snort/README.decode
 share/doc/snort/README.dns
 share/doc/snort/README.event_queue
 share/doc/snort/README.flow
@@ -34,12 +37,17 @@ share/doc/snort/README.flowbits
 share/doc/snort/README.frag3
 share/doc/snort/README.ftptelnet
 share/doc/snort/README.http_inspect
+share/doc/snort/README.ipv6
+share/doc/snort/README.ppm
 share/doc/snort/README.sfportscan
 share/doc/snort/README.ssh
 share/doc/snort/README.stream4
 share/doc/snort/README.stream5
+share/doc/snort/README.tag
 share/doc/snort/README.thresholding
+share/doc/snort/README.variables
 share/doc/snort/README.wireless
+share/doc/snort/generators
 share/doc/snort/TODO
 share/doc/snort/USAGE
 share/doc/snort/WISHLIST
@@ -58,13 +66,13 @@ share/examples/snort/classification.config
 share/examples/snort/gen-msg.map
 share/examples/snort/generators
 share/examples/snort/reference.config
-share/examples/snort/sid
 share/examples/snort/sid-msg.map
 share/examples/snort/snort.conf.default
 share/examples/snort/threshold.conf
 share/examples/snort/unicode.map
 share/snort/src/snort_dynamicsrc/bitop.h
 share/snort/src/snort_dynamicsrc/debug.h
+share/snort/src/snort_dynamicsrc/pcap_pkthdr32.h
 share/snort/src/snort_dynamicsrc/preprocids.h
 share/snort/src/snort_dynamicsrc/profiler.h
 share/snort/src/snort_dynamicsrc/sf_dynamic_common.h
@@ -78,7 +86,6 @@ share/snort/src/snort_dynamicsrc/sfghash.h
 share/snort/src/snort_dynamicsrc/sfhashfcn.h
 share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.c
 share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.h
-share/snort/src/snort_dynamicsrc/snort_packet_header.h
 share/snort/src/snort_dynamicsrc/str_search.h
 share/snort/src/snort_dynamicsrc/stream_api.h
 @dirrm share/snort/src/snort_dynamicsrc

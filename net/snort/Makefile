@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2007/08/20 20:28:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.33 2007/10/21 00:22:53 adrianp Exp $
 #
 
-DISTNAME=		snort-2.7.0.1
+DISTNAME=		snort-2.8.0
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/
 
@@ -83,10 +83,9 @@ post-install:
 
 	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
 			${WRKSRC}/etc/*.map \
-			${WRKSRC}/etc/generators \
-			${WRKSRC}/etc/sid \
 			${WRKSRC}/etc/threshold.conf \
 			${WRKSRC}/etc/snort.conf.default ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/generators ${EGDIR}
 
 .	for i in ${DOC_FILES}
 		${INSTALL_DATA}	${WRKSRC}/doc/${i} ${PREFIX}/share/doc/snort/

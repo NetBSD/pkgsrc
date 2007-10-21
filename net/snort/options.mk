@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2007/09/09 19:57:23 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2007/10/21 00:22:53 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
-PKG_SUPPORTED_OPTIONS=	debug snort-prelude
+PKG_SUPPORTED_OPTIONS=	debug snort-prelude ssl snmp snort-gre
+PKG_SUPPORTED_OPTIONS+=	snort-dynamicplugin snort-timestats
+PKG_SUPPORTED_OPTIONS+=	snort-rulestate
 PKG_SUGGESTED_OPTIONS=
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	flex
@@ -14,10 +16,58 @@ PKG_OPTIONS_GROUP.database=	mysql pgsql
 .include "../../mk/bsd.options.mk"
 
 ###
+### Please note that a large number of these options remain un-tested
+### for this package.
+###
+
+###
+### Enable dynamically loadable preprocessors, detection engine
+### and rules libraries.
+###
+.if !empty(PKG_OPTIONS:Msnort-dynamicplugin)
+CONFIGURE_ARGS+=	--enable-dynamicplugin
+.endif
+
+###
+### Enable rule state configuration feature
+###
+.if !empty(PKG_OPTIONS:Msnort-rulestate)
+CONFIGURE_ARGS+=	--enable-rulestate
+.endif
+
+###
+### Enable real-time performance statistics
+###
+.if !empty(PKG_OPTIONS:Msnort-timestats)
+CONFIGURE_ARGS+=	--enable-timestats
+.endif
+
+###
 ### Enable debug support
 ###
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+###
+### Support for openssl (used by the XML output plugin)
+###
+.if !empty(PKG_OPTIONS:Mssl)
+CONFIGURE_ARGS+=	--with-openssl
+.endif
+
+###
+### Enable GRE decoder
+###
+.if !empty(PKG_OPTIONS:Msnort-gre)
+CONFIGURE_ARGS+=	--enable-gre
+.endif
+
+###
+### Enable SNMP alerting code
+###
+.if !empty(PKG_OPTIONS:Msnmp)
+CONFIGURE_ARGS+=	--with-snmp
 .endif
 
 ###
