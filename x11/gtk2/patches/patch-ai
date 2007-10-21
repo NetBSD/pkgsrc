@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.19 2007/09/16 19:53:27 wiz Exp $
+$NetBSD: patch-ai,v 1.20 2007/10/21 02:03:34 obache Exp $
 
 --- configure.orig	2007-09-13 20:47:55.000000000 +0000
 +++ configure
@@ -11,13 +11,3 @@ $NetBSD: patch-ai,v 1.19 2007/09/16 19:53:27 wiz Exp $
    HAVE_OBJC_TRUE=
    HAVE_OBJC_FALSE='#'
  else
-@@ -35379,6 +35379,9 @@ fi
- fi
- 
- 
-+if test "x$ENABLE_CUPS"  != "xyes"; then
-+  CUPS_CONFIG=no
-+fi
- if test "x$CUPS_CONFIG" != "xno"; then
-   HAVE_CUPS_TRUE=
-   HAVE_CUPS_FALSE='#'
