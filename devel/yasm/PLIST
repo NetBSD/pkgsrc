@@ -1,21 +1,20 @@
-@comment $NetBSD: PLIST,v 1.6 2007/03/08 19:09:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/10/21 23:41:59 minskim Exp $
 bin/yasm
 include/libyasm-stdint.h
 include/libyasm.h
 include/libyasm/arch.h
 include/libyasm/assocdat.h
-include/libyasm/bc-int.h
 include/libyasm/bitvect.h
 include/libyasm/bytecode.h
 include/libyasm/compat-queue.h
 include/libyasm/coretype.h
 include/libyasm/dbgfmt.h
 include/libyasm/errwarn.h
-include/libyasm/expr-int.h
 include/libyasm/expr.h
 include/libyasm/file.h
 include/libyasm/floatnum.h
 include/libyasm/hamt.h
+include/libyasm/insn.h
 include/libyasm/intnum.h
 include/libyasm/inttree.h
 include/libyasm/linemap.h
