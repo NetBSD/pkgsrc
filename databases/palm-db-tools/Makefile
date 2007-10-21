@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/02/19 21:57:51 dsainty Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/21 03:53:45 dsainty Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
 PKGNAME=	palm-db-tools-0.3.6
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=palm-db-tools/}
 
