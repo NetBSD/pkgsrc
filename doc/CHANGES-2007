@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2208 2007/10/22 06:54:56 dogcow Exp $
+$NetBSD: CHANGES-2007,v 1.2209 2007/10/22 08:05:10 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4155,3 +4155,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix-current to 2.5-20071006 [martti 2007-10-22]
 	Updated editors/vim-share to 7.1.145 [martti 2007-10-22]
 	Updated security/p5-Net-SSH to 1.30 [dogcow 2007-10-22]
+	Updated www/seamonkey to 1.1.5 [ghen 2007-10-22]
+	Updated www/seamonkey-bin to 1.1.5 [ghen 2007-10-22]
+	Updated www/seamonkey-gtk1 to 1.1.5 [ghen 2007-10-22]
