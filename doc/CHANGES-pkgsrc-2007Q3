@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.1 2007/10/14 10:53:07 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.2 2007/10/22 08:50:34 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
 
 Created pkgsrc-2007Q3 branch [agc 2007-10-11 02:30 GMT]
+
+Pullup ticket 2209 - requested by adrianp
+security fix for openssl
