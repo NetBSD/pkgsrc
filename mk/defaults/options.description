@@ -205,6 +205,7 @@ libgpod			Enable libgpod support.
 libnet10	
 libnet11	
 libofx			Enable OFX support.
+links-zlib		Enable zlib support for the links WWW browser.
 long-usernames	
 lookup	
 lprng-priv-ports	Connections must be made from privileged ports.
