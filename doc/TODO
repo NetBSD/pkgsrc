@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6761 2007/10/21 23:43:08 minskim Exp $
+$NetBSD: TODO,v 1.6762 2007/10/22 11:30:42 taca Exp $
 
 Suggested new packages
 ======================
@@ -873,7 +873,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openssl-0.9.8e (in wip/)
-	o openssl-0.9.8f
+	o openssl-0.9.8g
 	o orca-2.20.0.1
 	o oregano-0.60.0
 	o oroborus-2.0.18
