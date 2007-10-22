@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.5 2007/10/22 11:39:37 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.6 2007/10/22 23:19:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -15,3 +15,5 @@ Pullup ticket 2207 - requested by adrianp
 bugfix for "make readme"
 Pullup ticket 2203 - requested by adrianp
 security update for drupal
+Pullup ticket 2203 - requested by ghen
+security update for firefox
