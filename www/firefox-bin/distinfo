@@ -1,21 +1,17 @@
-# $NetBSD: distinfo,v 1.32 2007/10/07 19:58:46 dmcmahill Exp $
+$NetBSD: distinfo,v 1.32.2.1 2007/10/22 23:18:58 salo Exp $
 
-SHA1 (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = a5acf3e329549634be8ccf5a435ba563298440d8
-RMD160 (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = b098d2d40e8c899ece96230f0f5b88615c14728b
-Size (firefox/releases/2.0.0.7/linux-i686/en-US/firefox-2.0.0.7.tar.gz) = 9671863 bytes
-
-SHA1 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-i386-gtk1.tar.bz2) = 9912e56145b2b9679ff7319d970fbe363dced590
-RMD160 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-i386-gtk1.tar.bz2) = a099077e66a52dcca416062cf2995746dc483682
-Size (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-i386-gtk1.tar.bz2) = 11204630 bytes
-
-SHA1 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-sparc-gtk1.tar.bz2) = f421cfa7bde1f9cf6298edf44533efc3abdce7b1
-RMD160 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-sparc-gtk1.tar.bz2) = ddfcac9d6ad9c52052d35ef641be295cce66cc36
-Size (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris8-sparc-gtk1.tar.bz2) = 12870048 bytes
-
-SHA1 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-i386.tar.bz2) = 5b2033936e1e9184d6c60e99fa05610d64154556
-RMD160 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-i386.tar.bz2) = 9fcbacc21d1fb14bfe9026ea355f948400aa13b7
-Size (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-i386.tar.bz2) = 11887270 bytes
-
-SHA1 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-sparc.tar.bz2) = e795b984782ce6c15309b8f2d95fbdc992f9addd
-RMD160 (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-sparc.tar.bz2) = 819dd37356b5ef006ab7f065bc6a11da59ef7931
-Size (firefox/releases/2.0.0.7/contrib/solaris_tarball/firefox-2.0.0.7.en-US.solaris10-sparc.tar.bz2) = 13373259 bytes
+SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 58495ecd499efd69c25fcff26d8d50d307382a36
+RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 12025ab2f5a01dc19e538f578037b3dfcf8ac223
+Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 27258 bytes
+SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 619f687740dd4710c66dc23d5dd45917d39de7ef
+RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 553fa2ea79e3b77c9358b62551b9b908fd10c3b5
+Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 27267 bytes
+SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 8b92d36408828b7a324fb9545a77624ce8bf7857
+RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 6633aeca93fee425f7087201ddd1eb8922e88896
+Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 11896427 
+SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 9c4f5b5ccb002b58fd2046cae45706e6d19bf9c1
+RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 18c14763a1966f642a8937ff5a348a6868a0f659
+Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 13363688 
+SHA1 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = f22c615a73fa1eb11a1a9237646ae86a81007da3
+RMD160 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 7a4a3a088090f6f3d3622294e092c1a58f427c69
+Size (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 9674559 bytes

@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2007/05/12 13:53:07 ghen Exp $
+$NetBSD: patch-ac,v 1.9.4.1 2007/10/22 23:18:58 salo Exp $
 
-diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2005-06-15 17:32:21.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2005-12-04 19:03:04.000000000 +0900
-@@ -61,10 +61,13 @@
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2007-10-03 14:54:53.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
+@@ -62,10 +62,13 @@ include $(topsrcdir)/config/config.mk
  #
  # Lots of Unixish x86 flavors
  #
@@ -17,8 +16,8 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/
 +endif
  endif
  #
- # New code for Linux, et. al., with gcc
-@@ -157,7 +160,7 @@
+ # OpenBSD/amd64
+@@ -170,7 +173,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -27,7 +26,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -191,7 +194,7 @@
+@@ -214,7 +217,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -36,7 +35,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -274,6 +277,7 @@
+@@ -297,6 +300,7 @@ endif
  ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
  CPPSRCS		:= xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
@@ -44,7 +43,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/
  endif
  
  #
-@@ -322,6 +326,13 @@
+@@ -353,6 +357,13 @@ ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
