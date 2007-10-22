@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2207 2007/10/22 06:16:57 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2208 2007/10/22 06:54:56 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4154,3 +4154,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/postfix to 2.4.6 [martti 2007-10-22]
 	Updated mail/postfix-current to 2.5-20071006 [martti 2007-10-22]
 	Updated editors/vim-share to 7.1.145 [martti 2007-10-22]
+	Updated security/p5-Net-SSH to 1.30 [dogcow 2007-10-22]
