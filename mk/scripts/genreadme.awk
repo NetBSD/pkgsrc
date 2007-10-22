@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.28 2007/08/29 23:26:30 adrianp Exp $
+# $NetBSD: genreadme.awk,v 1.28.2.1 2007/10/22 11:23:33 ghen Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -380,7 +380,7 @@ END {
 # XXX: shown in the generated README.html files for packages.
 
 			vul = "";
-			if (have_vfile && PKGTOOLS_VER < 20070714) {
+			if (have_vfile && PKGTOOLS_VERSION < 20070714) {
 				i = 1;
 				pkgbase = pkgdir2name[toppkg];
 				gsub(/-[^-]*$/, "", pkgbase);
@@ -410,7 +410,7 @@ END {
 				}
 			}
 
-			if (have_vfile && PKGTOOLS_VER >= 20070714) {
+			if (have_vfile && PKGTOOLS_VERSION >= 20070714) {
 				pkg = pkgdir2name[toppkg];
 
 				if (debug) {

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.19 2007/10/09 19:19:13 martti Exp $
+# $NetBSD: mkreadme,v 1.19.2.1 2007/10/22 11:23:33 ghen Exp $
 #
 # Script for README.html generation
 #
@@ -447,6 +447,7 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     PKG_SUFX=$PKG_SUFX \
     PKG_URL=$PKG_URL \
     PKGSRCDIR=$PKGSRCDIR \
+    PKGTOOLS_VERSION=$PKGTOOLS_VERSION \
     PVDIR=$PVDIR \
     SED=$SED \
     SETENV=$SETENV \
