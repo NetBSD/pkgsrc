@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.14 2007/10/09 19:19:12 martti Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.14.2.1 2007/10/22 11:23:32 ghen Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -299,7 +299,7 @@ README.html: .PRECIOUS
 		PKG_URL=${PKG_URL:Q} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||:Q} \
 		PVDIR=$$_PVDIR \
-		PKGTOOLS_VER=${PKGTOOLS_VERSION} \
+		PKGTOOLS_VERSION=${PKGTOOLS_VERSION} \
 		SED=${SED:Q} \
 		SETENV=${SETENV:Q} \
 		SORT=${SORT:Q} \
