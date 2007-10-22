@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/10/22 12:15:04 dsainty Exp $
+# $NetBSD: options.mk,v 1.4 2007/10/22 12:35:32 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups
@@ -21,7 +21,7 @@ PLIST_SUBST+=		CUPS=
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=	${PREFIX}/share/examples/cups
-CONF_FILES=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+CONF_FILES+=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
 
 SUBST_CLASSES+=		cupsetc
 SUBST_STAGE.cupsetc=	post-extract
