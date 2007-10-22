@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2206 2007/10/21 23:43:10 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2207 2007/10/22 06:16:57 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4151,3 +4151,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/keepassx version 0.2.2 [adrianp 2007-10-21]
 	Updated security/openssl to 0.9.7inb5 [adrianp 2007-10-21]
 	Updated devel/yasm to 0.6.2 [minskim 2007-10-21]
+	Updated mail/postfix to 2.4.6 [martti 2007-10-22]
+	Updated mail/postfix-current to 2.5-20071006 [martti 2007-10-22]
+	Updated editors/vim-share to 7.1.145 [martti 2007-10-22]
