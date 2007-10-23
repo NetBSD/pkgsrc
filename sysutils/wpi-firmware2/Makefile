@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/18 18:43:50 degroote Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/23 14:11:51 joerg Exp $
 #
 
 VERSION=		2.14.4
@@ -12,16 +12,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://intellinuxwireless.org/
 COMMENT=		Firmware binary images for wpi(4) driver
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-
-DATA_DESTDIR=${PREFIX}/libdata/if_wpi
+INSTALLATION_DIRS=	libdata/if_wpi
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATA_DESTDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.iwlwifi-3945-ucode  ${DATA_DESTDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.iwlwifi-3945-ucode ${DATA_DESTDIR}
-	${INSTALL_DATA} ${WRKSRC}/iwlwifi-3945.ucode ${DATA_DESTDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.iwlwifi-3945-ucode  ${DESTDIR}${PREFIX}/libdata/if_wpi
+	${INSTALL_DATA} ${WRKSRC}/README.iwlwifi-3945-ucode  ${DESTDIR}${PREFIX}/libdata/if_wpi
+	${INSTALL_DATA} ${WRKSRC}/iwlwifi-3945.ucode  ${DESTDIR}${PREFIX}/libdata/if_wpi
 
 .include "../../mk/bsd.pkg.mk"
