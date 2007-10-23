@@ -7,5 +7,6 @@ distribution of GNU Ghostscript and distributed under the terms of the GNU
 Public License.  ESP Ghostscript incorporates the CUPS raster printer
 driver and a large number of contributed Ghostscript printer drivers.
 
-Note that print/ghostscript now has cups support, and that this version is older.
-Thus ghostscript-esp is deprecated and will be removed at some point.
+Note that print/ghostscript now has cups support, and that this
+version is older.  Thus ghostscript-esp is deprecated and will be
+removed at some point.
