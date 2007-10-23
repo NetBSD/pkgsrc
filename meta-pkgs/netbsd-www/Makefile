@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/12/24 10:36:49 jnemeth Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/23 20:19:57 heinz Exp $
 #
 
 DISTNAME=	netbsd-www-1.4
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	grant@NetBSD.org
 COMMENT=	Packages required to build the NetBSD.org web site
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # we add an explicit dependency on docbook-xsl here since earlier versions
 # generated slightly different html code, leading to a large number of
