@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2215 2007/10/23 12:12:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2216 2007/10/23 15:18:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-MIME-tools to 5.423 [wiz 2007-10-23]
 	Updated security/gnutls to 2.0.2 [wiz 2007-10-23]
 	Updated devel/glibmm to 2.14.2 [wiz 2007-10-23]
+	Updated mail/exim-html to 4.68 [adam 2007-10-23]
