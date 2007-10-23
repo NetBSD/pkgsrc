@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/10/13 14:18:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/10/23 12:11:30 wiz Exp $
 include/glibmm-2.4/glibmm.h
 include/glibmm-2.4/glibmm/arrayhandle.h
 include/glibmm-2.4/glibmm/class.h
@@ -427,7 +427,6 @@ share/doc/glibmm-2.4/docs/reference/html/containers_8h.html
 share/doc/glibmm-2.4/docs/reference/html/convert_8h.html
 share/doc/glibmm-2.4/docs/reference/html/date_8h.html
 share/doc/glibmm-2.4/docs/reference/html/debug_8h.html
-share/doc/glibmm-2.4/docs/reference/html/deprecated.html
 share/doc/glibmm-2.4/docs/reference/html/dispatcher_8h.html
 share/doc/glibmm-2.4/docs/reference/html/doxygen.css
 share/doc/glibmm-2.4/docs/reference/html/doxygen.png
