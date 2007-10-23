@@ -1,4 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 20:09:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/10/23 15:34:32 tnn Exp $
+
+BUILDLINK_DEPMETHOD.recordproto?=	build
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RECORDPROTO_BUILDLINK3_MK:=	${RECORDPROTO_BUILDLINK3_MK}+
