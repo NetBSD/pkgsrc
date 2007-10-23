@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2214 2007/10/23 11:44:29 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2215 2007/10/23 12:12:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/inspircd to 1.1.14 [adrianp 2007-10-22]
 	Updated mail/p5-MIME-tools to 5.423 [wiz 2007-10-23]
 	Updated security/gnutls to 2.0.2 [wiz 2007-10-23]
+	Updated devel/glibmm to 2.14.2 [wiz 2007-10-23]
