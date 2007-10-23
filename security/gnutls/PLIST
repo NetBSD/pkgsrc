@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2007/09/05 21:51:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2007/10/23 11:43:56 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -54,11 +54,6 @@ man/man3/gnutls_anon_set_server_params_function.3
 man/man3/gnutls_auth_client_get_type.3
 man/man3/gnutls_auth_get_type.3
 man/man3/gnutls_auth_server_get_type.3
-man/man3/gnutls_authz_enable.3
-man/man3/gnutls_authz_send_saml_assertion.3
-man/man3/gnutls_authz_send_saml_assertion_url.3
-man/man3/gnutls_authz_send_x509_attr_cert.3
-man/man3/gnutls_authz_send_x509_attr_cert_url.3
 man/man3/gnutls_bye.3
 man/man3/gnutls_certificate_activation_time_peers.3
 man/man3/gnutls_certificate_allocate_credentials.3
@@ -478,7 +473,6 @@ share/doc/gnutls/TODO
 share/doc/gnutls/gnutls.ps
 share/examples/gnutls/ex-alert.c
 share/examples/gnutls/ex-cert-select.c
-share/examples/gnutls/ex-client-authz.c
 share/examples/gnutls/ex-client-resume.c
 share/examples/gnutls/ex-client-srp.c
 share/examples/gnutls/ex-client-tlsia.c
@@ -488,7 +482,6 @@ share/examples/gnutls/ex-crq.c
 share/examples/gnutls/ex-pkcs12.c
 share/examples/gnutls/ex-rfc2818.c
 share/examples/gnutls/ex-serv-anon.c
-share/examples/gnutls/ex-serv-authz.c
 share/examples/gnutls/ex-serv-export.c
 share/examples/gnutls/ex-serv-pgp.c
 share/examples/gnutls/ex-serv-srp.c
