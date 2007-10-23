@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/09/16 07:33:15 dsainty Exp $
+# $NetBSD: Makefile,v 1.31 2007/10/23 11:15:25 dsainty Exp $
 
 DISTNAME=	dar-2.3.5
 CATEGORIES=	archivers sysutils
@@ -60,4 +60,5 @@ CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
