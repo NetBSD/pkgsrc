@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2007/09/23 17:08:01 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/23 20:16:52 smb Exp $
 #
 
 PLUGIN_NAME=	clamav_plugin
-PKGREVISION=	1
+PLUG_VER=	3.0.1
 .include "../../mail/claws-mail/plugins.mk"
 BUILD_DIRS=     src/plugins/clamav
 INSTALL_DIRS=   src/plugins/clamav
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Enables the scanning of message attachments using Clam AntiVirus
+PKGREVISION=	2
 
 CONFIGURE_ARGS+=	--enable-clamav-plugin
 
 USE_LANGUAGES=	c
 
-DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
+DEPENDS+=	claws-mail>=3.0.1:../../mail/claws-mail
 DEPENDS+=	clamav>=0.91.1nb1:../../mail/clamav
 
 .include "../../mail/claws-mail/Makefile.vers"
