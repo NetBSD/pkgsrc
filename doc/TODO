@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6763 2007/10/23 10:27:37 wiz Exp $
+$NetBSD: TODO,v 1.6764 2007/10/23 11:29:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -938,7 +938,6 @@ Suggested package updates
 	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.423
 	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
