@@ -1,4 +1,4 @@
-<!-- $NetBSD: ftp-layout.xml,v 1.10 2007/10/18 23:01:30 rillig Exp $ -->
+<!-- $NetBSD: ftp-layout.xml,v 1.11 2007/10/24 09:14:42 rillig Exp $ -->
 
 <appendix id="ftp-layout">
 <title>Directory layout of the pkgsrc FTP server</title>
@@ -68,7 +68,9 @@
 	
 	<listitem><para><varname>ARCH</varname> is the hardware
 	architecture of the platform for which the packages have been
-	built.</para></listitem>
+	built. It also includes the <varname>ABI</varname> (Application
+	Binary Interface) for platforms that have several of
+	them.</para></listitem>
 
 	<listitem><para><varname>OSVERSION</varname> is the version of
 	the operating system. For version numbers that change often (for
