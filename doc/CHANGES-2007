@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2221 2007/10/24 21:16:50 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.2222 2007/10/24 22:33:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4193,3 +4193,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/cdrtools to 2.01.01.36 [wiz 2007-10-24]
 	Updated editors/nano to 2.0.6 [obache 2007-10-24]
 	Updated graphics/p5-Image-ExifTool to 7.00 [gdt 2007-10-24]
+	Added www/ap2-wsgi version 1.0 [gdt 2007-10-24]
