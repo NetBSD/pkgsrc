@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6767 2007/10/24 09:38:29 wiz Exp $
+$NetBSD: TODO,v 1.6768 2007/10/24 15:29:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ Suggested package updates
 	o mysql-5.2
 	o nagios-3.0a5
 	o naim-0.11.8.3.1
-	o nano-2.0.6
 	o nap-1.5.3
 	o nautilus-2.20.0
 	o nautilus-cd-burner-2.18.2 [needs hal]
