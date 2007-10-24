@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/06/09 05:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/24 14:40:53 joerg Exp $
 #
 
 DISTNAME=	bsddb3-4.5.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pybsddb/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pybsddb.sourceforge.net/
 COMMENT=	Python extension module for Berkeley DB 4
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYSETUPBUILDARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
 PYSETUPINSTALLARGS=	--berkeley-db=${BUILDLINK_PREFIX.db4}
