@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/10/24 23:25:12 wiz Exp $
+
+--- Makefile.orig	2007-06-11 13:22:47.000000000 +0000
++++ Makefile
+@@ -38,7 +38,7 @@ LDFLAGS=-s
+ #CFLAGS=-02 -Wall -fomit-frame-pointer -Zomf -Zsmall-conv
+ #LDFLAGS=-s -Zomf -Zsmall-conv
+ 
+-prefix = /usr
++prefix = ${PREFIX}
+ 
+ VERSION=1.5.1.1
+ TREE_DEST=tree
