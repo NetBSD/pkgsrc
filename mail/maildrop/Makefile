@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/09/11 04:33:37 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2007/10/24 07:46:37 joerg Exp $
 
 DISTNAME=	maildrop-2.0.4
 PKGREVISION=	2
@@ -61,7 +61,7 @@ SPECIAL_PERMS+=	bin/maildrop ${REAL_ROOT_USER} ${COURIER_GROUP} 4555
 
 .include "../../devel/sysexits/buildlink3.mk"
 
-INSTALLATION_DIRS=	${DOCDIR}/maildrop
+INSTALLATION_DIRS=	libexec/courier ${DOCDIR}/maildrop share/courier
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DESTDIR}${DOCDIR}
