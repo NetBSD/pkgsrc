@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.6 2007/10/24 15:28:38 obache Exp $
+
+--- src/nano.c.orig	2007-01-12 02:58:12.000000000 +0000
++++ src/nano.c
+@@ -1280,6 +1280,7 @@ void terminal_init(void)
+ 	cbreak();
+ 	nonl();
+ 	noecho();
++	raw();
+ 	disable_extended_io();
+ 	disable_signals();
+ 	if (!ISSET(PRESERVE))
+@@ -2230,6 +2231,7 @@ int main(int argc, char **argv)
+ 
+ 	/* Make sure the cursor is in the edit window. */
+ 	reset_cursor();
++	wrefresh(edit);
+ 
+ #ifndef NANO_TINY
+ 	if (!jump_buf_main) {
