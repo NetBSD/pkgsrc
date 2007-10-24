@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2007/10/15 11:59:49 abs Exp $
+# $NetBSD: Makefile,v 1.69 2007/10/24 15:50:18 joerg Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	C++ X GUI toolkit
 
@@ -39,11 +39,11 @@ PKGCONFIG_OVERRIDE=	lib/qt-mt.pc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${DESTDIR}${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/lib/libqt-mt.la ${DESTDIR}${QTPREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libqt-mt.la ${DESTDIR}${QTPREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${DESTDIR}${QTPREFIX}/include/
 	${INSTALL_DATA} ${WRKSRC}/include/private/*.h ${DESTDIR}${QTPREFIX}/include/private
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
-	${LIBTOOL} ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/plugins/imageformats/libqmng.la ${DESTDIR}${QTPREFIX}/plugins/imageformats/
 	${INSTALL_DATA} ${WRKSRC}/lib/qt-mt.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
