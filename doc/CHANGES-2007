@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2218 2007/10/23 23:16:55 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2219 2007/10/24 09:51:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/claws-mail-trayicon to 3.0.1nb2 [smb 2007-10-23]
 	Updated mail/claws-mail-vcalendar to 1.98nb2 [smb 2007-10-23]
 	Added x11/xf86-video-radeonhd version 0.0.2 [xtraeme 2007-10-23]
+	Updated sysutils/cdrtools to 2.01.01.36 [wiz 2007-10-24]
