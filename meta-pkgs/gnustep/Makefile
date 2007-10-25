@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/09/21 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/25 22:00:52 jlam Exp $
 
 DISTNAME=	gnustep-1.11.2
 PKGREVISION=	3
@@ -25,8 +25,8 @@ DEPENDS+=	gworkspace>=0.7.1:../../sysutils/gworkspace
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

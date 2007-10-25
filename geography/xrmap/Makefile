@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/11 11:05:54 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/25 22:00:44 jlam Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -13,6 +13,7 @@ COMMENT=		Earth map viewer - complete
 
 NO_CHECKSUM=		yes
 NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 DEPENDS+=	xrmap-base-2.29nb1:../../geography/xrmap-base
 DEPENDS+=	xrmap-data>=0:../../geography/xrmap-data

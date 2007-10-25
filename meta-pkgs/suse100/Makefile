@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/07/29 05:19:35 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/25 22:00:57 jlam Exp $
 
 DISTNAME=	suse-${SUSE_VERSION}
 PKGREVISION=	4
@@ -17,6 +17,7 @@ EMUL_PKG_FMT=		plain
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 
