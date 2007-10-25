@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2224 2007/10/25 00:02:44 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2225 2007/10/25 14:53:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/ap2-wsgi version 1.0 [gdt 2007-10-24]
 	Updated sysutils/tree to 1.5.1.1nb1 [wiz 2007-10-24]
 	Updated multimedia/dvdstyler to 1.5.1 [wiz 2007-10-25]
+	Updated www/ap2-wsgi to 1.1 [gdt 2007-10-25]
