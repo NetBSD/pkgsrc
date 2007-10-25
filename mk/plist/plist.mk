@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.33 2007/10/25 16:46:14 jlam Exp $
+# $NetBSD: plist.mk,v 1.34 2007/10/25 17:49:45 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -171,11 +171,11 @@ _SHLIB_AWKFILE.none=	${.CURDIR}/../../mk/plist/shlib-none.awk
 #	that outputs contents for a PLIST to stdout and is appended to
 #	the contents of ${PLIST_SRC}.
 #
-.if !empty(PLIST_SRC)
-GENERATE_PLIST?=	${TRUE};
-.else
-GENERATE_PLIST?=	${ECHO} "@comment "${PKGNAME:Q}" has no files";
+.if empty(PLIST_SRC) && empty(GENERATE_PLIST)
+PKG_FAIL_REASON+=	"Missing PLIST file or GENERATE_PLIST definition."
 .endif
+
+GENERATE_PLIST?=	${TRUE};
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
@@ -216,11 +216,7 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${DESTDIR}${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-.  if !empty(PLIST_SRC)
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
-.  else
-_GENERATE_PLIST=	${GENERATE_PLIST}
-.  endif
+_GENERATE_PLIST=	${CAT} /dev/null ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
 
 .PHONY: plist
