@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/24 22:31:51 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/25 14:50:06 gdt Exp $
 #
 
 DISTNAME=	mod_wsgi-${VERSION}
@@ -12,13 +12,13 @@ COMMENT=	WSGI module for apache
 
 USE_LIBTOOL=	yes
 APACHE_MODULE=	yes
-VERSION=	1.0
+VERSION=	1.1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-apxs=${APXS:Q}
 CONFIGURE_ARGS+=--with-python=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 
