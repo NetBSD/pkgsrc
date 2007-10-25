@@ -1,13 +1,43 @@
-$NetBSD: patch-ab,v 1.1 2007/10/24 23:25:12 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2007/10/25 08:51:30 heinz Exp $
 
---- Makefile.orig	2007-06-11 13:22:47.000000000 +0000
+--- Makefile.orig	2007-06-11 15:22:47.000000000 +0200
 +++ Makefile
-@@ -38,7 +38,7 @@ LDFLAGS=-s
+@@ -38,13 +38,18 @@ LDFLAGS=-s
  #CFLAGS=-02 -Wall -fomit-frame-pointer -Zomf -Zsmall-conv
  #LDFLAGS=-s -Zomf -Zsmall-conv
  
 -prefix = /usr
-+prefix = ${PREFIX}
++PREFIX = /usr
  
  VERSION=1.5.1.1
  TREE_DEST=tree
+-BINDIR=${prefix}/bin
++BINDIR=${PREFIX}/bin
+ MAN=tree.1
+-MANDIR=${prefix}/man/man1
++MANSUBDIR=man
++MANDIR=${PREFIX}/${MANSUBDIR}/man1
++INSTALL_PROGRAM_DIR=install -d
++INSTALL_PROGRAM=install -s
++INSTALL_MAN_DIR=install -d
++INSTALL_MAN=install
+ 
+ all:	tree
+ 
+@@ -59,12 +64,12 @@ clean:
+ 	rm -f *~
+ 
+ install:
+-	install -d $(BINDIR)
+-	install -d $(MANDIR)
++	$(INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)
+ 	if [ -e $(TREE_DEST) ]; then \
+-		install -s $(TREE_DEST) $(BINDIR)/$(TREE_DEST); \
++		$(INSTALL_PROGRAM) $(TREE_DEST) $(DESTDIR)$(BINDIR)/$(TREE_DEST); \
+ 	fi
+-	install man/$(MAN) $(MANDIR)/$(MAN)
++	$(INSTALL_MAN) man/$(MAN) $(DESTDIR)$(MANDIR)/$(MAN)
+ 
+ distclean:
+ 	if [ -f tree.o ]; then rm *.o; fi
