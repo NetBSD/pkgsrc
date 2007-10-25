@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2007/10/19 10:53:00 ghen Exp $
+# $NetBSD: Makefile.common,v 1.10 2007/10/25 21:04:25 jlam Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -61,7 +61,6 @@ MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
 FILES_SUBST+=	MOZILLA=${MOZILLA:Q}
 FILES_SUBST+=	MOZ_EXTRA=${MOZ_EXTRA:Q}
 FILES_SUBST+=	MOZ_PLATFORM=${MOZ_PLATFORM:Q}
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 INSTALLATION_DIRS=	bin
 
@@ -130,14 +129,13 @@ post-install:
 .  endif
 .endif
 	@${INSTALL_DATA_DIR} ${PREFIX}/lib/mozilla-linux/plugins
-	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	@${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM} >> ${PLIST_SRC}
-	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
-		>> ${PLIST_SRC}
-	@${FIND} ${MOZILLA_LIB} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
-		>> ${PLIST_SRC}
-	@${ECHO} @exec ${MKDIR} %D/lib/mozilla-linux/plugins >> ${PLIST_SRC}
+
+GENERATE_PLIST+=							\
+	${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM};		\
+	${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";		\
+	${FIND} ${MOZILLA_LIB} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g";	\
+	${ECHO} "@exec ${MKDIR} %D/lib/mozilla-linux/plugins";
 
 .include "../../mk/bsd.pkg.mk"
