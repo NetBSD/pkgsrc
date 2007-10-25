@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6769 2007/10/25 00:02:44 wiz Exp $
+$NetBSD: TODO,v 1.6770 2007/10/25 21:08:58 adam Exp $
 
 Suggested new packages
 ======================
@@ -540,7 +540,6 @@ Suggested package updates
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
-	o gimp-2.4.0
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
 	o gkrellm-2.3.0
