@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6768 2007/10/24 15:29:45 obache Exp $
+$NetBSD: TODO,v 1.6769 2007/10/25 00:02:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,6 @@ Suggested package updates
 	o dpkg-1.13.25
 	o drscheme-371
 	o dvdrip-0.98.8
-	o dvdstyler-1.5
 	o dvipng-1.9
 	o dwm-4.5
 	o eagle-4.16
