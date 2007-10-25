@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2007/10/24 22:34:50 gdt Exp $
+# $NetBSD: Makefile,v 1.525 2007/10/25 23:27:16 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -53,8 +53,8 @@ SUBDIR+=	ap2-python
 SUBDIR+=	ap2-subversion
 SUBDIR+=	ap2-suphp
 SUBDIR+=	ap2-transform
-SUBDIR+=	ap2-xslt2
 SUBDIR+=	ap2-wsgi
+SUBDIR+=	ap2-xslt2
 SUBDIR+=	apache
 SUBDIR+=	apache-tomcat55
 SUBDIR+=	apache2
