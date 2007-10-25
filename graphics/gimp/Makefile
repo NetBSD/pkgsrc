@@ -1,29 +1,30 @@
-# $NetBSD: Makefile,v 1.161 2007/09/21 13:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.162 2007/10/25 21:06:15 adam Exp $
 
-DISTNAME=	gimp-2.2.17
-PKGREVISION=	3
+DISTNAME=	gimp-2.4.0
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
-		ftp://ftp.sunet.se/pub/gnu/gimp/v2.2/ \
-		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.2/ \
-		ftp://ftp.minet.net/pub/gimp/v2.2/ \
-		ftp://ftp.funet.fi/pub/sci/graphics/packages/gimp/gimp/v2.2/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.4/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/v2.4/ \
+		ftp://ftp.sunet.se/pub/gnu/gimp/v2.4/ \
+		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.4/ \
+		ftp://ftp.minet.net/pub/gimp/v2.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
-COMMENT=	Image manipulation program similar to Photoshop[tm]
+COMMENT=	The GNU image manipulation program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS+=		gimp<=1.2.3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config intltool
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_DIRS+=		xdg-1.1
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
-PKGCONFIG_OVERRIDE=	gimpthumb.pc.in
-PKGCONFIG_OVERRIDE+=	gimp.pc.in
-PKGCONFIG_OVERRIDE+=	gimpui.pc.in
+PKGCONFIG_OVERRIDE=	gimp.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,29 +36,30 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 
 UNLIMIT_RESOURCES+=	datasize
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unitrc
+.for f in controllerrc gimprc gtkrc menurc ps-menurc sessionrc templaterc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-TWAINBridge.app=	/System/Library/Image Capture/Devices/TWAINBridge.app
-.if ${OPSYS} == "Darwin" && exists(${TWAINBridge.app})
-PLIST_SUBST+=		TWAIN=
+.if exists(/System/Library/Frameworks/TWAIN.framework)
+PLIST_SUBST+=	TWAIN=""
 .else
-PLIST_SUBST+=		TWAIN="@comment "
+PLIST_SUBST+=	TWAIN="@comment "
 .endif
 
+.include "options.mk"
+
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
@@ -68,10 +70,15 @@ PLIST_SUBST+=		TWAIN="@comment "
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.if empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
+PLIST_SUBST+=	REMOTE="@comment "
+.else
+PLIST_SUBST+=	REMOTE=""
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
+.endif
 .include "../../x11/libXpm/buildlink3.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
