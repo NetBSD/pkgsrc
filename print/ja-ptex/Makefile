@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/15 14:42:17 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/10/25 22:01:04 jlam Exp $
 
 DISTNAME=	ja-ptex-1.0
 PKGREVISION=	3
@@ -18,6 +18,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 MESSAGE_SRC=	${PKGDIR}/MESSAGE
 

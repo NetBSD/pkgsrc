@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2007/09/22 06:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2007/10/25 22:00:51 jlam Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -74,7 +74,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

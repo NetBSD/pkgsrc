@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/05 04:48:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/25 22:00:46 jlam Exp $
 
 .include "Makefile.common"
 
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+PLIST_SRC=	# empty (meta-package)
 
 CANNA_MODULE=	meta-package
 
