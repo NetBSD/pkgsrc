@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/30 21:14:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2007/10/25 22:01:00 jlam Exp $
 #
 
 DISTNAME=	gnome1-dirs-1.6
@@ -19,6 +19,7 @@ NO_CHECKSUM=	yes
 NO_EXTRACT=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty
 
 .include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"

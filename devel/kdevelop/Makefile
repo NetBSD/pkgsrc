@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2007/10/20 10:51:38 markd Exp $
+# $NetBSD: Makefile,v 1.69 2007/10/25 22:00:42 jlam Exp $
 
 DISTNAME=	kdevelop-3.5.0
 CATEGORIES=	devel kde meta-pkgs
@@ -16,7 +16,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

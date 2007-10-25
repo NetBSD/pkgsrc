@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:20 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/10/25 22:01:07 jlam Exp $
 
 .include "Makefile.common"
 
@@ -12,7 +12,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-NO_MTREE=	YES
+PLIST_SRC=	# empty (meta-package)
 
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/rubyversion.mk"

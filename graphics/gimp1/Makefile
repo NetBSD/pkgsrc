@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/02 19:37:34 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/25 22:00:46 jlam Exp $
 #
 
 DISTNAME=	gimp-1.2.5
@@ -13,6 +13,7 @@ COMMENT=	GNU Image Manipulation Program
 
 NO_CHECKSUM=	yes
 NO_BUILD=	YES
+PLIST_SRC=	# empty (meta-package)
 
 DEPENDS+=	gimp-base>=1.2.5:../../graphics/gimp1-base
 DEPENDS+=	gimp-data>=1.2:../../graphics/gimp1-data

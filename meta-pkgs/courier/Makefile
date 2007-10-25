@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/10/17 13:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/25 22:00:49 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGREVISION=	1
@@ -42,6 +42,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

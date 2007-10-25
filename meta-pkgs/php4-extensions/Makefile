@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/11/06 21:36:49 jdolecek Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/25 22:00:56 jlam Exp $
 
 DISTNAME=	php-extensions-4.4
 PKGREVISION=	9
@@ -65,7 +65,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

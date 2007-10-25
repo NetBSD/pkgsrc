@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2007/10/25 22:01:05 jlam Exp $
 #
 
 DISTNAME=	amanda-2.4.4p4
@@ -19,6 +19,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

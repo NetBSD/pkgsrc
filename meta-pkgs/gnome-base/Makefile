@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/09/21 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2007/10/25 22:00:50 jlam Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -82,7 +82,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

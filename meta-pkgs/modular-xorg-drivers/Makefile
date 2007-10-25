@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/10 04:06:45 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/25 22:00:54 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.1
@@ -13,10 +13,10 @@ COMMENT=	Modular Xorg driver meta-package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_BUILD=		yes
 NO_CHECKSUM=		yes
-NO_MTREE=		yes
 NO_CONFIGURE=		yes
+NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-install:
 

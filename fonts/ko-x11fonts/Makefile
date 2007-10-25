@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/04/14 21:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/25 22:00:44 jlam Exp $
 
 DISTNAME=		ko-x11fonts-20010722
 PKGREVISION=		2
@@ -18,6 +18,7 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-install:		# empty
 

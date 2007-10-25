@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/09/09 14:31:45 taca Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/25 22:00:48 jlam Exp $
 #
 
 DISTNAME=	# empty
@@ -21,6 +21,7 @@ RUBY_VERSION=	${RUBY18_VERSION}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:
 	@${ECHO_MSG} This is only a meta package.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/20 12:07:12 adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/25 22:01:09 jlam Exp $
 
 DISTNAME=	qt4-${QTVERSION}
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-install:	# empty
 

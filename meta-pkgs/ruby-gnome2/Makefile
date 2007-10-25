@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/05/27 02:02:51 obache Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/25 22:00:57 jlam Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
@@ -24,7 +24,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

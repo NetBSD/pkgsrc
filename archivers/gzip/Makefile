@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/30 09:51:01 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2007/10/25 22:00:39 jlam Exp $
 #
 
 DISTNAME=	gzip-1.2.4b
@@ -20,6 +20,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/08/08 02:55:13 wulf Exp $
+# $NetBSD: Makefile,v 1.10 2007/10/25 22:00:52 jlam Exp $
 
 .include	"../../meta-pkgs/gnuradio/Makefile.version"
 
@@ -37,7 +37,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 
