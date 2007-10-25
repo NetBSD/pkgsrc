@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/10/20 10:37:48 markd Exp $
+# $NetBSD: Makefile,v 1.49 2007/10/25 21:04:25 jlam Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
@@ -17,15 +17,15 @@ INSTALL_TARGET=		install-data-local
 
 UNLIMIT_RESOURCES+=	datasize
 SKIP_PORTABILITY_CHECK=	yes
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+
+GENERATE_PLIST+=							\
+	( cd ${WRKSRC}/apidocs;						\
+	  ${FIND} . -type f -print | ${GREP} -v "classmap.inc" |	\
+	  ${GREP} -v "^./.*/.*/.*\.tag" | ${SORT} |			\
+	  ${SED} 's:^.:share/doc/kde/HTML/en/kdelibs-apidocs:' );
 
 post-install:
-	${RM} -f ${PLIST_SRC}
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	cd ${WRKSRC}/apidocs;						\
-	${FIND} . -type f -print | ${GREP} -v "classmap.inc" |		\
-	${GREP} -v "^./.*/.*/.*\.tag" | ${SORT} |			\
-	${SED} 's:^.:share/doc/kde/HTML/en/kdelibs-apidocs:' >> ${PLIST_SRC}; \
 	DOCDIRS=`${FIND} . -name classmap.inc -print | ${SED} 's:/classmap.inc::'`; \
 	cd ${WRKSRC};							\
 	for d in $${DOCDIRS}; do					\

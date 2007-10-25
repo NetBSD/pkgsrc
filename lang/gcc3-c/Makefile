@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/10/13 15:06:29 heinz Exp $
+# $NetBSD: Makefile,v 1.23 2007/10/25 21:04:22 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C compiler
@@ -11,7 +11,6 @@ INFO_FILES=	yes
 
 # The "gcc" frontend knows all languages (by patch)
 CONFIGURE_ARGS+=	--enable-languages=c
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 MAKE_ENV+=	ALL_GCC=${ALL_GCC:Q}
 MAKE_ENV+=	ALL_GCC_C=${ALL_GCC_C:Q}
@@ -26,6 +25,12 @@ BUILD_TARGET=	bootstrap
 post-build:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
+GENERATE_PLIST+=							\
+	${FIND} ${DESTDIR:Q}${GCC_PREFIX} \( -type f -o -type l \) -print \
+		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";	\
+	${FIND} ${DESTDIR:Q}${GCC_PREFIX} -type d -print		\
+		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g";
+
 post-install:
 .if ${OPSYS} == "SunOS"
 	cd ${DESTDIR:Q}${GCC_ARCHDIR}/include && ${RM} -f fixed
@@ -39,12 +44,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR:Q}${GCC_PREFIX}/mk
 	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${DESTDIR:Q}${GCC_PREFIX}/mk/c.mk
 	${LN} -f ${DESTDIR:Q}${GCC_PREFIX}/bin/gcc ${DESTDIR:Q}${GCC_PREFIX}/bin/cc
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${DESTDIR:Q}${GCC_PREFIX} \( -type f -o -type l \) -print \
-		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g"	\
-		>> ${PLIST_SRC}
-	${FIND} ${DESTDIR:Q}${GCC_PREFIX} -type d -print		\
-		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g" \
-		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

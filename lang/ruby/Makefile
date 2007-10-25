@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/09/09 14:20:26 taca Exp $
+# $NetBSD: Makefile,v 1.45 2007/10/25 21:04:22 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_SUFFIX}
@@ -14,7 +14,6 @@ CONFLICTS=	pkg_alternatives-[0-9]*
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-PLIST_SRC=	${WRKDIR}/PLIST
 
 .include "../../lang/ruby/rubyversion.mk"
 
@@ -27,15 +26,21 @@ RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+.if ${RUBY_NAME} == "ruby"
+GENERATE_PLIST+=	${ECHO} "@comment This plist intentionally left empty";
+.else
+.  for f in ${RUBY_COMMANDS}
+GENERATE_PLIST+=	${ECHO} bin/${f};
+.  endfor
+GENERATE_PLIST+=	${ECHO} man/man1/ruby.1;
+.endif
+
 do-install:
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .if ${RUBY_NAME} != "ruby"
-.for f in ${RUBY_COMMANDS}
+.  for f in ${RUBY_COMMANDS}
 	${LN} -sf ${f}${RUBY_VER} ${PREFIX}/bin/${f}
-	${ECHO} bin/${f} >> ${PLIST_SRC}
-.endfor
+.  endfor
 	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/${PKGMANDIR}/man1/ruby.1
-	${ECHO} man/man1/ruby.1 >> ${PLIST_SRC}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
