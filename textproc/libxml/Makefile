@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/12/27 18:25:07 reed Exp $
+# $NetBSD: Makefile,v 1.37 2007/10/25 20:20:59 rillig Exp $
 #
 
 DISTNAME=		libxml-1.8.17
@@ -16,6 +16,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libxml.pc.in
+
+# Making all in doc
+# bmake: bmake: don't know how to make libxml/tree.h. Stop
+MAKE_JOBS_SAFE=		no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
