@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/24 22:42:50 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/25 22:00:54 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-fonts-1.0
@@ -37,10 +37,10 @@ DEPENDS+=	font-misc-misc-[0-9]*:../../fonts/font-misc-misc
 DEPENDS+=	font-mutt-misc-[0-9]*:../../fonts/font-mutt-misc
 DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 
-NO_BUILD=		yes
 NO_CHECKSUM=		yes
-NO_MTREE=		yes
 NO_CONFIGURE=		yes
+NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-install:
 

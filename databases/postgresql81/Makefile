@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/21 06:39:33 martti Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/25 22:00:41 jlam Exp $
 
 PKGNAME=	postgresql81-${BASE_VERS}
 COMMENT=	Robust, next generation, object-relational DBMS
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 do-patch:	# empty

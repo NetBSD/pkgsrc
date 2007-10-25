@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2007/09/02 13:02:36 ghen Exp $
+# $NetBSD: Makefile,v 1.121 2007/10/25 22:00:41 jlam Exp $
 
 DISTNAME=		openldap-${OPENLDAP_VERSION}
 OPENLDAP_VERSION=	2.3.38
@@ -18,6 +18,7 @@ EXTRACT_ONLY=		# yes
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-patch:		# empty
 do-install:		# empty

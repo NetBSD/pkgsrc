@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/30 19:49:24 reed Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/25 22:00:58 jlam Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.2
@@ -30,7 +30,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

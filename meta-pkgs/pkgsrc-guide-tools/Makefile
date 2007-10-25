@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/19 16:40:27 tv Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/25 22:00:57 jlam Exp $
 #
 
 DISTNAME=	pkgsrc-guide-tools-1.0
@@ -17,7 +17,7 @@ _GUIDE_DEPTYPE=	run
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:
 	@${DO_NADA}

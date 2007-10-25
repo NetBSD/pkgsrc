@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/12/05 21:00:12 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/25 22:01:05 jlam Exp $
 
 DISTNAME=	texmf-dirs-1.4
 CATEGORIES=	print
@@ -9,10 +9,11 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Local TeX directory structure
 
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 NO_EXTRACT=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+PLIST_SRC=	# empty
 USE_LANGUAGES=	# empty
 WRKSRC=		${WRKDIR}
 

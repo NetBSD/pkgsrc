@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/05/21 10:04:40 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/25 22:00:40 jlam Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -37,7 +37,7 @@ DEPENDS+=	mex-wcalc-${VER}*:../../cad/mex-wcalc
 EXTRACT_ONLY=	# none
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-patch:	# empty
 do-install:	# empty

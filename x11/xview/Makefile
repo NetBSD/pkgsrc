@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/25 22:01:10 jlam Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -23,6 +23,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

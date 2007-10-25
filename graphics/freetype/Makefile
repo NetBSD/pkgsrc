@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/17 19:41:33 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2007/10/25 22:00:45 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.5
@@ -17,6 +17,7 @@ EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+PLIST_SRC=		# empty (meta-package)
 
 do-install:		# empty
 

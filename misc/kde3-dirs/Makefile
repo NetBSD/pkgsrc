@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/26 02:30:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/25 22:01:01 jlam Exp $
 #
 
 DISTNAME=	kde3-dirs-1.0
@@ -18,6 +18,7 @@ NO_EXTRACT=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty
 
 .include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"

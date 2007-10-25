@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/10/23 21:32:08 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2007/10/25 22:00:55 jlam Exp $
 #
 
 DISTNAME=	netbsd-doc-1.2
@@ -25,7 +25,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 
