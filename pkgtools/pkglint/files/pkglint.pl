@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.721 2007/10/13 08:55:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.722 2007/10/25 16:08:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7297,6 +7297,20 @@ sub checkfile_PLIST($) {
 		return;
 	}
 	checkline_rcsid($lines->[0], "\@comment ");
+
+	if (@$lines == 1) {
+		$lines->[0]->log_warning("PLIST files shouldn't be empty.");
+		$lines->[0]->explain_warning(
+
+"One reason for empty PLISTs is that this is a newly created package",
+"and that the author didn't run \"bmake print-PLIST\" after installing",
+"the files.",
+"",
+"Another reason, common for Perl packages, is that the PLIST is",
+"automatically generated. Since there is no use of the empty PLIST file,",
+"it shouldn't be necessary. This should be fixed in the pkgsrc",
+"infrastructure.");
+	}
 
 	# Get the list of all files from the PLIST.
 	$all_files = {};
