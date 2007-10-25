@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/20 22:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/10/25 22:00:52 jlam Exp $
 
 DISTNAME=	gtk2-extras-2.8.0
 PKGREVISION=	4
@@ -19,7 +19,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 

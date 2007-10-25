@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:11:42 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/10/25 22:01:09 jlam Exp $
 #
 
 DISTNAME=	qt2-${QTVERSION}
@@ -21,6 +21,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+PLIST_SRC=	# empty (meta-package)
 
 do-install:	# empty
 
