@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/04/07 22:23:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2007/10/25 21:04:22 jlam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -115,7 +115,6 @@ USE_TOOLS+=		gmake makeinfo msgfmt
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 
@@ -226,14 +225,11 @@ do-install:
 		done )
 .endif
 
-post-install:
-	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print	\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
-		>> ${PLIST_SRC}
+GENERATE_PLIST+=							\
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";		\
+	${FIND} ${GCC_PREFIX} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g";
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])

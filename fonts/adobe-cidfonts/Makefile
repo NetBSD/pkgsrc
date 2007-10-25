@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:38 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/25 21:04:21 jlam Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
@@ -30,9 +30,15 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
+RESOURCESUBDIR=	share/Adobe/Resource
+RESOURCEDIR=	${PREFIX}/${RESOURCESUBDIR}
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+GENERATE_PLIST=								\
+	for f in ${DISTFILES:O:u}; do					\
+		${ECHO} ${RESOURCESUBDIR}/CIDFont/$$f;			\
+	done;								\
+	${ECHO} "@dirrm ${RESOURCESUBDIR}/CIDFont";			\
+	${ECHO} "@unexec ${RMDIR} -p %D/${RESOURCESUBDIR} 2>/dev/null || ${TRUE}";
 
 do-install:
 	${INSTALL_DATA_DIR} ${RESOURCEDIR}/CIDFont
@@ -40,13 +46,5 @@ do-install:
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$${file}	\
 			${RESOURCEDIR}/CIDFont;				\
 	done
-	${CAT} ${.CURDIR}/PLIST > ${PLIST_SRC}
-	( for file in ${DISTFILES}; do					\
-		${ECHO} ${RESOURCEDIR:S/^${PREFIX}\///}/CIDFont/$${file}; \
-	  done;								\
-	) | ${SORT} -u >> ${PLIST_SRC}
-	( ${ECHO} "@dirrm ${RESOURCEDIR:S/^${PREFIX}\///}/CIDFont";	\
-	  ${ECHO} "@unexec ${RMDIR} -p %D/${RESOURCEDIR:S/^${PREFIX}\///} 2>/dev/null || ${TRUE}";	\
-	) >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

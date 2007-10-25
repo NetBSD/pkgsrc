@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/14 12:12:57 markd Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/25 21:04:23 jlam Exp $
 
 .include "Makefile.common"
 
@@ -20,19 +20,18 @@ COMMENT=	Foomatic PPDs collection
 DEPENDS=	foomatic-filters>=3.0.2:../../print/foomatic-filters
 
 REQD_DIRS=	share/foomatic
-PLIST_SRC=	${WRKDIR}/PLIST_SRC
 
 CHECK_PORTABILITY_SKIP=		install
 
-do-build:
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	cd ${WRKSRC}/share;						\
-	${FIND} ppd -type f -print | ${SORT} -u |			\
-	${SED} -e "s|^|share/foomatic/|" >> ${PLIST_SRC}
-	cd ${WRKSRC}/share;						\
-	${FIND} ppd -type d -print | ${SORT} -ur |			\
-	${SED} -e "s|^|@dirrm share/foomatic/|" >> ${PLIST_SRC}
-	${ECHO} "@dirrm share/foomatic" >> ${PLIST_SRC}
+GENERATE_PLIST+=							\
+	( cd ${WRKSRC}/share;						\
+	  ${FIND} ppd -type f -print | ${SORT} -u |			\
+	  ${SED} -e "s|^|share/foomatic/|";				\
+	  ${FIND} ppd -type d -print | ${SORT} -ur |			\
+	  ${SED} -e "s|^|@dirrm share/foomatic/|";			\
+	  ${ECHO} "@dirrm share/foomatic" );
+
+do-build:	# nothing
 
 do-install:
 	${CP} -R ${WRKSRC}/share/ppd ${PREFIX}/share/foomatic/ppd
