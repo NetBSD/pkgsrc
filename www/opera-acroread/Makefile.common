@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2007/08/23 18:20:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2007/10/25 22:01:08 jlam Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -17,8 +17,7 @@ WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 BUILD_DIRS=		# empty
-
-PLIST_SRC=		${PKGSRCDIR}/www/opera-acroread/PLIST
+PLIST_SRC=		# empty
 
 FILES_SUBST+=		ACROREAD=${ACROREAD:Q}
 FILES_SUBST+=		ACRO_SUBDIR=${ACRO_SUBDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/25 22:01:03 jlam Exp $
 #
 
 DISTNAME=	prereq-readme-20050521
@@ -16,6 +16,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_INSTALL=	# defined
 NO_PACKAGE=	# defined
+PLIST_SRC=	# empty (meta-package)
 
 # list all the tools we use
 USE_TOOLS+=	awk
