@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/01/31 02:57:18 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2007/10/25 00:02:02 wiz Exp $
 
---- Makefile.in.orig	2006-01-31 03:38:30.000000000 +0100
-+++ Makefile.in	2006-01-31 03:38:43.000000000 +0100
-@@ -146,7 +146,7 @@
+--- Makefile.in.orig	2006-10-29 15:53:56.000000000 +0000
++++ Makefile.in
+@@ -151,7 +151,7 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
