@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.32 2007/10/10 02:37:13 rillig Exp $
+# $NetBSD: plist.mk,v 1.33 2007/10/25 16:46:14 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -171,7 +171,11 @@ _SHLIB_AWKFILE.none=	${.CURDIR}/../../mk/plist/shlib-none.awk
 #	that outputs contents for a PLIST to stdout and is appended to
 #	the contents of ${PLIST_SRC}.
 #
+.if !empty(PLIST_SRC)
 GENERATE_PLIST?=	${TRUE};
+.else
+GENERATE_PLIST?=	${ECHO} "@comment "${PKGNAME:Q}" has no files";
+.endif
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
@@ -212,14 +216,17 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${DESTDIR}${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC};				\
-			${GENERATE_PLIST}
+.  if !empty(PLIST_SRC)
+_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
+.  else
+_GENERATE_PLIST=	${GENERATE_PLIST}
+.  endif
 .endif
 
 .PHONY: plist
 plist: ${PLIST} ${_PLIST_NOKEYWORDS}
 
-.if ${PLIST_TYPE} == "static"
+.if (${PLIST_TYPE} == "static") && !empty(PLIST_SRC)
 ${PLIST}: ${PLIST_SRC}
 .endif
 ${PLIST}:
