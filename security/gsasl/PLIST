@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/12/09 14:06:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/10/25 21:24:53 adam Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -58,6 +58,7 @@ man/man3/gsasl_done.3
 man/man3/gsasl_encode.3
 man/man3/gsasl_encode_inline.3
 man/man3/gsasl_finish.3
+man/man3/gsasl_free.3
 man/man3/gsasl_hmac_md5.3
 man/man3/gsasl_init.3
 man/man3/gsasl_md5.3
@@ -127,6 +128,7 @@ share/locale/fr/LC_MESSAGES/gsasl.mo
 share/locale/fr/LC_MESSAGES/libgsasl.mo
 share/locale/ga/LC_MESSAGES/gsasl.mo
 share/locale/ga/LC_MESSAGES/libgsasl.mo
+share/locale/id/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/libgsasl.mo
 share/locale/pl/LC_MESSAGES/gsasl.mo
@@ -141,3 +143,4 @@ share/locale/sv/LC_MESSAGES/libgsasl.mo
 share/locale/vi/LC_MESSAGES/gsasl.mo
 share/locale/vi/LC_MESSAGES/libgsasl.mo
 share/locale/zh_CN/LC_MESSAGES/gsasl.mo
+share/locale/zh_TW/LC_MESSAGES/gsasl.mo
