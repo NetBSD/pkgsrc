@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2007/09/18 19:06:22 drochner Exp $
+# $NetBSD: Makefile,v 1.106 2007/10/26 16:16:17 wiz Exp $
 
-DISTNAME=		pango-1.18.2
+DISTNAME=		pango-1.18.3
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.18/}
 EXTRACT_SUFX=		.tar.bz2
