@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2007/10/17 20:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2007/10/26 03:53:39 bjs Exp $
 
 DISTNAME=	libpng-1.2.22
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
@@ -24,7 +25,7 @@ USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 # keep this in sync with the same code in buildlink3.mk
-.if ${MACHINE_ARCH} != "i386"
+.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .endif
 
