@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/01/03 20:38:46 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/10/26 03:53:39 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNG_BUILDLINK3_MK:=	${PNG_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_ABI_DEPENDS.png+=	png>=1.2.9nb2
 BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
 
 # keep this in sync with the same code in Makefile
-.  if ${MACHINE_ARCH} != "i386"
+.  if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .  endif
 .endif	# PNG_BUILDLINK3_MK
