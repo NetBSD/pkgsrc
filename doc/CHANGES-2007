@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2231 2007/10/26 03:54:54 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2232 2007/10/26 14:09:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4203,3 +4203,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/gsasl to 0.2.21 [adam 2007-10-25]
 	Updated print/ja-jsclasses to 071024 [uebayasi 2007-10-26]
 	Updated graphics/png to 1.2.22nb1 [bjs 2007-10-26]
+	Updated devel/monotone to 0.37 [jmmv 2007-10-26]
+	Updated devel/monotone-server to 0.37 [jmmv 2007-10-26]
