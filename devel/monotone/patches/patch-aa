@@ -1,64 +1,13 @@
-$NetBSD: patch-aa,v 1.15 2007/08/13 12:09:47 jmmv Exp $
+$NetBSD: patch-aa,v 1.16 2007/10/26 14:08:25 jmmv Exp $
 
---- configure.orig	2007-08-03 08:15:48.000000000 +0200
+--- configure.orig	2007-10-26 10:31:46.000000000 +0200
 +++ configure
-@@ -9208,11 +9208,11 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_sizeof_short" >&5
- echo "${ECHO_T}$ac_cv_sizeof_short" >&6; }
- case $ac_cv_sizeof_short in
--  (2) mtn_s16_type='short'
-+  2) mtn_s16_type='short'
-       mtn_u16_type='unsigned short' ;;
--  (4) mtn_s32_type='short'
-+  4) mtn_s32_type='short'
-       mtn_u32_type='unsigned short' ;;
--  (8) mtn_s64_type='short'
-+  8) mtn_s64_type='short'
-       mtn_u64_type='unsigned short' ;;
- esac
- 
-@@ -9548,11 +9548,11 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_sizeof_long" >&5
- echo "${ECHO_T}$ac_cv_sizeof_long" >&6; }
- case $ac_cv_sizeof_long in
--  (2) mtn_s16_type='long'
-+  2) mtn_s16_type='long'
-       mtn_u16_type='unsigned long' ;;
--  (4) mtn_s32_type='long'
-+  4) mtn_s32_type='long'
-       mtn_u32_type='unsigned long' ;;
--  (8) mtn_s64_type='long'
-+  8) mtn_s64_type='long'
-       mtn_u64_type='unsigned long' ;;
- esac
- 
-@@ -9888,11 +9888,11 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_sizeof_int" >&5
- echo "${ECHO_T}$ac_cv_sizeof_int" >&6; }
- case $ac_cv_sizeof_int in
--  (2) mtn_s16_type='int'
-+  2) mtn_s16_type='int'
-       mtn_u16_type='unsigned int' ;;
--  (4) mtn_s32_type='int'
-+  4) mtn_s32_type='int'
-       mtn_u32_type='unsigned int' ;;
--  (8) mtn_s64_type='int'
-+  8) mtn_s64_type='int'
-       mtn_u64_type='unsigned int' ;;
- esac
- 
-@@ -10243,11 +10243,11 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_sizeof_long_long" >&5
- echo "${ECHO_T}$ac_cv_sizeof_long_long" >&6; }
- case $ac_cv_sizeof_long_long in
--  (2) mtn_s16_type='long long'
-+  2) mtn_s16_type='long long'
-       mtn_u16_type='unsigned long long' ;;
--  (4) mtn_s32_type='long long'
-+  4) mtn_s32_type='long long'
-       mtn_u32_type='unsigned long long' ;;
--  (8) mtn_s64_type='long long'
-+  8) mtn_s64_type='long long'
-       mtn_u64_type='unsigned long long' ;;
- esac
-  if test "$mtn_s64_type" = unknown
+@@ -12100,7 +12102,7 @@ echo $ECHO_N "checking for PCRE using pc
+        # automatically.
+        PCRE_LIBS="`pcre-config --libs | \
+                    sed -e 's:-L */usr/lib/*::' -e 's:-R */usr/lib/*::' \
+-                       -e 's:-L */lib/*:: -e 's:-R */lib/*::'`"
++                       -e 's:-L */lib/*::' -e 's:-R */lib/*::'`"
+        found_libpcre=yes
+        { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }

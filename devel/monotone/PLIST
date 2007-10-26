@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/10/05 22:41:36 bjs Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/10/26 14:08:24 jmmv Exp $
 bin/mtn
 info/monotone.info
 share/doc/monotone/figures/branch-heads.png
@@ -28,6 +28,7 @@ share/locale/it/LC_MESSAGES/monotone.mo
 share/locale/ja/LC_MESSAGES/monotone.mo
 share/locale/pt_BR/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
+share/monotone/contrib/Monotone.pm
 share/monotone/contrib/README
 share/monotone/contrib/ciabot_monotone.py
 share/monotone/contrib/ciabot_monotone_hookversion.py
@@ -35,6 +36,7 @@ share/monotone/contrib/color-logs.conf
 share/monotone/contrib/color-logs.sh
 share/monotone/contrib/colorize
 share/monotone/contrib/edit_comment_from_changelog.lua
+share/monotone/contrib/extra-commands.lua
 share/monotone/contrib/get_passphrase_from_file.lua
 share/monotone/contrib/get_stdio.pl
 share/monotone/contrib/monoprof.sh
@@ -42,6 +44,7 @@ share/monotone/contrib/monotone-buildbot-notification.lua
 share/monotone/contrib/monotone-cluster-push.lua
 share/monotone/contrib/monotone-cvs-ignore.lua
 share/monotone/contrib/monotone-log-of-pulled-revs-hook.lua
+share/monotone/contrib/monotone-mail-notify.lua
 share/monotone/contrib/monotone-mirror.lua
 share/monotone/contrib/monotone-nav.el
 share/monotone/contrib/monotone-notify-hookversion.lua
@@ -51,7 +54,6 @@ share/monotone/contrib/monotone.bash_completion
 share/monotone/contrib/monotone.el
 share/monotone/contrib/monotone.zsh_completion
 share/monotone/contrib/mtbrowse.sh
-share/monotone/contrib/usher.cc
 @dirrm share/monotone/contrib
 @dirrm share/monotone
 @dirrm share/doc/monotone/figures
