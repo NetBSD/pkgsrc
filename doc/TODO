@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6771 2007/10/25 21:26:45 adam Exp $
+$NetBSD: TODO,v 1.6772 2007/10/26 14:43:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -792,7 +792,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mcrypt-2.6.6
 	o memtestplus-1.70
-	o mercurial-0.9.5
 	o mesure-0.7.2
 	o metacity-2.20.0
 	o metakit-lib-2.4.9.6

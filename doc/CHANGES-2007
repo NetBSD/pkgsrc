@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2232 2007/10/26 14:09:39 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.2233 2007/10/26 14:43:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/png to 1.2.22nb1 [bjs 2007-10-26]
 	Updated devel/monotone to 0.37 [jmmv 2007-10-26]
 	Updated devel/monotone-server to 0.37 [jmmv 2007-10-26]
+	Updated devel/mercurial to 0.9.5 [wiz 2007-10-26]
