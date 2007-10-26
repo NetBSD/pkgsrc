@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/06/08 17:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/26 10:01:53 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -12,7 +12,7 @@ PATCH_SITES=	ftp://ftp.crashrecovery.org/pub/linux/cdrtools/ \
 		http://crashrecovery.org/oss-dvd/
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://crashrecovery.org/oss-dvd.html
 COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs/DVDs
 
