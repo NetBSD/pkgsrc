@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2229 2007/10/25 21:26:43 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2230 2007/10/26 03:18:15 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/spamprobe to 1.4d [ghen 2007-10-25]
 	Updated graphics/gimp to 2.4.0 [adam 2007-10-25]
 	Updated security/gsasl to 0.2.21 [adam 2007-10-25]
+	Updated print/ja-jsclasses to 071024 [uebayasi 2007-10-26]
