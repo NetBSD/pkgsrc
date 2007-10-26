@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6775 2007/10/26 16:09:30 wiz Exp $
+$NetBSD: TODO,v 1.6776 2007/10/26 16:17:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -975,7 +975,6 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.18.3
 	o pari-2.1.7
 	o pcal-4.8
 	o pciids-20070322
