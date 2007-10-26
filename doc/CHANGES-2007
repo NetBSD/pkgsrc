@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2234 2007/10/26 16:09:30 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2235 2007/10/26 16:17:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4207,3 +4207,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/monotone-server to 0.37 [jmmv 2007-10-26]
 	Updated devel/mercurial to 0.9.5 [wiz 2007-10-26]
 	Updated devel/glib2 to 2.14.2 [wiz 2007-10-26]
+	Updated devel/pango to 1.18.3 [wiz 2007-10-26]
