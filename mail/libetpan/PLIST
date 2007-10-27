@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/09 15:46:37 smb Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/27 13:55:26 wiz Exp $
 bin/libetpan-config
-include/libetpan.h
 include/libetpan/acl.h
 include/libetpan/acl_types.h
 include/libetpan/annotatemore.h
@@ -15,8 +14,13 @@ include/libetpan/dbdriver.h
 include/libetpan/dbdriver_message.h
 include/libetpan/dbdriver_types.h
 include/libetpan/dbstorage.h
+include/libetpan/feeddriver.h
+include/libetpan/feeddriver_message.h
+include/libetpan/feeddriver_types.h
+include/libetpan/feedstorage.h
 include/libetpan/generic_cache_types.h
 include/libetpan/hotmailstorage.h
+include/libetpan/idle.h
 include/libetpan/imapdriver.h
 include/libetpan/imapdriver_cached.h
 include/libetpan/imapdriver_cached_message.h
@@ -110,6 +114,10 @@ include/libetpan/mhdriver_types.h
 include/libetpan/mhstorage.h
 include/libetpan/mime_message_driver.h
 include/libetpan/mmapstring.h
+include/libetpan/newsfeed.h
+include/libetpan/newsfeed_item.h
+include/libetpan/newsfeed_item_enclosure.h
+include/libetpan/newsfeed_types.h
 include/libetpan/newsnntp.h
 include/libetpan/newsnntp_socket.h
 include/libetpan/newsnntp_ssl.h
