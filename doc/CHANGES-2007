@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2245 2007/10/27 11:20:59 grant Exp $
+$NetBSD: CHANGES-2007,v 1.2246 2007/10/27 11:26:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4221,3 +4221,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/openafs to 1.4.5 [gendalia 2007-10-27]
 	Updated archivers/pax to 20060202nb2 [grant 2007-10-27]
 	Updated pkgtools/pax to 20060202nb2 [grant 2007-10-27]
+	Updated www/surfraw to 2.2.0 [wiz 2007-10-27]
