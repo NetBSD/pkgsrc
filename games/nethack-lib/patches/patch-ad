@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2003/09/02 00:30:55 pooka Exp $
+$NetBSD: patch-ad,v 1.6 2007/10/27 18:07:54 pooka Exp $
 
 --- sys/unix/nethack.sh.orig	2003-08-30 03:08:04.000000000 +0300
 +++ sys/unix/nethack.sh	2003-09-02 02:52:31.000000000 +0300
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.5 2003/09/02 00:30:55 pooka Exp $
  #	SCCS Id: @(#)nethack.sh	3.4	1990/02/26
  
 -HACKDIR=/usr/games/lib/nethackdir
-+if [ "$1" = "" ]; then
++if [ -z "$1" -o -z "${1%%-*}" ]; then
 +	TTY=tty
 +else
 +	TTY=$1
