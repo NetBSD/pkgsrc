@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2243 2007/10/27 04:50:13 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2244 2007/10/27 09:13:03 gendalia Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/gnumeric-current to 1.7.13 [wiz 2007-10-27]
 	Updated sysutils/skill to 4.1.4 [obache 2007-10-27]
 	Updated devel/ruby-fastthread to 1.0.1 [minskim 2007-10-27]
+	Updated net/openafs to 1.4.5 [gendalia 2007-10-27]
