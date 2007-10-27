@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/03/21 19:49:24 gendalia Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/27 09:11:10 gendalia Exp $
 bin/afsmonitor
 bin/bos
 bin/cmdebug
@@ -217,10 +217,10 @@ sbin/fms
 sbin/fstrace
 sbin/kadb_check
 sbin/kas
+sbin/ka-forwarder
 sbin/kdb
 sbin/kdump/kdump-build
 sbin/kpwvalid
-sbin/kseal
 sbin/prdb_check
 sbin/pt_util
 sbin/read_tape
