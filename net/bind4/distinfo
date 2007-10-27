@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/05/25 13:12:48 wiz Exp $
-
-SHA1 (bind-4.9.11-REL.tar.gz) = 2387f291cb54a81aa8f92d9c9ec28fe71085a894
-RMD160 (bind-4.9.11-REL.tar.gz) = 79df438da8bf1a846cd8829478356eab63a78dc1
-Size (bind-4.9.11-REL.tar.gz) = 1970685 bytes
