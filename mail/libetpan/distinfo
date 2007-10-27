@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2007/07/08 20:23:12 smb Exp $
+$NetBSD: distinfo,v 1.8 2007/10/27 13:55:27 wiz Exp $
 
-SHA1 (libetpan-0.49.tar.gz) = 857fb35678aed2b7a67bea37907c0f4faec6f17f
-RMD160 (libetpan-0.49.tar.gz) = 0878873394f2c3d470a2b516413091f0fdd54a0b
-Size (libetpan-0.49.tar.gz) = 1021102 bytes
+SHA1 (libetpan-0.52.tar.gz) = e2fdf76b471e57a153bad4c4def7fde512385021
+RMD160 (libetpan-0.52.tar.gz) = 3e826d57987780b204c9074a9c225e960f214d66
+Size (libetpan-0.52.tar.gz) = 1611405 bytes
 SHA1 (patch-aa) = e783adf544c9a63df584815ee4b033249cecf0ff
-SHA1 (patch-ab) = 969db9d52a419c9557e3faad7fe17be91d96ab25
