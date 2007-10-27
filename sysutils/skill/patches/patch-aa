@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2002/06/28 10:45:32 abs Exp $
+$NetBSD: patch-aa,v 1.12 2007/10/27 02:52:23 obache Exp $
 
---- Makefile.orig	Sat Apr  6 05:53:39 2002
+--- Makefile.orig	2007-05-04 20:57:23.000000000 +0000
 +++ Makefile
-@@ -59,15 +59,15 @@ PREFIX=	/usr/local
+@@ -62,15 +62,15 @@ PREFIX=	/usr/local
  
  # CONFIGURE: Set location of executable, it's group and mode.
  BINDIR=	${PREFIX}/bin
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.11 2002/06/28 10:45:32 abs Exp $
  
  # CONFIGURE(Config): Add any OS-specific options here.
  COPTS=	
-@@ -79,7 +79,7 @@ SRCS=	main.c argparse.c getproc.c
+@@ -82,7 +82,7 @@ SRCS=	main.c argparse.c getproc.c
  OBJS=	main.o argparse.o getproc.o
  HDRS=	conf.h
  
@@ -30,9 +30,14 @@ $NetBSD: patch-aa,v 1.11 2002/06/28 10:45:32 abs Exp $
  
  all:	skill
  
-@@ -94,20 +94,20 @@ ${OBJS}: ${HDRS}
+@@ -96,23 +96,23 @@ getproc.c:
+ ${OBJS}: ${HDRS}
  
  install: skill
+-	-test -d ${DESTDIR}/${BINDIR} || mkdir -p -m 755 ${DESTDIR}/${BINDIR}
+-	-test -d ${DESTDIR}/${MANDIR} || mkdir -p -m 755 ${DESTDIR}/${MANDIR}
++#	-test -d ${DESTDIR}/${BINDIR} || mkdir -p -m 755 ${DESTDIR}/${BINDIR}
++#	-test -d ${DESTDIR}/${MANDIR} || mkdir -p -m 755 ${DESTDIR}/${MANDIR}
  #(SysV)	filepriv -d ${DESTDIR}/${BINDIR}/skill
 -	rm -f ${DESTDIR}/${BINDIR}/skill ${DESTDIR}/${MANDIR}/skill.${MANSFX}
 -	rm -f ${DESTDIR}/${BINDIR}/snice ${DESTDIR}/${MANDIR}/snice.${MANSFX}
