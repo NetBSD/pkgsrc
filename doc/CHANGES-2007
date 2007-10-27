@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2244 2007/10/27 09:13:03 gendalia Exp $
+$NetBSD: CHANGES-2007,v 1.2245 2007/10/27 11:20:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4219,3 +4219,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/skill to 4.1.4 [obache 2007-10-27]
 	Updated devel/ruby-fastthread to 1.0.1 [minskim 2007-10-27]
 	Updated net/openafs to 1.4.5 [gendalia 2007-10-27]
+	Updated archivers/pax to 20060202nb2 [grant 2007-10-27]
+	Updated pkgtools/pax to 20060202nb2 [grant 2007-10-27]
