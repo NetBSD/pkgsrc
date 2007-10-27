@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2239 2007/10/27 00:39:58 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2240 2007/10/27 00:59:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added print/tex-draftwatermark version 1.0 [reed 2007-10-26]
 	Updated devel/netbsd-iscsi to 20071025 [agc 2007-10-26]
 	Updated audio/bmpx to 0.40.13 [wiz 2007-10-27]
+	Updated www/opera to 9.24 [xtraeme 2007-10-27]
