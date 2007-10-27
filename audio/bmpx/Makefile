@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:03:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/27 00:35:16 wiz Exp $
 #
 
-DISTNAME=	bmpx-0.40.1
-PKGREVISION=	3
+DISTNAME=	bmpx-0.40.13
 CATEGORIES=	audio
 MASTER_SITES=	http://files.beep-media-player.org/releases/0.40/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,10 +18,15 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-CONFIGURE_ENV+=		BOOST_REGEX_LIBS=-lboost_regex-mt
+CONFIGURE_ARGS+=	--with-boost-regex=mt
+CONFIGURE_ARGS+=	--with-boost-filesystem=mt
+CONFIGURE_ARGS+=	--with-boost-iostreams=mt
 # the following is a fix for nonsense in the configure script
-CONFIGURE_ENV+=		SQL3PATH=${BUILDLINK_PREFIX.sqlite3}
 CPPFLAGS+=		-I${LOCALBASE}/include/cdparanoia
+
+CHECK_WRKREF_SKIP=	bin/beep-media-player-2
+CHECK_WRKREF_SKIP+=	bin/bmp2
+CHECK_WRKREF_SKIP+=	libexec/beep-media-player-2-bin
 
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/libofa/buildlink3.mk"
@@ -39,7 +43,7 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.14.0
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm+=		gtkmm>=2.10.0
 .include "../../x11/gtkmm/buildlink3.mk"
