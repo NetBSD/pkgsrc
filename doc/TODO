@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6779 2007/10/27 02:59:46 obache Exp $
+$NetBSD: TODO,v 1.6780 2007/10/27 11:26:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1214,7 +1214,6 @@ Suggested package updates
 	o stratagus-2.2.2
 	o subtitleripper-0.3.4
 	o sunbird-0.5 [ghen]
-	o surfraw-2.2.0 [http://surfraw.alioth.debian.org/]
 	o suse_base-10.3
 	o swfdec-0.5.3
 	o swi-prolog-5.6.31
