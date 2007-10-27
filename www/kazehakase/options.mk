@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/09/24 16:26:54 salo Exp $
+# $NetBSD: options.mk,v 1.3 2007/10/27 13:03:50 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kazehakase
@@ -13,10 +13,4 @@ PKG_SUGGESTED_OPTIONS+=	gnutls
 CONFIGURE_ARGS+=	--enable-ssl
 .else
 CONFIGURE_ARGS+=	--disable-ssl
-.endif
-
-# Remove after upgrade to 0.3.4 or higher!
-#
-.if !empty(PKG_OPTIONS:Mseamonkey)
-BROKEN=		seamonkey backend is currently not supported
 .endif
