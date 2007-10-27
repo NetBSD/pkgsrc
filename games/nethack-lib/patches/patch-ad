@@ -1,16 +1,32 @@
-$NetBSD: patch-ad,v 1.6 2007/10/27 18:07:54 pooka Exp $
+$NetBSD: patch-ad,v 1.7 2007/10/27 18:26:34 pooka Exp $
 
---- sys/unix/nethack.sh.orig	2003-08-30 03:08:04.000000000 +0300
-+++ sys/unix/nethack.sh	2003-09-02 02:52:31.000000000 +0300
-@@ -1,9 +1,15 @@
+--- sys/unix/nethack.sh.orig	2003-12-08 00:39:13.000000000 +0100
++++ sys/unix/nethack.sh	2007-10-27 20:18:37.000000000 +0200
+@@ -1,9 +1,31 @@
  #!/bin/sh
  #	SCCS Id: @(#)nethack.sh	3.4	1990/02/26
  
 -HACKDIR=/usr/games/lib/nethackdir
++UILIST="tty x11 qt" 
++findbin ()
++{
++	for x in $UILIST; do
++		if [ -x XXXPREFIXXXX/bin/nethack-$x ]; then
++			echo $x
++			return
++		fi
++	done
++}
++
 +if [ -z "$1" -o -z "${1%%-*}" ]; then
-+	TTY=tty
++	TTY=`findbin`
 +else
 +	TTY=$1
++fi
++
++if [ -z "$TTY" ]; then
++	echo "No UI ($UILIST) found"
++	exit 1
 +fi
 +
 +HACKDIR=XXXPREFIXXXX/share/nethackdir340
