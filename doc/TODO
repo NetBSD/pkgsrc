@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6785 2007/10/27 12:40:47 wiz Exp $
+$NetBSD: TODO,v 1.6786 2007/10/27 13:05:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,6 @@ Suggested package updates
 	o jools-1.0
 	o jwhois-4.0
 	o kapooka-0.3
-	o kazehakase-0.4.6
 	o kbarcode-2.0.6
 	o kdrill-6.5
 	o kid3-0.9
