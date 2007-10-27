@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2238 2007/10/26 22:08:50 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2239 2007/10/27 00:39:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added print/tex-everypage version 1.0 [reed 2007-10-26]
 	Added print/tex-draftwatermark version 1.0 [reed 2007-10-26]
 	Updated devel/netbsd-iscsi to 20071025 [agc 2007-10-26]
+	Updated audio/bmpx to 0.40.13 [wiz 2007-10-27]
