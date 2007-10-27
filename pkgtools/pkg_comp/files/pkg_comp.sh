@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.32 2006/06/17 12:18:24 seb Exp $
+# $NetBSD: pkg_comp.sh,v 1.33 2007/10/27 17:11:24 seb Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -172,7 +172,7 @@ warn()
 #
 usage()
 {
-    echo "usage: $ProgName [-(c|C) conf_file] [-n] target [pkg_names]" 1>&2
+    echo "usage: $ProgName [-(c|C) conf_file] [-n] [-N] target [pkg_names]" 1>&2
     exit 1
 }
 
@@ -528,9 +528,9 @@ makeroot()
     trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
     makeroot_libkver
-    makeroot_digest
+    [ "$Nflag" = "no" ] && makeroot_digest
 
-    if [ "$USE_GCC3" = "yes" ]; then
+    if [ "$USE_GCC3" = "yes" -a "$Nflag" = "no" ]; then
         if [ -z "`echo $BUILD_PACKAGES $INSTALL_PACKAGES | grep gcc3`" ]; then
             AVOID_GCC3=yes pkg_build lang/gcc3
         fi
@@ -648,7 +648,7 @@ makeroot_x11()
             echo "export XAPPLRESDIR=${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/profile
             echo "setenv XAPPLRESDIR ${LOCALBASE}/lib/X11/app-defaults" >> $DESTDIR/etc/csh.login
         fi
-        pkg_build pkgtools/x11-links
+        [ "$Nflag" = "no" ] && pkg_build pkgtools/x11-links
     fi
 }
 
@@ -888,13 +888,14 @@ pkg_removeroot()
 confdir="$HOME/pkg_comp"
 
 # Parse options
-args=`getopt c:C:n $*`
+args=`getopt c:C:nN $*`
 if [ $? != 0 ]; then
     usage
 fi
 set -- $args
 conffile=
 nflag=no
+Nflag=no
 while [ $# -gt 0 ]; do
     case "$1" in
         -c)
@@ -909,6 +910,10 @@ while [ $# -gt 0 ]; do
             ;;
         -n)
             nflag=yes
+            ;;
+        -N)
+            nflag=yes
+            Nflag=yes
             ;;
         --)
             shift; break
