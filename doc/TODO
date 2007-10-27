@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6778 2007/10/27 02:27:05 wiz Exp $
+$NetBSD: TODO,v 1.6779 2007/10/27 02:59:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-5.0.1
-	o skill-4.1.4 [pkg/36788]
 	o skkinput-2.06.4
 	o skype-1.4.0.118
 	o smalleiffel-0.90
