@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2007/09/16 19:53:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2007/10/27 12:17:08 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -962,6 +962,8 @@ share/locale/ang/LC_MESSAGES/gtk20-properties.mo
 share/locale/ang/LC_MESSAGES/gtk20.mo
 share/locale/ar/LC_MESSAGES/gtk20-properties.mo
 share/locale/ar/LC_MESSAGES/gtk20.mo
+share/locale/as/LC_MESSAGES/gtk20-properties.mo
+share/locale/as/LC_MESSAGES/gtk20.mo
 share/locale/az/LC_MESSAGES/gtk20-properties.mo
 share/locale/az/LC_MESSAGES/gtk20.mo
 share/locale/az_IR/LC_MESSAGES/gtk20-properties.mo
@@ -1032,6 +1034,8 @@ share/locale/ia/LC_MESSAGES/gtk20-properties.mo
 share/locale/ia/LC_MESSAGES/gtk20.mo
 share/locale/id/LC_MESSAGES/gtk20-properties.mo
 share/locale/id/LC_MESSAGES/gtk20.mo
+share/locale/io/LC_MESSAGES/gtk20-properties.mo
+share/locale/io/LC_MESSAGES/gtk20.mo
 share/locale/is/LC_MESSAGES/gtk20-properties.mo
 share/locale/is/LC_MESSAGES/gtk20.mo
 share/locale/it/LC_MESSAGES/gtk20-properties.mo
