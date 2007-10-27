@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/10/27 11:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2007/10/27 12:27:46 wiz Exp $
 #
 
 DISTNAME=	surfraw-2.2.0
@@ -13,7 +13,9 @@ CONFLICTS+=	surfaw-[0-9]*
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
+REPLACE_PERL+=		surfraw-update-path.IN opensearch-discover \
+			opensearch-genquery
 
 DOCDIR=			${PREFIX}/share/doc/surfraw
 EGDIR=			${PREFIX}/share/examples/surfraw
