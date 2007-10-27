@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2248 2007/10/27 12:21:10 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2249 2007/10/27 12:31:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/bzr to 0.91 [wiz 2007-10-27]
 	Updated x11/gtk2 to 2.12.1 [wiz 2007-10-27]
 	Updated devel/p5-PathTools to 3.25 [wiz 2007-10-27]
+	Updated devel/p5-Test-Simple to 0.72 [wiz 2007-10-27]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6782 2007/10/27 12:21:10 wiz Exp $
+$NetBSD: TODO,v 1.6783 2007/10/27 12:31:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -950,7 +950,6 @@ Suggested package updates
 	o p5-Test-Harness-2.64
 	o p5-Test-Inline-2.207
 	o p5-Test-NoWarnings-0.083
-	o p5-Test-Simple-0.72
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
 	o p5-Test-Warn-0.09
