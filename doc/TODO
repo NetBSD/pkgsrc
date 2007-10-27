@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6783 2007/10/27 12:31:34 wiz Exp $
+$NetBSD: TODO,v 1.6784 2007/10/27 12:35:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ Suggested package updates
 	o p5-Time-TAI64-2.11
 	o p5-Want-0.15
 	o p5-XML-RAI-1.04
-	o p5-XML-RSS-1.31
 	o p5-XML-Stream-1.22
 	o p5-glib2-1.160
 	o p5-gtk2-1.160
