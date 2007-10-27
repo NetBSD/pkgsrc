@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2007/08/13 12:06:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/10/27 00:35:16 wiz Exp $
 bin/beep-media-player-2
-bin/bmp-enqueue-files-2.0
-bin/bmp-enqueue-uris-2.0
 bin/bmp-play-files-2.0
-bin/bmp-play-lastfm-2.0
+bin/bmp-play-uris-2.0
 bin/bmp2
 include/bmp-2.0/bmp/bmp.hh
 include/bmp-2.0/bmp/dbus.hh
+include/bmp-2.0/bmp/types/types-basic.hh
+include/bmp-2.0/bmp/types/types-bookmarks.hh
+include/bmp-2.0/bmp/types/types-database.hh
+include/bmp-2.0/bmp/types/types-lastfm.hh
+include/bmp-2.0/bmp/types/types-library.hh
+include/bmp-2.0/bmp/types/types-network.hh
+include/bmp-2.0/bmp/types/types-ui.hh
+include/bmp-2.0/bmp/types/types-xspf.hh
 lib/bmpx/plugins/taglib/libtaglib_plugin_asf.la
 lib/bmpx/plugins/taglib/libtaglib_plugin_flac.la
 lib/bmpx/plugins/taglib/libtaglib_plugin_mp3.la
@@ -19,14 +25,12 @@ lib/bmpx/plugins/vfs/container/libcontainer_pls.la
 lib/bmpx/plugins/vfs/container/libcontainer_xspf.la
 lib/bmpx/plugins/vfs/transport/libtransport_file.la
 lib/bmpx/plugins/vfs/transport/libtransport_http.la
-lib/libbmp_id3v2_reader.la
 lib/pkgconfig/bmp-2.0.pc
 libexec/beep-media-player-2-bin
 libexec/beep-media-player-2-sentinel
 man/man1/beep-media-player-2.1
 share/applications/bmp-2.0-offline.desktop
 share/applications/bmp-2.0.desktop
-share/applications/bmp-enqueue-2.0.desktop
 share/applications/bmp-play-2.0.desktop
 share/bmpx/glade/dialog-add-podcast.glade
 share/bmpx/glade/dialog-equalizer.glade
@@ -37,6 +41,7 @@ share/bmpx/glade/dialog-lastfm-recommend.glade
 share/bmpx/glade/dialog-lastfm-tag.glade
 share/bmpx/glade/dialog-play-uri.glade
 share/bmpx/glade/dialog-progress.glade
+share/bmpx/glade/dialog-remove-update-podcast.glade
 share/bmpx/glade/dialog-simple-entry.glade
 share/bmpx/glade/dialog-simple-progress.glade
 share/bmpx/glade/dialog-track-details.glade
@@ -116,34 +121,12 @@ share/bmpx/icons/themes/tango/icon_streams_64.png
 share/bmpx/icons/tray-icons/tray-icon-default.png
 share/bmpx/icons/tray-icons/tray-icon-paused.png
 share/bmpx/icons/tray-icons/tray-icon-playing.png
-share/bmpx/images/audio-default-no-background.png
 share/bmpx/images/audio-default.png
 share/bmpx/images/cdda/audiocd-big.png
 share/bmpx/images/cdda/audiocd-unplayable.png
-share/bmpx/images/collections/collection.png
 share/bmpx/images/cover-frame.png
-share/bmpx/images/hal/dev-cdrom.png
-share/bmpx/images/hal/dev-volume-1394.png
-share/bmpx/images/hal/dev-volume-ide.png
-share/bmpx/images/hal/dev-volume-usb.png
-share/bmpx/images/hal/device-camera.png
-share/bmpx/images/hal/device-cdrom.png
-share/bmpx/images/hal/device-cf-card.png
-share/bmpx/images/hal/device-floppy.png
-share/bmpx/images/hal/device-harddrive-1394.png
-share/bmpx/images/hal/device-harddrive-usb.png
-share/bmpx/images/hal/device-harddrive.png
-share/bmpx/images/hal/device-ipod.png
-share/bmpx/images/hal/device-ms.png
-share/bmpx/images/hal/device-removable-1394.png
-share/bmpx/images/hal/device-removable-usb.png
-share/bmpx/images/hal/device-removable.png
-share/bmpx/images/hal/device-sdmmc-card.png
-share/bmpx/images/hal/device-sm-card.png
+share/bmpx/images/lastfm/artist-unknown.png
 share/bmpx/images/lastfm/audioscrobbler.png
-share/bmpx/images/lastfm/header-logo-left.png
-share/bmpx/images/lastfm/header-logo-right.png
-share/bmpx/images/lastfm/header-logo-slice.png
 share/bmpx/images/lastfm/lastfm-album.png
 share/bmpx/images/lastfm/lastfm-artist.png
 share/bmpx/images/lastfm/lastfm-friend.png
@@ -157,22 +140,10 @@ share/bmpx/images/lastfm/lastfm-track.png
 share/bmpx/images/lastfm/lastfm-user.png
 share/bmpx/images/logo-about.png
 share/bmpx/images/logo-splash.png
-share/bmpx/images/main/header-logo-left.png
-share/bmpx/images/main/header-logo-right.png
-share/bmpx/images/main/header-logo-slice.png
-share/bmpx/images/main/warning.png
-share/bmpx/images/main/yingyang.gif
-share/bmpx/images/main/yingyang_paused.gif
-share/bmpx/images/main/yingyang_seeking.png
+share/bmpx/images/main/paused.gif
 share/bmpx/images/podcast/feed-default.png
 share/bmpx/images/podcast/feed-expired.png
-share/bmpx/images/preferences/lastfm.png
-share/bmpx/images/preferences/library.png
-share/bmpx/images/preferences/misc.png
-share/bmpx/images/preferences/museek.png
-share/bmpx/images/preferences/musicbrainz.png
-share/bmpx/images/preferences/playback.png
-share/bmpx/images/preferences/podcasts.png
+share/bmpx/images/podcast/updating.png
 share/bmpx/images/rating/stars_0.png
 share/bmpx/images/rating/stars_1.png
 share/bmpx/images/rating/stars_2.png
@@ -226,7 +197,6 @@ share/bmpx/images/stock/silk-feed_add.png
 share/bmpx/images/stock/silk-feed_delete.png
 share/bmpx/images/stock/silk-feed_disk.png
 share/bmpx/images/stock/silk-folder.png
-share/bmpx/images/stock/silk-html.png
 share/bmpx/images/stock/silk-new.png
 share/bmpx/images/stock/silk-picture.png
 share/bmpx/images/stock/silk-plugin.png
@@ -236,27 +206,20 @@ share/bmpx/images/stock/silk-world_link.png
 share/bmpx/images/stock/tag.png
 share/bmpx/images/stock/track.png
 share/bmpx/images/stock/undo.png
+share/bmpx/images/stock/web.png
 share/bmpx/images/stock/xiph.png
 share/bmpx/images/svg/button-background.svg
 share/bmpx/images/svg/button-outline.svg
+share/bmpx/images/throbber-small.gif
 share/bmpx/images/throbber.gif
+share/bmpx/images/video-default.png
 share/dbus-1/services/org.beepmediaplayer.sentinel.service
 share/dbus-1/services/org.mpris.bmp.service
-share/doc/bmpx/images/active-source.png
-share/doc/bmpx/images/bmp-logo-small.png
-share/doc/bmpx/images/bmp.png
-share/doc/bmpx/images/favicon.ico
-share/doc/bmpx/images/gradient.png
-share/doc/bmpx/images/important.png
-share/doc/bmpx/images/main-window.png
-share/doc/bmpx/images/playing-source.png
-share/doc/bmpx/images/rect1869.png
-share/doc/bmpx/images/tip.png
 share/icons/hicolor/48x48/apps/bmpx.png
 share/locale/af/LC_MESSAGES/bmpx.mo
 share/locale/cs/LC_MESSAGES/bmpx.mo
+share/locale/da/LC_MESSAGES/bmpx.mo
 share/locale/de/LC_MESSAGES/bmpx.mo
-share/locale/dk/LC_MESSAGES/bmpx.mo
 share/locale/el/LC_MESSAGES/bmpx.mo
 share/locale/es/LC_MESSAGES/bmpx.mo
 share/locale/et/LC_MESSAGES/bmpx.mo
@@ -277,21 +240,14 @@ share/locale/th_TH/LC_MESSAGES/bmpx.mo
 share/locale/zh_CN/LC_MESSAGES/bmpx.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/bmpx/images
-@dirrm share/doc/bmpx
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm share/bmpx/images/svg
 @dirrm share/bmpx/images/stock
 @dirrm share/bmpx/images/sources
 @dirrm share/bmpx/images/rating
-@dirrm share/bmpx/images/preferences
 @dirrm share/bmpx/images/podcast
 @dirrm share/bmpx/images/main
-@exec ${MKDIR} %D/share/bmpx/images/library
-@dirrm share/bmpx/images/library
 @dirrm share/bmpx/images/lastfm
-@dirrm share/bmpx/images/hal
-@dirrm share/bmpx/images/collections
 @dirrm share/bmpx/images/cdda
 @dirrm share/bmpx/images
 @dirrm share/bmpx/icons/tray-icons
@@ -313,5 +269,6 @@ share/locale/zh_CN/LC_MESSAGES/bmpx.mo
 @dirrm lib/bmpx/plugins/taglib
 @dirrm lib/bmpx/plugins
 @dirrm lib/bmpx
+@dirrm include/bmp-2.0/bmp/types
 @dirrm include/bmp-2.0/bmp
 @dirrm include/bmp-2.0
