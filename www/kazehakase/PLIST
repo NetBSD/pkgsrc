@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/24 16:29:11 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/27 13:03:50 wiz Exp $
 bin/kazehakase
+lib/kazehakase/embed/gecko.la
 lib/kazehakase/libkazehakase.la
 man/man1/kazehakase.1
 share/applications/kazehakase.desktop
@@ -69,4 +70,7 @@ share/pixmaps/kazehakase-icon.png
 @dirrm share/examples/kazehakase/mozilla
 @dirrm share/examples/kazehakase
 @comment in xdg-dirs: @dirrm share/applications
+@exec ${MKDIR} %D/lib/kazehakase/search
+@dirrm lib/kazehakase/search
+@dirrm lib/kazehakase/embed
 @dirrm lib/kazehakase
