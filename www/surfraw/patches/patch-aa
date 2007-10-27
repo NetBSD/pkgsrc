@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2007/10/27 11:25:29 wiz Exp $
+
+--- surfraw.IN.orig	2007-09-07 02:59:36.000000000 +0000
++++ surfraw.IN
+@@ -302,7 +302,7 @@ w3_parse_args () {
+ }
+ 
+ w3_browse_url () {
+-   if ok SURFRAW_new_screen && test -n "$STY" && test $mode == text; then
++   if ok SURFRAW_new_screen && test -n "$STY" && test $mode = text; then
+    	screen=yes
+    else
+    	screen=no
