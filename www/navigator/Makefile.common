@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.87 2007/10/27 13:35:26 obache Exp $
+# $NetBSD: Makefile.common,v 1.88 2007/10/27 13:46:33 obache Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -98,7 +98,6 @@ post-install:
 	    ${LOCALBASE} ${MOZILLA_HOME}/netscape
 
 .elif ${EMUL_PLATFORM} == "linux-i386"
-PKGREVISION=	1
 DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
