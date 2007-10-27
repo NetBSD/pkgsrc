@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2007/09/21 13:00:54 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2007/10/27 13:29:38 wiz Exp $
 
---- src/Makefile.orig	2005-10-17 13:52:03.000000000 +0200
+--- src/Makefile.orig	2007-09-25 10:56:49.000000000 +0000
 +++ src/Makefile
-@@ -220,7 +220,7 @@ build.ml: Makefile $(CONFIG) build.ml.in
- 	    -e "s|@GTKLIBS@|$(GTKLIBS)|" < build.ml.in > $@
- 
- gdk-pixbuf-mlsource$(XE) : lablgtk.cma gtkInit.cmo gdk-pixbuf-mlsource.ml
--	$(CAMLC) -o $@ $^
-+	$(CAMLC) -I . -o $@ $^
- 
- lablgtkopt:: $(MLLIBS:.cma=.cmxa) $(INITOBJS:.cmo=.cmx)
- ifeq ($(THREADS_LIB),system)
-@@ -254,9 +254,7 @@ install:
+@@ -285,9 +285,7 @@ install:
  	cp $(CLIBS) "$(INSTALLDIR)"
  	cd "$(INSTALLDIR)" && $(RANLIB) $(CLIBS)
  	cp varcc$(XE) propcc$(XE) "$(INSTALLDIR)"

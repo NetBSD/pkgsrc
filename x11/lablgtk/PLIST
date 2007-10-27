@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/21 13:00:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/10/27 13:29:38 wiz Exp $
 bin/gdk-pixbuf-mlsource
 bin/lablgtk2
 lib/ocaml/lablgtk2/gAction.cmi
 lib/ocaml/lablgtk2/gAction.cmx
 lib/ocaml/lablgtk2/gAction.ml
 lib/ocaml/lablgtk2/gAction.mli
+lib/ocaml/lablgtk2/gAssistant.cmi
+lib/ocaml/lablgtk2/gAssistant.cmx
+lib/ocaml/lablgtk2/gAssistant.ml
+lib/ocaml/lablgtk2/gAssistant.mli
 lib/ocaml/lablgtk2/gBin.cmi
 lib/ocaml/lablgtk2/gBin.cmx
 lib/ocaml/lablgtk2/gBin.ml
@@ -68,6 +72,7 @@ lib/ocaml/lablgtk2/gRange.cmi
 lib/ocaml/lablgtk2/gRange.cmx
 lib/ocaml/lablgtk2/gRange.ml
 lib/ocaml/lablgtk2/gRange.mli
+lib/ocaml/lablgtk2/gSourceView.mli
 lib/ocaml/lablgtk2/gText.cmi
 lib/ocaml/lablgtk2/gText.cmx
 lib/ocaml/lablgtk2/gText.ml
@@ -132,6 +137,9 @@ lib/ocaml/lablgtk2/gpointer.mli
 lib/ocaml/lablgtk2/gtk.cmi
 lib/ocaml/lablgtk2/gtk.cmx
 lib/ocaml/lablgtk2/gtk.ml
+lib/ocaml/lablgtk2/gtkAssistant.cmi
+lib/ocaml/lablgtk2/gtkAssistant.cmx
+lib/ocaml/lablgtk2/gtkAssistant.ml
 lib/ocaml/lablgtk2/gtkBase.cmi
 lib/ocaml/lablgtk2/gtkBase.cmx
 lib/ocaml/lablgtk2/gtkBase.ml
@@ -186,6 +194,7 @@ lib/ocaml/lablgtk2/gtkSignal.cmi
 lib/ocaml/lablgtk2/gtkSignal.cmx
 lib/ocaml/lablgtk2/gtkSignal.ml
 lib/ocaml/lablgtk2/gtkSignal.mli
+lib/ocaml/lablgtk2/gtkSourceView_types.mli
 lib/ocaml/lablgtk2/gtkSpell.cmi
 lib/ocaml/lablgtk2/gtkSpell.cmx
 lib/ocaml/lablgtk2/gtkSpell.ml
@@ -220,12 +229,14 @@ lib/ocaml/lablgtk2/lablgtkspell.cmxa
 lib/ocaml/lablgtk2/lablgtktop
 lib/ocaml/lablgtk2/liblablgtk2.a
 lib/ocaml/lablgtk2/liblablgtkspell.a
+lib/ocaml/lablgtk2/ml_domain.h
 lib/ocaml/lablgtk2/ml_gdk.h
 lib/ocaml/lablgtk2/ml_gdkpixbuf.h
 lib/ocaml/lablgtk2/ml_glib.h
 lib/ocaml/lablgtk2/ml_gobject.h
 lib/ocaml/lablgtk2/ml_gpointer.h
 lib/ocaml/lablgtk2/ml_gtk.h
+lib/ocaml/lablgtk2/ml_gtktext.h
 lib/ocaml/lablgtk2/ml_gtktree.h
 lib/ocaml/lablgtk2/ml_gvaluecaml.h
 lib/ocaml/lablgtk2/ml_pango.h
