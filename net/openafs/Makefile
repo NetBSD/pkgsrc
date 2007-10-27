@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2007/05/13 06:59:16 agc Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/27 09:11:10 gendalia Exp $
 
-DISTNAME=	openafs-1.4.4-src
-PKGREVISION=	1
+DISTNAME=	openafs-1.4.5-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.4/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
@@ -18,32 +17,16 @@ CONFLICTS+=	rx-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		lex
-CONFIGURE_ARGS+=	--enable-bitmap-later
-CONFIGURE_ARGS+=	--enable-bos-new-config
-CONFIGURE_ARGS+=	--enable-fast-restart
-CONFIGURE_ARGS+=	--enable-largefile-fileserver
-CONFIGURE_ARGS+=	--disable-kernel-module
-CONFIGURE_ARGS+=	--enable-namei-fileserver
+RCD_SCRIPTS+=		bosserver
+
+.include "options.mk"
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 USE_GNU_CONFIGURE_HOST= no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
-PKG_SUPPORTED_OPTIONS=	pam
-PKG_OPTIONS_VAR=	PKG_OPTIONS.openafs
-RCD_SCRIPTS+=		bosserver
-.include "../../mk/bsd.options.mk"
-
-
-.if !empty(PKG_OPTIONS:Mpam)
-CONFIGURE_ARGS+=	--enable-pam
-.include "../../mk/pam.buildlink3.mk"
-PLIST_SRC+=		${.CURDIR}/PLIST.pam
-.else
-CONFIGURE_ARGS+=	--disable-pam
-.endif
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 OWN_DIRS+=		${PKG_SYSCONFDIR}/openafs
