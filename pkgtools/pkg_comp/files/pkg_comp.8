@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.30 2006/02/10 23:41:20 salo Exp $
+.\" $NetBSD: pkg_comp.8,v 1.31 2007/10/27 17:11:24 seb Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd February 10, 2006
+.Dd October 27, 2007
 .Dt PKG_COMP 8
 .Os
 .Sh NAME
@@ -41,6 +41,7 @@
 .Ar conf_file
 .Oc
 .Op Fl n
+.Op Fl N
 .Ar target
 .Op Ar pkg_name ...
 .Sh DESCRIPTION
@@ -74,6 +75,14 @@ Use
 as configuration file (only base name expected).
 .It Fl n
 Avoid installation of
+.Va INSTALL_PACKAGES
+and
+.Va BUILD_PACKAGES
+during the creation of the chroot.
+.It Fl N
+With the exception of pkgtools/libkver ( see
+.Va NETBSD_RELEASE )
+avoid installation of default packages as well as
 .Va INSTALL_PACKAGES
 and
 .Va BUILD_PACKAGES
