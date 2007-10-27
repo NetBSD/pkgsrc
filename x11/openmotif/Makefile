@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/08/15 19:26:39 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2007/10/27 12:31:15 rillig Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -41,6 +41,7 @@ CONFLICTS+=		lesstif-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		flex gmake tbl
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no # PR 37233
 
 SUBST_CLASSES+=			man_rename
 SUBST_STAGE.man_rename=		pre-configure
