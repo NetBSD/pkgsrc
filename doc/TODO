@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6786 2007/10/27 13:05:33 wiz Exp $
+$NetBSD: TODO,v 1.6787 2007/10/27 13:30:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -694,7 +694,6 @@ Suggested package updates
 	o kronolith-2.1.6
 	o ksi-3.4.2
 	o kye-0.9.3
-	o lablgtk-2.10.0
 	o lapack-20070226
 	o latd-1.21
 	o lavaps-2.7
