@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/10/04 12:06:40 obache Exp $
+# $NetBSD: options.mk,v 1.3 2007/10/27 13:29:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
-PKG_SUPPORTED_OPTIONS=	glade gnomecanvas svg
+PKG_SUPPORTED_OPTIONS=	glade gnomecanvas gtksourceview svg
 PKG_SUGGESTED_OPTIONS=	gnomecanvas svg
 
 .include "../../mk/bsd.options.mk"
@@ -22,6 +22,14 @@ CONFIGURE_ARGS+=	--with-gnomecanvas
 PLIST_SRC+=		PLIST.gnomecanvas
 .else
 CONFIGURE_ARGS+=	--without-gnomecanvas
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtksourceview)
+.include "../../x11/gtksourceview/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gtksourceview
+PLIST_SRC+=		PLIST.gtksourceview
+.else
+CONFIGURE_ARGS+=	--without-gtksourceview
 .endif
 
 .if !empty(PKG_OPTIONS:Msvg)
