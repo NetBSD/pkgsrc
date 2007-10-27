@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6781 2007/10/27 11:49:33 wiz Exp $
+$NetBSD: TODO,v 1.6782 2007/10/27 12:21:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -602,7 +602,6 @@ Suggested package updates
 	o gtick-0.4.1
 	o gtk-doc-1.9
 	o gtk-systrace-20030623
-	o gtk2-2.12.1
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.1
@@ -935,7 +934,6 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-PAR-0.90
 	o p5-PV-1.5
-	o p5-PathTools-3.24
 	o p5-Perl-Tidy-20070801
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
