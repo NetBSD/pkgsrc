@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2251 2007/10/27 12:40:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2252 2007/10/27 13:05:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4228,3 +4228,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-Simple to 0.72 [wiz 2007-10-27]
 	Updated textproc/p5-XML-RSS to 1.31 [wiz 2007-10-27]
 	Updated mail/t-prot to 2.5 [wiz 2007-10-27]
+	Updated www/kazehakase to 0.4.9 [wiz 2007-10-27]
