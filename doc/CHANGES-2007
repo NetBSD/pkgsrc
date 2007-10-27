@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2254 2007/10/27 13:47:32 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2255 2007/10/27 13:56:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4232,3 +4232,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/lablgtk to 2.10.0 [wiz 2007-10-27]
 	Updated www/navigator to 4.80nb2 [obache 2007-10-27]
 	Updated www/communicator to 4.80nb2 [obache 2007-10-27]
+	Updated mail/libetpan to 0.52 [wiz 2007-10-27]
