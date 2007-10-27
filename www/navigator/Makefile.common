@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.86 2007/07/29 05:19:57 jlam Exp $
+# $NetBSD: Makefile.common,v 1.87 2007/10/27 13:35:26 obache Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -65,9 +65,6 @@ DISTUNAME=	sparc-sun-solaris2.8
 DIST_DIR_NAME=	supported/sunos58
 WRKNAME=	sparc-sun-solaris2.8
 .  endif
-.  if !defined(NS_NO_FLASH)
-DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
-.  endif
 
 .elif ${EMUL_PLATFORM} == "sunos-sparc"
 NS_VERS=	4.61
@@ -105,9 +102,6 @@ PKGREVISION=	1
 DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
-.  if !defined(NS_NO_FLASH)
-DEPENDS+=	ns-flash>4.0:../../multimedia/ns-flash
-.  endif
 .  if ${BINNAME} == "communicator"
 BUILD_DEPENDS=	binpatch>=1.0:../../pkgtools/binpatch
 
