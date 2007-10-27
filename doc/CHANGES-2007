@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2241 2007/10/27 02:27:04 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2242 2007/10/27 02:52:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4216,3 +4216,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/opera to 9.24 [xtraeme 2007-10-27]
 	Updated misc/goffice0.5 to 0.5.1 [wiz 2007-10-27]
 	Updated math/gnumeric-current to 1.7.13 [wiz 2007-10-27]
+	Updated sysutils/skill to 4.1.4 [obache 2007-10-27]
