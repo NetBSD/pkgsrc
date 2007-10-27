@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2005/12/06 13:27:01 joerg Exp $
+$NetBSD: distinfo,v 1.10 2007/10/27 02:52:23 obache Exp $
 
-SHA1 (skill-4.1.1.tgz) = f208730838abff3b3a824c767a963558fe5ee0ed
-RMD160 (skill-4.1.1.tgz) = a32fff409258227bf7c695c1714fde321d9b51a1
-Size (skill-4.1.1.tgz) = 45614 bytes
-SHA1 (patch-aa) = 99e982b6ca126a3844b9e056336276bdf1a062f1
-SHA1 (patch-ab) = 7953603ec4c8e1f9b0c690acef50d51432db7f1e
+SHA1 (skill-4.1.4.tgz) = 8a8dff9dbf9f1aa382887c142ac4dc205d7ddbf3
+RMD160 (skill-4.1.4.tgz) = e28e035879ecb66b6117133caf7ad05f00758371
+Size (skill-4.1.4.tgz) = 46349 bytes
+SHA1 (patch-aa) = 559a2cfec2c9395b88009042f50a017ffecd13d4
+SHA1 (patch-ab) = 20b64bdea73d123c3b10c086e7224f6bd67a04fd
+SHA1 (patch-ac) = 16c56baba8b2aecc6b0593c7e32669eaed54d8c5

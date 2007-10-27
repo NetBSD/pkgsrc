@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/10/27 02:52:22 obache Exp $
 #
 
-DISTNAME=	skill-4.1.1
+DISTNAME=	skill-4.1.4
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.flux.utah.edu/pub/skill/
 EXTRACT_SUFX=	.tgz
@@ -24,6 +24,19 @@ CPPFLAGS+=	-DHAS_STRERROR=1
 .elif ${OPSYS} == "SunOS"
 BINMODE=	02555
 MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
+.elif ${OPSYS} == "FreeBSD"
+MAKE_ENV+=	OPSYS=nbsd-44
+.elif ${OPSYS} == "Linux"
+MAKE_ENV+=	OPSYS=linux-1
+CPPFLAGS+=	-DHAS_STRERROR=1
+.elif ${OPSYS} == "IRIX"
+MAKE_ENV+=	OPSYS=irix5
+.elif ${OPSYS} == "OSF"
+MAKE_ENV+=	OPSYS=mach-3
+.elif ${OPSYS} == "AIX"
+MAKE_ENV+=	OPSYS=aix-3
+.elif ${OPSYS} == "HPUX"
+MAKE_ENV+=	OPSYS=hpux-10
 .endif
 
 pre-install:

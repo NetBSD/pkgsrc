@@ -1,9 +1,14 @@
-$NetBSD: patch-ab,v 1.12 2005/12/06 13:27:01 joerg Exp $
+$NetBSD: patch-ab,v 1.13 2007/10/27 02:52:23 obache Exp $
 
---- main.c.orig	2003-08-19 00:36:08.000000000 +0000
+--- main.c.orig	2007-05-04 20:56:20.000000000 +0000
 +++ main.c
-@@ -46,6 +46,13 @@ const char *CopyrightVersion = "%s %s\n\
+@@ -44,8 +44,18 @@ const char *CopyrightVersion = "%s %s\n\
+ #include "conf.h"
+ 
  #include <stdio.h>
++#ifdef __STDC__
++#include <stdlib.h>
++#endif
  #include <errno.h>
  #include <pwd.h>
 +#ifdef __NetBSD__
@@ -16,7 +21,7 @@ $NetBSD: patch-ab,v 1.12 2005/12/06 13:27:01 joerg Exp $
  
  /*
   * Processes which could not be checked -- usually due to permission
-@@ -137,7 +144,7 @@ main(argc, argv)
+@@ -137,7 +147,7 @@ main(argc, argv)
  			for (i = 0; i < CmdIndx; i++) {
  				cmdp = (CmdList + i);
  				if ((cmdp->flags & CMD_FLAG_EXACT) != 0 &&
@@ -25,7 +30,7 @@ $NetBSD: patch-ab,v 1.12 2005/12/06 13:27:01 joerg Exp $
  					break;
  				else if ((cmdp->flags & CMD_FLAG_REGEX) != 0 &&
  						RegexMatch(CMD, cmdp) != 0)
-@@ -330,8 +337,6 @@ Usage(error)
+@@ -384,8 +394,6 @@ Usage(error)
  char *
  SysErr()
  {
