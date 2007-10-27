@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6784 2007/10/27 12:35:21 wiz Exp $
+$NetBSD: TODO,v 1.6785 2007/10/27 12:40:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1214,7 +1214,6 @@ Suggested package updates
 	o swi-prolog-5.6.31
 	o sympa-5.3
 	o sysinfo-4.2.2
-	o t-prot-2.5
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
 	o tcl83-8.3.5
