@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/10/28 13:06:30 adrianp Exp $
+# $NetBSD: Makefile,v 1.49 2007/10/28 20:18:47 adrianp Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		1
@@ -12,6 +12,7 @@ COMMENT=		Secure and modular IRC client with text mode user interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
 .include "Makefile.common"
 
 GNU_CONFIGURE=		yes
@@ -22,6 +23,10 @@ CONFIGURE_ARGS+=	--with-terminfo \
 			--with-proxy \
 			--without-ncurses \
 			--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=YES
+.endif
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
