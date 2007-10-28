@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2007/10/25 21:06:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2007/10/28 11:05:45 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
@@ -16,8 +16,6 @@ BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.4.0
 BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.4.0
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
 .endif	# GIMP_BUILDLINK3_MK
-
-.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
