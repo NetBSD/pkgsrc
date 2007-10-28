@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.9 2007/08/15 21:22:55 seb Exp $
+$NetBSD: patch-aa,v 1.10 2007/10/28 16:42:48 seb Exp $
 
---- Makefile.orig	2007-06-30 20:38:47.000000000 +0000
+--- Makefile.orig	2007-10-07 11:07:19.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
--DESTDIR = /usr/local
+-DESTDIR =
 -BINDIR = /usr/local/bin
 -SHAREDIR = /usr/local/share/imapfilter
 -MANDIR = /usr/local/man
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.9 2007/08/15 21:22:55 seb Exp $
  
 -CFLAGS = $(MYCFLAGS) $(DEFS) $(INCDIRS)
 -LDFLAGS = $(MYLDFLAGS) $(LIBDIRS)
-+CFLAGS+= $(DEFS)
++CFLAGS+=	$(DEFS)
  
  LIBS = -lm -llua -lpcre -lssl -lcrypto
  
@@ -29,41 +29,46 @@ $NetBSD: patch-aa,v 1.9 2007/08/15 21:22:55 seb Exp $
  
  $(BIN): $(OBJ)
 -	$(CC) -o $(BIN) $(LDFLAGS) $(OBJ) $(LIBS)
-+	$(CC) -o $(BIN) $(LDFLAGS) $(CFLAGS) $(OBJ) $(LIBS)
++	$(CC) -o $(BIN) $(LDFLAGS) $(CLFAGS) $(OBJ) $(LIBS)
  
  $(OBJ): imapfilter.h
  buffer.o imap.o imapfilter.o namespace.o request.o response.o: buffer.h
-@@ -49,33 +48,22 @@ auth.o cert.o imap.o imapfilter.o log.o 
+@@ -49,38 +48,22 @@ auth.o cert.o imap.o imapfilter.o log.o 
  imapfilter.o: version.h
  
  install: $(BIN)
--	if test ! -d $(BINDIR); then mkdir -p $(BINDIR); fi
--	cp -f $(BIN) $(BINDIR) && chmod 0755 $(BINDIR)/$(BIN)
--	if test ! -d $(SHAREDIR); then mkdir -p $(SHAREDIR); fi
--	cp -f $(COMMON_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(COMMON_LUA)
--	cp -f $(SET_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(SET_LUA)
--	cp -f $(REGEX_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(REGEX_LUA)
--	cp -f $(ACCOUNT_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(ACCOUNT_LUA)
--	cp -f $(MAILBOX_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(MAILBOX_LUA)
--	cp -f $(MESSAGE_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(MESSAGE_LUA)
--	cp -f $(OPTIONS_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(OPTIONS_LUA)
--	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
--	cp -f $(DEPRECATED_LUA) $(SHAREDIR) && \
--		chmod 0644 $(SHAREDIR)/$(DEPRECATED_LUA)
--	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
--	cp -f $(MAN_BIN) $(MANDIR)/man1 && \
--		chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
--	if test ! -d $(MANDIR)/man5; then mkdir -p $(MANDIR)/man5; fi
--	cp -f $(MAN_CONFIG) $(MANDIR)/man5 && \
--		chmod 0644 $(MANDIR)/man5/$(MAN_CONFIG)
+-	if test ! -d $(DESTDIR)$(BINDIR); then \
+-		mkdir -p $(DESTDIR)$(BINDIR); fi
+-	cp -f $(BIN) $(DESTDIR)$(BINDIR) && \
+-		chmod 0755 $(DESTDIR)$(BINDIR)/$(BIN)
+-	if test ! -d $(DESTDIR)$(SHAREDIR); then \
+-		mkdir -p $(DESTDIR)$(SHAREDIR); fi
+-	cp -f $(COMMON_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(COMMON_LUA)
+-	cp -f $(SET_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(SET_LUA)
+-	cp -f $(REGEX_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(REGEX_LUA)
+-	cp -f $(ACCOUNT_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(ACCOUNT_LUA)
+-	cp -f $(MAILBOX_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(MAILBOX_LUA)
+-	cp -f $(MESSAGE_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(MESSAGE_LUA)
+-	cp -f $(OPTIONS_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(OPTIONS_LUA)
+-	cp -f $(AUXILIARY_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(AUXILIARY_LUA)
+-	cp -f $(DEPRECATED_LUA) $(DESTDIR)$(SHAREDIR) && \
+-		chmod 0644 $(DESTDIR)$(SHAREDIR)/$(DEPRECATED_LUA)
+-	if test ! -d $(DESTDIR)$(MANDIR)/man1; then \
+-		mkdir -p $(DESTDIR)$(MANDIR)/man1; fi
+-	cp -f $(MAN_BIN) $(DESTDIR)$(MANDIR)/man1 && \
+-		chmod 0644 $(DESTDIR)$(MANDIR)/man1/$(MAN_BIN)
+-	if test ! -d $(DESTDIR)$(MANDIR)/man5; then \
+-		mkdir -p $(DESTDIR)$(MANDIR)/man5; fi
+-	cp -f $(MAN_CONFIG) $(DESTDIR)$(MANDIR)/man5 && \
+-		chmod 0644 $(DESTDIR)$(MANDIR)/man5/$(MAN_CONFIG)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)/$(BIN)
 +	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)
@@ -82,4 +87,4 @@ $NetBSD: patch-aa,v 1.9 2007/08/15 21:22:55 seb Exp $
 +	$(BSD_INSTALL_MAN) $(MAN_CONFIG) $(MANDIR)/man5/$(MAN_CONFIG)
  
  deinstall:
- 	rm -f $(BINDIR)/$(BIN) \
+ 	rm -f $(DESTDIR)$(BINDIR)/$(BIN) \
