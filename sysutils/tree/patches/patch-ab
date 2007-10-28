@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.2 2007/10/25 08:51:30 heinz Exp $
+$NetBSD: patch-ab,v 1.3 2007/10/28 10:10:10 heinz Exp $
 
 --- Makefile.orig	2007-06-11 15:22:47.000000000 +0200
 +++ Makefile
-@@ -38,13 +38,18 @@ LDFLAGS=-s
+@@ -8,7 +8,8 @@
+ 
+ CC=gcc
+ #CFLAGS=-ggdb -Wall -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+-CFLAGS=-O2 -Wall -fomit-frame-pointer -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++CDEFS=-D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
++CFLAGS=-O2 -Wall -fomit-frame-pointer
+ LDFLAGS=-s
+ 
+ # Uncomment for FreeBSD:
+@@ -38,13 +39,18 @@ LDFLAGS=-s
  #CFLAGS=-02 -Wall -fomit-frame-pointer -Zomf -Zsmall-conv
  #LDFLAGS=-s -Zomf -Zsmall-conv
  
@@ -24,7 +34,15 @@ $NetBSD: patch-ab,v 1.2 2007/10/25 08:51:30 heinz Exp $
  
  all:	tree
  
-@@ -59,12 +64,12 @@ clean:
+@@ -52,6 +58,7 @@ tree:	tree.o
+ 	$(CC) $(LDFLAGS) -o $(TREE_DEST) tree.o
+ 
+ tree.o:	tree.c
++	$(CC) -c $(CFLAGS) $(CDEFS) -o $@ $<
+ 
+ clean:
+ 	if [ -x $(TREE_DEST) ]; then rm $(TREE_DEST); fi
+@@ -59,12 +66,12 @@ clean:
  	rm -f *~
  
  install:
