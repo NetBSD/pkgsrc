@@ -1,5 +1,7 @@
 aalib			Enable aalib support.
 abook			Enable abook support.
+acl			Enable POSIX ACL support.
+ads			Enable Windows's Active Directory support.
 anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
@@ -281,6 +283,7 @@ w3m-lynx-key		Enable lynx-like key bindings.
 w3m-m17n		Multilingual support.
 w3m-unicode		Use Unicode characters.
 wavpack			Enable wavpack support.
+winbind			Enable name-service switch daemon support using Windows Servers.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 x11			Enable X11 support.
 xaw			Enable Xaw support.
