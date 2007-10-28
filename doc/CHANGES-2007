@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2258 2007/10/27 22:31:32 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2259 2007/10/28 02:10:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4236,3 +4236,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/pkg_comp to 1.30 [seb 2007-10-27]
 	Removed net/bind4 [adrianp 2007-10-27]
 	Updated devel/mantis to 1.0.8 [adrianp 2007-10-27]
+	Updated security/sudo to 1.6.9p7 [taca 2007-10-28]
+	Updated converters/libiconv to 1.11nb1 [taca 2007-10-28]
