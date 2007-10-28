@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.17 2007/09/09 12:54:37 taca Exp $
+$NetBSD: patch-af,v 1.18 2007/10/28 02:05:45 taca Exp $
 
---- configure.in.orig	2007-09-07 01:19:57.000000000 +0900
+--- configure.in.orig	2007-10-25 01:43:25.000000000 +0900
 +++ configure.in
 @@ -129,7 +129,6 @@ dnl
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
@@ -30,15 +30,6 @@ $NetBSD: patch-af,v 1.17 2007/09/09 12:54:37 taca Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1470,7 +1482,7 @@ case "$host" in
- 		    AC_CHECK_FUNCS(auth_challenge, [AUTH_EXCL_DEF="BSD_AUTH"])
- 		fi
- 		;;
--    *-*-freebsd*)
-+    *-*-freebsd*|*-*-dragonfly*)
- 		# FreeBSD has a real setreuid(2) starting with 2.1 and
- 		# backported to 2.0.5.  We just take 2.1 and above...
- 		case "$OSREV" in
 @@ -1484,6 +1496,8 @@ case "$host" in
  		CHECKSHADOW="false"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
@@ -62,20 +53,3 @@ $NetBSD: patch-af,v 1.17 2007/09/09 12:54:37 taca Exp $
  		fi
  		CHECKSHADOW="false"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
-@@ -2047,16 +2063,6 @@ if test ${with_kerb5-'no'} != "no" -a -z
- fi
- 
- dnl
--dnl Some systems put login_cap(3) in libutil
--dnl
--if test ${with_logincap-'no'} = "yes"; then
--    case "$OS" in
--	freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
--	;;
--    esac
--fi
--
--dnl
- dnl extra AFS libs and includes
- dnl
- if test ${with_AFS-'no'} = "yes"; then

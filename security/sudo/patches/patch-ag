@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
+$NetBSD: patch-ag,v 1.10 2007/10/28 02:05:45 taca Exp $
 
---- configure.orig	2007-09-07 01:21:13.000000000 +0900
+--- configure.orig	2007-10-24 02:19:18.000000000 +0900
 +++ configure
 @@ -1436,7 +1436,7 @@ Fine tuning of the installation director
    --bindir=DIR           user executables [EPREFIX/bin]
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
    --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
    --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1505,6 +1505,7 @@ Optional Packages:
+@@ -1506,6 +1506,7 @@ Optional Packages:
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -2118,7 +2119,6 @@ shadow_libs_optional=
+@@ -2119,7 +2120,6 @@ shadow_libs_optional=
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -27,7 +27,7 @@ $NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
  
  
  
-@@ -2310,6 +2310,23 @@ fi
+@@ -2311,6 +2311,23 @@ fi
  
  
  
@@ -51,16 +51,7 @@ $NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval=$with_passwd; case $with_passwd in
-@@ -11981,7 +11998,7 @@ done
- 
- 		fi
- 		;;
--    *-*-freebsd*)
-+    *-*-freebsd*|*-*-dragonfly*)
- 		# FreeBSD has a real setreuid(2) starting with 2.1 and
- 		# backported to 2.0.5.  We just take 2.1 and above...
- 		case "$OSREV" in
-@@ -11995,6 +12012,8 @@ done
+@@ -11996,6 +12013,8 @@ done
  		CHECKSHADOW="false"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		: ${with_logincap='maybe'}
@@ -69,7 +60,7 @@ $NetBSD: patch-ag,v 1.9 2007/09/09 12:54:38 taca Exp $
  		;;
      *-*-*openbsd*)
  		# OpenBSD has a real setreuid(2) starting with 3.3 but
-@@ -12023,10 +12042,12 @@ done
+@@ -12024,10 +12043,12 @@ done
  		CHECKSHADOW="false"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		: ${with_logincap='maybe'}
