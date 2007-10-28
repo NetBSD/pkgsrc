@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/10/27 02:52:22 obache Exp $
+# $NetBSD: Makefile,v 1.24 2007/10/28 02:18:08 obache Exp $
 #
 
 DISTNAME=	skill-4.1.4
@@ -25,18 +25,18 @@ CPPFLAGS+=	-DHAS_STRERROR=1
 BINMODE=	02555
 MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
 .elif ${OPSYS} == "FreeBSD"
-MAKE_ENV+=	OPSYS=nbsd-44
+MAKE_ENV+=	OSTYPE=nbsd-44
 .elif ${OPSYS} == "Linux"
-MAKE_ENV+=	OPSYS=linux-1
+MAKE_ENV+=	OSTYPE=linux-1
 CPPFLAGS+=	-DHAS_STRERROR=1
 .elif ${OPSYS} == "IRIX"
-MAKE_ENV+=	OPSYS=irix5
+MAKE_ENV+=	OSTYPE=irix5
 .elif ${OPSYS} == "OSF"
-MAKE_ENV+=	OPSYS=mach-3
+MAKE_ENV+=	OSTYPE=mach-3
 .elif ${OPSYS} == "AIX"
-MAKE_ENV+=	OPSYS=aix-3
+MAKE_ENV+=	OSTYPE=aix-3
 .elif ${OPSYS} == "HPUX"
-MAKE_ENV+=	OPSYS=hpux-10
+MAKE_ENV+=	OSTYPE=hpux-10
 .endif
 
 pre-install:
