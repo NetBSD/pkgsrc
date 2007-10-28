@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6790 2007/10/28 07:30:38 taca Exp $
+$NetBSD: TODO,v 1.6791 2007/10/28 13:27:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -408,6 +408,7 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
+	o dd_rescue-1.14
 	o ddclient-3.7.3
 	o dd_rescue-1.13
 	o defendguin-0.0.11
@@ -428,12 +429,12 @@ Suggested package updates
 	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
-	o doxygen-1.5.3
+	o doxygen-1.5.4
 	o dpkg-1.13.25
 	o drscheme-371
 	o dvdrip-0.98.8
 	o dvipng-1.9
-	o dwm-4.5
+	o dwm-4.6
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -616,7 +617,7 @@ Suggested package updates
 	o guile-gtk-2.0
 	o gwave-20031224
 	o gwenview-1.4.2
-	o gworkspace-0.8.5
+	o gworkspace-0.8.6
 	o gzip-1.3.12
 	o gzrecover-0.5
 	o hackbot-2.21
@@ -657,7 +658,7 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ircservices-5.1.2
+	o ircservices-5.1.4
 	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
@@ -702,14 +703,14 @@ Suggested package updates
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
 	o leafpad-0.8.12
-	o less-408
+	o less-409
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.5.14
 	o libFoundation-1.1.3
 	o libassuan-1.0.1
 	o libast-0.7
 	o libbonobo-2.20.1
-	o libcdio-0.78.2
+	o libcdio-0.79
 	o libchewing-0.3.0
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
@@ -789,8 +790,10 @@ Suggested package updates
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
-	o mksh-31.4
+	o mksh-32
 	o mkvtoolnix-2.1.0
+	o mldonkey-2.9.2
+	o mldonkey-gui-2.9.2
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.3
@@ -993,7 +996,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.1.1
+	o phpmyadmin-2.11.2
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1142,6 +1145,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
+	o rxvt-unicode-8.4
 	o sablecc-3.2
 	o sarg-2.2.31
 	o sather-1.2.3
@@ -1182,7 +1186,7 @@ Suggested package updates
 	o smalltalk-2.3.6
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
-	o smokeping-2.2.4
+	o smokeping-2.2.5
 	o snd-9.4
 	o snes9x-1.51
 	o snobol-1.1
@@ -1204,7 +1208,9 @@ Suggested package updates
 	o stellarium-0.9.0
 	o stlport-4.6.2
 	o stratagus-2.2.2
+	o stunnel-4.21
 	o subtitleripper-0.3.4
+	o sudo-1.6.9p7
 	o sunbird-0.5 [ghen]
 	o suse_base-10.3
 	o swfdec-0.5.3
@@ -1217,7 +1223,7 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.2
+	o tcpreplay-3.2.1
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1284,7 +1290,7 @@ Suggested package updates
 	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.47
+	o wine-0.9.48
 	o wmii-3.5.1
 	o wml-2.0.11
 	o wmweather-2.4.4
@@ -1335,7 +1341,7 @@ Suggested package updates
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.3.2
+	o xmp-2.4.0
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xpad-2.12
