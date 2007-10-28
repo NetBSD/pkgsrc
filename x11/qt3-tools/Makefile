@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2007/10/24 15:50:19 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2007/10/28 16:04:41 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
@@ -21,30 +23,26 @@ BUILD_QT3=		yes
 UNLIMIT_RESOURCES=	datasize
 BUILD_TARGET=		sub-tools
 
+INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/lib			\
+			${QTPREFIX}/plugins/designer ${QTPREFIX}/mkspecs
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic ${QTPREFIX}/bin
-	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libqui.la ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/libeditor.la ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqassistantclient.la \
-		${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/designer ${QTPREFIX}/bin
-	${INSTALL_DATA_DIR} ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libwizards.la ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libcppeditor.la ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libdlgplugin.la ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/librcplugin.la ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/plugins/designer/libkdevdlgplugin.la ${QTPREFIX}/plugins/designer
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/assistant ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/linguist ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/lupdate ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/lrelease ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qm2ts ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qtconfig ${QTPREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qmake ${QTPREFIX}/bin/qmake
-	${INSTALL_DATA_DIR} ${QTPREFIX}/mkspecs
-	cd ${WRKSRC}/mkspecs && ${PAX} -rw . ${QTPREFIX}/mkspecs
+	for bin in assistant designer linguist lrelease lupdate qm2ts	\
+	    qmake qtconfig uic; do					\
+		${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/$$bin	\
+		    ${DESTDIR}${QTPREFIX}/bin;				\
+	done
+	for lib in libeditor.la libqassistantclient.la libqui.la; do	\
+		${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/lib/$$lib	\
+		    ${DESTDIR}${QTPREFIX}/lib;				\
+	done
+	for plugin in libwizards.la libcppeditor.la libdlgplugin.la	\
+	    librcplugin.la libkdevdlgplugin.la; do			\
+		${LIBTOOL} ${INSTALL_PROGRAM}				\
+		    ${WRKSRC}/plugins/designer/$$plugin			\
+		    ${DESTDIR}${QTPREFIX}/plugins/designer;		\
+	done
+	cd ${WRKSRC}/mkspecs && ${PAX} -rw . ${DESTDIR}${QTPREFIX}/mkspecs
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
