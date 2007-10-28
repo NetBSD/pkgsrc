@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/07/02 20:24:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.36 2007/10/28 15:30:44 joerg Exp $
 
 DISTNAME=	Python-2.4.4
 PKGNAME=	python24-2.4.4
@@ -43,7 +43,7 @@ PLIST_SRC+=	${.CURDIR}/../../lang/python24/PLIST.${OPSYS}
 .endif
 PLIST_SRC+=	${.CURDIR}/../../lang/python24/PLIST.common_end
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" && ${_USE_DESTDIR} == "no"
 PRIVILEGED_STAGES+=	clean
 .endif
 
