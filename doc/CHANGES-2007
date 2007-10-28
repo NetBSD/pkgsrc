@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2260 2007/10/28 07:29:36 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2261 2007/10/28 12:36:52 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/sudo to 1.6.9p7 [taca 2007-10-28]
 	Updated converters/libiconv to 1.11nb1 [taca 2007-10-28]
 	Updated net/samba to 3.0.26a [taca 2007-10-28]
+	Removed wm/ion3-devel [tnn 2007-10-28]
