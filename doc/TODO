@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6789 2007/10/28 05:58:48 minskim Exp $
+$NetBSD: TODO,v 1.6790 2007/10/28 07:30:38 taca Exp $
 
 Suggested new packages
 ======================
@@ -1143,7 +1143,6 @@ Suggested package updates
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
 	o sablecc-3.2
-	o samba-3.0.26
 	o sarg-2.2.31
 	o sather-1.2.3
 	o sbcl-1.06 [pkg/36885]
