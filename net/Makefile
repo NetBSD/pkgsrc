@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.687 2007/10/19 06:54:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.688 2007/10/28 23:16:15 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -31,7 +31,6 @@ SUBDIR+=	awhois
 SUBDIR+=	balance
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
-SUBDIR+=	bind4
 SUBDIR+=	bind8
 SUBDIR+=	bind9
 SUBDIR+=	bing
