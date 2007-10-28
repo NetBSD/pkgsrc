@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.64 2007/10/13 11:04:16 dsl Exp $
+# $NetBSD: bsd.options.mk,v 1.65 2007/10/28 11:29:06 tron Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -85,6 +85,9 @@
 #		This is the list of the selected build options, properly
 #		filtered to remove unsupported and duplicate options.
 #
+
+.if !defined(BSD_OPTIONS_MK)
+BSD_OPTIONS_MK=		# defined
 
 # To add options support to a package, here is an example for an
 # options.mk file. This file should be included by the package Makefile
@@ -434,3 +437,5 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 .  endif
 .endif
+
+.endif	# BSD_OPTIONS_MK
