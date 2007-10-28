@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6788 2007/10/27 13:56:20 wiz Exp $
+$NetBSD: TODO,v 1.6789 2007/10/28 05:58:48 minskim Exp $
 
 Suggested new packages
 ======================
@@ -855,6 +855,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openh323-1.19.1
+	o openldap-2.3.39
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openssl-0.9.8e (in wip/)
