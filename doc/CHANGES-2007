@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2261 2007/10/28 12:36:52 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2262 2007/10/28 12:50:14 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated converters/libiconv to 1.11nb1 [taca 2007-10-28]
 	Updated net/samba to 3.0.26a [taca 2007-10-28]
 	Removed wm/ion3-devel [tnn 2007-10-28]
+	Updated mail/dovecot to 1.0.6 [ghen 2007-10-28]
