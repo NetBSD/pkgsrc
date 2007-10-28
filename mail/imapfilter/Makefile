@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2007/08/15 21:22:54 seb Exp $
+# $NetBSD: Makefile,v 1.27 2007/10/28 16:42:48 seb Exp $
 
-DISTNAME=		imapfilter-2.0.3
+DISTNAME=		imapfilter-2.0.6
 CATEGORIES=		mail
 MASTER_SITES=		http://imapfilter.hellug.gr/source/
 EXTRACT_SUFX=		.tar.bz2
