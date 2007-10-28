@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2007/10/10 00:08:24 taca Exp $
+# $NetBSD: Makefile,v 1.99 2007/10/28 02:05:44 taca Exp $
 #
 
-DISTNAME=		sudo-1.6.9p6
+DISTNAME=		sudo-1.6.9p7
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -21,6 +21,7 @@ USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,16 +38,16 @@ CONFIGURE_ARGS+=	--with-logpath=${VARBASE:Q}/log/sudo.log
 
 CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=			share/doc/${PKGBASE}
+EGDIR=			share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers 0 0 0440
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/sudoers ${EGDIR}/sudoers
-	${INSTALL_DATA} ${WRKSRC}/README* ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
+	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
