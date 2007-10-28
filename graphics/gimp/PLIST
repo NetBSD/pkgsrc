@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2007/10/25 21:06:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2007/10/28 16:43:00 dogcow Exp $
 bin/gimp
 bin/gimp-2.4
 bin/gimp-console
@@ -313,7 +313,7 @@ lib/gimp/2.0/plug-ins/max_rgb
 lib/gimp/2.0/plug-ins/maze
 lib/gimp/2.0/plug-ins/mblur
 lib/gimp/2.0/plug-ins/metadata
-lib/gimp/2.0/plug-ins/mng
+${MNG}lib/gimp/2.0/plug-ins/mng
 lib/gimp/2.0/plug-ins/mosaic
 lib/gimp/2.0/plug-ins/neon
 lib/gimp/2.0/plug-ins/newsprint
@@ -367,7 +367,7 @@ lib/gimp/2.0/plug-ins/spheredesigner
 lib/gimp/2.0/plug-ins/spread
 lib/gimp/2.0/plug-ins/struc
 lib/gimp/2.0/plug-ins/sunras
-lib/gimp/2.0/plug-ins/svg
+${SVG}lib/gimp/2.0/plug-ins/svg
 lib/gimp/2.0/plug-ins/tga
 lib/gimp/2.0/plug-ins/threshold_alpha
 lib/gimp/2.0/plug-ins/tiff-load
