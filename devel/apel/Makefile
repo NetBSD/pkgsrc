@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/15 11:29:45 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/10/29 12:53:51 uebayasi Exp $
 
 DISTNAME=	apel-10.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -21,11 +21,12 @@ INSTALLATION_DIRS+=	${DOCDIR}
 
 # apel is included in xemacs-packages
 EMACS_VERSIONS_ACCEPTED=emacs22 emacs22nox emacs21 emacs21nox emacs20
+
 BUILD_TARGET.emacs=	elc
-INSTALL_TARGET.emacs=	install
-MAKE_FLAGS.emacs=
 BUILD_TARGET.xemacs=	package
+INSTALL_TARGET.emacs=	install
 INSTALL_TARGET.xemacs=	install-package
+MAKE_FLAGS.emacs=
 MAKE_FLAGS.xemacs=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 .include "../../mk/emacs.mk"
