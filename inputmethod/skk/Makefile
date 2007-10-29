@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/04/08 19:29:52 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/10/29 13:25:26 uebayasi Exp $
 #
 
-DISTNAME=	ddskk-12.2.0
-PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-12.2.0
-PKGREVISION=	4
+DISTNAME=	ddskk-20071028
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html
@@ -14,17 +12,7 @@ COMMENT=	Japanese input methods for Emacs
 
 CONFLICTS=	ddskk-[0-9]*
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
-
 EMACS_MODULES+=	base leim
-
-.include "../../mk/emacs.mk"
-.include "options.mk"
-
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
-.if ${EMACS_FLAVOR} == "emacs"
-BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
-.endif
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 BUILD_TARGET=	elc
@@ -43,5 +31,12 @@ SUBST_SED.cfg=		-e 's|@PREFIX@|${PREFIX}|g'			\
 post-extract:
 	@${MV} ${WRKSRC}/SKK-CFG ${WRKSRC}/SKK-CFG.orig
 	@${CP} ${FILESDIR}/SKK-CFG ${WRKSRC}
+	@${CHMOD} +w ${WRKSRC}/doc/skk.texi
 
+.include "options.mk"
+
+.include "../../mk/emacs.mk"
+
+.include "../../devel/apel/buildlink3.mk"
+.include "../../editors/mule-ucs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
