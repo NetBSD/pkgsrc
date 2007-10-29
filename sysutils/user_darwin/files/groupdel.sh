@@ -13,7 +13,8 @@ if [ -z "$group" ]; then
     exit 1
 fi
 
-if ! niutil -destroy . /groups/$group 2>/dev/null; then
+if ! niutil -destroy . /groups/$group 2>/dev/null &&			\
+   ! dscl . -delete /groups/$group >/dev/null 2>&1 ; then
     echo "groupdel: Could not delete group" 1>&2
     exit 1
 fi

@@ -14,7 +14,9 @@ getnextgid()
 {
     # See the comments in useradd for more details.
 
-    used_gids=`nireport . /groups gid`
+    used_gids=`nireport . /groups gid 2>/dev/null ||			\
+      dscl . -readall /groups PrimaryGroupID  | grep '^PrimaryGroupID:' | \
+      cut -d' ' -f2`
     low_gid=300
 
     maybe_gid=$low_gid
@@ -34,13 +36,16 @@ if [ -z "$group" ]; then
     exit 1
 fi
 
-if nireport . /groups/$group gid 2>/dev/null; then
+if nireport . /groups/$group gid 2>/dev/null ||				\
+   dscl . -read /groups/$group gid >/dev/null 2>&1; then
     echo "groupadd: Group '$group' already exists" 1>&2
     exit 1
 fi
 
 if [ -n "$gid" ]; then
-    if nireport . /groups/gid=$gid gid 2>/dev/null; then
+    if nireport . /groups/gid=$gid gid 2>/dev/null ||			\
+      dscl . -search /groups PrimaryGroupID $gid 2>/dev/null |		\
+      grep PrimaryGroupID >/dev/null 2>&1 ; then
 	echo "groupadd: GID $gid already exists" 1>&2
 	exit 1
     fi
@@ -48,8 +53,16 @@ else
     gid=`getnextgid`
 fi
 
-echo "${group}:*:${gid}:" | niload group .
-if ! nireport . /groups/$group gid 2>/dev/null; then
-    echo "groupadd: Could not create group" 1>&2
+if [ -x /usr/bin/niload ] || which niload | grep -v -q '^no '; then
+    echo "${group}:*:${gid}:" | niload group .
+else
+    dscl . -create /groups/$group RecordName $group
+    dscl . -create /groups/$group RecordType dsRecTypeNative:groups
+    dscl . -create /groups/$group PrimaryGroupID $gid
+fi
+if ! nireport . /groups/$group gid 2>/dev/null &&			\
+   ! dscl . -search /groups PrimaryGroupID $gid 2>/dev/null |		\
+   grep PrimaryGroupID >/dev/null 2>&1 ; then
+    echo "groupadd: Could not create group $gid: $group" 1>&2
     exit 1
 fi
