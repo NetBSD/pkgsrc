@@ -1,8 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/30 23:55:38 jlam Exp $
-#
-# TODO:
-# * Control ${WRKSRC}/SEMI-ELS explicitly, otherwise Emacs/XEmacs founds
-#   bbdb / w3 if installed.
+# $NetBSD: Makefile,v 1.25 2007/10/29 13:01:37 uebayasi Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -21,26 +17,23 @@ HOMEPAGE=	http://www.m17n.org/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim>=1.14.2:../../devel/flim
-EMACS_MODULES=	base
 
-.include "../../mk/emacs.mk"
-
-.if ${EMACS_FLAVOR} == "emacs"
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=9.22:../../devel/apel
-BUILD_TARGET=	elc
-INSTALL_TARGET=	install
-.else	# ${EMACS_FLAVOR} == "xemacs"
-BUILD_TARGET=	package
-INSTALL_TARGET=	install-package
-MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
-.endif
+BUILD_TARGET=	${BUILD_TARGET.${EMACS_TYPE}}
+INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_TYPE}}
+MAKEFLAGS=	${MAKEFLAGS.${EMACS_TYPE}}
 
 EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 
-.include "options.mk"
+EMACS_MODULES=	base
+
+BUILD_TARGET.emacs=	elc
+BUILD_TARGET.xemacs=	package
+INSTALL_TARGET.emacs=	install
+INSTALL_TARGET.xemacs=	install-package
+MAKEFLAGS.emacs+=
+MAKEFLAGS.xemacs+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 post-build:
 	@cd ${WRKSRC}; for i in mime-ui-en mime-ui-ja; do		\
@@ -56,4 +49,10 @@ post-install:
 		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
 	done
 
+.include "options.mk"
+
+.include "../../mk/emacs.mk"
+
+.include "../../devel/apel/buildlink3.mk"
+.include "../../devel/flim/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
