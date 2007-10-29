@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2007/09/24 22:31:16 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/10/29 16:04:53 shannonjr Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	3
-CATEGORIES=	x11
+CATEGORIES=	local
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
 
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	shannonjr@NetBSD.org
 COMMENT=	Xorg X11 Server from modular X.org X11
 
 USE_LIBTOOL=		YES
@@ -19,34 +18,23 @@ PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--enable-dri
 
-PKG_SUPPORTED_OPTIONS=	dri
+PKG_SUPPORTED_OPTIONS=	xglx
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xorg-server
 PKG_OPTIONS_LEGACY_OPTS=glx:dri
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdri)
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		MesaLib-6.5.2.tar.bz2
-SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-MESA_SRC=		${WRKDIR}/Mesa-6.5.2
-CONFIGURE_ARGS+=	--enable-glx
-CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
-.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
-    ${MACHINE_ARCH} == "alpha"
-GLX_DEFINES+=		-D__GLX_ALIGN64
-.endif
+.if !empty(PKG_OPTIONS:Mxglx)
 CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
-# glcore.h and dri_interface.h shipped with *proto are older than
-# those in Mesa-6.5.2. Either patch them or trick the build into using
-# the newer ones.
-#BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
-#BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
 PLIST_SUBST+=		USE_DRI=""
-.else
-CONFIGURE_ARGS+=	--disable-glx
-PLIST_SUBST+=		USE_DRI="@comment "
+CONFIGURE_ARGS+=	--enable-xglx
+CONFIGURE_ARGS+=	--enable-xgl
+CONFIGURE_ARGS+=	--enable-xkb
+CONFIGURE_ARGS+=	--disable-dri
+CONFIGURE_ARGS+=	--disable-kdriveserver
+CONFIGURE_ARGS+=	--enable-dlopen
+AUTOCONF_REQD=		2.61
+USE_TOOLS+=		autoconf
 .endif
 
 CONFIGURE_ENV+=	APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
@@ -61,19 +49,25 @@ BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.1
 
+
 post-extract:
 	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
 .if !empty(PKG_OPTIONS:Mdri)
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 .endif
 
+.if !empty(PKG_OPTIONS:Mxglx)
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
+.include "../../graphics/glitz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
-.if empty(PKG_OPTIONS:Mdri)
-# for GLX we already have the Mesa source
-.include "../../graphics/MesaLib/buildlink3.mk"
-.endif
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
