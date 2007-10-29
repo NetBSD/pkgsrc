@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2007/10/09 19:19:15 martti Exp $
+# $NetBSD: Makefile,v 1.55 2007/10/29 12:40:58 sborrill Exp $
 
 DISTNAME=		apcupsd-3.14.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR= 	apcupsd
 
+.include "options.mk"
+
 # Thread support is needed to compile powerflute, which has a curses
 # interface (apparently needing ncurses), but pthreads isn't very
 # efficient and is less preferred.
@@ -24,9 +26,6 @@ PKG_SYSCONFSUBDIR= 	apcupsd
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 
-# XXX this should be an option...
-CONFIGURE_ARGS+=	--enable-cgi		# include CGI support
-CONFIGURE_ARGS+=	--with-cgi-bin=${PREFIX}/libexec/cgi-bin
 #CONFIGURE_ARGS+=	--with-net-port=${APCUPSD_NET_PORT}	# un-registered port is 7000
 
 #CONFIGURE_ARGS+=	--with-nis-port=${APCUPSD_NIS_PORT}	# registered port is 3551
@@ -35,9 +34,6 @@ CONFIGURE_ARGS+=	--with-cgi-bin=${PREFIX}/libexec/cgi-bin
 
 CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
 CONFIGURE_ARGS+=	--enable-usb		# enable USB network driver
-# XXX this should be an option...
-.include "../../net/net-snmp/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
 CONFIGURE_ARGS+=	--enable-nls		# i18n support
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
