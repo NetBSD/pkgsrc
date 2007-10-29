@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/05 15:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/10/29 04:43:17 uebayasi Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -21,16 +21,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
-.include "../../mk/emacs.mk"
-
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
-
-.if ${EMACS_FLAVOR} == "xemacs"
-PIXMAPDIR=	${EMACS_LISPPREFIX:H}/etc/vm
-.elif ${EMACS_FLAVOR} == "emacs"
-PIXMAPDIR=	${EMACS_LISPPREFIX}/vm/pixmaps
-.endif
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/vm
@@ -42,6 +34,10 @@ PLIST_SUBST+=	PIXMAPDIR=${PIXMAPDIR:S/^${PREFIX}\///:Q}
 INSTALLATION_DIRS=	bin ${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/vm	\
 			${PIXMAPDIR}
 
+PIXMAPDIR=		${PIXMAPDIR.${EMACS_FLAVOR}}
+PIXMAPDIR.emacs=	${EMACS_LISPPREFIX}/vm/pixmaps
+PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
+
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${EMACS_LISPPREFIX}/vm
 	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
@@ -51,5 +47,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.x[pb]m ${PIXMAPDIR}
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
 		base64-decode base64-encode ${PREFIX}/bin
+
+.include "../../mk/emacs.mk"
 
 .include "../../mk/bsd.pkg.mk"
