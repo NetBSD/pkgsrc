@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2271 2007/10/29 16:10:32 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2272 2007/10/29 21:53:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/openwbem version 3.2.2 [agc 2007-10-29]
 	Updated net/mldonkey to 2.9.2 [wiz 2007-10-29]
 	Updated net/mldonkey-gui to 2.9.2 [wiz 2007-10-29]
+	Updated databases/p5-DBD-SQLite to 1.14 [adrianp 2007-10-29]
