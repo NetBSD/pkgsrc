@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/08 17:12:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/29 18:41:24 joerg Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.srcf.ucam.org/~mjg59/vbetool/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.srcf.ucam.org/~mjg59/vbetool/
 COMMENT=	Run real-mode video BIOS code to alter hardware state
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM+=	Linux-*-i386 NetBSD-*-i386 NetBSD-*-x86_64
 
