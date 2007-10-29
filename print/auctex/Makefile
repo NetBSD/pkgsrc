@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/01/17 13:18:42 tonio Exp $
+# $NetBSD: Makefile,v 1.33 2007/10/29 04:44:04 uebayasi Exp $
 
 DISTNAME=		auctex-11.84
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -11,18 +11,19 @@ COMMENT=		Enhanced LaTeX mode for Emacs
 
 EMACS_MODULES=		base
 
-.include "../../mk/emacs.mk"
-
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
-.if ${EMACS_FLAVOR} == "xemacs"
-CONFIGURE_ARGS+=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp||}
-.endif
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 CONFIGURE_ARGS+=	--disable-preview
 
 MAKEFLAGS+=		EMACS=${EMACS_BIN:Q}
 MESSAGE_SUBST+=		LISPDIR=${EMACS_LISPPREFIX:Q}
 INFO_FILES=		YES
+
+CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX}
+CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp||}
+
+.include "../../mk/emacs.mk"
 
 .include "../../mk/bsd.pkg.mk"
