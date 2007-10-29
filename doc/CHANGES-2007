@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2270 2007/10/29 15:07:38 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2271 2007/10/29 16:10:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4249,3 +4249,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated inputmethod/skk to 20071028 [uebayasi 2007-10-29]
 	Updated editors/emacs-packages to 0.8 [uebayasi 2007-10-29]
 	Added net/openwbem version 3.2.2 [agc 2007-10-29]
+	Updated net/mldonkey to 2.9.2 [wiz 2007-10-29]
+	Updated net/mldonkey-gui to 2.9.2 [wiz 2007-10-29]
