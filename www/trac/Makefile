@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/10/28 23:40:15 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2007/10/29 18:31:11 gdt Exp $
 #
 
 DISTNAME=	trac-0.10.4
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
 .endif
 .if !empty(PKG_OPTIONS:Mpsycopg2)
-DEPENDS+=	${PYPKGPREFIX}-psycopg>=1.1.14:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
 .endif
 # MySQL is sort of supported but not recommended by upstream and hence
 # omitted.
