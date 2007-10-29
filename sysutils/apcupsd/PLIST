@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2007/06/19 22:22:55 bouyer Exp $
-libexec/cgi-bin/upsstats.cgi
-libexec/cgi-bin/upsfstats.cgi
-libexec/cgi-bin/upsimage.cgi
-libexec/cgi-bin/multimon.cgi
+@comment $NetBSD: PLIST,v 1.10 2007/10/29 12:40:58 sborrill Exp $
+${CGI}libexec/cgi-bin/upsstats.cgi
+${CGI}libexec/cgi-bin/upsfstats.cgi
+${CGI}libexec/cgi-bin/upsimage.cgi
+${CGI}libexec/cgi-bin/multimon.cgi
 sbin/apcaccess
 sbin/apctest
 sbin/apcupsd
