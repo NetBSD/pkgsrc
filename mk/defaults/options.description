@@ -90,6 +90,7 @@ gdk-pixbuf		Use gdk-pixbuf as imaging library.
 geoip			Enable IP-to-country-lookup using the GeoIP C library.
 ggi			Enable GGI support.
 gif			Enable GIF support.
+gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 gnutls			Enable GNU TLS support.
 gopher			Enable support for the Gopher information system.
@@ -136,8 +137,8 @@ kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
 klash			Install Konqueror flash plugin.
-lablgtk1		Use lablgtk1 (GTK1).
 lablgtk			Use lablgtk.
+lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
 ldap			Enable LDAP support.
 libgpod			Enable libgpod support.
