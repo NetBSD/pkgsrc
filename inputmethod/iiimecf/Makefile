@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/29 13:02:50 uebayasi Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
@@ -11,8 +11,6 @@ MAINTAINER=	uebayasi@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Emacs Lisp library for IIIM Protocol
 
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.82:../../editors/mule-ucs
-
 do-build:
 	@cd ${WRKSRC} && \
 		${EMACS_BIN} -q --no-site-file -batch -l iiimcf-comp.el
@@ -24,4 +22,6 @@ do-install:
 	done
 
 .include "../../mk/emacs.mk"
+
+.include "../../editors/mule-ucs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
