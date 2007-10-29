@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
+
+--- configure	2006/02/21 21:18:12	1.1
++++ configure	2006/02/21 21:19:32
+@@ -4652,8 +4652,20 @@
+ 	PLAT_CXXFLAGS="-DEXPERIMENTAL"
+ 	LIBS="$LIBS -lnetware"
+ 	;;
+-#*-*-netbsd*)
+-#	;;
++*-*-netbsd*)
++	cat >>confdefs.h <<\_ACEOF
++#define NETBSD 1
++_ACEOF
++
++	PLAT_CFLAGS="-fPIC -D_REENTRANT -pipe -pthread -D_POSIX_PTHREAD_SEMANTICS"
++	PLAT_CXXFLAGS="-fPIC -D_REENTRANT -pipe -pthread -D_POSIX_PTHREAD_SEMANTICS"
++	CXXCOMMONLINKFLAGS="-pthread"
++	CXXBINLINKFLAGS="-Wl,-Bdynamic -Wl,-E $LDFLAGS"
++	CXXSHAREDLIBLINKFLAGS='-shared -fPIC -Wl,-soname -Wl,$@.$(LIBRARY_BINARY_VERSION)'
++	PLAT_OPTFLAGS="-O3"
++	PIDFILE_DIR="/var/run"
++	LIB_EXT="so"
++	;;
+ *-*-freebsd*)
+ 	cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
