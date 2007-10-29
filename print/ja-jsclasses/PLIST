@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/24 10:56:30 hira Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/29 23:54:36 uebayasi Exp $
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsarticle.cls
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsbook.cls
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsclasses.dtx
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsclasses.ins
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jspf.cls
+${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsverb.dtx
+${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsverb.ins
+${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsverb.sty
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/morisawa.dtx
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/morisawa.ins
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/morisawa.sty
