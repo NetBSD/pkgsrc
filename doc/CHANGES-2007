@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2269 2007/10/29 13:28:34 uebayasi Exp $
+$NetBSD: CHANGES-2007,v 1.2270 2007/10/29 15:07:38 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4248,3 +4248,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/snow version 20060213 [agc 2007-10-29]
 	Updated inputmethod/skk to 20071028 [uebayasi 2007-10-29]
 	Updated editors/emacs-packages to 0.8 [uebayasi 2007-10-29]
+	Added net/openwbem version 3.2.2 [agc 2007-10-29]
