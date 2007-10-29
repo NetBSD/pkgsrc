@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/06/30 13:21:13 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/29 13:11:11 uebayasi Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	1
@@ -14,40 +14,44 @@ INFO_FILES=	YES
 
 DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
 
-.include "../../mk/emacs.mk"
-
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
-.if ${EMACS_FLAVOR} == "xemacs"
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.3:../../devel/apel
-.endif
-
-.if ${EMACS_TYPE} == "emacs21" || ${EMACS_TYPE} == "emacs22"
-BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.84:../../editors/mule-ucs
-.endif
-
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=--with-icondir=${PREFIX}/${ETCDIR}
 BUILD_TARGET=	default
-.if ${EMACS_FLAVOR} == "xemacs"
-INSTALL_TARGET=	install-package
+INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
+PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
+
+SUBST_CLASSES+=	fix-icondir
+SUBST_STAGE.fix-icondir=	pre-configure
+SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
+SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g' \
+				-e 's|images/w3m|w3m|g'
+
+.include "../../mk/emacs.mk"
+
+# GNU Emacs 21 or later and XEmacs have GUI support
+.if (${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} > 20) || \
+    ${EMACS_FLAVOR} == "xemacs"
+PLIST_SUBST+=	FOR_gui=""
 .else
-INSTALL_TARGET=	install install-icons
+PLIST_SUBST+=	FOR_gui="@comment "
 .endif
 
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja
-.if ${EMACS_FLAVOR} == "xemacs"
-ETCDIR=	lib/xemacs/site-packages/etc
-ICONDIR=	${ETCDIR}/w3m
-.else
-ETCDIR=	share/emacs/${_EMACS_VERSION_NOREV}/etc
-ICONDIR=	${ETCDIR}/images/w3m
-.endif
-DOCDIR=	${ETCDIR}/w3m/doc
-PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
-PLIST_SUBST+=	ICONDIR=${ICONDIR:Q}
+ETCDIR=		${ETCDIR.${EMACS_FLAVOR}}
+
+INSTALL_TARGET.emacs=	install install-icons
+INSTALL_TARGET.xemacs=	install-package
+ETCDIR.emacs=		share/emacs/${_EMACS_VERSION_NOREV}/etc/w3m
+ETCDIR.xemacs=		lib/xemacs/site-packages/etc/w3m
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${DOCDIR}; done
+	@${INSTALL_DATA_DIR} ${PREFIX}/${ETCDIR}
+	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${ETCDIR}; done
 
+.include "options.mk"
+
+.include "../../devel/apel/buildlink3.mk"
+.include "../../devel/semi/buildlink3.mk"
+.include "../../editors/mule-ucs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
