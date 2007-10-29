@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/10/17 21:40:11 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/29 23:12:47 drochner Exp $
 #
 
 DISTNAME=	exaile_0.2.10
 PKGNAME=	exaile-0.2.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.exaile.org/files/
 
@@ -26,6 +26,7 @@ post-install:
 	${ECHO} exec "${PYTHONBIN} ${PREFIX}/share/exaile/exaile.py" >> ${EX}
 	chmod 755 ${EX}
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
