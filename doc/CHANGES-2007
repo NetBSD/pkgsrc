@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2264 2007/10/29 08:14:08 rh Exp $
+$NetBSD: CHANGES-2007,v 1.2265 2007/10/29 09:51:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4243,3 +4243,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dovecot to 1.0.6 [ghen 2007-10-28]
 	Updated mail/imapfilter to 2.0.6 [seb 2007-10-28]
 	Updated sysutils/user_darwin to 20071026 [rh 2007-10-29]
+	Added net/gsnmp version 0.2.0 [seb 2007-10-29]
