@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/06/30 05:07:02 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/29 13:41:29 uebayasi Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
