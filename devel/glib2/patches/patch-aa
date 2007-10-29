@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.35 2007/09/18 17:37:02 tnn Exp $
+$NetBSD: patch-aa,v 1.36 2007/10/29 19:15:24 drochner Exp $
 
 --- configure.orig	2007-09-16 18:29:44.000000000 +0200
 +++ configure
@@ -49,11 +49,11 @@ $NetBSD: patch-aa,v 1.35 2007/09/18 17:37:02 tnn Exp $
 +int gettext;
 +int main () {
 +    void *handle;
-+    handle = dlopen ("libintl.so", RTLD_GLOBAL | RTLD_LAZY);
++    handle = dlopen ("libm.so", RTLD_GLOBAL | RTLD_LAZY);
 +    if (!handle) return 0;
 +    handle = dlopen (NULL, 0);
 +    if (!handle) return 0;
-+    handle = dlsym (handle, "gettext");
++    handle = dlsym (handle, "sin");
 +    return handle == NULL;
 +}
 +
@@ -95,7 +95,7 @@ $NetBSD: patch-aa,v 1.35 2007/09/18 17:37:02 tnn Exp $
 +fi
 +{ echo "$as_me:$LINENO: result: $glib_cv_dlopennull_broken" >&5
 +echo "${ECHO_T}$glib_cv_dlopennull_broken" >&6; }
-+	if test "xglib_cv_dlopennull_broken$" = "xyes"; then
++	if test "x$glib_cv_dlopennull_broken" = "xyes"; then
 +		G_MODULE_BROKEN_DLOPEN_NULL=1
 +	else
 +		G_MODULE_BROKEN_DLOPEN_NULL=0
