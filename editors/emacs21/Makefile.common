@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2007/06/11 13:38:29 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/10/29 12:38:02 uebayasi Exp $
+
+DISTNAME=	emacs-${EMACSVERSION}a
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -24,6 +26,8 @@ MAKEFLAGS+=	EMACSLOADPATH=${WRKSRC}/lisp
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${EMACSVERSION}
+
+CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
