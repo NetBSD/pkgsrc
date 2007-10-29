@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.43 2007/10/29 12:52:36 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.44 2007/10/29 13:13:31 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -344,7 +344,7 @@ PLIST_SUBST+=	FOR_${e}="" NOTFOR_${e}="@comment "
 PLIST_SUBST+=	FOR_${e}="@comment " NOTFOR_${e}=""
 .  endif
 .endfor
-.if empty(EMACS_TYPE:*nox)
+.if empty(EMACS_TYPE:M*nox)
 PLIST_SUBST+=	FOR_emacs_x="" NOTFOR_emacs_nox="@comment " FOR_emacs_nox="@comment " NOTFOR_emacs_nox="" 
 .else
 PLIST_SUBST+=	FOR_emacs_x="@comment " NOTFOR_emacs_nox="" FOR_emacs_nox="" NOTFOR_emacs_nox="@comment " 
