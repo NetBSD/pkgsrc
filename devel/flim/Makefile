@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/20 12:42:37 uebayasi Exp $
+# $NetBSD: Makefile,v 1.26 2007/10/29 12:55:43 uebayasi Exp $
 
 DISTNAME=	flim-1.14.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,27 +10,25 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/FLIM/
 COMMENT=	Emacs lisp library for message representation/encoding
 
-EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs214 xemacs215
-EMACS_MODULES=	base
-
-.include "../../mk/emacs.mk"
-
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
 
-.if ${EMACS_FLAVOR} == "emacs"
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=9.22:../../devel/apel
-BUILD_TARGET=	elc
-INSTALL_TARGET= install
-.else	# ${EMACS_FLAVOR} == "xemacs"
-BUILD_TARGET=	package
-INSTALL_TARGET= install-package
-MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
-.endif
+BUILD_TARGET=	${BUILD_TARGET.${EMACS_TYPE}}
+INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_TYPE}}
+MAKEFLAGS=	${MAKEFLAGS.${EMACS_TYPE}}
 
 EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 TEXINFO_REQD=	4.5
+
+BUILD_TARGET.emacs=	elc
+BUILD_TARGET.xemacs=	package
+INSTALL_TARGET.emacs=	install
+INSTALL_TARGET.xemacs=	install-package
+MAKEFLAGS.emacs+=
+MAKEFLAGS.xemacs+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
+
+EMACS_MODULES=	base
 
 post-build:
 	@cd ${WRKSRC}; for i in mime-en mime-ja; do			\
@@ -46,4 +44,7 @@ post-install:
 		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
 	done
 
+.include "../../mk/emacs.mk"
+
+.include "../../devel/apel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
