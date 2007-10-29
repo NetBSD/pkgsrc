@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2007/09/05 19:07:30 shannonjr Exp $
+$NetBSD: distinfo,v 1.15 2007/10/29 21:57:17 shannonjr Exp $
 
-SHA1 (prelude-manager-0.9.9.1.tar.gz) = 64b590c4afc2f8680e6d1a4f08831a8a7e873679
-RMD160 (prelude-manager-0.9.9.1.tar.gz) = 7f8de090608459113e871eaf1a89438eebff1836
-Size (prelude-manager-0.9.9.1.tar.gz) = 647637 bytes
+SHA1 (prelude-manager-0.9.10.tar.gz) = 74fce47ed2baea48bd82dd564fae970208870b3a
+RMD160 (prelude-manager-0.9.10.tar.gz) = bb7e763890a91329f4f5ac2b5a608d7c16045938
+Size (prelude-manager-0.9.10.tar.gz) = 662751 bytes
 SHA1 (patch-aa) = 250034ddeba5188895a6d873ce108b1bf33dfcc5
 SHA1 (patch-ab) = 063fa408306df19a18bda3098a70f8859c243686
