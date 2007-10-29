@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/11 13:38:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/10/29 12:37:13 uebayasi Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -1789,6 +1789,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${EMACSVERSION}/etc/e
 @dirrm share/emacs/${EMACSVERSION}/etc
 @dirrm share/emacs/${EMACSVERSION}
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
 @dirrm libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/emacs/${EMACSVERSION}
