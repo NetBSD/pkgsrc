@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/05/30 13:46:13 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2007/10/29 04:38:47 uebayasi Exp $
 #
 
 DISTNAME=	riece-4.0.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.nongnu.org/riece/
 COMMENT=	IRC client for Emacs
 
 EMACS_VERSIONS_ACCEPTED= \
-		emacs21 emacs21nox emacs22 emacs22nox xemacs214
+		emacs22 emacs22nox emacs21 emacs21nox xemacs214
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[^0-9]$||}
 
@@ -19,15 +19,14 @@ GNU_CONFIGURE=	YES
 INFO_FILES=	# PLIST
 EMACS_MODULES=	base
 
-.include "../../mk/emacs.mk"
+# --with-emacs=... or --with-xemacs=...
+CONFIGURE_ARGS+=	--with-${EMACS_FLAVOR}=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 
-.if ${EMACS_FLAVOR} == "emacs"
-CONFIGURE_ARGS+=	--with-emacs=${EMACS_BIN:Q}
-.elif ${EMACS_FLAVOR} == "xemacs"
-CONFIGURE_ARGS+=	--with-xemacs=${EMACS_BIN:Q}
-CONFIGURE_ARGS+=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
-.endif
 # Riece digs sub directory.
-CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX:Q}
+CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX:Q}
+CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
+
+.include "../../mk/emacs.mk"
 
 .include "../../mk/bsd.pkg.mk"
