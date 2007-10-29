@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2007/10/26 16:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2007/10/29 19:06:04 drochner Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -46,8 +46,6 @@ CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
-
-.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
