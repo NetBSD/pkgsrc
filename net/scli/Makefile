@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.21 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: Makefile,v 1.22 2007/10/29 09:53:13 seb Exp $
 #
 
-DISTNAME=		scli-0.2.12
-PKGREVISION=		6
+DISTNAME=		scli-0.3.1
+#PKGREVISION=
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/pub/local/scli/
+MASTER_SITES=		ftp://ftp.ibr.cs.tu-bs.de/local/scli/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
 COMMENT=		SNMP command line interface
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config gmake
 
-USE_GNU_READLINE=	# history_list
-BUILDLINK_API_DEPENDS.readline+=    readline>=4.0
+USE_GNU_READLINE=	yes # history_list
+BUILDLINK_API_DEPENDS.readline+=	readline>=4.0
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
-.include "../../devel/readline/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../net/gnet/buildlink3.mk"
+.include "../../net/gsnmp/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
