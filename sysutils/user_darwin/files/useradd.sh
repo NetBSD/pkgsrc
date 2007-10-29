@@ -24,7 +24,8 @@ getnextuid()
     # * must be <400 (Fink uses 400 and up)
     # * must be from a reasonably sized range
 
-    used_uids=`nireport . /users uid`
+    used_uids=`nireport . /users uid 2>/dev/null ||			\
+      dscl . -readall /users UniqueID | grep '^UniqueID:' | cut -d' ' -f2`
     low_uid=300; high_uid=399
 
     # Try to use the GID as the UID.
@@ -53,7 +54,8 @@ if [ -z "$user" ]; then
     echo "useradd: Must specify username" 1>&2
     exit 1
 fi
-if nireport . /users/$user uid 2>/dev/null; then
+if nireport . /users/$user uid 2>/dev/null ||				\
+   dscl . -read /users/$user uid >/dev/null 2>&1; then
     echo "useradd: User '$user' already exists" 1>&2
     exit 1
 fi
@@ -62,14 +64,17 @@ if [ -z "$group" ]; then
     echo "useradd: Must specify group name" 1>&2
     exit 1
 fi
-gid=`niutil -readprop . /groups/$group gid 2>/dev/null`
-if [ -z "$gid" ]; then
+gid=`niutil -readprop . /groups/$group gid 2>/dev/null ||		\
+     dscl . -read /groups/$group gid 2>/dev/null | cut -d' ' -f2`
+if [ -z "$gid" -o "$gid" = "Invalid" ]; then
     echo "useradd: No group '$group'" 1>&2
     exit 1
 fi
 
 if [ -n "$uid" ]; then
-    if nireport . /users/uid=$uid uid 2>/dev/null; then
+    if nireport . /users/uid=$uid uid 2>/dev/null ||			\
+      dscl . -search /users UniqueID $uid 2>/dev/null |		\
+      grep UniqueID >/dev/null 2>&1 ; then
 	echo "useradd: UID $uid already exists" 1>&2
 	exit 1
     fi
@@ -80,10 +85,24 @@ else
     fi
 fi
 
-echo "${user}:*:${uid}:${gid}::0:0:${comment}:${homedir}:${shell}" | niload passwd .
-if ! nireport . /users/$user uid 2>/dev/null; then
+if [ -x /usr/bin/niload ] || which niload | grep -v -q '^no '; then
+    echo "${user}:*:${uid}:${gid}::0:0:${comment}:${homedir}:${shell}" | \
+    niload passwd .
+else
+    dscl . -create /users/$user RecordName $user
+    dscl . -create /users/$user RecordType dsRecTypeNative:users
+    dscl . -create /users/$user UniqueID $uid
+    dscl . -create /users/$user PrimaryGroupID $gid
+    dscl . -create /users/$user NFSHomeDirectory "$homedir"
+    dscl . -create /users/$user UserShell "$shell"
+    dscl . -create /users/$user Comment "$comment"
+fi
+
+if ! nireport . /users/uid=$uid uid 2>/dev/null &&			\
+   ! dscl . -search /users UniqueID $uid 2>/dev/null |			\
+   grep UniqueID >/dev/null 2>&1 ; then
     echo "useradd: Could not create user" 1>&2
     exit 1
 fi
 
-kill -HUP `cat /var/run/lookupd.pid`
+kill -HUP `cat /var/run/lookupd.pid 2>/dev/null` 2>/dev/null || true
