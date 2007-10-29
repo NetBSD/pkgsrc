@@ -13,7 +13,8 @@ if [ -z "$user" ]; then
     exit 1
 fi
 
-if ! niutil -destroy . /users/$user 2>/dev/null; then
+if ! niutil -destroy . /users/$user 2>/dev/null &&			\
+   ! dscl . -delete /users/$user >/dev/null 2>&1 ; then
     echo "userdel: Could not delete user" 1>&2
     exit 1
 fi
