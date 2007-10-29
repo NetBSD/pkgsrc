@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/07/24 17:17:18 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2007/10/29 13:01:37 uebayasi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.semi
 PKG_SUPPORTED_OPTIONS=	semi-bbdb
@@ -9,19 +9,20 @@ PKG_SUGGESTED_OPTIONS=
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msemi-bbdb)
-DEPENDS+=	bbdb-[0-9]*:../../misc/bbdb
+.include "../../misc/bbdb/buildlink3.mk"
 PLIST_SUBST+=	FOR_bbdb=
 .else
 PLIST_SUBST+=	FOR_bbdb="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mw3)
-DEPENDS+=	w3-[0-9]*:../../www/w3
+.include "../../www/w3/buildlink3.mk"
 PLIST_SUBST+=	FOR_w3=
 .else
 PLIST_SUBST+=	FOR_w3="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mw3m)
-DEPENDS+=	w3m-[0-9]*:../../www/emacs-w3m
-.endif
+# XXX inter-dependency!?!?!?
+#.if !empty(PKG_OPTIONS:Mw3m)
+#.include "../../www/emacs-w3m/buildlink3.mk"
+#.endif
