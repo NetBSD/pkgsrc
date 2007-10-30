@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2007/10/29 13:27:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.23 2007/10/30 12:46:01 dsainty Exp $
 
-DISTNAME=	emacs-packages-0.8
+DISTNAME=	emacs-packages-0.9
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,6 +21,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "20"
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}calc-[0-9]*:../../math/calc
 .endif
+DEPENDS+=	${EMACS_PKGNAME_PREFIX}doxymacs-[0-9]*:../../devel/doxymacs
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}eieio-[0-9]*:../../lang/eieio
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib-[0-9]*:../../devel/elib
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elscreen-[0-9]*:../../misc/elscreen
