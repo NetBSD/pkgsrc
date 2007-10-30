@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2007/09/20 00:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.293 2007/10/30 10:06:22 wiz Exp $
 #
 
 COMMENT=	Games
@@ -10,6 +10,7 @@ SUBDIR+=	KoboDeluxe
 SUBDIR+=	REminiscence
 SUBDIR+=	abuse
 SUBDIR+=	adom
+SUBDIR+=	alephone
 SUBDIR+=	an
 SUBDIR+=	angband-tty
 SUBDIR+=	angband-x11
