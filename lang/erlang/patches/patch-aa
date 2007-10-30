@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2007/07/30 07:15:36 joerg Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2007/10/30 13:47:19 is Exp $
 
---- lib/os_mon/c_src/memsup.c.orig	2007-07-30 06:46:25.000000000 +0000
+--- lib/os_mon/c_src/memsup.c.orig	2006-08-29 11:47:15.000000000 +0200
 +++ lib/os_mon/c_src/memsup.c
-@@ -101,7 +101,7 @@
- #ifndef __OpenBSD__
+@@ -98,10 +98,10 @@
+ #ifdef BSD4_4
+ #include <sys/types.h>
+ #include <sys/sysctl.h>
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
  #include <vm/vm_param.h>
  #endif
 -#ifdef __FreeBSD__
