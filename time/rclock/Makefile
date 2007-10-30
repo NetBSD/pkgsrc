@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/02/01 23:57:07 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/30 12:25:11 dsainty Exp $
 
-DISTNAME=		rxvt-2.6.0
-PKGNAME=		rclock-2.6.0
-PKGREVISION=		1
+DISTNAME=		rxvt-2.7.10
+PKGNAME=		rclock-2.7.10
 CATEGORIES=		x11 time
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/}  \
-			ftp://ftp.nuclecu.unam.mx/linux/local/rxvt/  \
-			ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin.X11/
+MASTER_SITES=           ftp://ftp.rxvt.org/pub/rxvt/ \
+                        ftp://mason.primenet.com.au/pub/rxvt/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
