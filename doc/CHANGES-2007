@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2277 2007/10/30 10:06:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2278 2007/10/30 12:05:22 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4259,3 +4259,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/gmp to 4.2.2 [bjs 2007-10-30]
 	Updated sysutils/pcvt-utils to 20000611nb1 [bjs 2007-10-30]
 	Added games/alephone version 20071020 [wiz 2007-10-30]
+	Updated mail/dovecot to 1.0.7 [ghen 2007-10-30]
