@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/30 13:51:24 martti Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/30 19:31:38 martti Exp $
 
 DISTNAME=	xfce4-dev-tools-4.4.0
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.xfce.org/
 COMMENT=	Xfce development tools
-LICENSE=	gnu-gpl-v2
+#LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
