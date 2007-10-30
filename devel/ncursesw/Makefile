@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/13 23:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/30 05:33:07 bjs Exp $
 
 .include "../../devel/ncurses/Makefile.common"
 
@@ -12,14 +12,15 @@ DISTINFO_FILE=	${.CURDIR}/../../devel/ncurses/distinfo
 CONFIGURE_ARGS+=	--enable-widec
 
 INSTALLATION_DIRS+=	include/ncursesw
+INSTALLATION_DIRS+=	lib
 
 BUILD_TARGET=	libs
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/include/curses.h ${PREFIX}/include/ncursesw/ncurses.h
+	${INSTALL_DATA} ${WRKSRC}/include/curses.h ${DESTDIR}${PREFIX}/include/ncursesw/ncurses.h
 	for LIB in form menu ncurses++ ncurses panel; do	\
 		${LIBTOOL} --mode=install ${INSTALL_PROGRAM}	\
-		    ${WRKSRC}/lib/lib$${LIB}w.la ${PREFIX}/lib;	\
+		    ${WRKSRC}/lib/lib$${LIB}w.la ${DESTDIR}${PREFIX}/lib;	\
 	done
 
 BUILDLINK_API_DEPENDS.ncurses+=	ncurses-${NC_VERS}{,nb*}
