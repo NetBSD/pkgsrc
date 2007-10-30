@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2275 2007/10/30 01:37:55 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2276 2007/10/30 02:23:50 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4257,3 +4257,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/py-prewikka to 0.9.13 [shannonjr 2007-10-29]
 	Updated filesystems/fuse-ntfs-3g to 1.1030 [xtraeme 2007-10-30]
 	Updated devel/gmp to 4.2.2 [bjs 2007-10-30]
+	Updated sysutils/pcvt-utils to 20000611nb1 [bjs 2007-10-30]
