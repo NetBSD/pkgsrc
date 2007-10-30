@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2279 2007/10/30 12:32:11 dsainty Exp $
+$NetBSD: CHANGES-2007,v 1.2280 2007/10/30 12:47:04 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added games/alephone version 20071020 [wiz 2007-10-30]
 	Updated mail/dovecot to 1.0.7 [ghen 2007-10-30]
 	Updated time/rclock to 2.7.10 [dave 2007-10-30]
+	Updated editors/emacs-packages to 0.9 [dave 2007-10-30]
