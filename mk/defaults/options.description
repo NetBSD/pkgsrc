@@ -92,6 +92,7 @@ ggi			Enable GGI support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
+gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnutls			Enable GNU TLS support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
