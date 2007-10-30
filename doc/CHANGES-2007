@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2274 2007/10/30 01:29:08 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2275 2007/10/30 01:37:55 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/prelude-manager to 0.9.16 [shannonjr 2007-10-29]
 	Updated security/py-prewikka to 0.9.13 [shannonjr 2007-10-29]
 	Updated filesystems/fuse-ntfs-3g to 1.1030 [xtraeme 2007-10-30]
+	Updated devel/gmp to 4.2.2 [bjs 2007-10-30]
