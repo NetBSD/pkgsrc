@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.93 2007/10/22 06:16:16 martti Exp $
+# $NetBSD: Makefile.common,v 1.94 2007/10/30 12:49:26 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -7,10 +7,15 @@ DISTFILES=		vim-${VIM_VERSION:Q}${EXTRACT_SUFX:Q}
 DISTFILES+=		vim-${VIM_VERSION:Q}-extra.tar.gz
 DISTFILES+=		vim-${VIM_VERSION:Q}-lang.tar.gz
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
-			ftp://ftp.vim.org/pub/editors/vim/extra/
+MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/unix/
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
+
+SITES.vim-${VIM_VERSION}-extra.tar.gz=	ftp://ftp.vim.org/pub/editors/vim/extra/
+SITES.vim-${VIM_VERSION}-extra.tar.gz+=	ftp://ftp.fu-berlin.de/misc/editors/vim/extra/
+SITES.vim-${VIM_VERSION}-lang.tar.gz=	ftp://ftp.vim.org/pub/editors/vim/extra/
+SITES.vim-${VIM_VERSION}-lang.tar.gz+=	ftp://ftp.fu-berlin.de/misc/editors/vim/extra/
 
 PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION:Q}/
 PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION:Q}/
