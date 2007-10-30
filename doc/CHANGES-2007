@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2281 2007/10/30 22:33:30 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2282 2007/10/30 22:57:23 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4263,3 +4263,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated time/rclock to 2.7.10 [dave 2007-10-30]
 	Updated editors/emacs-packages to 0.9 [dave 2007-10-30]
 	Updated net/Transmission to 0.91 [tnn 2007-10-30]
+	Updated mail/dbmail to 2.2.7 [shannonjr 2007-10-30]
