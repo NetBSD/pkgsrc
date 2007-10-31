@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2007/06/22 14:13:16 lkundrak Exp $
+# $NetBSD: Makefile,v 1.46 2007/10/31 15:35:30 sborrill Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -22,19 +22,20 @@ VLC_VER=		0.8.5
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "options.mk"
+
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-vcd
 .endif
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
-CONFIGURE_ARGS+=	--disable-skins2
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-smb
-CONFIGURE_ARGS+=	--disable-dvbpsi
 CONFIGURE_ARGS+=	--disable-mod
 CONFIGURE_ARGS+=	--disable-mpc
 CONFIGURE_ARGS+=	--disable-dts
@@ -115,6 +116,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
+.include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
@@ -123,7 +125,6 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

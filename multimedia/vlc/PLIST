@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2006/09/26 07:27:19 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/10/31 15:35:30 sborrill Exp $
 bin/vlc
+${COND_SKINS}bin/svlc
 bin/vlc-config
-bin/wxvlc
+${COND_WXWIDGETS}bin/wxvlc
 include/vlc/aout.h
 include/vlc/decoder.h
 include/vlc/input.h
@@ -123,12 +124,14 @@ lib/vlc/demux/librawdv_plugin.so
 lib/vlc/demux/libreal_plugin.so
 lib/vlc/demux/libsgimb_plugin.so
 lib/vlc/demux/libsubtitle_plugin.so
+lib/vlc/demux/libts_plugin.so
 lib/vlc/demux/libty_plugin.so
 lib/vlc/demux/libvobsub_plugin.so
 lib/vlc/demux/libvoc_plugin.so
 lib/vlc/demux/libwav_plugin.so
 lib/vlc/demux/libxa_plugin.so
-lib/vlc/gui/libwxwidgets_plugin.so
+${COND_SKINS}lib/vlc/gui/libskins2_plugin.so
+${COND_WXWIDGETS}lib/vlc/gui/libwxwidgets_plugin.so
 lib/vlc/libffmpeg.a
 lib/vlc/libi420_rgb_mmx.a
 lib/vlc/libi420_ymga_mmx.a
@@ -138,6 +141,7 @@ lib/vlc/libmemcpy3dn.a
 lib/vlc/libmemcpymmx.a
 lib/vlc/libmemcpymmxext.a
 lib/vlc/libmkv.a
+lib/vlc/libmux_ts.a
 lib/vlc/libstream_out_switcher.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
