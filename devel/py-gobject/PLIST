@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/14 23:43:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/10/31 20:50:17 drochner Exp $
 ${PYSITELIB}/gtk-2.0/dsextras.py
 ${PYSITELIB}/gtk-2.0/dsextras.pyc
 ${PYSITELIB}/gtk-2.0/dsextras.pyo
@@ -6,9 +6,15 @@ ${PYSITELIB}/gtk-2.0/gobject/__init__.py
 ${PYSITELIB}/gtk-2.0/gobject/__init__.pyc
 ${PYSITELIB}/gtk-2.0/gobject/__init__.pyo
 ${PYSITELIB}/gtk-2.0/gobject/_gobject.la
+${PYSITELIB}/gtk-2.0/gobject/constants.py
+${PYSITELIB}/gtk-2.0/gobject/constants.pyc
+${PYSITELIB}/gtk-2.0/gobject/constants.pyo
 ${PYSITELIB}/gtk-2.0/gobject/option.py
 ${PYSITELIB}/gtk-2.0/gobject/option.pyc
 ${PYSITELIB}/gtk-2.0/gobject/option.pyo
+${PYSITELIB}/gtk-2.0/gobject/propertyhelper.py
+${PYSITELIB}/gtk-2.0/gobject/propertyhelper.pyc
+${PYSITELIB}/gtk-2.0/gobject/propertyhelper.pyo
 ${PYSITELIB}/pygtk.pth
 ${PYSITELIB}/pygtk.py
 ${PYSITELIB}/pygtk.pyc
