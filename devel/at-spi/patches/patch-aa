@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2007/10/31 19:52:35 drochner Exp $
+
+--- Makefile.in.orig	2007-09-27 19:46:14.000000000 +0200
++++ Makefile.in
+@@ -286,7 +286,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = docs idl libspi login-helper registryd atk-bridge cspi pyatspi test po
++SUBDIRS = docs idl libspi login-helper registryd atk-bridge cspi test po
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libspi-1.0.pc cspi-1.0.pc libloginhelper-1.0.pc
+ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
