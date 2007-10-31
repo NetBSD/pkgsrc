@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.35 2007/10/25 22:02:18 jlam Exp $
+# $NetBSD: plist.mk,v 1.36 2007/10/31 21:09:03 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -159,8 +159,11 @@ PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
 _PLIST_AWK_ENV+=	${PLIST_SUBST:S/^/PLIST_/}
 _PLIST_AWK_ENV+=	PLIST_SUBST_VARS=${PLIST_SUBST:S/^/PLIST_/:C/=.*//:M*:Q}
 
+_PLIST_1_AWK+=		-f ${PKGSRCDIR}/mk/plist/plist-functions.awk
+_PLIST_1_AWK+=		-f ${PKGSRCDIR}/mk/plist/plist-subst.awk
+_PLIST_1_AWK+=		-f ${PKGSRCDIR}/mk/plist/plist-macros.awk
+
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-functions.awk
-_PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-subst.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-locale.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-info.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-man.awk
@@ -240,12 +243,11 @@ plist: ${PLIST} ${_PLIST_NOKEYWORDS}
 ${PLIST}: ${PLIST_SRC}
 .endif
 ${PLIST}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${_GENERATE_PLIST} } |					\
-	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} |		\
-	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}		\
-		> ${.TARGET}
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN} { ${_GENERATE_PLIST} } > ${.TARGET}-1src
+	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_1_AWK} < ${.TARGET}-1src > ${.TARGET}-2mac
+	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} < ${.TARGET}-2mac > ${.TARGET}-3mag
+	${RUN} ${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK} < ${.TARGET}-3mag > ${.TARGET}
 
 # for list of keywords see pkg_create(1)
 ${_PLIST_NOKEYWORDS}: ${PLIST}
