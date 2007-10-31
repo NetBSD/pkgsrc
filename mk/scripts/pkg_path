@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_path,v 1.3 2006/01/23 18:38:27 jlam Exp $
+# $NetBSD: pkg_path,v 1.4 2007/10/31 19:20:08 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,11 +54,11 @@
 #
 # DESCRIPTION
 #	pkg_path canonicalizes the specified directories into package
-#	paths are are relative to the pkgsrc directory tree, and prints
+#	paths that are relative to the pkgsrc directory tree, and prints
 #	each of them to standard output on a new line.  The specified
-#	directories are taken to be relative to the current directory or
-#	are otherwise absolute paths.  Directories that are not valid
-#	package directories or are not found are skipped during processing.
+#	directories are taken to be relative to the current directory.
+#	Directories that are not valid package directories or are not
+#	found are skipped during processing.
 #
 # ENVIRONMENT
 #	PKGSRCDIR	This is the location of the pkgsrc directory tree,
@@ -69,7 +69,6 @@
 : ${ECHO=echo}
 : ${PKGSRCDIR="/usr/pkgsrc"}
 : ${PWD_CMD="pwd -P"}
-: ${TEST=test}
 
 self="${0##*/}"
 
@@ -80,7 +79,7 @@ usage() {
 exitcode=0
 
 # Process optional arguments
-while ${TEST} $# -gt 0; do
+while [ $# -gt 0 ]; do
 	case "$1" in
 	-s)	PKGSRCDIR=$2; shift 2 ;;
 	--)	shift; break ;;
@@ -94,7 +93,7 @@ done
 
 # Process required arguments
 startdir=`${PWD_CMD}`
-while ${TEST} $# -gt 0; do
+while [ $# -gt 0 ]; do
 	dir="$1"; shift
 	case "$dir" in
 	${PKGSRCDIR}/*)	;;
@@ -103,7 +102,7 @@ while ${TEST} $# -gt 0; do
 		continue
 		;;
 	esac
-	if ${TEST} ! -d "$startdir/$dir"; then
+	if [ ! -d "$startdir/$dir" ]; then
 		${ECHO} 1>&2 "$self: \`\`$dir'' not found"
 		exitcode=1
 		continue
