@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.5 2007/10/31 02:16:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/10/31 19:58:13 drochner Exp $
 #
 
-GNOME_VFS_VERSION=	2.18.1
+GNOME_VFS_VERSION=	2.20.0
 
 DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -81,6 +81,8 @@ GNOME_VFS_FLAG?=	${GNOME_VFS_NAME}
 PKGNAME:=		${DISTNAME:S/gnome-vfs/gnome-vfs-${GNOME_VFS_NAME}/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS_FLAG}/--enable-${GNOME_VFS_FLAG}/}
 COMMENT+=		- ${GNOME_VFS_NAME} plugin
+
+CONFLICTS+=		${DISTNAME:S/gnome-vfs/gnome-vfs2-${GNOME_VFS_NAME}/}
 
 BUILD_TARGET=		lib${GNOME_VFS_NAME}.la
 BUILD_DIRS=		modules

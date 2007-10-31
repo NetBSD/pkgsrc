@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.64 2007/10/31 02:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2007/10/31 19:58:13 drochner Exp $
 
-PKGREVISION=		3
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
 
@@ -25,7 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-fam
 
-ONFLICTS+=		gnome-vfs2-[0-9]*
+CONFLICTS+=		gnome-vfs2-[0-9]*
 
 .include "../../devel/GConf/schemas.mk"
 

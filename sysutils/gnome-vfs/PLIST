@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/09/25 10:54:18 hira Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/10/31 19:58:13 drochner Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-df
@@ -198,6 +198,7 @@ share/locale/ne/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/nso/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/oc/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -214,6 +215,7 @@ share/locale/sr@Latn/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sr@ije/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/te/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/th/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-vfs-2.0.mo
