@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2007/10/21 00:22:53 adrianp Exp $
+# $NetBSD: options.mk,v 1.5 2007/10/31 16:49:17 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
 PKG_SUPPORTED_OPTIONS=	debug snort-prelude ssl snmp snort-gre
 PKG_SUPPORTED_OPTIONS+=	snort-dynamicplugin snort-timestats
-PKG_SUPPORTED_OPTIONS+=	snort-rulestate
+PKG_SUPPORTED_OPTIONS+=	snort-rulestate inet6
 PKG_SUGGESTED_OPTIONS=
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	flex
@@ -33,6 +33,13 @@ CONFIGURE_ARGS+=	--enable-dynamicplugin
 ###
 .if !empty(PKG_OPTIONS:Msnort-rulestate)
 CONFIGURE_ARGS+=	--enable-rulestate
+.endif
+
+###
+### Enable ipv6 support
+###
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 ###
