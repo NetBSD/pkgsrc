@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/10/13 13:13:16 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/10/31 02:16:03 wiz Exp $
 #
 
 GNOME_VFS_VERSION=	2.18.1
@@ -81,8 +81,6 @@ GNOME_VFS_FLAG?=	${GNOME_VFS_NAME}
 PKGNAME:=		${DISTNAME:S/gnome-vfs/gnome-vfs-${GNOME_VFS_NAME}/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS_FLAG}/--enable-${GNOME_VFS_FLAG}/}
 COMMENT+=		- ${GNOME_VFS_NAME} plugin
-
-CONFLICTS+=		gnome-vfs2-[0-9]*
 
 BUILD_TARGET=		lib${GNOME_VFS_NAME}.la
 BUILD_DIRS=		modules
