@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2007/01/26 02:49:25 markd Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/31 11:56:44 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	sasl samba debug pam
+PKG_SUPPORTED_OPTIONS=	inet6 sasl samba debug pam
 PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
