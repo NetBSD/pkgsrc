@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2283 2007/10/31 15:37:30 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.2284 2007/10/31 23:17:27 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/Transmission to 0.91 [tnn 2007-10-30]
 	Updated mail/dbmail to 2.2.7 [shannonjr 2007-10-30]
 	Updated multimedia/vlc to 0.8.5nb7 [sborrill 2007-10-31]
+	Updated devel/py-cheetah to 2.0 [shannonjr 2007-10-31]
