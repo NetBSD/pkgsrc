@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.722 2007/10/25 16:08:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.723 2007/10/31 12:20:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5744,6 +5744,15 @@ sub checkline_mk_varassign($$$$$) {
 	}
 }
 
+# The bmake parser is way too sloppy about syntax, so we need to check
+# that here.
+#
+sub checkline_mk_cond($$) {
+	my ($line, $cond) = @_;
+
+	$opt_debug_trace and $line->log_debug("checkline_mk_cond($cond)");
+}
+
 #
 # Procedures to check an array of lines.
 #
@@ -6092,7 +6101,7 @@ sub checklines_mk($) {
 				}
 
 			} elsif ($directive eq "if" || $directive eq "elif") {
-				$opt_debug_unchecked and $line->log_debug("Unchecked conditional \"${args}\".");
+				checkline_mk_cond($line, $args);
 
 			} elsif ($directive eq "ifdef" || $directive eq "ifndef") {
 				if ($args =~ qr"\s") {
