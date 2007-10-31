@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/09/21 12:58:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/31 19:46:18 drochner Exp $
 #
 
 .include "../../devel/GConf/Makefile.common"
-
-PKGREVISION=	1
 
 PKGNAME=	${DISTNAME:S/GConf/GConf-ui/}
 
