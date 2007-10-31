@@ -1,4 +1,4 @@
-# $NetBSD: flavor.mk,v 1.2 2007/08/14 23:58:24 joerg Exp $
+# $NetBSD: flavor.mk,v 1.3 2007/10/31 12:07:13 rillig Exp $
 #
 # This Makefile fragment provides variable and target overrides that are
 # specific to the pkgsrc native package format.
@@ -15,13 +15,13 @@ PKG_FILELIST_CMD=	${PKG_INFO} -qL ${PKGNAME:Q}
 PKG_FILELIST_CMD=	${SED} -e "/^@/d" -e "s|^|${PREFIX}/|" ${_DEPENDS_PLIST}
 .endif
 
-.include "${PKGSRCDIR}/mk/flavor/pkg/depends.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/check.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/metadata.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/install.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/deinstall.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/replace.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/package.mk"
-.include "${PKGSRCDIR}/mk/flavor/pkg/views.mk"
+.include "depends.mk"
+.include "check.mk"
+.include "metadata.mk"
+.include "install.mk"
+.include "deinstall.mk"
+.include "replace.mk"
+.include "package.mk"
+.include "views.mk"
 
-.include "${PKGSRCDIR}/mk/flavor/pkg/utility.mk"
+.include "utility.mk"
