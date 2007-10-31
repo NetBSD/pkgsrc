@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/10/31 21:47:51 gdt Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -9,7 +9,10 @@ EXTRACT_SUFX=	#empty
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Sendmail logfile viewer
 
+LICENSE=	fromto-license  # XXX missing
 RESTRICTED=	Redistribution allowed for non-commercial purposes only
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
