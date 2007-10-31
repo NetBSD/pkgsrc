@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/29 05:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/31 21:50:49 gdt Exp $
 #
 
 DISTNAME=	linunace25
@@ -11,6 +11,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 
+LICENSE=		unace-license
 RESTRICTED=		Only original file distribution.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
