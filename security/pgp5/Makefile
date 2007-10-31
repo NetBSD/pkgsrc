@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/02/22 19:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/10/31 12:29:34 rillig Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -26,7 +26,7 @@ CRYPTO=		YES
 GNU_CONFIGURE=	YES
 
 # use of IDEA as crypto function
-LICENCE=	fee-based-commercial-use
+LICENSE=	fee-based-commercial-use
 
 PGPLIB=	${PREFIX}/share/pgp5
 

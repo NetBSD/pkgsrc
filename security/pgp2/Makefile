@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/02/22 19:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2007/10/31 12:29:34 rillig Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/src
 CRYPTO=		yes
 
 # use of IDEA as crypto function
-LICENCE=	fee-based-commercial-use
+LICENSE=	fee-based-commercial-use
 
 .include "options.mk"
 
