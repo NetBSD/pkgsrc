@@ -1,4 +1,4 @@
-# $NetBSD: plist-functions.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist-functions.awk,v 1.2 2007/10/31 21:09:03 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,4 +56,10 @@ function print_entry(entry) {
 		entries[entry] = entry
 		print entry
 	}
+}
+
+function getenv_or_die(varname) {
+	if (varname in ENVIRON)
+		return ENVIRON[varname]
+	print "ERROR: "varname" must be defined." | "cat 1>&2"
 }
