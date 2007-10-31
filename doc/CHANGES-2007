@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2282 2007/10/30 22:57:23 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.2283 2007/10/31 15:37:30 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/emacs-packages to 0.9 [dave 2007-10-30]
 	Updated net/Transmission to 0.91 [tnn 2007-10-30]
 	Updated mail/dbmail to 2.2.7 [shannonjr 2007-10-30]
+	Updated multimedia/vlc to 0.8.5nb7 [sborrill 2007-10-31]
