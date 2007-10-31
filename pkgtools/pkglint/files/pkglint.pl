@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.724 2007/10/31 12:24:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.725 2007/10/31 19:24:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3247,6 +3247,8 @@ sub variable_needs_quoting($$$) {
 	my $type = get_variable_type($line, $varname);
 	my ($want_list, $have_list);
 
+	$opt_debug_trace and $line->log_debug("variable_needs_quoting($varname, " . $context->to_string() . ")");
+
 	use constant safe_types => array_to_hash(qw(
 		DistSuffix
 		Filemask FileMode Filename
@@ -3267,10 +3269,10 @@ sub variable_needs_quoting($$$) {
 	# enumerations, are expected to not require the :Q operator.
 	if (ref($type->basic_type) eq "HASH" || exists(safe_types->{$type->basic_type})) {
 		if ($type->kind_of_list == LK_NONE) {
-			return doesnt_matter;
+			return false;
 
 		} elsif ($type->kind_of_list == LK_EXTERNAL && $context->extent != VUC_EXTENT_WORD_PART) {
-			return doesnt_matter;
+			return false;
 		}
 	}
 
@@ -4007,7 +4009,7 @@ sub checkline_mk_varuse($$$$) {
 		} elsif ($type->kind_of_list == LK_INTERNAL) {
 			# Fine.
 
-		} elsif ($needs_quoting == doesnt_matter) {
+		} elsif ($needs_quoting == doesnt_matter || $needs_quoting == false) {
 			# Fine, these variables are assumed to not
 			# contain special characters.
 
@@ -4054,6 +4056,9 @@ sub checkline_mk_varuse($$$$) {
 		if ($needs_quoting == false && $mod =~ qr":Q$") {
 			$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
 			$line->explain_warning(
+"Many variables in pkgsrc do not need the :Q operator, since they",
+"are not expected to contain white-space or other evil characters.",
+"",
 "When a variable of type ShellWord appears in a context that expects",
 "a shell word, it does not need to have a :Q operator. Even when it",
 "is concatenated with another variable, it still stays _one_ word.",
