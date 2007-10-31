@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/05/15 13:04:29 shannonjr Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/31 23:15:54 shannonjr Exp $
 #
 
-DISTNAME=		Cheetah-2.0rc8
-PKGNAME=		${PYPKGPREFIX}-cheetah-2.0rc8
+DISTNAME=		Cheetah-2.0
+PKGNAME=		${PYPKGPREFIX}-cheetah-2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cheetahtemplate/}
 
