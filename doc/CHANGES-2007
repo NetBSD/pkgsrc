@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2286 2007/11/01 08:32:17 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2287 2007/11/01 08:37:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/py-cheetah to 2.0 [shannonjr 2007-10-31]
 	Updated editors/vim-share to 7.1.147 [martti 2007-11-01]
 	Updated security/p5-IO-Socket-SSL to 1.12 [wiz 2007-11-01]
+	Updated www/curl to 7.17.1 [wiz 2007-11-01]
