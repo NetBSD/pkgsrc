@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.115 2007/10/17 02:45:42 rillig Exp $
+# $NetBSD: bootstrap,v 1.116 2007/11/01 23:18:54 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -48,7 +48,7 @@ MAKECONF=/dev/null
 export MAKECONF
 
 ignorecasecheck=no
-ignoreusercheck=no
+unprivileged=no
 
 preserve_path=no
 
@@ -331,7 +331,7 @@ while [ $# -gt 0 ]; do
 	--compiler=*)	compiler=`get_optarg "$1"` ;;
 	--compiler)	compiler="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
-	--unprivileged | --ignore-user-check) ignoreusercheck=yes ;;
+	--unprivileged | --ignore-user-check) unprivileged=yes ;;
 	--preserve-path) preserve_path=yes ;;
 	--mk-fragment=*)
 			mk_fragment=`get_optarg "$1"` ;;
@@ -355,7 +355,7 @@ checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
 
 # set defaults for system locations if not already set by the user
 wrkobjdir=${wrkdir}/pkgsrc
-if [ "$ignoreusercheck" = "yes" ]; then
+if [ "$unprivileged" = "yes" ]; then
 	[ -z "$prefix" ] && prefix=${HOME}/pkg
 	[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/var/db/pkg
 	[ -z "$varbase" ] && varbase=${prefix}/var
@@ -689,7 +689,7 @@ if [ $? = 1 ]; then
 	user=$root_user
 	group=$root_group
 else
-	if [ $ignoreusercheck = "no" ]; then
+	if [ $unprivileged = "no" ]; then
 		die "You must be either root to install bootstrap-pkgsrc or use the --unprivileged option."
 	fi
 
@@ -765,7 +765,7 @@ if [ "$compiler" != "" ]; then
 fi
 
 # enable unprivileged builds if not root
-if [ "$ignoreusercheck" = "yes" ]; then
+if [ "$unprivileged" = "yes" ]; then
 	echo "UNPRIVILEGED=		yes" >> ${TARGET_MKCONF}
 fi
 
