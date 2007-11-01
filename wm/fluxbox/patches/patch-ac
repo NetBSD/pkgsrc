@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.8 2007/10/09 20:17:32 xtraeme Exp $
+$NetBSD: patch-ac,v 1.9 2007/11/01 13:08:05 rillig Exp $
 
---- src/fluxbox.cc.orig	2007-10-09 03:40:08.000000000 +0200
-+++ src/fluxbox.cc	2007-10-09 03:41:21.000000000 +0200
-@@ -589,11 +589,11 @@
+--- src/fluxbox.cc.orig	2007-03-19 20:57:09.000000000 +0100
++++ src/fluxbox.cc	2007-10-31 00:54:40.610976000 +0100
+@@ -94,7 +94,8 @@ class Toolbar { };
+ #ifdef SHAPE
+ #include <X11/extensions/shape.h>
+ #endif // SHAPE
+-#ifdef HAVE_RANDR
++#undef HAVE_RANDR
++#if defined(HAVE_RANDR) && !defined(__sun)
+ #include <X11/extensions/Xrandr.h>
+ #endif // HAVE_RANDR
+ 
+@@ -596,11 +597,11 @@ void Fluxbox::setupConfigFiles() {
  
      bool create_init = false, create_keys = false, create_menu = false;
  
@@ -17,4 +27,13 @@ $NetBSD: patch-ac,v 1.8 2007/10/09 20:17:32 xtraeme Exp $
 +    menu_file = dirname + "/" + "menu";
  
      struct stat buf;
+ 
+@@ -1349,7 +1350,7 @@ void Fluxbox::saveWindowSearchGroup(Wind
+ }
+ 
+ void Fluxbox::saveGroupSearch(Window window, WinClient *data) {
+-    m_group_search.insert(pair<Window, WinClient *>(window, data));
++    m_group_search.insert(std::multimap<Window, WinClient *>::value_type(window, data));
+ }
+ 
  
