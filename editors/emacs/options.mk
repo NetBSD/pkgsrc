@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/10/16 21:33:00 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2007/11/01 06:44:08 uebayasi Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
@@ -52,6 +52,15 @@ CONFIGURE_ARGS+=	--without-png
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xpm
+.  if exists(/System/Library/Frameworks/Carbon.framework)
+APPLICATIONS_DIR=	Applications
+CONFIGURE_ARGS+=	--with-carbon
+CONFIGURE_ARGS+=	--enable-carbon-app=${PREFIX}/${APPLICATIONS_DIR}
+PLIST_SRC+=		PLIST.carbon
+PLIST_SUBST+=		APPLIDATIONS_DIR=${APPLICATIONS_DIR:Q}
+INSTALLATION_DIRS+=	${APPLICATIONS_DIR}
+CHECK_WRKREF_SKIP+=	${APPLICATIONS_DIR}/Emacs.app/Contents/MacOS/Emacs
+.  endif
 .endif
 
 ###
