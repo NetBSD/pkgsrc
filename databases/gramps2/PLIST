@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/09/25 10:54:10 hira Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/11/01 12:52:56 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -111,6 +111,12 @@ share/gramps/DateHandler/_Date_nb.pyo
 share/gramps/DateHandler/_Date_nl.py
 share/gramps/DateHandler/_Date_nl.pyc
 share/gramps/DateHandler/_Date_nl.pyo
+share/gramps/DateHandler/_Date_pl.py
+share/gramps/DateHandler/_Date_pl.pyc
+share/gramps/DateHandler/_Date_pl.pyo
+share/gramps/DateHandler/_Date_pt.py
+share/gramps/DateHandler/_Date_pt.pyc
+share/gramps/DateHandler/_Date_pt.pyo
 share/gramps/DateHandler/_Date_ru.py
 share/gramps/DateHandler/_Date_ru.pyc
 share/gramps/DateHandler/_Date_ru.pyo
@@ -645,6 +651,9 @@ share/gramps/Filters/Rules/Person/_MatchIdOf.pyo
 share/gramps/Filters/Rules/Person/_MatchesFilter.py
 share/gramps/Filters/Rules/Person/_MatchesFilter.pyc
 share/gramps/Filters/Rules/Person/_MatchesFilter.pyo
+share/gramps/Filters/Rules/Person/_MissingParent.py
+share/gramps/Filters/Rules/Person/_MissingParent.pyc
+share/gramps/Filters/Rules/Person/_MissingParent.pyo
 share/gramps/Filters/Rules/Person/_MultipleMarriages.py
 share/gramps/Filters/Rules/Person/_MultipleMarriages.pyc
 share/gramps/Filters/Rules/Person/_MultipleMarriages.pyo
@@ -1616,6 +1625,9 @@ share/gramps/plugins/rel_no.pyo
 share/gramps/plugins/rel_pl.py
 share/gramps/plugins/rel_pl.pyc
 share/gramps/plugins/rel_pl.pyo
+share/gramps/plugins/rel_pt.py
+share/gramps/plugins/rel_pt.pyc
+share/gramps/plugins/rel_pt.pyo
 share/gramps/plugins/rel_ru.py
 share/gramps/plugins/rel_ru.pyc
 share/gramps/plugins/rel_ru.pyo
@@ -1628,6 +1640,7 @@ share/gramps/plugins/rel_sv.pyo
 share/gramps/plugins/relcalc.glade
 share/gramps/plugins/soundex.glade
 share/gramps/plugins/summary.glade
+share/gramps/plugins/unused.glade
 share/gramps/plugins/vcalendarexport.glade
 share/gramps/plugins/vcardexport.glade
 share/gramps/plugins/verify.glade
