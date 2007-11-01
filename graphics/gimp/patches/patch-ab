@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.20 2007/10/25 21:06:17 adam Exp $
+$NetBSD: patch-ab,v 1.21 2007/11/01 09:25:07 adam Exp $
 
---- configure.orig	2007-10-22 21:18:02.000000000 +0200
+--- configure.orig	2007-10-31 09:09:36.000000000 +0100
 +++ configure
 @@ -31051,6 +31051,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
    gimp_ok=yes
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.20 2007/10/25 21:06:17 adam Exp $
  rm -f conftest*
 +  fi
  
-       if test $gimp_ok = yes; then
+       if test "x$gimp_ok" = xyes; then
  
 @@ -31059,7 +31060,6 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.20 2007/10/25 21:06:17 adam Exp $
 -  fi
    { echo "$as_me:$LINENO: result: $gimp_ok" >&5
  echo "${ECHO_T}$gimp_ok" >&6; }
-   if test $gimp_ok = no; then
+   if test "x$gimp_ok" = xno; then
 @@ -33607,7 +33607,7 @@ if test "x$with_print" != xno; then
  fi
  
