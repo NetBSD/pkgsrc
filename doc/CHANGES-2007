@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2285 2007/11/01 06:18:24 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2286 2007/11/01 08:32:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/vlc to 0.8.5nb7 [sborrill 2007-10-31]
 	Updated devel/py-cheetah to 2.0 [shannonjr 2007-10-31]
 	Updated editors/vim-share to 7.1.147 [martti 2007-11-01]
+	Updated security/p5-IO-Socket-SSL to 1.12 [wiz 2007-11-01]
