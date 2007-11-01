@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.64 2007/11/01 21:57:37 rillig Exp $	*/
+/*	$NetBSD: perform.c,v 1.65 2007/11/01 23:08:29 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.64 2007/11/01 21:57:37 rillig Exp $");
+__RCSID("$NetBSD: perform.c,v 1.65 2007/11/01 23:08:29 rillig Exp $");
 #endif
 #endif
 
@@ -357,7 +357,7 @@ ignore_replace_depends_check:
 		if (Verbose)
 			printf("mv %s %s\n", replace_from, replace_via);						
 		if (rename(replace_from, replace_via) != 0)
-			err(EXIT_FAILURE, "renaming %s to %s failed", replace_from, replace_via);
+			err(EXIT_FAILURE, "renaming \"%s\" to \"%s\" failed", replace_from, replace_via);
 
 		*replacing = 1;
 	}
@@ -393,7 +393,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	plist_t *p;
 	struct stat sb;
 	struct utsname host_uname;
-	int	rc;
 	uint64_t needed;
 	Boolean	is_depoted_pkg = FALSE;
 	lfile_t	*lfp;
@@ -982,9 +981,8 @@ success:
 		 * Upgrade step 3/4: move back +REQUIRED_BY file
 		 * (see also step 2/4)
 		 */
-		rc = rename(replace_via, replace_to);
-		if (rc != 0)
-			err(EXIT_FAILURE, "renaming %s to %s failed", replace_via, replace_to);
+		if (rename(replace_via, replace_to) != 0)
+			err(EXIT_FAILURE, "renaming \"%s\" to \"%s\" failed", replace_via, replace_to);
 		
 		/*
 		 * Upgrade step 4/4: Fix pkgs that depend on us to
