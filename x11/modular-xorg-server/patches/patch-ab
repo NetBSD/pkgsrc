@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2007/10/29 16:04:54 shannonjr Exp $
+$NetBSD: patch-ab,v 1.6 2007/11/01 14:43:47 joerg Exp $
 
---- configure.orig	2007-04-19 19:25:26.000000000 -0600
+--- configure.orig	2007-04-20 01:25:26.000000000 +0000
 +++ configure
 @@ -24767,6 +24767,10 @@ _ACEOF
  #define USE_DEV_IO 1
@@ -59,15 +59,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/29 16:04:54 shannonjr Exp $
  
  if test $VERSION_SNAP = "0"; then
  	if test $VERSION_PATCH = "0"; then
-@@ -30426,7 +30427,6 @@ else
-   XGL_FALSE=
- fi
- 
--
- if test "x$XGL" = xyes; then
- 	XGL_LIBS="$FB_LIB $MI_LIB $COMPOSITE_LIB $FIXES_LIB $XEXT_LIB $DBE_LIB $XTRAP_LIB $RECORD_LIB $GLX_LIBS $RENDER_LIB $RANDR_LIB $DAMAGE_LIB $MIEXT_DAMAGE_LIB $MIEXT_SHADOW_LIB $MIEXT_LAYER_LIB $XI_LIB $XKB_LIB $XKB_STUB_LIB $XPSTUBS_LIB $CWRAP_LIB $OS_LIB"
- 
-@@ -30903,7 +30903,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -30903,7 +30904,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  		;;
@@ -76,7 +68,7 @@ $NetBSD: patch-ab,v 1.5 2007/10/29 16:04:54 shannonjr Exp $
  	  	XORG_OS="freebsd"
  		XORG_OS_SUBDIR="bsd"
  		XORG_OS_KBD="BSD"
-@@ -31146,7 +31146,14 @@ echo "$as_me: error: Your OS is unknown.
+@@ -31146,7 +31147,14 @@ echo "$as_me: error: Your OS is unknown.
  		;;
  	  sparc*)
  		xorg_bus_sparcpci="yes"
@@ -92,12 +84,3 @@ $NetBSD: patch-ab,v 1.5 2007/10/29 16:04:54 shannonjr Exp $
  		;;
  	  x86_64*|amd64*)
  		case $host_os in
-@@ -35222,6 +35229,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
