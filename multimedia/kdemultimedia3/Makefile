@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2007/10/20 10:41:20 markd Exp $
+# $NetBSD: Makefile,v 1.65 2007/11/01 07:43:38 markd Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -30,6 +31,7 @@ CONFIGURE_ARGS+=	--with-vorbis=${BUILDLINK_PREFIX.libvorbis}
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PTHREAD_OPTS+=	require
+PTHREAD_AUTO_VARS=	yes
 
 UNLIMIT_RESOURCES+=	datasize
 
