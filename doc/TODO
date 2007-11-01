@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6793 2007/11/01 08:27:21 wiz Exp $
+$NetBSD: TODO,v 1.6794 2007/11/01 08:43:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,6 @@ Suggested package updates
 	o cstream-2.7.3
 	o cuetools-1.3.1
 	o cups-1.3.4
-	o curl-7.17.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.0.0
 	o cweb-3.64a
@@ -922,7 +921,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-IO-Interface-1.03
-	o p5-IO-Socket-SSL-1.12
 	o p5-Ima-DBI-0.34
 	o p5-Image-Info-1.26
 	o p5-JSON-XS-1.52
