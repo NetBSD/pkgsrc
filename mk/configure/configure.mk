@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.18 2007/07/12 18:59:15 jlam Exp $
+# $NetBSD: configure.mk,v 1.19 2007/11/01 08:37:24 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -125,8 +125,8 @@ _REAL_CONFIGURE_TARGETS+=	configure-check-interactive
 _REAL_CONFIGURE_TARGETS+=	configure-message
 _REAL_CONFIGURE_TARGETS+=	configure-vars
 _REAL_CONFIGURE_TARGETS+=	pre-configure
-_REAL_CONFIGURE_TARGETS+=	pre-configure-checks-hook
 _REAL_CONFIGURE_TARGETS+=	do-configure-pre-hook
+_REAL_CONFIGURE_TARGETS+=	pre-configure-checks-hook
 _REAL_CONFIGURE_TARGETS+=	do-configure
 _REAL_CONFIGURE_TARGETS+=	do-configure-post-hook
 _REAL_CONFIGURE_TARGETS+=	post-configure
