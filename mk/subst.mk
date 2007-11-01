@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.46 2007/04/05 18:33:09 wiz Exp $
+# $NetBSD: subst.mk,v 1.47 2007/11/01 13:12:48 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -109,7 +109,9 @@ ${_SUBST_COOKIE.${_class_}}:
 	for file in $$files; do						\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file"${_SUBST_BACKUP_SUFFIX:Q};		\
-		if ${_SUBST_IS_TEXT_FILE.${_class_}}; then		\
+		if [ ! -f "$$file" ]; then				\
+			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-existent file \"$$file\"."; \
+		elif ${_SUBST_IS_TEXT_FILE.${_class_}}; then		\
 			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
 			${SUBST_FILTER_CMD.${_class_}}			\
 			< "$$tmpfile"					\
@@ -124,10 +126,8 @@ ${_SUBST_COOKIE.${_class_}}:
 				${SUBST_POSTCMD.${_class_}};		\
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
-		elif ${TEST} -f "$$file"; then				\
-			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-text file \"$$file\"."; \
 		else							\
-			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-existent file \"$$file\"."; \
+			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-text file \"$$file\"."; \
 		fi;							\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
