@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2290 2007/11/01 21:32:06 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.2291 2007/11/01 22:50:40 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/ORBit2 to 2.14.10 [drochner 2007-11-01]
 	Updated devel/GConf to 2.20.1 [drochner 2007-11-01]
 	Updated www/py-django to 0.96.1 [joerg 2007-11-01]
+	Updated audio/bmpx to 0.40.13nb1 [tnn 2007-11-01]
