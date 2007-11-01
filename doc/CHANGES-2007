@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2288 2007/11/01 09:28:50 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2289 2007/11/01 13:00:14 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4271,3 +4271,18 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/curl to 7.17.1 [wiz 2007-11-01]
 	Updated graphics/gimp to 2.4.1 [adam 2007-11-01]
 	Removed graphics/gimp24 [adam 2007-11-01]
+	Updated x11/py-gnome2 to 2.20.0 [drochner 2007-11-01]
+	Updated x11/py-gtk2 to 2.12.0 [drochner 2007-11-01]
+	Updated devel/py-gobject to 2.14.0 [drochner 2007-11-01]
+	Updated graphics/libgnomecanvas to 2.20.1.1 [drochner 2007-11-01]
+	Updated devel/libgnomeui to 2.20.1.1 [drochner 2007-11-01]
+	Updated devel/libgnome to 2.20.1.1 [drochner 2007-11-01]
+	Updated devel/libbonoboui to 2.20.0 [drochner 2007-11-01]
+	Updated devel/libbonobo to 2.20.1 [drochner 2007-11-01]
+	Updated security/gnome-keyring to 2.20.1 [drochner 2007-11-01]
+	Updated textproc/gtk-doc to 1.9 [drochner 2007-11-01]
+	Updated sysutils/gnome-vfs to 2.20.0 [drochner 2007-11-01]
+	Updated devel/gail to 1.20.1 [drochner 2007-11-01]
+	Updated devel/at-spi to 1.20.1 [drochner 2007-11-01]
+	Updated net/ORBit2 to 2.14.10 [drochner 2007-11-01]
+	Updated devel/GConf to 2.20.1 [drochner 2007-11-01]
