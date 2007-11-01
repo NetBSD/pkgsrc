@@ -1,12 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2005/02/02 09:11:27 tron Exp $
+$NetBSD: patch-aa,v 1.3 2007/11/01 08:34:43 rillig Exp $
 
 --- mencvcd.orig	2003-06-13 21:06:02.000000000 +0100
 +++ mencvcd	2005-02-02 08:20:24.000000000 +0000
-@@ -1,4 +1,3 @@
--#!/bin/sh
- #
- # Version:          0.3
- #
 @@ -23,7 +22,7 @@
  		exit 1
  	fi
