@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2293 2007/11/02 08:29:18 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.2294 2007/11/02 09:17:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/bmpx to 0.40.13nb1 [tnn 2007-11-01]
 	Updated lang/gawk to 3.1.6 [adam 2007-11-02]
 	Updated mail/sendmail to 8.14.2 [jnemeth 2007-11-02]
+	Updated lang/fort77 to 1.18 [roland 2007-11-02]
