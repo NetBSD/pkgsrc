@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2297 2007/11/02 18:32:52 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2298 2007/11/02 21:47:53 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4294,3 +4294,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-perl-ldap to 0.34 [adam 2007-11-02]
 	Updated www/ap-auth-external to 2.1.19nb2 [sborrill 2007-11-02]
 	Updated net/aria2 to 0.11.4 [bjs 2007-11-02]
+	Updated www/firefox to 2.0.0.9 [ghen 2007-11-02]
+	Updated www/firefox-bin to 2.0.0.9 [ghen 2007-11-02]
+	Updated www/firefox-gtk1 to 2.0.0.9 [ghen 2007-11-02]
