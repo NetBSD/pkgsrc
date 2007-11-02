@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.35 2007/10/20 10:42:36 ghen Exp $
+$NetBSD: distinfo,v 1.36 2007/11/02 21:46:38 ghen Exp $
 
-SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 58495ecd499efd69c25fcff26d8d50d307382a36
-RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 12025ab2f5a01dc19e538f578037b3dfcf8ac223
-Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-i386-gtk1.tar.bz2) = 27258 bytes
-SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 619f687740dd4710c66dc23d5dd45917d39de7ef
-RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 553fa2ea79e3b77c9358b62551b9b908fd10c3b5
-Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris8-sparc-gtk1.tar.bz2) = 27267 bytes
-SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 8b92d36408828b7a324fb9545a77624ce8bf7857
-RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 6633aeca93fee425f7087201ddd1eb8922e88896
-Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-i386.tar.bz2) = 11896427 
-SHA1 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 9c4f5b5ccb002b58fd2046cae45706e6d19bf9c1
-RMD160 (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 18c14763a1966f642a8937ff5a348a6868a0f659
-Size (firefox/releases/2.0.0.8/contrib/solaris_tarball/firefox-2.0.0.8.en-US.solaris10-sparc.tar.bz2) = 13363688 
-SHA1 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = f22c615a73fa1eb11a1a9237646ae86a81007da3
-RMD160 (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 7a4a3a088090f6f3d3622294e092c1a58f427c69
-Size (firefox/releases/2.0.0.8/linux-i686/en-US/firefox-2.0.0.8.tar.gz) = 9674559 bytes
+SHA1 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-i386.tar.bz2) = 58bb0383cb4ef0698a56e0a932e0bdf4929a3306
+RMD160 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-i386.tar.bz2) = 5816c324a19ddffea4ac3462f56a47b98c9700c9
+Size (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-i386.tar.bz2) = 11892588 bytes
+SHA1 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-sparc.tar.bz2) = 546f559eabc84365b36739fa407a60605393efca
+RMD160 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-sparc.tar.bz2) = 3fad8063264a6f3d9c51c3a01ca7cf9af9f6fa50
+Size (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris10-sparc.tar.bz2) = 13364654 bytes
+SHA1 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-i386-gtk1.tar.bz2) = 19bf12715f0e8f2f083d221b88b5412bc8f594ea
+RMD160 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-i386-gtk1.tar.bz2) = edb23951dc64f197e4ca1501f2915adbb114e950
+Size (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-i386-gtk1.tar.bz2) = 11209241 bytes
+SHA1 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-sparc-gtk1.tar.bz2) = d04a87e2e141dfd30214af516bfb6aaed7e8f072
+RMD160 (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-sparc-gtk1.tar.bz2) = 71040fea8c18506639bd3366715812b12d985e79
+Size (firefox/releases/2.0.0.9/contrib/solaris_tarball/firefox-2.0.0.9.en-US.solaris8-sparc-gtk1.tar.bz2) = 12881554 bytes
+SHA1 (firefox/releases/2.0.0.9/linux-i686/en-US/firefox-2.0.0.9.tar.gz) = e23b7860aa4857b3413fa88fc1592d876c035fce
+RMD160 (firefox/releases/2.0.0.9/linux-i686/en-US/firefox-2.0.0.9.tar.gz) = a2f69c6be4fc1b3a790fec79cb768b3f266b102f
+Size (firefox/releases/2.0.0.9/linux-i686/en-US/firefox-2.0.0.9.tar.gz) = 9675299 bytes
