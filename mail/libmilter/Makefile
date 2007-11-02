@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2007/10/15 11:57:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.14 2007/11/02 10:26:09 tron Exp $
 
 PKGNAME=	libmilter-${DIST_VERS}
-PKGREVISION=	1
 COMMENT=	Mail filter support library for sendmail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
