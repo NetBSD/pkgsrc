@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2007/09/05 16:40:34 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2007/11/02 10:31:21 ghen Exp $
 
 DISTNAME=		TeXmacs-1.0.6.11-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -24,21 +24,18 @@ SUBST_STAGE.init=	post-patch
 SUBST_FILES.init=	plugins/python/progs/init-python.scm
 SUBST_SED.init=		-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash+=	plugins/dratex/bin/tm_dratex
-REPLACE_FILES.bash+=	plugins/eukleides/bin/tm_eukleides
-REPLACE_FILES.bash+=	plugins/gnuplot/bin/tm_gnuplot
-REPLACE_FILES.bash+=	plugins/lisp/bin/tm_lisp
-REPLACE_FILES.bash+=	plugins/lush/bin/tm_lush
-REPLACE_FILES.bash+=	plugins/matlab/bin/tm_matlab
-REPLACE_FILES.bash+=	plugins/maxima/bin/maxima_detect
-REPLACE_FILES.bash+=	plugins/maxima/bin/tm_maxima
-REPLACE_FILES.bash+=	plugins/mupad/bin/tm_mupad_help
-REPLACE_FILES.bash+=	plugins/octave/bin/tm_octave
-REPLACE_FILES.bash+=	plugins/reduce/bin/tm_reduce
-REPLACE_FILES.bash+=	plugins/xypic/bin/tm_xypic
+REPLACE_SH+=		plugins/dratex/bin/tm_dratex
+REPLACE_SH+=		plugins/eukleides/bin/tm_eukleides
+REPLACE_SH+=		plugins/gnuplot/bin/tm_gnuplot
+REPLACE_SH+=		plugins/lisp/bin/tm_lisp
+REPLACE_SH+=		plugins/lush/bin/tm_lush
+REPLACE_SH+=		plugins/matlab/bin/tm_matlab
+REPLACE_SH+=		plugins/maxima/bin/maxima_detect
+REPLACE_SH+=		plugins/maxima/bin/tm_maxima
+REPLACE_SH+=		plugins/mupad/bin/tm_mupad_help
+REPLACE_SH+=		plugins/octave/bin/tm_octave
+REPLACE_SH+=		plugins/reduce/bin/tm_reduce
+REPLACE_SH+=		plugins/xypic/bin/tm_xypic
 
 pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
