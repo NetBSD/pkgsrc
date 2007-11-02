@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2005/09/05 16:58:22 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2007/11/02 07:18:00 adam Exp $
 
---- Makefile.in.orig	2005-07-26 20:44:03.000000000 +0200
+--- Makefile.in.orig	2007-10-22 08:52:01.000000000 +0200
 +++ Makefile.in
-@@ -156,7 +156,7 @@ CFLAGS = @CFLAGS@
+@@ -148,7 +148,7 @@ CFLAGS = @CFLAGS@
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CYGPATH_W = @CYGPATH_W@
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.10 2005/09/05 16:58:22 wiz Exp $
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
  ECHO_N = @ECHO_N@
-@@ -936,9 +936,7 @@ install-exec-hook:
+@@ -890,9 +890,7 @@ install-exec-hook:
  	(cd $(DESTDIR)$(bindir); \
  	$(LN) gawk$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
  	$(LN) pgawk$(EXEEXT) pgawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
