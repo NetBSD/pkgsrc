@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2292 2007/11/02 07:19:30 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2293 2007/11/02 08:29:18 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4289,3 +4289,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/py-django to 0.96.1 [joerg 2007-11-01]
 	Updated audio/bmpx to 0.40.13nb1 [tnn 2007-11-01]
 	Updated lang/gawk to 3.1.6 [adam 2007-11-02]
+	Updated mail/sendmail to 8.14.2 [jnemeth 2007-11-02]
