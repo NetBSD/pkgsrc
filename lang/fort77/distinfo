@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 12:37:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2007/11/02 09:17:33 rillig Exp $
 
-SHA1 (fort77-1.14a.tar.gz) = 2c786587992bfe6458d6d8a7767391f555f05cc8
-RMD160 (fort77-1.14a.tar.gz) = 35c3aadbc2a194d93b3bde5dc7e097d0ed618cc9
-Size (fort77-1.14a.tar.gz) = 6057 bytes
-SHA1 (patch-aa) = 6ba6f313cb553eb2160ae3d198fd05b67e52ff9a
-SHA1 (patch-ab) = 8e0a9ce6b1fd31f4fd6400eb955281b4aed60294
+SHA1 (fort77-1.18.tar.gz) = 0f8ba5a1106182a15e5ab87c615569b8911bc3a7
+RMD160 (fort77-1.18.tar.gz) = 9748f9e068b8071a5b89009bfdb533ee2a9b0c11
+Size (fort77-1.18.tar.gz) = 6562 bytes
+SHA1 (patch-fort77) = 0dccaff05defa1b0f57d94ede31e6b6b5c8cf78d
