@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/09/21 13:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2007/11/02 11:13:57 rillig Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.2
@@ -36,6 +36,8 @@ PLIST_SUBST+=		USE_CUPS=
 CONFIGURE_ARGS+=	--without-cups
 PLIST_SUBST+=		USE_CUPS="@comment "
 .endif
+
+CONFIGURE_ARGS+=	--without-papi
 
 .include "../../mk/bsd.prefs.mk"
 
