@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2295 2007/11/02 11:56:11 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2296 2007/11/02 15:07:23 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/sendmail to 8.14.2 [jnemeth 2007-11-02]
 	Updated lang/fort77 to 1.18 [roland 2007-11-02]
 	Updated databases/p5-perl-ldap to 0.34 [adam 2007-11-02]
+	Updated www/ap-auth-external to 2.1.19nb2 [sborrill 2007-11-02]
