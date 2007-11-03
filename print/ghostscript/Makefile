@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/10/22 12:15:03 dsainty Exp $
+# $NetBSD: Makefile,v 1.38 2007/11/03 22:39:40 rillig Exp $
 
 DISTNAME=	ghostscript-8.60
 PKGREVISION=	1
@@ -20,6 +20,7 @@ DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 REPLACE_PERL+=		lib/fixmswrd.pl
 
