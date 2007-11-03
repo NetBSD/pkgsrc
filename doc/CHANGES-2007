@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2301 2007/11/03 13:09:25 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2302 2007/11/03 14:28:30 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4300,3 +4300,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/cgoban-java to 3.3.20 [rh 2007-11-03]
 	Updated mail/dbmail to 2.2.7nb1 [obache 2007-11-03]
 	Updated filesystems/fuse-afpfs-ng to 0.4.3a [adam 2007-11-03]
+	Added sysutils/oak version 1.5.0 [roland 2007-11-03]
