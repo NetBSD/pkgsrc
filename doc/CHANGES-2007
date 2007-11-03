@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2308 2007/11/03 16:48:00 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2309 2007/11/03 17:28:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4311,3 +4311,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-silc to 2.2.2 [tnn 2007-11-03]
 	Updated chat/finch to 2.2.2 [tnn 2007-11-03]
 	Added mail/netbiff version 0.9.18 [roland 2007-11-03]
+	Added wm/awesome version 1.3nb1 [roland 2007-11-03]
