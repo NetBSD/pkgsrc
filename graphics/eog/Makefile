@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2007/09/21 13:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/11/03 16:22:56 drochner Exp $
 #
 
-DISTNAME=	eog-2.18.2
-PKGREVISION=	4
+DISTNAME=	eog-2.20.2
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -31,6 +30,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-icon-theme+= gnome-icon-theme>=2.20.0
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
@@ -39,6 +40,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.shared-mime-info+= shared-mime-info>=0.20
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
