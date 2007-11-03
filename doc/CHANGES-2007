@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2298 2007/11/02 21:47:53 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2299 2007/11/03 00:08:54 rh Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox to 2.0.0.9 [ghen 2007-11-02]
 	Updated www/firefox-bin to 2.0.0.9 [ghen 2007-11-02]
 	Updated www/firefox-gtk1 to 2.0.0.9 [ghen 2007-11-02]
+	Updated games/cgoban-java to 3.3.20 [rh 2007-11-03]
