@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.15 2007/09/21 23:59:30 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.16 2007/11/03 10:25:33 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -54,24 +54,25 @@ acquire-bin-install-lock: \
 release-bin-install-lock: \
 	release-localbase-lock
 
-locked-su-do-bin-install:
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-	${RUN} \
-	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;	\
+_BIN_INSTALL_PREPARE_CMD= \
+	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;		\
 	if [ "$$found" != "" ]; then					\
 		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
 		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
 		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
 		exit 1;							\
-	fi
-	${RUN} \
+	fi; \
 	rel=${_SHORT_UNAME_R:Q};					\
 	arch=${MACHINE_ARCH:Q};						\
 	pkg_path=${PKGREPOSITORY:Q};					\
 	set args ${BINPKG_SITES}; shift;				\
 	for i in "$$@"; do						\
 		pkg_path="$$pkg_path;$$i/All";				\
-	done;								\
+	done;
+
+locked-su-do-bin-install:
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+	${RUN} ${_BIN_INSTALL_PREPARE_CMD}				\
 	${STEP_MSG} "Installing ${PKGNAME} from $$pkg_path";		\
 	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
 		${ECHO} "Fixing recorded cwd...";			\
@@ -80,22 +81,7 @@ locked-su-do-bin-install:
 		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
 	fi
 .else
-	${RUN} \
-	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;	\
-	if [ "$$found" != "" ]; then					\
-		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
-		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
-		exit 1;							\
-	fi
-	${RUN} \
-	rel=${_SHORT_UNAME_R:Q};					\
-	arch=${MACHINE_ARCH:Q};						\
-	pkg_path=${PKGREPOSITORY:Q};					\
-	set args ${BINPKG_SITES}; shift;				\
-	for i in "$$@"; do						\
-		pkg_path="$$pkg_path;$$i/All";				\
-	done;								\
+	${RUN} ${_BIN_INSTALL_PREPARE_CMD}				\
 	pkgpattern=${PKGNAME_REQD:U${PKGNAME}:Q};			\
 	${STEP_MSG} "Installing $$pkgpattern from $$pkg_path";		\
 	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} "$$pkgpattern"; then \
