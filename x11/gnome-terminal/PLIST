@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/25 10:54:24 hira Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/03 16:18:10 drochner Exp $
 bin/gnome-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
@@ -13,11 +13,12 @@ share/gnome/help/gnome-terminal/bg/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/bg/figures/terminal_window.png
 share/gnome/help/gnome-terminal/bg/gnome-terminal.xml
 share/gnome/help/gnome-terminal/bg/legal.xml
+share/gnome/help/gnome-terminal/ca/figures/gnome-terminal-default.png
+share/gnome/help/gnome-terminal/ca/figures/gnome-terminal-tabbed.png
+share/gnome/help/gnome-terminal/ca/gnome-terminal.xml
 share/gnome/help/gnome-terminal/de/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/de/figures/gnome-terminal-tabbed.png
-share/gnome/help/gnome-terminal/de/figures/terminal_window.png
 share/gnome/help/gnome-terminal/de/gnome-terminal.xml
-share/gnome/help/gnome-terminal/de/legal.xml
 share/gnome/help/gnome-terminal/es/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/es/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/es/gnome-terminal.xml
@@ -34,9 +35,10 @@ share/gnome/help/gnome-terminal/ja/gnome-terminal.xml
 share/gnome/help/gnome-terminal/ja/legal.xml
 share/gnome/help/gnome-terminal/ko/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/ko/figures/gnome-terminal-tabbed.png
-share/gnome/help/gnome-terminal/ko/figures/terminal_window.png
 share/gnome/help/gnome-terminal/ko/gnome-terminal.xml
-share/gnome/help/gnome-terminal/ko/legal.xml
+share/gnome/help/gnome-terminal/oc/figures/gnome-terminal-default.png
+share/gnome/help/gnome-terminal/oc/figures/gnome-terminal-tabbed.png
+share/gnome/help/gnome-terminal/oc/gnome-terminal.xml
 share/gnome/help/gnome-terminal/ro/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/ro/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/ro/figures/terminal_window.png
@@ -63,6 +65,7 @@ share/gnome/help/gnome-terminal/zh_TW/gnome-terminal.xml
 share/gnome/help/gnome-terminal/zh_TW/legal.xml
 share/locale/am/LC_MESSAGES/gnome-terminal.mo
 share/locale/ar/LC_MESSAGES/gnome-terminal.mo
+share/locale/as/LC_MESSAGES/gnome-terminal.mo
 share/locale/az/LC_MESSAGES/gnome-terminal.mo
 share/locale/be/LC_MESSAGES/gnome-terminal.mo
 share/locale/be@latin/LC_MESSAGES/gnome-terminal.mo
@@ -120,6 +123,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-terminal.mo
 share/locale/ro/LC_MESSAGES/gnome-terminal.mo
 share/locale/ru/LC_MESSAGES/gnome-terminal.mo
 share/locale/rw/LC_MESSAGES/gnome-terminal.mo
+share/locale/si/LC_MESSAGES/gnome-terminal.mo
 share/locale/sk/LC_MESSAGES/gnome-terminal.mo
 share/locale/sl/LC_MESSAGES/gnome-terminal.mo
 share/locale/sq/LC_MESSAGES/gnome-terminal.mo
@@ -138,12 +142,14 @@ share/locale/zh_HK/LC_MESSAGES/gnome-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-terminal.mo
 share/omf/gnome-terminal/gnome-terminal-C.omf
 share/omf/gnome-terminal/gnome-terminal-bg.omf
+share/omf/gnome-terminal/gnome-terminal-ca.omf
 share/omf/gnome-terminal/gnome-terminal-de.omf
 share/omf/gnome-terminal/gnome-terminal-es.omf
 share/omf/gnome-terminal/gnome-terminal-fr.omf
 share/omf/gnome-terminal/gnome-terminal-it.omf
 share/omf/gnome-terminal/gnome-terminal-ja.omf
 share/omf/gnome-terminal/gnome-terminal-ko.omf
+share/omf/gnome-terminal/gnome-terminal-oc.omf
 share/omf/gnome-terminal/gnome-terminal-ro.omf
 share/omf/gnome-terminal/gnome-terminal-ru.omf
 share/omf/gnome-terminal/gnome-terminal-sv.omf
@@ -166,6 +172,8 @@ share/pixmaps/gnome-terminal.png
 @dirrm share/gnome/help/gnome-terminal/ru
 @dirrm share/gnome/help/gnome-terminal/ro/figures
 @dirrm share/gnome/help/gnome-terminal/ro
+@dirrm share/gnome/help/gnome-terminal/oc/figures
+@dirrm share/gnome/help/gnome-terminal/oc
 @dirrm share/gnome/help/gnome-terminal/ko/figures
 @dirrm share/gnome/help/gnome-terminal/ko
 @dirrm share/gnome/help/gnome-terminal/ja/figures
@@ -178,6 +186,8 @@ share/pixmaps/gnome-terminal.png
 @dirrm share/gnome/help/gnome-terminal/es
 @dirrm share/gnome/help/gnome-terminal/de/figures
 @dirrm share/gnome/help/gnome-terminal/de
+@dirrm share/gnome/help/gnome-terminal/ca/figures
+@dirrm share/gnome/help/gnome-terminal/ca
 @dirrm share/gnome/help/gnome-terminal/bg/figures
 @dirrm share/gnome/help/gnome-terminal/bg
 @dirrm share/gnome/help/gnome-terminal/C/figures
