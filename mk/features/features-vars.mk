@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.8 2007/10/16 23:49:01 tnn Exp $
+# $NetBSD: features-vars.mk,v 1.9 2007/11/03 11:50:18 rillig Exp $
 #
 # This file is included by bsd.prefs.mk.
 #
@@ -28,6 +28,8 @@
 #	The features listed in USE_FEATURES that are missing on the
 #	current system.  Also includes "inet6" if the system doesn't
 #	support IPv6.
+#
+# Keywords: feature features
 #
 
 _VARGROUPS+=		features
