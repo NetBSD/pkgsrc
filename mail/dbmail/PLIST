@@ -1,31 +1,69 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/30 22:52:43 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/11/03 11:39:49 obache Exp $
+${MYSQL}lib/dbmail/libmysql.la
+${PGSQL}lib/dbmail/libpgsql.la
+${SQLITE}lib/dbmail/libsqlite.la
+${LDAP}lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
-lib/dbmail/libmysql.la
+${SIEVE}lib/dbmail/libsort_sieve.la
+man/man1/dbmail.1
 man/man1/dbmail-smtp.1
+man/man5/dbmail.conf.5
+man/man8/dbmail-export.8
 man/man8/dbmail-imapd.8
 man/man8/dbmail-lmtpd.8
 man/man8/dbmail-pop3d.8
-man/man8/dbmail-users.8
-man/man8/dbmail-util.8
-man/man1/dbmail.1
-man/man5/dbmail.conf.5
-man/man8/dbmail-export.8
 man/man8/dbmail-sievecmd.8
 man/man8/dbmail-timsieved.8
+man/man8/dbmail-users.8
+man/man8/dbmail-util.8
+sbin/dbmail-export
 sbin/dbmail-imapd
 sbin/dbmail-lmtpd
 sbin/dbmail-pop3d
+${SIEVE}sbin/dbmail-sievecmd
 sbin/dbmail-smtp
+${SIEVE}sbin/dbmail-timsieved
 sbin/dbmail-users
 sbin/dbmail-util
+share/doc/dbmail/AUTHORS
+share/doc/dbmail/BUGS
+share/doc/dbmail/COPYING
+share/doc/dbmail/INSTALL
+share/doc/dbmail/NEWS
+share/doc/dbmail/README
+share/doc/dbmail/README.aliases
+share/doc/dbmail/README.exim
+share/doc/dbmail/README.ldap
+share/doc/dbmail/README.postfix
+share/doc/dbmail/README.qmail
+share/doc/dbmail/README.sieve
+share/doc/dbmail/README.smtp
+share/doc/dbmail/README.solaris
+share/doc/dbmail/README.usermap
+share/doc/dbmail/THANKS
+share/doc/dbmail/UPGRADING
 share/examples/dbmail/dbmail.conf
-share/examples/dbmail/migrate_from_2.0_to_2.2.mysql
-share/examples/dbmail/migrate_from_2.0_to_2.2.pgsql
+${MYSQL}share/dbmail/sql/mysql/2_1_7-2_2_0.mysql
+${MYSQL}share/dbmail/sql/mysql/create_tables.mysql
+${MYSQL}share/dbmail/sql/mysql/migrate_from_1.x_to_2.0_innodb.mysql
+${MYSQL}share/dbmail/sql/mysql/migrate_from_2.0_to_2.2.mysql
+${MYSQL}share/dbmail/sql/mysql/update_headervalue_01.mysql
+${PGSQL}share/dbmail/sql/postgresql/2_1_7-2_2_0.pgsql
+${PGSQL}share/dbmail/sql/postgresql/create_tables.pgsql
+${PGSQL}share/dbmail/sql/postgresql/migrate_from_1.x_to_2.0.pgsql
+${PGSQL}share/dbmail/sql/postgresql/migrate_from_2.0_to_2.2.pgsql
+${SQLITE}share/dbmail/sql/sqlite/2_1_7-2_2_0.sqlite
+${SQLITE}share/dbmail/sql/sqlite/create_tables.sqlite
 share/examples/rc.d/dbmail
 share/examples/rc.d/dbmailimapd
 share/examples/rc.d/dbmaillmtpd
 share/examples/rc.d/dbmailpop3d
-share/examples/rc.d/dbmail-timsieved
+${SIEVE}share/examples/rc.d/dbmailtimsieved
 @dirrm share/examples/dbmail
+${SQLITE}@dirrm share/dbmail/sql/sqlite
+${PGSQL}@dirrm share/dbmail/sql/pgsql
+${MYSQL}@dirrm share/dbmail/sql/mysql
+@dirrm share/dbmail/sql
+@dirrm share/doc/dbmail
 @dirrm lib/dbmail
