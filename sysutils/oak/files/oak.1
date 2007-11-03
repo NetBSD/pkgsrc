@@ -1,0 +1,256 @@
+.Dt OAK 1
+.Dd Feb 27, 2005
+.Dt OAK 1
+.Sh NAME
+.Nm oak
+.Nd System Log Reporting Tool
+.Sh SYNOPSIS
+.Nm
+.Op Fl v
+.Op Fl h
+.Op Fl d
+.Op Fl c Ar configfile
+.Sh DESCRIPTION
+Oak is a program that can be used to monitor syslogs from a collection 
+of servers and notify operators when problem conditions arise. In 
+addition to providing immediate notification of critical problems, oak 
+will also batch less critical problems into summary messages that can be 
+sent less often and via any medium. For example you may wish to have oak 
+page you on critical events while sending a summary of less important 
+messages to your terminal once an hour. In addition you could send a 
+daily email message summarizing all events.
+.Pp
+Oak runs as a daemon and monitors a syslog file for events. A common way 
+to run oak would be on a server that is receiving syslogs forwarded from 
+other servers. Based on a series of configurable regular expressions,
+each message is placed into one or more user-defined queues. Each queue 
+is configured by the user to send out its messages after waiting some 
+period of time.
+.Pp
+Oak keeps its messages succinct in a number of ways. Oak is aware of 
+some information in log messages that will be unnecessary and produce 
+needlessly repeated messages. For example process id's and sendmail 
+queue id's can be automatically filtered out, thereby condensing 
+hundreds of message to one short notification. In the case that oak does 
+not know about a kind of log that can be condensed the configuration 
+file can specify the custom information to be removed. Finally, for each 
+medium being used to send messages the user can specify limits on the 
+length of the message, the line length, the number of hosts being 
+reported on, the number of messages per host, etc. This helps ensure that 
+a runaway message won't overwhelm its recipient. 
+.Pp
+Available options:
+.Bl -tag -width file
+.It Fl v
+print version number and exit
+.It Fl h
+print help message and exit
+.It Fl d
+run in debugging mode
+.It Fl c Ar configfile
+specify the oak config file.
+.El
+.Pp
+.Sh CONFIGURATION FILE
+The configuration file first defines a number of queues. Each queue will 
+take a certain action at a certain time interval. For example you might 
+define a queue called "daily-mail" that fires once a day and sends a 
+piece of email. Or you might define a queue called "immediate-page" 
+which would page you as soon as a problem was noticed.
+.Pp
+Next the configuration file specifies lists of regular expressions and 
+each regular expression is associated with one or more of the queues 
+defined earlier. Messages that come in are compared against the regular 
+expressions in order. When the first regular expression is found that 
+matches the message that message is placed in the queues associated with 
+that expression.
+.Pp
+Note that a trash queue is defined for you by default and any messages 
+queued to it are discarded. Because oak uses the first regular 
+expression it finds the trash queue may be helpful in discarding 
+unwanted messages while still allowing others to fall through by 
+default.
+.Pp
+Config syntax:
+.Pp
+.Bl -ohang
+.It Sy set infile Ao Ar file Ac
+.Bl -ohang -offset indent
+Set the file being monitored to
+.Ao Ar file Ac .
+If this option is not specified in the config then it will default to 
+.Pa /var/adm/messages . 
+.El
+.It Sy set Oo Sy no Oc Sy nukepid
+.Bl -ohang -offset indent
+[Don't] Automatically remove process id's from logs. This option is on 
+by default and is strongly recommended.
+.El
+.It Sy set Oo Sy no Oc Sy nukeciscoid
+.Bl -ohang -offset indent
+[Don't] Automatically remove log id numbers from cisco syslogs. This 
+option is on by default and is recommended if you are processing logs 
+from cisco equipment.
+.El
+.It Sy set Oo Sy no Oc Sy nukesmqid
+.Bl -ohang -offset indent
+[Don't] Automatically remove sendmail queue id numbers from logs. 
+This option is on by default and is recommended if you are processing 
+logs from sendmail.
+.El
+.It Sy set ignorehosts Ao Ar host Ac Oo Ao Ar host Ac ... Oc
+.Bl -ohang -offset indent
+Ignore logs from the hosts in the list. Make sure each host is 
+listed exactly as it will appear in the log (i.e. exactly as it will be 
+resolved by the local syslogd). This command can not be used at the same 
+time as the
+.Em set onlyhosts
+command.
+.El
+.It Sy set onlyhosts Ao Ar host Ac Oo Ao Ar host Ac ... Oc
+.Bl -ohang -offset indent
+Process logs only from the hosts in the list. Make sure each host is 
+listed exactly as it will appear in the log (i.e. exactly as it will be 
+resolved by the local syslogd). This command can not be used at the same 
+time as the
+.Em set ignorehosts
+command.
+.El
+.It Sy set replacestr Ao Ar string Ac
+.Bl -ohang -offset indent
+Set the string to be used when a section of log is blanked out, such
+as the pid. By default the string is "___". Anything in parens in a 
+regular expression is blanked out, as is described below.
+.El
+.It Sy define queue Ao Ar queue Ac
+.Bl -ohang -offset indent
+Define a new queue whose name is
+.Ao Ar queue Ac .
+The following subcommands can be issued after defining a queue. They 
+pertain to the most recent queue defined.
+.It Sy action Ao Ar action Ac Oo Ao Ar arg Ac ... Oc
+.Bl -ohang -offset indent
+Direct the queue to take specified
+.Ao Ar action Ac
+when it receives messages. You may use multiple action commands to 
+specify more than one action. Currently supported values for
+.Ao Ar action Ac
+are 
+.Em mail ,
+.Em zwrite ,
+and
+.Em exec .
+The arguments for each are as follows:
+.Bl -ohang -offset indent
+.It Sy action mail Ao Ar to Ac Ao Ar from Ac Ao Ar subject Ac
+.It Sy action zwrite Ao Ar class Ac Ao Ar instance Ac Ao Ar recipient Ac
+.It Sy action exec Ao Ar program Ac Oo Ao Ar arg Ac ... Oc
+.El
+In the case of the exec command the message is piped to the stdin of 
+the named program.
+.El
+.It Sy action-limits Ao Ar numlines Ac Ao Ar linelen Ac Ao Ar numhosts Ac Ao Ar hostents Ac
+.Bl -ohang -offset indent
+Set limits on the size of messages sent by this queue.
+.Ao Ar numlines Ac
+is the total number of lines in the message.
+.Ao Ar linelen Ac
+is the maximum length of a line.
+.Ao Ar numhosts Ac
+is the maximum number of hosts in a message.
+.Ao Ar hostents Ac
+is the maximum number of logs per host. If the limits set by
+.Em numlines ,
+.Em numhosts ,
+or
+.Em hostents
+are exceeded then the message will be truncated appropriately and a 
+message will be included noting that fact. If
+.Em linelen
+is exceeded by a line, the final characters will silently be stripped off.
+.El
+.It Sy fire Ao Ar time Ac
+.Bl -ohang -offset indent
+Specify how often the queue should send messages.
+.Ao Ar time Ac
+can be in one of three formats:
+.Bl -ohang -offset indent
+.It Sy *<num>[m|h|s]
+This specifies a repeated interval. For example: 
+.Em *5m
+means to fire every 5 minutes from the time oak was started.
+.It Sy <hour>:<min>
+This specifies a static time to fire at, using a 24 hour clock.
+.Em 17:00
+would fire every day at 5pm.
+.It Sy now
+This indicates that message should be sent immediately. This option 
+should almost always be used in conjunction with the
+.Em locking
+command described below.
+.El
+.El
+.It Sy locking Ao Ar time Ac
+.Bl -ohang -offset indent
+This option specifies how long a queue should wait after sending a 
+message before it will send another message that matches the same 
+regular expression as the first. This is typically used with queues that
+fire immediately or at very short intervals. For example, if a queue 
+were set to page someone on a "file system full" message it would be 
+desirable to not receive the page every on each successive log of the 
+error; there would be a flood of pages. If the queue were set to be 
+.Em locking 30m
+then a "file system full" page would be sent at most once every thirty 
+minutes. 
+.El
+.It Sy header Ao Ar text Ac
+.Bl -ohang -offset indent
+Set
+.Ao Ar text Ac
+to be sent at the beginning of the message.
+.El
+.It Sy prescan
+.Bl -ohang -offset indent
+This option indicates that the queue should include messages that
+are already in the log file. Normally a queue will only pick up new
+messages after oak has been started. This option is useful if you want
+to restart the oak daemon, but not lose messages for a daily report. It
+is not recommended for queues that send frequent messages since with the
+.Em prescan
+option set those messages will all be sent when oak is started.
+.El
+.El
+.It Sy on Ao Ar regex Ac
+.Bl -ohang -offset indent
+Specify a regular expression that can be matched. The subcommands 
+following the
+.Em on
+command indicate what to do when the expression is matched. Anything in 
+the regular expression that falls between parenthesis will be blanked 
+out.
+.It Sy queues Ao Ar queuename Ac Oo Ao Ar queuename Ac ... Oc
+.Bl -ohang -offset indent
+Spool the message being matched into the queues named by
+.Ao Ar queuename Ac .
+.El
+.El
+.El
+.Pp
+.Sh SAMPLE CONFIG FILE
+.Bl -ohang
+.It A sample config file can be found at
+http://www.ktools.org/oak/oak-sample-config-1.txt
+.El
+.Sh BUGS
+Bugs can be reported to <bug-oak@ktools.org>.
+.Pp
+.Sh SEE ALSO
+.Bl -ohang
+.It re_format(7)
+.It oak homepage
+http://www.ktools.org/oak
+.It oak-users mailing list
+http://www.ktools.org/mailman/listinfo/oak-users/
+.El
+.Sh AUTHOR
+Oak was written by James Kretchmar (http://www.ktools.org/kretch).
