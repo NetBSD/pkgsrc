@@ -1,10 +1,13 @@
-# $NetBSD: curses.buildlink3.mk,v 1.4 2007/10/17 10:43:37 rillig Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.5 2007/11/03 15:17:42 rillig Exp $
 #
 # This file should be included by Makefiles for packages that use curses.
-# If a system curses isn't available, then add a dependency on ncurses.
+# It checks whether a native curses implementation is available, or
+# otherwise adds a dependency on ncurses.
 #
 # If a package genuinely requires ncurses, then it should directly include
-# ncurses/buildlink3.mk instead of this file in the package Makefile.
+# ncurses/buildlink3.mk instead of this file in the package Makefile and
+# additionally set USE_NCURSES=yes.
+#
 
 .if !exists(/usr/include/curses.h) && \
     !exists(/usr/include/ncurses.h)
