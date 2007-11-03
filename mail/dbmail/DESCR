@@ -1,6 +1,6 @@
 Dbmail is the name of a group of programs that enable the possibility
 of storing and retrieving mail messages from a database. Currently
-MySQL and PostgreSQL can be used as database backends.
+MySQL, PostgreSQL and SQLite can be used as database backends.
 
 DBMail is made up of several components. A normal MTA (Postfix,
 SendMail, QMail, Exim) is used for accepting messages. The MTA
