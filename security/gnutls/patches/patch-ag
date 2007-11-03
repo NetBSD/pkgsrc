@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2007/11/03 23:45:56 rillig Exp $
+
+void functions shall not return a value, says sunpro.
+
+--- lib/ext_authz.c.orig	2007-10-17 15:31:23.000000000 +0200
++++ lib/ext_authz.c	2007-11-04 00:41:34.219974000 +0100
+@@ -77,5 +77,5 @@ gnutls_authz_enable (gnutls_session_t se
+ 		     gnutls_authz_recv_callback_func recv_callback,
+ 		     gnutls_authz_send_callback_func send_callback)
+ {
+-  return GNUTLS_E_UNIMPLEMENTED_FEATURE;
++  /* not implemented */
+ }
