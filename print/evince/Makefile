@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2007/09/21 13:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2007/11/03 16:12:48 drochner Exp $
 #
 
 .include "../../print/evince/Makefile.common"
 
 COMMENT=		Document viewer for the GNOME Desktop
-PKGREVISION=		2
 
 GCONF_SCHEMAS=		evince.schemas
 GCONF_SCHEMAS+=	evince-thumbnailer.schemas
@@ -33,6 +32,9 @@ GCONF_SCHEMAS+=	evince-thumbnailer-djvu.schemas
 .else
 PLIST_SUBST+=		DJVU="@comment "
 .endif
+
+CONFIGURE_ARGS+=	--enable-comics
+GCONF_SCHEMAS+=	evince-thumbnailer-comics.schemas
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
