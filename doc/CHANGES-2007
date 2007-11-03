@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2311 2007/11/03 18:14:29 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2312 2007/11/03 20:17:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added mail/netbiff version 0.9.18 [roland 2007-11-03]
 	Added wm/awesome version 1.3nb1 [roland 2007-11-03]
 	Added games/thew version 1.1.1nb2 [roland 2007-11-03]
+	Updated math/R to 2.6.0 [markd 2007-11-03]

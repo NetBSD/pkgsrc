@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6800 2007/11/02 11:56:11 adam Exp $
+$NetBSD: TODO,v 1.6801 2007/11/03 20:17:11 markd Exp $
 
 Suggested new packages
 ======================
@@ -224,7 +224,6 @@ Suggested package updates
 	o Gorm-1.2.1
 	o GridSim-3.3
 	o PAM-0.99.7.1
-	o R-2.6.0
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-Matrix-0.9975.11
