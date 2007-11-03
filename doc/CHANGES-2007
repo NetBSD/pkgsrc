@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2302 2007/11/03 14:28:30 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2303 2007/11/03 14:34:32 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/dbmail to 2.2.7nb1 [obache 2007-11-03]
 	Updated filesystems/fuse-afpfs-ng to 0.4.3a [adam 2007-11-03]
 	Added sysutils/oak version 1.5.0 [roland 2007-11-03]
+	Added www/p5-CGI-ProgressBar version 0.04 [adrianp 2007-11-03]
