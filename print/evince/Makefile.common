@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.17 2007/09/21 13:04:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/11/03 16:12:48 drochner Exp $
 #
 
-DISTNAME=		evince-0.8.3
+DISTNAME=		evince-2.20.1
 CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -28,7 +28,7 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
-BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.3
+BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.9
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
