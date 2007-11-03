@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/11/03 14:58:01 rillig Exp $
+
+SHA1 (libconfig-1.1.3.tar.gz) = e7f8ca3ed0a2ec48ef8e8a16454e640c5e03af88
+RMD160 (libconfig-1.1.3.tar.gz) = 51f3e90fa72fad42b4cb591726f7949f0a8c072a
+Size (libconfig-1.1.3.tar.gz) = 494149 bytes
