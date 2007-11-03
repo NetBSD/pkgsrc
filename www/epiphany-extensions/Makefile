@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2007/09/21 13:04:27 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/11/03 17:30:57 drochner Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.18.3
-PKGREVISION=	2
+DISTNAME=	epiphany-extensions-2.20.1
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +15,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
+USE_DIRS+=		gnome2-1.5
 
 # Avoid -Werror, which breaks the build sometimes.
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
