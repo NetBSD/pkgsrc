@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/10/31 15:35:30 sborrill Exp $
+# $NetBSD: options.mk,v 1.2 2007/11/03 17:40:29 sborrill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		skins wxwidgets
@@ -7,10 +7,10 @@ PKG_SUGGESTED_OPTIONS=		wxwidgets
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mskins)
-CONFIGURE_ARGS+=	--enable-skins
+CONFIGURE_ARGS+=	--enable-skins2
 PLIST_SUBST+=		COND_SKINS=
 .else
-CONFIGURE_ARGS+=	--disable-skins
+CONFIGURE_ARGS+=	--disable-skins2
 PLIST_SUBST+=		COND_SKINS="@comment "
 .endif
 
