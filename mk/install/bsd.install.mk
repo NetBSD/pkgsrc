@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.10 2007/03/09 03:15:33 rillig Exp $
+# $NetBSD: bsd.install.mk,v 1.11 2007/11/03 09:12:46 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -33,8 +33,8 @@ install: barrier
 .  endif
 .endif
 
-.include "${PKGSRCDIR}/mk/install/deinstall.mk"
-.include "${PKGSRCDIR}/mk/install/replace.mk"
+.include "deinstall.mk"
+.include "replace.mk"
 
 ######################################################################
 ### install-cookie (PRIVATE)
