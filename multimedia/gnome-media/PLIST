@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/07 07:39:53 hira Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/11/03 16:32:49 drochner Exp $
 bin/cddb-slave2-properties
 bin/gnome-audio-profiles-properties
 bin/gnome-sound-recorder
@@ -45,108 +45,44 @@ share/gnome-sound-recorder/ui/ui.xml
 share/gnome/help/gnome-sound-recorder/C/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/C/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/C/legal.xml
+share/gnome/help/gnome-sound-recorder/es/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/es/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/fr/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/fr/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/oc/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/oc/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/sv/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/sv/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/uk/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/uk/gnome-sound-recorder.xml
-share/gnome/help/gnome-sound-recorder/uk/legal.xml
-share/gnome/help/gnome-volume-control/C/figures/gmix-prefs.png
-share/gnome/help/gnome-volume-control/C/figures/gmix.png
 share/gnome/help/gnome-volume-control/C/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/C/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/C/legal.xml
-share/gnome/help/gnome-volume-control/uk/figures/gmix-prefs.png
-share/gnome/help/gnome-volume-control/uk/figures/gmix.png
-share/gnome/help/gnome-volume-control/uk/figures/gnome-volume-control_window.png
-share/gnome/help/gnome-volume-control/uk/gnome-volume-control.xml
-share/gnome/help/gnome-volume-control/uk/legal.xml
-share/gnome/help/grecord/de/figures/grecord-prefs-path.png
-share/gnome/help/grecord/de/figures/grecord-prefs-play.png
-share/gnome/help/grecord/de/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/de/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/de/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/de/figures/grecord.png
-share/gnome/help/grecord/de/figures/grecord_window.png
-share/gnome/help/grecord/de/grecord.xml
-share/gnome/help/grecord/de/legal.xml
-share/gnome/help/grecord/es/figures/grecord-prefs-path.png
-share/gnome/help/grecord/es/figures/grecord-prefs-play.png
-share/gnome/help/grecord/es/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/es/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/es/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/es/figures/grecord.png
-share/gnome/help/grecord/es/figures/grecord_window.png
-share/gnome/help/grecord/es/grecord.xml
-share/gnome/help/grecord/es/legal.xml
-share/gnome/help/grecord/fr/figures/grecord-prefs-path.png
-share/gnome/help/grecord/fr/figures/grecord-prefs-play.png
-share/gnome/help/grecord/fr/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/fr/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/fr/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/fr/figures/grecord.png
-share/gnome/help/grecord/fr/figures/grecord_window.png
-share/gnome/help/grecord/fr/grecord.xml
-share/gnome/help/grecord/fr/legal.xml
-share/gnome/help/grecord/it/figures/grecord-prefs-path.png
-share/gnome/help/grecord/it/figures/grecord-prefs-play.png
-share/gnome/help/grecord/it/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/it/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/it/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/it/figures/grecord.png
-share/gnome/help/grecord/it/figures/grecord_window.png
-share/gnome/help/grecord/it/grecord.xml
-share/gnome/help/grecord/it/legal.xml
-share/gnome/help/grecord/ja/figures/grecord-prefs-path.png
-share/gnome/help/grecord/ja/figures/grecord-prefs-play.png
-share/gnome/help/grecord/ja/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/ja/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/ja/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/ja/figures/grecord.png
-share/gnome/help/grecord/ja/figures/grecord_window.png
-share/gnome/help/grecord/ja/grecord.xml
-share/gnome/help/grecord/ja/legal.xml
-share/gnome/help/grecord/ko/figures/grecord-prefs-path.png
-share/gnome/help/grecord/ko/figures/grecord-prefs-play.png
-share/gnome/help/grecord/ko/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/ko/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/ko/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/ko/figures/grecord.png
-share/gnome/help/grecord/ko/figures/grecord_window.png
-share/gnome/help/grecord/ko/grecord.xml
-share/gnome/help/grecord/ko/legal.xml
-share/gnome/help/grecord/sv/figures/grecord-prefs-path.png
-share/gnome/help/grecord/sv/figures/grecord-prefs-play.png
-share/gnome/help/grecord/sv/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/sv/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/sv/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/sv/figures/grecord.png
-share/gnome/help/grecord/sv/figures/grecord_window.png
-share/gnome/help/grecord/sv/grecord.xml
-share/gnome/help/grecord/sv/legal.xml
-share/gnome/help/grecord/zh_CN/figures/grecord-prefs-path.png
-share/gnome/help/grecord/zh_CN/figures/grecord-prefs-play.png
-share/gnome/help/grecord/zh_CN/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/zh_CN/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/zh_CN/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/zh_CN/figures/grecord.png
-share/gnome/help/grecord/zh_CN/figures/grecord_window.png
-share/gnome/help/grecord/zh_CN/grecord.xml
-share/gnome/help/grecord/zh_CN/legal.xml
-share/gnome/help/grecord/zh_TW/figures/grecord-prefs-path.png
-share/gnome/help/grecord/zh_TW/figures/grecord-prefs-play.png
-share/gnome/help/grecord/zh_TW/figures/grecord-prefs-rec.png
-share/gnome/help/grecord/zh_TW/figures/grecord-prefs-sound.png
-share/gnome/help/grecord/zh_TW/figures/grecord-prefs-ui.png
-share/gnome/help/grecord/zh_TW/figures/grecord.png
-share/gnome/help/grecord/zh_TW/figures/grecord_window.png
-share/gnome/help/grecord/zh_TW/grecord.xml
-share/gnome/help/grecord/zh_TW/legal.xml
+share/gnome/help/gnome-volume-control/es/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/es/gnome-volume-control.xml
+share/gnome/help/gnome-volume-control/fr/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/fr/gnome-volume-control.xml
+share/gnome/help/gnome-volume-control/oc/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/oc/gnome-volume-control.xml
+share/gnome/help/gnome-volume-control/sv/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/sv/gnome-volume-control.xml
 share/gnome/help/gstreamer-properties/C/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/C/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/C/legal.xml
-share/gnome/help/gstreamer-properties/uk/figures/gstreamer_properties_window.png
-share/gnome/help/gstreamer-properties/uk/gstreamer-properties.xml
-share/gnome/help/gstreamer-properties/uk/legal.xml
+share/gnome/help/gstreamer-properties/es/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/es/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/fr/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/fr/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/oc/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/oc/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/sv/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/sv/gstreamer-properties.xml
 share/gstreamer-properties/glade/gstreamer-properties.glade
 share/gstreamer-properties/icons/gstreamer-properties.png
+share/icons/hicolor/48x48/apps/gnome-grecord.png
+share/icons/hicolor/48x48/apps/gnome-reclevel.png
+share/icons/hicolor/48x48/apps/gnome-vumeter.png
+share/icons/hicolor/48x48/apps/gstreamer-properties.png
 share/idl/GNOME_Media_CDDBSlave2.idl
 share/locale/am/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-media-2.0.mo
@@ -197,6 +133,7 @@ share/locale/nb/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/oc/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-media-2.0.mo
@@ -205,6 +142,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/rw/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/si/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-media-2.0.mo
@@ -222,64 +160,44 @@ share/locale/xh/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
-share/omf/gnome-media/gnome-volume-control-C.omf
-share/omf/gnome-media/gnome-volume-control-uk.omf
-share/omf/gnome-media/grecord-C.omf
-share/omf/gnome-media/grecord-de.omf
-share/omf/gnome-media/grecord-es.omf
-share/omf/gnome-media/grecord-fr.omf
-share/omf/gnome-media/grecord-it.omf
-share/omf/gnome-media/grecord-ja.omf
-share/omf/gnome-media/grecord-ko.omf
-share/omf/gnome-media/grecord-sv.omf
-share/omf/gnome-media/grecord-uk.omf
-share/omf/gnome-media/grecord-zh_CN.omf
-share/omf/gnome-media/grecord-zh_TW.omf
-share/omf/gnome-media/gstreamer-properties-C.omf
-share/omf/gnome-media/gstreamer-properties-uk.omf
-share/pixmaps/gnome-grecord.png
-share/pixmaps/gnome-mixer.png
-share/pixmaps/gnome-reclevel.png
-share/pixmaps/gnome-vumeter.png
-share/pixmaps/gstreamer-properties.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnome-media
-@comment in scrollkeeper: @dirrm share/omf
 @comment in ORBit2: @dirrm share/idl
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gstreamer-properties/icons
 @dirrm share/gstreamer-properties/glade
 @dirrm share/gstreamer-properties
-@dirrm share/gnome/help/gstreamer-properties/uk/figures
-@dirrm share/gnome/help/gstreamer-properties/uk
+@dirrm share/gnome/help/gstreamer-properties/sv/figures
+@dirrm share/gnome/help/gstreamer-properties/sv
+@dirrm share/gnome/help/gstreamer-properties/oc/figures
+@dirrm share/gnome/help/gstreamer-properties/oc
+@dirrm share/gnome/help/gstreamer-properties/fr/figures
+@dirrm share/gnome/help/gstreamer-properties/fr
+@dirrm share/gnome/help/gstreamer-properties/es/figures
+@dirrm share/gnome/help/gstreamer-properties/es
 @dirrm share/gnome/help/gstreamer-properties/C/figures
 @dirrm share/gnome/help/gstreamer-properties/C
 @dirrm share/gnome/help/gstreamer-properties
-@dirrm share/gnome/help/grecord/zh_TW/figures
-@dirrm share/gnome/help/grecord/zh_TW
-@dirrm share/gnome/help/grecord/zh_CN/figures
-@dirrm share/gnome/help/grecord/zh_CN
-@dirrm share/gnome/help/grecord/sv/figures
-@dirrm share/gnome/help/grecord/sv
-@dirrm share/gnome/help/grecord/ko/figures
-@dirrm share/gnome/help/grecord/ko
-@dirrm share/gnome/help/grecord/ja/figures
-@dirrm share/gnome/help/grecord/ja
-@dirrm share/gnome/help/grecord/it/figures
-@dirrm share/gnome/help/grecord/it
-@dirrm share/gnome/help/grecord/fr/figures
-@dirrm share/gnome/help/grecord/fr
-@dirrm share/gnome/help/grecord/es/figures
-@dirrm share/gnome/help/grecord/es
-@dirrm share/gnome/help/grecord/de/figures
-@dirrm share/gnome/help/grecord/de
-@dirrm share/gnome/help/grecord
-@dirrm share/gnome/help/gnome-volume-control/uk/figures
-@dirrm share/gnome/help/gnome-volume-control/uk
+@dirrm share/gnome/help/gnome-volume-control/sv/figures
+@dirrm share/gnome/help/gnome-volume-control/sv
+@dirrm share/gnome/help/gnome-volume-control/oc/figures
+@dirrm share/gnome/help/gnome-volume-control/oc
+@dirrm share/gnome/help/gnome-volume-control/fr/figures
+@dirrm share/gnome/help/gnome-volume-control/fr
+@dirrm share/gnome/help/gnome-volume-control/es/figures
+@dirrm share/gnome/help/gnome-volume-control/es
 @dirrm share/gnome/help/gnome-volume-control/C/figures
 @dirrm share/gnome/help/gnome-volume-control/C
 @dirrm share/gnome/help/gnome-volume-control
 @dirrm share/gnome/help/gnome-sound-recorder/uk/figures
 @dirrm share/gnome/help/gnome-sound-recorder/uk
+@dirrm share/gnome/help/gnome-sound-recorder/sv/figures
+@dirrm share/gnome/help/gnome-sound-recorder/sv
+@dirrm share/gnome/help/gnome-sound-recorder/oc/figures
+@dirrm share/gnome/help/gnome-sound-recorder/oc
+@dirrm share/gnome/help/gnome-sound-recorder/fr/figures
+@dirrm share/gnome/help/gnome-sound-recorder/fr
+@dirrm share/gnome/help/gnome-sound-recorder/es/figures
+@dirrm share/gnome/help/gnome-sound-recorder/es
 @dirrm share/gnome/help/gnome-sound-recorder/C/figures
 @dirrm share/gnome/help/gnome-sound-recorder/C
 @dirrm share/gnome/help/gnome-sound-recorder
