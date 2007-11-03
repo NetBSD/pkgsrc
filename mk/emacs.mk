@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.44 2007/10/29 13:13:31 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.45 2007/11/03 11:23:06 rillig Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -190,6 +190,7 @@ _SYS_VARS.emacs=	EMACS_BIN EMACS_ETCPREFIX EMACS_FLAVOR \
 			EMACS_INFOPREFIX EMACS_LISPPREFIX \
 			EMACS_PKGNAME_PREFIX \
 			EMACS_VERSION_MAJOR EMACS_VERSION_MINOR
+_DEF_VARS.emacs=	_EMACS_TYPE _EMACS_PKGBASE _EMACS_VERSION_FULL _EMACS_BLNK
 BUILD_DEFS+=		${_USER_VARS.emacs}
 BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
@@ -264,7 +265,7 @@ _EMACS_BLNK.xemacs215=	../../editors/xemacs-current/buildlink3.mk
 #		abort;
 #
 
-.if !empty(EMACS_TYPE:Memacs) || !empty(EMACS_TYPE:Mxemacs)
+.if ${EMACS_TYPE} == "emacs" || ${EMACS_TYPE} == "xemacs"
 _EMACS_TYPE=	${_EMACS_VERSION_DEFAULT.${EMACS_TYPE}}
 .endif
 _EMACS_TYPE?=	${EMACS_TYPE}
