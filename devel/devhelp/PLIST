@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/25 10:54:10 hira Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/03 16:24:10 drochner Exp $
 bin/devhelp
 include/devhelp-1.0/devhelp/dh-base.h
 include/devhelp-1.0/devhelp/dh-book-tree.h
@@ -38,6 +38,7 @@ share/locale/az/LC_MESSAGES/devhelp.mo
 share/locale/be/LC_MESSAGES/devhelp.mo
 share/locale/be@latin/LC_MESSAGES/devhelp.mo
 share/locale/bg/LC_MESSAGES/devhelp.mo
+share/locale/bn/LC_MESSAGES/devhelp.mo
 share/locale/bn_IN/LC_MESSAGES/devhelp.mo
 share/locale/ca/LC_MESSAGES/devhelp.mo
 share/locale/cs/LC_MESSAGES/devhelp.mo
