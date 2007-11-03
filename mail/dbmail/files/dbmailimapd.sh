@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbmailimapd.sh,v 1.1 2005/01/09 04:17:39 schmonz Exp $
+# $NetBSD: dbmailimapd.sh,v 1.2 2007/11/03 11:39:50 obache Exp $
 #
 
 # PROVIDE: dbmailimap mail
@@ -12,7 +12,7 @@ name="dbmailimapd"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/dbmail.conf"
 command="@PREFIX@/sbin/dbmail-imapd"
-pidfile="/var/run/dbmail-imapd.pid"
+pidfile="@VARBASE@/run/dbmail-imapd.pid"
 
 load_rc_config $name
 run_rc_command "$1"

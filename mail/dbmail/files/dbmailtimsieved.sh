@@ -1,18 +1,18 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbmail-timsieved.sh,v 1.1 2007/10/30 22:52:44 shannonjr Exp $
+# $NetBSD: dbmailtimsieved.sh,v 1.1 2007/11/03 11:39:50 obache Exp $
 #
 
-# PROVIDE: timsieved
+# PROVIDE: dbmailtimsieved mail
 # REQUIRE: 
 
 . /etc/rc.subr
 
-name="timsieved"
+name="dbmailtimsieved"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/dbmail.conf"
 command="@PREFIX@/sbin/dbmail-timsieved"
-pidfile="/var/run/dbmail-timsieved.pid"
+pidfile="@VARBASE@/run/dbmail-timsieved.pid"
 
 load_rc_config $name
 run_rc_command "$1"
