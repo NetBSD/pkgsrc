@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.171 2007/10/13 08:57:09 rillig Exp $
+# $NetBSD: makevars.map,v 1.172 2007/11/03 11:48:53 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -689,7 +689,6 @@ USE_LANGUAGES		List of { c c99 c++ fortran java objc } [m:s,c:s,o:s]
 USE_LIBTOOL		Yes [$package]
 USE_MAKEINFO		Yes [$package]
 USE_MSGFMT_PLURALS	Yes [$package]
-USE_NCURSES		Yes [$package]
 USE_OLD_DES_API		YesNo [$package]
 USE_PKGINSTALL		Yes [$package]
 USE_PKGLOCALEDIR	YesNo [$package]
