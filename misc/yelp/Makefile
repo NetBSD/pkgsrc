@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2007/09/21 13:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2007/11/03 16:25:51 drochner Exp $
 #
 
-DISTNAME=		yelp-2.18.1
-PKGREVISION=		4
+DISTNAME=		yelp-2.20.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -55,6 +54,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/buildlink3.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
