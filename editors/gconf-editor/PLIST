@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/09/25 10:54:11 hira Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/11/03 15:54:30 drochner Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -6,15 +6,24 @@ share/gconf/schemas/gconf-editor.schemas
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml
 share/gnome/help/gconf-editor/C/legal.xml
+share/gnome/help/gconf-editor/de/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/de/gconf-editor.xml
+share/gnome/help/gconf-editor/es/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/es/gconf-editor.xml
 share/gnome/help/gconf-editor/fr/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/fr/gconf-editor.xml
 share/gnome/help/gconf-editor/it/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/it/gconf-editor.xml
+share/gnome/help/gconf-editor/oc/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/oc/gconf-editor.xml
 share/gnome/help/gconf-editor/sv/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/sv/gconf-editor.xml
+share/gnome/help/gconf-editor/uk/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/uk/gconf-editor.xml
 share/icons/hicolor/48x48/apps/gconf-editor.png
 share/locale/am/LC_MESSAGES/gconf-editor.mo
 share/locale/ar/LC_MESSAGES/gconf-editor.mo
+share/locale/as/LC_MESSAGES/gconf-editor.mo
 share/locale/az/LC_MESSAGES/gconf-editor.mo
 share/locale/be/LC_MESSAGES/gconf-editor.mo
 share/locale/be@latin/LC_MESSAGES/gconf-editor.mo
@@ -64,6 +73,7 @@ share/locale/ms/LC_MESSAGES/gconf-editor.mo
 share/locale/nb/LC_MESSAGES/gconf-editor.mo
 share/locale/ne/LC_MESSAGES/gconf-editor.mo
 share/locale/nl/LC_MESSAGES/gconf-editor.mo
+share/locale/oc/LC_MESSAGES/gconf-editor.mo
 share/locale/or/LC_MESSAGES/gconf-editor.mo
 share/locale/pa/LC_MESSAGES/gconf-editor.mo
 share/locale/pl/LC_MESSAGES/gconf-editor.mo
@@ -72,6 +82,7 @@ share/locale/pt_BR/LC_MESSAGES/gconf-editor.mo
 share/locale/ro/LC_MESSAGES/gconf-editor.mo
 share/locale/ru/LC_MESSAGES/gconf-editor.mo
 share/locale/rw/LC_MESSAGES/gconf-editor.mo
+share/locale/si/LC_MESSAGES/gconf-editor.mo
 share/locale/sk/LC_MESSAGES/gconf-editor.mo
 share/locale/sl/LC_MESSAGES/gconf-editor.mo
 share/locale/sq/LC_MESSAGES/gconf-editor.mo
@@ -90,9 +101,13 @@ share/locale/zh_CN/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_HK/LC_MESSAGES/gconf-editor.mo
 share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 share/omf/gconf-editor/gconf-editor-C.omf
+share/omf/gconf-editor/gconf-editor-de.omf
+share/omf/gconf-editor/gconf-editor-es.omf
 share/omf/gconf-editor/gconf-editor-fr.omf
 share/omf/gconf-editor/gconf-editor-it.omf
+share/omf/gconf-editor/gconf-editor-oc.omf
 share/omf/gconf-editor/gconf-editor-sv.omf
+share/omf/gconf-editor/gconf-editor-uk.omf
 share/pixmaps/gconf-editor/entry-blank.png
 share/pixmaps/gconf-editor/entry-bool.png
 share/pixmaps/gconf-editor/entry-list.png
@@ -107,12 +122,20 @@ share/pixmaps/gconf-editor/folder-open.png
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/gconf-editor/uk/figures
+@dirrm share/gnome/help/gconf-editor/uk
 @dirrm share/gnome/help/gconf-editor/sv/figures
 @dirrm share/gnome/help/gconf-editor/sv
+@dirrm share/gnome/help/gconf-editor/oc/figures
+@dirrm share/gnome/help/gconf-editor/oc
 @dirrm share/gnome/help/gconf-editor/it/figures
 @dirrm share/gnome/help/gconf-editor/it
 @dirrm share/gnome/help/gconf-editor/fr/figures
 @dirrm share/gnome/help/gconf-editor/fr
+@dirrm share/gnome/help/gconf-editor/es/figures
+@dirrm share/gnome/help/gconf-editor/es
+@dirrm share/gnome/help/gconf-editor/de/figures
+@dirrm share/gnome/help/gconf-editor/de
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
