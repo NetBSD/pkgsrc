@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2007/08/31 10:36:24 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2007/11/03 00:07:34 rh Exp $
 #
 
-DISTNAME=	cgoban-java-3.3.19
+DISTNAME=	cgoban-java-3.3.20
 CATEGORIES=	games java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # Mirrored from http://files.gokgs.com/javaBin/cgoban.jar
