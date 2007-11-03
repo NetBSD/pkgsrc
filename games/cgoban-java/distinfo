@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2007/08/31 10:36:24 rillig Exp $
+$NetBSD: distinfo,v 1.31 2007/11/03 00:07:34 rh Exp $
 
-SHA1 (cgoban-java-3.3.19.jar) = dc3bcc2bbf3e6d1472ddc6ee7aee91424a0efb6b
-RMD160 (cgoban-java-3.3.19.jar) = 9bc8d7724adc4a83cedc49cc2bad8f37d32385f7
-Size (cgoban-java-3.3.19.jar) = 1423800 bytes
+SHA1 (cgoban-java-3.3.20.jar) = bfeddc8458ebd46cfb44877be470bd5316abad30
+RMD160 (cgoban-java-3.3.20.jar) = f13538fe454f9e36871f36f06637667c95a178ba
+Size (cgoban-java-3.3.20.jar) = 1405917 bytes
