@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/10 16:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/11/03 14:10:32 wiz Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -12,6 +12,11 @@ HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+LICENSE=		unace-source-license
+RESTRICTED=		Only original file distribution.
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=	gmake
 
