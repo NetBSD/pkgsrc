@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.23 2006/10/11 16:45:49 joerg Exp $
+$NetBSD: patch-aa,v 1.24 2007/11/03 21:55:00 drochner Exp $
 
---- widgets/e-timezone-dialog/e-timezone-dialog.c.orig	2006-09-21 19:22:45.000000000 +0000
-+++ widgets/e-timezone-dialog/e-timezone-dialog.c
-@@ -80,8 +80,6 @@ struct _ETimezoneDialogPrivate {
+--- ./widgets/e-timezone-dialog/e-timezone-dialog.c.orig	2007-10-12 09:03:43.000000000 +0200
++++ ./widgets/e-timezone-dialog/e-timezone-dialog.c
+@@ -82,8 +82,6 @@ struct _ETimezoneDialogPrivate {
  
  #ifndef G_OS_WIN32 /* Declared properly in time.h already */
  extern char *tzname[2];
@@ -11,7 +11,15 @@ $NetBSD: patch-aa,v 1.23 2006/10/11 16:45:49 joerg Exp $
  #endif
  
  static void e_timezone_dialog_class_init	(ETimezoneDialogClass *class);
-@@ -314,6 +312,8 @@ get_local_offset ()
+@@ -304,7 +302,6 @@ e_timezone_dialog_construct (ETimezoneDi
+ 	return NULL;
+ }
+ 
+-#if 0
+ static int
+ get_local_offset ()
+ {
+@@ -317,10 +314,11 @@ get_local_offset ()
  	t_gmt = mktime (&gmt);
  	t_local = mktime (&local);
  	diff = t_local - t_gmt;
@@ -20,7 +28,11 @@ $NetBSD: patch-aa,v 1.23 2006/10/11 16:45:49 joerg Exp $
  
  	return diff;
  }
-@@ -324,7 +324,7 @@ get_local_timezone()
+-#endif
+ 
+ static const icaltimezone*
+ get_local_timezone()
+@@ -328,7 +326,7 @@ get_local_timezone()
  	icaltimezone *zone;
  	
  	tzset();

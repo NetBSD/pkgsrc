@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2007/09/21 13:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2007/11/03 21:55:00 drochner Exp $
 
-DISTNAME=		evolution-2.10.1
-PKGREVISION=		3
+DISTNAME=		evolution-2.12.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.10/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -95,11 +94,14 @@ PLIST_SUBST+=		HAVE_SMIME="@comment "
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
 
-GCONF_SCHEMAS=		apps-evolution-mail-prompts-checkdefault-2.10.schemas
-GCONF_SCHEMAS+=	apps_evolution_addressbook-2.10.schemas
-GCONF_SCHEMAS+=	apps_evolution_calendar-2.10.schemas
-GCONF_SCHEMAS+=	apps_evolution_shell-2.10.schemas
-GCONF_SCHEMAS+=	evolution-mail-2.10.schemas
+GCONF_SCHEMAS+= apps-evolution-attachment-reminder.schemas
+GCONF_SCHEMAS+= apps-evolution-mail-notification.schemas
+GCONF_SCHEMAS+= apps-evolution-mail-prompts-checkdefault.schemas
+GCONF_SCHEMAS+=	apps_evolution_addressbook.schemas
+GCONF_SCHEMAS+=	apps_evolution_calendar.schemas
+GCONF_SCHEMAS+=	apps_evolution_shell.schemas
+GCONF_SCHEMAS+= bogo-junk-plugin.schemas
+GCONF_SCHEMAS+=	evolution-mail.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
@@ -134,6 +136,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
