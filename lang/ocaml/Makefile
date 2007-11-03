@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/09/26 03:10:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.56 2007/11/03 22:38:12 rillig Exp $
 
 .include "Makefile.common"
 
@@ -6,6 +6,7 @@ CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ENV+=		disable_x11=yes
 
 BUILD_TARGET=		world
+MAKE_JOBS_SAFE=		no
 
 ###
 ### PLIST components
