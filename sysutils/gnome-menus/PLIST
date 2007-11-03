@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/07/12 19:30:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/11/03 16:34:56 drochner Exp $
 bin/gnome-menu-spec-test
 include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.la
@@ -29,6 +29,7 @@ share/examples/gnome-menus/xdg/menus/applications.menu
 share/examples/gnome-menus/xdg/menus/preferences.menu
 share/examples/gnome-menus/xdg/menus/settings.menu
 share/locale/ar/LC_MESSAGES/gnome-menus.mo
+share/locale/as/LC_MESSAGES/gnome-menus.mo
 share/locale/be/LC_MESSAGES/gnome-menus.mo
 share/locale/be@latin/LC_MESSAGES/gnome-menus.mo
 share/locale/bg/LC_MESSAGES/gnome-menus.mo
@@ -51,6 +52,7 @@ share/locale/eu/LC_MESSAGES/gnome-menus.mo
 share/locale/fa/LC_MESSAGES/gnome-menus.mo
 share/locale/fi/LC_MESSAGES/gnome-menus.mo
 share/locale/fr/LC_MESSAGES/gnome-menus.mo
+share/locale/ga/LC_MESSAGES/gnome-menus.mo
 share/locale/gl/LC_MESSAGES/gnome-menus.mo
 share/locale/gn/LC_MESSAGES/gnome-menus.mo
 share/locale/gu/LC_MESSAGES/gnome-menus.mo
@@ -62,6 +64,7 @@ share/locale/id/LC_MESSAGES/gnome-menus.mo
 share/locale/it/LC_MESSAGES/gnome-menus.mo
 share/locale/ja/LC_MESSAGES/gnome-menus.mo
 share/locale/ka/LC_MESSAGES/gnome-menus.mo
+share/locale/kn/LC_MESSAGES/gnome-menus.mo
 share/locale/ko/LC_MESSAGES/gnome-menus.mo
 share/locale/ku/LC_MESSAGES/gnome-menus.mo
 share/locale/ky/LC_MESSAGES/gnome-menus.mo
@@ -86,6 +89,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-menus.mo
 share/locale/ro/LC_MESSAGES/gnome-menus.mo
 share/locale/ru/LC_MESSAGES/gnome-menus.mo
 share/locale/rw/LC_MESSAGES/gnome-menus.mo
+share/locale/si/LC_MESSAGES/gnome-menus.mo
 share/locale/sk/LC_MESSAGES/gnome-menus.mo
 share/locale/sl/LC_MESSAGES/gnome-menus.mo
 share/locale/sq/LC_MESSAGES/gnome-menus.mo
@@ -98,6 +102,7 @@ share/locale/th/LC_MESSAGES/gnome-menus.mo
 share/locale/tr/LC_MESSAGES/gnome-menus.mo
 share/locale/ug/LC_MESSAGES/gnome-menus.mo
 share/locale/uk/LC_MESSAGES/gnome-menus.mo
+share/locale/uz@cyrillic/LC_MESSAGES/gnome-menus.mo
 share/locale/vi/LC_MESSAGES/gnome-menus.mo
 share/locale/xh/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-menus.mo
