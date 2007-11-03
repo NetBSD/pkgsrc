@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/11/03 17:28:00 drochner Exp $
 
---- libgnomekbd/Makefile.in.orig	2007-04-05 13:05:59.000000000 +0200
+--- libgnomekbd/Makefile.in.orig	2007-09-17 12:34:59.000000000 +0200
 +++ libgnomekbd/Makefile.in
-@@ -296,7 +296,7 @@ libgnomekbd_la_LDFLAGS = $(common_LDFLAG
+@@ -308,7 +308,7 @@ common_LDFLAGS = -version-info @VERSION_
+ libgnomekbd_la_LDFLAGS = $(common_LDFLAGS)
  libgnomekbdui_la_LDFLAGS = $(common_LDFLAGS) \
                             $(GTK_LIBS) \
-                            $(LIBGNOME_LIBS) \
 -                           -lgnomekbd
 +                           libgnomekbd.la
  
