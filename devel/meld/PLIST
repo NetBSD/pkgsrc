@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/16 02:35:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/03 13:22:43 wiz Exp $
 bin/meld
 lib/meld/diffutil.py
 lib/meld/diffutil.pyc
@@ -145,7 +145,7 @@ share/zh_TW/LC_MESSAGES/meld.mo
 @dirrm share/zh_CN/LC_MESSAGES
 @dirrm share/zh_CN
 @dirrm share/vi/LC_MESSAGES
-@dirrm share/vi
+@unexec ${RMDIR} %D/share/vi 2>/dev/null || ${TRUE}
 @dirrm share/sv/LC_MESSAGES
 @dirrm share/sv
 @dirrm share/sr@Latn/LC_MESSAGES
