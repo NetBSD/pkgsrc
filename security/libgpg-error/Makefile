@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/24 19:38:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2007/11/03 22:40:27 rillig Exp $
 #
 
 DISTNAME=	libgpg-error-1.4
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
