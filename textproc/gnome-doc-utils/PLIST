@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/03/21 11:05:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/03 15:59:27 drochner Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
@@ -7,9 +7,31 @@ lib/pkgconfig/xml2po.pc
 man/man1/xml2po.1
 share/aclocal/gnome-doc-utils.m4
 share/gnome-doc-utils/gnome-doc-utils.make
+share/gnome-doc-utils/icons/hicolor/48x48/admon-bug.png
+share/gnome-doc-utils/icons/hicolor/48x48/admon-caution.png
+share/gnome-doc-utils/icons/hicolor/48x48/admon-important.png
+share/gnome-doc-utils/icons/hicolor/48x48/admon-note.png
+share/gnome-doc-utils/icons/hicolor/48x48/admon-tip.png
+share/gnome-doc-utils/icons/hicolor/48x48/admon-warning.png
+share/gnome-doc-utils/icons/hicolor/scalable/admon-bug.svg
+share/gnome-doc-utils/icons/hicolor/scalable/admon-caution.svg
+share/gnome-doc-utils/icons/hicolor/scalable/admon-important.svg
+share/gnome-doc-utils/icons/hicolor/scalable/admon-note.svg
+share/gnome-doc-utils/icons/hicolor/scalable/admon-tip.svg
+share/gnome-doc-utils/icons/hicolor/scalable/admon-warning.svg
 share/gnome-doc-utils/template-document.xml
 share/gnome-doc-utils/template.make
 share/gnome-doc-utils/template.omf.in
+share/gnome-doc-utils/templates/gnome-app-template.xml
+share/gnome-doc-utils/templates/gnome-applet-template.xml
+share/gnome-doc-utils/templates/legal.xml
+share/gnome-doc-utils/watermarks/watermark-blockquote-00AB.png
+share/gnome-doc-utils/watermarks/watermark-blockquote-00BB.png
+share/gnome-doc-utils/watermarks/watermark-blockquote-201C.png
+share/gnome-doc-utils/watermarks/watermark-blockquote-201D.png
+share/gnome-doc-utils/watermarks/watermark-blockquote-201E.png
+share/gnome-doc-utils/watermarks/watermark-code-python.png
+share/gnome-doc-utils/watermarks/watermark-code.png
 share/gnome/help/gnome-doc-make/C/gnome-doc-make.xml
 share/gnome/help/gnome-doc-make/C/legal.xml
 share/gnome/help/gnome-doc-make/C/make-ref.xml
@@ -18,7 +40,6 @@ share/gnome/help/gnome-doc-xslt/C/db-common.xml
 share/gnome/help/gnome-doc-xslt/C/db-label.xml
 share/gnome/help/gnome-doc-xslt/C/db-title.xml
 share/gnome/help/gnome-doc-xslt/C/db-xref.xml
-share/gnome/help/gnome-doc-xslt/C/db2html-admon.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-autotoc.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-bibliography.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-block.xml
@@ -30,6 +51,7 @@ share/gnome/help/gnome-doc-xslt/C/db2html-division.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-ebnf.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-footnote.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-funcsynopsis.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-index.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-info.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-inline.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-l10n.xml
@@ -42,10 +64,12 @@ share/gnome/help/gnome-doc-xslt/C/db2html-title.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-xref.xml
 share/gnome/help/gnome-doc-xslt/C/db2html.xml
 share/gnome/help/gnome-doc-xslt/C/db2omf.xml
+share/gnome/help/gnome-doc-xslt/C/db2xhtml.xml
 share/gnome/help/gnome-doc-xslt/C/gettext.xml
 share/gnome/help/gnome-doc-xslt/C/gnome-doc-xslt.xml
 share/gnome/help/gnome-doc-xslt/C/l10n-numbers.xml
 share/gnome/help/gnome-doc-xslt/C/legal.xml
+share/gnome/help/gnome-doc-xslt/C/theme.xml
 share/gnome/help/gnome-doc-xslt/C/translating.xml
 share/locale/ar/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/bg/LC_MESSAGES/gnome-doc-utils.mo
@@ -85,6 +109,7 @@ share/locale/mr/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/nb/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ne/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/nl/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/oc/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/or/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/pa/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/pl/LC_MESSAGES/gnome-doc-utils.mo
@@ -111,12 +136,12 @@ share/locale/zh_HK/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-doc-utils.mo
 share/omf/gnome-doc-make/gnome-doc-make-C.omf
 share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
+share/xml/gnome/xslt/common/theme.xsl
 share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
 share/xml/gnome/xslt/docbook/common/db-label.xsl
 share/xml/gnome/xslt/docbook/common/db-title.xsl
 share/xml/gnome/xslt/docbook/common/db-xref.xsl
-share/xml/gnome/xslt/docbook/html/db2html-admon.xsl
 share/xml/gnome/xslt/docbook/html/db2html-autotoc.xsl
 share/xml/gnome/xslt/docbook/html/db2html-bibliography.xsl
 share/xml/gnome/xslt/docbook/html/db2html-block.xsl
@@ -128,6 +153,7 @@ share/xml/gnome/xslt/docbook/html/db2html-division.xsl
 share/xml/gnome/xslt/docbook/html/db2html-ebnf.xsl
 share/xml/gnome/xslt/docbook/html/db2html-footnote.xsl
 share/xml/gnome/xslt/docbook/html/db2html-funcsynopsis.xsl
+share/xml/gnome/xslt/docbook/html/db2html-index.xsl
 share/xml/gnome/xslt/docbook/html/db2html-info.xsl
 share/xml/gnome/xslt/docbook/html/db2html-inline.xsl
 share/xml/gnome/xslt/docbook/html/db2html-l10n.xsl
@@ -140,10 +166,12 @@ share/xml/gnome/xslt/docbook/html/db2html-table.xsl
 share/xml/gnome/xslt/docbook/html/db2html-title.xsl
 share/xml/gnome/xslt/docbook/html/db2html-xref.xsl
 share/xml/gnome/xslt/docbook/html/db2html.xsl
+share/xml/gnome/xslt/docbook/html/db2xhtml.xsl
 share/xml/gnome/xslt/docbook/omf/db2omf.xsl
 share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
 share/xml/gnome/xslt/docbook/utils/figures.xsl
+share/xml/gnome/xslt/docbook/utils/graphics.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
 share/xml/gnome/xslt/gettext/l10n-numbers.xsl
@@ -165,6 +193,7 @@ share/xml2po/xhtml.pyc
 @dirrm share/xml/gnome/xslt/docbook/html
 @dirrm share/xml/gnome/xslt/docbook/common
 @dirrm share/xml/gnome/xslt/docbook
+@dirrm share/xml/gnome/xslt/common
 @dirrm share/xml/gnome/xslt
 @dirrm share/xml/gnome
 @comment in xmlcatmgr: @dirrm share/xml
@@ -176,4 +205,10 @@ share/xml2po/xhtml.pyc
 @dirrm share/gnome/help/gnome-doc-make/C
 @dirrm share/gnome/help/gnome-doc-make
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm share/gnome-doc-utils/watermarks
+@dirrm share/gnome-doc-utils/templates
+@dirrm share/gnome-doc-utils/icons/hicolor/scalable
+@dirrm share/gnome-doc-utils/icons/hicolor/48x48
+@dirrm share/gnome-doc-utils/icons/hicolor
+@dirrm share/gnome-doc-utils/icons
 @dirrm share/gnome-doc-utils
