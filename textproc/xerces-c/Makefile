@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/08/16 00:15:56 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/11/03 04:29:13 yyamano Exp $
 #
 
 DISTNAME=	xerces-c-src_2_7_0
@@ -19,9 +19,9 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
-.if ${LOWER_OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 XERCES_PLATFORM=	solaris
-.elif ${LOWER_OPSYS} == "Darwin"
+.elif ${OPSYS} == "Darwin"
 XERCES_PLATFORM=	macosx
 .else
 XERCES_PLATFORM=	${LOWER_OPSYS}
@@ -49,7 +49,13 @@ CONFIGURE_ENV+=		${XERCES_ENV}
 MAKE_ENV+=		${XERCES_ENV}
 PLIST_SUBST+=		${PLIST_SUBST.${ICONV_TYPE}-iconv}
 
+# On Darwin, we have to use native (not libiconv) converter. see MacOSPlatformUtils.cpp.
+.if ${OPSYS} == "Darwin"
+ICONV_TYPE=		native
+CFLAGS.Darwin+=		-DXML_USE_MACOS_UNICODECONVERTER -I${WRKDIR}/${DISTNAME}/src
+.else
 .include "../../converters/libiconv/buildlink3.mk"
+.endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}/util/Platforms/DragonFly
