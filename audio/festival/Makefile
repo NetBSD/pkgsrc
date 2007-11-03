@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/07/12 07:40:07 gson Exp $
+# $NetBSD: Makefile,v 1.57 2007/11/03 22:33:57 rillig Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -15,6 +15,7 @@ COMMENT=	Advanced multi-lingual speech synthesis system
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+MAKE_JOBS_SAFE=	no
 
 SPEECHTOOLS=	${WRKSRC}/speech_tools
 FESTIVAL=	${WRKSRC}/festival
