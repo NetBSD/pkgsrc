@@ -1,12 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2007/08/09 18:42:51 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/11/03 16:10:40 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-qt-${POPPLER_VERS}
-PKGREVISION=		1
 
 COMMENT=		PDF rendering library (QT wrapper)
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-cairo-output
+CONFIGURE_ARGS+=	--disable-splash-output
+CONFIGURE_ARGS+=	--enable-poppler-qt
+CONFIGURE_ARGS+=	--disable-gtk-test
+CONFIGURE_ARGS+=	--disable-utils
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-qt.pc.in
 
