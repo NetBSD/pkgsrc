@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/08/15 15:56:12 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2007/11/03 22:36:06 rillig Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
 PKGREVISION=	3
@@ -28,6 +28,8 @@ PKGSRC_MAKE_ENV+=	PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 MAKE_ENV+=	CROSS_COMPILING=yes
 .endif
+
+MAKE_JOBS_SAFE=		no
 
 post-extract:
 	${CP} ${FILESDIR}/gen_matypes.awk ${WRKSRC}/src/mesa/x86
