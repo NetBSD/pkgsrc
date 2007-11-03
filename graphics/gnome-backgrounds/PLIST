@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/07/13 16:38:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/11/03 16:36:34 drochner Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-nature.xml
 share/gnome-background-properties/gnome-tiles.xml
@@ -40,6 +40,7 @@ share/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/lv/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/mai/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/mg/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/mk/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ml/LC_MESSAGES/gnome-backgrounds.mo
@@ -87,6 +88,4 @@ share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 @dirrm share/pixmaps/backgrounds/gnome/tiles
 @dirrm share/pixmaps/backgrounds/gnome/nature
 @dirrm share/pixmaps/backgrounds/gnome/branded
-@dirrm share/pixmaps/backgrounds/gnome
 @comment in xdg-dirs: @dirrm share/pixmaps/backgrounds
-@dirrm share/gnome-background-properties
