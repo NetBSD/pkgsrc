@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2007/09/21 13:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2007/11/03 21:51:28 drochner Exp $
 #
 
-DISTNAME=	evolution-data-server-1.10.3.1
-PKGREVISION=	2
+DISTNAME=	evolution-data-server-1.12.1
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/1.12/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -64,6 +63,11 @@ PKGCONFIG_OVERRIDE+=	servers/groupwise/libegroupwise.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
+
+.if ${OPSYS} == "NetBSD"
+# zone.tab file in /usr/share/zoneinfo
+DEPENDS+= zonetab-[0-9]*:../../time/zonetab
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
