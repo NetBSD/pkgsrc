@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.26 2007/10/09 19:19:08 martti Exp $
+# $NetBSD: mkbinarykit,v 1.27 2007/11/03 17:51:08 minskim Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -27,7 +27,7 @@ mkbinarykit_macpkg()
 	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" \
 		-e "s|%TARGETDIR%|${targetdir}|g" -e "s|%DATE%|${date}|g" \
 		< macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
-	/Developer/Tools/packagemaker -build -proj ${wrkdir}/macpkg.pmproj -p "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
+	${packagemaker} -build -proj ${wrkdir}/macpkg.pmproj -p "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
 	ls -dl "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.pkg"
 }
 
@@ -81,7 +81,16 @@ AIX)
 	;;
 Darwin)
 	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
-	universal_sdk="/Developer/SDKs/MacOSX${macosx_version}u.sdk"
+	case "$macosx_version" in
+	10.[0-4])
+		universal_sdk="/Developer/SDKs/MacOSX${macosx_version}u.sdk"
+		packagemaker=/Developer/Tools/packagemaker
+		;;
+	*)
+		universal_sdk="/Developer/SDKs/MacOSX${macosx_version}.sdk"
+		packagemaker=/Developer/usr/bin/packagemaker
+		;;
+	esac
 	if [ -d "${universal_sdk}" ]; then
 		echo "===> Building Universal binaries."
 		ospro=universal
