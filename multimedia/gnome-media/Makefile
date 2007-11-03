@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/09/21 13:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/03 16:32:49 drochner Exp $
 
-DISTNAME=		gnome-media-2.18.0
-PKGREVISION=		5
+DISTNAME=		gnome-media-2.20.1
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -25,6 +24,16 @@ CONFIGURE_ENV+=		XGETTEXT=${TOOLS_PATH.xgettext:Q}
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 CONFIGURE_ENV+=		CDROM_HOST="bsd"
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-media
+PKG_SUPPORTED_OPTIONS+=	inet6
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 GCONF_SCHEMAS=		CDDB-Slave2.schemas
@@ -49,6 +58,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
@@ -57,6 +67,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
