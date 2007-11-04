@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.2.26.1 2007/11/04 10:57:18 ghen Exp $
+
+--- Makefile.am.orig	2006-08-25 16:19:30.000000000 +0200
++++ Makefile.am
+@@ -56,8 +56,6 @@ uninstall-hook:
+ 	rm -f "$(DESTDIR)${mimedir}/subclasses"
+ 	rm -f "$(DESTDIR)${mimedir}/XMLnamespaces"
+ 
+-all: check
+-
+ check:
+ 	if [ -d CVS/ ]; then						\
+ 		xmllint --noout --valid $(srcdir)/freedesktop.org.xml;	\
