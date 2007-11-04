@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2007/08/24 15:20:43 taca Exp $
+# $NetBSD: Makefile.common,v 1.44 2007/11/04 15:58:24 agc Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -31,6 +31,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .sinclude "options.mk"
 
 BUILD_DEFS+=	ZSH_STATIC
+MAKE_JOBS_SAFE=	no
 
 .if defined(ZSH_STATIC) && !empty(ZSH_STATIC:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--disable-dynamic
