@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.725 2007/10/31 19:24:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.726 2007/11/04 12:17:10 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7668,11 +7668,11 @@ sub checkdir_CVS($) {
 	return unless $cvs_entries;
 
 	foreach my $line (@$cvs_entries) {
-		my ($type, $fname, $mtime, $date, $empty, $tag, $undef) = my_split("/", $line->text);
+		my ($type, $fname, $mtime, $date, $keyword_mode, $tag, $undef) = my_split("/", $line->text);
 		next if ($type eq "D" && !defined($fname));
 		assert($type eq "" || $type eq "D", "Unknown line format: " . $line->text);
 		assert(defined($tag), "Unknown line format: " . $line->text);
-		assert(defined($empty) && $empty eq "", "Unknown line format: " . $line->text);
+		assert(defined($keyword_mode), "Unknown line format: " . $line->text);
 		assert(!defined($undef), "Unknown line format: " . $line->text);
 	}
 }
