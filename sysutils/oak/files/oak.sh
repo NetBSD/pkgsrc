@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# oak - Jason White <jdwhite@jdwhite.org>
+# oak - Jason White <jdw-pkgsrc@menelos.com>
 #
 # PROVIDE: oak
 # REQUIRE: DAEMON
