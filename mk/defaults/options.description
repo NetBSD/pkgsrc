@@ -223,6 +223,7 @@ seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 sieve			Enable sieve support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
+skey			Enable S/Key support.
 slang			Enable S-Lang support.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
