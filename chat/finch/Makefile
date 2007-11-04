@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/09/25 10:03:52 hira Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2007/11/04 14:25:32 ghen Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -11,6 +11,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	msgfmt
 
+PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
 PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
 PKGCONFIG_OVERRIDE+=	gaim.pc.in
 PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
