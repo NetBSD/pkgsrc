@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/07/01 20:47:46 heinz Exp $
+# $NetBSD: Makefile,v 1.43 2007/11/04 16:00:02 agc Exp $
 
 DISTNAME=	libsndfile-1.0.17
 PKGREVISION=	1
@@ -19,6 +19,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
+
+MAKE_JOBS_SAFE=		no
 
 # This package compiles with gcc2, but its configure script doesn't know that
 CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes
