@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2007/11/01 09:39:26 jnemeth Exp $
+# $NetBSD: Makefile,v 1.471 2007/11/04 15:56:39 tnn Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -96,6 +96,7 @@ SUBDIR+=	gimp
 SUBDIR+=	gimp-color-manager
 SUBDIR+=	gimp-docs
 SUBDIR+=	gimp-fix-ca
+SUBDIR+=	gimp-liquid-rescale
 SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
 SUBDIR+=	gimp-ufraw
