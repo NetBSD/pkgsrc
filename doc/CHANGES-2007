@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2320 2007/11/04 15:56:38 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2321 2007/11/04 16:04:15 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4321,3 +4321,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/gnome-keyring to 2.20.1nb1 [tron 2007-11-04]
 	Added time/p5-Time-Format version 1.02 [adrianp 2007-11-04]
 	Added graphics/gimp-liquid-rescale version 0.3.0 [tnn 2007-11-04]
+	Added time/p5-Time-Interval version 1.22 [adrianp 2007-11-04]
