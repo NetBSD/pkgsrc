@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/08/30 12:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2007/11/04 16:57:15 rillig Exp $
 #
 
 DISTNAME=		gstreamer-0.10.14
@@ -11,12 +11,10 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gstreamer.net/
 COMMENT=		Open source multimedia framework
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		bison flex gmake perl pkg-config
 
 CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
