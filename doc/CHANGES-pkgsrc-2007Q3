@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.8 2007/10/28 14:54:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.9 2007/11/04 10:58:27 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -21,3 +21,5 @@ Pullup ticket 2215 - requested by tnn
 removal of ion3-devel
 Pullup ticket 2211 - requested by ghen
 security update for seamonkey
+Pullup ticket 2218 - requested by joerg
+build fix for shared-mime-info
