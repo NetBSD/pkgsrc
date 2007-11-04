@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2315 2007/11/04 10:06:15 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2316 2007/11/04 10:06:34 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4316,3 +4316,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/bootstrap-mk-files to 20071104 [minskim 2007-11-04]
 	Added net/net6 version 1.3.5 [roland 2007-11-04]
 	Added editors/obby version 0.4.4 [roland 2007-11-04]
+	Added editors/gobby version 0.4.5 [roland 2007-11-04]
