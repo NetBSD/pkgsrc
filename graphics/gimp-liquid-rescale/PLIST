@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/04 15:52:29 tnn Exp $
+lib/gimp/2.0/plug-ins/gimp-lqr-plugin
+share/locale/de/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/es_AR/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/es_ES/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/eu_ES/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/fr/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/hu/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/it/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/nb_NO/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/pt_BR/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/ro_RO/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/ru/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/sr/LC_MESSAGES/gimp22-lqr-plugin.mo
+share/locale/zh_CN/LC_MESSAGES/gimp22-lqr-plugin.mo
