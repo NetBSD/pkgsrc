@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2312 2007/11/03 20:17:11 markd Exp $
+$NetBSD: CHANGES-2007,v 1.2313 2007/11/04 08:15:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4313,3 +4313,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added wm/awesome version 1.3nb1 [roland 2007-11-03]
 	Added games/thew version 1.1.1nb2 [roland 2007-11-03]
 	Updated math/R to 2.6.0 [markd 2007-11-03]
+	Updated pkgtools/bootstrap-mk-files to 20071104 [minskim 2007-11-04]
