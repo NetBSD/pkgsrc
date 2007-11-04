@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/11/04 15:52:29 tnn Exp $
+
+--- Makefile.in.orig	2007-10-22 03:14:01.000000000 +0200
++++ Makefile.in
+@@ -211,7 +211,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = po src help
++SUBDIRS = po src
+ EXTRA_DIST = m4/ChangeLog  \
+ 	BUGS			\
+ 	autogen.sh		\
