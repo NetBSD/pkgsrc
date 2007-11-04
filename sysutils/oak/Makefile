@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/03 14:28:21 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/04 03:46:01 gendalia Exp $
 #
 
 DISTNAME=		oak-1.5.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ktools.org/dist/oak/
 
-MAINTAINER=		jdwhite@jdwhite.org
+MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.ktools.org/dist/oak/
 COMMENT=		System log reporting tool
 
