@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.9 2007/10/15 09:17:31 rillig Exp $
+$NetBSD: patch-aa,v 1.10 2007/11/04 15:34:09 rillig Exp $
 
 * "grep -q" doesn't work everywhere.
 * Do not use the home directory of the user building the package.
 
---- util/fluxbox-generate_menu.in.orig	2007-03-19 20:57:15.000000000 +0100
-+++ util/fluxbox-generate_menu.in	2007-10-15 11:07:05.000000000 +0200
+--- util/fluxbox-generate_menu.in.orig	2007-10-08 18:49:08.000000000 +0000
++++ util/fluxbox-generate_menu.in	2007-11-04 15:31:20.000000000 +0000
 @@ -51,7 +51,7 @@ WHOAMI=`whoami`
  [ "$WHOAMI" = root ] && PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
  
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.9 2007/10/15 09:17:31 rillig Exp $
      PNG_ICONS="yes"
  else
      # better assume to assume "no"
-@@ -337,7 +337,7 @@ searchForIcon(){
+@@ -338,7 +338,7 @@ searchForIcon(){
      # echo "^.${entry_exec}.[[:space:]]*<.*/${icon_base}\....>" 
      if [ -f "$entry_icon" ]; then
      # if icon exists and entry does not already exists, add it
@@ -23,7 +23,16 @@ $NetBSD: patch-aa,v 1.9 2007/10/15 09:17:31 rillig Exp $
              echo -e "\"${entry_exec}\" \t <${entry_icon}>" >> $ICONMAPPING
          else 
              : echo "#    mapping already exists for ${entry_exec}" >> $ICONMAPPING
-@@ -1635,7 +1635,7 @@ append_submenu "${MULTIMEDIAMENU}"
+@@ -1210,7 +1210,7 @@ case ${LC_ALL} in
+ esac
+ 
+ # Set Defaults
+-USERFLUXDIR="${HOME}/.@pkgprefix@fluxbox@pkgsuffix@"
++USERFLUXDIR="\${HOME}/.@pkgprefix@fluxbox@pkgsuffix@"
+ MENUFILENAME="${MENUFILENAME:=${USERFLUXDIR}/menu}"
+ MENUTITLE="${MENUTITLE:=Fluxbox}"
+ HOMEPAGE="${HOMEPAGE:=fluxbox.org}"
+@@ -1708,7 +1708,7 @@ append_submenu "${MULTIMEDIAMENU}"
         append_submenu "${XUTILSMENU}"
             normal_find xfontsel xman xload xbiff editres viewres xclock \
                 xmag wmagnify gkrellm gkrellm2 vmware portagemaster agave 
