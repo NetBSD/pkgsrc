@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/11/04 10:05:44 rillig Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+NET6_BUILDLINK3_MK:=	${NET6_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	net6
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnet6}
+BUILDLINK_PACKAGES+=	net6
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}net6
+
+.if ${NET6_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.net6+=	net6>=1.3.5
+BUILDLINK_PKGSRCDIR.net6?=	../../net/net6
+.endif	# NET6_BUILDLINK3_MK
+
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
