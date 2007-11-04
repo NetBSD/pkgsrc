@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6801 2007/11/03 20:17:11 markd Exp $
+$NetBSD: TODO,v 1.6802 2007/11/04 15:37:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,6 +308,7 @@ Suggested package updates
 	o arping-2.06
 	o arpwatch-2.1a15
 	o asapm-3.1
+	o asc-2.0.0
 	o ascii-3.8
 	o aspell-danish-1.6.7
 	o aspell-faroese-0.2.30
@@ -533,6 +534,7 @@ Suggested package updates
 	o gettext-0.16.1
 	o gfract-0.33
 	o ggiterm-0.7.1
+	o ghc-6.8.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.0.10
@@ -567,6 +569,7 @@ Suggested package updates
 	o gnome-themes-2.20.1
 	o gnome-user-docs-2.20.1
 	o gnome-utils-2.20.0.1
+	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
@@ -679,6 +682,7 @@ Suggested package updates
 	o jigdo-0.7.3
 	o jools-1.0
 	o jwhois-4.0
+	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.6
 	o kdrill-6.5
@@ -803,6 +807,7 @@ Suggested package updates
 	o mtools-3.9.11
 	o multitail-5.2.0
 	o muse-0.9.2
+	o mutt-devel-1.5.17
 	o mysql-5.2
 	o nagios-3.0a5
 	o naim-0.11.8.3.1
@@ -1208,7 +1213,7 @@ Suggested package updates
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
 	o tcpillust-1.00b
-	o tcpreplay-3.2.2
+	o tcpreplay-3.2.3
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
