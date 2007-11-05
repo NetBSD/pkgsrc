@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2323 2007/11/05 06:40:09 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2324 2007/11/05 12:57:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4324,3 +4324,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added time/p5-Time-Interval version 1.22 [adrianp 2007-11-04]
 	Updated devel/scmgit to 1.5.3.5 [bjs 2007-11-05]
 	Added sysutils/rename version 1.3nb1 [roland 2007-11-05]
+	Updated x11/qwt to 5.0.2 [roland 2007-11-05]
