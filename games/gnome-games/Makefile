@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2007/09/21 13:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2007/11/05 19:29:47 drochner Exp $
 
-DISTNAME=		gnome-games-2.18.2.1
-PKGREVISION=		4
+DISTNAME=		gnome-games-2.20.1
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -45,12 +44,10 @@ GCONF_SCHEMAS+=	gnibbles.schemas
 GCONF_SCHEMAS+=	gnobots2.schemas
 GCONF_SCHEMAS+=	gnometris.schemas
 GCONF_SCHEMAS+=	gnomine.schemas
-GCONF_SCHEMAS+=	gnotski.schemas
 GCONF_SCHEMAS+=	gnotravex.schemas
 GCONF_SCHEMAS+=	gnotski.schemas
 GCONF_SCHEMAS+=	gtali.schemas
 GCONF_SCHEMAS+=	iagno.schemas
-GCONF_SCHEMAS+=	libgnomegames.schemas
 GCONF_SCHEMAS+=	mahjongg.schemas
 GCONF_SCHEMAS+=	same-gnome.schemas
 
