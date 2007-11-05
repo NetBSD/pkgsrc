@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2007/04/11 18:03:39 drochner Exp $
+$NetBSD: patch-aa,v 1.7 2007/11/05 19:26:20 drochner Exp $
 
---- Makefile.in.orig	2007-04-04 16:41:43.000000000 +0200
+--- Makefile.in.orig	2007-09-16 23:55:43.000000000 +0200
 +++ Makefile.in
 @@ -73,7 +73,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-re
    distclean-recursive maintainer-clean-recursive
  ETAGS = etags
  CTAGS = ctags
--DIST_SUBDIRS = po data src help browser-plugin
-+DIST_SUBDIRS = po data src help
+-DIST_SUBDIRS = bindings po data lib src help browser-plugin
++DIST_SUBDIRS = bindings po data lib src help
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  distdir = $(PACKAGE)-$(VERSION)
  top_distdir = $(distdir)
