@@ -1,94 +1,105 @@
-$NetBSD: patch-ab,v 1.6 2007/09/20 21:12:06 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2007/11/05 19:06:03 drochner Exp $
 
---- sysdeps/freebsd/proctime.c.orig	2006-04-04 20:01:43.000000000 +0000
-+++ sysdeps/freebsd/proctime.c
-@@ -32,6 +32,10 @@
- #include <osreldate.h>
- #endif
+--- sysdeps/bsd/proctime.c.orig	2007-04-27 00:27:34.000000000 +0200
++++ sysdeps/bsd/proctime.c
+@@ -40,11 +40,25 @@ static const unsigned long _glibtop_sysd
  
-+#ifdef __NetBSD__
-+#include <sys/resourcevar.h>
+ #define tv2sec(tv)	(((guint64) tv.tv_sec * 1000000) + (guint64) tv.tv_usec)
+ 
++#if defined(__NetBSD__)
++static unsigned int clockrate;
++static const int mib [] = { CTL_KERN, KERN_CLOCKRATE };
 +#endif
 +
- static const unsigned long _glibtop_sysdeps_proc_time =
- (1L << GLIBTOP_PROC_TIME_RTIME) + (1L << GLIBTOP_PROC_TIME_FREQUENCY);
+ /* Init function. */
  
-@@ -58,7 +62,7 @@ glibtop_init_proc_time_p (glibtop *serve
+ void
+ _glibtop_init_proc_time_p (glibtop *server)
+ {
++#if defined(__NetBSD__)
++	struct clockinfo ci;
++	size_t length;
++	length = sizeof (ci);
++	if (sysctl (mib, 2, &ci, &length, NULL, 0) == 0)
++		clockrate = ci.hz;
++	if (!clockrate)
++		clockrate = 1; /* XXX avoid div by 0 later */
++#endif
+ 	server->sysdeps.proc_time = _glibtop_sysdeps_proc_time |
+ 		_glibtop_sysdeps_proc_time_user;
+ }
+@@ -56,7 +70,7 @@ _glibtop_init_proc_time_p (glibtop *serv
   * system, and interrupt time usage.
   */
  
--#ifndef __FreeBSD__
-+#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+-#if !(defined(__FreeBSD__) || defined(__FreeBSD_kernel__))
++#if !(defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__))
  
- #ifndef __FreeBSD__
  static void
-@@ -125,7 +129,9 @@ glibtop_get_proc_time_p (glibtop *server
+ calcru(p, up, sp, ip)
+@@ -114,13 +128,17 @@ void
+ glibtop_get_proc_time_p (glibtop *server, glibtop_proc_time *buf,
+ 			 pid_t pid)
+ {
++#if defined (__NetBSD__)
++	struct kinfo_proc2 *pinfo;
++#else
+ 	struct kinfo_proc *pinfo;
+-#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)) || (defined(OpenBSD) && (OpenBSD >= 199912))
++#if (defined(OpenBSD) && (OpenBSD >= 199912))
+ 	register struct rusage *rup;
  #else
  	struct user *u_addr = (struct user *)USRSTACK;
  #endif
-+#if !defined(__DragonFly__)
  	struct pstats pstats;
-+#endif
++#endif /* NetBSD */
  	int count;
  
  	glibtop_init_p (server, (1L << GLIBTOP_SYSDEPS_PROC_TIME), 0);
-@@ -142,11 +148,15 @@ glibtop_get_proc_time_p (glibtop *server
+@@ -136,7 +154,12 @@ glibtop_get_proc_time_p (glibtop *server
+ #endif
  
  	/* Get the process information */
++#if defined (__NetBSD__)
++	pinfo = kvm_getproc2 (server->machine.kd, KERN_PROC_PID, pid,
++			      sizeof (*pinfo), &count);
++#else
  	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
--	if ((pinfo == NULL) || (count != 1))
--		glibtop_error_io_r (server, "kvm_getprocs (%d)", pid);
-+	if ((pinfo == NULL) || (count != 1)) {
-+		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
-+		return;
-+	}
- 
- #if defined(__FreeBSD__) && (__FreeBSD_version >= 500013)
++#endif
+ 	if ((pinfo == NULL) || (count != 1)) {
+ 		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
+ 		return;
+@@ -146,14 +169,31 @@ glibtop_get_proc_time_p (glibtop *server
  	buf->rtime = pinfo [0].ki_runtime;
-+#elif defined(__DragonFly__)
-+	buf->rtime = pinfo [0].kp_eproc.e_uticks / 100000;
  #elif (defined __FreeBSD__) && (__FreeBSD_version <= 500013)
  	buf->rtime = pinfo [0].kp_proc.p_runtime;
++#elif defined (__NetBSD__)
++	buf->rtime = pinfo[0].p_rtime_sec * clockrate 
++		+ pinfo[0].p_rtime_usec  * clockrate / 1000000;
++	buf->frequency = clockrate;
  #else
-@@ -189,16 +199,38 @@ glibtop_get_proc_time_p (glibtop *server
-        if ((pinfo [0].ki_flag & P_INMEM)) {
+ 	buf->rtime = tv2sec (pinfo [0].kp_proc.p_rtime);
++	buf->frequency = 1000000;
  #endif
-            buf->utime = pinfo [0].ki_runtime;
--           buf->stime = 0; /* XXX */
-+		   buf->stime = tv2sec (pinfo [0].ki_rusage.ru_stime);
-            buf->cutime = tv2sec (pinfo [0].ki_childtime);
--           buf->cstime = 0; /* XXX */
-+#if __FreeBSD_version >= 600000
-+		   buf->cstime = tv2sec (pinfo [0].ki_rusage_ch.ru_stime);
-+#else
-+		   buf->cstime = 0;
-+#endif
-            buf->start_time = tv2sec (pinfo [0].ki_start);
-            buf->flags = _glibtop_sysdeps_proc_time_user;
-        }
  
+-	buf->frequency = 1000000;
+ 	buf->flags = _glibtop_sysdeps_proc_time;
+ 
+-#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)) || (defined(OpenBSD) && (OpenBSD >= 199912))
++#if (defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000))
++
++	buf->utime = pinfo[0].p_uutime_sec * 1000000
++		+ pinfo[0].p_uutime_usec;
++	buf->stime = pinfo[0].p_ustime_sec * 1000000
++		+ pinfo[0].p_ustime_usec;
++	buf->cutime = pinfo[0].p_uctime_sec * 1000000
++		+ pinfo[0].p_uctime_usec; /* XXX is u+s */
++	buf->cstime = 0; /* XXX */
++	buf->start_time = pinfo[0].p_ustart_sec;
++
++	buf->flags |= _glibtop_sysdeps_proc_time_user;
++
++#elif (defined(OpenBSD) && (OpenBSD >= 199912))
  	glibtop_suid_enter (server);
  
--#elif (__FreeBSD_version <= 500013)
-+#elif defined(__DragonFly__)
-+
-+        if ((pinfo [0].kp_proc.p_flag & P_SWAPPEDOUT) == 0)
-+		{
-+
-+                       buf->utime = pinfo[0].kp_eproc.e_uticks / 1000000;
-+                       buf->stime = pinfo[0].kp_eproc.e_sticks / 1000000;
-+#if __DragonFly_version >= 180000
-+                       buf->cutime = 0; /* XXX no idea about this */
-+                       buf->cstime = 0;
-+#else
-+                       buf->cutime = tv2sec (pinfo[0].kp_eproc.e_stats.p_cru.ru_utime);
-+                       buf->cstime = tv2sec (pinfo[0].kp_eproc.e_stats.p_cru.ru_stime);
-+#endif
-+                       buf->start_time = tv2sec (pinfo[0].kp_thread.td_start);
-+                       buf->flags = _glibtop_sysdeps_proc_time_user;
-+                       glibtop_suid_leave (server);
-+		}
-+#elif defined(__FreeBSD__) && (__FreeBSD_version <= 500013)
- 
-         if ((pinfo [0].kp_proc.p_flag & P_INMEM) &&
-             kvm_uread (server->machine.kd, &(pinfo [0]).kp_proc,
+ 	if (kvm_read (server->machine.kd,

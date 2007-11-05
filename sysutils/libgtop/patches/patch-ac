@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2007/09/20 21:12:07 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2007/11/05 19:06:03 drochner Exp $
 
---- sysdeps/common/mountlist.c.orig	2003-10-20 09:29:03.000000000 -0500
+--- sysdeps/common/mountlist.c.orig	2007-04-27 00:27:34.000000000 +0200
 +++ sysdeps/common/mountlist.c
 @@ -106,7 +106,7 @@ static struct mount_entry *read_filesyst
  #endif
@@ -32,3 +32,11 @@ $NetBSD: patch-ac,v 1.5 2007/09/20 21:12:07 wiz Exp $
  	me->me_type = g_strdup (fsp->f_fstypename);
  #else
  	me->me_type = g_strdup (fstype_to_string (fsp->f_type));
+@@ -544,6 +548,7 @@ static gboolean ignore_mount_entry(const
+ 		"devfs",
+ 		"devpts",
+ 		"fusectl",
++		"kernfs",
+ 		"linprocfs",
+ 		"mfs",
+ 		"mntfs",
