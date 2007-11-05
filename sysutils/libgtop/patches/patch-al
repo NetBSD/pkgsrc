@@ -1,39 +1,69 @@
-$NetBSD: patch-al,v 1.5 2007/09/20 21:12:10 wiz Exp $
+$NetBSD: patch-al,v 1.6 2007/11/05 19:06:05 drochner Exp $
 
---- sysdeps/freebsd/procmem.c.orig	2005-12-12 10:09:39.000000000 +0000
-+++ sysdeps/freebsd/procmem.c
-@@ -41,7 +41,9 @@
- 
- #include <sys/vnode.h>
- #include <ufs/ufs/quota.h>
-+#if !defined(__DragonFly__)
- #include <ufs/ufs/inode.h>
-+#endif
- 
- #include <sys/ucred.h>
- #if (!defined __OpenBSD__) && (!defined __bsdi__)
-@@ -63,6 +65,10 @@
- #include <uvm/uvm.h>
+--- sysdeps/bsd/procmem.c.orig	2007-04-27 00:27:34.000000000 +0200
++++ sysdeps/bsd/procmem.c
+@@ -116,6 +116,9 @@ void
+ glibtop_get_proc_mem_p (glibtop *server, glibtop_proc_mem *buf,
+ 			pid_t pid)
+ {
++#if defined (__NetBSD__)
++	struct kinfo_proc2 *pinfo;
++#else
+ 	struct kinfo_proc *pinfo;
+ 	struct vm_map_entry entry, *first;
+ 	struct vmspace *vms, vmspace;
+@@ -127,6 +130,7 @@ glibtop_get_proc_mem_p (glibtop *server,
+ #if (!defined(__FreeBSD__) || (__FreeBSD_version < 500013)) && !defined(__FreeBSD_kernel__)
+ 	struct plimit plimit;
  #endif
++#endif /* NetBSD */
+ 	int count;
  
-+#ifdef __NetBSD__
-+#include <sys/resourcevar.h>
+ 	glibtop_init_p (server, (1L << GLIBTOP_SYSDEPS_PROC_MEM), 0);
+@@ -140,7 +144,12 @@ glibtop_get_proc_mem_p (glibtop *server,
+ 	if (pid == 0) return;
+ 
+ 	/* Get the process data */
++#if defined(__NetBSD__)
++	pinfo = kvm_getproc2 (server->machine.kd, KERN_PROC_PID, pid,
++			      sizeof (*pinfo), &count);
++#else
+ 	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
 +#endif
-+
- static const unsigned long _glibtop_sysdeps_proc_mem =
- (1L << GLIBTOP_PROC_MEM_SIZE) +
- (1L << GLIBTOP_PROC_MEM_VSIZE) +
-@@ -214,8 +220,11 @@ glibtop_get_proc_mem_p (glibtop *server,
- 			return;
- 		}
+ 	if ((pinfo == NULL) || (count < 1)) {
+ 		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
+ 		return;
+@@ -157,6 +166,15 @@ glibtop_get_proc_mem_p (glibtop *server,
+        buf->resident = buf->rss = (guint64) pagetok
+                (pinfo [0].ki_rssize) << LOG1024;
  
--#ifdef __FreeBSD__
--#if __FreeBSD__ >= 4
-+#if defined(__DragonFly__) && (__DragonFly_version >= 180000)
-+		if (entry.maptype != VM_MAPTYPE_NORMAL && entry.maptype != VM_MAPTYPE_VPAGETABLE)
-+			continue;
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
-+#if defined(__DragonFly__) || (defined(__FreeBSD__) && __FreeBSD__ >= 4)
- 		if (entry.eflags & (MAP_ENTRY_IS_SUB_MAP))
- 			continue;
++#elif defined(__NetBSD__)
++
++       buf->rss_rlim = pinfo[0].p_uru_maxrss;
++       buf->vsize = buf->size = (guint64)pagetok
++	       (pinfo[0].p_vm_tsize + pinfo[0].p_vm_dsize + pinfo[0].p_vm_ssize)
++	       << LOG1024;
++       buf->resident = buf->rss = (guint64)pagetok
++               (pinfo[0].p_vm_rssize) << LOG1024;
++
  #else
+ 
+ #define        PROC_VMSPACE   kp_proc.p_vmspace
+@@ -182,6 +200,9 @@ glibtop_get_proc_mem_p (glibtop *server,
+ 
+ 	/* Now we get the shared memory. */
+ 
++#if defined(__NetBSD__)
++	buf->share = pinfo[0].p_uru_ixrss;
++#else
+ 	if (kvm_read (server->machine.kd,
+ 		      (unsigned long) pinfo [0].PROC_VMSPACE,
+ 		      (char *) &vmspace, sizeof (vmspace)) != sizeof (vmspace)) {
+@@ -287,6 +308,7 @@ glibtop_get_proc_mem_p (glibtop *server,
+ 		buf->share += object.un_pager.vnp.vnp_size;
+ #endif
+ 	}
++#endif /* NetBSD */
+ 
+ 	buf->flags = _glibtop_sysdeps_proc_mem |
+ 		_glibtop_sysdeps_proc_mem_share;

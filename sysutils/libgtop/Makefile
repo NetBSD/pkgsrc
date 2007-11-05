@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/09/21 13:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/05 19:06:02 drochner Exp $
 
-DISTNAME=		libgtop-2.14.2
-PKGREVISION=		6
+DISTNAME=		libgtop-2.20.0
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -41,6 +40,9 @@ PRINT_PLIST_AWK+=	/^include\/libgtop-2.0\/glibtop_suid.h$$/ \
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
+
+CONFIGURE_ENV+=	fu_cv_sys_mounted_getmntinfo=yes
+
 .  if (${MACHINE_ARCH} != alpha) && \
 	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
 	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
