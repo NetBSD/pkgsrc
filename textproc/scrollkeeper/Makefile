@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/02/22 19:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/11/05 15:56:13 jmmv Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -13,6 +13,8 @@ COMMENT=		Open Document Cataloging Project
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		rarian-[0-9]*
 
 DEPENDS+=		docbook-xml>=4.4nb4:../../textproc/docbook-xml
 
