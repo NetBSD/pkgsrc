@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/17 19:03:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/05 20:02:39 drochner Exp $
 bin/orca
 ${PYSITELIB}/orca/Gecko.py
 ${PYSITELIB}/orca/Gecko.pyc
@@ -12,9 +12,15 @@ ${PYSITELIB}/orca/__init__.pyo
 ${PYSITELIB}/orca/acss.py
 ${PYSITELIB}/orca/acss.pyc
 ${PYSITELIB}/orca/acss.pyo
+${PYSITELIB}/orca/app_gui_prefs.py
+${PYSITELIB}/orca/app_gui_prefs.pyc
+${PYSITELIB}/orca/app_gui_prefs.pyo
 ${PYSITELIB}/orca/atspi.py
 ${PYSITELIB}/orca/atspi.pyc
 ${PYSITELIB}/orca/atspi.pyo
+${PYSITELIB}/orca/bookmarks.py
+${PYSITELIB}/orca/bookmarks.pyc
+${PYSITELIB}/orca/bookmarks.pyo
 ${PYSITELIB}/orca/braille.py
 ${PYSITELIB}/orca/braille.pyc
 ${PYSITELIB}/orca/braille.pyo
@@ -55,9 +61,6 @@ ${PYSITELIB}/orca/focus_tracking_presenter.pyo
 ${PYSITELIB}/orca/gnomespeechfactory.py
 ${PYSITELIB}/orca/gnomespeechfactory.pyc
 ${PYSITELIB}/orca/gnomespeechfactory.pyo
-${PYSITELIB}/orca/hierarchical_presenter.py
-${PYSITELIB}/orca/hierarchical_presenter.pyc
-${PYSITELIB}/orca/hierarchical_presenter.pyo
 ${PYSITELIB}/orca/httpserver.py
 ${PYSITELIB}/orca/httpserver.pyc
 ${PYSITELIB}/orca/httpserver.pyo
@@ -160,12 +163,18 @@ ${PYSITELIB}/orca/scripts/gedit.pyo
 ${PYSITELIB}/orca/scripts/gnome-keyring-ask.py
 ${PYSITELIB}/orca/scripts/gnome-keyring-ask.pyc
 ${PYSITELIB}/orca/scripts/gnome-keyring-ask.pyo
-${PYSITELIB}/orca/scripts/gnome-power-manager.py
-${PYSITELIB}/orca/scripts/gnome-power-manager.pyc
-${PYSITELIB}/orca/scripts/gnome-power-manager.pyo
+${PYSITELIB}/orca/scripts/gnome-mud.py
+${PYSITELIB}/orca/scripts/gnome-mud.pyc
+${PYSITELIB}/orca/scripts/gnome-mud.pyo
+${PYSITELIB}/orca/scripts/gnome-panel.py
+${PYSITELIB}/orca/scripts/gnome-panel.pyc
+${PYSITELIB}/orca/scripts/gnome-panel.pyo
 ${PYSITELIB}/orca/scripts/gnome-search-tool.py
 ${PYSITELIB}/orca/scripts/gnome-search-tool.pyc
 ${PYSITELIB}/orca/scripts/gnome-search-tool.pyo
+${PYSITELIB}/orca/scripts/gnome-system-monitor.py
+${PYSITELIB}/orca/scripts/gnome-system-monitor.pyc
+${PYSITELIB}/orca/scripts/gnome-system-monitor.pyo
 ${PYSITELIB}/orca/scripts/gnome-terminal.py
 ${PYSITELIB}/orca/scripts/gnome-terminal.pyc
 ${PYSITELIB}/orca/scripts/gnome-terminal.pyo
@@ -181,36 +190,44 @@ ${PYSITELIB}/orca/scripts/liferea.pyo
 ${PYSITELIB}/orca/scripts/metacity.py
 ${PYSITELIB}/orca/scripts/metacity.pyc
 ${PYSITELIB}/orca/scripts/metacity.pyo
+${PYSITELIB}/orca/scripts/nautilus.py
+${PYSITELIB}/orca/scripts/nautilus.pyc
+${PYSITELIB}/orca/scripts/nautilus.pyo
+${PYSITELIB}/orca/scripts/notification-daemon.py
+${PYSITELIB}/orca/scripts/notification-daemon.pyc
+${PYSITELIB}/orca/scripts/notification-daemon.pyo
 ${PYSITELIB}/orca/scripts/planner.py
 ${PYSITELIB}/orca/scripts/planner.pyc
 ${PYSITELIB}/orca/scripts/planner.pyo
 ${PYSITELIB}/orca/scripts/self_voicing.py
 ${PYSITELIB}/orca/scripts/self_voicing.pyc
 ${PYSITELIB}/orca/scripts/self_voicing.pyo
-${PYSITELIB}/orca/scripts/users-admin.py
-${PYSITELIB}/orca/scripts/users-admin.pyc
-${PYSITELIB}/orca/scripts/users-admin.pyo
 ${PYSITELIB}/orca/settings.py
 ${PYSITELIB}/orca/settings.pyc
 ${PYSITELIB}/orca/settings.pyo
 ${PYSITELIB}/orca/speech.py
 ${PYSITELIB}/orca/speech.pyc
 ${PYSITELIB}/orca/speech.pyo
+${PYSITELIB}/orca/speechdispatcherfactory.py
+${PYSITELIB}/orca/speechdispatcherfactory.pyc
+${PYSITELIB}/orca/speechdispatcherfactory.pyo
 ${PYSITELIB}/orca/speechgenerator.py
 ${PYSITELIB}/orca/speechgenerator.pyc
 ${PYSITELIB}/orca/speechgenerator.pyo
 ${PYSITELIB}/orca/speechserver.py
 ${PYSITELIB}/orca/speechserver.pyc
 ${PYSITELIB}/orca/speechserver.pyo
-${PYSITELIB}/orca/util.py
-${PYSITELIB}/orca/util.pyc
-${PYSITELIB}/orca/util.pyo
 ${PYSITELIB}/orca/where_am_I.py
 ${PYSITELIB}/orca/where_am_I.pyc
 ${PYSITELIB}/orca/where_am_I.pyo
 man/man1/orca.1
 share/applications/orca.desktop
+share/icons/hicolor/16x16/apps/orca.png
+share/icons/hicolor/22x22/apps/orca.png
+share/icons/hicolor/24x24/apps/orca.png
+share/icons/hicolor/32x32/apps/orca.png
 share/icons/hicolor/48x48/apps/orca.png
+share/icons/hicolor/scalable/apps/orca.svg
 share/locale/ar/LC_MESSAGES/orca.mo
 share/locale/bg/LC_MESSAGES/orca.mo
 share/locale/bn/LC_MESSAGES/orca.mo
@@ -244,6 +261,7 @@ share/locale/mr/LC_MESSAGES/orca.mo
 share/locale/nb/LC_MESSAGES/orca.mo
 share/locale/ne/LC_MESSAGES/orca.mo
 share/locale/nl/LC_MESSAGES/orca.mo
+share/locale/oc/LC_MESSAGES/orca.mo
 share/locale/or/LC_MESSAGES/orca.mo
 share/locale/pa/LC_MESSAGES/orca.mo
 share/locale/pl/LC_MESSAGES/orca.mo
@@ -251,7 +269,9 @@ share/locale/pt/LC_MESSAGES/orca.mo
 share/locale/pt_BR/LC_MESSAGES/orca.mo
 share/locale/ru/LC_MESSAGES/orca.mo
 share/locale/rw/LC_MESSAGES/orca.mo
+share/locale/si/LC_MESSAGES/orca.mo
 share/locale/sl/LC_MESSAGES/orca.mo
+share/locale/sq/LC_MESSAGES/orca.mo
 share/locale/sr/LC_MESSAGES/orca.mo
 share/locale/sr@Latn/LC_MESSAGES/orca.mo
 share/locale/sv/LC_MESSAGES/orca.mo
@@ -269,7 +289,12 @@ share/orca/glade/orca-quit.glade
 share/orca/glade/orca-setup.glade
 @dirrm share/orca/glade
 @dirrm share/orca
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm ${PYSITELIB}/orca/scripts
