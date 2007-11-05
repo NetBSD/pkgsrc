@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/20 21:21:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/11/05 20:19:02 drochner Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
@@ -98,6 +98,7 @@ share/locale/nb/LC_MESSAGES/eel-2.0.mo
 share/locale/ne/LC_MESSAGES/eel-2.0.mo
 share/locale/nl/LC_MESSAGES/eel-2.0.mo
 share/locale/nn/LC_MESSAGES/eel-2.0.mo
+share/locale/oc/LC_MESSAGES/eel-2.0.mo
 share/locale/or/LC_MESSAGES/eel-2.0.mo
 share/locale/pa/LC_MESSAGES/eel-2.0.mo
 share/locale/pl/LC_MESSAGES/eel-2.0.mo
@@ -106,6 +107,7 @@ share/locale/pt_BR/LC_MESSAGES/eel-2.0.mo
 share/locale/ro/LC_MESSAGES/eel-2.0.mo
 share/locale/ru/LC_MESSAGES/eel-2.0.mo
 share/locale/rw/LC_MESSAGES/eel-2.0.mo
+share/locale/si/LC_MESSAGES/eel-2.0.mo
 share/locale/sk/LC_MESSAGES/eel-2.0.mo
 share/locale/sl/LC_MESSAGES/eel-2.0.mo
 share/locale/sq/LC_MESSAGES/eel-2.0.mo
