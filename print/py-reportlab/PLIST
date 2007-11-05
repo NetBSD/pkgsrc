@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/21 15:18:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/11/05 20:57:51 drochner Exp $
 ${PYSITELIB}/reportlab/README
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
 ${PYSITELIB}/reportlab/changes
+${PYSITELIB}/reportlab/demos/colors/colortest.py
 ${PYSITELIB}/reportlab/demos/gadflypaper/00readme.txt
 ${PYSITELIB}/reportlab/demos/gadflypaper/gfe.py
 ${PYSITELIB}/reportlab/demos/odyssey/00readme.txt
@@ -281,6 +282,7 @@ ${PYSITELIB}/reportlab/lib/xmllib.pyo
 ${PYSITELIB}/reportlab/lib/yaml.py
 ${PYSITELIB}/reportlab/lib/yaml.pyc
 ${PYSITELIB}/reportlab/lib/yaml.pyo
+${PYSITELIB}/reportlab/license.txt
 ${PYSITELIB}/reportlab/pdfbase/__init__.py
 ${PYSITELIB}/reportlab/pdfbase/__init__.pyc
 ${PYSITELIB}/reportlab/pdfbase/__init__.pyo
@@ -371,6 +373,12 @@ ${PYSITELIB}/reportlab/rl_config.pyo
 ${PYSITELIB}/reportlab/test/__init__.py
 ${PYSITELIB}/reportlab/test/__init__.pyc
 ${PYSITELIB}/reportlab/test/__init__.pyo
+${PYSITELIB}/reportlab/test/doctest.py
+${PYSITELIB}/reportlab/test/doctest.pyc
+${PYSITELIB}/reportlab/test/doctest.pyo
+${PYSITELIB}/reportlab/test/linecache_copy.py
+${PYSITELIB}/reportlab/test/linecache_copy.pyc
+${PYSITELIB}/reportlab/test/linecache_copy.pyo
 ${PYSITELIB}/reportlab/test/pythonpowered.gif
 ${PYSITELIB}/reportlab/test/runAll.py
 ${PYSITELIB}/reportlab/test/runAll.pyc
@@ -477,6 +485,9 @@ ${PYSITELIB}/reportlab/test/test_platypus_general.pyo
 ${PYSITELIB}/reportlab/test/test_platypus_indents.py
 ${PYSITELIB}/reportlab/test/test_platypus_indents.pyc
 ${PYSITELIB}/reportlab/test/test_platypus_indents.pyo
+${PYSITELIB}/reportlab/test/test_platypus_leftright.py
+${PYSITELIB}/reportlab/test/test_platypus_leftright.pyc
+${PYSITELIB}/reportlab/test/test_platypus_leftright.pyo
 ${PYSITELIB}/reportlab/test/test_platypus_paragraphs.py
 ${PYSITELIB}/reportlab/test/test_platypus_paragraphs.pyc
 ${PYSITELIB}/reportlab/test/test_platypus_paragraphs.pyo
@@ -510,6 +521,9 @@ ${PYSITELIB}/reportlab/test/test_table_layout.pyo
 ${PYSITELIB}/reportlab/test/test_tools_pythonpoint.py
 ${PYSITELIB}/reportlab/test/test_tools_pythonpoint.pyc
 ${PYSITELIB}/reportlab/test/test_tools_pythonpoint.pyo
+${PYSITELIB}/reportlab/test/test_utils.py
+${PYSITELIB}/reportlab/test/test_utils.pyc
+${PYSITELIB}/reportlab/test/test_utils.pyo
 ${PYSITELIB}/reportlab/test/test_widgetbase_tpc.py
 ${PYSITELIB}/reportlab/test/test_widgetbase_tpc.pyc
 ${PYSITELIB}/reportlab/test/test_widgetbase_tpc.pyo
@@ -647,5 +661,6 @@ ${PYSITELIB}/reportlab/tools/pythonpoint/styles/standard.pyo
 @dirrm ${PYSITELIB}/reportlab/demos/rlzope
 @dirrm ${PYSITELIB}/reportlab/demos/odyssey
 @dirrm ${PYSITELIB}/reportlab/demos/gadflypaper
+@dirrm ${PYSITELIB}/reportlab/demos/colors
 @dirrm ${PYSITELIB}/reportlab/demos
 @dirrm ${PYSITELIB}/reportlab
