@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/11/05 12:56:44 rillig Exp $
 
-DISTNAME=	qwt-0.3.0
-PKGREVISION=	5
+DISTNAME=	qwt-5.0.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/qwt
+HOMEPAGE=	http://sourceforge.net/projects/qwt/
 COMMENT=	Qt widget library for technical purposes
 
 USE_X11BASE=	yes
@@ -14,21 +14,12 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
-MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
-
 CONFLICTS=	qwtlib-[0-9]*
 
-INSTALLATION_DIRS=	lib ${PKGMANDIR}/man3
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
-post-patch:
-	${LN} -s ${WRKSRC}/makefiles/netbsd-g++ ${WRKSRC}/Makefile
+do-configure:
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} qmake
 
-do-install:
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libqwt.la \
-	  ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/include/qwt
-	${INSTALL_DATA} ${WRKSRC}/include/*.h ${PREFIX}/include/qwt
-	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
-
-.include "../../x11/qt2-libs/buildlink3.mk"
+.include "../../x11/qt3/application.mk"
 .include "../../mk/bsd.pkg.mk"
