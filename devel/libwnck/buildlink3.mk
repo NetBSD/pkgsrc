@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/01/11 15:53:59 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/11/05 11:36:17 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWNCK_BUILDLINK3_MK:=	${LIBWNCK_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	libwnck
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libwnck
 
 .if !empty(LIBWNCK_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libwnck+=	libwnck>=2.10.0
-BUILDLINK_ABI_DEPENDS.libwnck?=	libwnck>=2.14.1nb1
+BUILDLINK_API_DEPENDS.libwnck+=	libwnck>=2.20.0
+BUILDLINK_ABI_DEPENDS.libwnck?=	libwnck>=2.20.0
 BUILDLINK_PKGSRCDIR.libwnck?=	../../devel/libwnck
 .endif	# LIBWNCK_BUILDLINK3_MK
 
