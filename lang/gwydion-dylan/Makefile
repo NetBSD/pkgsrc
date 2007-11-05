@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/05 07:14:51 rillig Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -35,6 +35,11 @@ ALT_ARCH=		ppc
 .else
 ALT_ARCH=		${MACHINE_ARCH}
 .endif
+
+SUBST_CLASSES+=		gc
+SUBST_STAGE.gc=		pre-configure
+SUBST_FILES.gc=		d2c/runtime/garbage-collection/Makegen
+SUBST_SED.gc=		-e 's,-I/usr/include,-I${LOCALBASE}/include,'
 
 PLIST_SUBST+=		ALT_ARCH=${ALT_ARCH:Q}
 PLIST_SUBST+=		DYLAN_VERSION=${DYLAN_VERSION:Q}
