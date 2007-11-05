@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.413 2007/10/18 02:53:25 cjs Exp $
+# $NetBSD: Makefile,v 1.414 2007/11/05 06:42:00 rillig Exp $
 #
 
 COMMENT=	System utilities
@@ -175,6 +175,7 @@ SUBDIR+=	notification-daemon
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
 SUBDIR+=	nvnet
+SUBDIR+=	oak
 SUBDIR+=	open-vm-tools
 SUBDIR+=	osname
 SUBDIR+=	p5-File-Copy-Recursive
@@ -207,6 +208,7 @@ SUBDIR+=	radeontool
 SUBDIR+=	radmind
 SUBDIR+=	rconfig
 SUBDIR+=	rdiff-backup
+SUBDIR+=	rename
 SUBDIR+=	rfstool
 SUBDIR+=	roller
 SUBDIR+=	rox
