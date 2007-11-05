@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2007/11/05 20:01:00 drochner Exp $
+
+--- Src/DasherCore/DasherViewSquare.cpp.orig	2007-10-30 17:46:41.000000000 +0100
++++ Src/DasherCore/DasherViewSquare.cpp
+@@ -802,7 +802,7 @@ inline myint CDasherViewSquare::CustomID
+   else
+     return quot;
+ #else
+-  lldiv_t res = __gnu_cxx::lldiv(iNumerator, iDenominator);
++  lldiv_t res = ::lldiv(iNumerator, iDenominator);
+   
+   if(res.rem < 0)
+     return res.quot - 1;

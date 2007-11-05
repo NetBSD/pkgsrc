@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2007/04/18 23:19:28 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2007/11/05 20:01:00 drochner Exp $
 
---- Src/DasherCore/TimeSpan.cpp.orig	2007-04-18 13:15:12.000000000 +0200
+--- Src/DasherCore/TimeSpan.cpp.orig	2007-10-15 15:55:01.000000000 +0200
 +++ Src/DasherCore/TimeSpan.cpp
 @@ -114,6 +114,7 @@ string CTimeSpan::GetTimeStamp()
  #else
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.1 2007/04/18 23:19:28 wiz Exp $
      szTimeLine = ctime(&(sTimeBuffer.time));
  #else
      gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
--    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
+-    szTimeLine = ctime((const time_t *)&(sTimeBuffer.tv_sec));
 +    help = sTimeBuffer.tv_sec;
 +    szTimeLine = ctime(&help);
  #endif
@@ -32,7 +32,7 @@ $NetBSD: patch-ae,v 1.1 2007/04/18 23:19:28 wiz Exp $
      szTimeLine = ctime(&(sTimeBuffer.time));
  #else
      gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
--    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
+-    szTimeLine = ctime((const time_t *)&(sTimeBuffer.tv_sec));
 +    help = sTimeBuffer.tv_sec;
 +    szTimeLine = ctime(&help);
  #endif
