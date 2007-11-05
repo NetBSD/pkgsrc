@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/09/25 10:54:18 hira Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/11/05 19:49:04 drochner Exp $
 bin/seahorse
 bin/seahorse-agent
 bin/seahorse-daemon
@@ -22,7 +22,6 @@ share/applications/seahorse-pgp-keys.desktop
 share/applications/seahorse-pgp-preferences.desktop
 share/applications/seahorse-pgp-signature.desktop
 share/applications/seahorse.desktop
-share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop
 share/dbus-1/services/org.gnome.seahorse.service
 share/gconf/schemas/seahorse.schemas
 share/gnome/help/seahorse/C/figures/export.png
@@ -91,6 +90,19 @@ share/gnome/help/seahorse/it/figures/seahorse-window.png
 share/gnome/help/seahorse/it/figures/signature.png
 share/gnome/help/seahorse/it/figures/text-editor.png
 share/gnome/help/seahorse/it/seahorse.xml
+share/gnome/help/seahorse/oc/figures/export.png
+share/gnome/help/seahorse/oc/figures/file-manager.png
+share/gnome/help/seahorse/oc/figures/generate.png
+share/gnome/help/seahorse/oc/figures/import.png
+share/gnome/help/seahorse/oc/figures/key-manager.png
+share/gnome/help/seahorse/oc/figures/key-properties.png
+share/gnome/help/seahorse/oc/figures/passphrase.png
+share/gnome/help/seahorse/oc/figures/preferences.png
+share/gnome/help/seahorse/oc/figures/recipients.png
+share/gnome/help/seahorse/oc/figures/seahorse-window.png
+share/gnome/help/seahorse/oc/figures/signature.png
+share/gnome/help/seahorse/oc/figures/text-editor.png
+share/gnome/help/seahorse/oc/seahorse.xml
 share/gnome/help/seahorse/sv/figures/export.png
 share/gnome/help/seahorse/sv/figures/file-manager.png
 share/gnome/help/seahorse/sv/figures/generate.png
@@ -104,6 +116,19 @@ share/gnome/help/seahorse/sv/figures/seahorse-window.png
 share/gnome/help/seahorse/sv/figures/signature.png
 share/gnome/help/seahorse/sv/figures/text-editor.png
 share/gnome/help/seahorse/sv/seahorse.xml
+share/gnome/help/seahorse/vi/figures/export.png
+share/gnome/help/seahorse/vi/figures/file-manager.png
+share/gnome/help/seahorse/vi/figures/generate.png
+share/gnome/help/seahorse/vi/figures/import.png
+share/gnome/help/seahorse/vi/figures/key-manager.png
+share/gnome/help/seahorse/vi/figures/key-properties.png
+share/gnome/help/seahorse/vi/figures/passphrase.png
+share/gnome/help/seahorse/vi/figures/preferences.png
+share/gnome/help/seahorse/vi/figures/recipients.png
+share/gnome/help/seahorse/vi/figures/seahorse-window.png
+share/gnome/help/seahorse/vi/figures/signature.png
+share/gnome/help/seahorse/vi/figures/text-editor.png
+share/gnome/help/seahorse/vi/seahorse.xml
 share/icons/hicolor/22x22/apps/seahorse-preferences.svg
 share/icons/hicolor/22x22/apps/seahorse.svg
 share/icons/hicolor/48x48/apps/seahorse-applet.png
@@ -114,7 +139,9 @@ share/icons/hicolor/scalable/apps/seahorse-preferences.svg
 share/icons/hicolor/scalable/apps/seahorse.svg
 share/locale/ar/LC_MESSAGES/seahorse.mo
 share/locale/az/LC_MESSAGES/seahorse.mo
+share/locale/be@latin/LC_MESSAGES/seahorse.mo
 share/locale/bg/LC_MESSAGES/seahorse.mo
+share/locale/bn/LC_MESSAGES/seahorse.mo
 share/locale/bn_IN/LC_MESSAGES/seahorse.mo
 share/locale/ca/LC_MESSAGES/seahorse.mo
 share/locale/cs/LC_MESSAGES/seahorse.mo
@@ -132,30 +159,37 @@ share/locale/fr/LC_MESSAGES/seahorse.mo
 share/locale/gl/LC_MESSAGES/seahorse.mo
 share/locale/gu/LC_MESSAGES/seahorse.mo
 share/locale/he/LC_MESSAGES/seahorse.mo
+share/locale/hi/LC_MESSAGES/seahorse.mo
 share/locale/hr/LC_MESSAGES/seahorse.mo
 share/locale/hu/LC_MESSAGES/seahorse.mo
 share/locale/it/LC_MESSAGES/seahorse.mo
 share/locale/ja/LC_MESSAGES/seahorse.mo
 share/locale/ko/LC_MESSAGES/seahorse.mo
 share/locale/lt/LC_MESSAGES/seahorse.mo
+share/locale/lv/LC_MESSAGES/seahorse.mo
 share/locale/mk/LC_MESSAGES/seahorse.mo
 share/locale/ml/LC_MESSAGES/seahorse.mo
 share/locale/ms/LC_MESSAGES/seahorse.mo
 share/locale/nb/LC_MESSAGES/seahorse.mo
 share/locale/ne/LC_MESSAGES/seahorse.mo
 share/locale/nl/LC_MESSAGES/seahorse.mo
+share/locale/oc/LC_MESSAGES/seahorse.mo
+share/locale/or/LC_MESSAGES/seahorse.mo
 share/locale/pa/LC_MESSAGES/seahorse.mo
 share/locale/pl/LC_MESSAGES/seahorse.mo
 share/locale/pt/LC_MESSAGES/seahorse.mo
 share/locale/pt_BR/LC_MESSAGES/seahorse.mo
 share/locale/ru/LC_MESSAGES/seahorse.mo
 share/locale/rw/LC_MESSAGES/seahorse.mo
+share/locale/si/LC_MESSAGES/seahorse.mo
 share/locale/sk/LC_MESSAGES/seahorse.mo
 share/locale/sl/LC_MESSAGES/seahorse.mo
 share/locale/sq/LC_MESSAGES/seahorse.mo
 share/locale/sr/LC_MESSAGES/seahorse.mo
 share/locale/sr@Latn/LC_MESSAGES/seahorse.mo
 share/locale/sv/LC_MESSAGES/seahorse.mo
+share/locale/ta/LC_MESSAGES/seahorse.mo
+share/locale/te/LC_MESSAGES/seahorse.mo
 share/locale/th/LC_MESSAGES/seahorse.mo
 share/locale/tr/LC_MESSAGES/seahorse.mo
 share/locale/uk/LC_MESSAGES/seahorse.mo
@@ -169,7 +203,9 @@ share/omf/seahorse/seahorse-en_GB.omf
 share/omf/seahorse/seahorse-es.omf
 share/omf/seahorse/seahorse-fr.omf
 share/omf/seahorse/seahorse-it.omf
+share/omf/seahorse/seahorse-oc.omf
 share/omf/seahorse/seahorse-sv.omf
+share/omf/seahorse/seahorse-vi.omf
 share/pixmaps/seahorse-applet.svg
 share/pixmaps/seahorse-preferences.png
 share/pixmaps/seahorse.png
@@ -181,10 +217,12 @@ share/pixmaps/seahorse/22x22/seahorse-applet-unknown.png
 share/pixmaps/seahorse/22x22/seahorse-key-personal.png
 share/pixmaps/seahorse/22x22/seahorse-key-ssh.png
 share/pixmaps/seahorse/22x22/seahorse-key.png
+share/pixmaps/seahorse/22x22/seahorse-person.png
 share/pixmaps/seahorse/22x22/seahorse-preferences.png
 share/pixmaps/seahorse/22x22/seahorse-share-keys.png
 share/pixmaps/seahorse/22x22/seahorse-sign-bad.png
 share/pixmaps/seahorse/22x22/seahorse-sign-ok.png
+share/pixmaps/seahorse/22x22/seahorse-sign.png
 share/pixmaps/seahorse/22x22/seahorse.png
 share/pixmaps/seahorse/48x48/seahorse-applet-encrypted.png
 share/pixmaps/seahorse/48x48/seahorse-applet-key.png
@@ -261,8 +299,12 @@ share/seahorse/glade/seahorse-ssh-upload.glade
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/seahorse/vi/figures
+@dirrm share/gnome/help/seahorse/vi
 @dirrm share/gnome/help/seahorse/sv/figures
 @dirrm share/gnome/help/seahorse/sv
+@dirrm share/gnome/help/seahorse/oc/figures
+@dirrm share/gnome/help/seahorse/oc
 @dirrm share/gnome/help/seahorse/it/figures
 @dirrm share/gnome/help/seahorse/it
 @dirrm share/gnome/help/seahorse/fr/figures
@@ -277,7 +319,6 @@ share/seahorse/glade/seahorse-ssh-upload.glade
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/seahorse
 @dirrm include/libcryptui
