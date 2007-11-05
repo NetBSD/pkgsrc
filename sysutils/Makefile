@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.414 2007/11/05 06:42:00 rillig Exp $
+# $NetBSD: Makefile,v 1.415 2007/11/05 15:49:45 rillig Exp $
 #
 
 COMMENT=	System utilities
@@ -208,7 +208,6 @@ SUBDIR+=	radeontool
 SUBDIR+=	radmind
 SUBDIR+=	rconfig
 SUBDIR+=	rdiff-backup
-SUBDIR+=	rename
 SUBDIR+=	rfstool
 SUBDIR+=	roller
 SUBDIR+=	rox
