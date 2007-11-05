@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2007/09/21 13:04:30 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2007/11/05 19:21:47 drochner Exp $
 #
 
-DISTNAME=		gnome-session-2.18.3
-PKGREVISION=		4
+DISTNAME=		gnome-session-2.20.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.20/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
@@ -49,8 +48,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../textproc/scrollkeeper/buildlink3.mk"
-.include "../../x11/control-center/buildlink3.mk"
+.include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

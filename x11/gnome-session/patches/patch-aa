@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2007/04/11 20:25:38 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2007/11/05 19:21:48 drochner Exp $
 
---- gnome-session/Makefile.in.orig	2007-03-12 19:59:22.000000000 +0100
+--- gnome-session/Makefile.in.orig	2007-09-17 20:55:46.000000000 +0200
 +++ gnome-session/Makefile.in
-@@ -309,7 +309,7 @@ INCLUDES = \
+@@ -311,7 +311,7 @@ INCLUDES = \
  	-DGNOME_KEYRING_DAEMON=\""$(GNOME_KEYRING_DAEMON)"\"	    \
  	-DGNOME_ICONDIR=\""$(datadir)/pixmaps\""	\
  	-DRSH_COMMAND=\""$(RSH_COMMAND)\""		\
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.8 2007/04/11 20:25:38 drochner Exp $
 +	-DGCONFTOOL_CMD=\""$(REAL_GCONFTOOL)\""		\
  	-DDEFAULTDIR="\"$(defaultdir)\""		\
  	-DESD_SERVER="\"$(ESD_SERVER)\""		\
- 	-DAT_SPI_REGISTRYD_DIR="\"$(AT_SPI_REGISTRYD_DIR)\""
+ 	-DAT_SPI_REGISTRYD_DIR="\"$(AT_SPI_REGISTRYD_DIR)\""	\
