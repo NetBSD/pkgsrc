@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2007/09/21 13:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2007/11/05 19:31:19 drochner Exp $
 #
 
-DISTNAME=		gnome-utils-2.18.1
-PKGREVISION=		5
+DISTNAME=		gnome-utils-2.20.0.1
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.18/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.20/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -21,6 +20,15 @@ PKGCONFIG_OVERRIDE=	gnome-dictionary/libgdict/gdict-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-dictionary/libgdict/gdict-1.0-uninstalled.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-utils
+PKG_SUPPORTED_OPTIONS+=	inet6
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 GCONF_SCHEMAS+=	baobab.schemas
 GCONF_SCHEMAS+=	gnome-dictionary.schemas
