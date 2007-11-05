@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2007/09/21 13:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2007/11/05 20:01:00 drochner Exp $
 
-DISTNAME=	dasher-4.4.2
-PKGREVISION=	2
+DISTNAME=	dasher-4.6.1
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -55,4 +54,5 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
