@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/09/25 10:54:23 hira Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/11/05 19:21:47 drochner Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-remove
@@ -22,6 +22,7 @@ share/locale/am/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/be@latin/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-session-2.0.mo
@@ -81,6 +82,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/rw/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/si/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-session-2.0.mo
@@ -88,6 +90,7 @@ share/locale/sr/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/te/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/th/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/tk/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-session-2.0.mo
