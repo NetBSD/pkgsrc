@@ -1,12 +1,12 @@
-$NetBSD: patch-am,v 1.4 2007/09/20 21:12:11 wiz Exp $
+$NetBSD: patch-am,v 1.5 2007/11/05 19:06:05 drochner Exp $
 
---- sysdeps/freebsd/procsignal.c.orig	2005-12-12 10:09:39.000000000 +0000
-+++ sysdeps/freebsd/procsignal.c
-@@ -53,7 +53,11 @@ glibtop_get_proc_signal_p (glibtop *serv
+--- sysdeps/bsd/procsignal.c.orig	2007-04-27 00:27:34.000000000 +0200
++++ sysdeps/bsd/procsignal.c
+@@ -51,7 +51,11 @@ glibtop_get_proc_signal_p (glibtop *serv
  			   glibtop_proc_signal *buf,
  			   pid_t pid)
  {
-+#if defined(KERN_PROC2)
++#if defined(__NetBSD__)
 +	struct kinfo_proc2 *pinfo;
 +#else
  	struct kinfo_proc *pinfo;
@@ -14,98 +14,90 @@ $NetBSD: patch-am,v 1.4 2007/09/20 21:12:11 wiz Exp $
  	int count = 0;
  
  	glibtop_init_p (server, (1L << GLIBTOP_SYSDEPS_PROC_SIGNAL), 0);
-@@ -64,7 +68,12 @@ glibtop_get_proc_signal_p (glibtop *serv
+@@ -62,7 +66,12 @@ glibtop_get_proc_signal_p (glibtop *serv
  	if (pid == 0) return;
  
  	/* Get the process information */
-+#if defined(KERN_PROC2)
++#if defined(__NetBSD__)
 +	pinfo = kvm_getproc2 (server->machine.kd, KERN_PROC_PID, pid,
-+			sizeof(struct kinfo_proc2), &count);
++			      sizeof (*pinfo), &count);
 +#else
  	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
 +#endif
  	if ((pinfo == NULL) || (count != 1)) {
  		glibtop_warn_io_r (server, "kvm_getprocs (%d)", pid);
  		return;
-@@ -77,6 +86,13 @@ glibtop_get_proc_signal_p (glibtop *serv
+@@ -75,6 +84,10 @@ glibtop_get_proc_signal_p (glibtop *serv
  #define	PROC_SIGIGNORE	ki_sigignore
  #define	PROC_SIGCATCH	ki_sigcatch
  
-+#elif defined(KERN_PROC2)
++#elif defined(__NetBSD__)
 +
-+#define	PROC_SIGLIST	p_siglist
-+#define	PROC_SIGMASK	p_sigmask
-+#define	PROC_SIGIGNORE	p_sigignore
-+#define	PROC_SIGCATCH	p_sigcatch
++/* nothing for now */
 +
  #else
  
  #define	PROC_SIGLIST	kp_proc.p_siglist
-@@ -89,11 +105,12 @@ glibtop_get_proc_signal_p (glibtop *serv
+@@ -87,6 +100,9 @@ glibtop_get_proc_signal_p (glibtop *serv
  	/* signal: mask of pending signals.
  	 *         pinfo [0].kp_proc.p_siglist
  	 */
--#if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
--	buf->signal [0] = pinfo [0].kp_proc.p_sigctx.ps_siglist.__bits[0];
--#elif (defined(__NetBSD__) && (NSIG > 32)) || \
--      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011))
-+#if (defined(__NetBSD__) && (NSIG > 32)) || \
-+      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011)) || \
-+      defined(__DragonFly__)
- 	buf->signal [0] = pinfo [0].PROC_SIGLIST.__bits[0];
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
-+	buf->signal [0] = pinfo [0].kp_proc.p_sigctx.ps_siglist.__bits[0];
++#if defined(__NetBSD__)
++	buf->signal[0] = pinfo[0].p_siglist.__bits[0];
++#else
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
+ 	buf->signal [0] = pinfo [0].kp_proc.p_sigctx.ps_siglist.__bits[0];
+ #elif (defined(__NetBSD__) && (NSIG > 32)) || \
+@@ -95,10 +111,14 @@ glibtop_get_proc_signal_p (glibtop *serv
  #else
  	buf->signal [0] = pinfo [0].kp_proc.p_siglist;
  #endif
-@@ -101,11 +118,12 @@ glibtop_get_proc_signal_p (glibtop *serv
++#endif /* NetBSD */
+ 
  	/* blocked: mask of blocked signals.
  	 *          pinfo [0].kp_proc.p_sigmask
  	 */
--#if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
--	buf->blocked [0] = pinfo [0].kp_proc.p_sigctx.ps_sigmask.__bits[0];
--#elif (defined(__NetBSD__) && (NSIG > 32)) || \
--      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011))
-+#if (defined(__NetBSD__) && (NSIG > 32)) || \
-+      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011)) || \
-+      defined(__DragonFly__)
- 	buf->blocked [0] = pinfo [0].PROC_SIGMASK.__bits[0];
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
-+	buf->blocked [0] = pinfo [0].kp_proc.p_sigctx.ps_sigmask.__bits[0];
++#if defined(__NetBSD__)
++	buf->blocked[0] = pinfo[0].p_sigmask.__bits[0];
++#else
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
+ 	buf->blocked [0] = pinfo [0].kp_proc.p_sigctx.ps_sigmask.__bits[0];
+ #elif (defined(__NetBSD__) && (NSIG > 32)) || \
+@@ -107,10 +127,14 @@ glibtop_get_proc_signal_p (glibtop *serv
  #else
  	buf->blocked [0] = pinfo [0].kp_proc.p_sigmask;
  #endif
-@@ -113,11 +131,12 @@ glibtop_get_proc_signal_p (glibtop *serv
++#endif /* NetBSD */
+ 
  	/* sigignore: mask of ignored signals.
  	 *            pinfo [0].kp_proc.p_sigignore
  	*/
--#if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
--	buf->sigignore [0] = pinfo [0].kp_proc.p_sigctx.ps_sigignore.__bits[0];
--#elif (defined(__NetBSD__) && (NSIG > 32)) || \
--      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011))
-+#if (defined(__NetBSD__) && (NSIG > 32)) || \
-+      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011)) || \
-+      defined(__DragonFly__)
- 	buf->sigignore [0] = pinfo [0].PROC_SIGIGNORE.__bits[0];
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
-+	buf->sigignore [0] = pinfo [0].kp_proc.p_sigctx.ps_sigignore.__bits[0];
++#if defined(__NetBSD__)
++	buf->sigignore[0] = pinfo[0].p_sigignore.__bits[0];
++#else
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
+ 	buf->sigignore [0] = pinfo [0].kp_proc.p_sigctx.ps_sigignore.__bits[0];
+ #elif (defined(__NetBSD__) && (NSIG > 32)) || \
+@@ -119,10 +143,14 @@ glibtop_get_proc_signal_p (glibtop *serv
  #else
  	buf->sigignore [0] = pinfo [0].kp_proc.p_sigignore;
  #endif
-@@ -125,11 +144,12 @@ glibtop_get_proc_signal_p (glibtop *serv
++#endif /* NetBSD */
+ 
  	/* sigcatch: mask of caught signals.
  	 *           pinfo [0].kp_proc.p_sigcatch
  	*/
--#if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
--	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigctx.ps_sigcatch.__bits[0];
--#elif (defined(__NetBSD__) && (NSIG > 32)) || \
--      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011))
-+#if (defined(__NetBSD__) && (NSIG > 32)) || \
-+      (defined(__FreeBSD__) && (__FreeBSD_version >= 400011)) || \
-+      defined(__DragonFly__)
- 	buf->sigcatch [0] = pinfo [0].PROC_SIGCATCH.__bits[0];
-+#elif defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
-+	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigctx.ps_sigcatch.__bits[0];
++#if defined(__NetBSD__)
++	buf->sigcatch[0] = pinfo[0].p_sigcatch.__bits[0];
++#else
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 105150000)
+ 	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigctx.ps_sigcatch.__bits[0];
+ #elif (defined(__NetBSD__) && (NSIG > 32)) || \
+@@ -131,6 +159,7 @@ glibtop_get_proc_signal_p (glibtop *serv
  #else
  	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigcatch;
  #endif
++#endif /* NetBSD */
+ 
+ 	buf->flags = _glibtop_sysdeps_proc_signal;
+ }
