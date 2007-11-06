@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2007/11/03 14:33:12 adrianp Exp $
+# $NetBSD: Makefile,v 1.527 2007/11/06 13:53:41 rillig Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -88,6 +88,7 @@ SUBDIR+=	cronolog
 SUBDIR+=	curl
 SUBDIR+=	cvsweb
 SUBDIR+=	dillo
+SUBDIR+=	django
 SUBDIR+=	drivel
 SUBDIR+=	drraw
 SUBDIR+=	drupal
