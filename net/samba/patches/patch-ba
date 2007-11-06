@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.5 2007/10/28 07:28:48 taca Exp $
+$NetBSD: patch-ba,v 1.6 2007/11/06 00:47:51 rillig Exp $
 
 --- Makefile.in.orig	2007-06-20 02:11:39.000000000 +0900
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ba,v 1.5 2007/10/28 07:28:48 taca Exp $
  CONFIGDIR = @configdir@
  VARDIR = @localstatedir@
 -MANDIR = @mandir@
-+MANDIR = /usr/pkg/man
++MANDIR = @mandir@
  DATADIR = @datadir@
  
  # The permissions to give the executables
