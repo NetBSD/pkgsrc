@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2325 2007/11/05 15:56:43 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2326 2007/11/06 11:08:08 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4325,3 +4325,27 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/scmgit to 1.5.3.5 [bjs 2007-11-05]
 	Updated x11/qwt to 5.0.2 [roland 2007-11-05]
 	Added sysutils/rename version 1.3nb1 [roland 2007-11-05]
+	Updated print/py-reportlab to 1.21.2 [drochner 2007-11-05]
+	Updated math/qalculate to 0.9.6 [drochner 2007-11-05]
+	Updated devel/eel to 2.20.0 [drochner 2007-11-05]
+	Updated misc/orca to 2.20.1 [drochner 2007-11-05]
+	Updated editors/dasher to 4.6.1 [drochner 2007-11-05]
+	Updated x11/py-gnome2-extras to 2.14.3 [drochner 2007-11-05]
+	Updated misc/deskbar-applet to 2.20.1 [drochner 2007-11-05]
+	Updated misc/gnome-user-docs to 2.20.1 [drochner 2007-11-05]
+	Updated security/seahorse to 2.20.1 [drochner 2007-11-05]
+	Updated x11/gnome-screensaver to 2.20.0 [drochner 2007-11-05]
+	Updated wm/metacity to 2.20.0 [drochner 2007-11-05]
+	Updated devel/libgail-gnome to 1.20.0 [drochner 2007-11-05]
+	Updated misc/gnome-utils to 2.20.0.1 [drochner 2007-11-05]
+	Updated games/gnome-games to 2.20.1 [drochner 2007-11-05]
+	Updated x11/py-gnome2-desktop to 2.20.0 [drochner 2007-11-05]
+	Updated archivers/file-roller to 2.20.1 [drochner 2007-11-05]
+	Updated multimedia/totem to 2.20.1 [drochner 2007-11-05]
+	Updated x11/gnome-applets to 2.20.0 [drochner 2007-11-05]
+	Updated x11/gnome-session to 2.20.1 [drochner 2007-11-05]
+	Added x11/gnome-control-center version 2.20.1 [drochner 2007-11-05]
+	Updated sysutils/nautilus to 2.20.0 [drochner 2007-11-05]
+	Updated sysutils/gnome-system-monitor to 2.20.1 [drochner 2007-11-05]
+	Updated sysutils/libgtop to 2.20.0 [drochner 2007-11-05]
+	Updated x11/gnome-panel to 2.20.1 [drochner 2007-11-05]
