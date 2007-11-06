@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2007/08/23 18:20:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2007/11/06 23:30:15 rillig Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		9.1
@@ -60,7 +60,7 @@ FILESDIR=		${SUSE_PKGSRCDIR}/files
 PATCHDIR=		${SUSE_PKGSRCDIR}/patches
 PKGDIR=			${SUSE_PKGSRCDIR}
 
-.if (${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")
+.if defined(SUSE_COMPAT32)
 PKGNAME:=		${DISTNAME:S/^suse_/suse32_/}
 COMMENT:=		${COMMENT:S/Linux/Linux 32-bit/}
 LINUX_BASE=		linux32
