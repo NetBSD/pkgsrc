@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2328 2007/11/06 14:36:17 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2329 2007/11/06 21:38:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4349,3 +4349,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/gnome-system-monitor to 2.20.1 [drochner 2007-11-05]
 	Updated sysutils/libgtop to 2.20.0 [drochner 2007-11-05]
 	Updated x11/gnome-panel to 2.20.1 [drochner 2007-11-05]
+	Updated net/libtorrent to 0.11.8 [tron 2007-11-06]
