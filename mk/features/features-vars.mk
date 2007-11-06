@@ -1,8 +1,34 @@
-# $NetBSD: features-vars.mk,v 1.9 2007/11/03 11:50:18 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.10 2007/11/06 22:48:15 rillig Exp $
 #
-# This file is included by bsd.prefs.mk.
+# The platforms that are supported by pkgsrc differ in the amount of
+# functions they provide in the C library (libc). Functions that are
+# typically available on NetBSD are provided in the libnbcomat package.
 #
-# Package-settable variables:
+# This file defines a set of "features" that some packages require.
+# Whenever a package makes use of them, it should list the features in
+# the USE_FEATURES variable. (It serves a similar purpose as USE_TOOLS.)
+#
+# The *.c files that use the features must be patched a little. When
+# there are missing features, the C preprocessor macro HAVE_NBCOMPAT_H
+# will be defined to 1. In this case, the headers from the nbcompat
+# directory must be included.
+#
+# === Example ===
+#
+# In the package Makefile:
+#
+#	USE_FEATURES=		err
+#
+# In the C files using the err*() or warn*() functions:
+#
+#	#if defined(HAVE_NBCOMPAT_H)
+#	#include <nbcompat/cdefs.h>	/* needed for the other headers */
+#	#include <nbcompat/err.h>
+#	#else
+#	#include <err.h>
+#	#endif
+#
+# === Package-settable variables ===
 #
 # USE_FEATURES
 #	Lists the system features required by the package.
@@ -10,7 +36,7 @@
 #	Possible:
 #	* err: The functions err, verr, errx, verrx.
 #	* warn: The functions warn, vwarn, warnx, vwarnx.
-#	* fts_close, ftp_open, fts_read, fts_set: Functions
+#	* fts_close, fts_open, fts_read, fts_set: Functions
 #	  for filesystem traversal.
 #	* getopt_long: The GNU version of getopt.
 #	* getprogname, setprogname
@@ -22,7 +48,7 @@
 #
 #	Default value: undefined
 #
-# Variables defined by this file:
+# === Variables defined by this file ===
 #
 # MISSING_FEATURES
 #	The features listed in USE_FEATURES that are missing on the
