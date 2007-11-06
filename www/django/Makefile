@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/06 13:52:51 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/06 14:13:35 rillig Exp $
 #
 
 DISTNAME=	Django-0.96.1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://media.djangoproject.com/releases/0.96/
 
 MAINTAINER=	rillig@NetBSD.org
-HOMEPAGE=	http://media.djangoproject.com/releases/0.96/
+HOMEPAGE=	http://www.djangoproject.com/
 COMMENT=	Python web development framework
 
 USE_LANGUAGES=	# only Python
