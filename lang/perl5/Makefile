@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2007/09/06 16:31:38 rillig Exp $
+# $NetBSD: Makefile,v 1.129 2007/11/06 19:54:52 drochner Exp $
 
 DISTNAME=	perl-5.8.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 EXTRACT_SUFX=	.tar.bz2
