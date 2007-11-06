@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/04 10:06:25 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/06 21:16:17 drochner Exp $
 #
 
 DISTNAME=	gobby-0.4.5
@@ -12,7 +12,7 @@ COMMENT=	Collaborative Editor
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config
+USE_TOOLS=		pkg-config gmake
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
