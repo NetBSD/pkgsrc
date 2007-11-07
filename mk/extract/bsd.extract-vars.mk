@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.7 2007/07/31 17:42:40 jlam Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.8 2007/11/07 09:52:58 rillig Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -14,6 +14,10 @@
 #       extracted.  The default suffix is ".tar.gz".
 #
 
+_VARGROUPS+=		extract
+_PKG_VARS.extract=	EXTRACT_DIR EXTRACT_ONLY EXTRACT_SUFX EXTRACT_CMD \
+			EXTRACT_OPTS EXTRACT_USING EXTRACT_ELEMENTS
+_SYS_VARS.extract=	EXTRACT_CMD_DEFAULT
 
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
