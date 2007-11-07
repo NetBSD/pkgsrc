@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/04/21 18:27:21 tonio Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/11/07 21:19:36 tonio Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -35,6 +35,7 @@ share/doc/mutt/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/mimesupport.html
 share/doc/mutt/miscellany.html
+share/doc/mutt/optionalfeatures.html
 share/doc/mutt/patch-notes.txt
 share/doc/mutt/reference.html
 share/doc/mutt/smime-notes.txt
