@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6805 2007/11/07 06:49:55 wiz Exp $
+$NetBSD: TODO,v 1.6806 2007/11/07 20:01:05 jonb Exp $
 
 Suggested new packages
 ======================
@@ -1155,8 +1155,6 @@ Suggested package updates
 	o sablecc-3.2
 	o sarg-2.2.31
 	o sather-1.2.3
-	o sbcl-1.06 [pkg/36885]
-	o sbcl-1.09
 	o scamper-20070201
 	o scapy-1.1.1
 	o scew-0.4.0
