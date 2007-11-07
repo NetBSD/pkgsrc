@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.20 2007/09/22 15:19:47 gdt Exp $
+# $NetBSD: replace.mk,v 1.21 2007/11/07 13:50:09 gdt Exp $
 #
 
 # _flavor-replace:
@@ -13,8 +13,8 @@
 # can be confused when a +REQUIRED_BY files suddenly disappears.
 #
 _flavor-replace: \
-	replace-tarup \
 	replace-names \
+	replace-tarup \
 	replace-preserve-installed-info \
 	replace-preserve-required-by \
 	deinstall \
@@ -76,9 +76,10 @@ undo-replace-check: .PHONY
 replace-tarup: .PHONY
 	${RUN} [ -x ${_PKG_TARUP_CMD:Q} ] \
 	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";
+	${_REPLACE_OLDNAME_CMD};					\
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${WRKDIR}					\
-		${_PKG_TARUP_CMD} ${PKGBASE}
+		${_PKG_TARUP_CMD} $${oldname}
 
 ######################################################################
 ### undo-replace-install (PRIVATE)
@@ -93,14 +94,20 @@ undo-replace-install: .PHONY
 	${PKG_ADD} ${WRKDIR}/$${oldname}${PKG_SUFX}
 
 ######################################################################
-### replace-names, undo-replace-names (PRIVATE)
+### replace-names (PRIVATE)
 ######################################################################
-### replace-names and undo-replace-names save the correct names of the
-### installed and replacement packages into files queried by other
-### targets.
+
+### replace-names computes and saves the full names of the installed
+### package to be replaced (oldname) and the package that will be
+### installed (newname) into files for later use.
 ###
 replace-names: .PHONY
-	${RUN} ${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} > ${_REPLACE_OLDNAME_FILE}
+	${RUN} if [ x"${OLDNAME}" = x ]; then				\
+		wildcard=${PKGWILDCARD:Q};				\
+	else								\
+		wildcard="${OLDNAME}-[0-9]*";				\
+	fi;								\
+	${_PKG_BEST_EXISTS} "$${wildcard}" > ${_REPLACE_OLDNAME_FILE}
 	${RUN} ${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
 	${RUN} ${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
 
