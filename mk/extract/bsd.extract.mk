@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract.mk,v 1.3 2007/01/09 05:13:43 rillig Exp $
+# $NetBSD: bsd.extract.mk,v 1.4 2007/11/07 09:53:15 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -33,4 +33,4 @@
 #	* chmod -R a+r,u+w,go-w ${WRKSRC}
 #
 
-.include "${PKGSRCDIR}/mk/extract/extract.mk"
+.include "extract.mk"
