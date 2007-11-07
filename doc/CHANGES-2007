@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2330 2007/11/06 21:38:52 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2331 2007/11/07 08:09:25 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4351,3 +4351,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/gnome-panel to 2.20.1 [drochner 2007-11-05]
 	Updated net/libtorrent to 0.11.8 [tron 2007-11-06]
 	Updated net/rtorrent to 0.7.8 [tron 2007-11-06]
+	Updated net/aria2 to 0.11.4nb1 [bjs 2007-11-07]
