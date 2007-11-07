@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.733 2007/11/07 16:47:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.734 2007/11/07 17:01:24 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4286,6 +4286,14 @@ sub checkline_mk_shellword($$$) {
 			}
 
 		} elsif ($state == SWST_PLAIN) {
+
+			if ($rest =~ qr"([\w_]+)=\"\`") {
+				$line->log_note("In the assignment to \"$1\", you don't need double quotes around backticks.");
+				$line->explain_note(
+"Assignments are a special context, where no double quotes are needed",
+"around backticks. In other contexts, the double quotes are necessary.");
+			}
+
 			if ($rest =~ s/^[!#\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]^_a-z{|}~]+//) {
 			} elsif ($rest =~ s/^\'//) {
 				$state = SWST_SQUOT;
