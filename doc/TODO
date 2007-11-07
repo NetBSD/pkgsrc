@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6804 2007/11/07 01:39:23 schmonz Exp $
+$NetBSD: TODO,v 1.6805 2007/11/07 06:49:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -254,8 +254,9 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o RealPlayerGold-10.0.9
 	o SmartEiffel-2.3
+	o TeXmacs-1.0.6.12
 	o TiffIO-130e
-	o YoSucker-75
+	o YoSucker-81
 	o aap-0.144
 	o abcm2ps-5.6.0
 	o abcmidi-20070318
@@ -610,6 +611,7 @@ Suggested package updates
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.1
 	o gtklife-5.1
+	o gtkmm-2.12.2
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
 	o gtkyahoo-0.18.3
@@ -677,6 +679,7 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
 	o jabberd2-2.1.19
+	o jam-2.5.2 [pkg/37285]
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
@@ -1175,7 +1178,7 @@ Suggested package updates
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.1.2
-	o silc-toolkit-1.1.3
+	o silc-toolkit-1.1.4
 	o simh-3.7.0
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
@@ -1327,6 +1330,7 @@ Suggested package updates
 	o xli-2006.11.10
 	o xlispstat-3.52.20
 	o xload-1.0.2
+	o xlog-1.6
 	o xm7-1020s
 	o xmahjongg-3.70
 	o xmbdfed-4.6
