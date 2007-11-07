@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.5 2007/03/09 01:29:11 rillig Exp $
+# $NetBSD: utility.mk,v 1.6 2007/11/07 17:39:02 rillig Exp $
 
 ######################################################################
 ###
@@ -8,21 +8,21 @@
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
-info:
+info: _about-to-be-removed
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
 .PHONY: check
-check:
+check: _about-to-be-removed
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
 .PHONY: list
-list:
+list: _about-to-be-removed
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 .PHONY: show-downlevel
-show-downlevel:
+show-downlevel: _about-to-be-removed
 .if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
@@ -38,7 +38,7 @@ show-downlevel:
 .endif
 
 .PHONY: show-installed-depends
-show-installed-depends:
+show-installed-depends: _about-to-be-removed
 .if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
@@ -47,7 +47,7 @@ show-installed-depends:
 .endif
 
 .PHONY: show-needs-update
-show-needs-update:
+show-needs-update: _about-to-be-removed
 .if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
@@ -64,7 +64,7 @@ show-needs-update:
 .endif
 
 .PHONY: show-pkgsrc-dir
-show-pkgsrc-dir:
+show-pkgsrc-dir: _about-to-be-removed
 .if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
@@ -78,3 +78,9 @@ show-pkgsrc-dir:
 # Short aliases
 .PHONY: sid
 sid: show-installed-depends
+
+_about-to-be-removed: .USE
+	@${WARNING_MSG} "This make target (${.TARGET}) is about to be removed. Since you used"
+	@${WARNING_MSG} "it, it may not be completele useless.  Please tell us on the"
+	@${WARNING_MSG} "tech-pkg""@""NetBSD.org mailing list why you think this target should"
+	@${WARNING_MSG} "not be removed."
