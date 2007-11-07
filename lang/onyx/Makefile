@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/10/05 16:07:58 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/11/07 07:05:15 rillig Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
@@ -24,13 +24,13 @@ VERS=		5.1.1
 PLIST_SUBST+=	VERS=${VERS:Q}
 
 do-build:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} cook)
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cook
 
 do-install:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} cook install)
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cook install
 
 post-install:
-	@strip ${PREFIX}/bin/onyx
+	strip ${PREFIX}/bin/onyx
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
