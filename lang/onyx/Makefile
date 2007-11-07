@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/11/07 07:05:15 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2007/11/07 07:40:19 rillig Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
@@ -11,9 +11,6 @@ HOMEPAGE=	http://www.canonware.com/onyx/
 COMMENT=	Embeddable stack-based threaded interpreted language
 
 BUILD_DEPENDS+=	cook-[0-9]*:../../devel/cook
-
-# needs EL_CLIENTDATA in /usr/include/histedit.h
-ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-* NetBSD-[2-9]*-*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
