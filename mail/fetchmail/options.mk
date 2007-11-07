@@ -1,20 +1,13 @@
-# $NetBSD: options.mk,v 1.14 2005/12/05 23:55:10 rillig Exp $
+# $NetBSD: options.mk,v 1.15 2007/11/07 08:57:10 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
-PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 kerberos gssapi ssl
+PKG_SUPPORTED_OPTIONS=	kerberos4 kerberos gssapi ssl
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks
 PKG_OPTIONS_GROUP.socks=	socks4 socks5
 
 PKG_SUGGESTED_OPTIONS= ssl
 
 .include "../../mk/bsd.options.mk"
-
-###
-### IPv6 support.
-###
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-inet6
-.endif
 
 ###
 ### Authentication via GSSAPI (currently only over Kerberos V) support.
