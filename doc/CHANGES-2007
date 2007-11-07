@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2333 2007/11/07 11:46:22 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2334 2007/11/07 14:02:05 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4005,6 +4005,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/gtk-gnutella to 0.96.4 [adam 2007-10-14]
 	Updated graphics/GraphicsMagick to 1.1.10 [obache 2007-10-14]
 	Updated editors/nano to 1.2.5 [obache 2007-10-14]
+	Added net/nagios-plugin-spamd version 1.4 [heinz 2007-10-14]
 	Updated archivers/unalz to 0.61 [minskim 2007-10-14]
 	Updated mail/exim to 4.68 [adam 2007-10-14]
 	Updated chat/ircd-hybrid to 7.2.3 [adrianp 2007-10-14]
@@ -4352,5 +4353,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libtorrent to 0.11.8 [tron 2007-11-06]
 	Updated net/rtorrent to 0.7.8 [tron 2007-11-06]
 	Updated net/aria2 to 0.11.4nb1 [bjs 2007-11-07]
+	Updated www/p5-libwww to 5.808nb2 [heinz 2007-11-07]
 	Updated shells/zsh-current to 4.3.4nb1 [bjs 2007-11-07]
 	Updated net/Transmission to 0.92 [tnn 2007-11-07]
