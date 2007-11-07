@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2006/04/06 06:21:40 reed Exp $
+# $NetBSD: builtin.mk,v 1.17 2007/11/07 17:24:28 minskim Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -32,10 +32,10 @@ MAKEVARS+=	IS_BUILTIN.iconv
 BUILTIN_VERSION.iconv!=							\
 	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
 		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\
-			M = 16 * (index(hex, substr($$3, 3, 1)) - 1);	\
-			M += index(hex, substr($$3, 4, 1)) - 1;		\
-			m = 16 * (index(hex, substr($$3, 5, 1)) - 1);	\
-			m += index(hex, substr($$3, 6, 1)) - 1;		\
+			M = 16 * (index(hex, tolower(substr($$3, 3, 1))) - 1);	\
+			M += index(hex, tolower(substr($$3, 4, 1))) - 1;		\
+			m = 16 * (index(hex, tolower(substr($$3, 5, 1))) - 1);	\
+			m += index(hex, tolower(substr($$3, 6, 1))) - 1;		\
 			printf "%d.%d\n", M, m;				\
 			exit 0;						\
 		}							\
