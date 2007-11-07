@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.732 2007/11/07 16:42:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.733 2007/11/07 16:47:27 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3254,10 +3254,10 @@ sub variable_needs_quoting($$$) {
 
 	use constant safe_types => array_to_hash(qw(
 		DistSuffix
-		Filemask FileMode Filename
+		FileMode Filename
 		Identifier
 		Option
-		Pathmask Pathname PkgName PkgOptionsVar PkgRevision
+		Pathname PkgName PkgOptionsVar PkgRevision
 		RelativePkgDir RelativePkgPath
 		URL UserGroupName
 		Varname Version
