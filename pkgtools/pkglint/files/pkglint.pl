@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.731 2007/11/07 16:19:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.732 2007/11/07 16:42:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4181,7 +4181,7 @@ sub checkline_mk_shellword($$$) {
 		# reasonable to check the whole shell command
 		# recursively, instead of splitting off the first
 		# make(1) variable (see the elsif below).
-		if ($state == SWST_BACKT) {
+		if ($state == SWST_BACKT || $state == SWST_DQUOT_BACKT) {
 
 			# Scan for the end of the backticks, checking
 			# for single backslashes and removing one level
@@ -4193,19 +4193,29 @@ sub checkline_mk_shellword($$$) {
 			my $stripped = "";
 			while ($rest ne "") {
 				if ($rest =~ s/^\`//) {
-					last;
+					$state = ($state == SWST_BACKT) ? SWST_PLAIN : SWST_DQUOT;
+					goto end_of_backquotes;
 				} elsif ($rest =~ s/^\\([\\\`\$])//) {
 					$stripped .= $1;
 				} elsif ($rest =~ s/^(\\)//) {
 					$line->log_warning("Backslashes should be doubled inside backticks.");
 					$stripped .= $1;
+				} elsif ($state == SWST_DQUOT_BACKT && $rest =~ s/^"//) {
+					$line->log_warning("Double quotes inside backticks inside double quotes are error prone.");
+					$line->explain_warning(
+"According to the SUSv3, they produce undefined results.",
+"",
+"See the paragraph starting \"Within the backquoted ...\" in",
+"http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html");
 				} elsif ($rest =~ s/^([^\\\`]+)//) {
 					$stripped .= $1;
 				} else {
 					assert(false, "rest=$rest");
 				}
 			}
+			$line->log_error("Unfinished backquotes: rest=$rest");
 
+		end_of_backquotes:
 			# Check the resulting command.
 			checkline_mk_shelltext($line, $stripped);
 
@@ -4325,6 +4335,8 @@ sub checkline_mk_shellword($$$) {
 		} elsif ($state == SWST_DQUOT) {
 			if ($rest =~ s/^\"//) {
 				$state = SWST_PLAIN;
+			} elsif ($rest =~ s/^\`//) {
+				$state = SWST_DQUOT_BACKT;
 			} elsif ($rest =~ s/^[^\$"\\\`]+//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
