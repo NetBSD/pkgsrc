@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6803 2007/11/05 22:55:29 wiz Exp $
+$NetBSD: TODO,v 1.6804 2007/11/07 01:39:23 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,7 @@ Suggested package updates
 	o evolution-exchange-2.12.0
 	o evolution-webcal-2.12.0
 	o ex-20050325
-	o ezmlm-idx-5.1.0 [schmonz]
+	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
 	o faces-1.7.7
@@ -773,7 +773,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.12a
 	o mail-notification-4.1
-	o mailfront-1.10 [pkg/34765]
+	o mailfront-1.11 [pkg/34765]
 	o mailscanner-4.54.6
 	o maketool-0.8.4
 	o makeztxt-1.60
@@ -848,6 +848,7 @@ Suggested package updates
 	o ntp-4.2.4p3
 	o ntp4-4.2.4
 	o nulib2-220
+	o nullmailer-1.04
 	o nut-12.0 [pkg/34466]
 	o nut-13.0
 	o nxtvepg-2.7.7
@@ -1192,12 +1193,12 @@ Suggested package updates
 	o snd-9.4
 	o snes9x-1.51
 	o snobol-1.1
-	o solfege-3.8.1
+	o solfege-3.8.2
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.20.1
 	o source-highlight-2.8
-	o spamdyke-3.0.1
+	o spamdyke-3.1.0
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
