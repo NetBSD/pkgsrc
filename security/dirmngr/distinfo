@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2007/11/07 12:43:22 shannonjr Exp $
+$NetBSD: distinfo,v 1.14 2007/11/07 19:38:12 shannonjr Exp $
 
 SHA1 (dirmngr-1.0.1.tar.bz2) = 39eb62907e5c4ddc29da00b1291c24e5267f113e
 RMD160 (dirmngr-1.0.1.tar.bz2) = eca2e5622ffe7af7ddece1b76977e5f696465385
@@ -9,9 +9,9 @@ Size (libassuan-1.0.3.tar.bz2) = 292168 bytes
 SHA1 (pth-2.0.7.tar.gz) = 9a71915c89ff2414de69fe104ae1016d513afeee
 RMD160 (pth-2.0.7.tar.gz) = 80bc66777ba20d9648b7aaf3f58d593be6416910
 Size (pth-2.0.7.tar.gz) = 652640 bytes
-SHA1 (patch-aa) = 5f3cb038a5d799a91394406aecf855e77c931412
+SHA1 (patch-aa) = 7a82dce7d558914e2a95b1f464c9d5760a9357b6
 SHA1 (patch-ab) = 97fbb195fa8ab33c4fddfee9b23ae2024f99c615
-SHA1 (patch-ac) = c148a6f0c3066decdbd91abb8725d6f2bd3b0d38
+SHA1 (patch-ac) = 6726d6dcd897cddaf068e400ceddfdaed0094cba
 SHA1 (patch-ad) = 94c789bd308208c147a24f05b371602ec74185f4
 SHA1 (patch-ae) = 3d77aff4b2ee779106dee329f3a6cd5b8f332e26
 SHA1 (patch-af) = b6ae3b526e344ca63af1babb9eb6707b90edc837
