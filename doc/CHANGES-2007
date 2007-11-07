@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2334 2007/11/07 14:02:05 heinz Exp $
+$NetBSD: CHANGES-2007,v 1.2335 2007/11/07 15:30:26 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4356,3 +4356,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-libwww to 5.808nb2 [heinz 2007-11-07]
 	Updated shells/zsh-current to 4.3.4nb1 [bjs 2007-11-07]
 	Updated net/Transmission to 0.92 [tnn 2007-11-07]
+	Updated security/libassuan to 1.0.3 [shannonjr 2007-11-07]
+	Updated security/dirmngr to 1.0.1 [shannonjr 2007-11-07]
+	Updated security/gnupg2	 to 2.0.7 [shannonjr 2007-11-07]
