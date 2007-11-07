@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/11/07 08:03:55 rillig Exp $
 
 DISTNAME=	cook-2.26
 PKGREVISION=	1
@@ -11,6 +11,7 @@ COMMENT=	More powerful replacement for the traditional make(1) tool
 
 USE_TOOLS+=	msgfmt yacc perl:run
 GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
 
 REPLACE_PERL=	bin/cook_rsh
 
