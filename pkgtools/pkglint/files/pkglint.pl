@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.730 2007/11/07 12:11:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.731 2007/11/07 16:19:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5961,6 +5961,8 @@ sub checklines_mk($) {
 	$mkctx_build_defs = {};
 	$mkctx_tools = {%{get_predefined_tool_names()}};
 	$mkctx_varuse = {};
+
+	determine_used_variables($lines);
 
 	foreach my $prefix (qw(pre do post)) {
 		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
