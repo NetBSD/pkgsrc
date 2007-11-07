@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.727 2007/11/06 14:22:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.728 2007/11/07 11:09:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7298,7 +7298,7 @@ sub checkfile_patch($) {
 
 sub checkfile_PLIST($) {
 	my ($fname) = @_;
-	my ($lines, $last_file_seen, $all_files);
+	my ($lines, $last_file_seen);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_PLIST()");
 
@@ -7328,12 +7328,17 @@ sub checkfile_PLIST($) {
 	}
 
 	# Get the list of all files from the PLIST.
-	$all_files = {};
+	my $all_files = {};
+	my $all_dirs = {};
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
 		if ($text =~ qr"^[\w\$]") {
 			$all_files->{$text} = $line;
+			my $dir = $text;
+			while ($dir =~ s,/[^/]+$,,) {
+				$all_dirs->{$dir} = $line;
+			}
 		}
 	}
 
@@ -7373,6 +7378,14 @@ sub checkfile_PLIST($) {
 					my $s = join(" or ", map { "\"USE_DIRS+= $_\"" } @ids);
 					$line->log_warning("Please add $s to the package Makefile and remove this line.");
 				}
+				if (!exists($all_dirs->{$arg})) {
+					$line->log_warning("The PLIST does not contain files for \"$arg\".");
+					$line->explain_warning(
+"A package should only remove those directories that it created. When",
+"there are no files in the directory, it is unlikely that the package",
+"created the directory.");
+				}
+
 			} elsif ($cmd eq "imake-man") {
 				my (@args) = split(/\s+/, $arg);
 				if (@args != 3) {
