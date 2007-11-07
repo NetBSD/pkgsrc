@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/10/29 21:59:00 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/11/07 15:26:20 shannonjr Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -213,6 +213,7 @@ share/prewikka/htdocs/images/table_order_up.gif
 share/prewikka/htdocs/images/pause.png
 share/prewikka/htdocs/images/play.png
 share/prewikka/htdocs/js/functions.js
+share/prewikka/htdocs/js/jquery.js
 share/locale/fr/LC_MESSAGES/prewikka.mo
 @dirrm ${PYSITELIB}/prewikka/modules/auth/cgi
 @dirrm ${PYSITELIB}/prewikka/modules/auth/loginpassword
