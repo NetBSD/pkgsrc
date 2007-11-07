@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/11 19:26:39 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/07 07:47:43 ghen Exp $
 
 DISTNAME=		ldapvi-1.7
 CATEGORIES=		databases
@@ -12,7 +12,7 @@ GNU_CONFIGURE=		yes
 USE_NCURSES=		yes
 USE_GNU_READLINE=	yes
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 MAKE_FILE=		GNUmakefile
 
 .include "options.mk"
