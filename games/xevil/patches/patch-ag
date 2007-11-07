@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-ag,v 1.2 2007/11/07 14:00:54 rillig Exp $
 
---- cmn/utils.cpp.orig	2003-11-22 11:14:12.000000000 -0800
-+++ cmn/utils.cpp	2003-11-22 11:15:38.000000000 -0800
+--- cmn/utils.cpp.orig	2007-11-07 14:55:38.000000000 +0100
++++ cmn/utils.cpp	2007-11-07 14:57:57.000000000 +0100
 @@ -30,18 +30,20 @@
  
  // Include Files
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  #ifdef WIN32
  // For file manipulation routines.
  #include <direct.h>
-@@ -475,7 +477,7 @@
+@@ -475,7 +477,7 @@ char* Utils::get_OS_info() {
  #endif
  
  
@@ -38,3 +38,12 @@ $NetBSD: patch-ag,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  
  #ifdef X11
    FILE* fp = popen(UNAME_PATH " -a","r");
+@@ -757,7 +759,7 @@ public:
+ 
+ 
+ private:
+-  Bucket* HashTable::_get(int &index,void* key);
++  Bucket* _get(int &index,void* key);
+   /* MODIFIES: index */
+   /* EFFECTS: Internal helper function.  Return the Bucket containing key
+      or NULL if not found.  Set index to the bucket list for key whether
