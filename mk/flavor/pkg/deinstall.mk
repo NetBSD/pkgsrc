@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.3 2007/03/09 00:39:55 rillig Exp $
+# $NetBSD: deinstall.mk,v 1.4 2007/11/07 13:50:09 gdt Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -31,7 +31,11 @@ _PKG_ARGS_DEINSTALL+=	-N -f	# update w/o removing any files
 #
 _flavor-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_INFO} -e \"${PKGNAME}\" || ${TRUE}`";		\
+	if [ x"$OLDNAME" = x ]; then					\
+		found="`${PKG_INFO} -e \"${PKGNAME}\" || ${TRUE}`";	\
+	else								\
+		found=${OLDNAME};					\
+	fi;								\
 	case "$$found" in						\
 	"") found="`${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} || ${TRUE}`" ;; \
 	esac;								\
