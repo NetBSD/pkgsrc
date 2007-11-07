@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/11/02 18:27:59 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/07 08:08:18 bjs Exp $
 #
 
 DISTNAME=	aria2-0.11.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,11 @@ USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--enable-bittorrent
 CONFIGURE_ARGS+=	--with-included-gettext=no
 
+GCC_REQD+=		3.4
+
 TEST_TARGET=		check
+
+USE_FEATURES=		getopt_long snprintf
 
 .include "options.mk"
 
@@ -34,6 +39,5 @@ CONFIGURE_ARGS+=	--disable-xmltest
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libgetopt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
