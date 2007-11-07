@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2335 2007/11/07 15:30:26 shannonjr Exp $
+$NetBSD: CHANGES-2007,v 1.2336 2007/11/07 20:01:04 jonb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4359,3 +4359,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/libassuan to 1.0.3 [shannonjr 2007-11-07]
 	Updated security/dirmngr to 1.0.1 [shannonjr 2007-11-07]
 	Updated security/gnupg2	 to 2.0.7 [shannonjr 2007-11-07]
+	Updated lang/sbcl to 1.0.11 [jonb 2007-11-07]
