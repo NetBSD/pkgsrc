@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dirmngr.sh,v 1.1 2005/05/02 22:33:37 shannonjr Exp $
+# $NetBSD: dirmngr.sh,v 1.2 2007/11/07 12:43:22 shannonjr Exp $
 #
 # PROVIDE: dirmngr
 # REQUIRE: DAEMON
@@ -12,8 +12,8 @@ fi
 
 name="dirmngr"
 rcvar="${name}"
-dirmngr_user="dirmngr"
-dirmngr_group="dirmngr"
+dirmngr_user="@DIRMNGR_USER@"
+dirmngr_group="@DIRMNGR_GROUP@"
 dirmngr_flags="--daemon"
 dirmngr_command="@PREFIX@/sbin/runDirmngr"
 start_precmd="dirmngr_precmd"
@@ -26,10 +26,10 @@ required_files="@PKG_SYSCONFDIR@/dirmngr/ldapservers.conf"
 dirmngr_precmd()
 {
 	mkdir -p @VARBASE@/run/dirmngr
-	chgrp dirmngr @VARBASE@/run/dirmngr
+	chgrp @DIRMNGR_GROUP@ @VARBASE@/run/dirmngr
 	chmod 775 @VARBASE@/run/dirmngr
 	mkdir -p /tmp/dirmngr
-	chgrp dirmngr /tmp/dirmngr
+	chgrp @DIRMNGR_GROUP@ /tmp/dirmngr
 	chmod 755 /tmp/dirmngr
 }
 
