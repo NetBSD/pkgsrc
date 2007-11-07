@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/11/07 12:43:21 shannonjr Exp $
+# $NetBSD: Makefile,v 1.31 2007/11/07 19:38:12 shannonjr Exp $
 #
 
 DISTNAME=		dirmngr-1.0.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/dirmngr/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -40,6 +41,7 @@ INFO_FILES=		YES
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/libdata
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_openldap-client=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-pth-prefix=${WRKDIR}/pth
 CONFIGURE_ARGS+=	--with-libassuan-prefix=${WRKDIR}/libassuan
@@ -56,7 +58,6 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dirmngr/trusted-certs
 OWN_DIRS+=		${VARBASE}/cache/dirmngr
 
 DIRMNGR_PERMS=		${DIRMNGR_USER} ${DIRMNGR_GROUP} 0755
-#OWN_DIRS_PERMS+=	${VARBASE}/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${VARBASE}/cache/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
