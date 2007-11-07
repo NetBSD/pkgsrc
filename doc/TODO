@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6806 2007/11/07 20:01:05 jonb Exp $
+$NetBSD: TODO,v 1.6807 2007/11/07 21:22:20 tonio Exp $
 
 Suggested new packages
 ======================
@@ -816,7 +816,6 @@ Suggested package updates
 	o mtools-3.9.11
 	o multitail-5.2.0
 	o muse-0.9.2
-	o mutt-devel-1.5.17
 	o mysql-5.2
 	o nagios-3.0a5
 	o naim-0.11.8.3.1
