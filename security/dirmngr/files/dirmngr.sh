@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dirmngr.sh,v 1.2 2007/11/07 12:43:22 shannonjr Exp $
+# $NetBSD: dirmngr.sh,v 1.3 2007/11/07 19:38:12 shannonjr Exp $
 #
 # PROVIDE: dirmngr
 # REQUIRE: DAEMON
@@ -26,8 +26,10 @@ required_files="@PKG_SYSCONFDIR@/dirmngr/ldapservers.conf"
 dirmngr_precmd()
 {
 	mkdir -p @VARBASE@/run/dirmngr
+	rm -f @VARBASE@/run/dirmngr/socket
+	chown @DIRMNGR_USER@  @VARBASE@/run/dirmngr
 	chgrp @DIRMNGR_GROUP@ @VARBASE@/run/dirmngr
-	chmod 775 @VARBASE@/run/dirmngr
+	chmod 1755 @VARBASE@/run/dirmngr
 	mkdir -p /tmp/dirmngr
 	chgrp @DIRMNGR_GROUP@ /tmp/dirmngr
 	chmod 755 /tmp/dirmngr
@@ -65,6 +67,7 @@ dirmngr_stop()
 {
 	if [ -f /tmp/dirmngr/dirmngr.info ] ; then
 		kill `cut -f 2 -d ':' /tmp/dirmngr/dirmngr.info`
+		rm -f @VARBASE@/run/dirmngr/socket
 	fi
 }
 
