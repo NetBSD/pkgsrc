@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.729 2007/11/07 11:58:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.730 2007/11/07 12:11:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1836,6 +1836,9 @@ my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 my $pkgctx_vardef;		# { varname => line }
 my $pkgctx_varuse;		# { varname => line }
 my $pkgctx_bl3;			# buildlink3.mk name => line of inclusion
+my $pkgctx_plist_subst_cond;	# { varname => 1 } list of all variables
+				# that are used as conditionals (@comment
+				# or nothing) in PLISTs.
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 # Context of the Makefile that is currently checked.
@@ -5729,6 +5732,12 @@ sub checkline_mk_varassign($$$$$) {
 			"append that variable with PLIST_SUBST+= \${MY_PLIST_SUBST}.");
 	}
 
+	# Mark the variable as PLIST condition. This is later used in
+	# checkfile_PLIST.
+	if (defined($pkgctx_plist_subst_cond) && $value =~ qr"(.+)=.*\@comment.*") {
+		$pkgctx_plist_subst_cond->{$1}++;
+	}
+
 	use constant op_to_use_time => {
 		":="	=> VUC_TIME_LOAD,
 		"!="	=> VUC_TIME_LOAD,
@@ -7334,6 +7343,13 @@ sub checkfile_PLIST($) {
 	foreach my $line (@{$extra_lines}, @{$lines}) {
 		my $text = $line->text;
 
+		if ($text =~ qr"\$\{([\w_]+)\}(.*)") {
+			if (defined($pkgctx_plist_subst_cond) && exists($pkgctx_plist_subst_cond->{$1})) {
+				$opt_debug_misc and $line->log_debug("Removed PLIST_SUBST conditional $1.");
+				$text = $2;
+			}
+		}
+		
 		if ($text =~ qr"^[\w\$]") {
 			$all_files->{$text} = $line;
 			my $dir = $text;
@@ -7944,6 +7960,7 @@ sub checkdir_package() {
 	$pkgctx_vardef = {%{get_userdefined_variables()}};
 	$pkgctx_varuse = {};
 	$pkgctx_bl3 = {};
+	$pkgctx_plist_subst_cond = {};
 	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
@@ -8013,6 +8030,7 @@ cleanup:
 	$pkgctx_vardef = undef;
 	$pkgctx_varuse = undef;
 	$pkgctx_bl3 = undef;
+	$pkgctx_plist_subst_cond = undef;
 	$seen_Makefile_common = undef;
 }
 
