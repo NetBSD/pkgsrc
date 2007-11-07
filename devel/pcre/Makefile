@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2007/10/21 04:48:15 dsainty Exp $
+# $NetBSD: Makefile,v 1.44 2007/11/07 21:27:48 drochner Exp $
 
 DISTNAME=	pcre-7.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
@@ -16,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-utf8
+CONFIGURE_ARGS+=	--enable-utf8 --enable-unicode-properties
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
