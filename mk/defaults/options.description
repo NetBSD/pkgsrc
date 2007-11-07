@@ -142,7 +142,9 @@ lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
 ldap			Enable LDAP support.
+libao			Enable libao support.
 libgpod			Enable libgpod support.
+libmodplug		Use libmodplug for MOD and MOD-like music formats.
 libiconv-cp932		Add supplemental support for CP932
 libofx			Enable OFX support.
 links-zlib		Enable zlib support for the links WWW browser.
