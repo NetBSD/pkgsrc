@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2007/08/29 23:19:07 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2007/11/07 15:24:27 shannonjr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg2
 PKG_SUPPORTED_OPTIONS=	gpgsm idea
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 ## If no options are specified, only gpg-agent is built. This
@@ -17,6 +18,8 @@ PLIST_SRC=      ${.CURDIR}/PLIST
 .if empty(PKG_OPTIONS:Mgpgsm)
 CONFIGURE_ARGS+=        --enable-agent-only
 .else
+CONFIGURE_ARGS+=	--enable-gpgsm
+CONFIGURE_ARGS+=	--with-dirmngr-pgm=${BUILDLINK_PREFIX.dirmngr}/bin/dirmngr
 PLIST_SRC+=     ${.CURDIR}/PLIST.gpgsm
 .  include "../../security/dirmngr/buildlink3.mk"
 .endif
