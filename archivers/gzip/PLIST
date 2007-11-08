@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/08 19:26:52 joerg Exp $
 bin/gunzip
 bin/gzexe
 bin/gzip
+bin/uncompress
 bin/zcat
 bin/zcmp
 bin/zdiff
+bin/zegrep
+bin/zfgrep
 bin/zforce
 bin/zgrep
+bin/zless
 bin/zmore
 bin/znew
 man/man1/gunzip.1
@@ -17,5 +21,9 @@ man/man1/zcmp.1
 man/man1/zdiff.1
 man/man1/zforce.1
 man/man1/zgrep.1
+man/man1/zless.1
 man/man1/zmore.1
 man/man1/znew.1
+share/info/dir
+share/info/gzip.info
+@dirrm share/info
