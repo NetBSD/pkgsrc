@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2350 2007/11/08 20:09:02 reinoud Exp $
+$NetBSD: CHANGES-2007,v 1.2351 2007/11/08 21:56:46 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4382,3 +4382,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/pixman version 0.9.6 [bjs 2007-11-08]
 	Updated misc/udfclient to version 0.5.7 [reinoud 2007-11-08]
 
+	Updated security/gpgme to 1.1.4nb2 [bjs 2007-11-08]
+	Updated mail/mutt-devel to 1.5.17nb1 [bjs 2007-11-08]
