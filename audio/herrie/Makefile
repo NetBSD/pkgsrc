@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/08 04:08:46 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/08 04:11:40 bjs Exp $
 #
 
 DISTNAME=	herrie-1.8.4
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	no_xspf
 CONFIGURE_ARGS+=	verbose
 
 EGDIR=			${PREFIX}/share/examples/herrie
-MAKE_ENV+=		MSGFMT=${TOOLS_PATH.msgfmt:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		TRANSDIR=${PREFIX}/${PKGLOCALEDIR}/locale
