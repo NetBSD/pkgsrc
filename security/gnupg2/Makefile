@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/11/07 15:24:26 shannonjr Exp $
+# $NetBSD: Makefile,v 1.18 2007/11/08 09:56:03 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-2.0.7
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/gnupg/gnupg2/}
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -32,6 +33,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 #LICENSE=		GPLv3
 
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-pth-prefix=${WRKDIR}/pth
