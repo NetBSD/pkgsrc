@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/08 04:08:46 bjs Exp $
 #
 
 DISTNAME=	herrie-1.8.4
@@ -17,8 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 
 
-CONFIGURE_ARGS+=	no_scrobbler
-CONFIGURE_ARGS+=	no_vorbis
 CONFIGURE_ARGS+=	no_xspf
 CONFIGURE_ARGS+=	verbose
 
@@ -52,6 +50,7 @@ post-install:
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/resolv.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

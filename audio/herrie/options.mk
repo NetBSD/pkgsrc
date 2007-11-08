@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2007/11/08 04:08:46 bjs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.herrie
 PKG_OPTIONS_GROUP.curses=	ncurses ncursesw
 PKG_OPTIONS_OPTIONAL_GROUPS=	curses
-PKG_SUPPORTED_OPTIONS=		curl libao libmodplug sndfile
+PKG_SUPPORTED_OPTIONS=		curl libao libmodplug sndfile vorbis
 PKG_SUGGESTED_OPTIONS=		ncurses curl
 
 .include "../../mk/oss.buildlink3.mk"
@@ -22,6 +22,7 @@ PKG_SUGGESTED_OPTIONS+=	libao
 .  include "../../www/curl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	no_http
+CONFIGURE_ARGS+=	no_scrobbler
 .endif
 
 .if !empty(PKG_OPTIONS:Mncurses)
@@ -59,4 +60,10 @@ CONFIGURE_ARGS+=	no_sndfile
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	no_strip strict
+.endif
+
+.if !empty(PKG_OPTIONS:Mvorbis)
+.  include "../../audio/libvorbis/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	no_vorbis
 .endif
