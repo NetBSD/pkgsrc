@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2007/11/04 16:03:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.67 2007/11/08 20:10:46 jnemeth Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -102,5 +102,6 @@ SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xtimer
 SUBDIR+=	xtu
+SUBDIR+=	zonetab
 
 .include "../mk/misc/category.mk"
