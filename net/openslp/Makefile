@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/13 13:42:36 he Exp $
+# $NetBSD: Makefile,v 1.32 2007/11/08 19:32:27 joerg Exp $
 
 DISTNAME=	openslp-1.2.1
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openslp/}
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://sourceforge.net/projects/openslp
 COMMENT=	Open-source implementation of the Service Location Protocol
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Needs pkgviews-enabled automake
 # PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -30,6 +32,8 @@ CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
 RCD_SCRIPTS=		slpd
 
+INSTALLATION_DIRS=	share/doc/openslp
+
 .include "../../security/openssl/buildlink3.mk"
 
 post-extract:
@@ -41,13 +45,12 @@ pre-configure:
 		${LOCALBASE}/bin/libtoolize && automake --add-missing
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/openslp
-	@cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/openslp
-	@${FIND} ${PREFIX}/share/doc/openslp | ${XARGS} ${CHOWN} \
+	@cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/openslp
+	@${FIND} ${DESTDIR}${PREFIX}/share/doc/openslp | ${XARGS} ${CHOWN} \
 		${SHAREOWN}:${SHAREGRP}
-	@${FIND} ${PREFIX}/share/doc/openslp -type f | ${XARGS} ${CHMOD} \
+	@${FIND} ${DESTDIR}${PREFIX}/share/doc/openslp -type f | ${XARGS} ${CHMOD} \
 		${SHAREMODE}
-	@${FIND} ${PREFIX}/share/doc/openslp -type d | ${XARGS} ${CHMOD} \
+	@${FIND} ${DESTDIR}${PREFIX}/share/doc/openslp -type d | ${XARGS} ${CHMOD} \
 		${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
