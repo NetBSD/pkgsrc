@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2007/11/05 19:18:23 drochner Exp $
+# $NetBSD: Makefile,v 1.530 2007/11/08 19:52:14 bjs Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -236,6 +236,7 @@ SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
 SUBDIR+=	oneko
 SUBDIR+=	openmotif
+SUBDIR+=	pixman
 SUBDIR+=	p5-Gtk2-Ex-FormFactory
 SUBDIR+=	p5-Tk
 SUBDIR+=	p5-X11-Protocol
