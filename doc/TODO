@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6810 2007/11/08 19:46:26 wiz Exp $
+$NetBSD: TODO,v 1.6811 2007/11/08 21:15:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,7 @@ Suggested package updates
 	o botan-1.6.3
 	o btpd-0.12
 	o bug-buddy-2.20.1
-	o bwidget-1.7.0
+	o bwidget-1.8.0 [pkg/37302]
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -497,6 +497,7 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
+	o fuse-ntfs-3g-1.1104
 	o fvwm2-themes-0.7.0
 	o gaim-icb-20070203
 	o galculator-1.3.1
@@ -1154,7 +1155,7 @@ Suggested package updates
 	o sjeng-11.2
 	o skampi-5.0.1
 	o skkinput-2.06.4
-	o skype-1.4.0.118
+	o skype-2.0.0.13
 	o smalleiffel-0.90
 	o smalltalk-2.3.6
 	o smlnj-110.59 [pkgsrc-wip]
@@ -1233,6 +1234,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o uim-1.4.1
 	o unix2dos-1.3
+	o ups-nut-2.2.0 [pkg/37301]
 	o upx-2.90
 	o userppp-030706
 	o valgrind-3.2.3
@@ -1301,7 +1303,7 @@ Suggested package updates
 	o xmahjongg-3.70
 	o xmbdfed-4.6
 	o xmcd-3.3.0
-	o xmlsec1-1.2.10
+	o xmlsec1-1.2.11
 	o xmms-crossfade-1.3.10
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
@@ -1318,6 +1320,7 @@ Suggested package updates
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xpad-2.12
+	o xpdf-3.02pl2
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrestop-0.4
