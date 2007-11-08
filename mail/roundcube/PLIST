@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/05 20:25:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/11/08 23:35:33 adrianp Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
 share/doc/roundcube/UPGRADING
 share/examples/roundcube/SQL/mssql.initial.sql
 share/examples/roundcube/SQL/mysql.initial.sql
-share/examples/roundcube/SQL/mysql.update-0.1a.sql
 share/examples/roundcube/SQL/mysql.update.sql
 share/examples/roundcube/SQL/mysql5.initial.sql
 share/examples/roundcube/SQL/postgres.initial.sql
@@ -20,7 +19,7 @@ share/roundcube/index.php
 share/roundcube/program/blank.gif
 share/roundcube/program/blocked.gif
 share/roundcube/program/include/bugs.inc
-share/roundcube/program/include/cache.inc
+share/roundcube/program/include/rcube_html.inc
 share/roundcube/program/include/main.inc
 share/roundcube/program/include/rcmail_template.inc
 share/roundcube/program/include/rcube_contacts.inc
@@ -315,8 +314,6 @@ share/roundcube/program/localization/ar/labels.inc
 share/roundcube/program/localization/ar/messages.inc
 share/roundcube/program/localization/bg/labels.inc
 share/roundcube/program/localization/bg/messages.inc
-share/roundcube/program/localization/bs_BA/labels.inc
-share/roundcube/program/localization/bs_BA/messages.inc
 share/roundcube/program/localization/ca/labels.inc
 share/roundcube/program/localization/ca/messages.inc
 share/roundcube/program/localization/cz/labels.inc
@@ -333,6 +330,8 @@ share/roundcube/program/localization/en_GB/labels.inc
 share/roundcube/program/localization/en_GB/messages.inc
 share/roundcube/program/localization/en_US/labels.inc
 share/roundcube/program/localization/en_US/messages.inc
+share/roundcube/program/localization/eo/labels.inc
+share/roundcube/program/localization/eo/messages.inc
 share/roundcube/program/localization/es/labels.inc
 share/roundcube/program/localization/es/messages.inc
 share/roundcube/program/localization/et_EE/labels.inc
@@ -345,33 +344,31 @@ share/roundcube/program/localization/fi/labels.inc
 share/roundcube/program/localization/fi/messages.inc
 share/roundcube/program/localization/fr/labels.inc
 share/roundcube/program/localization/fr/messages.inc
-share/roundcube/program/localization/hi/labels.inc
-share/roundcube/program/localization/hi/messages.inc
+share/roundcube/program/localization/ga_IE/labels.inc
+share/roundcube/program/localization/ga_IE/messages.inc
+share/roundcube/program/localization/gl/labels.inc
+share/roundcube/program/localization/gl/messages.inc
 share/roundcube/program/localization/hr/labels.inc
 share/roundcube/program/localization/hr/messages.inc
 share/roundcube/program/localization/hu/labels.inc
 share/roundcube/program/localization/hu/messages.inc
-share/roundcube/program/localization/id_ID/labels.inc
-share/roundcube/program/localization/id_ID/messages.inc
 share/roundcube/program/localization/index.inc
 share/roundcube/program/localization/it/labels.inc
 share/roundcube/program/localization/it/messages.inc
 share/roundcube/program/localization/ja/labels.inc
 share/roundcube/program/localization/ja/messages.inc
-share/roundcube/program/localization/kur_KU/labels.inc
-share/roundcube/program/localization/kur_KU/messages.inc
 share/roundcube/program/localization/lt/labels.inc
 share/roundcube/program/localization/lt/messages.inc
 share/roundcube/program/localization/lv/labels.inc
 share/roundcube/program/localization/lv/messages.inc
+share/roundcube/program/localization/mk/labels.inc
+share/roundcube/program/localization/mk/messages.inc
+share/roundcube/program/localization/ms_MY/labels.inc
+share/roundcube/program/localization/ms_MY/messages.inc
 share/roundcube/program/localization/nb_NO/labels.inc
 share/roundcube/program/localization/nb_NO/messages.inc
-share/roundcube/program/localization/nl_BE/labels.inc
-share/roundcube/program/localization/nl_BE/messages.inc
 share/roundcube/program/localization/nl_NL/labels.inc
 share/roundcube/program/localization/nl_NL/messages.inc
-share/roundcube/program/localization/nn_NO/labels.inc
-share/roundcube/program/localization/nn_NO/messages.inc
 share/roundcube/program/localization/pl/labels.inc
 share/roundcube/program/localization/pl/messages.inc
 share/roundcube/program/localization/pt_BR/labels.inc
@@ -390,16 +387,10 @@ share/roundcube/program/localization/sl/labels.inc
 share/roundcube/program/localization/sl/messages.inc
 share/roundcube/program/localization/sk/labels.inc
 share/roundcube/program/localization/sk/messages.inc
-share/roundcube/program/localization/sr_cyrillic/labels.inc
-share/roundcube/program/localization/sr_cyrillic/messages.inc
-share/roundcube/program/localization/sr_latin/labels.inc
-share/roundcube/program/localization/sr_latin/messages.inc
-share/roundcube/program/localization/th/labels.inc
-share/roundcube/program/localization/th/messages.inc
 share/roundcube/program/localization/tr/labels.inc
 share/roundcube/program/localization/tr/messages.inc
-share/roundcube/program/localization/vn/labels.inc
-share/roundcube/program/localization/vn/messages.inc
+share/roundcube/program/localization/uk/labels.inc
+share/roundcube/program/localization/uk/messages.inc
 share/roundcube/program/localization/zh_CN/labels.inc
 share/roundcube/program/localization/zh_CN/messages.inc
 share/roundcube/program/localization/zh_TW/labels.inc
@@ -615,13 +606,15 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/steps/mail
 @dirrm share/roundcube/program/steps/addressbook
 @dirrm share/roundcube/program/steps
+@dirrm share/roundcube/program/localization/eo
+@dirrm share/roundcube/program/localization/ga_IE
+@dirrm share/roundcube/program/localization/gl
+@dirrm share/roundcube/program/localization/mk
+@dirrm share/roundcube/program/localization/ms_MY
+@dirrm share/roundcube/program/localization/uk
 @dirrm share/roundcube/program/localization/zh_TW
 @dirrm share/roundcube/program/localization/zh_CN
-@dirrm share/roundcube/program/localization/vn
 @dirrm share/roundcube/program/localization/tr
-@dirrm share/roundcube/program/localization/th
-@dirrm share/roundcube/program/localization/sr_latin
-@dirrm share/roundcube/program/localization/sr_cyrillic
 @dirrm share/roundcube/program/localization/sk
 @dirrm share/roundcube/program/localization/si
 @dirrm share/roundcube/program/localization/sl
@@ -631,19 +624,14 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/localization/pt_PT
 @dirrm share/roundcube/program/localization/pt_BR
 @dirrm share/roundcube/program/localization/pl
-@dirrm share/roundcube/program/localization/nn_NO
 @dirrm share/roundcube/program/localization/nl_NL
-@dirrm share/roundcube/program/localization/nl_BE
 @dirrm share/roundcube/program/localization/nb_NO
 @dirrm share/roundcube/program/localization/lv
 @dirrm share/roundcube/program/localization/lt
-@dirrm share/roundcube/program/localization/kur_KU
 @dirrm share/roundcube/program/localization/ja
 @dirrm share/roundcube/program/localization/it
-@dirrm share/roundcube/program/localization/id_ID
 @dirrm share/roundcube/program/localization/hu
 @dirrm share/roundcube/program/localization/hr
-@dirrm share/roundcube/program/localization/hi
 @dirrm share/roundcube/program/localization/fr
 @dirrm share/roundcube/program/localization/fi
 @dirrm share/roundcube/program/localization/fa
@@ -658,7 +646,6 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/localization/da
 @dirrm share/roundcube/program/localization/cz
 @dirrm share/roundcube/program/localization/ca
-@dirrm share/roundcube/program/localization/bs_BA
 @dirrm share/roundcube/program/localization/bg
 @dirrm share/roundcube/program/localization/ar
 @dirrm share/roundcube/program/localization/am
