@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/06/05 20:25:26 adrianp Exp $
+$NetBSD: MESSAGE,v 1.3 2007/11/08 23:35:33 adrianp Exp $
 
 Please refer to the following file on how to setup your RoundCube
 installation.
@@ -10,7 +10,7 @@ For pkgsrc installations the RoundCube package is installed in
 non-default locations.
 
 	Configuration files:	${PKG_SYSCONFDIR}/roundcube/
-	Log files:		${VARBASE}/roundcube/
+	Log files:		${VARBASE}/roundcube/log/
 	Document root:		${PREFIX}/share/roundcube/
 
 You will also need to make RoundCube accessible through your HTTP server.
