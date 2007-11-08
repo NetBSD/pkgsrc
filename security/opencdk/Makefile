@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2007/09/08 09:42:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/11/08 19:43:37 wiz Exp $
 
-DISTNAME=	opencdk-0.6.4
-PKGREVISION=	1
+DISTNAME=	opencdk-0.6.5
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.stud.uni-hannover.de/~twoaday/opencdk/ \
 		http://josefsson.org/gnutls/releases/opencdk/ \
@@ -24,13 +23,12 @@ NOT_FOR_COMPILER=	xlc
 
 REPLACE_PERL=		doc/gdoc
 
-DOCDIR=		${PREFIX}/share/doc/opencdk
 EGDIR=		${PREFIX}/share/examples/opencdk
 HTMLDIR=	${PREFIX}/share/doc/html/opencdk
 
 PKGCONFIG_OVERRIDE=	src/opencdk.pc.in
 
-INSTALLATION_DIRS=	${DOCDIR} ${HTMLDIR} ${EGDIR}
+INSTALLATION_DIRS=	${HTMLDIR} ${EGDIR}
 
 pre-install:
 	${INSTALL_DATA}	${WRKSRC}/doc/opencdk-api.html ${DESTDIR}${HTMLDIR}
