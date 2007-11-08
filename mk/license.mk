@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.8 2007/08/22 16:29:15 gdt Exp $
+# $NetBSD: license.mk,v 1.9 2007/11/08 19:31:05 joerg Exp $
 #
 # Note: This file is in draft state and not yet actively used.
 #
@@ -85,7 +85,8 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	original-bsd modified-bsd \
 	x11 \
 	apache-2.0 \
-	cddl-1.0
+	cddl-1.0 \
+	open-font-license
 
 .if !defined(LICENSE)
 .  if defined(AFTER_2007Q3)
