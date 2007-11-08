@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2007/11/08 19:52:21 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIB2_BUILDLINK3_MK:=	${GLIB2_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
