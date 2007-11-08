@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2345 2007/11/08 18:46:22 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2346 2007/11/08 19:27:44 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4367,3 +4367,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/uriparser to 0.6.0 [bjs 2007-11-08]
 	Added audio/libspiff version 0.8.2 [bjs 2007-11-08]
 	Updated audio/herrie to 1.8.4nb1 [bjs 2007-11-08]
+	Updated archivers/gzip to 1.3.12 [joerg 2007-11-08]
+	Removed archivers/gzip-base [joerg 2007-11-08]
+	Removed archivers/gzip-info [joerg 2007-11-08]
