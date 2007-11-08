@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2349 2007/11/08 19:53:25 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2350 2007/11/08 20:09:02 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4380,3 +4380,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/dwm to 4.6 [wiz 2007-11-08]
 	Updated security/opencdk to 0.6.5 [wiz 2007-11-08]
 	Added x11/pixman version 0.9.6 [bjs 2007-11-08]
+	Updated misc/udfclient to version 0.5.7 [reinoud 2007-11-08]
+
