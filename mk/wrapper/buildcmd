@@ -1,4 +1,4 @@
-# $NetBSD: buildcmd,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: buildcmd,v 1.2 2007/11/08 17:38:17 he Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,6 +54,16 @@ case $arg in
 		cmd="$cmd $arg"
 		;;
 	esac
+	;;
+######################################################################
+# Preserve the -Wl,-Bstatic / -Wl,-Bdynamic arguments, but also
+# duplicate them into the list of libraries.  Someone may want to mix
+# static and dynamic linking.
+######################################################################
+-Wl,-Bdynamic|-Wl,-Bstatic)
+	shquote "$arg"; arg="$shquoted"
+	cmd="$cmd $arg"
+	libs="$libs $arg"
 	;;
 -l*)
 	case $libs in
