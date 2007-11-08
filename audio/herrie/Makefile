@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/11/08 04:11:40 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/08 18:45:36 bjs Exp $
 #
 
 DISTNAME=	herrie-1.8.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://herrie.info/distfiles/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,8 +17,6 @@ HAS_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
 
-
-CONFIGURE_ARGS+=	no_xspf
 CONFIGURE_ARGS+=	verbose
 
 EGDIR=			${PREFIX}/share/examples/herrie
