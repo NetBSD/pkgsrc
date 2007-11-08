@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.65 2007/11/01 23:08:29 rillig Exp $	*/
+/*	$NetBSD: perform.c,v 1.66 2007/11/08 23:24:56 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.65 2007/11/01 23:08:29 rillig Exp $");
+__RCSID("$NetBSD: perform.c,v 1.66 2007/11/08 23:24:56 joerg Exp $");
 #endif
 #endif
 
@@ -386,7 +386,6 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	char   *buildinfo[BI_ENUM_COUNT];
 	int	replacing = 0;
 	char   dbdir[MaxPathSize];
-	const char *exact;
 	const char *tmppkg;
 	FILE   *cfile;
 	int     errc, err_prescan;
@@ -761,17 +760,11 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 	
 
 	/* Now check the packing list for dependencies */
-	for (exact = NULL, p = Plist.head; p; p = p->next) {
+	for (p = Plist.head; p; p = p->next) {
 		char *best_installed;
 
-		if (p->type == PLIST_BLDDEP) {
-			exact = p->name;
+		if (p->type != PLIST_PKGDEP)
 			continue;
-		}
-		if (p->type != PLIST_PKGDEP) {
-			exact = NULL;
-			continue;
-		}
 		if (Verbose)
 			printf("Package `%s' depends on `%s'.\n", PkgName, p->name);
 
@@ -789,13 +782,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 				int done = 0;
 				int errc0 = 0;
 
-				if (exact != NULL) {
-					/* first try the exact name, from the @blddep */
-					done = installprereq(exact, &errc0, (Replace > 1) ? 2 : 0);
-				}
-				if (!done) {
-					done = installprereq(p->name, &errc0, (Replace > 1) ? 2 : 0);
-				}
+				done = installprereq(p->name, &errc0, (Replace > 1) ? 2 : 0);
 				if (!done && !Force) {
 					errc += errc0;
 				}
