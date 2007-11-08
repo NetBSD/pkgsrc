@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2007/07/04 20:54:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/08 23:35:33 adrianp Exp $
 #
 
-DISTNAME=	roundcube-0.1-20070528
-PKGNAME=	${DISTNAME:S/-0.1//}
+DISTNAME=	roundcubemail-0.1-rc2
+PKGNAME=	roundcube-0.1rc2
 CATEGORIES=	mail
-MASTER_SITES=	http://www.farrokhi.net/roundcube/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
@@ -13,7 +12,6 @@ COMMENT=	Browser-based multilingual IMAP client
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/roundcubemail
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,7 +19,7 @@ PKG_SYSCONFSUBDIR?=	httpd
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE APACHE_USER APACHE_GROUP
 
 RCDIR=		${PREFIX}/share/roundcube
 EGDIR=		${PREFIX}/share/examples/roundcube
@@ -59,10 +57,10 @@ INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
 .include "../../mk/apache.mk"
 
 post-extract:
-	cp ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
+	${CP} ${FILESDIR}/roundcube.conf ${WRKSRC}/roundcube.conf
 
 pre-install:
-	find ${WRKSRC} -name "*.orig" -print | xargs rm -f
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/roundcube.conf ${EGDIR}/roundcube.conf
@@ -81,10 +79,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist ${EGDIR}/main.inc.php
 
 .for i in ${PAX_DIRS}
-	cd ${WRKSRC}/${i} && pax -rw . ${RCDIR}/${i}
-	find ${RCDIR}/${i} -type f | xargs chmod ${SHAREMODE}
-	find ${RCDIR}/${i} -type d | xargs chmod ${PKGDIRMODE}
-	chown -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
+	cd ${WRKSRC}/${i} && ${PAX} -rw . ${RCDIR}/${i}
+	${FIND} ${RCDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${RCDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
