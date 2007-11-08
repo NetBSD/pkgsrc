@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.26 2007/07/17 21:06:51 joerg Exp $
+# $NetBSD: options.mk,v 1.27 2007/11/08 21:56:00 bjs Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=	debug idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox mutt-hcache mutt-smtp
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
@@ -133,4 +133,15 @@ CONFIGURE_ARGS+=	--disable-idn
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
 CFLAGS+= -g
+.endif
+
+###
+### gpgme support
+###
+.if !empty(PKG_OPTIONS:Mgpgme)
+.  include "../../security/gpgme/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--with-gpgme-prefix=${BUILDLINK_PREFIX.gpgme}
+.else
+CONFIGURE_ARGS+=	--disable-gpgme
 .endif
