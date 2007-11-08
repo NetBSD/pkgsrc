@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/02/22 19:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/11/08 18:19:24 joerg Exp $
 #
 
 DISTNAME=	jikes-1.22
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jikes.sourceforge.net/
 COMMENT=	Java source to byte-code compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
