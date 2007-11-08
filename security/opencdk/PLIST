@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/08 09:42:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/08 19:43:38 wiz Exp $
 bin/opencdk-config
 include/opencdk.h
 lib/libopencdk.la
 lib/pkgconfig/opencdk.pc
 share/doc/html/opencdk/opencdk-api.html
 share/examples/opencdk/basic.c
+share/examples/opencdk/exp-key.gpg
 share/examples/opencdk/newkey.gpg
 share/examples/opencdk/photo-key.gpg
 share/examples/opencdk/plain-test-pubenc-part.gpg
