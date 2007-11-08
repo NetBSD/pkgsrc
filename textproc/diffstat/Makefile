@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/10/13 01:28:12 reed Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/08 23:46:11 joerg Exp $
 
 DISTNAME=	diffstat-1.45
 CATEGORIES=	textproc
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/diffstat/diffstat.html
 COMMENT=	Display a histogram of diff changes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
