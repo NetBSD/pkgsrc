@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2343 2007/11/08 18:38:17 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2344 2007/11/08 18:41:27 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/libupnp to 1.6.1 [obache 2007-11-08]
 	Updated devel/tailor to 0.9.30 [bjs 2007-11-08]
 	Added textproc/uriparser to 0.6.0 [bjs 2007-11-08]
+	Added audio/libspiff version 0.8.2 [bjs 2007-11-08]
