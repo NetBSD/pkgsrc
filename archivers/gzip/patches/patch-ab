@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2006/09/23 13:52:17 adrianp Exp $
+$NetBSD: patch-ab,v 1.1 2007/11/08 19:26:53 joerg Exp $
 
 --- unpack.c.orig	1993-08-13 08:35:00.000000000 +0100
 +++ unpack.c
