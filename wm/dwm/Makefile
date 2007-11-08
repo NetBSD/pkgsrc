@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/05/11 21:39:35 tonio Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/08 19:40:05 wiz Exp $
 
-DISTNAME=	dwm-4.0
+DISTNAME=	dwm-4.6
 CATEGORIES=	wm
 MASTER_SITES=	http://suckless.org/download/
 
