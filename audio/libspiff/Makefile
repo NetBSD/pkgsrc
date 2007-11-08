@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/08 18:58:48 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/08 20:25:25 bjs Exp $
 #
 
 DISTNAME=	libspiff-0.8.2
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
-BUILDLINK_ABI_DEPENDS.expat+=	expat>=2.0.0nb1:../../textproc/expat
+BUILDLINK_ABI_DEPENDS.expat+=	expat>=2.0.0nb1
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/uriparser/buildlink3.mk"
