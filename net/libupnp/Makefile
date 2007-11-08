@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/08/19 01:36:22 obache Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/08 03:56:58 obache Exp $
 #
 
-DISTNAME=		libupnp-1.6.0
+DISTNAME=		libupnp-1.6.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-documentation
 
 PKGCONFIG_OVERRIDE+=	libupnp.pc.in
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
