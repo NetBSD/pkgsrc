@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2007/10/25 20:20:59 rillig Exp $
+# $NetBSD: Makefile,v 1.389 2007/11/08 18:37:03 bjs Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -361,6 +361,7 @@ SUBDIR+=	trang
 SUBDIR+=	troffcvt
 SUBDIR+=	unroff
 SUBDIR+=	untex
+SUBDIR+=	uriparser
 SUBDIR+=	urlview
 SUBDIR+=	vis
 SUBDIR+=	wdiff
