@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2347 2007/11/08 19:40:49 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.2348 2007/11/08 19:46:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4371,3 +4371,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed archivers/gzip-base [joerg 2007-11-08]
 	Removed archivers/gzip-info [joerg 2007-11-08]
 	Updated print/poppler to 0.6.1 [drochner 2007-11-08]
+	Updated devel/p5-Params-Validate to 0.89 [wiz 2007-11-08]
+	Updated misc/dialog to 1.1.20071028 [wiz 2007-11-08]
+	Updated misc/goffice0.5 to 0.5.2 [wiz 2007-11-08]
+	Updated math/gnumeric-current to 1.7.14 [wiz 2007-11-08]
+	Updated www/links to 2.1.0.31 [wiz 2007-11-08]
+	Updated www/links-gui to 2.1.0.31 [wiz 2007-11-08]
+	Updated wm/dwm to 4.6 [wiz 2007-11-08]
+	Updated security/opencdk to 0.6.5 [wiz 2007-11-08]
