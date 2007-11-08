@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/12 13:48:06 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/08 23:47:03 joerg Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -33,6 +33,6 @@ pre-install:
 post-install:
 	${CP} ${WRKSRC}/pyxrc.default ${PREFIX}/share/examples/PyX/pyxrc
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
