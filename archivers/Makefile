@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2007/08/22 16:43:32 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2007/11/08 19:27:43 joerg Exp $
 #
 
 COMMENT=	Archivers
@@ -25,8 +25,6 @@ SUBDIR+=	gtar
 SUBDIR+=	gtar-base
 SUBDIR+=	gtar-info
 SUBDIR+=	gzip
-SUBDIR+=	gzip-base
-SUBDIR+=	gzip-info
 SUBDIR+=	gzrecover
 SUBDIR+=	ha
 SUBDIR+=	hpack
