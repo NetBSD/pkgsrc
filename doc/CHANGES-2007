@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2338 2007/11/08 03:54:19 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2339 2007/11/08 03:57:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4362,3 +4362,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/sbcl to 1.0.11 [jonb 2007-11-07]
 	Updated mail/mutt-devel to 1.5.17 [tonio 2007-11-07]
 	Updated audio/herrie to 1.8.4 [bjs 2007-11-08]
+	Updated net/libupnp to 1.6.1 [obache 2007-11-08]
