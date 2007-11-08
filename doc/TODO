@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6809 2007/11/08 06:44:43 wiz Exp $
+$NetBSD: TODO,v 1.6810 2007/11/08 19:46:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ Suggested package updates
 	o devhelp-0.16.1
 	o devtodo-0.1.19
 	o dhid-5.3
-	o dialog-1.1.20071028
 	o diction-1.11
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -431,7 +430,6 @@ Suggested package updates
 	o drscheme-371
 	o dvdrip-0.98.8
 	o dvipng-1.9
-	o dwm-4.6
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -560,7 +558,6 @@ Suggested package updates
 	o gnome-themes-2.20.1
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnumeric-current-1.7.14
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
@@ -568,7 +565,6 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice0.5-0.5.2
 	o gogo-3.11p1
 	o gok-1.3.7
 	o gossip-0.26
@@ -746,7 +742,6 @@ Suggested package updates
 	o licq-core-1.3.0
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
-	o links-gui-2.1.0.31
 	o linuxsms-0.77
 	o liquidwar-5.6.4
 	o lmms-0.2.1
@@ -846,7 +841,6 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o opencdk-0.6.5
 	o openh323-1.19.1
 	o openldap-2.3.39
 	o openmortal-0.7.1
@@ -926,7 +920,6 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-PAR-0.90
 	o p5-PV-1.5
-	o p5-Params-Validate-0.89
 	o p5-Perl-Tidy-20070801
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
@@ -1019,7 +1012,6 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.3.7
 	o polsms-2.1.0
-	o poppler-0.6.1
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
