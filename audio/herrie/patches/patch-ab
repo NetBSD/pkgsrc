@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
+
+--- src/stdinc.h.orig	2007-09-23 09:21:10.000000000 -0400
++++ src/stdinc.h
+@@ -39,7 +39,14 @@
+ #include <locale.h>
+ #endif /* BUILD_NLS */
+ #include <signal.h>
++
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/cdefs.h>
++#include <stdio.h>
++#else
+ #include <stdio.h>
++#endif
++
+ #include <stdlib.h>
+ #include <string.h>
+ #include <time.h>
