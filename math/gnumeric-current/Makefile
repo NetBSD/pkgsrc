@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/10/27 02:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/08 19:39:11 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.7.13
+DISTNAME=		gnumeric-1.7.14
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,7 +32,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 #BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.1.1
 #.include "../../databases/libgda/buildlink3.mk"
 #.include "../../databases/libgnomedb/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.2
+BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
