@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/08/29 23:19:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/11/08 21:06:33 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUPG2_BUILDLINK3_MK:=	${GNUPG2_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ pkgbase:=	gnupg2
 pkgbase:=	libgcrypt
 .   	include "../../mk/pkg-build-options.mk"
 .   	if empty(PKG_BUILD_OPTIONS.libgcrypt:Midea)
-PKGSRC_MAKE_ENV+=	PKG_OPTIONS.libgcrypt+=	idea
+PKGSRC_MAKE_ENV+=	PKG_OPTIONS.libgcrypt+=idea
 .   	endif
 .   endif
 .endif	# GNUPG2_BUILDLINK3_MK
