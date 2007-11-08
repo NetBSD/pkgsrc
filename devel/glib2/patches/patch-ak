@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
+$NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
 
---- configure.in.orig	2007-08-04 02:50:45.000000000 +0200
+--- configure.in.orig	2007-11-07 06:12:00.000000000 +0100
 +++ configure.in
-@@ -1205,6 +1205,7 @@ fi
+@@ -1202,6 +1202,7 @@ fi
  dnl G_MODULE_IMPL= don't reset, so cmd-line can override
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -10,7 +10,7 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1329,6 +1330,38 @@ dnl *** check for having dlerror()
+@@ -1326,6 +1327,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  fi
@@ -29,11 +29,11 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
 +int gettext;
 +int main () {
 +    void *handle;
-+    handle = dlopen ("libintl.so", RTLD_GLOBAL | RTLD_LAZY);
++    handle = dlopen ("libm.so", RTLD_GLOBAL | RTLD_LAZY);
 +    if (!handle) return 0;
 +    handle = dlopen (NULL, 0);
 +    if (!handle) return 0;
-+    handle = dlsym (handle, "gettext");
++    handle = dlsym (handle, "sin");
 +    return handle == NULL;
 +}
 +		],
@@ -41,7 +41,7 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
 +		[glib_cv_dlopennull_broken=yes],
 +		[glib_cv_dlopennull_broken=no])
 +	])
-+	if test "xglib_cv_dlopennull_broken$" = "xyes"; then
++	if test "x$glib_cv_dlopennull_broken" = "xyes"; then
 +		G_MODULE_BROKEN_DLOPEN_NULL=1
 +	else
 +		G_MODULE_BROKEN_DLOPEN_NULL=0
@@ -49,7 +49,7 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1358,6 +1391,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1355,6 +1388,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -58,7 +58,7 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1601,22 +1636,8 @@ if test x"$have_threads" != xno; then
+@@ -1598,22 +1633,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -83,7 +83,7 @@ $NetBSD: patch-ak,v 1.1 2007/08/15 22:09:13 tnn Exp $
           ;;
      esac 
    fi
-@@ -1972,6 +1993,10 @@ case $host in
+@@ -1970,6 +1991,10 @@ case $host in
    *) 	 
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS" 	 
      ;;

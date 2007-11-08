@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.125 2007/10/29 19:06:04 drochner Exp $
+# $NetBSD: Makefile,v 1.126 2007/11/08 19:52:21 drochner Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
-DISTNAME=		glib-2.14.2
+DISTNAME=		glib-2.14.3
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.14/ \
@@ -39,13 +39,17 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
-
 CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
+CONFIGURE_ARGS+=	--with-pcre=system
+# need pcre utf8 + unicode-properties
+BUILDLINK_API_DEPENDS.pcre+= pcre>=7.4nb1
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
+
+CONFIGURE_ENV+=		ac_cv_func_posix_memalign=no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -88,5 +92,6 @@ CONFIGURE_ARGS+=	--disable-threads
 .else
 .include "../../mk/pthread.buildlink3.mk"
 .endif
+.include "../../devel/pcre/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
