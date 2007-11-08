@@ -147,6 +147,7 @@ libgpod			Enable libgpod support.
 libmodplug		Use libmodplug for MOD and MOD-like music formats.
 libiconv-cp932		Add supplemental support for CP932
 libofx			Enable OFX support.
+libspiff		Use libspiff for XML shareable playlist support.
 links-zlib		Enable zlib support for the links WWW browser.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
