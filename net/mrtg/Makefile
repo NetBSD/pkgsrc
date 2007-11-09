@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2007/10/30 19:31:41 martti Exp $
+# $NetBSD: Makefile,v 1.83 2007/11/09 16:41:50 mishka Exp $
 
 DISTNAME=	mrtg-2.15.2
 CATEGORIES=	net
@@ -73,6 +73,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/mrtg2/BER.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
+	  ${WRKSRC}/lib/mrtg2/Net_SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
 	  ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
 	  ${PERL5_INSTALLVENDORLIB}
