@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/22 07:25:47 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/11/09 12:07:06 martti Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -109,7 +109,6 @@ share/fvwm/ConfigFvwmDefaults
 share/fvwm/ConfigFvwmIconBox
 share/fvwm/ConfigFvwmIconMan
 share/fvwm/ConfigFvwmIdent
-share/fvwm/ConfigFvwmMenuDefaults
 share/fvwm/ConfigFvwmPager
 share/fvwm/ConfigFvwmProxyDefaults
 share/fvwm/ConfigFvwmScroll
@@ -185,5 +184,11 @@ share/locale/zh_CN/LC_MESSAGES/fvwm.mo
 @dirrm share/fvwm/perllib
 @dirrm share/fvwm
 @dirrm share/examples/fvwm
+@dirrm share/doc/fvwm/modules
+@dirrm share/doc/fvwm/images/svg_rendering
+@dirrm share/doc/fvwm/images
+@dirrm share/doc/fvwm/fvwm
+@dirrm share/doc/fvwm/commands
+@dirrm share/doc/fvwm
 @dirrm libexec/fvwm/${FVWM_VER}
 @dirrm libexec/fvwm
