@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/11/01 10:36:58 martti Exp $
+# $NetBSD: Makefile,v 1.23 2007/11/09 12:07:06 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Development version of X11 Virtual window manager
 #LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
-FVWM_VER=	2.5.21
+FVWM_VER=	2.5.23
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -30,10 +30,29 @@ CONFIGURE_ARGS+=	--without-gnome
 CONFIGURE_ARGS+=	--without-rplay-library
 CONFIGURE_ARGS+=	--without-stroke-library
 
+SUBST_CLASSES+=		perl
+SUBST_STAGE.perl=	post-build
+SUBST_MESSAGE.perl=	Fixing path to perl
+SUBST_FILES.perl+=	bin/fvwm-convert-2.4
+SUBST_FILES.perl+=	bin/fvwm-convert-2.6
+SUBST_FILES.perl+=	bin/fvwm-menu-desktop
+SUBST_FILES.perl+=	bin/fvwm-menu-directory
+SUBST_FILES.perl+=	bin/fvwm-menu-headlines
+SUBST_FILES.perl+=	bin/fvwm-menu-xlock
+SUBST_FILES.perl+=	bin/fvwm-perllib
+SUBST_FILES.perl+=	modules/FvwmConsole/FvwmConsoleC.pl
+SUBST_FILES.perl+=	modules/FvwmDebug/FvwmDebug
+SUBST_FILES.perl+=	modules/FvwmDebug/FvwmGtkDebug
+SUBST_FILES.perl+=	modules/FvwmPerl/FvwmPerl
+SUBST_FILES.perl+=	modules/FvwmTabs/FvwmTabs
+SUBST_FILES.perl+=	modules/FvwmWindowMenu/FvwmWindowMenu
+SUBST_FILES.perl+=	modules/FvwmScript/Scripts/FvwmScript-ComExample
+SUBST_FILES.perl+=	modules/FvwmScript/Scripts/FvwmScript-Setup95
+SUBST_SED.perl=		-e "s|${TOOLS_CMD.perl}|${PERL5}|"
+
 post-install:
 	cd ${WRKSRC}/sample.fvwmrc && ${INSTALL_DATA} \
-		`${LS} | ${GREP} -v Makefile` \
-		${PREFIX}/share/examples/fvwm
+		`ls | grep -v Makefile` ${PREFIX}/share/examples/fvwm
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
