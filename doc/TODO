@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6812 2007/11/09 02:55:46 hiramatsu Exp $
+$NetBSD: TODO,v 1.6813 2007/11/09 04:40:54 taca Exp $
 
 Suggested new packages
 ======================
@@ -1255,6 +1255,7 @@ Suggested package updates
 	o vttest-20070304
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
+	o webmin-1.380
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.3
 	o wdm-1.28
