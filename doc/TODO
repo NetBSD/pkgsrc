@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6811 2007/11/08 21:15:52 wiz Exp $
+$NetBSD: TODO,v 1.6812 2007/11/09 02:55:46 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -877,7 +877,6 @@ Suggested package updates
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
-	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.49
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
