@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.10 2007/08/02 18:04:48 jlam Exp $
+# $NetBSD: java-env.mk,v 1.11 2007/11/09 00:49:54 joerg Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -84,7 +84,7 @@ ${WRKDIR}/${w}:
 .    endif
 
 install-java-wrapper-${w}:
-	${INSTALL_SCRIPT} ${WRKDIR}/${w} ${PREFIX}/bin/${JAVA_NAME}-${w}
+	${INSTALL_SCRIPT} ${WRKDIR}/${w} ${DESTDIR}${PREFIX}/bin/${JAVA_NAME}-${w}
 
 .  endfor
 .  undef w
