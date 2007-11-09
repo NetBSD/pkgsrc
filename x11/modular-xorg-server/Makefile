@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/10/30 10:56:43 shannonjr Exp $
+# $NetBSD: Makefile,v 1.22 2007/11/09 11:34:47 abs Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -66,6 +66,8 @@ post-extract:
 .if !empty(PKG_OPTIONS:Mdri)
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 .endif
+
+.include "options.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
