@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2352 2007/11/08 23:36:23 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2353 2007/11/09 02:55:46 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/gpgme to 1.1.4nb2 [bjs 2007-11-08]
 	Updated mail/mutt-devel to 1.5.17nb1 [bjs 2007-11-08]
 	Updated mail/roundcube to 0.1rc2 [adrianp 2007-11-08]
+	Updated databases/p5-DBIx-ContextualFetch to 1.03 [hiramatsu 2007-11-09]
