@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.6 2007/11/07 17:39:02 rillig Exp $
+# $NetBSD: utility.mk,v 1.7 2007/11/10 00:38:30 rillig Exp $
 
 ######################################################################
 ###
@@ -21,8 +21,11 @@ check: _about-to-be-removed
 list: _about-to-be-removed
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
-.PHONY: show-downlevel
-show-downlevel: _about-to-be-removed
+# show-downlevel:
+#	Lists the packages whose installed version does not match the
+#	current version in pkgsrc.
+#
+show-downlevel: .PHONY
 .if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
