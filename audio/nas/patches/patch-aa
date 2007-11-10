@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2006/07/08 00:27:56 minskim Exp $
+$NetBSD: patch-aa,v 1.10 2007/11/10 02:41:34 wiz Exp $
 
---- lib/audio/Imakefile.orig	2005-06-04 13:08:54.000000000 -0700
+--- lib/audio/Imakefile.orig	2006-08-14 01:10:05.000000000 +0000
 +++ lib/audio/Imakefile
+@@ -150,7 +150,7 @@ XAULIB = 
+ XAULIB = -lXau
+ #endif
+ 
+-#if defined(LinuxArchitecture) || defined(GNUArchitecture) || defined(__FreeBSD_kernel__)
++#if defined(LinuxArchitecture) || defined(GNUArchitecture) || defined(__FreeBSD_kernel__) || defined(NetBSDArchitecture)
+ REQUIREDLIBS = -L$(USRLIBDIR) -lXt $(XAULIB) -lm 
+ #endif
+ 
 @@ -159,6 +159,10 @@ REQUIREDLIBS = $(LDPRELIB) $(XAUTHLIB) $
  STD_INCLUDES = -I/usr/include
  #endif                                                                        
