@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.7 2007/11/10 00:38:30 rillig Exp $
+# $NetBSD: utility.mk,v 1.8 2007/11/10 23:44:01 rillig Exp $
 
 ######################################################################
 ###
@@ -41,7 +41,7 @@ show-downlevel: .PHONY
 .endif
 
 .PHONY: show-installed-depends
-show-installed-depends: _about-to-be-removed
+show-installed-depends: # will not be removed
 .if !empty(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
