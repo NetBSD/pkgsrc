@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6813 2007/11/09 04:40:54 taca Exp $
+$NetBSD: TODO,v 1.6814 2007/11/10 02:23:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,6 +428,7 @@ Suggested package updates
 	o doxygen-1.5.4
 	o dpkg-1.13.25
 	o drscheme-371
+	o dvdauthor-0.6.14
 	o dvdrip-0.98.8
 	o dvipng-1.9
 	o eagle-4.16
@@ -525,6 +526,7 @@ Suggested package updates
 	o gedit-2.20.3
 	o generator-cbiere-0.35r3
 	o genius-1.0.0
+	o getmail-4.7.7
 	o gettext-0.16.1
 	o gfract-0.33
 	o ggiterm-0.7.1
@@ -595,7 +597,7 @@ Suggested package updates
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.1
 	o gtklife-5.1
-	o gtkmm-2.12.2
+	o gtkmm-2.12.3
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
 	o gtkyahoo-0.18.3
@@ -1020,7 +1022,7 @@ Suggested package updates
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
-	o psi-0.11
+	o psi-0.11 [pkg/37345]
 	o psmisc-21.9
 	o pstoedit-3.45
 	o puf-0.93.3
@@ -1160,7 +1162,7 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.2.7
-	o snd-9.4
+	o snd-9.5
 	o snes9x-1.51
 	o snobol-1.1
 	o solfege-3.8.2
@@ -1268,7 +1270,7 @@ Suggested package updates
 	o wmii-3.5.1
 	o wml-2.0.11
 	o wmweather-2.4.4
-	o worker-2.15.0
+	o worker-2.16.0
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9c
