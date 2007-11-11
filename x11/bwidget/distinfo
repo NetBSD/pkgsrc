@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/25 11:14:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2007/11/11 23:39:08 wiz Exp $
 
-SHA1 (BWidget-1.6.0.tar.gz) = 7265b02c88e3fc13d3d789aeff0d82dc5f25b916
-RMD160 (BWidget-1.6.0.tar.gz) = a179d73e92fe758100f9363797c1837d51d8e8f4
-Size (BWidget-1.6.0.tar.gz) = 187340 bytes
+SHA1 (BWidget-1.8.0.tar.gz) = b2976eafa503e76deccbb4560df3d1ef96bb83e0
+RMD160 (BWidget-1.8.0.tar.gz) = b27fbec6e0bd27cd2e5b5641fa28fd7501985060
+Size (BWidget-1.8.0.tar.gz) = 218530 bytes
