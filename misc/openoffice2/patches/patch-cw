@@ -1,0 +1,32 @@
+$NetBSD: patch-cw,v 1.1 2007/11/11 03:35:36 hira Exp $
+
+--- i18npool/source/collator/makefile.mk.orig	2007-01-26 00:25:50.000000000 +0900
++++ i18npool/source/collator/makefile.mk	2007-11-09 02:40:37.000000000 +0900
+@@ -46,7 +46,26 @@
+ 
+ # --- Files --------------------------------------------------------
+ 
+-tempvar:=$(shell cd data && ls *.txt)
++tempvar= \
++	dz_charset.txt \
++	hu_charset.txt \
++	ja_charset.txt \
++	ja_phonetic_alphanumeric_first.txt \
++	ja_phonetic_alphanumeric_last.txt \
++	km_charset.txt \
++	ko_charset.txt \
++	ku_alphanumeric.txt \
++	ln_charset.txt \
++	ne_charset.txt \
++	vi_charset.txt \
++	zh_TW_charset.txt \
++	zh_TW_radical.txt \
++	zh_TW_stroke.txt \
++	zh_charset.txt \
++	zh_pinyin.txt \
++	zh_radical.txt \
++	zh_stroke.txt \
++	zh_zhuyin.txt
+ LOCAL_RULE_LANGS:=$(uniq $(foreach,i,$(tempvar) $(i:s/-/_/:s/_/ /:1)))
+ rules_dependencies:=$(foreach,i,$(tempvar) data$/$i)
+ 
