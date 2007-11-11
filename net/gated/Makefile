@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2007/04/24 14:49:34 gdt Exp $
+# $NetBSD: Makefile,v 1.31 2007/11/11 23:57:39 wiz Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
-		http://www.zcu.cz/ftp/pub/security/merit/gated/ \
+MASTER_SITES=	http://www.zcu.cz/ftp/pub/security/merit/gated/ \
 		http://www.funet.fi/pub/unix/tcpip/gated/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
