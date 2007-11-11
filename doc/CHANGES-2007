@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2356 2007/11/10 11:36:28 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2357 2007/11/11 00:58:52 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/fvwm-devel to 2.5.23 [martti 2007-11-09]
 	Updated audio/nas to 1.9nb1 [wiz 2007-11-10]
 	Added databases/cstore version 0.2 [agc 2007-11-10]
+	Updated databases/p5-DBI to 1.601 [adrianp 2007-11-11]
