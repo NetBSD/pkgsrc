@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/09/06 09:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2007/11/11 23:49:14 wiz Exp $
 
 DISTNAME=	jisx0212fonts-0.0
 PKGREVISION=	2
 CATEGORIES=	fonts x11 japanese
-MASTER_SITES=	ftp://ginkaku.kudpc.kyoto-u.ac.jp/fonts/ \
-		ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \
+MASTER_SITES=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \
 		http://www.freebsd.org/~itojun/distfiles/
 DISTFILES=	jisksp14.bdf.gz jisksp16-1990.bdf.Z min-1-24.bdf.gz \
 		jisksp40.bdf.Z
