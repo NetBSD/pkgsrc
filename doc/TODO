@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6815 2007/11/11 01:25:09 wiz Exp $
+$NetBSD: TODO,v 1.6816 2007/11/11 16:00:11 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -498,7 +498,6 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
-	o fuse-ntfs-3g-1.1104
 	o fvwm2-themes-0.7.0
 	o gaim-icb-20070203
 	o galculator-1.3.1
