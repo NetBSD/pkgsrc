@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/11/11 03:35:35 hira Exp $
+# $NetBSD: Makefile,v 1.28 2007/11/11 15:46:25 hira Exp $
 #
 
 OO_VER=			2.3.0
@@ -62,6 +62,7 @@ LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
 
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
+CONFIGURE_ENV+=		BLNK_PREFIX_nas=${BUILDLINK_PREFIX.nas}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
@@ -80,7 +81,7 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
 
 # XXX: Error in OOo internal libsndfile.
-CONFIGURE_ARGS+=	--disable-pasf --without-nas
+CONFIGURE_ARGS+=	--disable-pasf
 
 # systray quickstarter is broken with mutex handling.
 CONFIGURE_ARGS+=	--disable-systray
