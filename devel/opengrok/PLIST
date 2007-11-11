@@ -1,17 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/08 16:59:41 adrianp Exp $
-share/examples/opengrok/conf/default/html/foot.html
-share/examples/opengrok/conf/default/html/help.html
+@comment $NetBSD: PLIST,v 1.2 2007/11/11 22:05:49 adrianp Exp $
 share/examples/opengrok/conf/default/html/img/Logo.png
 share/examples/opengrok/conf/default/html/img/icon.png
 share/examples/opengrok/conf/default/html/img/rss.png
 share/examples/opengrok/conf/default/html/img/servedby.png
-share/examples/opengrok/conf/default/html/index.html
 share/examples/opengrok/conf/default/html/print.css
-share/examples/opengrok/conf/default/html/rss.xsl.xml
 share/examples/opengrok/conf/default/html/style.css
 share/examples/opengrok/conf/default/web.xml
-share/examples/opengrok/conf/offwhite/html/foot.html
-share/examples/opengrok/conf/offwhite/html/help.html
 share/examples/opengrok/conf/offwhite/html/img/Logo.png
 share/examples/opengrok/conf/offwhite/html/img/b.gif
 share/examples/opengrok/conf/offwhite/html/img/d.gif
@@ -27,13 +21,9 @@ share/examples/opengrok/conf/offwhite/html/img/rss.png
 share/examples/opengrok/conf/offwhite/html/img/servedby.png
 share/examples/opengrok/conf/offwhite/html/img/t.gif
 share/examples/opengrok/conf/offwhite/html/img/w.gif
-share/examples/opengrok/conf/offwhite/html/index.html
 share/examples/opengrok/conf/offwhite/html/print.css
-share/examples/opengrok/conf/offwhite/html/rss.xsl.xml
 share/examples/opengrok/conf/offwhite/html/style.css
 share/examples/opengrok/conf/offwhite/web.xml
-share/examples/opengrok/conf/polished/html/foot.html
-share/examples/opengrok/conf/polished/html/help.html
 share/examples/opengrok/conf/polished/html/img/Logo.png
 share/examples/opengrok/conf/polished/html/img/b.gif
 share/examples/opengrok/conf/polished/html/img/d.gif
@@ -49,9 +39,7 @@ share/examples/opengrok/conf/polished/html/img/rss.png
 share/examples/opengrok/conf/polished/html/img/servedby.png
 share/examples/opengrok/conf/polished/html/img/t.gif
 share/examples/opengrok/conf/polished/html/img/w.gif
-share/examples/opengrok/conf/polished/html/index.html
 share/examples/opengrok/conf/polished/html/print.css
-share/examples/opengrok/conf/polished/html/rss.xsl.xml
 share/examples/opengrok/conf/polished/html/style.css
 share/examples/opengrok/conf/polished/web.xml
 share/examples/opengrok/paths.tsv
@@ -59,11 +47,11 @@ share/opengrok/README.txt
 share/opengrok/lib/ant-tools.jar
 share/opengrok/lib/bcel-5.1.jar
 share/opengrok/lib/jakarta-oro-2.0.8.jar
-share/opengrok/lib/lucene-1.4.3.jar
+share/opengrok/lib/lucene-core-2.1.0.jar
+share/opengrok/lib/lucene-spellchecker-2.1.0.jar
 share/opengrok/lib/org.apache.commons.jrcs.diff.jar
 share/opengrok/lib/org.apache.commons.jrcs.rcs.jar
 share/opengrok/lib/servlet-api.jar
-share/opengrok/lib/speller.jar
 share/opengrok/lib/svn-javahl.jar
 share/opengrok/lib/swing-layout-0.9.jar
 share/opengrok/opengrok.jar
