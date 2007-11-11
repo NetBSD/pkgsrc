@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2358 2007/11/11 01:03:17 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2359 2007/11/11 03:36:59 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4390,3 +4390,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/cstore version 0.2 [agc 2007-11-10]
 	Updated databases/p5-DBI to 1.601 [adrianp 2007-11-11]
 	Updated mail/grepmail to 5.3033 [adrianp 2007-11-11]
+	Updated misc/openoffice2 to 2.3.0nb1 [hira 2007-11-11]
