@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/11/07 21:27:48 drochner Exp $
+# $NetBSD: Makefile,v 1.45 2007/11/11 11:35:49 martti Exp $
 
 DISTNAME=	pcre-7.4
 PKGREVISION=	1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
+#LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
