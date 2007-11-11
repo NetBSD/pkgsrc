@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2359 2007/11/11 03:36:59 hira Exp $
+$NetBSD: CHANGES-2007,v 1.2360 2007/11/11 16:00:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4391,3 +4391,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/p5-DBI to 1.601 [adrianp 2007-11-11]
 	Updated mail/grepmail to 5.3033 [adrianp 2007-11-11]
 	Updated misc/openoffice2 to 2.3.0nb1 [hira 2007-11-11]
+	Updated filesystems/fuse-ntfs-3g to 1.1104 [xtraeme 2007-11-11]
