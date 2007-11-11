@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2362 2007/11/11 19:09:40 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2363 2007/11/11 19:29:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4394,3 +4394,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated filesystems/fuse-ntfs-3g to 1.1104 [xtraeme 2007-11-11]
 	Updated multimedia/dvdauthor to 0.6.14 [wiz 2007-11-11]
 	Updated graphics/png to 1.2.23 [wiz 2007-11-11]
+	Updated security/gnutls to 2.0.3 [wiz 2007-11-11]
