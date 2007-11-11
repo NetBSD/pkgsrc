@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6819 2007/11/11 19:29:17 wiz Exp $
+$NetBSD: TODO,v 1.6820 2007/11/11 23:39:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ Suggested package updates
 	o botan-1.6.3
 	o btpd-0.12
 	o bug-buddy-2.20.1
-	o bwidget-1.8.0 [pkg/37302]
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
