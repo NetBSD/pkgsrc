@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.14 2007/10/08 15:06:07 hira Exp $
+# $NetBSD: options.mk,v 1.15 2007/11/11 03:35:36 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
-# The list from solenv/inc/postset.mk:completelangiso.
+# The list from completelangiso in solenv/inc/postset.mk.
 OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 				cs cy da de dz el en-GB en-US en-ZA eo es et \
 				eu fa fi fr ga gl gu-IN he hi-IN hr hu it ja \
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 .elif !empty(PKG_OPTIONS:Mseamonkey)
 CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey/buildlink3.mk"
+# The following browsers do not install *.pc files.
 #.elif !empty(PKG_OPTIONS:Mfirefox-gtk1)
 #CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 #.include "../../www/firefox-gtk1/buildlink3.mk"
@@ -41,6 +42,11 @@ CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 #.include "../../www/seamonkey-gtk1/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-mozilla
+.endif
+
+.if !empty(PKG_OPTIONS:Mooo-external-libwpd)
+CONFIGURE_ARGS+=	--with-system-libwpd
+.include "../../converters/libwpd/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)
