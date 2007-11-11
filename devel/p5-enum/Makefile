@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/11 21:57:03 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/11 11:35:49 martti Exp $
 #
 
 DISTNAME=	enum-1.016
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=enum/}
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~zenin/${DISTNAME}/enum.pm
 COMMENT=	Enumerations for Perl
+#LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
