@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2006/04/13 18:23:35 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2007/11/11 23:55:19 wiz Exp $
 #
 
 DISTNAME=	pspp-0.3.0
 PKGREVISION=	5
 CATEGORIES=	math
-MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
-		ftp://alpha.gnu.org/gnu/pspp/ \
+MASTER_SITES=	ftp://alpha.gnu.org/gnu/pspp/ \
 		ftp://ftp.gwdg.de/pub/gnu-alpha/pspp/ \
 		ftp://ftp.unex.es/pub/gnu-beta/pspp/ \
 		ftp://ftp.cs.columbia.edu/.archives/gnu/alpha/pspp/ \
