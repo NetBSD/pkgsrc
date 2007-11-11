@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/20 21:37:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/11 21:46:41 jmmv Exp $
 bin/atf-compile
 bin/atf-config
 bin/atf-report
@@ -16,12 +16,13 @@ include/atf/fs.hpp
 include/atf/io.hpp
 include/atf/macros.hpp
 include/atf/parser.hpp
-include/atf/serial.hpp
+include/atf/sanity.hpp
 include/atf/tests.hpp
 include/atf/text.hpp
 include/atf/ui.hpp
 include/atf/user.hpp
-lib/libatf.a
+include/atf/utils.hpp
+lib/libatf.la
 libexec/atf-cleanup
 libexec/atf-format
 man/man1/atf-cleanup.1
@@ -35,6 +36,7 @@ man/man1/atf-version.1
 man/man4/atf-test-case.4
 man/man5/atf-formats.5
 man/man7/atf.7
+share/atf/atf-run.hooks
 share/atf/atf.config.subr
 share/atf/atf.footer.subr
 share/atf/atf.header.subr
@@ -44,6 +46,10 @@ share/doc/atf/COPYING
 share/doc/atf/NEWS
 share/doc/atf/README
 share/doc/atf/ROADMAP
+share/examples/atf/atf-run.hooks
+share/examples/atf/tests-results.css
+share/xml/atf/tests-results.dtd
+share/xsl/atf/tests-results.xsl
 tests/atf/Atffile
 tests/atf/formats/Atffile
 tests/atf/formats/d_atffile_1
@@ -163,6 +169,10 @@ tests/atf/formats/d_tps_2
 tests/atf/formats/d_tps_2.expout
 tests/atf/formats/d_tps_3
 tests/atf/formats/d_tps_3.expout
+tests/atf/formats/d_tps_4
+tests/atf/formats/d_tps_4.expout
+tests/atf/formats/d_tps_5
+tests/atf/formats/d_tps_5.expout
 tests/atf/formats/d_tps_50
 tests/atf/formats/d_tps_50.experr
 tests/atf/formats/d_tps_51
@@ -187,13 +197,37 @@ tests/atf/formats/d_tps_57.expout
 tests/atf/formats/d_tps_58
 tests/atf/formats/d_tps_58.experr
 tests/atf/formats/d_tps_58.expout
+tests/atf/formats/d_tps_59
+tests/atf/formats/d_tps_59.experr
+tests/atf/formats/d_tps_60
+tests/atf/formats/d_tps_60.experr
+tests/atf/formats/d_tps_61
+tests/atf/formats/d_tps_61.experr
+tests/atf/formats/d_tps_62
+tests/atf/formats/d_tps_62.experr
+tests/atf/formats/d_tps_62.expout
+tests/atf/formats/d_tps_63
+tests/atf/formats/d_tps_63.experr
+tests/atf/formats/d_tps_63.expout
+tests/atf/formats/d_tps_64
+tests/atf/formats/d_tps_64.experr
+tests/atf/formats/d_tps_64.expout
+tests/atf/formats/d_tps_65
+tests/atf/formats/d_tps_65.experr
+tests/atf/formats/d_tps_65.expout
+tests/atf/formats/d_tps_66
+tests/atf/formats/d_tps_66.experr
+tests/atf/formats/d_tps_66.expout
 tests/atf/formats/h_parser
 tests/atf/formats/t_parsers
+tests/atf/formats/t_writers
 tests/atf/sh_interface/Atffile
+tests/atf/sh_interface/h_misc
 tests/atf/sh_interface/t_atf_check
 tests/atf/sh_interface/t_config
 tests/atf/sh_interface/t_normalize
 tests/atf/sh_interface/t_tc
+tests/atf/sh_interface/t_tp
 tests/atf/test_programs/Atffile
 tests/atf/test_programs/h_cpp
 tests/atf/test_programs/h_sh
@@ -203,7 +237,13 @@ tests/atf/test_programs/t_env
 tests/atf/test_programs/t_fork
 tests/atf/test_programs/t_meta_data
 tests/atf/test_programs/t_srcdir
+tests/atf/test_programs/t_status
+tests/atf/test_programs/t_workdir
 tests/atf/tools/Atffile
+tests/atf/tools/h_fail
+tests/atf/tools/h_misc
+tests/atf/tools/h_mode
+tests/atf/tools/h_pass
 tests/atf/tools/t_atf_cleanup
 tests/atf/tools/t_atf_compile
 tests/atf/tools/t_atf_config
@@ -213,14 +253,14 @@ tests/atf/units/Atffile
 tests/atf/units/t_config
 tests/atf/units/t_env
 tests/atf/units/t_expand
-tests/atf/units/t_formats
 tests/atf/units/t_fs
 tests/atf/units/t_io
 tests/atf/units/t_parser
-tests/atf/units/t_serial
+tests/atf/units/t_sanity
 tests/atf/units/t_tests
 tests/atf/units/t_text
 tests/atf/units/t_user
+tests/atf/units/t_utils
 @dirrm tests/atf/units
 @dirrm tests/atf/tools
 @dirrm tests/atf/test_programs
@@ -228,6 +268,11 @@ tests/atf/units/t_user
 @dirrm tests/atf/formats
 @dirrm tests/atf
 @dirrm tests
+@dirrm share/xsl/atf
+@unexec ${RMDIR} %D/share/xsl >/dev/null 2>&1 || ${TRUE}
+@dirrm share/xml/atf
+@comment in xmlcatmgr: @dirrm share/xml
+@dirrm share/examples/atf
 @dirrm share/doc/atf
 @dirrm share/atf
 @dirrm include/atf
