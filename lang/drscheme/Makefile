@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/02/22 19:26:37 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/11/11 23:52:49 wiz Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -10,8 +10,7 @@ MASTER_SITES=		http://download.plt-scheme.org/bundles/${DRSCHEME_VERSION}/plt/ 	
 			http://download.plt-scheme.org/doc/${DRSCHEME_VERSION}/bundles/ 	\
 			http://www.cs.utah.edu/plt/download/${DRSCHEME_VERSION}/plt/ 		\
 			ftp://ftp.pasteur.fr/pub/computing/Scheme/plt-scheme/${DRSCHEME_VERSION}/plt/ \
-			ftp://archive.informatik.uni-tuebingen.de/unix/language/plt/${DRSCHEME_VERSION}/plt/ \
-			ftp://morpheus.wish.com.mx/pub/plt/${DRSCHEME_VERSION}/plt/
+			ftp://archive.informatik.uni-tuebingen.de/unix/language/plt/${DRSCHEME_VERSION}/plt/
 DISTFILES+=		${DOCFILES} ${DISTNAME}${EXTRACT_SUFX}
 DOCFILES=		mred-doc.plt framework-doc.plt tools-doc.plt tex2page-doc.plt
 EXTRACT_SUFX=		.tgz
