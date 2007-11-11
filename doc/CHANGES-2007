@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2364 2007/11/11 21:48:42 jmmv Exp $
+$NetBSD: CHANGES-2007,v 1.2365 2007/11/11 22:06:21 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4396,3 +4396,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/png to 1.2.23 [wiz 2007-11-11]
 	Updated security/gnutls to 2.0.3 [wiz 2007-11-11]
 	Updated devel/atf to 0.3 [jmmv 2007-11-11]
+	Updated devel/opengrok to 0.5 [adrianp 2007-11-11]
