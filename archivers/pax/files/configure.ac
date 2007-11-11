@@ -29,9 +29,6 @@ AH_BOTTOM([/* Define to 1 if the user- and root-changeable masks were detected *
 #endif
 ])
 
-# Enable large file support, if applicable
-AC_SYS_LARGEFILE
-
 # Checks for library functions.
 AC_CHECK_FUNCS([fchroot lutimes])
 AC_CHECK_FUNCS([getrlimit setrlimit])
