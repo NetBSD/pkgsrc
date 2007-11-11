@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/25 11:14:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/11 23:39:08 wiz Exp $
 lib/bwidget/arrow.tcl
 lib/bwidget/bitmap.tcl
 lib/bwidget/button.tcl
@@ -46,6 +46,7 @@ lib/bwidget/init.tcl
 lib/bwidget/label.tcl
 lib/bwidget/labelentry.tcl
 lib/bwidget/labelframe.tcl
+lib/bwidget/lang/da.rc
 lib/bwidget/lang/de.rc
 lib/bwidget/lang/en.rc
 lib/bwidget/lang/es.rc
@@ -56,6 +57,7 @@ lib/bwidget/messagedlg.tcl
 lib/bwidget/notebook.tcl
 lib/bwidget/pagesmgr.tcl
 lib/bwidget/panedw.tcl
+lib/bwidget/panelframe.tcl
 lib/bwidget/passwddlg.tcl
 lib/bwidget/pkgIndex.tcl
 lib/bwidget/progressbar.tcl
@@ -65,10 +67,12 @@ lib/bwidget/scrollview.tcl
 lib/bwidget/scrollw.tcl
 lib/bwidget/separator.tcl
 lib/bwidget/spinbox.tcl
+lib/bwidget/statusbar.tcl
 lib/bwidget/titleframe.tcl
 lib/bwidget/tree.tcl
 lib/bwidget/utils.tcl
 lib/bwidget/widget.tcl
+lib/bwidget/wizard.tcl
 lib/bwidget/xpm2image.tcl
 share/doc/bwidget/ArrowButton.html
 share/doc/bwidget/BWidget.html
@@ -89,6 +93,7 @@ share/doc/bwidget/MessageDlg.html
 share/doc/bwidget/NoteBook.html
 share/doc/bwidget/PagesManager.html
 share/doc/bwidget/PanedWindow.html
+share/doc/bwidget/PanelFrame.html
 share/doc/bwidget/PasswdDlg.html
 share/doc/bwidget/ProgressBar.html
 share/doc/bwidget/ProgressDlg.html
@@ -99,6 +104,7 @@ share/doc/bwidget/SelectColor.html
 share/doc/bwidget/SelectFont.html
 share/doc/bwidget/Separator.html
 share/doc/bwidget/SpinBox.html
+share/doc/bwidget/StatusBar.html
 share/doc/bwidget/TitleFrame.html
 share/doc/bwidget/Tree.html
 share/doc/bwidget/Widget.html
