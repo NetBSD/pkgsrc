@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2007/10/27 11:19:04 grant Exp $
+# $NetBSD: Makefile,v 1.33 2007/11/11 16:51:27 joerg Exp $
 
 USE_FEATURES=	nbcompat
 
 .include "Makefile.common"
 
 CATEGORIES=	archivers
-PKGREVISION=	2
+PKGREVISION=	3
 
 # pax installs "tar" and "cpio"
 .if defined(GNU_PROGRAM_PREFIX) && ${GNU_PROGRAM_PREFIX} == ""
