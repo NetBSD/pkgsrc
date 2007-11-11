@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.15 2007/11/11 03:35:36 hira Exp $
+# $NetBSD: options.mk,v 1.16 2007/11/11 15:46:25 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
-PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd
+PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
 # The list from completelangiso in solenv/inc/postset.mk.
@@ -84,4 +84,13 @@ CONFIGURE_ARGS+=	--enable-kde --enable-kdeab
 .include "../../x11/kdelibs3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-kde --disable-kdeab
+.endif
+
+.if !empty(PKG_OPTIONS:Mnas)
+CONFIGURE_ARGS+=	--with-system-nas
+# Build error with nas<=1.9.
+BUILDLINK_API_DEPENDS.nas+=	nas>=1.9nb1
+.include "../../audio/nas/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-nas
 .endif
