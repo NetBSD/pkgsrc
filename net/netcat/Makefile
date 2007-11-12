@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/07/19 11:10:03 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2007/11/12 20:05:38 heinz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -7,7 +7,6 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://coast.cs.purdue.edu/pub/tools/unix/netutils/netcat/ \
 		ftp://zippy.telcom.arizona.edu/pub/mirrors/avian.org/hacks/ \
 		ftp://ftp.sterling.com/mirrors/avian.org/src/hacks/ \
-		ftp://ftp.rge.com/pub/security/coast/mirrors/avian.org/netcat/ \
 		ftp://avian.org/src/hacks/
 EXTRACT_SUFX=	.tgz
 
