@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2007/11/12 00:00:49 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
@@ -19,7 +19,6 @@ MASTER_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.kfki.hu/pub/infosystems/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.ring.gr.jp/pub/net/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.win.ne.jp/pub/network/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.bitcon.no/pub/unix/networking/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.ox.ac.uk/pub/comp/security/COAST/mirrors/ftp.vr.net/wu-ftpd/
