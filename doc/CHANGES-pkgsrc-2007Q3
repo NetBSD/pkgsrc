@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.10 2007/11/04 14:26:10 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.11 2007/11/12 18:10:05 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -25,3 +25,5 @@ Pullup ticket 2218 - requested by joerg
 build fix for shared-mime-info
 Pullup ticket 2219 - requested by tnn
 security update for libpurple/pidgin/finch
+Pullup ticket 2223 - requested by markd
+security fix for koffice
