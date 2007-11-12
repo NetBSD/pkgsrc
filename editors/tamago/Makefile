@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/10/29 04:41:46 uebayasi Exp $
+# $NetBSD: Makefile,v 1.16 2007/11/12 15:29:49 uebayasi Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
@@ -17,7 +17,7 @@ EMACS_MODULES+=	leim
 
 .include "../../mk/emacs.mk"
 
-.if !empty(_EMACS_TYPE:Nxemacs*) && ${EMACS_VERSION_MAJOR} >= 21
+.if ${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} >= 21
 PLIST_SUBST+=	HAVE_JISX0213=	# empty
 .else
 PLIST_SUBST+=	HAVE_JISX0213="@comment "
