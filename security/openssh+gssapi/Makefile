@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/09/07 22:12:22 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2007/11/12 20:52:14 heinz Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -9,8 +9,7 @@ PKGNAME=		openssh+gssapi-3.6.1.2.20030430
 PKGREVISION=		7
 SVR4_PKGNAME=		osshgss
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.stealth.net/pub/mirrors/ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
+MASTER_SITES=		ftp://ftp.stealth.net/pub/mirrors/ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			http://public.planetmirror.com.au/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
