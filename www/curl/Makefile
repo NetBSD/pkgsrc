@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2007/11/01 08:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2007/11/12 00:15:45 wiz Exp $
 
 DISTNAME=	curl-7.17.1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
-		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
-		ftp://ftp.rge.com/pub/networking/curl/
+		ftp://ftp.sunet.se/pub/www/utilities/curl/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
