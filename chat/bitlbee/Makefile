@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:48 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2007/11/12 20:17:14 tonio Exp $
 #
 
-DISTNAME=		bitlbee-1.0.3
+DISTNAME=		bitlbee-1.0.4
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
