@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2007/11/11 23:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2007/11/12 21:06:17 adrianp Exp $
 
 DISTNAME=	net-snmp-5.4.1
 CATEGORIES=	net
@@ -125,6 +125,8 @@ post-wrapper:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/EXAMPLE.conf	\
 		${PREFIX}/share/examples/net-snmp/EXAMPLE.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/agent/snmp_perl.pl \
+		${PREFIX}/share/snmp/
 
 .include "../../lang/perl5/module.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
