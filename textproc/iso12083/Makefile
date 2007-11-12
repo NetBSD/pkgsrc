@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/11/12 00:11:11 wiz Exp $
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	5
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
-		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \
-		ftp://ftp.oit.unc.edu/pub/packages/SGML/oslo-mirror/ISO12083/
+MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/
 DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
 MAINTAINER=	rh@NetBSD.org
