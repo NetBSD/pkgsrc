@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:49 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2007/11/12 00:10:10 wiz Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		6
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/} \
-			ftp://batraq.anything3d.com/pub/cdbkup/cdbkup-1/ \
-			http://mishka.terabyte.com.ua/cdbkup/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/}
 
 MAINTAINER=		mishka@terabyte.com.ua
 HOMEPAGE=		http://sourceforge.net/projects/cdbkup/
