@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2007/06/16 14:39:28 obache Exp $
+# $NetBSD: Makefile,v 1.21 2007/11/12 00:18:58 wiz Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.plig.org/xwinman/ \
-		ftp://ftp.cit.gu.edu.au/pub/AIcons/ \
 		${MASTER_SITE_SUNSITE:=X11/icons/} \
 		http://the-labs.com/AfterStep/
 DISTFILES=	icons.tar.gz KDEicons.tgz \
