@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.18 2007/10/28 02:05:45 taca Exp $
+$NetBSD: patch-af,v 1.19 2007/11/12 11:12:16 taca Exp $
 
 --- configure.in.orig	2007-10-25 01:43:25.000000000 +0900
 +++ configure.in
@@ -30,26 +30,12 @@ $NetBSD: patch-af,v 1.18 2007/10/28 02:05:45 taca Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1484,6 +1496,8 @@ case "$host" in
- 		CHECKSHADOW="false"
- 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
- 		: ${with_logincap='maybe'}
-+		# We really want libutil.
-+		SUDO_LIBS="${SUDO_LIBS} -lutil"
- 		;;
-     *-*-*openbsd*)
- 		# OpenBSD has a real setreuid(2) starting with 3.3 but
-@@ -1512,10 +1526,12 @@ case "$host" in
- 		CHECKSHADOW="false"
- 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
- 		: ${with_logincap='maybe'}
-+		# We really want libutil.
-+		SUDO_LIBS="${SUDO_LIBS} -lutil"
- 		;;
-     *-*-dragonfly*)
- 		if test "$with_skey" = "yes"; then
--		     SUDO_LIBS="${SUDO_LIBS} -lmd"
-+		     SUDO_LIBS="${SUDO_LIBS} -lutil -lmd"
- 		fi
- 		CHECKSHADOW="false"
- 		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
+@@ -1634,7 +1646,7 @@ fi
+ if test ${with_logincap-'no'} != "no"; then
+     AC_CHECK_HEADERS(login_cap.h, [
+ 	case "$OS" in
+-	    freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
++	    dragonfly*|freebsd*|netbsd*)	SUDO_LIBS="${SUDO_LIBS} -lutil"
+ 	    ;;
+ 	esac
+     ])
