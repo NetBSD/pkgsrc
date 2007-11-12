@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.45 2007/11/03 11:23:06 rillig Exp $
+# $NetBSD: emacs.mk,v 1.46 2007/11/12 01:55:03 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -40,7 +40,7 @@
 #		Description:
 #			The user's favourite Emacs version.
 #		Possible values:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
 #			emacs21
 #
@@ -59,9 +59,9 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs214
+#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #
 # Variables provided for ELPs:
 #
@@ -155,7 +155,7 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs214}
+#	FOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #		Description:
 #			These macros will become either an empty string or
 #			"@comment" depending on the Emacs version; when
@@ -167,7 +167,7 @@
 #		Possible values:
 #			"", "@comment"
 #
-#	NOTFOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs214}
+#	NOTFOR_{emacs,emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #		Description:
 #			The opposite of FOR_*.  See above.
 #		Possible values:
@@ -201,7 +201,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 #
 
 _EMACS_VERSIONS_ALL= \
-	emacs20 emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs214nox xemacs215
+	emacs20 emacs21 emacs21nox emacs22 emacs22nox xemacs214 xemacs214nox xemacs215 xemacs215nox
 _EMACS_VERSIONS_ACCEPTED_DEFAULT=	${_EMACS_VERSIONS_ALL}
 _EMACS_VERSION_DEFAULT.emacs=	emacs21
 _EMACS_VERSION_DEFAULT.xemacs=	xemacs214
@@ -213,6 +213,7 @@ _EMACS_REQD.emacs22nox=	emacs-nox11>=22
 _EMACS_REQD.xemacs214=	xemacs>=21.4<21.5
 _EMACS_REQD.xemacs214nox=	xemacs-nox>=21.4<21.5
 _EMACS_REQD.xemacs215=	xemacs>=21.5<21.6
+_EMACS_REQD.xemacs215nox=	xemacs-nox>=21.5<21.6
 _LEIM_REQD.emacs20=	leim>=20.${EMACS_VERSION_MINOR}<21
 _LEIM_REQD.emacs20nox=	${_LEIM_REQD.emacs20}
 _LEIM_REQD.emacs21=	leim>=21.${EMACS_VERSION_MINOR}<22
@@ -227,6 +228,7 @@ _EMACS_DEP.emacs22nox=	../../editors/emacs-nox11
 _EMACS_DEP.xemacs214=	../../editors/xemacs
 _EMACS_DEP.xemacs214nox=../../editors/xemacs-nox11
 _EMACS_DEP.xemacs215=	../../editors/xemacs-current
+_EMACS_DEP.xemacs215nox=../../editors/xemacs-current-nox11
 _LEIM_DEP.emacs20=	../../editors/leim20
 _LEIM_DEP.emacs20nox=	${_LEIM_DEP.emacs20}
 _LEIM_DEP.emacs21=	../../editors/leim21
@@ -242,6 +244,7 @@ _EMACS_BLNK.emacs22nox=	../../editors/emacs-nox11/buildlink3.mk
 _EMACS_BLNK.xemacs214=	../../editors/xemacs/buildlink3.mk
 _EMACS_BLNK.xemacs214nox=	../../editors/xemacs-nox11/buildlink3.mk
 _EMACS_BLNK.xemacs215=	../../editors/xemacs-current/buildlink3.mk
+_EMACS_BLNK.xemacs215nox=	../../editors/xemacs-current-nox11/buildlink3.mk
 
 #
 # Version decision
