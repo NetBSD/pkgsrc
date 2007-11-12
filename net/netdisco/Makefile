@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/09/04 21:08:00 seb Exp $
+# $NetBSD: Makefile,v 1.20 2007/11/12 23:10:08 seb Exp $
 #
 
 DISTNAME=		netdisco-0.95_with_mibs
@@ -30,12 +30,14 @@ EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	bin/doc_munge
+REPLACE_PERL+=	bin/pod_arg_link_fix
 REPLACE_PERL+=	bin/test_cdp.pl
 REPLACE_PERL+=	bin/test_fwtable.pl
 REPLACE_PERL+=	bin/test_iproute.pl
 REPLACE_PERL+=	bin/parse_kismet_ap
 REPLACE_PERL+=	netdisco
 REPLACE_PERL+=	mibs/chk_dups
+REPLACE_PERL+=	mibs/diff_dir
 REPLACE_PERL+=	mibs/rm_cisco_dups
 REPLACE_PERL+=	mibs/chk_mibs
 REPLACE_PERL+=	mibs/snmpwalkmib
