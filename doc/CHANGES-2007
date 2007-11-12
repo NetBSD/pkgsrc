@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2369 2007/11/12 19:39:31 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2370 2007/11/12 20:17:59 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey-bin to 1.1.6 [ghen 2007-11-12]
 	Updated www/seamonkey-gtk1 to 1.1.6 [ghen 2007-11-12]
 	Updated math/glpk to 4.23 [adam 2007-11-12]
+	Updated chat/bitlbee to 1.0.4 [tonio 2007-11-12]
