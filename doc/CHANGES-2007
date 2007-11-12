@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2367 2007/11/11 23:39:56 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2368 2007/11/12 15:04:44 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4399,3 +4399,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/opengrok to 0.5 [adrianp 2007-11-11]
 	Updated print/ruby-gnome2-poppler to 0.16.0nb1 [wiz 2007-11-11]
 	Updated x11/bwidget to 1.8.0 [wiz 2007-11-11]
+	Updated www/seamonkey to 1.1.6 [ghen 2007-11-12]
+	Updated www/seamonkey-bin to 1.1.6 [ghen 2007-11-12]
+	Updated www/seamonkey-gtk1 to 1.1.6 [ghen 2007-11-12]
