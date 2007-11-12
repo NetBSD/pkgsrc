@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/11/11 23:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2007/11/12 00:10:09 uebayasi Exp $
 
 DISTNAME=	jisx0212fonts-0.0
 PKGREVISION=	2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \
 DISTFILES=	jisksp14.bdf.gz jisksp16-1990.bdf.Z min-1-24.bdf.gz \
 		jisksp40.bdf.Z
 
-MAINTAINER=	itojun@itojun.org
+MAINTAINER=	uebayasi@NetBSD.org
 COMMENT=	X11 bitmap fonts for JIS X 0212
 
 USE_X11BASE=	yes
