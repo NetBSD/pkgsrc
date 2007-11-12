@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/07/04 20:54:36 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2007/11/12 14:05:26 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -21,7 +21,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 USE_TOOLS+=	perl:run
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.10.2
+DIST_VERSION=	2.11.2.1
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -80,9 +80,17 @@ do-install:
 	${INSTALL_DATA}	${WRKSRC}/ChangeLog ${PMDIR}
 
 	for dir in ${INSTALL_DIRS}; do					\
-		for file in "${WRKSRC}/$$dir"/*; do			\
-			${TEST} -f "$$file" -a `${BASENAME} "$$file" .sh` = `${BASENAME} "$$file"` &&				\
-			${INSTALL_DATA} $$file ${PMDIR}/$$dir;		\
+		for file in ${WRKSRC}/$$dir/*; do			\
+			case "$$file" in				\
+			*.sh)						\
+				;;					\
+			*)						\
+				if [ -f "$$file" ]; then		\
+					${INSTALL_DATA} "$$file"	\
+					  ${PMDIR}/$$dir;		\
+				fi					\
+				;;					\
+			esac;						\
 		done							\
 	done
 
