@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/01/07 09:14:10 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/12 00:07:48 wiz Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/prngd/ \
-			ftp://ftp.ayamura.org/pub/prngd/ \
+MASTER_SITES=		ftp://ftp.ayamura.org/pub/prngd/ \
 			ftp://ftp.win.ne.jp/pub/misc/prngd/ \
 			http://www.mirrors.wiretapped.net/security/cryptography/libraries/math/prng-and-entropy/prngd/ \
 			ftp://ftp.mirrors.wiretapped.net/pub/security/cryptography/libraries/math/prng-and-entropy/prngd/ \
