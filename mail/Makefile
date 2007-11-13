@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2007/11/13 16:44:26 ghen Exp $
+# $NetBSD: Makefile,v 1.340 2007/11/13 18:02:52 jlam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -43,6 +43,7 @@ SUBDIR+=	claws-mail-synce
 SUBDIR+=	claws-mail-trayicon
 SUBDIR+=	claws-mail-vcalendar
 SUBDIR+=	columba
+SUBDIR+=	cone
 SUBDIR+=	coolmail
 SUBDIR+=	courier-analog
 SUBDIR+=	courier-imap
