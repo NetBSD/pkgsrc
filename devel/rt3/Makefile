@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2007/07/04 20:54:39 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/11/13 02:40:06 cube Exp $
 
-DISTNAME=		rt-3.4.5
-PKGREVISION=		4
+DISTNAME=		rt-3.4.6
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -12,7 +11,6 @@ COMMENT=		Industrial-grade ticketing system
 .include "options.mk"
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL+=	rt-dump-database rt-setup-database rt-test-dependencies
 
 # Core dependencies:
 DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
@@ -38,6 +36,7 @@ DEPENDS+=	p5-Text-Quoted>=1.5:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Module-Versions-Report-[0-9]*:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
 
 # Mason dependencies:
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
