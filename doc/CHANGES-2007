@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2374 2007/11/13 08:44:56 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2375 2007/11/13 12:43:22 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4408,3 +4408,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/rrdtool to 1.2.23nb2 [cube 2007-11-13]
 	Updated devel/rt3 to 3.4.6 [cube 2007-11-13]
 	Updated net/p5-IO-Interface to 1.03 [hiramatsu 2007-11-13]
+	Updated editors/vim-share to 7.1.156 [martti 2007-11-13]
