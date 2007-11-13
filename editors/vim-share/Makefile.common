@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.95 2007/11/01 06:18:10 martti Exp $
+# $NetBSD: Makefile.common,v 1.96 2007/11/13 12:42:42 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -27,7 +27,8 @@ PATCHFILES+=		7.1.115 7.1.116 7.1.117 7.1.118 7.1.119 7.1.120 7.1.121
 PATCHFILES+=		7.1.122 7.1.123 7.1.124 7.1.125 7.1.126 7.1.127 7.1.128
 PATCHFILES+=		7.1.129 7.1.130 7.1.131 7.1.132 7.1.133 7.1.134 7.1.135
 PATCHFILES+=		7.1.136 7.1.137 7.1.138 7.1.139 7.1.140 7.1.141 7.1.142
-PATCHFILES+=		7.1.143 7.1.144 7.1.145 7.1.146 7.1.147
+PATCHFILES+=		7.1.143 7.1.144 7.1.145 7.1.146 7.1.147 7.1.148 7.1.149
+PATCHFILES+=		7.1.150 7.1.151 7.1.152 7.1.153 7.1.154 7.1.155 7.1.156
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
 LICENSE=		vim-license
