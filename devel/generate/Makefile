@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/30 13:02:51 darcy Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/13 17:40:26 rillig Exp $
 #
 
 DISTNAME=	generate-2.4
@@ -10,8 +10,8 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/darcy/readme-generate.html
 COMMENT=	Simple text pre-processor
 
-MAKE_ENV+=	${BSD_MAKE_ENV}
-
+MAKE_ENV+=	${BSD_MAKE_ENV} LIBS=${LIBS:Q}
 USE_TOOLS+=	gmake
+LIBS.SunOS=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
