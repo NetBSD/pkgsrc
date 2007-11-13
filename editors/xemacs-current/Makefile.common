@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2007/11/12 01:48:47 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/11/13 04:07:42 dan Exp $
 
 DISTNAME=	xemacs-21.5.27
 
@@ -11,11 +11,11 @@ COMMENT=	*BETA* XEmacs text editor version 21.5.27
 
 CONFLICTS+=	gnuclient-[0-9]*
 
-DESCR_SRC=	../../editors/xemacs-current/DESCR
-PLIST_SRC=	../../editors/xemacs-current/PLIST
-DISTINFO_FILE=	../../editors/xemacs-current/distinfo
-FILESDIR=	../../editors/xemacs-current/files
-PATCHDIR=	../../editors/xemacs-current/patches
+DESCR_SRC=	${.CURDIR}/../../editors/xemacs-current/DESCR
+PLIST_SRC=	${.CURDIR}/../../editors/xemacs-current/PLIST
+DISTINFO_FILE=	${.CURDIR}/../../editors/xemacs-current/distinfo
+FILESDIR=	${.CURDIR}/../../editors/xemacs-current/files
+PATCHDIR=	${.CURDIR}/../../editors/xemacs-current/patches
 
 EMACSVERSION=	21.5-b27
 PLIST_SUBST+=	EMACSVER=xemacs-${EMACSVERSION}
