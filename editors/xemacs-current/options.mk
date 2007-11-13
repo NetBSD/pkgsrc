@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2007/11/12 01:48:48 uebayasi Exp $
+# $NetBSD: options.mk,v 1.10 2007/11/13 04:10:09 dan Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xemacs
-PKG_SUPPORTED_OPTIONS=	esound ldap xface canna debug x11
+PKG_SUPPORTED_OPTIONS=	esound ldap xface canna debug x11 xft
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
 PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw
 PKG_SUGGESTED_OPTIONS=	x11 xaw
@@ -50,6 +50,13 @@ CONFIGURE_ARGS+=	--enable-debug=yes --with-debug
 .  include "../../graphics/png/buildlink3.mk"
 .  include "../../graphics/tiff/buildlink3.mk"
 .  include "../../x11/xbitmaps/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mxft)
+.    include "../../fonts/fontconfig/buildlink3.mk"
+.    include "../../graphics/freetype2/buildlink3.mk"
+.    include "../../x11/libXft/buildlink3.mk"
+.    include "../../x11/libXrender/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-xft=emacs,tabs,menubars,gauges
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-x11
 CONFIGURE_ARGS+=	--without-jpeg
