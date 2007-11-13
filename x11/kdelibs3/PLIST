@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2007/10/20 10:36:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.41 2007/11/13 11:19:18 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -5213,7 +5213,6 @@ share/kde/servicetypes/kurifilterplugin.desktop
 share/kde/servicetypes/renamedlgplugin.desktop
 share/kde/servicetypes/scriptinterface.desktop
 share/locale/all_languages
-${NEED_ZONETAB}share/zone.tab
 @comment in xmlcatmgr: share/sgml/catalog
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services/kresources/kabc
