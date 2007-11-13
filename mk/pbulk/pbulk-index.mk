@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.5 2007/09/09 16:42:00 rillig Exp $
+#	$NetBSD: pbulk-index.mk,v 1.6 2007/11/13 22:41:41 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -16,7 +16,7 @@
 #	_PBULK_MULTI_VAR.foo forces a specific version
 #	_PBULK_MULTI_DEFAULT.foo contains the default value
 
-_PBULK_MULTI=	apache php python
+_PBULK_MULTI?=	apache php python
 
 _PBULK_MULTI_LIST.apache=	PKG_APACHE_ACCEPTED
 _PBULK_MULTI_VAR.apache=	PKG_APACHE
