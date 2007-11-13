@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/11/12 14:05:26 tron Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/11/13 12:44:33 tron Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -683,7 +683,6 @@ share/phpmyadmin/view_create.php
 @dirrm share/phpmyadmin/libraries
 @dirrm share/phpmyadmin/lang
 @dirrm share/phpmyadmin/js
-@dirrm share/phpmyadmin/css
 @dirrm share/phpmyadmin
 @dirrm share/examples/phpmyadmin
 @dirrm share/doc/phpmyadmin
