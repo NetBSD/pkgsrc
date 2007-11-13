@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.11 2007/11/12 18:10:05 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.12 2007/11/13 11:53:38 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -27,3 +27,5 @@ Pullup ticket 2219 - requested by tnn
 security update for libpurple/pidgin/finch
 Pullup ticket 2223 - requested by markd
 security fix for koffice
+Pullup ticket 2225 - requested by tron
+security update for phpmyadmin
