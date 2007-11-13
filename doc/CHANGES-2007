@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2371 2007/11/12 22:38:18 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2372 2007/11/13 02:00:18 cube Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/glpk to 4.23 [adam 2007-11-12]
 	Updated chat/bitlbee to 1.0.4 [tonio 2007-11-12]
 	Updated databases/p5-Ima-DBI to 0.35 [hiramatsu 2007-11-12]
+	Updated databases/rrdtool to 1.2.23nb2 [cube 2007-11-13]
