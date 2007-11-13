@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2372 2007/11/13 02:00:18 cube Exp $
+$NetBSD: CHANGES-2007,v 1.2373 2007/11/13 02:42:02 cube Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/bitlbee to 1.0.4 [tonio 2007-11-12]
 	Updated databases/p5-Ima-DBI to 0.35 [hiramatsu 2007-11-12]
 	Updated databases/rrdtool to 1.2.23nb2 [cube 2007-11-13]
+	Updated devel/rt3 to 3.4.6 [cube 2007-11-13]
