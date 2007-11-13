@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2007/11/13 02:52:07 cube Exp $
+
+--- lib/RT/EmailParser.pm.orig	2005-11-14 23:35:40.000000000 +0100
++++ lib/RT/EmailParser.pm
+@@ -613,7 +613,7 @@ sub _SetupMIMEParser {
+     # Turns out that the default is to recycle tempfiles
+     # Temp files should never be recycled, especially when running under perl taint checking
+     
+-    $parser->tmp_recycling(0);
++    $parser->tmp_recycling(0) if $parser->can('tmp_recycling');
+ 
+ }
+ 
