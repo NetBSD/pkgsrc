@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6824 2007/11/12 23:48:26 schmonz Exp $
+$NetBSD: TODO,v 1.6825 2007/11/13 07:50:45 taca Exp $
 
 Suggested new packages
 ======================
@@ -287,6 +287,7 @@ Suggested package updates
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
+	o ap-fastcgi-2.4.4
 	o ap-layout-3.3
 	o ap-mp3-0.40
 	o ap-python-3.3.1
@@ -975,6 +976,7 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.2.5
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
