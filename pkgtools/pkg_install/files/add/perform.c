@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.66 2007/11/08 23:24:56 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.67 2007/11/13 19:53:11 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.66 2007/11/08 23:24:56 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.67 2007/11/13 19:53:11 rillig Exp $");
 #endif
 #endif
 
@@ -663,9 +663,8 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			printf("Package `%s' conflicts with `%s'.\n", PkgName, p->name);
 		best_installed = find_best_matching_installed_pkg(p->name);
 		if (best_installed) {
-			warnx("Conflicting package `%s'installed, please use\n"
-			      "\t\"pkg_delete %s\" first to remove it!",
-			      best_installed, best_installed);
+			warnx("Package `%s' conflicts with `%s', and `%s' is installed.",
+			      PkgName, p->name, best_installed);
 			free(best_installed);
 			++errc;
 		}
