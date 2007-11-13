@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2007/11/01 06:18:10 martti Exp $
+$NetBSD: distinfo,v 1.85 2007/11/13 12:42:42 martti Exp $
 
 SHA1 (vim/7.1.001-100.gz) = 6571772fb45d8b5a28fa7cdee5c131555ac3bb48
 RMD160 (vim/7.1.001-100.gz) = 65aebf5446773169d077f49dcee1e29ea0457cc4
@@ -144,6 +144,33 @@ Size (vim/7.1.146) = 2838 bytes
 SHA1 (vim/7.1.147) = 7911fa45c772188400d9b80ae4b9e9a931c971da
 RMD160 (vim/7.1.147) = 0a63b51b1bc3095900ee3c2ce907c3c362e3dab3
 Size (vim/7.1.147) = 2079 bytes
+SHA1 (vim/7.1.148) = fa70129a135fab6071f9a20090dafa39e2445222
+RMD160 (vim/7.1.148) = b9169a417c33a0d47bdd9879e08b4f510e618cc2
+Size (vim/7.1.148) = 2557 bytes
+SHA1 (vim/7.1.149) = 5f00461a0aee1eb11b675ea7d851b0b7c3b320ef
+RMD160 (vim/7.1.149) = 5d028f82806e5cd09bfcb9c3a98f006b67d287ca
+Size (vim/7.1.149) = 4823 bytes
+SHA1 (vim/7.1.150) = 564f1db794fd20debe20275d7bb5eb944961228c
+RMD160 (vim/7.1.150) = dd4bb3362f35a05e7f28de05f749eb4223156c70
+Size (vim/7.1.150) = 1759 bytes
+SHA1 (vim/7.1.151) = 221702c9b6f9ef44a4bd58fb7fef7f78c339d38e
+RMD160 (vim/7.1.151) = 5e5d8ddd9d74444ca1b9bfe5f3d925c4098d2dc4
+Size (vim/7.1.151) = 2108 bytes
+SHA1 (vim/7.1.152) = ca283ca9e5517b48e90bfcae0f40ed69880adbd9
+RMD160 (vim/7.1.152) = 8483e4dcd5649cb792db7fa714f6674fa9f7642c
+Size (vim/7.1.152) = 3183 bytes
+SHA1 (vim/7.1.153) = 850d9015fa47cdd90836e8406b17b0396279a8b1
+RMD160 (vim/7.1.153) = 63c6f44af451b65940d267ecd5e748510223a090
+Size (vim/7.1.153) = 4610 bytes
+SHA1 (vim/7.1.154) = 086e76c1a7da3c6f6db6aa0edd27476b980665db
+RMD160 (vim/7.1.154) = cdbe442354667ba82550249f88b27d040faabf56
+Size (vim/7.1.154) = 1547 bytes
+SHA1 (vim/7.1.155) = a19bf894ec9d55f8c715e8124bfe44f0c4a17f70
+RMD160 (vim/7.1.155) = 4916702dfacd3a2dc9b5778a6b3e28459c76580e
+Size (vim/7.1.155) = 1594 bytes
+SHA1 (vim/7.1.156) = 1ea4eaef5a9ebd72238dab59d236abc63e04d641
+RMD160 (vim/7.1.156) = 6923d0f936a83c425e978192cb77f2f2ba09fdf7
+Size (vim/7.1.156) = 4174 bytes
 SHA1 (vim/vim-7.1-extra.tar.gz) = 65581f63ff3c665e0513ba578d9e80e9e9512aa3
 RMD160 (vim/vim-7.1-extra.tar.gz) = e44bde407fb42233a8fbcc74d96a03650bf863d1
 Size (vim/vim-7.1-extra.tar.gz) = 713842 bytes
