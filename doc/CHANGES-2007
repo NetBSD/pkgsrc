@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2377 2007/11/13 16:44:49 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2378 2007/11/13 18:02:51 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/vim-share to 7.1.156 [martti 2007-11-13]
 	Added textproc/p5-File-ReadBackwards 1.04 [jnemeth 2007-11-14]
 	Added mail/sqlgrey version 1.6.8 [ghen 2007-11-13]
+	Added mail/cone version 0.73 [jlam 2007-11-13]
