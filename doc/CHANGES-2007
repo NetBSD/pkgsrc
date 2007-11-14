@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2378 2007/11/13 18:02:51 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.2379 2007/11/14 10:09:01 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/p5-File-ReadBackwards 1.04 [jnemeth 2007-11-14]
 	Added mail/sqlgrey version 1.6.8 [ghen 2007-11-13]
 	Added mail/cone version 0.73 [jlam 2007-11-13]
+	Updated www/p5-HTMLObject to 2.28 [hiramatsu 2007-11-14]
