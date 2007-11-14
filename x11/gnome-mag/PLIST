@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/07/17 10:48:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/11/14 18:57:21 drochner Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -100,6 +100,7 @@ share/locale/sr/LC_MESSAGES/gnome-mag.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-mag.mo
 share/locale/sv/LC_MESSAGES/gnome-mag.mo
 share/locale/ta/LC_MESSAGES/gnome-mag.mo
+share/locale/te/LC_MESSAGES/gnome-mag.mo
 share/locale/th/LC_MESSAGES/gnome-mag.mo
 share/locale/tk/LC_MESSAGES/gnome-mag.mo
 share/locale/tr/LC_MESSAGES/gnome-mag.mo
