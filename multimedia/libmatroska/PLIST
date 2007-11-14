@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/18 00:57:21 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/14 18:27:48 drochner Exp $
 include/matroska/FileKax.h
 include/matroska/KaxAttached.h
 include/matroska/KaxAttachments.h
@@ -27,6 +27,6 @@ include/matroska/KaxTypes.h
 include/matroska/KaxVersion.h
 include/matroska/c/libmatroska.h
 include/matroska/c/libmatroska_t.h
-lib/libmatroska.a
+lib/libmatroska.la
 @dirrm include/matroska/c
 @dirrm include/matroska

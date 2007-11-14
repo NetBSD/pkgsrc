@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2007/07/01 20:23:19 heinz Exp $
+$NetBSD: patch-ac,v 1.8 2007/11/14 18:27:48 drochner Exp $
 
---- make/linux/Makefile.orig	2005-04-19 09:00:00.000000000 +0200
+--- make/linux/Makefile.orig	2006-06-02 16:32:52.000000000 +0200
 +++ make/linux/Makefile
 @@ -16,15 +16,15 @@ prefix=/boot/home/config
  else
@@ -24,7 +24,35 @@ $NetBSD: patch-ac,v 1.7 2007/07/01 20:23:19 heinz Exp $
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
-@@ -155,23 +155,23 @@ install: install_staticlib install_share
+@@ -56,7 +56,7 @@ MUX_LIBS=-lmatroska -lebml $(LIBICONV)
+ 
+ # Names
+ LIBRARY=libmatroska.a
+-LIBRARY_SO=libmatroska.so
++LIBRARY_SO=libmatroska.la
+ LIBRARY_SO_VER=libmatroska.so.0
+ 
+ # source-files
+@@ -95,16 +95,14 @@ lib:
+ 	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
+ 
+ %.lo: %$(EXTENSION)
+-	$(CXX) -c $(COMPILEFLAGS) -fPIC -o $@ $<
++	$(LIBTOOL) --mode=compile $(CXX) -c $(COMPILEFLAGS) -o $@ $<
+ 
+ $(LIBRARY): $(objects)
+ 	$(AR) $@ $(objects)
+ 	$(RANLIB) $@
+ 
+ $(LIBRARY_SO): $(objects_so)
+-	$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so) -lebml
+-	rm -f $(LIBRARY_SO)
+-	ln -s $(LIBRARY_SO_VER) $(LIBRARY_SO)
++	$(LIBTOOL) --mode=link $(CXX) -o $(LIBRARY_SO) $(objects_so) -lebml -rpath $(PREFIX)/lib -version-info 0
+ 
+ clean:	cleantest
+ 	rm -f $(objects) $(objects_so)
+@@ -156,23 +154,22 @@ install: install_staticlib install_share
  endif
  
  install_headers:
@@ -50,10 +78,9 @@ $NetBSD: patch-ac,v 1.7 2007/07/01 20:23:19 heinz Exp $
  install_sharedlib: $(LIBRARY_SO)
 -	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(libdir)
 -	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
--	ln -s $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
+-	ln -fs $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
 +	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
-+	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)
-+	ln -s $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)/$(LIBRARY_SO)
++	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
  
  ifneq ($(wildcard .depend),)
  include .depend

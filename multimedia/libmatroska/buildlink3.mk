@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/07/08 23:11:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2007/11/14 18:27:48 drochner Exp $
 #
 # This Makefile fragment is included by packages that use libmatroska.
 #
-
-BUILDLINK_DEPMETHOD.libmatroska?=	build
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMATROSKA_BUILDLINK3_MK:=	${LIBMATROSKA_BUILDLINK3_MK}+
