@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6827 2007/11/13 13:24:06 taca Exp $
+$NetBSD: TODO,v 1.6828 2007/11/14 06:15:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -252,10 +252,11 @@ Suggested package updates
 	o R-wle-0.9.3
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
-	o RealPlayerGold-10.0.9
+	o RealPlayerGold-10.0.9.809.20070726 [pkg/37371]
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.6.12
 	o TiffIO-130e
+	o Transmission-0.93
 	o YoSucker-81
 	o aap-0.144
 	o abcm2ps-5.6.0
@@ -326,11 +327,12 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o baci-20040415
-	o bacula-2.2.5
+	o bacula-2.2.6
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.4.16
 	o base64-1.4
+	o bazaar-0.92
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -355,6 +357,7 @@ Suggested package updates
 	o bug-buddy-2.20.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o cairomm-1.4.6
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
@@ -442,7 +445,7 @@ Suggested package updates
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elinks-0.12
-	o elm-me-2.4pl123d
+	o elm-me-2.4pl124a
 	o elscreen-1.5.2
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
@@ -525,7 +528,7 @@ Suggested package updates
 	o generator-cbiere-0.35r3
 	o genius-1.0.0
 	o getmail-4.7.7
-	o gettext-0.16.1
+	o gettext-0.17
 	o gfract-0.33
 	o ggiterm-0.7.1
 	o ghc-6.8.1
@@ -533,6 +536,7 @@ Suggested package updates
 	o gifsicle-1.48
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
+	o gimp-ufraw-0.13
 	o gkrellm-2.3.0
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -635,6 +639,7 @@ Suggested package updates
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
 	o ikiwiki-2.8
+	o imap-uw-2006k
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
 	o imp-4.1.5
@@ -705,7 +710,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
 	o libelf-0.8.10
-	o libevent-1.3e
+	o libevent-1.4.0beta
 	o libflash-0.4.13
 	o libgda-3.1.2
 	o libggi-2.2.2
@@ -718,6 +723,7 @@ Suggested package updates
 	o libgnomekbd-2.20.0
 	o libgpod-0.6.0
 	o libhydrogen-0.9.2
+	o libiconv-1.12
 	o libjit-0.1.0
 	o liblive-2007.02.20
 	o liblzo-2.02
@@ -730,6 +736,7 @@ Suggested package updates
 	o libopensync-0.30
 	o libpreludedb-0.9.13
 	o libshout-2.2.2
+	o libsigsegv-2.5
 	o libsoup-2.2.102
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -765,6 +772,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-12.7.9
 	o mcrypt-2.6.6
+	o mednafen-0.8.4
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -905,6 +913,7 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
+	o p5-MIME-tools-5.424
 	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
@@ -938,6 +947,7 @@ Suggested package updates
 	o p5-Test-Unit-0.25
 	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
+	o p5-Text-Quoted-2.03
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
@@ -980,7 +990,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.2
+	o php5-5.2.5
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1145,7 +1155,7 @@ Suggested package updates
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.1.2
-	o silc-toolkit-1.1.4
+	o silc-toolkit-1.1.5
 	o simh-3.7.0
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
@@ -1200,7 +1210,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-17.3.5
+	o tea-17.4.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o texmaker-1.6
@@ -1282,7 +1292,7 @@ Suggested package updates
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
 	o xcircuit-3.6.85
-	o xdaliclock-2.23
+	o xdaliclock-2.25
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
 	o xemacs-21.4.21
@@ -1347,7 +1357,7 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.20.0
-	o zile-2.2.49
+	o zile-2.2.50
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
