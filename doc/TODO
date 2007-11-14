@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6829 2007/11/14 10:09:01 hiramatsu Exp $
+$NetBSD: TODO,v 1.6830 2007/11/14 21:30:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -221,7 +221,7 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GeoIP-1.4.2
-	o Gorm-1.2.1
+	o Gorm-1.2.2
 	o GridSim-3.3
 	o PAM-0.99.7.1
 	o R-CGIwithR-0.72
@@ -312,6 +312,7 @@ Suggested package updates
 	o asapm-3.1
 	o asc-2.0.0
 	o ascii-3.8
+	o asciidoc-8.2.4
 	o aspell-danish-1.6.7
 	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
@@ -544,7 +545,7 @@ Suggested package updates
 	o glade3-3.4.0
 	o glchess-1.0.5
 	o global-5.6
-	o gmime-2.2.10
+	o gmime-2.2.11
 	o gmpc-0.15.1
 	o gnash-0.8.1
 	o gnet1-1.1.9
@@ -1337,7 +1338,7 @@ Suggested package updates
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33
 	o xrn-9.02
-	o xscreensaver-5.03
+	o xscreensaver-5.04
 	o xskat-4.0
 	o xsoldier-1.4
 	o xtraceroute-0.9.1
