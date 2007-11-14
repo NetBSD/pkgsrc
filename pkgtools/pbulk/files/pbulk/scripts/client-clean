@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-clean,v 1.6 2007/10/10 09:04:21 rillig Exp $
+# $NetBSD: client-clean,v 1.7 2007/11/14 12:38:18 rillig Exp $
 
 . @PBULK_CONFIG@
 
@@ -17,5 +17,5 @@ elif [ -d "${bootstrapkit}" ]; then
 	[ -d ${prefix} ] || mkdir ${prefix}
 	cp -R ${bootstrapkit}/* ${prefix}
 else
-	# Do nothing
+	: "Do nothing"
 fi
