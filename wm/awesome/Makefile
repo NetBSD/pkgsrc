@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/11/07 21:52:34 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/14 20:52:50 rillig Exp $
 #
 
 DISTNAME=		awesome-1.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		wm
 MASTER_SITES=		http://awesome.naquadah.org/download/
 
@@ -10,9 +10,10 @@ MAINTAINER=		adam.hoka@gmail.com
 HOMEPAGE=		http://awesome.naquadah.org/
 COMMENT=		Tiling window manager based on dwm
 
-EGDIR=			${PREFIX}/share/examples/awesome/
-MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}awesomerc
+EGDIR=			${PREFIX}/share/examples/awesome
+MESSAGE_SUBST+=		EGDIR=${EGDIR}/awesomerc
 
+USE_LANGUAGES=		c99
 USE_TOOLS+=		pkg-config
 
 post-install:
