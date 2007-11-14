@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/10/08 03:11:05 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2007/11/14 18:20:05 drochner Exp $
 #
 # This Makefile fragment is included by packages that use libebml.
 #
-
-BUILDLINK_DEPMETHOD.libebml?=	build
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBEBML_BUILDLINK3_MK:=	${LIBEBML_BUILDLINK3_MK}+

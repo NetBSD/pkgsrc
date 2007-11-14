@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2007/07/01 20:20:45 heinz Exp $
+$NetBSD: patch-aa,v 1.9 2007/11/14 18:20:06 drochner Exp $
 
 --- make/linux/Makefile.orig	2006-03-30 21:05:11.000000000 +0200
 +++ make/linux/Makefile
@@ -24,7 +24,35 @@ $NetBSD: patch-aa,v 1.8 2007/07/01 20:20:45 heinz Exp $
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
-@@ -125,23 +125,23 @@ install: install_staticlib install_share
+@@ -51,7 +51,7 @@ LIBS=
+ 
+ # Names
+ LIBRARY=libebml.a
+-LIBRARY_SO=libebml.so
++LIBRARY_SO=libebml.la
+ LIBRARY_SO_VER=libebml.so.0
+ 
+ # source-files
+@@ -87,16 +87,14 @@ lib:
+ 	$(CXX) -c $(COMPILEFLAGS) -o $@ $<
+ 
+ %.lo: %$(EXTENSION)
+-	$(CXX) -c $(COMPILEFLAGS) -fPIC -o $@ $<
++	$(LIBTOOL) --mode=compile $(CXX) -c $(COMPILEFLAGS) -o $@ $<
+ 
+ $(LIBRARY): $(objects)
+ 	$(AR) $@ $(objects)
+ 	$(RANLIB) $@
+ 
+ $(LIBRARY_SO): $(objects_so)
+-	$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER) -o $(LIBRARY_SO_VER) $(objects_so)
+-	rm -f $(LIBRARY_SO)
+-	ln -s $(LIBRARY_SO_VER) $(LIBRARY_SO)
++	$(LIBTOOL) --mode=link $(CXX) -o $(LIBRARY_SO) $(objects_so) -rpath $(PREFIX)/lib -version-info 0
+ 
+ clean:
+ 	rm -f $(objects) $(objects_so)
+@@ -125,23 +123,22 @@ install: install_staticlib install_share
  endif
  
  install_headers:
@@ -52,8 +80,7 @@ $NetBSD: patch-aa,v 1.8 2007/07/01 20:20:45 heinz Exp $
 -	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(libdir)
 -	ln -s $(LIBRARY_SO_VER) $(libdir)/$(LIBRARY_SO)
 +	$(INSTALL) $(INSTALL_DIR_OPTS) -d $(DESTDIR)$(libdir)
-+	$(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)
-+	ln -s $(LIBRARY_SO_VER) $(DESTDIR)$(libdir)/$(LIBRARY_SO)
++	$(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_OPTS_LIB) $(LIBRARY_SO) $(DESTDIR)$(libdir)
  
  
  ifneq ($(wildcard .depend),)
