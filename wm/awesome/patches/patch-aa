@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/03 17:27:55 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2007/11/14 20:52:50 rillig Exp $
 
---- config.mk.orig	2007-10-05 17:07:18.000000000 +0200
+--- config.mk.orig	2007-11-13 16:45:43.000000000 +0100
 +++ config.mk
-@@ -7,18 +7,17 @@ VERSION = 1.3
+@@ -7,19 +7,18 @@ VERSION = 1.3
  LAYOUTS = layouts/tile.c layouts/floating.c layouts/max.c
  
  # paths
@@ -21,7 +21,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/03 17:27:55 rillig Exp $
  
  # flags
 -CFLAGS = -fgnu89-inline -std=gnu99 -ggdb3 -pipe -Wall -Wextra -W -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings -Wsign-compare -Wunused -Wuninitialized -Winit-self -Wpointer-arith -Wredundant-decls -Wno-format-zero-length -Wmissing-prototypes -Wmissing-format-attribute -Wmissing-noreturn -O3 ${INCS} -DVERSION=\"${VERSION}\"
-+CFLAGS += -std=gnu99 -ggdb3 -pipe -Wall -Wextra -W -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings -Wsign-compare -Wunused -Wuninitialized -Winit-self -Wpointer-arith -Wredundant-decls -Wno-format-zero-length -Wmissing-prototypes -Wmissing-format-attribute -Wmissing-noreturn ${INCS} -DVERSION=\"${VERSION}\"
- LDFLAGS = -ggdb3 ${LIBS}
+-LDFLAGS = -ggdb3 ${LIBS}
++CFLAGS += -Wall ${INCS} -DVERSION=\"${VERSION}\"
++LDFLAGS = ${LIBS}
  
  # compiler and linker
+-CC = cc
++#CC = cc
