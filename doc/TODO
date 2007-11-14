@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6828 2007/11/14 06:15:43 wiz Exp $
+$NetBSD: TODO,v 1.6829 2007/11/14 10:09:01 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ Suggested package updates
 	o p5-HTML-Prototype-1.48
 	o p5-HTML-Prototype-Useful-0.05
 	o p5-HTML-Table-2.05
-	o p5-HTMLObject-2.26
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTP-Server-Simple-Static-0.05
