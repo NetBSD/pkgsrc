@@ -1,10 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/11/03 17:27:55 rillig Exp $
+$NetBSD: MESSAGE,v 1.2 2007/11/14 20:52:49 rillig Exp $
 
-To use awsome, you need an ~/.awesomerc file. You can use the example:
+To use awesome, you need an ~/.awesomerc file. You can use the example:
 
 	${EGDIR}
-
-You can use the install-user target to install it for the current user.
 
 ===========================================================================
