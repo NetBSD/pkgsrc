@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/11/15 10:39:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/11/15 14:11:53 rillig Exp $
 
 DISTNAME=	sqlite-3.5.2
 PKGNAME=	${DISTNAME:S/-/3-/}
@@ -16,5 +16,12 @@ PATCHDIR=	${.CURDIR}/../../databases/sqlite3/patches
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+
+# XXX: This option has been added for backwards compatibility after
+# updating to 3.5.2. Without it, py-sqlite2 crashes when trying to
+# access the mutex. The effect of this option is that multiple threads
+# may not use a _common_ database connection. They may access the
+# database through different database connections, though.
+CONFIGURE_ARGS+=	--disable-threadsafe
 
 PKGCONFIG_OVERRIDE=	sqlite3.pc.in
