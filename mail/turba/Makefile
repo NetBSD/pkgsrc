@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/04 20:54:47 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2007/11/15 22:24:01 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -18,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.1.4
+TURBAVER=	2.1.5
 PAXDIRS=	lib locale po scripts templates themes
 USE_TOOLS+=	perl:run
 
@@ -29,12 +29,20 @@ REPLACE_PERL+=	${WRKSRC}/scripts/ldap/addou.pl
 PKG_SYSCONFSUBDIR?=	httpd
 
 PKG_USERS_VARS+=	APACHE_USER
+BUILD_DEFS=		APACHE_USER
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	turba.conf.dist
 SUBST_SED.files=	-e "s|@TURBADIR@|${TURBADIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	scripts/import_vcards.php \
+			scripts/upgrades/create_default_histories.php \
+			scripts/upgrades/public_to_horde_share.php
 
 CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
 CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
@@ -55,10 +63,10 @@ CONF_FILES_PERMS+=	${TURBADIR}/config/prefs.php.dist \
 .include "options.mk"
 
 do-build:
-	@${CP} ${FILESDIR}/turba.conf.dist ${WRKSRC}/turba.conf.dist
-	@${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
-	@${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
-	@${CHMOD} 0750 ${WRKSRC}/scripts/ldap/addou.pl
+	${CP} ${FILESDIR}/turba.conf.dist ${WRKSRC}/turba.conf.dist
+	${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
+	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
+	${CHMOD} 0750 ${WRKSRC}/scripts/ldap/addou.pl
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -77,16 +85,16 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${TURBADIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${TURBADIR}/${d:Q}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
-	@${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	@${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	@${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
-	@${CHMOD} 0750 ${TURBADIR}/config
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
+	${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
+	${CHMOD} 0750 ${TURBADIR}/config
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

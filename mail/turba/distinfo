@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2007/03/18 12:14:05 adrianp Exp $
+$NetBSD: distinfo,v 1.9 2007/11/15 22:24:01 adrianp Exp $
 
-SHA1 (turba-h3-2.1.4.tar.gz) = 92b462224ef537aa9095bed7bfb72d80a3feb7ea
-RMD160 (turba-h3-2.1.4.tar.gz) = 8b5d8ab08bac54230b29428a4172a48bffe2ea93
-Size (turba-h3-2.1.4.tar.gz) = 1809857 bytes
+SHA1 (turba-h3-2.1.5.tar.gz) = c15a26f6546ef673ce6e203ebb339552b7399cd5
+RMD160 (turba-h3-2.1.5.tar.gz) = 69d4fed1ade543b11fc5d59085374ea2ff21c8fe
+Size (turba-h3-2.1.5.tar.gz) = 1862010 bytes
