@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/03/18 12:24:13 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/11/15 22:11:36 adrianp Exp $
 @exec ${MKDIR} %D/share/horde/lib/docs
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
@@ -33,7 +33,6 @@ share/horde/admin/setup/diff.php
 share/horde/admin/setup/index.php
 share/horde/admin/setup/scripts.php
 share/horde/admin/sqlshell.php
-share/horde/admin/templates.php
 share/horde/admin/user.php
 share/horde/config/conf.php.dist
 share/horde/config/conf.xml.dist
@@ -101,7 +100,6 @@ share/horde/lib/Horde/Auth/http.php
 share/horde/lib/Horde/Auth/imap.php
 share/horde/lib/Horde/Auth/imsp.php
 share/horde/lib/Horde/Auth/ipbasic.php
-share/horde/lib/Horde/Auth/ipmap.php
 share/horde/lib/Horde/Auth/kolab.php
 share/horde/lib/Horde/Auth/krb5.php
 share/horde/lib/Horde/Auth/ldap.php
@@ -423,7 +421,6 @@ share/horde/lib/VFS/musql.php
 share/horde/lib/VFS/smb.php
 share/horde/lib/VFS/sql.php
 share/horde/lib/VFS/sql_file.php
-share/horde/lib/XML/SVG.php
 share/horde/lib/XML/WBXML.php
 share/horde/lib/XML/WBXML/ContentHandler.php
 share/horde/lib/XML/WBXML/DTD.php
