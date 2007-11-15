@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2383 2007/11/15 01:08:25 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2384 2007/11/15 07:27:17 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4418,3 +4418,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Removed net/ripe-whois [seb 2007-11-15]
 	Added net/whois3 version 3.2.2 [seb 2007-11-15]
 	Removed net/ripe-whois-tools [seb 2007-11-15]
+	Updated devel/p5-Class-Accessor to 0.31 [hiramatsu 2007-11-15]
