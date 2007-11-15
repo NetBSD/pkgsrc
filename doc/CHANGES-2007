@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2393 2007/11/15 22:24:28 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2394 2007/11/15 22:31:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/horde to 3.1.5 [adrianp 2007-11-15]
 	Updated mail/imp to 4.1.5 [adrianp 2007-11-15]
 	Updated mail/turba to 2.1.5 [adrianp 2007-11-15]
+	Updated mail/ingo to 1.1.4 [adrianp 2007-11-15]
