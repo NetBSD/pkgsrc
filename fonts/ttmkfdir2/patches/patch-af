@@ -1,7 +1,9 @@
-$NetBSD: patch-af,v 1.1 2004/04/28 00:10:04 recht Exp $
+$NetBSD: patch-af,v 1.2 2007/11/15 06:36:45 rillig Exp $
+
+http://wiki.netbsd.se/Typical_pkgsrc_error_messages
 
 --- encoding.cpp.orig	2002-11-07 06:28:44.000000000 +0100
-+++ encoding.cpp	2004-04-28 02:04:02.000000000 +0200
++++ encoding.cpp	2007-11-15 07:19:38.547700000 +0100
 @@ -2,7 +2,7 @@
  #include <cstdio>
  #include <cstdlib>
@@ -11,3 +13,10 @@ $NetBSD: patch-af,v 1.1 2004/04/28 00:10:04 recht Exp $
  
  #include "ttmkfdir.h"
  #include "encoding.h"
+@@ -101,5 +101,5 @@ Encoding::Encoding (Encodings_t *dest, B
+ 	(*m)[i] = b->mapdata.mappingtable[i];
+ 
+     AddMapping (m);
+-    dest->insert (std::make_pair(m->cmapkey(), this));;
++    dest->insert (Encodings_t::value_type(m->cmapkey(), this));
+ }
