@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.12 2007/11/15 12:05:09 rillig Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.13 2007/11/15 12:09:52 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -33,7 +33,7 @@ _MAKE_CLEAN_AS_ROOT=yes
 
 .PHONY: clean-depends
 clean-depends:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${_DEPENDS_WALK_CMD} ${PKGPATH} |				\
 	while read dir; do						\
 		cd ${.CURDIR}/../../$$dir &&				\
@@ -61,22 +61,22 @@ do-clean: su-do-clean
 .  endif
 .endif
 
-su-do-clean:
+su-do-clean: .PHONY
 	@${PHASE_MSG} "Cleaning for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} -d ${WRKDIR:Q}; then					\
-		if ${TEST} -w ${WRKDIR:Q}; then				\
-			${RM} -fr ${WRKDIR:Q};				\
+	${RUN}								\
+	if ${TEST} -d ${WRKDIR}; then					\
+		if ${TEST} -w ${WRKDIR}; then				\
+			${RM} -fr ${WRKDIR};				\
 		else							\
-			${STEP_MSG} ${WRKDIR:Q}" not writable, skipping"; \
+			${STEP_MSG} ${WRKDIR}" not writable, skipping";	\
 		fi;							\
         fi
-.  if defined(WRKOBJDIR)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+.if defined(WRKOBJDIR)
+	${RUN}								\
 	${RMDIR} ${BUILD_DIR} 2>/dev/null || ${TRUE};			\
 	${RMDIR} ${BUILD_DIR:H} 2>/dev/null || ${TRUE};			\
 	${RM} -f ${WRKDIR_BASENAME} 2>/dev/null || ${TRUE}
-.  endif
+.endif
 
 _CLEAN_TARGETS+=	pre-clean
 .if empty(CLEANDEPENDS:M[nN][oO])
