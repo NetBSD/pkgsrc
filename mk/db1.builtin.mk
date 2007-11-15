@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.18 2007/10/17 10:43:37 rillig Exp $
+# $NetBSD: db1.builtin.mk,v 1.19 2007/11/15 12:15:43 rillig Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -9,7 +9,7 @@ BUILTIN_FIND_FILES.H_DB=	/usr/include/db1/db.h /usr/include/db.h
 # The builtin Berkeley database library must support hash version 2 or
 # else it doesn't support db-1.85 databases.
 #
-BUILTIN_FIND_GREP.H_DB=	^\#define.*HASHVERSION.*2$$
+BUILTIN_FIND_GREP.H_DB=	^\#define.*HASHVERSION.*2\$$
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -83,7 +83,7 @@ BUILDLINK_TARGETS+=	buildlink-db1-db185-h
 .  if !target(buildlink-db1-db185-h)
 .PHONY: buildlink-db1-db185-h
 buildlink-db1-db185-h:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	src=${H_DB:Q};							\
 	dest=${BUILDLINK_DIR:Q}"/include/db_185.h";			\
 	if ${TEST} -f "$$src" -a ! -f "$$dest"; then			\
