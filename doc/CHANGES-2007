@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2387 2007/11/15 10:48:40 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2388 2007/11/15 12:58:49 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4421,3 +4421,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Class-Accessor to 0.31 [hiramatsu 2007-11-15]
 	Updated databases/sqlite3 to 3.5.2 [rillig 2007-11-15]
 	Updated databases/sqlite3-tcl to 3.5.2 [rillig 2007-11-15]
+	Updated chat/jabberd2 to 2.1.14nb1 [sborrill 2007-11-15]
