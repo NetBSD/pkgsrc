@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2388 2007/11/15 12:58:49 sborrill Exp $
+$NetBSD: CHANGES-2007,v 1.2389 2007/11/15 15:05:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4422,3 +4422,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/sqlite3 to 3.5.2 [rillig 2007-11-15]
 	Updated databases/sqlite3-tcl to 3.5.2 [rillig 2007-11-15]
 	Updated chat/jabberd2 to 2.1.14nb1 [sborrill 2007-11-15]
+	Updated mail/thunderbird to 2.0.0.9 [tron 2007-11-15]
