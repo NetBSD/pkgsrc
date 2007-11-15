@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/12 20:47:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/15 23:53:48 dmcmahill Exp $
 bin/gwave
 bin/gwave-exec
 bin/gwaverepl
 bin/sp2sp
+bin/sweepsplit
 man/man1/sp2sp.1
 share/guile/app/gwave/cmds.scm
 share/guile/app/gwave/dynlink.scm
@@ -12,6 +13,7 @@ share/guile/app/gwave/export.scm
 share/guile/app/gwave/extra-menus.scm
 share/guile/app/gwave/globals.scm
 share/guile/app/gwave/gtk-helpers.scm
+share/guile/app/gwave/gwave-config.scm
 share/guile/app/gwave/gwave-startup.scm
 share/guile/app/gwave/minimal.scm
 share/guile/app/gwave/std-args.scm
