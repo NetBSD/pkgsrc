@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2381 2007/11/15 01:03:01 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2382 2007/11/15 01:07:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4415,5 +4415,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-HTMLObject to 2.28 [hiramatsu 2007-11-14]
 	Renamed devel/netbsd-iscsi to devel/netbsd-iscsi-target [agc 2007-11-14]
 	Added devel/netbsd-iscsi-initiator version 20071114 [agc 2007-11-14]
-	Removed net/ripe-whois/patches [seb 2007-11-15]
+	Removed net/ripe-whois [seb 2007-11-15]
 	Added net/whois3 version 3.2.2 [seb 2007-11-15]
