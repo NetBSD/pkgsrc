@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2390 2007/11/15 20:39:46 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.2391 2007/11/15 22:12:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4424,3 +4424,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/jabberd2 to 2.1.14nb1 [sborrill 2007-11-15]
 	Updated mail/thunderbird to 2.0.0.9 [tron 2007-11-15]
 	Updated print/p5-PostScript-MailLabels to 2.25 [jlam 2007-11-15]
+	Updated www/horde to 3.1.5 [adrianp 2007-11-15]
