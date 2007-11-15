@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2007/07/04 20:55:04 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2007/11/15 22:11:36 adrianp Exp $
 
-DISTNAME=	horde-3.1.4
+DISTNAME=	horde-3.1.5
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -39,6 +39,16 @@ PKG_USERS_VARS+=APACHE_USER
 
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		HORDEDIR=${HORDEDIR:Q}
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	po/translation.php \
+			scripts/count_sessions.php \
+			scripts/create-symlinks.php \
+			scripts/remove_prefs.php \
+			scripts/upgrades/migrate_user_categories.php \
+			scripts/upgrades/move_history_out_of_datatree.php
 
 CONF_FILES+=		${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES_PERMS+=	${HORDEDIR}/config/conf.php.dist \
