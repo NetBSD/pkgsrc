@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.15 2007/09/15 09:17:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2007/11/15 10:39:18 rillig Exp $
 
-DISTNAME=	sqlite-3.4.2
+DISTNAME=	sqlite-3.5.2
 PKGNAME=	${DISTNAME:S/-/3-/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
 		http://www.sqlite.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hwaci.com/sw/sqlite/
+HOMEPAGE=	http://www.sqlite.org/
 COMMENT=	SQL Database Engine in a C Library
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/sqlite3/distinfo
