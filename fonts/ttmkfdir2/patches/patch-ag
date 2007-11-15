@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2007/05/24 02:06:17 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.2 2007/11/15 06:36:46 rillig Exp $
 
---- commandline.cpp.orig	2000-01-12 03:31:50.000000000 -0500
-+++ commandline.cpp
+--- commandline.cpp.orig	2000-01-12 09:31:50.000000000 +0100
++++ commandline.cpp	2007-11-15 06:51:09.407141000 +0100
 @@ -1,6 +1,18 @@
  #include <cstdlib>
  
@@ -21,3 +21,12 @@ $NetBSD: patch-ag,v 1.1 2007/05/24 02:06:17 dmcmahill Exp $
  #include <getopt.h>
  
  #include "commandline.h"
+@@ -35,7 +47,7 @@ Commandline::parse (int argc, char *argv
+     int c, j, option_index;
+ 
+     for (i = OptionsByName.begin (), j = 0; i != OptionsByName.end (); i++, j++) {
+-	lopts[j].name    = i->second->name.c_str ();
++	lopts[j].name    = const_cast<char *>(i->second->name.c_str ());
+ 	lopts[j].has_arg = i->second->argument;
+ 	lopts[j].flag    = 0;
+ 	lopts[j].val     = i->second->shortop;
