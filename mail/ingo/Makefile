@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/07/04 20:54:44 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/15 22:30:49 adrianp Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -18,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
 HORDEDIR=	${PREFIX}/share/horde
 INGODIR=	${HORDEDIR}/ingo
-INGOVER=	1.1.3
+INGOVER=	1.1.4
 PAXDIRS=	lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	INGODIR=${INGODIR:Q}
@@ -34,6 +34,7 @@ SUBST_SED.files=	-e "s|@INGODIR@|${INGODIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 PKG_USERS_VARS+=	APACHE_USER
+BUILD_DEFS=		APACHE_USER
 
 CONF_FILES=		${EGDIR}/ingo.conf ${PKG_SYSCONFDIR}/ingo.conf
 CONF_FILES_PERMS+=	${INGODIR}/config/conf.xml.dist \
@@ -52,9 +53,9 @@ CONF_FILES_PERMS+=	${INGODIR}/config/prefs.php.dist \
 .include "options.mk"
 
 do-build:
-	@${CP} ${FILESDIR}/ingo.conf.dist ${WRKSRC}/ingo.conf.dist
-	@${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
-	@${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
+	${CP} ${FILESDIR}/ingo.conf.dist ${WRKSRC}/ingo.conf.dist
+	${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
+	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -72,16 +73,16 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${INGODIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${INGODIR}/${d:Q}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${INGODIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${INGODIR}
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INGODIR}
-	@${FIND} ${INGODIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	@${FIND} ${INGODIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	@${CHOWN} ${APACHE_USER}:${SHAREGRP} ${INGODIR}/config
-	@${CHMOD} 0750 ${INGODIR}/config
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INGODIR}
+	${FIND} ${INGODIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${INGODIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${INGODIR}/config
+	${CHMOD} 0750 ${INGODIR}/config
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
