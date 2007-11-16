@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2399 2007/11/16 08:07:18 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2400 2007/11/16 11:55:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4433,3 +4433,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tor to 0.1.2.18 [bjs 2007-11-16]
 	Added devel/tig version 0.9.1 [bjs 2007-11-16]
 	Updated net/aria2 to 0.11.4nb2 [bjs 2007-11-16]
+	Updated net/samba to 3.0.26anb2 [tron 2007-11-16]
