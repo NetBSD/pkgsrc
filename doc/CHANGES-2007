@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2400 2007/11/16 11:55:09 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2401 2007/11/16 11:56:24 martin Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4434,3 +4434,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/tig version 0.9.1 [bjs 2007-11-16]
 	Updated net/aria2 to 0.11.4nb2 [bjs 2007-11-16]
 	Updated net/samba to 3.0.26anb2 [tron 2007-11-16]
+	Updated www/webalizer to 2.1.10nb7 [martin 2007-11-16]
