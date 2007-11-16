@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2401 2007/11/16 11:56:24 martin Exp $
+$NetBSD: CHANGES-2007,v 1.2402 2007/11/16 11:58:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4435,3 +4435,13 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/aria2 to 0.11.4nb2 [bjs 2007-11-16]
 	Updated net/samba to 3.0.26anb2 [tron 2007-11-16]
 	Updated www/webalizer to 2.1.10nb7 [martin 2007-11-16]
+	Updated databases/qdbm to 1.8.77 [obache 2007-11-16]
+	Updated databases/java-qdbm to 1.0.0.1.8.77 [obache 2007-11-16]
+	Updated databases/p5-qdbm to 1.0.0.1.8.77 [obache 2007-11-16]
+	Updated databases/qdbm-cgi to 0.0.1.1.8.77 [obache 2007-11-16]
+	Updated databases/qdbm-plus to 1.0.0.1.8.77 [obache 2007-11-16]
+	Updated databases/ruby-qdbm to 1.0.0.1.8.77 [obache 2007-11-16]
+	Updated textproc/hyperestraier to 1.4.11 [obache 2007-11-16]
+	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.11 [obache 2007-11-16]
+	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.11 [obache 2007-11-16]
+	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.11 [obache 2007-11-16]
