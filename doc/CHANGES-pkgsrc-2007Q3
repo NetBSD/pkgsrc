@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.14 2007/11/15 18:33:30 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.15 2007/11/16 15:19:47 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -33,3 +33,5 @@ Pullup ticket 2224 - requested by markd
 security fix for kdegraphics3
 Pullup ticket 2227 - requested by tron
 security update for thunderbird
+Pullup ticket 2228 - requested by tron
+security update for samba
