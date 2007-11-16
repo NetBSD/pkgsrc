@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.898 2007/11/14 20:35:44 agc Exp $
+# $NetBSD: Makefile,v 1.899 2007/11/16 08:15:19 bjs Exp $
 #
 
 COMMENT=	Development utilities
@@ -773,6 +773,7 @@ SUBDIR+=	tcl-tclcl
 SUBDIR+=	tcllib
 SUBDIR+=	teem
 SUBDIR+=	tet3
+SUBDIR+=	tig
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
