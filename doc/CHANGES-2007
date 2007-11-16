@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2397 2007/11/16 05:31:17 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2398 2007/11/16 07:42:47 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4431,3 +4431,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated cad/gwave to 20060606 [dmcmahill 2007-11-15]
 	Updated devel/p5-Class-Autouse to 1.29 [hiramatsu 2007-11-16]
 	Updated net/tor to 0.1.2.18 [bjs 2007-11-16]
+	Added devel/tig version 0.9.1 [bjs 2007-11-16]
