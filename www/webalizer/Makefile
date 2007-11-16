@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2007/02/22 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/11/16 11:50:48 martin Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
 PKGNAME=	webalizer-2.1.10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/ \
 		http://gd.tuwien.ac.at/infosys/logeval/webalizer/
@@ -73,6 +73,8 @@ post-install:
 	done;
 	@${ECHO} "@dirrm ${_DOC_SUBDIR}" >> ${PLIST_ADD};
 
+BDB_ACCEPTED=db1 db2
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
