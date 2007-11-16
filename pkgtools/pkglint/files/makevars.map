@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.173 2007/11/03 14:49:43 rillig Exp $
+# $NetBSD: makevars.map,v 1.174 2007/11/16 08:11:16 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -190,7 +190,7 @@ BUILTIN_PKG		Identifier [builtin.mk:psu]
 BUILTIN_PKG.*		PkgName [builtin.mk:psu]
 BUILTIN_FIND_FILES_VAR	List of Varname [builtin.mk:s]
 BUILTIN_FIND_FILES.*	List of Pathname [builtin.mk:s]
-BUILTIN_FIND_GREP.*	List of ShellWord [builtin.mk:s]
+BUILTIN_FIND_GREP.*	String [builtin.mk:s]
 BUILTIN_FIND_LIBS	List of Pathname [builtin.mk:s]
 BUILTIN_IMAKE_CHECK	List of Unchecked [builtin.mk:s]
 BUILTIN_IMAKE_CHECK.*	YesNo []
