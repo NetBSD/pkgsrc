@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.2 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-ay,v 1.2.6.1 2007/11/16 15:19:24 ghen Exp $
 
---- script/installswat.sh.orig	2007-02-04 18:59:25.000000000 +0000
-+++ script/installswat.sh	2007-02-11 17:31:13.000000000 +0000
-@@ -136,7 +136,7 @@
+--- script/installswat.sh.orig	2007-03-01 13:55:02.000000000 +0900
++++ script/installswat.sh
+@@ -140,7 +140,7 @@ if [ -d $SRCDIR../docs/htmldocs/ ]; then
        
        INSTALLDIR="$DESTDIR/$SWATDIR/help/`echo $dir | sed 's/htmldocs\///g'`"
        if test ! -d "$INSTALLDIR" -a "$mode" = 'install'; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ay,v 1.2 2007/02/11 18:39:04 tron Exp $
          if test ! -d "$INSTALLDIR"; then
            echo "Failed to make directory $INSTALLDIR, does $USER have privileges? "
            exit 1
-@@ -164,7 +164,7 @@
+@@ -168,7 +168,7 @@ if [ -d $SRCDIR../docs/htmldocs/ ]; then
  
        if test -d "$SRCDIR../docs/$dir/images/"; then
            if test ! -d "$INSTALLDIR/images/" -a "$mode" = 'install'; then
@@ -20,7 +20,7 @@ $NetBSD: patch-ay,v 1.2 2007/02/11 18:39:04 tron Exp $
                if test ! -d "$INSTALLDIR/images/"; then
                    echo "Failed to make directory $INSTALLDIR/images, does $USER have privileges? "
                    exit 1
-@@ -200,7 +200,7 @@
+@@ -204,7 +204,7 @@ if [ "x$BOOKDIR" != "x" -a -f $SRCDIR../
  
      for d in $BOOKDIR $BOOKDIR/figs ; do
          if test ! -d "$d" -a "$mode" = 'install'; then

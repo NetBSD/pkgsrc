@@ -1,8 +1,8 @@
-$NetBSD: patch-bi,v 1.4 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-bi,v 1.4.6.1 2007/11/16 15:19:26 ghen Exp $
 
---- lib/sharesec.c.orig	2006-04-20 03:29:23.000000000 +0100
-+++ lib/sharesec.c	2007-02-11 17:46:13.000000000 +0000
-@@ -47,7 +47,7 @@
+--- lib/sharesec.c.orig	2007-03-01 13:54:29.000000000 +0900
++++ lib/sharesec.c
+@@ -47,10 +47,10 @@ BOOL share_info_db_init(void)
  		return True;
  	}
  
@@ -10,4 +10,8 @@ $NetBSD: patch-bi,v 1.4 2007/02/11 18:39:04 tron Exp $
 +	share_tdb = tdb_open_log(state_path("share_info.tdb"), 0, TDB_DEFAULT, O_RDWR|O_CREAT, 0600);
  	if (!share_tdb) {
  		DEBUG(0,("Failed to open share info database %s (%s)\n",
- 			lock_path("share_info.tdb"), strerror(errno) ));
+-			lock_path("share_info.tdb"), strerror(errno) ));
++			state_path("share_info.tdb"), strerror(errno) ));
+ 		return False;
+ 	}
+  

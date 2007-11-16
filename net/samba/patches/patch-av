@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.2 2006/01/02 22:33:36 jlam Exp $
+$NetBSD: patch-av,v 1.2.14.1 2007/11/16 15:19:24 ghen Exp $
 
---- script/installman.sh.orig	2005-12-02 16:58:47.000000000 -0500
+--- script/installman.sh.orig	2007-03-01 13:55:02.000000000 +0900
 +++ script/installman.sh
-@@ -32,7 +32,7 @@ for lang in $langs; do
+@@ -33,7 +33,7 @@ for lang in $langs; do
      langdir=$MANDIR/$lang
      for d in $MANDIR $langdir $langdir/man1 $langdir/man5 $langdir/man7 $langdir/man8; do
  	if [ ! -d $d ]; then
