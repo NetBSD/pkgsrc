@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2395 2007/11/15 23:55:17 dmcmahill Exp $
+$NetBSD: CHANGES-2007,v 1.2396 2007/11/16 03:12:17 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/turba to 2.1.5 [adrianp 2007-11-15]
 	Updated mail/ingo to 1.1.4 [adrianp 2007-11-15]
 	Updated cad/gwave to 20060606 [dmcmahill 2007-11-15]
+	Updated devel/p5-Class-Autouse to 1.29 [hiramatsu 2007-11-16]
