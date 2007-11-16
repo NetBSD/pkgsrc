@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.174 2007/09/25 10:03:53 hira Exp $
+# $NetBSD: Makefile,v 1.174.2.1 2007/11/16 15:19:21 ghen Exp $
 
 .include "Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -13,15 +13,17 @@ MAINTAINER=		jlam@pkgsrc.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 
-VERSION=		3.0.24
+VERSION=		3.0.26a
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
 MAKE_JOBS_SAFE=		NO
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=		yes
+BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -96,10 +98,12 @@ MAKEFLAGS+=	PWD_MKDB=${PWD_MKDB:Q}
 FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
-DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=		share/doc/${PKGBASE}
+EGDIR=		share/examples/${PKGBASE}
 
-CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+
+CONF_FILES=		${PREFIX}/${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 MAKE_DIRS=		${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR} ${SAMBA_STATEDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
@@ -139,7 +143,7 @@ SMBVERSION.smbclient=	${LIBSMBCLIENT_MAJOR} ${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT
 install-samba-lib-symlinks:
 .for l in ${SMBLIBS}
 	for v in ${SMBVERSION.${l}}; do					\
-		(cd ${SAMBA_LIBDIR} && rm -f lib${l}.so.$$v &&		\
+		(cd ${DESTDIR}${SAMBA_LIBDIR} && rm -f lib${l}.so.$$v && \
 			ln -s lib${l}.so lib${l}.so.$$v);		\
 	done
 .endfor
@@ -148,30 +152,28 @@ post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
 
 post-install: install-samba-lib-symlinks
-	${RMDIR} ${PREFIX}/share/samba/swat/js
-	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/include
-	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/images
-	${RMDIR} ${PREFIX}/share/samba/swat/lang/ja/js
-	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/include
-	${RMDIR} ${PREFIX}/share/samba/swat/lang/tr/js
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/js
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/include
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/images
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/js
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/include
+	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/js
 	for d in idmap pdb rpc; do					\
-		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
+		${RMDIR} ${DESTDIR}${SAMBA_LIBDIR}/$$d;			\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKDIR}/${DISTNAME}/docs/registry; for f in *.reg; do	\
-		${INSTALL_DATA} $${f} ${DOCDIR}/$${f};			\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${DOCDIR}/$${f}; \
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EGDIR}/adduser.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EGDIR}/deluser.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${DESTDIR}${PREFIX}/${EGDIR}/adduser.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${DESTDIR}${PREFIX}/${EGDIR}/deluser.sh
 	cd ${WRKDIR}/${DISTNAME}/examples; \
-		${INSTALL_DATA} LDAP/samba.schema ${EGDIR}; \
-		${INSTALL_DATA} smb.conf.default ${EGDIR}
-	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpasswd.sh ${EGDIR}
-	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
-	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
-	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
-	${CHMOD} -x ${PREFIX}/include/libmsrpc.h \
-	  ${PREFIX}/include/libsmbclient.h
+		${INSTALL_DATA} LDAP/samba.schema ${DESTDIR}${PREFIX}/${EGDIR}; \
+		${INSTALL_DATA} smb.conf.default ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
+	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
+	${CHMOD} -x ${DESTDIR}${PREFIX}/include/libmsrpc.h \
+	  ${DESTDIR}${PREFIX}/include/libsmbclient.h
 
 .include "../../mk/bsd.pkg.mk"

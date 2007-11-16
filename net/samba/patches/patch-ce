@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.2 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-ce,v 1.1.2.2 2007/11/16 15:19:28 ghen Exp $
 
---- groupdb/mapping.c.orig	2007-02-04 18:59:14.000000000 +0000
-+++ groupdb/mapping.c	2007-02-11 17:42:21.000000000 +0000
-@@ -56,7 +56,7 @@
+--- groupdb/mapping_tdb.c.orig	2007-04-25 18:38:59.000000000 +0900
++++ groupdb/mapping_tdb.c
+@@ -39,7 +39,7 @@ static TDB_CONTEXT *tdb; /* used for dri
  	if (tdb)
  		return True;
  		

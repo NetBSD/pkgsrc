@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2007/03/20 22:17:09 grant Exp $
+# $NetBSD: options.mk,v 1.21.6.1 2007/11/16 15:19:22 ghen Exp $
 
 # Recommended package options for various setups:
 #
@@ -48,12 +48,13 @@ CONFIGURE_ARGS+=	--with-acl-support
 .  include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 PLIST_SUBST+=		CUPS=
+INSTALLATION_DIRS+=	libexec/cups/backend
 
 .PHONY: samba-cups-install
 post-install: samba-cups-install
 samba-cups-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/cups/backend
-	cd ${PREFIX}/libexec/cups/backend && ${LN} -fs ../../../bin/smbspool smb
+	cd ${DESTDIR}${PREFIX}/libexec/cups/backend && \
+		${LN} -fs ../../../bin/smbspool smb
 .else
 CONFIGURE_ARGS+=	--disable-cups
 PLIST_SUBST+=		CUPS="@comment "
@@ -79,16 +80,16 @@ CONFIGURE_ARGS+=	--with-pam_smbpass
 CONFIGURE_ARGS+=	--with-pammodulesdir=${PAM_INSTMODULEDIR}
 PLIST_SUBST+=		PAM_SMBPASS=lib/security/pam_smbpass.so
 PLIST_SUBST+=		PAM=
+INSTALLATION_DIRS+=	${EGDIR}/pam_smbpass
 
 .PHONY: samba-pam-smbpass-install
 post-install: samba-pam-smbpass-install
 samba-pam-smbpass-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/pam_smbpass/README			\
-		${DOCDIR}/README.pam_smbpass
-	${INSTALL_DATA_DIR} ${EGDIR}/pam_smbpass
+		${DESTDIR}${PREFIX}/${DOCDIR}/README.pam_smbpass
 	cd ${WRKSRC}/pam_smbpass/samples; for f in [a-z]*; do		\
-		${INSTALL_DATA} $${f} ${EGDIR}/pam_smbpass/$${f};	\
+		${INSTALL_DATA} $${f} \
+			${DESTDIR}${PREFIX}/${EGDIR}/pam_smbpass/$${f};	\
 	done
 .else
 PLIST_SUBST+=		PAM_SMBPASS="@comment no PAM smbpass module"
@@ -133,7 +134,7 @@ NSS_WINBIND_cmd=	\
 post-install: samba-nss-winbind-install
 samba-nss-winbind-install:
 	lib=${WRKSRC:Q}/nsswitch/${NSS_WINBIND:T:Q};			\
-	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${PREFIX:Q}/lib
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX:Q}/lib
 
 # Install the NSS WINS module if it exists.
 PLIST_SUBST+=	NSS_WINS=${NSS_WINS:Q}
@@ -151,7 +152,7 @@ NSS_WINS_cmd=	\
 post-install: samba-nss-wins-install
 samba-nss-wins-install:
 	lib=${WRKSRC:Q}/nsswitch/${NSS_WINS:T:Q};			\
-	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${PREFIX:Q}/lib
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX:Q}/lib
 .else
 CONFIGURE_ARGS+=	--without-winbind
 PLIST_SUBST+=		WINBIND="@comment "
