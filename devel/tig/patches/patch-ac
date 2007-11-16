@@ -1,0 +1,37 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/11/16 07:41:11 bjs Exp $
+
+--- tig.c.orig	2007-11-16 01:48:58.000000000 -0500
++++ tig.c
+@@ -353,6 +353,7 @@ sq_quote(char buf[SIZEOF_STR], size_t bu
+ 	REQ_(TOGGLE_REV_GRAPH,	"Toggle revision graph visualization"), \
+ 	REQ_(STATUS_UPDATE,	"Update file status"), \
+ 	REQ_(STATUS_MERGE,	"Merge file using external tool"), \
++	REQ_(TREE_PARENT,	"Switch to parent directory in tree view"), \
+ 	REQ_(EDIT,		"Open in editor"), \
+ 	REQ_(CHERRY_PICK,	"Cherry-pick commit to current branch")
+ 
+@@ -790,6 +791,7 @@ static struct keybinding default_keybind
+ 	{ ':',		REQ_PROMPT },
+ 	{ 'u',		REQ_STATUS_UPDATE },
+ 	{ 'M',		REQ_STATUS_MERGE },
++	{ ',',		REQ_TREE_PARENT },
+ 	{ 'e',		REQ_EDIT },
+ 	{ 'C',		REQ_CHERRY_PICK },
+ 
+@@ -2861,6 +2863,16 @@ tree_request(struct view *view, enum req
+ {
+ 	enum open_flags flags;
+ 
++	if (request == REQ_TREE_PARENT) {
++		if (*opt_path) {
++			/* fake 'cd  ..' */
++			request = REQ_ENTER;
++			line = &view->line[1];
++		} else {
++			/* quit view if at top of tree */
++			return REQ_VIEW_CLOSE;
++		}
++	}
+ 	if (request != REQ_ENTER)
+ 		return request;
+ 
