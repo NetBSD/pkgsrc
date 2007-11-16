@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/10/09 12:49:23 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2007/11/16 00:16:29 rillig Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -30,7 +30,7 @@ pre-configure:
 		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'		\
 		${WRKSRC}/include/config.h.in > ${WRKSRC}/include/config.h
 
-PRE_ROOT_CMD=	${CHMOD} -R go+rwx ${WRKDIR}
+PRE_ROOT_CMD=	${CHMOD} -R go+rwx ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/designdoc.ps ${PREFIX}/share/doc/tripwire
