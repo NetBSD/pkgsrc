@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.3 2006/04/01 04:55:35 jlam Exp $
+$NetBSD: patch-ca,v 1.3.12.1 2007/11/16 15:19:27 ghen Exp $
 
---- VERSION.orig	2006-03-29 18:36:47.000000000 -0500
+--- VERSION.orig	2007-09-11 23:17:48.000000000 +0900
 +++ VERSION
-@@ -96,5 +96,5 @@ SAMBA_VERSION_IS_SVN_SNAPSHOT=
+@@ -95,5 +95,5 @@ SAMBA_VERSION_IS_SVN_SNAPSHOT=
  # e.g. SAMBA_VERSION_VENDOR_SUFFIX=vendor_version()    #
  #  ->  "CVS 3.0.0rc2-VendorVersion"                    #
  ########################################################

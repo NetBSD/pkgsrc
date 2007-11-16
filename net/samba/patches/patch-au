@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-au,v 1.6.6.1 2007/11/16 15:19:24 ghen Exp $
 
---- configure.in.orig	2007-02-04 18:59:28.000000000 +0000
-+++ configure.in	2007-02-11 16:16:27.000000000 +0000
-@@ -24,6 +24,7 @@
+--- configure.in.orig	2007-08-20 22:04:51.000000000 +0900
++++ configure.in
+@@ -27,6 +27,7 @@ AC_PREFIX_DEFAULT(/usr/local/samba)
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -10,7 +10,7 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -37,7 +38,8 @@
+@@ -40,7 +41,8 @@ AC_ARG_WITH(fhs,
  [  --with-fhs              Use FHS-compliant paths (default=no)],
  [ case "$withval" in
    yes)
@@ -20,7 +20,7 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -97,6 +99,22 @@
+@@ -100,6 +102,22 @@ AC_ARG_WITH(lockdir,
    esac])
  
  #################################################
@@ -43,7 +43,7 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
  # set pid directory location
  AC_ARG_WITH(piddir,
  [  --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)],
-@@ -229,6 +247,7 @@
+@@ -246,6 +264,7 @@ fi
  
  AC_SUBST(configdir)
  AC_SUBST(lockdir)
@@ -51,16 +51,16 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
  AC_SUBST(piddir)
  AC_SUBST(logfilebase)
  AC_SUBST(privatedir)
-@@ -1271,7 +1290,7 @@
- AC_CHECK_FUNCS(lstat64 fopen64 atexit grantpt dup2 lseek64 ftruncate64)
+@@ -1231,7 +1250,7 @@ AC_CHECK_FUNCS(lstat64 fopen64 atexit gr
  AC_CHECK_FUNCS(fseek64 fseeko64 ftell64 ftello64 setluid getpwanam setlinebuf)
  AC_CHECK_FUNCS(opendir64 readdir64 seekdir64 telldir64 rewinddir64 closedir64)
+ AC_CHECK_FUNCS(getpwent_r)
 -AC_CHECK_FUNCS(getdents getdents64)
 +AC_CHECK_FUNCS(getdents getdents64 getpwent_r)
  AC_CHECK_FUNCS(srandom random srand rand setenv usleep strcasecmp fcvt fcvtl symlink readlink)
  AC_CHECK_FUNCS(syslog vsyslog timegm)
  AC_CHECK_FUNCS(setlocale nl_langinfo)
-@@ -3420,7 +3439,7 @@
+@@ -3498,7 +3517,7 @@ if test x"$with_ads_support" != x"no"; t
    AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
  
    # Heimdal checks.
@@ -69,7 +69,7 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
    AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
    AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
  
-@@ -5287,15 +5306,39 @@
+@@ -5719,32 +5738,40 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -81,6 +81,16 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
 -		    nsswitch/winbind_nss_linux.o"
 -		WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
 -		WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
+-		;;
+-
+-	*netbsd*[[3-9]]*)
+-		# NetBSD winbind client is implemented as a wrapper
+-		# around the Linux version. It needs getpwent_r() to
+-		# indicate libc's use of the correct nsdispatch API.
+-		#
+-		if test x"$ac_cv_func_getpwent_r" = x"yes"; then
+-			WINBIND_NSS_EXTRA_OBJS="\
+-			    nsswitch/winbind_nss_netbsd.o \
 +	*freebsd*)
 +		case "$UNAME_R" in
 +		[5-9]*)
@@ -88,13 +98,18 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
 +			# around the Linux version.
 +			NSSSONAMEVERSIONSUFFIX=".1"
 +			WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_freebsd.o \
-+			    nsswitch/winbind_nss_linux.o"
-+			WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
-+			WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
+ 			    nsswitch/winbind_nss_linux.o"
+ 			WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
+ 			WINBIND_WINS_NSS="nsswitch/nss_wins.$SHLIBEXT"
+-		else
+-			HAVE_WINBIND=no
+-			winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
+-		fi
 +			;;
 +		esac
  		;;
-+	*netbsd*)
++
++	*netbsd*[[3-9]]*)
 +		case "$UNAME_R" in
 +		[3-9]*)
 +			# NetBSD winbind client is implemented as a wrapper
@@ -102,7 +117,7 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
 +			# indicate libc's use of the correct nsdispatch API.
 +			#
 +			if test x"$ac_cv_func_getpwent_r" = x"yes"; then
-+				WINBIND_NSS_EXTRA_OBJS=" \
++				WINBIND_NSS_EXTRA_OBJS="\
 +				    nsswitch/winbind_nss_netbsd.o \
 +				    nsswitch/winbind_nss_linux.o"
 +				WINBIND_NSS="nsswitch/nss_winbind.$SHLIBEXT"
@@ -112,20 +127,8 @@ $NetBSD: patch-au,v 1.6 2007/02/11 18:39:04 tron Exp $
 +				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
 +			fi
 +			;;
++		;;
 +		esac
-+  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_irix.o"
-@@ -5361,6 +5404,11 @@
- 
- # Display test results
- 
-+if test x"$HAVE_WINBIND" = x"no"; then
-+	WINBIND_NSS=""
-+	WINBIND_WINS_NSS=""
-+fi
-+
- if test x"$HAVE_WINBIND" = x"yes"; then
-         AC_MSG_RESULT(yes)
- 	AC_DEFINE(WITH_WINBIND,1,[Whether to build winbind])

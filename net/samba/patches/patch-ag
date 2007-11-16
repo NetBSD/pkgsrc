@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2007/02/11 18:39:04 tron Exp $
+$NetBSD: patch-ag,v 1.6.6.1 2007/11/16 15:19:22 ghen Exp $
 
---- passdb/passdb.c.orig	2007-02-04 18:59:21.000000000 +0000
-+++ passdb/passdb.c	2007-02-11 15:29:46.000000000 +0000
-@@ -137,6 +137,7 @@
+--- passdb/passdb.c.orig	2007-05-24 00:29:17.000000000 +0900
++++ passdb/passdb.c
+@@ -135,6 +135,7 @@ static NTSTATUS samu_set_unix_internal(s
  	const char *guest_account = lp_guestaccount();
  	const char *domain = global_myname();
  	uint32 urid;
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.6 2007/02/11 18:39:04 tron Exp $
  
  	if ( !pwd ) {
  		return NT_STATUS_NO_SUCH_USER;
-@@ -145,7 +146,9 @@
+@@ -143,7 +144,9 @@ static NTSTATUS samu_set_unix_internal(s
  	/* Basic properties based upon the Unix account information */
  	
  	pdb_set_username(user, pwd->pw_name, PDB_SET);

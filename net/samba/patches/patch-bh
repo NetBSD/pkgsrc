@@ -1,8 +1,8 @@
-$NetBSD: patch-bh,v 1.2 2006/01/02 22:33:36 jlam Exp $
+$NetBSD: patch-bh,v 1.2.14.1 2007/11/16 15:19:26 ghen Exp $
 
---- registry/reg_db.c.orig	2005-10-17 22:45:06.000000000 -0400
+--- registry/reg_db.c.orig	2007-03-01 13:55:05.000000000 +0900
 +++ registry/reg_db.c
-@@ -205,12 +205,12 @@ BOOL regdb_init( void )
+@@ -234,12 +234,12 @@ BOOL regdb_init( void )
  	if ( tdb_reg )
  		return True;
  
@@ -18,7 +18,7 @@ $NetBSD: patch-bh,v 1.2 2006/01/02 22:33:36 jlam Exp $
  			return False;
  		}
  		
-@@ -252,11 +252,11 @@ WERROR regdb_open( void )
+@@ -281,11 +281,11 @@ WERROR regdb_open( void )
  	
  	become_root();
  
