@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.NetBSD.x86_64,v 1.2 2007/11/11 03:35:35 hira Exp $
+# $NetBSD: Makefile.NetBSD.x86_64,v 1.3 2007/11/17 16:28:09 hira Exp $
 
 #OPENOFFICE_DLLSUFFIX=	bx
 OPENOFFICE_OUTPATH=	unxbsdx3
@@ -9,3 +9,4 @@ OPENOFFICE_SETFILE=	NetBSDX86-64
 #  used when making a shared object; recompile with -fPIC
 #  /usr/lib/libsupc++.a: could not read symbols: Bad value
 USE_PKGSRC_GCC=		YES
+.include "../../mk/compiler.mk"

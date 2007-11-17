@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.8 2007/11/11 15:46:25 hira Exp $
+$NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
 
 --- config_office/configure.orig	2007-08-24 21:31:18.000000000 +0900
-+++ config_office/configure	2007-11-12 00:42:00.000000000 +0900
++++ config_office/configure	2007-11-13 10:30:55.000000000 +0900
 @@ -3010,11 +3010,11 @@
  		test_cups=no
  		_os=OSF1
@@ -59,6 +59,41 @@ $NetBSD: patch-ba,v 1.8 2007/11/11 15:46:25 hira Exp $
     fi
  
        save_CPPFLAGS="$CPPFLAGS"
+@@ -13090,7 +13090,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
+ echo "${ECHO_T}$ac_cv_header_db_h" >&6
+ if test $ac_cv_header_db_h = yes; then
+-   DB_INCLUDES=/usr/include
++   DB_INCLUDES=${BLNK_PREFIX_db4}/include/db4
+ else
+ 
+              CFLAGS=-I/usr/include/db4
+@@ -13213,13 +13213,13 @@
+     #AC_CHECK_LIB(db, db_create, [],
+     #  [AC_MSG_ERROR([db library not installed or functional])], [])
+ 
+-echo "$as_me:$LINENO: checking for main in -ldb" >&5
+-echo $ECHO_N "checking for main in -ldb... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for main in -ldb4" >&5
++echo $ECHO_N "checking for main in -ldb4... $ECHO_C" >&6
+ if test "${ac_cv_lib_db_main+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldb  $LIBS"
++LIBS="-ldb4  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -13276,7 +13276,7 @@
+ #define HAVE_LIBDB 1
+ _ACEOF
+ 
+-  LIBS="-ldb $LIBS"
++  LIBS="-ldb4 $LIBS"
+ 
+ else
+   { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
 @@ -18928,7 +18928,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_audio_audiolib_h" >&5
  echo "${ECHO_T}$ac_cv_header_audio_audiolib_h" >&6

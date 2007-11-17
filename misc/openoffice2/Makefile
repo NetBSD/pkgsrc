@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2007/11/11 15:46:25 hira Exp $
+# $NetBSD: Makefile,v 1.29 2007/11/17 16:28:09 hira Exp $
 #
 
 OO_VER=			2.3.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -54,7 +54,7 @@ SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
 SUBST_FILES.lib=	solenv/inc/libs.mk
-.for pkg in expat jpeg zlib
+.for pkg in db4 expat jpeg zlib
 SUBST_SED.lib+=		-e 's,@BLNK_PREFIX_${pkg}@,${BUILDLINK_PREFIX.${pkg}},g'
 LIBS+=			-L${BUILDLINK_PREFIX.${pkg}}/lib
 LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
@@ -62,6 +62,7 @@ LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
 
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
+CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ENV+=		BLNK_PREFIX_nas=${BUILDLINK_PREFIX.nas}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
@@ -69,11 +70,13 @@ CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--with-system-stdlibs
+CONFIGURE_ARGS+=	--with-system-db
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-freetype
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-libxml2
 CONFIGURE_ARGS+=	--with-system-libxslt
+CONFIGURE_ARGS+=	--with-system-neon
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 
@@ -167,6 +170,7 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../lang/python/application.mk"
 
+.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -176,6 +180,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
