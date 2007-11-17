@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/11/06 11:28:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2007/11/17 01:40:50 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMLIB2_BUILDLINK3_MK:=	${IMLIB2_BUILDLINK3_MK}+
@@ -24,7 +24,20 @@ BUILDLINK_PKGSRCDIR.imlib2?=	../../graphics/imlib2
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+
+_IMLIB2_PRE_X11_OPTION!= \
+	if ${PKG_INFO} -qe 'imlib2<=1.4.0'; then			\
+		${ECHO} yes;						\
+	else								\
+		${ECHO} no;						\
+	fi
+
+pkgbase := imlib2
+.include "../../mk/pkg-build-options.mk"
+
+.if ${_IMLIB2_PRE_X11_OPTION} == "yes" || !empty(PKG_BUILD_OPTIONS.imlib2:Mx11)
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
