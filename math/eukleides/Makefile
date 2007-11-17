@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/08/01 21:17:45 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2007/11/17 12:04:13 rillig Exp $
 
 DISTNAME=	eukleides.1.0.1
 PKGNAME=	eukleides-1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Euclidean geometry drawing language
 DEPENDS+=	pstoedit>=3.31:../../graphics/pstoedit
 
 BUILD_TARGET=	eukleides
-USE_TOOLS+=	bash:run bison gmake makeinfo
+USE_TOOLS+=	bash:run bison gmake makeinfo lex
 INFO_FILES=	# PLIST
 
 REPLACE_BASH=	euk2edit euk2eps

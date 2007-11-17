@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/11/17 12:04:13 rillig Exp $
 #
 
 DISTNAME=	9.01
@@ -15,6 +15,7 @@ COMMENT=	Usenet News reader for the X window system
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	xrn
 
+USE_TOOLS+=	lex yacc
 USE_IMAKE=	yes
 
 pre-install:

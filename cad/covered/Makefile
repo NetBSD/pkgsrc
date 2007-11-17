@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/12 03:11:18 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2007/11/17 12:04:11 rillig Exp $
 #
 
 DISTNAME=	covered-0.4.7
@@ -16,7 +16,7 @@ DEPENDS+=	verilog{,-current}-[0-9]*:../../cad/verilog
 CONFLICTS+=	covered-current-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	bison gmake
+USE_TOOLS+=	bison gmake lex
 
 # we use this hack of setting a cache variable because
 # the configure script uses AC_PATH_PROG to try and find

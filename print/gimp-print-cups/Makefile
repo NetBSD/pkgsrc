@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/11/17 12:04:14 rillig Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-cups-4.2.7
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	GIMP print plugin
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake lex
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-escputil=no --enable-libgimpprint=no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/02/09 15:15:49 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2007/11/17 12:04:12 rillig Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
@@ -15,7 +15,7 @@ BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1 pkgsrc-2006Q4
 
 WRKSRC=			${WRKDIR}/twin
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake lex yacc
 BUILD_TARGET=		depend world
 CONFIGURE_ARGS+=	--enable-debugger
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/11/17 12:04:14 rillig Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	GIMP print plugin
 
 CONFLICTS+=	gimp<=1.2.3
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake lex
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-samples --without-user-guide
