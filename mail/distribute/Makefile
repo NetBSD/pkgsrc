@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2007/11/17 13:40:15 wiz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -10,7 +10,7 @@ PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/BETA/
 PATCHFILES=	patch.20.gz patch.21e.gz patch.22e.gz patch.23e.gz \
 		patch.24e.gz patch.25e.gz patch.26e.gz
 
-MAINTAINER=	itojun@itojun.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # in japanese
 # HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
 # AWOL
