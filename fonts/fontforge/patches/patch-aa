@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2006/04/05 07:03:25 adam Exp $
+$NetBSD: patch-aa,v 1.6 2007/11/17 21:20:49 adam Exp $
 
---- fontforge/Makefile.dynamic.in.orig	2006-02-01 23:28:03.000000000 +0100
+--- fontforge/Makefile.dynamic.in.orig	2007-10-28 05:06:05.000000000 +0100
 +++ fontforge/Makefile.dynamic.in
-@@ -14,7 +14,7 @@ LIBTOOL = @LIBTOOL@
- CC = @CC@
+@@ -15,7 +15,7 @@ CC = @CC@
+ O = @O_EXTENSION@
  
  X_CFLAGS = @X_CFLAGS@
 -X_LIBS = @X_LIBS@
