@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2404 2007/11/17 01:41:06 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2405 2007/11/17 08:42:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4447,3 +4447,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.11 [obache 2007-11-16]
 	Updated sysutils/bchunk to 1.2.0 [dillo 2007-11-16]
 	Updated graphics/imlib2 to 1.4.0nb1 [obache 2007-11-17]
+	Updated games/alephone to 20071103 [obache 2007-11-17]
