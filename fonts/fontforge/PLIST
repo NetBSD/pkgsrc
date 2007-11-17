@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.15 2007/04/13 21:04:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/11/17 21:20:49 adam Exp $
 bin/fontforge
 bin/fontimage
+bin/fontlint
 bin/sfddiff
+lib/libfontforge.la
 lib/libgdraw.la
 lib/libgunicode.la
 lib/pkgconfig/fontforge.pc
 man/man1/fontforge.1
 man/man1/fontimage.1
+man/man1/fontlint.1
 man/man1/sfddiff.1
 share/locale/de/LC_MESSAGES/FontForge.mo
 share/locale/el/LC_MESSAGES/FontForge.mo
