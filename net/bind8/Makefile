@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/09/10 19:05:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.39 2007/11/17 12:04:13 rillig Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME}pl1
@@ -9,6 +9,8 @@ DISTFILES=	bind-src.tar.gz bind-doc.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
+
+USE_TOOLS+=	lex yacc
 
 WRKSRC=		${WRKDIR}
 BIND_VERSION=	8.4.7
