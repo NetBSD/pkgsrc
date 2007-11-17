@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6834 2007/11/17 09:55:59 wiz Exp $
+$NetBSD: TODO,v 1.6835 2007/11/17 11:09:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -306,6 +306,7 @@ Suggested package updates
 	o aqsis-1.2
 	o aranym-0.9.5
 	o argtable-2.3
+	o aria2-0.11.5
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.06
@@ -528,7 +529,7 @@ Suggested package updates
 	o geda-1.2.0.20070902
 	o gedit-2.20.3
 	o generator-cbiere-0.35r3
-	o genius-1.0.0
+	o genius-1.0.1
 	o getmail-4.7.7
 	o gettext-0.17
 	o gfract-0.33
@@ -774,7 +775,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.2.12.08
 	o matchbox-panel-0.9.3
-	o mathomatic-12.7.9
+	o mathomatic-12.8.0
 	o mcrypt-2.6.6
 	o mednafen-0.8.4
 	o memtestplus-1.70
@@ -1277,7 +1278,7 @@ Suggested package updates
 	o winbind-3.0.13
 	o windowlab-1.34
 	o wine-0.9.49
-	o wmii-3.5.1
+	o wmii-3.6
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o worker-2.16.0
@@ -1317,6 +1318,7 @@ Suggested package updates
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
+	o xmms-1.2.11
 	o xmms-crossfade-1.3.10
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
