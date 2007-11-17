@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6836 2007/11/17 11:12:08 taca Exp $
+$NetBSD: TODO,v 1.6837 2007/11/17 13:01:51 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -898,7 +898,6 @@ Suggested package updates
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Error-0.17009
-	o p5-File-Copy-Recursive-0.31
 	o p5-File-Remove-0.38
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
