@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/29 06:22:10 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2007/11/17 13:40:15 wiz Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -6,7 +6,7 @@ PKGREVISION=		4
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
-MAINTAINER=		itojun@kame.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
 
 # this is not compatible with cross build - there's no other way
