@@ -1,0 +1,14 @@
+$NetBSD: patch-da,v 1.1 2007/11/17 14:08:36 rillig Exp $
+
+Some shells don't like syntactically empty "for" loops.
+
+--- omf.make.orig	2007-01-06 23:39:36.000000000 +0100
++++ omf.make	2007-11-17 15:07:19.000000000 +0100
+@@ -44,6 +44,7 @@ omf_timestamp: $(omffile)
+ 
+ install-data-hook-omf:
+ 	$(mkinstalldirs) $(DESTDIR)$(omf_dest_dir)
++	test "$(omffile)" || exit 0; \
+ 	if test "$(omffile)"; then \
+ 	  for file in $(omffile); do \
+ 	    $(INSTALL_DATA) $$file.out $(DESTDIR)$(omf_dest_dir)/$$file; \
