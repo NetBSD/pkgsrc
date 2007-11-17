@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6833 2007/11/17 08:49:33 obache Exp $
+$NetBSD: TODO,v 1.6834 2007/11/17 09:55:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -590,6 +590,8 @@ Suggested package updates
 	o gsl-1.10
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-base-0.10.15
+	o gstreamer0.10-0.10.15
 	o gtar-1.19
 	o gtexinfo-4.11
 	o gthumb-2.10.7
@@ -673,7 +675,7 @@ Suggested package updates
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jgrasp-183
-	o jhead-2.7
+	o jhead-2.8
 	o jigdo-0.7.3
 	o jools-1.0
 	o jwhois-4.0
@@ -781,7 +783,7 @@ Suggested package updates
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o micq-0.5.4.2
-	o minivmac-2.8.2
+	o minivmac-3.0.4
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
