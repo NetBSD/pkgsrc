@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/09/07 22:12:11 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2007/11/17 13:40:16 wiz Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.viagenie.qc.ca/quake/
 
-MAINTAINER=	itojun@kame.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.viagenie.qc.ca/en/ipv6-quake.shtml
 COMMENT=	Quake over IPv6
 
