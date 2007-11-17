@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2407 2007/11/17 13:01:50 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2408 2007/11/17 16:30:03 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4450,3 +4450,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/alephone to 20071103 [obache 2007-11-17]
 	Updated net/jigdo to 0.7.3 [rillig 2007-11-17]
 	Updated sysutils/p5-File-Copy-Recursive to 0.35 [hiramatsu 2007-11-17]
+	Updated misc/openoffice2 to 2.3.0nb2 [hira 2007-11-17]
