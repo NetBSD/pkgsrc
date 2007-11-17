@@ -1,7 +1,7 @@
-$NetBSD: patch-cx,v 1.1 2007/11/11 03:35:36 hira Exp $
+$NetBSD: patch-cx,v 1.2 2007/11/17 16:28:09 hira Exp $
 
---- solenv/inc/libs.mk.orig	2007-11-09 05:07:41.000000000 +0900
-+++ solenv/inc/libs.mk	2007-11-09 05:19:45.000000000 +0900
+--- solenv/inc/libs.mk.orig	2007-07-31 22:06:06.000000000 +0900
++++ solenv/inc/libs.mk	2007-11-13 10:33:35.000000000 +0900
 @@ -187,14 +187,14 @@
  LINGULIB=$(HM2LIBST)
  LNGLIB=-llng$(OFFICEUPD)$(DLLPOSTFIX)
@@ -29,3 +29,14 @@ $NetBSD: patch-cx,v 1.1 2007/11/11 03:35:36 hira Exp $
  .ENDIF
  .ELSE
  JPEG3RDLIB=-ljpeglib
+@@ -221,8 +221,8 @@
+ CURLLIB=-lcurl-3
+ .ELSE			# "$(GUI)$(COM)"=="WNTGCC"
+ .IF "$(SYSTEM_DB)" == "YES"
+-BERKELEYLIB=-ldb
+-BERKELEYCPPLIB=-ldb_cxx
++BERKELEYLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4"
++BERKELEYCPPLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4_cxx"
+ .ELSE
+ BERKELEYLIB=-ldb-4.2
+ BERKELEYCPPLIB=-ldb_cxx-4.2
