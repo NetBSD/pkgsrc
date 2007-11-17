@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/11/17 11:40:59 rillig Exp $
 
-DISTNAME=		jigdo-0.7.1
-PKGREVISION=		3
+DISTNAME=		jigdo-0.7.3
 CATEGORIES=		net
 MASTER_SITES=		http://atterer.net/jigdo/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +16,7 @@ CONFIGURE_ARGS+=	--without-libdb
 BROKEN_GETTEXT_DETECTION=	yes
 
 #.include "../../databases/db3/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../www/libwww/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
