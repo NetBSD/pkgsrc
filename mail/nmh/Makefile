@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/10/16 23:49:01 tnn Exp $
+# $NetBSD: Makefile,v 1.66 2007/11/17 12:04:13 rillig Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		7
@@ -12,6 +12,8 @@ COMMENT=		Cleaned up MH mailer suite
 
 CONFLICTS=		ja-mh-[0-9]*
 CONFLICTS+=		ja-mh6-[0-9]*
+
+USE_TOOLS+=		lex
 
 # We choose DOT_LOCKING in our patches because ".lock" files are
 # the most common locking mechanism supported by mail software.
