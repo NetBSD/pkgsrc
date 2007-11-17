@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/11/03 22:39:40 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2007/11/17 12:04:13 rillig Exp $
 
 DISTNAME=	ghostscript-8.60
 PKGREVISION=	1
@@ -18,7 +18,7 @@ CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run lex
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 
