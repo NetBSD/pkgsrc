@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.30 2007/09/07 22:12:13 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/11/17 13:40:16 wiz Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/ \
-		ftp://ftp.sendmail.org/ucb/src/sendmail/ \
-		http://freefall.freebsd.org/~itojun/distfiles/
+		ftp://ftp.sendmail.org/ucb/src/sendmail/
 
-MAINTAINER=	itojun@itojun.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kyoto.wide.ad.jp/mta/sendmail.html#smtpfeed
 COMMENT=	SMTP Fast Exploding External Deliverer for Sendmail
 
