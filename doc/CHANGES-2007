@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2406 2007/11/17 11:53:47 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2407 2007/11/17 13:01:50 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4449,3 +4449,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/imlib2 to 1.4.0nb1 [obache 2007-11-17]
 	Updated games/alephone to 20071103 [obache 2007-11-17]
 	Updated net/jigdo to 0.7.3 [rillig 2007-11-17]
+	Updated sysutils/p5-File-Copy-Recursive to 0.35 [hiramatsu 2007-11-17]
