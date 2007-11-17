@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/17 16:45:32 bouyer Exp $
 #
 
 VERSION=		3.1.0
@@ -18,7 +18,8 @@ DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
 PKG_SYSCONFSUBDIR=	xen
 
-ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386
+ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 Linux-2.[46]*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
@@ -36,7 +37,13 @@ MAKE_ENV+=		CONFIG_NetBSD=yes
 MAKE_ENV+=		CONFIG_MBOOTPACK=no
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
-MAKE_ENV+=		XEN_TARGET_ARCH="x86_32"
+.if ${MACHINE_ARCH} == "i386"
+MAKE_ENV+=		XEN_TARGET_ARCH="x86_32" XEN_COMPILE_ARCH="x86_32"
+.elif  ${MACHINE_ARCH} == "x86_64"
+MAKE_ENV+=		XEN_TARGET_ARCH="x86_64" XEN_COMPILE_ARCH="x86_64"
+.else
+MAKE_ENV+=		XEN_TARGET_ARCH="unsupported"
+.endif
 PYTHON_VERSIONS_ACCEPTED= 24 23
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS+=	misc/xm
@@ -175,6 +182,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
 .endfor
 	${RM} -rf ${PREFIX}/lib/xen
+	${INSTALL_DATA_DIR} ${PREFIX}/man/man1 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${PREFIX}/man/man5
 	${INSTALL_DATA} ${WRKDIR}/xm.1 ${PREFIX}/man/man1
