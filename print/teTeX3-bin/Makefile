@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/15 21:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2007/11/17 12:04:14 rillig Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -20,7 +20,7 @@ CONFLICTS+=	omega<0.90.4nb1
 
 INFO_FILES=	# PLIST
 
-USE_TOOLS+=	bison
+USE_TOOLS+=	bison lex
 REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
 
