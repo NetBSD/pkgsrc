@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/30 10:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/17 08:42:33 obache Exp $
 #
 
-DISTNAME=	AlephOne-20071020
+DISTNAME=	AlephOne-20071103
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
@@ -16,7 +16,7 @@ USE_LANGUAGES+=		c c++
 INSTALLATION_DIRS=	share/doc/AlephOne
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/AlephOne
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/AlephOne/
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
