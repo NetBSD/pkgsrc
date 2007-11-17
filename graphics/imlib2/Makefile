@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2007/09/18 19:18:10 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2007/11/17 01:40:50 obache Exp $
 
 DISTNAME=	imlib2-1.4.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -42,8 +43,5 @@ SUBST_SED.shlib+=	-e 's,"\.so",".${SHLIB_SUFFIX}",'
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
