@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.55 2007/05/26 12:46:20 heinz Exp $
+# $NetBSD: module.mk,v 1.56 2007/11/18 21:44:56 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -106,7 +106,7 @@ do-makemaker-configure:
 		if ${TEST} -f "$$dir"/Makefile.PL; then			\
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
-				${PERL5} Makefile.PL ${MAKE_PARAMS};	\
+				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
@@ -118,7 +118,7 @@ do-modbuild-configure:
 		if ${TEST} -f "$$dir"/Build.PL; then			\
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
-				${PERL5} Build.PL ${MAKE_PARAMS};	\
+				${BUILDLINK_PREFIX.perl}/bin/perl Build.PL ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
