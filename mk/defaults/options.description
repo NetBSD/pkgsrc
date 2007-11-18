@@ -6,6 +6,7 @@ anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
+ao			Enable the platform-independent 'ao' audio library.
 ares			Use the ares library for asynchronous name resolution.
 arts			Use the aRts audio daemon.
 aterm-big5		Enable Chinese support.
@@ -156,15 +157,18 @@ mad			Enable usage of the mad library to play MP3 files.
 memtesplus-iso		Build a .iso file for memtest+
 memtesplus-serialconsole	Enable use of serial console for memtest+
 mex			Enable matlab mex support (Linux and Solaris only).
+mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
 mjpegtools-simd		Enable MMX/3DNOW/SSE/Altivec support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
+modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
 mozilla-single-profile	Enable single profiles on mozilla browsers
+mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
 mpg123-arm-fixed64	Enable 64-bit calculations to avoid glitches on ARM.
 mplayer-menu		Enable support for user-defined menus.
