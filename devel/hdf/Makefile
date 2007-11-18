@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2006/06/27 16:04:29 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2007/11/18 10:39:56 wiz Exp $
 
 DISTNAME=	HDF4.2r1
 PKGNAME=	hdf-4.2r1
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF/HDF4.2r1/src/
+MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/prev-releases/HDF4.2r1/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/hdf4.html

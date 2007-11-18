@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:51 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/18 10:39:58 wiz Exp $
 
 DISTNAME=		ratfor77
 PKGNAME=		ratfor-1.0
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://sepftp.stanford.edu/pub/sep-distr/
+MASTER_SITES=		http://sepwww.stanford.edu/ftp/sep-distr/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sepwww.stanford.edu/software/ratfor.html
