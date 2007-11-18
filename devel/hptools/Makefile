@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/18 10:39:57 wiz Exp $
 #
 
 DISTNAME=	hptools-src-3.0.8
 PKGNAME=	hptools-3.0.8
 CATEGORIES=	devel
-MASTER_SITES=	http://www.epita.fr/~avenar_j/hp/product/
+MASTER_SITES=	http://www.hpcalc.org/hp48/pc/programming/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://etud.epita.fr:8000/~avenar_j/hp/calcen.html
+HOMEPAGE=	http://www.hpcalc.org/hp48/pc/programming/
 COMMENT=	SDK for Hewlett-Packard HP-48G/49G/39G/40G calculators
 
 RESTRICTED=	Redistribution of unmodified source only; resale prohibited.
