@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2413 2007/11/18 16:06:37 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2414 2007/11/18 19:47:39 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4458,3 +4458,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Class-Fields to 0.203 [hiramatsu 2007-11-18]
 	Updated devel/p5-Class-Trigger to 0.12 [hiramatsu 2007-11-18]
 	Updated textproc/p5-XML-LibXML-Iterator to 1.04 [seb 2007-11-18]
+	Updated databases/openldap to 2.3.39 [ghen 2007-11-18]
+	Updated databases/openldap-client to 2.3.39 [ghen 2007-11-18]
+	Updated databases/openldap-doc to 2.3.39 [ghen 2007-11-18]
+	Updated databases/openldap-server to 2.3.39 [ghen 2007-11-18]
