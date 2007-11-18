@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/11/24 19:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/18 13:28:26 hiramatsu Exp $
 #
 
-DISTNAME=	Class-Trigger-0.10
+DISTNAME=	Class-Trigger-0.12
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ctr
 CATEGORIES=	devel perl5
