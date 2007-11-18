@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6837 2007/11/17 13:01:51 hiramatsu Exp $
+$NetBSD: TODO,v 1.6838 2007/11/18 04:35:51 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -497,6 +497,7 @@ Suggested package updates
 	o freeciv-2.1.0
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
+	o freepops-0.2.6
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
