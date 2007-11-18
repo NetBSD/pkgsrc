@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2411 2007/11/18 08:46:13 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2412 2007/11/18 13:31:29 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4455,3 +4455,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/echoping to 6.0.2 [adrianp 2007-11-18]
 	Updated graphics/cairomm to 1.4.6 [adam 2007-11-18]
 	Updated x11/gtkmm to 2.12.3 [adam 2007-11-18]
+	Updated devel/p5-Class-Fields to 0.203 [hiramatsu 2007-11-18]
+	Updated devel/p5-Class-Trigger to 0.12 [hiramatsu 2007-11-18]
