@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2007/11/11 11:35:49 martti Exp $
+# $NetBSD: Makefile,v 1.131 2007/11/18 00:42:50 adrianp Exp $
 
 DISTNAME=	perl-5.8.8
 PKGREVISION=	5
@@ -71,7 +71,6 @@ CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Dcc=${CC:Q}
 CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	-Duseshrplib
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
@@ -135,6 +134,16 @@ CONFIGURE_ARGS+=	-Dvendorman3dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man3
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_TOOLS+=	gmake
+.endif
+
+#
+# For the moment disable the building of a shared libperl.dylib on Darwin
+# => 9.0 as it breaks the build.  This should just be considered a temporary
+# work around until the actual problem can be fixed as this worked for
+# Darwin < 9.0.
+#
+.if empty(MACHINE_PLATFORM:MDarwin-9.*-*)
+CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 # Perl embeds the full paths to the following tools in several installed
