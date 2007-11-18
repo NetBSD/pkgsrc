@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/11/19 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/18 10:23:22 wiz Exp $
 #
 
 DISTNAME=		libofa-0.9.3
 PKGREVISION=		1
 CATEGORIES=		audio
-MASTER_SITES=		http://www.musicdns.org/themes/musicdns_org/downloads/
+MASTER_SITES=		http://www.musicip.com/dns/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.musicdns.org/
+HOMEPAGE=		http://www.musicip.com/dns/index.jsp
 COMMENT=		Open Fingerprint Architecture library
 
 USE_PKGLOCALEDIR=	yes
