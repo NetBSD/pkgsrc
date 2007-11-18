@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2409 2007/11/17 21:21:46 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2410 2007/11/18 00:17:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/p5-File-Copy-Recursive to 0.35 [hiramatsu 2007-11-17]
 	Updated misc/openoffice2 to 2.3.0nb2 [hira 2007-11-17]
 	Updated fonts/fontforge to 20071110 [adam 2007-11-17]
+	Updated net/echoping to 6.0.2 [adrianp 2007-11-18]
