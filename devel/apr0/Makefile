@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/07 23:11:40 tron Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/18 16:22:06 adrianp Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -44,6 +44,10 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	apr/config.layout apr-util/config.layout
 SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},g"
 SUBST_MESSAGE.conf=	Fixing hardcoded paths.
+
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
+APR_CONFIGURE_ARGS+=	--without-sendfile
+.endif
 
 TEST_TARGET=		check
 
