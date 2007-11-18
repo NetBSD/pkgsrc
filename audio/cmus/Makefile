@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2007/11/18 10:23:22 wiz Exp $
 #
 
 DISTNAME=		cmus-2.1.0
 CATEGORIES=		audio
-MASTER_SITES=		http://onion.dynserv.net/~timo/files/
+MASTER_SITES=		http://mirror.greaterscope.net/cmus/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		webmaster@deepblack24.de
