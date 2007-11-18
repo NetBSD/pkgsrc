@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6838 2007/11/18 04:35:51 schmonz Exp $
+$NetBSD: TODO,v 1.6839 2007/11/18 08:46:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ Suggested package updates
 	o bug-buddy-2.20.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairomm-1.4.6
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
@@ -604,7 +603,6 @@ Suggested package updates
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.1
 	o gtklife-5.1
-	o gtkmm-2.12.3
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
 	o gtkyahoo-0.18.3
