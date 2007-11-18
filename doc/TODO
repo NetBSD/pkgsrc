@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6840 2007/11/18 09:51:36 wiz Exp $
+$NetBSD: TODO,v 1.6841 2007/11/18 13:31:30 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ Suggested package updates
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
 	o p5-Class-ReturnValue-0.55
-	o p5-Class-Trigger-0.11
 	o p5-Config-General-2.36
 	o p5-Config-Tiny-2.12
 	o p5-Crypt-CBC-2.22
