@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6839 2007/11/18 08:46:13 adam Exp $
+$NetBSD: TODO,v 1.6840 2007/11/18 09:51:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -489,6 +489,7 @@ Suggested package updates
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
+	o fluidsynth-1.0.8
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -570,6 +571,7 @@ Suggested package updates
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
+	o gnutls-2.0.4
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -781,6 +783,7 @@ Suggested package updates
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
+	o metacity-2.20.1
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o micq-0.5.4.2
