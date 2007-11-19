@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2417 2007/11/19 06:32:54 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2418 2007/11/19 06:42:49 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4465,3 +4465,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/perl5 to 5.8.8nb6 [minskim 2007-11-19]
 	Added sysutils/psftools version 1.0.5 [bjs 2007-11-19]
 	Updated devel/scmgit to 1.5.3.6 [bjs 2007-11-19]
+	Updated devel/exctags to 5.7 [adrianp 2007-11-19]
