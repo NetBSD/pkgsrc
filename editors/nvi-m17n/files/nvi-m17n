@@ -1,9 +1,18 @@
 #! /bin/sh
 EXINIT0="set ${CANNA_OPT} autodetect=${AUTODETECT} fileencoding=${ENCODING} displayencoding=${ENCODING} inputencoding=${ENCODING} noskipdisplay"
-if [ -f ~/.exrc ]; then
-	EXINIT="$EXINIT0 `sed -e '/^set /!d' -e 's/^set //' < ~/.exrc | tr '\012' ' '`"
+if [ "x$NEXINIT" != "x" -a "${NEXINIT-UNSET}" != "UNSET" ]; then
+	EXINIT1="$NEXINIT"
+elif [ "x$EXINIT" != "x" -a "${EXINIT-UNSET}" != "UNSET" ]; then
+	EXINIT1="$EXINIT"
 else
-	EXINIT=$EXINIT0
+	ecfile="/dev/null"
+	if [ -f "${HOME}/.nexrc" ]; then
+		rcfile="$HOME/.nexrc"
+	elif [ -f "${HOME}/.exrc" ]; then
+		rcfile="$HOME/.exrc"
+	fi
+	EXINIT1="source $rcfile"
 fi
-export EXINIT
+NEXINIT="$EXINIT0|$EXINIT1"
+export NEXINIT
 exec ${PREFIX}/bin/nvi "$@"
