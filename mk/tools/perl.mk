@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.21 2006/07/10 08:13:37 rillig Exp $
+# $NetBSD: perl.mk,v 1.22 2007/11/19 00:40:14 minskim Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,5 +65,7 @@ TOOLS_${_TOOLS_VARNAME.perl}?=	${TOOLS_PLATFORM.perl}
 .  else
 TOOLS_${_TOOLS_VARNAME.perl}?=	${LOCALBASE}/bin/perl
 .  endif
+.  if empty(PKGNAME:Mperl-[0-9]*)
 ${_TOOLS_VARNAME.perl}?=	${TOOLS_${_TOOLS_VARNAME.perl}}
+.  endif
 .endif
