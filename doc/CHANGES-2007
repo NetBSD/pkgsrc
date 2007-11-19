@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2421 2007/11/19 10:15:33 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2422 2007/11/19 12:24:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/zile to 2.2.50 [hiramatsu 2007-11-19]
 	Updated multimedia/libmp4v2 to 1.6.1nb1 [dillo 2007-11-19]
 	Updated devel/py-pexpect to 2.1 [tron 2007-11-19]
+	Updated editors/nvi-m17n to 1.79.20040401nb3 [obache 2007-11-19]
