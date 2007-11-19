@@ -1,25 +1,25 @@
-# $NetBSD: utility.mk,v 1.8 2007/11/10 23:44:01 rillig Exp $
+# $NetBSD: utility.mk,v 1.9 2007/11/19 14:59:40 tron Exp $
+
+# The 'info' target can be used to display information about a package.
+.PHONY: info
+info:
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
+
+# The 'check' target can be used to check an installed package.
+.PHONY: check
+check:
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
+
+# The 'list' target can be used to list the files installed by a package.
+.PHONY: list
+list:
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 ######################################################################
 ###
 ### The targets below should probably be removed from pkgsrc.
 ###
 ######################################################################
-
-# The 'info' target can be used to display information about a package.
-.PHONY: info
-info: _about-to-be-removed
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
-
-# The 'check' target can be used to check an installed package.
-.PHONY: check
-check: _about-to-be-removed
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
-
-# The 'list' target can be used to list the files installed by a package.
-.PHONY: list
-list: _about-to-be-removed
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
 
 # show-downlevel:
 #	Lists the packages whose installed version does not match the
