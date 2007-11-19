@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2415 2007/11/19 00:50:20 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2416 2007/11/19 05:00:14 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/openldap-doc to 2.3.39 [ghen 2007-11-18]
 	Updated databases/openldap-server to 2.3.39 [ghen 2007-11-18]
 	Updated lang/perl5 to 5.8.8nb6 [minskim 2007-11-19]
+	Added sysutils/psftools version 1.0.5 [bjs 2007-11-19]
