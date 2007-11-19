@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2007/11/18 21:44:56 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2007/11/19 03:53:10 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -16,6 +16,10 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}perl
 PERL5_REQD+=			5.8.7
 BUILDLINK_API_DEPENDS.perl+=	perl>=${PERL5_REQD}
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
+
+FIND_PREFIX:=	PERLDIR=perl
+.include "../../mk/find-prefix.mk"
+PERL5=		${PERLDIR}/bin/perl
 
 PERL5_OPTIONS?=		# empty
 .  if !empty(PERL5_OPTIONS:Mthreads)
