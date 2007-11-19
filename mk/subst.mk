@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.47 2007/11/01 13:12:48 rillig Exp $
+# $NetBSD: subst.mk,v 1.48 2007/11/19 23:38:03 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -31,7 +31,8 @@
 #
 #		-e 's,@VARNAME@,${VARNAME},g'
 #
-#	also taking care of (most) quoting issues.
+#	also taking care of (most) quoting issues. You can use both
+#	SUBST_SED and SUBST_VARS in a single class.
 #
 # SUBST_FILTER_CMD.<class>
 #	Filter used to perform the actual substitution on the specified
