@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.27 2007/11/01 14:31:03 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.28 2007/11/19 00:45:49 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -143,6 +143,7 @@ case $arg in
 -pedantic	|\
 -pie		|\
 -pipe		|\
+-rdynamic	|\
 -traditional	) transform_discard ;;
 
 # Ignore all other -f flags.
