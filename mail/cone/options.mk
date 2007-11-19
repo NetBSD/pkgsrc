@@ -20,3 +20,10 @@ CONFIGURE_ARGS+=	--with-spellcheck=aspell
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 .endif
+
+###
+### FAM (file alteration monitor) support
+###
+.if !empty(PKG_OPTIONS:Mfam)
+.  include "../../mk/fam.buildlink3.mk"
+.endif

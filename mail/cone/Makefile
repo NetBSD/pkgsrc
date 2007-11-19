@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/13 18:02:15 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/19 20:28:57 jlam Exp $
 
 DISTNAME=	cone-0.73
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,7 +10,7 @@ MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.courier-mta.org/cone/
 COMMENT=	console newsreader and emailer
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl true
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0	# need Standard C++ Library
 
@@ -18,6 +19,15 @@ GCC_REQD+=		3.0	# need Standard C++ Library
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-certdb
+
+# Cone doesn't really need the openssl or c_rehash binaries, but the
+# rootcerts/configure script is written poorly and directly overrides
+# variables that were meant for the builder to use.  Fix that by
+# overriding the special ac_cv_* configure cache variables as a last
+# resort.
+#
+CONFIGURE_ENV+=		ac_cv_path_OPENSSL=${TOOLS_TRUE}
+CONFIGURE_ENV+=		ac_cv_path_REHASH=${TOOLS_TRUE}
 
 EGDIR=			${PREFIX}/share/examples/cone
 INSTALL_AM_MAKEFLAGS+=	sysconfdir=${EGDIR:Q}
