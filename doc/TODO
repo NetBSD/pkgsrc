@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6841 2007/11/18 13:31:30 hiramatsu Exp $
+$NetBSD: TODO,v 1.6842 2007/11/19 07:13:48 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -1362,7 +1362,6 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.20.0
-	o zile-2.2.50
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
