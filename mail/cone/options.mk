@@ -7,16 +7,16 @@ PKG_SUGGESTED_OPTIONS=		aspell ldap
 # Package-specific option-handling
 
 ###
-### LDAP addressbook support
-###
-.if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap-client/buildlink3.mk"
-.endif
-
-###
 ### Aspell spell-check support
 ###
 .if !empty(PKG_OPTIONS:Maspell)
 .  include "../../textproc/aspell/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-spellcheck=aspell
+.endif
+
+###
+### LDAP addressbook support
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
