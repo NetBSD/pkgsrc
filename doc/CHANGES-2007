@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2419 2007/11/19 07:13:47 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2420 2007/11/19 09:55:23 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/scmgit to 1.5.3.6 [bjs 2007-11-19]
 	Updated devel/exctags to 5.7 [adrianp 2007-11-19]
 	Updated editors/zile to 2.2.50 [hiramatsu 2007-11-19]
+	Updated multimedia/libmp4v2 to 1.6.1nb1 [dillo 2007-11-19]
