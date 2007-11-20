@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.11 2007/11/20 17:19:59 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.12 2007/11/20 17:49:49 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -34,6 +34,7 @@
 #	Lists the system features required by the package.
 #
 #	Possible:
+#	* asprintf: The functions asprintf and vasprintf.
 #	* err: The functions err, verr, errx, verrx.
 #	* warn: The functions warn, vwarn, warnx, vwarnx.
 #	* fts_close, fts_open, fts_read, fts_set: Functions
@@ -75,6 +76,12 @@ USE_FEATURES?=		# none
 .if defined(_OPSYS_HAS_INET6) && !empty(_OPSYS_HAS_INET6:M[nN][oO])
 MISSING_FEATURES+=	inet6
 .endif
+
+.for f in ${_OPSYS_MISSING_FEATURES}
+.  if !empty(USE_FEATURES:M${f})
+MISSING_FEATURES+=	${f}
+.  endif
+.endfor
 
 .for _feature_ in err warn
 .  if !empty(USE_FEATURES:M${_feature_})
