@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6842 2007/11/19 07:13:48 hiramatsu Exp $
+$NetBSD: TODO,v 1.6843 2007/11/20 07:08:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -320,7 +320,7 @@ Suggested package updates
 	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
-	o asterisk-1.4.11
+	o asterisk-1.4.14
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o autoconvert-0.3.16
@@ -359,8 +359,10 @@ Suggested package updates
 	o botan-1.6.3
 	o btpd-0.12
 	o bug-buddy-2.20.1
+	o bzr-0.92
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o caff-0.4.12
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
@@ -381,7 +383,7 @@ Suggested package updates
 	o classpath-0.96.1
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
-	o clisp-2.42
+	o clisp-2.43
 	o cmake-2.4.7
 	o cocoon-2.1.10
 	o compiz-0.6.2
@@ -401,7 +403,7 @@ Suggested package updates
 	o cuetools-1.3.1
 	o cups-1.3.4
 	o cvs2p4-2.5.5 [schmonz]
-	o cvs2svn-2.0.0
+	o cvs2svn-2.0.1 [pkg/37401]
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
@@ -447,6 +449,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
+	o elfsh-0.78
 	o elinks-0.12
 	o elm-me-2.4pl124a
 	o elscreen-1.5.2
@@ -492,6 +495,7 @@ Suggested package updates
 	o fluidsynth-1.0.8
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.5.0
 	o fop-0.20.5
 	o fox-1.6.30
 	o freeciv-2.1.0
@@ -522,7 +526,7 @@ Suggested package updates
 	o gcpio-2.7
 	o gdal-1.4.3
 	o gdb-6.7
-	o gdb6-6.6
+	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
 	o gdm-2.20.1
@@ -542,6 +546,7 @@ Suggested package updates
 	o gimp-docs-2.0.10
 	o gimp-print-5.0.1 [now called gutenprint]
 	o gimp-ufraw-0.13
+	o gindent-2.2.9
 	o gkrellm-2.3.0
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
@@ -586,6 +591,7 @@ Suggested package updates
 	o grace-5.1.21
 	o gramofile-1.6P
 	o grap-1.40
+	o graphviz-2.16
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
@@ -621,6 +627,7 @@ Suggested package updates
 	o hackbot-2.21
 	o hanzim-1.8
 	o haskell-mode-1.45
+	o hdf-4.2r2
 	o heimdal-1.0.1 [pkg/37010]
 	o hercules-3.04.1
 	o hesiod-3.1.0
@@ -642,6 +649,7 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.3.1
 	o icon-943
+	o icon-naming-utils-0.8.6
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
@@ -661,6 +669,7 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
+	o iso-codes-1.5
 	o ispell-gaeilge-4.1
 	o ispell-german-20070829
 	o ispell-slovak-0.3.2
@@ -708,11 +717,13 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.6.1
 	o libFoundation-1.1.3
+	o libao-0.8.8
 	o libarchive-2.4.0
 	o libassuan-1.0.1
 	o libast-0.7
 	o libcdio-0.79
 	o libchewing-0.3.0
+	o libconfig-1.2
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
@@ -731,12 +742,14 @@ Suggested package updates
 	o libgpod-0.6.0
 	o libhydrogen-0.9.2
 	o libiconv-1.12
+	o libidn-1.2
 	o libjit-0.1.0
 	o liblive-2007.02.20
 	o liblzo-2.02
 	o libmatheval-1.1.5
 	o libmatroska-0.8.1
 	o libmpeg3-1.7
+	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libole2-2.2.8
@@ -841,6 +854,7 @@ Suggested package updates
 	o ns-plugger-navigator-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a7
+	o nss-3.11.7
 	o nss_ldap-255
 	o ntp-4.2.4p3
 	o ntp4-4.2.4
@@ -848,6 +862,7 @@ Suggested package updates
 	o nullmailer-1.04
 	o nut-12.0 [pkg/34466]
 	o nut-13.0
+	o nvi-1.81.6
 	o nxtvepg-2.7.7
 	o objc-3.2.8
 	o ocamlnet-2.2.4
@@ -858,6 +873,8 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
+	o opencdk-0.6.6
+	o openexr-1.6.1
 	o openh323-1.19.1
 	o openldap-2.3.39
 	o openmortal-0.7.1
@@ -868,12 +885,13 @@ Suggested package updates
 	o oroborus-2.0.18
 	o osh-20070324
 	o otpCalc-0.97
-	o p5-Algorithm-Dependency-1.103
+	o p5-Algorithm-Dependency-1.104
 	o p5-Algorithm-Merge-0.08
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.83
+	o p5-Archive-Tar-1.36
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
@@ -884,22 +902,34 @@ Suggested package updates
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Factory-1.05
+	o p5-Class-Inspector-1.18
 	o p5-Class-ReturnValue-0.55
+	o p5-Class-Singleton-1.4
+	o p5-Clone-0.28
+	o p5-Compress-Raw-Zlib-2.008
+	o p5-Compress-Zlib-2.008
 	o p5-Config-General-2.36
 	o p5-Config-Tiny-2.12
 	o p5-Crypt-CBC-2.22
+	o p5-Crypt-SSLeay-0.57
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
+	o p5-DBIx-DBSchema-0.35
 	o p5-DBIx-SearchBuilder-1.49
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
+	o p5-DateTime-Format-Mail-0.3001
+	o p5-DateTime-TimeZone-0.6904
 	o p5-Devel-Profile-1.05
+	o p5-Devel-Symdump-2.0800
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Error-0.17009
-	o p5-File-Remove-0.38
+	o p5-ExtUtils-CBuilder-0.21
+	o p5-File-MimeInfo-0.14
+	o p5-File-Remove-0.39
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -912,25 +942,33 @@ Suggested package updates
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
+	o p5-INET6-2.51
+	o p5-IO-Compress-Base-2.008
+	o p5-IO-Compress-Zlib-2.008
+	o p5-IO-Zlib-1.08
 	o p5-Image-Info-1.26
 	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
+	o p5-Locale-Maketext-Fuzzy-0.10
 	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.424
+	o p5-MIME-tools-5.425
 	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
+	o p5-Module-Refresh-0.13
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
+	o p5-Net-ICQ2000-0.2.2
 	o p5-Net-Jabber-2.0
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-PAR-0.90
 	o p5-PV-1.5
+	o p5-Params-Util-0.31
 	o p5-Perl-Tidy-20070801
 	o p5-PostScript-MailLabels-2.25
 	o p5-RRDTool-OO-0.17
@@ -941,11 +979,13 @@ Suggested package updates
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.20
+	o p5-Storable-2.17
 	o p5-Sub-Uplevel-0.18
 	o p5-Term-Size-0.203
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
 	o p5-Test-Inline-2.207
+	o p5-Test-Manifest-1.22
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
@@ -953,12 +993,19 @@ Suggested package updates
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Quoted-2.03
 	o p5-Text-Tabs+Wrap-2006.1117
+	o p5-Text-WikiFormat-0.79
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
+	o p5-Tree-Simple-1.18
 	o p5-WWW-Mechanize-1.32
 	o p5-Want-0.15
+	o p5-XML-Atom-0.28
+	o p5-XML-LibXML-1.65
+	o p5-XML-LibXSLT-1.63
+	o p5-XML-Parser-2.35
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
+	o p5-YAML-0.66
 	o p5-glib2-1.160
 	o p5-gtk2-1.160
 	o p5-ispman-1.2
@@ -999,6 +1046,7 @@ Suggested package updates
 	o phylip-3.65
 	o picp-0.6.8
 	o piewm-1.04
+	o pilot-link-libs-0.12.3
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
@@ -1058,6 +1106,7 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-html2text-2.29
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.1
@@ -1136,12 +1185,14 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-8.4
 	o sablecc-3.2
+	o samba-3.0.27
 	o sarg-2.2.31
 	o sather-1.2.3
 	o scamper-20070201
 	o scapy-1.1.1
 	o scew-0.4.0
 	o sch-3.8.3
+	o scmgit-1.5.3.6
 	o scons-0.97
 	o scribus-1.3.4
 	o scrollz-1.9.99
@@ -1217,6 +1268,7 @@ Suggested package updates
 	o tea-17.4.0
 	o ted-2.17
 	o ted-en-us-2.17
+	o tesseract-2.01
 	o texmaker-1.6
 	o tfmxplay-1.1.6
 	o tile-0.7.4
@@ -1247,6 +1299,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o uim-1.4.1
 	o unix2dos-1.3
+	o unrar-3.7.8
 	o ups-nut-2.2.0 [pkg/37301]
 	o upx-2.90
 	o userppp-030706
@@ -1254,6 +1307,7 @@ Suggested package updates
 	o varnish-1.1.1
 	o vera-1.17
 	o vfu-4.03
+	o vicq-0.4.2
 	o vifm-0.3a
 	o vino-2.20.1
 	o visual-regexp-3.1
@@ -1289,7 +1343,7 @@ Suggested package updates
 	o wxGTK-2.8.6
 	o wxRemind-0.9.13
 	o wyrd-1.4.3
-	o x264-devel-20070324
+	o x264-devel-20071118
 	o xalan-c-1.10.0
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
