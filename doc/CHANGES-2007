@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2426 2007/11/20 13:31:54 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2427 2007/11/20 22:13:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/yaz to 2.1.56 [phil 2007-11-19]
 	Updated databases/rrdtool to 1.2.26 [martti 2007-11-20]
 	Updated filesystems/fuse-ntfs-3g to 1.1120 [xtraeme 2007-11-20]
+	Updated www/apache-tomcat55 to 5.5.25 [adrianp 2007-11-20]
