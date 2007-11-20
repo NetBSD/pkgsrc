@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2424 2007/11/20 05:12:37 phil Exp $
+$NetBSD: CHANGES-2007,v 1.2425 2007/11/20 11:58:19 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4472,3 +4472,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/nvi-m17n to 1.79.20040401nb3 [obache 2007-11-19]
 	Updated sysutils/duplicity to 0.4.3 [tron 2007-11-19]
 	Updated net/yaz to 2.1.56 [phil 2007-11-19]
+	Updated databases/rrdtool to 1.2.26 [martti 2007-11-20]
