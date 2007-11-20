@@ -1,7 +1,11 @@
-# $NetBSD: inplace.mk,v 1.6 2007/11/20 18:15:23 rillig Exp $
+# $NetBSD: inplace.mk,v 1.7 2007/11/20 18:55:25 rillig Exp $
+#
+# This file should not be included directly. Use USE_FEATURES instead.
 #
 # This Makefile fragment builds a working copy of libnbcompat inside
 # ${WRKDIR}.
+#
+# XXX: Why isn't libnbcompat installed as shared library?
 #
 
 .include "../../mk/bsd.prefs.mk"
