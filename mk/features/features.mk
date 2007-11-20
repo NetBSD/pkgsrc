@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.4 2007/11/20 17:19:59 rillig Exp $
+# $NetBSD: features.mk,v 1.5 2007/11/20 17:49:49 rillig Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -33,22 +33,14 @@ CPPFLAGS+=		${FEATURE_CPPFLAGS}
 LDFLAGS+=		${FEATURE_LDFLAGS}
 LIBS+=			${FEATURE_LIBS}
 
+# libnbcompat provides many of the current features.
+#
 _FEATURE_USE_NBCOMPAT?=	no
-.  if !empty(MISSING_FEATURES:Merr) || \
-      !empty(MISSING_FEATURES:Mfts_close) || \
-      !empty(MISSING_FEATURES:Mfts_open) || \
-      !empty(MISSING_FEATURES:Mfts_read) || \
-      !empty(MISSING_FEATURES:Mfts_set) || \
-      !empty(MISSING_FEATURES:Mgetopt_long) || \
-      !empty(MISSING_FEATURES:Mglob) || \
-      !empty(MISSING_FEATURES:Mnbcompat) || \
-      !empty(MISSING_FEATURES:Mregcomp) || \
-      !empty(MISSING_FEATURES:Msnprintf) || \
-      !empty(MISSING_FEATURES:Mutimes) || \
-      !empty(MISSING_FEATURES:Mvsnprintf) || \
-      !empty(MISSING_FEATURES:Mwarn)
+.  for f in asprintf err fts_close fts_open fts_read fts_set getopt_long glob nbcompat regcomp snprintf utimes vsnprintf warn
+.    if !empty(MISSING_FEATURES:M${f})
 _FEATURE_USE_NBCOMPAT=	yes
-.  endif
+.    endif
+.  endfor
 
 .  if ${_FEATURE_USE_NBCOMPAT} == "yes"
 .    include "${PKGSRCDIR}/pkgtools/libnbcompat/inplace.mk"
