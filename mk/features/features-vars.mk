@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.12 2007/11/20 17:49:49 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.13 2007/11/20 18:21:03 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -22,6 +22,7 @@
 # In the C files using the err*() or warn*() functions:
 #
 #	#if defined(HAVE_NBCOMPAT_H)
+#	#include <nbcompat/config.h>	/* needed for the other headers */
 #	#include <nbcompat/cdefs.h>	/* needed for the other headers */
 #	#include <nbcompat/err.h>
 #	#else
