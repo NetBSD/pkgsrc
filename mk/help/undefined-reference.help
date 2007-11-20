@@ -1,0 +1,10 @@
+# $NetBSD: undefined-reference.help,v 1.1 2007/11/20 11:14:51 rillig Exp $
+
+# When the linker finds an undefined reference to one of the libintl_*
+# functions, and the package uses a GNU configure script, you should set
+# BROKEN_GETTEXT_DETECTION=yes and "bmake clean && bmake" again.
+#
+# See also:
+#	devel/gettext-lib/builtin.mk
+#
+# Keywords: intl lintl -lintl gettext libintl_gettext
