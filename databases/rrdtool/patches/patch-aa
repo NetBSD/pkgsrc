@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.8 2007/11/20 11:58:00 martti Exp $
+
+--- src/rrd_tool.h.orig	2007-11-20 02:15:10.000000000 +0200
++++ src/rrd_tool.h	2007-11-20 13:47:45.000000000 +0200
+@@ -202,6 +202,16 @@
+ 
+ #endif
+ 
++#if defined(__NetBSD__)
++# if !defined(_NETBSD_SOURCE)
++#  define _NETBSD_SOURCE
++# endif
++
++# if !defined(POSIX_MADV_RANDOM)
++#  define POSIX_MADV_RANDOM MADV_RANDOM
++# endif
++#endif
++
+ #ifdef  __cplusplus
+ }
+ #endif
