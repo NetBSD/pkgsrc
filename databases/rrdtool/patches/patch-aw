@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.7 2007/01/30 13:26:55 adam Exp $
+$NetBSD: patch-aw,v 1.8 2007/11/20 11:58:00 martti Exp $
 
---- src/rrd_tool.c.orig	2007-01-23 21:54:49.000000000 +0100
-+++ src/rrd_tool.c
-@@ -702,9 +702,9 @@ int HandleInputLine(int argc, char **arg
+--- src/rrd_tool.c.orig	2007-11-20 02:15:10.000000000 +0200
++++ src/rrd_tool.c	2007-11-20 12:58:12.000000000 +0200
+@@ -699,9 +699,9 @@
  	  printf("<?xml version=\"1.0\" encoding=\"%s\"?>\n\n", XML_ENCODING);
  	  printf("<%s>\n", ROOT_TAG);
  	  printf("  <%s>\n", META_TAG);
@@ -14,7 +14,7 @@ $NetBSD: patch-aw,v 1.7 2007/01/30 13:26:55 adam Exp $
  	  printf("    <%s>%lu</%s>\n", META_ROWS_TAG, row_cnt, META_ROWS_TAG);
  	  printf("    <%s>%lu</%s>\n", META_COLS_TAG, col_cnt, META_COLS_TAG);
  	  printf("    <%s>\n", LEGEND_TAG);
-@@ -720,7 +720,7 @@ int HandleInputLine(int argc, char **arg
+@@ -717,7 +717,7 @@
  	  printf("  <%s>\n", DATA_TAG);
  	  for (ti = start+step; ti <= end; ti += step) {
  	    printf ("    <%s>", DATA_ROW_TAG);
