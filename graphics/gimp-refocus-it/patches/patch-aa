@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/16 11:51:52 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/11/20 17:46:44 rillig Exp $
 
---- gimp-plugin/main-gimp.c.orig	2005-01-14 23:05:32.000000000 +0100
-+++ gimp-plugin/main-gimp.c
-@@ -27,6 +27,7 @@
+--- gimp-plugin/main-gimp.c.orig	2004-07-19 12:17:44.000000000 +0200
++++ gimp-plugin/main-gimp.c	2007-11-20 18:45:06.000000000 +0100
+@@ -19,6 +19,12 @@
+ 
+ #define _GNU_SOURCE
+ 
++#if HAVE_NBCOMPAT_H
++#  include <nbcompat/config.h>
++#  include <nbcompat/cdefs.h>
++#  include <nbcompat/stdio.h>
++#endif
++
+ #include <gtk/gtk.h>
+ #include <glib.h>
+ #include <libgimp/gimp.h>
+@@ -27,6 +33,7 @@
  #include <ctype.h>
  #include <stdlib.h>
  #include <time.h>
