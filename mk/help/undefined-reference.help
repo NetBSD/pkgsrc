@@ -1,4 +1,4 @@
-# $NetBSD: undefined-reference.help,v 1.1 2007/11/20 11:14:51 rillig Exp $
+# $NetBSD: undefined-reference.help,v 1.2 2007/11/20 18:45:07 rillig Exp $
 
 # When the linker finds an undefined reference to one of the libintl_*
 # functions, and the package uses a GNU configure script, you should set
@@ -8,3 +8,11 @@
 #	devel/gettext-lib/builtin.mk
 #
 # Keywords: intl lintl -lintl gettext libintl_gettext
+
+# gethostbyname
+#
+# Needs -lnsl on Solaris
+
+# socket
+#
+# Needs -lsocket on Solaris
