@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.5 2007/09/08 21:57:59 jlam Exp $
+# $NetBSD: inplace.mk,v 1.6 2007/11/20 18:15:23 rillig Exp $
 #
 # This Makefile fragment builds a working copy of libnbcompat inside
 # ${WRKDIR}.
@@ -25,10 +25,11 @@ NBCOMPAT_CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 
 pre-configure: libnbcompat-build
 libnbcompat-build:
+	@${STEP_MSG} "Configuring and building libnbcompat"
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV}				\
-		AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}"		\
-		CPPFLAGS="${CPPFLAGS:M*}"				\
+		AWK=${AWK:Q} CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}		\
+		CPPFLAGS=${CPPFLAGS:M*:Q}				\
 		${CONFIGURE_ENV:NLIBS=*} ${CONFIG_SHELL}		\
 		${CONFIGURE_SCRIPT} ${NBCOMPAT_CONFIGURE_ARGS} &&	\
 		${MAKE_PROGRAM}
