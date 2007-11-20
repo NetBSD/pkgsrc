@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/01/24 22:16:55 adam Exp $
+# $NetBSD: options.mk,v 1.6 2007/11/20 07:51:35 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl
@@ -23,4 +23,6 @@ PLIST_SUBST+=		IPV6H="@comment "
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl
+.else
+CONFIGURE_ARGS+=	--without-openssl
 .endif
