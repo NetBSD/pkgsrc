@@ -1,25 +1,30 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/06 15:58:26 jwise Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/20 05:11:30 phil Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
 bin/yaz-iconv
 bin/yaz-marcdump
 bin/yaz-ztest
+bin/ziffy
 bin/zoomsh
 include/yaz/backend.h
 include/yaz/ccl.h
+include/yaz/ccl_xml.h
 include/yaz/charneg.h
 include/yaz/comstack.h
 include/yaz/cql.h
 include/yaz/diagbib1.h
+include/yaz/diagsru_update.h
 include/yaz/diagsrw.h
 include/yaz/ill-core.h
 include/yaz/ill.h
 include/yaz/item-req.h
+include/yaz/libxml2_error.h
 include/yaz/log.h
 include/yaz/logrpn.h
 include/yaz/marcdisp.h
 include/yaz/nmem.h
+include/yaz/nmem_xml.h
 include/yaz/odr.h
 include/yaz/oid.h
 include/yaz/options.h
@@ -27,16 +32,24 @@ include/yaz/otherinfo.h
 include/yaz/pquery.h
 include/yaz/proto.h
 include/yaz/prt-ext.h
+include/yaz/querytowrbuf.h
 include/yaz/readconf.h
+include/yaz/record_conv.h
+include/yaz/retrieval.h
+include/yaz/snprintf.h
 include/yaz/soap.h
 include/yaz/sortspec.h
 include/yaz/srw.h
 include/yaz/statserv.h
 include/yaz/tcpip.h
+include/yaz/test.h
+include/yaz/timing.h
 include/yaz/tpath.h
 include/yaz/unix.h
 include/yaz/wrbuf.h
 include/yaz/xmalloc.h
+include/yaz/xmlquery.h
+include/yaz/xmltypes.h
 include/yaz/yaz-ccl.h
 include/yaz/yaz-iconv.h
 include/yaz/yaz-util.h
@@ -73,12 +86,17 @@ include/yaz/zes-update.h
 include/yaz/zes-update0.h
 include/yaz/zgdu.h
 include/yaz/zoom.h
+lib/libyaz.a
 lib/libyaz.la
-${YAZTHREAD}lib/libyazthread.la
+lib/libyaz.so
+lib/libyaz.so.2
+lib/libyaz.so.2.0.1
+lib/pkgconfig/yaz.pc
 man/man1/yaz-asncomp.1
 man/man1/yaz-client.1
 man/man1/yaz-iconv.1
 man/man1/yaz-marcdump.1
+man/man1/ziffy.1
 man/man1/zoomsh.1
 man/man7/yaz-log.7
 man/man7/yaz.7
@@ -95,6 +113,8 @@ share/doc/yaz/client.commands.html
 share/doc/yaz/client.html
 share/doc/yaz/client.invoking.html
 share/doc/yaz/client.searching.html
+share/doc/yaz/common/id.png
+share/doc/yaz/common/style1.css
 share/doc/yaz/comstack.addresses.html
 share/doc/yaz/comstack.client.html
 share/doc/yaz/comstack.common.html
@@ -106,7 +126,7 @@ share/doc/yaz/comstack.ssl.html
 share/doc/yaz/comstack.summary.html
 share/doc/yaz/credits.html
 share/doc/yaz/future.html
-share/doc/yaz/id.png
+share/doc/yaz/index.html
 share/doc/yaz/indexdata.html
 share/doc/yaz/installation.html
 share/doc/yaz/installation.unix.html
@@ -115,6 +135,7 @@ share/doc/yaz/introduction.api.html
 share/doc/yaz/introduction.html
 share/doc/yaz/license.html
 share/doc/yaz/license.other.html
+share/doc/yaz/marc.html
 share/doc/yaz/odr.debugging.html
 share/doc/yaz/odr.html
 share/doc/yaz/odr.programming.html
@@ -132,13 +153,13 @@ share/doc/yaz/soap.srw.html
 share/doc/yaz/soap.xml.html
 share/doc/yaz/tools.html
 share/doc/yaz/tools.log.html
-share/doc/yaz/tools.marc.html
 share/doc/yaz/tools.nmem.html
 share/doc/yaz/tools.oid.html
-share/doc/yaz/yaz.css
-share/doc/yaz/yaz.html
-share/doc/yaz/yaz.pdf
+share/doc/yaz/tools.retrieval.html
+share/doc/yaz/ziffy.html
+share/doc/yaz/ziffy.using.html
 share/doc/yaz/zoom.events.html
+share/doc/yaz/zoom.extendedservices.html
 share/doc/yaz/zoom.html
 share/doc/yaz/zoom.options.html
 share/doc/yaz/zoom.query.html
@@ -149,8 +170,10 @@ share/yaz/etc/MARC21slim2DC.xsl
 share/yaz/etc/MARC21slim2MODS.xsl
 share/yaz/etc/MARC21slim2RDFDC.xsl
 share/yaz/etc/MARC21slimUtils.xsl
+share/yaz/etc/cqlpass.properties
 share/yaz/etc/maps.xml
 share/yaz/etc/pqf.properties
+share/yaz/etc/yazgfs.xml
 share/yaz/ill/ill.tcl
 share/yaz/ill/ill9702.asn
 share/yaz/ill/item-req.asn
@@ -164,6 +187,7 @@ share/yaz/z39.50/univres.asn
 share/yaz/z39.50/z.tcl
 share/yaz/z39.50/z3950v3.asn
 @dirrm include/yaz
+@dirrm share/doc/yaz/common
 @dirrm share/doc/yaz
 @dirrm share/yaz/etc
 @dirrm share/yaz/ill
