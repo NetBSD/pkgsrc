@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.10 2007/11/06 22:48:15 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.11 2007/11/20 17:19:59 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -64,6 +64,7 @@ _PKG_VARS.features=	USE_FEATURES
 _SYS_VARS.features=	MISSING_FEATURES
 
 MISSING_FEATURES=	# empty
+USE_FEATURES?=		# none
 
 #
 #	Handle "inet6" feature specially -- we always add it to
@@ -76,7 +77,7 @@ MISSING_FEATURES+=	inet6
 .endif
 
 .for _feature_ in err warn
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if (${OPSYS} != NetBSD) && (${OPSYS} != FreeBSD) && (${OPSYS} != DragonFly)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -84,7 +85,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in fts_close fts_open fts_read fts_set
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if !exists(/usr/include/fts.h)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -92,7 +93,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in getopt_long
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if !exists(/usr/include/getopt.h)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -100,7 +101,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in getprogname setprogname
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if (${OPSYS} != NetBSD) && (${OPSYS} != FreeBSD) && (${OPSYS} != DragonFly)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -108,7 +109,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in glob
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if !exists(/usr/include/glob.h)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -116,7 +117,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in regcomp
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if !exists(/usr/include/regex.h)
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -124,7 +125,7 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in snprintf vsnprintf
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if ${OPSYS} == "IRIX"
 MISSING_FEATURES+=	${_feature_}
 .    endif
@@ -132,13 +133,13 @@ MISSING_FEATURES+=	${_feature_}
 .endfor
 
 .for _feature_ in utimes
-.  if defined(USE_FEATURES) && !empty(USE_FEATURES:M${_feature_})
+.  if !empty(USE_FEATURES:M${_feature_})
 .    if ${OPSYS} == "Interix"
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif
 .endfor
 
-.if defined(USE_FEATURES) && !empty(USE_FEATURES:Mnbcompat)
+.if !empty(USE_FEATURES:Mnbcompat)
 MISSING_FEATURES+=	nbcompat
 .endif
