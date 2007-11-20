@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.10 2007/05/16 09:01:11 martti Exp $
+$NetBSD: patch-al,v 1.11 2007/11/20 11:58:00 martti Exp $
 
---- examples/Makefile.in.orig	2007-05-02 21:07:00.000000000 +0300
-+++ examples/Makefile.in	2007-05-16 08:41:47.000000000 +0300
-@@ -219,7 +219,7 @@
+--- examples/Makefile.in.orig	2007-11-20 02:15:30.000000000 +0200
++++ examples/Makefile.in	2007-11-20 12:57:37.000000000 +0200
+@@ -224,7 +224,7 @@
  target_os = @target_os@
  target_vendor = @target_vendor@
  EXTRA_DIST = cgi-demo.cgi.in
