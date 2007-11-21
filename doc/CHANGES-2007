@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2430 2007/11/21 19:53:33 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2431 2007/11/21 20:30:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ap2-wsgi to 1.2 [gdt 2007-11-21]
 	Updated sysutils/memtester to 4.0.8 [xtraeme 2007-11-21]
 	Updated graphics/gimp to 2.4.2 [adam 2007-11-21]
+	Updated mail/milter-greylist to 4.0 [gdt 2007-11-21]
