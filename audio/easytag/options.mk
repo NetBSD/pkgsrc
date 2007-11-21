@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/10/16 21:32:59 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2007/11/21 21:47:25 drochner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easytag
 PKG_SUPPORTED_OPTIONS=	flac mpeg4ip ogg
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--disable-flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mmpeg4ip)
+BUILDLINK_API_DEPENDS.libmp4v2+= libmp4v2>=1.6.1
 .include "../../multimedia/libmp4v2/buildlink3.mk"
 # for mpeg4ip.h
 CPPFLAGS+=		-DHAVE_GTK
