@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2007/01/07 15:01:52 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/11/21 12:47:04 drochner Exp $
 
-DISTNAME=	flac-1.1.3
-PKGREVISION=	1
+DISTNAME=	flac-1.2.1
 CATEGORIES=	audio archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 
@@ -20,6 +19,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN=""
+
+PKGCONFIG_OVERRIDE+=	src/libFLAC++/flac++.pc.in src/libFLAC/flac.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
