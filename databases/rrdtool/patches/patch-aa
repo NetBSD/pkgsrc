@@ -1,21 +1,19 @@
-$NetBSD: patch-aa,v 1.8 2007/11/20 11:58:00 martti Exp $
+$NetBSD: patch-aa,v 1.9 2007/11/21 07:50:14 martti Exp $
 
---- src/rrd_tool.h.orig	2007-11-20 02:15:10.000000000 +0200
-+++ src/rrd_tool.h	2007-11-20 13:47:45.000000000 +0200
-@@ -202,6 +202,16 @@
- 
+Index: src/rrd_update.c
+===================================================================
+--- src/rrd_update.c	(revision 1235)
++++ src/rrd_update.c	(working copy)
+@@ -427,10 +427,10 @@
+         fclose(rrd_file);
+ 	return(-1);
+     }
+-#ifdef HAVE_MADVISE
++#ifdef USE_MADVISE
+     /* when we use mmaping we tell the kernel the mmap equivalent
+        of POSIX_FADV_RANDOM */
+-    madvise(rrd_mmaped_file,rrd_filesize,POSIX_MADV_RANDOM);
++    madvise(rrd_mmaped_file,rrd_filesize,MADV_RANDOM);
  #endif
- 
-+#if defined(__NetBSD__)
-+# if !defined(_NETBSD_SOURCE)
-+#  define _NETBSD_SOURCE
-+# endif
-+
-+# if !defined(POSIX_MADV_RANDOM)
-+#  define POSIX_MADV_RANDOM MADV_RANDOM
-+# endif
-+#endif
-+
- #ifdef  __cplusplus
- }
  #endif
+     /* loop through the arguments. */
