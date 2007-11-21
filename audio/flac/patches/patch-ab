@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2007/01/07 12:25:05 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2007/11/21 12:47:05 drochner Exp $
 
---- doc/html/images/Makefile.in.orig	2006-11-27 06:40:52.000000000 +0000
+--- doc/html/images/Makefile.in.orig	2007-09-16 22:04:58.000000000 +0200
 +++ doc/html/images/Makefile.in
-@@ -218,7 +218,7 @@ target_alias = @target_alias@
+@@ -223,7 +223,7 @@ AUTOMAKE_OPTIONS = foreign
  
- AUTOMAKE_OPTIONS = foreign
+ SUBDIRS = hw
  
 -docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/html/images
 +docdir = $(datadir)/doc/html/$(PACKAGE)/images
