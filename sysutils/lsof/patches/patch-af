@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.10 2007/08/14 19:59:18 veego Exp $
+$NetBSD: patch-af,v 1.11 2007/11/21 11:01:55 apb Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 23:54:15.000000000 +0200
-+++ dialects/n+obsd/dlsof.h	2007-08-11 18:16:59.000000000 +0200
-@@ -161,6 +161,7 @@
++++ dialects/n+obsd/dlsof.h
+@@ -161,6 +161,7 @@ struct nameidata;	/* to satisfy a functi
  #include <sys/socketvar.h>
  #include <sys/un.h>
  #include <sys/unpcb.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.10 2007/08/14 19:59:18 veego Exp $
  #include <netinet/in.h>
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
-@@ -170,7 +171,6 @@
+@@ -170,7 +171,6 @@ struct nameidata;	/* to satisfy a functi
  #include <netinet6/in6_pcb.h>
  # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
  
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.10 2007/08/14 19:59:18 veego Exp $
  #include <netinet/in_pcb.h>
  #include <netinet/ip_var.h>
  #include <netinet/tcp.h>
-@@ -264,6 +264,9 @@
+@@ -264,6 +264,9 @@ struct sockproto {
  
  #undef KERNEL
  #include <ufs/mfs/mfsnode.h>
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.10 2007/08/14 19:59:18 veego Exp $
  
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
-@@ -489,7 +492,12 @@
+@@ -489,7 +492,12 @@ extern KA_T Kpa;
  struct l_vfs {
  	KA_T addr;			/* kernel address */
  	fsid_t	fsid;			/* file system ID */
@@ -41,3 +41,13 @@ $NetBSD: patch-af,v 1.10 2007/08/14 19:59:18 veego Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
+@@ -581,4 +589,9 @@ struct sfile {
+ #  endif	/* defined(HASNCVPID) */
+ # endif  /* defined(HASNCACHE) */
+ 
++#if     defined(VV_ROOT)		/* NetBSD >= 4.99.33 */
++#define VNODE_VFLAG     v_vflag
++#define NCACHE_VROOT    VV_ROOT
++#endif  /* VV_ROOT */
++
+ #endif	/* NETBSD_LSOF_H */
