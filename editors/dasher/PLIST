@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/11/05 20:01:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/11/21 18:59:23 drochner Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -351,7 +351,6 @@ share/omf/dasher/dasher-ru.omf
 share/omf/dasher/dasher-sv.omf
 @dirrm share/omf/dasher
 @comment in scrollkeeper: @dirrm share/omf
-@dirrm share/locale/uz@cyrillic/LC_MESSAGES
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
