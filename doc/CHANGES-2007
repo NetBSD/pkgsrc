@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2427 2007/11/20 22:13:51 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2428 2007/11/21 15:20:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4475,3 +4475,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/rrdtool to 1.2.26 [martti 2007-11-20]
 	Updated filesystems/fuse-ntfs-3g to 1.1120 [xtraeme 2007-11-20]
 	Updated www/apache-tomcat55 to 5.5.25 [adrianp 2007-11-20]
+	Updated www/ap2-wsgi to 1.2 [gdt 2007-11-21]
