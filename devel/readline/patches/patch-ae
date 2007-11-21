@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
+$NetBSD: patch-ae,v 1.13 2007/11/21 23:33:14 minskim Exp $
 
---- Makefile.in.orig	2005-05-08 01:11:23.000000000 +0000
+--- Makefile.in.orig	2005-05-07 18:11:23.000000000 -0700
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -12,7 +12,15 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
  PACKAGE = @PACKAGE_NAME@
  VERSION = @PACKAGE_VERSION@
  
-@@ -94,9 +97,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
+@@ -72,6 +75,7 @@ CTAGS = ctags -tw
+ CFLAGS = @CFLAGS@
+ LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
+ CPPFLAGS = @CPPFLAGS@
++LDFLAGS = @LDFLAGS@
+ 
+ DEFS = @DEFS@ @CROSS_COMPILE@
+ LOCAL_DEFS = @LOCAL_DEFS@
+@@ -94,9 +98,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
  	${RM} $@
  	$(CC) -c $(CCFLAGS) $<
  
@@ -28,7 +36,7 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -145,6 +154,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
+@@ -145,6 +155,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
  
  all: $(TARGETS)
  
@@ -37,7 +45,7 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
  everything: all examples
  
  static: $(STATIC_LIBS)
-@@ -154,17 +165,31 @@ libreadline.a: $(OBJECTS)
+@@ -154,17 +166,33 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
@@ -45,6 +53,7 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
 +	$(LIBTOOL) --mode=clean $(RM) $@
 +	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJECTS:.o=.lo) $(TERMCAP_LIB) \
 +		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
++		$(LDFLAGS)
 +
  libhistory.a: $(HISTOBJ) xmalloc.o
  	$(RM) $@
@@ -54,7 +63,8 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
 +libhistory.la: $(HISTOBJ:.o=.lo) xmalloc.lo
 +	$(LIBTOOL) --mode=clean $(RM) $@
 +	$(LIBTOOL) --mode=link $(CC) -o $@ $(HISTOBJ:.o=.lo) xmalloc.lo \
-+		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR)
++		-rpath $(libdir) -version-info $(SHLIB_MAJOR):$(SHLIB_MINOR) \
++		$(LDFLAGS)
 +
  # Since tilde.c is shared between readline and bash, make sure we compile
  # it with the right flags when it's built as part of readline
@@ -69,7 +79,7 @@ $NetBSD: patch-ae,v 1.12 2006/03/02 00:24:55 minskim Exp $
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
-@@ -243,6 +268,12 @@ install-shared: installdirs install-head
+@@ -243,6 +271,12 @@ install-shared: installdirs install-head
  uninstall-shared: maybe-uninstall-headers
  	-( cd shlib; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
  
