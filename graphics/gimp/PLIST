@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2007/10/28 16:43:00 dogcow Exp $
+@comment $NetBSD: PLIST,v 1.33 2007/11/21 19:52:15 adam Exp $
 bin/gimp
 bin/gimp-2.4
 bin/gimp-console
@@ -877,7 +877,6 @@ share/gimp/2.0/scripts/guides-from-selection.scm
 share/gimp/2.0/scripts/guides-new-percent.scm
 share/gimp/2.0/scripts/guides-new.scm
 share/gimp/2.0/scripts/guides-remove-all.scm
-share/gimp/2.0/scripts/hsv-graph.scm
 share/gimp/2.0/scripts/i26-gunya2.scm
 share/gimp/2.0/scripts/images/beavis.jpg
 share/gimp/2.0/scripts/images/texture.jpg
