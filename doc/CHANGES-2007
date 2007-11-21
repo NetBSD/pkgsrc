@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2429 2007/11/21 18:42:21 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2430 2007/11/21 19:53:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/apache-tomcat55 to 5.5.25 [adrianp 2007-11-20]
 	Updated www/ap2-wsgi to 1.2 [gdt 2007-11-21]
 	Updated sysutils/memtester to 4.0.8 [xtraeme 2007-11-21]
+	Updated graphics/gimp to 2.4.2 [adam 2007-11-21]
