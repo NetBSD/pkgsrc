@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2428 2007/11/21 15:20:26 gdt Exp $
+$NetBSD: CHANGES-2007,v 1.2429 2007/11/21 18:42:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated filesystems/fuse-ntfs-3g to 1.1120 [xtraeme 2007-11-20]
 	Updated www/apache-tomcat55 to 5.5.25 [adrianp 2007-11-20]
 	Updated www/ap2-wsgi to 1.2 [gdt 2007-11-21]
+	Updated sysutils/memtester to 4.0.8 [xtraeme 2007-11-21]
