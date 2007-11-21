@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2007/11/19 03:53:10 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2007/11/21 14:15:11 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -32,6 +32,7 @@ INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 # default BUILDLINK_FILES_CMD, so name them to be symlinked into
 # ${BUILDLINK_DIR}.
 #
+.include "../../lang/perl5/vars.mk"
 BUILDLINK_FILES.perl=							\
 	${PERL5_SUB_INSTALLARCHLIB}/CORE/*				\
 	${PERL5_SUB_INSTALLARCHLIB}/auto/DynaLoader/DynaLoader.a
