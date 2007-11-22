@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6845 2007/11/21 23:37:47 minskim Exp $
+$NetBSD: TODO,v 1.6846 2007/11/22 11:20:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ Suggested package updates
 	o gcombust-0.1.55
 	o gcompris-8.4.2
 	o gconf-editor-2.18.2
-	o gconfmm-2.20.0
 	o gcpio-2.7
 	o gdal-1.4.3
 	o gdb-6.7
