@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/22 02:56:03 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/22 04:13:08 jnemeth Exp $
 
 DISTNAME=	DateTime-Format-MySQL-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Parse and format MySQL dates and times
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/DateTime/Format/MySQL/.packlist
 
-DEPENDS+=	p5-DateTime-Format-Builder>=0.7807:../../time/p5-DateTime-Format-Builder
+DEPENDS+=	p5-DateTime-Format-Builder>=0.60:../../time/p5-DateTime-Format-Builder
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
