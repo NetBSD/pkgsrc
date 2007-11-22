@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/25 06:14:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2007/11/22 21:19:13 ghen Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -41,7 +41,7 @@ tomcat/server/lib/catalina-cluster.jar
 tomcat/server/lib/catalina-optional.jar
 tomcat/server/lib/catalina-storeconfig.jar
 tomcat/server/lib/catalina.jar
-tomcat/server/lib/commons-modeler-2.0.jar
+tomcat/server/lib/commons-modeler-2.0.1.jar
 tomcat/server/lib/servlets-cgi.renametojar
 tomcat/server/lib/servlets-default.jar
 tomcat/server/lib/servlets-invoker.jar
