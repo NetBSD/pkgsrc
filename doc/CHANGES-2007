@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2434 2007/11/22 11:20:50 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2435 2007/11/22 11:45:39 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated math/mathomatic to 12.8.0 [minskim 2007-11-21]
 	Updated time/p5-DateTime-Format-MySQL to 0.04nb1 [jnemeth 2007-11-22]
 	Updated devel/gconfmm to 2.20.0 [adam 2007-11-22]
+	Updated chat/inspircd to 1.1.15 [adrianp 2007-11-22]
