@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/08/09 21:48:53 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2007/11/22 22:56:01 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.smokeping
 
@@ -18,9 +18,9 @@ PKG_SUGGESTED_OPTIONS+=	smokeping-speedycgi
 ###
 .if !empty(PKG_OPTIONS:Msmokeping-speedycgi)
 DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
-INTERP=		speedy
+INTERP=		lib/perl5/vendor_perl/bin/speedy
 .else
-INTERP=		perl
+INTERP=		bin/perl
 .endif
 
 ###
