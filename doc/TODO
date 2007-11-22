@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6847 2007/11/22 20:27:25 adrianp Exp $
+$NetBSD: TODO,v 1.6848 2007/11/22 23:08:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -260,7 +260,7 @@ Suggested package updates
 	o Transmission-0.93
 	o YoSucker-81
 	o aap-0.144
-	o abcm2ps-5.6.0
+	o abcm2ps-5.6.1
 	o abcmidi-20070318
 	o acme-091
 	o acr-0.5.2
@@ -381,6 +381,7 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.96.1
+	o claws-mail-3.1.0
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o clisp-2.43
@@ -420,6 +421,7 @@ Suggested package updates
 	o delegate-9.7.5
 	o devIL-1.6.7
 	o devhelp-0.16.1
+	o devilspie-0.21
 	o devtodo-0.1.19
 	o dhid-5.3
 	o diction-1.11
@@ -437,12 +439,13 @@ Suggested package updates
 	o drscheme-371
 	o dvdrip-0.98.8
 	o dvipng-1.9
+	o dwm-4.7
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ed-0.8
-	o ede-1.1
+	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o efax-gtk-3.0.16
 	o egtk-0.3.6.2
@@ -534,7 +537,6 @@ Suggested package updates
 	o geda-1.2.0.20070902
 	o gedit-2.20.3
 	o generator-cbiere-0.35r3
-	o genius-1.0.1
 	o getmail-4.7.7
 	o gettext-0.17
 	o gfract-0.33
@@ -553,6 +555,8 @@ Suggested package updates
 	o glade3-3.4.0
 	o glchess-1.0.5
 	o global-5.6
+	o glpk-4.24
+	o glproto-1.4.9
 	o gmime-2.2.11
 	o gmpc-0.15.1
 	o gnash-0.8.1
@@ -570,14 +574,17 @@ Suggested package updates
 	o gnome-themes-2.20.1
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
+	o gnumeric-current-1.7.90
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
 	o gnutls-2.0.4
+	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
+	o goffice0.5-0.5.3
 	o gogo-3.11p1
 	o gok-1.3.7
 	o gossip-0.28
@@ -652,7 +659,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.8
+	o ikiwiki-2.12
 	o imap-uw-2006k
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -664,7 +671,7 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ircservices-5.1.6
+	o ircservices-5.1.9
 	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.3.1
@@ -716,6 +723,13 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.6.1
 	o libFoundation-1.1.3
+	o libICE-1.0.4
+	o libXaw-1.0.4
+	o libXcursor-1.1.9
+	o libXpm-3.5.7
+	o libXrender-0.9.4
+	o libXtst-1.0.3
+	o libXxf86dga-1.0.2
 	o libao-0.8.8
 	o libarchive-2.4.0
 	o libassuan-1.0.1
@@ -790,7 +804,8 @@ Suggested package updates
 	o maradns-1.2.12.08
 	o matchbox-panel-0.9.3
 	o mcrypt-2.6.6
-	o mednafen-0.8.4
+	o mednafen-0.8.5
+	o memtester-4.0.8
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -807,6 +822,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.3
+	o modular-xorg-server-1.4
 	o mono-1.2.4
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
@@ -987,6 +1003,7 @@ Suggested package updates
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
+	o p5-Test-WWW-Mechanize-1.16
 	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Quoted-2.03
@@ -1040,6 +1057,7 @@ Suggested package updates
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o php5-5.2.5
+	o phpmyadmin-2.11.2.2
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1099,7 +1117,7 @@ Suggested package updates
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
-	o py-clearsilver-0.10.4
+	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
@@ -1162,6 +1180,7 @@ Suggested package updates
 	o rdp-1.6
 	o regionset-0.2
 	o remind-3.1.3
+	o renderproto-0.9.3
 	o replex-0.1.6.8
 	o resize_image-0.7
 	o rhythmbox-0.10.1
@@ -1181,7 +1200,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
-	o rxvt-unicode-8.4
+	o rxvt-unicode-8.5
 	o sablecc-3.2
 	o samba-3.0.27a
 	o sarg-2.2.31
@@ -1208,6 +1227,7 @@ Suggested package updates
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.1.2
+	o silc-server-1.1
 	o silc-toolkit-1.1.5
 	o simh-3.7.3
 	o simulavr-0.1.2.2
@@ -1356,6 +1376,11 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
+	o xf86-input-keyboard-1.2.2
+	o xf86-input-mouse-1.2.3
+	o xf86-video-intel-2.2.0
+	o xf86-video-nv-2.1.6
+	o xf86dgaproto-2.0.3
 	o xfstt-1.7
 	o xhippo-3.5
 	o xine-1.1.8
@@ -1371,7 +1396,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
 	o xmms-1.2.11
-	o xmms-crossfade-1.3.10
+	o xmms-crossfade-0.3.13
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
@@ -1389,6 +1414,7 @@ Suggested package updates
 	o xpad-2.12
 	o xpdf-3.02pl2
 	o xpp-1.5
+	o xproto-7.0.11
 	o xpuyopuyo-0.9.5
 	o xrestop-0.4
 	o xrmap-anthems-1.2
@@ -1413,6 +1439,7 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.20.0
+	o zile-2.2.52
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-2.9.8
