@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2007/11/21 19:52:15 adam Exp $
+# $NetBSD: Makefile,v 1.167 2007/11/22 18:12:45 tron Exp $
 
 DISTNAME=	gimp-2.4.2
 CATEGORIES=	graphics
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
 COMMENT=	The GNU image manipulation program
+
+BUILD_DEPENDS+=	p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
