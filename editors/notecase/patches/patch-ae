@@ -1,0 +1,46 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
+
+--- src/lib/FilePath.cpp.orig	2007-07-31 07:47:28.000000000 +0200
++++ src/lib/FilePath.cpp
+@@ -23,6 +23,8 @@
+  #include <unistd.h>
+ #endif
+ 
++#include "../config.h"
++
+ #define PATH_DELIMITERS "\\/"
+ 
+ std::string GetHomeDir()
+@@ -95,31 +97,7 @@ std::string GetAppPath()
+         ::GetModuleFileName(NULL, buf, 511);
+         path = buf;
+ #else
+-		//code adapted from public domain code by Nicolai Haehnle <prefect_@gmx.net>
+- 		char linkname[64]; /* /proc/<pid>/exe */
+-		int ret;
+-		
+-		/* Get our PID and build the name of the link in /proc */
+-		pid_t pid = getpid();
+-			
+-		if (snprintf(linkname, sizeof(linkname), "/proc/%i/exe", pid) < 0)
+-			return path; //error
+-
+-		/* Now read the symbolic link */
+-		char buffer[2048];
+-		ret = readlink(linkname, buffer, sizeof(buffer));
+-		
+-		/* In case of an error, leave the handling up to the caller */
+-		if (ret == -1)
+-			return path;
+-		
+-		/* Report insufficient buffer size */
+-		if (ret >= (int)sizeof(buffer))
+-			return path;
+-
+-		buffer[ret] = '\0';	//terminate the buffer
+-
+-		path = buffer;
++		path = INSTALL_PREFIX "/bin/notecase";
+ #endif
+         found = true;
+     }
