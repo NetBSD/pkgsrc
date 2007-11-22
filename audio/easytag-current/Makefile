@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/21 21:40:25 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2007/11/22 19:23:23 drochner Exp $
 #
 
 DISTNAME=	easytag-2.1.3
@@ -26,4 +26,5 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.4.1
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
