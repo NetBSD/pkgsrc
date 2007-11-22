@@ -2,11 +2,11 @@ SpeedyCGI is a way to run perl scripts persistently, which can make them run
 much more quickly. A script can be made to to run persistently by changing
 the interpreter line at the top of the script from:
 
-    #!${LOCALBASE}/bin/perl
+    #!${PREFIX}/bin/perl
 
 to
 
-    #!${LOCALBASE}/bin/speedy
+    #!${PREFIX}/lib/perl5/vendor_perl/bin/speedy
 
 After the script is initially run, instead of exiting, the perl interpreter
 is kept running. During subsequent runs, this interpreter is used to handle
