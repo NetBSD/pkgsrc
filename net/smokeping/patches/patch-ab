@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2007/11/22 20:25:54 adrianp Exp $
+$NetBSD: patch-ab,v 1.8 2007/11/22 22:56:01 adrianp Exp $
 
 --- htdocs/smokeping.cgi.dist.orig	2007-11-05 21:59:38.000000000 +0000
 +++ htdocs/smokeping.cgi.dist
 @@ -1,13 +1,12 @@
 -#!/usr/sepp/bin/speedy -w
-+#!@PREFIX@/bin/@INTERP@ -w
++#!@PREFIX@/@INTERP@ -w
  # -*-perl-*-
  
 -use lib qw(/usr/pack/rrdtool-1.0.33-to/lib/perl);
