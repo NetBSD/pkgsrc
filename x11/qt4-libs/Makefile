@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/10/13 12:02:14 adam Exp $
+# $NetBSD: Makefile,v 1.15 2007/11/22 18:51:24 drochner Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
+
+PKGREVISION=	1
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -14,7 +16,9 @@ BUILDLINK_PASSTHRU_DIRS+= ${QTPREFIX}
 
 PLIST_SRC=		${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
+# built as plugins
 CONFIGURE_ARGS+=	-no-sql-sqlite
+CONFIGURE_ARGS+=	-no-libtiff
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}

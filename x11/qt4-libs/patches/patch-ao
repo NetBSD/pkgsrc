@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2007/09/03 09:35:17 drochner Exp $
+$NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
 
---- ./src/corelib/codecs/qiconvcodec.cpp.orig	2007-08-07 15:08:39.000000000 +0200
+--- ./src/corelib/codecs/qiconvcodec.cpp.orig	2007-10-01 15:06:02.000000000 +0200
 +++ ./src/corelib/codecs/qiconvcodec.cpp
 @@ -44,7 +44,7 @@
  
@@ -11,6 +11,42 @@ $NetBSD: patch-ao,v 1.1 2007/09/03 09:35:17 drochner Exp $
  #  include <langinfo.h>
  #endif
  
+@@ -95,7 +95,7 @@ QString QIconvCodec::convertToUnicode(co
+     QByteArray ba;
+     size_t outBytesLeft = len * 2 + 2;
+     ba.resize(outBytesLeft);
+-#ifdef GNU_LIBICONV
++#if defined(GNU_LIBICONV) || defined(__NetBSD__)
+     // GNU doesn't disagree with POSIX :/
+     const char *inBytes = chars;
+ #else
+@@ -155,7 +155,7 @@ QByteArray QIconvCodec::convertFromUnico
+     ba.resize(outBytesLeft);
+     char *outBytes = ba.data();
+ 
+-#if defined(GNU_LIBICONV)
++#if defined(GNU_LIBICONV) || defined(__NetBSD__)
+     const char *inBytes;
+ #else
+     char *inBytes;
+@@ -165,7 +165,7 @@ QByteArray QIconvCodec::convertFromUnico
+ #if !defined(NO_BOM)
+     // give iconv() a BOM
+     QChar bom[] = { QChar(QChar::ByteOrderMark) };
+-#ifdef GNU_LIBICONV
++#if defined(GNU_LIBICONV) || defined(__NetBSD__)
+     // GNU doesn't disagree with POSIX :/
+     inBytes = reinterpret_cast<const char *>(bom);
+ #else
+@@ -179,7 +179,7 @@ QByteArray QIconvCodec::convertFromUnico
+ #endif // NO_BOM
+ 
+     // now feed iconv() the real data
+-#ifdef GNU_LIBICONV
++#if defined(GNU_LIBICONV) || defined(__NetBSD__)
+     // GNU doesn't disagree with POSIX :/
+     inBytes = reinterpret_cast<const char *>(uc);
+ #else
 @@ -244,7 +244,7 @@ iconv_t QIconvCodec::createIconv_t(const
      char *codeset = 0;
  #endif
