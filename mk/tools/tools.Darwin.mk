@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.34 2007/11/16 05:51:37 minskim Exp $
+# $NetBSD: tools.Darwin.mk,v 1.35 2007/11/22 16:39:47 tron Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -71,7 +71,6 @@ TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
-TOOLS_PLATFORM.perl?=		/usr/bin/perl
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
