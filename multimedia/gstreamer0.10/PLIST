@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/08/30 12:21:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/22 20:25:20 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -18,6 +18,7 @@ ${GSTCHECK}include/gstreamer-0.10/gst/check/gstcheck.h
 include/gstreamer-0.10/gst/controller/gstcontroller.h
 include/gstreamer-0.10/gst/controller/gstcontrolsource.h
 include/gstreamer-0.10/gst/controller/gstinterpolationcontrolsource.h
+include/gstreamer-0.10/gst/controller/gstlfocontrolsource.h
 include/gstreamer-0.10/gst/dataprotocol/dataprotocol.h
 include/gstreamer-0.10/gst/glib-compat.h
 include/gstreamer-0.10/gst/gst.h
@@ -29,6 +30,7 @@ include/gstreamer-0.10/gst/gstchildproxy.h
 include/gstreamer-0.10/gst/gstclock.h
 include/gstreamer-0.10/gst/gstcompat.h
 include/gstreamer-0.10/gst/gstconfig.h
+include/gstreamer-0.10/gst/gstdebugutils.h
 include/gstreamer-0.10/gst/gstelement.h
 include/gstreamer-0.10/gst/gstelementfactory.h
 include/gstreamer-0.10/gst/gstenumtypes.h
@@ -160,6 +162,7 @@ share/gtk-doc/html/gstreamer-libs-0.10/GstCollectPads.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstController.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstInterpolationControlSource.html
+share/gtk-doc/html/gstreamer-libs-0.10/GstLFOControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstPushSrc.html
 share/gtk-doc/html/gstreamer-libs-0.10/api-index.html
 share/gtk-doc/html/gstreamer-libs-0.10/gdp-header.png
@@ -206,18 +209,24 @@ share/gtk-doc/html/gstreamer-plugins-0.10/index.sgml
 share/gtk-doc/html/gstreamer-plugins-0.10/style.css
 share/locale/af/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/az/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/be/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/bg/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/ca/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/cs/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/da/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/de/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/es/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/fi/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/fr/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/hu/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/it/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/nb/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/nl/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/pl/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/ru/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/rw/LC_MESSAGES/gstreamer-0.10.mo
+share/locale/sk/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/sq/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/sr/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/sv/LC_MESSAGES/gstreamer-0.10.mo
