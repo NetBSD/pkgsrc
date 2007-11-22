@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.114 2007/07/26 17:07:59 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.115 2007/11/22 09:36:38 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -280,6 +280,15 @@ sub main() {
     }
 }
 
+sub canonicalize_pkgname($) {
+	my ($pkgname) = @_;
+
+	$pkgname =~ s,^py\d+(?:pth|)-,py-,;
+	$pkgname =~ s,^ruby\d+-,ruby-,;
+	$pkgname =~ s,^php\d+-,php-,;
+	return $pkgname;
+}
+
 # Could speed up by building a cache of package names to paths, then processing
 # each package name once against the tests.
 sub check_prebuilt_packages() {
@@ -293,10 +302,7 @@ sub check_prebuilt_packages() {
     elsif (/(.+)-(\d.*)\.t[bg]z$/) {
         my ( $pkg, $ver ) = ( $1, $2 );
 
-        # XXX: hack for python and ruby prefix support
-        $pkg =~ s/^py[0-9][0-9]pth-/py-/;
-        $pkg =~ s/^py[0-9][0-9]-/py-/;
-        $pkg =~ s/^ruby[0-9][0-9]-/ruby-/;
+	$pkg = canonicalize_pkgname($pkg);
 
         if ( $opt{V} && $vuln{$pkg} ) {
             foreach my $chk ( @{ $vuln{$pkg} } ) {
@@ -627,20 +633,11 @@ sub listdir($$) {
 #
 sub list_installed_packages() {
     my (@pkgs);
-    my $pkgver;
 
-    open( PKG_INFO, 'pkg_info -a|' ) || fail("Unable to run pkg_info: $!");
-    while (<PKG_INFO>) {
-        my ($pkg);
-
-        $pkg = (split)[0];
-
-        # XXX: hack for python and ruby prefix support
-        $pkg =~ s/^py[0-9][0-9]pth-/py-/;
-        $pkg =~ s/^py[0-9][0-9]-/py-/;
-        $pkg =~ s/^ruby[0-9][0-9]-/ruby-/;
-
-        push( @pkgs, $pkg );
+    open(PKG_INFO, 'pkg_info -e "*" |') || fail("Unable to run pkg_info: $!");
+    while (defined(my $pkg = <PKG_INFO>)) {
+        chomp($pkg);
+        push(@pkgs, canonicalize_pkgname($pkg));
     }
     close(PKG_INFO);
 
@@ -893,10 +890,7 @@ sub parse_makefile_pkgsrc($) {
             $pkgname = "pkg_install-$pkg_installver";
         }
 
-        # XXX: hack for python and ruby prefix support
-        $pkgname =~ s/^py..pth-/py-/;
-        $pkgname =~ s/^py..-/py-/;
-        $pkgname =~ s/^ruby..-/ruby-/;
+	$pkgname = canonicalize_pkgname($pkgname);
 
         if ( defined $vars->{PKGREVISION}
             and not $vars->{PKGREVISION} =~ /^\s*$/ )
@@ -1435,10 +1429,7 @@ sub pkgsrc_check_depends() {
 
             $depend =~ s/:.*// || next;
 
-            # XXX: hack for python prefix support
-            $depend =~ s/^py..pth-/py-/;
-            $depend =~ s/^py..-/py-/;
-            $depend =~ s/^ruby..-/ruby-/;
+	    $depend = canonicalize_pkgname($depend);
             if ( ( $msg = invalid_version($depend) ) ) {
                 if ( !defined($err) ) {
                     print $pkgver->pkgname . " DEPENDS errors:\n";
