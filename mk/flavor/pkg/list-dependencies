@@ -18,26 +18,25 @@
 #
 # ENVIRONMENT
 #	AWK
-#		This is the path to the awk interpreter.
+#		Path to the awk interpreter.
 #
 #	PKGSRCDIR
-#		This is the root of the pkgsrc tree.
+#		Root directory of the pkgsrc tree.
 #
 #	SED
-#		This is the path to the sed command.
+#		Path to the sed command.
 #
 # The following variables are used by the reduce-depends.awk script:
 #
 #	PKG_ADMIN
-#		This is the path to the pkg_admin command.
+#		Path to the pkg_admin command.
 #
 #	PWD_CMD
-#		This is the path to the pwd command.
+#		Path to the pwd command.
 #
 ######################################################################
 
 : ${ECHO:=echo}
-: ${TEST:=test}
 : ${CAT:=cat}
 
 set -e
@@ -56,9 +55,8 @@ print_entries() {
 	done
 }
 
-if ${TEST} $# != 3;
-then
-	${ECHO} "list-dependencies must be called with 3 arguments" 1>&2
+if [ $# != 3 ]; then
+	echo "usage: list-dependencies bootstrap_depends build_depends depends" 1>&2
 	exit 1
 fi
 
