@@ -1,5 +1,5 @@
 #
-# $Id: options.mk,v 1.3 2006/12/15 20:33:05 joerg Exp $
+# $Id: options.mk,v 1.4 2007/11/22 11:57:19 obache Exp $
 #
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.rxvt-unicode
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--with-term=rxvt
 CONFIGURE_ARGS+=	--enable-perl
 PLIST_SUBST+=		PERL=
 .include "../../lang/perl5/buildlink3.mk"
+USE_TOOLS+=		perl
 .else
 CONFIGURE_ARGS+=	--disable-perl
 PLIST_SUBST+=		PERL='@comment '
