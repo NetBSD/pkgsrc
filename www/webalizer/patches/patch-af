@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/11/16 11:50:49 martin Exp $
+$NetBSD: patch-af,v 1.2 2007/11/22 15:26:15 martti Exp $
 
---- configure.orig	2007-11-16 11:46:40.000000000 +0100
-+++ configure	2007-11-16 11:49:51.000000000 +0100
-@@ -1243,8 +1243,8 @@
+--- configure.orig	2000-10-06 10:51:48.000000000 +0300
++++ configure	2007-11-22 10:52:18.000000000 +0200
+@@ -1216,8 +1216,8 @@
    cat conftest.$ac_ext >&5
  fi
  rm -f conftest*
@@ -11,9 +11,9 @@ $NetBSD: patch-af,v 1.1 2007/11/16 11:50:49 martin Exp $
 +if test "$ac_cv_search_dbopen" = "no"; then
 +LIBS="${BDB_LIBS} $ac_func_search_save_LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 1250 "configure"
+ #line 1223 "configure"
  #include "confdefs.h"
-@@ -1266,7 +1266,7 @@
+@@ -1239,7 +1239,7 @@
    cat conftest.$ac_ext >&5
  fi
  rm -f conftest*
