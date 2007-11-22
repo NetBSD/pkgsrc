@@ -40,11 +40,11 @@
 
 set -e
 
-trap "exit 1" INT
+trap "exit 1" USR1
 
 reduce_depends() {
 	${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk "$1" \
-	|| kill -INT $$
+	|| kill -USR1 $$
 }
 
 print_entries() {
