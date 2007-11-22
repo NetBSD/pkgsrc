@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6846 2007/11/22 11:20:50 adam Exp $
+$NetBSD: TODO,v 1.6847 2007/11/22 20:27:25 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1222,7 +1222,6 @@ Suggested package updates
 	o smalltalk-2.3.6
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
-	o smokeping-2.2.7
 	o snd-9.5
 	o snes9x-1.51
 	o snobol-1.1
