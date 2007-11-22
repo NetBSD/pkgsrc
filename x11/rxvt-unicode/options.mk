@@ -1,6 +1,4 @@
-#
-# $Id: options.mk,v 1.4 2007/11/22 11:57:19 obache Exp $
-#
+# $NetBSD: options.mk,v 1.5 2007/11/22 11:59:06 obache Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.rxvt-unicode
 PKG_SUPPORTED_OPTIONS=  perl unicode3 xft2 rxvt-term
