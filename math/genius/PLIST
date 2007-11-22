@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/08 18:27:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/11/22 20:31:44 drochner Exp $
 bin/genius
 bin/gnome-genius
 include/genius/compil.h
@@ -61,51 +61,19 @@ share/genius/gel/statistics/basic.gel
 share/genius/gel/statistics/loader.gel
 share/genius/gel/symbolic/differentiation.gel
 share/genius/gel/symbolic/loader.gel
+share/genius/genius-graph.png
 share/genius/genius.txt
 share/genius/gtksourceview/genius.lang
 share/genius/plugins/test.plugin
-share/gnome/help/genius/C/about.xml
-share/gnome/help/genius/C/examples.xml
 share/gnome/help/genius/C/figures/genius_window.png
 share/gnome/help/genius/C/figures/line_plot.png
 share/gnome/help/genius/C/figures/line_plot_graph.png
 share/gnome/help/genius/C/figures/parametric.png
 share/gnome/help/genius/C/figures/parametric_graph.png
 share/gnome/help/genius/C/figures/surface_graph.png
-share/gnome/help/genius/C/gel-absolute-value-modulus.xml
-share/gnome/help/genius/C/gel-comparison-operators.xml
-share/gnome/help/genius/C/gel-conditionals.xml
-share/gnome/help/genius/C/gel-error-handling.xml
 share/gnome/help/genius/C/gel-function-list.xml
-share/gnome/help/genius/C/gel-functions.xml
-share/gnome/help/genius/C/gel-loading-programs.xml
-share/gnome/help/genius/C/gel-loops.xml
-share/gnome/help/genius/C/gel-lvalues.xml
-share/gnome/help/genius/C/gel-matrix-linalg.xml
-share/gnome/help/genius/C/gel-matrix-support.xml
-share/gnome/help/genius/C/gel-matrix-transpose.xml
-share/gnome/help/genius/C/gel-modular-evaluation.xml
-share/gnome/help/genius/C/gel-operator-list.xml
-share/gnome/help/genius/C/gel-plotting.xml
-share/gnome/help/genius/C/gel-polynomials.xml
-share/gnome/help/genius/C/gel-previous-result.xml
-share/gnome/help/genius/C/gel-references.xml
-share/gnome/help/genius/C/gel-returning.xml
-share/gnome/help/genius/C/gel-separator.xml
-share/gnome/help/genius/C/gel-startup-procedure.xml
-share/gnome/help/genius/C/gel-sums-products.xml
-share/gnome/help/genius/C/gel-values.xml
-share/gnome/help/genius/C/gel-variables.xml
 share/gnome/help/genius/C/genius.xml
 share/gnome/help/genius/C/legal.xml
-share/gnome/help/genius/C/prefs-display.xml
-share/gnome/help/genius/C/prefs-precision.xml
-share/gnome/help/genius/C/prefs-terminal.xml
-share/gnome/help/genius/C/starting-to-start.xml
-share/gnome/help/genius/C/starting-when-start.xml
-share/gnome/help/genius/C/usage-create-program.xml
-share/gnome/help/genius/C/usage-open-program.xml
-share/gnome/help/genius/C/usage-workarea.xml
 share/icons/hicolor/32x32/apps/gnome-genius.png
 share/icons/hicolor/48x48/apps/gnome-genius.png
 share/locale/ar/LC_MESSAGES/genius.mo
@@ -125,9 +93,13 @@ share/locale/hr/LC_MESSAGES/genius.mo
 share/locale/it/LC_MESSAGES/genius.mo
 share/locale/ja/LC_MESSAGES/genius.mo
 share/locale/ko/LC_MESSAGES/genius.mo
+share/locale/lv/LC_MESSAGES/genius.mo
+share/locale/mk/LC_MESSAGES/genius.mo
+share/locale/ml/LC_MESSAGES/genius.mo
 share/locale/nb/LC_MESSAGES/genius.mo
 share/locale/ne/LC_MESSAGES/genius.mo
 share/locale/nl/LC_MESSAGES/genius.mo
+share/locale/oc/LC_MESSAGES/genius.mo
 share/locale/pa/LC_MESSAGES/genius.mo
 share/locale/pl/LC_MESSAGES/genius.mo
 share/locale/pt/LC_MESSAGES/genius.mo
@@ -144,7 +116,7 @@ share/mime-info/genius.mime
 share/mime/packages/genius.xml
 share/omf/genius/genius-C.omf
 @dirrm share/omf/genius
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
 @comment in xdg-dirs: @dirrm share/mime-info
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
