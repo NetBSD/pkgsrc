@@ -1,27 +1,26 @@
-$NetBSD: patch-ac,v 1.5 2005/10/28 21:43:18 adrianp Exp $
+$NetBSD: patch-ac,v 1.6 2007/11/22 20:25:54 adrianp Exp $
 
---- etc/config.dist.orig	2005-10-23 22:19:51.000000000 +0100
+--- etc/config.dist.orig	2007-10-15 08:49:18.000000000 +0100
 +++ etc/config.dist
-@@ -4,17 +4,17 @@
- 
+@@ -1,16 +1,16 @@
  *** General ***
  
--owner    = Joe Random
--contact  = joe@some.place.xyz
--mailhost = smtp.mailhost.abc
+-owner    = Peter Random
+-contact  = some@address.nowhere
+-mailhost = my.mail.host
 -sendmail = /usr/lib/sendmail
--imgcache = /home/oetiker/public_html/.simg
+-imgcache = /home/oetiker/public_html/smokeping-ms/cache
 +owner    = Charlie Root
 +contact  = root@localhost
 +mailhost = smtp.mynet
 +sendmail = /usr/sbin/sendmail
-+imgcache = @PREFIX@/share/httpd/htdocs/.simg
- imgurl   = ../.simg
--datadir  = /home/oetiker/data/projects/AADJ-smokeping/dist/var
--piddir  = /home/oetiker/data/projects/AADJ-smokeping/dist/var
--cgiurl   = http://people.ee.ethz.ch/~oetiker/smokeping/smokeping.cgi
--smokemail = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/smokemail.dist
--tmail = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/tmail.dist
++imgcache = @SPDIR@/.simg
+ imgurl   = cache
+-datadir  = /tmp/smokeping-ms/data
+-piddir  = /tmp/smokeping-ms/var
+-cgiurl   = http://some.url/smokeping.cgi
+-smokemail = /home/oetiker/checkouts/smokeping/trunk/software/etc/smokemail.dist
+-tmail = /home/oetiker/checkouts/smokeping/trunk/software/etc/tmail.dist
 +datadir  = @VARBASE@/db/smokeping
 +piddir  = @VARBASE@/run
 +cgiurl   = http://localhost/cgi-bin/smokeping.cgi
@@ -30,21 +29,21 @@ $NetBSD: patch-ac,v 1.5 2005/10/28 21:43:18 adrianp Exp $
  # specify this to get syslog logging
  syslogfacility = local0
  # each probe is now run in its own process
-@@ -66,7 +66,7 @@ AVERAGE  0.5 144   720
+@@ -44,7 +44,7 @@ AVERAGE  0.5 144   720
  
  *** Presentation ***
  
--template = /home/oetiker/data/projects/AADJ-smokeping/dist/etc/basepage.html.dist
+-template = /home/oetiker/checkouts/smokeping/trunk/software/etc/basepage.html.dist
 +template = @PKG_SYSCONFDIR@/basepage.html
  
- + overview 
+ + charts
  
-@@ -89,7 +89,7 @@ unison_tolerance = 2
+@@ -96,7 +96,7 @@ unison_tolerance = 2
  
  + FPing
  
--binary = /usr/sepp/bin/fping
+-binary = /usr/sbin/fping
 +binary = @PREFIX@/sbin/fping
  
- *** Targets ***
- 
+ *** Slaves ***
+ secrets=/home/oetiker/checkouts/smokeping/trunk/software/etc/smokeping_secrets.dist
