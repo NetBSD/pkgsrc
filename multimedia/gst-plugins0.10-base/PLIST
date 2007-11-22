@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/08/30 12:22:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/22 20:28:44 drochner Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -12,6 +12,11 @@ include/gstreamer-0.10/gst/audio/mixerutils.h
 include/gstreamer-0.10/gst/audio/multichannel-enumtypes.h
 include/gstreamer-0.10/gst/audio/multichannel.h
 include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h
+include/gstreamer-0.10/gst/fft/gstfft.h
+include/gstreamer-0.10/gst/fft/gstfftf32.h
+include/gstreamer-0.10/gst/fft/gstfftf64.h
+include/gstreamer-0.10/gst/fft/gstffts16.h
+include/gstreamer-0.10/gst/fft/gstffts32.h
 include/gstreamer-0.10/gst/floatcast/floatcast.h
 include/gstreamer-0.10/gst/interfaces/colorbalance.h
 include/gstreamer-0.10/gst/interfaces/colorbalancechannel.h
@@ -39,6 +44,7 @@ include/gstreamer-0.10/gst/rtp/gstbasertpdepayload.h
 include/gstreamer-0.10/gst/rtp/gstbasertppayload.h
 include/gstreamer-0.10/gst/rtp/gstrtcpbuffer.h
 include/gstreamer-0.10/gst/rtp/gstrtpbuffer.h
+include/gstreamer-0.10/gst/rtp/gstrtppayloads.h
 include/gstreamer-0.10/gst/rtsp/gstrtsp-enumtypes.h
 include/gstreamer-0.10/gst/rtsp/gstrtspbase64.h
 include/gstreamer-0.10/gst/rtsp/gstrtspconnection.h
@@ -50,6 +56,7 @@ include/gstreamer-0.10/gst/rtsp/gstrtsptransport.h
 include/gstreamer-0.10/gst/rtsp/gstrtspurl.h
 include/gstreamer-0.10/gst/sdp/gstsdp.h
 include/gstreamer-0.10/gst/sdp/gstsdpmessage.h
+include/gstreamer-0.10/gst/tag/gsttagdemux.h
 include/gstreamer-0.10/gst/tag/tag.h
 include/gstreamer-0.10/gst/video/gstvideofilter.h
 include/gstreamer-0.10/gst/video/gstvideosink.h
@@ -75,6 +82,7 @@ lib/gstreamer-0.10/libgstvideotestsrc.la
 lib/gstreamer-0.10/libgstvolume.la
 lib/libgstaudio-0.10.la
 lib/libgstcdda-0.10.la
+lib/libgstfft-0.10.la
 lib/libgstinterfaces-0.10.la
 lib/libgstnetbuffer-0.10.la
 lib/libgstpbutils-0.10.la
@@ -104,6 +112,11 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstb
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcddabasesrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcolorbalance.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcolorbalancechannel.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfft.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfftf32.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfftf64.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstffts16.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstffts32.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstfloatcast.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstmixer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstmixeroptions.html
@@ -120,6 +133,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstr
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstringbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtcpbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtpbuffer.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtppayloads.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspbase64.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspconnection.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspdefs.html
@@ -129,6 +143,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstr
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstrtspurl.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstsdpmessage.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttag.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagid3.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagvorbis.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttuner.html
@@ -142,6 +157,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstx
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-audio.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-base-utils.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-cdda.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-ffft.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-floatcast.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-interfaces.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/gstreamer-libs-hierarchy.html
@@ -158,19 +174,25 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/index.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10/style.css
 share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/bg/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/cs/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/da/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/de/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/es/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/fi/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/nb/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/nl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/pl/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sq/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sr/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/sv/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
+share/locale/zh_CN/LC_MESSAGES/gst-plugins-base-0.10.mo
 @dirrm share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10
 @unexec ${RMDIR} %D/share/doc/gst-plugins-0.10 2>/dev/null || ${TRUE}
 @comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
@@ -184,6 +206,7 @@ share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 @dirrm include/gstreamer-0.10/gst/netbuffer
 @dirrm include/gstreamer-0.10/gst/interfaces
 @dirrm include/gstreamer-0.10/gst/floatcast
+@dirrm include/gstreamer-0.10/gst/fft
 @dirrm include/gstreamer-0.10/gst/cdda
 @dirrm include/gstreamer-0.10/gst/audio
 @comment in gstreamer0.10: @dirrm include/gstreamer-0.10/gst
