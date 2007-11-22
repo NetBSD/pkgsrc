@@ -37,12 +37,14 @@
 ######################################################################
 
 : ${ECHO:=echo}
-: ${CAT:=cat}
 
 set -e
 
+trap "exit 1" INT
+
 reduce_depends() {
-	${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk "$1"
+	${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk "$1" \
+	|| kill -INT $$
 }
 
 print_entries() {
