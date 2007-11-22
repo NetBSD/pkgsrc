@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2007/10/31 19:58:13 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2007/11/22 20:16:27 drochner Exp $
 #
 
-GNOME_VFS_VERSION=	2.20.0
+GNOME_VFS_VERSION=	2.20.1
 
 DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
