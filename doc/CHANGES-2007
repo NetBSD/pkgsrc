@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2453 2007/11/23 14:35:22 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2454 2007/11/23 19:51:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4513,3 +4513,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/php5 to 5.2.5 [adrianp 2007-11-23]
 	Updated x11/xterm to 229 [bjs 2007-11-23]
 	Updated x11/libxkbui to 1.0.2nb1 [bjs 2007-11-23]
+	Updated devel/libgnomeuimm to 2.20.0 [adam 2007-11-23]
