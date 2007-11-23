@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2448 2007/11/23 12:15:50 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.2449 2007/11/23 12:24:23 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4508,3 +4508,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/metacity to 2.20.1 [drochner 2007-11-23]
 	Updated www/liferea to 1.4.7 [drochner 2007-11-23]
 	Updated x11/xcalc to 1.0.2 [bjs 2007-11-23]
+	Updated x11/sessreg to 1.0.3 [bjs 2007-11-23]
