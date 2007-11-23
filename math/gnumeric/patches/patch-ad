@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.7 2007/11/23 13:48:19 rillig Exp $
+
+--- src/dialogs/dialog-doc-metadata.c.orig	2005-09-29 01:29:46.000000000 +0200
++++ src/dialogs/dialog-doc-metadata.c	2007-11-23 14:27:35.336794000 +0100
+@@ -336,7 +336,7 @@ cb_dialog_doc_metadata_owner_read_clicke
+ 	GtkCheckButton * button  = GTK_CHECK_BUTTON (w); 
+ 
+ 	g_return_if_fail(button != NULL);
+-	fprintf(stderr, "%s() - state = %d\n", __FUNCTION__, gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)));
++	fprintf(stderr, "%s() - state = %d\n", G_STRFUNC, gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)));
+ }
+ 
+ static void
