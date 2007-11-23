@@ -15,6 +15,7 @@ aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 batch			Enable batch mode support.
+bdb			Enable Berkeley DB support.
 bittorrent		Enable bittorrent support
 blender-exppython	Enable the Experimental Python support.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
