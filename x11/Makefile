@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2007/11/17 02:34:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.533 2007/11/23 20:42:32 jnemeth Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -240,8 +240,8 @@ SUBDIR+=	p5-Tk
 SUBDIR+=	p5-X11-Protocol
 SUBDIR+=	p5-gtk
 SUBDIR+=	p5-gtk2
-SUBDIR+=	pixman
 SUBDIR+=	paragui
+SUBDIR+=	pixman
 SUBDIR+=	printproto
 SUBDIR+=	py-Pmw
 SUBDIR+=	py-Tk
