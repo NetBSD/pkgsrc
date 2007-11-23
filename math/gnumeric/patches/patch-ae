@@ -1,0 +1,34 @@
+$NetBSD: patch-ae,v 1.7 2007/11/23 13:48:20 rillig Exp $
+
+--- src/style.c.orig	2006-03-15 14:55:15.000000000 +0100
++++ src/style.c	2007-11-23 14:25:49.371371000 +0100
+@@ -216,7 +216,8 @@ style_font_new_simple (PangoContext *con
+ 		font->ref_count++;
+ 
+ #ifdef DEBUG_REF_COUNT
+-	g_message (__FUNCTION__ " font=%p name=%s%s%s ref_count=%d\n",
++	g_message ("%s font=%p name=%s%s%s ref_count=%d\n",
++		 G_STRFUNC,
+ 		 font, font->font_name,
+ 		 font->is_bold ? " bold" : "",
+ 		 font->is_italic ? " italic" : "",
+@@ -274,7 +275,8 @@ style_font_ref (GnmFont *sf)
+ 
+ 	sf->ref_count++;
+ #ifdef DEBUG_REF_COUNT
+-	g_message (__FUNCTION__ " font=%p name=%s%s%s ref_count=%d\n",
++	g_message ("%s font=%p name=%s%s%s ref_count=%d\n",
++		 G_STRFUNC,
+ 		 sf, sf->font_name,
+ 		 sf->is_bold ? " bold" : "",
+ 		 sf->is_italic ? " italic" : "",
+@@ -290,7 +292,8 @@ style_font_unref (GnmFont *sf)
+ 
+ 	sf->ref_count--;
+ #ifdef DEBUG_REF_COUNT
+-	g_message (__FUNCTION__ " font=%p name=%s%s%s ref_count=%d\n",
++	g_message ("%s font=%p name=%s%s%s ref_count=%d\n",
++		 G_STRFUNC,
+ 		 sf, sf->font_name,
+ 		 sf->is_bold ? " bold" : "",
+ 		 sf->is_italic ? " italic" : "",
