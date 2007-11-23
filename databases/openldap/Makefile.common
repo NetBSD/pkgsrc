@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.11 2007/11/18 19:46:15 ghen Exp $
+# $NetBSD: Makefile.common,v 1.12 2007/11/23 08:38:05 dsainty Exp $
 
 # please stick to the "stable" releases as much as possible!
 DISTNAME=		openldap-2.3.39
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
-MASTER_SITES+=		http://ftp.openldap.org/pub/OpenLDAP/openldap-release/
+MASTER_SITES+=		http://www.openldap.org/software/download/OpenLDAP/openldap-release/
 MASTER_SITES+=		http://www.PlanetMirror.com/pub/openldap/openldap-release/
 MASTER_SITES+=		ftp://gd.tuwien.ac.at/infosys/network/OpenLDAP/openldap-release/
 MASTER_SITES+=		ftp://ftp.matrix.com.br/pub/openldap/openldap-release/
