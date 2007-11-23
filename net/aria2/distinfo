@@ -1,18 +1,11 @@
-$NetBSD: distinfo,v 1.4 2007/11/16 08:06:33 bjs Exp $
+$NetBSD: distinfo,v 1.5 2007/11/23 07:46:35 bjs Exp $
 
-SHA1 (aria2-0.11.4.tar.bz2) = 76144a9525c005ea39ceda82da8f61883ab4ac6f
-RMD160 (aria2-0.11.4.tar.bz2) = 1a9807ed2b24448062e78818a59e51eccdb822cc
-Size (aria2-0.11.4.tar.bz2) = 540252 bytes
+SHA1 (aria2-0.11.5.tar.bz2) = 93272ca14daf72cccd65140c09a54616a67d6850
+RMD160 (aria2-0.11.5.tar.bz2) = 7aac56e01b297fe40fe6d2d0fd26781ede46239b
+Size (aria2-0.11.5.tar.bz2) = 540503 bytes
 SHA1 (patch-aa) = 166fd5b7737424762d0cf36dea68951894ead244
 SHA1 (patch-ab) = 47f90f558e4ac0ba0fba6f3cbaad5d2d10de8041
 SHA1 (patch-ac) = 64b43e0b75d82c0602d1c53764ab8e2896a35c69
 SHA1 (patch-ad) = 037d1cc28a45fc636487dcddc5e014ca43df66c4
 SHA1 (patch-ae) = 80a2c165130282b893c39ed6428689c14f7b08bc
 SHA1 (patch-af) = 5a045331fc27ced85571ff59e03ed562ad3901fe
-SHA1 (patch-ag) = d60d9bd458f1543b2f47eafadae328d9e1862afb
-SHA1 (patch-ah) = 54d31f1b33848d044b4492700401589193bb6d60
-SHA1 (patch-ai) = d8c0ee2c70c0f49999ef67d760d24074120aa0b5
-SHA1 (patch-aj) = 8c2df42e035b7cff88f09ade6bceba46f8ce8f4d
-SHA1 (patch-ak) = bda3c3c70ae2da15bc2d02245db741798e3e7159
-SHA1 (patch-al) = 6fa61faedf017f1adce4354e09171db39a2e9fb7
-SHA1 (patch-am) = 806211d4e3990ebc411c14ec5b7662d0a332d9ac
