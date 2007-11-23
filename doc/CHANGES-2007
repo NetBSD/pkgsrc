@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2437 2007/11/22 23:03:40 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2438 2007/11/23 00:19:46 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4486,3 +4486,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/smokeping to 2.2.7 [adrianp 2007-11-22]
 	Updated devel/netbsd-iscsi-target to 20071122 [agc 2007-11-22]
 	Updated devel/netbsd-iscsi-initiator to 20071122 [agc 2007-11-22]
+	Added audio/rtunes version 20071122 [bjs 2007-11-23]
