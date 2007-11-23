@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/09/17 06:36:21 bjs Exp $
+# $NetBSD: Makefile,v 1.37 2007/11/23 14:23:34 bjs Exp $
 
 DISTNAME=	xterm-229
 CATEGORIES=	x11
@@ -31,9 +31,9 @@ CONFIGURE_ARGS+= --enable-wide-chars
 CONFIGURE_ARGS+= --with-setuid
 .endif
 
-.if ${OPSYS} == "SunOS"
-INSTALL_FILE=	${WRKDIR}/INSTALL
-DEINSTALL_FILE=	${INSTALL_FILE}
+#.#if ${OPSYS} == "SunOS"
+#INSTALL_FILE=	${WRKDIR}/INSTALL
+#DEINSTALL_FILE=	${INSTALL_FILE}
 
 pre-build:
 	${MKDIR} ${INSTALL_FILE:H}
@@ -47,7 +47,7 @@ pre-install:
 
 post-install:
 	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-.endif
+#.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
