@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2438 2007/11/23 00:19:46 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2439 2007/11/23 07:47:18 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/netbsd-iscsi-target to 20071122 [agc 2007-11-22]
 	Updated devel/netbsd-iscsi-initiator to 20071122 [agc 2007-11-22]
 	Added audio/rtunes version 20071122 [bjs 2007-11-23]
+	Updated net/aria2 to 0.11.5 [bjs 2007-11-23]
