@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2007/11/08 18:45:36 bjs Exp $
+# $NetBSD: options.mk,v 1.4 2007/11/23 05:40:02 bjs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.herrie
 PKG_OPTIONS_GROUP.curses=	ncurses ncursesw
 PKG_OPTIONS_OPTIONAL_GROUPS=	curses
-PKG_SUPPORTED_OPTIONS=		curl libao libmodplug libspiff sndfile vorbis
+PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile vorbis
 PKG_SUGGESTED_OPTIONS=		ncurses curl
 
 .include "../../mk/oss.buildlink3.mk"
