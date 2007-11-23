@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/11/12 21:06:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.66 2007/11/23 21:29:17 adrianp Exp $
 
 DISTNAME=	net-snmp-5.4.1
 CATEGORIES=	net
@@ -75,6 +75,13 @@ CONFIGURE_ARGS+=	--with-mib-modules="smux host"
 .endif
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*)
 CONFIGURE_ARGS+=	--with-out-mib-modules="ucd-snmp/diskio mibII"
+.endif
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*)
+CONFIGURE_ARGS+=	--with-mib-modules="host ucd-snmp/diskio"
+CONFIGURE_ARGS+=	--with-out-mib-modules="mibII/icmp host/hr_swrun"
+CONFIGURE_ARGS+=	--enable-as-needed
+CONFIGURE_ARGS+=	--without-kmem-usage
+CONFIGURE_ARGS+=	--without-rpm
 .endif
 #
 # Using "dummy" values is technically not compliant with SNMP specs, but
