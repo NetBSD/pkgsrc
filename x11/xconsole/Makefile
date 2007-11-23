@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/06/19 09:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/23 12:04:03 bjs Exp $
 #
 
-DISTNAME=	xconsole-1.0.2
+DISTNAME=	xconsole-1.0.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
