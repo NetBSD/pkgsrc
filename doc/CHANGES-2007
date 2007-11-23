@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2441 2007/11/23 08:00:04 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2442 2007/11/23 08:46:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/aria2 to 0.11.5 [bjs 2007-11-23]
 	Updated x11/xrestop to 0.4 [bjs 2007-11-23]
 	Updated shells/mksh to 32 [bjs 2007-11-23]
+	Updated www/p5-libwww to 5.808nb3 [tron 2007-11-23]
