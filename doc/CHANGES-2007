@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2451 2007/11/23 13:20:23 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2452 2007/11/23 14:24:16 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4511,3 +4511,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/sessreg to 1.0.3 [bjs 2007-11-23]
 	Updated databases/php-dba to 5.2.4nb1 [obache 2007-11-23]
 	Updated lang/php5 to 5.2.5 [adrianp 2007-11-23]
+	Updated x11/xterm to 229 [bjs 2007-11-23]
