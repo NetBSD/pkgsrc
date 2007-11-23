@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2447 2007/11/23 12:10:36 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2448 2007/11/23 12:15:50 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4496,4 +4496,15 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xload to 1.0.2 [bjs 2007-11-23]
 	Updated x11/xvinfo to 1.0.2 [bjs 2007-11-23]
 	Updated x11/xconsole to 1.0.3 [bjs 2007-11-23]
+	Added graphics/djview4 version 4.2.2 [drochner 2007-11-23]
+	Added editors/notecase version 1.7.2 [drochner 2007-11-23]
+	Updated devel/libsigc++ to 2.1.1 [drochner 2007-11-23]
+	Updated mail/gmime to 2.2.11 [drochner 2007-11-23]
+	Updated math/genius to 1.0.2 [drochner 2007-11-23]
+	Updated multimedia/gst-plugins0.10-base to 0.10.15 [drochner 2007-11-23]
+	Updated multimedia/gstreamer0.10 to 0.10.15 [drochner 2007-11-23]
+	Updated multimedia/xine-lib to 1.1.8 [drochner 2007-11-23]
+	Updated sysutils/gnome-vfs to 2.20.1 [drochner 2007-11-23]
+	Updated wm/metacity to 2.20.1 [drochner 2007-11-23]
+	Updated www/liferea to 1.4.7 [drochner 2007-11-23]
 	Updated x11/xcalc to 1.0.2 [bjs 2007-11-23]
