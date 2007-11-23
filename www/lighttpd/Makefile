@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/09/10 13:59:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/11/23 19:12:08 joerg Exp $
 
 DISTNAME=	lighttpd-1.4.18
 CATEGORIES=	www
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.lighttpd.net/download/
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.lighttpd.net/
 COMMENT=	Fast, light-footprint HTTP server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
@@ -22,6 +24,8 @@ PKG_SYSCONFSUBDIR=	${PKGBASE}
 RCD_SCRIPTS=		lighttpd
 CONF_FILES=		${EGDIR}/lighttpd.conf ${PKG_SYSCONFDIR}/lighttpd.conf
 
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+
 .include "options.mk"
 
 .include "../../devel/pcre/buildlink3.mk"
@@ -29,16 +33,14 @@ CONF_FILES=		${EGDIR}/lighttpd.conf ${PKG_SYSCONFDIR}/lighttpd.conf
 .include "../../mk/dlopen.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; for f in doc/*.css doc/*.dot doc/*.txt; do	\
-		${INSTALL_DATA} $$f ${DOCDIR};				\
+		${INSTALL_DATA} $$f ${DESTDIR}${DOCDIR};		\
 	done
 	for f in AUTHORS COPYING ChangeLog NEWS README; do		\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${DOCDIR};		\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${DOCDIR};	\
 	done
 	for f in lighttpd.conf rrdtool-graph.sh spawn-php.sh; do	\
-		${INSTALL_DATA} ${WRKSRC}/doc/$$f ${EGDIR};		\
+		${INSTALL_DATA} ${WRKSRC}/doc/$$f ${DESTDIR}${EGDIR};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
