@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2443 2007/11/23 09:51:38 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2444 2007/11/23 11:56:43 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/p5-libwww to 5.808nb3 [tron 2007-11-23]
 	Updated net/libtorrent to 0.11.9 [tron 2007-11-23]
 	Updated net/rtorrent to 0.7.9 [tron 2007-11-23]
+	Updated x11/xload to 1.0.2 [bjs 2007-11-23]
