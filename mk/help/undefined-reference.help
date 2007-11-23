@@ -1,4 +1,4 @@
-# $NetBSD: undefined-reference.help,v 1.2 2007/11/20 18:45:07 rillig Exp $
+# $NetBSD: undefined-reference.help,v 1.3 2007/11/23 01:29:28 rillig Exp $
 
 # When the linker finds an undefined reference to one of the libintl_*
 # functions, and the package uses a GNU configure script, you should set
@@ -16,3 +16,8 @@
 # socket
 #
 # Needs -lsocket on Solaris
+
+# asprintf
+#
+# Add USE_FEATURES+=asprintf to the package Makefile, "bmake clean" and
+# try again.
