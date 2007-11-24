@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2455 2007/11/24 00:47:58 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2456 2007/11/24 16:52:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3413,7 +3413,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/inconsolata-ttf version 20070822 [smb 2007-08-22]
 	Updated textproc/ispell-russian to 0.99g4 [mishka 2007-08-22]
 	Updated textproc/ispell-russian-io to 0.99g4 [mishka 2007-08-22]
-	Removed archivers/rar-bin [jlam 2007-08-22]
+	Removed archivers/rar-bin successor archivers/rar [jlam 2007-08-22]
 	Added databases/yap2lc version 0.5.9 [tron 2007-08-22]
 	Removed misc/xorg-dirs [joerg 2007-08-23]
 	Updated x11/xfce4-terminal to 0.2.6nb1 [martti 2007-08-23]
@@ -4271,7 +4271,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/p5-IO-Socket-SSL to 1.12 [wiz 2007-11-01]
 	Updated www/curl to 7.17.1 [wiz 2007-11-01]
 	Updated graphics/gimp to 2.4.1 [adam 2007-11-01]
-	Removed graphics/gimp24 [adam 2007-11-01]
+	Removed graphics/gimp24 successor graphics/gimp [adam 2007-11-01]
 	Updated x11/py-gnome2 to 2.20.0 [drochner 2007-11-01]
 	Updated x11/py-gtk2 to 2.12.0 [drochner 2007-11-01]
 	Updated devel/py-gobject to 2.14.0 [drochner 2007-11-01]
