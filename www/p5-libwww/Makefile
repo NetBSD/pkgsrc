@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/11/23 08:46:32 tron Exp $
+# $NetBSD: Makefile,v 1.55 2007/11/24 16:17:46 adrianp Exp $
 
 DISTNAME=	libwww-perl-5.808
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -24,13 +24,12 @@ DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
 PERL5_PACKLIST=		auto/LWP/.packlist
-MAKE_ENV+=		OPSYS=${OPSYS:Q} PERL_MM_USE_DEFAULT=1
+MAKE_ENV+=		INSTALL_ALIASES=${ALIASES} PERL_MM_USE_DEFAULT=1
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-.if ${OPSYS} == "Darwin"
-# Mac OS X uses an case-insensitive filesystem where "HEAD" can be
-# confused with "head".
+.if ${ALIASES} == "no"
 post-install:
 	${RM} -f ${PREFIX}/bin/HEAD
 .endif
