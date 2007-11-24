@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2454 2007/11/23 19:51:29 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2455 2007/11/24 00:47:58 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4514,3 +4514,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xterm to 229 [bjs 2007-11-23]
 	Updated x11/libxkbui to 1.0.2nb1 [bjs 2007-11-23]
 	Updated devel/libgnomeuimm to 2.20.0 [adam 2007-11-23]
+	Updated chat/ircservices to 5.0.63 [adrianp 2007-11-24]
