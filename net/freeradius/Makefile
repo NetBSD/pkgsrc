@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/09/18 22:15:07 adrianp Exp $
+# $NetBSD: Makefile,v 1.62 2007/11/24 17:40:36 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
 CATEGORIES=	net
@@ -115,12 +115,12 @@ CONFIGURE_ARGS+=	--without-threads
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
 SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
-			${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q} -lsemaphore|g'
+			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q} -lsemaphore|g'
 .endif
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
-			${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|g'
+			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}|g'
 .endif
 
 .if ${MACHINE_ARCH} == "amd64"
