@@ -151,6 +151,7 @@ libmodplug		Use libmodplug for MOD and MOD-like music formats.
 libiconv-cp932		Add supplemental support for CP932
 libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
+libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.)
 links-zlib		Enable zlib support for the links WWW browser.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
@@ -238,6 +239,7 @@ small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
 sndfile			Enable sndfile support.
+snmp			Enable SNMP support.
 snort-flexresp		Flexible Responses on hostile connection attempts
 snort-flexresp2		NEW Flexible Responses on hostile connection attempts
 snort-prelude		Enable prelude support.
