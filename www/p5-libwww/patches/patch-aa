@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2007/11/23 08:46:32 tron Exp $
+$NetBSD: patch-aa,v 1.5 2007/11/24 16:17:47 adrianp Exp $
 
 --- Makefile.PL.orig	2007-07-19 21:45:32.000000000 +0100
 +++ Makefile.PL	2007-11-23 08:42:49.000000000 +0000
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.4 2007/11/23 08:46:32 tron Exp $
      for my $alias (@request_aliases) {
 -	my $default = "n";
 +	my $default = "y";
-+	if ($ENV{"OPSYS"} eq "Darwin") {
++	if ($ENV{"INSTALL_ALIASES"} eq "no") {
 +	    $default = "n";
 +	}
  	if (prompt("Do you want to install the $alias alias?", $default) =~ /^y/) {
