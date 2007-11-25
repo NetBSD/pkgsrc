@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/10/31 09:18:45 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2007/11/25 13:19:04 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=	inet6 irssi-perl ssl
@@ -6,6 +6,7 @@ PKG_SUPPORTED_OPTIONS=	inet6 irssi-perl ssl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mirssi-perl)
+USE_TOOLS+=		perl
 PERL5_PACKLIST=		auto/Irssi/.packlist
 PERL5_PACKLIST+=	auto/Irssi/Irc/.packlist
 PERL5_PACKLIST+=	auto/Irssi/UI/.packlist
