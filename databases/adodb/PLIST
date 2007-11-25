@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/13 12:18:23 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/25 17:53:23 adrianp Exp $
 share/adodb/adodb-active-record.inc.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
@@ -8,6 +8,7 @@ share/adodb/adodb-errorpear.inc.php
 share/adodb/adodb-exceptions.inc.php
 share/adodb/adodb-iterator.inc.php
 share/adodb/adodb-lib.inc.php
+share/adodb/adodb-memcache.lib.inc.php
 share/adodb/adodb-pager.inc.php
 share/adodb/adodb-pear.inc.php
 share/adodb/adodb-perf.inc.php
@@ -45,6 +46,7 @@ share/adodb/drivers/adodb-informix.inc.php
 share/adodb/drivers/adodb-informix72.inc.php
 share/adodb/drivers/adodb-ldap.inc.php
 share/adodb/drivers/adodb-mssql.inc.php
+share/adodb/drivers/adodb-mssql_n.inc.php
 share/adodb/drivers/adodb-mssqlpo.inc.php
 share/adodb/drivers/adodb-mysql.inc.php
 share/adodb/drivers/adodb-mysqli.inc.php
@@ -97,6 +99,7 @@ share/adodb/lang/adodb-pt-br.inc.php
 share/adodb/lang/adodb-ro.inc.php
 share/adodb/lang/adodb-ru1251.inc.php
 share/adodb/lang/adodb-sv.inc.php
+share/adodb/lang/adodb_th.inc.php
 share/adodb/lang/adodb-uk1251.inc.php
 share/adodb/perf/perf-db2.inc.php
 share/adodb/perf/perf-informix.inc.php
@@ -110,16 +113,21 @@ share/adodb/server.php
 share/adodb/session/adodb-compress-bzip2.php
 share/adodb/session/adodb-compress-gzip.php
 share/adodb/session/adodb-cryptsession.php
+share/adodb/session/adodb-cryptsession2.php
 share/adodb/session/adodb-encrypt-mcrypt.php
 share/adodb/session/adodb-encrypt-md5.php
 share/adodb/session/adodb-encrypt-secret.php
 share/adodb/session/adodb-encrypt-sha1.php
 share/adodb/session/adodb-sess.txt
 share/adodb/session/adodb-session-clob.php
+share/adodb/session/adodb-session-clob2.php
 share/adodb/session/adodb-session.php
+share/adodb/session/adodb-session2.php
 share/adodb/session/adodb-sessions.mysql.sql
 share/adodb/session/adodb-sessions.oracle.clob.sql
 share/adodb/session/adodb-sessions.oracle.sql
+share/adodb/session/session_schema.xml
+share/adodb/session/session_schema2.xml
 share/adodb/session/crypt.inc.php
 share/adodb/tests/benchmark.php
 share/adodb/tests/client.php
@@ -166,6 +174,7 @@ share/doc/adodb/docs-datadict.htm
 share/doc/adodb/docs-oracle.htm
 share/doc/adodb/docs-perf.htm
 share/doc/adodb/docs-session.htm
+share/doc/adodb/docs-session.old.htm
 share/doc/adodb/license.txt
 share/doc/adodb/old-changelog.htm
 share/doc/adodb/readme.htm
