@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/25 11:46:59 wiz Exp $
 #
 
 DISTNAME=	vilearn-1.0
 CATEGORIES=	editors misc
-MASTER_SITES=	ftp://terminator.rs.itd.umich.edu/unix/
+MASTER_SITES=	#
 EXTRACT_SUFX=	.shar.Z
 
 MAINTAINER=	abs@NetBSD.org
