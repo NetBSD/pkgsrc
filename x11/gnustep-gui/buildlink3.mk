@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:11:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2007/11/25 14:43:12 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_GUI_BUILDLINK3_MK:=	${GNUSTEP_GUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnustep-gui
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-gui
 
 .if !empty(GNUSTEP_GUI_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.gnustep-gui+=		gnustep-gui>=0.9.2
+BUILDLINK_API_DEPENDS.gnustep-gui+=	gnustep-gui>=0.9.2
 BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.10.3nb1
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
 
@@ -21,9 +21,9 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Bundles\/TextConvert
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Headers\/AppKit$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Headers\/GNUstepGUI$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Headers\/gnustep\/gui$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui\/English.lproj$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui\/Italian.lproj$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources\/English.lproj$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources\/Italian.lproj$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/PostScript\/PPD$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/PostScript\/PPD\/English.lproj$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Services\/GSspell.service$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }
@@ -33,9 +33,9 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Bundle
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Headers\/AppKit$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Headers\/GNUstepGUI$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Headers\/gnustep\/gui$$/ { next; }
-PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui$$/ { next; }
-PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui\/English.lproj$$/ { next; }
-PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-gui\/Italian.lproj$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources\/English.lproj$$/ { next; }
+PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/gnustep-gui\/Versions\/0\.12\/Resources\/Italian.lproj$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/PostScript\/PPD$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/PostScript\/PPD\/English.lproj$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Services\/GSspell.service$$/ { next; }
