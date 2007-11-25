@@ -1,17 +1,25 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2007/11/25 12:15:52 wiz Exp $
 
-DISTNAME=	beav_1.40-11
-PKGNAME=	beav-1.40.11
+DISTNAME=	beav_1.40.orig
+PKGNAME=	beav-1.40.18
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=hamm/hamm/source/editors/}
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/beav/}
+
+PATCHFILES=	beav_1.40-18.diff.gz
+PATCH_SITES=	${MASTER_SITE_DEBIAN:=pool/main/b/beav/}
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Binary Editor And Viewer, a full featured binary file editor
 
-WRKSRC=		${WRKDIR}/beav-1.40
+WRKSRC=		${WRKDIR}/beav-140
 MAKE_ENV+=	SED=${SED:Q}
+BUILD_TARGET=	beav
 
-pre-patch:
-	${MV} ${WRKSRC}/beav.1 ${WRKSRC}/beav.1.in
+SUBST_CLASSES+=	docpath
+SUBST_FILES.docpath=	beav.1
+SUBST_STAGE.docpath=	post-build
+SUBST_SED.docpath=	-e 's,/usr/share/doc/,${PREFIX}/share/doc,'
+SUBST_MESSAGE.docpath=	Fixing path in documentation.
 
 .include "../../mk/bsd.pkg.mk"
