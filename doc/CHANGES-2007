@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2457 2007/11/25 12:16:18 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2458 2007/11/25 12:42:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4516,3 +4516,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libgnomeuimm to 2.20.0 [adam 2007-11-23]
 	Updated chat/ircservices to 5.0.63 [adrianp 2007-11-24]
 	Updated editors/beav to 1.40.18 [wiz 2007-11-25]
+	Updated wm/openbox to 3.4.4nb1 [wiz 2007-11-25]
