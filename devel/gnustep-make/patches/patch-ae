@@ -1,17 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2006/08/30 14:53:28 adam Exp $
+$NetBSD: patch-ae,v 1.6 2007/11/25 14:42:02 adam Exp $
 
---- GNUmakefile.in.orig	2006-07-05 19:35:10.000000000 +0200
+--- GNUmakefile.in.orig	2007-03-08 18:15:05.000000000 +0100
 +++ GNUmakefile.in
-@@ -115,7 +115,7 @@ all: generated-files which_lib$(EXEEXT)
- # used. (I mean: 'cd core/make; cd ..; mkdir make-build; cd
- # make-build; ../make/configure --disable-import; make;' must work)
- which_lib$(EXEEXT): which_lib.c config.h
--	$(CC) @CFLAGS@ -Wall -I. -o $@ $<
-+	$(CC) @CFLAGS@ -I. -o $@ $<
- 
- ifeq ($(messages),yes)
-   EC = 
-@@ -144,9 +144,9 @@ install: all @GNUSTEP_MOVE_OBSOLETE@
+@@ -133,9 +133,9 @@ install: generated-files
  		$(makedir)/Instance \
  		$(makedir)/Instance/Shared \
  		$(makedir)/Instance/Documentation)
@@ -21,6 +12,6 @@ $NetBSD: patch-ae,v 1.5 2006/08/30 14:53:28 adam Exp $
 +	$(EC)(echo "Installing GNUstep configuration file"; \
 +	 $(srcdir)/mkinstalldirs "${PREFIX}/share/examples/GNUstep"; \
 +	 $(INSTALL_DATA) GNUstep.conf "${PREFIX}/share/examples/GNUstep")
- 	-$(EC) rm -f "$(GNUSTEP_SYSTEM_ROOT)/Makefiles"
- 	 $(EC)(echo "Installing gnustep-make support software"; \
- 	   $(INSTALL_PROGRAM) -m 755 which_lib$(EXEEXT) \
+ 	 $(EC)(echo "Installing gnustep-make support software")
+ 	 $(EC)(for f in config.guess config.sub install-sh mkinstalldirs \
+ 		clean_cpu.sh clean_os.sh \
