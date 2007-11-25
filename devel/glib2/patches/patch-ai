@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.13 2007/01/10 14:57:33 drochner Exp $
+$NetBSD: patch-ai,v 1.14 2007/11/25 23:38:53 wiz Exp $
 
---- glib/gmain.c.orig	2007-01-10 14:36:51.000000000 +0100
+--- glib/gmain.c.orig	2007-11-24 06:40:59.000000000 +0000
 +++ glib/gmain.c
-@@ -2619,13 +2619,13 @@ g_main_context_iterate (GMainContext *co
+@@ -2636,13 +2636,13 @@ g_main_context_iterate (GMainContext *co
      {
        gboolean got_ownership;
        
@@ -18,7 +18,7 @@ $NetBSD: patch-ai,v 1.13 2007/01/10 14:57:33 drochner Exp $
        if (!context->cond)
  	context->cond = g_cond_new ();
            
-@@ -2635,7 +2635,6 @@ g_main_context_iterate (GMainContext *co
+@@ -2652,7 +2652,6 @@ g_main_context_iterate (GMainContext *co
  
        if (!got_ownership)
  	{
