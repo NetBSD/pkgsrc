@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2461 2007/11/25 18:10:17 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2462 2007/11/25 18:48:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/Gorm to 1.2.2 [adam 2007-11-25]
 	Updated databases/adodb to 4.96a [adrianp 2007-11-25]
 	Updated security/base to 1.3.9 [adrianp 2007-11-25]
+	Updated math/glpk to 4.24 [adam 2007-11-25]
