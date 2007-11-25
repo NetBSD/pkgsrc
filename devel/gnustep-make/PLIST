@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/07/28 01:50:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/11/25 14:42:01 adam Exp $
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -59,6 +59,7 @@ share/GNUstep/System/Library/Makefiles/Master/test-library.make
 share/GNUstep/System/Library/Makefiles/Master/test-tool.make
 share/GNUstep/System/Library/Makefiles/Master/tool.make
 share/GNUstep/System/Library/Makefiles/aggregate.make
+share/GNUstep/System/Library/Makefiles/app-wrapper.template
 share/GNUstep/System/Library/Makefiles/application.make
 share/GNUstep/System/Library/Makefiles/bundle.make
 share/GNUstep/System/Library/Makefiles/clean_cpu.sh
@@ -66,15 +67,21 @@ share/GNUstep/System/Library/Makefiles/clean_os.sh
 share/GNUstep/System/Library/Makefiles/clean_vendor.sh
 share/GNUstep/System/Library/Makefiles/clibrary.make
 share/GNUstep/System/Library/Makefiles/common.make
+share/GNUstep/System/Library/Makefiles/config-noarch.make
 share/GNUstep/System/Library/Makefiles/config.guess
 share/GNUstep/System/Library/Makefiles/config.make
 share/GNUstep/System/Library/Makefiles/config.sub
 share/GNUstep/System/Library/Makefiles/cpu.sh
 share/GNUstep/System/Library/Makefiles/ctool.make
 share/GNUstep/System/Library/Makefiles/documentation.make
+share/GNUstep/System/Library/Makefiles/empty.make
 share/GNUstep/System/Library/Makefiles/executable.template
+share/GNUstep/System/Library/Makefiles/filesystem.csh
+share/GNUstep/System/Library/Makefiles/filesystem.make
+share/GNUstep/System/Library/Makefiles/filesystem.sh
 share/GNUstep/System/Library/Makefiles/fixpath.sh
 share/GNUstep/System/Library/Makefiles/framework.make
+share/GNUstep/System/Library/Makefiles/gnustep-make-help
 share/GNUstep/System/Library/Makefiles/gswapp.make
 share/GNUstep/System/Library/Makefiles/gswbundle.make
 share/GNUstep/System/Library/Makefiles/install-sh
@@ -93,12 +100,11 @@ share/GNUstep/System/Library/Makefiles/native-library.make
 share/GNUstep/System/Library/Makefiles/objc.make
 share/GNUstep/System/Library/Makefiles/os.sh
 share/GNUstep/System/Library/Makefiles/palette.make
+share/GNUstep/System/Library/Makefiles/print_unique_pathlist.sh
 share/GNUstep/System/Library/Makefiles/relative_path.sh
 share/GNUstep/System/Library/Makefiles/resource-set.make
 share/GNUstep/System/Library/Makefiles/rules.make
 share/GNUstep/System/Library/Makefiles/service.make
-share/GNUstep/System/Library/Makefiles/spec-debug-alone-rules.template
-share/GNUstep/System/Library/Makefiles/spec-debug-rules.template
 share/GNUstep/System/Library/Makefiles/spec-rules.template
 share/GNUstep/System/Library/Makefiles/strip_makefiles.sh
 share/GNUstep/System/Library/Makefiles/subproject.make
@@ -108,16 +114,13 @@ share/GNUstep/System/Library/Makefiles/test-application.make
 share/GNUstep/System/Library/Makefiles/test-library.make
 share/GNUstep/System/Library/Makefiles/test-tool.make
 share/GNUstep/System/Library/Makefiles/tool.make
-share/GNUstep/System/Library/Makefiles/transform_paths.sh
 share/GNUstep/System/Library/Makefiles/vendor.sh
-share/GNUstep/System/Library/Makefiles/which_lib
 share/GNUstep/System/Tools/debugapp
+share/GNUstep/System/Tools/gnustep-config
 share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
-share/GNUstep/System/share/config.site
 share/examples/GNUstep/GNUstep.conf
 @dirrm share/examples/GNUstep
-@dirrm share/GNUstep/System/share
 @exec ${MKDIR} %D/share/GNUstep/System/Tools/Resources
 @dirrm share/GNUstep/System/Tools/Resources
 @exec ${MKDIR} %D/share/GNUstep/System/Tools/Java
