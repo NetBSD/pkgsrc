@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6851 2007/11/25 12:21:09 wiz Exp $
+$NetBSD: TODO,v 1.6852 2007/11/25 14:47:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -580,7 +580,6 @@ Suggested package updates
 	o gnupg2-2.0.7
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
-	o gnustep-make-2.0.1
 	o gnustep-objc-1.4.0
 	o gnutls-2.0.4
 	o gob2-2.0.15
