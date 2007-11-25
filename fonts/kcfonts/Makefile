@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/09/22 21:53:57 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/25 11:55:57 wiz Exp $
 
 DISTNAME=	kcfonts-1.05
 PKGREVISION=	3
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://freebsd.sinica.edu.tw/pub/distfiles/
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	kevlo@midassol.com
 COMMENT=	Kuo Chauo Chinese Fonts collection
