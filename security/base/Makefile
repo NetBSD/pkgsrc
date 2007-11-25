@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/10/20 23:22:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2007/11/25 18:09:53 adrianp Exp $
 #
 
-DISTNAME=	base-1.3.8
+DISTNAME=	base-1.3.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -9,10 +9,10 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://secureideas.sourceforge.net/
 COMMENT=	Analysis engine to process a database of security events
 
-# adodb is only available for PHP4
-PHP_VERSIONS_ACCEPTED=	4
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	adodb>=1.2:../../databases/adodb
+DEPENDS+=	adodb>=4.96a:../../databases/adodb
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.0.4:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=4.0.4:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.4:../../databases/php-mysql
@@ -21,6 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Numbers_Words-[0-9]*:../../math/pear-Numbers_Wo
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Numbers_Roman-[0-9]*:../../math/pear-Numbers_Roman
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
 
 NO_BUILD=	YES
 
@@ -36,7 +37,7 @@ WWW_GROUP?=	${APACHE_GROUP}
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	scripts/base_maintenance.pl
 
-SKIP_PORTABILITY_CHECK=	YES
+# SKIP_PORTABILITY_CHECK=	YES
 
 PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER
@@ -45,6 +46,8 @@ CONF_FILES=	${EGDIR}/base.conf ${PKG_SYSCONFDIR}/base.conf
 
 CONF_FILES_PERMS=	${EGDIR}/base_conf.php ${BASE_DIR}/base_conf.php \
 			${WWW_USER} ${WWW_GROUP} 0600
+
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
@@ -79,7 +82,4 @@ do-install:
 
 	${CHOWN} ${WWW_USER} ${BASE_DIR}
 
-.include "../../mk/apachever.mk"
-.include "../../lang/php/phpversion.mk"
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
 .include "../../mk/bsd.pkg.mk"
