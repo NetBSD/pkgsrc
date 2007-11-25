@@ -1,27 +1,21 @@
-$NetBSD: patch-aa,v 1.1 1998/12/20 21:12:58 bad Exp $
+$NetBSD: patch-aa,v 1.2 2007/11/25 12:15:53 wiz Exp $
 
---- Makefile.orig	Sat Dec 13 09:34:59 1997
-+++ Makefile	Thu Dec 17 19:55:06 1998
+--- Makefile.orig	2007-11-25 12:10:44.000000000 +0000
++++ Makefile
 @@ -1,6 +1,6 @@
  # This is the makefile for BSD UNIX
  #CFLAGS=     -g -DUNIX
--CFLAGS=     -O2 -DUNIX
-+CFLAGS+=     -DUNIX -DBSD
+-CFLAGS=     -g -DUNIX -Wall
++CFLAGS=     -g -DUNIX -DBSD -Wall
  CC=gcc
  
  OFILES=		basic.o ebcdic.o fileio.o region.o text.o wangpc.o \
-@@ -16,10 +16,21 @@
- 
+@@ -17,9 +17,15 @@ CFILES=     basic.c ebcdic.c fileio.c re
  HFILES=     def.h prototyp.h
  
-+all: beav beav.1
-+
  beav:     $(OFILES)
 -	$(CC) $(CFLAGS) $(OFILES) -lncurses -o beav
 +	$(CC) $(CFLAGS) $(OFILES) -ltermcap -o beav
-+
-+beav.1: beav.1.in
-+	${SED} -e "s:@PREFIX@:${PREFIX}:" beav.1.in >beav.1
 +
 +install: beav beav.1
 +	$(BSD_INSTALL_PROGRAM) beav $(PREFIX)/bin
@@ -30,8 +24,7 @@ $NetBSD: patch-aa,v 1.1 1998/12/20 21:12:58 bad Exp $
 +	$(BSD_INSTALL_MAN) beav.1 $(PREFIX)/man/man1
  
  clean:
--	rm -f *.o beav
-+	rm -f *.o beav beav.1
+ 	rm -f *.o beav
  
 -(OFILES):  $(HFILES)
 +$(OFILES):  $(HFILES)

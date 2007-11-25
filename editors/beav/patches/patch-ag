@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2005/12/09 13:56:51 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2007/11/25 12:15:53 wiz Exp $
 
---- file.c.orig	2005-12-09 13:50:30.000000000 +0000
+--- file.c.orig	2007-11-25 12:03:46.000000000 +0000
 +++ file.c
-@@ -9,7 +9,6 @@
+@@ -10,7 +10,6 @@
  char load_file ();
  char readin ();
  void makename ();
