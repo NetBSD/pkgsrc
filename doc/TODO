@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6852 2007/11/25 14:47:25 adam Exp $
+$NetBSD: TODO,v 1.6853 2007/11/25 18:48:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -556,7 +556,6 @@ Suggested package updates
 	o glchess-1.0.5
 	o glib2-2.14.4
 	o global-5.6
-	o glpk-4.24
 	o glproto-1.4.9
 	o gmime-2.2.11
 	o gmpc-0.15.1
