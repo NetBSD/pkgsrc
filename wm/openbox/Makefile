@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2007/08/11 07:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2007/11/25 12:41:36 wiz Exp $
 
 DISTNAME=	openbox-3.4.4
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 # PR pkg/36489
@@ -42,6 +43,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
