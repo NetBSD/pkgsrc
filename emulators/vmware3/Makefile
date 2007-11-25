@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2007/08/23 18:20:31 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2007/11/25 11:52:45 wiz Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
 PKGREVISION=	2
 CATEGORIES=	emulators
-MASTER_SITES=	http://download3.vmware.com/software/wkst/ \
-		http://vmware-svca.www.conxion.com/software/ \
-		http://vmware-chil.www.conxion.com/software/ \
-		http://vmware-heva.www.conxion.com/software/ \
-		ftp://mirror.aarnet.edu.au/pub/vmware/software/
+MASTER_SITES=	http://download3.vmware.com/software/wkst/
 
 # Binary patch to fix an problem with the nice(3) interface in an
 # newer glibc (>= v2.3.3)
