@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/02/18 17:13:45 bouyer Exp $
+$NetBSD: MESSAGE,v 1.2 2007/11/26 22:14:23 seb Exp $
 
 Inetd Configuration:
 
@@ -11,12 +11,12 @@ of TCP wrappers, you need to do the following things:
 1) Add a line to your /etc/services file as follows (modify the port
    number as you see fit)
 
-        nsca            5667/tcp        # NSCA
+  nsca            5667/tcp        # NSCA
 
 2) Add an entry to /etc/inetd.conf as follows:
 
 
-        nsca    stream  tcp     nowait  <nscabin> -c <nscacfg> --inetd
+  nsca    stream  tcp     nowait  <user> <nscabin> nsca -c <nscacfg> --inetd
 
 
    - Replace <user> with the name of the user that nsca server should run as.

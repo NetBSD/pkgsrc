@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/26 22:14:23 seb Exp $
 #
 
 DISTNAME=	nsca-2.6
 PKGNAME=	nagios-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagios/}
 
@@ -20,6 +21,13 @@ CONF_FILES+=	${EGDIR}/${files} ${PKG_SYSCONFDIR}/${files}
 .endfor
 
 .include "../../net/nagios-base/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-nsca-user=${NAGIOS_USER:Q}
+CONFIGURE_ARGS+=	--with-nsca-grp=${NAGIOS_GROUP:Q}
+
+PKG_GROUPS+=			${NAGIOS_GROUP}
+PKG_USERS+=			${NAGIOS_USER}:${NAGIOS_GROUP}
+PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nsca ${PREFIX}/bin
