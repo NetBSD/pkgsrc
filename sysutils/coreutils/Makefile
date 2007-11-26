@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/11/26 00:52:32 tron Exp $
+# $NetBSD: Makefile,v 1.41 2007/11/26 09:35:39 tron Exp $
 
 DISTNAME=	coreutils-6.9
 CATEGORIES=	sysutils
@@ -27,7 +27,7 @@ TEST_TARGET=		check
 CONFIGURE_ENV+=		ac_list_mounted_fs=found
 .endif
 
-.if ${OPSYS} == "Darwin" && !empty(OS_VERSION:M9.*)
+.if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
 CONFIGURE_ENV+=		 jm_cv_func_svid_putenv=yes
 .endif
 
