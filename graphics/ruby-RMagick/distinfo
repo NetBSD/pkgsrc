@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2007/09/18 04:07:30 obache Exp $
+$NetBSD: distinfo,v 1.28 2007/11/26 03:21:30 obache Exp $
 
-SHA1 (RMagick-1.15.10.tar.gz) = 6f3ed7b15fca65417b6144b213239ef8506cef21
-RMD160 (RMagick-1.15.10.tar.gz) = 75007054f209603e8533fe7073023c7787cb6ae8
-Size (RMagick-1.15.10.tar.gz) = 1067327 bytes
+SHA1 (RMagick-1.15.11.tar.gz) = fb4cccc7b5f283010d228c6af848e4276eb6bbc8
+RMD160 (RMagick-1.15.11.tar.gz) = 660af6c948c1e084ce75a3a14254ecd27994129a
+Size (RMagick-1.15.11.tar.gz) = 1067614 bytes
