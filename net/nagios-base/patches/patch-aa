@@ -1,14 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2007/05/04 04:53:03 grant Exp $
+$NetBSD: patch-aa,v 1.4 2007/11/26 22:14:14 seb Exp $
 
---- Makefile.in.orig	2006-05-31 02:31:44.000000000 +1000
+--- Makefile.in.orig	2006-05-30 16:31:44.000000000 +0000
 +++ Makefile.in
-@@ -21,16 +21,17 @@ LDFLAGS=@LDFLAGS@ @LIBS@
- 
+@@ -22,15 +22,16 @@ LDFLAGS=@LDFLAGS@ @LIBS@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
--LOGDIR=@localstatedir@
+ LOGDIR=@localstatedir@
 -CFGDIR=@sysconfdir@
-+LOGDIR=@localstatedir@/log/nagios
 +CGIDIR=@libexecdir@
  BINDIR=@bindir@
  CGIDIR=@sbindir@
