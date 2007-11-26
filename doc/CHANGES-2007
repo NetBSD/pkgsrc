@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2466 2007/11/26 09:06:42 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2467 2007/11/26 11:25:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4537,3 +4537,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.11 [obache 2007-11-26]
 	Updated wm/fvwm-devel to 2.5.24 [martti 2007-11-26]
 	Updated editors/vim-share to 7.1.161 [martti 2007-11-26]
+	Updated textproc/hyperestraier to 1.4.12 [obache 2007-11-26]
+	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
+	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
+	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
