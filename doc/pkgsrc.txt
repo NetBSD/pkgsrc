@@ -2886,7 +2886,7 @@ something like:
 FETCH_CMD=             wget
 FETCH_BEFORE_ARGS=     --passive-ftp
 FETCH_RESUME_ARGS=     -c
-FETCH_OUTPUT_ARGS=     -O
+FETCH_OUTPUT_ARGS=     -O -nc
 
 9.6. How can I install/use modular X.org from pkgsrc?
 
@@ -9002,7 +9002,8 @@ The meaning of these variables is:
     differ from the one you are used to hear.
 
   * ARCH is the hardware architecture of the platform for which the packages
-    have been built.
+    have been built. It also includes the ABI (Application Binary Interface)
+    for platforms that have several of them.
 
   * OSVERSION is the version of the operating system. For version numbers that
     change often (for example NetBSD-current), the often-changing part should
