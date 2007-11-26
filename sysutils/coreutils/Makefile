@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/07/19 09:07:43 tron Exp $
+# $NetBSD: Makefile,v 1.40 2007/11/26 00:52:32 tron Exp $
 
 DISTNAME=	coreutils-6.9
 CATEGORIES=	sysutils
@@ -25,6 +25,10 @@ TEST_TARGET=		check
 
 .if ${OPSYS} == "Interix"
 CONFIGURE_ENV+=		ac_list_mounted_fs=found
+.endif
+
+.if ${OPSYS} == "Darwin" && !empty(OS_VERSION:M9.*)
+CONFIGURE_ENV+=		 jm_cv_func_svid_putenv=yes
 .endif
 
 # Exclude programs from PLIST which aren't built on a platform.
