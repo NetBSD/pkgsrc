@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2465 2007/11/26 03:21:56 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2466 2007/11/26 09:06:42 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4535,3 +4535,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/iso-codes to 1.6 [wiz 2007-11-25]
 	Updated devel/libconfig to 1.2 [wiz 2007-11-26]
 	Updated graphics/ruby-RMagick to 1.15.11 [obache 2007-11-26]
+	Updated wm/fvwm-devel to 2.5.24 [martti 2007-11-26]
+	Updated editors/vim-share to 7.1.161 [martti 2007-11-26]
