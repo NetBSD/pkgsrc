@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2007/11/26 09:35:39 tron Exp $
+# $NetBSD: Makefile,v 1.42 2007/11/26 15:40:45 tron Exp $
 
 DISTNAME=	coreutils-6.9
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +14,8 @@ NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 
 CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
+CFLAGS+=		-g
+LDFLAGS+=		-g
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		msgfmt msgmerge perl xgettext
 USE_PKGLOCALEDIR=	YES
@@ -28,7 +31,7 @@ CONFIGURE_ENV+=		ac_list_mounted_fs=found
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
-CONFIGURE_ENV+=		 jm_cv_func_svid_putenv=yes
+CONFIGURE_ENV+=		 ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
 .endif
 
 # Exclude programs from PLIST which aren't built on a platform.
