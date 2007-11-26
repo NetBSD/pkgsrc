@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2470 2007/11/26 19:19:26 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.2471 2007/11/26 19:36:34 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4543,3 +4543,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
 	Updated sysutils/coreutils to 6.9nb1 [tron 2007-11-26]
 	Updated devel/gettext-tools to 0.14.6nb1 [tron 2007-11-26]
+	Updated sysutils/xenkernel3 to version 3.1.0nb3 [bouyer 2007-11-26]
