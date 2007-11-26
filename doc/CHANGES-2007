@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2467 2007/11/26 11:25:13 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2468 2007/11/26 15:41:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
 	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.12 [obache 2007-11-26]
+	Updated sysutils/coreutils to 6.9nb1 [tron 2007-11-26]
