@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/03/30 05:52:37 grant Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/26 22:14:27 seb Exp $
 #
 
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,8 @@ USE_TOOLS+=	perl:run
 CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 		--without-smbclient-command --without-snmpget-command \
 		--without-snmpgetnext-command --without-fping-command
+
+SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${REAL_ROOT_USER} ${NAGIOS_GROUP} 4550
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
