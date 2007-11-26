@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2472 2007/11/26 22:17:31 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2473 2007/11/26 22:45:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4547,3 +4547,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nagios-base to 2.5nb4 [seb 2007-11-26]
 	Updated net/nagios-nsca to 2.6nb1 [seb 2007-11-26]
 	Updated net/nagios-plugins to 1.4.3nb3 [seb 2007-11-26]
+	Updated audio/py-karaoke to 0.5.1 [wiz 2007-11-26]
