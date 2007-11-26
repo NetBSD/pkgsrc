@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2007/11/22 21:49:54 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/26 19:35:24 bouyer Exp $
 #
 
 VERSION=	3.1.0
 DISTNAME=	xen-${VERSION}-src
 PKGNAME=	xenkernel3-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
 		http://bits.xensource.com/oss-xen/release/${VERSION}/src.tgz/
