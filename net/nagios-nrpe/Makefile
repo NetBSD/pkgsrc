@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/07/04 20:54:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/11/26 22:14:19 seb Exp $
 #
 
 DISTNAME=		nrpe-2.5.2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/nagios/
 COMMENT=		Nagios remote program execution daemon
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl
 USE_PKGINSTALL=		yes
@@ -18,11 +20,8 @@ PKG_SYSCONFSUBDIR=	nagios
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-NAGIOS_USER?=		nagios
-NAGIOS_GROUP?=		${NAGIOS_USER}
-
-PKG_GROUPS+=		${NAGIOS_GROUP}
-PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
+PKG_GROUPS+=			${NAGIOS_GROUP}
+PKG_USERS+=			${NAGIOS_USER}:${NAGIOS_GROUP}
 PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
 
 PKG_GROUPS_VARS+=	NAGIOS_GROUP
