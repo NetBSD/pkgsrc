@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2463 2007/11/25 23:17:08 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2464 2007/11/26 00:04:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4526,3 +4526,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/base to 1.3.9 [adrianp 2007-11-25]
 	Updated math/glpk to 4.24 [adam 2007-11-25]
 	Updated archivers/unrar to 3.7.8 [wiz 2007-11-25]
+	Updated x11/devilspie to 0.22 [wiz 2007-11-25]
+	Updated wm/dwm to 4.7 [wiz 2007-11-25]
+	Updated devel/glib2 to 2.14.4 [wiz 2007-11-25]
+	Updated security/gnutls to 2.0.4 [wiz 2007-11-25]
+	Updated graphics/icon-naming-utils to 0.8.6 [wiz 2007-11-25]
+	Added games/qonk version 0.3.1 [wiz 2007-11-25]
+	Updated textproc/iso-codes to 1.6 [wiz 2007-11-25]
+	Updated devel/libconfig to 1.2 [wiz 2007-11-26]
