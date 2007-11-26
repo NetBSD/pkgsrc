@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2007/11/09 12:07:06 martti Exp $
+$NetBSD: distinfo,v 1.14 2007/11/26 08:55:36 martti Exp $
 
-SHA1 (fvwm-2.5.23.tar.bz2) = 0a80afc06b4d6729e73e7e3a5797ed98d01d1b4e
-RMD160 (fvwm-2.5.23.tar.bz2) = 214b834c9939ba062263b3ca7637df276bc86e8c
-Size (fvwm-2.5.23.tar.bz2) = 2513623 bytes
+SHA1 (fvwm-2.5.24.tar.bz2) = 9a8ad57f585d0d53f3083dbba1983dea9db894cb
+RMD160 (fvwm-2.5.24.tar.bz2) = ad5318505f8331cf0ecca492f1c7cd73096c91ab
+Size (fvwm-2.5.24.tar.bz2) = 2513796 bytes
 SHA1 (patch-aa) = 5f530f15410c580dd3cad671e863d5f1506af2c6
 SHA1 (patch-ab) = 4df59dbcd630c2fcb1cf703bc4aefb7223081c7c
