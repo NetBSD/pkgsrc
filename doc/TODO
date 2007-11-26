@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6857 2007/11/26 00:07:40 wiz Exp $
+$NetBSD: TODO,v 1.6858 2007/11/26 23:16:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,9 +386,11 @@ Suggested package updates
 	o cmake-2.4.7
 	o cocoon-2.1.10
 	o compiz-0.6.2
+	o cone-0.74
 	o connect-1.96
 	o control-center-2.20.1
 	o cook-2.30
+	o courier-0.58.0
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -417,6 +419,7 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.21
 	o delegate-9.7.5
+	o deskbar-applet-2.20.2
 	o devIL-1.6.7
 	o devhelp-0.16.1
 	o devtodo-0.1.19
@@ -457,7 +460,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.10
 	o enscript-1.6.4
-	o eog-2.20.2
+	o eog-2.20.3
 	o epic4-2.6
 	o epiphany-2.20.1
 	o epiphany-extensions-2.20.1
@@ -469,9 +472,9 @@ Suggested package updates
 	o eukleides-1.0.3
 	o evilwm-1.0.0
 	o evince-2.20.1
-	o evolution-2.12.1
-	o evolution-data-server-1.12.1
-	o evolution-exchange-2.12.0
+	o evolution-2.12.2
+	o evolution-data-server-1.12.2
+	o evolution-exchange-2.12.2
 	o evolution-webcal-2.12.0
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
@@ -509,6 +512,7 @@ Suggested package updates
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
+	o gail-1.20.2
 	o gaim-icb-20070203
 	o galculator-1.3.1
 	o gap-4r4p9
@@ -609,7 +613,7 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
-	o gtkhtml-3.16.1
+	o gtkhtml-3.16.2
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
@@ -881,6 +885,7 @@ Suggested package updates
 	o openmotif-2.3
 	o openssl-0.9.8e (in wip/)
 	o openssl-0.9.8g
+	o orca-2.20.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
@@ -1187,7 +1192,7 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
-	o rxvt-unicode-8.6
+	o rxvt-unicode-8.7
 	o sablecc-3.2
 	o samba-3.0.27a
 	o sarg-2.2.31
@@ -1380,7 +1385,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
 	o xmms-1.2.11
-	o xmms-crossfade-0.3.13
+	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
@@ -1421,7 +1426,7 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.20.0
+	o zenity-2.20.1
 	o zile-2.2.52
 	o zircon-1.18.256
 	o zoom-1.0.5
