@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.37 2007/08/15 06:33:44 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.38 2007/11/26 23:40:10 hubertf Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -282,7 +282,7 @@ like:</para>
 FETCH_CMD=             wget
 FETCH_BEFORE_ARGS=     --passive-ftp
 FETCH_RESUME_ARGS=     -c
-FETCH_OUTPUT_ARGS=     -O
+FETCH_OUTPUT_ARGS=     -O -nc
 </programlisting>
 
 </sect1>
