@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.146 2007/10/27 12:17:06 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2007/11/27 21:45:45 drochner Exp $
 
-DISTNAME=		gtk+-2.12.1
+DISTNAME=		gtk+-2.12.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.12/ \
@@ -58,6 +58,13 @@ SUBST_STAGE.pthread=	pre-configure
 SUBST_MESSAGE.pthread=	Fixing pthread flags.
 SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
+
+# XXX temporary hack, remove on update
+# The gtk-doc (html) docs are not properly packaged in 2.12.2.
+# We need to regenerate. Will hopefully fixed in the next gtk release.
+BUILD_DEPENDS+= gtk-doc-[0-9]*:../../textproc/gtk-doc
+post-build:
+	(cd ${WRKSRC}/docs//reference/gtk && ${GMAKE} html-build.stamp)
 
 .include "options.mk"
 
