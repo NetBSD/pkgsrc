@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/02 21:16:34 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2007/11/27 01:31:03 rillig Exp $
 
 --- Makefile.orig	2005-02-02 19:27:32.000000000 +0100
 +++ Makefile
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/02 21:16:34 drochner Exp $
  LDGIMPFLAGS=`gimptool --libs`
  LDGTKFLAGS=`gtk-config --libs`
 -LDFLAGS=$(LDGIMPFLAGS) $(LDGTKFLAGS)
-+LDFLAGS=$(LDGIMPFLAGS) #$(LDGTKFLAGS)
++LDFLAGS=$(LDGIMPFLAGS) -lm
   
  build: rawphoto
   
