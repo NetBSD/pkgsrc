@@ -1,4 +1,4 @@
-# $NetBSD: imake-check.mk,v 1.6 2007/07/27 17:44:43 tnn Exp $
+# $NetBSD: imake-check.mk,v 1.7 2007/11/27 23:06:43 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -58,29 +58,32 @@
 #
 
 .for _pair_ in ${BUILTIN_IMAKE_CHECK}
+.  for pkg in ${_pair_:C/\:[^:]*$//}
+.  for symbol in ${_pair_:C/^[^:]*\://}
 .  if ${X11_TYPE} == "modular"
-BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}=	no
+BUILTIN_IMAKE_CHECK.${pkg}=	no
 .  else
 USE_TOOLS+=	cat:pkgsrc echo:pkgsrc grep:pkgsrc mkdir:pkgsrc		\
 		rm:pkgsrc test:pkgsrc
 USE_TOOLS+=	imake:pkgsrc ${IMAKE_TOOLS:S/$/:pkgsrc/}	# XXX
 IMAKE?=		${X11BASE}/bin/imake				# XXX
 
-.    if !defined(BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//})
-BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}!=				\
+.    if !defined(BUILTIN_IMAKE_CHECK.${pkg})
+BUILTIN_IMAKE_CHECK.${pkg}!=				\
 	if ${SETENV} CAT=${CAT:Q} ECHO=${ECHO:Q} GREP=${GREP:Q}		\
 		IMAKE=${IMAKE:Q} IMAKE_MAKE=${IMAKE_MAKE:Q}		\
 		MKDIR=${MKDIR:Q} PATH_ORIG=${_PATH_ORIG:Q}		\
 		RM=${RM:Q} TEST=${TEST:Q}				\
 		X11BASE=${X11BASE:Q}					\
-	   ${SH} ${.CURDIR}/../../mk/buildlink3/imake-check		\
-		${_pair_:C/^[^:]*\://};					\
+	   ${SH} ${.CURDIR}/../../mk/buildlink3/imake-check ${symbol};	\
 	then								\
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
 	fi
 .    endif
-MAKEVARS+=	BUILTIN_IMAKE_CHECK.${_pair_:C/\:[^:]*$//}
+MAKEVARS+=	BUILTIN_IMAKE_CHECK.${pkg}
 .  endif
+.  endfor
+.  endfor
 .endfor
