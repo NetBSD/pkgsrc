@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/07 12:59:12 kano Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/27 19:20:42 jlam Exp $
 
 COMPAT_PKG=		compat15	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.5
@@ -19,6 +19,7 @@ EMUL_PLATFORMS=		netbsd-alpha netbsd-arm netbsd-i386 netbsd-m68k	\
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5[A-Z]*-* NetBSD-1.[6-9]*-*		\
 			NetBSD-[2-9]*-* NetBSD-[1-9][0-9]*-*
+NOT_FOR_PLATFORM=	NetBSD-*-x86_64
 .endif
 
 .include "../../emulators/compat_netbsd/Makefile.common"
