@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2007/11/25 23:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2007/11/27 21:33:22 drochner Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -48,8 +48,6 @@ BUILDLINK_API_DEPENDS.pcre+= pcre>=7.4nb1
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
-
-CONFIGURE_ENV+=		ac_cv_func_posix_memalign=no
 
 .include "../../mk/bsd.prefs.mk"
 
