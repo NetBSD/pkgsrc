@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2476 2007/11/27 15:21:01 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2477 2007/11/27 18:58:09 pooka Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4551,3 +4551,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Class-Factory to 1.06 [hiramatsu 2007-11-27]
 	Updated security/pam-ldap to 184 [adam 2007-11-27]
 	Updated databases/phpmyadmin to 2.11.2.1nb1 [tron 2007-11-27]
+	Added filesystems/fuse-chironfs version 1.0-RC9 [pooka 2007-11-27]
