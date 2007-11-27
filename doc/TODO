@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6859 2007/11/27 06:14:00 taca Exp $
+$NetBSD: TODO,v 1.6860 2007/11/27 06:56:05 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -907,7 +907,6 @@ Suggested package updates
 	o p5-Cache-Memcached-1.15
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Factory-1.05
 	o p5-Class-Inspector-1.18
 	o p5-Class-ReturnValue-0.55
 	o p5-Class-Singleton-1.4
