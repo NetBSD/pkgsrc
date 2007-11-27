@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2474 2007/11/27 06:56:04 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2475 2007/11/27 08:29:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4549,3 +4549,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nagios-plugins to 1.4.3nb3 [seb 2007-11-26]
 	Updated audio/py-karaoke to 0.5.1 [wiz 2007-11-26]
 	Updated devel/p5-Class-Factory to 1.06 [hiramatsu 2007-11-27]
+	Updated security/pam-ldap to 184 [adam 2007-11-27]
