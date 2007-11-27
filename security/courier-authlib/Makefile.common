@@ -1,4 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2007/07/04 20:54:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/11/27 16:27:30 jlam Exp $
+#
+# This file is included by the following Makefiles:
+#
+#	mail/courier-mta/Makefile.common
+#
 
 COURIER_USER?=		courier
 COURIER_GROUP?=		mail
