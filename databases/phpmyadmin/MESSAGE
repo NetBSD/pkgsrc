@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2005/09/28 14:15:49 rillig Exp $
+$NetBSD: MESSAGE,v 1.10 2007/11/27 15:20:47 tron Exp $
 
-Do *not* edit "${PMDIR}/config.inc.php" to customize
+Do *not* edit "${CONF_INC_PHP}" to customize
 this package because it is a link which will removed during upgrades.
 The actual configuration file is "${PMCONFFILE}".
 
