@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2475 2007/11/27 08:29:01 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2476 2007/11/27 15:21:01 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4550,3 +4550,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/py-karaoke to 0.5.1 [wiz 2007-11-26]
 	Updated devel/p5-Class-Factory to 1.06 [hiramatsu 2007-11-27]
 	Updated security/pam-ldap to 184 [adam 2007-11-27]
+	Updated databases/phpmyadmin to 2.11.2.1nb1 [tron 2007-11-27]
