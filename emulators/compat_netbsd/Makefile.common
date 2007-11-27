@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2007/08/30 16:54:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/11/27 19:40:51 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -29,8 +29,7 @@ FILESDIR=		${NETBSD_PKGSRCDIR}/files
 PATCHDIR=		${NETBSD_PKGSRCDIR}/patches
 PKGDIR=			${NETBSD_PKGSRCDIR}
 
-.if ((${EMUL_ARCH} == "i386") && (${MACHINE_ARCH} == "x86_64")) || \
-    ((${EMUL_ARCH} == "sparc") && (${MACHINE_ARCH} == "sparc64"))
+.if defined(NETBSD_COMPAT32)
 PKGNAME=		netbsd32_${DISTNAME:S/-${EMUL_ARCH}-/-/}
 COMMENT:=		${COMMENT:S/NetBSD/NetBSD 32-bit/}
 NETBSD_BASE=		netbsd32_
