@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
+$NetBSD: patch-ab,v 1.7 2007/11/27 08:27:06 adam Exp $
 
---- pam_ldap.c.orig	Sun Oct 31 02:42:54 2004
-+++ pam_ldap.c	Sun Oct 31 02:48:03 2004
+--- pam_ldap.c.orig	2007-08-12 18:35:00.000000000 +0200
++++ pam_ldap.c
 @@ -131,12 +131,7 @@
  #include "pam_ldap.h"
  #include "md5.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
  
  #ifndef HAVE_LDAP_MEMFREE
  #define ldap_memfree(x)	free(x)
-@@ -3137,7 +3132,7 @@
+@@ -3281,7 +3276,7 @@ pam_sm_authenticate (pam_handle_t * pamh
    int rc;
    const char *username;
    char *p;
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
    int i;
    pam_ldap_session_t *session = NULL;
    const char *configFile = NULL;
-@@ -3158,6 +3153,8 @@
+@@ -3302,6 +3297,8 @@ pam_sm_authenticate (pam_handle_t * pamh
  	;
        else if (!strcmp (argv[i], "debug"))
  	;
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
        else
  	syslog (LOG_ERR, "illegal option %s", argv[i]);
      }
-@@ -3171,6 +3168,22 @@
+@@ -3315,6 +3312,22 @@ pam_sm_authenticate (pam_handle_t * pamh
      return rc;
  
    rc = pam_get_item (pamh, PAM_AUTHTOK, (CONST_ARG void **) &p);
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
    if (rc == PAM_SUCCESS && (use_first_pass || try_first_pass))
      {
        rc = _do_authentication (pamh, session, username, p);
-@@ -3419,11 +3432,11 @@
+@@ -3563,11 +3576,11 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
  		    {
  		      _conv_sendmsg (appconv, "Password change aborted",
  				     PAM_ERROR_MSG, no_warn);
@@ -72,7 +72,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
  		    }
  		  else
  		    {
-@@ -3437,7 +3450,7 @@
+@@ -3581,7 +3594,7 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
  	  if (curpass == NULL)
  	    return PAM_MAXTRIES;	/* maximum tries exceeded */
  	  else
@@ -81,7 +81,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
  	}
        else
  	{
-@@ -3465,11 +3478,11 @@
+@@ -3609,11 +3622,11 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
        syslog (LOG_ERR,
  	      "pam_ldap: error getting old authentication token (%s)",
  	      pam_strerror (pamh, rc));
@@ -97,7 +97,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
      }
  
    if (try_first_pass || use_first_pass)
-@@ -3479,11 +3492,11 @@
+@@ -3623,11 +3636,11 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
  	newpass = NULL;
  
        if (use_first_pass && newpass == NULL)
@@ -113,7 +113,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
      }
  
    tries = 0;
-@@ -3533,11 +3546,11 @@
+@@ -3677,11 +3690,11 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
  	}
        else
  	{
@@ -129,7 +129,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/15 03:24:03 taca Exp $
  	}
  
        if (cmiscptr == NULL)
-@@ -3569,11 +3582,11 @@
+@@ -3713,11 +3726,11 @@ pam_sm_chauthtok (pam_handle_t * pamh, i
  		{
  		  _conv_sendmsg (appconv, "Password change aborted",
  				 PAM_ERROR_MSG, no_warn);
