@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.28 2007/11/19 00:45:49 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.29 2007/11/28 13:03:56 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,6 +37,9 @@
 transform_setname "transform-sunpro-cc"
 
 case $arg in
+
+# libstdc++ is specific to the GNU C++ compiler.
+-lstdc++	) transform_discard_with_warning ;;
 
 # Standard options, except -O0 and -O1.
 -[cEgOos]	|\
