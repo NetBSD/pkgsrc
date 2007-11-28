@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/07/06 18:23:26 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2007/11/28 11:40:09 jnemeth Exp $
 #
 
 DISTNAME=	dbus-glib-0.74
@@ -9,6 +9,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	GLib bindings for the D-BUS message bus system
 
+MAKE_JOBS_SAFE=		NO
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
