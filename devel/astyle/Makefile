@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/06 21:38:34 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2007/11/28 19:06:00 joerg Exp $
 #
 
 DISTNAME=	astyle_1.13.6.1
@@ -12,7 +12,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://astyle.sourceforge.net/
 COMMENT=	Reindenter and reformatter of C++, C and Java source code
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_FILE=	makefile
+
 HTMLDIR=	${PREFIX}/share/doc/html/astyle
+INSTALLATION_DIRS=	bin ${HTMLDIR}
 
 USE_LANGUAGES=	c++
 
@@ -22,12 +27,8 @@ USE_LANGUAGES=	c++
 CFLAGS+=	-DASTYLE_GCC2
 .endif
 
-post-extract:
-	${MV} -f ${WRKSRC}/makefile ${WRKSRC}/Makefile
-
 post-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} astyle.html \
-		astyle_release_notes.html license.html ${HTMLDIR}
+		astyle_release_notes.html license.html ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
