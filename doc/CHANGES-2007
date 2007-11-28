@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2478 2007/11/28 01:38:33 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2479 2007/11/28 11:41:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4555,3 +4555,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox to 2.0.0.10 [ghen 2007-11-28]
 	Updated www/firefox-bin to 2.0.0.10 [ghen 2007-11-28]
 	Updated www/firefox-gtk1 to 2.0.0.10 [ghen 2007-11-28]
+	Updated editors/nvi-m17n to 1.79.20040401nb4 [obache 2007-11-28]
