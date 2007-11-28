@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/11/19 12:24:06 obache Exp $
+# $NetBSD: Makefile,v 1.41 2007/11/28 11:40:35 obache Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.20040401
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.sleepycat.com/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi/
