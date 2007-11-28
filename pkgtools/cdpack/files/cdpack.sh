@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.10 2005/08/01 21:47:43 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.11 2007/11/28 16:18:01 mishka Exp $
 #
 # Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 #
@@ -634,8 +634,8 @@ fi
 # Create the ISO Images
 #
 volid=PkgsrcDisk
-#mkisofs_flags="-f -l -r -J -L -volset-size $ncds -V $volid "
-mkisofs_flags="-v -v -f -l -r -J -L "
+#mkisofs_flags="-f -l -r -J -allow-leading-dots -volset-size $ncds -V $volid "
+mkisofs_flags="-v -v -f -l -r -J -allow-leading-dots "
 
 echo "Creating the ISO images"
 cdn=1
