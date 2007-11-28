@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2477 2007/11/27 18:58:09 pooka Exp $
+$NetBSD: CHANGES-2007,v 1.2478 2007/11/28 01:38:33 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4552,3 +4552,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/pam-ldap to 184 [adam 2007-11-27]
 	Updated databases/phpmyadmin to 2.11.2.1nb1 [tron 2007-11-27]
 	Added filesystems/fuse-chironfs version 1.0-RC9 [pooka 2007-11-27]
+	Updated www/firefox to 2.0.0.10 [ghen 2007-11-28]
+	Updated www/firefox-bin to 2.0.0.10 [ghen 2007-11-28]
+	Updated www/firefox-gtk1 to 2.0.0.10 [ghen 2007-11-28]
