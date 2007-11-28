@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.3 2007/07/21 15:44:02 tnn Exp $ */
+/* $NetBSD: pbuild.h,v 1.4 2007/11/28 11:34:20 rillig Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -36,6 +36,21 @@
 #include <inttypes.h>
 #endif
 
+/**
+ * At the very beginning of a pbulk, each job is in state JOB_INIT.
+ *
+ * (jobs.c, init_jobs:) If scanning the package failed or the package is
+ * not available for this configuration, its state is changed to
+ * JOB_PREFAILED. Packages that are listed in the "error" log are marked
+ * as JOB_FAILED, those in the the "success" log are marked as JOB_DONE.
+ * The remaining jobs are marked as JOB_OPEN.
+ *
+ * The packages that are ready to be built are those that have the state
+ * JOB_OPEN and no pending dependencies. At most one job can be in the
+ * state JOB_IN_PROCESSING. After trying to build a job, its state is
+ * set to either JOB_DONE or to JOB_FAILED. In the latter case, all the
+ * jobs that depend on this one are marked as JOB_INDIRECT_FAILED.
+ */
 enum job_state {
 	JOB_INIT,
 	JOB_OPEN,
@@ -65,14 +80,36 @@ struct dependency_list {
 };
 
 struct build_job {
+	/** The package name, including the version number. */
 	char *pkgname;
+
+	/**
+	 * Pointers into the output from pbulk-resolve. The lines
+	 * between these two pointers describe additional properties
+	 * of the job, such as the PKGPATH in which to build the
+	 * package. The information can be accessed with the
+	 * find_content function.
+	 */
 	const char *begin;
 	const char *end;
+
 	enum job_state state;
 	int pkg_depth;
+
+	/**
+	 * Iff this is 1, this package and all its dependencies do not
+	 * have any definition for RESTRICTED or NO_BIN_ON_FTP, and thus
+	 * may be uploaded on a public FTP server.
+	 */
 	int unrestricted_subset;
+
+	/**
+	 * The number of direct dependencies that must be built before
+	 * this package can be tried.
+	 */
 	size_t open_depends;
 
+	/** The packages that depend on this package. */
 	SLIST_HEAD(, dependency_list) depending_pkgs;
 
 	TAILQ_ENTRY(build_job) build_link;
