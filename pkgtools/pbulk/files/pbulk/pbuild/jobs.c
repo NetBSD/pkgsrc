@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.5 2007/08/15 20:55:28 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.6 2007/11/28 11:34:20 rillig Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -391,6 +391,12 @@ recursive_mark_broken(struct build_job *job, enum job_state state)
 	}	
 }
 
+/**
+ * Changes the state of the ''job'' to ''state'' and runs some code
+ * depending on the new state. If ''log_state'' is non-zero, the package
+ * name is written to either the "error" or the "success" log, depending
+ * on the ''state''.
+ */
 void
 process_job(struct build_job *job, enum job_state state, int log_state)
 {
