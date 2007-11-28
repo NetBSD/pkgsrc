@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2480 2007/11/28 11:50:05 mjl Exp $
+$NetBSD: CHANGES-2007,v 1.2481 2007/11/28 15:12:30 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4558,3 +4558,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated editors/nvi-m17n to 1.79.20040401nb4 [obache 2007-11-28]
 	Removed chat/micq [mjl 2007-11-28]
 	Added chat/climm version 0.6.1 [mjl 2007-11-28]
+	Updated mail/dovecot to 1.0.8 [ghen 2007-11-28]
