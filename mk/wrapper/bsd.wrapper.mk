@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.73 2007/11/28 12:57:46 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.74 2007/11/28 13:18:50 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -365,7 +365,7 @@ _WRAP_SH_CRUNCH_FILTER= ${AWK} ' \
 		/^\#!/ { print } \
 		/^[[:space:]]*\#/ || NF == 0 { next } \
 		/.*/ { print } \
-		' | tee /dev/tty
+		'
 
 _WRAP_SUBST_SED=							\
 	-e "s|@ABI@|${ABI:Q}|g"						\
