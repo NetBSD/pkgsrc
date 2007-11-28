@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/11 18:43:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/28 07:48:14 tron Exp $
 #
 
 DISTNAME=	rarian-0.6.0
@@ -16,11 +16,11 @@ CONFLICTS+=	scrollkeeper-[0-9]*
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash:run
 
 PKGCONFIG_OVERRIDE+=	rarian.pc.in
 
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 # we don't install anything here, but dependent pkgs do,
 # so we are the only instance which can reasonably own that dir
