@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.15 2007/09/13 10:50:43 rillig Exp $
+# $NetBSD: logic,v 1.16 2007/11/28 14:45:22 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 # Empty out the argument buffer and fill up the command buffer.
+. $cache
 skipargs=0
 while ! queue_is_empty argbuf; do
 	#
@@ -79,7 +80,7 @@ while ! queue_is_empty argbuf; do
 	#
 	case $do_transform in
 	yes)
-		. $cache
+		cache_lookup
 		case $cachehit in
 		yes)
 			# The cache was hit and $arg is set.
@@ -135,10 +136,12 @@ while ! queue_is_empty argbuf; do
 				$cat >> $cache_body << EOF
 $cachearg) arg=$cachedarg; split_arg=$split_arg; cachehit=yes ;;
 EOF
-				{ echo "case \$arg in"
+				{ echo "cache_lookup() {"
+				  echo "case \$arg in"
 				  $cat $cache_body
 				  echo "*) cachehit=no ;;"
 				  echo "esac"
+				  echo "}"
 				} > $cache-$$.tmp
 				$mv -f $cache-$$.tmp $cache
 				;;
