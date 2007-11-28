@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/02/20 19:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2007/11/28 07:37:46 rillig Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		7
@@ -49,7 +49,7 @@ SUBST_SED.sather-configure=					\
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-patch:
-	cd ${WRKSRC}/System/Platforms && ${CP} -r netbsd dragonfly
+	ln -s netbsd ${WRKSRC}/System/Platforms/dragonfly
 
 post-build:
 	cd ${WRKSRC}/Emacs;						\
