@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.7 2007/07/28 00:42:33 joerg Exp $
+# $NetBSD: replace-interpreter.mk,v 1.8 2007/11/28 08:48:11 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -30,6 +30,7 @@
 # variable, all identifiers starting with "sys-" are reserved for the
 # pkgsrc infrastructure. All others may be used freely.
 #
+# Keywords: replace_interpreter interpreter interp
 
 ######################################################################
 ### replace-interpreter (PRIVATE)
