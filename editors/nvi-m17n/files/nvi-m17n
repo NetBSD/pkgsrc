@@ -5,7 +5,7 @@ if [ "x$NEXINIT" != "x" -a "${NEXINIT-UNSET}" != "UNSET" ]; then
 elif [ "x$EXINIT" != "x" -a "${EXINIT-UNSET}" != "UNSET" ]; then
 	EXINIT1="$EXINIT"
 else
-	ecfile="/dev/null"
+	rcfile="/dev/null"
 	if [ -f "${HOME}/.nexrc" ]; then
 		rcfile="$HOME/.nexrc"
 	elif [ -f "${HOME}/.exrc" ]; then
