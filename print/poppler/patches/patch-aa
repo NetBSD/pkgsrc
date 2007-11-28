@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2007/11/03 16:10:38 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2007/11/28 20:54:37 drochner Exp $
 
---- glib/Makefile.in.orig	2007-05-30 20:32:26.000000000 +0200
+--- glib/Makefile.in.orig	2007-11-10 13:04:33.000000000 +0100
 +++ glib/Makefile.in
 @@ -66,7 +66,7 @@ am__DEPENDENCIES_1 =
  @BUILD_CAIRO_OUTPUT_TRUE@am__DEPENDENCIES_2 = $(top_builddir)/poppler/libpoppler-cairo.la \
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.7 2007/11/03 16:10:38 drochner Exp $
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_2)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
-@@ -319,7 +319,7 @@ libpoppler_glib_la_SOURCES = \
+@@ -324,7 +324,7 @@ libpoppler_glib_la_SOURCES = \
  	poppler-private.h
  
  libpoppler_glib_la_LIBADD = \
@@ -29,8 +29,8 @@ $NetBSD: patch-aa,v 1.7 2007/11/03 16:10:38 drochner Exp $
  	$(POPPLER_GLIB_LIBS)				\
  	$(FREETYPE_LIBS)				\
  	$(FONTCONFIG_LIBS)				\
-@@ -330,7 +330,7 @@ test_poppler_glib_SOURCES = \
-        test-poppler-glib.c
+@@ -335,7 +335,7 @@ test_poppler_glib_SOURCES = \
+        test-poppler-glib.cc
  
  test_poppler_glib_LDADD = \
 -	$(top_builddir)/poppler/libpoppler.la	\
