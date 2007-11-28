@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2007/02/22 19:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/11/28 16:18:01 mishka Exp $
 #
 
 DISTNAME=	cdpack-1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
