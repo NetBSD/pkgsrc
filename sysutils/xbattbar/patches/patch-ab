@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
+$NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
 
---- xbattbar.c.orig	2001-02-02 06:25:29.000000000 +0100
-+++ xbattbar.c	2007-07-25 17:03:43.000000000 +0200
+--- xbattbar.c.orig	2001-02-02 00:25:29.000000000 -0500
++++ xbattbar.c	2007-11-27 20:56:25.000000000 -0500
 @@ -27,6 +27,14 @@
  
  #include <sys/types.h>
@@ -17,7 +17,18 @@ $NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -583,27 +591,161 @@
+@@ -577,33 +585,177 @@
+ 
+ #ifdef __NetBSD__
+ 
++#ifndef _NO_APM
+ #include <machine/apmvar.h>
++#else
++#define APM_AC_OFF	0x00
++#define APM_AC_ON	0x01
++#endif
+ 
+ #define _PATH_APM_SOCKET       "/var/run/apmdev"
  #define _PATH_APM_CTLDEV       "/dev/apmctl"
  #define _PATH_APM_NORMAL       "/dev/apm"
  
@@ -88,7 +99,9 @@ $NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
  void battery_check(void)
  {
         int fd, r, p;
++#ifndef _NO_APM
         struct apm_power_info info;
++#endif
 +       int acpi;
 +       size_t ns;
 +       size_t cc;
@@ -128,15 +141,17 @@ $NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
 +		}
 +
 +		fillsensors(fd, etds, ebis, ns);
- 
-+#endif
-+       } else {
 +
++#endif
++#ifndef _NO_APM
++       } else {
+ 
 +	       memset(&info, 0, sizeof(info));
         if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
                 fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
                 exit(1);
         }
++#endif
 +       }
  
         close(fd);
@@ -177,15 +192,17 @@ $NetBSD: patch-ab,v 1.7 2007/07/25 15:09:32 xtraeme Exp $
 +		}
 +		r = (rtot * 100.0) / maxtot;
 +#endif
++#ifndef _NO_APM
 +       } else {
 +	       /* get current remain */
         if (info.battery_life > 100) {
                 /* some APM BIOSes return values slightly > 100 */
                 r = 100;
-@@ -617,6 +759,7 @@
+@@ -617,6 +769,8 @@
         } else {
                 p = APM_AC_OFF;
         }
++#endif
 +       }
  
         if (first || ac_line != p || battery_level != r) {
