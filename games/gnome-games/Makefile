@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2007/11/05 19:29:47 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2007/11/29 20:35:19 drochner Exp $
 
-DISTNAME=		gnome-games-2.20.1
+DISTNAME=		gnome-games-2.20.2
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.20/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,17 +21,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-# This package installs files in sysconfdir but does not read them directly,
-# so the following configuration argument is safe.
-CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
-
-EGDIR=			${PREFIX}/share/examples/gnome-games
-CONF_FILES=
-.for conffile in	sound/events/gnibbles.soundlist \
-			sound/events/gnobots2.soundlist \
-			sound/events/iagno.soundlist
-CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
-.endfor
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
@@ -74,7 +63,7 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -82,4 +71,5 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
 # optional for network games
 #.include "../../wip/ggz-libggz/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
