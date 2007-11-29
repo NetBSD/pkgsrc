@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2495 2007/11/29 15:14:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2496 2007/11/29 15:15:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4573,3 +4573,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Storable to 2.18 [wiz 2007-11-29]
 	Updated devel/p5-Test-Manifest to 1.22 [wiz 2007-11-29]
 	Updated mail/p5-MIME-tools to 5.425 [wiz 2007-11-29]
+	Updated audio/p5-MP3-Info to 1.23 [wiz 2007-11-29]
