@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2007/11/29 14:14:22 wiz Exp $
 
-SHA1 (Class-Singleton-1.03.tar.gz) = 38c3e0619788212bdd3d49e9592e0fa4c6f6a5d1
-RMD160 (Class-Singleton-1.03.tar.gz) = 6ab4be9b84b7bcfac56874895ed677d1b468cccc
-Size (Class-Singleton-1.03.tar.gz) = 7136 bytes
+SHA1 (Class-Singleton-1.4.tar.gz) = 29c4c6b6cfb9af9eaa61582f3f3b10015f6ea900
+RMD160 (Class-Singleton-1.4.tar.gz) = 80b739b14dbe947a869d37e5b134100d274f9bf7
+Size (Class-Singleton-1.4.tar.gz) = 7793 bytes
