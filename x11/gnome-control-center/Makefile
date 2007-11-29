@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/05 19:17:29 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/29 20:42:13 drochner Exp $
 #
 
 DISTNAME=	gnome-control-center-2.20.1
@@ -40,7 +40,7 @@ GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	themus.schemas
 GCONF_SCHEMAS+=	fontilus.schemas
 
-EGDIR=			${PREFIX}/share/examples/control-center
+EGDIR=			${PREFIX}/share/examples/gnome-control-center
 CONF_FILES=		${EGDIR}/theme-method.conf \
 			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/theme-method.conf
 CONF_FILES+=		${EGDIR}/font-method.conf \
