@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.13 2007/11/20 18:21:03 rillig Exp $
+# $NetBSD: features-vars.mk,v 1.14 2007/11/29 08:53:14 rillig Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -57,8 +57,10 @@
 #	current system.  Also includes "inet6" if the system doesn't
 #	support IPv6.
 #
-# Keywords: feature features
-#
+# Keywords: feature features asprintf vasprintf err errx warn warnx
+# Keywords: fts fts_open fts_read fts_set fts_close getopt_long
+# Keywords: getprogname setprogname glob regcomp snprintf vsnprintf
+# Keywords: utimes libnbcompat nbcompat
 
 _VARGROUPS+=		features
 _USER_VARS.features=	# none
