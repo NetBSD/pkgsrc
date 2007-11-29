@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.7 2007/03/08 15:01:50 rillig Exp $
+$NetBSD: patch-am,v 1.8 2007/11/29 18:36:39 wiz Exp $
 
---- configure.orig	2004-02-23 13:44:32.000000000 -0800
+--- configure.orig	2007-11-16 21:54:45.000000000 +0000
 +++ configure
-@@ -19078,13 +19078,6 @@ _ACEOF
+@@ -33390,13 +33390,6 @@ _ACEOF
  
  		fi
  	;;
@@ -16,7 +16,7 @@ $NetBSD: patch-am,v 1.7 2007/03/08 15:01:50 rillig Exp $
  	*-hpux-*)
  		ARCH_DEFINES="-DHPUX"
  	;;
-@@ -19099,7 +19092,7 @@ case "$host" in
+@@ -33411,7 +33404,7 @@ case "$host" in
  	i386-*-* | i486-*-* | i586-*-* | i686-*-* | i86pc-*-*)
  		arch_type=ix86
  		case "$host" in

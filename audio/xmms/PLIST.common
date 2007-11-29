@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2006/07/08 01:22:41 minskim Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2007/11/29 18:36:35 wiz Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -42,6 +42,7 @@ share/locale/da/LC_MESSAGES/xmms.mo
 share/locale/de/LC_MESSAGES/xmms.mo
 share/locale/el/LC_MESSAGES/xmms.mo
 share/locale/en/LC_MESSAGES/xmms.mo
+share/locale/en_GB/LC_MESSAGES/xmms.mo
 share/locale/eo/LC_MESSAGES/xmms.mo
 share/locale/es/LC_MESSAGES/xmms.mo
 share/locale/et/LC_MESSAGES/xmms.mo
