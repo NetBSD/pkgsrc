@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2007/09/21 13:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2007/11/29 13:49:11 wiz Exp $
 #
 
 DISTNAME=		gnucash-2.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -11,7 +11,8 @@ HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
 
 DEPENDS+=		guile-slib>=3.1.1:../../devel/guile-slib
-#DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
+DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
+DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
