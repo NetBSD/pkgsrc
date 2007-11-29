@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2007/11/05 19:27:29 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2007/11/29 20:55:10 drochner Exp $
 #
 
-DISTNAME=	file-roller-2.20.1
+DISTNAME=	file-roller-2.20.2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,6 @@ BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
