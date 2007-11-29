@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2489 2007/11/29 14:20:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2490 2007/11/29 14:26:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4567,3 +4567,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Class-Singleton to 1.4 [wiz 2007-11-29]
 	Updated security/p5-Crypt-SSLeay to 0.57 [wiz 2007-11-29]
 	Updated textproc/p5-YAML to 0.66 [wiz 2007-11-29]
+	Updated textproc/p5-XML-Parser to 2.36 [wiz 2007-11-29]
