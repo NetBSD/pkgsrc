@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2007/09/20 20:48:58 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2007/11/29 20:37:26 drochner Exp $
 
---- configure.orig	2006-02-06 21:55:16.000000000 +0100
+--- configure.orig	2007-11-26 17:39:55.000000000 +0100
 +++ configure
-@@ -5276,11 +5276,11 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
- 
+@@ -23369,11 +23369,11 @@ echo "$as_me: error: GNU gettext tools n
+ fi
  
  # Use the tools built into the package, not the ones that are installed.
 -INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
