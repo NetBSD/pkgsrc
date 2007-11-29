@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2007/11/03 16:22:56 drochner Exp $
+$NetBSD: distinfo,v 1.6 2007/11/29 20:37:26 drochner Exp $
 
-SHA1 (eog-2.20.2.tar.bz2) = eca46e393cd02bf5156c30a6f64a9341e0a3bcca
-RMD160 (eog-2.20.2.tar.bz2) = 0c3bd4f85a76910e5c892b27ec02645de990e2fa
-Size (eog-2.20.2.tar.bz2) = 1656601 bytes
-SHA1 (patch-ab) = d75be607acda1586434b13721ca620326c516ecd
+SHA1 (eog-2.20.3.tar.bz2) = 7a89765c9c87b0c029b4bf92458440884951f659
+RMD160 (eog-2.20.3.tar.bz2) = 2f5027cd1fe6626a40e41197e235231f1e22bf86
+Size (eog-2.20.3.tar.bz2) = 1735180 bytes
+SHA1 (patch-ab) = e3da0c7d31c2508e51f6df6e36fc624995c6137e
 SHA1 (patch-ac) = d3eb6261275131400c332285147bccbf82e8f1dc
