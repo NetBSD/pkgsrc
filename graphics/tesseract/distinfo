@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/07/28 01:02:14 wiz Exp $
+$NetBSD: distinfo,v 1.3 2007/11/29 16:42:09 wiz Exp $
 
-SHA1 (tesseract-2.00.tar.gz) = 3051d90b74a255db791ce0d7a6dc3e12203727b9
-RMD160 (tesseract-2.00.tar.gz) = 96deb8315861e0e0c423fc2d12c9a69b776cb456
-Size (tesseract-2.00.tar.gz) = 1072362 bytes
+SHA1 (tesseract-2.01.tar.gz) = c35f3448e97d61e00980abba6b2e9cb6e151c366
+RMD160 (tesseract-2.01.tar.gz) = e28bb1d60baf73c8eaa646b32825d9931116851e
+Size (tesseract-2.01.tar.gz) = 1050770 bytes

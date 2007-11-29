@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/28 01:02:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/29 16:42:09 wiz Exp $
 bin/cntraining
 bin/mftraining
 bin/tesseract
@@ -25,6 +25,7 @@ include/tesseract/blobcmp.h
 include/tesseract/blobcmpl.h
 include/tesseract/blobs.h
 include/tesseract/blread.h
+include/tesseract/boxread.h
 include/tesseract/callcpp.h
 include/tesseract/callnet.h
 include/tesseract/charcut.h
@@ -275,6 +276,7 @@ lib/libtesseract_viewer.a
 lib/libtesseract_wordrec.a
 libexec/tesseract
 share/doc/tesseract/README
+share/tessdata/configs/api_config
 share/tessdata/configs/box.train
 share/tessdata/configs/inter
 share/tessdata/configs/makebox
