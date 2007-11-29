@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2007/11/06 19:56:22 drochner Exp $
+# $NetBSD: Makefile,v 1.79 2007/11/29 20:40:51 drochner Exp $
 #
 
-DISTNAME=	epiphany-2.20.1
+DISTNAME=	epiphany-2.20.2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -52,7 +52,7 @@ BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
