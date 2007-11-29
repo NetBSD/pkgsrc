@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 13:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/29 22:45:06 heinz Exp $
 #
 
 DISTNAME=	wormux-0.7.9
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.gna.org/wormux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wormux.org/
 COMMENT=	Battle game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -49,7 +51,7 @@ WSHDIRS+= game_mode
 
 pre-install:
 	for d in ${WSHDIRS}; do \
-	 ${INSTALL_DATA_DIR} ${PREFIX}/share/wormux/$$d; \
+	 ${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX}/share/wormux/$$d; \
 	done
 
 .include "../../devel/SDL/buildlink3.mk"
