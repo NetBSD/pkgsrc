@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2510 2007/11/29 17:50:24 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2511 2007/11/29 17:55:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4588,3 +4588,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/p5-File-Remove to 0.39 [wiz 2007-11-29]
 	Updated time/p5-DateTime-TimeZone to 0.6904 [wiz 2007-11-29]
 	Updated time/p5-DateTime-Locale to 0.35 [wiz 2007-11-29]
+	Updated time/p5-DateTime to 0.41 [wiz 2007-11-29]
