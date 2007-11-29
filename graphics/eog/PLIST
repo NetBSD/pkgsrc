@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/11/03 16:22:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/11/29 20:37:26 drochner Exp $
 bin/eog
 include/eog-2.20/eog/eog-application.h
 include/eog-2.20/eog/eog-debug.h
@@ -170,6 +170,8 @@ share/locale/tk/LC_MESSAGES/eog.mo
 share/locale/tr/LC_MESSAGES/eog.mo
 share/locale/ug/LC_MESSAGES/eog.mo
 share/locale/uk/LC_MESSAGES/eog.mo
+share/locale/uz/LC_MESSAGES/eog.mo
+share/locale/uz@cyrillic/LC_MESSAGES/eog.mo
 share/locale/vi/LC_MESSAGES/eog.mo
 share/locale/wa/LC_MESSAGES/eog.mo
 share/locale/xh/LC_MESSAGES/eog.mo
@@ -195,7 +197,7 @@ share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
 @dirrm share/omf/eog
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps

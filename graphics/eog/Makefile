@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/11/03 16:22:56 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2007/11/29 20:37:26 drochner Exp $
 #
 
-DISTNAME=	eog-2.20.2
+DISTNAME=	eog-2.20.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -44,7 +44,7 @@ BUILDLINK_API_DEPENDS.shared-mime-info+= shared-mime-info>=0.20
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
