@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/05/01 12:24:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/29 22:20:29 wiz Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -44,7 +44,9 @@ share/asciidoc/images/icons/tip.png
 share/asciidoc/images/icons/up.png
 share/asciidoc/images/icons/warning.png
 share/asciidoc/javascripts/ASCIIMathML.js
+share/asciidoc/javascripts/LaTeXMathML.js
 share/asciidoc/javascripts/toc.js
+share/asciidoc/lang-es.conf
 share/asciidoc/latex.conf
 share/asciidoc/linuxdoc.conf
 share/asciidoc/stylesheets/docbook-xsl.css
@@ -58,8 +60,8 @@ share/asciidoc/xhtml-deprecated-css.conf
 share/asciidoc/xhtml-deprecated.conf
 share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
-share/doc/asciidoc/asciidoc.txt
 share/doc/asciidoc/asciidoc.html
+share/doc/asciidoc/asciidoc.txt
 @dirrm share/doc/asciidoc
 @dirrm share/asciidoc/stylesheets
 @dirrm share/asciidoc/javascripts
