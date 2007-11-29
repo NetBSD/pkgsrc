@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2513 2007/11/29 18:02:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2514 2007/11/29 18:28:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4591,3 +4591,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated time/p5-DateTime to 0.41 [wiz 2007-11-29]
 	Updated time/p5-DateTime-Format-Mail to 0.3001 [wiz 2007-11-29]
 	Updated devel/slib to 3.1.5 [wiz 2007-11-29]
+	Updated devel/libsigsegv to 2.5 [rillig 2007-11-29]
