@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/02 17:48:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/29 22:27:13 heinz Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
@@ -28,6 +30,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/build/jam_src/bin.*/bjam \
-	    ${PREFIX}/bin
+	    ${DESTDIR:Q}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
