@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/02/07 19:39:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/11/29 18:01:29 wiz Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -67,6 +67,7 @@ share/slib/html4each.scm
 share/slib/htmlform.scm
 share/slib/http-cgi.scm
 share/slib/jscheme.init
+share/slib/kawa.init
 share/slib/limit.scm
 share/slib/lineio.scm
 share/slib/linterp.scm
@@ -136,10 +137,12 @@ share/slib/scsh.init
 share/slib/selfset.scm
 share/slib/sierpinski.scm
 share/slib/simetrix.scm
+share/slib/sisc.init
 share/slib/solid.scm
 share/slib/sort.scm
 share/slib/soundex.scm
 share/slib/srfi-1.scm
+share/slib/srfi-11.scm
 share/slib/srfi-2.scm
 share/slib/srfi-23.scm
 share/slib/srfi-61.scm
@@ -173,6 +176,7 @@ share/slib/vscm.init
 share/slib/withfile.scm
 share/slib/wttest.scm
 share/slib/wttree.scm
+share/slib/xml-parse.scm
 share/slib/yasyn.scm
 @dirrm share/slib
 @dirrm share/doc/slib
