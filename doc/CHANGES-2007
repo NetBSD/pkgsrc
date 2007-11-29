@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2508 2007/11/29 17:39:15 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2509 2007/11/29 17:44:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4586,3 +4586,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/liquidwar to 5.6.4 [wiz 2007-11-29]
 	Updated devel/p5-ExtUtils-CBuilder to 0.21 [wiz 2007-11-29]
 	Updated sysutils/p5-File-Remove to 0.39 [wiz 2007-11-29]
+	Updated time/p5-DateTime-TimeZone to 0.6904 [wiz 2007-11-29]
