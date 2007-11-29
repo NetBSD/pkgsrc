@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2502 2007/11/29 16:35:47 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2503 2007/11/29 16:42:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4580,3 +4580,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-File-BaseDir to 0.03 [wiz 2007-11-29]
 	Updated devel/p5-File-MimeInfo to 0.14 [wiz 2007-11-29]
 	Updated security/opencdk to 0.6.6 [wiz 2007-11-29]
+	Updated graphics/tesseract to 2.01 [wiz 2007-11-29]
