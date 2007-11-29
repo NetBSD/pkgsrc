@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/15 22:38:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/11/29 22:45:22 wiz Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -69,6 +69,7 @@ include/allegro/platform/albcc32.h
 include/allegro/platform/albecfg.h
 include/allegro/platform/albeos.h
 include/allegro/platform/aldjgpp.h
+include/allegro/platform/aldmc.h
 include/allegro/platform/aldos.h
 include/allegro/platform/almac.h
 include/allegro/platform/almaccfg.h
@@ -97,14 +98,14 @@ include/allegro/unicode.h
 include/linalleg.h
 include/xalleg.h
 info/allegro.info
-lib/allegro/4.2.1/alleg-dga2.so
-${ESOUND}lib/allegro/4.2.1/alleg-esddigi.so
-lib/allegro/4.2.1/modules.lst
+lib/allegro/4.2.2/alleg-dga2.so
+${ESOUND}lib/allegro/4.2.2/alleg-esddigi.so
+lib/allegro/4.2.2/modules.lst
 lib/liballeg-${PKGVERSION}.so
 lib/liballeg.so.4.2
 lib/liballeg_unsharable.a
 share/aclocal/allegro.m4
-@dirrm lib/allegro/4.2.1
+@dirrm lib/allegro/4.2.2
 @dirrm lib/allegro
 @dirrm include/allegro/platform
 @dirrm include/allegro/internal
