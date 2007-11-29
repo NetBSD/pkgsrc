@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2007/10/17 20:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2007/11/29 12:42:48 wiz Exp $
 
-DISTNAME=	wesnoth-1.2.7
+DISTNAME=	wesnoth-1.2.8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,16 @@ GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES+=	datasize
 
 REPLACE_PERL+=		utils/wmlxgettext
+REPLACE_PERL+=	data/tools/unit_tree/units.pl
+REPLACE_PERL+=	data/tools/unit_tree/TeamColorizer.pl
 USE_TOOLS+=		perl:run msgfmt
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-build
+SUBST_FILES.python=	data/ais/sample.py
+SUBST_MESSAGE.python=	Fixing path to python.
+# XXX: Best we can do without pulling in a python dependency.
+SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.4,'
 
 .include "../../mk/bsd.prefs.mk"
 
