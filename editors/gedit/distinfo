@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2007/11/03 16:27:40 drochner Exp $
+$NetBSD: distinfo,v 1.32 2007/11/29 20:33:01 drochner Exp $
 
-SHA1 (gedit-2.20.3.tar.bz2) = ccbb9bad00101ed465c39da05b0dcaf8ea881120
-RMD160 (gedit-2.20.3.tar.bz2) = e3747bbafca099ae5567005b5bd6af3ba2704c3d
-Size (gedit-2.20.3.tar.bz2) = 3812377 bytes
+SHA1 (gedit-2.20.4.tar.bz2) = 82bf5fe2e119018936fca0b89196c9e86c69ee3f
+RMD160 (gedit-2.20.4.tar.bz2) = 8f87871f2ab5c9f5747dd990aaa5eaad2f30215a
+Size (gedit-2.20.4.tar.bz2) = 3809006 bytes
