@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2520 2007/11/29 22:37:00 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2521 2007/11/29 22:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/cairo to 1.4.12 [wiz 2007-11-29]
 	Updated textproc/asciidoc to 8.2.5 [wiz 2007-11-29]
 	Updated emulators/mednafen to 0.8.5 [wiz 2007-11-29]
+	Updated devel/allegro to 4.2.2 [wiz 2007-11-29]
