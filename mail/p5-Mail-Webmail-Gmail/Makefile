@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/09 07:59:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/29 15:18:24 wiz Exp $
 
-DISTNAME=	Mail-Webmail-Gmail-1.08
+DISTNAME=	Mail-Webmail-Gmail-1.09
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~mincus/Mail-Webmail-Gmail-1.08/
+HOMEPAGE=	http://search.cpan.org/dist/Mail-Webmail-Gmail/
 COMMENT=	Interface to Google's webmail service
 
 DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-Crypt-SSLeay
