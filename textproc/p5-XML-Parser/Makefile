@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/11/05 17:06:43 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/11/29 14:25:46 wiz Exp $
 #
 
-DISTNAME=	XML-Parser-2.34
+DISTNAME=	XML-Parser-2.36
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 SVR4_PKGNAME=	p5xpa
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -11,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Parser/
 COMMENT=	Perl extension interface to James Clark's XML parser, expat
+
+#TEST_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
