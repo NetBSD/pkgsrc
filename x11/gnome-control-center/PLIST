@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/05 19:17:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/29 20:42:13 drochner Exp $
 bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-appearance-properties
@@ -51,8 +51,6 @@ share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/desktop-directories/font-method.directory
 share/desktop-directories/gnomecc.directory
 share/desktop-directories/theme-method.directory
-share/examples/control-center/font-method.conf
-share/examples/control-center/theme-method.conf
 share/examples/gnome-control-center/font-method.conf
 share/examples/gnome-control-center/gnomecc.menu
 share/examples/gnome-control-center/theme-method.conf
@@ -304,7 +302,6 @@ share/pkgconfig/gnome-keybindings.pc
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/examples/gnome-control-center
-@dirrm share/examples/control-center
 @comment in xdg-dirs: @dirrm share/desktop-directories
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in xdg-dirs: @dirrm share/applications
