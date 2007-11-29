@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/11/05 11:44:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/11/29 20:44:31 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -89,6 +89,9 @@ share/gnome/help/clock/oc/legal.xml
 share/gnome/help/clock/pa/clock.xml
 share/gnome/help/clock/pa/figures/clock_applet.png
 share/gnome/help/clock/pa/legal.xml
+share/gnome/help/clock/pt_BR/clock.xml
+share/gnome/help/clock/pt_BR/figures/clock_applet.png
+share/gnome/help/clock/pt_BR/legal.xml
 share/gnome/help/clock/ru/clock.xml
 share/gnome/help/clock/ru/figures/clock_applet.png
 share/gnome/help/clock/ru/legal.xml
@@ -385,6 +388,7 @@ share/omf/clock/clock-ko.omf
 share/omf/clock/clock-nl.omf
 share/omf/clock/clock-oc.omf
 share/omf/clock/clock-pa.omf
+share/omf/clock/clock-pt_BR.omf
 share/omf/clock/clock-ru.omf
 share/omf/clock/clock-sr.omf
 share/omf/clock/clock-sv.omf
@@ -446,7 +450,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/omf/gnome-panel
 @dirrm share/omf/fish
 @dirrm share/omf/clock
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @dirrm share/idl/gnome-panel-2.0
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
@@ -541,6 +545,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/clock/sr
 @dirrm share/gnome/help/clock/ru/figures
 @dirrm share/gnome/help/clock/ru
+@dirrm share/gnome/help/clock/pt_BR/figures
+@dirrm share/gnome/help/clock/pt_BR
 @dirrm share/gnome/help/clock/pa/figures
 @dirrm share/gnome/help/clock/pa
 @dirrm share/gnome/help/clock/oc/figures
