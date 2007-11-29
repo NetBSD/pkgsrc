@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/11/08 19:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/11/29 16:35:12 wiz Exp $
 
-DISTNAME=	opencdk-0.6.5
+DISTNAME=	opencdk-0.6.6
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.stud.uni-hannover.de/~twoaday/opencdk/ \
 		http://josefsson.org/gnutls/releases/opencdk/ \
