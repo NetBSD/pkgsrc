@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/02/18 02:03:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2007/11/29 17:38:39 wiz Exp $
 
-SHA1 (File-Remove-0.34.tar.gz) = a16ba4438981a1da951ec3fc1cb3860408816793
-RMD160 (File-Remove-0.34.tar.gz) = 3c697f54c1dd7581420149af4ddccba6364f0e67
-Size (File-Remove-0.34.tar.gz) = 14067 bytes
+SHA1 (File-Remove-0.39.tar.gz) = e9bef56e35de0d6a3dcf846f5463ee436042889c
+RMD160 (File-Remove-0.39.tar.gz) = 964bcda4310721fb69286c50bc2e05c57616a12f
+Size (File-Remove-0.39.tar.gz) = 15689 bytes
