@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2007/11/03 16:27:40 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2007/11/29 20:33:01 drochner Exp $
 #
 
-DISTNAME=		gedit-2.20.3
+DISTNAME=		gedit-2.20.4
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.20/}
 EXTRACT_SUFX=		.tar.bz2
@@ -45,7 +45,7 @@ BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.16.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
