@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2007/03/15 22:38:55 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2007/11/29 22:45:23 wiz Exp $
 
---- makefile.in.orig	2006-04-08 17:07:28.000000000 +0000
+--- makefile.in.orig	2007-07-22 05:55:54.000000000 +0000
 +++ makefile.in
-@@ -59,7 +59,7 @@ ACLOCAL_M4 = aclocal.m4
+@@ -58,7 +58,7 @@ ACLOCAL_M4 = aclocal.m4
  
  INCLUDES = -I. -Iinclude -Iinclude/allegro -I$(srcdir)/include -I$(srcdir)/include/allegro
  DEFS = -DALLEGRO_MODULES_PATH=\"$(libdir)/allegro\" @DEFS@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2007/03/15 22:38:55 wiz Exp $
  override LDFLAGS += @LDFLAGS@
  PROG_LDFLAGS = @PROG_LDFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
-@@ -481,17 +481,7 @@ install-lib: lib modules
+@@ -480,17 +480,7 @@ install-lib: lib modules
  	fi
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
  	@echo Installing allegro-config to $(DESTDIR)$(bindir)
