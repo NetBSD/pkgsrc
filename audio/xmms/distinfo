@@ -1,23 +1,16 @@
-$NetBSD: distinfo,v 1.32 2007/06/13 22:29:21 wiz Exp $
+$NetBSD: distinfo,v 1.33 2007/11/29 18:36:35 wiz Exp $
 
-SHA1 (xmms-1.2.10.tar.bz2) = a3c3d3756d5263183c27b3c50a7f5404cba8bfaf
-RMD160 (xmms-1.2.10.tar.bz2) = 0360cbb8c326b3325bd8ebb3343c69a9788d7084
-Size (xmms-1.2.10.tar.bz2) = 2418265 bytes
+SHA1 (xmms-1.2.11.tar.bz2) = 9d1eae4baab25fd35c9ddfb49321ca60222f672d
+RMD160 (xmms-1.2.11.tar.bz2) = 466a624572574c56595ef34f42c43d0b74857b0a
+Size (xmms-1.2.11.tar.bz2) = 2581032 bytes
 SHA1 (patch-aa) = 91b17156a2d0a48d8610552993357bf522aacbd0
 SHA1 (patch-ab) = 806b1e8e974fe1100be90eca1ce582b9d80f3ab2
-SHA1 (patch-ac) = 208d0f9ac537a042893db02130c14a8417808f9c
+SHA1 (patch-ac) = 3f09b5522d37e682cac13735b12f625a2c1e71c8
 SHA1 (patch-ad) = 4b1856f43c4cd92418046afa3f9c91f6d0900328
-SHA1 (patch-ae) = ee126d0744feea2e260a0080a6903ea49a0b12ec
-SHA1 (patch-af) = 9b97ab806c497533a0e4d116a072a5d7920a15a6
-SHA1 (patch-ag) = d03063c53d2b04c0d172a3e420c5cb0319e4ae59
-SHA1 (patch-ah) = a49b667b145380f501ebd932185014d4a957e287
-SHA1 (patch-ai) = c0bb82e63e6fb96327b1ee1e9ec5617fe9b55b44
-SHA1 (patch-aj) = 67a69e2a05f343a5d7c22b3f1f1cf0c25d9aeb6d
-SHA1 (patch-ak) = b49316325c6f778b0d3e85007b141699cf338238
-SHA1 (patch-al) = 1457ca7b5e4e1084623207d042a8ff349eb31aaa
-SHA1 (patch-am) = 6474ef355b194189345008e35a4efc9648c26397
+SHA1 (patch-ae) = 80264154ae00a4a4a3fa9ca0f0f2715c89503ed8
+SHA1 (patch-ag) = 4703bfbedeb4d17a86f9547bea981f2aef4cf6a3
+SHA1 (patch-am) = 3369b11c2db0f9d5264aaed166d3a1699a398579
 SHA1 (patch-an) = 3abc68bd37018800dc70b151a5b419211a727a02
-SHA1 (patch-ao) = 2cadee08e6db7b802d1b700559705a8fe591f2dd
 SHA1 (patch-ap) = 101c54e2ce0e575893b8d3880ca54a021e89a8dd
-SHA1 (patch-aq) = 1b5e0b7a2f3e9c529deffad63f24a498b11d96f6
+SHA1 (patch-aq) = 2a16fbd747e03df4ef0fbb94e45c79e9c3de9ac8
 SHA1 (patch-ar) = b9cf22e3ab585ef255a533e56a3430f49f2fba4f

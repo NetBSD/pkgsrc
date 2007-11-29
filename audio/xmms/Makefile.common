@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.26 2007/02/22 19:26:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2007/11/29 18:36:35 wiz Exp $
 #
 
-DISTNAME=	xmms-1.2.10
+DISTNAME=	xmms-1.2.11
 CATEGORIES=	audio
-MASTER_SITES=	http://www.xmms.org/files/1.2.x/ \
-		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
+MASTER_SITES=	http://www.xmms.org/files/1.2.x/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
