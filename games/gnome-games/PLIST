@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/11/05 19:29:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/11/29 20:35:20 drochner Exp $
 bin/blackjack
 bin/glchess
 bin/glines
@@ -357,6 +357,30 @@ share/gnome-games/pixmaps/baize.png
 share/gnome-games/pixmaps/slot.svg
 share/gnome-games/same-gnome/themes/2.10/planets.png
 share/gnome-games/same-gnome/themes/2.10/stones.png
+share/gnome-games/sounds/appear.ogg
+share/gnome-games/sounds/bad.ogg
+share/gnome-games/sounds/bonus.ogg
+share/gnome-games/sounds/click.ogg
+share/gnome-games/sounds/crash.ogg
+share/gnome-games/sounds/die.ogg
+share/gnome-games/sounds/flip-piece.ogg
+share/gnome-games/sounds/gameover.ogg
+share/gnome-games/sounds/gnometris.ogg
+share/gnome-games/sounds/gobble.ogg
+share/gnome-games/sounds/land.ogg
+share/gnome-games/sounds/laughter.ogg
+share/gnome-games/sounds/life.ogg
+share/gnome-games/sounds/lines1.ogg
+share/gnome-games/sounds/lines2.ogg
+share/gnome-games/sounds/lines3.ogg
+share/gnome-games/sounds/pop.ogg
+share/gnome-games/sounds/reverse.ogg
+share/gnome-games/sounds/slide.ogg
+share/gnome-games/sounds/splat.ogg
+share/gnome-games/sounds/teleport.ogg
+share/gnome-games/sounds/turn.ogg
+share/gnome-games/sounds/victory.ogg
+share/gnome-games/sounds/yahoo.ogg
 share/gnome-sudoku/high_scores.glade
 share/gnome-sudoku/new_game.glade
 share/gnome-sudoku/open_game.glade
@@ -466,6 +490,9 @@ share/gnome/help/blackjack/C/blackjack.xml
 share/gnome/help/blackjack/C/figures/blackjack_start_window.png
 share/gnome/help/blackjack/C/figures/blackjack_win_window.png
 share/gnome/help/blackjack/C/legal.xml
+share/gnome/help/blackjack/ca/blackjack.xml
+share/gnome/help/blackjack/ca/figures/blackjack_start_window.png
+share/gnome/help/blackjack/ca/figures/blackjack_win_window.png
 share/gnome/help/blackjack/es/blackjack.xml
 share/gnome/help/blackjack/es/figures/blackjack_start_window.png
 share/gnome/help/blackjack/es/figures/blackjack_win_window.png
@@ -480,6 +507,7 @@ share/gnome/help/blackjack/sv/figures/blackjack_start_window.png
 share/gnome/help/blackjack/sv/figures/blackjack_win_window.png
 share/gnome/help/glchess/C/glchess.xml
 share/gnome/help/glchess/C/legal.xml
+share/gnome/help/glchess/ca/glchess.xml
 share/gnome/help/glchess/es/glchess.xml
 share/gnome/help/glchess/fr/glchess.xml
 share/gnome/help/glchess/oc/glchess.xml
@@ -490,6 +518,10 @@ share/gnome/help/glines/C/figures/glines-startgame.png
 share/gnome/help/glines/C/figures/preferences.png
 share/gnome/help/glines/C/glines.xml
 share/gnome/help/glines/C/legal.xml
+share/gnome/help/glines/ca/figures/glines-gameover.png
+share/gnome/help/glines/ca/figures/glines-startgame.png
+share/gnome/help/glines/ca/figures/preferences.png
+share/gnome/help/glines/ca/glines.xml
 share/gnome/help/glines/en_GB/figures/glines-gameover.png
 share/gnome/help/glines/en_GB/figures/glines-startgame.png
 share/gnome/help/glines/en_GB/figures/preferences.png
@@ -521,6 +553,11 @@ share/gnome/help/gnect/C/figures/tileset.png
 share/gnome/help/gnect/C/gnect.xml
 share/gnome/help/gnect/C/legal.xml
 share/gnome/help/gnect/C/network-games.xml
+share/gnome/help/gnect/ca/figures/connect.png
+share/gnome/help/gnect/ca/figures/mainwindow.png
+share/gnome/help/gnect/ca/figures/tables.png
+share/gnome/help/gnect/ca/figures/tileset.png
+share/gnome/help/gnect/ca/gnect.xml
 share/gnome/help/gnect/en_GB/figures/connect.png
 share/gnome/help/gnect/en_GB/figures/mainwindow.png
 share/gnome/help/gnect/en_GB/figures/tables.png
@@ -586,6 +623,8 @@ share/gnome/help/gnibbles/sv/gnibbles.xml
 share/gnome/help/gnobots2/C/figures/gnobots2-main.png
 share/gnome/help/gnobots2/C/gnobots2.xml
 share/gnome/help/gnobots2/C/legal.xml
+share/gnome/help/gnobots2/ca/figures/gnobots2-main.png
+share/gnome/help/gnobots2/ca/gnobots2.xml
 share/gnome/help/gnobots2/da/gnobots2.xml
 share/gnome/help/gnobots2/da/legal.xml
 share/gnome/help/gnobots2/de/figures/gnobots2-main.png
@@ -653,6 +692,20 @@ share/gnome/help/gnomine/C/figures/preferences.png
 share/gnome/help/gnomine/C/figures/statusbar.png
 share/gnome/help/gnomine/C/gnomine.xml
 share/gnome/help/gnomine/C/legal.xml
+share/gnome/help/gnomine/ca/figures/easy-hints-1.png
+share/gnome/help/gnomine/ca/figures/easy-hints-2.png
+share/gnome/help/gnomine/ca/figures/easy-hints-3.png
+share/gnome/help/gnomine/ca/figures/faces.png
+share/gnome/help/gnomine/ca/figures/flags.png
+share/gnome/help/gnomine/ca/figures/hard-hints-1.png
+share/gnome/help/gnomine/ca/figures/hard-hints-2.png
+share/gnome/help/gnomine/ca/figures/hard-hints-3.png
+share/gnome/help/gnomine/ca/figures/highscores.png
+share/gnome/help/gnomine/ca/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/ca/figures/main-window.png
+share/gnome/help/gnomine/ca/figures/preferences.png
+share/gnome/help/gnomine/ca/figures/statusbar.png
+share/gnome/help/gnomine/ca/gnomine.xml
 share/gnome/help/gnomine/de/figures/easy-hints-1.png
 share/gnome/help/gnomine/de/figures/easy-hints-2.png
 share/gnome/help/gnomine/de/figures/easy-hints-3.png
@@ -749,6 +802,9 @@ share/gnome/help/gnotski/C/figures/gnotski_start_window.png
 share/gnome/help/gnotski/C/figures/gnotski_win.png
 share/gnome/help/gnotski/C/gnotski.xml
 share/gnome/help/gnotski/C/legal.xml
+share/gnome/help/gnotski/ca/figures/gnotski_start_window.png
+share/gnome/help/gnotski/ca/figures/gnotski_win.png
+share/gnome/help/gnotski/ca/gnotski.xml
 share/gnome/help/gnotski/es/figures/gnotski_start_window.png
 share/gnome/help/gnotski/es/figures/gnotski_win.png
 share/gnome/help/gnotski/es/gnotski.xml
@@ -1051,17 +1107,20 @@ share/omf/aisleriot/aisleriot-fr.omf
 share/omf/aisleriot/aisleriot-oc.omf
 share/omf/aisleriot/aisleriot-sv.omf
 share/omf/blackjack/blackjack-C.omf
+share/omf/blackjack/blackjack-ca.omf
 share/omf/blackjack/blackjack-es.omf
 share/omf/blackjack/blackjack-fr.omf
 share/omf/blackjack/blackjack-oc.omf
 share/omf/blackjack/blackjack-sv.omf
 share/omf/glchess/glchess-C.omf
+share/omf/glchess/glchess-ca.omf
 share/omf/glchess/glchess-es.omf
 share/omf/glchess/glchess-fr.omf
 share/omf/glchess/glchess-oc.omf
 share/omf/glchess/glchess-pt_BR.omf
 share/omf/glchess/glchess-sv.omf
 share/omf/glines/glines-C.omf
+share/omf/glines/glines-ca.omf
 share/omf/glines/glines-en_GB.omf
 share/omf/glines/glines-es.omf
 share/omf/glines/glines-fr.omf
@@ -1069,6 +1128,7 @@ share/omf/glines/glines-oc.omf
 share/omf/glines/glines-ru.omf
 share/omf/glines/glines-sv.omf
 share/omf/gnect/gnect-C.omf
+share/omf/gnect/gnect-ca.omf
 share/omf/gnect/gnect-en_GB.omf
 share/omf/gnect/gnect-es.omf
 share/omf/gnect/gnect-fr.omf
@@ -1080,6 +1140,7 @@ share/omf/gnibbles/gnibbles-fr.omf
 share/omf/gnibbles/gnibbles-oc.omf
 share/omf/gnibbles/gnibbles-sv.omf
 share/omf/gnobots2/gnobots2-C.omf
+share/omf/gnobots2/gnobots2-ca.omf
 share/omf/gnobots2/gnobots2-de.omf
 share/omf/gnobots2/gnobots2-es.omf
 share/omf/gnobots2/gnobots2-fr.omf
@@ -1100,6 +1161,7 @@ share/omf/gnometris/gnometris-fr.omf
 share/omf/gnometris/gnometris-oc.omf
 share/omf/gnometris/gnometris-sv.omf
 share/omf/gnomine/gnomine-C.omf
+share/omf/gnomine/gnomine-ca.omf
 share/omf/gnomine/gnomine-de.omf
 share/omf/gnomine/gnomine-es.omf
 share/omf/gnomine/gnomine-fr.omf
@@ -1113,6 +1175,7 @@ share/omf/gnotravex/gnotravex-fr.omf
 share/omf/gnotravex/gnotravex-oc.omf
 share/omf/gnotravex/gnotravex-sv.omf
 share/omf/gnotski/gnotski-C.omf
+share/omf/gnotski/gnotski-ca.omf
 share/omf/gnotski/gnotski-es.omf
 share/omf/gnotski/gnotski-fr.omf
 share/omf/gnotski/gnotski-oc.omf
@@ -1251,7 +1314,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/omf/glchess
 @dirrm share/omf/blackjack
 @dirrm share/omf/aisleriot
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
@@ -1316,6 +1379,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnotski/fr
 @dirrm share/gnome/help/gnotski/es/figures
 @dirrm share/gnome/help/gnotski/es
+@dirrm share/gnome/help/gnotski/ca/figures
+@dirrm share/gnome/help/gnotski/ca
 @dirrm share/gnome/help/gnotski/C/figures
 @dirrm share/gnome/help/gnotski/C
 @dirrm share/gnome/help/gnotski
@@ -1344,6 +1409,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnomine/es
 @dirrm share/gnome/help/gnomine/de/figures
 @dirrm share/gnome/help/gnomine/de
+@dirrm share/gnome/help/gnomine/ca/figures
+@dirrm share/gnome/help/gnomine/ca
 @dirrm share/gnome/help/gnomine/C/figures
 @dirrm share/gnome/help/gnomine/C
 @dirrm share/gnome/help/gnomine
@@ -1377,6 +1444,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnobots2/de/figures
 @dirrm share/gnome/help/gnobots2/de
 @dirrm share/gnome/help/gnobots2/da
+@dirrm share/gnome/help/gnobots2/ca/figures
+@dirrm share/gnome/help/gnobots2/ca
 @dirrm share/gnome/help/gnobots2/C/figures
 @dirrm share/gnome/help/gnobots2/C
 @dirrm share/gnome/help/gnobots2
@@ -1401,6 +1470,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnect/es
 @dirrm share/gnome/help/gnect/en_GB/figures
 @dirrm share/gnome/help/gnect/en_GB
+@dirrm share/gnome/help/gnect/ca/figures
+@dirrm share/gnome/help/gnect/ca
 @dirrm share/gnome/help/gnect/C/figures
 @dirrm share/gnome/help/gnect/C
 @dirrm share/gnome/help/gnect
@@ -1416,6 +1487,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/glines/es
 @dirrm share/gnome/help/glines/en_GB/figures
 @dirrm share/gnome/help/glines/en_GB
+@dirrm share/gnome/help/glines/ca/figures
+@dirrm share/gnome/help/glines/ca
 @dirrm share/gnome/help/glines/C/figures
 @dirrm share/gnome/help/glines/C
 @dirrm share/gnome/help/glines
@@ -1424,6 +1497,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/glchess/oc
 @dirrm share/gnome/help/glchess/fr
 @dirrm share/gnome/help/glchess/es
+@dirrm share/gnome/help/glchess/ca
 @dirrm share/gnome/help/glchess/C
 @dirrm share/gnome/help/glchess
 @dirrm share/gnome/help/blackjack/sv/figures
@@ -1434,6 +1508,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/blackjack/fr
 @dirrm share/gnome/help/blackjack/es/figures
 @dirrm share/gnome/help/blackjack/es
+@dirrm share/gnome/help/blackjack/ca/figures
+@dirrm share/gnome/help/blackjack/ca
 @dirrm share/gnome/help/blackjack/C/figures
 @dirrm share/gnome/help/blackjack/C
 @dirrm share/gnome/help/blackjack
@@ -1450,6 +1526,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/aisleriot
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-sudoku
+@dirrm share/gnome-games/sounds
 @dirrm share/gnome-games/same-gnome/themes/2.10
 @dirrm share/gnome-games/same-gnome/themes
 @dirrm share/gnome-games/same-gnome
