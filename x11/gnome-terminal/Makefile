@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/11/03 16:18:10 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/29 20:47:28 drochner Exp $
 #
 
-DISTNAME=		gnome-terminal-2.18.2
+DISTNAME=		gnome-terminal-2.18.3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.18/}
 EXTRACT_SUFX=		.tar.bz2
@@ -29,7 +29,7 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
