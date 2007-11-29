@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2492 2007/11/29 15:04:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2493 2007/11/29 15:07:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-XML-Parser to 2.36 [wiz 2007-11-29]
 	Updated textproc/p5-XML-LibXML to 1.65 [wiz 2007-11-29]
 	Updated textproc/p5-XML-Atom to 0.28 [wiz 2007-11-29]
+	Updated devel/p5-Storable to 2.18 [wiz 2007-11-29]
