@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2484 2007/11/29 10:13:22 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2485 2007/11/29 12:43:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4562,3 +4562,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xbattbar to 1.4.2nb8 [jnemeth 2007-11-28]
 	Updated cad/gerbv to 1.0.3 [dmcmahill 2007-11-28]
 	Added devel/cvsdiff2patch version 1.0.1 [bjs 2007-11-29]
+	Updated games/wesnoth to 1.2.8 [wiz 2007-11-29]
