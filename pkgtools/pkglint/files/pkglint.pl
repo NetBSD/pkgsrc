@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.735 2007/11/14 16:03:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.736 2007/11/29 21:05:29 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7363,7 +7363,7 @@ sub checkfile_PLIST($) {
 	my $all_dirs = {};
 	my $extra_lines = [];
 	if (basename($fname) eq "PLIST.common_end") {
-		my $common_lines = load_file(dirname($fname) . "PLIST.common");
+		my $common_lines = load_file(dirname($fname) . "/PLIST.common");
 		if ($common_lines) {
 			$extra_lines = $common_lines;
 		}
