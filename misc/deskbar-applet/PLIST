@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/05 19:52:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/11/29 20:57:11 drochner Exp $
 lib/bonobo/servers/Deskbar_Applet.server
 lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/modules-2.20-compatible/beagle-live.py
@@ -345,6 +345,8 @@ share/locale/ta/LC_MESSAGES/deskbar-applet.mo
 share/locale/th/LC_MESSAGES/deskbar-applet.mo
 share/locale/tr/LC_MESSAGES/deskbar-applet.mo
 share/locale/uk/LC_MESSAGES/deskbar-applet.mo
+share/locale/uz/LC_MESSAGES/deskbar-applet.mo
+share/locale/uz@cyrillic/LC_MESSAGES/deskbar-applet.mo
 share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
