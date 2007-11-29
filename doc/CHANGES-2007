@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2482 2007/11/28 22:34:39 jnemeth Exp $
+$NetBSD: CHANGES-2007,v 1.2483 2007/11/29 04:05:31 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4560,3 +4560,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added chat/climm version 0.6.1 [mjl 2007-11-28]
 	Updated mail/dovecot to 1.0.8 [ghen 2007-11-28]
 	Updated sysutils/xbattbar to 1.4.2nb8 [jnemeth 2007-11-28]
+	Updated cad/gerbv to 1.0.3 [dmcmahill 2007-11-28]
