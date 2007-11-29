@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2491 2007/11/29 14:29:25 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2492 2007/11/29 15:04:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4569,3 +4569,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/p5-YAML to 0.66 [wiz 2007-11-29]
 	Updated textproc/p5-XML-Parser to 2.36 [wiz 2007-11-29]
 	Updated textproc/p5-XML-LibXML to 1.65 [wiz 2007-11-29]
+	Updated textproc/p5-XML-Atom to 0.28 [wiz 2007-11-29]
