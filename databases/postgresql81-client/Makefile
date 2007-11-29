@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/08 18:55:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/29 23:41:35 rmind Exp $
 
 PKGNAME=	postgresql81-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -17,10 +17,11 @@ CONFLICTS+=	postgresql81-lib-[0-9]*
 CONFLICTS+=	postgresql81-docs-[0-9]*
 
 # 1. The thread-safety test in ${WRSRC}/src/tools/thread does not pass on
-# NetBSD (missing strerror_r) or DragonFly.
+# NetBSD earler than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
 #
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-3].*)) || \
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
 .endif
 PGSQL_THREAD_SAFETY?=	yes
