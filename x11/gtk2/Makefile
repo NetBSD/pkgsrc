@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2007/11/27 23:09:29 tron Exp $
+# $NetBSD: Makefile,v 1.149 2007/11/29 22:10:17 drochner Exp $
 
 DISTNAME=		gtk+-2.12.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -7,6 +7,12 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.12/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/pub/gtk/2.12/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/2.12/}
 EXTRACT_SUFX=		.tar.bz2
+
+# temporary hack for 2.12.2: use correctly built html doc
+FIXEDDOC=	gtk+-2.12.2-gtkdoc-html.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${FIXEDDOC}
+SITES.${FIXEDDOC}=	${MASTER_SITE_LOCAL}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
@@ -61,10 +67,12 @@ SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 # XXX temporary hack, remove on update
 # The gtk-doc (html) docs are not properly packaged in 2.12.2.
-# We need to regenerate. Will hopefully fixed in the next gtk release.
-BUILD_DEPENDS+= gtk-doc-[0-9]*:../../textproc/gtk-doc
-post-build:
-	(cd ${WRKSRC}/docs//reference/gtk && ${GMAKE} html-build.stamp)
+# Will hopefully fixed in the next gtk release.
+USE_TOOLS+=	bzcat tar
+post-configure:
+	${BZCAT} <${DISTDIR}/${DIST_SUBDIR}/${FIXEDDOC} | \
+		(cd ${WRKDIR} && ${TAR} xf -)
+	(cd ${WRKSRC}/docs/reference/gtk && ${GMAKE} just-copy-images)
 
 .include "options.mk"
 
