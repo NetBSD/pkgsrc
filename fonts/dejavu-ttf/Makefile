@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/08/08 12:18:51 obache Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/29 22:51:06 wiz Exp $
 #
 
-DISTNAME=	dejavu-ttf-2.19
+DISTNAME=	dejavu-ttf-2.21
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/08/08 12:18:51 obache Exp $
+$NetBSD: distinfo,v 1.5 2007/11/29 22:51:06 wiz Exp $
 
-SHA1 (dejavu-ttf-2.19.tar.bz2) = 0f860e0f7bb29c8f6a478c49acbbcde87c505069
-RMD160 (dejavu-ttf-2.19.tar.bz2) = 22ed08e8cf39268a679f57b993418ab782cc5d8d
-Size (dejavu-ttf-2.19.tar.bz2) = 3360351 bytes
+SHA1 (dejavu-ttf-2.21.tar.bz2) = 5f3d3362cf4e6fc269f9d429ab9d25d095e8af48
+RMD160 (dejavu-ttf-2.21.tar.bz2) = c6f35bb8ec3b9949664c9ebe63bc58e5e0f693fe
+Size (dejavu-ttf-2.21.tar.bz2) = 3568331 bytes
