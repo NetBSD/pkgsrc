@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2487 2007/11/29 14:15:02 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2488 2007/11/29 14:17:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4565,3 +4565,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/wesnoth to 1.2.8 [wiz 2007-11-29]
 	Updated finance/gnucash to 2.2.1nb3 [wiz 2007-11-29]
 	Updated devel/p5-Class-Singleton to 1.4 [wiz 2007-11-29]
+	Updated security/p5-Crypt-SSLeay to 0.57 [wiz 2007-11-29]
