@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/11/05 19:52:28 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2007/11/29 20:57:11 drochner Exp $
 #
 
-DISTNAME=	deskbar-applet-2.20.1
+DISTNAME=	deskbar-applet-2.20.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../lang/python/extension.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
