@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/11/03 17:30:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/11/29 20:40:51 drochner Exp $
 bin/epiphany
 include/epiphany/2.20/epiphany/ephy-adblock-manager.h
 include/epiphany/2.20/epiphany/ephy-adblock.h
@@ -201,6 +201,7 @@ share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
+share/locale/be@latin/LC_MESSAGES/epiphany.mo
 share/locale/bg/LC_MESSAGES/epiphany.mo
 share/locale/bn/LC_MESSAGES/epiphany.mo
 share/locale/bn_IN/LC_MESSAGES/epiphany.mo
