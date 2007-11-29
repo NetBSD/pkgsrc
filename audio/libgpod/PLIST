@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/07 22:30:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/11/29 18:47:28 wiz Exp $
 include/gpod-1.0/gpod/itdb.h
 lib/libgpod.la
 lib/pkgconfig/libgpod-1.0.pc
@@ -30,6 +30,7 @@ share/locale/fr/LC_MESSAGES/libgpod.mo
 share/locale/he/LC_MESSAGES/libgpod.mo
 share/locale/it/LC_MESSAGES/libgpod.mo
 share/locale/ja/LC_MESSAGES/libgpod.mo
+share/locale/ro/LC_MESSAGES/libgpod.mo
 share/locale/sv/LC_MESSAGES/libgpod.mo
 @dirrm share/gtk-doc/html/libgpod
 @dirrm include/gpod-1.0/gpod
