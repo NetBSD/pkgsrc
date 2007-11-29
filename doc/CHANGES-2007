@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2518 2007/11/29 22:14:32 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2519 2007/11/29 22:21:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4597,3 +4597,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/libgpod to 0.6.0 [wiz 2007-11-29]
 	Updated devel/bzr to 0.92 [wiz 2007-11-29]
 	Updated graphics/cairo to 1.4.12 [wiz 2007-11-29]
+	Updated textproc/asciidoc to 8.2.5 [wiz 2007-11-29]
