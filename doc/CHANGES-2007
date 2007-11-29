@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2499 2007/11/29 15:56:22 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2500 2007/11/29 16:01:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4577,3 +4577,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/p5-Mail-Webmail-Gmail to 1.09 [wiz 2007-11-29]
 	Updated devel/p5-File-Temp to 0.19 [wiz 2007-11-29]
 	Added devel/p5-File-DesktopEntry version 0.04 [wiz 2007-11-29]
+	Updated devel/p5-File-BaseDir to 0.03 [wiz 2007-11-29]
