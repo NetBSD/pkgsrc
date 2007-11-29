@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2517 2007/11/29 20:05:30 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2518 2007/11/29 22:14:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4596,3 +4596,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/xmms to 1.2.11 [wiz 2007-11-29]
 	Updated audio/libgpod to 0.6.0 [wiz 2007-11-29]
 	Updated devel/bzr to 0.92 [wiz 2007-11-29]
+	Updated graphics/cairo to 1.4.12 [wiz 2007-11-29]
