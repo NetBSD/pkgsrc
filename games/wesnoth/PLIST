@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/10/17 20:48:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/11/29 12:42:48 wiz Exp $
 bin/wesnoth
 man/cs/man6/wesnoth.6
 man/de/man6/wesnoth.6
@@ -1341,6 +1341,18 @@ share/wesnoth/data/tools/exploder/wall-concave.cfg
 share/wesnoth/data/tools/exploder/wall-convex.cfg
 share/wesnoth/data/tools/exploder/wall-exploded-concave.cfg
 share/wesnoth/data/tools/exploder/wall-exploded-convex.cfg
+share/wesnoth/data/tools/unit_tree/TeamColorizer.pl
+share/wesnoth/data/tools/unit_tree/anim_header.html
+share/wesnoth/data/tools/unit_tree/index.html
+share/wesnoth/data/tools/unit_tree/index_base.html
+share/wesnoth/data/tools/unit_tree/index_languages.html
+share/wesnoth/data/tools/unit_tree/tree_fact_header.html
+share/wesnoth/data/tools/unit_tree/tree_footer.html
+share/wesnoth/data/tools/unit_tree/tree_header.html
+share/wesnoth/data/tools/unit_tree/tree_race_header.html
+share/wesnoth/data/tools/unit_tree/unit.html
+share/wesnoth/data/tools/unit_tree/units.css
+share/wesnoth/data/tools/unit_tree/units.pl
 share/wesnoth/data/traits.cfg
 share/wesnoth/data/tutorial/images/portraits/delfador.png
 share/wesnoth/data/tutorial/images/portraits/konrad.png
@@ -6004,6 +6016,7 @@ share/wesnoth/translations/zh_CN/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/data/tutorial/images/portraits
 @dirrm share/wesnoth/data/tutorial/images
 @dirrm share/wesnoth/data/tutorial
+@dirrm share/wesnoth/data/tools/unit_tree
 @dirrm share/wesnoth/data/tools/exploder/models
 @dirrm share/wesnoth/data/tools/exploder
 @dirrm share/wesnoth/data/tools
