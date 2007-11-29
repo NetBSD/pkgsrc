@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:13:55 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2007/11/29 20:52:07 heinz Exp $
 #
 
 DISTNAME=	vms-empire-1.7
@@ -9,11 +9,13 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.catb.org/~esr/vms-empire/
 COMMENT=	Solitaire Empire (sometimes called "VMS Empire")
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vms-empire ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/vms-empire.6 ${PREFIX}/${PKGMANDIR}/man6/vms-empire.6
+	${INSTALL_PROGRAM} ${WRKSRC}/vms-empire ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/vms-empire.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/vms-empire.6
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
