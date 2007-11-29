@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/04/06 06:21:37 reed Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/29 18:36:41 wiz Exp $
 #
 
 .include "../../audio/xmms/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/xmms/xmms-esound/}
-PKGREVISION=	3
 CATEGORIES+=	gnome
 
 COMMENT=	XMMS plugin to output sound through the esound daemon
