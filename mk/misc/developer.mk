@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.10 2007/09/09 22:57:04 gdt Exp $
+# $NetBSD: developer.mk,v 1.11 2007/11/29 23:35:37 gdt Exp $
 #
 # Public targets for developers:
 #
@@ -53,6 +53,7 @@ _NETBSD_LOGIN_NAME_cmd=	${ID} -nu
 .if ${CTYPE} == "Updated"
 _CE_MSG1=	Updated ${PKGPATH} to ${PKGVERSION}
 .elif ${CTYPE} == "Removed"
+# XXX Check OLDNAME, and if so add " successor ${OLDNAME}".
 _CE_MSG1=	Removed ${PKGPATH}
 .elif ${CTYPE} == "Added"
 _CE_MSG1=	Added ${PKGPATH} version ${PKGVERSION}
