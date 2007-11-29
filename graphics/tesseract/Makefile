@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/07/28 01:02:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/29 16:42:08 wiz Exp $
 #
 
-DISTNAME=	tesseract-2.00
+DISTNAME=	tesseract-2.01
 CATEGORIES=	graphics
 MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
 
