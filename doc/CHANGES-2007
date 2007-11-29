@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2506 2007/11/29 17:29:05 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2507 2007/11/29 17:31:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4584,3 +4584,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/libidn to 1.2 [wiz 2007-11-29]
 	Updated converters/libiconv to 1.12 [wiz 2007-11-29]
 	Updated games/liquidwar to 5.6.4 [wiz 2007-11-29]
+	Updated devel/p5-ExtUtils-CBuilder to 0.21 [wiz 2007-11-29]
