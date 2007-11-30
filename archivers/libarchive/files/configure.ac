@@ -16,33 +16,45 @@ AM_INIT_AUTOMAKE()
 # This gets a little hairy...
 AC_CONFIG_COMMANDS_PRE([
 # Autoconf assigns the version above to PACKAGE_VERSION
-ARCHIVE_VERSION=$PACKAGE_VERSION
+LIBARCHIVE_VERSION_STRING=$PACKAGE_VERSION
+BSDTAR_VERSION_STRING=$PACKAGE_VERSION
+# For a little while longer, cpio is considered immature
+BSDCPIO_VERSION_STRING=0.3.0
 
 # Peel off first three numbers major.minor.revision
-ARCHIVE_MAJOR=`echo $ARCHIVE_VERSION | sed -e 's/[[^0-9]]/./g' -e 's/\..*//'`
-ARCHIVE_MINOR=`echo $ARCHIVE_VERSION | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.//' -e 's/\..*//'`
-ARCHIVE_REVISION=`echo $ARCHIVE_VERSION | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.[[0-9]]*\.//' -e 's/\..*//'`
+ARCHIVE_MAJOR=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/\..*//'`
+ARCHIVE_MINOR=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.//' -e 's/\..*//'`
+ARCHIVE_REVISION=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.[[0-9]]*\.//' -e 's/\..*//'`
 # Major/minor indicate the API version
-ARCHIVE_API_MAJOR=$ARCHIVE_MAJOR
-ARCHIVE_API_MINOR=$ARCHIVE_MINOR
-ARCHIVE_VERSION_STAMP=`printf "%d%03d%03d" ${ARCHIVE_MAJOR} ${ARCHIVE_MINOR} ${ARCHIVE_REVISION}`
+LIBARCHIVE_VERSION=`printf "%d%03d%03d" ${ARCHIVE_MAJOR} ${ARCHIVE_MINOR} ${ARCHIVE_REVISION}`
 # Libtool versioning uses different conventions on different platforms.
 # FreeBSD libtool still uses this old (and very dumb) convention,
 # which doesn't match FreeBSD system conventions, nor anything else
 # I'm familiar with.
 ARCHIVE_LIBTOOL_MAJOR=`echo $((${ARCHIVE_MAJOR} + ${ARCHIVE_MINOR}))`
 ARCHIVE_LIBTOOL_VERSION=$ARCHIVE_LIBTOOL_MAJOR:$ARCHIVE_REVISION:$ARCHIVE_MINOR
+
+# Make sure the following get defined in config.h properly
+AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION_STRING],
+	"$LIBARCHIVE_VERSION_STRING",
+	[Version number of libarchive])
+AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION],
+	"$LIBARCHIVE_VERSION",
+	[Version number of libarchive as a single integer])
+AC_DEFINE_UNQUOTED([BSDCPIO_VERSION_STRING],
+	"$BSDCPIO_VERSION_STRING",
+	[Version number of bsdcpio])
+AC_DEFINE_UNQUOTED([BSDTAR_VERSION_STRING],
+	"$BSDTAR_VERSION_STRING",
+	[Version number of bsdtar])
 ])
 
 # Substitute the above version numbers into the various files below.
-AC_SUBST(ARCHIVE_VERSION)
-AC_SUBST(ARCHIVE_MAJOR)
-AC_SUBST(ARCHIVE_MINOR)
-AC_SUBST(ARCHIVE_REVISION)
-AC_SUBST(ARCHIVE_API_MAJOR)
-AC_SUBST(ARCHIVE_API_MINOR)
-AC_SUBST(ARCHIVE_VERSION_STAMP)
 AC_SUBST(ARCHIVE_LIBTOOL_VERSION)
+AC_SUBST(BSDCPIO_VERSION_STRING)
+AC_SUBST(BSDTAR_VERSION_STRING)
+AC_SUBST(LIBARCHIVE_VERSION_STRING)
+AC_SUBST(LIBARCHIVE_VERSION)
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile])
@@ -55,7 +67,11 @@ AC_PROG_YACC
 AC_PROG_LIBTOOL
 AC_CHECK_TOOL([STRIP],[strip])
 
+#
+# Options for building bsdtar.
+#
 # Default is to build bsdtar, but allow people to override that.
+#
 AC_ARG_ENABLE([bsdtar],
 	[AS_HELP_STRING([--enable-bsdtar], [enable build of bsdtar (default)])
 	AS_HELP_STRING([--enable-bsdtar=static], [force static build of bsdtar])
@@ -71,7 +87,6 @@ yes)
 		static_bsdtar=yes
 	fi
 	build_bsdtar=yes
-
 	;;
 dynamic|shared)
 	if test "$enable_shared" = "no"; then
@@ -93,27 +108,51 @@ no)
 	;;
 esac
 
-# Default is not to build bsdcpio
+AM_CONDITIONAL([BUILD_BSDTAR], [ test "$build_bsdtar" = yes ])
+AM_CONDITIONAL([STATIC_BSDTAR], [ test "$static_bsdtar" = yes ])
+
+#
+# Options for building bsdcpio.
+#
+# Default is not to build bsdcpio, but that can be overridden.
+#
 AC_ARG_ENABLE([bsdcpio],
 	[AS_HELP_STRING([--enable-bsdcpio], [enable build of bsdcpio])
+	AS_HELP_STRING([--enable-bsdcpio=static], [static build of bsdcpio])
+	AS_HELP_STRING([--enable-bsdcpio=shared], [dynamic build of bsdcpio])
 AS_HELP_STRING([--disable-bsdcpio], [disable build of bsdcpio (default)])],
 	[], [enable_bsdcpio=no])
 
 case "$enable_bsdcpio" in
 yes)
+	if test "$enable_static" = "no"; then
+	   static_bsdcpio=no
+	else
+	   static_bsdcpio=yes
+        fi
 	build_bsdcpio=yes
+	;;
+dynamic|shared)
+	if test "$enabled_shared" = "no"; then
+	   AC_MSG_FAILURE([Shared linking of bsdcpio requires shared libarchive])
+	fi
+	build_bsdcpio=yes
+	;;
+static)
+	build_bsdcpio=yes
+	static_bsdcpio=yes
 	;;
 no)
 	build_bsdcpio=no
+	static_bsdcpio=no
 	;;
 *)
 	AC_MSG_FAILURE([Unsupported value for --enable-bsdcpio])
 	;;
 esac
 
-AM_CONDITIONAL([BUILD_BSDTAR], [ test "$build_bsdtar" = yes ])
 AM_CONDITIONAL([BUILD_BSDCPIO], [ test "$build_bsdcpio" = yes ])
-AM_CONDITIONAL([STATIC_BSDTAR], [ test "$static_bsdtar" = yes ])
+AM_CONDITIONAL([STATIC_BSDCPIO], [ test "$static_bsdcpio" = yes ])
 
 # Checks for header files.
 AC_HEADER_STDC
