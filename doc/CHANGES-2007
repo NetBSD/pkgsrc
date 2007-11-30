@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2523 2007/11/30 10:01:39 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2524 2007/11/30 10:11:55 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4600,3 +4600,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/asciidoc to 8.2.5 [wiz 2007-11-29]
 	Updated emulators/mednafen to 0.8.5 [wiz 2007-11-29]
 	Updated devel/allegro to 4.2.2 [wiz 2007-11-29]
+	Updated pkgtools/cdpack to 1.7nb2 [mishka 2007-11-30]
+	Updated net/mrtg to 2.15.2nb1 [mishka 2007-11-30]
