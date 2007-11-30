@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/01/26 01:26:46 markd Exp $
+# $NetBSD: Makefile,v 1.47 2007/11/30 18:17:11 wiz Exp $
 
 .include "../../comms/pilot-link/Makefile.common"
 
@@ -14,10 +14,7 @@ CONFIGURE_ARGS+=	--with-libpng
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--enable-conduits
 
-BUILD_DIRS=		${WRKSRC}/src
-BUILD_DIRS+=		${WRKSRC}/bindings
-BUILD_DIRS+=		${WRKSRC}/doc
-BUILD_DIRS+=		${WRKSRC}/tests
+BUILD_DIRS=		src bindings doc tests
 
 post-patch:
 	cd ${WRKSRC} &&							\
