@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2532 2007/11/30 15:32:38 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2533 2007/11/30 15:34:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4614,3 +4614,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-IO-Compress-Base to 2.008 [wiz 2007-11-30]
 	Updated devel/p5-IO-Compress-Zlib to 2.008 [wiz 2007-11-30]
 	Updated devel/p5-Compress-Zlib to 2.008 [wiz 2007-11-30]
+	Updated devel/p5-IO-Zlib to 1.08 [wiz 2007-11-30]
