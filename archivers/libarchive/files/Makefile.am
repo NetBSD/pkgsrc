@@ -1,18 +1,37 @@
 ## Process this file with automake to produce Makefile.in
 
-AUTOMAKE_OPTIONS = foreign subdir-objects
+AUTOMAKE_OPTIONS= foreign subdir-objects
 
-BUILT_SOURCES = libarchive/test/list.h libarchive/archive.h
+#
+# What to build and install
+#
+lib_LTLIBRARIES=	libarchive.la
+bin_PROGRAMS=	$(bsdtar_programs) $(bsdcpio_programs)
+man_MANS= $(libarchive_man_MANS) $(bsdtar_man_MANS) $(bsdcpio_man_MANS)
+BUILT_SOURCES= libarchive/test/list.h cpio/test/list.h
 
-EXTRA_DIST= version				\
-	config.h.in				\
-	examples				\
-	libarchive/test/list.h			\
-	tar/test				\
-	tar/getdate.c
+#
+# What to test
+#
+check_PROGRAMS= libarchive_test $(bsdcpio_test_programs)
+TESTS= libarchive_test $(bsdcpio_test_programs)
+TESTS_ENVIRONMENT= $(bsdcpio_TESTS_ENVIRONMENT)
+# Always build and test bsdcpio as part of 'distcheck'
+DISTCHECK_CONFIGURE_FLAGS = --enable-bsdcpio
 
-# Clean out some unneeded files and directories
-# that get picked up as part of the directories in EXTRA_DIST above.
+#
+# What to include in the distribution
+#
+EXTRA_DIST= version			\
+	contrib				\
+	examples			\
+	$(libarchive_EXTRA_DIST)	\
+	$(bsdtar_EXTRA_DIST)		\
+	$(bsdcpio_EXTRA_DIST)		\
+	$(bsdcpio_test_EXTRA_DIST)
+
+# a) Clean out some unneeded files and directories
+# b) Collect all documentation and format it for distribution.
 dist-hook:
 	rm -rf `find $(distdir) -name CVS -type d`
 	rm -rf `find $(distdir) -name .svn -type d`
@@ -20,19 +39,19 @@ dist-hook:
 	rm -f `find $(distdir) -name '*.out'`
 	rm -f `find $(distdir) -name '*.core'`
 	rm -f $(distdir)/*/Makefile
+	mkdir -p $(distdir)/doc/man
+	cp $(distdir)/libarchive/*.[135] $(distdir)/doc/man
+	cp $(distdir)/tar/*.[135] $(distdir)/doc/man
+	cp $(distdir)/cpio/*.[135] $(distdir)/doc/man
+	mkdir -p $(distdir)/doc/text
+	cd $(distdir)/doc/man; for f in *.[135]; do nroff -mdoc $$f | col -b > ../text/`basename $$f`.txt; done
 
 distclean-local:
 	-rm -f tar/getdate.c tar/getdate.h
 	-rm -f libarchive/test/list.h
+	-rm -f cpio/test/list.h
 	-rm -rf autom4te.cache/
 	-rm -f *~
-
-# Always build libarchive, regardless
-lib_LTLIBRARIES=	libarchive.la
-bin_PROGRAMS=	$(bsdtar_programs) $(bsdcpio_programs)
-check_PROGRAMS= libarchive_test
-dist_man_MANS=$(libarchive_dist_man_MANS) $(bsdtar_dist_man_MANS) $(bsdcpio_dist_man_MANS)
-TESTS= libarchive_test
 
 #
 # Libarchive headers, source, etc.
@@ -49,8 +68,10 @@ libarchive_la_SOURCES=						\
 	libarchive/archive_entry.c				\
 	libarchive/archive_entry.h				\
 	libarchive/archive_entry_copy_stat.c			\
+	libarchive/archive_entry_link_resolver.c		\
 	libarchive/archive_entry_private.h			\
 	libarchive/archive_entry_stat.c				\
+	libarchive/archive_entry_strmode.c			\
 	libarchive/archive_platform.h				\
 	libarchive/archive_private.h				\
 	libarchive/archive_read.c				\
@@ -107,19 +128,27 @@ libarchive_la_SOURCES=						\
 	libarchive/filter_fork.h
 
 # archive.h ends up in the build directory, so make sure we can find it.
-libarchive_la_CPPFLAGS=-I$(top_builddir)/libarchive
+libarchive_la_CPPFLAGS= -I$(top_builddir)/libarchive
 libarchive_la_LDFLAGS= -version-info $(ARCHIVE_LIBTOOL_VERSION)
 
-libarchive_dist_man_MANS=					\
+# Manpages to install
+libarchive_man_MANS=						\
 	libarchive/archive_entry.3				\
 	libarchive/archive_read.3				\
 	libarchive/archive_util.3				\
 	libarchive/archive_write.3				\
 	libarchive/archive_write_disk.3				\
+	libarchive/cpio.5					\
 	libarchive/libarchive.3					\
 	libarchive/libarchive_internals.3			\
 	libarchive/libarchive-formats.5				\
+	libarchive/mtree.5					\
 	libarchive/tar.5
+
+# Additional libarchive files to include in the distribution
+libarchive_EXTRA_DIST=		\
+	libarchive/test/list.h	\
+	$(libarchive_man_MANS)
 
 #
 #
@@ -136,6 +165,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_archive_api_feature.c		\
 	libarchive/test/test_bad_fd.c				\
 	libarchive/test/test_entry.c				\
+	libarchive/test/test_entry_strmode.c			\
 	libarchive/test/test_read_compress_program.c		\
 	libarchive/test/test_read_data_large.c			\
 	libarchive/test/test_read_extract.c			\
@@ -164,6 +194,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_read_position.c			\
 	libarchive/test/test_read_truncated.c			\
 	libarchive/test/test_tar_filenames.c			\
+	libarchive/test/test_tar_large.c			\
 	libarchive/test/test_write_compress_program.c		\
 	libarchive/test/test_write_disk.c			\
 	libarchive/test/test_write_disk_perms.c			\
@@ -171,12 +202,14 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_write_format_ar.c			\
 	libarchive/test/test_write_format_cpio.c		\
 	libarchive/test/test_write_format_cpio_empty.c		\
+	libarchive/test/test_write_format_cpio_odc.c		\
+	libarchive/test/test_write_format_cpio_newc.c		\
 	libarchive/test/test_write_format_shar_empty.c		\
 	libarchive/test/test_write_format_tar.c			\
 	libarchive/test/test_write_format_tar_empty.c		\
 	libarchive/test/test_write_open_memory.c
 
-libarchive_test_CPPFLAGS=-I$(top_builddir)/libarchive -I$(top_builddir)/libarchive/test
+libarchive_test_CPPFLAGS= -I$(top_builddir)/libarchive -I$(top_builddir)/libarchive/test
 
 # The "list.h" file just lists all of the tests defined in all of the sources.
 # Building it automatically provides a sanity-check on libarchive_test_SOURCES
@@ -202,25 +235,28 @@ bsdtar_SOURCES=				\
 		tar/util.c		\
 		tar/write.c
 
-bsdtar_DEPENDENCIES = libarchive.la		\
+bsdtar_DEPENDENCIES= libarchive.la		\
 		libarchive/archive_entry.h	\
 		libarchive/archive.h
 
 if STATIC_BSDTAR
-bsdtar_static=-static
+bsdtar_static= -static
 else
 bsdtar_static=
 endif
 
 bsdtar_LDADD= libarchive.la
-bsdtar_CPPFLAGS=-I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdtar_CPPFLAGS= -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
 bsdtar_LDFLAGS= $(bsdtar_static)
+bsdtar_EXTRA_DIST=		\
+	tar/test		\
+	tar/bsdtar.1
 
 if BUILD_BSDTAR
-bsdtar_dist_man_MANS=	tar/bsdtar.1
-bsdtar_programs=bsdtar
+bsdtar_man_MANS= tar/bsdtar.1
+bsdtar_programs= bsdtar
 else
-bsdtar_dist_man_MANS=
+bsdtar_man_MANS=
 bsdtar_programs=
 endif
 
@@ -232,25 +268,82 @@ endif
 #
 
 bsdcpio_SOURCES=			\
+		cpio/cmdline.c		\
 		cpio/cpio.c		\
 		cpio/cpio.h		\
 		cpio/cpio_platform.h	\
-		cpio/util.c
+		cpio/err.c		\
+		cpio/match.c
 
 bsdcpio_DEPENDENCIES = libarchive.la		\
 		libarchive/archive_entry.h	\
 		libarchive/archive.h
 
+
+if STATIC_BSDCPIO
 bsdcpio_static= -static
+else
+bsdcpio_static=
+endif
+
 bsdcpio_LDADD= libarchive.la
-bsdcpio_CPPFLAGS=-I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
+bsdcpio_CPPFLAGS= -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
 bsdcpio_LDFLAGS= $(bsdcpio_static)
+bsdcpio_EXTRA_DIST=		\
+	cpio/test/list.h	\
+	cpio/bsdcpio.1
 
 if BUILD_BSDCPIO
-bsdcpio_dist_man_MANS=	cpio/bsdcpio.1
-bsdcpio_programs=bsdcpio
+# Manpages to install
+bsdcpio_man_MANS= cpio/bsdcpio.1
+bsdcpio_programs= bsdcpio
 else
-bsdcpio_dist_man_MANS=
+bsdcpio_man_MANS=
 bsdcpio_programs=
+endif
+
+#
+# bsdcpio_test
+#
+
+bsdcpio_test_SOURCES=						\
+	cpio/cmdline.c						\
+	cpio/err.c						\
+	cpio/match.c						\
+	cpio/test/main.c					\
+	cpio/test/test.h					\
+	cpio/test/test_basic.c					\
+	cpio/test/test_gcpio_compat.c				\
+	cpio/test/test_help.c					\
+	cpio/test/test_option_B.c				\
+	cpio/test/test_option_d.c				\
+	cpio/test/test_option_m.c				\
+	cpio/test/test_option_t.c				\
+	cpio/test/test_owner_parse.c				\
+	cpio/test/test_pathmatch.c				\
+	cpio/test/test_version.c				\
+	cpio/test/test_write_odc.c
+
+bsdcpio_test_EXTRA_DIST=			\
+	cpio/test/test_gcpio_compat_ref.bin	\
+	cpio/test/test_gcpio_compat_ref.crc	\
+	cpio/test/test_gcpio_compat_ref.newc	\
+	cpio/test/test_gcpio_compat_ref.ustar	\
+	cpio/test/test_option_m.cpio		\
+	cpio/test/test_option_t.cpio		\
+	cpio/test/test_option_t.stdout		\
+	cpio/test/test_option_tv.stdout
+
+bsdcpio_test_CPPFLAGS= -I$(top_builddir)/cpio/test
+
+cpio/test/list.h: Makefile
+	cat $(top_srcdir)/cpio/test/test_*.c | grep DEFINE_TEST > cpio/test/list.h
+
+if BUILD_BSDCPIO
+bsdcpio_test_programs= bsdcpio_test
+bsdcpio_TESTS_ENVIRONMENT= BSDCPIO=`cd $(top_builddir);/bin/pwd`/bsdcpio BSDCPIO_TEST_FILES=`cd $(top_srcdir);/bin/pwd`/cpio/test
+else
+bsdcpio_test_programs=
+bsdcpio_TESTS_ENVIRONMENT=
 endif
 
