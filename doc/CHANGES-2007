@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2544 2007/11/30 21:53:46 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2545 2007/11/30 22:12:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4659,3 +4659,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/nsd to 3.0.7 [joerg 2007-11-30]
 	Added graphics/ilmbase version 1.0.1 [wiz 2007-11-30]
 	Updated graphics/openexr to 1.6.1 [wiz 2007-11-30]
+	Updated devel/pkg-config to 0.22 [wiz 2007-11-30]
