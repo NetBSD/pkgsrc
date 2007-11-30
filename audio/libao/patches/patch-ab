@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2005/02/18 17:22:07 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2007/11/30 17:50:31 wiz Exp $
 
---- src/plugins/oss/Makefile.in.orig	2005-01-11 23:12:07.000000000 +0100
+--- src/plugins/oss/Makefile.in.orig	2007-05-24 10:51:47.000000000 +0000
 +++ src/plugins/oss/Makefile.in
-@@ -226,7 +226,7 @@ AUTOMAKE_OPTIONS = foreign
+@@ -222,7 +222,7 @@ AUTOMAKE_OPTIONS = foreign
  @HAVE_OSS_TRUE@osssources = ao_oss.c
  INCLUDES = -I$(top_builddir)/include/ao -I$(top_srcdir)/include
  lib_LTLIBRARIES = $(ossltlibs)

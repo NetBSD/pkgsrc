@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/04/06 06:21:34 reed Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/30 17:50:33 wiz Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-macosx/}
-PKGREVISION=	1
 
 COMMENT+=	(MacOS X plugin)
 
