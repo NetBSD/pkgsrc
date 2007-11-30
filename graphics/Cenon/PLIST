@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/05 05:59:17 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/11/30 19:53:01 rillig Exp $
 share/GNUstep/Local/Applications/Cenon.app/Cenon
 share/GNUstep/Local/Applications/Cenon.app/Resources/Cenon.desktop
 share/GNUstep/Local/Applications/Cenon.app/Resources/Cenon.tiff
@@ -39,6 +39,7 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/IPThread.gmod
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/IPWeb.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/InspectorPanel.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/IntersectionPanel.gmodel
+share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/LayerDetails.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/Localizable.strings
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/Main.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/English.lproj/Operations.strings
@@ -93,6 +94,7 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/IPThread.gmode
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/IPWeb.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/InspectorPanel.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/IntersectionPanel.gmodel
+share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/LayerDetails.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/Localizable.strings
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/Main.gmodel
 share/GNUstep/Local/Applications/Cenon.app/Resources/German.lproj/Operations.strings
@@ -154,7 +156,6 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/cursorMagnify.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/cursorRotate.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/eye.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/eyeclosed.tiff
-share/GNUstep/Local/Applications/Cenon.app/Resources/info.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/infoTitle.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/ipArc.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/ipCrosshairs.tiff
@@ -185,6 +186,7 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/sortColULLR.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/sortColURLL.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/sortRowLLUR.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/sortRowULLR.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/toolAddPt.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolArc.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolArc1.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolArrow.tiff
@@ -199,6 +201,11 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/toolSinking.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolText.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolThread.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/toolWeb.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/tpAlign.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/tpMix.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/tpMove.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/tpRotate.tiff
+share/GNUstep/Local/Applications/Cenon.app/Resources/tpScale.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typeAI.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typeAI_128x128.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typeAI_48x48.tiff
@@ -221,7 +228,6 @@ share/GNUstep/Local/Applications/Cenon.app/Resources/typeHPGL.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typeHPGL_128x128.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typeHPGL_48x48.tiff
 share/GNUstep/Local/Applications/Cenon.app/Resources/typePS.tiff
-share/GNUstep/Local/Applications/Cenon.app/library_paths.openapp
 share/GNUstep/Local/Applications/Cenon.app/stamp.make
 share/GNUstep/Local/Library/Cenon/.dir.tiff
 share/GNUstep/Local/Library/Cenon/Devices/.dir.tiff
@@ -244,9 +250,11 @@ share/GNUstep/Local/Library/Cenon/Projects/.dir.tiff
 share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon/document
 share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon/output
 share/GNUstep/Local/Library/Cenon/README
+share/GNUstep/Local/Tools/Cenon
 share/doc/Cenon/LICENSE
 share/doc/Cenon/README
 @dirrm share/doc/Cenon
+@dirrm share/GNUstep/Local/Tools
 @dirrm share/GNUstep/Local/Library/Cenon/Projects/Cenon.cenon
 @dirrm share/GNUstep/Local/Library/Cenon/Projects
 @dirrm share/GNUstep/Local/Library/Cenon/Devices/hpgl
@@ -277,3 +285,4 @@ share/doc/Cenon/README
 @dirrm share/GNUstep/Local/Applications/Cenon.app/Resources
 @dirrm share/GNUstep/Local/Applications/Cenon.app
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
