@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.10 2007/10/21 14:01:16 joerg Exp $
+$NetBSD: distinfo,v 1.11 2007/11/30 22:12:07 wiz Exp $
 
-SHA1 (pkg-config-0.21.tar.gz) = b2508ba8404cad46ec42f6f58cbca43ae59d715f
-RMD160 (pkg-config-0.21.tar.gz) = 6d48e449a3cedb576c0f54b08825be6ab684d955
-Size (pkg-config-0.21.tar.gz) = 998420 bytes
+SHA1 (pkg-config-0.22.tar.gz) = 3ec40bda9864d7aa3c912c6ae87a750fd8b6e420
+RMD160 (pkg-config-0.22.tar.gz) = f82754f9892469d2865cc5d2fd3c2ca4513dab5b
+Size (pkg-config-0.22.tar.gz) = 1006425 bytes
 SHA1 (patch-aa) = 86e1d0b7e86fe125482533f4f5d41e6b230031b5
-SHA1 (patch-ab) = b4c43bd021cca8b5fc78c268d52e3e96daf6c280
-SHA1 (patch-ac) = a8a4cfa7b6e9052b0c111088c6d8ede810d61752
-SHA1 (patch-ad) = 9000209dc393925bb1750ffacdbb15f0edbf4729
+SHA1 (patch-ab) = 2298c2798be04669796bf990d9dbddbfc8ee1897
+SHA1 (patch-ac) = 53d90ba40f8aafe0eae9c898e122a95ce951d2e3
+SHA1 (patch-ad) = ad7805b2aa69e3c872fa35eb08a938fa3f8d323b
 SHA1 (patch-ae) = b924f64ee3c7ef9f3efe6d83b60bc0a6fbe1f26d
 SHA1 (patch-af) = 1186777da42151583594fd137e135ef6a77ee09f
-SHA1 (patch-ag) = 507ace528c51cb544c3ee8a05c2a36882828bb77
-SHA1 (patch-ah) = c9e5b296886e525cf01c0c275ad06ec9f857860c
+SHA1 (patch-ah) = 9b5e537f2c0606efa45078d02de53700f3d3439a

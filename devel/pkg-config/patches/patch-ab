@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2005/10/22 12:59:14 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2007/11/30 22:12:07 wiz Exp $
 
 The static variables are needed because they are used in a struct
 initializer. The IRIX/mipseb C compiler needs those addresses to be
@@ -6,7 +6,7 @@ constant.
 
 Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
 
---- main.c.orig	2005-10-22 14:48:50.000000000 +0200
+--- main.c.orig	2007-06-18 21:35:05.000000000 +0000
 +++ main.c
 @@ -172,27 +172,27 @@ pkg_uninstalled (Package *pkg)
  int
@@ -56,7 +56,7 @@ Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
    GString *str;
    GSList *packages = NULL;
    char *search_path;
-@@ -462,12 +462,27 @@ main (int argc, char **argv)
+@@ -461,12 +461,27 @@ main (int argc, char **argv)
      gboolean failed = FALSE;
      GSList *reqs;
      GSList *iter;
@@ -84,7 +84,7 @@ Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
      while (iter != NULL)
        {
          Package *req;
-@@ -478,6 +493,18 @@ main (int argc, char **argv)
+@@ -477,6 +492,18 @@ main (int argc, char **argv)
          else
            req = get_package (ver->name);
  
@@ -103,7 +103,7 @@ Log all pkg-config calls to a file.  Used by pkgtools/verifypc.
          if (req == NULL)
            {
              failed = TRUE;
-@@ -508,6 +535,11 @@ main (int argc, char **argv)
+@@ -507,6 +534,11 @@ main (int argc, char **argv)
          iter = g_slist_next (iter);
        }
  

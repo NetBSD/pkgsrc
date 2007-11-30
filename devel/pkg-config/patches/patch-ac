@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1 2006/10/04 18:48:04 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2007/11/30 22:12:07 wiz Exp $
 
 Arbitrary strings should not be passed to "eval".
 
---- configure.orig	2006-08-16 21:10:18.000000000 +0200
-+++ configure	2006-10-04 20:39:13.000000000 +0200
-@@ -19397,7 +19397,7 @@ echo "$as_me:$LINENO: checking whether t
- echo $ECHO_N "checking whether to list both direct and indirect dependencies... $ECHO_C" >&6
+--- configure.orig	2007-06-18 21:36:04.000000000 +0000
++++ configure
+@@ -19890,7 +19890,7 @@ echo use_indirect_deps=$use_indirect_dep
+ echo $ECHO_N "checking whether to list both direct and indirect dependencies... $ECHO_C" >&6; }
  case $use_indirect_deps in
    auto)
 -    deplibs_check_method=`(./libtool --config; echo eval echo \$deplibs_check_method) | sh`
