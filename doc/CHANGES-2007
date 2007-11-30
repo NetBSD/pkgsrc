@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2534 2007/11/30 16:20:45 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.2535 2007/11/30 17:13:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4640,3 +4640,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/grandr_applet version 0.4 [drochner 2007-11-30]
 	Updated devel/gail to 1.20.2 [drochner 2007-11-30]
 	Updated x11/gtk2 to 2.12.2 [drochner 2007-11-30]
+	Updated misc/goffice0.5 to 0.5.3 [wiz 2007-11-30]
