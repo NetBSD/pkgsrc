@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/11/22 23:02:19 agc Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/30 10:55:05 agc Exp $
 
-DISTNAME=	netbsd-iscsi-20071122
+DISTNAME=	netbsd-iscsi-20071130
 PKGNAME=	${DISTNAME:C/-iscsi/-iscsi-initiator/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
