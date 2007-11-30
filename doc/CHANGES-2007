@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2539 2007/11/30 18:27:03 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2540 2007/11/30 19:53:22 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4653,3 +4653,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/libao-sun to 0.8.8 [wiz 2007-11-30]
 	Updated comms/pilot-link to 0.12.3 [wiz 2007-11-30]
 	Updated comms/pilot-link-libs to 0.12.3 [wiz 2007-11-30]
+	Updated graphics/Cenon to 3.83 [rillig 2007-11-30]
