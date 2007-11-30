@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6864 2007/11/30 13:57:28 wiz Exp $
+$NetBSD: TODO,v 1.6865 2007/11/30 18:30:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ Suggested package updates
 	o bug-buddy-2.20.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o caff-0.4.13
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
@@ -417,7 +416,6 @@ Suggested package updates
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
-	o deskbar-applet-2.20.2
 	o devIL-1.6.7
 	o devhelp-0.16.1
 	o devtodo-0.1.19
@@ -458,9 +456,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.10
 	o enscript-1.6.4
-	o eog-2.20.3
 	o epic4-2.6
-	o epiphany-2.20.1
 	o epiphany-extensions-2.20.1
 	o epstool-3.08
 	o eric3-4.0.3 [now called eric4]
@@ -470,7 +466,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o evilwm-1.0.0
 	o evolution-2.12.2
-	o evolution-data-server-1.12.2
 	o evolution-exchange-2.12.2
 	o evolution-webcal-2.12.0
 	o ex-20050325
@@ -486,7 +481,6 @@ Suggested package updates
 	o fetchyahoo-2.11.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o firefox-2.0.0.10
 	o firefox-bin-flash-9.0.64.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
@@ -529,7 +523,6 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.12
 	o geda-1.2.0.20070902
-	o gedit-2.20.3
 	o generator-cbiere-0.35r3
 	o getmail-4.7.7
 	o gettext-0.17
@@ -550,34 +543,24 @@ Suggested package updates
 	o glchess-1.0.5
 	o global-5.6
 	o glproto-1.4.9
-	o gmime-2.2.11
 	o gmpc-0.15.1
 	o gnash-0.8.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
-	o gnome-desktop-2.20.1
-	o gnome-games-2.20.2
-	o gnome-keyring-2.20.2
 	o gnome-mag-1.14.10
 	o gnome-media-2.20.1
-	o gnome-menus-2.20.1
 	o gnome-speech-0.4.16
 	o gnome-spell-1.0.8
-	o gnome-terminal-2.18.2
-	o gnome-themes-2.20.1
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnumeric-current-1.7.90
-	o gnupg2-2.0.7
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice0.5-0.5.3
 	o gogo-3.11p1
 	o gok-1.3.7
 	o gossip-0.28
@@ -598,8 +581,6 @@ Suggested package updates
 	o gsl-1.10
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-base-0.10.15
-	o gstreamer0.10-0.10.15
 	o gtar-1.19
 	o gtar-base-1.19
 	o gtexinfo-4.11
@@ -618,7 +599,6 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.3
 	o guile-gtk-2.0
-	o gwave-20031224
 	o gwenview-1.4.2
 	o gworkspace-0.8.6
 	o gzrecover-0.5
@@ -718,7 +698,6 @@ Suggested package updates
 	o libXrender-0.9.4
 	o libXtst-1.0.3
 	o libXxf86dga-1.0.2
-	o libao-0.8.8
 	o libarchive-2.4.0
 	o libast-0.7
 	o libcdio-0.79
@@ -758,7 +737,6 @@ Suggested package updates
 	o libstatgrab-0.15
 	o libstree-0.4.2
 	o libtcl-nothread-8.4.9
-	o libwnck-2.20.1
 	o libxklavier-3.3
 	o libxml++2-2.20.0
 	o licq-1.3.5
@@ -895,8 +873,6 @@ Suggested package updates
 	o p5-Class-Inspector-1.18
 	o p5-Class-ReturnValue-0.55
 	o p5-Clone-0.28
-	o p5-Compress-Raw-Zlib-2.008
-	o p5-Compress-Zlib-2.008
 	o p5-Config-General-2.36
 	o p5-Config-Tiny-2.12
 	o p5-Crypt-CBC-2.22
@@ -926,9 +902,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-INET6-2.51
-	o p5-IO-Compress-Base-2.008
-	o p5-IO-Compress-Zlib-2.008
-	o p5-IO-Zlib-1.08
 	o p5-Image-Info-1.26
 	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
@@ -1021,7 +994,6 @@ Suggested package updates
 	o phylip-3.65
 	o picp-0.6.8
 	o piewm-1.04
-	o pilot-link-libs-0.12.3
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
@@ -1078,7 +1050,6 @@ Suggested package updates
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
-	o py-gnome2-2.20.1
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
@@ -1388,7 +1359,6 @@ Suggested package updates
 	o ysm-2.9.9.1
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.20.1
 	o zile-2.2.52
 	o zircon-1.18.256
 	o zoom-1.0.5
