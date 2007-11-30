@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2533 2007/11/30 15:34:41 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2534 2007/11/30 16:20:45 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4615,3 +4615,28 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-IO-Compress-Zlib to 2.008 [wiz 2007-11-30]
 	Updated devel/p5-Compress-Zlib to 2.008 [wiz 2007-11-30]
 	Updated devel/p5-IO-Zlib to 1.08 [wiz 2007-11-30]
+	Updated misc/deskbar-applet to 2.20.2 [drochner 2007-11-30]
+	Updated archivers/file-roller to 2.20.2 [drochner 2007-11-30]
+	Updated x11/zenity to 2.20.1 [drochner 2007-11-30]
+	Updated x11/py-gnome2 to 2.20.1 [drochner 2007-11-30]
+	Updated x11/gnome-themes to 2.20.2 [drochner 2007-11-30]
+	Updated x11/gnome-terminal to 2.18.3 [drochner 2007-11-30]
+	Updated x11/gnome-session to 2.20.2 [drochner 2007-11-30]
+	Updated x11/gnome-panel to 2.20.2 [drochner 2007-11-30]
+	Updated www/epiphany to 2.20.2 [drochner 2007-11-30]
+	Updated sysutils/gnome-menus to 2.20.2 [drochner 2007-11-30]
+	Updated graphics/eog to 2.20.3 [drochner 2007-11-30]
+	Updated games/gnome-games to 2.20.2 [drochner 2007-11-30]
+	Updated editors/gedit to 2.20.4 [drochner 2007-11-30]
+	Updated mail/evolution-data-server to 1.12.2 [drochner 2007-11-30]
+	Updated x11/gnome-desktop to 2.20.2 [drochner 2007-11-30]
+	Updated x11/gtksourceview2 to 2.0.2 [drochner 2007-11-30]
+	Updated www/gtkhtml314 to 3.16.2 [drochner 2007-11-30]
+	Updated net/libsoup-devel to 2.2.104 [drochner 2007-11-30]
+	Updated devel/libwnck to 2.20.2 [drochner 2007-11-30]
+	Updated security/gnome-keyring to 2.20.2 [drochner 2007-11-30]
+	Updated print/evince to 2.20.2 [drochner 2007-11-30]
+	Updated print/poppler to 0.6.2 [drochner 2007-11-30]
+	Added x11/grandr_applet version 0.4 [drochner 2007-11-30]
+	Updated devel/gail to 1.20.2 [drochner 2007-11-30]
+	Updated x11/gtk2 to 2.12.2 [drochner 2007-11-30]
