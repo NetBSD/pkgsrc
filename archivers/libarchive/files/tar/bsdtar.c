@@ -792,7 +792,9 @@ usage(struct bsdtar *bsdtar)
 static void
 version(void)
 {
-	printf("bsdtar %s - %s\n", PACKAGE_VERSION, archive_version());
+	printf("bsdtar %s - %s\n",
+	    BSDTAR_VERSION_STRING,
+	    archive_version());
 	exit(1);
 }
 

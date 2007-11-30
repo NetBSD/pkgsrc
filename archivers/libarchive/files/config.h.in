@@ -1,5 +1,11 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Version number of bsdcpio */
+#undef BSDCPIO_VERSION_STRING
+
+/* Version number of bsdtar */
+#undef BSDTAR_VERSION_STRING
+
 /* Define to 1 if you have the `acl_create_entry' function. */
 #undef HAVE_ACL_CREATE_ENTRY
 
@@ -369,6 +375,12 @@
 
 /* Define to 1 if you have the <zlib.h> header file. */
 #undef HAVE_ZLIB_H
+
+/* Version number of libarchive as a single integer */
+#undef LIBARCHIVE_VERSION
+
+/* Version number of libarchive */
+#undef LIBARCHIVE_VERSION_STRING
 
 /* Define to 1 if `lstat' dereferences a symlink specified with a trailing
    slash. */

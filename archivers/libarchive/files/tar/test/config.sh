@@ -71,4 +71,5 @@ echo CPIO=$CPIO '('`$CPIO --version`')'
 rm -rf $TESTDIR
 mkdir -p $TESTDIR || exit 1
 cd $TESTDIR || exit 1
+echo TESTDIR=$TESTDIR
 

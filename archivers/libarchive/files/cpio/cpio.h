@@ -46,6 +46,7 @@ struct cpio {
 	const char	 *format; /* -H format */
 	int		  bytes_per_block; /* -b block_size */
 	int		  verbose;   /* -v */
+	int		  quiet;   /* --quiet */
 	int		  extract_flags; /* Flags for extract operation */
 	char		  symlink_mode; /* H or L, per BSD conventions */
 	const char	 *compress_program;
@@ -57,22 +58,34 @@ struct cpio {
 	char		 *pass_destdir;
 	size_t		  pass_destpath_alloc;
 	char		 *pass_destpath;
+	int		  uid_override;
+	int		  gid_override;
 
 	/* If >= 0, then close this when done. */
 	int		  fd;
 
 	/* Miscellaneous state information */
 	struct archive	 *archive;
-	const char	 *progname;
 	int		  argc;
 	char		**argv;
 	int		  return_value; /* Value returned by main() */
+	struct archive_entry_linkresolver *linkresolver;
 };
 
-void	cpio_errc(struct cpio *, int _eval, int _code,
-	    const char *fmt, ...);
-void	cpio_warnc(struct cpio *, int _code, const char *fmt, ...);
-void	cpio_strmode(struct archive_entry *, char *);
-int	process_lines(struct cpio *cpio, const char *pathname,
-	    int (*process)(struct cpio *, const char *));
+/* Name of this program; used in error reporting, initialized in main(). */
+const char *cpio_progname;
 
+void	cpio_errc(int _eval, int _code, const char *fmt, ...);
+void	cpio_warnc(int _code, const char *fmt, ...);
+
+int	owner_parse(const char *, int *, int *);
+
+
+/* Fake short equivalents for long options that otherwise lack them. */
+enum {
+	OPTION_QUIET = 1,
+	OPTION_VERSION
+};
+
+int	cpio_getopt(struct cpio *cpio);
+int	pathmatch(const char *pattern, const char *s);

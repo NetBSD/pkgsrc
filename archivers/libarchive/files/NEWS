@@ -1,5 +1,52 @@
 
-Sep 11, 2007: libarchive 2.2.8 released
+Oct 30, 2007: libarchive 2.4.0 released
+Oct 30, 2007: Minor compile fix thanks to Joerg Schilling.
+Oct 30, 2007: Only run the format auction once at the beginning of the
+	archive.  This is simpler and supports better error recovery.
+Oct 29, 2007: Test support for very large entries in tar archives:
+	libarchive_test now exercises entries from 2GB up to 1TB.
+
+Oct 27, 2007: libarchive 2.3.5 released
+Oct 27, 2007: Correct some unnecessary internal data copying in the
+	"compression none" reader and writer; this reduces user time
+	by up to 2/3 in some tests.  (Thanks to Jan Psota for
+	publishing his performance test results to GNU tar's bug-tar
+	mailing list; those results pointed me towards this problem.)
+Oct 27, 2007: Fix for skipping archive entries that are exactly
+	a multiple of 4G on 32-bit platforms.
+Oct 25, 2007: Fix for reading very large (>8G) tar archives; this was
+	broken when I put in support for new GNU tar sparse formats.
+Oct 20, 2007: Initial work on new pattern-matching code for cpio; I
+	hope this eventually replaces the code currently in bsdtar.
+
+Oct 08, 2007: libarchive 2.3.4 released
+Oct 05, 2007: Continuing work on bsdcpio test suite.
+Oct 05, 2007: New cpio.5 manpage, updates to "History" of bsdcpio.1 and
+	bsdtar.1 manpages.
+Oct 05, 2007: Fix zip reader to immediately return EOF if you try
+	to read body of non-regular file.  In particular, this fixes
+	bsdtar extraction of zip archives.
+
+Sep 30, 2007: libarchive 2.3.3 released
+Sep 26, 2007: Rework Makefile.am so that the enable/disable options
+	actually do the right things.
+Sep 26, 2007: cpio-odc and cpio-newc archives no longer write bodies
+	for non-regular files.
+Sep 26, 2007: Test harness for bsdcpio is in place, needs more tests written.
+	This is much nicer than the ragtag collection of test scripts
+	that bsdtar has.
+
+Sep 20, 2007: libarchive 2.3.2 released
+Sep 20, 2007: libarchive 2.3.1 broke bsdtar because the archive_write_data()
+	fix was implemented incorrectly.
+
+Sep 16, 2007: libarchive 2.3.1 released
+Sep 16, 2007: Many fixes to bsdcpio 0.3:  handle hardlinks with -p, recognize
+	block size on writing, fix a couple of segfaults.
+Sep 16, 2007: Fixed return value from archive_write_data() when used
+	with archive_write_disk() to match the documentation and other
+	instances of this same function.
+Sep 15, 2007: Add archive_entry_link_resolver, archive_entry_strmode
 
 Sep 11, 2007: libarchive 2.2.8 released
 Sep 09, 2007: bsdcpio 0.2 supports most (not yet all) of the old POSIX spec.
@@ -12,10 +59,8 @@ Aug 13, 2007: Refined suid/sgid restore handling; it is no longer
 	an error if suid/sgid bits are dropped when you request
 	perm restore but don't request owner restore.
 Aug 06, 2007: Use --enable-bsdcpio if you want to try bsdcpio
-	(Still very incomplete!)
 
 Aug 05, 2007: libarchive 2.2.6 released
-
 Aug 05, 2007: New configure option --disable-bsdtar, thanks to Joerg
 	Sonnenberger.
 Aug 05, 2007: Several bug fixes from FreeBSD CVS repo.
