@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.16 2007/11/22 21:19:52 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.17 2007/11/30 23:51:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -37,3 +37,5 @@ Pullup ticket 2228 - requested by tron
 security update for samba
 Pullup ticket 2231 - requested by adrianp
 security update for apache-tomcat
+Pullup ticket 2229 - requested by ghen
+security update for openldap
