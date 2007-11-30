@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
+$NetBSD: patch-aa,v 1.18 2007/11/30 19:32:56 rillig Exp $
 
 --- bsd/kernel.cc.orig	2006-02-18 08:36:06.000000000 +0100
-+++ bsd/kernel.cc	2007-04-14 21:34:03.000000000 +0200
++++ bsd/kernel.cc	2007-10-11 01:53:02.000000000 +0200
 @@ -115,8 +115,16 @@
  // in __NetBSD_Version__ for us if needed.
  #if defined(XOSVIEW_NETBSD) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106010000)
@@ -19,7 +19,33 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
  #include "general.h"
  #include "kernel.h"		/*  To grab CVSID stuff.  */
  
-@@ -400,6 +408,8 @@
+@@ -303,9 +311,11 @@
+ 
+ void
+ OpenKDIfNeeded() {
++  static int initialized = 0;
+   char unusederrorstring[_POSIX2_LINE_MAX];
+ 
+-  if (kd) return; //  kd is non-NULL, so it has been initialized.  BCG
++  if (initialized) return;
++  initialized = 1;
+ 
+     /*  Open it read-only, for a little added safety.  */
+     /*  If the first character of kernelFileName is not '\0', then use
+@@ -313,8 +323,10 @@
+ 	specifying NULL.  */
+   if ((kd = kvm_openfiles ((kernelFileName[0]) ? kernelFileName : NULL,
+ 			    NULL, NULL, O_RDONLY, unusederrorstring))
+-      == NULL)
+-	  err (-1, "OpenKDIfNeeded():kvm-open()");
++      == NULL) {
++	  warn ("OpenKDIfNeeded():kvm-open()");
++	  return;
++  }
+   // Parenthetical note:  FreeBSD kvm_openfiles() uses getbootfile() to get
+   // the correct kernel file if the 1st arg is NULL.  As far as I can see,
+   // one should always use NULL in FreeBSD, but I suppose control is never a
+@@ -400,6 +412,8 @@
    static int mib[] = { CTL_KERN, KERN_CPUSTATS };
  #endif
  #if defined(XOSVIEW_NETBSD) && (__NetBSD_Version__ >= 104260000)
@@ -28,7 +54,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
    static int mib[] = { CTL_KERN, KERN_CP_TIME };
  #endif
  
-@@ -407,14 +417,11 @@
+@@ -407,14 +421,11 @@
    if (CPUSTATES != 5)
      errx (-1, "Error:  xosview for *BSD expects 5 cpu states!\n");
  #if defined(__NetBSD_Version__) && __NetBSD_Version__ > 104260000 /* > 1.4Z */
@@ -47,7 +73,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
  #else
  #ifdef XOSVIEW_BSDI
    if (sysctl(mib, 2, &cpu, &size, NULL, 0) < 0) {
-@@ -441,7 +448,7 @@
+@@ -441,7 +452,7 @@
  }
  
  void
@@ -56,7 +82,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
  
  
    struct ifnet * ifnetp;
-@@ -466,7 +473,8 @@
+@@ -466,7 +477,8 @@
    while (ifnetp) {
      //  Now, dereference the pointer to get the ifnet struct.
      safe_kvm_read ((u_long) ifnetp, &ifnet, sizeof(ifnet));
@@ -66,7 +92,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
      char ifname[256];
  #ifdef NETBSD_OLD_IFACE
      //  In pre-1.2A, getting the interface name was more complicated.
-@@ -476,15 +484,21 @@
+@@ -476,15 +488,21 @@
      safe_kvm_read ((u_long) (((char*)ifnetp) + (&ifnet.if_xname[0] - (char*)&ifnet)), ifname, 256);
      snprintf (ifname, 256, "%s", ifname);
  #endif
@@ -89,7 +115,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
      //  Linked-list step taken from if.c in netstat source, line 120.
  #ifdef XOSVIEW_FREEBSD
  #if (__FreeBSD_version >= 300000) 
-@@ -773,13 +787,12 @@
+@@ -773,13 +791,12 @@
  #ifdef NETBSD_1_6A
    // Do a sysctl with a NULL data pointer to get the size that would
    // have been returned, and use that to figure out # drives.
@@ -105,7 +131,7 @@ $NetBSD: patch-aa,v 1.17 2007/04/15 08:12:36 veego Exp $
    return 1;
  #endif
    return ValidSymbol(DISKLIST_SYM_INDEX);
-@@ -816,19 +829,29 @@
+@@ -816,19 +833,29 @@
  #else
  #if defined(NETBSD_1_6A)
    // Use the new sysctl to do this for us.
