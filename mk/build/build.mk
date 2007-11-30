@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.13 2007/06/13 20:34:48 rillig Exp $
+# $NetBSD: build.mk,v 1.14 2007/11/30 18:54:40 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -159,7 +159,11 @@ post-build:
 .endif
 
 BUILD_ENV_SHELL?=	${SH}
+.if defined(_PKGSRC_BARRIER)
 build-env: .PHONY configure
 	@${STEP_MSG} "Entering the build environment for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BUILD_ENV_SHELL}
+.else
+build-env: barrier
+.endif
