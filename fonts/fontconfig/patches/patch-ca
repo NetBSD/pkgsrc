@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.1 2007/08/01 16:33:39 joerg Exp $
+$NetBSD: patch-ca,v 1.2 2007/11/30 22:31:17 wiz Exp $
 
---- configure.in.orig	2006-12-03 00:24:39.000000000 +0100
+--- configure.in.orig	2007-11-14 02:54:45.000000000 +0000
 +++ configure.in
 @@ -137,22 +137,6 @@ AC_SUBST(EXEEXT_FOR_BUILD)
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ca,v 1.1 2007/08/01 16:33:39 joerg Exp $
  # Checks for header files.
  AC_HEADER_DIRENT
  AC_HEADER_STDC
-@@ -561,6 +545,7 @@ fc-lang/Makefile
+@@ -565,6 +549,7 @@ fc-lang/Makefile
  fc-glyphname/Makefile
  fc-case/Makefile
  fc-arch/Makefile

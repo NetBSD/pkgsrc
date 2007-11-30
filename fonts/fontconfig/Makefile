@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2007/08/01 16:33:39 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2007/11/30 22:31:15 wiz Exp $
 
-DISTNAME=	fontconfig-2.4.2
-PKGREVISION=	3
+DISTNAME=	fontconfig-2.5.0
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -47,11 +46,11 @@ CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
 CONF_FILES+=	${EGDIR}/conf.d/20-fix-globaladvance.conf ${PKG_SYSCONFDIR}/conf.d/20-fix-globaladvance.conf
-CONF_FILES+=	${EGDIR}/conf.d/20-lohit-gujarati.conf ${PKG_SYSCONFDIR}/conf.d/20-lohit-gujarati.conf
 CONF_FILES+=	${EGDIR}/conf.d/20-unhint-small-vera.conf ${PKG_SYSCONFDIR}/conf.d/20-unhint-small-vera.conf
-CONF_FILES+=	${EGDIR}/conf.d/30-amt-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-amt-aliases.conf
+CONF_FILES+=	${EGDIR}/conf.d/30-metric-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-metric-aliases.conf
 CONF_FILES+=	${EGDIR}/conf.d/30-urw-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-urw-aliases.conf
-CONF_FILES+=	${EGDIR}/conf.d/40-generic.conf ${PKG_SYSCONFDIR}/conf.d/40-generic.conf
+CONF_FILES+=	${EGDIR}/conf.d/40-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/40-nonlatin.conf
+CONF_FILES+=	${EGDIR}/conf.d/45-latin.conf ${PKG_SYSCONFDIR}/conf.d/45-latin.conf
 CONF_FILES+=	${EGDIR}/conf.d/49-sansserif.conf ${PKG_SYSCONFDIR}/conf.d/49-sansserif.conf
 CONF_FILES+=	${EGDIR}/conf.d/50-user.conf ${PKG_SYSCONFDIR}/conf.d/50-user.conf
 CONF_FILES+=	${EGDIR}/conf.d/51-local.conf ${PKG_SYSCONFDIR}/conf.d/51-local.conf
@@ -63,6 +62,7 @@ CONF_FILES+=	${EGDIR}/conf.d/80-delicious.conf ${PKG_SYSCONFDIR}/conf.d/80-delic
 CONF_FILES+=	${EGDIR}/conf.d/90-synthetic.conf ${PKG_SYSCONFDIR}/conf.d/90-synthetic.conf
 
 MAKE_DIRS+=	${VARBASE}/cache
+BUILD_DEFS+=	VARBASE
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
 
@@ -73,7 +73,7 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 .endif
 
 pre-configure:
-	echo '#define FC_ARCHITECTURE "@host_cpu@"' > ${WRKSRC}/fc-arch/fcarch.h.in
+	${ECHO} '#define FC_ARCHITECTURE "@host_cpu@"' > ${WRKSRC}/fc-arch/fcarch.h.in
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
