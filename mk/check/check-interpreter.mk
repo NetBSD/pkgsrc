@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.20 2007/11/07 10:52:00 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.21 2007/11/30 08:34:31 bjs Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -63,10 +63,14 @@ _check-interpreter: error-check .PHONY
 		case "$$interp" in					\
 		"") continue;						\
 		esac;							\
-		if [ ! -f "$$interp" ]; then				\
+									\
+		if { [ ! -f ${DESTDIR:Q}"$$interp" ] &&			\
+		     [ ! -f "$$interp" ]; }; then			\
+									\
 			if [ -x "$$file" ]; then			\
 				${DELAYED_ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" does not exist."; \
 			else						\
+									\
 				${DELAYED_WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"${DESTDIR}${PREFIX}/$$file\" does not exist."; \
 			fi;						\
 		fi;							\
