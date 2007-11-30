@@ -1,16 +1,18 @@
-$NetBSD: patch-ak,v 1.3 2006/03/30 21:25:48 jmmv Exp $
+$NetBSD: patch-ak,v 1.4 2007/11/30 20:08:38 drochner Exp $
 
---- gui/greeter/Makefile.in.orig	2006-03-13 22:42:37.000000000 +0100
+--- gui/greeter/Makefile.in.orig	2007-09-17 16:48:25.000000000 +0200
 +++ gui/greeter/Makefile.in
-@@ -386,9 +386,8 @@ gdmgreeter_SOURCES = \
- 	greeter_system.h 
+@@ -408,10 +408,9 @@ gdmgreeter_SOURCES = \
  
  gdmgreeter_LDADD = \
+ 	$(EXTRA_GREETER_LIBS)   \
 -	-L$(top_builddir)/gui	\
 -	-lgdmwm			\
 -	-lgdmcommon		\
+-	-lgdmgreeter		\
 +	$(top_builddir)/gui/libgdmwm.a \
 +	$(top_builddir)/gui/libgdmcommon.a \
- 	$(top_builddir)/vicious-extensions/libviciousui-minimal.a \
++	$(top_builddir)/gui/libgdmgreeter.a \
+ 	$(top_builddir)/common/libgdmcommon.a \
  	$(GLIB_LIBS)		\
  	$(GOBJECT_LIBS)		\
