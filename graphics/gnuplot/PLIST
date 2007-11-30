@@ -1,10 +1,21 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/04 14:45:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/11/30 07:13:18 cjs Exp $
 bin/gnuplot
 info/gnuplot.info
-libexec/gnuplot/4.0/gnuplot_x11
+lib/X11/app-defaults/Gnuplot.app-defaults
+libexec/gnuplot/4.2/gnuplot_x11
 man/man1/gnuplot.1
-share/gnuplot/4.0/gnuplot.gih
-@dirrm share/gnuplot/4.0
+share/gnuplot/4.2/PostScript/8859-1.ps
+share/gnuplot/4.2/PostScript/8859-15.ps
+share/gnuplot/4.2/PostScript/8859-2.ps
+share/gnuplot/4.2/PostScript/cp1250.ps
+share/gnuplot/4.2/PostScript/cp437.ps
+share/gnuplot/4.2/PostScript/cp850.ps
+share/gnuplot/4.2/PostScript/cp852.ps
+share/gnuplot/4.2/PostScript/koi8r.ps
+share/gnuplot/4.2/PostScript/koi8u.ps
+share/gnuplot/4.2/PostScript/prologue.ps
+share/gnuplot/4.2/gnuplot.gih
+@dirrm share/gnuplot/4.2
 @dirrm share/gnuplot
-@dirrm libexec/gnuplot/4.0
+@dirrm libexec/gnuplot/4.2
 @dirrm libexec/gnuplot
