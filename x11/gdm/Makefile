@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.133 2007/10/11 09:46:51 hauke Exp $
+# $NetBSD: Makefile,v 1.134 2007/11/30 20:08:37 drochner Exp $
 #
 
-DISTNAME=	gdm-2.18.4
-PKGREVISION=	5
+DISTNAME=	gdm-2.20.2
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,6 +34,8 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR:Q}/custom.conf
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
+
+#CONFIGURE_ARGS+=	--disable-ipv6
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/Init
 OWN_DIRS+=		${PKG_SYSCONFDIR}/PostLogin
@@ -153,7 +154,7 @@ PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:
