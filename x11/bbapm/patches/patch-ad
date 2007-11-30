@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/09/07 20:22:54 jschauma Exp $
+$NetBSD: patch-ad,v 1.2 2007/11/30 19:59:04 rillig Exp $
 
---- Image.hh.orig	Sun Aug 15 07:43:55 1999
-+++ Image.hh	Sat Aug  4 20:52:40 2001
-@@ -35,11 +35,21 @@
+--- Image.hh.orig	1999-08-15 14:43:55.000000000 +0000
++++ Image.hh	2007-11-30 19:57:26.000000000 +0000
+@@ -35,11 +35,21 @@ class Basewindow;
  class BImage;
  class BImageControl;
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/09/07 20:22:54 jschauma Exp $
 +  int allocated;
 +  unsigned char red, green, blue;
 +  unsigned long pixel;
-+  BColor::BColor() { allocated = False; }
++  BColor() { allocated = False; }
 +};
 +#endif
  
