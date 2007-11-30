@@ -159,9 +159,6 @@ typedef _int64 intmax_t;
 #define	mkdir _mkdir
 #define	close _close
 
-#define	PACKAGE_NAME "libarchive"
-#define	PACKAGE_VERSION "2.0experimental"
-
 /* TODO: Fix the code, don't suppress the warnings. */
 #pragma warning(disable:4996)
 #pragma warning(disable:4244)
