@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2542 2007/11/30 21:44:53 joerg Exp $
+$NetBSD: CHANGES-2007,v 1.2543 2007/11/30 21:52:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/libarchive to 2.4.0 [joerg 2007-11-30]
 	Updated archivers/bsdtar to 2.4.0 [joerg 2007-11-30]
 	Updated net/nsd to 3.0.7 [joerg 2007-11-30]
+	Added graphics/ilmbase version 1.0.1 [wiz 2007-11-30]
