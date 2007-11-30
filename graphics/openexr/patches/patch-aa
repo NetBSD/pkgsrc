@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2007/11/30 21:52:20 wiz Exp $
+
+--- configure.orig	2007-11-30 19:18:05.000000000 +0000
++++ configure
+@@ -19595,7 +19595,7 @@ else
+   multithread=yes
+ fi;
+ 
+-if test x$PKG_CONFIG == xno && test "x${multithread}" != xno ; then
++if test x$PKG_CONFIG = xno && test "x${multithread}" != xno ; then
+ 
+ 
+ 
