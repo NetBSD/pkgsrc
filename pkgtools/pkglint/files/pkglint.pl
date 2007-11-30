@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.736 2007/11/29 21:05:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.737 2007/11/30 14:19:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4975,29 +4975,34 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value =~ qr"^(${regex_pkgbase})(<|=|>|<=|>=|!=)(${regex_pkgversion})$") {
 			my ($depbase, $op, $depversion) = ($1, $2, $3);
 
-		} elsif ($value =~ qr"^(${regex_pkgbase})-(\[.*\]\*|\d.*|\*)$") {
-			my ($depbase, $depversion) = ($1, $2);
+		} elsif ($value =~ qr"^(${regex_pkgbase})-(?:\[(.*)\]\*|(\d+(?:\.\d+)*(?:\.\*)?)(\{,nb\*\}|\*|)|(.*))?$") {
+			my ($depbase, $bracket, $version, $version_wildcard, $other) = ($1, $2, $3, $4, $5);
 
-			if ($depversion eq "*") {
+			if (defined($bracket)) {
+				if ($bracket ne "0-9") {
+					$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
+				}
+
+			} elsif (defined($version) && defined($version_wildcard) && $version_wildcard ne "") {
+				# Great.
+
+			} elsif (defined($version)) {
+				$line->log_warning("Please append {,nb*} to the version number of this dependency.");
+				$line->explain_warning(
+"Usually, a dependency should stay valid when the PKGREVISION is",
+"increased, since those changes are most often editorial. In the",
+"current form, the dependency only matches if the PKGREVISION is",
+"undefined.");
+
+			} elsif ($other eq "*") {
 				$line->log_warning("Please use ${depbase}-[0-9]* instead of ${depbase}-*.");
 				$line->explain_warning(
 					"If you use a * alone, the package specification may match other",
 					"packages that have the same prefix, but a longer name. For example,",
 					"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
 
-			} elsif ($depversion =~ qr"^\[.*\]$") {
-				if ($depversion ne "[0-9]*") {
-					$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
-				}
-
-			} elsif ($depversion !~ qr"\[" && $depversion !~ qr"\.\*$") {
-				$line->log_warning("Error-prone dependency pattern \"${depversion}\".");
-				$line->explain_warning(
-					"Instead of 3*, you should either write write 3{,nb*} or 3.* if you",
-					"meant that. Otherwise, maybe you meant \"package>=3\"?");
-
 			} else {
-				# Great.
+				$line->log_warning("Unknown dependency pattern \"${value}\".");
 			}
 
 		} elsif ($value =~ qr"\{") {
