@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.8 2007/06/15 17:47:59 drochner Exp $
+$NetBSD: patch-ae,v 1.9 2007/11/30 20:49:25 drochner Exp $
 
 Fixes cairo on 8-bit pseudo color and other 8-bit displays.
 See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 
---- src/cairo-xlib-surface-private.h.orig	2007-05-09 15:37:39.000000000 +0200
-+++ src/cairo-xlib-surface-private.h	2007-06-15 14:15:41.000000000 +0200
+--- src/cairo-xlib-surface-private.h.orig	2007-11-27 07:20:12.000000000 +0100
++++ src/cairo-xlib-surface-private.h
 @@ -39,6 +39,14 @@
  
  typedef struct _cairo_xlib_surface cairo_xlib_surface_t;
@@ -20,18 +20,30 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  struct _cairo_xlib_surface {
      cairo_surface_t base;
  
-@@ -89,6 +97,8 @@ struct _cairo_xlib_surface {
+@@ -89,6 +97,9 @@ struct _cairo_xlib_surface {
      cairo_filter_t filter;
      int repeat;
      XTransform xtransform;
 +
 +    struct clut_r3g3b2 *clut;
++    int workaround;
  };
  
  enum {
---- src/cairo-xlib-surface.c.orig	2007-06-07 19:44:01.000000000 +0200
-+++ src/cairo-xlib-surface.c	2007-06-15 14:13:26.000000000 +0200
-@@ -489,6 +489,74 @@ _swap_ximage_to_native (XImage *ximage)
+--- src/cairo-xlib-surface.c.orig	2007-11-27 07:20:12.000000000 +0100
++++ src/cairo-xlib-surface.c
+@@ -108,6 +108,10 @@ static const XTransform identity = { {
+ #define CAIRO_SURFACE_RENDER_HAS_PICTURE_TRANSFORM(surface)	CAIRO_SURFACE_RENDER_AT_LEAST((surface), 0, 6)
+ #define CAIRO_SURFACE_RENDER_HAS_FILTERS(surface)	CAIRO_SURFACE_RENDER_AT_LEAST((surface), 0, 6)
+ 
++#define WORKAROUND_NONE 0
++#define WORKAROUND_8BIT_PALETTE 1
++#define WORKAROUND_8BIT_DIRECT 2
++
+ static int
+ _CAIRO_FORMAT_DEPTH (cairo_format_t format)
+ {
+@@ -494,6 +498,74 @@ _swap_ximage_to_native (XImage *ximage)
      }
  }
  
@@ -106,11 +118,11 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _get_image_surface (cairo_xlib_surface_t    *surface,
  		    cairo_rectangle_int16_t *interest_rect,
-@@ -650,6 +718,36 @@ _get_image_surface (cairo_xlib_surface_t
+@@ -655,18 +727,77 @@ _get_image_surface (cairo_xlib_surface_t
      }
      else
      {
-+        if (surface->clut != NULL) {
++        if ((surface->clut != NULL) && (surface->workaround == WORKAROUND_8BIT_PALETTE)) {
 +	    
 +      	    /*
 +	     * Otherwise, we construct a buffer containing RGB24 data
@@ -122,7 +134,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 +
 +	    data = (uint32_t*)malloc(ximage->height * ximage->width * 4);
 +	    if (data == NULL) {
-+		printf("Cannot allocate RGB buffer\n");
++		_cairo_error(CAIRO_STATUS_NO_MEMORY);
 +		goto FAIL;
 +	    }
 +
@@ -139,11 +151,45 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 +		cairo_image_surface_create_for_data ((unsigned char *)data,
 +                   CAIRO_FORMAT_RGB24, ximage->width, ximage->height,
 +                   ximage->width*4);
-+        } else {
++        } else if (surface->workaround == WORKAROUND_8BIT_DIRECT) {
++
++	    uint32_t *data, *dst;
++	    uint8_t  *src8;
++	    int i,j;
++
++	    data = (uint32_t*)malloc(ximage->height * ximage->width * 4);
++	    if (data == NULL) {
++		_cairo_error(CAIRO_STATUS_NO_MEMORY);
++		goto FAIL;
++	    }
++
++	    src8 = (uint8_t*) ximage->data;
++	    dst = data;
++	    for (j = 0; j < ximage->height; j++) {
++		for (i = 0; i < ximage->width; i++)
++	      		    *dst++ = (src8[i] & masks.red_mask << 21) | 
++			             (src8[i] & masks.green_mask << 10 ) | 
++			             (src8[i] & masks.blue_mask );
++		 
++		src8 += ximage->bytes_per_line;
++	    }
++	    free(ximage->data);
++	    image = (cairo_image_surface_t*)
++		cairo_image_surface_create_for_data ((unsigned char *)data,
++                   CAIRO_FORMAT_RGB24, ximage->width, ximage->height,
++                   ximage->width*4);
++	}else if (surface->workaround == WORKAROUND_NONE){
  	/*
  	 * XXX This can't work.  We must convert the data to one of the
  	 * supported pixman formats.  Pixman needs another function
-@@ -662,6 +760,8 @@ _get_image_surface (cairo_xlib_surface_t
+ 	 * which takes data in an arbitrary format and converts it
+ 	 * to something supported by that library.
+ 	 */
+-	image = (cairo_image_surface_t*)
+-	    _cairo_image_surface_create_with_masks ((unsigned char *) ximage->data,
++            image = (cairo_image_surface_t*)
++	      _cairo_image_surface_create_with_masks ((unsigned char *) ximage->data,
+ 						    &masks,
  						    ximage->width,
  						    ximage->height,
  						    ximage->bytes_per_line);
@@ -152,7 +198,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  	if (image->base.status)
  	    goto FAIL;
      }
-@@ -757,6 +857,31 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
+@@ -770,6 +901,31 @@ _cairo_xlib_surface_ensure_gc (cairo_xli
      return CAIRO_STATUS_SUCCESS;
  }
  
@@ -184,7 +230,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
  static cairo_status_t
  _draw_image_surface (cairo_xlib_surface_t   *surface,
  		     cairo_image_surface_t  *image,
-@@ -769,22 +894,54 @@ _draw_image_surface (cairo_xlib_surface_
+@@ -782,22 +938,78 @@ _draw_image_surface (cairo_xlib_surface_
  {
      XImage ximage;
      unsigned int bpp, alpha, red, green, blue;
@@ -196,7 +242,7 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
      pixman_format_get_masks (pixman_image_get_format (image->pixman_image),
  			     &bpp, &alpha, &red, &green, &blue);
  
-+    if (surface->clut != NULL) {
++    if ((surface->clut != NULL) && (surface->workaround == WORKAROUND_8BIT_PALETTE)) {
 +      static unsigned char *buf = NULL;
 +      static int size = 0;
 +      int i, j;
@@ -222,8 +268,32 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
 +      depth = bpp = 8;
 +              ximage.data = data;
 +
-+    } else {
-+       ximage.data = (char *)image->data;
++    }else if (surface->workaround == WORKAROUND_8BIT_DIRECT){
++      static unsigned char *buf = NULL;
++      static int size = 0;
++      int i, j;
++      unsigned char *data;
++      uint32_t *src;
++      uint8_t *dst8;
++
++      if (_make_space_for(&buf, &size, &stride, image->width, image->height, 1))
++            return CAIRO_STATUS_NO_MEMORY;
++      data = buf;
++      src = (uint32_t*)image->data;
++      for (j=0;j<image->height;j++) {
++            dst8 = data + j * stride;
++            for (i=0;i<image->width;i++) {
++              dst8[i] = ((*src >> 16) & 0xe0) |
++                        ((*src >> 11) & 0x1c) |
++                        ((*src >> 6)  & 0x03) ;
++              src++;
++            }
++      }
++      alpha = red = green = blue = 0;
++      depth = bpp = 8;
++              ximage.data = data;
++    } else if( surface->workaround == WORKAROUND_NONE){
++      ximage.data = (char *)image->data;
 +    }
 +
      ximage.width = image->width;
@@ -242,17 +312,24 @@ See https://bugs.freedesktop.org/show_bug.cgi?id=4945
      ximage.bits_per_pixel = bpp;
      ximage.red_mask = red;
      ximage.green_mask = green;
-@@ -2029,6 +2186,13 @@ _cairo_xlib_surface_create_internal (Dis
+@@ -2043,6 +2255,20 @@ _cairo_xlib_surface_create_internal (Dis
      surface->have_clip_rects = FALSE;
      surface->clip_rects = surface->embedded_clip_rects;
      surface->num_clip_rects = 0;
 +    surface->clut = NULL;
 +
 +    if (xrender_format == NULL &&
-+       (visual->class == PseudoColor || visual->class == StaticColor)) {
++       (visual==NULL?FALSE:(visual->class == PseudoColor || visual->class == StaticColor))) {
 +        surface->clut = _get_clut_r3g3b2(dpy,
 +            DefaultColormapOfScreen(surface->screen));
-+    }
++    }else if (xrender_format == NULL &&
++	      (visual==NULL?FALSE:((visual->class == TrueColor) 
++				   && (surface->visual->red_mask == 0x07)
++				   && (surface->visual->green_mask == 0x38)
++				   && (surface->visual->blue_mask == 0xc0))))
++        surface->workaround = WORKAROUND_8BIT_DIRECT;
++    else 
++        surface->workaround = WORKAROUND_NONE;
  
      return (cairo_surface_t *) surface;
  }
