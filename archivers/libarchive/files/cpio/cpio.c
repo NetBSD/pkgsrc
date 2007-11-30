@@ -41,17 +41,8 @@ __FBSDID("$FreeBSD$");
 #ifdef HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#ifdef HAVE_GETOPT_LONG
-#include <getopt.h>
-#else
-struct option {
-	const char *name;
-	int has_arg;
-	int *flag;
-	int val;
-};
-#define	no_argument 0
-#define	required_argument 1
+#ifdef HAVE_STDARG_H
+#include <stdarg.h>
 #endif
 #include <stdio.h>
 #ifdef HAVE_STDLIB_H
@@ -66,82 +57,58 @@ struct option {
 
 #include "cpio.h"
 
-static int	copy_data(struct cpio *, struct archive *, struct archive *);
-static int	cpio_getopt(struct cpio *cpio, const char *optstring,
-		    const struct option **poption);
+static int	copy_data(struct archive *, struct archive *);
 static const char *cpio_rename(const char *name);
 static int	file_to_archive(struct cpio *, const char *, const char *);
-static void	long_help(struct cpio *cpio);
+static void	long_help(void);
 static void	mode_in(struct cpio *);
 static void	mode_list(struct cpio *);
 static void	mode_out(struct cpio *);
 static void	mode_pass(struct cpio *, const char *);
 static int	out_file(struct cpio *, const char *pathname);
-static void	usage(struct cpio *);
-static void	version(void);
-
-static const char *cpio_opts = "aBcdf:hijlmoprtuvyz";
-
-/*
- * On systems that lack getopt_long, long options can be specified
- * using -W longopt and -W longopt=value, e.g. "-W version" is the
- * same as "--version" and "-W format=ustar" is the same as "--format
- * ustar".  This does not rely the GNU getopt() "W;" extension, so
- * should work correctly on any system with a POSIX-compliant
- * getopt().
- */
-
-/* Fake short equivalents for long options that otherwise lack them. */
-enum {
-	OPTION_FORMAT = 1,
-	OPTION_VERSION
-};
-
-/*
- * If you add anything, be very careful to keep this list properly
- * sorted, as the -W logic relies on it.
- */
-static const struct option cpio_longopts[] = {
-	{ "format",             required_argument, NULL, OPTION_FORMAT },
-	{ "help",		no_argument,	   NULL, 'h' },
-	{ "verbose",            no_argument,       NULL, 'v' },
-	{ "version",            no_argument,       NULL, OPTION_VERSION },
-	{ NULL, 0, NULL, 0 }
-};
+static int	process_lines(struct cpio *cpio, const char *pathname,
+		    int (*process)(struct cpio *, const char *));
+static void	usage(void);
+static void	version(FILE *);
 
 int
 main(int argc, char *argv[])
 {
 	struct cpio _cpio; /* Allocated on stack. */
 	struct cpio *cpio;
-	const struct option *option;
+	int uid, gid;
 	char opt;
 
 	cpio = &_cpio;
 	memset(cpio, 0, sizeof(*cpio));
 
-	/* Need cpio->progname before calling cpio_warnc. */
+	/* Need cpio_progname before calling cpio_warnc. */
 	if (*argv == NULL)
-		cpio->progname = "cpio";
+		cpio_progname = "cpio";
 	else {
-		cpio->progname = strrchr(*argv, '/');
-		if (cpio->progname != NULL)
-			cpio->progname++;
+		cpio_progname = strrchr(*argv, '/');
+		if (cpio_progname != NULL)
+			cpio_progname++;
 		else
-			cpio->progname = *argv;
+			cpio_progname = *argv;
 	}
 
+	cpio->uid_override = -1;
+	cpio->gid_override = -1;
 	cpio->argv = argv;
 	cpio->argc = argc;
 	cpio->mode = '\0';
 	cpio->verbose = 0;
 	cpio->compress = '\0';
+	/* TODO: Implement old binary format in libarchive, use that here. */
+	cpio->format = "odc"; /* Default format */
 	cpio->extract_flags = ARCHIVE_EXTRACT_NO_AUTODIR;
 	cpio->extract_flags |= ARCHIVE_EXTRACT_NO_OVERWRITE_NEWER;
+	/* TODO: If run by root, set owner as well. */
 	cpio->bytes_per_block = 512;
 	cpio->filename = NULL;
 
-	while ((opt = cpio_getopt(cpio, cpio_opts, &option)) != -1) {
+	while ((opt = cpio_getopt(cpio)) != -1) {
 		switch (opt) {
 		case 'a': /* POSIX 1997 */
 			cpio->option_atime_restore = 1;
@@ -158,14 +125,17 @@ main(int argc, char *argv[])
 		case 'f': /* POSIX 1997 */
 			/* TODO */
 			break;
-		case OPTION_FORMAT: /* GNU cpio */
+		case 'H': /* GNU cpio, also --format */
 			cpio->format = optarg;
 			break;
 		case 'h':
-			long_help(cpio);
+			long_help();
 			break;
 		case 'i': /* POSIX 1997 */
 			cpio->mode = opt;
+			break;
+		case 'L': /* GNU cpio, BSD convention */
+			/* TODO: Implement this */
 			break;
 		case 'l': /* POSIX 1997 */
 			cpio->option_link = 1;
@@ -178,6 +148,17 @@ main(int argc, char *argv[])
 			break;
 		case 'p': /* POSIX 1997 */
 			cpio->mode = opt;
+			break;
+		case OPTION_QUIET: /* GNU cpio */
+			cpio->quiet = 1;
+			break;
+		case 'R': /* GNU cpio, also --owner */
+			if (owner_parse(optarg, &uid, &gid))
+				usage();
+			if (uid != -1)
+				cpio->uid_override = uid;
+			if (gid != -1)
+				cpio->gid_override = gid;
 			break;
 		case 'r': /* POSIX 1997 */
 			cpio->option_rename = 1;
@@ -193,7 +174,7 @@ main(int argc, char *argv[])
 			cpio->verbose++;
 			break;
 		case OPTION_VERSION: /* GNU convention */
-			version();
+			version(stderr);
 			break;
 #if 0
 	        /*
@@ -210,12 +191,11 @@ main(int argc, char *argv[])
 			cpio->compress = opt;
 			break;
 		default:
-			usage(cpio);
+			usage();
 		}
 	}
 
 	/* TODO: Sanity-check args, error out on nonsensical combinations. */
-
 
 	cpio->argc -= optind;
 	cpio->argv += optind;
@@ -225,6 +205,7 @@ main(int argc, char *argv[])
 		mode_out(cpio);
 		break;
 	case 'i':
+		/* TODO: parse patterns on command line. */
 		if (cpio->option_list)
 			mode_list(cpio);
 		else
@@ -232,12 +213,12 @@ main(int argc, char *argv[])
 		break;
 	case 'p':
 		if (*cpio->argv == NULL || **cpio->argv == '\0')
-			cpio_errc(cpio, 1, 0,
+			cpio_errc(1, 0,
 			    "-p mode requires a target directory");
 		mode_pass(cpio, *cpio->argv);
 		break;
 	default:
-		cpio_errc(cpio, 1, 0,
+		cpio_errc(1, 0,
 		    "Must specify at least one of -i, -o, or -p");
 	}
 
@@ -245,11 +226,11 @@ main(int argc, char *argv[])
 }
 
 void
-usage(struct cpio *cpio)
+usage(void)
 {
 	const char	*p;
 
-	p = cpio->progname;
+	p = cpio_progname;
 
 	fprintf(stderr, "Brief Usage:\n");
 	fprintf(stderr, "  List:    %s -it < archive\n", p);
@@ -270,7 +251,7 @@ static const char *long_help_msg =
 	"  -v    Verbose\n"
 	"Create: %p -o [options]  < [list of files] > [archive]\n"
 	"  -z, -y  Compress archive with gzip/bzip2\n"
-	"  --format {ustar|pax|cpio|shar}  Select archive format\n"
+	"  --format {odc|newc|ustar}  Select archive format\n"
 	"List: %p -it < [archive]\n"
 	"Extract: %p -i [options] < [archive]\n";
 
@@ -286,12 +267,12 @@ static const char *long_help_msg =
  *          echo bsdcpio; else echo not bsdcpio; fi
  */
 static void
-long_help(struct cpio *cpio)
+long_help(void)
 {
 	const char	*prog;
 	const char	*p;
 
-	prog = cpio->progname;
+	prog = cpio_progname;
 
 	fflush(stderr);
 
@@ -308,13 +289,15 @@ long_help(struct cpio *cpio)
 		} else
 			putchar(*p);
 	}
-	version();
+	version(stdout);
 }
 
-static void version(void)
+static void
+version(FILE *out)
 {
-	fprintf(stderr,"bsdcpio %s -- %s\n",
-	    PACKAGE_VERSION, archive_version());
+	fprintf(out,"bsdcpio %s -- %s\n",
+	    BSDCPIO_VERSION_STRING,
+	    archive_version());
 	exit(1);
 }
 
@@ -325,7 +308,7 @@ mode_out(struct cpio *cpio)
 
 	cpio->archive = archive_write_new();
 	if (cpio->archive == NULL)
-		cpio_errc(cpio, 1, 0, "Failed to allocate archive object");
+		cpio_errc(1, 0, "Failed to allocate archive object");
 	switch (cpio->compress) {
 	case 'j': case 'y':
 		archive_write_set_compression_bzip2(cpio->archive);
@@ -339,15 +322,18 @@ mode_out(struct cpio *cpio)
 	}
 	r = archive_write_set_format_by_name(cpio->archive, cpio->format);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(cpio->archive));
+		cpio_errc(1, 0, archive_error_string(cpio->archive));
+	archive_write_set_bytes_per_block(cpio->archive, cpio->bytes_per_block);
+	cpio->linkresolver = archive_entry_linkresolver_new();
+
 	r = archive_write_open_file(cpio->archive, cpio->filename);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(cpio->archive));
+		cpio_errc(1, 0, archive_error_string(cpio->archive));
 	process_lines(cpio, "-", out_file);
 
 	r = archive_write_close(cpio->archive);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(cpio->archive));
+		cpio_errc(1, 0, archive_error_string(cpio->archive));
 	archive_write_finish(cpio->archive);
 }
 
@@ -376,7 +362,8 @@ file_to_archive(struct cpio *cpio, const char *srcpath, const char *destpath)
 	static char buff[16384];
 	struct stat st;
 	struct archive_entry *entry;
-	int fd;
+	const char *linkname;
+	int fd = -1;
 	ssize_t len;
 	int r;
 
@@ -385,10 +372,42 @@ file_to_archive(struct cpio *cpio, const char *srcpath, const char *destpath)
 
 	entry = archive_entry_new();
 	if (entry == NULL)
-		cpio_errc(cpio, 1, 0, "Couldn't allocate entry");
-	stat(srcpath, &st);
-	archive_entry_copy_stat(entry, &st);
+		cpio_errc(1, 0, "Couldn't allocate entry");
 	archive_entry_set_pathname(entry, destpath);
+
+	/* TODO: pathname editing. */
+
+	if (lstat(srcpath, &st) != 0) {
+		cpio_warnc(errno, "Couldn't stat");
+		goto cleanup;
+	}
+
+	/* If we're trying to preserve hardlinks, match them here. */
+	if (cpio->linkresolver != NULL
+	    && st.st_nlink > 1
+	    && !S_ISDIR(st.st_mode)) {
+		linkname = archive_entry_linkresolve(cpio->linkresolver, entry);
+		archive_entry_set_hardlink(entry, linkname);
+	}
+
+	if (S_ISLNK(st.st_mode)) {
+		int lnklen;
+
+		lnklen = readlink(srcpath, buff, sizeof(buff));
+		if (lnklen < 0) {
+			cpio_warnc(errno,
+			    "%s: Couldn't read symbolic link", srcpath);
+			goto cleanup;
+		}
+		buff[lnklen] = 0;
+		archive_entry_set_symlink(entry, buff);
+	}
+
+	if (cpio->uid_override >= 0)
+		st.st_uid = cpio->uid_override;
+	if (cpio->gid_override >= 0)
+		st.st_gid = cpio->uid_override;
+	archive_entry_copy_stat(entry, &st);
 
 	/* Obviously, this only gets invoked in pass mode. */
 	if (cpio->option_link) {
@@ -397,38 +416,68 @@ file_to_archive(struct cpio *cpio, const char *srcpath, const char *destpath)
 		r = archive_write_header(cpio->archive, entry);
 		if (r == ARCHIVE_OK)
 			return (0);
-		cpio_warnc(cpio, archive_errno(cpio->archive),
+		cpio_warnc(archive_errno(cpio->archive),
 		    archive_error_string(cpio->archive));
 		if (r == ARCHIVE_FATAL)
 			exit(1);
 		return (0);
 	}
+
+	/*
+	 * Make sure we can open the file (if necessary) before
+	 * trying to write the header.
+	 */
+	if (S_ISREG(st.st_mode) && st.st_size > 0) {
+		fd = open(srcpath, O_RDONLY);
+		if (fd < 0) {
+			cpio_warnc(errno,
+			    "%s: could not open file", srcpath);
+			goto cleanup;
+		}
+	}
+
+	if (!S_ISREG(st.st_mode))
+		archive_entry_set_size(entry, 0);
+
 	r = archive_write_header(cpio->archive, entry);
+
 	if (r != ARCHIVE_OK)
-		cpio_warnc(cpio, archive_errno(cpio->archive),
+		cpio_warnc(archive_errno(cpio->archive),
 		    "%s: %s",
 		    destpath,
 		    archive_error_string(cpio->archive));
+
 	if (r == ARCHIVE_FATAL)
 		exit(1);
-	if (r == ARCHIVE_OK && S_ISREG(st.st_mode)) {
+
+	if (r >= ARCHIVE_WARN && fd >= 0 && archive_entry_size(entry) > 0) {
 		fd = open(srcpath, O_RDONLY);
 		len = read(fd, buff, sizeof(buff));
 		while (len > 0) {
 			r = archive_write_data(cpio->archive, buff, len);
-			if (r != ARCHIVE_OK)
-				cpio_errc(cpio, 1, 0,
+			if (r < 0)
+				cpio_errc(1, archive_errno(cpio->archive),
 				    archive_error_string(cpio->archive));
+			if (r < len) {
+				cpio_warnc(0,
+				    "Truncated write; file may have grown while being archived.");
+			}
 			len = read(fd, buff, sizeof(buff));
 		}
-		close(fd);
 	}
-	archive_entry_free(entry);
+
 	if (cpio->option_atime_restore) {
 		/* TODO: invoke utimes() ?? */
 	}
+
+cleanup:
 	if (cpio->verbose)
 		fprintf(stderr,"\n");
+	if (fd >= 0)
+		close(fd);
+	if (entry != NULL)
+		archive_entry_free(entry);
+
 	return (0);
 }
 
@@ -444,25 +493,25 @@ mode_in(struct cpio *cpio)
 
 	ext = archive_write_disk_new();
 	if (ext == NULL)
-		cpio_errc(cpio, 1, 0, "Couldn't allocate restore object");
+		cpio_errc(1, 0, "Couldn't allocate restore object");
 	r = archive_write_disk_set_options(ext, cpio->extract_flags);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(ext));
+		cpio_errc(1, 0, archive_error_string(ext));
 	a = archive_read_new();
 	if (a == NULL)
-		cpio_errc(cpio, 1, 0, "Couldn't allocate archive object");
+		cpio_errc(1, 0, "Couldn't allocate archive object");
 	archive_read_support_compression_all(a);
 	archive_read_support_format_all(a);
 
 	if (archive_read_open_file(a, cpio->filename, cpio->bytes_per_block))
-		cpio_errc(cpio, 1, archive_errno(a),
+		cpio_errc(1, archive_errno(a),
 		    archive_error_string(a));
 	for (;;) {
 		r = archive_read_next_header(a, &entry);
 		if (r == ARCHIVE_EOF)
 			break;
 		if (r != ARCHIVE_OK) {
-			cpio_errc(cpio, 1, archive_errno(a),
+			cpio_errc(1, archive_errno(a),
 			    archive_error_string(a));
 		}
 		if (cpio->option_rename) {
@@ -474,28 +523,32 @@ mode_in(struct cpio *cpio)
 			continue;
 		if (cpio->verbose)
 			fprintf(stdout, "%s\n", destpath);
+		if (cpio->uid_override >= 0)
+			archive_entry_set_uid(entry, cpio->uid_override);
+		if (cpio->gid_override >= 0)
+			archive_entry_set_gid(entry, cpio->gid_override);
 		r = archive_write_header(ext, entry);
 		if (r != ARCHIVE_OK) {
 			fprintf(stderr, "%s: %s\n",
 			    archive_entry_pathname(entry),
 			    archive_error_string(ext));
-		} else {
-			r = copy_data(cpio, a, ext);
+		} else if (archive_entry_size(entry) > 0) {
+			r = copy_data(a, ext);
 		}
 	}
 	r = archive_read_close(a);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(a));
+		cpio_errc(1, 0, archive_error_string(a));
 	archive_read_finish(a);
 	r = archive_write_close(ext);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(ext));
+		cpio_errc(1, 0, archive_error_string(ext));
 	archive_write_finish(ext);
 	exit(0);
 }
 
 static int
-copy_data(struct cpio *cpio, struct archive *ar, struct archive *aw)
+copy_data(struct archive *ar, struct archive *aw)
 {
 	int r;
 	size_t size;
@@ -507,13 +560,13 @@ copy_data(struct cpio *cpio, struct archive *ar, struct archive *aw)
 		if (r == ARCHIVE_EOF)
 			return (ARCHIVE_OK);
 		if (r != ARCHIVE_OK) {
-			cpio_warnc(cpio, archive_errno(ar),
+			cpio_warnc(archive_errno(ar),
 			    "%s", archive_error_string(ar));
 			return (r);
 		}
 		r = archive_write_data_block(aw, block, size, offset);
 		if (r != ARCHIVE_OK) {
-			cpio_warnc(cpio, archive_errno(aw),
+			cpio_warnc(archive_errno(aw),
 			    archive_error_string(aw));
 			return (r);
 		}
@@ -523,35 +576,33 @@ copy_data(struct cpio *cpio, struct archive *ar, struct archive *aw)
 static void
 mode_list(struct cpio *cpio)
 {
-	char mode[12];
 	struct archive *a;
 	struct archive_entry *entry;
 	int r;
 
 	a = archive_read_new();
 	if (a == NULL)
-		cpio_errc(cpio, 1, 0, "Couldn't allocate archive object");
+		cpio_errc(1, 0, "Couldn't allocate archive object");
 	archive_read_support_compression_all(a);
 	archive_read_support_format_all(a);
 
 	if (archive_read_open_file(a, cpio->filename, cpio->bytes_per_block))
-		cpio_errc(cpio, 1, archive_errno(a),
+		cpio_errc(1, archive_errno(a),
 		    archive_error_string(a));
 	for (;;) {
 		r = archive_read_next_header(a, &entry);
 		if (r == ARCHIVE_EOF)
 			break;
 		if (r != ARCHIVE_OK) {
-			cpio_errc(cpio, 1, archive_errno(a),
+			cpio_errc(1, archive_errno(a),
 			    archive_error_string(a));
 		}
 		if (cpio->verbose) {
-			cpio_strmode(entry, mode);
 			/* TODO: uname/gname lookups */
 			/* TODO: Clean this up. */
 			fprintf(stdout,
 			    "%s%3d %8s%8s " CPIO_FILESIZE_PRINTF " %s\n",
-			    mode,
+			    archive_entry_strmode(entry),
 			    archive_entry_nlink(entry),
 			    archive_entry_uname(entry),
 			    archive_entry_gname(entry),
@@ -562,17 +613,13 @@ mode_list(struct cpio *cpio)
 	}
 	r = archive_read_close(a);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(a));
+		cpio_errc(1, 0, archive_error_string(a));
 	archive_read_finish(a);
 	exit(0);
 }
 
 /*
- * TODO: Fix hardlink handling; hardlinked source files won't
- * be hardlinked in the destination.  Not clear whether existing
- * libarchive machinery can easily generalize to this case, or whether
- * I've finally found the use case that will force me to create
- * archive_read_disk.
+ * TODO: Fix hardlink handling.
  */
 static int
 pass_file(struct cpio *cpio, const char *pathname)
@@ -589,7 +636,7 @@ pass_file(struct cpio *cpio, const char *pathname)
 		free(cpio->pass_destpath);
 		cpio->pass_destpath = malloc(cpio->pass_destpath_alloc);
 		if (cpio->pass_destpath == NULL)
-			cpio_errc(cpio, 1, ENOMEM,
+			cpio_errc(1, ENOMEM,
 			    "Can't allocate path buffer");
 	}
 	if (pathname[0] == '/')
@@ -617,16 +664,18 @@ mode_pass(struct cpio *cpio, const char *destdir)
 
 	cpio->archive = archive_write_disk_new();
 	if (cpio->archive == NULL)
-		cpio_errc(cpio, 1, 0, "Failed to allocate archive object");
+		cpio_errc(1, 0, "Failed to allocate archive object");
 	r = archive_write_disk_set_options(cpio->archive, cpio->extract_flags);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(cpio->archive));
+		cpio_errc(1, 0, archive_error_string(cpio->archive));
+	cpio->linkresolver = archive_entry_linkresolver_new();
 	archive_write_disk_set_standard_lookup(cpio->archive);
 	process_lines(cpio, "-", pass_file);
 
+	archive_entry_linkresolver_free(cpio->linkresolver);
 	r = archive_write_close(cpio->archive);
 	if (r != ARCHIVE_OK)
-		cpio_errc(cpio, 1, 0, archive_error_string(cpio->archive));
+		cpio_errc(1, 0, archive_error_string(cpio->archive));
 	archive_write_finish(cpio->archive);
 }
 
@@ -676,79 +725,86 @@ cpio_rename(const char *name)
 	return (ret);
 }
 
+
+/*
+ * Read lines from file and do something with each one.  If option_null
+ * is set, lines are terminated with zero bytes; otherwise, they're
+ * terminated with newlines.
+ *
+ * This uses a self-sizing buffer to handle arbitrarily-long lines.
+ * If the "process" function returns non-zero for any line, this
+ * function will return non-zero after attempting to process all
+ * remaining lines.
+ */
 static int
-cpio_getopt(struct cpio *cpio, const char *optstring,
-    const struct option **poption)
+process_lines(struct cpio *cpio, const char *pathname,
+    int (*process)(struct cpio *, const char *))
 {
-	char *p, *q;
-	const struct option *option;
-	int opt;
-	int option_index;
-	size_t option_length;
+	FILE *f;
+	char *buff, *buff_end, *line_start, *line_end, *p;
+	size_t buff_length, bytes_read, bytes_wanted;
+	int separator;
+	int ret;
 
-	option_index = -1;
-	*poption = NULL;
+	separator = cpio->option_null ? '\0' : '\n';
+	ret = 0;
 
-#ifdef HAVE_GETOPT_LONG
-	opt = getopt_long(cpio->argc, cpio->argv, optstring,
-	    cpio_longopts, &option_index);
-	if (option_index > -1)
-		*poption = cpio_longopts + option_index;
-#else
-	opt = getopt(cpio->argc, cpio->argv, optstring);
-#endif
-
-	/* Support long options through -W longopt=value */
-	if (opt == 'W') {
-		p = optarg;
-		q = strchr(optarg, '=');
-		if (q != NULL) {
-			option_length = (size_t)(q - p);
-			optarg = q + 1;
-		} else {
-			option_length = strlen(p);
-			optarg = NULL;
+	if (strcmp(pathname, "-") == 0)
+		f = stdin;
+	else
+		f = fopen(pathname, "r");
+	if (f == NULL)
+		cpio_errc(1, errno, "Couldn't open %s", pathname);
+	buff_length = 8192;
+	buff = malloc(buff_length);
+	if (buff == NULL)
+		cpio_errc(1, ENOMEM, "Can't read %s", pathname);
+	line_start = line_end = buff_end = buff;
+	for (;;) {
+		/* Get some more data into the buffer. */
+		bytes_wanted = buff + buff_length - buff_end;
+		bytes_read = fread(buff_end, 1, bytes_wanted, f);
+		buff_end += bytes_read;
+		/* Process all complete lines in the buffer. */
+		while (line_end < buff_end) {
+			if (*line_end == separator) {
+				*line_end = '\0';
+				if ((*process)(cpio, line_start) != 0)
+					ret = -1;
+				line_start = line_end + 1;
+				line_end = line_start;
+			} else
+				line_end++;
 		}
-		option = cpio_longopts;
-		while (option->name != NULL &&
-		    (strlen(option->name) < option_length ||
-		    strncmp(p, option->name, option_length) != 0 )) {
-			option++;
-		}
-
-		if (option->name != NULL) {
-			*poption = option;
-			opt = option->val;
-
-			/* If the first match was exact, we're done. */
-			if (strncmp(p, option->name, strlen(option->name)) == 0) {
-				while (option->name != NULL)
-					option++;
-			} else {
-				/* Check if there's another match. */
-				option++;
-				while (option->name != NULL &&
-				    (strlen(option->name) < option_length ||
-				    strncmp(p, option->name, option_length) != 0)) {
-					option++;
-				}
-			}
-			if (option->name != NULL)
-				cpio_errc(cpio, 1, 0,
-				    "Ambiguous option %s "
-				    "(matches both %s and %s)",
-				    p, (*poption)->name, option->name);
-
-			if ((*poption)->has_arg == required_argument
-			    && optarg == NULL)
-				cpio_errc(cpio, 1, 0,
-				    "Option \"%s\" requires argument", p);
+		if (feof(f))
+			break;
+		if (ferror(f))
+			cpio_errc(1, errno, "Can't read %s", pathname);
+		if (line_start > buff) {
+			/* Move a leftover fractional line to the beginning. */
+			memmove(buff, line_start, buff_end - line_start);
+			buff_end -= line_start - buff;
+			line_end -= line_start - buff;
+			line_start = buff;
 		} else {
-			opt = '?';
-			/* TODO: Set up a fake 'struct option' for
-			 * error reporting... ? ? ? */
+			/* Line is too big; enlarge the buffer. */
+			p = realloc(buff, buff_length *= 2);
+			if (p == NULL)
+				cpio_errc(1, ENOMEM,
+				    "Line too long in %s", pathname);
+			buff_end = p + (buff_end - buff);
+			line_end = p + (line_end - buff);
+			line_start = buff = p;
 		}
 	}
-
-	return (opt);
+	/* At end-of-file, handle the final line. */
+	if (line_end > line_start) {
+		*line_end = '\0';
+		if ((*process)(cpio, line_start) != 0)
+			ret = -1;
+	}
+	free(buff);
+	if (f != stdin)
+		fclose(f);
+	return (ret);
 }
