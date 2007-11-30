@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2526 2007/11/30 11:21:18 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2527 2007/11/30 12:02:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4605,3 +4605,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/netbsd-iscsi-initiator to 20071130 [agc 2007-11-30]
 	Updated devel/netbsd-iscsi-target to 20071130 [agc 2007-11-30]
 	Updated games/tileworld to 1.3.0 [wiz 2007-11-30]
+	Updated x11/xf86-video-radeonhd to 1.0.0 [joerg 2007-11-30]
