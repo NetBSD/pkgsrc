@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2537 2007/11/30 17:22:44 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2538 2007/11/30 17:51:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4643,3 +4643,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/goffice0.5 to 0.5.3 [wiz 2007-11-30]
 	Updated math/gnumeric-current to 1.7.90 [wiz 2007-11-30]
 	Updated security/caff to 0.4.13 [wiz 2007-11-30]
+	Updated audio/libao to 0.8.8 [wiz 2007-11-30]
+	Updated audio/libao-arts to 0.8.8 [wiz 2007-11-30]
+	Updated audio/libao-esound to 0.8.8 [wiz 2007-11-30]
+	Updated audio/libao-macosx to 0.8.8 [wiz 2007-11-30]
+	Updated audio/libao-oss to 0.8.8 [wiz 2007-11-30]
+	Updated audio/libao-sun to 0.8.8 [wiz 2007-11-30]
