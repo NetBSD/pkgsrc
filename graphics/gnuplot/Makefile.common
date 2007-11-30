@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.10 2007/11/30 07:13:18 cjs Exp $
-#
+# $NetBSD: Makefile.common,v 1.11 2007/11/30 12:31:52 tron Exp $
 
 DISTNAME=		gnuplot-4.2.2
+PKGREVISION=		1
 CATEGORIES+=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnuplot/} \
 			ftp://ftp.ucc.ie/pub/gnuplot/ \
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--enable-history-file
 CONFIGURE_ARGS+=	--with-plot=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CONFIGURE_ARGS+=	--without-lisp-files
+CONFIGURE_ARGS+=	--without-tutorial
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
