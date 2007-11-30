@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6865 2007/11/30 18:30:49 wiz Exp $
+$NetBSD: TODO,v 1.6866 2007/11/30 22:45:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -214,7 +214,6 @@ Suggested package updates
 
 	o 9base-20060125
 	o CSP-0.34
-	o Cenon-3.82
 	o Chinput-3.0.1
 	o Coin-2.4.5
 	o DatLib-2.22
@@ -488,7 +487,6 @@ Suggested package updates
 	o fluidsynth-1.0.8
 	o fmsx-3.0
 	o fondu-040927
-	o fontconfig-2.5.0
 	o fop-0.20.5
 	o fox-1.6.30
 	o freeciv-2.1.1
@@ -519,7 +517,6 @@ Suggested package updates
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
-	o gdm-2.20.2
 	o gdsreader-0.3.2
 	o geany-0.12
 	o geda-1.2.0.20070902
@@ -698,7 +695,6 @@ Suggested package updates
 	o libXrender-0.9.4
 	o libXtst-1.0.3
 	o libXxf86dga-1.0.2
-	o libarchive-2.4.0
 	o libast-0.7
 	o libcdio-0.79
 	o libchewing-0.3.0
@@ -842,7 +838,6 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openexr-1.6.1
 	o openh323-1.19.1
 	o openldap-client-2.4.6
 	o openmortal-0.7.1
@@ -1000,7 +995,6 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.11.3
 	o pircbot-1.4.4
-	o pkg-config-0.22
 	o pkg_select-20051209
 	o pload-0.9.5
 	o plone-2.5.3
