@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/30 21:32:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/30 21:54:06 joerg Exp $
 #
 
 DISTNAME=	bsdtar-2.4.0
@@ -22,9 +22,6 @@ GNU_CONFIGURE=	yes
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
-
-USE_BUILTIN.bzip2=no
-USE_BUILTIN.zlib=no
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/bzip2
