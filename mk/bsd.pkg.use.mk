@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.44 2007/10/17 10:43:37 rillig Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.45 2007/11/30 08:27:51 rillig Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -9,6 +9,14 @@
 #	Should be set to "yes" whenever a package uses a BSD-style
 #	Makefile. These Makefiles typically end with a line including
 #	<bsd.prog.mk>.
+
+# USE_IMAKE
+#	When set to "yes", means that the package uses imake as the
+#	primary (and often only) build system. This is different from
+#	USE_TOOLS+=imake, which only states that the package uses imake
+#	among other tools.
+#
+#	Keywords: imake
 #
 
 .if defined(USE_BSD_MAKEFILE)
