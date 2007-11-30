@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.42 2007/10/05 22:09:09 rillig Exp $
+# $NetBSD: sunpro.mk,v 1.43 2007/11/30 16:55:28 rhaen Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -51,8 +51,16 @@ PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 
 # Turn on C99 support if required
 # XXX: What if a package needs both -- a c89 and a c99 compiler?
+#
+# Solaris SunPro Compiler 11/12 fails on Solaris 8/9 with -xc99
+# The header files supplied by the OS are not c99 aware, the
+# manpage suggests the setting: -xc99=all,no_lib
+# See PR 37200
 .if !empty(USE_LANGUAGES:Mc99)
 _WRAP_EXTRA_ARGS.CC+=	-xc99
+. if !empty(MACHINE_PLATFORM:MSunOS-5.[89]-*)
+_WRAP_EXTRA_ARGS.CC+=   -xc99=all,no_lib
+. endif
 .endif
 
 # The Solaris linker uses "-R" for rpath directives.
