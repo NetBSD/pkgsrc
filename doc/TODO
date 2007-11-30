@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6863 2007/11/29 15:53:59 taca Exp $
+$NetBSD: TODO,v 1.6864 2007/11/30 13:57:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -278,7 +278,6 @@ Suggested package updates
 	o alee-ttf-11.2
 	o algae-4.3.6
 	o aliados-0.2.0
-	o allegro-4.2.2
 	o amanda-2.5.2p1
 	o amanda-client-2.5.0
 	o amanda-common-2.5.0
@@ -318,7 +317,6 @@ Suggested package updates
 	o asapm-3.1
 	o asc-2.0.0
 	o ascii-3.8
-	o asciidoc-8.2.4
 	o aspell-danish-1.6.10
 	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
@@ -339,7 +337,6 @@ Suggested package updates
 	o balance-3.35
 	o balsa-2.4.16
 	o base64-1.4
-	o bazaar-0.92
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -362,16 +359,13 @@ Suggested package updates
 	o botan-1.6.3
 	o btpd-0.12
 	o bug-buddy-2.20.1
-	o bzr-0.92
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o caff-0.4.13
-	o cairo-1.4.12
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o cddb-1.5.2
 	o cddbd-1.5.2
 	o cdlabelgen-4.0.0
 	o cfengine2-2.2.2
@@ -421,9 +415,7 @@ Suggested package updates
 	o dctc-0.85.9
 	o dd_rescue-1.14
 	o ddclient-3.7.3
-	o dd_rescue-1.13
 	o defendguin-0.0.11
-	o dejavu-ttf-2.21
 	o delegate-9.7.5
 	o deskbar-applet-2.20.2
 	o devIL-1.6.7
@@ -482,7 +474,6 @@ Suggested package updates
 	o evolution-exchange-2.12.2
 	o evolution-webcal-2.12.0
 	o ex-20050325
-	o ezmlm-idx-5.1.2 [schmonz]
 	o ezmlm-idx-6.0.1 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
@@ -518,7 +509,6 @@ Suggested package updates
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
-	o gaim-icb-20070203
 	o galculator-1.3.1
 	o gap-4r4p9
 	o gated-3.6
@@ -532,7 +522,6 @@ Suggested package updates
 	o gconf-editor-2.18.2
 	o gcpio-2.7
 	o gdal-1.4.3
-	o gdb-6.7
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
@@ -669,7 +658,6 @@ Suggested package updates
 	o imapsync-1.217
 	o instiki-0.11pl1
 	o intercal-0.24
-	o ion3-devel-20070927
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
@@ -750,10 +738,7 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.20.0
-	o libgpod-0.6.0
 	o libhydrogen-0.9.2
-	o libiconv-1.12
-	o libidn-1.2
 	o libjit-0.1.0
 	o liblive-2007.02.20
 	o liblzo-2.02
@@ -768,7 +753,6 @@ Suggested package updates
 	o libprelude-0.9.16.1
 	o libpreludedb-0.9.13
 	o libshout-2.2.2
-	o libsigsegv-2.5 [pkg/37440]
 	o libsoup-2.2.102
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -778,11 +762,9 @@ Suggested package updates
 	o libxklavier-3.3
 	o libxml++2-2.20.0
 	o licq-1.3.5
-	o licq-core-1.3.0
 	o lilypond-2.10.20
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
-	o liquidwar-5.6.4
 	o lmms-0.2.1
 	o lout-3.31
 	o lpairs-1.0.3
@@ -804,13 +786,11 @@ Suggested package updates
 	o maradns-1.2.12.08
 	o matchbox-panel-0.9.3
 	o mcrypt-2.6.6
-	o mednafen-0.8.5
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
-	o micq-0.5.4.2
 	o minivmac-3.0.4
 	o mirmon-1.37
 	o mk-files-20061230
@@ -848,7 +828,6 @@ Suggested package updates
 	o nelma-3.1
 	o neon-0.27.2
 	o nessus-3.0.4
-	o nessus-core-2.3.1
 	o netcdf-3.6.2
 	o netperf-2.4.1
 	o netpipe-3.6.2
@@ -869,8 +848,7 @@ Suggested package updates
 	o nslint-2.1a7
 	o nss-3.11.7
 	o nss_ldap-255
-	o ntp-4.2.4p3
-	o ntp4-4.2.4
+	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
 	o nut-12.0 [pkg/34466]
@@ -886,13 +864,12 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o opencdk-0.6.6
 	o openexr-1.6.1
 	o openh323-1.19.1
 	o openldap-client-2.4.6
 	o openmortal-0.7.1
 	o openmotif-2.3
-	o openssl-0.9.8e (in wip/)
+	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
 	o orca-2.20.2
 	o oregano-0.60.0
@@ -917,14 +894,12 @@ Suggested package updates
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Inspector-1.18
 	o p5-Class-ReturnValue-0.55
-	o p5-Class-Singleton-1.4
 	o p5-Clone-0.28
 	o p5-Compress-Raw-Zlib-2.008
 	o p5-Compress-Zlib-2.008
 	o p5-Config-General-2.36
 	o p5-Config-Tiny-2.12
 	o p5-Crypt-CBC-2.22
-	o p5-Crypt-SSLeay-0.57
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
@@ -932,18 +907,12 @@ Suggested package updates
 	o p5-DBIx-SearchBuilder-1.50
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
-	o p5-DateTime-Format-Mail-0.3001
-	o p5-DateTime-TimeZone-0.6904
 	o p5-Devel-Profile-1.05
 	o p5-Devel-Symdump-2.0800
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Error-0.17010
-	o p5-ExtUtils-CBuilder-0.21
-	o p5-File-MimeInfo-0.14
-	o p5-File-Remove-0.39
-	o p5-File-Temp-0.19
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -966,10 +935,7 @@ Suggested package updates
 	o p5-Locale-Maketext-Fuzzy-0.10
 	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.425
-	o p5-MP3-Info-1.22
 	o p5-Mail-SpamAssassin-3.2.2
-	o p5-Mail-Webmail-Gmail-1.09
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Refresh-0.13
@@ -992,13 +958,11 @@ Suggested package updates
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
 	o p5-Spreadsheet-WriteExcel-2.20
-	o p5-Storable-2.18
 	o p5-Sub-Uplevel-0.18
 	o p5-Term-Size-0.203
 	o p5-Test-File-Contents-0.05
 	o p5-Test-Harness-2.64
 	o p5-Test-Inline-2.207
-	o p5-Test-Manifest-1.22
 	o p5-Test-NoWarnings-0.083
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
@@ -1013,13 +977,9 @@ Suggested package updates
 	o p5-Tree-Simple-1.18
 	o p5-WWW-Mechanize-1.32
 	o p5-Want-0.15
-	o p5-XML-Atom-0.28
-	o p5-XML-LibXML-1.65
 	o p5-XML-LibXSLT-1.63
-	o p5-XML-Parser-2.36
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
-	o p5-YAML-0.66
 	o p5-glib2-1.160
 	o p5-gtk2-1.160
 	o p5-ispman-1.2
@@ -1163,8 +1123,6 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
-	o quagga-0.99.9
-	o quagga-devel-0.99.6
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
@@ -1236,7 +1194,6 @@ Suggested package updates
 	o skampi-5.0.1
 	o skkinput-2.06.4
 	o skype-2.0.0.13
-	o slib-3a5
 	o smalleiffel-0.90
 	o smalltalk-2.3.6
 	o smlnj-110.59 [pkgsrc-wip]
@@ -1284,11 +1241,9 @@ Suggested package updates
 	o tea-17.4.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o tesseract-2.01
 	o texmaker-1.6
 	o tfmxplay-1.1.6
 	o tile-0.7.4
-	o tileworld-1.3.0
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.1
@@ -1392,7 +1347,6 @@ Suggested package updates
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
-	o xmms-1.2.11
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
