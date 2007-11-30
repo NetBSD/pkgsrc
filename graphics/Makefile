@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2007/11/22 21:04:21 drochner Exp $
+# $NetBSD: Makefile,v 1.473 2007/11/30 21:50:50 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -146,6 +146,7 @@ SUBDIR+=	hicolor-icon-theme
 SUBDIR+=	hp2xx
 SUBDIR+=	iGMT
 SUBDIR+=	icon-naming-utils
+SUBDIR+=	ilmbase
 SUBDIR+=	imlib
 SUBDIR+=	imlib2
 SUBDIR+=	impress
