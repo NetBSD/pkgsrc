@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/30 07:13:18 cjs Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/11/30 12:31:52 tron Exp $
 bin/gnuplot
 info/gnuplot.info
 lib/X11/app-defaults/Gnuplot.app-defaults
@@ -15,6 +15,7 @@ share/gnuplot/4.2/PostScript/koi8r.ps
 share/gnuplot/4.2/PostScript/koi8u.ps
 share/gnuplot/4.2/PostScript/prologue.ps
 share/gnuplot/4.2/gnuplot.gih
+@dirrm share/gnuplot/4.2/PostScript
 @dirrm share/gnuplot/4.2
 @dirrm share/gnuplot
 @dirrm libexec/gnuplot/4.2
