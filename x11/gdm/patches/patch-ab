@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.16 2006/07/26 12:36:12 drochner Exp $
+$NetBSD: patch-ab,v 1.17 2007/11/30 20:08:38 drochner Exp $
 
---- daemon/gdmconfig.c.orig	2006-05-12 07:58:21.000000000 +0200
-+++ daemon/gdmconfig.c
-@@ -38,7 +38,7 @@
- #include <ctype.h>
+--- ./daemon/gdm-daemon-config.c.orig	2007-09-28 17:00:37.000000000 +0200
++++ ./daemon/gdm-daemon-config.c
+@@ -40,7 +40,7 @@
  #include <fcntl.h>
+ #include <string.h>
  #include <sys/types.h>
 -#include <sys/resource.h>
 +#include <sys/time.h>
