@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2535 2007/11/30 17:13:03 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2536 2007/11/30 17:17:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4641,3 +4641,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/gail to 1.20.2 [drochner 2007-11-30]
 	Updated x11/gtk2 to 2.12.2 [drochner 2007-11-30]
 	Updated misc/goffice0.5 to 0.5.3 [wiz 2007-11-30]
+	Updated math/gnumeric-current to 1.7.90 [wiz 2007-11-30]
