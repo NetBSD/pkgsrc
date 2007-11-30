@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2007/11/30 21:55:09 wiz Exp $
 #
 
 DISTNAME=		kmemaid-0.4.7.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=memaid/}
 EXTRACT_SUFX=		.tar.bz2
