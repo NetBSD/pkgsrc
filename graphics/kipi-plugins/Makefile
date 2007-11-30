@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/10/05 22:51:05 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2007/11/30 21:55:07 wiz Exp $
 
 DISTNAME=	kipi-plugins-0.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
