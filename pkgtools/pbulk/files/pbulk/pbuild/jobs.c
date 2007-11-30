@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.6 2007/11/28 11:34:20 rillig Exp $ */
+/* $NetBSD: jobs.c,v 1.7 2007/11/30 17:31:38 rillig Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -353,7 +353,7 @@ build_tree(void)
 					break;
 			}
 			if (iter == NULL)
-				errx(1, "Dependency doesn't exist");
+				errx(1, "Dependency `%.*s' doesn't exist", (int)strcspn(depends, " \t\n"), depends);
 
 			dep = xmalloc(sizeof(*dep));
 			dep->dependency = job;
