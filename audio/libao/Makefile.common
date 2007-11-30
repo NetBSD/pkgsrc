@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.28 2006/12/19 01:18:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.29 2007/11/30 17:50:30 wiz Exp $
 
-DISTNAME=	libao-0.8.6
+DISTNAME=	libao-0.8.8
 CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
