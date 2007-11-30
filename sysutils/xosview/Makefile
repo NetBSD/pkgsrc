@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2007/09/29 12:04:39 obache Exp $
+# $NetBSD: Makefile,v 1.65 2007/11/30 19:32:55 rillig Exp $
 
 DISTNAME=	xosview-1.8.3
 PKGREVISION=	1
@@ -36,6 +36,13 @@ CPPFLAGS+=	-I${X11BASE:Q}/include
 LIBS+=		-lsocket -lnsl
 .elif ${OPSYS} == "Linux"
 USE_TOOLS+=	gmake
+.endif
+
+.if ${UNPRIVILEGED:M[Yy][Ee][Ss]} != ""
+SUBST_CLASSES+=		unpriv
+SUBST_STAGE.unpriv=	pre-configure
+SUBST_FILES.unpriv=	config/Makefile.top.in
+SUBST_SED.unpriv=	-e s,@INSTALL_ARGS@,,
 .endif
 
 SUBST_CLASSES+=		paths
