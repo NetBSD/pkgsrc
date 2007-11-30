@@ -18,7 +18,8 @@ struct package_conflict {
 };
 
 static void *
-nonnull(void *p) {
+nonnull(void *p)
+{
 
 	if (p == NULL) {
 		err(EXIT_FAILURE, "NullPointerException");
@@ -44,7 +45,8 @@ fopen_contents(const char *pkgname, const char *mode)
 
 
 static int
-check_package_conflict(const char *pkgname, void *v) {
+check_package_conflict(const char *pkgname, void *v)
+{
 	struct package_conflict *conflict = v;
 	package_t pkg;
 	plist_t *p;
