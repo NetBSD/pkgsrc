@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2007/11/03 15:39:05 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2007/11/30 13:27:50 rillig Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.20.0
@@ -20,6 +20,7 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 
 BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.5
+BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils-0.8.2{,nb*}
 HICOLOR_ICON_THEME_DEPEND_ONLY=		yes
 
 # XXX this is used by applications. We "own" the subtree share/icons/gnome,
