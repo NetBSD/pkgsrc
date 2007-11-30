@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.1 2007/10/21 14:01:16 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2007/11/30 22:12:08 wiz Exp $
 
 Don't call gnome-config, it has been dead for ages and the warnings
 just confuse users.
 
---- parse.c.orig	2006-08-16 20:45:45.000000000 +0200
+--- parse.c.orig	2007-06-18 21:35:05.000000000 +0000
 +++ parse.c
-@@ -1396,102 +1396,8 @@ get_compat_package (const char *name)
+@@ -1418,102 +1418,8 @@ get_compat_package (const char *name)
      }
    else
      {

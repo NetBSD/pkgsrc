@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/10/21 14:01:16 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/11/30 22:12:07 wiz Exp $
 #
 
-DISTNAME=	pkg-config-0.21
-PKGREVISION=	2
+DISTNAME=	pkg-config-0.22
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
