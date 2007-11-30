@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2522 2007/11/30 09:11:49 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2523 2007/11/30 10:01:39 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4600,4 +4600,3 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/asciidoc to 8.2.5 [wiz 2007-11-29]
 	Updated emulators/mednafen to 0.8.5 [wiz 2007-11-29]
 	Updated devel/allegro to 4.2.2 [wiz 2007-11-29]
-	Updated www/links to 2.1.0.31nb1 [bjs 2007-11-30]
