@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:48:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/01 03:56:44 rillig Exp $
 Acrobat4/Resource/CMap/83pv-RKSJ-H
 Acrobat4/Resource/CMap/90ms-RKSJ-H
 Acrobat4/Resource/CMap/90ms-RKSJ-UCS2
@@ -110,5 +110,7 @@ Acrobat4/Resource/Encoding/FontProp-SChinese.dat
 Acrobat4/Resource/Encoding/FontProp-TChinese.dat
 @dirrm Acrobat4/Resource/Encoding
 @dirrm Acrobat4/Resource/CMap
-@exec ${MKDIR} %D/Acrobat4/Resource/CIDFont; ${CHOWN} ${SHAREOWN}:${SHAREGRP} %D/Acrobat4/Resource/CIDFont; ${CHMOD} ${SHAREMODE} %D/Acrobat4/Resource/CIDFont
+@exec ${MKDIR} %D/Acrobat4/Resource/CIDFont
+@exec ${CHOWN} ${SHAREOWN}:${SHAREGRP} %D/Acrobat4/Resource/CIDFont
+@exec ${CHMOD} ${PKGDIRMODE} %D/Acrobat4/Resource/CIDFont
 @dirrm Acrobat4/Resource/CIDFont
