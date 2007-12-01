@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2006/03/01 22:49:07 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2007/12/01 13:03:27 rillig Exp $
 
---- tcpdpriv.c.orig	2000-04-18 07:59:19.000000000 +0000
-+++ tcpdpriv.c
+--- tcpdpriv.c.orig	2000-04-18 09:59:19.000000000 +0200
++++ tcpdpriv.c	2007-12-01 14:02:20.000000000 +0100
 @@ -90,7 +90,7 @@
  #include <arpa/nameser.h>
  #endif
@@ -22,6 +22,18 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 22:49:07 wiz Exp $
  /*
   * deal with systems in which bpf_int32 and bpf_u_int32 are not defined
   */
+@@ -2491,10 +2495,10 @@ dlt_hdrlen(int dlt)
+     }
+ }
+ 
++static void usage(char *cmd);
+ static void
+ verify_and_print_args(char *cmd)
+ {
+-    static void usage(char *cmd);
+ 
+     lookup_init(&addr_propagate);
+ 
 @@ -2759,7 +2763,7 @@ usage(char *cmd)
  int
  main(int argc, char *argv[], char *envp[])
