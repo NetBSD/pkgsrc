@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6868 2007/12/01 14:20:24 tonio Exp $
+$NetBSD: TODO,v 1.6869 2007/12/01 20:39:38 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,6 @@ Suggested package updates
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-2.4.0
-	o py-urwid-0.9.7.2
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
