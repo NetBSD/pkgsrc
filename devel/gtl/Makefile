@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/12/01 11:16:44 rillig Exp $
 
 DISTNAME=		GTL-1.2.1
 PKGNAME=		gtl-1.2.1
@@ -25,10 +25,22 @@ DOCDIR=		${PREFIX}/share/doc/GTL
 
 INTERACTIVE_STAGE=	fetch
 
-FETCH_MESSAGE=								\
-	"Follow the instructions at:"					\
-	"    http://www.infosun.fmi.uni-passau.de/GTL/register.html"	\
-	"to download the distfile."
+FETCH_MESSAGE= \
+"With the release of version 1.0.0 the download policy of GTL has been" \
+"changed. GTL can be downloaded free of charge for non-commercial use." \
+"Please follow the steps below to get access to the download archive:" \
+"" \
+"Send an email to gtl-download@infosun.fmi.uni-passau.de containing the" \
+"following information:" \
+"- Your Name" \
+"- Your Affiliation" \
+"- And your email address. Please use your academic address, e.g. .edu," \
+"  if you have. Otherwise your are classified as a \"commercial\" user." \
+"As soon as possible you will receive an answer from the GTL Team" \
+"containing the access code to the download page." \
+"" \
+"If you intend to use GTL commercially please send an email to" \
+"brandenb@fmi.uni-passau.de."
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
