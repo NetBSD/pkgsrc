@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/02/27 13:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/01 23:00:03 adrianp Exp $
 
 DISTNAME=	xmltv-0.5.45
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,6 +46,7 @@ DEPENDS+=	p5-Unicode-UTF8simple-[0-9]*:../../converters/p5-Unicode-UTF8simple
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/XMLTV/.packlist
+USE_TOOLS+=	perl
 
 MAKE_PARAMS+=	PREFIX=${PREFIX:Q}
 PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
