@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6866 2007/11/30 22:45:16 wiz Exp $
+$NetBSD: TODO,v 1.6867 2007/12/01 06:37:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -480,6 +480,7 @@ Suggested package updates
 	o fetchyahoo-2.11.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
+	o firefox-2.0.0.11
 	o firefox-bin-flash-9.0.64.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
@@ -1166,6 +1167,7 @@ Suggested package updates
 	o snd-9.5
 	o snes9x-1.51
 	o snobol-1.1
+	o snort-2.8.0.1
 	o solfege-3.8.2
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
