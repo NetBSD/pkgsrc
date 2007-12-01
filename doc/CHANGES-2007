@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2556 2007/12/01 21:23:00 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.2557 2007/12/01 21:44:34 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4671,3 +4671,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/mpop to 1.0.12 [reed 2007-12-01]
 	Updated devel/py-urwid to 0.9.8.1 [tonio 2007-12-01]
 	Updated wm/ratpoison to 1.4.2 [tonio 2007-12-01]
+	Updated www/firefox to 2.0.0.11 [ghen 2007-12-01]
+	Updated www/firefox-bin to 2.0.0.11 [ghen 2007-12-01]
+	Updated www/firefox-gtk1 to 2.0.0.11 [ghen 2007-12-01]
