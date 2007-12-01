@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2007/11/30 23:55:39 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2007/12/01 14:07:30 rillig Exp $
 
-Added experimental code to support mounting on NetBSD >= 4.99. The magic
-value of 256 is taken from coda_vfsops in coda_vfsops.c.
+Added experimental code to support mounting on NetBSD >= 4.99.23. The
+magic value of 256 is taken from coda_vfsops in coda_vfsops.c.
 
 --- coda-src/venus/worker.cc.orig	2007-08-01 18:32:29.000000000 +0000
 +++ coda-src/venus/worker.cc	2007-11-30 23:12:18.000000000 +0000
@@ -11,7 +11,7 @@ value of 256 is taken from coda_vfsops in coda_vfsops.c.
  #endif
 -			
 +
-+#if defined(__NetBSD__) && defined(__NetBSD_Prereq__) && __NetBSD_Prereq__(4,99,0)
++#if defined(__NetBSD__) && defined(__NetBSD_Prereq__) && __NetBSD_Prereq__(4,99,23)
 +	if (error < 0)
 +	    error = mount("coda", venusRoot, 0, kernDevice, 256);
 +	if (error < 0)
