@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
+$NetBSD: patch-aa,v 1.6 2007/12/01 13:05:37 tonio Exp $
 
---- Makefile.orig	2007-02-07 13:21:01.000000000 +0100
+--- Makefile.orig	Thu Oct 11 15:44:00 2007
 +++ Makefile
-@@ -697,22 +697,22 @@ install-coqide:: install-ide-$(HASCOQIDE
+@@ -690,22 +690,22 @@ install-coqide:: install-ide-$(HASCOQIDE
  install-ide-no:
  
  install-ide-byte: 
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
  
  ###########################################################################
  # Pcoq: special binaries for debugging (coq-interface, parser)
-@@ -782,18 +782,18 @@ clean::
+@@ -775,18 +775,18 @@ clean::
  install-pcoq:: install-pcoq-binaries install-pcoq-files install-pcoq-manpages
  
  install-pcoq-binaries::
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
  
  ###########################################################################
  # tests
-@@ -1248,21 +1248,21 @@ install-coqlight: install-binaries insta
+@@ -1244,22 +1244,21 @@ install-coqlight: install-binaries insta
  install-binaries:: install-$(BEST) install-tools
  
  install-byte::
@@ -79,6 +79,7 @@ $NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
 -	$(MKDIR) $(FULLBINDIR)
  	# recopie des fichiers de style pour coqide
 -	$(MKDIR) $(FULLCOQLIB)/tools/coqdoc
+-	touch $(FULLCOQLIB)/tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc/coqdoc.css # to have the mode according to umask (bug #1715)
 -	cp tools/coqdoc/coqdoc.css tools/coqdoc/coqdoc.sty $(FULLCOQLIB)/tools/coqdoc
 -	cp $(TOOLS) $(FULLBINDIR)
 +	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
@@ -88,7 +89,7 @@ $NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
  
  LIBFILES=$(THEORIESVO) $(CONTRIBVO)
  LIBFILESLIGHT=$(THEORIESLIGHTVO)
-@@ -1275,52 +1275,55 @@ OBJECTCMA=lib/lib.cma kernel/kernel.cma 
+@@ -1272,52 +1271,55 @@ OBJECTCMA=lib/lib.cma kernel/kernel.cma 
  OBJECTCMXA=$(OBJECTCMA:.cma=.cmxa)
  
  install-library:
@@ -165,3 +166,12 @@ $NetBSD: patch-aa,v 1.5 2007/02/25 15:03:52 tonio Exp $
  #	-$(UPDATETEX)
  
  ###########################################################################
+@@ -1758,7 +1760,7 @@ depend: dependp4 ml4filesml $(BEFOREDEPE
+ 	for f in $(ML4FILES); do \
+ 	  bn=`dirname $$f`/`basename $$f .ml4`; \
+ 	  deps=`$(CAMLP4DEPS) $$f`; \
+-	  if [[ $${deps} != "" ]]; then \
++	  if [ "$${deps}" != "" ]; then \
+ 	    /bin/mv -f .depend .depend.tmp; \
+ 	    sed -e "\|^$${bn}.cmo|s|^$${bn}.cmo: \(.*\)$$|$${bn}.cmo: $${deps} \1|" \
+ 	        -e "\|^$${bn}.cmx|s|^$${bn}.cmx: \(.*\)$$|$${bn}.cmx: $${deps} \1|" \
