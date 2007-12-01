@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.14 2007/11/30 18:54:40 rillig Exp $
+# $NetBSD: build.mk,v 1.15 2007/12/01 11:11:54 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -125,8 +125,7 @@ build-check-interactive:
 	@${ERROR_MSG} "The build stage of this package requires user interaction"
 	@${ERROR_MSG} "Please build manually with:"
 	@${ERROR_MSG} "    \"cd ${.CURDIR} && ${MAKE} build\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
+	${RUN} ${FALSE}
 .else
 	@${DO_NADA}
 .endif
