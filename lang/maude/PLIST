@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/01 13:15:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/01 13:17:56 rillig Exp $
 bin/maude
-share/examples/maude/linear.maude
-share/examples/maude/machine-int.maude
-share/examples/maude/model-checker.maude
-share/examples/maude/model-checker.maude
-share/examples/maude/prelude.maude
-share/examples/maude/prelude.maude
-share/examples/maude/socket.maude
-share/examples/maude/term-order.maude
-@dirrm share/examples/maude
+share/maude/linear.maude
+share/maude/machine-int.maude
+share/maude/model-checker.maude
+share/maude/model-checker.maude
+share/maude/prelude.maude
+share/maude/prelude.maude
+share/maude/socket.maude
+share/maude/term-order.maude
+@dirrm share/maude
