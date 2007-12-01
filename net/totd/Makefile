@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.25 2007/04/04 17:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2007/12/01 13:20:51 rillig Exp $
 #
 
 DISTNAME=	totd-1.5.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
+MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/totd/
 
 MAINTAINER=	feico@pasta.cs.uit.no
-HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
+HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/software/totd.html
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
 
 GNU_CONFIGURE=	yes
