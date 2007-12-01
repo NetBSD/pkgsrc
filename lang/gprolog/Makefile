@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.11 2007/12/01 12:27:59 rillig Exp $
 
-DISTNAME=		gprolog-1.2.16
+DISTNAME=		gprolog-1.3.0
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/contraintes/gprolog/
+MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		brook@nmsu.edu
-HOMEPAGE=		http://gnu-prolog.inria.fr/
+HOMEPAGE=		http://www.gprolog.org/
 COMMENT=		GNU prolog compiler and interpreter
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-powerpc *-*-sparc
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-install-dir=${PREFIX}/libexec/${PKGNAME} \
+CONFIGURE_DIRS=		src
+CONFIGURE_ARGS+=	--with-install-dir=${PREFIX}/lib/${PKGNAME_NOREV} \
 			--with-doc-dir=${PREFIX}/share/doc/gprolog \
-			--with-html-dir=${PREFIX}/share/doc/html/gprolog \
+			--with-html-dir=${PREFIX}/share/doc/gprolog/html \
 			--with-examples-dir=${PREFIX}/share/examples/gprolog \
-			--with-c-flags='-O3 -finline-functions -fomit-frame-pointer -D__unix__=1'
+			--with-c-flags=${CFLAGS:Q}
 
 .include "../../mk/bsd.pkg.mk"
