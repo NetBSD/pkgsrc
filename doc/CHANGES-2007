@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2547 2007/12/01 04:18:18 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2548 2007/12/01 12:28:21 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/pkg-config to 0.22 [wiz 2007-11-30]
 	Updated fonts/fontconfig to 2.5.0 [wiz 2007-11-30]
 	Updated security/crypto++ to 5.2.1nb1 [rillig 2007-12-01]
+	Updated lang/gprolog to 1.3.0 [rillig 2007-12-01]
