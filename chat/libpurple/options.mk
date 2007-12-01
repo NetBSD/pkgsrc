@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/09/05 14:31:52 reed Exp $
+# $NetBSD: options.mk,v 1.6 2007/12/01 22:46:42 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
 PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl
@@ -40,8 +40,11 @@ CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 PLIST_SUBST+=		DBUS=
+REPLACE_SH+=		libpurple/purple-send
+REPLACE_SH+=		libpurple/purple-send-async
 REPLACE_PYTHON+=	libpurple/purple-remote
 REPLACE_PYTHON+=	libpurple/purple-url-handler
+.  include "../../sysutils/py-dbus/buildlink3.mk"
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
 .  include "../../lang/python/application.mk"
