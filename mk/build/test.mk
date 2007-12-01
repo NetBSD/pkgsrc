@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.12 2007/03/15 22:54:24 rillig Exp $
+# $NetBSD: test.mk,v 1.13 2007/12/01 11:11:54 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -112,8 +112,7 @@ test-check-interactive:
 	@${ERROR_MSG} "The test stage of this package requires user interaction"
 	@${ERROR_MSG} "Please test manually with:"
 	@${ERROR_MSG} "    \"cd ${.CURDIR} && ${MAKE} test\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
+	${RUN} ${FALSE}
 .else
 	@${DO_NADA}
 .endif
