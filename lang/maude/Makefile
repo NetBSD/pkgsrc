@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/01 13:15:55 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/01 13:17:56 rillig Exp $
 #
 
 DISTNAME=	Maude-2.3
@@ -17,7 +17,7 @@ USE_TOOLS+=	flex bison
 INSTALLATION_DIRS_FROM_PLIST=yes
 
 post-install:
-	cd ${WRKSRC}/src/Main && ${INSTALL_DATA} *.maude ${PREFIX}/share/examples/maude
+	cd ${WRKSRC}/src/Main && ${INSTALL_DATA} *.maude ${PREFIX}/share/maude
 
 .include "../../devel/buddy/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
