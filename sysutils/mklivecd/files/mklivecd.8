@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.17 2007/07/03 15:45:06 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.18 2007/12/01 20:27:16 wiz Exp $
 .\"
 .\" mklivecd - Make your own NetBSD/x86 Live CD-ROM/DVD-ROM
 .\"
@@ -68,7 +68,10 @@ ISO9660 bootloader (since
 .Nx 4.0 ) .
 By default on i386 will use the first option:
 .Pa the GNU Grub bootloader ,
-and the NetBSD ISO9660 booloader on amd64. You may want to
+and the
+.Nx
+ISO9660 bootloader on amd64.
+You may want to
 change this by changing the option
 .Pa USE_GNU_GRUB
 to
@@ -210,7 +213,7 @@ Defaults to
 Name of the built
 .Nx
 kernel.
-Useful if you want to change the default behaviour of the build process.
+Useful if you want to change the default behavior of the build process.
 Defaults to
 .Sy MKLIVECD .
 .It MULTIPLE_KERNELS
@@ -259,7 +262,7 @@ then X11 sets and configuration files will be unpacked automatically.
 Defaults to
 .Sy no .
 .It GRUB_FILES_DIR
-Directory where the grub files are stored. 
+Directory where the grub files are stored.
 Defaults to
 .Sy @LOCALBASE@/lib/grub/@MACHINE_ARCH@-/ .
 .It HOSTNAME
@@ -299,7 +302,7 @@ Defaults to
 .It PKG_SYSCONFDIR
 Directory where the pkgsrc settings are stored, by default
 .Nm
-preserves this behaviour and uses
+preserves this behavior and uses
 .Pa usr/pkg/etc .
 .It REMOVE_DIRS
 Take care with this option, because it will remove all directories when
@@ -314,7 +317,8 @@ Defaults to
 Used to select the bootloader for the Live CD.
 When it's disabled the
 .Nx
-CD Bootloader will be used. Note that you cannot use GRUB
+CD Bootloader will be used.
+Note that you cannot use GRUB
 on amd64, so the option shouldn't be touched on this arch.
 Defaults to
 .Sy yes .
@@ -544,9 +548,11 @@ It is not perfect but at least it does its task correctly.
 .Sh SUPPORT
 Many Live CDs are built with this software, and sometimes
 .Nm
-is not even mentioned, that's not good. If you use
+is not even mentioned, that's not good.
+If you use
 this software to build a Live CD, please say so in your
 README file or FAQ.
 If you want more features implemented, please make a
 hardware or monetary donation to continue improving
-NetBSD development.
+.Nx
+development.
