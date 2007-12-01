@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2552 2007/12/01 14:49:26 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.2553 2007/12/01 16:52:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4667,3 +4667,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/coq to 8.1pl2 [tonio 2007-12-01]
 	Updated converters/bibtex2html to 1.88 [tonio 2007-12-01]
 	Updated lang/ocamlduce to 3.10.0 [tonio 2007-12-01]
+	Updated time/devtodo to 0.1.20 [rillig 2007-12-01]
