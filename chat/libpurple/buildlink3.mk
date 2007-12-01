@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2007/12/01 16:46:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/12/01 22:46:42 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPURPLE_BUILDLINK3_MK:=	${LIBPURPLE_BUILDLINK3_MK}+
@@ -22,6 +22,7 @@ pkgbase := libpurple
 .if !empty(PKG_BUILD_OPTIONS.libpurple:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
+.  include "../../sysutils/py-dbus/buildlink3.mk"
 .endif
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
