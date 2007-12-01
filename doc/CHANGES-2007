@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2557 2007/12/01 21:44:34 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2558 2007/12/01 22:47:25 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4674,3 +4674,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/firefox to 2.0.0.11 [ghen 2007-12-01]
 	Updated www/firefox-bin to 2.0.0.11 [ghen 2007-12-01]
 	Updated www/firefox-gtk1 to 2.0.0.11 [ghen 2007-12-01]
+	Updated net/unison-devel to 2.27.48 [tonio 2007-12-01]
