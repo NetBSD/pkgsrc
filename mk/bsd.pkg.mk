@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1928 2007/10/13 11:04:16 dsl Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1929 2007/12/01 11:11:53 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -248,7 +248,6 @@ _NONZERO_FILESIZE_P=	${AWK} 'END { exit (NR > 0) ? 0 : 1; }'
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
 
-_INTERACTIVE_COOKIE=	${.CURDIR}/.interactive_stage
 _NULL_COOKIE=		${WRKDIR}/.null
 
 # Miscellaneous overridable commands:
