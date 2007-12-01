@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2007/03/02 21:20:14 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/01 14:19:35 tonio Exp $
 
-DISTNAME=	bibtex2html-1.85
+DISTNAME=	bibtex2html-1.88
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
@@ -23,6 +23,7 @@ SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-build:
+	set -e; \
 	cd ${WRKSRC}; ${MAKE} doc
 
 do-install:
