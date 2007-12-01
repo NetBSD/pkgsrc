@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/02/25 15:03:52 tonio Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/12/01 13:05:36 tonio Exp $
 bin/coq-interface
 bin/coq-tex
 bin/coq_makefile
@@ -55,7 +55,9 @@ lib/coq/contrib/setoid_ring/Ring_theory.vo
 lib/coq/contrib/setoid_ring/ZArithRing.vo
 lib/coq/contrib/subtac/FixSub.vo
 lib/coq/contrib/subtac/FunctionalExtensionality.vo
+lib/coq/contrib/subtac/Heq.vo
 lib/coq/contrib/subtac/Subtac.vo
+lib/coq/contrib/subtac/SubtacTactics.vo
 lib/coq/contrib/subtac/Utils.vo
 lib/coq/ide/.coqide-gtk2rc
 lib/coq/ide/FAQ
