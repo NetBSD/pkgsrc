@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2550 2007/12/01 13:06:32 tonio Exp $
+$NetBSD: CHANGES-2007,v 1.2551 2007/12/01 14:20:24 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4665,3 +4665,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated lang/gprolog to 1.3.0 [rillig 2007-12-01]
 	Added lang/camlp5 version 5.01 [tonio 2007-12-01]
 	Updated lang/coq to 8.1pl2 [tonio 2007-12-01]
+	Updated converters/bibtex2html to 1.88 [tonio 2007-12-01]
