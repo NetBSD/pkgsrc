@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2007/06/12 13:35:12 dmcmahill Exp $
-share/guile/1.8/slibcat
+@comment $NetBSD: PLIST,v 1.9 2007/12/01 15:56:25 gdt Exp $
+share/guile/site/slibcat
 share/guile/site/slib
-@comment in guile: @dirrm share/guile/1.8
+@comment in guile: @dirrm share/guile/site
 @comment in guile: @dirrm share/guile
