@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/01 21:29:52 rillig Exp $
 #
 
 DISTNAME=	nvu-1.0-sources
@@ -17,6 +17,7 @@ BROKEN_IN=		pkgsrc-2006Q4
 
 WRKSRC=		${WRKDIR}/mozilla
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	ORBIT_CONFIG=orbit2-config
 USE_TOOLS+=	gmake perl pkg-config unzip
 USE_LANGUAGES=	c c++
 
@@ -31,5 +32,6 @@ CPPFLAGS+=	-I${BUILDLINK_PREFIX.libIDL}/include/libIDL-2.0
 BUILDLINK_TRANSFORM+=	l:IDL:IDL-2
 
 .include "../../net/libIDL/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
