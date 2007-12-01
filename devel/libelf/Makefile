@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2007/10/11 18:53:12 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/01 23:54:58 wiz Exp $
 #
 
 DISTNAME=		libelf-0.8.10
 CATEGORIES=		devel
-MASTER_SITES=		http://www.mr511.de/software/	\
-			${MASTER_SITE_SUNSITE:=libs/}
+MASTER_SITES=		http://www.mr511.de/software/
+
 MAINTAINER=		petrov@NetBSD.org
 HOMEPAGE=		http://www.mr511.de/software/
 COMMENT=		ELF object file access library
