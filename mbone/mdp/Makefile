@@ -1,29 +1,33 @@
-# $NetBSD: Makefile,v 1.15 2006/10/28 21:29:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/12/01 13:55:11 rillig Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
 PKGREVISION=	1
 CATEGORIES=	mbone
-MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/mdp/
-MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
+MASTER_SITES=	http://downloads.pf.itd.nrl.navy.mil/mdp/ \
+		http://downloads.pf.itd.nrl.navy.mil/protolib/
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://cs.itd.nrl.navy.mil/work/mdp/
 COMMENT=	Multicast file transfer
 
-WRKSRC=		${WRKDIR}/mdp/unix
+WRKSRC=		${WRKDIR}/mdp
+BUILD_DIRS=	unix
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 BUILD_TARGET=	mdp
 
 INSTALLATION_DIRS=	bin
 
-pre-build:
-		${LN} -sf ${WRKSRC}/Makefile.netbsd ${WRKSRC}/Makefile
-		${RM} -f ${WRKSRC}/../protolib
-		${LN} -sf ${WRKDIR}/protolib-1.0 ${WRKSRC}/../protolib
+post-extract:
+	rm ${WRKSRC}/protolib
+	mv ${WRKDIR}/protolib-1.0 ${WRKSRC}/protolib
+
+do-configure:
+	cd ${WRKSRC}/unix && rm -f Makefile && ln -s Makefile.netbsd Makefile
+
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/mdp ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/mdp ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
