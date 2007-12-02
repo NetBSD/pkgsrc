@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.14 2007/08/17 01:19:45 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.15 2007/12/02 02:11:05 tnn Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -63,6 +63,7 @@
 
 # Substituted by pkgsrc at pre-configure time.
 MAKE="@MAKE@"
+AWK="@AWK@"
 
 test -z "$MAKECONF" && MAKECONF="@MAKECONF@"
 test -f "$MAKECONF" && test -z "$PKGSRCDIR" && PKGSRCDIR="` \
@@ -151,15 +152,22 @@ check_packages_w_flag()
 # echo dep->pkg edges for all installed packages
 depgraph_installed()
 {
-    for pkgver in $(${PKG_INFO} -e '*'); do
-        pkg=$(echo $pkgver | sed 's/-[0-9][^-]*$//')
-	# Include $pkg as a node without dependencies in case it has none.
-        echo $pkg $pkg
-        for depver in $(${PKG_INFO} -Nq $pkg); do
-            dep=$(echo $depver | sed 's/-[0-9][^-]*$//')
-            echo $dep $pkg
-        done
-    done
+	${PKG_INFO} -N '*' | ${AWK} '					\
+		/^Information for/ {					\
+			pkg=$3; sub("-[0-9][^-]*:$", "", pkg);		\
+			print pkg" "pkg;				\
+			state=1;					\
+		}							\
+		/^./ {							\
+			if (state == 2) {				\
+				dep=$1; sub("-[0-9][^-]*$", "", dep);	\
+				print dep" "pkg;			\
+			}						\
+		}							\
+		/^Built using/ {					\
+			state=2						\
+		}							\
+	'
 }
 
 # usage: who_requires pkg --in-graph DEPGRAPH
@@ -320,7 +328,7 @@ while [ -n "$REPLACE_TODO" ]; do
             break;
         fi
     done
-    pkgdir=$(${PKG_INFO} -Bq $pkg | awk -F= '/PKGPATH=/{print $2}' | sed -e 's/^ //')
+    pkgdir=$(${PKG_INFO} -Bq $pkg | ${AWK} -F= '/PKGPATH=/{print $2}' | sed -e 's/^ //')
     echo "${OPI} Selecting $pkg ($pkgdir) as next package to replace"
     sleep 1
 
