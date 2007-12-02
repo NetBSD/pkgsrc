@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2560 2007/12/02 02:53:21 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2561 2007/12/02 04:20:53 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4677,3 +4677,8 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/unison-devel to 2.27.48 [tonio 2007-12-01]
 	Updated pkgtools/pkg_rolling-replace to 0.12 [tnn 2007-12-02]
 	Updated net/Transmission to 0.94 [tnn 2007-12-02]
+	Updated chat/libpurple to 2.3.0 [tnn 2007-11-03]
+	Updated chat/pidgin to 2.3.0 [tnn 2007-11-03]
+	Updated chat/pidgin-sametime to 2.3.0 [tnn 2007-11-03]
+	Updated chat/pidgin-silc to 2.3.0 [tnn 2007-11-03]
+	Updated chat/finch to 2.3.0 [tnn 2007-11-03]
