@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2007/02/22 19:20:41 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2007/12/02 11:25:02 wiz Exp $
 #
 
 DISTNAME=	windows-all-20061022
 PKGNAME=	win32-codecs-061022
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/codecs/ \
-		http://ftp5.mplayerhq.hu/MPlayer/releases/codecs/ \
 		ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www1.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
