@@ -1,27 +1,17 @@
-# $NetBSD: Makefile,v 1.31 2007/11/12 00:00:49 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/02 12:18:09 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
-		ftp://ftp.academy.rpi.edu/pub/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.auscert.org.au/pub/mirrors/ftp.wu-ftpd.org/wu-ftpd/ \
 		ftp://mirror.aarnet.edu.au/pub/wu-ftpd/wu-ftpd/ \
 		http://mirror.aarnet.edu.au/pub/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.tuwien.ac.at/infosys/servers/ftp/wu-ftpd/wu-ftpd/ \
 		http://gd.tuwien.ac.at/infosys/servers/ftp/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.crc.ca/pub/packages/ftp/servers/wuarchive-ftpd-dg/wu-ftpd/ \
-		ftp://ftp.dpn.de/pub/mirrors/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.tu-clausthal.de/pub/mirror/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.freenet.de/pub/ftp.wu-ftpd.org/pub/wu-ftpd/ \
-		ftp://ftp.hol.gr/pub/packages/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.kfki.hu/pub/infosystems/wu-ftpd/wu-ftpd/ \
 		ftp://ftp.ring.gr.jp/pub/net/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.win.ne.jp/pub/network/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/wu-ftpd/wu-ftpd/ \
-		ftp://ftp.ox.ac.uk/pub/comp/security/COAST/mirrors/ftp.vr.net/wu-ftpd/
+		ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/
 
 PATCHFILES=	realpath.patch connect-dos.patch
 PATCH_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/patches/apply_to_2.6.2/
