@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/22 04:46:17 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/02 09:49:28 rillig Exp $
 
 DISTNAME=	gnugk-2.2.0
 PKGREVISION=	2
@@ -23,7 +23,6 @@ MAKE_ENV+=	LIBTOOL=${LIBTOOL:Q} SYSLIBDIR="${PREFIX}/lib"
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		${EGDIR}/gnugk.ini ${PKG_SYSCONFDIR}/gnugk.ini
 RCD_SCRIPTS=		gnugk
 
 post-install:
