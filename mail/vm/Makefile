@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/10/29 04:43:17 uebayasi Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/02 12:14:01 wiz Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -11,11 +11,9 @@ MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://ftp.uu.net/networking/mail/vm/ \
 		http://www.interhack.net/projects/vm/ \
 		ftp://ftp.ccs.neu.edu/net/mirrors/VM/ \
-		http://www.rge.com/pub/mail/vm/ \
 		http://ftp.lip6.fr/pub/unix/mail/vm/ \
 		http://ftp.jussieu.fr/pub/unix/mail/vm/ \
-		ftp://ftp.surfnet.nl/pub/mail/vm/ \
-		http://ftp.algx.net/pub/packages/mail/vm/
+		ftp://ftp.surfnet.nl/pub/mail/vm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wonderworks.com/vm/
