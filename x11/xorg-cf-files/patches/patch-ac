@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2007/12/02 00:35:23 joerg Exp $
 
---- linux.cf.orig	2005-12-06 11:06:50.000000000 +0100
-+++ linux.cf	2005-12-06 11:09:08.000000000 +0100
-@@ -609,10 +609,10 @@
+--- linux.cf.orig	2005-10-21 21:10:27.000000000 +0200
++++ linux.cf
+@@ -609,10 +609,10 @@ InstallNamedTargetNoClobber(install,file
  #  if defined (i386Architecture) && ((GccMajorVersion >3) \
     || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
  #   ifndef CcCmd
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  #   endif
  #  endif
  #  if defined (Ppc64Architecture)
-@@ -624,8 +624,8 @@
+@@ -624,8 +624,8 @@ InstallNamedTargetNoClobber(install,file
  #   endif
  #  endif
  #  ifndef CcCmd
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  #  endif
  #  ifndef AsCmd
  #   define AsCmd		CcCmd -c -x assembler
-@@ -779,7 +779,6 @@
+@@ -779,7 +779,6 @@ InstallNamedTargetNoClobber(install,file
  #define YaccCmd			bison -y
  #define LexCmd			flex -l
  #define HasFlex			YES
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  #define PreProcessCmd		CcCmd -E
  #define PostIncDir		DefaultGccIncludeDir
  #define LdCombineFlags		-r
-@@ -853,7 +852,7 @@
+@@ -853,7 +852,7 @@ InstallNamedTargetNoClobber(install,file
  
  #ifdef i386Architecture
  # ifndef OptimizedCDebugFlags
@@ -43,7 +43,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
  # endif
  # define LinuxMachineDefines	-D__i386__
  # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
-@@ -1053,9 +1052,6 @@ InstallNamedTargetNoClobber(install,file
+@@ -1042,8 +1041,6 @@ InstallNamedTargetNoClobber(install,file
+ #endif
+ 
+ 
+-#define HasGnuMake		YES
+-
+ #define MakeNamedTargetSubdir(dir,flags,subname)\
+ 	$(MAKE) -C dir $(MFLAGS) $(PARALLELMFLAGS) flags subname
+ 
+@@ -1053,9 +1050,6 @@ InstallNamedTargetNoClobber(install,file
  #define TtClientDepLibs $(DEPTTLIB) $(DEPXTOOLLIB) $(DEPXLIB)
  
  #if HaveLib64
