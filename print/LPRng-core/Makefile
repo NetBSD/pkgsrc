@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2006/09/04 08:47:17 martti Exp $
+# $NetBSD: Makefile,v 1.33 2007/12/02 11:33:01 wiz Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
 PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.lprng.com/pub/LPRng/LPRng/ \
-		http://www.lprng.com/DISTRIB/LPRng/ \
-		http://lprng.sourceforge.net/DISTRIB/LPRng/
+		http://www.lprng.com/DISTRIB/LPRng/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
