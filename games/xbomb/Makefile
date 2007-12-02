@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2007/02/02 18:26:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2007/12/02 12:00:38 wiz Exp $
 
 DISTNAME=	xbomb-2.1a
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.gedanken.demon.co.uk/download-xbomb/ \
-		ftp://ftp.demon.co.uk/pub/unix/xwindows/games/ \
-		ftp://ftp.ibiblio.org/pub/Linux/games/strategy/
+MASTER_SITES=	http://www.gedanken.demon.co.uk/download-xbomb/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org
