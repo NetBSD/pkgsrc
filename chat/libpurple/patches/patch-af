@@ -1,10 +1,8 @@
-$NetBSD: patch-af,v 1.2 2007/09/15 14:55:02 tnn Exp $
+$NetBSD: patch-af,v 1.3 2007/12/02 04:17:54 tnn Exp $
 
-  .desktop file only in the pidgin package
-
---- Makefile.in.orig	2007-09-14 09:31:38.000000000 +0200
+--- Makefile.in.orig	2007-11-24 20:07:19.000000000 +0100
 +++ Makefile.in
-@@ -466,7 +466,7 @@ noinst_HEADERS = config.h
+@@ -370,7 +370,7 @@ noinst_HEADERS = config.h
  #	cp libpurple/plugins/perl/common/Gaim.pm $(distdir)/libpurple/plugins/perl/common
  appsdir = $(datadir)/applications
  apps_in_files = pidgin.desktop.in
@@ -12,4 +10,4 @@ $NetBSD: patch-af,v 1.2 2007/09/15 14:55:02 tnn Exp $
 +@ENABLE_GTK_TRUE@apps_DATA = $(apps_in_files:.desktop.in=.desktop)
  @ENABLE_GTK_TRUE@GTK_DIR = pidgin
  @ENABLE_GNT_TRUE@GNT_DIR = finch
- SUBDIRS = libpurple doc $(GNT_DIR) $(GTK_DIR) m4macros po share
+ SUBDIRS = libpurple doc $(GNT_DIR) $(GTK_DIR) m4macros po share/ca-certs share/sounds
