@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.22 2007/11/17 14:00:55 rillig Exp $
+# $NetBSD: replace.mk,v 1.23 2007/12/02 11:29:22 rillig Exp $
 #
 
 # _flavor-replace:
@@ -57,22 +57,14 @@ _REPLACE_NEWNAME_CMD=	\
 	|| ${FAIL_MSG} "[${.TARGET}] ${_REPLACE_NEWNAME_FILE}: File not found"; \
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`
 
-######################################################################
-### undo-replace-check (PRIVATE)
-######################################################################
-### undo-replace-check verifies that there was a previous "replace"
-### action performed that can be undone.
-###
+# Verifies that there was a previous "replace" action performed that can be undone.
+#
 undo-replace-check: .PHONY
 	${RUN} [ -f ${_COOKIE.replace} ] \
 	|| ${FAIL_MSG} "No replacement to undo!"
 
-######################################################################
-### replace-tarup (PRIVATE)
-######################################################################
-### replace-tarup generates a binary package for the (older) installed
-### package using pkg_tarup.
-###
+# Generates a binary package for the (older) installed package using pkg_tarup.
+#
 replace-tarup: .PHONY
 	${RUN} [ -x ${_PKG_TARUP_CMD:Q} ] \
 	|| ${FAIL_MSG} ${_PKG_TARUP_CMD:Q}" was not found.";		\
@@ -81,26 +73,18 @@ replace-tarup: .PHONY
 		PKGREPOSITORY=${WRKDIR}					\
 		${_PKG_TARUP_CMD} $${oldname}
 
-######################################################################
-### undo-replace-install (PRIVATE)
-######################################################################
-### undo-replace-install re-installs the old package from the binary
-### package saved from replace-tarup.
-###
+# Re-installs the old package that has been saved by replace-tarup.
+#
 undo-replace-install: .PHONY
 	@${PHASE_MSG} "Re-adding ${PKGNAME} from saved tar-up package."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${ECHO} "Installing saved package ${WRKDIR}/$${oldname}${PKG_SUFX}"; \
 	${PKG_ADD} ${WRKDIR}/$${oldname}${PKG_SUFX}
 
-######################################################################
-### replace-names (PRIVATE)
-######################################################################
-
-### replace-names computes and saves the full names of the installed
-### package to be replaced (oldname) and the package that will be
-### installed (newname) into files for later use.
-###
+# Computes and saves the full names of the installed package to be replaced
+# (oldname) and the package that will be installed (newname), so that these
+# names are available later.
+#
 replace-names: .PHONY
 	${RUN} if [ x"${OLDNAME}" = x ]; then				\
 		wildcard=${PKGWILDCARD:Q};				\
@@ -111,12 +95,8 @@ replace-names: .PHONY
 	${RUN} ${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
 	${RUN} ${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
 
-######################################################################
-### replace-preserve-installed-info (PRIVATE)
-######################################################################
-### replace-preserve-installed-info saves and removes the +INSTALLED_INFO
-### file from the installed package.
-###
+# Saves and removes the +INSTALLED_INFO file from the installed package.
+#
 replace-preserve-installed-info: .PHONY
 	@${STEP_MSG} "Preserving existing +INSTALLED_INFO file."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
@@ -124,12 +104,8 @@ replace-preserve-installed-info: .PHONY
 	${TEST} ! -f "$$installed_info" ||				\
 	${MV} $$installed_info ${_INSTALLED_INFO_FILE}
 
-######################################################################
-### replace-preserve-required-by (PRIVATE)
-######################################################################
-### replace-preserve-required-by saves and removes the +REQUIRED_BY
-### file from the installed package.
-###
+# Saves and removes the +REQUIRED_BY file from the installed package.
+#
 replace-preserve-required-by: .PHONY
 	@${STEP_MSG} "Preserving existing +REQUIRED_BY file."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
@@ -137,16 +113,14 @@ replace-preserve-required-by: .PHONY
 	${TEST} ! -f "$$required_by" ||					\
 	${MV} $$required_by ${_REQUIRED_BY_FILE}
 
-######################################################################
-### replace-fixup-required-by (PRIVATE)
-######################################################################
-### replace-fixup-required-by fixes the +CONTENTS files of dependent
-### packages to refer to the replacement package, and puts the
-### +REQUIRED_BY file back into place.  It also sets the
-### unsafe_depends_strict tag on each dependent package, and sets the
-### unsafe_depends tag if the replaced package has a different
-### version.
-### XXX Only set unsafe_depends if there is an ABI change.
+# Fixes the +CONTENTS files of dependent packages to refer to the
+# replacement package, and puts the +REQUIRED_BY file back into place.
+# It also sets the unsafe_depends_strict tag on each dependent package,
+# and sets the unsafe_depends tag if the replaced package has a different
+# version.
+#
+# XXX Only set unsafe_depends if there is an ABI change.
+#
 replace-fixup-required-by: .PHONY
 	@${STEP_MSG} "Fixing @pkgdep entries in dependent packages."
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
@@ -174,12 +148,10 @@ replace-fixup-required-by: .PHONY
 	done;								\
 	${MV} ${_REQUIRED_BY_FILE} ${_PKG_DBDIR}/$$newname/+REQUIRED_BY
 
-######################################################################
-### replace-fixup-installed-info (PRIVATE)
-######################################################################
-### replace-fixup-installed-info removes unsafe_depends* and rebuild
-### tags from this package.
-### XXX pkg_admin should not complain on unset with no +INSTALLED_INFO.
+# Removes unsafe_depends* and rebuild tags from this package.
+#
+# XXX: pkg_admin should not complain on unset with no +INSTALLED_INFO.
+#
 replace-fixup-installed-info: .PHONY
 	@${STEP_MSG} "Removing unsafe_depends and rebuild tags."
 	${RUN} ${_REPLACE_NEWNAME_CMD};					\
@@ -190,12 +162,8 @@ replace-fixup-installed-info: .PHONY
 		${PKG_ADMIN} unset $$var $$newname;			\
 	done
 
-######################################################################
-### replace-clean (PRIVATE)
-######################################################################
-### replace-clean removes the state files for the "replace" target so
-### that it may be re-invoked.
-###
+# Removes the state files for the "replace" target, so that it may be re-invoked.
+#
 replace-clean: .PHONY
 	${RUN} ${_REPLACE_OLDNAME_CMD};					\
 	${_REPLACE_NEWNAME_CMD};					\
