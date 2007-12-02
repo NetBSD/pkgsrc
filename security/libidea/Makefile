@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2007/10/31 12:29:34 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/02 12:22:10 wiz Exp $
 #
 
 DISTNAME=	libidea-0.8.2b
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ \
-		ftp://ftp.ntnu.no/pub/unix/security/ \
-		ftp://ftp.sunsite.org.uk/Mirrors/ftp.psy.uq.oz.au/pub/Crypto/libeay/
+		ftp://ftp.ntnu.no/pub/unix/security/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.media-crypt.com/pages/fidea.html
