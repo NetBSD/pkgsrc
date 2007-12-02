@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/02 11:41:48 wiz Exp $
 #
 
 DISTNAME=	xdu-3.0
 PKGREVISION=	6
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/ \
-		ftp://ftp.arl.mil/pub/
+MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/
 PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/xdu/
 EXTRACT_SUFX=	.tar.Z
 PATCHFILES+=	xdu-3.0.dirname.patch \
