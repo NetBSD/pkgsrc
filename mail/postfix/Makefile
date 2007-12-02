@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.210 2007/10/30 19:31:39 martti Exp $
+# $NetBSD: Makefile,v 1.211 2007/12/02 02:17:24 gdt Exp $
 
 DISTNAME=	postfix-2.4.6
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 DIST_SUBDIR=	postfix
@@ -117,7 +117,7 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
-.if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mdovecot-sasl)
+.if !empty(PKG_OPTIONS:Msasl)
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
