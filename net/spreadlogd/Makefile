@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/16 09:27:05 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/02 08:32:25 rillig Exp $
 #
 
 DISTNAME=	spreadlogd
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.backhand.org/mod_log_spread/
 COMMENT=	Daemon to log to file, messages from spread toolkit clients
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl yacc
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 RCD_SCRIPTS=	spreadlogd

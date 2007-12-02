@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/12 06:11:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/02 08:32:24 rillig Exp $
 #
 
 DISTNAME=	csup-snap-20070216
@@ -10,7 +10,7 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://www.mu.org/~mux/csup.html
 COMMENT=	Rewrite of the CVSup file updating client in C
 
-USE_TOOLS+=	yacc
+USE_TOOLS+=	lex yacc
 WRKSRC=		${WRKDIR}/csup
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

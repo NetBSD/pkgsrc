@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2007/11/10 02:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2007/12/02 08:32:23 rillig Exp $
 
 DISTNAME=	nas-1.9.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake yacc lex
 USE_IMAKE=		yes
 
 PKG_SYSCONFSUBDIR=	nas

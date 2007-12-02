@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2007/12/02 08:32:24 rillig Exp $
 #
 
 NETHACK_BASEVER=	3.4.3
@@ -19,7 +19,7 @@ HOMEPAGE=		http://www.nethack.org/
 WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
-USE_TOOLS+=		gzip
+USE_TOOLS+=		gzip yacc lex
 
 .include "../../mk/bsd.prefs.mk"
 
