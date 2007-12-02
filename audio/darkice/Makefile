@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/02 13:04:06 wiz Exp $
 #
 
 DISTNAME=	darkice-0.17.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://darkice.sourceforge.net/
+HOMEPAGE=	http://darkice.tyrell.hu/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
 
 GNU_CONFIGURE=		yes

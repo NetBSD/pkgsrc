@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/15 22:55:21 agc Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/02 13:04:09 wiz Exp $
 #
 
 DISTNAME=	encfs-1.2.0-2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=encfs/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arg0.net/users/vgough/encfs.html
+HOMEPAGE=	http://arg0.net/wiki/encfs
 COMMENT=	FUSE Encrypted Filesystem
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-2//}

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2007/09/20 08:54:18 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/02 13:04:11 wiz Exp $
 #
 
 DISTNAME=		mirmon-1.36
 CATEGORIES=		misc
-MASTER_SITES=		http://www.cs.uu.nl/people/henkp/mirmon/src/
+MASTER_SITES=		http://people.cs.uu.nl/henkp/mirmon/src/
 
 MAINTAINER=		heinz@NetBSD.org
-HOMEPAGE=		http://www.cs.uu.nl/people/henkp/mirmon/
+HOMEPAGE=		http://people.cs.uu.nl/henkp/mirmon/
 COMMENT=		Monitor the state of mirror servers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

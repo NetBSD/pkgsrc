@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/21 23:20:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/02 13:04:12 wiz Exp $
 #
 
 SNAPSHOT_DATE=		20060127
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://developers.videolan.org/x264.html
+HOMEPAGE=		http://www.videolan.org/developers/x264.html
 COMMENT=		GPL licensed H.264 encoder
 
 .include "../../mk/bsd.prefs.mk"
