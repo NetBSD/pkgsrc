@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2007/07/02 13:36:38 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/12/02 00:10:40 wiz Exp $
 
 DISTNAME=	lua-5.1.2
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
-		ftp://ftp.ntua.gr/pub/lang/lua/ \
 		ftp://ftp.gwdg.de/pub/languages/lua/ \
 		ftp://ftp.u-aizu.ac.jp/pub/lang/lua/ \
-		ftp://ftp.ucore.com/lua/dist/ \
-		ftp://sunsite.dk/pub/languages/lua/ \
 		ftp://ftp.chg.ru/pub/lang/lua/ \
 		http://www.lua.org/ftp/ \
 		http://www.tecgraf.puc-rio.br/lua/ftp/ \
