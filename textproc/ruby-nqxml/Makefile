@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/03/15 16:46:13 taca Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/02 11:44:03 wiz Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/p/./}
 PKGREVISION=	1
 CATEGORIES=	textproc ruby
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/} \
-		http://rrr.jin.gr.jp/download/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/}
 
 MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://sourceforge.net/projects/nqxml/

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.149 2007/11/29 22:10:17 drochner Exp $
+# $NetBSD: Makefile,v 1.150 2007/12/02 11:48:10 wiz Exp $
 
 DISTNAME=		gtk+-2.12.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.12/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/pub/gtk/2.12/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/2.12/}
 EXTRACT_SUFX=		.tar.bz2
 
