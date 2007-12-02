@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/15 22:04:36 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/02 12:34:39 wiz Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -9,9 +9,7 @@ CATEGORIES=	x11
 # and produces a page explaining how the user "uddn" no longer
 # has web pages on their system.
 #
-MASTER_SITES=	http://www.cs.unc.edu/~scheuerm/xglobe/ \
-		http://livingearth.com/LE/images/ \
-		http://www.ngdc.noaa.gov/mgg/image/
+MASTER_SITES=	http://livingearth.com/LE/images/
 DISTFILES+=	${MAPS} ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
