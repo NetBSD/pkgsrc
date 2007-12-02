@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/11/30 21:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2007/12/02 13:04:16 wiz Exp $
 #
 
 DISTNAME=	compiz-0.4.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.go-compiz.org/
+HOMEPAGE=	http://compiz.org/
 COMMENT=	Compositing window manager
 
 GNU_CONFIGURE=		yes
