@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2007/12/01 11:16:44 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2007/12/02 13:04:09 wiz Exp $
 
 DISTNAME=		GTL-1.2.1
 PKGNAME=		gtl-1.2.1
 CATEGORIES=		devel
-MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/download/
+MASTER_SITES=		http://infosun.fim.uni-passau.de/GTL/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.infosun.fmi.uni-passau.de/GTL/
+HOMEPAGE=		http://www.infosun.fim.uni-passau.de/GTL/
 COMMENT=		C++ graph data structure library based on the STL
 
 USE_LIBTOOL=		yes
@@ -30,7 +30,7 @@ FETCH_MESSAGE= \
 "changed. GTL can be downloaded free of charge for non-commercial use." \
 "Please follow the steps below to get access to the download archive:" \
 "" \
-"Send an email to gtl-download@infosun.fmi.uni-passau.de containing the" \
+"Send an email to gtl-download@infosun.fim.uni-passau.de containing the" \
 "following information:" \
 "- Your Name" \
 "- Your Affiliation" \
@@ -40,7 +40,7 @@ FETCH_MESSAGE= \
 "containing the access code to the download page." \
 "" \
 "If you intend to use GTL commercially please send an email to" \
-"brandenb@fmi.uni-passau.de."
+"brandenb@fim.uni-passau.de."
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

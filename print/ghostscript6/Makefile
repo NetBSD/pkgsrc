@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/08/11 15:22:31 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/02 13:04:14 wiz Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 PKGREVISION=		10
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Aladdin Postscript interpreter
-HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
+HOMEPAGE=		http://pages.cs.wisc.edu/~ghost/index.html
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont

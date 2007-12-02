@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2007/10/14 02:04:38 obache Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/02 13:04:13 wiz Exp $
 #
 
 DISTNAME=	ttt-1.8.2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.csl.sony.co.jp/pub/kjc/
+MASTER_SITES=	ftp://ftp.sonycsl.co.jp/pub/kjc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csl.sony.co.jp/person/kjc/software.html
+HOMEPAGE=	http://www.sonycsl.co.jp/person/kjc/software.html
 COMMENT=	Tele Traffic Tapper
 
 GNU_CONFIGURE=	yes

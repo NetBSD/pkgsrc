@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/11/30 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/02 13:04:06 wiz Exp $
 #
 
 DISTNAME=	kmess-1.4.3
@@ -7,7 +7,7 @@ CATEGORIES=	chat kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmess/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kmess.sourceforge.net/
+HOMEPAGE=	http://www.kmess.org/
 COMMENT=	MSN Messenger Client for KDE3
 
 GNU_CONFIGURE=		yes
