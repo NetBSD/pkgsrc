@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/02 12:38:19 wiz Exp $
 #
 
-DISTNAME=	libmng-1.0.7
+DISTNAME=	libmng-1.0.10
 PKGNAME=	${DISTNAME:S/libmng/gmngview/}
-PKGREVISION=	5
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.3-t.com/libmng/download/ \
-		${MASTER_SITE_SOURCEFORGE:=libmng/} \
-		http://www.libmng.com/download/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
@@ -18,10 +15,11 @@ MAKE_ENV+=	LIBMNG_PREFIX=${BUILDLINK_PREFIX.mng:Q}
 
 EXTRACT_ELEMENTS=	*/contrib/gcc/gtk-mng*
 INSTALLATION_DIRS=	bin
+USE_TOOLS+=		pkg-config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmngview ${PREFIX}/bin
 
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
