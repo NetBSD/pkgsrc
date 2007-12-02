@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2006/01/07 16:15:46 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2007/12/02 12:55:09 wiz Exp $
 
 --- src/lib/libast/port/mnt.c.orig	2002-09-26 16:33:59.000000000 +0000
 +++ src/lib/libast/port/mnt.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.1 2006/01/07 16:15:46 wiz Exp $
  #include <sys/param.h>		/* expect some macro redefinitions here */
  #include <sys/mount.h>
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 299000900)
 +#define statfs                                statvfs
 +#define f_flags                               f_flag
 +#endif
