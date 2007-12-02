@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.167 2007/11/22 18:12:45 tron Exp $
+# $NetBSD: Makefile,v 1.168 2007/12/02 12:06:19 wiz Exp $
 
 DISTNAME=	gimp-2.4.2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.4/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/v2.4/ \
 		ftp://ftp.sunet.se/pub/gnu/gimp/v2.4/ \
-		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.4/ \
-		ftp://ftp.minet.net/pub/gimp/v2.4/
+		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
