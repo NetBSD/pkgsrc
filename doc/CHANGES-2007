@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2561 2007/12/02 04:20:53 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2562 2007/12/02 11:57:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4682,3 +4682,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-sametime to 2.3.0 [tnn 2007-11-03]
 	Updated chat/pidgin-silc to 2.3.0 [tnn 2007-11-03]
 	Updated chat/finch to 2.3.0 [tnn 2007-11-03]
+	Updated converters/unix2dos to 1.3 [wiz 2007-12-02]
