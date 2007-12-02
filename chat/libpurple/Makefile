@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/09/21 13:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/02 04:17:54 tnn Exp $
 #
 
 PKGNAME=	libpurple-${PIDGIN_VERSION}
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-consoleui
 
 .include "options.mk"
 
-BUILD_DIRS=	m4macros libpurple po share
+BUILD_DIRS=	m4macros libpurple po share/ca-certs share/sounds
 
 ## #post-build:
 ## #	cp ${WRKSRC}/libpurple/gconf/purple.schemas ${WRKSRC}/purple.schemas

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/15 14:55:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/02 04:17:54 tnn Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -45,6 +45,7 @@ include/pidgin/gtkstatusbox.h
 include/pidgin/gtkthemes.h
 include/pidgin/gtkutils.h
 include/pidgin/gtkwhiteboard.h
+include/pidgin/minidialog.h
 include/pidgin/pidgin.h
 include/pidgin/pidgincombobox.h
 include/pidgin/pidginstock.h
@@ -69,7 +70,6 @@ share/icons/hicolor/22x22/apps/pidgin.png
 share/icons/hicolor/24x24/apps/pidgin.png
 share/icons/hicolor/32x32/apps/pidgin.png
 share/icons/hicolor/48x48/apps/pidgin.png
-share/icons/hicolor/scalable/apps/pidgin.svg
 share/pixmaps/pidgin/animations/16/connect0.png
 share/pixmaps/pidgin/animations/16/connect1.png
 share/pixmaps/pidgin/animations/16/connect2.png
@@ -106,6 +106,7 @@ share/pixmaps/pidgin/dialogs/64/mail.png
 share/pixmaps/pidgin/dialogs/64/question.png
 share/pixmaps/pidgin/dialogs/64/warning.png
 share/pixmaps/pidgin/emblems/16/aol-client.png
+share/pixmaps/pidgin/emblems/16/birthday.png
 share/pixmaps/pidgin/emblems/16/blocked.png
 share/pixmaps/pidgin/emblems/16/bot.png
 share/pixmaps/pidgin/emblems/16/external.png
@@ -117,6 +118,7 @@ share/pixmaps/pidgin/emblems/16/half-operator.png
 share/pixmaps/pidgin/emblems/16/hiptop.png
 share/pixmaps/pidgin/emblems/16/male.png
 share/pixmaps/pidgin/emblems/16/mobile.png
+share/pixmaps/pidgin/emblems/16/music.png
 share/pixmaps/pidgin/emblems/16/not-authorized.png
 share/pixmaps/pidgin/emblems/16/operator.png
 share/pixmaps/pidgin/emblems/16/qq-member.png
@@ -370,6 +372,8 @@ share/pixmaps/pidgin/status/11/busy.png
 share/pixmaps/pidgin/status/11/chat.png
 share/pixmaps/pidgin/status/11/extended-away.png
 share/pixmaps/pidgin/status/11/invisible.png
+share/pixmaps/pidgin/status/11/log-in.png
+share/pixmaps/pidgin/status/11/log-out.png
 share/pixmaps/pidgin/status/11/offline.png
 share/pixmaps/pidgin/status/11/person.png
 share/pixmaps/pidgin/status/11/rtl/extended-away.png
@@ -409,9 +413,9 @@ share/pixmaps/pidgin/status/32/log-in.png
 share/pixmaps/pidgin/status/32/log-out.png
 share/pixmaps/pidgin/status/32/offline.png
 share/pixmaps/pidgin/status/32/person.png
+share/pixmaps/pidgin/status/32/rtl/extended-away.png
 share/pixmaps/pidgin/status/32/rtl/log-in.png
 share/pixmaps/pidgin/status/32/rtl/log-out.png
-share/pixmaps/pidgin/status/32/rtl/extended-away.png
 share/pixmaps/pidgin/status/48/available.png
 share/pixmaps/pidgin/status/48/away.png
 share/pixmaps/pidgin/status/48/busy.png
@@ -428,9 +432,9 @@ share/pixmaps/pidgin/toolbar/16/emote-select.png
 share/pixmaps/pidgin/toolbar/16/font-face.png
 share/pixmaps/pidgin/toolbar/16/font-size-down.png
 share/pixmaps/pidgin/toolbar/16/font-size-up.png
-share/pixmaps/pidgin/toolbar/16/insert.png
 share/pixmaps/pidgin/toolbar/16/insert-image.png
 share/pixmaps/pidgin/toolbar/16/insert-link.png
+share/pixmaps/pidgin/toolbar/16/insert.png
 share/pixmaps/pidgin/toolbar/16/message-new.png
 share/pixmaps/pidgin/toolbar/16/plugins.png
 share/pixmaps/pidgin/toolbar/16/send-file.png
@@ -572,6 +576,7 @@ share/pixmaps/purple/buddy_icons/qq/qq_98.png
 share/pixmaps/purple/buddy_icons/qq/qq_99.png
 @dirrm share/pixmaps/purple/buddy_icons/qq
 @dirrm share/pixmaps/purple/buddy_icons
+@dirrm share/pixmaps/purple
 @dirrm share/pixmaps/pidgin/tray/48
 @dirrm share/pixmaps/pidgin/tray/32
 @dirrm share/pixmaps/pidgin/tray/22
@@ -607,6 +612,5 @@ share/pixmaps/purple/buddy_icons/qq/qq_99.png
 @dirrm share/pixmaps/pidgin/animations/16
 @dirrm share/pixmaps/pidgin/animations
 @dirrm share/pixmaps/pidgin
-@dirrm share/pixmaps/purple
 @dirrm lib/pidgin
 @dirrm include/pidgin
