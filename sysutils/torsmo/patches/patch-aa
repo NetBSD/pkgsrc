@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/02 12:55:11 wiz Exp $
 
 --- fs.c.orig	2004-08-25 18:24:24.000000000 +0200
 +++ fs.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
  #include <sys/mount.h>
  #endif
  
-+#if defined (__NetBSD__)
++#if defined (__NetBSD__) && (__NetBSD_Version__ >= 299000900)
 +#include <sys/statvfs.h>
 +#define STATVFS 1
 +#endif

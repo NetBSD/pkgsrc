@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.3 2007/10/13 12:02:14 adam Exp $
+$NetBSD: patch-aj,v 1.4 2007/12/02 12:55:11 wiz Exp $
 
 --- mkspecs/netbsd-g++/qplatformdefs.h.orig	2007-10-01 15:05:54.000000000 +0200
 +++ mkspecs/netbsd-g++/qplatformdefs.h
@@ -14,7 +14,7 @@ $NetBSD: patch-aj,v 1.3 2007/10/13 12:02:14 adam Exp $
  #define QT_SNPRINTF		::snprintf
  #define QT_VSNPRINTF		::vsnprintf
  
-+#if (__NetBSD_Version__ >= 200040000)
++#if (__NetBSD_Version__ >= 299000900)
 +#include <sys/statvfs.h>
 +#define QT_STATVFS		1
 +#endif
