@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/07/31 10:35:09 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/02 08:32:25 rillig Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -16,7 +16,7 @@ RESTRICTED=	Restrictive copyright (non-commerical use only)
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=	ksh:run
+USE_TOOLS+=	ksh:run yacc lex
 REPLACE_KSH=	Xsession.in Xsession2.in
 
 .include "../../mk/bsd.prefs.mk"

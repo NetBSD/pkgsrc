@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/09/28 21:11:49 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/02 08:32:24 rillig Exp $
 
 DISTNAME=		avrdude-5.2
 PKGREVISION=		1
@@ -16,7 +16,7 @@ TEX_ACCEPTED=		teTeX3
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf automake makeinfo texi2html
+USE_TOOLS+=		autoconf automake makeinfo texi2html yacc
 INFO_FILES=		yes
 EGDIR=			${PREFIX}/share/examples/avrdude
 CONF_FILES=		${EGDIR}/avrdude.conf ${PKG_SYSCONFDIR}/avrdude.conf

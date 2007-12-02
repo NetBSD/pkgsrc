@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/04/28 15:20:43 reed Exp $
+# $NetBSD: Makefile,v 1.28 2007/12/02 08:32:25 rillig Exp $
 
 DISTNAME=	plan-1.9
 CATEGORIES=	x11 time
@@ -9,6 +9,7 @@ HOMEPAGE=	http://me.in-berlin.de/~bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
+USE_TOOLS+=	yacc lex
 USE_X11BASE=	YES
 BUILD_TARGET=	${LOWER_OPSYS}
 
