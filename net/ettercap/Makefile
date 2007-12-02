@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2006/03/04 21:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2007/12/02 11:25:44 wiz Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		3
 CATEGORIES=		security net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/} \
-			http://ettercap.sourceforge.net/download/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ettercap.sourceforge.net/

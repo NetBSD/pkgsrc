@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2007/11/08 19:39:43 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2007/12/02 11:26:50 wiz Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
 PKGNAME=	freewais-sf-2.2.12
 PKGREVISION=	6
 CATEGORIES=	net databases
-MASTER_SITES=	ftp://ftp.ngb.se/pub/linux/wais/ \
-		ftp://ftp.informatik.uni-hamburg.de/pub/soft/infosystems/wais/freeWAIS/
+MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/infosystems/wais/freeWAIS/
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://www.is.informatik.uni-duisburg.de/projects/freeWAIS-sf/
