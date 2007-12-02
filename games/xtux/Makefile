@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2006/12/15 20:32:57 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/12/02 00:03:37 wiz Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://www.adelaide.net.au/~philaw/ \
-		${MASTER_SITE_SOURCEFORGE:=xtux/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xtux/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xtux.sourceforge.net/
