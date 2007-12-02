@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2007/02/22 19:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/12/02 12:11:09 wiz Exp $
 #
 
 DISTNAME=	unix_jb35foundation
 PKGNAME=	jbuilder-jit-1.2.15
 PKGREVISION=	2
 CATEGORIES=	lang java
-MASTER_SITES=	http://ftp.cdut.edu.cn/pub2/linux/develop/jbuilder/ \
-		http://python.planetmirror.com/ftp/jbuilder/foundation/3.5/linux/ \
-		http://planetmirror.com.au/ftp/jbuilder/foundation/3.5/linux/ \
-		http://www.au.horde.org/pub/jbuilder/foundation/3.5/linux/
+MASTER_SITES=	http://ftp.cdut.edu.cn/pub2/linux/develop/jbuilder/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.borland.com/
