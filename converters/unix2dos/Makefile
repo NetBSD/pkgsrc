@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/02 11:56:49 wiz Exp $
 
-DISTNAME=	unix2dos-1.2
+DISTNAME=	unix2dos-1.3
 CATEGORIES=	converters
-MASTER_SITES=	${MASTER_SITE_BACKUP} \
-		http://www.fisicc-ufm.edu/~obonilla/files/		\
-		ftp://ftp.guug.org/pub/
+MASTER_SITES=	ftp://ftp.guug.org/pub/
 
 MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Translate ASCII files to/from DOS (cr/lf) and UNIX (lf)
