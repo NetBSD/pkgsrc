@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.146 2007/12/02 12:57:32 wiz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.147 2007/12/02 12:58:25 wiz Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -177,9 +177,6 @@ BULK_DBFILE?=		${BULKFILESDIR}/.bulk_db${BULK_ID}
 # use is for digest and also for xpkgwedge.  Add pkgtools/xpkgwedge in
 # /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
-.ifdef PKG_CHK_FILE
-BULK_PREREQ+=		pkgtools/pkg_chk
-.endif
 
 # Commands for printing informational messages from the bulk build.
 # BULK_MSG_CONT is used for continuing a message started with BULK_MSG
@@ -246,7 +243,7 @@ bulk-cache:
 .endfor
 	${RM} -f ${BULK_DBFILE}
 	${TOUCH} ${BULK_DBFILE}
-.if !defined(SPECIFIC_PKGS) && !defined(PKG_CHK_FILE)
+.if !defined(SPECIFIC_PKGS)
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${BULK_MSG} "Building complete pkgsrc dependency tree (this may take a while)."
