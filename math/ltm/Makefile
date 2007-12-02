@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 09:35:10 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/02 22:30:35 rillig Exp $
 #
 
 DISTNAME=		ltm-0.39
@@ -17,7 +17,7 @@ MAKE_FILE=		makefile
 BUILD_TARGET=		default
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS=	share/doc/ltm
+INSTALLATION_DIRS_FROM_PLIST=yes
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/tommath.h ${PREFIX}/include
