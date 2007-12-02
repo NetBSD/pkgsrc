@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2006/12/15 20:33:00 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2007/12/02 12:20:43 wiz Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
 PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/ \
-		ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
-		ftp://ftp.sdsc.edu/pub/other/lyx/stable/
+		ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/
 
 PATCH_SITES=	ftp://stone.phys.pusan.ac.kr/pub/CJK-LyX/
 PATCHFILES=	CJK-LyX-${LYX_VERS}-patch
