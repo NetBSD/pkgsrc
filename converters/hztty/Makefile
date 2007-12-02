@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:49 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/02 11:54:49 wiz Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
-MASTER_SITES=	ftp://ftp.ifcss.org/pub/software/unix/convert/ \
-		ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/ \
-		ftp://ftp.edu.tw/Chinese/ifcss/software/unix/convert/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/chinese/mirror/ftp.ifcss.org/software/unix/convert/
+MASTER_SITES=	ftp://ftp.cuhk.hk/pub/chinese/ifcss/software/unix/convert/
 
 MAINTAINER=	rxg@NetBSD.org
 #HOMEPAGE=
