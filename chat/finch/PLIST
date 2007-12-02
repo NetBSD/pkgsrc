@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/11/03 15:59:17 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/02 04:17:54 tnn Exp $
 bin/finch
 include/finch/finch.h
 include/finch/gntaccount.h
@@ -47,13 +47,13 @@ lib/finch/gntclipboard.la
 lib/finch/gntgf.la
 lib/finch/gnthistory.la
 lib/finch/gntlastlog.la
-lib/libgnt.la
-lib/gnt/s.la
 lib/gnt/irssi.la
+lib/gnt/s.la
+lib/libgnt.la
 lib/pkgconfig/finch.pc
 lib/pkgconfig/gnt.pc
 man/man1/finch.1
-@dirrm include/finch
-@dirrm include/gnt
 @dirrm lib/gnt
 @dirrm lib/finch
+@dirrm include/gnt
+@dirrm include/finch

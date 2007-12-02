@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/11/03 15:59:18 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/12/02 04:17:54 tnn Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -33,6 +33,7 @@ include/libpurple/prefs.h
 include/libpurple/privacy.h
 include/libpurple/proxy.h
 include/libpurple/prpl.h
+include/libpurple/purple.h
 include/libpurple/request.h
 include/libpurple/roomlist.h
 include/libpurple/savedstatuses.h
@@ -61,8 +62,8 @@ lib/purple-2/libicq.la
 lib/purple-2/libirc.la
 lib/purple-2/libjabber.la
 lib/purple-2/libmsn.la
-lib/purple-2/libnovell.la
 lib/purple-2/libmyspace.la
+lib/purple-2/libnovell.la
 lib/purple-2/liboscar.la
 lib/purple-2/libqq.la
 lib/purple-2/libsimple.la
@@ -142,6 +143,7 @@ share/locale/te/LC_MESSAGES/pidgin.mo
 share/locale/th/LC_MESSAGES/pidgin.mo
 share/locale/tr/LC_MESSAGES/pidgin.mo
 share/locale/uk/LC_MESSAGES/pidgin.mo
+share/locale/ur/LC_MESSAGES/pidgin.mo
 share/locale/vi/LC_MESSAGES/pidgin.mo
 share/locale/xh/LC_MESSAGES/pidgin.mo
 share/locale/zh_CN/LC_MESSAGES/pidgin.mo

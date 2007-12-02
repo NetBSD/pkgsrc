@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2007/12/01 22:46:42 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/12/02 04:17:54 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPURPLE_BUILDLINK3_MK:=	${LIBPURPLE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libpurple
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libpurple
 
 .if ${LIBPURPLE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libpurple+=	libpurple>=2.2.2
+BUILDLINK_API_DEPENDS.libpurple+=	libpurple>=2.3.0
 BUILDLINK_PKGSRCDIR.libpurple?=	../../chat/libpurple
 .endif	# LIBPURPLE_BUILDLINK3_MK
 
