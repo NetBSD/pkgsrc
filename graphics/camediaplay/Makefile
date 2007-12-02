@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/02 00:04:48 wiz Exp $
 
 DISTNAME=	camediaplay-20010211
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.itojun.org/pub/digi-cam/C-400L/unix/ \
-		ftp://ftp.digipri.co.jp/pub/free-software/Olympus/C-400L/unix/
+MASTER_SITES=	ftp://ftp.itojun.org/pub/digi-cam/C-400L/unix/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Digital camera downloading tool for Epson/Sanyo/Olympus/Agfa camera
