@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.38 2007/12/01 21:43:25 ghen Exp $
+$NetBSD: distinfo,v 1.39 2007/12/02 21:28:36 ghen Exp $
 
+SHA1 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-i386.tar.bz2) = c7931ce8b279462058f61bbba31dbf67b2e2c3c8
+RMD160 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-i386.tar.bz2) = bde8c5edfa98e6306a7f3dadc743364dc0cd3605
+Size (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-i386.tar.bz2) = 11894829 bytes
+SHA1 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-sparc.tar.bz2) = bb2946c643f0fb01b9c59bd3dcb71a7eed86d17d
+RMD160 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-sparc.tar.bz2) = 3e29810988a1ab2561e6d0adf83249c730d31ce3
+Size (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris10-sparc.tar.bz2) = 13363662 bytes
 SHA1 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris8-i386-gtk1.tar.bz2) = 6c5c1bfb616c75fec92b3542cba1ba39c8539778
 RMD160 (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris8-i386-gtk1.tar.bz2) = dd2e9c39ad2e530f9a56f948c265d68c479d9ae0
 Size (firefox/releases/2.0.0.11/contrib/solaris_tarball/firefox-2.0.0.11.en-US.solaris8-i386-gtk1.tar.bz2) = 27275 bytes
