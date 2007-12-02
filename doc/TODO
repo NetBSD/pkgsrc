@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6871 2007/12/02 13:53:43 wiz Exp $
+$NetBSD: TODO,v 1.6872 2007/12/02 13:54:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -703,7 +703,6 @@ Suggested package updates
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
-	o libelf-0.8.10
 	o libevent-1.4.0beta
 	o libflash-0.4.13
 	o libgda-3.1.2
