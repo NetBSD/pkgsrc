@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2007/04/30 02:49:15 obache Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/02 11:41:30 wiz Exp $
 #
 
 DISTNAME=	pstree-2.27
 CATEGORIES=	sysutils
-# PKGREVISION=	1
-MASTER_SITES=	ftp://ftp.thp.uni-duisburg.de/pub/source/ \
-		http://fresh.t-systems-sfr.com/unix/src/misc/
+MASTER_SITES=	ftp://ftp.thp.uni-duisburg.de/pub/source/
+#		http://fresh.t-systems-sfr.com/unix/src/misc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Display processes in a tree
