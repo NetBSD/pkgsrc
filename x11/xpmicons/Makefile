@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2007/11/12 00:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2007/12/02 12:35:27 wiz Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	5
 CATEGORIES=	x11
-MASTER_SITES=	http://www.plig.org/xwinman/ \
-		${MASTER_SITE_SUNSITE:=X11/icons/} \
-		http://the-labs.com/AfterStep/
+MASTER_SITES=	http://www.plig.org/xwinman/
 DISTFILES=	icons.tar.gz KDEicons.tgz \
 		3d_pixmaps_V1.21.tar.gz StarOffice3.1-icons.tar.gz \
 		eicons-1.0.tar.gz kdeicons.tgz wm-icons-0.2.6.tar.gz \
