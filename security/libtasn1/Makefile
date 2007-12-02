@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2007/03/08 18:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/12/02 12:22:45 wiz Exp $
 
 DISTNAME=	libtasn1-0.3.9
 CATEGORIES=	security devel
 MASTER_SITES=	http://josefsson.org/gnutls/releases/libtasn1/ \
 		ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
-		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/ \
-		http://www.mirrors.wiretapped.net/security/network-security/gnutls/libtasn1/ \
-		ftp://ftp.mirrors.wiretapped.net/pub/security/network-security/gnutls/libtasn1/
+		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
