@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/09/12 04:15:06 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/03 05:54:15 obache Exp $
 
-DISTNAME=		JSON-1.14
+DISTNAME=		JSON-1.15
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5 converters
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
