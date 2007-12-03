@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/08/23 18:20:33 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2007/12/03 13:55:33 abs Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -31,22 +31,20 @@ EMUL_REQD=		suse>=9.0
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${EMUL_PLATFORM} == "linux-i386"
-FLASH_VERS=		9.0r48
-DISTUNAME=		linux
-DISTNAME=		install_flash_player_9_${DISTUNAME}
-WRKNAME=		install_flash_player_9_${DISTUNAME}
-.elif ${EMUL_PLATFORM} == "solaris-sparc"
+.if ${EMUL_PLATFORM} == "solaris-sparc"
 FLASH_VERS=		7.0r67
 PKGREVISION=		2
 DISTUNAME=		solaris
 DISTNAME=		install_flash_player_7_${DISTUNAME}_sparc
 WRKNAME=		install_flash_player_7_${DISTUNAME}
-.else
+.else  # if ${EMUL_PLATFORM} == "linux-i386"
 # Defaults so lintpkgsrc is happy
-FLASH_VERS=		5.0.47
-DISTNAME=		flash_player
+FLASH_VERS=		9.0r48
+DISTUNAME=		linux
+DISTNAME=		install_flash_player_9_${DISTUNAME}
+WRKNAME=		install_flash_player_9_${DISTUNAME}
 .endif
+
 PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
