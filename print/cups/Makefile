@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2007/10/08 11:39:47 rillig Exp $
+# $NetBSD: Makefile,v 1.126.2.1 2007/12/03 13:13:14 ghen Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -9,6 +9,7 @@ PKGNAME=	cups-${VERS}
 BASE_VERS=	1.2.12
 DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -135,6 +136,12 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/cups.pam
 SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
+
+SUBST_CLASSES+=		rpathfix
+SUBST_FILES.rpathfix=	cups-config.in
+SUBST_MESSAGE.rpathfix=	Adding rpath to cups-config.
+SUBST_SED.rpathfix=	-e 's|@EXPORT_LDFLAGS@|${COMPILER_RPATH_FLAG}${LOCALBASE}/lib|g'
+SUBST_STAGE.rpathfix=	post-patch
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
