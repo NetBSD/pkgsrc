@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/11/14 13:05:12 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9.8.1 2007/12/03 12:53:58 ghen Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
@@ -104,7 +104,6 @@ share/mantis/core/adodb/adodb-pear.inc.php
 share/mantis/core/adodb/adodb-perf.inc.php
 share/mantis/core/adodb/adodb-php4.inc.php
 share/mantis/core/adodb/adodb-time.inc.php
-share/mantis/core/adodb/adodb-time.zip
 share/mantis/core/adodb/adodb-xmlschema.inc.php
 share/mantis/core/adodb/adodb.inc.php
 share/mantis/core/adodb/contrib/toxmlrpc.inc.php
