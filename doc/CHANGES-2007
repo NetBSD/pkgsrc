@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2570 2007/12/03 16:47:48 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2571 2007/12/03 21:55:55 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4693,3 +4693,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey-bin to 1.1.7 [ghen 2007-12-03]
 	Updated www/seamonkey-gtk1 to 1.1.7 [ghen 2007-12-03]
 	Updated mail/mutt-devel to 1.5.17nb2 [wiz 2007-12-03]
+	Updated sysutils/xenkernel3 to 3.1.2 [bouyer 2007-12-03]
+	Updated sysutils/xentools3 to 3.1.2 [bouyer 2007-12-03]
+	Updated sysutils/xentools3-hvm to 3.1.2 [bouyer 2007-12-03]
