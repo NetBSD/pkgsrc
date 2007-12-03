@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2007/12/02 18:55:30 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/03 21:54:31 bouyer Exp $
 #
 
-VERSION=		3.1.0
-PKGREVISION=		1
+VERSION=		3.1.2
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		xentools3-hvm-${VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
-			http://bits.xensource.com/oss-xen/release/${VERSION}/src.tgz/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://www.cl.cam.ac.uk/research/srg/netos/xen/
+HOMEPAGE=		http://xen.org/
 COMMENT=		Tools for Virtual Machine Extensions support in Xen
 
 BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware

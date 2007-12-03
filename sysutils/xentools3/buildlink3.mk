@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/12/03 21:54:30 bouyer Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XENTOOLS3_BUILDLINK3_MK:=	${XENTOOLS3_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xentools3
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xentools3
 
 .if ${XENTOOLS3_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xentools3+=	xentools3>=3.1.0
+BUILDLINK_API_DEPENDS.xentools3+=	xentools3>=3.1.2
 BUILDLINK_PKGSRCDIR.xentools3?=	../../sysutils/xentools3
 .endif	# XENTOOLS3_BUILDLINK3_MK
 
