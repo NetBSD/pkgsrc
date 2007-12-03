@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/23 23:15:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/03 19:33:14 xtraeme Exp $
 lib/xorg/modules/drivers/radeonhd_drv.la
+man/man4/radeonhd.4
