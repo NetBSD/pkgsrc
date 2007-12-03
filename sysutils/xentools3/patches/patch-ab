@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/03 21:54:30 bouyer Exp $
 
---- /dev/null	2007-05-27 15:18:39.000000000 +0200
-+++ libxc/xc_netbsd.c	2007-05-27 16:01:23.000000000 +0200
+--- libxc/xc_netbsd.c.orig	2007-12-03 12:46:01.000000000 +0100
++++ libxc/xc_netbsd.c	2007-12-03 12:48:59.000000000 +0100
 @@ -0,0 +1,268 @@
 +/******************************************************************************
 + *
@@ -173,7 +173,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
 +    return ioctl(xce_handle, IOCTL_EVTCHN_NOTIFY, &notify);
 +}
 +
-+evtchn_port_t xc_evtchn_bind_interdomain(int xce_handle, int domid,
++evtchn_port_or_error_t xc_evtchn_bind_interdomain(int xce_handle, int domid,
 +    evtchn_port_t remote_port)
 +{
 +    struct ioctl_evtchn_bind_interdomain bind;
@@ -198,7 +198,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
 +    return ioctl(xce_handle, IOCTL_EVTCHN_UNBIND, &unbind);
 +}
 +
-+evtchn_port_t xc_evtchn_bind_virq(int xce_handle, unsigned int virq)
++evtchn_port_or_error_t xc_evtchn_bind_virq(int xce_handle, unsigned int virq)
 +{
 +    struct ioctl_evtchn_bind_virq bind;
 +    int err;
@@ -237,7 +237,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
 +    return 0;
 +}
 +
-+evtchn_port_t xc_evtchn_pending(int xce_handle)
++evtchn_port_or_error_t xc_evtchn_pending(int xce_handle)
 +{
 +    evtchn_port_t port;
 +

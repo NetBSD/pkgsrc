@@ -1,15 +1,12 @@
-$NetBSD: distinfo,v 1.5 2007/11/26 19:35:24 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2007/12/03 21:54:29 bouyer Exp $
 
-SHA1 (xen-3.1.0-src.tgz) = fa4b54c36626f2cce9b15dc99cafda0b42c54777
-RMD160 (xen-3.1.0-src.tgz) = 2fd65a3b81e522d0ed2d62fd11e5977167f1ceb3
-Size (xen-3.1.0-src.tgz) = 6831094 bytes
+SHA1 (xen-3.1.2-src.tgz) = 475499fd2c3f917a5e8e7f95950dedf9c6fa295e
+RMD160 (xen-3.1.2-src.tgz) = 90413e82899f422b16407de156b88ad54b6e05ad
+Size (xen-3.1.2-src.tgz) = 6975860 bytes
 SHA1 (patch-aa) = 1be644e7edd3735c2850d3e581002f53bd50eb59
-SHA1 (patch-ab) = 58ba3a1ec8c1bbc895dd70d286eb5a70778b7c7f
-SHA1 (patch-ac) = 3eb6179c90090d5b05f97a66b50cf78ce50e6f56
-SHA1 (patch-ad) = 0af2e62c4a1469d03b3999cf0864c62e28d95ed0
-SHA1 (patch-ae) = 3bba21641c64d572a845966e6600d686e6d86983
 SHA1 (patch-ba) = f9a576b74a7039167aee57d9583ac99e9cbf70a1
 SHA1 (patch-bb) = 7338e5a512c909d4b043654dab882761de274f94
 SHA1 (patch-bc) = fa35699da6ad2a4950418a02432c2ccdb5d34844
 SHA1 (patch-bd) = 2a07955b1285d288458066813f8ebc801b8038c1
-SHA1 (patch-cw) = 0265eeebfe488ec6d795ee28f45a26b65a7976db
+SHA1 (patch-cw) = 83a0f34dac9ba9a465c7362d4de6706afb84d688
+SHA1 (patch-cy) = 6fcaa3284442b19f6580173ac8753d9216fa10cf

@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2007/11/17 16:45:32 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/03 21:54:30 bouyer Exp $
 #
 
-VERSION=		3.1.0
+VERSION=		3.1.2
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		xentools3-${VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.cl.cam.ac.uk/research/srg/netos/xen/downloads/ \
-			http://bits.xensource.com/oss-xen/release/${VERSION}/src.tgz/
+MASTER_SITES=		${MASTER_SITES_LOCAL}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://www.cl.cam.ac.uk/research/srg/netos/xen/
+HOMEPAGE=		http://xen.org/
 COMMENT=		Userland Tools for Xen
 
 #DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted

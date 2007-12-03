@@ -1,6 +1,0 @@
-$NetBSD: patch-ad,v 1.1 2007/08/17 17:26:04 bouyer Exp $
-
---- config/NetBSD.mk.orig	2007-08-16 21:44:15.000000000 +0200
-+++ config/NetBSD.mk	2007-08-16 21:44:08.000000000 +0200
-@@ -0,0 +1 @@
-+include $(XEN_ROOT)/config/StdGNU.mk
