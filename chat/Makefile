@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2007/11/28 11:46:30 mjl Exp $
+# $NetBSD: Makefile,v 1.133 2007/12/03 20:22:30 jnemeth Exp $
 #
 
 COMMENT=	Communication programs
@@ -14,8 +14,8 @@ SUBDIR+=	bnc
 SUBDIR+=	bsflite
 SUBDIR+=	centericq
 SUBDIR+=	centerim
-SUBDIR+=	climm
 SUBDIR+=	cgiirc
+SUBDIR+=	climm
 SUBDIR+=	dccserver
 SUBDIR+=	dircproxy
 SUBDIR+=	dircproxy-devel
