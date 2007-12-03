@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/11 16:59:30 abs Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/03 06:00:16 obache Exp $
 #
 
 DISTNAME=	JSON-XS-1.5
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/dist/JSON_XS/
+HOMEPAGE=	http://search.cpan.org/dist/JSON-XS/
 COMMENT=	JSON serialising/deserialising, done correctly and fast
 
 PERL5_PACKLIST=	auto/JSON/XS/.packlist
