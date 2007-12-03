@@ -1,0 +1,15 @@
+$NetBSD: patch-cy,v 1.1 2007/12/03 21:54:30 bouyer Exp $
+
+--- xen/arch/x86/domain_build.c.orig	2007-12-03 21:59:10.000000000 +0100
++++ xen/arch/x86/domain_build.c	2007-12-03 22:01:57.000000000 +0100
+@@ -768,6 +768,10 @@
+             l1start = l1tab = l2e_to_l1e(*l2tab);
+         }
+     }
++    /* make sure remaining entries are clear */
++    l4tab = l4start;
++    for ( count = 0; count < ROOT_PAGETABLE_FIRST_XEN_SLOT; count++)
++	l4tab[count].l4 = 0;
+ 
+ #endif /* __x86_64__ */
+ 
