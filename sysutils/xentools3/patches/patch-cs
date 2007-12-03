@@ -1,7 +1,7 @@
-$NetBSD: patch-cs,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+$NetBSD: patch-cs,v 1.2 2007/12/03 21:54:31 bouyer Exp $
 
---- misc/xen-python-path.orig	2007-05-18 16:45:21.000000000 +0200
-+++ misc/xen-python-path	2007-05-27 17:07:21.000000000 +0200
+--- misc/xen-python-path.orig	2007-11-15 00:35:27.000000000 +0100
++++ misc/xen-python-path	2007-12-03 12:45:29.000000000 +0100
 @@ -22,14 +22,14 @@
  # take the first installed instance of auxbin that we find, and then run it
  # to determine the correct path, appending that to sys.path.
@@ -16,6 +16,6 @@ $NetBSD: patch-cs,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
  for p in ['python%s' % sys.version[:3], 'python']:
 -    for l in ['/usr/lib64', '/usr/lib']:
 +    for l in ['@PREFIX@/lib']:
-         d = os.path.join(l, p)
-         if os.path.exists(os.path.join(d, AUXBIN)):
-             sys.path.append(d)
+         for k in ['', 'site-packages/']:
+             d = os.path.join(l, p, k)
+             if os.path.exists(os.path.join(d, AUXBIN)):
