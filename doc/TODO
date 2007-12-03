@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6873 2007/12/02 14:43:04 taca Exp $
+$NetBSD: TODO,v 1.6874 2007/12/03 01:24:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,7 @@ Suggested package updates
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-9.54
 	o angband-3.0.9
-	o anjuta-2.2.2
+	o anjuta-2.2.3
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -305,6 +305,7 @@ Suggested package updates
 	o apache-1.3.39
 	o apache-ant15-1.7.0
 	o apache-tomcat-5.5.25
+	o apr-1.2.12
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o aranym-0.9.5
@@ -320,7 +321,7 @@ Suggested package updates
 	o aspell-faroese-0.2.30
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
-	o asterisk-1.4.14
+	o asterisk-1.4.15
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o autoconvert-0.3.16
@@ -492,6 +493,7 @@ Suggested package updates
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
 	o freepops-0.2.6
+	o freesci-0.6.2
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
@@ -516,6 +518,7 @@ Suggested package updates
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
+	o gdm-2.20.2
 	o gdsreader-0.3.2
 	o geany-0.12
 	o geda-1.2.0.20070902
@@ -628,7 +631,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.14
+	o ikiwiki-2.15
 	o imap-uw-2006k
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -697,6 +700,7 @@ Suggested package updates
 	o libXtst-1.0.3
 	o libXxf86dga-1.0.2
 	o libast-0.7
+	o libcares-1.5.1
 	o libcdio-0.79
 	o libchewing-0.3.0
 	o libdiscid-0.1.1
@@ -854,7 +858,8 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-1.83
+	o p5-Apache-Session-1.84
+	o p5-Apache-Test-1.30
 	o p5-Archive-Tar-1.36
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
@@ -904,6 +909,7 @@ Suggested package updates
 	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
 	o p5-Mail-SpamAssassin-3.2.2
+	o p5-MailTools-2.02
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
 	o p5-Module-Refresh-0.13
@@ -932,6 +938,7 @@ Suggested package updates
 	o p5-Test-Harness-2.64
 	o p5-Test-Inline-2.207
 	o p5-Test-NoWarnings-0.083
+	o p5-Test-Simple-0.74
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.16
@@ -1131,6 +1138,7 @@ Suggested package updates
 	o scapy-1.1.1
 	o scew-0.4.0
 	o sch-3.8.3
+	o scmgit-1.5.3.7
 	o scons-0.97
 	o scribus-1.3.4
 	o scrollz-1.9.99
@@ -1266,7 +1274,7 @@ Suggested package updates
 	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.49
+	o wine-0.9.50
 	o wmii-3.6
 	o wml-2.0.11
 	o wmweather-2.4.4
@@ -1277,7 +1285,7 @@ Suggested package updates
 	o wxGTK-2.8.6
 	o wxRemind-0.9.13
 	o wyrd-1.4.3
-	o x264-devel-20071124
+	o x264-devel-20071201
 	o xalan-c-1.10.0
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
@@ -1311,6 +1319,7 @@ Suggested package updates
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
+	o xmlto-0.0.19
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
