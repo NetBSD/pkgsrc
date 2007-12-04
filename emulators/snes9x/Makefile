@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/06/15 17:16:02 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2007/12/04 11:38:55 obache Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -45,9 +45,10 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snes9x
+PKG_SUPPORTED_OPTIONS=	# empty
 .if ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-PKG_SUPPORTED_OPTIONS=	mmx
+PKG_SUPPORTED_OPTIONS+=	mmx
 .endif
 
 .include "../../mk/bsd.options.mk"
