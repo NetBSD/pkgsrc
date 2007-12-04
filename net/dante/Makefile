@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/05/25 00:28:19 rh Exp $
+# $NetBSD: Makefile,v 1.21 2007/12/04 13:30:06 abs Exp $
 
 DISTNAME=	dante-1.1.19
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.inet.no/pub/socks/
 
@@ -16,6 +17,8 @@ CONFIGURE_ARGS+=	--with-socks-conf=${PKG_SYSCONFDIR}/socks.conf
 CONFIGURE_ARGS+=	--with-sockd-conf=${PKG_SYSCONFDIR}/sockd.conf
 
 CHECK_PORTABILITY_SKIP=	contrib/StartupItems.Dante
+
+RCD_SCRIPTS=		sockd
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dante
