@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2571 2007/12/03 21:55:55 bouyer Exp $
+$NetBSD: CHANGES-2007,v 1.2572 2007/12/04 00:37:05 grant Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4696,3 +4696,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xenkernel3 to 3.1.2 [bouyer 2007-12-03]
 	Updated sysutils/xentools3 to 3.1.2 [bouyer 2007-12-03]
 	Updated sysutils/xentools3-hvm to 3.1.2 [bouyer 2007-12-03]
+	Added databases/php-oci8-5.2.5 [grant 2007-12-04]
