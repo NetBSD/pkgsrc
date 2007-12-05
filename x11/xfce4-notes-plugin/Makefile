@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/04/12 09:55:23 martti Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/05 07:50:47 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.4.1
+XFCE4_VERSION=	1.6.0
 
 DISTNAME=	xfce4-notes-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
