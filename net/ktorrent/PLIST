@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/22 08:38:57 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/05 11:05:24 abs Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -303,6 +303,10 @@ share/kde/apps/ktorrent/ktschedulerpluginui.rc
 share/kde/apps/ktorrent/www/coldmilk/favicon.ico
 share/kde/apps/ktorrent/www/coldmilk/icon.png
 share/kde/apps/ktorrent/www/coldmilk/icons/16x16/edit_user.png
+share/kde/apps/ktorrent/www/coldmilk/icons/16x16/high_priority.png
+share/kde/apps/ktorrent/www/coldmilk/icons/16x16/low_priority.png
+share/kde/apps/ktorrent/www/coldmilk/icons/16x16/normal_priority.png
+share/kde/apps/ktorrent/www/coldmilk/icons/16x16/only_seed.png
 share/kde/apps/ktorrent/www/coldmilk/icons/22x22/exit.png
 share/kde/apps/ktorrent/www/coldmilk/icons/22x22/ktstart_all.png
 share/kde/apps/ktorrent/www/coldmilk/icons/22x22/ktstop_all.png
@@ -325,14 +329,20 @@ share/kde/apps/ktorrent/www/coldmilk/page_update.js
 share/kde/apps/ktorrent/www/coldmilk/rest.php
 share/kde/apps/ktorrent/www/coldmilk/shutdown.php
 share/kde/apps/ktorrent/www/coldmilk/style.css
+share/kde/apps/ktorrent/www/default/details.php
 share/kde/apps/ktorrent/www/default/favicon.ico
 share/kde/apps/ktorrent/www/default/grad1.jpg
 share/kde/apps/ktorrent/www/default/grad2.jpg
 share/kde/apps/ktorrent/www/default/header_tile.png
+share/kde/apps/ktorrent/www/default/high_priority.png
 share/kde/apps/ktorrent/www/default/icon.png
 share/kde/apps/ktorrent/www/default/interface.php
 share/kde/apps/ktorrent/www/default/ktorrentwebinterfacelogo.png
 share/kde/apps/ktorrent/www/default/login.html
+share/kde/apps/ktorrent/www/default/low_priority.png
+share/kde/apps/ktorrent/www/default/menu_bg.png
+share/kde/apps/ktorrent/www/default/normal_priority.png
+share/kde/apps/ktorrent/www/default/only_seed.png
 share/kde/apps/ktorrent/www/default/remove.png
 share/kde/apps/ktorrent/www/default/shutdown.php
 share/kde/apps/ktorrent/www/default/start.png
@@ -394,6 +404,7 @@ share/locale/ja/LC_MESSAGES/ktorrent.mo
 share/locale/ka/LC_MESSAGES/ktorrent.mo
 share/locale/lt/LC_MESSAGES/ktorrent.mo
 share/locale/ms/LC_MESSAGES/ktorrent.mo
+share/locale/nb/LC_MESSAGES/ktorrent.mo
 share/locale/nds/LC_MESSAGES/ktorrent.mo
 share/locale/nl/LC_MESSAGES/ktorrent.mo
 share/locale/pa/LC_MESSAGES/ktorrent.mo
