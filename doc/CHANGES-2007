@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2582 2007/12/05 17:43:20 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2583 2007/12/05 22:12:55 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/sudo to 1.6.9p9nb1 [taca 2007-12-05]
 	Updated net/ktorrent to 2.2.4 [abs 2007-12-05]
 	Updated www/ap2-fastcgi to 2.4.2nb4 [ghen 2007-12-05]
+	Updated sysutils/xenkernel3 to 3.1.2nb1 [bouyer 2007-12-05]
