@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2007/12/05 21:39:01 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2007/12/05 21:42:18 tron Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
 .endif
 
+# See <http://developer.apple.com/qa/qa2007/qa1567.html>.
 .if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
 BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file -Wl,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
 .endif
