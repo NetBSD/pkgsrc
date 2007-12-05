@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2575 2007/12/05 04:09:53 reed Exp $
+$NetBSD: CHANGES-2007,v 1.2576 2007/12/05 04:15:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added databases/php-oci8 version 5.2.5 [grant 2007-12-04]
 	Updated textproc/diction to 1.11 [bjs 2007-12-04]
 	Updated www/ikiwiki to 2.15 [reed 2007-12-05]
+	Updated security/sudo to 1.6.9p9 [taca 2007-12-05]
