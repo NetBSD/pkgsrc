@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2007/10/02 05:28:19 martti Exp $
+# $NetBSD: Makefile,v 1.92.2.1 2007/12/05 07:31:12 ghen Exp $
 
-DISTNAME=	squirrelmail-1.4.11
+DISTNAME=	squirrelmail-1.4.12
 #PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
@@ -29,7 +29,7 @@ BUILD_DEFS+=		VARBASE
 .include "options.mk"
 
 PKG_SYSCONFSUBDIR?=	httpd
-MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
@@ -37,24 +37,24 @@ DATADIR=		${VARBASE}/spool/squirrelmail
 ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
 
-MESSAGE_SUBST+=		SMDIR=${SMDIR:Q}
-FILES_SUBST+=		SMDIR=${SMDIR:Q}
+MESSAGE_SUBST+=		SMDIR=${SMDIR}
+FILES_SUBST+=		SMDIR=${SMDIR}
 
-CONF_FILES=		${SMDIR:Q}/config/config_default.php \
-			${SMDIR:Q}/config/config.php
-CONF_FILES+=		${SMDIR:Q}/data/default_pref \
-			${DATADIR:Q}/data/default_pref
-CONF_FILES+=		${EGDIR:Q}/squirrelmail.conf \
-			${PKG_SYSCONFDIR:Q}/squirrelmail.conf
+CONF_FILES=		${SMDIR}/config/config_default.php \
+			${SMDIR}/config/config.php
+CONF_FILES+=		${SMDIR}/data/default_pref \
+			${DATADIR}/data/default_pref
+CONF_FILES+=		${EGDIR}/squirrelmail.conf \
+			${PKG_SYSCONFDIR}/squirrelmail.conf
 
-REQD_DIRS+=		${SMDIR:Q} ${SMDIR:Q}/config
+REQD_DIRS+=		${SMDIR} ${SMDIR}/config
 
 OWN_DIRS=		${DATADIR}
 OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR:Q}/squirrelmail.conf.dist
+SUBST_FILES.paths=	${WRKDIR}/squirrelmail.conf.dist
 SUBST_FILES.paths+=	config/config_default.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@ATTACHMENTS_DIR@,${ATTACHMENTS_DIR},g'
@@ -67,25 +67,25 @@ INSTALLATION_DIRS+=	share/examples/squirrelmail
 INSTALLATION_DIRS+=	share/squirrelmail
 
 post-extract:
-	cp ${FILESDIR:Q}/squirrelmail.conf.dist \
-		${WRKDIR:Q}/squirrelmail.conf.dist
+	cp ${FILESDIR}/squirrelmail.conf.dist \
+		${WRKDIR}/squirrelmail.conf.dist
 
 pre-configure:
-	find ${WRKSRC:Q} \( -name '*.orig*' -o -name '.cvsignore' \) \
+	find ${WRKSRC} \( -name '*.orig*' -o -name '.cvsignore' \) \
 		-exec rm -f {} \;
 # currently, we use iso_2022_jp.php in squirrelmail-decode package.
 #
 	rm -f ${WRKSRC}/functions/decode/iso_2022_jp.php
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR:Q}/squirrelmail.conf.dist ${EGDIR:Q}/squirrelmail.conf
-	cp -R ${WRKSRC:Q}/* ${SMDIR:Q}
+	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist ${EGDIR}/squirrelmail.conf
+	cp -R ${WRKSRC}/* ${SMDIR}
 	chown -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	find ${SMDIR} -type d -exec chmod ${PKGDIRMODE} {} \;
 	find ${SMDIR} -type f -exec chmod ${SHAREMODE} {} \;
-	chmod a+x ${SMDIR:Q}/config/conf.pl
-	${INSTALL_DATA} ${WRKSRC:Q}/data/index.php ${USER_PREFS_DIR:Q}/
-	${INSTALL_DATA} ${WRKSRC:Q}/data/.htaccess ${USER_PREFS_DIR:Q}/
+	chmod a+x ${SMDIR}/config/conf.pl
+	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
+	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 	mv ${PREFIX}/share/squirrelmail/contrib/conf.pl.8 \
 	  ${PREFIX}/${PKGMANDIR}/man8/squirrelmail-conf.pl.8
 

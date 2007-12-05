@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2007/05/10 06:48:28 martti Exp $
+$NetBSD: patch-aa,v 1.13.4.1 2007/12/05 07:31:14 ghen Exp $
 
---- config/config_default.php.orig	2007-03-04 04:07:59.000000000 +0200
-+++ config/config_default.php	2007-05-10 09:21:01.000000000 +0300
-@@ -414,7 +414,7 @@
+--- config/config_default.php.orig	2007-07-10 17:52:53.000000000 +0300
++++ config/config_default.php	2007-12-05 08:50:31.000000000 +0200
+@@ -434,7 +434,7 @@
   * false. (Cyrus works fine whether it's true OR false).
   * @global bool $show_contain_subfolders_option
   */
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2007/05/10 06:48:28 martti Exp $
  
  /**
   * These next two options set the defaults for the way that the
-@@ -464,7 +464,7 @@
+@@ -484,7 +484,7 @@
   *
   * @global string $data_dir
   */
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2007/05/10 06:48:28 martti Exp $
  
  /**
   * Attachments directory
-@@ -482,7 +482,7 @@
+@@ -502,7 +502,7 @@
   *    + It should probably be another directory than data_dir.
   * @global string $attachment_dir
   */
