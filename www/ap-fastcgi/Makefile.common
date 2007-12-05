@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/03/04 21:30:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/12/05 17:42:49 ghen Exp $
 #
 DISTNAME=	mod_fastcgi-2.4.2
 CATEGORIES=	www
@@ -14,6 +14,7 @@ PLIST_SRC=	${.CURDIR}/../../www/ap-fastcgi/PLIST
 MESSAGE_SRC=	${.CURDIR}/../../www/ap-fastcgi/MESSAGE
 
 PLIST_SUBST+=	APACHE_MANUAL=${APACHE_MANUAL:Q}
+MESSAGE_SUBST+=	APACHE_MANUAL=${APACHE_MANUAL:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/mod_fastcgi.html	\
