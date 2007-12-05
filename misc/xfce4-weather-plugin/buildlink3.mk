@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2007/04/12 09:55:11 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2007/12/05 07:48:46 martti Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_WEATHER_PLUGIN_BUILDLINK3_MK:=	${XFCE4_WEATHER_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-weather-plugin
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-weather-plugin
 
 .if ${XFCE4_WEATHER_PLUGIN_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-weather-plugin+=	xfce4-weather-plugin>=0.6.0
+BUILDLINK_API_DEPENDS.xfce4-weather-plugin+=	xfce4-weather-plugin>=0.6.2
 BUILDLINK_PKGSRCDIR.xfce4-weather-plugin?=	../../misc/xfce4-weather-plugin
 .endif	# XFCE4_WEATHER_PLUGIN_BUILDLINK3_MK
 
