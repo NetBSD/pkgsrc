@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/10/06 00:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/05 04:09:53 reed Exp $
 #
 
-DISTNAME=	ikiwiki_2.6.1
+DISTNAME=	ikiwiki_2.15
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -12,7 +11,7 @@ HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=	svn w3m
+PKG_SUPPORTED_OPTIONS=	imagemagick svn w3m
 PKG_SUGGESTED_OPTIONS=	# none on by default
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,7 +37,10 @@ DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
 # for img plugin
+.if !empty(PKG_OPTIONS:Mimagemagick)
+# the plugin uses the ImageMagick tools via PerlMagic
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
+.endif
 
 .if !empty(PKG_OPTIONS:Msvn)
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
@@ -47,59 +49,38 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 .if !empty(PKG_OPTIONS:Mw3m)
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
 PLIST_SUBST+=	W3M=""
+SUBST_SED.makefile+=	-e 's,/lib/w3m/cgi-bin,/libexec/w3m/cgi-bin,'
+INSTALLATION_DIRS+=	share/doc/ikiwiki/w3mmode
 .else
 PLIST_SUBST+=	W3M="@comment "
+SUBST_SED.makefile+=	-e 's,^\(.*install .*/lib/w3m/cgi-bin\),\#\1,'
 .endif
 
-
+INSTALLATION_DIRS+=	share/doc/ikiwiki
 WRKSRC=		${WRKDIR}/ikiwiki
 PERL5_PACKLIST=	auto/IkiWiki/.packlist
 USE_LANGUAGES=	# none
-USE_TOOLS=	gmake xgettext
+USE_TOOLS=	gmake perl:run xgettext
 
+# TODO: check these
 REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
-REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild
+REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild ikiwiki-update-wikilist
 REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm
 REPLACE_PERL+=	doc/ikiwiki.setup doc/w3mmode/ikiwiki.setup
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8
-
-post-extract:
-	cd ${WRKSRC} && ${CHMOD} a+r IkiWiki/Rcs/git.pm \
-		basewiki/favicon.ico doc/logo/ikiwiki_large.png \
-		doc/logo/ikiwiki.svgz templates/atomitem.tmpl
+SUBST_CLASSES+=	makefile
+SUBST_STAGE.makefile=	post-patch
+SUBST_FILES.makefile=	Makefile.PL
+SUBST_SED.makefile+=	-e 's,share/man/man,${PKGMANDIR}/man,g'
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ikiwiki
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ikiwiki/templates
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ikiwiki/basewiki
-	cd ${WRKSRC} && pax -rwLvpp templates basewiki ${PREFIX}/share/ikiwiki/
-
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ikiwiki
-# This is the ikiwiki website with near 600 files and near 2MB;
-# using pax -L above to copy the symlink targets for the needed doc
-#	cd ${WRKSRC}/html && pax -rwvpp . ${PREFIX}/share/doc/ikiwiki/
-
-# copy select files from docs
-	${INSTALL_DATA} ${WRKSRC}/doc/ikiwiki.setup \
-		${PREFIX}/share/doc/ikiwiki/ikiwiki.setup
-
-	${INSTALL_MAN} ${WRKSRC}/ikiwiki.man ${PREFIX}/${PKGMANDIR}/man1/ikiwiki.1
-	${INSTALL_MAN} ${WRKSRC}/ikiwiki-mass-rebuild.man ${PREFIX}/${PKGMANDIR}/man8/ikiwiki-mass-rebuild.8
-
-	${INSTALL_SCRIPT} ${WRKSRC}/ikiwiki-mass-rebuild ${PREFIX}/sbin
-
-	${INSTALL_SCRIPT} ${WRKSRC}/ikiwiki.out ${PREFIX}/bin/ikiwiki
-
-	${GMAKE} -C ${WRKSRC}/po install PREFIX=${PREFIX}
+	${INSTALL_DATA} ${WRKSRC}/html/ikiwiki.setup \
+		${PREFIX}/share/doc/ikiwiki/
 .if !empty(PKG_OPTIONS:Mw3m)
-	${INSTALL_SCRIPT} ${WRKSRC}/ikiwiki-w3m.cgi ${PREFIX}/libexec/w3m/cgi-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ikiwiki/w3mmode
 	${INSTALL_DATA} ${WRKSRC}/html/w3mmode.html \
 		${PREFIX}/share/doc/ikiwiki/
 	${INSTALL_DATA} ${WRKSRC}/doc/w3mmode/ikiwiki.setup \
 		${PREFIX}/share/doc/ikiwiki/w3mmode/ikiwiki.setup
-
 .endif
 
 .include "../../lang/perl5/module.mk"
