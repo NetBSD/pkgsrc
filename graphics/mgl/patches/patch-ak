@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2003/10/14 16:22:21 salo Exp $
+$NetBSD: patch-ak,v 1.3 2007/12/05 13:38:27 obache Exp $
 
---- mgterm/mdate.c.orig	2001-03-09 12:05:20.000000000 +0100
-+++ mgterm/mdate.c	2003-10-14 17:47:28.000000000 +0200
-@@ -66,23 +66,23 @@
+--- mgterm/mdate.c.orig	2001-03-09 11:05:20.000000000 +0000
++++ mgterm/mdate.c
+@@ -66,23 +66,23 @@ static int from_main=0;
  void mdate();
  
  static char *icon_mdate="\
@@ -43,7 +43,7 @@ $NetBSD: patch-ak,v 1.2 2003/10/14 16:22:21 salo Exp $
  ";
  main() {
  	int c;
-@@ -670,9 +670,10 @@
+@@ -670,9 +670,10 @@ void mem_draw() {
  #include <sys/swap.h>
  #include <sys/param.h>
  #include <sys/sysctl.h>
@@ -56,3 +56,27 @@ $NetBSD: patch-ak,v 1.2 2003/10/14 16:22:21 salo Exp $
  #endif
  #include <errno.h>
  
+@@ -683,7 +684,11 @@ struct swapent swaps[NSWAPS];
+ int
+ memmode()
+ {
++#if __NetBSD_Version__ > 106000000
++	struct uvmexp_sysctl uvmexp;
++#else
+ 	struct uvmexp uvmexp;
++#endif
+ 	int mib[2];
+ 	int size = sizeof(uvmexp);
+ 	int pagesize = getpagesize();
+@@ -694,7 +699,11 @@ memmode()
+ 	if (!memmode_ok)
+ 		return 0;
+ 	mib[0] = CTL_VM;
++#if __NetBSD_Version__ > 106000000
++	mib[1] = VM_UVMEXP2;
++#else
+ 	mib[1] = VM_UVMEXP;
++#endif
+ 	if (sysctl(mib, 2, &uvmexp, &size, NULL, 0) < 0) {
+ 		printf("Can't get uvmexp: %s\n", strerror(errno));
+ 		memset(&uvmexp, 0, sizeof(uvmexp));

@@ -1,8 +1,16 @@
-$NetBSD: patch-aq,v 1.1 2005/12/20 14:32:01 joerg Exp $
+$NetBSD: patch-aq,v 1.2 2007/12/05 13:38:27 obache Exp $
 
---- lib/draw_engine.c.orig	2005-12-20 14:27:42.000000000 +0000
+--- lib/draw_engine.c.orig	2000-09-09 03:40:42.000000000 +0000
 +++ lib/draw_engine.c
-@@ -413,6 +413,7 @@ void bitblt_generic(struct screen *dst, 
+@@ -30,6 +30,7 @@
+ #include "mgl2.h"
+ #include "draw_engine.h"
+ #include <stdlib.h>
++#include <stdio.h>
+ 
+ 
+ #ifndef NULL
+@@ -413,6 +414,7 @@ void bitblt_generic(struct screen *dst, 
  	    }
  	}
  ret:
