@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2007/12/05 04:14:42 taca Exp $
+# $NetBSD: Makefile,v 1.102 2007/12/05 10:07:14 taca Exp $
 #
 
 DISTNAME=		sudo-1.6.9p9
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -10,6 +11,7 @@ MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.tux.org/pub/security/sudo/ \
 			http://www.courtesan.com/sudo/dist/OLD/ \
 			http://www.courtesan.com/sudo/dist/beta/
+DIST_SUBDIR=		${DISTNAME}-20071205
 
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.courtesan.com/sudo/
