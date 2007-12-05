@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2580 2007/12/05 10:08:01 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2581 2007/12/05 11:06:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/netbsd-iscsi-initiator to 20071205 [agc 2007-12-05]
 	Updated devel/netbsd-iscsi-target to 20071205 [agc 2007-12-05]
 	Updated security/sudo to 1.6.9p9nb1 [taca 2007-12-05]
+	Updated net/ktorrent to 2.2.4 [abs 2007-12-05]
