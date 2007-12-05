@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2007/10/24 15:28:38 obache Exp $
+$NetBSD: patch-aa,v 1.7 2007/12/05 00:54:56 obache Exp $
 
 --- src/nano.c.orig	2007-01-12 02:58:12.000000000 +0000
 +++ src/nano.c
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/24 15:28:38 obache Exp $
  
  	/* Make sure the cursor is in the edit window. */
  	reset_cursor();
-+	wrefresh(edit);
++	wnoutrefresh(edit);
  
  #ifndef NANO_TINY
  	if (!jump_buf_main) {
