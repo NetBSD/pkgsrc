@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
+$NetBSD: patch-ah,v 1.3 2007/12/05 16:31:00 christos Exp $
 
---- file.c.orig	2005-06-08 16:45:28.000000000 -0400
-+++ file.c	2007-04-27 14:57:58.000000000 -0400
+--- file.c.orig	2007-01-15 15:25:52.000000000 -0500
++++ file.c	2007-12-05 11:22:56.000000000 -0500
 @@ -1,5 +1,4 @@
  /*
 -#ifdef LINUX
@@ -31,7 +31,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  #include <sys/param.h>
  #include <sys/mount.h>
  #include <sys/stat.h>
-@@ -754,16 +760,20 @@
+@@ -831,16 +837,20 @@
  #endif /* LINUXSPARC */
  
  static const struct xlat fileflags[] = {
@@ -53,7 +53,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  #elif UNIXWARE >= 2
  #ifdef 	_S_ISMLD
  	{ _S_ISMLD, 	"_S_ISMLD"	},
-@@ -775,7 +785,7 @@
+@@ -852,7 +862,7 @@
  	{ 0,		NULL		},
  };
  
@@ -62,7 +62,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  int
  sys_chflags(tcp)
  struct tcb *tcp;
-@@ -981,7 +991,7 @@
+@@ -1058,7 +1068,7 @@
  #endif /* !HAVE_STRUCT_STAT_ST_RDEV */
  		break;
  	default:
@@ -71,7 +71,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  		break;
  	}
  	if (!abbrev(tcp)) {
-@@ -1440,6 +1450,7 @@
+@@ -1546,6 +1556,7 @@
  #endif /* LINUX */
  
  #ifndef SVR4
@@ -79,7 +79,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  
  static const char *
  sprintfstype(magic)
-@@ -1458,6 +1469,7 @@
+@@ -1564,6 +1575,7 @@
  	sprintf(buf, "%#x", magic);
  	return buf;
  }
@@ -87,7 +87,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  
  static void
  printstatfs(tcp, addr)
-@@ -1485,7 +1497,11 @@
+@@ -1591,7 +1603,11 @@
  		statbuf.f_namelen);
  #else /* !ALPHA */
  	tprintf("{f_type=%s, f_bsize=%lu, f_blocks=%lu, f_bfree=%lu, ",
@@ -99,7 +99,43 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  		(unsigned long)statbuf.f_bsize,
  		(unsigned long)statbuf.f_blocks,
  		(unsigned long)statbuf.f_bfree);
-@@ -1986,7 +2002,7 @@
+@@ -1846,7 +1862,7 @@
+ 	return 0;
+ }
+ 
+-#if defined(SUNOS4) || defined(SVR4)
++#if defined(SUNOS4) || defined(SVR4) || defined(NETBSD)
+ int
+ sys_fchroot(tcp)
+ struct tcb *tcp;
+@@ -1856,7 +1872,7 @@
+ 	}
+ 	return 0;
+ }
+-#endif /* SUNOS4 || SVR4 */
++#endif /* SUNOS4 || SVR4 || NETBSD */
+ 
+ int
+ sys_link(tcp)
+@@ -2188,7 +2204,7 @@
+ }
+ #endif
+ 
+-#ifdef FREEBSD
++#ifdef ALLBSD
+ int
+ sys_mkfifo(tcp)
+ struct tcb *tcp;
+@@ -2199,7 +2215,7 @@
+ 	}
+ 	return 0;
+ }
+-#endif /* FREEBSD */
++#endif /* ALLBSD */
+ 
+ int
+ sys_fsync(tcp)
+@@ -2254,7 +2270,7 @@
  
  #endif /* LINUX */
  
@@ -108,7 +144,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  static const struct xlat direnttypes[] = {
  	{ DT_UNKNOWN,	"DT_UNKNOWN" 	},
  	{ DT_FIFO,	"DT_FIFO" 	},
-@@ -2059,15 +2075,16 @@
+@@ -2327,15 +2343,16 @@
  				d->d_namlen, d->d_namlen, d->d_name);
  		}
  #endif /* SUNOS4 */
@@ -129,7 +165,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  		if (!d->d_reclen) {
  			tprintf("/* d_reclen == 0, problem here */");
  			break;
-@@ -2153,7 +2170,7 @@
+@@ -2421,7 +2438,7 @@
  }
  #endif
  
@@ -138,7 +174,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  int
  sys_getdirentries(tcp)
  struct tcb * tcp;
-@@ -2186,8 +2203,9 @@
+@@ -2454,8 +2471,9 @@
  	for (i = 0; i < len;) {
  		struct kernel_dirent *d = (struct kernel_dirent *) &buf[i];
  		if (!abbrev(tcp)) {
@@ -150,7 +186,7 @@ $NetBSD: patch-ah,v 1.2 2007/04/27 19:45:01 christos Exp $
  			printxval(direnttypes, d->d_type, "DT_???");
  			tprintf(", d_namlen=%u, d_name=\"%.*s\"}",
  				d->d_namlen, d->d_namlen, d->d_name);
-@@ -2225,7 +2243,7 @@
+@@ -2493,7 +2511,7 @@
  }
  #endif /* LINUX */
  
