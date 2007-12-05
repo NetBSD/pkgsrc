@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2007/10/26 16:44:38 obache Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/05 00:54:56 obache Exp $
 
 --- src/prompt.c.orig	2007-10-26 13:16:08.000000000 +0000
 +++ src/prompt.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1 2007/10/26 16:44:38 obache Exp $
  #endif
  
  	reset_statusbar_cursor();
-+	wrefresh(bottomwin);
++	wnoutrefresh(bottomwin);
      }
  
  #ifndef NANO_TINY
