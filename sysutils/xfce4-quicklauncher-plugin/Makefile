@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/04/17 17:45:06 martti Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/05 07:50:16 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.9.2
+XFCE4_VERSION=	1.9.4
 
 DISTNAME=	xfce4-quicklauncher-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
