@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+$NetBSD: distinfo,v 1.2 2007/12/05 07:51:18 martti Exp $
 
-SHA1 (xfce4-places-plugin-0.1.0.tar.bz2) = 22b2fb5dcd10067a9af57369b4b847773ea940f7
-RMD160 (xfce4-places-plugin-0.1.0.tar.bz2) = 9c4300974e681a2a75538f8944e59afecb329793
-Size (xfce4-places-plugin-0.1.0.tar.bz2) = 256987 bytes
+SHA1 (xfce4-places-plugin-1.0.0.tar.bz2) = 16cb0b7c3d869010f12656da64277e213bbb8de8
+RMD160 (xfce4-places-plugin-1.0.0.tar.bz2) = 3e8d64745d869e8bcd6a851f14c1dc7b999ecf84
+Size (xfce4-places-plugin-1.0.0.tar.bz2) = 298759 bytes
