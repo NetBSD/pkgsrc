@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/06/30 16:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/05 17:42:49 ghen Exp $
 
 .include "../../www/ap-fastcgi/Makefile.common"
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=		3
+PKGREVISION=		4
 PKG_APACHE_ACCEPTED=	apache2 apache22
 APACHE_MANUAL=		manual
 APACHE_MODULE=		# defined
