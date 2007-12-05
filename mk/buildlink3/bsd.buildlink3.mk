@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.198 2007/10/01 06:46:37 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.199 2007/12/05 21:36:43 tron Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -356,22 +356,22 @@ BUILDLINK_CFLAGS=	# empty
 .for _pkg_ in ${_BLNK_PACKAGES}
 .  if !empty(BUILDLINK_AUTO_VARS.${_pkg_}:M[yY][eE][sS])
 .    for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
-.      if empty(BUILDLINK_CPPFLAGS:M${_flag_})
+.      if empty(BUILDLINK_CPPFLAGS:M${_flag_:S/:/\\:/g})
 BUILDLINK_CPPFLAGS+=	${_flag_}
 .      endif
 .    endfor
 .    for _flag_ in ${BUILDLINK_LDFLAGS.${_pkg_}}
-.      if empty(BUILDLINK_LDFLAGS:M${_flag_})
+.      if empty(BUILDLINK_LDFLAGS:M${_flag_:S/:/\\:/g})
 BUILDLINK_LDFLAGS+=	${_flag_}
 .      endif
 .    endfor
 .    for _flag_ in ${BUILDLINK_CFLAGS.${_pkg_}}
-.      if empty(BUILDLINK_CFLAGS:M${_flag_})
+.      if empty(BUILDLINK_CFLAGS:M${_flag_:S/:/\\:/g})
 BUILDLINK_CFLAGS+=	${_flag_}
 .      endif
 .    endfor
 .    for _flag_ in ${BUILDLINK_LIBS.${_pkg_}}
-.      if empty(BUILDLINK_LIBS:M${_flag_})
+.      if empty(BUILDLINK_LIBS:M${_flag_:S/:/\\:/g})
 BUILDLINK_LIBS+=	${_flag_}
 .      endif
 .    endfor
@@ -455,10 +455,10 @@ LDFLAGS?=	# empty
 LIBS?=		# empty
 
 .for _flag_ in ${BUILDLINK_CFLAGS}
-.  if empty(CFLAGS:M${_flag_})
+.  if empty(CFLAGS:M${_flag_:S/:/\\:/g})
 CFLAGS+=	${_flag_}
 .  endif
-.  if empty(CXXFLAGS:M${_flag_})
+.  if empty(CXXFLAGS:M${_flag_:S/:/\\:/g})
 CXXFLAGS+=	${_flag_}
 .  endif
 .endfor
@@ -467,23 +467,23 @@ CXXFLAGS+=	${_flag_}
 # ignores the value of CPPFLAGS that we set in the environment.
 #
 .for _flag_ in ${BUILDLINK_CPPFLAGS}
-.  if empty(CPPFLAGS:M${_flag_})
+.  if empty(CPPFLAGS:M${_flag_:S/:/\\:/g})
 CPPFLAGS+=	${_flag_}
 .  endif
-.  if empty(CFLAGS:M${_flag_})
+.  if empty(CFLAGS:M${_flag_:S/:/\\:/g})
 CFLAGS+=	${_flag_}
 .  endif
-.  if empty(CXXFLAGS:M${_flag_})
+.  if empty(CXXFLAGS:M${_flag_:S/:/\\:/g})
 CXXFLAGS+=	${_flag_}
 .  endif
 .endfor
 .for _flag_ in ${BUILDLINK_LDFLAGS}
-.  if empty(LDFLAGS:M${_flag_})
+.  if empty(LDFLAGS:M${_flag_:S/:/\\:/g})
 LDFLAGS+=	${_flag_}
 .  endif
 .endfor
 .for _flag_ in ${BUILDLINK_LIBS}
-.  if empty(LIBS:M${_flag_})
+.  if empty(LIBS:M${_flag_:S/:/\\:/g})
 LIBS+=		${_flag_}
 .  endif
 .endfor
