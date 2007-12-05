@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2576 2007/12/05 04:15:35 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2577 2007/12/05 07:12:52 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4700,3 +4700,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated textproc/diction to 1.11 [bjs 2007-12-04]
 	Updated www/ikiwiki to 2.15 [reed 2007-12-05]
 	Updated security/sudo to 1.6.9p9 [taca 2007-12-05]
+	Updated mail/squirrelmail to 1.4.12 [martti 2007-12-05]
