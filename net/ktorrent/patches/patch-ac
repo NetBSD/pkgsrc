@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2007/12/05 11:12:23 abs Exp $
+
+--- /var/obj/pkg/net/ktorrent/work/ktorrent-2.2.4/translations/nb/messages/ktorrent.po.orig	2007-11-20 19:21:27.000000000 +0000
++++ /var/obj/pkg/net/ktorrent/work/ktorrent-2.2.4/translations/nb/messages/ktorrent.po
+@@ -4895,11 +4895,6 @@ msgstr ""
+ "strømmer med dem"
+ 
+ #, fuzzy
+-#~| msgid "Alt+1"
+-#~ msgid "Alt+X"
+-#~ msgstr "Alt + 1"
+-
+-#, fuzzy
+ #~ msgid "TrackerViewBase"
+ #~ msgstr "Sporere"
+ 
