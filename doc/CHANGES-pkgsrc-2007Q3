@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.19 2007/12/05 07:31:34 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.20 2007/12/05 14:07:40 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -47,3 +47,5 @@ Pullup ticket 2234 - requested by adrianp
 security update for ircservices
 Pullup ticket 2238 - requested by martti
 security update for squirrelmail
+Pullup ticket 2239 - requested by adrianp
+security update for php5
