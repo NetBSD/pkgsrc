@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2577 2007/12/05 07:12:52 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2578 2007/12/05 07:52:54 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4701,3 +4701,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/ikiwiki to 2.15 [reed 2007-12-05]
 	Updated security/sudo to 1.6.9p9 [taca 2007-12-05]
 	Updated mail/squirrelmail to 1.4.12 [martti 2007-12-05]
+	Updated misc/xfce4-weather-plugin to 0.6.2 [martti 2007-12-05]
+	Updated multimedia/xfce4-mpc-plugin to 0.3.2 [martti 2007-12-05]
+	Updated sysutils/xfce4-fsguard-plugin to 0.4.0 [martti 2007-12-05]
+	Updated sysutils/xfce4-quicklauncher-plugin to 1.9.4 [martti 2007-12-05]
+	Updated x11/xfce4-notes-plugin to 1.6.0 [martti 2007-12-05]
+	Updated x11/xfce4-places-plugin to 1.0.0 [martti 2007-12-05]
