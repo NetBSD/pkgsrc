@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/10/02 05:28:19 martti Exp $
+@comment $NetBSD: PLIST,v 1.23.2.1 2007/12/05 07:31:12 ghen Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -39,7 +39,6 @@ share/squirrelmail/contrib/RPM/squirrelmail.spec
 share/squirrelmail/contrib/decrypt_headers.php
 share/squirrelmail/contrib/squirrelmail.mailto.NT2KXP.reg
 share/squirrelmail/contrib/squirrelmail.mailto.Win9x.reg
-share/squirrelmail/contrib/squirrelmail.mailto.reg
 share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
@@ -57,6 +56,8 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10a.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.11.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.12.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
