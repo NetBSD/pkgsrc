@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2579 2007/12/05 08:48:24 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2580 2007/12/05 10:08:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4709,3 +4709,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xfce4-places-plugin to 1.0.0 [martti 2007-12-05]
 	Updated devel/netbsd-iscsi-initiator to 20071205 [agc 2007-12-05]
 	Updated devel/netbsd-iscsi-target to 20071205 [agc 2007-12-05]
+	Updated security/sudo to 1.6.9p9nb1 [taca 2007-12-05]
