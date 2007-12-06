@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.4 2007/12/05 16:31:00 christos Exp $
+$NetBSD: patch-an,v 1.5 2007/12/06 16:59:38 christos Exp $
 
 --- net.c.orig	2006-12-13 14:57:23.000000000 -0500
-+++ net.c	2007-12-05 11:19:06.000000000 -0500
++++ net.c	2007-12-06 11:54:11.000000000 -0500
 @@ -35,7 +35,6 @@
  #include <sys/stat.h>
  #include <sys/socket.h>
@@ -32,7 +32,20 @@ $NetBSD: patch-an,v 1.4 2007/12/05 16:31:00 christos Exp $
  #include <arpa/inet.h>
  #include <net/if.h>
  #if defined(LINUX)
-@@ -1099,7 +1105,7 @@
+@@ -800,8 +806,12 @@
+ 
+ #ifdef SOL_PACKET
+ static const struct xlat sockpacketoptions[] = {
++#if defined(PACKET_ADD_MEMBERSHIP)
+ 	{ PACKET_ADD_MEMBERSHIP,	"PACKET_ADD_MEMBERSHIP"	},
++#endif
++#if defined(PACKET_DROP_MEMBERSHIP)
+ 	{ PACKET_DROP_MEMBERSHIP,	"PACKET_DROP_MEMBERSHIP"},
++#endif
+ #if defined(PACKET_RECV_OUTPUT)
+ 	{ PACKET_RECV_OUTPUT,		"PACKET_RECV_OUTPUT"	},
+ #endif
+@@ -1099,7 +1109,7 @@
  		return;
  	}
  
@@ -41,7 +54,7 @@ $NetBSD: patch-an,v 1.4 2007/12/05 16:31:00 christos Exp $
  	printxval(socketlayers, cmsg->cmsg_level, "SOL_???");
  	tprintf(", cmsg_type=");
  
-@@ -1125,12 +1131,21 @@
+@@ -1125,12 +1135,21 @@
  			free(cmsg);
  			return;
  		}
@@ -63,7 +76,7 @@ $NetBSD: patch-an,v 1.4 2007/12/05 16:31:00 christos Exp $
  			free(cmsg);
  			return;
  		}
-@@ -1472,7 +1487,7 @@
+@@ -1472,7 +1491,7 @@
  		else
  			tprintf("[%u, %u]", fds[0], fds[1]);
  	}
@@ -72,7 +85,7 @@ $NetBSD: patch-an,v 1.4 2007/12/05 16:31:00 christos Exp $
  	if (exiting(tcp))
  		tprintf("[%lu, %lu]", tcp->u_rval, getrval2(tcp));
  #endif
-@@ -1519,9 +1534,9 @@
+@@ -1519,9 +1538,9 @@
  		else
  			tprintf(", [%u, %u]", fds[0], fds[1]);
  #endif /* LINUX */
