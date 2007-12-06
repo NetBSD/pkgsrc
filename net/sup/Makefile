@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/12/01 12:58:56 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/06 22:02:02 christos Exp $
 #
 
-DISTNAME=	sup-0.0
+DISTNAME=	sup-0.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.astron.com/pub/sup/
 
