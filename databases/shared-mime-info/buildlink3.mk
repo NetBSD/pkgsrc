@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:40 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/12/06 11:38:26 markd Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SHARED_MIME_INFO_BUILDLINK3_MK:=	${SHARED_MIME_INFO_BUILDLINK3_MK}+
@@ -27,6 +27,7 @@ shared-mime-info-buildlink-fake:
 		${ECHO_BUILDLINK_MSG} "Creating "${_SMI_FAKE_UPDATEDB:Q}; \
 		${MKDIR} ${_SMI_FAKE_UPDATEDB:H};			\
 		${ECHO} "#!/bin/sh" > ${_SMI_FAKE_UPDATEDB};		\
+		${ECHO} 'if [ "$$1" = "-v" ]; then' ${BUILDLINK_PREFIX.shared-mime-info}/bin/update-mime-database "-v; fi" >> ${_SMI_FAKE_UPDATEDB};		\
 		${ECHO} "echo '[pkgsrc] Doing nothing for update-mime-database' \$$*" >> ${_SMI_FAKE_UPDATEDB};		\
 		${CHMOD} +x ${_SMI_FAKE_UPDATEDB};			\
 	fi
