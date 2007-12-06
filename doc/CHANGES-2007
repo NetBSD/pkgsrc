@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2586 2007/12/06 21:45:59 cjep Exp $
+$NetBSD: CHANGES-2007,v 1.2587 2007/12/06 22:03:10 christos Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4716,3 +4716,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added x11/qt4-qdbus version 4.3.2 [markd 2007-12-06]
 	Updated devel/dejagnu to 1.4.4nb2 [obache 2007-12-06]
 	Updated textproc/bsdgrep-devel to 20071201 [cjep 2007-12-06]
+	Updated net/sup to 0.1 [christos 2007-12-06]
