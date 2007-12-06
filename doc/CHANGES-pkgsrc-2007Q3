@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.20 2007/12/05 14:07:40 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.21 2007/12/06 10:36:57 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -46,6 +46,12 @@ security fix for cups
 Pullup ticket 2234 - requested by adrianp
 security update for ircservices
 Pullup ticket 2238 - requested by martti
-security update for squirrelmail
+bugfix update for squirrelmail
 Pullup ticket 2239 - requested by adrianp
 security update for php5
+Pullup ticket 2240 - requested by adrianp
+security update for drupal
+Pullup ticket 2241 - requested by taca
+security update for squid
+Pullup ticket 2243 - requested by taca
+bugfix update for squirrelmail (squirrelmail-japanese option)
