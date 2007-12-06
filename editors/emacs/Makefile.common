@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/06/15 18:15:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2007/12/06 12:10:32 markd Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -38,7 +38,7 @@ SUBST_SED.test_equal=		-e 's/ == / = /g'
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-SPECIAL_PERMS+=		${PREFIX}/libexec/emacs/22.1/i386--netbsdelf/update-game-score ${GAMEOWN:Q} ${GAMEGRP:Q} 4555
+SPECIAL_PERMS+=		${PREFIX}/libexec/emacs/22.1/i386--netbsdelf/update-game-score ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEMODE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
