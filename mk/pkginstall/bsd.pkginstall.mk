@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.36 2007/11/23 11:50:19 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.37 2007/12/06 22:03:22 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -418,6 +418,7 @@ _pkginstall-postinstall-check: .PHONY
 	${RUN} p="${DESTDIR}${PREFIX}";					\
 	${_FUNC_STRIP_PREFIX};						\
 	canon() { f=`strip_prefix "$$1"`; case $$f in [!/]*) f="$$p/$$f"; esac; echo "$$f"; }; \
+	needargs() { [ $$3 -ge $$2 ] || ${FAIL_MSG} "[bsd.pkginstall.mk] $$1 must have a multiple of $$2 words. Rest: $$4"; }; \
 	set args ${RCD_SCRIPTS}; shift;					\
 	while [ $$# -gt 0 ]; do						\
 		egfile=`canon "${RCD_SCRIPTS_EXAMPLEDIR}/$$1"`; shift;	\
@@ -425,21 +426,25 @@ _pkginstall-postinstall-check: .PHONY
 	done;								\
 	set args ${CONF_FILES}; shift;					\
 	while [ $$# -gt 0 ]; do						\
+		needargs CONF_FILES 2 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 2;				\
 		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILE $$egfile does not exist."; \
 	done;								\
 	set args ${REQD_FILES}; shift;					\
 	while [ $$# -gt 0 ]; do						\
+		needargs REDQ_FILES 2 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 2;				\
 		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILE $$egfile does not exist."; \
 	done;								\
 	set args ${CONF_FILES_PERMS}; shift;				\
 	while [ $$# -gt 0 ]; do						\
+		needargs CONF_FILES_PERMS 5 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 5;				\
 		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILES_PERMS $$egfile does not exist."; \
 	done;								\
 	set args ${REQD_FILES_PERMS}; shift;				\
 	while [ $$# -gt 0 ]; do						\
+		needargs REQD_FILES_PERMS 5 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 5;				\
 		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist."; \
 	done
