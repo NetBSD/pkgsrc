@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2007/10/13 12:02:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/12/06 11:17:11 markd Exp $
 lib/pkgconfig/QtTest.pc
+lib/pkgconfig/QtUiTools.pc
 qt4/bin/assistant
 qt4/bin/designer
 qt4/bin/linguist
@@ -120,10 +121,14 @@ qt4/include/QtTest/qtestkeyboard.h
 qt4/include/QtTest/qtestmouse.h
 qt4/include/QtTest/qtestspontaneevent.h
 qt4/include/QtTest/qtestsystem.h
+qt4/include/QtUiTools/QUiLoader
+qt4/include/QtUiTools/QtUiTools
+qt4/include/QtUiTools/quiloader.h
 qt4/lib/libQtAssistantClient.la
 qt4/lib/libQtDesigner.la
 qt4/lib/libQtDesignerComponents.la
 qt4/lib/libQtTest.la
+qt4/lib/libQtUiTools.a
 qt4/mkspecs/aix-g++-64/qmake.conf
 qt4/mkspecs/aix-g++-64/qplatformdefs.h
 qt4/mkspecs/aix-g++/qmake.conf
@@ -368,7 +373,12 @@ qt4/phrasebooks/swedish.qph
 qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/plugins/designer
 @dirrm qt4/phrasebooks
+@dirrm qt4/mkspecs/win32-msvc2005
+@dirrm qt4/mkspecs/win32-msvc/features
+@dirrm qt4/mkspecs/win32-msvc.net
+@dirrm qt4/mkspecs/win32-msvc
 @dirrm qt4/mkspecs/win32-g++
+@dirrm qt4/mkspecs/win32-borland
 @dirrm qt4/mkspecs/unixware-g++
 @dirrm qt4/mkspecs/unixware-cc
 @dirrm qt4/mkspecs/tru64-g++
@@ -420,7 +430,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/interix-g++
 @dirrm qt4/mkspecs/hurd-g++
 @dirrm qt4/mkspecs/hpuxi-acc-64
-@dirrm qt4/mkspecs/hpuxi-acc
+@dirrm qt4/mkspecs/hpuxi-acc-32
 @dirrm qt4/mkspecs/hpux-g++-64
 @dirrm qt4/mkspecs/hpux-g++
 @dirrm qt4/mkspecs/hpux-acc-o64
@@ -441,6 +451,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/aix-g++-64
 @dirrm qt4/mkspecs/aix-g++
 @dirrm qt4/mkspecs
+@dirrm qt4/include/QtUiTools
 @dirrm qt4/include/QtTest
 @dirrm qt4/include/QtDesigner
 @dirrm qt4/include/QtAssistant
