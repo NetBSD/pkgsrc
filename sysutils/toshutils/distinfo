@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/04/23 20:37:18 riz Exp $
+$NetBSD: distinfo,v 1.6 2007/12/06 02:12:44 obache Exp $
 
 SHA1 (toshutils-991217.tar.gz) = b4eaf35fed37890c08f60999a2143f023cf632c1
 RMD160 (toshutils-991217.tar.gz) = ea81ea88f53a4c0ed960868fc0604f9f82aeb836
@@ -18,3 +18,4 @@ SHA1 (patch-al) = f2a06cf56e11a4ebb95a6d7ebda4b1c15dd0733d
 SHA1 (patch-am) = 43bba59c837c951e0b71c80365cf620ff3e05419
 SHA1 (patch-an) = 4d682ceb01d89ae676ba2fd1b342a50979c8694e
 SHA1 (patch-ao) = ce863073a18463643a8c02b1d81efa3e8c31d805
+SHA1 (patch-ap) = 996325634e8f78c85ea9706fd4f67bccb7602954
