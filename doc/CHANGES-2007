@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2585 2007/12/06 12:31:19 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2586 2007/12/06 21:45:59 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4715,3 +4715,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/xenkernel3 to 3.1.2nb1 [bouyer 2007-12-05]
 	Added x11/qt4-qdbus version 4.3.2 [markd 2007-12-06]
 	Updated devel/dejagnu to 1.4.4nb2 [obache 2007-12-06]
+	Updated textproc/bsdgrep-devel to 20071201 [cjep 2007-12-06]
