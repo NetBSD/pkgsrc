@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2007/08/13 12:40:57 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2007/12/06 12:10:32 markd Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor)${COMMENT_EXTRA}
 
