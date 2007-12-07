@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2007/04/12 09:55:20 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2007/12/07 19:43:25 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXFCE4GUI_BUILDLINK3_MK:=	${LIBXFCE4GUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libxfce4gui
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxfce4gui
 
 .if ${LIBXFCE4GUI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libxfce4gui+=	libxfce4gui>=4.4.1
+BUILDLINK_API_DEPENDS.libxfce4gui+=	libxfce4gui>=4.4.2
 BUILDLINK_PKGSRCDIR.libxfce4gui?=	../../x11/libxfce4gui
 .endif	# LIBXFCE4GUI_BUILDLINK3_MK
 
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.libxfce4gui?=	../../x11/libxfce4gui
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 

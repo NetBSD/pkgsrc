@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/04/12 09:55:23 martti Exp $
+# $NetBSD: Makefile,v 1.31 2007/12/07 19:43:30 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 .include "../../mk/compiler.mk"
@@ -8,7 +8,7 @@ DISTNAME=		xfce4-panel-${XFCE4_VERSION}
 CATEGORIES=		x11
 COMMENT=		Xfce panel
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
@@ -23,6 +23,10 @@ SUBST_FILES.launcher=	plugins/launcher/Makefile
 SUBST_SED.launcher=	-e 's|-O |-O0 |g'
 SUBST_SED.launcher+=	-e 's|-O[123s] |-O0 |g'
 .endif
+
+post-install:
+	@${ECHO} "Removing the dummy files"
+	rm -f ${PREFIX}/bin/xfce4-iconbox ${PREFIX}/bin/xftaskbar4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2007/04/12 09:55:12 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/12/07 19:43:22 martti Exp $
 bin/xfce4-appfinder
 share/applications/xfce4-appfinder.desktop
 share/icons/hicolor/48x48/apps/xfce4-appfinder.png
+share/locale/am/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/be/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/bn_IN/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ca/LC_MESSAGES/xfce4-appfinder.mo
@@ -28,8 +29,10 @@ share/locale/ja/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ka/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ko/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/lt/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/lv/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/mk/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/mr/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/nb_NO/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/nl/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/pa/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/pl/LC_MESSAGES/xfce4-appfinder.mo

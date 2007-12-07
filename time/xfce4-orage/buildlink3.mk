@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/04/12 09:49:16 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/12/07 19:43:23 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_ORAGE_BUILDLINK3_MK:=	${XFCE4_ORAGE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-orage
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-orage
 
 .if ${XFCE4_ORAGE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-orage+=	xfce4-orage>=4.4.1
+BUILDLINK_API_DEPENDS.xfce4-orage+=	xfce4-orage>=4.4.2
 BUILDLINK_PKGSRCDIR.xfce4-orage?=	../../time/xfce4-orage
 .endif	# XFCE4_ORAGE_BUILDLINK3_MK
 

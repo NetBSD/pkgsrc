@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.37 2007/10/30 19:31:41 martti Exp $
+# $NetBSD: Makefile.common,v 1.38 2007/12/07 19:43:21 martti Exp $
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
+MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.2/src/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 #LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.4.1
+XFCE4_VERSION=		4.4.2
 
 # Do NOT put a PKGREVISION statement in this file!
 
