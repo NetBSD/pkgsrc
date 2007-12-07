@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2007/04/12 09:55:23 martti Exp $
-bin/xfce4-iconbox
+@comment $NetBSD: PLIST,v 1.17 2007/12/07 19:43:30 martti Exp $
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
-bin/xftaskbar4
 etc/xdg/xfce4/panel/clock-14.rc
 etc/xdg/xfce4/panel/launcher-10.rc
 etc/xdg/xfce4/panel/launcher-7.rc
@@ -66,6 +64,7 @@ share/icons/hicolor/48x48/apps/xfce-mouse.png
 share/icons/hicolor/48x48/apps/xfce4-iconbox.png
 share/icons/hicolor/48x48/apps/xfce4-panel.png
 share/icons/hicolor/48x48/apps/xfce4-taskbar.png
+share/locale/am/LC_MESSAGES/xfce4-panel.mo
 share/locale/ar/LC_MESSAGES/xfce4-panel.mo
 share/locale/az/LC_MESSAGES/xfce4-panel.mo
 share/locale/be/LC_MESSAGES/xfce4-panel.mo
@@ -96,6 +95,7 @@ share/locale/ja/LC_MESSAGES/xfce4-panel.mo
 share/locale/ka/LC_MESSAGES/xfce4-panel.mo
 share/locale/ko/LC_MESSAGES/xfce4-panel.mo
 share/locale/lt/LC_MESSAGES/xfce4-panel.mo
+share/locale/lv/LC_MESSAGES/xfce4-panel.mo
 share/locale/mk/LC_MESSAGES/xfce4-panel.mo
 share/locale/mr/LC_MESSAGES/xfce4-panel.mo
 share/locale/ms/LC_MESSAGES/xfce4-panel.mo
