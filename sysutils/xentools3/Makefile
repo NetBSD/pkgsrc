@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2007/12/03 21:54:30 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/07 19:12:07 bouyer Exp $
 #
 
 VERSION=		3.1.2
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		xentools3-${VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITES_LOCAL}
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		bouyer@NetBSD.org
