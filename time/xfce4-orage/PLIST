@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 09:49:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/07 19:43:23 martti Exp $
 bin/orage
 lib/xfce4/mcs-plugins/orage_plugin.la
 libexec/xfce4/panel-plugins/orageclock
@@ -6,6 +6,7 @@ share/applications/xfcalendar.desktop
 share/applications/xfce-xfcalendar-settings.desktop
 share/icons/hicolor/48x48/apps/xfcalendar.png
 share/icons/hicolor/scalable/apps/xfcalendar.svg
+share/locale/am/LC_MESSAGES/orage.mo
 share/locale/ar/LC_MESSAGES/orage.mo
 share/locale/az/LC_MESSAGES/orage.mo
 share/locale/be/LC_MESSAGES/orage.mo
@@ -36,6 +37,7 @@ share/locale/ja/LC_MESSAGES/orage.mo
 share/locale/ka/LC_MESSAGES/orage.mo
 share/locale/ko/LC_MESSAGES/orage.mo
 share/locale/lt/LC_MESSAGES/orage.mo
+share/locale/lv/LC_MESSAGES/orage.mo
 share/locale/mk/LC_MESSAGES/orage.mo
 share/locale/mr/LC_MESSAGES/orage.mo
 share/locale/ms/LC_MESSAGES/orage.mo
