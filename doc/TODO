@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6878 2007/12/07 19:46:55 martti Exp $
+$NetBSD: TODO,v 1.6879 2007/12/07 21:16:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,7 @@ Suggested package updates
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o aap-0.144
-	o abcm2ps-5.6.1
+	o abcm2ps-5.6.2
 	o abcmidi-20070318
 	o acme-091
 	o acr-0.5.2
@@ -374,7 +374,7 @@ Suggested package updates
 	o cgicc-3.2.4
 	o chemtool-1.6.11
 	o cherokee-0.5.6
-	o chrony-1.21
+	o chrony-1.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.96.1
@@ -472,6 +472,7 @@ Suggested package updates
 	o ezmlm-idx-6.0.1 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
+	o faad2-2.6.1
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o fast-user-switch-applet-2.20.0
@@ -481,7 +482,7 @@ Suggested package updates
 	o fetchyahoo-2.11.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o firefox-bin-flash-9.0.64.0
+	o firefox-bin-flash-9.0.115.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
@@ -589,6 +590,7 @@ Suggested package updates
 	o gthumb-2.10.7
 	o gtick-0.4.1
 	o gtk-systrace-20030623
+	o gtk2+-2.12.3
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtkhtml-3.16.2
@@ -625,7 +627,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.2
-	o hylafax-5.1.12
+	o hylafax-5.2.0
 	o i2ocfg-1.1
 	o ical-2.3.2
 	o icdprog-0.5
@@ -822,7 +824,7 @@ Suggested package updates
 	o nkf-2.07 [pkg/37132]
 	o nmh-1.2.1
 	o nomarch-1.4
-	o ns-flash-9.0.64.0
+	o ns-flash-9.0.115.0
 	o ns-plugger-common-5.1.3
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3
@@ -850,6 +852,7 @@ Suggested package updates
 	o openldap-client-2.4.6
 	o openmortal-0.7.1
 	o openmotif-2.3
+	o openoffice2-2.3.1
 	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
 	o orca-2.20.2
@@ -927,7 +930,7 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-Params-Util-0.31
-	o p5-Perl-Tidy-20070801
+	o p5-Perl-Tidy-20071205
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
 	o p5-SWF-File-0.42
@@ -1079,7 +1082,7 @@ Suggested package updates
 	o py-qt3-base-3.17.3
 	o py-qt3-modules-3.17
 	o py-qt3-qscintilla-3.17
-	o py-qt3-sip-4.7.1
+	o py-qt3-sip-4.7.2
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
@@ -1122,7 +1125,7 @@ Suggested package updates
 	o robodoc-4.99.6
 	o root-5.14.0
 	o root-tail-1.2
-	o rosegarden4-1.5.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rosegarden4-1.6.0 [replacing audio/rosegarden|pkgsrc-wip]
 	o roundup-1.3.3
 	o rox-2.7
 	o rox-session-0.29
