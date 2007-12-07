@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2587 2007/12/06 22:03:10 christos Exp $
+$NetBSD: CHANGES-2007,v 1.2588 2007/12/07 07:55:53 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4717,3 +4717,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/dejagnu to 1.4.4nb2 [obache 2007-12-06]
 	Updated textproc/bsdgrep-devel to 20071201 [cjep 2007-12-06]
 	Updated net/sup to 0.1 [christos 2007-12-06]
+	Updated devel/p5-Array-Compare to 1.14 [hiramatsu 2007-12-07]
+	Updated devel/p5-Sub-Uplevel to 0.18 [hiramatsu 2007-12-07]
