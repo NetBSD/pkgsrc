@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.366 2007/11/20 21:46:20 rillig Exp $
+# $NetBSD: Makefile,v 1.367 2007/12/07 11:47:52 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.79
+DISTNAME=	pkglint-4.80
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,7 +23,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
