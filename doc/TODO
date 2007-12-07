@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6877 2007/12/07 07:55:54 hiramatsu Exp $
+$NetBSD: TODO,v 1.6878 2007/12/07 19:46:55 martti Exp $
 
 Suggested new packages
 ======================
@@ -1311,7 +1311,6 @@ Suggested package updates
 	o xf86-video-intel-2.2.0
 	o xf86-video-nv-2.1.6
 	o xf86dgaproto-2.0.3
-	o xfce-4.4.2
 	o xfstt-1.7
 	o xhippo-3.5
 	o xine-1.1.8
