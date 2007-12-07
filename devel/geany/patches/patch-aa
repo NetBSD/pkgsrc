@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2007/02/08 00:25:13 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/07 21:33:32 drochner Exp $
 
---- src/Makefile.in.orig	2007-02-07 23:46:59.000000000 +0100
-+++ src/Makefile.in	2007-02-07 23:58:21.031979136 +0100
-@@ -247,7 +247,7 @@
- #AM_CFLAGS = -DGEANY_DEBUG -Wall -pipe -mms-bitfields -g -O0
- @MINGW_TRUE@geany_LDFLAGS = -mwindows
- @MINGW_FALSE@INCLUDES = \
--@MINGW_FALSE@	-DPACKAGE_DATA_DIR=\""$(datadir)"\" -DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
-+@MINGW_FALSE@	-DPACKAGE_DATA_DIR=\""$(datadir)"\" -DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
- @MINGW_FALSE@	-I../scintilla/include -I../tagmanager/include @PACKAGE_CFLAGS@
+--- configure.in.orig	2007-11-21 23:17:48.000000000 +0100
++++ configure.in	2007-11-21 23:18:13.000000000 +0100
+@@ -11,7 +11,7 @@
+ AC_MINIX
  
- @MINGW_TRUE@INCLUDES = -I../scintilla/include -I../tagmanager/include -DENABLE_NLS \
+ AC_PROG_CC
+-AM_CONDITIONAL(IS_COMPILER_GCC,test x$SSC == x)
++AM_CONDITIONAL(IS_COMPILER_GCC,test x$CC = xgcc)
+ 
+ AM_PROG_CC_STDC
+ AC_HEADER_STDC

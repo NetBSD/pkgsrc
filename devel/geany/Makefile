@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2007/03/12 22:52:21 rmind Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/07 21:33:31 drochner Exp $
 
-DISTNAME=	geany-0.10.2
+DISTNAME=	geany-0.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
 
@@ -9,11 +9,27 @@ HOMEPAGE=	http://geany.uvena.de/
 COMMENT=	Geany integrated development environment (IDE)
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
-USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config msgfmt gmake perl:run
+USE_LANGUAGES=		c c++
+USE_DIRS+=		xdg-1.1
+
+CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=	--enable-vte
+CONFIGURE_ARGS+=	--enable-socket
+
 MAKE_FLAGS+=		CCLD=${CXX:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "sunpro"
+CONFIGURE_ARGS+=	CC=sunpro
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
+.else
+CONFIGURE_ARGS+=	CC=gcc
+.endif
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
