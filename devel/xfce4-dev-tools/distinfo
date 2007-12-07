@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 09:43:12 martti Exp $
+$NetBSD: distinfo,v 1.2 2007/12/07 19:43:20 martti Exp $
 
-SHA1 (xfce4-dev-tools-4.4.0.tar.bz2) = 20b620ab7e732aa95e8072474251de2d899b3419
-RMD160 (xfce4-dev-tools-4.4.0.tar.bz2) = aa251c01fcab09d9bfeeb5072e52c90543b3d093
-Size (xfce4-dev-tools-4.4.0.tar.bz2) = 56154 bytes
+SHA1 (xfce4-dev-tools-4.4.0.1.tar.bz2) = 4577d204087f7fe58228fc2f4140001d9b97b493
+RMD160 (xfce4-dev-tools-4.4.0.1.tar.bz2) = df02905cb59ad3c11d7ad4b6d55e73241c81b2dc
+Size (xfce4-dev-tools-4.4.0.1.tar.bz2) = 60477 bytes

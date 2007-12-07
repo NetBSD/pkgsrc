@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 09:45:01 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/07 19:43:20 martti Exp $
 bin/mousepad
 share/applications/mousepad.desktop
+share/locale/am/LC_MESSAGES/mousepad.mo
+share/locale/ar/LC_MESSAGES/mousepad.mo
 share/locale/be/LC_MESSAGES/mousepad.mo
 share/locale/ca/LC_MESSAGES/mousepad.mo
 share/locale/cs/LC_MESSAGES/mousepad.mo
@@ -8,6 +10,7 @@ share/locale/cy/LC_MESSAGES/mousepad.mo
 share/locale/de/LC_MESSAGES/mousepad.mo
 share/locale/dz/LC_MESSAGES/mousepad.mo
 share/locale/el/LC_MESSAGES/mousepad.mo
+share/locale/en_GB/LC_MESSAGES/mousepad.mo
 share/locale/eo/LC_MESSAGES/mousepad.mo
 share/locale/es/LC_MESSAGES/mousepad.mo
 share/locale/et/LC_MESSAGES/mousepad.mo
@@ -23,15 +26,22 @@ share/locale/ja/LC_MESSAGES/mousepad.mo
 share/locale/ka/LC_MESSAGES/mousepad.mo
 share/locale/ko/LC_MESSAGES/mousepad.mo
 share/locale/lt/LC_MESSAGES/mousepad.mo
+share/locale/lv/LC_MESSAGES/mousepad.mo
 share/locale/mk/LC_MESSAGES/mousepad.mo
+share/locale/nb_NO/LC_MESSAGES/mousepad.mo
 share/locale/nl/LC_MESSAGES/mousepad.mo
 share/locale/pa/LC_MESSAGES/mousepad.mo
 share/locale/pl/LC_MESSAGES/mousepad.mo
 share/locale/pt_BR/LC_MESSAGES/mousepad.mo
+share/locale/pt_PT/LC_MESSAGES/mousepad.mo
+share/locale/ro/LC_MESSAGES/mousepad.mo
 share/locale/ru/LC_MESSAGES/mousepad.mo
 share/locale/sk/LC_MESSAGES/mousepad.mo
+share/locale/sq/LC_MESSAGES/mousepad.mo
 share/locale/sv/LC_MESSAGES/mousepad.mo
 share/locale/ta/LC_MESSAGES/mousepad.mo
+share/locale/th/LC_MESSAGES/mousepad.mo
+share/locale/tr/LC_MESSAGES/mousepad.mo
 share/locale/uk/LC_MESSAGES/mousepad.mo
 share/locale/zh_CN/LC_MESSAGES/mousepad.mo
 share/locale/zh_TW/LC_MESSAGES/mousepad.mo

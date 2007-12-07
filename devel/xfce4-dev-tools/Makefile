@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/10/30 19:31:38 martti Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/07 19:43:19 martti Exp $
 
-DISTNAME=	xfce4-dev-tools-4.4.0
+DISTNAME=	xfce4-dev-tools-4.4.0.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.xfce.org/archive/xfce-4.4.1/src/
+MASTER_SITES=	http://www.xfce.org/archive/xfce-4.4.2/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org

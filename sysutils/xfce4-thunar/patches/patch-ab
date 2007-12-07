@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2007/04/16 16:56:46 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/07 19:43:23 martti Exp $
 
---- configure.orig	2007-04-16 16:13:21.000000000 +0000
-+++ configure
-@@ -28900,7 +28900,7 @@ fi
-     echo "$as_me:$LINENO: checking for operating system support" >&5
- echo $ECHO_N "checking for operating system support... $ECHO_C" >&6
+--- configure.orig	2007-12-02 13:47:33.000000000 +0000
++++ configure	2007-12-04 13:14:18.000000000 +0000
+@@ -29537,7 +29537,7 @@
+     { echo "$as_me:$LINENO: checking for operating system support" >&5
+ echo $ECHO_N "checking for operating system support... $ECHO_C" >&6; }
    case "$target_os" in
 -  dragonfly*|freebsd*|netbsd*|openbsd*|darwin*)
 +  freebsd*|netbsd*|openbsd*|darwin*)
