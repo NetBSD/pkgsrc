@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2588 2007/12/07 07:55:53 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2589 2007/12/07 11:48:26 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/sup to 0.1 [christos 2007-12-06]
 	Updated devel/p5-Array-Compare to 1.14 [hiramatsu 2007-12-07]
 	Updated devel/p5-Sub-Uplevel to 0.18 [hiramatsu 2007-12-07]
+	Updated pkgtools/pkglint to 4.80 [rillig 2007-12-07]
