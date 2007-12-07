@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/04/12 09:55:22 martti Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/12/07 19:43:26 martti Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -25,6 +25,7 @@ share/examples/xfce4/desktop/menu.xml.hu
 share/examples/xfce4/desktop/menu.xml.it
 share/examples/xfce4/desktop/menu.xml.ja
 share/examples/xfce4/desktop/menu.xml.ko
+share/examples/xfce4/desktop/menu.xml.nb_NO
 share/examples/xfce4/desktop/menu.xml.nl
 share/examples/xfce4/desktop/menu.xml.pa
 share/examples/xfce4/desktop/menu.xml.pl
@@ -50,6 +51,7 @@ share/examples/xfce4/desktop/xfce-registered-categories.xml.he
 share/examples/xfce4/desktop/xfce-registered-categories.xml.hu
 share/examples/xfce4/desktop/xfce-registered-categories.xml.it
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ja
+share/examples/xfce4/desktop/xfce-registered-categories.xml.nb_NO
 share/examples/xfce4/desktop/xfce-registered-categories.xml.nl
 share/examples/xfce4/desktop/xfce-registered-categories.xml.pl
 share/examples/xfce4/desktop/xfce-registered-categories.xml.pt_BR
@@ -66,6 +68,7 @@ share/icons/hicolor/48x48/apps/xfce4-backdrop.png
 share/icons/hicolor/48x48/apps/xfce4-menueditor.png
 share/icons/hicolor/scalable/apps/xfce4-backdrop.svg
 share/icons/hicolor/scalable/apps/xfce4-menueditor.svg
+share/locale/am/LC_MESSAGES/xfdesktop.mo
 share/locale/ar/LC_MESSAGES/xfdesktop.mo
 share/locale/az/LC_MESSAGES/xfdesktop.mo
 share/locale/be/LC_MESSAGES/xfdesktop.mo
@@ -96,6 +99,7 @@ share/locale/ja/LC_MESSAGES/xfdesktop.mo
 share/locale/ka/LC_MESSAGES/xfdesktop.mo
 share/locale/ko/LC_MESSAGES/xfdesktop.mo
 share/locale/lt/LC_MESSAGES/xfdesktop.mo
+share/locale/lv/LC_MESSAGES/xfdesktop.mo
 share/locale/mk/LC_MESSAGES/xfdesktop.mo
 share/locale/mr/LC_MESSAGES/xfdesktop.mo
 share/locale/ms/LC_MESSAGES/xfdesktop.mo
