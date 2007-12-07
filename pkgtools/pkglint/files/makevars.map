@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.174 2007/11/16 08:11:16 rillig Exp $
+# $NetBSD: makevars.map,v 1.175 2007/12/07 11:28:17 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -132,6 +132,7 @@ AS			ShellCommand [$system]
 AUTOCONF_REQD		List of Version [$package_list]
 AUTOMAKE_OVERRIDE	List of Pathmask
 AUTOMAKE_REQD		List of Version [$package_list]
+AUTO_MKDIRS		YesNo [$package]
 BATCH			Yes [$user]
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Pathname [$system]
