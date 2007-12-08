@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2590 2007/12/07 19:46:54 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2591 2007/12/08 13:54:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4721,3 +4721,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Sub-Uplevel to 0.18 [hiramatsu 2007-12-07]
 	Updated pkgtools/pkglint to 4.80 [rillig 2007-12-07]
 	Updated meta-pkgs/xfce4 to 4.4.2 [martti 2007-12-07]
+	Updated devel/dejagnu to 1.4.4nb3 [obache 2007-12-08]
