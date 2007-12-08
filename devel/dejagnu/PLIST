@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/20 19:37:28 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/08 13:54:34 obache Exp $
 bin/runtest
 include/dejagnu.h
 man/man1/runtest.1
@@ -163,6 +163,47 @@ share/dejagnu/tip.exp
 share/dejagnu/util-defs.exp
 share/dejagnu/utils.exp
 share/dejagnu/xsh.exp
+share/doc/dejagnu/dejagnu.pdf
+share/doc/dejagnu/dejagnu.ps
+share/doc/dejagnu/dejagnu.rtf
+share/doc/dejagnu/html/book1.html
+share/doc/dejagnu/html/c1099.html
+share/doc/dejagnu/html/c1584.html
+share/doc/dejagnu/html/c1593.html
+share/doc/dejagnu/html/c203.html
+share/doc/dejagnu/html/c401.html
+share/doc/dejagnu/html/c50.html
+share/doc/dejagnu/html/c5112.html
+share/doc/dejagnu/html/c848.html
+share/doc/dejagnu/html/f40.html
+share/doc/dejagnu/html/x107.html
+share/doc/dejagnu/html/x1107.html
+share/doc/dejagnu/html/x1195.html
+share/doc/dejagnu/html/x1214.html
+share/doc/dejagnu/html/x1234.html
+share/doc/dejagnu/html/x134.html
+share/doc/dejagnu/html/x1445.html
+share/doc/dejagnu/html/x1462.html
+share/doc/dejagnu/html/x1493.html
+share/doc/dejagnu/html/x1522.html
+share/doc/dejagnu/html/x1551.html
+share/doc/dejagnu/html/x1590.html
+share/doc/dejagnu/html/x1600.html
+share/doc/dejagnu/html/x1655.html
+share/doc/dejagnu/html/x227.html
+share/doc/dejagnu/html/x276.html
+share/doc/dejagnu/html/x319.html
+share/doc/dejagnu/html/x428.html
+share/doc/dejagnu/html/x5058.html
+share/doc/dejagnu/html/x5158.html
+share/doc/dejagnu/html/x755.html
+share/doc/dejagnu/html/x81.html
+share/doc/dejagnu/html/x916.html
+share/doc/dejagnu/html/x935.html
+share/doc/dejagnu/html/x953.html
+share/doc/dejagnu/html/x992.html
+@dirrm share/doc/dejagnu/html
+@dirrm share/doc/dejagnu
 @dirrm share/dejagnu/libexec
 @dirrm share/dejagnu/config
 @dirrm share/dejagnu/baseboards
