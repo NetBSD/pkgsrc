@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2597 2007/12/09 22:20:24 abs Exp $
+$NetBSD: CHANGES-2007,v 1.2598 2007/12/09 22:27:22 jklos Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4727,4 +4727,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated ham/tnt to 1.9.2 [obache 2007-12-09]
 	Updated www/php-eaccelerator to 0.9.5.2 [jdolecek 2007-12-09]
 	Updated textproc/asciidoc to 8.2.5nb1 [wiz 2007-12-09]
-	Updated alpine to 0.999999 [abs 2007-12-09]
+	Updated mail/alpine to 0.999999 [abs 2007-12-09]
+	Updated devel/apr to 1.2.12 [jklos 2007-12-09]
