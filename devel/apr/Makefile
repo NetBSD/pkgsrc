@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2007/10/11 09:12:08 tron Exp $
+# $NetBSD: Makefile,v 1.55 2007/12/09 22:08:32 jklos Exp $
 
-DISTNAME=	apr-1.2.11
+DISTNAME=	apr-1.2.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 
