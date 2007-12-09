@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.38 2007/09/07 22:12:26 jlam Exp $
+# $NetBSD: Makefile.php,v 1.39 2007/12/09 14:40:08 jdolecek Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -7,6 +7,7 @@ DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
 PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
 USE_LIBTOOL=		YES
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-mysql
