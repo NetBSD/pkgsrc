@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/02/19 11:45:30 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2007/12/09 19:09:48 wiz Exp $
 
 DISTNAME=		icon.v942src
 PKGNAME=		icon-9.4.2
@@ -14,6 +14,7 @@ COMMENT=		The Icon programming language
 CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All
 TEST_TARGET=		Test
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
