@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/09 22:15:42 rhaen Exp $
 #
 
-DISTNAME=	Cache-Memcached-1.14
+DISTNAME=	Cache-Memcached-1.24
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://danga.com/memcached/dist/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://danga.com/memcached/
-COMMENT=	Perl API module for memcached
+COMMENT=	Perl API for distributed memory cache daemon memcached
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-String-CRC32-[0-9]*:../../textproc/p5-String-CRC32
+DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST= auto/Cache/Memcached/.packlist
 
