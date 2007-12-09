@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
+$NetBSD: patch-ab,v 1.10 2007/12/09 23:38:31 wiz Exp $
 
---- configure.orig	2005-02-28 23:10:33.000000000 +0100
+--- configure.orig	2006-02-27 16:36:50.000000000 +0000
 +++ configure
-@@ -5938,7 +5938,7 @@ if [ $host_os3 = hpux ] ; then
+@@ -5940,7 +5940,7 @@ if [ $host_os3 = hpux ] ; then
  fi
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
      LDFLAGS="$LDFLAGS -z"
  fi
  
-@@ -6221,7 +6221,7 @@ else
+@@ -6223,7 +6223,7 @@ else
  
    # It would also be nice to do this for all -L options, not just this one.
    if test -n "$x_libraries"; then
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case `(uname -sr) 2>/dev/null` in
-@@ -7281,7 +7281,7 @@ fi
+@@ -7283,7 +7283,7 @@ fi
  
    # Check for libraries that X11R6 Xt/Xaw programs need.
    ac_save_LDFLAGS=$LDFLAGS
@@ -29,18 +29,16 @@ $NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
    # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
    # check for ICE first), but we must link in the order -lSM -lICE or
    # we get undefined symbols.  So assume we have SM if we have ICE.
-@@ -7737,7 +7737,9 @@ if test X$use_floppyd = Xyes; then
- 	exit 1
+@@ -7740,6 +7740,8 @@ if test X$use_floppyd = Xyes; then
      fi
      FLOPPYD="floppyd floppyd_installtest"
--    BINFLOPPYD="\$(bindir)/floppyd \$(bindir)/floppyd_installtest"
-+    BINFLOPPYD="\${DESTDIR}\$(bindir)/floppyd \${DESTDIR}\$(bindir)/floppyd_installtest"
+     BINFLOPPYD="\$(DESTDIR)\$(bindir)/floppyd \$(DESTDIR)\$(bindir)/floppyd_installtest"
 +    MANFLOPPYD="floppyd.1"
 +    MANFLOPPYD_INSTTEST="floppyd_installtest.1"
  
  cat >>confdefs.h <<\_ACEOF
  #define USE_FLOPPYD 1
-@@ -7746,6 +7748,8 @@ _ACEOF
+@@ -7748,6 +7750,8 @@ _ACEOF
  else
      FLOPPYD=
      BINFLOPPYD=
@@ -49,7 +47,7 @@ $NetBSD: patch-ab,v 1.9 2007/08/17 20:55:34 joerg Exp $
  fi
  
  
-@@ -8401,6 +8407,8 @@ s,@X_LIBS@,$X_LIBS,;t t
+@@ -8403,6 +8407,8 @@ s,@X_LIBS@,$X_LIBS,;t t
  s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
  s,@FLOPPYD@,$FLOPPYD,;t t
  s,@BINFLOPPYD@,$BINFLOPPYD,;t t
