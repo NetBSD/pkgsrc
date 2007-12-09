@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2007/02/07 00:03:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/12/09 22:45:14 rhaen Exp $
+lib/libcfengine.a
+lib/libcfengine.la
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8
