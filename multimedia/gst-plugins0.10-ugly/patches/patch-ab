@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2007/12/09 11:03:50 drochner Exp $
+
+--- gst/mpegaudioparse/gstmpegaudioparse.h.orig	2007-06-13 11:21:26.000000000 +0200
++++ gst/mpegaudioparse/gstmpegaudioparse.h
+@@ -82,6 +82,9 @@ struct _GstMPEGAudioParse {
+   guchar xing_seek_table[100];
+   guint32 xing_vbr_scale;
+   guint   xing_bitrate;
++
++  /* pending segment */
++  GstEvent *pending_segment;
+ };
+ 
+ struct _GstMPEGAudioParseClass {
