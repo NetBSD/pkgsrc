@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/05/17 21:58:58 abs Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/09 22:17:55 abs Exp $
 
---- pico/browse.c.orig	2007-03-07 23:16:56.000000000 +0000
+--- pico/browse.c.orig	2007-12-06 19:57:49.000000000 +0000
 +++ pico/browse.c
-@@ -1399,8 +1399,8 @@ FileBrowse(char *dir, size_t dirlen, cha
+@@ -1402,8 +1402,8 @@ FileBrowse(char *dir, size_t dirlen, cha
  	  case (CTRL|'M'):
  	  Selected:
  
