@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2594 2007/12/09 13:08:58 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2595 2007/12/09 14:02:14 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/p5-CDDB_get to 2.27 [heinz 2007-12-08]
 	Updated devel/p5-Test-Warn to 0.10 [hiramatsu 2007-12-09]
 	Updated ham/tnt to 1.9.2 [obache 2007-12-09]
+	Updated www/php-eaccelerator to 0.9.5.2 [jdolecek 2007-12-09]
