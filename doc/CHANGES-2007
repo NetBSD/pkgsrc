@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2595 2007/12/09 14:02:14 jdolecek Exp $
+$NetBSD: CHANGES-2007,v 1.2596 2007/12/09 20:57:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-Warn to 0.10 [hiramatsu 2007-12-09]
 	Updated ham/tnt to 1.9.2 [obache 2007-12-09]
 	Updated www/php-eaccelerator to 0.9.5.2 [jdolecek 2007-12-09]
+	Updated textproc/asciidoc to 8.2.5nb1 [wiz 2007-12-09]
