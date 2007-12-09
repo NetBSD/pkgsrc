@@ -1,30 +1,25 @@
-$NetBSD: patch-aa,v 1.3 2002/05/24 18:12:36 martin Exp $
+$NetBSD: patch-aa,v 1.4 2007/12/09 23:41:11 wiz Exp $
 
---- ioctl_stat.c.orig	Thu Mar  4 08:33:03 1999
-+++ ioctl_stat.c	Fri May 24 20:03:05 2002
-@@ -68,6 +68,13 @@
- 
+--- ioctl_stat.c.orig	2000-02-01 07:11:24.000000000 +0000
++++ ioctl_stat.c
+@@ -61,6 +61,10 @@ void getsocket(if_data *ifd)
  void ioctl_stat(if_data *ifd)
  {
-+#ifdef __NetBSD__
-+	struct ifreq ifr;
+ 	struct ifreq ifr;
 +#ifdef SIOCGIFDATA
 +	struct ifdatareq ifdr;
 +	struct if_data * const ifi = &ifdr.ifdr_data;
 +#endif
-+#endif
  	struct ifpppstatsreq req;
  	
- 	if (s < 0) getsocket();
-@@ -78,8 +85,33 @@
+ 	if (!ifd->s) getsocket(ifd);
+@@ -84,6 +88,31 @@ void ioctl_stat(if_data *ifd)
  #define ifr_name ifr__name
- 	req.stats_ptr = (caddr_t) &req.stats;
- #endif
--	sprintf(req.ifr_name, ifd->device);
- 	
+ #endif	
+ 
 +#ifdef __NetBSD__
-+	sprintf(ifr.ifr_name, ifd->device);
-+	if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0 ||
++	strncpy(ifr.ifr_name, ifd->device, sizeof(ifr.ifr_name));
++	if (ioctl(ifd->s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0 ||
 +						!(ifr.ifr_flags&IFF_UP))
 +	{
 +		/* invalid interface, or interface down */
@@ -35,23 +30,22 @@ $NetBSD: patch-aa,v 1.3 2002/05/24 18:12:36 martin Exp $
 +#endif
 +
 +#if defined(__NetBSD__) && defined(SIOCGIFDATA)
-+	/* prefere the generic interface statistics over the PPP specific ones */
++	/* prefer the generic interface statistics over the PPP specific ones */
 +	strncpy(ifdr.ifdr_name, ifd->device, sizeof(ifdr.ifdr_name));
-+	if (ioctl(s, SIOCGIFDATA, &ifdr) == -1)
++	if (ioctl(ifd->s, SIOCGIFDATA, &ifdr) == -1)
 +	{
-+		/* non-existant device? */
++		/* non-existent device? */
 +		ifd->in_bytes = 0UL;
 +		ifd->out_bytes = 0UL;
 +		return;
 +	}
-+	ifd->in_bytes = (unsigned long)ifi->ifi_ibytes;
-+	ifd->out_bytes = (unsigned long)ifi->ifi_obytes;
++	ifd->in_bytes = ifi->ifi_ibytes;
++	ifd->out_bytes = ifi->ifi_obytes;
 +#else
-+	sprintf(req.ifr_name, ifd->device);
- 	if (ioctl(s, SIOCGPPPSTATS, &req) != 0)
+ 	strncpy(req.ifr_name, ifd->device, sizeof(req.ifr_name));
+ 	if (ioctl(ifd->s, SIOCGPPPSTATS, &req) != 0)
  	{
- 		/* non-existant device? */
-@@ -90,6 +122,7 @@
+@@ -95,6 +124,7 @@ void ioctl_stat(if_data *ifd)
  	
  	ifd->in_bytes = (unsigned long)req.stats.p.ppp_ibytes;
  	ifd->out_bytes = (unsigned long)req.stats.p.ppp_obytes;
