@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6879 2007/12/07 21:16:02 wiz Exp $
+$NetBSD: TODO,v 1.6880 2007/12/09 00:23:58 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -948,7 +948,6 @@ Suggested package updates
 	o p5-Test-Tester-0.104
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.16
-	o p5-Test-Warn-0.09
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Quoted-2.03
 	o p5-Text-Tabs+Wrap-2006.1117
