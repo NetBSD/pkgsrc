@@ -1,27 +1,24 @@
-$NetBSD: patch-ac,v 1.1 2007/06/12 13:29:51 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2007/12/09 22:17:55 abs Exp $
 
---- configure.ac.orig	2007-06-12 13:04:37.000000000 +0000
+--- configure.ac.orig	2007-12-06 23:58:57.000000000 +0000
 +++ configure.ac
-@@ -1091,10 +1091,17 @@ case "$host" in
+@@ -1351,7 +1351,14 @@ case "$host" in
    *-*-netbsd*)
      systype="NEB"
      alpine_path_delim="/"
 -    alpine_local_maildir="/usr/spool/mail"
 +    alpine_local_maildir="/var/mail"
-     alpine_mode_readonly="(0600)"
-     alpine_c_client_target="neb"
-     ;;
++    alpine_mode_readonly="(0600)"
++    alpine_c_client_target="neb"
++    ;;
 +  *-*-dragonfly*)
 +    systype="DFB"
 +    alpine_path_delim="/"
 +    alpine_local_maildir="/var/mail"
-+    alpine_mode_readonly="(0600)"
-+    alpine_c_client_target="neb"
-+    ;;
-   *-*-bsdi*)
-     systype="BSI"
-     alpine_path_delim="/"
-@@ -1105,7 +1112,7 @@ case "$host" in
+     alpine_mode_readonly="(0600)"
+     alpine_c_client_target="neb"
+     ;;
+@@ -1365,7 +1372,7 @@ case "$host" in
    *-*-freebsd*)
      systype="BSF"
      alpine_path_delim="/"
@@ -30,7 +27,7 @@ $NetBSD: patch-ac,v 1.1 2007/06/12 13:29:51 joerg Exp $
      alpine_mode_readonly="(0600)"
      alpine_c_client_target="bsf"
      LIBS="$LIBS $LIBINTL"
-@@ -1113,7 +1120,7 @@ case "$host" in
+@@ -1373,7 +1380,7 @@ case "$host" in
    *-*-openbsd*)
      systype="BSO"
      alpine_path_delim="/"
