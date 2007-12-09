@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/02/07 07:54:45 wiz Exp $
+$NetBSD: distinfo,v 1.5 2007/12/09 23:33:39 wiz Exp $
 
-SHA1 (kid3-0.8.1.tar.gz) = 17d89087c3a21a2963fdd39600d5dac50922bb80
-RMD160 (kid3-0.8.1.tar.gz) = 6054aa27b2df3aba7c4f5302c1954241710aaa2b
-Size (kid3-0.8.1.tar.gz) = 871390 bytes
+SHA1 (kid3-0.10.tar.gz) = 088f434db9242a557113b35ad5b942d79cf7e747
+RMD160 (kid3-0.10.tar.gz) = 6f4aae70cd2e3079d19653f2294a8e27cdbe6269
+Size (kid3-0.10.tar.gz) = 1037218 bytes
 SHA1 (patch-ab) = 75955211d667793420a481cfa269dec29bd49221
-SHA1 (patch-ac) = 9db1beeb39a5e08f682a0d16e5d1a9754877419e
+SHA1 (patch-ac) = 066f36a9ece1a85cfea9c1b93671cdad8f78e66c
