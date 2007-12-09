@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2007/08/17 20:55:34 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/12/09 23:38:21 wiz Exp $
 
-DISTNAME=	mtools-3.9.10
-PKGREVISION=	1
+DISTNAME=	mtools-3.9.11
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.tux.org/pub/knaff/mtools/
+MASTER_SITES=	http://mtools.linux.lu/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	is@NetBSD.org
-HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
+HOMEPAGE=	http://mtools.linux.lu/
 COMMENT=	FAT (MS-DOS, Atari) disk access tools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,7 +15,7 @@ NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
