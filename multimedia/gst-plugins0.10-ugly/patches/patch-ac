@@ -1,0 +1,55 @@
+$NetBSD: patch-ac,v 1.1 2007/12/09 11:03:51 drochner Exp $
+
+--- gst/mpegaudioparse/gstmpegaudioparse.c.orig	2007-06-13 11:21:26.000000000 +0200
++++ gst/mpegaudioparse/gstmpegaudioparse.c
+@@ -218,7 +218,8 @@ mp3_caps_create (guint layer, guint chan
+   new = gst_caps_new_simple ("audio/mpeg",
+       "mpegversion", G_TYPE_INT, 1,
+       "layer", G_TYPE_INT, layer,
+-      "rate", G_TYPE_INT, samplerate, "channels", G_TYPE_INT, channels, NULL);
++      "rate", G_TYPE_INT, samplerate,
++      "channels", G_TYPE_INT, channels, "parsed", G_TYPE_BOOLEAN, TRUE, NULL);
+ 
+   return new;
+ }
+@@ -329,6 +330,7 @@ gst_mp3parse_sink_event (GstPad * pad, G
+ {
+   gboolean res;
+   GstMPEGAudioParse *mp3parse;
++  GstEvent **eventp;
+ 
+   mp3parse = GST_MP3PARSE (gst_pad_get_parent (pad));
+ 
+@@ -379,12 +381,18 @@ gst_mp3parse_sink_event (GstPad * pad, G
+       GST_DEBUG_OBJECT (mp3parse, "Pushing newseg rate %g, applied rate %g, "
+           "format %d, start %lld, stop %lld, pos %lld\n",
+           rate, applied_rate, format, start, stop, pos);
+-      res = gst_pad_push_event (mp3parse->srcpad, event);
++      /* save the segment for later, right before we push a new buffer so that
++       * the caps are fixed and the next linked element can receive the segment. */
++      eventp = &mp3parse->pending_segment;
++      gst_event_replace (eventp, event);
++      res = TRUE;
+       break;
+     }
+     case GST_EVENT_FLUSH_STOP:
+       /* Clear our adapter and set up for a new position */
+       gst_adapter_clear (mp3parse->adapter);
++      eventp = &mp3parse->pending_segment;
++      gst_event_replace (eventp, NULL);
+       res = gst_pad_push_event (mp3parse->srcpad, event);
+       break;
+     default:
+@@ -483,6 +491,12 @@ gst_mp3parse_emit_frame (GstMPEGAudioPar
+         mp3parse->srcpad, taglist);
+   }
+ 
++  /* push any pending segment now */
++  if (mp3parse->pending_segment) {
++    gst_pad_push_event (mp3parse->srcpad, mp3parse->pending_segment);
++    mp3parse->pending_segment = NULL;
++  }
++
+   return gst_pad_push (mp3parse->srcpad, outbuf);
+ }
+ 
