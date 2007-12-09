@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/11/29 22:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/09 20:56:40 wiz Exp $
 #
 
 DISTNAME=		asciidoc-8.2.5
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${HOMEPAGE}	\
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
@@ -14,14 +15,15 @@ DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 REPLACE_BASH+=		a2x
 USE_TOOLS+=		bash:run
+PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
 PYTHON_PATCH_SCRIPTS=	asciidoc.py
 NO_BUILD=		yes
 
 SUBST_CLASSES+=		ad
 SUBST_STAGE.ad=		pre-configure
-SUBST_MESSAGE.ad=	Fixing hard-coded paths.
-SUBST_FILES.ad=		asciidoc.py
-SUBST_SED.ad=		-e 's,^\(GLOBAL_CONFIG_DIR\).*=.*,\1 = "${PREFIX}/share/asciidoc",'
+SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
+SUBST_FILES.ad=		a2x asciidoc.py
+SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1 = "${PREFIX}/share/asciidoc",'
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \
@@ -40,15 +42,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DOCDIR}
 
-	cd ${WRKSRC} && ${PAX} -wr -pma *.conf stylesheets filters/*.py \
+	cd ${WRKSRC} && ${PAX} -wr -pma *.conf filters/*.py \
 		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/icons/callouts/* images/icons/*.png \
+		images/icons/README \
 		${PREFIX}/share/asciidoc/.
 
 do-test:
 	cd ${WRKSRC} && ./asciidoc.py -v doc/asciidoc.txt
 
-# requires Python 2.3 or newer
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
