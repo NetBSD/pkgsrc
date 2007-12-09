@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2006/09/06 09:54:39 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/09 19:33:56 wiz Exp $
 #
 
 DISTNAME=		pyproj-1.7.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/pyproj/proj/}
 CATEGORIES=		geography
-MASTER_SITES=		http://www.cdc.noaa.gov/people/jeffrey.s.whitaker/python/
+MASTER_SITES=		#http://pyproj.googlecode.com/files/
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://www.cdc.noaa.gov/people/jeffrey.s.whitaker/python/
+HOMEPAGE=		http://code.google.com/p/pyproj/
 COMMENT=		Python wrapper for proj
 
 PYDISTUTILSPKG=			true
