@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/08/14 17:19:20 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/09 19:27:20 wiz Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
@@ -6,7 +6,8 @@ PKGNAME=		epsg-6.13
 PKGREVISION=		1
 VERS=			6_13
 CATEGORIES=		geography databases
-MASTER_SITES+=		http://www.epsg.org/databases/
+MASTER_SITES+=		http://www.epsg.org/databases/ \
+			http://www.epsg.org/databases/Arc/${VERS}/
 DISTFILES+=		epsg-v${VERS}sql-PostgreSQL.zip \
 			epsg-v${VERS}sql-mySQL.zip
 DIST_SUBDIR=		epsg-${VERS}
