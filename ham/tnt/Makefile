@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/04/04 14:45:45 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/12/09 13:08:42 obache Exp $
 #
 
-DISTNAME=	tnt-1.9.1
-PKGREVISION=	2
+DISTNAME=	tnt-1.9.2
 CATEGORIES=	ham
 MASTER_SITES=	ftp://ftp.wspse.de/pub/packet_radio/tnt/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://wspse.de/WSPse/Packet.php3
@@ -18,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
