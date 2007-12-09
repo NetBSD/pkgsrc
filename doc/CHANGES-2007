@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2599 2007/12/09 23:23:25 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2600 2007/12/09 23:34:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4730,3 +4730,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/alpine to 0.999999 [abs 2007-12-09]
 	Updated devel/apr to 1.2.12 [jklos 2007-12-09]
 	Updated games/gtkballs to 3.1.5nb6 [wiz 2007-12-09]
+	Updated audio/kid3 to 0.10 [wiz 2007-12-09]
