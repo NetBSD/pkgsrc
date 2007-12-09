@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2593 2007/12/09 00:23:58 hiramatsu Exp $
+$NetBSD: CHANGES-2007,v 1.2594 2007/12/09 13:08:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/dejagnu to 1.4.4nb3 [obache 2007-12-08]
 	Updated audio/p5-CDDB_get to 2.27 [heinz 2007-12-08]
 	Updated devel/p5-Test-Warn to 0.10 [hiramatsu 2007-12-09]
+	Updated ham/tnt to 1.9.2 [obache 2007-12-09]
