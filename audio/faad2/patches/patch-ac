@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2007/02/09 20:10:50 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2007/12/09 10:55:31 drochner Exp $
 
---- Makefile.am.orig	2004-02-06 17:04:39.000000000 +0100
+--- Makefile.am.orig	2004-07-27 10:52:20.000000000 +0200
 +++ Makefile.am
-@@ -1,8 +1,10 @@
+@@ -1,7 +1,9 @@
 -SUBDIRS = libfaad common frontend plugins
 +SUBDIRS = libfaad common frontend include
  
@@ -10,10 +10,6 @@ $NetBSD: patch-ac,v 1.5 2007/02/09 20:10:50 drochner Exp $
  
 +include_HEADERS = faad2-config.h
 +
- rpm:    Makefile
--       make dist
--       $(RPMBUILD) -ta $(PACKAGE)-$(VERSION).tar.gz
--       rm $(PACKAGE)-$(VERSION).tar.gz
-+	make dist
-+	$(RPMBUILD) -ta $(PACKAGE)-$(VERSION).tar.gz
-+	rm $(PACKAGE)-$(VERSION).tar.gz
+ rpm:	Makefile
+ 	make dist
+ 	$(RPMBUILD) -ta $(PACKAGE)-$(VERSION).tar.gz

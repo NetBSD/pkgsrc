@@ -1,14 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/10/06 13:13:28 ben Exp $
+$NetBSD: patch-aa,v 1.4 2007/12/09 10:55:31 drochner Exp $
 
---- libfaad/Makefile.am.orig	2004-02-06 13:12:28.000000000 +0000
-+++ libfaad/Makefile.am	2004-03-27 22:27:18.000000000 +0000
-@@ -1,5 +1,4 @@
- lib_LTLIBRARIES = libfaad.la
--include_HEADERS = ../include/faad.h
- 
- libfaad_la_SOURCES = bits.c cfft.c decoder.c drc.c \
- error.c filtbank.c \
-@@ -7,8 +6,9 @@ ic_predict.c is.c lt_predict.c mdct.c mp
+--- libfaad/Makefile.am.orig	2004-11-08 09:06:09.000000000 +0100
++++ libfaad/Makefile.am
+@@ -12,8 +12,9 @@ ps_dec.c ps_syntax.c \
  pulse.c specrec.c syntax.c tns.c hcr.c huffman.c \
  rvlc.c ssr.c ssr_fb.c ssr_ipqf.c common.c \
  sbr_dct.c sbr_e_nf.c sbr_fbt.c sbr_hfadj.c sbr_hfgen.c \
@@ -17,6 +11,13 @@ $NetBSD: patch-aa,v 1.3 2005/10/06 13:13:28 ben Exp $
 +sbr_huff.c sbr_qmf.c sbr_syntax.c sbr_tf_grid.c sbr_dec.c
 +
 +libfaad_la_INCLUDES = analysis.h bits.h cfft.h cfft_tab.h common.h \
- decoder.h drc.h error.h fixed.h filtbank.h \
- huffman.h ic_predict.h iq_table.h is.h kbd_win.h lt_predict.h mdct.h mp4.h \
- ms.h output.h pns.h pulse.h rvlc.h sine_win.h ssr.h ssr_fb.h ssr_ipqf.h \
+ decoder.h drc.h drm_dec.h error.h fixed.h filtbank.h \
+ huffman.h ic_predict.h iq_table.h is.h kbd_win.h lt_predict.h \
+ mdct.h mdct_tab.h mp4.h ms.h output.h pns.h ps_dec.h ps_tables.h \
+@@ -25,4 +26,4 @@ ssr_win.h syntax.h structs.h tns.h \
+ sbr_qmf_c.h codebook/hcb.h \
+ codebook/hcb_1.h codebook/hcb_2.h codebook/hcb_3.h codebook/hcb_4.h \
+ codebook/hcb_5.h codebook/hcb_6.h codebook/hcb_7.h codebook/hcb_8.h \
+-codebook/hcb_9.h codebook/hcb_10.h codebook/hcb_11.h codebook/hcb_sf.h
+\ No newline at end of file
++codebook/hcb_9.h codebook/hcb_10.h codebook/hcb_11.h codebook/hcb_sf.h
