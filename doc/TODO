@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6881 2007/12/09 19:17:41 heinz Exp $
+$NetBSD: TODO,v 1.6882 2007/12/09 19:45:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -318,6 +318,7 @@ Suggested package updates
 	o aqsis-1.2
 	o aranym-0.9.5
 	o argtable-2.3
+	o aria2-0.12.0
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.06
@@ -412,6 +413,7 @@ Suggested package updates
 	o cups-1.3.4
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.0.1 [pkg/37401]
+	o cvsd-1.0.14
 	o cweb-3.64a
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
@@ -466,6 +468,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o epic4-2.6
 	o epiphany-extensions-2.20.1
+	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.0.3 [now called eric4]
 	o esh-0.8.5
@@ -519,7 +522,7 @@ Suggested package updates
 	o gcalctool-5.20.2
 	o gcc-4.2.2
 	o gcc-ssp-3.4.4
-	o gcin-1.3.4
+	o gcin-1.3.7.1
 	o gcombust-0.1.55
 	o gcompris-8.4.2
 	o gconf-editor-2.18.2
@@ -653,7 +656,7 @@ Suggested package updates
 	o iozone-3.283
 	o ipa-2.1.11
 	o ipcalc-0.41
-	o ircservices-5.1.9
+	o ircservices-5.1.10
 	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o isapnptools-1.27
@@ -773,7 +776,7 @@ Suggested package updates
 	o mailscanner-4.54.6
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mapserver-4.2.5
+	o mapserver-5.0.0
 	o maradns-1.2.12.08
 	o matchbox-panel-0.9.3
 	o mcrypt-2.6.6
@@ -1004,7 +1007,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.2.2
+	o phpmyadmin-2.11.3
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1082,7 +1085,7 @@ Suggested package updates
 	o py-mutagen-1.11
 	o py-mysqldb-1.1.7
 	o py-paramiko-1.7
-	o py-proj-1.8.1a [at python.org]
+	o py-proj-1.8.3
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-3.17.3
@@ -1347,16 +1350,16 @@ Suggested package updates
 	o xmms-wma-1.0.5
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.5.0
+	o xmp-2.5.1
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xpad-2.12
+	o xpad-2.13
 	o xpdf-3.02pl2
 	o xpp-1.5
 	o xproto-7.0.11
 	o xpuyopuyo-0.9.5
 	o xrmap-anthems-1.2
-	o xrmap-base-2.33
+	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.5
 	o xscreensaver-5.04
