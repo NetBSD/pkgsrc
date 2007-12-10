@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6885 2007/12/10 00:47:54 rhaen Exp $
+$NetBSD: TODO,v 1.6886 2007/12/10 05:25:28 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1101,7 +1101,7 @@ Suggested package updates
 	o qwspritefield-1.7
 	o radiance-3.7.2
 	o radiusd-cistron-1.6.8
-	o rails-1.2.6 [CVE-2007-6077]
+	o rails-2.0.1
 	o raine-0.50.5
 	o randread-0.2
 	o raptor-1.4.16
