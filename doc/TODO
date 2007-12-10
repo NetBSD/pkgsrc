@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6887 2007/12/10 10:49:26 obache Exp $
+$NetBSD: TODO,v 1.6888 2007/12/10 11:35:11 tnn Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,6 @@ Suggested package updates
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.6.12
 	o TiffIO-130e
-	o Transmission-0.93
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o aap-0.144
