@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2607 2007/12/10 19:59:01 reinoud Exp $
+$NetBSD: CHANGES-2007,v 1.2608 2007/12/10 20:43:05 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4743,4 +4743,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/finch to 2.3.1 [tnn 2007-12-10]
 	Updated wm/piewm to 1.04 [obache 2007-12-10]
 	Updated misc/udfclient to 0.5.8 [reinoud 2007-12-10]
+	Updated devel/netbsd-iscsi-initiator to 20071209 [agc 2007-12-10]
+	Updated devel/netbsd-iscsi-target to 20071209 [agc 2007-12-10]
 
