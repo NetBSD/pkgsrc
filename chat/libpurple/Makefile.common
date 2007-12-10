@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.8 2007/12/02 04:17:54 tnn Exp $
+# $NetBSD: Makefile.common,v 1.9 2007/12/10 11:33:58 tnn Exp $
 #
 
-PIDGIN_VERSION=	2.3.0
+PIDGIN_VERSION=	2.3.1
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
