@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2007/03/17 11:14:29 minskim Exp $
+# $NetBSD: Makefile,v 1.8.6.1 2007/12/10 17:08:11 ghen Exp $
 
-DISTNAME=	actionmailer-1.3.3
+DISTNAME=	actionmailer-1.3.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/18409/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/26557/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/actionmailer/
 COMMENT=	Ruby framework for designing email-service layers
 
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.3:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.5:../../www/ruby-actionpack
 DEPENDS+=	${RUBY_PKGPREFIX}-tmail>=0.10.8:../../mail/ruby-tmail
 
 NO_BUILD=		yes

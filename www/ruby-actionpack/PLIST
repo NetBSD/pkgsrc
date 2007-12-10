@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/03/17 11:10:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9.6.1 2007/12/10 17:08:10 ghen Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/deprecated_assertions.rb
@@ -14,6 +14,7 @@ ${RUBY_SITELIBDIR}/action_controller/caching.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_ext.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_methods.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/cookie_performance_fix.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/pstore_performance_fix.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/raw_post_data_fix.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_ext/session_performance_fix.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_process.rb

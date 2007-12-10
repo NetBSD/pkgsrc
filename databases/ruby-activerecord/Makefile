@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2007/03/17 11:05:15 minskim Exp $
+# $NetBSD: Makefile,v 1.9.6.1 2007/12/10 17:08:11 ghen Exp $
 
-DISTNAME=	activerecord-1.15.3
+DISTNAME=	activerecord-1.15.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/18406/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/26551/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/activerecord/
 COMMENT=	Object-relation mapping put on rails
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.2:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.4:../../devel/ruby-activesupport
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
