@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2603 2007/12/10 05:25:27 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2604 2007/12/10 05:48:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4734,3 +4734,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/mtools to 3.9.11 [wiz 2007-12-09]
 	Updated net/pload to 0.9.5 [wiz 2007-12-09]
 	Updated www/rails to 1.2.6 [minskim 2007-12-10]
+	Updated www/ruby-actionpack to 1.13.6 [minskim 2007-12-10]
