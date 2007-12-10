@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2605 2007/12/10 11:35:12 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2606 2007/12/10 11:35:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4741,3 +4741,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/pidgin-sametime to 2.3.1 [tnn 2007-12-10]
 	Updated chat/pidgin-silc to 2.3.1 [tnn 2007-12-10]
 	Updated chat/finch to 2.3.1 [tnn 2007-12-10]
+	Updated wm/piewm to 1.04 [obache 2007-12-10]
