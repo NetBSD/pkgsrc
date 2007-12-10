@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2604 2007/12/10 05:48:27 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2605 2007/12/10 11:35:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4735,3 +4735,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/pload to 0.9.5 [wiz 2007-12-09]
 	Updated www/rails to 1.2.6 [minskim 2007-12-10]
 	Updated www/ruby-actionpack to 1.13.6 [minskim 2007-12-10]
+	Updated net/Transmission to 0.95 [tnn 2007-12-10]
+	Updated chat/libpurple to 2.3.1 [tnn 2007-12-10]
+	Updated chat/pidgin to 2.3.1 [tnn 2007-12-10]
+	Updated chat/pidgin-sametime to 2.3.1 [tnn 2007-12-10]
+	Updated chat/pidgin-silc to 2.3.1 [tnn 2007-12-10]
+	Updated chat/finch to 2.3.1 [tnn 2007-12-10]
