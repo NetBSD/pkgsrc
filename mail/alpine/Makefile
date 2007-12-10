@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/12/09 22:17:54 abs Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/10 00:01:38 abs Exp $
 #
 
 DISTNAME=	alpine-0.999999
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +27,10 @@ PKG_SUPPORTED_OPTIONS=	pinepwd
 PKG_SUGGESTED_OPTIONS=	pinepwd
 
 .include "../../mk/bsd.options.mk"
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+= --without-pthread
+.endif
 
 .if !empty(PKG_OPTIONS:Mpinepwd)
 CONFIGURE_ARGS+= --with-passfile=.pinepwd
