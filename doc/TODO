@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6884 2007/12/09 23:42:43 wiz Exp $
+$NetBSD: TODO,v 1.6885 2007/12/10 00:47:54 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ Suggested package updates
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
 	o cdlabelgen-4.0.0
-	o cfengine2-2.2.2
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -868,8 +867,6 @@ Suggested package updates
 	o oroborus-2.0.18
 	o osh-20070324
 	o otpCalc-0.97
-	o p5-Algorithm-Dependency-1.104
-	o p5-Algorithm-Merge-0.08
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
@@ -880,16 +877,12 @@ Suggested package updates
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-CDDB_get-2.27
-	o p5-CGI-Application-4.06
-	o p5-CGI-Minimal-1.25
-	o p5-Cache-Memcached-1.15
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Inspector-1.18
 	o p5-Class-ReturnValue-0.55
 	o p5-Clone-0.28
 	o p5-Config-General-2.37
-	o p5-Config-Tiny-2.12
 	o p5-Crypt-CBC-2.22
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
@@ -898,12 +891,9 @@ Suggested package updates
 	o p5-DBIx-SearchBuilder-1.50
 	o p5-Data-Dump-1.08
 	o p5-Data-FormValidator-4.50
-	o p5-Devel-Profile-1.05
-	o p5-Devel-Symdump-2.0800
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Error-0.17010
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -921,7 +911,6 @@ Suggested package updates
 	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Fuzzy-0.10
-	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-MailTools-2.02
