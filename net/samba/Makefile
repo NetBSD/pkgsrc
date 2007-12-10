@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.177 2007/11/16 11:41:38 tron Exp $
+# $NetBSD: Makefile,v 1.178 2007/12/10 21:44:47 adrianp Exp $
 
 .include "Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
