@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2007/12/02 11:20:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2007/12/10 17:50:31 adam Exp $
 
-DISTNAME=	lapack
-PKGNAME=	lapack-20010201
-PKGREVISION=	4
+DISTNAME=	lapack-lite-3.1.1
+PKGNAME=	lapack-3.1.1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.netlib.org/lapack/			\
 		ftp://netlib.no/netlib/lapack/			\
@@ -16,8 +14,6 @@ COMMENT=	Linear Algebra PACKage
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/LAPACK
-DIST_SUBDIR=		lapack-20010201
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
 BUILD_TARGET=		lapacklib

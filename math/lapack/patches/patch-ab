@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2005/01/03 15:38:05 wennmach Exp $
+$NetBSD: patch-ab,v 1.6 2007/12/10 17:50:31 adam Exp $
 
-Do not include boilerplate make.inc.
-
---- Makefile.orig	2004-12-23 09:35:14.000000000 +0100
-+++ Makefile	2004-12-23 09:36:02.000000000 +0100
+--- Makefile.orig	2007-02-22 22:55:00.000000000 +0100
++++ Makefile
 @@ -4,7 +4,7 @@
- #  June 30, 1999
+ #  February 2007
  #
  
 -include make.inc
 +#include make.inc
  
- all: install lib testing blas_testing timing blas_timing
+ all: lapack_install lib lapack_testing blas_testing
  
