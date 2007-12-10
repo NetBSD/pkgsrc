@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.49 2007/12/07 05:25:25 rillig Exp $
+# $NetBSD: install.mk,v 1.50 2007/12/10 22:49:19 rillig Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -163,6 +163,7 @@ _INSTALL_ALL_TARGETS+=		check-files-pre
 _INSTALL_ALL_TARGETS+=		install-makedirs
 .if defined(INSTALLATION_DIRS_FROM_PLIST) && \
 	!empty(INSTALLATION_DIRS_FROM_PLIST:M[Yy][Ee][Ss])
+_INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
 .elif defined(AUTO_MKDIRS) && !empty(AUTO_MKDIRS:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
 .endif
