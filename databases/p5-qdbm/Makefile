@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/01 01:58:37 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/10 01:24:25 obache Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -15,6 +15,7 @@ BUILD_DIRS=	${MY_SUBDIR}
 CONFIGURE_DIRS=	${MY_SUBDIR}
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		perl
 PERL5_CONFIGURE=	no
 TEST_TARGET=		check
 
