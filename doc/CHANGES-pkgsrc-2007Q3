@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.21 2007/12/06 10:36:57 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.22 2007/12/10 17:08:39 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -55,3 +55,5 @@ Pullup ticket 2241 - requested by taca
 security update for squid
 Pullup ticket 2243 - requested by taca
 bugfix update for squirrelmail (squirrelmail-japanese option)
+Pullup ticket 2244 - requested by minskim
+security update for ruby-actionpack
