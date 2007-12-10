@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2007/03/17 10:59:26 minskim Exp $
+$NetBSD: distinfo,v 1.9.6.1 2007/12/10 17:08:10 ghen Exp $
 
-SHA1 (activesupport-1.4.2.tgz) = ec1b98727e0ca2eb55304f2cb814c50075e7d998
-RMD160 (activesupport-1.4.2.tgz) = 5a0cc3dc0710cdd4930189d3812a8d43c7936477
-Size (activesupport-1.4.2.tgz) = 214206 bytes
+SHA1 (activesupport-1.4.4.tgz) = d5676bc270329478d31baecc95f3a506a510b43f
+RMD160 (activesupport-1.4.4.tgz) = 697258b8c491937c1b1d157723bbbd8d1717b8a2
+Size (activesupport-1.4.4.tgz) = 214299 bytes
 SHA1 (patch-aa) = d49d9f6c9a1f1ef23cfdb6df0f35a9391cc6934d
 SHA1 (patch-ab) = 25d4bf00f57e2708ac5af41383c1d13ff74a0c1d

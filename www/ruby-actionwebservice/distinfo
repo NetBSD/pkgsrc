@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2007/03/17 11:17:57 minskim Exp $
+$NetBSD: distinfo,v 1.8.6.1 2007/12/10 17:08:12 ghen Exp $
 
-SHA1 (actionwebservice-1.2.3.tgz) = 611adf0f75cbb367170d12ec4fe5a7da8a407b64
-RMD160 (actionwebservice-1.2.3.tgz) = a523fe77763604b99b19cd9cf94372ab7d385ad7
-Size (actionwebservice-1.2.3.tgz) = 64095 bytes
+SHA1 (actionwebservice-1.2.5.tgz) = 88e4bd8cc52e536672b135d5a91bc0d461e4caa1
+RMD160 (actionwebservice-1.2.5.tgz) = 2da3bf540c42aec5a1a723e59c98ac918c67030a
+Size (actionwebservice-1.2.5.tgz) = 64094 bytes
