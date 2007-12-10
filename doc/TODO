@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6888 2007/12/10 11:35:11 tnn Exp $
+$NetBSD: TODO,v 1.6889 2007/12/10 11:38:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -995,7 +995,6 @@ Suggested package updates
 	o phppgadmin-4.1.2
 	o phylip-3.65
 	o picp-0.6.8
-	o piewm-1.04
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
