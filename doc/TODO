@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6891 2007/12/11 02:28:18 wulf Exp $
+$NetBSD: TODO,v 1.6892 2007/12/11 11:37:17 obache Exp $
 
 Suggested new packages
 ======================
@@ -594,7 +594,7 @@ Suggested package updates
 	o gss-0.0.22
 	o gtar-1.19
 	o gtar-base-1.19
-	o gtexinfo-4.11
+	o gtexinfo-4.11 [pkg/37481]
 	o gthumb-2.10.7
 	o gtick-0.4.1
 	o gtk-systrace-20030623
