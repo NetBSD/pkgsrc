@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2617 2007/12/11 17:00:46 rhaen Exp $
+$NetBSD: CHANGES-2007,v 1.2618 2007/12/11 21:48:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Test-Inline to 2.207 [rhaen 2007-12-11]
 	Added fonts/vlgothic-ttf version 20071031 [obache 2007-12-11]
 	Added fonts/monafonts-ttf version 2.90 [obache 2007-12-11]
+	Updated multimedia/mplayer-plugin-firefox to 3.50 [xtraeme 2007-12-11]
