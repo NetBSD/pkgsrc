@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2616 2007/12/11 13:16:51 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2617 2007/12/11 17:00:46 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4728,9 +4728,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/php-eaccelerator to 0.9.5.2 [jdolecek 2007-12-09]
 	Updated textproc/asciidoc to 8.2.5nb1 [wiz 2007-12-09]
 	Updated mail/alpine to 0.999999 [abs 2007-12-09]
-	Updated devel/p5-Algorith-Merge to 0.08 [rhaen 2007-12-09]
+	Updated devel/p5-Algorithm-Merge to 0.08 [rhaen 2007-12-09]
 	Updated devel/apr to 1.2.12 [jklos 2007-12-09]
-	Updated devel/p5-Algorith-Dependency to 1.104 [rhaen 2007-12-09]
+	Updated devel/p5-Algorithm-Dependency to 1.104 [rhaen 2007-12-09]
 	Updated devel/p5-Devel-Profile to 1.05 [rhaen 2007-12-09]
 	Updated devel/p5-Cache-Memcached to 1.24 [rhaen 2007-12-09]
 	Updated devel/p5-Devel-Symdump to 2.08 [rhaen 2007-12-09]
@@ -4769,7 +4769,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/p5-Tree-Simple to 1.18 [rhaen 2007-12-11]
 	Updated textproc/p5-Text-WikiFormat to 0.79 [rhaen 2007-12-11]
 	Updated devel/p5-Want to 0.16 [rhaen 2007-12-11]
-	Added devel/p5-TestScript version 1.02 [rhaen 2007-12-11]
+	Added devel/p5-Test-Script version 1.02 [rhaen 2007-12-11]
 	Added devel/p5-IPC-Run3 version 0.039 [rhaen 2007-12-11]
 	Added sysutils/p5-File-chmod version 0.32 [rhaen 2007-12-11]
 	Updated devel/p5-Test-Inline to 2.207 [rhaen 2007-12-11]
