@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/06 03:41:31 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2007/12/11 12:29:39 obache Exp $
 #
 
 DISTNAME=	ttmkfdir2.20021109
@@ -19,13 +19,15 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex
 USE_LANGUAGES=	c c++
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_ENV+=	FREETYPE_CONFIG=${FREETYPE_CONFIG:Q}
 LDFLAGS+=	${BUILDLINK_LDADD.getopt}
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ttmkfdir ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
