@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2612 2007/12/11 05:29:16 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2613 2007/12/11 09:14:43 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4745,9 +4745,9 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/udfclient to 0.5.8 [reinoud 2007-12-10]
 	Updated devel/netbsd-iscsi-initiator to 20071209 [agc 2007-12-10]
 	Updated devel/netbsd-iscsi-target to 20071209 [agc 2007-12-10]
-
 	Updated net/samba to 3.0.26anb3 [adrianp 2007-12-10]
 	Updated net/libupnp to 1.6.2 [obache 2007-12-11]
 	Updated graphics/gimp-docs to 2.4.0 [wulf 2007-12-11]
 	Updated devel/ncurses to 5.6nb2 [bjs 2007-12-11]
 	Updated devel/ncursesw to 5.6nb2 [bjs 2007-12-11]
+	Added www/nginx version 0.5.33 [ghen 2007-12-11]
