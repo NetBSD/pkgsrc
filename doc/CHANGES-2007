@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2613 2007/12/11 09:14:43 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2614 2007/12/11 12:48:17 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4728,7 +4728,16 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/php-eaccelerator to 0.9.5.2 [jdolecek 2007-12-09]
 	Updated textproc/asciidoc to 8.2.5nb1 [wiz 2007-12-09]
 	Updated mail/alpine to 0.999999 [abs 2007-12-09]
+	Updated devel/p5-Algorith-Merge to 0.08 [rhaen 2007-12-09]
 	Updated devel/apr to 1.2.12 [jklos 2007-12-09]
+	Updated devel/p5-Algorith-Dependency to 1.104 [rhaen 2007-12-09]
+	Updated devel/p5-Devel-Profile to 1.05 [rhaen 2007-12-09]
+	Updated devel/p5-Cache-Memcached to 1.24 [rhaen 2007-12-09]
+	Updated devel/p5-Devel-Symdump to 2.08 [rhaen 2007-12-09]
+	Updated devel/p5-Log-Dispatch to 2.20 [rhaen 2007-12-09]
+	Updated devel/p5-Error to 0.17010 [rhaen 2007-12-09]
+	Updated www/p5-CGI-Application to 4.06 [rhaen 2007-12-09]
+	Updated sysutils/cfengine2 to 2.2.3 [rhaen 2007-12-09]
 	Updated games/gtkballs to 3.1.5nb6 [wiz 2007-12-09]
 	Updated audio/kid3 to 0.10 [wiz 2007-12-09]
 	Updated sysutils/mtools to 3.9.11 [wiz 2007-12-09]
@@ -4751,3 +4760,16 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/ncurses to 5.6nb2 [bjs 2007-12-11]
 	Updated devel/ncursesw to 5.6nb2 [bjs 2007-12-11]
 	Added www/nginx version 0.5.33 [ghen 2007-12-11]
+	Updated mail/p5-MailTools to 2.02 [rhaen 2007-12-11]
+	Updated archivers/p5-Archive-Tar to 1.36 [rhaen 2007-12-11]
+	Updated devel/p5-Test-File-Contents to 0.05 [rhaen 2007-12-11]
+	Updated devel/p5-Test-NoWarnings to 0.084 [rhaen 2007-12-11]
+	Updated devel/p5-Test-Simple to 0.74 [rhaen 2007-12-11]
+	Updated devel/p5-Test-Tester to 0.106 [rhaen 2007-12-11]
+	Updated devel/p5-Tree-Simple to 1.18 [rhaen 2007-12-11]
+	Updated textproc/p5-Text-WikiFormat to 0.79 [rhaen 2007-12-11]
+	Updated devel/p5-Want to 0.16 [rhaen 2007-12-11]
+	Added devel/p5-TestScript version 1.02 [rhaen 2007-12-11]
+	Added devel/p5-IPC-Run3 version 0.039 [rhaen 2007-12-11]
+	Added sysutils/p5-File-chmod version 0.32 [rhaen 2007-12-11]
+	Updated devel/p5-Test-Inline to 2.207 [rhaen 2007-12-11]
