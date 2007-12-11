@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2615 2007/12/11 12:52:50 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2616 2007/12/11 13:16:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4774,3 +4774,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added sysutils/p5-File-chmod version 0.32 [rhaen 2007-12-11]
 	Updated devel/p5-Test-Inline to 2.207 [rhaen 2007-12-11]
 	Added fonts/vlgothic-ttf version 20071031 [obache 2007-12-11]
+	Added fonts/monafonts-ttf version 2.90 [obache 2007-12-11]
