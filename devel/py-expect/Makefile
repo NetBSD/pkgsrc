@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.15 2007/03/21 19:44:10 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2007/12/11 22:41:54 heinz Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
 PKGNAME=	${PYPKGPREFIX}-expect-1.9b1
 PKGREVISION=	3
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pub/sourceforge/expectpy/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expectpy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/expectpy/
 COMMENT=	Expect module for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -25,10 +27,13 @@ PLIST_SUBST+=	PYLIB=${PYLIB:Q} PYPKGPREFIX=${PYPKGPREFIX:Q}
 EXAMPLESDIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-expect
 EXAMPLESFILES=	ask.py glob.py ping.py telnet.py xping.py
 
+INSTALLATION_DIRS=	lib/python${PYVERSSUFFIX}/lib-dynload
+
 post-install:
-		${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+		${INSTALL_DATA_DIR} ${DESTDIR:Q}${EXAMPLESDIR}
 .for f in ${EXAMPLESFILES}
-		${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLESDIR}
+		${INSTALL_DATA} ${WRKSRC}/examples/${f} \
+			${DESTDIR:Q}${EXAMPLESDIR}
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
