@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
---- Makefile.in.orig	Fri Oct 20 05:06:30 2000
-+++ Makefile.in	Wed Mar 21 15:10:52 2001
-@@ -29,8 +29,8 @@
+$NetBSD: patch-ad,v 1.2 2007/12/11 22:41:55 heinz Exp $
+--- Makefile.in.orig	2000-10-20 14:06:30.000000000 +0200
++++ Makefile.in
+@@ -29,8 +29,8 @@ PYTHLIB   = @PYTH_LIBDIR@/config
  PYTHCNFG  = @PYTH_CONFIG@
  PYCNF   = @PYCNF@
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
  RANLIB  = @RANLIB@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -39,13 +39,13 @@
+@@ -39,13 +39,13 @@ LN_S    = @LN_S@
  LDEXE   = @LDEXE@
  
  SO       = @SO@
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
  LIBS     = $(EXPLIB) @LIBS@
  INSTLIBDIR = @PYTH_SHLIBDIR@
  
-@@ -109,8 +109,8 @@
+@@ -109,8 +109,8 @@ python: $(MODNAME)module.a pyconfig.o $(
  	$(LDEXE) $(LDFLAGS) -o $@ $(PYTH_OBJS) pyconfig.o \
  	  $(MODNAME)module.a $(EXPSUBLIB).a $(LIBS)
  
@@ -40,3 +40,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
  $(MODNAME)module.a: $(OBJS)
  	$(AR) $(ARFLAGS) $@ $(OBJS)
  	$(RANLIB) $@
+@@ -141,9 +141,9 @@ explib/libexplib.a explib/libexplib.as e
+ install:
+ 	@echo Use either installbin or installshared
+ installbin: python
+-	$(INSTALL_PROGRAM) python $(exec_prefix)/bin/python.exppy
++	$(INSTALL_PROGRAM) python $(DESTDIR)$(exec_prefix)/bin/python.exppy
+ installshared:  $(MODNAME)module$(SO)
+-	$(INSTALL_PROGRAM) $(MODNAME)module$(SO) $(INSTLIBDIR)
++	$(INSTALL_PROGRAM) $(MODNAME)module$(SO) $(DESTDIR)$(INSTLIBDIR)
+ uninstall:
+ 
+ clean::
