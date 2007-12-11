@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.17 2007/10/05 23:28:07 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18 2007/12/11 21:46:51 xtraeme Exp $
 #
 
-DISTNAME=		mplayerplug-in-3.45
-PKGNAME=		mplayer-plugin-${BROWSER}-3.45
+DISTNAME=		mplayerplug-in-${DIST_VER}
+PKGNAME=		mplayer-plugin-${BROWSER}-${DIST_VER}
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mplayerplug-in/}
 
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 
+DIST_VER=		3.50
 CONFIGURE_ARGS+=	--enable-wmp
 CONFIGURE_ARGS+=	--enable-qt
 CONFIGURE_ARGS+=	--enable-rm
