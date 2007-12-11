@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2609 2007/12/10 21:45:40 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2610 2007/12/11 00:21:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/netbsd-iscsi-target to 20071209 [agc 2007-12-10]
 
 	Updated net/samba to 3.0.26anb3 [adrianp 2007-12-10]
+	Updated net/libupnp to 1.6.2 [obache 2007-12-11]
