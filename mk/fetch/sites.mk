@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.33 2007/09/11 17:22:18 xtraeme Exp $
+# $NetBSD: sites.mk,v 1.34 2007/12/11 19:55:06 heinz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -100,26 +100,23 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://dfn.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
+	http://garr.dl.sourceforge.net/sourceforge/ \
 	http://internap.dl.sourceforge.net/sourceforge/ \
 	http://jaist.dl.sourceforge.net/sourceforge/ \
 	http://kent.dl.sourceforge.net/sourceforge/ \
 	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://nchc.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
-	http://ovh.dl.sourceforge.net/sourceforge/ \
-	http://puzzle.dl.sourceforge.net/sourceforge/ \
 	http://superb-east.dl.sourceforge.net/sourceforge/ \
 	http://superb-west.dl.sourceforge.net/sourceforge/ \
 	http://surfnet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://ufpr.dl.sourceforge.net/sourceforge/ \
-	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://belnet.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://download.sourceforge.jp/ \
 	http://osdn.dl.sourceforge.jp/ \
-	http://iij.dl.sourceforge.jp/ \
 	http://keihanna.dl.sourceforge.jp/ \
 	http://globalbase.dl.sourceforge.jp/
 
