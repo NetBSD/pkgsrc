@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2618 2007/12/11 21:48:24 xtraeme Exp $
+$NetBSD: CHANGES-2007,v 1.2619 2007/12/11 22:35:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/vlgothic-ttf version 20071031 [obache 2007-12-11]
 	Added fonts/monafonts-ttf version 2.90 [obache 2007-12-11]
 	Updated multimedia/mplayer-plugin-firefox to 3.50 [xtraeme 2007-12-11]
+	Updated archivers/dar to 2.3.6 [bjs 2007-12-11]
