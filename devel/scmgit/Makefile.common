@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2007/12/12 04:05:27 bjs Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/12/12 04:21:45 bjs Exp $
 #
 
 DISTNAME=	git-${GIT_VERSION}
@@ -8,12 +8,16 @@ MASTER_SITES?=	http://www.kernel.org/pub/software/scm/git/
 MAINTAINER?=	pancake@phreaker.net
 HOMEPAGE?=	http://git.or.cz/
 
-PATCHDIR=	${.CURDIR}/../scmgit-base/patches
-DISTINFO_FILE=	${.CURDIR}/../scmgit-base/distinfo
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_VERSION=	1.5.3.7
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if "${PKGPATH}" != "devel/scmgit"
+PATCHDIR=	${.CURDIR}/../scmgit-base/patches
+DISTINFO_FILE=	${.CURDIR}/../scmgit-base/distinfo
 
 MAKE_ENV+=	HOME=${PREFIX:Q}
 USE_TOOLS+=	gmake tar perl sh
@@ -29,3 +33,4 @@ LIBS.SunOS+=	-liconv
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 AUTO_MKDIRS?=	yes
+.endif
