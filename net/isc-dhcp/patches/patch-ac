@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+
+--- minires/res_send.c.orig	2004-06-10 18:59:44.000000000 +0100
++++ minires/res_send.c
+@@ -80,15 +80,4 @@ static const char rcsid[] = "$Id: res_se
+ #endif /* LIBC_SCCS and not lint */
+ 
+-/* Rename the I/O functions in case we're tracing. */
+-#define send		trace_mr_send
+-#define recvfrom	trace_mr_recvfrom
+-#define	read		trace_mr_read
+-#define connect		trace_mr_connect
+-#define socket		trace_mr_socket
+-#define bind		trace_mr_bind
+-#define close		trace_mr_close
+-#define select		trace_mr_select
+-#define time		trace_mr_time
+-
+ /*
+  * Send query to name server and wait for reply.
+@@ -112,5 +101,17 @@ static const char rcsid[] = "$Id: res_se
+ #include <unistd.h>
+ 
++/* Rename the I/O functions in case we're tracing. */
++#define send		trace_mr_send
++#define recvfrom	trace_mr_recvfrom
++#define	read		trace_mr_read
++#define connect		trace_mr_connect
++#define socket		trace_mr_socket
++#define bind		trace_mr_bind
++#define close		trace_mr_close
++#define select		trace_mr_select
++#define time		trace_mr_time
++
+ #include "minires/minires.h"
++#include "omapip/trace_mr.h"
+ #include "arpa/nameser.h"
+ 
