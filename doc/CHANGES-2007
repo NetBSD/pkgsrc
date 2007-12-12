@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2624 2007/12/12 13:16:36 ghen Exp $
+$NetBSD: CHANGES-2007,v 1.2625 2007/12/12 18:04:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4784,3 +4784,6 @@ Changes to the packages collection and infrastructure in 2007:
 	Added textproc/ebview version 0.3.6 [obache 2007-12-12]
 	Updated misc/openoffice2 to 2.3.1 [hira 2007-12-12]
 	Updated mail/dovecot to 1.0.9 [ghen 2007-12-12]
+	Updated security/libfwbuilder21 to 2.1.15 [adam 2007-12-12]
+	Updated security/fwbuilder21 to 2.1.15 [adam 2007-12-12]
+	Added misc/koffice-l10n-pl version 1.6.3 [adam 2007-12-12]
