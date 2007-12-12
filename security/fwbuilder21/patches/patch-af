@@ -1,0 +1,63 @@
+$NetBSD: patch-af,v 1.1 2007/12/12 17:59:21 adam Exp $
+
+--- configure.orig	2007-12-12 18:11:16.000000000 +0100
++++ configure
+@@ -5986,7 +5986,7 @@ echo "${ECHO_T}Win32 mingw" >&6
+   *-*-darwin*)
+     OS=MacOSX
+     OS_MACOSX=1
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     echo "$as_me:$LINENO: result: MacOSX" >&5
+ echo "${ECHO_T}MacOSX" >&6
+     DEFAULT_RES_DIR="../Resources"
+@@ -5995,12 +5995,21 @@ echo "${ECHO_T}MacOSX" >&6
+   *-*-solaris*)
+     OS=Solaris
+     OS_SOLARIS=1
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     echo "$as_me:$LINENO: result: Solaris" >&5
+ echo "${ECHO_T}Solaris" >&6
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder${FWB_MAJOR_VERSION}${FWB_MINOR_VERSION}"
+     ;;
+ 
++  *-*-netbsd*)
++    OS=NetBSD
++    OS_NETBSD=1
++    MANDIR="${PREFIX}/man/"
++    echo "$as_me:$LINENO: result: NetBSD" >&5
++echo "${ECHO_T}NetBSD" >&6
++    DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder${FWB_MAJOR_VERSION}${FWB_MINOR_VERSION}"
++    ;;
++
+   *-*-freebsd*)
+     OS=FreeBSD
+     OS_FREEBSD=1
+@@ -6027,7 +6036,7 @@ echo "${ECHO_T}OpenBSD" >&6
+     else
+        DISTRO="Unknown"
+     fi
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     echo "$as_me:$LINENO: result: $DISTRO GNU/kFreeBSD" >&5
+ echo "${ECHO_T}$DISTRO GNU/kFreeBSD" >&6
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder${FWB_MAJOR_VERSION}${FWB_MINOR_VERSION}"
+@@ -6054,7 +6063,7 @@ echo "${ECHO_T}$DISTRO GNU/kFreeBSD" >&6
+     else
+ 	DISTRO="Unknown"
+     fi
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     echo "$as_me:$LINENO: result: $DISTRO Linux" >&5
+ echo "${ECHO_T}$DISTRO Linux" >&6
+     ;;
+@@ -6063,7 +6072,7 @@ echo "${ECHO_T}$DISTRO Linux" >&6
+     OS=Unknown
+     OS_UNKNOWN=1
+     DISTRO=Unknown
+-    MANDIR="${PREFIX}/share/man/"
++    MANDIR="${PREFIX}/man/"
+     echo "$as_me:$LINENO: result: Unknown" >&5
+ echo "${ECHO_T}Unknown" >&6
+     DEFAULT_RES_DIR="${PREFIX}/share/fwbuilder${FWB_MAJOR_VERSION}${FWB_MINOR_VERSION}"
