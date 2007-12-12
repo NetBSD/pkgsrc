@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.693 2007/11/15 01:06:18 seb Exp $
+# $NetBSD: Makefile,v 1.694 2007/12/12 20:08:00 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -153,6 +153,10 @@ SUBDIR+=	ipv6calc
 SUBDIR+=	ipw
 SUBDIR+=	irrd
 SUBDIR+=	irrtoolset-nox11
+SUBDIR+=	isc-dhclient
+SUBDIR+=	isc-dhcp
+SUBDIR+=	isc-dhcpd
+SUBDIR+=	isc-dhcrelay
 SUBDIR+=	ishell
 SUBDIR+=	isic
 SUBDIR+=	ispman
