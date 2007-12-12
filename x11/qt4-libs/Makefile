@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2007/12/06 11:09:35 markd Exp $
+# $NetBSD: Makefile,v 1.17 2007/12/12 01:14:29 markd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -39,6 +39,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${QTPREFIX}/lib/
 	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
+		-e "s:${QTPREFIX}/lib/lib\([A-Za-z3]*\)\.la:-l\1:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKOBJ}/${lib}.pc
 	${INSTALL_DATA} ${WRKOBJ}/${lib}.pc ${PREFIX}/lib/pkgconfig/
 .endfor
