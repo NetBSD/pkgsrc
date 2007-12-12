@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/07/29 05:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/12 20:42:28 wiz Exp $
 
 DISTNAME=	aim-1.5.286-1.i386
 PKGNAME=	aim-1.5.286
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://ftp.newaol.com/aimgen/380469/
 EXTRACT_SUFX=	.rpm
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.aim.com/
 COMMENT=	AOL Instant Messenger (SM)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/23 23:33:22 reed Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/12 20:42:31 wiz Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.enst.fr/pub/mbone/mMosaic/
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perso.enst.fr/~dauphin/mMosaic/
 COMMENT=	Modern derivative of NCSA XMosaic
 

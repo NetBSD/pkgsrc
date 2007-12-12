@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/07 15:28:49 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/12 20:42:30 wiz Exp $
 #
 
 DISTNAME=	fsh-1.2
@@ -7,7 +7,7 @@ CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/unix/fsh/ \
 		http://www.lysator.liu.se/fsh/
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/fsh/
 COMMENT=	Fast remote command execution
 
