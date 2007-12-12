@@ -1,0 +1,9 @@
+This package provides the ISC Dynamic Host Configuration Protocol (DHCP)
+Client.
+
+The Internet Software Consortium DHCP Client, dhclient, provides
+a means for configuring one or more network interfaces using DHCP
+or BOOTP, or by statically assigning an address (if these protocols
+fail). The actual network configuration is done by dhclient-script.
+
+This package contains the Relay component.
