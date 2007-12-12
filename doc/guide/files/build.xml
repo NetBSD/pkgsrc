@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.47 2007/08/15 06:33:44 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.48 2007/12/12 01:03:33 markd Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -581,6 +581,16 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <varname>USE_X11BASE</varname> instead.)  You can add variables to
     xmkmf's environment by adding them to the
     <varname>SCRIPTS_ENV</varname> variable.</para>
+
+    <para>If the program uses <filename>cmake</filename>
+    for configuration, the appropriate steps can be invoked by
+    setting <varname>USE_CMAKE</varname> to <quote>yes</quote>.
+    You can add variables to cmake's environment by adding them to the
+    <varname>CONFIGURE_ENV</varname> variable and arguments to cmake
+    by adding them to the <varname>CMAKE_ARGS</varname> variable.
+    The top directory argument is given by the
+    <varname>CMAKE_ARG_PATH</varname> variable, that defaults to
+    <quote>.</quote> (relative to <varname>CONFIGURE_DIRS</varname>)</para>
 
     <para>If there is no configure step at all, set
     <varname>NO_CONFIGURE</varname> to <quote>yes</quote>.</para>
