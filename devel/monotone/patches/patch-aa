@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.16 2007/10/26 14:08:25 jmmv Exp $
+$NetBSD: patch-aa,v 1.17 2007/12/12 14:34:58 jmmv Exp $
 
---- configure.orig	2007-10-26 10:31:46.000000000 +0200
+--- configure.orig	2007-10-26 00:41:00.000000000 +0200
 +++ configure
-@@ -12100,7 +12102,7 @@ echo $ECHO_N "checking for PCRE using pc
+@@ -11879,9 +11879,9 @@ fi
+ # Check whether --with-system-pcre was given.
+ if test "${with_system_pcre+set}" = set; then
+   withval=$with_system_pcre; case "$withval" in
+-      (""|yes) with_system_pcre=yes ;;
+-      (no)     with_system_pcre=no  ;;
+-      (*)      { { echo "$as_me:$LINENO: error: --with(out)-system-pcre takes no argument" >&5
++      ""|yes) with_system_pcre=yes ;;
++      no)     with_system_pcre=no  ;;
++      *)      { { echo "$as_me:$LINENO: error: --with(out)-system-pcre takes no argument" >&5
+ echo "$as_me: error: --with(out)-system-pcre takes no argument" >&2;}
+    { (exit 1); exit 1; }; } ;;
+     esac
+@@ -12100,7 +12100,7 @@ echo $ECHO_N "checking for PCRE using pc
         # automatically.
         PCRE_LIBS="`pcre-config --libs | \
                     sed -e 's:-L */usr/lib/*::' -e 's:-R */usr/lib/*::' \
