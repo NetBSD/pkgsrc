@@ -1,0 +1,4 @@
+set up patch for NetBSD, like:
+includes/cf/netbsd.h
+and common/bpf.c and common/fddi.c to use NETBSD_FDDI
+(see NetBSD's /usr/src/dist/dhcp)

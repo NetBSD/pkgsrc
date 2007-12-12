@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+
+--- configure.orig	2004-09-10 23:02:30.000000000 +0200
++++ configure
+@@ -259,7 +259,7 @@ for foo in $dirs; do
+ 				<Makefile.conf; \
+ 		cat site.conf; \
+ 		echo "TOP = `pwd`"; \
+-		echo CC_OPTIONS = $copts; \
++		echo CC_OPTIONS ?= $copts; \
+ 		cat $foo/Makefile.dist)	\
+ 				>${workname}/$bar/Makefile
+ done
