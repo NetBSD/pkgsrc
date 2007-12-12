@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.901 2007/11/29 15:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.902 2007/12/12 04:23:56 bjs Exp $
 #
 
 COMMENT=	Development utilities
@@ -743,6 +743,8 @@ SUBDIR+=	rx
 SUBDIR+=	sablecc
 SUBDIR+=	scmcvs
 SUBDIR+=	scmgit
+SUBDIR+=	scmgit-base
+SUBDIR+=	scmgit-docs
 SUBDIR+=	scons
 SUBDIR+=	scons-devel
 SUBDIR+=	sdcc
