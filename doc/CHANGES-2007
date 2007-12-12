@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2626 2007/12/12 20:11:09 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2627 2007/12/12 20:11:38 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/fwbuilder21 to 2.1.15 [adam 2007-12-12]
 	Added misc/koffice-l10n-pl version 1.6.3 [adam 2007-12-12]
 	Added net/isc-dhcp version 3.1.0 [adrianp 2007-12-12]
+	Added net/isc-dhclient version 3.1.0 [adrianp 2007-12-12]
