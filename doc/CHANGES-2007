@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2627 2007/12/12 20:11:38 adrianp Exp $
+$NetBSD: CHANGES-2007,v 1.2628 2007/12/12 20:12:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4789,3 +4789,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added misc/koffice-l10n-pl version 1.6.3 [adam 2007-12-12]
 	Added net/isc-dhcp version 3.1.0 [adrianp 2007-12-12]
 	Added net/isc-dhclient version 3.1.0 [adrianp 2007-12-12]
+	Added net/isc-dhcpd version 3.1.0 [adrianp 2007-12-12]
