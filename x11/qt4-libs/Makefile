@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/12/12 01:14:29 markd Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/12 09:53:46 markd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
-PKGREVISION=	3
+PKGREVISION=	4
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -43,6 +43,7 @@ do-install:
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKOBJ}/${lib}.pc
 	${INSTALL_DATA} ${WRKOBJ}/${lib}.pc ${PREFIX}/lib/pkgconfig/
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/tools/porting/src/q3porting.xml ${QTPREFIX}
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/accessible
 .for plug in qtaccessiblecompatwidgets qtaccessiblewidgets
