@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2622 2007/12/12 08:35:10 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2623 2007/12/12 10:09:51 hira Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4782,3 +4782,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added devel/scmgit-base version 1.5.3.7 [bjs 2007-12-12]
 	Added devel/scmgit-docs version 1.5.3.7 [bjs 2007-12-12]
 	Added textproc/ebview version 0.3.6 [obache 2007-12-12]
+	Updated misc/openoffice2 to 2.3.1 [hira 2007-12-12]
