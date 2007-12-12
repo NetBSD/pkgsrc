@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2007/12/12 13:24:39 yyamano Exp $
+
+--- osengine/osengine_client.c.orig	2007-03-27 20:49:26.000000000 +0900
++++ osengine/osengine_client.c
+@@ -765,10 +765,10 @@ osync_bool osync_client_spawn(OSyncClien
+ 			osync_env_export_loaded_modules(osync_group_get_env(engine->group));
+ 
+ 			char *memberstring = g_strdup_printf("%lli", osync_member_get_id(client->member));
+-			execlp(OSPLUGIN, OSPLUGIN, osync_group_get_configdir(engine->group), memberstring, NULL);
++			execlp(OSPLUGIN, OSPLUGIN, osync_group_get_configdir(engine->group), memberstring, (char *)NULL);
+ 			
+ 			if (errno == ENOENT) {
+-				execlp("./osplugin", "osplugin", osync_group_get_configdir(engine->group), memberstring, NULL);
++				execlp("./osplugin", "osplugin", osync_group_get_configdir(engine->group), memberstring, (char *)NULL);
+ 			}
+ 			
+ 			osync_trace(TRACE_INTERNAL, "unable to exec");
