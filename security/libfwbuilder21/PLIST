@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/24 18:37:19 bad Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/12 17:59:20 adam Exp $
 bin/libfwbuilder-config-2.1
 include/fwb-2.1/fwbuilder/Address.h
 include/fwb-2.1/fwbuilder/AddressRange.h
@@ -50,7 +50,6 @@ include/fwb-2.1/fwbuilder/ThreadTools.h
 include/fwb-2.1/fwbuilder/Tools.h
 include/fwb-2.1/fwbuilder/UDPService.h
 include/fwb-2.1/fwbuilder/XMLTools.h
-include/fwb-2.1/fwbuilder/crypto.h
 include/fwb-2.1/fwbuilder/dns.h
 include/fwb-2.1/fwbuilder/libfwbuilder-config.h
 include/fwb-2.1/fwbuilder/libfwbuilder-version.h
@@ -101,6 +100,7 @@ share/libfwbuilder21/migration/FWObjectDatabase_2.0.0.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.1.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.10.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.11.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.0.12.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.2.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.3.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.4.xslt
@@ -109,12 +109,14 @@ share/libfwbuilder21/migration/FWObjectDatabase_2.0.6.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.7.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.8.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.9.xslt
-share/libfwbuilder21/migration/FWObjectDatabase_2.0.10.xslt
-share/libfwbuilder21/migration/FWObjectDatabase_2.0.11.xslt
-share/libfwbuilder21/migration/FWObjectDatabase_2.0.12.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.0.99.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.0.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.1.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.1.10.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.1.11.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.1.12.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.1.13.xslt
+share/libfwbuilder21/migration/FWObjectDatabase_2.1.14.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.2.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.3.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.4.xslt
