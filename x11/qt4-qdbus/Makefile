@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/06 11:28:09 markd Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/12 11:56:10 markd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -22,8 +22,8 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libQtDBus.la \
 		${QTPREFIX}/lib/
 	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
-		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKOBJ}/QtDBus.pc
-	${INSTALL_DATA} ${WRKOBJ}/QtDBus.pc ${PREFIX}/lib/pkgconfig/
+		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKDIR}/QtDBus.pc
+	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${PREFIX}/lib/pkgconfig/
 	cd ${WRKSRC}/tools/qdbus/src && env ${MAKE_ENV} \
                 ${MAKE_PROGRAM} install_qtdbus_headers
 .for prog in qdbus qdbuscpp2xml qdbusviewer qdbusxml2cpp
