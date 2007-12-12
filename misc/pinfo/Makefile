@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/13 18:23:35 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2007/12/12 20:42:33 wiz Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		http://zeus.polsl.gliwice.pl/~pborys/stable-version/
 
-MAINTAINER=		fredb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://zeus.polsl.gliwice.pl/~pborys/
 COMMENT=		Przemek's Info Viewer
 

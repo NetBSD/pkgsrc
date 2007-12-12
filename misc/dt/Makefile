@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/22 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/12/12 20:42:30 wiz Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Virtual consoles for NetBSD/mac68k (and macppc?)
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
