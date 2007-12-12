@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+#
+
+DISTNAME=		dhcp-3.1.0
+PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
+CATEGORIES=		net
+MASTER_SITES=		http://ftp.isc.org/isc/dhcp/ \
+			http://ftp.isc.org/isc/dhcp/dhcp-3.0-history/
+
+MAINTAINER=		adrianp@NetBSD.org
+HOMEPAGE=		http://www.isc.org/sw/dhcp/
+
+.include "../../mk/bsd.prefs.mk"
+
+HAS_CONFIGURE=		yes
+DHCP_HOME?=		${VARBASE}/db/isc-dhcp
+DHCP_SYSLOG_LEVEL?=	1
+PKG_SYSCONFSUBDIR=	dhcp
+USE_TOOLS+=		nroff
+
+FILESDIR=		${.CURDIR}/../isc-dhcp/files
+PATCHDIR=		${.CURDIR}/../isc-dhcp/patches
+EGDIR=			${PREFIX}/share/examples/isc-dhcp-${COMPONENT}
+BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_SYSLOG_LEVEL
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=       pre-configure
+SUBST_MESSAGE.conf=	Fixing configuration files.
+SUBST_FILES.conf=	includes/site.h site.conf
+SUBST_SED.conf=		-e 's|@@DHCP_SYSLOG_LEVEL@@|${DHCP_SYSLOG_LEVEL}|g'
+SUBST_SED.conf+=	-e 's|@@VARBASE@@|${VARBASE}|g'
+SUBST_SED.conf+=	-e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|g'
+SUBST_SED.conf+=	-e 's|@@PREFIX@@|${PREFIX}|g'
+SUBST_SED.conf+=	-e 's|@@CC@@|${CC:Q}|g'
+SUBST_SED.conf+=	-e 's|@@CFLAGS@@|${CFLAGS:Q}|g'
+SUBST_SED.conf+=	-e 's|@@PKGMANDIR@@|${PKGMANDIR}|g'
+
+post-extract:
+	${CAT} ${FILESDIR}/site.h >> ${WRKSRC}/includes/site.h
+	${CAT} ${FILESDIR}/site.conf >> ${WRKSRC}/site.conf
+
+do-install:
+.	for d in ${SUBDIR}
+		cd ${WRKSRC}/work.`${WRKSRC}/configure --print-sysname`/${d} \
+			&& ${SETENV} ${MAKE_ENV} ${MAKE} install
+.	endfor
+
+.	for m in ${MAN_FILES}
+		${CHMOD} ${MANMODE} ${PREFIX}/${PKGMANDIR}/${m}
+.	endfor
