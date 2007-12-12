@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 20:05:11 adrianp Exp $
+man/man8/dhcrelay.8
+sbin/dhcrelay
+share/examples/rc.d/isc_dhcrelay
