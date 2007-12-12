@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/11/09 19:07:56 bad Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/12 17:59:21 adam Exp $
 
---- qmake.inc.in.orig	2006-06-21 09:20:37.000000000 +0200
-+++ qmake.inc.in	2006-11-08 01:26:21.000000000 +0100
-@@ -27,7 +27,7 @@
+--- qmake.inc.in.orig	2007-08-06 09:07:21.000000000 +0200
++++ qmake.inc.in
+@@ -36,7 +36,7 @@ unix {
  	res_os.path             = $(DDIR)@RES_DIR@/os
  	res_platform.path       = $(DDIR)@RES_DIR@/platform
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/11/09 19:07:56 bad Exp $
  	INCLUDEPATH            += @LIBFWBUILDER_INCLUDEPATH@
  
  	LIBS                   += $$LIBS_FWBUILDER @LIBS@
-@@ -35,9 +35,8 @@
+@@ -44,9 +44,8 @@ unix {
  	PKGLOCALEDIR            = $$res.path/locale
  
  	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter

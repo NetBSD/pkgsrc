@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/11/09 19:06:37 bad Exp $
+$NetBSD: patch-af,v 1.2 2007/12/12 17:59:21 adam Exp $
 
---- configure.in.orig	2006-09-06 05:53:34.000000000 +0200
+--- configure.in.orig	2007-08-26 05:06:34.000000000 +0200
 +++ configure.in
-@@ -427,7 +427,7 @@ dnl  By default we assume user wants dns
+@@ -334,7 +334,7 @@ dnl  By default we assume user wants dns
  dnl  zone transfers support, provided script can find the library
  dnl
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1.1.1 2006/11/09 19:06:37 bad Exp $
  
    LIB_RESOLV=""
    HAVE_RES_NQUERY=""
-@@ -841,8 +841,8 @@ fi
+@@ -744,8 +744,8 @@ fi
  if test "Z$ac_cv_gethostbyaddr_args" != "Z"; then
    echo "Function gethostbyaddr_r takes $ac_cv_gethostbyaddr_args arguments"
    echo -n "First argument for gethostbyaddr_r is "
