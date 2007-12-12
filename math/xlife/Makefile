@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2007/12/12 20:42:34 wiz Exp $
 #
 
 DISTNAME=	xlife-5.0
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	math games
 MASTER_SITES=	http://www.catb.org/~esr/
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/software.html
 COMMENT=	John Horton Conway's "Game of Life"
 

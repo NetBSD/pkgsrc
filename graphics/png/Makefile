@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2007/12/02 12:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2007/12/12 20:42:33 wiz Exp $
 
 DISTNAME=	libpng-1.2.23
 PKGNAME=	${DISTNAME:S/lib//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fredb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libpng.org/pub/png/
 COMMENT=	Library for manipulating PNG images
 
