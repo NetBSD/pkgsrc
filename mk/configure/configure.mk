@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.20 2007/12/01 11:11:55 rillig Exp $
+# $NetBSD: configure.mk,v 1.21 2007/12/12 01:00:40 markd Exp $
 #
 # = Package-settable variables =
 #
@@ -48,14 +48,17 @@ _VARGROUPS+=		configure
 _USER_VARS.configure=	CONFIG_SHELL_FLAGS
 _PKG_VARS.configure=	CONFIGURE_ENV CONFIG_SHELL CONFIGURE_SCRIPT \
 	CONFIGURE_ARGS OVERRIDE_GNU_CONFIG_SCRIPTS HAS_CONFIGURE \
-	GNU_CONFIGURE PKGCONFIG_OVERRIDE USE_PKGLOCALEDIR
+	GNU_CONFIGURE PKGCONFIG_OVERRIDE USE_PKGLOCALEDIR \
+	CMAKE_ARGS CMAKE_ARG_PATH
 
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
 CONFIG_SHELL?=		${SH}
 CONFIG_SHELL_FLAGS?=	# none
-_BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
+CMAKE_ARGS?=		# empty
+CMAKE_ARG_PATH?=	.
+_BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_ARGS
 
 .if defined(GNU_CONFIGURE)
 .  include "${PKGSRCDIR}/mk/configure/gnu-configure.mk"
@@ -75,6 +78,9 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 .include "${PKGSRCDIR}/mk/configure/replace-interpreter.mk"
 .if defined(USE_PKGLOCALEDIR)
 .  include "${PKGSRCDIR}/mk/configure/replace-localedir.mk"
+.endif
+.if defined(USE_CMAKE)
+.  include "${PKGSRCDIR}/mk/configure/cmake.mk"
 .endif
 
 ######################################################################
@@ -222,6 +228,25 @@ do-configure-imake:
 .endfor
 
 ######################################################################
+### do-configure-cmake (PRIVATE)
+######################################################################
+### do-configure-cmake runs cmake to configure the software for
+### building.
+###
+_CONFIGURE_CMAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR}
+_CONFIGURE_CMAKE_ENV+=	${CONFIGURE_ENV}
+
+
+.PHONY: do-configure-cmake
+do-configure-cmake:
+.for _dir_ in ${CONFIGURE_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC} && cd ${_dir_} &&					\
+	${SETENV} ${_CONFIGURE_CMAKE_ENV}				\
+		cmake ${CMAKE_ARGS} ${CMAKE_ARG_PATH}
+.endfor
+
+######################################################################
 ### pre-configure, do-configure, post-configure (PUBLIC, override)
 ######################################################################
 ### {pre,do,post}-configure are the heart of the package-customizable
@@ -231,6 +256,7 @@ do-configure-imake:
 
 _DO_CONFIGURE_TARGETS+=	${HAS_CONFIGURE:D	do-configure-script}
 _DO_CONFIGURE_TARGETS+=	${USE_IMAKE:D		do-configure-imake}
+_DO_CONFIGURE_TARGETS+=	${USE_CMAKE:D		do-configure-cmake}
 
 .if !target(do-configure)
 do-configure: ${_DO_CONFIGURE_TARGETS}
