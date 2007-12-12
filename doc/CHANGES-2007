@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2619 2007/12/11 22:35:20 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2620 2007/12/12 01:33:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added fonts/monafonts-ttf version 2.90 [obache 2007-12-11]
 	Updated multimedia/mplayer-plugin-firefox to 3.50 [xtraeme 2007-12-11]
 	Updated archivers/dar to 2.3.6 [bjs 2007-12-11]
+	Added print/poppler-qt4 version 0.6.2 [markd 2007-12-12]
