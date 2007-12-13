@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/25 09:17:41 epg Exp $
+$NetBSD: MESSAGE,v 1.3 2007/12/13 20:03:36 epg Exp $
 
 See ${PREFIX}/share/doc/subversion/INSTALL for details on making
 a repository accessible via mod_dav_svn.  Basically, you need
@@ -12,7 +12,8 @@ something like this in httpd.conf:
         AuthType Basic
         AuthName "Subversion repository"
         AuthUserFile "/path/to/passwd-file"
-        <LimitExcept GET HEAD OPTIONS POST PROPFIND REPORT TRACE>
+        # Allow anonymous reads but require authentication for writes.
+        <LimitExcept GET HEAD OPTIONS PROPFIND REPORT TRACE>
             Require valid-user
         </LimitExcept>
     </Location>
