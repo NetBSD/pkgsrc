@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1929 2007/12/01 11:11:53 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1930 2007/12/13 11:57:34 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -685,6 +685,10 @@ show-pkgtools-version:
 
 # convenience target, to display make variables from command line
 # i.e. "make show-var VARNAME=var", will print var's value
+#
+# See also:
+#	show-vars, show-subdir-var
+#
 .PHONY: show-var
 show-var:
 	@${ECHO} ${${VARNAME}:Q}
