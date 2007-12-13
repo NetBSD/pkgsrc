@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2007/12/13 10:41:07 rillig Exp $
+
+--- PlugIns/GuiElements/include/OgreBorderPanelGuiElement.h.orig	2003-09-16 03:35:09.000000000 +0000
++++ PlugIns/GuiElements/include/OgreBorderPanelGuiElement.h	2007-10-10 10:48:59.000000000 +0000
+@@ -31,7 +31,7 @@ http://www.gnu.org/copyleft/lesser.txt.
+ 
+ namespace Ogre {
+ 
+-
++    class BorderRenderable;
+     
+     /** A specialisation of the PanelGuiElement to provide a panel with a border.
+     @remarks
