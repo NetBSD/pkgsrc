@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.902 2007/12/12 04:23:56 bjs Exp $
+# $NetBSD: Makefile,v 1.903 2007/12/13 00:26:52 rhaen Exp $
 #
 
 COMMENT=	Development utilities
@@ -496,6 +496,7 @@ SUBDIR+=	p5-IO-Util
 SUBDIR+=	p5-IO-Zlib
 SUBDIR+=	p5-IO-stringy
 SUBDIR+=	p5-IPC-Run
+SUBDIR+=	p5-IPC-Run3
 SUBDIR+=	p5-IPC-ShareLite
 SUBDIR+=	p5-IPC-Shareable
 SUBDIR+=	p5-IPC-SharedCache
@@ -605,6 +606,7 @@ SUBDIR+=	p5-Test-Object
 SUBDIR+=	p5-Test-Perl-Critic
 SUBDIR+=	p5-Test-Pod
 SUBDIR+=	p5-Test-Pod-Coverage
+SUBDIR+=	p5-Test-Script
 SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-Tester
