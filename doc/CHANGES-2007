@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2630 2007/12/13 07:02:13 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2631 2007/12/13 07:43:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4792,3 +4792,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/isc-dhcpd version 3.1.0 [adrianp 2007-12-12]
 	Added net/isc-dhcrelay version 3.1.0 [adrianp 2007-12-12]
 	Added filesystems/fuse-svnfs version 0.4 [bjs 2007-12-13]
+	Updated mail/dbmail to 2.2.8 [obache 2007-12-13]
