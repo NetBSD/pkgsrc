@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/10/24 09:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/12/13 23:35:11 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a36
 PKGNAME=	cdrtools-2.01.01.36
@@ -111,14 +111,14 @@ do-install:
 				${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
 	${INSTALL_DATA} ${WRKSRC}/libsiconv/tables/[cik]* \
-		${PREFIX}/lib/siconv
-	${RM} ${PREFIX}/lib/siconv/*mk
+		${DESTDIR}${PREFIX}/lib/siconv
+	${RM} ${DESTDIR}${PREFIX}/lib/siconv/*mk
 	${INSTALL_DATA} ${WRKSRC}/cdda2wav/README* \
-		${PREFIX}/share/doc/cdrtools/cdda2wav
+		${DESTDIR}${PREFIX}/share/doc/cdrtools/cdda2wav
 	${INSTALL_DATA} ${WRKSRC}/cdrecord/README* \
-		${PREFIX}/share/doc/cdrtools/cdrecord
+		${DESTDIR}${PREFIX}/share/doc/cdrtools/cdrecord
 	${INSTALL_DATA} ${WRKSRC}/mkisofs/README* \
-		${PREFIX}/share/doc/cdrtools/mkisofs
+		${DESTDIR}${PREFIX}/share/doc/cdrtools/mkisofs
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
