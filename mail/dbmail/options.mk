@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/11/03 11:39:50 obache Exp $
+# $NetBSD: options.mk,v 1.7 2007/12/13 07:43:20 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	ldap sieve
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS=	mysql sieve
 .include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql
 PLIST_SUBST+=		MYSQL=""
-INSTALLATION_DIRS+=	${DATADIR:Q}/sql/mysql
+INSTALLATION_DIRS+=	${DATADIR}/sql/mysql
 .else
 PLIST_SUBST+=		MYSQL="@comment "
 .endif
@@ -27,7 +27,7 @@ PLIST_SUBST+=		MYSQL="@comment "
 .include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql
 PLIST_SUBST+=		PGSQL=""
-INSTALLATION_DIRS+=	${DATADIR:Q}/sql/pgsql
+INSTALLATION_DIRS+=	${DATADIR}/sql/pgsql
 .else
 PLIST_SUBST+=		PGSQL="@comment "
 .endif
@@ -39,9 +39,9 @@ PLIST_SUBST+=		PGSQL="@comment "
 .include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite
 PLIST_SUBST+=		SQLITE=""
-INSTALLATION_DIRS+=	${DATADIR:Q}/sql/sqlite
+INSTALLATION_DIRS+=	${DATADIR}/sql/sqlite
 .else
-PLIST_SUBST+=		SQLITE="@comment "	
+PLIST_SUBST+=		SQLITE="@comment "
 .endif
 
 ###
@@ -49,7 +49,7 @@ PLIST_SUBST+=		SQLITE="@comment "
 ###
 .if !empty(PKG_OPTIONS:Msieve)
 .include "../../mail/libsieve/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sieve=${BUILDLINK_PREFIX.libsieve:Q}
+CONFIGURE_ARGS+=	--with-sieve=${BUILDLINK_PREFIX.libsieve}
 PLIST_SUBST+=		SIEVE=""
 FILES_SUBST+=		TIMSIEVED="dbmailtimsieved"
 RCD_SCRIPTS+=		dbmailtimsieved
@@ -63,7 +63,7 @@ FILES_SUBST+=		TIMSIEVED=""
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client:Q}
+CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 PLIST_SUBST+=		LDAP=""
 .else
 PLIST_SUBST+=		LDAP="@comment "
@@ -74,9 +74,14 @@ PLIST_SUBST+=		LDAP="@comment "
 ###
 post-install: dbmail-install-scripts
 
+.PHONY: dbmail-install-scripts
 dbmail-install-scripts:
-.for d in ${PKG_OPTIONS_GROUP.sql}
-.  if !empty(PKG_OPTIONS:M${d})
-	${INSTALL_DATA} ${WRKSRC:Q}/sql/$d/* ${DATADIR:Q}/sql/$d
-.  endif
-.endfor
+.if !empty(PKG_OPTIONS:Mmysql)
+	${INSTALL_DATA} ${WRKSRC}/sql/mysql/* ${DESTDIR}${DATADIR}/sql/mysql
+.endif
+.if !empty(PKG_OPTIONS:Mpgsql)
+	${INSTALL_DATA} ${WRKSRC}/sql/postgresql/* ${DESTDIR}${DATADIR}/sql/pgsql
+.endif
+.if !empty(PKG_OPTIONS:Msqlite)
+	${INSTALL_DATA} ${WRKSRC}/sql/sqlite/* ${DESTDIR}${DATADIR}/sql/sqlite
+.endif
