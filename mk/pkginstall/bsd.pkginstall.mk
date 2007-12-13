@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.37 2007/12/06 22:03:22 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.38 2007/12/13 11:10:42 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -17,6 +17,42 @@
 #
 #	Default value: "all" for PKG_DEVELOPERs, empty otherwise.
 #
+
+_VARGROUPS+=		pkginstall
+_USER_VARS.pkginstall= \
+	PKGINSTALL_VERBOSE \
+	PKG_CREATE_USERGROUP \
+	PKG_CONFIG PKG_CONFIG_PERMS \
+	PKG_RCD_SCRIPTS \
+	PKG_REGISTER_SHELLS \
+	PKG_UPDATE_FONTS_DB
+_PKG_VARS.pkginstall= \
+	DEINSTALL_TEMPLATES INSTALL_TEMPLATES \
+	DEINSTALL_SRC INSTALL_SRC \
+	FILES_SUBST \
+	PKG_USERS PKG_GROUPS USERGROUP_PHASE
+.for u in ${PKG_USERS}
+_PKG_VARS.pkginstall+=	PKG_UID.${u} PKG_GECOS.${u} PKG_HOME.${u} PKG_SHELL.${u}
+.endfor
+.for g in ${PKG_GROUPS}
+_PKG_VARS.pkginstall+=	PKG_GID.${g}
+.endfor
+_PKG_VARS.pkginstall+= \
+	SPECIAL_PERMS \
+	CONF_FILES REQD_FILES \
+	CONF_FILES_MODE REQD_FILES_MODE \
+	CONF_FILES_PERMS REQD_FILES_PERMS \
+	RCD_SCRIPTS ${RCD_SCRIPTS:@s@RCD_SCRIPT_SRC.${s}@} \
+	OWN_DIRS MAKE_DIRS REQD_DIRS \
+	OWN_DIRS_PERMS MAKE_DIRS_PERMS REQD_DIRS_PERMS \
+	PKG_SYSCONFDIR_PERMS \
+	PKG_SHELL \
+	FONTS_DIRS.ttf FONTS_DIRS.type1 FONTS_DIRS.x11 \
+_SYS_VARS.pkginstall= \
+	SETUID_ROOT_PERMS \
+	SHLIB_TYPE \
+	LDCONFIG_ADD_CMD \
+	LDCONFIG_REMOVE_CMD
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
 # This shell function serves a similar purpose, but is specialized on
