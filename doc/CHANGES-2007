@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2631 2007/12/13 07:43:41 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2632 2007/12/13 12:37:26 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added net/isc-dhcrelay version 3.1.0 [adrianp 2007-12-12]
 	Added filesystems/fuse-svnfs version 0.4 [bjs 2007-12-13]
 	Updated mail/dbmail to 2.2.8 [obache 2007-12-13]
+	Updated devel/p5-Event to 1.09 [rhaen 2007-12-13]
