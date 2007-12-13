@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/03 11:39:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/13 07:43:20 obache Exp $
 ${MYSQL}lib/dbmail/libmysql.la
 ${PGSQL}lib/dbmail/libpgsql.la
 ${SQLITE}lib/dbmail/libsqlite.la
@@ -6,8 +6,8 @@ ${LDAP}lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
 ${SIEVE}lib/dbmail/libsort_sieve.la
-man/man1/dbmail.1
 man/man1/dbmail-smtp.1
+man/man1/dbmail.1
 man/man5/dbmail.conf.5
 man/man8/dbmail-export.8
 man/man8/dbmail-imapd.8
@@ -62,7 +62,7 @@ share/examples/rc.d/dbmailpop3d
 ${SIEVE}share/examples/rc.d/dbmailtimsieved
 @dirrm share/examples/dbmail
 ${SQLITE}@dirrm share/dbmail/sql/sqlite
-${PGSQL}@dirrm share/dbmail/sql/pgsql
+${PGSQL}@dirrm share/dbmail/sql/postgresql
 ${MYSQL}@dirrm share/dbmail/sql/mysql
 @dirrm share/dbmail/sql
 @dirrm share/doc/dbmail

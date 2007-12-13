@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/11/03 11:39:49 obache Exp $
+# $NetBSD: Makefile,v 1.16 2007/12/13 07:43:20 obache Exp $
 #
 
-DISTNAME=		dbmail-2.2.7
-PKGREVISION=		1
+DISTNAME=		dbmail-2.2.8
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dbmail.org/download/2.2/
 
@@ -11,13 +10,17 @@ HOMEPAGE=		http://www.dbmail.org/
 COMMENT=		Store and retrieve mail messages in a database
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-logdir=${VARBASE:Q}/log
-CONFIGURE_ARGS+=	--with-pkglibdir=${PREFIX:Q}/lib/dbmail
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}/run
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
+CONFIGURE_ARGS+=	--with-pkglibdir=${PREFIX}/lib/dbmail
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+
+BUILD_DEFS+=		VARBASE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/dbmail
 CONF_FILES=		${EGDIR}/dbmail.conf ${PKG_SYSCONFDIR}/dbmail.conf
@@ -45,9 +48,9 @@ SUBST_MESSAGE.sysconf=	Fixing sysconf paths.
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${DOCSDIR} ${EGDIR} ${DATADIR}/sql
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/dbmail.conf ${DESTDIR}${EGDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
 .endfor
 
 .include "options.mk"
