@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2007/12/13 10:41:07 rillig Exp $
+
+--- OgreMain/include/OgreFontManager.h.orig	2002-10-26 16:49:51.000000000 +0000
++++ OgreMain/include/OgreFontManager.h	2007-10-10 10:41:17.000000000 +0000
+@@ -61,7 +61,7 @@ namespace Ogre
+                 This method just delegates to the template version anyway, but the implementation stays in this
+                 single compilation unit, preventing link errors.
+         */
+-        static FontManager& FontManager::getSingleton(void);
++        static FontManager& getSingleton(void);
+ 
+     protected:
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2007/12/13 10:41:08 rillig Exp $
+
+--- PlugIns/NatureSceneManager/include/NatureTerrainPatch.h.orig	2003-09-10 22:48:22.000000000 +0000
++++ PlugIns/NatureSceneManager/include/NatureTerrainPatch.h	2007-10-10 10:55:35.000000000 +0000
+@@ -146,7 +146,7 @@ private:
+     void getNormal(int x, int z, Vector3 *normal);
+ 
+     /// Adds a vertex to the vertex buffer or returns its index if it
+-    inline int NatureTerrainPatch::addVertex(int x, int y, int z)
++    inline int addVertex(int x, int y, int z)
+     {
+         unsigned int idx = z * QUADTREE_SIZE + x;
+         unsigned int v = mManager->mVertexLookup[idx];
