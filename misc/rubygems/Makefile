@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/12/02 22:32:51 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2007/12/13 14:46:58 taca Exp $
 
 DISTNAME=	rubygems-0.9.5
 CATEGORIES=	misc ruby
@@ -15,7 +15,7 @@ RUBY_REQD=	1.8.3
 USE_RUBY_SETUP=	yes
 
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin
-REPLACE_FILE_PAT=	[a-z]*
+REPLACE_RUBY_PAT=	[a-z]*
 
 PLIST_SRC=      ${PKGDIR}/PLIST.common
 PLIST_SRC+=     ${WRKDIR}/PLIST_DYNAMIC

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/10 05:24:01 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/13 14:46:58 taca Exp $
 
 DISTNAME=	rails-1.2.6
 CATEGORIES=	www
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/rails/vendor/rails/railties
 
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin ${WRKSRC}/dispatches	\
 			${WRKSRC}/lib/commands/ncgi
-REPLACE_FILE_PAT=	*
+REPLACE_RUBY_PAT=	*
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
