@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/13 07:00:16 bjs Exp $
+
+--- svn-config.pl.orig	2007-06-11 04:50:03.000000000 -0400
++++ svn-config.pl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ #
+ # Hacky replacement for (non-existant) svn-config to find the libraries,
+ # the library path and the include file path.
+@@ -47,7 +47,7 @@ if( $libs ) {
+ }
+ 
+ if( $includes ) {
+-   open(IN, "ls -d /usr/include/subversion* 2>/dev/null |");
++   open(IN, "ls -d @LOCALBASE@/include/subversion-* 2>/dev/null |");
+    while( <IN> ) {
+       chomp();
+       $out_includes = $out_includes."-I".$_." ";
