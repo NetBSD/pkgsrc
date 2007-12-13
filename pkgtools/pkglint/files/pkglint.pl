@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.737 2007/11/30 14:19:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.738 2007/12/13 15:56:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3714,7 +3714,7 @@ sub checkline_rcsid_regex($$$) {
 
 	$opt_debug_trace and $line->log_debug("checkline_rcsid_regex(${prefix_regex}, ${prefix})");
 
-	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]*|)\$$") {
+	if ($line->text !~ qr"^${prefix_regex}\$(${id})(?::[^\$]+|)\$$") {
 		$line->log_error("\"${prefix}\$${opt_rcsidstring}\$\" expected.");
 		return false;
 	}
