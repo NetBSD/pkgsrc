@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2632 2007/12/13 12:37:26 rhaen Exp $
+$NetBSD: CHANGES-2007,v 1.2633 2007/12/14 07:21:45 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4794,3 +4794,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added filesystems/fuse-svnfs version 0.4 [bjs 2007-12-13]
 	Updated mail/dbmail to 2.2.8 [obache 2007-12-13]
 	Updated devel/p5-Event to 1.09 [rhaen 2007-12-13]
+	Updated sysutils/checkperms to 1.10 [bjs 2007-12-14]
