@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/14 08:34:43 bjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/14 19:07:44 bjs Exp $
 include/tre/regex.h
 include/tre/tre-config.h
 lib/libtre.la
 lib/pkgconfig/tre.pc
-@dirrm include/tre
+share/locale/fi/LC_MESSAGES/tre.mo
+share/locale/sv/LC_MESSAGES/tre.mo
