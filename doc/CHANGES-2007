@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2636 2007/12/14 11:40:00 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2637 2007/12/14 12:47:02 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4798,3 +4798,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/tre to 0.7.5nb3 [bjs 2007-12-14]
 	Updated devel/monotone to 0.38 [bjs 2007-12-14]
 	Updated devel/monotone-server to 0.38 [bjs 2007-12-14]
+	Updated net/aria2 to 0.12.0 [bjs 2007-12-14]
