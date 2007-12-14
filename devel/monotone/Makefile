@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.46 2007/10/26 14:08:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2007/12/14 08:58:00 bjs Exp $
 #
 
-DISTNAME=	monotone-0.37
+DISTNAME=	monotone-0.38
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.37/
+MASTER_SITES=	http://monotone.ca/downloads/0.38/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Free distributed version control system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
@@ -34,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/monotone
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/monotone
 	cd ${WRKSRC} && rm -rf contrib/.deps && \
 	    pax -rw -pp -pm contrib \
 	    ${DESTDIR}${PREFIX}/share/monotone
