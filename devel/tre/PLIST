@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/29 19:12:04 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/14 08:34:43 bjs Exp $
 include/tre/regex.h
 include/tre/tre-config.h
 lib/libtre.la
