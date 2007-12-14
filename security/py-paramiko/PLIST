@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/04 15:35:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/14 13:35:04 bjs Exp $
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
@@ -65,6 +65,9 @@ ${PYSITELIB}/paramiko/primes.pyo
 ${PYSITELIB}/paramiko/rsakey.py
 ${PYSITELIB}/paramiko/rsakey.pyc
 ${PYSITELIB}/paramiko/rsakey.pyo
+${PYSITELIB}/paramiko/resource.py
+${PYSITELIB}/paramiko/resource.pyc
+${PYSITELIB}/paramiko/resource.pyo
 ${PYSITELIB}/paramiko/server.py
 ${PYSITELIB}/paramiko/server.pyc
 ${PYSITELIB}/paramiko/server.pyo

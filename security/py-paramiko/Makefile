@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/07/11 00:21:17 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/14 13:35:04 bjs Exp $
 #
 
-DISTNAME=		paramiko-1.6
-PKGNAME=		${PYPKGPREFIX}-paramiko-1.6
+DISTNAME=		paramiko-1.7.1
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		security
 MASTER_SITES=		http://www.lag.net/paramiko/download/
 EXTRACT_SUFX=		.zip
