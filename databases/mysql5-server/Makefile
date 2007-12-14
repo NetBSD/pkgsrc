@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/07/31 14:10:11 obache Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/14 13:36:53 tron Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -36,7 +36,11 @@ MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 BUILD_DEFS+=		MYSQL_DATADIR
 BUILD_DIRS=		. man
 
-REPLACE_PERL+=		mysql-test/mysql-test-run.pl
+REPLACE_PERL+=		mysql-test/mysql-test-run.pl \
+			mysql-test/suite/funcs_1/lib/DataGen_local.pl \
+			mysql-test/suite/funcs_1/lib/DataGen_modify.pl \
+			mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl \
+			mysql-test/mysql-stress-test.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,7 +55,7 @@ BUILDLINK_DEPMETHOD.readline=build
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
 post-configure:
-	cd ${WRKSRC} && cp -f config.h include/my_config.h
+	cd ${WRKSRC}/include && cp -f config.h my_config.h
 
 post-build:
 	cd ${WRKSRC}/scripts && env ${MAKE_ENV} ${MAKE_PROGRAM}	\

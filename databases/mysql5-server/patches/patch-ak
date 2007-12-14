@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.3 2007/05/21 04:40:01 xtraeme Exp $
+$NetBSD: patch-ak,v 1.4 2007/12/14 13:36:54 tron Exp $
 
---- support-files/Makefile.in.orig	2007-05-21 06:04:49.000000000 +0200
-+++ support-files/Makefile.in	2007-05-21 06:05:08.000000000 +0200
-@@ -380,14 +380,7 @@
+--- support-files/Makefile.in.orig	2007-11-15 14:08:49.000000000 +0000
++++ support-files/Makefile.in	2007-12-13 23:59:01.000000000 +0000
+@@ -383,14 +383,7 @@
  			compiler_warnings.supp
  
  SUBDIRS = MacOSX RHEL4-SElinux
@@ -16,5 +16,5 @@ $NetBSD: patch-ak,v 1.3 2007/05/21 04:40:01 xtraeme Exp $
 -			ndb-config-2-node.ini
 +pkgdata_DATA =
  
- pkgdata_SCRIPTS = mysql.server
- noinst_DATA = mysql-@VERSION@.spec \
+ pkgdata_SCRIPTS = mysql.server \
+ 			mysqld_multi.server
