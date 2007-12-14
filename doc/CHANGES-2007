@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2638 2007/12/14 13:38:13 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2639 2007/12/14 20:44:57 martti Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4801,3 +4801,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/aria2 to 0.12.0 [bjs 2007-12-14]
 	Updated databases/mysql5-client to 5.0.51 [tron 2007-12-14]
 	Updated databases/mysql5-server to 5.0.51 [tron 2007-12-14]
+	Updated mail/squirrelmail to 1.4.13 [martti 2007-12-14]
