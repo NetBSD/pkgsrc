@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/10/26 14:08:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/12/14 08:58:00 bjs Exp $
 bin/mtn
 info/monotone.info
 share/doc/monotone/figures/branch-heads.png
@@ -31,6 +31,7 @@ share/locale/sv/LC_MESSAGES/monotone.mo
 share/monotone/contrib/Monotone.pm
 share/monotone/contrib/README
 share/monotone/contrib/ciabot_monotone.py
+share/monotone/contrib/ciabot_monotone_hookversion.lua
 share/monotone/contrib/ciabot_monotone_hookversion.py
 share/monotone/contrib/color-logs.conf
 share/monotone/contrib/color-logs.sh
