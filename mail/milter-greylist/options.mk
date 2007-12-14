@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/07/03 13:54:45 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2007/12/14 18:57:54 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
 PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf
@@ -9,9 +9,7 @@ PKG_SUGGESTED_OPTIONS=		dnsrbl spf
 ###
 ### DNS Realtime Black List
 ###
-.if empty(PKG_OPTIONS:Mdnsrbl)
-CONFIGURE_ARGS+=	--disable-dnsrbl
-.else
+.if !empty(PKG_OPTIONS:Mdnsrbl)
 CONFIGURE_ARGS+=	--enable-dnsrbl --with-thread-safe-resolver
 .endif
 
