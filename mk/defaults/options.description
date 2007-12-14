@@ -188,6 +188,7 @@ ncursesw		Enable wide character ncurses support.
 nfdump-ftconv		Build the flow-tools to nfdump converter
 nfdump-nfprofile	Build the netflow profiler
 nfdump-sflow		Build sflow collector sfcpad
+nls			Use native language support
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nox11			Do not link against x11 libraries.	
