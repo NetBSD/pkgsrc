@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2635 2007/12/14 08:58:57 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2636 2007/12/14 11:40:00 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4797,3 +4797,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/checkperms to 1.10 [bjs 2007-12-14]
 	Updated devel/tre to 0.7.5nb3 [bjs 2007-12-14]
 	Updated devel/monotone to 0.38 [bjs 2007-12-14]
+	Updated devel/monotone-server to 0.38 [bjs 2007-12-14]
