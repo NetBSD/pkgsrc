@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2006/11/30 15:00:45 joerg Exp $
+# $NetBSD: Makefile.common,v 1.36 2007/12/15 15:14:26 heinz Exp $
 
 MPLAYER_DIST_VERSION=	1.0rc1
 
@@ -17,8 +17,6 @@ DIST_SUBDIR=		mplayer-${MPLAYER_PKG_VERSION}
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #
 # NOTE: gmplayer has its own distinfo file. if you are also updating
