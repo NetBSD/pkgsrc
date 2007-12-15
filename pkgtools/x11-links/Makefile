@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2007/11/11 11:35:50 martti Exp $
+# $NetBSD: Makefile,v 1.86 2007/12/15 17:53:39 tron Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.31
+DISTNAME=	x11-links-0.32
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -65,6 +65,9 @@ do-build:
 		if [ -d ${X11BASE}/$$dir ]; then			\
 			${MKDIR} ${X11_LINKS_BUILD_DIR}/$$dir;		\
 			${CHMOD} ${PKGDIRMODE} ${X11_LINKS_BUILD_DIR}/$$dir; \
+		elif [ -d /usr/$$dir ]; then				\
+			${MKDIR} ${X11_LINKS_BUILD_DIR}/$$dir;		\
+			${CHMOD} ${PKGDIRMODE} ${X11_LINKS_BUILD_DIR}/$$dir; \
 		fi;							\
 	done
 	${RM} -f ${PLIST_SRC.files}
@@ -72,6 +75,12 @@ do-build:
 	while read file; do						\
 		if ${TEST} -r ${X11BASE}/$$file; then			\
 			src="${X11BASE}/$$file";			\
+			dest="${X11_LINKS_BUILD_DIR}/$$file";		\
+			${CREATE_X11LINK};				\
+			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\
+				>> ${PLIST_SRC.files};			\
+		elif ${TEST} -r /usr/$$file; then			\
+			src="/usr/$$file";				\
 			dest="${X11_LINKS_BUILD_DIR}/$$file";		\
 			${CREATE_X11LINK};				\
 			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\

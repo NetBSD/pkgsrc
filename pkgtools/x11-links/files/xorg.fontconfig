@@ -1,0 +1,11 @@
+# $NetBSD: xorg.fontconfig,v 1.1 2007/12/15 17:53:40 tron Exp $
+#
+include/fontconfig/fcfreetype.h
+include/fontconfig/fcprivate.h
+include/fontconfig/fontconfig.h
+lib/libfontconfig.la
+lib/libfontconfig.1.1.0.dylib
+lib/libfontconfig.1.dylib
+lib/libfontconfig.dylib
+lib/libfontconfig.la
+lib/pkgconfig/fontconfig.pc
