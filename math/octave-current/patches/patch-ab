@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2007/09/19 18:09:16 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2007/12/15 05:54:50 adam Exp $
 
---- src/DLD-FUNCTIONS/__glpk__.cc.orig	2007-04-04 05:22:17.000000000 +0200
+--- src/DLD-FUNCTIONS/__glpk__.cc.orig	2007-10-12 23:27:34.000000000 +0200
 +++ src/DLD-FUNCTIONS/__glpk__.cc
-@@ -26,6 +26,7 @@ Software Foundation, Inc., 51 Franklin S
+@@ -25,6 +25,7 @@ along with Octave; see the file COPYING.
  #endif
  
  #include <cfloat>
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.6 2007/09/19 18:09:16 drochner Exp $
  #include <csetjmp>
  #include <ctime>
  
-@@ -36,6 +37,10 @@ Software Foundation, Inc., 51 Franklin S
+@@ -35,6 +36,10 @@ along with Octave; see the file COPYING.
  #include "oct-obj.h"
  #include "pager.h"
  
