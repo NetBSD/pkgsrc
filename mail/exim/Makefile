@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2007/10/14 19:14:57 adam Exp $
+# $NetBSD: Makefile,v 1.88 2007/12/15 16:04:41 adam Exp $
 
 DISTNAME=	exim-4.68
 CATEGORIES=	mail net
@@ -19,6 +19,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man8
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 MAKE_ENV+=	INST_CHOWN=${CHOWN:Q}
 MAKE_FLAGS+=	FULLECHO=''
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,7 +40,7 @@ EXAMPLESDIR=		${PREFIX}/share/examples/exim
 CONF_FILES=		${EXAMPLESDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 CONF_FILES+=		${EXAMPLESDIR}/configure ${PKG_SYSCONFDIR}/configure
 MESSAGE_SUBST+=		EXAMPLESDIR="${EXAMPLESDIR}"
-PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 RCD_SCRIPTS=		exim
 

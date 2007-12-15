@@ -1,18 +1,19 @@
-# $NetBSD: options.mk,v 1.14 2007/09/11 18:16:01 abs Exp $
+# $NetBSD: options.mk,v 1.15 2007/12/15 16:04:41 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
-PKG_SUPPORTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
-PKG_SUPPORTED_OPTIONS+= exim-appendfile-mbx exim-auth-dovecot exim-build-eximon
-PKG_SUPPORTED_OPTIONS+= exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
-PKG_SUPPORTED_OPTIONS+= exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
-PKG_SUPPORTED_OPTIONS+= exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
-PKG_SUPPORTED_OPTIONS+= exim-old-demime exim-router-iplookup exim-tcp-wrappers
-PKG_SUPPORTED_OPTIONS+= exim-tls exim-transport-lmtp gdbm inet6 saslauthd
+PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
+PKG_SUPPORTED_OPTIONS+=	exim-appendfile-mbx exim-auth-dovecot exim-build-eximon
+PKG_SUPPORTED_OPTIONS+=	exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
+PKG_SUPPORTED_OPTIONS+=	exim-old-demime exim-router-iplookup exim-tcp-wrappers
+PKG_SUPPORTED_OPTIONS+=	exim-tls exim-transport-lmtp gdbm inet6 saslauthd
+PKG_SUPPORTED_OPTIONS+=	readline
 
-PKG_SUGGESTED_OPTIONS= exim-appendfile-maildir exim-appendfile-mailstore
-PKG_SUGGESTED_OPTIONS+= exim-appendfile-mbx exim-content-scan
-PKG_SUGGESTED_OPTIONS+= exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
-PKG_SUGGESTED_OPTIONS+= exim-tls
+PKG_SUGGESTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
+PKG_SUGGESTED_OPTIONS+=	exim-appendfile-mbx exim-content-scan
+PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
+PKG_SUGGESTED_OPTIONS+=	exim-tls
 
 .include "../../mk/bsd.options.mk"
 
@@ -148,4 +149,11 @@ LOCAL_MAKEFILE_OPTIONS+=AUTH_CYRUS_SASL=YES
 LOCAL_MAKEFILE_OPTIONS+=CYRUS_SASLAUTHD_SOCKET=/var/state/saslauthd/mux
 LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl} -lsasl2
 .  include "../../security/cyrus-sasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mreadline)
+LOCAL_MAKEFILE_OPTIONS+=USE_READLINE=yes
+LOOKUP_LIBS+=		-lreadline
+USE_GNU_READLINE=	yes
+.  include "../../devel/readline/buildlink3.mk"
 .endif
