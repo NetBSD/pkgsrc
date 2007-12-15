@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2645 2007/12/15 16:42:51 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2646 2007/12/15 17:54:11 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4808,3 +4808,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/squirrelmail to 1.4.13nb1 [taca 2007-12-15]
 	Updated graphics/rabbit to 0.5.4 [obache 2007-12-15]
 	Updated sysutils/monit to 4.10.1 [seb 2007-12-15]
+	Updated pkgtools/x11-links to 0.32 [tron 2007-12-15]
