@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/12/02 11:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/12/15 15:25:12 heinz Exp $
 #
 
 DISTNAME=	windows-all-20061022
@@ -18,7 +18,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	Huge compilation of Win32 binary codecs
 
-USE_LANGUAGES=	# empty
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		# empty
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
@@ -33,9 +35,11 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/qtextras-20041107/* ${PREFIX}/lib/win32
-	${INSTALL_DATA} ${WRKDIR}/rp9codecs-win32-20050115/*.dll ${PREFIX}/lib/win32
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/* ${DESTDIR}${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/qtextras-20041107/* \
+		${DESTDIR}${PREFIX}/lib/win32
+	${INSTALL_DATA} ${WRKDIR}/rp9codecs-win32-20050115/*.dll \
+		${DESTDIR}${PREFIX}/lib/win32
 
 .include "../../mk/bsd.pkg.mk"
