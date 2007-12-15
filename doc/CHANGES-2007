@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2640 2007/12/15 05:56:23 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2641 2007/12/15 13:32:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4803,3 +4803,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated databases/mysql5-server to 5.0.51 [tron 2007-12-14]
 	Updated mail/squirrelmail to 1.4.13 [martti 2007-12-14]
 	Updated math/octave-current to 2.9.19 [adam 2007-12-15]
+	Updated misc/openoffice2-bin to 2.3.1 [tron 2007-12-15]
