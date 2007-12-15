@@ -1,0 +1,8 @@
+# $NetBSD: xorg.kbproto,v 1.1 2007/12/15 17:53:40 tron Exp $
+#
+include/X11/extensions/XKB.h
+include/X11/extensions/XKBgeom.h
+include/X11/extensions/XKBproto.h
+include/X11/extensions/XKBsrv.h
+include/X11/extensions/XKBstr.h
+lib/pkgconfig/kbproto.pc

@@ -1,0 +1,12 @@
+# $NetBSD: xorg.libXau,v 1.1 2007/12/15 17:53:41 tron Exp $
+#
+include/X11/Xauth.h
+lib/libXau.6.0.0.dylib
+lib/libXau.6.dylib
+lib/libXau.a
+lib/libXau.dylib
+lib/libXau.la
+lib/libXau.so
+lib/libXau.so.6
+lib/libXau.so.6.0
+lib/pkgconfig/xau.pc
