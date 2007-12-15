@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2007/12/05 21:33:58 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/15 11:06:12 joerg Exp $
 
-DISTNAME=	pbulk-0.16
+DISTNAME=	pbulk-0.17
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -51,9 +51,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/pbulk.conf ${DESTDIR}${PREFIX}/share/examples/pbulk/pbulk.conf
 
 .if ${OPSYS} == "NetBSD"
-.  if !empty(OS_VERSION:M2.*)
 USE_BUILTIN.libevent = no
-.  endif
 .endif
 
 .if ${OPSYS} == "SunOS"
