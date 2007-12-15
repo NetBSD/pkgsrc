@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2007/09/19 18:09:17 drochner Exp $
+$NetBSD: patch-ad,v 1.8 2007/12/15 05:54:50 adam Exp $
 
---- libcruft/Makefile.in.orig	2007-07-25 17:49:17.000000000 +0200
+--- libcruft/Makefile.in.orig	2007-10-12 23:27:12.000000000 +0200
 +++ libcruft/Makefile.in
-@@ -108,8 +108,8 @@ libraries: cruft.def
+@@ -121,8 +121,8 @@ libraries: cruft.def
  
  $(LIBPRE)cruft.$(LIBEXT): $(CRUFT_OBJ)
  	rm -f $@
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.7 2007/09/19 18:09:17 drochner Exp $
  
  $(LIBPRE)cruft.$(SHLEXT_VER): $(LIBPRE)cruft.$(SHLEXT)
  	rm -f $@
-@@ -134,9 +134,8 @@ install::
+@@ -147,9 +147,8 @@ install::
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)cruft.$(LIBEXT) ; \
