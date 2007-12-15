@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2005/07/01 16:11:05 adam Exp $
+$NetBSD: patch-ah,v 1.6 2007/12/15 05:54:51 adam Exp $
 
---- liboctave/f2c-main.c.orig	2005-05-18 12:20:20.000000000 +0000
+--- liboctave/f2c-main.c.orig	2007-10-12 23:27:16.000000000 +0200
 +++ liboctave/f2c-main.c
-@@ -21,6 +21,10 @@ Software Foundation, Inc., 51 Franklin S
+@@ -20,6 +20,10 @@ along with Octave; see the file COPYING.
  
  */
  
