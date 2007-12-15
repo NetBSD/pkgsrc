@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.2 2006/01/19 01:05:24 reed Exp $
+# $NetBSD: xorg,v 1.3 2007/12/15 17:53:40 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -37,8 +37,6 @@ include/X11/ConstrainP.h
 include/X11/Constraint.h
 include/X11/Core.h
 include/X11/CoreP.h
-include/X11/DECkeysym.h
-include/X11/HPkeysym.h
 include/X11/ICE/ICE.h
 include/X11/ICE/ICEconn.h
 include/X11/ICE/ICElib.h
@@ -64,18 +62,9 @@ include/X11/SM/SMproto.h
 include/X11/Shell.h
 include/X11/ShellP.h
 include/X11/StringDefs.h
-include/X11/Sunkeysym.h
 include/X11/Vendor.h
 include/X11/VendorP.h
-include/X11/X.h
 include/X11/X10.h
-include/X11/XF86keysym.h
-include/X11/XKBlib.h
-include/X11/XWDFile.h
-include/X11/Xalloca.h
-include/X11/Xarch.h
-include/X11/Xatom.h
-include/X11/Xauth.h
 include/X11/Xaw/AllWidgets.h
 include/X11/Xaw/AsciiSink.h
 include/X11/Xaw/AsciiSinkP.h
@@ -149,17 +138,7 @@ include/X11/Xaw/Viewport.h
 include/X11/Xaw/ViewportP.h
 include/X11/Xaw/XawImP.h
 include/X11/Xaw/XawInit.h
-include/X11/Xcms.h
-include/X11/Xdefs.h
-include/X11/Xdmcp.h
 include/X11/Xft/XftFreetype.h
-include/X11/Xfuncproto.h
-include/X11/Xfuncs.h
-include/X11/Xlib.h
-include/X11/XlibConf.h
-include/X11/Xlibint.h
-include/X11/Xlocale.h
-include/X11/Xmd.h
 include/X11/Xmu/Atoms.h
 include/X11/Xmu/CharSet.h
 include/X11/Xmu/CloseHook.h
@@ -182,18 +161,8 @@ include/X11/Xmu/WidgetNode.h
 include/X11/Xmu/WinUtil.h
 include/X11/Xmu/Xct.h
 include/X11/Xmu/Xmu.h
-include/X11/Xos.h
-include/X11/Xos_r.h
-include/X11/Xosdefs.h
-include/X11/Xpoll.h
 include/X11/XprintAppUtil/xpapputil.h
 include/X11/XprintUtil/xprintutil.h
-include/X11/Xproto.h
-include/X11/Xprotostr.h
-include/X11/Xresource.h
-include/X11/Xthreads.h
-include/X11/Xutil.h
-include/X11/ap_keysym.h
 include/X11/bitmaps/1x1
 include/X11/bitmaps/2x2
 include/X11/bitmaps/Dashes
@@ -292,7 +261,6 @@ include/X11/bitmaps/xlogo16
 include/X11/bitmaps/xlogo32
 include/X11/bitmaps/xlogo64
 include/X11/bitmaps/xsnow
-include/X11/cursorfont.h
 include/X11/extensions/Print.h
 include/X11/extensions/Printstr.h
 include/X11/extensions/XIE.h
@@ -356,8 +324,6 @@ include/X11/fonts/codeconv/xttcommon.h
 include/X11/fonts/codeconv/xttversion.h
 include/X11/fonts/fontenc.h
 include/X11/fonts/fsmasks.h
-include/X11/keysym.h
-include/X11/keysymdef.h
 include/X11/pixmaps/card.xpm
 include/X11/pixmaps/computer.xpm
 include/X11/pixmaps/deny-always.xpm
@@ -398,15 +364,6 @@ lib/libSM.dylib
 lib/libSM.so
 lib/libSM.so.6
 lib/libSM.so.6.0
-lib/libX11.6.1.dylib
-lib/libX11.6.2.dylib
-lib/libX11.6.dylib
-lib/libX11.a
-lib/libX11.dylib
-lib/libX11.so
-lib/libX11.so.6
-lib/libX11.so.6.1
-lib/libX11.so.6.2
 lib/libXIE.6.0.dylib
 lib/libXIE.6.dylib
 lib/libXIE.a
@@ -425,10 +382,6 @@ lib/libXTrap.dylib
 lib/libXTrap.so
 lib/libXTrap.so.6
 lib/libXTrap.so.6.4
-lib/libXau.a
-lib/libXau.so
-lib/libXau.so.6
-lib/libXau.so.6.0
 lib/libXaw.6.1.dylib
 lib/libXaw.6.dylib
 lib/libXaw.7.0.dylib
@@ -443,11 +396,6 @@ lib/libXaw.so.7.0
 lib/libXaw.so.8.0
 lib/libXdamage.a
 lib/libXdamage.so.1.0
-lib/libXdmcp.a
-lib/libXdmcp.so
-lib/libXdmcp.so.6
-lib/libXdmcp.so.6.0
-lib/libXdpms.a
 lib/libXevie.a
 lib/libXevie.so.1.0
 lib/libXext.6.3.dylib
@@ -476,6 +424,8 @@ lib/libXfontcache.so.1.2
 lib/libXft.1.0.dylib
 lib/libXft.1.1.dylib
 lib/libXft.1.dylib
+lib/libXft.2.1.2.dylib
+lib/libXft.2.dylib
 lib/libXft.dylib
 lib/libXft.so.1
 lib/libXft.so.1.0
