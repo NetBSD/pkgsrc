@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2643 2007/12/15 13:59:25 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2644 2007/12/15 14:11:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated misc/openoffice2-bin to 2.3.1 [tron 2007-12-15]
 	Updated net/wireshark to 0.99.7pre2 [tron 2007-12-15]
 	Updated mail/squirrelmail to 1.4.13nb1 [taca 2007-12-15]
+	Updated graphics/rabbit to 0.5.4 [obache 2007-12-15]
