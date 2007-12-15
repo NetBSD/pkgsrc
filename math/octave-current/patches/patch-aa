@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2007/09/19 18:09:16 drochner Exp $
+$NetBSD: patch-aa,v 1.18 2007/12/15 05:54:50 adam Exp $
 
---- configure.orig	2007-09-17 22:49:11.000000000 +0200
+--- configure.orig	2007-12-05 16:41:30.000000000 +0100
 +++ configure
-@@ -12339,7 +12339,7 @@ if $have_fortran_compiler; then
- %.c : %.f
- 
- %.o : %.f
--	$(FC) -c $(ALL_FFLAGS) -o $@ $<
-+	${LIBTOOL} --mode=compile --tag=CC $(FC) -c $(ALL_FFLAGS) $<
- 
- pic/%.o : %.f
- 	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
-@@ -16736,7 +16736,7 @@ OCTAVE_DLL_DEFS=
+@@ -15732,7 +15732,7 @@ OCTAVE_DLL_DEFS=
  OCTINTERP_DLL_DEFS=
  library_path_var=LD_LIBRARY_PATH
  case "$canonical_host_type" in
@@ -19,29 +10,4 @@ $NetBSD: patch-aa,v 1.17 2007/09/19 18:09:16 drochner Exp $
 +  *-*-386bsd*)
      SH_LD=ld
      SH_LDFLAGS=-Bshareable
-   ;;
-@@ -27024,19 +27024,19 @@ case "$canonical_host_type" in
-     cat << \EOF > $bsd_gcc_kluge_targets_frag
- 
- lex.o: lex.cc
--	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
- 
- pt-plot.o: pt-plot.cc
--	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
- 
- symtab.o: symtab.cc
--	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
- 
- toplev.o: toplev.cc
--	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
- 
- unwind-prot.o: unwind-prot.cc
--	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
- 
- EOF
    ;;
