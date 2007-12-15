@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/15 15:21:53 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2007/12/15 15:26:15 tron Exp $
 
 BUILTIN_PKG:=	libX11
 
-BUILTIN_FIND_FILES_VAR:=	H_LIBX11
-BUILTIN_FIND_FILES.H_LIBX11=	${X11BASE}/include/X11/Xlib.h
+BUILTIN_FIND_FILES_VAR:=	H_XLIB
+BUILTIN_FIND_FILES.H_XLIB=	${X11BASE}/include/X11/Xlib.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -15,7 +15,7 @@ BUILTIN_FIND_FILES.H_LIBX11=	${X11BASE}/include/X11/Xlib.h
 IS_BUILTIN.libX11=	no
 .elif !defined(IS_BUILTIN.libX11)
 IS_BUILTIN.libX11=	no
-.  if empty(H_LIBX11:M__nonexistent__)
+.  if empty(H_XLIB:M__nonexistent__)
 IS_BUILTIN.libX11=	yes
 .  endif
 .endif
