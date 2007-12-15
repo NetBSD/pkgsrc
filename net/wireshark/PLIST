@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/06 17:58:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/15 13:53:27 tron Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -19,13 +19,12 @@ lib/wireshark/plugins/${PKGVERSION}/coseventcomm.la
 lib/wireshark/plugins/${PKGVERSION}/cosnaming.la
 lib/wireshark/plugins/${PKGVERSION}/docsis.la
 lib/wireshark/plugins/${PKGVERSION}/enttec.la
+lib/wireshark/plugins/${PKGVERSION}/ethercat.la
 lib/wireshark/plugins/${PKGVERSION}/gryphon.la
-lib/wireshark/plugins/${PKGVERSION}/h223.la
 lib/wireshark/plugins/${PKGVERSION}/irda.la
 lib/wireshark/plugins/${PKGVERSION}/lwres.la
 lib/wireshark/plugins/${PKGVERSION}/m2m.la
 lib/wireshark/plugins/${PKGVERSION}/mate.la
-lib/wireshark/plugins/${PKGVERSION}/mgcp.la
 lib/wireshark/plugins/${PKGVERSION}/opcua.la
 lib/wireshark/plugins/${PKGVERSION}/opsi.la
 lib/wireshark/plugins/${PKGVERSION}/parlay.la
@@ -37,8 +36,10 @@ lib/wireshark/plugins/${PKGVERSION}/rudp.la
 lib/wireshark/plugins/${PKGVERSION}/sbus.la
 lib/wireshark/plugins/${PKGVERSION}/stats_tree.la
 lib/wireshark/plugins/${PKGVERSION}/tango.la
+lib/wireshark/plugins/${PKGVERSION}/unistim.la
 lib/wireshark/plugins/${PKGVERSION}/v5ua.la
 lib/wireshark/plugins/${PKGVERSION}/wimax.la
+lib/wireshark/plugins/${PKGVERSION}/wimaxasncp.la
 man/man1/capinfos.1
 man/man1/dumpcap.1
 man/man1/editcap.1
@@ -64,6 +65,8 @@ share/wireshark/diameter/mobileipv4.xml
 share/wireshark/diameter/nasreq.xml
 share/wireshark/diameter/sip.xml
 share/wireshark/diameter/sunping.xml
+share/wireshark/diameter/Ericsson.xml
+share/wireshark/diameter/etsie2e4.xml
 share/wireshark/dtds/dc.dtd
 share/wireshark/dtds/itunes.dtd
 share/wireshark/dtds/mscml.dtd
@@ -75,6 +78,7 @@ share/wireshark/dtds/rss.dtd
 share/wireshark/dtds/smil.dtd
 share/wireshark/dtds/watcherinfo.dtd
 share/wireshark/dtds/xcap-caps.dtd
+share/wireshark/dtds/xcap-error.dtd
 share/wireshark/dumpcap.html
 share/wireshark/editcap.html
 share/wireshark/help/capture_filters.txt
@@ -149,10 +153,17 @@ share/wireshark/radius/dictionary.valemount
 share/wireshark/radius/dictionary.versanet
 share/wireshark/radius/dictionary.wispr
 share/wireshark/radius/dictionary.xedia
+share/wireshark/services
+share/wireshark/smi_modules
 share/wireshark/text2pcap.html
+share/wireshark/tpncp/tpncp.dat
 share/wireshark/tshark.html
 share/wireshark/wireshark-filter.html
 share/wireshark/wireshark.html
+share/wireshark/wimaxasncp/dictionary.dtd
+share/wireshark/wimaxasncp/dictionary.xml
+@dirrm share/wireshark/wimaxasncp
+@dirrm share/wireshark/tpncp
 @dirrm share/wireshark/radius
 @dirrm share/wireshark/help
 @dirrm share/wireshark/dtds
