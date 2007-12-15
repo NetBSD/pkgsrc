@@ -1,20 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/04/30 20:53:54 heinz Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/15 16:41:51 seb Exp $
 
-Shut up warnings about "subscript has type char"
+Fix for LP64 big-endian platforms.
 
---- util.c.orig	2007-02-03 00:00:25.000000000 +0100
-+++ util.c
-@@ -367,11 +367,11 @@ int Util_countWords(char *s, const char 
-  */
- int Util_startsWith(const char *a, const char *b) {
+--- http/engine.c.orig	2007-07-29 20:23:26.000000000 +0000
++++ http/engine.c
+@@ -246,7 +246,7 @@ int add_host_allow(char *name) {
+        struct sockaddr_in *sin = (struct sockaddr_in *)_res->ai_addr;
  
--  if((!a || !b) || toupper(*a)!=toupper(*b)) return FALSE;
-+  if((!a || !b) || toupper((int)*a)!=toupper((int)*b)) return FALSE;
- 
-   while(*a && *b) {
-     
--    if(toupper(*a++) != toupper(*b++)) return FALSE;
-+    if(toupper((int)*a++) != toupper((int)*b++)) return FALSE;
-     
-   }
- 
+        NEW(h);      
+-       memcpy(&h->network, &sin->sin_addr, 4);
++       h->network = sin->sin_addr.s_addr;
+        h->mask=    0xffffffff;
+        LOCK(hostlist_mutex)
+        if(hostlist) {
