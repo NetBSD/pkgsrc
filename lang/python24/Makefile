@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/12/02 11:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2007/12/15 18:43:31 tron Exp $
 
 DISTNAME=	Python-2.4.4
 PKGNAME=	python24-2.4.4
@@ -90,6 +90,16 @@ PLIST_SUBST+=	OSSAUDIODEV=
 PLIST_SUBST+=	OSSAUDIODEV=
 .else
 PLIST_SUBST+=	OSSAUDIODEV="@comment "
+.endif
+
+# Mac OS X Leopard support:
+# 1.) Fix detection of setpgrp(2).
+# 2.) "lib-dynload/_OSA.so" isn't built.
+.if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
+CFLAGS+=	-D__DARWIN_UNIX03
+PLIST_SUBST+=	LEOPARD="@comment "
+.else
+PLIST_SUBST+=	LEOPARD=
 .endif
 
 # Make sure python modules can link correctly
