@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/04 16:32:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/15 14:10:29 obache Exp $
 bin/rabbit
 bin/rabbit-theme-manager
 bin/rabbit.bat
 bin/rabrick
-${RUBY_SITELIBDIR}/hikidoc.rb
 ${RUBY_SITELIBDIR}/rabbit/action.rb
 ${RUBY_SITELIBDIR}/rabbit/action/basic.rb
 ${RUBY_SITELIBDIR}/rabbit/action/radio.rb
@@ -40,6 +39,7 @@ ${RUBY_SITELIBDIR}/rabbit/element/description-list.rb
 ${RUBY_SITELIBDIR}/rabbit/element/enum-list.rb
 ${RUBY_SITELIBDIR}/rabbit/element/footnote.rb
 ${RUBY_SITELIBDIR}/rabbit/element/image.rb
+${RUBY_SITELIBDIR}/rabbit/element/image-title-slide.rb
 ${RUBY_SITELIBDIR}/rabbit/element/index-slide.rb
 ${RUBY_SITELIBDIR}/rabbit/element/item-list.rb
 ${RUBY_SITELIBDIR}/rabbit/element/method-list.rb
@@ -73,7 +73,6 @@ ${RUBY_SITELIBDIR}/rabbit/image/eps.rb
 ${RUBY_SITELIBDIR}/rabbit/image/gimp.rb
 ${RUBY_SITELIBDIR}/rabbit/image/pdf.rb
 ${RUBY_SITELIBDIR}/rabbit/image/svg.rb
-${RUBY_SITELIBDIR}/rabbit/image/tgif.rb
 ${RUBY_SITELIBDIR}/rabbit/info-window.rb
 ${RUBY_SITELIBDIR}/rabbit/keys.rb
 ${RUBY_SITELIBDIR}/rabbit/logger.rb
@@ -90,6 +89,7 @@ ${RUBY_SITELIBDIR}/rabbit/parser/ext/escape.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/ext/image.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/ext/inline.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/ext/tex.rb
+${RUBY_SITELIBDIR}/rabbit/parser/image.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/pdf.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/rd.rb
 ${RUBY_SITELIBDIR}/rabbit/parser/rd/ext/anthy.rb
@@ -159,9 +159,9 @@ ${RUBY_SITELIBDIR}/rabbit/source/file.rb
 ${RUBY_SITELIBDIR}/rabbit/source/hiki.rb
 ${RUBY_SITELIBDIR}/rabbit/source/memory.rb
 ${RUBY_SITELIBDIR}/rabbit/source/rwiki.rb
+${RUBY_SITELIBDIR}/rabbit/source/slide-share.rb
 ${RUBY_SITELIBDIR}/rabbit/source/uri.rb
 ${RUBY_SITELIBDIR}/rabbit/stock.rb
-${RUBY_SITELIBDIR}/rabbit/tgif.rb
 ${RUBY_SITELIBDIR}/rabbit/theme-browser.rb
 ${RUBY_SITELIBDIR}/rabbit/theme-browser/default-tag.yaml
 ${RUBY_SITELIBDIR}/rabbit/theme-browser/document.rb
@@ -252,6 +252,8 @@ ${RUBY_SITELIBDIR}/rabbit/theme/image-slide-number/image-slide-number.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/image-slide-number/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/image-timer/image-timer.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/image-timer/property.rb
+${RUBY_SITELIBDIR}/rabbit/theme/image-viewer/image-viewer.rb
+${RUBY_SITELIBDIR}/rabbit/theme/image-viewer/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/image/image.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/image/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/lightning-rabbit/lightning-rabbit.rb
@@ -307,8 +309,6 @@ ${RUBY_SITELIBDIR}/rabbit/theme/ruby-gnome2/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/ruby-gnome2/ruby-gnome2.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/scroll-effect/scroll-effect.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/scroll-effect/property.rb
-${RUBY_SITELIBDIR}/rabbit/theme/slide-show/property.rb
-${RUBY_SITELIBDIR}/rabbit/theme/slide-show/slide-show.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/searcher.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/show-frame/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/show-frame/show-frame.rb
@@ -318,8 +318,12 @@ ${RUBY_SITELIBDIR}/rabbit/theme/slide-background-image/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/slide-background-image/slide-background-image.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/slide-background/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/slide-background/slide-background.rb
+${RUBY_SITELIBDIR}/rabbit/theme/slide-footer-info/slide-footer-info.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/slide-number/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/slide-number/slide-number.rb
+${RUBY_SITELIBDIR}/rabbit/theme/slide-logo/slide-logo.rb
+${RUBY_SITELIBDIR}/rabbit/theme/slide-show/property.rb
+${RUBY_SITELIBDIR}/rabbit/theme/slide-show/slide-show.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/table/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/table/table.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/timer/property.rb
@@ -410,8 +414,10 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-background-color
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/timer
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/table
+@dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-logo
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-show
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-number
+@dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-footer-info
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-background-image
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/slide-background
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/simple-item-mark
@@ -442,6 +448,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/lightning-talk
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/lightning-simple
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/lightning-rabbit
+@dirrm ${RUBY_SITELIBDIR}/rabbit/theme/image-viewer
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/image-timer
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/image-slide-number
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/image
