@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/30 20:53:46 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/15 16:41:50 seb Exp $
 #
 
-DISTNAME=		monit-4.9
+DISTNAME=		monit-4.10.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.tildeslash.com/monit/dist/
 
@@ -27,11 +27,11 @@ PKG_SUGGESTED_OPTIONS=	ssl
 CONFIGURE_ARGS+=	--without-ssl
 .endif
 CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 PKG_SYSCONFSUBDIR=	monit
 
 RCD_SCRIPTS=		monit
-RCD_SCRIPT_SRC.monit=   ${FILESDIR}/monit-rc-script.sh
+RCD_SCRIPT_SRC.monit=	${FILESDIR}/monit-rc-script.sh
 
 CONF_FILES=		${EGDIR}/monitrc.sample ${PKG_SYSCONFDIR}/monitrc
 CONF_FILES_MODE=	0600
@@ -54,8 +54,11 @@ SUBST_SED.monit=	-e "s|^\# *set *daemon|set daemon|"
 SUBST_SED.monit+=	-e "s|include */etc/monit.d|include ${PKG_SYSCONFDIR}/monit.d|"
 
 post-extract:
-	${MV} -f ${WRKSRC}/monit.1 ${WRKSRC}/monit.1.obsolete
-	cd ${WRKSRC}/contrib && ${PAX} -zrf monit-OSX-startup.tar.gz
+	cd ${WRKSRC}/contrib && pax -zrf monit-OSX-startup.tar.gz
+
+# Perform configure substitutions on monit.1
+post-configure:
+	cd ${WRKSRC} && mv monit.1 monit.1.in && ./config.status --file=monit.1
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
