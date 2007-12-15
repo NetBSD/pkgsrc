@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/08/26 01:25:32 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/15 14:10:29 obache Exp $
 #
 
-DISTNAME=	rabbit-0.5.3
-PKGREVISION=	1
+DISTNAME=	rabbit-0.5.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/
@@ -18,7 +17,7 @@ USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rabbit bin/rabbit-theme-manager bin/rabrick
 
 do-test:
-	cd ${WRKSRC:Q} && ${RUBY} test/run-test.rb
+	cd ${WRKSRC} && ${RUBY} test/run-test.rb
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
