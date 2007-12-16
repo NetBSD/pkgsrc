@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/04 02:51:02 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/16 14:19:01 drochner Exp $
 bin/gbf-am-parse
 bin/gbf-mkfile-parse
 include/gnome-build-1.0/gbf/gbf-backend.h
@@ -23,11 +23,13 @@ share/gnome-build/GBF/Make.pm
 share/gnome-build/glade/create_dialogs.glade
 share/gnome-build/glade/gbf-am-dialogs.glade
 share/locale/am/LC_MESSAGES/gbf-1.mo
+share/locale/ar/LC_MESSAGES/gbf-1.mo
 share/locale/az/LC_MESSAGES/gbf-1.mo
 share/locale/be/LC_MESSAGES/gbf-1.mo
 share/locale/ca/LC_MESSAGES/gbf-1.mo
 share/locale/cs/LC_MESSAGES/gbf-1.mo
 share/locale/de/LC_MESSAGES/gbf-1.mo
+share/locale/dz/LC_MESSAGES/gbf-1.mo
 share/locale/el/LC_MESSAGES/gbf-1.mo
 share/locale/en_CA/LC_MESSAGES/gbf-1.mo
 share/locale/en_GB/LC_MESSAGES/gbf-1.mo
