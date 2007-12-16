@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2646 2007/12/15 17:54:11 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2647 2007/12/16 09:35:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4809,3 +4809,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/rabbit to 0.5.4 [obache 2007-12-15]
 	Updated sysutils/monit to 4.10.1 [seb 2007-12-15]
 	Updated pkgtools/x11-links to 0.32 [tron 2007-12-15]
+	Updated archivers/p7zip to 4.57 [adam 2007-12-16]
