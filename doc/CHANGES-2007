@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2652 2007/12/16 16:15:35 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2653 2007/12/16 16:42:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated audio/fluidsynth to 1.0.8 [adam 2007-12-16]
 	Updated databases/py-ldap to 2.3.1 [adam 2007-12-16]
 	Updated converters/base64 to 1.5 [adam 2007-12-16]
+	Updated comms/efax-gtk to 3.0.16 [adam 2007-12-16]
