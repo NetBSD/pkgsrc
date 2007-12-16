@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/17 19:12:02 drochner Exp $
+$NetBSD: distinfo,v 1.2 2007/12/16 14:03:00 drochner Exp $
 
-SHA1 (glade3-3.2.2.tar.bz2) = d32d38dbb475d6c35c564c4e5dcb3df3ce075916
-RMD160 (glade3-3.2.2.tar.bz2) = 6953c52ab921e6d0727e428796095fe9b84a0873
-Size (glade3-3.2.2.tar.bz2) = 1429808 bytes
+SHA1 (glade3-3.4.0.tar.bz2) = 79710d932db8fdd19a5aff21727af14059d16763
+RMD160 (glade3-3.4.0.tar.bz2) = 2f703f14f46f5a35c8d39f899e87d7a3d83093cf
+Size (glade3-3.4.0.tar.bz2) = 1493286 bytes
