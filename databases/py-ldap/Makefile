@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2007/02/28 15:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2007/12/16 15:34:14 adam Exp $
 
-DISTNAME=	python-ldap-2.2.0
+DISTNAME=	python-ldap-2.3.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-ldap/}
 
@@ -19,22 +18,21 @@ PY_LDAP_LIBS=			ldap_r lber ssl crypto
 
 .include "options.mk"
 
-SUBST_CLASSES+=			setup
-SUBST_STAGE.setup=		pre-configure
-SUBST_FILES.setup=		setup.cfg
-SUBST_SED.setup=		-e "s|@PY_LDAP_LIBRARY_DIRS@|${PY_LDAP_LIBRARY_DIRS}|"
-SUBST_SED.setup+=		-e "s|@PY_LDAP_INCLUDE_DIRS@|${PY_LDAP_INCLUDE_DIRS}|"
-SUBST_SED.setup+=		-e "s|@PY_LDAP_LIBS@|${PY_LDAP_LIBS}|"
+SUBST_CLASSES+=		setup
+SUBST_STAGE.setup=	pre-configure
+SUBST_FILES.setup=	setup.cfg
+SUBST_SED.setup=	-e "s|@PY_LDAP_LIBRARY_DIRS@|${PY_LDAP_LIBRARY_DIRS}|"
+SUBST_SED.setup+=	-e "s|@PY_LDAP_INCLUDE_DIRS@|${PY_LDAP_INCLUDE_DIRS}|"
+SUBST_SED.setup+=	-e "s|@PY_LDAP_LIBS@|${PY_LDAP_LIBS}|"
 
-PY_LDAP_DOCDIR=			${PREFIX}/share/doc/py-ldap
+PY_LDAP_DOCDIR=		${PREFIX}/share/doc/py-ldap
 
 post-install:
 	${INSTALL_DATA_DIR} ${PY_LDAP_DOCDIR}
-	cd ${WRKSRC} && ${PAX} -rw CHANGES README INSTALL TODO Demo \
+	cd ${WRKSRC} && pax -rw CHANGES README INSTALL TODO Demo \
 		${PY_LDAP_DOCDIR}
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-
 .include "../../mk/bsd.pkg.mk"
