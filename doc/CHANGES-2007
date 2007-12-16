@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2654 2007/12/16 19:06:23 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2655 2007/12/16 21:58:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4818,3 +4818,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated converters/base64 to 1.5 [adam 2007-12-16]
 	Updated comms/efax-gtk to 3.0.16 [adam 2007-12-16]
 	Updated pkgtools/x11-links to 0.33 [tron 2007-12-16]
+	Updated devel/p5-Object-InsideOut to 3.34 [seb 2007-12-16]
