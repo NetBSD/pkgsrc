@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/16 15:18:29 adam Exp $
 
---- src/fluid_sys.c.orig	Fri Mar 26 01:20:55 2004
+--- src/fluid_sys.c.orig	2007-11-11 20:47:30.000000000 +0100
 +++ src/fluid_sys.c
-@@ -630,8 +630,10 @@ new_fluid_timer(int msec, fluid_timer_ca
+@@ -709,8 +709,10 @@ new_fluid_timer(int msec, fluid_timer_ca
  {
    pthread_attr_t *attr = NULL;
    pthread_attr_t rt_attr;
@@ -13,16 +13,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
    int err;
  
    fluid_timer_t* timer = FLUID_NEW(fluid_timer_t);
-@@ -647,6 +649,7 @@ new_fluid_timer(int msec, fluid_timer_ca
+@@ -726,6 +728,7 @@ new_fluid_timer(int msec, fluid_timer_ca
    timer->auto_destroy = auto_destroy;
  
-   err = pthread_attr_init(&rt_attr); 
+   err = pthread_attr_init(&rt_attr);
 +#if !defined(__NetBSD__)
    if (err == 0) {
  	  err = pthread_attr_setschedpolicy(&rt_attr, SCHED_FIFO);
  	  if (err == 0) {
-@@ -657,6 +660,7 @@ new_fluid_timer(int msec, fluid_timer_ca
- 		  } 
+@@ -736,6 +739,7 @@ new_fluid_timer(int msec, fluid_timer_ca
+ 		  }
  	  }
    }
 +#endif
