@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/12/09 22:21:59 rhaen Exp $
+# $NetBSD: Makefile,v 1.21 2007/12/16 07:12:33 rhaen Exp $
 
 DISTNAME=		CGI-Application-4.06
 PKGNAME=		p5-${DISTNAME}
