@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/06/05 05:37:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/12/16 13:55:48 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GDL_BUILDLINK3_MK:=	${GDL_BUILDLINK3_MK}+
@@ -17,7 +17,8 @@ BUILDLINK_ABI_DEPENDS.gdl?=	gdl>=0.6.1nb2
 BUILDLINK_PKGSRCDIR.gdl?=	../../devel/gdl
 .endif	# GDL_BUILDLINK3_MK
 
-.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
