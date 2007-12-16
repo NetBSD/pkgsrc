@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6902 2007/12/16 15:19:30 adam Exp $
+$NetBSD: TODO,v 1.6903 2007/12/16 15:35:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -1049,7 +1049,6 @@ Suggested package updates
 	o py-html2text-2.29
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
-	o py-ldap-2.3.1
 	o py-libxml2-2.6.28
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.18.2
