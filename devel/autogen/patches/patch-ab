@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/12/16 14:38:30 drochner Exp $
+
+--- ./autoopts/optlib.tpl.orig	2007-11-21 11:26:19.000000000 +0100
++++ ./autoopts/optlib.tpl
+@@ -465,7 +465,7 @@ Define the arrays of values associated w
+ DEFINE   emit-nondoc-option     =][=
+   (if (exist? "translators")
+       (string-append "\n" (shellf
+-"(fmt --width 60|columns -I16 -c1 --first='/* TRANSLATORS:')<<\\_EOF_
++"(fmt|columns -I16 -c1 --first='/* TRANSLATORS:')<<\\_EOF_
+ %s
+ _EOF_" (get "translators")  ) " */" )  ) =][=
+ 
