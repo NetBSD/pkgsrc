@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.4 2007/08/02 18:19:32 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.5 2007/12/16 01:49:08 adrianp Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -38,6 +38,24 @@ LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
+.endif
+
+# audit-packages logic for its location depends on a variety of factors
+# including OS, pkg_install version and NetBSD version.  The following
+# should pick the correct version to run.
+#
+.if defined(OPSYS) && ${OPSYS} != "NetBSD"
+AP?=	${PKG_TOOLS_BIN}/audit-packages
+.else
+.	if exists(${LOCALBASE}/sbin/audit-packages)
+AP?=		${LOCALBASE}/sbin/audit-packages
+.	else
+.		if exists(/usr/sbin/audit-packages)
+AP?=			/usr/sbin/audit-packages
+.		else
+AP?=			audit-packages
+.		endif
+.	endif
 .endif
 
 # The binary pkg_install tools all need to consistently to refer to the
