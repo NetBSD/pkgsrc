@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/09/03 00:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2007/12/16 18:36:36 heinz Exp $
 
 DISTNAME=	mikmod-3.2.1
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mikmod.raphnet.net/
 COMMENT=	MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR ULT 669 files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		gmake
