@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2648 2007/12/16 14:35:44 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2649 2007/12/16 15:08:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4812,3 +4812,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated archivers/p7zip to 4.57 [adam 2007-12-16]
 	Updated net/Transmission to 0.96 [tnn 2007-12-16]
 	Updated graphics/gimp-liquid-rescale to 0.3.0.6 [tnn 2007-12-16]
+	Updated databases/luma to 2.3 [adam 2007-12-16]
