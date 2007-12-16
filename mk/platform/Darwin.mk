@@ -1,11 +1,11 @@
-# $NetBSD: Darwin.mk,v 1.27 2007/12/16 12:27:28 tron Exp $
+# $NetBSD: Darwin.mk,v 1.28 2007/12/16 12:36:28 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
 .if !defined(CPP) || ${CPP} == "cpp"
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-i386)
+.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 ECHO_N?=	/bin/echo -n
 .else
 ECHO_N?=	${ECHO} -n
