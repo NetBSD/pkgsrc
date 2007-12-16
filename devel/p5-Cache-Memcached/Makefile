@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/09 22:15:42 rhaen Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/16 07:13:15 rhaen Exp $
 #
 
 DISTNAME=	Cache-Memcached-1.24
