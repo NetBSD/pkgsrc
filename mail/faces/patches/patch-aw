@@ -1,12 +1,20 @@
-$NetBSD: patch-aw,v 1.1 2001/02/03 01:53:03 dmcmahill Exp $
+$NetBSD: patch-aw,v 1.2 2007/12/16 14:48:30 tron Exp $
 
-add prototypes for 64-bit machines
-
---- address.y.orig	Sun Jun 30 21:25:54 1991
-+++ address.y	Fri Feb  2 18:03:04 2001
-@@ -2,4 +2,5 @@
+--- address.y.orig	1991-07-01 02:25:54.000000000 +0100
++++ address.y	2007-12-16 14:41:03.000000000 +0000
+@@ -1,9 +1,15 @@
+ %{
  #include <stdio.h>
  #include <signal.h>
 +#include <string.h>
++#include <stdlib.h>
  #include "addr.h"
  #include "faces.h"
+ 
++static char * newstring2(char *a, char *b);
++static char * newstring3(char *a, char *b, char *c);
++static void yyerror(char *s);
++
+ /*  @(#)address.y 1.4 91/05/06
+  *
+  *  Copyright (c) 1986, 1987, 1988, 1989, 1990, 1991, by:
