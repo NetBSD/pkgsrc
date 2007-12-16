@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1 2007/12/16 14:03:00 drochner Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+GLADE3_BUILDLINK3_MK:=	${GLADE3_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	glade3
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglade3}
+BUILDLINK_PACKAGES+=	glade3
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}glade3
+
+.if ${GLADE3_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.glade3+=	glade3>=3.4.0
+BUILDLINK_PKGSRCDIR.glade3?=	../../devel/glade3
+.endif	# GLADE3_BUILDLINK3_MK
+
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
