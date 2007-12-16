@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6901 2007/12/16 07:18:26 rhaen Exp $
+$NetBSD: TODO,v 1.6902 2007/12/16 15:19:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ Suggested package updates
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
-	o fluidsynth-1.0.8
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5

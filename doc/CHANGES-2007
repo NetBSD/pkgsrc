@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2649 2007/12/16 15:08:21 adam Exp $
+$NetBSD: CHANGES-2007,v 1.2650 2007/12/16 15:19:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/Transmission to 0.96 [tnn 2007-12-16]
 	Updated graphics/gimp-liquid-rescale to 0.3.0.6 [tnn 2007-12-16]
 	Updated databases/luma to 2.3 [adam 2007-12-16]
+	Updated audio/fluidsynth to 1.0.8 [adam 2007-12-16]
