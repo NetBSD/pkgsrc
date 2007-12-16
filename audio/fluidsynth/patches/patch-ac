@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.4 2006/10/02 15:29:36 rillig Exp $
+$NetBSD: patch-ac,v 1.5 2007/12/16 15:18:29 adam Exp $
 
---- configure.orig	2006-02-19 10:38:11.000000000 +0100
-+++ configure	2006-10-02 17:27:18.000000000 +0200
-@@ -21101,7 +21101,7 @@ esac
+--- configure.orig	2007-11-17 22:32:16.000000000 +0100
++++ configure
+@@ -20727,7 +20727,7 @@ esac
  
  
  
--if test "$mingw32_support" == "yes"; then
-+if test "$mingw32_support" = "yes"; then
+- if test "$mingw32_support" == "yes"; then
++ if test "$mingw32_support" = "yes"; then
    MINGW32_SUPPORT_TRUE=
    MINGW32_SUPPORT_FALSE='#'
  else
-@@ -21310,7 +21310,7 @@ cat >>confdefs.h <<\_ACEOF
+@@ -20899,7 +20899,7 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
  else
