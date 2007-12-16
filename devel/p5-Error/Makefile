@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/09 22:20:12 rhaen Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/16 07:13:57 rhaen Exp $
 
 DISTNAME=	Error-0.17010
 PKGNAME=	p5-${DISTNAME}
