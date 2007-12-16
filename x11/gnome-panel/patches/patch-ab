@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2007/12/16 12:05:46 drochner Exp $
+
+--- applets/clock/calendar-client.c.orig	2007-12-01 20:23:22.000000000 +0100
++++ applets/clock/calendar-client.c
+@@ -2025,7 +2025,7 @@ calendar_client_set_task_completed (Cale
+     {
+       struct icaltimetype  completed_time;
+ 
+-      completed_time = icaltime_current_time_with_zone (client->priv->zone);
++      completed_time = icaltime_current_time_with_zone (icaltimezone_get_utc_timezone ());
+       if (!prop)
+ 	{
+ 	  icalcomponent_add_property (ical,
