@@ -1,3 +1,5 @@
+# $NetBSD: options.mk,v 1.2 2007/12/16 21:51:54 rillig Exp $
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	threads
 
