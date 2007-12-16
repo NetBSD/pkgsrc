@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6900 2007/12/15 05:56:23 adam Exp $
+$NetBSD: TODO,v 1.6901 2007/12/16 07:18:26 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -894,7 +894,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Error-0.17010
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -912,7 +911,6 @@ Suggested package updates
 	o p5-JSON-XS-1.52
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Fuzzy-0.10
-	o p5-Log-Dispatch-2.20
 	o p5-MARC-1.38
 	o p5-Mail-SpamAssassin-3.2.2
 	o p5-Math-Pari-2.010709
