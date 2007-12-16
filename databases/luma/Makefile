@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2007/12/16 15:07:18 adam Exp $
 
-DISTNAME=		luma-2.2.1
-PKGREVISION=		4
-CATEGORIES=		databases
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=luma/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	luma-2.3
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=luma/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://luma.sourceforge.net/
-COMMENT=		LDAP browser
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://luma.sourceforge.net/
+COMMENT=	LDAP browser
 
 SUBST_CLASSES+=		luma
 SUBST_STAGE.luma=	pre-configure
@@ -22,14 +20,15 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC} && ${PYTHONBIN} install.py --prefix=${PREFIX})
-	${RM} -f ${PREFIX}/bin/luma.orig
+	rm -f ${PREFIX}/bin/luma.orig
 
-.include "../../lang/python/application.mk"
 .include "../../databases/py-ldap/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/py-qt3-base/buildlink3.mk"
 .include "../../x11/py-qt3-modules/buildlink3.mk"
 # XXX Please verify whether qt3-tools is really needed at run-time.
 # If it is, then remove this comment.  If it is not, then remove
 # this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
+#BUILDLINK_DEPMETHOD.qt3-tools=	full
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
