@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/16 15:18:29 adam Exp $
 
---- src/fluid_oss.c.orig	Wed Mar  3 03:02:28 2004
+--- src/fluid_oss.c.orig	2007-09-19 08:10:57.000000000 +0200
 +++ src/fluid_oss.c
 @@ -43,6 +43,12 @@
  #include <errno.h>
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
 +    devname = DEVOSSAUDIO;
    }
    if (stat(devname, &devstat) == -1) {
-     FLUID_LOG(FLUID_ERR, "Device <%s> does not exists", devname);    
+     FLUID_LOG(FLUID_ERR, "Device <%s> does not exists", devname);
 @@ -380,6 +398,13 @@ new_fluid_oss_audio_driver2(fluid_settin
      goto error_recovery;
    }
@@ -108,7 +108,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
  
    return (fluid_audio_driver_t*) dev;
  
-@@ -644,7 +670,7 @@ fluid_oss_audio_run2(void* d)
+@@ -642,7 +668,7 @@ fluid_oss_audio_run2(void* d)
  
  void fluid_oss_midi_driver_settings(fluid_settings_t* settings)
  {
@@ -117,7 +117,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
  }
  
  /*
-@@ -657,8 +683,10 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -655,8 +681,10 @@ new_fluid_oss_midi_driver(fluid_settings
    int err;
    fluid_oss_midi_driver_t* dev;
    pthread_attr_t attr;
@@ -126,9 +126,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
    struct sched_param priority;
 +#endif
    char* device;
-   
+ 
    /* not much use doing anything */
-@@ -689,7 +717,7 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -687,7 +715,7 @@ new_fluid_oss_midi_driver(fluid_settings
    /* get the device name. if none is specified, use the default device. */
    fluid_settings_getstr(settings, "midi.oss.device", &device);
    if (device == NULL) {
@@ -137,7 +137,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
    }
  
    /* open the default hardware device. only use midi in. */
-@@ -706,6 +734,14 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -704,6 +732,14 @@ new_fluid_oss_midi_driver(fluid_settings
      FLUID_LOG(FLUID_ERR, "Couldn't initialize midi thread attributes");
      goto error_recovery;
    }
@@ -152,10 +152,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
    /* use fifo scheduling. if it fails, use default scheduling. */
    while (1) {
      err = pthread_attr_setschedpolicy(&attr, sched);
-@@ -737,6 +773,7 @@ new_fluid_oss_midi_driver(fluid_settings
+@@ -735,6 +771,7 @@ new_fluid_oss_midi_driver(fluid_settings
      }
      break;
-   }  
+   }
 +#endif /* __NetBSD__ */
    return (fluid_midi_driver_t*) dev;
  
