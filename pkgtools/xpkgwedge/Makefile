@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2007/11/11 11:35:50 martti Exp $
+# $NetBSD: Makefile,v 1.73 2007/12/16 12:29:17 tron Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -44,7 +44,7 @@ FILES_SUBST+=		FONT_PROGS=${FONT_PROGS:Q}
 FILES_SUBST+=		MAKE=${IMAKE_MAKE:Q}
 USE_TOOLS+=		${IMAKE_TOOLS}
 
-.if ${OPSYS} == "Darwin"
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-i386)
 PLIST_SUBST+=		IS_DARWIN=
 USE_TOOLS+=		patch
 .else
@@ -100,8 +100,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${DESTDIR}${PREFIX}/bin/pkgxmkmf
 	@case ${OPSYS} in \
 	Darwin) \
-	${INSTALL_DATA} ${X11BASE}/lib/X11/config/darwin.cf ${DESTDIR}${PREFIX}/lib/X11/config; \
-	cd ${DESTDIR}${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/darwin.cf.patch; \
+	if [ -z "$IS_DARWIN" ]; then \
+	  ${INSTALL_DATA} ${X11BASE}/lib/X11/config/darwin.cf ${DESTDIR}${PREFIX}/lib/X11/config; \
+	  cd ${DESTDIR}${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/darwin.cf.patch; \
+	fi; \
 	;; \
 	IRIX) \
 	${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgi.cf ${DESTDIR}${PREFIX}/lib/X11/config; \
