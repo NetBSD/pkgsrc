@@ -1,4 +1,4 @@
-# $NetBSD: distclean.mk,v 1.4 2007/10/13 13:49:19 rillig Exp $
+# $NetBSD: distclean.mk,v 1.5 2007/12/16 02:51:24 obache Exp $
 #
 # === make targets for pkgsrc users ===
 #
@@ -20,7 +20,7 @@ distclean: pre-distclean clean
 	cd ${_DISTDIR};							\
 	${RM} -f ${ALLFILES} ${ALLFILES:S/$/.pkgsrc.resume/}
 .  if defined(DIST_SUBDIR)
-	${RUN} ${RMDIR} ${_DISTDIR} 2>/dev/null ${TRUE}
+	${RUN} ${RMDIR} ${_DISTDIR} 2>/dev/null || ${TRUE}
 .  endif
 	${RUN} ${RM} -f README.html
 .endif
