@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2007/10/13 17:25:19 adam Exp $
+# $NetBSD: Makefile,v 1.39 2007/12/16 16:41:47 adam Exp $
 
-DISTNAME=	efax-gtk-3.0.15.src
-PKGNAME=	efax-gtk-3.0.15
+DISTNAME=	efax-gtk-3.0.16.src
+PKGNAME=	efax-gtk-3.0.16
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=efax-gtk/}
 EXTRACT_SUFX=	.tgz
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
 
 EGDIR=			${PREFIX}/share/examples
