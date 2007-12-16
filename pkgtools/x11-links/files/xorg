@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.3 2007/12/15 17:53:40 tron Exp $
+# $NetBSD: xorg,v 1.4 2007/12/16 19:05:52 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -444,22 +444,6 @@ lib/libXinerama.dylib
 lib/libXinerama.so
 lib/libXinerama.so.1
 lib/libXinerama.so.1.0
-lib/libXmu.6.0.dylib
-lib/libXmu.6.2.dylib
-lib/libXmu.6.dylib
-lib/libXmu.a
-lib/libXmu.dylib
-lib/libXmu.so
-lib/libXmu.so.6
-lib/libXmu.so.6.0
-lib/libXmu.so.6.2
-lib/libXmuu.1.0.dylib
-lib/libXmuu.1.dylib
-lib/libXmuu.a
-lib/libXmuu.dylib
-lib/libXmuu.so
-lib/libXmuu.so.1
-lib/libXmuu.so.1.0
 lib/libXp.6.2.dylib
 lib/libXp.6.dylib
 lib/libXp.a

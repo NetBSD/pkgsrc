@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.6 2007/12/15 17:53:40 tron Exp $
+# $NetBSD: xorg.mk,v 1.7 2007/12/16 19:05:52 tron Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -18,6 +18,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
