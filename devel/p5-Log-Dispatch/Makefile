@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/12/09 22:18:54 rhaen Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/16 07:14:42 rhaen Exp $
 
 DISTNAME=	Log-Dispatch-2.20
 PKGNAME=	p5-${DISTNAME}
