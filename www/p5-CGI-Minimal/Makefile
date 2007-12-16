@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/12/09 22:23:42 rhaen Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/16 07:11:51 rhaen Exp $
 
 DISTNAME=		CGI-Minimal-1.29
 PKGNAME=		p5-${DISTNAME}
