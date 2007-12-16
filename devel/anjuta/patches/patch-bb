@@ -1,32 +1,16 @@
-$NetBSD: patch-bb,v 1.2 2007/02/02 17:05:58 joerg Exp $
+$NetBSD: patch-bb,v 1.3 2007/12/16 14:49:41 drochner Exp $
 
---- libanjuta/anjuta-launcher.c.orig	2006-02-26 10:15:28.000000000 +0000
+--- libanjuta/anjuta-launcher.c.orig	2007-08-13 23:39:27.000000000 +0200
 +++ libanjuta/anjuta-launcher.c
-@@ -24,7 +24,9 @@
- #include <unistd.h>
- #include <fcntl.h>
- #include <signal.h>
--#ifndef sun
-+#if defined(__DragonFly__)
-+#include <libutil.h>
-+#elif !defined(__sun) && !defined(__NetBSD__)
- #include <pty.h>
- #endif
- #include <assert.h>
-@@ -48,7 +50,15 @@
- #define ANJUTA_PIXMAP_PASSWORD "password.png"
- #define FILE_BUFFER_SIZE 1024
- #ifndef __MAX_BAUD
--#define __MAX_BAUD B460800
-+#  ifdef B460800
-+#    define __MAX_BAUD B460800
-+#  else
-+#    define __MAX_BAUD B230400
-+#  endif
+@@ -68,7 +68,11 @@
+ #ifdef __CYGWIN__
+ #define __MAX_BAUD B256000
+ #else
++#ifdef B460800
+ #define __MAX_BAUD B460800
++#else
++#define __MAX_BAUD B230400
 +#endif
-+
-+#if defined(__DragonFly__) && !defined(O_SYNC)
-+#define O_SYNC O_FSYNC
+ #endif
  #endif
  
- /*
