@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/11/30 20:08:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2007/12/16 22:19:43 drochner Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -179,7 +179,7 @@ share/omf/gdm/gdm-ko.omf
 share/omf/gdm/gdm-oc.omf
 share/omf/gdm/gdm-sv.omf
 share/omf/gdm/gdm-uk.omf
-share/pixmaps/${OPSYS}.xpm
+share/pixmaps/NetBSD.xpm
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
 share/pixmaps/faces/butterfly.png
