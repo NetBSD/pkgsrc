@@ -6,9 +6,7 @@ the the Linux x86 flash player in Firefox browsers on other x86
 systems.
 
 Systems tested with nspluginwrapper:
-    - NetBSD 3.1			- works
-    - NetBSD 3.99.21, 4.0_BETA2, 4.99.9	- works
-    - NetBSD 4.99.15, 4.99.16 		- does not work
+    - NetBSD 3.1, 4.0, 4.99.x		- works
     - firefox 1.5.0.x, 2.0.0.x		- works
     - firefox-gtk1 (any version)	- does not work
     - seamonkey 1.1.x			- works
