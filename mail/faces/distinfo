@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2006/01/08 14:30:01 tron Exp $
+$NetBSD: distinfo,v 1.13 2007/12/16 14:48:30 tron Exp $
 
 SHA1 (faces-1.6.1.tar.Z) = 8402a74e43e78345c23a975a417c2407322db65f
 RMD160 (faces-1.6.1.tar.Z) = fdf0d1eca4d094b0b50c00c627082c78ae5dd195
@@ -25,7 +25,7 @@ SHA1 (patch-as) = 3751bb0603637db885263d49a50769c7d6c39377
 SHA1 (patch-at) = ee84e7a191c0db0f278be753562ba086050a7f8c
 SHA1 (patch-au) = 582e9ad10b44e2e8af10c5c5e8682a7bfe508318
 SHA1 (patch-av) = 0167d89f23dcc997af9a9b9ab78439d5840e0724
-SHA1 (patch-aw) = a53df4bc5b1eb696bc9416f7109d152d735b76f7
+SHA1 (patch-aw) = 654de6c7e5e1164fad2bbd60606f50cb45ad8da3
 SHA1 (patch-ax) = d815d247fbbfe9a0553bd3c2187d842269d36000
 SHA1 (patch-ay) = 47cfbfb581fcfb9a781c76dd9dfdcd410ce39a93
 SHA1 (patch-az) = 1d753d201e2c4790a027b0ccad1da3ce02e20085
