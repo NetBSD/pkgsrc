@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2006/07/26 13:30:24 joerg Exp $
+$NetBSD: patch-an,v 1.2 2007/12/16 13:42:10 tron Exp $
 
 --- config.tests/x11/xrandr.test.orig	2006-07-26 12:20:40.000000000 +0000
 +++ config.tests/x11/xrandr.test
@@ -26,7 +26,7 @@ $NetBSD: patch-an,v 1.1 2006/07/26 13:30:24 joerg Exp $
 +	    break
 +	fi
 +    done
-+    if [ -z "$F" -o -z "$F2"]
++    if [ -z "$F" -o -z "$F2" ]
      then
  	XRANDR=no
  	[ "$VERBOSE" = "yes" ] && echo "  Could not find $INC anywhere in $INCDIRS"
