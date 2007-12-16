@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2006/11/05 17:09:00 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2007/12/16 14:25:14 cjep Exp $
 #
 
 DISTNAME=		fam-2.7.0
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		sysutils devel
 MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/	\
 			ftp://ftp.tuwien.ac.at/opsys/linux/gentoo/distfiles/ \
