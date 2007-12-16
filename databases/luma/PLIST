@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/08 18:29:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/16 15:07:18 adam Exp $
 bin/luma
 lib/luma/__init__.py
 lib/luma/__init__.pyc
@@ -28,7 +28,6 @@ lib/luma/base/gui/BaseSelectorDesign.pyc
 lib/luma/base/gui/BaseSelectorDesign.ui
 lib/luma/base/gui/ImprovedServerDialog.py
 lib/luma/base/gui/ImprovedServerDialog.pyc
-lib/luma/base/gui/ImprovedServerDialog.ui
 lib/luma/base/gui/ImprovedServerDialogDesign.py
 lib/luma/base/gui/ImprovedServerDialogDesign.pyc
 lib/luma/base/gui/ImprovedServerDialogDesign.ui
@@ -311,6 +310,7 @@ share/luma/i18n/luma_cs.qm
 share/luma/i18n/luma_de.qm
 share/luma/i18n/luma_es.qm
 share/luma/i18n/luma_fr.qm
+share/luma/i18n/luma_it.qm
 share/luma/i18n/luma_no.qm
 share/luma/i18n/luma_no_NY.qm
 share/luma/i18n/luma_ru.qm
@@ -330,13 +330,15 @@ share/luma/icons/AdvancedObjectWidget/single.png
 share/luma/icons/LOGO.README
 share/luma/icons/addattribute.png
 share/luma/icons/alias.png
-share/luma/icons/binary.png
 share/luma/icons/auth32.png
+share/luma/icons/binary.png
 share/luma/icons/binary_big.png
 share/luma/icons/bomb.png
+share/luma/icons/certificate32.png
 share/luma/icons/certificate48.png
 share/luma/icons/clear.png
 share/luma/icons/config.png
+share/luma/icons/config32.png
 share/luma/icons/delete.png
 share/luma/icons/deleteEntry.png
 share/luma/icons/delete_small.png
@@ -381,7 +383,6 @@ share/luma/icons/objectclass.png
 share/luma/icons/ok.png
 share/luma/icons/password_big.png
 share/luma/icons/passwordmedium.png
-share/luma/icons/plugins/addressbook/addressbook.png
 share/luma/icons/plugins/addressbook/category.png
 share/luma/icons/plugins/addressbook/email.png
 share/luma/icons/plugins/addressbook/home.png
@@ -389,13 +390,15 @@ share/luma/icons/plugins/addressbook/location.png
 share/luma/icons/plugins/addressbook/person.png
 share/luma/icons/plugins/addressbook/personal.png
 share/luma/icons/plugins/addressbook/phone.png
+share/luma/icons/plugins/addressbook/plugin.png
 share/luma/icons/plugins/addressbook/url.png
 share/luma/icons/plugins/addressbook/work.png
-share/luma/icons/plugins/admin_utils/admin_utils.png
 share/luma/icons/plugins/admin_utils/date.png
+share/luma/icons/plugins/admin_utils/plugin.png
 share/luma/icons/plugins/admin_utils/secure.png
 share/luma/icons/plugins/browser_plugin/plugin.png
-share/luma/icons/plugins/mass_creation_plugin/massive_users.png
+share/luma/icons/plugins/mass_creation_plugin/plugin.png
+share/luma/icons/plugins/schemabrowser/plugin.png
 share/luma/icons/plugins/search_plugin/plugin.png
 share/luma/icons/plugins/template_plugin/add.png
 share/luma/icons/plugins/template_plugin/down.png
@@ -408,12 +411,13 @@ share/luma/icons/plugins/usermanagement/group.png
 share/luma/icons/plugins/usermanagement/groupbig.png
 share/luma/icons/plugins/usermanagement/home.png
 share/luma/icons/plugins/usermanagement/password.png
+share/luma/icons/plugins/usermanagement/plugin.png
 share/luma/icons/plugins/usermanagement/shell.png
-share/luma/icons/plugins/usermanagement/usermanagement.png
 share/luma/icons/reload.png
 share/luma/icons/save.png
 share/luma/icons/secure-alias.png
 share/luma/icons/secure.png
+share/luma/icons/security32.png
 share/luma/icons/security48.png
 share/luma/icons/server.png
 share/luma/icons/single.png
@@ -433,6 +437,7 @@ share/man/man1/luma.1
 @dirrm share/luma/icons/plugins/usermanagement
 @dirrm share/luma/icons/plugins/template_plugin
 @dirrm share/luma/icons/plugins/search_plugin
+@dirrm share/luma/icons/plugins/schemabrowser
 @dirrm share/luma/icons/plugins/mass_creation_plugin
 @dirrm share/luma/icons/plugins/browser_plugin
 @dirrm share/luma/icons/plugins/admin_utils
