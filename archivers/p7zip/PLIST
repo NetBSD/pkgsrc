@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/07/27 13:43:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/12/16 09:25:22 adam Exp $
 bin/7z
 bin/7za
 ${DYNAMIC_7Z}lib/7z/7z
@@ -48,7 +48,6 @@ share/doc/p7zip/switches/charset.htm
 share/doc/p7zip/switches/exclude.htm
 share/doc/p7zip/switches/include.htm
 share/doc/p7zip/switches/index.htm
-share/doc/p7zip/switches/large_pages.htm
 share/doc/p7zip/switches/list_tech.htm
 share/doc/p7zip/switches/method.htm
 share/doc/p7zip/switches/output_dir.htm
