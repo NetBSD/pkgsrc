@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/09/21 13:03:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/16 14:19:00 drochner Exp $
 #
 
-DISTNAME=	gnome-build-0.1.3
-PKGREVISION=	5
+DISTNAME=	gnome-build-0.2.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-build/0.1/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-build/0.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rillig@NetBSD.org
@@ -13,7 +12,7 @@ COMMENT=	Project management components for GNOME development
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl:run intltool msgfmt
+USE_TOOLS+=	pkg-config perl:run intltool msgfmt gmake
 
 PKGCONFIG_OVERRIDE+=	gnome-build-1.0.pc.in
 
