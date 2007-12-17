@@ -1,3 +1,12 @@
+/*
+ * XXX: Reading the +REQUIRED_BY files of all installed packages is
+ * rather slow. Since this check is necessary to avoid conflicting
+ * packages, it should not be removed.
+ *
+ * TODO: Put all the information that is currently in the +REQUIRED_BY
+ * files into one large file or another database.
+ */
+
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -11,6 +20,14 @@
 #include "dewey.h"
 #include "lib.h"
 
+/**
+ * Data structure to keep the intermediate result of the conflict
+ * search. ''pkgname'' is the package in question. The first
+ * installed package that conflicts is filled into
+ * ''conflicting_pkgname''. The pattern that leads to the conflict is
+ * also filled in to help the user in deciding what to do with the
+ * conflict.
+ */
 struct package_conflict {
 	const char *pkgname;
 	char **conflicting_pkgname;
