@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.48 2007/07/25 23:31:08 wiz Exp $
+$NetBSD: distinfo,v 1.49 2007/12/17 20:40:00 tron Exp $
 
 SHA1 (SDL-1.2.12.tar.gz) = 2c37ff1683368369c0f555d4a742f0544153610d
 RMD160 (SDL-1.2.12.tar.gz) = 3871023c63ea056eba43ce4f55ee8d3a73ff3022
 Size (SDL-1.2.12.tar.gz) = 2829456 bytes
 SHA1 (patch-aa) = 5a3b922c1ad64837d2bc1461723e4f34622b481f
+SHA1 (patch-ab) = f18edd064b28528dec186d26967fdd9455fb9cff
+SHA1 (patch-ac) = 0b14c735e5467e176549576aed5f8e1e2378037a

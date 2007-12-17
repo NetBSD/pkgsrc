@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2007/08/14 14:08:13 tron Exp $
+# $NetBSD: Makefile,v 1.80 2007/12/17 20:40:00 tron Exp $
 
 DISTNAME=	SDL-1.2.12
 CATEGORIES=	devel games
@@ -49,7 +49,14 @@ COCOA_DIRS+=			/System /Library /Developer
 BUILDLINK_PASSTHRU_DIRS+=	${dir}
 .    endif
 .  endfor
+
+# See <http://developer.apple.com/qa/qa2007/qa1567.html>.
+.  if !empty(OS_VERSION:M9.*)
+LDFLAGS+=	-Wl,-dylib_file -Wl,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+.  endif
+
 .endif
+
 
 .include "../../mk/oss.buildlink3.mk"
 
