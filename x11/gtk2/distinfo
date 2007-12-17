@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.94 2007/11/29 22:10:17 drochner Exp $
+$NetBSD: distinfo,v 1.95 2007/12/17 20:24:14 drochner Exp $
 
-SHA1 (gtk+-2.12.2-gtkdoc-html.tar.bz2) = db72858ca5c26bfd49a8ecaf45f0b0d7bf25dcd5
-RMD160 (gtk+-2.12.2-gtkdoc-html.tar.bz2) = e63c4f95c1ac736f517418a3620f78766158df56
-Size (gtk+-2.12.2-gtkdoc-html.tar.bz2) = 925120 bytes
-SHA1 (gtk+-2.12.2.tar.bz2) = 495ff3ef09de44cc23718239967203bd7871b4aa
-RMD160 (gtk+-2.12.2.tar.bz2) = b5cd6b7ec6abf557a6f82c707e0eafb67c813f8d
-Size (gtk+-2.12.2.tar.bz2) = 14723320 bytes
+SHA1 (gtk+-2.12.3.tar.bz2) = 5af5ab069c49189abf223b25736c254da047c712
+RMD160 (gtk+-2.12.3.tar.bz2) = 5da22ae4ac257bd2fcefbe2f374e92b6b0dbcc85
+Size (gtk+-2.12.3.tar.bz2) = 15898599 bytes
 SHA1 (patch-aa) = 507f43c8257607c3ddb194015cc67c5b166a5047
 SHA1 (patch-ad) = f38270c343961be2892d8f2b2f89a67d21f0dc15
 SHA1 (patch-ai) = a71559e7f06a0334f19e3d44288dae5fcecff131
-SHA1 (patch-ba) = 4885469eafd53424d2581d9863119e105a4fdc41
