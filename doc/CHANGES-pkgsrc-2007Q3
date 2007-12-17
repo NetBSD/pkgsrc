@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.23 2007/12/17 16:28:10 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.24 2007/12/17 21:51:32 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -65,3 +65,13 @@ Pullup ticket 2247 - requested by tron
 security update for openoffice2-bin
 Pullup ticket 2248 - requested by tron
 security update for wireshark
+Pullup ticket 2217 - requested by joerg
+security update for py-django
+Pullup ticket 2237 - requested by mishka
+bugfix for mrtg
+Pullup ticket 2208 - requested by tnn
+build fix for sawfish
+Pullup ticket 2221 - requested by drochner
+build fix for kphotobook
+Pullup ticket 2212 - requested by hira
+build fix for p5-Math-Pari
