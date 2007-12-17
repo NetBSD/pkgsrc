@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/29 20:42:13 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/17 16:50:45 drochner Exp $
 #
 
 DISTNAME=	gnome-control-center-2.20.1
@@ -20,7 +20,6 @@ CONFLICTS+=		gnome2-control-center-[0-9]* control-center-[0-9]*
 
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-hal
-CONFIGURE_ARGS+=	--enable-aboutme
 CONFIGURE_ARGS+=	--with-gstreamer=0.10
 
 CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
@@ -54,6 +53,17 @@ BUILDLINK_API_DEPENDS.gst-plugins0.10-base=	gst-plugins0.10-base>=0.10.1.2
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.12
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-control-center
+PKG_SUPPORTED_OPTIONS=	evolution
+PKG_SUGGESTED_OPTIONS=	evolution
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mevolution)
+CONFIGURE_ARGS+=	--enable-aboutme
+PLIST_SUBST+=		EVOLUTION=""
+.else
+PLIST_SUBST+=		EVOLUTION="@comment "
+.endif
+
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
@@ -65,7 +75,9 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mevolution)
 .include "../../mail/evolution-data-server/buildlink3.mk"
+.endif
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
