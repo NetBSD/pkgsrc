@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/10/14 17:43:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/12/17 16:30:30 tron Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -80,5 +80,6 @@ share/mysql/mysql_system_tables_data.sql
 share/mysql/mysql_test_data_timezone.sql
 @dirrm share/mysql
 @dirrm share/examples/mysql
+@dirrm share/doc/mysql
 @dirrm lib/mysql
 @dirrm include/mysql
