@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/10/05 21:55:26 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/17 18:55:31 drochner Exp $
 
-DISTNAME=	gcompris-8.3.3
-PKGREVISION=	3
+DISTNAME=	gcompris-8.4.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcompris/}
 
@@ -30,15 +29,14 @@ CONFIGURE_ARGS+=	--enable-gnet
 .include "../../net/gnet/buildlink3.mk"
 .endif
 
-.include "../../audio/libao/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/py-sqlite2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
