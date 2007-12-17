@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:08 agc Exp $
+$NetBSD: distinfo,v 1.2.22.1 2007/12/17 21:41:55 ghen Exp $
 
 SHA1 (kphotobook-0.0.6.tar.gz) = ef02c1a690f83960cdcafa8fff50b64d6226b1f3
 RMD160 (kphotobook-0.0.6.tar.gz) = 50d07978a63fa122e1e955e4cec78c8141c0b729
 Size (kphotobook-0.0.6.tar.gz) = 810271 bytes
 SHA1 (patch-aa) = e8ecee939d3cc86e72e0304f2bff52ead02e54aa
 SHA1 (patch-ab) = 8a49ffa9a665fc92d90152e375688a8bc7dba470
+SHA1 (patch-ac) = 17ab04ab9aa9410abbd74c5915c627858ddfb1af
