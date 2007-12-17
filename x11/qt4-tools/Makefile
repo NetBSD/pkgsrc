@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2007/12/12 11:54:20 markd Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/17 22:19:44 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
@@ -43,7 +42,7 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libQtUiTools.a \
 		${QTPREFIX}/lib/
 .for lib in QtUiTools QtTest
-	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
+	sed -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
 	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${PREFIX}/lib/pkgconfig/
 .endfor
