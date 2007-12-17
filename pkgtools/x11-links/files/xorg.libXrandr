@@ -1,0 +1,8 @@
+# $NetBSD: xorg.libXrandr,v 1.1 2007/12/17 18:20:20 tron Exp $
+#
+include/X11/extensions/Xrandr.h
+lib/libXrandr.2.0.0.dylib
+lib/libXrandr.2.dylib
+lib/libXrandr.dylib
+lib/libXrandr.la
+lib/pkgconfig/xrandr.pc
