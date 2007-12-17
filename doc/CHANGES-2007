@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2658 2007/12/17 12:16:13 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2659 2007/12/17 16:30:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/ruby-gnome2-gtk to 0.16.0nb2 [obache 2007-12-17]
 	Updated mail/libsieve to 2.2.6 [obache 2007-12-17]
 	Updated sysutils/lsof to 4.78.4.0nb2 [tron 2007-12-17]
+	Updated databases/mysql5-client to 5.0.51nb1 [tron 2007-12-17]
