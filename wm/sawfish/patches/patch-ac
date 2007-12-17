@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.2.4.1 2007/12/17 21:31:03 ghen Exp $
+
+--- src/events.c.orig	2007-07-26 19:55:01.000000000 +0200
++++ src/events.c
+@@ -1155,7 +1155,11 @@ shape_notify (XEvent *ev)
+     XShapeEvent *sev = (XShapeEvent *)ev;
+     Lisp_Window *w = find_window_by_id (sev->window);
+     if (w != 0 && sev->window == w->id
+-	&& (sev->kind == ShapeBounding || sev->kind == ShapeInput))
++	&& (sev->kind == ShapeBounding
++#ifdef ShapeInput
++ || sev->kind == ShapeInput
++#endif
++))
+     {
+ 	if (sev->kind == ShapeBounding)
+ 	    w->shaped = sev->shaped ? 1 : 0;

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2007/09/14 15:04:49 tnn Exp $
+$NetBSD: distinfo,v 1.11.2.1 2007/12/17 21:31:03 ghen Exp $
 
 SHA1 (sawfish-1.3.1.tar.gz) = c204129b7b6fdf702580140c39f62c561683216a
 RMD160 (sawfish-1.3.1.tar.gz) = 66de77629ad98e6205c13b7300928616d687c80a
 Size (sawfish-1.3.1.tar.gz) = 1741281 bytes
 SHA1 (patch-aa) = d2883ff092ce4fa86b20f9928dc004cf5bf61e75
 SHA1 (patch-ab) = 21a89c87afa9cb5fdf3b028109b0db9c5991fb1e
+SHA1 (patch-ac) = 5b06b5d5d5ea1c30af3c48f7dc87c7ce2ce29816
