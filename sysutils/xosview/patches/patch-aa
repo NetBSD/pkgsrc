@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.18 2007/11/30 19:32:56 rillig Exp $
+$NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
 
 --- bsd/kernel.cc.orig	2006-02-18 08:36:06.000000000 +0100
-+++ bsd/kernel.cc	2007-10-11 01:53:02.000000000 +0200
++++ bsd/kernel.cc	2007-12-17 21:23:26.000000000 +0100
 @@ -115,8 +115,16 @@
  // in __NetBSD_Version__ for us if needed.
  #if defined(XOSVIEW_NETBSD) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106010000)
@@ -164,3 +164,21 @@ $NetBSD: patch-aa,v 1.18 2007/11/30 19:32:56 rillig Exp $
    }
    *bytesXferred = xferred;
  #else
+@@ -1016,7 +1043,7 @@
+ 
+     while (evptr && i < NUM_INTR) {
+ 
+-      safe_kvm_read((unsigned int)evptr, &evcnt, sizeof(evcnt));
++      safe_kvm_read((u_long)evptr, &evcnt, sizeof(evcnt));
+ 
+       evptr = evcnt.ev_list.tqe_next;
+ 
+@@ -1024,7 +1051,7 @@
+       if (evcnt.ev_type != EVCNT_TYPE_INTR)
+ 	continue;
+ 
+-      safe_kvm_read((unsigned int)evcnt.ev_name, evname, evcnt.ev_namelen);
++      safe_kvm_read((u_long)evcnt.ev_name, evname, evcnt.ev_namelen);
+       // If it's a soft interrupt (has a name that starts with "soft"), skip it.
+       if (!strncmp(evname, "soft", 4))
+ 	continue;
