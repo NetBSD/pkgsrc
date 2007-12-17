@@ -1,0 +1,18 @@
+# $NetBSD: xorg.libICE,v 1.1 2007/12/17 18:20:19 tron Exp $
+#
+include/X11/ICE/ICE.h
+include/X11/ICE/ICEconn.h
+include/X11/ICE/ICElib.h
+include/X11/ICE/ICEmsg.h
+include/X11/ICE/ICEproto.h
+include/X11/ICE/ICEutil.h
+lib/libICE.6.3.0.dylib
+lib/libICE.6.3.dylib
+lib/libICE.6.dylib
+lib/libICE.a
+lib/libICE.dylib
+lib/libICE.la
+lib/libICE.so
+lib/libICE.so.6
+lib/libICE.so.6.3
+lib/pkgconfig/ice.pc
