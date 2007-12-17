@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/09/25 10:54:13 hira Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/12/17 19:31:29 drochner Exp $
 bin/gthumb
 lib/bonobo/servers/GNOME_GThumb.server
 lib/gthumb/modules/libduplicates.la
@@ -22,6 +22,11 @@ share/gnome/help/gthumb/es/figures/main-win.png
 share/gnome/help/gthumb/es/figures/nav-button.png
 share/gnome/help/gthumb/es/figures/preferences.png
 share/gnome/help/gthumb/es/gthumb.xml
+share/gnome/help/gthumb/fr/figures/comment.png
+share/gnome/help/gthumb/fr/figures/main-win.png
+share/gnome/help/gthumb/fr/figures/nav-button.png
+share/gnome/help/gthumb/fr/figures/preferences.png
+share/gnome/help/gthumb/fr/gthumb.xml
 share/gnome/help/gthumb/sv/figures/comment.png
 share/gnome/help/gthumb/sv/figures/main-win.png
 share/gnome/help/gthumb/sv/figures/nav-button.png
@@ -171,6 +176,7 @@ share/locale/zh_HK/LC_MESSAGES/gthumb.mo
 share/locale/zh_TW/LC_MESSAGES/gthumb.mo
 share/omf/gthumb/gthumb-C.omf
 share/omf/gthumb/gthumb-es.omf
+share/omf/gthumb/gthumb-fr.omf
 share/omf/gthumb/gthumb-sv.omf
 @dirrm share/omf/gthumb
 @comment in scrollkeeper: @dirrm share/omf
@@ -187,6 +193,8 @@ share/omf/gthumb/gthumb-sv.omf
 @dirrm share/gthumb
 @dirrm share/gnome/help/gthumb/sv/figures
 @dirrm share/gnome/help/gthumb/sv
+@dirrm share/gnome/help/gthumb/fr/figures
+@dirrm share/gnome/help/gthumb/fr
 @dirrm share/gnome/help/gthumb/es/figures
 @dirrm share/gnome/help/gthumb/es
 @dirrm share/gnome/help/gthumb/C/figures
