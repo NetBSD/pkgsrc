@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/11/29 20:14:26 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/17 16:45:11 drochner Exp $
 
 DISTNAME=	gnome-keyring-2.20.2
 CATEGORIES=	security gnome
@@ -21,16 +21,10 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/gnome-keyring-1.pc.in
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-pre-configure:
-	${LN} -fs /usr/include/pam ${BUILDLINK_DIR}/include/security
-.endif
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
