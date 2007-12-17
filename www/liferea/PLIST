@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/10/20 00:17:33 tnn Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/12/17 19:10:02 drochner Exp $
 bin/liferea
 bin/liferea-add-feed
 bin/liferea-bin
@@ -72,6 +72,7 @@ share/liferea/media/xspf_license.txt
 share/liferea/media/xspf_player_slim.swf
 share/liferea/node_source.glade
 share/liferea/opml/feedlist.opml
+share/liferea/opml/feedlist_bg.opml
 share/liferea/opml/feedlist_ca.opml
 share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
@@ -79,6 +80,8 @@ share/liferea/opml/feedlist_eu.opml
 share/liferea/opml/feedlist_fr.opml
 share/liferea/opml/feedlist_nl.opml
 share/liferea/opml/feedlist_pl.opml
+share/liferea/opml/feedlist_pt_BR.opml
+share/liferea/opml/feedlist_ru.opml
 share/liferea/opml/feedlist_sk.opml
 share/liferea/opml/feedlist_sv.opml
 share/liferea/opml/feedlist_tr.opml
