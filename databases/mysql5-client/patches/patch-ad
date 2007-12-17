@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2007/07/15 19:22:06 tron Exp $
+$NetBSD: patch-ad,v 1.6.2.1 2007/12/17 15:26:49 ghen Exp $
 
 --- Makefile.in.orig	2007-07-04 14:10:07.000000000 +0100
 +++ Makefile.in	2007-07-15 17:20:48.000000000 +0100
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.6 2007/07/15 19:22:06 tron Exp $
 -			@sql_union_dirs@ @man_dirs@ tests \
 -			netware @libmysqld_dirs@ \
 -			@bench_dirs@ support-files @tools_dirs@
-+SUBDIRS = . include strings @sql_client_dirs@ scripts man
++SUBDIRS = . include @docs_dirs@ strings @sql_client_dirs@ scripts man
  
  DIST_SUBDIRS = . include @docs_dirs@ zlib \
  			@readline_topdir@ sql-common \

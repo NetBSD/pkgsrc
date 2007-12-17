@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/05/21 04:39:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10.4.1 2007/12/17 15:26:47 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--enable-thread-safe-client
 UNWRAP_FILES+=		scripts/mysql_config
 INFO_FILES=		yes
 
-INSTALLATION_DIRS+=	share/examples/mysql
+INSTALLATION_DIRS_FROM_PLIST=	yes
 
 post-install:
 	cd ${WRKSRC}; for f in mysql.info mysql.info-[0-9]*; do		\
@@ -25,6 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/support-files/my-${f}.cnf.sh \
 		${PREFIX}/share/examples/mysql/my-${f}.cnf
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/Docs/manual.chm ${DESTDIR}${PREFIX}/share/doc/mysql/
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
