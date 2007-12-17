@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/08/09 21:42:42 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10.10.1 2007/12/17 21:10:23 ghen Exp $
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgindexmaker
@@ -10,6 +10,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/BER.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/MRTG_lib.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/SNMP_Session.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/SNMP_util.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Net_SNMP_util.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/locales_mrtg.pm
 man/man1/mrtg-contrib.1
 man/man1/mrtg-faq.1

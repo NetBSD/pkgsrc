@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2007/05/16 09:01:13 martti Exp $
+# $NetBSD: Makefile,v 1.80.4.1 2007/12/17 21:10:22 ghen Exp $
 
 DISTNAME=	mrtg-2.15.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
 		http://oss.oetiker.ch/mrtg/pub/old/ \
@@ -72,6 +73,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/mrtg2/BER.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
+	  ${WRKSRC}/lib/mrtg2/Net_SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/MRTG_lib.pm \
 	  ${WRKSRC}/lib/mrtg2/locales_mrtg.pm \
 	  ${PERL5_INSTALLVENDORLIB}
