@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2007/10/15 11:59:49 abs Exp $
+# $NetBSD: Makefile.common,v 1.69 2007/12/17 18:21:31 tron Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	-prefix ${QTPREFIX}
 CONFIGURE_ARGS+=	-shared -sm -thread \
 			-system-zlib -system-libpng \
 			-system-libmng -system-libjpeg \
-			${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
+			${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//:S/-dylib_file//:C/.*\.dylib\:.*\.dylib//}
 CONFIGURE_ARGS+=	-qt-gif	# qt3 does not write compressed GIFs
 
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
@@ -123,7 +123,7 @@ pre-configure:
 		-e 's:@LIBTOOL@:${LIBTOOL}:g' \
 		-e 's:@CC@:${CC}:g' \
 		-e 's:@CXX@:${CXX}:g' \
-		-e 's:@LDFLAGS@:${LDFLAGS}:g' \
+		-e 's:@LDFLAGS@:${LDFLAGS:S/:/\\:/g}:g' \
 		-e 's:@CFLAGS@:${CFLAGS}:g' \
 		-e 's:@CXXFLAGS@:${CXXFLAGS}:g' \
 		-e 's:@SYS_LIBS@:${SYS_LIBS}:g' \
