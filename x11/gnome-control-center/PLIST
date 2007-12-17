@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/29 20:42:13 drochner Exp $
-bin/gnome-about-me
+@comment $NetBSD: PLIST,v 1.3 2007/12/17 16:50:45 drochner Exp $
+${EVOLUTION}bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
@@ -35,7 +35,7 @@ share/applications/accessibility-keyboard.desktop
 share/applications/at-properties.desktop
 share/applications/default-applications.desktop
 share/applications/display-properties.desktop
-share/applications/gnome-about-me.desktop
+${EVOLUTION}share/applications/gnome-about-me.desktop
 share/applications/gnome-appearance-properties.desktop
 share/applications/gnome-font-viewer.desktop
 share/applications/gnome-network-preferences.desktop
@@ -65,7 +65,7 @@ share/gnome-control-center/glade/acme.glade
 share/gnome-control-center/glade/appearance.glade
 share/gnome-control-center/glade/apply-font.glade
 share/gnome-control-center/glade/at-enable-dialog.glade
-share/gnome-control-center/glade/gnome-about-me.glade
+${EVOLUTION}share/gnome-control-center/glade/gnome-about-me.glade
 share/gnome-control-center/glade/gnome-accessibility-keyboard-properties.glade
 share/gnome-control-center/glade/gnome-default-applications-properties.glade
 share/gnome-control-center/glade/gnome-keybinding-properties.glade
@@ -93,8 +93,8 @@ share/gnome-control-center/pixmaps/bar.png
 share/gnome-control-center/pixmaps/double-click-maybe.png
 share/gnome-control-center/pixmaps/double-click-off.png
 share/gnome-control-center/pixmaps/double-click-on.png
-share/gnome-control-center/pixmaps/gnome-about-me-lock-open.png
-share/gnome-control-center/pixmaps/gnome-about-me-lock.png
+${EVOLUTION}share/gnome-control-center/pixmaps/gnome-about-me-lock-open.png
+${EVOLUTION}share/gnome-control-center/pixmaps/gnome-about-me-lock.png
 share/gnome-control-center/pixmaps/gtk-theme-thumbnailing.png
 share/gnome-control-center/pixmaps/icon-theme-thumbnailing.png
 share/gnome-control-center/pixmaps/keyboard-bell.png
