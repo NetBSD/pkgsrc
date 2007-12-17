@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/03/11 18:42:49 adam Exp $
+$NetBSD: patch-ab,v 1.4.6.1 2007/12/17 15:26:52 ghen Exp $
 
---- tests/Makefile.in.orig	2007-03-05 20:23:23.000000000 +0100
-+++ tests/Makefile.in
-@@ -93,7 +93,7 @@ insert_test_LDADD = $(LDADD)
+--- tests/Makefile.in.orig	2007-11-15 14:08:50.000000000 +0000
++++ tests/Makefile.in	2007-12-13 23:57:31.000000000 +0000
+@@ -96,7 +96,7 @@
  am_mysql_client_test_OBJECTS = mysql_client_test.$(OBJEXT) \
  	my_memmem.$(OBJEXT)
  mysql_client_test_OBJECTS = $(am_mysql_client_test_OBJECTS)
@@ -11,16 +11,16 @@ $NetBSD: patch-ab,v 1.4 2007/03/11 18:42:49 adam Exp $
  am__DEPENDENCIES_2 =
  mysql_client_test_DEPENDENCIES = $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_2)
-@@ -103,7 +103,7 @@ select_test_LDADD = $(LDADD)
+@@ -106,7 +106,7 @@
  thread_test_SOURCES = thread_test.c
  thread_test_OBJECTS = thread_test.$(OBJEXT)
  thread_test_LDADD = $(LDADD)
 -thread_test_DEPENDENCIES = $(top_builddir)/libmysql/libmysqlclient.la
-+thread_test_DEPENDENCIES = 
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
++thread_test_DEPENDENCIES =
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -397,8 +397,7 @@ EXTRA_DIST = auto_increment.res auto_inc
+@@ -404,8 +404,7 @@
  INCLUDES = -I$(top_builddir)/include -I$(top_srcdir)/include \
  			$(openssl_includes)
  
