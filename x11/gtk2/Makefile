@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.150 2007/12/02 11:48:10 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2007/12/17 20:24:13 drochner Exp $
 
-DISTNAME=		gtk+-2.12.2
+DISTNAME=		gtk+-2.12.3
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.12/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/2.12/}
 EXTRACT_SUFX=		.tar.bz2
-
-# temporary hack for 2.12.2: use correctly built html doc
-FIXEDDOC=	gtk+-2.12.2-gtkdoc-html.tar.bz2
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${FIXEDDOC}
-SITES.${FIXEDDOC}=	${MASTER_SITE_LOCAL}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
@@ -63,15 +57,6 @@ SUBST_STAGE.pthread=	pre-configure
 SUBST_MESSAGE.pthread=	Fixing pthread flags.
 SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
-
-# XXX temporary hack, remove on update
-# The gtk-doc (html) docs are not properly packaged in 2.12.2.
-# Will hopefully fixed in the next gtk release.
-USE_TOOLS+=	bzcat tar
-post-configure:
-	${BZCAT} <${DISTDIR}/${DIST_SUBDIR}/${FIXEDDOC} | \
-		(cd ${WRKDIR} && ${TAR} xf -)
-	(cd ${WRKSRC}/docs/reference/gtk && ${GMAKE} just-copy-images)
 
 .include "options.mk"
 
