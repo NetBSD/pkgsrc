@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.22 2007/12/10 17:08:39 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.23 2007/12/17 16:28:10 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -57,3 +57,11 @@ Pullup ticket 2243 - requested by taca
 bugfix update for squirrelmail (squirrelmail-japanese option)
 Pullup ticket 2244 - requested by minskim
 security update for ruby-actionpack
+Pullup ticket 2245 - requested by tron
+security update for mysql5
+Pullup ticket 2246 - requested by martti
+security update for squirrelmail
+Pullup ticket 2247 - requested by tron
+security update for openoffice2-bin
+Pullup ticket 2248 - requested by tron
+security update for wireshark
