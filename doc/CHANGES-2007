@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2655 2007/12/16 21:58:15 seb Exp $
+$NetBSD: CHANGES-2007,v 1.2656 2007/12/17 03:00:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4819,3 +4819,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated comms/efax-gtk to 3.0.16 [adam 2007-12-16]
 	Updated pkgtools/x11-links to 0.33 [tron 2007-12-16]
 	Updated devel/p5-Object-InsideOut to 3.34 [seb 2007-12-16]
+	Updated x11/ruby-gnome2-gtk to 0.16.0nb2 [obache 2007-12-17]
