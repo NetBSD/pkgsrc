@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2659 2007/12/17 16:30:47 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2660 2007/12/17 18:20:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4823,3 +4823,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/libsieve to 2.2.6 [obache 2007-12-17]
 	Updated sysutils/lsof to 4.78.4.0nb2 [tron 2007-12-17]
 	Updated databases/mysql5-client to 5.0.51nb1 [tron 2007-12-17]
+	Updated pkgtools/x11-links to 0.34 [tron 2007-12-17]
