@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.12 2007/11/21 21:01:40 apb Exp $
+$NetBSD: patch-af,v 1.13 2007/12/17 11:13:41 tron Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 23:54:15.000000000 +0200
 +++ dialects/n+obsd/dlsof.h
@@ -50,7 +50,7 @@ $NetBSD: patch-af,v 1.12 2007/11/21 21:01:40 apb Exp $
 +#define NCACHE_VROOT    VV_ROOT
 +#else
 +#define VNODE_VFLAG     v_flag
-+#define NCACHE_VROOT    V_ROOT
++#define NCACHE_VROOT    VROOT
 +#endif  /* VV_ROOT */
 +
  #endif	/* NETBSD_LSOF_H */
