@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/07/03 19:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2007/12/17 22:13:42 tron Exp $
 
 DISTNAME=	xvidcore-1.1.3
 CATEGORIES=	multimedia
@@ -17,7 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # nor on amd64 -- they are not PIC, but the ABI demands it
 # big patch available from Gentoo, if someone is interested:
 # http://bugs.gentoo.org/show_bug.cgi?id=90287
-.if ${OPSYS} == "SunOS" || ${MACHINE_ARCH} == "x86_64"
+.if ${OPSYS} == "SunOS" || ${MACHINE_ARCH} == "x86_64" || \
+    !empty(MACHINE_PLATFORM:MDarwin-[9].*-i386)
 CONFIGURE_ARGS+=	--disable-assembly
 .elif ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
