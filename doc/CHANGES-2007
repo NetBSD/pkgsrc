@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2662 2007/12/17 22:11:47 veego Exp $
+$NetBSD: CHANGES-2007,v 1.2663 2007/12/17 22:23:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4826,3 +4826,11 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/x11-links to 0.34 [tron 2007-12-17]
 	Updated graphics/gimp to 2.4.3 [adam 2007-12-17]
 	Updated sysutils/xosview to 1.8.3nb2 [veego 2007-12-17]
+	Updated x11/qt4 to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-libs to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-tools to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-docs to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-pgsql to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-sqlite3 to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-tiff to 4.3.3 [adam 2007-12-17]
+	Updated x11/qt4-qdbus to 4.3.3 [adam 2007-12-17]
