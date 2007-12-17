@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/09/21 13:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2007/12/17 22:04:38 drochner Exp $
 #
 
 DISTNAME=		wv2-0.2.3
@@ -11,7 +11,6 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://wvware.sourceforge.net/
 COMMENT=		Library to access Microsoft Word files
 
-USE_GNU_ICONV=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
