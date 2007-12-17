@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2660 2007/12/17 18:20:33 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2661 2007/12/17 19:09:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4824,3 +4824,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/lsof to 4.78.4.0nb2 [tron 2007-12-17]
 	Updated databases/mysql5-client to 5.0.51nb1 [tron 2007-12-17]
 	Updated pkgtools/x11-links to 0.34 [tron 2007-12-17]
+	Updated graphics/gimp to 2.4.3 [adam 2007-12-17]
