@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2007/08/14 19:59:17 veego Exp $
-#
+# $NetBSD: Makefile,v 1.94 2007/12/17 12:15:59 tron Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
@@ -28,6 +27,14 @@ OSVERSION_SPECIFIC=	yes
 
 TMPWRK=			${WRKDIR}/${DISTNAME}
 SRCBALL_NAME=		${DISTNAME}_src
+
+REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
+		scripts/list_NULf.perl5 scripts/big_brother.perl5 \
+		scripts/identd.perl5 scripts/shared.perl5 \
+		scripts/idrlogin.perl5 scripts/count_pf.perl \
+		scripts/idrlogin.perl scripts/list_fields.perl \
+		scripts/watch_a_file.perl
+USE_TOOLS+=	gtar perl:run
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
