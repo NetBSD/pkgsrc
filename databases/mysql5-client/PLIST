@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/07/15 19:22:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2007/12/17 15:26:48 ghen Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
@@ -57,6 +57,7 @@ include/mysql/sslopt-case.h
 include/mysql/sslopt-longopts.h
 include/mysql/sslopt-vars.h
 include/mysql/typelib.h
+info/mysql.info
 lib/mysql/libmysqlclient.la
 lib/mysql/libmysqlclient_r.la
 man/man1/mysql.1
@@ -66,6 +67,7 @@ man/man1/mysqlaccess.1
 man/man1/mysqladmin.1
 man/man1/mysqldump.1
 man/man1/mysqlshow.1
+share/doc/mysql/manual.chm
 share/examples/mysql/my-huge.cnf
 share/examples/mysql/my-innodb-heavy-4G.cnf
 share/examples/mysql/my-large.cnf

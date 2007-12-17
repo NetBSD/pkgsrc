@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2007/07/15 19:22:06 tron Exp $
+# $NetBSD: Makefile.common,v 1.25.2.1 2007/12/17 15:26:48 ghen Exp $
 
-DISTNAME=		mysql-5.0.45
+DISTNAME=		mysql-5.0.51
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -46,9 +46,6 @@ CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
 # We always use our own readline, either system- or pkgsrc-supplied.
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-libedit
-
-# This forces mysql.info _not_ to be rebuilt.
-CONFIGURE_ARGS+=	--without-docs
 
 # Speed up production one-time builds; see "./configure --help" for
 # more information on using or disabling this option.
