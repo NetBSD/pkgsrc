@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2656 2007/12/17 03:00:29 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2657 2007/12/17 11:42:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4820,3 +4820,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated pkgtools/x11-links to 0.33 [tron 2007-12-16]
 	Updated devel/p5-Object-InsideOut to 3.34 [seb 2007-12-16]
 	Updated x11/ruby-gnome2-gtk to 0.16.0nb2 [obache 2007-12-17]
+	Updated mail/libsieve to 2.2.6 [obache 2007-12-17]
