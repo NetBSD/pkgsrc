@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2007/12/17 19:06:55 drochner Exp $
 
---- Makefile.orig	2007-11-11 18:37:32.000000000 +0100
+--- Makefile.orig	2007-12-03 11:30:40.000000000 +0100
 +++ Makefile
 @@ -10,7 +10,7 @@
- VERSION=1.7.2
+ VERSION=1.7.4
  
  # define install target dirs
 -prefix=/usr
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
  bindir=$(prefix)/bin
  datadir=$(prefix)/share
  
-@@ -103,7 +103,7 @@ FLAGS=$(CFLAGS)
+@@ -112,7 +112,7 @@ FLAGS=$(CFLAGS)
  BIN=./bin
  OBJ=./bin
  
@@ -20,20 +20,20 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
  ifdef OSX_BUILD
   INSTALL=install -c
  endif 
-@@ -131,7 +131,7 @@ CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DEN
+@@ -140,7 +140,7 @@ CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DEN
  ifdef WINDIR
   LD=$(QL) $(CXX) $(DEBUG) $(PROFILE) $(LDFLAGS) -L$(OBJ) -lz 
  else
 - LD=$(QL) $(CXX) $(DEBUG) $(PROFILE) $(LDFLAGS) -ldl
 + LD=$(QL) $(CXX) $(DEBUG) $(PROFILE) $(LDFLAGS) -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lz
- endif 
+ endif
  
- #
-@@ -158,7 +158,6 @@ OBJS= $(OBJ)/main.o $(OBJ)/support.o $(O
+ ifndef OSX_BUILD 
+@@ -171,7 +171,6 @@ OBJS= $(OBJ)/main.o $(OBJ)/support.o $(O
   $(OBJ)/IOLayerRedirect.o $(OBJ)/FileExportDlg.o $(OBJ)/FormatIOTxt.o $(OBJ)/FindReplaceDlg.o \
   $(OBJ)/FindReplaceInfo.o $(OBJ)/LinkInfo.o $(OBJ)/LinkPropertiesDlg.o $(OBJ)/ExecuteFile.o \
   $(OBJ)/FileSaveAsDlg.o $(OBJ)/CircularBuffer.o $(OBJ)/FormatIOMMLX.o \
 - $(OBJ)/libz.a \
   $(OBJ)/ProgressDlg.o $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o \
   $(OBJ)/FileAttachmentDlg.o $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o \
-  $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o $(OBJ)/EditDlg.o
+  $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o $(OBJ)/EditDlg.o \
