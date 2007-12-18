@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/02/16 14:40:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/12/18 08:16:11 martti Exp $
 bin/clamav-config
 bin/clamconf
 bin/clamdscan
@@ -7,6 +7,8 @@ bin/freshclam
 bin/sigtool
 include/clamav.h
 lib/libclamav.la
+lib/libclamunrar.la
+lib/libclamunrar_iface.la
 lib/pkgconfig/libclamav.pc
 man/man1/clamconf.1
 man/man1/clamdscan.1
