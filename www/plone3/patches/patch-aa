@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/18 15:47:05 taca Exp $
+
+# Fix close Plone's bug ticket #7492.
+
+--- lib/python/plone/app/vocabularies/workflow.py.orig	2007-12-08 08:43:08.000000000 +0900
++++ lib/python/plone/app/vocabularies/workflow.py
+@@ -5,6 +5,8 @@ from zope.schema.vocabulary import Simpl
+ from zope.i18nmessageid import MessageFactory
+ from zope.i18n import translate
+ 
++from Acquisition import aq_get
++
+ from Products.CMFCore.utils import getToolByName
+ _ = MessageFactory('plone')
+ 
+@@ -29,9 +31,12 @@ class WorkflowStatesVocabulary(object):
+ 
+     def __call__(self, context):
+         context = getattr(context, 'context', context)
++	# XXX This is evil. A vocabulary shouldn't be request specific.
++        # The sorting should go into a separate widget.
++        request = aq_get(context, 'REQUEST', None)
+         wtool = getToolByName(context, 'portal_workflow')
+         items = wtool.listWFStatesByTitle(filter_similar=True)
+-        items_dict = dict([(i[1], translate(_(i[0]), context=context)) for i in items])
++        items_dict = dict([(i[1], translate(_(i[0]), context=request)) for i in items])
+         items_list = [(k, v) for k, v in items_dict.items()]
+         items_list.sort(lambda x, y: cmp(x[1], y[1]))
+         terms = [SimpleTerm(k, title=u'%s [%s]' % (v, k)) for k, v in items_list]
