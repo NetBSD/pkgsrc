@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.53 2007/12/12 01:00:40 markd Exp $
+# $NetBSD: defaults.mk,v 1.54 2007/12/18 10:18:49 markd Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -66,6 +66,7 @@ _TOOLS_VARNAME.chown=		CHOWN
 _TOOLS_VARNAME.cmake=		CMAKE
 _TOOLS_VARNAME.cmp=		CMP
 _TOOLS_VARNAME.cp=		CP
+_TOOLS_VARNAME.cpack=		CPACK
 _TOOLS_VARNAME.csh=		CSH
 _TOOLS_VARNAME.cut=		CUT
 _TOOLS_VARNAME.date=		DATE
