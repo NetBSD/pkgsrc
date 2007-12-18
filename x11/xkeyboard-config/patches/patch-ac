@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+
+--- symbols/group.orig	2007-09-26 07:56:42.000000000 -0400
++++ symbols/group
+@@ -317,3 +317,15 @@ xkb_symbols "alt_caps_toggle" {
+     };
+ };
+ 
++
++// using the group(sclk_toggle) map, pressing the Scroll Lock key
++// toggles groups.
++partial modifier_keys
++xkb_symbols "sclk_toggle" {
++  virtual_modifiers AltGr;
++  key <SCLK> {
++    virtualMods= AltGr,
++    symbols[Group1] = [ ISO_Next_Group ]
++    };
++};
++

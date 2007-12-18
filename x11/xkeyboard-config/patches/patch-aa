@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+
+--- rules/base.o_s.part.orig	2007-07-16 04:24:28.000000000 -0400
++++ rules/base.o_s.part
+@@ -64,6 +64,7 @@
+   keypad:legacy_wang         =	+keypad(legacy_wang)
+   keypad:oss_wang         =	+keypad(oss_wang)
+   keypad:future_wang         =	+keypad(future_wang)
++  keypad:comma          =       +keypad(comma)
+   nbsp:none             =	+nbsp(none)
+   nbsp:level2           =	+nbsp(level2)
+   nbsp:level3           =	+nbsp(level3)
