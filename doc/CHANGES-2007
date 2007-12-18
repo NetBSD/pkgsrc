@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2667 2007/12/18 11:41:29 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2668 2007/12/18 15:57:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4840,3 +4840,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated mail/clamav to 0.92 [martti 2007-12-18]
 	Updated devel/netbsd-iscsi-initiator to 20071218 [agc 2007-12-18]
 	Updated devel/netbsd-iscsi-target to 20071218 [agc 2007-12-18]
+	Updated www/zope29 to 2.9.8 [taca 2007-12-18]
+	Added www/zope210 version 2.10.5 [taca 2007-12-18]
+	Added www/plone25 version 2.5.5 [taca 2007-12-18]
+	Added www/plone3 version 3.0.4 [taca 2007-12-18]
