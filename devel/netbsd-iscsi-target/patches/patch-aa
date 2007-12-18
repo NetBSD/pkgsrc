@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2007/12/17 12:26:26 agc Exp $
+$NetBSD: patch-aa,v 1.3 2007/12/18 11:30:09 agc Exp $
 
 --- src/Makefile.in.orig	2006-06-03 00:39:22.000000000 +0000
 +++ src/Makefile.in
-@@ -16,11 +16,12 @@
+@@ -16,9 +16,9 @@
  SYSCONFDIR=@sysconfdir@
  
  CC= @CC@
@@ -14,16 +14,4 @@ $NetBSD: patch-aa,v 1.2 2007/12/17 12:26:26 agc Exp $
 +PTHREAD_LIBS?= -lpthread
  GCC_CFLAGS= -Wall -Wstrict-prototypes -fno-strict-aliasing -fno-common -Wno-trigraphs
  COMMON_CFLAGS += -DCONFIG_ISCSI_DEBUG -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
-+COMMON_CFLAGS += -DHAVE_CONFIG_H
- CFLAGS= @CFLAGS@ ${GCC_CFLAGS} ${COMMON_CFLAGS} -I${INCLUDE} ${PTHREAD_FLAGS}
- LIBS= @LIBS@
- 
-@@ -64,7 +65,7 @@
- 
- osd_ops.o: $(INCLUDE)/iscsiutil.h $(INCLUDE)/osd.h $(INCLUDE)/osd_ops.h osd_ops.c
- util.o: util.c $(INCLUDE)/iscsiutil.h
--parameters.o: parameters.c $(INCLUDE)/parameters.h $(INCLUDE)/iscsiutil.h md5.c 
-+parameters.o: parameters.c $(INCLUDE)/parameters.h $(INCLUDE)/iscsiutil.h
- usocktest.o: usocktest.c $(INCLUDE)/iscsiutil.h
- disk.o: disk.c  $(INCLUDE)/device.h $(INCLUDE)/iscsiutil.h $(INCLUDE)/iscsi.h
- osd.o: osd.c $(INCLUDE)/osd.h $(INCLUDE)/device.h $(INCLUDE)/iscsiutil.h $(INCLUDE)/iscsi.h
+ COMMON_CFLAGS += -DHAVE_CONFIG_H
