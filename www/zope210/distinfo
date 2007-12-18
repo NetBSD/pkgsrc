@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/12/18 15:35:22 taca Exp $
+
+SHA1 (Zope-2.10.5-final.tgz) = e23b9bdce30c799a91ef375759e11dff43b796b8
+RMD160 (Zope-2.10.5-final.tgz) = 028656274059c385d7f6f1b5e6ff09017696c440
+Size (Zope-2.10.5-final.tgz) = 7236917 bytes
+SHA1 (patch-aa) = 85124be8493036eb8b835c5050cac98d8e808aff
+SHA1 (patch-ab) = fb9da4fcf47fa1ec0119ff94f9e3124135016d2d
+SHA1 (patch-ac) = 62f2bcbaeb6bd064cbcbea2e2fa0d36a2c8bbf48
+SHA1 (patch-ad) = 7bc7ef78c2367324deaedd326015f9fd2f0b027a
+SHA1 (patch-ae) = 427deb06bbed0f0b23efa14ce1ad5f820d2f3d0f
+SHA1 (patch-af) = 3b352c8bd6cc8f7360025d3d27267a0319cd6b17
+SHA1 (patch-ag) = dffc88b9d087e01bf853441c4a9064a9184a310f
+SHA1 (patch-ah) = 360c8f69e1f23a9f0dec666d509e03e4ef55d93b
+SHA1 (patch-ai) = d7987483068b677aeab5ceb59dd8261e204065d7
