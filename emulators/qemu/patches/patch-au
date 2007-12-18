@@ -1,3 +1,5 @@
+$NetBSD: patch-au,v 1.4 2007/12/18 00:16:56 joerg Exp $
+
 --- fpu/softfloat-native.h.orig	2007-02-06 00:01:54.000000000 +0100
 +++ fpu/softfloat-native.h	2007-05-02 01:54:50.000000000 +0200
 @@ -33,6 +33,24 @@
