@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1 2007/12/18 15:31:13 taca Exp $
+
+--- skel/etc/zope.conf.in.orig	2007-03-25 18:41:51.000000000 +0900
++++ skel/etc/zope.conf.in
+@@ -90,6 +90,8 @@ instancehome $INSTANCE
+ # Example:
+ #
+ #    products /home/chrism/projects/myproducts
++products @ZOPE_PRODUCTS_DIR@
++products $INSTANCE/Products
+ 
+ 
+ # Directive: environment
+@@ -147,6 +149,7 @@ instancehome $INSTANCE
+ # Example:
+ #
+ #    effective-user chrism
++effective-user @ZOPE_USER@
+ 
+ 
+ # Directive: enable-product-installation

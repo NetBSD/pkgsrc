@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2007/12/18 15:31:13 taca Exp $
+
+--- setup.py.orig	2007-03-25 18:41:51.000000000 +0900
++++ setup.py
+@@ -493,7 +493,6 @@ def skel_visit(skel, dirname, names):
+     skel.append(("../../" + dirname, L))
+ 
+ installed_data_files = [
+-    ["../../doc", ['doc/*.txt']],
+     ["../../bin", ['utilities/README.txt']],
+     ]
+ 
