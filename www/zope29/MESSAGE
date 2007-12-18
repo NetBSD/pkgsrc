@@ -1,13 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/08/17 11:57:24 darcy Exp $
+$NetBSD: MESSAGE,v 1.2 2007/12/18 15:31:11 taca Exp $
 
 Zope Successfull installed.
 
 To create an instance of Zope please run
-${ZOPEBASEDIR}/bin/mkzopeinstance.py -d <INSTANCEDIR>
+${ZOPE_DIR}/bin/mkzopeinstance.py -d <INSTANCEDIR>
 
 <INSTANCEDIR> is the directory where the instance files should
-              be installed. This can be ${ZOPEBASEDIR}
+be installed. This can be ${ZOPE_DIR}
+but not recommended.
 
 Command-line options to 'mkzopeinstance' are available, and can be
 investigated by running 'mkzopeinstance.py --help'.
@@ -16,37 +17,32 @@ The Instancefiles created by mkzopeinstance.py will not be remove
 when the package is deinstalled. You`ll have to delete them yourself.
 
 If Zope should get started automatically when the system starts,
-please add the following lines to /etc/rc.conf
+please add the following lines to /etc/rc.conf:
 
-zope_enable="YES"
-zope_instances="<INSTANCEDIR>"
+zope${ZOPE_VERSION}${RCVAR_SUFFIX}="YES"
+zope${ZOPE_VERSION}_instances="<INSTANCEDIR>"
+zope${ZOPE_VERSION}_encoding="<ENCODING>"
 
-Additional zope Instances have to be added to zope_instances
+You can optionally specify default character encoding for python
+as <ENCODING> (default is utf-8).
+
+Additional zope Instances have to be added to zope${ZOPE_VERSION}_instances
 seperated by a space.
 
 ** ZEO Instances ** (Optional)
 ** Please refere to http://zope.org/Products/ZEO/ZEOFactSheet
 
 If you want to run a ZEO server please create a ZEO instancen by
-calling ${ZOPEBASEDIR}/bin/mkzopeinstance.py <ZEODIR>
+calling ${ZOPE_DIR}/bin/mkzopeinstance.py <ZEODIR>
 
 To start the ZEO Server at System startup add the following lines to
 /etc/rc.conf
 
-zeo_enable="YES"
-zeo_instances="<ZEODIR>"
+zeo${ZOPE_VERSION}${RCVAR_SUFFIX}="YES"
+zeo${ZOPE_VERSION}_instances="<ZEODIR>"
+zeo${ZOPE_VERSION}_encoding="<ENCODING>"
 
-Additional zeo Instances have to be added to zeo_instances seperated
-by a space.
+Additional zeo Instances have to be added to zeo${ZOPE_VERSION}_instances
+seperated by a space.
 
-**********************************************************************
-****** ATTENTION ***** ATTENTION ***** ATTENTION ***** ATTENTION *****
-
-The default installation directory for Zope Products has changed from
-${ZOPEBASEDIR}/lib/python/Products
-to ${ZOPEBASEDIR}/Products.
-
-You might have to add the following lines to your zope.conf
-products ${ZOPEBASEDIR}/Products
-products $INSTANCE/Products
 ===========================================================================
