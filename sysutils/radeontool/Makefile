@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:56 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/18 17:04:53 rumble Exp $
 
 DISTNAME=	radeontool-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fdd.com/software/radeon/
 
