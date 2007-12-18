@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6909 2007/12/18 15:20:58 hira Exp $
+$NetBSD: TODO,v 1.6910 2007/12/18 15:59:37 taca Exp $
 
 Suggested new packages
 ======================
@@ -1008,8 +1008,6 @@ Suggested package updates
 	o pioneers-0.11.3
 	o pircbot-1.4.4
 	o pkg_select-20051209
-	o plone-2.5.3
-	o plone-3.0.1
 	o ploticus-2.33
 	o ploticus-examples-230
 	o plotutils-2.5
@@ -1374,8 +1372,6 @@ Suggested package updates
 	o zile-2.2.52
 	o zircon-1.18.256
 	o zoom-1.0.5
-	o zope-2.9.8
-	o zope-2.10.4
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-2.0.0
