@@ -1,20 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/24 15:07:35 jmcneill Exp $
---- radeontool.c.orig	2005-01-24 10:39:22.000000000 -0400
-+++ radeontool.c	2005-01-24 10:41:49.000000000 -0400
-@@ -21,7 +21,12 @@
+$NetBSD: patch-aa,v 1.2 2007/12/18 17:03:35 rumble Exp $
+--- radeontool.c.orig	2007-12-17 21:35:53.000000000 -0500
++++ radeontool.c	2007-12-17 21:42:16.000000000 -0500
+@@ -21,7 +21,17 @@
  #include <sys/stat.h>
  #include <fcntl.h>
  #include <sys/mman.h>
 +#ifdef __NetBSD__
-+#include <sys/lock.h>
-+#include <machine/vmparam.h>
++#include <sys/param.h>
++#if __NetBSD_Prereq__(4,99,32)
++#include <sys/mutex.h>
 +#else
++#include <sys/lock.h>
++#endif
++#include <machine/vmparam.h>
++#else /* ! __NetBSD__ */
  #include <asm/page.h>
 +#endif
  
  #include "radeon_reg.h"
  
-@@ -251,7 +256,6 @@
+@@ -251,7 +261,6 @@
      } else if(forkrc == 0) { /* if child */
          close(pipefd[0]);
          dup2(pipefd[1],1);  /* stdout */
@@ -22,7 +27,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/24 15:07:35 jmcneill Exp $
          execlp("lspci","lspci","-v",NULL);
          fatal("exec lspci failure\n");
      }
-@@ -307,7 +311,13 @@
+@@ -307,7 +316,13 @@
         }
         if(debug) 
            printf("%s",line);
