@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6906 2007/12/18 07:23:20 wiz Exp $
+$NetBSD: TODO,v 1.6907 2007/12/18 08:46:54 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -830,6 +830,7 @@ Suggested package updates
 	o netcdf-3.6.2
 	o netperf-2.4.1
 	o netpipe-3.6.2
+	o netqmail-1.06
 	o netramet-50
 	o newmail-1.0.2
 	o newmat-11
