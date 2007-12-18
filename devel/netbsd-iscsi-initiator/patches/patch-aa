@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/14 20:33:47 agc Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/18 11:38:44 agc Exp $
 
 --- src/Makefile.in.orig	2006-06-03 00:39:22.000000000 +0000
 +++ src/Makefile.in
-@@ -16,9 +16,9 @@ MANDIR=$(prefix)/man
+@@ -16,9 +16,9 @@
  SYSCONFDIR=@sysconfdir@
  
  CC= @CC@
@@ -14,4 +14,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/14 20:33:47 agc Exp $
 +PTHREAD_LIBS?= -lpthread
  GCC_CFLAGS= -Wall -Wstrict-prototypes -fno-strict-aliasing -fno-common -Wno-trigraphs
  COMMON_CFLAGS += -DCONFIG_ISCSI_DEBUG -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
- CFLAGS= @CFLAGS@ ${GCC_CFLAGS} ${COMMON_CFLAGS} -I${INCLUDE} ${PTHREAD_FLAGS}
+ COMMON_CFLAGS += -DHAVE_CONFIG_H
