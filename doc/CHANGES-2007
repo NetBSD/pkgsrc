@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2666 2007/12/18 08:16:29 martti Exp $
+$NetBSD: CHANGES-2007,v 1.2667 2007/12/18 11:41:29 agc Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4838,3 +4838,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/pixman to 0.9.6nb1 [bjs 2007-12-18]
 	Updated editors/vim-share to 7.1.175 [martti 2007-12-18]
 	Updated mail/clamav to 0.92 [martti 2007-12-18]
+	Updated devel/netbsd-iscsi-initiator to 20071218 [agc 2007-12-18]
+	Updated devel/netbsd-iscsi-target to 20071218 [agc 2007-12-18]
