@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2668 2007/12/18 15:57:19 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2669 2007/12/18 16:07:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4844,3 +4844,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Added www/zope210 version 2.10.5 [taca 2007-12-18]
 	Added www/plone25 version 2.5.5 [taca 2007-12-18]
 	Added www/plone3 version 3.0.4 [taca 2007-12-18]
+	Added www/zope-ejsplitter version 0.5.1 [taca 2007-12-18]
+	Added www/zope-jamailhost version 0.4.4 [taca 2007-12-18]
