@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/18 17:13:49 rumble Exp $
 
 DISTNAME=		w9wm-0.4.2
 PKGREVISION=		1
 CATEGORIES=		plan9 wm
 MASTER_SITES=		http://www.grassouille.org/code/w9wm/src/
 
-MAINTAINER=		rumble@NetBSD.org
 HOMEPAGE=		http://www.grassouille.org/code/w9wm.en.html
 COMMENT=		8 1/2-like Window Manager for X with virtual desktops
 
