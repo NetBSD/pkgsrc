@@ -1,6 +1,8 @@
---- Makefile.orig	2007-05-02 02:06:53.000000000 +0200
-+++ Makefile	2007-05-02 02:08:59.000000000 +0200
-@@ -66,21 +66,21 @@
+$NetBSD: patch-ak,v 1.11 2007/12/18 00:16:56 joerg Exp $
+
+--- Makefile.orig	2007-02-06 00:01:54.000000000 +0100
++++ Makefile
+@@ -66,21 +66,21 @@ ar      de     en-us  fi  fr-be  hr     
  common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
  install-doc: $(DOCS)
@@ -17,9 +19,9 @@
 -	mkdir -p "$(DESTDIR)$(bindir)"
 -	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
 -	mkdir -p "$(DESTDIR)$(datadir)"
-+	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
-+	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
-+	$(BSD_INSTALL_DATA_DIR) $(datadir)
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(bindir)
++	$(BSD_INSTALL_PROGRAM) $(TOOLS) ${DESTDIR}$(bindir)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(datadir)
  	for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
  		video.x openbios-sparc32 linux_boot.bin pxe-ne2k_pci.bin \
  		pxe-rtl8139.bin pxe-pcnet.bin; do \

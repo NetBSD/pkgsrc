@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/09/10 12:18:13 abs Exp $
+# $NetBSD: Makefile,v 1.49 2007/12/18 00:16:56 joerg Exp $
 #
 
 DISTNAME=		qemu-0.9.0
@@ -8,6 +8,8 @@ MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
 COMMENT=		CPU emulator using dynamic translation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
@@ -58,13 +60,13 @@ CFLAGS+=		-fno-stack-protector
 CONFIGURE_ARGS+=	--disable-gcc-check
 .endif
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/qemu
-	${INSTALL_DATA} ${FILESDIR:Q}/Makefile.multinode-NetBSD \
-		${PREFIX:Q}/share/doc/qemu/
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/doc/qemu
 
-	${INSTALL_MAN} ${WRKSRC}/qemu.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/qemu-img.1 ${PREFIX}/${PKGMANDIR}/man1
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
+		${DESTDIR}${PREFIX}/share/doc/qemu/
+	${INSTALL_MAN} ${WRKSRC}/qemu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/qemu-img.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
