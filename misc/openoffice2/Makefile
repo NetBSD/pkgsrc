@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/12/12 10:07:54 hira Exp $
+# $NetBSD: Makefile,v 1.31 2007/12/18 22:24:29 hira Exp $
 #
 
 OO_VER=			2.3.1
@@ -165,6 +165,14 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
+.endif
+
+# *.pc files are required, but these don't exist on NetBSD.
+.if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
+USE_BUILTIN.freetype2=	no
+USE_BUILTIN.Xfixes=     no
+USE_BUILTIN.Xrandr=     no
+USE_BUILTIN.Xrender=    no
 .endif
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
