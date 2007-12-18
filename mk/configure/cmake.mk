@@ -1,8 +1,7 @@
-# $NetBSD: cmake.mk,v 1.1 2007/12/12 01:00:39 markd Exp $
+# $NetBSD: cmake.mk,v 1.2 2007/12/18 10:18:39 markd Exp $
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
-USE_TOOLS+=	cmake
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
 
