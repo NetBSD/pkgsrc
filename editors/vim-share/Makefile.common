@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.97 2007/11/26 09:06:24 martti Exp $
+# $NetBSD: Makefile.common,v 1.98 2007/12/18 08:15:03 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
 DISTNAME=		vim-${VIM_VERSION}
-DISTFILES=		vim-${VIM_VERSION:Q}${EXTRACT_SUFX:Q}
-DISTFILES+=		vim-${VIM_VERSION:Q}-extra.tar.gz
-DISTFILES+=		vim-${VIM_VERSION:Q}-lang.tar.gz
+DISTFILES=		vim-${VIM_VERSION}${EXTRACT_SUFX}
+DISTFILES+=		vim-${VIM_VERSION}-extra.tar.gz
+DISTFILES+=		vim-${VIM_VERSION}-lang.tar.gz
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/unix/
@@ -17,8 +17,8 @@ SITES.vim-${VIM_VERSION}-extra.tar.gz+=	ftp://ftp.fu-berlin.de/misc/editors/vim/
 SITES.vim-${VIM_VERSION}-lang.tar.gz=	ftp://ftp.vim.org/pub/editors/vim/extra/
 SITES.vim-${VIM_VERSION}-lang.tar.gz+=	ftp://ftp.fu-berlin.de/misc/editors/vim/extra/
 
-PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION:Q}/
-PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION:Q}/
+PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
+PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 
 PATCHFILES+=		7.1.001-100.gz
 PATCHFILES+=		7.1.101 7.1.102 7.1.103 7.1.104 7.1.105 7.1.106 7.1.107
@@ -29,7 +29,9 @@ PATCHFILES+=		7.1.129 7.1.130 7.1.131 7.1.132 7.1.133 7.1.134 7.1.135
 PATCHFILES+=		7.1.136 7.1.137 7.1.138 7.1.139 7.1.140 7.1.141 7.1.142
 PATCHFILES+=		7.1.143 7.1.144 7.1.145 7.1.146 7.1.147 7.1.148 7.1.149
 PATCHFILES+=		7.1.150 7.1.151 7.1.152 7.1.153 7.1.154 7.1.155 7.1.156
-PATCHFILES+=		7.1.157 7.1.158 7.1.159 7.1.160 7.1.161
+PATCHFILES+=		7.1.157 7.1.158 7.1.159 7.1.160 7.1.161 7.1.162 7.1.163
+PATCHFILES+=		7.1.164 7.1.165 7.1.166 7.1.167 7.1.168 7.1.169 7.1.170
+PATCHFILES+=		7.1.171 7.1.172 7.1.173 7.1.174 7.1.175
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
 LICENSE=		vim-license
@@ -47,9 +49,9 @@ MAKE_JOBS_SAFE=		no	# At least on Solaris
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 CONFIGURE_ARGS+=	--enable-multibyte
 
-PATCH_ARGS=		-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
+PATCH_ARGS=		-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
 				-E ${PATCH_STRIP:Q}
-PATCH_DIST_ARGS=	-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
+PATCH_DIST_ARGS=	-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
 				-E ${PATCH_DIST_STRIP:Q}
 PATCHDIR=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
@@ -59,7 +61,7 @@ BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
 .endif
 
 .if empty(PKGNAME:Mvim-share*)
-ALTERNATIVES_SRC=	${.CURDIR:Q}/../../editors/vim-share/ALTERNATIVES
+ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
 .else
 ALTERNATIVES_SRC=
 .endif
