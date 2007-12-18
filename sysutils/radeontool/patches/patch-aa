@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2007/12/18 17:03:35 rumble Exp $
+$NetBSD: patch-aa,v 1.3 2007/12/18 20:45:49 rumble Exp $
 --- radeontool.c.orig	2007-12-17 21:35:53.000000000 -0500
-+++ radeontool.c	2007-12-17 21:42:16.000000000 -0500
++++ radeontool.c	2007-12-18 15:38:46.000000000 -0500
 @@ -21,7 +21,17 @@
  #include <sys/stat.h>
  #include <fcntl.h>
@@ -19,6 +19,15 @@ $NetBSD: patch-aa,v 1.2 2007/12/18 17:03:35 rumble Exp $
  
  #include "radeon_reg.h"
  
+@@ -107,7 +117,7 @@
+         mem_fd, 
+         base
+     );
+-    if ((long)device_mem < 0) {
++    if (device_mem == MAP_FAILED) {
+         if(debug)
+             fprintf(stderr,"mmap returned %d\n",(int)device_mem);
+         fatal("mmap error \n");
 @@ -251,7 +261,6 @@
      } else if(forkrc == 0) { /* if child */
          close(pipefd[0]);
