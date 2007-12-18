@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/12/18 15:42:32 taca Exp $
+
+To complete the installation of Plone:
+
+1. Add "products ${PLONE_DIR}" to your zope.conf
+   before existing "products" directive.
+
+2. Restart Zope.  This may be done from the Zope Control Panel.
+
+3. If you are upgrading from an earlier version:
+
+	- Go http://yoursite/manage
+	- Go to portal_migrations
+	- Click the Migration tab
+	- Click Migrate
+
+NOTE: If you want to use CacheFu product, add package plone-CacehFu.
+
+===========================================================================
