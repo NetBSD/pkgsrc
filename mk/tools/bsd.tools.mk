@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.47 2007/03/15 22:54:25 rillig Exp $
+# $NetBSD: bsd.tools.mk,v 1.48 2007/12/18 10:18:40 markd Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -155,6 +155,7 @@ post-tools:
 .include "${PKGSRCDIR}/mk/tools/ldconfig.mk"
 .include "${PKGSRCDIR}/mk/tools/rpcgen.mk"
 .include "${PKGSRCDIR}/mk/tools/strip.mk"
+.include "${PKGSRCDIR}/mk/tools/cmake.mk"
 .include "${PKGSRCDIR}/mk/tools/imake.mk"
 .include "${PKGSRCDIR}/mk/tools/replace.mk"
 .include "${PKGSRCDIR}/mk/tools/perl.mk"
