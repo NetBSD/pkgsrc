@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2664 2007/12/17 23:40:49 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2665 2007/12/18 00:11:26 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/qt4-tiff to 4.3.3 [adam 2007-12-17]
 	Updated x11/qt4-qdbus to 4.3.3 [adam 2007-12-17]
 	Added math/ruby-rb-gsl version 1.9.2 [minskim 2007-12-17]
+	Updated x11/pixman to 0.9.6nb1 [bjs 2007-12-18]
