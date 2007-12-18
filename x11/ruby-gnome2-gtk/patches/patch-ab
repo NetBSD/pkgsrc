@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.2.2 2007/12/18 09:27:09 ghen Exp $
+
+--- gtk/src/rbgtkmessagedialog.c.orig	2006-12-29 13:17:28.000000000 +0000
++++ gtk/src/rbgtkmessagedialog.c
+@@ -28,7 +28,8 @@ mdiag_initialize(argc, argv, self)
+                                RVAL2GFLAGS(flags, GTK_TYPE_DIALOG_FLAGS), 
+                                RVAL2GENUM(type, GTK_TYPE_MESSAGE_TYPE), 
+                                RVAL2GENUM(buttons, GTK_TYPE_BUTTONS_TYPE),
+-                               (const gchar*)(NIL_P(message) ? "": RVAL2CSTR(message)));
++                               "%s",
++                               NIL_P(message) ? "": RVAL2CSTR(message));
+     RBGTK_INITIALIZE(self, w);
+     return Qnil;
+ }
