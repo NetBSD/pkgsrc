@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.24 2007/12/17 21:51:32 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q3,v 1.1.2.25 2007/12/18 09:35:20 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q3 branch:
@@ -75,3 +75,7 @@ Pullup ticket 2221 - requested by drochner
 build fix for kphotobook
 Pullup ticket 2212 - requested by hira
 build fix for p5-Math-Pari
+Pullup ticket 2250 - requested by CVE-2007-6183
+security fix for ruby-gnome2-gtk
+Pullup ticket 2251 - requested by martti
+latest update for clamav
