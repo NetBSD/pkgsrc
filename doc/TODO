@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6908 2007/12/18 08:58:49 schmonz Exp $
+$NetBSD: TODO,v 1.6909 2007/12/18 15:20:58 hira Exp $
 
 Suggested new packages
 ======================
@@ -868,7 +868,6 @@ Suggested package updates
 	o openldap-client-2.4.7
 	o openmortal-0.7.1
 	o openmotif-2.3
-	o openoffice2-2.3.1
 	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
 	o orca-2.20.2
