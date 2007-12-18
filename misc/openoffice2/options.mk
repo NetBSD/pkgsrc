@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2007/11/11 15:46:25 hira Exp $
+# $NetBSD: options.mk,v 1.17 2007/12/18 22:24:29 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -67,12 +67,6 @@ CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-gtk
-# *.pc files are needed with NetBSD using native XFree86.
-.  if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
-USE_BUILTIN.Xfixes=	no
-USE_BUILTIN.Xrandr=	no
-USE_BUILTIN.Xrender=	no
-.  endif
 .include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
