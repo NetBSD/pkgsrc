@@ -1,16 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+$NetBSD: distinfo,v 1.2 2007/12/19 04:10:43 bjs Exp $
 
 SHA1 (xkeyboard-config-20071217.tar.bz2) = ea42385301c510e0f81c1e7c8d1873f34d3dca13
 RMD160 (xkeyboard-config-20071217.tar.bz2) = 12bfdcd9033b36912a8f698eba7f2ec7b1861079
 Size (xkeyboard-config-20071217.tar.bz2) = 435349 bytes
-SHA1 (patch-aa) = ac43d33901b10e7369bbcb478eaba07c6f792be8
-SHA1 (patch-ab) = 209d4b90ea95403f0bdee0007cd782ff16e64635
-SHA1 (patch-ac) = 66896134f0eea92d8fb9c69d596aeb13d640710d
-SHA1 (patch-ad) = 0184973c9dff5dc186a9bbe132539ddd70e25944
-SHA1 (patch-ae) = da99bb8b22299e50de5f79aed07556397b9e800e
-SHA1 (patch-af) = 27276cf3dec47f9997d750e6d56c6bc8f0f49222
-SHA1 (patch-ag) = 09df52807bd4b0a24b15236f7813c0b7c99697b1
-SHA1 (patch-ah) = 2786c64778643e3880de2fddccc20873f07765a9
-SHA1 (patch-ai) = 9ca96076a2785749a060b6625d72f57ac32bfaff
-SHA1 (patch-aj) = b0624e86a4dba582738dcef71fc97494f96a6874
-SHA1 (patch-ak) = 0fbfe2ba1fda1f522875b222bff19e302456329f
+SHA1 (patch-aa) = 1f6ec615b0915c5d08ac7ddbf2d35948b8859d85
+SHA1 (patch-ab) = c8225979ce3b0e06b02ee71d6675588844ca3e81
