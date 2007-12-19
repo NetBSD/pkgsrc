@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/19 08:13:11 bjs Exp $
 
---- configure.orig	2007-09-23 09:21:10.000000000 -0400
+--- configure.orig	2007-12-17 11:06:05.000000000 -0500
 +++ configure
-@@ -33,7 +33,7 @@ APP_LINGUAS='de ga nl pl ru sv tr vi'
- CFG_AO=ao
+@@ -33,7 +33,7 @@ APP_LINGUAS='ca de es ga nl pl ru sv tr 
+ CFG_AO=oss
  unset CFG_BINEXT
  CFG_CURSES_HEADER=ncurses
 -CFG_CURSES_LIB=ncursesw
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
  CFG_FTELLO=yes
  CFG_HTTP=yes
  CFG_MODPLUG=yes
-@@ -63,7 +63,7 @@ Darwin)
+@@ -66,7 +66,7 @@ Darwin)
  	LDFLAGS="$LDFLAGS -lresolv"
  	[ "$PREFIX" = "" ] && PREFIX=/opt/local
  	;;
 -FreeBSD)
 +FreeBSD|DragonFly)
- 	CFG_AO=oss
  	CFG_SETPROCTITLE=yes
  	[ "$PREFIX" = "" ] && PREFIX=/usr/local
-@@ -97,7 +97,6 @@ Windows)
+ 	[ "$MANDIR" = "" ] && MANDIR=$PREFIX/man
+@@ -98,7 +98,6 @@ Windows)
  	unset CFG_FTELLO
  	unset CFG_HTTP
  	unset CFG_MODPLUG
@@ -28,43 +28,23 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
  	CFG_CURSES_HEADER=curses
  	CFG_CURSES_LIB=pdcurses
  	;;
-@@ -178,7 +177,7 @@ done
- [ "$CFLAGS" = "" ] && CFLAGS="-O"
- CFLAGS="$CFLAGS `pkg-config --cflags glib-2.0 gthread-2.0` \
-     -DAPP_NAME=\\\"$APP_NAME\\\" -DAPP_VERSION=\\\"$APP_VERSION\\\" \
--    -I$PREFIX/include -I$PREFIX/include/ncurses \
-+    -I$PREFIX/include/ncurses -I$PREFIX/include \
-     -DCURSES_HEADER=\\<$CFG_CURSES_HEADER.h\\>"
- if [ $? -ne 0 ]
- then
-@@ -205,7 +204,7 @@ then
- 	if [ "$CFG_SCROBBLER" != "" ]
- 	then
- 		case $OS in
--		FreeBSD)
-+		FreeBSD|DragonFly)
- 			LDFLAGS="$LDFLAGS -lmd"
- 			;;
- 		NetBSD|OpenBSD)
-@@ -321,14 +320,14 @@ oss)
- 	case $OS in
+@@ -325,13 +324,13 @@ oss)
  	NetBSD|OpenBSD)
  		CFLAGS="$CFLAGS -DOSS_HEADER=\\<soundcard.h\\>"
--		CFLAGS_config="-DOSS_DEVICE=\\\"/dev/audio\\\""
--		LDFLAGS="$LDFLAGS -lossaudio"
-+		CFLAGS_config="-DOSS_DEVICE=\\\"$DEVOSSAUDIO\\\""
-+		LDFLAGS="$LDFLAGS"
+ 		LDFLAGS="$LDFLAGS -lossaudio"
+-		OSS_DEVICE="/dev/audio"
++		OSS_DEVICE="$DEVOSSAUDIO"
  		;;
  	*)
  		# The OSS-through-ALSA compat may generate noise
  		[ "$OS" = "Linux" ] && CFLAGS_main="$CFLAGS_main -DCLOSE_STDERR"
  		CFLAGS="$CFLAGS -DOSS_HEADER=\\<sys/soundcard.h\\>"
--		CFLAGS_config="-DOSS_DEVICE=\\\"/dev/dsp\\\""
-+		CFLAGS_config="-DOSS_DEVICE=\\\"$DEVOSSAUDIO\\\""
+-		OSS_DEVICE="/dev/dsp"
++		OSS_DEVICE="$DEVOSSAUDIO"
  		;;
  	esac
- 	;;
-@@ -361,7 +360,7 @@ echo "- Using $CFG_AO audio output"
+ 	CFG_VOLUME=yes
+@@ -375,7 +374,7 @@ echo "- Using $CFG_AO audio output"
  echo
  
  # Perform a simple compiler test
@@ -72,23 +52,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
 +eval ${LIBTOOL} --mode=link $CC $SRCDIR/src/conftest.c $CFLAGS $LDFLAGS -o conftest$CFG_BINEXT
  if [ $? -ne 0 ]
  then
- 	echo "Error: some dependencies are missing; please see README for a list"
-@@ -382,10 +381,10 @@ done
+ 	echo "Error: some dependencies are missing"
+@@ -402,13 +401,13 @@ done
  all: $APP_NAME$CFG_BINEXT $APP_NAME.1.gz $SRCDIR/$APP_NAME.conf.sample $MOS
  $APP_NAME$CFG_BINEXT: $OBJS
  	# Linking $APP_NAME$CFG_BINEXT
 -	$DOIT$CC $OBJS $LDFLAGS -o $APP_NAME$CFG_BINEXT
-+	$DOIT\${LIBTOOL} --mode=link $CC $OBJS $LDFLAGS -o $APP_NAME$CFG_BINEXT
- $APP_NAME.1.gz: $SRCDIR/$APP_NAME.1 Makefile
--	# Generating manual page $APP_NAME.1.gz
--	${DOIT}sed -e 's|%%CONFFILE%%|$CONFFILE|' $SRCDIR/$APP_NAME.1 | gzip -9 > $APP_NAME.1.gz
-+	# Generating manual page $APP_NAME.1
-+	${DOIT}sed -e 's|%%CONFFILE%%|$CONFFILE|' $SRCDIR/$APP_NAME.1 > $APP_NAME.1.tmp && mv $SRCDIR/$APP_NAME.1.tmp $SRCDIR/$APP_NAME.1
++	$DOIT$\${LIBTOOL} --mode=link $CC $OBJS $LDFLAGS -o $APP_NAME$CFG_BINEXT
+ $APP_NAME.1.gz: $MANFILES Makefile
+ 	# Generating manual page $APP_NAME.1.gz
+-	${DOIT}sed $MANREGEX $MANFILES | gzip -9 > $APP_NAME.1.gz
++	${DOIT}sed $MANREGEX $MANFILES > $APP_NAME.1
  clean:
  	# Removing $APP_NAME$CFG_BINEXT $APP_NAME.1.gz *.mo *.o
- 	${DOIT}rm -f $APP_NAME$CFG_BINEXT $APP_NAME.1.gz *.mo *.o
-@@ -394,29 +393,29 @@ distclean: clean
+-	${DOIT}rm -f $APP_NAME$CFG_BINEXT $APP_NAME.1.gz *.mo *.o
++	${DOIT}rm -f $APP_NAME$CFG_BINEXT $APP_NAME.1 *.mo *.o
+ distclean: clean
+ 	# Removing Makefile
  	${DOIT}rm -f Makefile
+@@ -416,29 +415,29 @@ Makefile: $0 `dirname $0`/depends
+ 	# WARNING: Your Makefile is outdated. Please re-run $0!
  install: all
  	# Installing \$(DESTDIR)$BINDIR/$APP_NAME$CFG_BINEXT
 -	${DOIT}mkdir -p \$(DESTDIR)$BINDIR
@@ -129,7 +112,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
  EOF
  for i in $CFG_LINGUAS
  do
-@@ -433,7 +432,7 @@ do
+@@ -455,7 +454,7 @@ do
  	done
  	echo "$i.o: Makefile $SRCDIR/src/$i.c $SRCDIR/src/stdinc.h $DEPS"
  	echo "	# Compiling $i.o"
