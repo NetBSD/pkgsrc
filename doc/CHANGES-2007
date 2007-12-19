@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2673 2007/12/19 08:13:56 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2674 2007/12/19 13:21:33 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4850,3 +4850,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xkeyboard-config to 20071217nb1 [bjs 2007-12-19]
 	Updated x11/xcompmgr to 1.1.3nb1 [bjs 2007-12-19]
 	Updated audio/herrie to 1.9.1 [bjs 2007-12-19]
+	Updated security/qca to 2.0.0 [jdolecek 2007-12-19]
+	Removed security/qca-tls [jdolecek 2007-12-19]
+	Added security/qca-ossl version 2.0.0beta3 [jdolecek 2007-12-19]
+	Updated chat/psi to 0.11 [jdolecek 2007-12-19]
