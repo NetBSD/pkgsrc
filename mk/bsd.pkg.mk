@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1930 2007/12/13 11:57:34 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1931 2007/12/19 11:56:19 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -72,6 +72,22 @@ PKGNAME_NOREV=		${DISTNAME}
 .else
 PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
+.endif
+
+# A meta-package is a package that does not have any files and whose
+# only purpose is to depend on other packages, giving that collection
+# a simple name.
+#
+# Keywords: meta meta-package META_PACKAGE
+#
+.if defined(META_PACKAGE)
+NO_CHECKSUM=		yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+DISTFILES=		# none
+PLIST_SRC=		# none
+do-install:
+	@${DO_NADA}
 .endif
 
 ##### Others
