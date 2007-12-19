@@ -1,9 +1,9 @@
 /*
- * XXX: Reading the +REQUIRED_BY files of all installed packages is
+ * XXX: Reading the +CONTENTS files of all installed packages is
  * rather slow. Since this check is necessary to avoid conflicting
  * packages, it should not be removed.
  *
- * TODO: Put all the information that is currently in the +REQUIRED_BY
+ * TODO: Put all the information that is currently in the +CONTENTS
  * files into one large file or another database.
  */
 
