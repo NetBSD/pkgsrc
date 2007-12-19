@@ -1,4 +1,4 @@
-$NetBSD: patch-regcomp,v 1.1 2007/12/19 00:11:26 rillig Exp $
+$NetBSD: patch-regcomp,v 1.2 2007/12/19 13:27:20 rillig Exp $
 
 The [ from ... to ] designator is gcc-specific.
 
@@ -14,7 +14,7 @@ The [ from ... to ] designator is gcc-specific.
 +  [1] = BITSET_WORD_MAX,
 +  [2] = BITSET_WORD_MAX,
 +  [3] = BITSET_WORD_MAX
-+#elif BITSET_WORD_BITS == 0xffffffffffffffffULL
++#elif BITSET_WORD_MAX == 0xffffffffffffffffULL
 +  [0] = BITSET_WORD_MAX,
 +  [1] = BITSET_WORD_MAX
 +#else
