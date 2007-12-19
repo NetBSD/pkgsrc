@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/11/08 03:52:30 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/19 08:13:11 bjs Exp $
 
---- src/stdinc.h.orig	2007-09-23 09:21:10.000000000 -0400
+--- src/stdinc.h.orig	2007-12-17 11:06:05.000000000 -0500
 +++ src/stdinc.h
 @@ -39,7 +39,14 @@
  #include <locale.h>
