@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.739 2007/12/19 12:04:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.740 2007/12/19 12:34:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4062,9 +4062,9 @@ sub checkline_mk_varuse($$$$) {
 "Many variables in pkgsrc do not need the :Q operator, since they",
 "are not expected to contain white-space or other evil characters.",
 "",
-"When a variable of type ShellWord appears in a context that expects",
-"a shell word, it does not need to have a :Q operator. Even when it",
-"is concatenated with another variable, it still stays _one_ word.",
+"Another case is when a variable of type ShellWord appears in a context",
+"that expects a shell word, it does not need to have a :Q operator. Even",
+"when it is concatenated with another variable, it still stays _one_ word.",
 "",
 "Example:",
 "\tWORD1=  Have\\ fun             # 1 word",
