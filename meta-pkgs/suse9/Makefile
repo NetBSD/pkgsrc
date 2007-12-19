@@ -1,22 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2007/10/25 22:00:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/19 12:27:30 rillig Exp $
 
 DISTNAME=	suse-${SUSE_VERSION}
 PKGREVISION=	4
 CATEGORIES=	meta-pkgs emulators
 MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	SUSE-based Linux binary emulation environment
 
 .include "../../emulators/suse91_linux/Makefile.common"
 
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 EMUL_MODULES.linux=	aspell base compat expat fontconfig freetype2	\
 			gdk-pixbuf glx gtk gtk2 jpeg locale motif png	\
