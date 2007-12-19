@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/11/11 21:24:24 adrianp Exp $
+# $NetBSD: Makefile,v 1.35 2007/12/19 03:18:49 taca Exp $
 #
 
 DISTNAME=		snort-2.8.0
@@ -43,8 +43,6 @@ CONF_FILES+=		${EGDIR}/gen-msg.map \
 			${PKG_SYSCONFDIR}/gen-msg.map
 CONF_FILES+=		${EGDIR}/generators \
 			${PKG_SYSCONFDIR}/generators
-CONF_FILES+=		${EGDIR}/sid \
-			${PKG_SYSCONFDIR}/sid
 CONF_FILES+=		${EGDIR}/sid-msg.map \
 			${PKG_SYSCONFDIR}/sid-msg.map
 CONF_FILES+=		${EGDIR}/unicode.map \
