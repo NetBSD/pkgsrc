@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/11/06 22:06:35 jdolecek Exp $
+# $NetBSD: Makefile,v 1.21 2007/12/19 12:27:30 rillig Exp $
 
 DISTNAME=	php-extensions-5.2
 #PKGREVISION=	1
@@ -70,14 +70,7 @@ DEPENDS+=	php5-pdo_mysql-5.2.*:../../databases/php-pdo_mysql
 DEPENDS+=	php5-pdo_pgsql-5.2.*:../../databases/php-pdo_pgsql
 DEPENDS+=	php5-pdo_sqlite-5.2.*:../../databases/php-pdo_sqlite
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-NO_MTREE=	yes
+META_PACKAGE=	yes
 
-do-install:	# empty
-
-
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
