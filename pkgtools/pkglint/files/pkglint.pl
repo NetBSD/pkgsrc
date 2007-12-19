@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.738 2007/12/13 15:56:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.739 2007/12/19 12:04:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6837,15 +6837,16 @@ sub checkfile_package_Makefile($$$) {
 
 	if (!exists($pkgctx_vardef->{"PLIST_SRC"})
 	    && !exists($pkgctx_vardef->{"GENERATE_PLIST"})
+	    && !exists($pkgctx_vardef->{"META_PACKAGE"})
 	    && defined($pkgdir)
 	    && !-f "${current_dir}/$pkgdir/PLIST"
 	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
 		log_warning($fname, NO_LINE_NUMBER, "Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?");
 	}
 
-	if (exists($pkgctx_vardef->{"NO_CHECKSUM"}) && is_emptydir("${current_dir}/${patchdir}")) {
+	if ((exists($pkgctx_vardef->{"NO_CHECKSUM"}) || $pkgctx_vardef->{"META_PACKAGE"}) && is_emptydir("${current_dir}/${patchdir}")) {
 		if (-f "${current_dir}/${distinfo_file}") {
-			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
+			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM or META_PACKAGE is set.");
 		}
 	} else {
 		if (!-f "${current_dir}/${distinfo_file}") {
@@ -7465,6 +7466,8 @@ sub checkfile_PLIST($) {
 				if (defined($last_file_seen)) {
 					if ($last_file_seen gt $text) {
 						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
+					} elsif ($last_file_seen eq $text) {
+						$line->log_warning("Duplicate filename.");
 					}
 				}
 				$last_file_seen = $text;
