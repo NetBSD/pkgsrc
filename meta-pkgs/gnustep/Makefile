@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2007/10/25 22:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2007/12/19 12:27:28 rillig Exp $
 
 DISTNAME=	gnustep-1.11.2
 PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
@@ -22,13 +21,7 @@ DEPENDS+=	ProjectCenter>=0.4.3:../../devel/ProjectCenter
 DEPENDS+=	Renaissance>=0.8.0:../../devel/Renaissance
 DEPENDS+=	gworkspace>=0.7.1:../../sysutils/gworkspace
 
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-EXTRACT_ONLY=	# empty
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/10/25 22:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/19 12:27:29 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.4
@@ -62,11 +62,6 @@ DEPENDS+=	xwininfo-[0-9]*:../../x11/xwininfo
 DEPENDS+=	xwd-[0-9]*:../../x11/xwd
 DEPENDS+=	xwud-[0-9]*:../../x11/xwud
 
-NO_CHECKSUM=		yes
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-PLIST_SRC=		# empty (meta-package)
-
-do-install:
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

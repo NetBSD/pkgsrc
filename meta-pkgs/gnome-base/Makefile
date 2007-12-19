@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/11/08 12:37:08 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2007/12/19 12:27:27 rillig Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -77,12 +77,6 @@ DEPENDS+=	vte>=0.16.1:../../x11/vte
 DEPENDS+=	gnome-terminal>=2.18.0:../../x11/gnome-terminal
 DEPENDS+=	gnome-session>=2.18.0:../../x11/gnome-session
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

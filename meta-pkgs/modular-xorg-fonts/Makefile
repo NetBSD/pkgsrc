@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/25 22:00:54 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/19 12:27:29 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-fonts-1.0
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg font meta-package
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	font-adobe-100dpi-[0-9]*:../../fonts/font-adobe-100dpi
 DEPENDS+=	font-adobe-75dpi-[0-9]*:../../fonts/font-adobe-75dpi
@@ -37,11 +35,6 @@ DEPENDS+=	font-misc-misc-[0-9]*:../../fonts/font-misc-misc
 DEPENDS+=	font-mutt-misc-[0-9]*:../../fonts/font-mutt-misc
 DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 
-NO_CHECKSUM=		yes
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-PLIST_SRC=		# empty (meta-package)
-
-do-install:
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
