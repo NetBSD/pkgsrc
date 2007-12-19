@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/12/04 04:42:03 christos Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/19 18:43:38 joerg Exp $
 --- Makefile.orig	2003-12-31 09:51:40.000000000 -0500
 +++ Makefile	2006-12-03 23:40:16.000000000 -0500
 @@ -1,7 +1,4 @@
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 2006/12/04 04:42:03 christos Exp $
  
  all: i810switch
  
-@@ -9,16 +6,19 @@
+@@ -9,16 +6,20 @@
  	$(CC) $(CFLAGS) -o $@ $(OBJECTS)
  
  install: i810switch
@@ -18,23 +18,24 @@ $NetBSD: patch-aa,v 1.1 2006/12/04 04:42:03 christos Exp $
 -	install -d $(DESTDIR)/usr/share/man/man1
 -	install i810switch i810rotate $(DESTDIR)/usr/bin
 -	install i810switch.1.gz i810rotate.1.gz $(DESTDIR)/usr/share/man/man1
-+	install -d $(PREFIX)/bin
-+	install -d $(PREFIX)/man/man1
-+	install i810switch $(PREFIX)/sbin
-+	ln $(PREFIX)/sbin/i810switch $(PREFIX)/sbin/i810rotate
-+	install i810switch.1.gz i810rotate.1.gz $(PREFIX)/man/man1
-+	gunzip $(PREFIX)/man/man1/i810switch.1.gz
-+	gunzip $(PREFIX)/man/man1/i810rotate.1.gz
++	install -d ${DESTDIR}$(PREFIX)/bin
++	install -d ${DESTDIR}$(PREFIX)/sbin
++	install -d ${DESTDIR}$(PREFIX)/man/man1
++	install i810switch ${DESTDIR}$(PREFIX)/sbin
++	ln i810switch ${DESTDIR}$(PREFIX)/sbin/i810rotate
++	install i810switch.1.gz i810rotate.1.gz ${DESTDIR}$(PREFIX)/man/man1
++	gunzip ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810switch.1.gz
++	gunzip ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810rotate.1.gz
  
  uninstall:
 -	rm -f $(DESTDIR)/usr/bin/i810switch
 -	rm -f $(DESTDIR)/usr/bin/i810rotate
 -	rm -f $(DESTDIR)/usr/share/man/man1/i810switch.1.gz
 -	rm -f $(DESTDIR)/usr/share/man/man1/i810rotate.1.gz
-+	rm -f $(PREFIX)/usr/bin/i810switch
-+	rm -f $(PREFIX)/usr/bin/i810rotate
-+	rm -f $(PREFIX)/usr/share/man/man1/i810switch.1.gz
-+	rm -f $(PREFIX)/usr/share/man/man1/i810rotate.1.gz
++	rm -f ${DESTDIR}$(PREFIX)/i810switch
++	rm -f ${DESTDIR}$(PREFIX)/i810rotate
++	rm -f ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810switch.1.gz
++	rm -f ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/i810rotate.1.gz
  
  clean:
  	@rm -f $(OBJECTS) i810switch
