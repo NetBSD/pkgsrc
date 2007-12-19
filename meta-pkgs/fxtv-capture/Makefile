@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/10/25 22:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/19 12:27:27 rillig Exp $
 #
 
 DISTNAME=	fxtv-capture-1.1
@@ -16,12 +16,6 @@ DEPENDS+=	fxtv>=1.03nb1:../../multimedia/fxtv
 DEPENDS+=	mpeg_encode-[0-9]*:../../multimedia/mpeg_encode
 DEPENDS+=	mjpegtools>=1.8.0nb1:../../multimedia/mjpegtools
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

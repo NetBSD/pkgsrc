@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2007/10/25 22:00:51 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2007/12/19 12:27:27 rillig Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -70,12 +70,6 @@ DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
 #DEPENDS+=	orca-1.0.0.tar.bz2
 #DEPENDS+=	tomboy-0.4.0.tar.bz2
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

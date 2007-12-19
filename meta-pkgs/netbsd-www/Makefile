@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/10/25 22:00:56 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/19 12:27:29 rillig Exp $
 #
 
 DISTNAME=	netbsd-www-1.4
@@ -23,14 +23,8 @@ DEPENDS+=	xplanet>=1.2.0nb3:../../x11/xplanet
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
 DEPENDS+=	psutils>=1.17:../../print/psutils
 DEPENDS+=	w3m>=0.4:../../www/w3m
-
 USE_TOOLS+=	perl:run
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
 
-do-install:
-	@${DO_NADA}
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

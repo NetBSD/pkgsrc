@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/25 22:00:56 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/19 12:27:30 rillig Exp $
 #
 
 DISTNAME=	pkg_developer-1.1
@@ -21,12 +21,6 @@ DEPENDS+=	revbump>=1.8:../../pkgtools/revbump
 DEPENDS+=	url2pkg>=1.34:../../pkgtools/url2pkg
 DEPENDS+=	verifypc>=1.3:../../pkgtools/verifypc
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
