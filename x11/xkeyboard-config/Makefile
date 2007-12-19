@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/19 04:10:43 bjs Exp $
 #
 
 DISTNAME=	xkeyboard-config-20071217
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,8 @@ CONFLICTS+=		xkbdata-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		# none
-USE_TOOLS+=		gmake intltool perl:build 
+USE_TOOLS+=		
+USE_TOOLS+=		gmake intltool perl:build automake
 USE_TOOLS+=		msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
@@ -36,7 +38,7 @@ XKBBASE=		${PREFIX}/share/X11/xkb
 
 ### The server puts compiled keymaps in the directory below.
 ###
-XKBCOMPDIR?=		${VARBASE}/db/xkb	
+XKBCOMPDIR?=		${VARBASE}/db/xkb
 
 ### The package must symlink ${XKBCOMPDIR} into ${XKBBASE}. ${XKBCOMP} is
 ### is the path to the xkbcomp binary we wish to use.
@@ -44,7 +46,7 @@ XKBCOMPDIR?=		${VARBASE}/db/xkb
 XKBCOMPDIR_SYMLINK=	${XKBBASE}/compiled
 XKBCOMP=		${LOCALBASE}/bin/xkbcomp
 
-BUILD_DEFS+=		VARBASE 
+BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		XKBCOMPDIR
 
 FILES_SUBST+=		XKBBASE=${XKBBASE:Q}
@@ -55,6 +57,7 @@ FILES_SUBST+=		XKBCOMPDIR_SYMLINK=${XKBCOMPDIR_SYMLINK:Q}
 
 OWN_DIRS+=		${XKBCOMPDIR}
 
-.include "../../converters/libiconv/buildlink3.mk"
+pre-configure:
+	${RUN} cd ${WRKSRC}; intltoolize --copy && autoreconf -i
 
 .include "../../mk/bsd.pkg.mk"

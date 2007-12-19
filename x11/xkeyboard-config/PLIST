@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/19 04:10:43 bjs Exp $
 share/X11/xkb/compat.dir
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
@@ -151,7 +151,6 @@ share/X11/xkb/symbols/cd
 share/X11/xkb/symbols/ch
 share/X11/xkb/symbols/cn
 share/X11/xkb/symbols/compose
-share/X11/xkb/symbols/cs
 share/X11/xkb/symbols/ctrl
 share/X11/xkb/symbols/cz
 share/X11/xkb/symbols/de
@@ -220,6 +219,7 @@ share/X11/xkb/symbols/macintosh_vndr/pt
 share/X11/xkb/symbols/macintosh_vndr/se
 share/X11/xkb/symbols/macintosh_vndr/us
 share/X11/xkb/symbols/mao
+share/X11/xkb/symbols/me
 share/X11/xkb/symbols/mk
 share/X11/xkb/symbols/mm
 share/X11/xkb/symbols/mn
@@ -231,14 +231,17 @@ share/X11/xkb/symbols/ng
 share/X11/xkb/symbols/nl
 share/X11/xkb/symbols/no
 share/X11/xkb/symbols/np
+share/X11/xkb/symbols/olpc
 share/X11/xkb/symbols/pc
 share/X11/xkb/symbols/pk
 share/X11/xkb/symbols/pl
 share/X11/xkb/symbols/pt
 share/X11/xkb/symbols/ro
+share/X11/xkb/symbols/rs
 share/X11/xkb/symbols/ru
 share/X11/xkb/symbols/se
 share/X11/xkb/symbols/sgi_vndr/jp
+share/X11/xkb/symbols/shift
 share/X11/xkb/symbols/si
 share/X11/xkb/symbols/sk
 share/X11/xkb/symbols/sony_vndr/us
@@ -295,6 +298,34 @@ share/X11/xkb/types/level5
 share/X11/xkb/types/mousekeys
 share/X11/xkb/types/numpad
 share/X11/xkb/types/pc
+share/locale/af/LC_MESSAGES/xkeyboard-config.mo
+share/locale/az/LC_MESSAGES/xkeyboard-config.mo
+share/locale/bg/LC_MESSAGES/xkeyboard-config.mo
+share/locale/cs/LC_MESSAGES/xkeyboard-config.mo
+share/locale/da/LC_MESSAGES/xkeyboard-config.mo
+share/locale/el/LC_MESSAGES/xkeyboard-config.mo
+share/locale/en_GB/LC_MESSAGES/xkeyboard-config.mo
+share/locale/es/LC_MESSAGES/xkeyboard-config.mo
+share/locale/fi/LC_MESSAGES/xkeyboard-config.mo
+share/locale/fr/LC_MESSAGES/xkeyboard-config.mo
+share/locale/hu/LC_MESSAGES/xkeyboard-config.mo
+share/locale/it/LC_MESSAGES/xkeyboard-config.mo
+share/locale/ka/LC_MESSAGES/xkeyboard-config.mo
+share/locale/ko/LC_MESSAGES/xkeyboard-config.mo
+share/locale/nl/LC_MESSAGES/xkeyboard-config.mo
+share/locale/ru/LC_MESSAGES/xkeyboard-config.mo
+share/locale/rw/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sk/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sl/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sq/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sr/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sr@Latn/LC_MESSAGES/xkeyboard-config.mo
+share/locale/sv/LC_MESSAGES/xkeyboard-config.mo
+share/locale/tr/LC_MESSAGES/xkeyboard-config.mo
+share/locale/uk/LC_MESSAGES/xkeyboard-config.mo
+share/locale/vi/LC_MESSAGES/xkeyboard-config.mo
+share/locale/zh_CN/LC_MESSAGES/xkeyboard-config.mo
+share/locale/zh_TW/LC_MESSAGES/xkeyboard-config.mo
 @dirrm share/X11/xkb/types
 @dirrm share/X11/xkb/symbols/xfree68_vndr
 @dirrm share/X11/xkb/symbols/sun_vndr

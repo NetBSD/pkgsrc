@@ -1,30 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/12/18 00:28:14 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/19 04:10:44 bjs Exp $
 
---- rules/base.xml.in.orig	2007-09-26 07:56:42.000000000 -0400
-+++ rules/base.xml.in
-@@ -213,6 +213,12 @@
-     </model>
-     <model>
-       <configItem>
-+        <name>btc9116u</name>
-+	<_description>BTC 9116U Mini Wireless Internet and Gaming</_description>
-+      </configItem>
-+    </model>
-+    <model>
-+      <configItem>
-         <name>cherryblue</name>
-         <_description>Cherry Blue Line CyBo@rd</_description>
-       </configItem>
-@@ -3606,6 +3612,12 @@
-       </option>
-       <option>
-         <configItem>
-+          <name>keypad:comma</name>
-+          <_description>Force standard comma keypad</_description>
-+       </configItem>
-+      </option>
-+      <option>
-+        <configItem>
-           <name>keypad:oss</name>
-           <_description>Keypad with unicode additions (arrows and math operators)</_description>
-        </configItem>
+--- configure.in.orig	2007-10-02 17:51:04.000000000 -0400
++++ configure.in
+@@ -91,7 +91,7 @@ else
+   echo "    Symbolic link(s) to legacy rules: $xkb_rules_symlink"
+ fi
+ 
+-if test "$enable_compat_rules" == "yes" ; then
++if test "$enable_compat_rules" = "yes" ; then
+   echo "    Compatibility rules are included"
+ else
+   echo "    Compatibility rules are not included"
