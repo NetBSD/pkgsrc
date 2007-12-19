@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/05/11 11:19:44 smb Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/19 13:01:36 jdolecek Exp $
 
-DISTNAME=	qca-1.0
-PKGREVISION=	3
+DISTNAME=	qca-2.0.0
 CATEGORIES=	security
-MASTER_SITES=	http://delta.affinix.com/qca/
+MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jdolecek@NetBSD.org
@@ -17,7 +16,6 @@ USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	include lib
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
