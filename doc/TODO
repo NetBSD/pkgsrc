@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6911 2007/12/18 20:39:49 wiz Exp $
+$NetBSD: TODO,v 1.6912 2007/12/19 03:41:59 taca Exp $
 
 Suggested new packages
 ======================
@@ -1111,7 +1111,7 @@ Suggested package updates
 	o radiance-3.7.2
 	o radiusd-cistron-1.6.8
 	o radmind-1.11.0
-	o rails-2.0.1
+	o rails-2.0.2 [import as rails2?]
 	o raine-0.50.5
 	o randread-0.2
 	o raptor-1.4.16
