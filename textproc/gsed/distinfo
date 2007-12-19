@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.13 2007/04/10 19:44:27 joerg Exp $
+$NetBSD: distinfo,v 1.14 2007/12/19 00:11:26 rillig Exp $
 
 SHA1 (sed-4.1.5.tar.gz) = 8e575e8a44568392d5b6e089eab5da5cdbd45885
 RMD160 (sed-4.1.5.tar.gz) = 49b12e99a55c6d2e78ad236f0205e63e46444173
 Size (sed-4.1.5.tar.gz) = 799584 bytes
 SHA1 (patch-aa) = fa00264254c527a08bce1b60090fc05ebe2fbd37
 SHA1 (patch-ad) = 95e210098db1ba9d28623acfa1e4d838e5d94cfa
-SHA1 (patch-ae) = 2091cccb70a8017d8e6fd356874681b51f366890
+SHA1 (patch-ae) = 5246cbee7e25923bfe7f4896404e286d5721c135
+SHA1 (patch-regcomp) = 633f4ed4216cf6538c166b7cd5c3df1950c8fdea
+SHA1 (patch-regexec) = 26a97fa3b6c161ebe6fa6b80251d1bb11f2877f0
