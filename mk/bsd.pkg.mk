@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1931 2007/12/19 11:56:19 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1932 2007/12/19 12:32:06 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -81,11 +81,14 @@ PKGNAME_NOREV=		${PKGNAME}
 # Keywords: meta meta-package META_PACKAGE
 #
 .if defined(META_PACKAGE)
+PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 DISTFILES=		# none
 PLIST_SRC=		# none
+do-patch:
+	@${DO_NADA}
 do-install:
 	@${DO_NADA}
 .endif
