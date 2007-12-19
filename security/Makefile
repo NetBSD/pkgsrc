@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2007/10/29 09:58:43 agc Exp $
+# $NetBSD: Makefile,v 1.307 2007/12/19 13:02:11 jdolecek Exp $
 #
 
 COMMENT=	Security tools
@@ -229,7 +229,6 @@ SUBDIR+=	py-prewikka
 SUBDIR+=	py-tlslite
 SUBDIR+=	pyca
 SUBDIR+=	qca
-SUBDIR+=	qca-tls
 SUBDIR+=	qident
 SUBDIR+=	rainbowcrack
 SUBDIR+=	rats
