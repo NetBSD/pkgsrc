@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2672 2007/12/19 05:44:51 bjs Exp $
+$NetBSD: CHANGES-2007,v 1.2673 2007/12/19 08:13:56 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2007:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2007Q4 branch [agc 2007-12-18]
 	Updated x11/xkeyboard-config to 20071217nb1 [bjs 2007-12-19]
 	Updated x11/xcompmgr to 1.1.3nb1 [bjs 2007-12-19]
+	Updated audio/herrie to 1.9.1 [bjs 2007-12-19]
