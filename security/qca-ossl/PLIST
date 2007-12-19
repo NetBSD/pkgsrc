@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/19 13:05:05 jdolecek Exp $
+qt4/plugins/crypto/libqca-ossl.la
