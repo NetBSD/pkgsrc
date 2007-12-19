@@ -1,0 +1,15 @@
+$NetBSD: patch-regexec,v 1.1 2007/12/19 00:11:26 rillig Exp $
+
+gcc extensions tend to confuse other compilers.
+
+--- lib/regexec.c.orig	2005-12-06 09:46:56.000000000 +0100
++++ lib/regexec.c	2007-12-19 00:55:31.130195000 +0100
+@@ -2894,7 +2894,7 @@ check_arrival (re_match_context_t *mctx,
+ 	      sizeof (re_dfastate_t *) * (path->alloc - old_alloc));
+     }
+ 
+-  str_idx = path->next_idx ?: top_str;
++  str_idx = path->next_idx ? path->next_idx : top_str;
+ 
+   /* Temporary modify MCTX.  */
+   backup_state_log = mctx->state_log;

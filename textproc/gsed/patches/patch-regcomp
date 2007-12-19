@@ -1,0 +1,25 @@
+$NetBSD: patch-regcomp,v 1.1 2007/12/19 00:11:26 rillig Exp $
+
+The [ from ... to ] designator is gcc-specific.
+
+--- lib/regcomp.c.orig	2005-12-06 09:46:51.000000000 +0100
++++ lib/regcomp.c	2007-12-19 00:52:02.864945000 +0100
+@@ -558,7 +558,17 @@ weak_alias (__regerror, regerror)
+ static const bitset_t utf8_sb_map =
+ {
+   /* Set the first 128 bits.  */
+-  [0 ... 0x80 / BITSET_WORD_BITS - 1] = BITSET_WORD_MAX
++#if BITSET_WORD_MAX == 0xffffffffULL
++  [0] = BITSET_WORD_MAX,
++  [1] = BITSET_WORD_MAX,
++  [2] = BITSET_WORD_MAX,
++  [3] = BITSET_WORD_MAX
++#elif BITSET_WORD_BITS == 0xffffffffffffffffULL
++  [0] = BITSET_WORD_MAX,
++  [1] = BITSET_WORD_MAX
++#else
++#error "Unknown value for BITSET_WORD_MAX"
++#endif
+ };
+ #endif
+ 
