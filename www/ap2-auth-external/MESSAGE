@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/12/20 14:59:14 sborrill Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule ${MODULE_NAME} lib/httpd/mod_auth_external.so
+
+===========================================================================
