@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.3 2007/12/20 20:37:25 jdolecek Exp $
+qt3/plugins/crypto/libqca-tls.la
+@dirrm qt3/plugins/crypto
