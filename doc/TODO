@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6912 2007/12/19 03:41:59 taca Exp $
+$NetBSD: TODO,v 1.6913 2007/12/20 03:38:42 taca Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ Suggested package updates
 	o spim-7.3
 	o sqlitemanager-1.1.3
 	o squeak-3.9.8 [pkg/37522]
-	o squidGuard-1.2.1
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
