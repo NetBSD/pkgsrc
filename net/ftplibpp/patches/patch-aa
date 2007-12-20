@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/09/06 16:27:03 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/20 15:11:06 obache Exp $
 
---- Makefile.orig	2003-08-12 02:34:35.000000000 +0100
+--- Makefile.orig	2003-08-12 01:34:35.000000000 +0000
 +++ Makefile
 @@ -3,6 +3,8 @@
  SONAME = 1
@@ -24,13 +24,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/09/06 16:27:03 cjep Exp $
 -	install -m 644 libftp.so.$(SOVERSION) /usr/local/lib
 -	install -m 644 ftplib.h /usr/local/include
 -	(cd /usr/local/lib && \
-+	install -m 644 libftp.so.$(SOVERSION) ${PREFIX}/lib
-+	install -m 644 ftplib.h ${PREFIX}/include
-+	(cd ${PREFIX}/lib && \
++	${BSD_INSTALL_LIB} libftp.so.$(SOVERSION) ${DESTDIR}${PREFIX}/lib
++	${BSD_INSTALL_DATA} ftplib.h ${DESTDIR}${PREFIX}/include
++	(cd ${DESTDIR}${PREFIX}/lib && \
  	 ln -sf libftp.so.$(SOVERSION) libftp.so.$(SONAME) && \
  	 ln -sf libftp.so.$(SONAME) libftp.so)
 -#	-(cd /usr/local/bin && \
-+#	-(cd ${PREFIX}/bin && \
++#	-(cd ${DESTDIR}${PREFIX}/bin && \
  #	  for f in ftpdir ftpget ftplist ftprm ftpsend; \
  #	  do ln -s qftp $$f; done)
  
