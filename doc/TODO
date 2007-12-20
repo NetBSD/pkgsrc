@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6913 2007/12/20 03:38:42 taca Exp $
+$NetBSD: TODO,v 1.6914 2007/12/20 13:40:51 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1137,6 +1137,7 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-4.4.2.1
+	o rss2email-2.61
 	o rt3-3.6.5
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
