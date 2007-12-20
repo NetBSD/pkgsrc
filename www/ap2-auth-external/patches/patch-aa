@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/20 14:59:14 sborrill Exp $
+
+--- mod_auth_external.c.orig	2007-12-19 15:17:29.000000000 +0000
++++ mod_auth_external.c	2007-12-19 15:17:29.000000000 +0000
+@@ -242,6 +242,7 @@
+ #define ENV_PASS	"PASS"
+ #define ENV_GROUP	"GROUP"
+ #define ENV_URI		"URI"
++#define ENV_METHOD	"METHOD"
+ #define ENV_IP		"IP"
+ #define ENV_HOST	"HOST"		/* Remote Host */
+ #define ENV_HTTP_HOST   "HTTP_HOST"	/* Local Host */
+@@ -506,6 +507,9 @@
+ 	if (r->uri)
+ 	    child_env[i++]= apr_pstrcat(r->pool, ENV_URI"=", r->uri, NULL);
+ 
++	if (r->method)
++	    child_env[i++]= apr_pstrcat(r->pool, ENV_METHOD"=", r->method, NULL);
++
+ 	if ((host= lookup_header(r,"Host")) != NULL)
+ 	    child_env[i++]= apr_pstrcat(r->pool, ENV_HTTP_HOST"=", host, NULL);
+ 
