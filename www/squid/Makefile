@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2007/12/02 14:47:07 taca Exp $
+# $NetBSD: Makefile,v 1.200 2007/12/20 03:17:14 taca Exp $
 
 DISTNAME=	squid-2.6.STABLE17
 PKGNAME=	${DISTNAME:S/STABLE//}
@@ -14,45 +14,33 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
-DATADIR=	${VARBASE}/squid
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-			--localstatedir=${DATADIR:Q}
+			--localstatedir=${SQUID_DATADIR:Q}
 
 MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}
 PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	squid
 
-PKG_GROUPS_VARS+=	SQUID_GROUP
-PKG_USERS_VARS+=	SQUID_USER
-
-PKG_GROUPS=	${SQUID_GROUP}
-PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}
-
-PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
-
 CONF_FILES+=	${EXAMPLESDIR}/cachemgr.conf ${PKG_SYSCONFDIR}/cachemgr.conf
 CONF_FILES+=	${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=	${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 CONF_FILES+=	${EXAMPLESDIR}/msntauth.conf ${PKG_SYSCONFDIR}/msntauth.conf
-OWN_DIRS=	${DATADIR}
-OWN_DIRS_PERMS+= ${DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
-		 ${DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
+OWN_DIRS=	${SQUID_DATADIR}
+OWN_DIRS_PERMS+= ${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
+		 ${SQUID_DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
 EXAMPLES_FILES=	src/mime.conf.default src/squid.conf.default \
 		helpers/basic_auth/MSNT/msntauth.conf.default \
 		tools/cachemgr.conf
 
 .include "../../mk/bsd.prefs.mk"
+.include "Makefile.common"
 
-PKG_SYSCONFSUBDIR?=	squid
-
-SQUID_USER?=	squid
-SQUID_GROUP?=	squid
 BUILD_DEFS+=	VARBASE
 
 CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
