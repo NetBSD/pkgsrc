@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4 2007/12/20 20:37:27 jdolecek Exp $
+
+--- configure.orig	2004-12-19 09:10:21.000000000 +0000
++++ configure	2004-12-19 09:20:50.000000000 +0000
+@@ -144,8 +144,10 @@
+ 
+ 		s = conf->getenv("QC_WITH_OPENSSL_LIB");
+ 		if(!s.isEmpty()) {
++			/*
+ 			if(!conf->checkLibrary(s, "ssl"))
+ 				return false;
++			*/
+ 			lib = s;
+ 		}
+ 		else {
