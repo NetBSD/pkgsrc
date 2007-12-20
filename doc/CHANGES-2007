@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2678 2007/12/20 20:30:42 christos Exp $
+$NetBSD: CHANGES-2007,v 1.2679 2007/12/20 20:35:49 epg Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4875,3 +4875,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/glade3 to 3.4.0 [drochner 2007-12-20]
 	Updated devel/gdl to 0.7.6 [drochner 2007-12-20]
 	Updated net/sup to 0.2 [christos 2007-12-20]
+	Updated devel/subversion to 1.4.6 [epg 2007-12-20]
