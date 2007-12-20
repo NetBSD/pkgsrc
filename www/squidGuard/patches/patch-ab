@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2007/12/20 03:37:01 taca Exp $
+
+# Don't try to update documents now.
+
+--- Makefile.in.orig	2007-07-02 00:37:14.000000000 +0900
++++ Makefile.in
+@@ -24,7 +24,7 @@ configfile = @sg_config@
+ dbhomedir = @sg_dbhome@
+ SQUIDUSER = @squiduser@
+ 
+-SUBDIRS = src doc test samples contrib
++SUBDIRS = src test samples contrib
+ INSTALL_TARGETS = install-conf install-build
+ 
+ all::

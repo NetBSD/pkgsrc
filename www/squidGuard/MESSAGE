@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/12/20 03:36:59 taca Exp $
+
+If you update ${PKGNAME} package from version 1.2.0nb3 or before,
+please be careful for these changes.
+
+- Now squidGuard use db4 as Berkely DB.  If you have any trouble
+  with db, please recreate db files manually.
+
+- Default configuration file are changed to
+  ${PKG_SYSCONFDIR}/squidGuard.conf.
+
+===========================================================================
