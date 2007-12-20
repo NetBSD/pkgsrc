@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2677 2007/12/20 13:57:41 drochner Exp $
+$NetBSD: CHANGES-2007,v 1.2678 2007/12/20 20:30:42 christos Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4874,3 +4874,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated devel/gnome-build to 0.2.0 [drochner 2007-12-20]
 	Updated devel/glade3 to 3.4.0 [drochner 2007-12-20]
 	Updated devel/gdl to 0.7.6 [drochner 2007-12-20]
+	Updated net/sup to 0.2 [christos 2007-12-20]
