@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/04 21:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/20 14:54:48 obache Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
@@ -12,8 +12,9 @@ COMMENT=		C++ class providing ftp client functionality
 
 USE_TOOLS+=		gmake
 
+INSTALLATION_DIRS=	include lib share/doc/ftplibpp
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftplibpp
 	${INSTALL_DATA} ${WRKSRC}/ftplibpp.html ${PREFIX}/share/doc/ftplibpp
 
 .include "../../mk/bsd.pkg.mk"
