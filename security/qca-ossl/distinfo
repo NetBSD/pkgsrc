@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/19 13:05:05 jdolecek Exp $
-
-SHA1 (qca-ossl-2.0.0-beta3.tar.bz2) = dd925e8732ff76f24f9f90f4094abaf2f0ac27bf
-RMD160 (qca-ossl-2.0.0-beta3.tar.bz2) = c979c3c3427eb45e8866e28746f83966e8bcf3c2
-Size (qca-ossl-2.0.0-beta3.tar.bz2) = 49188 bytes
