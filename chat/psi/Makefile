@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/12/19 13:19:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.51 2007/12/20 20:30:24 jdolecek Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
 
-DEPENDS+=	qca-ossl>=2.0.0beta3:../../security/qca-ossl
+DEPENDS+=	qca-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}-20071115-1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
