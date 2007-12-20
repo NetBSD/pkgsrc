@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/11/09 09:33:24 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/20 20:29:37 christos Exp $
 
---- Makefile.orig	2006-03-14 23:59:43.000000000 +0100
-+++ Makefile	2006-11-09 10:32:29.000000000 +0100
-@@ -69,8 +69,8 @@ NON_MACH_DEFINES	= -UMACH
+--- Makefile.orig	2007-12-20 15:16:34.000000000 -0500
++++ Makefile	2007-12-20 15:21:40.000000000 -0500
+@@ -72,8 +72,8 @@
  #INSTALLATION PARAMETERS
  PREFIX		       ?= /usr/local/
  NETBSD_BINDIR		= ${PREFIX}/sbin
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1 2006/11/09 09:33:24 rillig Exp $
  
  CFLAGS			= ${DEFS} -O -I.
  
-@@ -123,9 +123,9 @@ clean cleandir distclean:
+@@ -130,9 +130,9 @@
  	rm -f ${PROGRAMS} libextra.a netcrypt.c *.o core a.out
  
  install: ${PROGRAMS}
