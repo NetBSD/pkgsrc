@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.22 2007/12/19 13:19:38 jdolecek Exp $
+$NetBSD: distinfo,v 1.23 2007/12/20 20:15:25 jdolecek Exp $
 
 SHA1 (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 834fac4b51d92e2502cb08d01d40f05ffcdce4a2
 RMD160 (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 0e4ce707d7659e02d29b16d6d95a4c4c8ba9850a
 Size (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 2000216 bytes
-SHA1 (patch-aa) = 1cc8ebcc9317f48e1a1548e6a3895f57899f6cb7
-SHA1 (patch-ac) = 011dfae070e171628ce03471c76360aa1f4a30d4
-SHA1 (patch-ad) = 01c71c5a00284570b919a5d244fe0e96d141138e
-SHA1 (patch-ae) = 93896bc73cb834a42d81e3eed1419940b75a49a0
-SHA1 (patch-af) = 3be7b02847bbc1c552a15334ae1ba158b030326b
-SHA1 (patch-ag) = ed53824947298272f5ac83af91bf59186d544b93
-SHA1 (patch-ah) = 97eba977a7519488b2d3bef0ed2cbc3e2636de9b
-SHA1 (patch-ai) = 06d0e9dc7aa67ca42462779acf4d2978904df66b
-SHA1 (patch-aj) = b7f7b3ccc5333f50fcde36bab3a3bc120900f37b
