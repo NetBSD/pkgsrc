@@ -1,6 +1,6 @@
-$NetBSD: patch-au,v 1.7 2007/10/28 07:28:47 taca Exp $
+$NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
 
---- configure.in.orig	2007-08-20 22:04:51.000000000 +0900
+--- configure.in.orig	2007-08-20 15:04:51.000000000 +0200
 +++ configure.in
 @@ -27,6 +27,7 @@ AC_PREFIX_DEFAULT(/usr/local/samba)
  
@@ -60,7 +60,29 @@ $NetBSD: patch-au,v 1.7 2007/10/28 07:28:47 taca Exp $
  AC_CHECK_FUNCS(srandom random srand rand setenv usleep strcasecmp fcvt fcvtl symlink readlink)
  AC_CHECK_FUNCS(syslog vsyslog timegm)
  AC_CHECK_FUNCS(setlocale nl_langinfo)
-@@ -3498,7 +3517,7 @@ if test x"$with_ads_support" != x"no"; t
+@@ -2823,6 +2842,21 @@ if test x"$samba_cv_HAVE_IFACE_AIX" = x"
+ fi
+ 
+ if test $iface = no; then
++AC_CACHE_CHECK([for iface ifaddrs],samba_cv_HAVE_IFACE_IFADDRS,[
++SAVE_CPPFLAGS="$CPPFLAGS"
++CPPFLAGS="$CPPFLAGS ${SAMBA_CONFIGURE_CPPFLAGS}"
++AC_TRY_RUN([
++#define HAVE_IFACE_IFADDRS 1
++#define AUTOCONF_TEST 1
++#include "${srcdir-.}/lib/interfaces.c"],
++	samba_cv_HAVE_IFACE_IFADDRS=yes,samba_cv_HAVE_IFACE_IFADDRS=no,samba_cv_HAVE_IFACE_IFADDRS=cross)])
++CPPFLAGS="$SAVE_CPPFLAGS"
++if test x"$samba_cv_HAVE_IFACE_IFADDRS" = x"yes"; then
++	iface=yes;AC_DEFINE(HAVE_IFACE_IFADDRS,1,[Whether iface ifaddrs is available])
++fi
++fi
++
++if test $iface = no; then
+ AC_CACHE_CHECK([for iface ifconf],samba_cv_HAVE_IFACE_IFCONF,[
+ SAVE_CPPFLAGS="$CPPFLAGS"
+ CPPFLAGS="$CPPFLAGS ${SAMBA_CONFIGURE_CPPFLAGS}"
+@@ -3498,7 +3532,7 @@ if test x"$with_ads_support" != x"no"; t
    AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
  
    # Heimdal checks.
@@ -69,7 +91,7 @@ $NetBSD: patch-au,v 1.7 2007/10/28 07:28:47 taca Exp $
    AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
    AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
  
-@@ -5719,32 +5738,40 @@ case "$host_os" in
+@@ -5719,31 +5753,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -107,7 +129,7 @@ $NetBSD: patch-au,v 1.7 2007/10/28 07:28:47 taca Exp $
 -		fi
 +			;;
 +		esac
- 		;;
++		;;
 +
 +	*netbsd*[[3-9]]*)
 +		case "$UNAME_R" in
@@ -127,8 +149,7 @@ $NetBSD: patch-au,v 1.7 2007/10/28 07:28:47 taca Exp $
 +				winbind_no_reason=", getpwent_r is missing on $host_os so winbind is unsupported"
 +			fi
 +			;;
-+		;;
 +		esac
+ 		;;
  	*irix*)
  		# IRIX has differently named shared libraries
- 		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_irix.o"
