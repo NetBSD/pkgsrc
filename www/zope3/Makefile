@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/12/21 03:09:25 taca Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/21 16:18:35 taca Exp $
 #
 
 DISTNAME=		Zope-3.3.1
@@ -13,26 +13,22 @@ COMMENT=		Zope 3 Application Server
 
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
-.include "Makefile.common"
-.include "../../mk/bsd.prefs.mk"
-
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 			--prefix ${ZOPE3_DIR} \
 			--force
-CHECK_INTERPRETER_SKIP=	share/zope3/lib/python/twisted/internet/*.py \
-	share/zope3/lib/python/twisted/mail/test/*.py \
-	share/zope3/lib/python/twisted/trial/test/*.py \
-	share/zope3/lib/python/twisted/web/test/*.py \
-	share/zope3/lib/python/twisted/web2/test/*.py \
-	share/zope3/lib/python/zdaemon/*.py \
+REPLACE_PYTHON= \
+	Dependencies/twisted-Zope-3.3.1/twisted/mail/test/pop3testserver.py \
+	Dependencies/twisted-Zope-3.3.1/twisted/trial/test/scripttest.py \
+	Dependencies/twisted-Zope-3.3.1/twisted/web/test/test_cgi.py \
+	Dependencies/twisted-Zope-3.3.1/twisted/web/test/test_distrib.py \
+	Dependencies/twisted-Zope-3.3.1/twisted/web2/test/test_cgi.py \
+	Dependencies/zdaemon-Zope-3.3.1/zdaemon/zdctl.py \
+	Dependencies/zdaemon-Zope-3.3.1/zdaemon/zdrun.py
+CHECK_INTERPRETER_SKIP=	\
 	share/zope3/lib/python/zope/app/server/zopeskel/bin/*.in \
 	share/zope3/zopeskel/bin/*.in
 CHECK_PERMS_SKIP=	share/zope3/zopeskel/bin/*.in
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
-EXTRACT_USING=		gtar
-.endif
 
 BUILD_DEFS+=		VARBASE
 BUILD_TARGET=		build
@@ -46,6 +42,12 @@ MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 			ZOPE3_GROUP=${ZOPE3_GROUP:Q} \
 			VARBASE=${VARBASE:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
+EXTRACT_USING=		gtar
+.endif
+
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
 
@@ -58,5 +60,6 @@ post-install:
 		${ZOPE3_DOCDIR}
 	cd ${WRKSRC}/Zope/doc && ${PAX} -r -w *.txt ${ZOPE3_DOCDIR}
 
+.include "Makefile.common"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
