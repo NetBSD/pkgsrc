@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.177 2007/12/21 12:31:20 rillig Exp $
+# $NetBSD: makevars.map,v 1.178 2007/12/21 12:36:59 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -627,6 +627,7 @@ REQD_DIRS		List of Pathname [$package_list]
 REQD_DIRS_PERMS		List of ShellWord [$package_list]
 REQD_FILES		List of Pathname [$package_list]
 REQD_FILES_MODE		{ 0644 0640 0600 0400 } [$package]
+REQD_FILES_PERMS	List of ShellWord [$package_list]
 RESTRICTED		Message [$package]
 ROOT_USER		UserGroupName [$user]
 ROOT_GROUP		UserGroupName [$user]
