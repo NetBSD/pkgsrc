@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2007/12/20 20:30:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.52 2007/12/21 00:22:49 jdolecek Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +11,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
 
-DEPENDS+=	qca-ossl>=2.0.0beta3:../../security/qca2-ossl
+DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}-20071115-1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
@@ -46,6 +47,9 @@ INSTALLATION_DIRS=	bin share/psi share/doc/psi
 do-install:
 	cd ${WRKSRC}/src && ${MAKE} install_target install_sharedfiles
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/psi
+	${RM} ${PREFIX}/share/psi/README
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/psi
+	${RM} ${PREFIX}/share/psi/COPYING
 .for f in ${LANG_FILES}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
 .endfor
@@ -53,6 +57,6 @@ do-install:
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/qca/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
