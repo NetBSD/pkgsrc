@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/31 23:56:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/21 20:44:05 joerg Exp $
 bin/gss
 include/gss.h
 include/gss/api.h
@@ -47,4 +47,10 @@ man/man3/gss_userok.3
 man/man3/gss_verify_mic.3
 man/man3/gss_wrap.3
 man/man3/gss_wrap_size_limit.3
+share/locale/en@boldquot/LC_MESSAGES/gss.mo
+share/locale/en@quot/LC_MESSAGES/gss.mo
+share/locale/fr/LC_MESSAGES/gss.mo
+share/locale/pl/LC_MESSAGES/gss.mo
+share/locale/ro/LC_MESSAGES/gss.mo
+share/locale/sv/LC_MESSAGES/gss.mo
 @dirrm include/gss
