@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2007/12/10 21:44:48 adrianp Exp $
+$NetBSD: distinfo,v 1.59 2007/12/21 17:32:24 drochner Exp $
 
 SHA1 (samba-3.0.26a-CVE-2007-4572.patch) = 32b4f45558a0765b9cd96e67ac57a83cc62678ea
 RMD160 (samba-3.0.26a-CVE-2007-4572.patch) = 81afb6ce0a58cd688fc3c25c1c8a878ca1a4b7fc
@@ -19,8 +19,8 @@ SHA1 (patch-af) = 9f14842b7d0b5e66bf1d52bcacefe5e1aa392b7c
 SHA1 (patch-ag) = c73e717e053b6618b2a334602fefabe5a5f98a98
 SHA1 (patch-ah) = 5bd17d69b96439797339deb07ffff59d74ac403e
 SHA1 (patch-ak) = 0c69720954282022c7982d36eaee94a03db7b689
-SHA1 (patch-at) = c0501c015acb6b905b43a207675c1f61e26eba8f
-SHA1 (patch-au) = 92cdaa2fa6805a05bc10bd02e50dc563daa14f74
+SHA1 (patch-at) = 21080ca3699e7dbb61c40b9bc3d0fc39e1d82288
+SHA1 (patch-au) = 69d58caf47ecdcbc722b2980e313481126b5ed25
 SHA1 (patch-av) = c29ba19e96c24ef95a9a043f8678d77c00d73506
 SHA1 (patch-aw) = 5b6c1bf65d23564eaabf1bafda41a29d1f687538
 SHA1 (patch-ax) = 73c182fc30dd9b1b36d77e8ba6cfec7b022a993c
@@ -42,9 +42,10 @@ SHA1 (patch-bs) = bc241be076c773c222a90b816471c09b2745497b
 SHA1 (patch-bt) = 262a86f15af3550966e05949bb3c1e4325532c1f
 SHA1 (patch-bu) = ba28d950f8e1c14fa99a400b79cb4d6b587a7140
 SHA1 (patch-bv) = 2d80f4e24edab32bf4f620f651e70b9e63d28cc5
-SHA1 (patch-bw) = ab8d1cd12bcc06f6416f5139c9b4352457078716
+SHA1 (patch-bw) = 11f9b3713382a23075ed5980d7b8a2dbd11ecf54
 SHA1 (patch-ca) = 636ddd71fb078ad93dfb96bc8399a3dbbe65ccdb
 SHA1 (patch-ce) = 81c6c2d9c6c0df7180d41a0382f2b4600f545620
 SHA1 (patch-cf) = 8b50f657f8f4fa71936ec4766c2517ca5d128ff7
 SHA1 (patch-cg) = 2755a019759826a39c3e201f6a0d1646e6dd2fba
 SHA1 (patch-ch) = 3c4c404519154e294cee134ddb4d2b9c7d8e02a2
+SHA1 (patch-da) = 2dddd250b2207d658b02ff43b46199ce4305b7f8
