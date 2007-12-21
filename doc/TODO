@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6917 2007/12/21 11:33:22 tron Exp $
+$NetBSD: TODO,v 1.6918 2007/12/21 12:14:38 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1502,3 +1502,8 @@ Suggested cleanups in pkgsrc
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
+
+	o Remove the redundancy of builtin.mk files by factoring out the
+	  most commonly used cases into a well-documented file. For
+	  example, x11/kbproto/builtin.mk and x11/libXrender/builtin.mk
+	  almost look the same.
