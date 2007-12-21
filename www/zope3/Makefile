@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/07/04 20:55:06 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2007/12/21 03:09:25 taca Exp $
 #
 
 DISTNAME=		Zope-3.3.1
@@ -20,6 +20,15 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 			--prefix ${ZOPE3_DIR} \
 			--force
+CHECK_INTERPRETER_SKIP=	share/zope3/lib/python/twisted/internet/*.py \
+	share/zope3/lib/python/twisted/mail/test/*.py \
+	share/zope3/lib/python/twisted/trial/test/*.py \
+	share/zope3/lib/python/twisted/web/test/*.py \
+	share/zope3/lib/python/twisted/web2/test/*.py \
+	share/zope3/lib/python/zdaemon/*.py \
+	share/zope3/lib/python/zope/app/server/zopeskel/bin/*.in \
+	share/zope3/zopeskel/bin/*.in
+CHECK_PERMS_SKIP=	share/zope3/zopeskel/bin/*.in
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
 EXTRACT_USING=		gtar
