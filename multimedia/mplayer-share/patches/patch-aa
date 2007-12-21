@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.18 2007/12/21 11:31:15 tron Exp $
+$NetBSD: patch-aa,v 1.19 2007/12/21 16:07:48 tron Exp $
 
 --- configure.orig	2007-10-07 20:49:33.000000000 +0100
-+++ configure	2007-12-19 13:38:13.000000000 +0000
++++ configure	2007-12-21 15:21:48.000000000 +0000
 @@ -718,7 +718,7 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
@@ -42,7 +42,20 @@ $NetBSD: patch-aa,v 1.18 2007/12/21 11:31:15 tron Exp $
  if test "$_rpath" = yes ; then
    for I in `echo $_ld_extra | sed 's/-L//g'` ; do
      tmp="$tmp ` echo $I | sed 's/.*/ -L& -Wl,-R&/'`"
-@@ -4368,7 +4367,7 @@
+@@ -3884,7 +3883,11 @@
+   for I in "" -L/usr/X11R6/lib -L/usr/lib/X11R6 -L/usr/X11/lib \
+            -L/usr/lib32 -L/usr/openwin/lib -L/usr/X11R6/lib64 -L/usr/lib ; do
+     if netbsd; then
+-      _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R`echo $I | sed s/^-L//`"
++      if test -n "$I" ; then
++        _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R`echo $I | sed s/^-L//`"
++      else
++        _ld_tmp="-lXext -lX11 $_ld_pthread"
++      fi
+     else
+       _ld_tmp="$I -lXext -lX11 $_ld_pthread"
+     fi
+@@ -4368,7 +4371,7 @@
  if test "$_aa" = yes ; then
    _def_aa='#define HAVE_AA 1'
    if cygwin ; then
