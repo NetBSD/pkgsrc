@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/12/21 23:21:12 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2007/12/21 23:57:41 rillig Exp $
 #
 
 DISTNAME=	gzip-1.3.12
@@ -19,6 +19,6 @@ CONFLICTS+=		gzip-base-[0-9]* gzip-info-[0-9]*
 
 GNU_CONFIGURE=	YES
 MAKE_FLAGS+=	manlinks=so
-INFO_FILES=	gzip.info
+INFO_FILES=	yes
 
 .include "../../mk/bsd.pkg.mk"
