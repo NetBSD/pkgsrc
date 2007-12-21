@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/02 01:56:46 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2007/12/21 20:32:45 joerg Exp $
 
 SHA1 (confuse-2.5.tar.gz) = 0ba87baeb0f6540414b24c4b2d47ae375d0b870d
 RMD160 (confuse-2.5.tar.gz) = 25314942e740bb4c7e90dc9860df4df73f8ffc07
 Size (confuse-2.5.tar.gz) = 502501 bytes
+SHA1 (patch-aa) = 35cf7140d9500bb602766500b8866017b2bdac55
