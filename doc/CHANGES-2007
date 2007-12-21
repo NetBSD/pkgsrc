@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2685 2007/12/21 13:29:02 agc Exp $
+$NetBSD: CHANGES-2007,v 1.2686 2007/12/21 16:11:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4884,3 +4884,5 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/miredo to 1.0.6nb1 [obache 2007-12-21]
 	Updated devel/netbsd-iscsi-initiator to 20071221 [agc 2007-12-21]
 	Updated devel/netbsd-iscsi-target to 20071221 [agc 2007-12-21]
+	Updated multimedia/mplayer to 1.0rc10nb1 [tron 2007-12-21]
+	Updated multimedia/gmplayer to 1.0rc10nb1 [tron 2007-12-21]
