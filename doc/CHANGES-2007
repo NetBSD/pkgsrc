@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2683 2007/12/21 11:33:21 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2684 2007/12/21 12:43:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/mplayer to 1.0rc10 [tron 2007-12-21]
 	Updated multimedia/mencoder to 1.0rc10 [tron 2007-12-21]
 	Updated multimedia/gmplayer to 1.0rc10 [tron 2007-12-21]
+	Updated net/miredo to 1.0.6nb1 [obache 2007-12-21]
