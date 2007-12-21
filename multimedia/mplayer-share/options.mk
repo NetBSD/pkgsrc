@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2007/09/06 18:31:00 abs Exp $
+# $NetBSD: options.mk,v 1.23 2007/12/21 11:31:14 tron Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -69,6 +69,11 @@ PKG_SUGGESTED_OPTIONS+=	${_o_}
 .endfor
 
 # -------------------------------------------------------------------------
+# Handle extra libraries (part 1)
+# -------------------------------------------------------------------------
+EXTRA_LIBS=
+
+# -------------------------------------------------------------------------
 # Handle chosen options.
 # -------------------------------------------------------------------------
 
@@ -80,6 +85,7 @@ PKG_SUGGESTED_OPTIONS+=	${_o_}
 
 .if !empty(PKG_OPTIONS:Marts)
 CONFIGURE_ARGS+=	--enable-arts
+EXTRA_LIBS+=		-lartsc
 .  include "../../audio/arts/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-arts
@@ -93,10 +99,10 @@ CONFIGURE_ARGS+=	--disable-cdparanoia
 .endif
 
 .if !empty(PKG_OPTIONS:Mdts)
-CONFIGURE_ARGS+=	--enable-libdts
+CONFIGURE_ARGS+=	--enable-libdca
 .  include "../../audio/libdca/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-libdts
+CONFIGURE_ARGS+=	--disable-libdca
 .endif
 
 .if !empty(PKG_OPTIONS:Mdv)
@@ -182,7 +188,7 @@ CONFIGURE_ARGS+=	--disable-menu
 EVAL_PREFIX+=		PREFIX.realplayer-codecs=realplayer-codecs
 PREFIX.realplayer-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-real
-CONFIGURE_ARGS+=	--with-reallibdir="${PREFIX.realplayer-codecs}/lib/RealPlayer8-Codecs"
+CONFIGURE_ARGS+=	--realcodecsdir="${PREFIX.realplayer-codecs}/lib/RealPlayer8-Codecs"
 DEPENDS+=		realplayer-codecs>=8nb2:../../multimedia/realplayer-codecs
 .else
 CONFIGURE_ARGS+=	--disable-real
@@ -197,11 +203,11 @@ CONFIGURE_ARGS+=	--disable-runtime-cpudetection
 .if !empty(PKG_OPTIONS:Mmplayer-win32)
 EVAL_PREFIX+=		PREFIX.win32-codecs=win32-codecs
 PREFIX.win32-codecs_DEFAULT=	${LOCALBASE}
-CONFIGURE_ARGS+=	--enable-win32
-CONFIGURE_ARGS+=	--with-win32libdir="${PREFIX.win32-codecs}/lib/win32"
+CONFIGURE_ARGS+=	--enable-win32dll
+CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
 DEPENDS+=		win32-codecs>=011227:../../multimedia/win32-codecs
 .else
-CONFIGURE_ARGS+=	--disable-win32
+CONFIGURE_ARGS+=	--disable-win32dll
 .endif
 
 .if !empty(PKG_OPTIONS:Mnas)
@@ -246,9 +252,17 @@ CONFIGURE_ARGS+=	--disable-libvorbis
 
 .if !empty(PKG_OPTIONS:Mxvid)
 CONFIGURE_ARGS+=	--enable-xvid
+EXTRA_LIBS+=		-lxvidcore
 .  include "../../multimedia/xvidcore/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-xvid
+.endif
+
+# -------------------------------------------------------------------------
+# Handle extra libraries (part 1)
+# -------------------------------------------------------------------------
+.if ${EXTRA_LIBS} != ""
+CONFIGURE_ARGS+=	--extra-libs=${EXTRA_LIBS:C/^ //:Q}
 .endif
 
 .endif # defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
