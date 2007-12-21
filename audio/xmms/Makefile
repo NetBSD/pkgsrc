@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2007/11/29 18:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2007/12/21 23:23:58 joerg Exp $
 #
 
 .include "Makefile.common"
+
+USE_TOOLS+=	msgfmt
 
 CONFIGURE_ARGS+=	--disable-esd
 
