@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/30 21:51:49 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/21 20:49:15 joerg Exp $
 bin/morph
 bin/xmorph
 include/xmorph/RgbaImage.h
@@ -18,6 +18,8 @@ lib/libmorph.la
 man/man1/gtkmorph.1
 man/man1/xmorph.1
 share/info/xmorph.info
+share/locale/fr/LC_MESSAGES/xmorph.mo
+share/locale/it/LC_MESSAGES/xmorph.mo
 share/xmorph/example/AA/README
 share/xmorph/example/AA/circuit.dest.mesh
 share/xmorph/example/AA/circuit.jpg
