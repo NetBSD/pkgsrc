@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2007/12/21 11:31:14 tron Exp $
+# $NetBSD: options.mk,v 1.24 2007/12/21 17:41:12 drochner Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -53,6 +53,9 @@ PKG_SUPPORTED_OPTIONS+= mplayer-default-cflags mplayer-win32
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || \
     ${MACHINE_ARCH} == "alpha"
 PKG_SUPPORTED_OPTIONS+=	mplayer-real
+.endif
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
 .endif
 
 # -------------------------------------------------------------------------
@@ -256,6 +259,13 @@ EXTRA_LIBS+=		-lxvidcore
 .  include "../../multimedia/xvidcore/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-xvid
+.endif
+
+.if !empty(PKG_OPTIONS:Mmplayer-ssse3)
+# needs a recent assembler
+.include "../../devel/binutils/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ssse3
 .endif
 
 # -------------------------------------------------------------------------
