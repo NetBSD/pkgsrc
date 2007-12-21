@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2681 2007/12/20 21:40:38 tron Exp $
+$NetBSD: CHANGES-2007,v 1.2682 2007/12/21 03:13:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4876,3 +4876,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Added security/qca2 version 2.0.0 [jdolecek 2007-12-20]
 	Added security/qca2-ossl version 2.0.0beta3 [jdolecek 2007-12-20]
 	Updated net/wireshark to 0.99.7 [tron 2007-12-20]
+	Updated security/sudo to 1.6.9p10 [taca 2007-12-21]
