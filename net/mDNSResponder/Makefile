@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/09/07 22:12:18 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2007/12/21 11:59:39 obache Exp $
 
 DISTNAME=	mDNSResponder-108
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Apple's mDNS responder
 USE_TOOLS+=	gmake
 BUILD_DIRS=	mDNSPosix
 BUILDDIR=	${WRKSRC}/mDNSPosix/build/prod
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,13 +71,13 @@ MAKE_ENV+=	HAVE_IPV6=1
 
 do-install:
 	for i in ${BINARY}; do \
-		${INSTALL_PROGRAM} ${BUILDDIR}/$$i ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${BUILDDIR}/$$i ${DESTDIR}${PREFIX}/bin; \
 	done
 	for i in ${SBINARY}; do \
-		${INSTALL_PROGRAM} ${BUILDDIR}/$$i ${PREFIX}/sbin; \
+		${INSTALL_PROGRAM} ${BUILDDIR}/$$i ${DESTDIR}${PREFIX}/sbin; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/mDNSShared/dns_sd.h ${PREFIX}/include
-	${INSTALL_LIB} ${BUILDDIR}/libdns_sd.${SO_SUFFIX} ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/mDNSShared/dns_sd.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_LIB} ${BUILDDIR}/libdns_sd.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
