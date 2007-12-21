@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/21 19:11:38 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/21 20:35:31 jnemeth Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-tools-0.14.6
@@ -12,6 +12,8 @@ COMMENT=	Tools for providing messages in different languages
 
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
 CONFLICTS=		gettext<0.14.5
+
+MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
