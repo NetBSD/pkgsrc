@@ -1,6 +1,6 @@
-$NetBSD: patch-bw,v 1.4 2007/10/28 07:28:49 taca Exp $
+$NetBSD: patch-bw,v 1.5 2007/12/21 17:32:27 drochner Exp $
 
---- include/config.h.in.orig	2007-09-11 23:21:02.000000000 +0900
+--- include/config.h.in.orig	2007-09-11 16:22:53.000000000 +0200
 +++ include/config.h.in
 @@ -321,9 +321,6 @@
  /* Define to 1 if you have the `delproplist' function. */
@@ -22,13 +22,13 @@ $NetBSD: patch-bw,v 1.4 2007/10/28 07:28:49 taca Exp $
  /* Define to 1 if you have the <execinfo.h> header file. */
  #undef HAVE_EXECINFO_H
  
-@@ -595,6 +595,9 @@
- /* Define to 1 if you have the `getpwent_r' function. */
- #undef HAVE_GETPWENT_R
+@@ -661,6 +661,9 @@
+ /* Whether iface AIX is available */
+ #undef HAVE_IFACE_AIX
  
-+/* Define to 1 if you have the `getpwent_r' function. */
-+#undef HAVE_GETPWENT_R
++/* Whether iface ifaddrs is available */
++#undef HAVE_IFACE_IFADDRS
 +
- /* Define to 1 if you have the `getrlimit' function. */
- #undef HAVE_GETRLIMIT
+ /* Whether iface ifconf is available */
+ #undef HAVE_IFACE_IFCONF
  

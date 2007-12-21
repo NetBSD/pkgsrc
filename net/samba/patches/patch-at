@@ -1,8 +1,16 @@
-$NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
+$NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
 
---- configure.orig	2007-09-11 23:21:05.000000000 +0900
+--- configure.orig	2007-09-11 16:22:55.000000000 +0200
 +++ configure
-@@ -1395,6 +1395,7 @@ Optional Packages:
+@@ -667,6 +667,7 @@ target_vendor
+ target_os
+ configdir
+ lockdir
++statedir
+ piddir
+ logfilebase
+ privatedir
+@@ -1395,6 +1396,7 @@ Optional Packages:
    --with-privatedir=DIR   Where to put smbpasswd ($ac_default_prefix/private)
    --with-rootsbindir=DIR  Which directory to use for root sbin ($ac_default_prefix/sbin)
    --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)
@@ -10,7 +18,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
    --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
    --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
    --with-configdir=DIR    Where to put configuration files ($libdir)
-@@ -2125,6 +2126,7 @@ fi
+@@ -2125,6 +2127,7 @@ fi
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -18,7 +26,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -2139,7 +2141,8 @@ swatdir="\${prefix}/swat"
+@@ -2139,7 +2142,8 @@ swatdir="\${prefix}/swat"
  if test "${with_fhs+set}" = set; then
    withval=$with_fhs;  case "$withval" in
    yes)
@@ -28,7 +36,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -2213,6 +2216,26 @@ fi
+@@ -2213,6 +2217,26 @@ fi
  
  
  #################################################
@@ -55,16 +63,101 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  # set pid directory location
  
  # Check whether --with-piddir was given.
-@@ -31006,7 +31029,7 @@ done
+@@ -2450,6 +2474,7 @@ fi
+ 
+ 
+ 
++
+ ## check for --enable-debug first before checking CFLAGS before
+ ## so that we don't mix -O and -g
+ # Check whether --enable-debug was given.
+@@ -31006,7 +31031,8 @@ done
  
  
  
 -for ac_func in getdents getdents64
++
 +for ac_func in getdents getdents64 getpwent_r
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -49841,9 +49864,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -46527,6 +46553,75 @@ _ACEOF
+ fi
+ 
+ if test $iface = no; then
++{ echo "$as_me:$LINENO: checking for iface ifaddrs" >&5
++echo $ECHO_N "checking for iface ifaddrs... $ECHO_C" >&6; }
++if test "${samba_cv_HAVE_IFACE_IFADDRS+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++
++SAVE_CPPFLAGS="$CPPFLAGS"
++CPPFLAGS="$CPPFLAGS ${SAMBA_CONFIGURE_CPPFLAGS}"
++if test "$cross_compiling" = yes; then
++  samba_cv_HAVE_IFACE_IFADDRS=cross
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++#define HAVE_IFACE_IFADDRS 1
++#define AUTOCONF_TEST 1
++#include "${srcdir-.}/lib/interfaces.c"
++_ACEOF
++rm -f conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
++  { (case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_try") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  samba_cv_HAVE_IFACE_IFADDRS=yes
++else
++  echo "$as_me: program exited with status $ac_status" >&5
++echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++( exit $ac_status )
++samba_cv_HAVE_IFACE_IFADDRS=no
++fi
++rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
++fi
++
++
++fi
++{ echo "$as_me:$LINENO: result: $samba_cv_HAVE_IFACE_IFADDRS" >&5
++echo "${ECHO_T}$samba_cv_HAVE_IFACE_IFADDRS" >&6; }
++CPPFLAGS="$SAVE_CPPFLAGS"
++if test x"$samba_cv_HAVE_IFACE_IFADDRS" = x"yes"; then
++	iface=yes;
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_IFACE_IFADDRS 1
++_ACEOF
++
++fi
++fi
++
++if test $iface = no; then
+ { echo "$as_me:$LINENO: checking for iface ifconf" >&5
+ echo $ECHO_N "checking for iface ifconf... $ECHO_C" >&6; }
+ if test "${samba_cv_HAVE_IFACE_IFCONF+set}" = set; then
+@@ -49841,9 +49936,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -77,7 +170,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -49859,11 +49882,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -49859,11 +49954,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -91,7 +184,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
    ;
    return 0;
  }
-@@ -49886,13 +49909,13 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -49886,13 +49981,13 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -107,7 +200,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  		  ac_cv_lib_ext_crypto=no
  fi
  
-@@ -49900,11 +49923,11 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -49900,11 +49995,11 @@ rm -f core conftest.err conftest.$ac_obj
        conftest$ac_exeext conftest.$ac_ext
  
  fi
@@ -123,7 +216,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  _ACEOF
  
  fi
-@@ -62806,31 +62829,39 @@ case "$host_os" in
+@@ -62806,31 +62901,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -185,7 +278,7 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -67320,6 +67351,7 @@ target_vendor!$target_vendor$ac_delim
+@@ -67320,6 +67423,7 @@ target_vendor!$target_vendor$ac_delim
  target_os!$target_os$ac_delim
  configdir!$configdir$ac_delim
  lockdir!$lockdir$ac_delim
@@ -193,12 +286,28 @@ $NetBSD: patch-at,v 1.7 2007/10/28 07:28:47 taca Exp $
  piddir!$piddir$ac_delim
  logfilebase!$logfilebase$ac_delim
  privatedir!$privatedir$ac_delim
-@@ -67366,7 +67398,7 @@ LDAP_LIBS!$LDAP_LIBS$ac_delim
- PAM_MODULES!$PAM_MODULES$ac_delim
+@@ -67363,7 +67467,6 @@ IDMAP_LIBS!$IDMAP_LIBS$ac_delim
+ KRB5_LIBS!$KRB5_LIBS$ac_delim
+ UUID_LIBS!$UUID_LIBS$ac_delim
+ LDAP_LIBS!$LDAP_LIBS$ac_delim
+-PAM_MODULES!$PAM_MODULES$ac_delim
  _ACEOF
  
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 98; then
+   if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
+@@ -67405,6 +67508,7 @@ _ACEOF
+ ac_delim='%!_!# '
+ for ac_last_try in false false false false false :; do
+   cat >conf$$subs.sed <<_ACEOF
++PAM_MODULES!$PAM_MODULES$ac_delim
+ INSTALL_PAM_MODULES!$INSTALL_PAM_MODULES$ac_delim
+ UNINSTALL_PAM_MODULES!$UNINSTALL_PAM_MODULES$ac_delim
+ NSS_MODULES!$NSS_MODULES$ac_delim
+@@ -67488,7 +67592,7 @@ SMBD_LIBS!$SMBD_LIBS$ac_delim
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 81; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 82; then
      break
    elif $ac_last_try; then
      { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
