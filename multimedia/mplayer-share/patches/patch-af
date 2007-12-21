@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.3 2007/07/05 05:18:51 wiz Exp $
+$NetBSD: patch-af,v 1.4 2007/12/21 11:31:16 tron Exp $
 
---- libavcodec/h264.c.orig	2006-10-22 22:32:34.000000000 +0000
-+++ libavcodec/h264.c
-@@ -6034,7 +6034,7 @@ static int inline get_cabac_cbf_ctx( H26
+--- libavcodec/h264.c.orig	2007-10-07 20:49:36.000000000 +0100
++++ libavcodec/h264.c	2007-12-19 13:39:30.000000000 +0000
+@@ -5241,7 +5241,7 @@
      return ctx + 4 * cat;
  }
  
--static const __attribute((used)) uint8_t last_coeff_flag_offset_8x8[63] = {
-+const __attribute((used)) uint8_t last_coeff_flag_offset_8x8[63] = {
+-static const attribute_used uint8_t last_coeff_flag_offset_8x8[63] = {
++const attribute_used uint8_t last_coeff_flag_offset_8x8[63] = {
      0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
      2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
      3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4,

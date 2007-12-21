@@ -1,31 +1,13 @@
-$NetBSD: patch-ae,v 1.7 2007/06/07 13:19:54 tron Exp $
+$NetBSD: patch-ae,v 1.8 2007/12/21 11:31:15 tron Exp $
 
---- stream/stream_cddb.c.orig	2006-10-22 23:32:25.000000000 +0100
-+++ stream/stream_cddb.c	2007-06-07 13:57:35.000000000 +0100
-@@ -435,7 +435,7 @@
+--- libvo/aclib.c.orig	2007-10-07 20:49:28.000000000 +0100
++++ libvo/aclib.c	2007-12-20 21:37:53.000000000 +0000
+@@ -18,7 +18,7 @@
+ //Feel free to fine-tune the above 2, it might be possible to get some speedup with them :)
  
- 	switch(status) {
- 		case 210:
--			ret = sscanf( http_hdr->body, "%d %s %08lx", &status, category, &disc_id);
-+			ret = sscanf( http_hdr->body, "%d %99s %08lx", &status, category, &disc_id);
- 			if( ret!=3 ) {
- 				mp_msg(MSGT_DEMUX, MSGL_ERR, MSGTR_ParseError);
- 				return -1;
-@@ -496,7 +496,7 @@
- 	ptr++;
- 	// We have a list of exact/inexact matches, so which one do we use?
- 	// So let's take the first one.
--	ret = sscanf(ptr, "%s %08lx %s", cddb_data->category, &(cddb_data->disc_id), album_title);
-+	ret = sscanf(ptr, "%99s %08lx %99s", cddb_data->category, &(cddb_data->disc_id), album_title);
- 	if( ret!=3 ) {
- 		mp_msg(MSGT_DEMUX, MSGL_ERR, MSGTR_ParseError);
- 		return -1;
-@@ -533,7 +533,7 @@
- 	switch(status) {
- 		case 200:
- 			// Found exact match
--			ret = sscanf(http_hdr->body, "%d %s %08lx %s", &status, cddb_data->category, &(cddb_data->disc_id), album_title);
-+			ret = sscanf(http_hdr->body, "%d %99s %08lx %99s", &status, cddb_data->category, &(cddb_data->disc_id), album_title);
- 			if( ret!=4 ) {
- 				mp_msg(MSGT_DEMUX, MSGL_ERR, MSGTR_ParseError);
- 				return -1;
+ //#define STATISTICS
+-#ifdef ARCH_X86
++#if defined(ARCH_X86) && !defined(__APPLE__)
+ #define CAN_COMPILE_X86_ASM
+ #endif
+ 

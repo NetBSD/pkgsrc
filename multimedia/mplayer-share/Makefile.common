@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.36 2007/12/15 15:14:26 heinz Exp $
+# $NetBSD: Makefile.common,v 1.37 2007/12/21 11:31:13 tron Exp $
 
-MPLAYER_DIST_VERSION=	1.0rc1
+MPLAYER_DIST_VERSION=	1.0rc2
 
 # This variable is used in all packages which depend on this package
-MPLAYER_PKG_VERSION=	1.0rc9
+MPLAYER_PKG_VERSION=	1.0rc10
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		multimedia
@@ -41,10 +41,7 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
 			--with-extralibdir="${LOCALBASE}/lib" \
-			--with-x11libdir="${X11BASE}/lib" \
-			--with-extraincdir=${X11BASE}/include \
-			--disable-mpdvdkit \
-			--disable-smb
+			--disable-dvdread-internal --disable-smb
 
 ONLY_FOR_COMPILER=	gcc
 
