@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2007/12/21 00:19:44 jdolecek Exp $
+
+--- src/src.pro.orig	2007-08-14 23:00:28.000000000 +0200
++++ src/src.pro
+@@ -91,10 +91,6 @@ unix: {
+ 	incfiles.files = $$PUBLIC_HEADERS
+ 	incfiles.files += $$QCA_INC/qca.h $$QCA_INC/QtCrypto
+ 	INSTALLS += incfiles
+-
+-	manfiles.path = $$DATADIR/man/man1
+-	manfiles.files = $$QCA_BASE/man/qcatool2.1
+-	INSTALLS += manfiles
+ }
+ 
+ !debug_and_release|build_pass {
