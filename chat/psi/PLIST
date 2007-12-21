@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2007/12/19 13:19:38 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/12/21 00:22:49 jdolecek Exp $
 bin/psi
+share/doc/psi/COPYING
 share/doc/psi/README
 share/psi/certs/README
 share/psi/certs/startcom_ca.crt
@@ -164,9 +165,16 @@ share/psi/sound/ft_incoming.wav
 share/psi/sound/offline.wav
 share/psi/sound/online.wav
 share/psi/sound/send.wav
+@dirrm share/psi/sound
 @dirrm share/psi/iconsets/system/default/whiteboarding
 @dirrm share/psi/iconsets/system/default
 @dirrm share/psi/iconsets/system
+@dirrm share/psi/iconsets/roster/default
+@dirrm share/psi/iconsets/roster
+@dirrm share/psi/iconsets/emoticons/default
+@dirrm share/psi/iconsets/emoticons
 @dirrm share/psi/iconsets
+@dirrm share/psi/iconsets
+@dirrm share/psi/certs
 @dirrm share/psi
 @dirrm share/doc/psi
