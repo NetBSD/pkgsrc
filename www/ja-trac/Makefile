@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/10/13 08:00:53 obache Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/21 03:38:06 taca Exp $
 #
 
 DISTNAME=	trac-0.10.4-ja-1
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.14:../../www/py-clearsilver
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
 DEPENDS+=	${PYPKGPREFIX}-jpCodecs>=1.4.11:../../converters/py-jpCodecs
 
-PKG_OPTIONS_VAR=	PKG_OPTOINS.trac
+PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
 PKG_SUGGESTED_OPTIONS=	sqlite
