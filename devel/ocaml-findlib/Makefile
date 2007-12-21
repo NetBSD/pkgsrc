@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/20 13:47:43 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/21 16:48:30 joerg Exp $
 #
 
 DISTNAME=		findlib-1.1.2pl1
@@ -11,7 +11,7 @@ MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://www.ocaml-programming.de/packages/
 COMMENT=		Library finder for OCaml
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake m4
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-bindir ${PREFIX}/bin
