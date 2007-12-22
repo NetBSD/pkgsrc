@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2007/12/11 05:27:05 bjs Exp $
+$NetBSD: distinfo,v 1.17 2007/12/22 00:23:58 joerg Exp $
 
 SHA1 (ncurses-5.6-coverity.patch.gz) = fee27bdd55c1c316248643e168865b55235d79c7
 RMD160 (ncurses-5.6-coverity.patch.gz) = b11682ae9e043be8d6c50f040d8531f80fc26ce8
@@ -8,6 +8,6 @@ RMD160 (ncurses-5.6.tar.gz) = 1a878819c43e6426500fd74ccedf0a032ef399d8
 Size (ncurses-5.6.tar.gz) = 2402592 bytes
 SHA1 (patch-aa) = a3a24e73b79ca8611ae4d5616f1c671926ea5a64
 SHA1 (patch-ab) = 39679b18ba817af7ec47a17a62ab3ae6e214b443
-SHA1 (patch-ac) = c8137405a61258a9a4d89ad889839f43c1462210
+SHA1 (patch-ac) = 19becdf15b3a0fc8f630985ff2af4680e8f2652c
 SHA1 (patch-ad) = bfb957df138b1567d895882316c96011f44a1c30
 SHA1 (patch-ae) = 5e3396e7dafe0f772780d0c2ad2b9ec752c09a86
