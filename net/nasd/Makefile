@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/22 11:25:52 obache Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
@@ -13,7 +13,7 @@ COMMENT=		Prototype storage implementation
 ONLY_FOR_PLATFORM=	NetBSD-*-* SunOS-*-* Linux-*-*
 
 USE_IMAKE=		yes
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl makedepend
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 pre-patch:
