@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.740 2007/12/19 12:34:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.741 2007/12/22 11:15:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7360,8 +7360,7 @@ sub checkfile_PLIST($) {
 "",
 "Another reason, common for Perl packages, is that the PLIST is",
 "automatically generated. Since there is no use of the empty PLIST file,",
-"it shouldn't be necessary. This should be fixed in the pkgsrc",
-"infrastructure.");
+"it shouldn't be necessary.");
 	}
 
 	# Get the list of all files from the PLIST.
@@ -7590,6 +7589,11 @@ sub checkfile_PLIST($) {
 
 			} elsif (defined($effective_pkgbase) && $text =~ qr"^share/\Q${effective_pkgbase}\E/") {
 				# Fine.
+
+			} elsif ($text =~ qr"^share/info/") {
+				$line->log_warning("Info pages should be installed into info/, not share/info/.");
+				$line->explain_warning(
+"To fix this, you should add INFO_FILES=yes to the package Makefile.");
 
 			} elsif ($text =~ qr"^share/locale/[\w\@_]+/LC_MESSAGES/[^/]+\.mo$") {
 				# Fine.
