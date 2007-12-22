@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/07/14 07:12:14 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2007/12/22 19:42:01 tnn Exp $
 
---- Makefile.in.orig	2003-07-14 07:47:06.000000000 +0100
-+++ Makefile.in	2003-07-14 07:48:40.000000000 +0100
-@@ -31,7 +31,8 @@
+--- Makefile.in.orig	2007-12-18 07:20:38.000000000 +0100
++++ Makefile.in
+@@ -38,7 +38,8 @@ MKDEPFLAGS=@MKDEPFLAGS@;
  SOURCES=grap.cc grap_lex.cc *.cc
  DISTDIR=@PACKAGE_TARNAME@-@PACKAGE_VERSION@
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/14 07:12:14 jtb Exp $
  
  # To suppress optimization of certain files under g++ where
  # optimization is costly at compilation time and of minimial use at
-@@ -48,7 +49,7 @@
+@@ -55,7 +56,7 @@ SPOTLESSFILES=grap.1 grap.ps grap.man
  include Makefile.common
  
  grap:	${OBJS}
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/14 07:12:14 jtb Exp $
  
  .l.cc:
  	${LEX} -o$@ $<
-@@ -67,7 +68,7 @@
+@@ -74,7 +75,7 @@ grap_lex.cc:	grap_lex.l y.tab.h
  # that file under g++ by default.  If --optimize-grap_tokenizer is
  # given to configure, no attempt to suppress optimization is made.
  grap_tokenizer.o:	grap_tokenizer.cc
@@ -30,11 +30,11 @@ $NetBSD: patch-aa,v 1.3 2003/07/14 07:12:14 jtb Exp $
  
  # flex defines an unused static function.  This rule supresses that
  # warning under g++.
-@@ -89,7 +90,6 @@
+@@ -98,7 +99,6 @@ grap.1:	grap.doc
  # The || true lines allow make to continue on systems where install -d
  # fails on existing directories.
  install:	@INSTALL_DEPS@
 -	strip grap || true
- 	${INSTALL} -d ${BINDIR} || true
- 	${INSTALL} -d ${MANDIR} || true
- 	${INSTALL} -d ${DEFINESDIR} || true
+ 	${INSTALL} -d ${DESTDIR}${BINDIR} || true
+ 	${INSTALL} -d ${DESTDIR}${MANDIR} || true
+ 	${INSTALL} -d ${DESTDIR}${DEFINESDIR} || true
