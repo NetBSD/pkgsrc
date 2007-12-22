@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6921 2007/12/22 12:09:59 obache Exp $
+$NetBSD: TODO,v 1.6922 2007/12/22 12:41:00 obache Exp $
 
 Suggested new packages
 ======================
@@ -1112,7 +1112,6 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
-	o radiusd-cistron-1.6.8
 	o radmind-1.11.0
 	o rails-2.0.2 [import as rails2?]
 	o raine-0.50.5
