@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:14:02 agc Exp $
+$NetBSD: distinfo,v 1.6 2007/12/22 12:08:58 obache Exp $
 
-SHA1 (pxe-1.4.tar.gz) = cd84b29e61c7f142e8e7ebe15248de47954d6a68
-RMD160 (pxe-1.4.tar.gz) = 2d06b57fe998ce0904c82d1fbc4d384125b348b5
-Size (pxe-1.4.tar.gz) = 55985 bytes
-SHA1 (patch-aa) = f286f08998840e32bd1a4b78ad4a63781bbba9a7
-SHA1 (patch-ab) = 4a50f5047b4304bc41a857775895e5ca8e13b176
+SHA1 (pxe-1.4.2.tar.gz) = b2e53e97eeb01fe8d4e9978016f6a9d7872e869d
+RMD160 (pxe-1.4.2.tar.gz) = 8d626d500d088140284bdad32616d8b45aae8baf
+Size (pxe-1.4.2.tar.gz) = 56342 bytes
+SHA1 (patch-aa) = 7d24c06f1d584d2d4c555e0ca793fb6ee1e0b7f6
