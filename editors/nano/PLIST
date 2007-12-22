@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/10/24 15:28:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/12/22 15:12:22 obache Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -36,6 +36,7 @@ share/locale/sv/LC_MESSAGES/nano.mo
 share/locale/tr/LC_MESSAGES/nano.mo
 share/locale/uk/LC_MESSAGES/nano.mo
 share/locale/vi/LC_MESSAGES/nano.mo
+share/locale/zh_CN/LC_MESSAGES/nano.mo
 share/locale/zh_TW/LC_MESSAGES/nano.mo
 share/nano/asm.nanorc
 share/nano/c.nanorc
