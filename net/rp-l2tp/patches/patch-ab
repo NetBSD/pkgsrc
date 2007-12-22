@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/12/18 16:39:18 agc Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/22 13:01:08 obache Exp $
 
 --- Makefile.in.orig	2002-09-30 21:33:55.000000000 +0100
 +++ Makefile.in	2003-12-18 10:24:07.000000000 +0000
@@ -34,12 +34,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/18 16:39:18 agc Exp $
  
  libevent/libevent.a:
  	test -d libevent || ln -s ../libevent .
-@@ -82,8 +91,7 @@
+@@ -82,8 +91,8 @@
  install: all
  	-mkdir -p $(RPM_INSTALL_ROOT)$(sbindir)
  	$(install) -m 755 -s l2tpd $(RPM_INSTALL_ROOT)$(sbindir)
 -	-mkdir -p $(RPM_INSTALL_ROOT)/etc/l2tp
 -	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)/etc/l2tp/l2tp.conf.example
++	-mkdir -p $(RPM_INSTALL_ROOT)${PREFIX}/share/examples
 +	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)${PREFIX}/share/examples/l2tp.conf
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
