@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2005/12/07 03:45:21 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2007/12/22 12:39:58 obache Exp $
 
---- src/radiusd.c.orig	2005-12-07 03:33:06.000000000 +0000
+--- src/radiusd.c.orig	2005-03-31 21:06:51.000000000 +0000
 +++ src/radiusd.c
-@@ -78,10 +78,6 @@ static time_t		start_time;
+@@ -80,10 +80,6 @@ static time_t		start_time;
  static AUTH_REQ		*first_request;
  
  
