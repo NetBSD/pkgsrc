@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/24 23:57:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/22 22:34:23 jdolecek Exp $
 bin/licq
+bin/viewurl-firefox.sh
 bin/viewurl-lynx.sh
 bin/viewurl-mozilla.sh
 bin/viewurl-ncftp.sh
 bin/viewurl-netscape.sh
 bin/viewurl-opera.sh
+bin/viewurl-seamonkey.sh
 bin/viewurl-w3m.sh
+include/licq/licq_backgroundcodes.h
 include/licq/licq_buffer.h
 include/licq/licq_chat.h
 include/licq/licq_color.h
@@ -15,15 +18,22 @@ include/licq/licq_events.h
 include/licq/licq_file.h
 include/licq/licq_filetransfer.h
 include/licq/licq_history.h
+include/licq/licq_homepagecodes.h
 include/licq/licq_icq.h
 include/licq/licq_icqd.h
+include/licq/licq_interestcodes.h
 include/licq/licq_languagecodes.h
 include/licq/licq_log.h
 include/licq/licq_message.h
+include/licq/licq_occupationcodes.h
 include/licq/licq_onevent.h
+include/licq/licq_organizationcodes.h
 include/licq/licq_packets.h
 include/licq/licq_plugin.h
 include/licq/licq_plugind.h
+include/licq/licq_protoplugin.h
+include/licq/licq_protoplugind.h
+include/licq/licq_providers.h
 include/licq/licq_proxy.h
 include/licq/licq_sar.h
 include/licq/licq_sighandler.h
