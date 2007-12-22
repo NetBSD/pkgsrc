@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1 2007/12/22 01:40:21 joerg Exp $
+
+--- Makefile.in.orig	2004-02-23 19:22:09.000000000 +0100
++++ Makefile.in
+@@ -88,7 +88,7 @@ libargp_a_OBJECTS = $(am_libargp_a_OBJEC
+ PROGRAMS = $(noinst_PROGRAMS)
+ argp_test_SOURCES = argp-test.c
+ argp_test_OBJECTS = argp-test.$(OBJEXT)
+-argp_test_DEPENDENCIES = libargp.a
++argp_test_DEPENDENCIES = libargp.la
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -99,10 +99,10 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/argp-help.Po ./$(DEPDIR)/argp-parse.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/argp-pv.Po ./$(DEPDIR)/argp-pvh.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/argp-test.Po
+-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = libtool --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = libtool --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(libargp_a_SOURCES) argp-test.c
+ DIST_SOURCES = $(libargp_a_SOURCES) argp-test.c
+ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
+@@ -200,7 +200,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = foreign
+ SUBDIRS = . testsuite
+-noinst_LIBRARIES = libargp.a
++noinst_LIBRARIES = libargp.la
+ noinst_HEADERS = argp.h argp-fmtstream.h argp-namefrob.h # argp-comp.h
+ EXTRA_DIST = mempcpy.c strchrnul.c strndup.c Versions
+ 
+@@ -210,7 +210,7 @@ libargp_a_SOURCES = argp-ba.c argp-eexst
+ 		    argp-pvh.c
+ 
+ libargp_a_LIBADD = $(LIBOBJS)
+-argp_test_LDADD = libargp.a
++argp_test_LDADD = libargp.la
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+@@ -269,10 +269,8 @@ distclean-hdr:
+ 
+ clean-noinstLIBRARIES:
+ 	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libargp.a: $(libargp_a_OBJECTS) $(libargp_a_DEPENDENCIES) 
+-	-rm -f libargp.a
+-	$(libargp_a_AR) libargp.a $(libargp_a_OBJECTS) $(libargp_a_LIBADD)
+-	$(RANLIB) libargp.a
++libargp.la: $(libargp_a_OBJECTS) $(libargp_a_DEPENDENCIES) 
++	libtool --mode=link ${CC} -o $@ -rpath ${libdir} $(LIBOBJS:C/.o$/.lo/) $(libargp_a_OBJECTS:C/.o$/.lo/)
+ 
+ clean-noinstPROGRAMS:
+ 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)

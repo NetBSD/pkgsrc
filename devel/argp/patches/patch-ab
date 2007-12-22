@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1 2007/12/22 01:40:22 joerg Exp $
+
+--- testsuite/Makefile.in.orig	2007-12-22 02:17:56.000000000 +0100
++++ testsuite/Makefile.in
+@@ -53,24 +53,24 @@ PROGRAMS = $(noinst_PROGRAMS)
+ ex1_SOURCES = ex1.c
+ ex1_OBJECTS = ex1.$(OBJEXT)
+ ex1_LDADD = $(LDADD)
+-ex1_DEPENDENCIES = ../libargp.a
++ex1_DEPENDENCIES = ../libargp.la
+ ex3_SOURCES = ex3.c
+ ex3_OBJECTS = ex3.$(OBJEXT)
+ ex3_LDADD = $(LDADD)
+-ex3_DEPENDENCIES = ../libargp.a
++ex3_DEPENDENCIES = ../libargp.la
+ ex4_SOURCES = ex4.c
+ ex4_OBJECTS = ex4.$(OBJEXT)
+ ex4_LDADD = $(LDADD)
+-ex4_DEPENDENCIES = ../libargp.a
++ex4_DEPENDENCIES = ../libargp.la
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/ex1.Po ./$(DEPDIR)/ex3.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/ex4.Po
+-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = libtool --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = libtool --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = ex1.c ex3.c ex4.c
+ DIST_SOURCES = ex1.c ex3.c ex4.c
+ ETAGS = etags
+@@ -151,7 +151,7 @@ target_alias = @target_alias@
+ TS_SH = ex1-test permute-test
+ TS_PROGS = 
+ TS_ALL = $(TS_PROGS) $(TS_SH)
+-LDADD = ../libargp.a
++LDADD = ../libargp.la
+ EXTRA_DIST = $(TS_SH) run-tests
+ CLEANFILES = test.out
+ all: all-am
