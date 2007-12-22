@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/08/02 21:53:05 dbj Exp $
+# $NetBSD: Makefile,v 1.34 2007/12/22 00:05:25 joerg Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-0.4.9pre1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 MAINTAINER=	zul@NetBSD-fr.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
@@ -31,25 +33,21 @@ CONFIGURE_ARGS+=	--enable-pp --disable-vhook --disable-debug
 CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--enable-ffplay
 
+INSTALLATION_DIRS=	include/ffmpeg/libpostproc lib \
+			share/examples/ffmpeg share/doc/ffmpeg
+
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ffmpeg \
-		${PREFIX}/share/doc/ffmpeg \
-		${PREFIX}/include/ffmpeg/libpostproc
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/apiexample.c \
-		${PREFIX}/share/doc/ffmpeg
+		${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/TODO \
-		${PREFIX}/share/doc/ffmpeg
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${PREFIX}/share/doc/ffmpeg
+		${DESTDIR}${PREFIX}/share/doc/ffmpeg
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
-		${PREFIX}/share/examples/ffmpeg
-	# ffplay not installed
-	if [ -f ${PREFIX}/${PKGMANDIR}/man1/ffplay.1 ]; then \
-	${RM} ${PREFIX}/${PKGMANDIR}/man1/ffplay.1 ; \
-	fi
+		${DESTDIR}${PREFIX}/share/examples/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/libpostproc/postprocess.h \
-		${PREFIX}/include/ffmpeg/libpostproc
+		${DESTDIR}${PREFIX}/include/ffmpeg/libpostproc
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
