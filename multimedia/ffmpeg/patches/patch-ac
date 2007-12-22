@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2007/08/02 21:48:34 dbj Exp $
+$NetBSD: patch-ac,v 1.5 2007/12/22 00:05:25 joerg Exp $
 
 --- Makefile.orig	2004-07-08 13:02:04.000000000 +0200
 +++ Makefile
@@ -83,14 +83,26 @@ $NetBSD: patch-ac,v 1.4 2007/08/02 21:48:34 dbj Exp $
  install: all install-man $(INSTALLVHOOK)
 -	$(MAKE) -C libavcodec install
 -	$(MAKE) -C libavformat install
+-	install -d "$(bindir)"
+-	install -c -s -m 755 $(PROG) "$(bindir)"
 +	$(MAKE) -C libavcodec install install-headers
 +	$(MAKE) -C libavformat install install-headers
- 	install -d "$(bindir)"
--	install -c -s -m 755 $(PROG) "$(bindir)"
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROG) "$(bindir)"
++	install -d "${DESTDIR}$(bindir)"
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROG) ${DESTDIR}$(bindir)
  
  # create the window installer
  wininstaller: all install
+@@ -135,8 +128,8 @@ wininstaller: all install
+ install-man:
+ ifneq ($(CONFIG_WIN32),yes)
+ 	if [ -f $(SRC_PATH)/doc/ffmpeg.1 ] ; then \
+-	    install -d "$(mandir)/man1" ; \
+-	    install -m 644 $(MANPAGE) "$(mandir)/man1" ; \
++	    install -d "${DESTDIR}$(mandir)/man1" ; \
++	    install -m 644 $(MANPAGE) "${DESTDIR}$(mandir)/man1" ; \
+ 	fi
+ endif
+ 
 @@ -159,15 +152,15 @@ endif
  .depend: $(SRCS)
  	$(CC) -MM $(CFLAGS) $(SDL_CFLAGS) $^ 1>.depend

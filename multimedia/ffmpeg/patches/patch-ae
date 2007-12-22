@@ -1,7 +1,7 @@
--$NetBSD: patch-ae,v 1.7 2007/08/02 21:48:34 dbj Exp $
+$NetBSD: patch-ae,v 1.8 2007/12/22 00:05:25 joerg Exp $
 
---- libavcodec/Makefile.orig	2004-06-18 06:11:15.000000000 -0700
-+++ libavcodec/Makefile	2007-08-02 10:50:10.000000000 -0700
+--- libavcodec/Makefile.orig	2004-06-18 15:11:15.000000000 +0200
++++ libavcodec/Makefile
 @@ -7,7 +7,7 @@ include ../config.mak
  VPATH=$(SRC_PATH)/libavcodec
  
@@ -25,7 +25,7 @@
  TESTS= imgresample-test dct-test motion-test fft-test
  
 +install: all
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(prefix)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIB:.a=.la) ${DESTDIR}$(prefix)/lib
 +
  all: $(LIB) $(SLIB)
  
@@ -57,3 +57,21 @@
  
  dep:	depend
  
+@@ -278,14 +278,14 @@ install:
+ endif
+ 
+ installlib: all install-headers
+-	install -m 644 $(LIB) $(prefix)/lib
++	install -m 644 $(LIB) ${DESTDIR}$(prefix)/lib
+ 
+ install-headers:
+-	mkdir -p "$(prefix)/include/ffmpeg"
++	mkdir -p "${DESTDIR}$(prefix)/include/ffmpeg"
+ 	install -m 644 $(SRC_PATH)/libavcodec/avcodec.h \
+ 	               $(SRC_PATH)/libavcodec/common.h \
+ 	               $(SRC_PATH)/libavcodec/rational.h \
+-                "$(prefix)/include/ffmpeg"
++                ${DESTDIR}$(prefix)/include/ffmpeg
+ 
+ #
+ # include dependency files if they exist
