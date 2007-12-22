@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:23 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/22 12:08:58 obache Exp $
 #
 
-DISTNAME=	pxe-1.4
-PKGREVISION=	1
+DISTNAME=	pxe-1.4.2
 CATEGORIES=	net sysutils
 MASTER_SITES=	http://www.kano.org.uk/projects/pxe/
 
@@ -20,5 +19,9 @@ EGDIR=		${PREFIX}/share/examples/pxe
 CONF_FILES=	${EGDIR}/pxe.conf ${PKG_SYSCONFDIR}/pxe.conf
 
 RCD_SCRIPTS=	pxe
+
+BUILD_DEFS+=	VARBASE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"
