@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6920 2007/12/22 04:29:47 taca Exp $
+$NetBSD: TODO,v 1.6921 2007/12/22 12:09:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -1052,7 +1052,6 @@ Suggested package updates
 	o puf-0.93.3
 	o puzzle-5.2
 	o pwlib-1.10.10
-	o pxe-1.4.2
 	o py-FourSuite-1.0.2
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
