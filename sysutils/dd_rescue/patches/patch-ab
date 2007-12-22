@@ -1,5 +1,7 @@
---- dd_rescue.c.orig	2006-07-23 13:47:50.000000000 +0200
-+++ dd_rescue.c	2006-09-20 20:27:33.000000000 +0200
+$NetBSD: patch-ab,v 1.3 2007/12/22 04:27:17 taca Exp $
+
+--- dd_rescue.c.orig	2006-07-23 20:47:50.000000000 +0900
++++ dd_rescue.c
 @@ -55,6 +55,10 @@
  #include <sys/time.h>
  #include <sys/stat.h>
@@ -11,3 +13,17 @@
  int softbs, hardbs, syncfreq;
  int maxerr, nrerr, reverse, dotrunc, abwrerr, sparse, nosparse;
  int verbose, quiet, interact, force;
+@@ -742,7 +746,12 @@ int main(int argc, char* argv[])
+ 		ipos = 0;
+ 
+ #ifdef O_DIRECT
+-	if (posix_memalign(mp, sysconf(_SC_PAGESIZE), softbs)) {
++#ifdef linux
++#define my_valloc(a, b, c)	posix_memalign((a), (b), (c))
++#else
++#define my_valloc(a, b, c)	(*(a) = valloc((c)))
++#endif
++	if (my_valloc(mp, sysconf(_SC_PAGESIZE), softbs)) {
+ 		fplog(stderr, "dd_rescue: (fatal): allocation of aligned buffer failed!\n");
+ 		cleanup(); exit(18);
+ 	}
