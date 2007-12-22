@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2007/08/02 21:48:34 dbj Exp $
+$NetBSD: patch-ad,v 1.6 2007/12/22 00:05:25 joerg Exp $
 
---- libavformat/Makefile.orig	2004-04-24 08:16:23.000000000 -0700
-+++ libavformat/Makefile	2007-08-02 10:47:18.000000000 -0700
+--- libavformat/Makefile.orig	2004-04-24 17:16:23.000000000 +0200
++++ libavformat/Makefile
 @@ -6,7 +6,7 @@ include ../config.mak
  
  VPATH=$(SRC_PATH)/libavformat
@@ -28,7 +28,7 @@ $NetBSD: patch-ad,v 1.5 2007/08/02 21:48:34 dbj Exp $
  SRCS := $(OBJS:.o=.c) $(PPOBJS:.o=.cpp)
  
 +install: all
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(prefix)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIB:.a=.la) ${DESTDIR}$(prefix)/lib
 +
  all: $(LIB) $(SLIB)
  
@@ -50,8 +50,17 @@ $NetBSD: patch-ad,v 1.5 2007/08/02 21:48:34 dbj Exp $
  ifeq ($(BUILD_SHARED),yes)
  install: all install-headers
  ifeq ($(CONFIG_WIN32),yes)
-@@ -124,11 +128,11 @@ install-headers:
-                 "$(prefix)/include/ffmpeg"
+@@ -117,18 +121,18 @@ installlib: all install-headers
+ 	install -m 644 $(LIB) $(prefix)/lib
+ 
+ install-headers:
+-	mkdir -p "$(prefix)/include/ffmpeg"
++	mkdir -p "${DESTDIR}$(prefix)/include/ffmpeg"
+ 	install -m 644 $(SRC_PATH)/libavformat/avformat.h $(SRC_PATH)/libavformat/avio.h \
+                 $(SRC_PATH)/libavformat/rtp.h $(SRC_PATH)/libavformat/rtsp.h \
+                 $(SRC_PATH)/libavformat/rtspcodes.h \
+-                "$(prefix)/include/ffmpeg"
++                "${DESTDIR}$(prefix)/include/ffmpeg"
  
  %.o: %.c
 -	$(CC) $(CFLAGS) -c -o $@ $< 
