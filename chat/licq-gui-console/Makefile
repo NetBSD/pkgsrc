@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2007/12/21 23:50:21 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/22 22:34:24 jdolecek Exp $
 #
 
-DISTNAME=	licq-1.2.6
+DISTNAME=	licq-1.3.5
 PKGNAME=	${DISTNAME:C/-/-gui-console-/}
-PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=licq/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,5 +26,6 @@ OVERRIDE_DIRDEPTH=	3
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/cdk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
