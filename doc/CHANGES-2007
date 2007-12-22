@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2689 2007/12/22 11:22:00 rillig Exp $
+$NetBSD: CHANGES-2007,v 1.2690 2007/12/22 12:09:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4889,3 +4889,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/xf86-video-radeonhd to 1.1.0 [joerg 2007-12-21]
 	Updated sysutils/dd_rescue to 1.14 [taca 2007-12-22]
 	Updated pkgtools/pkglint to 4.81 [rillig 2007-12-22]
+	Updated net/pxe to 1.4.2 [obache 2007-12-22]
