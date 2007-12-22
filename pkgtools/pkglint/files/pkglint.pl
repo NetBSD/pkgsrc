@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.741 2007/12/22 11:15:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.742 2007/12/22 22:27:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1785,6 +1785,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\`[^\`]*\`		# backticks string
 	|	\\\$\$			# an escaped dollar sign
 	|	\\[^\$]			# other escaped characters
+	|	\$[\w_]			# one-character make(1) variable
 	|	\$\{[^{}]+\}		# make(1) variable
 	|	\$\([^()]+\)		# make(1) variable, $(...)
 	|	\$[/\@<^]		# special make(1) variables
@@ -4223,7 +4224,7 @@ sub checkline_mk_shellword($$$) {
 		# which state we are currently.
 		} elsif ($rest =~ s/^\$\{(${regex_varname}|[\@])(:[^\{]+)?\}//
 		||  $rest =~ s/^\$\((${regex_varname}|[\@])(:[^\)]+)?\)//
-		||  $rest =~ s/^\$(\@)//) {
+		||  $rest =~ s/^\$([\w\@])//) {
 			my ($varname, $mod) = ($1, $2);
 
 			if ($varname eq "\@") {
