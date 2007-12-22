@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2007/12/22 21:40:13 tnn Exp $
+
+--- lib/bsd/dynamic.c.orig	1997-02-13 07:31:42.000000000 +0100
++++ lib/bsd/dynamic.c
+@@ -2,6 +2,7 @@
+ 
+ /* allocate dynamic region on BSD */
+ 
++#include <sys/cdefs.h>
+ #include <sys/vadvise.h>
+ 
+ char *malloc();
