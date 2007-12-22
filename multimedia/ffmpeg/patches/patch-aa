@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2007/08/02 21:48:34 dbj Exp $
+$NetBSD: patch-aa,v 1.7 2007/12/22 00:05:25 joerg Exp $
 
---- configure.orig	2004-07-05 11:06:16.000000000 -0700
-+++ configure	2007-08-02 12:56:27.000000000 -0700
+--- configure.orig	2004-07-05 21:06:16.000000000 +0300
++++ configure
 @@ -224,11 +224,10 @@ FFSLDFLAGS=""
  need_inet_aton="yes"
  extralibs="$extralibs -lsocket -lnsl"
@@ -23,3 +23,13 @@ $NetBSD: patch-aa,v 1.6 2007/08/02 21:48:34 dbj Exp $
  SHFLAGS="-dynamiclib"
  extralibs=""
  darwin="yes"
+@@ -1140,8 +1138,8 @@ fi
+ if test "$vhook" = "yes" ; then
+   echo "BUILD_VHOOK=yes" >> config.mak
+   echo "#define HAVE_VHOOK 1" >> $TMPH
+-  extralibs="$extralibs $ldl"
+ fi
++extralibs="$extralibs $ldl"
+ if test "$lshared" = "yes" ; then
+   echo "BUILD_SHARED=yes" >> config.mak
+   echo "PIC=-fPIC" >> config.mak
