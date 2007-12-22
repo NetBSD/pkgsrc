@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2007/12/02 11:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2007/12/22 12:39:57 obache Exp $
 
-DISTNAME=	radiusd-cistron-1.6.7
-PKGREVISION=	2
+DISTNAME=	radiusd-cistron-1.6.8
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.cistron.nl/pub/people/miquels/radius/
 
@@ -16,8 +15,8 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	src/checkrad.pl
 
 MAKE_FILE=	Makefile.BSD
-BUILD_DIRS=	${WRKSRC}/src
-INSTALL_DIRS=	${WRKSRC}/src
+BUILD_DIRS=	src
+INSTALL_DIRS=	src
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			${PKGMANDIR}/man8 sbin share/examples/raddb \
 			share/doc/radiusd-cistron

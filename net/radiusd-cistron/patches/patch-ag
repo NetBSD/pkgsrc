@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2007/12/22 12:39:58 obache Exp $
+
+--- src/radiusd.h.orig	2003-12-08 16:12:22.000000000 +0000
++++ src/radiusd.h
+@@ -204,7 +204,6 @@ extern char		*radutmp_path;
+ extern char		*radwtmp_path;
+ extern UINT4		expiration_seconds;
+ extern UINT4		warning_seconds;
+-extern int		radius_pid;
+ extern int		use_dbm;
+ extern int		use_dns;
+ extern int		use_wtmp;
