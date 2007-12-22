@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.34 2007/12/11 19:55:06 heinz Exp $
+# $NetBSD: sites.mk,v 1.35 2007/12/22 07:22:04 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -125,12 +125,32 @@ MASTER_SITE_SUSE+=	\
 	ftp://fr.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
 	ftp://fr2.rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/
 
-MASTER_SITE_MOZILLA+=   \
+MASTER_SITE_MOZILLA_ALL+=   \
 	http://ftp.mozilla.org/pub/mozilla.org/ \
 	ftp://ftp.mozilla.org/pub/mozilla.org/ \
-	ftp://ftp.fu-berlin.de/unix/network/www/ \
-	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/ \
-	ftp://ftp.chg.ru/pub/WWW/mozilla/
+	ftp://ftp.belnet.be/mirror/ftp.mozilla.org/
+
+MASTER_SITE_MOZILLA+=	\
+	http://ftp.mozilla.org/pub/mozilla.org/ \
+	ftp://ftp.mozilla.org/pub/mozilla.org/ \
+	http://releases.mozilla.org/pub/mozilla.org/ \
+	ftp://releases.mozilla.org/pub/mozilla.org/ \
+	http://mozilla.isc.org/pub/mozilla.org/ \
+	ftp://mozilla.isc.org/pub/mozilla.org/ \
+	http://mozilla.ussg.indiana.edu/pub/mozilla.org/ \
+	ftp://mozilla.ussg.indiana.edu/pub/mozilla.org/ \
+	http://mozilla.osuosl.org/pub/mozilla.org/ \
+	ftp://ftp.osuosl.org/pub/mozilla.org/ \
+	http://mozilla.cs.utah.edu/pub/mozilla.org/ \
+	ftp://mozilla.cs.utah.edu/pub/mozilla.org/ \
+	http://mozilla.mirrors.tds.net/pub/mozilla.org/ \
+	ftp://mozilla.mirrors.tds.net/pub/mozilla.org/ \
+	ftp://ftp.scarlet.be/pub/mozilla.org/ \
+	http://ftp.scarlet.be/pub/mozilla.org/ \
+	ftp://ftp.uni-erlangen.de/pub/mozilla.org/ \
+	http://ftp.uni-erlangen.de/pub/mozilla.org/ \
+	http://sunsite.rediris.es/pub/mozilla.org/ \
+	ftp://sunsite.rediris.es/pub/mozilla.org/
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
