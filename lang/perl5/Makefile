@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2007/11/19 00:49:29 minskim Exp $
+# $NetBSD: Makefile,v 1.133 2007/12/22 21:03:31 minskim Exp $
 
 DISTNAME=	perl-5.8.8
 PKGREVISION=	6
@@ -166,6 +166,7 @@ LIBSWANTED.DragonFly=	m crypt
 LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.Interix=	m dl
+LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
