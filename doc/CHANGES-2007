@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2693 2007/12/22 19:44:38 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2694 2007/12/22 23:12:51 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/radiusd-cistron to 1.6.8 [obache 2007-12-22]
 	Updated editors/nano to 2.0.7 [obache 2007-12-22]
 	Updated graphics/grap to 1.41 [tnn 2007-12-22]
+	Updated mail/dovecot to 1.0.9nb1 [ghen 2007-12-22]
