@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/10/25 21:04:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2007/12/22 07:22:10 obache Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -42,14 +42,7 @@ MOZ_DIR?=		${MOZ_VER}
 MOZ_PLATFORM?=		${LOWER_OPSYS}
 
 .if !defined(MASTER_SITES)
-_MASTER_SITES+=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.uni-erlangen.de/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/network/www/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
-_MASTER_SITES+=		http://ftp.cvut.cz/mozilla/${MOZILLA_SHORT}/releases/${MOZ_DIR}/
+_MASTER_SITES+=		${MASTER_SITE_MOZILLA:=${MOZILLA_SHORT}/releases/${MOZ_DIR}/}
 .  for _site_ in ${_MASTER_SITES}
 MASTER_SITES+=		${_site_}
 MASTER_SITES+=		${_site_}contrib/
