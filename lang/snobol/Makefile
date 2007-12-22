@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/10/01 08:39:53 obache Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/22 21:40:13 tnn Exp $
 #
 
 DISTNAME=	snobol-0.99.4
@@ -21,6 +21,7 @@ BUILD_TARGET=	it
 USE_CONFIGURE=		NO
 USE_TOOLS+=		gzip
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+MAKE_JOBS_SAFE=		NO
 
 do-install:
 	@${CP} ${WRKSRC}/doc/head ${WRKSRC}/doc/tutorial
