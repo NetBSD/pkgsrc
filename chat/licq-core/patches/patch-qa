@@ -1,8 +1,8 @@
-$NetBSD: patch-qa,v 1.1 2007/10/10 10:20:32 rillig Exp $
+$NetBSD: patch-qa,v 1.2 2007/12/22 22:34:24 jdolecek Exp $
 
---- plugins/qt-gui/configure.orig	2006-04-28 10:36:59.000000000 +0000
+--- plugins/qt-gui/configure.orig	2007-10-28 19:42:59.000000000 +0100
 +++ plugins/qt-gui/configure
-@@ -17307,8 +17307,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+@@ -22556,8 +22556,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
      save_LIBS="$LIBS"
  
      CXXFLAGS="$CXXFLAGS $QT_INCLUDES $X_CFLAGS"
@@ -12,4 +12,22 @@ $NetBSD: patch-qa,v 1.1 2007/10/10 10:20:32 rillig Exp $
 +    LIBS="$LIB_QT $X_PRE_LIBS -lX11 -lXext $LIBS $PTHREAD_LIBS"
  
      cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -22943,7 +22943,7 @@ echo "${ECHO_T}no" >&6; }
+ 
+ 
+ 
+-  if test "$have_kde" == "yes"; then
++  if test "$have_kde" = "yes"; then
+     # Extract the first word of "dcopidl", so it can be a program name with args.
+ set dummy dcopidl; ac_word=$2
+ { echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -23978,6 +23978,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
