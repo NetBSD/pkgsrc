@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/07/21 03:02:55 reed Exp $
+# $NetBSD: Makefile,v 1.44 2007/12/22 19:12:27 minskim Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -23,7 +23,18 @@ MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} CHMOD=${CHMOD:Q} SED=${SED:Q}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
-USE_TOOLS+=	bdftopcf
+USE_TOOLS+=	bdftopcf csh:run
+
+REPLACE_INTERPRETER+=	csh
+REPLACE.csh.old=	/bin/csh
+REPLACE.csh.new=	${CSH}
+REPLACE_FILES.csh=	bin/audiocompose bin/audiosend bin/extcompose
+REPLACE_FILES.csh+=	bin/getfilename bin/mailserver bin/mailto-hebrew
+REPLACE_FILES.csh+=	bin/metasend bin/patch-metamail bin/showaudio
+REPLACE_FILES.csh+=	bin/showexternal bin/shownonascii bin/showpartial
+REPLACE_FILES.csh+=	bin/showpicture bin/sun-audio-file bin/sun-message.csh
+REPLACE_FILES.csh+=	bin/sun-to-mime
+REPLACE_FILES.csh+=	fonts/Xmailto-hebrew fonts/Xshownonascii
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4
 
