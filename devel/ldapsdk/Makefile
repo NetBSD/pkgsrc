@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2007/11/18 10:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2007/12/22 07:22:07 obache Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	2
 CATEGORIES=	devel databases
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/directory/c-sdk/ancient/
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=directory/c-sdk/ancient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/directory/
