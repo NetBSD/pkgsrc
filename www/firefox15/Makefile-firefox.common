@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-firefox.common,v 1.3 2007/06/16 01:14:48 dmcmahill Exp $
+# $NetBSD: Makefile-firefox.common,v 1.4 2007/12/22 07:22:10 obache Exp $
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		1.5.0.12
@@ -6,10 +6,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 DISTNAME=		firefox-${MOZ_VER}-source
 
-MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/
-MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/
-MASTER_SITES+=		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/
-MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=firefox/releases/${MOZ_VER}/source/}
 
 HOMEPAGE=		http://www.mozilla.org/projects/firefox/
 
