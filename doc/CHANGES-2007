@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2690 2007/12/22 12:09:18 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2691 2007/12/22 12:40:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/dd_rescue to 1.14 [taca 2007-12-22]
 	Updated pkgtools/pkglint to 4.81 [rillig 2007-12-22]
 	Updated net/pxe to 1.4.2 [obache 2007-12-22]
+	Updated net/radiusd-cistron to 1.6.8 [obache 2007-12-22]
