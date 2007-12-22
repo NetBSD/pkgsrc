@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2007/12/22 11:18:18 obache Exp $
+
+--- src/gnutella.h.orig	2003-10-19 13:31:37.000000000 +0000
++++ src/gnutella.h
+@@ -472,8 +472,6 @@ extern gint socks_protocol;
+ extern gchar *proxy_ip;
+ extern gint proxy_port;
+ 
+-extern guint32 gnutella_welcome_length;
+-
+ extern gchar *socksv5_user;
+ extern gchar *socksv5_pass;
+ 
