@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.14 2007/12/05 00:54:56 obache Exp $
+$NetBSD: distinfo,v 1.15 2007/12/22 15:12:22 obache Exp $
 
-SHA1 (nano-2.0.6.tar.gz) = 00102580404cdb1c8594e5f6193000d5acac2249
-RMD160 (nano-2.0.6.tar.gz) = 858dc7cf7137cc2b19e9084a503fe508ef734381
-Size (nano-2.0.6.tar.gz) = 1315207 bytes
-SHA1 (patch-aa) = a64ff242e203b143ffd02ca2649f884e21bd49b8
-SHA1 (patch-ab) = dca9903f51323444e2392f8ca8c7ceb5bd7f79ec
+SHA1 (nano-2.0.7.tar.gz) = 6616c6496e6f21e61df6bb991c0be84eda5c6a0c
+RMD160 (nano-2.0.7.tar.gz) = 96ff5a88288451ed24f679d88d59a752616ce94c
+Size (nano-2.0.7.tar.gz) = 1363684 bytes
