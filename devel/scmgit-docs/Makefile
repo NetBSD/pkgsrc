@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 04:22:45 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/22 01:07:01 joerg Exp $
 #
 
 PKGNAME=		scmgit-docs-${GIT_VERSION}
@@ -17,7 +17,7 @@ INSTALL_TARGET=		install-doc
 .include "../../mk/bsd.fast.prefs.mk"
 
 .for d in asciidoc docbook-xsl
-GITDOCDEP.${d}=	${${${PKG_INFO} -E ${d}:L:sh}:L:C/[^[0-9]]*/ /g:[1..3]:ts.}
+GITDOCDEP.${d}=	${${${PKG_INFO} -E ${d} || echo:L:sh}:L:C/[^[0-9]]*/ /g:[1..3]:ts.}
 .endfor
 
 .if !empty(GITDOCDEP.asciidoc:M[8]*)
