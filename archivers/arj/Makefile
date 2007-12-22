@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/09/09 02:41:53 obache Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/22 23:41:01 tnn Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -19,6 +19,12 @@ MAKE_FLAGS+=		INSTALL_DIR=${INSTALL_PROGRAM_DIR:Q}
 
 INSTALL_UNSTRIPPED=	yes # $LOCALBASE/bin/arj must have symbol table
 ARJ_DOCSDIR=		${PREFIX}/share/doc/arj
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-4.*)
+CFLAGS+=	-fno-unit-at-a-time
+.endif
 
 pre-configure:
 	${CP} -f ${WRKSRC}/environ.c ${WRKSRC}/environ.c.1
