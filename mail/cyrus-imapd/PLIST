@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/10/04 12:18:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/12/22 21:15:06 adam Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -36,6 +36,9 @@ cyrus/bin/notifyd
 cyrus/bin/pop3d
 cyrus/bin/pop3proxyd
 cyrus/bin/proxyd
+${LDAP}cyrus/bin/ptdump
+${LDAP}cyrus/bin/ptexpire
+${LDAP}cyrus/bin/ptloader
 cyrus/bin/quota
 cyrus/bin/reconstruct
 cyrus/bin/rehash
