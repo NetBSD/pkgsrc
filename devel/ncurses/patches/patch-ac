@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.14 2007/01/08 11:01:05 adam Exp $
+$NetBSD: patch-ac,v 1.15 2007/12/22 00:23:58 joerg Exp $
 
---- configure.orig	2006-12-17 17:33:38.000000000 +0100
+--- configure.orig	2007-12-21 22:33:08.000000000 +0000
 +++ configure
+@@ -6051,7 +6051,7 @@ case $host_os in #(vi
+ aix[45]*) #(vi
+ 	CPPFLAGS="$CPPFLAGS -D_ALL_SOURCE"
+ 	;;
+-freebsd*) #(vi
++dragonfly*|freebsd*) #(vi
+ 	# 5.x headers associate
+ 	#	_XOPEN_SOURCE=600 with _POSIX_C_SOURCE=200112L
+ 	#	_XOPEN_SOURCE=500 with _POSIX_C_SOURCE=199506L
 @@ -7921,12 +7921,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
