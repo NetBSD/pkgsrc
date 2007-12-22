@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6919 2007/12/21 16:30:50 tron Exp $
+$NetBSD: TODO,v 1.6920 2007/12/22 04:29:47 taca Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
-	o dd_rescue-1.14
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
