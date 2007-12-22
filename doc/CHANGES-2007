@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2692 2007/12/22 15:12:38 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2693 2007/12/22 19:44:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/pxe to 1.4.2 [obache 2007-12-22]
 	Updated net/radiusd-cistron to 1.6.8 [obache 2007-12-22]
 	Updated editors/nano to 2.0.7 [obache 2007-12-22]
+	Updated graphics/grap to 1.41 [tnn 2007-12-22]

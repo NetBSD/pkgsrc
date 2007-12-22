@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6922 2007/12/22 12:41:00 obache Exp $
+$NetBSD: TODO,v 1.6923 2007/12/22 19:44:38 tnn Exp $
 
 Suggested new packages
 ======================
@@ -589,7 +589,6 @@ Suggested package updates
 	o gq-1.2.2
 	o grace-5.1.21
 	o gramofile-1.6P
-	o grap-1.40
 	o graphviz-2.16.1
 	o grep-2.5.1a
 	o grhino-0.16.0
