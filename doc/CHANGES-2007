@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2695 2007/12/22 23:30:42 jdolecek Exp $
+$NetBSD: CHANGES-2007,v 1.2696 2007/12/23 04:52:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4897,3 +4897,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated chat/licq-core to 1.3.5 [jdolecek 2007-12-22]
 	Updated chat/licq-gui-console to 1.3.5 [jdolecek 2007-12-22]
 	Updated chat/licq-gui-qt to 1.3.5 [jdolecek 2007-12-22]
+	Updated textproc/wdiff to 0.5nb2 [minskim 2007-12-23]
