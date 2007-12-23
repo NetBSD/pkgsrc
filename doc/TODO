@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6924 2007/12/23 10:12:45 wiz Exp $
+$NetBSD: TODO,v 1.6925 2007/12/23 22:31:37 tnn Exp $
 
 Suggested new packages
 ======================
@@ -494,7 +494,6 @@ Suggested package updates
 	o fetchyahoo-2.11.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o firefox-bin-flash-9.0.115.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.0.0
