@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
+$NetBSD: patch-ae,v 1.2 2007/12/23 04:50:30 minskim Exp $
 
---- wdiff.c.orig	Sun Nov  6 16:57:23 1994
-+++ wdiff.c	Fri Jan 24 22:41:01 2003
-@@ -168,6 +168,10 @@
+--- wdiff.c.orig	1994-11-05 23:57:23.000000000 -0800
++++ wdiff.c
+@@ -168,6 +168,10 @@ int interrupted;		/* set when some signa
  # define L_tmpnam PATH_MAX
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
  typedef struct side SIDE;	/* all variables for one side */
  struct side
  {
-@@ -555,6 +559,9 @@
+@@ -555,6 +559,9 @@ static void
  split_file_into_words (SIDE *side)
  {
    struct stat stat_buffer;	/* for checking if file is directory */
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
  
    /* Open files.  */
  
-@@ -566,10 +573,23 @@
+@@ -566,10 +573,23 @@ split_file_into_words (SIDE *side)
  	 this temporary local file.  Once done, prepare it for reading.
  	 We do not need the file name itself anymore.  */
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
        if (unlink (side->temp_name) != 0)
  	error (EXIT_OTHER_REASON, errno, side->temp_name);
        while (side->character = getchar (), side->character != EOF)
-@@ -593,10 +613,23 @@
+@@ -593,10 +613,23 @@ split_file_into_words (SIDE *side)
    side->character = getc (side->file);
    side->position = 0;
  
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
  
    /* Complete splitting input file into words on output.  */
  
-@@ -1135,7 +1168,7 @@
+@@ -1135,7 +1168,7 @@ Mandatory arguments to long options are 
  | Main program.	 |
  `---------------*/
  
@@ -80,7 +80,27 @@ $NetBSD: patch-ae,v 1.1 2003/01/24 14:12:04 itohy Exp $
  main (int argc, char *const argv[])
  {
    int option_char;		/* option character */
-@@ -1329,5 +1362,5 @@
+@@ -1304,12 +1337,13 @@ main (int argc, char *const argv[])
+       reformat_diff_output ();
+       fclose (input_file);
+     }
+-
+-  /* Clean up.  Beware that input_file and output_file might not exist,
+-     if a signal occurred early in the program.  */
+-
+-  if (input_file)
+-    complete_input_program ();
++  else
++    {
++      /* Clean up.  Beware that input_file and output_file might not
++	exist, if a signal occurred early in the program.  */
++      if (input_file)
++	complete_input_program ();
++    }
+ 
+   if (*left_side->temp_name)
+     unlink (left_side->temp_name);
+@@ -1329,5 +1363,5 @@ main (int argc, char *const argv[])
        || count_changed_left || count_changed_right)
      exit (EXIT_ANY_DIFFERENCE);
  
