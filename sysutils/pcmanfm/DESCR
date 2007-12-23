@@ -1,11 +1,11 @@
-An extremly fast and lightweight file manager which features tabbed
+An extremely fast and lightweight file manager which features tabbed
 browsing and user-friendly interface.
 
 Features:
 
-    * Extremly fast and lightweight
+    * Extremely fast and lightweight
     * Can be started in one second on normal machine
-    * Tabbed browsing (Similiar to Firefox)
+    * Tabbed browsing (Similar to Firefox)
     * Drag & Drop support
     * Files can be dragged among tabs
     * Load large directories in reasonable time
