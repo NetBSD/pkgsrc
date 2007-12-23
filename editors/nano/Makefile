@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/12/22 15:12:22 obache Exp $
+# $NetBSD: Makefile,v 1.34 2007/12/23 10:00:09 wiz Exp $
 
 DISTNAME=	nano-2.0.7
 CATEGORIES=	editors
@@ -11,6 +11,8 @@ COMMENT=	Small and friendly text editor (a free replacement for Pico)
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+
+#LICENSE=		gnu-gplv3
 
 INFO_FILES=		yes
 
