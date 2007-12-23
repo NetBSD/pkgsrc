@@ -1,4 +1,4 @@
-/*	$NetBSD: lambd.c,v 1.5 2006/03/01 22:46:50 wiz Exp $	*/
+/*	$NetBSD: lambd.c,v 1.6 2007/12/23 00:32:49 tnn Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -290,16 +290,16 @@ morse()
 	int mark, blank;
 	unsigned long t = delay / 10;
 
-	for (p = morsestr; *p; p++) {
+	for (p = (unsigned char*)morsestr; *p; p++) {
 		if (monitor())
 			return 1;
 
 		if (isdigit(*p))
-			q = digit[*p - '0'];
+			q = (unsigned char*)digit[*p - '0'];
 		else if (isalpha(*p) && isupper(*p))
-			q = alph[*p - 'A'];
+			q = (unsigned char*)alph[*p - 'A'];
 		else if (isalpha(*p) && islower(*p))
-			q = alph[*p - 'a'];
+			q = (unsigned char*)alph[*p - 'a'];
 		else
 			q = NULL;
 
