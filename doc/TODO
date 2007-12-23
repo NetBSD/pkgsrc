@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6923 2007/12/22 19:44:38 tnn Exp $
+$NetBSD: TODO,v 1.6924 2007/12/23 10:12:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,6 +355,7 @@ Suggested package updates
 	o biew-5.6.4
 	o bind-8.4.7
 	o bind-9.4.2
+	o binutils-2.18
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
 	o blender-2.44
@@ -554,6 +555,7 @@ Suggested package updates
 	o glade3-3.4.1
 	o glchess-1.0.5
 	o global-5.6
+	o glpk-4.25
 	o glproto-1.4.9
 	o gmime-2.2.12
 	o gmpc-0.15.1
@@ -570,6 +572,8 @@ Suggested package updates
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.2
 	o gnumeric-current-1.7.91
+	o gnupg-1.4.8
+	o gnupg2-2.0.8
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
@@ -602,7 +606,6 @@ Suggested package updates
 	o gtexinfo-4.11 [pkg/37481]
 	o gthumb-2.10.7
 	o gtick-0.4.1
-	o gtk-send-pr-0.4.9
 	o gtk-systrace-20030623
 	o gtk2+-2.12.3
 	o gtk2-engines-2.12.2
@@ -869,12 +872,14 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
+	o openafs-1.4.6
 	o openh323-1.19.1
 	o openldap-client-2.4.7
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
+	o opera-9.25
 	o orca-2.20.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
