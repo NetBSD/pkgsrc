@@ -1,4 +1,4 @@
-/*	$NetBSD: lambio.c,v 1.2 2004/05/23 22:55:39 kristerw Exp $	*/
+/*	$NetBSD: lambio.c,v 1.3 2007/12/23 00:32:49 tnn Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -43,6 +43,30 @@
 
 #define BASEPORT	(0x378)
 
+/* We get these from libi386.so, but there are no public prototypes. */
+
+int i386_get_ioperm(u_long *);
+int i386_set_ioperm(u_long *);
+
+/*
+ * These used to be provided by machine/pio.h as inline functions,
+ * but that's not true anymore, so use a local copy.
+ */
+
+static void
+lamb_outb(unsigned port, u_int8_t data)
+{
+	asm volatile("outb %0,%w1" : : "a" (data), "d" (port));
+}
+
+static u_int8_t
+lamb_inb(unsigned port)
+{
+	u_int8_t data;
+	__asm volatile("inb %w1,%0" : "=a" (data) : "id" (port));
+	return data;
+}
+
 int
 lamb_open()
 {
@@ -69,7 +93,7 @@ int
 lamb_reboot()
 {
 
-	if ((inb(BASEPORT + 1) & 0x20) == 0)
+	if ((lamb_inb(BASEPORT + 1) & 0x20) == 0)
 		return 1;
 	else
 		return 0;
@@ -80,7 +104,7 @@ lamb_led(on)
 	int on;
 {
 
-	outb(BASEPORT + 2, on ? 8 : 0);
+	lamb_outb(BASEPORT + 2, on ? 8 : 0);
 }
 
 /*
