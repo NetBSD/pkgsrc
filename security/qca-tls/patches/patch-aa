@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/12/20 20:37:27 jdolecek Exp $
+$NetBSD: patch-aa,v 1.5 2007/12/23 21:05:51 jdolecek Exp $
 
---- configure.orig	2004-12-19 09:10:21.000000000 +0000
-+++ configure	2004-12-19 09:20:50.000000000 +0000
-@@ -144,8 +144,10 @@
+--- configure.orig	2003-12-17 17:54:50.000000000 -0500
++++ configure
+@@ -144,8 +144,10 @@ public:
  
  		s = conf->getenv("QC_WITH_OPENSSL_LIB");
  		if(!s.isEmpty()) {
@@ -13,3 +13,12 @@ $NetBSD: patch-aa,v 1.4 2007/12/20 20:37:27 jdolecek Exp $
  			lib = s;
  		}
  		else {
+@@ -168,7 +170,7 @@ public:
+ 		if(kb)
+ 			ext += QString("-I") + kbdir + ' ';
+ 		if(!lib.isEmpty())
+-			ext += QString("-L") + lib + " -lssl -lcrypto ";
++			ext += QString("-L") + lib + " " + QString("-R") + lib + " -lssl -lcrypto ";
+ 		int ret;
+ 		if(!conf->doCompileAndLink(str, ext, &ret))
+ 			return false;
