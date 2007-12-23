@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/01 14:02:32 ghen Exp $
-lib/${MOZ_NAME}/plugins/flashplayer.xpt
+@comment $NetBSD: PLIST,v 1.2 2007/12/23 22:27:15 tnn Exp $
 lib/${MOZ_NAME}/plugins/libflashplayer.so
