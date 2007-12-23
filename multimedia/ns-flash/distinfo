@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2007/07/29 05:19:45 jlam Exp $
+$NetBSD: distinfo,v 1.14 2007/12/23 22:27:15 tnn Exp $
 
-SHA1 (flash/9.0r48/install_flash_player_9_linux.tar.gz) = 4bba0b81462394388b4509ecdc845f469c95d6ae
-RMD160 (flash/9.0r48/install_flash_player_9_linux.tar.gz) = 4eea521f45fcd42e6916ba61ba299df8694fbc14
-Size (flash/9.0r48/install_flash_player_9_linux.tar.gz) = 2608602 bytes
+SHA1 (flash/9.0r115/install_flash_player_9_linux.tar.gz) = 269ebe804f77890687f280ce7bfb79a62d2c5bd3
+RMD160 (flash/9.0r115/install_flash_player_9_linux.tar.gz) = e588c81ee6b3f5965561911efa846329b4961912
+Size (flash/9.0r115/install_flash_player_9_linux.tar.gz) = 3036127 bytes
 SHA1 (flash/7.0r67/install_flash_player_7_solaris_sparc.tar.gz) = f8dc29f2eee2e91c8856ee4d1bc402021ec7c694
 RMD160 (flash/7.0r67/install_flash_player_7_solaris_sparc.tar.gz) = ad5cf828d4d13bd512c106dfef73e515f4b655b0
 Size (flash/7.0r67/install_flash_player_7_solaris_sparc.tar.gz) = 1074253 bytes

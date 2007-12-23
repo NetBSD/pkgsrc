@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2007/07/29 05:19:52 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2007/12/23 22:27:15 tnn Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -23,7 +23,7 @@ EMUL_PLATFORMS=		linux-i386
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		9.0r48
+FLASH_VERS=		9.0r115
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_9_${DISTUNAME}
 
@@ -41,5 +41,4 @@ PLIST_SUBST+=		MOZ_NAME=${MOZ_NAME:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/flashplayer.xpt ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
