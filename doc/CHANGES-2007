@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2696 2007/12/23 04:52:08 minskim Exp $
+$NetBSD: CHANGES-2007,v 1.2697 2007/12/23 22:31:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4892,9 +4892,12 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/pxe to 1.4.2 [obache 2007-12-22]
 	Updated net/radiusd-cistron to 1.6.8 [obache 2007-12-22]
 	Updated editors/nano to 2.0.7 [obache 2007-12-22]
-	Updated graphics/grap to 1.41 [tnn 2007-12-22]
+	Updated graphics/grap to 1.41nb1 [tnn 2007-12-22]
 	Updated mail/dovecot to 1.0.9nb1 [ghen 2007-12-22]
 	Updated chat/licq-core to 1.3.5 [jdolecek 2007-12-22]
 	Updated chat/licq-gui-console to 1.3.5 [jdolecek 2007-12-22]
 	Updated chat/licq-gui-qt to 1.3.5 [jdolecek 2007-12-22]
 	Updated textproc/wdiff to 0.5nb2 [minskim 2007-12-23]
+	Updated multimedia/ns-flash to 9.0.115 [tnn 2007-12-23]
+	Updated www/firefox-bin-flash to 9.0.115 [tnn 2007-12-23]
+	Updated www/seamonkey-bin-flash to 9.0.115 [tnn 2007-12-23]
