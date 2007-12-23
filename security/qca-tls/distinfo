@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.8 2007/12/20 20:37:26 jdolecek Exp $
+$NetBSD: distinfo,v 1.9 2007/12/23 21:05:51 jdolecek Exp $
 
 SHA1 (qca-tls-1.0.tar.bz2) = 775e764c5be342048eba11dae5c5fd3b636d23c5
+RMD160 (qca-tls-1.0.tar.bz2) = c553782e77ab54edde7e4f0676a3caad74dfa910
 Size (qca-tls-1.0.tar.bz2) = 23489 bytes
+SHA1 (patch-aa) = 2c28782e3af7ecffa0b5758f1671c0773bc9af03
+SHA1 (patch-ab) = 3d59570c75a52f0ce9850584326ceeb4bf59f08f
