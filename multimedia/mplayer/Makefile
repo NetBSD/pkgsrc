@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/12/21 16:07:48 tron Exp $
+# $NetBSD: Makefile,v 1.49 2007/12/23 14:36:30 gdt Exp $
 
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	1
@@ -6,6 +6,10 @@ PKGREVISION=	1
 COMMENT=	Software-only MPEG-1/2/4 video decoder
 
 .include "../../multimedia/mplayer-share/Makefile.common"
+
+# pci_ids.c is created and then used without adequate dependencies
+# being expressed.
+MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--disable-mencoder
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
