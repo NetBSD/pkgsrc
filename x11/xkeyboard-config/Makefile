@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/12/19 04:10:43 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/24 06:58:33 bjs Exp $
 #
 
 DISTNAME=	xkeyboard-config-20071217
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		
 USE_TOOLS+=		gmake intltool perl:build automake
-USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		msgfmt msgmerge xgettext gettext-m4
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
