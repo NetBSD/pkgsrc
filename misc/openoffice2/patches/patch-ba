@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
+$NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
 
---- config_office/configure.orig	2007-08-24 21:31:18.000000000 +0900
-+++ config_office/configure	2007-11-13 10:30:55.000000000 +0900
+--- config_office/configure.orig	2007-11-02 17:30:08.000000000 +0900
++++ config_office/configure	2007-12-24 09:04:32.000000000 +0900
 @@ -3010,11 +3010,11 @@
  		test_cups=no
  		_os=OSF1
@@ -59,7 +59,7 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
     fi
  
        save_CPPFLAGS="$CPPFLAGS"
-@@ -13090,7 +13090,7 @@
+@@ -13200,7 +13200,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
  echo "${ECHO_T}$ac_cv_header_db_h" >&6
  if test $ac_cv_header_db_h = yes; then
@@ -68,7 +68,7 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
  else
  
               CFLAGS=-I/usr/include/db4
-@@ -13213,13 +13213,13 @@
+@@ -13323,13 +13323,13 @@
      #AC_CHECK_LIB(db, db_create, [],
      #  [AC_MSG_ERROR([db library not installed or functional])], [])
  
@@ -85,7 +85,7 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13276,7 +13276,7 @@
+@@ -13386,7 +13386,7 @@
  #define HAVE_LIBDB 1
  _ACEOF
  
@@ -94,7 +94,7 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
  
  else
    { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
-@@ -18928,7 +18928,7 @@
+@@ -19101,7 +19101,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_audio_audiolib_h" >&5
  echo "${ECHO_T}$ac_cv_header_audio_audiolib_h" >&6
  if test $ac_cv_header_audio_audiolib_h = yes; then
@@ -103,7 +103,7 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
  else
  
               CFLAGS=-I/usr/X11R6/include
-@@ -22818,7 +22818,7 @@
+@@ -22998,7 +22998,7 @@
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"
@@ -112,3 +112,12 @@ $NetBSD: patch-ba,v 1.9 2007/11/17 16:28:09 hira Exp $
  fi
  
  
+@@ -23652,7 +23652,7 @@
+    XINERAMA_LINK=dynamic
+    echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+-elif test "$_os" = "Linux" -o "$_os" = "FreeBSD"; then
++elif test "$_os" = "Linux" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" ; then
+    if test -e "$XLIB/libXinerama.so" -a -e "$XLIB/libXinerama.a"; then
+       # we have both versions, let the user decide but use the static one
+       # per default

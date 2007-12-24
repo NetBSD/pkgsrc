@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/12/18 22:24:29 hira Exp $
+# $NetBSD: Makefile,v 1.32 2007/12/24 02:07:10 hira Exp $
 #
 
 OO_VER=			2.3.1
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--with-system-libxslt
 CONFIGURE_ARGS+=	--with-system-neon
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-dynamic-xinerama
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
