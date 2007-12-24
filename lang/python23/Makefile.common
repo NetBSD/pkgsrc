@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2007/07/02 20:24:27 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.37 2007/12/24 01:19:47 minskim Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -102,6 +102,7 @@ PLIST_SUBST+=	NOSHLIB="@comment "
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
+MAKE_ENV+=	PY_BDB_LIBS=${BDB_LIBS:Q}
 PLIST_SUBST+=	BSDDBMODULE=
 PLIST_SUBST+=	NOSHLIB=
 .  if ${OPSYS} == "Interix"
@@ -110,10 +111,6 @@ CONFIGURE_ENV+=	ac_cv_header_stropts_h=no
 .  else
 PLIST_SUBST+=	NISMODULE=
 .  endif
-.endif
-
-.if defined(BUILDLINK_TRANSFORM)
-MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 .endif
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}

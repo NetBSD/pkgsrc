@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.5 2004/04/13 22:48:41 recht Exp $
+$NetBSD: patch-am,v 1.6 2007/12/24 01:19:48 minskim Exp $
 
---- setup.py.orig	2003-10-21 15:01:21.000000000 -0500
+--- setup.py.orig	2005-01-17 13:07:49.000000000 -0800
 +++ setup.py
 @@ -15,7 +15,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -268,8 +268,8 @@ $NetBSD: patch-am,v 1.5 2004/04/13 22:48:41 recht Exp $
 +                        else:
 +                            raise NotFound
 +            try:
-+                bltransform = os.environ['PY_BDB_TRANSFORM']
-+                m = re.search(r"l:db:(db.)\s*", bltransform)
++                bdblib = os.environ['PY_BDB_LIBS']
++                m = re.search(r"-l(db.)\s*", bdblib)
 +                if m is not None and m.group(1) is not None:
 +                    dblibs = [m.group(1)]
 +            except:
@@ -339,7 +339,7 @@ $NetBSD: patch-am,v 1.5 2004/04/13 22:48:41 recht Exp $
              exts.append( Extension('ossaudiodev', ['ossaudiodev.c']) )
  
          if platform == 'sunos5':
-@@ -1140,7 +1195,7 @@ def main():
+@@ -1148,7 +1203,7 @@ def main():
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
