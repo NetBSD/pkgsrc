@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/12/27 13:37:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2007/12/24 18:57:49 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAW_XPM_BUILDLINK3_MK:=	${XAW_XPM_BUILDLINK3_MK}+
@@ -15,9 +15,20 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}Xaw-Xpm
 BUILDLINK_API_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1
 BUILDLINK_ABI_DEPENDS.Xaw-Xpm?=	Xaw-Xpm>=1.1nb2
 BUILDLINK_PKGSRCDIR.Xaw-Xpm?=	../../x11/Xaw-Xpm
-.endif	# XAW_XPM_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+.if ${X11_TYPE} == "modular"
+.PHONY: buildlink-Xaw_Xpm-inc-hack
+buildlink-Xaw-Xpm-cookie: buildlink-Xaw-Xpm-inc-hack
+
+buildlink-Xaw-Xpm-inc-hack: buildlink-directories
+	[ ! -h ${BUILDLINK_DIR}/include/X11/Xaw ] && \
+		${MKDIR} ${BUILDLINK_DIR}/include/X11 && \
+		${LN} -s Xaw3d ${BUILDLINK_DIR}/include/X11/Xaw
+.endif
+.endif	# XAW_XPM_BUILDLINK3_MK
+
 .include "../../x11/libXpm/buildlink3.mk"
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
