@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2699 2007/12/24 08:35:07 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2700 2007/12/24 08:47:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4903,3 +4903,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated www/seamonkey-bin-flash to 9.0.115 [tnn 2007-12-23]
 	Updated x11/xkeyboard-config to 20071217nb2 [bjs 2007-12-24]
 	Updated net/sdist to 1.7nb1 [obache 2007-12-24]
+	Updated net/netname to 1.7nb1 [obache 2007-12-24]
