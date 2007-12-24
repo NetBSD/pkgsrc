@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/24 06:58:33 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/24 08:01:07 bjs Exp $
 #
 
 DISTNAME=	xkeyboard-config-20071217
@@ -17,9 +17,9 @@ CONFLICTS+=		xkbdata-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		# none
-USE_TOOLS+=		
+USE_TOOLS+=		libtool
 USE_TOOLS+=		gmake intltool perl:build automake
-USE_TOOLS+=		msgfmt msgmerge xgettext gettext-m4
+USE_TOOLS+=		msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
@@ -57,7 +57,11 @@ FILES_SUBST+=		XKBCOMPDIR_SYMLINK=${XKBCOMPDIR_SYMLINK:Q}
 
 OWN_DIRS+=		${XKBCOMPDIR}
 
+post-extract:
+	cp ${FILESDIR}/aclocal.m4 ${WRKSRC}/aclocal.m4
+
 pre-configure:
-	${RUN} cd ${WRKSRC}; intltoolize --copy && autoreconf -i
+	${RUN} cd ${WRKSRC}; intltoolize -c && autoreconf -i
+
 
 .include "../../mk/bsd.pkg.mk"
