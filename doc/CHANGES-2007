@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2697 2007/12/23 22:31:38 tnn Exp $
+$NetBSD: CHANGES-2007,v 1.2698 2007/12/24 06:59:35 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4901,3 +4901,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated multimedia/ns-flash to 9.0.115 [tnn 2007-12-23]
 	Updated www/firefox-bin-flash to 9.0.115 [tnn 2007-12-23]
 	Updated www/seamonkey-bin-flash to 9.0.115 [tnn 2007-12-23]
+	Updated x11/xkeyboard-config to 20071217nb2 [bjs 2007-12-24]
