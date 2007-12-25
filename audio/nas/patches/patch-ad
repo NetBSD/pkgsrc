@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.11 2007/05/05 21:31:10 markd Exp $
+$NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
 
 --- server/dda/voxware/auvoxware.c.orig	2007-03-18 17:05:55.000000000 +1200
 +++ server/dda/voxware/auvoxware.c
@@ -28,3 +28,39 @@ $NetBSD: patch-ad,v 1.11 2007/05/05 21:31:10 markd Exp $
      "/dev/mixer",               /* mixer */
      O_WRONLY,                   /* howToOpen */
      1,                          /* autoOpen */
+@@ -1335,7 +1344,7 @@ disableProcessFlow(void)
+ }
+ 
+ 
+-#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+ inline
+ #endif
+         static void
+@@ -1350,7 +1359,7 @@ monoToStereoLinearSigned16LSB(AuUint32 n
+     }
+ }
+ 
+-#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+ inline
+ #endif
+         static void
+@@ -1413,7 +1422,7 @@ writePhysicalOutputsMono(void)
+     AuUnBlockAudio(l);
+ }
+ 
+-#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+ inline
+ #endif
+         static void
+@@ -1428,7 +1437,7 @@ stereoToMonoLinearSigned16LSB(AuUint32 n
+     }
+ }
+ 
+-#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__)
++#if defined(__GNUC__) && !defined(linux) && !defined(USL) && !defined(__CYGWIN__) && !defined(__powerpc__)
+ inline
+ #endif
+         static void
