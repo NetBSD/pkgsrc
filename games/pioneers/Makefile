@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 18:35:22 veego Exp $
+# $NetBSD: Makefile,v 1.11 2007/12/25 10:53:30 veego Exp $
 #
 
-DISTNAME=	pioneers-0.11.2
+DISTNAME=	pioneers-0.11.3
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pio/}
 
