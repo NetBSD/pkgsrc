@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6927 2007/12/25 03:05:05 obache Exp $
+$NetBSD: TODO,v 1.6928 2007/12/25 10:55:29 veego Exp $
 
 Suggested new packages
 ======================
@@ -1023,7 +1023,6 @@ Suggested package updates
 	o pim6sd-20040824a
 	o pine-pgp-filters-1.2
 	o pinfo-0.6.9
-	o pioneers-0.11.3
 	o pircbot-1.4.4
 	o pkg_select-20051209
 	o ploticus-2.33
