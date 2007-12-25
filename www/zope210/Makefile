@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/18 15:35:22 taca Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/25 06:03:54 taca Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE210_VERSION}-final
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope, the Z Object Publishing Environment
+
+DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PYTHON_VERSIONS_ACCEPTED=	24
 ZOPE_VERSION=			210
