@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/06 18:31:48 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/26 15:23:21 taca Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR:Q}
 CONFIGURE_ARGS+=	--disable-progressbar
 CONFIGURE_ARGS+=	--with-foundry=${FOUNDRY:Q}
 
+INSTALLATION_DIRS=	lib/X11/fonts/local share/examples
 
 do-install:
 	cd ${WRKSRC}; \
