@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.27 2007/12/26 19:39:42 jdolecek Exp $
+$NetBSD: distinfo,v 1.28 2007/12/26 21:44:49 xtraeme Exp $
 
+SHA1 (opera-9.25-20071214.1-static-qt-sol8-sparc-en.tar.bz2) = 7cbc2fd77fa9aa8f13302e1559a4185f21af9d4e
+RMD160 (opera-9.25-20071214.1-static-qt-sol8-sparc-en.tar.bz2) = aa6828cfe711b9985fa53f5c852949af7362bece
+Size (opera-9.25-20071214.1-static-qt-sol8-sparc-en.tar.bz2) = 8379502 bytes
 SHA1 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 277b7dc8d84ebe350fd70fc272a0b29c8a263da5
 RMD160 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 3e74abf3744969c0289985cdb05049c420eb6df6
 Size (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 7284903 bytes
-SHA1 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 277b7dc8d84ebe350fd70fc272a0b29c8a263da5
-RMD160 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 3e74abf3744969c0289985cdb05049c420eb6df6
-Size (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 7284903 bytes
-SHA1 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 277b7dc8d84ebe350fd70fc272a0b29c8a263da5
-RMD160 (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 3e74abf3744969c0289985cdb05049c420eb6df6
-Size (opera-9.25-20071214.1-static-qt.i386-en.rpm) = 7284903 bytes
+SHA1 (opera-9.25-20071214.1-static-qt.i386.freebsd-en.tar.bz2) = fb8f614ad3a3a62d71b7e7e0943d87257934009e
+RMD160 (opera-9.25-20071214.1-static-qt.i386.freebsd-en.tar.bz2) = 4dafda310ef785d91cdb245a8d18a9bf5f384b2c
+Size (opera-9.25-20071214.1-static-qt.i386.freebsd-en.tar.bz2) = 6548352 bytes
