@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2702 2007/12/26 14:02:34 smb Exp $
+$NetBSD: CHANGES-2007,v 1.2703 2007/12/26 15:22:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4905,4 +4905,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/sdist to 1.7nb1 [obache 2007-12-24]
 	Updated net/netname to 1.7nb1 [obache 2007-12-24]
 	Updated games/pioneers to 0.11.3 [veego 2007-12-25]
-	Updated audio/gtkpd to 0.99.12 [smb 2007-12-26]
+	Updated audio/gtkpod to 0.99.12 [smb 2007-12-26]
