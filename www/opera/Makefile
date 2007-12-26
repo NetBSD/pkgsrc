@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2007/10/27 00:58:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.78 2007/12/26 19:39:41 jdolecek Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 #PKGREVISION=		1
@@ -27,9 +27,9 @@ USE_LANGUAGES=		# empty
 BUILD_DIRS=		# empty
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20071015
-OPERA_PKG_VERSION=	9.24
-OPERA_PKG_VERSION_DIR=	924
+OPERA_VER_DATE=		20071214
+OPERA_PKG_VERSION=	9.25
+OPERA_PKG_VERSION_DIR=	925
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -42,4 +42,19 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 .  include "Makefile.plain"
 .endif
 
+# regenerate distinfo for all ports supported by this package
+.PHONY: opera-distinfo
+opera-distinfo:
+	( ${ECHO} '$$'NetBSD'$$'; \
+	  ${ECHO} ''; \
+	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	_OPERA_OPSYS=SunOS _OPERA_MACHINE_ARCH=sparc make distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	) > distinfo.new
+	${MV} -f distinfo.new distinfo
+
 .include "../../mk/bsd.pkg.mk"
+#.include "../../mk/bsd.pkg.subdir.mk"
