@@ -1,0 +1,31 @@
+$NetBSD: patch-bj,v 1.1 2007/12/26 14:02:35 smb Exp $
+
+--- src/file_convert.c.orig	2007-12-25 00:38:17.000000000 -0500
++++ src/file_convert.c	2007-12-25 00:38:47.000000000 -0500
+@@ -216,7 +216,7 @@
+     gchar *fname_root;      /* filename root of converted file          */
+     gchar *fname_extension; /* filename extension of converted file     */
+     GPid  pid;              /* PID of child doing the conversion        */
+-    gint  stderr;           /* stderr of child doing the conversion     */
++    gint  Cstderr;          /* stderr of child doing the conversion     */
+     Track *track;           /* for reference, don't access inside threads! */
+     iTunesDB *itdb;         /* for reference, don't access inside threads! */
+     gint  threadnum;        /* number of thread working on this track   */
+@@ -2308,7 +2308,7 @@
+ 				  &ctr->pid,    /* child's PID    */
+ 				  NULL,         /* child's stdin  */
+ 				  NULL,         /* child's stdout */
+-				  &ctr->stderr, /* child's stderr */
++				  &ctr->Cstderr,/* child's stderr */
+ 				  &error);
+ 
+ 	    child_pid = ctr->pid;
+@@ -2334,7 +2334,7 @@
+ 		gint status;
+ 
+ 		/* set up i/o channel to main thread */
+-		ctr->gio_channel = g_io_channel_unix_new (ctr->stderr);
++		ctr->gio_channel = g_io_channel_unix_new (ctr->Cstderr);
+ 		g_io_channel_set_flags (ctr->gio_channel,
+ 					G_IO_FLAG_NONBLOCK, NULL);
+ 		g_io_channel_set_close_on_unref (ctr->gio_channel, TRUE);
