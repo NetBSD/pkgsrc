@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2706 2007/12/27 12:08:31 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2707 2007/12/27 12:28:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/tinyfugue to 4.0s1nb5 [obache 2007-12-27]
 	Updated sysutils/osname to 1.1nb1 [obache 2007-12-27]
 	Updated net/srsh to 1.2nb1 [obache 2007-12-27]
+	Updated print/gimp-print-cups to 4.2.7nb4 [obache 2007-12-27]
