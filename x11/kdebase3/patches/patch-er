@@ -1,7 +1,7 @@
-$NetBSD: patch-er,v 1.6 2006/05/16 13:21:06 tron Exp $
+$NetBSD: patch-er,v 1.7 2007/12/27 08:01:20 markd Exp $
 
---- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2005-10-10 16:04:31.000000000 +0100
-+++ ksysguard/ksysguardd/NetBSD/ProcessList.c	2006-05-16 14:17:57.000000000 +0100
+--- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2005-10-11 04:04:31.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/ProcessList.c
 @@ -24,6 +24,7 @@
  
  #include <ctype.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-er,v 1.6 2006/05/16 13:21:06 tron Exp $
  #include <pwd.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -191,7 +192,9 @@
+@@ -191,11 +192,13 @@ updateProcess(int pid)
          ps->ppid      = p.kp_eproc.e_ppid;
          ps->uid       = p.kp_eproc.e_ucred.cr_uid;
          ps->gid       = p.kp_eproc.e_pgid;
@@ -20,3 +20,8 @@ $NetBSD: patch-er,v 1.6 2006/05/16 13:21:06 tron Exp $
          ps->niceLevel = p.kp_proc.p_nice;
  
          /* this isn't usertime -- it's total time (??) */
+-	ps->userTime = p.kp_proc.p_rtime.tv_sec*100+p.kp_proc.p_rtime.tv_usec/100;
++	ps->userTime = 0;
+         ps->sysTime  = 0;
+         ps->sysLoad  = 0;
+ 

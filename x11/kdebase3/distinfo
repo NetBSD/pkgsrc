@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2007/11/01 10:35:56 markd Exp $
+$NetBSD: distinfo,v 1.102 2007/12/27 08:01:20 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -34,7 +34,7 @@ SHA1 (patch-cb) = d13c59029ef13c89d565431244128044735ddaef
 SHA1 (patch-cc) = ed95490558d4de4a04aa0f45634e44ed0b78fdd8
 SHA1 (patch-dd) = 4c98e62275ce9a632f79f99110e8fb4995e3f017
 SHA1 (patch-ep) = 745f03daf088afdef4d5eff486311a49291eb947
-SHA1 (patch-er) = ead52469004abbb4e04278e038fad8f850d79701
+SHA1 (patch-er) = 5e0ad3d9a039565719728390b1b9fef568e51981
 SHA1 (patch-ev) = 551dc4d79b637e15a580eb1dcd2f0930ff1e3dbc
 SHA1 (patch-ew) = f8f95cf602a9d88f620d5546ad58b87d5e6be2a5
 SHA1 (patch-fa) = 1ea4390477d7f68283b68e695bcb2e4b7c18aecc
@@ -52,4 +52,5 @@ SHA1 (patch-ga) = 40ab73f3e32e8d8e8c58662df7c5dc54bd4acd29
 SHA1 (patch-gb) = b36e23cf6c64e42269b396f389c5a0e24a40e67e
 SHA1 (patch-gc) = e02ddb93ae7aa249b3b3e68690f587b2c98255b8
 SHA1 (patch-gd) = 39469384668e4ee7fc489406e2813100fc90aa9b
+SHA1 (patch-ge) = 4d86708cae2bb52803a67804e02cec1331648783
 SHA1 (patch-kdesud) = acc40c2d1fb65e404a7aa0dbb6eae72fa7ac6a5e
