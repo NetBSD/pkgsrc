@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.10 2007/12/27 14:07:25 joerg Exp $
+
+--- setup.py.orig	2007-12-21 23:31:57.000000000 +0100
++++ setup.py
+@@ -15,12 +15,8 @@ if not hasattr(sys, 'version_info') or s
+     raise SystemExit, "Python 2.0 or later required to build Numeric."
+ 
+ from glob import glob
+-try:
+-    from setuptools import setup
+-    have_setuptools = 1
+-except ImportError:
+-    from distutils.core import setup
+-    have_setuptools = 0
++from distutils.core import setup
++have_setuptools = 0
+ from distutils.core import Extension
+ from distutils.command.config import config
+ from distutils.sysconfig import get_config_var, customize_compiler
