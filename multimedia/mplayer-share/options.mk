@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2007/12/21 17:41:12 drochner Exp $
+# $NetBSD: options.mk,v 1.25 2007/12/27 13:19:40 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -14,10 +14,9 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 # Options supported by both mplayer* or mencoder*.
 
-.if ${OSS_TYPE} != "none"
-PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread oss png theora vorbis
-.else
 PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis
+.if ${OSS_TYPE} != "none"
+PKG_SUPPORTED_OPTIONS+=	oss
 .endif
 
 # Set options based on the specific package being built.
@@ -40,6 +39,9 @@ PKG_SUPPORTED_OPTIONS+=	lame
 PKG_SUPPORTED_OPTIONS+=	cdparanoia
 .elif ${OPSYS} == "SunOS"
 PKG_SUPPORTED_OPTIONS+=	mlib
+.endif
+.if ${OPSYS} == "Linux"
+PKG_SUPPORTED_OPTIONS+=	vidix
 .endif
 
 # Platform-specific options.
@@ -70,6 +72,9 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
 .endfor
+.if ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	vidix
+.endif
 
 # -------------------------------------------------------------------------
 # Handle extra libraries (part 1)
@@ -245,6 +250,12 @@ CONFIGURE_ARGS+=	--enable-theora
 .  include "../../multimedia/libtheora/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-theora
+.endif
+
+# disable vidix if not in options
+.if empty(PKG_OPTIONS:Mvidix)
+CONFIGURE_ARGS+=	--disable-vidix-internal
+CONFIGURE_ARGS+=	--disable-vidix-external
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
