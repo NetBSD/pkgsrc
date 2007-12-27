@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/07/19 00:26:19 grant Exp $
+# $NetBSD: options.mk,v 1.3 2007/12/27 23:41:42 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	idea mdc2 rc5
@@ -13,9 +13,7 @@ OPENSSL_LICENSE=	# empty
 ###	Japan Patent: 508119/1991
 ###
 .if !empty(PKG_OPTIONS:Midea)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
-OPENSSL_LICENSE=	fee-based-commercial-use
-.  endif
+OPENSSL_LICENSE+=	idea-license
 PLIST_SUBST+=		IDEA=
 .else
 CONFIGURE_ARGS+=	no-idea
@@ -27,9 +25,8 @@ PLIST_SUBST+=		IDEA="@comment "
 ###	US Patent: 4908861
 ###
 .if !empty(PKG_OPTIONS:Mmdc2)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
-OPENSSL_LICENSE=	fee-based-commercial-use
-.  endif
+# A license file is needed.
+OPENSSL_LICENSE+=	mdc2-nonlicense
 PLIST_SUBST+=		MDC2=
 .else
 CONFIGURE_ARGS+=	no-mdc2
@@ -41,9 +38,8 @@ PLIST_SUBST+=		MDC2="@comment "
 ###	US Patent: 5724428, 5835600, 6269163
 ###
 .if !empty(PKG_OPTIONS:Mrc5)
-.  if empty(OPENSSL_LICENSE:Mfee-based-commercial-use)
-OPENSSL_LICENSE=	fee-based-commercial-use
-.  endif
+# A license file is needed.
+OPENSSL_LICENSE+=	rc5-nonlicense
 PLIST_SUBST+=		RC5=
 .else
 CONFIGURE_ARGS+=	no-rc5
@@ -51,5 +47,6 @@ PLIST_SUBST+=		RC5="@comment "
 .endif
 
 .if !empty(OPENSSL_LICENSE)
-LICENSE=	${OPENSSL_LICENSE}
+# pkgsrc does not handle multiple licenses
+LICENSE=	openssl-patented-algorithms-nonlicense
 .endif
