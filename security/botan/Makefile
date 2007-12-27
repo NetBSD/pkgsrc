@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/11/30 20:02:39 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/27 14:13:58 obache Exp $
 
 DISTNAME=	Botan-1.4.11
 PKGNAME=	botan-1.4.11
@@ -27,6 +27,7 @@ MAKE_FLAGS+=	INSTALL_CMD_DATA=${INSTALL_DATA:Q}
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
 CXXFLAGS.DragonFly+=	-D_DRAGONFLY_SOURCE
+CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 BUILDLINK_TRANSFORM+=	rm:-mcpu=i686
 
 .include "../../mk/bsd.pkg.mk"
