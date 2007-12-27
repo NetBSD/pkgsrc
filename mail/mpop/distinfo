@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/12/01 17:22:22 reed Exp $
+$NetBSD: distinfo,v 1.5 2007/12/27 17:59:53 joerg Exp $
 
 SHA1 (mpop-1.0.12.tar.bz2) = 4618832ddbc84a7f00e8222d1a92ef2ae1f5c60f
 RMD160 (mpop-1.0.12.tar.bz2) = 7e6b609cf59535a67653040a09f2d58aa55cd6cd
 Size (mpop-1.0.12.tar.bz2) = 732061 bytes
+SHA1 (patch-aa) = 79a89fb4e3a64d5c40df00fba498ce44819f472f

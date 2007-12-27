@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.3 2007/12/27 17:59:53 joerg Exp $
+
+--- gnulib/stdint.in.h.orig	2007-12-27 16:11:09.000000000 +0000
++++ gnulib/stdint.in.h
+@@ -82,15 +82,6 @@
+ # include <sys/bitypes.h>
+ #endif
+ 
+-#if ! defined __cplusplus || defined __STDC_CONSTANT_MACROS
+-
+-/* Get WCHAR_MIN, WCHAR_MAX.  */
+-# if ! (defined WCHAR_MIN && defined WCHAR_MAX)
+-#  include <wchar.h>
+-# endif
+-
+-#endif
+-
+ /* Minimum and maximum values for a integer type under the usual assumption.
+    Return an unspecified value if BITS == 0, adding a check to pacify
+    picky compilers.  */
+@@ -512,5 +503,14 @@ typedef int _verify_intmax_size[2 * (siz
+ 
+ #endif /* !defined __cplusplus || defined __STDC_CONSTANT_MACROS */
+ 
++#if ! defined __cplusplus || defined __STDC_CONSTANT_MACROS
++
++/* Get WCHAR_MIN, WCHAR_MAX.  */
++# if ! (defined WCHAR_MIN && defined WCHAR_MAX)
++#  include <wchar.h>
++# endif
++
++#endif
++
+ #endif /* _GL_STDINT_H */
+ #endif /* !defined _GL_STDINT_H && !defined _GL_JUST_INCLUDE_SYSTEM_STDINT_H */
