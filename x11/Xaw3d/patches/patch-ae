@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2007/12/27 14:14:24 reed Exp $
+
+Already in XFree86 and X.org versions since at least Nov. 2004.
+Also in Fedora version since Aug 09 2002.
+http://rpmfind.net//linux/RPM/fedora/7/x86_64/Xaw3d-1.5E-10.1.i386.html
+
+--- MultiSrc.c.orig	Tue Aug  6 22:51:08 2002
++++ MultiSrc.c	Tue Aug  6 22:51:16 2002
+@@ -735,6 +735,7 @@
+   
+   if ( string_set || (old_src->multi_src.type != src->multi_src.type) ) {
+     RemoveOldStringOrFile(old_src, string_set);
++    src->multi_src.allocated_string = old_src->multi_src.allocated_string;
+     file = InitStringOrFile(src, string_set);
+ 
+     /* Load pieces does this logic for us, but it shouldn't.  Its messy.*/
