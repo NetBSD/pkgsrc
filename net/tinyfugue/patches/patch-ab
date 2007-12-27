@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2002/12/12 21:02:58 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2007/12/27 11:43:51 obache Exp $
 
---- unix/Config.orig	Sat Mar  6 23:43:28 1999
+--- unix/Config.orig	1999-03-06 22:43:28.000000000 +0000
 +++ unix/Config
 @@ -33,9 +33,12 @@
  #   even if an old version is currently in use.  You can remove
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.4 2002/12/12 21:02:58 jmmv Exp $
 -# MANTYPE="nroff"
 -# MANPAGE="/usr/local/man/man1/tf.1"
 +MANTYPE="nroff"
-+MANPAGE="${PREFIX}/man/man1/tf.1"
++MANPAGE="${PREFIX}/${PKGMANDIR}/man1/tf.1"
  
  
  ### Flags.
