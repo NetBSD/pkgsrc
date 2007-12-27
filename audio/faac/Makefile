@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/09 20:27:16 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/27 22:38:25 joerg Exp $
 #
 
 DISTNAME=	faac-1.25
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.audiocoding.com/
 COMMENT=	AAC audio encoder
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	automake
