@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.1 2007/11/05 20:01:00 drochner Exp $
+$NetBSD: patch-ag,v 1.2 2007/12/27 14:55:36 joerg Exp $
 
 --- Src/DasherCore/DasherViewSquare.cpp.orig	2007-10-30 17:46:41.000000000 +0100
 +++ Src/DasherCore/DasherViewSquare.cpp
+@@ -791,7 +791,7 @@ void CDasherViewSquare::GetScaleFactor( 
+ inline myint CDasherViewSquare::CustomIDiv(myint iNumerator, myint iDenominator) { 
+   // Integer division rounding away from zero
+   
+-#ifdef _WIN32
++#if defined(_WIN32) || defined(__DragonFly__)
+   myint quot = iNumerator / iDenominator;
+   myint rem = (int64)iNumerator % (int64)iDenominator;
+ 
 @@ -802,7 +802,7 @@ inline myint CDasherViewSquare::CustomID
    else
      return quot;
