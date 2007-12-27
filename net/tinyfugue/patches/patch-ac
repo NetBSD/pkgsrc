@@ -1,8 +1,31 @@
-$NetBSD: patch-ac,v 1.3 1999/11/27 23:13:43 rh Exp $
+$NetBSD: patch-ac,v 1.4 2007/12/27 11:43:51 obache Exp $
 
---- unix/tfconfig.orig	Sun Nov 28 00:12:19 1999
-+++ unix/tfconfig	Sun Nov 28 00:12:19 1999
-@@ -224,17 +224,17 @@
+--- unix/tfconfig.orig	2007-12-27 11:03:19.000000000 +0000
++++ unix/tfconfig
+@@ -168,18 +168,18 @@ fi
+ # The cd;pwd is needed to normalize the directory name in case of links, etc.
+ 
+ DIR1=`echo $TF      | sed 's;/[^/]*$;;'`
+-DIR1=`cd $DIR1 && pwd`
++#DIR1=`cd $DIR1 && pwd`
+ DIR2=`echo $LIBDIR  | sed 's;/[^/]*$;;'`
+-DIR2=`cd $DIR2 && pwd`
++#DIR2=`cd $DIR2 && pwd`
+ DIR3=`echo $SYMLINK | sed 's;/[^/]*$;;'`
+-DIR3=`cd $DIR3 && pwd`
++#DIR3=`cd $DIR3 && pwd`
+ 
+ if [ -z "$DIR1" ] || [ -z "$DIR2" ] || [ -z "$DIR3" ]; then
+     echo "Error in directory."
+     exit 1;
+ fi
+ 
+-DIR1=`cd $DIR1 && pwd || { echo "Error in directory $DIR1."; false; }`
++#DIR1=`cd $DIR1 && pwd || { echo "Error in directory $DIR1."; false; }`
+ 
+ BUILDTREE=`cd .. && pwd`
+ if echo "${DIR1}/" | egrep "^${BUILDTREE}/" >/dev/null 2>&1 ||
+@@ -223,17 +223,17 @@ fi
  echo
  
  echo 'To change these locations type "n" now and edit the unix/Config file.'
