@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2007/11/29 18:36:35 wiz Exp $
+$NetBSD: distinfo,v 1.34 2007/12/27 10:19:00 taca Exp $
 
 SHA1 (xmms-1.2.11.tar.bz2) = 9d1eae4baab25fd35c9ddfb49321ca60222f672d
 RMD160 (xmms-1.2.11.tar.bz2) = 466a624572574c56595ef34f42c43d0b74857b0a
@@ -14,3 +14,4 @@ SHA1 (patch-an) = 3abc68bd37018800dc70b151a5b419211a727a02
 SHA1 (patch-ap) = 101c54e2ce0e575893b8d3880ca54a021e89a8dd
 SHA1 (patch-aq) = 2a16fbd747e03df4ef0fbb94e45c79e9c3de9ac8
 SHA1 (patch-ar) = b9cf22e3ab585ef255a533e56a3430f49f2fba4f
+SHA1 (patch-aw) = eed1a2b95f8d92bb75c118f64a4e33b97b9b4ee5
