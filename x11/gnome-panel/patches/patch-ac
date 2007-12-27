@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.7 2007/12/27 15:29:32 joerg Exp $
+
+--- gnome-panel/panel-util.c.orig	2007-12-27 13:36:58.000000000 +0000
++++ gnome-panel/panel-util.c
+@@ -18,6 +18,7 @@
+ 
+ #include <dirent.h>
+ #include <string.h>
++#include <limits.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ 
+@@ -856,7 +857,11 @@ panel_make_unique_desktop_path_from_name
+ {
+ 	int   num = 1;
+ 	char *path = NULL;
++#ifdef NAME_MAX
++	char  filename[NAME_MAX];
++#else
+ 	char  filename[MAXNAMLEN];
++#endif
+ 
+ /* g_file_set_contents() use "%s.XXXXXX"
+  * FIXME: waiting for http://bugzilla.gnome.org/show_bug.cgi?id=437977 */
