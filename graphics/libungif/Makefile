@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2006/11/05 17:23:45 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2007/12/27 11:43:37 jnemeth Exp $
 
 DISTNAME=	libungif-4.1.4
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
