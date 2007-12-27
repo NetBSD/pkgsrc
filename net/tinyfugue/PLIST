@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/27 11:40:28 obache Exp $
 bin/tf
 bin/tf-40s1
 lib/tf-40s1-lib/CHANGES
@@ -56,5 +56,5 @@ lib/tf-40s1-lib/tr.tf
 lib/tf-40s1-lib/watch.tf
 lib/tf-40s1-lib/world-q.tf
 lib/tf-40s1-lib/worldqueue.tf
-man/man1/tf.1.gz
+man/man1/tf.1
 @dirrm lib/tf-40s1-lib
