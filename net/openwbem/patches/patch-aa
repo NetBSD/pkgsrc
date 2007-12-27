@@ -1,8 +1,30 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/27 18:54:19 joerg Exp $
 
---- configure	2006/02/21 21:18:12	1.1
-+++ configure	2006/02/21 21:19:32
-@@ -4652,8 +4652,20 @@
+--- configure.orig	2006-10-19 23:08:04.000000000 +0000
++++ configure
+@@ -4590,7 +4590,7 @@ _ACEOF
+ #define HPUX 1
+ _ACEOF
+ 
+-	LIBS="$LIBS -lxnet -lpthread -lrt"
++	LIBS="$LIBS -lxnet ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -lrt"
+ 	PLAT_CFLAGS="+Z -mt -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1"
+ 	PLAT_CXXFLAGS="-AA +Z -mt +p -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__HPACC_THREAD_SAFE_RB_TREE"
+ 	CPPFLAGS="-AA $CPPFLAGS" # need this so the configure tests work right.
+@@ -4614,9 +4614,9 @@ _ACEOF
+ 	PLAT_CFLAGS="-fPIC -D_REENTRANT -D_GNU_SOURCE -pipe"
+ 	PLAT_CXXFLAGS="-fPIC -D_REENTRANT -D_GNU_SOURCE -pipe"
+ 	CXXCOMMONLINKFLAGS=""
+-	CXXBINLINKFLAGS="-Wl,-Bdynamic -lpthread -Wl,-E $LDFLAGS"
+-	CBINLINKFLAGS="-Wl,-Bdynamic -lpthread $LDFLAGS"
+-	CXXSHAREDLIBLINKFLAGS='-shared -fPIC -Wl,-soname -Wl,$@.$(LIBRARY_BINARY_VERSION) -lpthread'
++	CXXBINLINKFLAGS="-Wl,-Bdynamic ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -Wl,-E $LDFLAGS"
++	CBINLINKFLAGS="-Wl,-Bdynamic ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LDFLAGS"
++	CXXSHAREDLIBLINKFLAGS='-shared -fPIC -Wl,-soname -Wl,$@.$(LIBRARY_BINARY_VERSION) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}'
+ 	PLAT_OPTFLAGS="-O3"
+ 	PIDFILE_DIR="/var/run"
+ 	LIB_EXT="so"
+@@ -4652,8 +4652,20 @@ _ACEOF
  	PLAT_CXXFLAGS="-DEXPERIMENTAL"
  	LIBS="$LIBS -lnetware"
  	;;
@@ -25,3 +47,38 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/10/29 15:05:21 agc Exp $
  *-*-freebsd*)
  	cat >>confdefs.h <<\_ACEOF
  #define FREEBSD 1
+@@ -4694,9 +4706,9 @@ echo "$as_me: WARNING: *****************
+ 	PLAT_CFLAGS="-fPIC -D_REENTRANT -D_GNU_SOURCE -pipe"
+ 	PLAT_CXXFLAGS="-fPIC -D_REENTRANT -D_GNU_SOURCE -pipe"
+ 	CXXCOMMONLINKFLAGS=""
+-	CXXBINLINKFLAGS="-Wl,-Bdynamic -lpthread -Wl,-E $LDFLAGS"
+-	CBINLINKFLAGS="-Wl,-Bdynamic -lpthread $LDFLAGS"
+-	CXXSHAREDLIBLINKFLAGS='-shared -fPIC -Wl,-soname -Wl,$@.$(LIBRARY_BINARY_VERSION) -lpthread'
++	CXXBINLINKFLAGS="-Wl,-Bdynamic ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -Wl,-E $LDFLAGS"
++	CBINLINKFLAGS="-Wl,-Bdynamic ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LDFLAGS"
++	CXXSHAREDLIBLINKFLAGS='-shared -fPIC -Wl,-soname -Wl,$@.$(LIBRARY_BINARY_VERSION) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}'
+ 	PLAT_OPTFLAGS="-O3"
+ 	PIDFILE_DIR="/var/run"
+ 	LIB_EXT="so"
+@@ -16646,9 +16658,9 @@ main ()
+ {
+ 
+ 	pthread_barrier_t barrier;
+-	assert(pthread_barrier_init(&barrier, NULL, 1) == 0);
+-	assert(pthread_barrier_wait(&barrier) == PTHREAD_BARRIER_SERIAL_THREAD);
+-	assert(pthread_barrier_destroy(&barrier) == 0);
++	pthread_barrier_init(&barrier, NULL, 1);
++	pthread_barrier_wait(&barrier);
++	pthread_barrier_destroy(&barrier);
+ 	return 0;
+ 
+   ;
+@@ -16657,7 +16669,7 @@ main ()
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
++  (eval $ac_link) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
