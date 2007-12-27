@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.2 2006/02/22 20:59:58 wiz Exp $
+@comment $NetBSD: PLIST.opt,v 1.3 2007/12/27 16:24:23 joerg Exp $
 lib/ocaml/labltk/balloon.cmx
 lib/ocaml/labltk/bell.cmx
 lib/ocaml/labltk/button.cmx
@@ -90,6 +90,7 @@ lib/ocaml/labltk/timer.cmx
 lib/ocaml/labltk/tk.cmx
 lib/ocaml/labltk/tkanim.a
 lib/ocaml/labltk/tkanim.cmxa
+lib/ocaml/labltk/tkthread.cmx
 lib/ocaml/labltk/tkvars.cmx
 lib/ocaml/labltk/tkwait.cmx
 lib/ocaml/labltk/toplevel.cmx
