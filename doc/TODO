@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6930 2007/12/27 00:17:28 xtraeme Exp $
+$NetBSD: TODO,v 1.6931 2007/12/27 02:06:53 obache Exp $
 
 Suggested new packages
 ======================
@@ -769,6 +769,7 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtasn1-1.2
 	o libtcl-nothread-8.4.9
+	o libupnp-1.6.3
 	o libxklavier-3.3
 	o libxml++2-2.20.0
 	o licq-1.3.5
