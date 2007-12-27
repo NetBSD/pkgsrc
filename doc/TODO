@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6928 2007/12/25 10:55:29 veego Exp $
+$NetBSD: TODO,v 1.6929 2007/12/27 00:15:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -1152,6 +1152,7 @@ Suggested package updates
 	o rss2email-2.61
 	o rt3-3.6.5
 	o rtcw-1.41.3
+	o ruby-RMagick-1.15.12
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
 	o rxvt-unicode-8.8
