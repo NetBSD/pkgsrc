@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/27 15:37:44 joerg Exp $
 
 --- Makefile.orig	2002-03-20 13:59:19.000000000 +0800
 +++ Makefile
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
  
  # you might need to change "libtcl" and "libtk" to "libtcl8.x" and "libtk8.x"
 -LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk -ltcl -lX11 -lm -ldl
-+LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk -ltcl -lX11 -lm -lpthread
++LIBS = $(LIBXDIR) $(LIBTCLDIR) -ltk -ltcl -lX11 -lm ${PTHREAD_LIBS} ${PTHREAD_LDADD}
  
  INSTALL = install
  RM = rm -f
