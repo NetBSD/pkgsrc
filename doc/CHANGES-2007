@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2704 2007/12/27 11:44:23 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2705 2007/12/27 11:56:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4907,3 +4907,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated games/pioneers to 0.11.3 [veego 2007-12-25]
 	Updated audio/gtkpod to 0.99.12 [smb 2007-12-26]
 	Updated net/tinyfugue to 4.0s1nb5 [obache 2007-12-27]
+	Updated sysutils/osname to 1.1nb1 [obache 2007-12-27]
