@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/01/13 18:51:51 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/27 16:24:21 joerg Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/ocaml/labltk/}
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		Tk bindings for ocaml
 
