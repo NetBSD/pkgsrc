@@ -1,0 +1,13 @@
+$NetBSD: patch-ge,v 1.1 2007/12/27 08:01:21 markd Exp $
+
+--- nsplugins/viewer/qxteventloop.cpp.orig	2007-05-14 19:55:42.000000000 +1200
++++ nsplugins/viewer/qxteventloop.cpp
+@@ -72,7 +72,7 @@ public:
+ 
+     QIntDict<QSocketNotifier> socknotDict;
+     bool activate_timers;
+-    int timerid;
++    XtIntervalId timerid;
+ 
+     // arguments for Xt display initialization
+     const char* applicationClass;
