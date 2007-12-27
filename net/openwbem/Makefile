@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/29 15:05:20 agc Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/27 18:54:18 joerg Exp $
 
 DISTNAME=	openwbem-3.2.2
 CATEGORIES=	net devel
@@ -82,4 +82,5 @@ SUBST_FILES.mkdir+=	${WRKSRC}/src/providers/cpp/instance/OpenWBEM_ConfigSettingD
 SUBST_SED.mkdir=        -e "s|\$$(INSTALL_PROGRAM) -d|\$${mkdir_p}|g"
 SUBST_MESSAGE.mkdir=    Fixing ${INSTALL_PROGRAM} -d lines (the -s does not interoperate with -d)
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
