@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2007/12/28 11:45:42 obache Exp $
+
+--- signature.c.orig	2001-01-07 05:24:17.000000000 +0000
++++ signature.c
+@@ -135,7 +135,7 @@ c_node *new_c_node(s_node *service,  u_i
+ 
+     new_node->delta2 = (u_char *)NULL;
+ 
+-    if( (const char *)re_err = re_compile_pattern( pattern, strlen( pattern ),&(new_node->reg_pattern))){
++    if( re_err = (char *)re_compile_pattern( pattern, strlen( pattern ),&(new_node->reg_pattern))){
+       fprintf( stderr, "new_c_node:re_compile_pattern %s\n", re_err );
+       final(0);
+     }
