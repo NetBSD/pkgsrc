@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2007/12/28 20:30:47 darcy Exp $
+bin/dir2slideshow
+bin/dvd-menu
+bin/dvd-slideshow
+bin/gallery1-to-slideshow
+bin/jigl2slideshow
+man/man1/dir2slideshow.1
+man/man1/dvd-menu.1
+man/man1/dvd-slideshow.1
+man/man1/gallery1-to-slideshow.1
+man/man1/jigl2slideshow.1

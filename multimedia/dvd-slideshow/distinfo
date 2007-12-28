@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2007/12/28 20:30:47 darcy Exp $
+
+SHA1 (dvd-slideshow-0.7.5.tar.gz) = 82a33d1e9713cd4204dbd592989bb10946fe07ec
+RMD160 (dvd-slideshow-0.7.5.tar.gz) = 09bea91d35766bc4dc5a8711b49e6c50207dc6ca
+Size (dvd-slideshow-0.7.5.tar.gz) = 98747 bytes
+SHA1 (patch-aa) = 3112a1e0cfe0e6bc3a6e980f4df6661b6c6fec99
