@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/12/28 04:22:43 obache Exp $
+# $NetBSD: Makefile,v 1.41 2007/12/28 05:01:47 obache Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -25,26 +25,24 @@ PKG_SYSCONFSUBDIR=	isakmpd
 RCD_SCRIPTS=		isakmpd
 RCD_SCRIPT_WRK.isakmpd=	${WRKDIR}/isakmpd.sh
 
-pre-configure:
-	@${ECHO_MSG} "Fixing references to buildlink directories"
-	@for i in ${WRKSRC}/sysdep/netbsd/Makefile.sysdep; do		\
-		${MV} $${i} $${i}.unfixed;				\
-		${SED} "s+@BUILDLINK_PREFIX.openssl@+${BUILDLINK_PREFIX.openssl}+g" \
-			< $${i}.unfixed > $${i};			\
-	done
-	@${ECHO_MSG} "Fixing references to configuration directory"
-	@for i in conf.h policy.h ike_auth.h; do			\
-		${MV} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.unfixed;		\
-		${SED} "s+/etc/isakmpd+${PKG_SYSCONFDIR}+g"		\
-			< ${WRKSRC}/$${i}.unfixed > ${WRKSRC}/$${i};	\
-	done
-	@${ECHO_MSG} "Fixing manual page references"
-	@for i in isakmpd.8 isakmpd.conf.5 isakmpd.policy.5; do		\
-		${MV} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.unfixed;		\
-		${SED} -e "s+/usr/share/ipsec+${PREFIX}/share/examples+g" \
-			-e "s+/etc/isakmpd+${PKG_SYSCONFDIR}+g"		\
-			< ${WRKSRC}/$${i}.unfixed > ${WRKSRC}/$${i};	\
-	done
+SUBST_CLASSES+=		ssl
+SUBST_STAGE.ssl=	pre-configure
+SUBST_MESSAGE.ssl=	Fixing references to buildlink directories
+SUBST_FILES.ssl=	sysdep/netbsd/Makefile.sysdep
+SUBST_VARS.ssl=		BUILDLINK_PREFIX.openssl
+
+SUBST_CLASSES+=		cfg
+SUBST_STAGE.cfg=	pre-configure
+SUBST_MESSAGE.cfg=	Fixing references to configuration directory
+SUBST_FILES.cfg=	conf.h policy.h ike_auth.h
+SUBST_SED.cfg=		-e "s+/etc/isakmpd+${PKG_SYSCONFDIR}+g"
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing manual page references
+SUBST_FILES.man=	isakmpd.8 isakmpd.conf.5 isakmpd.policy.5
+SUBST_SED.man=		-e "s+/usr/share/ipsec+${PREFIX}/share/examples+g"
+SUBST_SED.man+=		-e "s+/etc/isakmpd+${PKG_SYSCONFDIR}+g"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
