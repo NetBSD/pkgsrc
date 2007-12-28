@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/18 18:56:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2007/12/28 11:47:24 obache Exp $
 
 DISTNAME=	pakemon-0.3.1
 PKGREVISION=	4
@@ -19,6 +19,8 @@ SUBST_SED.conf=		-e "s|libnet-config|libnet10-config|g"
 SUBST_SED.conf+=	-e "s|@@LN_INC@@|${BUILDLINK_PREFIX.libnet10}/include/libnet10|g"
 SUBST_SED.conf+=	-e "s|@@LN_LIB@@|${BUILDLINK_PREFIX.libnet10}/lib/libnet10|g"
 SUBST_MESSAGE.conf=	Fixing configuration script.
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	${CP} ${WRKSRC}/pakemon.h ${WRKSRC}/pakemon.h.in
