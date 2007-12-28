@@ -1,12 +1,5 @@
-# $NetBSD: Makefile.NetBSD.x86_64,v 1.3 2007/11/17 16:28:09 hira Exp $
+# $NetBSD: Makefile.NetBSD.x86_64,v 1.4 2007/12/28 04:47:04 hira Exp $
 
 #OPENOFFICE_DLLSUFFIX=	bx
 OPENOFFICE_OUTPATH=	unxbsdx3
 OPENOFFICE_SETFILE=	NetBSDX86-64
-
-# Is /usr/lib/libsupc++.a broken (-current and 4.0_BETA2) ?
-#  /usr/bin/ld: /usr/lib/libsupc++.a(pure.o): relocation R_X86_64_32 can not be
-#  used when making a shared object; recompile with -fPIC
-#  /usr/lib/libsupc++.a: could not read symbols: Bad value
-USE_PKGSRC_GCC=		YES
-.include "../../mk/compiler.mk"
