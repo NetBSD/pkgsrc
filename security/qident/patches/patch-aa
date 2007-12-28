@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2007/12/28 12:27:20 obache Exp $
+
+--- Makefile.orig	2007-12-28 12:14:35.000000000 +0000
++++ Makefile
+@@ -6,7 +6,4 @@ MAN=		qident.1
+ CFLAGS+=	-I${PREFIX}/include -Wall
+ LDADD+=		-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lident
+ 
+-BINDIR=		${PREFIX}/bin
+-MANDIR=		${PREFIX}/man
+-
+ .include <bsd.prog.mk>
