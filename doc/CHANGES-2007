@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2710 2007/12/28 04:48:31 hira Exp $
+$NetBSD: CHANGES-2007,v 1.2711 2007/12/28 05:25:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4913,3 +4913,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated x11/Xaw3d to 1.5Enb4 [reed 2007-12-27]
 	Updated graphics/gimp-ufraw to 0.13 [gdt 2007-12-27]
 	Updated misc/openoffice2 to 2.3.1nb1 [hira 2007-12-28]
+	Updated sysutils/wbm-apache to 1.370nb2 [obache 2007-12-28]
