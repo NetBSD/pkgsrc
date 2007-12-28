@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/08/28 21:43:35 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2007/12/28 12:15:38 joerg Exp $
 #
 
 DISTNAME=	avidemux_2.3.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://download.berlios.de/avidemux/
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://fixounet.free.fr/avidemux/
 COMMENT=	Graphical video editing program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
