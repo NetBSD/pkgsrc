@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2007/12/28 15:00:45 tron Exp $
+
+--- src/Scheduler.c++.orig	2003-01-18 14:18:12.000000000 +0000
++++ src/Scheduler.c++	2007-12-28 14:57:21.000000000 +0000
+@@ -309,7 +309,7 @@
+ {
+     if (fds)
+ 	for (int fd = 0; fd < nfds; fd++)
+-	    if (FD_ISSET(fd, fds))
++	    if (FD_ISSET(fd, const_cast<fd_set *>(fds)))
+ 	    {   FDInfo *fp = &fdinfo[fd];
+ 		assert(iotype == &FDInfo::read || iotype == &FDInfo::write);
+ 		(fp->*iotype).handler(fd, (fp->*iotype).closure);
