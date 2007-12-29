@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1 2007/12/29 19:54:02 joerg Exp $
+
+Conflicts with system function (size_t datlen) on DragonFly.
+
+--- libbsd/arc4random.c.orig	2007-12-29 17:37:54.000000000 +0000
++++ libbsd/arc4random.c
+@@ -150,14 +150,6 @@ arc4random_stir(void)
+ 	arc4_stir(&rs);
+ }
+ 
+-void
+-arc4random_addrandom(u_char *dat, int datlen)
+-{
+-	if (!rs_initialized)
+-		arc4random_stir();
+-	arc4_addrandom(&rs, dat, datlen);
+-}
+-
+ u_int32_t
+ arc4random(void)
+ {
