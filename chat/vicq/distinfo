@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/08/08 18:13:13 jlam Exp $
+$NetBSD: distinfo,v 1.8 2007/12/29 21:29:55 joerg Exp $
 
 SHA1 (vicq-0.4.1.tar.bz2) = 824f49adb0f17d3f8c1593517db80fed5c70353c
 RMD160 (vicq-0.4.1.tar.bz2) = 4c1e24baf2ae3aa8206eb9cd611ba6dfed9efce5
 Size (vicq-0.4.1.tar.bz2) = 54292 bytes
-SHA1 (patch-aa) = 66c5203a16013952584ed20b88be26f75c7dda0f
-SHA1 (patch-ab) = 92592ab9aa43d33546a6ab77ebd3a59d76366a7c
-SHA1 (patch-ac) = ef9fba66af10197d8975076c3caaf310c8549175
+SHA1 (patch-ab) = 7a9d24c8a1e07ccfd868480d6f5f204f92fa05c9
+SHA1 (patch-ac) = ddbb85f68eac90c54a881bd3098cae81f7492f04
