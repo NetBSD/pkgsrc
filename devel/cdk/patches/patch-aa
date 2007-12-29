@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/08/29 15:29:41 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2007/12/29 20:32:37 joerg Exp $
 
---- Makefile.in.orig	Fri Jul  9 01:24:13 1999
-+++ Makefile.in	Sun Aug 29 09:59:59 1999
+--- Makefile.in.orig	1999-07-09 05:24:13.000000000 +0000
++++ Makefile.in
 @@ -31,18 +31,21 @@
  #  SUCH DAMAGE.
  # 
@@ -28,18 +28,18 @@ $NetBSD: patch-aa,v 1.3 1999/08/29 15:29:41 jlam Exp $
  
  default:: cdklib
  
-@@ -76,8 +79,8 @@
+@@ -76,8 +79,8 @@ CDKOBJS		= $(CDKSRC:.c=.o)
  # Standard library directive.
  #
  cdklib $(CDKLIB): $(CDKOBJS)
 -	$(AR) -cr $(CDKLIB) $(CDKOBJS)
 -	$(RANLIB) $(CDKLIB)
 +	${LIBTOOL} --mode=link @CC@ -o ${CDKLIB} ${CDKOBJS:.o=.lo} \
-+		-rpath ${LIB_DIR} -version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
++		-rpath ${LIB_DIR} -version-info ${SHLIB_MAJOR}:${SHLIB_MINOR} -lm
  
  #
  # Make the examples directory.
-@@ -114,9 +117,12 @@
+@@ -114,9 +117,12 @@ installCDKHeaderFiles::
  #
  installCDKReadme::
  	@echo "Installing CDK Readme files..."
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.3 1999/08/29 15:29:41 jlam Exp $
  	done
  
  #
-@@ -127,8 +133,8 @@
+@@ -127,8 +133,8 @@ installCDKLibrary::
  	@if [ ! -d $(LIB_DIR) ]; then \
  	   mkdir $(LIB_DIR); \
  	fi
