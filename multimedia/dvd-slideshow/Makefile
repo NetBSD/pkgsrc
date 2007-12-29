@@ -1,21 +1,26 @@
-# $NetBSD: Makefile,v 1.1 2007/12/28 20:30:47 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/29 15:47:27 joerg Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
+PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=${PORTNAME}/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://dvd-slideshow.sourceforge.net/
 COMMENT=	Script that creates a slideshow-style DVD with some simple menus
 
-DEPENDS +=	cdrtools:../../sysutils/cdrtools
-DEPENDS +=	sox:../../audio/sox
-DEPENDS +=	dvdauthor:../../multimedia/dvdauthor
-DEPENDS +=	dvd+rw-tools:../../sysutils/dvd+rw-tools
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_X11BASE=yes
-USE_TOOLS += bash
+DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
+DEPENDS+=	lame-[0-9]*:../../audio/lame
+DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
+DEPENDS+=	sox-[0-9]*:../../audio/sox
+DEPENDS+=	dvdauthor-[0-9]*:../../multimedia/dvdauthor
+DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
+
+USE_X11BASE=	yes
+USE_TOOLS+=	bash:run
 NO_BUILD=	yes
 SCRIPTS=	dvd-slideshow dvd-menu dir2slideshow gallery1-to-slideshow \
 			jigl2slideshow
@@ -29,36 +34,24 @@ REPLACE_BASH =	dir2slideshow dvd-burn dvd-encode dvd-iso dvd-menu \
 				dvd-slideshow dvd-slideshow.orig gallery1-to-slideshow \
 				install.sh jigl2slideshow
 
-.include "../../mk/bsd.prefs.mk"
-
-.if exists(${LOCALBASE}/bin/lame)
-DEPENDS+=	lame:../../audio/lame
-.endif
-.if exists(${LOCALBASE}/bin/oggdec)
-DEPENDS +=	vorbis-tools:../../audio/vorbis-tools
-.endif
-
 SUBST_CLASSES+=     	fonts
-SUBST_STAGE.fonts=  	post-install
+SUBST_STAGE.fonts=  	post-build
 SUBST_FILES.fonts=  	dvd-menu dvd-slideshow
 SUBST_SED.fonts= 	   -e 's,/usr/share/fonts/,${X11BASE}/lib/X11/fonts/,g'
 SUBST_MESSAGE.fonts=    Fixing hardcoded fonts paths.
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR}
+
 do-install:
 .for file in ${SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/bin
 .endfor
-
-	@${ECHO_MSG} "Installing man files."
 .for file in ${MAN1}
-	${INSTALL_MAN} ${WRKSRC}/man/${file} ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/${file} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
-
-	@${ECHO_MSG} "Installing doc files."
-	${MKDIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/dvd-slideshowrc ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/dvd-slideshowrc ${DESTDIR}${DOCDIR}
 .for file in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DESTDIR}${DOCDIR}
 .endfor
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
