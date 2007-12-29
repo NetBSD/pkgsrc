@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/02 12:20:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/29 19:57:43 joerg Exp $
 #
 
 DISTNAME=	nelma-3.0
@@ -16,5 +16,6 @@ USE_TOOLS+=	pkg-config
 
 
 .include "../../devel/confuse/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
