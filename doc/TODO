@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6934 2007/12/29 10:18:34 wiz Exp $
+$NetBSD: TODO,v 1.6935 2007/12/29 19:50:14 abs Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,6 @@ Suggested package updates
 	o alee-ttf-11.2
 	o algae-4.3.6
 	o aliados-0.2.0
-	o alpine-1.0
 	o amanda-2.5.2p1
 	o amanda-client-2.5.0
 	o amanda-common-2.5.0
