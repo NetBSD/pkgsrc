@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2002/05/07 15:41:38 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2007/12/29 21:29:55 joerg Exp $
 
---- vicq.orig	Mon Apr 15 18:55:17 2002
-+++ vicq
+--- ../../vicq.orig	Mon Apr 15 18:55:17 2002
++++ ../../vicq
 @@ -2010,7 +2010,7 @@
  		$config{log_path} = expand_file($config{log_path});
  		$config{log_path}.='/' unless $config{log_path}=~/\/$/;
