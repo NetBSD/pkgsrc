@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/12/29 15:47:27 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/29 22:37:54 darcy Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 
@@ -35,12 +35,16 @@ REPLACE_BASH =	dir2slideshow dvd-burn dvd-encode dvd-iso dvd-menu \
 				install.sh jigl2slideshow
 
 SUBST_CLASSES+=     	fonts
-SUBST_STAGE.fonts=  	post-build
+SUBST_STAGE.fonts=  	post-configure
 SUBST_FILES.fonts=  	dvd-menu dvd-slideshow
 SUBST_SED.fonts= 	   -e 's,/usr/share/fonts/,${X11BASE}/lib/X11/fonts/,g'
 SUBST_MESSAGE.fonts=    Fixing hardcoded fonts paths.
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR}
+SUBST_CLASSES+=			pipeline
+SUBST_STAGE.pipeline=	post-configure
+SUBST_FILES.pipeline=	dvd-slideshow
+SUBST_SED.pipeline=		-e 's/print0/printx/g;s/sort -z/sort/g;s/xargs -0/xargs/g'
+SUBST_MESSAGE.pipeline=	Fixing Linux centric pipeline.
 
 do-install:
 .for file in ${SCRIPTS}
