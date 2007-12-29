@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2007/08/30 14:12:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/29 10:13:08 wiz Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
 PKGNAME=	cddbd-1.3.1p1
 PKGREVISION=	1
 CATEGORIES=	audio net
-MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/cddbd-1.3.1/}
 
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	cddbd-1.3.1.patch1.gz
