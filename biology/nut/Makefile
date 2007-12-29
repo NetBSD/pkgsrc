@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:48 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2007/12/29 10:17:46 wiz Exp $
 
 DISTNAME=	nut-10.18
 PKGREVISION=	1
 CATEGORIES=	biology
-MASTER_SITES=	http://www.lafn.org/~av832/
+MASTER_SITES=	# ${MASTER_SITE_SOURCEFORGE:=nut/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.lafn.org/~av832/
+HOMEPAGE=	http://nut.sourceforge.net/
 COMMENT=	Record what you eat and analyze your meals
 
 BUILD_TARGET=	nut
