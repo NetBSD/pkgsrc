@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/12/01 23:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2007/12/29 22:05:15 joerg Exp $
 #
 
 DISTNAME=		freesci-0.3.5
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www-plan.cs.colorado.edu/reichenb/freesci/
 
@@ -12,8 +13,14 @@ COMMENT=		Interpreter for Sierra On-Line's SCI games
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		wish:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-ggi --without-directfb
+
+REPLACE_INTERPRETER+=	wish
+REPLACE.wish.old=	.*/bin/wish
+REPLACE.wish.new=	${PREFIX}/bin/wish
+REPLACE_FILES.wish=	conf/freesci-setup
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/freesci
