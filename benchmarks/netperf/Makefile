@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2007/11/17 13:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/29 10:14:50 wiz Exp $
 #
 
 DISTNAME=	netperf-2.3pl1
 PKGNAME=	netperf-2.3.1
 CATEGORIES=	benchmarks
-MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/
+MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/archive/ \
+		ftp://ftp.netperf.org/netperf/archive/ \
+		ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/ \
+		ftp://ftp.netperf.org/netperf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netperf.org/
