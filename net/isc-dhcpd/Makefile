@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/12/13 02:54:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/29 01:06:53 adrianp Exp $
 #
 
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Server
 COMPONENT=	server
+PKGREVISION=	1
 SUBDIR=		omapip dhcpctl server
 
 CONF_FILES+=	${EGDIR}/dhcpd.conf ${PKG_SYSCONFDIR}/dhcpd.conf

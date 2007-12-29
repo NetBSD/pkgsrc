@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 20:04:29 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/29 01:06:53 adrianp Exp $
 bin/omshell
+include/dhcpctl.h
 lib/libdhcpctl.a
 lib/libomapi.a
 man/man1/omshell.1
