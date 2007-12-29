@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6932 2007/12/27 10:11:21 wiz Exp $
+$NetBSD: TODO,v 1.6933 2007/12/29 09:27:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -268,6 +268,7 @@ Suggested package updates
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
+	o a2ps-4.14
 	o aap-0.144
 	o abcm2ps-5.7.0
 	o abcmidi-20071209
@@ -344,6 +345,7 @@ Suggested package updates
 	o avrdude-5.3.1
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
+	o bacula-2.2.7
 	o bacula-doc-2.0.3
 	o balance-3.35
 	o balsa-2.4.16
@@ -564,7 +566,7 @@ Suggested package updates
 	o glproto-1.4.9
 	o gmime-2.2.12
 	o gmpc-0.15.1
-	o gnash-0.8.1
+	o gnash-0.8.1 [pkg/37639]
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.2.0
@@ -669,7 +671,7 @@ Suggested package updates
 	o intercal-0.24
 	o intltool-0.37.0
 	o iozone-3.283
-	o ipa-2.0.5
+	o ipa-2.0.5 [pkg/37630]
 	o ipcalc-0.41
 	o ircservices-5.1.10
 	o irrd-2.3.4 [pkg/36813]
@@ -829,7 +831,7 @@ Suggested package updates
 	o mowitz-0.3.1
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.0.0
+	o mpg123-1.0.1
 	o mpich-1.2.7p1
 	o mpop-1.0.12
 	o mserv-devel-0.41
@@ -880,6 +882,7 @@ Suggested package updates
 	o objc-3.2.8
 	o ocamlnet-2.2.4
 	o ocrad-0.17
+	o octave-3.0.0
 	o odbc-postgresql-8.2.3
 	o ogre-0.12.3
 	o olvwm-4.5
@@ -1132,7 +1135,7 @@ Suggested package updates
 	o radiance-3.7.2
 	o radmind-1.11.0
 	o rails-2.0.2 [import as rails2?]
-	o raine-0.50.5
+	o raine-0.50.6
 	o randread-0.2
 	o raptor-1.4.16
 	o rat-4.2.25
@@ -1288,6 +1291,7 @@ Suggested package updates
 	o vfu-4.03
 	o vicq-0.4.2
 	o vifm-0.3a
+	o vile-9.6
 	o vino-2.20.1
 	o visual-regexp-3.1
 	o vlc-0.8.6d
@@ -1320,7 +1324,7 @@ Suggested package updates
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9c
 	o wxGTK-2.8.6
-	o wxRemind-0.9.13
+	o wxRemind-11
 	o wyrd-1.4.3
 	o x264-devel-20071201
 	o xalan-c-1.10.0
