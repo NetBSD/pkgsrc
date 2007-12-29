@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6933 2007/12/29 09:27:06 wiz Exp $
+$NetBSD: TODO,v 1.6934 2007/12/29 10:18:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -595,6 +595,7 @@ Suggested package updates
 	o gourmet-0.13.3
 	o gpaint-0.3.3
 	o gperiodic-2.0.10
+	o gplcver-2.12a
 	o gpredict-0.9.0
 	o gpsdrive-2.09
 	o gq-1.2.2
@@ -851,7 +852,7 @@ Suggested package updates
 	o neon-0.27.2
 	o nessus-3.0.4
 	o netcdf-3.6.2
-	o netperf-2.4.1
+	o netperf-2.4.4
 	o netpipe-3.6.2
 	o netqmail-1.06
 	o netramet-50
@@ -1381,7 +1382,7 @@ Suggested package updates
 	o xpdf-3.02pl2
 	o xpp-1.5
 	o xproto-7.0.11
-	o xpuyopuyo-0.9.5
+	o xpuyopuyo-0.9.8
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
