@@ -1,8 +1,8 @@
-$NetBSD: patch-bj,v 1.1 2007/12/26 14:02:35 smb Exp $
+$NetBSD: patch-bj,v 1.2 2007/12/29 16:15:55 joerg Exp $
 
---- src/file_convert.c.orig	2007-12-25 00:38:17.000000000 -0500
-+++ src/file_convert.c	2007-12-25 00:38:47.000000000 -0500
-@@ -216,7 +216,7 @@
+--- src/file_convert.c.orig	2007-12-18 04:37:43.000000000 +0000
++++ src/file_convert.c
+@@ -216,7 +216,7 @@ struct _ConvTrack
      gchar *fname_root;      /* filename root of converted file          */
      gchar *fname_extension; /* filename extension of converted file     */
      GPid  pid;              /* PID of child doing the conversion        */
@@ -11,7 +11,19 @@ $NetBSD: patch-bj,v 1.1 2007/12/26 14:02:35 smb Exp $
      Track *track;           /* for reference, don't access inside threads! */
      iTunesDB *itdb;         /* for reference, don't access inside threads! */
      gint  threadnum;        /* number of thread working on this track   */
-@@ -2308,7 +2308,7 @@
+@@ -647,7 +647,11 @@ static void conversion_prefs_changed (Co
+     conv->max_threads_num = prefs_get_int (FILE_CONVERT_MAX_THREADS_NUM);
+     if (conv->max_threads_num == 0)
+     {   /* set to maximum available number of processors */
++#ifdef __DragonFly__
++	conv->max_threads_num = 1;
++#else
+ 	conv->max_threads_num = sysconf (_SC_NPROCESSORS_ONLN);
++#endif
+ 	/* paranoia mode on */
+ 	if (conv->max_threads_num <= 0)
+ 	{
+@@ -2308,7 +2312,7 @@ static gboolean conversion_convert_track
  				  &ctr->pid,    /* child's PID    */
  				  NULL,         /* child's stdin  */
  				  NULL,         /* child's stdout */
@@ -20,7 +32,7 @@ $NetBSD: patch-bj,v 1.1 2007/12/26 14:02:35 smb Exp $
  				  &error);
  
  	    child_pid = ctr->pid;
-@@ -2334,7 +2334,7 @@
+@@ -2334,7 +2338,7 @@ static gboolean conversion_convert_track
  		gint status;
  
  		/* set up i/o channel to main thread */
