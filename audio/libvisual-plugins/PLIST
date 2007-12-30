@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/03 23:36:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/30 17:57:19 joerg Exp $
 lib/libvisual-0.4/actor/actor_JESS.la
 lib/libvisual-0.4/actor/actor_bumpscope.la
 lib/libvisual-0.4/actor/actor_corona.la
@@ -267,6 +267,8 @@ share/libvisual-plugins-0.4/actor/actor_gforce/GForceWaveShapes/Wave
 share/libvisual-plugins-0.4/actor/actor_gforce/GForceWaveShapes/Zoomed_Square
 share/libvisual-plugins-0.4/actor/actor_madspin/star1.bmp
 share/libvisual-plugins-0.4/actor/actor_madspin/star2.bmp
+share/locale/es_AR/LC_MESSAGES/libvisual-plugins-0.4.mo
+share/locale/es_ES/LC_MESSAGES/libvisual-plugins-0.4.mo
 @dirrm share/libvisual-plugins-0.4/actor/actor_madspin
 @dirrm share/libvisual-plugins-0.4/actor/actor_gforce/GForceWaveShapes
 @dirrm share/libvisual-plugins-0.4/actor/actor_gforce/GForceParticles
