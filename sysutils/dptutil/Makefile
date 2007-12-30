@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/18 16:04:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/30 13:35:44 obache Exp $
 
 DISTNAME=		raidmgt-3.31
 PKGNAME=		dptutil-3.31
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 USE_LANGUAGES=		c++
 USE_TOOLS+=		makedepend
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	sbin
 
 post-patch:
 	${SED}	-e "s,@SBINDIR@,${PREFIX}/sbin,g"			\
