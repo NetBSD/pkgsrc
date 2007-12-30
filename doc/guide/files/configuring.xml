@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.30 2007/10/17 14:08:02 kano Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.31 2007/12/30 22:54:39 darcy Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -360,6 +360,11 @@ LDFLAGS+=        -your -linkerflags
 PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </screen>
+
+    <para>It is important to note that options that were specifically
+    suggested by the package maintainer must be explicitely removed if
+    you do not wish to include the option.  If you are unsure you can view
+    the current state with <command>make show-options</command>.</para>
 
     <para>The following settings are consulted in the order given, and
     the last setting that selects or disables an option is
