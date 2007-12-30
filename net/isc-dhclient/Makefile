@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/12/13 02:54:49 taca Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/30 12:30:53 adrianp Exp $
 #
 
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Client
 COMPONENT=	client
+PKGREVISION=	1
 SUBDIR=		client
 
 CONF_FILES+=	${EGDIR}/dhclient.conf ${PKG_SYSCONFDIR}/dhclient.conf

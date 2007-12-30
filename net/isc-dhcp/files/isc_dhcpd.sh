@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcpd.sh,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+# $NetBSD: isc_dhcpd.sh,v 1.2 2007/12/30 12:30:52 adrianp Exp $
 #
 
 # PROVIDE: dhcpd
@@ -12,10 +12,10 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 name="dhcpd"
-rcvar="isc_dhcpd"
+rcvar="isc_${name}"
 command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/isc-dhcp/${name}.pid"
-required_files="@PKG_SYSCONFDIR@/${name}.conf @DHCP_HOME@/${name}.leases"
+pidfile="@VARBASE@/run/isc-dhcp/isc-${name}.pid"
+required_files="@PKG_SYSCONFDIR@/${name}.conf"
 start_precmd="isc_dhcpd_precmd"
 
 isc_dhcpd_precmd()
@@ -26,10 +26,11 @@ isc_dhcpd_precmd()
 	fi
 
 	if [ ! -f @DHCP_HOME@/dhcpd.leases ]; then
+		@MKDIR@ @DHCP_HOME@
 		@TOUCH@ @DHCP_HOME@/dhcpd.leases
 		@CHMOD@ 0640 @DHCP_HOME@/dhcpd.leases
 	fi
 }
 
-load_rc_config $name
+load_rc_config $rcvar
 run_rc_command "$1"
