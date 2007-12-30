@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2716 2007/12/30 18:28:51 mlelstv Exp $
+$NetBSD: CHANGES-2007,v 1.2717 2007/12/30 18:42:01 mlelstv Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4919,3 +4919,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated security/ssh-ip-tunnel to 1.0nb1 [obache 2007-12-30]
 	Updated mail/mew to 5.2nb1 [cjep 2007-12-30]
 	Updated sysutils/memtest86 to 3.4 [mlelstv 2007-12-30]
+	Updated sysutils/memtestplus to 1.70 [mlelstv 2007-12-30]
