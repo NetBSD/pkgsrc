@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.103 2007/12/21 03:12:34 taca Exp $
+# $NetBSD: Makefile,v 1.104 2007/12/30 13:42:29 heinz Exp $
 #
 
 DISTNAME=		sudo-1.6.9p10
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
-			ftp://ftp.cs.colorado.edu/pub/sudo/ \
-			ftp://ftp.uu.net/pub/security/sudo/ \
-			ftp://ftp.tux.org/pub/security/sudo/ \
+			ftp://ftp.uwsg.indiana.edu/pub/security/sudo/ \
+			ftp://ftp.twaren.net/Unix/Security/Sudo/ \
+			http://ftp.tux.org/pub/security/sudo/ \
+			http://netmirror.org/mirror/ftp.sudo.ws/ \
 			http://www.courtesan.com/sudo/dist/OLD/ \
 			http://www.courtesan.com/sudo/dist/beta/
 DIST_SUBDIR=		${DISTNAME}-20071205
