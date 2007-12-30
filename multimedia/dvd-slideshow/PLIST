@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/12/28 20:30:47 darcy Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/30 14:17:37 joerg Exp $
 bin/dir2slideshow
 bin/dvd-menu
 bin/dvd-slideshow
@@ -9,3 +9,11 @@ man/man1/dvd-menu.1
 man/man1/dvd-slideshow.1
 man/man1/gallery1-to-slideshow.1
 man/man1/jigl2slideshow.1
+share/doc/dvd-slideshow/changelog.html
+share/doc/dvd-slideshow/dir2slideshow.html
+share/doc/dvd-slideshow/dvd-menu.html
+share/doc/dvd-slideshow/dvd-slideshow.html
+share/doc/dvd-slideshow/dvd-slideshowrc
+share/doc/dvd-slideshow/gallery1-to-slideshow.html
+share/doc/dvd-slideshow/jigl2slideshow.html
+@dirrm share/doc/dvd-slideshow

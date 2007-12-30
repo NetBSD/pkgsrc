@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/12/29 22:37:54 darcy Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/30 14:17:37 joerg Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvd-slideshow/}
 
@@ -46,6 +46,8 @@ SUBST_FILES.pipeline=	dvd-slideshow
 SUBST_SED.pipeline=		-e 's/print0/printx/g;s/sort -z/sort/g;s/xargs -0/xargs/g'
 SUBST_MESSAGE.pipeline=	Fixing Linux centric pipeline.
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/dvd-slideshow
+
 do-install:
 .for file in ${SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/bin
@@ -53,9 +55,9 @@ do-install:
 .for file in ${MAN1}
 	${INSTALL_MAN} ${WRKSRC}/man/${file} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/dvd-slideshowrc ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/dvd-slideshowrc ${DESTDIR}${PREFIX}/share/doc/dvd-slideshow
 .for file in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${DESTDIR}${PREFIX}/share/doc/dvd-slideshow
 .endfor
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
