@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/03/04 11:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/30 13:19:39 obache Exp $
 #
 
 DISTNAME=	depot-5.14
@@ -16,9 +16,11 @@ USE_TOOLS+=	lex yacc
 CONFIGURE_ENV+=	INSTALL="" CC=${CC:Q}
 MAKE_ENV+=	CC=${CC:Q}
 
-do-install:
-	cd ${WRKSRC}/src/cmd && ${MAKE} DESTDIR=${PREFIX} install
-	cd ${WRKSRC}/man/man1 && ${MAKE} MANDIR=${PREFIX}/${PKGMANDIR} install
-	cd ${WRKSRC}/man/man5 && ${MAKE} MANDIR=${PREFIX}/${PKGMANDIR} install
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
+INSTALL_DIRS=	src/cmd man/man1 man/man5
+
+INSTALL_MAKE_FLAGS+=	DESTDIR=${PREFIX}
+INSTALL_MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
