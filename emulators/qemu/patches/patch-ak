@@ -1,8 +1,21 @@
-$NetBSD: patch-ak,v 1.11 2007/12/18 00:16:56 joerg Exp $
+$NetBSD: patch-ak,v 1.12 2007/12/30 17:12:45 joerg Exp $
 
---- Makefile.orig	2007-02-06 00:01:54.000000000 +0100
+--- Makefile.orig	2007-02-05 23:01:54 +0000
 +++ Makefile
-@@ -66,21 +66,21 @@ ar      de     en-us  fi  fr-be  hr     
+@@ -27,10 +27,12 @@ endif
+ ifndef CONFIG_DARWIN
+ ifndef CONFIG_WIN32
+ ifndef CONFIG_SOLARIS
++ifndef CONFIG_DRAGONFLY
+ LIBS+=-lrt
+ endif
+ endif
+ endif
++endif
+ 
+ all: $(TOOLS) $(DOCS) recurse-all
+ 
+@@ -66,21 +68,21 @@ ar      de     en-us  fi  fr-be  hr     
  common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
  install-doc: $(DOCS)
