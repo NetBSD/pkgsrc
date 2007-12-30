@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2007/12/30 09:15:36 obache Exp $
+
+--- Makefile.in.orig	1999-02-22 07:22:29.000000000 +0000
++++ Makefile.in
+@@ -5,21 +5,16 @@ all: sbin/vpn.inst
+ 
+ 
+ sbin/vpn.inst:
+-	sed s,@CONFIGDIR@,$(PREFIX)/etc/vpn,g sbin/vpn > sbin/vpn.inst
++	sed s,@CONFIGDIR@,@sysconfdir@,g sbin/vpn > sbin/vpn.inst
+ 
+ # This would probably be a *little* nicer if I assumed a BSD install
+ install: sbin/vpn.inst
+-	mkdir -p $(PREFIX)/etc
+-	cp -r etc $(PREFIX)/etc/vpn
+-	chown root.wheel $(PREFIX)/etc/vpn
+-	chmod 750 $(PREFIX)/etc/vpn
+-	cp -r sbin/vpn.inst $(PREFIX)/sbin/vpn
+-	chown root.wheel $(PREFIX)/sbin/vpn
+-	chmod 750 $(PREFIX)/sbin/vpn
+-	mkdir -p $(PREFIX)/man/man8
+-	chmod 755 $(PREFIX)/man $(PREFIX)/man/man8
+-	cp man/vpn.8 $(PREFIX)/man/man8
+-	chmod 644 $(PREFIX)/man/man8/vpn.8
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(PREFIX)/share/examples/vpn
++	cd etc && pax -wr * $(DESTDIR)$(PREFIX)/share/examples/vpn
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)$(PREFIX)/sbin
++	${BSD_INSTALL_SCRIPT} sbin/vpn.inst $(DESTDIR)$(PREFIX)/sbin/vpn
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)@mandir@/man8
++	${BSD_INSTALL_MAN} man/vpn.8 $(DESTDIR)@mandir@/man8
+ 
+ clean:
+ 	rm -f sbin/vpn.inst

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:54 zuntum Exp $
-sbin/vpn
-etc/vpn/peers/sample.peer
-etc/vpn/global.conf
+@comment $NetBSD: PLIST,v 1.2 2007/12/30 09:15:36 obache Exp $
 man/man8/vpn.8
-@unexec /bin/rm -rf %D/etc/vpn/peers
-@dirrm etc/vpn
+sbin/vpn
+share/examples/vpn/global.conf
+share/examples/vpn/peers/sample.peer
+@dirrm share/examples/vpn/peers
+@dirrm share/examples/vpn
