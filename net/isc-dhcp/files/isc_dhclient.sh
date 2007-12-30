@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhclient.sh,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+# $NetBSD: isc_dhclient.sh,v 1.2 2007/12/30 12:30:52 adrianp Exp $
 #
 
 # PROVIDE: dhclient
@@ -16,9 +16,9 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 name="dhclient"
-rcvar="isc_dhclient"
+rcvar="isc_${name}"
 command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/isc-dhcp/${name}.pid"
+pidfile="@VARBASE@/run/isc-dhcp/dhclient.pid"
 start_precmd="isc_dhclient_precmd"
 
 isc_dhclient_precmd()
@@ -29,5 +29,5 @@ isc_dhclient_precmd()
 	fi
 }
 
-load_rc_config $name
+load_rc_config $rcvar
 run_rc_command "$1"
