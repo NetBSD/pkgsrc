@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/05/04 10:13:12 hira Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/30 09:37:23 hira Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,6 +9,10 @@ PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-battery-plugin/
 COMMENT=	Xfce battey monitor plugin
+
+.if ${OPSYS} == "NetBSD" && !exists(/usr/include/machine/apmvar.h)
+PKG_FAIL_REASON+=	"APM is not available on ${MACHINE_PLATFORM}."
+.endif
 
 USE_TOOLS+=	perl:run
 
