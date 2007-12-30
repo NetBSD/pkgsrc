@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 19:27:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/30 18:40:52 mlelstv Exp $
 #
 
-DISTNAME=		memtest86+-1.65
-PKGNAME=		memtestplus-1.65
-PKGREVISION=		3
+DISTNAME=		memtest86+-1.70
+PKGNAME=		memtestplus-1.70
+PKGREVISION=
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.memtest.org/download/1.65/
+MASTER_SITES=		http://www.memtest.org/download/1.70/
 
 MAINTAINER=		smb@NetBSD.org
 HOMEPAGE=		http://www.memtest.org/
@@ -30,7 +30,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtestplus
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/memtestplus
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/memtestplus
-.if !empty(PKG_OPTIONS:Mmemtesplus-iso)
+.if !empty(PKG_OPTIONS:Miso)
 	${INSTALL_DATA} ${WRKSRC}/memtest.iso ${PREFIX}/mdec/memtestplus.iso
 .endif
 
