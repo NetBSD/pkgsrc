@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/06 20:16:16 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/30 17:15:25 joerg Exp $
 #
 
 DISTNAME=	gelemental-1.2.0
@@ -12,7 +12,7 @@ COMMENT=	Periodic table viewer
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_LANGUAGES=	c++
 USE_DIRS+=	xdg-1.1
 
