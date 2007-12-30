@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6935 2007/12/29 19:50:14 abs Exp $
+$NetBSD: TODO,v 1.6936 2007/12/30 15:30:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -444,6 +444,7 @@ Suggested package updates
 	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
+	o dovecot-1.0.10
 	o doxygen-1.5.4
 	o dpkg-1.13.25
 	o drscheme-371
