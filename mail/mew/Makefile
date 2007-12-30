@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2007/02/20 12:41:53 uebayasi Exp $
+# $NetBSD: Makefile,v 1.74 2007/12/30 16:24:54 cjep Exp $
 
 DISTNAME=	mew-5.2
+PKGREVISION=	1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
@@ -23,14 +24,20 @@ MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
 MAKE_FLAGS+=	prefix=${PREFIX:Q}
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/mew
-MAKE_FLAGS+=	etcdir=${PREFIX}/share/mew
+MAKE_FLAGS+=	etcdir=${EMACS_ETCPREFIX}/mew
 MAKE_FLAGS+=	infodir=${EMACS_INFOPREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
+CONFIGURE_ARGS+=	--with-etcdir=${EMACS_ETCPREFIX}/mew
 
 SUBST_CLASSES+=		local
 SUBST_STAGE.local=	post-configure
 SUBST_FILES.local=	Makefile bin/configure info/Makefile
 SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'
+
+post-configure:
+	${MV} ${WRKSRC}/mew-key.el ${WRKSRC}/mew-key.el.1
+	${SED} -e 's|@ICONDIR@|${EMACS_ETCPREFIX}/mew|g' \
+		${WRKSRC}/mew-key.el.1 > ${WRKSRC}/mew-key.el
 
 post-install:
 	${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
