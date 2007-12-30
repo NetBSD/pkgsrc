@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2007/12/12 04:21:45 bjs Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/12/30 13:34:19 joerg Exp $
 #
 
 DISTNAME=	git-${GIT_VERSION}
@@ -21,7 +21,7 @@ DISTINFO_FILE=	${.CURDIR}/../scmgit-base/distinfo
 
 MAKE_ENV+=	HOME=${PREFIX:Q}
 USE_TOOLS+=	gmake tar perl sh
-EXTRACT_USING?=	gtar
+EXTRACT_USING=	gtar
 
 MAKE_ENV+=	PERL_PATH=${PERL5:Q}
 MAKE_ENV+=	SHELL_PATH=${SH:Q}
