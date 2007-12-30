@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2007/10/27 13:03:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2007/12/30 17:55:11 joerg Exp $
 
 SHA1 (kazehakase-0.4.9.tar.gz) = 8f0e4c3a8f9c4565a9f03b483247896ee1cd880c
 RMD160 (kazehakase-0.4.9.tar.gz) = a37c5dd081f2faf535ffdbf031e3d320bf15aef7
 Size (kazehakase-0.4.9.tar.gz) = 1364165 bytes
+SHA1 (patch-aa) = ea47af38299092d0772830f347ecf202b7762aec
 SHA1 (patch-ab) = 7e0a07503f8c9db3af5ba03b1e0c8671fa965404
 SHA1 (patch-ad) = bd35a10ac9142cb9792639790ae61cd07d5dfce6
 SHA1 (patch-af) = 22e7e43cd8285daa25d918a88656eb7b5c9e7202
