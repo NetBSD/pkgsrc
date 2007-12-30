@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2713 2007/12/30 01:08:27 abs Exp $
+$NetBSD: CHANGES-2007,v 1.2714 2007/12/30 09:15:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4916,3 +4916,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/wbm-apache to 1.370nb2 [obache 2007-12-28]
 	Added multimedia/dvd-slideshow 0.7.5 [darcy 2007-12-28]
 	Updated mail/alpine to 1.00 [abs 2007-12-30]
+	Updated security/ssh-ip-tunnel to 1.0nb1 [obache 2007-12-30]
