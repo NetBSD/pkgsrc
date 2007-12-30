@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2007/04/13 06:47:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.49 2007/12/30 14:21:00 obache Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
 PKGREVISION=	3
 CATEGORIES=	editors
-MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
-		${MASTER_SITE_SOURCEFORGE:=nedit/} \
-		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
-		ftp://ftp.nl.nedit.org/pub/mirror/NEdit/v${VERS:S/./_/g}/
+MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/} \
+		${MASTER_SITE_SOURCEFORGE:=nedit/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +15,13 @@ COMMENT=	Motif based standard GUI style text editor
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERS=		5.5
+MASTER_SITE_NEDIT=	http://www.nedit.org/ftp/			\
+			http://nl.nedit.org/ftp/			\
+			ftp://nl.nedit.org/pub/NEdit/			\
+			ftp://ftp.fu-berlin.de/unix/editors/nedit/	\
+			http://gd.tuwien.ac.at/editors/nedit/NEdit/	\
+			ftp://cri.univ-tlse1.fr/pub/unix/nedit/NEdit/	\
+			ftp://ftp.chg.ru/pub/unix/editors/nedit/
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=		netbsd
