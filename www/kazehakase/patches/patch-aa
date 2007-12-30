@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2007/12/30 17:55:11 joerg Exp $
+
+--- configure.orig	2007-12-30 15:35:54.000000000 +0000
++++ configure
+@@ -31084,7 +31084,6 @@ done
+ sed \
+   -i'' \
+   -e "s/EXTRA_DISTFILES = /EXTRA_DISTFILES = rgettext.mk.in /
+-      s/^itlocaledir = /itlocaledir = \$(datadir)\/locale\n#itlocaledir = /
+       /	\$(GENPOT)/r po/rgettext.mk
+      " \
+   po/Makefile
