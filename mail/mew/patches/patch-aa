@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2007/12/30 16:24:54 cjep Exp $
+
+--- mew-key.el.orig	2007-01-04 06:49:11.000000000 +0000
++++ mew-key.el
+@@ -618,7 +618,7 @@
+ 	    (throw 'loop (expand-file-name "etc" (car path)))
+ 	  (setq path (cdr path)))))))
+ 
+-(defvar mew-icon-directory (mew-which-mew-etc))
++(defvar mew-icon-directory "@ICONDIR@")
+ 
+ (defvar mew-icon-separate nil)
+ (defvar mew-icon-blank nil)
