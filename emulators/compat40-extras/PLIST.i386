@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2007/12/31 20:06:40 jlam Exp $
+${EMULSUBDIRSLASH}lib/libm387.so
+${EMULSUBDIRSLASH}lib/libm387.so.0
+${EMULSUBDIRSLASH}lib/libm387.so.0.1
+${EMULSUBDIRSLASH}usr/lib/libi386.so
+${EMULSUBDIRSLASH}usr/lib/libi386.so.1
+${EMULSUBDIRSLASH}usr/lib/libi386.so.1.0
+${EMULSUBDIRSLASH}usr/lib/libm387.so
+${EMULSUBDIRSLASH}usr/lib/libm387.so.0
+${EMULSUBDIRSLASH}usr/lib/libm387.so.0.1
+${EMULSUBDIRSLASH}usr/lib/libpmc.so
+${EMULSUBDIRSLASH}usr/lib/libpmc.so.0
+${EMULSUBDIRSLASH}usr/lib/libpmc.so.0.0
