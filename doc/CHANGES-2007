@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2720 2007/12/31 02:52:21 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2721 2007/12/31 05:42:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4923,3 +4923,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated graphics/ruby-RMagick to 1.15.12 [obache 2007-12-31]
 	Updated sysutils/i2ocfg to 1.1 [obache 2007-12-31]
 	Updated sysutils/isapnptools to 1.27 [obache 2007-12-31]
+	Updated net/netatalk1 to 1.6.4anb4 [taca 2007-12-31]
