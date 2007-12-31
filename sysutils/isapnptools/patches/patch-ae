@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/07/23 12:07:45 agc Exp $
---- include/config.h.in	Fri Apr 27 13:51:05 2001
-+++ include/config.h.in	Mon Jul 22 07:48:39 2002
-@@ -142,6 +142,9 @@
- /* Define if you have the <unistd.h> header file.  */
- #undef HAVE_UNISTD_H
+$NetBSD: patch-ae,v 1.2 2007/12/31 02:51:56 obache Exp $
+--- include/config.h.in.orig	2007-03-24 17:11:35.000000000 +0000
++++ include/config.h.in
+@@ -154,6 +154,9 @@
+ /* Define to 1 if you have the `_sleep2' function. */
+ #undef HAVE__SLEEP2
  
-+/* Define if you have the i386 library (-li386).  */
++/* Define if you have the i386 library (-li386). */
 +#undef HAVE_LIBI386
 +
  /* Name of package */
