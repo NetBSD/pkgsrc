@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2718 2007/12/31 00:08:40 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2719 2007/12/31 02:07:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4921,3 +4921,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/memtest86 to 3.4 [mlelstv 2007-12-30]
 	Updated sysutils/memtestplus to 1.70 [mlelstv 2007-12-30]
 	Updated graphics/ruby-RMagick to 1.15.12 [obache 2007-12-31]
+	Updated sysutils/i2ocfg to 1.1 [obache 2007-12-31]
