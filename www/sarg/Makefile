@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/08/04 18:11:46 ben Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/31 06:53:17 obache Exp $
 
 DISTNAME=		sarg-2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
@@ -75,7 +75,7 @@ CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGLNG}/Portuguese ${CFLNG}/Portuguese		\
 			${EGLNG}/Romanian ${CFLNG}/Romanian		\
 			${EGLNG}/Russian_koi8 ${CFLNG}/Russian_koi8	\
-			${EGLNG}/Russian_UTF8 ${CFLNG}/Russian_UTF8	\
+			${EGLNG}/Russian_UTF-8 ${CFLNG}/Russian_UTF-8	\
 			${EGLNG}/Russian_windows1251			\
 				${CFLNG}/Russian_windows1251		\
 			${EGLNG}/Serbian ${CFLNG}/Serbian		\
