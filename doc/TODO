@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6937 2007/12/31 00:11:06 obache Exp $
+$NetBSD: TODO,v 1.6938 2007/12/31 00:17:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -571,13 +571,14 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
-	o gnome-mag-1.14.10
+	o gnome-mag-0.15.0
 	o gnome-media-2.20.1
 	o gnome-speech-0.4.17
 	o gnome-spell-1.0.8
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.2
+	o gnumeric-1.8.0
 	o gnumeric-current-1.7.91
 	o gnupg-1.4.8
 	o gnupg2-2.0.8
@@ -741,6 +742,7 @@ Suggested package updates
 	o libcares-1.5.1
 	o libcdio-0.79
 	o libchewing-0.3.0
+	o libconfig-1.2.1
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
@@ -908,6 +910,7 @@ Suggested package updates
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.85
 	o p5-Apache-Test-1.30
+	o p5-Archive-Tar-1.38
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
@@ -931,6 +934,7 @@ Suggested package updates
 	o p5-Device-Gsm-1.48
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
+	o p5-Error-0.17011
 	o p5-File-Flat-1.02
 	o p5-File-Temp-0.20
 	o p5-Filter-1.33
@@ -957,6 +961,7 @@ Suggested package updates
 	o p5-Math-Random-0.69
 	o p5-Module-Refresh-0.13
 	o p5-Net-Amazon-S3-0.38
+	o p5-Net-DNS-0.62
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-ICQ2000-0.2.2
@@ -1316,7 +1321,7 @@ Suggested package updates
 	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.51
+	o wine-0.9.52
 	o wmii-3.6
 	o wml-2.0.11
 	o wmweather-2.4.4
@@ -1327,7 +1332,7 @@ Suggested package updates
 	o wxGTK-2.8.6
 	o wxRemind-11
 	o wyrd-1.4.3
-	o x264-devel-20071201
+	o x264-devel-20071229.2245
 	o xalan-c-1.10.0
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
