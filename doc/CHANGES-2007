@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2723 2007/12/31 07:05:16 obache Exp $
+$NetBSD: CHANGES-2007,v 1.2724 2007/12/31 09:22:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/netatalk1 to 1.6.4anb4 [taca 2007-12-31]
 	Updated www/sarg to 2.1nb3 [obache 2007-12-31]
 	Updated www/screws to 0.56nb4 [obache 2007-12-31]
+	Updated net/netatalk to 2.0.3nb6 [taca 2007-12-31]
