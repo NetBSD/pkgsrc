@@ -1,6 +1,6 @@
-$NetBSD: patch-bt,v 1.3 2007/05/22 12:17:49 spz Exp $
+$NetBSD: patch-bt,v 1.4 2007/12/31 09:15:15 spz Exp $
 
---- src/RtConfig/command.y.orig	2004-07-30 12:58:11.000000000 +0200
+--- src/RtConfig/command.y.orig	2007-02-09 20:46:31.000000000 +0100
 +++ src/RtConfig/command.y
 @@ -56,7 +56,11 @@
  
@@ -14,3 +14,12 @@ $NetBSD: patch-bt,v 1.3 2007/05/22 12:17:49 spz Exp $
  #include <cstring>
  #include <cstdlib>
  #include <cctype>
+@@ -383,6 +387,8 @@ cisco_access_list_no_line: KW_SET KW_CIS
+       pktFilterMgr.setNextID($4);
+       aspathMgr.setNextID($4);
+       prefixMgr.setNextID($4);
++      ipv6prefixMgr.setNextID($4);
++      ipv6pktFilterMgr.setNextID($4);
+    }
+    Trace(TR_INPUT) << "RtConfig: cisco_pktfilter_access_list_no '"
+ 		   << $4 << "'" << std::endl;
