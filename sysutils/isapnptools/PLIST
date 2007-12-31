@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/23 12:07:45 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/31 02:10:53 obache Exp $
 include/isapnp/callbacks.h
 include/isapnp/errcodes.h
 include/isapnp/errenum.h
@@ -11,9 +11,9 @@ include/isapnp/release.h
 include/isapnp/res-access.h
 include/isapnp/resource.h
 lib/libisapnp.a
-sbin/isapnp
-sbin/pnpdump
 man/man5/isapnp.conf.5
 man/man8/isapnp.8
 man/man8/pnpdump.8
+sbin/isapnp
+sbin/pnpdump
 @dirrm include/isapnp
