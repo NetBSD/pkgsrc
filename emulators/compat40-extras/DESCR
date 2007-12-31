@@ -1,0 +1,4 @@
+This package supplies the extra user files needed to run dynamically
+linked executables compiled under NetBSD 4.0, including user files
+that might be found in NetBSD versions beyond 4.0 that are missing
+from the pkgsrc/emulators/compat40 package.

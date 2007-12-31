@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2007/12/31 20:06:41 jlam Exp $
+
+SHA1 (20071230/compat40-extras-i386-4.0.tar.bz2) = 03c8aae8d7d437365a0077c341dbf887c7283277
+RMD160 (20071230/compat40-extras-i386-4.0.tar.bz2) = fdf7a452de100d6aaa897f1c7baefbb6e16623b4
+Size (20071230/compat40-extras-i386-4.0.tar.bz2) = 5622349 bytes
+SHA1 (20071230/compat40-extras-sparc-4.0.tar.bz2) = 54e405dd211003e18fd69babac28ddb0bc2a239f
+RMD160 (20071230/compat40-extras-sparc-4.0.tar.bz2) = fe23addd36370c81e68515774a44e2d240238fdc
+Size (20071230/compat40-extras-sparc-4.0.tar.bz2) = 5928204 bytes
