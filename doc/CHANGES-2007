@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2721 2007/12/31 05:42:33 taca Exp $
+$NetBSD: CHANGES-2007,v 1.2722 2007/12/31 06:53:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4924,3 +4924,4 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated sysutils/i2ocfg to 1.1 [obache 2007-12-31]
 	Updated sysutils/isapnptools to 1.27 [obache 2007-12-31]
 	Updated net/netatalk1 to 1.6.4anb4 [taca 2007-12-31]
+	Updated www/sarg to 2.1nb3 [obache 2007-12-31]
