@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2007/12/02 11:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/31 05:41:36 taca Exp $
 
 DISTNAME=	netatalk-1.6.4a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
+
+DEPENDS=	rc>=1.5:../../shells/rc
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake perl:run
@@ -51,6 +53,11 @@ SUBST_FILES.paths+=	${WRKSRC}/etc/psf/etc2ps.sh
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_STAGE.paths=	pre-configure
 
+SUBST_CLASSES+=		rc
+SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
+SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_STAGE.rc=		pre-configure
+
 .include "options.mk"
 
 pre-install:
@@ -66,5 +73,4 @@ pre-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../devel/rx/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
