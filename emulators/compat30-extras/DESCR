@@ -1,4 +1,4 @@
 This package supplies the extra user files needed to run dynamically
-linked executables compiled under NetBSD 2.0, including user files
-that might be found in NetBSD versions beyond 2.0 that are missing
-from the pkgsrc/emulators/compat20 package.
+linked executables compiled under NetBSD 3.0, including user files
+that might be found in NetBSD versions beyond 3.0 that are missing
+from the pkgsrc/emulators/compat30 package.
