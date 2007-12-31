@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/12 13:53:46 obache Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/31 12:23:41 obache Exp $
 
---- Makefile.orig	2007-03-12 00:44:08.000000000 +0900
+--- Makefile.orig	2007-06-10 14:32:44.000000000 +0000
 +++ Makefile
-@@ -2,19 +2,17 @@ TARGET=MeCab
+@@ -2,22 +2,20 @@ TARGET=MeCab
  JAVAC=javac
  JAVA=java
  JAR=jar
@@ -22,7 +22,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/05/12 13:53:46 obache Exp $
 +	$(CXX) $(LDFLAGS) -shared  $(TARGET)_wrap.o -o lib$(TARGET).so $(LIBS)
  	$(JAVAC) $(PACKAGE)/*.java
 -	$(JAVAC) test.java
-+	$(JAVAC) -encoding EUC_JP test.java
  	$(JAR) cfv $(TARGET).jar $(PACKAGE)/*.class
  
  test:
++	$(JAVAC) -encoding EUC_JP test.java
+ 	env LD_LIBRARY_PATH=. $(JAVA) test
+ 
+ clean:
