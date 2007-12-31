@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/31 20:06:38 jlam Exp $
 
 COMPAT_PKG=		compat30	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		3.0
@@ -38,8 +38,7 @@ COMPAT_EXTRAS=	netbsd32_compat30-extras-${COMPAT_VERSION}{,nb*}:../../emulators/
 .  if !empty(COMPAT_EXTRAS)
 DEPENDS+=	${COMPAT_EXTRAS}
 .  else
-# XXX This package doesn't exist yet.
-#DEPENDS+=	netbsd32_compat40>=4.0:../../emulators/netbsd32_compat40
+DEPENDS+=	netbsd32_compat40>=4.0:../../emulators/netbsd32_compat40
 .  endif
 #
 # vax running NetBSD-4.x lacks any shared libraries, so depend on the
@@ -56,8 +55,7 @@ DEPENDS+=	compat30-extras-${COMPAT_VERSION}{,nb*}:../../emulators/compat30-extra
 .elif empty(OS_VERSION:M[0-3].*) && empty(OS_VERSION:M4.[0-9]) && \
       empty(OS_VERSION:M4.[0-9].*) && empty(OS_VERSION:M4.[1-8][0-9].*) && \
       empty(OS_VERSION:M4.9[0-8]*)
-# XXX This package doesn't exist yet.
-#DEPENDS+=	compat40>=4.0:../../emulators/compat40
+DEPENDS+=	compat40>=4.0:../../emulators/compat40
 .endif
 
 .include "../../mk/bsd.pkg.mk"
