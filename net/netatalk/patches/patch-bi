@@ -1,0 +1,10 @@
+$NetBSD: patch-bi,v 1.1 2007/12/31 09:22:07 taca Exp $
+
+--- bin/afile/acleandir.rc.orig	2000-08-09 00:46:33.000000000 +0900
++++ bin/afile/acleandir.rc
+@@ -1,4 +1,4 @@
+-#! /usr/bin/rc
++#! @PREFIX@/bin/rc
+ #
+ # acleandir  [-rvnid] dir 
+ #

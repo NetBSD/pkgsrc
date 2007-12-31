@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2007/06/08 12:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2007/12/31 09:22:07 taca Exp $
 
 DISTNAME=	netatalk-2.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
 COMMENT=	Netatalk appletalk file and print services
+
+DEPENDS=	rc>=1.5:../../shells/rc
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake perl:run
@@ -55,6 +57,11 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"
 SUBST_SED.paths+=	-e "s,\(NETBSD.*\)/etc/rc.d,\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
+
+SUBST_CLASSES+=		rc
+SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
+SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_STAGE.rc=		pre-configure
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups kerberos pam slp
@@ -106,5 +113,4 @@ post-install:
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
