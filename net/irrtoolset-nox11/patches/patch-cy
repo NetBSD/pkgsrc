@@ -1,4 +1,4 @@
-$NetBSD: patch-cy,v 1.1 2007/09/07 21:26:32 spz Exp $
+$NetBSD: patch-cy,v 1.2 2007/12/31 09:15:15 spz Exp $
 
 --- src/irr/irr.hh.orig	2006-06-08 17:16:26.000000000 +0200
 +++ src/irr/irr.hh
@@ -10,3 +10,13 @@ $NetBSD: patch-cy,v 1.1 2007/09/07 21:26:32 spz Exp $
  #include "classes.hh"
  
  class AutNum;
+@@ -192,6 +193,9 @@ protected:
+    bool         isIndirectMember(Object *o, 
+ 			   AttrGenericIterator<ItemWORD> &mbrs_by_ref);
+ 
++   // next method is used by RAWhoisClient to query the SetCache
++   bool queryCache(SymID setID, Set *&set);
++
+ private:
+    static void initCache(char *objectText, int objectLength, char *clss);
+ };
