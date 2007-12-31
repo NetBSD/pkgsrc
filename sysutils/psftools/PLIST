@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/19 04:58:15 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/31 23:38:29 bjs Exp $
 bin/cpi2psf
 bin/cpicomp
 bin/cpidcomp
@@ -8,12 +8,14 @@ bin/fon2fnts
 bin/mda2psf
 bin/page2cp2
 bin/psf2bdf
+bin/psf2bsd
 bin/psf2fnt
 bin/psf2inc
 bin/psf2pbms
 bin/psf2raw
 bin/psf2txt
 bin/psf2wof
+bin/psf2wyse
 bin/psf2xbm
 bin/psf2zx
 bin/psfjoin
@@ -24,6 +26,7 @@ bin/psfxform
 bin/raw2psf
 bin/txt2psf
 bin/wof2psf
+bin/wyse2psf
 bin/zx2psf
 include/psflib.h
 include/psfutils.h
@@ -36,12 +39,14 @@ man/man1/fnts2fon.1
 man/man1/fon2fnts.1
 man/man1/mda2psf.1
 man/man1/psf2bdf.1
+man/man1/psf2bsd.1
 man/man1/psf2fnt.1
 man/man1/psf2inc.1
 man/man1/psf2pbms.1
 man/man1/psf2raw.1
 man/man1/psf2txt.1
 man/man1/psf2wof.1
+man/man1/psf2wyse.1
 man/man1/psf2xbm.1
 man/man1/psf2zx.1
 man/man1/psfjoin.1
@@ -52,4 +57,5 @@ man/man1/psfxform.1
 man/man1/raw2psf.1
 man/man1/txt2psf.1
 man/man1/wof2psf.1
+man/man1/wyse2psf.1
 man/man1/zx2psf.1
