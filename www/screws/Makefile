@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/07/04 20:55:05 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2007/12/31 07:05:00 obache Exp $
 #
 
 DISTNAME=	screws-0.56
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/screws/
 
@@ -21,7 +21,7 @@ PKG_GROUPS=	${SCREWS_GROUP}
 MAKE_ENV+=	ETCPREFIX=${PKG_SYSCONFDIR:Q}
 MAKE_ENV+=	PERL=${PERL5:Q}
 
-EGDIR=		${PREFIX}/share/examples
+EGDIR=		${PREFIX}/share/examples/screws
 CONF_FILES=	${EGDIR}/default.conf ${PKG_SYSCONFDIR}/screws.conf
 
 RCD_SCRIPTS=		screws
@@ -37,6 +37,8 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	Makefile
 SUBST_SED.man=		-e 's,PREFIX}/man,PREFIX}/${PKGMANDIR},g'
+
+BUILD_DEFS+=		VARBASE
 
 # The HSML files do not really contain a script interpreter, only
 # something very similar.
