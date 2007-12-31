@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2007/09/07 22:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2007/12/31 20:06:38 jlam Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -32,6 +32,8 @@ SUBDIR+=	compat20
 SUBDIR+=	compat20-extras
 SUBDIR+=	compat30
 SUBDIR+=	compat30-extras
+SUBDIR+=	compat40
+SUBDIR+=	compat40-extras
 #SUBDIR+=	compat_netbsd		# only contains Makefile fragments
 SUBDIR+=	cygwin_esound
 SUBDIR+=	cygwin_lib
@@ -79,6 +81,8 @@ SUBDIR+=	netbsd32_compat20
 SUBDIR+=	netbsd32_compat20-extras
 SUBDIR+=	netbsd32_compat30
 SUBDIR+=	netbsd32_compat30-extras
+SUBDIR+=	netbsd32_compat40
+SUBDIR+=	netbsd32_compat40-extras
 SUBDIR+=	openmsx
 SUBDIR+=	or1ksim
 SUBDIR+=	osf1_lib
