@@ -1,11 +1,11 @@
-#	$NetBSD: Makefile,v 1.2 2001/07/18 06:47:37 itojun Exp $
+#	$NetBSD: Makefile,v 1.3 2007/12/31 03:09:31 obache Exp $
 
 PROG=	lambd
 SRCS=	lambd.c lambio.c
 MAN=	lambd.8
 
 WARNS?=	2
-BINDIR?=	/sbin
+BINDIR=	${PREFIX}/sbin
 LDSTATIC=	-static
 
 LDADD+=	-li386
