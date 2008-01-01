@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1932 2007/12/19 12:32:06 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1933 2008/01/01 14:20:20 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -234,7 +234,11 @@ ALL_ENV+=	PREFIX=${PREFIX}
 # This variable can be added to MAKE_ENV to ease installation of packages
 # that use BSD-style Makefiles.
 BSD_MAKE_ENV=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+BSD_MAKE_ENV+=	GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
 BSD_MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
+BSD_MAKE_ENV+=	SHAREOWN=${SHAREOWN} SHAREGRP=${SHAREGRP}
+BSD_MAKE_ENV+=	DOCOWN=${DOCOWN} DOCGRP=${DOCGRP}
+BSD_MAKE_ENV+=	BINMODE=${BINMODE} NONBINMODE=${NONBINMODE}
 BSD_MAKE_ENV+=	BINDIR=${PREFIX}/bin
 BSD_MAKE_ENV+=	INCSDIR=${PREFIX}/include
 BSD_MAKE_ENV+=	LIBDIR=${PREFIX}/lib
