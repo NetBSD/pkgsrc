@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2003/03/14 01:26:41 uebayasi Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/01 19:54:27 cjep Exp $
 
---- lisp/un-define.el.orig	Tue Mar  6 14:41:38 2001
+--- lisp/un-define.el.orig	2001-03-06 22:41:38.000000000 +0000
 +++ lisp/un-define.el
 @@ -610,13 +610,21 @@ by calling post-read-conversion and pre-
  
@@ -26,8 +26,8 @@ $NetBSD: patch-aa,v 1.1 2003/03/14 01:26:41 uebayasi Exp $
 +	 (mucs-define-coding-system
 +	  (nth 0 y) (nth 1 y) (nth 2 y)
 +	  (nth 3 y) (nth 4 y) (nth 5 y) (nth 6 y))
-+	 (coding-system-put (car y) 'alias-coding-systems (list (car x)))))
-+      (cdr x)))
++	 (coding-system-put (car y) 'alias-coding-systems (list (car x))))
++      (cdr x))))
    `((utf-8
       (utf-8-unix
        ?u "UTF-8 coding system"
