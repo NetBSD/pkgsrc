@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/09/06 15:38:32 tron Exp $
+# $NetBSD: Makefile,v 1.53 2008/01/01 20:22:36 agc Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
@@ -150,6 +150,19 @@ REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol
 REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc
 REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages
 
+REPLACEMENTS.perl=	${PREFIX}/lib/xemacs/xemacs-packages/etc/bbdb/bbdb-areacode-split.pl
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/bbdb/bbdb-cid.pl
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/bbdb/bbdb-srv.pl
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/bbdb/bbdb-unlazy-lock.pl
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/erc/servers.pl
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/idlwave/idlwave_catalog
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/fonts/makesub
+REPLACEMENTS.perl+=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/hyperbole/file-newer
+
+REPLACEMENTS.zsh=	${PREFIX}/lib/xemacs/xemacs-packages/lisp/erc/mkChangeLog.upstream
+
+REPLACEMENT_PROGS=	perl zsh
+
 .include "../../editors/xemacs/Makefile.pkg"
 
 .if defined(MANZ)
@@ -203,6 +216,14 @@ do-install:
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
+.for PROG in ${REPLACEMENT_PROGS}
+	@${ECHO_MSG} "Fixing ${PROG} paths"
+	for f in ${REPLACEMENTS.${PROG}}; do 			\
+		cp $$f $$f.pre;					\
+		sed -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|' $$f.pre > $$f;\
+		rm $$f.pre;					\
+	done
+.endfor
 .if defined(MANZ)
 	@${ECHO_MSG} -n "Compressing \".el\" files ... "
 	@cd ${PREFIX} && \
