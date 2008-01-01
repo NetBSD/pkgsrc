@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.743 2008/01/01 13:44:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.744 2008/01/01 20:44:29 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5301,7 +5301,12 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 	} elsif ($type eq "Restricted") {
 		if ($value ne "\${RESTRICTED}") {
-			$line->log_warning("The only valid value for this variable is \${RESTRICTED}.");
+			$line->log_warning("The only valid value for ${varname} is \${RESTRICTED}.");
+			$line->explain_warning(
+
+"These variables are used to control which files may be mirrored on FTP",
+"servers or CD-ROM collections. They are not intended to mark packages",
+"whose only MASTER_SITES are on ftp.NetBSD.org.");
 		}
 
 	} elsif ($type eq "SVR4PkgName") {
