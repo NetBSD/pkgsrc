@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/31 07:37:46 obache Exp $
+# $NetBSD: Makefile,v 1.19 2008/01/01 14:27:40 obache Exp $
 #
 
 DISTNAME=	birda-1.3
@@ -9,9 +9,6 @@ MAINTAINER=	lennart@augustsson.net
 COMMENT=	Bohlin's IrDA utilities
 
 USE_BSD_MAKEFILE=	yes
-
-MAKE_ENV+=		BINMODE=${BINMODE}
-MAKE_ENV+=		MANMODE=${MANMODE}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
