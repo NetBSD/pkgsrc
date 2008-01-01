@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/31 06:39:41 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/01 14:23:44 obache Exp $
 #
 
 DISTNAME=	qsubst-20010422
@@ -13,9 +13,6 @@ USE_BSD_MAKEFILE=	yes
 WRKSRC=		${WRKDIR}/qsubst
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
-
-MAKE_ENV+=	BINMODE=${BINMODE}
-MAKE_ENV+=	MANMODE=${MANMODE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
