@@ -1,4 +1,5 @@
-$NetBSD: CHANGES-2008,v 1.1 2008/01/01 20:50:59 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.2 2008/01/01 20:51:33 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
+	Updated mail/dovecot to 1.0.10 [ghen 2008-01-01]
