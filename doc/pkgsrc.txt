@@ -2048,6 +2048,11 @@ PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec
 
+It is important to note that options that were specifically suggested by the
+package maintainer must be explicitely removed if you do not wish to include
+the option. If you are unsure you can view the current state with make
+show-options.
+
 The following settings are consulted in the order given, and the last setting
 that selects or disables an option is used:
 
@@ -3791,7 +3796,7 @@ After that, there should be a comment for each change that the patch does.
 There are a number of standard cases:
 
   * Patches that replace the == operator for test(1) with = in shell scripts
-    should contain a reference to , to avoid redundant explanations.
+    are so common that they don't need a comment at all.
 
   * Patches for commonly known vulnerabilities should mention the vulnerability
     ID (CAN, CVE).
@@ -5790,6 +5795,13 @@ be invoked by setting USE_IMAKE to "yes". (If you only want the package
 installed in ${X11PREFIX} but xmkmf not being run, set USE_X11BASE instead.)
 You can add variables to xmkmf's environment by adding them to the SCRIPTS_ENV
 variable.
+
+If the program uses cmake for configuration, the appropriate steps can be
+invoked by setting USE_CMAKE to "yes". You can add variables to cmake's
+environment by adding them to the CONFIGURE_ENV variable and arguments to cmake
+by adding them to the CMAKE_ARGS variable. The top directory argument is given
+by the CMAKE_ARG_PATH variable, that defaults to "." (relative to
+CONFIGURE_DIRS)
 
 If there is no configure step at all, set NO_CONFIGURE to "yes".
 
