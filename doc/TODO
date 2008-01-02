@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6940 2007/12/31 02:52:53 obache Exp $
+$NetBSD: TODO,v 1.6941 2008/01/02 18:48:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -896,7 +896,6 @@ Suggested package updates
 	o openmotif-2.3
 	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
-	o opera-9.25
 	o orca-2.20.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
