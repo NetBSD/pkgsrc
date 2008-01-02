@@ -562,14 +562,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&#8212; That means, if a package contains bugs, it's better to find
+&mdash; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&#8212; Like NetBSD has been ported to many hardware architectures,
+&mdash; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -2169,7 +2169,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2369,6 +2369,10 @@ LDFLAGS+=        -your -linkerflags
 PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </pre>
+<p>It is important to note that options that were specifically
+    suggested by the package maintainer must be explicitely removed if
+    you do not wish to include the option.  If you are unsure you can view
+    the current state with <span class="command"><strong>make show-options</strong></span>.</p>
 <p>The following settings are consulted in the order given, and
     the last setting that selects or disables an option is
     used:</p>
@@ -2786,7 +2790,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -4341,8 +4345,7 @@ converters    games         mbone         print         x11
 <div class="itemizedlist"><ul type="disc">
 <li><p>Patches that replace the <code class="literal">==</code>
   operator for <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?test+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">test</span>(1)</span></a> with <code class="literal">=</code> in shell scripts
-  should contain a reference to , to avoid
-  redundant explanations.</p></li>
+  are so common that they don't need a comment at all.</p></li>
 <li><p>Patches for commonly known vulnerabilities should
   mention the vulnerability ID (CAN, CVE).</p></li>
 <li><p>Patches that change source code should mention the
@@ -4425,7 +4428,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &#8212;
+      kqueue support, add a check that detects kqueue itself &mdash;
       yes, this generally involves patching the
       <span class="command"><strong>configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4796,7 +4799,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span class="command"><strong>.for</strong></span>
+<p>No rule without exception&mdash;the <span class="command"><strong>.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -6841,6 +6844,15 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <code class="varname">USE_X11BASE</code> instead.)  You can add variables to
     xmkmf's environment by adding them to the
     <code class="varname">SCRIPTS_ENV</code> variable.</p>
+<p>If the program uses <code class="filename">cmake</code>
+    for configuration, the appropriate steps can be invoked by
+    setting <code class="varname">USE_CMAKE</code> to &#8220;<span class="quote">yes</span>&#8221;.
+    You can add variables to cmake's environment by adding them to the
+    <code class="varname">CONFIGURE_ENV</code> variable and arguments to cmake
+    by adding them to the <code class="varname">CMAKE_ARGS</code> variable.
+    The top directory argument is given by the
+    <code class="varname">CMAKE_ARG_PATH</code> variable, that defaults to
+    &#8220;<span class="quote">.</span>&#8221; (relative to <code class="varname">CONFIGURE_DIRS</code>)</p>
 <p>If there is no configure step at all, set
     <code class="varname">NO_CONFIGURE</code> to &#8220;<span class="quote">yes</span>&#8221;.</p>
 </div>
@@ -7452,7 +7464,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2727525"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id2727593"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7462,7 +7474,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2727534"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id2727671"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7473,7 +7485,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2727545"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id2727682"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9474,7 +9486,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2733352"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id2733489"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9490,7 +9502,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2733390"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id2733527"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9508,7 +9520,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2733431"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id2733568"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9526,7 +9538,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2733470"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id2733607"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9539,7 +9551,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2733491"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id2733627"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9555,7 +9567,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2733521"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id2733657"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9579,7 +9591,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2733597"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id2733734"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9604,7 +9616,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2733636"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id2733772"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9652,7 +9664,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2733698"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id2733902"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9668,7 +9680,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &#8212; it contains a list of suggested new packages and a list of
+    &mdash; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10186,8 +10198,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>24.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
