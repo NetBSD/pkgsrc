@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.37 2007/08/15 06:33:44 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.38 2008/01/02 14:20:55 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -244,8 +244,7 @@ converters    games         mbone         print         x11
 
   <listitem><para>Patches that replace the <literal>==</literal>
   operator for &man.test.1; with <literal>=</literal> in shell scripts
-  should contain a reference to <!-- xref linkend="test-eqeq"/ -->, to avoid
-  redundant explanations.</para></listitem>
+  are so common that they don't need a comment at all.</para></listitem>
 
   <listitem><para>Patches for commonly known vulnerabilities should
   mention the vulnerability ID (CAN, CVE).</para></listitem>
