@@ -1,5 +1,6 @@
-$NetBSD: CHANGES-2008,v 1.2 2008/01/01 20:51:33 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.3 2008/01/02 18:48:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
 	Updated mail/dovecot to 1.0.10 [ghen 2008-01-01]
+	Updated www/opera to 9.25 [xtraeme 2008-01-02]
