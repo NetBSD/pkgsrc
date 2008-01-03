@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/06/30 01:44:55 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/01/03 23:18:07 heinz Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
@@ -13,26 +15,26 @@ CONFIGURE_ARGS+=	--without-posix-threads
 .endif
 
 post-install:
-		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/share/doc/cdrdao
 		${INSTALL_MAN} ${WRKSRC}/README \
 			${WRKSRC}/README.PlexDAE \
-			${PREFIX}/share/doc/cdrdao
-		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/cdrdao/testtocs
+			${DESTDIR}${PREFIX}/share/doc/cdrdao
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/share/doc/cdrdao/testtocs
 		${INSTALL_MAN} ${WRKSRC}/testtocs/*.toc \
-			${PREFIX}/share/doc/cdrdao/testtocs
-		${INSTALL_MAN_DIR} ${PREFIX}/share/examples/cdrdao
+			${DESTDIR}${PREFIX}/share/doc/cdrdao/testtocs
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/share/examples/cdrdao
 		${INSTALL_MAN} ${WRKSRC}/contrib/mp32dao/mp32dao.pl \
-			${PREFIX}/share/examples/cdrdao
-		${INSTALL_MAN_DIR} ${PREFIX}/share/examples/cdrdao/psxcopy
+			${DESTDIR}${PREFIX}/share/examples/cdrdao
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/share/examples/cdrdao/psxcopy
 		${INSTALL_MAN} ${WRKSRC}/contrib/psxcopy-0.2/Makefile \
 			${WRKSRC}/contrib/psxcopy-0.2/README \
 			${WRKSRC}/contrib/psxcopy-0.2/cdjob.c \
 			${WRKSRC}/contrib/psxcopy-0.2/psxdump.c \
 			${WRKSRC}/contrib/psxcopy-0.2/read-psx \
 			${WRKSRC}/contrib/psxcopy-0.2/write-psx \
-			${PREFIX}/share/examples/cdrdao/psxcopy
+			${DESTDIR}${PREFIX}/share/examples/cdrdao/psxcopy
 		${INSTALL_MAN} ${WRKSRC}/contrib/wav2dao/wav2dao.pl \
-			${PREFIX}/share/examples/cdrdao
+			${DESTDIR}${PREFIX}/share/examples/cdrdao
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2007/04/25 13:21:43 obache Exp $
+# $NetBSD: Makefile,v 1.59 2008/01/03 23:21:41 heinz Exp $
 #
 
 DISTNAME=	tcsh-6.15.00
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.tcsh.org/Welcome
 COMMENT=	Extended C-shell with many useful features
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS?=	static-tcsh-[0-9]*
 
@@ -29,16 +31,18 @@ LOWER_OPSYS=	solaris${OS_VER_cmd:sh}
 
 PKG_SHELL?=	bin/tcsh
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 post-install:
 	@${ECHO} "Installing message catalogues"
 	cp ${PKGDIR:Q}/PLIST ${PLIST_SRC:Q}
 	set -e;							\
 	if [ -f ${WRKSRC:Q}/tcsh.C.cat ];				\
 	then								\
-	    [ -d ${PREFIX:Q}/${NLSDIR:Q}/C ] ||				\
-		${INSTALL_DATA_DIR} ${PREFIX:Q}/${NLSDIR:Q}/C;		\
+	    [ -d ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C ] ||		\
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C;\
 	    ${INSTALL_DATA} ${WRKSRC:Q}/tcsh.C.cat 			\
-		${PREFIX}/${NLSDIR:Q}/C/tcsh.cat;			\
+		${DESTDIR}${PREFIX}/${NLSDIR:Q}/C/tcsh.cat;		\
 	    ${ECHO} ${NLSDIR:Q}/C/tcsh.cat >> ${PLIST_SRC:Q};		\
 	    for i in 							\
 		et:ISO_8859-15:et:EE					\
@@ -65,16 +69,16 @@ post-install:
 		while [ $$# -gt 0 ];					\
 		do							\
 		    d=${NLSDIR:Q}/$${c}_$$1.$${s};			\
-		    [ -d ${PREFIX}/$$d ] ||				\
-			${INSTALL_DATA_DIR} ${PREFIX}/$$d;		\
+		    [ -d ${DESTDIR}${PREFIX}/$$d ] ||			\
+			${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/$$d;	\
 		    if [ -z "$$o" ];					\
 		    then						\
 			o="$$d";					\
 			${INSTALL_DATA} ${WRKSRC}/tcsh.$${l}.cat	\
-			    ${PREFIX}/$${d}/tcsh.cat;			\
+			    ${DESTDIR}${PREFIX}/$${d}/tcsh.cat;		\
 		    else						\
-			${LN} -f ${PREFIX}/$${o}/tcsh.cat		\
-			    ${PREFIX}/$${d};				\
+			${LN} -f ${DESTDIR}${PREFIX}/$${o}/tcsh.cat	\
+			    ${DESTDIR}${PREFIX}/$${d};			\
 		    fi;							\
 		    ${ECHO} $${d}/tcsh.cat >> ${PLIST_SRC};		\
 		    shift 1;						\
