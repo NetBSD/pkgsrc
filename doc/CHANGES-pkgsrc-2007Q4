@@ -1,5 +1,7 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.1 2008/01/03 16:16:58 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.2 2008/01/03 16:18:06 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
 
+Pullup ticket 2255 - requested by joerg
+build fix for erlang
