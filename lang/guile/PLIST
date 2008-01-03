@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/06/12 03:02:33 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/01/03 13:30:26 gdt Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -258,6 +258,8 @@ share/guile/1.8/srfi/srfi-2.scm
 share/guile/1.8/srfi/srfi-26.scm
 share/guile/1.8/srfi/srfi-31.scm
 share/guile/1.8/srfi/srfi-34.scm
+share/guile/1.8/srfi/srfi-35.scm
+share/guile/1.8/srfi/srfi-37.scm
 share/guile/1.8/srfi/srfi-39.scm
 share/guile/1.8/srfi/srfi-4.scm
 share/guile/1.8/srfi/srfi-6.scm
