@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2007/11/26 11:23:21 obache Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/01/03 12:50:52 obache Exp $
 
 DISTNAME=	hyperestraier-${HYPERESTRAIER_VERSION}
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hyperestraier/}		\
 		http://hyperestraier.sourceforge.net/
-HYPERESTRAIER_VERSION=1.4.12
+HYPERESTRAIER_VERSION=1.4.13
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://hyperestraier.sourceforge.net/
