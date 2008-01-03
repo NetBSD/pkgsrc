@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2007/12/28 01:00:10 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2008/01/03 13:30:25 gdt Exp $
 
-DISTNAME=		guile-1.8.2
-PKGREVISION=		1
+DISTNAME=		guile-1.8.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -16,14 +15,17 @@ USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
+
+# XXX Make this conditional on the problematic systems.
 # couldn't figure out how to work around an error on solaris-2.9/sparc with gcc when
 # compiling ${WRKSRC}/libguile/filesys.c.  The warning is that readdir64_r was missing
 # a prototype.
 CONFIGURE_ARGS+=	--disable-error-on-warning
-#CONFIGURE_ARGS+=	--without-threads
-TEST_DIRS=		${WRKSRC}
+
+TEST_DIRS=		.
 TEST_TARGET=		check
+
 OWN_DIRS=		${PREFIX}/share/guile/site
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,8 +41,8 @@ OWN_DIRS=		${PREFIX}/share/guile/site
 # http://lists.gnu.org/archive/html/guile-user/2006-11/msg00035.html
 post-patch:
 	${TOUCH} ${WRKSRC}/libguile/scmconfig.h
-	echo "(define-module (ice-9 slib))" > ${WRKSRC}/ice-9/slib.scm
-	echo "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm
+	${ECHO} "(define-module (ice-9 slib))" > ${WRKSRC}/ice-9/slib.scm
+	${ECHO} "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	ac_cv_type_complex_double=no
@@ -49,10 +51,15 @@ CONFIGURE_ARGS+=	ac_cv_type_complex_double=no
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=		-Dmacosx
 
+# Darwin does not use -rpath, so back out the patch that adds it.  It
+# is not clear that guile works properly if directories with modules
+# are not in LTDL_LIBRARY_PATH or LD_LIBRARY_PATH.  See the following
+# PRs:
+#   http://www.NetBSD.org/cgi-bin/query-pr-single.pl?number=33665
+#   http://www.NetBSD.org/cgi-bin/query-pr-single.pl?number=36975
 post-patch:
-	@${MV} ${WRKSRC}/guile-config/guile-config.in.orig \
+	${MV} ${WRKSRC}/guile-config/guile-config.in.orig \
 	    ${WRKSRC}/guile-config/guile-config.in
-
 .endif
 
 .include "../../devel/gmp/buildlink3.mk"
