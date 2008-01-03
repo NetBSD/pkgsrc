@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.21 2008/01/03 23:36:34 grant Exp $
+$NetBSD: CHANGES-2008,v 1.22 2008/01/03 23:39:53 grant Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -25,3 +25,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/sylpheed to 2.4.8 [xtraeme 2008-01-03]
 	Updated comms/p5-Device-SerialPort to 1.04 [grant 2008-01-03]
 	Updated comms/p5-Device-Modem to 1.48 [grant 2008-01-03]
+	Updated comms/p5-Device-Gsm to 1.48 [grant 2008-01-03]
