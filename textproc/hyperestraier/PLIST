@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2007/11/26 11:23:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/01/03 12:50:53 obache Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -14,7 +14,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.37.0
+lib/libestraier.so.8.38.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estfraud.cgi
 libexec/estproxy.cgi
@@ -58,7 +58,9 @@ share/hyperestraier/doc/javanativeapi/index.html
 share/hyperestraier/doc/javanativeapi/overview-summary.html
 share/hyperestraier/doc/javanativeapi/overview-tree.html
 share/hyperestraier/doc/javanativeapi/package-list
+share/hyperestraier/doc/javanativeapi/packages.html
 share/hyperestraier/doc/javanativeapi/resources/inherit.gif
+share/hyperestraier/doc/javanativeapi/serialized-form.html
 share/hyperestraier/doc/javanativeapi/stylesheet.css
 share/hyperestraier/doc/javapureapi/allclasses-frame.html
 share/hyperestraier/doc/javapureapi/allclasses-noframe.html
@@ -77,6 +79,7 @@ share/hyperestraier/doc/javapureapi/index.html
 share/hyperestraier/doc/javapureapi/overview-summary.html
 share/hyperestraier/doc/javapureapi/overview-tree.html
 share/hyperestraier/doc/javapureapi/package-list
+share/hyperestraier/doc/javapureapi/packages.html
 share/hyperestraier/doc/javapureapi/resources/inherit.gif
 share/hyperestraier/doc/javapureapi/stylesheet.css
 share/hyperestraier/doc/logo.png
