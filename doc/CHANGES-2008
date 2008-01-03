@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.8 2008/01/03 12:53:24 obache Exp $
+$NetBSD: CHANGES-2008,v 1.9 2008/01/03 13:30:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -12,3 +12,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
 	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
+	Updated lang/guile to 1.8.3 [gdt 2008-01-03]
