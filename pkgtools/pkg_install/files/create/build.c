@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.4 2007/08/08 12:21:14 tnn Exp $	*/
+/*	$NetBSD: build.c,v 1.5 2008/01/03 22:31:20 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: build.c,v 1.4 2007/08/08 12:21:14 tnn Exp $");
+__RCSID("$NetBSD: build.c,v 1.5 2008/01/03 22:31:20 rillig Exp $");
 #endif
 #endif
 
@@ -217,7 +217,7 @@ write_normal_file(const char *name, struct archive *archive, const char *owner, 
 	case S_IFREG:
 		fd = open(name, O_RDONLY);
 		if (fd == -1)
-			errx(2, "cannot open data file %s: %s", name, archive_error_string(archive));
+			err(2, "cannot open data file %s", name);
 
 		len = st.st_size;
 
