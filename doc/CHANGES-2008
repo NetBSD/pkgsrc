@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.13 2008/01/03 17:43:23 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.14 2008/01/03 19:11:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated geography/py-proj to 1.8.3 [gdt 2008-01-03]
 	Updated geography/postgresql81-postgis to 1.3.2 [gdt 2008-01-03]
 	Added pkgtools/lintpkgsrc version 4.82 [rillig 2008-01-03]
+	Updated net/net-snmp to 5.4.1nb1 [seb 2008-01-03]
