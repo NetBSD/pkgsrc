@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.19 2008/01/03 22:39:31 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.20 2008/01/03 23:33:43 grant Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Getopt-Long-Descriptive version 0.06 [seb 2008-01-03]
 	Added devel/p5-App-Cmd version 0.012 [seb 2008-01-03]
 	Updated mail/sylpheed to 2.4.8 [xtraeme 2008-01-03]
+	Updated comms/p5-Device-SerialPort to 1.04 [grant 2008-01-03]
