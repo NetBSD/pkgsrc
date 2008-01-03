@@ -1,4 +1,4 @@
-# $NetBSD: check.mk,v 1.5 2007/08/04 11:21:08 adrianp Exp $
+# $NetBSD: check.mk,v 1.6 2008/01/03 20:51:21 adrianp Exp $
 #
 
 # _flavor-check-vulnerable:
@@ -17,7 +17,7 @@ _flavor-check-vulnerable: .PHONY
 			${PHASE_MSG} "Skipping vulnerability checks.";	\
 			${WARNING_MSG} "No $$vulnfile file found.";	\
 			${WARNING_MSG} "To fix, install the pkgsrc/security/audit-packages"; \
-			${WARNING_MSG} "package and run: \`\`${LOCALBASE}/sbin/download-vulnerability-list''."; \
+			${WARNING_MSG} "package and run: \`${DOWNLOAD_VULN_LIST}'."; \
 			exit 0;						\
 		fi;							\
 		${PHASE_MSG} "Checking for vulnerabilities in ${PKGNAME}"; \
@@ -48,16 +48,16 @@ _flavor-check-vulnerable: .PHONY
 			${FALSE};					\
 		fi;							\
 	else								\
-		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
+		_PKGVULNDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
 		vulnfile=$$_PKGVULNDIR/pkg-vulnerabilities;		\
 		if ${TEST} ! -f "$$vulnfile"; then 			\
 			${PHASE_MSG} "Skipping vulnerability checks.";	\
 			${WARNING_MSG} "No $$vulnfile file found.";	\
-			${WARNING_MSG} "To fix run: \`download-vulnerability-list'."; \
+			${WARNING_MSG} "To fix run: \`${DOWNLOAD_VULN_LIST}'."; \
 			exit 0;						\
 		fi;							\
 		${PHASE_MSG} "Checking for vulnerabilities in ${PKGNAME}"; \
-		audit-packages ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME};	\
+		${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME};	\
 		if ${TEST} "$$?" -ne 0; then				\
 			${ERROR_MSG} "Define ALLOW_VULNERABLE_PACKAGES in mk.conf or IGNORE_URLS in audit-packages.conf(5) if this package is absolutely essential."; \
 			${FALSE};					\
