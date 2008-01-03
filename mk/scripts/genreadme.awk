@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.29 2007/10/20 13:35:12 adrianp Exp $
+# $NetBSD: genreadme.awk,v 1.30 2008/01/03 20:51:22 adrianp Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -418,7 +418,7 @@ END {
 					 toppkg, pkg);
 				}
 
-				cmd = sprintf("audit-packages -n %s", pkg);
+				cmd = sprintf("%s -n %s", AUDIT_PACKAGES, pkg);
 				while (cmd | getline vuln_entry) {
 					split(vuln_entry, entry, " ");
 					vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",

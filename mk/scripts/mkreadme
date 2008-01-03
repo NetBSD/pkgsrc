@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.20 2007/10/20 13:35:12 adrianp Exp $
+# $NetBSD: mkreadme,v 1.21 2008/01/03 20:51:22 adrianp Exp $
 #
 # Script for README.html generation
 #
@@ -287,7 +287,7 @@ if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
     for v in CDROM_PKG_URL_HOST CDROM_PKG_URL_DIR DISTDIR \
 	FTP_PKG_URL_HOST FTP_PKG_URL_DIR PACKAGES PKG_INFO PKG_SUFX PKG_ADMIN \
-	AUDIT_PACKAGES_FLAGS PKGVULNDIR PKGTOOLS_VERSION
+	AUDIT_PACKAGES AUDIT_PACKAGES_FLAGS PKGTOOLS_VERSION
     do
 	val=`${BMAKE} show-var VARNAME=${v}`
 	if [ $? != 0 ]; then
@@ -308,9 +308,9 @@ fi
 #
 if [ "$pv" = "default" ]; then
     if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then
-        PVDIR=$PKGVULNDIR
+	PVDIR=`${BMAKE} show-var VARNAME=PKGVULNDIR`
     else
-	PVDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+	PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
     fi
 fi
 	echo "---->  PVDIR=\"${PVDIR}\""
@@ -436,6 +436,7 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     debug=$debug \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
     summary=${summary} \
+    AUDIT_PACKAGES=$AUDIT_PACKAGES \
     AWK=$AWK \
     CMP=$CMP \
     DISTDIR=$DISTDIR \
