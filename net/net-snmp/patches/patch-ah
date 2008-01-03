@@ -1,0 +1,48 @@
+$NetBSD: patch-ah,v 1.4 2008/01/03 19:10:10 seb Exp $
+
+--- agent/mibgroup/hardware/memory/memory_netbsd.c.orig	2006-03-06 16:23:52.000000000 +0000
++++ agent/mibgroup/hardware/memory/memory_netbsd.c
+@@ -4,6 +4,7 @@
+ #include <net-snmp/agent/hardware/memory.h>
+ 
+ #include <unistd.h>
++#include <errno.h>
+ #include <sys/sysctl.h>
+ #include <sys/swap.h>
+ 
+@@ -30,7 +31,7 @@ int netsnmp_mem_arch_load( netsnmp_cache
+     long           pagesize;
+ 
+     struct uvmexp  uvmexp;
+-    int            uvmexp_size  = sizeof(uvmexp);
++    size_t         uvmexp_size  = sizeof(uvmexp);
+     int            uvmexp_mib[] = { CTL_VM, VM_UVMEXP };
+ 
+     struct vmtotal total;
+@@ -46,10 +47,22 @@ int netsnmp_mem_arch_load( netsnmp_cache
+     /*
+      * Retrieve the memory information from the underlying O/S...
+      */
+-    sysctl(uvmexp_mib,   2, &uvmexp,   &uvmexp_size,   NULL, 0);
+-    sysctl(total_mib,    2, &total,    &total_size,    NULL, 0);
+-    sysctl(phys_mem_mib, 2, &phys_mem, &mem_size,      NULL, 0);
+-    sysctl(user_mem_mib, 2, &user_mem, &mem_size,      NULL, 0);
++    if (sysctl(uvmexp_mib,   2, &uvmexp,   &uvmexp_size,   NULL, 0) == -1) {
++        snmp_log(LOG_ERR, "sysctl VM_UVMEXP failed (errno %d)\n", errno);
++	return -1;
++    }
++    if (sysctl(total_mib,    2, &total,    &total_size,    NULL, 0) == -1) {
++        snmp_log(LOG_ERR, "sysctl VM_METER failed (errno %d)\n", errno);
++	return -1;
++    }
++    if (sysctl(phys_mem_mib, 2, &phys_mem, &mem_size,      NULL, 0) == -1) {
++        snmp_log(LOG_ERR, "sysctl HW_PHYSMEM failed (errno %d)\n", errno);
++	return -1;
++    }
++    if (sysctl(user_mem_mib, 2, &user_mem, &mem_size,      NULL, 0) == -1) {
++        snmp_log(LOG_ERR, "sysctl HW_USERMEM failed (errno %d)\n", errno);
++	return -1;
++    }
+     pagesize = uvmexp.pagesize;
+ 
+     /*
