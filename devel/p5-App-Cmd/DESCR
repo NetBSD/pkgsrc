@@ -1,0 +1,3 @@
+The Perl 5 module App::Cmd is intended to make it easy to write
+complex command-line applications without having to think about
+most of the annoying things usually involved.
