@@ -6,7 +6,7 @@
 #include <net-snmp/agent/net-snmp-agent-includes.h>
 #include <net-snmp/agent/hardware/cpu.h>
 
-#include <sys/types.h>
+#include <sys/param.h>
 #include <sys/vmmeter.h>
 #include <kinfo.h>
 #include <stdlib.h>
