@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/06/16 18:15:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2008/01/03 19:58:38 joerg Exp $
 #
 
 DISTNAME=	gxemul-0.4.6
@@ -10,20 +10,21 @@ HOMEPAGE=	http://gavare.se/gxemul/
 COMMENT=	Machine emulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 BUILD_TARGET=	build
 
-INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .for f in README HISTORY TODO RELEASE LICENSE
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
-	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${PREFIX}/share/doc/${PKGBASE}
+	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
 PKG_SUPPORTED_OPTIONS=	x11
