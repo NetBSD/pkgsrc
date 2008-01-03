@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.5 2008/01/03 13:34:37 gdt Exp $
+
+Fix parallel build failure by expressing dependencies.
+Filed upstream as http://bugzilla.mplayerhq.hu/show_bug.cgi?id=967
+
+--- vidix/Makefile.orig	2007-10-07 15:49:27.000000000 -0400
++++ vidix/Makefile
+@@ -40,13 +40,13 @@ dep depend:: pci_names.c
+ 
+ include ../mpcommon.mak
+ 
+-mga_crtc2_vid.o: mga_vid.c
++mga_crtc2_vid.o: mga_vid.c pci_ids.h
+ 	$(CC) -c $(CFLAGS) -DCRTC2 -o $@ $<
+ 
+-rage128_vid.o: radeon_vid.c
++rage128_vid.o: radeon_vid.c pci_ids.h
+ 	$(CC) -c $(CFLAGS) -DRAGE128 -o $@ $<
+ 
+-pci_names.c pci_dev_ids.c: pci.db
++pci_vendors.h pci_ids.h pci_names.c pci_names.h pci_dev_ids.c: pci.db
+ 	LC_ALL=C awk -f pci_db2c.awk $<
+ 
+ clean::
