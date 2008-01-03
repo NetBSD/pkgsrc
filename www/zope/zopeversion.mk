@@ -1,4 +1,4 @@
-# $NetBSD: zopeversion.mk,v 1.1.1.1 2007/12/18 15:27:23 taca Exp $
+# $NetBSD: zopeversion.mk,v 1.2 2008/01/03 12:31:13 taca Exp $
 #
 
 .if !defined(_ZOPEVERSION_MK)
@@ -32,7 +32,8 @@ _ZOPEVERSION_MK=	# defined
 #	Known Zope release which we support.
 #
 # ZOPE_PKG
-#	Short name for each Zope major release; zope29, zope210, zope33.
+#	Short name for each Zope major release; zope29, zope210 and
+#	hopefully zope33.
 #
 # ZOPE_USE_PYPKGPREFIX
 #	Bool variable which enable prefix Zope based package with
@@ -49,7 +50,7 @@ _ZOPEVERSION_MK=	# defined
 #
 #
 
-ZOPE_VERSION_SUPPORTED=	29 210 33
+ZOPE_VERSION_SUPPORTED=	29 210 # 33
 
 ZOPE_VERSION_DEFAULT?=	29
 ZOPE_VERSION_ACCEPTED?=	${ZOPE_VERSION_SUPPORTED}
