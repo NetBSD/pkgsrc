@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/01/18 09:42:14 rillig Exp $
+# $NetBSD: Makefile,v 1.76 2008/01/03 23:18:39 heinz Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -18,6 +18,7 @@ COMMENT=	The GNU Bourne Again Shell
 
 CONFLICTS=	static-bash-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_GNU_READLINE=	yes
@@ -62,7 +63,7 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=4.3
 .include "../../devel/readline/buildlink3.mk"
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
