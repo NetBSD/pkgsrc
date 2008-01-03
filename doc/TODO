@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6944 2008/01/03 13:47:06 obache Exp $
+$NetBSD: TODO,v 1.6945 2008/01/03 13:52:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -640,6 +640,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hdf-4.2r2
 	o heimdal-1.0.1 [pkg/37010]
+	o hevea-1.10
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
