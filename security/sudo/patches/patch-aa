@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2007/10/28 02:05:44 taca Exp $
+$NetBSD: patch-aa,v 1.17 2008/01/03 23:17:48 rillig Exp $
 
 --- Makefile.in.orig	2007-10-26 00:52:02.000000000 +0900
 +++ Makefile.in
@@ -27,12 +27,12 @@ $NetBSD: patch-aa,v 1.16 2007/10/28 02:05:44 taca Exp $
  
  install-binaries: $(PROGS)
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4511 -s sudo $(DESTDIR)$(sudodir)/sudo
  	rm -f $(DESTDIR)$(sudodir)/sudoedit
  	ln $(DESTDIR)$(sudodir)/sudo $(DESTDIR)$(sudodir)/sudoedit
  
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0511 -s visudo $(DESTDIR)$(visudodir)/visudo
  
  install-noexec: sudo_noexec.la
  	$(LIBTOOL) --mode=install $(INSTALL) sudo_noexec.la $(DESTDIR)$(noexecdir)
