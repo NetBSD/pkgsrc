@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/07/04 20:55:04 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2008/01/03 12:37:06 adrianp Exp $
 #
 
 DISTNAME=	awstats-6.6
@@ -22,6 +22,7 @@ REPLACE_PERL+=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
