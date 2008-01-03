@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.18 2008/01/03 21:16:51 seb Exp $
+$NetBSD: CHANGES-2008,v 1.19 2008/01/03 22:39:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -22,3 +22,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/bochs to 2.3.6 [xtraeme 2008-01-03]
 	Added devel/p5-Getopt-Long-Descriptive version 0.06 [seb 2008-01-03]
 	Added devel/p5-App-Cmd version 0.012 [seb 2008-01-03]
+	Updated mail/sylpheed to 2.4.8 [xtraeme 2008-01-03]
