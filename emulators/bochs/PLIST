@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/12/04 17:37:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/03 21:03:45 xtraeme Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -8,6 +8,7 @@ man/man1/bxcommit.1
 man/man1/bximage.1
 man/man5/bochsrc.5
 share/bochs/BIOS-bochs-latest
+share/bochs/BIOS-bochs-legacy
 share/bochs/VGABIOS-elpin-2.40
 share/bochs/VGABIOS-elpin-LICENSE
 share/bochs/VGABIOS-lgpl-README
