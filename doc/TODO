@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6945 2008/01/03 13:52:16 obache Exp $
+$NetBSD: TODO,v 1.6946 2008/01/03 21:04:55 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,6 @@ Suggested package updates
 	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.3.6 [xtraeme, waiting for the freeze]
 	o bonnie++-1.03b
 	o bos-2.0.1
 	o boson-0.13
