@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2006/11/12 01:45:19 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/03 14:05:38 obache Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
-MASTER_SITES=	http://userpage.fu-berlin.de/~mbayer/tools/
+MASTER_SITES=	http://www.mbayer.de/html2text/downloads/	\
+		${MASTER_SITE_SUNSITE:=apps/www/converters/}
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://userpage.fu-berlin.de/~mbayer/tools/html2text.html
+HOMEPAGE=	http://www.mbayer.de/html2text/
 COMMENT=	Advanced HTML-to-text converter
 
 USE_LANGUAGES=		c c++
