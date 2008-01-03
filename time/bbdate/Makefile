@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/03 14:37:03 obache Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
 PKGREVISION=	1
 CATEGORIES=	time
-MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	jschauma@NetBSD.org
-HOMEPAGE=	http://bbtools.windsofstorm.net/available.phtml#bbdate
+HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=3
 COMMENT=	Display the current date
 
 GNU_CONFIGURE=	YES
