@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/12/11 00:21:20 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/03 12:32:34 obache Exp $
 #
 
-DISTNAME=		libupnp-1.6.2
+DISTNAME=		libupnp-1.6.3
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-documentation
 
 PKGCONFIG_OVERRIDE+=	libupnp.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-lcompat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
