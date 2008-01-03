@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.744 2008/01/01 20:44:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.745 2008/01/03 16:16:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1824,6 +1824,7 @@ my $is_internal;		# Is the current item from the infrastructure?
 my $ipc_distinfo;		# Maps "$alg:$fname" => "checksum".
 
 # Context of the package that is currently checked.
+my $pkgpath;			# The relative path to the package within PKGSRC.
 my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
@@ -2859,6 +2860,22 @@ sub resolve_relative_path($$) {
 
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "resolve_relative_path: $arg => $relpath");
 	return $relpath;
+}
+
+# Takes two pathnames and returns the relative pathname to get from
+# the first to the second.
+sub relative_path($$) {
+	my ($from, $to) = @_;
+
+	my $abs_from = Cwd::abs_path($from);
+	my $abs_to = Cwd::abs_path($to);
+	if ($abs_to =~ qr"^\Q$abs_from/\E(.*)$") {
+		return $1;
+	} elsif ($abs_to eq $abs_from) {
+		return ".";
+	} else {
+		assert(false, "$abs_from is not a prefix of $abs_to");
+	}
 }
 
 sub expand_variable($$) {
@@ -8113,12 +8130,14 @@ sub checkitem($) {
 	# Determine the root directory of pkgsrc. By only overwriting
 	# the global variable $cwd_pkgsrcdir when we are checking inside
 	# a pkgsrc tree, the user can specify a tree with the
-	# --pkgsrcdir option and then check files outside of any pkgsrc
-	# tree.
+	# --pkgsrcdir option and then check files (but not directories)
+	# outside of any pkgsrc tree.
 	$cur_pkgsrcdir = undef;
+	$pkgpath = undef;
 	foreach my $d (".", "..", "../..", "../../..") {
 		if (-f "${current_dir}/${d}/mk/bsd.pkg.mk") {
 			$cur_pkgsrcdir = $d;
+			$pkgpath = relative_path("${current_dir}/${d}", $current_dir);
 		}
 	}
 	if (!defined($cwd_pkgsrcdir) && defined($cur_pkgsrcdir)) {
