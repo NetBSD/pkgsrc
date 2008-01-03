@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2007/09/25 10:07:05 hira Exp $
+# $NetBSD: Makefile,v 1.51 2008/01/03 21:03:45 xtraeme Exp $
 
-DISTNAME=		bochs-2.3
+DISTNAME=		bochs-2.3.6
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -12,6 +12,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_TOOLS+=		gunzip gzip
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 ONLY_FOR_COMPILER=	gcc
 CXXFLAGS+=		-DPARANOID
@@ -51,7 +52,6 @@ CONFIGURE_ARGS+=	--enable-guest2host-tlb
 CONFIGURE_ARGS+=	--enable-host-specific-asms
 CONFIGURE_ARGS+=	--enable-icache
 CONFIGURE_ARGS+=	--enable-mmx
-CONFIGURE_ARGS+=	--enable-new-pit
 CONFIGURE_ARGS+=	--enable-pae
 CONFIGURE_ARGS+=	--enable-pci
 CONFIGURE_ARGS+=	--enable-repeat-speedups
@@ -60,6 +60,15 @@ CONFIGURE_ARGS+=	--enable-sse=3
 CONFIGURE_ARGS+=	--enable-usb
 CONFIGURE_ARGS+=	--enable-vbe
 CONFIGURE_ARGS+=	--enable-x86-64
+CONFIGURE_ARGS+=	--enable-popcnt
+CONFIGURE_ARGS+=	--enable-smp
+CONFIGURE_ARGS+=	--enable-ne2000
+CONFIGURE_ARGS+=	--enable-acpi
+CONFIGURE_ARGS+=	--enable-pnic
+CONFIGURE_ARGS+=	--enable-large-pages
+CONFIGURE_ARGS+=	--enable-mtrr
+CONFIGURE_ARGS+=	--enable-clgd54xx
+CONFIGURE_ARGS+=	--enable-sse-extension
 
 .  if !empty(MACHINE_PLATFORM:M*-*-i386)
 CONFIGURE_ARGS+=	--enable-fast-function-calls
