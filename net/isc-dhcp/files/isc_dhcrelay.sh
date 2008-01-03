@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcrelay.sh,v 1.2 2007/12/30 12:30:52 adrianp Exp $
+# $NetBSD: isc_dhcrelay.sh,v 1.3 2008/01/03 12:25:01 adrianp Exp $
 #
 
 # PROVIDE: dhcrelay
@@ -18,7 +18,7 @@ fi
 name="dhcrelay"
 rcvar="isc_${name}"
 command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/isc-dhcp/${name}.pid"
+pidfile="@VARBASE@/run/isc-dhcp/isc-${name}.pid"
 start_precmd="isc_dhcrelay_precmd"
 
 isc_dhcrelay_precmd()
