@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.17 2008/01/03 21:11:41 seb Exp $
+$NetBSD: CHANGES-2008,v 1.18 2008/01/03 21:16:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/maxima to 5.14.0 [tonio 2008-01-03]
 	Updated emulators/bochs to 2.3.6 [xtraeme 2008-01-03]
 	Added devel/p5-Getopt-Long-Descriptive version 0.06 [seb 2008-01-03]
+	Added devel/p5-App-Cmd version 0.012 [seb 2008-01-03]
