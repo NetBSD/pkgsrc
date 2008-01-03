@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.7 2008/01/03 12:40:31 agc Exp $
+$NetBSD: CHANGES-2008,v 1.8 2008/01/03 12:53:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -8,3 +8,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Net-Server to 0.97 [adrianp 2008-01-03]
 	Updated net/libupnp to 1.6.3 [obache 2008-01-03]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2007Q4 branch [agc 2008-01-02]
+	Updated textproc/hyperestraier to 1.4.13 [obache 2008-01-03]
+	Updated textproc/p5-native-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
+	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
+	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
