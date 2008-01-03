@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/03 13:51:28 obache Exp $
 
 DISTNAME=	hevea-1.09
 CATEGORIES=	textproc
-MASTER_SITES=	http://para.inria.fr/~maranget/hevea/distri/
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/moscova/hevea/
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://para.inria.fr/~maranget/hevea/
+HOMEPAGE=	http://pauillac.inria.fr/~maranget/hevea/
 COMMENT=	LaTeX to HTML translator
 
 BUILD_DEPENDS+=	ocaml>=3.07:../../lang/ocaml
