@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.903 2007/12/13 00:26:52 rhaen Exp $
+# $NetBSD: Makefile,v 1.904 2008/01/03 21:10:33 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -470,6 +470,7 @@ SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Euclid
 SUBDIR+=	p5-Getopt-Long
+SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Graph
