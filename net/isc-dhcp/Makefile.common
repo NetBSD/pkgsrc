@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/01/03 12:25:01 adrianp Exp $
 #
 
 DISTNAME=		dhcp-3.1.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://ftp.isc.org/isc/dhcp/ \
 
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/dhcp/
+
+CONFLICTS+=		isc-dhcp-base-4.*{,nb*}
 
 .include "../../mk/bsd.prefs.mk"
 
