@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.15 2008/01/03 20:26:09 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.16 2008/01/03 21:04:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -19,3 +19,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added pkgtools/lintpkgsrc version 4.82 [rillig 2008-01-03]
 	Updated net/net-snmp to 5.4.1nb1 [seb 2008-01-03]
 	Updated math/maxima to 5.14.0 [tonio 2008-01-03]
+	Updated emulators/bochs to 2.3.6 [xtraeme 2008-01-03]
