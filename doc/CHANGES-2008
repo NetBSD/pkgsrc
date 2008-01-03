@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.10 2008/01/03 13:37:12 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.11 2008/01/03 13:41:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.13 [obache 2008-01-03]
 	Updated lang/guile to 1.8.3 [gdt 2008-01-03]
 	Updated misc/proj to 4.6.0 [gdt 2008-01-03]
+	Updated geography/py-proj to 1.8.3 [gdt 2008-01-03]
