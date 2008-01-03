@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2008,v 1.4 2008/01/03 12:10:47 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.5 2008/01/03 12:16:32 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
 	Updated mail/dovecot to 1.0.10 [ghen 2008-01-01]
 	Updated www/opera to 9.25 [xtraeme 2008-01-02]
 	Updated sysutils/p5-Unix-Syslog to 1.0 [adrianp 2008-01-03]
+	Updated net/p5-Net-Server to 0.97 [adrianp 2008-01-03]
