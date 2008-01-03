@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6943 2008/01/03 12:54:50 obache Exp $
+$NetBSD: TODO,v 1.6944 2008/01/03 13:47:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -381,6 +381,7 @@ Suggested package updates
 	o capc-calc-2.12.2.2
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
+	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cfitsio-3.030
 	o cflow-1.2
