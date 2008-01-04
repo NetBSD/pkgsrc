@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2007/11/23 08:38:05 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.13 2008/01/04 11:42:29 ghen Exp $
 
 # please stick to the "stable" releases as much as possible!
 DISTNAME=		openldap-2.3.39
@@ -113,6 +113,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 # Set the correct file modes for the example config files.
 post-install:
 .for file in ${CNFS} ${CNFS_PERMS} ${DB_CONFIG}
-	${CHMOD} ${SHAREMODE} ${EGDIR}/${file:Q}
-	${RM} -f ${EGDIR}/${file:Q}.default
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/${file:Q}
+	${RM} -f ${DESTDIR}${EGDIR}/${file:Q}.default
 .endfor

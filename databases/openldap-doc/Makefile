@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/18 19:46:16 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/04 11:42:30 ghen Exp $
 
 DISTNAME=		openldap-2.3.39
 PKGNAME=		${DISTNAME:S/-/-doc-/}
@@ -24,6 +24,8 @@ MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.openldap.org/
 COMMENT=		Lightweight Directory Access Protocol documentation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DISTINFO_FILE=		${.CURDIR}/../../databases/openldap/distinfo
 
 NO_CONFIGURE=		yes
@@ -35,17 +37,17 @@ IMAGES+=		config_repl.gif config_x500fe.gif config_x500ref.gif
 IMAGES+=		intro_dctree.gif intro_tree.gif replication.gif
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/admin
-	${INSTALL_DATA_DIR} ${DOCDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/COPYRIGHT ${DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/LICENSE ${DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/README ${DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/images/LDAPlogo.gif ${DOCDIR}/images/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/images/LDAPwww.gif ${DOCDIR}/images/
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/admin/guide.html ${DOCDIR}/admin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/admin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/COPYRIGHT ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/LICENSE ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/README ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/images/LDAPlogo.gif ${DESTDIR}${DOCDIR}/images/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/images/LDAPwww.gif ${DESTDIR}${DOCDIR}/images/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/admin/guide.html ${DESTDIR}${DOCDIR}/admin/
 .for file in ${IMAGES}
-	${INSTALL_DATA} ${WRKSRC}/doc/guide/admin/${file} ${DOCDIR}/admin/
+	${INSTALL_DATA} ${WRKSRC}/doc/guide/admin/${file} ${DESTDIR}${DOCDIR}/admin/
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

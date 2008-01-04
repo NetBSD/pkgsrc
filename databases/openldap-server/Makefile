@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/02 13:04:38 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/04 11:42:30 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 COMMENT=		Lightweight Directory Access Protocol server suite
@@ -6,6 +6,8 @@ COMMENT=		Lightweight Directory Access Protocol server suite
 CONFLICTS+=		openldap<2.3.23nb1
 
 DEPENDS+=		openldap-client>=2.3.27nb1:../../databases/openldap-client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # slapd options
 CONFIGURE_ARGS+=	--enable-slapd
