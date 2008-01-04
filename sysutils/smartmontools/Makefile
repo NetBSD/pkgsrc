@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/09/11 11:19:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/04 22:15:47 heinz Exp $
 
 DISTNAME=		smartmontools-5.37
 CATEGORIES=		sysutils
@@ -11,6 +11,7 @@ COMMENT=		Control and monitor storage systems using SMART
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES+=		c++
