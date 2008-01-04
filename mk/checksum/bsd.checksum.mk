@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.7 2007/08/31 16:30:11 jlam Exp $
+# $NetBSD: bsd.checksum.mk,v 1.8 2008/01/04 01:46:26 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -47,5 +47,5 @@ mps: makepatchsum
 checksum checksum-phase makesum makepatchsum mps mdi makedistinfo distinfo:
 	@${DO_NADA}
 .else
-.  include "${PKGSRCDIR}/mk/checksum/checksum.mk"
+.  include "checksum.mk"
 .endif

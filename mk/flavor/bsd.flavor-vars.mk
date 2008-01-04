@@ -1,4 +1,4 @@
-# $NetBSD: bsd.flavor-vars.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.flavor-vars.mk,v 1.2 2008/01/04 01:46:27 rillig Exp $
 #
 # This Makefile fragment is included by bsd.prefs.mk and defines some
 # variables which must be defined earlier than where bsd.flavor.mk
@@ -8,4 +8,4 @@
 # Default to the pkgsrc-package flavor.
 PKG_FLAVOR?=	pkg
 
-.sinclude "${PKGSRCDIR}/mk/flavor/${PKG_FLAVOR}/flavor-vars.mk"
+.sinclude "${PKG_FLAVOR}/flavor-vars.mk"
