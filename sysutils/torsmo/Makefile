@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2007/06/15 18:15:21 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/04 12:31:02 ghen Exp $
 
-DISTNAME=	torsmo-0.18
-CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=torsmo/}
+DISTNAME=		torsmo-0.18
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=torsmo/}
 
-MAINTAINER=	ghen@NetBSD.org
-HOMEPAGE=	http://torsmo.sourceforge.net/
-COMMENT=	Tyopoytaorvelo System Monitor
+MAINTAINER=		ghen@NetBSD.org
+HOMEPAGE=		http://torsmo.sourceforge.net/
+COMMENT=		Tyopoytaorvelo System Monitor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
-EGDIR=		${PREFIX}/share/examples/torsmo
-DOCDIR=		${PREFIX}/share/doc/torsmo
+EGDIR=			${PREFIX}/share/examples/torsmo
+DOCDIR=			${PREFIX}/share/doc/torsmo
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/torsmo
+INSTALLATION_DIRS+=	share/doc/torsmo
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,13 +28,11 @@ SPECIAL_PERMS+=	bin/torsmo ${BINOWN} kmem 2555
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/torsmo ${PREFIX:Q}/bin/
-	${INSTALL_MAN} ${WRKSRC:Q}/torsmo.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1/
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/torsmorc.sample ${EGDIR:Q}/
-	${INSTALL_DATA_DIR} ${DOCDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}/
-	${INSTALL_DATA} ${WRKSRC:Q}/readme.html ${DOCDIR:Q}/
+	${INSTALL_PROGRAM} ${WRKSRC}/torsmo ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/torsmo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/torsmorc.sample ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${DOCDIR}/
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
