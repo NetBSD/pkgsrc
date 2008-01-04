@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/01/04 05:36:35 obache Exp $
+# $NetBSD: Makefile,v 1.27 2008/01/04 05:40:57 obache Exp $
 
 DISTNAME=	zorro-1.1p8
 PKGNAME=	zorro-1.1.8
@@ -15,7 +15,7 @@ DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 NO_BUILD=	yes
 
-USE_TOOLS+=	wish
+USE_TOOLS+=	wish:run
 
 REPLACE_INTERPRETER+=	wish
 REPLACE.wish.old=	[^[:space:]]*wish
