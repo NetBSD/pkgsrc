@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/04 08:00:50 obache Exp $
 #
 
 DISTNAME=	wmcpuload-1.0.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.sh.rim.or.jp/~ssato/src/
+MASTER_SITES=	http://seiichisato.jp/dockapps/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	coto@core.de
-HOMEPAGE=	http://www.sh.rim.or.jp/~ssato/dockapp/\#wmcpuload
+HOMEPAGE=	http://seiichisato.jp/dockapps/
 COMMENT=	Dockable CPU monitor
 
 GNU_CONFIGURE=	YES
