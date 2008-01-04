@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/13 09:34:21 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/04 20:05:12 jmmv Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns/}
+PKGREVISION=		1
 COMMENT=		Modern, advanced and high performance nameserver
 
 CONFIGURE_ARGS+=	--with-modules="geo"
