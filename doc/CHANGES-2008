@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.28 2008/01/04 14:06:12 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.29 2008/01/04 15:59:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/erlang to 12.0 [ghen 2008-01-04]
 	Updated lang/erlang-doc to 12.0 [ghen 2008-01-04]
 	Updated lang/erlang-man to 12.0 [ghen 2008-01-04]
+	Updated pkgtools/pkglint to 4.82 [rillig 2008-01-04]
