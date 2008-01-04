@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2006/04/17 13:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/01/04 07:29:04 obache Exp $
 
 DISTNAME=		gperiodic-2.0.8
 PKGREVISION=		3
 CATEGORIES=		misc x11
-MASTER_SITES=		http://www.acclab.helsinki.fi/~frantz/software/
+MASTER_SITES=		# http://www.frantz.fi/software/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.acclab.helsinki.fi/~frantz/software/gperiodic.php
+HOMEPAGE=		http://www.frantz.fi/software/gperiodic.php
 COMMENT=		Displays a periodic table of the elements
 
 USE_DIRS+=		gnome1-1.5
