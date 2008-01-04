@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/04 16:08:24 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/04 18:49:14 joerg Exp $
 #
 
 DISTNAME=		maxima-5.14.0
@@ -15,7 +15,7 @@ COMMENT=		Computer algebra system
 DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 DEPENDS+=		tk-[0-9]*:../../x11/tk
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-clisp
