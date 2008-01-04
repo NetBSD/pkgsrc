@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.1 2007/05/27 09:49:53 schmonz Exp $
+$NetBSD: patch-ar,v 1.2 2008/01/04 06:48:07 martti Exp $
 
---- src/server.c.orig	2005-09-22 17:57:34.000000000 +0200
-+++ src/server.c
-@@ -782,6 +782,7 @@ E Protocol error: Root says \"%s\" but p
+--- src/server.c.orig	2006-06-08 17:34:20.000000000 +0300
++++ src/server.c	2008-01-02 14:45:35.000000000 +0200
+@@ -782,6 +782,7 @@
         nothing.  But for rsh, we need to do it now.  */
      parse_config (current_parsed_root->directory);
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ar,v 1.1 2007/05/27 09:49:53 schmonz Exp $
      path = xmalloc (strlen (current_parsed_root->directory)
  		   + sizeof (CVSROOTADM)
  		   + 2);
-@@ -799,6 +800,7 @@ E Protocol error: Root says \"%s\" but p
+@@ -799,6 +800,7 @@
  	pending_error = save_errno;
      }
      free (path);
@@ -18,7 +18,7 @@ $NetBSD: patch-ar,v 1.1 2007/05/27 09:49:53 schmonz Exp $
  
  #ifdef HAVE_PUTENV
      env = xmalloc (strlen (CVSROOT_ENV) + strlen (current_parsed_root->directory) + 2);
-@@ -2283,8 +2285,12 @@ serve_global_option (arg)
+@@ -2284,8 +2286,12 @@
  	    break;
  	case 'n':
  	    noexec = 1;
@@ -31,7 +31,7 @@ $NetBSD: patch-ar,v 1.1 2007/05/27 09:49:53 schmonz Exp $
  	case 'q':
  	    quiet = 1;
  	    break;
-@@ -5306,6 +5312,7 @@ switch_to_user (cvs_username, username)
+@@ -5369,6 +5375,7 @@
      const char *username;
  {
      struct passwd *pw;
@@ -39,7 +39,7 @@ $NetBSD: patch-ar,v 1.1 2007/05/27 09:49:53 schmonz Exp $
  
      pw = getpwnam (username);
      if (pw == NULL)
-@@ -5384,7 +5391,15 @@ error 0 %s: no such system user\n", user
+@@ -5447,7 +5454,15 @@
  	}
      }
  

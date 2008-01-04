@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2007/05/27 09:49:52 schmonz Exp $
+$NetBSD: patch-al,v 1.2 2008/01/04 06:48:06 martti Exp $
 
---- src/client.c.orig	2005-03-17 16:47:22.000000000 +0100
-+++ src/client.c
-@@ -4528,6 +4528,16 @@ start_server ()
+--- src/client.c.orig	2006-06-08 17:36:03.000000000 +0300
++++ src/client.c	2008-01-02 14:44:23.000000000 +0200
+@@ -4497,6 +4497,16 @@
  		error (1, 0,
  		       "This server does not support the global -n option.");
  	}
