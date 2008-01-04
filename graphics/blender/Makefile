@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.58 2007/02/22 19:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2008/01/04 19:56:45 markd Exp $
 
-DISTNAME=	blender-2.41
-PKGREVISION=	3
+DISTNAME=	blender-2.45
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 		http://download.blender.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.blender.org/cms/Home.2.0.html
+HOMEPAGE=	http://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 
-BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
-
-WRKSRC=			${WRKDIR}/blender
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+CMAKE_ARG_PATH=		..
+CONFIGURE_DIRS=		_build
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LDFLAGS+=		-lcrypto
 
@@ -23,28 +22,37 @@ LDFLAGS+=		-lcrypto
 
 INSTALLATION_DIRS=	bin
 
-# remember to change the line number after an update
-post-patch:
-	${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig
-	${AWK} '{print} NR == 62 {print "env.Append(LINKFLAGS = \"-Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib\")"}' ${WRKSRC}/SConstruct.orig > ${WRKSRC}/SConstruct
+CMAKE_ARGS+=	-DFREETYPE_INC=${BUILDLINK_PREFIX.freetype2}/include/freetype2
+CMAKE_ARGS+=	-DSDL_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL}/include/SDL
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		ADD_C_INCLUDE_DIRS=${WRKDIR}/.buildlink/include ADD_C_LIB_DIRS=${WRKDIR}/.buildlink/lib \
-		${PREFIX}/bin/scons -C ${WRKSRC} prefix=${PREFIX}
+CHECK_INTERPRETER_SKIP= share/blender/scripts/*.py share/blender/scripts/*/*.py
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/_build
+
+WRKSRCBIN=	${WRKSRC}/_build/bin
+
+post-build:
+	${CP} -f ${WRKSRCBIN}/blender ${WRKSRCBIN}/blender-bin
+	${SED} -e "s|__PREFIX__|${PREFIX}|g" files/blender > ${WRKSRCBIN}/blender
+	${CHMOD} +x ${WRKSRCBIN}/blender
+	${CHMOD} -x ${WRKSRCBIN}/.blender/scripts/*.py
+	${CHMOD} -x ${WRKSRCBIN}/.blender/scripts/*/*.py
 
 do-install:
-	${CP} -f ${WRKSRC}/blender ${WRKSRC}/blender-bin
-	${SED} -e "s|__PREFIX__|${PREFIX}|g" files/blender > ${WRKDIR}/blender/bin/blender
-	${CHMOD} +x ${WRKDIR}/blender/bin/blender
-	${INSTALL_PROGRAM} ${WRKSRC}/blender-bin ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts
-	${INSTALL_DATA} ${WRKSRC}/release/scripts/*.py \
-		${PREFIX}/share/blender/scripts
-	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts/bpymodules
-	${INSTALL_DATA} ${WRKSRC}/release/scripts/bpymodules/*.py \
-		${PREFIX}/share/blender/scripts/bpymodules
-	${INSTALL} ${WRKDIR}/blender/bin/blender ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRCBIN}/blender-bin ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRCBIN}/blender ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/blender
+	${CP} -R ${WRKSRCBIN}/.blender/scripts \
+		${DESTDIR}${PREFIX}/share/blender/
+	${CP} -R ${WRKSRCBIN}/.blender/locale \
+		${DESTDIR}${PREFIX}/share/blender/
+	${INSTALL_DATA} ${WRKSRCBIN}/.blender/.Blanguages \
+		${DESTDIR}${PREFIX}/share/blender
+	${INSTALL_DATA} ${WRKSRCBIN}/.blender/.bfont.ttf \
+		${DESTDIR}${PREFIX}/share/blender
+	${INSTALL_DATA} ${WRKSRCBIN}/BlenderQuickStart.pdf \
+		${DESTDIR}${PREFIX}/share/blender
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
