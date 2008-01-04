@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
+$NetBSD: patch-ab,v 1.9 2008/01/04 01:43:58 pooka Exp $
 
---- xbattbar.c.orig	2001-02-02 00:25:29.000000000 -0500
-+++ xbattbar.c	2007-11-27 20:56:25.000000000 -0500
-@@ -27,6 +27,14 @@
+--- xbattbar.c.orig	2001-02-02 07:25:29.000000000 +0200
++++ xbattbar.c	2008-01-04 03:32:10.000000000 +0200
+@@ -27,6 +27,16 @@
  
  #include <sys/types.h>
  #include <sys/time.h>
@@ -12,12 +12,14 @@ $NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
 +#include <sys/param.h>
 +#include <sys/envsys.h>
 +#include <paths.h>
++#include <stdlib.h>
++#include <string.h>
 +#endif /* __NetBSD__ */
 +
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -577,33 +585,177 @@
+@@ -577,33 +587,177 @@
  
  #ifdef __NetBSD__
  
@@ -162,7 +164,7 @@ $NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
 +       if (acpi) {
 +#ifdef HAVE_NETBSD_ACPI
 +		int32_t rtot = 0, maxtot = 0;
-+		p = APM_AC_OFF;
++		p = APM_AC_ON;
 +		for (i = 0 ; i < ns ; i++) {
 +			if ((etds[i].validflags & ENVSYS_FCURVALID) == 0)
 +				continue;
@@ -183,11 +185,11 @@ $NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
 +			 * "discharging" and vice versa, but this is the best
 +			 * compromise.
 +			 */
-+			if (ebis[i].units == ENVSYS_INDICATOR &&
++			if ((ebis[i].units == ENVSYS_SWATTS || ebis[i].units == ENVSYS_SAMPS) &&
 +			    etds[i].cur.data_s &&
 +			    strncmp(ebis[i].desc, "acpibat", 7) == 0 &&
-+			    strcmp(&ebis[i].desc[cc - 8], "charging") == 0) {
-+				p = APM_AC_ON;
++			    strcmp(&ebis[i].desc[cc - 14], "discharge rate") == 0) {
++				p = APM_AC_OFF;
 +			}
 +		}
 +		r = (rtot * 100.0) / maxtot;
@@ -198,7 +200,7 @@ $NetBSD: patch-ab,v 1.8 2007/11/28 22:33:18 jnemeth Exp $
         if (info.battery_life > 100) {
                 /* some APM BIOSes return values slightly > 100 */
                 r = 100;
-@@ -617,6 +769,8 @@
+@@ -617,6 +771,8 @@
         } else {
                 p = APM_AC_OFF;
         }
