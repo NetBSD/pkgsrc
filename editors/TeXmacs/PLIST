@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2007/09/05 16:40:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.38 2008/01/04 15:26:17 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -2132,7 +2132,6 @@ share/TeXmacs/progs/generic/generic-kbd.scm
 share/TeXmacs/progs/generic/insert-menu.scm
 share/TeXmacs/progs/graphics/graphics-edit.scm
 share/TeXmacs/progs/graphics/graphics-env.scm
-share/TeXmacs/progs/graphics/graphics-env.scm.orig
 share/TeXmacs/progs/graphics/graphics-group.scm
 share/TeXmacs/progs/graphics/graphics-kbd.scm
 share/TeXmacs/progs/graphics/graphics-main.scm
@@ -2334,6 +2333,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/yacas
 @dirrm share/TeXmacs/plugins/xypic/progs
 @dirrm share/TeXmacs/plugins/xypic
+@dirrm share/TeXmacs/plugins/tools
 @dirrm share/TeXmacs/plugins/shell/progs
 @dirrm share/TeXmacs/plugins/shell
 @dirrm share/TeXmacs/plugins/scilab/progs

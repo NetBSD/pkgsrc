@@ -1,32 +1,31 @@
-$NetBSD: patch-ai,v 1.5 2007/09/05 16:40:35 drochner Exp $
+$NetBSD: patch-ai,v 1.6 2008/01/04 15:26:17 drochner Exp $
 
---- plugins/maxima/bin/maxima_detect.orig	2007-09-03 16:47:53.000000000 +0200
+--- plugins/maxima/bin/maxima_detect.orig	2007-11-05 10:21:32.000000000 +0100
 +++ plugins/maxima/bin/maxima_detect
 @@ -36,11 +36,11 @@ find_old_help()
    fi
  }
  
--if [ $OSTYPE == "cygwin" ] ; then EXT='.bat'; else EXT=''; fi
--MAXIMA=`type -p maxima$EXT 2>/dev/null`
+-if [ $OSTYPE = "cygwin" ] ; then EXT='.bat'; else EXT=''; fi
 +if [ x$OSTYPE = x"cygwin" ] ; then EXT='.bat'; else EXT=''; fi
-+MAXIMA=`which maxima$EXT`
+ MAXIMA=`which maxima$EXT 2>/dev/null`
  if [ $? -eq 0 ]
  then
--  if [ $OSTYPE == "cygwin" ]
+-  if [ $OSTYPE = "cygwin" ]
 +  if [ x$OSTYPE = x"cygwin" ]
    then
      if [ "$1" ]
      then
-@@ -61,9 +61,10 @@ version 5.9.2
- version 5.9.3
+@@ -62,9 +62,10 @@ version 5.9.3
  version 5.10
  version 5.11
--version 5.12" >/dev/null
-+version 5.12
-+version 5.13" >/dev/null
+ version 5.12
+-version 5.13" >/dev/null
++version 5.13
++version 5.14" >/dev/null
          then
--          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12
-+          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13
+-          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13
++          # 5.9.1 or 5.9.2 or 5.9.3 or 5.10 or 5.11 or 5.12 or 5.13 or 5.14
            maxima -d | grep -F 'maxima-htmldir=' | sed -e \
            's/maxima-htmldir=/"/' -e 's|$|/maxima_toc.html"|'
          else
