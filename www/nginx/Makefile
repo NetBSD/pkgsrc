@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/11 09:12:26 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/04 11:48:12 ghen Exp $
 
 DISTNAME=		nginx-0.5.33
 CATEGORIES=		www
@@ -7,6 +7,8 @@ MASTER_SITES=		http://sysoev.ru/nginx/
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://nginx.net/
 COMMENT=		Lightweight HTTP server and mail proxy server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
@@ -47,12 +49,12 @@ SUBST_SED.paths=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,%%NGINX_LOGDIR%%,${NGINX_LOGDIR},g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${PREFIX}/sbin/nginx
+	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
 .for file in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/conf/${file} ${EGDIR}/conf/${file}
+	${INSTALL_DATA} ${WRKSRC}/conf/${file} ${DESTDIR}${EGDIR}/conf/${file}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${EGDIR}/html/50x.html
-	${INSTALL_DATA} ${WRKSRC}/html/index.html ${EGDIR}/html/index.html
+	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
+	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 
 .include "options.mk"
 
