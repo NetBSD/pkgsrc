@@ -1,0 +1,20 @@
+$NetBSD: patch-dm,v 1.1 2008/01/04 20:23:45 spz Exp $
+
+--- src/Makefile.in.orig	2006-06-08 17:16:26.000000000 +0200
++++ src/Makefile.in
+@@ -81,11 +81,11 @@ depend:
+ 
+ install:
+ 	@for i in $(prefix) $(bindir) $(mandir) $(man1dir) $(man3dir) ; do \
+-		test -d $$i || mkdir -p $$i; \
++		test -d ${DESTDIR}$$i || mkdir -p ${DESTDIR}$$i; \
+ 	done
+-	for i in $(TOOLDIRS); do $(INSTALL_PROGRAM) $$i/$$i $(bindir); done
+-	for i in ../man/man1/*; do $(INSTALL_DATA) $$i $(man1dir); done
+-	for i in ../man/man3/*; do $(INSTALL_DATA) $$i $(man3dir); done
++	for i in $(TOOLDIRS); do $(INSTALL_PROGRAM) $$i/$$i ${DESTDIR}$(bindir); done
++	for i in ../man/man1/*; do $(INSTALL_DATA) $$i ${DESTDIR}$(man1dir); done
++	for i in ../man/man3/*; do $(INSTALL_DATA) $$i ${DESTDIR}$(man3dir); done
+ 
+ tags:
+ 	@find `pwd` -name \*.hh -or -name \*.cc -or -name \*.c -or -name \*.h -or -name \*.y -or -name \*.l | xargs etags -t
