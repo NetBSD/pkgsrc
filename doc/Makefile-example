@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.15 2007/01/09 21:14:21 gdt Exp $
+# $NetBSD: Makefile-example,v 1.16 2008/01/04 19:53:36 heinz Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -27,6 +27,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 # Fourth paragraph - PKG_INSTALLATION_TYPES
 PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
+# if the package can be created without root privileges
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Fifth paragraph - all build definitions that describe things used by
 # the package.  These include: WRKSRC, GNU_CONFIGURE,
