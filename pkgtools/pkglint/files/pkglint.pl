@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.747 2008/01/04 16:03:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.748 2008/01/04 16:12:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3182,6 +3182,10 @@ sub expect_text($$$) {
 	}
 }
 
+# Returns an object of type Pkglint::Type that represents the type of
+# the variable (maybe guessed based on the variable name), or undef if
+# the type cannot even be guessed.
+#
 sub get_variable_type($$) {
 	my ($line, $varname) = @_;
 	my ($type);
@@ -3377,6 +3381,59 @@ sub variable_needs_quoting($$$) {
 #
 # Parsing.
 #
+
+# Checks whether $tree matches $pattern, and if so, instanciates the
+# variables in $pattern. If they don't match, some variables may be
+# instanciated nevertheless, but the exact behavior is unspecified.
+#
+sub tree_match($$);
+sub tree_match($$) {
+	my ($tree, $pattern) = @_;
+
+	return true if (!defined($tree) && !defined($pattern));
+	return false if (!defined($tree) || !defined($pattern));
+	my $aref = ref($tree);
+	my $pref = ref($pattern);
+	if ($pref eq "SCALAR" && !defined($$pattern)) {
+		$$pattern = $tree;
+		return true;
+	}
+	if ($aref eq "" && ($pref eq "" || $pref eq "SCALAR")) {
+		return $tree eq $pattern;
+	}
+	if ($aref eq "ARRAY" && $pref eq "ARRAY") {
+		return false if scalar(@$tree) != scalar(@$pattern);
+		for (my $i = 0; $i < scalar(@$tree); $i++) {
+			return false unless tree_match($tree->[$i], $pattern->[$i]);
+		}
+		return true;
+	}
+	return false;
+}
+
+# TODO: Needs to be redesigned to handle more complex expressions.
+sub parse_mk_cond($$);
+sub parse_mk_cond($$) {
+	my ($line, $cond) = @_;
+
+	$opt_debug_trace and $line->log_debug("parse_mk_cond(\"${cond}\")");
+
+	my $re_simple_varname = qr"[A-Z_][A-Z0-9_]*(?:\.[\w_+\-]+)?";
+	while ($cond ne "") {
+		if ($cond =~ s/^!//) {
+			return ["not", parse_mk_cond($line, $cond)];
+		} elsif ($cond =~ s/^defined\((${re_simple_varname})\)$//) {
+			return ["defined", $1];
+		} elsif ($cond =~ s/^empty\((${re_simple_varname})\)$//) {
+			return ["empty", $1];
+		} elsif ($cond =~ s/^empty\((${re_simple_varname}):M([^\$:{})]+)\)$//) {
+			return ["empty", ["match", $1, $2]];
+		} else {
+			$opt_debug_unchecked and $line->log_debug("parse_mk_cond: ${cond}");
+			return ["unknown", $cond];
+		}
+	}
+}
 
 # This procedure fills in the extra fields of a line, depending on the
 # line type. These fields can later be queried without having to parse
@@ -5837,8 +5894,36 @@ sub checkline_mk_varassign($$$$$) {
 #
 sub checkline_mk_cond($$) {
 	my ($line, $cond) = @_;
+	my ($varname, $match);
 
 	$opt_debug_trace and $line->log_debug("checkline_mk_cond($cond)");
+	my $tree = parse_mk_cond($line, $cond);
+	if (tree_match($tree, ["not", ["empty", ["match", \$varname, \$match]]])) {
+		#$line->log_note("tree_match: varname=$varname, match=$match");
+
+		my $type = get_variable_type($line, $varname);
+		my $btype = defined($type) ? $type->basic_type : undef;
+		if (defined($btype) && ref($type->basic_type) eq "HASH") {
+			if ($match !~ qr"[\$\[*]" && !exists($btype->{$match})) {
+				$line->log_warning("Invalid :M value \"$match\". Only { " . join(" ", sort keys %$btype) . " } are allowed.");
+			}
+		}
+
+		# Currently disabled because the valid options can also be defined in PKG_OPTIONS_GROUP.*.
+		# Additionally, all these variables may have multiple assigments (+=).
+		if (false && $varname eq "PKG_OPTIONS" && defined($pkgctx_vardef) && exists($pkgctx_vardef->{"PKG_SUPPORTED_OPTIONS"})) {
+			my $options = $pkgctx_vardef->{"PKG_SUPPORTED_OPTIONS"}->get("value");
+
+			if ($match !~ qr"[\$\[*]" && index(" $options ", " $match ") == -1) {
+				$line->log_warning("Invalid option \"$match\". Only { $options } are allowed.");
+			}
+		}
+
+		# TODO: PKG_BUILD_OPTIONS. That requires loading the
+		# complete package definitition for the package "pkgbase"
+		# or some other database. If we could confine all option
+		# definitions to options.mk, this would become easier.
+	}
 }
 
 #
