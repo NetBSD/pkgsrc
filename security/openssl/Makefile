@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2007/10/21 17:52:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.129 2008/01/04 22:08:09 rillig Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -24,7 +24,7 @@ MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
 .  endif
 .endif
 
-PKGREVISION=	5
+PKGREVISION=	6
 SVR4_PKGNAME=	ossl
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -111,10 +111,6 @@ PLIST_SRC=		${PLIST_SHLIB}
 PLIST_SRC+=		${PKGDIR}/PLIST.common
 PLIST_SUBST+=		SHLIB_VERSION=${OPENSSL_VERS:C/[^0-9]*$//}
 PLIST_SUBST+=		SHLIB_MAJOR=${OPENSSL_VERS:C/\..*$//}
-
-.if ${OPSYS} == "NetBSD"
-PKG_SYSCONFDIR.openssl?=	/etc/openssl
-.endif
 
 PKG_SYSCONFSUBDIR=	openssl
 CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
