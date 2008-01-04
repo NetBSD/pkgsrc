@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.38 2007/11/26 23:40:10 hubertf Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.39 2008/01/04 15:53:41 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -176,7 +176,11 @@ etc:</para>
 
   <listitem>
     <para><filename role="pkg">pkgtools/pkglint</filename>: The
-      pkglint(1) program checks a pkgsrc entry for errors, lintpkgsrc(1)
+      pkglint(1) program checks a pkgsrc entry for errors.</para>
+  </listitem>
+
+  <listitem>
+    <para><filename role="pkg">pkgtools/lintpkgsrc</filename>: The lintpkgsrc(1) program
       does various checks on the complete pkgsrc system.</para>
   </listitem>
 
