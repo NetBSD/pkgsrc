@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.44 2007/11/02 08:27:36 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.45 2008/01/04 02:25:36 jnemeth Exp $
 #
-# Makefile fragment shared with libmilter
+# used by mail/libmilter/Makefile
 #
 
 DISTNAME=	sendmail.${DIST_VERS}
