@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.21 2007/12/12 01:00:40 markd Exp $
+# $NetBSD: configure.mk,v 1.22 2008/01/04 01:46:26 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -61,26 +61,26 @@ CMAKE_ARG_PATH?=	.
 _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_ARGS
 
 .if defined(GNU_CONFIGURE)
-.  include "${PKGSRCDIR}/mk/configure/gnu-configure.mk"
+.  include "gnu-configure.mk"
 .endif
 .if defined(OVERRIDE_GNU_CONFIG_SCRIPTS)
-.  include "${PKGSRCDIR}/mk/configure/config-override.mk"
+.  include "config-override.mk"
 .endif
 .if defined(INSTALL_SH_OVERRIDE) && empty(INSTALL_SH_OVERRIDE:M[Nn][Oo])
-.  include "${PKGSRCDIR}/mk/configure/install-sh-override.mk"
+.  include "install-sh-override.mk"
 .endif
 .if defined(USE_LIBTOOL)
-.  include "${PKGSRCDIR}/mk/configure/libtool-override.mk"
+.  include "libtool-override.mk"
 .endif
 .if defined(PKGCONFIG_OVERRIDE)
-.  include "${PKGSRCDIR}/mk/configure/pkg-config-override.mk"
+.  include "pkg-config-override.mk"
 .endif
-.include "${PKGSRCDIR}/mk/configure/replace-interpreter.mk"
+.include "replace-interpreter.mk"
 .if defined(USE_PKGLOCALEDIR)
-.  include "${PKGSRCDIR}/mk/configure/replace-localedir.mk"
+.  include "replace-localedir.mk"
 .endif
 .if defined(USE_CMAKE)
-.  include "${PKGSRCDIR}/mk/configure/cmake.mk"
+.  include "cmake.mk"
 .endif
 
 ######################################################################

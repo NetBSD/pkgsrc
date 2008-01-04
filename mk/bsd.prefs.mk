@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.273 2007/10/17 10:37:43 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.274 2008/01/04 01:46:24 rillig Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -616,21 +616,21 @@ PREPEND_PATH+=		${X11BASE}/bin
 PREPEND_PATH+=		${LOCALBASE}/bin
 
 # Wrapper framework definitions
-.include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
+.include "wrapper/wrapper-defs.mk"
 
 # Binary emulator framework definitions
 .if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
-.  include "${PKGSRCDIR}/mk/emulator/emulator-vars.mk"
+.  include "emulator/emulator-vars.mk"
 .endif
 
 # System features framework
-.include "${PKGSRCDIR}/mk/features/features-vars.mk"
+.include "features/features-vars.mk"
 
 # Package system flavor definitions
-.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
+.include "flavor/bsd.flavor-vars.mk"
 
 # Make variable definitions cache
-.include "${PKGSRCDIR}/mk/bsd.makevars.mk"
+.include "bsd.makevars.mk"
 
 # If MAKECONF is defined, then pass it down to all recursive make
 # processes invoked by pkgsrc.
