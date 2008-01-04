@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/09/07 22:12:11 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2008/01/04 20:00:32 heinz Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -12,6 +12,7 @@ COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 VERS=			20060725
@@ -24,6 +25,7 @@ GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER:Q}
 .endif
+USE_TOOLS+=		chmod	# see post-extract
 
 # This pkg auto-detects IPv6.
 BUILD_DEFS+=		IPV6_READY
@@ -48,6 +50,9 @@ DOC_COMPRESS_ARGS=	-z ${PREFIX}
 PLIST_SUBST+=		GZSUFFIX=
 DOC_COMPRESS_ARGS=	${PREFIX}
 .endif
+
+post-extract:
+	chmod -R g-w ${WRKSRC}/help/.
 
 post-install:
 	${AWK} '/^share\/irc\/help\// { sub("\\$${GZSUFFIX}$$", ""); print }' \
