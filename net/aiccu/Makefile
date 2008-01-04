@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/18 14:42:17 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/04 12:02:49 ghen Exp $
 
 DISTNAME=		aiccu_20070115
 PKGNAME=		${DISTNAME:S/_/-/:S/.//g}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.sixxs.net/archive/sixxs/aiccu/unix/
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.sixxs.net/tools/aiccu/
 COMMENT=		Automatic IPv6 Connectivity Client Utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 CHECK_PORTABILITY_SKIP+=debian/*
@@ -22,6 +24,9 @@ DOCDIR=			${PREFIX}/share/doc/aiccu
 CONF_FILES=		${EXAMPLESDIR}/aiccu.conf ${PKG_SYSCONFDIR}/aiccu.conf
 CONF_FILES_MODE=	0600
 
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 share/examples/aiccu
+INSTALLATION_DIRS+=	share/doc/aiccu
+
 RCD_SCRIPTS=		aiccu
 
 .include "options.mk"
@@ -32,15 +37,13 @@ post-extract:
 	${MV} ${WRKDIR}/aiccu ${WRKDIR}/${DISTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unix-console/aiccu ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/doc/aiccu.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/aiccu.conf ${EXAMPLESDIR}/
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/LICENSE ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/COPYRIGHT ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/HOWTO ${DOCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/unix-console/aiccu ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/doc/aiccu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/aiccu.conf ${DESTDIR}${EXAMPLESDIR}/
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/LICENSE ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/COPYRIGHT ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/HOWTO ${DESTDIR}${DOCDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

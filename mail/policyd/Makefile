@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/20 07:30:09 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/04 11:55:37 ghen Exp $
 
 DISTNAME=		policyd-1.82
 CATEGORIES=		mail
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=policyd/}
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.policyd.org/
 COMMENT=		Policy daemon for Postfix with greylisting and throttling
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
@@ -35,14 +37,14 @@ MESSAGE_SUBST+=		BINDIR=${BINDIR}
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/policyd ${BINDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/cleanup ${BINDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/stats ${BINDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/policyd.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/blacklist_helo.sql ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/whitelist.sql ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/DATABASE.mysql ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/policyd ${DESTDIR}${BINDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/cleanup ${DESTDIR}${BINDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/stats ${DESTDIR}${BINDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/policyd.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/blacklist_helo.sql ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/whitelist.sql ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/DATABASE.mysql ${DESTDIR}${EGDIR}
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
