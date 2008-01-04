@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.10 2007/02/22 19:30:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2008/01/04 19:58:41 jmmv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.33.1
+BOOST_VERSION=		1.34.1
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -25,7 +25,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
 
-CONFLICTS+=		boost<1.32.0
+CONFLICTS+=		boost<1.34.0
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
