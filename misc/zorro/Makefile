@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/04 05:07:43 obache Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/04 05:11:32 obache Exp $
 
 DISTNAME=	zorro-1.1p8
 PKGNAME=	zorro-1.1.8
@@ -15,16 +15,17 @@ DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin share/zorro
 
 post-patch:
 	( cd ${WRKSRC} ; ${SED} 's|@PREFIX@|'${PREFIX}'|g' \
 		<zorro >zorro.BAK ; ${MV} zorro.BAK zorro )
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${PREFIX}/bin/zorro
-	${INSTALL_DATA_DIR} ${PREFIX}/share/zorro
-	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${PREFIX}/share/zorro
+	${INSTALL_SCRIPT} ${WRKSRC}/zorro ${DESTDIR}${PREFIX}/bin/zorro
+	${INSTALL_DATA} ${WRKSRC}/DOTzorrorc ${DESTDIR}${PREFIX}/share/zorro
 	@${ECHO} ""
 	@${ECHO} "Take a look at ${PREFIX}/share/zorro/DOTzorrorc"
 	@${ECHO} ""
