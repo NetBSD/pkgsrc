@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.102 2007/06/15 15:52:22 rillig Exp $
+# $NetBSD: build,v 1.103 2008/01/04 15:49:07 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -206,7 +206,7 @@ do_common_setup () {
 	# Set the paths to commonly used directories.
 	#
 	pkgsrc_dir="${USR_PKGSRC}"
-	pkglint_dir="${USR_PKGSRC}/pkgtools/pkglint"
+	lintpkgsrc_dir="${USR_PKGSRC}/pkgtools/lintpkgsrc"
 
 	#
 	# Set up variables specific for the bulk build.
@@ -226,7 +226,7 @@ do_common_setup () {
 # Check that the package tools are up to date.
 check_tools () {
 	echo "build> Checking if the pkgtools are up-to-date"
-	( cd "${pkglint_dir}"				\
+	( cd "${lintpkgsrc_dir}"				\
   	  && ${BMAKE} fetch >/dev/null 2>&1
 	) || {
 	  echo "build> Updating pkgtools"
@@ -264,7 +264,7 @@ load_vars () {
 		AWK GREP MAIL_CMD MKDIR PERL5 SED
 		PKG_DELETE PKG_INFO PKGBASE"
 
-	values=`cd "$pkglint_dir" && $BMAKE show-vars VARNAMES="$vars" USE_TOOLS="awk grep mail mkdir perl sed"`
+	values=`cd "$lintpkgsrc_dir" && $BMAKE show-vars VARNAMES="$vars" USE_TOOLS="awk grep mail mkdir perl sed"`
 
 	for v in $vars; do
 		eval "read $v" || die "Could not read value for $v"
@@ -277,7 +277,7 @@ load_vars () {
 $values
 EOF
 	echo "------------------------------------------"
-	[ "$PKGBASE" = "pkglint" ] \
+	[ "$PKGBASE" = "lintpkgsrc" ] \
 	|| die	"Error reading the variables." \
 		"Try running $0 with another shell."
 

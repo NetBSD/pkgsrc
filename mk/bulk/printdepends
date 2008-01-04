@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.24 2007/01/08 21:36:07 rillig Exp $
+# $NetBSD: printdepends,v 1.25 2008/01/04 15:49:08 rillig Exp $
 #
 
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -112,7 +112,7 @@ esac
 # Get additional system information
 #
 
-cd "${pkgsrcdir}/pkgtools/pkglint"
+cd "${pkgsrcdir}/pkgtools/lintpkgsrc"
 GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep`
 MKDIR=`${BMAKE} show-var VARNAME=MKDIR USE_TOOLS=mkdir`
 SED=`${BMAKE} show-var VARNAME=SED USE_TOOLS=sed`
