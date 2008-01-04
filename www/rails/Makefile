@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/13 14:46:58 taca Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/04 15:42:53 ghen Exp $
 
 DISTNAME=	rails-1.2.6
 CATEGORIES=	www
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Framework for developing database-backed web applications
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.4:../../devel/ruby-activesupport
 DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.5:../../databases/ruby-activerecord
@@ -36,15 +38,15 @@ post-configure:
 	${FIND} ${WRKSRC} -name \*.orig -exec ${RM} -f {} \;
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/rails ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/rails
-	cd ${WRKSRC}/lib && ${PAX} -rwppm * ${RUBY_SITELIBDIR}/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rails
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/rails ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_SITELIBDIR}/rails
+	cd ${WRKSRC}/lib && ${PAX} -rwppm * ${DESTDIR}${RUBY_SITELIBDIR}/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/rails
 .for f in CHANGELOG MIT-LICENSE README
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/rails
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/rails
 .endfor
 	cd ${WRKSRC} && ${PAX} -rwppm bin builtin configs dispatches doc \
 		environments fresh_rakefile helpers html \
-		${PREFIX}/share/rails/
+		${DESTDIR}${PREFIX}/share/rails/
 
 .include "../../mk/bsd.pkg.mk"
