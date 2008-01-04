@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.32 2008/01/04 20:00:45 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.33 2008/01/04 22:31:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/boost-libs to 1.34.1 [jmmv 2008-01-04]
 	Updated devel/boost-python to 1.34.1 [jmmv 2008-01-04]
 	Updated meta-pkgs/boost to 1.34.1 [jmmv 2008-01-04]
+	Updated emulators/gxemul to 0.4.6.1 [xtraeme 2008-01-04]
