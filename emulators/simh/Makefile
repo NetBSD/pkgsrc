@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/04/06 06:21:59 reed Exp $
+# $NetBSD: Makefile,v 1.26 2008/01/04 21:45:05 joerg Exp $
 #
 
 DISTNAME=	simhv33-0
@@ -13,6 +13,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supnik's historical computer simulator
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6
 
 EXTRACT_OPTS_ZIP=	-aoq
@@ -26,7 +28,7 @@ CFLAGS:=	${CFLAGS:S/-O2//}
 .endif
 .endif
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
@@ -34,13 +36,11 @@ post-extract:
 
 do-install:
 	(cd ${WRKSRC}/BIN && for BIN in *; do				\
-		${INSTALL_PROGRAM} $$BIN ${PREFIX}/bin/simh-$$BIN;	\
+		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN;	\
 	done)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/simh
-	${INSTALL_DATA} ${WRKSRC}/VAX/ka655.bin ${PREFIX}/share/simh
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/simh
+	${INSTALL_DATA} ${WRKSRC}/VAX/ka655.bin ${DESTDIR}${PREFIX}/share/simh
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
-		${INSTALL_DATA} $$TXT ${PREFIX}/share/doc/simh;		\
+		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
 
 .include "../../net/libpcap/buildlink3.mk"
