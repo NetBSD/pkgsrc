@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/09 07:42:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/04 19:58:39 jmmv Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
 share/boost-build/bootstrap.jam
@@ -34,14 +34,17 @@ share/boost-build/doc/src/architecture.xml
 share/boost-build/doc/src/catalog.xml
 share/boost-build/doc/src/extending.xml
 share/boost-build/doc/src/faq.xml
+share/boost-build/doc/src/fragments.xml
 share/boost-build/doc/src/howto.xml
 share/boost-build/doc/src/install.xml
 share/boost-build/doc/src/recipes.xml
 share/boost-build/doc/src/reference.xml
+share/boost-build/doc/src/standalone.xml
+share/boost-build/doc/src/tasks.xml
 share/boost-build/doc/src/tutorial.xml
 share/boost-build/doc/src/userman.xml
+share/boost-build/doc/src/v1_vs_v2.xml
 share/boost-build/doc/tools.html
-share/boost-build/doc/tracker.html
 share/boost-build/doc/userman.pdf
 share/boost-build/example/boost-build.jam
 share/boost-build/example/customization/Jamfile
@@ -54,6 +57,13 @@ share/boost-build/example/customization/t1.verbatim
 share/boost-build/example/customization/t2.verbatim
 share/boost-build/example/customization/usage.verbatim
 share/boost-build/example/customization/verbatim.jam
+share/boost-build/example/generate/Jamroot
+share/boost-build/example/generate/REAME.txt
+share/boost-build/example/generate/a.cpp
+share/boost-build/example/generator/Jamroot
+share/boost-build/example/generator/README.txt
+share/boost-build/example/generator/foo.gci
+share/boost-build/example/generator/soap.jam
 share/boost-build/example/gettext/Jamfile
 share/boost-build/example/gettext/main.cpp
 share/boost-build/example/gettext/project-root.jam
@@ -67,26 +77,35 @@ share/boost-build/example/libraries/app/app.cpp
 share/boost-build/example/libraries/util/foo/Jamfile
 share/boost-build/example/libraries/util/foo/bar.cpp
 share/boost-build/example/libraries/util/foo/include/lib1.h
-share/boost-build/example/make/Jamfile
-share/boost-build/example/make/a.cpp
-share/boost-build/example/make/extlib/Jamfile
-share/boost-build/example/make/extlib/c.cpp
-share/boost-build/example/make/extlib/gcc.jam
-share/boost-build/example/make/extlib/project-root.jam
-share/boost-build/example/make/gcc.jam
-share/boost-build/example/make/lib/Jamfile
-share/boost-build/example/make/lib/b.cpp
-share/boost-build/example/make/project-root.jam
+share/boost-build/example/make/Jamroot
+share/boost-build/example/make/main_cpp.pro
 share/boost-build/example/make/readme.txt
-share/boost-build/example/qt-ui/Jamfile
-share/boost-build/example/qt-ui/hello_world_widget.ui
-share/boost-build/example/qt-ui/main.cpp
-share/boost-build/example/qt-ui/project-root.jam
-share/boost-build/example/qt/Jamfile
-share/boost-build/example/qt/canvas.cpp
-share/boost-build/example/qt/canvas.h
-share/boost-build/example/qt/main.cpp
-share/boost-build/example/qt/project-root.jam
+share/boost-build/example/pch/Jamroot
+share/boost-build/example/pch/include/pch.hpp
+share/boost-build/example/pch/source/hello_world.cpp
+share/boost-build/example/python_modules/Jamroot
+share/boost-build/example/python_modules/python_helpers.jam
+share/boost-build/example/python_modules/python_helpers.py
+share/boost-build/example/python_modules/readme.txt
+share/boost-build/example/qt/README.txt
+share/boost-build/example/qt/qt3/hello/Jamroot
+share/boost-build/example/qt/qt3/hello/canvas.cpp
+share/boost-build/example/qt/qt3/hello/canvas.h
+share/boost-build/example/qt/qt3/hello/main.cpp
+share/boost-build/example/qt/qt3/moccable-cpp/Jamroot
+share/boost-build/example/qt/qt3/moccable-cpp/main.cpp
+share/boost-build/example/qt/qt3/uic/Jamroot
+share/boost-build/example/qt/qt3/uic/hello_world_widget.ui
+share/boost-build/example/qt/qt3/uic/main.cpp
+share/boost-build/example/qt/qt4/hello/Jamroot
+share/boost-build/example/qt/qt4/hello/arrow.cpp
+share/boost-build/example/qt/qt4/hello/arrow.h
+share/boost-build/example/qt/qt4/hello/main.cpp
+share/boost-build/example/qt/qt4/moccable-cpp/Jamroot
+share/boost-build/example/qt/qt4/moccable-cpp/main.cpp
+share/boost-build/example/qt/qt4/uic/Jamroot
+share/boost-build/example/qt/qt4/uic/hello_world_widget.ui
+share/boost-build/example/qt/qt4/uic/main.cpp
 share/boost-build/example/variant/Jamfile
 share/boost-build/example/variant/a.cpp
 share/boost-build/example/variant/libs/Jamfile
@@ -107,6 +126,7 @@ share/boost-build/kernel/modules.jam
 share/boost-build/nightly.sh
 share/boost-build/notes/README.txt
 share/boost-build/notes/build_dir_option.txt
+share/boost-build/notes/relative_source_paths.txt
 share/boost-build/options/help.jam
 share/boost-build/release_procedure.txt
 share/boost-build/roll.sh
@@ -127,12 +147,15 @@ share/boost-build/test/boostbook/Jamroot
 share/boost-build/test/boostbook/a.hpp
 share/boost-build/test/boostbook/docs.xml
 share/boost-build/test/build_dir.py
+share/boost-build/test/build_file.py
+share/boost-build/test/build_no.py
 share/boost-build/test/c_file.py
 share/boost-build/test/chain.py
 share/boost-build/test/check-arguments.jam
 share/boost-build/test/check-bindrule.jam
 share/boost-build/test/check-jam-patches.jam
 share/boost-build/test/check-test-tools.jam
+share/boost-build/test/clean.py
 share/boost-build/test/composite.py
 share/boost-build/test/conditionals.py
 share/boost-build/test/conditionals2.py
@@ -173,18 +196,24 @@ share/boost-build/test/direct-request-test/b.cpp
 share/boost-build/test/direct-request-test/b_inverse.cpp
 share/boost-build/test/direct-request-test/project-root.jam
 share/boost-build/test/direct_request_test.py
+share/boost-build/test/disambiguation.py
 share/boost-build/test/dll_path.py
 share/boost-build/test/double_loading.py
 share/boost-build/test/duplicate.py
 share/boost-build/test/echo_args.jam
 share/boost-build/test/empty.jam
+share/boost-build/test/example_customization.py
+share/boost-build/test/example_gettext.py
+share/boost-build/test/example_libraries.py
+share/boost-build/test/example_make.py
+share/boost-build/test/example_qt4.py
 share/boost-build/test/expansion.py
 share/boost-build/test/explicit.py
 share/boost-build/test/gcc_runtime.py
 share/boost-build/test/generators-test/Jamfile
 share/boost-build/test/generators-test/a.cpp
 share/boost-build/test/generators-test/b.cxx
-share/boost-build/test/generators-test/c.ui
+share/boost-build/test/generators-test/c.tui
 share/boost-build/test/generators-test/d.wd
 share/boost-build/test/generators-test/e.cpp
 share/boost-build/test/generators-test/extra.jam
@@ -198,9 +227,11 @@ share/boost-build/test/generators-test/x.l
 share/boost-build/test/generators-test/y.x_pro
 share/boost-build/test/generators-test/z.cpp
 share/boost-build/test/generators_test.py
-share/boost-build/test/glob.py
+share/boost-build/test/implicit_dependency.py
+share/boost-build/test/indirect_conditional.py
 share/boost-build/test/inherit_toolset.py
 share/boost-build/test/inline.py
+share/boost-build/test/lib_source_property.py
 share/boost-build/test/library_chain.py
 share/boost-build/test/library_order.py
 share/boost-build/test/library_property.py
@@ -220,6 +251,7 @@ share/boost-build/test/notfile.py
 share/boost-build/test/ordered_properties.py
 share/boost-build/test/out_of_tree.py
 share/boost-build/test/path_features.py
+share/boost-build/test/pch.py
 share/boost-build/test/prebuilt.py
 share/boost-build/test/prebuilt/Jamfile
 share/boost-build/test/prebuilt/ext/Jamfile
@@ -271,7 +303,9 @@ share/boost-build/test/project-test4/lib2/Jamfile2
 share/boost-build/test/project-test4/project-root.jam
 share/boost-build/test/project-test4/readme.txt
 share/boost-build/test/project_dependencies.py
+share/boost-build/test/project_glob.py
 share/boost-build/test/project_root_constants.py
+share/boost-build/test/project_root_rule.py
 share/boost-build/test/project_test1.py
 share/boost-build/test/project_test3.py
 share/boost-build/test/project_test4.py
@@ -293,6 +327,8 @@ share/boost-build/test/rebuilds.py
 share/boost-build/test/recursive.jam
 share/boost-build/test/regression.py
 share/boost-build/test/relative_sources.py
+share/boost-build/test/remove_requirement.py
+share/boost-build/test/resolution.py
 share/boost-build/test/searched_lib.py
 share/boost-build/test/skipping.py
 share/boost-build/test/source_locations.py
@@ -363,6 +399,7 @@ share/boost-build/tools/boostbook-config.jam
 share/boost-build/tools/boostbook.jam
 share/boost-build/tools/borland.jam
 share/boost-build/tools/builtin.jam
+share/boost-build/tools/cast.jam
 share/boost-build/tools/common.jam
 share/boost-build/tools/como-linux.jam
 share/boost-build/tools/como-win.jam
@@ -370,29 +407,39 @@ share/boost-build/tools/como.jam
 share/boost-build/tools/cw-config.jam
 share/boost-build/tools/cw.jam
 share/boost-build/tools/darwin.jam
+share/boost-build/tools/dmc.jam
 share/boost-build/tools/docutils.jam
+share/boost-build/tools/doxproc.py
 share/boost-build/tools/doxygen-config.jam
 share/boost-build/tools/doxygen.jam
 share/boost-build/tools/fop.jam
 share/boost-build/tools/fortran.jam
 share/boost-build/tools/gcc.jam
+share/boost-build/tools/generate.jam
 share/boost-build/tools/gettext.jam
 share/boost-build/tools/gfortran.jam
+share/boost-build/tools/hp_cxx.jam
 share/boost-build/tools/hpfortran.jam
 share/boost-build/tools/ifort.jam
 share/boost-build/tools/intel-linux.jam
 share/boost-build/tools/intel-win.jam
 share/boost-build/tools/intel.jam
-share/boost-build/tools/kylix.jam
 share/boost-build/tools/lex.jam
 share/boost-build/tools/make.jam
+share/boost-build/tools/mc.jam
+share/boost-build/tools/midl.jam
+share/boost-build/tools/mpi.jam
 share/boost-build/tools/msvc-config.jam
 share/boost-build/tools/msvc.jam
 share/boost-build/tools/notfile.jam
 share/boost-build/tools/package.jam
+share/boost-build/tools/pch.jam
 share/boost-build/tools/python-config.jam
 share/boost-build/tools/python.jam
+share/boost-build/tools/qcc.jam
 share/boost-build/tools/qt.jam
+share/boost-build/tools/qt3.jam
+share/boost-build/tools/qt4.jam
 share/boost-build/tools/quickbook-config.jam
 share/boost-build/tools/quickbook.jam
 share/boost-build/tools/rc.jam
@@ -401,11 +448,13 @@ share/boost-build/tools/stlport.jam
 share/boost-build/tools/sun.jam
 share/boost-build/tools/symlink.jam
 share/boost-build/tools/testing.jam
+share/boost-build/tools/types/asm.jam
 share/boost-build/tools/types/cpp.jam
 share/boost-build/tools/types/exe.jam
 share/boost-build/tools/types/html.jam
 share/boost-build/tools/types/lib.jam
 share/boost-build/tools/types/obj.jam
+share/boost-build/tools/types/qt.jam
 share/boost-build/tools/types/register.jam
 share/boost-build/tools/types/rsp.jam
 share/boost-build/tools/unix.jam
@@ -489,10 +538,19 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/example/versioned
 @dirrm share/boost-build/example/variant/libs
 @dirrm share/boost-build/example/variant
-@dirrm share/boost-build/example/qt-ui
+@dirrm share/boost-build/example/qt/qt4/uic
+@dirrm share/boost-build/example/qt/qt4/moccable-cpp
+@dirrm share/boost-build/example/qt/qt4/hello
+@dirrm share/boost-build/example/qt/qt4
+@dirrm share/boost-build/example/qt/qt3/uic
+@dirrm share/boost-build/example/qt/qt3/moccable-cpp
+@dirrm share/boost-build/example/qt/qt3/hello
+@dirrm share/boost-build/example/qt/qt3
 @dirrm share/boost-build/example/qt
-@dirrm share/boost-build/example/make/lib
-@dirrm share/boost-build/example/make/extlib
+@dirrm share/boost-build/example/python_modules
+@dirrm share/boost-build/example/pch/source
+@dirrm share/boost-build/example/pch/include
+@dirrm share/boost-build/example/pch
 @dirrm share/boost-build/example/make
 @dirrm share/boost-build/example/libraries/util/foo/include
 @dirrm share/boost-build/example/libraries/util/foo
@@ -501,6 +559,8 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/example/libraries
 @dirrm share/boost-build/example/hello
 @dirrm share/boost-build/example/gettext
+@dirrm share/boost-build/example/generator
+@dirrm share/boost-build/example/generate
 @dirrm share/boost-build/example/customization
 @dirrm share/boost-build/example
 @dirrm share/boost-build/doc/src
