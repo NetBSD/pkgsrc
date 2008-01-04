@@ -1,8 +1,8 @@
-$NetBSD: patch-er,v 1.7 2007/12/27 08:01:20 markd Exp $
+$NetBSD: patch-er,v 1.8 2008/01/04 21:05:57 markd Exp $
 
 --- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2005-10-11 04:04:31.000000000 +1300
 +++ ksysguard/ksysguardd/NetBSD/ProcessList.c
-@@ -24,6 +24,7 @@
+@@ -24,10 +24,12 @@
  
  #include <ctype.h>
  #include <dirent.h>
@@ -10,18 +10,184 @@ $NetBSD: patch-er,v 1.7 2007/12/27 08:01:20 markd Exp $
  #include <pwd.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -191,11 +192,13 @@ updateProcess(int pid)
-         ps->ppid      = p.kp_eproc.e_ppid;
-         ps->uid       = p.kp_eproc.e_ucred.cr_uid;
-         ps->gid       = p.kp_eproc.e_pgid;
-+#if __NetBSD_Version__ < 106130000
-         ps->priority  = p.kp_proc.p_priority;
-+#endif
-         ps->niceLevel = p.kp_proc.p_nice;
+ #include <string.h>
++#include <kvm.h>
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #include <sys/time.h>
+@@ -46,6 +48,8 @@ CONTAINER ProcessList = 0;
  
-         /* this isn't usertime -- it's total time (??) */
+ #define BUFSIZE 1024
+ 
++static kvm_t *kd;
++
+ typedef struct
+ {
+ 	/* This flag is set for all found processes at the beginning of the
+@@ -157,15 +161,13 @@ findProcessInList(int pid)
+ }
+ 
+ static int
+-updateProcess(int pid)
++updateProcess(int pid, struct kinfo_proc2 *p)
+ {
+-	static char *statuses[] = { "idle","run","sleep","stop","zombie" };
++	static char *statuses[] = { "", "idle","run","sleep","stop","zombie","dead","onproc" };
+ 	
+ 	ProcessInfo* ps;
+ 	struct passwd* pwent;
+-	int mib[4];
+-	struct kinfo_proc p;
+-	size_t len;
++	char **argv, **a;
+ 
+ 	if ((ps = findProcessInList(pid)) == 0)
+ 	{
+@@ -178,26 +180,18 @@ updateProcess(int pid)
+ 
+ 	ps->alive = 1;
+ 
+-	mib[0] = CTL_KERN;
+-	mib[1] = KERN_PROC;
+-	mib[2] = KERN_PROC_PID;
+-	mib[3] = pid;
+-
+-	len = sizeof (p);
+-	if (sysctl(mib, 4, &p, &len, NULL, 0) == -1 || !len)
+-		return -1;
+-
+-        ps->pid       = p.kp_proc.p_pid;
+-        ps->ppid      = p.kp_eproc.e_ppid;
+-        ps->uid       = p.kp_eproc.e_ucred.cr_uid;
+-        ps->gid       = p.kp_eproc.e_pgid;
+-        ps->priority  = p.kp_proc.p_priority;
+-        ps->niceLevel = p.kp_proc.p_nice;
+-
+-        /* this isn't usertime -- it's total time (??) */
 -	ps->userTime = p.kp_proc.p_rtime.tv_sec*100+p.kp_proc.p_rtime.tv_usec/100;
-+	ps->userTime = 0;
-         ps->sysTime  = 0;
+-        ps->sysTime  = 0;
++	ps->pid       = p->p_pid;
++	ps->ppid      = p->p_ppid;
++	ps->uid       = p->p_uid;
++	ps->gid       = p->p_gid;
++	ps->priority  = p->p_priority - 22; /* why 22? */
++	ps->niceLevel = p->p_nice - NZERO;
++
++#if 0
++	ps->userTime = p->p_rtime_sec*100+p->p_rtime_usec/100;
++	ps->sysTime  = 0;
          ps->sysLoad  = 0;
++#endif
  
+         /* memory, process name, process uid */
+ 	/* find out user name with process uid */
+@@ -205,19 +199,26 @@ updateProcess(int pid)
+ 	strlcpy(ps->userName,pwent&&pwent->pw_name? pwent->pw_name:"????",sizeof(ps->userName));
+ 	ps->userName[sizeof(ps->userName)-1]='\0';
+ 
+-        ps->userLoad = p.kp_proc.p_pctcpu / 100;
+-	ps->vmSize   = (p.kp_eproc.e_vm.vm_tsize +
+-			p.kp_eproc.e_vm.vm_dsize +
+-			p.kp_eproc.e_vm.vm_ssize) * getpagesize();
+-	ps->vmRss    = p.kp_eproc.e_vm.vm_rssize * getpagesize();
+-	strlcpy(ps->name,p.kp_proc.p_comm ? p.kp_proc.p_comm : "????", sizeof(ps->name));
+-	strlcpy(ps->status,(p.kp_proc.p_stat>=1)&&(p.kp_proc.p_stat<=5)? statuses[p.kp_proc.p_stat-1]:"????", sizeof(ps->status));
++	ps->userLoad = 100.0 * ((double)(p->p_pctcpu) / FSCALE);
++	ps->vmSize   = (p->p_vm_tsize +
++			p->p_vm_dsize +
++			p->p_vm_ssize) * getpagesize();
++	ps->vmRss    = p->p_vm_rssize * getpagesize();
++	strlcpy(ps->name,p->p_comm ? p->p_comm : "????", sizeof(ps->name));
++	strlcpy(ps->status,(p->p_stat<=7)? statuses[p->p_stat]:"????", sizeof(ps->status));
+ 
+         /* process command line */
+-	/* the following line causes segfaults on some FreeBSD systems... why?
+-		strncpy(ps->cmdline, p.kp_proc.p_args->ar_args, sizeof(ps->cmdline) - 1);
+-	*/
+-	strcpy(ps->cmdline, "????");
++	argv = kvm_getargv2(kd, p, sizeof(ps->cmdline));
++	ps->cmdline[0] = '\0';
++	if ((a = argv) != NULL) {
++		while (*a) {
++			strlcat(ps->cmdline, *a, sizeof(ps->cmdline));
++			a++;
++			strlcat(ps->cmdline, " ", sizeof(ps->cmdline));
++		}
++	} else {
++		strcpy(ps->cmdline, "????");
++	}
+ 
+ 	return (0);
+ }
+@@ -266,6 +267,8 @@ initProcessList(struct SensorModul* sm)
+ 		registerCommand("setpriority", setPriority);
+ 	}
+ 
++	kd = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, "kvm_open");
++
+ 	updateProcessList();
+ }
+ 
+@@ -277,27 +280,22 @@ exitProcessList(void)
+ 
+ 	if (ProcessList)
+ 		free (ProcessList);
++
++	kvm_close(kd);
+ }
+ 
+ int
+ updateProcessList(void)
+ {
+-        int mib[3];
+-        size_t len;
+-        size_t num;
+-        struct kinfo_proc *p;
+-
+-
+-        mib[0] = CTL_KERN;
+-        mib[1] = KERN_PROC;
+-        mib[2] = KERN_PROC_ALL;
+-        sysctl(mib, 3, NULL, &len, NULL, 0);
+-	p = malloc(len);
+-        sysctl(mib, 3, p, &len, NULL, 0);
+-
+-	for (num = 0; num < len / sizeof(struct kinfo_proc); num++)
+-		updateProcess(p[num].kp_proc.p_pid);
+-	free(p);
++	int len;
++	int num;
++	struct kinfo_proc2 *p;
++
++	p = kvm_getproc2(kd, KERN_PROC_ALL, 0,
++			 sizeof(struct kinfo_proc2), &len);
++
++	for (num = 0; num < len; num++)
++		updateProcess(p[num].p_pid, &p[num]);
+ 	cleanupProcessList();
+ 
+ 	return (0);
+@@ -306,8 +304,8 @@ updateProcessList(void)
+ void
+ printProcessListInfo(const char* cmd)
+ {
+-	fprintf(CurrentClient, "Name\tPID\tPPID\tUID\tGID\tStatus\tUser%%\tSystem%%\tNice\tVmSize\tVmRss\tLogin\tCommand\n");
+-	fprintf(CurrentClient, "s\td\td\td\td\tS\tf\tf\td\tD\tD\ts\ts\n");
++	fprintf(CurrentClient, "Name\tPID\tPPID\tUID\tGID\tStatus\tCPU%%\tPrio\tNice\tVmSize\tVmRss\tLogin\tCommand\n");
++	fprintf(CurrentClient, "s\td\td\td\td\tS\tf\td\td\tD\tD\ts\ts\n");
+ }
+ 
+ void
+@@ -318,10 +316,10 @@ printProcessList(const char* cmd)
+ 	ps = first_ctnr(ProcessList); /* skip 'kernel' entry */
+ 	for (ps = next_ctnr(ProcessList); ps; ps = next_ctnr(ProcessList))
+ 	{
+-		fprintf(CurrentClient, "%s\t%ld\t%ld\t%ld\t%ld\t%s\t%.2f\t%.2f\t%d\t%d\t%d\t%s\t%s\n",
++		fprintf(CurrentClient, "%s\t%ld\t%ld\t%ld\t%ld\t%s\t%.2f\t%d\t%d\t%d\t%d\t%s\t%s\n",
+ 			   ps->name, (long)ps->pid, (long)ps->ppid,
+ 			   (long)ps->uid, (long)ps->gid, ps->status,
+-			   ps->userLoad, ps->sysLoad, ps->niceLevel,
++			   ps->userLoad, ps->priority, ps->niceLevel,
+ 			   ps->vmSize / 1024, ps->vmRss / 1024, ps->userName, ps->cmdline);
+ 	}
+ }
