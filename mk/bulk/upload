@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.41 2007/10/09 19:19:13 martti Exp $
+# $NetBSD: upload,v 1.42 2008/01/04 15:49:08 rillig Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -151,9 +151,9 @@ SHA1="digest sha1";
 
 _INFO_VER=`${PKG_INFO} -V`;
 if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
-	REQUIRED_PACKAGES="pkgtools/pkglint net/rsync security/audit-packages"
+	REQUIRED_PACKAGES="pkgtools/lintpkgsrc net/rsync security/audit-packages"
 else
-	REQUIRED_PACKAGES="pkgtools/pkglint net/rsync"
+	REQUIRED_PACKAGES="pkgtools/lintpkgsrc net/rsync"
 fi
 
 opsys=`uname -s`
@@ -229,11 +229,11 @@ upload_vulnerable="$TMP"/upload_vulnerable
 
 # May be different than $USR_PKGSRC:
 echo "upload> Running ${BMAKE} to get the pkgsrc variables"
-pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
-packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
-distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
-gzip_cmd=`cd pkgtools/pkglint; ${BMAKE} show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
-pkg_info=`cd pkgtools/pkglint && ${BMAKE} show-var VARNAME=PKG_INFO`
+pkgsrcdir=`cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
+packages=`cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=PACKAGES`
+distdir=`cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=DISTDIR`
+gzip_cmd=`cd pkgtools/lintpkgsrc; ${BMAKE} show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
+pkg_info=`cd pkgtools/lintpkgsrc && ${BMAKE} show-var VARNAME=PKG_INFO`
 
 # Pull in some pkgs needed
 for pkg in ${REQUIRED_PACKAGES}; do
@@ -260,7 +260,7 @@ fi
 
 case $LINTPKGSRC_CACHE in
 yes|YES)
-	lintpkgsrc_cache="-I `cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB`"
+	lintpkgsrc_cache="-I `cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB`"
 	;;
 *)
 	lintpkgsrc_cache=''

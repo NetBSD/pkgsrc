@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.69 2007/10/07 12:59:13 kano Exp $
+# $NetBSD: post-build,v 1.70 2008/01/04 15:49:08 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -137,7 +137,7 @@ my $BMAKE = $ENV{BMAKE} || pb_die(undef, "The BMAKE environment variable must be
 sub get_mk_conf_vars (@) {
 	my ($rest);
 
-	open(I, "set -e; . '$BULK_BUILD_CONF'; . '$vars{USR_PKGSRC}/mk/bulk/post-build-conf'; export_config_vars; cd $vars{USR_PKGSRC}/pkgtools/pkglint && $BMAKE show-vars BATCH=1 VARNAMES='".join(' ', @_)."' |")
+	open(I, "set -e; . '$BULK_BUILD_CONF'; . '$vars{USR_PKGSRC}/mk/bulk/post-build-conf'; export_config_vars; cd $vars{USR_PKGSRC}/pkgtools/lintpkgsrc && $BMAKE show-vars BATCH=1 VARNAMES='".join(' ', @_)."' |")
 		or pb_die(undef, "Cannot get mk.conf variables.");
 
 	foreach my $var (@_) {

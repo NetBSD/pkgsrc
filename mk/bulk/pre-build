@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.70 2007/07/21 12:48:31 adrianp Exp $
+# $NetBSD: pre-build,v 1.71 2008/01/04 15:49:08 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -21,50 +21,50 @@ PRUNELINKS=${PRUNEPACKAGES:-"yes"}
 PKG_ADMIN="pkg_admin"
 PKG_INFO="pkg_info"
 
-PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
+some_package_dir=${USR_PKGSRC}/pkgtools/lintpkgsrc
 
 # Extract the name of the files used for the build log and broken build log.
 # These have defaults set by bsd.bulk-pkg.mk and may be overridden in
 # /etc/mk.conf
-BULKFILESDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BULKFILESDIR )`;
+BULKFILESDIR=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=BULKFILESDIR )`;
 if [ "$BULKFILESDIR" = "" ]; then
 	echo "pre-build> Had problems determining the directory of .broken* files"
 	exit 1
 fi
-BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
+BROKENF=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .broken files"
 	exit 1
 fi
-NOTAVAILF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=NOT_AVAILABLE_FILE )`;
+NOTAVAILF=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=NOT_AVAILABLE_FILE )`;
 if [ "$NOTAVAILF" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .bulk-not_available files"
 	exit 1
 fi
-BRKWRKLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENWRKLOG )`;
+BRKWRKLOG=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=BROKENWRKLOG )`;
 if [ "$BRKWRKLOG" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .broken.work files"
 	exit 1
 fi
-BLDLOG=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BUILDLOG )`;
+BLDLOG=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .make files"
 	exit 1
 fi
-LINTPKGSRC_DB=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB )`;
+LINTPKGSRC_DB=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=LINTPKGSRC_DB )`;
 if [ "$LINTPKGSRC_DB" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .lintpkgsrc.db file"
 	exit 1
 fi
-STARTFILE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=STARTFILE )`;
+STARTFILE=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=STARTFILE )`;
 if [ "$STARTFILE" = "" ]; then
 	echo "pre-build> Had problems determining the name of the .start file"
 	exit 1
 fi
 
-LOCALBASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=LOCALBASE )`;
-X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
-DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
+LOCALBASE=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=LOCALBASE )`;
+X11BASE=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=X11BASE )`;
+DISTDIR=`( cd ${some_package_dir} ; ${BMAKE} show-var VARNAME=DISTDIR )`;
 
 # Create ${BULKFILESDIR} if necessary
 echo "pre-build> Creating ${BULKFILESDIR} if necessary"
@@ -129,9 +129,9 @@ fi
 #
 # Clean out everything and its mother
 #
-PKG_DBDIR=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_DBDIR)`
-DEPOTBASE=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=DEPOTBASE)`
-PKG_TOOLS_BIN=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
+PKG_DBDIR=`(cd "${some_package_dir}" && ${BMAKE} show-var VARNAME=PKG_DBDIR)`
+DEPOTBASE=`(cd "${some_package_dir}" && ${BMAKE} show-var VARNAME=DEPOTBASE)`
+PKG_TOOLS_BIN=`(cd "${some_package_dir}" && ${BMAKE} show-var VARNAME=PKG_TOOLS_BIN)`
 
 for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
 	echo "pre-build> Removing all installed packages in ${dbdir}"
@@ -197,12 +197,12 @@ rm -f "${BULKFILESDIR}/$BROKENF" "${BULKFILESDIR}/$BRKWRKLOG" "${BULKFILESDIR}/$
 #
 # Remove old/broken distfiles and binary packages
 #
-PACKAGES=`( cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PACKAGES )`
+PACKAGES=`( cd "${some_package_dir}" && ${BMAKE} show-var VARNAME=PACKAGES )`
 
 case "$LINTPKGSRC_CACHE$PRUNEDISTFILES$PRUNEPACKAGES" in
 *yes*|*YES*)
-	# install pkglint to support any of these options
-	( cd "${PKGLINT_PKG_DIR}" && ${BMAKE} PRECLEAN=yes bulk-install )
+	# install lintpkgsrc to support any of these options
+	( cd "${USR_PKGSRC}/pkgtools/lintpkgsrc" && ${BMAKE} PRECLEAN=yes bulk-install )
 	;;
 esac
 
