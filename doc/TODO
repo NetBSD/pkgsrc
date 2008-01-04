@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6949 2008/01/04 08:03:22 obache Exp $
+$NetBSD: TODO,v 1.6950 2008/01/04 19:59:19 markd Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,6 @@ Suggested package updates
 	o binutils-2.18
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
-	o blender-2.44
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bonnie++-1.03b
