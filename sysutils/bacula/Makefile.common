@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2007/09/20 13:40:18 ghen Exp $
+# $NetBSD: Makefile.common,v 1.43 2008/01/04 14:32:49 ghen Exp $
 
 DISTNAME=		bacula-2.2.4
 CATEGORIES=		sysutils
@@ -61,7 +61,7 @@ PTHREAD_AUTO_VARS=	yes
 EXAMPLESDIR=		${PREFIX}/share/examples/bacula
 
 pre-install:
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
