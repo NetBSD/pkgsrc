@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.746 2008/01/04 01:43:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.747 2008/01/04 16:03:55 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3552,7 +3552,33 @@ sub readmakefile($$$$) {
 					$line->log_error("Cannot read $dirname/$includefile.");
 				} else {
 					$opt_debug_include and $line->log_debug("Including \"$dirname/$includefile\".");
+					my $last_lineno = $#{$all_lines};
 					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
+
+					# Check that there is a comment in each
+					# Makefile.common that says which files
+					# include it.
+					if ($includefile =~ qr"/Makefile\.common$") {
+						my $mentioned = false;
+						my $expected = "# used by " . relative_path($cwd_pkgsrcdir, $fname);
+						for (my $i = $last_lineno + 1; $i <= $#{$all_lines}; $i++) {
+							my $mcline = $all_lines->[$i];
+							$mentioned = true if $mcline->text eq $expected;
+						}
+
+						if (!$mentioned) {
+							$all_lines->[$last_lineno + 3]->log_warning("Please add a line \"$expected\" here.");
+							$all_lines->[$last_lineno + 3]->explain_warning(
+"Since Makefile.common files usually don't have any comments and",
+"therefore not a clearly defined interface, they should at least contain",
+"references to all files that include them, so that it is easier to see",
+"what effects future changes may have.",
+"",
+"If there are more than five packages that use a Makefile.common,",
+"you should think about giving it a proper name (maybe plugin.mk) and",
+"documenting its interface.");
+						}
+					}
 				}
 			}
 
