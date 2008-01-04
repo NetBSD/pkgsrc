@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2007/10/29 13:06:44 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/04 05:54:57 obache Exp $
 #
 
 DISTNAME=	elscreen-1.4.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/
+MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/ \
+		ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/old/
 DISTFILES=	${DISTNAME}.tar.gz \
 		elscreen-dired-0.1.0.tar.gz \
 		elscreen-dnd-0.0.0.tar.gz \
