@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.139 2007/12/27 08:01:20 markd Exp $
+# $NetBSD: Makefile,v 1.140 2008/01/04 21:05:56 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -32,7 +32,6 @@ REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
-CONFIGURE_ARGS+=	--without-composite
 CONFIGURE_ARGS+=	--without-java
 
 REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \

@@ -1,10 +1,18 @@
-# $NetBSD: options.mk,v 1.2 2007/10/31 11:56:44 markd Exp $
+# $NetBSD: options.mk,v 1.3 2008/01/04 21:05:56 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	inet6 sasl samba debug pam
+PKG_SUPPORTED_OPTIONS=	inet6 sasl samba debug pam composite
 PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcomposite)
+CONFIGURE_ARGS+=	--with-composite
+PLIST_SUBST+=		HAVE_COMPOSITE=""
+.else
+CONFIGURE_ARGS+=	--without-composite
+PLIST_SUBST+=		HAVE_COMPOSITE="@comment "
+.endif
 
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
