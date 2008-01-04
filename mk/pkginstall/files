@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.4 2007/07/12 19:41:46 jlam Exp $
+# $NetBSD: files,v 1.5 2008/01/04 21:50:27 heinz Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -425,8 +425,8 @@ CHECK-PERMS)
 		exit 1
 		;;
 	esac; }
-	${RM} -fr $tmpdir
 	${TEST} $? -eq 0 || exitcode=1
+	${RM} -fr $tmpdir
 	;;
 
 *)
