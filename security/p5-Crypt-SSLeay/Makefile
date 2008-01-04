@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/11/29 14:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/04 22:20:31 heinz Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.57
@@ -12,6 +12,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Crypt-SSLeay/
 COMMENT=	Crypt::SSLeay - OpenSSL glue that provides LWP https support
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		c
 
 PERL5_PACKLIST=		auto/Crypt/SSLeay/.packlist
 
