@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.33 2007/10/18 22:44:09 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.34 2008/01/04 15:53:41 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -189,7 +189,7 @@ and you can still use binary packages from someone else.</para>
   <sect2 id="pkg_versions">
     <title>Finding if newer versions of your installed packages are in pkgsrc</title>
     <para>
-      Install <filename role="pkg">pkgtools/pkglint</filename> and run
+      Install <filename role="pkg">pkgtools/lintpkgsrc</filename> and run
       <command>lintpkgsrc</command> with the <quote>-i</quote>
       argument to check if your packages are up-to-date, e.g.
     </para>
