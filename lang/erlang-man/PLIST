@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/07/28 14:27:11 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/04 14:05:06 ghen Exp $
 lib/erlang/man/man1/epmd.1
 lib/erlang/man/man1/erl.1
 lib/erlang/man/man1/erl_call.1
@@ -80,6 +80,7 @@ lib/erlang/man/man3/alarm_handler.3
 lib/erlang/man/man3/any.3
 lib/erlang/man/man3/application.3
 lib/erlang/man/man3/appmon.3
+lib/erlang/man/man3/array.3
 lib/erlang/man/man3/asn1ct.3
 lib/erlang/man/man3/asn1rt.3
 lib/erlang/man/man3/auth.3
@@ -102,7 +103,13 @@ lib/erlang/man/man3/cover.3
 lib/erlang/man/man3/cprof.3
 lib/erlang/man/man3/cpu_sup.3
 lib/erlang/man/man3/crashdump.3
-lib/erlang/man/man3/crypto.3
+lib/erlang/man/man3/ct.3
+lib/erlang/man/man3/ct_cover.3
+lib/erlang/man/man3/ct_ftp.3
+lib/erlang/man/man3/ct_master.3
+lib/erlang/man/man3/ct_rpc.3
+lib/erlang/man/man3/ct_snmp.3
+lib/erlang/man/man3/ct_telnet.3
 lib/erlang/man/man3/dbg.3
 lib/erlang/man/man3/debugger.3
 lib/erlang/man/man3/dets.3
@@ -122,6 +129,7 @@ lib/erlang/man/man3/edoc_extract.3
 lib/erlang/man/man3/edoc_layout.3
 lib/erlang/man/man3/edoc_lib.3
 lib/erlang/man/man3/edoc_run.3
+lib/erlang/man/man3/egd.3
 lib/erlang/man/man3/ei.3
 lib/erlang/man/man3/ei_connect.3
 lib/erlang/man/man3/epp.3
@@ -196,6 +204,7 @@ lib/erlang/man/man3/ic_c_protocol.3
 lib/erlang/man/man3/ic_clib.3
 lib/erlang/man/man3/igor.3
 lib/erlang/man/man3/inet.3
+lib/erlang/man/man3/inets.3
 lib/erlang/man/man3/init.3
 lib/erlang/man/man3/instrument.3
 lib/erlang/man/man3/int.3
@@ -226,11 +235,9 @@ lib/erlang/man/man3/megaco_transport.3
 lib/erlang/man/man3/megaco_udp.3
 lib/erlang/man/man3/megaco_user.3
 lib/erlang/man/man3/memsup.3
-lib/erlang/man/man3/mnemosyne.3
 lib/erlang/man/man3/mnesia.3
 lib/erlang/man/man3/mnesia_frag_hash.3
 lib/erlang/man/man3/mnesia_registry.3
-lib/erlang/man/man3/mnesia_session.3
 lib/erlang/man/man3/mod_alias.3
 lib/erlang/man/man3/mod_auth.3
 lib/erlang/man/man3/mod_esi.3
@@ -254,6 +261,7 @@ lib/erlang/man/man3/os_sup.3
 lib/erlang/man/man3/otp_mib.3
 lib/erlang/man/man3/overload.3
 lib/erlang/man/man3/packages.3
+lib/erlang/man/man3/percept.3
 lib/erlang/man/man3/pg.3
 lib/erlang/man/man3/pg2.3
 lib/erlang/man/man3/pman.3
@@ -294,6 +302,7 @@ lib/erlang/man/man3/snmpa_error_report.3
 lib/erlang/man/man3/snmpa_local_db.3
 lib/erlang/man/man3/snmpa_mpd.3
 lib/erlang/man/man3/snmpa_network_interface.3
+lib/erlang/man/man3/snmpa_network_interface_filter.3
 lib/erlang/man/man3/snmpa_notification_filter.3
 lib/erlang/man/man3/snmpa_supervisor.3
 lib/erlang/man/man3/snmpc.3
@@ -311,19 +320,20 @@ lib/erlang/man/man3/ssh_sftpd.3
 lib/erlang/man/man3/ssh_ssh.3
 lib/erlang/man/man3/ssh_sshd.3
 lib/erlang/man/man3/ssh_transport.3
-lib/erlang/man/man3/ssl.3
-lib/erlang/man/man3/ssl_pkix.3
 lib/erlang/man/man3/string.3
 lib/erlang/man/man3/supervisor.3
 lib/erlang/man/man3/supervisor_bridge.3
 lib/erlang/man/man3/sys.3
 lib/erlang/man/man3/systools.3
 lib/erlang/man/man3/tags.3
+lib/erlang/man/man3/test_server.3
+lib/erlang/man/man3/test_server_ctrl.3
 lib/erlang/man/man3/tftp.3
 lib/erlang/man/man3/timer.3
 lib/erlang/man/man3/toolbar.3
 lib/erlang/man/man3/ttb.3
 lib/erlang/man/man3/tv.3
+lib/erlang/man/man3/unix_telnet.3
 lib/erlang/man/man3/user.3
 lib/erlang/man/man3/webtool.3
 lib/erlang/man/man3/win32reg.3
@@ -344,15 +354,15 @@ lib/erlang/man/man4/config.4
 lib/erlang/man/man4/rel.4
 lib/erlang/man/man4/relup.4
 lib/erlang/man/man4/script.4
-lib/erlang/man/man6/crypto.6
+lib/erlang/man/man6/common_test.6
 lib/erlang/man/man6/docbuilder.6
 lib/erlang/man/man6/kernel.6
 lib/erlang/man/man6/observer.6
 lib/erlang/man/man6/runtime_tools.6
 lib/erlang/man/man6/sasl.6
 lib/erlang/man/man6/snmp.6
-lib/erlang/man/man6/ssl.6
 lib/erlang/man/man6/stdlib.6
+lib/erlang/man/man6/test_server.6
 @dirrm lib/erlang/man/man6
 @dirrm lib/erlang/man/man4
 @dirrm lib/erlang/man/man3

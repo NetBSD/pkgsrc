@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST.common_end,v 1.5 2007/07/28 14:27:10 obache Exp $
+@comment $NetBSD: PLIST.common_end,v 1.6 2008/01/04 14:05:05 ghen Exp $
 @dirrm lib/erlang/usr/lib
 @dirrm lib/erlang/usr/include/obsolete
 @dirrm lib/erlang/usr/include
 @dirrm lib/erlang/usr
-@dirrm lib/erlang/releases/R11B
+@dirrm lib/erlang/releases/${VERSION}
 @dirrm lib/erlang/releases
 @dirrm lib/erlang/misc
 @dirrm lib/erlang/lib/xmerl-${VERSION.xmerl}/src
@@ -36,6 +36,10 @@
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}/src
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}/ebin
 @dirrm lib/erlang/lib/toolbar-${VERSION.toolbar}
+@dirrm lib/erlang/lib/test_server-${VERSION.test_server}/src
+@dirrm lib/erlang/lib/test_server-${VERSION.test_server}/include
+@dirrm lib/erlang/lib/test_server-${VERSION.test_server}/ebin
+@dirrm lib/erlang/lib/test_server-${VERSION.test_server}
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/src
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/examples
 @dirrm lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/ebin
@@ -154,21 +158,12 @@
 @dirrm lib/erlang/lib/observer-${VERSION.observer}/include
 @dirrm lib/erlang/lib/observer-${VERSION.observer}/ebin
 @dirrm lib/erlang/lib/observer-${VERSION.observer}
-@dirrm lib/erlang/lib/mnesia_session-${VERSION.mnesia_session}/src
-@dirrm lib/erlang/lib/mnesia_session-${VERSION.mnesia_session}/include
-@dirrm lib/erlang/lib/mnesia_session-${VERSION.mnesia_session}/ebin
-@dirrm lib/erlang/lib/mnesia_session-${VERSION.mnesia_session}
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}/src
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}/include
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}/examples/bench
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}/examples
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}/ebin
 @dirrm lib/erlang/lib/mnesia-${VERSION.mnesia}
-@dirrm lib/erlang/lib/mnemosyne-${VERSION.mnemosyne}/src
-@dirrm lib/erlang/lib/mnemosyne-${VERSION.mnemosyne}/include
-@dirrm lib/erlang/lib/mnemosyne-${VERSION.mnemosyne}/examples
-@dirrm lib/erlang/lib/mnemosyne-${VERSION.mnemosyne}/ebin
-@dirrm lib/erlang/lib/mnemosyne-${VERSION.mnemosyne}
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/udp
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/text
 @dirrm lib/erlang/lib/megaco-${VERSION.megaco}/src/tcp
@@ -342,6 +337,15 @@
 @dirrm lib/erlang/lib/compiler-${VERSION.compiler}/src
 @dirrm lib/erlang/lib/compiler-${VERSION.compiler}/ebin
 @dirrm lib/erlang/lib/compiler-${VERSION.compiler}
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/src
+@exec ${MKDIR} %D/lib/erlang/lib/common_test-${VERSION.common_test}/priv/lib
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/priv/lib
+@exec ${MKDIR} %D/lib/erlang/lib/common_test-${VERSION.common_test}/priv/bin
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/priv/bin
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/priv
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/include
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}/ebin
+@dirrm lib/erlang/lib/common_test-${VERSION.common_test}
 @dirrm lib/erlang/lib/asn1-${VERSION.asn1}/src
 @dirrm lib/erlang/lib/asn1-${VERSION.asn1}/priv/lib
 @dirrm lib/erlang/lib/asn1-${VERSION.asn1}/priv
@@ -362,7 +366,7 @@
 @dirrm lib/erlang/erts-${VERSION.erts}/include/internal/x86_64
 @dirrm lib/erlang/erts-${VERSION.erts}/include/internal/sparc32
 @dirrm lib/erlang/erts-${VERSION.erts}/include/internal/ppc32
-@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/i386
+@dirrm lib/erlang/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}
 @dirrm lib/erlang/erts-${VERSION.erts}/include/internal
 @dirrm lib/erlang/erts-${VERSION.erts}/include
 @exec ${MKDIR} %D/lib/erlang/erts-${VERSION.erts}/doc
