@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/18 21:06:58 wiz Exp $
-bin/lintpkgsrc
+@comment $NetBSD: PLIST,v 1.4 2008/01/04 15:59:47 rillig Exp $
 bin/pkglint
 bin/plist-clash
-man/cat1/lintpkgsrc.0
 man/cat1/pkglint.0
-man/man1/lintpkgsrc.1
 man/man1/pkglint.1
 share/pkglint/deprecated.map
 share/pkglint/makevars.map
