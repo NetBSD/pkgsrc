@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2006/01/21 09:02:16 jmmv Exp $
+$NetBSD: patch-ad,v 1.5 2008/01/04 19:58:41 jmmv Exp $
 
---- boost/config/suffix.hpp.orig	2006-01-20 21:59:33.000000000 +0100
+--- boost/config/suffix.hpp.orig	2007-10-13 15:10:16.000000000 +0200
 +++ boost/config/suffix.hpp
-@@ -213,7 +213,7 @@
+@@ -207,7 +207,7 @@
  // from here then add to the appropriate compiler section):
  //
  #if (defined(__MT__) || defined(_MT) || defined(_REENTRANT) \
 -    || defined(_PTHREADS)) && !defined(BOOST_HAS_THREADS)
-+    || defined(_PTHREADS) || defined(__DragonFly__) || defined(__APPLE__)) && !defined(BOOST_HAS_THREADS)
++    || defined(_PTHREADS) || defined(__APPLE__) || defined(__DragonFly__)) && !defined(BOOST_HAS_THREADS)
  #  define BOOST_HAS_THREADS
  #endif
  

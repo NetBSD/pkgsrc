@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2008/01/04 19:58:43 jmmv Exp $
+
+--- tools/build/v2/tools/python.jam.orig	2007-09-22 22:13:17.000000000 +0200
++++ tools/build/v2/tools/python.jam
+@@ -622,6 +622,7 @@ local rule system-library-dependencies (
+ 
+         case qnx* : return ;
+         case darwin : return ;
++        case netbsd : return ;
+         case windows : return ;
+ 
+         case hpux : return  <library>rt ;
