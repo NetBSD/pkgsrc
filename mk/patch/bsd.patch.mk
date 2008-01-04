@@ -1,4 +1,4 @@
-# $NetBSD: bsd.patch.mk,v 1.1 2006/06/06 04:48:19 jlam Exp $
+# $NetBSD: bsd.patch.mk,v 1.2 2008/01/04 01:46:27 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -12,4 +12,4 @@
 #    pre-patch, do-patch, post-patch
 #
 
-.include "${PKGSRCDIR}/mk/patch/patch.mk"
+.include "patch.mk"
