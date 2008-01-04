@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.25 2008/01/04 10:06:09 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.26 2008/01/04 10:08:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/ruby-RMagick to 2.0.0 [obache 2008-01-04]
 	Updated devel/scmcvs to 1.11.22 [martti 2008-01-04]
 	Updated security/ap-modsecurity2 to 2.1.4 [adrianp 2008-01-04]
+	Updated www/php4 to 4.4.8 [adrianp 2008-01-04]
