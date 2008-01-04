@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:00 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/04 06:04:42 obache Exp $
 #
 
 DISTNAME=	colorize_0.3.0
 PKGNAME=	colorize-0.3.0
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://nrg.martos.bme.hu/release/colorize/download/bz2/
+MASTER_SITES=	http://colorize.raszi.hu/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zuntum@NetBSD.org
-HOMEPAGE=	http://nrg.martos.bme.hu/release/colorize/
+HOMEPAGE=	# http://colorize.raszi.hu/
 COMMENT=	Log colorize perl script
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
