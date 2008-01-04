@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/04 14:05:06 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/04 14:10:06 ghen Exp $
 
 DISTNAME=		otp_doc_html_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
 PKGNAME=		erlang-doc-${ERLANG_VERSION}
@@ -14,16 +14,18 @@ DIST_SUBDIR=		erlang
 # needs erlang installed for its directory structure
 DEPENDS+=		erlang-${ERLANG_VERSION}{,nb*}:../../lang/erlang
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 # these files are already installed by ../../lang/erlang:
-DUPLICATE_FILES=	lib/cosEvent-${VERSION.cosEvent:Q}/info
-DUPLICATE_FILES+=	lib/cosEventDomain-${VERSION.cosEventDomain:Q}/info
-DUPLICATE_FILES+=	lib/mnesia_session-${VERSION.mnesia_session:Q}/info
+DUPLICATE_FILES=	lib/cosEvent-${VERSION.cosEvent}/info
+DUPLICATE_FILES+=	lib/cosEventDomain-${VERSION.cosEventDomain}/info
+DUPLICATE_FILES+=	lib/mnesia_session-${VERSION.mnesia_session}/info
 
 do-install:
-	cd ${WRKDIR} && ${PAX} ${DUPLICATE_FILES:=-s,%,,} -rw doc erts-${VERSION.erts:Q} lib ${PREFIX:Q}/lib/erlang/
+	cd ${WRKDIR} && pax ${DUPLICATE_FILES:=-s,%,,} -rw doc erts-${VERSION.erts} lib ${DESTDIR}${PREFIX}/lib/erlang/
 
 .include "../../lang/erlang/Makefile.versions"
 
