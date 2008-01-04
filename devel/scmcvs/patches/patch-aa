@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/05/27 09:49:51 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/04 06:48:06 martti Exp $
 
---- Makefile.in.orig	2005-02-01 00:11:19.000000000 +0100
-+++ Makefile.in
-@@ -65,7 +65,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
+--- Makefile.in.orig	2006-06-09 17:44:15.000000000 +0300
++++ Makefile.in	2008-01-02 14:42:37.000000000 +0200
+@@ -65,7 +65,7 @@
   configure.lineno configure.status.lineno
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = config.h
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2007/05/27 09:49:51 schmonz Exp $
  SOURCES =
  DIST_SOURCES =
  RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
-@@ -183,7 +183,7 @@ target_alias = @target_alias@
+@@ -184,7 +184,7 @@
  
  # Unix source subdirs, where we'll want to run lint and etags:
  # This is a legacy variable from b4 Automake
