@@ -1,2 +1,1 @@
-RMagick is an interface between the Ruby programming language and the
-ImageMagick and GraphicsMagick image processing libraries.
+RMagick is an interface between Ruby and ImageMagick.
