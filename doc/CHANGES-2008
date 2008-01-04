@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.24 2008/01/04 06:48:18 martti Exp $
+$NetBSD: CHANGES-2008,v 1.25 2008/01/04 10:06:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/p5-Device-Gsm to 1.48 [grant 2008-01-03]
 	Updated graphics/ruby-RMagick to 2.0.0 [obache 2008-01-04]
 	Updated devel/scmcvs to 1.11.22 [martti 2008-01-04]
+	Updated security/ap-modsecurity2 to 2.1.4 [adrianp 2008-01-04]
