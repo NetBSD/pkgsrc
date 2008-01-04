@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.368 2007/12/22 11:21:47 rillig Exp $
+# $NetBSD: Makefile,v 1.369 2008/01/04 15:59:47 rillig Exp $
 #
 
-DISTNAME=	pkglint-4.81
+DISTNAME=	pkglint-4.82
 CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	# none
+DISTFILES=	# none
 
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
-COMMENT=	Verifier for NetBSD packages and complete pkgsrc tree
+COMMENT=	Verifier for NetBSD packages
 
-DEPENDS+=	digest>=20010101:../../pkgtools/digest
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
@@ -22,14 +21,12 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
-
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
-SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.pl
 SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
@@ -51,18 +48,15 @@ quick-install:
 	${MAKE} do-extract subst-pkglint do-install selftest clean
 
 do-extract:
-	cd ${FILESDIR} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
+	cd ${FILESDIR} && ${CP} pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${DESTDIR}${PREFIX}/bin/pkglint
-	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${DESTDIR}${PREFIX}/bin/lintpkgsrc
 	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${DESTDIR}${PREFIX}/bin/plist-clash
 .if !empty(MANINSTALL:Mcatinstall)
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 .endif
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 	${INSTALL_DATA} ${FILESDIR}/makevars.map ${DESTDIR}${PREFIX}/share/pkglint/
