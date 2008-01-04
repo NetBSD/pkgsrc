@@ -1,0 +1,42 @@
+$NetBSD: patch-al,v 1.1 2008/01/04 19:58:42 jmmv Exp $
+
+--- Jamfile.v2.orig
++++ Jamfile.v2
+@@ -106,6 +106,9 @@
+ 
+ constant BOOST_VERSION_TAG : $(version-tag:J="_") ;
+ 
++local PREFIX = [ os.environ PREFIX ] ;
++local COMPILER_RPATH_FLAG = [ os.environ COMPILER_RPATH_FLAG ] ;
++
+ local default-build ;
+ if $(__file__:D) = ""
+ {
+@@ -113,6 +116,7 @@
+         debug release
+         <threading>single <threading>multi
+         <link>shared <link>static
++        <linkflags>$(COMPILER_RPATH_FLAG)$(PREFIX)/lib
+         ;
+     
+     if [ os.name ] = NT
+@@ -215,7 +216,7 @@
+        EXIT ;
+    }
+    local wrong = [ set.difference $(without-parameter) : $(existing-libraries) ] ;
+-   if $(wrong)
++   if $(without-parameter) != * && $(wrong)
+    {
+        ECHO "error: wrong library name '$(wrong[1])' in the --without-<library> option." ;
+        EXIT ;
+@@ -225,6 +226,10 @@
+    {
+        return [ set.intersection $(existing-libraries) : $(with-parameter) ] ;
+    }
++   else if $(without-parameter) = *
++   {
++       return [ set.difference "" : "" ] ;
++   }
+    else
+    {
+        return [ set.difference $(existing-libraries) : $(without-parameter) ] ;
