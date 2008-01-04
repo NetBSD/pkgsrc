@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/06/16 18:15:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/01/04 22:31:01 xtraeme Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -80,7 +80,7 @@ share/doc/gxemul/20070616-netbsd-pmppc-diskless_small.png
 share/doc/gxemul/HISTORY
 share/doc/gxemul/LICENSE
 share/doc/gxemul/README
-share/doc/gxemul/RELEASE
+share/doc/gxemul/RELEASE.html
 share/doc/gxemul/TODO
 share/doc/gxemul/configfiles.html
 share/doc/gxemul/debian-1-small.png
@@ -119,8 +119,6 @@ share/doc/gxemul/guestoses.html
 share/doc/gxemul/index.html
 share/doc/gxemul/intro.html
 share/doc/gxemul/maddr.gif
-share/doc/gxemul/make_doc_footer.html
-share/doc/gxemul/make_doc_header.html
 share/doc/gxemul/misc.html
 share/doc/gxemul/networking.html
 share/doc/gxemul/openbsd-pmax-20040710.png
