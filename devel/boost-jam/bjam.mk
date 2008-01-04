@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.1.1.1 2007/06/02 17:48:51 jmmv Exp $
+# $NetBSD: bjam.mk,v 1.2 2008/01/04 19:58:40 jmmv Exp $
 #
 
 .include "../../devel/boost-jam/buildlink3.mk"
@@ -7,24 +7,36 @@
 .include "../../mk/bsd.prefs.mk"
 
 BJAM=			${BUILDLINK_PREFIX.boost-jam}/bin/bjam
+
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
 BJAM_ARGS+=		--layout=system
 BJAM_ARGS+=		--prefix=${PREFIX}
-BJAM_ARGS+=		-sBUILD=${BJAM_BUILD:Q}
-BJAM_ARGS+=		-sTOOLS=${BOOST_TOOLSET}
+BJAM_ARGS+=		--toolset=${BOOST_TOOLSET}
 .if ${OPSYS} == "Darwin"
 BJAM_ARGS+=		-sTARGET_LIBDIR=${PREFIX}/lib
 .endif
-.if defined(BOOST_DEBUG) && !empty(BOOST_DEBUG:M[Yy][Ee][Ss])
+BJAM_ARGS+=		${BJAM_BUILD}
+
 BJAM_BUILD+=		debug
-.endif
-BJAM_BUILD+=		<linkflags>${COMPILER_RPATH_FLAG}${PREFIX}/lib
-BJAM_BUILD+=		<threading>multi
 BJAM_BUILD+=		release
+BJAM_BUILD+=		threading=multi
+BJAM_BUILD+=		link=shared,static
+
 BJAM_CMD=		${SETENV} ${MAKE_ENV} ${BJAM} ${BJAM_ARGS}
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.boost
+PKG_SUPPORTED_OPTIONS=	debug
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_SRC+=		PLIST
+
+UNLIMIT_RESOURCES+=	datasize
+
 bjam-build:
-	@cd ${WRKSRC} && ${BJAM_CMD} stage
+	@${_ULIMIT_CMD}							\
+	cd ${WRKSRC} && ${BJAM_CMD} stage
 
 bjam-install:
-	@cd ${WRKSRC} && ${BJAM_CMD} install
+	@${_ULIMIT_CMD}							\
+	cd ${WRKSRC} && ${BJAM_CMD} install

@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2006/01/12 22:48:46 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2008/01/04 19:58:42 jmmv Exp $
 
---- tools/build/jam_src/jam.h.orig	2006-01-12 21:30:50.000000000 +0000
-+++ tools/build/jam_src/jam.h
+--- tools/jam/src/jam.h.orig	2005-10-16 17:34:27.000000000 +0200
++++ tools/jam/src/jam.h
 @@ -250,8 +250,8 @@
  # define OS_FREEBSD
  # endif
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.1 2006/01/12 22:48:46 joerg Exp $
  # endif
  # ifdef __DGUX__
  # define OSMINOR "OS=DGUX"
-@@ -415,7 +415,7 @@
+@@ -419,7 +419,7 @@
  
  # if !defined(OS_BSDI) && \
       !defined(OS_FREEBSD) && \
@@ -22,7 +22,7 @@ $NetBSD: patch-ah,v 1.1 2006/01/12 22:48:46 joerg Exp $
       !defined(OS_NEXT) && \
       !defined(OS_MACHTEN) && \
       !defined(OS_MACOSX) && \
-@@ -448,7 +448,7 @@
+@@ -452,7 +452,7 @@
       defined( __i386__ ) || \
       defined( _M_IX86 )
  # if !defined( OS_FREEBSD ) && \
