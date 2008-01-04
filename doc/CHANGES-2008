@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.26 2008/01/04 10:08:09 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.27 2008/01/04 12:12:28 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmcvs to 1.11.22 [martti 2008-01-04]
 	Updated security/ap-modsecurity2 to 2.1.4 [adrianp 2008-01-04]
 	Updated www/php4 to 4.4.8 [adrianp 2008-01-04]
+	Updated wm/evilwm to 1.0.0 [sketch 2008-01-04]
