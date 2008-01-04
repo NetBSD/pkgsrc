@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2007/01/22 01:40:44 obache Exp $
-${RUBY_SITEARCHLIBDIR}/RMagick.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.11 2008/01/04 03:05:13 obache Exp $
+${RUBY_SITEARCHLIBDIR}/RMagick2.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
 ${RUBY_SITELIBDIR}/rvg/container.rb
@@ -15,6 +15,7 @@ ${RUBY_SITELIBDIR}/rvg/stylable.rb
 ${RUBY_SITELIBDIR}/rvg/text.rb
 ${RUBY_SITELIBDIR}/rvg/transformable.rb
 ${RUBY_SITELIBDIR}/rvg/units.rb
+${RUBY_EXAMPLESDIR}/RMagick/crop_with_gravity.rb
 ${RUBY_EXAMPLESDIR}/RMagick/demo.rb
 ${RUBY_EXAMPLESDIR}/RMagick/describe.rb
 ${RUBY_EXAMPLESDIR}/RMagick/find_similar_region.rb
@@ -28,6 +29,7 @@ ${RUBY_EXAMPLESDIR}/RMagick/spinner.rb
 ${RUBY_EXAMPLESDIR}/RMagick/thumbnail.rb
 ${RUBY_EXAMPLESDIR}/RMagick/vignette.rb
 ${RUBY_DOCDIR}/RMagick/.rmagick
+${RUBY_DOCDIR}/RMagick/composite_layers.rb.html
 ${RUBY_DOCDIR}/RMagick/crop_resized.rb.html
 ${RUBY_DOCDIR}/RMagick/css/.rmagick
 ${RUBY_DOCDIR}/RMagick/css/doc.css
@@ -139,6 +141,9 @@ ${RUBY_DOCDIR}/RMagick/ex/colors.miff
 ${RUBY_DOCDIR}/RMagick/ex/colors.rb
 ${RUBY_DOCDIR}/RMagick/ex/composite.gif
 ${RUBY_DOCDIR}/RMagick/ex/composite.rb
+${RUBY_DOCDIR}/RMagick/ex/composite_layers.gif
+${RUBY_DOCDIR}/RMagick/ex/composite_layers.rb
+${RUBY_DOCDIR}/RMagick/ex/composite_layers1.gif
 ${RUBY_DOCDIR}/RMagick/ex/constitute.jpg
 ${RUBY_DOCDIR}/RMagick/ex/contrast.jpg
 ${RUBY_DOCDIR}/RMagick/ex/contrast.rb
@@ -176,6 +181,8 @@ ${RUBY_DOCDIR}/RMagick/ex/equalize.jpg
 ${RUBY_DOCDIR}/RMagick/ex/equalize.rb
 ${RUBY_DOCDIR}/RMagick/ex/evenodd.gif
 ${RUBY_DOCDIR}/RMagick/ex/evenodd.rb
+${RUBY_DOCDIR}/RMagick/ex/fill_pattern.gif
+${RUBY_DOCDIR}/RMagick/ex/fill_pattern.rb
 ${RUBY_DOCDIR}/RMagick/ex/flatten_images.gif
 ${RUBY_DOCDIR}/RMagick/ex/flatten_images.rb
 ${RUBY_DOCDIR}/RMagick/ex/flip.jpg
@@ -551,6 +558,7 @@ ${RUBY_DOCDIR}/RMagick/color_reset.rb.html
 ${RUBY_DOCDIR}/RMagick/colorize.rb.html
 ${RUBY_DOCDIR}/RMagick/colors.rb.html
 ${RUBY_DOCDIR}/RMagick/composite.rb.html
+${RUBY_DOCDIR}/RMagick/composite_layers.rb.html
 ${RUBY_DOCDIR}/RMagick/comtasks.html
 ${RUBY_DOCDIR}/RMagick/constants.html
 ${RUBY_DOCDIR}/RMagick/contrast.rb.html
@@ -570,6 +578,7 @@ ${RUBY_DOCDIR}/RMagick/emboss.rb.html
 ${RUBY_DOCDIR}/RMagick/enhance.rb.html
 ${RUBY_DOCDIR}/RMagick/equalize.rb.html
 ${RUBY_DOCDIR}/RMagick/evenodd.rb.html
+${RUBY_DOCDIR}/RMagick/fill_pattern.rb.html
 ${RUBY_DOCDIR}/RMagick/flatten_images.rb.html
 ${RUBY_DOCDIR}/RMagick/flip.rb.html
 ${RUBY_DOCDIR}/RMagick/flop.rb.html
