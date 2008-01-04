@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/25 19:34:22 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/04 20:17:47 markd Exp $
 #
 
 DISTNAME=	mppenc-1.16
@@ -10,10 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.musepack.net/
 COMMENT=	Musepack encoder
 
-BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-do-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/cmake \
-	 -DCMAKE_INSTALL_PREFIX:STRING=${PREFIX})
+USE_CMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
