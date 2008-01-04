@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/01/03 19:58:38 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/01/04 22:31:01 xtraeme Exp $
 #
 
-DISTNAME=	gxemul-0.4.6
+DISTNAME=	gxemul-0.4.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://gavare.se/gxemul/src/
 
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gxemul ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/gxemul.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.for f in README HISTORY TODO RELEASE LICENSE
+.for f in README HISTORY TODO RELEASE.html LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
