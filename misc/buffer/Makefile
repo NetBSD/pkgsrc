@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/04 06:24:32 obache Exp $
 
 DISTNAME=	buffer-1.17
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.gwdg.de/pub/linux/jurix/source/system/backup/ \
-		ftp://ftp.fu-berlin.de/unix/linux/mirrors/jurix.jura.uni-sb.de/source/system/backup/
+MASTER_SITES=	#
 
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	Buffer sporadic binary I/O for faster tape use
