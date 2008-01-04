@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.48 2007/12/18 10:18:40 markd Exp $
+# $NetBSD: bsd.tools.mk,v 1.49 2008/01/04 01:46:27 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,23 +146,23 @@ post-tools:
 	@${DO_NADA}
 .endif
 
-.include "${PKGSRCDIR}/mk/tools/digest.mk"
-.include "${PKGSRCDIR}/mk/tools/automake.mk"
-.include "${PKGSRCDIR}/mk/tools/autoconf.mk"
-.include "${PKGSRCDIR}/mk/tools/texinfo.mk"
-.include "${PKGSRCDIR}/mk/tools/gettext.mk"
-.include "${PKGSRCDIR}/mk/tools/intltool.mk"
-.include "${PKGSRCDIR}/mk/tools/ldconfig.mk"
-.include "${PKGSRCDIR}/mk/tools/rpcgen.mk"
-.include "${PKGSRCDIR}/mk/tools/strip.mk"
-.include "${PKGSRCDIR}/mk/tools/cmake.mk"
-.include "${PKGSRCDIR}/mk/tools/imake.mk"
-.include "${PKGSRCDIR}/mk/tools/replace.mk"
-.include "${PKGSRCDIR}/mk/tools/perl.mk"
-.include "${PKGSRCDIR}/mk/tools/pkg-config.mk"
-.include "${PKGSRCDIR}/mk/tools/make.mk"
+.include "digest.mk"
+.include "automake.mk"
+.include "autoconf.mk"
+.include "texinfo.mk"
+.include "gettext.mk"
+.include "intltool.mk"
+.include "ldconfig.mk"
+.include "rpcgen.mk"
+.include "strip.mk"
+.include "cmake.mk"
+.include "imake.mk"
+.include "replace.mk"
+.include "perl.mk"
+.include "pkg-config.mk"
+.include "make.mk"
 
-.include "${PKGSRCDIR}/mk/tools/create.mk"
+.include "create.mk"
 
 _VARGROUPS+=		tools
 _USER_VARS.tools=	TOOLS_SHELL
