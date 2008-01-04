@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2005/06/18 14:32:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/04 19:58:41 jmmv Exp $
+lib/libboost_python-mt-d.a
+lib/libboost_python-mt-d.so
 lib/libboost_python-mt.a
 lib/libboost_python-mt.so
-lib/libboost_python-mt.so.${PKGVERSION}
