@@ -1,6 +1,6 @@
-$NetBSD: patch-bc,v 1.4 2005/12/11 11:01:48 markd Exp $
+$NetBSD: patch-bc,v 1.5 2008/01/04 21:05:57 markd Exp $
 
---- kdeeject/kdeeject.orig	2005-09-10 20:25:38.000000000 +1200
+--- kdeeject/kdeeject.orig	2006-10-02 06:31:56.000000000 +1300
 +++ kdeeject/kdeeject
 @@ -1,6 +1,6 @@
  #!/bin/sh
@@ -10,7 +10,7 @@ $NetBSD: patch-bc,v 1.4 2005/12/11 11:01:48 markd Exp $
  #
  # Copyright GPL v2 by David Faure <david@mandrakesoft.com>
  #
-@@ -17,7 +17,7 @@ if test $# -ge 1 -a "$1" != "--help"; th
+@@ -17,10 +17,26 @@ if test $# -ge 1 -a "$1" != "--help"; th
      OpenBSD)
        cdio -f $1 eject >/dev/null 2>&1
        ;;
@@ -19,3 +19,22 @@ $NetBSD: patch-bc,v 1.4 2005/12/11 11:01:48 markd Exp $
        dev=`echo $1 | sed -E -e 's#/dev/##' -e 's/([0-9])./\1/'`
        cdcontrol -f $dev eject >/dev/null 2>&1
        ;;
++    NetBSD)
++      dev=$1
++      if [ -h $1 ]; then
++        dev=$(readlink $dev 2> /dev/null) || dev=$1
++      fi
++      case $(sysctl -n kern.rawpartition 2> /dev/null) in
++      2) rawp=c ;;
++      3) rawp=d ;;
++      esac
++      rdev=$(echo $dev | sed -E -e 's#(/dev/)#\1r#; s#[a-z]$#'$rawp'#')
++      if [ -e $rdev ]; then
++        eject $rdev >/dev/null 2>&1
++      else
++        eject $dev >/dev/null 2>&1
++      fi
++      ;;
+     *)
+       # Warning, it has to be either eject 2.0.x or >=2.1.5
+       # Otherwise it doesn't work as expected (it requires a

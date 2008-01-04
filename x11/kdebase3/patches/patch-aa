@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2007/05/23 13:05:34 markd Exp $
+$NetBSD: patch-aa,v 1.18 2008/01/04 21:05:57 markd Exp $
 
---- configure.orig	2007-05-14 23:57:00.000000000 +1200
+--- configure.orig	2007-10-09 03:40:32.000000000 +1300
 +++ configure
-@@ -34288,7 +34288,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
+@@ -31683,7 +31683,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
  	# if you're trying to debug this check and think it's incorrect,
  	# better check your installation. The check _is_ correct - your
  	# installation is not.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.17 2007/05/23 13:05:34 markd Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -47113,6 +47113,23 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -42949,6 +42949,23 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.17 2007/05/23 13:05:34 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -50244,7 +50261,7 @@ fi
+@@ -45685,7 +45702,7 @@ fi
  
  
  case "$host" in
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.17 2007/05/23 13:05:34 markd Exp $
  	FOUND_USBVIEW=yes
  	;;
  esac
-@@ -51868,7 +51885,7 @@ acimake:
+@@ -47101,7 +47118,7 @@ acimake:
  
  EOF
      if $XMKMF >&5 2>&1 && test -f Makefile; then
@@ -53,7 +53,15 @@ $NetBSD: patch-aa,v 1.17 2007/05/23 13:05:34 markd Exp $
  	kde_cv_defines_imake_version=$imkv
      else
          { echo "$as_me:$LINENO: result: failed" >&5
-@@ -60629,6 +60647,7 @@ fi
+@@ -49261,6 +49278,7 @@ fi
+ 
+ 
+ case "$host" in
++  *-*-netbsd*) LIB_KVM="-lkvm" ;;
+   *-*-freebsd*) LIB_KVM="-lkvm" ;;
+   *) LIB_KVM=""  ;;
+ esac
+@@ -54739,6 +54757,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
