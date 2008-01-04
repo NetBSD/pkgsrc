@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2008/01/04 14:48:26 ghen Exp $
+# $NetBSD: Makefile,v 1.80 2008/01/04 18:17:16 joerg Exp $
 
 DISTNAME=		guile-1.8.3
 CATEGORIES=		lang
@@ -10,7 +10,7 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo
