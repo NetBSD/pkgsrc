@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6951 2008/01/04 20:20:39 wiz Exp $
+$NetBSD: TODO,v 1.6952 2008/01/04 22:31:56 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -635,7 +635,6 @@ Suggested package updates
 	o guile-gtk-2.0
 	o gwenview-1.4.2
 	o gworkspace-0.8.6
-	o gxemul-0.4.6.1
 	o gzrecover-0.5
 	o hackbot-2.21
 	o hanzim-1.8
