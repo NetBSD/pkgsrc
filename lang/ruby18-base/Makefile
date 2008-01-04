@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/11/05 01:09:23 grant Exp $
+# $NetBSD: Makefile,v 1.40 2008/01/04 15:42:34 ghen Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -17,6 +17,8 @@ CONFLICTS=	${RUBY_PKGPREFIX}-dbm-[0-9]* \
 		${RUBY_PKGPREFIX}-iconv-[0-9]* \
 		${RUBY_PKGPREFIX}-openssl-[0-9]* \
 		${RUBY_PKGPREFIX}-tcltk-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	yacc
@@ -109,36 +111,36 @@ pre-install:
 		-exec ${RM} -f {} \;
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/pty
-	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${RUBY_DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/irb
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/pty
+	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${DESTDIR}${RUBY_DOCDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^doc\///}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/${f:C/^doc\///}
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/ext/dl/h2rb ${PREFIX}/bin/h2rb${RUBY_VER}
+	${INSTALL_SCRIPT} ${WRKSRC}/ext/dl/h2rb ${DESTDIR}${PREFIX}/bin/h2rb${RUBY_VER}
 .for f in ${EXT_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${RUBY_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${DESTDIR}${RUBY_DOCDIR}
 .endfor
-	${CP} -r ${WRKSRC}/ext/pty/README.* ${RUBY_DOCDIR}/pty
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/pty
-	${CP} -r ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/bigdecimal
+	${CP} -r ${WRKSRC}/ext/pty/README.* ${DESTDIR}${RUBY_DOCDIR}/pty
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/pty
+	${CP} -r ${WRKSRC}/sample/* ${DESTDIR}${RUBY_EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/bigdecimal
 .for f in ${BIGDECIMAL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/bigdecimal/sample/${f} \
-		${RUBY_EXAMPLESDIR}/bigdecimal
+		${DESTDIR}${RUBY_EXAMPLESDIR}/bigdecimal
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/dl
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/dl
 .for f in ${DL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/dl/sample/${f} \
-		${RUBY_EXAMPLESDIR}/dl
+		${DESTDIR}${RUBY_EXAMPLESDIR}/dl
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/openssl
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/openssl
 .for f in ${OPENSSL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/sample/openssl/${f} \
-		${RUBY_EXAMPLESDIR}/openssl
+		${DESTDIR}${RUBY_EXAMPLESDIR}/openssl
 .endfor
 .for f in ${PTY_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_EXAMPLESDIR}/pty
+	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${DESTDIR}${RUBY_EXAMPLESDIR}/pty
 .endfor
 	${RUBY_GENERATE_PLIST}
 
