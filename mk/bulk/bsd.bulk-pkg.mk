@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.147 2007/12/02 12:58:25 wiz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.148 2008/01/04 15:49:07 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -254,7 +254,7 @@ bulk-cache:
 .else
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
-.  for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
+.  for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/lintpkgsrc
 	@if [ ! -d ${PKGSRCDIR}/${__tmp__} ]; then \
 		${BULK_MSG} "WARN: Skipping nonexisting directory ${__tmp__}"; \
 		${ECHO} " 0 ${__tmp__} 0" >> ${BULKFILESDIR:Q}/${BROKENFILE:Q}; \

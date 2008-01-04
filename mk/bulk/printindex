@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.30 2006/12/10 13:59:31 rillig Exp $
+# $NetBSD: printindex,v 1.31 2008/01/04 15:49:08 rillig Exp $
 #
 
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -95,7 +95,7 @@ esac
 # Get additional system information
 #
 
-cd "${pkgsrcdir}/pkgtools/pkglint"
+cd "${pkgsrcdir}/pkgtools/lintpkgsrc"
 BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
 GREP=`${BMAKE} show-var VARNAME=GREP USE_TOOLS=grep`
 MKDIR=`${BMAKE} show-var VARNAME=MKDIR USE_TOOLS=mkdir`

@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.46 2007/05/19 14:09:54 wiz Exp $
+# $NetBSD: mksandbox,v 1.47 2008/01/04 15:49:07 rillig Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -184,11 +184,11 @@ fi
 sandbox=$1
 sandbox_script="$sandbox/sandbox"
 
-packages=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PACKAGES)`
-distfiles=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=DISTDIR)`
-localbase=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALBASE)`
-pkg_dbdir=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PKG_DBDIR)`
-localpatches=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALPATCHES)`
+packages=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PACKAGES)`
+distfiles=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=DISTDIR)`
+localbase=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALBASE)`
+pkg_dbdir=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=PKG_DBDIR)`
+localpatches=`(cd $pkgsrc/pkgtools/lintpkgsrc; $bmakeprog show-var VARNAME=LOCALPATCHES)`
 
 test -d "$localpatches" || echo "WARNING: LOCALPATCHES directory does not exist - ignoring"
 
