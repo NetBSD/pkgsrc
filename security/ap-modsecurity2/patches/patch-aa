@@ -1,28 +1,25 @@
-$NetBSD: patch-aa,v 1.3 2007/05/18 09:20:09 adrianp Exp $
+$NetBSD: patch-aa,v 1.4 2008/01/04 10:05:51 adrianp Exp $
 
---- apache2/Makefile.orig	2007-03-07 16:24:45.000000000 +0000
+--- apache2/Makefile.orig	2007-11-27 18:37:37.000000000 +0000
 +++ apache2/Makefile
-@@ -17,7 +17,7 @@ builddir     = .
- #     Debian - /usr/share/apache2  (apache2-prefork-dev or apache2-threaded-dev
- #                                   needed, depending on your installation type)
+@@ -32,7 +32,7 @@ builddir     = .
+ # XML references in the Core Ruleset if you choose not to include XML support.
+ # In future versions of ModSecurity XML support will be required.
  #
--top_dir      = /apps/apache22
+-top_dir      = /usr/local/apache2
 +top_dir      = @PREFIX@/share/httpd
  
  top_srcdir   = ${top_dir}
  top_builddir = ${top_dir}
-@@ -27,11 +27,11 @@ include ${top_builddir}/build/special.mk
+@@ -42,9 +42,9 @@ include ${top_builddir}/build/special.mk
  APXS      = apxs
  APACHECTL = apachectl
  
 -INCLUDES = -I /usr/include/libxml2
--DEFS = -DWITH_LIBXML2
 +INCLUDES += -I@PREFIX@/include/httpd @XMLINC@
+ #INCLUDES = -I /usr/include/libxml2 -I /path/to/httpd-x.y/srclib/pcre
+-DEFS = -DWITH_LIBXML2
 +DEFS += @XMLDEFS@
+ #DEFS = -DWITH_LIBXML2 -DNO_MODSEC_API
  #LIBS = -Lmy/lib/dir -lmylib
- 
--CFLAGS = -O2 -g -Wuninitialized -Wall -Wmissing-prototypes -Wshadow -Wunused-variable -Wunused-value -Wchar-subscripts -Wsign-compare
-+#CFLAGS = -O2 -g -Wuninitialized -Wall -Wmissing-prototypes -Wshadow -Wunused-variable -Wunused-value -Wchar-subscripts -Wsign-compare
- 
- all: local-shared-build
  

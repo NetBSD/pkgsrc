@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/18 10:35:13 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/04 10:05:51 adrianp Exp $
 lib/httpd/mod_security2.so
 share/doc/ap-security/apache_request_cycle-modsecurity.jpg
 share/doc/ap-security/breach-logo-small.gif
@@ -10,8 +10,9 @@ share/doc/ap-security/html-multipage/05-variables.html
 share/doc/ap-security/html-multipage/06-transformation-functions.html
 share/doc/ap-security/html-multipage/07-actions.html
 share/doc/ap-security/html-multipage/08-operators.html
-share/doc/ap-security/html-multipage/apache_request_cycle-modsecurity.jpg
 share/doc/ap-security/html-multipage/ar01s02.html
+share/doc/ap-security/html-multipage/ar01s10.html
+share/doc/ap-security/html-multipage/apache_request_cycle-modsecurity.jpg
 share/doc/ap-security/html-multipage/breach-logo-small.gif
 share/doc/ap-security/html-multipage/index.html
 share/doc/ap-security/html-multipage/modsecurity-reference.css
