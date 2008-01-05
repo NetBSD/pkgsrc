@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.750 2008/01/05 18:04:06 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.751 2008/01/05 18:41:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7120,7 +7120,7 @@ sub checkfile_patch($) {
 	my $check_text = sub($) {
 		my ($text) = @_;
 
-		if ($text =~ qr"(\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*|\$))") {
+		if ($text =~ qr"(\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*)?\$)") {
 			my ($tag) = ($2);
 
 			if ($text =~ re_patch_uh) {
