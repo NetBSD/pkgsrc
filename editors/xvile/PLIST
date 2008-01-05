@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/14 06:33:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/05 14:59:47 agc Exp $
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
@@ -16,6 +16,7 @@ libexec/xvile/vile-bat-filt
 libexec/xvile/vile-bnf-filt
 libexec/xvile/vile-c-filt
 libexec/xvile/vile-cfg-filt
+libexec/xvile/vile-conf-filt
 libexec/xvile/vile-crypt
 libexec/xvile/vile-css-filt
 libexec/xvile/vile-cweb-filt
@@ -116,6 +117,7 @@ share/xvile/doc/modes.doc
 share/xvile/doc/oleauto.doc
 share/xvile/doc/perl.doc
 share/xvile/doc/visvile.doc
+share/xvile/docbook.keywords
 share/xvile/ecl.keywords
 share/xvile/esql.keywords
 share/xvile/est.keywords
