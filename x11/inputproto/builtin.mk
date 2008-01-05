@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2008/01/05 15:27:08 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/01/05 16:00:08 tron Exp $
 
 BUILTIN_PKG:=	inputproto
 
-BUILTIN_FIND_FILES_VAR:=	H_XI
-BUILTIN_FIND_FILES.H_XI=	${X11BASE}/include/X11/extensions/XI.h
+BUILTIN_FIND_FILES_VAR:=		PC_INPUTPROTO
+BUILTIN_FIND_FILES.PC_INPUTPROTO=	${X11BASE}/lib/pkgconfig/inputproto.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -15,11 +15,23 @@ BUILTIN_FIND_FILES.H_XI=	${X11BASE}/include/X11/extensions/XI.h
 IS_BUILTIN.inputproto=	no
 .elif !defined(IS_BUILTIN.inputproto)
 IS_BUILTIN.inputproto=	no
-.  if empty(H_XI:M__nonexistent__)
+.  if empty(PC_INPUTPROTO:M__nonexistent__)
 IS_BUILTIN.inputproto=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.inputproto
+
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.inputproto) && \
+    !empty(IS_BUILTIN.inputproto:M[yY][eE][sS]) && \
+    empty(PC_INPUTPROTO:M__nonexistent__)
+BUILTIN_VERSION.inputproto!= ${SED} -n -e 's/Version: //p' ${PC_INPUTPROTO}
+BUILTIN_PKG.inputproto= inputproto-${BUILTIN_VERSION.inputproto}
+.endif
+MAKEVARS+=      BUILTIN_PKG.inputproto
 
 ###
 ### Determine whether we should use the built-in implementation if it
