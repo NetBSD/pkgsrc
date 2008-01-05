@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.18 2007/12/13 11:48:38 rillig Exp $
+# $NetBSD: help.awk,v 1.19 2008/01/05 17:01:23 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -20,8 +20,8 @@ BEGIN {
 	ignore_next_empty_line = no;
 
 	delete lines;		# the collected lines
-	relevant = no;		# are the current lines relevant?
 	nlines = 0;		# the number of lines collected so far
+	delete keywords;	# the keywords for this paragraph
 	comment_lines = 0;	# the number of comment lines so far
 	print_noncomment_lines = yes; # for make targets, this isn't useful
 }
@@ -30,12 +30,17 @@ BEGIN {
 # end of a file or by the end of all files. When there have been enough
 # comment lines, the topic is considered worth printing.
 #
-function end_of_topic() {
+function end_of_topic(		kw, relevant) {
+	kw = "";
+	for (i in keywords) {
+		kw = kw " " i;
+	}
+	relevant = (topic in keywords || lctopic in keywords || uctopic in keywords);
 	if (relevant && comment_lines > 2) {
 		if (found_anything)
 			print "";
 		found_anything = yes;
-		print "===> "last_fname":";
+		print "===> "last_fname " (keywords:" kw "):";
 		for (i = 0; i < nlines; i++) {
 			if (print_noncomment_lines || (lines[i] ~ /^#/))
 				print lines[i];
@@ -44,8 +49,8 @@ function end_of_topic() {
 
 	ignore_next_empty_line = yes;
 	delete lines;
-	relevant = no;
 	nlines = 0;
+	delete keywords;
 	comment_lines = 0;
 	print_noncomment_lines = yes;
 }
@@ -70,9 +75,8 @@ always {
 ($1 == "#" && $2 == "Keywords:") {
 	for (i = 3; i <= NF; i++) {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
-		if (w == lctopic || w == lctopic",") {
-			relevant = yes;
-		}
+		sub(/,$/, "", w);
+		keywords[w] = yes;
 	}
 	ignore_this_line = yes;
 	ignore_next_empty_line = yes;
@@ -116,7 +120,7 @@ NF >= 1 {
 	    (index(w1, "#"uctopic"?=") == 1) ||
 	    (this_line_maybe_definition &&
 	        (w == uctopic || w == uctopic":"))) {
-		relevant = yes;
+		keywords[w] = yes;
 	}
 }
 
