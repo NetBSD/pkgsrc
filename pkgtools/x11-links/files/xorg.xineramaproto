@@ -1,0 +1,6 @@
+# $NetBSD: xorg.xineramaproto,v 1.1 2008/01/05 16:08:53 tron Exp $
+#
+include/X11/extensions/Xinerama.h
+include/X11/extensions/panoramiXext.h
+include/X11/extensions/panoramiXproto.h
+lib/pkgconfig/xineramaproto.pc
