@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2007/12/22 22:50:13 jdolecek Exp $
+$NetBSD: distinfo,v 1.12 2008/01/05 21:00:18 rillig Exp $
 
 SHA1 (licq-1.3.5.tar.bz2) = a1059173f36694e6e5ec9ba62ced6e9738807916
 RMD160 (licq-1.3.5.tar.bz2) = 4442f6cb3630d8300e5f128617a522bd2cb863dc
@@ -10,5 +10,5 @@ SHA1 (patch-af) = 86a99ad96c56f0e53547025a7c5536a01fd2a8b8
 SHA1 (patch-ai) = f8cebb4e821a1b648e69135db5dd232a9459773a
 SHA1 (patch-ca) = 36475ac0642e8908a2ae6a8913efa25ba09af1c3
 SHA1 (patch-cb) = 3a4f3f35825207693dc87112899a3e6bb3ec71a0
-SHA1 (patch-qa) = a2f8c7aa14f30a1139600ef89b39b5540d5ef715
+SHA1 (patch-qa) = 1fb1821418c151d7a43085d9b1038279dca59f4d
 SHA1 (patch-qb) = 2fa14d43c3d415947fdd67db30642b31030e5a3b

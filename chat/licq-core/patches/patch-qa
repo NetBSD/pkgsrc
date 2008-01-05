@@ -1,4 +1,4 @@
-$NetBSD: patch-qa,v 1.2 2007/12/22 22:34:24 jdolecek Exp $
+$NetBSD: patch-qa,v 1.3 2008/01/05 21:00:19 rillig Exp $
 
 --- plugins/qt-gui/configure.orig	2007-10-28 19:42:59.000000000 +0100
 +++ plugins/qt-gui/configure
@@ -22,12 +22,3 @@ $NetBSD: patch-qa,v 1.2 2007/12/22 22:34:24 jdolecek Exp $
      # Extract the first word of "dcopidl", so it can be a program name with args.
  set dummy dcopidl; ac_word=$2
  { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -23978,6 +23978,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
