@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.35 2008/01/05 08:15:29 obache Exp $
+$NetBSD: CHANGES-2008,v 1.36 2008/01/05 15:00:57 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -47,3 +47,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/gxemul to 0.4.6.1 [xtraeme 2008-01-04]
 	Updated converters/p5-JSON-XS to 2.01 [obache 2008-01-05]
 	Updated converters/p5-JSON to 2.03 [obache 2008-01-05]
+	Updated editors/vile to 9.6 [agc 2008-01-05]
+	Updated editors/xvile to 9.6 [agc 2008-01-05]
