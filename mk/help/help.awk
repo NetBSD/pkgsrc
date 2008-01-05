@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.20 2008/01/05 17:55:48 rillig Exp $
+# $NetBSD: help.awk,v 1.21 2008/01/05 19:48:27 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -136,7 +136,7 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 		# Automatic keywords must be either upper- or lower-case.
 		# Lower-case keywords (make targets) must end with a colon.
 
-	} else if (w !~ /^[A-Za-z].*[0-9A-Za-z]$/) {
+	} else if (w !~ /^[A-Za-z].*[0-9A-Za-z]:?$/) {
 		# Keywords must start with a letter and end with a letter
 		# or digit.
 
