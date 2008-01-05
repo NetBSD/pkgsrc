@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/01/05 17:22:17 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2008/01/05 21:37:45 wiz Exp $
 #
 
 DISTNAME=	guile-pg-0.34
@@ -13,6 +13,7 @@ USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 INFO_FILES=	# PLIST
+#LICENSE=	gnu-gplv3
 
 TEST_TARGET=	check
 
