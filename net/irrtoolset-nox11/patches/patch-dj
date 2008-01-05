@@ -1,17 +1,21 @@
-$NetBSD: patch-dj,v 1.1 2007/12/31 09:15:15 spz Exp $
+$NetBSD: patch-dj,v 1.2 2008/01/05 14:35:22 spz Exp $
 
 --- src/irr/rawhoisc.cc.orig	2007-02-13 01:25:01.000000000 +0100
 +++ src/irr/rawhoisc.cc
-@@ -517,7 +517,7 @@ bool RAWhoisClient::getAutNum(char *as, 
- }
- 
- bool RAWhoisClient::getSet(SymID sname, char *clss, char *&text, int &len) {
--   len = QueryResponse(text, "!m%s,%s", clss, sname);
-+   len = QueryResponse(text, "!i%s,1", sname);
+@@ -516,6 +516,12 @@ bool RAWhoisClient::getAutNum(char *as, 
     return len;
  }
  
-@@ -557,26 +557,58 @@ bool RAWhoisClient::expandAS(char *as,  
++// get asset or rsset
++bool RAWhoisClient::getASSet(SymID sname, char *&text, int &len) {
++   len = QueryResponse(text, "!i%s,1", sname);
++   return len;
++}
++
+ bool RAWhoisClient::getSet(SymID sname, char *clss, char *&text, int &len) {
+    len = QueryResponse(text, "!m%s,%s", clss, sname);
+    return len;
+@@ -557,26 +563,58 @@ bool RAWhoisClient::expandAS(char *as,  
  }
  
  bool RAWhoisClient::expandASSet(SymID asset, SetOfUInt *result) {
@@ -42,7 +46,7 @@ $NetBSD: patch-dj,v 1.1 2007/12/31 09:15:15 spz Exp $
 +  } else {
 +    char *text;
 +    int  len;
-+    if (getSet(asset, "as-set", text, len)) {
++    if (getASSet(asset, text, len)) {
 +      for (char *word = strtok(text, " \t\n"); word; word = strtok(NULL, "\t\n"))
 +        result->add(atoi(word+2));
 +    }
@@ -76,7 +80,7 @@ $NetBSD: patch-dj,v 1.1 2007/12/31 09:15:15 spz Exp $
 +  } else {
 +    char *text;
 +    int  len;
-+    if (getSet(rsset, "route-set", text, len)) {
++    if (getASSet(rsset, text, len)) {
 +      for (char *word = strtok(text, " \t\n"); word; word = strtok(NULL, "\t\n"))
 +        result->push_back(MPPrefix(word));
 +    }
