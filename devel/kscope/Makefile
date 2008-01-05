@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/11/30 21:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/05 23:29:42 rillig Exp $
 #
 
-DISTNAME=		kscope-1.5.0
-PKGREVISION=		2
+DISTNAME=		kscope-1.6.0
 CATEGORIES=		devel kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kscope/}
 
@@ -20,7 +19,7 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
 post-build:
-	@${SED} -e "s,@LOCALBASE@,${LOCALBASE},g" \
+	sed -e "s,@LOCALBASE@,${LOCALBASE},g" \
 		${FILESDIR}/kscoperc > ${WRKDIR}/kscoperc
 
 pre-install:
@@ -34,4 +33,3 @@ pre-install:
 .include "../../x11/kdelibs3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
-

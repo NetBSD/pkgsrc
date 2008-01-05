@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/15 03:52:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/05 23:29:42 rillig Exp $
 bin/kscope
 share/doc/kde/HTML/en/kscope/about.docbook
 share/doc/kde/HTML/en/kscope/autocomp_dlg.png
+share/doc/kde/HTML/en/kscope/bookmarks.docbook
+share/doc/kde/HTML/en/kscope/bookmarks.png
 share/doc/kde/HTML/en/kscope/call_graph.png
 share/doc/kde/HTML/en/kscope/call_tree.png
 share/doc/kde/HTML/en/kscope/common
@@ -19,6 +21,7 @@ share/doc/kde/HTML/en/kscope/pref_opts.png
 share/doc/kde/HTML/en/kscope/pref_progs.png
 share/doc/kde/HTML/en/kscope/project_details.png
 share/doc/kde/HTML/en/kscope/project_files.png
+share/doc/kde/HTML/en/kscope/project_make.png
 share/doc/kde/HTML/en/kscope/project_open.png
 share/doc/kde/HTML/en/kscope/project_opts.png
 share/doc/kde/HTML/en/kscope/project_types.png
@@ -45,9 +48,15 @@ share/kde/apps/kscope/pics/query_locked.png
 share/kde/apps/kscope/pics/query_unlocked.png
 share/kde/apps/kscope/pics/tab_list.png
 share/kde/config/kscoperc
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kscope/pics
 @dirrm share/kde/apps/kscope
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Development
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/kscope
 @comment in kde: @dirrm share/doc/kde/HTML/en
