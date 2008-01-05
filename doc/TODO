@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6955 2008/01/05 09:30:15 wiz Exp $
+$NetBSD: TODO,v 1.6956 2008/01/05 21:59:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o dnsmasq-2.40
 	o dnstop-20070307
 	o dnstracer-1.8
-	o dovecot-1.0.10
 	o doxygen-1.5.4
 	o dpkg-1.13.25
 	o drscheme-371
@@ -565,7 +564,6 @@ Suggested package updates
 	o glade3-3.4.1
 	o glchess-1.0.5
 	o global-5.6
-	o glpk-4.25
 	o glproto-1.4.9
 	o gmime-2.2.15
 	o gmpc-0.15.1
