@@ -1,0 +1,6 @@
+# $NetBSD: xorg.inputproto,v 1.1 2008/01/05 16:08:53 tron Exp $
+#
+include/X11/extensions/XI.h
+include/X11/extensions/XInput.h
+include/X11/extensions/XIproto.h
+lib/pkgconfig/inputproto.pc

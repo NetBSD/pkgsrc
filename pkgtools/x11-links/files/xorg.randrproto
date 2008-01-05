@@ -1,0 +1,6 @@
+# $NetBSD: xorg.randrproto,v 1.1 2008/01/05 16:08:53 tron Exp $
+#
+include/X11/extensions/randr.h
+include/X11/extensions/randrproto.h
+lib/pkgconfig/randrproto.pc
+share/doc/randrproto/randrproto.txt
