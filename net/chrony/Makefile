@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/01/05 15:04:57 rillig Exp $
 
 DISTNAME=	chrony-1.20
 PKGREVISION=	3
@@ -12,6 +12,7 @@ COMMENT=	Daemon for maintaining the accuracy of computer clocks
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+AUTO_MKDIRS=		yes
 
 EGDIR=			${PREFIX}/share/examples/chrony
 EGFILES=		chrony.conf.example chrony.keys.example
