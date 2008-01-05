@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.40 2008/01/05 21:59:31 adam Exp $
+$NetBSD: CHANGES-2008,v 1.41 2008/01/05 23:29:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/guile-pg to 0.34 [gdt 2008-01-05]
 	Updated chat/amsn to 0.97 [rillig 2008-01-05]
 	Updated math/glpk to 4.25 [adam 2008-01-05]
+	Updated devel/kscope to 1.6.0 [rillig 2008-01-05]
