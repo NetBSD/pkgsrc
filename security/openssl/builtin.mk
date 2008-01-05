@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.22 2007/09/07 17:26:23 jlam Exp $
+# $NetBSD: builtin.mk,v 1.23 2008/01/05 20:41:26 rillig Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -193,7 +193,7 @@ BUILDLINK_TARGETS+=	buildlink-openssl-des-h
 .    if !target(buildlink-openssl-des-h)
 .PHONY: buildlink-openssl-des-h
 buildlink-openssl-des-h:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	bl_odes_h="${BUILDLINK_DIR}/include/openssl/des.h";		\
 	bl_odes_old_h="${BUILDLINK_DIR}/include/openssl/des_old.h";	\
 	odes_h="${BUILDLINK_PREFIX.openssl}/include/openssl/des.h";	\
