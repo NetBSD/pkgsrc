@@ -1,0 +1,12 @@
+$NetBSD: patch-dn,v 1.1 2008/01/05 14:35:22 spz Exp $
+
+--- src/irr/rawhoisc.hh.orig	2006-10-01 13:23:32.000000000 +0200
++++ src/irr/rawhoisc.hh
+@@ -146,6 +146,7 @@ public:
+    int  PendingData(); 
+ 
+    virtual bool getAutNum(char *as,          char *&text, int &len);
++   virtual bool getASSet(SymID sname, char *&text, int &len);
+    virtual bool getSet(SymID sname, char *clss, char *&text, int &len);
+    virtual bool getRoute(char *rt, char *as, char *&text, int &len);
+    virtual bool getInetRtr(SymID inetrtr,    char *&text, int &len);
