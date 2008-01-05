@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/06/30 17:40:50 joerg Exp $
+$NetBSD: distinfo,v 1.5 2008/01/05 05:35:20 hira Exp $
 
 SHA1 (xfce4-battery-plugin-0.5.0.tar.bz2) = 63439d32bfe8411458d41c38824cb393bc31d6e0
 RMD160 (xfce4-battery-plugin-0.5.0.tar.bz2) = bbf64994c7686b11b6a51bd7728569cd2a5d9777
 Size (xfce4-battery-plugin-0.5.0.tar.bz2) = 222269 bytes
-SHA1 (patch-aa) = b0eb860a4c1f18c2ececa01e4e8e3816cecc852c
+SHA1 (patch-aa) = ee4a4ff7f38d1bb5b018dad4dcf0d8cd339972b0
