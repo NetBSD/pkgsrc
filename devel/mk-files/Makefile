@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/05 21:48:53 rillig Exp $
 #
 
 DISTNAME=	mk-20050405
@@ -37,9 +37,9 @@ do-install:
 # same goes for the bsd.*.mk files (it makes the symlinks to *.mk)
 ${WRKSRC}/FILES:	extract
 ${WRKDIR}/.PLIST_SRC:	${WRKSRC}/FILES
-	@( ${GREP} '^[A-Za-z].*\.mk' $> ; \
+	@( ${GREP} '^[A-Za-z].*\.mk' ${.ALLSRC} ; \
 	[ -f /usr/share/mk/sys.mk ] || ${ECHO} sys.mk; \
 	[ -f /usr/share/mk/bsd.prog.mk ] || \
 	for f in dep doc init lib man nls obj own prog subdir; do \
 		${ECHO} bsd.$$f.mk; \
-	done ) | ${SED} 's,^,share/mk/,' > $@
+	done ) | ${SED} 's,^,share/mk/,' > ${.TARGET}
