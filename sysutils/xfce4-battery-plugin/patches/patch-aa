@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/01/05 05:35:20 hira Exp $
+$NetBSD: patch-aa,v 1.6 2008/01/05 05:42:02 hira Exp $
 
 --- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
 +++ panel-plugin/battery.c	2008-01-03 21:30:22.000000000 +0900
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2008/01/05 05:35:20 hira Exp $
  #include <sys/ioctl.h>
 +#if defined(__sparc64__)
 +/* On NetBSD/sparc64, apmvar.h is not exist in /usr/include/machine. */
-+/* Reported in PR pkg/36735. */
++/* Reported in PR port-sparc64/36735. */
 +#include <sparc/apmvar.h>
 +#else
  #include <machine/apmvar.h>
