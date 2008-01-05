@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2007/08/15 18:16:35 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2008/01/05 20:53:18 rillig Exp $
 
 --- configure.orig	2006-10-03 17:02:18.000000000 +0200
 +++ configure
@@ -28,12 +28,3 @@ $NetBSD: patch-ac,v 1.1 2007/08/15 18:16:35 joerg Exp $
  echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_File'}'`" >&5
  echo "${ECHO_T}`eval echo '${'$as_ac_File'}'`" >&6
  if test `eval echo '${'$as_ac_File'}'` = yes; then
-@@ -21694,6 +21686,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
