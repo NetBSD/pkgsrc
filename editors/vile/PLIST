@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/10/14 06:26:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/01/05 14:58:42 agc Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -15,6 +15,7 @@ libexec/vile/vile-bat-filt
 libexec/vile/vile-bnf-filt
 libexec/vile/vile-c-filt
 libexec/vile/vile-cfg-filt
+libexec/vile/vile-conf-filt
 libexec/vile/vile-crypt
 libexec/vile/vile-css-filt
 libexec/vile/vile-cweb-filt
@@ -115,6 +116,7 @@ share/vile/doc/modes.doc
 share/vile/doc/oleauto.doc
 share/vile/doc/perl.doc
 share/vile/doc/visvile.doc
+share/vile/docbook.keywords
 share/vile/ecl.keywords
 share/vile/esql.keywords
 share/vile/est.keywords
