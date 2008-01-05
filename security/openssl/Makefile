@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2008/01/04 22:08:09 rillig Exp $
+# $NetBSD: Makefile,v 1.130 2008/01/05 20:41:25 rillig Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -126,7 +126,7 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 pre-configure:
 	cd ${WRKSRC};							\
 	for file in fips/*/Makefile; do					\
-		if ${GREP} "^EXHEADER=[ 	]*$$" $$file >/dev/null; then \
+		if ${GREP} "^EXHEADER=[ 	]*\$$" $$file >/dev/null; then \
 			${ECHO} "Fixing 'install' target in $$file.";	\
 			${MV} -f $$file $$file.preawk;			\
 			${AWK} '/^install:/ { printf "install:\n\nnot-install:\n"; next } { print }' \
