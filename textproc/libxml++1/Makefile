@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/09/20 21:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/05 23:24:46 heinz Exp $
 #
 
 DISTNAME=		libxml++-1.0.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://libxmlplusplus.sourceforge.net/
 COMMENT=		C++ wrapper for the libxml XML parser library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
