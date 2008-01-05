@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/12/06 11:17:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/01/05 22:15:24 wiz Exp $
 lib/pkgconfig/QtTest.pc
 lib/pkgconfig/QtUiTools.pc
 qt4/bin/assistant
@@ -128,7 +128,7 @@ qt4/lib/libQtAssistantClient.la
 qt4/lib/libQtDesigner.la
 qt4/lib/libQtDesignerComponents.la
 qt4/lib/libQtTest.la
-qt4/lib/libQtUiTools.a
+qt4/lib/libQtUiTools.la
 qt4/mkspecs/aix-g++-64/qmake.conf
 qt4/mkspecs/aix-g++-64/qplatformdefs.h
 qt4/mkspecs/aix-g++/qmake.conf
