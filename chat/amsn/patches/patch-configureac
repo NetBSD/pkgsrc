@@ -1,4 +1,6 @@
-$NetBSD: patch-configureac,v 1.1 2008/01/05 20:27:17 rillig Exp $
+$NetBSD: patch-configureac,v 1.2 2008/01/05 20:35:14 rillig Exp $
+
+http://sourceforge.net/tracker/index.php?func=detail&aid=1864687&group_id=54091&atid=472657
 
 --- configure.ac.orig	2007-12-24 21:35:51.000000000 +0000
 +++ configure.ac	2008-01-05 20:03:57.000000000 +0000
