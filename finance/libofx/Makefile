@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/20 21:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/05 23:33:23 heinz Exp $
 #
 
 DISTNAME=	libofx-0.8.3
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libofx/}
 MAINTAINER=	gary@duzan.org
 HOMEPAGE=	http://libofx.sourceforge.net/
 COMMENT=	OFX (Open Financial eXchange) Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-opensp-includes=${BUILDLINK_PREFIX.opensp}/include/OpenSP \
