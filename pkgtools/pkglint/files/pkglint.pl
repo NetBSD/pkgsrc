@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.752 2008/01/05 21:54:50 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.753 2008/01/05 22:13:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7169,7 +7169,10 @@ sub checkfile_patch($) {
 				if ($text =~ qr": Avoid regenerating within pkgsrc$") {
 					$line->log_error("This code must not be included in patches.");
 					$line->explain_error(
-						"It is generated automatically by pkgsrc after the patch phase.");
+"It is generated automatically by pkgsrc after the patch phase.",
+"",
+"For more details, look for \"configure-scripts-override\" in",
+"mk/configure/gnu-configure.mk.");
 				}
 
 			} elsif ($current_ftype eq "ignore") {
