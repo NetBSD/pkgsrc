@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/06/12 02:55:15 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2008/01/05 16:57:57 gdt Exp $
 #
 
 DISTNAME=	guile-pg-0.29
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.gnuvola.org/software/guile-pg/
 
@@ -30,10 +30,12 @@ TEST_TARGET=	check
 # preferred location ${PREFIX}/share/guile/site, but there is a shared
 # library which of course cannot go in share.
 
+SITE=${PREFIX}/guile/1.6/share/guile/site
+
 post-install:
 	# guile should make this, but if not
-	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site
-	cd ${PREFIX}/share/guile/site && ${LN} -sf ../../../lib/guile/site/database .
+	${INSTALL_DATA_DIR} ${SITE}
+	cd ${SITE} && ${LN} -sf ../../../../../lib/guile/site/database .
 
 .include "../../lang/guile16/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
