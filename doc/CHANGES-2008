@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.34 2008/01/05 08:12:46 obache Exp $
+$NetBSD: CHANGES-2008,v 1.35 2008/01/05 08:15:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/boost to 1.34.1 [jmmv 2008-01-04]
 	Updated emulators/gxemul to 0.4.6.1 [xtraeme 2008-01-04]
 	Updated converters/p5-JSON-XS to 2.01 [obache 2008-01-05]
+	Updated converters/p5-JSON to 2.03 [obache 2008-01-05]
