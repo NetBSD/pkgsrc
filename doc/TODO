@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6952 2008/01/04 22:31:56 xtraeme Exp $
+$NetBSD: TODO,v 1.6953 2008/01/05 05:27:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -863,6 +863,7 @@ Suggested package updates
 	o newt-1.08
 	o ng-1.4.4
 	o ngrep-1.45
+	o nikto-2.0.1
 	o nkf-2.07 [pkg/37132]
 	o nmap-4.50
 	o nmh-1.2.1
@@ -1132,6 +1133,7 @@ Suggested package updates
 	o python-mode-1.0 (Revision 4.75)
 	o qDecoder-8.0
 	o qbrew-0.3.9
+	o qca-2.0.0
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
