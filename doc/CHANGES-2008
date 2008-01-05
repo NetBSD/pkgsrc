@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.37 2008/01/05 16:11:48 tron Exp $
+$NetBSD: CHANGES-2008,v 1.38 2008/01/05 17:23:17 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vile to 9.6 [agc 2008-01-05]
 	Updated editors/xvile to 9.6 [agc 2008-01-05]
 	Updated pkgtools/x11-links to 0.35 [tron 2008-01-05]
+	Updated databases/guile-pg to 0.34 [gdt 2008-01-05]
