@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.748 2008/01/04 16:12:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.749 2008/01/05 11:13:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5961,7 +5961,7 @@ sub checklines_package_Makefile_varorder($) {
 				[ "PKGREVISION", optional ],
 				[ "SVR4_PKGNAME", optional ],
 				[ "CATEGORIES", once ],
-				[ "MASTER_SITES", once ],
+				[ "MASTER_SITES", optional ],
 				[ "DIST_SUBDIR", optional ],
 				[ "EXTRACT_SUFX", optional ],
 				[ "DISTFILES", many ],
