@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.36 2008/01/05 15:00:57 agc Exp $
+$NetBSD: CHANGES-2008,v 1.37 2008/01/05 16:11:48 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/p5-JSON to 2.03 [obache 2008-01-05]
 	Updated editors/vile to 9.6 [agc 2008-01-05]
 	Updated editors/xvile to 9.6 [agc 2008-01-05]
+	Updated pkgtools/x11-links to 0.35 [tron 2008-01-05]
