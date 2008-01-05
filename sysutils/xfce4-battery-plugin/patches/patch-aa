@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2008/01/05 05:35:20 hira Exp $
 
---- panel-plugin/battery.c.orig	2007-01-17 17:56:51.000000000 +0000
-+++ panel-plugin/battery.c
+--- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
++++ panel-plugin/battery.c	2008-01-03 21:30:22.000000000 +0900
 @@ -25,7 +25,7 @@
  #include <config.h>
  #endif
@@ -11,15 +11,23 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
  #include <machine/apm_bios.h>
  #elif __OpenBSD__
  #include <sys/param.h>
-@@ -35,6 +35,7 @@
+@@ -33,8 +33,15 @@
+ #elif __NetBSD__
+ #include <sys/param.h>
  #include <sys/ioctl.h>
++#if defined(__sparc64__)
++/* On NetBSD/sparc64, apmvar.h is not exist in /usr/include/machine. */
++/* Reported in PR pkg/36735. */
++#include <sparc/apmvar.h>
++#else
  #include <machine/apmvar.h>
++#endif
  #define APMDEVICE "/dev/apm"
 +#define _ACPI_APM_BATT_UNKNOWN 0xffff /* from sys/dev/acpi/acpi_apm.c */
  #elif __linux__
  #include <libapm.h>
  #endif
-@@ -155,7 +156,7 @@ init_options(t_battmon_options *options)
+@@ -155,7 +162,7 @@
  gboolean
  detect_battery_info(t_battmon *battmon)
  {
@@ -28,7 +36,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
    /* This is how I read the information from the APM subsystem under
       FreeBSD.  Each time this functions is called (once every second)
       the APM device is opened, read from and then closed.
-@@ -209,7 +210,7 @@ detect_battery_info(t_battmon *battmon)
+@@ -209,7 +216,7 @@
        battmon->method = BM_BROKEN;
        fd = open(APMDEVICE, O_RDONLY);
        if (fd == -1) return FALSE;
@@ -37,7 +45,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
          close(fd);
               return FALSE;
      }
-@@ -302,13 +303,16 @@ update_apm_status(t_battmon *battmon)
+@@ -302,13 +309,16 @@
        battmon->method = BM_BROKEN;
        fd = open(APMDEVICE, O_RDONLY);
        if (fd == -1) return TRUE;
@@ -55,7 +63,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
  #else
      struct apm_info apm;
      DBG ("Updating battery status...");
-@@ -400,7 +404,7 @@ update_apm_status(t_battmon *battmon)
+@@ -400,7 +410,7 @@
          acline = apm.ac_line_status ? TRUE : FALSE;
          
      }
@@ -64,7 +72,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
      else {
   /* This is how I read the information from the APM subsystem under
       FreeBSD.  Each time this functions is called (once every second)
-@@ -460,6 +464,11 @@ battmon.c:241: for each function it appe
+@@ -460,6 +470,11 @@
  
      if(battmon->options.display_percentage && !(battmon->options.hide_when_full && acline && charge >= 99)){
          gtk_widget_show((GtkWidget *)battmon->charge);
@@ -76,7 +84,7 @@ $NetBSD: patch-aa,v 1.4 2007/06/30 17:40:50 joerg Exp $
          g_snprintf(buffer, sizeof(buffer),"%d%% ", charge);
          gtk_label_set_text(battmon->charge,buffer);
      } else {
-@@ -477,6 +486,11 @@ battmon.c:241: for each function it appe
+@@ -477,6 +492,11 @@
          }
  
          gtk_widget_show((GtkWidget *)active_label);
