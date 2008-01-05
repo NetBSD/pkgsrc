@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/01/05 09:22:06 tonio Exp $
 
 DISTNAME=	mos20src
 PKGNAME=	moscow_ml-2.00
@@ -15,6 +15,7 @@ WRKSRC=		${WRKDIR}/mosml/src
 USE_TOOLS+=	perl
 
 BUILD_TARGET=	clean world
+MAKE_JOBS_SAFE=	no
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/moscow_ml
