@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/12/02 12:12:47 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/01/05 19:21:00 rillig Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
@@ -26,6 +26,12 @@ CONF_FILES=		${PREFIX}/lib/elm.mimetypes-dist		\
 			${PREFIX}/lib/elm.mimetypes
 
 USE_TOOLS+=	ksh
+
+SUBST_CLASSES+=		errno
+SUBST_STAGE.errno=	post-patch
+SUBST_MESSAGE.errno=	Fixing declaration of errno.
+SUBST_FILES.errno=	*/*.c
+SUBST_SED.errno=	-e 's,^extern int errno;,\#include <errno.h>,'
 
 pre-configure:
 	${CP} ${FILESDIR}/config.sh ${WRKSRC}/
