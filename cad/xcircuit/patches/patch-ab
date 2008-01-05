@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2006/11/12 14:25:50 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.10 2008/01/05 20:59:00 rillig Exp $
 
 --- configure.orig	2006-06-09 17:54:33.000000000 +0000
 +++ configure
@@ -64,12 +64,3 @@ $NetBSD: patch-ab,v 1.9 2006/11/12 14:25:50 dmcmahill Exp $
          LDDL_FLAGS="-shared"
        fi
        ;;
-@@ -10542,6 +10542,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
