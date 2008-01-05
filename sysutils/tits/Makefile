@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/05 14:12:40 rillig Exp $
 #
 
 DISTNAME=	tits-1.2.2
@@ -17,6 +17,7 @@ MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 RCD_SCRIPTS=	tits
 
 MANCOMPRESSED_IF_MANZ=	yes
+AUTO_MKDIRS=	yes
 
 pre-install:
 	${INSTALL_MAN_DIR} ${MANDIR}/cat8
