@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/24 08:01:07 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/05 20:55:28 rillig Exp $
 #
 
 DISTNAME=	xkeyboard-config-20071217
@@ -17,9 +17,9 @@ CONFLICTS+=		xkbdata-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		# none
-USE_TOOLS+=		libtool
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool perl:build automake
-USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		msgfmt msgmerge xgettext intltoolize autoreconf
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
