@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.751 2008/01/05 18:41:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.752 2008/01/05 21:54:50 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6207,7 +6207,7 @@ sub checklines_mk($) {
 			checkline_relative_path($line, $includefile);
 
 			if ($includefile =~ qr"../Makefile$") {
-				$line->log_error("Other Makefiles must not be included.");
+				$line->log_error("Other Makefiles must not be included directly.");
 				$line->explain_warning(
 					"If you want to include portions of another Makefile, extract",
 					"the common parts and put them into a Makefile.common. After",
