@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/01/06 21:47:09 ghen Exp $
+
+--- config.mk.orig	2007-11-05 15:36:22.000000000 +0100
++++ config.mk
+@@ -11,10 +11,10 @@ RUBYINC = -I/usr/local/lib/ruby/1.8/i386
+ TASKINC = -I${HOME}/libtask
+ 
+ # paths
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ BIN = ${PREFIX}/bin
+-MAN = ${PREFIX}/share/man
+-ETC = ${PREFIX}/etc
++MAN = ${PREFIX}/${PKGMANDIR}
++ETC = ${PKG_SYSCONFDIR}
+ LIBDIR = ${PREFIX}/lib
+ INCLUDE = ${PREFIX}/include
+ 
+@@ -24,8 +24,8 @@ LIBS = -L/usr/lib -lc
+ 
+ # Flags
+ include ${ROOT}/mk/gcc.mk
+-CFLAGS = -g -Wall ${INCS} -DVERSION=\"${VERSION}\"
+-LDFLAGS = -g ${LIBS}
++CFLAGS += -Wall ${INCS} -DVERSION=\"${VERSION}\"
++LDFLAGS += ${LIBS}
+ 
+ # Compiler
+ CC = cc -c
