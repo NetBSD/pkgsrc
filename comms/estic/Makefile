@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/30 20:04:15 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/01/06 18:39:38 rillig Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	1
@@ -24,24 +24,21 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	patch unzip
 
 BUILD_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
-LIB_TARGET=	depend lib
-LIBSRC=		${WRKDIR}/spunk
 MAKE_FILE=	make/freebsd-x.mak
 
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && \
-	${LOCALBASE}/bin/unzip -p ${DISTDIR}/${ESTICPATCH} | \
-		${PATCH} -p0 ${PATCH_DIST_ARGS}
+	cd ${WRKSRC} && \
+	unzip -p ${DISTDIR}/${ESTICPATCH} \
+	| ${PATCH} -p0 ${PATCH_DIST_ARGS}
 
 pre-build:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${LIBSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} \
-	  ${LIB_TARGET}
+	cd ${WRKDIR}/spunk && ${BUILD_MAKE_CMD} depend lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xestic ${PREFIX}/bin

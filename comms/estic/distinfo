@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2006/09/08 07:35:50 joerg Exp $
+$NetBSD: distinfo,v 1.10 2008/01/06 18:39:38 rillig Exp $
 
 SHA1 (estic-1.60-sources.zip) = ce66a6d52faaf6adba492bb3f74e49eab608d0c3
 RMD160 (estic-1.60-sources.zip) = be071c72ab881c815dc9a0847f2b09914bdeb2ed
@@ -31,3 +31,5 @@ SHA1 (patch-av) = e9239931b98b0ba1444e426df4ae4df7e9aaca7d
 SHA1 (patch-aw) = ed428001d0ffc2428a67182a22fa54a726ca103a
 SHA1 (patch-ax) = 18f16c755f05d5899d13be239544366a1393d7d3
 SHA1 (patch-ay) = 25ec057efcb071f83ab53ca7d7d2af22e9a2c93f
+SHA1 (patch-az) = 661710c038aa502216c7cf5c7374515a43518a7f
+SHA1 (patch-ba) = cced4632684abfe71b115ec0cc65bbd77a7d2770
