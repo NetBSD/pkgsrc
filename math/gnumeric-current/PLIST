@@ -1,124 +1,124 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/30 17:16:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/01/06 16:48:01 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
 bin/ssindex
-include/libspreadsheet-1-7/spreadsheet/application.h
-include/libspreadsheet-1-7/spreadsheet/auto-format.h
-include/libspreadsheet-1-7/spreadsheet/cell-draw.h
-include/libspreadsheet-1-7/spreadsheet/cell.h
-include/libspreadsheet-1-7/spreadsheet/cellspan.h
-include/libspreadsheet-1-7/spreadsheet/clipboard.h
-include/libspreadsheet-1-7/spreadsheet/cmd-edit.h
-include/libspreadsheet-1-7/spreadsheet/collect.h
-include/libspreadsheet-1-7/spreadsheet/colrow.h
-include/libspreadsheet-1-7/spreadsheet/command-context-stderr.h
-include/libspreadsheet-1-7/spreadsheet/command-context.h
-include/libspreadsheet-1-7/spreadsheet/commands.h
-include/libspreadsheet-1-7/spreadsheet/complete-sheet.h
-include/libspreadsheet-1-7/spreadsheet/complete.h
-include/libspreadsheet-1-7/spreadsheet/complex.h
-include/libspreadsheet-1-7/spreadsheet/consolidate.h
-include/libspreadsheet-1-7/spreadsheet/dependent.h
-include/libspreadsheet-1-7/spreadsheet/expr-impl.h
-include/libspreadsheet-1-7/spreadsheet/expr-name.h
-include/libspreadsheet-1-7/spreadsheet/expr.h
-include/libspreadsheet-1-7/spreadsheet/file-autoft.h
-include/libspreadsheet-1-7/spreadsheet/format-template.h
-include/libspreadsheet-1-7/spreadsheet/func-builtin.h
-include/libspreadsheet-1-7/spreadsheet/func.h
-include/libspreadsheet-1-7/spreadsheet/gnm-datetime.h
-include/libspreadsheet-1-7/spreadsheet/gnm-format.h
-include/libspreadsheet-1-7/spreadsheet/gnm-graph-window.h
-include/libspreadsheet-1-7/spreadsheet/gnm-pane.h
-include/libspreadsheet-1-7/spreadsheet/gnm-plugin.h
-include/libspreadsheet-1-7/spreadsheet/gnm-so-filled.h
-include/libspreadsheet-1-7/spreadsheet/gnm-so-line.h
-include/libspreadsheet-1-7/spreadsheet/gnm-so-polygon.h
-include/libspreadsheet-1-7/spreadsheet/gnm-style-impl.h
-include/libspreadsheet-1-7/spreadsheet/gnumeric-gconf.h
-include/libspreadsheet-1-7/spreadsheet/gnumeric-simple-canvas.h
-include/libspreadsheet-1-7/spreadsheet/gnumeric.h
-include/libspreadsheet-1-7/spreadsheet/graph.h
-include/libspreadsheet-1-7/spreadsheet/gui-clipboard.h
-include/libspreadsheet-1-7/spreadsheet/gui-file.h
-include/libspreadsheet-1-7/spreadsheet/gui-gnumeric.h
-include/libspreadsheet-1-7/spreadsheet/gui-util.h
-include/libspreadsheet-1-7/spreadsheet/gutils.h
-include/libspreadsheet-1-7/spreadsheet/history.h
-include/libspreadsheet-1-7/spreadsheet/hlink-impl.h
-include/libspreadsheet-1-7/spreadsheet/hlink.h
-include/libspreadsheet-1-7/spreadsheet/input-msg.h
-include/libspreadsheet-1-7/spreadsheet/item-acetate.h
-include/libspreadsheet-1-7/spreadsheet/item-bar.h
-include/libspreadsheet-1-7/spreadsheet/item-cursor.h
-include/libspreadsheet-1-7/spreadsheet/item-debug.h
-include/libspreadsheet-1-7/spreadsheet/item-edit.h
-include/libspreadsheet-1-7/spreadsheet/item-grid.h
-include/libspreadsheet-1-7/spreadsheet/libgnumeric.h
-include/libspreadsheet-1-7/spreadsheet/mathfunc.h
-include/libspreadsheet-1-7/spreadsheet/mstyle.h
-include/libspreadsheet-1-7/spreadsheet/number-match.h
-include/libspreadsheet-1-7/spreadsheet/numbers.h
-include/libspreadsheet-1-7/spreadsheet/parse-util.h
-include/libspreadsheet-1-7/spreadsheet/pattern.h
-include/libspreadsheet-1-7/spreadsheet/position.h
-include/libspreadsheet-1-7/spreadsheet/preview-grid.h
-include/libspreadsheet-1-7/spreadsheet/print-cell.h
-include/libspreadsheet-1-7/spreadsheet/print-info.h
-include/libspreadsheet-1-7/spreadsheet/print.h
-include/libspreadsheet-1-7/spreadsheet/rangefunc-strings.h
-include/libspreadsheet-1-7/spreadsheet/rangefunc.h
-include/libspreadsheet-1-7/spreadsheet/ranges.h
-include/libspreadsheet-1-7/spreadsheet/regression.h
-include/libspreadsheet-1-7/spreadsheet/rendered-value.h
-include/libspreadsheet-1-7/spreadsheet/search.h
-include/libspreadsheet-1-7/spreadsheet/selection.h
-include/libspreadsheet-1-7/spreadsheet/session.h
-include/libspreadsheet-1-7/spreadsheet/sheet-autofill.h
-include/libspreadsheet-1-7/spreadsheet/sheet-control-gui-priv.h
-include/libspreadsheet-1-7/spreadsheet/sheet-control-gui.h
-include/libspreadsheet-1-7/spreadsheet/sheet-control-priv.h
-include/libspreadsheet-1-7/spreadsheet/sheet-control.h
-include/libspreadsheet-1-7/spreadsheet/sheet-filter-combo.h
-include/libspreadsheet-1-7/spreadsheet/sheet-filter.h
-include/libspreadsheet-1-7/spreadsheet/sheet-merge.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object-cell-comment.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object-graph.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object-image.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object-impl.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object-widget.h
-include/libspreadsheet-1-7/spreadsheet/sheet-object.h
-include/libspreadsheet-1-7/spreadsheet/sheet-private.h
-include/libspreadsheet-1-7/spreadsheet/sheet-style.h
-include/libspreadsheet-1-7/spreadsheet/sheet-view.h
-include/libspreadsheet-1-7/spreadsheet/sheet.h
-include/libspreadsheet-1-7/spreadsheet/solver.h
-include/libspreadsheet-1-7/spreadsheet/sort.h
-include/libspreadsheet-1-7/spreadsheet/stf-export.h
-include/libspreadsheet-1-7/spreadsheet/stf-parse.h
-include/libspreadsheet-1-7/spreadsheet/stf.h
-include/libspreadsheet-1-7/spreadsheet/str.h
-include/libspreadsheet-1-7/spreadsheet/style-border.h
-include/libspreadsheet-1-7/spreadsheet/style-color.h
-include/libspreadsheet-1-7/spreadsheet/style-conditions.h
-include/libspreadsheet-1-7/spreadsheet/style-font.h
-include/libspreadsheet-1-7/spreadsheet/style.h
-include/libspreadsheet-1-7/spreadsheet/symbol.h
-include/libspreadsheet-1-7/spreadsheet/validation-combo.h
-include/libspreadsheet-1-7/spreadsheet/validation.h
-include/libspreadsheet-1-7/spreadsheet/value.h
-include/libspreadsheet-1-7/spreadsheet/wbc-gtk-impl.h
-include/libspreadsheet-1-7/spreadsheet/wbc-gtk.h
-include/libspreadsheet-1-7/spreadsheet/workbook-cmd-format.h
-include/libspreadsheet-1-7/spreadsheet/workbook-control-priv.h
-include/libspreadsheet-1-7/spreadsheet/workbook-control.h
-include/libspreadsheet-1-7/spreadsheet/workbook-priv.h
-include/libspreadsheet-1-7/spreadsheet/workbook-view.h
-include/libspreadsheet-1-7/spreadsheet/workbook.h
-include/libspreadsheet-1-7/spreadsheet/xml-io-version.h
-include/libspreadsheet-1-7/spreadsheet/xml-io.h
-include/libspreadsheet-1-7/spreadsheet/xml-sax.h
+include/libspreadsheet-1.8/spreadsheet/application.h
+include/libspreadsheet-1.8/spreadsheet/auto-format.h
+include/libspreadsheet-1.8/spreadsheet/cell-draw.h
+include/libspreadsheet-1.8/spreadsheet/cell.h
+include/libspreadsheet-1.8/spreadsheet/cellspan.h
+include/libspreadsheet-1.8/spreadsheet/clipboard.h
+include/libspreadsheet-1.8/spreadsheet/cmd-edit.h
+include/libspreadsheet-1.8/spreadsheet/collect.h
+include/libspreadsheet-1.8/spreadsheet/colrow.h
+include/libspreadsheet-1.8/spreadsheet/command-context-stderr.h
+include/libspreadsheet-1.8/spreadsheet/command-context.h
+include/libspreadsheet-1.8/spreadsheet/commands.h
+include/libspreadsheet-1.8/spreadsheet/complete-sheet.h
+include/libspreadsheet-1.8/spreadsheet/complete.h
+include/libspreadsheet-1.8/spreadsheet/complex.h
+include/libspreadsheet-1.8/spreadsheet/consolidate.h
+include/libspreadsheet-1.8/spreadsheet/dependent.h
+include/libspreadsheet-1.8/spreadsheet/expr-impl.h
+include/libspreadsheet-1.8/spreadsheet/expr-name.h
+include/libspreadsheet-1.8/spreadsheet/expr.h
+include/libspreadsheet-1.8/spreadsheet/file-autoft.h
+include/libspreadsheet-1.8/spreadsheet/format-template.h
+include/libspreadsheet-1.8/spreadsheet/func-builtin.h
+include/libspreadsheet-1.8/spreadsheet/func.h
+include/libspreadsheet-1.8/spreadsheet/gnm-datetime.h
+include/libspreadsheet-1.8/spreadsheet/gnm-format.h
+include/libspreadsheet-1.8/spreadsheet/gnm-graph-window.h
+include/libspreadsheet-1.8/spreadsheet/gnm-pane.h
+include/libspreadsheet-1.8/spreadsheet/gnm-plugin.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-filled.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-line.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-polygon.h
+include/libspreadsheet-1.8/spreadsheet/gnm-style-impl.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric-gconf.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric-simple-canvas.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric.h
+include/libspreadsheet-1.8/spreadsheet/graph.h
+include/libspreadsheet-1.8/spreadsheet/gui-clipboard.h
+include/libspreadsheet-1.8/spreadsheet/gui-file.h
+include/libspreadsheet-1.8/spreadsheet/gui-gnumeric.h
+include/libspreadsheet-1.8/spreadsheet/gui-util.h
+include/libspreadsheet-1.8/spreadsheet/gutils.h
+include/libspreadsheet-1.8/spreadsheet/history.h
+include/libspreadsheet-1.8/spreadsheet/hlink-impl.h
+include/libspreadsheet-1.8/spreadsheet/hlink.h
+include/libspreadsheet-1.8/spreadsheet/input-msg.h
+include/libspreadsheet-1.8/spreadsheet/item-acetate.h
+include/libspreadsheet-1.8/spreadsheet/item-bar.h
+include/libspreadsheet-1.8/spreadsheet/item-cursor.h
+include/libspreadsheet-1.8/spreadsheet/item-debug.h
+include/libspreadsheet-1.8/spreadsheet/item-edit.h
+include/libspreadsheet-1.8/spreadsheet/item-grid.h
+include/libspreadsheet-1.8/spreadsheet/libgnumeric.h
+include/libspreadsheet-1.8/spreadsheet/mathfunc.h
+include/libspreadsheet-1.8/spreadsheet/mstyle.h
+include/libspreadsheet-1.8/spreadsheet/number-match.h
+include/libspreadsheet-1.8/spreadsheet/numbers.h
+include/libspreadsheet-1.8/spreadsheet/parse-util.h
+include/libspreadsheet-1.8/spreadsheet/pattern.h
+include/libspreadsheet-1.8/spreadsheet/position.h
+include/libspreadsheet-1.8/spreadsheet/preview-grid.h
+include/libspreadsheet-1.8/spreadsheet/print-cell.h
+include/libspreadsheet-1.8/spreadsheet/print-info.h
+include/libspreadsheet-1.8/spreadsheet/print.h
+include/libspreadsheet-1.8/spreadsheet/rangefunc-strings.h
+include/libspreadsheet-1.8/spreadsheet/rangefunc.h
+include/libspreadsheet-1.8/spreadsheet/ranges.h
+include/libspreadsheet-1.8/spreadsheet/regression.h
+include/libspreadsheet-1.8/spreadsheet/rendered-value.h
+include/libspreadsheet-1.8/spreadsheet/search.h
+include/libspreadsheet-1.8/spreadsheet/selection.h
+include/libspreadsheet-1.8/spreadsheet/session.h
+include/libspreadsheet-1.8/spreadsheet/sheet-autofill.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-gui-priv.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-gui.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-priv.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control.h
+include/libspreadsheet-1.8/spreadsheet/sheet-filter-combo.h
+include/libspreadsheet-1.8/spreadsheet/sheet-filter.h
+include/libspreadsheet-1.8/spreadsheet/sheet-merge.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-cell-comment.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-graph.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-image.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-impl.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-widget.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object.h
+include/libspreadsheet-1.8/spreadsheet/sheet-private.h
+include/libspreadsheet-1.8/spreadsheet/sheet-style.h
+include/libspreadsheet-1.8/spreadsheet/sheet-view.h
+include/libspreadsheet-1.8/spreadsheet/sheet.h
+include/libspreadsheet-1.8/spreadsheet/solver.h
+include/libspreadsheet-1.8/spreadsheet/sort.h
+include/libspreadsheet-1.8/spreadsheet/stf-export.h
+include/libspreadsheet-1.8/spreadsheet/stf-parse.h
+include/libspreadsheet-1.8/spreadsheet/stf.h
+include/libspreadsheet-1.8/spreadsheet/str.h
+include/libspreadsheet-1.8/spreadsheet/style-border.h
+include/libspreadsheet-1.8/spreadsheet/style-color.h
+include/libspreadsheet-1.8/spreadsheet/style-conditions.h
+include/libspreadsheet-1.8/spreadsheet/style-font.h
+include/libspreadsheet-1.8/spreadsheet/style.h
+include/libspreadsheet-1.8/spreadsheet/symbol.h
+include/libspreadsheet-1.8/spreadsheet/validation-combo.h
+include/libspreadsheet-1.8/spreadsheet/validation.h
+include/libspreadsheet-1.8/spreadsheet/value.h
+include/libspreadsheet-1.8/spreadsheet/wbc-gtk-impl.h
+include/libspreadsheet-1.8/spreadsheet/wbc-gtk.h
+include/libspreadsheet-1.8/spreadsheet/workbook-cmd-format.h
+include/libspreadsheet-1.8/spreadsheet/workbook-control-priv.h
+include/libspreadsheet-1.8/spreadsheet/workbook-control.h
+include/libspreadsheet-1.8/spreadsheet/workbook-priv.h
+include/libspreadsheet-1.8/spreadsheet/workbook-view.h
+include/libspreadsheet-1.8/spreadsheet/workbook.h
+include/libspreadsheet-1.8/spreadsheet/xml-io-version.h
+include/libspreadsheet-1.8/spreadsheet/xml-io.h
+include/libspreadsheet-1.8/spreadsheet/xml-sax.h
 lib/gnumeric/${PKGVERSION}/include/gnumeric-features.h
 lib/gnumeric/${PKGVERSION}/plugins/applix/applix.la
 lib/gnumeric/${PKGVERSION}/plugins/applix/plugin.xml
@@ -200,7 +200,7 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
 lib/libspreadsheet.la
-lib/pkgconfig/libspreadsheet-1.7.pc
+lib/pkgconfig/libspreadsheet-1.8.pc
 man/man1/gnumeric.1
 man/man1/ssconvert.1
 man/man1/ssindex.1
@@ -832,7 +832,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/pixmaps/gnumeric
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnumeric
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @dirrm share/gnumeric/${PKGVERSION}/templates
 @dirrm share/gnumeric/${PKGVERSION}/idl
 @dirrm share/gnumeric/${PKGVERSION}/glade
@@ -848,7 +848,6 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/gnome/help/gnumeric/C/figures
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
-@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/xbase
@@ -893,5 +892,5 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/include
 @dirrm lib/gnumeric/${PKGVERSION}
 @dirrm lib/gnumeric
-@dirrm include/libspreadsheet-1-7/spreadsheet
-@dirrm include/libspreadsheet-1-7
+@dirrm include/libspreadsheet-1.8/spreadsheet
+@dirrm include/libspreadsheet-1.8
