@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/09/21 13:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/01/06 16:59:31 heinz Exp $
 #
 
 DISTNAME=		goffice-0.4.3
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.4/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ftp.gnome.org/pub/GNOME/sources/goffice/0.4/
 COMMENT=		Library of document-centric objects and utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
