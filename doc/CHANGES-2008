@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.48 2008/01/06 18:21:47 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.49 2008/01/06 20:12:42 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -52,7 +52,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/x11-links to 0.35 [tron 2008-01-05]
 	Updated databases/guile-pg to 0.34 [gdt 2008-01-05]
 	Updated chat/amsn to 0.97 [rillig 2008-01-05]
+	Updated sysutils/pstree to 2.32 [heinz 2008-01-05]
 	Updated math/glpk to 4.25 [adam 2008-01-05]
+	Updated devel/p5-Date-Manip to 5.48 [heinz 2008-01-05]
 	Updated devel/kscope to 1.6.0 [rillig 2008-01-05]
 	Updated net/snort to 2.8.0.1 [adrianp 2008-01-06]
 	Updated meta-pkgs/pkg_developer to 1.2 [adrianp 2008-01-06]
