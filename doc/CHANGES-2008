@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.47 2008/01/06 16:42:43 adam Exp $
+$NetBSD: CHANGES-2008,v 1.48 2008/01/06 18:21:47 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-client to 2.1.2 [adam 2008-01-06]
 	Updated games/freeciv-server to 2.1.2 [adam 2008-01-06]
 	Removed games/freeciv-sounds [adam 2008-01-06]
+	Updated audio/xmms-wma to 1.0.5 [rillig 2008-01-06]
