@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2007/08/16 22:59:08 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2008/01/06 16:39:14 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeciv-client
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
 PKG_OPTIONS_GROUP.backend=	gtk gtk2 xaw xaw3d sdl x11
-PKG_SUGGESTED_OPTIONS=	gtk2
+PKG_SUGGESTED_OPTIONS=		gtk2
 
 .include "../../mk/bsd.options.mk"
 
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--enable-client=xaw3d
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--enable-ftwl=sdl
+CONFIGURE_ARGS+=	--enable-client=sdl
+#CONFIGURE_ARGS+=	--enable-ftwl=sdl
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .endif
