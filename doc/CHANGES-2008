@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.44 2008/01/06 12:02:26 obache Exp $
+$NetBSD: CHANGES-2008,v 1.45 2008/01/06 16:01:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -57,3 +57,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/snort to 2.8.0.1 [adrianp 2008-01-06]
 	Updated meta-pkgs/pkg_developer to 1.2 [adrianp 2008-01-06]
 	Added mail/im version 149 [obache 2008-01-06]
+	Updated www/zope29 to 2.9.8nb1 [taca 2008-01-06]
+	Updated www/zope210 to 2.10.5nb1 [taca 2008-01-06]
