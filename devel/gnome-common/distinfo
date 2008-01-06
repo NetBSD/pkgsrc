@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/10/08 17:17:36 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2008/01/06 16:36:49 drochner Exp $
 
-SHA1 (gnome-common-2.12.0.tar.bz2) = 5483bad8bcded040946f776c655507caf05946af
-RMD160 (gnome-common-2.12.0.tar.bz2) = cbd83180027c69b88737b02bef2f2b99e4c2968c
-Size (gnome-common-2.12.0.tar.bz2) = 60283 bytes
+SHA1 (gnome-common-2.20.0.tar.bz2) = 8fc9eeacdf6b77d8e6d1735979bbc3d678f49d95
+RMD160 (gnome-common-2.20.0.tar.bz2) = 13747e5b81708e511cb8e73e96edfa794025fa07
+Size (gnome-common-2.20.0.tar.bz2) = 64309 bytes
