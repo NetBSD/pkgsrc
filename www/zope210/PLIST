@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/18 15:35:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/06 15:59:26 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -4970,6 +4970,8 @@ ${ZOPE_BASE}/lib/python/reStructuredText/tests/__init__.py
 ${ZOPE_BASE}/lib/python/reStructuredText/tests/__init__.pyc
 ${ZOPE_BASE}/lib/python/reStructuredText/tests/testReST.py
 ${ZOPE_BASE}/lib/python/reStructuredText/tests/testReST.pyc
+${ZOPE_BASE}/lib/python/sitecustomize.py
+${ZOPE_BASE}/lib/python/sitecustomize.pyc
 ${ZOPE_BASE}/lib/python/tempstorage/TemporaryStorage.py
 ${ZOPE_BASE}/lib/python/tempstorage/TemporaryStorage.pyc
 ${ZOPE_BASE}/lib/python/tempstorage/__init__.py
@@ -9245,7 +9247,6 @@ ${ZOPE_BASE}/skel/etc/site.zcml
 ${ZOPE_BASE}/skel/Extensions/README.txt
 ${ZOPE_BASE}/skel/Products/README.txt
 ${ZOPE_BASE}/skel/README.txt
-${ZOPE_BASE}/skel/bin/runzope.bat.in
 ${ZOPE_BASE}/skel/bin/runzope.in
 ${ZOPE_BASE}/skel/bin/zopectl.in
 ${ZOPE_BASE}/skel/bin/zopeservice.py.in
