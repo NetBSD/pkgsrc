@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.905 2008/01/03 21:16:16 seb Exp $
+# $NetBSD: Makefile,v 1.906 2008/01/06 21:47:56 ghen Exp $
 #
 
 COMMENT=	Development utilities
@@ -271,6 +271,7 @@ SUBDIR+=	libhfs
 SUBDIR+=	libiberty
 SUBDIR+=	libidn
 SUBDIR+=	libinstaller
+SUBDIR+=	libixp
 SUBDIR+=	libjit
 SUBDIR+=	libjudy
 SUBDIR+=	libltdl
