@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.43 2008/01/06 02:13:18 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.44 2008/01/06 12:02:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/kscope to 1.6.0 [rillig 2008-01-05]
 	Updated net/snort to 2.8.0.1 [adrianp 2008-01-06]
 	Updated meta-pkgs/pkg_developer to 1.2 [adrianp 2008-01-06]
+	Added mail/im version 149 [obache 2008-01-06]
