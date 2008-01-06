@@ -1,0 +1,36 @@
+# $NetBSD: c++.help,v 1.1 2008/01/06 18:03:16 rillig Exp $
+
+# This file contains typical error messages from C++ compilers and
+# instructions how to fix them properly.
+
+# === ISO C++ forbits declaration of '%s' with no type ===
+#
+# This g++ error message appears when a variable is declared, but the
+# type of the variable has not been defined before.
+#
+# A common cause is that the type has been "declared" implicitly in a
+# friend declaration of a class. Up to g++3, this friend declaration
+# was also an implicit class declaration. Starting with g++4, this is no
+# longer the case.
+#
+# Now you have to declare the friend class twice: Once to say that it is
+# a class, and twice to say that it is a friend. Example:
+#
+# Wrong:
+#
+#	class Me {
+#		friend class You;
+#	};
+#
+#	You look_great;
+#
+# Correct:
+#
+#	class You;			// <-- new
+#	class Me {
+#		friend class You;
+#	};
+#
+#	You look_great;
+#
+# Keywords: ISO C++ forbids declaration type friend
