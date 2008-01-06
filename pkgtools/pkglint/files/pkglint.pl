@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.753 2008/01/05 22:13:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.754 2008/01/06 01:02:14 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1529,6 +1529,7 @@ package main;
 use strict;
 use warnings;
 
+use Data::Dumper;
 use Digest::SHA1;
 use Getopt::Long qw(:config no_ignore_case bundling require_order);
 use Fcntl qw(:mode);
@@ -3390,6 +3391,10 @@ sub tree_match($$);
 sub tree_match($$) {
 	my ($tree, $pattern) = @_;
 
+	my $d1 = Data::Dumper->new([$tree, $pattern])->Terse(true)->Indent(0);
+	my $d2 = Data::Dumper->new([$pattern])->Terse(true)->Indent(0);
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, sprintf("tree_match(%s, %s)", $d1->Dump, $d2->Dump));
+
 	return true if (!defined($tree) && !defined($pattern));
 	return false if (!defined($tree) || !defined($pattern));
 	my $aref = ref($tree);
@@ -3428,6 +3433,8 @@ sub parse_mk_cond($$) {
 			return ["empty", $1];
 		} elsif ($cond =~ s/^empty\((${re_simple_varname}):M([^\$:{})]+)\)$//) {
 			return ["empty", ["match", $1, $2]];
+		} elsif ($cond =~ s/^\$\{(${re_simple_varname})\}\s+(==|!=)\s+"([^"\$\\]*)"$//) {
+			return [$2, ["var", $1], ["string", $3]];
 		} else {
 			$opt_debug_unchecked and $line->log_debug("parse_mk_cond: ${cond}");
 			return ["unknown", $cond];
@@ -4927,6 +4934,15 @@ sub checkline_mk_vardef($$$) {
 	}
 }
 
+# @param $op
+#	The operator that is used for reading or writing to the variable.
+#	One of: "=", "+=", ":=", "!=", "?=", "use", "pp-use", "".
+#	For some variables (like BuildlinkDepth or BuildlinkPackages), the
+#	operator influences the valid values.
+# @param $comment
+#	In assignments, a part of the line may be commented out. If there
+#	is no comment, pass C<undef>.
+#
 sub checkline_mk_vartype_basic($$$$$$$$);
 sub checkline_mk_vartype_basic($$$$$$$$) {
 	my ($line, $varname, $type, $op, $value, $comment, $list_context, $is_guessed) = @_;
@@ -4945,7 +4961,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 	if (ref($type) eq "HASH") {
 		if (!exists($type->{$value})) {
-			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ".join(" ", sort(keys(%{$type})))." instead.");
+			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of { ".join(" ", sort(keys(%{$type})))." } instead.");
 		}
 
 	} elsif ($type eq "AwkCommand") {
@@ -4975,7 +4991,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 
 	} elsif ($type eq "BuildlinkDepth") {
-		if ($value ne "\${BUILDLINK_DEPTH}+"
+		if (!($op eq "use" && $value eq "+")
+		    && $value ne "\${BUILDLINK_DEPTH}+"
 		    && $value ne "\${BUILDLINK_DEPTH:S/+\$//}") {
 			$line->log_warning("Invalid value for ${varname}.");
 		}
@@ -5074,7 +5091,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 
 	} elsif ($type eq "Dependency") {
 		if ($value =~ qr"^(${regex_pkgbase})(<|=|>|<=|>=|!=)(${regex_pkgversion})$") {
-			my ($depbase, $op, $depversion) = ($1, $2, $3);
+			my ($depbase, $depop, $depversion) = ($1, $2, $3);
 
 		} elsif ($value =~ qr"^(${regex_pkgbase})-(?:\[(.*)\]\*|(\d+(?:\.\d+)*(?:\.\*)?)(\{,nb\*\}|\*|)|(.*))?$") {
 			my ($depbase, $bracket, $version, $version_wildcard, $other) = ($1, $2, $3, $4, $5);
@@ -5894,7 +5911,7 @@ sub checkline_mk_varassign($$$$$) {
 #
 sub checkline_mk_cond($$) {
 	my ($line, $cond) = @_;
-	my ($varname, $match);
+	my ($op, $varname, $match, $value);
 
 	$opt_debug_trace and $line->log_debug("checkline_mk_cond($cond)");
 	my $tree = parse_mk_cond($line, $cond);
@@ -5923,7 +5940,15 @@ sub checkline_mk_cond($$) {
 		# complete package definitition for the package "pkgbase"
 		# or some other database. If we could confine all option
 		# definitions to options.mk, this would become easier.
+
+	} elsif (tree_match($tree, [\$op, ["var", \$varname], ["string", \$value]])) {
+		checkline_mk_vartype($line, $varname, "use", $value, undef);
+
 	}
+	# XXX: When adding new cases, be careful that the variables may have
+	# been partially initialized by previous calls to tree_match.
+	# XXX: Maybe it is better to clear these references at the beginning
+	# of tree_match.
 }
 
 #
