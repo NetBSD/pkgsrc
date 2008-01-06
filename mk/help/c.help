@@ -1,0 +1,16 @@
+# $NetBSD: c.help,v 1.1 2008/01/06 19:13:31 rillig Exp $
+
+# This file contains typical error messages from C++ compilers and
+# instructions how to fix them properly.
+
+# === Invalid lvalue in increment ===
+#
+# Once upon a time, it was possible to say "((int)foo)++". With gcc4,
+# this no longer works, and now you have to say "foo = (int)foo + 1".
+#
+# This becomes more complicated in macros that access datastructures,
+# which involves much pointer arithmetics. A popular example is obstack,
+# a collection of "object stack macros". A patch for fixing that is in
+# devel/coconut/patches/patch-ab revision 1.1.
+#
+# Keywords: C lvalue increment obstack obstack_ptr_grow
