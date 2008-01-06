@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.906 2008/01/06 21:47:56 ghen Exp $
+# $NetBSD: Makefile,v 1.907 2008/01/06 23:51:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -287,6 +287,7 @@ SUBDIR+=	libntlm
 SUBDIR+=	liboil
 SUBDIR+=	liboop
 SUBDIR+=	libosip
+SUBDIR+=	libowfat
 SUBDIR+=	libportlib
 SUBDIR+=	libproplist
 SUBDIR+=	librfuncs
