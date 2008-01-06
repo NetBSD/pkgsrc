@@ -1,31 +1,33 @@
-# $NetBSD: Makefile,v 1.14 2007/02/01 17:53:40 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.15 2008/01/06 21:55:38 ghen Exp $
 
-DISTNAME=		wmii-3.1
+DISTNAME=		wmii-3.6
 CATEGORIES=		wm
-MASTER_SITES=		http://suckless.org/download/
+MASTER_SITES=		http://www.suckless.org/download/
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Modular and keyboard-friendly window manager
 
+DEPENDS+=		dmenu>=3.4:../../x11/dmenu
+
 NO_CONFIGURE=		yes
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
+MAKE_ENV+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	cmd/wm/wmii rc/wmiirc cmd/wm/wmii.1
-SUBST_SED.path+=	-e 's|CONFPREFIX|${PKG_SYSCONFBASE}|g'
+# see ${WRKSRC}/mk/wmii.mk
+CONFVERSION=		3.5
+PLIST_SUBST+=		CONFVERSION=${CONFVERSION}
 
-PKG_SYSCONFSUBDIR=	wmii-3
+PKG_SYSCONFSUBDIR=	wmii-${CONFVERSION}
 EGDIR=			${PREFIX}/share/examples/${PKG_SYSCONFSUBDIR}
-EGFILES=		quit status welcome wmiirc
+EGFILES=		rc.wmii welcome wmiirc
 CONF_FILES_MODE=	0755
 
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
+.include "../../devel/libixp/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/15 11:39:10 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/06 21:55:38 ghen Exp $
 bin/wmii
-bin/wmiimenu
-bin/wmiipsel
+bin/wmii9menu
+bin/wmii9rc
+bin/wmiiloop
 bin/wmiir
-bin/wmiisetsid
-bin/wmiiwarp
-bin/wmiiwm
+bin/wmiistartrc
 man/man1/wmii.1
-man/man1/wmiimenu.1
+man/man1/wmiiloop.1
 man/man1/wmiir.1
-man/man1/wmiiwm.1
-share/examples/wmii-3/quit
-share/examples/wmii-3/status
-share/examples/wmii-3/welcome
-share/examples/wmii-3/wmiirc
-@dirrm share/examples/wmii-3
+share/examples/wmii-${CONFVERSION}/rc.wmii
+share/examples/wmii-${CONFVERSION}/welcome
+share/examples/wmii-${CONFVERSION}/wmiirc
+@dirrm share/examples/wmii-${CONFVERSION}
