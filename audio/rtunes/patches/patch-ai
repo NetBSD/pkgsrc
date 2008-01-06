@@ -1,10 +1,21 @@
-$NetBSD: patch-ai,v 1.1 2007/12/29 19:54:02 joerg Exp $
+$NetBSD: patch-ai,v 1.2 2008/01/06 17:17:15 rillig Exp $
 
 Conflicts with system function (size_t datlen) on DragonFly.
 
---- libbsd/arc4random.c.orig	2007-12-29 17:37:54.000000000 +0000
-+++ libbsd/arc4random.c
-@@ -150,14 +150,6 @@ arc4random_stir(void)
+--- libbsd/arc4random.c.orig	2006-05-06 14:33:22.000000000 +0000
++++ libbsd/arc4random.c	2008-01-06 18:14:32.000000000 +0000
+@@ -41,7 +41,9 @@
+ #include <sys/time.h>
+ #include <sys/sysctl.h>
+ 
+-#define KERN_ARND 37
++#ifndef KERN_ARND
++#define KERN_ARND 37		/* XXX: Different (81) on NetBSD */
++#endif
+ 
+ #ifdef __GNUC__
+ #define inline __inline
+@@ -150,14 +152,6 @@ arc4random_stir(void)
  	arc4_stir(&rs);
  }
  
