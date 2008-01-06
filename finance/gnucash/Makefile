@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2007/11/29 13:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2008/01/06 19:37:52 heinz Exp $
 #
 
 DISTNAME=		gnucash-2.2.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		guile-slib>=3.1.1:../../devel/guile-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
