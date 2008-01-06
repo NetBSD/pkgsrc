@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2007/04/09 00:46:11 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2008/01/06 15:57:47 drochner Exp $
 
---- Makefile.in.orig	2007-03-12 13:47:59.000000000 +0000
+--- Makefile.in.orig	2007-12-22 21:45:16.000000000 +0100
 +++ Makefile.in
-@@ -264,7 +264,7 @@ psdir = @psdir@
+@@ -263,7 +263,7 @@ psdir = @psdir@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
