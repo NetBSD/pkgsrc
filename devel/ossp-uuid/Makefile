@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/20 02:42:27 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/06 20:08:24 heinz Exp $
 #
 
 DISTNAME=		uuid-1.6.0
@@ -12,7 +12,8 @@ COMMENT=		C-API and command line tool for generating UUIDs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS=		e2fsprogs>1.32 libuuid-[0-9]*
+# conflicts with packages in pkgsrc-wip
+#CONFLICTS=		e2fsprogs>1.32 libuuid-[0-9]* # libuuid.* uuid.pc uuid.3
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uuid.pc.in
