@@ -1,35 +1,28 @@
-$NetBSD: patch-aa,v 1.5 2007/01/15 11:39:10 ghen Exp $
+$NetBSD: patch-aa,v 1.6 2008/01/06 21:55:38 ghen Exp $
 
---- config.mk.orig	2006-06-17 13:44:29.000000000 +0200
+--- config.mk.orig	2007-11-16 14:59:15.000000000 +0100
 +++ config.mk
-@@ -1,22 +1,21 @@
- # Customize to fit your system
+@@ -1,10 +1,9 @@
+ # Customize below to fit your system
  
  # paths
 -PREFIX = /usr/local
--CONFPREFIX = ${PREFIX}/etc
--MANPREFIX = ${PREFIX}/share/man
-+#PREFIX = /usr/local
-+CONFPREFIX = ${PREFIX}/share/examples
-+MANPREFIX = ${PREFIX}/${PKGMANDIR}
+ BIN = ${PREFIX}/bin
+-MAN = ${PREFIX}/share/man
+-ETC = ${PREFIX}/etc
++MAN = ${PREFIX}/${PKGMANDIR}
++ETC = ${PKG_SYSCONFBASE}
+ LIBDIR = ${PREFIX}/lib
+ INCLUDE = ${PREFIX}/include
  
--X11INC = /usr/X11R6/include
--X11LIB = /usr/X11R6/lib
-+X11INC = ${X11BASE}/include
-+X11LIB = ${X11BASE}/lib
+@@ -14,8 +13,8 @@ LIBS = -L/usr/lib -lc -L${ROOT}/lib
  
- VERSION = 3.1
- 
- # includes and libs
--LIBS = -L${PREFIX}/lib -L/usr/lib -lc -L${X11LIB} -lX11
-+LIBS = -lc -lX11
- 
- # Linux/BSD
--CFLAGS = -O3 -I. -I${PREFIX}/include -I/usr/include -I${X11INC} \
--	-DVERSION=\"${VERSION}\"
--LDFLAGS = ${LIBS}
-+CFLAGS += -DVERSION=\"${VERSION}\"
+ # Flags
+ include ${ROOT}/mk/gcc.mk
+-CFLAGS += -g -O0 -DIXPlint
+-LDFLAGS += -g ${LIBS}
++CFLAGS += -DIXPlint
 +LDFLAGS += ${LIBS}
+ STATIC = -static
+ MKDEP = cpp -M
  
- # Solaris
- #CFLAGS = -fast -xtarget=ultra ${INCLUDES} -DVERSION=\"${VERSION}\"
