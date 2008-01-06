@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.50 2008/01/06 21:49:10 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.51 2008/01/06 21:56:18 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/xmms-wma to 1.0.5 [rillig 2008-01-06]
 	Added x11/dmenu version 3.4 [ghen 2008-01-06]
 	Added devel/libixp version 0.4 [ghen 2008-01-06]
+	Updated wm/wmii to 3.6 [ghen 2008-01-06]
