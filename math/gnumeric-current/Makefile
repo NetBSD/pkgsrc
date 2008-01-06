@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2007/11/30 17:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/01/06 16:48:01 drochner Exp $
 #
 
-DISTNAME=		gnumeric-1.7.90
+DISTNAME=		gnumeric-1.8.0
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.7/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -18,9 +18,13 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 GCONF_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
-PKGCONFIG_OVERRIDE=	libspreadsheet-1.7.pc.in
+PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
+
+# XXX work around missing file in distribution, remove on update
+post-extract:
+	${CP} ${FILESDIR}/gnumeric-C.omf ${WRKSRC}/doc/C
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
@@ -42,10 +46,10 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../misc/goffice0.5/buildlink3.mk"
+.include "../../misc/goffice0.6/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
 
