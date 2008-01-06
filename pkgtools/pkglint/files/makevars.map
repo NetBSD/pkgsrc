@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.178 2007/12/21 12:36:59 rillig Exp $
+# $NetBSD: makevars.map,v 1.179 2008/01/06 18:37:21 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -188,6 +188,7 @@ BUILD_DEFS		List of Varname [m:a,c:a,o:a]
 BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BUILD_DIRS		List of WrksrcSubdirectory [$package_list]
 BUILD_ENV		List of ShellWord [$package_list]
+BUILD_MAKE_CMD		ShellCommand [$system]
 BUILD_MAKE_FLAGS	List of ShellWord [$package_list]
 BUILD_TARGET		List of Identifier [$package]
 BUILD_USES_MSGFMT	Yes [$package]
