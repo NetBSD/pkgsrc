@@ -1,0 +1,2 @@
+libixp is a stand-alone client/server 9P library including ixpc client.
+It consists of less than 2000 lines of code (including ixpc).
