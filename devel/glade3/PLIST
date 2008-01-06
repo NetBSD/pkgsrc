@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/16 14:03:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/06 15:59:41 drochner Exp $
 bin/glade-3
 include/libgladeui-1.0/gladeui/glade-app.h
 include/libgladeui-1.0/gladeui/glade-base-editor.h
@@ -279,6 +279,43 @@ share/glade3/pixmaps/hicolor/22x22/actions/widget-gtk-vseparator.png
 share/glade3/pixmaps/hicolor/22x22/actions/widget-gtk-window.png
 share/glade3/pixmaps/plus.png
 share/glade3/pixmaps/selector.png
+share/gtk-doc/html/gladeui/GladeApp.html
+share/gtk-doc/html/gladeui/GladeClipboard.html
+share/gtk-doc/html/gladeui/GladeClipboardView.html
+share/gtk-doc/html/gladeui/GladeCommand.html
+share/gtk-doc/html/gladeui/GladeEditor.html
+share/gtk-doc/html/gladeui/GladeEditorProperty.html
+share/gtk-doc/html/gladeui/GladeFixed.html
+share/gtk-doc/html/gladeui/GladeInspector.html
+share/gtk-doc/html/gladeui/GladePalette.html
+share/gtk-doc/html/gladeui/GladePlaceholder.html
+share/gtk-doc/html/gladeui/GladeProject.html
+share/gtk-doc/html/gladeui/GladeWidget.html
+share/gtk-doc/html/gladeui/catalog.html
+share/gtk-doc/html/gladeui/catalogintro.html
+share/gtk-doc/html/gladeui/children.html
+share/gtk-doc/html/gladeui/core.html
+share/gtk-doc/html/gladeui/dockables.html
+share/gtk-doc/html/gladeui/gladeui-GladeBaseEditor.html
+share/gtk-doc/html/gladeui/gladeui-GladePropertyClass.html
+share/gtk-doc/html/gladeui/gladeui-GladeWidgetAdaptor.html
+share/gtk-doc/html/gladeui/gladeui-glade-parameter.html
+share/gtk-doc/html/gladeui/gladeui-glade-property.html
+share/gtk-doc/html/gladeui/gladeui-glade-signal-editor.html
+share/gtk-doc/html/gladeui/gladeui-glade-utils.html
+share/gtk-doc/html/gladeui/gladeui.devhelp
+share/gtk-doc/html/gladeui/gladeui.devhelp2
+share/gtk-doc/html/gladeui/home.png
+share/gtk-doc/html/gladeui/index.html
+share/gtk-doc/html/gladeui/index.sgml
+share/gtk-doc/html/gladeui/ix01.html
+share/gtk-doc/html/gladeui/left.png
+share/gtk-doc/html/gladeui/misc.html
+share/gtk-doc/html/gladeui/properties.html
+share/gtk-doc/html/gladeui/right.png
+share/gtk-doc/html/gladeui/style.css
+share/gtk-doc/html/gladeui/up.png
+share/gtk-doc/html/gladeui/widgetclasses.html
 share/icons/hicolor/16x16/apps/glade-3.png
 share/icons/hicolor/22x22/apps/glade-3.png
 share/icons/hicolor/24x24/apps/glade-3.png
@@ -339,6 +376,7 @@ share/locale/zh_TW/LC_MESSAGES/glade3.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/gladeui
 @dirrm share/glade3/pixmaps/hicolor/22x22/actions
 @dirrm share/glade3/pixmaps/hicolor/22x22
 @dirrm share/glade3/pixmaps/hicolor/16x16/actions
