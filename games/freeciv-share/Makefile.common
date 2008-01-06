@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.29 2007/03/18 13:12:14 adam Exp $
+# $NetBSD: Makefile.common,v 1.30 2008/01/06 16:39:15 adam Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.0.9
+FC_VERS=	2.1.2
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
 		http://www.freeciv.org/ftp/stable/ \
@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
