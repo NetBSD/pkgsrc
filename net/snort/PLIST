@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.25 2007/10/21 00:22:53 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.26 2008/01/06 00:28:44 adrianp Exp $
 bin/snort
 lib/snort_dynamicengine/libsf_engine.la
+lib/snort_dynamicrules/lib_sfdynamic_example_rule.la
 lib/snort_dynamicpreprocessor/libsf_dcerpc_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dns_preproc.la
 lib/snort_dynamicpreprocessor/libsf_ftptelnet_preproc.la
 lib/snort_dynamicpreprocessor/libsf_smtp_preproc.la
 lib/snort_dynamicpreprocessor/libsf_ssh_preproc.la
+lib/snort_dynamicpreprocessor/lib_sfdynamic_preprocessor_example.la
 man/man8/snort.8
 share/doc/snort/AUTHORS
 share/doc/snort/BUGS
@@ -90,9 +92,11 @@ share/snort/src/snort_dynamicsrc/str_search.h
 share/snort/src/snort_dynamicsrc/stream_api.h
 @dirrm share/snort/src/snort_dynamicsrc
 @dirrm share/snort/src
+@dirrm share/snort/rules
 @dirrm share/snort
 @dirrm share/examples/snort
 @dirrm share/doc/snort/schemas
 @dirrm share/doc/snort
 @dirrm lib/snort_dynamicpreprocessor
 @dirrm lib/snort_dynamicengine
+@dirrm lib/snort_dynamicrules
