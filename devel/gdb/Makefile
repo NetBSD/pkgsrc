@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/07/03 12:41:18 lkundrak Exp $
+# $NetBSD: Makefile,v 1.35 2008/01/06 19:25:09 rillig Exp $
 #
 
 DISTNAME=	gdb-5.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
-BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1 pkgsrc-2006Q4
-
 NOT_FOR_PLATFORM=	Darwin-*-*
 
 BROKEN_GETTEXT_DETECTION=	yes
@@ -22,7 +20,7 @@ USE_TOOLS+=		gmake msgfmt
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
-INFO_FILES=		# PLIST.common
+INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
