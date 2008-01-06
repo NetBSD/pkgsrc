@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2008/01/06 21:55:39 ghen Exp $
+
+--- rc/Makefile.orig	2007-11-16 14:59:15.000000000 +0100
++++ rc/Makefile
+@@ -2,7 +2,7 @@ ROOT=..
+ include ${ROOT}/mk/hdr.mk
+ include ${ROOT}/mk/wmii.mk
+ 
+-BIN = ${ETC}/wmii-${CONFVERSION}
++BIN = ${PREFIX}/share/examples/wmii-${CONFVERSION}
+ TARG =	rc.wmii   \
+ 	wmiirc    \
+ 	welcome
