@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/18 15:31:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/01/06 15:57:45 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -8910,7 +8910,6 @@ ${ZOPE_BASE}/lib/python/zope/viewlet/zope.viewlet-meta.zcml
 ${ZOPE_BASE}/skel/Extensions/README.txt
 ${ZOPE_BASE}/skel/Products/README.txt
 ${ZOPE_BASE}/skel/README.txt
-${ZOPE_BASE}/skel/bin/runzope.bat.in
 ${ZOPE_BASE}/skel/bin/runzope.in
 ${ZOPE_BASE}/skel/bin/zopectl.in
 ${ZOPE_BASE}/skel/bin/zopeservice.py.in
