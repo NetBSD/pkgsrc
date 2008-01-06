@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1 2008/01/06 15:52:29 taca Exp $
+#
+
+FILES_SUBST+=	RCVAR_SUFFIX=${RCVAR_SUFFIX}
+MESSAGE_SUBST+=	RCVAR_SUFFIX=${RCVAR_SUFFIX}
+
+PKG_GROUPS_VARS+=	ZOPE_GROUP
+PKG_USERS_VARS+=	ZOPE_USER
+
+PKG_GROUPS=	${ZOPE_GROUP}
+PKG_USERS=	${ZOPE_USER}:${ZOPE_GROUP}
+
+SUBST_CLASSES+=		site
+SUBST_STAGE.site=	pre-configure
+SUBST_FILES.site+=	lib/python/sitecustomize.py
+SUBST_SED.site=		-e "s|@ZOPE_VERSION@|${ZOPE_VERSION}|g"
+SUBST_MESSAGE.site=	Update sitecustomize.py to ${ZOPE_PKG}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_DESTDIR} == "no"
+PRIVILEGED_STAGES+=	clean
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+RCVAR_SUFFIX=	_enable
+.else
+RCVAR_SUFFIX=	# empty
+.endif
