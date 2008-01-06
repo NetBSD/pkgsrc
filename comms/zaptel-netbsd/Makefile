@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/06 18:58:50 rillig Exp $
 #
 
 DISTNAME=		zaptel-netbsd-20060127
@@ -17,10 +17,17 @@ INSTALLATION_DIRS=	lkm
 ZAPTEL_KERNEL_ENV?=	# empty
 BUILD_DEFS+=		ZAPTEL_KERNEL_ENV
 MAKE_ENV+=		ZAPTEL_KERNEL_ENV=${ZAPTEL_KERNEL_ENV:Q}
+MAKE_ENV+=		BSDSRCDIR=${BSDSRCDIR}
 CONF_FILES=		${PREFIX}/share/examples/zaptel/zaptel.conf \
 			${PKG_SYSCONFDIR}/zaptel.conf
 
 RCD_SCRIPTS=		ztcfg
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${BSDSRCDIR}/sys)
+PKG_FAIL_REASON+=	"${PKGNAME} needs kernel sources in ${BSDSRCDIR}."
+.endif
 
 .include "../../devel/newt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
