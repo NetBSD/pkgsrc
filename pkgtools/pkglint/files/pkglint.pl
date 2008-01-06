@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.754 2008/01/06 01:02:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.755 2008/01/06 14:55:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4670,7 +4670,9 @@ sub checkline_mk_shelltext($$) {
 					$line->log_warning("The \"${plain_tool}\" tool is used but not added to USE_TOOLS.");
 				}
 
-				if (defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-(?:extract|patch|wrapper|configure|build|install|package|clean)$") {
+				# Deactivated to allow package developers to write
+				# consistent code that uses ${TOOL} in all places.
+				if (false && defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-(?:extract|patch|wrapper|configure|build|install|package|clean)$") {
 					if (!exists(get_required_vartool_varnames()->{$vartool})) {
 						$opt_warn_extra and $line->log_note("You can write \"${plain_tool}\" instead of \"${shellword}\".");
 						$opt_warn_extra and $line->explain_note(
