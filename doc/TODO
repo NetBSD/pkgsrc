@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6957 2008/01/05 22:15:10 adam Exp $
+$NetBSD: TODO,v 1.6958 2008/01/06 16:42:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,6 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fox-1.6.30
-	o freeciv-2.1.2
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
 	o freepops-0.2.6

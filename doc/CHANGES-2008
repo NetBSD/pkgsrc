@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.46 2008/01/06 16:09:05 taca Exp $
+$NetBSD: CHANGES-2008,v 1.47 2008/01/06 16:42:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -60,3 +60,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/zope29 to 2.9.8nb1 [taca 2008-01-06]
 	Updated www/zope210 to 2.10.5nb1 [taca 2008-01-06]
 	Updated security/sudo to 1.6.9p11 [taca 2008-01-06]
+	Updated games/freeciv-share to 2.1.2 [adam 2008-01-06]
+	Updated games/freeciv-client to 2.1.2 [adam 2008-01-06]
+	Updated games/freeciv-server to 2.1.2 [adam 2008-01-06]
+	Removed games/freeciv-sounds [adam 2008-01-06]
