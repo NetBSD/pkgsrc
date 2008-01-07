@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.2 2007/10/13 12:02:15 adam Exp $
+$NetBSD: patch-an,v 1.3 2008/01/07 21:09:05 ghen Exp $
 
---- src/script/qscriptlexer.cpp.orig	2007-10-01 15:06:09.000000000 +0200
+--- src/script/qscriptlexer.cpp.orig	2007-12-04 17:43:06.000000000 +0100
 +++ src/script/qscriptlexer.cpp
-@@ -706,7 +706,7 @@ int QScript::Lexer::lex()
+@@ -704,7 +704,7 @@ int QScript::Lexer::lex()
  
      double dval = 0;
      if (state == Number) {
 -#if defined(Q_WS_WIN) || defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_CC_HPACC) || defined(Q_OS_AIX) || defined(Q_OS_OPENBSD)
-+#if defined(Q_WS_WIN) || defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_CC_HPACC) || defined(Q_OS_AIX) || defined(Q_OS_OPENBSD) || defined(__DragonFly__)
++#if defined(Q_WS_WIN) || defined(Q_OS_SOLARIS) || defined(Q_OS_IRIX) || defined(Q_CC_HPACC) || defined(Q_OS_AIX) || defined(Q_OS_OPENBSD) || defined(__DragonFly__) || ( defined(Q_OS_NETBSD) && (__NetBSD_Version__ < 400000000) )
          // ### This may cause autotest failure, but that's just plain weird...
          dval = strtod(buffer8, 0L);
  #else
