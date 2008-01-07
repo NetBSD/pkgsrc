@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/01/06 21:55:38 ghen Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/07 09:54:25 ghen Exp $
 
 DISTNAME=		wmii-3.6
+PKGREVISION=		1
 CATEGORIES=		wm
 MASTER_SITES=		http://www.suckless.org/download/
 
