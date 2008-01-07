@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.57 2008/01/07 23:06:10 abs Exp $
+$NetBSD: CHANGES-2008,v 1.58 2008/01/07 23:15:35 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql80-plpython to 8.0.15 [adam 2008-01-07]
 	Updated databases/postgresql80-pltcl to 8.0.15 [adam 2008-01-07]
 	Updated databases/jdbc-postgresql82 to 507 [abs 2008-01-07]
+	Updated databases/jdbc-postgresql81 to 411 [abs 2008-01-07]
