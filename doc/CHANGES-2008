@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.55 2008/01/07 19:57:57 tron Exp $
+$NetBSD: CHANGES-2008,v 1.56 2008/01/07 20:29:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -75,3 +75,24 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/nginx to 0.5.34 [ghen 2008-01-07]
 	Updated lang/sun-jre15 to 5.0.14 [tron 2008-01-07]
 	Updated lang/sun-jdk15 to 5.0.14 [tron 2008-01-07]
+	Updated databases/postgresql82 to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-adminpack to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-client to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-server to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-plperl to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-plpython to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-pltcl to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql82-tsearch2 to 8.2.6 [adam 2008-01-07]
+	Updated databases/postgresql81 to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-client to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-server to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-plperl to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-plpython to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-pltcl to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql81-tsearch2 to 8.1.11 [adam 2008-01-07]
+	Updated databases/postgresql80 to 8.0.15 [adam 2008-01-07]
+	Updated databases/postgresql80-client to 8.0.15 [adam 2008-01-07]
+	Updated databases/postgresql80-server to 8.0.15 [adam 2008-01-07]
+	Updated databases/postgresql80-plperl to 8.0.15 [adam 2008-01-07]
+	Updated databases/postgresql80-plpython to 8.0.15 [adam 2008-01-07]
+	Updated databases/postgresql80-pltcl to 8.0.15 [adam 2008-01-07]
