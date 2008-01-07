@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6960 2008/01/07 10:38:48 ghen Exp $
+$NetBSD: TODO,v 1.6961 2008/01/07 22:55:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -304,7 +304,7 @@ Suggested package updates
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
 	o ap-fastcgi-2.4.6
-	o ap-layout-3.3
+	o ap-layout-5.0
 	o ap-mp3-0.40
 	o ap-python-3.3.1
 	o ap-ssl-2.8.30
@@ -333,12 +333,13 @@ Suggested package updates
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
-	o asterisk-1.4.16.2
+	o asterisk-1.4.17
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o autoconvert-0.3.16
 	o autogen-5.9.3
 	o avcheck-0.91
+	o avidemux-2.4.0
 	o avl-2.0.2a
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
@@ -432,8 +433,9 @@ Suggested package updates
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
+	o deskbar-applet-2.20.3
 	o devIL-1.6.7
-	o devhelp-0.16.1
+	o devhelp-0.17
 	o dhcp-4.0.0 [DHCP6 supported.  as dhcp4?]
 	o dhid-5.3
 	o diction-1.11
@@ -473,6 +475,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.10
 	o enscript-1.6.4
+	o eog-2.20.4
 	o epic4-2.6
 	o epiphany-extensions-2.20.1
 	o epsg-6.14
@@ -484,8 +487,9 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o evilwm-1.0.0
-	o evolution-2.12.2
-	o evolution-exchange-2.12.2
+	o evolution-2.12.3
+	o evolution-data-server-1.12.3
+	o evolution-exchange-2.12.3
 	o evolution-webcal-2.12.0
 	o ex-20050325
 	o ezmlm-idx-6.0.1 [schmonz]
@@ -537,7 +541,7 @@ Suggested package updates
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
-	o gdm-2.20.2
+	o gdm-2.20.3
 	o gdsreader-0.3.2
 	o geany-0.12
 	o geda-1.3.0.20071229
@@ -569,8 +573,10 @@ Suggested package updates
 	o gnash-0.8.1 [pkg/37639]
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.20.1
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
+	o gnome-keyring-2.20.3
 	o gnome-mag-0.15.0
 	o gnome-media-2.20.1
 	o gnome-speech-0.4.17
@@ -619,7 +625,7 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
-	o gtkhtml-3.16.2
+	o gtkhtml314-3.16.3
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
@@ -655,7 +661,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs98-200609
 	o hydrogen-0.9.2
-	o hylafax-5.2.0
+	o hylafax-5.2.1
 	o ical-2.3.2
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -663,7 +669,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.16
+	o ikiwiki-2.18
 	o imap-uw-2007
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -807,7 +813,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-12.8.2
 	o mcrypt-2.6.6
-	o mednafen-0.8.6
+	o mednafen-0.8.7
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -857,11 +863,12 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o newt-1.08
+	o nfdump-1.5.6 [pkg/37705]
 	o ng-1.4.4
 	o ngrep-1.45
 	o nikto-2.0.1
 	o nkf-2.07 [pkg/37132]
-	o nmap-4.50
+	o nmap-4.52
 	o nmh-1.2.1
 	o nomarch-1.4
 	o ns-flash-9.0.115.0
@@ -878,7 +885,7 @@ Suggested package updates
 	o nut-12.0 [pkg/34466]
 	o nut-13.1
 	o nvi-1.81.6
-	o nxtvepg-2.7.7
+	o nxtvepg-2.8.0
 	o objc-3.2.8
 	o ocamlnet-2.2.4
 	o ocrad-0.17
@@ -895,7 +902,7 @@ Suggested package updates
 	o openmotif-2.3
 	o openssl-0.9.8e [in wip]
 	o openssl-0.9.8g
-	o orca-2.20.2
+	o orca-2.20.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20070324
@@ -946,6 +953,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-INET6-2.51
+	o p5-IO-Zlib-1.09
 	o p5-Image-Info-1.27
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Fuzzy-0.10
@@ -1161,7 +1169,7 @@ Suggested package updates
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rpm-4.4.2.1
+	o rpm-5.0.0
 	o rss2email-2.61
 	o rt3-3.6.5
 	o rtcw-1.41.3
@@ -1182,6 +1190,7 @@ Suggested package updates
 	o scribus-1.3.4
 	o scrollz-1.9.99
 	o scsh-1.3.0
+	o seahorse-2.20.3
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
@@ -1245,6 +1254,7 @@ Suggested package updates
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
+	o tcpdump-3.9.8
 	o tcpillust-1.00b
 	o tcpreplay-3.2.3
 	o tcpslice-1.2a3
@@ -1268,6 +1278,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o totem-2.20.3
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.0.4
@@ -1295,6 +1306,7 @@ Suggested package updates
 	o vino-2.20.1
 	o visual-regexp-3.1
 	o vlc-0.8.6d
+	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
 	o vmware-5.5
 	o vmware-module-3.2.2
@@ -1331,6 +1343,7 @@ Suggested package updates
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
+	o xchm-1.14
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
 	o xdesktopwaves-1.3
@@ -1388,7 +1401,7 @@ Suggested package updates
 	o xscreensaver-5.04
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-230
+	o xterm-231
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
