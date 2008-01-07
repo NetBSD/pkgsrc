@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.53 2008/01/07 09:55:17 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.54 2008/01/07 10:42:34 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/wmii to 3.6 [ghen 2008-01-06]
 	Added devel/libowfat version 0.27 [wiz 2008-01-06]
 	Updated wm/wmii to 3.6nb1 [ghen 2008-01-07]
+	Updated www/nginx to 0.5.34 [ghen 2008-01-07]
