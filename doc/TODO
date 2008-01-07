@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6958 2008/01/06 16:42:43 adam Exp $
+$NetBSD: TODO,v 1.6959 2008/01/07 00:12:21 agc Exp $
 
 Suggested new packages
 ======================
@@ -1292,7 +1292,6 @@ Suggested package updates
 	o vfu-4.03
 	o vicq-0.4.2
 	o vifm-0.3a
-	o vile-9.6
 	o vino-2.20.1
 	o visual-regexp-3.1
 	o vlc-0.8.6d
