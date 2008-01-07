@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/20 00:50:02 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/07 17:56:08 hubertf Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.netbeans.org/
 COMMENT=	NetBeans Java IDE
 
 USE_JAVA=	run
-PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk14
+PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk14 sun-jdk15 jdk15 sun-jdk6 jdk6
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/netbeans
