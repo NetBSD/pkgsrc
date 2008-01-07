@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/01/04 18:41:54 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/01/07 13:33:28 joerg Exp $
 
 --- configure.orig	2007-12-18 22:45:04.000000000 +0100
 +++ configure
@@ -13,7 +13,14 @@ $NetBSD: patch-aa,v 1.3 2008/01/04 18:41:54 joerg Exp $
    kfreebsd*-gnu)
      SYS="FREEBSD"
      CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
-@@ -252,7 +256,7 @@ case $host_cpu in
+@@ -245,14 +249,12 @@ case $host_cpu in
+       ASFLAGS="$ASFLAGS -f macho -DPREFIX"
+     elif [ "$SYS" = CYGWIN -o "$SYS" = MINGW ]; then
+       ASFLAGS="$ASFLAGS -f win32 -DPREFIX"
+-    elif [ "$SYS" = NETBSD ]; then
+-      ASFLAGS="$ASFLAGS -f aoutb"
+     else
+       ASFLAGS="$ASFLAGS -f elf"
      fi
      as_check || AS="nasm"
      ;;
