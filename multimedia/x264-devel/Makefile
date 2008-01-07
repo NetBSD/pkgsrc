@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/04 18:41:54 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/07 13:33:27 joerg Exp $
 #
 
 SNAPSHOT_DATE=		20071218
@@ -17,9 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386"
-BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
-.elif ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 .endif
 
