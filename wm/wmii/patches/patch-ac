@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2008/01/07 09:54:26 ghen Exp $
+
+http://www.suckless.org/hg.rc/wmii/rev/3749896cf02c
+
+--- cmd/wmii/utf.c.orig	2007-11-16 14:59:15.000000000 +0100
++++ cmd/wmii/utf.c
+@@ -2,6 +2,7 @@
+ #include "dat.h"
+ #include <errno.h>
+ #include <iconv.h>
++#include <langinfo.h>
+ #include <string.h>
+ #include "fns.h"
+ 
+@@ -11,8 +12,11 @@ toutf8n(char *str, size_t nstr) {
+ 	char *buf, *pos;
+ 	size_t nbuf, bsize;
+ 
+-	if(cd == nil)
+-		cd = iconv_open("UTF-8", "");
++	if(cd == nil) {
++		cd = iconv_open("UTF-8", nl_langinfo(CODESET));
++		if(cd == (iconv_t)-1)
++			fatal("Can't convert from native codeset to UTF-8");
++	}
+ 	iconv(cd, nil, nil, nil, nil);
+ 
+ 	bsize = nstr * 1.25 + 4;
