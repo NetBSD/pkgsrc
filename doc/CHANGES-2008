@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.54 2008/01/07 10:42:34 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.55 2008/01/07 19:57:57 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -73,3 +73,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/libowfat version 0.27 [wiz 2008-01-06]
 	Updated wm/wmii to 3.6nb1 [ghen 2008-01-07]
 	Updated www/nginx to 0.5.34 [ghen 2008-01-07]
+	Updated lang/sun-jre15 to 5.0.14 [tron 2008-01-07]
+	Updated lang/sun-jdk15 to 5.0.14 [tron 2008-01-07]
