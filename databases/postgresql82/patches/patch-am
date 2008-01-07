@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2007/10/09 20:17:08 adam Exp $
+$NetBSD: patch-am,v 1.3 2008/01/07 20:14:36 adam Exp $
 
 --- contrib/tsearch2/Makefile.orig	2006-09-11 17:14:46.000000000 +0200
 +++ contrib/tsearch2/Makefile
@@ -24,7 +24,7 @@ $NetBSD: patch-am,v 1.2 2007/10/09 20:17:08 adam Exp $
  top_builddir = ../..
  include $(top_builddir)/src/Makefile.global
  include $(top_srcdir)/contrib/contrib-global.mk
-+include $(top_builddir)/src/Makefile.shlib
++include $(top_srcdir)/src/Makefile.shlib
  endif
  
  
