@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6962 2008/01/08 02:52:57 obache Exp $
+$NetBSD: TODO,v 1.6963 2008/01/08 03:44:56 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1199,7 +1199,6 @@ Suggested package updates
 	o shc-3.8
 	o shmux-1.0.1
 	o shntool-3.0.5
-	o shorten-3.6.1
 	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.1.2
