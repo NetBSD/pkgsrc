@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2008/01/04 14:32:49 ghen Exp $
+# $NetBSD: Makefile,v 1.23 2008/01/08 16:52:20 ghen Exp $
+
+PKGREVISION=		1
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 
@@ -32,5 +34,8 @@ RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 .include "Makefile.common"
 
 PLIST_SRC+=		PLIST.common_end
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../mk/bsd.pkg.mk"
