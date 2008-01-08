@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.59 2008/01/07 23:18:33 abs Exp $
+$NetBSD: CHANGES-2008,v 1.60 2008/01/08 03:44:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -99,3 +99,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/jdbc-postgresql82 to 507 [abs 2008-01-07]
 	Updated databases/jdbc-postgresql81 to 411 [abs 2008-01-07]
 	Updated databases/jdbc-postgresql80 to 321 [abs 2008-01-07]
+	Updated net/Transmission to 1.00 [tnn 2008-01-08]
+	Updated audio/shorten to 3.6.1 [tnn 2008-01-08]
