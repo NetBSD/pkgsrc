@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/10/13 09:14:16 obache Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/08 17:02:11 adrianp Exp $
 #
 
 DISTNAME=	putty-0.60
@@ -28,7 +28,7 @@ CFLAGS+=	-DHAVE_NO_SETRESUID
 CFLAGS+=	-DIPV6
 .endif
 
-.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
 CFLAGS+=	-DOMIT_UTMP
 .endif
 
