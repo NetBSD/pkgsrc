@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2007/08/24 19:28:16 heinz Exp $
+# $NetBSD: Makefile,v 1.37 2008/01/08 19:29:45 heinz Exp $
 
-DISTNAME=		Net-DNS-0.61
+DISTNAME=		Net-DNS-0.62
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ndn
 CATEGORIES=		net perl5
@@ -36,6 +36,8 @@ MAKE_PARAMS=		--online-tests
 .else
 MAKE_PARAMS=		--noonline-tests
 .endif
+
+USE_LANGUAGES=		c
 
 PERL5_PACKLIST=		auto/Net/DNS/.packlist
 
