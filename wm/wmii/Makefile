@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/07 09:54:25 ghen Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/08 12:38:43 ghen Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		1
@@ -30,5 +30,8 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 .include "../../devel/libixp/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
