@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/01/04 14:32:50 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/08 16:52:20 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
+PKGREVISION=		1
 COMMENT=		The Network Backup Solution (client only)
 
 CONFLICTS=		bacula-[0-9]* bacula-client-[0-9]*
@@ -27,5 +28,8 @@ RCD_SCRIPTS=		bacula-fd
 .include "../../sysutils/bacula/Makefile.common"
 
 PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.common_end
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../mk/bsd.pkg.mk"
