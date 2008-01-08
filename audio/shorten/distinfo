@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 20:39:51 agc Exp $
+$NetBSD: distinfo,v 1.8 2008/01/08 03:07:45 tnn Exp $
 
-SHA1 (shorten-3.6.0.tar.gz) = 8d4a0f793acb23ecd29af68bcd9df272b5520b44
-RMD160 (shorten-3.6.0.tar.gz) = f9c98a683c3baa834b22e99ebbeef9fde2206390
-Size (shorten-3.6.0.tar.gz) = 584183 bytes
+SHA1 (shorten-3.6.1.tar.gz) = bd525ced0b9ba99a7a178c11647a853147977fa5
+RMD160 (shorten-3.6.1.tar.gz) = c25d0cf634ea86de2a3f155bc96f494c0a3167a0
+Size (shorten-3.6.1.tar.gz) = 597581 bytes
