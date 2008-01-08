@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/05 22:15:24 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/08 08:35:19 markd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -9,6 +9,7 @@ COMMENT=	QT GUI (WYSIWYG) builder and other tools
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
+CONFIGURE_ARGS+=	-DQT_NO_DBUS
 
 BUILD_TARGET=		sub-tools
 
