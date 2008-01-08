@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.13 2007/11/26 00:26:22 tron Exp $
+$NetBSD: patch-ag,v 1.14 2008/01/08 23:31:56 tnn Exp $
 
---- glib/gutils.h.orig	2007-11-07 05:11:58.000000000 +0000
-+++ glib/gutils.h	2007-11-25 23:54:06.000000000 +0000
-@@ -96,6 +96,8 @@
+--- glib/gutils.h.orig	2008-01-08 02:39:49.000000000 +0100
++++ glib/gutils.h
+@@ -108,6 +108,8 @@ G_BEGIN_DECLS
  #ifdef G_IMPLEMENT_INLINES
  #  define G_INLINE_FUNC
  #  undef  G_CAN_INLINE
 +#elif defined (__APPLE__)
 +#  define G_INLINE_FUNC static inline
  #elif defined (__GNUC__) 
- #  define G_INLINE_FUNC extern inline
- #elif defined (G_CAN_INLINE) 
+ #  if __GNUC_PREREQ (4,2) && defined (__STDC_VERSION__) \
+    && __STDC_VERSION__ >= 199901L
