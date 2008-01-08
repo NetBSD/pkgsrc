@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2007/08/24 19:28:16 heinz Exp $
+$NetBSD: distinfo,v 1.20 2008/01/08 19:29:45 heinz Exp $
 
-SHA1 (Net-DNS-0.61.tar.gz) = 56a6eaba303e45035ab71f47c0ccc14eafbc1bad
-RMD160 (Net-DNS-0.61.tar.gz) = 1ccfae25e7d39c58915592745452fec7a8358e15
-Size (Net-DNS-0.61.tar.gz) = 145400 bytes
+SHA1 (Net-DNS-0.62.tar.gz) = b8f8d8a9a720e8d04b37cb80fc1ee7935486f498
+RMD160 (Net-DNS-0.62.tar.gz) = 1897fd754ef206398782bc6ba2cfb05d5f92a5e9
+Size (Net-DNS-0.62.tar.gz) = 148827 bytes
