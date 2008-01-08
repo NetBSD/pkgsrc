@@ -1,8 +1,20 @@
-$NetBSD: patch-ah,v 1.8 2006/04/09 06:34:32 jlam Exp $
+$NetBSD: patch-ah,v 1.9 2008/01/08 15:19:39 apb Exp $
 
---- perl.c.orig	2006-01-31 07:34:47.000000000 -0500
+--- perl.c.orig	2006-01-31 12:34:47.000000000 +0000
 +++ perl.c
-@@ -4770,45 +4770,12 @@ S_init_perllib(pTHX)
+@@ -4615,8 +4615,10 @@ S_procself_val(pTHX_ SV *sv, char *arg0)
+        to the executable (or returning an error from the readlink).  Any valid
+        path has a '/' in it somewhere, so use that to validate the result.
+        See http://www.freebsd.org/cgi/query-pr.cgi?pr=35703
++
++       NetBSD's implementation sometimes returns "/"; reject that too.
+     */
+-    if (len > 0 && memchr(buf, '/', len)) {
++    if (len > 1 && memchr(buf, '/', len)) {
+ 	sv_setpvn(sv,buf,len);
+     }
+     else {
+@@ -4770,45 +4772,12 @@ S_init_perllib(pTHX)
      }
  
  /* Use the ~-expanded versions of APPLLIB (undocumented),
@@ -49,7 +61,7 @@ $NetBSD: patch-ah,v 1.8 2006/04/09 06:34:32 jlam Exp $
  #ifdef SITEARCH_EXP
      /* sitearch is always relative to sitelib on Windows for
       * DLL-based path intuition to work correctly */
-@@ -4850,6 +4817,39 @@ S_init_perllib(pTHX)
+@@ -4850,6 +4819,39 @@ S_init_perllib(pTHX)
      incpush(PERL_VENDORLIB_STEM, FALSE, TRUE, TRUE);
  #endif
  
