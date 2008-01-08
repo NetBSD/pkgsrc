@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/02/02 19:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2008/01/08 20:58:30 heinz Exp $
 #
 
 DISTNAME=		HTML-Parser-3.56
@@ -19,6 +19,8 @@ DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 # needed for HTTP/Headers self-test, but this would create a circular
 # dependency -- weird.
 #DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
+
+USE_LANGUAGES=		c
 
 PERL5_PACKLIST=		auto/HTML/Parser/.packlist
 
