@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/29 17:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/08 22:56:10 heinz Exp $
 
 DISTNAME=	ExtUtils-CBuilder-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-CBuilder/
 COMMENT=	Perl5 module for compiling and linking C code for Perl modules
 
-PERL5_PACKLIST=	auto/ExtUtils/CBuilder/.packlist
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		c
+PERL5_PACKLIST=		auto/ExtUtils/CBuilder/.packlist
 
 REPLACE_PERL=	bleadcheck.pl
 
