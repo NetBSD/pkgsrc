@@ -21,7 +21,7 @@ blender-exppython	Enable the Experimental Python support.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 bugzilla-charts		Enable generation of charts.
 bugzilla-imagemagick	Compress .BMPs to save space.
-bugzilla-patchviewer	Enable patchiewer support.
+bugzilla-patchviewer	Enable patchviewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2
 canna			Use Canna as Japanese conversion program.
