@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6963 2008/01/08 03:44:56 tnn Exp $
+$NetBSD: TODO,v 1.6964 2008/01/08 22:49:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,8 @@ Suggested package updates
 	o enscript-1.6.4
 	o eog-2.20.4
 	o epic4-2.6
-	o epiphany-extensions-2.20.1
+	o epiphany-2.20.3
+	o epiphany-extensions-2.20.3
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.0.4 [now called eric4]
@@ -565,6 +566,7 @@ Suggested package updates
 	o glade-2.12.2
 	o glade3-3.4.1
 	o glchess-1.0.5
+	o glib2-2.14.5
 	o global-5.6
 	o glproto-1.4.9
 	o gmime-2.2.15
@@ -575,14 +577,21 @@ Suggested package updates
 	o gnome-applets-2.20.1
 	o gnome-build-0.2.0
 	o gnome-common-2.20.0
+	o gnome-control-center-2.20.3
+	o gnome-desktop-2.20.3
+	o gnome-games-2.20.3
 	o gnome-keyring-2.20.3
 	o gnome-mag-0.15.0
 	o gnome-media-2.20.1
+	o gnome-menus-2.20.3
+	o gnome-panel-2.20.3
+	o gnome-session-2.20.3
 	o gnome-speech-0.4.17
 	o gnome-spell-1.0.8
+	o gnome-terminal-2.18.4
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.2
+	o gnucash-2.2.3
 	o gnumeric-1.8.0
 	o gnumeric-current-1.7.91
 	o gnupg-1.4.8
@@ -622,6 +631,7 @@ Suggested package updates
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-systrace-20030623
+	o gtk2-2.12.4
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtkhtml314-3.16.3
@@ -632,6 +642,7 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
+	o gucharmap-1.10.2
 	o guile-1.8.3
 	o guile-gtk-2.0
 	o gwenview-1.4.2
@@ -782,6 +793,7 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtasn1-1.2
 	o libtcl-nothread-8.4.9
+	o libwnck-2.20.3
 	o libxklavier-3.3
 	o libxml++2-2.20.0
 	o licq-1.3.5
@@ -816,6 +828,7 @@ Suggested package updates
 	o memtestplus-1.70
 	o mergeant-0.67
 	o mesure-0.7.2
+	o metacity-2.20.2
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o minivmac-3.0.4
@@ -1004,6 +1017,7 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
+	o pango-1.18.4
 	o pari-2.1.7
 	o pcal-4.8
 	o pciids-20071004
@@ -1214,7 +1228,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-2.0.0.13
 	o smalleiffel-0.90
-	o smalltalk-2.3.6
+	o smalltalk-3.0
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o snd-9.6
