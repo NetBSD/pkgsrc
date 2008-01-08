@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6961 2008/01/07 22:55:51 wiz Exp $
+$NetBSD: TODO,v 1.6962 2008/01/08 02:52:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -295,7 +295,6 @@ Suggested package updates
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.5.3
 	o amaya-9.54
-	o amsn-0.96 [pkg/37509]
 	o angband-3.0.9
 	o anjuta-2.2.3
 	o antiright-8.6
