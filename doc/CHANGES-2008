@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.61 2008/01/08 07:35:59 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.62 2008/01/08 16:53:00 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -102,3 +102,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.00 [tnn 2008-01-08]
 	Updated audio/shorten to 3.6.1 [tnn 2008-01-08]
 	Updated editors/texmaker to 1.6 [ghen 2008-01-08]
+	Updated sysutils/bacula to 2.2.4nb1 [ghen 2008-01-08]
+	Updated sysutils/bacula-clientonly to 2.2.4nb1 [ghen 2008-01-08]
