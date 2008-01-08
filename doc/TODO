@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6964 2008/01/08 22:49:33 wiz Exp $
+$NetBSD: TODO,v 1.6965 2008/01/08 23:17:25 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1458,12 +1458,47 @@ Infrastructure problems which need addressing
 Licenses of packages
 ====================
 
-[Please add here any package that requires the user to accept anything
-else than a single, simple license. List the files and how they are
-combined (one-of, all, additional-license-per-option, ...). This
-information will be used to extend the license framework as needed.]
+[This section contains discussion of enhancements needed to the
+licensing framework.]
 
+	o Some packages are dual licensed, meaning that permission is
+	  granted to copy under either of two licenses.  An example is
+	  perl, with the license choice being GPL or the Artistic
+	  license.  A way is needed to encode this situation in a
+	  LICENSE= statement.  Possibilities include:
 
+	  * Add a new license file that explains the dual licensing
+            situation and refers to license files for the two
+            licenses.  This may not scale, but a small number may
+            cover many common cases (in particular, GPL/Artistic may
+            cover most of them).
+
+	  * Add some syntax that expresses dual licensing by referring
+            to multiple licenses.  For example, one could redefine the
+            value of LICENSE= to be an s-expression rather than a
+            token, and ues "(dual gnu-gpl-v2 artistic)".
+
+	o Some packages have multiple licenses, each covering a
+	  different part of the package.  Redistribution requires
+	  following the terms of all them.  It is not clear how often
+	  this situation occurs, but an example is openssl when
+	  patented algorithms are enabled.
+
+	  * We could use "(multiple gnu-gpl-v2 modified-bsd)" to
+            represent this.
+
+	o The dual and multiple license situations can occur at the
+	  same time, so ideally an arbitrary grammer is in order.
+	  But this seems too complicated.
+
+	o Documentation sometimes refers to a user "accepting a
+	  license".  This wording makes it sound like pkgsrc
+	  operations give rise to contracts, and pkgsrc should be as
+	  neutral as possible as such issues.  The documentation
+	  should be adjusted to instead refer to the user instructing
+	  pkgsrc not to refrain from building packages with such a
+	  license tag.  This is awkward, so a shorter phrase is needed
+	  which does not give the impression of a contract.
 
 Suggested pkgsrc enhancements
 =============================
