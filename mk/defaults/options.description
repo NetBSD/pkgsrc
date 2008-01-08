@@ -152,6 +152,9 @@ libiconv-cp932		Add supplemental support for CP932
 libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.)
+liferea-gtkhtml		Use libgtkhtml2 to render HTML.
+liferea-firefox		Use Firefox to render HTML.
+liferea-seamonkey	Use Seamonkey to render HTML.
 links-zlib		Enable zlib support for the links WWW browser.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.

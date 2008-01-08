@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/01/06 15:53:43 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2008/01/08 15:14:25 smb Exp $
 
 DISTNAME=		liferea-1.4.10
 CATEGORIES=		www
@@ -14,6 +14,14 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.liferea
+PKG_OPTIONS_REQUIRED_GROUPS=	renderer
+PKG_OPTIONS_GROUP.renderer=	liferea-gtkhtml liferea-seamonkey liferea-firefox
+PKG_SUGGESTED_OPTIONS=	liferea-gtkhtml
+.include "../../mk/bsd.options.mk"
 
 SHLIBTOOL_OVERRIDE=	# empty
 
@@ -31,7 +39,15 @@ GCONF_SCHEMAS=		liferea.schemas
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mliferea-gtkhtml)
 .include "../../www/libgtkhtml/buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mliferea-firefox)
+.include "../../www/firefox/buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mliferea-seamonkey)
+.include "../../www/seamonkey/buildlink3.mk"
+.endif
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
