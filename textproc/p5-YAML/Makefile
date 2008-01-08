@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/11/29 14:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/08 22:49:47 heinz Exp $
 
 DISTNAME=	YAML-0.66
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/YAML/
 COMMENT=	YAML implementation for Perl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/YAML/.packlist
 MAKE_PARAMS+=		< /dev/null
 
