@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2007/08/04 12:19:23 joerg Exp $
+$NetBSD: distinfo,v 1.11 2008/01/09 18:27:35 kristerw Exp $
 
 SHA1 (emacs-20.7.tar.gz) = ef0168b927fb633bc9b14e2249431f26ff8b8452
 RMD160 (emacs-20.7.tar.gz) = f3b8ea8d6f6ad52ccdd7ca74c84e87a7409fc270
@@ -14,6 +14,7 @@ RMD160 (emacs20-xim-20000713.diff) = 5887a4d43ee92e8cad65d6412c9ecbce08e781da
 Size (emacs20-xim-20000713.diff) = 21296 bytes
 SHA1 (patch-aa) = 3b3fd76c058a0a46e0458338ce4c2327a238fb3d
 SHA1 (patch-ab) = 3d9497d4894cd126ca49636d9adfdd14cc31b017
+SHA1 (patch-ac) = abf5971279a8d875504be4c17b8d36cb8cc24885
 SHA1 (patch-ad) = dd21028a6360ccfb442ecced4c67717f60ea78a6
 SHA1 (patch-ae) = 7aaca5409a71f8a292ac57f828ee5ec7a07e3880
 SHA1 (patch-af) = e7e65a2df5d55bf5bfa9dd8155b906882f620cca
