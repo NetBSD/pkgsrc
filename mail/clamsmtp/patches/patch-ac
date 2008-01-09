@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/01/09 14:10:06 martti Exp $
+
+Check for strcasestr. We provide an implementation for it if needed.
+
+--- configure.in.orig	2007-12-31 12:16:35.544370000 +0200
++++ configure.in	2007-12-31 12:34:53.195760000 +0200
+@@ -106,7 +106,7 @@
+ # Required Functions
+ AC_CHECK_FUNCS([memset strerror malloc realloc getopt strchr tolower getaddrinfo], , 
+            [echo "ERROR: Required function missing"; exit 1])
+-AC_CHECK_FUNCS([strlwr strlcat strlcpy strncat strncpy setenv daemon])
++AC_CHECK_FUNCS([strlwr strlcat strlcpy strncat strncpy setenv daemon strcasestr])
+ AC_CHECK_FUNCS([getline getdelim flockfile])
+ 
+ # DMALLOC memory debugging

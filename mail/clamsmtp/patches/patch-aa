@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/04/08 21:56:56 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/09 14:10:06 martti Exp $
+
+The default clamd socket as defined in pkgsrc/mail/clamav/files/clamd.sh
 
 --- doc/clamsmtpd.conf.orig	2006-04-06 16:42:26.000000000 +0200
 +++ doc/clamsmtpd.conf
