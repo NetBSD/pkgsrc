@@ -1,5 +1,9 @@
+Siag Office is a tightly integrated, free office package.
+
 egon:	 Egon Animator, presentation generator, similar to MS PowerPoint
-siag:	 Scheme In A Grid, spreadsheet, similar to MS Excel
-tsiag:	 Curses-Based version of siag
+gvu:	 Postscript previewer
 pw:	 Pathetic Writer, text processor, similar to MS Word (well... :-)
+siag:	 Scheme In A Grid, spreadsheet, similar to MS Excel
+tsiag:	 Curses-based version of siag
 xedplus: Lightweight text editor which can easily be configured away
+xfiler:	 File manager
