@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.76 2008/01/09 21:51:07 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.77 2008/01/09 22:06:19 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -114,7 +114,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Exception to 0.26 [heinz 2008-01-08]
 	Updated devel/glib2 to 2.14.5 [tnn 2008-01-09]
 	Updated devel/pango to 1.18.4 [tnn 2008-01-09]
-	Updated x11/gtk2 to 2.12.4 [tnn 2008-01-09]
+	Updated x11/gtk2 to 2.12.5 [tnn 2008-01-09]
 	Updated security/p5-Net-SSLeay to 1.32 [heinz 2008-01-09]
 	Updated devel/p5-Data-Dump to 1.08 [heinz 2008-01-09]
 	Updated www/elinks to 0.11.20080109nb1 [bjs 2008-01-09]
