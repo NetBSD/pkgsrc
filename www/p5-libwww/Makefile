@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/11/24 16:17:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.56 2008/01/09 00:58:24 heinz Exp $
 
 DISTNAME=	libwww-perl-5.808
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -22,6 +22,8 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net>=1.09:../../net/p5-Net		# for Net::FTP>=2.58
 DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+
+USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/LWP/.packlist
 MAKE_ENV+=		INSTALL_ALIASES=${ALIASES} PERL_MM_USE_DEFAULT=1
