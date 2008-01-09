@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/06 15:43:45 drochner Exp $
+$NetBSD: distinfo,v 1.2 2008/01/09 17:44:39 drochner Exp $
 
 SHA1 (goffice-0.6.1.tar.gz) = 2b5da913143c7b9913411c84bf8cacf14a43240d
 RMD160 (goffice-0.6.1.tar.gz) = 196a948112622154ef6f457be7c7910c1ffc266b
 Size (goffice-0.6.1.tar.gz) = 3049472 bytes
+SHA1 (patch-aa) = 9808c7d3f77a0f99ad6250a1d43ed691cd5dcc2a
