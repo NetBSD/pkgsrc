@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1 2008/01/09 19:21:45 drochner Exp $
+
+--- build.orig	2008-01-02 09:14:04.000000000 +0100
++++ build
+@@ -41,23 +41,6 @@ else
+    fi
+ fi
+ 
+-mkdir -p -m a+rx  $appdirk                                                 # create install directory
+-if [ $? -ne 0 ]
+-then 
+-   echo "*** unable to create or access $appdirk"
+-   echo "    (run this script as root if necessary)"
+-   exit 1
+-fi
+-
+-cp -f -r  *  $appdirk                                                      # copy all files there
+-if [ $? -ne 0 ]
+-then
+-   echo "*** unable to copy files to install directory"
+-   exit 1
+-fi
+-rm -f -r  *                                                                # clean up
+-
+-cd  $appdirk                                                               # build executable
+ g++ -O -Wall -o $appname  $appname.cpp  zfuncs.cpp     \
+ $(pkg-config --cflags gtk+-2.0 --libs gtk+-2.0 gthread-2.0)
+ if [ $? -ne 0 ]; then exit 1; fi
+@@ -66,7 +49,7 @@ echo "$appname build successful"
+ chmod  a+rx  $appname                                                      # set access for all users
+ chmod  -R  a+r  *
+ 
+-launcher=$HOME/Desktop/$appname.desktop
++launcher=$appname.desktop
+ yn=$2                                                                      # yn << parameter
+ 
+ if [ -z "$yn" ]
+@@ -83,8 +66,8 @@ then                                    
+    echo "Name=$appname" >> $launcher
+    echo "Type=Application" >> $launcher
+    echo "Terminal=false" >> $launcher
+-   echo "Exec=$appdirk/$appname" >> $launcher
+-   echo "Icon=$appdirk/icons/$appname.png" >> $launcher
++   echo "Exec=$appdirk/bin/$appname" >> $launcher
++   echo "Icon=$appdirk/share/fotox/icons/$appname.png" >> $launcher
+ fi; fi
+ 
+ exit 0
