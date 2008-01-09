@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.73 2008/01/09 19:20:09 reed Exp $
+$NetBSD: CHANGES-2008,v 1.74 2008/01/09 21:22:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine to 0.9.44nb1 [reinoud 2008-01-09]
 	Updated x11/mowitz to 0.3.1 [reed 2008-01-09]
 	Updated misc/siag to 3.6.1 [reed 2008-01-09]
+	Removed misc/goffice0.5 successor misc/goffice0.6 [wiz 2008-01-09]
