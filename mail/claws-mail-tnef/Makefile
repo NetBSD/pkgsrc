@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2008/01/09 03:55:13 smb Exp $
+# $NetBSD: Makefile,v 1.1 2008/01/09 03:55:13 smb Exp $
 #
 
-DISTNAME=	vcalendar-1.100
-PKGNAME=	claws-mail-vcalendar-1.100
+DISTNAME=	tnef_parse-0.2.1
+PKGNAME=	claws-mail-tnef-0.2.1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
-COMMENT=	Enable vCalendar message handling
+COMMENT=	Handles TNEF attachments from Outlook
 
 #PLIST_SRC+=	PLIST
 
@@ -20,8 +20,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../mail/libytnef/buildlink3.mk"
 .include "../../mail/claws-mail/Makefile.vers"
 .include "../../mail/claws-mail/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/01/09 03:55:09 smb Exp $
+
+--- src/common/ssl_certificate.c.orig	2007-12-26 22:47:33.000000000 -0500
++++ src/common/ssl_certificate.c	2007-12-26 22:48:25.000000000 -0500
+@@ -34,6 +34,8 @@
+ #include <unistd.h>
+ #include <string.h>
+ #endif
++#include <sys/socket.h>
++#include <netinet/in.h>
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ 
