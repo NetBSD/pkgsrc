@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.71 2008/01/09 14:43:19 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.72 2008/01/09 17:46:41 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.212 [martti 2008-01-09]
 	Updated misc/rlwrap to 0.30 [heinz 2008-01-09]
 	Updated www/nginx to 0.5.35 [ghen 2008-01-09]
+	Updated emulators/wine to 0.9.44nb1 [reinoud 2008-01-09]

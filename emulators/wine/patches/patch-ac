@@ -1,22 +1,23 @@
-$NetBSD: patch-ac,v 1.37 2007/08/29 14:42:25 adam Exp $
+$NetBSD: patch-ac,v 1.38 2008/01/09 17:46:41 reinoud Exp $
 
---- dlls/ntdll/directory.c.orig	2007-08-10 18:18:12.000000000 +0200
+--- dlls/ntdll/directory.c.orig	2007-08-24 16:34:33.000000000 +0200
 +++ dlls/ntdll/directory.c
-@@ -128,6 +128,19 @@ static inline int getdents64( int fd, ch
+@@ -128,6 +128,20 @@ static inline int getdents64( int fd, ch
  #endif  /* linux */
  
  #define IS_OPTION_TRUE(ch) ((ch) == 'y' || (ch) == 'Y' || (ch) == 't' || (ch) == 'T' || (ch) == '1')
-+#if defined(__NetBSD_Version) && __NetBSD_Version >= 399000800
++#if defined(__NetBSD_Version__) && __NetBSD_Version__ >= 399000800
 +/*
 + * workaround for obsolete getdirentries() which returns
 + * the old 32-bit inode struct dirent, while dirent.h has the
 + * new 64-bit inode struct dirent inode since 3.99.8
 + */
-+int getdirentries(int fd, char *buf, int nbytes, long *basep)
++int compat_netbsd_getdirentries(int fd, char *buf, int nbytes, long *basep)
 +{
 +        *basep = (long)lseek(fd, 0, SEEK_CUR);
 +        return getdents(fd, buf, (size_t)nbytes);
 +}
++#define getdirentries compat_netbsd_getdirentries
 +#endif
 +
  #define IS_SEPARATOR(ch)   ((ch) == '\\' || (ch) == '/')
