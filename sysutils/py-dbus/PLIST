@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/03 10:00:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/01/09 19:04:42 drochner Exp $
 include/dbus-1.0/dbus/dbus-python.h
 lib/pkgconfig/dbus-python.pc
 ${PYSITELIB}/_dbus_bindings.la
@@ -57,11 +57,17 @@ ${PYSITELIB}/dbus/types.pyo
 ${PYSITELIB}/dbus_bindings.py
 ${PYSITELIB}/dbus_bindings.pyc
 ${PYSITELIB}/dbus_bindings.pyo
+share/doc/dbus-python/API_CHANGES.html
 share/doc/dbus-python/API_CHANGES.txt
+share/doc/dbus-python/HACKING.html
 share/doc/dbus-python/HACKING.txt
 share/doc/dbus-python/NEWS
+share/doc/dbus-python/NEWS.html
 share/doc/dbus-python/README
+share/doc/dbus-python/README.html
 share/doc/dbus-python/TODO
+share/doc/dbus-python/TODO.html
+share/doc/dbus-python/tutorial.html
 share/doc/dbus-python/tutorial.txt
 @dirrm share/doc/dbus-python
 @dirrm ${PYSITELIB}/dbus/mainloop
