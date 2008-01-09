@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2008/01/09 11:35:31 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2008/01/09 12:25:40 hubertf Exp $
 
 --- makeman.pl.orig	2007-09-10 22:39:48.000000000 +0200
-+++ makeman.pl	2007-09-14 14:39:22.000000000 +0200
-@@ -1,4 +1,4 @@
++++ makeman.pl
+@@ -1,2 +1,2 @@
 -#! /usr/bin/perl -w
 +#! @PERL5@ -w
- 
- # $Id: patch-ab,v 1.5 2008/01/09 11:35:31 hubertf Exp $
  
