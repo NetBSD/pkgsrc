@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6968 2008/01/09 09:27:17 bjs Exp $
+$NetBSD: TODO,v 1.6969 2008/01/09 19:20:08 reed Exp $
 
 Suggested new packages
 ======================
@@ -842,7 +842,6 @@ Suggested package updates
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
-	o mowitz-0.3.1
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
 	o mpg123-1.0.1
@@ -1209,7 +1208,6 @@ Suggested package updates
 	o shc-3.8
 	o shmux-1.0.1
 	o shntool-3.0.5
-	o siag-3.6.1
 	o sign-1.0.7
 	o silc-client-1.1.2
 	o silc-server-1.1
