@@ -1,33 +1,33 @@
-$NetBSD: patch-aa,v 1.4 2007/04/28 20:17:13 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2008/01/09 11:35:31 hubertf Exp $
 
---- config.c.orig	2007-02-16 18:22:06.000000000 +0100
-+++ config.c	2007-04-28 11:30:56.000000000 +0200
-@@ -251,7 +251,7 @@ static const char *config_def_app_versio
+--- config.c.orig	2007-09-10 22:39:48.000000000 +0200
++++ config.c	2007-09-14 14:31:56.000000000 +0200
+@@ -267,7 +267,7 @@ static const char *config_def_app_versio
  
  static const char *config_def_script(void)
  {
 -	return "/etc/vpnc/vpnc-script";
-+	return PKG_SYSCONFDIR "/vpnc-script";
++	return "@PKG_SYSCONFDIR@/vpnc/vpnc-script";
  }
  
  static const char *config_def_pid_file(void)
-@@ -485,7 +485,7 @@ static char *get_config_filename(const c
+@@ -538,7 +538,7 @@ static char *get_config_filename(const c
  {
  	char *realname;
  	
 -	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "/etc/vpnc/", name, add_dot_conf ? ".conf" : "");
-+	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : PKG_SYSCONFDIR "/", name, add_dot_conf ? ".conf" : "");
++	asprintf(&realname, "%s%s%s", index(name, '/') ? "" : "@PKG_SYSCONFDIR@/vpnc/", name, add_dot_conf ? ".conf" : "");
  	return realname;
  }
  
-@@ -701,8 +701,8 @@ void do_config(int argc, char **argv)
+@@ -757,8 +757,8 @@ void do_config(int argc, char **argv)
  	}
  	
  	if (!got_conffile) {
 -		read_config_file("/etc/vpnc/default.conf", config, 1);
 -		read_config_file("/etc/vpnc.conf", config, 1);
-+		read_config_file(PKG_SYSCONFDIR "/vpnc/default.conf", config, 1);
-+		read_config_file(PKG_SYSCONFDIR "/vpnc.conf", config, 1);
++		read_config_file("@PKG_SYSCONFDIR@/vpnc/default.conf", config, 1);
++		read_config_file("@PKG_SYSCONFDIR@/vpnc.conf", config, 1);
  	}
  	
  	if (!print_config) {
