@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/01/07 10:42:01 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/09 14:42:54 ghen Exp $
 
-DISTNAME=		nginx-0.5.34
+DISTNAME=		nginx-0.5.35
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
@@ -30,7 +30,7 @@ EGDIR=			${PREFIX}/share/examples/nginx
 EGFILES=		fastcgi_params koi-utf koi-win mime.types nginx.conf win-utf
 
 .for file in ${EGFILES}
-CONF_FILES+=		${EGDIR:Q}/conf/${file} ${PKG_SYSCONFDIR}/${file}
+CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
 
 RCD_SCRIPTS=		nginx
