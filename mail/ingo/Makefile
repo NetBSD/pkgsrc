@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/15 22:30:49 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/09 21:48:51 adrianp Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -18,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
 HORDEDIR=	${PREFIX}/share/horde
 INGODIR=	${HORDEDIR}/ingo
-INGOVER=	1.1.4
+INGOVER=	1.1.5
 PAXDIRS=	lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	INGODIR=${INGODIR:Q}
