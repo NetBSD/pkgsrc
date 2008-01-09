@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/18 15:47:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/09 22:13:12 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -244,6 +244,7 @@ ${PLONE_BASE}/ATContentTypes/tests/input/test.sxw
 ${PLONE_BASE}/ATContentTypes/tests/input/test.zip
 ${PLONE_BASE}/ATContentTypes/tests/input/tidy1-in.html
 ${PLONE_BASE}/ATContentTypes/tests/input/tidy1-out.html
+${PLONE_BASE}/ATContentTypes/tests/portaltype_criterion.txt
 ${PLONE_BASE}/ATContentTypes/tests/test_adapters.py
 ${PLONE_BASE}/ATContentTypes/tests/test_adapters.pyc
 ${PLONE_BASE}/ATContentTypes/tests/test_archive.py
@@ -5606,7 +5607,7 @@ ${PLONE_BASE}/PloneTranslations/locales/af/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/ar/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/bg/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/bn/LC_MESSAGES/plonelocales.po
-${PLONE_BASE}/PloneTranslations/locales/ca/LC_MESSAGES/plonefrontpage-ca.po
+${PLONE_BASE}/PloneTranslations/locales/ca/LC_MESSAGES/plonefrontpage.po
 ${PLONE_BASE}/PloneTranslations/locales/ca/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/cs/LC_MESSAGES/plonefrontpage.po
 ${PLONE_BASE}/PloneTranslations/locales/cs/LC_MESSAGES/plonelocales.po
@@ -6681,6 +6682,7 @@ ${PLONE_BASE}/kupu/form/head.kupu
 ${PLONE_BASE}/kupu/form/include.kupu
 ${PLONE_BASE}/kupu/form/save.kupu
 ${PLONE_BASE}/kupu/i18n/README.txt
+${PLONE_BASE}/kupu/i18n/kupu-ca.po
 ${PLONE_BASE}/kupu/i18n/kupu-cs.po
 ${PLONE_BASE}/kupu/i18n/kupu-da.po
 ${PLONE_BASE}/kupu/i18n/kupu-de.po
@@ -6699,6 +6701,7 @@ ${PLONE_BASE}/kupu/i18n/kupu-pl.po
 ${PLONE_BASE}/kupu/i18n/kupu-pt-br.po
 ${PLONE_BASE}/kupu/i18n/kupu-pt.po
 ${PLONE_BASE}/kupu/i18n/kupu-sk.po
+${PLONE_BASE}/kupu/i18n/kupu-sl.po
 ${PLONE_BASE}/kupu/i18n/kupu-sr-Latn.po
 ${PLONE_BASE}/kupu/i18n/kupu-sr.po
 ${PLONE_BASE}/kupu/i18n/kupu-tr.po
@@ -6707,6 +6710,7 @@ ${PLONE_BASE}/kupu/i18n/kupu-zh-cn.po
 ${PLONE_BASE}/kupu/i18n/kupu-zh-tw.po
 ${PLONE_BASE}/kupu/i18n/kupu-zh.po
 ${PLONE_BASE}/kupu/i18n/kupu.pot
+${PLONE_BASE}/kupu/i18n/kupuconfig-ca.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-cs.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-da.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-es.po
@@ -6716,11 +6720,13 @@ ${PLONE_BASE}/kupu/i18n/kupuconfig-it.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-ja.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-pl.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-pt.po
+${PLONE_BASE}/kupu/i18n/kupuconfig-pt-br.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-sk.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-tr.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-vi.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-zh-tw.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig.pot
+${PLONE_BASE}/kupu/i18n/kupupox-ca.po
 ${PLONE_BASE}/kupu/i18n/kupupox-cs.po
 ${PLONE_BASE}/kupu/i18n/kupupox-da.po
 ${PLONE_BASE}/kupu/i18n/kupupox-de.po
@@ -6738,6 +6744,7 @@ ${PLONE_BASE}/kupu/i18n/kupupox-pl.po
 ${PLONE_BASE}/kupu/i18n/kupupox-pt-br.po
 ${PLONE_BASE}/kupu/i18n/kupupox-pt.po
 ${PLONE_BASE}/kupu/i18n/kupupox-sk.po
+${PLONE_BASE}/kupu/i18n/kupupox-sl.po
 ${PLONE_BASE}/kupu/i18n/kupupox-sr-Latn.po
 ${PLONE_BASE}/kupu/i18n/kupupox-sr.po
 ${PLONE_BASE}/kupu/i18n/kupupox-tr.po
@@ -6970,6 +6977,7 @@ ${PLONE_BASE}/kupu/plone/profiles/default/export_steps.xml
 ${PLONE_BASE}/kupu/plone/profiles/default/import_steps.xml
 ${PLONE_BASE}/kupu/plone/profiles/default/jsregistry.xml
 ${PLONE_BASE}/kupu/plone/profiles/default/kupu.xml
+${PLONE_BASE}/kupu/plone/profiles/default/metadata.xml
 ${PLONE_BASE}/kupu/plone/profiles/default/skins.xml
 ${PLONE_BASE}/kupu/plone/profiles/default/toolset.xml
 ${PLONE_BASE}/kupu/plone/resource_types.pt
@@ -8374,6 +8382,8 @@ ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_manage_views.py
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_manage_views.pyc
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_mapping.py
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_mapping.pyc
+${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_namechooser.py
+${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_namechooser.pyc
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_navigation_portlet.py
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_navigation_portlet.pyc
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/test_news_portlet.py
@@ -8394,7 +8404,6 @@ ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/utils.py
 ${ZOPE_BASE}/lib/python/plone/app/portlets/tests/utils.pyc
 ${ZOPE_BASE}/lib/python/plone/app/portlets/utils.py
 ${ZOPE_BASE}/lib/python/plone/app/portlets/utils.pyc
-${ZOPE_BASE}/lib/python/plone/app/redirector/README.txt
 ${ZOPE_BASE}/lib/python/plone/app/redirector/__init__.py
 ${ZOPE_BASE}/lib/python/plone/app/redirector/__init__.pyc
 ${ZOPE_BASE}/lib/python/plone/app/redirector/browser.py
