@@ -31,6 +31,7 @@ catalog-pgsql		Store Bacula catalog in PostgreSQL database.
 catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 clamav			Enable ClamAV support.
+claws-mail-jpilot	Add jpilot support
 coqide			Enable ide support for coq.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
