@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6967 2008/01/09 03:49:30 tnn Exp $
+$NetBSD: TODO,v 1.6968 2008/01/09 09:27:17 bjs Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,6 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.3
 	o bsflite-0.83 [pkg/37602]
-	o btpd-0.12
 	o bug-buddy-2.20.1
 	o bzr-1.0
 	o c4-1.10 [schmonz]
