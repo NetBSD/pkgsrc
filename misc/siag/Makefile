@@ -1,22 +1,17 @@
-# $NetBSD: Makefile,v 1.51 2007/06/12 02:55:16 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.52 2008/01/09 19:16:15 reed Exp $
 #
-# Note: I have tried to update this package to 3.6.0, but there were
-# some undefined identifiers "DndDrop" and "DndRawData" in the
-# xsiag/window.c file.
 
-DISTNAME=	siag-3.5.7
-PKGREVISION=	8
-CATEGORIES=	misc textproc math
-MASTER_SITES=	ftp://siag.nu/pub/siag/
+DISTNAME=       siag-3.6.1
+CATEGORIES=     misc editors math textproc
+MASTER_SITES=   ftp://siag.nu/pub/siag/		\
+		http://siag.nu/pub/siag/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://siag.nu/
+HOMEPAGE=       http://siag.nu/
 COMMENT=	Poor man's office suite with spreadsheet, word processor, etc
 
-DEPENDS+=	gv>=3.5.8nb1:../../print/gv
-DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
-
-CONFLICTS+=	antiword-[0-9]*
+#DEPENDS+=	gv>=3.5.8nb1:../../print/gv
+#DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-x
