@@ -1,0 +1,5 @@
+The TNEF Parser plugins handles TNEF attachments from Outlook. TNEF
+attachments have a MIME type of "application/ms-tnef" and are often
+named "winmail.dat". They can contain multiple files. This plugin
+parses this kind of attachment and displays the real files in the
+parts list.
