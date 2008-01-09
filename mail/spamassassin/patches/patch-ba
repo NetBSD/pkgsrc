@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2007/08/26 17:26:51 heinz Exp $
+$NetBSD: patch-ba,v 1.2 2008/01/09 15:55:52 heinz Exp $
 
- Both submitted upstream:
+ Both submitted upstream (bug id 5628/5630):
  - no need for a hard-coded path, the appropriate variables already exist
  - the documentation conflicts with the code
 
