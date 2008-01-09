@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2007/05/16 04:56:26 martti Exp $
+$NetBSD: patch-aa,v 1.14 2008/01/09 13:37:45 martti Exp $
+
+Buildlink takes care of include files.
 
 --- src/auto/configure.orig	2007-05-12 14:49:09.000000000 +0300
 +++ src/auto/configure	2007-05-14 12:20:05.000000000 +0300
