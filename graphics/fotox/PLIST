@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/17 19:45:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/09 19:21:08 drochner Exp $
 bin/fotox
+share/applications/fotox.desktop
 share/fotox/fotox-guide.pdf
+share/fotox/fotox.xtext
 share/fotox/icons/HDR.png
+share/fotox/icons/bigger.png
 share/fotox/icons/blank.png
 share/fotox/icons/crop.png
 share/fotox/icons/exif.png
 share/fotox/icons/exif2.png
 share/fotox/icons/fotox.png
-share/fotox/icons/fotox2.png
+share/fotox/icons/fotox1.png
 share/fotox/icons/goto-end.png
 share/fotox/icons/goto-top.png
 share/fotox/icons/help.png
@@ -29,10 +32,12 @@ share/fotox/icons/redo.png
 share/fotox/icons/resize.png
 share/fotox/icons/rotate.png
 share/fotox/icons/save.png
+share/fotox/icons/smaller.png
 share/fotox/icons/trash.png
 share/fotox/icons/tune.png
 share/fotox/icons/unbend.png
 share/fotox/icons/undo.png
 share/fotox/parameters.txt
+share/fotox/zfuncs.xtext
 @dirrm share/fotox/icons
 @dirrm share/fotox

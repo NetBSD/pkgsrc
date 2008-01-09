@@ -1,73 +1,37 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/17 19:45:08 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/09 19:21:09 drochner Exp $
 
---- zlib.cpp.orig	2007-11-10 17:58:47.000000000 +0100
-+++ zlib.cpp
-@@ -15,10 +15,10 @@
+--- zfuncs.cpp.orig	2008-01-02 09:14:04.000000000 +0100
++++ zfuncs.cpp
+@@ -2150,26 +2150,15 @@ char     zexedirk[1000], zappdirk[200], 
  
- char * syserrText(int err)
- {
--   static char    *ptext, buff[200];
-+   static char    buff[200];
-    if (err == 0) err = errno;
--   ptext = strerror_r(err,buff,200);
--   return ptext;
-+   strerror_r(err,buff,200);
-+   return buff;
- }
- 
- 
-@@ -2115,7 +2115,10 @@ void zlockInit()                        
- {
-    int      ii;
-    tid_main = pthread_self();
--   for (ii = 0; ii < tmax; ii++) tids[ii] = tlocks[ii] = 0;
-+   for (ii = 0; ii < tmax; ii++) {
-+	   tids[ii] = (pthread_t)0;
-+	   tlocks[ii] = 0;
-+   }
-    mutex_init(&zmutex,null);
-    zinit++;
-    return;
-@@ -2482,7 +2485,10 @@ void wfilesave(GtkWidget *mLog)
-    file = zgetfile("save screen to file","screen-save.txt","save");
-    if (! file) return;
-    err = wfiledump(mLog,file);
--   if (err) zmessageACK(strerror_r(errno,file,200));
-+   if (err) {
-+	   strerror_r(errno,file,200);
-+	   zmessageACK(file);
-+   }
-    zfree(file);
-    return;
- }
-@@ -2646,24 +2652,15 @@ char     zexedirk[1000], zappdirk[200], 
  void initz_appfiles(const char *appfile, ...)  //  null terminator         v.07
  {
-    char           command[1200], *pp;
+-   char           command[1200], *pp;
 -   int            fcc, err;
++   char           command[1200];
 +   int            err;
     struct stat    statdat;
     va_list        arglist;
  
--   fcc = readlink("/proc/self/exe",zexedirk,999);                          //  get /dirk-path/appname.x
--   if (fcc < 3 || fcc > 997) zappcrash("/proc/self/exe absurd");
+-   fcc = readlink("/proc/self/exe",zexedirk,999);                          //  get /dirk-path/appname
+-   if (fcc <= 0) fcc = readlink("/proc/curproc/file",zexedirk,999);        //  BSD version      v.13
+-   if (fcc < 3 || fcc > 997) zappcrash("cannot find executable location");
 -   zexedirk[fcc] = 0;
 -   pp = strrchr(zexedirk,'/');
--   if (! pp) zappcrash("/proc/self/exe absurd");
+-   if (! pp) zappcrash("cannot find executable location");
 -   *pp = 0;
 -
--   strncpy0(zappname,pp+1,39);                                             //  appname
+-   strncpy0(zappname,pp+1,39);                                             //  appname [ .exe ]
 -   pp = strrchr(zappname,'.');
 -   if (pp) *pp = 0;
 -   
 -   pp = cuserid(0);                                                        //  get /home/user/.appname/
 -   if (strEqu(pp,"root")) snprintf(zappdirk,199,"/root/.%s",zappname);
--   else snprintf(zappdirk,199,"/home/%s/.%s",pp,zappname);
-+   strncpy0(zexedirk, "@FDATA@", 999);
-+   strncpy0(zappname,"fotox",39);                                             //  appname
+-   else snprintf(zappdirk,199,"%s/.%s",getenv("HOME"),zappname);           //  use HOME variable         v.13
++   strncpy0(zexedirk, "/usr/pkg/share/fotox", 999);
++   strncpy0(zappname,"fotox",39);
 +   
-+   pp = getenv("HOME");                                                        //  get /home/user/.appname/
-+   snprintf(zappdirk,199,"%s/.%s",pp,zappname);
++   snprintf(zappdirk,199,"%s/.%s",getenv("HOME"),zappname);           //  use HOME variable         v.13
     
     err = stat(zappdirk,&statdat);                                          //  does it exist already?
     if (err) {

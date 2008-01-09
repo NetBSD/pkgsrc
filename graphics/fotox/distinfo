@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/17 19:45:08 drochner Exp $
+$NetBSD: distinfo,v 1.2 2008/01/09 19:21:08 drochner Exp $
 
-SHA1 (fotox.32.tar.gz) = 606333582f72ee4a405fbe8ea31639228a82eed5
-RMD160 (fotox.32.tar.gz) = d030ad1d89b4e8c564bbec7659cd5fe19c172770
-Size (fotox.32.tar.gz) = 1600578 bytes
-SHA1 (patch-aa) = f7305ae008e25e2fa51178e8a95472fc6bf035bc
+SHA1 (fotox.34.tar.gz) = 219a8d84bd231c97d8eea10d55c3bc6d5779425c
+RMD160 (fotox.34.tar.gz) = 774e2fd2934b6720b31199d12ae1047cb2326f1e
+Size (fotox.34.tar.gz) = 1547843 bytes
+SHA1 (patch-aa) = bc49037c49944db7b097c4123f9735c0198ea02e
+SHA1 (patch-ab) = 63e3c6311835d97aadef852a03f528ece47bd61c
