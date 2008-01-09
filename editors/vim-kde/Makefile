@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2007/12/02 11:58:59 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2008/01/09 13:47:43 martti Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
 PKGREVISION=	14
 CATEGORIES=	editors kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/utils/
+MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE3.x/utils/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--with-features=huge
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 post-configure:
-	${TOUCH} ${WRKSRC:Q}/auto/configure ${WRKSRC:Q}/auto/config.mk
+	${TOUCH} ${WRKSRC}/auto/configure ${WRKSRC}/auto/config.mk
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
