@@ -1,31 +1,34 @@
-$NetBSD: patch-ac,v 1.4 2007/04/28 20:17:13 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2008/01/09 11:35:31 hubertf Exp $
 
---- vpnc-script.orig	2007-02-18 12:52:03.000000000 +0100
-+++ vpnc-script	2007-04-28 11:49:41.000000000 +0200
-@@ -31,12 +31,13 @@ case "$OS" in
+--- vpnc-script.orig	2007-09-06 22:05:15.000000000 +0200
++++ vpnc-script	2007-09-14 13:30:59.000000000 +0200
+@@ -56,14 +56,15 @@ case "$OS" in
  		;;
  esac
  
 -DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
 -RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
-+STATEDIR=/var/run/vpnc
+-FULL_SCRIPTNAME=/usr/local/sbin/vpnc
++STATEDIR=@VARBASE@/run/vpnc
 +DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
 +RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
++FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
+ SCRIPTNAME=`basename $FULL_SCRIPTNAME`
  
  # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
 -if ! [ -d "/var/run/vpnc" ]; then
--       mkdir -p /var/run/vpnc
+-	mkdir -p /var/run/vpnc
 +if ! [ -d $STATEDIR ]; then
-+       mkdir -p $STATEDIR
++	mkdir -p $STATEDIR
  fi
  
  # stupid SunOS: no blubber in /usr/local/bin ... (on stdout)
-@@ -167,7 +168,7 @@ else
- 	get_default_gw() {
+@@ -157,7 +158,7 @@ else # use route command
  		# isn't -n supposed to give --numeric output?
  		# apperently not...
--		netstat -r -n | sed 's/default/0.0.0.0/' | grep '^0.0.0.0' | awk '{print $2}'
-+		netstat -r -n | awk '$2 ~ /^link/ { next; } /^(default|0.0.0.0)/ { print $2; }'
+ 		# Get rid of lines containing IPv6 addresses (':')
+-		netstat -r -n | sed 's/default/0.0.0.0/' | sed 's/^.*:.*$//' | grep '^0.0.0.0' | awk '{print $2}'
++		netstat -r -n | awk '/:/ { next; } $2 ~ /^link/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
  	}
  	
  	set_vpngateway_route() {
