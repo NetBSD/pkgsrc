@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.43 2008/01/09 20:12:19 smb Exp $
+$NetBSD: distinfo,v 1.44 2008/01/09 20:35:28 smb Exp $
 
 SHA1 (liferea-1.4.10.tar.gz) = 7293e6872149308d0fbfdad57c3aae8ec20b6b63
 RMD160 (liferea-1.4.10.tar.gz) = af7656ef9e89850c5e5b2fcee4b9e1d5312ffaf5
 Size (liferea-1.4.10.tar.gz) = 1609333 bytes
-SHA1 (patch-aa) = 9c9ce0adae109b07ee69422830d35eb09445ec6b
+SHA1 (patch-ae) = 9c9ce0adae109b07ee69422830d35eb09445ec6b
