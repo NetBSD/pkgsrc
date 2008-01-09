@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.22 2007/09/07 17:26:23 jlam Exp $
+# $NetBSD: builtin.mk,v 1.22.4.1 2008/01/09 17:14:10 ghen Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -136,7 +136,8 @@ USE_BUILTIN.openssl!=							\
 .        endif
 .      endfor
 .    endif
-.    if defined(USE_FEATURES.openssl)
+.    if !empty(IS_BUILTIN.openssl:M[yY][eE][sS]) && \
+	defined(USE_FEATURES.openssl)
 .      if !empty(USE_FEATURES.openssl:Mthreads) && \
 	  !empty(BUILTIN_OPENSSL_HAS_THREADS:M[nN][oO])
 USE_BUILTIN.openssl=	no
