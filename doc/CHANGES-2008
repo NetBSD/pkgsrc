@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.63 2008/01/09 00:17:25 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.64 2008/01/09 01:02:42 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -102,8 +102,17 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.00 [tnn 2008-01-08]
 	Updated audio/shorten to 3.6.1 [tnn 2008-01-08]
 	Updated editors/texmaker to 1.6 [ghen 2008-01-08]
+	Updated security/p5-Crypt-OpenSSL-Bignum to 0.04 [heinz 2008-01-08]
+	Updated security/p5-Crypt-OpenSSL-Random to 0.04 [heinz 2008-01-08]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.25 [heinz 2008-01-08]
+	Updated security/p5-Digest-SHA to 5.45 [heinz 2008-01-08]
 	Updated sysutils/bacula to 2.2.4nb1 [ghen 2008-01-08]
 	Updated sysutils/bacula-clientonly to 2.2.4nb1 [ghen 2008-01-08]
+	Updated net/p5-Net-DNS to 0.62 [heinz 2008-01-08]
+	Updated mail/p5-Mail-DKIM to 0.29 [heinz 2008-01-08]
+	Updated devel/p5-IO-Zlib to 1.09 [heinz 2008-01-08]
+	Updated devel/p5-Test-Exception to 0.26 [heinz 2008-01-08]
 	Updated devel/glib2 to 2.14.5 [tnn 2008-01-09]
 	Updated devel/pango to 1.18.4 [tnn 2008-01-09]
 	Updated x11/gtk2 to 2.12.4 [tnn 2008-01-09]
+	Updated security/p5-Net-SSLeay to 1.32 [heinz 2008-01-09]
