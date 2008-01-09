@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2007/08/22 14:03:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.38 2008/01/09 02:54:39 ghen Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -14,6 +14,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 
@@ -58,7 +60,7 @@ post-fetch:
 	fi
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 
 .include "../../mk/java-env.mk"
