@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/22 12:15:03 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/09 19:01:07 drochner Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -31,8 +31,6 @@ bin/ps2ps2
 bin/pv.sh
 bin/unix-lpr.sh
 bin/wftopfa
-${CUPS}libexec/cups/filter/pstopxl
-${CUPS}libexec/cups/filter/pstoraster
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/font2c.1
@@ -71,67 +69,6 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
-${CUPS}share/cups/model/pxlcolor.ppd
-${CUPS}share/cups/model/pxlmono.ppd
-share/doc/ghostscript/API.htm
-share/doc/ghostscript/C-style.htm
-share/doc/ghostscript/Changes.htm
-share/doc/ghostscript/Commprod.htm
-share/doc/ghostscript/DLL.htm
-share/doc/ghostscript/Deprecated.htm
-share/doc/ghostscript/Details.htm
-share/doc/ghostscript/Details8.htm
-share/doc/ghostscript/Develop.htm
-share/doc/ghostscript/Devices.htm
-share/doc/ghostscript/Drivers.htm
-share/doc/ghostscript/Fonts.htm
-share/doc/ghostscript/Helpers.htm
-share/doc/ghostscript/Hershey.htm
-share/doc/ghostscript/History1.htm
-share/doc/ghostscript/History2.htm
-share/doc/ghostscript/History3.htm
-share/doc/ghostscript/History4.htm
-share/doc/ghostscript/History5.htm
-share/doc/ghostscript/History6.htm
-share/doc/ghostscript/History7.htm
-share/doc/ghostscript/History8.htm
-share/doc/ghostscript/Htmstyle.htm
-share/doc/ghostscript/Humor.htm
-share/doc/ghostscript/Install.htm
-share/doc/ghostscript/Issues.htm
-share/doc/ghostscript/Language.htm
-share/doc/ghostscript/Lib.htm
-share/doc/ghostscript/Make.htm
-share/doc/ghostscript/News.htm
-share/doc/ghostscript/Projects.htm
-share/doc/ghostscript/Ps-style.htm
-share/doc/ghostscript/Ps2epsi.htm
-share/doc/ghostscript/Ps2pdf.htm
-share/doc/ghostscript/Psfiles.htm
-share/doc/ghostscript/README
-share/doc/ghostscript/Readme.htm
-share/doc/ghostscript/Release.htm
-share/doc/ghostscript/Source.htm
-share/doc/ghostscript/Testing.htm
-share/doc/ghostscript/Unix-lpr.htm
-share/doc/ghostscript/Use.htm
-share/doc/ghostscript/Xfonts.htm
-share/doc/ghostscript/gs.css
-share/doc/ghostscript/index.html
-${CUPS}share/examples/cups/pstoraster.convs
-share/examples/ghostscript/alphabet.ps
-share/examples/ghostscript/annots.pdf
-share/examples/ghostscript/chess.ps
-share/examples/ghostscript/colorcir.ps
-share/examples/ghostscript/doretree.ps
-share/examples/ghostscript/escher.ps
-share/examples/ghostscript/golfer.eps
-share/examples/ghostscript/grayalph.ps
-share/examples/ghostscript/ridt91.eps
-share/examples/ghostscript/snowflak.ps
-share/examples/ghostscript/tiger.eps
-share/examples/ghostscript/vasarely.ps
-share/examples/ghostscript/waterfal.ps
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-H
@@ -350,11 +287,19 @@ share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS-UTF32-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS-UTF32-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS-UTF8-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS-UTF8-V
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF16-H
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF16-V
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF32-H
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF32-V
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF8-H
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJIS2004-UTF8-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISPro-UCS2-HW-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISPro-UCS2-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISPro-UTF8-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISX0213-UTF32-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISX0213-UTF32-V
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISX02132004-UTF32-H
+share/ghostscript/${PKGVERSION}/Resource/CMap/UniJISX02132004-UTF32-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniKS-UCS2-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniKS-UCS2-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/UniKS-UTF16-H
@@ -377,6 +322,64 @@ share/ghostscript/${PKGVERSION}/Resource/Decoding/Latin1
 share/ghostscript/${PKGVERSION}/Resource/Decoding/StandardEncoding
 share/ghostscript/${PKGVERSION}/Resource/Decoding/Unicode
 share/ghostscript/${PKGVERSION}/Resource/Encoding/Wingdings
+share/ghostscript/${PKGVERSION}/doc/API.htm
+share/ghostscript/${PKGVERSION}/doc/C-style.htm
+share/ghostscript/${PKGVERSION}/doc/Changes.htm
+share/ghostscript/${PKGVERSION}/doc/Commprod.htm
+share/ghostscript/${PKGVERSION}/doc/DLL.htm
+share/ghostscript/${PKGVERSION}/doc/Deprecated.htm
+share/ghostscript/${PKGVERSION}/doc/Details.htm
+share/ghostscript/${PKGVERSION}/doc/Details8.htm
+share/ghostscript/${PKGVERSION}/doc/Develop.htm
+share/ghostscript/${PKGVERSION}/doc/Devices.htm
+share/ghostscript/${PKGVERSION}/doc/Drivers.htm
+share/ghostscript/${PKGVERSION}/doc/Fonts.htm
+share/ghostscript/${PKGVERSION}/doc/Helpers.htm
+share/ghostscript/${PKGVERSION}/doc/Hershey.htm
+share/ghostscript/${PKGVERSION}/doc/History1.htm
+share/ghostscript/${PKGVERSION}/doc/History2.htm
+share/ghostscript/${PKGVERSION}/doc/History3.htm
+share/ghostscript/${PKGVERSION}/doc/History4.htm
+share/ghostscript/${PKGVERSION}/doc/History5.htm
+share/ghostscript/${PKGVERSION}/doc/History6.htm
+share/ghostscript/${PKGVERSION}/doc/History7.htm
+share/ghostscript/${PKGVERSION}/doc/History8.htm
+share/ghostscript/${PKGVERSION}/doc/Htmstyle.htm
+share/ghostscript/${PKGVERSION}/doc/Humor.htm
+share/ghostscript/${PKGVERSION}/doc/Install.htm
+share/ghostscript/${PKGVERSION}/doc/Issues.htm
+share/ghostscript/${PKGVERSION}/doc/Language.htm
+share/ghostscript/${PKGVERSION}/doc/Lib.htm
+share/ghostscript/${PKGVERSION}/doc/Make.htm
+share/ghostscript/${PKGVERSION}/doc/News.htm
+share/ghostscript/${PKGVERSION}/doc/Projects.htm
+share/ghostscript/${PKGVERSION}/doc/Ps-style.htm
+share/ghostscript/${PKGVERSION}/doc/Ps2epsi.htm
+share/ghostscript/${PKGVERSION}/doc/Ps2pdf.htm
+share/ghostscript/${PKGVERSION}/doc/Psfiles.htm
+share/ghostscript/${PKGVERSION}/doc/README
+share/ghostscript/${PKGVERSION}/doc/Readme.htm
+share/ghostscript/${PKGVERSION}/doc/Release.htm
+share/ghostscript/${PKGVERSION}/doc/Source.htm
+share/ghostscript/${PKGVERSION}/doc/Testing.htm
+share/ghostscript/${PKGVERSION}/doc/Unix-lpr.htm
+share/ghostscript/${PKGVERSION}/doc/Use.htm
+share/ghostscript/${PKGVERSION}/doc/Xfonts.htm
+share/ghostscript/${PKGVERSION}/doc/gs.css
+share/ghostscript/${PKGVERSION}/doc/index.html
+share/ghostscript/${PKGVERSION}/examples/alphabet.ps
+share/ghostscript/${PKGVERSION}/examples/annots.pdf
+share/ghostscript/${PKGVERSION}/examples/chess.ps
+share/ghostscript/${PKGVERSION}/examples/colorcir.ps
+share/ghostscript/${PKGVERSION}/examples/doretree.ps
+share/ghostscript/${PKGVERSION}/examples/escher.ps
+share/ghostscript/${PKGVERSION}/examples/golfer.eps
+share/ghostscript/${PKGVERSION}/examples/grayalph.ps
+share/ghostscript/${PKGVERSION}/examples/ridt91.eps
+share/ghostscript/${PKGVERSION}/examples/snowflak.ps
+share/ghostscript/${PKGVERSION}/examples/tiger.eps
+share/ghostscript/${PKGVERSION}/examples/vasarely.ps
+share/ghostscript/${PKGVERSION}/examples/waterfal.ps
 share/ghostscript/${PKGVERSION}/lib/FCOfontmap-PCLPS2
 share/ghostscript/${PKGVERSION}/lib/Fontmap
 share/ghostscript/${PKGVERSION}/lib/Fontmap.GS
@@ -551,6 +554,7 @@ share/ghostscript/${PKGVERSION}/lib/packfile.ps
 share/ghostscript/${PKGVERSION}/lib/pcharstr.ps
 share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_base.ps
+share/ghostscript/${PKGVERSION}/lib/pdf_cslayer.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_draw.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_font.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_main.ps
@@ -634,6 +638,8 @@ share/ghostscript/${PKGVERSION}/lib/wrfont.ps
 share/ghostscript/${PKGVERSION}/lib/xlatmap
 share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/lib
+@dirrm share/ghostscript/${PKGVERSION}/examples
+@dirrm share/ghostscript/${PKGVERSION}/doc
 @dirrm share/ghostscript/${PKGVERSION}/Resource/Encoding
 @dirrm share/ghostscript/${PKGVERSION}/Resource/Decoding
 @dirrm share/ghostscript/${PKGVERSION}/Resource/ColorSpace
@@ -641,5 +647,3 @@ share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/Resource
 @dirrm share/ghostscript/${PKGVERSION}
 @dirrm share/ghostscript
-@dirrm share/examples/ghostscript
-@dirrm share/doc/ghostscript
