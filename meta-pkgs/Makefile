@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/08/17 20:25:44 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2008/01/09 18:49:21 drochner Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -9,6 +9,7 @@ SUBDIR+=	fxtv-capture
 SUBDIR+=	gnome
 SUBDIR+=	gnome-base
 SUBDIR+=	gnome-devel
+SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gtk2-extras
