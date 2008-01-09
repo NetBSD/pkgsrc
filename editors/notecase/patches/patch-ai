@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/01/09 19:09:23 drochner Exp $
+
+--- po/it.po.orig	2008-01-09 13:44:20.000000000 +0100
++++ po/it.po
+@@ -408,7 +408,7 @@ msgstr ""
+ #: callbacks.cpp:5877
+ #: FileAttachmentDlg.cpp:592
+ msgid "Failed to open input file!\n"
+-msgstr "Errore nell'apertura del file di input!"
++msgstr "Errore nell'apertura del file di input!\n"
+ 
+ #: callbacks.cpp:5891
+ #: FileAttachmentDlg.cpp:292

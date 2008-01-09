@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2007/12/17 19:06:55 drochner Exp $
+$NetBSD: patch-ad,v 1.3 2008/01/09 19:09:23 drochner Exp $
 
---- Makefile.orig	2007-12-03 11:30:40.000000000 +0100
+--- Makefile.orig	2008-01-08 20:24:20.000000000 +0100
 +++ Makefile
 @@ -10,7 +10,7 @@
- VERSION=1.7.4
+ VERSION=1.7.6
  
  # define install target dirs
 -prefix=/usr
@@ -37,3 +37,12 @@ $NetBSD: patch-ad,v 1.2 2007/12/17 19:06:55 drochner Exp $
   $(OBJ)/ProgressDlg.o $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o \
   $(OBJ)/FileAttachmentDlg.o $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o \
   $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o $(OBJ)/EditDlg.o \
+@@ -599,7 +598,7 @@ updatesrc:
+ 	$(Q)sed -i 's/^Version:.*/Version:        $(VERSION)/' ./docs/notecase.spec
+ 	$(Q)sed -i 's/^Source:.*/Source:         $(archive)_src.tar.gz/' ./docs/notecase.spec
+ 	$(Q)sed -i 's/\#define APP_VER_STR .*/\#define APP_VER_STR "$(VERSION)"/' ./src/config.h
+-	#$(Q)sed -i 's:\#define INSTALL_PREFIX .*:\#define INSTALL_PREFIX "$(DESTDIR)$(prefix)":' ./src/config.h
++	$(Q)sed -i 's:\#define INSTALL_PREFIX .*:\#define INSTALL_PREFIX "$(DESTDIR)$(prefix)":' ./src/config.h
+ 	$(Q)if [ "$(HAVE_GNOME_VFS)" = "" ]; then \
+ 		sed -i 's:[/]*#define HAVE_GNOME_VFS.*://#define HAVE_GNOME_VFS:' ./src/config.h; \
+ 	else \
