@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2007/08/09 13:03:21 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2008/01/09 03:48:07 bjs Exp $
 
---- configure.orig	2007-04-15 16:51:12.000000000 -0400
+--- configure.orig	2008-01-08 18:35:23.000000000 -0500
 +++ configure
 @@ -907,7 +907,7 @@ Optional Packages:
    --without-openssl       disable OpenSSL support
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.7 2007/08/09 13:03:21 joerg Exp $
  			ASCIIDOC_FLAGS=--unsafe
  		fi
  		rm config.asciidoc-unsafe.*
-@@ -17564,7 +17564,7 @@ if test -z "$disable_lua"; then
+@@ -17624,7 +17624,7 @@ if test -z "$disable_lua"; then
  	for luadir in "$withval" "" /usr /usr/local; do
  		for suffix in "" 50 51; do
  			if test "$cf_result" = no; then
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.7 2007/08/09 13:03:21 joerg Exp $
  
  				if test ! -z "$luadir"; then
  					LUA_LIBS="-L$luadir/lib $LUA_LIBS"
-@@ -20479,9 +20479,9 @@ done
+@@ -20603,9 +20603,9 @@ done
  
  
  
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.7 2007/08/09 13:03:21 joerg Exp $
  
      for dir in `echo "$withval" | tr : ' '`; do
        if test -d $dir/include; then CPPFLAGS="$CPPFLAGS -I$dir/include"; fi
-@@ -23231,7 +23231,7 @@ _ACEOF
+@@ -23355,7 +23355,7 @@ _ACEOF
  
  
  # Create LIBDIR #define for config.h
