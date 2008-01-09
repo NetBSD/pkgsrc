@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/10/31 20:51:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/01/09 18:56:01 drochner Exp $
 bin/pygtk-codegen-2.0
 bin/pygtk-demo
 include/pygtk-2.0/pygtk/pygtk.h
@@ -631,6 +631,7 @@ share/pygtk/2.0/defs/gtk-2.12-types.defs
 share/pygtk/2.0/defs/gtk-2.12.defs
 share/pygtk/2.0/defs/gtk-base-types.defs
 share/pygtk/2.0/defs/gtk-base.defs
+share/pygtk/2.0/defs/gtk-extrafuncs.defs
 share/pygtk/2.0/defs/gtk-types.defs
 share/pygtk/2.0/defs/gtk.defs
 share/pygtk/2.0/defs/gtkunixprint.defs
