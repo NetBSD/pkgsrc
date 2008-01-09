@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.62 2008/01/08 16:53:00 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.63 2008/01/09 00:17:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -104,3 +104,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/texmaker to 1.6 [ghen 2008-01-08]
 	Updated sysutils/bacula to 2.2.4nb1 [ghen 2008-01-08]
 	Updated sysutils/bacula-clientonly to 2.2.4nb1 [ghen 2008-01-08]
+	Updated devel/glib2 to 2.14.5 [tnn 2008-01-09]
+	Updated devel/pango to 1.18.4 [tnn 2008-01-09]
+	Updated x11/gtk2 to 2.12.4 [tnn 2008-01-09]
