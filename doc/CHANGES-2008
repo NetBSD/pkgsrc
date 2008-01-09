@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.75 2008/01/09 21:49:11 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.76 2008/01/09 21:51:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -129,3 +129,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/siag to 3.6.1 [reed 2008-01-09]
 	Removed misc/goffice0.5 successor misc/goffice0.6 [wiz 2008-01-09]
 	Updated mail/ingo to 1.1.5 [adrianp 2008-01-09]
+	Updated mail/imp to 4.1.6 [adrianp 2008-01-09]
