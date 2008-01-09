@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/22 21:24:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/09 03:55:09 smb Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -8,7 +8,9 @@ include/claws-mail/addr_compl.h
 include/claws-mail/addrbook.h
 include/claws-mail/addrcache.h
 include/claws-mail/addrclip.h
+include/claws-mail/addrcustomattr.h
 include/claws-mail/addrdefs.h
+include/claws-mail/addrduplicates.h
 include/claws-mail/addressadd.h
 include/claws-mail/addressbook.h
 include/claws-mail/addressbook_foldersel.h
@@ -29,7 +31,6 @@ include/claws-mail/common/hooks.h
 include/claws-mail/common/log.h
 include/claws-mail/common/md5.h
 include/claws-mail/common/mgutils.h
-include/claws-mail/common/nntp.h
 include/claws-mail/common/passcrypt.h
 include/claws-mail/common/plugin.h
 include/claws-mail/common/prefs.h
@@ -70,6 +71,7 @@ include/claws-mail/etpan/etpan-errors.h
 include/claws-mail/etpan/etpan-thread-manager-types.h
 include/claws-mail/etpan/etpan-thread-manager.h
 include/claws-mail/etpan/imap-thread.h
+include/claws-mail/etpan/nntp-thread.h
 include/claws-mail/exphtmldlg.h
 include/claws-mail/expldifdlg.h
 include/claws-mail/export.h
@@ -179,6 +181,7 @@ include/claws-mail/prefs_template.h
 include/claws-mail/prefs_themes.h
 include/claws-mail/prefs_toolbar.h
 include/claws-mail/prefs_wrapping.h
+include/claws-mail/printing.h
 include/claws-mail/privacy.h
 include/claws-mail/procheader.h
 include/claws-mail/procmime.h
@@ -252,6 +255,8 @@ share/locale/sr/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
 share/locale/zh_TW/LC_MESSAGES/claws-mail.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/examples/claws-mail
 @dirrm share/doc/claws-mail/manual/pl
 @dirrm share/doc/claws-mail/manual/fr
@@ -265,4 +270,4 @@ share/locale/zh_TW/LC_MESSAGES/claws-mail.mo
 @dirrm include/claws-mail/etpan
 @dirrm include/claws-mail/common
 @dirrm include/claws-mail
-@dirrm etc/claws-mail
+@dirrm lib/claws-mail

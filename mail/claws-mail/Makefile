@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/10/27 13:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/09 03:55:09 smb Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -31,12 +30,12 @@ EGDIR=		${PREFIX}/share/examples/claws-mail
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.claws-mail
+PKG_SUPPORTED_OPTIONS=	claws-mail-jpilot ldap inet6
 PKG_SUGGESTED_OPTIONS=
-PKG_SUPPORTED_OPTIONS=	jpilot ldap inet6
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mjpilot)
+.if !empty(PKG_OPTIONS:Mclaws-mail-jpilot)
 CONFIGURE_ARGS+=	--enable-jpilot
 .  include "../../comms/pilot-link-libs/buildlink3.mk"
 .  include "../../comms/jpilot/buildlink3.mk"
