@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6965 2008/01/08 23:17:25 gdt Exp $
+$NetBSD: TODO,v 1.6966 2008/01/09 00:17:25 tnn Exp $
 
 Suggested new packages
 ======================
@@ -566,7 +566,6 @@ Suggested package updates
 	o glade-2.12.2
 	o glade3-3.4.1
 	o glchess-1.0.5
-	o glib2-2.14.5
 	o global-5.6
 	o glproto-1.4.9
 	o gmime-2.2.15
@@ -631,7 +630,6 @@ Suggested package updates
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-systrace-20030623
-	o gtk2-2.12.4
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtkhtml314-3.16.3
@@ -1017,7 +1015,6 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pango-1.18.4
 	o pari-2.1.7
 	o pcal-4.8
 	o pciids-20071004
