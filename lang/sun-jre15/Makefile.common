@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2007/08/22 14:03:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2008/01/09 02:38:26 ghen Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -16,6 +16,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 
@@ -64,7 +66,7 @@ post-fetch:
 	fi
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 
 .include "../../mk/java-env.mk"
