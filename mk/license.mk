@@ -1,6 +1,7 @@
-# $NetBSD: license.mk,v 1.9 2007/11/08 19:31:05 joerg Exp $
+# $NetBSD: license.mk,v 1.10 2008/01/09 14:38:05 gdt Exp $
 #
-# Note: This file is in draft state and not yet actively used.
+# Note: This file is in draft state and not yet included in default
+# pkgsrc operations.
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -33,16 +34,17 @@
 # LICENSE
 #	The license of the package.
 #
-#	When the package has multiple licenses, there are many different
-#	cases. Some packages use an OR-combination, while others use an
-#	AND-combination. Currently, pkgsrc can only handle a single
-#	license per package. For now, add a description of the licensing
-#	to ../doc/TODO, section "Licenses of packages".  Note that in
-#	such cases, one can place the text of both licenses in
-#	licenses/foo-license and reference it.
-#
+#	Sometimes licensing is other than a single text file.  See
+#	doc/TODO for discussion of how to handle packages with dual
+#	licensing (a choice) or where multiple licenses apply
+#	simultaneously.
+# 
 #	Every package should specify its license.  (Prior to July 2007,
 #	Open Source and Free software did not have license tags.)
+#
+# 	As of 2008-01, we are adding #LICENSE=; until this file is
+#	included from bsd.pkg.mk such tags will cause failure because
+#	DEFAULT_ACCEPTABLE_LICENSES is not yet implemented.
 #
 #	Licenses are collected in the licenses/ subdirectory of
 #	pkgsrc.  For open source license, we generally use the same
@@ -74,6 +76,11 @@
 # This list is not complete.  Free and Open Source licenses should be
 # added to the list as they are added to pkgsrc.
 
+# The convention is that Free or Open Source licenses do not have a
+# -license suffix, and nonfree licenses end in -license.
+
+# XXX open-font-license should perhaps be changed to open-font
+
 # XXX Surely we will encounter licenses that clearly are Free, but
 # which have not been formally approved.  These licenses, if added,
 # should be somehow marked.
@@ -89,6 +96,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	open-font-license
 
 .if !defined(LICENSE)
+# XXX Revisit date.
 .  if defined(AFTER_2007Q3)
 LICENSE?=		unknown
 PKG_FAIL_REASON+=	"[license.mk] Every package must define a LICENSE."
