@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2008/01/09 20:12:19 smb Exp $
+$NetBSD: patch-ae,v 1.2 2008/01/09 21:09:26 smb Exp $
 
---- src/common.c.orig	2008-01-09 11:46:50.000000000 -0500
-+++ src/common.c	2008-01-09 11:46:53.000000000 -0500
+--- src/common.c.orig	2007-10-21 14:30:46.000000000 -0400
++++ src/common.c	2008-01-09 15:58:30.000000000 -0500
+@@ -37,7 +37,7 @@
+ #  include <config.h>
+ #endif
+ 
+-#define _XOPEN_SOURCE /* glibc2 needs this (man strptime) */
++#define _XOPEN_SOURCE	4 /* glibc2 needs this (man strptime); NetBSD wants it to be 4 or higher */
+ 
+ #include <libxml/uri.h>
+ 
 @@ -196,7 +196,7 @@
  
  /* converts a ISO 8601 time string to a time_t value */
