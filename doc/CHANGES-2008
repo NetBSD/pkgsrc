@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.68 2008/01/09 11:35:26 hubertf Exp $
+$NetBSD: CHANGES-2008,v 1.69 2008/01/09 13:38:27 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.9.6nb2 [bjs 2008-01-09]
 	Updated net/btpd to 0.12 [bjs 2008-01-09]
 	Updated net/vpnc to 0.5.1 [hubertf 2008-01-09]
+	Updated editors/vim-share to 7.1.212 [martti 2008-01-09]
