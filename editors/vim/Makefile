@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/01/03 23:20:50 heinz Exp $
+# $NetBSD: Makefile,v 1.67 2008/01/09 13:47:42 martti Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -23,8 +23,8 @@ TEST_TARGET=		check
 
 post-install:
 .for f in rvim rview
-	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/bin/${f:Q}
-	${LN} -s vim ${DESTDIR:Q}${PREFIX:Q}/bin/${f:Q}
+	${RM} -f ${DESTDIR}${PREFIX}/bin/${f}
+	${LN} -s vim ${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
