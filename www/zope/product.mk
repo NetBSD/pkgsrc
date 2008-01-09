@@ -1,4 +1,4 @@
-# $NetBSD: product.mk,v 1.1.1.1 2007/12/18 15:27:23 taca Exp $
+# $NetBSD: product.mk,v 1.2 2008/01/09 22:10:50 taca Exp $
 #
 
 .if !defined(_ZOPE_PRODUCT_MK)
@@ -76,6 +76,7 @@ zope-install-product:
 		-s ',.*/\#.*,,'			\
 		-s ',.*~$$,,'			\
 		-s ',.*/.svn/.*,,'		\
+		-s ',.*/\._.*,,p'		\
 		-s ',.*/.svn$$,,'		\
 		-s ',svn-commit\.tmp,,'		\
 		${ZOPE_PRODUCT_SRC} ${DESTDIR}${ZOPE_PRODUCT_DSTDIR}
