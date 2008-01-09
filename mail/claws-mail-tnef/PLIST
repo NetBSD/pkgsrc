@@ -1,18 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/09 03:55:13 smb Exp $
-include/vcalendar/plugins/ical.h
-lib/claws-mail/plugins/vcalendar.la
-share/locale/ca/LC_MESSAGES/vcalendar.mo
-share/locale/de/LC_MESSAGES/vcalendar.mo
-share/locale/es/LC_MESSAGES/vcalendar.mo
-share/locale/fi/LC_MESSAGES/vcalendar.mo
-share/locale/fr/LC_MESSAGES/vcalendar.mo
-share/locale/hu/LC_MESSAGES/vcalendar.mo
-share/locale/it/LC_MESSAGES/vcalendar.mo
-share/locale/pl/LC_MESSAGES/vcalendar.mo
-share/locale/pt_BR/LC_MESSAGES/vcalendar.mo
-share/locale/sk/LC_MESSAGES/vcalendar.mo
-share/locale/sr/LC_MESSAGES/vcalendar.mo
-share/locale/zh_CN/LC_MESSAGES/vcalendar.mo
+@comment $NetBSD: PLIST,v 1.2 2008/01/09 14:49:36 smb Exp $
+lib/claws-mail/plugins/tnef_parse.la
+share/locale/fi/LC_MESSAGES/tnef_parse.mo
+share/locale/fr/LC_MESSAGES/tnef_parse.mo
+share/locale/hu/LC_MESSAGES/tnef_parse.mo
+share/locale/it/LC_MESSAGES/tnef_parse.mo
+share/locale/pt_BR/LC_MESSAGES/tnef_parse.mo
+share/locale/sk/LC_MESSAGES/tnef_parse.mo
 @dirrm lib/claws-mail/plugins
-@dirrm include/vcalendar/plugins
-@dirrm include/vcalendar
