@@ -1,0 +1,83 @@
+$NetBSD: patch-ae,v 1.1 2008/01/09 12:25:41 hubertf Exp $
+
+--- vpnc.8.template.orig	2007-09-10 22:39:48.000000000 +0200
++++ vpnc.8.template	2007-09-14 16:08:21.000000000 +0200
+@@ -48,9 +48,9 @@ command line options
+ .IP \(bu
+ config file(s) specified on the command line
+ .IP \(bu
+-/etc/vpnc/default.conf
++@PKG_SYSCONFDIR@/vpnc/default.conf
+ .IP \(bu
+-/etc/vpnc.conf
++@PKG_SYSCONFDIR@/vpnc.conf
+ .IP \(bu
+ prompting the user if not found above
+ 
+@@ -63,9 +63,9 @@ place to set an option wins.
+ configuration filenames
+ which do not contain a /
+ will be searched at
+-.B /etc/vpnc/<filename>
++.B @PKG_SYSCONFDIR@/vpnc/<filename>
+ and
+-.B /etc/vpnc/<filename>.conf.
++.B @PKG_SYSCONFDIR@/vpnc/<filename>.conf.
+ Otherwise
+ .B <filename>
+ and
+@@ -74,9 +74,9 @@ will be used.
+ If no configuration file
+ is specified on the command-line
+ at all, both
+-.B /etc/vpnc/default.conf
++.B @PKG_SYSCONFDIR@/vpnc/default.conf
+ and
+-.B /etc/vpnc.conf
++.B @PKG_SYSCONFDIR@/vpnc.conf
+ will be loaded.
+ 
+ .SH OPTIONS
+@@ -91,8 +91,8 @@ for security reasons) or be stored in a 
+ Prints your configuration; output can be used as vpnc.conf
+ 
+ .SH FILES
+-.I /etc/vpnc.conf
+-.I /etc/vpnc/default.conf
++.I @PKG_SYSCONFDIR@/vpnc.conf
++.I @PKG_SYSCONFDIR@/vpnc/default.conf
+ .RS
+ The default configuration file. You can specify the same config
+ directives as with command line options and additionaly
+@@ -110,7 +110,7 @@ See
+ for further details.
+ .RE
+ 
+-.I /etc/vpnc/*.conf
++.I @PKG_SYSCONFDIR@/vpnc/*.conf
+ .RS
+ vpnc will read configuration files in this directory when
+ the config filename (with or without .conf) is specified on the command line.
+@@ -149,11 +149,11 @@ IKE Authmode hybrid
+ .P
+ 
+ .P
+-CA-Dir /etc/vpnc
++CA-Dir @PKG_SYSCONFDIR@/vpnc
+ .P
+ \fBor\fR
+ .P
+-CA-File /etc/vpnc/vpn-example-com.pem
++CA-File @PKG_SYSCONFDIR@/vpnc/vpn-example-com.pem
+ .P
+ 
+ .P
+@@ -176,7 +176,7 @@ named something like 722d15bd.X, where X
+ make sure that files with colliding hashes have different names. The number
+ can be derived from the certificate file itself:
+ .P
+-openssl x509 -subject_hash -noout -in /etc/vpnc/vpn-example-com.pem
++openssl x509 -subject_hash -noout -in @PKG_SYSCONFDIR@/vpnc/vpn-example-com.pem
+ 
+ See also the
+ .B \-\-print\-config
