@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.64 2008/01/09 01:02:42 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.65 2008/01/09 04:17:21 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.18.4 [tnn 2008-01-09]
 	Updated x11/gtk2 to 2.12.4 [tnn 2008-01-09]
 	Updated security/p5-Net-SSLeay to 1.32 [heinz 2008-01-09]
+	Updated www/elinks to 0.11.20080109nb1 [bjs 2008-01-09]
