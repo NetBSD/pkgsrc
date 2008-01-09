@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/15 22:30:49 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/01/09 21:48:51 adrianp Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -46,6 +46,7 @@ share/horde/ingo/locale/fi_FI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/help.xml
 share/horde/ingo/locale/fr_FR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fr_FR/help.xml
+share/horde/ingo/locale/ja_JP/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/hu_HU/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/it_IT/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/ko_KR/LC_MESSAGES/ingo.mo
@@ -76,6 +77,7 @@ share/horde/ingo/po/fr_FR.po
 share/horde/ingo/po/hu_HU.po
 share/horde/ingo/po/ingo.pot
 share/horde/ingo/po/it_IT.po
+share/horde/ingo/po/ja_JP.po
 share/horde/ingo/po/ko_KR.po
 share/horde/ingo/po/lt_LT.po
 share/horde/ingo/po/lv_LV.po
@@ -172,6 +174,8 @@ share/horde/ingo/whitelist.php
 @dirrm share/horde/ingo/locale/it_IT
 @dirrm share/horde/ingo/locale/hu_HU/LC_MESSAGES
 @dirrm share/horde/ingo/locale/hu_HU
+@dirrm share/horde/ingo/locale/ja_JP/LC_MESSAGES/
+@dirrm share/horde/ingo/locale/ja_JP
 @dirrm share/horde/ingo/locale/fr_FR/LC_MESSAGES
 @dirrm share/horde/ingo/locale/fr_FR
 @dirrm share/horde/ingo/locale/fi_FI/LC_MESSAGES
