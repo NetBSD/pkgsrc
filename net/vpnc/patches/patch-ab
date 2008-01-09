@@ -1,13 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2007/04/28 20:17:13 hubertf Exp $
+$NetBSD: patch-ab,v 1.5 2008/01/09 11:35:31 hubertf Exp $
 
---- Makefile.orig	2007-02-19 21:51:12.000000000 +0100
-+++ Makefile	2007-04-28 11:32:25.000000000 +0200
-@@ -35,7 +35,7 @@ VERSION := $(shell sh mk-version)
- RELEASE_VERSION := $(shell cat VERSION)
+--- makeman.pl.orig	2007-09-10 22:39:48.000000000 +0200
++++ makeman.pl	2007-09-14 14:39:22.000000000 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/perl -w
++#! @PERL5@ -w
  
- CC=gcc
--CFLAGS += -W -Wall -O3 -Wmissing-declarations -Wwrite-strings -g
-+CFLAGS += -W -Wall -O3 -Wmissing-declarations -Wwrite-strings -g -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
- CPPFLAGS = -DVERSION=\"$(VERSION)\"
- LDFLAGS = -g $(shell libgcrypt-config --libs)
- CFLAGS +=  $(shell libgcrypt-config --cflags)
+ # $Id: patch-ab,v 1.5 2008/01/09 11:35:31 hubertf Exp $
+ 
