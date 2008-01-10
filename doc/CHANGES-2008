@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.86 2008/01/10 23:01:37 dillo Exp $
+$NetBSD: CHANGES-2008,v 1.87 2008/01/10 23:09:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -141,3 +141,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added comms/msynctool version 0.22 [dillo 2008-01-10]
 	Added comms/libopensync-plugin-file version 0.22 [dillo 2008-01-10]
 	Added comms/libopensync-plugin-kdepim version 0.22 [dillo 2008-01-10]
+	Updated www/horde to 3.1.6 [adrianp 2008-01-10]
