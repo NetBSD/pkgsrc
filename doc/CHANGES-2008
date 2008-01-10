@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.82 2008/01/10 18:16:11 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.83 2008/01/10 20:54:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -135,3 +135,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clamsmtp to 1.9 [martti 2008-01-10]
 	Updated print/ghostscript to 8.61nb1 [tron 2008-01-10]
 	Updated converters/bibtex2html to 1.89 [tonio 2008-01-10]
+	Updated squirrelmail-locales to 1.4.13 [adam 2008-01-10]
