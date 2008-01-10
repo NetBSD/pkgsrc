@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.7 2007/06/08 12:23:51 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2008/01/10 21:55:53 adam Exp $
 
---- hmac/sha1.c.orig	2006-09-09 00:45:39.000000000 +0000
+--- hmac/sha1.c.orig	2008-01-09 19:15:23.000000000 +0100
 +++ hmac/sha1.c
-@@ -99,6 +99,63 @@ A million repetitions of "a"
- #define R3(v,w,x,y,z,i) z+=(((w|x)&y)|(w&x))+blk(i)+0x8F1BBCDC+rol(v,5);w=rol(w,30);
- #define R4(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0xCA62C1D6+rol(v,5);w=rol(w,30);
+@@ -98,6 +98,64 @@ A million repetitions of "a"
+ #define	R3(v,w,x,y,z,i) z+=(((w|x)&y)|(w&x))+blk(i)+0x8F1BBCDC+rol(v,5);w=rol(w,30);
+ #define	R4(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0xCA62C1D6+rol(v,5);w=rol(w,30);
  
 +typedef union {
 +    unsigned char c[64];
@@ -63,11 +63,12 @@ $NetBSD: patch-ac,v 1.7 2007/06/08 12:23:51 wiz Exp $
 +    nR4(e,a,b,c,d,76); nR4(d,e,a,b,c,77); nR4(c,d,e,a,b,78); nR4(b,c,d,e,a,79);
 +}
 +#endif
- 
++
  #ifdef VERBOSE  /* SAK */
  static void __db_SHAPrintContext __P((SHA1_CTX *, char *));
-@@ -131,10 +188,6 @@ __db_SHA1Transform(state, buffer)
-         unsigned char *buffer;
+ static void
+@@ -129,10 +187,6 @@ __db_SHA1Transform(state, buffer)
+ 	unsigned char *buffer;
  {
  u_int32_t a, b, c, d, e;
 -typedef union {
@@ -75,9 +76,9 @@ $NetBSD: patch-ac,v 1.7 2007/06/08 12:23:51 wiz Exp $
 -    u_int32_t l[16];
 -} CHAR64LONG16;
  CHAR64LONG16* block;
- static int is_bigendian = -1;
+     int is_bigendian;
  #ifdef SHA1HANDSOFF
-@@ -153,6 +206,13 @@ static int is_bigendian = -1;
+@@ -151,6 +205,13 @@ CHAR64LONG16* block;
      c = state[2];
      d = state[3];
      e = state[4];
@@ -91,7 +92,7 @@ $NetBSD: patch-ac,v 1.7 2007/06/08 12:23:51 wiz Exp $
      /* 4 rounds of 20 operations each. Loop unrolled. */
      R0(a,b,c,d,e, 0); R0(e,a,b,c,d, 1); R0(d,e,a,b,c, 2); R0(c,d,e,a,b, 3);
      R0(b,c,d,e,a, 4); R0(a,b,c,d,e, 5); R0(e,a,b,c,d, 6); R0(d,e,a,b,c, 7);
-@@ -174,6 +234,8 @@ static int is_bigendian = -1;
+@@ -172,6 +233,8 @@ CHAR64LONG16* block;
      R4(c,d,e,a,b,68); R4(b,c,d,e,a,69); R4(a,b,c,d,e,70); R4(e,a,b,c,d,71);
      R4(d,e,a,b,c,72); R4(c,d,e,a,b,73); R4(b,c,d,e,a,74); R4(a,b,c,d,e,75);
      R4(e,a,b,c,d,76); R4(d,e,a,b,c,77); R4(c,d,e,a,b,78); R4(b,c,d,e,a,79);

@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.52 2007/06/08 12:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/01/10 21:55:51 adam Exp $
 
-DISTNAME=		db-4.5.20
-PKGNAME=		${DISTNAME:S/db/db4/}.2
-CATEGORIES=		databases
-MASTER_SITES=		http://download.oracle.com/berkeley-db/ \
-			http://download-uk.oracle.com/berkeley-db/
+DISTNAME=	db-4.6.21
+PKGNAME=	${DISTNAME:S/db/db4/}
+CATEGORIES=	databases
+MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
+		http://download-uk.oracle.com/berkeley-db/
 
-PATCHFILES=		patch.4.5.20.1 patch.4.5.20.2
-PATCH_SITES=		http://www.oracle.com/technology/products/berkeley-db/db/update/4.5.20/
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.oracle.com/database/berkeley-db/db/index.html
-COMMENT=		Berkeley DB version 4 from Oracle
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
+COMMENT=	Berkeley DB version 4 from Oracle
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=		db4-4.5.20
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
