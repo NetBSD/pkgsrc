@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.755 2008/01/06 14:55:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.756 2008/01/10 03:33:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4019,6 +4019,10 @@ sub checkline_cpp_macro_names($$) {
 		"__svr4__" => "__SVR4",
 	};
 
+	use constant spellcheck_macros => {
+		"__NetBSD_Version" => "__NetBSD_Version__",
+	};
+
 	$rest = $text;
 	while ($rest =~ s/defined\((__[\w_]+)\)//) {
 		my ($macro) = ($1);
@@ -4028,6 +4032,9 @@ sub checkline_cpp_macro_names($$) {
 		} elsif (exists(bad_macros->{$macro})) {
 			$line->log_warning("The macro \"${macro}\" is not portable enough. Please use \"".bad_macros->{$macro}."\" instead.");
 			$line->explain_warning("See the pkgsrc guide, section \"CPP defines\" for details.");
+
+		} elsif (exists(spellcheck_macros->{$macro})) {
+			$line->log_warning("Misspelled variant \"${macro}\" of \"".spellcheck_macros->{$macro}."\".");
 		} else {
 			$opt_debug_unchecked and $line->log_debug("Unchecked macro \"${macro}\".");
 		}
