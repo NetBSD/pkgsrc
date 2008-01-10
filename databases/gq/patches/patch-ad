@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/01/21 16:26:37 cube Exp $
+$NetBSD: patch-ad,v 1.2 2008/01/10 21:42:51 adam Exp $
 
---- src/dt_password.c.orig	2003-11-03 22:07:57.000000000 +0100
+--- src/dt_password.c.orig	2007-05-14 18:26:51.000000000 +0200
 +++ src/dt_password.c
-@@ -45,6 +45,15 @@
+@@ -48,6 +48,15 @@
  #include <openssl/md5.h>
  #include <openssl/md4.h>
  #include <openssl/sha.h>
