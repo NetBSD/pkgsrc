@@ -1,7 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.2 2008/01/03 16:18:06 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.3 2008/01/10 07:34:29 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
 
 Pullup ticket 2255 - requested by joerg
 build fix for erlang
+Pullup ticket 2257 - requested by joerg
+build fix for openssl
+Pullup ticket 2258 - requested by sketch
+build fix for libiconv
+Pullup ticket 2259 - requested by adam
+security updates for postgresql
