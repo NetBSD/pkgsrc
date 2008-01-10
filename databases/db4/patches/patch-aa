@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2007/06/08 12:23:51 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2008/01/10 21:55:53 adam Exp $
 
---- dist/Makefile.in.orig	2006-09-13 16:22:38.000000000 +0000
+--- dist/Makefile.in.orig	2007-07-05 20:35:02.000000000 +0200
 +++ dist/Makefile.in
 @@ -11,7 +11,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.12 2007/06/08 12:23:51 wiz Exp $
  libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -723,8 +723,7 @@ install_include:
+@@ -738,8 +738,7 @@ install_include:
  	    ($(MKDIR) -p $(DESTDIR)$(includedir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(includedir))
  	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.12 2007/06/08 12:23:51 wiz Exp $
  
  uninstall_include:
  	@cd $(DESTDIR)$(includedir) && $(RM) -f $(INCDOT)
-@@ -735,7 +734,7 @@ install_lib:
+@@ -750,7 +749,7 @@ install_lib:
  	    ($(MKDIR) -p $(DESTDIR)$(libdir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(libdir))
  	@cd $(DESTDIR)$(libdir) && $(RM) -f $(LIB_INSTALL_FILE_LIST)
@@ -78,14 +78,14 @@ $NetBSD: patch-aa,v 1.12 2007/06/08 12:23:51 wiz Exp $
  	@(cd $(DESTDIR)$(libdir) && \
  	    test -f $(libso) && $(LN) -s $(libso) $(libso_default); \
  	    test -f $(libso) && $(LN) -s $(libso) $(libso_major); \
-@@ -759,11 +758,8 @@ install_utilities:
+@@ -774,11 +773,8 @@ install_utilities:
  	    ($(MKDIR) -p $(DESTDIR)$(bindir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
 -		test -f $$i.exe && i=$$i.exe || i=$$i; \
 -		$(RM) -f $(DESTDIR)$(bindir)/$$i; \
 -		$(INSTALLER) $$i $(DESTDIR)$(bindir)/$$i; \
--		test "$(STRIP)" = "none" || $(STRIP) $(DESTDIR)$(bindir)/$$i; \
+-		$(STRIP) $(DESTDIR)$(bindir)/$$i; \
 -		$(CHMOD) $(emode) $(DESTDIR)$(bindir)/$$i; \
 +		target="${DESTDIR}${bindir}/`echo $$i | sed '${transform}'`"; \
 +		libtool --mode=install ${BSD_INSTALL_PROGRAM} $$i $$target; \
