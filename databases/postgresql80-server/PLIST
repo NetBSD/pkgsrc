@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/09/19 20:01:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10.4.1 2008/01/10 07:33:54 ghen Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -202,6 +202,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Louisville
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Maceio
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Managua
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Manaus
+${PG_SUBPREFIX}share/postgresql/timezone/America/Marigot
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Martinique
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Mazatlan
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Mendoza
@@ -242,6 +243,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Santo_Domingo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Sao_Paulo
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Scoresbysund
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Shiprock
+${PG_SUBPREFIX}share/postgresql/timezone/America/St_Barthelemy
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Johns
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Kitts
 ${PG_SUBPREFIX}share/postgresql/timezone/America/St_Lucia
