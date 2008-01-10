@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2007/06/08 12:23:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/01/10 21:55:51 adam Exp $
 bin/berkeley_db4_svc
 bin/db4_archive
 bin/db4_checkpoint
+bin/db4_codegen
 bin/db4_deadlock
 bin/db4_dump
 bin/db4_hotbackup
@@ -14,11 +15,11 @@ bin/db4_verify
 include/db4/db.h
 include/db4/db_185.h
 include/db4/db_cxx.h
-lib/libdb4-4.5.la
+lib/libdb4-4.6.la
 lib/libdb4-4.so
 lib/libdb4.a
 lib/libdb4.so
-lib/libdb4_cxx-4.5.la
+lib/libdb4_cxx-4.6.la
 lib/libdb4_cxx-4.so
 lib/libdb4_cxx.a
 lib/libdb4_cxx.so
@@ -31,6 +32,7 @@ share/doc/db4/api_c/db_compact.html
 share/doc/db4/api_c/db_cursor.html
 share/doc/db4/api_c/db_del.html
 share/doc/db4/api_c/db_err.html
+share/doc/db4/api_c/db_exists.html
 share/doc/db4/api_c/db_fd.html
 share/doc/db4/api_c/db_get.html
 share/doc/db4/api_c/db_get_byteswapped.html
@@ -57,6 +59,7 @@ share/doc/db4/api_c/db_set_errfile.html
 share/doc/db4/api_c/db_set_errpfx.html
 share/doc/db4/api_c/db_set_feedback.html
 share/doc/db4/api_c/db_set_flags.html
+share/doc/db4/api_c/db_set_h_compare.html
 share/doc/db4/api_c/db_set_h_ffactor.html
 share/doc/db4/api_c/db_set_h_hash.html
 share/doc/db4/api_c/db_set_h_nelem.html
@@ -64,6 +67,7 @@ share/doc/db4/api_c/db_set_lorder.html
 share/doc/db4/api_c/db_set_msgcall.html
 share/doc/db4/api_c/db_set_msgfile.html
 share/doc/db4/api_c/db_set_pagesize.html
+share/doc/db4/api_c/db_set_priority.html
 share/doc/db4/api_c/db_set_q_extentsize.html
 share/doc/db4/api_c/db_set_re_delim.html
 share/doc/db4/api_c/db_set_re_len.html
@@ -82,6 +86,7 @@ share/doc/db4/api_c/dbc_dup.html
 share/doc/db4/api_c/dbc_get.html
 share/doc/db4/api_c/dbc_list.html
 share/doc/db4/api_c/dbc_put.html
+share/doc/db4/api_c/dbc_set_priority.html
 share/doc/db4/api_c/dbm.html
 share/doc/db4/api_c/dbt_bulk.html
 share/doc/db4/api_c/dbt_class.html
@@ -101,6 +106,7 @@ share/doc/db4/api_c/env_open.html
 share/doc/db4/api_c/env_remove.html
 share/doc/db4/api_c/env_set_alloc.html
 share/doc/db4/api_c/env_set_app_dispatch.html
+share/doc/db4/api_c/env_set_cache_max.html
 share/doc/db4/api_c/env_set_cachesize.html
 share/doc/db4/api_c/env_set_data_dir.html
 share/doc/db4/api_c/env_set_encrypt.html
@@ -165,7 +171,6 @@ share/doc/db4/api_c/memp_fcreate.html
 share/doc/db4/api_c/memp_fget.html
 share/doc/db4/api_c/memp_fopen.html
 share/doc/db4/api_c/memp_fput.html
-share/doc/db4/api_c/memp_fset.html
 share/doc/db4/api_c/memp_fsync.html
 share/doc/db4/api_c/memp_list.html
 share/doc/db4/api_c/memp_maxwrite.html
@@ -193,6 +198,7 @@ share/doc/db4/api_c/mutex_set_tas_spins.html
 share/doc/db4/api_c/mutex_stat.html
 share/doc/db4/api_c/mutex_unlock.html
 share/doc/db4/api_c/object.html
+share/doc/db4/api_c/pindex.src
 share/doc/db4/api_c/rep_config.html
 share/doc/db4/api_c/rep_elect.html
 share/doc/db4/api_c/rep_limit.html
@@ -200,6 +206,7 @@ share/doc/db4/api_c/rep_list.html
 share/doc/db4/api_c/rep_message.html
 share/doc/db4/api_c/rep_nsites.html
 share/doc/db4/api_c/rep_priority.html
+share/doc/db4/api_c/rep_request.html
 share/doc/db4/api_c/rep_start.html
 share/doc/db4/api_c/rep_stat.html
 share/doc/db4/api_c/rep_sync.html
@@ -210,6 +217,7 @@ share/doc/db4/api_c/repmgr_local_site.html
 share/doc/db4/api_c/repmgr_remote_site.html
 share/doc/db4/api_c/repmgr_site_list.html
 share/doc/db4/api_c/repmgr_start.html
+share/doc/db4/api_c/repmgr_stat.html
 share/doc/db4/api_c/seq_class.html
 share/doc/db4/api_c/seq_close.html
 share/doc/db4/api_c/seq_get.html
@@ -265,6 +273,7 @@ share/doc/db4/api_cxx/db_compact.html
 share/doc/db4/api_cxx/db_cursor.html
 share/doc/db4/api_cxx/db_del.html
 share/doc/db4/api_cxx/db_err.html
+share/doc/db4/api_cxx/db_exists.html
 share/doc/db4/api_cxx/db_fd.html
 share/doc/db4/api_cxx/db_get.html
 share/doc/db4/api_cxx/db_get_byteswapped.html
@@ -292,6 +301,7 @@ share/doc/db4/api_cxx/db_set_error_stream.html
 share/doc/db4/api_cxx/db_set_errpfx.html
 share/doc/db4/api_cxx/db_set_feedback.html
 share/doc/db4/api_cxx/db_set_flags.html
+share/doc/db4/api_cxx/db_set_h_compare.html
 share/doc/db4/api_cxx/db_set_h_ffactor.html
 share/doc/db4/api_cxx/db_set_h_hash.html
 share/doc/db4/api_cxx/db_set_h_nelem.html
@@ -300,6 +310,7 @@ share/doc/db4/api_cxx/db_set_msg_stream.html
 share/doc/db4/api_cxx/db_set_msgcall.html
 share/doc/db4/api_cxx/db_set_msgfile.html
 share/doc/db4/api_cxx/db_set_pagesize.html
+share/doc/db4/api_cxx/db_set_priority.html
 share/doc/db4/api_cxx/db_set_q_extentsize.html
 share/doc/db4/api_cxx/db_set_re_delim.html
 share/doc/db4/api_cxx/db_set_re_len.html
@@ -318,6 +329,7 @@ share/doc/db4/api_cxx/dbc_dup.html
 share/doc/db4/api_cxx/dbc_get.html
 share/doc/db4/api_cxx/dbc_list.html
 share/doc/db4/api_cxx/dbc_put.html
+share/doc/db4/api_cxx/dbc_set_priority.html
 share/doc/db4/api_cxx/dbt_bulk_class.html
 share/doc/db4/api_cxx/dbt_class.html
 share/doc/db4/api_cxx/dbt_package.html
@@ -337,6 +349,7 @@ share/doc/db4/api_cxx/env_open.html
 share/doc/db4/api_cxx/env_remove.html
 share/doc/db4/api_cxx/env_set_alloc.html
 share/doc/db4/api_cxx/env_set_app_dispatch.html
+share/doc/db4/api_cxx/env_set_cache_max.html
 share/doc/db4/api_cxx/env_set_cachesize.html
 share/doc/db4/api_cxx/env_set_data_dir.html
 share/doc/db4/api_cxx/env_set_encrypt.html
@@ -406,7 +419,6 @@ share/doc/db4/api_cxx/memp_fcreate.html
 share/doc/db4/api_cxx/memp_fget.html
 share/doc/db4/api_cxx/memp_fopen.html
 share/doc/db4/api_cxx/memp_fput.html
-share/doc/db4/api_cxx/memp_fset.html
 share/doc/db4/api_cxx/memp_fsync.html
 share/doc/db4/api_cxx/memp_list.html
 share/doc/db4/api_cxx/memp_maxwrite.html
@@ -442,6 +454,7 @@ share/doc/db4/api_cxx/rep_list.html
 share/doc/db4/api_cxx/rep_message.html
 share/doc/db4/api_cxx/rep_nsites.html
 share/doc/db4/api_cxx/rep_priority.html
+share/doc/db4/api_cxx/rep_request.html
 share/doc/db4/api_cxx/rep_start.html
 share/doc/db4/api_cxx/rep_stat.html
 share/doc/db4/api_cxx/rep_sync.html
@@ -452,6 +465,7 @@ share/doc/db4/api_cxx/repmgr_local_site.html
 share/doc/db4/api_cxx/repmgr_remote_site.html
 share/doc/db4/api_cxx/repmgr_site_list.html
 share/doc/db4/api_cxx/repmgr_start.html
+share/doc/db4/api_cxx/repmgr_stat.html
 share/doc/db4/api_cxx/runrec_class.html
 share/doc/db4/api_cxx/seq_class.html
 share/doc/db4/api_cxx/seq_close.html
@@ -509,6 +523,9 @@ share/doc/db4/api_tcl/txn_abort.html
 share/doc/db4/api_tcl/txn_checkpoint.html
 share/doc/db4/api_tcl/txn_commit.html
 share/doc/db4/api_tcl/version.html
+share/doc/db4/articles/inmemory/C/InMemoryDBApplication.pdf
+share/doc/db4/articles/inmemory/C/gettingStarted.css
+share/doc/db4/articles/inmemory/C/index.html
 share/doc/db4/collections/tutorial/BasicProgram.html
 share/doc/db4/collections/tutorial/BerkeleyDB-Java-Collections.pdf
 share/doc/db4/collections/tutorial/Entity.html
@@ -853,7 +870,6 @@ share/doc/db4/gsg_txn/JAVA/txnnowait.html
 share/doc/db4/gsg_txn/JAVA/usingtxns.html
 share/doc/db4/gsg_txn/JAVA/wrapup.html
 share/doc/db4/gsg_txn/JAVA/writeblock.jpg
-share/doc/db4/images/Oracle_BerkeleyDB_clr.bmp
 share/doc/db4/images/api.gif
 share/doc/db4/images/next.gif
 share/doc/db4/images/prev.gif
@@ -902,6 +918,7 @@ share/doc/db4/java/com/sleepycat/bind/serial/package-frame.html
 share/doc/db4/java/com/sleepycat/bind/serial/package-summary.html
 share/doc/db4/java/com/sleepycat/bind/serial/package-tree.html
 share/doc/db4/java/com/sleepycat/bind/serial/package-use.html
+share/doc/db4/java/com/sleepycat/bind/tuple/BigIntegerBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/BooleanBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/ByteBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/CharacterBinding.html
@@ -925,6 +942,7 @@ share/doc/db4/java/com/sleepycat/bind/tuple/TupleTupleBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/TupleTupleKeyCreator.html
 share/doc/db4/java/com/sleepycat/bind/tuple/TupleTupleMarshalledBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/TupleTupleMarshalledKeyCreator.html
+share/doc/db4/java/com/sleepycat/bind/tuple/class-use/BigIntegerBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/class-use/BooleanBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/class-use/ByteBinding.html
 share/doc/db4/java/com/sleepycat/bind/tuple/class-use/CharacterBinding.html
@@ -1016,7 +1034,7 @@ share/doc/db4/java/com/sleepycat/db/Environment.html
 share/doc/db4/java/com/sleepycat/db/EnvironmentConfig.html
 share/doc/db4/java/com/sleepycat/db/ErrorHandler.html
 share/doc/db4/java/com/sleepycat/db/EventHandler.html
-share/doc/db4/java/com/sleepycat/db/EventType.html
+share/doc/db4/java/com/sleepycat/db/EventHandlerAdapter.html
 share/doc/db4/java/com/sleepycat/db/FeedbackHandler.html
 share/doc/db4/java/com/sleepycat/db/HashStats.html
 share/doc/db4/java/com/sleepycat/db/Hasher.html
@@ -1057,9 +1075,12 @@ share/doc/db4/java/com/sleepycat/db/ReplicationHandleDeadException.html
 share/doc/db4/java/com/sleepycat/db/ReplicationHoldElectionException.html
 share/doc/db4/java/com/sleepycat/db/ReplicationHostAddress.html
 share/doc/db4/java/com/sleepycat/db/ReplicationJoinFailureException.html
+share/doc/db4/java/com/sleepycat/db/ReplicationLeaseExpiredException.html
+share/doc/db4/java/com/sleepycat/db/ReplicationLeaseTimeoutException.html
 share/doc/db4/java/com/sleepycat/db/ReplicationLockoutException.html
 share/doc/db4/java/com/sleepycat/db/ReplicationManagerAckPolicy.html
 share/doc/db4/java/com/sleepycat/db/ReplicationManagerStartPolicy.html
+share/doc/db4/java/com/sleepycat/db/ReplicationManagerStats.html
 share/doc/db4/java/com/sleepycat/db/ReplicationSiteUnavailableException.html
 share/doc/db4/java/com/sleepycat/db/ReplicationStats.html
 share/doc/db4/java/com/sleepycat/db/ReplicationStatus.html
@@ -1070,6 +1091,7 @@ share/doc/db4/java/com/sleepycat/db/SecondaryConfig.html
 share/doc/db4/java/com/sleepycat/db/SecondaryCursor.html
 share/doc/db4/java/com/sleepycat/db/SecondaryDatabase.html
 share/doc/db4/java/com/sleepycat/db/SecondaryKeyCreator.html
+share/doc/db4/java/com/sleepycat/db/SecondaryMultiKeyCreator.html
 share/doc/db4/java/com/sleepycat/db/Sequence.html
 share/doc/db4/java/com/sleepycat/db/SequenceConfig.html
 share/doc/db4/java/com/sleepycat/db/SequenceStats.html
@@ -1078,7 +1100,7 @@ share/doc/db4/java/com/sleepycat/db/Transaction.html
 share/doc/db4/java/com/sleepycat/db/TransactionConfig.html
 share/doc/db4/java/com/sleepycat/db/TransactionStats.Active.html
 share/doc/db4/java/com/sleepycat/db/TransactionStats.html
-share/doc/db4/java/com/sleepycat/db/UpdateConflictException.html
+share/doc/db4/java/com/sleepycat/db/VerboseConfig.html
 share/doc/db4/java/com/sleepycat/db/VerifyConfig.html
 share/doc/db4/java/com/sleepycat/db/VersionMismatchException.html
 share/doc/db4/java/com/sleepycat/db/class-use/BtreePrefixCalculator.html
@@ -1103,7 +1125,7 @@ share/doc/db4/java/com/sleepycat/db/class-use/Environment.html
 share/doc/db4/java/com/sleepycat/db/class-use/EnvironmentConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/ErrorHandler.html
 share/doc/db4/java/com/sleepycat/db/class-use/EventHandler.html
-share/doc/db4/java/com/sleepycat/db/class-use/EventType.html
+share/doc/db4/java/com/sleepycat/db/class-use/EventHandlerAdapter.html
 share/doc/db4/java/com/sleepycat/db/class-use/FeedbackHandler.html
 share/doc/db4/java/com/sleepycat/db/class-use/HashStats.html
 share/doc/db4/java/com/sleepycat/db/class-use/Hasher.html
@@ -1144,9 +1166,12 @@ share/doc/db4/java/com/sleepycat/db/class-use/ReplicationHandleDeadException.htm
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationHoldElectionException.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationHostAddress.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationJoinFailureException.html
+share/doc/db4/java/com/sleepycat/db/class-use/ReplicationLeaseExpiredException.html
+share/doc/db4/java/com/sleepycat/db/class-use/ReplicationLeaseTimeoutException.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationLockoutException.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationManagerAckPolicy.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationManagerStartPolicy.html
+share/doc/db4/java/com/sleepycat/db/class-use/ReplicationManagerStats.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationSiteUnavailableException.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationStats.html
 share/doc/db4/java/com/sleepycat/db/class-use/ReplicationStatus.html
@@ -1157,6 +1182,7 @@ share/doc/db4/java/com/sleepycat/db/class-use/SecondaryConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/SecondaryCursor.html
 share/doc/db4/java/com/sleepycat/db/class-use/SecondaryDatabase.html
 share/doc/db4/java/com/sleepycat/db/class-use/SecondaryKeyCreator.html
+share/doc/db4/java/com/sleepycat/db/class-use/SecondaryMultiKeyCreator.html
 share/doc/db4/java/com/sleepycat/db/class-use/Sequence.html
 share/doc/db4/java/com/sleepycat/db/class-use/SequenceConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/SequenceStats.html
@@ -1165,7 +1191,7 @@ share/doc/db4/java/com/sleepycat/db/class-use/Transaction.html
 share/doc/db4/java/com/sleepycat/db/class-use/TransactionConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/TransactionStats.Active.html
 share/doc/db4/java/com/sleepycat/db/class-use/TransactionStats.html
-share/doc/db4/java/com/sleepycat/db/class-use/UpdateConflictException.html
+share/doc/db4/java/com/sleepycat/db/class-use/VerboseConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/VerifyConfig.html
 share/doc/db4/java/com/sleepycat/db/class-use/VersionMismatchException.html
 share/doc/db4/java/com/sleepycat/db/package-frame.html
@@ -1205,7 +1231,6 @@ share/doc/db4/java/resources/inherit.gif
 share/doc/db4/java/serialized-form.html
 share/doc/db4/java/style.css
 share/doc/db4/license/license_db.html
-share/doc/db4/license/license_xml.html
 share/doc/db4/ref/am/close.html
 share/doc/db4/ref/am/count.html
 share/doc/db4/ref/am/curclose.html
@@ -1269,6 +1294,8 @@ share/doc/db4/ref/arch/progmodel.html
 share/doc/db4/ref/arch/script.html
 share/doc/db4/ref/arch/smallpic.gif
 share/doc/db4/ref/arch/utilities.html
+share/doc/db4/ref/build_brew/intro.html
+share/doc/db4/ref/build_s60/intro.html
 share/doc/db4/ref/build_unix/aix.html
 share/doc/db4/ref/build_unix/conf.html
 share/doc/db4/ref/build_unix/flags.html
@@ -1298,10 +1325,48 @@ share/doc/db4/ref/build_win/intro.html
 share/doc/db4/ref/build_win/notes.html
 share/doc/db4/ref/build_win/small.html
 share/doc/db4/ref/build_win/test.html
+share/doc/db4/ref/build_wince/faq.html
+share/doc/db4/ref/build_wince/intro.html
+share/doc/db4/ref/build_wince/notes.html
 share/doc/db4/ref/cam/app.html
 share/doc/db4/ref/cam/fail.html
 share/doc/db4/ref/cam/intro.html
-share/doc/db4/ref/debug/common.html
+share/doc/db4/ref/changelog/2.1.html
+share/doc/db4/ref/changelog/2.2.html
+share/doc/db4/ref/changelog/2.3.10.html
+share/doc/db4/ref/changelog/2.3.11.html
+share/doc/db4/ref/changelog/2.3.12.html
+share/doc/db4/ref/changelog/2.3.14.html
+share/doc/db4/ref/changelog/2.3.16.html
+share/doc/db4/ref/changelog/2.3.5.html
+share/doc/db4/ref/changelog/2.3.html
+share/doc/db4/ref/changelog/2.4.10.html
+share/doc/db4/ref/changelog/2.4.14.html
+share/doc/db4/ref/changelog/2.5.9.html
+share/doc/db4/ref/changelog/2.6.4.html
+share/doc/db4/ref/changelog/2.6.5.html
+share/doc/db4/ref/changelog/2.6.6.html
+share/doc/db4/ref/changelog/2.6.7.html
+share/doc/db4/ref/changelog/2.7.1.html
+share/doc/db4/ref/changelog/2.7.3.html
+share/doc/db4/ref/changelog/2.7.4.html
+share/doc/db4/ref/changelog/2.7.5.html
+share/doc/db4/ref/changelog/2.7.7.html
+share/doc/db4/ref/changelog/3.0.55.html
+share/doc/db4/ref/changelog/3.1.14.html
+share/doc/db4/ref/changelog/3.1.17.html
+share/doc/db4/ref/changelog/3.2.9.html
+share/doc/db4/ref/changelog/3.3.11.html
+share/doc/db4/ref/changelog/4.0.14.html
+share/doc/db4/ref/changelog/4.1.24.html
+share/doc/db4/ref/changelog/4.1.25.html
+share/doc/db4/ref/changelog/4.2.52.html
+share/doc/db4/ref/changelog/4.3.29.html
+share/doc/db4/ref/changelog/4.4.16.html
+share/doc/db4/ref/changelog/4.4.20.html
+share/doc/db4/ref/changelog/4.5.20.html
+share/doc/db4/ref/changelog/4.6.html
+share/doc/db4/ref/changelog/toc.html
 share/doc/db4/ref/debug/compile.html
 share/doc/db4/ref/debug/intro.html
 share/doc/db4/ref/debug/printlog.html
@@ -1375,7 +1440,6 @@ share/doc/db4/ref/program/ram.html
 share/doc/db4/ref/program/runtime.html
 share/doc/db4/ref/program/scope.html
 share/doc/db4/ref/program/solaris.txt
-share/doc/db4/ref/refs/bdb_usenix.html
 share/doc/db4/ref/refs/bdb_usenix.ps
 share/doc/db4/ref/refs/embedded.html
 share/doc/db4/ref/refs/hash_usenix.ps
@@ -1602,6 +1666,17 @@ share/doc/db4/ref/upgrade.4.5/rep_event.html
 share/doc/db4/ref/upgrade.4.5/rep_set.html
 share/doc/db4/ref/upgrade.4.5/source.html
 share/doc/db4/ref/upgrade.4.5/toc.html
+share/doc/db4/ref/upgrade.4.6/cursor.html
+share/doc/db4/ref/upgrade.4.6/disk.html
+share/doc/db4/ref/upgrade.4.6/event.html
+share/doc/db4/ref/upgrade.4.6/full_election.html
+share/doc/db4/ref/upgrade.4.6/intro.html
+share/doc/db4/ref/upgrade.4.6/memp_fput.html
+share/doc/db4/ref/upgrade.4.6/memp_fset.html
+share/doc/db4/ref/upgrade.4.6/toc.html
+share/doc/db4/ref/upgrade.4.6/verb.html
+share/doc/db4/ref/upgrade.4.6/verbose.html
+share/doc/db4/ref/upgrade.4.6/win.html
 share/doc/db4/ref/upgrade/process.html
 share/doc/db4/ref/upgrade/version.html
 share/doc/db4/ref/xa/build.html
@@ -1612,6 +1687,7 @@ share/doc/db4/ref/xa/xa_intro.html
 share/doc/db4/utility/berkeley_db_svc.html
 share/doc/db4/utility/db_archive.html
 share/doc/db4/utility/db_checkpoint.html
+share/doc/db4/utility/db_codegen.html
 share/doc/db4/utility/db_deadlock.html
 share/doc/db4/utility/db_dump.html
 share/doc/db4/utility/db_hotbackup.html
@@ -1624,6 +1700,7 @@ share/doc/db4/utility/db_verify.html
 share/doc/db4/utility/index.html
 @dirrm share/doc/db4/utility
 @dirrm share/doc/db4/ref/xa
+@dirrm share/doc/db4/ref/upgrade.4.6
 @dirrm share/doc/db4/ref/upgrade.4.5
 @dirrm share/doc/db4/ref/upgrade.4.4
 @dirrm share/doc/db4/ref/upgrade.4.3
@@ -1656,10 +1733,14 @@ share/doc/db4/utility/index.html
 @dirrm share/doc/db4/ref/dumpload
 @dirrm share/doc/db4/ref/distrib
 @dirrm share/doc/db4/ref/debug
+@dirrm share/doc/db4/ref/changelog
 @dirrm share/doc/db4/ref/cam
+@dirrm share/doc/db4/ref/build_wince
 @dirrm share/doc/db4/ref/build_win
 @dirrm share/doc/db4/ref/build_vxworks
 @dirrm share/doc/db4/ref/build_unix
+@dirrm share/doc/db4/ref/build_s60
+@dirrm share/doc/db4/ref/build_brew
 @dirrm share/doc/db4/ref/arch
 @dirrm share/doc/db4/ref/apprec
 @dirrm share/doc/db4/ref/am_misc
@@ -1698,6 +1779,9 @@ share/doc/db4/utility/index.html
 @dirrm share/doc/db4/gsg
 @dirrm share/doc/db4/collections/tutorial
 @dirrm share/doc/db4/collections
+@dirrm share/doc/db4/articles/inmemory/C
+@dirrm share/doc/db4/articles/inmemory
+@dirrm share/doc/db4/articles
 @dirrm share/doc/db4/api_tcl
 @dirrm share/doc/db4/api_cxx
 @dirrm share/doc/db4/api_c
