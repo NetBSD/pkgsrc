@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.80 2008/01/10 07:47:53 martti Exp $
+$NetBSD: CHANGES-2008,v 1.81 2008/01/10 09:11:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -133,3 +133,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/plone3 to 3.0.5 [taca 2008-01-09]
 	Updated devel/stgit to 0.14.1 [bjs 2008-01-10]
 	Updated mail/clamsmtp to 1.9 [martti 2008-01-10]
+	Updated print/ghostscript to 8.61nb1 [tron 2008-01-10]
