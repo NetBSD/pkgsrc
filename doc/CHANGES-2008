@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.85 2008/01/10 21:58:05 adam Exp $
+$NetBSD: CHANGES-2008,v 1.86 2008/01/10 23:01:37 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -138,3 +138,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/squirrelmail-locales to 1.4.13 [adam 2008-01-10]
 	Updated databases/gq to 1.2.3 [adam 2008-01-10]
 	Updated databases/db4 to 4.6.21 [adam 2008-01-10]
+	Added comms/msynctool version 0.22 [dillo 2008-01-10]
+	Added comms/libopensync-plugin-file version 0.22 [dillo 2008-01-10]
+	Added comms/libopensync-plugin-kdepim version 0.22 [dillo 2008-01-10]
