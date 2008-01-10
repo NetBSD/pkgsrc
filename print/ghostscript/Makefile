@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/01/10 09:09:02 tron Exp $
+# $NetBSD: Makefile,v 1.42 2008/01/10 15:23:27 drochner Exp $
 
 DISTNAME=	ghostscript-8.61
 PKGREVISION=	1
@@ -18,7 +18,7 @@ CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-USE_TOOLS+=		gmake perl:run lex
+USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 
@@ -55,7 +55,6 @@ post-extract:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 # pkgsrc jasper is too new
 #.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
