@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/10 22:54:37 dillo Exp $
+bin/convcard
+bin/convtest
+bin/msynctool
+man/man1/convcard.1
+man/man1/msynctool.1
