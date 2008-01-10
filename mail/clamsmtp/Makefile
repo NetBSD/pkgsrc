@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2008/01/09 14:10:06 martti Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/10 07:47:29 martti Exp $
 
-DISTNAME=		clamsmtp-1.8
-PKGREVISION=		3
+DISTNAME=		clamsmtp-1.9
+#PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/stef/software/clamsmtp/
 
@@ -12,7 +12,6 @@ COMMENT=		SMTP filter that allows you to check for viruses
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		aclocal autoconf autoheader automake
 GNU_CONFIGURE=		yes
 RCD_SCRIPTS=		clamsmtpd
 
@@ -29,12 +28,6 @@ CONF_FILES=		${EGDIR}/clamsmtpd.conf \
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 
 PKG_USERS_VARS=		CLAMAV_USER
-
-pre-configure:
-	cd ${WRKSRC} && aclocal
-	cd ${WRKSRC} && autoheader
-	cd ${WRKSRC} && automake -a --foreign -i
-	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${EGDIR}
