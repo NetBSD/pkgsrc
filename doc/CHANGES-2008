@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.84 2008/01/10 21:44:15 adam Exp $
+$NetBSD: CHANGES-2008,v 1.85 2008/01/10 21:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/bibtex2html to 1.89 [tonio 2008-01-10]
 	Updated mail/squirrelmail-locales to 1.4.13 [adam 2008-01-10]
 	Updated databases/gq to 1.2.3 [adam 2008-01-10]
+	Updated databases/db4 to 4.6.21 [adam 2008-01-10]
