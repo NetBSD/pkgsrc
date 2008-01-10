@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/29 23:07:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/10 06:35:48 bjs Exp $
 bin/stg
+${PYSITELIB}/stgit/__init__.py
+${PYSITELIB}/stgit/__init__.pyc
+${PYSITELIB}/stgit/__init__.pyo
 ${PYSITELIB}/stgit/basedir.py
 ${PYSITELIB}/stgit/basedir.pyc
 ${PYSITELIB}/stgit/basedir.pyo
+${PYSITELIB}/stgit/commands/__init__.py
+${PYSITELIB}/stgit/commands/__init__.pyc
+${PYSITELIB}/stgit/commands/__init__.pyo
 ${PYSITELIB}/stgit/commands/add.py
 ${PYSITELIB}/stgit/commands/add.pyc
 ${PYSITELIB}/stgit/commands/add.pyo
 ${PYSITELIB}/stgit/commands/applied.py
 ${PYSITELIB}/stgit/commands/applied.pyc
 ${PYSITELIB}/stgit/commands/applied.pyo
-${PYSITELIB}/stgit/commands/assimilate.py
-${PYSITELIB}/stgit/commands/assimilate.pyc
-${PYSITELIB}/stgit/commands/assimilate.pyo
 ${PYSITELIB}/stgit/commands/branch.py
 ${PYSITELIB}/stgit/commands/branch.pyc
 ${PYSITELIB}/stgit/commands/branch.pyo
@@ -36,6 +39,9 @@ ${PYSITELIB}/stgit/commands/delete.pyo
 ${PYSITELIB}/stgit/commands/diff.py
 ${PYSITELIB}/stgit/commands/diff.pyc
 ${PYSITELIB}/stgit/commands/diff.pyo
+${PYSITELIB}/stgit/commands/edit.py
+${PYSITELIB}/stgit/commands/edit.pyc
+${PYSITELIB}/stgit/commands/edit.pyo
 ${PYSITELIB}/stgit/commands/export.py
 ${PYSITELIB}/stgit/commands/export.pyc
 ${PYSITELIB}/stgit/commands/export.pyo
@@ -60,11 +66,8 @@ ${PYSITELIB}/stgit/commands/id.pyo
 ${PYSITELIB}/stgit/commands/imprt.py
 ${PYSITELIB}/stgit/commands/imprt.pyc
 ${PYSITELIB}/stgit/commands/imprt.pyo
-${PYSITELIB}/stgit/commands/__init__.py
 ${PYSITELIB}/stgit/commands/init.py
-${PYSITELIB}/stgit/commands/__init__.pyc
 ${PYSITELIB}/stgit/commands/init.pyc
-${PYSITELIB}/stgit/commands/__init__.pyo
 ${PYSITELIB}/stgit/commands/init.pyo
 ${PYSITELIB}/stgit/commands/log.py
 ${PYSITELIB}/stgit/commands/log.pyc
@@ -99,6 +102,9 @@ ${PYSITELIB}/stgit/commands/refresh.pyo
 ${PYSITELIB}/stgit/commands/rename.py
 ${PYSITELIB}/stgit/commands/rename.pyc
 ${PYSITELIB}/stgit/commands/rename.pyo
+${PYSITELIB}/stgit/commands/repair.py
+${PYSITELIB}/stgit/commands/repair.pyc
+${PYSITELIB}/stgit/commands/repair.pyo
 ${PYSITELIB}/stgit/commands/resolved.py
 ${PYSITELIB}/stgit/commands/resolved.pyc
 ${PYSITELIB}/stgit/commands/resolved.pyo
@@ -135,18 +141,24 @@ ${PYSITELIB}/stgit/commands/unhide.pyo
 ${PYSITELIB}/stgit/config.py
 ${PYSITELIB}/stgit/config.pyc
 ${PYSITELIB}/stgit/config.pyo
-${PYSITELIB}/stgit/gitmergeonefile.py
-${PYSITELIB}/stgit/gitmergeonefile.pyc
-${PYSITELIB}/stgit/gitmergeonefile.pyo
+${PYSITELIB}/stgit/exception.py
+${PYSITELIB}/stgit/exception.pyc
+${PYSITELIB}/stgit/exception.pyo
 ${PYSITELIB}/stgit/git.py
 ${PYSITELIB}/stgit/git.pyc
 ${PYSITELIB}/stgit/git.pyo
-${PYSITELIB}/stgit/__init__.py
-${PYSITELIB}/stgit/__init__.pyc
-${PYSITELIB}/stgit/__init__.pyo
+${PYSITELIB}/stgit/gitmergeonefile.py
+${PYSITELIB}/stgit/gitmergeonefile.pyc
+${PYSITELIB}/stgit/gitmergeonefile.pyo
 ${PYSITELIB}/stgit/main.py
 ${PYSITELIB}/stgit/main.pyc
 ${PYSITELIB}/stgit/main.pyo
+${PYSITELIB}/stgit/out.py
+${PYSITELIB}/stgit/out.pyc
+${PYSITELIB}/stgit/out.pyo
+${PYSITELIB}/stgit/run.py
+${PYSITELIB}/stgit/run.pyc
+${PYSITELIB}/stgit/run.pyo
 ${PYSITELIB}/stgit/stack.py
 ${PYSITELIB}/stgit/stack.pyc
 ${PYSITELIB}/stgit/stack.pyo
@@ -165,6 +177,7 @@ share/stgit/contrib/stgit-completion.bash
 share/stgit/examples/gitconfig
 share/stgit/examples/patchdescr.tmpl
 share/stgit/templates/covermail.tmpl
+share/stgit/templates/mailattch.tmpl
 share/stgit/templates/patchexport.tmpl
 share/stgit/templates/patchmail.tmpl
 @dirrm share/stgit/templates
