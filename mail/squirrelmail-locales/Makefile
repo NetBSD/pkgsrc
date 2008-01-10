@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2007/10/30 19:31:41 martti Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/10 20:52:59 adam Exp $
 
-DISTNAME=	all_locales-${VER}-20070106
+DISTNAME=	all_locales-${VER}-20071220
 PKGNAME=	squirrelmail-locales-${VER}
-#PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +11,7 @@ HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	Locale package for SquirrelMail
 #LICENSE=	gnu-gpl-v2
 
-VER=		1.4.9
+VER=		1.4.13
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		tar
@@ -21,11 +20,11 @@ INSTALLATION_DIRS=	share/squirrelmail
 WRKSRC=		${WRKDIR}
 
 do-build:
-	cd ${WRKDIR:Q}/help && rm -rf en_US
+	cd ${WRKDIR}/help && rm -rf en_US
 
 do-install:
-	cd ${WRKDIR:Q} && tar -cf - help images locale | \
-		tar -xf - -C ${PREFIX:Q}/share/squirrelmail/
+	cd ${WRKDIR} && \
+		pax -rw -pp help images locale ${PREFIX}/share/squirrelmail
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
