@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.78 2008/01/09 22:14:05 taca Exp $
+$NetBSD: CHANGES-2008,v 1.79 2008/01/10 06:36:27 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/ingo to 1.1.5 [adrianp 2008-01-09]
 	Updated mail/imp to 4.1.6 [adrianp 2008-01-09]
 	Updated www/plone3 to 3.0.5 [taca 2008-01-09]
+	Updated devel/stgit to 0.14.1 [bjs 2008-01-10]
