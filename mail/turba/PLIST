@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/03/18 12:14:05 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/10 23:19:10 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -133,11 +133,11 @@ share/horde/turba/scripts/ldap/addou
 share/horde/turba/scripts/ldap/addou.pl
 share/horde/turba/scripts/ldap/core.schema.patch
 share/horde/turba/scripts/ldap/rfc2739.schema
-share/horde/turba/scripts/sql/turba_objects.mssql.sql
-share/horde/turba/scripts/sql/turba_objects.mysql.sql
-share/horde/turba/scripts/sql/turba_objects.oci8.sql
-share/horde/turba/scripts/sql/turba_objects.pgsql.sql
-share/horde/turba/scripts/sql/turba_objects.sql
+share/horde/turba/scripts/sql/turba.mssql.sql
+share/horde/turba/scripts/sql/turba.mysql.sql
+share/horde/turba/scripts/sql/turba.oci8.sql
+share/horde/turba/scripts/sql/turba.pgsql.sql
+share/horde/turba/scripts/sql/turba.sql
 share/horde/turba/scripts/sql/turba_weddingguests.sql
 share/horde/turba/scripts/sql/turba.xml
 share/horde/turba/scripts/upgrades/1.1_to_1.2.sql
