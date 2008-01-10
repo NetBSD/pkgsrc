@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2008/01/09 19:01:07 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2008/01/10 09:09:02 tron Exp $
 
 DISTNAME=	ghostscript-8.61
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=	.tar.bz2
@@ -54,6 +55,7 @@ post-extract:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 # pkgsrc jasper is too new
 #.include "../../graphics/jasper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
