@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.81 2008/01/10 09:11:45 tron Exp $
+$NetBSD: CHANGES-2008,v 1.82 2008/01/10 18:16:11 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/stgit to 0.14.1 [bjs 2008-01-10]
 	Updated mail/clamsmtp to 1.9 [martti 2008-01-10]
 	Updated print/ghostscript to 8.61nb1 [tron 2008-01-10]
+	Updated converters/bibtex2html to 1.89 [tonio 2008-01-10]

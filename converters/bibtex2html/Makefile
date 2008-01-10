@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2007/12/01 14:19:35 tonio Exp $
+# $NetBSD: Makefile,v 1.24 2008/01/10 18:15:29 tonio Exp $
 
-DISTNAME=	bibtex2html-1.88
+DISTNAME=	bibtex2html-1.89
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
@@ -20,7 +20,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	aux2bib.1
 SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
 post-build:
 	set -e; \
@@ -33,7 +34,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1/bib2bib.1
 	${INSTALL_MAN} ${WRKSRC}/aux2bib.1 ${PREFIX}/${PKGMANDIR}/man1/aux2bib.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/manual.ps ${PREFIX}/share/doc/${PKGBASE}
 
