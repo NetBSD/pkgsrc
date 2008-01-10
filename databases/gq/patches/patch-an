@@ -1,12 +1,15 @@
-$NetBSD: patch-an,v 1.1 2006/07/17 08:46:29 seb Exp $
+$NetBSD: patch-an,v 1.2 2008/01/10 21:42:54 adam Exp $
 
---- src/gq.c.orig	2003-11-03 21:25:53.000000000 +0000
+--- src/gq.c.orig	2008-01-10 22:31:56.000000000 +0100
 +++ src/gq.c
-@@ -40,6 +40,7 @@
- #include "gq.h"
- #include "i18n.h"
- #include "mainwin.h"
-+#include "util.h"
- #include "configfile.h"
- #include "syntax.h"
- #include "encode.h"
+@@ -32,6 +32,10 @@
+ # include  <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
++#ifdef HAVE_LOCALE_H
++# include  <locale.h>
++#endif /* HAVE_LOCALE_H */
++
+ #ifdef DEBUG
+ #  include "debug.h"
+ #  ifdef HAVE_MCHECK
