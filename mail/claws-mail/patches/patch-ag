@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/01/10 01:57:27 smb Exp $
+
+--- src/common/passcrypt.c.orig	2008-01-09 19:59:19.000000000 -0500
++++ src/common/passcrypt.c	2008-01-09 19:59:41.000000000 -0500
+@@ -17,7 +17,7 @@
+  * 
+  */
+ 
+-#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE	600
+ 
+ #include <sys/types.h>
+ #include <stdio.h>
