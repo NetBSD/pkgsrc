@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2007/09/21 13:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/01/11 16:17:12 drochner Exp $
 #
 
-DISTNAME=		gok-1.2.5
-PKGREVISION=		2
+DISTNAME=		gok-1.3.7
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.3/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -36,9 +35,11 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXevie/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
