@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.36 2007/11/05 19:26:20 drochner Exp $
+# $NetBSD: Makefile.common,v 1.37 2008/01/11 13:58:48 drochner Exp $
 #
 
-DISTNAME=	totem-2.20.1
+DISTNAME=	totem-2.20.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.20/}
 
@@ -46,6 +46,6 @@ BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
