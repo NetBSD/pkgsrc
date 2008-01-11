@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2007/11/30 20:08:39 drochner Exp $
+$NetBSD: patch-ap,v 1.2 2008/01/11 13:02:33 drochner Exp $
 
---- ./daemon/gdm-xdmcp-manager.c.orig	2007-11-27 00:12:29.000000000 +0100
+--- ./daemon/gdm-xdmcp-manager.c.orig	2008-01-07 20:39:37.000000000 +0100
 +++ ./daemon/gdm-xdmcp-manager.c
-@@ -63,7 +63,7 @@
+@@ -64,7 +64,7 @@
   * On Sun, we need to define allow_severity and deny_severity to link
   * against libwrap.
   */
@@ -11,7 +11,7 @@ $NetBSD: patch-ap,v 1.1 2007/11/30 20:08:39 drochner Exp $
  #include <syslog.h>
  int allow_severity = LOG_INFO;
  int deny_severity = LOG_WARNING;
-@@ -369,12 +369,14 @@ ai_flags_str (struct addrinfo *ai)
+@@ -370,12 +370,14 @@ ai_flags_str (struct addrinfo *ai)
  		if (ai->ai_flags & AI_NUMERICSERV) {
  			g_string_append (str, "numserv ");
  		}
@@ -26,7 +26,7 @@ $NetBSD: patch-ap,v 1.1 2007/11/30 20:08:39 drochner Exp $
  	}
  	return g_string_free (str, FALSE);
  }
-@@ -404,6 +406,14 @@ create_socket (struct addrinfo *ai)
+@@ -405,6 +407,14 @@ create_socket (struct addrinfo *ai)
  		return sock;
  	}
  
@@ -39,9 +39,9 @@ $NetBSD: patch-ap,v 1.1 2007/11/30 20:08:39 drochner Exp $
 +#endif
 +
  	if (bind (sock, ai->ai_addr, ai->ai_addrlen) < 0) {
- 		g_warning ("bind: %s", g_strerror (errno));
+ 		gdm_debug ("bind: %s", g_strerror (errno));
  		close (sock);
-@@ -1259,7 +1269,9 @@ create_sa_from_request (ARRAY8 *req_addr
+@@ -1260,7 +1270,9 @@ create_sa_from_request (ARRAY8 *req_addr
  
  	memset (&hints, 0, sizeof (hints));
  	hints.ai_family = family;
@@ -49,9 +49,9 @@ $NetBSD: patch-ap,v 1.1 2007/11/30 20:08:39 drochner Exp $
  	hints.ai_flags = AI_V4MAPPED; /* this should convert IPv4 address to IPv6 if needed */
 +#endif
  	if ((gaierr = getaddrinfo (host, serv, &hints, &ai_list)) != 0) {
- 		g_warning ("Unable get address: %s", gai_strerror (gaierr));
+ 		gdm_debug ("Unable get address: %s", gai_strerror (gaierr));
  		return FALSE;
-@@ -1278,6 +1290,20 @@ create_sa_from_request (ARRAY8 *req_addr
+@@ -1279,6 +1291,20 @@ create_sa_from_request (ARRAY8 *req_addr
  
  	freeaddrinfo (ai_list);
  
