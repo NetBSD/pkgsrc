@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/11/29 20:38:50 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2008/01/11 13:00:10 drochner Exp $
 #
 
-DISTNAME=	gnome-menus-2.20.2
+DISTNAME=	gnome-menus-2.20.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.20/}
 EXTRACT_SUFX=	.tar.bz2

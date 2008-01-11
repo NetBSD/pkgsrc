@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/11/03 16:34:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/01/11 13:00:10 drochner Exp $
 bin/gnome-menu-spec-test
 include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.la
@@ -28,6 +28,7 @@ share/desktop-directories/System.directory
 share/examples/gnome-menus/xdg/menus/applications.menu
 share/examples/gnome-menus/xdg/menus/preferences.menu
 share/examples/gnome-menus/xdg/menus/settings.menu
+share/locale/af/LC_MESSAGES/gnome-menus.mo
 share/locale/ar/LC_MESSAGES/gnome-menus.mo
 share/locale/as/LC_MESSAGES/gnome-menus.mo
 share/locale/be/LC_MESSAGES/gnome-menus.mo
