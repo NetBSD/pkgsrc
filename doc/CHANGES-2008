@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.89 2008/01/10 23:34:01 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.90 2008/01/11 01:24:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/horde to 3.1.6 [adrianp 2008-01-10]
 	Updated mail/turba to 2.1.6 [adrianp 2008-01-10]
 	Updated time/kronolith to 2.1.7 [adrianp 2008-01-10]
+	Updated math/octave to 3.0.0 [adam 2008-01-11]
