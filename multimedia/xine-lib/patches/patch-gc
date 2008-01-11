@@ -1,0 +1,24 @@
+$NetBSD: patch-gc,v 1.1 2008/01/11 16:05:28 drochner Exp $
+
+--- src/input/librtsp/rtsp_session.c.orig	2008-01-01 14:30:08.000000000 +0100
++++ src/input/librtsp/rtsp_session.c
+@@ -148,6 +148,11 @@ connect:
+ 	
+ 	  rtsp_session->header_left = 
+     rtsp_session->header_len  = rmff_dump_header(h,rtsp_session->header,HEADER_SIZE);
++    if (rtsp_session->header_len < 0) {
++	xprintf (stream->xine, XINE_VERBOSITY_LOG,
++		_("rtsp_session: rtsp server returned overly-large headers, session can not be established.\n"));
++	goto session_abort;
++    }
+ 
+     xine_buffer_copyin(rtsp_session->recv, 0, rtsp_session->header, rtsp_session->header_len);
+     rtsp_session->recv_size = rtsp_session->header_len;
+@@ -157,6 +162,7 @@ connect:
+   {
+     xprintf(stream->xine, XINE_VERBOSITY_LOG,
+ 	    _("rtsp_session: rtsp server type '%s' not supported yet. sorry.\n"), server);
++session_abort:
+     rtsp_close(rtsp_session->s);
+     free(server);
+     xine_buffer_free(rtsp_session->recv);
