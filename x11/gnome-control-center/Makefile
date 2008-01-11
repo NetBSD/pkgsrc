@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/12/17 16:50:45 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/11 13:31:18 drochner Exp $
 #
 
-DISTNAME=	gnome-control-center-2.20.1
+DISTNAME=	gnome-control-center-2.20.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -89,7 +89,7 @@ PLIST_SUBST+=		EVOLUTION="@comment "
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
