@@ -1,27 +1,27 @@
-$NetBSD: patch-ad,v 1.3 2005/04/01 10:16:24 adam Exp $
+$NetBSD: patch-ad,v 1.4 2008/01/11 01:23:44 adam Exp $
 
---- libcruft/Makefile.in.orig	2004-02-16 19:57:21.000000000 +0000
+--- libcruft/Makefile.in.orig	2007-10-12 23:27:12.000000000 +0200
 +++ libcruft/Makefile.in
-@@ -98,8 +98,8 @@ libraries: $(SUBDIRS)
+@@ -121,8 +121,8 @@ libraries: cruft.def
  
- libcruft.$(LIBEXT): $(CRUFT_OBJ)
+ $(LIBPRE)cruft.$(LIBEXT): $(CRUFT_OBJ)
  	rm -f $@
 -	$(AR) $(ARFLAGS) $@ $^
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link ${CC} -o libcruft.$(LIBEXT) $(CRUFT_OBJ:.o=.lo) \
-+		-rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
++		-rpath ${PREFIX}/lib -version-info ${version:3.0.%=3:%}
  
- libcruft.$(SHLEXT_VER): libcruft.$(SHLEXT)
+ $(LIBPRE)cruft.$(SHLEXT_VER): $(LIBPRE)cruft.$(SHLEXT)
  	rm -f $@
-@@ -124,9 +124,8 @@ install::
+@@ -147,9 +147,8 @@ install::
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
--	  $(INSTALL_DATA) libcruft.$(LIBEXT) \
--	    $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
--	  $(RANLIB) $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)cruft.$(LIBEXT) ; \
+-	  $(INSTALL_DATA) $(LIBPRE)cruft.$(LIBEXT) \
+-	    $(DESTDIR)$(octlibdir)/$(LIBPRE)cruft.$(LIBEXT) ; \
+-	  $(RANLIB) $(DESTDIR)$(octlibdir)/$(LIBPRE)cruft.$(LIBEXT) ; \
 +	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcruft.$(LIBEXT) \
-+	    ${PREFIX}/lib; \
++		${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/libcruft.$(SHLLIB_VER); \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)cruft.$(SHLLIB_VER); \

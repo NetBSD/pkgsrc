@@ -1,28 +1,28 @@
-$NetBSD: patch-af,v 1.3 2005/04/01 10:15:47 adam Exp $
+$NetBSD: patch-af,v 1.4 2008/01/11 01:23:44 adam Exp $
 
---- liboctave/Makefile.in.orig	2004-11-12 05:34:57.000000000 +0000
+--- liboctave/Makefile.in.orig	2007-11-30 19:53:30.000000000 +0100
 +++ liboctave/Makefile.in
-@@ -208,8 +208,9 @@ endif
+@@ -256,8 +256,9 @@ endif
  
- liboctave.$(LIBEXT): $(LIBOCTAVE_OBJECTS)
+ $(LIBPRE)octave.$(LIBEXT): $(LIBOCTAVE_OBJECTS)
  	rm -f $@
 -	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $(LIBOCTAVE_OBJECTS)
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link ${CC} -o liboctave.$(LIBEXT) \
 +		$(LIBOCTAVE_OBJECTS:.o=.lo) -rpath ${PREFIX}/lib \
-+		-version-info ${version:2.1.%=2:%}
++		-version-info ${version:3.0.%=3:%}
  
- liboctave.$(SHLEXT_VER): liboctave.$(SHLEXT)
+ $(LIBPRE)octave.$(SHLEXT_VER): $(LIBPRE)octave.$(SHLEXT)
  	rm -f $@
-@@ -236,9 +237,8 @@ install-lib:
+@@ -284,9 +285,8 @@ install-lib:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
--	  $(INSTALL_DATA) liboctave.$(LIBEXT) \
--	    $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
--	  $(RANLIB) $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
+-	  $(INSTALL_DATA) $(LIBPRE)octave.$(LIBEXT) \
+-	    $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
+-	  $(RANLIB) $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
 +	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} liboctave.$(LIBEXT) \
-+	    ${PREFIX}/lib; \
++		${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
- 	  rm -f $(DESTDIR)$(octlibdir)/liboctave.$(SHLLIB_VER); \
+ 	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(SHLLIB_VER); \
