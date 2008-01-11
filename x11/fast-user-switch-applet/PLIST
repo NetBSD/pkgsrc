@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/25 10:54:22 hira Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/01/11 14:09:17 drochner Exp $
 lib/bonobo/servers/GNOME_FastUserSwitchApplet.server
 libexec/fast-user-switch-applet
 share/fast-user-switch-applet/ui.glade
@@ -33,6 +33,13 @@ share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-pref
 share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-text.png
 share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-username.png
 share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet.png
+share/gnome/help/fast-user-switch-applet/oc/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/oc/figures/fast_user_switch_applet.png
 share/gnome/help/fast-user-switch-applet/pa/fast-user-switch-applet.xml
 share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-context.png
 share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-icon.png
@@ -94,6 +101,7 @@ share/locale/mr/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/nb/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/ne/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/nl/LC_MESSAGES/fast-user-switch-applet.mo
+share/locale/oc/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/or/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/pa/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/pl/LC_MESSAGES/fast-user-switch-applet.mo
@@ -118,6 +126,7 @@ share/omf/fast-user-switch-applet/fast-user-switch-applet-C.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-en_GB.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-es.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-fr.omf
+share/omf/fast-user-switch-applet/fast-user-switch-applet-oc.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-pa.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-sr.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-sv.omf
@@ -129,6 +138,8 @@ share/omf/fast-user-switch-applet/fast-user-switch-applet-sv.omf
 @dirrm share/gnome/help/fast-user-switch-applet/sr
 @dirrm share/gnome/help/fast-user-switch-applet/pa/figures
 @dirrm share/gnome/help/fast-user-switch-applet/pa
+@dirrm share/gnome/help/fast-user-switch-applet/oc/figures
+@dirrm share/gnome/help/fast-user-switch-applet/oc
 @dirrm share/gnome/help/fast-user-switch-applet/fr/figures
 @dirrm share/gnome/help/fast-user-switch-applet/fr
 @dirrm share/gnome/help/fast-user-switch-applet/es/figures
