@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/09 19:21:08 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/11 13:14:39 drochner Exp $
 #
 
 DISTNAME=	fotox.34
@@ -22,7 +22,7 @@ SUBST_FILES.data=	zfuncs.cpp
 SUBST_VARS.data=	FDATA
 
 do-build:
-	(cd ${WRKSRC} && ${SH} build ${PREFIX}/bin y)
+	(cd ${WRKSRC} && ${SH} build ${PREFIX} y)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fotox ${PREFIX}/bin
