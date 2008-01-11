@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2008/01/06 12:01:51 obache Exp $
+# $NetBSD: Makefile,v 1.342 2008/01/11 10:39:57 kristerw Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -40,6 +40,7 @@ SUBDIR+=	claws-mail-smime
 SUBDIR+=	claws-mail-spamassassin
 SUBDIR+=	claws-mail-spamreport
 SUBDIR+=	claws-mail-synce
+SUBDIR+=	claws-mail-tnef
 SUBDIR+=	claws-mail-trayicon
 SUBDIR+=	claws-mail-vcalendar
 SUBDIR+=	columba
@@ -115,6 +116,7 @@ SUBDIR+=	libmilter
 SUBDIR+=	libsieve
 SUBDIR+=	libspf-alt
 SUBDIR+=	libsylph
+SUBDIR+=	libytnef
 SUBDIR+=	mail-notification
 SUBDIR+=	mailagent
 SUBDIR+=	mailcrypt
