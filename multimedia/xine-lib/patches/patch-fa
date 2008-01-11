@@ -1,0 +1,14 @@
+$NetBSD: patch-fa,v 1.1 2008/01/11 16:05:27 drochner Exp $
+
+--- m4/pthreads.m4.orig	2008-01-10 16:56:36.000000000 +0100
++++ m4/pthreads.m4
+@@ -37,6 +37,9 @@ AC_DEFUN([CC_PTHREAD_FLAGS], [
+      esac
+   fi
+ 
++dnl compensate for pkgsrc pthread.bl3 smartness
++  PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++
+   AC_CACHE_CHECK([if $CC supports Pthread],
+     AS_TR_SH([cc_cv_pthreads]),
+     [ac_save_CFLAGS="$CFLAGS"

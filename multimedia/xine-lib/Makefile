@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2008/01/06 15:36:41 drochner Exp $
+# $NetBSD: Makefile,v 1.54 2008/01/11 16:05:27 drochner Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=		1
 
 COMMENT=		Multimedia player library
 
@@ -43,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-opengl
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
