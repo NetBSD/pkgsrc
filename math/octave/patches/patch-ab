@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.3 2008/01/11 01:23:44 adam Exp $
+
+--- src/DLD-FUNCTIONS/__glpk__.cc.orig	2007-10-12 23:27:34.000000000 +0200
++++ src/DLD-FUNCTIONS/__glpk__.cc
+@@ -25,6 +25,7 @@ along with Octave; see the file COPYING.
+ #endif
+ 
+ #include <cfloat>
++#include <cmath>
+ #include <csetjmp>
+ #include <ctime>
+ 
+@@ -35,6 +36,10 @@ along with Octave; see the file COPYING.
+ #include "oct-obj.h"
+ #include "pager.h"
+ 
++#if defined(_GLIBCXX_USE_C99_MATH) && !defined(_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC)
++using std::isinf;
++#endif
++
+ #if defined (HAVE_GLPK)
+ 
+ extern "C"

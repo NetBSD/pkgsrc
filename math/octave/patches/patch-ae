@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.4 2005/04/01 10:15:47 adam Exp $
+$NetBSD: patch-ae,v 1.5 2008/01/11 01:23:44 adam Exp $
 
---- libcruft/misc/Makefile.in.orig	2003-11-20 13:50:06.000000000 +0100
+--- libcruft/misc/Makefile.in.orig	2007-10-12 23:27:12.000000000 +0200
 +++ libcruft/misc/Makefile.in
-@@ -62,7 +62,7 @@ XCC = $(patsubst -O%, , $(CC))
+@@ -64,7 +64,7 @@ XCC = $(patsubst -O%, , $(CC))
  XALL_CFLAGS = $(patsubst -O%, , $(ALL_CFLAGS))
  
  machar.o: $(srcdir)/machar.c
--	$(XCC) -c $(CPPFLAGS) $(XALL_CFLAGS) -DDP $<
+-	$(XCC) -c $(CPPFLAGS) $(XALL_CFLAGS) -DDP $< -o $@
 +	${LIBTOOL} --mode=compile $(XCC) -c $(CPPFLAGS) $(XALL_CFLAGS) -DDP $<
  
  pic/machar.o: $(srcdir)/machar.c
