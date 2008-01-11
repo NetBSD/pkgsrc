@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.48 2007/11/22 20:20:21 drochner Exp $
+$NetBSD: distinfo,v 1.49 2008/01/11 16:05:27 drochner Exp $
 
-SHA1 (xine-lib-1.1.8.tar.gz) = 869905908a831a959ae3c6962d6d3204dc53d39b
-RMD160 (xine-lib-1.1.8.tar.gz) = b4207e0d0373b68d8d3c3fb66a467953c0024732
-Size (xine-lib-1.1.8.tar.gz) = 8872132 bytes
+SHA1 (xine-lib-1.1.9.tar.bz2) = f9e36b6cc69f76fed3b95de8a29ef2255770aa33
+RMD160 (xine-lib-1.1.9.tar.bz2) = 179dc66d13f5f1dcdf134ac82ed71b905c7332e8
+Size (xine-lib-1.1.9.tar.bz2) = 7391259 bytes
 SHA1 (patch-aa) = e09d34a121080b03bc67b2d8a3ca27463b771acc
 SHA1 (patch-ab) = ef13b60c2bea54f354acf1b2d70c04594dac36c9
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
-SHA1 (patch-ae) = 78060d0d1a721642776a909ab3dfef6bd4441a33
-SHA1 (patch-ag) = 8638939d400eb11fc01fd832b205366b906fc9ee
+SHA1 (patch-ae) = 417d730034cc4dbf3103e07afb8432822084c64b
+SHA1 (patch-ag) = fa2298e1214a4dbea36526aed27a6e506a069681
 SHA1 (patch-ah) = ba408237d4a717cc91b5d06ede425048914a9a1f
 SHA1 (patch-ai) = f0b33c1a36082445a86bcf71e07a6210aa21b7dc
 SHA1 (patch-aj) = 4215c3bc37cf636e563a509f9a391081ed8e773b
 SHA1 (patch-ak) = 744f59d1b9e40983f25bb532db1a5d4e92be6fbe
 SHA1 (patch-al) = 9e3ad86a7d7f32e58de157fa37141138af10838e
 SHA1 (patch-ao) = c4524c88bb4ce61b13e354d22aa0f7445ff0aa37
-SHA1 (patch-ap) = 756db263fc805a75a0d6be5bdb10344a6fd9c2e9
+SHA1 (patch-ap) = e4801863b0d4625fe6db9e4c51218f55b90c6100
 SHA1 (patch-aq) = f6efa28ab1b9a24b79c18c181a5d309db53172e4
 SHA1 (patch-as) = a0a93a256589e87a66eef31494441aa1b200f834
 SHA1 (patch-av) = 40e9a44a506a0006b6761e8367c65239bd4856ee
@@ -29,3 +29,7 @@ SHA1 (patch-db) = 3ad4ca6f43a379b251211477972cd6d34b1f821a
 SHA1 (patch-dc) = 11c4212029e67f22796e57706b42400a0dbcac3a
 SHA1 (patch-eb) = b65e2c7c30fc04115d55da1ce1f6f65216ac1d23
 SHA1 (patch-ee) = 49efc9d722f2141e88106d87414586ab80e4f5a9
+SHA1 (patch-fa) = a69fe09588596bfc3d74fad29e5a1aeeeead4dfd
+SHA1 (patch-ga) = 3f987a5660e48e86d0edab3ab15436227282eed1
+SHA1 (patch-gb) = 8d104ac33a7f8dbd47ff4f132b4360788efa29b8
+SHA1 (patch-gc) = 876e9c319d8ff01c57267c90f3f1b8c55a3fb766
