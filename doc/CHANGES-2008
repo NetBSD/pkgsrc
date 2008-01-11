@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.94 2008/01/11 13:29:47 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.95 2008/01/11 23:24:11 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -124,6 +124,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.212 [martti 2008-01-09]
 	Updated misc/rlwrap to 0.30 [heinz 2008-01-09]
 	Updated www/nginx to 0.5.35 [ghen 2008-01-09]
+	Updated mail/spamassassin to 3.2.4 [heinz 2008-01-09]
 	Updated emulators/wine to 0.9.44nb1 [reinoud 2008-01-09]
 	Updated x11/mowitz to 0.3.1 [reed 2008-01-09]
 	Updated misc/siag to 3.6.1 [reed 2008-01-09]
@@ -150,3 +151,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added print/gutenprint51-lib version 5.1.6 [gdt 2008-01-11]
 	Updated devel/cpuflags to 1.18 [abs 2008-01-11]
 	Updated pkgtools/pkg_rolling-replace to 0.13 [gdt 2008-01-11]
+	Updated mail/p5-Mail-DKIM to 0.30 [heinz 2008-01-11]
