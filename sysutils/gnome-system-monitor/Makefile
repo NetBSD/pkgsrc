@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/11/05 19:09:07 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/11 14:01:19 drochner Exp $
 #
 
-DISTNAME=	gnome-system-monitor-2.20.1
+DISTNAME=	gnome-system-monitor-2.20.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,7 +40,7 @@ BUILDLINK_API_DEPENDS.libgtop+=	libgtop>=2.19.3
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
