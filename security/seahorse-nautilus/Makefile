@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/11/05 19:49:05 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/11 13:56:56 drochner Exp $
 
-DISTNAME=	seahorse-2.20.1
-PKGNAME=	seahorse-nautilus-2.20.1
+DISTNAME=	seahorse-2.20.3
+PKGNAME=	seahorse-nautilus-2.20.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,6 +37,6 @@ INSTALL_DIRS=	plugins/nautilus-ext
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
