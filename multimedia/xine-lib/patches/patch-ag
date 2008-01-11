@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.17 2007/11/22 20:20:21 drochner Exp $
+$NetBSD: patch-ag,v 1.18 2008/01/11 16:05:27 drochner Exp $
 
---- configure.ac.orig	2007-08-25 15:27:01.000000000 +0200
+--- configure.ac.orig	2008-01-04 19:02:22.000000000 +0100
 +++ configure.ac
 @@ -98,7 +98,7 @@ dnl ------------------------------------
  AC_CANONICAL_HOST
@@ -104,12 +104,12 @@ $NetBSD: patch-ag,v 1.17 2007/11/22 20:20:21 drochner Exp $
       	    AC_DEFINE([HAVE_WIN32_CDROM], [1], 
                        [Define 1 if you have MinGW CD-ROM support])
  	 ;;
--         freebsd4.*)
-+         freebsd4.* | dragonfly*)
+-         freebsd4.*|kfreebsd*-gnu)
++         freebsd4.*|kfreebsd*-gnu|dragonfly*)
       	    AC_DEFINE([HAVE_FREEBSD_CDROM], [1], 
                        [Define 1 if you have FreeBSD CD-ROM support])
  	 ;;
-@@ -2581,7 +2598,7 @@ case $host in
+@@ -2591,7 +2608,7 @@ case $host in
       dnl FreeBSD (et al.) does not complete linking for shared objects when pthreads
       dnl are requested, as different implementations are present; to avoid problems
       dnl use -Wl,-z,defs only for those platform not behaving this way.
