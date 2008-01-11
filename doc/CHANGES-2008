@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.92 2008/01/11 12:45:54 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.93 2008/01/11 12:59:20 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -148,3 +148,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal to 5.6 [adrianp 2008-01-11]
 	Added print/gutenprint-lib version 5.0.2 [gdt 2008-01-11]
 	Added print/gutenprint51-lib version 5.1.6 [gdt 2008-01-11]
+	Updated devel/cpuflags to 1.18 [abs 2008-01-11]
