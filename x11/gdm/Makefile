@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.134 2007/11/30 20:08:37 drochner Exp $
+# $NetBSD: Makefile,v 1.135 2008/01/11 13:02:33 drochner Exp $
 #
 
-DISTNAME=	gdm-2.20.2
+DISTNAME=	gdm-2.20.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -34,8 +34,6 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR:Q}/custom.conf
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
-
-#CONFIGURE_ARGS+=	--disable-ipv6
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/Init
 OWN_DIRS+=		${PKG_SYSCONFDIR}/PostLogin
