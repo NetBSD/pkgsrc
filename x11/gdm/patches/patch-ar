@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2008/01/11 13:02:34 drochner Exp $
+
+--- daemon/verify-crypt.c.orig	2008-01-08 21:21:30.000000000 +0100
++++ daemon/verify-crypt.c
+@@ -43,6 +43,7 @@
+ #include "gdm-common.h"
+ #include "gdm-daemon-config.h"
+ #include "gdm-socket-protocol.h"
++#include "gdm-log.h"
+ 
+ static char *selected_user = NULL;
+ 
