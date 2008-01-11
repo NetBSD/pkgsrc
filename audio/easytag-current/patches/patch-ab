@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/01/11 13:13:50 drochner Exp $
+
+--- easytag.desktop.orig	2008-01-10 21:51:48.000000000 +0100
++++ easytag.desktop
+@@ -16,7 +16,7 @@ Comment[ru]=EasyTAG -- ЩРН ОПНЦП
+ Comment[sv]=EasyTAG är ett verktyg för att undersöka, editera och skriva taggar för dina MP3-, MP2-, FLAC- och Ogg Vorbis-filer, och använder ett enkelt och trevligt GTK+-gränssnitt.
+ Comment[uk]=EasyTAG - утиліта для перегляду, редагування та запису тегів у файли MP3, MP2, FLAC, Ogg Vorbis, MusePack та Monkey's Audio. Простий та приємний інтерфейс GTK+ допоможе процесу запису тегів.
+ Exec=easytag %F
+-Icon=EasyTAG.xpm
++Icon=EasyTAG_icon.xpm
+ Terminal=false
+ Type=Application
+ Encoding=UTF-8
