@@ -1,0 +1,14 @@
+Gutenprint is a package of high quality printer drivers for Linux,
+BSD, Solaris, IRIX, and other UNIX-alike operating systems. In many
+cases, these drivers rival or exceed the OEM drivers in quality and
+functionality. Our goal is to produce the highest possible output
+quality from all supported printers. To that end, we have done
+extensive work on screening algorithms, color generation, and printer
+feature utilization. We are continuing our work in all of these areas
+to produce ever higher quality results, particularly on the
+ubiquitous, inexpensive inkjet printers that are nonetheless capable
+of nearly photographic output quality.  Earlier versions of Gutenprint
+were called gimp-print.
+
+This package contains the base library, the Epson utility escputil,
+cups support, and a gimp2 plugin.
