@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6970 2008/01/10 21:44:15 adam Exp $
+$NetBSD: TODO,v 1.6971 2008/01/11 01:24:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -896,7 +896,6 @@ Suggested package updates
 	o objc-3.2.8
 	o ocamlnet-2.2.4
 	o ocrad-0.17
-	o octave-3.0.0
 	o odbc-postgresql-8.2.3
 	o ogre-0.12.3
 	o olvwm-4.5
