@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/10/05 16:31:33 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/01/11 01:23:43 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCTAVE_BUILDLINK3_MK:=	${OCTAVE_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	octave
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}octave
 
 .if !empty(OCTAVE_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.octave+=	octave>=2.1.69
-BUILDLINK_ABI_DEPENDS.octave+=	octave>=2.1.73nb1
+BUILDLINK_API_DEPENDS.octave+=	octave>=3.0.0
+BUILDLINK_ABI_DEPENDS.octave+=	octave>=3.0.0
 BUILDLINK_PKGSRCDIR.octave?=	../../math/octave
 .endif	# OCTAVE_BUILDLINK3_MK
 
@@ -26,8 +26,9 @@ BUILDLINK_PKGSRCDIR.octave?=	../../math/octave
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

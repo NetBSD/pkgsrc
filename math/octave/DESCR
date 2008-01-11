@@ -11,12 +11,3 @@ differential and differential-algebraic equations.  It is easily extensible
 and customizable via user-defined functions written in Octave's own
 language, or using dynamically loaded modules written in C++, C, Fortran,
 or other languages.
-
-GNU Octave is also freely redistributable software.  You may redistribute
-it and/or modify it under the terms of the GNU General Public License
-(GPL) as published by the Free Software Foundation.
-
-Octave was written by John W. Eaton and many others.  Because Octave is
-free software you are encouraged to help make Octave more useful by writing
-and contributing additional functions for it, and by reporting any problems
-you may have.
