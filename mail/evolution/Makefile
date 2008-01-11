@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2007/12/16 17:58:19 drochner Exp $
+# $NetBSD: Makefile,v 1.126 2008/01/11 13:46:38 drochner Exp $
 
-DISTNAME=		evolution-2.12.2
+DISTNAME=		evolution-2.12.3
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -139,7 +139,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/gtkhtml314/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
