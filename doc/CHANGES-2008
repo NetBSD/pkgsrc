@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.93 2008/01/11 12:59:20 abs Exp $
+$NetBSD: CHANGES-2008,v 1.94 2008/01/11 13:29:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -149,3 +149,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added print/gutenprint-lib version 5.0.2 [gdt 2008-01-11]
 	Added print/gutenprint51-lib version 5.1.6 [gdt 2008-01-11]
 	Updated devel/cpuflags to 1.18 [abs 2008-01-11]
+	Updated pkgtools/pkg_rolling-replace to 0.13 [gdt 2008-01-11]
