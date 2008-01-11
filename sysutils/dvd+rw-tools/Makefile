@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/06/08 08:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/01/11 20:05:27 heinz Exp $
 #
 
 DISTNAME=	dvd+rw-tools-7.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 MAINTAINER=	dan@NetBSD.org
 HOMEPAGE=	http://fy.chalmers.se/~appro/linux/DVD+RW/
 COMMENT=	Tools for writing DVD+R[W] disks
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{cdrtools-[1-9]*,cdrtools-ossdvd-[0-9]*}:../../sysutils/cdrtools
 
@@ -24,13 +26,15 @@ ONLY_FOR_PLATFORM=Linux-*-* OpenBSD-*-* NetBSD-*-* FreeBSD-*-* \
 LDFLAGS.NetBSD+=	-lrt # sem_* functions
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/growisofs ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/growisofs.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-booktype ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-format ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-mediainfo ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dvd+rw-tools
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/doc/dvd+rw-tools
+	${INSTALL_PROGRAM} ${WRKSRC}/growisofs ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/growisofs.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-booktype ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-format ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-mediainfo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/dvd+rw-tools
+	${INSTALL_DATA} ${WRKSRC}/index.html \
+		${DESTDIR}${PREFIX}/share/doc/dvd+rw-tools
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
