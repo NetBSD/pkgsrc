@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/11 12:39:47 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/11 13:39:43 gdt Exp $
 
 VERSION=	5.0.2
 DISTNAME=	gutenprint-${VERSION}
@@ -19,6 +19,9 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 
 USE_LANGUAGES+=		c99 c++
+# gcc 3.3.3 either can't compile this, or needs huge amounts of RAM (0.5G+).
+# Observed on NetBSD/i386 3 and confirmed with upstream.  Apparently it's
+# just 3.3.3 - there are no known issues with 2.95.
 
 # gutenprint has many options, and really should be split into
 # multiple packages.  Splitting is difficult because of the structure
