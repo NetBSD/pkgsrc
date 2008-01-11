@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/01/08 19:47:16 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/11 20:12:24 heinz Exp $
 #
 
-DISTNAME=		Mail-DKIM-0.29
+DISTNAME=		Mail-DKIM-0.30
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5mdk
 CATEGORIES=		mail perl5
