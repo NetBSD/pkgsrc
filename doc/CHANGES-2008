@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.95 2008/01/11 23:24:11 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.96 2008/01/12 04:18:02 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.18 [abs 2008-01-11]
 	Updated pkgtools/pkg_rolling-replace to 0.13 [gdt 2008-01-11]
 	Updated mail/p5-Mail-DKIM to 0.30 [heinz 2008-01-11]
+	Updated editors/fe to 1.8 [bjs 2008-01-12]
