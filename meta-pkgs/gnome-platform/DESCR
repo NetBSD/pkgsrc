@@ -5,5 +5,5 @@ environment for the user, and a powerful application framework for
 the software developer.
 
 This is a meta package for the second major version of the GNOME
-project.  It provides all the basic components required to get a
-working desktop, but nothing else.
+project.  It provides the core GNOME libraries, defined by the project
+as the "GNOME platform", but nothing else.
