@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2004/04/26 07:10:16 fredb Exp $
+$NetBSD: patch-ak,v 1.2 2008/01/12 23:30:38 bad Exp $
 
---- platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c	1969-12-31 18:00:00.000000000 -0600
-+++ platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c	2004-04-25 15:05:47.000000000 -0500
+--- platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c.orig	2007-12-06 18:47:09.000000000 -0600
++++ platforms/unix/vm-sound-NetBSD/sqUnixSoundNetBSD.c
 @@ -0,0 +1,378 @@
 +/* sqUnixSoundNetBSD.c -- sound support for NetBSD
 + *
@@ -41,7 +41,7 @@ $NetBSD: patch-ak,v 1.1 2004/04/26 07:10:16 fredb Exp $
 + */
 +
 +#include "sq.h"
-+#include "aio.h"
++#include "sqaio.h"
 +
 +#include <stdio.h>
 +#include <unistd.h>

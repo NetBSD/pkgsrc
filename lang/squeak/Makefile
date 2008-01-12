@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2007/12/12 20:42:34 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/01/12 23:30:38 bad Exp $
 #
 
-DISTNAME=	Squeak-3.6-3
-PKGNAME=	squeak-3.6.3
-PKGREVISION=	2
+DISTNAME=	Squeak-3.9-8
+PKGNAME=	squeak-3.9.8
 CATEGORIES=	lang
-MASTER_SITES=	http://squeakvm.org/unix/release/
-DISTFILES=	Squeak-3.6-3.src.tar.gz	Squeak-3.6-5429.image.tar.gz
-DISTFILES+=	Squeak-3.sources.tar.gz
+MASTER_SITES=	http://ftp.squeak.org/3.9/unix-linux/
+DISTFILES=	Squeak-3.9-8.src.tar.gz
+DISTFILES+=	Squeak3.9-final-7067.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeakvm.org/unix/
@@ -17,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	automake14
+USE_TOOLS+=	automake14 gmake gzip
 
 AUTOCONF_REQD=	2.57
 AUTOMAKE_REQD=	1.4.6
@@ -29,12 +28,16 @@ DIST_SUBDIR=		squeak
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-SQUEAK_CHANGES= ${DISTNAME}/usr/local/lib/squeak/Squeak3.6-5429.changes.gz
-SQUEAK_IMAGE=	${DISTNAME}/usr/local/lib/squeak/Squeak3.6-5429.image.gz
-SQUEAK_SOURCES=	Squeak-3/usr/local/lib/squeak/SqueakV3.sources
+SQUEAK_CHANGES= Squeak3.9-final-7067/Squeak3.9-final-7067.changes.gz
+SQUEAK_IMAGE=	Squeak3.9-final-7067/Squeak3.9-final-7067.image.gz
+SQUEAK_SOURCES=	Squeak3.9-final-7067/SqueakV39.sources
 
 INSTALLATION_DIRS=	bin lib/squeak
 INSTALL_ENV+=	ROOT=${DESTDIR:Q}
+
+post-extract:
+	${GZIP_CMD} ${WRKDIR}/${SQUEAK_IMAGE:S/.gz$//W}
+	${GZIP_CMD} ${WRKDIR}/${SQUEAK_CHANGES:S/.gz$//W}
 
 pre-configure:
 	cd ${WRKSRC}/platforms/unix/config 				\
@@ -42,8 +45,8 @@ pre-configure:
 	${MKDIR} ${CONFIGURE_DIRS}
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_CHANGES} ${DESTDIR}${PREFIX}/lib/squeak/
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_IMAGE} ${DESTDIR}${PREFIX}/lib/squeak/
+	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_CHANGES}.gz ${DESTDIR}${PREFIX}/lib/squeak/
+	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_IMAGE}.gz ${DESTDIR}${PREFIX}/lib/squeak/
 	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_SOURCES} ${DESTDIR}${PREFIX}/lib/squeak/
 	cd ${DESTDIR}${PREFIX}/lib/squeak						\
 	    && ${LN} -s ${SQUEAK_CHANGES:C/.*\///} squeak.changes.gz	\
