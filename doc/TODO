@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6971 2008/01/11 01:24:48 adam Exp $
+$NetBSD: TODO,v 1.6972 2008/01/12 06:09:07 taca Exp $
 
 Suggested new packages
 ======================
@@ -449,6 +449,7 @@ Suggested package updates
 	o doxygen-1.5.4
 	o dpkg-1.13.25
 	o drscheme-371
+	o drupal-5.6
 	o dvdrip-0.98.8
 	o dvipng-1.9
 	o eagle-4.16
@@ -1141,6 +1142,7 @@ Suggested package updates
 	o python-mode-1.0 (Revision 4.75)
 	o qDecoder-8.0
 	o qbrew-0.3.9
+	o qemu-0.9.1
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
