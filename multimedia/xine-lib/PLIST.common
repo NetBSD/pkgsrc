@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.20 2008/01/06 15:36:41 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.21 2008/01/12 13:15:39 drochner Exp $
 bin/xine-config
 include/xine.h
 include/xine/alphablend.h
@@ -226,6 +226,7 @@ share/locale/it/LC_MESSAGES/libxine1.mo
 share/locale/pl/LC_MESSAGES/libxine1.mo
 share/locale/pt_BR/LC_MESSAGES/libxine1.mo
 share/locale/sk/LC_MESSAGES/libxine1.mo
+share/locale/tr/LC_MESSAGES/libxine1.mo
 share/xine/libxine1/fonts/cc-16.xinefont.gz
 share/xine/libxine1/fonts/cc-20.xinefont.gz
 share/xine/libxine1/fonts/cc-24.xinefont.gz
