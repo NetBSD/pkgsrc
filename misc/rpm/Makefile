@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/05/13 00:55:14 gdt Exp $
+# $NetBSD: Makefile,v 1.66 2008/01/12 23:43:53 heinz Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	6
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rpm.org/
 COMMENT=	The Red Hat Package Manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		rpm2cpio<1.0nb1
 
@@ -26,6 +28,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
 CONFIGURE_ENV+=		varprefix=${RPM_DB_PREFIX:Q}
 
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man8
+MAKE_FLAGS+=		ROOT=${DESTDIR}
 
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR:Q}
@@ -36,11 +39,11 @@ post-configure:
 	cd ${WRKSRC}/po && ${MV} cz.po cs.po
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/rpm
 
 .if defined(RANLIB)
 post-install:
-	$(RANLIB) ${PREFIX}/lib/librpm.a
+	$(RANLIB) ${DESTDIR}${PREFIX}/lib/librpm.a
 .endif
 
 # The configure script doesn't detect whether libintl.so has any
