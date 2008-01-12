@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2007/01/30 23:52:53 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/12 04:17:38 bjs Exp $
 
---- configure.orig	2007-01-30 23:50:13.000000000 +0000
+--- configure.orig	2007-09-12 09:58:44.000000000 -0400
 +++ configure
-@@ -2717,6 +2717,7 @@ fi
- rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
- fi
+@@ -3170,6 +3170,7 @@ fi
+ 
+ 
  LIBS=$ORIG_LIBS
 +curses_ok=yes
  if test "$curses_ok" = yes; then
-   echo "$as_me:$LINENO: checking for modern curses without raw() bug" >&5
- echo $ECHO_N "checking for modern curses without raw() bug... $ECHO_C" >&6
+   { echo "$as_me:$LINENO: checking for modern curses without raw() bug" >&5
+ echo $ECHO_N "checking for modern curses without raw() bug... $ECHO_C" >&6; }
