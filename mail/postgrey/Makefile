@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2007/08/31 09:21:02 martti Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/12 11:36:32 adam Exp $
 #
 
 DISTNAME=	postgrey-1.30
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://isg.ee.ethz.ch/tools/postgrey/pub/ \
 		http://isg.ee.ethz.ch/tools/postgrey/pub/old/
