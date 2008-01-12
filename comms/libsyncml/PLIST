@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+bin/syncml-http-client
+bin/syncml-http-server
+bin/syncml-obex-client
+include/libsyncml-1.0/libsyncml/http_client.h
+include/libsyncml-1.0/libsyncml/http_server.h
+include/libsyncml-1.0/libsyncml/obex_client.h
+include/libsyncml-1.0/libsyncml/obex_server.h
+include/libsyncml-1.0/libsyncml/sml_auth.h
+include/libsyncml-1.0/libsyncml/sml_base64.h
+include/libsyncml-1.0/libsyncml/sml_command.h
+include/libsyncml-1.0/libsyncml/sml_defines.h
+include/libsyncml-1.0/libsyncml/sml_devinf.h
+include/libsyncml-1.0/libsyncml/sml_devinf_obj.h
+include/libsyncml-1.0/libsyncml/sml_ds_server.h
+include/libsyncml-1.0/libsyncml/sml_elements.h
+include/libsyncml-1.0/libsyncml/sml_error.h
+include/libsyncml-1.0/libsyncml/sml_manager.h
+include/libsyncml-1.0/libsyncml/sml_md5.h
+include/libsyncml-1.0/libsyncml/sml_notification.h
+include/libsyncml-1.0/libsyncml/sml_parse.h
+include/libsyncml-1.0/libsyncml/sml_session.h
+include/libsyncml-1.0/libsyncml/sml_transport.h
+include/libsyncml-1.0/libsyncml/syncml.h
+lib/libsyncml.la
+lib/pkgconfig/libsyncml-1.0.pc
+man/man1/syncml-http-server.1
+man/man1/syncml-obex-client.1
+@dirrm include/libsyncml-1.0/libsyncml
+@dirrm include/libsyncml-1.0
