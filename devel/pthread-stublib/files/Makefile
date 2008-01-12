@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/21 19:23:08 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/12 12:35:39 joerg Exp $
 
 all: libpthstub.la
 
@@ -10,4 +10,4 @@ pthread-stubs.lo: pthread-stubs.c
 
 install:
 	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libpthstub.la \
-		${PREFIX}/lib
+		${DESTDIR}${PREFIX}/lib
