@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 14:05:17 dillo Exp $
+bin/wbxml2xml
+bin/xml2wbxml
+include/wbxml.h
+include/wbxml_base64.h
+include/wbxml_buffers.h
+include/wbxml_charset.h
+include/wbxml_conv.h
+include/wbxml_elt.h
+include/wbxml_encoder.h
+include/wbxml_errors.h
+include/wbxml_handlers.h
+include/wbxml_lists.h
+include/wbxml_log.h
+include/wbxml_mem.h
+include/wbxml_parser.h
+include/wbxml_tables.h
+include/wbxml_tree.h
+include/wbxml_tree_clb_wbxml.h
+include/wbxml_tree_clb_xml.h
+lib/libwbxml2.la
+lib/pkgconfig/libwbxml2.pc
+share/doc/wbxml2-0.9.0/GNU-LGPL
+@dirrm share/doc/wbxml2-0.9.0

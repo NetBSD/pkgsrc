@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/01/12 14:05:17 dillo Exp $
+
+--- Makefile.am.orig	2006-07-11 13:47:43.000000000 +0200
++++ Makefile.am
+@@ -24,10 +24,6 @@ wbxmldoc_DATA = \
+ 	TODO\
+ 	doxygen.h
+ 
+-install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(wbxmldocdir)/manual
+-	cp -Rp doc/* $(DESTDIR)$(wbxmldocdir)/manual
+-
+ dist-bz2: distdir
+ 	sed -e "s/tar.gz/tar.bz2/g" $(distdir)/wbxml2.spec > $(distdir)/wbxml2.spec.aux
+ 	mv $(distdir)/wbxml2.spec.aux $(distdir)/wbxml2.spec
