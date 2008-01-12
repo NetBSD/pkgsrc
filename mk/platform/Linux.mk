@@ -1,9 +1,11 @@
-# $NetBSD: Linux.mk,v 1.31 2007/10/19 13:41:35 rillig Exp $
+# $NetBSD: Linux.mk,v 1.32 2008/01/12 22:44:10 joerg Exp $
 #
 # Variable definitions for the Linux operating system.
 
 ECHO_N?=	${ECHO} -n
+.if !defined(X11_TYPE) || ${X11_TYPE} == "native"
 IMAKE_MAKE?=	${GMAKE}	# program which gets invoked by imake
+.endif
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
