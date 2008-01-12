@@ -1,11 +1,11 @@
 The libarchive library contains routines for creating, reading from, and
-writing to different streaming archive formats, e.g. most popular tar 
-and cpio formats. Additionally, libarchive supports writing to shar archives 
+writing to different streaming archive formats, e.g. most popular tar
+and cpio formats. Additionally, libarchive supports writing to shar archives
 and reading from ISO-9660 (CD-ROM) images.
 
-This package contains bsdtar, a high-efficiency libarchive front-end which 
-is [almost] wholly compatible with the ubiquitous GNU tar.  It supports 
+This package contains bsdtar, a high-efficiency libarchive front-end which
+is [almost] wholly compatible with the ubiquitous GNU tar.  It supports
 advanced features many other implementations do not.
 
-For your convenience, the installed bsdtar binary will not be linked 
+For your convenience, the installed bsdtar binary will not be linked
 to any pkgsrc-provided libraries.
