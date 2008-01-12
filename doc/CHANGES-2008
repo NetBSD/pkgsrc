@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.97 2008/01/12 04:36:05 obache Exp $
+$NetBSD: CHANGES-2008,v 1.98 2008/01/12 05:58:49 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -154,3 +154,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Mail-DKIM to 0.30 [heinz 2008-01-11]
 	Updated editors/fe to 1.8 [bjs 2008-01-12]
 	Updated graphics/ruby-RMagick to 2.1.0 [obache 2008-01-12]
+	Added chat/smirk version 20080111 [bjs 2008-01-12]
