@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.98 2008/01/12 05:58:49 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.99 2008/01/12 06:09:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/fe to 1.8 [bjs 2008-01-12]
 	Updated graphics/ruby-RMagick to 2.1.0 [obache 2008-01-12]
 	Added chat/smirk version 20080111 [bjs 2008-01-12]
+	Removed net/ja-samba [taca 2008-01-12]
