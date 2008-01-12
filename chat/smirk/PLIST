@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 05:56:15 bjs Exp $
+bin/smirk
+share/smirk/clientcmnds.hlp
+share/smirk/irccmnds.hlp
+share/smirk/keys.hlp
+@dirrm share/smirk
