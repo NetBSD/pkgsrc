@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/06/08 12:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/01/12 11:36:31 adam Exp $
 
 DISTNAME=	cvs2svn-1.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel scm
 MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/34574/
 
