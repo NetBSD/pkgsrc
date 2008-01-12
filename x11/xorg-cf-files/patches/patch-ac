@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2008/01/12 21:19:34 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2008/01/12 21:57:04 joerg Exp $
 
 --- linux.cf.orig	2005-10-21 21:10:27.000000000 +0200
 +++ linux.cf
@@ -43,15 +43,6 @@ $NetBSD: patch-ac,v 1.3 2008/01/12 21:19:34 joerg Exp $
  # endif
  # define LinuxMachineDefines	-D__i386__
  # define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
-@@ -1042,8 +1041,6 @@ InstallNamedTargetNoClobber(install,file
- #endif
- 
- 
--#define HasGnuMake		YES
--
- #define MakeNamedTargetSubdir(dir,flags,subname)\
- 	$(MAKE) -C dir $(MFLAGS) $(PARALLELMFLAGS) flags subname
- 
 @@ -1042,20 +1041,12 @@ InstallNamedTargetNoClobber(install,file
  #endif
  
