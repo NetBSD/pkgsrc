@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/12 05:56:15 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/12 06:57:32 bjs Exp $
 #
 
 DISTNAME=	smirk-20080111
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE=	http://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+HOMEPAGE=	${MASTER_SITE_LOCAL}
 COMMENT=	Revival of the curses-based Rhapsody IRC client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
