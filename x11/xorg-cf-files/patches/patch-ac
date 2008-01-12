@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2007/12/02 00:35:23 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2008/01/12 21:19:34 joerg Exp $
 
 --- linux.cf.orig	2005-10-21 21:10:27.000000000 +0200
 +++ linux.cf
@@ -52,7 +52,18 @@ $NetBSD: patch-ac,v 1.2 2007/12/02 00:35:23 joerg Exp $
  #define MakeNamedTargetSubdir(dir,flags,subname)\
  	$(MAKE) -C dir $(MFLAGS) $(PARALLELMFLAGS) flags subname
  
-@@ -1053,9 +1050,6 @@ InstallNamedTargetNoClobber(install,file
+@@ -1042,20 +1041,12 @@ InstallNamedTargetNoClobber(install,file
+ #endif
+ 
+ 
+-#define HasGnuMake		YES
+-
+-#define MakeNamedTargetSubdir(dir,flags,subname)\
+-	$(MAKE) -C dir $(MFLAGS) $(PARALLELMFLAGS) flags subname
+-
+ #define ArchitectureDefines	-DLINUX_ARCHITECTURE
+ 
+ #define TtClientLibs $(TTLIB) $(XTOOLLIB) $(XLIB)
  #define TtClientDepLibs $(DEPTTLIB) $(DEPXTOOLLIB) $(DEPXLIB)
  
  #if HaveLib64
