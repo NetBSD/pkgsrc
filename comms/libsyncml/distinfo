@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+
+SHA1 (libsyncml-0.4.5.tar.bz2) = 93794fd891def238025559cb74be18669fd5197a
+RMD160 (libsyncml-0.4.5.tar.bz2) = 551f27a5173f7d54ca51d6c01c2d601970eee496
+Size (libsyncml-0.4.5.tar.bz2) = 374803 bytes
+SHA1 (patch-aa) = e610909735c46812f69dfe292293d3e0e0965ee1
+SHA1 (patch-ab) = 2b6fe22c62f324d6d3c894e7271256c3b6e9396f
+SHA1 (patch-ac) = 20179ab5aa95f25e8e9956cdfbd7757fc16f7606
+SHA1 (patch-ad) = 51298b6b0a7b32bb941ef75781f1148ddc03d5a4

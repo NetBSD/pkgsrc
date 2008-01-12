@@ -1,0 +1,199 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+
+Regen for patch-aa (hand trimmed).
+
+--- configure.orig	2008-01-08 00:58:11.000000000 +0100
++++ configure
+@@ -884,6 +884,7 @@ ENABLE_OBEX_TRUE
+ ENABLE_OBEX_FALSE
+ LIBBLUETOOTH_CFLAGS
+ LIBBLUETOOTH_LIBS
++HAVE_BLUETOOTH_BLUETOOTH_H
+ ENABLE_BLUETOOTH
+ ENABLE_BLUETOOTH_TRUE
+ ENABLE_BLUETOOTH_FALSE
+@@ -20785,15 +20770,154 @@ fi
+ 
+ 	{ echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+-                HAVE_BLUETOOTH=no
++                { echo "$as_me:$LINENO: checking for bt_gethostbyname in -lbluetooth" >&5
++echo $ECHO_N "checking for bt_gethostbyname in -lbluetooth... $ECHO_C" >&6; }
++if test "${ac_cv_lib_bluetooth_bt_gethostbyname+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lbluetooth  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char bt_gethostbyname ();
++int
++main ()
++{
++return bt_gethostbyname ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_lib_bluetooth_bt_gethostbyname=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_lib_bluetooth_bt_gethostbyname=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
++      conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_bluetooth_bt_gethostbyname" >&5
++echo "${ECHO_T}$ac_cv_lib_bluetooth_bt_gethostbyname" >&6; }
++if test $ac_cv_lib_bluetooth_bt_gethostbyname = yes; then
++  HAVE_BLUETOOTH=yes
++	 LIBBLUETOOTH_LIBS=-lbluetooth
++else
++  HAVE_BLUETOOTH=no
++fi
++
+ elif test $pkg_failed = untried; then
+-	HAVE_BLUETOOTH=no
++	{ echo "$as_me:$LINENO: checking for bt_gethostbyname in -lbluetooth" >&5
++echo $ECHO_N "checking for bt_gethostbyname in -lbluetooth... $ECHO_C" >&6; }
++if test "${ac_cv_lib_bluetooth_bt_gethostbyname+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lbluetooth  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char bt_gethostbyname ();
++int
++main ()
++{
++return bt_gethostbyname ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_lib_bluetooth_bt_gethostbyname=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_lib_bluetooth_bt_gethostbyname=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
++      conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_bluetooth_bt_gethostbyname" >&5
++echo "${ECHO_T}$ac_cv_lib_bluetooth_bt_gethostbyname" >&6; }
++if test $ac_cv_lib_bluetooth_bt_gethostbyname = yes; then
++  HAVE_BLUETOOTH=yes
++	 LIBBLUETOOTH_LIBS=-lbluetooth
++else
++  HAVE_BLUETOOTH=no
++fi
++
+ else
+ 	LIBBLUETOOTH_CFLAGS=$pkg_cv_LIBBLUETOOTH_CFLAGS
+ 	LIBBLUETOOTH_LIBS=$pkg_cv_LIBBLUETOOTH_LIBS
+         { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+ 	HAVE_BLUETOOTH=yes
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_BLUETOOTH_BLUETOOTH_H 1
++_ACEOF
++
+ fi
+ if test "x${HAVE_BLUETOOTH}" = "xyes"; then
+ 	if test "x${WANT_BLUETOOTH}" = "xno"; then
+@@ -20811,8 +20934,8 @@ _ACEOF
+ 	fi
+ else
+ 	if test "x${WANT_BLUETOOTH}" = "xyes"; then
+-		{ { echo "$as_me:$LINENO: error: \"Bluez not found\"" >&5
+-echo "$as_me: error: \"Bluez not found\"" >&2;}
++		{ { echo "$as_me:$LINENO: error: \"Bluetooth libraries not found\"" >&5
++echo "$as_me: error: \"Bluetooth libraries not found\"" >&2;}
+    { (exit 1); exit 1; }; }
+ 	else
+ 		ENABLE_BLUETOOTH=no
+@@ -22531,6 +22650,7 @@ ENABLE_OBEX_TRUE!$ENABLE_OBEX_TRUE$ac_de
+ ENABLE_OBEX_FALSE!$ENABLE_OBEX_FALSE$ac_delim
+ LIBBLUETOOTH_CFLAGS!$LIBBLUETOOTH_CFLAGS$ac_delim
+ LIBBLUETOOTH_LIBS!$LIBBLUETOOTH_LIBS$ac_delim
++HAVE_BLUETOOTH_BLUETOOTH_H!$HAVE_BLUETOOTH_BLUETOOTH_H$ac_delim
+ ENABLE_BLUETOOTH!$ENABLE_BLUETOOTH$ac_delim
+ ENABLE_BLUETOOTH_TRUE!$ENABLE_BLUETOOTH_TRUE$ac_delim
+ ENABLE_BLUETOOTH_FALSE!$ENABLE_BLUETOOTH_FALSE$ac_delim
+@@ -22554,7 +22674,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+ LTLIBOBJS!$LTLIBOBJS$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 41; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 42; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
