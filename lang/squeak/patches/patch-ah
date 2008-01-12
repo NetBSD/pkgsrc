@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2004/04/26 07:10:16 fredb Exp $
+$NetBSD: patch-ah,v 1.2 2008/01/12 23:30:38 bad Exp $
 
---- platforms/unix/vm/sqUnixMain.c	2003-11-23 06:23:43.000000000 -0600
-+++ platforms/unix/vm/sqUnixMain.c	2004-04-25 21:29:44.000000000 -0500
-@@ -62,7 +62,7 @@
+--- platforms/unix/vm/sqUnixMain.c.orig	2006-10-10 20:38:14.000000000 -0600
++++ platforms/unix/vm/sqUnixMain.c
+@@ -63,7 +63,7 @@
  #include <signal.h>
  #include <fcntl.h>
  
@@ -11,15 +11,15 @@ $NetBSD: patch-ah,v 1.1 2004/04/26 07:10:16 fredb Exp $
  # include <sys/sysinfo.h>
  # include <sys/proc.h>
  #endif
-@@ -677,6 +677,7 @@
-   { &soundModule,   "sound",   "NAS"    },	/*** NO DEFAULT ***/
+@@ -685,6 +685,7 @@ static struct moduleDescription moduleDe
+   /* defaults */
    { &displayModule, "display", "Quartz" },
    { &soundModule,   "sound",   "MacOSX" },
 +  { &soundModule,   "sound",   "NetBSD" },
    { &soundModule,   "sound",   "Sun"    },
-   { &soundModule,   "sound",   "OSS"    },
+   { &soundModule,   "sound",   "ALSA"   },
    { &soundModule,   "sound",   "null"   },
-@@ -1275,7 +1276,7 @@
+@@ -1306,7 +1307,7 @@ int main(int argc, char **argv, char **e
  
    signal(SIGSEGV, sigsegv);
  
