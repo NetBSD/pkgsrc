@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.102 2008/01/12 14:28:03 dillo Exp $
+$NetBSD: CHANGES-2008,v 1.103 2008/01/12 23:32:28 bad Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/wbxml2 version 0.9.2 [dillo 2008-01-12]
 	Added comms/libsyncml version 0.4.5 [dillo 2008-01-12]
 	Added comms/libopensync-plugin-syncml version 0.22 [dillo 2008-01-12]
+	Updated lang/squeak to 3.9-8 [bad 2008-01-13]
