@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/26 07:10:16 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/12 23:30:38 bad Exp $
 bin/inisqueak
 bin/squeak
-lib/squeak/3.6-3/B3DAcceleratorPlugin
-lib/squeak/3.6-3/UnixOSProcessPlugin
-lib/squeak/3.6-3/XDisplayControlPlugin
-lib/squeak/3.6-3/npsqueak.so
-lib/squeak/3.6-3/npsqueakrun
-lib/squeak/3.6-3/squeak
-lib/squeak/3.6-3/vm-display-X11
-lib/squeak/3.6-3/vm-display-null
-lib/squeak/3.6-3/vm-sound-NAS
-lib/squeak/3.6-3/vm-sound-NetBSD
-lib/squeak/3.6-3/vm-sound-null
-lib/squeak/Squeak3.6-5429.changes.gz
-lib/squeak/Squeak3.6-5429.image.gz
-lib/squeak/SqueakV3.sources
+lib/squeak/3.9-8/AioPlugin
+lib/squeak/3.9-8/B3DAcceleratorPlugin
+lib/squeak/3.9-8/PseudoTTYPlugin
+lib/squeak/3.9-8/Squeak3D
+lib/squeak/3.9-8/UnixOSProcessPlugin
+lib/squeak/3.9-8/XDisplayControlPlugin
+lib/squeak/3.9-8/npsqueak.so
+lib/squeak/3.9-8/squeak
+lib/squeak/3.9-8/vm-display-X11
+lib/squeak/3.9-8/vm-display-null
+lib/squeak/3.9-8/vm-sound-NAS
+lib/squeak/3.9-8/vm-sound-${OPSYS}
+lib/squeak/3.9-8/vm-sound-null
+lib/squeak/Squeak3.9-final-7067.changes.gz
+lib/squeak/Squeak3.9-final-7067.image.gz
+lib/squeak/SqueakV39.sources
 lib/squeak/npsqueakregister
+lib/squeak/npsqueakrun
 lib/squeak/squeak.changes.gz
 lib/squeak/squeak.image.gz
 man/man1/inisqueak.1
@@ -27,5 +30,5 @@ share/doc/squeak/README.Contributing
 share/doc/squeak/README.Keyboard
 share/doc/squeak/README.Sound
 @dirrm share/doc/squeak
-@dirrm lib/squeak/3.6-3
+@dirrm lib/squeak/3.9-8
 @dirrm lib/squeak
