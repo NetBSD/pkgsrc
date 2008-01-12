@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/12/01 13:05:37 tonio Exp $
+$NetBSD: patch-aa,v 1.7 2008/01/12 11:48:40 tonio Exp $
 
---- Makefile.orig	Thu Oct 11 15:44:00 2007
+--- Makefile.orig	Mon Nov 12 16:10:25 2007
 +++ Makefile
 @@ -690,22 +690,22 @@ install-coqide:: install-ide-$(HASCOQIDE
  install-ide-no:
@@ -89,7 +89,7 @@ $NetBSD: patch-aa,v 1.6 2007/12/01 13:05:37 tonio Exp $
  
  LIBFILES=$(THEORIESVO) $(CONTRIBVO)
  LIBFILESLIGHT=$(THEORIESLIGHTVO)
-@@ -1272,52 +1271,55 @@ OBJECTCMA=lib/lib.cma kernel/kernel.cma 
+@@ -1274,52 +1273,55 @@ OBJECTCMA=lib/lib.cma kernel/kernel.cma 
  OBJECTCMXA=$(OBJECTCMA:.cma=.cmxa)
  
  install-library:
@@ -104,7 +104,7 @@ $NetBSD: patch-aa,v 1.6 2007/12/01 13:05:37 tonio Exp $
 -	$(MKDIR) $(FULLCOQLIB)/states
 -	cp states/*.coq $(FULLCOQLIB)/states
 -	$(MKDIR) $(FULLCOQLIB)/user-contrib
--	cp $(OBJECTCMA) $(OBJECTCMXA) $(FULLCOQLIB)
+-	cp $(OBJECTCMA) $(OBJECTCMXA) $(GRAMMARCMA) $(FULLCOQLIB)
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
 +	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
 +	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/user-contrib
@@ -166,12 +166,3 @@ $NetBSD: patch-aa,v 1.6 2007/12/01 13:05:37 tonio Exp $
  #	-$(UPDATETEX)
  
  ###########################################################################
-@@ -1758,7 +1760,7 @@ depend: dependp4 ml4filesml $(BEFOREDEPE
- 	for f in $(ML4FILES); do \
- 	  bn=`dirname $$f`/`basename $$f .ml4`; \
- 	  deps=`$(CAMLP4DEPS) $$f`; \
--	  if [[ $${deps} != "" ]]; then \
-+	  if [ "$${deps}" != "" ]; then \
- 	    /bin/mv -f .depend .depend.tmp; \
- 	    sed -e "\|^$${bn}.cmo|s|^$${bn}.cmo: \(.*\)$$|$${bn}.cmo: $${deps} \1|" \
- 	        -e "\|^$${bn}.cmx|s|^$${bn}.cmx: \(.*\)$$|$${bn}.cmx: $${deps} \1|" \

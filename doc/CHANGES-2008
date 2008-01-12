@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.100 2008/01/12 06:21:40 taca Exp $
+$NetBSD: CHANGES-2008,v 1.101 2008/01/12 11:49:18 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/smirk version 20080111 [bjs 2008-01-12]
 	Removed net/ja-samba [taca 2008-01-12]
 	Updated www/squid to 2.6.18 [taca 2008-01-12]
+	Updated lang/coq to 8.1pl3 [tonio 2008-01-12]
