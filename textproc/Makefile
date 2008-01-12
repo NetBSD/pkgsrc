@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.392 2007/12/12 08:35:53 obache Exp $
+# $NetBSD: Makefile,v 1.393 2008/01/12 20:39:22 dillo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -366,6 +366,7 @@ SUBDIR+=	untex
 SUBDIR+=	uriparser
 SUBDIR+=	urlview
 SUBDIR+=	vis
+SUBDIR+=	wbxml2
 SUBDIR+=	wdiff
 SUBDIR+=	writer2latex
 SUBDIR+=	xalan-c
