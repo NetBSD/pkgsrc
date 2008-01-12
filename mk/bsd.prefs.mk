@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.274 2008/01/04 01:46:24 rillig Exp $
+# $NetBSD: bsd.prefs.mk,v 1.275 2008/01/12 14:40:21 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -187,6 +187,9 @@ MACHINE_ARCH:=		${MACHINE_ARCH:C/ppc/powerpc/}
 .  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/' -e 's/ppc/powerpc/'
 .  endif # !defined(LOWER_ARCH)
+.  if ${LOWER_ARCH} == "x86_64"
+MACHINE_ARCH=		x86_64
+.  endif
 .  if ${MACHINE_ARCH} == "unknown" || ${MACHINE_ARCH} == ""
 MACHINE_ARCH=		${LOWER_ARCH}
 MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH:Q}
