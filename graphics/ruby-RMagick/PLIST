@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/01/04 03:05:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/01/12 04:35:47 obache Exp $
 ${RUBY_SITEARCHLIBDIR}/RMagick2.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/RMagick.rb
 ${RUBY_SITELIBDIR}/rvg/clippath.rb
@@ -15,6 +15,7 @@ ${RUBY_SITELIBDIR}/rvg/stylable.rb
 ${RUBY_SITELIBDIR}/rvg/text.rb
 ${RUBY_SITELIBDIR}/rvg/transformable.rb
 ${RUBY_SITELIBDIR}/rvg/units.rb
+${RUBY_EXAMPLESDIR}/RMagick/constitute.rb
 ${RUBY_EXAMPLESDIR}/RMagick/crop_with_gravity.rb
 ${RUBY_EXAMPLESDIR}/RMagick/demo.rb
 ${RUBY_EXAMPLESDIR}/RMagick/describe.rb
@@ -30,14 +31,12 @@ ${RUBY_EXAMPLESDIR}/RMagick/thumbnail.rb
 ${RUBY_EXAMPLESDIR}/RMagick/vignette.rb
 ${RUBY_DOCDIR}/RMagick/.rmagick
 ${RUBY_DOCDIR}/RMagick/composite_layers.rb.html
-${RUBY_DOCDIR}/RMagick/crop_resized.rb.html
 ${RUBY_DOCDIR}/RMagick/css/.rmagick
 ${RUBY_DOCDIR}/RMagick/css/doc.css
 ${RUBY_DOCDIR}/RMagick/css/popup.css
 ${RUBY_DOCDIR}/RMagick/css/ref.css
 ${RUBY_DOCDIR}/RMagick/ex/.examples
 ${RUBY_DOCDIR}/RMagick/ex/.rmagick
-${RUBY_DOCDIR}/RMagick/ex/Adispatch.rb
 ${RUBY_DOCDIR}/RMagick/ex/InitialCoords.gif
 ${RUBY_DOCDIR}/RMagick/ex/InitialCoords.rb
 ${RUBY_DOCDIR}/RMagick/ex/NewCoordSys.gif
@@ -59,7 +58,6 @@ ${RUBY_DOCDIR}/RMagick/ex/Use03.rb
 ${RUBY_DOCDIR}/RMagick/ex/ViewBox.rb
 ${RUBY_DOCDIR}/RMagick/ex/ViewBox_150x200.gif
 ${RUBY_DOCDIR}/RMagick/ex/ViewBox_300x200.gif
-${RUBY_DOCDIR}/RMagick/ex/Zconstitute.rb
 ${RUBY_DOCDIR}/RMagick/ex/adaptive_threshold.jpg
 ${RUBY_DOCDIR}/RMagick/ex/adaptive_threshold.rb
 ${RUBY_DOCDIR}/RMagick/ex/add_noise.rb
@@ -144,14 +142,11 @@ ${RUBY_DOCDIR}/RMagick/ex/composite.rb
 ${RUBY_DOCDIR}/RMagick/ex/composite_layers.gif
 ${RUBY_DOCDIR}/RMagick/ex/composite_layers.rb
 ${RUBY_DOCDIR}/RMagick/ex/composite_layers1.gif
-${RUBY_DOCDIR}/RMagick/ex/constitute.jpg
 ${RUBY_DOCDIR}/RMagick/ex/contrast.jpg
 ${RUBY_DOCDIR}/RMagick/ex/contrast.rb
 ${RUBY_DOCDIR}/RMagick/ex/crop.rb
 ${RUBY_DOCDIR}/RMagick/ex/crop_after.jpg
 ${RUBY_DOCDIR}/RMagick/ex/crop_before.jpg
-${RUBY_DOCDIR}/RMagick/ex/crop_resized.jpg
-${RUBY_DOCDIR}/RMagick/ex/crop_resized.rb
 ${RUBY_DOCDIR}/RMagick/ex/crop_with_gravity.miff
 ${RUBY_DOCDIR}/RMagick/ex/crop_with_gravity.rb
 ${RUBY_DOCDIR}/RMagick/ex/cubic01.gif
@@ -346,7 +341,6 @@ ${RUBY_DOCDIR}/RMagick/ex/pattern1.gif
 ${RUBY_DOCDIR}/RMagick/ex/pattern1.rb
 ${RUBY_DOCDIR}/RMagick/ex/pattern2.gif
 ${RUBY_DOCDIR}/RMagick/ex/pattern2.rb
-${RUBY_DOCDIR}/RMagick/ex/pixels-array
 ${RUBY_DOCDIR}/RMagick/ex/polaroid.jpg
 ${RUBY_DOCDIR}/RMagick/ex/polaroid.rb
 ${RUBY_DOCDIR}/RMagick/ex/polygon.gif
@@ -382,6 +376,10 @@ ${RUBY_DOCDIR}/RMagick/ex/rectangle.gif
 ${RUBY_DOCDIR}/RMagick/ex/rectangle.rb
 ${RUBY_DOCDIR}/RMagick/ex/reduce_noise.jpg
 ${RUBY_DOCDIR}/RMagick/ex/reduce_noise.rb
+${RUBY_DOCDIR}/RMagick/ex/resize_to_fill.jpg
+${RUBY_DOCDIR}/RMagick/ex/resize_to_fill.rb
+${RUBY_DOCDIR}/RMagick/ex/resize_to_fit.jpg
+${RUBY_DOCDIR}/RMagick/ex/resize_to_fit.rb
 ${RUBY_DOCDIR}/RMagick/ex/rvg_clippath.gif
 ${RUBY_DOCDIR}/RMagick/ex/rvg_clippath.rb
 ${RUBY_DOCDIR}/RMagick/ex/rvg_linecap.gif
@@ -511,7 +509,6 @@ ${RUBY_DOCDIR}/RMagick/ex/writing_mode02.rb
 ${RUBY_DOCDIR}/RMagick/scripts/.rmagick
 ${RUBY_DOCDIR}/RMagick/scripts/doc.js
 ${RUBY_DOCDIR}/RMagick/scripts/stripeTables.js
-${RUBY_DOCDIR}/RMagick/Adispatch.rb.html
 ${RUBY_DOCDIR}/RMagick/InitialCoords.rb.html
 ${RUBY_DOCDIR}/RMagick/NewCoordSys.rb.html
 ${RUBY_DOCDIR}/RMagick/OrigCoordSys.rb.html
@@ -522,7 +519,6 @@ ${RUBY_DOCDIR}/RMagick/Use01.rb.html
 ${RUBY_DOCDIR}/RMagick/Use02.rb.html
 ${RUBY_DOCDIR}/RMagick/Use03.rb.html
 ${RUBY_DOCDIR}/RMagick/ViewBox.rb.html
-${RUBY_DOCDIR}/RMagick/Zconstitute.rb.html
 ${RUBY_DOCDIR}/RMagick/adaptive_threshold.rb.html
 ${RUBY_DOCDIR}/RMagick/add_noise.rb.html
 ${RUBY_DOCDIR}/RMagick/affine.rb.html
@@ -649,6 +645,8 @@ ${RUBY_DOCDIR}/RMagick/rect01.rb.html
 ${RUBY_DOCDIR}/RMagick/rect02.rb.html
 ${RUBY_DOCDIR}/RMagick/rectangle.rb.html
 ${RUBY_DOCDIR}/RMagick/reduce_noise.rb.html
+${RUBY_DOCDIR}/RMagick/resize_to_fill.rb.html
+${RUBY_DOCDIR}/RMagick/resize_to_fit.rb.html
 ${RUBY_DOCDIR}/RMagick/roll.rb.html
 ${RUBY_DOCDIR}/RMagick/rotate.rb.html
 ${RUBY_DOCDIR}/RMagick/rotate_f.rb.html
