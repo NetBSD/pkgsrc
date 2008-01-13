@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6975 2008/01/13 01:28:29 wiz Exp $
+$NetBSD: TODO,v 1.6976 2008/01/13 13:16:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -835,7 +835,6 @@ Suggested package updates
 	o nfdump-1.5.6 [pkg/37705]
 	o ng-1.4.4
 	o nikto-2.0.1
-	o nkf-2.07 [pkg/37132]
 	o nmap-4.52
 	o nmh-1.2.1
 	o nomarch-1.4
