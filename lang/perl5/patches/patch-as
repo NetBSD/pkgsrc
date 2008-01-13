@@ -1,4 +1,7 @@
-$NetBSD: patch-as,v 1.1 2008/01/12 15:12:39 joerg Exp $
+$NetBSD: patch-as,v 1.2 2008/01/13 00:20:22 joerg Exp $
+
+asm/page.h is no longer installed as part of the kernel header
+page on Gentoo/Linux.
 
 --- ext/IPC/SysV/SysV.xs.orig	2008-01-12 15:55:22.000000000 +0100
 +++ ext/IPC/SysV/SysV.xs
