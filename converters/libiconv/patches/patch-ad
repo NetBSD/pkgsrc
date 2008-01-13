@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.8 2008/01/13 09:30:57 joerg Exp $
+
+Always export locale_alias as e.g. libintl expects it.
+
+--- libcharset/include/localcharset.h.build.in.orig	2008-01-12 18:20:07.000000000 +0100
++++ libcharset/include/localcharset.h.build.in
+@@ -20,7 +20,7 @@
+ #ifndef _LOCALCHARSET_H
+ #define _LOCALCHARSET_H
+ 
+-#if @HAVE_VISIBILITY@ && BUILDING_LIBCHARSET
++#if @HAVE_VISIBILITY@
+ #define LIBCHARSET_DLL_EXPORTED __attribute__((__visibility__("default")))
+ #else
+ #define LIBCHARSET_DLL_EXPORTED
