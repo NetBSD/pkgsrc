@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2007/10/31 20:06:34 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2008/01/13 06:23:04 minskim Exp $
 #
 
 DISTNAME=	libgnomeui-2.20.1.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +25,7 @@ PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
 BUILDLINK_API_DEPENDS.glib2=		glib2>=2.8.0
-BUILDLINK_API_DEPENDS.gtk2=		gtk2+>=2.9.0
+BUILDLINK_API_DEPENDS.gtk2=		gtk2+>=2.11.5
 BUILDLINK_API_DEPENDS.libbonoboui=	libbonoboui>=2.13.1
 BUILDLINK_API_DEPENDS.libgnome=		libgnome>=2.16.0
 
