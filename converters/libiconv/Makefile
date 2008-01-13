@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2007/11/29 17:05:34 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/01/13 09:30:57 joerg Exp $
 
 DISTNAME=	libiconv-1.12
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 
