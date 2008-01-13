@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1 2008/01/13 22:42:07 rillig Exp $
+
+Sun Studio C++ is very picky about the correct prototypes. It doesn't
+resolve pow(int, int) to one of pow(double, int) and pow(long double,
+int). It also cannot decide for pow(double, unsigned int) whether it
+should be pow(double, int) (which _might_ invoke undefined behavior)
+and pow(double, double).
+
+--- src/binio.cpp.orig	2004-08-18 21:41:20.000000000 +0200
++++ src/binio.cpp	2007-12-05 18:16:12.361936000 +0100
+@@ -215,9 +215,9 @@ binistream::Float binistream::ieee_singl
+     }
+ 
+   if(!exp)	// Unnormalized float values
+-    return sign * pow(2, -126) * fract * pow(2, -23);
++    return sign * pow(2.0, -126) * fract * pow(2.0, -23);
+   else		// Normalized float values
+-    return sign * pow(2, exp - 127) * (fract * pow(2, -23) + 1);
++    return sign * pow(2.0, int(exp - 127)) * (fract * pow(2.0, -23) + 1);
+ 
+   err |= Fatal; return 0.0;
+ }
+@@ -227,9 +227,9 @@ binistream::Float binistream::ieee_doubl
+   signed int	sign = data[0] >> 7 ? -1 : 1;
+   unsigned int	exp = ((unsigned int)(data[0] & 0x7f) << 4) | (data[1] >> 4),
+     fracthi4 = data[1] & 0xf;
+-  Float		fract = fracthi4 * pow(2, 48) + data[2] * pow(2, 40) + data[3] *
+-    pow(2, 32) + data[4] * pow(2, 24) + data[5] * pow(2, 16) + data[6] *
+-    pow(2, 8) + data[7];
++  Float		fract = fracthi4 * pow(2.0, 48) + data[2] * pow(2.0, 40) + data[3] *
++    pow(2.0, 32) + data[4] * pow(2.0, 24) + data[5] * pow(2.0, 16) + data[6] *
++    pow(2.0, 8) + data[7];
+ 
+   // Signed and unsigned zero
+   if(!exp && !fracthi4 && !data[2] && !data[3] && !data[4] && !data[5] &&
+@@ -254,9 +254,9 @@ binistream::Float binistream::ieee_doubl
+     }
+ 
+   if(!exp)	// Unnormalized float values
+-    return sign * pow(2, -1022) * fract * pow(2, -52);
++    return sign * pow(2.0, -1022) * fract * pow(2.0, -52);
+   else		// Normalized float values
+-    return sign * pow(2, exp - 1023) * (fract * pow(2, -52) + 1);
++    return sign * pow(2.0, int(exp - 1023)) * (fract * pow(2.0, -52) + 1);
+ 
+   err |= Fatal; return 0.0;
+ }
