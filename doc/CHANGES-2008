@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.103 2008/01/12 23:32:28 bad Exp $
+$NetBSD: CHANGES-2008,v 1.104 2008/01/13 05:42:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added comms/libsyncml version 0.4.5 [dillo 2008-01-12]
 	Added comms/libopensync-plugin-syncml version 0.22 [dillo 2008-01-12]
 	Updated lang/squeak to 3.9-8 [bad 2008-01-13]
+	Updated devel/libbonoboui to 2.20.0nb1 [minskim 2008-01-13]
