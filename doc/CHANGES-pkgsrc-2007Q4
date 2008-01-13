@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.3 2008/01/10 07:34:29 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.4 2008/01/13 14:58:50 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
@@ -11,3 +11,5 @@ Pullup ticket 2258 - requested by sketch
 build fix for libiconv
 Pullup ticket 2259 - requested by adam
 security updates for postgresql
+Pullup ticket 2260 - requested by tron
+security update for sun-jdk/jre15
