@@ -1,21 +1,18 @@
-$NetBSD: patch-be,v 1.2 2007/08/28 14:08:22 tron Exp $
+$NetBSD: patch-be,v 1.3 2008/01/13 17:15:17 ghen Exp $
 
---- servers/slapd/overlays/Makefile.in.orig	2007-08-24 05:35:05.000000000 +0200
-+++ servers/slapd/overlays/Makefile.in	2007-08-24 05:35:38.000000000 +0200
-@@ -24,8 +24,9 @@
- 	ppolicy.c \
- 	refint.c \
+--- servers/slapd/overlays/Makefile.in.orig	2007-10-23 23:25:37.000000000 +0200
++++ servers/slapd/overlays/Makefile.in
+@@ -27,6 +27,7 @@ SRCS = overlays.c \
  	retcode.c \
  	rwm.c rwmconf.c rwmdn.c rwmmap.c \
+ 	seqmod.c \
 +	smbk5pwd.c \
  	syncprov.c \
  	translucent.c \
  	unique.c \
- 	valsort.c
-@@ -92,8 +93,11 @@
- 
- rwm.la : rwm.lo rwmconf.lo rwmdn.lo rwmmap.lo
- 	$(LTLINK_MOD) -module -o $@ rwm.lo rwmconf.lo rwmdn.lo rwmmap.lo version.lo $(LINK_LIBS)
+@@ -101,6 +102,9 @@ rwm.la : rwm.lo rwmconf.lo rwmdn.lo rwmm
+ seqmod.la : seqmod.lo
+ 	$(LTLINK_MOD) -module -o $@ seqmod.lo version.lo $(LINK_LIBS)
  
 +smbk5pwd.la : smbk5pwd.lo
 +	$(LTLINK_MOD) -module -o $@ smbk5pwd.lo version.lo $(LINK_LIBS)
@@ -23,4 +20,3 @@ $NetBSD: patch-be,v 1.2 2007/08/28 14:08:22 tron Exp $
  syncprov.la : syncprov.lo
  	$(LTLINK_MOD) -module -o $@ syncprov.lo version.lo $(LINK_LIBS)
  
- translucent.la : translucent.lo

@@ -1,40 +1,33 @@
-$NetBSD: patch-bd,v 1.2 2007/08/28 14:08:22 tron Exp $
+$NetBSD: patch-bd,v 1.3 2008/01/13 17:15:17 ghen Exp $
 
---- configure.in.orig	2007-08-24 05:32:07.000000000 +0200
-+++ configure.in	2007-08-24 05:34:02.000000000 +0200
-@@ -350,8 +350,9 @@
- 	proxycache \
- 	refint \
+--- configure.in.orig	2007-10-17 01:43:09.000000000 +0200
++++ configure.in
+@@ -338,6 +338,7 @@ Overlays="accesslog \
  	retcode \
  	rwm \
+ 	seqmod \
 +	smbk5pwd \
  	syncprov \
  	translucent \
  	unique \
- 	valsort"
-@@ -382,8 +383,10 @@
- OL_ARG_ENABLE(retcode,[    --enable-retcode	  Return Code testing overlay],
+@@ -374,6 +375,8 @@ OL_ARG_ENABLE(rwm,[    --enable-rwm     
  	no, [no yes mod], ol_enable_overlays)
- OL_ARG_ENABLE(rwm,[    --enable-rwm       	  Rewrite/Remap overlay],
- 	no, [no yes mod], ol_enable_overlays)
+ OL_ARG_ENABLE(seqmod,[    --enable-seqmod	  Sequential Modify overlay],
+ 	yes, [no yes mod], ol_enable_overlays)
 +OL_ARG_ENABLE(smbk5pwd,[    --enable-smbk5pwd	  smbk5pwd overlay],
 +	yes, [no yes mod], ol_enable_overlays)
  OL_ARG_ENABLE(syncprov,[    --enable-syncprov	  Syncrepl Provider overlay],
  	yes, [no yes mod], ol_enable_overlays)
  OL_ARG_ENABLE(translucent,[    --enable-translucent  Translucent Proxy overlay],
- 	no, [no yes mod], ol_enable_overlays)
-@@ -627,8 +630,9 @@
- BUILD_PROXYCACHE=no
- BUILD_REFINT=no
+@@ -536,6 +539,7 @@ BUILD_REFINT=no
  BUILD_RETCODE=no
  BUILD_RWM=no
+ BUILD_SEQMOD=no
 +BUILD_SMBK5PWD=no
  BUILD_SYNCPROV=no
  BUILD_TRANSLUCENT=no
  BUILD_UNIQUE=no
- BUILD_VALSORT=no
-@@ -2981,8 +2985,20 @@
- 	fi
+@@ -2793,6 +2797,18 @@ if test "$ol_enable_rwm" != no ; then
  	AC_DEFINE_UNQUOTED(SLAPD_OVER_RWM,$MFLAG,[define for Rewrite/Remap overlay])
  fi
  
@@ -50,17 +43,14 @@ $NetBSD: patch-bd,v 1.2 2007/08/28 14:08:22 tron Exp $
 +	AC_DEFINE_UNQUOTED(SLAPD_OVER_SMBK5PWD,$MFLAG,[define for smbk5pwd overlay])
 +fi
 +
- if test "$ol_enable_syncprov" != no ; then
- 	BUILD_SYNCPROV=$ol_enable_syncprov
- 	if test "$ol_enable_syncprov" = mod ; then
- 		MFLAG=SLAPD_MOD_DYNAMIC
-@@ -3099,8 +3115,9 @@
-   AC_SUBST(BUILD_PROXYCACHE)
-   AC_SUBST(BUILD_REFINT)
+ if test "$ol_enable_seqmod" != no ; then
+ 	BUILD_SEQMOD=$ol_enable_seqmod
+ 	if test "$ol_enable_seqmod" = mod ; then
+@@ -2920,6 +2936,7 @@ dnl overlays
    AC_SUBST(BUILD_RETCODE)
    AC_SUBST(BUILD_RWM)
+   AC_SUBST(BUILD_SEQMOD)
 +  AC_SUBST(BUILD_SMBK5PWD)
    AC_SUBST(BUILD_SYNCPROV)
    AC_SUBST(BUILD_TRANSLUCENT)
    AC_SUBST(BUILD_UNIQUE)
-   AC_SUBST(BUILD_VALSORT)
