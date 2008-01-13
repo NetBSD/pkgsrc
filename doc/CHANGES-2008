@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.105 2008/01/13 06:23:40 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.106 2008/01/13 13:14:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/squeak to 3.9-8 [bad 2008-01-13]
 	Updated devel/libbonoboui to 2.20.0nb1 [minskim 2008-01-13]
 	Updated devel/libgnomeui to 2.20.1.1nb1 [minskim 2008-01-13]
+	Updated converters/nkf to 2.08b [obache 2008-01-13]
