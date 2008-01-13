@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2007/11/21 21:40:25 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2008/01/13 15:28:32 wiz Exp $
 
---- src/mp4_tag.c.orig	2007-11-19 19:27:42.000000000 +0100
-+++ src/mp4_tag.c
-@@ -185,7 +185,7 @@ gboolean Mp4tag_Read_File_Tag (gchar *fi
-      * Picture *
-      ***********/
-     // There is only one picture!
--    if ( MP4GetMetadataCoverArt( mp4file, &coverArt, &coverSize ) )
-+    if ( MP4GetMetadataCoverArt( mp4file, &coverArt, &coverSize, 0 ) )
-     {
-         Picture *pic = Picture_Allocate();
-         pic->size = coverSize;
+--- src/et_core.c.orig	2007-12-05 20:03:34.000000000 +0000
++++ src/et_core.c
+@@ -22,6 +22,7 @@
+ 
+ #include <gtk/gtk.h>
+ #include <glib/gi18n-lib.h>
++#include <locale.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
