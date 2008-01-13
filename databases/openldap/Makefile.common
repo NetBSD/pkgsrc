@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2008/01/04 11:42:29 ghen Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/01/13 17:15:16 ghen Exp $
 
 # please stick to the "stable" releases as much as possible!
-DISTNAME=		openldap-2.3.39
+DISTNAME=		openldap-2.4.7
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 MASTER_SITES+=		http://www.openldap.org/software/download/OpenLDAP/openldap-release/
@@ -41,11 +41,10 @@ OPENLDAP_MODULEDIR=	${PREFIX}/lib/openldap
 OPENLDAP_VARDIR?=	${VARBASE}/openldap
 
 SLAPD_USER?=		slapd
-SLURPD_USER?=		slurpd
 LDAP_GROUP?=		ldap
 
 PKG_GROUPS_VARS+=	LDAP_GROUP
-PKG_USERS_VARS+=	SLAPD_USER SLURPD_USER
+PKG_USERS_VARS+=	SLAPD_USER
 
 # the internal avl_* prototypes conflict with those in <sys/avl.h> which
 # is included by another system header file on Solaris, so subst them.
