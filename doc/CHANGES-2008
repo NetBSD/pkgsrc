@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.107 2008/01/13 17:16:12 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.108 2008/01/13 19:25:58 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -169,3 +169,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-client to 2.4.7 [ghen 2008-01-13]
 	Updated databases/openldap-doc to 2.4.7 [ghen 2008-01-13]
 	Updated databases/openldap-server to 2.4.7 [ghen 2008-01-13]
+	Updated textproc/hevea to 1.10 [tonio 2008-01-13]
