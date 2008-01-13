@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2007/12/20 21:21:16 jdolecek Exp $
+# $NetBSD: Makefile,v 1.310 2008/01/13 20:20:33 adrianp Exp $
 #
 
 COMMENT=	Security tools
@@ -20,7 +20,6 @@ SUBDIR+=	ap-modsecurity
 SUBDIR+=	ap-modsecurity2
 SUBDIR+=	apg
 SUBDIR+=	arirang
-SUBDIR+=	audit-packages
 SUBDIR+=	avcheck
 SUBDIR+=	base
 SUBDIR+=	bcrypt
