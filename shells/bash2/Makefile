@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/01/03 23:18:39 heinz Exp $
+# $NetBSD: Makefile,v 1.77 2008/01/13 23:08:35 rillig Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -28,6 +28,7 @@ MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:${LOCALBASE}/bin:/usr/local/bin\""
 TEST_TARGET=		test
 MAKE_JOBS_SAFE=		no
+BROKEN_GETTEXT_DETECTION=	yes
 
 PKG_SHELL=		bin/bash
 
