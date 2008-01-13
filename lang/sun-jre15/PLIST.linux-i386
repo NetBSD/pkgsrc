@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.5 2007/08/27 21:51:23 jlam Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.5.4.1 2008/01/13 14:54:32 ghen Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -308,6 +308,7 @@ java/sun-1.5/lib/zi/America/Indiana/Indianapolis
 java/sun-1.5/lib/zi/America/Indiana/Knox
 java/sun-1.5/lib/zi/America/Indiana/Marengo
 java/sun-1.5/lib/zi/America/Indiana/Petersburg
+java/sun-1.5/lib/zi/America/Indiana/Tell_City
 java/sun-1.5/lib/zi/America/Indiana/Vevay
 java/sun-1.5/lib/zi/America/Indiana/Vincennes
 java/sun-1.5/lib/zi/America/Indiana/Winamac
