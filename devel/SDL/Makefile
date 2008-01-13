@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2007/12/17 20:40:00 tron Exp $
+# $NetBSD: Makefile,v 1.81 2008/01/13 15:57:59 wiz Exp $
 
-DISTNAME=	SDL-1.2.12
+DISTNAME=	SDL-1.2.13
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
