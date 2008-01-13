@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.106 2008/01/13 13:14:07 obache Exp $
+$NetBSD: CHANGES-2008,v 1.107 2008/01/13 17:16:12 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -165,3 +165,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libbonoboui to 2.20.0nb1 [minskim 2008-01-13]
 	Updated devel/libgnomeui to 2.20.1.1nb1 [minskim 2008-01-13]
 	Updated converters/nkf to 2.08b [obache 2008-01-13]
+	Updated databases/openldap to 2.4.7 [ghen 2008-01-13]
+	Updated databases/openldap-client to 2.4.7 [ghen 2008-01-13]
+	Updated databases/openldap-doc to 2.4.7 [ghen 2008-01-13]
+	Updated databases/openldap-server to 2.4.7 [ghen 2008-01-13]
