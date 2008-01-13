@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2008/01/03 13:51:28 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/01/13 19:24:49 tonio Exp $
 
-DISTNAME=	hevea-1.09
+DISTNAME=	hevea-1.10
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/moscova/hevea/
 
