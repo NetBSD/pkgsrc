@@ -1,11 +1,10 @@
-$NetBSD: patch-bh,v 1.2 2007/08/28 14:08:22 tron Exp $
+$NetBSD: patch-bh,v 1.3 2008/01/13 17:15:17 ghen Exp $
 
---- include/portable.hin.orig	2007-08-24 18:05:46.000000000 +0200
-+++ include/portable.hin	2007-08-24 18:06:10.000000000 +0200
-@@ -1001,8 +1001,11 @@
- 
- /* define for Rewrite/Remap overlay */
- #undef SLAPD_OVER_RWM
+--- include/portable.hin.orig	2007-09-01 01:13:53.000000000 +0200
++++ include/portable.hin
+@@ -987,6 +987,9 @@
+ /* define for Sequential Modify overlay */
+ #undef SLAPD_OVER_SEQMOD
  
 +/* define for smbk5pwd overlay */
 +#undef SLAPD_OVER_SMBK5PWD
@@ -13,4 +12,3 @@ $NetBSD: patch-bh,v 1.2 2007/08/28 14:08:22 tron Exp $
  /* define for Syncrepl Provider overlay */
  #undef SLAPD_OVER_SYNCPROV
  
- /* define for Translucent Proxy overlay */
