@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2006/01/10 19:50:46 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2008/01/13 21:20:58 tonio Exp $
 
---- src/btlist.c.orig	2006-01-10 19:47:43.000000000 +0000
+--- src/btlist.c.orig	2005-12-10 00:50:12.000000000 +0100
 +++ src/btlist.c
-@@ -1,5 +1,6 @@
+@@ -13,6 +13,7 @@
+ 
  #include "config.h"
  
 +#include <sys/types.h>
