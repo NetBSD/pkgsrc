@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.46 2007/03/07 11:31:24 drochner Exp $
+$NetBSD: distinfo,v 1.47 2008/01/13 16:23:55 wiz Exp $
 
-SHA1 (gnupg-1.4.7.tar.bz2) = 22149105845c79068771837c8deb7d5ba0854927
-RMD160 (gnupg-1.4.7.tar.bz2) = 630344c99834cf9adcf806d55e6f609a1e50bd8b
-Size (gnupg-1.4.7.tar.bz2) = 3200642 bytes
+SHA1 (gnupg-1.4.8.tar.bz2) = 4b63267358e5c70f05b48e27d6877bad2636cabd
+RMD160 (gnupg-1.4.8.tar.bz2) = 75228c02ea1999494232cb2eb2107951d1602c4d
+Size (gnupg-1.4.8.tar.bz2) = 3320100 bytes
 SHA1 (idea.c.gz) = 82fded4ec31b97b3b2dd22741880b67cfee40f84
 RMD160 (idea.c.gz) = e35be5a031d10d52341ac5f029d28f811edd908d
 Size (idea.c.gz) = 5216 bytes
