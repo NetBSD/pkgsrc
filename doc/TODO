@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6980 2008/01/14 00:38:29 wiz Exp $
+$NetBSD: TODO,v 1.6981 2008/01/14 19:24:44 tnn Exp $
 
 Suggested new packages
 ======================
@@ -861,8 +861,7 @@ Suggested package updates
 	o openldap-client-2.4.7
 	o openmortal-0.7.1
 	o openmotif-2.3
-	o openssl-0.9.8e [in wip]
-	o openssl-0.9.8g
+	o openssl-0.9.8g [in wip]
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o osh-20080109
