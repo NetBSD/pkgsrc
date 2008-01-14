@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2007/11/30 21:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/14 23:19:52 wiz Exp $
 
-DISTNAME=		digikam-0.9.2
-PKGREVISION=		2
+DISTNAME=		digikam-0.9.3
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,7 +18,8 @@ REPLACE_PERL+=		digikam/utilities/scripts/digitaglinktree
 
 BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
-BUILDLINK_API_DEPENDS.libkexiv2+=	libkexiv2>=0.1.5
+BUILDLINK_API_DEPENDS.libkexiv2+=	libkexiv2>=0.1.6
+BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.2
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
