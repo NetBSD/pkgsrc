@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/05 10:36:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/14 18:57:40 adam Exp $
+share/doc/exim/html/filter-txt.html
 share/doc/exim/html/filter.html
 share/doc/exim/html/index.html
-share/doc/exim/html/pcrepattern.html
-share/doc/exim/html/pcretest.html
+share/doc/exim/html/spec-txt.html
 share/doc/exim/html/spec_html/ch01.html
 share/doc/exim/html/spec_html/ch02.html
 share/doc/exim/html/spec_html/ch03.html
