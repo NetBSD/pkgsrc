@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.112 2008/01/14 13:57:43 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.113 2008/01/14 19:00:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -217,3 +217,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/py-gtk2 to 2.12.1 [drochner 2008-01-14]
 	Updated devel/py-gobject to 2.14.1 [drochner 2008-01-14]
 	Updated textproc/intltool to 0.36.3 [drochner 2008-01-14]
+	Updated mail/exim to 4.69 [adam 2008-01-14]
+	Updated mail/exim-html to 4.69 [adam 2008-01-14]
+	Updated databases/slony1 to 1.2.12 [adam 2008-01-14]
