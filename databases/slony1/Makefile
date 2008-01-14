@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2007/04/10 21:59:02 rmind Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/14 18:58:02 adam Exp $
 
-DISTNAME=	slony1-1.2.9
+DISTNAME=	slony1-1.2.12
 CATEGORIES=	databases
-MASTER_SITES=	http://www.slony.info/downloads/1.2/source/
+MASTER_SITES=	http://slony.info/downloads/1.2/source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://gborg.postgresql.org/project/slony1/projdisplay.php
+HOMEPAGE=	http://main.slony.info/
 COMMENT=	Replication system for PostgreSQL
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-pgconfigdir=${PGSQL_PREFIX:Q}/bin
 CONFIGURE_ARGS+=	--with-pgbindir=${PGSQL_PREFIX:Q}/bin
