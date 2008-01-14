@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2008/01/12 23:30:38 bad Exp $
+# $NetBSD: Makefile,v 1.35 2008/01/14 20:39:34 bad Exp $
 #
 
 DISTNAME=	Squeak-3.9-8
 PKGNAME=	squeak-3.9.8
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.squeak.org/3.9/unix-linux/
 DISTFILES=	Squeak-3.9-8.src.tar.gz
@@ -45,8 +46,8 @@ pre-configure:
 	${MKDIR} ${CONFIGURE_DIRS}
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_CHANGES}.gz ${DESTDIR}${PREFIX}/lib/squeak/
-	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_IMAGE}.gz ${DESTDIR}${PREFIX}/lib/squeak/
+	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_CHANGES} ${DESTDIR}${PREFIX}/lib/squeak/
+	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_IMAGE} ${DESTDIR}${PREFIX}/lib/squeak/
 	${INSTALL_DATA} ${WRKDIR}/${SQUEAK_SOURCES} ${DESTDIR}${PREFIX}/lib/squeak/
 	cd ${DESTDIR}${PREFIX}/lib/squeak						\
 	    && ${LN} -s ${SQUEAK_CHANGES:C/.*\///} squeak.changes.gz	\
