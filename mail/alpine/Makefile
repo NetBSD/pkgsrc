@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/01/01 16:05:13 abs Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/14 15:09:14 jwise Exp $
 #
 
 DISTNAME=	alpine-1.00
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
+DIST_SUBDIR=	alpine
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
@@ -23,7 +24,7 @@ USE_LIBTOOL=	yes
 INSTALLATION_DIRS=	bin ${PKMANDIR}/man1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.alpine
-PKG_SUPPORTED_OPTIONS=	pinepwd
+PKG_SUPPORTED_OPTIONS=	pinepwd fancythreads
 PKG_SUGGESTED_OPTIONS=	pinepwd
 
 .include "../../mk/bsd.options.mk"
@@ -34,6 +35,12 @@ CONFIGURE_ARGS+= --without-pthread
 
 .if !empty(PKG_OPTIONS:Mpinepwd)
 CONFIGURE_ARGS+= --with-passfile=.pinepwd
+.endif
+
+.if !empty(PKG_OPTIONS:Mfancythreads)
+PATCH_SITES+=		http://staff.washington.edu/chappa/alpine/patches/alpine-1.00/
+PATCHFILES+=		fancy.patch.gz
+PATCH_DIST_STRIP=	-p1
 .endif
 
 do-install:
