@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2008/01/14 06:50:52 tnn Exp $
+
+--- src/XlibInt.c.orig	2007-07-21 10:45:39.000000000 +0200
++++ src/XlibInt.c
+@@ -138,6 +138,10 @@ xthread_t (*_Xthread_self_fn)(void) = NU
+ #ifdef ISC
+ #define ECHECK(err) ((errno == err) || ETEST())
+ #else
++#ifdef __hpux
++#define ECHECK(err) ((errno == err) || ETEST())
++#define SUNSYSV 1
++#else
+ #define ECHECK(err) (errno == err)
+ #endif
+ #define ESET(val) errno = val
