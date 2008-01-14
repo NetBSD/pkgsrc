@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/11/25 12:41:36 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2008/01/14 23:07:10 tnn Exp $
 
 DISTNAME=	openbox-3.4.4
 PKGREVISION=	1
@@ -18,6 +18,7 @@ USE_DIRS+=		gnome2-1.5 xdg-1.4
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_FEATURES+=		setenv
 
 PKGCONFIG_OVERRIDE=	parser/obparser-3.0.pc.in
 PKGCONFIG_OVERRIDE+=	render/obrender-3.0.pc.in
@@ -36,7 +37,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libsetenv/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
