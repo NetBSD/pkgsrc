@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6981 2008/01/14 19:24:44 tnn Exp $
+$NetBSD: TODO,v 1.6982 2008/01/14 23:31:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -431,7 +431,6 @@ Suggested package updates
 	o devhelp-0.17
 	o dhcp-4.0.0 [DHCP6 supported.  as dhcp4?]
 	o dhid-5.3
-	o digikam-0.9.3
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.8.0
