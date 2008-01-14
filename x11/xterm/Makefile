@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/11/23 14:23:34 bjs Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/14 06:16:48 tnn Exp $
 
 DISTNAME=	xterm-229
 CATEGORIES=	x11
@@ -30,24 +30,6 @@ CONFIGURE_ARGS+= --enable-wide-chars
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+= --with-setuid
 .endif
-
-#.#if ${OPSYS} == "SunOS"
-#INSTALL_FILE=	${WRKDIR}/INSTALL
-#DEINSTALL_FILE=	${INSTALL_FILE}
-
-pre-build:
-	${MKDIR} ${INSTALL_FILE:H}
-	${SED} -e 's#@MV@#${MV}#g' \
-	  -e 's#@LOCALBASE@#${LOCALBASE}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  ${PKGDIR}/INSTALL.openwin >${INSTALL_FILE}
-
-pre-install:
-	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install:
-	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-#.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
