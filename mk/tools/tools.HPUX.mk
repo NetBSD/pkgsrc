@@ -1,4 +1,4 @@
-# $NetBSD: tools.HPUX.mk,v 1.2 2007/07/18 09:18:57 tnn Exp $
+# $NetBSD: tools.HPUX.mk,v 1.3 2008/01/14 08:03:47 tnn Exp $
 #
 # System-supplied tools for the HP-UX operating system.
 
@@ -36,9 +36,6 @@ TOOLS_PLATFORM.ln?=		/bin/ln
 TOOLS_PLATFORM.ls?=		/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/bin/m4
 TOOLS_PLATFORM.mail?=		/usr/bin/mailx
-.if defined(X11_TYPE) && !empty(X11_TYPE:Mnative) && exists(/opt/imake/bin/makedepend)
-TOOLS_PLATFORM.makedepend?=	/opt/imake/bin/makedepend
-.endif
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
