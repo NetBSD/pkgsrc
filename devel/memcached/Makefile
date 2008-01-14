@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/08/30 19:33:55 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/14 16:00:59 ghen Exp $
 #
 
 DISTNAME=	memcached-1.2.2
@@ -23,4 +23,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/libevent/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.0
 .include "../../mk/bsd.pkg.mk"
