@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.113 2008/01/14 19:00:17 adam Exp $
+$NetBSD: CHANGES-2008,v 1.114 2008/01/14 23:12:19 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/exim to 4.69 [adam 2008-01-14]
 	Updated mail/exim-html to 4.69 [adam 2008-01-14]
 	Updated databases/slony1 to 1.2.12 [adam 2008-01-14]
+	Removed devel/libsetenv [tnn 2008-01-15]
