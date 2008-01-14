@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6979 2008/01/14 00:16:33 wiz Exp $
+$NetBSD: TODO,v 1.6980 2008/01/14 00:38:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -563,7 +563,6 @@ Suggested package updates
 	o gnome-terminal-2.18.4
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.3
 	o gnupg2-2.0.8
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
