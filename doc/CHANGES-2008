@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.110 2008/01/14 00:10:19 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.111 2008/01/14 00:38:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-server to 2.4.7 [ghen 2008-01-13]
 	Updated textproc/hevea to 1.10 [tonio 2008-01-13]
 	Removed security/audit-packages successor pkgtools/pkg_install [adrianp 2008-01-13]
+	Updated finance/gnucash to 2.2.3 [wiz 2008-01-14]
