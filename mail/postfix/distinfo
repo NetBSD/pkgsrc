@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.114 2007/10/22 06:15:19 martti Exp $
+$NetBSD: distinfo,v 1.115 2008/01/14 13:29:24 ghen Exp $
 
+SHA1 (postfix/postfix-2.4-stress-patch.gz) = fa0f7f01358c8dde1757f1c98806bb1585e487c3
+RMD160 (postfix/postfix-2.4-stress-patch.gz) = 0f96dda904a40a60cd1e26d20ad3cee0af4a4e7d
+Size (postfix/postfix-2.4-stress-patch.gz) = 2947 bytes
 SHA1 (postfix/postfix-2.4.6.tar.gz) = 226222707fd8d963d3173070cac96370c453ffa7
 RMD160 (postfix/postfix-2.4.6.tar.gz) = 115b3a4eb982701e29db2e52e294ec8ee69bdae5
 Size (postfix/postfix-2.4.6.tar.gz) = 2935249 bytes

@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.25 2007/04/29 19:27:35 tron Exp $
+# $NetBSD: options.mk,v 1.26 2008/01/14 13:29:25 ghen Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls dovecot-sasl
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls dovecot-sasl postfix-stress
 PKG_SUGGESTED_OPTIONS=	tls
 
 .include "../../mk/bsd.options.mk"
@@ -109,4 +109,13 @@ PLIST_SUBST+=	SASL="@comment "
 DEPENDS+=	dovecot-[0-9]*:../../mail/dovecot
 
 CCARGS+=	-DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\"dovecot\"
+.endif
+
+###
+### Postfix stress-adaptive behaviour, back-ported from Postfix 2.5
+### See http://www.postfix.org/STRESS_README.html#adapt
+###
+.if !empty(PKG_OPTIONS:Mpostfix-stress)
+PATCHFILES=	postfix-2.4-stress-patch.gz
+PATCH_SITES=	${MASTER_SITES}
 .endif
