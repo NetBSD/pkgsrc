@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2008/01/11 13:05:14 drochner Exp $
+$NetBSD: distinfo,v 1.43 2008/01/14 12:50:16 drochner Exp $
 
 SHA1 (evolution-data-server-1.12.3.tar.bz2) = 12b8b23fb77ff6436def3cc5ea472886c8e0350e
 RMD160 (evolution-data-server-1.12.3.tar.bz2) = c7102c38af4888f3f8933c9d28981d1809d504f8
@@ -11,3 +11,4 @@ SHA1 (patch-aq) = 375d592b72f59fa70160bf23aa260338d350c517
 SHA1 (patch-ar) = b6b92b068f94954d435cff11543a4de7d07712ac
 SHA1 (patch-as) = 6aca887951562eb26d2e3de0ef0f0d909c0ce886
 SHA1 (patch-at) = 2b94015299ab7a97aca4c9edda8dd3794b07437b
+SHA1 (patch-au) = 6b6ad9dd3120924e932f893dbb396e05e4c44fb4
