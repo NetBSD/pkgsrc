@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.109 2008/01/13 20:26:13 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.110 2008/01/14 00:10:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -165,6 +165,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libbonoboui to 2.20.0nb1 [minskim 2008-01-13]
 	Updated devel/libgnomeui to 2.20.1.1nb1 [minskim 2008-01-13]
 	Updated converters/nkf to 2.08b [obache 2008-01-13]
+	Updated audio/easytag-current to 2.1.4 [wiz 2008-01-13]
+	Updated graphics/png to 1.2.24 [wiz 2008-01-13]
+	Updated devel/SDL to 1.2.13 [wiz 2008-01-13]
+	Updated games/monsterz to 0.7.1 [wiz 2008-01-13]
+	Updated security/gnupg to 1.4.8 [wiz 2008-01-13]
 	Updated databases/openldap to 2.4.7 [ghen 2008-01-13]
 	Updated databases/openldap-client to 2.4.7 [ghen 2008-01-13]
 	Updated databases/openldap-doc to 2.4.7 [ghen 2008-01-13]
