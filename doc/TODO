@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6977 2008/01/13 19:25:58 tonio Exp $
+$NetBSD: TODO,v 1.6978 2008/01/14 00:10:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
 	o RealPlayerGold-10.0.9.809.20070726 [pkg/37371]
-	o SDL-1.2.13
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.6.12
 	o TiffIO-130e
@@ -449,7 +448,6 @@ Suggested package updates
 	o dvipng-1.9
 	o eagle-4.16
 	o easymenu-0.7.2p1
-	o easytag-current-2.1.4
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ed-0.8
@@ -566,7 +564,6 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.3
-	o gnupg-1.4.8
 	o gnupg2-2.0.8
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
@@ -799,7 +796,6 @@ Suggested package updates
 	o moc-2.4.3
 	o modular-xorg-server-1.4
 	o mono-1.2.6
-	o monsterz-0.7.1
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
@@ -1011,7 +1007,6 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
-	o png-1.2.24
 	o pngcheck-2.3.0
 	o po4a-0.29
 	o poedit-1.3.9
