@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.1.1.1 2005/12/17 19:26:26 markd Exp $
+$NetBSD: patch-af,v 1.2 2008/01/14 09:46:45 yyamano Exp $
 
---- htsearch/htsearch.cc.orig	2004-05-29 01:15:24.000000000 +1200
+--- htsearch/htsearch.cc.orig	2004-05-28 22:15:24.000000000 +0900
 +++ htsearch/htsearch.cc
+@@ -68,7 +68,7 @@ StringList              collectionList; 
+ // reconised word prefixes (for field-restricted search and per-word fuzzy
+ // algorithms) in *descending* alphabetical order.
+ // Don't use a dictionary structure, as setup time outweights saving.
+-struct {char *name; unsigned int flag; } colonPrefix [] =
++static struct {char *name; unsigned int flag; } colonPrefix [] =
+ {
+     { "url",     FLAG_URL },
+     { "title",   FLAG_TITLE },
 @@ -211,8 +211,7 @@ main(int ac, char **av)
  	}
  	if (access((char*)configFile, R_OK) < 0)
