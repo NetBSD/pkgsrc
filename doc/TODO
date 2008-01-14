@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6978 2008/01/14 00:10:20 wiz Exp $
+$NetBSD: TODO,v 1.6979 2008/01/14 00:16:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -848,6 +848,7 @@ Suggested package updates
 	o nvi-1.81.6
 	o nxtvepg-2.8.0
 	o objc-3.2.8
+	o ocaml-3.10.1
 	o ocamlnet-2.2.4
 	o ocrad-0.17
 	o odbc-postgresql-8.2.3
@@ -1195,6 +1196,7 @@ Suggested package updates
 	o sympa-5.3.4
 	o sysinfo-4.2.2
 	o systrace-1.6e
+	o t1utils-1.33
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
 	o tcl-8.5
