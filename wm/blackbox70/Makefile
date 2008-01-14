@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/19 10:01:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/14 02:04:58 rillig Exp $
 #
 
 DISTNAME=	blackbox-0.70.1
@@ -16,6 +16,7 @@ CONFLICTS+=	blackbox-*
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 BUILDLINK_DEPMETHOD.libXt?=	build
