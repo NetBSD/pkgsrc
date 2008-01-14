@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2008/01/14 02:04:41 rillig Exp $
+
+Sunpro has problems with a non-const const_reverse_iterator.
+
+--- src/Screen.cc.orig	2005-10-18 10:07:22.000000000 +0200
++++ src/Screen.cc	2007-12-05 16:25:38.677507000 +0100
+@@ -492,8 +492,8 @@ void BScreen::setCurrentWorkspace(unsign
+ 
+     // withdraw windows in reverse order to minimize the number of
+     // Expose events
+-    StackingList::const_reverse_iterator it = _stackingList.rbegin();
+-    const StackingList::const_reverse_iterator end = _stackingList.rend();
++    StackingList::reverse_iterator it = _stackingList.rbegin();
++    const StackingList::reverse_iterator end = _stackingList.rend();
+     for (; it != end; ++it) {
+       BlackboxWindow *win = dynamic_cast<BlackboxWindow *>(*it);
+       if (win && win->workspace() == current_workspace)
