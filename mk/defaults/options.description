@@ -212,6 +212,7 @@ pgsql			Enable PostgreSQL support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 png			Enable PNG support.
+postfix-stress		Enable Postfix stress-adaptive behaviour.
 proftpd-readme		Enable mod_readme.
 psycopg1		Enable psycopg 1.1.x support
 psycopg2		Enable psycopg 2.x support
