@@ -1,8 +1,8 @@
-#	$NetBSD: HPUX.sys.mk,v 1.2 2008/01/14 05:08:52 tnn Exp $
+#	$NetBSD: HPUX.sys.mk,v 1.3 2008/01/14 05:14:59 tnn Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
-OS!=		HPUX
+OS?=		HPUX
 
 .SUFFIXES: .out .a .ln .o .s .S .c .cc .cpp .cxx .C .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
