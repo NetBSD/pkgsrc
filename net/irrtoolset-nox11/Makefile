@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/01/07 15:33:02 spz Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/14 12:39:54 spz Exp $
 #
 
 DISTNAME=		IRRToolSet-4.8.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=		net
 MASTER_SITES=	ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-4.8.5/
 

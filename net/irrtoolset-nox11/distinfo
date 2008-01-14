@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2008/01/07 15:33:02 spz Exp $
+$NetBSD: distinfo,v 1.16 2008/01/14 12:39:54 spz Exp $
 
 SHA1 (IRRToolSet-4.8.5.tar.gz) = 0a22daef3c5c04b5bce929e420233885c44662ec
 RMD160 (IRRToolSet-4.8.5.tar.gz) = 3f6a291a1c33c2725325ebc51ab8306e7a1e743b
@@ -48,8 +48,7 @@ SHA1 (patch-df) = 176d2186b72c40334190d5635677104241c06e74
 SHA1 (patch-dg) = 5f3fe95a69cdf1d3eb13b4e2a3a3fce1f4c53168
 SHA1 (patch-dh) = ce1218fe7d82e3bb5c470cd74b334400aebd1928
 SHA1 (patch-di) = ab0fa75329575141844ff55698a21060c2b62e43
-SHA1 (patch-dj) = a93a4c30a26379e51307faf55158a132bf9ff575
+SHA1 (patch-dj) = 25258cbb8e544f0eda9ed6ac4f9f61825266bfdd
 SHA1 (patch-dk) = a1632fa3030ee483c99af5ef039e494295af0b7f
 SHA1 (patch-dl) = 85ab29170a0ce1f82f3058bd58b00c779684fbca
 SHA1 (patch-dm) = 7d65970aea11d00dd1867aa07c3ee970d26b3b73
-SHA1 (patch-dn) = ef4b17979cc7ffddadcbcf64847339020ac53f34
