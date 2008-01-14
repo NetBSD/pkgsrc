@@ -1,21 +1,8 @@
-$NetBSD: patch-dj,v 1.2 2008/01/05 14:35:22 spz Exp $
+$NetBSD: patch-dj,v 1.3 2008/01/14 12:39:55 spz Exp $
 
 --- src/irr/rawhoisc.cc.orig	2007-02-13 01:25:01.000000000 +0100
 +++ src/irr/rawhoisc.cc
-@@ -516,6 +516,12 @@ bool RAWhoisClient::getAutNum(char *as, 
-    return len;
- }
- 
-+// get asset or rsset
-+bool RAWhoisClient::getASSet(SymID sname, char *&text, int &len) {
-+   len = QueryResponse(text, "!i%s,1", sname);
-+   return len;
-+}
-+
- bool RAWhoisClient::getSet(SymID sname, char *clss, char *&text, int &len) {
-    len = QueryResponse(text, "!m%s,%s", clss, sname);
-    return len;
-@@ -557,26 +563,58 @@ bool RAWhoisClient::expandAS(char *as,  
+@@ -557,26 +557,61 @@ bool RAWhoisClient::expandAS(char *as,  
  }
  
  bool RAWhoisClient::expandASSet(SymID asset, SetOfUInt *result) {
@@ -28,31 +15,34 @@ $NetBSD: patch-dj,v 1.2 2008/01/05 14:35:22 spz Exp $
 -  if (response)
 -     delete [] response;
 +  Set *set = NULL;
-+
 +  if (queryCache(asset, set)) {
 +    AttrGenericIterator<Item> itr(set, "members");
-+    for (Item *pt = itr.first(); pt; pt = itr.next())
++    for (Item *pt = itr.first(); pt; pt = itr.next()) {
 +      if (typeid(*pt) == typeid(ItemASNAME)) { // ASNAME (aka as-set)
 +        const SetOfUInt *tmp = IRR::expandASSet(((ItemASNAME *)pt)->name);
 +        if (tmp)
 +          *result |= *(SetOfUInt *) tmp;
-+      } else if (typeid(*pt) == typeid(ItemASNO)) {
-+         result->add(((ItemASNO *)pt)->asno);
 +      } else {
-+        cerr << "WARNING: irrd/rawhoisd cannot resolve as-set " << asset << "!";
-+        cerr << "Unknown element found in as-set definition!\n";
++        if (typeid(*pt) == typeid(ItemASNO)) {
++          result->add(((ItemASNO *)pt)->asno);
++        } else {
++          cerr << "WARNING: irrd/rawhoisd cannot resolve as-set " << asset << "!";
++          cerr << "Unknown element found in as-set definition!\n";
++        }
 +      }
-+    if (set != NULL) free (set);
-+  } else {
-+    char *text;
-+    int  len;
-+    if (getASSet(asset, text, len)) {
-+      for (char *word = strtok(text, " \t\n"); word; word = strtok(NULL, "\t\n"))
-+        result->add(atoi(word+2));
++      if (set)
++        delete [] set;
 +    }
-+    if (text != NULL) free(text);
++  } else {
++    char *response;
++    if (!QueryResponse(response, "!i%s,1", asset)) return false;
++    for (char *word = strtok(response, " \t\n"); 
++         word; 
++         word = strtok(NULL, " \t\n"))
++      result->add(atoi(word+2));
++    if (response)
++       delete [] response;
 +  }
-+
    return true;
  }
  
@@ -66,8 +56,7 @@ $NetBSD: patch-dj,v 1.2 2008/01/05 14:35:22 spz Exp $
 -  if (response)
 -     delete [] response;
 +  Set *set = NULL;
-+
-+  if (queryCache(rsset, set)) {
++  if (queryCache(rsset, set)) { 
 +    AttrGenericIterator<Item> itr(set, "members");
 +    for (Item *pt = itr.first(); pt; pt = itr.next()) {
 +      expandItem(pt, result);
@@ -76,17 +65,18 @@ $NetBSD: patch-dj,v 1.2 2008/01/05 14:35:22 spz Exp $
 +    for (Item *pt = itr1.first(); pt; pt = itr1.next()) {
 +      expandItem(pt, result);
 +    }
-+    if (set != NULL) free (set);
++    if (set)
++      delete [] set;
 +  } else {
-+    char *text;
-+    int  len;
-+    if (getASSet(rsset, text, len)) {
-+      for (char *word = strtok(text, " \t\n"); word; word = strtok(NULL, "\t\n"))
-+        result->push_back(MPPrefix(word));
-+    }
-+    if (text != NULL) free(text);
++    char *response;
++    if (!QueryResponse(response, "!i%s,1", rsset)) return false;
++    for (char *word = strtok(response, " \t\n"); 
++         word; 
++         word = strtok(NULL, " \t\n"))
++      result->push_back(MPPrefix(word));
++    if (response)
++       delete [] response;
 +  }
-+
    return true;
  }
  
