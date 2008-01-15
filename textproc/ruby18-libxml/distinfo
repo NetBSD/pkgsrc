@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/01/15 10:56:59 rillig Exp $
+
+SHA1 (libxml-ruby-0.3.8.4.tar.gz) = 43f6a4f32f5384d0a165b6b0010101d81d62657e
+RMD160 (libxml-ruby-0.3.8.4.tar.gz) = eba8dce300a921bb6a2b5b874824b64d1f50d26c
+Size (libxml-ruby-0.3.8.4.tar.gz) = 59089 bytes
