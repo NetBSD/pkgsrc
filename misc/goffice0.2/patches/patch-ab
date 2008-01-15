@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 2008/01/15 10:54:26 rillig Exp $
+
+sunpro says: void functions cannot return a value.
+
+--- goffice/graph/gog-axis.c.orig	2005-10-05 12:00:23.000000000 +0200
++++ goffice/graph/gog-axis.c	2007-11-20 15:24:51.231826000 +0100
+@@ -873,9 +873,9 @@ void
+ gog_axis_map_get_extents (GogAxisMap *map, double *start, double *stop)
+ {
+ 	if (map->axis->inverted)
+-		return map->desc->map_bounds (map, stop, start);
++		map->desc->map_bounds (map, stop, start);
+ 	else
+-		return map->desc->map_bounds (map, start, stop);
++		map->desc->map_bounds (map, start, stop);
+ }
+ 
+ /**
+@@ -894,7 +894,7 @@ gog_axis_map_get_extents (GogAxisMap *ma
+ void
+ gog_axis_map_get_bounds (GogAxisMap *map, double *minimum, double *maximum)
+ {
+-	return map->desc->map_bounds (map, minimum, maximum);
++	map->desc->map_bounds (map, minimum, maximum);
+ }
+ /**
+  * gog_axis_map_free :

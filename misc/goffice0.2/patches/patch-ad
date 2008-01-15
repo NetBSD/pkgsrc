@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/01/15 10:54:26 rillig Exp $
+
+sunpro says: void functions cannot return a value.
+
+--- goffice/graph/gog-data-set.c.orig	2006-03-23 05:28:41.000000000 +0100
++++ goffice/graph/gog-data-set.c	2007-11-20 15:26:28.173752000 +0100
+@@ -61,7 +61,7 @@ gog_dataset_dims (GogDataset const *set,
+ 	g_return_if_fail (klass != NULL);
+ 	g_return_if_fail (first != NULL);
+ 	g_return_if_fail (last != NULL);
+-	return (klass->dims) (set, first, last);
++	(klass->dims) (set, first, last);
+ }
+ 
+ /**
