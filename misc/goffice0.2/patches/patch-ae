@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2008/01/15 10:54:26 rillig Exp $
+
+sunpro says: void functions cannot return a value.
+
+--- goffice/graph/gog-object.c.orig	2005-10-17 14:59:21.000000000 +0200
++++ goffice/graph/gog-object.c	2007-11-20 15:21:10.637817000 +0100
+@@ -787,8 +787,10 @@ gog_object_set_id (GogObject *obj, unsig
+ 
+ 	g_return_if_fail (GOG_OBJECT (obj) != NULL);
+ 
+-	if (id == 0)
+-		return gog_object_generate_id (obj);
++	if (id == 0) {
++		gog_object_generate_id (obj);
++		return;
++	}
+ 
+ 	g_return_if_fail (GOG_OBJECT (obj)->parent != NULL);
+ 
