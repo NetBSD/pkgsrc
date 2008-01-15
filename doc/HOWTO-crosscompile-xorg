@@ -1,4 +1,4 @@
-$NetBSD: HOWTO-crosscompile-xorg,v 1.1 2007/12/21 23:14:50 joerg Exp $
+$NetBSD: HOWTO-crosscompile-xorg,v 1.2 2008/01/15 17:15:41 joerg Exp $
 
 How to cross-compile modular Xorg on NetBSD
 -------------------------------------------
@@ -16,13 +16,14 @@ DEPENDS_TARGET=		package-install
 
 X11_TYPE =		modular 
 
+MACHINE_ARCH=		what-to-compile-for
 CROSS_DESTDIR=		/where/ever/above/destdir/is
 TOOLDIR=		/where/ever/above/tools/are 
 USE_CROSS_COMPILE=	yes
 
 The first two activate DESTDIR support, which is required for the
 cross-compile infrastructure. The third option tells it to use modular
-Xorg. oThe other three options specify the correct path names and
-activate cross compiling.
+Xorg. The other four options specify the target platform and the correct
+path names and activate cross compiling.
 
 (c) Just run make package e.g. in meta-pkgs/modular-xorg-apps now.
