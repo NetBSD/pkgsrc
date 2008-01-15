@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2006/12/27 13:37:46 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/15 12:45:22 obache Exp $
 #
 
 DISTNAME=	xlupe-1.1
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://core.de/~coto/xlupe/
+MASTER_SITES=	http://core.de/~coto/projects/xlupe/
 
 MAINTAINER=	coto@core.de
-HOMEPAGE=	http://core.de/~coto/xlupe/
+HOMEPAGE=	http://core.de/~coto/projects/xlupe/
 COMMENT=	Magnifier for X
 
 USE_IMAKE=	yes
