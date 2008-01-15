@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2007/11/03 16:37:43 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2008/01/15 22:53:59 wiz Exp $
 
 Don't force a build of the PO files, they need newer gettext versions.
 
---- Makefile.am.orig	2007-11-03 17:18:35.000000000 +0100
+--- Makefile.am.orig	2007-12-12 22:24:27.000000000 +0000
 +++ Makefile.am
-@@ -54,8 +54,6 @@ uninstall-hook:
+@@ -56,8 +56,6 @@ uninstall-hook:
  	rm -f "$(DESTDIR)$(datadir)/mime/mime-cache"
  	rm -f "$(DESTDIR)$(datadir)/mime/XMLnamespaces"
  
 -all: check
 -
  check:
- 	if [ -d CVS/ ]; then						\
+ 	if test -n $(XMLLINT) ; then \
  		xmllint --noout --valid $(srcdir)/freedesktop.org.xml;	\
