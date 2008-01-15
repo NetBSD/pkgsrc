@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.118 2008/01/15 10:57:06 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.119 2008/01/15 11:53:24 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -227,3 +227,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/kipi-plugins to 0.1.4nb4 [wiz 2008-01-14]
 	Updated games/cgoban-java to 3.3.21 [rh 2008-01-15]
 	Added textproc/ruby18-libxml version 0.3.8.4 [rillig 2008-01-15]
+	Updated editors/vim-share to 7.1.229 [martti 2008-01-15]
