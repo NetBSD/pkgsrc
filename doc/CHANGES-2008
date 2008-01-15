@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.116 2008/01/14 23:44:25 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.117 2008/01/15 06:59:09 rh Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/libkdcraw to 0.1.3 [wiz 2008-01-14]
 	Updated graphics/digikam to 0.9.3 [wiz 2008-01-14]
 	Updated graphics/kipi-plugins to 0.1.4nb4 [wiz 2008-01-14]
+	Updated games/cgoban-java to 3.3.21 [rh 2008-01-15]
