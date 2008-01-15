@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/20 22:11:52 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/15 12:36:41 obache Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -8,11 +8,13 @@
 DISTNAME=	bbapm-0.0.1
 PKGREVISION=	2
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	jschauma@NetBSD.org
-HOMEPAGE=	http://bbtools.windsofstorm.net/
+HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=14
 COMMENT=	APM monitor for Blackbox
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -27,18 +29,20 @@ LDFLAGS.Linux+=		-lapm
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 
 post-patch:
 	${SED} -e 's,@PREFIX@,${PREFIX},' ${WRKSRC}/data/bbapm.1.tmp > \
 		${WRKSRC}/data/bbapm.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bbapm ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/data/bbapm.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/bbtools
+	${INSTALL_PROGRAM} ${WRKSRC}/bbapm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/data/bbapm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/bbtools
 .for a in README.bbapm bbapm.conf bbapm.nobb bbapm.style
-	${INSTALL_DATA} ${WRKSRC}/data/${a} ${PREFIX}/share/bbtools
+	${INSTALL_DATA} ${WRKSRC}/data/${a} ${DESTDIR}${PREFIX}/share/bbtools
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
