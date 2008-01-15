@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.4 2008/01/13 14:58:50 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.5 2008/01/15 09:03:55 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
@@ -13,3 +13,13 @@ Pullup ticket 2259 - requested by adam
 security updates for postgresql
 Pullup ticket 2260 - requested by tron
 security update for sun-jdk/jre15
+Pullup ticket 2264 - requested by adrianp
+security update for turba
+Pullup ticket 2265 - requested by adrianp
+security update for kronolith
+Pullup ticket 2266 - requested by adrianp
+security update for horde
+Pullup ticket 2267 - requested by adrianp
+security update for php4
+Pullup ticket 2268 - requested by adrianp
+security update for drupal
