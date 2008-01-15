@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.4 2007/08/14 13:15:58 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.5 2008/01/15 22:14:30 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -113,7 +113,9 @@ process_job(struct scan_job *job, enum job_state state)
 			if (done_jobs % 50)
 				(void)putchar('.');
 			else
-				(void)printf(". %zd/%zd\n", done_jobs, len_jobs);
+				(void)printf(". %lu/%lu\n",
+				    (unsigned long)done_jobs,
+				    (unsigned long)len_jobs);
 			(void)fflush(stdout);
 		}
 	}
@@ -253,7 +255,8 @@ write_jobs(const char *output_file)
 
 	if (verbosity >= 1) {
 		if (done_jobs % 50)
-			(void)printf(" %zd/%zd\n", done_jobs, len_jobs);
+			(void)printf(" %lu/%lu\n", (unsigned long)done_jobs,
+			    (unsigned long)len_jobs);
 		(void)fflush(stdout);
 	}
 
