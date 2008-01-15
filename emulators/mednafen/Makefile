@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/11/29 22:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/15 22:44:33 wiz Exp $
 #
 
-DISTNAME=	mednafen-0.8.5
+DISTNAME=	mednafen-0.8.7
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mednafen/}
 EXTRACT_SUFX=	.tar.bz2
