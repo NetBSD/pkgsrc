@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/14 15:55:20 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/15 23:27:32 wiz Exp $
 
 BUILDLINK_DEPMETHOD.xf86dgaproto?=	build
 
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	xf86dgaproto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xf86dgaproto
 
 .if ${XF86DGAPROTO_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.2
+BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_PKGSRCDIR.xf86dgaproto?=	../../x11/xf86dgaproto
 .endif	# XF86DGAPROTO_BUILDLINK3_MK
 
