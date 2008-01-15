@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2008/01/15 10:54:25 rillig Exp $
+
+sunpro doesn't like empty structs, and the name doesn't seem to be used
+by anyone.
+
+--- goffice/app/go-doc-control-impl.h.orig	2005-08-08 10:56:57.000000000 +0200
++++ goffice/app/go-doc-control-impl.h	2007-11-20 15:20:26.330848000 +0100
+@@ -28,8 +28,6 @@ G_BEGIN_DECLS
+ struct _GODocControl {
+ 	GObject		 base;
+ 
+-	struct {
+-	} state[GO_DOC_CONTROL_STATE_MAX];
+ };
+ 
+ typedef struct {
