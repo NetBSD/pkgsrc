@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/01/04 07:18:21 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/15 23:59:09 wiz Exp $
 #
 
-DISTNAME=		getopt-1.1.3
-PKGREVISION=		1
+DISTNAME=		getopt-1.1.4
 CATEGORIES=		misc
 MASTER_SITES=		http://software.frodo.looijaard.name/getopt/files/
 
