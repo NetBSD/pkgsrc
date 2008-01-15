@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 17:36:21 wiz Exp $
+$NetBSD: distinfo,v 1.10 2008/01/15 12:52:51 obache Exp $
 
-SHA1 (wterm-6.2.9.tar.bz2) = e759dea038d07146d70e9cd88ff4c68e4b0fd5b2
-RMD160 (wterm-6.2.9.tar.bz2) = 9f477d53e68414dd6a58dfbf7bafed9533a13bf2
-Size (wterm-6.2.9.tar.bz2) = 262049 bytes
+SHA1 (wterm-6.2.9.tar.gz) = e3624d44c70f143ec77a6089ce4074357a9c3ae8
+RMD160 (wterm-6.2.9.tar.gz) = 954c6264998456e90a62e25089fb5adc3924b2a8
+Size (wterm-6.2.9.tar.gz) = 316773 bytes
 SHA1 (patch-aa) = f4e3f5cfdeaca21ed4b37df18152066d30f18e62
 SHA1 (patch-ab) = b0103999bf2d38e61d46772d0396c45102e8f559
 SHA1 (patch-ac) = 5dd3db02b265872c6cfb8dc8e47957c3bdfe8224
