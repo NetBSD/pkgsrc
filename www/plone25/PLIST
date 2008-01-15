@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/18 15:42:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/15 14:38:08 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/Extensions/Install.py
@@ -4590,8 +4590,6 @@ ${PLONE_BASE}/PlacelessTranslationService/www/catalog_broken.pt
 ${PLONE_BASE}/PlacelessTranslationService/www/catalog_info.pt
 ${PLONE_BASE}/PlacelessTranslationService/www/catalog_test.pt
 ${PLONE_BASE}/PlacelessTranslationService/www/manage_trackerForm.pt
-${PLONE_BASE}/PloneErrorReporting/._HISTORY.txt
-${PLONE_BASE}/PloneErrorReporting/._version.txt
 ${PLONE_BASE}/PloneErrorReporting/Extensions/Install.py
 ${PLONE_BASE}/PloneErrorReporting/Extensions/Install.pyc
 ${PLONE_BASE}/PloneErrorReporting/Extensions/__init__.py
@@ -6094,7 +6092,6 @@ ${PLONE_BASE}/PortalTransforms/z3/__init__.py
 ${PLONE_BASE}/PortalTransforms/z3/__init__.pyc
 ${PLONE_BASE}/PortalTransforms/z3/interfaces.py
 ${PLONE_BASE}/PortalTransforms/z3/interfaces.pyc
-${PLONE_BASE}/ResourceRegistries/._version.txt
 ${PLONE_BASE}/ResourceRegistries/20compatibility/header.pt
 ${PLONE_BASE}/ResourceRegistries/Extensions/Install.py
 ${PLONE_BASE}/ResourceRegistries/Extensions/Install.pyc
@@ -6108,7 +6105,6 @@ ${PLONE_BASE}/ResourceRegistries/__init__.pyc
 ${PLONE_BASE}/ResourceRegistries/config.py
 ${PLONE_BASE}/ResourceRegistries/config.pyc
 ${PLONE_BASE}/ResourceRegistries/configure.zcml
-${PLONE_BASE}/ResourceRegistries/doc/._HISTORY.txt
 ${PLONE_BASE}/ResourceRegistries/doc/HISTORY.txt
 ${PLONE_BASE}/ResourceRegistries/doc/INSTALL.txt
 ${PLONE_BASE}/ResourceRegistries/doc/TODO.txt
