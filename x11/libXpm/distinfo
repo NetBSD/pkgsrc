@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 21:06:54 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/01/15 23:22:36 wiz Exp $
 
-SHA1 (libXpm-3.5.6.tar.bz2) = 870e29be101e9063963a31feab4adb662bd1ead9
-RMD160 (libXpm-3.5.6.tar.bz2) = f74ab2c72752e34355b01aebea83f4a3c3a8f218
-Size (libXpm-3.5.6.tar.bz2) = 371577 bytes
+SHA1 (libXpm-3.5.7.tar.bz2) = 215208091051530867efae0a4c1cedb7385d5f0e
+RMD160 (libXpm-3.5.7.tar.bz2) = 6bd355cb5f011b271b177d86db7f9a4e9d885ed3
+Size (libXpm-3.5.7.tar.bz2) = 358241 bytes
