@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2007/12/31 20:06:39 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/15 15:43:48 jlam Exp $
 
 COMPAT_PKG=		compat40	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		4.0
 
 HOMEPAGE=		http://www.NetBSD.org/releases/formal-4/index.html
 COMMENT=		Shared libraries for NetBSD 4.0 compatibility
+
+# XXX Until NetBSD 5.0 is released, we fetch the distfiles into a date-specific
+# XXX subdirectory where the date corresponds to the build of HEAD against
+# XXX which these compat40 packages were generated.
+#
+DIST_SUBDIR=		20071230
 
 .if defined(NETBSD_COMPAT32)
 EMUL_PLATFORMS=		netbsd-i386 netbsd-sparc
@@ -28,12 +34,6 @@ ONLY_FOR_PLATFORM=	NetBSD-4.99.*-* NetBSD-[5-9]*-* NetBSD-[1-9][0-9]*-*
 
 DISTNAME=		compat40-${EMUL_ARCH}-${COMPAT_VERSION}
 COMPAT_VERSION=		4.0
-
-# XXX Until NetBSD 5.0 is released, we fetch the distfiles into a date-specific
-# XXX subdirectory where the date corresponds to the build of HEAD against
-# XXX which these compat40 packages were generated.
-#
-DIST_SUBDIR=		20071230
 
 # For COMPAT_NETBSD32, we need to depend on the compat40-extras package
 # on NetBSD-4.0 to supply the missing shared libraries; otherwise, we
