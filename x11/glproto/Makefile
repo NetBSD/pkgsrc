@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/14 13:30:57 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/15 23:51:56 wiz Exp $
 #
 
-DISTNAME=		glproto-1.4.8
+DISTNAME=		glproto-1.4.9
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
