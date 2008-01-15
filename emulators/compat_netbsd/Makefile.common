@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2007/11/27 19:40:51 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/01/15 15:43:49 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -7,7 +7,7 @@
 #
 
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		${MASTER_SITE_LOCAL:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
