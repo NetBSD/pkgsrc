@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6983 2008/01/15 22:46:51 wiz Exp $
+$NetBSD: TODO,v 1.6984 2008/01/15 22:47:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,7 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-2.1rc1
+	o awesome-2.1rc2
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.7
@@ -368,6 +368,7 @@ Suggested package updates
 	o bzr-1.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o cairo-1.4.14
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.2.2
@@ -462,7 +463,7 @@ Suggested package updates
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o enlightenment-0.16.8.10
+	o enlightenment-0.16.8.11
 	o enscript-1.6.4
 	o epic4-2.6
 	o epiphany-2.20.3
@@ -514,6 +515,7 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.12
+	o gcalctool-5.21.5
 	o gcc-4.2.2
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
@@ -556,6 +558,7 @@ Suggested package updates
 	o gnome-mag-0.15.0
 	o gnome-panel-2.20.3
 	o gnome-session-2.20.3
+	o gnome-speech-0.4.18
 	o gnome-spell-1.0.8
 	o gnome-terminal-2.18.4
 	o gnomeicu-0.99.14
@@ -584,6 +587,7 @@ Suggested package updates
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
+	o gsasl-0.2.23
 	o gsharutils-4.7
 	o gsl-1.10
 	o gsm-1.0.12
@@ -636,7 +640,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.18
+	o ikiwiki-2.20
 	o imap-uw-2007
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -649,7 +653,7 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
-	o iso-codes-1.7
+	o iso-codes-1.8
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -690,6 +694,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b12
 	o lcc-4.2
+	o lcms-1.17
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
 	o leafpad-0.8.13
@@ -714,7 +719,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
 	o libevent-1.4.0beta
-	o libextractor-0.5.19
+	o libextractor-0.5.19a
 	o libflash-0.4.13
 	o libgcrypt-1.4.0
 	o libgda-3.1.2
@@ -748,6 +753,7 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libxklavier-3.3
 	o libxml++2-2.20.0
+	o libxml2-2.6.31
 	o lilypond-2.10.33
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -822,7 +828,7 @@ Suggested package updates
 	o nfdump-1.5.6 [pkg/37705]
 	o ng-1.4.4
 	o nikto-2.0.1
-	o nmap-4.52
+	o nmap-4.53
 	o nmh-1.2.1
 	o nomarch-1.4
 	o ns-plugger-common-5.1.3
@@ -931,6 +937,7 @@ Suggested package updates
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.18
 	o p5-Text-BibTeX-0.34
+	o p5-Text-Markdown-1.0.5
 	o p5-Text-Quoted-2.03
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
@@ -1044,7 +1051,7 @@ Suggested package updates
 	o py-html2text-2.29
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
-	o py-libxml2-2.6.28
+	o py-libxml2-2.6.31
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.18.2
 	o py-mad-0.6
@@ -1247,7 +1254,7 @@ Suggested package updates
 	o vmware-5.5
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vobcopy-1.0.2
+	o vobcopy-1.1.0
 	o vp-1.6
 	o vsftpd-2.0.5
 	o vttest-20071216
