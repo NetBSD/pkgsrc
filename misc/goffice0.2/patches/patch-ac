@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/01/15 10:54:26 rillig Exp $
+
+sunpro says: void functions cannot return a value.
+
+--- goffice/graph/gog-chart.c.orig	2005-10-30 15:35:37.000000000 +0100
++++ goffice/graph/gog-chart.c	2007-11-20 15:22:57.563151000 +0100
+@@ -295,7 +295,7 @@ gog_chart_map_new (GogChart *chart, GogV
+ void
+ gog_chart_map_2D_to_view (GogChartMap *map, double x, double y, double *u, double *v)
+ {
+-	return (map->map_2D_to_view) (map, x, y, u, v);
++	(map->map_2D_to_view) (map, x, y, u, v);
+ }
+ 
+ GogAxisMap *
