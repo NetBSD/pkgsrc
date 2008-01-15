@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/11/03 17:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/15 23:02:27 wiz Exp $
 #
 
-DISTNAME=		renderproto-0.9.2
+DISTNAME=		renderproto-0.9.3
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
