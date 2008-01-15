@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2007/01/22 15:12:13 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/01/15 23:16:49 wiz Exp $
 
-SHA1 (libXaw-1.0.3.tar.bz2) = b758d4d3d9e5752e01819db6912a7572174064d0
-RMD160 (libXaw-1.0.3.tar.bz2) = cb3bd6bf9b0bf4162b5ec2fbfb3d24fece1702f1
-Size (libXaw-1.0.3.tar.bz2) = 515197 bytes
-SHA1 (patch-aa) = 70cdc676d8c83886988c9f790eb2c16c9bfcef3d
+SHA1 (libXaw-1.0.4.tar.bz2) = 9bf93239e6329ec819b6bfd00455cc0efffac103
+RMD160 (libXaw-1.0.4.tar.bz2) = face40c68b49aee9aa9149b963566c39fb6425cb
+Size (libXaw-1.0.4.tar.bz2) = 517275 bytes
+SHA1 (patch-aa) = 8adf7cd5eac26b92097c7acad1343b36f17ce2cb
 SHA1 (patch-ab) = 70550419ca4a683708923f068ae18b23b2f26c44
