@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: build,v 1.2 2007/07/20 19:39:34 joerg Exp $
+# $NetBSD: build,v 1.3 2008/01/15 21:43:32 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -55,10 +55,13 @@ cd ${packages}/All
 sed 's/$/.tgz/' < ${loc}/success | sort | xargs ${external_pkg_info} -X | ${gzip} -c > pkg_summary.gz
 ${gzip} -dc < pkg_summary.gz | ${bzip2} -c > pkg_summary.bz2
 
-echo "Building SHA512..."
-cd ${packages}
-{
-	echo "All/pkg_summary.bz2"
-	echo "All/pkg_summary.gz"
-	sed 's|^\(.*\)$|All/\1.tgz|' < ${loc}/success
-} | sort | xargs ${digest} SHA512 | ${bzip2} -c > SHA512.bz2
+if [ "${checksum_packages}" != "no" ] && \
+   [ "${checksum_packages}" != "NO" ]; then
+	echo "Building SHA512..."
+	cd ${packages}
+	{
+		echo "All/pkg_summary.bz2"
+		echo "All/pkg_summary.gz"
+		sed 's|^\(.*\)$|All/\1.tgz|' < ${loc}/success
+	} | sort | xargs ${digest} SHA512 | ${bzip2} -c > SHA512.bz2
+fi

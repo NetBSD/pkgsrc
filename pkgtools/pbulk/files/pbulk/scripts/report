@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: report,v 1.6 2007/10/17 20:42:30 joerg Exp $
+# $NetBSD: report,v 1.7 2008/01/15 21:43:32 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -41,9 +41,9 @@ ${report_html_script} ${loc} ${bulklog}
 ${report_txt_script} ${loc}
 
 ${report_graph_script} ${loc}
-if [ "`grep -- '->' < ${loc}/report.dot | wc -l`" -lt ${report_graph_script_limit} ]; then
-	${pkg_add} ${packages}/All/graphviz
-	${prefix}/bin/neato -Tsvg -Goverlap=ortho -Gsplines=true \
+if [ -x "${neato}" ] && \
+   [ "`grep -- '->' < ${loc}/report.dot | wc -l`" -lt ${report_graph_script_limit} ]; then
+	${neato} -Tsvg -Goverlap=ortho -Gsplines=true \
 	    -o ${loc}/report.svg ${loc}/report.dot
 else
 	rm -f ${loc}/report.svg
