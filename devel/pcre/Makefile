@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2007/11/11 11:35:49 martti Exp $
+# $NetBSD: Makefile,v 1.46 2008/01/15 22:42:36 wiz Exp $
 
-DISTNAME=	pcre-7.4
-PKGREVISION=	1
+DISTNAME=	pcre-7.5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
@@ -28,7 +27,7 @@ SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 PKGCONFIG_OVERRIDE=	libpcre.pc.in libpcrecpp.pc.in
 
-# needs a stacksize of 4mb, default is 2mb
+# needs a stacksize of 5.5mb, default is 2mb
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
