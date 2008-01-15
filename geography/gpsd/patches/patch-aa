@@ -1,16 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2006/10/13 06:22:54 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2008/01/15 00:58:17 gdt Exp $
 
---- configure.orig	2006-06-07 17:08:36.000000000 +0200
-+++ configure	2006-10-13 08:21:17.000000000 +0200
-@@ -21174,13 +21174,13 @@ if test $ac_cv_lib_c_open = yes; then
+Not 100% sure about this, but it is not apparently fixed upstream.
+I think we should have a configure.ac patch as well for regeneration.)
+
+
+--- configure.orig	2008-01-01 13:44:00.000000000 -0500
++++ configure
+@@ -25345,13 +25345,13 @@ if test $ac_cv_lib_c_open = yes; then
  fi
  
  
--echo "$as_me:$LINENO: checking for main in -lpthread" >&5
--echo $ECHO_N "checking for main in -lpthread... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking for main in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for main in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
- if test "${ac_cv_lib_pthread_main+set}" = set; then
+-{ echo "$as_me:$LINENO: checking for pthread_setcancelstate in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_setcancelstate in -lpthread... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for pthread_setcancelstate in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_setcancelstate in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_pthread_pthread_setcancelstate+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -19,21 +23,12 @@ $NetBSD: patch-aa,v 1.4 2006/10/13 06:22:54 rillig Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -21233,7 +21233,7 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_main" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_main" >&6
- if test $ac_cv_lib_pthread_main = yes; then
+@@ -25407,7 +25407,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_setcancelstate" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_setcancelstate" >&6; }
+ if test $ac_cv_lib_pthread_pthread_setcancelstate = yes; then
 -  LIBPTHREAD="-lpthread"
 +  LIBPTHREAD="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
- fi
  
- 
-@@ -23456,7 +23456,7 @@ else
- fi;
- echo "$as_me:$LINENO: checking for DBUS support" >&5
- echo $ECHO_N "checking for DBUS support... $ECHO_C" >&6
--if test x"$ac_dbus" == "xyes"; then
-+if test x"$ac_dbus" = "xyes"; then
-     echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6
- 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_LIBPTHREAD
