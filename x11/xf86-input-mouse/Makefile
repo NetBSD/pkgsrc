@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/08/05 23:39:02 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/15 23:49:48 wiz Exp $
 
-DISTNAME=	xf86-input-mouse-1.2.2
+DISTNAME=	xf86-input-mouse-1.2.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
