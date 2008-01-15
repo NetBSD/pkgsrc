@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.4 2007/07/21 15:36:36 tnn Exp $ */
+/* $NetBSD: master.c,v 1.5 2008/01/15 21:43:32 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -244,6 +244,7 @@ listen_handler(int sock, short event, void *arg)
 	peer = xmalloc(sizeof(*peer));
 	peer->fd = fd;
 	peer->buf = NULL;
+	peer->job = NULL;
 	recv_command(peer);
 }
 
