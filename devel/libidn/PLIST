@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/11/29 16:54:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/01/15 22:43:00 wiz Exp $
 bin/idn
 include/idn-free.h
 include/idn-int.h
@@ -58,11 +58,13 @@ man/man3/tld_get_4z.3
 man/man3/tld_get_table.3
 man/man3/tld_get_z.3
 man/man3/tld_strerror.3
+share/locale/cs/LC_MESSAGES/libidn.mo
 share/locale/da/LC_MESSAGES/libidn.mo
 share/locale/de/LC_MESSAGES/libidn.mo
 share/locale/en@boldquot/LC_MESSAGES/libidn.mo
 share/locale/en@quot/LC_MESSAGES/libidn.mo
 share/locale/eo/LC_MESSAGES/libidn.mo
+share/locale/fi/LC_MESSAGES/libidn.mo
 share/locale/fr/LC_MESSAGES/libidn.mo
 share/locale/it/LC_MESSAGES/libidn.mo
 share/locale/ja/LC_MESSAGES/libidn.mo
