@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.120 2008/01/15 14:39:00 taca Exp $
+$NetBSD: CHANGES-2008,v 1.121 2008/01/15 21:46:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -229,3 +229,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/ruby18-libxml version 0.3.8.4 [rillig 2008-01-15]
 	Updated editors/vim-share to 7.1.229 [martti 2008-01-15]
 	Updated www/plone25 to 2.5.5nb1 [taca 2008-01-15]
+	Updated pkgtools/pbulk to 0.18 [root 2008-01-15]
