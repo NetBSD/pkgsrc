@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.121 2008/01/15 21:46:51 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.122 2008/01/15 22:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -230,3 +230,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.229 [martti 2008-01-15]
 	Updated www/plone25 to 2.5.5nb1 [taca 2008-01-15]
 	Updated pkgtools/pbulk to 0.18 [root 2008-01-15]
+	Updated audio/amarok to 1.4.8 [wiz 2008-01-15]
+	Updated wm/openbox to 3.4.5 [wiz 2008-01-15]
+	Updated devel/pcre to 7.5 [wiz 2008-01-15]
+	Updated devel/libidn to 1.4 [wiz 2008-01-15]
+	Updated www/links to 2.1.0.32 [wiz 2008-01-15]
+	Updated www/links-gui to 2.1.0.31 [wiz 2008-01-15]
+	Updated emulators/mednafen to 0.8.7 [wiz 2008-01-15]
+	Updated sysutils/cdrtools to 2.01.01.37 [wiz 2008-01-15]
