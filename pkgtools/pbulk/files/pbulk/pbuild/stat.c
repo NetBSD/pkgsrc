@@ -1,4 +1,4 @@
-/* $NetBSD: stat.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
+/* $NetBSD: stat.c,v 1.3 2008/01/15 22:14:30 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -99,14 +99,22 @@ stat_mode(const char *client_port)
 	(void)memcpy(&tmp, buf + 24, 4);
 	st.done = ntohl(tmp);
 
-	(void)printf("Jobs not yet processed: %zu\n", st.open_jobs);
-	(void)printf("Jobs currently in processing: %zu\n", st.in_processing);
-	(void)printf("Successful builds: %zu\n", st.done);
-	(void)printf("Failing builds: %zu\n", st.failed + st.prefailed + st.indirect_failed + st.indirect_prefailed);
-	(void)printf("  Directly broken: %zu\n", st.failed);
-	(void)printf("  Broken due to a broken dependency: %zu\n", st.indirect_failed);
-	(void)printf("  Not build as explicitly marked broken: %zu\n", st.prefailed);
-	(void)printf("  Broken due to an explicitly broken dependency: %zu\n", st.indirect_prefailed);
+	(void)printf("Jobs not yet processed: %lu\n",
+	    (unsigned long)st.open_jobs);
+	(void)printf("Jobs currently in processing: %lu\n",
+	    (unsigned long)st.in_processing);
+	(void)printf("Successful builds: %lu\n",
+	    (unsigned long)st.done);
+	(void)printf("Failing builds: %lu\n",
+	    (unsigned long)(st.failed + st.prefailed + st.indirect_failed + st.indirect_prefailed));
+	(void)printf("  Directly broken: %lu\n",
+	    (unsigned long)st.failed);
+	(void)printf("  Broken due to a broken dependency: %lu\n",
+	    (unsigned long)st.indirect_failed);
+	(void)printf("  Not build as explicitly marked broken: %lu\n",
+	    (unsigned long)st.prefailed);
+	(void)printf("  Broken due to an explicitly broken dependency: %lu\n",
+	    (unsigned long)st.indirect_prefailed);
 
 	exit(0);
 }
