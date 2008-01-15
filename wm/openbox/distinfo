@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2007/08/11 07:48:21 wiz Exp $
+$NetBSD: distinfo,v 1.16 2008/01/15 22:40:03 wiz Exp $
 
-SHA1 (openbox-3.4.4.tar.gz) = bb947c0dcc5f8988110d2a717d84fa80fc3afbe8
-RMD160 (openbox-3.4.4.tar.gz) = de40aa4e69ded7e8acf5b043a8db9cdbfc689190
-Size (openbox-3.4.4.tar.gz) = 748325 bytes
+SHA1 (openbox-3.4.5.tar.gz) = 3d598d05377332196974396b7d771c671c07cf71
+RMD160 (openbox-3.4.5.tar.gz) = d8162f85e7c985a20ea4ddbd4ce7561653e1f585
+Size (openbox-3.4.5.tar.gz) = 758724 bytes
 SHA1 (patch-aa) = 77043ec9f0466dbd2eb5dd54e467f983afccd9c1
 SHA1 (patch-ab) = bb13ec5801c2e271f1e6b2dc4d0aa149c9e2dff1

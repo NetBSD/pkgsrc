@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/07/28 22:23:30 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/01/15 22:40:03 wiz Exp $
 bin/gnome-panel-control
 bin/openbox
 bin/openbox-gnome-session
@@ -55,6 +55,7 @@ share/locale/es/LC_MESSAGES/openbox.mo
 share/locale/et/LC_MESSAGES/openbox.mo
 share/locale/fi/LC_MESSAGES/openbox.mo
 share/locale/fr/LC_MESSAGES/openbox.mo
+share/locale/hu/LC_MESSAGES/openbox.mo
 share/locale/it/LC_MESSAGES/openbox.mo
 share/locale/ja/LC_MESSAGES/openbox.mo
 share/locale/nl/LC_MESSAGES/openbox.mo
