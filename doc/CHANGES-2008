@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.125 2008/01/16 07:54:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.126 2008/01/16 11:41:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/iso-codes to 1.8 [wiz 2008-01-16]
 	Added textproc/xmltoman version 0.3 [bjs 2008-01-16]
 	Updated graphics/exiv2 to 0.16 [wiz 2008-01-16]
+	Updated pkgtools/bootstrap-mk-files to 20080116 [tnn 2008-01-16]
