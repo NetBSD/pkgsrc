@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2007/10/22 06:15:56 martti Exp $
+$NetBSD: distinfo,v 1.39 2008/01/16 17:39:01 ghen Exp $
 
-SHA1 (postfix/postfix-2.5-20071006.tar.gz) = 963e18616ffcc1ea1615ddbc7bb96e67dde884a5
-RMD160 (postfix/postfix-2.5-20071006.tar.gz) = 6c08011cbca7f5c901cebbd29ddfff01567e84fc
-Size (postfix/postfix-2.5-20071006.tar.gz) = 2940780 bytes
+SHA1 (postfix/postfix-2.5.0-RC1.tar.gz) = cb1d9dca4806aafa56f6192cdd26b33cdd5005d1
+RMD160 (postfix/postfix-2.5.0-RC1.tar.gz) = 40d5ac065980097516b7f09aa2c4a3e62e1af595
+Size (postfix/postfix-2.5.0-RC1.tar.gz) = 3158558 bytes
 SHA1 (patch-aa) = 60c51bfd1462f0553587b0ea9a5d496305e55648
 SHA1 (patch-ag) = 4d66026fe81dde97470bd01d529af191f1547228
 SHA1 (patch-ai) = 7b19361e77d25139134511331a82abcd26b5336d
