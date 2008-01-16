@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.122 2008/01/15 22:46:50 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.123 2008/01/16 00:24:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -238,3 +238,22 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/links-gui to 2.1.0.31 [wiz 2008-01-15]
 	Updated emulators/mednafen to 0.8.7 [wiz 2008-01-15]
 	Updated sysutils/cdrtools to 2.01.01.37 [wiz 2008-01-15]
+	Updated databases/shared-mime-info to 0.23 [wiz 2008-01-15]
+	Updated x11/xproto to 7.0.11 [wiz 2008-01-15]
+	Updated x11/libICE to 1.0.4 [wiz 2008-01-15]
+	Updated x11/renderproto to 0.9.3 [wiz 2008-01-15]
+	Updated x11/libXrender to 0.9.4 [wiz 2008-01-15]
+	Updated x11/libXaw to 1.0.4 [wiz 2008-01-15]
+	Updated x11/libXcursor to 1.1.9 [wiz 2008-01-15]
+	Updated x11/libXpm to 3.5.7 [wiz 2008-01-15]
+	Updated x11/libXtst to 1.0.3 [wiz 2008-01-15]
+	Updated x11/libXxf86dga to 1.0.2 [wiz 2008-01-15]
+	Updated devel/p5-File-Temp to 0.20 [wiz 2008-01-15]
+	Updated textproc/libxml2 to 2.6.31 [wiz 2008-01-15]
+	Updated graphics/lcms to 1.17 [wiz 2008-01-15]
+	Updated x11/xf86-input-keyboard to 1.2.2 [wiz 2008-01-15]
+	Updated x11/xf86-input-mouse to 1.2.3 [wiz 2008-01-15]
+	Updated x11/glproto to 1.4.9 [wiz 2008-01-15]
+	Updated x11/libXmu to 1.0.4 [wiz 2008-01-15]
+	Updated misc/getopt to 1.1.4 [wiz 2008-01-15]
+	Updated textproc/iso-codes to 1.8 [wiz 2008-01-16]
