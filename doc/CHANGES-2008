@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.127 2008/01/16 17:39:48 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.128 2008/01/16 22:57:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -261,3 +261,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/exiv2 to 0.16 [wiz 2008-01-16]
 	Updated pkgtools/bootstrap-mk-files to 20080116 [tnn 2008-01-16]
 	Updated mail/postfix-current to 2.5.0rc1 [ghen 2008-01-16]
+	Updated misc/rubygems to 1.0.1 [minskim 2008-01-16]
