@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2007/10/30 19:31:40 martti Exp $
+# $NetBSD: Makefile,v 1.88 2008/01/16 14:21:44 ghen Exp $
 
 DISTNAME=	postfix-2.5-20071006
 #PKGREVISION=	1
@@ -30,7 +30,7 @@ BUILD_DEFS+=		VARBASE POSTFIX_QUEUE_DIR
 # CCARGS is a list of options to pass to the preprocessor/compiler.
 # AUXLIBS is a list of options to pass to the linker.
 #
-CCARGS=		# empty
+CCARGS=		-DUSE_SASL_AUTH
 AUXLIBS=	${LDFLAGS}
 FIX_RPATH+=	AUXLIBS
 
