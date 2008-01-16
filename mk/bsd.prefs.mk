@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.275 2008/01/12 14:40:21 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.276 2008/01/16 03:16:39 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -502,6 +502,12 @@ USE_XPKGWEDGE=		yes
 USE_XPKGWEDGE=	no
 .else
 USE_XPKGWEDGE?=	yes
+.endif
+
+.if defined(FIX_SYSTEM_HEADERS) && ${FIX_SYSTEM_HEADERS} == "yes" && \
+    empty(PKGPATH:Mpkgtools/*) && empty(PKGPATH:M*/nbsed) && \
+    empty(PKGPATH:M*/nawk) && empty(PKGPATH:M*/bmake)
+.  include "../../pkgtools/posix_headers/buildlink3.mk"
 .endif
 
 .if ${X11_TYPE} == "modular"
