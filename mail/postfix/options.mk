@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.26 2008/01/14 13:29:25 ghen Exp $
+# $NetBSD: options.mk,v 1.27 2008/01/16 14:21:43 ghen Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls dovecot-sasl postfix-stress
+PKG_SUPPORTED_OPTIONS=	bdb ldap mysql mysql4 pcre pgsql sasl tls postfix-stress
 PKG_SUGGESTED_OPTIONS=	tls
 
 .include "../../mk/bsd.options.mk"
@@ -83,14 +83,15 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 .endif
 
 ###
-### SASL support for SMTP authentication.
+### Cyrus SASL support for SMTP authentication.
+### (Dovcot SASL support is built in by default.)
 ###
 .if !empty(PKG_OPTIONS:Msasl)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL_AUTH -DUSE_CYRUS_SASL
+CCARGS+=	-DUSE_CYRUS_SASL
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
@@ -100,15 +101,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 .else
 PLIST_SUBST+=	SASL="@comment "
-.endif
-
-###
-### SASL support for SMTP authentication (via Dovecot).
-###
-.if !empty(PKG_OPTIONS:Mdovecot-sasl)
-DEPENDS+=	dovecot-[0-9]*:../../mail/dovecot
-
-CCARGS+=	-DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\"dovecot\"
+CCARGS+=	-DDEF_SERVER_SASL_TYPE=\"dovecot\"
 .endif
 
 ###
