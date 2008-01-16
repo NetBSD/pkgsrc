@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/05/30 07:58:29 martti Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/01/16 17:39:01 ghen Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -138,6 +138,7 @@ share/doc/postfix/SMTPD_ACCESS_README
 share/doc/postfix/SMTPD_POLICY_README
 share/doc/postfix/SMTPD_PROXY_README
 share/doc/postfix/STANDARD_CONFIGURATION_README
+share/doc/postfix/STRESS_README
 share/doc/postfix/TLS_LEGACY_README
 share/doc/postfix/TLS_README
 share/doc/postfix/TUNING_README
