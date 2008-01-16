@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/16 03:04:16 bjs Exp $
+bin/xmlmantohtml
+bin/xmltoman
+man/man1/xmlmantohtml.1
+man/man1/xmltoman.1
+share/xmltoman/xmltoman.css
+share/xmltoman/xmltoman.dtd
+share/xmltoman/xmltoman.xsl
+@dirrm share/xmltoman
