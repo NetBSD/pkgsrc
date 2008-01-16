@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2008/01/14 23:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2008/01/16 07:54:30 wiz Exp $
 
 DISTNAME=		digikam-0.9.3
+PKGREVISION=		1
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
