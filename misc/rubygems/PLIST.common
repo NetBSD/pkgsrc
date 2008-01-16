@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2007/12/03 17:59:45 minskim Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2008/01/16 22:56:42 minskim Exp $
 bin/gem
 bin/update_rubygems
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Config/cdesc-Config.yaml
@@ -244,7 +244,9 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/app_script_text-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/build_extensions-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/cdesc-Installer.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/ensure_dependency-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/exec_format-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/extract_files-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/formatted_program_filename-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/generate_bin-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/generate_bin_script-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Installer/generate_bin_symlink-i.yaml
@@ -308,6 +310,7 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/getc-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/is_directory%3f-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/is_directory-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/is_file%3f-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/is_file-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/new-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/pos-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Package/TarReader/Entry/read-i.yaml
@@ -350,6 +353,7 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/%3d%3d%3d-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/%3d%3d-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/%3d%7e-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/cdesc-Platform.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/const_missing-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/inspect-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/local-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Platform/match-c.yaml
@@ -365,18 +369,9 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteFetcher/fetcher-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteFetcher/new-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstallationCancelled/cdesc-RemoteInstallationCancelled.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstallationSkipped/cdesc-RemoteInstallationSkipped.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/cdesc-RemoteInstaller.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/download_gem-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/find_dependencies_not_installed-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/find_gem_to_install-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/install-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/install_dependencies-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/new-c.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/new_installer-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/source_index_hash-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/specs_n_sources_matching-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller/write_gem_to_file-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteSourceException/cdesc-RemoteSourceException.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RequirePathsBuilder/cdesc-RequirePathsBuilder.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RequirePathsBuilder/write_require_paths_file_if_needed-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Requirement/%3c%3d%3e-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Requirement/as_list-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Requirement/cdesc-Requirement.yaml
@@ -422,6 +417,7 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/gem_signature-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/index_signature-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/installed_spec_directories-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/latest_specs-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/length-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/load_gems_in-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/load_specification-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/new-c.yaml
@@ -429,6 +425,7 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/outdated-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/refresh%21-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/remove_spec-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/search-i.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/size-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/specification-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceIndex/update-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SourceInfoCache/cache-c.yaml
@@ -496,7 +493,6 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Specification/test_suite_file-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Specification/to_ruby-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Specification/to_s-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Specification/validate-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Specification/warn_deprecated-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/StreamUI/SilentProgressReporter/cdesc-SilentProgressReporter.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/StreamUI/SilentProgressReporter/done-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/StreamUI/SilentProgressReporter/new-c.yaml
@@ -547,7 +543,6 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/bump-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/cdesc-Version.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/correct%3f-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/create-c.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/hash-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/marshal_dump-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/marshal_load-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Version/new-c.yaml
@@ -569,8 +564,13 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/config_file-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/configuration%3d-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/configuration-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/datadir-c.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_bindir-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_dir-c.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_exec_format-c.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_path-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_sources-c.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_system_source_cache_dir-c.yaml
+lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/default_user_source_cache_dir-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/dir-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/ensure_gem_subdirectories-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/ensure_ssl_available-c.yaml
@@ -593,7 +593,6 @@ lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/user_home-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/win_platform%3f-c.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Kernel/cdesc-Kernel.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Kernel/gem-i.yaml
-lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Kernel/require_gem-i.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/OpenSSL/X509/Certificate/cdesc-Certificate.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/OpenSSL/X509/cdesc-X509.yaml
 lib/ruby/gems/1.8/doc/${PKGNAME}/ri/OpenSSL/cdesc-OpenSSL.yaml
@@ -631,6 +630,7 @@ ${RUBY_SITELIBDIR}/rubygems/commands/update_command.rb
 ${RUBY_SITELIBDIR}/rubygems/commands/which_command.rb
 ${RUBY_SITELIBDIR}/rubygems/config_file.rb
 ${RUBY_SITELIBDIR}/rubygems/custom_require.rb
+${RUBY_SITELIBDIR}/rubygems/defaults.rb
 ${RUBY_SITELIBDIR}/rubygems/dependency.rb
 ${RUBY_SITELIBDIR}/rubygems/dependency_installer.rb
 ${RUBY_SITELIBDIR}/rubygems/dependency_list.rb
@@ -663,7 +663,7 @@ ${RUBY_SITELIBDIR}/rubygems/open-uri.rb
 ${RUBY_SITELIBDIR}/rubygems/package.rb
 ${RUBY_SITELIBDIR}/rubygems/platform.rb
 ${RUBY_SITELIBDIR}/rubygems/remote_fetcher.rb
-${RUBY_SITELIBDIR}/rubygems/remote_installer.rb
+${RUBY_SITELIBDIR}/rubygems/require_paths_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/requirement.rb
 ${RUBY_SITELIBDIR}/rubygems/rubygems_version.rb
 ${RUBY_SITELIBDIR}/rubygems/security.rb
