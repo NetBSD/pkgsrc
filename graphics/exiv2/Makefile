@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/07/17 19:29:30 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/16 07:54:01 wiz Exp $
 #
 
-DISTNAME=		exiv2-0.15
+DISTNAME=		exiv2-0.16
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.exiv2.org/
 
@@ -17,6 +17,8 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	config/exiv2.pc.in
 
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
