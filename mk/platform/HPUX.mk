@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.12 2008/01/15 22:37:49 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.13 2008/01/16 03:16:40 tnn Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -30,6 +30,9 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 # The modular X.org userland works rather well, apart from the server which
 # is unlikely to ever be supported due to proprietary graphics hardware.
 X11_TYPE?=		modular
+
+# Fix broken system headers by using pkgtools/posix_headers
+FIX_SYSTEM_HEADERS?=	yes
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/NetBSD.cf
