@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2008/01/16 00:22:52 wiz Exp $
+
+--- iso_4217/hu.po.orig	2008-01-07 09:08:42.000000000 +0000
++++ iso_4217/hu.po
+@@ -1180,7 +1180,6 @@ msgstr "zairei zaire"
+ #~ msgstr "dél-koreai won"
+ 
+ #, fuzzy
+-#~| msgid "Polish Złoty"
+ #~ msgid "Polish Zloty"
+ #~ msgstr "lengyel zlotyi"
+ 
