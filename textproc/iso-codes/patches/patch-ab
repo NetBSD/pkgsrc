@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2008/01/16 00:22:52 wiz Exp $
+
+--- iso_4217/zh_HK.po.orig	2008-01-07 09:08:42.000000000 +0000
++++ iso_4217/zh_HK.po
+@@ -1179,7 +1179,6 @@ msgstr "薩伊"
+ #~ msgstr "南韓圜"
+ 
+ #, fuzzy
+-#~| msgid "Polish Złoty"
+ #~ msgid "Polish Zloty"
+ #~ msgstr "波蘭茲羅提"
+ 
