@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.12 2007/08/20 11:04:03 joerg Exp $
+# $NetBSD: check-shlibs.mk,v 1.13 2008/01/16 14:03:31 joerg Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -40,7 +40,7 @@ privileged-install-hook: _check-shlibs
 
 .if !empty(USE_CHECK_SHLIBS_ELF:M[yY][eE][sS])
 CHECK_SHLIBS_ELF=	${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
-CHECK_SHLIBS_ELF_ENV=	PLATFORM_RPATH=/usr/lib
+CHECK_SHLIBS_ELF_ENV=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
 CHECK_SHLIBS_ELF_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
 CHECK_SHLIBS_ELF_ENV+=	CROSS_DESTDIR=${_CROSS_DESTDIR:Q}
 CHECK_SHLIBS_ELF_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
