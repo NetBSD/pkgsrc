@@ -1,15 +1,7 @@
-# $NetBSD: OSF1.mk,v 1.21 2007/10/19 13:41:35 rillig Exp $
+# $NetBSD: OSF1.mk,v 1.22 2008/01/16 03:09:48 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
-# current bmake is broken, see pkg/25559
-
-#.SHELL: name=ksh path=/bin/ksh hasErrCtl=true \
-#	check="set -e" ignore="set +e" \
-#	echo="set -v" quiet="set +v" filter="set +v" \
-#	echoFlag=v errFlag=e
-
-CPP?=		/usr/bin/cpp
 ECHO_N?=	${SETENV} CMD_ENV=bsd /usr/bin/echo -n
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 PKGLOCALEDIR=	share
@@ -46,6 +38,9 @@ IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	1
 IMAKE_MANINSTALL?=	maninstall catinstall
+
+# Fix broken system headers by using pkgtools/posix_headers
+FIX_SYSTEM_HEADERS?=    yes
 
 _OPSYS_EMULDIR.osf1=	# empty
 
