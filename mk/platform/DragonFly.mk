@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.34 2007/10/19 13:41:35 rillig Exp $
+# $NetBSD: DragonFly.mk,v 1.35 2008/01/16 14:03:31 joerg Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -45,6 +45,8 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_EMULDIR.linux=	/compat/linux
+
+_OPSYS_SYSTEM_RPATH?=		/usr/lib:/usr/lib/gcc41:/usr/lib/gcc34
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
