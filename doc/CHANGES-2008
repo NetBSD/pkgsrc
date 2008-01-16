@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.123 2008/01/16 00:24:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.124 2008/01/16 03:05:56 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libXmu to 1.0.4 [wiz 2008-01-15]
 	Updated misc/getopt to 1.1.4 [wiz 2008-01-15]
 	Updated textproc/iso-codes to 1.8 [wiz 2008-01-16]
+	Added textproc/xmltoman version 0.3 [bjs 2008-01-16]
