@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6985 2008/01/16 00:24:16 wiz Exp $
+$NetBSD: TODO,v 1.6986 2008/01/16 07:54:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o evilwm-1.0.0
 	o ex-20050325
-	o exiv2-0.16
 	o ezmlm-idx-6.0.1 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
