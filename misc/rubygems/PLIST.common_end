@@ -35,6 +35,7 @@
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Security
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/SSL
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/Requirement
+@dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RequirePathsBuilder
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteSourceException
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstaller
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/ri/Gem/RemoteInstallationSkipped
@@ -165,6 +166,7 @@
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/Security.src
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/Security
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/Requirement.src
+@dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/RequirePathsBuilder.src
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/RemoteInstaller.src
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/RemoteFetcher.src
 @dirrm lib/ruby/gems/1.8/doc/${PKGNAME}/rdoc/classes/Gem/RemoteFetcher

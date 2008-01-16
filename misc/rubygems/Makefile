@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/12/13 14:46:58 taca Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/16 22:56:42 minskim Exp $
 
-DISTNAME=	rubygems-0.9.5
+DISTNAME=	rubygems-1.0.1
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/28174/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/29548/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,6 +11,7 @@ COMMENT=	Ruby standard for publishing and managing third party libraries
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+INSTALL_TARGET=	install --format-executable
 RUBY_REQD=	1.8.3
 USE_RUBY_SETUP=	yes
 
