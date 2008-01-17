@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/04/27 19:40:01 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/17 22:05:48 minskim Exp $
 
-DISTNAME=	rake-0.7.3
+DISTNAME=	rake-0.8.1
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/19879/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/29752/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
