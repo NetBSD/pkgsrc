@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.134 2008/01/17 21:23:22 adam Exp $
+$NetBSD: CHANGES-2008,v 1.135 2008/01/17 22:07:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -268,3 +268,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmcvs to 1.11.22nb1 [tnn 2008-01-17]
 	Updated mail/postfix-current to 2.5.0rc2 [martti 2008-01-17]
 	Updated games/scummvm to 0.11.0 [adam 2008-01-17]
+	Updated devel/rake to 0.8.1 [minskim 2008-01-17]
