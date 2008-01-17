@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/01/15 22:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2008/01/17 09:14:51 tron Exp $
 
 DISTNAME=	libidn-1.4
 CATEGORIES=	devel
@@ -18,6 +18,7 @@ USE_TOOLS+=		makeinfo pkg-config perl:build
 TEXINFO_REQD=		4.1
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
+CONFIGURE_ENV+=		EMACS=${FALSE}
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
