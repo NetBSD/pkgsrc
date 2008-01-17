@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/04/27 19:40:01 minskim Exp $
+$NetBSD: distinfo,v 1.7 2008/01/17 22:05:48 minskim Exp $
 
-SHA1 (rake-0.7.3.tgz) = 1f0065ae24a67814043643c32909af8c5346ad8e
-RMD160 (rake-0.7.3.tgz) = a0bbf24476a24226c0ad061dda9c54cd1299553d
-Size (rake-0.7.3.tgz) = 83853 bytes
+SHA1 (rake-0.8.1.tgz) = 370a1f418c8d79d9fd715785b811c096b5f3d318
+RMD160 (rake-0.8.1.tgz) = dc9acefa9e1d75d4432b1193531a55a371328511
+Size (rake-0.8.1.tgz) = 91006 bytes
