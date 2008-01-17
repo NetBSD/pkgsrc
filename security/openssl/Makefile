@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.130 2008/01/05 20:41:25 rillig Exp $
+# $NetBSD: Makefile,v 1.131 2008/01/17 06:42:47 tnn Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
-OPENSSL_VERS?=		0.9.7i
+OPENSSL_VERS?=		0.9.8g
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
@@ -24,7 +24,6 @@ MASTER_SITES=	ftp://ftp.openssl.org/snapshot/
 .  endif
 .endif
 
-PKGREVISION=	6
 SVR4_PKGNAME=	ossl
 CATEGORIES=	security
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,6 +35,7 @@ CONFLICTS=	SSLeay-[0-9]* ssleay-[0-9]*
 CRYPTO=		yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -46,6 +46,7 @@ TEST_TARGET=		tests
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--install_prefix=${DESTDIR}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	shared threads
 
@@ -81,9 +82,9 @@ CONFIGURE_ARGS+=	irix64-mips4-cc
 PLIST_OPSYS=		PLIST.osf1
 CONFIGURE_SCRIPT=	./Configure
 .  if !empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=	alpha-gcc-rpath
+CONFIGURE_ARGS+=	tru64-alpha-gcc
 .  else
-CONFIGURE_ARGS+=	alpha-cc-rpath
+CONFIGURE_ARGS+=	tru64-alpha-cc
 .  endif
 .elif ${OPSYS} == "Darwin"
 .include "../../mk/dlopen.buildlink3.mk"
@@ -92,8 +93,8 @@ SUBST_CLASSES+=		dl
 SUBST_MESSAGE.dl=	Adding dynamic link compatibility library.
 SUBST_STAGE.dl=		post-configure
 SUBST_FILES.dl=		Makefile apps/Makefile crypto/Makefile \
-			crypto/pkcs7/Makefile fips/Makefile test/Makefile
-SUBST_SED.dl=		-e "s,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS} ,g"
+			crypto/pkcs7/Makefile test/Makefile
+SUBST_SED.dl=		-e 's,^EX_LIBS=,EX_LIBS=${DL_LDFLAGS:Q} ,g'
 .endif
 
 .include "../../security/openssl/options.mk"
@@ -117,22 +118,8 @@ CONF_FILES=		${PREFIX}/share/examples/openssl/openssl.cnf	\
 			${PKG_SYSCONFDIR}/openssl.cnf
 OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
-# Some shells don't accept empty word lists in for loops.  For those
-# Makefiles where this occurs, edit the file so that we avoid running
-# the loop.
-#
-# Also, fix the path to perl in various scripts.
-#
+# Fix the path to perl in various scripts.
 pre-configure:
-	cd ${WRKSRC};							\
-	for file in fips/*/Makefile; do					\
-		if ${GREP} "^EXHEADER=[ 	]*\$$" $$file >/dev/null; then \
-			${ECHO} "Fixing 'install' target in $$file.";	\
-			${MV} -f $$file $$file.preawk;			\
-			${AWK} '/^install:/ { printf "install:\n\nnot-install:\n"; next } { print }' \
-				$$file.preawk > $$file;			\
-		fi;							\
-	done
 	cd ${WRKSRC} && ${PERL5} util/perlpath.pl ${PERL5}
 
 .include "../../mk/bsd.pkg.mk"

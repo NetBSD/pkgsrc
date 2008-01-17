@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/12/27 23:41:42 gdt Exp $
+# $NetBSD: options.mk,v 1.4 2008/01/17 06:42:48 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	idea mdc2 rc5
@@ -27,6 +27,7 @@ PLIST_SUBST+=		IDEA="@comment "
 .if !empty(PKG_OPTIONS:Mmdc2)
 # A license file is needed.
 OPENSSL_LICENSE+=	mdc2-nonlicense
+CONFIGURE_ARGS+=	enable-mdc2
 PLIST_SUBST+=		MDC2=
 .else
 CONFIGURE_ARGS+=	no-mdc2
@@ -40,6 +41,7 @@ PLIST_SUBST+=		MDC2="@comment "
 .if !empty(PKG_OPTIONS:Mrc5)
 # A license file is needed.
 OPENSSL_LICENSE+=	rc5-nonlicense
+CONFIGURE_ARGS+=	enable-rc5
 PLIST_SUBST+=		RC5=
 .else
 CONFIGURE_ARGS+=	no-rc5

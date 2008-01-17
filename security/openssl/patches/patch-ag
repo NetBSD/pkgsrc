@@ -1,0 +1,58 @@
+$NetBSD: patch-ag,v 1.10 2008/01/17 06:42:48 tnn Exp $
+
+--- Makefile.shared.orig	2007-09-16 16:11:51.000000000 +0200
++++ Makefile.shared	2007-10-21 13:28:51.000000000 +0200
+@@ -273,6 +273,11 @@ link_o.alpha-osf1:
+ 	@ if ${DETECT_GNU_LD}; then \
+ 		$(DO_GNU_SO); \
+ 	else \
++		if ($(CC) -v 2>&1 | grep gcc) > /dev/null; then \
++			WL="-Wl,"; DELIM=","; \
++		else \
++			WL=""; DELIM=" "; \
++		fi; \
+ 		SHLIB=lib$(LIBNAME).so; \
+ 		SHLIB_SUFFIX=; \
+ 		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
+@@ -282,11 +287,11 @@ link_o.alpha-osf1:
+ 			SHLIB_HIST="$(LIBVERSION)"; \
+ 		fi; \
+ 		SHLIB_SOVER=; \
+-		ALLSYMSFLAGS='-all'; \
+-		NOALLSYMSFLAGS='-none'; \
++		ALLSYMSFLAGS="$${WL}-all"; \
++		NOALLSYMSFLAGS="$${WL}-none"; \
+ 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared -Wl,-B,symbolic"; \
+ 		if [ -n "$$SHLIB_HIST" ]; then \
+-			SHAREDFLAGS="$$SHAREDFLAGS -set_version $$SHLIB_HIST"; \
++			SHAREDFLAGS="$$SHAREDFLAGS $${WL}-set_version$${DELIM}$$SHLIB_HIST"; \
+ 		fi; \
+ 	fi; \
+ 	$(LINK_SO_O)
+@@ -294,6 +299,11 @@ link_a.alpha-osf1:
+ 	@ if ${DETECT_GNU_LD}; then \
+ 		$(DO_GNU_SO); \
+ 	else \
++		if ($(CC) -v 2>&1 | grep gcc) > /dev/null; then \
++			WL="-Wl,"; DELIM=","; \
++		else \
++			WL=""; DELIM=" "; \
++		fi; \
+ 		SHLIB=lib$(LIBNAME).so; \
+ 		SHLIB_SUFFIX=; \
+ 		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
+@@ -303,11 +313,11 @@ link_a.alpha-osf1:
+ 			SHLIB_HIST="$(LIBVERSION)"; \
+ 		fi; \
+ 		SHLIB_SOVER=; \
+-		ALLSYMSFLAGS='-all'; \
+-		NOALLSYMSFLAGS='-none'; \
++		ALLSYMSFLAGS="$${WL}-all"; \
++		NOALLSYMSFLAGS="$${WL}-none"; \
+ 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared -Wl,-B,symbolic"; \
+ 		if [ -n "$$SHLIB_HIST" ]; then \
+-			SHAREDFLAGS="$$SHAREDFLAGS -set_version $$SHLIB_HIST"; \
++			SHAREDFLAGS="$$SHAREDFLAGS $${WL}-set_version$${DELIM}$$SHLIB_HIST"; \
+ 		fi; \
+ 	fi; \
+ 	$(LINK_SO_A)
