@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.129 2008/01/17 03:33:27 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.130 2008/01/17 06:46:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -263,3 +263,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix-current to 2.5.0rc1 [ghen 2008-01-16]
 	Updated misc/rubygems to 1.0.1 [minskim 2008-01-16]
 	Added net/unfs3 version 0.9.20 [tnn 2008-01-17]
+	Updated security/openssl to 0.9.8g [tnn 2008-01-17]
