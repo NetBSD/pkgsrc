@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.7 2007/08/16 13:02:05 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.8 2008/01/17 19:25:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -178,13 +178,15 @@ BEGIN {
 	print "    </table>" > html_report
 	print "    <hr />" > html_report
 
+	has_top_count = 0
 	for (pkg in status) {
 		if (depth[pkg] == 0 || status[pkg] != "failed")
 			continue
 		top_count[depth[pkg] " " pkg] = pkg
+		has_top_count = 1
 	}
-	sort(top_count, sorted_top_count, "-rn")
-	if (sorted_top_count[0]) {
+	if (has_top_count) {
+		sort(top_count, sorted_top_count, "-rn")
 		print "    <h2>Packages causing the most breakage</h2>" > html_report	
 		print "    <table>" > html_report
 		print "      <tr>" > html_report
