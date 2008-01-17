@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.11 2005/10/11 17:19:21 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.12 2008/01/17 06:42:47 tnn Exp $
 bin/c_rehash
 bin/openssl
-bin/openssl_fips_fingerprint
 include/openssl/aes.h
 include/openssl/asn1.h
 include/openssl/asn1_mac.h
@@ -20,15 +19,15 @@ include/openssl/des_old.h
 include/openssl/dh.h
 include/openssl/dsa.h
 include/openssl/dso.h
+include/openssl/dtls1.h
 include/openssl/e_os2.h
 include/openssl/ebcdic.h
 include/openssl/ec.h
+include/openssl/ecdh.h
+include/openssl/ecdsa.h
 include/openssl/engine.h
 include/openssl/err.h
 include/openssl/evp.h
-include/openssl/fips.h
-include/openssl/fips_rand.h
-include/openssl/fips_sha.h
 include/openssl/hmac.h
 ${IDEA}include/openssl/idea.h
 include/openssl/krb5_asn.h
@@ -48,6 +47,8 @@ include/openssl/pem.h
 include/openssl/pem2.h
 include/openssl/pkcs12.h
 include/openssl/pkcs7.h
+include/openssl/pq_compat.h
+include/openssl/pqueue.h
 include/openssl/rand.h
 include/openssl/rc2.h
 include/openssl/rc4.h
@@ -61,6 +62,7 @@ include/openssl/ssl2.h
 include/openssl/ssl23.h
 include/openssl/ssl3.h
 include/openssl/stack.h
+include/openssl/store.h
 include/openssl/symhacks.h
 include/openssl/tls1.h
 include/openssl/tmdiff.h
@@ -70,8 +72,19 @@ include/openssl/ui_compat.h
 include/openssl/x509.h
 include/openssl/x509_vfy.h
 include/openssl/x509v3.h
+lib/engines/lib4758cca.so
+lib/engines/libaep.so
+lib/engines/libatalla.so
+lib/engines/libchil.so
+lib/engines/libcswift.so
+lib/engines/libgmp.so
+lib/engines/libnuron.so
+lib/engines/libsureware.so
+lib/engines/libubsec.so
 lib/libcrypto.a
 lib/libssl.a
+lib/pkgconfig/libcrypto.pc
+lib/pkgconfig/libssl.pc
 lib/pkgconfig/openssl.pc
 man/man1/CA.pl.1
 man/man1/openssl.1
@@ -84,6 +97,8 @@ man/man1/openssl_dgst.1
 man/man1/openssl_dhparam.1
 man/man1/openssl_dsa.1
 man/man1/openssl_dsaparam.1
+man/man1/openssl_ec.1
+man/man1/openssl_ecparam.1
 man/man1/openssl_enc.1
 man/man1/openssl_errstr.1
 man/man1/openssl_gendsa.1
@@ -129,6 +144,8 @@ man/man3/ASN1_STRING_print_ex_fp.3
 man/man3/ASN1_STRING_set.3
 man/man3/ASN1_STRING_type.3
 man/man3/ASN1_STRING_type_new.3
+man/man3/ASN1_generate_nconf.3
+man/man3/ASN1_generate_v3.3
 man/man3/BF_cbc_encrypt.3
 man/man3/BF_cfb64_encrypt.3
 man/man3/BF_decrypt.3
@@ -255,6 +272,18 @@ man/man3/BIO_vfree.3
 man/man3/BIO_wpending.3
 man/man3/BIO_write.3
 man/man3/BIO_write_filename.3
+man/man3/BN_BLINDING_convert.3
+man/man3/BN_BLINDING_convert_ex.3
+man/man3/BN_BLINDING_create_param.3
+man/man3/BN_BLINDING_free.3
+man/man3/BN_BLINDING_get_flags.3
+man/man3/BN_BLINDING_get_thread_id.3
+man/man3/BN_BLINDING_invert.3
+man/man3/BN_BLINDING_invert_ex.3
+man/man3/BN_BLINDING_new.3
+man/man3/BN_BLINDING_set_flags.3
+man/man3/BN_BLINDING_set_thread_id.3
+man/man3/BN_BLINDING_update.3
 man/man3/BN_CTX_end.3
 man/man3/BN_CTX_free.3
 man/man3/BN_CTX_get.3
@@ -344,6 +373,7 @@ man/man3/BUF_MEM_free.3
 man/man3/BUF_MEM_grow.3
 man/man3/BUF_MEM_new.3
 man/man3/BUF_strdup.3
+man/man3/CONF_modules_finish.3
 man/man3/CONF_modules_free.3
 man/man3/CONF_modules_load.3
 man/man3/CONF_modules_load_file.3
@@ -457,11 +487,13 @@ man/man3/ERR_peek_error_line_data.3
 man/man3/ERR_peek_last_error.3
 man/man3/ERR_peek_last_error_line.3
 man/man3/ERR_peek_last_error_line_data.3
+man/man3/ERR_pop_to_mark.3
 man/man3/ERR_print_errors.3
 man/man3/ERR_print_errors_fp.3
 man/man3/ERR_put_error.3
 man/man3/ERR_reason_error_string.3
 man/man3/ERR_remove_state.3
+man/man3/ERR_set_mark.3
 man/man3/EVP_BytesToKey.3
 man/man3/EVP_CIPHER_CTX_block_size.3
 man/man3/EVP_CIPHER_CTX_cipher.3
@@ -597,8 +629,10 @@ man/man3/OBJ_obj2txt.3
 man/man3/OBJ_sn2nid.3
 man/man3/OBJ_txt2nid.3
 man/man3/OBJ_txt2obj.3
+man/man3/OPENSSL_Applink.3
 man/man3/OPENSSL_VERSION_NUMBER.3
 man/man3/OPENSSL_config.3
+man/man3/OPENSSL_ia32cap.3
 man/man3/OPENSSL_load_builtin_modules.3
 man/man3/OPENSSL_no_config.3
 man/man3/OpenSSL_add_all_algorithms.3
@@ -774,6 +808,7 @@ man/man3/SSL_SESSION_get_time.3
 man/man3/SSL_SESSION_get_timeout.3
 man/man3/SSL_SESSION_set_ex_data.3
 man/man3/SSL_SESSION_set_time.3
+man/man3/SSL_SESSION_set_timeout.3
 man/man3/SSL_accept.3
 man/man3/SSL_add_client_CA.3
 man/man3/SSL_add_session.3
@@ -1036,6 +1071,7 @@ man/man3/openssl_crypto.3
 man/man3/openssl_des.3
 man/man3/openssl_dh.3
 man/man3/openssl_dsa.3
+man/man3/openssl_ecdsa.3
 man/man3/openssl_engine.3
 man/man3/openssl_err.3
 man/man3/openssl_evp.3
@@ -1053,8 +1089,9 @@ man/man3/openssl_ssl.3
 man/man3/openssl_threads.3
 man/man3/openssl_ui.3
 man/man3/openssl_ui_compat.3
+man/man3/openssl_x509.3
 man/man5/openssl_config.5
-man/man7/Modes_of_DES.7
+man/man5/openssl_x509v3_config.5
 man/man7/des_modes.7
 share/examples/openssl/CA.pl
 share/examples/openssl/CA.sh
@@ -1065,4 +1102,5 @@ share/examples/openssl/c_name
 share/examples/openssl/openssl.cnf
 @dirrm share/examples/openssl
 @unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
+@dirrm lib/engines
 @dirrm include/openssl
