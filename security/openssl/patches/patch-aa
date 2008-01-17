@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.19 2006/06/12 22:46:51 joerg Exp $
+$NetBSD: patch-aa,v 1.20 2008/01/17 06:42:48 tnn Exp $
 
---- config.orig	2005-04-07 20:26:10.000000000 +0000
-+++ config
+--- config.orig	2007-08-01 13:21:35.000000000 +0200
++++ config	2007-10-21 13:18:53.000000000 +0200
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.19 2006/06/12 22:46:51 joerg Exp $
  RELEASE=`(uname -r) 2>/dev/null` || RELEASE="unknown"
  SYSTEM=`(uname -s) 2>/dev/null`  || SYSTEM="unknown"
  VERSION=`(uname -v) 2>/dev/null` || VERSION="unknown"
-@@ -155,6 +156,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
+@@ -154,6 +155,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "mips4-sgi-irix64"; exit 0
  	;;
  
@@ -21,14 +21,14 @@ $NetBSD: patch-aa,v 1.19 2006/06/12 22:46:51 joerg Exp $
      Linux:[2-9].*)
  	echo "${MACHINE}-whatever-linux2"; exit 0
  	;;
-@@ -210,13 +215,16 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
-     FreeBSD:*)
+@@ -210,12 +215,16 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "${MACHINE}-whatever-freebsd"; exit 0
  	;;
+ 
 +    DragonFly:*)
 +	echo "${MACHINE}-whatever-dragonfly"; exit 0
 +	;;
- 
++
      NetBSD:*:*:*386*)
          echo "`(/usr/sbin/sysctl -n hw.model || /sbin/sysctl -n hw.model) | sed 's,.*\(.\)86-class.*,i\186,'`-whatever-netbsd"; exit 0
  	;;
@@ -39,30 +39,32 @@ $NetBSD: patch-aa,v 1.19 2006/06/12 22:46:51 joerg Exp $
  	;;
  
      OpenBSD:*)
-@@ -670,10 +678,23 @@ EOF
-   sparc64-*-freebsd*) OUT="FreeBSD-sparc64" ;;
-   ia64-*-freebsd*) OUT="FreeBSD-ia64" ;;
-   *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
-+  *-dragonfly*) OUT="FreeBSD-elf" ;;
-   *-freebsd[1-2]*) OUT="FreeBSD" ;;
--  *86*-*-netbsd) OUT="NetBSD-x86" ;;
--  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
--  *-*-netbsd) OUT="NetBSD-sparc" ;;
-+  x86_64-*-netbsd) OUT="NetBSD-${MACHINE_ARCH}" ;;
-+  *86*-*-netbsd)
-+	if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
-+		OUT="NetBSD-x86-aout"
-+	else
-+		OUT="NetBSD-x86-elf"
-+	fi
-+	;;
+@@ -655,13 +664,18 @@ case "$GUESSOS" in
+ 	;;
+   *-*-sunos4)		OUT="sunos-$CC" ;;
+ 
 +  alpha-*-netbsd|arm-*-netbsd|arm32-*-netbsd|m68000-*-netbsd|m68k-*-netbsd|\
 +  mipseb-*-netbsd|mipsel-*-netbsd|ns32k-*-netbsd|powerpc-*-netbsd|\
-+  sparc-*-netbsd|sparc64-*-netbsd|vax-*-netbsd)
-+	OUT="NetBSD-${MACHINE_ARCH}"
-+	;;
-+  *-*-netbsd) OUT="NetBSD" ;;
-+  *-*-interix3) OUT="Interix3" ;;
-   alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
-   *86*-*-openbsd) OUT="OpenBSD-i386" ;;
-   m68k*-*-openbsd) OUT="OpenBSD-m68k" ;;
++  sparc-*-netbsd|sparc64-*-netbsd|vax-*-netbsd|x86_64-*-netbsd)
++			OUT="NetBSD-${MACHINE_ARCH}" ;;
++
+   *86*-*-bsdi4)		OUT="BSD-x86-elf"; options="$options no-sse2 -ldl" ;;
+   alpha*-*-*bsd*)	OUT="BSD-generic64"; options="$options -DL_ENDIAN" ;;
+   powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
+   sparc64-*-*bsd*)	OUT="BSD-sparc64" ;;
+   ia64-*-*bsd*)		OUT="BSD-ia64" ;;
+   amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
+-  *86*-*-*bsd*)		# mimic ld behaviour when it's looking for libc...
++  *86*-*-*bsd*|*-dragonfly*) # mimic ld behaviour when it's looking for libc...
+ 			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
+ 			    libc=/usr/lib/libc.so
+ 			else					# OpenBSD
+@@ -674,6 +688,8 @@ case "$GUESSOS" in
+ 			esac ;;
+   *-*-*bsd*)		OUT="BSD-generic32" ;;
+ 
++  *-*-interix3)		OUT="Interix3" ;;
++
+   *-*-osf)		OUT="osf1-alpha-cc" ;;
+   *-*-tru64)		OUT="tru64-alpha-cc" ;;
+   *-*-[Uu]nix[Ww]are7)
