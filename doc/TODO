@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6986 2008/01/16 07:54:49 wiz Exp $
+$NetBSD: TODO,v 1.6987 2008/01/17 02:47:58 obache Exp $
 
 Suggested new packages
 ======================
@@ -669,6 +669,7 @@ Suggested package updates
 	o jhead-2.8
 	o jools-1.0
 	o jwhois-4.0
+	o jwm-2.0.1
 	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.6
@@ -1205,6 +1206,7 @@ Suggested package updates
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.0.5
+	o transfig-3.2.5
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
