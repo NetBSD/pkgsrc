@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.6 2007/08/16 13:02:05 joerg Exp $
+# $NetBSD: create-report-txt.awk,v 1.7 2008/01/17 19:25:34 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -140,12 +140,15 @@ BEGIN {
 	printf "  Depending on masked package: %5d\n", pkgs_indirect_prefailed > txt_report
 	print "" > txt_report
 
+	has_top_count = 0
 	for (loc in location_status) {
-		if (broken_location[loc] != "" && broken_location[loc] != 0)
-			top_count[broken_location[loc] " " loc] = loc
+		if (broken_location[loc] == "" || broken_location[loc] == 0)
+			continue
+		top_count[broken_location[loc] " " loc] = loc
+		has_top_count = 1
 	}
-	sort(top_count, sorted_top_count, "-rn")
-	if (sorted_top_count[0]) {
+	if (has_top_count) {
+		sort(top_count, sorted_top_count, "-rn")
 		print "Packages breaking the most other packages" > txt_report
 		print "" > txt_report
 		print "Package                               Breaks Maintainer" > txt_report
