@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/17 03:29:16 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/17 04:00:47 tnn Exp $
 #
 
 DISTNAME=	unfs3-0.9.20
@@ -32,6 +32,6 @@ CPPFLAGS+=		-Dxp_sock=xp_fd
 
 post-install:
 			${INSTALL_DATA} ${FILESDIR}/exports \
-			    ${DESTDIR}/${PREFIX}/share/examples/unfs3
+			    ${DESTDIR}${PREFIX}/share/examples/unfs3
 
 .include "../../mk/bsd.pkg.mk"
