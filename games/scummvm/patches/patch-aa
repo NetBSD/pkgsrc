@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.17 2007/07/01 10:12:02 adam Exp $
+$NetBSD: patch-aa,v 1.18 2008/01/17 21:22:35 adam Exp $
 
---- Makefile.orig	2007-06-16 23:45:09.000000000 +0200
+--- Makefile.orig	2008-01-13 00:08:51.000000000 +0100
 +++ Makefile
 @@ -9,7 +9,7 @@ srcdir      ?= .
  DEFINES     := -DHAVE_CONFIG_H
  LDFLAGS     :=
  INCLUDES    := -I. -I$(srcdir) -I$(srcdir)/engines
--LIBS	    :=
-+LIBS	    := ${LIBOSSAUDIO}
- OBJS	    :=
+-LIBS        :=
++LIBS        := ${LIBOSSAUDIO}
+ OBJS        :=
+ DEPDIR      := .deps
  
- MODULES     :=
