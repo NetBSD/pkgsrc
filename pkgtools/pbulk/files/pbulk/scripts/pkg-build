@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.8 2008/01/16 14:20:09 joerg Exp $
+# $NetBSD: pkg-build,v 1.9 2008/01/17 17:47:09 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -102,6 +102,11 @@ set -e
 mkdir -p ${bulklog}/${pkgname}
 rm -f ${bulklog}/${pkgname}/*
 
+if [ "$use_destdir" = "user-destdir" ]; then
+	touch ${bulklog}/${pkgname}/work.log
+	chown ${unprivileged_user} ${bulklog}/${pkgname}/work.log
+fi
+
 # Go to target directory
 cd ${pkgsrc}/${pkgdir}
 # Clean build area, just in case
@@ -111,11 +116,11 @@ if [ ! -z "$dependencies" ]; then
 	PKG_PATH=${packages}/All ${pkg_add} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
 fi
 # Build package, create a separate log file for each major phase
-run_make ${run_build} checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
+run_make run_direct checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
 run_make ${run_build} configure  > ${bulklog}/${pkgname}/configure.log 2>&1 || cleanup
 run_make ${run_build} all  > ${bulklog}/${pkgname}/build.log 2>&1 || cleanup
 run_make ${run_install} install  > ${bulklog}/${pkgname}/install.log 2>&1 || cleanup
-run_make ${run_install} package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
+run_make run_direct package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 
 # When using DESTDIR build, add the package once to test install rules.
 if [ "$use_destdir" != "no" ]; then
