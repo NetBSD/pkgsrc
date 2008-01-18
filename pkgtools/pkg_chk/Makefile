@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2007/09/20 08:18:13 abs Exp $
+# $NetBSD: Makefile,v 1.57 2008/01/18 07:50:03 tnn Exp $
 
-DISTNAME=	pkg_chk-1.87
+DISTNAME=	pkg_chk-1.88
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,6 +34,7 @@ do-build:
 	  -e 's#@ID@#${ID}#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${TMP_MAKECONF}#g' \
+	  -e 's#@MKTEMP@#${MKTEMP}#g' \
 	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
 	  -e 's#@PKG_ADMIN@#${PKG_ADMIN}#g' \
 	  -e 's#@PKG_DELETE@#${PKG_DELETE}#g' \

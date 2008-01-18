@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.51 2007/09/20 08:18:13 abs Exp $
+# $Id: pkg_chk.sh,v 1.52 2008/01/18 07:50:03 tnn Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -698,9 +698,6 @@ if [ $# != 0 ];then
     usage "Additional argument ($*) given"
 fi
 
-MY_TMPDIR=`mktemp -d ${TMPDIR-/tmp}/${0##*/}.XXXXXX`
-MY_TMPFILE=$MY_TMPDIR/tmp
-
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
 unset PKG_PATH || true
@@ -712,6 +709,7 @@ export GZIP_CMD
 test -n "$ID"         || ID="@ID@"
 test -n "$MAKE"       || MAKE="@MAKE@"
 test -n "$MAKECONF"   || MAKECONF="@MAKECONF@"
+test -n "$MKTEMP"     || MKTEMP="@MKTEMP@"
 test -n "$PKG_ADD"    || PKG_ADD="@PKG_ADD@"
 test -n "$PKG_ADMIN"  || PKG_ADMIN="@PKG_ADMIN@"
 test -n "$PKG_DBDIR"  || PKG_DBDIR="@PKG_DBDIR@"
@@ -720,6 +718,9 @@ test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
 test -n "$SED"        || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
+
+MY_TMPDIR=`${MKTEMP} -d ${TMPDIR-/tmp}/${0##*/}.XXXXXX`
+MY_TMPFILE=$MY_TMPDIR/tmp
 
 if [ -z "$MAKECONF" -o ! -f "$MAKECONF" ] ; then
     if [ -f @PREFIX@/etc/mk.conf ] ; then
