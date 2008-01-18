@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE.Darwin,v 1.1 2006/12/03 22:18:16 jmmv Exp $
+$NetBSD: MESSAGE.Darwin,v 1.2 2008/01/18 10:21:01 jmmv Exp $
 
-Bochs has been installed into ${PREFIX}/share/libexec/bochs.
-You can find there an application bundle (bochs.app) that you can copy to
+Bochs has been installed as ${PREFIX}/libexec/bochs.app.
+That directory (bochs.app) is an application bundle that you can copy to
 /Applications if you want to.
 
-There is also a sample configuration file in that location.  Note that you
-can use the $BXSHARE variable in your own configuration files to specify
-the location of the system BIOSes.  This variable will be automatically set
-to the appropriate location by Bochs when executed.
+There is a sample configuration file in ${PREFIX}/share/bochs.
+Note that you can use the $BXSHARE variable in your own configuration files
+to specify the location of the system BIOSes.  This variable will be
+automatically set to the appropriate location by Bochs when executed.
 
 For your convenience, a 'bochs' helper script has also been installed and
 should be available through your PATH as a regular command-line utility.
