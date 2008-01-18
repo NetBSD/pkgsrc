@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.1 2008/01/18 05:47:30 tnn Exp $
+# $NetBSD: NEWS,v 1.2 2008/01/18 17:39:09 reed Exp $
 
 PKGSRC NEWS
 ===========
@@ -20,6 +20,12 @@ pkgsrc-2007Q4 released [agc 20080105]
 Simplifying meta-packages [rillig 20071219]
 	The variable META_PACKAGE was introduced. This simplifies creation
 	and maintenance of packages that do not install files.
+
+Replace a package with different name [gdt 20071107]
+	The variable OLDNAME was introduced for "make replace" to
+	replace a package with a name other than the new one, via
+	"make replace OLDNAME=oldpkgname".  Read the announcement at:
+	http://mail-index.netbsd.org/tech-pkg/2007/11/07/0002.html
 	
 pkgsrc-2007Q3 released [agc 20071015]
 	A new stable branch was released. Read the announcement at:
