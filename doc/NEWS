@@ -1,0 +1,68 @@
+# $NetBSD: NEWS,v 1.1 2008/01/18 05:47:30 tnn Exp $
+
+PKGSRC NEWS
+===========
+
+  This file contains information about important infrastructural changes in
+  pkgsrc. The intended readers are the pkgsrc developers as well as anyone
+  tracking pkgsrc-current.
+
+
+OpenSSL update [tnn 20080118]
+	OpenSSL in pkgsrc switched from the 0.9.7 to the 0.9.8 branch. To
+	accomodate for this, 596 packages dependent on openssl had their
+	revisions bumped.
+
+pkgsrc-2007Q4 released [agc 20080105]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2008/01/05/0000.html
+
+Simplifying meta-packages [rillig 20071219]
+	The variable META_PACKAGE was introduced. This simplifies creation
+	and maintenance of packages that do not install files.
+	
+pkgsrc-2007Q3 released [agc 20071015]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2007/10/15/0000.html
+
+Features framework [jlam 20070907]
+	A "system features" framework has been added. It will be used to
+	automatically supply missing "basic" headers and libraries for old
+	systems. This is supported through the USE_FEATURES variable.
+
+X.org 6.9 removed [joerg 20070817]
+	monolithic X.org 6.9 was removed from pkgsrc. It was obsoleted by the
+	modular X.org (7.x) packages. Transitioning users should remove all old
+	X.org packages and set X11_TYPE=modular in mk.conf.
+
+Emulator framework [jlam 20070729]
+	A new emulator framework has been added. This will handle all
+	binary-only packages that require emulation on the native OS.
+	Please see pkgsrc/mk/emulator/README.
+
+audit-packages merged with pkg_install [adrianp 20070714]
+	The utility for auditing installed packages for security problems,
+	audit-packages, has been rewritten in C. It is now part of the
+	pkgtools/pkg_install package.
+	
+pkgsrc-2007Q2 released [agc 20070701]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2007/07/01/0000.html
+
+New framework for bulk builds [joerg 20070619]
+	pbulk, the new automated pkgsrc bulk build framework was imported.
+
+pkgsrc-2007Q1 released [agc 20070419]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2007/04/19/0000.html
+
+pkgsrc-2006Q4 released [agc 20070104]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2007/01/04/0000.html
+
+modular X.org imported [joerg 20061114]
+	The modular X.org packages were imported.
+
+pkgsrc-2006Q3 released [agc 20061001]
+	A new stable branch was released. Read the announcement at:
+	http://mail-index.netbsd.org/netbsd-announce/2006/10/01/0000.html
