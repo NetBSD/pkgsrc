@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/02/15 15:45:07 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/18 05:06:28 tnn Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		odbc-postgresql-${BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		ODBC interface to PostgreSQL
 
 CONFIGURE_ARGS+=	--with-odbcinst=${PKG_SYSCONFDIR:Q}

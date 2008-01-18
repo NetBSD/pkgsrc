@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/11/30 21:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/01/18 05:06:42 tnn Exp $
 
 DISTNAME=	libkexif-0.2.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
