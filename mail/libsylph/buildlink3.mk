@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/10/13 12:38:30 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/18 05:08:26 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSYLPH_BUILDLINK3_MK:=	${LIBSYLPH_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libsylph
 
 .if ${LIBSYLPH_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libsylph+=	libsylph>=0.3.0
+BUILDLINK_ABI_DEPENDS.libsylph?=	libsylph>=0.3.0nb1
 BUILDLINK_PKGSRCDIR.libsylph?=	../../mail/libsylph
 .endif	# LIBSYLPH_BUILDLINK3_MK
 

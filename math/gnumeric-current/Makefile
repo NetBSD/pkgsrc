@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/01/06 16:48:01 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/18 05:08:31 tnn Exp $
 #
 
 DISTNAME=		gnumeric-1.8.0
+PKGREVISION=		1
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.8/}
 EXTRACT_SUFX=		.tar.bz2

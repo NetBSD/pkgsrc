@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/01/16 07:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/18 05:06:42 tnn Exp $
 #
 
 DISTNAME=	libkexiv2-0.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
