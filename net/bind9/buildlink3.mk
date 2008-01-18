@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/01/18 05:08:40 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BIND_BUILDLINK3_MK:=	${BIND_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}bind
 
 .if !empty(BIND_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.bind+=	bind>=9.2.2
-BUILDLINK_ABI_DEPENDS.bind+=	bind>=9.2.3nb5
+BUILDLINK_ABI_DEPENDS.bind+=	bind>=9.4.1pl1nb2
 BUILDLINK_PKGSRCDIR.bind?=	../../net/bind9
 
 BUILDLINK_INCDIRS.bind?=	include/bind

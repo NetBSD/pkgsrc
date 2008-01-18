@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/12/31 05:41:36 taca Exp $
+# $NetBSD: Makefile,v 1.15 2008/01/18 05:08:46 tnn Exp $
 
 DISTNAME=	netatalk-1.6.4a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 

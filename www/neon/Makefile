@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2007/11/08 16:16:11 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2008/01/18 05:09:52 tnn Exp $
 
 # Note: when upgrading neon to >=0.27, make sure that subversion still
 # works. 1.4.5 does not.
 DISTNAME=	neon-0.26.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.webdav.org/neon/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/18 05:08:44 tnn Exp $
 #
 
 PKGNAME=	nagios-plugin-ldap-${PLUGINSVERSION}
+PKGREVISION=	1
 CATEGORIES=	net sysutils databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
