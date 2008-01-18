@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.48 2007/11/19 23:38:03 rillig Exp $
+# $NetBSD: subst.mk,v 1.49 2008/01/18 10:41:05 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -101,11 +101,9 @@ subst-${_class_}: ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
 .  if defined(SUBST_MESSAGE.${_class_})
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
+	${RUN} ${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	cd ${WRKSRC:Q};							\
+	${RUN} cd ${WRKSRC:Q};						\
 	files=${SUBST_FILES.${_class_}:Q};				\
 	for file in $$files; do						\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
@@ -131,6 +129,5 @@ ${_SUBST_COOKIE.${_class_}}:
 			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-text file \"$$file\"."; \
 		fi;							\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
-	${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
+	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
 .endfor
