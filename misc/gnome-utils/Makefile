@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2007/11/05 19:31:19 drochner Exp $
+# $NetBSD: Makefile,v 1.85 2008/01/18 05:08:34 tnn Exp $
 #
 
 DISTNAME=		gnome-utils-2.20.0.1
+PKGREVISION=		1
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.20/}
 EXTRACT_SUFX=		.tar.bz2

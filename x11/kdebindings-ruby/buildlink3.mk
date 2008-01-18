@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/11/30 21:55:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/01/18 05:10:05 tnn Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 KDEBINDINGS_RUBY_BUILDLINK3_MK:=	${KDEBINDINGS_RUBY_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdebindings-ruby
 
 .if ${KDEBINDINGS_RUBY_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kdebindings-ruby+=	kdebindings-ruby>=3.5.5
-BUILDLINK_ABI_DEPENDS.kdebindings-ruby?=	kdebindings-ruby>=3.5.8nb1
+BUILDLINK_ABI_DEPENDS.kdebindings-ruby?=	kdebindings-ruby>=3.5.8nb2
 BUILDLINK_PKGSRCDIR.kdebindings-ruby?=	../../x11/kdebindings-ruby
 .endif	# KDEBINDINGS_RUBY_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/01/07 12:26:20 ghen Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/18 05:08:48 tnn Exp $
 #
 
 DISTNAME=	pen-0.15.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://siag.nu/pub/pen/					\
 		ftp://siag.nu/pub/pen/

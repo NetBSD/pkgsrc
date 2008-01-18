@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/12/07 20:41:03 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/18 05:09:45 tnn Exp $
 #
 
 DISTNAME=	xmlrpc-c-1.09.00
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlrpc-c/}
 EXTRACT_SUFX=	.tgz

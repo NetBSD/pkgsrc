@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2007/09/21 13:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/01/18 05:14:34 tnn Exp $
 #
 
 DISTNAME=		monotone-viz-0.15
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel scm
 MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 

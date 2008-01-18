@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2008/01/06 16:59:31 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2008/01/18 05:08:34 tnn Exp $
 #
 
 DISTNAME=		goffice-0.4.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/goffice/0.4/}
 

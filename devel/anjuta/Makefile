@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2007/12/16 14:49:39 drochner Exp $
+# $NetBSD: Makefile,v 1.60 2008/01/18 05:14:31 tnn Exp $
 
 DISTNAME=	anjuta-2.2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 EXTRACT_SUFX=	.tar.bz2

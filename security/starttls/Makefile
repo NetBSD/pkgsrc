@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/18 16:09:12 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 05:09:42 tnn Exp $
 #
 
 DISTNAME=		starttls-0.10
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://opaopa.org/pub/elisp/
 

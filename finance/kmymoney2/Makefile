@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2007/11/30 21:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2008/01/18 05:06:33 tnn Exp $
 
 DISTNAME=	kmymoney2-0.8.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 

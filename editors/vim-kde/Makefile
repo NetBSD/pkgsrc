@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2008/01/09 13:47:43 martti Exp $
+# $NetBSD: Makefile,v 1.50 2008/01/18 05:06:32 tnn Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	editors kde
 MASTER_SITES=	${MASTER_SITE_KDE:=apps/KDE3.x/utils/}
 EXTRACT_SUFX=	.tar.bz2

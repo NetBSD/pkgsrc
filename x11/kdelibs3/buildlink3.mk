@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2007/11/30 21:55:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2008/01/18 05:10:06 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdelibs
 
 .if !empty(KDELIBS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.6
-BUILDLINK_ABI_DEPENDS.kdelibs?=	kdelibs>=3.5.8nb2
+BUILDLINK_ABI_DEPENDS.kdelibs?=	kdelibs>=3.5.8nb5
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 .endif	# KDELIBS_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/12/17 21:06:23 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/01/18 05:09:38 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBNASL_BUILDLINK3_MK:=	${LIBNASL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libnasl
 
 .if !empty(LIBNASL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libnasl+=	libnasl>=2.2.9
-BUILDLINK_ABI_DEPENDS.libnasl?=	libnasl>=2.2.9
+BUILDLINK_ABI_DEPENDS.libnasl?=	libnasl>=2.2.9nb1
 BUILDLINK_PKGSRCDIR.libnasl?=	../../security/libnasl
 .endif	# LIBNASL_BUILDLINK3_MK
 

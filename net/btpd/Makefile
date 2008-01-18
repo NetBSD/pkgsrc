@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/01/09 09:26:38 bjs Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/18 05:08:40 tnn Exp $
 
 DISTNAME=	btpd-0.12
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.murmeldjur.se/btpd/ \
 		http://people.su.se/~rnyberg/btpd/
