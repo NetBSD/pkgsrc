@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/15 23:53:01 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 15:36:34 joerg Exp $
 #
 
 DISTNAME=		libXpm-3.5.7
@@ -15,7 +15,7 @@ CONFLICTS+=		xpm-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config xgettext
 PKGCONFIG_OVERRIDE+=	xpm.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
