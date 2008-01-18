@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/07/13 11:52:28 itohy Exp $
+$NetBSD: distinfo,v 1.6 2008/01/18 14:40:19 itohy Exp $
 
-SHA1 (kyopon-0.4.tar.gz) = 84ea7431aae573e64757f66f75617c4d92720c13
-RMD160 (kyopon-0.4.tar.gz) = 107e7c2ac04ed1e338cba6facdc7e048d56d74e1
-Size (kyopon-0.4.tar.gz) = 16756 bytes
+SHA1 (kyopon-0.5.tar.gz) = e85e3fcf85c884464a17584bffbb70891f68ca56
+RMD160 (kyopon-0.5.tar.gz) = 456d5c5d97967e2fae8625f128bf942e80b93f55
+Size (kyopon-0.5.tar.gz) = 17167 bytes
