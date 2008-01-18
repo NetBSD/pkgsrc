@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.7 2008/01/18 10:21:01 jmmv Exp $
+
+--- main.cc.orig	2007-12-21 22:16:34.000000000 +0100
++++ main.cc
+@@ -600,7 +600,7 @@ int bx_init_main(int argc, char *argv[])
+     }
+     arg++;
+   }
+-#if BX_WITH_CARBON
++#if BROKEN_BX_WITH_CARBON
+   if(!getenv("BXSHARE"))
+   {
+     CFBundleRef mainBundle;

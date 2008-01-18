@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.6 2008/01/18 10:21:01 jmmv Exp $
+
+--- bx_debug/dbg_main.cc.orig	2007-12-13 23:56:35.000000000 +0100
++++ bx_debug/dbg_main.cc
+@@ -1070,7 +1070,7 @@ void bx_dbg_xlate_address(bx_lin_address
+   bx_phy_address paddr;
+   laddr &= BX_CONST64(0xfffffffffffff000);
+ 
+-  bx_bool paddr_valid = BX_CPU(which_cpu)->dbg_xlate_linear2phy(laddr, &paddr);
++  bx_bool paddr_valid = BX_CPU(dbg_cpu)->dbg_xlate_linear2phy(laddr, &paddr);
+   if (paddr_valid) {
+     dbg_printf("linear page 0x" FMT_ADDRX " maps to physical page 0x%08x\n", laddr, paddr);
+   }

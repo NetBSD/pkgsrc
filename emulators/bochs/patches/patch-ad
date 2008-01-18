@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2008/01/03 21:03:45 xtraeme Exp $
+$NetBSD: patch-ad,v 1.10 2008/01/18 10:21:01 jmmv Exp $
 
---- Makefile.in.orig	2007-12-27 00:43:38.000000000 +0100
-+++ Makefile.in	2007-12-27 00:44:54.000000000 +0100
-@@ -72,8 +72,8 @@
+--- Makefile.in.orig	2007-10-22 00:07:20.000000000 +0200
++++ Makefile.in
+@@ -72,8 +72,8 @@ RMDIR=rmdir
  TAR=tar
  CHMOD=chmod
  # the GZIP variable is reserved by gzip program
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.9 2008/01/03 21:03:45 xtraeme Exp $
  ZIP=zip
  UNIX2DOS=unix2dos
  LIBTOOL=@LIBTOOL@
-@@ -576,7 +576,7 @@
+@@ -576,7 +576,7 @@ RINCLUDES=/System/Library/Frameworks/Car
  REZ_ARGS=-append -i $RINCLUDES -d SystemSevenOrLater=1 -useDF
  STANDALONE_LIBDIR=`pwd`/$(APP)/Contents/$(APP_PLATFORM)/lib
  OSACOMPILE=/usr/bin/osacompile
@@ -22,13 +22,14 @@ $NetBSD: patch-ad,v 1.9 2008/01/03 21:03:45 xtraeme Exp $
  
  # On a MacOS X machine, you run rez, osacompile, and setfile to
  # produce the script executable, which has both a data fork and a
-@@ -653,18 +653,15 @@
+@@ -653,18 +653,15 @@ $(APP)/.build_plugins: $(APP)/.build boc
  	$(LIBTOOL) --finish $(STANDALONE_LIBDIR);
  	touch $(APP)/.build_plugins
  
 -install_macosx: all download_dlx install_man @INSTALL_DOCBOOK_VAR@
+-	-mkdir -p $(DESTDIR)$(prefix)
 +install_macosx: all install_man @INSTALL_DOCBOOK_VAR@
- 	-mkdir -p $(DESTDIR)$(prefix)
++	-mkdir -p $(DESTDIR)$(sharedir)
  	for i in $(INSTALL_LIST_MACOSX); do if test -e $$i; then $(CPMAC) -r $$i $(DESTDIR)$(sharedir); else $(CPMAC) -r $(srcdir)/$$i $(DESTDIR)$(sharedir); fi; done
  	$(CPMAC) $(srcdir)/.bochsrc $(DESTDIR)$(sharedir)/bochsrc-sample.txt
  	-mkdir $(DESTDIR)$(sharedir)/keymaps
