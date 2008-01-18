@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/01/08 18:55:38 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2008/01/18 05:06:29 tnn Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 POSTGRESQL81_CLIENT_BUILDLINK3_MK:=	${POSTGRESQL81_CLIENT_BUILDLINK3_MK}+
@@ -15,6 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}postgresql81-client
 
 .if ${POSTGRESQL81_CLIENT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.postgresql81-client+=		postgresql81-client>=8.1.0
+BUILDLINK_ABI_DEPENDS.postgresql81-client?=	postgresql81-client>=8.1.11nb1
 BUILDLINK_PKGSRCDIR.postgresql81-client?=	../../databases/postgresql81-client
 
 .  if defined(PG_SUBPREFIX) && !empty(PG_SUBPREFIX)

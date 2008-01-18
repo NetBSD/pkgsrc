@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/01/09 03:55:10 smb Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/18 05:08:20 tnn Exp $
 #
 
 PLUGIN_NAME=	clamav_plugin
 PLUG_VER=	3.2.0
+PKGREVISION=	1
 .include "../../mail/claws-mail/plugins.mk"
 BUILD_DIRS=     src/plugins/clamav
 INSTALL_DIRS=   src/plugins/clamav

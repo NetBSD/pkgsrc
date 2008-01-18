@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2007/11/25 14:43:12 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/01/18 05:09:55 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_GUI_BUILDLINK3_MK:=	${GNUSTEP_GUI_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-gui
 
 .if !empty(GNUSTEP_GUI_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-gui+=	gnustep-gui>=0.9.2
-BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.10.3nb1
+BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.12.0nb1
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Bundles\/GSPrinting$$/ { print "@comment in x11/gnustep-gui: " $$0; next; }

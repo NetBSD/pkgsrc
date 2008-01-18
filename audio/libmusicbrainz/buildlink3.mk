@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/01/05 20:56:56 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/01/18 05:06:20 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMUSICBRAINZ_BUILDLINK3_MK:=	${LIBMUSICBRAINZ_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmusicbrainz
 
 .if ${LIBMUSICBRAINZ_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libmusicbrainz+=	libmusicbrainz>=3.0.0
+BUILDLINK_ABI_DEPENDS.libmusicbrainz?=	libmusicbrainz>=3.0.0nb1
 BUILDLINK_PKGSRCDIR.libmusicbrainz?=	../../audio/libmusicbrainz
 .endif	# LIBMUSICBRAINZ_BUILDLINK3_MK
 

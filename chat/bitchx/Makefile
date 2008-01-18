@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/06/25 14:15:21 lkundrak Exp $
+# $NetBSD: Makefile,v 1.43 2008/01/18 05:06:22 tnn Exp $
 
 DISTNAME=	ircii-pana-1.1-final
 PKGNAME=	bitchx-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.bitchx.org/files/source/ \
 		ftp://ftp.bitchx.org/pub/BitchX/source/ \

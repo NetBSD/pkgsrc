@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2007/11/30 21:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2008/01/18 05:08:36 tnn Exp $
 
 DISTNAME=	koffice-1.6.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.3/src/}
 EXTRACT_SUFX=	.tar.bz2

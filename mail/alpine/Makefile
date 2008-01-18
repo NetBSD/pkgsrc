@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/01/14 15:09:14 jwise Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/18 05:08:20 tnn Exp $
 #
 
 DISTNAME=	alpine-1.00
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/alpine/
 DIST_SUBDIR=	alpine

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2007/04/19 18:25:39 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2008/01/18 05:08:39 tnn Exp $
 #
 
 .include "../../multimedia/totem/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-xine-/}
+PKGREVISION=	1
 
 COMMENT+=	(using Xine)
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/01/14 23:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/18 05:06:42 tnn Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2

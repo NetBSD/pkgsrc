@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2007/01/30 20:41:38 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/01/18 05:09:38 tnn Exp $
 #
 
 DISTNAME=		krb4-1.2.2
 PKGNAME=		kth-krb4-1.2.2
 #PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 

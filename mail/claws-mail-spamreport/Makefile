@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/01/09 03:55:12 smb Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 05:08:21 tnn Exp $
 #
 
 DISTNAME=	spam_report-0.3.1
 PKGNAME=	claws-mail-spam_report-0.3.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
