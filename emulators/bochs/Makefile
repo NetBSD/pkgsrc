@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/01/03 21:03:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.52 2008/01/18 10:21:01 jmmv Exp $
 
 DISTNAME=		bochs-2.3.6
 CATEGORIES=		emulators
@@ -97,19 +97,20 @@ BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,\#,'
 .endif
 
 .if ${OPSYS} == "Darwin"
-INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}/libexec/bochs
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Darwin
 PLIST_SRC=		${.CURDIR}/PLIST.Darwin
 
 post-build:
 	{ ${ECHO} '#! ${SH}'; \
-	  ${ECHO} 'exec ${PREFIX}/libexec/bochs/bochs.app/Contents/MacOS/bochs'\
+	  ${ECHO} 'exec ${PREFIX}/libexec/bochs.app/Contents/MacOS/bochs'\
 	          '"$$@"'; } >${WRKDIR}/bochs.sh
 
 post-install:
+	/Developer/Tools/CpMac -r -p ${WRKSRC}/bochs.app ${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/bxcommit ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bximage ${PREFIX}/bin
+	${RM} -rf ${PREFIX}/libexec/bochs.app/.build
 	${INSTALL_SCRIPT} ${WRKDIR}/bochs.sh ${PREFIX}/bin/bochs
-	${LN} -fs ${PREFIX}/libexec/bochs/bxcommit ${PREFIX}/bin/bxcommit
-	${LN} -fs ${PREFIX}/libexec/bochs/bximage ${PREFIX}/bin/bximage
 .else
 BUILDLINK_DEPMETHOD.libXt?=	build
 
