@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/01/18 05:08:36 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2008/01/18 22:31:41 hira Exp $
 #
 
 OO_VER=			2.3.1
@@ -34,6 +34,8 @@ CONFIGURE_DIRS=		config_office
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
+
+.include "../../mk/compiler.mk"
 
 USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
@@ -208,6 +210,5 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/compiler.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
