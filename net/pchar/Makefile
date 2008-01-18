@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2007/09/07 22:12:19 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2008/01/18 05:08:48 tnn Exp $
 
 DISTNAME=		pchar-1.5
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.kitchenlab.org/www/bmah/Software/pchar/
 

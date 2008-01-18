@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/18 05:08:33 tnn Exp $
 #
 
 DISTNAME=	gkrellmlaunch-0.5
 PKGNAME=	${DISTNAME:S/gkrellm/gkrellm-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkrellmlaunch/}
 
