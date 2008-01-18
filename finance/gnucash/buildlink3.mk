@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2008/01/12 23:36:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2008/01/18 05:06:33 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUCASH_BUILDLINK3_MK:=	${GNUCASH_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnucash
 
 .if ${GNUCASH_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gnucash+=	gnucash>=2.1.0
-BUILDLINK_ABI_DEPENDS.gnucash?=	gnucash>=2.1.3
+BUILDLINK_ABI_DEPENDS.gnucash?=	gnucash>=2.2.3nb1
 BUILDLINK_PKGSRCDIR.gnucash?=	../../finance/gnucash
 .endif	# GNUCASH_BUILDLINK3_MK
 

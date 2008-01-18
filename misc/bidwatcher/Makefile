@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/02/22 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2008/01/18 05:08:33 tnn Exp $
 
 DISTNAME=	bidwatcher-1.3.17
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bidwatcher/}
 

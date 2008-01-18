@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/03/22 10:06:24 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/18 05:09:39 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OCAML_SSL_BUILDLINK3_MK:=	${OCAML_SSL_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ocaml-ssl
 
 .if ${OCAML_SSL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ocaml-ssl+=	ocaml-ssl>=0.4.0
+BUILDLINK_ABI_DEPENDS.ocaml-ssl?=	ocaml-ssl>=0.4.1nb1
 BUILDLINK_PKGSRCDIR.ocaml-ssl?=	../../security/ocaml-ssl
 .endif	# OCAML_SSL_BUILDLINK3_MK
 
