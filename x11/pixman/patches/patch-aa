@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/08 19:51:43 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/18 03:12:41 bjs Exp $
 
 Not only OpenBSD has <inttypes.h>.
 
---- pixman/pixman.h.orig	2007-10-24 12:30:17.000000000 -0400
+--- pixman/pixman.h.orig	2007-12-17 18:50:58.000000000 -0500
 +++ pixman/pixman.h
 @@ -75,7 +75,7 @@ SOFTWARE.
  #if defined (__SVR4) && defined (__sun)
@@ -13,3 +13,12 @@ Not only OpenBSD has <inttypes.h>.
  #  include <inttypes.h>
  #elif defined (_MSC_VER)
  typedef __int8 int8_t;
+@@ -370,7 +370,7 @@ pixman_bool_t pixman_fill (uint32_t *bit
+ 			   int y,
+ 			   int width,
+ 			   int height,
+-			   uint32_t xor);
++			   uint32_t _xor);
+ /*
+  * Images
+  */
