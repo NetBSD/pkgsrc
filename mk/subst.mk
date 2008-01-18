@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.50 2008/01/18 11:16:08 rillig Exp $
+# $NetBSD: subst.mk,v 1.51 2008/01/18 11:26:11 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -15,7 +15,7 @@
 #	{pre,do,post}-{extract,patch,configure,build,install}.
 #
 # SUBST_MESSAGE.<class>
-#	The message to display when the substitution is done.
+#	The message to display before doing the substitution.
 #
 # SUBST_FILES.<class>
 #	A list of file patterns on which to run the substitution;
@@ -75,6 +75,7 @@ _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
 SUBST_VARS.${_class_}?=		# none
+SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}}
 .  for v in ${SUBST_VARS.${_class_}}
 SUBST_FILTER_CMD.${_class_} +=	-e s,@${v}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:Q},g
 .  endfor
@@ -100,7 +101,7 @@ ${SUBST_STAGE.${_class_}}: subst-${_class_}
 subst-${_class_}: ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
-.  if defined(SUBST_MESSAGE.${_class_})
+.  if !empty(SUBST_MESSAGE.${_class_})
 	${RUN} ${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
 .  endif
 	${RUN} cd ${WRKSRC:Q};						\
