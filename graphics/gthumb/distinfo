@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.17 2007/12/17 19:31:29 drochner Exp $
+$NetBSD: distinfo,v 1.18 2008/01/18 21:04:37 drochner Exp $
 
-SHA1 (gthumb-2.10.7.tar.gz) = 8dfcefec432f408917aff925e9fddde4c6854896
-RMD160 (gthumb-2.10.7.tar.gz) = f5c8ea6468310c72f65fd382b62da535dc63d6b4
-Size (gthumb-2.10.7.tar.gz) = 3345119 bytes
+SHA1 (gthumb-2.10.8.tar.gz) = 4fed3cd7a980150b0bd41032615093f7de9f8c46
+RMD160 (gthumb-2.10.8.tar.gz) = ceba118ee8ce51854c7cb7363c02af77bcb63e34
+Size (gthumb-2.10.8.tar.gz) = 3351714 bytes
 SHA1 (patch-aa) = 782e9ce646cdb2d5fbc28675cffb75f7e059a071
-SHA1 (patch-ab) = cdc799e16b2d213e62d538138634569fab857103
