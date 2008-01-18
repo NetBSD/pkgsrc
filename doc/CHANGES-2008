@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.139 2008/01/18 04:14:38 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.140 2008/01/18 07:50:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xdm to 1.1.6 [bjs 2008-01-18]
 	Updated x11/pixman to 0.9.6nb3 [bjs 2008-01-18]
 	Updated textproc/xmltoman to 0.3nb1 [bjs 2008-01-18]
+	Updated pkgtools/pkg_chk to 1.88 [tnn 2008-01-18]
