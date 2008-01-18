@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.140 2008/01/18 07:50:38 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.141 2008/01/18 14:42:29 itohy Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -274,3 +274,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.9.6nb3 [bjs 2008-01-18]
 	Updated textproc/xmltoman to 0.3nb1 [bjs 2008-01-18]
 	Updated pkgtools/pkg_chk to 1.88 [tnn 2008-01-18]
+	Updated comms/kyopon to 0.5 [itohy 2008-01-18]
