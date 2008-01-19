@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/09/25 10:03:52 hira Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/19 09:16:20 wiz Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://set.gmd.de/~hua/
 COMMENT=	Warcraft-like game for X11
 

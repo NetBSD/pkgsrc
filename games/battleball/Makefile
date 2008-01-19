@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/12/29 09:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/19 09:16:20 wiz Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	#
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/*/http://www.cs.utexas.edu/users/pahardin/bb.html
 COMMENT=	3d game of soccer, with tanks
 
