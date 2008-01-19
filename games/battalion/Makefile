@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/12/29 09:47:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/19 09:16:20 wiz Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -7,7 +7,7 @@ CATEGORIES=		games x11
 MASTER_SITES=		http://www.evl.uic.edu/aej/BATTALION/
 DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.evl.uic.edu/aej/AndyBattalion.html
 COMMENT=		Virtual reality 3D GL game for X11
 

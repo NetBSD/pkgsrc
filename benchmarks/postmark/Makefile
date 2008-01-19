@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/19 09:16:19 wiz Exp $
 
 DISTNAME=	postmark-1_5.c
 PKGNAME=	postmark-1.5
@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.netapp.com/ftp/
 EXTRACT_SUFX=	#
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netapp.com/tech_library/3022.html
 COMMENT=	NetApps file system benchmark
 

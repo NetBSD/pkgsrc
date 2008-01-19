@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/19 09:16:22 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -7,7 +7,7 @@ PKGREVISION=		12
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.artsoft.org/mirrormagic/
 COMMENT=		Nice little puzzle game with color graphics and sound
 

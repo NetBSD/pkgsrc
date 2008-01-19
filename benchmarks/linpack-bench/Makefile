@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/19 09:16:18 wiz Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-bench-940225
@@ -6,7 +6,7 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.netlib.org/benchmark/
 EXTRACT_SUFX=		# empty
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Collection of benchmarks for floating point
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

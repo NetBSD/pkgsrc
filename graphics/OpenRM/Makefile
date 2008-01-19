@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/15 14:58:19 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/19 09:16:24 wiz Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -7,7 +7,7 @@ PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
 

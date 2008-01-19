@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:24 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/19 09:16:22 wiz Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
@@ -7,7 +7,7 @@ CATEGORIES=		games x11
 MASTER_SITES=		http://src.doc.ic.ac.uk/public/computing/graphics/systems/X11/R5contrib/
 EXTRACT_SUFX=		.shar.Z
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Spy Vs. Bob, the timeless classic
 
 WRKSRC=			${WRKDIR}
