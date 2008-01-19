@@ -1,0 +1,12 @@
+# $NetBSD: c-functions.help,v 1.1 2008/01/19 22:37:47 rillig Exp $
+
+# mremap
+#
+# The mremap function is not covered by POSIX, so operating systems are
+# free to define the function as they want:
+#
+# NetBSD: void *mremap(void *oldp, size_t oldsize,
+#			void *newp, size_t newsize, int flags);
+# Linux: void *mremap(void *old_address, size_t old_size,
+#			size_t new_size, unsigned long flags);
+#
