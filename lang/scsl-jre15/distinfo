@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/05/15 19:44:07 tv Exp $
-
-SHA1 (jre-1_5_0-p3-bin-duh1-bsd-i586.tar.bz2) = 85fa7dc9571cde219fdf2be6c80acf6c4a008f1d
-RMD160 (jre-1_5_0-p3-bin-duh1-bsd-i586.tar.bz2) = bdeb4ed891940bdadeec672adc0c33f5c6f2642b
-Size (jre-1_5_0-p3-bin-duh1-bsd-i586.tar.bz2) = 21502676 bytes
-SHA1 (jce_policy-1_5_0.zip) = f0e887b91b4499142285633e65c5710c3a133a16
-RMD160 (jce_policy-1_5_0.zip) = eb12d0333c3ddbbba57a0e825a6891a75ec485c0
-Size (jce_policy-1_5_0.zip) = 8826 bytes
