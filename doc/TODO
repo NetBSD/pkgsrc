@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6989 2008/01/19 08:55:00 obache Exp $
+$NetBSD: TODO,v 1.6990 2008/01/19 12:09:58 obache Exp $
 
 Suggested new packages
 ======================
@@ -848,7 +848,6 @@ Suggested package updates
 	o openmotif-2.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
-	o osh-20080109
 	o otpCalc-0.97
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
