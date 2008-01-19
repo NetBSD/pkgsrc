@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/10/04 22:54:58 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2008/01/19 09:16:20 wiz Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -8,7 +8,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://clockwork.dementia.org/angband/Source/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thangorodrim.net/
 COMMENT=	Tolkien based variant of Moria for X11 displays
 

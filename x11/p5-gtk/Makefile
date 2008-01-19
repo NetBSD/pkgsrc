@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/01/07 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2008/01/19 09:16:26 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		p5-gtk-${GTKPERL_VERSION}
 PKGREVISION=		6
 SVR4_PKGNAME=		p5gtk
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Perl bindings for GTK+
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/Gtk

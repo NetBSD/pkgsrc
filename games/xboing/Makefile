@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/03/24 19:21:24 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/19 09:16:22 wiz Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -7,7 +7,7 @@ PKGREVISION=		3
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.techrescue.org/xboing/
 COMMENT=		Breakout style game for X11
 
