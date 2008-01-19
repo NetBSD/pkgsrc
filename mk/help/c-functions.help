@@ -1,7 +1,5 @@
-# $NetBSD: c-functions.help,v 1.1 2008/01/19 22:37:47 rillig Exp $
+# $NetBSD: c-functions.help,v 1.2 2008/01/19 23:00:49 rillig Exp $
 
-# mremap
-#
 # The mremap function is not covered by POSIX, so operating systems are
 # free to define the function as they want:
 #
@@ -10,3 +8,16 @@
 # Linux: void *mremap(void *old_address, size_t old_size,
 #			size_t new_size, unsigned long flags);
 #
+# Keywords: mremap
+
+# The mount function is probably different on all operating systems. For
+# some operating systems, it even changes between releases:
+#
+# NetBSD < 4.99.24: int mount(const char *type, const char *dir,
+#			int flags, void *data);
+# NetBSD >= 4.99.24: int mount(const char *type, const char *dir,
+#			int flags, void *data, size_t data_len);
+#
+# See net/coda/patches/patch-ac 1.3 for an example.
+#
+# Keywords: mount
