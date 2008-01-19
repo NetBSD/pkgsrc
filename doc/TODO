@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6990 2008/01/19 12:09:58 obache Exp $
+$NetBSD: TODO,v 1.6991 2008/01/19 17:19:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,9 @@ Suggested package updates
 	o ap2-python-3.3.1
 	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
-	o apache-1.3.39
+	o apache-1.3.41
+	o apache-2.0.63
+	o apache-2.2.8
 	o apache-ant15-1.7.0
 	o apache-tomcat-5.5.25
 	o apsfilter-7.2.8
