@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2007/02/22 19:26:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/01/19 09:16:24 wiz Exp $
 #
 
 DISTNAME=		cal3d-${CAL3D_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cal3d/}
 
 CAL3D_VERSION=		0.9.1
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cal3d.sourceforge.net/
 COMMENT=	Skeletal based 3d character animation library in C++
 
