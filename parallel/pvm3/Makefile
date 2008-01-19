@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/02/02 01:04:06 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2008/01/19 09:16:26 wiz Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -7,7 +7,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.netlib.org/pvm3/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
 
