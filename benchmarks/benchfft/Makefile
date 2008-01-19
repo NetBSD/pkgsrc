@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/07/21 06:36:21 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2008/01/19 09:16:17 wiz Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			ftp://ftp.fftw.org/pub/fftw/old/benchfft/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} fftw-2.0.1${EXTRACT_SUFX}
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithms
 

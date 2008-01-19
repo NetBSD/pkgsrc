@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2008/01/19 09:16:22 wiz Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -7,7 +7,7 @@ CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xbill.org/
 COMMENT=		Stop the dreaded Windows virus from infecting computers
 

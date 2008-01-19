@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:13:55 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/19 09:16:23 wiz Exp $
 #
 
 DISTNAME=	xpipeman-1.5
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/strategy/}
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.spinne.com/x/games/xpipeman/
 # domain squatted, page last updated 1999
 COMMENT=	Connect the pipes to contain the water flow game for X11

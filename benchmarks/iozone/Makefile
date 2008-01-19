@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2008/01/19 09:16:18 wiz Exp $
 
 DISTNAME=	iozone3_263
 PKGNAME=	iozone-3.263
@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iozone.org/
 COMMENT=	Benchmark for file read and write speed
 

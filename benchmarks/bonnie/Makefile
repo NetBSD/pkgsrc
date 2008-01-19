@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/02/22 19:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/01/19 09:16:17 wiz Exp $
 
 DISTNAME=	bonnie
 PKGNAME=	bonnie-2.06
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.textuality.com/bonnie/
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.textuality.com/bonnie/index.html
 COMMENT=	Performance Test of Sequential Filesystem I/O and STDIO
 

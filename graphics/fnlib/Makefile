@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/11 10:19:00 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/01/19 09:16:24 wiz Exp $
 #
 
 DISTNAME=		fnlib-0.5
@@ -6,7 +6,7 @@ PKGREVISION=		10
 CATEGORIES=		x11 graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Color font rendering library for X11R6
 
 # XXX Added to stop old distfiles conflicting due to the authors updating

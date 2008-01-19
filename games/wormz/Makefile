@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/02 18:39:43 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/19 09:16:22 wiz Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://lide.punknet.cz/miri/
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lide.punknet.cz/miri/Wormz.html
 COMMENT=		Networked game for X11
 

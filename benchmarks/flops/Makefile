@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/19 09:16:18 wiz Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -6,7 +6,7 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/flops/
 DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://performance.netlib.org/performance/html/flops.html
 COMMENT=		Floating point benchmark to give your MFLOPS rating
 
