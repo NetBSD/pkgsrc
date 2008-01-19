@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/07/05 06:53:13 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2008/01/19 09:16:25 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://now.cs.berkeley.edu/Glunix/glunix.html
 COMMENT=	Global Layer Unix for NOW (Network Of Workstations)
 

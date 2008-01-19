@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/01/21 18:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/19 09:16:19 wiz Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -6,7 +6,7 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.netlib.org/benchmark/
 EXTRACT_SUFX=		.c
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark for processors that gives you a MIPS rating
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

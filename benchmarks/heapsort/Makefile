@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/30 15:50:37 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/19 09:16:18 wiz Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -6,7 +6,7 @@ CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/heapsort/
 EXTRACT_SUFX=		#empty
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark program for variable sized arrays
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

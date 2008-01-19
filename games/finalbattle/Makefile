@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/02 17:14:04 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/19 09:16:21 wiz Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -8,7 +8,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/} \
 		ftp://ftp.billsgames.com/unix/x/finalbattle/
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/2/http://www.newbreedsoftware.com/finalbattle/
 COMMENT=	Multiplayer space battle simulation for X
 
