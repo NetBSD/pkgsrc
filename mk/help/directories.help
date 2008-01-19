@@ -1,4 +1,4 @@
-# $NetBSD: directories.mk,v 1.4 2007/01/17 12:47:21 rillig Exp $
+# $NetBSD: directories.help,v 1.1 2008/01/19 22:41:48 rillig Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.

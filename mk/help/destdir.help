@@ -1,4 +1,4 @@
-# $NetBSD: destdir.mk,v 1.2 2007/02/06 19:47:13 rillig Exp $
+# $NetBSD: destdir.help,v 1.1 2008/01/19 22:41:47 rillig Exp $
 #
 # ===
 # Warning: This file is still under construction. Don't rely on it.
