@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.141 2008/01/18 14:42:29 itohy Exp $
+$NetBSD: CHANGES-2008,v 1.142 2008/01/19 04:51:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -275,3 +275,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/xmltoman to 0.3nb1 [bjs 2008-01-18]
 	Updated pkgtools/pkg_chk to 1.88 [tnn 2008-01-18]
 	Updated comms/kyopon to 0.5 [itohy 2008-01-18]
+	Removed lang/scsl-jre15 [tnn 2008-01-19]
+	Removed lang/scsl-jdk15 [tnn 2008-01-19]
