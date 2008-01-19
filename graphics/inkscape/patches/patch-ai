@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/01/19 17:39:37 adam Exp $
+
+--- src/conn-avoid-ref.cpp.orig	2008-01-19 18:09:35.000000000 +0100
++++ src/conn-avoid-ref.cpp
+@@ -17,7 +17,7 @@
+ #include "libavoid/polyutil.h"
+ #include "libavoid/router.h"
+ #include "libavoid/connector.h"
+-#include "xml/simple-node.cpp"
++#include "xml/simple-node.h"
+ #include "document.h"
+ #include "prefs-utils.h"
+ 
