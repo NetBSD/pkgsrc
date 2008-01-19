@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.142 2008/01/19 04:51:22 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.143 2008/01/19 12:08:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/kyopon to 0.5 [itohy 2008-01-18]
 	Removed lang/scsl-jre15 [tnn 2008-01-19]
 	Removed lang/scsl-jdk15 [tnn 2008-01-19]
+	Updated shells/osh to 20080109 [obache 2008-01-19]
