@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.61 2007/11/18 22:17:50 adrianp Exp $
+# $NetBSD: java-vm.mk,v 1.62 2008/01/19 05:04:00 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -10,7 +10,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: jdk sun-jdk13 blackdown-jdk13 kaffe
-#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 scsl-jdk15 jdk15
+#		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 jdk15
 #	Default value: (platform-dependent)
 #
 # Package-settable variables:
@@ -69,7 +69,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # This is a list of all of the JDKs that may be used.
 #
 _PKG_JVMS.6=		sun-jdk6
-_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 scsl-jdk15 jdk15
+_PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
 _PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
@@ -124,8 +124,6 @@ _ONLY_FOR_PLATFORMS.jdk15= \
 	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
-_ONLY_FOR_PLATFORMS.scsl-jdk15= \
-	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk13= \
 	Darwin-*-* \
 	DragonFly-*-i386 \
@@ -164,7 +162,6 @@ _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk14=		jdk14
 _JAVA_PKGBASE.jdk15=		jdk15
 _JAVA_PKGBASE.kaffe=		kaffe
-_JAVA_PKGBASE.scsl-jdk15=	scsl-jre15
 _JAVA_PKGBASE.sun-jdk13=	sun-jre13
 _JAVA_PKGBASE.sun-jdk14=	sun-jre14
 _JAVA_PKGBASE.sun-jdk15=	sun-jre15
@@ -175,7 +172,6 @@ _JAVA_NAME.blackdown-jdk13=	blackdown13
 _JAVA_NAME.jdk=			jdk11
 _JAVA_NAME.jdk14=		jdk14
 _JAVA_NAME.kaffe=		kaffe
-_JAVA_NAME.scsl-jre15=		scsl15
 _JAVA_NAME.sun-jdk13=		sun13
 _JAVA_NAME.sun-jdk14=		sun14
 _JAVA_NAME.sun-jdk15=		sun15
@@ -201,10 +197,7 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
       !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
       !empty(MACHINE_PLATFORM:MDarwin-[8-9].*-*)
-.    if defined(_PKG_JVM_INSTALLED.scsl-jdk15) && \
-	(${_PKG_JVM_INSTALLED.scsl-jdk15} == "yes")
-_PKG_JVM_DEFAULT=	scsl-jdk15
-.    elif defined(_PKG_JVM_INSTALLED.sun-jdk6) && \
+.    if defined(_PKG_JVM_INSTALLED.sun-jdk6) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk6} == "yes")
 _PKG_JVM_DEFAULT=	sun-jdk6
 .    elif defined(_PKG_JVM_INSTALLED.sun-jdk15) && \
@@ -266,8 +259,6 @@ BUILDLINK_API_DEPENDS.jdk?=			jdk-[0-9]*
 BUILDLINK_API_DEPENDS.jdk14?=		jdk14-[0-9]*
 BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
-BUILDLINK_API_DEPENDS.scsl-jdk15?=		scsl-jdk15-[0-9]*
-BUILDLINK_API_DEPENDS.scsl-jre15?=		scsl-jre15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
@@ -282,7 +273,6 @@ _JRE.jdk=		jdk
 _JRE.jdk14=		jdk14
 _JRE.jdk15=		jdk15
 _JRE.kaffe=		kaffe
-_JRE.scsl-jdk15=	scsl-jre15
 _JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.sun-jdk15=		sun-jre15
@@ -315,10 +305,6 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
-.elif ${_PKG_JVM} == "scsl-jdk15"
-_JDK_PKGSRCDIR=		../../lang/scsl-jdk15
-_JRE_PKGSRCDIR=		../../lang/scsl-jre15
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/scsl-1.5
 .elif ${_PKG_JVM} == "sun-jdk13"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk13
 _JRE_PKGSRCDIR=		../../lang/sun-jre13
