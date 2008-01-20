@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2007/10/07 20:49:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.193 2008/01/20 04:06:03 reed Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -79,7 +79,7 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 CONFIGURE_ARGS+=	--enable-suexec 				\
 			${APACHE_SUEXEC_CONFIGURE_ARGS:M--suexec-*}
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
-BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
+BUILD_DEFS+=	 	APACHE_SUEXEC_DOCROOT
 .endif
 
 # Note that there is NO static compile module hook here.  This is intentional.
@@ -130,7 +130,7 @@ LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 .  endif
 .endif
 
-BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
+BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS APACHE_USER APACHE_GROUP
 
 EGDIR=		${PREFIX}/share/examples/httpd
 
