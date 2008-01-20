@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6991 2008/01/19 17:19:15 taca Exp $
+$NetBSD: TODO,v 1.6992 2008/01/20 08:13:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.3
-	o bsflite-0.83 [pkg/37602]
 	o bzr-1.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
