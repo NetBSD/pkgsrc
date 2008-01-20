@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2008/01/12 11:36:32 adam Exp $
+# $NetBSD: Makefile,v 1.23 2008/01/20 21:08:01 xtraeme Exp $
 #
 
-DISTNAME=	postgrey-1.30
+DISTNAME=	postgrey-1.31
 #PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://isg.ee.ethz.ch/tools/postgrey/pub/ \
-		http://isg.ee.ethz.ch/tools/postgrey/pub/old/
+MASTER_SITES=	http://postgrey.schweikert.ch/pub/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://isg.ee.ethz.ch/tools/postgrey/
+HOMEPAGE=	http://postgrey.schweikert.ch/
 COMMENT=	Postfix Greylist Policy Server
 
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
