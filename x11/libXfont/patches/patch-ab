@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.3 2008/01/20 18:24:51 joerg Exp $
+
+--- src/bitmap/pcfread.c.orig	2007-09-05 02:18:23.000000000 +0200
++++ src/bitmap/pcfread.c
+@@ -588,6 +588,9 @@ pcfReadFont(FontPtr pFont, FontFilePtr f
+     pFont->info.lastRow = pcfGetINT16(file, format);
+     pFont->info.defaultCh = pcfGetINT16(file, format);
+     if (IS_EOF(file)) goto Bail;
++    if (pFont->info.firstCol > pFont->info.lastCol ||
++       pFont->info.firstRow > pFont->info.lastRow ||
++       pFont->info.lastCol-pFont->info.firstCol > 255) goto Bail;
+ 
+     nencoding = (pFont->info.lastCol - pFont->info.firstCol + 1) *
+ 	(pFont->info.lastRow - pFont->info.firstRow + 1);
+@@ -726,6 +729,9 @@ pcfReadFontInfo(FontInfoPtr pFontInfo, F
+     pFontInfo->lastRow = pcfGetINT16(file, format);
+     pFontInfo->defaultCh = pcfGetINT16(file, format);
+     if (IS_EOF(file)) goto Bail;
++    if (pFontInfo->firstCol > pFontInfo->lastCol ||
++       pFontInfo->firstRow > pFontInfo->lastRow ||
++       pFontInfo->lastCol-pFontInfo->firstCol > 255) goto Bail;
+ 
+     nencoding = (pFontInfo->lastCol - pFontInfo->firstCol + 1) *
+ 	(pFontInfo->lastRow - pFontInfo->firstRow + 1);
