@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/01/20 09:21:35 tnn Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/01/20 12:51:43 obache Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -39,7 +39,7 @@ BUILD_DIRS=		# empty
 JAVA_HOME=		${LOCALBASE}/java/sun-6
 JAVA_NAME=		sun6
 JAVA_UNLIMIT=		datasize
-JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${MACHINE_ARCH}/jli
+JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${EMUL_ARCH}/jli
 
 MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
 
