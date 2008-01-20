@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2008/01/20 02:31:47 tnn Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/01/20 09:21:35 tnn Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -6,7 +6,7 @@ EXTRACT_SUFX=	.bin
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
-DOWNLOAD=	http://www.java.com/en/download/manual.jsp
+DOWNLOAD=	http://java.sun.com/javase/downloads/index.jsp
 ARCHIVE=	http://java.sun.com/products/archive/
 
 RESTRICTED=	Redistribution of repackaged binaries not permitted

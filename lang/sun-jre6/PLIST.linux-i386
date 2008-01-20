@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.4 2008/01/20 02:31:47 tnn Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.5 2008/01/20 09:21:35 tnn Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -118,6 +118,8 @@ java/sun-6/lib/fontconfig.RedHat.2.1.bfc.default
 java/sun-6/lib/fontconfig.RedHat.2.1.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.3.bfc.default
 java/sun-6/lib/fontconfig.RedHat.3.properties.src.default
+java/sun-6/lib/fontconfig.RedHat.4.bfc.default
+java/sun-6/lib/fontconfig.RedHat.4.properties.src.default
 java/sun-6/lib/fontconfig.RedHat.bfc.default
 java/sun-6/lib/fontconfig.RedHat.properties.src.default
 java/sun-6/lib/fontconfig.SuSE.bfc.default
