@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.144 2008/01/20 02:32:46 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.145 2008/01/20 08:12:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -280,3 +280,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated shells/osh to 20080109 [obache 2008-01-19]
 	Updated lang/sun-jre6 to 6.0.3 [tnn 2008-01-20]
 	Updated lang/sun-jdk6 to 6.0.4 [tnn 2008-01-20]
+	Updated chat/bsflite to 0.83 [obache 2008-01-20]
