@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.116 2007/11/01 23:18:54 rillig Exp $
+# $NetBSD: bootstrap,v 1.117 2008/01/20 19:55:29 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -170,7 +170,7 @@ check_prog()
 	fi
 
 	for _d in `echo $PATH | tr ':' ' '`; do
-		if [ -x "$_d/$_name" ]; then
+		if [ -f "$_d/$_name" ] && [ -x "$_d/$_name" ]; then
 			# Program found
 			eval $_var=\""$_d/$_name"\"
 			return 1
