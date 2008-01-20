@@ -1,21 +1,23 @@
-$NetBSD: patch-ae,v 1.4 2007/09/11 15:53:58 obache Exp $
+$NetBSD: patch-ae,v 1.5 2008/01/20 20:11:09 jschauma Exp $
 
---- configure.orig	2007-08-30 21:01:38.000000000 +0000
-+++ configure
-@@ -5356,6 +5356,8 @@ done
+--- configure.orig	2008-01-20 12:04:44.000000000 -0800
++++ configure	2008-01-20 12:05:23.000000000 -0800
+@@ -5356,7 +5356,8 @@
  
  fi
  
+-
 +# these checks don't work, assume types are present
 +if false; then
  
- { echo "$as_me:$LINENO: checking for u_int64_t" >&5
- echo $ECHO_N "checking for u_int64_t... $ECHO_C" >&6; }
-@@ -5609,6 +5611,7 @@ _ACEOF
- 
+ for ac_header in sys/types.h
+ do
+@@ -5610,6 +5611,8 @@
+ 	ac_cv_type_u_int32_t=no
  fi
  
 +fi
- 
- { echo "$as_me:$LINENO: checking for libevent directory" >&5
- echo $ECHO_N "checking for libevent directory... $ECHO_C" >&6; }
++
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_type_u_int32_t" >&5
