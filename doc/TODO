@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6992 2008/01/20 08:13:25 obache Exp $
+$NetBSD: TODO,v 1.6993 2008/01/20 11:18:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,7 @@ Suggested package updates
 	o ZIPIdent-2.9
 	o a2ps-4.14
 	o aap-0.144
-	o abcm2ps-5.7.2
+	o abcm2ps-5.7.3
 	o abcmidi-20080104
 	o acme-091
 	o acr-0.5.2
@@ -316,6 +316,7 @@ Suggested package updates
 	o apache-2.2.8
 	o apache-ant15-1.7.0
 	o apache-tomcat-5.5.25
+	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o aranym-0.9.5
@@ -367,7 +368,7 @@ Suggested package updates
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.3
-	o bzr-1.0
+	o bzr-1.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairo-1.4.14
@@ -503,6 +504,7 @@ Suggested package updates
 	o freefont-ttf-20060126
 	o freeglut-2.4.0
 	o freepops-0.2.6
+	o freeradius-2.0.0
 	o freesci-0.6.2
 	o freetds-0.64
 	o freetype-lib-1.5.20050518
@@ -524,6 +526,7 @@ Suggested package updates
 	o gconf-editor-2.18.2
 	o gcpio-2.7
 	o gdal-lib-1.4.4
+	o gdb-6.7.1
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.5
@@ -566,7 +569,7 @@ Suggested package updates
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
-	o gnutls-2.2.0
+	o gnutls-2.2.1
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -721,6 +724,7 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-2.20.0
+	o libgnomemm-2.20.1
 	o libhydrogen-0.9.2
 	o libjit-0.1.0
 	o liblive-2007.02.20
@@ -734,6 +738,7 @@ Suggested package updates
 	o libopensync-0.35
 	o libprelude-0.9.16.1
 	o libpreludedb-0.9.14
+	o librsvg-2.20.0
 	o libshout-2.2.2
 	o libsoup-2.2.102
 	o libssh-0.2
@@ -788,7 +793,7 @@ Suggested package updates
 	o most-4.10.2
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.0.1
+	o mpg123-1.1.0
 	o mpich-1.2.7p1
 	o mserv-devel-0.41
 	o msf-2.7
@@ -889,6 +894,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-INET6-2.51
+	o p5-Image-ExifTool-7.13
 	o p5-Image-Info-1.27
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Fuzzy-0.10
@@ -1138,6 +1144,7 @@ Suggested package updates
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-5.0.1
+	o skipstone-0.9.7
 	o skkinput-2.06.4
 	o skype-2.0.0.13
 	o smalleiffel-0.90
@@ -1162,6 +1169,7 @@ Suggested package updates
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
 	o stella-2.4.2
+	o stellarium-0.9.1
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o stunnel-4.21
@@ -1182,7 +1190,7 @@ Suggested package updates
 	o tcpdstat-0.9
 	o tcpdump-3.9.8
 	o tcpillust-1.00b
-	o tcpreplay-3.2.3
+	o tcpreplay-3.2.4
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1251,7 +1259,7 @@ Suggested package updates
 	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
-	o wine-0.9.52
+	o wine-0.9.53
 	o wml-2.0.11
 	o wmweather-2.4.4
 	o worker-2.16.1
@@ -1259,7 +1267,7 @@ Suggested package updates
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9c
 	o wxGTK-2.8.6
-	o wxRemind-32
+	o wxRemind-43
 	o wyrd-1.4.3
 	o x264-devel-20071229.2245
 	o xalan-c-1.10.0
