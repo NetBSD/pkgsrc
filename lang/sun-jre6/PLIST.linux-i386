@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.3 2007/08/27 21:51:24 jlam Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.4 2008/01/20 02:31:47 tnn Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -360,8 +360,10 @@ java/sun-6/lib/zi/America/Indiana/Indianapolis
 java/sun-6/lib/zi/America/Indiana/Knox
 java/sun-6/lib/zi/America/Indiana/Marengo
 java/sun-6/lib/zi/America/Indiana/Petersburg
+java/sun-6/lib/zi/America/Indiana/Tell_City
 java/sun-6/lib/zi/America/Indiana/Vevay
 java/sun-6/lib/zi/America/Indiana/Vincennes
+java/sun-6/lib/zi/America/Indiana/Winamac
 java/sun-6/lib/zi/America/Inuvik
 java/sun-6/lib/zi/America/Iqaluit
 java/sun-6/lib/zi/America/Jamaica
@@ -404,6 +406,7 @@ java/sun-6/lib/zi/America/Rainy_River
 java/sun-6/lib/zi/America/Rankin_Inlet
 java/sun-6/lib/zi/America/Recife
 java/sun-6/lib/zi/America/Regina
+java/sun-6/lib/zi/America/Resolute
 java/sun-6/lib/zi/America/Rio_Branco
 java/sun-6/lib/zi/America/Santiago
 java/sun-6/lib/zi/America/Santo_Domingo

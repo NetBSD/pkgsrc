@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/05/25 02:04:15 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/01/20 02:31:48 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JDK6_BUILDLINK3_MK:=	${SUN_JDK6_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}sun-jdk6
 .if !empty(SUN_JDK6_BUILDLINK3_MK:M+)
 
 BUILDLINK_API_DEPENDS.sun-jdk6+=	sun-jdk6-[0-9]*
-BUILDLINK_ABI_DEPENDS.sun-jdk6?=	sun-jdk6>=6.0.1
+BUILDLINK_ABI_DEPENDS.sun-jdk6?=	sun-jdk6>=6.0.4
 BUILDLINK_PKGSRCDIR.sun-jdk6?=	../../lang/sun-jdk6
 BUILDLINK_DEPMETHOD.sun-jdk6?= build
 
