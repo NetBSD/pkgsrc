@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2008/01/14 15:09:14 jwise Exp $
+$NetBSD: distinfo,v 1.8 2008/01/20 15:18:55 abs Exp $
 
 SHA1 (alpine/alpine-1.00.tar.bz2) = 1eae937d385f5a844fd52096fe428471928439fc
 RMD160 (alpine/alpine-1.00.tar.bz2) = d1ff2f90388e0107d5e4039fa35939b1def52ccf
@@ -6,3 +6,6 @@ Size (alpine/alpine-1.00.tar.bz2) = 4792104 bytes
 SHA1 (alpine/fancy.patch.gz) = b7260d0ce00c8f79cefc942a0de2e1f04ca3f7b5
 RMD160 (alpine/fancy.patch.gz) = 85416c9cc500b1e4d7258269db8a59e50cee6230
 Size (alpine/fancy.patch.gz) = 24900 bytes
+SHA1 (alpine/searchheader.patch.gz) = af02f356c05f44f01fc9bd729b1bd44e847b498f
+RMD160 (alpine/searchheader.patch.gz) = ec835e08913915d930260eecb999ba7dca4bbc44
+Size (alpine/searchheader.patch.gz) = 1714 bytes
