@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.10 2008/01/18 11:36:18 rillig Exp $
+# $NetBSD: pkg-build,v 1.11 2008/01/21 12:37:46 tnn Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -96,7 +96,7 @@ ${pkg_up_to_date_script} ${pkgname} ${dependencies} && exit 0
 
 set -e
 
-/usr/pkg_bulk/libexec/pbulk/client-clean
+@PREFIX@/libexec/pbulk/client-clean
 
 # Create the output directory and clean it up
 mkdir -p ${bulklog}/${pkgname}
