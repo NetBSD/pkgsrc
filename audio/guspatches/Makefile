@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/22 19:26:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/01/21 21:21:50 heinz Exp $
 #
 
 DISTNAME=	dgguspat
@@ -15,10 +15,12 @@ RESTRICTED=		Uses copyrighted patches
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-EXTRACT_ONLY=	# empty
-NO_BUILD=	yes
-USE_TOOLS+=	unzip
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+PKG_DESTDIR_SUPPORT=	user-destdir
+EXTRACT_ONLY=		# empty
+NO_BUILD=		yes
+USE_LANGUAGES=		# empty
+USE_TOOLS+=		unzip
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 do-configure:
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/gravis.cfg > \
@@ -27,10 +29,14 @@ do-configure:
 		${WRKDIR}/timidity.cfg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/guspatches
-	cd ${PREFIX}/share/guspatches && unzip -oqL ${DISTDIR}/${DISTFILES}
-	${INSTALL_DATA} ${FILESDIR}/midia.cfg ${PREFIX}/share/guspatches
-	${INSTALL_DATA} ${WRKDIR}/gravis.cfg ${PREFIX}/share/guspatches
-	${INSTALL_DATA} ${WRKDIR}/timidity.cfg ${PREFIX}/share/guspatches
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/guspatches
+	cd ${DESTDIR}${PREFIX}/share/guspatches && \
+		unzip -oqL ${DISTDIR}/${DISTFILES}
+	${INSTALL_DATA} ${FILESDIR}/midia.cfg \
+		${DESTDIR}${PREFIX}/share/guspatches
+	${INSTALL_DATA} ${WRKDIR}/gravis.cfg \
+		${DESTDIR}${PREFIX}/share/guspatches
+	${INSTALL_DATA} ${WRKDIR}/timidity.cfg \
+		${DESTDIR}${PREFIX}/share/guspatches
 
 .include "../../mk/bsd.pkg.mk"
