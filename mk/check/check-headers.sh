@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.sh,v 1.9 2007/01/02 17:58:11 rillig Exp $
+# $NetBSD: check-headers.sh,v 1.10 2008/01/21 06:11:09 rillig Exp $
 #
 # This program checks the header files for possible problems.
 #
@@ -22,7 +22,7 @@ check_header() {
 
 		# Check for "${" in macro definitions.
 		case "$line" in
-		"#"*define*\"\$\{[A-Za-z]*\}/*\"*)
+		"#"*define*[\":]\$\{[A-Za-z]*\}/*\"*)
 			found_unresolved_variable=yes
 			cs_error_heading "Found unresolved variable in macro:"
 			cs_error_msg "$fname: $line"
@@ -55,6 +55,7 @@ The cause of this problem is usually that in a configure.ac or
 configure.in file, there is some code like
 
     FOO_DIR="\${bindir}"
+    # ...
     AC_DEFINE_UNQUOTED(FOO_DIR, "\$FOO_DIR", [Directory where foo files go])
 
 You can fix this by telling the original package author not to use
