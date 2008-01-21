@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/01/21 02:34:28 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2008/01/21 12:05:52 tnn Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -20,11 +20,10 @@ MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 MAKE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 GNU_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	./autogen.sh
 CONFIGURE_ARGS+=	--disable-themer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-USE_TOOLS+=		gmake makeinfo msgfmt pkg-config autoconf automake
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
