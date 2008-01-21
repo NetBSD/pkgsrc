@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2007/08/22 14:03:47 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/21 01:39:01 tnn Exp $
 
-DISTNAME=	j2sdk-1_4_2_14-linux-${DIST_ARCH}
-PKGNAME=	sun-jdk14-2.14
-PKGREVISION=	1
+DISTNAME=	j2sdk-1_4_2_16-linux-${DIST_ARCH}
+PKGNAME=	sun-jdk14-2.16
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 SDK, Standard Edition 1.4.2
@@ -11,9 +10,11 @@ SHORT=		SDK
 
 DEPENDS+=	sun-jre14>=2.9:../../lang/sun-jre14
 
-WRKSRC=		${WRKDIR}/j2sdk1.4.2_14
+WRKSRC=		${WRKDIR}/j2sdk1.4.2_16
 JAVA_WRAPPERS+=	appletviewer extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
+
+LICENSE=	sun-jdk14-license
 
 .include "../../lang/sun-jre14/Makefile.common"
 

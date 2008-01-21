@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2008/01/09 02:54:39 ghen Exp $
+# $NetBSD: Makefile.common,v 1.39 2008/01/21 01:39:02 tnn Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -8,7 +8,6 @@ HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/j2se/1.4.2/download.html
 ARCHIVE=	http://java.sun.com/products/archive/index.html
 
-LICENSE=	jdk13-license
 RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
