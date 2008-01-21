@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.157 2008/01/21 14:29:22 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.158 2008/01/21 14:41:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -293,3 +293,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/cut version 2.4 [ichiro 2008-01-21]
 	Updated net/uucp to 1.07nb6 [obache 2008-01-21]
 	Updated devel/p5-Module-Refresh to 0.13 [abs 2008-01-21]
+	Updated devel/apr0 to 0.9.17.2.0.63 [taca 2008-01-21]
+	Updated www/apache2 to 2.0.63 [taca 2008-01-21]
