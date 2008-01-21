@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 05:08:20 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/21 19:09:42 smb Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	claws-mail-${CLAWS_VERSION}
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
-PKGREVISION=	3
+PKGREVISION=	4
 
 CONFLICTS+=	sylpheed-claws-[0-9]*
 
@@ -63,6 +63,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/claws-mail
 	${INSTALL_DATA} ${WRKSRC}/claws-mail*.png ${PREFIX}/share/claws-mail
 
+.include "../../databases/db4/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
