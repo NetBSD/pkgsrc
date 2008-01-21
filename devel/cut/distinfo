@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2008/01/21 11:08:33 ichiro Exp $
+
+SHA1 (cut-2.4.tar.gz) = 453c608367bd15b61a43f0a841e86453a34441ac
+RMD160 (cut-2.4.tar.gz) = 3d6d56f4613264a21f8bd87d71a831b16514f070
+Size (cut-2.4.tar.gz) = 120644 bytes
+SHA1 (patch-aa) = 88616d584ccd1a1a98f77e0c388453b0f4c4cea5
+SHA1 (patch-ab) = c5ce03e2eeed63a0c5fe14f7ffb69c821885f688
