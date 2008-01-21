@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2008/01/09 02:38:26 ghen Exp $
+# $NetBSD: Makefile.common,v 1.23 2008/01/21 01:50:22 tnn Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -10,7 +10,6 @@ DOWNLOAD=	http://java.sun.com/javase/downloads/index_jdk5.jsp
 DOWNLOAD_NAME=	${SHORT_NAME} 5.0 Update ${PKGNAME_NOREV:C/^.*\.//}
 ARCHIVE=	http://java.sun.com/products/archive/
 
-LICENSE=	jdk13-license
 RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
