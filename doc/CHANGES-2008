@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.153 2008/01/21 13:27:34 taca Exp $
+$NetBSD: CHANGES-2008,v 1.154 2008/01/21 13:48:15 ichiro Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -290,3 +290,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pbulk to 0.23 [tnn 2008-01-21]
 	Updated textproc/chasen-base to 2.4.2 [taca 2008-01-21]
 	Updated textproc/chasen to 2.4.2 [taca 2008-01-21]
+	Added devel/cut version 2.4 [ichiro 2008-01-21]
