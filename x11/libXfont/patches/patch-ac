@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/01/21 13:56:29 tnn Exp $
+
+--- src/Type1/objects.h.orig	2007-09-05 02:18:23.000000000 +0200
++++ src/Type1/objects.h
+@@ -34,8 +34,10 @@
+ #include <X11/Xdefs.h>
+ #include <X11/Xfuncproto.h>
+ #ifndef FONTMODULE
++#ifndef __hpux
+ #include <stdlib.h>
+ #endif
++#endif
+ /*SHARED*/
+ 
+ #define   Permanent(obj)    t1_Permanent(obj)
