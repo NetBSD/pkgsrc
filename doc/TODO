@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6993 2008/01/20 11:18:34 wiz Exp $
+$NetBSD: TODO,v 1.6994 2008/01/21 02:25:43 obache Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,7 @@ Suggested package updates
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.4
+	o chasen-2.4.2
 	o chemtool-1.6.11
 	o cherokee-0.5.6
 	o chrony-1.23
