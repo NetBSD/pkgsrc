@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2008/01/21 11:08:33 ichiro Exp $
+
+--- src/cuttemplate.c.orig	2006-04-26 03:11:47.000000000 +0900
++++ src/cuttemplate.c	2008-01-20 16:12:45.000000000 +0900
+@@ -64,7 +64,7 @@
+    "",
+    "static void print_integer_as_expected( int i )",
+    "{",
+-   "  printf( \"(signed) %d (unsigned) %u (hex) 0x%08lX\", i, i, i );",
++   "  printf( \"(signed) %d (unsigned) %u (hex) 0x%08lX\", i, i, (long)i );",
+    "}",
+    "",
+    "static void print_integer( int i )",
+@@ -354,6 +354,7 @@
+    "",
+    "    cut_exit();",
+    "  } else return 1;",
++   "  return 0;",
+    "}",
+    "",
+    "void __cut_end( char *filename, int lineNumber, char *closingFrame )",
