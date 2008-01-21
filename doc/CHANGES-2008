@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.159 2008/01/21 15:08:11 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.160 2008/01/21 16:39:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/apr0 to 0.9.17.2.0.63 [taca 2008-01-21]
 	Updated www/apache2 to 2.0.63 [taca 2008-01-21]
 	Updated www/apache22 to 2.2.8 [xtraeme 2008-01-21]
+	Updated security/sudo to 1.6.9p12 [taca 2008-01-21]
