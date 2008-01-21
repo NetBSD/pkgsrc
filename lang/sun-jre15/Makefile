@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/01/07 19:56:27 tron Exp $
+# $NetBSD: Makefile,v 1.50 2008/01/21 01:50:21 tnn Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -18,6 +18,8 @@ REQD_DIRS+=	${JAVA_HOME}/lib/images
 REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
 REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
+
+LICENSE=	sun-jre6-license
 
 .include "../../lang/sun-jre15/Makefile.common"
 
