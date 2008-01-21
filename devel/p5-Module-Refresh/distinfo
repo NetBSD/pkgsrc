@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/08 08:22:51 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/01/21 13:55:29 abs Exp $
 
-SHA1 (Module-Refresh-0.09.tar.gz) = 326c048995b8f885a11f2d4cb96c6e6783a68ca3
-RMD160 (Module-Refresh-0.09.tar.gz) = 17cb40af855dbc66c9c0bebb01b634df87b61678
-Size (Module-Refresh-0.09.tar.gz) = 11298 bytes
+SHA1 (Module-Refresh-0.13.tar.gz) = a7f0dc88312c863bd873c67e7ce414b485c05388
+RMD160 (Module-Refresh-0.13.tar.gz) = 0a1127f6f043fc0b471da5d2d82fd62f831a0bbd
+Size (Module-Refresh-0.13.tar.gz) = 11666 bytes
