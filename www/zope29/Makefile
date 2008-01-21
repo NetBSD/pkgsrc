@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/06 15:57:45 taca Exp $
+# $NetBSD: Makefile,v 1.16 2008/01/21 07:17:49 rillig Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE29_VERSION}-final
@@ -44,9 +44,9 @@ pre-patch:
 	${CP} ../zope/files/sitecustomize.py ${WRKSRC}/lib/python
 	${RM} -f ${WRKSRC}/skel/bin/runzope.bat.in
 
-post-patch:
-	${FIND} ${WRKSRC}/doc ${WRKSRC}/lib ${WRKSRC}/skel/import \
-		-type f -print0 | ${XARGS} -0 -- ${CHMOD} -x
+post-extract:
+	cd ${WRKSRC} && ${FIND} doc lib skel/import -type f -print \
+	| ${XARGS} ${CHMOD} -x
 
 post-build:
 	cd ${WRKSRC}; ${PY_COMPILE_ALL} .
