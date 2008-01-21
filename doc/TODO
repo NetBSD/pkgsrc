@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6997 2008/01/21 15:08:11 xtraeme Exp $
+$NetBSD: TODO,v 1.6998 2008/01/21 15:23:42 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -315,7 +315,6 @@ Suggested package updates
 	o apache-ant15-1.7.0
 	o apache-tomcat-5.5.25
 	o apache-tomcat55-6.0.14
-	o apr-0.9.17
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o aranym-0.9.5
