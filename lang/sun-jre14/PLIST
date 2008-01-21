@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/07/29 05:19:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/01/21 10:34:20 tnn Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -312,6 +312,7 @@ java/sun-1.4/lib/zi/America/Indiana/Marengo
 java/sun-1.4/lib/zi/America/Indiana/Petersburg
 java/sun-1.4/lib/zi/America/Indiana/Vevay
 java/sun-1.4/lib/zi/America/Indiana/Vincennes
+java/sun-1.4/lib/zi/America/Indiana/Winamac
 java/sun-1.4/lib/zi/America/Inuvik
 java/sun-1.4/lib/zi/America/Iqaluit
 java/sun-1.4/lib/zi/America/Jamaica
@@ -354,6 +355,7 @@ java/sun-1.4/lib/zi/America/Rainy_River
 java/sun-1.4/lib/zi/America/Rankin_Inlet
 java/sun-1.4/lib/zi/America/Recife
 java/sun-1.4/lib/zi/America/Regina
+java/sun-1.4/lib/zi/America/Resolute
 java/sun-1.4/lib/zi/America/Rio_Branco
 java/sun-1.4/lib/zi/America/Santiago
 java/sun-1.4/lib/zi/America/Santo_Domingo
