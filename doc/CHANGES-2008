@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.149 2008/01/21 02:07:03 obache Exp $
+$NetBSD: CHANGES-2008,v 1.150 2008/01/21 02:59:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -283,4 +283,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/bsflite to 0.83 [obache 2008-01-20]
 	Updated x11/libXfont to 1.3.1nb2 [joerg 2008-01-20]
 	Updated mail/postgrey to 1.31 [xtraeme 2008-01-20]
+	Updated lang/sun-jre14 to 2.16 [tnn 2008-01-21]
+	Updated lang/sun-jdk14 to 2.16 [tnn 2008-01-21]
 	Updated converters/skf to 1.95.3 [obache 2008-01-21]
+	Updated wm/sawfish to 1.3.2 [tnn 2008-01-21]
