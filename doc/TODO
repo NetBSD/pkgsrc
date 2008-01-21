@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6995 2008/01/21 13:30:31 taca Exp $
+$NetBSD: TODO,v 1.6996 2008/01/21 13:56:46 abs Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ Suggested package updates
 	o p5-MARC-1.38
 	o p5-Math-Pari-2.010709
 	o p5-Math-Random-0.69
-	o p5-Module-Refresh-0.13
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
