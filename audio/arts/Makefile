@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2007/11/23 22:05:13 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2008/01/21 00:43:49 markd Exp $
 
 DISTNAME=	arts-1.5.8
 CATEGORIES=	audio
@@ -6,6 +6,8 @@ HOMEPAGE=	http://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	kdelibs-2*
 
@@ -17,7 +19,6 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 _IN_ARTS_BUILD=		yes
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -26,6 +27,8 @@ _IN_ARTS_BUILD=		yes
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+.include "options.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+=	--disable-threading
