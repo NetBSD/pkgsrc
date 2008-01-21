@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/06/08 17:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2008/01/21 21:32:36 heinz Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -11,7 +11,9 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://timidity.sourceforge.net/
 COMMENT=	MIDI to WAV renderer and player
 
-CONFLICTS=	kdemultimedia-2.[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		kdemultimedia-2.[0-9]*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-vt100
