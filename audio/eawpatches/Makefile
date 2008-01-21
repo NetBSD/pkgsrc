@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/22 16:42:10 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2008/01/21 21:19:41 heinz Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -13,11 +13,14 @@ COMMENT=	Eric A. Welsh' patches (audio samples) for TiMidity
 RESTRICTED=	Some patches are copyrighted, some marked no-commercial-use
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-LICENSE=	generic-nonlicense
+LICENSE=		generic-nonlicense
 
-WRKSRC=		${WRKDIR}
-NO_BUILD=	yes
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}
+NO_BUILD=		yes
+USE_LANGUAGES=		# empty
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 post-extract:
 	chmod go-w ${WRKSRC}/eawpats/gravis.cfg
@@ -30,6 +33,6 @@ pre-configure:
 		${WRKSRC}/eawpats/winconfig
 
 do-install:
-	cd ${WRKSRC} && pax -wr eawpats ${PREFIX}/share
+	cd ${WRKSRC} && pax -wr eawpats ${DESTDIR}${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
