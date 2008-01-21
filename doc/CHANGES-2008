@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.156 2008/01/21 13:56:46 abs Exp $
+$NetBSD: CHANGES-2008,v 1.157 2008/01/21 14:29:22 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -235,7 +235,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pcre to 7.5 [wiz 2008-01-15]
 	Updated devel/libidn to 1.4 [wiz 2008-01-15]
 	Updated www/links to 2.1.0.32 [wiz 2008-01-15]
-	Updated www/links-gui to 2.1.0.31 [wiz 2008-01-15]
+	Updated www/links-gui to 2.1.0.32 [wiz 2008-01-15]
 	Updated emulators/mednafen to 0.8.7 [wiz 2008-01-15]
 	Updated sysutils/cdrtools to 2.01.01.37 [wiz 2008-01-15]
 	Updated databases/shared-mime-info to 0.23 [wiz 2008-01-15]
