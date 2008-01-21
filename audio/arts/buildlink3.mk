@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/07/08 23:10:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2008/01/21 00:43:49 markd Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ARTS_BUILDLINK3_MK:=	${ARTS_BUILDLINK3_MK}+
@@ -20,7 +20,6 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/arts$$/ \
 				{ print "@comment in arts: " $$0; next; }
 .endif	# ARTS_BUILDLINK3_MK
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -28,5 +27,20 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/arts$$/ \
 .include "../../multimedia/libogg/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
+
+pkgbase := arts
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.arts:Mesound)
+.include "../../audio/esound/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.arts:Mnas)
+.include "../../audio/nas/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.arts:Mjack)
+.include "../../audio/jack/buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
