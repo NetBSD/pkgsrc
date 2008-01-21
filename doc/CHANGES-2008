@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.155 2008/01/21 13:52:30 obache Exp $
+$NetBSD: CHANGES-2008,v 1.156 2008/01/21 13:56:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/chasen to 2.4.2 [taca 2008-01-21]
 	Added devel/cut version 2.4 [ichiro 2008-01-21]
 	Updated net/uucp to 1.07nb6 [obache 2008-01-21]
+	Updated devel/p5-Module-Refresh to 0.13 [abs 2008-01-21]
