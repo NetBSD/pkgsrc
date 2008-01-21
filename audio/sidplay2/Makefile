@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/09 13:13:38 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/21 20:37:49 heinz Exp $
 #
 
 DISTNAME=	sidplay-2.0.9
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sidplay2/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sidplay2.sourceforge.net/
 COMMENT=	Tool for playing sidtunes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
