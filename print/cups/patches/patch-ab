@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.17 2007/03/14 12:29:03 markd Exp $
+$NetBSD: patch-ab,v 1.18 2008/01/22 23:58:13 markd Exp $
 
---- Makefile.orig	2006-08-30 03:51:19.000000000 +1200
-+++ Makefile	2007-01-19 15:11:19.000000000 +1300
-@@ -31,7 +31,7 @@
+--- Makefile.orig	2007-12-07 09:09:39.000000000 +1300
++++ Makefile	2008-01-16 12:28:17.000000000 +1300
+@@ -22,7 +22,7 @@
  DIRS	=	cups backend berkeley cgi-bin filter locale man monitor \
  		notifier $(PDFTOPS) scheduler systemv test \
  		$(PHPDIR) \
--		conf data doc fonts ppd templates
-+		data doc fonts ppd templates
+-		conf data doc $(FONTS) ppd templates
++		data doc $(FONTS) ppd templates
  
  
  #
-@@ -91,7 +91,9 @@
+@@ -92,7 +92,9 @@
  # Install object and target files...
  #
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.17 2007/03/14 12:29:03 markd Exp $
  	for dir in $(DIRS); do\
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
-@@ -99,6 +101,10 @@
+@@ -100,6 +102,10 @@
  	echo Installing cups-config script...
  	$(INSTALL_DIR) -m 755 $(BINDIR)
  	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
