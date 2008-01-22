@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2007/04/11 17:58:23 gdt Exp $
+$NetBSD: distinfo,v 1.13 2008/01/22 02:00:42 gdt Exp $
 
-SHA1 (lwp-2.3.tar.gz) = 6bab5b13e61c9039ca24a4298e94fb4e94f95efe
-RMD160 (lwp-2.3.tar.gz) = c4a82e93f33014e8efcd9517deebc85547dc8382
-Size (lwp-2.3.tar.gz) = 381102 bytes
+SHA1 (lwp-2.4.tar.gz) = c15064a9b5991db14cd00ea0bd8528559a28f57b
+RMD160 (lwp-2.4.tar.gz) = 963786da9e39ad2182df3994ff8b4050f30d4cd6
+Size (lwp-2.4.tar.gz) = 386511 bytes
