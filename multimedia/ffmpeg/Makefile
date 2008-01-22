@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/12/22 00:05:25 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/01/22 22:51:45 jdc Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-0.4.9pre1
@@ -9,6 +9,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 MAINTAINER=	zul@NetBSD-fr.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
+
+# The `sparc' code in libavcode/sparc is only suitable for sparc64
+NOT_FOR_PLATFORM=	*-*-sparc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
