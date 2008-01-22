@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2007/12/14 13:36:52 tron Exp $
+# $NetBSD: Makefile.common,v 1.29 2008/01/22 00:41:59 rillig Exp $
 
 DISTNAME=		mysql-5.0.51
 CATEGORIES=		databases
@@ -89,7 +89,7 @@ CONFIGURE_ENV+=		ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		autoconf gmake perl:run
+USE_TOOLS+=		autoconf autoheader gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 SUBST_CLASSES=		mk
@@ -117,6 +117,6 @@ SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoconf && autoheader
 
 .include "../../devel/zlib/buildlink3.mk"
