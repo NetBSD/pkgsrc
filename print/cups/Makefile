@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2008/01/18 05:08:53 tnn Exp $
+# $NetBSD: Makefile,v 1.131 2008/01/22 23:58:13 markd Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,10 +6,9 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${VERS}
-BASE_VERS=	1.2.12
+BASE_VERS=	1.3.5
 DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
@@ -52,6 +51,8 @@ CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
 CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-icondir
+CONFIGURE_ARGS+=	--without-menudir
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gnutls=no
@@ -61,30 +62,7 @@ CONFIGURE_ARGS+=	--without-php
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
-PKG_SUPPORTED_OPTIONS=	pam slp
-PKG_SUGGESTED_OPTIONS=	slp
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mpam)
-.  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-pam
-MESSAGE_SRC=		${PKGDIR}/MESSAGE
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
-PLIST_SUBST+=		PAM=
-.else
-CONFIGURE_ARGS+=	--disable-pam
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
-PLIST_SUBST+=		PAM="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mslp)
-.include "../../net/openslp/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-slp
-.else
-CONFIGURE_ARGS+=	--disable-slp
-.endif
+.include "options.mk"
 
 # CUPS_USER	username of the CUPS administrator
 # CUPS_GROUP	group of the CUPS administrator
@@ -159,7 +137,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done
-	cd ${WRKSRC}/conf; for file in *.conf mime.*; do		\
+	cd ${WRKSRC}/conf; for file in *.conf mime.convs mime.types; do	\
 		case $${file} in					\
 		pam.conf)						\
 			;;						\
