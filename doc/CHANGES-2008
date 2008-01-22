@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.161 2008/01/22 00:50:01 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.162 2008/01/22 02:00:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -298,3 +298,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache22 to 2.2.8 [xtraeme 2008-01-21]
 	Updated security/sudo to 1.6.9p12 [taca 2008-01-21]
 	Updated devel/bzr to 1.1 [gdt 2008-01-22]
+	Updated devel/lwp to 2.4 [gdt 2008-01-22]
