@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/25 11:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/22 17:09:55 tnn Exp $
 
 DISTNAME=	kcfonts-1.05
 PKGREVISION=	3
@@ -12,5 +12,7 @@ WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/local
 REQD_DIRS+=	${PREFIX}/lib/X11/fonts/local
+
+USE_TOOLS+=	gzip ucs2any
 
 .include "../../mk/bsd.pkg.mk"

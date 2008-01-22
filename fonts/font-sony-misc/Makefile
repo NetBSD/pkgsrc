@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/17 19:06:47 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/22 17:09:54 tnn Exp $
 #
 
 DISTNAME=		font-sony-misc-1.0.0
@@ -13,7 +13,7 @@ COMMENT=		Standard X11 "sony" PCF fonts
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any
+USE_TOOLS+=		gmake pkg-config bdftopcf ucs2any gzip
 
 FONTS_DIRS.x11=		lib/X11/fonts/misc
 
