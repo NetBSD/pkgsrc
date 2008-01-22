@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1 2008/01/22 00:42:00 rillig Exp $
+
+See patch-ca.
+
+--- libmysqld/stacktrace.c.orig	2007-11-15 15:06:35.000000000 +0100
++++ libmysqld/stacktrace.c	2008-01-22 01:16:41.000000000 +0100
+@@ -251,7 +251,7 @@ void write_core(int sig)
+   __gcov_flush();
+ #endif
+   pthread_kill(pthread_self(), sig);
+-#if defined(P_MYID) && !defined(SCO)
++#if HAVE_SIGSEND && defined(P_MYID) && !defined(SCO)
+   /* On Solaris, the above kill is not enough */
+   sigsend(P_PID,P_MYID,sig);
+ #endif
