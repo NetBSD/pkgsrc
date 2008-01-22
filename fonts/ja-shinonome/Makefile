@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/12/26 15:23:21 taca Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/22 17:09:54 tnn Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -15,7 +15,7 @@ COMMENT=		12, 14, 16 dots bitmap fonts for Japanese, iso8859-1
 
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
-USE_TOOLS+=		gawk gmake mkfontdir perl
+USE_TOOLS+=		gawk gmake mkfontdir perl gzip
 FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FOUNDRY=		Misc

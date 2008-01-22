@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/14 20:54:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/22 17:09:53 tnn Exp $
 #
 
 DISTNAME=		font-cursor-misc-1.0.0
@@ -13,7 +13,7 @@ COMMENT=		Standard X11 cursors in PCF format
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		bdftopcf
+USE_TOOLS+=		bdftopcf gzip
 
 FONTS_DIRS.x11=		lib/X11/fonts/misc
 
