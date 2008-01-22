@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6998 2008/01/21 15:23:42 xtraeme Exp $
+$NetBSD: TODO,v 1.6999 2008/01/22 00:50:01 gdt Exp $
 
 Suggested new packages
 ======================
@@ -366,7 +366,6 @@ Suggested package updates
 	o bos-2.0.1
 	o boson-0.13
 	o botan-1.6.3
-	o bzr-1.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairo-1.4.14
