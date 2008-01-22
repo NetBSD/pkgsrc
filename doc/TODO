@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7000 2008/01/22 12:25:09 obache Exp $
+$NetBSD: TODO,v 1.7001 2008/01/22 13:06:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -216,6 +216,98 @@ Suggested new packages
 	ReportMagic
 	http://www.reportmagic.org/
 	Builds nice looking statistics reports for output from www/analog
+
+	mime-support [pkg/28529]
+	Support commands for manipulating files using MIME and mailcap
+
+	Compiler of the AGFL formalis [pkg/28946]
+	formalism for the syntactic description of Natural Languages
+
+	Azureus [pkg/30103, pkgsrc-wip]
+	http://azureus.sourceforge.net/
+	Bittorrent client written in java
+
+	Webfwlog Firewall Log Analyzer [pkg/30110]
+	http://www.webfwlog.net/
+	Web-Based Firewall Log Analysis and Reporting
+	
+	FreeVRRPd [pkg/30113]
+	VRRP (Virtual Router Redundancy Protocol) implementation daemon
+
+	Algol 68 Genie [pkg/30695]
+	http://www.xs4all.nl/~jmvdveer/algol.html
+	Algol 68 interpreter
+
+	SystemC class library [pkg/30707]
+	http://www.systemc.org/
+	SystemC is a C++ class collection for modelling systems.
+
+	crm114 [pkg/31969]
+	http://crm114.sourceforge.net/
+	Controllable Regex Mutilator
+
+	TRE [pkg/31970]
+	http://laurikari.net/tre/index.html
+	Lightweight,robust,and efficient POSIX compliant regexp matching library
+
+	SQLite Browser [pkg/32461]
+	http://sqlitebrowser.sourceforge.net/
+	SQLite Database Browser
+
+	INADYN [pkg/34502]
+	INADYN is a free DynDNS client.
+
+	Fenix Project [pkg/35346]
+	http://fenix.divsite.net
+	
+	*BSD Usage Statistics [pkg/35365]
+	http://www.bsdstats.org/
+	Report machine statistics to the BSDstats Project
+
+	SuSE100_krb5 [pkg/35543]
+	(MIT) kerberos libraries for our Linux emulation.
+	firefox2-bin can do the GSSAPI/Kerberos HTTP Negotiate protocol.
+
+	Skins for XMMS [pkg/35666]
+	http://www.xmms.org/skins.php
+
+	Berkeley automounter suite of utilities [pkg/35668]
+	http://www.am-utils.org/
+
+	Javascript major mode for Emacs [pkg/35669]
+	http://www.brgeight.se/
+
+	THEAMA [pkg/35896]
+	http://sourceforge.net/projects/theama
+	curses-based version of the famous HangMan game.
+
+	sharatype [pkg/36217]
+	http://ftp.45.free.net/pub/fonts/type1/
+	Cyrillic fonts for a2ps (a part of sharatype project)
+
+	xmms-cdread [pkg/36220]
+	ftp://mud.stack.nl/pub/OuterSpace/willem/
+	XMMS input plugin that reads audio data from CDs
+
+	ioquake3 [pkg/36365, pkg/36366, pkg/36367]
+
+	OTR localhost AIM proxy [pkg/37397]
+	http://www.cypherpunks.ca/otr/
+	Off-the-Record Messaging Proxy
+
+	Adobe Reader 8 [pkg/37457]
+
+	M+ FONTS [pkg/37614]
+	http://mplus-fonts.sourceforge.jp/
+	Small and neat Japanese bitmap fonts
+
+	Migemo [pkg/37615]
+	http://0xcc.net/migemo/
+	Japanese text search tool/library
+
+	Ruby RSS Parser [pkg/37766]
+	http://www.cozmixng.org/~rwiki/?cmd=view;name=RSS+Parser
+	Newer version of included in ruby18
 
 Suggested package updates
 =========================
