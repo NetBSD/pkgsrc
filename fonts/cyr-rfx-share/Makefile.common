@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2006/07/17 18:32:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/01/22 13:33:35 obache Exp $
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
 MASTER_SITES=	\
 	ftp://ftp.ptc.spbu.ru/mirror/ftp.inp.nsk.su/pub/BINP/X11/fonts/cyr-rfx/ \
-	ftp://ftp.ifmo.ru/unix/unix-soft/fonts-for-X/ \
-	ftp://ftp.inp.nsk.su/pub/BINP/X11/fonts/cyr-rfx/
+	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	shattered@users.sourceforge.net
