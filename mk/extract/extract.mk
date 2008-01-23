@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.23 2007/12/30 13:37:18 joerg Exp $
+# $NetBSD: extract.mk,v 1.24 2008/01/23 14:59:35 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -103,8 +103,7 @@ extract-message:
 
 .PHONY: extract-dir
 extract-dir:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	mkdir -p ${EXTRACT_DIR}
+	${RUN}${MKDIR} ${EXTRACT_DIR}
 
 ######################################################################
 ### extract-check-interactive (PRIVATE)
@@ -131,9 +130,9 @@ extract-check-interactive:
 ###
 .PHONY: extract-cookie
 extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.extract} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.extract:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.extract}
+	${RUN}${TEST} ! -f ${_COOKIE.extract} || ${FALSE}
+	${RUN}${MKDIR} ${_COOKIE.extract:H}
+	${RUN}${ECHO} ${PKGNAME} > ${_COOKIE.extract}
 
 ######################################################################
 ### pre-extract, do-extract, post-extract (PUBLIC, override)
@@ -201,9 +200,8 @@ DOWNLOADED_DISTFILE=	$${extract_file}
 
 .if !target(do-extract)
 do-extract: ${WRKDIR}
-.  for __file__ in ${EXTRACT_ONLY}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extract_file=${_DISTDIR:Q}/${__file__:Q}; export extract_file;	\
+.  for f in ${EXTRACT_ONLY}
+	${RUN} extract_file=${_DISTDIR:Q}/${f:Q}; export extract_file;	\
 	cd ${WRKDIR} && cd ${EXTRACT_DIR} && ${EXTRACT_CMD}
 .  endfor
 .endif
