@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.19 2007/09/14 15:34:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2008/01/23 20:42:25 adam Exp $
 
-DISTNAME=	ocaml-3.10.0
+DISTNAME=	ocaml-3.10.1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-3.10/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		BDB_LIBS=${BDB_LIBS:Q}
 CONFIGURE_ENV+=		BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
-CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
+CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-libs ${LDFLAGS:Q}
 CONFIGURE_ARGS+=	-with-pthread
 CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
@@ -35,11 +35,11 @@ post-extract: cp-power-bsd cp-gnu-config
 
 .PHONY: cp-power-bsd
 cp-power-bsd:
-	${CP} ${WRKSRC:Q}/asmrun/power-elf.S ${WRKSRC:Q}/asmrun/power-bsd.S
+	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
 
 .PHONY: cp-gnu-config
 cp-gnu-config:
-	${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.guess ${WRKSRC:Q}/config/gnu/
-	${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.sub ${WRKSRC:Q}/config/gnu/
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
 
 .include "../../mk/pthread.buildlink3.mk"
