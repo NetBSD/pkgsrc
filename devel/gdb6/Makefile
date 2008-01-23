@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/03 12:32:28 lkundrak Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/23 05:38:46 tnn Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -36,4 +36,5 @@ do-test:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
