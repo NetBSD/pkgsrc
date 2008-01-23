@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7004 2008/01/23 00:00:23 markd Exp $
+$NetBSD: TODO,v 1.7005 2008/01/23 00:38:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,13 +426,14 @@ Suggested package updates
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o autoconvert-0.3.16
+	o automake-1.10.1
 	o avcheck-0.91
 	o avidemux-2.4.0
 	o avl-2.0.2a
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-2.1rc2
+	o awesome-2.1
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.7
@@ -471,7 +472,7 @@ Suggested package updates
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
-	o cgicc-3.2.4
+	o cgicc-3.2.5
 	o chemtool-1.6.11
 	o cherokee-0.5.6
 	o chrony-1.23
@@ -753,7 +754,7 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
-	o jabberd2-2.1.19
+	o jabberd2-2.1.22
 	o jam-2.5.2 [pkg/37285]
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
@@ -871,6 +872,8 @@ Suggested package updates
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.1.0
+	o mldonkey-2.9.3
+	o mldonkey-gui-2.9.3
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.3
@@ -893,7 +896,7 @@ Suggested package updates
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
-	o nasm-2.00
+	o nasm-2.01
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o ncview-1.93b
 	o ne-2.01
@@ -946,6 +949,7 @@ Suggested package updates
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Algorithm-Dependency-1.106
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
@@ -966,7 +970,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
 	o p5-DBIx-DBSchema-0.36
-	o p5-DBIx-SearchBuilder-1.50
+	o p5-DBIx-SearchBuilder-1.51
 	o p5-Data-FormValidator-4.50
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
@@ -981,6 +985,7 @@ Suggested package updates
 	o p5-HTML-Table-2.05
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
+	o p5-HTTP-Server-Simple-0.28
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
@@ -1003,6 +1008,7 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-Params-Util-0.31
+	o p5-PathTools-3.27
 	o p5-Perl-Tidy-20071205
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
@@ -1035,6 +1041,7 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.1.7
+	o parrot-0.5.2
 	o pcal-4.8
 	o pciids-20071004
 	o pciutils-2.2.9
@@ -1072,6 +1079,7 @@ Suggested package updates
 	o pine-pgp-filters-1.2
 	o pinfo-0.6.9
 	o pircbot-1.4.4
+	o pkg-config-0.23
 	o pkg_select-20051209
 	o ploticus-2.33
 	o ploticus-examples-230
@@ -1206,6 +1214,7 @@ Suggested package updates
 	o samba-3.0.28
 	o sarg-2.2.31
 	o sather-1.2.3
+	o sawfish-1.3.2
 	o scamper-20070201
 	o scapy-1.1.1
 	o scew-0.4.0
@@ -1250,7 +1259,7 @@ Suggested package updates
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.20.1
 	o source-highlight-2.8
-	o spamdyke-3.1.3
+	o spamdyke-3.1.4
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
@@ -1302,6 +1311,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o tor-0.1.2.19
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.0.5
@@ -1315,7 +1325,7 @@ Suggested package updates
 	o twolame-0.3.12
 	o txt2html-2.50
 	o ubs-0.20
-	o ucarp-1.3
+	o ucarp-1.4
 	o ucblogo-5.5
 	o uim-1.4.1
 	o ups-nut-2.2.0 [pkg/37301]
@@ -1392,7 +1402,7 @@ Suggested package updates
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
-	o xmlto-0.0.19
+	o xmlto-0.0.20
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
