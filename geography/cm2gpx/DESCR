@@ -1,0 +1,4 @@
+cm2gpx is used to convert Palms CacheMate backup or import PDB
+files to equivalent GPX files. Extensions specific to
+Geocaching.com and CacheMate are automatically used as needed.
+Filter options are available, to selectively convert waypoints.
