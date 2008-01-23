@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.91 2007/10/17 14:08:02 kano Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.92 2008/01/23 13:46:21 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -599,6 +599,7 @@ DISTNAME=       foo-17.43
       Security fixes</para></listitem><listitem><para>
       Changes or additions to a patch file</para></listitem><listitem><para>
       Changes to the <filename>PLIST</filename></para></listitem>
+      <listitem><para>A dependency is changed or renamed.</para></listitem>
     </itemizedlist>
 
     <para>PKGREVISION must also be incremented when dependencies have ABI
