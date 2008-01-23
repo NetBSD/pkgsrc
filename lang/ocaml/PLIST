@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/09/14 15:34:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/01/23 20:42:25 adam Exp $
 bin/camlp4
 bin/camlp4boot
 bin/camlp4o
@@ -170,6 +170,7 @@ lib/ocaml/camlp4/Camlp4Top/Top.cmi
 lib/ocaml/camlp4/Camlp4Top/Top.cmo
 lib/ocaml/camlp4/Camlp4Top/Top.o
 lib/ocaml/camlp4/Camlp4_config.cmi
+lib/ocaml/camlp4/Camlp4_import.cmi
 lib/ocaml/camlp4/camlp4fulllib.a
 lib/ocaml/camlp4/camlp4fulllib.cma
 lib/ocaml/camlp4/camlp4lib.a
@@ -266,8 +267,14 @@ lib/ocaml/obj.ml
 lib/ocaml/obj.mli
 lib/ocaml/ocamlbuild/ocamlbuild.cmo
 lib/ocaml/ocamlbuild/ocamlbuild.o
+lib/ocaml/ocamlbuild/ocamlbuild_executor.cmi
+lib/ocaml/ocamlbuild/ocamlbuild_executor.cmo
+lib/ocaml/ocamlbuild/ocamlbuild_executor.o
 lib/ocaml/ocamlbuild/ocamlbuild_pack.cmi
 lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmi
+lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmi
+lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmo
+lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.o
 lib/ocaml/ocamlbuild/ocamlbuildlib.a
 lib/ocaml/ocamlbuild/ocamlbuildlib.cma
 lib/ocaml/ocamldoc/ocamldoc.hva

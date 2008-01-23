@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2007/10/04 05:19:16 adam Exp $
+$NetBSD: distinfo,v 1.41 2008/01/23 20:42:25 adam Exp $
 
-SHA1 (ocaml-3.10.0.tar.bz2) = 5c7ee7dd5ac55bee2877ca0ace5ffb044df8efb5
-RMD160 (ocaml-3.10.0.tar.bz2) = 19615743230f0215135eb966f1f08a6a828f9aa4
-Size (ocaml-3.10.0.tar.bz2) = 2786012 bytes
+SHA1 (ocaml-3.10.1.tar.bz2) = 908176ff481fd6ce3ab89a96a76d9b3d7ca8c105
+RMD160 (ocaml-3.10.1.tar.bz2) = bf5bc105aece26df6460204d5a04e90c0d90d1cb
+Size (ocaml-3.10.1.tar.bz2) = 2282041 bytes
 SHA1 (patch-aa) = 858f326fe4db7971a05b3b001c6aecc02ecb2903
 SHA1 (patch-ab) = c6140f43fdb76c4f2d499f9d3beb714de3926460
 SHA1 (patch-ac) = efe8290b394f40d6675fc9d57557c49ddafdb239
@@ -11,10 +11,10 @@ SHA1 (patch-ag) = f1b751098d3693b92feb26cda87970426bffcaf1
 SHA1 (patch-ah) = 3165bbcdb98d09f5161912e51a3131486aa0b488
 SHA1 (patch-aj) = 61b977596cbaf8e16a66bfdbe8a7ca1701073fa7
 SHA1 (patch-an) = 7a56338a19015b407cbfa8a328655e2bd035f8bf
-SHA1 (patch-at) = 0e7657ff41899864fba9db8bd330b790b31a24e8
+SHA1 (patch-at) = 4ce7a79f0c418ffe662401e7bd0bb0b150ee5e8f
 SHA1 (patch-au) = 2696bc59b08a0ef06157b77665588bcf26feb306
 SHA1 (patch-av) = f56c8924b81a620602bc5a67b0c4459b721701d2
-SHA1 (patch-aw) = 9d8b75ebba957ff69e4a344400ba3d1c0adb3951
+SHA1 (patch-aw) = 5838ca13ba0f5d9328b9bb2135604f72e7d8b87b
 SHA1 (patch-ax) = 2419dffbf548837dc61e137032e06d33b1059976
 SHA1 (patch-ay) = ae0fcda810e61967f879f4f18cb17de291f7834b
 SHA1 (patch-az) = 4870ed5960559a90aaaa5e2e881b546e6a5898ad
