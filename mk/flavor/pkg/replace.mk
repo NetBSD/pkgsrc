@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.23 2007/12/02 11:29:22 rillig Exp $
+# $NetBSD: replace.mk,v 1.24 2008/01/23 14:48:50 gdt Exp $
 #
 
 # _flavor-replace:
@@ -71,7 +71,8 @@ replace-tarup: .PHONY
 	${_REPLACE_OLDNAME_CMD};					\
 	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${WRKDIR}					\
-		${_PKG_TARUP_CMD} $${oldname}
+		${_PKG_TARUP_CMD} $${oldname} ||			\
+	${FAIL_MSG} "Could not pkg_tarup $${oldname}".
 
 # Re-installs the old package that has been saved by replace-tarup.
 #
