@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.51 2008/01/18 11:26:11 rillig Exp $
+# $NetBSD: subst.mk,v 1.52 2008/01/23 01:44:28 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -8,7 +8,8 @@
 # Package-settable variables:
 #
 # SUBST_CLASSES
-#	A list of class names. 	A new class name must be appended (+=).
+#	A list of class names.  When adding new classes to this list, be
+#	sure to append them (+=) instead of overriding them (=).
 #
 # SUBST_STAGE.<class>
 #	"stage" at which we do the text replacement. Should be one of
