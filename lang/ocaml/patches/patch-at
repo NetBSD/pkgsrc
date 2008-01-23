@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
+$NetBSD: patch-at,v 1.15 2008/01/23 20:42:25 adam Exp $
 
---- configure.orig	2007-05-03 14:49:56.000000000 +0200
+--- configure.orig	2008-01-04 14:26:38.000000000 +0100
 +++ configure
 @@ -488,7 +488,7 @@ mksharedlibrpath=''
  
@@ -31,7 +31,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
    i[3456]86-*-darwin*)          arch=i386; system=macosx;;
    i[3456]86-*-gnu*)             arch=i386; system=gnu;;
    mips-*-irix6*)                arch=mips; system=irix;;
-@@ -680,6 +682,7 @@ case "$arch,$model,$system" in
+@@ -691,6 +693,7 @@ case "$arch,$model,$system" in
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -39,7 +39,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1070,6 +1073,8 @@ if test "$pthread_wanted" = "yes"; then
+@@ -1081,6 +1084,8 @@ if test "$pthread_wanted" = "yes"; then
                     pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
      *-*-freebsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
@@ -48,7 +48,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
      *-*-openbsd*)  pthread_link="-pthread"
                     pthread_caml_link="-cclib -pthread";;
      *)             pthread_link="-lpthread"
-@@ -1121,6 +1126,7 @@ fi
+@@ -1132,6 +1137,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -56,7 +56,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1167,6 +1173,7 @@ do
+@@ -1178,6 +1184,7 @@ do
      break
    fi
  done
@@ -64,7 +64,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1256,31 +1263,8 @@ dbm_include="not found"
+@@ -1269,31 +1276,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -98,7 +98,7 @@ $NetBSD: patch-at,v 1.14 2007/09/14 15:34:12 adam Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1290,8 +1274,8 @@ else
+@@ -1303,8 +1287,8 @@ else
    else
      dbm_include="-I$dbm_include"
    fi
