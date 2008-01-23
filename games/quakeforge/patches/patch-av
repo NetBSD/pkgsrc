@@ -1,0 +1,12 @@
+$NetBSD: patch-av,v 1.1 2008/01/23 04:59:38 tnn Exp $
+
+--- tools/qfcc/include/method.h.orig	2004-02-04 04:49:46.000000000 +0000
++++ tools/qfcc/include/method.h
+@@ -99,6 +99,6 @@ void clear_selectors (void);
+ 
+ struct expr_s *method_check_params (method_t *method, struct expr_s *args);
+ 
+-extern struct hashtab_s *known_methods;
++// extern struct hashtab_s *known_methods;
+ 
+ #endif//__method_h

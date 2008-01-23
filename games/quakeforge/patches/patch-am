@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 2008/01/23 04:59:36 tnn Exp $
+
+--- libs/gib/gib_function.c.orig	2004-04-09 18:18:19.000000000 +0000
++++ libs/gib/gib_function.c
+@@ -169,7 +169,7 @@ GIB_Function_Prepare_Args (cbuf_t * cbuf
+ 	gib_var_t  *var;
+ 	static char argss[] = "args";
+ 
+-	static qboolean 
++	qboolean 
+ 	iterate (char *arg, llist_node_t *node)
+ 	{	
+ 		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
+@@ -207,7 +207,7 @@ GIB_Function_Prepare_Args_D (cbuf_t * cb
+ 	gib_var_t  *var;
+ 	static char argss[] = "args";
+ 
+-	static qboolean 
++	qboolean 
+ 	iterate (char *arg, llist_node_t *node)
+ 	{	
+ 		var = GIB_Var_Get_Complex (&GIB_DATA(cbuf)->locals, &zero,
