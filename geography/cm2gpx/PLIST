@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2008/01/23 00:52:52 rhaen Exp $
+bin/cm2gpx
+man/man1/cm2gpx.1
