@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.20 2007/09/27 13:57:12 rillig Exp $
+# $NetBSD: check-files.mk,v 1.21 2008/01/23 14:30:59 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -172,12 +172,10 @@ check-files-post: ${_CHECK_FILES_POST}
 
 .PHONY: check-files-pre-message check-files-post-message
 check-files-pre-message:
-	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
-		"Generating pre-install file lists"
+	@${STEP_MSG} "Generating pre-install file lists"
 
 check-files-post-message:
-	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
-		"Generating post-install file lists"
+	@${STEP_MSG} "Generating post-install file lists"
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
