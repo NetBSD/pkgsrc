@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2008/01/23 00:54:18 rhaen Exp $
+bin/cmconvert
+man/man1/cmconvert.1
