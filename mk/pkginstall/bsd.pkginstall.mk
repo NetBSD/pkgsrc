@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.39 2008/01/23 14:12:32 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.40 2008/01/23 14:46:33 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -243,15 +243,17 @@ _PKG_GROUPS+=	${_group_}:${PKG_GID.${_group_}}
 .endfor
 
 .for _entry_ in ${PKG_USERS}
-.  if defined(USERGROUP_PHASE)
+.  for e in ${_entry_:C/\:.*//}
+.    if defined(USERGROUP_PHASE)
 # Determine the numeric UID of each user.
 USE_TOOLS+=	perl
-PKG_UID.${_entry_:C/\:.*//}_cmd=					\
+PKG_UID.${e}_cmd=							\
 	if ${TEST} ! -x ${PERL5}; then ${ECHO} ""; exit 0; fi;		\
-	${PERL5} -le 'print scalar getpwnam shift' ${_entry_:C/\:.*//}
-PKG_UID.${_entry_:C/\:.*//}?=	${PKG_UID.${_entry_:C/\:.*//}_cmd:sh:M*}
-.  endif
-_PKG_USERS+=	${_entry_}:${PKG_UID.${_entry_:C/\:.*//}}:${PKG_GECOS.${_entry_:C/\:.*//}:Q}:${PKG_HOME.${_entry_:C/\:.*//}:Q}:${PKG_SHELL.${_entry_:C/\:.*//}:Q}
+	${PERL5} -le 'print scalar getpwnam shift' ${e}
+PKG_UID.${e}?=	${PKG_UID.${e}_cmd:sh:M*}
+.    endif
+_PKG_USERS+=	${_entry_}:${PKG_UID.${e}}:${PKG_GECOS.${e}:Q}:${PKG_HOME.${e}:Q}:${PKG_SHELL.${e}:Q}
+.  endfor
 .endfor
 
 ${_INSTALL_USERGROUP_DATAFILE}:
