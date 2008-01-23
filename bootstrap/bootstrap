@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.117 2008/01/20 19:55:29 rillig Exp $
+# $NetBSD: bootstrap,v 1.118 2008/01/23 21:12:41 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -71,6 +71,9 @@ usage="Usage: $0 "'
     [ --preserve-path ]
     [ --compiler <compiler> ]
     [ --mk-fragment <mk.conf> ]
+    [ --binary-kit <tarball> ]
+    [ --gzip-binary-kit <tarball> ]
+    [ --binary-macpkg <pkg> ]
     [ --full ]
     [ --quiet ]
     [ --help ]'
@@ -81,6 +84,42 @@ usage="Usage: $0 "'
 
 # strip / for BSD/OS, strip - for HP-UX
 opsys=`uname -s | tr -d /-`
+
+mkbinarykit_macpkg()
+{
+	local macdestdir
+	macdestdir=${wrkdir}/macpkg-destdir
+	rm -rf ${macdestdir} || die "cleanup destdir"
+
+	mkdir -p ${macdestdir}${prefix} || die "mkdir destprefix"
+	rmdir ${macdestdir}${prefix} || die "rmdir destprefix"
+	cp -Rp ${prefix} ${macdestdir}${prefix} || die "copy prefix"
+
+	if [ ! -d ${macdestdir}${pkgdbdir} ]; then
+		mkdir -p ${macdestdir}${pkgdbdir} || die "mkdir destdbdir"
+		rmdir ${macdestdir}${pkgdbdir} || die "rmdir destdbdir"
+		cp -Rp ${pkgdbdir} ${macdestdir}${pkgdbdir} || die "copy dbdir"
+	fi
+
+	${sedprog} -e "s|%WRKDIR%|${wrkdir}|g" \
+		-e "s|%TARGETDIR%|${targetdir}|g" -e "s|%DATE%|${date}|g" \
+		< macpkg.pmproj.in > ${wrkdir}/macpkg.pmproj
+	${packagemaker} -build -proj ${wrkdir}/macpkg.pmproj -p "${binary_macpkg}"
+}
+
+mkbinarykit_tar()
+{
+	# in case tar was built by bootstrap
+	PATH="$prefix/bin:$PATH"; export PATH
+	cd / && tar -hcf "${binary_kit}" .$prefix .$pkgdbdir .$etc_mk_conf
+}
+
+mkbinarykit_tgz()
+{
+	# in case tar was built by bootstrap
+	PATH="$prefix/bin:$PATH"; export PATH
+	cd / && tar -hzcf "${binary_gzip_kit}" .$prefix .$pkgdbdir .$etc_mk_conf
+}
 
 die()
 {
@@ -337,6 +376,17 @@ while [ $# -gt 0 ]; do
 			mk_fragment=`get_optarg "$1"` ;;
 	--mk-fragment)
 			mk_fragment="$2"; shift ;;
+
+	--binary-kit=*)
+			binary_kit=`get_optarg "$1"` ;;
+	--binary-kit)
+			binary_kit="$2"; shift ;;
+	--gzip-binary-kit=*)
+			binary_gzip_kit=`get_optarg "$1"` ;;
+	--gzip-binary-kit)
+			binary_gzip_kit="$2"; shift ;;
+	--binary-macpkg)
+			binary_macpkg=`get_optarg "$1"` ;;
 	--full)		full=yes ;;
 	--quiet)	quiet=yes ;;
 	--help)		echo "$usage"; exit ;;
@@ -1015,6 +1065,10 @@ echo "Thank you"
 echo ""
 echo "$hline"
 echo ""
+
+[ ! -z "${binary_kit}" ] && mkbinarykit_tar
+[ ! -z "${binary_gzip_kit}" ] && mkbinarykit_tgz
+[ ! -z "${binary_macpkg}" ] && mkbinarykit_macpkg
 
 echo_msg "bootstrap started: $build_start"
 echo_msg "bootstrap ended:   `date`"
