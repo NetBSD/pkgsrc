@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2007/09/24 18:33:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2008/01/23 17:35:20 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 .endif	# GETTEXT_BUILDLINK3_MK
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 CHECK_BUILTIN.gettext:=	yes
 .include "../../devel/gettext-lib/builtin.mk"
