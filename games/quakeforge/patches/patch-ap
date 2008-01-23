@@ -1,0 +1,15 @@
+$NetBSD: patch-ap,v 1.1 2008/01/23 04:59:37 tnn Exp $
+
+--- libs/video/renderer/sw/Makefile.in.orig	2004-05-02 20:52:12.000000000 +0000
++++ libs/video/renderer/sw/Makefile.in
+@@ -403,8 +403,8 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ vid_libs = @vid_libs@
+ AUTOMAKE_OPTIONS = foreign
+-AM_CFLAGS = @PREFER_NON_PIC@
+-AM_CCASFLAGS = @PREFER_NON_PIC@
++AM_CFLAGS = -fPIC
++AM_CCASFLAGS = -fPIC
+ INCLUDES = -I$(top_srcdir)/include
+ @ASM_ARCH_FALSE@asm = 
+ @ASM_ARCH_TRUE@asm = libasm.la
