@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/08/10 08:25:58 pooka Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/23 01:53:06 rillig Exp $
 
 DISTNAME=		mz-360-src-unix
 PKGNAME=		mzscheme-360
@@ -35,8 +35,6 @@ SUBST_FILES.mz+=	collects/slibinit/init.ss
 SUBST_FILES.mz+=	src/configure
 SUBST_SED.mz=		-e 's@XXXPREFIXXXX@${PREFIX}@g'
 SUBST_SED.mz+=		-e 's@XXXMZDOCDIRXXX@${PREFIX}/share/doc/${PKGNAME}@g'
-# setup-extension.ss is classified as precompiled, which it isn't.
-SUBST_SKIP_TEXT_CHECK.mz=	yes
 
 LIBTOOL_OVERRIDE=	src/lt/libtool src/foreign/gcc/libffi/libtool
 
