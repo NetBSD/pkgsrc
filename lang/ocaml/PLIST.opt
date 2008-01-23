@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.13 2007/09/14 15:34:09 adam Exp $
+@comment $NetBSD: PLIST.opt,v 1.14 2008/01/23 20:42:25 adam Exp $
 bin/camlp4o.opt
 bin/camlp4of.opt
 bin/camlp4oof.opt
@@ -90,6 +90,8 @@ lib/ocaml/nums.a
 lib/ocaml/nums.cmxa
 lib/ocaml/obj.cmx
 lib/ocaml/ocamlbuild/ocamlbuild.cmx
+lib/ocaml/ocamlbuild/ocamlbuild_executor.cmx
+lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmx
 lib/ocaml/ocamlbuild/ocamlbuildlib.cmxa
 lib/ocaml/ocamldoc/odoc_info.a
 lib/ocaml/ocamldoc/odoc_info.cmxa
