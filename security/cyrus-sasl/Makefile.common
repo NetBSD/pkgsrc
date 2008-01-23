@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2008/01/22 10:56:16 obache Exp $
+# $NetBSD: Makefile.common,v 1.13 2008/01/23 08:53:06 obache Exp $
 #
 # This file is currently included by:
 #
@@ -7,6 +7,7 @@
 #	security/cy2-crammd5/Makefile
 #	security/cy2-digestmd5/Makefile
 #	security/cy2-gssapi/Makefile
+#	security/cy2-ldapdb/Makefile
 #	security/cy2-login/Makefile
 #	security/cy2-ntlm/Makefile
 #	security/cy2-otp/Makefile
