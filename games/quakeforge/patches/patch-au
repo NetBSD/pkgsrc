@@ -1,0 +1,14 @@
+$NetBSD: patch-au,v 1.1 2008/01/23 04:59:38 tnn Exp $
+
+--- qw/source/cl_sys_unix.c.orig	2003-02-11 22:48:57.000000000 +0000
++++ qw/source/cl_sys_unix.c
+@@ -73,6 +73,9 @@ shutdown (void)
+ 
+ int         skipframes;
+ 
++extern void Key_Progs_Init ();
++void (*x)() = Key_Progs_Init;
++
+ int
+ main (int c, const char *v[])
+ {
