@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.15 2008/01/05 22:06:20 rillig Exp $
+# $NetBSD: package.mk,v 1.16 2008/01/23 14:07:07 rillig Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -40,6 +40,7 @@ _PKG_ARGS_PACKAGE+=	-E
 
 ${PKGFILE}: ${_CONTENTS_TARGETS}
 	${RUN} ${MKDIR} ${.TARGET:H}
+	@${STEP_MSG} "Creating binary package ${.TARGET}"
 	${RUN} tmpname=${.TARGET:S,${PKG_SUFX}$,.tmp${PKG_SUFX},};	\
 	if ${PKG_CREATE} ${_PKG_ARGS_PACKAGE} "$$tmpname"; then		\
 		${MV} -f "$$tmpname" ${.TARGET};			\
