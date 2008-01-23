@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/05/15 23:33:22 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2008/01/23 04:59:35 tnn Exp $
 
---- configure.orig	2006-05-15 22:52:47.000000000 +0000
+--- configure.orig	2004-05-02 20:53:17.000000000 +0000
 +++ configure
 @@ -4034,13 +4034,13 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
@@ -99,3 +99,20 @@ $NetBSD: patch-ag,v 1.1 2006/05/15 23:33:22 joerg Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
+@@ -22733,7 +22733,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-void *(*foo)(size_t) = alloca;
++void *foo = alloca(sizeof(void));
+   ;
+   return 0;
+ }
+@@ -32305,6 +32305,7 @@ fi
+ 
+ if test "x$BUILD_SW" = xyes; then
+ 	VID_REND_NOINST_TARGETS="$VID_REND_NOINST_TARGETS libQFrenderer_sw.la"
++	VID_REND_TARGETS="$VID_REND_TARGETS libQFrenderer_sw.la"
+ 	VID_MODEL_TARGETS="$VID_MODEL_TARGETS libQFmodels_sw.la"
+ fi
+ if test "x$BUILD_SW32" = xyes; then
