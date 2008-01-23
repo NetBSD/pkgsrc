@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.8 2006/04/10 12:25:43 tron Exp $
+# $NetBSD: bsd.builtin.mk,v 1.9 2008/01/23 17:35:20 tnn Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -120,7 +120,7 @@
 # multiple inclusion.
 #
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 .for _pkg_ in ${BUILTIN_PKG}
 #
