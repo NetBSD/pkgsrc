@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/05/20 09:01:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/24 07:23:47 obache Exp $
 #
 
 DISTNAME=	viewvc-1.0.4
@@ -9,7 +9,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
 COMMENT=	Viewing the content of CVS/SVN repositories with a Webbrowser
 
-BOOTSTRAP_DEPENDS+=	wget-[0-9]*:../../net/wget
 PYTHON_PATCH_SCRIPTS=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
 
 .if !exists(/usr/bin/rlog)
@@ -17,7 +16,6 @@ DEPENDS+=	rcs-[0-9]*:../../devel/rcs
 .endif
 
 NO_BUILD=	YES
-FETCH_CMD=	${PREFIX}/bin/wget
 VIEWVCDIR=	share/viewvc
 PLIST_SUBST+=	VIEWVCDIR=${VIEWVCDIR:Q}
 
