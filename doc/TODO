@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7007 2008/01/24 06:41:37 taca Exp $
+$NetBSD: TODO,v 1.7008 2008/01/24 07:18:21 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1371,7 +1371,6 @@ Suggested package updates
 	o wxRemind-43
 	o wyrd-1.4.3
 	o x264-devel-20071229.2245
-	o xalan-c-1.10.0
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
