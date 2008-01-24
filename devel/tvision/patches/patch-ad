@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2008/01/24 19:27:10 rillig Exp $
+
+sunpro says:
+cannot assign "const char *" to "char *".
+
+--- lib/system.cc.orig	2008-01-24 15:17:51.000000000 +0100
++++ lib/system.cc	2008-01-24 15:51:10.273636000 +0100
+@@ -2335,7 +2335,7 @@ filelength(istream &s)
+ 
+ void expandPath(const char *path, char *dir, char *file)
+ {
+-	char *tag = strrchr(path, '/');
++	const char *tag = strrchr(path, '/');
+ 
+ 	/* the path is in the form /dir1/dir2/file ? */
+ 
