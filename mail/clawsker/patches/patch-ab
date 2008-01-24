@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/01/24 03:00:29 smb Exp $
+
+--- clawsker.orig	2008-01-21 12:19:07.000000000 -0500
++++ clawsker	2008-01-21 12:19:46.000000000 -0500
+@@ -345,8 +345,6 @@
+ sub set_widget_hint() {
+     if ($SHOWHINTS) {
+         my ($wdgt, $hint) = @_;    
+-        $wdgt->set_tooltip_text ($hint);
+-        $wdgt->set_has_tooltip (TRUE);
+     }
+ }
+ 
