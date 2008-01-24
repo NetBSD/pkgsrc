@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/01/10 15:23:27 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2008/01/24 15:17:30 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups fontconfig
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		cupsetc
 SUBST_STAGE.cupsetc=	post-extract
 SUBST_MESSAGE.cupsetc=	Fixing CUPS etc directory path to install as example
 SUBST_FILES.cupsetc=	cups/cups.mak
-SUBST_SED.cupsetc=	-e "s|^CUPSCONFIG=.*|CUPSCONFIG=${CUPS_EGDIR}|g"
+SUBST_SED.cupsetc=	-e 's|$$(CUPSSERVERROOT)|${CUPS_EGDIR}|g'
 
 .include "../../print/cups/buildlink3.mk"
 .else
