@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7008 2008/01/24 07:18:21 xtraeme Exp $
+$NetBSD: TODO,v 1.7009 2008/01/24 10:36:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -422,6 +422,7 @@ Suggested package updates
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.9
 	o aspell-ukrainian-1.3.3
+	o ast-ksh-20071105 [pkg/37854]
 	o asterisk-1.4.17
 	o astyle-1.15.3
 	o aterm-1.0.1
@@ -485,6 +486,7 @@ Suggested package updates
 	o clearsilver-base-0.10.4
 	o clisp-2.43
 	o cmake-2.4.7
+	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o compiz-0.6.2
 	o cone-0.74
@@ -898,6 +900,7 @@ Suggested package updates
 	o nas-1.9.1
 	o nasm-2.01
 	o nautilus-cd-burner-2.18.2 [needs hal]
+	o ncftp3-3.2.1 [pkg/37859]
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
