@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/07/20 13:12:16 adam Exp $
+$NetBSD: patch-aa,v 1.3 2008/01/24 18:32:37 adam Exp $
 
---- sound/osssound.c.orig	2004-07-20 14:50:41.000000000 +0000
+--- sound/osssound.c.orig	2007-12-21 17:43:10.000000000 +0100
 +++ sound/osssound.c
-@@ -56,7 +56,7 @@ int sound_lowlevel_init(const char *devi
+@@ -52,7 +52,7 @@ int sound_lowlevel_init(const char *devi
  int frag,tmp,flags;
  
  /* select a default device if we weren't explicitly given one */
