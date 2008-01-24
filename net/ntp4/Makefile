@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/01/18 05:08:47 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2008/01/24 11:55:42 is Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -58,6 +58,8 @@ CONFIGURE_ENV+=	ac_cv_lib_md5_MD5Init=no
 .elif ${OPSYS} == "IRIX"
 TIMETRIM=	"@comment "
 NO_TIMETRIM=	""
+.elif ${OPSYS} == "SunOS" && ${LOWER_OPSYS} == "solaris"
+TIMETRIM=      "@comment "
 .endif
 
 PLIST_SUBST+=	TIMETRIM=${TIMETRIM} NO_TIMETRIM=${NO_TIMETRIM}
