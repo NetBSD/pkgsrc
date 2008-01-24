@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7009 2008/01/24 10:36:27 obache Exp $
+$NetBSD: TODO,v 1.7010 2008/01/24 18:34:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
-	o fuse-0.9.0
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
