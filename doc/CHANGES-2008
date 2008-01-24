@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.167 2008/01/24 07:18:21 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.168 2008/01/24 18:34:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -304,3 +304,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ocaml to 3.10.1 [adam 2008-01-23]
 	Added mail/clawsker version 0.3.0 [smb 2008-01-24]
 	Updated textproc/xalan-c to 1.10 [xtraeme 2008-01-24]
+	Updated emulators/libspectrum to 0.4.0 [adam 2008-01-24]
+	Updated emulators/fuse to 0.9.0 [adam 2008-01-24]
+	Updated emulators/fuse-utils to 0.9.0 [adam 2008-01-24]
