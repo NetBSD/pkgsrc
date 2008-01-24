@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.118 2008/01/23 21:12:41 joerg Exp $
+# $NetBSD: bootstrap,v 1.119 2008/01/24 14:48:02 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -407,13 +407,14 @@ checkarg_sane_relative_path "$pkgmandir" "--pkgmandir"
 wrkobjdir=${wrkdir}/pkgsrc
 if [ "$unprivileged" = "yes" ]; then
 	[ -z "$prefix" ] && prefix=${HOME}/pkg
-	[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/var/db/pkg
-	[ -z "$varbase" ] && varbase=${prefix}/var
-else
-	[ -z "$prefix" ] && prefix=/usr/pkg
-	[ -z "$pkgdbdir" ] && pkgdbdir=/var/db/pkg
+elif [ -z "$prefix" -o "$prefix" = "/usr/pkg" ]; then
+	prefix=/usr/pkg
 	[ -z "$varbase" ] && varbase=/var
 fi
+
+[ -z "$varbase" ] && varbase=${prefix}/var
+[ -z "$pkgdbdir" ] && pkgdbdir=${varbase}/db/pkg
+
 if [ "$prefix" = "/usr" ]; then
 	[ -z "$pkgmandir" ] && pkgmandir=share/man
 else
