@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/01/24 03:00:29 smb Exp $
+
+--- po/Makefile.orig	2008-01-23 21:55:37.000000000 -0500
++++ po/Makefile	2008-01-23 21:55:49.000000000 -0500
+@@ -28,7 +28,7 @@
+ 
+ install: all install-dirs
+ 	for po in ${LINGUAS}; \
+-	do install -m 0755 $${po}.mo ${DESTDIR}${LOCALEDIR}/$${po}/LC_MESSAGES/${NAME}.mo; \
++	do install -m 0444 $${po}.mo ${DESTDIR}${LOCALEDIR}/$${po}/LC_MESSAGES/${NAME}.mo; \
+ 	done
+ 
+ install-dirs:
