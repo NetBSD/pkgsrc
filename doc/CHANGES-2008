@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.172 2008/01/25 18:22:45 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.173 2008/01/25 22:00:43 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/youtube-dl to 20080124 [dave 2008-01-25]
 	Updated mail/postfix-current to 2.5.0 [ghen 2008-01-25]
 	Updated x11/xterm to 231 [bjs 2008-01-25]
+	Updated chat/inspircd to 1.1.16 [adrianp 2008-01-25]
