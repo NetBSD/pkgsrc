@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/12/09 19:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/01/25 12:10:57 tnn Exp $
 
 DISTNAME=		icon.v942src
 PKGNAME=		icon-9.4.2
@@ -30,7 +30,7 @@ PTHREAD_OPTS+=		require native
 .  include "../../mk/pthread.buildlink3.mk"
 .  endif
 
-.elif ${OPSYS} == "DragonFly"
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 NAME=	freebsd
 
 .elif ${OPSYS} == "SunOS"
