@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.533 2008/01/25 01:39:08 heinz Exp $
+# $NetBSD: Makefile,v 1.534 2008/01/25 02:32:30 heinz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -189,6 +189,8 @@ SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-Session
 SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
+SUBDIR+=	p5-Captcha-reCAPTCHA
+SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
 SUBDIR+=	p5-CGI
 SUBDIR+=	p5-CGI-Application
 SUBDIR+=	p5-CGI-Application-Plugin-DBH
