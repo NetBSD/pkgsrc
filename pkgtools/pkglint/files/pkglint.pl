@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.756 2008/01/10 03:33:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.757 2008/01/25 17:59:24 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4564,8 +4564,9 @@ sub checkline_mk_shelltext($$) {
 
 	use constant forbidden_commands => array_to_hash(qw(
 		ktrace
+		mktexlsr
 		strace
-		truss
+		texconfig truss
 	));
 
 	if ($text =~ qr"\$\{SED\}" && $text =~ qr"\$\{MV\}") {
@@ -4655,8 +4656,12 @@ sub checkline_mk_shelltext($$) {
 			if ($shellword eq "\${RUN}") {
 				# Just skip this one.
 
-			} elsif (exists(forbidden_commands->{$shellword})) {
-				$line->log_error("${shellword} is forbidden and must not be used.");
+			} elsif (exists(forbidden_commands->{basename($shellword)})) {
+				$line->log_error("${shellword} must not be used in Makefiles.");
+				$line->explain_error(
+"This command must appear in INSTALL scripts, not in the package",
+"Makefile, so that the package also works if it is installed as a binary",
+"package via pkg_add.");
 
 			} elsif (exists(get_tool_names()->{$shellword})) {
 				if (!exists($mkctx_tools->{$shellword})) {
