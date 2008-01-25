@@ -1,0 +1,3 @@
+HTML::Tiny is a simple, dependency free Perl module for generating HTML
+(and XML). It concentrates on generating syntactically correct XHTML using
+a simple Perl notation.
