@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.532 2007/12/20 15:04:26 sborrill Exp $
+# $NetBSD: Makefile,v 1.533 2008/01/25 01:39:08 heinz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -223,6 +223,7 @@ SUBDIR+=	p5-HTML-Table
 SUBDIR+=	p5-HTML-TableExtract
 SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
+SUBDIR+=	p5-HTML-Tiny
 SUBDIR+=	p5-HTML-Tree
 SUBDIR+=	p5-HTML-WikiConverter
 SUBDIR+=	p5-HTMLObject
