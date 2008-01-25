@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/11/13 00:33:40 jklos Exp $
+# $NetBSD: Makefile,v 1.50 2008/01/25 23:44:14 joerg Exp $
 
 DISTNAME=		rar	# overridden in Makefile.${EMUL_PLATFORM}
 PKGNAME=		rar-2.02 # also overridden
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rarsoft.com/
 COMMENT=		RAR file archiver (binary)
 
-EMUL_PLATFORM=		linux-i386 netbsd-i386
+EMUL_PLATFORMS=		linux-i386 netbsd-i386
 
 LICENSE=		rar-license
 RESTRICTED=		Only unmodified original package can be distributed
