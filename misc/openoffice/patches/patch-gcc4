@@ -1,0 +1,352 @@
+$NetBSD: patch-gcc4,v 1.1 2008/01/25 20:56:57 rillig Exp $
+
+Lots of fixes for gcc4. They are intentionally bundled into one large
+patch.
+
+--- ../autodoc/inc/ary/common_gate.hxx.orig	2002-11-01 17:10:16.000000000 +0000
++++ ../autodoc/inc/ary/common_gate.hxx	2008-01-25 18:17:55.000000000 +0000
+@@ -83,7 +83,7 @@ class CommonGate
+ {
+   public:
+     // LIFECYCLE
+-    virtual             CommonGate::~CommonGate() {}
++    virtual             ~CommonGate() {}
+ 
+     // OPERATIONS
+ 
+--- ../autodoc/source/ary/inc/nametreenode.hxx.orig	2003-03-18 14:11:34.000000000 +0000
++++ ../autodoc/source/ary/inc/nametreenode.hxx	2008-01-25 18:20:23.000000000 +0000
+@@ -187,7 +187,7 @@ inline void
+ NameTreeNode<ITEM_ID>::Add_Name( const String &      i_sName,
+                                  item_id             i_nId )
+ {
+-    LocalNames().insert( Map_LocalNames::value_type(i_sName, i_nId) );
++    LocalNames().insert( typename Map_LocalNames::value_type(i_sName, i_nId) );
+ }
+ 
+ 
+--- ../autodoc/source/ary/inc/store/st_iterator.hxx.orig	2002-11-01 17:13:57.000000000 +0000
++++ ../autodoc/source/ary/inc/store/st_iterator.hxx	2008-01-25 18:29:31.000000000 +0000
+@@ -244,7 +244,7 @@ class RootConstIterator : public interna
+ 
+ 
+     const unit_type &   operator*() const       /// @precond bool(*this);
+-                                                { return CurUnit(); }
++                                                { return this->CurUnit(); }
+ };
+ 
+ 
+@@ -271,7 +271,7 @@ class RootIterator: public internal::Ite
+                             { }
+ 
+     unit_type &         operator*() const       /// @precond bool(*this);
+-                                                { return CurUnit(); }
++                                                { return this->CurUnit(); }
+ };
+ 
+ 
+@@ -279,6 +279,8 @@ template <class UNIT, class FILTER>
+ class RootFilterConstIterator : public internal::IteratorBase< UNIT, FILTER >
+ {
+   public:
++    typedef UNIT                                    unit_type;
++
+     typedef RootFilterConstIterator<UNIT,FILTER>    self;
+ 
+                         RootFilterConstIterator(
+@@ -290,7 +292,7 @@ class RootFilterConstIterator : public i
+                                     i_rOther.CurPosition() ) {}
+ 
+     const unit_type &   operator*() const       /// @precond bool(*this);
+-                                                { return CurUnit(); }
++                                                { return this->CurUnit(); }
+     self &              operator=(
+                             const RootConstIterator<UNIT> &
+                                                 i_rOther )
+@@ -307,6 +309,9 @@ template <class UNIT, class FILTER>
+ class RootFilterIterator : public internal::IteratorBase< UNIT, FILTER >
+ {
+   public:
++    typedef UNIT                                    unit_type;
++    typedef RootFilterConstIterator<UNIT,FILTER>    self;
++
+                         RootFilterIterator(
+                             const RootIterator<UNIT> &
+                                                 i_rOther )
+--- ../autodoc/source/ary/store/t_storg.hxx.orig	2003-07-02 13:49:27.000000000 +0000
++++ ../autodoc/source/ary/store/t_storg.hxx	2008-01-25 18:36:50.000000000 +0000
+@@ -131,8 +131,8 @@ RE &
+ StdReStorage<RE>::do_Add( const KEY &         i_rKey,
+ 						  DYN RE &            let_drElement )
+ {
+-	std::pair<DataBase::iterator, bool> result
+-			= aDataBase.insert(DataBase::value_type(i_rKey, &let_drElement));
++	std::pair<typename DataBase::iterator, bool> result;
++	result = aDataBase.insert(typename DataBase::value_type(i_rKey, &let_drElement));
+ 	if (result.second == false)
+ 		delete &let_drElement;
+ 	return *(*result.first).second;
+--- ../autodoc/source/ary/store/ti_storg.hxx.orig	2002-03-08 14:45:20.000000000 +0000
++++ ../autodoc/source/ary/store/ti_storg.hxx	2008-01-25 18:33:37.000000000 +0000
+@@ -124,7 +124,7 @@ class ReStorage
+ template <class RE>
+ inline const RE &
+ ReStorage<RE>::operator[]( const KEY & i_rKey ) const
+-    { const RE * ret = inq_Find(i_rKey);
++    { const RE * ret = this->inq_Find(i_rKey);
+       csv_assert(ret != 0);
+       return *ret;
+     }
+--- ../autodoc/source/inc/estack.hxx.orig	2003-06-30 15:27:34.000000000 +0000
++++ ../autodoc/source/inc/estack.hxx	2008-01-25 18:38:07.000000000 +0000
+@@ -98,11 +98,11 @@ class EStack : private std::slist<ELEM>
+     bool                operator==(
+                             const EStack<ELEM> &
+                                                 i_r2 ) const
+-                                                { return std::operator==( Base(), i_rStack.Base() ); }
++                                                { return std::operator==( Base(), this->i_rStack.Base() ); }
+     bool                operator<(
+                             const EStack<ELEM> &
+                                                 i_r2 ) const
+-                                                { return std::operator<( Base(), i_rStack.Base() ); }
++                                                { return std::operator<( Base(), this->i_rStack.Base() ); }
+     // OPERATIONS
+     void                push(
+                             const value_type &  i_rElem )
+--- ../autodoc/source/parser_i/idl/tk_keyw.cxx.orig	2002-11-01 17:15:41.000000000 +0000
++++ ../autodoc/source/parser_i/idl/tk_keyw.cxx	2008-01-25 18:43:36.000000000 +0000
+@@ -137,15 +137,15 @@ TokParameterHandling::EV_TokenId   	ev_p
+ namespace lux
+ {
+ 
+-EnumValueMap &
++template<> EnumValueMap &
+ TokBuiltInType::EV_TokenId::Values_()		{ return G_aTokBuiltInType_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ TokTypeModifier::EV_TokenId::Values_()		{ return G_aTokTypeModifier_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ TokMetaType::EV_TokenId::Values_()			{ return G_aTokMetaType_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ TokStereotype::EV_TokenId::Values_()		{ return G_aTokStereotype_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ TokParameterHandling::EV_TokenId::Values_()	{ return G_aTokParameterHandling_EV_TokenId_Values; }
+ 
+ }   // namespace lux
+--- ../autodoc/source/parser_i/idl/tk_punct.cxx.orig	2004-03-25 11:33:03.000000000 +0000
++++ ../autodoc/source/parser_i/idl/tk_punct.cxx	2008-01-25 19:00:15.000000000 +0000
+@@ -90,6 +90,7 @@ TokPunctuation::EV_TokenId  Fullstop(Tok
+ 
+ namespace lux
+ {
++template<>
+ EnumValueMap &
+ TokPunctuation::EV_TokenId::Values_()		{ return G_aTokPunctuation_EV_TokenId_Values; }
+ }
+--- ../autodoc/source/parser_i/idoc/tk_atag2.cxx.orig	2003-06-10 11:35:20.000000000 +0000
++++ ../autodoc/source/parser_i/idoc/tk_atag2.cxx	2008-01-25 19:00:46.000000000 +0000
+@@ -90,6 +90,7 @@ Tok_AtTag::EV_TokenId ev_since(Tok_AtTag
+ 
+ namespace lux
+ {
++template<>
+ EnumValueMap &
+ Tok_AtTag::EV_TokenId::Values_()	{ return G_aTokAtTag_EV_TokenId_Values; }
+ }
+--- ../autodoc/source/parser_i/idoc/tk_xml.cxx.orig	2002-05-14 09:02:21.000000000 +0000
++++ ../autodoc/source/parser_i/idoc/tk_xml.cxx	2008-01-25 19:01:10.000000000 +0000
+@@ -94,11 +94,11 @@ Tok_XmlFormat_Tag::EV_TokenId   ev_atom(
+ namespace lux
+ {
+ 
+-EnumValueMap &
++template<> EnumValueMap &
+ Tok_XmlConst::EV_TokenId::Values_()	        { return G_aTok_XmlConst_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ Tok_XmlLink_Tag::EV_TokenId::Values_()	    { return G_aTok_XmlLink_Tag_EV_TokenId_Values; }
+-EnumValueMap &
++template<> EnumValueMap &
+ Tok_XmlFormat_Tag::EV_TokenId::Values_()	{ return G_aTok_XmlFormat_Tag_EV_TokenId_Values; }
+ 
+ }   // namespace lux
+--- ../sal/inc/osl/mutex.hxx.orig	2003-04-04 17:10:54.000000000 +0000
++++ ../sal/inc/osl/mutex.hxx	2008-01-25 19:18:01.000000000 +0000
+@@ -245,8 +245,8 @@ namespace osl
+         {
+             if( pResetT )
+             {
+-                pT = pResetT;
+-                pT->acquire();
++                this->pT = pResetT;
++                this->pT->acquire();
+             }
+         }
+     };
+--- ../sal/textenc/convertbig5hkscs.c.orig	2002-02-25 15:07:48.000000000 +0000
++++ ../sal/textenc/convertbig5hkscs.c	2008-01-25 19:25:28.000000000 +0000
+@@ -139,7 +139,7 @@ sal_Size ImplConvertBig5HkscsToUnicode(I
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         if (nRow == 0)
+             if (nChar < 0x80)
+                 if (pDestBufPtr != pDestBufEnd)
+--- ../sal/textenc/converteuctw.c.orig	2001-11-19 17:46:37.000000000 +0000
++++ ../sal/textenc/converteuctw.c	2008-01-25 19:26:34.000000000 +0000
+@@ -154,7 +154,7 @@ sal_Size ImplConvertEucTwToUnicode(ImplT
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         switch (eState)
+         {
+         case IMPL_EUC_TW_TO_UNICODE_STATE_0:
+--- ../sal/textenc/convertgb18030.c.orig	2001-11-19 17:46:37.000000000 +0000
++++ ../sal/textenc/convertgb18030.c	2008-01-25 19:27:01.000000000 +0000
+@@ -147,7 +147,7 @@ sal_Size ImplConvertGb18030ToUnicode(Imp
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         switch (eState)
+         {
+         case IMPL_GB_18030_TO_UNICODE_STATE_0:
+--- ../sal/textenc/convertiso2022cn.c.orig	2001-11-23 09:42:41.000000000 +0000
++++ ../sal/textenc/convertiso2022cn.c	2008-01-25 19:27:36.000000000 +0000
+@@ -187,7 +187,7 @@ sal_Size ImplConvertIso2022CnToUnicode(I
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         sal_uInt32 nPlane;
+         switch (eState)
+         {
+--- ../sal/textenc/convertiso2022jp.c.orig	2001-11-23 09:42:42.000000000 +0000
++++ ../sal/textenc/convertiso2022jp.c	2008-01-25 19:28:17.000000000 +0000
+@@ -162,7 +162,7 @@ sal_Size ImplConvertIso2022JpToUnicode(I
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         switch (eState)
+         {
+         case IMPL_ISO_2022_JP_TO_UNICODE_STATE_ASCII:
+--- ../sal/textenc/convertiso2022kr.c.orig	2001-11-23 09:42:42.000000000 +0000
++++ ../sal/textenc/convertiso2022kr.c	2008-01-25 19:28:33.000000000 +0000
+@@ -161,7 +161,7 @@ sal_Size ImplConvertIso2022KrToUnicode(I
+     for (; nConverted < nSrcBytes; ++nConverted)
+     {
+         sal_Bool bUndefined = sal_True;
+-        sal_uInt32 nChar = *((sal_uChar const *) pSrcBuf)++;
++        sal_uInt32 nChar = *(*((sal_uChar const **) pSrcBuf))++;
+         switch (eState)
+         {
+         case IMPL_ISO_2022_KR_TO_UNICODE_STATE_ASCII:
+--- ../xml2cmp/source/support/list.hxx.orig	2002-08-08 16:07:56.000000000 +0000
++++ ../xml2cmp/source/support/list.hxx	2008-01-25 19:03:11.000000000 +0000
+@@ -252,31 +252,31 @@ List<XX>::alloc( unsigned           newS
+ template <class XY>
+ DynamicList<XY>::~DynamicList()
+ {
+-    erase_all();
++    this->erase_all();
+ }
+ 
+ template <class XY>
+ void
+ DynamicList<XY>::insert(unsigned pos, XY * const & elem)
+ {
+-    if ( pos > len )
++    if ( pos > this->len )
+       return;
+ 
+-    checkSize(len+2);
+-    memmove(inhalt[pos+1], inhalt[pos], (len-pos) * sizeof(XY*) );
+-    inhalt[pos] = elem;
+-    len++;
++    checkSize(this->len+2);
++    memmove(this->inhalt[pos+1], this->inhalt[pos], (this->len-pos) * sizeof(XY*) );
++    this->inhalt[pos] = elem;
++    this->len++;
+ }
+ 
+ template <class XY>
+ void
+ DynamicList<XY>::remove( unsigned           pos )
+ {
+-    if (!is_valid_index(pos) )
++    if (!this->is_valid_index(pos) )
+         return;
+-    len--;
+-    delete inhalt[pos];
+-    memmove(inhalt[pos], inhalt[pos+1], (len-pos) * sizeof(XY*) );
++    this->len--;
++    delete this->inhalt[pos];
++    memmove(this->inhalt[pos], this->inhalt[pos+1], (this->len-pos) * sizeof(XY*) );
+ }
+ 
+ 
+--- ../soltools/inc/st_list.hxx.orig	2003-07-16 19:27:41.000000000 +0200
++++ ../soltools/inc/st_list.hxx	2008-01-25 19:07:41.000000000 +0100
+@@ -305,8 +305,8 @@
+ DynamicList<XY>::DynamicList( const DynamicList<XY> & i_rList )
+     :   ST_List< XY* >(i_rList)
+ {         
+-    for ( typename DynamicList<XY>::iterator it = begin();
+-          it != end();
++    for ( typename DynamicList<XY>::iterator it = this->begin();
++          it != this->end();
+           ++it )
+     {
+         // Copying the contents the pointers point at:
+@@ -317,7 +317,7 @@
+ template <class XY>
+ DynamicList<XY>::~DynamicList()
+ {
+-	erase_all();
++	this->erase_all();
+ }
+ 
+ template <class XY>
+@@ -338,13 +338,13 @@
+ void
+ DynamicList<XY>::Insert(unsigned pos, XY * const & elem)
+ {
+-	if ( pos > len )
++	if ( pos > this->len )
+ 	  return;
+ 
+-	checkSize(len+2);
+-	memmove( inhalt+pos+1, inhalt+pos, (len-pos) * sizeof(XY*) );
+-	inhalt[pos] = elem;
+-	len++;
++	checkSize(this->len+2);
++	memmove( this->inhalt+pos+1, this->inhalt+pos, (this->len-pos) * sizeof(XY*) );
++	this->inhalt[pos] = elem;
++	this->len++;
+ }
+ 
+ template <class XY>
+@@ -353,9 +353,9 @@
+ {
+ 	if (!is_valid_index(pos) )
+ 		return;
+-	len--;
+-	delete inhalt[pos];
+-	memmove(inhalt+pos, inhalt+pos+1, (len-pos) * sizeof(XY*) );
++	this->len--;
++	delete this->inhalt[pos];
++	memmove(this->inhalt+pos, this->inhalt+pos+1, (this->len-pos) * sizeof(XY*) );
+ }
+ 
+ 

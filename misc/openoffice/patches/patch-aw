@@ -1,10 +1,10 @@
-$NetBSD: patch-aw,v 1.7 2005/04/12 01:10:45 rillig Exp $
+$NetBSD: patch-aw,v 1.8 2008/01/25 20:56:57 rillig Exp $
 
 Patch from Rui-Xiang Guo for building on NetBSD-current. The getpwent_r
 function is not used at all, so why provide a (wrong) prototype for it?
 
---- ../sal/osl/unx/system.h.orig	2004-11-19 09:23:53.000000000 +0800
-+++ ../sal/osl/unx/system.h	2004-11-19 09:27:55.000000000 +0800
+--- ../sal/osl/unx/system.h.orig	2003-08-15 11:38:50.000000000 +0000
++++ ../sal/osl/unx/system.h	2008-01-25 19:15:07.000000000 +0000
 @@ -169,7 +169,10 @@
  #endif
  
@@ -16,7 +16,17 @@ function is not used at all, so why provide a (wrong) prototype for it?
  #	define _POSIX_THREAD_SYSCALL_SOFT 1
  #	include <pthread.h>
  #	include <netdb.h>
-@@ -569,7 +572,6 @@ extern int sem_post(sem_t* sem);
+@@ -482,7 +485,9 @@ void macxp_getSystemVersion( unsigned in
+ #	define PTHREAD_VALUE(t) 			(t)
+ #endif
+ #ifndef PTHREAD_NONE
++# if (__GNUC__ < 4) && !defined(MACOSX)
+ extern pthread_t _pthread_none_;
++# endif
+ #	define PTHREAD_NONE					_pthread_none_
+ #   ifndef PTHREAD_NONE_INIT
+ #		define PTHREAD_NONE_INIT		((pthread_t)-1)
+@@ -569,7 +574,6 @@ extern int sem_post(sem_t* sem);
  
  #ifdef NO_PTHREAD_RTL
  #if !defined FREEBSD || (__FreeBSD_version < 500112)
