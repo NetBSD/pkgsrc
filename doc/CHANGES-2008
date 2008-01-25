@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.168 2008/01/24 18:34:56 adam Exp $
+$NetBSD: CHANGES-2008,v 1.169 2008/01/25 02:36:52 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -307,3 +307,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/libspectrum to 0.4.0 [adam 2008-01-24]
 	Updated emulators/fuse to 0.9.0 [adam 2008-01-24]
 	Updated emulators/fuse-utils to 0.9.0 [adam 2008-01-24]
+	Added www/p5-HTML-Tiny version 1.01 [heinz 2008-01-25]
+	Updated security/p5-Crypt-Rijndael to 1.05 [heinz 2008-01-25]
+	Added www/p5-Captcha-reCAPTCHA version 0.92 [heinz 2008-01-25]
+	Added www/p5-Captcha-reCAPTCHA-Mailhide version 0.93 [heinz 2008-01-25]
