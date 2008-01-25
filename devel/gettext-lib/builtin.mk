@@ -1,4 +1,6 @@
-# $NetBSD: builtin.mk,v 1.36 2007/09/24 18:33:52 jlam Exp $
+# $NetBSD: builtin.mk,v 1.37 2008/01/25 14:42:27 joerg Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_PKG:=	gettext
 
@@ -6,7 +8,9 @@ BUILTIN_FIND_LIBS:=			intl
 BUILTIN_FIND_FILES_VAR:=		H_GETTEXT _BLTN_H_GETTEXT
 BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
 BUILTIN_FIND_FILES._BLTN_H_GETTEXT=	/usr/include/libintl.h
+.if ${OPSYS} != "Linux"
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
+.endif
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -18,7 +22,7 @@ BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
 IS_BUILTIN.gettext=	no
 .  if empty(H_GETTEXT:M__nonexistent__) && \
       empty(H_GETTEXT:M${LOCALBASE}/*) && \
-      !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
+      (!empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS]) || ${OPSYS} == "Linux")
 IS_BUILTIN.gettext=	yes
 .  endif
 .endif
