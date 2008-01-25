@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.171 2008/01/25 09:45:22 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.172 2008/01/25 18:22:45 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Captcha-reCAPTCHA-Mailhide version 0.93 [heinz 2008-01-25]
 	Updated net/youtube-dl to 20080124 [dave 2008-01-25]
 	Updated mail/postfix-current to 2.5.0 [ghen 2008-01-25]
+	Updated x11/xterm to 231 [bjs 2008-01-25]
