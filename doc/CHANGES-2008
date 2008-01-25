@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.169 2008/01/25 02:36:52 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.170 2008/01/25 04:34:57 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Crypt-Rijndael to 1.05 [heinz 2008-01-25]
 	Added www/p5-Captcha-reCAPTCHA version 0.92 [heinz 2008-01-25]
 	Added www/p5-Captcha-reCAPTCHA-Mailhide version 0.93 [heinz 2008-01-25]
+	Updated net/youtube-dl to 20080124 [dave 2008-01-25]
