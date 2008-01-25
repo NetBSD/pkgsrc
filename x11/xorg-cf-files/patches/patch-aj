@@ -1,0 +1,34 @@
+$NetBSD: patch-aj,v 1.1 2008/01/25 18:55:02 joerg Exp $
+
+Force Rpath usage on Linux. For reasons analysed in details,
+the binutils detection seems to fail.
+
+--- lnxLib.rules.orig	2004-04-23 20:41:58.000000000 +0200
++++ lnxLib.rules
+@@ -12,7 +12,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
+ #endif
+ 
+ #ifndef UseRpath
+-#define UseRpath NO
++#define UseRpath YES
+ #endif
+ 
+ #ifndef SharedOldX
+@@ -87,17 +87,7 @@ XCOMM $XFree86: xc/config/cf/lnxLib.rule
+ #  define PositionIndependentCplusplusFlags -fPIC
+ # endif
+ # ifndef ExtraLoadFlags
+-#  if LinuxBinUtilsMajorVersion >= 26
+-#   ifdef UseInstalled
+-#    if LinuxBinUtilsMajorVersion < 27
+-#     define ExtraLoadFlags RpathLoadFlags -Wl,-rpath-link,$(USRLIBDIRPATH)
+-#    endif
+-#   else
+ #    define ExtraLoadFlags RpathLoadFlags -Wl,-rpath-link,$(BUILDLIBDIR)
+-#   endif
+-#  else
+-#   define ExtraLoadFlags RpathLoadFlags
+-#  endif
+ # endif
+ # ifndef HardCodeLibdirFlag
+ #  define HardCodeLibdirFlag RpathLoadFlags
