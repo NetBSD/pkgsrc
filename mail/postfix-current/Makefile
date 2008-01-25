@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2008/01/25 09:41:28 ghen Exp $
+# $NetBSD: Makefile,v 1.93 2008/01/25 09:42:54 ghen Exp $
 
 DISTNAME=	postfix-2.5.0
 CATEGORIES=	mail
@@ -116,10 +116,6 @@ CONF_FILES_PERMS=	# empty
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
-.if !empty(PKG_OPTIONS:Msasl)
-MAKE_DIRS+=		${SASLLIBDIR}
-CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
-.endif
 
 MAKE_ENV+=		DEBUG= # empty
 
