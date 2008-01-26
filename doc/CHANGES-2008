@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.173 2008/01/25 22:00:43 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.174 2008/01/26 00:37:00 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix-current to 2.5.0 [ghen 2008-01-25]
 	Updated x11/xterm to 231 [bjs 2008-01-25]
 	Updated chat/inspircd to 1.1.16 [adrianp 2008-01-25]
+	Updated pkgtools/pbulk to 0.24 [joerg 2008-01-26]
