@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.52 2008/01/23 01:44:28 rillig Exp $
+# $NetBSD: subst.mk,v 1.53 2008/01/26 15:23:21 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -47,6 +47,9 @@
 #	By default, each file is checked whether it really is a text file
 #	before any substitutions are done to it. Since that test is not
 #	perfect, it can be disabled by setting this variable to "yes".
+#
+# See also:
+#	PLIST_SUBST
 #
 # Keywords: subst
 #
