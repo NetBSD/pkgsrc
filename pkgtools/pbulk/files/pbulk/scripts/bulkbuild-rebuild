@@ -1,0 +1,49 @@
+#!@SH@
+# $NetBSD: bulkbuild-rebuild,v 1.1 2008/01/26 01:57:00 joerg Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+check_pkg() {
+	found=0
+	while read line; do
+		if [ "$line" = "PKGNAME=$1" ]; then
+			return 0
+		fi
+	done < ${loc}/presolve
+	echo "Package $1 not found, aborting."
+	exit 1
+}
+
+pkg_failed() {
+	echo "failed"
+	exit 1
+}
+
+build_pkg() {
+	printf "Building package %s... " "$1"
+	do_print=0
+	while read line; do
+		case "$line" in
+		"PKGNAME=$1")
+			do_print=1
+			;;
+		"PKGNAME="*)
+			do_print=0
+			;;
+		esac
+		[ "$do_print" = 1 ] && echo "$line"
+	done < ${loc}/presolve | ${pbuild_script} || pkg_failed "$1"
+	echo "done"
+}
+
+if [ $# = 0 ]; then
+	echo "Usage: $0 package ..."
+fi
+
+while [ $# != 0 ]; do
+	check_pkg "$1"
+	build_pkg "$1"
+	shift
+done
