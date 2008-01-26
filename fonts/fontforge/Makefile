@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/11/17 21:20:49 adam Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/26 11:27:02 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20071110
+VERSION=	20080109
 
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
@@ -29,7 +29,4 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libxkbui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
