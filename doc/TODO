@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7012 2008/01/26 09:42:08 xtraeme Exp $
+$NetBSD: TODO,v 1.7013 2008/01/26 16:06:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1216,7 +1216,7 @@ Suggested package updates
 	o ruby-RMagick-2.0.0
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
-	o rxvt-unicode-8.9
+	o rxvt-unicode-9.0
 	o sablecc-3.2
 	o samba-3.0.28
 	o sarg-2.2.31
@@ -1395,6 +1395,7 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xf86-video-intel-2.2.0
+	o xf86-video-nv-2.1.7
 	o xfstt-1.7
 	o xhippo-3.5
 	o xine-1.1.8
