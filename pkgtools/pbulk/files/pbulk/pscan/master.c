@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.4 2007/07/21 15:36:36 tnn Exp $ */
+/* $NetBSD: master.c,v 1.5 2008/01/26 00:34:57 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -55,6 +55,8 @@
 #include "pscan.h"
 
 static LIST_HEAD(, scan_peer) active_peers, inactive_peers;
+static struct event listen_event;
+static int listen_event_socket;
 
 struct scan_peer {
 	LIST_ENTRY(scan_peer) peer_link;
@@ -147,6 +149,21 @@ send_job_path(void *arg)
 }
 
 static void
+shutdown_master(void)
+{
+	struct timeval tv;
+	struct scan_peer *peer;
+
+	event_del(&listen_event);
+	(void)close(listen_event_socket);
+	LIST_FOREACH(peer, &inactive_peers, peer_link)
+		(void)shutdown(peer->fd, SHUT_RDWR);
+	tv.tv_sec = 1;
+	tv.tv_usec = 0;
+	event_loopexit(&tv);
+}
+
+static void
 assign_job(struct scan_peer *peer)
 {
 	size_t job_len;
@@ -156,7 +173,7 @@ assign_job(struct scan_peer *peer)
 	if (peer->job == NULL) {
 		LIST_INSERT_HEAD(&inactive_peers, peer, peer_link);
 		if (LIST_EMPTY(&active_peers))
-			event_loopexit(NULL);
+			shutdown_master();
 		return;
 	}
 
@@ -201,7 +218,6 @@ listen_handler(int sock, short event, void *arg)
 void
 master_mode(const char *master_port, const char *start_script)
 {
-	struct event listen_event;
 	struct sockaddr_in dst;
 	int fd;
 
@@ -242,6 +258,7 @@ master_mode(const char *master_port, const char *start_script)
 
 	event_set(&listen_event, fd, EV_READ | EV_PERSIST, listen_handler, NULL);
 	event_add(&listen_event, NULL);
+	listen_event_socket = fd;
 
 	event_dispatch();
 
