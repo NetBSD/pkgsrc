@@ -1,21 +1,28 @@
 #!@SH@
-# $NetBSD: client-clean,v 1.7 2007/11/14 12:38:18 rillig Exp $
+# $NetBSD: client-clean,v 1.8 2008/01/26 23:44:08 joerg Exp $
 
 . @PBULK_CONFIG@
 
 set -e
 
+if [ "$cross_compile" != "no" ]; then
+	cur_destdir=${target_destdir}
+else
+	cur_destdir=
+fi
+
 # Clean build system first
-rm -rf ${prefix} ${pkgdb} ${varbase}/qmail 2> /dev/null || true
+rm -rf ${cur_destdir}${prefix} ${cur_destdir}${pkgdb} 2> /dev/null || true
+rm -rf ${cur_destdir}${varbase}/qmail 2> /dev/null || true
 # Note: It is not an error if ${prefix} still exists at this point,
 # because it might be a mount point.
 
 # Install fresh bootstrap state
 if [ -f "${bootstrapkit}" ]; then
-	${tar} -xzf ${bootstrapkit} -C /
+	${tar} -xzf ${bootstrapkit} -C ${cur_destdir}/
 elif [ -d "${bootstrapkit}" ]; then
-	[ -d ${prefix} ] || mkdir ${prefix}
-	cp -R ${bootstrapkit}/* ${prefix}
+	[ -d ${prefix} ] || mkdir ${cur_destdir}${prefix}
+	cp -R ${bootstrapkit}/* ${cur_destdir}${prefix}
 else
 	: "Do nothing"
 fi

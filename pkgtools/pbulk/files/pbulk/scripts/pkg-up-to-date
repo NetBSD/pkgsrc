@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+# $NetBSD: pkg-up-to-date,v 1.2 2008/01/26 23:44:09 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -37,7 +37,7 @@ set -e
 pkg="${packages}/All/$1.tgz"
 [ -f ${pkg} ]
 
-${external_pkg_info} -qb ${pkg} | sed 's/:/ /' | while read file file_id; do
+${pkg_info} -qb ${pkg} | sed 's/:/ /' | while read file file_id; do
 	[ -z "$file" ] && continue
 
 	id=`${ident} ${pkgsrc}/${file} 2> /dev/null | head -n 2 | sed -e 1d -e 's/^     //'`
@@ -49,7 +49,7 @@ done
 # Remove current package, so that only dependencies are in $* now.
 shift
 
-${external_pkg_info} -qN ${pkg} | while read dep; do
+${pkg_info} -qN ${pkg} | while read dep; do
 	# pkg_info prints a trailing newline, ignore that
 	[ -z "${dep}" ] && continue
 	found=0

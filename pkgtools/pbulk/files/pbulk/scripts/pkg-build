@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.11 2008/01/21 12:37:46 tnn Exp $
+# $NetBSD: pkg-build,v 1.12 2008/01/26 23:44:08 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -37,7 +37,12 @@ cleanup() {
 		${make} pbulk-save-wrkdir INTO=${bulklog}/${pkgname}/wrkdir.tar.gz
 	fi
 	if [ "$keep_prefix" = yes ] && [ -f ${bulklog}/${pkgname}/install.log ]; then
-		tar cfz ${bulklog}/${pkgname}/prefix.tar.gz ${prefix}
+		if [ "$cross_compile" != "no" ]; then
+			cur_destdir=${target_destdir}
+		else
+			cur_destdir=
+		fi
+		${tar} cfz $${bulklog}/${pkgname}/prefix.tar.gz ${cur_destdir}${prefix}
 	fi
 	${make} clean > /dev/null 2>&1 || true
 	exit 1
@@ -107,13 +112,38 @@ if [ "$use_destdir" = "user-destdir" ]; then
 	chown ${unprivileged_user} ${bulklog}/${pkgname}/work.log
 fi
 
+pkg_add_normal() {
+	PKG_PATH=${packages}/All ${pkg_add} -K ${cur_pkgdb} "$@"
+}
+
+pkg_add_cross() {
+	PKG_PATH=${packages}/All ${pkg_add} -K ${cur_pkgdb} \
+	    -m ${target_arch} -I -p ${target_destdir}${prefix} "$@"
+	echo "Fixing recorded cwd..."
+	${pkg_info} -K ${target_destdir}${pkgdb} | while read pkg junk; do
+		${sed} -e 's|@cwd '"${target_destdir}"'|@cwd |' \
+		    ${cur_pkgdb}/"${pkg}"/+CONTENTS > \
+		    ${cur_pkgdb}/"${pkg}"/+CONTENTS.tmp
+		mv ${cur_pkgdb}/"${pkg}"/+CONTENTS.tmp \
+		    ${cur_pkgdb}/"${pkg}"/+CONTENTS
+	done
+}
+
+if [ "$cross_compile" != "no" ]; then
+	pkg_add_cmd=pkg_add_cross
+	cur_pkgdb="${target_destdir}${pkgdb}"
+else
+	pkg_add_cmd=pkg_add_normal
+	cur_pkgdb="${pkgdb}"
+fi
+
 # Go to target directory
 cd ${pkgsrc}/${pkgdir}
 # Clean build area, just in case
 ${make} clean > ${bulklog}/${pkgname}/pre-clean.log 2>&1
 # Install all dependencies the package said it would need
 if [ ! -z "$dependencies" ]; then
-	PKG_PATH=${packages}/All ${pkg_add} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
+	${pkg_add_cmd} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
 fi
 # Build package, create a separate log file for each major phase
 run_make run_direct checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
@@ -124,15 +154,18 @@ run_make run_direct package  > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 
 # When using DESTDIR build, add the package once to test install rules.
 if [ "$use_destdir" != "no" ]; then
-	PKG_PATH=${packages}/All ${pkg_add} ${pkgname} \
+	${pkg_add_cmd} ${pkgname} \
 	    > ${bulklog}/${pkgname}/package.log 2>&1 || cleanup
 fi
 
 # Clean build area
 ${make} clean > ${bulklog}/${pkgname}/clean.log 2>&1
 
-# Test uninstall rules
-${pkg_delete} ${pkgname} > ${bulklog}/${pkgname}/deinstall.log 2>&1
+# Test uninstall rules. This is not for cross-compiling as the install script
+# is not run in that case anyway.
+if [ "$cross_compile" = "no" ]; then
+	${pkg_delete} -K ${cur_pkgdb} ${pkgname} > ${bulklog}/${pkgname}/deinstall.log 2>&1
+fi
 
 # Comment the following out if you want to test all deinstall scripts.
 # This is quite expensive and mostly redundant, so it is disabled by default.

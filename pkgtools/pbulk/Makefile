@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2008/01/26 01:57:00 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/01/26 23:44:08 joerg Exp $
 
-DISTNAME=	pbulk-0.25
+DISTNAME=	pbulk-0.26
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +17,7 @@ NO_CHECKSUM=	YES
 
 USE_FEATURES=	nbcompat
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
-		mail:run tar:run
+		mail:run sed:run tar:run
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 .include "../../mk/bsd.prefs.mk"
@@ -41,7 +41,8 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/create-report-html.awk scripts/create-report-txt.awk \
 	scripts/create-report.awk
 SUBST_VARS.tools=	AWK BZIP2 DIGEST GZIP_CMD IDENT MAIL_CMD NEATO \
-			PBULK_CONFIG PKG_INFO PREFIX SH TAR TARGET_MAKE
+			PBULK_CONFIG PKG_ADD_CMD PKG_DELETE_CMD \
+			PKG_INFO_CMD PREFIX SED SH TAR TARGET_MAKE
 
 CONF_FILES+=	share/examples/pbulk/pbulk.conf ${PKG_SYSCONFDIR}/pbulk.conf
 
