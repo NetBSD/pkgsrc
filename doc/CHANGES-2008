@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.176 2008/01/26 09:42:08 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.177 2008/01/26 11:27:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -318,3 +318,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pbulk to 0.24 [joerg 2008-01-26]
 	Updated pkgtools/pbulk to 0.25 [joerg 2008-01-26]
 	Updated devel/cvs2svn to 2.0.1 [xtraeme 2008-01-26]
+	Updated fonts/fontforge to 20080109 [adam 2008-01-26]
