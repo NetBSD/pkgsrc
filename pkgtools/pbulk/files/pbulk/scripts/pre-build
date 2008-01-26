@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.6 2008/01/17 17:47:09 joerg Exp $
+# $NetBSD: pre-build,v 1.7 2008/01/26 23:44:09 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -33,6 +33,21 @@
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "$cross_compile" != "no" ]; then
+	if [ -z "${target_destdir}" ]; then
+		echo "target_destdir must be set for cross-compiling."
+		exit 1
+	fi
+	if [ ! -d "${target_destdir}" ]; then
+		echo "target_destdir must exist for cross-compiling."
+		exit 1
+	fi
+	if [ `cd "${target_destdir}" && pwd` = "/" ]; then
+		echo "target_destdir must not be / for cross-compiling."
+		exit 1
+	fi	
+fi
 
 if [ -d "${bulklog}/meta" ]; then
 	echo "Warning: All log files of the previous pbulk run will be"
