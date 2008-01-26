@@ -1,0 +1,5 @@
+$NetBSD: MESSAGE,v 1.1 2008/01/26 23:44:08 joerg Exp $
+
+If you are updating pbulk from earlier versions, please don't forget
+to update the configuration file. Otherwise unexpected results can
+occur.
