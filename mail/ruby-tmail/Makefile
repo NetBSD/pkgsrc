@@ -1,30 +1,27 @@
-# $NetBSD: Makefile,v 1.13 2007/04/02 13:36:21 taca Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/27 16:46:46 taca Exp $
 
-DISTNAME=	tmail-0.10.8
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
+DISTNAME=	tmail.${VERS}
+PKGNAME=	${RUBY_PKGPREFIX}-tmail-${VERS}
 CATEGORIES=	mail ruby
-MASTER_SITES=	http://i.loveruby.net/archive/tmail/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/30630/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://i.loveruby.net/en/projects/tmail/
+HOMEPAGE=	http://tmail.rubyforge.org/
 COMMENT=	Mail manipulating library for Ruby including MIME multipart support
 
+VERS=			1.2.1
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_SETUP=		yes
+RUBY_SETUP=		script/setup
+
+WRKSRC=			${WRKDIR}/tmail-${VERS}
+INSTALLATION_DIRS=	${RUBY_DOCDIR}/tmail ${RUBY_EXAMPLESDIR}/tmail/data
+DOCS=			CHANGES LICENSE NOTES README
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tmail/en
-	${INSTALL_DATA} ${WRKSRC}/BUGS ${WRKSRC}/ChangeLog ${WRKSRC}/TODO \
-		${RUBY_DOCDIR}/tmail
-	${INSTALL_DATA} ${WRKSRC}/Incompatibilities ${WRKSRC}/README.en \
-		${RUBY_DOCDIR}/tmail/en
-	${INSTALL_DATA} ${WRKSRC}/doc.en/*.html ${RUBY_DOCDIR}/tmail/en
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tmail/ja
-	${INSTALL_DATA} ${WRKSRC}/Incompatibilities.ja ${WRKSRC}/README.ja \
-		${RUBY_DOCDIR}/tmail/ja
-	${INSTALL_DATA} ${WRKSRC}/doc.ja/*.html ${RUBY_DOCDIR}/tmail/ja
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tmail/data
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/tmail
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/sample/*.rb ${RUBY_EXAMPLESDIR}/tmail
 	${INSTALL_DATA} ${WRKSRC}/sample/data/* ${RUBY_EXAMPLESDIR}/tmail/data
 
