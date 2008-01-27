@@ -1,55 +1,38 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/07 15:54:25 taca Exp $
-${RUBY_SITEARCHLIBDIR}/tmail/base64.${RUBY_DLEXT}
-${RUBY_SITEARCHLIBDIR}/tmail/scanner_c.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.5 2008/01/27 16:46:46 taca Exp $
+${RUBY_SITEARCHLIBDIR}/tmailscanner/tmailscanner.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/tmail.rb
+${RUBY_SITELIBDIR}/tmail/Makefile
 ${RUBY_SITELIBDIR}/tmail/address.rb
+${RUBY_SITELIBDIR}/tmail/attachments.rb
 ${RUBY_SITELIBDIR}/tmail/base64.rb
-${RUBY_SITELIBDIR}/tmail/config.rb
 ${RUBY_SITELIBDIR}/tmail/compat.rb
+${RUBY_SITELIBDIR}/tmail/config.rb
+${RUBY_SITELIBDIR}/tmail/core_extensions.rb
 ${RUBY_SITELIBDIR}/tmail/encode.rb
 ${RUBY_SITELIBDIR}/tmail/header.rb
-${RUBY_SITELIBDIR}/tmail/info.rb
+${RUBY_SITELIBDIR}/tmail/index.rb
+${RUBY_SITELIBDIR}/tmail/interface.rb
 ${RUBY_SITELIBDIR}/tmail/loader.rb
 ${RUBY_SITELIBDIR}/tmail/mail.rb
 ${RUBY_SITELIBDIR}/tmail/mailbox.rb
+${RUBY_SITELIBDIR}/tmail/main.rb
 ${RUBY_SITELIBDIR}/tmail/mbox.rb
 ${RUBY_SITELIBDIR}/tmail/net.rb
 ${RUBY_SITELIBDIR}/tmail/obsolete.rb
 ${RUBY_SITELIBDIR}/tmail/parser.rb
 ${RUBY_SITELIBDIR}/tmail/port.rb
+${RUBY_SITELIBDIR}/tmail/quoting.rb
+${RUBY_SITELIBDIR}/tmail/require_arch.rb
 ${RUBY_SITELIBDIR}/tmail/scanner.rb
 ${RUBY_SITELIBDIR}/tmail/scanner_r.rb
 ${RUBY_SITELIBDIR}/tmail/stringio.rb
-${RUBY_SITELIBDIR}/tmail/textutils.rb
-${RUBY_SITELIBDIR}/tmail/tmail.rb
 ${RUBY_SITELIBDIR}/tmail/utils.rb
-${RUBY_DOCDIR}/tmail/BUGS
-${RUBY_DOCDIR}/tmail/ChangeLog
-${RUBY_DOCDIR}/tmail/TODO
-${RUBY_DOCDIR}/tmail/en/Incompatibilities
-${RUBY_DOCDIR}/tmail/en/README.en
-${RUBY_DOCDIR}/tmail/en/address.html
-${RUBY_DOCDIR}/tmail/en/basics.html
-${RUBY_DOCDIR}/tmail/en/config.html
-${RUBY_DOCDIR}/tmail/en/details.html
-${RUBY_DOCDIR}/tmail/en/index.html
-${RUBY_DOCDIR}/tmail/en/mail.html
-${RUBY_DOCDIR}/tmail/en/mailbox.html
-${RUBY_DOCDIR}/tmail/en/port.html
-${RUBY_DOCDIR}/tmail/en/tmail.html
-${RUBY_DOCDIR}/tmail/en/usage.html
-${RUBY_DOCDIR}/tmail/ja/Incompatibilities.ja
-${RUBY_DOCDIR}/tmail/ja/README.ja
-${RUBY_DOCDIR}/tmail/ja/address.html
-${RUBY_DOCDIR}/tmail/ja/basics.html
-${RUBY_DOCDIR}/tmail/ja/config.html
-${RUBY_DOCDIR}/tmail/ja/details.html
-${RUBY_DOCDIR}/tmail/ja/index.html
-${RUBY_DOCDIR}/tmail/ja/mail.html
-${RUBY_DOCDIR}/tmail/ja/mailbox.html
-${RUBY_DOCDIR}/tmail/ja/port.html
-${RUBY_DOCDIR}/tmail/ja/tmail.html
-${RUBY_DOCDIR}/tmail/ja/usage.html
+${RUBY_SITELIBDIR}/tmail/version.rb
+${RUBY_DOCDIR}/tmail/CHANGES
+${RUBY_DOCDIR}/tmail/LICENSE
+${RUBY_DOCDIR}/tmail/NOTES
+${RUBY_DOCDIR}/tmail/README
+${RUBY_EXAMPLESDIR}/tmail/bench_base64.rb
 ${RUBY_EXAMPLESDIR}/tmail/data/multipart
 ${RUBY_EXAMPLESDIR}/tmail/data/normal
 ${RUBY_EXAMPLESDIR}/tmail/data/sendtest
@@ -61,10 +44,8 @@ ${RUBY_EXAMPLESDIR}/tmail/multipart.rb
 ${RUBY_EXAMPLESDIR}/tmail/parse-bench.rb
 ${RUBY_EXAMPLESDIR}/tmail/parse-test.rb
 ${RUBY_EXAMPLESDIR}/tmail/sendmail.rb
-@dirrm ${RUBY_SITEARCHLIBDIR}/tmail
-@dirrm ${RUBY_SITELIBDIR}/tmail
-@dirrm ${RUBY_DOCDIR}/tmail/en
-@dirrm ${RUBY_DOCDIR}/tmail/ja
-@dirrm ${RUBY_DOCDIR}/tmail
 @dirrm ${RUBY_EXAMPLESDIR}/tmail/data
 @dirrm ${RUBY_EXAMPLESDIR}/tmail
+@dirrm ${RUBY_DOCDIR}/tmail
+@dirrm ${RUBY_SITELIBDIR}/tmail
+@dirrm ${RUBY_SITEARCHLIBDIR}/tmailscanner
