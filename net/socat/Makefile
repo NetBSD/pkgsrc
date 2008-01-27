@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/01/27 12:35:35 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/01/27 14:09:09 rillig Exp $
 
 DISTNAME=	socat-1.6.0.0
 PKGREVISION=	2
@@ -11,6 +11,7 @@ COMMENT=	"netcat++" (extended design, new implementation)
 
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
+ONLY_FOR_COMPILER=	gcc	# uses -Werror in the configure script
 
 CONFIGURE_ARGS+=	--disable-libwrap
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
