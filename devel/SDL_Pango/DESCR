@@ -1,0 +1,2 @@
+Pango is the text rendering engine of GNOME 2.x. SDL_Pango connects the
+engine to SDL (Simple DirectMedia Layer), a cross-platform multimedia library.
