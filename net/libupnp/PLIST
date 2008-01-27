@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/03 12:32:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/27 06:11:24 obache Exp $
 include/upnp/FreeList.h
 include/upnp/LinkedList.h
 include/upnp/ThreadPool.h
@@ -59,7 +59,7 @@ share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_TIMEDOUT-207.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_SOCKET_ERROR-208.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_CANCELED-210.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_SUBSCRIBE_UNACCEPTED-301.html
-share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_UNSUBSCRIBE_UNACCAPTED-302.html
+share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_UNSUBSCRIBE_UNACCEPTED-302.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_NOTIFY_UNACCEPTED-303.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_INVALID_ARGUMENT-501.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/upnp/UPNP_E_FILE_NOT_FOUND-502.html
