@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.909 2008/01/25 14:15:12 jnemeth Exp $
+# $NetBSD: Makefile,v 1.910 2008/01/27 04:32:12 heinz Exp $
 #
 
 COMMENT=	Development utilities
@@ -17,6 +17,7 @@ SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL-intro-en
 SUBDIR+=	SDL-intro-ko
+SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
 SUBDIR+=	SDLmm
