@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.179 2008/01/27 06:11:35 obache Exp $
+$NetBSD: CHANGES-2008,v 1.180 2008/01/27 16:47:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/fontforge to 20080109 [adam 2008-01-26]
 	Added devel/SDL_Pango version 0.1.2 [heinz 2008-01-27]
 	Updated net/libupnp to 1.6.4 [obache 2008-01-27]
+	Updated mail/ruby-tmail to 1.2.1 [taca 2008-01-27]
