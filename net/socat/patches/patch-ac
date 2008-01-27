@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2008/01/27 12:35:17 rillig Exp $
+
+As the author said: Keep the enums and their names in sync.
+
+--- xioopts.h.orig	2007-03-06 22:19:46.000000000 +0100
++++ xioopts.h	2008-01-27 13:32:15.000000000 +0100
+@@ -49,7 +49,9 @@ enum e_types {
+    TYPE_LONGLONG,	/* long long */
+    TYPE_OFF32,		/* off_t */
+    TYPE_OFF64,		/* off64_t */
++#if HAVE_STRUCT_IP_MREQ || HAVE_STRUCT_IP_MREQN
+    TYPE_IP_MREQN,	/* for  struct ip_mreq  or  struct ip_mreqn */
++#endif
+    TYPE_IP4NAME,	/* IPv4 hostname or address */
+ 
+    TYPE_2BYTE = TYPE_USHORT
