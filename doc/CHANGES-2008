@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.177 2008/01/26 11:27:45 adam Exp $
+$NetBSD: CHANGES-2008,v 1.178 2008/01/27 04:34:00 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pbulk to 0.25 [joerg 2008-01-26]
 	Updated devel/cvs2svn to 2.0.1 [xtraeme 2008-01-26]
 	Updated fonts/fontforge to 20080109 [adam 2008-01-26]
+	Added devel/SDL_Pango version 0.1.2 [heinz 2008-01-27]
