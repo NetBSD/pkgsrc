@@ -1,22 +1,21 @@
-$NetBSD: patch-ab,v 1.1 2007/05/16 22:28:19 agc Exp $
+$NetBSD: patch-ab,v 1.2 2008/01/28 02:56:46 bjs Exp $
 
---- src/wdfs-main.c	2007/05/16 22:24:29	1.1
-+++ src/wdfs-main.c	2007/05/16 22:24:54
-@@ -1209,7 +1209,7 @@
+--- src/wdfs-main.h.orig	2007-03-28 16:53:21.000000000 -0400
++++ src/wdfs-main.h
+@@ -29,10 +29,16 @@
+ 	esac
+ */
  
++#if defined(HAVE_STDBOOL_H)
++#include <stdbool.h>
++typedef bool bool_t;
++#else
+ typedef enum {
+ 	true 	= 1,
+ 	false 	= 0
+ } bool_t;
++#endif
++
  
- /* just say hello when fuse takes over control. */
--#if FUSE_VERSION >= 26
-+#if FUSE_USE_VERSION >= 26
- 	static void* wdfs_init(struct fuse_conn_info *conn)
- #else
- 	static void* wdfs_init()
-@@ -1304,7 +1304,7 @@
- /* just a simple wrapper for fuse_main(), because the interface changed...  */
- static int call_fuse_main(struct fuse_args *args)
- {
--#if FUSE_VERSION >= 26
-+#if FUSE_USE_VERSION >= 26
- 	return fuse_main(args->argc, args->argv, &wdfs_operations, NULL);
- #else
- 	return fuse_main(args->argc, args->argv, &wdfs_operations);
+ /* used as mode for unify_path() */
+ enum {
