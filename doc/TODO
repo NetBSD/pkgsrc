@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7013 2008/01/26 16:06:42 wiz Exp $
+$NetBSD: TODO,v 1.7014 2008/01/28 05:40:18 bjs Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ Suggested package updates
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
-	o nasm-2.01
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncview-1.93b
