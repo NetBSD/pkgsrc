@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.11 2007/11/28 16:18:01 mishka Exp $
+# $NetBSD: cdpack.sh,v 1.12 2008/01/28 23:03:48 dmcmahill Exp $
 #
 # Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 #
@@ -595,7 +595,7 @@ do
 	(cd ${cddir}/${cdname} && cp $indexf .index)
     fi
 
-    if [ -f $indexf ]; then
+    if [ -f $restricted ]; then
 	(cd ${cddir}/${cdname} &&  cp $restricted .restricted)
     fi
 
@@ -650,7 +650,7 @@ do
 	echo "mkisofs failed"
 	clean_and_exit
     fi
-    cdn=$(($cdn + 1))
+    cdn=`${EXPR} $cdn + 1`
 done
 
 echo "ISO Images are available in $cddir"
