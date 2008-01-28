@@ -12,3 +12,6 @@ The "no inter-CD/DVD depends" algorithm will place certain
 packages on more than one CD/DVD to ensure that each CD/DVD is
 self contained (all package dependencies are satisfied within
 the single CD/DVD).
+
+The cddist utility in this package is used for creating an archive
+set of distfiles.
