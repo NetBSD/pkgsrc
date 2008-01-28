@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2007/02/18 18:56:13 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/01/28 00:45:26 rillig Exp $
 
 DISTNAME=	dsniff-${VERS}
-PKGREVISION=	1
 VERS=		2.3
 CATEGORIES=	security
 MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
