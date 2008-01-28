@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/14 19:56:15 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/28 23:06:13 dmcmahill Exp $
+bin/cddist
 bin/cdpack
 libexec/cdgen.awk
+man/man1/cddist.1
 man/man1/cdpack.1
