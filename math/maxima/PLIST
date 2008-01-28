@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2008/01/03 20:13:26 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/28 12:08:49 reinoud Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
 info/maxima-index.lisp
 info/maxima.info
 info/xmaxima.info
-lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
-lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
+${clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
+${clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
+${sbcl}lib/maxima/${PKGVERSION}/binary-sbcl/maxima.core
 libexec/maxima/${PKGVERSION}/mgnuplot
 man/man1/maxima.1
 share/maxima/${PKGVERSION}/demo/array.dem
@@ -481,13 +482,13 @@ share/maxima/${PKGVERSION}/share/contrib/gf/gf_roots.mac
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_roots_test.mac
 share/maxima/${PKGVERSION}/share/contrib/ggf.mac
 share/maxima/${PKGVERSION}/share/contrib/graph2d.lisp
-share/maxima/${PKGVERSION}/share/contrib/graphs/create_graph.mac
 share/maxima/${PKGVERSION}/share/contrib/graphs/cgraphs.mac
+share/maxima/${PKGVERSION}/share/contrib/graphs/create_graph.mac
 share/maxima/${PKGVERSION}/share/contrib/graphs/demoucron.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/draw_graph.mac
+share/maxima/${PKGVERSION}/share/contrib/graphs/graph6.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/graph_core.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/graph_polynomials.mac
-share/maxima/${PKGVERSION}/share/contrib/graphs/graph6.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/graphio.mac
 share/maxima/${PKGVERSION}/share/contrib/graphs/graphs.mac
 share/maxima/${PKGVERSION}/share/contrib/graphs/graphs.system
@@ -1645,6 +1646,7 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima
 @dirrm libexec/maxima/${PKGVERSION}
 @dirrm libexec/maxima
-@dirrm lib/maxima/${PKGVERSION}/binary-clisp
+${clisp}@dirrm lib/maxima/${PKGVERSION}/binary-clisp
+${sbcl}@dirrm lib/maxima/${PKGVERSION}/binary-sbcl
 @dirrm lib/maxima/${PKGVERSION}
 @dirrm lib/maxima
