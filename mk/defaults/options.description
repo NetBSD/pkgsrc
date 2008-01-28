@@ -32,6 +32,7 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support
+clisp			Common/C Lisp
 coqide			Enable ide support for coq.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
@@ -232,6 +233,7 @@ samplerate		Enable libsamplerate support.
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
+sbcl			Use Steel-Bank Common Lisp
 scapy-crypto		Add in crypto support
 scapy-pyx		Add in py-X support
 sdl			Use SDL as display library.
