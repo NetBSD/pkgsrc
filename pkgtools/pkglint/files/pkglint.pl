@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.757 2008/01/25 17:59:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.758 2008/01/28 00:53:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1756,7 +1756,7 @@ use constant regex_gnu_configure_volatile_vars
 use constant regex_mk_comment	=> qr"^ *\s*#(.*)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
-use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"\s*(?:#.*)?$";
+use constant regex_mk_include	=> qr"^\.\s*(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$";
 use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>\s*(?:#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
@@ -2327,7 +2327,7 @@ sub load_tool_names() {
 
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_mk_include) {
-				my ($includefile) = ($1);
+				my (undef, $includefile) = ($1, $2);
 				if ($includefile =~ qr"^(?:\$\{PKGSRCDIR\}/mk/tools/)?([^/]+)$") {
 					push(@tool_files, $1);
 				}
@@ -3500,7 +3500,7 @@ sub parseline_mk($) {
 		defined($comment) and $line->set("comment", $comment);
 
 	} elsif ($text =~ regex_mk_include) {
-		my ($includefile, $comment) = ($1, $2);
+		my (undef, $includefile, $comment) = ($1, $2, $3);
 
 		$line->set("is_include", true);
 		$line->set("includefile", $includefile);
@@ -3934,8 +3934,8 @@ sub checkline_other_absolute_pathname($$) {
 	}
 }
 
-sub checkline_relative_path($$) {
-	my ($line, $path) = @_;
+sub checkline_relative_path($$$) {
+	my ($line, $path, $must_exist) = @_;
 	my ($res_path);
 
 	if (!$is_wip && $path =~ qr"/wip/") {
@@ -3945,7 +3945,7 @@ sub checkline_relative_path($$) {
 	if ($res_path =~ regex_unresolved) {
 		$opt_debug_unchecked and $line->log_debug("Unchecked path: \"${path}\".");
 	} elsif (!-e ((($res_path =~ qr"^/") ? "" : "${current_dir}/") . $res_path)) {
-		$line->log_error("\"${res_path}\" does not exist.");
+		$must_exist and $line->log_error("\"${res_path}\" does not exist.");
 	} elsif ($path =~ qr"^\.\./\.\./([^/]+)/([^/]+)(.*)") {
 		my ($cat, $pkg, $rest) = ($1, $2, $3);
 	} elsif ($path =~ qr"^\.\./\.\./mk/") {
@@ -3960,7 +3960,7 @@ sub checkline_relative_path($$) {
 sub checkline_relative_pkgdir($$) {
 	my ($line, $path) = @_;
 
-	checkline_relative_path($line, $path);
+	checkline_relative_path($line, $path, true);
 	$path = resolve_relative_path($path, false);
 
 	if ($path !~ qr"^(?:\./)?\.\./\.\./[^/]+/[^/]+$") {
@@ -5428,7 +5428,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		checkline_relative_pkgdir($line, $value);
 
 	} elsif ($type eq "RelativePkgPath") {
-		checkline_relative_path($line, $value);
+		checkline_relative_path($line, $value, true);
 
 	} elsif ($type eq "Restricted") {
 		if ($value ne "\${RESTRICTED}") {
@@ -6240,10 +6240,10 @@ sub checklines_mk($) {
 			checkline_mk_shellcmd($line, $shellcmd);
 
 		} elsif ($text =~ regex_mk_include) {
-			my ($includefile) = ($1);
+			my ($include, $includefile) = ($1, $2);
 
 			$opt_debug_include and $line->log_debug("includefile=${includefile}");
-			checkline_relative_path($line, $includefile);
+			checkline_relative_path($line, $includefile, $include eq "include");
 
 			if ($includefile =~ qr"../Makefile$") {
 				$line->log_error("Other Makefiles must not be included directly.");
@@ -6466,7 +6466,7 @@ sub checklines_buildlink3_inclusion($) {
 	$included_files = {};
 	foreach my $line (@{$lines}) {
 		if ($line->text =~ regex_mk_include) {
-			my ($file, $comment) = ($1, $2);
+			my (undef, $file, $comment) = ($1, $2, $3);
 
 			if ($file =~ qr"^\.\./\.\./(.*)/buildlink3\.mk") {
 				my ($bl3) = ($1);
