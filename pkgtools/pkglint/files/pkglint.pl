@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.758 2008/01/28 00:53:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.759 2008/01/28 01:18:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3623,16 +3623,17 @@ sub readmakefile($$$$) {
 					# Makefile.common that says which files
 					# include it.
 					if ($includefile =~ qr"/Makefile\.common$") {
-						my $mentioned = false;
+						my @mc_lines = @{$all_lines}[$last_lineno+1 .. $#{$all_lines}];
 						my $expected = "# used by " . relative_path($cwd_pkgsrcdir, $fname);
-						for (my $i = $last_lineno + 1; $i <= $#{$all_lines}; $i++) {
-							my $mcline = $all_lines->[$i];
-							$mentioned = true if $mcline->text eq $expected;
-						}
 
-						if (!$mentioned) {
-							$all_lines->[$last_lineno + 3]->log_warning("Please add a line \"$expected\" here.");
-							$all_lines->[$last_lineno + 3]->explain_warning(
+						if (!(grep { $_->text eq $expected } @mc_lines)) {
+							my $lineno = 0;
+							while ($lineno < $#mc_lines && $mc_lines[$lineno]->has("is_comment")) {
+								$lineno++;
+							}
+							my $iline = $mc_lines[$lineno];
+							$iline->log_warning("Please add a line \"$expected\" here.");
+							$iline->explain_warning(
 "Since Makefile.common files usually don't have any comments and",
 "therefore not a clearly defined interface, they should at least contain",
 "references to all files that include them, so that it is easier to see",
@@ -3641,6 +3642,8 @@ sub readmakefile($$$$) {
 "If there are more than five packages that use a Makefile.common,",
 "you should think about giving it a proper name (maybe plugin.mk) and",
 "documenting its interface.");
+							$iline->append_before($expected);
+							autofix(\@mc_lines);
 						}
 					}
 				}
