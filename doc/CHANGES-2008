@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.181 2008/01/28 02:57:26 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.182 2008/01/28 05:38:51 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/libupnp to 1.6.4 [obache 2008-01-27]
 	Updated mail/ruby-tmail to 1.2.1 [taca 2008-01-27]
 	Updated filesystems/fuse-wdfs to 1.4.2 [bjs 2008-01-28]
+	Updated devel/nasm to 2.01 [bjs 2008-01-28]
