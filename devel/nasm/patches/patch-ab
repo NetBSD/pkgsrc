@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/09/17 16:40:14 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2008/01/28 05:38:20 bjs Exp $
 
---- doc/Makefile.in.orig	2002-05-18 22:17:28.000000000 +0000
+--- doc/Makefile.in.orig	2008-01-17 15:22:17.000000000 -0500
 +++ doc/Makefile.in
-@@ -9,20 +9,20 @@ prefix		= @prefix@
+@@ -8,7 +8,8 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
  bindir		= @bindir@
  mandir		= @mandir@
@@ -10,8 +10,9 @@ $NetBSD: patch-ab,v 1.1 2003/09/17 16:40:14 jmmv Exp $
 +docdir		= $(prefix)/share/doc/nasm
 +htmldocdir	= $(prefix)/share/doc/html/nasm
  infodir		= @infodir@
+ datarootdir	= @datarootdir@
  
- INSTALL		= @INSTALL@
+@@ -16,13 +17,12 @@ INSTALL		= @INSTALL@
  INSTALL_PROGRAM	= @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
@@ -19,15 +20,15 @@ $NetBSD: patch-ab,v 1.1 2003/09/17 16:40:14 jmmv Exp $
 -MAKEINFO	= makeinfo
 +PERL		= ${PERL5}
  TEXI2DVI        = texi2dvi
- PS2PDF          = ps2pdf -dOptimize=true	# Part of GhostScript
+ PS2PDF          = ps2pdf		# Part of GhostScript
  
  SRCS		= nasmdoc.src
 -OUT		= nasm.info nasmdoc.ps nasmdoc.pdf
 +OUT		= nasm.info nasmdoc.ps # nasmdoc.pdf
  
- all: $(OUT)
- 
-@@ -73,6 +73,7 @@ spotless: clean
+ # exports
+ export srcdir
+@@ -77,6 +77,7 @@ spotless: clean
  
  install: all
  	$(INSTALL_DATA) info/* $(INSTALLROOT)$(infodir)
