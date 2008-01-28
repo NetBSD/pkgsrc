@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2007/06/30 19:18:47 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2008/01/28 00:54:51 rillig Exp $
 
 --- configure.orig	2001-10-30 21:27:30.000000000 +0000
 +++ configure
@@ -23,12 +23,3 @@ $NetBSD: patch-ad,v 1.1 2007/06/30 19:18:47 joerg Exp $
  	TCLTK_INCLUDES="-I/usr/local/include/tk$TK_DOTTED_HI_VERS -I/usr/local/include/tcl$TCL_DOTTED_HI_VERS -L/usr/local/lib"
  	if test x$TCLTK_LIB_SUFFIX_TYPE = xunspecified
  	then
-@@ -2908,6 +2909,8 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
