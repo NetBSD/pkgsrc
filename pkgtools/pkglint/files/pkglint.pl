@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.759 2008/01/28 01:18:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.760 2008/01/28 09:25:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5397,6 +5397,12 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 		if ($line->fname !~ qr"(?:^|/)Makefile$") {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
+			$line->explain_error(
+"Usually, different packages using the same Makefile.common have",
+"different dependencies and will be bumped at different times (e.g. for",
+"shlib major bumps) and thus the PKGREVISIONs must be in the separate",
+"Makefiles. There is no practical way of having this information in a",
+"commonly used Makefile.");
 		}
 
 	} elsif ($type eq "PlatformTriple") {
