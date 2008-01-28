@@ -1,0 +1,33 @@
+$NetBSD: patch-at,v 1.6 2008/01/28 19:33:01 markd Exp $
+
+KDE bug 143112
+
+--- kioslave/media/mediamanager/fstabbackend.cpp.orig	2006-10-02 06:31:54.000000000 +1300
++++ kioslave/media/mediamanager/fstabbackend.cpp
+@@ -69,7 +69,7 @@ FstabBackend::FstabBackend(MediaList &li
+ 
+ 	KDirWatch::self()->startScan();
+ 
+-#ifdef Q_OS_FREEBSD
++#if defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD)
+ 	connect( &m_mtabTimer, SIGNAL( timeout() ),
+ 	         this, SLOT( handleMtabChange() ) );
+ 	m_mtabTimer.start(250);
+@@ -170,7 +170,7 @@ bool inExclusionPattern(KMountPoint *mou
+ void FstabBackend::handleMtabChange(bool allowNotification)
+ {
+ 	QStringList new_mtabIds;
+-	KMountPoint::List mtab = KMountPoint::currentMountPoints();
++	KMountPoint::List mtab = KMountPoint::currentMountPoints(KMountPoint::NeedRealDeviceName);
+ 
+ 	KMountPoint::List::iterator it = mtab.begin();
+ 	KMountPoint::List::iterator end = mtab.end();
+@@ -409,6 +409,8 @@ void FstabBackend::guess(const QString &
+ 	       || devNode.find("/dev/scd")!=-1 || devNode.find("/dev/sr")!=-1
+ 	       // FREEBSD SPECIFIC
+ 	       || devNode.find("/acd")!=-1 || devNode.find("/scd")!=-1
++	       // NETBSD SPECIFIC
++	       || devNode.find("/cd")!=-1 || devNode.find("/mcd")!=-1
+ 	        )
+ 	{
+ 		mimeType = "media/cdrom";
