@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.12 2008/01/26 23:44:08 joerg Exp $
+# $NetBSD: pkg-build,v 1.13 2008/01/29 08:14:44 tnn Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -42,7 +42,7 @@ cleanup() {
 		else
 			cur_destdir=
 		fi
-		${tar} cfz $${bulklog}/${pkgname}/prefix.tar.gz ${cur_destdir}${prefix}
+		${tar} -czf ${bulklog}/${pkgname}/prefix.tar.gz ${cur_destdir}${prefix}
 	fi
 	${make} clean > /dev/null 2>&1 || true
 	exit 1
