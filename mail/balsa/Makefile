@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2008/01/18 05:08:20 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2008/01/29 19:21:06 rillig Exp $
 
 DISTNAME=	balsa-2.3.10
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://balsa.gnome.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,11 +24,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
 
 EGDIR=		${PREFIX}/share/examples/balsa
-.for cnf in balsa.soundlist email.soundlist
-CONF_FILES+=	${EGDIR}/${cnf} ${PKG_SYSCONFDIR}/sound/events/${cnf}
-.endfor
+CONF_FILES=	${EGDIR}/balsa.soundlist ${PKG_SYSCONFDIR}/sound/events/balsa.soundlist
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 BUILDLINK_TRANSFORM+=		rm:-DGNOME_DISABLE_DEPRECATED
