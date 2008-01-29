@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7014 2008/01/28 05:40:18 bjs Exp $
+$NetBSD: TODO,v 1.7015 2008/01/29 12:27:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,7 @@ Suggested new packages
 	Compiler of the AGFL formalis [pkg/28946]
 	formalism for the syntactic description of Natural Languages
 
-	Azureus [pkg/30103, pkgsrc-wip]
+	Azureus [pkg/29976, pkg/30103, pkgsrc-wip]
 	http://azureus.sourceforge.net/
 	Bittorrent client written in java
 
