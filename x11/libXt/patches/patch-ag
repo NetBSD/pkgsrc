@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 2008/01/29 03:37:02 bjs Exp $
+
+Recalculate fd_set more aggressively (bug #808)
+
+select() can modify the fd set, so be a bit pessimistic and recalculate
+it more often.
+
+--- src/NextEvent.c.orig	2006-07-11 14:05:55.000000000 -0400
++++ src/NextEvent.c
+@@ -581,10 +581,10 @@ int _XtWaitForSomething(
+     wf.stack = fdlist;
+ #endif
+ 
++WaitLoop:
+     app->rebuild_fdlist = TRUE;
+ 
+     while (1) {
+-WaitLoop:
+ 	AdjustTimes (app, block, howlong, ignoreTimers, &wt);
+ 
+ 	if (block && app->block_hook_list) {
