@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2008/01/28 01:15:26 bjs Exp $
+# $NetBSD: builtin.mk,v 1.8 2008/01/29 00:52:58 obache Exp $
 
 BUILTIN_PKG:=	openpam
 
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.openpam
     !empty(IS_BUILTIN.openpam:M[yY][eE][sS]) && \
     empty(H_OPENPAM:M__nonexistent__)
 BUILTIN_VERSION.openpam!=	\
-	${AWK} '/\#define[ 	]*OPENPAM_VERSION[ 	]/ {print $$3; }' \
+	${AWK} '/\#define[ 	]*_?OPENPAM_VERSION[ 	]/ {print $$3; }' \
 		${H_OPENPAM}
 BUILTIN_PKG.openpam=	openpam-${BUILTIN_VERSION.openpam}
 .endif
