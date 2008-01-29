@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.2 2007/02/26 14:58:18 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/01/29 02:00:21 bjs Exp $
 
 SHA1 (libXext-1.0.3.tar.bz2) = 341796c502d0076912b090f0ac6a764501800684
 RMD160 (libXext-1.0.3.tar.bz2) = 375041cf7b89d2130a38200122ab3f27ef3ca5fd
 Size (libXext-1.0.3.tar.bz2) = 262116 bytes
+SHA1 (patch-aa) = 3d8b3a3236a7b23d91c541bb2da5fac28a34ecfa
+SHA1 (patch-ab) = e48c5005eeaff5d6664c47f9d80339bfd965356a
+SHA1 (patch-ac) = 23374cc6243334f360c265ca7abe83ae2e6d1a81
+SHA1 (patch-ad) = d9e670932c4ddcbb3cac5c9d32df9627473259ca
+SHA1 (patch-ae) = 801927abe502d3c6e250d1edd8805f27d55dedad
+SHA1 (patch-af) = 8f970ba7e514c7a9a824f32824c9c2a6f0d61b8d

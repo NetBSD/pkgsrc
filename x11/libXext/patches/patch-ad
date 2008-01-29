@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/01/29 02:00:22 bjs Exp $
+
+Fix warnings.
+
+--- src/XTestExt1.c.orig	2006-07-11 14:05:14.000000000 -0400
++++ src/XTestExt1.c
+@@ -1200,7 +1200,7 @@ int	ack_flag)
+ 	/*
+ 	 * points to XTestIdentifyMyEvent
+ 	 */
+-	Bool	(*func_ptr)();
++	Bool	(*func_ptr)(Display *, XEvent *, XPointer);
+ 
+ 	/*
+ 	 * write the input actions to the server

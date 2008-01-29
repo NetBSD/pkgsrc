@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2008/01/29 02:00:22 bjs Exp $
+
+Fix warnings.
+
+--- src/globals.c.orig	2006-07-11 14:05:14.000000000 -0400
++++ src/globals.c
+@@ -75,7 +75,7 @@ from The Open Group.
+ /*
+  * Error handlers; used to be in XlibInt.c
+  */
+-typedef int (*funcptr)();
++typedef int (*funcptr)(Display*, char *, char *);
+ ZEROINIT (funcptr, _XExtensionErrorFunction, NULL);
+ 
+ /*

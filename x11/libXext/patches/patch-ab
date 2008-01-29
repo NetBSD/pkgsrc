@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/01/29 02:00:22 bjs Exp $
+
+Coverity #467: security_error_list has fewer than 
+XSecurityNumberErrors entries
+
+--- src/XSecurity.c.orig	2006-07-11 14:05:14.000000000 -0400
++++ src/XSecurity.c
+@@ -78,7 +78,7 @@ static XExtensionHooks Security_extensio
+ };
+ 
+ static char    *security_error_list[] = {
+-    "BadAuthorization"
++    "BadAuthorization",
+     "BadAuthorizationProtocol"
+ };
+ 
