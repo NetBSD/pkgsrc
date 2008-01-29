@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/09 19:01:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/01/29 16:04:13 gdt Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -31,6 +31,8 @@ bin/ps2ps2
 bin/pv.sh
 bin/unix-lpr.sh
 bin/wftopfa
+${CUPS}libexec/cups/filter/pstopxl
+${CUPS}libexec/cups/filter/pstoraster
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/font2c.1
@@ -69,6 +71,9 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
+${CUPS}share/cups/model/pxlcolor.ppd
+${CUPS}share/cups/model/pxlmono.ppd
+${CUPS}share/examples/cups/pstoraster.convs
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-V
 share/ghostscript/${PKGVERSION}/Resource/CMap/78-H
