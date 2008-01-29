@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/12/22 07:22:08 obache Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/29 11:37:35 joerg Exp $
 
 DISTNAME=		nspr-4.6.7
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v4.6.7/src/}
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
 COMMENT=		Platform-neutral API for system level and libc like functions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub
 CONFIGURE_DIRS=		build
@@ -63,6 +65,8 @@ SUBST_FILES.libpath=	build/config/autoconf.mk
 SUBST_SED.libpath=	-e 's,@executable_path/$$@,${PREFIX}/lib/nspr/$$(notdir $$@),'
 .endif
 
+INSTALLATION_DIRS=	bin include/nspr lib/nspr lib/pkgconfig
+
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
 	${CHMOD} -x ${WRKSRC}/pr/include/prvrsion.h
@@ -71,12 +75,10 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/nspr
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/nspr
-	(cd ${WRKSRC}/build/dist/include && ${PAX} -Lrwpe . ${PREFIX}/include/ )
-	(cd ${WRKSRC}/build/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
-	${INSTALL_SCRIPT} ${WRKSRC}/build/config/nspr-config ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
+	(cd ${WRKSRC}/build/dist/include && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/include/ )
+	(cd ${WRKSRC}/build/dist/lib && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/lib/nspr/ )
+	${INSTALL_SCRIPT} ${WRKSRC}/build/config/nspr-config ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	set -e; \
 	{ ${ECHO} "Name: NSPR"; \
 	  ${ECHO} "Description: The Netscape Portable Runtime"; \
@@ -85,7 +87,7 @@ do-install:
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr" \
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr" \
 	      "-lplds4 -lplc4 -lnspr4 "${BUILDLINK_LIBS.pthread:Q}; \
-	} >${PREFIX}/lib/pkgconfig/nspr.pc
+	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nspr.pc
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+=	--without-pthreads
