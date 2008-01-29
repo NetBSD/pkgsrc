@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/10 20:36:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2008/01/29 14:24:36 ghen Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -359,13 +359,16 @@ share/httpd/manual/bind.html.ja.euc-jp
 share/httpd/manual/bind.html.ko.euc-kr
 share/httpd/manual/caching.html
 share/httpd/manual/caching.html.en
+share/httpd/manual/caching.html.fr
 share/httpd/manual/configuring.html
 share/httpd/manual/configuring.html.de
 share/httpd/manual/configuring.html.en
+share/httpd/manual/configuring.html.fr
 share/httpd/manual/configuring.html.ja.euc-jp
 share/httpd/manual/configuring.html.ko.euc-kr
 share/httpd/manual/content-negotiation.html
 share/httpd/manual/content-negotiation.html.en
+share/httpd/manual/content-negotiation.html.fr
 share/httpd/manual/content-negotiation.html.ja.euc-jp
 share/httpd/manual/content-negotiation.html.ko.euc-kr
 share/httpd/manual/convenience.map
@@ -417,6 +420,7 @@ share/httpd/manual/glossary.html
 share/httpd/manual/glossary.html.de
 share/httpd/manual/glossary.html.en
 share/httpd/manual/glossary.html.es
+share/httpd/manual/glossary.html.fr
 share/httpd/manual/glossary.html.ko.euc-kr
 share/httpd/manual/handler.html
 share/httpd/manual/handler.html.en
@@ -499,8 +503,8 @@ share/httpd/manual/install.html.ko.euc-kr
 share/httpd/manual/invoking.html
 share/httpd/manual/invoking.html.de
 share/httpd/manual/invoking.html.en
-share/httpd/manual/invoking.html.fr
 share/httpd/manual/invoking.html.es
+share/httpd/manual/invoking.html.fr
 share/httpd/manual/invoking.html.ja.euc-jp
 share/httpd/manual/invoking.html.ko.euc-kr
 share/httpd/manual/invoking.html.ru.koi8-r
@@ -513,6 +517,8 @@ share/httpd/manual/logs.html.ko.euc-kr
 share/httpd/manual/misc/index.html
 share/httpd/manual/misc/index.html.en
 share/httpd/manual/misc/index.html.ko.euc-kr
+share/httpd/manual/misc/password_encryptions.html
+share/httpd/manual/misc/password_encryptions.html.en
 share/httpd/manual/misc/perf-tuning.html
 share/httpd/manual/misc/perf-tuning.html.en
 share/httpd/manual/misc/perf-tuning.html.ko.euc-kr
@@ -774,6 +780,8 @@ share/httpd/manual/mod/mod_status.html
 share/httpd/manual/mod/mod_status.html.en
 share/httpd/manual/mod/mod_status.html.ja.euc-jp
 share/httpd/manual/mod/mod_status.html.ko.euc-kr
+share/httpd/manual/mod/mod_substitute.html
+share/httpd/manual/mod/mod_substitute.html.en
 share/httpd/manual/mod/mod_suexec.html
 share/httpd/manual/mod/mod_suexec.html.en
 share/httpd/manual/mod/mod_suexec.html.ja.euc-jp
@@ -828,8 +836,8 @@ share/httpd/manual/mod/worker.html.ja.euc-jp
 share/httpd/manual/mpm.html
 share/httpd/manual/mpm.html.de
 share/httpd/manual/mpm.html.en
-share/httpd/manual/mpm.html.fr
 share/httpd/manual/mpm.html.es
+share/httpd/manual/mpm.html.fr
 share/httpd/manual/mpm.html.ja.euc-jp
 share/httpd/manual/mpm.html.ko.euc-kr
 share/httpd/manual/new_features_2_0.html
@@ -923,6 +931,7 @@ share/httpd/manual/rewrite/rewrite_tech.html
 share/httpd/manual/rewrite/rewrite_tech.html.en
 share/httpd/manual/sections.html
 share/httpd/manual/sections.html.en
+share/httpd/manual/sections.html.fr
 share/httpd/manual/sections.html.ja.euc-jp
 share/httpd/manual/sections.html.ko.euc-kr
 share/httpd/manual/server-wide.html
@@ -948,10 +957,10 @@ share/httpd/manual/ssl/ssl_intro.html
 share/httpd/manual/ssl/ssl_intro.html.en
 share/httpd/manual/ssl/ssl_intro.html.ja.euc-jp
 share/httpd/manual/stopping.html
-share/httpd/manual/stopping.html.fr
 share/httpd/manual/stopping.html.de
 share/httpd/manual/stopping.html.en
 share/httpd/manual/stopping.html.es
+share/httpd/manual/stopping.html.fr
 share/httpd/manual/stopping.html.ja.euc-jp
 share/httpd/manual/stopping.html.ko.euc-kr
 share/httpd/manual/style/build.properties
@@ -1010,6 +1019,7 @@ share/httpd/manual/suexec.html.ko.euc-kr
 share/httpd/manual/upgrading.html
 share/httpd/manual/upgrading.html.de
 share/httpd/manual/upgrading.html.en
+share/httpd/manual/upgrading.html.fr
 share/httpd/manual/upgrading.html.ja.euc-jp
 share/httpd/manual/upgrading.html.ko.euc-kr
 share/httpd/manual/upgrading.html.pt-br
