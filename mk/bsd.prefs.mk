@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.276 2008/01/16 03:16:39 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.277 2008/01/29 13:04:05 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -82,11 +82,6 @@ _OS_VERSION_CMD=	${UNAME} -r
 OS_VERSION=		${_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 .endif
-.if !defined(LOWER_OS_VERSION)
-_LOWER_OS_VERSION_CMD=	echo ${OS_VERSION:Q} | tr 'A-Z' 'a-z'
-LOWER_OS_VERSION=	${_LOWER_OS_VERSION_CMD:sh}
-MAKEFLAGS+=		LOWER_OS_VERSION=${LOWER_OS_VERSION:Q}
-.endif
 
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
@@ -119,7 +114,6 @@ _OS_VERSION!=		/usr/bin/oslevel
 _OS_VERSION!=		echo `${UNAME} -v`.`${UNAME} -r`
 .  endif
 OS_VERSION=		${_OS_VERSION:C/\([0-9]*\.[0-9]*\).*/\1/}
-LOWER_OS_VERSION=	${OS_VERSION}
 LOWER_OPSYS_VERSUFFIX=	${_OS_VERSION}
 LOWER_OPSYS?=		aix
 LOWER_VENDOR?=		ibm
@@ -170,7 +164,6 @@ OS_VERSION=		3.1
 .  else
 OS_VERSION=		3.0
 .  endif
-LOWER_OS_VERSION=	${OS_VERSION}
 
 .elif !empty(OPSYS:MIRIX*)
 LOWER_ARCH!=		${UNAME} -p
@@ -180,7 +173,6 @@ LOWER_VENDOR?=		sgi
 
 .elif ${OPSYS} == "Linux"
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
-LOWER_OS_VERSION:=	${LOWER_OS_VERSION_CMD:C/-.*$//}
 LOWER_OPSYS?=		linux
 MACHINE_ARCH:=          ${MACHINE_ARCH:C/i.86/i386/}
 MACHINE_ARCH:=		${MACHINE_ARCH:C/ppc/powerpc/}
@@ -244,12 +236,12 @@ LOWER_OPSYS?=		solaris
 LOWER_OPSYS_VERSUFFIX=	2
 
 .elif !defined(LOWER_OPSYS)
-LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
+LOWER_OPSYS:=		${OPSYS:tl}
 .endif
 
 # Now commit the [LOWER_]OS_VERSION values computed above, eliding the :sh
-LOWER_OS_VERSION:=	${LOWER_OS_VERSION}
 OS_VERSION:=		${OS_VERSION}
+LOWER_OS_VERSION:=	${OS_VERSION:tl}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
 
