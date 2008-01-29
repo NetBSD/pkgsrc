@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2008/01/28 19:38:51 jnemeth Exp $
+# $NetBSD: Makefile,v 1.40 2008/01/29 01:11:15 jnemeth Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontforge/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,5 +30,5 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
