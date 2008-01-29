@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.41 2008/01/29 19:14:45 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.42 2008/01/29 19:18:26 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -451,7 +451,6 @@ _INSTALL_FILES_DATAFILE=	${_PKGINSTALL_DIR}/files-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_FILES_FILE}
 _INSTALL_DATA_TMPL+=		${_INSTALL_FILES_DATAFILE}
 
-# XXX: These checks should be run _after_ ./+INSTALL
 privileged-install-hook: _pkginstall-postinstall-check
 _pkginstall-postinstall-check: .PHONY
 	${RUN} p="${DESTDIR}${PREFIX}";					\
@@ -461,31 +460,31 @@ _pkginstall-postinstall-check: .PHONY
 	set args ${RCD_SCRIPTS}; shift;					\
 	while [ $$# -gt 0 ]; do						\
 		egfile=`canon "${RCD_SCRIPTS_EXAMPLEDIR}/$$1"`; shift;	\
-		: [ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "RCD_SCRIPT $$egfile does not exist."; \
+		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "RCD_SCRIPT $$egfile does not exist."; \
 	done;								\
 	set args ${CONF_FILES}; shift;					\
 	while [ $$# -gt 0 ]; do						\
 		needargs CONF_FILES 2 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 2;				\
-		: [ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILE $$egfile does not exist."; \
+		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILE $$egfile does not exist."; \
 	done;								\
 	set args ${REQD_FILES}; shift;					\
 	while [ $$# -gt 0 ]; do						\
 		needargs REDQ_FILES 2 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 2;				\
-		: [ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILE $$egfile does not exist."; \
+		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILE $$egfile does not exist."; \
 	done;								\
 	set args ${CONF_FILES_PERMS}; shift;				\
 	while [ $$# -gt 0 ]; do						\
 		needargs CONF_FILES_PERMS 5 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 5;				\
-		: [ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILES_PERMS $$egfile does not exist."; \
+		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "CONF_FILES_PERMS $$egfile does not exist."; \
 	done;								\
 	set args ${REQD_FILES_PERMS}; shift;				\
 	while [ $$# -gt 0 ]; do						\
 		needargs REQD_FILES_PERMS 5 $$# "$$*";			\
 		egfile=`canon "$$1"`; shift 5;				\
-		: [ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist."; \
+		[ -f "$$egfile" ] || [ -c "$$egfile" ] || ${FAIL_MSG} "REQD_FILES_PERMS $$egfile does not exist."; \
 	done
 
 ${_INSTALL_FILES_DATAFILE}:
