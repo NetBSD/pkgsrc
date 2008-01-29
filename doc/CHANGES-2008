@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.187 2008/01/29 03:33:43 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.188 2008/01/29 03:37:24 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/cdpack to 1.8 [dmcmahill 2008-01-28]
 	Updated fonts/fontforge to 20080109nb2 [jnemeth 2008-01-29]
 	Updated x11/libXext to 1.0.3nb1 [bjs 2008-01-29]
+	Updated x11/libXt to 1.0.5nb1 [bjs 2008-01-29]
