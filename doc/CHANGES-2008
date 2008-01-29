@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.190 2008/01/29 03:50:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.191 2008/01/29 03:58:27 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libXt to 1.0.5nb1 [bjs 2008-01-29]
 	Updated x11/libXi to 1.1.3nb1 [bjs 2008-01-29]
 	Updated x11/libXdamage to 1.1.1nb1 [bjs 2008-01-29]
+	Updated x11/libXaw to 1.0.4nb1 [bjs 2008-01-29]
