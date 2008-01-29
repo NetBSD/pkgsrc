@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.5 2008/01/15 09:03:55 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.6 2008/01/29 14:25:14 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
@@ -23,3 +23,9 @@ Pullup ticket 2267 - requested by adrianp
 security update for php4
 Pullup ticket 2268 - requested by adrianp
 security update for drupal
+Pullup ticket 2278 - requested by taca
+security update for apache2
+Pullup ticket 2281 - requested by drochner
+security fix for libsndfile
+Pullup ticket 2282 - requested by tron
+security update for apache22
