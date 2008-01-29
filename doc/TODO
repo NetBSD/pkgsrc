@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7015 2008/01/29 12:27:54 obache Exp $
+$NetBSD: TODO,v 1.7016 2008/01/29 13:25:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -245,10 +245,6 @@ Suggested new packages
 	crm114 [pkg/31969]
 	http://crm114.sourceforge.net/
 	Controllable Regex Mutilator
-
-	TRE [pkg/31970]
-	http://laurikari.net/tre/index.html
-	Lightweight,robust,and efficient POSIX compliant regexp matching library
 
 	SQLite Browser [pkg/32461]
 	http://sqlitebrowser.sourceforge.net/
