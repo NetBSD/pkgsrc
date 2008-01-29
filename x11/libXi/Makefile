@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/21 19:28:47 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/29 03:45:36 bjs Exp $
 #
 
 DISTNAME=		libXi-1.1.3
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
