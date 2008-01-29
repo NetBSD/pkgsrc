@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/10/26 10:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/01/29 18:24:30 tnn Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -76,6 +76,7 @@ do-configure:
 			${LN} -sf i386-$$suffix ${MACHINE}-$$suffix;	\
 		fi;							\
 	done
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} config
 
 post-build:
 	cd ${WRKSRC};							\
@@ -103,5 +104,10 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
 
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+LDFLAGS+=	-lrt
+.endif
+
 .include "../../mk/oss.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
