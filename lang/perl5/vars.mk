@@ -1,4 +1,4 @@
-# $NetBSD: vars.mk,v 1.3 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: vars.mk,v 1.4 2008/01/29 16:41:36 tnn Exp $
 #
 # This Makefile fragment exposes several Perl configuration variables
 # to the package Makefiles.  The variables are only defined if the
@@ -11,34 +11,28 @@ _PERL5_VARS=	INSTALLARCHLIB INSTALLSCRIPT				\
 		INSTALLVENDORLIB INSTALLVENDORARCH			\
 		INSTALLVENDORMAN1DIR INSTALLVENDORMAN3DIR
 
-_PERL5_VAR.INSTALLARCHLIB=		installarchlib
-_PERL5_VAR.INSTALLSCRIPT=		installscript
-_PERL5_VAR.INSTALLVENDORBIN=		installvendorbin
-_PERL5_VAR.INSTALLVENDORSCRIPT=		installvendorscript
-_PERL5_VAR.INSTALLVENDORLIB=		installvendorlib
-_PERL5_VAR.INSTALLVENDORARCH=		installvendorarch
-_PERL5_VAR.INSTALLVENDORMAN1DIR=	installvendorman1dir
-_PERL5_VAR.INSTALLVENDORMAN3DIR=	installvendorman3dir
-
 .if defined(PERL5) && exists(${PERL5:Q})
 #
 # Locate some of the installation prefixes for ${PERL5} that are used to
 # define later variables.
 #
-.  if !defined(_PERL5_PREFIX)
-_PERL5_PREFIX!=		\
-	eval `${PERL5:Q} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
+.  if !defined(_PERL5_VARS_OUT)
+_PERL5_VARS_CMD=	${PERL5:Q} -V:prefix ${_PERL5_VARS:tl:S/^/-V:/}
+_PERL5_VARS_OUT:=	${_PERL5_VARS_CMD:sh:ts,:S/'//g:S/;//g:Q:S/,/ /g}
+MAKEVARS+=		_PERL5_VARS_OUT
 .  endif
-MAKEVARS+=	_PERL5_PREFIX
+
+.  if !defined(_PERL5_PREFIX)
+_PERL5_PREFIX:=		${_PERL5_VARS_OUT:Mprefix=*:C/^prefix=//}
+MAKEVARS+=		_PERL5_PREFIX
+.  endif
 #
 # Define PERL5_SUB_* as the vendor variables minus the installation prefix
 # define later variables.
 #
 .  for _var_ in ${_PERL5_VARS}
 .    if !defined(PERL5_SUB_${_var_})
-PERL5_SUB_${_var_}!=	\
-	eval `${PERL5:Q} -V:${_PERL5_VAR.${_var_}} 2>/dev/null`;	\
-	${ECHO} $${${_PERL5_VAR.${_var_}}} | ${SED} -e "s,^${_PERL5_PREFIX}/,,"
+PERL5_SUB_${_var_}:=	${_PERL5_VARS_OUT:M${_var_:tl}=*:S/^${_var_:tl}=${_PERL5_PREFIX:=/}//}
 .    endif
 PERL5_${_var_}?=	${PREFIX}/${PERL5_SUB_${_var_}}
 MAKEVARS+=		PERL5_SUB_${_var_}
