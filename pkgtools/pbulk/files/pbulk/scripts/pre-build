@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.7 2008/01/26 23:44:09 joerg Exp $
+# $NetBSD: pre-build,v 1.8 2008/01/30 15:01:04 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -47,6 +47,10 @@ if [ "$cross_compile" != "no" ]; then
 		echo "target_destdir must not be / for cross-compiling."
 		exit 1
 	fi	
+	if [ -z "${target_arch}" ]; then
+		echo "target_arch must be specified for cross-compiling."
+		exit 1
+	fi
 fi
 
 if [ -d "${bulklog}/meta" ]; then
