@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/09/26 21:46:27 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2008/01/30 08:27:30 ghen Exp $
 
-SHA1 (pen-0.15.0.tar.gz) = 543995208da58aec8b0850079b2d9175fca916e9
-RMD160 (pen-0.15.0.tar.gz) = 9f9ecccfd1e1958aca48e7e76d216b2f16a249b4
-Size (pen-0.15.0.tar.gz) = 112886 bytes
+SHA1 (pen-0.17.2.tar.gz) = 7277259c552b659ece6fef1d4bc55ca9fd927488
+RMD160 (pen-0.17.2.tar.gz) = 3e7152cad72f3893c171db8e1c85cae37418aeb6
+Size (pen-0.17.2.tar.gz) = 129285 bytes
