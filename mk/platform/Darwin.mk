@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.28 2007/12/16 12:36:28 tron Exp $
+# $NetBSD: Darwin.mk,v 1.29 2008/01/30 22:57:42 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -24,7 +24,9 @@ IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
 .endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
-CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
+# Use the GNU cpp, not the OS X cpp, don't look in "/usr/local/include"
+# before "/usr/include".
+CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	-isystem /usr/include
 .endif
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
