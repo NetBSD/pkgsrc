@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2006/09/05 17:04:31 tv Exp $
+# $NetBSD: Makefile,v 1.22 2008/01/30 10:07:34 tnn Exp $
 
-DISTNAME=	phpPgAdmin-3.5.6
+DISTNAME=	phpPgAdmin-4.1.3
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
@@ -12,15 +12,17 @@ COMMENT=	Set of PHP-scripts to administer PostgreSQL over the WWW
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.2.0:../../databases/php-pgsql
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*//}
 NO_BUILD=	YES
 
 PHPPGBASE=	${PREFIX}/share/phppgadmin
-PHPPGHIER=	classes/HTML_TreeMenu/images help images/themes/default \
-		libraries/adodb/datadict libraries/adodb/drivers \
-		classes/database lang/recoded themes/default sql conf
+PHPPGHIER=	conf help sql xloadtree \
+		libraries/adodb/drivers libraries/adodb/lang \
+		classes/database classes/plugins lang/recoded \
+		images/themes/default themes/default
 
 EGDIR=		${PREFIX}/share/examples/phppgadmin
 DOCDIR=		${PREFIX}/share/doc/phppgadmin
@@ -39,44 +41,38 @@ do-configure:
 		> ${WRKDIR}/apache.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PHPPGBASE}
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PHPPGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 
 	for d in ${PHPPGHIER}; do \
-	        ${INSTALL_DATA_DIR} ${PHPPGBASE}/$$d; \
+	        ${INSTALL_DATA_DIR} ${DESTDIR}${PHPPGBASE}/$$d; \
 	done
 
-	${INSTALL_SCRIPT} ${WRKSRC}/*.* ${PHPPGBASE}
-	${INSTALL_SCRIPT} ${WRKSRC}/classes/*.* ${PHPPGBASE}/classes
-	${INSTALL_SCRIPT} ${WRKSRC}/classes/HTML_TreeMenu/*.* \
-		${PHPPGBASE}/classes/HTML_TreeMenu
-	${INSTALL_DATA} ${WRKSRC}/classes/HTML_TreeMenu/images/* \
-		${PHPPGBASE}/classes/HTML_TreeMenu/images
+	${INSTALL_SCRIPT} ${WRKSRC}/*.* ${DESTDIR}${PHPPGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/classes/*.* ${DESTDIR}${PHPPGBASE}/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/classes/database/* \
-		${PHPPGBASE}/classes/database
-	${INSTALL_SCRIPT} ${WRKSRC}/help/* ${PHPPGBASE}/help
-	${INSTALL_SCRIPT} ${WRKSRC}/sql/* ${PHPPGBASE}/sql
+		${DESTDIR}${PHPPGBASE}/classes/database
+	${INSTALL_SCRIPT} ${WRKSRC}/help/* ${DESTDIR}${PHPPGBASE}/help
+	${INSTALL_SCRIPT} ${WRKSRC}/sql/* ${DESTDIR}${PHPPGBASE}/sql
 	${INSTALL_DATA} ${WRKSRC}/images/themes/default/*.png \
-		${PHPPGBASE}/images/themes/default
-	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.* ${PHPPGBASE}/lang
-	${INSTALL_SCRIPT} ${WRKSRC}/lang/recoded/*.* ${PHPPGBASE}/lang/recoded
-	${INSTALL_SCRIPT} ${WRKSRC}/libraries/*.php ${PHPPGBASE}/libraries
+		${DESTDIR}${PHPPGBASE}/images/themes/default
+	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.* ${DESTDIR}${PHPPGBASE}/lang
+	${INSTALL_SCRIPT} ${WRKSRC}/lang/recoded/*.* ${DESTDIR}${PHPPGBASE}/lang/recoded
+	${INSTALL_SCRIPT} ${WRKSRC}/libraries/*.php ${DESTDIR}${PHPPGBASE}/libraries
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/adodb/*.php \
-		${PHPPGBASE}/libraries/adodb
+		${DESTDIR}${PHPPGBASE}/libraries/adodb
 	${INSTALL_DATA} ${WRKSRC}/libraries/adodb/*.txt \
-		${PHPPGBASE}/libraries/adodb
-	${INSTALL_SCRIPT} ${WRKSRC}/libraries/adodb/datadict/* \
-		${PHPPGBASE}/libraries/adodb/datadict
+		${DESTDIR}${PHPPGBASE}/libraries/adodb
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/adodb/drivers/* \
-		${PHPPGBASE}/libraries/adodb/drivers
+		${DESTDIR}${PHPPGBASE}/libraries/adodb/drivers
 	${INSTALL_DATA} ${WRKSRC}/themes/default/global.css \
-		${PHPPGBASE}/themes/default
-	${INSTALL_DATA} ${WRKSRC}/conf/config.inc.php-dist ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/apache.conf ${EGDIR}
+		${DESTDIR}${PHPPGBASE}/themes/default
+	${INSTALL_DATA} ${WRKSRC}/conf/config.inc.php-dist ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/apache.conf ${DESTDIR}${EGDIR}
 
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	for f in ${DOC_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${DOCDIR}; \
 	done
 
 .include "../../lang/php/phpversion.mk"
