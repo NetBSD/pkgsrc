@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.198 2008/01/30 19:24:13 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.199 2008/01/30 22:11:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -343,3 +343,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-mga to 1.4.8 [tnn 2008-01-30]
 	Updated x11/xf86-video-intel to 2.2.0 [tnn 2008-01-30]
 	Added multimedia/bsdav version 1.4 [bjs 2008-01-30]
+	Updated sysutils/ups-nut to 2.0.5 [ghen 2008-01-30]
+	Updated sysutils/ups-nut-cgi to 2.0.5 [ghen 2008-01-30]
+	Updated sysutils/ups-nut-snmp to 2.0.5 [ghen 2008-01-30]
+	Updated sysutils/ups-nut-usb to 2.0.5 [ghen 2008-01-30]
