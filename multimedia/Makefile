@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2007/12/28 20:30:46 darcy Exp $
+# $NetBSD: Makefile,v 1.113 2008/01/30 19:23:53 bjs Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -7,6 +7,7 @@ SUBDIR+=	RealPlayerGold
 SUBDIR+=	acidrip
 SUBDIR+=	alevt
 SUBDIR+=	avidemux
+SUBDIR+=	bsdav
 SUBDIR+=	dirac
 SUBDIR+=	divxplayer
 SUBDIR+=	dumpmpeg
