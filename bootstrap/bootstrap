@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.119 2008/01/24 14:48:02 joerg Exp $
+# $NetBSD: bootstrap,v 1.120 2008/01/30 22:57:31 tron Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -442,6 +442,7 @@ Darwin)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	CC="gcc -isystem /usr/include"; export CC
 	;;
 DragonFly)
 	root_group=wheel
