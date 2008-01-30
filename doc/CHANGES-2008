@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.197 2008/01/30 13:49:22 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.198 2008/01/30 19:24:13 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -342,3 +342,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.03 [tnn 2008-01-30]
 	Updated x11/xf86-video-mga to 1.4.8 [tnn 2008-01-30]
 	Updated x11/xf86-video-intel to 2.2.0 [tnn 2008-01-30]
+	Added multimedia/bsdav version 1.4 [bjs 2008-01-30]
