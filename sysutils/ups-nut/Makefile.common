@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2006/08/16 13:15:54 ghen Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/01/30 22:10:12 ghen Exp $
 
-DISTNAME=		nut-2.0.4
+DISTNAME=		nut-2.0.5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://random.networkupstools.org/source/2.0/
 
@@ -15,6 +15,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${NUT_DATADIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${NUT_STATEDIR:Q}
 CONFIGURE_ARGS+=	--with-statepath=${NUT_STATEDIR:Q}
+CONFIGURE_ARGS+=	--with-htmlpath=${PREFIX:Q}/share/nut/html
+
+CHECK_PORTABILITY_SKIP=	packaging/*
 
 .include "../../mk/bsd.prefs.mk"
 
