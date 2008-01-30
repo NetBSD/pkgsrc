@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7018 2008/01/30 04:58:41 obache Exp $
+$NetBSD: TODO,v 1.7019 2008/01/30 05:06:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -257,6 +257,9 @@ Suggested new packages
 	sysjail [pkg/34123, pkgsrc-wip]
 	http://sysjail.bsd.lv/
 	userland virtualisation system
+
+	Raster3D [pkg/34225]
+	http://skuld.bmsc.washington.edu/raster3d/
 
 	INADYN [pkg/34502]
 	INADYN is a free DynDNS client.
