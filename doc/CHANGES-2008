@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.192 2008/01/29 04:19:27 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.193 2008/01/30 05:44:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -335,3 +335,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libXdamage to 1.1.1nb1 [bjs 2008-01-29]
 	Updated x11/libXaw to 1.0.4nb1 [bjs 2008-01-29]
 	Updated x11/libXft to 2.1.12nb1 [bjs 2008-01-29]
+	Updated biology/nut to 13.2 [obache 2008-01-30]
