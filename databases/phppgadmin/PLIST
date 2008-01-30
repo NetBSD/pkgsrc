@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/16 14:00:54 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/01/30 10:07:34 tnn Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -9,27 +9,14 @@ share/doc/phppgadmin/TODO
 share/doc/phppgadmin/TRANSLATORS
 share/examples/phppgadmin/apache.conf
 share/examples/phppgadmin/config.inc.php-dist
+share/phppgadmin/aciur.js
 share/phppgadmin/aggregates.php
 share/phppgadmin/all_db.php
-share/phppgadmin/bottombar.php
+share/phppgadmin/autocomplete.php
 share/phppgadmin/browser.php
 share/phppgadmin/casts.php
+share/phppgadmin/classes/ArrayRecordSet.php
 share/phppgadmin/classes/Gui.php
-share/phppgadmin/classes/HTML_TreeMenu/TreeMenu.js
-share/phppgadmin/classes/HTML_TreeMenu/TreeMenu.php
-share/phppgadmin/classes/HTML_TreeMenu/images/branch.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/branchbottom.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/branchtop.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/folder-expanded.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/folder.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/line.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/linebottom.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/minus.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/minusbottom.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/minustop.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/plus.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/plusbottom.gif
-share/phppgadmin/classes/HTML_TreeMenu/images/plustop.gif
 share/phppgadmin/classes/Misc.php
 share/phppgadmin/classes/Reports.php
 share/phppgadmin/classes/class.select.php
@@ -41,6 +28,9 @@ share/phppgadmin/classes/database/Postgres72.php
 share/phppgadmin/classes/database/Postgres73.php
 share/phppgadmin/classes/database/Postgres74.php
 share/phppgadmin/classes/database/Postgres80.php
+share/phppgadmin/classes/database/Postgres81.php
+share/phppgadmin/classes/database/Postgres82.php
+share/phppgadmin/colproperties.php
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
 share/phppgadmin/database.php
@@ -49,6 +39,7 @@ share/phppgadmin/dataimport.php
 share/phppgadmin/dbexport.php
 share/phppgadmin/display.php
 share/phppgadmin/domains.php
+share/phppgadmin/functions.js
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
 share/phppgadmin/help.php
@@ -58,16 +49,133 @@ share/phppgadmin/help/PostgresDoc72.php
 share/phppgadmin/help/PostgresDoc73.php
 share/phppgadmin/help/PostgresDoc74.php
 share/phppgadmin/help/PostgresDoc80.php
-share/phppgadmin/images/themes/default/database.png
-share/phppgadmin/images/themes/default/domains.png
-share/phppgadmin/images/themes/default/functions.png
-share/phppgadmin/images/themes/default/operators.png
-share/phppgadmin/images/themes/default/sequences.png
-share/phppgadmin/images/themes/default/tables.png
+share/phppgadmin/help/PostgresDoc81.php
+share/phppgadmin/help/PostgresDoc82.php
+share/phppgadmin/images/themes/default/AddArguments.png
+share/phppgadmin/images/themes/default/Admin.png
+share/phppgadmin/images/themes/default/Aggregate.png
+share/phppgadmin/images/themes/default/Aggregates.png
+share/phppgadmin/images/themes/default/AllUsers.png
+share/phppgadmin/images/themes/default/AvailableReplicationSet.png
+share/phppgadmin/images/themes/default/AvailableSubscription.png
+share/phppgadmin/images/themes/default/Backup.png
+share/phppgadmin/images/themes/default/Cast.png
+share/phppgadmin/images/themes/default/Casts.png
+share/phppgadmin/images/themes/default/CheckConstraint.png
+share/phppgadmin/images/themes/default/Cluster.png
+share/phppgadmin/images/themes/default/Column.png
+share/phppgadmin/images/themes/default/Columns.png
+share/phppgadmin/images/themes/default/Constraints.png
+share/phppgadmin/images/themes/default/Conversion.png
+share/phppgadmin/images/themes/default/Conversions.png
+share/phppgadmin/images/themes/default/Copy.png
+share/phppgadmin/images/themes/default/CorruptedDatabase.png
+share/phppgadmin/images/themes/default/Cut.png
+share/phppgadmin/images/themes/default/Database.png
+share/phppgadmin/images/themes/default/Databases.png
+share/phppgadmin/images/themes/default/Definition.png
+share/phppgadmin/images/themes/default/Delete.png
+share/phppgadmin/images/themes/default/DisabledJob.png
+share/phppgadmin/images/themes/default/DisconnectedDatabase.png
+share/phppgadmin/images/themes/default/DisconnectedServer.png
+share/phppgadmin/images/themes/default/Domain.png
+share/phppgadmin/images/themes/default/Domains.png
+share/phppgadmin/images/themes/default/EnableArgument.png
+share/phppgadmin/images/themes/default/Erase.png
+share/phppgadmin/images/themes/default/Execute.png
+share/phppgadmin/images/themes/default/ExecuteSave.png
+share/phppgadmin/images/themes/default/Explain.png
+share/phppgadmin/images/themes/default/Export.png
+share/phppgadmin/images/themes/default/Filter.png
+share/phppgadmin/images/themes/default/ForeignKey.png
+share/phppgadmin/images/themes/default/Function.png
+share/phppgadmin/images/themes/default/Functions.png
+share/phppgadmin/images/themes/default/GurusHint.png
+share/phppgadmin/images/themes/default/Help.png
+share/phppgadmin/images/themes/default/I.png
+share/phppgadmin/images/themes/default/Import.png
+share/phppgadmin/images/themes/default/Index.png
+share/phppgadmin/images/themes/default/Indexes.png
+share/phppgadmin/images/themes/default/Introduction.png
+share/phppgadmin/images/themes/default/Job.png
+share/phppgadmin/images/themes/default/Jobs.png
+share/phppgadmin/images/themes/default/Key.png
+share/phppgadmin/images/themes/default/L.png
+share/phppgadmin/images/themes/default/Language.png
+share/phppgadmin/images/themes/default/Languages.png
+share/phppgadmin/images/themes/default/Listen.png
+share/phppgadmin/images/themes/default/Listens.png
+share/phppgadmin/images/themes/default/Lminus.png
+share/phppgadmin/images/themes/default/LowerArgument.png
+share/phppgadmin/images/themes/default/Lplus.png
+share/phppgadmin/images/themes/default/Node.png
+share/phppgadmin/images/themes/default/Nodes.png
+share/phppgadmin/images/themes/default/ObjectNotFound.png
+share/phppgadmin/images/themes/default/OfferedReplicationSet.png
+share/phppgadmin/images/themes/default/OfferedSubscription.png
+share/phppgadmin/images/themes/default/Open.png
+share/phppgadmin/images/themes/default/Operator.png
+share/phppgadmin/images/themes/default/OperatorClass.png
+share/phppgadmin/images/themes/default/OperatorClasses.png
+share/phppgadmin/images/themes/default/Operators.png
+share/phppgadmin/images/themes/default/Paste.png
+share/phppgadmin/images/themes/default/Path.png
+share/phppgadmin/images/themes/default/Paths.png
+share/phppgadmin/images/themes/default/PrimaryKey.png
+share/phppgadmin/images/themes/default/Privileges.png
+share/phppgadmin/images/themes/default/Processes.png
+share/phppgadmin/images/themes/default/Property.png
+share/phppgadmin/images/themes/default/RaiseArgument.png
+share/phppgadmin/images/themes/default/Redo.png
+share/phppgadmin/images/themes/default/Refresh.png
+share/phppgadmin/images/themes/default/RemoveArgument.png
+share/phppgadmin/images/themes/default/Replication.png
+share/phppgadmin/images/themes/default/ReplicationSets.png
+share/phppgadmin/images/themes/default/Reports.png
+share/phppgadmin/images/themes/default/Restore.png
+share/phppgadmin/images/themes/default/Roles.png
+share/phppgadmin/images/themes/default/Rule.png
+share/phppgadmin/images/themes/default/Rules.png
+share/phppgadmin/images/themes/default/Save.png
+share/phppgadmin/images/themes/default/Schedule.png
+share/phppgadmin/images/themes/default/Schedules.png
+share/phppgadmin/images/themes/default/Schema.png
+share/phppgadmin/images/themes/default/Schemas.png
+share/phppgadmin/images/themes/default/Search.png
+share/phppgadmin/images/themes/default/Sequence.png
+share/phppgadmin/images/themes/default/Sequences.png
+share/phppgadmin/images/themes/default/Server.png
+share/phppgadmin/images/themes/default/Servers.png
+share/phppgadmin/images/themes/default/SqlEditor.png
+share/phppgadmin/images/themes/default/Statistics.png
+share/phppgadmin/images/themes/default/Step.png
+share/phppgadmin/images/themes/default/Steps.png
+share/phppgadmin/images/themes/default/Stop.png
+share/phppgadmin/images/themes/default/Subscriptions.png
+share/phppgadmin/images/themes/default/T.png
+share/phppgadmin/images/themes/default/Table.png
+share/phppgadmin/images/themes/default/Tables.png
+share/phppgadmin/images/themes/default/Tablespace.png
+share/phppgadmin/images/themes/default/Tablespaces.png
+share/phppgadmin/images/themes/default/Tminus.png
+share/phppgadmin/images/themes/default/Tplus.png
+share/phppgadmin/images/themes/default/Trigger.png
+share/phppgadmin/images/themes/default/TriggerFunction.png
+share/phppgadmin/images/themes/default/TriggerFunctions.png
+share/phppgadmin/images/themes/default/Triggers.png
+share/phppgadmin/images/themes/default/Type.png
+share/phppgadmin/images/themes/default/Types.png
+share/phppgadmin/images/themes/default/Undo.png
+share/phppgadmin/images/themes/default/UniqueConstraint.png
+share/phppgadmin/images/themes/default/User.png
+share/phppgadmin/images/themes/default/UserGroup.png
+share/phppgadmin/images/themes/default/UserGroups.png
+share/phppgadmin/images/themes/default/Users.png
+share/phppgadmin/images/themes/default/Variables.png
+share/phppgadmin/images/themes/default/View.png
+share/phppgadmin/images/themes/default/Views.png
+share/phppgadmin/images/themes/default/blank.png
 share/phppgadmin/images/themes/default/title.png
-share/phppgadmin/images/themes/default/triggers.png
-share/phppgadmin/images/themes/default/types.png
-share/phppgadmin/images/themes/default/views.png
 share/phppgadmin/index.php
 share/phppgadmin/indexes.js
 share/phppgadmin/indexes.php
@@ -75,6 +183,7 @@ share/phppgadmin/info.php
 share/phppgadmin/intro.php
 share/phppgadmin/lang/afrikaans.php
 share/phppgadmin/lang/arabic.php
+share/phppgadmin/lang/catalan.php
 share/phppgadmin/lang/chinese-sim.php
 share/phppgadmin/lang/chinese-tr.php
 share/phppgadmin/lang/convert.awk
@@ -94,6 +203,7 @@ share/phppgadmin/lang/portuguese-br.php
 share/phppgadmin/lang/portuguese-pt.php
 share/phppgadmin/lang/recoded/afrikaans.php
 share/phppgadmin/lang/recoded/arabic.php
+share/phppgadmin/lang/recoded/catalan.php
 share/phppgadmin/lang/recoded/chinese-sim.php
 share/phppgadmin/lang/recoded/chinese-tr.php
 share/phppgadmin/lang/recoded/czech.php
@@ -122,57 +232,27 @@ share/phppgadmin/lang/russian.php
 share/phppgadmin/lang/slovak.php
 share/phppgadmin/lang/spanish.php
 share/phppgadmin/lang/swedish.php
+share/phppgadmin/lang/translations.php
 share/phppgadmin/lang/turkish.php
 share/phppgadmin/lang/ukrainian.php
 share/phppgadmin/languages.php
-share/phppgadmin/libraries/adodb/adodb-connection.inc.php
-share/phppgadmin/libraries/adodb/adodb-cryptsession.php
 share/phppgadmin/libraries/adodb/adodb-csvlib.inc.php
 share/phppgadmin/libraries/adodb/adodb-datadict.inc.php
+share/phppgadmin/libraries/adodb/adodb-error.inc.php
 share/phppgadmin/libraries/adodb/adodb-errorhandler.inc.php
 share/phppgadmin/libraries/adodb/adodb-errorpear.inc.php
+share/phppgadmin/libraries/adodb/adodb-exceptions.inc.php
+share/phppgadmin/libraries/adodb/adodb-iterator.inc.php
 share/phppgadmin/libraries/adodb/adodb-lib.inc.php
-share/phppgadmin/libraries/adodb/adodb-pager.inc.php
 share/phppgadmin/libraries/adodb/adodb-pear.inc.php
-share/phppgadmin/libraries/adodb/adodb-recordset.inc.php
-share/phppgadmin/libraries/adodb/adodb-session.php
+share/phppgadmin/libraries/adodb/adodb-php4.inc.php
 share/phppgadmin/libraries/adodb/adodb-time.inc.php
+share/phppgadmin/libraries/adodb/adodb-xmlschema.inc.php
 share/phppgadmin/libraries/adodb/adodb.inc.php
-share/phppgadmin/libraries/adodb/crypt.inc.php
-share/phppgadmin/libraries/adodb/datadict/datadict-mssql.inc.php
-share/phppgadmin/libraries/adodb/datadict/datadict-mysql.inc.php
-share/phppgadmin/libraries/adodb/datadict/datadict-oci8.inc.php
-share/phppgadmin/libraries/adodb/datadict/datadict-postgres.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-access.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-ado.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-ado_access.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-ado_mssql.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-borland_ibase.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-csv.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-db2.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-fbsql.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-firebird.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-ibase.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-informix.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-informix72.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-mssql.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-mssqlpo.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-mysql.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-mysqlt.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-oci8.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-oci805.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-oci8po.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-odbc.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-odbc_mssql.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-odbc_oracle.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-oracle.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres64.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres7.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-proxy.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-sqlanywhere.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-sybase.inc.php
-share/phppgadmin/libraries/adodb/drivers/adodb-vfp.inc.php
+share/phppgadmin/libraries/adodb/drivers/adodb-postgres8.inc.php
 share/phppgadmin/libraries/adodb/license.txt
 share/phppgadmin/libraries/adodb/pivottable.inc.php
 share/phppgadmin/libraries/adodb/readme.txt
@@ -180,6 +260,7 @@ share/phppgadmin/libraries/adodb/rsfilter.inc.php
 share/phppgadmin/libraries/adodb/server.php
 share/phppgadmin/libraries/adodb/toexport.inc.php
 share/phppgadmin/libraries/adodb/tohtml.inc.php
+share/phppgadmin/libraries/decorator.inc.php
 share/phppgadmin/libraries/errorhandler.inc.php
 share/phppgadmin/libraries/highlight.php
 share/phppgadmin/libraries/lib.inc.php
@@ -188,30 +269,37 @@ share/phppgadmin/login.php
 share/phppgadmin/logout.php
 share/phppgadmin/opclasses.php
 share/phppgadmin/operators.php
+share/phppgadmin/plugin_slony.php
 share/phppgadmin/privileges.php
 share/phppgadmin/redirect.php
 share/phppgadmin/reports.php
 share/phppgadmin/robots.txt
+share/phppgadmin/roles.php
 share/phppgadmin/rules.php
+share/phppgadmin/schemas.php
 share/phppgadmin/sequences.php
+share/phppgadmin/servers.php
 share/phppgadmin/sql.php
 share/phppgadmin/sql/reports-pgsql.sql
 share/phppgadmin/sqledit.php
+share/phppgadmin/tables.js
 share/phppgadmin/tables.php
 share/phppgadmin/tablespaces.php
 share/phppgadmin/tblproperties.php
 share/phppgadmin/themes/default/global.css
-share/phppgadmin/topbar.php
 share/phppgadmin/triggers.php
 share/phppgadmin/types.php
 share/phppgadmin/users.php
 share/phppgadmin/viewproperties.php
 share/phppgadmin/views.php
+@exec ${MKDIR} %D/share/phppgadmin/xloadtree
+@dirrm share/phppgadmin/xloadtree
 @dirrm share/phppgadmin/themes/default
 @dirrm share/phppgadmin/themes
 @dirrm share/phppgadmin/sql
+@exec ${MKDIR} %D/share/phppgadmin/libraries/adodb/lang
+@dirrm share/phppgadmin/libraries/adodb/lang
 @dirrm share/phppgadmin/libraries/adodb/drivers
-@dirrm share/phppgadmin/libraries/adodb/datadict
 @dirrm share/phppgadmin/libraries/adodb
 @dirrm share/phppgadmin/libraries
 @dirrm share/phppgadmin/lang/recoded
@@ -220,9 +308,12 @@ share/phppgadmin/views.php
 @dirrm share/phppgadmin/images/themes
 @dirrm share/phppgadmin/images
 @dirrm share/phppgadmin/help
+@exec ${MKDIR} %D/share/phppgadmin/conf
+@dirrm share/phppgadmin/conf
+@exec ${MKDIR} %D/share/phppgadmin/classes/plugins
+@dirrm share/phppgadmin/classes/plugins
 @dirrm share/phppgadmin/classes/database
-@dirrm share/phppgadmin/classes/HTML_TreeMenu/images
-@dirrm share/phppgadmin/classes/HTML_TreeMenu
 @dirrm share/phppgadmin/classes
+@dirrm share/phppgadmin
 @dirrm share/examples/phppgadmin
 @dirrm share/doc/phppgadmin
