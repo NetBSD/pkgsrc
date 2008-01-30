@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7017 2008/01/30 02:40:44 obache Exp $
+$NetBSD: TODO,v 1.7018 2008/01/30 04:58:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -253,6 +253,10 @@ Suggested new packages
 	SQLite Browser [pkg/32461]
 	http://sqlitebrowser.sourceforge.net/
 	SQLite Database Browser
+
+	sysjail [pkg/34123, pkgsrc-wip]
+	http://sysjail.bsd.lv/
+	userland virtualisation system
 
 	INADYN [pkg/34502]
 	INADYN is a free DynDNS client.
