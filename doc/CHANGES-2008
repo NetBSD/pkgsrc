@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.194 2008/01/30 08:19:51 obache Exp $
+$NetBSD: CHANGES-2008,v 1.195 2008/01/30 08:27:57 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libXft to 2.1.12nb1 [bjs 2008-01-29]
 	Updated biology/nut to 13.2 [obache 2008-01-30]
 	Updated devel/gtexinfo to 4.11 [obache 2008-01-30]
+	Updated net/pen to 0.17.2 [ghen 2008-01-30]
