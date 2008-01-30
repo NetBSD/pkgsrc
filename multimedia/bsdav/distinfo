@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/01/30 19:21:08 bjs Exp $
+
+SHA1 (bsdav-1.4.tar.bz2) = 89cc652951bd4e1761fe8b2b065f7dd07abd3c29
+RMD160 (bsdav-1.4.tar.bz2) = 686c4d79e580dda1eb9b2be1bfe46ce5d6a9a154
+Size (bsdav-1.4.tar.bz2) = 60807 bytes
