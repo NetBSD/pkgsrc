@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7020 2008/01/30 05:44:44 obache Exp $
+$NetBSD: TODO,v 1.7021 2008/01/30 06:04:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -260,6 +260,18 @@ Suggested new packages
 
 	Raster3D [pkg/34225]
 	http://skuld.bmsc.washington.edu/raster3d/
+
+	libpcapnav [pkg/34473]
+	http://netdude.sourceforge.net/
+	Wrapper library that allows navigation in tcpdump traces
+
+	libnetdude [pkg/34473]
+	http://netdude.sourceforge.net/
+	Library for manipulating libpcap/tcpdump trace files
+
+	netdude [pkg/34473]
+	http://netdude.sourceforge.net/
+	NETwork DUmp data Displayer and Editor for tcpdump tracefiles
 
 	INADYN [pkg/34502]
 	INADYN is a free DynDNS client.
