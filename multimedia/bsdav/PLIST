@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/30 19:21:08 bjs Exp $
+bin/audiorec
+bin/bktrrec
+bin/bsdavdemux
+bin/bsdavrec
+bin/btv
+bin/tunerctl
+lib/libbsdav.a
+lib/libbsdav.so
+lib/libbsdav.so.2
+lib/libbsdav.so.2.0
+lib/libbsdav_p.a
+man/cat1/audiorec.0
+man/cat1/bktrrec.0
+man/cat1/bsdavdemux.0
+man/cat1/bsdavrec.0
+man/cat1/tunerctl.0
+man/cat5/bsdav.0
+man/man1/audiorec.1
+man/man1/bktrrec.1
+man/man1/bsdavdemux.1
+man/man1/bsdavrec.1
+man/man1/tunerctl.1
+man/man5/bsdav.5
