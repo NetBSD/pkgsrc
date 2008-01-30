@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7019 2008/01/30 05:06:11 obache Exp $
+$NetBSD: TODO,v 1.7020 2008/01/30 05:44:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -941,8 +941,6 @@ Suggested package updates
 	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-12.0 [pkg/34466]
-	o nut-13.1
 	o nvi-1.81.6
 	o nxtvepg-2.8.0
 	o objc-3.2.8
