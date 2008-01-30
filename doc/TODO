@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7022 2008/01/30 08:20:29 obache Exp $
+$NetBSD: TODO,v 1.7023 2008/01/30 13:49:22 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1285,7 +1285,6 @@ Suggested package updates
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
-	o squeak-3.9.8 [pkg/37522]
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
@@ -1409,7 +1408,6 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
-	o xf86-video-intel-2.2.0
 	o xf86-video-nv-2.1.7
 	o xfstt-1.7
 	o xhippo-3.5
