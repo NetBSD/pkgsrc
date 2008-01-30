@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/07/04 20:55:01 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2008/01/30 22:10:12 ghen Exp $
 
 .include "Makefile.common"
 
@@ -59,7 +59,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/cables
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/drivers
-	for f in CHANGES COPYING CREDITS NEWS README INSTALL UPGRADING; do \
+	for f in COPYING CREDITS ChangeLog NEWS README INSTALL UPGRADING; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${NUT_DOCDIR}; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
