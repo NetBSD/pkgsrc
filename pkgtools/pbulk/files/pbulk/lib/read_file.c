@@ -1,4 +1,4 @@
-/* $NetBSD: read_file.c,v 1.3 2007/11/13 19:30:26 rillig Exp $ */
+/* $NetBSD: read_file.c,v 1.4 2008/01/30 21:52:09 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -55,7 +55,7 @@ read_from_file(int fd)
 	
 	if ((sb.st_mode & S_IFMT) != S_IFREG)
 		errx(1, "Input is not regular file");
-	if (sb.st_size > SSIZE_MAX)
+	if (sb.st_size > SSIZE_MAX - 1)
 		errx(1, "Input too large");
 
 	input_len = (size_t)sb.st_size;
