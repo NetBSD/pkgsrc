@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7021 2008/01/30 06:04:48 obache Exp $
+$NetBSD: TODO,v 1.7022 2008/01/30 08:20:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,6 @@ Suggested package updates
 	o gss-0.0.22
 	o gtar-1.19
 	o gtar-base-1.19
-	o gtexinfo-4.11 [pkg/37481]
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-systrace-20030623
