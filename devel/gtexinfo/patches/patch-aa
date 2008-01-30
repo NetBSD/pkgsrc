@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.14 2005/02/28 13:06:46 wiz Exp $
+$NetBSD: patch-aa,v 1.15 2008/01/30 08:19:25 obache Exp $
 
---- util/Makefile.in.orig	2005-02-28 13:54:04.000000000 +0100
+--- util/Makefile.in.orig	2007-09-10 02:37:45.000000000 +0200
 +++ util/Makefile.in
-@@ -235,7 +235,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
+@@ -385,7 +385,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
--bin_SCRIPTS = texi2dvi texi2pdf
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-bin_SCRIPTS = texi2dvi texi2pdf pdftexi2dvi
 +bin_SCRIPTS = texi2dvi
  
  # Use `ginstall-info' in the definition of PROGRAMS and in dependencies

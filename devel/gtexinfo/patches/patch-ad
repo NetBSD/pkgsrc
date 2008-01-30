@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2004/07/04 23:17:59 wiz Exp $
+$NetBSD: patch-ad,v 1.8 2008/01/30 08:19:25 obache Exp $
 
---- info/terminal.c.orig	2004-03-27 16:35:55.000000000 +0100
+--- info/terminal.c.orig	2007-07-01 23:20:31.000000000 +0200
 +++ info/terminal.c
-@@ -31,13 +31,17 @@
+@@ -30,13 +30,17 @@
  #ifdef HAVE_NCURSES_TERMCAP_H
  #include <ncurses/termcap.h>
  #else
@@ -21,7 +21,7 @@ $NetBSD: patch-ad,v 1.7 2004/07/04 23:17:59 wiz Exp $
  /* Termcap requires these variables, whether we access them or not. */
  char *BC, *UP;
  char PC;      /* Pad character */
-@@ -112,11 +116,17 @@ static char *term_invend;
+@@ -111,11 +115,17 @@ static char *term_invend;
  /* Although I can't find any documentation that says this is supposed to
     return its argument, all the code I've looked at (termutils, less)
     does so, so fine.  */

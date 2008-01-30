@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2008/01/30 08:19:26 obache Exp $
+
+--- util/texi2dvi.orig	2007-09-10 00:36:30.000000000 +0000
++++ util/texi2dvi
+@@ -1037,7 +1037,7 @@ uncomment_iftex='s/^@c texi2dvi//'
+ # main info output, the user asked to run TeX, not makeinfo.
+ run_makeinfo ()
+ {
+-  test $in_lang == texinfo ||
++  test $in_lang = texinfo ||
+     return 0
+ 
+   # Unless required by the user, makeinfo expansion is wanted only
