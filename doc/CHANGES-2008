@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.199 2008/01/30 22:11:11 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.200 2008/01/30 23:04:38 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/ups-nut-cgi to 2.0.5 [ghen 2008-01-30]
 	Updated sysutils/ups-nut-snmp to 2.0.5 [ghen 2008-01-30]
 	Updated sysutils/ups-nut-usb to 2.0.5 [ghen 2008-01-30]
+	Updated devel/stgit to 20080128 [bjs 2008-01-30]
