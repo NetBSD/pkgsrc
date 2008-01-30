@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/01/17 04:00:47 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/30 09:39:13 tnn Exp $
 #
 
 DISTNAME=	unfs3-0.9.20
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unfs3/}
 
@@ -14,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES+=		${PREFIX}/share/examples/unfs3/exports \
 			    ${PKG_SYSCONFDIR}/exports
+RCD_SCRIPTS=		unfsd
 
 INSTALLATION_DIRS+=	share/examples/unfs3
 
