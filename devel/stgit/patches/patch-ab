@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2008/01/30 23:03:51 bjs Exp $
+
+--- setup.py.orig	2007-12-19 18:15:14.000000000 -0500
++++ setup.py
+@@ -59,10 +59,8 @@ setup(name = 'stgit',
+       scripts = ['stg'],
+       packages = ['stgit', 'stgit.commands', 'stgit.lib'],
+       data_files = [('share/stgit/templates', glob.glob('templates/*.tmpl')),
+-                    ('share/stgit/examples', glob.glob('examples/*.tmpl')),
+-                    ('share/stgit/examples', ['examples/gitconfig']),
+-                    ('share/stgit/contrib', ['contrib/diffcol.sh',
+-                                             'contrib/stgbashprompt.sh',
++                    ('share/examples/stgit', ['examples/gitconfig']),
++                    ('share/stgit/contrib', ['contrib/stgbashprompt.sh',
+                                              'contrib/stgit-completion.bash']),
+                     ('share/doc/stgit', glob.glob('doc/*.txt'))]
+       )
