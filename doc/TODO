@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7016 2008/01/29 13:25:24 obache Exp $
+$NetBSD: TODO,v 1.7017 2008/01/30 02:40:44 obache Exp $
 
 Suggested new packages
 ======================
@@ -222,6 +222,10 @@ Suggested new packages
 
 	Compiler of the AGFL formalis [pkg/28946]
 	formalism for the syntactic description of Natural Languages
+
+	DCC [pkg/29619]
+	http://www.rhyolite.com/anti-spam/dcc/
+	Distributed Checksum Clearinghouse [pkg/29619]
 
 	Azureus [pkg/29976, pkg/30103, pkgsrc-wip]
 	http://azureus.sourceforge.net/
