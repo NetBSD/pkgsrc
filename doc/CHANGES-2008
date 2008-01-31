@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.201 2008/01/30 23:07:54 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.202 2008/01/31 06:18:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/ups-nut-usb to 2.0.5 [ghen 2008-01-30]
 	Updated devel/stgit to 20080128 [bjs 2008-01-30]
 	Updated chat/ircu to 2.10.12.12 [adrianp 2008-01-30]
+	Updated graphics/ruby-RMagick to 2.2.0 [obache 2008-01-31]
