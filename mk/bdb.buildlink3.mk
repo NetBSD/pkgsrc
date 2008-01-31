@@ -1,37 +1,14 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.20 2007/10/17 10:43:36 rillig Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.21 2008/01/31 12:45:08 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
-# require a Berkeley DB implementation.  It abstracts finding the
-# appropriate library, choosing among built-in or pkgsrc-provided
-# db-1.85, and choosing among db[234].
+# require a Berkeley DB (BDB) implementation and that are not restricted
+# to a single one. The available BDB implementations are db1
+# (if builtin) and db[234].
 #
-# There is a default version for db[234], which is db4 unless already
-# set (e.g. in /etc/mk.conf).  While it is nice to have fewer versions
-# installed, the real problem is installed dynamic libraries that link
-# against bdb.  These cannot be used with a program linked against a
-# different version, and hence this Makefile is written to cause only
-# one version to be used whenever possible.
+# FIXME: This Makefile cannot handle packages that can use only a
+# subset of { db2 db3 db4 }.
 #
-# This Makefile can handle several cases:
-#   package requires db-1.85
-#   package can use any of db[234]
-#   package can use db-1.85 or any of db[234]
-#   package can use db-1.85 which is builtin and some subset of db[234]
-#
-# This Makefile does not handle:
-#   packages that need a specific version, e.g. db2
-#     [in such cases, include ../../database/db2/buildlink3.mk directly]
-#   packages that can use e.g. db3 or db4, but not db2
-#     [there is no good way to handle this at present]
-#
-# bdb.buildlink3.mk will:
-#
-#       * set BDBBASE to the base directory of the Berkeley DB files;
-#	* set BDB_LIBS to the library option needed to link against
-#	  the Berkeley DB library;
-#       * set BDB_TYPE to the Berkeley DB implementation used.
-#
-# User-settable variables:
+# === User-settable variables ===
 #
 # BDB_DEFAULT
 #	This value represents the package we use when either a db-1.85
@@ -41,19 +18,35 @@
 #	FIXME: Improve the wording of the text above so that one can
 #	understand it.
 #
+#	Possible: db1 db2 db3 db4
+#	Default: db4
+#
 # BDB185_DEFAULT
 #	The package we use when a db-1.85 interface is required.
 #	It defaults to "db1" if it's built-in, or to ${BDB_DEFAULT}
 #	otherwise.
 #
-# Package-settable variables:
+# === Package-settable variables ===
 #
 # BDB_ACCEPTED
-#	The list of Berkeley DB implementations
-#       that may be used by the package.  Note that if the list does not
-#	include db1 and does not include BDB_DEFAULT, the package will not
-#	build - this is the second unhandled case above.
+#	The list of Berkeley DB implementations that can be used by the
+#	package.
 #
+#	FIXME: If the list does not include db1 and does not include
+#	BDB_DEFAULT, the package will not build at the moment.
+#
+# === Variables set by this file ===
+#
+# BDB_TYPE
+#	The name of the selected BDB implementation.
+#
+# BDBBASE
+#	The base directory of the selected BDB implementation. It has
+#	subdirectories include/ and lib/.
+#
+# BDB_LIBS
+#	Linker flags to link against the BDB library.
+
 # Note for when databases/db1 is imported:
 #   (1) Remove the section that conditionally sets the default
 #	value for BDB185_DEFAULT and always set it to be "db1".
