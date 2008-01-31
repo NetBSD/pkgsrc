@@ -1,17 +1,19 @@
-$NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
+$NetBSD: patch-ah,v 1.12 2008/01/31 08:40:51 markd Exp $
 
---- kicker/applets/naughty/NaughtyProcessMonitor.cpp.orig	2007-12-30 16:38:02.000000000 +1300
+--- kicker/applets/naughty/NaughtyProcessMonitor.cpp.orig	2005-10-11 04:03:59.000000000 +1300
 +++ kicker/applets/naughty/NaughtyProcessMonitor.cpp
-@@ -20,7 +20,7 @@
+@@ -20,8 +20,9 @@
  
  /* OpenBSD support by Jean-Yves Burlett <jean-yves@burlett.org> */
  
 -#ifdef __OpenBSD__
 +#if defined(__OpenBSD__) || defined(__NetBSD__)
  #include <sys/param.h>
++#include <sys/time.h>
  #include <sys/proc.h>
  #include <sys/sysctl.h>
-@@ -29,6 +29,11 @@
+ #include <sys/ucred.h>
+@@ -29,6 +30,11 @@
  #include <stdlib.h>
  #endif
  
@@ -23,7 +25,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
  #include <sys/types.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -67,10 +72,13 @@ class NaughtyProcessMonitorPrivate
+@@ -67,10 +73,13 @@ class NaughtyProcessMonitorPrivate
      QTimer * timer_;
      QMap<ulong, uint> loadMap_;
      QMap<ulong, uint> scoreMap_;
@@ -38,7 +40,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
      uint oldLoad_;
      uint triggerLevel_;
  
-@@ -95,11 +103,17 @@ NaughtyProcessMonitor::NaughtyProcessMon
+@@ -95,11 +104,17 @@ NaughtyProcessMonitor::NaughtyProcessMon
    d->interval_ = interval * 1000;
    d->triggerLevel_ = triggerLevel;
    d->timer_ = new QTimer(this);
@@ -56,7 +58,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
    delete d;
  }
  
-@@ -219,7 +233,7 @@ NaughtyProcessMonitor::canKill(ulong pid
+@@ -219,7 +234,7 @@ NaughtyProcessMonitor::canKill(ulong pid
  //  uint d(l[4].toUInt());
  
    return geteuid() == a;
@@ -65,7 +67,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
    // simply check if entry exists in the uid map and use it
    if (!d->uidMap_.contains(pid))
        return false ;
-@@ -234,7 +248,7 @@ NaughtyProcessMonitor::canKill(ulong pid
+@@ -234,7 +249,7 @@ NaughtyProcessMonitor::canKill(ulong pid
    QString
  NaughtyProcessMonitor::processName(ulong pid) const
  {
@@ -74,7 +76,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
  #ifdef __linux__
    QFile f("/proc/" + QString::number(pid) + "/cmdline");
  
-@@ -283,6 +297,29 @@ NaughtyProcessMonitor::processName(ulong
+@@ -283,6 +298,29 @@ NaughtyProcessMonitor::processName(ulong
    QString unicode(QString::fromLocal8Bit(argv[0]));
  
    free (argv) ;
@@ -104,7 +106,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
  #endif
  
    QStringList parts(QStringList::split(' ', unicode));
-@@ -350,6 +387,28 @@ NaughtyProcessMonitor::cpuLoad() const
+@@ -350,6 +388,28 @@ NaughtyProcessMonitor::cpuLoad() const
    d->oldLoad_ = load ;
    
    return (forgetThisOne ? 0 : diff);
@@ -133,7 +135,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
  #else
    return 0;
  #endif
-@@ -420,6 +479,30 @@ NaughtyProcessMonitor::pidList() const
+@@ -420,6 +480,30 @@ NaughtyProcessMonitor::pidList() const
    free (kp) ;
    
    return l ;
@@ -164,7 +166,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
  #else
    QValueList<ulong> l;
    return l;
-@@ -447,7 +530,7 @@ NaughtyProcessMonitor::getLoad(ulong pid
+@@ -447,7 +531,7 @@ NaughtyProcessMonitor::getLoad(ulong pid
    load = userTime + sysTime;
  
    return true;
@@ -173,7 +175,7 @@ $NetBSD: patch-ah,v 1.11 2008/01/04 21:05:57 markd Exp $
    // use cache
    if (!d->cacheLoadMap_.contains(pid))
        return false ;
-@@ -464,7 +547,7 @@ NaughtyProcessMonitor::getLoad(ulong pid
+@@ -464,7 +548,7 @@ NaughtyProcessMonitor::getLoad(ulong pid
    bool
  NaughtyProcessMonitor::kill(ulong pid) const
  {
