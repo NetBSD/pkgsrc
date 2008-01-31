@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.761 2008/01/31 13:20:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.762 2008/01/31 14:00:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4605,8 +4605,10 @@ sub checkline_mk_shelltext($$) {
 		${WARNING_CAT} ${WARNING_MSG}
 	));
 
-	if ($rest =~ s/^\s*([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
-		my ($hidden) = ($1);
+	$set_e_mode = false;
+
+	if ($rest =~ s/^\s*([-@]*)(\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\}|\${RUN}|)//) {
+		my ($hidden, $macro) = ($1, $2);
 
 		if ($hidden !~ qr"\@") {
 			# Nothing is hidden at all.
@@ -4633,10 +4635,13 @@ sub checkline_mk_shelltext($$) {
 				"all errors you never thought of), append \"|| \${TRUE}\" to the",
 				"command.");
 		}
+
+		if ($macro eq "\${RUN}") {
+			$set_e_mode = true;
+		}
 	}
 
 	$state = SCST_START;
-	$set_e_mode = false;
 	while ($rest =~ s/^$regex_shellword//) {
 		my ($shellword) = ($1);
 
