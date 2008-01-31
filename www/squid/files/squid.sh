@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.19 2006/06/21 12:10:35 taca Exp $
+# $NetBSD: squid.sh,v 1.20 2008/01/31 20:01:13 adam Exp $
 #
 
 # PROVIDE: squid
@@ -54,7 +54,7 @@ stop_nicely ()
 # create the squid cache directories
 squid_createdirs()
 {
-	${start_cmd} -z
+	${command} -z
 }
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
