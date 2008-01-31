@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/01/19 09:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2008/01/31 19:04:09 tnn Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -26,6 +26,7 @@ WRKSRC=			${WRKDIR}/pvm3
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+MAKE_JOBS_SAFE=		no
 
 PVM_ROOT=		${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${WRKSRC:Q}
