@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.760 2008/01/28 09:25:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.761 2008/01/31 13:20:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -8312,6 +8312,8 @@ sub checkitem($) {
 	}
 
 	check_pkglint_version();	# (needs $cwd_pkgsrcdir)
+
+	return if $is_dir && is_emptydir($item);
 
 	if ($is_dir) {
 		checkdir_CVS($item);
