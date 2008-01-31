@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
+$NetBSD: patch-ca,v 1.2 2008/01/31 21:46:43 joerg Exp $
 
---- glib-1.2.8/configure.orig	2008-01-15 23:25:54.000000000 +0100
+--- glib-1.2.8/configure.orig	2007-06-18 23:36:00.000000000 +0200
 +++ glib-1.2.8/configure
 @@ -20267,119 +20267,6 @@ if test "x$GCC" = "xyes"; then
    fi
@@ -352,10 +352,15 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -26135,42 +25970,40 @@ cat >>conftest.$ac_ext <<_ACEOF
- 	  f (0, 42);
- 	  return 0;
+@@ -26131,46 +25966,41 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
  	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
+-	}
++
 +int
 +main ()
 +{
@@ -415,7 +420,7 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  
  fi
  
-@@ -26182,14 +26015,7 @@ if test "${glib_cv___va_copy+set}" = set
+@@ -26182,14 +26012,7 @@ if test "${glib_cv___va_copy+set}" = set
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
  
@@ -431,10 +436,15 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -26209,42 +26035,40 @@ cat >>conftest.$ac_ext <<_ACEOF
- 	  f (0, 42);
- 	  return 0;
+@@ -26205,46 +26028,41 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
  	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
+-	}
++
 +int
 +main ()
 +{
@@ -495,7 +505,7 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  
  fi
  
-@@ -26256,14 +26080,7 @@ if test "${glib_cv_va_val_copy+set}" = s
+@@ -26256,14 +26074,7 @@ if test "${glib_cv_va_val_copy+set}" = s
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
  
@@ -511,10 +521,15 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -26283,42 +26100,40 @@ cat >>conftest.$ac_ext <<_ACEOF
- 	  f (0, 42);
- 	  return 0;
+@@ -26279,46 +26090,41 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
  	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
+-	}
++
 +int
 +main ()
 +{
@@ -574,7 +589,7 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  
  fi
  
-@@ -28655,6 +28470,15 @@ _ACEOF
+@@ -28655,6 +28461,15 @@ _ACEOF
  
  
  
@@ -590,7 +605,7 @@ $NetBSD: patch-ca,v 1.1 2008/01/15 22:56:57 joerg Exp $
  glib_sysdefso="glibconfig-sysdefs.h"
  glib_sysdef_msg=`echo POLLIN:1 POLLOUT:4 POLLPRI:2 POLLERR:8 POLLHUP:16 POLLNVAL:32 | sed 's/:[^ 	]*//g'`
  if test "x`(echo '\n') 2>/dev/null`" != 'x\n'; then
-@@ -28748,7 +28572,7 @@ fi
+@@ -28748,7 +28563,7 @@ fi
  
  rm -f confrun.c
  
