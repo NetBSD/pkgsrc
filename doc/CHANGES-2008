@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.203 2008/01/31 15:50:20 reed Exp $
+$NetBSD: CHANGES-2008,v 1.204 2008/01/31 20:42:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -351,3 +351,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/ircu to 2.10.12.12 [adrianp 2008-01-30]
 	Updated graphics/ruby-RMagick to 2.2.0 [obache 2008-01-31]
 	Added graphics/ewipe version 1.2.0 [reed 2008-01-31]
+	Updated graphics/gimp to 2.4.4 [adam 2008-01-31]
