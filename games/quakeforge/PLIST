@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/06/30 19:16:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/31 17:39:49 tnn Exp $
 bin/bsp2img
 bin/hw-master
 bin/nq-glx
@@ -167,6 +167,7 @@ lib/libQFmodels.la
 lib/libQFmodels_gl.la
 lib/libQFmodels_sw.la
 lib/libQFrenderer_gl.la
+lib/libQFrenderer_sw.la
 lib/libQFrenderer_sw32.la
 lib/libQFruamoko.la
 lib/libQFsound.la
