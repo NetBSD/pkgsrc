@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.48 2008/01/31 13:47:19 rillig Exp $
+# $NetBSD: pyversion.mk,v 1.49 2008/01/31 19:34:35 rillig Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -16,9 +16,10 @@
 # PYTHON_VERSIONS_ACCEPTED
 #	The Python versions that are acceptable for the package. The
 #	order of the entries matters, since earlier entries are
-#	preferred over later ones. Using PYTHON_VERSIONS_INCOMPATIBLE
-#	is preferred over this variable, since it automatically extends
-#	to newly introduced versions.
+#	preferred over later ones. If the package doesn't work with
+#	older Python versions but only with newer ones, please use
+#	PYTHON_VERSIONS_INCOMPATIBLE instead, since it will
+#	automatically include future versions.
 #
 #	Possible values: 24 23 22 21 20 15
 #	Default: (all)
