@@ -1,6 +1,6 @@
-$NetBSD: patch-cb,v 1.1 2008/01/15 22:56:57 joerg Exp $
+$NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
 
---- glib-1.2.8/configure.in.orig	2008-01-15 23:26:43.000000000 +0100
+--- glib-1.2.8/configure.in.orig	2007-06-18 23:35:54.000000000 +0200
 +++ glib-1.2.8/configure.in
 @@ -157,26 +157,6 @@ if test "x$GCC" = "xyes"; then
  fi
@@ -99,16 +99,19 @@ $NetBSD: patch-cb,v 1.1 2008/01/15 22:56:57 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -414,16 +392,15 @@ AC_CACHE_VAL(glib_cv_va_copy,[
- 	int main() {
- 	  f (0, 42);
- 	  return 0;
+@@ -411,19 +389,15 @@ AC_CACHE_VAL(glib_cv_va_copy,[
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
+ 	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
 -	}],
 -	glib_cv_va_copy=yes
 -	,
 -	glib_cv_va_copy=no
 -	,)
-+	}])],
++	])],
 +	[glib_cv_va_copy=yes],
 +	[glib_cv_va_copy=no])
  ])
@@ -121,16 +124,19 @@ $NetBSD: patch-cb,v 1.1 2008/01/15 22:56:57 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -436,16 +413,15 @@ AC_CACHE_VAL(glib_cv___va_copy,[
- 	int main() {
- 	  f (0, 42);
- 	  return 0;
+@@ -433,19 +407,15 @@ AC_CACHE_VAL(glib_cv___va_copy,[
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
+ 	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
 -	}],
 -	glib_cv___va_copy=yes
 -	,
 -	glib_cv___va_copy=no
 -	,)
-+	}])],
++	])],
 +	[glib_cv_va___copy=yes],
 +	[glib_cv_va___copy=no])
  ])
@@ -143,22 +149,25 @@ $NetBSD: patch-cb,v 1.1 2008/01/15 22:56:57 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -458,11 +434,9 @@ AC_CACHE_VAL(glib_cv_va_val_copy,[
- 	int main() {
- 	  f (0, 42);
- 	  return 0;
+@@ -455,14 +425,9 @@ AC_CACHE_VAL(glib_cv_va_val_copy,[
+ 	  exit (1);
+ 	va_end (args1); va_end (args2);
+ 	}
+-	int main() {
+-	  f (0, 42);
+-	  return 0;
 -	}],
 -	glib_cv_va_val_copy=yes
 -	,
 -	glib_cv_va_val_copy=no
 -	,)
-+	}])],
++	])],
 +	[glib_cv_va_val_copy=yes],
 +	[glib_cv_va_val_copy=no])
  ])
  if test "x$glib_cv_va_copy" = "xyes"; then
    AC_DEFINE(G_VA_COPY, va_copy)
-@@ -893,13 +867,22 @@ GLIB_IF_VAR_EQ(mutex_has_default, yes,
+@@ -893,13 +858,22 @@ GLIB_IF_VAR_EQ(mutex_has_default, yes,
  dnl ****************************************
  dnl *** GLib POLL* compatibility defines ***
  dnl ****************************************
