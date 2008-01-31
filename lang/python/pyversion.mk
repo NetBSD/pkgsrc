@@ -1,9 +1,9 @@
-# $NetBSD: pyversion.mk,v 1.47 2007/08/24 07:14:28 rillig Exp $
+# $NetBSD: pyversion.mk,v 1.48 2008/01/31 13:47:19 rillig Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
 #
-# The following variables may be set by the pkgsrc user in mk.conf:
+# === User-settable variables ===
 #
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
@@ -11,12 +11,14 @@
 #	Possible values: 15 20 21 22 23 24
 #	Default: 24
 #
-# The following variables may be set by a package before including this
-# file:
+# === Package-settable variables ===
 #
 # PYTHON_VERSIONS_ACCEPTED
 #	The Python versions that are acceptable for the package. The
-#	order of the entries matters.
+#	order of the entries matters, since earlier entries are
+#	preferred over later ones. Using PYTHON_VERSIONS_INCOMPATIBLE
+#	is preferred over this variable, since it automatically extends
+#	to newly introduced versions.
 #
 #	Possible values: 24 23 22 21 20 15
 #	Default: (all)
@@ -144,8 +146,7 @@ PYPKGPREFIX=	py15
 BUILD_DEPENDS+=	py15-distutils-[0-9]*:../../devel/py-distutils
 .endif
 .else
-# force an error
-PKG_SKIP_REASON+=   "No valid Python version"
+PKG_FAIL_REASON+=   "No valid Python version"
 .endif
 
 PTHREAD_OPTS+=	require
