@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.204 2008/01/31 20:42:29 adam Exp $
+$NetBSD: CHANGES-2008,v 1.205 2008/01/31 21:47:57 is Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/ruby-RMagick to 2.2.0 [obache 2008-01-31]
 	Added graphics/ewipe version 1.2.0 [reed 2008-01-31]
 	Updated graphics/gimp to 2.4.4 [adam 2008-01-31]
+	Updated parallel/pvm3 to 3.4.5nb4 [is 2008-01-31]
