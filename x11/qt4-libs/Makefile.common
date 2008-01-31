@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/01/28 10:13:55 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/01/31 17:37:25 rillig Exp $
 
 DISTNAME=	qt-x11-opensource-src-${QTVERSION}
 CATEGORIES=	x11
@@ -46,13 +46,13 @@ CONFIGURE_ARGS+=	-no-g++-exceptions
 
 .if ${OPSYS} == "SunOS"
 .  if !empty(CC_VERSION:Mgcc*)
-.    if ${ABI} == "64"
+.    if ${ABI:U} == "64"
 CONFIGURE_ARGS+=	-platform solaris-g++-64
 .    else
 CONFIGURE_ARGS+=	-platform solaris-g++
 .    endif
 .  else
-.    if ${ABI} == "64"
+.    if ${ABI:U} == "64"
 CONFIGURE_ARGS+=	-platform solaris-cc-64
 .    else
 CONFIGURE_ARGS+=	-platform solaris-cc
