@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/31 15:47:58 reed Exp $
+bin/ewipe
+share/doc/ewipe/Changes.jp
+share/doc/ewipe/README
+share/doc/ewipe/README.jp
+share/doc/ewipe/dot.ewipe
+share/ewipe/definefont.tcl
+share/ewipe/edittable.tcl
+share/ewipe/setpointer.tcl
+share/ewipe/tclIndex
+share/ewipe/viewer.tcl
+share/examples/ewipe/a1.gif
+share/examples/ewipe/a2.gif
+share/examples/ewipe/a3.gif
+share/examples/ewipe/a4.gif
+share/examples/ewipe/blue1.gif
+share/examples/ewipe/sample.ewp
+share/examples/ewipe/test.ewp
+share/examples/ewipe/tutorial-e.ewp
+share/examples/ewipe/tutorial.ewp
+@dirrm share/examples/ewipe
+@dirrm share/ewipe
+@dirrm share/doc/ewipe
