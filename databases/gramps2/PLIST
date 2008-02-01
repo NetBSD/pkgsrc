@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/11/01 12:52:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/02/01 21:07:49 drochner Exp $
 bin/gramps
 man/fr/man1/gramps.1
 man/man1/gramps.1
@@ -1619,6 +1619,9 @@ share/gramps/plugins/rel_hu.pyo
 share/gramps/plugins/rel_it.py
 share/gramps/plugins/rel_it.pyc
 share/gramps/plugins/rel_it.pyo
+share/gramps/plugins/rel_nl.py
+share/gramps/plugins/rel_nl.pyc
+share/gramps/plugins/rel_nl.pyo
 share/gramps/plugins/rel_no.py
 share/gramps/plugins/rel_no.pyc
 share/gramps/plugins/rel_no.pyo
