@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.19 2007/05/31 12:48:34 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/02/01 02:34:23 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
+share/gEDA/gafrc.d/geda-clib.scm
+share/gEDA/scheme/geda-font.scm
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
 share/gEDA/sym/4000/4001-1.sym
@@ -875,6 +877,7 @@ share/gEDA/sym/font/rbrace.sym
 share/gEDA/sym/font/rbrack.sym
 share/gEDA/sym/font/rparen.sym
 share/gEDA/sym/font/s_-acute-accent.sym
+share/gEDA/sym/font/s_-sharp.sym
 share/gEDA/sym/font/s_.sym
 share/gEDA/sym/font/semi.sym
 share/gEDA/sym/font/slash.sym
@@ -1049,6 +1052,7 @@ share/gEDA/sym/maxim/max3120-1.sym
 share/gEDA/sym/maxim/max3223e-1.sym
 share/gEDA/sym/maxim/max3226-1.sym
 share/gEDA/sym/maxim/max3491-1.sym
+share/gEDA/sym/maxim/max3674-1.sym
 share/gEDA/sym/maxim/max378-1.sym
 share/gEDA/sym/maxim/max400-1.sym
 share/gEDA/sym/maxim/max4005-1.sym
@@ -1634,7 +1638,6 @@ share/gEDA/sym/xilinx/XC2S50-5PQ208C.sym
 share/gEDA/sym/xilinx/XC2S50-5PQ208I.sym
 share/gEDA/sym/xilinx/XC2S50-6PQ208C.sym
 share/gEDA/sym/xilinx/XC95108-PC84.sym
-share/gEDA/system-gafrc
 @dirrm share/gEDA/sym/xilinx
 @dirrm share/gEDA/sym/vhdl
 @dirrm share/gEDA/sym/verilog
