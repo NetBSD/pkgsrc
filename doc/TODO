@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7025 2008/02/01 11:51:26 rhaen Exp $
+$NetBSD: TODO,v 1.7026 2008/02/01 12:00:37 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -989,7 +989,6 @@ Suggested package updates
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.85
 	o p5-Apache-Test-1.30
-	o p5-Archive-Tar-1.38
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
