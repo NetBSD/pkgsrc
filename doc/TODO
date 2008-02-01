@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7024 2008/02/01 08:17:02 wiz Exp $
+$NetBSD: TODO,v 1.7025 2008/02/01 11:51:26 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -984,7 +984,6 @@ Suggested package updates
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Algorithm-Dependency-1.106
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
