@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2007/06/08 23:52:02 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/02/01 02:34:24 dmcmahill Exp $
 share/examples/geda/AUTHORS
 share/examples/geda/COPYING
 share/examples/geda/ChangeLog
+share/examples/geda/ChangeLog-1.0
 share/examples/geda/INSTALL
 share/examples/geda/NEWS
 share/examples/geda/README
@@ -39,9 +40,9 @@ share/examples/geda/configure
 share/examples/geda/configure.ac
 share/examples/geda/gTAG/7414-1.sym
 share/examples/geda/gTAG/ChangeLog
+share/examples/geda/gTAG/ChangeLog-1.0
 share/examples/geda/gTAG/README
 share/examples/geda/gTAG/attribs
-share/examples/geda/gTAG/commonrc
 share/examples/geda/gTAG/copyleft.sym
 share/examples/geda/gTAG/crdist.sh
 share/examples/geda/gTAG/cy7c64603-52nc.sym
@@ -61,9 +62,8 @@ share/examples/geda/gTAG/gTAG-ucont.sym
 share/examples/geda/gTAG/gTAG.bom
 share/examples/geda/gTAG/gTAG.ps
 share/examples/geda/gTAG/gTAG.sch
+share/examples/geda/gTAG/gafrc
 share/examples/geda/gTAG/gnetlistrc
-share/examples/geda/gTAG/gschemrc
-share/examples/geda/gTAG/gschlasrc
 share/examples/geda/gTAG/max882.sym
 share/examples/geda/gTAG/sn75240pw.sym
 share/examples/geda/install-sh
