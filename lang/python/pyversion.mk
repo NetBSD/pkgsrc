@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.49 2008/01/31 19:34:35 rillig Exp $
+# $NetBSD: pyversion.mk,v 1.50 2008/02/01 08:17:00 xtraeme Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 15 20 21 22 23 24
+#	Possible values: 15 20 21 22 23 24 25
 #	Default: 24
 #
 # === Package-settable variables ===
@@ -21,13 +21,13 @@
 #	PYTHON_VERSIONS_INCOMPATIBLE instead, since it will
 #	automatically include future versions.
 #
-#	Possible values: 24 23 22 21 20 15
+#	Possible values: 25 24 23 22 21 20 15
 #	Default: (all)
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 15 20 21 22 23 24
+#	Possible values: 15 20 21 22 23 24 25
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -51,7 +51,7 @@ PYTHON_VERSION_DEFAULT?=		24
 .if ${OPSYS} == "Darwin"
 PYTHON_VERSIONS_INCOMPATIBLE+=		22 21 20 15
 .endif
-PYTHON_VERSIONS_ACCEPTED?=		24 23 22 21 20
+PYTHON_VERSIONS_ACCEPTED?=		25 24 23 22 21 20
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_API_DEPENDS.python15?=		python15>=1.5
@@ -60,6 +60,7 @@ BUILDLINK_API_DEPENDS.python21?=		python21>=2.1
 BUILDLINK_API_DEPENDS.python22?=		python22>=2.2
 BUILDLINK_API_DEPENDS.python23?=		python23>=2.3
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
+BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -107,7 +108,13 @@ _PYTHON_VERSION=	none
 #  PYPKGPREFIX: prefix to use in PKGNAME for extensions which can install
 #               to multiple Python versions
 #
-.if ${_PYTHON_VERSION} == "24"
+.if ${_PYTHON_VERSION} == "25"
+PYPKGSRCDIR=	../../wip/python25
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python25}:${PYPKGSRCDIR}
+PYPACKAGE=	python25
+PYVERSSUFFIX=	2.5
+PYPKGPREFIX=	py25
+.elif ${_PYTHON_VERSION} == "24"
 PYPKGSRCDIR=	../../lang/python24
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python24}:${PYPKGSRCDIR}
 PYPACKAGE=	python24
