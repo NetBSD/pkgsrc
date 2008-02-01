@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.207 2008/02/01 11:51:26 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.208 2008/02/01 12:00:37 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -364,3 +364,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated cad/geda-examples to 1.4.0 [dmcmahill 2008-01-31]
 	Updated cad/geda to 1.4.0 [dmcmahill 2008-01-31]
 	Updated devel/p5-Algorithm-Dependency to 1.106 [rhaen 2008-02-01]
+	Updated archivers/p5-Archive-Tar to 1.38 [rhaen 2008-02-01]
