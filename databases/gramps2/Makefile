@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/01/12 11:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/01 21:07:49 drochner Exp $
 #
 
-DISTNAME=		gramps-2.2.9
-PKGREVISION=		1
+DISTNAME=		gramps-2.2.10
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -28,7 +27,7 @@ MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 GCONF_SCHEMAS+=	gramps.schemas
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
