@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/05/31 12:48:33 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/02/01 02:34:23 dmcmahill Exp $
 bin/gnetlist
 bin/mk_verilog_syms
 bin/sch2eaglepos.sh
@@ -30,6 +30,7 @@ share/gEDA/scheme/gnet-futurenet2.scm
 share/gEDA/scheme/gnet-geda.scm
 share/gEDA/scheme/gnet-gossip.scm
 share/gEDA/scheme/gnet-gsch2pcb.scm
+share/gEDA/scheme/gnet-mathematica.scm
 share/gEDA/scheme/gnet-maxascii.scm
 share/gEDA/scheme/gnet-osmond.scm
 share/gEDA/scheme/gnet-pads.scm
@@ -50,6 +51,7 @@ share/gEDA/scheme/gnet-verilog.scm
 share/gEDA/scheme/gnet-vhdl.scm
 share/gEDA/scheme/gnet-vipec.scm
 share/gEDA/scheme/gnetlist.scm
+share/gEDA/scheme/gnetlist-post.scm
 share/gEDA/system-gnetlistrc
 @unexec ${RMDIR} %D/share/doc/geda-doc/man 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/doc/geda-doc/readmes 2>/dev/null || ${TRUE}

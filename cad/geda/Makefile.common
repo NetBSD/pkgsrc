@@ -1,7 +1,12 @@
-# $NetBSD: Makefile.common,v 1.12 2007/05/31 12:48:35 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.13 2008/02/01 02:34:25 dmcmahill Exp $
 #
 
 DIST_SUBDIR=	geda
-PKGVERSION=	20070526
-MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
-		http://www.geda.seul.org/devel/${PKGVERSION}/
+PKGVERSION=	1.4.0
+MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/release/v1.4/${PKGVERSION}/ \
+		http://www.geda.seul.org/release/v1.4/${PKGVERSION}/
+
+USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--disable-update-desktop-database
+CONFIGURE_ARGS+=	--disable-update-mime-database
+USE_PKGLOCALEDIR=	yes
