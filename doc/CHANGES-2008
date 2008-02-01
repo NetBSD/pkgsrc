@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.205 2008/01/31 21:47:57 is Exp $
+$NetBSD: CHANGES-2008,v 1.206 2008/02/01 02:35:56 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -353,3 +353,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/ewipe version 1.2.0 [reed 2008-01-31]
 	Updated graphics/gimp to 2.4.4 [adam 2008-01-31]
 	Updated parallel/pvm3 to 3.4.5nb4 [is 2008-01-31]
+	Updated cad/libgeda to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/gattrib to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/gschem to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/gnetlist to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/gsymcheck to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/geda-utils to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/geda-symbols to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/geda-docs to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/geda-examples to 1.4.0 [dmcmahill 2008-01-31]
+	Updated cad/geda to 1.4.0 [dmcmahill 2008-01-31]
