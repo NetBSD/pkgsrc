@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.20 2007/05/31 12:48:32 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/02/01 02:34:22 dmcmahill Exp $
 bin/gschem
 bin/gschemdoc
 man/man1/gschem.1
+share/applications/geda-gschem.desktop
 share/gEDA/bitmap/gschem-alignment_bottomcenter.png
 share/gEDA/bitmap/gschem-alignment_bottomleft.png
 share/gEDA/bitmap/gschem-alignment_bottomright.png
@@ -44,6 +45,7 @@ share/gEDA/gschem-gtkrc
 share/gEDA/gschem-lightbg
 share/gEDA/scheme/auto-place-attribs.scm
 share/gEDA/scheme/auto-uref.scm
+share/gEDA/scheme/default-attrib-positions.scm
 share/gEDA/scheme/generate_netlist.scm
 share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/image.scm
@@ -52,14 +54,18 @@ share/gEDA/scheme/pcb.scm
 share/gEDA/scheme/print-NB-attribs.scm
 share/gEDA/scheme/print.scm
 share/gEDA/system-gschemrc
-share/locale/de_DE/LC_MESSAGES/geda-gschem.mo
-share/locale/es_ES/LC_MESSAGES/geda-gschem.mo
-share/locale/fr_FR/LC_MESSAGES/geda-gschem.mo
-share/locale/it_IT/LC_MESSAGES/geda-gschem.mo
-share/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
-share/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
-share/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
-share/locale/ru/LC_MESSAGES/geda-gschem.mo
+share/icons/hicolor/48x48/apps/geda-gschem-48.png
+share/icons/hicolor/scalable/apps/geda-gschem.svg
+${PKGLOCALEDIR}/locale/af_ZA/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/it_IT/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/geda-gschem.mo
 @dirrm share/gEDA/bitmap
 @unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
