@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/22 20:25:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/02/01 20:40:17 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -191,6 +191,7 @@ share/gtk-doc/html/gstreamer-libs-0.10/style.css
 share/gtk-doc/html/gstreamer-plugins-0.10/ch01.html
 share/gtk-doc/html/gstreamer-plugins-0.10/ch02.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-0.10.devhelp
+share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-0.10.devhelp2
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-capsfilter.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fakesink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fakesrc.html
