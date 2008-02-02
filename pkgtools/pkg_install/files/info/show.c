@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.19 2008/01/29 15:39:31 hubertf Exp $	*/
+/*	$NetBSD: show.c,v 1.20 2008/02/02 16:21:45 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.19 2008/01/29 15:39:31 hubertf Exp $");
+__RCSID("$NetBSD: show.c,v 1.20 2008/02/02 16:21:45 joerg Exp $");
 #endif
 #endif
 
@@ -113,74 +113,50 @@ static const show_t showv[] = {
 	{-1, NULL, NULL}
 };
 
-static int print_file_as_var(const char *, const char *);
+static int print_string_as_var(const char *, const char *);
 
 void
-show_file(const char *pkg, const char *title, const char *fname, Boolean separator)
+show_file(const char *buf, const char *title, Boolean separator)
 {
-	FILE   *fp;
-	char    line[1024];
-	int     n;
+	size_t len;
 
-	if (!Quiet) {
+	if (!Quiet)
 		printf("%s%s", InfoPrefix, title);
-	}
-	if ((fp = fopen(fname, "r")) == (FILE *) NULL) {
-		printf("ERROR: show_file: package \"%s\": can't open '%s' for reading\n", pkg, fname);
-	} else {
-		int append_nl = 0;
-		while ((n = fread(line, 1, sizeof(line), fp)) != 0) {
-			fwrite(line, 1, n, stdout);
-			append_nl = (line[n - 1] != '\n');
-		}
-		(void) fclose(fp);
-		if (append_nl)
-			printf("\n");
-	}
-	if (!Quiet || separator) {
-		printf("\n");		/* just in case */
-	}
+
+	len = strlen(buf);
+	if (len == 0 || buf[len - 1] != '\n')
+		puts(buf);
+	else
+		fputs(buf, stdout);
+
+	if (!Quiet || separator)
+		printf("\n");
 }
 
 void
-show_var(const char *pkg, const char *fname, const char *variable)
+show_var(const char *buf, const char *variable)
 {
-	char   *filename, *value;
+	char   *value;
 
-	filename = pkgdb_pkg_file(pkg, fname);
-
-	if ((value = var_get(filename, variable)) != NULL) {
+	if ((value = var_get_memory(buf, variable)) != NULL) {
 		(void) printf("%s\n", value);
 		free(value);
 	}
-	free(filename);
 }
 
 void
-show_index(const char *pkg, const char *title, const char *fname)
+show_index(const char *buf, const char *title)
 {
-	FILE   *fp;
-	char   *line;
-	size_t  linelen;
-	size_t  maxline = termwidth;
+	size_t len;
 
-	if (!Quiet) {
+	if (!Quiet)
 		printf("%s%s", InfoPrefix, title);
-		maxline -= MAX(MAXNAMESIZE, strlen(title));
-	}
-	if ((fp = fopen(fname, "r")) == (FILE *) NULL) {
-		warnx("show_index: package \"%s\": can't open '%s' for reading", pkg, fname);
-		return;
-	}
-	if ((line = fgetln(fp, &linelen))) {
-		line[linelen - 1] = '\0';	/* tromp newline & terminate string */
-		if (termwidth && (linelen > maxline)) {
-			/* XXX -1 if term does NOT have xn (or xenl) quirk */
-			line[maxline] = '\0';
-		}
-		(void) printf("%s\n", line);
-	}
-	(void) fclose(fp);
+
+	len = strlen(buf);
+	if (len == 0 || buf[len - 1] != '\n')
+		puts(buf);
+	else
+		fputs(buf, stdout);	
 }
 
 /*
@@ -359,7 +335,7 @@ show_bld_depends(const char *title, package_t *plist)
  * Show entry for pkg_summary.txt file.
  */
 void
-show_summary(package_t *plist, const char *binpkgfile)
+show_summary(struct pkg_meta *meta, package_t *plist, const char *binpkgfile)
 {
 	static const char *bi_vars[] = {
 		"PKGPATH",
@@ -397,10 +373,10 @@ show_summary(package_t *plist, const char *binpkgfile)
 		}
 	}
 
-	print_file_as_var("COMMENT", COMMENT_FNAME);
-	print_file_as_var("SIZE_PKG", SIZE_PKG_FNAME);
+	print_string_as_var("COMMENT", meta->meta_comment);
+	print_string_as_var("SIZE_PKG", meta->meta_size_pkg);
 
-	var_copy_list(BUILD_INFO_FNAME, bi_vars);
+	var_copy_list(meta->meta_build_info, bi_vars);
 
 	if (binpkgfile != NULL && stat(binpkgfile, &st) == 0) {
 	    const char *base;
@@ -415,7 +391,7 @@ show_summary(package_t *plist, const char *binpkgfile)
 	    /* XXX: DIGETS */
 	}
 
-	print_file_as_var("DESCRIPTION", DESC_FNAME);
+	print_string_as_var("DESCRIPTION", meta->meta_desc);
 	putc('\n', stdout);
 }
 
@@ -423,25 +399,16 @@ show_summary(package_t *plist, const char *binpkgfile)
  * Print the contents of file fname as value of variable var to stdout.
  */
 static int
-print_file_as_var(const char *var, const char *fname)
+print_string_as_var(const char *var, const char *str)
 {
-	FILE *fp;
-	char *line;
-	size_t len;
+	const char *eol;
 
-	fp = fopen(fname, "r");
-	if (!fp) {
-		warn("unable to open %s file", fname);
-		return -1;
+	while ((eol = strchr(str, '\n')) != NULL) {
+		printf("%s=%.*s\n", var, (int)(eol - str), str);
+		str = eol + 1;
 	}
-
-	while ((line = fgetln(fp, &len)) != (char *) NULL) {
-		if (line[len - 1] == '\n')
-			--len;
-		printf("%s=%.*s\n", var, (int)len, line);
-	}
-	
-	fclose(fp);
+	if (*str)
+		printf("%s=%s\n", var, str);
 
 	return 0;
 }
