@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7026 2008/02/01 12:00:37 rhaen Exp $
+$NetBSD: TODO,v 1.7027 2008/02/02 22:13:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,6 @@ Suggested package updates
 	o chrony-1.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o clamav-0.92
 	o classpath-0.96.1
 	o claws-mail-3.2.0
 	o clearsilver-0.10.4
@@ -720,7 +719,6 @@ Suggested package updates
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.2
 	o gtklife-5.1
-	o gtkmm-2.12.4
 	o gtksee-0.6.0b
 	o gtksourceview-2.0.1
 	o gtkyahoo-0.18.3
