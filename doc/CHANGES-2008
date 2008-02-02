@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.209 2008/02/01 20:45:19 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.210 2008/02/02 04:51:59 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -366,3 +366,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Algorithm-Dependency to 1.106 [rhaen 2008-02-01]
 	Updated archivers/p5-Archive-Tar to 1.38 [rhaen 2008-02-01]
 	Added textproc/metauml version 0.2.5 [tonio 2008-02-01]
+	Updated cad/pcb to 20080202 [dmcmahill 2008-02-01]
