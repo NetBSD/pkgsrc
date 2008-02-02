@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/11/03 15:59:17 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/02 21:43:27 gdt Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
+PKGREVISION=	1
 
 COMMENT=	Multi-protocol Instant Messaging client console frontend
 
@@ -25,6 +26,10 @@ CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-nss
 #CONFIGURE_ARGS+=	--disable-plugins
 
+CONFIGURE_ARGS+=	--with-ncurses-headers=${PREFIX}/include/ncursesw
+CONFIGURE_ENV+=		ac_cv_lib_ncursesw_initscr=yes
+CONFIGURE_ENV+=		ac_cv_lib_panelw_update_panels=yes
+
 USE_NCURSES=		yes # force ncurses, for libpanel
 
 BUILD_DIRS=finch
@@ -43,6 +48,6 @@ post-install:
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
