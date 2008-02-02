@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/30 14:17:37 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/02 21:01:24 darcy Exp $
 # FreeBSD Id: ports/multimedia/dvd-slideshow/Makefile,v 1.12 2007/09/23 04:42:06 edwin Exp
 
 DISTNAME=	dvd-slideshow-0.7.5
@@ -34,17 +34,23 @@ REPLACE_BASH =	dir2slideshow dvd-burn dvd-encode dvd-iso dvd-menu \
 				dvd-slideshow dvd-slideshow.orig gallery1-to-slideshow \
 				install.sh jigl2slideshow
 
-SUBST_CLASSES+=     	fonts
-SUBST_STAGE.fonts=  	post-configure
-SUBST_FILES.fonts=  	dvd-menu dvd-slideshow
-SUBST_SED.fonts= 	   -e 's,/usr/share/fonts/,${X11BASE}/lib/X11/fonts/,g'
-SUBST_MESSAGE.fonts=    Fixing hardcoded fonts paths.
+SUBST_CLASSES+=			fonts
+SUBST_STAGE.fonts=		post-configure
+SUBST_FILES.fonts=		dvd-menu dvd-slideshow
+SUBST_SED.fonts=		-e 's,/usr/share/fonts/,${X11BASE}/lib/X11/fonts/,g'
+SUBST_MESSAGE.fonts=	Fixing hardcoded fonts paths.
 
 SUBST_CLASSES+=			pipeline
 SUBST_STAGE.pipeline=	post-configure
 SUBST_FILES.pipeline=	dvd-slideshow
 SUBST_SED.pipeline=		-e 's/print0/printx/g;s/sort -z/sort/g;s/xargs -0/xargs/g'
 SUBST_MESSAGE.pipeline=	Fixing Linux centric pipeline.
+
+SUBST_CLASSES+=			lsof
+SUBST_STAGE.lsof=		post-configure
+SUBST_FILES.lsof=		dvd-slideshow
+SUBST_SED.lsof=			-e 's+/usr/sbin/lsof+${DESTDIR}${PREFIX}/sbin/lsof+g'
+SUBST_MESSAGE.lsof=		Fixing lsof command line
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/dvd-slideshow
 
