@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2007/09/02 11:45:06 kei Exp $
+$NetBSD: patch-aa,v 1.4 2008/02/02 21:04:00 heinz Exp $
 
---- Makefile.orig	1996-11-11 23:43:22.000000000 +0900
-+++ Makefile	2007-07-17 14:08:03.000000000 +0900
-@@ -25,29 +25,33 @@
+--- Makefile.orig	1996-11-11 15:43:22.000000000 +0100
++++ Makefile
+@@ -25,29 +25,33 @@ REVISION=0
  INTERNAL_REVISION=7
  ARCFILE=netmaj-$(VERSION).$(REVISION).$(INTERNAL_REVISION).tar.gz
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.3 2007/09/02 11:45:06 kei Exp $
  
  # for nec ews
  ##CC=/usr/abiccs/bin/cc -ZXNd=5000
-@@ -60,13 +64,15 @@
+@@ -60,13 +64,15 @@ LDFLAGS =  -Llib 
  #LDFLAGS =  -Llib 
  
  # for Solaris
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.3 2007/09/02 11:45:06 kei Exp $
  
  # for nec ews (SVR2)
  #CC=cc
-@@ -163,9 +169,9 @@
+@@ -163,9 +169,9 @@ libs:
  x:
  	-if test -d xui; then \
  	(cd xui; make CC="$(CC)" OS_CFLAGS="$(OS_CFLAGS)" \
@@ -81,3 +81,56 @@ $NetBSD: patch-aa,v 1.3 2007/09/02 11:45:06 kei Exp $
  
  
  netmaj: netmaj.in Makefile
+@@ -179,35 +185,35 @@ player_info: player_info.in Makefile
+ 	chmod 755 player_info
+ 
+ install: netmaj player_info
+-	-if test ! -d ${BINDIR}; then \
+-		mkdir ${BINDIR}; fi
+-	-if test ! -d ${LIBDIR}; then \
+-		mkdir ${LIBDIR}; fi
++	-if test ! -d ${DESTDIR}${BINDIR}; then \
++		mkdir ${DESTDIR}${BINDIR}; fi
++	-if test ! -d ${DESTDIR}${LIBDIR}; then \
++		mkdir ${DESTDIR}${LIBDIR}; fi
+ 	-./server_kill
+-	cp server client auto server_kill player_info $(LIBDIR)
+-	cp proxyserver inputserver proxyclient $(LIBDIR)
+-	cp netmaj.hlp $(LIBDIR)
+-	cp netmaj netmaj1 plview $(BINDIR)
++	cp server client auto server_kill player_info $(DESTDIR)$(LIBDIR)
++	cp proxyserver inputserver proxyclient $(DESTDIR)$(LIBDIR)
++	cp netmaj.hlp $(DESTDIR)$(LIBDIR)
++	cp netmaj netmaj1 plview $(DESTDIR)$(BINDIR)
+ 	-if test -d xui; then \
+ 	(cd xui; make install CC="$(CC)" OS_CFLAGS="$(OS_CFLAGS)" \
+ 	RANLIB="$(RANLIB)" LIBS="$(LIBS)" LIBDIR="$(LIBDIR)" \
+-	BINDIR="$(BINDIR)" \
++	BINDIR="$(BINDIR)" DESTDIR="$(DESTDIR)" \
+ 	); fi
+ 
+ install-remote: netmaj server server_kill auto proxyclient
+-	-if test ! -d ${BINDIR}; then \
+-		mkdir ${BINDIR}; fi
+-	-if test ! -d ${LIBDIR}; then \
+-		mkdir ${LIBDIR}; fi
+-	cp server auto server_kill proxyclient $(LIBDIR)
+-	cp netmaj $(BINDIR)
++	-if test ! -d ${DESTDIR}${BINDIR}; then \
++		mkdir ${DESTDIR}${BINDIR}; fi
++	-if test ! -d ${DESTDIR}${LIBDIR}; then \
++		mkdir ${DESTDIR}${LIBDIR}; fi
++	cp server auto server_kill proxyclient $(DESTDIR)$(LIBDIR)
++	cp netmaj $(DESTDIR)$(BINDIR)
+ 
+ install-pf:
+-	cp *.pf $(LIBDIR)
++	cp *.pf $(DESTDIR)$(LIBDIR)
+ 	-if test -d xui; then \
+ 	(cd xui; make install-pf CC="$(CC)" OS_CFLAGS="$(OS_CFLAGS)" \
+ 	RANLIB="$(RANLIB)" LIBS="$(LIBS)" LIBDIR="$(LIBDIR)" \
+-	BINDIR="$(BINDIR)" \
++	BINDIR="$(BINDIR)" DESTDIR="$(DESTDIR)" \
+ 	); fi
+ 
+ clean:

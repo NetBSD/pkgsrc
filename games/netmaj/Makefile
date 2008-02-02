@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/02 11:45:06 kei Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/02 21:04:00 heinz Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 MAINTAINER=		kei@NetBSD.org
 HOMEPAGE=		http://www.sfc.wide.ad.jp/~kusune/netmaj/
 COMMENT=		Mahjongg game with network and 1-4 player(s) support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/netmaj
 USE_TOOLS+=		perl:run
@@ -21,7 +23,7 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 post-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/html/* ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
