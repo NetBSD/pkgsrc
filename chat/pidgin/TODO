@@ -1,9 +1,0 @@
-+ Builds and installs. Works so with IRC.
-
-- does not install pidgin.1 in doc/Makefile. Why? finch does it.
-- options.mk: is this sufficient?
-- gstreamer should be a suggested option
-- pidgin/Makefile.am, pidgin/Makefile.in should be patched to use an
-  already installed libpurple ("pkg-config --libs purple",
-  "pkg-config --cflags purple") to avoid the hack of linking libpurple.la
-  from the .buildlink directory.
