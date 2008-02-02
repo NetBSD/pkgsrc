@@ -1,9 +1,0 @@
-+ Builds, installs and does not crash on start but does not do anything useful
-  for me. At least CTRL-c works.
-
-- PKG_SUGGESTED_OPTIONS should be: gstreamer
-- during install:
-  libtool: install: warning: relinking `s.la'
-  cd: can't cd to ../../../libpurple/.libs
-  libtool: link: cannot determine absolute directory name of `../../../libpurple/.libs'
-
