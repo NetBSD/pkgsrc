@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.11 2007/07/16 09:57:58 joerg Exp $
+# $NetBSD: Makefile.in,v 1.12 2008/02/02 16:21:45 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -10,10 +10,17 @@ mandir=		@mandir@
 man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1
 
+BOOTSTRAP=	@bootstrap@
+
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		-linstall @LIBS@
+.if empty(BOOTSTRAP)
+LIBS=		-linstall -larchive -lbz2 -lz @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
+.else
+LIBS=		-linstall @LIBS@
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP
+.endif
 DEFS=		@DEFS@
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
