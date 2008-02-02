@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/25 10:03:52 hira Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/02 21:52:52 gdt Exp $
 #
 
 PKGNAME=		pidgin-${PIDGIN_VERSION}
@@ -30,6 +30,8 @@ pre-build:
 	# XXX Find a cleaner way.
 	${TEST} -r ${WRKSRC}/libpurple/libpurple.la || \
 	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
+
+# XXX install pidgin.1 via doc/Makefile
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
