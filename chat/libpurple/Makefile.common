@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.9 2007/12/10 11:33:58 tnn Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/02/02 21:37:11 gdt Exp $
 #
-
+# used by chat/finch/Makefile
 PIDGIN_VERSION=	2.3.1
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
