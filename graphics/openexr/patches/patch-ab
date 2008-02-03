@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2006/10/11 18:47:28 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2008/02/03 03:37:33 heinz Exp $
+
+  - Shell portability fix: see
+    https://savannah.nongnu.org/bugs/index.php?22222
 
 --- bootstrap.orig	2006-10-11 20:46:46.000000000 +0200
 +++ bootstrap	2006-10-11 20:46:27.000000000 +0200
