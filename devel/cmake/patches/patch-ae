@@ -1,0 +1,18 @@
+$NetBSD: patch-ae,v 1.3 2008/02/03 13:01:11 tnn Exp $
+
+--- Modules/FindCURL.cmake.orig	2007-01-10 18:59:12.000000000 +0100
++++ Modules/FindCURL.cmake
+@@ -6,11 +6,11 @@
+ #  CURL_FOUND        - True if curl found.
+ 
+ # Look for the header file.
+-FIND_PATH(CURL_INCLUDE_DIR NAMES curl/curl.h)
++FIND_PATH(CURL_INCLUDE_DIR curl/curl.h @prefix@/include)
+ MARK_AS_ADVANCED(CURL_INCLUDE_DIR)
+ 
+ # Look for the library.
+-FIND_LIBRARY(CURL_LIBRARY NAMES curl)
++FIND_LIBRARY(CURL_LIBRARY NAMES curl PATHS @prefix@/lib)
+ MARK_AS_ADVANCED(CURL_LIBRARY)
+ 
+ # Copy the results to the output variables.
