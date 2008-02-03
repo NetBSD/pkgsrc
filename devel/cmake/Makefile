@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/02/03 02:10:40 heinz Exp $
+# $NetBSD: Makefile,v 1.35 2008/02/03 02:12:11 heinz Exp $
 
 DISTNAME=	cmake-2.4.6
 PKGREVISION=	4
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-2.4
 CONFIGURE_ARGS+=	--system-libs
 BUILD_TARGET=		default_target
+
+# for Source/cmDependsJavaParser.cxx
+UNLIMIT_RESOURCES=	datasize
 
 # as of 2.4.6, x11 and fortran tests fail in pkgsrc
 TEST_TARGET=		test
