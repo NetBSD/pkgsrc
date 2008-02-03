@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/03 02:45:23 reed Exp $
+bin/rtf2latex2e
+share/doc/rtf2latex2e/INSTALL
+share/doc/rtf2latex2e/README
+share/doc/rtf2latex2e/rtf2LaTeX2eDoc.html
+share/rtf2latex2e/pref/TeX-map.applemac
+share/rtf2latex2e/pref/applemac.map
+share/rtf2latex2e/pref/ansi-sym
+share/rtf2latex2e/pref/TeX-map.cp1250
+share/rtf2latex2e/pref/cp1250.map
+share/rtf2latex2e/pref/cp1252.map
+share/rtf2latex2e/pref/cp1254.map
+share/rtf2latex2e/pref/cp437.map
+share/rtf2latex2e/pref/cp850.map
+share/rtf2latex2e/pref/mac-sym
+share/rtf2latex2e/pref/pc-sym
+share/rtf2latex2e/pref/pca-sym
+share/rtf2latex2e/pref/r2l-head
+share/rtf2latex2e/pref/r2l-map
+share/rtf2latex2e/pref/r2l-pref
+share/rtf2latex2e/pref/rtf-ctrl
+share/rtf2latex2e/pref/TeX-map
+share/rtf2latex2e/pref/TeX-map.cp1252
+share/rtf2latex2e/pref/TeX-map.default
+share/rtf2latex2e/pref/TeX-map.german
+share/rtf2latex2e/pref/TeX-map.latin1
+@dirrm share/rtf2latex2e/pref
+@dirrm share/rtf2latex2e
+@dirrm share/doc/rtf2latex2e
