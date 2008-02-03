@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/09 19:04:42 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/03 12:22:26 drochner Exp $
 #
 
 DISTNAME=	dbus-python-0.82.3
@@ -19,6 +19,8 @@ PYTHON_VERSIONS_ACCEPTED=	24
 #PYDISTUTILSPKG=			YES
 #PYBINMODULE=			YES
 PY_PATCHPLIST=			YES
+
+BUILD_DEPENDS+= ${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
