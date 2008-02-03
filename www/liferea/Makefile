@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2008/01/16 19:53:24 smb Exp $
+# $NetBSD: Makefile,v 1.68 2008/02/03 11:14:27 drochner Exp $
 
-DISTNAME=		liferea-1.4.10
+DISTNAME=		liferea-1.4.12
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
-PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://liferea.sourceforge.net/
