@@ -1,0 +1,12 @@
+This is rtf2latex2e by Ujwal Sathyam and Scott Prahl.  It uses the
+RTF reader by Paul DuBois and converts RTF files into the LaTeX2e
+format. Its main features are:
+
+1. detects text style: bold, italic, color, big, small,...
+2. reads embedded figures: PICT, WMF, PNG, JPEG, converts to EPS
+3. reads tables: simple to semi-complex
+4. equations: converts embedded MathType < 3.0 equations
+5. symbols: converts most greek and math symbols
+6. reads footnotes (not in tables yet)
+7. support for use of the fontenc package
+8. translates hyperlinks using the hyperref package
