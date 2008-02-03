@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2007/11/30 21:52:18 wiz Exp $
+$NetBSD: distinfo,v 1.10 2008/02/03 03:37:32 heinz Exp $
 
 SHA1 (openexr-1.6.1.tar.gz) = b3650e6542f0e09daadb2d467425530bc8eec333
 RMD160 (openexr-1.6.1.tar.gz) = 3670633be841628e9d4c11981661e9d94a9b2711
 Size (openexr-1.6.1.tar.gz) = 13632660 bytes
-SHA1 (patch-aa) = 5c4a5ae3440e49a774dd7056f3b93d78e1f6528a
-SHA1 (patch-ab) = af6a9601b68e8cab51de75f6d1a05476fdfa3b87
+SHA1 (patch-aa) = d1b9c2d817d875c30fa15cbbea5d1226b03b62d8
+SHA1 (patch-ab) = 7d4fdf8d36f58ea5126b8c72dae901d1d68e6a60
