@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/09/18 20:01:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/02/03 12:20:58 drochner Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-content-selector.h
@@ -34,6 +34,7 @@ share/locale/am/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/ar/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/az/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/be/LC_MESSAGES/libgnomeprintui-2.2.mo
+share/locale/be@latin/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/bg/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/bn/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/bn_IN/LC_MESSAGES/libgnomeprintui-2.2.mo
