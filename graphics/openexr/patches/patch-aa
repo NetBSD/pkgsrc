@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2007/11/30 21:52:20 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/03 03:37:32 heinz Exp $
+
+  - Shell portability fix: see
+    https://savannah.nongnu.org/bugs/index.php?22222
 
 --- configure.orig	2007-11-30 19:18:05.000000000 +0000
 +++ configure
