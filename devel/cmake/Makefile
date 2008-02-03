@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/02/03 02:12:11 heinz Exp $
+# $NetBSD: Makefile,v 1.36 2008/02/03 13:01:11 tnn Exp $
 
 DISTNAME=	cmake-2.4.6
 PKGREVISION=	4
@@ -31,7 +31,8 @@ TEST_TARGET=		test
 SUBST_CLASSES+=		cmake
 SUBST_STAGE.cmake=	pre-configure
 SUBST_MESSAGE.cmake=	Fixing hard-coded prefix.
-SUBST_FILES.cmake=	Modules/FindCurses.cmake Modules/FindX11.cmake
+SUBST_FILES.cmake=	Modules/FindCurses.cmake Modules/FindCURL.cmake \
+			    Modules/FindX11.cmake
 SUBST_SED.cmake=	-e "s|@prefix@|${PREFIX}|g"
 SUBST_SED.cmake+=	-e "s|@x11base@|${X11BASE}|g"
 
