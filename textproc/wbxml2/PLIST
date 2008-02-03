@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 14:05:17 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/03 12:23:33 drochner Exp $
 bin/wbxml2xml
 bin/xml2wbxml
 include/wbxml.h
@@ -20,5 +20,17 @@ include/wbxml_tree_clb_wbxml.h
 include/wbxml_tree_clb_xml.h
 lib/libwbxml2.la
 lib/pkgconfig/libwbxml2.pc
+share/doc/wbxml2-0.9.0/AUTHORS
+share/doc/wbxml2-0.9.0/BUGS
+share/doc/wbxml2-0.9.0/COPYING
+share/doc/wbxml2-0.9.0/ChangeLog
 share/doc/wbxml2-0.9.0/GNU-LGPL
+share/doc/wbxml2-0.9.0/INSTALL
+share/doc/wbxml2-0.9.0/NEWS
+share/doc/wbxml2-0.9.0/README
+share/doc/wbxml2-0.9.0/References
+share/doc/wbxml2-0.9.0/THANKS
+share/doc/wbxml2-0.9.0/TODO
+share/doc/wbxml2-0.9.0/bootstrap
+share/doc/wbxml2-0.9.0/doxygen.h
 @dirrm share/doc/wbxml2-0.9.0
