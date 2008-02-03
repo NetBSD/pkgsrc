@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/01/18 05:14:32 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/03 02:10:40 heinz Exp $
 
 DISTNAME=	cmake-2.4.6
 PKGREVISION=	4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.cmake.org/files/v2.4/
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
 COMMENT=	Cross platform make
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
