@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2007/09/18 20:01:40 drochner Exp $
+$NetBSD: distinfo,v 1.19 2008/02/03 12:20:58 drochner Exp $
 
-SHA1 (libgnomeprintui-2.18.1.tar.bz2) = 52ac5cd12272c3e2f8a5e699041b8acdf7e79a7f
-RMD160 (libgnomeprintui-2.18.1.tar.bz2) = 51048d938dbadfdcfc81a7f6edc1d1f805506927
-Size (libgnomeprintui-2.18.1.tar.bz2) = 686595 bytes
+SHA1 (libgnomeprintui-2.18.2.tar.bz2) = 335a8e0396fb1b80d94ff0322b816bbbf772262d
+RMD160 (libgnomeprintui-2.18.2.tar.bz2) = c1cd03707123e1e2215ee58b227057c8a23697a0
+Size (libgnomeprintui-2.18.2.tar.bz2) = 697697 bytes
