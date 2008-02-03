@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.211 2008/02/02 22:13:45 adam Exp $
+$NetBSD: CHANGES-2008,v 1.212 2008/02/03 02:47:35 reed Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -368,3 +368,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/metauml version 0.2.5 [tonio 2008-02-01]
 	Updated cad/pcb to 20080202 [dmcmahill 2008-02-01]
 	Updated x11/gtkmm to 2.12.4 [adam 2008-02-01]
+	Added print/rtf2latex2e version 1.0fc2 [reed 2008-02-03]
