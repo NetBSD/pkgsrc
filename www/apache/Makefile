@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2008/02/03 13:24:22 tnn Exp $
+# $NetBSD: Makefile,v 1.195 2008/02/03 14:07:40 tnn Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -179,7 +179,8 @@ SUBST_SED.db+=          -e 's,@DB_CFLAGS@,-I${BDB_BASE}/include,g'
 SUBST_SED.db+=          -e 's,@DB_CFLAGS@,,g'
 .endif
 
-REPLACE_PERL=		docs/cgi-examples/printenv
+REPLACE_PERL+=			cgi-bin/printenv
+CHECK_INTERPRETER_SKIP+=	lib/httpd/httpd.exp
 
 PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
