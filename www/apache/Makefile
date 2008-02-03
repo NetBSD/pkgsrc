@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2008/01/20 04:06:03 reed Exp $
+# $NetBSD: Makefile,v 1.194 2008/02/03 13:24:22 tnn Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--enable-module=most				\
 			--disable-module=auth_dbm
 CONFIGURE_ARGS+=	--enable-rule=EAPI				\
 			--disable-module=ssl
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--without-confadjust
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-port=80
