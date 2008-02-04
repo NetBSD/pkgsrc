@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2008/01/29 11:28:45 joerg Exp $
+# $NetBSD: Makefile,v 1.96 2008/02/04 12:58:19 obache Exp $
 
-DISTNAME=	wget-1.10.2
-PKGREVISION=	2
+DISTNAME=	wget-1.11
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
@@ -18,14 +17,14 @@ USE_OLD_DES_API=	YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		msgfmt
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		ac_cv_func_sigsetjmp=yes
 
 EGDIR=			${PREFIX}/share/examples/wget
 CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "options.mk"
 
