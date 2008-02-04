@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/02/15 14:45:40 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2008/02/04 19:52:55 tnn Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.gnu.org/
 COMMENT=		Unified GNU binutils for cross build environments
 
 USE_CROSSBASE=		yes
-USE_TOOLS+=		gm4
+USE_TOOLS+=		gm4 pod2man
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
