@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7028 2008/02/04 12:00:18 obache Exp $
+$NetBSD: TODO,v 1.7029 2008/02/04 12:53:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,7 @@ Suggested package updates
 	o claws-mail-3.2.0
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
-	o clisp-2.43
+	o clisp-2.44 [pkgsrc-wip]
 	o cmake-2.4.8
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
@@ -528,6 +528,7 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
+	o curl-7.18.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.14
 	o cweb-3.64a
@@ -626,6 +627,7 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
+	o fuse-ntfs-3g-1.2129
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
@@ -661,9 +663,10 @@ Suggested package updates
 	o glabels-2.2.1
 	o glchess-1.0.5
 	o global-5.6
-	o gmime-2.2.15
+	o gmime-2.2.16
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
+	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.20.1
@@ -757,7 +760,7 @@ Suggested package updates
 	o icsi-finger-1.0.29
 	o ifile-1.3.5
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.20
+	o ikiwiki-2.30
 	o imap-uw-2007
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.217
@@ -866,12 +869,16 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.15
 	o libstree-0.4.2
-	o libtasn1-1.2
+	o libtasn1-1.3
 	o libtcl-nothread-8.4.9
+	o libtool-1.5.26
+	o libtorrent-0.12.0
 	o libxklavier-3.4
 	o libxml++2-2.20.0
 	o lilypond-2.10.33
 	o lincvs-2.0.0 [now called CrossVC]
+	o links-2.1.0.33
+	o links-gui-2.1.0.33
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o lout-3.31
@@ -881,6 +888,7 @@ Suggested package updates
 	o ltm-0.40
 	o lua-5.1.3
 	o lucy-1.19p
+	o luit-1.0.3
 	o lyx-1.5
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-sdl-3.0.6
@@ -985,7 +993,7 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-1.85
+	o p5-Apache-Session-1.86
 	o p5-Apache-Test-1.30
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
@@ -1004,6 +1012,7 @@ Suggested package updates
 	o p5-DBIx-DBSchema-0.36
 	o p5-DBIx-SearchBuilder-1.51
 	o p5-Data-FormValidator-4.50
+	o p5-Devel-StackTrace-1.16
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Error-0.17012
@@ -1023,6 +1032,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-INET6-2.51
+	o p5-IO-Socket-SSL-1.13
 	o p5-Image-ExifTool-7.13
 	o p5-Image-Info-1.27
 	o p5-Locale-Codes-2.07
@@ -1063,7 +1073,8 @@ Suggested package updates
 	o p5-Time-HiRes-1.9707
 	o p5-Time-TAI64-2.11
 	o p5-WWW-Mechanize-1.34
-	o p5-XML-LibXSLT-1.63
+	o p5-XML-LibXML-1.66
+	o p5-XML-LibXSLT-1.66
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
 	o p5-glib2-1.160
@@ -1078,6 +1089,7 @@ Suggested package updates
 	o pcal-4.8
 	o pciids-20071004
 	o pciutils-2.2.9
+	o pcre-7.6
 	o pdmenu-1.2.87
 	o pear-1.6.2
 	o pear-DB-1.7.10
@@ -1237,8 +1249,9 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rpm-5.0.0
 	o rss2email-2.61
-	o rt3-3.6.5
+	o rt3-3.6.6
 	o rtcw-1.41.3
+	o rtorrent-0.8.0
 	o ruby-RMagick-2.0.0
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
@@ -1251,6 +1264,7 @@ Suggested package updates
 	o scapy-1.1.1
 	o scew-0.4.0
 	o sch-3.8.3
+	o scm-5e5
 	o scmgit-1.5.3.7
 	o scons-0.97
 	o scribus-1.3.3.11
@@ -1278,6 +1292,7 @@ Suggested package updates
 	o skipstone-0.9.9
 	o skkinput-2.06.4
 	o skype-2.0.0.27
+	o slib-3b1
 	o smalleiffel-0.90
 	o smalltalk-3.0
 	o smlnj-110.59 [pkgsrc-wip]
