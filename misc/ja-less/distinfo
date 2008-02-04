@@ -1,13 +1,24 @@
-$NetBSD: distinfo,v 1.3 2006/09/27 11:27:31 taca Exp $
+$NetBSD: distinfo,v 1.4 2008/02/04 14:34:09 obache Exp $
 
-SHA1 (less-358-iso254.patch.gz) = cb2df9fb8e66484d5e1544ae902fa87b1745fe70
-RMD160 (less-358-iso254.patch.gz) = 664ed1f357e8d10c76855fa63ad4e0391c2e1a7f
-Size (less-358-iso254.patch.gz) = 71182 bytes
-SHA1 (less-358.tar.gz) = 1893ce820ef76686004c45364c559d1bd713ee73
-RMD160 (less-358.tar.gz) = 38e2d28d7cb411c12837bd4cea6d1dadceab46b4
-Size (less-358.tar.gz) = 231140 bytes
-SHA1 (patch-aa) = db51345c5db24ea57b24c250c092a8f28bd5e732
-SHA1 (patch-ab) = 6b30f10502e66680b2cee28dd3f7e822a58dd080
-SHA1 (patch-ac) = dc7fa429614fd0450128b6bbdb721e11e1b7bfc8
-SHA1 (patch-ad) = 8d3f50a946e085fd050dccbc74dd5edd93e296a5
-SHA1 (patch-ae) = f1dd566b45d6b9ac61121f18bd392ade0c8d7cac
+SHA1 (less-382-iso258-259.patch.gz) = 7256998c59f9743e61e83e9e5ebc5183e8eeb269
+RMD160 (less-382-iso258-259.patch.gz) = 4b2214d0bea7db838d65feeb1ae011894001cdaa
+Size (less-382-iso258-259.patch.gz) = 9466 bytes
+SHA1 (less-382-iso258.patch.gz) = 961275c26c6f6ec2e04821d9d9d1b10505214b1f
+RMD160 (less-382-iso258.patch.gz) = 9ad98b4bbd029c34ee640837d39c52b9d6d9c822
+Size (less-382-iso258.patch.gz) = 87859 bytes
+SHA1 (less-382-iso259-260.patch.gz) = 56e5537fae516ee738b1512eed303f43ed0d4575
+RMD160 (less-382-iso259-260.patch.gz) = 1284a79e1cb0f48261838931c81bde98b96fd40a
+Size (less-382-iso259-260.patch.gz) = 19014 bytes
+SHA1 (less-382-iso260-261.patch.gz) = 3a889e178a32c3a273b89fd396976362a975f627
+RMD160 (less-382-iso260-261.patch.gz) = 8dd3e9d8447b64fc62e178046acc4dc9940c78c7
+Size (less-382-iso260-261.patch.gz) = 841 bytes
+SHA1 (less-382-iso261-262.patch.gz) = d5cc92e5dcbfde26257eec5f126df5bf73779a89
+RMD160 (less-382-iso261-262.patch.gz) = f2ae517a19a886792ccfebac91d57ea040d8c8e1
+Size (less-382-iso261-262.patch.gz) = 2215 bytes
+SHA1 (less-382.tar.gz) = 3c3f1ae0bf18039b047524ff0f573ef514bcc944
+RMD160 (less-382.tar.gz) = 2b851c7038d9a4dea4f369ff5705eafc9093de97
+Size (less-382.tar.gz) = 264414 bytes
+SHA1 (patch-aa) = 08761c6e5bf60fcb59fdf13e58d9c556acf41d84
+SHA1 (patch-ad) = b000ff818556b824b3f293282e56b448c2af8cf6
+SHA1 (patch-ae) = 5f488d26762794293a6c94937f4588c99e96e2db
+SHA1 (patch-af) = c5dfe927c428beea5a53c7ef34bfd2efe41f04de
