@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.213 2008/02/03 03:02:03 obache Exp $
+$NetBSD: CHANGES-2008,v 1.214 2008/02/04 05:01:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -370,3 +370,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gtkmm to 2.12.4 [adam 2008-02-01]
 	Added print/rtf2latex2e version 1.0fc2 [reed 2008-02-03]
 	Updated net/libupnp to 1.6.5 [obache 2008-02-03]
+	Updated textproc/mecab to 0.97 [obache 2008-02-04]
+	Updated textproc/mecab-base to 0.97 [obache 2008-02-04]
+	Updated textproc/p5-mecab to 0.97 [obache 2008-02-04]
+	Updated textproc/py-mecab to 0.97 [obache 2008-02-04]
+	Updated textproc/ruby-mecab to 0.97 [obache 2008-02-04]
+	Updated textproc/java-mecab to 0.97 [obache 2008-02-04]
