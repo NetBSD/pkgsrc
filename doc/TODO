@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7027 2008/02/02 22:13:45 adam Exp $
+$NetBSD: TODO,v 1.7028 2008/02/04 12:00:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -1104,7 +1104,6 @@ Suggested package updates
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o phpmyadmin-2.11.4
-	o phppgadmin-4.1.3 [pkg/37679]
 	o phylip-3.65
 	o picp-0.6.8
 	o pim6dd-20040819a
