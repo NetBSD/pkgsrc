@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/12 13:55:03 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/04 04:58:53 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -9,11 +9,15 @@ CATEGORIES+=		perl5
 
 COMMENT=		MeCab perl module
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PERL5_CONFIGURE=	yes
 USE_LANGUAGES=		c++
 
 PERL5_PACKLIST=		auto/MeCab/.packlist
 REPLACE_PERL+=		test.pl
+
+BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 
 .include "../../textproc/mecab/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

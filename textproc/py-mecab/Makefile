@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/12 13:56:34 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/04 04:58:53 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -9,6 +9,8 @@ CATEGORIES+=	python
 
 COMMENT=	MeCab python module
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG=	yes
@@ -17,9 +19,11 @@ PYBINMODULE=	yes
 TEST_ENV+=	PYTHONPATH=${WRKSRC:Q}/build/lib.${LOWER_OPSYS}-${OS_VERSION}-${MACHINE_ARCH}-${PYVERSSUFFIX}
 
 do-test:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN}								\
 	cd ${WRKSRC};							\
 	env ${TEST_ENV} ${PYTHONBIN} test.py
+
+BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 
 .include "../../textproc/mecab/buildlink3.mk"
 .include "../../lang/python/extension.mk"
