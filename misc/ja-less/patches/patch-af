@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2008/02/04 14:34:10 obache Exp $
+
+--- edit.c.orig	2008-02-04 13:36:20.000000000 +0000
++++ edit.c
+@@ -706,7 +706,8 @@ use_logfile(filename)
+ 	 */
+ 	filename = shell_unquote(filename);
+ 	exists = open(filename, OPEN_READ);
+-	close(exists);
++	if (exists >= 0)
++		close(exists);
+ 	exists = (exists >= 0);
+ 
+ 	/*
