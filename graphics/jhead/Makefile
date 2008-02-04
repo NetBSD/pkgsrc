@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2008/02/04 14:42:14 wiz Exp $
 #
 
 DISTNAME=	jhead-2.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 
-MAINTAINER=	veego@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
 
