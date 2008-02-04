@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/11/11 21:46:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/04 20:19:33 jmmv Exp $
 #
 
-DISTNAME=	atf-0.3
+DISTNAME=	atf-0.4
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.3/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/atf/0.4/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~jmmv/atf/
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	ATF_CONFSUBDIR=
 CONFIGURE_ARGS+=	ATF_SHELL=${SH:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+PKGCONFIG_OVERRIDE=	data/atf.pc.in
 
 PKG_SYSCONFSUBDIR=	atf
 
