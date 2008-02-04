@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/23 04:31:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/04 04:58:53 obache Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -7,6 +7,8 @@ DISTNAME=		mecab-${MECAB_VERSION}
 PKGNAME=		mecab-base-${MECAB_VERSION}
 
 COMMENT=		Yet Another Part-of-Speech and Morphological Analyzer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -37,12 +39,6 @@ SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
 
 PTHREAD_AUTO_VARS=	yes
-
-# XXX: avoid compiler error with -O2.
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc*)
-BUILDLINK_TRANSFORM+=	rename:-O2:-O3
-.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
