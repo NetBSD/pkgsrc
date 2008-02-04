@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/12/26 14:02:35 smb Exp $
+# $NetBSD: Makefile,v 1.20 2008/02/04 20:10:34 tnn Exp $
 #
 
 DISTNAME=	gtkpod-0.99.12
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt perl:run pkg-config
+USE_TOOLS+=		intltool lex msgfmt perl:run pkg-config
 USE_TOOLS+=		gmake
 
 REPLACE_PERL+=		scripts/mab2vcard

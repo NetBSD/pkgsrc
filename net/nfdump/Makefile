@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/21 13:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/04 20:10:35 tnn Exp $
 #
 
 DISTNAME=	nfdump-1.5.5
@@ -12,6 +12,7 @@ COMMENT=	Tools to collect and process netflow data
 
 GNU_CONFIGURE=	yes
 TEST_TARGET=	test
+USE_TOOLS+=	lex
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nfdump
 PKG_SUPPORTED_OPTIONS=	nfdump-ftconv nfdump-sflow nfdump-nfprofile

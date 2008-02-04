@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/01/30 23:07:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.30 2008/02/04 20:10:34 tnn Exp $
 #
 
 DISTNAME=	ircu2.10.12.12
@@ -13,6 +13,7 @@ COMMENT=	Internet Relay Chat server customized for Undernet
 CONFLICTS+=	ircd-hybrid-[0-9]*
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	lex
 
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-cpath=${PKG_SYSCONFDIR}/ircd.conf

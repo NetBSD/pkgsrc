@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/11/03 16:30:30 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2008/02/04 20:10:34 tnn Exp $
 #
 
 DISTNAME=		gcalctool-5.20.2
@@ -15,7 +15,7 @@ CONFIGURE_ENV+=		HAVE_YACC=yes
 
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison gmake intltool msgfmt pkg-config
+USE_TOOLS+=		bison gmake intltool lex msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		gcalctool.schemas
