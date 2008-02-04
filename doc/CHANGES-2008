@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.215 2008/02/04 12:58:34 obache Exp $
+$NetBSD: CHANGES-2008,v 1.216 2008/02/04 14:34:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/ruby-mecab to 0.97 [obache 2008-02-04]
 	Updated textproc/java-mecab to 0.97 [obache 2008-02-04]
 	Updated net/wget to 1.11 [obache 2008-02-04]
+	Updated misc/ja-less to 382.262 [obache 2008-02-04]
