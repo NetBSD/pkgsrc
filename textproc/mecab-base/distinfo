@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2007/06/23 04:31:55 obache Exp $
+$NetBSD: distinfo,v 1.4 2008/02/04 04:58:53 obache Exp $
 
-SHA1 (mecab-0.96.tar.gz) = a9dc9b0dd25287ee81fd16dc09066c3640e2ed11
-RMD160 (mecab-0.96.tar.gz) = 8032ff1cea3ee8201d4f32d540e45b277e8846e8
-Size (mecab-0.96.tar.gz) = 1387493 bytes
-SHA1 (patch-aa) = 101d0084a6bdce044559746fc91944852e92bfa9
+SHA1 (mecab-0.97.tar.gz) = 43ceea0e7acbb760c1022abe94709bd95f1035a0
+RMD160 (mecab-0.97.tar.gz) = a20d86c2993e1febd98eb6969125981c759389f5
+Size (mecab-0.97.tar.gz) = 1364214 bytes
+SHA1 (patch-aa) = da7abb1b86af09f15d4ed18bbf4bb0c490730ddd
 SHA1 (patch-ab) = 2849effb4aa6e5e81d1be3280958e50cba0273d8
