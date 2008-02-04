@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/03 16:47:50 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/04 19:52:54 tnn Exp $
 #
 
 DISTNAME=		netbiff-0.9.18
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.cs.virginia.edu/~jrk3g/netbiff/
 MAINTAINER=		rvalls@ac.upc.edu
 HOMEPAGE=		http://www.cs.virginia.edu/~jrk3g/netbiff/
 COMMENT=		Xbiff-like mail notification, handles multiple mailboxes
+
+USE_TOOLS+=		pkg-config
 
 SUBST_CLASSES+=		fix-path
 SUBST_FILES.fix-path+=	conf-home
