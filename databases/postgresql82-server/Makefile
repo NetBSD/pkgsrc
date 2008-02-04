@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 05:06:31 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/04 15:29:28 ghen Exp $
 
 PKGNAME=	postgresql82-server-${BASE_VERS}
 PKGREVISION=	1
@@ -46,7 +46,7 @@ DL_LIBS+=	-lltdl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql82-server
-PKG_SUPPORTED_OPTIONS=	pam
+PKG_SUPPORTED_OPTIONS=	pam ldap
 .include "../../databases/postgresql82/options.mk"
 
 # PGUSER	username of the database administrator
