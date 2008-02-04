@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/11 14:27:58 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/04 20:10:34 tnn Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:S/tetex-src/hugeotp2ocp/}
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 BUILD_DIRS=	${WRKSRC}/texk/web2c/lib
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+USE_TOOLS+=	lex
 
 CONFIGURE_ARGS+=	--without-texinfo
 CONFIGURE_ARGS+=	--without-dialog
