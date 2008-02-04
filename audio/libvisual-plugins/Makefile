@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/12/30 17:57:19 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/04 20:10:35 tnn Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.4.0
@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config mkdirhier
+USE_TOOLS+=		pkg-config mkdirhier yacc
 
 .include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
