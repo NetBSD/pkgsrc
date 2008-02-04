@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.216 2008/02/04 14:34:22 obache Exp $
+$NetBSD: CHANGES-2008,v 1.217 2008/02/04 20:20:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/java-mecab to 0.97 [obache 2008-02-04]
 	Updated net/wget to 1.11 [obache 2008-02-04]
 	Updated misc/ja-less to 382.262 [obache 2008-02-04]
+	Updated devel/atf to 0.4 [jmmv 2008-02-04]
