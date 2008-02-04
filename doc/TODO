@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7030 2008/02/04 12:59:54 obache Exp $
+$NetBSD: TODO,v 1.7031 2008/02/04 13:04:56 obache Exp $
 
 Suggested new packages
 ======================
@@ -1203,7 +1203,6 @@ Suggested package updates
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
-	o py-sqlite2-2.3.5
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-2.4.0
