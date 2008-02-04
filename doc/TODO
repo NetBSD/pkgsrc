@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7029 2008/02/04 12:53:07 wiz Exp $
+$NetBSD: TODO,v 1.7030 2008/02/04 12:59:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -1404,7 +1404,6 @@ Suggested package updates
 	o wdm-1.28
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
-	o wget-1.11
 	o win32-codecs-20071007
 	o winbind-3.0.13
 	o windowlab-1.34
