@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2008/01/08 08:35:18 markd Exp $
+# $NetBSD: Makefile,v 1.22 2008/02/04 18:07:53 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -19,42 +21,41 @@ PLIST_SRC=		${WRKDIR}/PLIST ${PKGDIR}/PLIST
 CONFIGURE_ARGS+=	-no-sql-sqlite
 CONFIGURE_ARGS+=	-no-libtiff
 
+INSTALLATION_DIRS=	lib/pkgconfig ${QTPREFIX}/bin ${QTPREFIX}/include \
+	${QTPREFIX}/lib ${QTPREFIX}/plugins/accessible \
+	${QTPREFIX}/plugins/imageformats
+
+INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
+
 do-install:
-	${INSTALL_DATA_DIR} ${QTPREFIX}
-	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 .for prog in moc rcc uic
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${QTPREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic3 \
-	    ${QTPREFIX}/bin
-	${INSTALL_DATA_DIR} ${QTPREFIX}/include
+	    ${DESTDIR}${QTPREFIX}/bin
 .for incl in corelib gui network opengl qt3support sql svg xml script
-	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} \
+	cd ${WRKSRC}/src/${incl} && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} ${INSTALL_TARGET}
 .endfor
-	cd ${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
-	${INSTALL_LIB_DIR} ${QTPREFIX}/lib
+	cd ${DESTDIR}${PREFIX} && find qt4/include -type f -print > ${WRKDIR}/PLIST
 .for lib in Qt3Support QtCore QtGui QtNetwork QtOpenGL QtSql QtSvg QtXml QtScript
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
-		${QTPREFIX}/lib/
+		${DESTDIR}${QTPREFIX}/lib/
 	sed	-e "s:${WRKSRC}:${QTPREFIX}:g" \
 		-e "s:${QTPREFIX}/lib/lib\([A-Za-z3]*\)\.la:-l\1:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
-	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${PREFIX}/lib/pkgconfig/
+	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/tools/porting/src/q3porting.xml ${QTPREFIX}
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/accessible
+	${INSTALL_DATA} ${WRKSRC}/tools/porting/src/q3porting.xml ${DESTDIR}${QTPREFIX}
 .for plug in qtaccessiblecompatwidgets qtaccessiblewidgets
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/accessible/lib${plug}.la \
-		${QTPREFIX}/plugins/accessible/
+		${DESTDIR}${QTPREFIX}/plugins/accessible/
 .endfor
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/imageformats/
 .for plug in qgif qjpeg qmng
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
-		${QTPREFIX}/plugins/imageformats/
+		${DESTDIR}${QTPREFIX}/plugins/imageformats/
 .endfor
 
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
