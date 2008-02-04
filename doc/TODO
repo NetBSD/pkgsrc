@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7034 2008/02/04 14:34:47 obache Exp $
+$NetBSD: TODO,v 1.7035 2008/02/04 16:16:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -1285,6 +1285,7 @@ Suggested package updates
 	o sipcalc-1.1.4
 	o sitecopy-0.16.3
 	o sitescooper-3.1.2
+	o sj3-lib-2.0.1.21 [http://code.google.com/p/sj3/]
 	o sjeng-11.2
 	o skampi-5.0.1
 	o skipstone-0.9.9
