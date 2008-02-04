@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2008/01/25 09:44:54 ghen Exp $
+# $NetBSD: options.mk,v 1.21 2008/02/04 13:07:54 ghen Exp $
 
 # Global and legacy options
 
@@ -91,7 +91,7 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL_AUTH -DUSE_CYRUS_SASL
+CCARGS+=	-DUSE_CYRUS_SASL
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
