@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7033 2008/02/04 13:51:53 wiz Exp $
+$NetBSD: TODO,v 1.7034 2008/02/04 14:34:47 obache Exp $
 
 Suggested new packages
 ======================
@@ -779,7 +779,6 @@ Suggested package updates
 	o ispman-1.2
 	o ja-gawk-3.1.5
 	o ja-grep-2.5.1a
-	o ja-less-382 [at http://www25.big.jp/~jam/less/]
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
