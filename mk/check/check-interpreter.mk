@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.21 2007/11/30 08:34:31 bjs Exp $
+# $NetBSD: check-interpreter.mk,v 1.22 2008/02/05 08:17:59 tnn Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -42,9 +42,7 @@ privileged-install-hook: _check-interpreter
 
 _check-interpreter: error-check .PHONY
 	@${STEP_MSG} "Checking for non-existent script interpreters in ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -e;								\
-	cd ${DESTDIR}${PREFIX};						\
+	${RUN} cd ${DESTDIR}${PREFIX};					\
 	${_CHECK_INTERP_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |\
 	while read file; do						\
 		case "$$file" in					\
