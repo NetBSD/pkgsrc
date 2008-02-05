@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/09/21 10:16:28 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2008/02/05 15:37:18 tnn Exp $
 #
 
 DISTNAME=	bmake-20051105
@@ -10,7 +10,7 @@ DISTFILES=	# empty
 # distfile obtained from ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 # source is kept in files/ for bootstrap purposes
 
-MAINTAINER=	sjg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
