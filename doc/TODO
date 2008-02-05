@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7035 2008/02/04 16:16:54 obache Exp $
+$NetBSD: TODO,v 1.7036 2008/02/05 11:38:18 obache Exp $
 
 Suggested new packages
 ======================
@@ -1031,7 +1031,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-INET6-2.51
-	o p5-IO-Socket-SSL-1.13
 	o p5-Image-ExifTool-7.13
 	o p5-Image-Info-1.27
 	o p5-Locale-Codes-2.07
@@ -1050,7 +1049,6 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-Params-Util-0.31
-	o p5-PathTools-3.27
 	o p5-Perl-Tidy-20071205
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
