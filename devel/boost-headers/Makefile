@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2008/01/04 19:58:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/05 23:00:27 heinz Exp $
 #
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
 BOOST_CONFIG=		generate
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/boost/Makefile.common"
 
@@ -14,9 +16,9 @@ BJAM_ARGS+=		--without-* # disable all libraries
 do-build:
 
 do-install: bjam-install
-	${FIND} ${PREFIX}/include/boost \
+	${FIND} ${DESTDIR}${PREFIX}/include/boost \
 		-type f -print | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
-	${FIND} ${PREFIX}/include/boost \
+	${FIND} ${DESTDIR}${PREFIX}/include/boost \
 		-type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 
 PTHREAD_OPTS+=		require
