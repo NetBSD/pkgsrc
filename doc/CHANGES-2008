@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.220 2008/02/05 14:07:05 reed Exp $
+$NetBSD: CHANGES-2008,v 1.221 2008/02/05 22:02:12 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -382,3 +382,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-PathTools to 3.27 [obache 2008-02-05]
 	Updated security/p5-IO-Socket-SSL to 1.13 [obache 2008-02-05]
 	Updated sysutils/pstree to 2.32nb1 [reed 2008-02-05]
+	Added mail/libspf2 version 1.2.5 [adrianp 2008-02-05]
