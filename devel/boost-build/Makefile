@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/05 22:44:18 heinz Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/05 22:50:40 heinz Exp $
 #
 
 BOOST_PACKAGE=		build
@@ -18,7 +18,7 @@ CONF_FILES=		${EGDIR}/site-config.jam \
 			${PKG_SYSCONFDIR}/site-config.jam
 
 # contains /usr/bin/python
-CHECK_INTERPRETER_SKIP= share/boost-build/example/customization/inline_file.py
+CHECK_INTERPRETER_SKIP=	share/boost-build/example/customization/inline_file.py
 CHECK_INTERPRETER_SKIP+=share/boost-build/tools/doxproc.py
 CHECK_INTERPRETER_SKIP+=share/boost-build/test/*.py
 # contains /bin/bash
@@ -38,8 +38,8 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/boost-build
-	cd ${WRKSRC}/tools/build/v2 && ${PAX} -rw -pp -pm . \
-	    ${PREFIX}/share/boost-build
+	cd ${WRKSRC}/tools/build/v2 && ${PAX} -rw -pp -pm		\
+		-s ':^.*\.orig$$::' . ${PREFIX}/share/boost-build
 	find ${PREFIX}/share/boost-build -name "*.orig" -exec rm "{}" \;
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/site-config.jam ${EGDIR}
