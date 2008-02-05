@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.10 2007/08/14 23:58:24 joerg Exp $
+# $NetBSD: check-perms.mk,v 1.11 2008/02/05 08:17:59 tnn Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -75,8 +75,7 @@ _CHECK_PERMS_GETDIRS_AWK=						\
 
 _check-perms: .PHONY
 	@${STEP_MSG} "Checking file permissions in ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
-	${PKG_INFO} -qe "checkperms>=1.1"				\
+	${RUN} ${PKG_INFO} -qe "checkperms>=1.1"			\
 	|| {								\
 		${WARNING_MSG} "[check-perms.mk] Skipping file permissions check."; \
 		${WARNING_MSG} "[check-perms.mk] Install sysutils/checkperms to enable this check."; \
