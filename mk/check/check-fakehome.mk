@@ -1,4 +1,4 @@
-# $NetBSD: check-fakehome.mk,v 1.1 2008/02/05 09:45:00 tnn Exp $
+# $NetBSD: check-fakehome.mk,v 1.2 2008/02/05 11:17:00 tnn Exp $
 #
 # This file checks that the package does not install files to $HOME.
 #
@@ -31,8 +31,8 @@ privileged-install-hook: _check-fakehome
 
 _check-fakehome: .PHONY
 	${RUN} if [ `ls -a ${FAKEHOMEDIR:Q} | ${AWK} 			\
-		'{if ($$0 != "." && $$0 != "..") cnt++}			\
-		END {print cnt?1:0}'					\
+		'{if ($$0 != "." && $$0 != "..") {x=1; exit}}		\
+		END {print x + 0}'					\
 	` = 1 ]; then							\
 		${WARNING_MSG} "[check-fakehome.mk] fake home directory not empty:"; \
 		find ${FAKEHOMEDIR} -print | ${SED} 's/^/	/';	\
