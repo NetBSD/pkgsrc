@@ -1,0 +1,23 @@
+# $NetBSD: Makefile.FreeBSD,v 1.1 2008/02/05 19:17:24 hira Exp $
+
+BUILD_DEPENDS+=		coreutils>=*:../../sysutils/coreutils
+BUILD_DEPENDS+=		patch>=*:../../devel/patch
+CONFIGURE_ARGS+=	--with-gnu-cp=${PREFIX}/bin/gcp
+CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/gpatch
+
+# libgcc_s.so is required, but FreeBSD does not have it.
+USE_PKGSRC_GCC=		yes
+
+# Is this required every time?
+pre-build:
+	ldconfig -m ${BUILDLINK_PREFIX.gcc34}/lib
+
+.if ${MACHINE_ARCH} == "i386"
+#OPENOFFICE_DLLSUFFIX=	fi
+OPENOFFICE_OUTPATH=	unxfbsdi
+OPENOFFICE_SETFILE=	FreeBSDX86
+.elif ${MACHINE_ARCH} == "x86_64"
+#OPENOFFICE_DLLSUFFIX=	fx
+OPENOFFICE_OUTPATH=	unxfbsdx
+OPENOFFICE_SETFILE=	FreeBSDAMD
+.endif
