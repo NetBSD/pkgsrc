@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.2 2008/01/04 19:58:40 jmmv Exp $
+# $NetBSD: bjam.mk,v 1.3 2008/02/05 22:39:41 heinz Exp $
 #
 
 .include "../../devel/boost-jam/buildlink3.mk"
@@ -10,7 +10,6 @@ BJAM=			${BUILDLINK_PREFIX.boost-jam}/bin/bjam
 
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
 BJAM_ARGS+=		--layout=system
-BJAM_ARGS+=		--prefix=${PREFIX}
 BJAM_ARGS+=		--toolset=${BOOST_TOOLSET}
 .if ${OPSYS} == "Darwin"
 BJAM_ARGS+=		-sTARGET_LIBDIR=${PREFIX}/lib
@@ -35,8 +34,8 @@ UNLIMIT_RESOURCES+=	datasize
 
 bjam-build:
 	@${_ULIMIT_CMD}							\
-	cd ${WRKSRC} && ${BJAM_CMD} stage
+	cd ${WRKSRC} && ${BJAM_CMD} --prefix=${PREFIX} stage
 
 bjam-install:
 	@${_ULIMIT_CMD}							\
-	cd ${WRKSRC} && ${BJAM_CMD} install
+	cd ${WRKSRC} && ${BJAM_CMD} --prefix=${DESTDIR}${PREFIX} install
