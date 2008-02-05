@@ -1,0 +1,30 @@
+$NetBSD: patch-cz,v 1.1 2008/02/05 19:17:25 hira Exp $
+
+From FreeBSD ports patch-i78875.
+
+--- libtextcat/libtextcat-2.2.patch.orig	2007-10-26 15:01:46.000000000 +0000
++++ libtextcat/libtextcat-2.2.patch	2008-02-03 00:35:33.000000000 +0000
+@@ -18,6 +18,23 @@
+   # when you set need_version to no, make sure it does not cause -set_version
+   # flags to be left without arguments
+   archive_cmds=
++***************
++*** 6280,6286 ****
++    ;;
++  
++  freebsd*)
++!   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
++    version_type=freebsd-$objformat
++    case $version_type in
++      freebsd-elf*)
++--- 6281,6287 ----
++    ;;
++  
++  freebsd*)
++!   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo elf`
++    version_type=freebsd-$objformat
++    case $version_type in
++      freebsd-elf*)
+ *** misc/libtextcat-2.2/src/Makefile.in	Thu May 22 13:39:52 2003
+ --- misc/build/libtextcat-2.2/src/Makefile.in	Fri Aug 17 21:51:26 2007
+ ***************
