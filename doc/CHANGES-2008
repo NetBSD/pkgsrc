@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.218 2008/02/05 11:02:35 obache Exp $
+$NetBSD: CHANGES-2008,v 1.219 2008/02/05 11:36:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -380,3 +380,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/ja-less to 382.262 [obache 2008-02-04]
 	Updated devel/atf to 0.4 [jmmv 2008-02-04]
 	Updated devel/p5-PathTools to 3.27 [obache 2008-02-05]
+	Updated security/p5-IO-Socket-SSL to 1.13 [obache 2008-02-05]
