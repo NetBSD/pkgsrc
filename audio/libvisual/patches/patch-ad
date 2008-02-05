@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/02/05 20:38:33 drochner Exp $
+
+--- libvisual/Makefile.in.orig	2008-01-29 15:12:46.000000000 +0100
++++ libvisual/Makefile.in
+@@ -213,7 +213,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_LIBADD =
++libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_LIBADD = ${RT_LIB_SCHED}
+ am_libvisual_@LIBVISUAL_VERSION_SUFFIX@_la_OBJECTS = lv_actor.lo \
+ 	lv_input.lo lv_event.lo lv_bin.lo lv_plugin.lo lv_video.lo \
+ 	lv_video_simd.lo lv_mem.lo lv_audio.lo lv_fourier.lo lv_list.lo \

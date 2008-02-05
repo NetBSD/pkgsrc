@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2008/02/05 20:38:33 drochner Exp $
+
+--- libvisual.pc.in.orig	2008-01-29 15:19:07.000000000 +0100
++++ libvisual.pc.in
+@@ -8,5 +8,5 @@ Name: libvisual
+ Version: @VERSION@
+ Description: an audio visualisation abstraction library.
+ Requires: @VISUAL_PKG_CONFIG_DEP@
+-Libs: -L${libdir} @VISUAL_LIBS@
++Libs: -L${libdir} @VISUAL_LIBS@ @RT_LIB_SCHED@
+ Cflags: -I${includedir} @VISUAL_CFLAGS@

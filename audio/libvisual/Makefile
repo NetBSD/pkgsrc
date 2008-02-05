@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/21 20:35:36 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/02/05 20:38:33 drochner Exp $
 #
 
 DISTNAME=		libvisual-0.4.0
@@ -17,6 +17,18 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+RT_LIB_SCHED=		-lrt
+.else
+RT_LIB_SCHED=		# empty
+.endif
+MAKE_ENV+=		RT_LIB_SCHED=${RT_LIB_SCHED}
+SUBST_CLASSES+=	rtlib
+SUBST_STAGE.rtlib=	post-patch
+SUBST_FILES.rtlib=	libvisual.pc.in
+SUBST_VARS.rtlib=	RT_LIB_SCHED
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
