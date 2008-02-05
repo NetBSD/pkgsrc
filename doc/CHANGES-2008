@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.217 2008/02/04 20:20:13 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.218 2008/02/05 11:02:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -379,3 +379,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/wget to 1.11 [obache 2008-02-04]
 	Updated misc/ja-less to 382.262 [obache 2008-02-04]
 	Updated devel/atf to 0.4 [jmmv 2008-02-04]
+	Updated devel/p5-PathTools to 3.27 [obache 2008-02-05]
