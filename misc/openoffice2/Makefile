@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/01/18 22:31:41 hira Exp $
+# $NetBSD: Makefile,v 1.37 2008/02/05 19:17:24 hira Exp $
 #
 
 OO_VER=			2.3.1
@@ -35,8 +35,6 @@ CONFIGURE_DIRS=		config_office
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
 
-.include "../../mk/compiler.mk"
-
 USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
@@ -47,7 +45,8 @@ CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 FreeBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-x86_64 NetBSD-[2-9]*-x86_64
 
 GNU_CONFIGURE=		yes
@@ -95,9 +94,6 @@ CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
 
 # XXX: Error in OOo internal libsndfile.
 CONFIGURE_ARGS+=	--disable-pasf
-
-# systray quickstarter is broken with mutex handling.
-CONFIGURE_ARGS+=	--disable-systray
 
 # Disable Java.
 CONFIGURE_ARGS+=	--without-java --disable-odk --disable-gcjaot
@@ -168,22 +164,12 @@ post-install:
 	${ECHO} bin/${OO_UNXNAME} >> ${PLIST_SRC}
 	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${PLIST_SRC}
 
-# everything specific to your OS/Arch goes into its own Makefile
-# group together i386, i486, i586 and i686 (for Linux)
-#
-ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
-
-.if exists(Makefile.${OPSYS}.${ARCH})
-.  include "Makefile.${OPSYS}.${ARCH}"
+# OS specific Makefile
+.if exists(Makefile.${OPSYS})
+.  include "Makefile.${OPSYS}"
 .endif
 
-# *.pc files are required, but these don't exist on NetBSD.
-.if ${OPSYS} == "NetBSD" && defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
-USE_BUILTIN.freetype2=	no
-USE_BUILTIN.Xfixes=     no
-USE_BUILTIN.Xrandr=     no
-USE_BUILTIN.Xrender=    no
-.endif
+.include "../../mk/compiler.mk"
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../lang/python/application.mk"
