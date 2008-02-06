@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/01/18 05:09:49 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2008/02/06 04:30:37 bjs Exp $
 
-DISTNAME=		elinks-0.11-20080109
-PKGREVISION=		2
-PKGNAME=		${DISTNAME:R}.${DISTNAME:E:S/-/./}
+DISTNAME=		elinks-0.11.4rc0
 CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		http://elinks.or.cz/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
