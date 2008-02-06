@@ -260,7 +260,7 @@ spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
 speex			Enable speex support.
 spf			Enable Sender Policy Framework support.
-spidermonkey		Enable Mozilla's C implementation of JavaScript.
+javascript		Enable Javascript support.
 sqlite			Enable SQLite support.
 squirrelmail-japanese	Add experimental Japanese fix to squirrelmail.
 squirrelmail-lite	Add experimental none-frame support to squirrelmail.
