@@ -1,19 +1,10 @@
-# $NetBSD: Makefile.FreeBSD,v 1.2 2008/02/05 22:11:16 hira Exp $
+# $NetBSD: Makefile.FreeBSD,v 1.3 2008/02/06 16:41:07 hira Exp $
+#
 
 BUILD_DEPENDS+=		coreutils>=*:../../sysutils/coreutils
 BUILD_DEPENDS+=		patch>=*:../../devel/patch
 CONFIGURE_ARGS+=	--with-gnu-cp=${PREFIX}/bin/gcp
 CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/gpatch
-
-# libgcc_s.so is required, but FreeBSD does not have it.
-USE_PKGSRC_GCC=		yes
-
-# Even if a conftest compiled with -Wl,-R${BUILDLINK_PREFIX.gcc34}/lib,
-# /libexec/ld-elf.so.1 cannot find libgcc_s.so.1.
-pre-configure:
-	ldconfig -m ${BUILDLINK_PREFIX.gcc34}/lib
-pre-build:
-	ldconfig -m ${BUILDLINK_PREFIX.gcc34}/lib
 
 .if ${MACHINE_ARCH} == "i386"
 #OPENOFFICE_DLLSUFFIX=	fi
