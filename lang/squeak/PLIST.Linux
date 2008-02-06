@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2008/02/06 18:45:32 reed Exp $
+lib/squeak/3.9-8/UUIDPlugin
+lib/squeak/3.9-8/vm-display-fbdev
+lib/squeak/3.9-8/vm-sound-ALSA
+lib/squeak/3.9-8/vm-sound-OSS
