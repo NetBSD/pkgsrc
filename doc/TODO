@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7038 2008/02/06 07:04:14 bjs Exp $
+$NetBSD: TODO,v 1.7039 2008/02/06 15:22:32 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1013,7 +1013,6 @@ Suggested package updates
 	o p5-Devel-StackTrace-1.16
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
-	o p5-Error-0.17012
 	o p5-File-Flat-1.02
 	o p5-File-Slurp-9999.13
 	o p5-Filter-1.33
