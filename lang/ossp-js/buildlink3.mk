@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/06 10:08:01 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/02/06 10:10:45 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OSSP_JS_BUILDLINK3_MK:=	${OSSP_JS_BUILDLINK3_MK}+
@@ -17,6 +17,6 @@ BUILDLINK_PKGSRCDIR.ossp-js?=	../../lang/ossp-js
 .  include "../../lang/ossp-js/libm.mk"
 .endif	# OSSP_JS_BUILDLINK3_MK
 
-.include "../../mk/dlopen/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
