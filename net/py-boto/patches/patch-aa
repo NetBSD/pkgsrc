@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/02/06 07:11:14 bjs Exp $
+
+--- setup.py.orig	2007-12-30 12:14:31.000000000 -0500
++++ setup.py
+@@ -37,7 +37,6 @@ setup(name = "boto",
+       url = "http://code.google.com/p/boto/",
+       packages = [ 'boto', 'boto.sqs', 'boto.s3', 'boto.ec2', 'boto.sdb',
+                    'boto.mturk', 'boto.contrib', 'tests'],
+-      scripts=['test.py'],
+       license = 'MIT',
+       platforms = 'Posix; MacOS X; Windows',
+       classifiers = [ 'Development Status :: 3 - Alpha',
