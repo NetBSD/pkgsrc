@@ -1,20 +1,17 @@
-$NetBSD: patch-ac,v 1.16 2007/01/08 11:29:47 adam Exp $
+$NetBSD: patch-ac,v 1.17 2008/02/06 18:56:52 adam Exp $
 
---- configure.orig	2006-12-04 23:02:10.000000000 +0100
+--- configure.orig	2007-12-13 06:48:49.000000000 +0100
 +++ configure
-@@ -6315,6 +6315,7 @@ fi
+@@ -7198,6 +7198,7 @@ fi
  
  for ac_header in stdarg.h stddef.h stddef.h stdlib.h stdint.h malloc.h \
  	search.h getopt.h pthread.h values.h float.h limits.h termios.h \
 +	crt_externs.h \
- 	errno.h time.h unistd.h fenv.h strings.h inttypes.h \
+ 	errno.h time.h unistd.h fenv.h strings.h inttypes.h setjmp.h \
  	sys/time.h sys/times.h sys/types.h sys/select.h fpu_control.h \
  	sys/fpu.h strings.h sys/socket.h sys/stat.h sys/mman.h \
-@@ -7974,8 +7975,10 @@ fi
+@@ -8750,6 +8751,7 @@ fi
  
- 
- 
-+
  for ac_func in lrand48 drand48 srand48 setmode setenv getenv \
  	__freadable _sysconf getrusage strerror cbrt lsqrt vsnprintf \
 +	_NSGetEnviron \
