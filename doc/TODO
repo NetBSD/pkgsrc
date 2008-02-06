@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7037 2008/02/06 00:49:29 obache Exp $
+$NetBSD: TODO,v 1.7038 2008/02/06 07:04:14 bjs Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ Suggested package updates
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
 	o clisp-2.44 [pkgsrc-wip]
-	o cmake-2.4.8
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o compiz-0.6.2
