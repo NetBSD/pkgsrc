@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2008/02/06 10:08:02 bjs Exp $
 
 --- Makefile.in.orig	2007-02-08 04:25:33.000000000 -0500
 +++ Makefile.in
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
 -               src/jsdso.lo                \
 -               src/fdlibm/e_acos.lo        \
 +               src/jsdso.lo                
-+.if defined(PKG_FDLIBM_MATH_REQUESTED)
++.if defined(JS_FDLIBM_MATH_REQUESTED)
 +LIB_OBJS+=     src/fdlibm/e_acos.lo        \
                 src/fdlibm/e_asin.lo        \
                 src/fdlibm/e_atan2.lo       \
