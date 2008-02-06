@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2006/09/05 21:03:58 tv Exp $
+$NetBSD: distinfo,v 1.10 2008/02/06 23:27:02 heinz Exp $
 
-SHA1 (GeoIP-1.4.0.tar.gz) = a108e33661db98a43a9c7334816c1dce6d759c46
-RMD160 (GeoIP-1.4.0.tar.gz) = 54779bae497d6032a35c1c1de8c97461db9b7075
-Size (GeoIP-1.4.0.tar.gz) = 808314 bytes
-SHA1 (patch-aa) = 5a1c82ce58945a645354fffbe598e4d1c853e519
-SHA1 (patch-ab) = b25dec12477c7b198b3a57764abdc8ac1deb52fb
+SHA1 (GeoIP-1.4.4.tar.gz) = 4a2937e7a8fc7c26aa88c0678791246b58d81d02
+RMD160 (GeoIP-1.4.4.tar.gz) = 4aa31840ec6496647551c6e12c9c5e32dceed426
+Size (GeoIP-1.4.4.tar.gz) = 944698 bytes
+SHA1 (patch-aa) = 0b40dd16471e6e94d04493dfb61bc1270161d2b1
+SHA1 (patch-ab) = 5b229ed08c66580d50965cbfa6b7af76154a6a60
+SHA1 (patch-ac) = 4705cdce7f4dc1eb5d814f0d2101dc95d948522c
+SHA1 (patch-ad) = 3d9235f7978d3bfff2d37fcb6c97c467998ba37e
