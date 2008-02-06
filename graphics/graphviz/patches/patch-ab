@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.12 2007/01/08 11:29:47 adam Exp $
+$NetBSD: patch-ab,v 1.13 2008/02/06 18:56:52 adam Exp $
 
---- config.h.in.orig	2006-12-04 23:02:31.000000000 +0100
+--- config.h.in.orig	2007-12-13 06:52:34.000000000 +0100
 +++ config.h.in
-@@ -57,6 +57,9 @@
- /* Define to 1 if you have the `dcgettext' function. */
- #undef HAVE_DCGETTEXT
+@@ -60,6 +60,9 @@
+ /* Define if you have the DevIL library */
+ #undef HAVE_DEVIL
  
 +/* Define to 1 if you have the <crt_externs.h> header file. */
 +#undef HAVE_CRT_EXTERNS_H
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.12 2007/01/08 11:29:47 adam Exp $
  /* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
     */
  #undef HAVE_DIRENT_H
-@@ -345,6 +348,9 @@
+@@ -360,6 +363,9 @@
  /* Define to 1 if the system has the type `_Bool'. */
  #undef HAVE__BOOL
  
