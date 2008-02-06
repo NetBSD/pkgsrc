@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.696 2008/01/17 03:33:28 tnn Exp $
+# $NetBSD: Makefile,v 1.697 2008/02/06 07:12:46 bjs Exp $
 #
 
 COMMENT=	Networking tools
@@ -379,6 +379,7 @@ SUBDIR+=	py-IP
 SUBDIR+=	py-METAR
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-adns
+SUBDIR+= 	py-boto	
 SUBDIR+=	py-dns
 SUBDIR+=	py-google
 SUBDIR+=	py-kenosis
