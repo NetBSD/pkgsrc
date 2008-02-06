@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/06 10:08:01 bjs Exp $
 #
 
 DISTNAME=	js-1.6.20070208
 PKGNAME=	ossp-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.ossp.org/pkg/lib/js/
 
@@ -37,26 +38,12 @@ REPLACE.js.old=	./js
 REPLACE.js.new=	${PREFIX}/bin/js
 REPLACE_FILES.js=	jslint.js jspack.js
 
-.include "../../mk/bsd.prefs.mk"
+.include "libm.mk"
 
-.if defined(PKG_DEVELOPER)
-CPPFLAGS+=	-Wall
-.endif
-
-###
-### XXX I took this from jslibmath.h.  If this is not correct, please feel
-### 	free to change it.  Our lang/spidermonkey package never uses
-### 	the Sun math library, and I'm not sure if this is correct.
-###
-JS_FDLIBM_PLATFORMS=	Linux-*-* IRIX-*-* SunOS-*-* \
- 	 	 	Solaris-*-* AIX-*-* HPUX-*-*
-
-.if !empty(JS_FDLIBM_PLATFORMS:M${MACHINE_PLATFORM})
-CPPFLAGS+=		-DPKG_FDLIBM_MATH_REQUESTED=1
-MAKE_ENV+=		-DPKG_FDLIBM_MATH_REQUESTED=1
+.if !empty(JS_FDLIBM_MATH_REQUESTED:M[Yy][Ee][Ss])
+MAKE_ENV+=		-DJS_FDLIBM_MATH_REQUESTED=1
 CONFIGURE_ENV+=		LIBM=""
 .else
-CPPFLAGS+=		-DPKG_FDLIBM_MATH_REQUESTED=0
 CONFIGURE_ENV+=		LIBM="-lm"
 .endif
 
