@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/26 18:24:51 wennmach Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/06 07:17:00 bjs Exp $
 
---- setup.py.orig	Mon Feb  9 04:49:51 2004
-+++ setup.py	Thu Aug 26 19:55:38 2004
-@@ -21,8 +21,8 @@
- 							   ["_librsyncmodule.c"],
+--- setup.py.orig	2008-01-04 13:11:39.000000000 -0500
++++ setup.py
+@@ -48,8 +48,8 @@ setup(name="duplicity",
+ 							   library_dirs=libdir_list,
  							   libraries=["rsync"])],
  	  scripts = ['rdiffdir', 'duplicity'],
 -	  data_files = [('share/man/man1', ['duplicity.1', 'rdiffdir.1']),
