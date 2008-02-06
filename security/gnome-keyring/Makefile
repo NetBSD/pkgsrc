@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/01/11 14:02:42 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/06 00:36:06 tnn Exp $
 
 DISTNAME=	gnome-keyring-2.20.3
 CATEGORIES=	security gnome
@@ -17,6 +17,8 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gnome-keyring-1.pc.in
+
+CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
