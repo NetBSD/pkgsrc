@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/19 13:46:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/06 07:17:00 bjs Exp $
 bin/duplicity
 bin/rdiffdir
 man/man1/duplicity.1
@@ -9,6 +9,7 @@ share/doc/${PKGNAME}/README
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
+${PYSITELIB}/duplicity/_librsync.so
 ${PYSITELIB}/duplicity/backends.py
 ${PYSITELIB}/duplicity/backends.pyc
 ${PYSITELIB}/duplicity/backends.pyo
@@ -72,6 +73,11 @@ ${PYSITELIB}/duplicity/statistics.pyo
 ${PYSITELIB}/duplicity/tarfile.py
 ${PYSITELIB}/duplicity/tarfile.pyc
 ${PYSITELIB}/duplicity/tarfile.pyo
-${PYSITELIB}/duplicity/_librsync.so
+${PYSITELIB}/duplicity/tempdir.py
+${PYSITELIB}/duplicity/tempdir.pyc
+${PYSITELIB}/duplicity/tempdir.pyo
+${PYSITELIB}/duplicity/urlparse_2_5.py
+${PYSITELIB}/duplicity/urlparse_2_5.pyc
+${PYSITELIB}/duplicity/urlparse_2_5.pyo
 @dirrm share/doc/${PKGNAME}
 @dirrm ${PYSITELIB}/duplicity
