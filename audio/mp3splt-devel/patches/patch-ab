@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/02/06 09:31:06 bjs Exp $
+
+--- configure.orig	2006-12-21 16:36:28.000000000 -0500
++++ configure
+@@ -3260,30 +3260,9 @@ fi
+ { echo "$as_me:$LINENO: checking the host" >&5
+ echo $ECHO_N "checking the host... $ECHO_C" >&6; }
+ case $host in
+-	*linux*)
+-		HOST="Linux-based system"
+-		;;
+-	*openbsd*)
+-		HOST="OpenBSD"
+-		;;
+-	*netbsd*)
+-		HOST="NetBSD"
+-		;;
+-	*freebsd*)
+-		HOST="FreeBSD"
+-		;;
+-	*mingw*)
+-		HOST="Mingw"
+-		LIBS="libvorbisfile.a libmad.a libvorbis.a libogg.a libid3tag.a libz.a libmp3splt.a -lwsock32"
+-		;;
+-	*solaris*)
+-		HOST="Solaris"
+-		LIBS="$LIBS -lsocket"
+-		;;
+ 	*)
+ 		HOST="Other"
+                 LIBS="$LIBS"
+-#		LIBS="-lmad -logg -lvorbis -lvorbisfile -lm"
+ 		;;
+ esac
+ { echo "$as_me:$LINENO: result: $HOST" >&5
