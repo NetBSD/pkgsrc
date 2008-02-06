@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2007/11/23 00:41:22 bjs Exp $
+# $NetBSD: Makefile,v 1.367 2008/02/06 09:33:02 bjs Exp $
 #
 
 COMMENT=	Audio tools
@@ -162,6 +162,7 @@ SUBDIR+=	libdiscid
 SUBDIR+=	libgpod
 SUBDIR+=	libhydrogen
 SUBDIR+=	libid3tag
+SUBDIR+= 	libmp3splt
 SUBDIR+=	libmad
 SUBDIR+=	libmikmod
 SUBDIR+=	libmodplug
@@ -214,6 +215,7 @@ SUBDIR+=	mp3check
 SUBDIR+=	mp3cut
 SUBDIR+=	mp3info
 SUBDIR+=	mp3splt
+SUBDIR+= 	mp3splt-devel
 SUBDIR+=	mp3to
 SUBDIR+=	mpc
 SUBDIR+=	mpegaudio
