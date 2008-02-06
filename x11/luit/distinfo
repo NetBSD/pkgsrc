@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/10 13:46:47 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/02/06 08:03:10 bjs Exp $
 
-SHA1 (luit-1.0.2.tar.bz2) = 0b811edc2b1cf11716cb24c468613622e72ebf35
-RMD160 (luit-1.0.2.tar.bz2) = 3e85593ea25e92c694c40351d91efa616cf46f66
-Size (luit-1.0.2.tar.bz2) = 99235 bytes
-SHA1 (patch-aa) = 61f1a4de4cef760fe54fb96e7cae0c1c1548ecd4
+SHA1 (luit-1.0.3.tar.bz2) = 8b32bcc2f72af7c8c1cdaede3d4ff5b251ecbf31
+RMD160 (luit-1.0.3.tar.bz2) = f03a3ff729284f78c1c1ec90fc3efd1fdee8a43b
+Size (luit-1.0.3.tar.bz2) = 104642 bytes
