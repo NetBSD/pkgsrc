@@ -1,0 +1,59 @@
+$NetBSD: patch-ac,v 1.1 2008/02/06 23:27:02 heinz Exp $
+
+  - probably a typo
+    http://sourceforge.net/tracker/index.php?func=detail&aid=1888390&group_id=66844&atid=515957
+
+  - move call of GeoIP_database_edition() to where it is actually needed.
+    Otherwise a segmentation fault may occur because gi may be NULL (see
+    GeoIP_open()).
+    http://sourceforge.net/tracker/index.php?func=detail&aid=1888390&group_id=66844&atid=515957
+
+  - GeoIP_country_code[] does not contain NULL, so the test for NULL can
+    never succeed. In order to change this we steal the assignment to
+    country_code from GeoIP_country_code_by_name(); while here move the
+    assignment to country_name where it is actually needed.
+    http://sourceforge.net/tracker/index.php?func=detail&aid=1888390&group_id=66844&atid=515957
+    
+
+--- apps/geoiplookup.c.orig	2007-08-16 01:06:28.000000000 +0200
++++ apps/geoiplookup.c
+@@ -64,22 +64,22 @@ int main (int argc, char *argv[]) {
+ 		exit(1);
+ 	}
+ 
+-	if (custom_file != NULL) {
++	if (custom_directory != NULL) {
+ 		GeoIP_setup_custom_directory(custom_directory);
+ 	}
+ 	_GeoIP_setup_dbfilename();
+ 
+ 	if (custom_file != NULL) {
+ 		gi = GeoIP_open(custom_file, GEOIP_STANDARD);
+-		i = GeoIP_database_edition(gi);
+ 		if (NULL == gi) {
+-			printf("%s not available, skipping...\n", GeoIPDBDescription[i]);
++			printf("%s not available, skipping...\n", custom_file);
+ 		} else {
+ 			if (version_flag == 1) {
+ 				db_info = GeoIP_database_info(gi);
+ 				printf("%s: %s\n",GeoIPDBDescription[i],db_info);
+ 				free(db_info);
+ 			} else {
++				i = GeoIP_database_edition(gi);
+ 				geoiplookup(gi,hostname,i);
+ 			}
+ 		}
+@@ -126,11 +126,11 @@ void geoiplookup(GeoIP* gi,char *hostnam
+ 	}
+ 	if (GEOIP_COUNTRY_EDITION == i) {
+ 		country_id = GeoIP_id_by_name(gi, hostname);
+-		country_code = GeoIP_country_code[country_id];
+-		country_name = GeoIP_country_name[country_id];
++		country_code = (country_id > 0) ?  GeoIP_country_code[country_id] : NULL;
+ 		if (country_code == NULL) {
+ 			printf("%s: IP Address not found\n", GeoIPDBDescription[i]);
+ 		} else {
++			country_name = GeoIP_country_name[country_id];
+ 			printf("%s: %s, %s\n", GeoIPDBDescription[i], country_code, country_name);
+ 		}
+ 	} else if (GEOIP_REGION_EDITION_REV0 == i || GEOIP_REGION_EDITION_REV1 == i) {
