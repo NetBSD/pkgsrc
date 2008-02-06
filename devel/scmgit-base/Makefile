@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 05:14:39 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/06 07:53:31 bjs Exp $
 #
 
 .include "${.CURDIR}/../scmgit/Makefile.common"
 
 PKGNAME=		scmgit-base-${GIT_VERSION}
-PKGREVISION=		1
 COMMENT=		GIT Tree History Storage Tool (base package)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +11,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		git-[0-9]*		# misc/git
 
 USE_LANGUAGES=		c99
-USE_TOOLS+=		perl:run sh:run wish:run
+USE_TOOLS+=		perl:run sh:run wish:run msgfmt
 
 MAKE_ENV+=		CURLDIR=${BUILDLINK_PREFIX.curl:Q}
 MAKE_ENV+=		PYTHON_PATH=${PYTHONBIN:Q}
