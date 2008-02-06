@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2007/08/09 14:12:35 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/02/06 22:39:43 joerg Exp $
 
-DISTNAME=	pkg_tarup-1.6.6
+DISTNAME=	pkg_tarup-1.7
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty

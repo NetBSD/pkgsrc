@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.20 2006/10/29 07:50:27 erh Exp $
+# $Id: pkg_tarup,v 1.21 2008/02/06 22:39:43 joerg Exp $
 #
 # Tar up installed package
 #
@@ -86,9 +86,8 @@ create_package()
 	check_and_add -S "${PKG_DBDIR}/${PKG}/+SIZE_ALL"
 	check_and_add -i "${PKG_DBDIR}/${PKG}/+INSTALL"
 	check_and_add -k "${PKG_DBDIR}/${PKG}/+DEINSTALL"
-	check_and_add -r "${PKG_DBDIR}/${PKG}/+REQUIRE"
 	check_and_add -D "${PKG_DBDIR}/${PKG}/+DISPLAY"
-	check_and_add -m "${PKG_DBDIR}/${PKG}/+MTREE"		#NOTYET#
+	check_and_add -m "${PKG_DBDIR}/${PKG}/+MTREE"
 	check_and_add -n "${PKG_DBDIR}/${PKG}/+PRESERVE"
 
 	PLIST=/tmp/+CONTENTS.$$
@@ -101,25 +100,11 @@ create_package()
 	${SED} \
 		-e '/^@comment MD5:/d' \
 		-e '/^@comment Symlink:/d' \
-		-e '/^@blddep/d' \
-		-e '/^@pkgdep/d' \
-		-e '/^@pkgcfl/d' \
-		-e '/^@name/d' \
 		-e '/^@mtree/d' \
-		-e '/^@cwd \.$/d' \
+		-e '/^@cwd/d' \
+		-e '/^@src/d' \
 		-e '/^@ignore/,/^.*$/d' \
 		<"${PKG_DBDIR}/${PKG}/+CONTENTS" >"${PLIST}"
-
-	# Duplicate first @cwd (work around pkg_create "feature" ...)
-	${GREP} '^@cwd' "${PLIST}" | ${HEAD} -1 >"${PLIST}.1"
-	if [ -s "${PLIST}.1" ]
-	then
-		${SED} \
-		   -e "/`cat \"${PLIST}.1\" | ${SED} 's,/,\\\\/,g'`/r${PLIST}.1" \
-		   <"${PLIST}" >"${PLIST}.2"
-		mv "${PLIST}.2" "${PLIST}"
-	fi
-	rm "${PLIST}.1"
 
 	# ${ECHO} -----
 	# cat $PLIST
@@ -133,16 +118,18 @@ create_package()
 	# here, since we have no way to pass it to pkg_create, but maybe someone
 	# will care enough to fix the rest of this.
 	PKG_PREFIX=`pkg_info -qp "${PKG}" | ${HEAD} -1 | ${SED} -e's/^@cwd[[:space:]]*//'`
-	PKG_DEPS=`pkg_info -qf "${PKG}" | ${GREP} "^@pkgdep" | ${SED} -e's/^@pkgdep[[:space:]]*//'`
-	PKG_CONFLICT=`pkg_info -qf "${PKG}" | ${GREP} "^@pkgcfl" | ${SED} -e's/^@pkgcfl[[:space:]]*//'`
 
 	PKG_ARGS="${PKG_ARGS} -v"
 	PKG_ARGS="${PKG_ARGS} -f \"${PLIST}\""
 	PKG_ARGS="${PKG_ARGS} -l"
 	PKG_ARGS="${PKG_ARGS} -p \"${PKG_PREFIX}\""
-	PKG_ARGS="${PKG_ARGS} -P \"${PKG_DEPS}\""
-	PKG_ARGS="${PKG_ARGS} -C \"${PKG_CONFLICT}\""
+	PKG_ARGS="${PKG_ARGS} -L \"${PKG_PREFIX}\""
+	PKG_ARGS="${PKG_ARGS} -I \"${PKG_PREFIX}\""
 	PKG_ARGS="${PKG_ARGS} \"${PKGREPOSITORY}/${PKG}${PKG_SUFX}\""
+	if [ -f "${PKG_DBDIR}/${PKG}/+VIEWS" ]
+	then
+		PKG_ARGS="${PKG_ARGS} -E"
+	fi
 	eval pkg_create "${PKG_ARGS}"
 
 	rm -f "${PLIST}"
