@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/12 04:22:20 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/06 07:53:31 bjs Exp $
 
 NetBSD 3.0 needs -liconv, too.
 
 AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 
---- Makefile.orig	2007-12-01 16:21:12.000000000 -0500
+--- Makefile.orig	2008-02-01 23:09:01.000000000 -0500
 +++ Makefile
-@@ -139,8 +139,6 @@ uname_P := $(shell sh -c 'uname -p 2>/de
+@@ -150,8 +150,6 @@ uname_P := $(shell sh -c 'uname -p 2>/de
  
  # CFLAGS and LDFLAGS are for the users to override from the command line.
  
@@ -15,9 +15,9 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  ALL_CFLAGS = $(CFLAGS)
  ALL_LDFLAGS = $(LDFLAGS)
  STRIP ?= strip
-@@ -177,12 +175,8 @@ GITWEB_SITE_FOOTER =
+@@ -192,12 +190,8 @@ GITWEB_SITE_FOOTER =
  
- export prefix bindir gitexecdir sharedir template_dir sysconfdir
+ export prefix bindir gitexecdir sharedir template_dir htmldir sysconfdir
  
 -CC = gcc
 -AR = ar
@@ -28,8 +28,8 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -402,9 +396,10 @@ ifeq ($(uname_S),Darwin)
- 	NO_STRLCPY = YesPlease
+@@ -421,9 +415,10 @@ ifeq ($(uname_S),Darwin)
+ 	NO_MEMMEM = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
 +	NEEDS_LIBICONV = YesPlease
@@ -38,9 +38,9 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 -	SHELL_PATH = /bin/bash
 +	SHELL_PATH = ${BASH}
  	NO_STRCASESTR = YesPlease
+ 	NO_MEMMEM = YesPlease
  	NO_HSTRERROR = YesPlease
- 	ifeq ($(uname_R),5.8)
-@@ -420,8 +415,6 @@ ifeq ($(uname_S),SunOS)
+@@ -441,8 +436,6 @@ ifeq ($(uname_S),SunOS)
  		NO_C99_FORMAT = YesPlease
  		NO_STRTOUMAX = YesPlease
  	endif
@@ -49,7 +49,7 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  	BASIC_CFLAGS += -D__EXTENSIONS__
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -451,9 +444,7 @@ ifeq ($(uname_S),OpenBSD)
+@@ -476,9 +469,7 @@ ifeq ($(uname_S),OpenBSD)
  	BASIC_LDFLAGS += -L/usr/local/lib
  endif
  ifeq ($(uname_S),NetBSD)
@@ -60,7 +60,7 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  	BASIC_CFLAGS += -I/usr/pkg/include
  	BASIC_LDFLAGS += -L/usr/pkg/lib
  	ALL_LDFLAGS += -Wl,-rpath,/usr/pkg/lib
-@@ -718,7 +709,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
+@@ -779,7 +770,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  TCLTK_PATH_SQ = $(subst ','\'',$(TCLTK_PATH))
  
@@ -68,24 +68,19 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 +LIBS += $(GITLIBS) $(EXTLIBS)
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
- 	-DETC_GITCONFIG='"$(ETC_GITCONFIG_SQ)"' $(COMPAT_CFLAGS)
-@@ -991,14 +982,14 @@ remove-dashes:
+ 	$(COMPAT_CFLAGS)
+@@ -1047,10 +1038,10 @@ remove-dashes:
  ### Installation rules
  
  install: all
--	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(bindir_SQ)'
--	$(INSTALL) -d -m755 '$(DESTDIR_SQ)$(gitexecdir_SQ)'
+-	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(bindir_SQ)'
+-	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(gitexecdir_SQ)'
 -	$(INSTALL) $(ALL_PROGRAMS) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
 -	$(INSTALL) git$X '$(DESTDIR_SQ)$(bindir_SQ)'
 +	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(bindir_SQ)'
-+	$(BSD_INSTALL_PROGRAM_DIR) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
++	$(BSD_INSTALL_SCRIPT_DIR) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
 +	$(BSD_INSTALL_SCRIPT) $(ALL_PROGRAMS) '$(DESTDIR_SQ)$(gitexecdir_SQ)'
 +	$(BSD_INSTALL_SCRIPT) git$X '$(DESTDIR_SQ)$(bindir_SQ)'
  	$(MAKE) -C templates DESTDIR='$(DESTDIR_SQ)' install
- 	$(MAKE) -C perl prefix='$(prefix_SQ)' install
+ 	$(MAKE) -C perl prefix='$(prefix_SQ)' DESTDIR='$(DESTDIR_SQ)' install
  ifndef NO_TCLTK
--	$(INSTALL) gitk-wish '$(DESTDIR_SQ)$(bindir_SQ)'/gitk
-+	$(BSD_INSTALL_SCRIPT) gitk-wish '$(DESTDIR_SQ)$(bindir_SQ)'/gitk
- 	$(MAKE) -C git-gui install
- endif
- 	if test 'z$(bindir_SQ)' != 'z$(gitexecdir_SQ)'; \
