@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7036 2008/02/05 11:38:18 obache Exp $
+$NetBSD: TODO,v 1.7037 2008/02/06 00:49:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -414,7 +414,7 @@ Suggested package updates
 	o ap-auth-pam-1.1.1
 	o ap-dtcl-1.0.0
 	o ap-fastcgi-2.4.6
-	o ap-layout-5.0
+	o ap-layout-3.4
 	o ap-mp3-0.40
 	o ap-python-3.3.1
 	o ap-ssl-2.8.30
