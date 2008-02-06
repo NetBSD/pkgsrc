@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.226 2008/02/06 07:17:31 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.227 2008/02/06 07:55:38 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -388,3 +388,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cmake to 2.4.8 [bjs 2008-02-06]
 	Added net/py-boto version 1.0a [bjs 2008-02-06]
 	Updated sysutils/duplicity to 0.4.9 [bjs 2008-02-06]
+	Updated devel/scmgit to 1.5.4 [bjs 2008-02-06]
+	Updated devel/scmgit-base to 1.5.4 [bjs 2008-02-06]
+	Updated devel/scmgit-docs to 1.5.4 [bjs 2008-02-06]
