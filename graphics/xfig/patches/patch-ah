@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2008/02/06 23:33:01 smb Exp $
+
+--- w_drawprim.c.orig	2004-02-09 13:32:56.000000000 -0500
++++ w_drawprim.c	2008-02-06 18:28:34.000000000 -0500
+@@ -36,6 +36,7 @@
+ #include "mode.h"
+ #include "object.h"
+ #include "u_fonts.h"
++#include "u_create.h"
+ #include "w_canvas.h"
+ #include "w_drawprim.h"
+ #include "w_indpanel.h"
