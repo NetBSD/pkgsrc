@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 04:22:20 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/06 07:53:31 bjs Exp $
 bin/git
 bin/git-add
 bin/git-add--interactive
@@ -24,7 +24,6 @@ bin/git-clone
 bin/git-commit
 bin/git-commit-tree
 bin/git-config
-bin/git-convert-objects
 bin/git-count-objects
 bin/git-cvsexportcommit
 bin/git-cvsimport
@@ -35,6 +34,7 @@ bin/git-diff
 bin/git-diff-files
 bin/git-diff-index
 bin/git-diff-tree
+bin/git-fast-export
 bin/git-fast-import
 bin/git-fetch
 bin/git-fetch--tool
@@ -50,6 +50,7 @@ bin/git-get-tar-commit-id
 bin/git-grep
 bin/git-gui
 bin/git-hash-object
+bin/git-help--browse
 bin/git-http-fetch
 bin/git-http-push
 bin/git-imap-send
@@ -57,7 +58,6 @@ bin/git-index-pack
 bin/git-init
 bin/git-init-db
 bin/git-instaweb
-bin/git-local-fetch
 bin/git-log
 bin/git-lost-found
 bin/git-ls-files
@@ -109,7 +109,6 @@ bin/git-rev-list
 bin/git-rev-parse
 bin/git-revert
 bin/git-rm
-bin/git-runstatus
 bin/git-send-email
 bin/git-send-pack
 bin/git-sh-setup
@@ -119,16 +118,11 @@ bin/git-show
 bin/git-show-branch
 bin/git-show-index
 bin/git-show-ref
-bin/git-ssh-fetch
-bin/git-ssh-pull
-bin/git-ssh-push
-bin/git-ssh-upload
 bin/git-stash
 bin/git-status
 bin/git-stripspace
 bin/git-submodule
 bin/git-svn
-bin/git-svnimport
 bin/git-symbolic-ref
 bin/git-tag
 bin/git-tar-tree
@@ -156,6 +150,7 @@ share/git-core/templates/hooks/pre-commit
 share/git-core/templates/hooks/pre-rebase
 share/git-core/templates/hooks/update
 share/git-core/templates/info/exclude
+share/git-gui/lib/about.tcl
 share/git-gui/lib/blame.tcl
 share/git-gui/lib/branch.tcl
 share/git-gui/lib/branch_checkout.tcl
@@ -165,16 +160,28 @@ share/git-gui/lib/branch_rename.tcl
 share/git-gui/lib/browser.tcl
 share/git-gui/lib/checkout_op.tcl
 share/git-gui/lib/choose_font.tcl
+share/git-gui/lib/choose_repository.tcl
 share/git-gui/lib/choose_rev.tcl
 share/git-gui/lib/class.tcl
 share/git-gui/lib/commit.tcl
 share/git-gui/lib/console.tcl
 share/git-gui/lib/database.tcl
+share/git-gui/lib/date.tcl
 share/git-gui/lib/diff.tcl
 share/git-gui/lib/encoding.tcl
 share/git-gui/lib/error.tcl
+share/git-gui/lib/git-gui.ico
 share/git-gui/lib/index.tcl
+share/git-gui/lib/logo.tcl
 share/git-gui/lib/merge.tcl
+share/git-gui/lib/msgs/de.msg
+share/git-gui/lib/msgs/fr.msg
+share/git-gui/lib/msgs/hu.msg
+share/git-gui/lib/msgs/it.msg
+share/git-gui/lib/msgs/ja.msg
+share/git-gui/lib/msgs/ru.msg
+share/git-gui/lib/msgs/sv.msg
+share/git-gui/lib/msgs/zh_cn.msg
 share/git-gui/lib/option.tcl
 share/git-gui/lib/remote.tcl
 share/git-gui/lib/remote_branch_delete.tcl
@@ -182,6 +189,13 @@ share/git-gui/lib/shortcut.tcl
 share/git-gui/lib/status_bar.tcl
 share/git-gui/lib/tclIndex
 share/git-gui/lib/transport.tcl
+share/git-gui/lib/win32.tcl
+share/git-gui/lib/win32_shortcut.js
+share/gitk/lib/msgs/de.msg
+@dirrm share/gitk/lib/msgs
+@dirrm share/gitk/lib
+@dirrm share/gitk
+@dirrm share/git-gui/lib/msgs
 @dirrm share/git-gui/lib
 @dirrm share/git-gui
 @dirrm share/git-core/templates/info

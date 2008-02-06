@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2007/12/30 13:34:19 joerg Exp $
+# $NetBSD: Makefile.common,v 1.4 2008/02/06 07:53:31 bjs Exp $
 #
+# used by devel/scmgit-base/Makefile
+# used by devel/scmgit-docs/Makefile
 
 DISTNAME=	git-${GIT_VERSION}
 CATEGORIES=	devel scm
@@ -11,7 +13,7 @@ HOMEPAGE?=	http://git.or.cz/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GIT_VERSION=	1.5.3.7
+GIT_VERSION=	1.5.4
 
 .include "../../mk/bsd.fast.prefs.mk"
 
