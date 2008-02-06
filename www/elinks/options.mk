@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.7 2008/01/11 14:52:42 abs Exp $
+# $NetBSD: options.mk,v 1.8 2008/02/06 04:30:37 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
-PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey finger gopher
+PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
 PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-fastmem elinks-exmode expat
 PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_SUGGESTED_OPTIONS=	ssl
+
+PKG_OPTIONS_LEGACY_OPTS= spidermonkey:javascript
 
 .include "../../mk/bsd.options.mk"
 
@@ -39,11 +41,11 @@ CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--disable-nntp
 .endif
 
-.if !empty(PKG_OPTIONS:Mspidermonkey)
+.if !empty(PKG_OPTIONS:Mjavascript)
 
-.include "../../lang/spidermonkey/buildlink3.mk"
+.include "../../lang/ossp-js/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-spidermonkey
+CONFIGURE_ARGS+=	--with-spidermonkey=${BUILDLINK_PREFIX.ossp-js:Q}
 CONFIGURE_ARGS+=	--enable-sm-scripting
 .else
 CONFIGURE_ARGS+=	--without-spidermonkey
