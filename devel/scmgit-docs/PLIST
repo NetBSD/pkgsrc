@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 04:22:45 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/06 07:53:33 bjs Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -22,7 +22,6 @@ man/man1/git-clone.1
 man/man1/git-commit-tree.1
 man/man1/git-commit.1
 man/man1/git-config.1
-man/man1/git-convert-objects.1
 man/man1/git-count-objects.1
 man/man1/git-cvsexportcommit.1
 man/man1/git-cvsimport.1
@@ -33,6 +32,7 @@ man/man1/git-diff-files.1
 man/man1/git-diff-index.1
 man/man1/git-diff-tree.1
 man/man1/git-diff.1
+man/man1/git-fast-export.1
 man/man1/git-fast-import.1
 man/man1/git-fetch-pack.1
 man/man1/git-fetch.1
@@ -47,6 +47,7 @@ man/man1/git-get-tar-commit-id.1
 man/man1/git-grep.1
 man/man1/git-gui.1
 man/man1/git-hash-object.1
+man/man1/git-help.1
 man/man1/git-http-fetch.1
 man/man1/git-http-push.1
 man/man1/git-imap-send.1
@@ -54,7 +55,6 @@ man/man1/git-index-pack.1
 man/man1/git-init-db.1
 man/man1/git-init.1
 man/man1/git-instaweb.1
-man/man1/git-local-fetch.1
 man/man1/git-log.1
 man/man1/git-lost-found.1
 man/man1/git-ls-files.1
@@ -99,7 +99,6 @@ man/man1/git-rev-list.1
 man/man1/git-rev-parse.1
 man/man1/git-revert.1
 man/man1/git-rm.1
-man/man1/git-runstatus.1
 man/man1/git-send-email.1
 man/man1/git-send-pack.1
 man/man1/git-sh-setup.1
@@ -109,14 +108,11 @@ man/man1/git-show-branch.1
 man/man1/git-show-index.1
 man/man1/git-show-ref.1
 man/man1/git-show.1
-man/man1/git-ssh-fetch.1
-man/man1/git-ssh-upload.1
 man/man1/git-stash.1
 man/man1/git-status.1
 man/man1/git-stripspace.1
 man/man1/git-submodule.1
 man/man1/git-svn.1
-man/man1/git-svnimport.1
 man/man1/git-symbolic-ref.1
 man/man1/git-tag.1
 man/man1/git-tar-tree.1
@@ -134,6 +130,7 @@ man/man1/git-whatchanged.1
 man/man1/git-write-tree.1
 man/man1/gitk.1
 man/man5/gitattributes.5
+man/man5/gitcli.5
 man/man5/gitignore.5
 man/man5/gitmodules.5
 man/man7/git.7
