@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7039 2008/02/06 15:22:32 rhaen Exp $
+$NetBSD: TODO,v 1.7040 2008/02/06 15:27:34 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ Suggested package updates
 	o p5-Spreadsheet-WriteExcel-2.20
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
-	o p5-Test-Inline-2.208
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.18
 	o p5-Text-BibTeX-0.34
