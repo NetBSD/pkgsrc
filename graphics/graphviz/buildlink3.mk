@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2007/01/08 11:29:47 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/02/06 18:56:52 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GRAPHVIZ_BUILDLINK3_MK:=	${GRAPHVIZ_BUILDLINK3_MK}+
@@ -19,11 +19,8 @@ BUILDLINK_PKGSRCDIR.graphviz?=	../../graphics/graphviz
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/swig/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

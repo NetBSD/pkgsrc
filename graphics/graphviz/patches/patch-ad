@@ -1,18 +1,23 @@
-$NetBSD: patch-ad,v 1.8 2006/02/15 02:53:29 minskim Exp $
+$NetBSD: patch-ad,v 1.9 2008/02/06 18:56:53 adam Exp $
 
---- lib/ast/pathpath.c.orig	2005-08-28 05:47:29.000000000 -0700
+--- lib/ast/pathpath.c.orig	2007-05-03 21:09:15.000000000 +0200
 +++ lib/ast/pathpath.c
-@@ -33,7 +33,14 @@
- #include <unistd.h>
+@@ -37,11 +37,19 @@
+ #endif
  
  /* #include <option.h> */
 +#ifdef HAVE_CRT_EXTERNS_H
 +#include <crt_externs.h>
 +#endif
++
+ #ifdef WIN32
+ #define environ _environ
+ #else
 +#ifdef HAVE__NSGETENVIRON
 +#define environ (*_NSGetEnviron())
 +#else
  extern char **environ;
+ #endif
 +#endif
  char **opt_info_argv;
  
