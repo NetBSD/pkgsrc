@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.230 2008/02/06 09:34:09 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.231 2008/02/06 10:09:52 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/eboard to 1.0.4 [rillig 2008-02-06]
 	Added audio/libmp3splt version 0.4rc1 [bjs 2008-02-06]
 	Added audio/mp3splt-devel version 2.2rc1 [bjs 2008-02-06]
+	Updated lang/ossp-js to 1.6.20070208nb1 [bjs 2008-02-06]
