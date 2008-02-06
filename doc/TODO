@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7040 2008/02/06 15:27:34 rhaen Exp $
+$NetBSD: TODO,v 1.7041 2008/02/06 18:59:50 adam Exp $
 
 Suggested new packages
 ======================
@@ -701,7 +701,6 @@ Suggested package updates
 	o grace-5.1.21
 	o gramofile-1.6P
 	o granulate-0.2
-	o graphviz-2.16.1 [pkg/37702]
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
