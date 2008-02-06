@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+
+--- src/jslibmath.h.orig	2006-07-23 08:22:18.000000000 -0400
++++ src/jslibmath.h
+@@ -85,11 +85,7 @@
+ 
+ #ifdef OSSP
+ #undef JS_USE_FDLIBM_MATH
+-#if defined(__FreeBSD__)
+-#define JS_USE_FDLIBM_MATH 0
+-#else
+-#define JS_USE_FDLIBM_MATH 1
+-#endif
++#define JS_USE_FDLIBM_MATH PKG_JS_FDLIBM_REQUESTED
+ #endif
+ 
+ #if !JS_USE_FDLIBM_MATH

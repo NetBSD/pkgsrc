@@ -1,0 +1,77 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+
+--- Makefile.in.orig	2007-02-08 04:25:33.000000000 -0500
++++ Makefile.in
+@@ -95,8 +95,9 @@ LIB_OBJS     = src/jsapi.lo             
+                src/jsxdrapi.lo             \
+                src/jsxml.lo                \
+                src/prmjtime.lo             \
+-               src/jsdso.lo                \
+-               src/fdlibm/e_acos.lo        \
++               src/jsdso.lo                
++.if defined(PKG_FDLIBM_MATH_REQUESTED)
++LIB_OBJS+=     src/fdlibm/e_acos.lo        \
+                src/fdlibm/e_asin.lo        \
+                src/fdlibm/e_atan2.lo       \
+                src/fdlibm/e_exp.lo         \
+@@ -129,6 +130,7 @@ LIB_OBJS     = src/jsapi.lo             
+                src/fdlibm/w_log.lo         \
+                src/fdlibm/w_pow.lo         \
+                src/fdlibm/w_sqrt.lo
++.endif
+ LIB_NAME     = libjs.la
+ 
+ CLI_OBJS     = src/js.o @CLI_OBJS@
+@@ -155,7 +157,7 @@ subdirs:
+ 	@$(LIBTOOL) --mode=compile $(CC) $(CPPFLAGS) $(CFLAGS) -o $@ -c $<
+ 
+ $(LIB_NAME): $(LIB_OBJS)
+-	@$(LIBTOOL) --mode=link $(CC) -o $(LIB_NAME) $(LIB_OBJS) -rpath $(libdir) -version-info 1:6
++	@$(LIBTOOL) --mode=link $(CC) -o $(LIB_NAME) $(LIB_OBJS) $(LIBS) -rpath $(libdir) -version-info 1:6
+ 
+ $(CLI_NAME): $(CLI_OBJS) $(LIB_NAME)
+ 	@$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(CLI_LDFLAGS) -o $(CLI_NAME) $(CLI_OBJS) $(LIB_NAME) $(LIBS) $(CLI_LIBS)
+@@ -176,22 +178,27 @@ src/jsopcode.h src/jsopcode.c: src/jsopc
+ 
+ .PHONY: install
+ install: all
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(prefix)
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(bindir)
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(mandir)/man1
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(mandir)/man3
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(includedir)/js
+-	$(SHTOOL) mkdir -f -p -m 755 $(DESTDIR)$(libdir)/pkgconfig
+-	$(SHTOOL) install -c -m 644 js.1 $(DESTDIR)$(mandir)/man1/
+-	$(SHTOOL) install -c -m 644 js-config.1 $(DESTDIR)$(mandir)/man1/
+-	$(SHTOOL) install -c -m 644 js.3 $(DESTDIR)$(mandir)/man3/
+-	$(SHTOOL) install -c -m 644 src/js*.h $(DESTDIR)$(includedir)/js/
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 $(LIB_NAME) $(DESTDIR)$(libdir)/
+-	$(SHTOOL) install -c -m 644 js.pc $(DESTDIR)$(libdir)/pkgconfig/
+-	$(SHTOOL) install -c -m 755 js-config.sh $(DESTDIR)$(bindir)/js-config
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 755 js $(DESTDIR)$(bindir)/
+-	$(SHTOOL) install -e 's;#!\./js;#!$(bindir)/js;' -c -m 755 jslint.js $(DESTDIR)$(bindir)/jslint
+-	$(SHTOOL) install -e 's;#!\./js;#!$(bindir)/js;' -c -m 755 jspack.js $(DESTDIR)$(bindir)/jspack
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(prefix)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man3
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(includedir)/js
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(libdir)/pkgconfig
++	$(BSD_INSTALL_MAN) js.1 $(DESTDIR)$(mandir)/man1/
++	$(BSD_INSTALL_MAN) js-config.1 $(DESTDIR)$(mandir)/man1/
++	$(BSD_INSTALL_MAN) js.3 $(DESTDIR)$(mandir)/man3/
++	@for fn in src/js*.h; do \
++		$(BSD_INSTALL_DATA) $$fn $(DESTDIR)$(includedir)/js/; \
++	done
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(LIB_NAME) $(DESTDIR)$(libdir)/
++	$(BSD_INSTALL_DATA) js.pc $(DESTDIR)$(libdir)/pkgconfig/
++	$(BSD_INSTALL_SCRIPT) js-config.sh $(DESTDIR)$(bindir)/js-config
++	@$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) \
++		js $(DESTDIR)$(bindir)/
++	for fn in jslint jspack; do \
++		$(BSD_INSTALL_SCRIPT) $${fn}.js $(DESTDIR)$(bindir)/$${fn}; \
++	done
++
+ 	@if [ ".$(WITH_PERL)" = ".yes" ]; then \
+ 	    (cd src/perlconnect; $(MAKE) $(MFLAGS) install DESTDIR=$(DESTDIR)); \
+ 	fi

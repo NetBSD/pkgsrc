@@ -1,0 +1,45 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+
+${LIBM} is defined as -lm if we're using the system math library; otherwise
+it's blank.  This should configure everything properly downstream.
+
+--- configure.orig	2007-02-08 04:39:29.000000000 -0500
++++ configure
+@@ -3894,7 +3894,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <string.h>
+-#define DO_VA_COPY(d, s) memcpy((void *)&(d), (void *)&(s))
++#define DO_VA_COPY(d, s) memcpy((void *)&(d), (void *)&(s), sizeof((s)))
+ void test(char *str, ...)
+ {
+     va_list ap, ap2;
+@@ -3975,7 +3975,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <string.h>
+-#define DO_VA_COPY(d, s) memcpy((void *)(d), (void *)(s))
++#define DO_VA_COPY(d, s) memcpy((void *)(d), (void *)(s), sizeof(*(s)))
+ void test(char *str, ...)
+ {
+     va_list ap, ap2;
+@@ -4338,7 +4338,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+-      conftest$ac_exeext conftest.$ac_ext
++      conftest$ac_xexeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_m_floor" >&5
+@@ -4348,7 +4348,9 @@ if test $ac_cv_lib_m_floor = yes; then
+ #define HAVE_LIBM 1
+ _ACEOF
+ 
+-  LIBS="-lm $LIBS"
++if test "x$LIBM" != x; then
++  LIBS="${LIBM} $LIBS"
++fi
+ 
+ fi
+ 

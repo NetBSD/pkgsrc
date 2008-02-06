@@ -1,0 +1,23 @@
+OSSP js is a stand-alone distribution of the JavaScript (JS)
+programming language reference implementation from Mozilla -- aka
+"JSRef" or "SpiderMonkey". This distribution provides a smart,
+stand-alone and portable distribution of Mozilla JavaScript through a
+GNU autotools-based build environment.  Additionally,
+the C API in "libjs" contains both the JavaScript engine and the
+required Sun math library ("fdlibm") and with all internal symbols
+carefully protected under the "js" namespace. Finally, a js-config(1)
+utility and a pkg-config(1) specification is provided to allow
+applications to easily build with the JavaScript C API.
+
+OSSP js was created because for OSSP and similar pedantic C coding
+projects a smart, stand-alone, portable, clean, powerful and
+robust scripting language engine is required. JavaScript is a
+great programming language and Mozilla JavaScript "SpiderMonkey"
+definitely is an acceptable clean, powerful and robust implementation.
+Unfortunately there is just a stand-alone distribution released from
+time to time by Mozilla and it is far away from really being smart,
+stand-alone and portable. OSSP js combines the best from two worlds:
+the 1:1 repackaged JavaScript code base from Mozilla with the GNU
+autotools-based build environment as always used by OSSP.  Additionally,
+this package provides stdio-based file object support and does not depend
+upon the Mozilla NSPR library.
