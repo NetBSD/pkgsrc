@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/02/25 08:49:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/02/06 07:01:17 bjs Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -60,6 +60,7 @@ share/cmake-2.4/Modules/CMakeVS71FindMake.cmake
 share/cmake-2.4/Modules/CMakeVS7BackwardCompatibility.cmake
 share/cmake-2.4/Modules/CMakeVS7FindMake.cmake
 share/cmake-2.4/Modules/CMakeVS8FindMake.cmake
+share/cmake-2.4/Modules/CMakeVS9FindMake.cmake
 share/cmake-2.4/Modules/CPack.Description.plist.in
 share/cmake-2.4/Modules/CPack.Info.plist.in
 share/cmake-2.4/Modules/CPack.STGZ_Header.sh.in
@@ -139,6 +140,7 @@ share/cmake-2.4/Modules/FindPerl.cmake
 share/cmake-2.4/Modules/FindPerlLibs.cmake
 share/cmake-2.4/Modules/FindPhysFS.cmake
 share/cmake-2.4/Modules/FindPike.cmake
+share/cmake-2.4/Modules/FindPkgConfig.cmake
 share/cmake-2.4/Modules/FindPythonInterp.cmake
 share/cmake-2.4/Modules/FindPythonLibs.cmake
 share/cmake-2.4/Modules/FindQt.cmake
@@ -181,6 +183,7 @@ share/cmake-2.4/Modules/Platform/Darwin-xlc.cmake
 share/cmake-2.4/Modules/Platform/Darwin.cmake
 share/cmake-2.4/Modules/Platform/DragonFly.cmake
 share/cmake-2.4/Modules/Platform/FreeBSD.cmake
+share/cmake-2.4/Modules/Platform/GNU.cmake
 share/cmake-2.4/Modules/Platform/HP-UX.cmake
 share/cmake-2.4/Modules/Platform/IRIX.cmake
 share/cmake-2.4/Modules/Platform/IRIX64.cmake
