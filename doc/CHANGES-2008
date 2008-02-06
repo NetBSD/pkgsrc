@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.233 2008/02/06 16:42:42 hira Exp $
+$NetBSD: CHANGES-2008,v 1.234 2008/02/06 18:59:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-IPC-Run3 to 0.040 [rhaen 2008-02-06]
 	Updated devel/p5-Test-Inline to 2.208 [rhaen 2008-02-06]
 	Updated misc/openoffice2 to 2.3.1nb4 [hira 2008-02-06]
+	Updated graphics/graphviz to 2.16.1 [adam 2008-02-06]
