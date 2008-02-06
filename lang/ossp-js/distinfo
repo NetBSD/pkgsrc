@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+
+SHA1 (js-1.6.20070208.tar.gz) = 3c8c4b81637b84fa344334a2c0bb093244620d9e
+RMD160 (js-1.6.20070208.tar.gz) = e2e5a1f50026d50caae672bf1122f728991ca377
+Size (js-1.6.20070208.tar.gz) = 1109930 bytes
+SHA1 (patch-aa) = 850e025755cd2f5099a0779b54d9ba1d76fb938b
+SHA1 (patch-ab) = f7e8d00401df8c7f86f2b3c2c342d3869562fe4a
+SHA1 (patch-ac) = cfb32539e82762755090c90fd22978d541edb1d7
+SHA1 (patch-ad) = 9cee1435756bd1d6dec029d81444ec45418a4b18
+SHA1 (patch-ae) = 0a031230be8fc001e510a26d296b5bfdc2a7e1d7
