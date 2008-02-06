@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.1.1.1 2007/12/12 04:22:20 bjs Exp $
+$NetBSD: patch-af,v 1.2 2008/02/06 07:53:32 bjs Exp $
 
---- Documentation/Makefile.orig	2007-09-02 01:57:44.000000000 -0400
+--- Documentation/Makefile.orig	2008-02-01 23:09:01.000000000 -0500
 +++ Documentation/Makefile
-@@ -75,16 +75,16 @@ man7: $(DOC_MAN7)
- info: git.info
+@@ -90,16 +90,16 @@ man7: $(DOC_MAN7)
+ info: git.info gitman.info
  
  install: man
--	$(INSTALL) -d -m755 $(DESTDIR)$(man1dir)
--	$(INSTALL) -d -m755 $(DESTDIR)$(man5dir)
--	$(INSTALL) -d -m755 $(DESTDIR)$(man7dir)
--	$(INSTALL) -m644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
--	$(INSTALL) -m644 $(DOC_MAN5) $(DESTDIR)$(man5dir)
--	$(INSTALL) -m644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
+-	$(INSTALL) -d -m 755 $(DESTDIR)$(man1dir)
+-	$(INSTALL) -d -m 755 $(DESTDIR)$(man5dir)
+-	$(INSTALL) -d -m 755 $(DESTDIR)$(man7dir)
+-	$(INSTALL) -m 644 $(DOC_MAN1) $(DESTDIR)$(man1dir)
+-	$(INSTALL) -m 644 $(DOC_MAN5) $(DESTDIR)$(man5dir)
+-	$(INSTALL) -m 644 $(DOC_MAN7) $(DESTDIR)$(man7dir)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(man1dir)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(man5dir)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(man7dir)
@@ -20,10 +20,10 @@ $NetBSD: patch-af,v 1.1.1.1 2007/12/12 04:22:20 bjs Exp $
 +	$(BSD_INSTALL_MAN) $(DOC_MAN7) $(DESTDIR)$(man7dir)
  
  install-info: info
--	$(INSTALL) -d -m755 $(DESTDIR)$(infodir)
--	$(INSTALL) -m644 git.info $(DESTDIR)$(infodir)
+-	$(INSTALL) -d -m 755 $(DESTDIR)$(infodir)
+-	$(INSTALL) -m 644 git.info gitman.info $(DESTDIR)$(infodir)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(infodir)
-+	$(BSD_INSTALL_DATA) git.info $(DESTDIR)$(infodir)
++	$(BSD_INSTALL_DATA) git.info gitman.info $(DESTDIR)$(infodir)
  	if test -r $(DESTDIR)$(infodir)/dir; then \
  	  $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) git.info ;\
- 	else \
+ 	  $(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) gitman.info ;\

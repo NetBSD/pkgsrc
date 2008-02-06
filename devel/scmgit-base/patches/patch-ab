@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/12/12 04:22:20 bjs Exp $
+$NetBSD: patch-ab,v 1.2 2008/02/06 07:53:32 bjs Exp $
 
---- git-compat-util.h.orig	2007-10-31 21:04:37.000000000 +0100
-+++ git-compat-util.h	2007-11-29 16:24:57.810134000 +0100
-@@ -6,6 +6,8 @@
- #ifndef FLEX_ARRAY
- #if defined(__GNUC__) && (__GNUC__ < 3)
- #define FLEX_ARRAY 0
-+#elif defined(__SUNPRO_C)
-+#define FLEX_ARRAY 1
- #else
- #define FLEX_ARRAY /* empty */
- #endif
-@@ -24,7 +26,7 @@
+--- git-compat-util.h.orig	2008-02-01 23:09:01.000000000 -0500
++++ git-compat-util.h
+@@ -39,7 +39,7 @@
  /* Approximation of the length of the decimal representation of this type. */
  #define decimal_length(x)	((int)(sizeof(x) * 2.56 + 0.5) + 1)
  
