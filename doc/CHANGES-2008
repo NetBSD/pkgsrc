@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.224 2008/02/06 07:01:53 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.225 2008/02/06 07:13:04 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added lang/ossp-js version 1.6.20070208 [bjs 2008-02-06]
 	Updated www/elinks to 0.11.4rc0 [bjs 2008-02-06]
 	Updated devel/cmake to 2.4.8 [bjs 2008-02-06]
+	Added net/py-boto version 1.0a [bjs 2008-02-06]
