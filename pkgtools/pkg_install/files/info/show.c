@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.20 2008/02/02 16:21:45 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.21 2008/02/07 23:40:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: show.c,v 1.11 1997/10/08 07:47:38 charnier Exp";
 #else
-__RCSID("$NetBSD: show.c,v 1.20 2008/02/02 16:21:45 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.21 2008/02/07 23:40:52 joerg Exp $");
 #endif
 #endif
 
@@ -137,6 +137,9 @@ void
 show_var(const char *buf, const char *variable)
 {
 	char   *value;
+
+	if (buf == NULL)
+		return;
 
 	if ((value = var_get_memory(buf, variable)) != NULL) {
 		(void) printf("%s\n", value);
