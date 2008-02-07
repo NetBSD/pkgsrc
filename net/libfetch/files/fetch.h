@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.1.1.1 2008/02/07 01:48:22 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.2 2008/02/07 16:34:52 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -33,6 +33,7 @@
 #define _FETCH_H_INCLUDED
 
 #include <limits.h>
+#include <stdio.h>
 
 #define _LIBFETCH_VER "libfetch/2.0"
 
@@ -90,7 +91,9 @@ struct url_ent {
 #define	FETCH_URL	18
 #define	FETCH_VERBOSE	19
 
-__BEGIN_DECLS
+#if defined(__cplusplus)
+extern "C" {
+#endif
 
 /* FILE-specific functions */
 FILE		*fetchXGetFile(struct url *, struct url_stat *, const char *);
@@ -131,8 +134,6 @@ struct url	*fetchMakeURL(const char *, const char *, int,
 struct url	*fetchParseURL(const char *);
 void		 fetchFreeURL(struct url *);
 
-__END_DECLS
-
 /* Authentication */
 typedef int (*auth_t)(struct url *);
 extern auth_t		 fetchAuthMethod;
@@ -150,5 +151,9 @@ extern int		 fetchRestartCalls;
 
 /* Extra verbosity */
 extern int		 fetchDebug;
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif
