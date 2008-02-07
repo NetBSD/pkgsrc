@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.5 2008/02/07 17:20:50 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.6 2008/02/07 17:27:40 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -1198,7 +1198,7 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
  * List a directory
  */
 struct url_ent *
-fetchListFTP(struct url *url __unused, const char *flags)
+fetchListFTP(struct url *url, const char *flags)
 {
 	warnx("fetchListFTP(): not implemented");
 	return (NULL);
