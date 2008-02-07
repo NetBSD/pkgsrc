@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.2 2008/02/07 16:34:52 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.3 2008/02/07 17:10:35 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -32,6 +32,7 @@
 #ifndef _FETCH_H_INCLUDED
 #define _FETCH_H_INCLUDED
 
+#include <sys/types.h>
 #include <limits.h>
 #include <stdio.h>
 
