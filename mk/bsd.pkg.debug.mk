@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.20 2007/09/27 12:49:14 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.21 2008/02/07 21:36:13 rillig Exp $
 #
 # Public targets:
 #
@@ -42,7 +42,7 @@ debug: \
 
 _show-dbginfo-file-versions:
 	@${PRINTF} "File versions:\\n"
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN} \
 	sedexpr='s,^.*\([$$]NetBSD:[^$$]*\$$\).*,\1,p';			\
 	${FIND} * -type f -print					\
 	| while read fname; do						\
@@ -73,7 +73,7 @@ _show-dbginfo-configure:
 
 _show-dbginfo-config.status:
 .if !empty(CONFIGURE_DIRS:M*)
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN} \
 	if ${TEST} -d ${WRKSRC:Q}; then cd ${WRKSRC:Q};			\
 	for cs in ${CONFIGURE_DIRS:=/config.status}; do			\
 	  if ${TEST} ! -f "$${cs}"; then continue; fi;			\
@@ -97,7 +97,7 @@ _show-dbginfo-config.status:
 
 _show-dbginfo-config.h:
 .if !empty(CONFIGURE_DIRS:M*)
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN} \
 	[ -d ${WRKSRC} ] || exit 0;					\
 	print_config_h() {						\
 	  printf "%s:\\n" "`pwd`/$$1";					\

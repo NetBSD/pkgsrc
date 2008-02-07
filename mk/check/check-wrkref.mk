@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.15 2007/09/13 09:52:46 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.16 2008/02/07 21:36:13 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -69,7 +69,7 @@ privileged-install-hook: _check-wrkref
 _check-wrkref: error-check .PHONY
 	@${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
 	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
