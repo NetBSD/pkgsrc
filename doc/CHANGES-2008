@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.239 2008/02/07 19:33:13 agc Exp $
+$NetBSD: CHANGES-2008,v 1.240 2008/02/07 20:54:25 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -410,3 +410,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.9.6nb4 [bjs 2008-02-07]
 	Updated devel/netbsd-iscsi-target to 20080207 [agc 2008-02-07]
 	Updated devel/netbsd-iscsi-initiator to 20080207 [agc 2008-02-07]
+	Updated net/p5-Geo-IP to 1.30 [heinz 2008-02-07]
+	Updated sysutils/p5-Parse-Syslog to 1.10 [heinz 2008-02-07]
+	Updated security/p5-Crypt-CBC to 2.24 [heinz 2008-02-07]
+	Updated graphics/p5-SVG to 2.36 [heinz 2008-02-07]
