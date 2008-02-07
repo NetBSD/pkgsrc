@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.2 2008/02/07 16:14:44 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.3 2008/02/07 17:12:12 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -550,7 +550,7 @@ ftp_writefn(void *v, const char *buf, int len)
 }
 
 static fpos_t
-ftp_seekfn(void *v, fpos_t pos __unused, int whence __unused)
+ftp_seekfn(void *v, fpos_t pos, int whence)
 {
 	struct ftpio *io;
 
@@ -1195,7 +1195,7 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
  * List a directory
  */
 struct url_ent *
-fetchListFTP(struct url *url __unused, const char *flags __unused)
+fetchListFTP(struct url *url __unused, const char *flags)
 {
 	warnx("fetchListFTP(): not implemented");
 	return (NULL);
