@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.8 2008/02/07 17:47:12 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.9 2008/02/07 17:57:28 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -786,7 +786,10 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 	} else {
 		uint32_t a;
 		uint16_t p;
-		int arg, d;
+#if defined(IPV6_PORTRANGE) || defined(IP_PORTRANGE)
+		int arg;
+#endif
+		int d;
 		char *ap;
 		char hname[INET6_ADDRSTRLEN];
 
