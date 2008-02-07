@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.2 2008/02/07 16:14:44 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.3 2008/02/07 16:24:01 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -109,8 +109,12 @@ fetch_syserr(void)
 	case EPERM:
 	case EACCES:
 	case EROFS:
+#ifdef EAUTH
 	case EAUTH:
+#endif
+#ifdef ENEEDAUTH
 	case ENEEDAUTH:
+#endif
 		fetchLastErrCode = FETCH_AUTH;
 		break;
 	case ENOENT:
