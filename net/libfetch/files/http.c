@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.1.1.1 2008/02/07 01:48:23 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.2 2008/02/07 16:14:44 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -265,7 +265,7 @@ http_readfn(void *v, char *buf, int len)
 		l = io->buflen - io->bufpos;
 		if (len < l)
 			l = len;
-		bcopy(io->buf + io->bufpos, buf + pos, l);
+		memcpy(buf + pos, io->buf + io->bufpos, l);
 		io->bufpos += l;
 	}
 
