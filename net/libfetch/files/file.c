@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.1.1.1 2008/02/07 01:48:22 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.2 2008/02/07 17:12:12 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -104,13 +104,13 @@ fetch_stat_file(const char *fn, struct url_stat *us)
 }
 
 int
-fetchStatFile(struct url *u, struct url_stat *us, const char *flags __unused)
+fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
 {
 	return (fetch_stat_file(u->doc, us));
 }
 
 struct url_ent *
-fetchListFile(struct url *u, const char *flags __unused)
+fetchListFile(struct url *u, const char *flags)
 {
 	struct dirent *de;
 	struct url_stat us;
