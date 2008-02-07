@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.4 2008/02/07 17:12:12 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.5 2008/02/07 17:23:37 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -158,10 +158,10 @@ http_new_chunk(struct httpio *io)
 	if (fetchDebug) {
 		io->total += io->chunksize;
 		if (io->chunksize == 0)
-			fprintf(stderr, "%s(): end of last chunk\n", __func__);
+			fprintf(stderr, "http_new_chunk(): end of last chunk\n");
 		else
-			fprintf(stderr, "%s(): new chunk: %lu (%lu)\n",
-			    __func__, (unsigned long)io->chunksize,
+			fprintf(stderr, "http_new_chunk(): new chunk: %lu (%lu)\n",
+			    (unsigned long)io->chunksize,
 			    (unsigned long)io->total);
 	}
 #endif
