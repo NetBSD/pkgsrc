@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.238 2008/02/07 06:41:02 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.239 2008/02/07 19:33:13 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -408,3 +408,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/libfetch version 2.0 [joerg 2008-02-07]
 	Updated x11/xkeyboard-config to 1.2 [bjs 2008-02-07]
 	Updated x11/pixman to 0.9.6nb4 [bjs 2008-02-07]
+	Updated devel/netbsd-iscsi-target to 20080207 [agc 2008-02-07]
+	Updated devel/netbsd-iscsi-initiator to 20080207 [agc 2008-02-07]
