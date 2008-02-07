@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.4 2008/02/07 17:19:50 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.5 2008/02/07 17:20:50 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -133,7 +133,10 @@ unmappedaddr(struct sockaddr_in6 *sin6)
 	sin4->sin_addr.s_addr = addr;
 	sin4->sin_port = port;
 	sin4->sin_family = AF_INET;
+#if !defined(__sun) && !defined(__hpux) && !defined(__INTERIX) && \
+    !defined(__digital__) && !defined(__linux)
 	sin4->sin_len = sizeof(struct sockaddr_in);
+#endif
 }
 
 /*
