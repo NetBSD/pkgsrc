@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.12 2007/03/08 17:18:18 rillig Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.13 2008/02/07 22:27:53 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.12 2007/03/08 17:18:18 rillig Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.13 2008/02/07 22:27:53 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -238,7 +238,8 @@ file_close(ARCHD *arcn, int fd)
 	else
 		set_pmode(tmp_name, arcn->sb.st_mode & FILEBITS(0));
 	if (patime || pmtime)
-		set_ftime(tmp_name, arcn->sb.st_mtime, arcn->sb.st_atime, 0);
+		set_ftime(tmp_name, arcn->sb.st_mtime,
+		    arcn->sb.st_atime, 0, 0);
 
 	/* Did we write directly to the target file? */
 	if (arcn->tmp_name == NULL)
@@ -625,12 +626,9 @@ badlink:
 			add_dir(nm, arcn->nlen, &(arcn->sb), 0);
 	}
 
-#if HAVE_LUTIMES
 	if (patime || pmtime)
-#else
-	if ((patime || pmtime) && arcn->type != PAX_SLK)
-#endif
-		set_ftime(arcn->name, arcn->sb.st_mtime, arcn->sb.st_atime, 0);
+		set_ftime(arcn->name, arcn->sb.st_mtime,
+		    arcn->sb.st_atime, 0, (arcn->type == PAX_SLK) ? 1 : 0);
 
 #if HAVE_FILE_FLAGS
 	if (pfflags && arcn->type != PAX_SLK)
@@ -799,10 +797,16 @@ chk_path(char *name, uid_t st_uid, gid_t st_gid)
  *	other ones are left alone. We do not assume the un-documented feature
  *	of many utimes() implementations that consider a 0 time value as a do
  *	not set request.
+ *
+ *	Unfortunately, there are systems where lutimes() is present but does
+ *	not work on some filesystem types, which cannot be detected at
+ * 	compile time.  This requires passing down symlink knowledge into
+ *	this function to obtain correct operation.  Linux with XFS is one
+ * 	example of such a system.
  */
 
 void
-set_ftime(char *fnm, time_t mtime, time_t atime, int frc)
+set_ftime(char *fnm, time_t mtime, time_t atime, int frc, int slk)
 {
 	struct timeval tv[2];
 	struct stat sb;
@@ -836,13 +840,18 @@ set_ftime(char *fnm, time_t mtime, time_t atime, int frc)
 	 * set the times
 	 */
 #if HAVE_LUTIMES
-	if (lutimes(fnm, tv))
-#else
-	if (utimes(fnm, tv))
+	if (lutimes(fnm, tv) == 0)
+		return;
+	if (errno != ENOSYS)	/* XXX linux: lutimes is per-FS */
+		goto bad;
 #endif
-		syswarn(1, errno, "Access/modification time set failed on: %s",
-		    fnm);
+	if (slk)
+		return;
+	if (utimes(fnm, tv) == -1)
+		goto bad;
 	return;
+bad:
+	syswarn(1, errno, "Access/modification time set failed on: %s", fnm);
 }
 
 /*
@@ -1100,7 +1109,7 @@ rdfile_close(ARCHD *arcn, int *fd)
 	/*
 	 * user wants last access time reset
 	 */
-	set_ftime(arcn->org_name, arcn->sb.st_mtime, arcn->sb.st_atime, 1);
+	set_ftime(arcn->org_name, arcn->sb.st_mtime, arcn->sb.st_atime, 1, 0);
 	return;
 }
 
