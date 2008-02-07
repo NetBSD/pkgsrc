@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.1.1.1 2008/02/07 01:48:22 joerg Exp $	*/
+/*	$NetBSD: common.h,v 1.2 2008/02/07 17:42:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -43,6 +43,11 @@
 #include <openssl/pem.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
+#endif
+
+#if !defined(__sun) && !defined(__hpux) && !defined(__INTERIX) && \
+    !defined(__digital__) && !defined(__linux)
+#define HAVE_SA_LEN
 #endif
 
 /* Connection */
