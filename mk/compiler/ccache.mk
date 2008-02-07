@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.30 2007/10/16 09:33:29 rillig Exp $
+# $NetBSD: ccache.mk,v 1.31 2008/02/07 20:59:05 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -129,11 +129,11 @@ PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
 .    if !target(${_CCACHE_${_var_}})
 override-tools: ${_CCACHE_${_var_}}
 ${_CCACHE_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	${LN} -fs ${CCACHE_BASE}/bin/ccache ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -fs ${CCACHE_BASE}/bin/ccache ${_alias_};		\
 	fi
