@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.13 2007/12/01 11:11:54 rillig Exp $
+# $NetBSD: test.mk,v 1.14 2008/02/07 21:36:13 rillig Exp $
 #
 # After the "build" phase, many packages provide some sort of self-test
 # that can be run on the not-yet installed package. To enable these
@@ -129,7 +129,7 @@ test-check-interactive:
 .  if defined(TEST_TARGET) && !empty(TEST_TARGET)
 do-test:
 .    for _dir_ in ${TEST_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN}${_ULIMIT_CMD}			\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${TEST_MAKE_CMD} ${TEST_TARGET}
 .    endfor
@@ -156,6 +156,6 @@ post-test:
 ###
 .PHONY: test-cookie
 test-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.test} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.test:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.test}
+	${RUN}${TEST} ! -f ${_COOKIE.test} || ${FALSE}
+	${RUN}${MKDIR} ${_COOKIE.test:H}
+	${RUN}${ECHO} ${PKGNAME} > ${_COOKIE.test}

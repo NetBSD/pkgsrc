@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.error.mk,v 1.3 2006/10/06 19:05:43 rillig Exp $
+# $NetBSD: bsd.pkg.error.mk,v 1.4 2008/02/07 21:36:13 rillig Exp $
 
 ERROR_DIR=		${WRKDIR}/.error
 WARNING_DIR=		${WRKDIR}/.warning
@@ -14,7 +14,7 @@ DELAYED_WARNING_MSG?=	${ECHO} >> ${WARNING_DIR}/${.TARGET:T:C/^[.]*//:Q}
 
 makedirs: ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}
 ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET}
 
 .PHONY: error-check
 
@@ -28,7 +28,7 @@ ${ERROR_DIR} ${WARNING_DIR} ${_ERROR_DONE_DIR} ${_WARNING_DONE_DIR}:
 ### directory, then the target will fail.
 ###
 error-check: .USE
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${RM} -f ${WARNING_DIR}/*.tmp;					\
 	${TEST} -d ${WARNING_DIR} || exit 0;				\
 	cd ${WARNING_DIR};						\
@@ -39,7 +39,7 @@ error-check: .USE
 	${CAT} ./* | ${WARNING_CAT};					\
 	${MV} -f ./* ${_WARNING_DONE_DIR}
 
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${RM} -f ${ERROR_DIR}/*.tmp;					\
 	${TEST} -d ${ERROR_DIR} || exit 0;				\
 	cd ${ERROR_DIR};						\
@@ -59,4 +59,4 @@ error-check: .USE
 ### error-clean removes the error and warning directory and files.
 ###
 error-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${ERROR_DIR} ${WARNING_DIR}
+	${RUN}${RM} -fr ${ERROR_DIR} ${WARNING_DIR}

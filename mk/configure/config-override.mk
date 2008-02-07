@@ -1,4 +1,4 @@
-# $NetBSD: config-override.mk,v 1.5 2006/11/05 12:40:01 rillig Exp $
+# $NetBSD: config-override.mk,v 1.6 2008/02/07 21:36:13 rillig Exp $
 
 ######################################################################
 ### config-{guess,sub,rpath}-override (PRIVATE)
@@ -30,14 +30,14 @@ _SCRIPT.config-${_sub_}-override=					\
 config-${_sub_}-override:
 	@${STEP_MSG} "Replacing config-${_sub_} with pkgsrc versions"
 .  if defined(${_OVERRIDE_VAR.${_sub_}}) && !empty(${_OVERRIDE_VAR.${_sub_}})
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	for file in ${${_OVERRIDE_VAR.${_sub_}}}; do			\
 		[ -f "$$file" ] || [ -h "$$file" ] || continue;		\
 		${_SCRIPT.${.TARGET}};					\
 	done
 .  else
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	depth=0; pattern=config.${_sub_};				\
 	while [ $$depth -le ${OVERRIDE_DIRDEPTH.config-${_sub_}} ]; do	\

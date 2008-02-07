@@ -1,4 +1,4 @@
-# $NetBSD: install-sh-override.mk,v 1.1 2007/07/12 18:59:15 jlam Exp $
+# $NetBSD: install-sh-override.mk,v 1.2 2008/02/07 21:36:13 rillig Exp $
 
 ######################################################################
 ### install-sh-override (PRIVATE)
@@ -22,7 +22,7 @@ _SCRIPT.install-sh-override=						\
 install-sh-override:
 	@${STEP_MSG} "Replacing install-sh with pkgsrc version"
 .if defined(INSTALL_SH_OVERRIDE) && !empty(INSTALL_SH_OVERRIDE)
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	set -- dummy ${INSTALL_SH_OVERRIDE}; shift;			\
 	while [ $$# -gt 0 ]; do						\
@@ -31,7 +31,7 @@ install-sh-override:
 		${_SCRIPT.${.TARGET}};					\
 	done
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	depth=0; pattern=install-sh;					\
 	while [ $$depth -le ${OVERRIDE_DIRDEPTH.install-sh} ]; do	\

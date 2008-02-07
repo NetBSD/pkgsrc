@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.13 2007/09/07 16:47:05 rillig Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.14 2008/02/07 21:36:13 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -60,7 +60,7 @@ update:
 .  endif
 .endif
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES DEPENDS_TARGET=${DEPENDS_TARGET:Q}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	[ ! -s ${_DDIR} ] || for dep in `${CAT} ${_DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
 			${PHASE_MSG} "Installing in $${dep}" &&		\
@@ -83,7 +83,7 @@ update:
 .PHONY: clean-update
 clean-update:
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ -s ${_DDIR} ] ; then					\
 		for dep in `${CAT} ${_DDIR}` ; do			\
 			(if cd ../.. && cd "$${dep}" ; then		\

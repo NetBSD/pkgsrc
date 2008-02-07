@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.9 2006/11/05 12:40:01 rillig Exp $
+# $NetBSD: libtool-override.mk,v 1.10 2008/02/07 21:36:13 rillig Exp $
 
 ######################################################################
 ### {libtool,shlibtool}-override (PRIVATE)
@@ -29,7 +29,7 @@ _SCRIPT.${_script_}-override=						\
 libtool-override:
 	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc libtool"
 .if defined(LIBTOOL_OVERRIDE)
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	set -- dummy ${LIBTOOL_OVERRIDE}; shift;			\
 	while [ $$# -gt 0 ]; do						\
@@ -38,7 +38,7 @@ libtool-override:
 		${_SCRIPT.${.TARGET}};					\
 	done
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	depth=0; pattern=libtool;					\
 	while [ $$depth -le ${OVERRIDE_DIRDEPTH.libtool} ]; do		\
@@ -54,7 +54,7 @@ libtool-override:
 shlibtool-override:
 	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc shlibtool"
 .if defined(SHLIBTOOL_OVERRIDE) && !empty(SHLIBTOOL_OVERRIDE)
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	set -- dummy ${SHLIBTOOL_OVERRIDE}; shift;			\
 	while [ $$# -gt 0 ]; do						\
@@ -63,7 +63,7 @@ shlibtool-override:
 		${_SCRIPT.${.TARGET}};					\
 	done
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	depth=0; pattern=libtool;					\
 	while [ $$depth -le ${OVERRIDE_DIRDEPTH.shlibtool} ]; do	\
