@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2006/10/01 07:48:38 obache Exp $
+$NetBSD: patch-af,v 1.3 2008/02/07 12:40:16 obache Exp $
 
 --- ruby/Makefile.in.orig	2006-09-06 12:37:33.000000000 +0900
 +++ ruby/Makefile.in
@@ -11,62 +11,3 @@ $NetBSD: patch-af,v 1.2 2006/10/01 07:48:38 obache Exp $
  DESTDIR =
  
  # Building binaries
-@@ -35,9 +35,9 @@ RUNENV = LD_LIBRARY_PATH=.:..:../..:/usr
- 
- 
- all :
--	cd depot && [ -f Makefile ] || $(RUNENV) ruby extconf.rb ; $(RUNENV) make
--	cd curia && [ -f Makefile ] || $(RUNENV) ruby extconf.rb ; $(RUNENV) make
--	cd villa && [ -f Makefile ] || $(RUNENV) ruby extconf.rb ; $(RUNENV) make
-+	cd depot && [ -f Makefile ] || $(RUNENV) ${RUBY} extconf.rb ; $(RUNENV) make
-+	cd curia && [ -f Makefile ] || $(RUNENV) ${RUBY} extconf.rb ; $(RUNENV) make
-+	cd villa && [ -f Makefile ] || $(RUNENV) ${RUBY} extconf.rb ; $(RUNENV) make
- 	@printf '\n'
- 	@printf '#================================================================\n'
- 	@printf '# Ready to install.\n'
-@@ -69,7 +69,7 @@ install :
- 
- 
- uninstall :
--	pprefix=`ruby -e '$$:.each() do |path| ; printf("%s\n", path) ; end' | grep -v '^\.'` ; \
-+	pprefix=`${RUBY} -e '$$:.each() do |path| ; printf("%s\n", path) ; end' | grep -v '^\.'` ; \
- 	  find $$pprefix -print | sort | uniq | \
- 	  egrep '(mod_depot\.so|depot\.rb|mod_curia\.so|curia\.rb|mod_villa\.so|villa\.rb)' | \
- 	  xargs rm -f
-@@ -85,27 +85,27 @@ check :
- 	sync ; sync
- 	cd depot && rm -rf casket
- 	cd depot && \
--	  $(RUNENV) ruby -w -Ilib rbdptest write casket 10000 1000
-+	  $(RUNENV) ${RUBY} -w -Ilib rbdptest write casket 10000 1000
- 	cd depot && \
--	  $(RUNENV) ruby -w -Ilib rbdptest read casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbdptest read casket
- 	cd depot && \
--	  $(RUNENV) ruby -w -Ilib rbdptest misc casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbdptest misc casket
- 	cd depot && rm -rf casket
- 	cd curia && rm -rf casket
- 	cd curia && \
--	  $(RUNENV) ruby -w -Ilib rbcrtest write casket 10000 1000 10
-+	  $(RUNENV) ${RUBY} -w -Ilib rbcrtest write casket 10000 1000 10
- 	cd curia && \
--	  $(RUNENV) ruby -w -Ilib rbcrtest read casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbcrtest read casket
- 	cd curia && \
--	  $(RUNENV) ruby -w -Ilib rbcrtest misc casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbcrtest misc casket
- 	cd curia && rm -rf casket
- 	cd villa && rm -rf casket
- 	cd villa && \
--	  $(RUNENV) ruby -w -Ilib rbvltest write casket 10000
-+	  $(RUNENV) ${RUBY} -w -Ilib rbvltest write casket 10000
- 	cd villa && \
--	  $(RUNENV) ruby -w -Ilib rbvltest read casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbvltest read casket
- 	cd villa && \
--	  $(RUNENV) ruby -w -Ilib rbvltest misc casket
-+	  $(RUNENV) ${RUBY} -w -Ilib rbvltest misc casket
- 	cd villa && rm -rf casket
- 	@printf '\n'
- 	@printf '#================================================================\n'
