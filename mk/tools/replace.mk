@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.204 2008/01/04 01:46:27 rillig Exp $
+# $NetBSD: replace.mk,v 1.205 2008/02/07 12:10:36 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -895,11 +895,15 @@ _TOOLS.groff=	groff nroff soelim tbl
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
-.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS]) || \
+       !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS]) 
+.      if !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS])
+_TOOLS_USE_PKGSRC.${_t_}= yes
+.      endif
 TOOLS_DEPENDS.${_t_}?=	groff>=1.19.2nb3:../../textproc/groff
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
-.      if ${OPSYS} == "SunOS"
+.      if ${OPSYS} == "SunOS" && "${_t_}" != "groff"
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
 .      else
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
