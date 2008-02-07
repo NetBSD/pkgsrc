@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.206 2008/02/07 16:53:14 tnn Exp $
+# $NetBSD: replace.mk,v 1.207 2008/02/07 17:01:02 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -896,9 +896,10 @@ _TOOLS.groff=	groff nroff soelim tbl
 .    if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS]) || \
-       !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS]) 
+       (defined(_TOOLS_USE_PKGSRC.groff) && \
+        !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS]))
 .      if defined(_TOOLS_USE_PKGSRC.groff) && \
-         !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS])
+        !empty(_TOOLS_USE_PKGSRC.groff:M[yY][eE][sS])
 _TOOLS_USE_PKGSRC.${_t_}= yes
 .      endif
 TOOLS_DEPENDS.${_t_}?=	groff>=1.19.2nb3:../../textproc/groff
