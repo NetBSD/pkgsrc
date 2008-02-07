@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.15 2007/11/30 18:54:40 rillig Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.16 2008/02/07 21:36:13 rillig Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -63,7 +63,7 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	cd ${.CURDIR}							\
 	&& ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS} \
 	|| {								\
@@ -82,5 +82,5 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 ### barrier-cookie creates the "barrier" cookie file.
 ###
 ${_COOKIE.barrier}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${.TARGET}
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${ECHO} ${PKGNAME} > ${.TARGET}

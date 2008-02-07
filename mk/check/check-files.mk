@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.21 2008/01/23 14:30:59 rillig Exp $
+# $NetBSD: check-files.mk,v 1.22 2008/02/07 21:36:13 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -178,7 +178,7 @@ check-files-post-message:
 	@${STEP_MSG} "Generating post-install file lists"
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${FIND} ${DESTDIR}${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER}				\
@@ -186,7 +186,7 @@ ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
                 || ${TRUE}
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${FIND} ${DESTDIR}${PKG_SYSCONFDIR}/. -print 2>/dev/null	\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
@@ -194,7 +194,7 @@ ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 		|| ${TRUE}
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${FIND} ${DESTDIR}${VARBASE}/. -print 2>/dev/null		\
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} 				\
@@ -239,28 +239,28 @@ _CHECK_FILES_MISSING_REAL=	${WRKDIR}/.check_files_missing_real
 _CHECK_FILES_EXTRA=		${WRKDIR}/.check_files_extra
 
 ${_CHECK_FILES_DIFF}: ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${DIFF} -u ${_CHECK_FILES_PRE.prefix}				\
 		  ${_CHECK_FILES_POST.prefix}				\
 		> ${.TARGET} || ${TRUE}
 
 ${_CHECK_FILES_ADDED}: ${_CHECK_FILES_DIFF}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${GREP} '^+/' ${_CHECK_FILES_DIFF} | ${SED} "s|^+||" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_DELETED}: ${_CHECK_FILES_DIFF}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${GREP} '^-/' ${_CHECK_FILES_DIFF} | ${SED} "s|^-||" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_EXPECTED}: plist
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${GREP} '^[^@]' ${PLIST} | ${SED} "s|^|${DESTDIR}${PREFIX}/|" | ${SORT}	\
 		> ${.TARGET}
 
 ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${DIFF} -u ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^-[^-]' | ${SED} "s|^-||" |				\
 	while read file; do						\
@@ -268,21 +268,21 @@ ${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
 	done > ${.TARGET}
 
 ${_CHECK_FILES_MISSING_REAL}: ${_CHECK_FILES_MISSING}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${CAT} ${_CHECK_FILES_MISSING} | ${_CHECK_FILES_SKIP_FILTER}	\
 		> ${.TARGET} || ${TRUE}
 
 ${_CHECK_FILES_MISSING_SKIP}:						\
 		${_CHECK_FILES_MISSING}					\
 		${_CHECK_FILES_MISSING_REAL}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${DIFF} -u ${_CHECK_FILES_MISSING}				\
 		   ${_CHECK_FILES_MISSING_REAL} |			\
 	${GREP} '^-[^-]' | ${SED} "s|^-||"				\
 		> ${.TARGET}
 
 ${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${DIFF} -u  ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
 	${GREP} '^+[^+]' | ${SED} "s|^+||" |				\
 	while read file; do						\
@@ -295,28 +295,28 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 		${_CHECK_FILES_MISSING_REAL}				\
 		${_CHECK_FILES_MISSING_SKIP}				\
 		${_CHECK_FILES_EXTRA}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}					\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_DELETED}; then		\
 		${ECHO} "The following files have been deleted"		\
 			"from ${PREFIX}!";				\
 		${SED} "s|^|        |" ${_CHECK_FILES_DELETED};		\
 	fi >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_REAL}; then	\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in the"		\
 			"PLIST but not in ${PREFIX}:";			\
 		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_REAL};	\
 	fi >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_EXTRA}; then		\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in"			\
 			"${PREFIX} but not in the PLIST:";		\
 		${SED} "s|^|        |" ${_CHECK_FILES_EXTRA};		\
 	fi >> ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_SKIP}; then	\
 		${ECHO} "************************************************************"; \
 		${ECHO} "The following files are in both the"		\
@@ -330,7 +330,7 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 		${_CHECK_FILES_PRE.sysconfdir}				\
 		${_CHECK_FILES_POST.sysconfdir}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${CMP} -s ${_CHECK_FILES_PRE.sysconfdir}			\
 		     ${_CHECK_FILES_POST.sysconfdir}; then		\
 		${DO_NADA};						\
@@ -350,7 +350,7 @@ ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 ${_CHECK_FILES_ERRMSG.varbase}:						\
 		${_CHECK_FILES_PRE.varbase}				\
 		${_CHECK_FILES_POST.varbase}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${CMP} -s ${_CHECK_FILES_PRE.varbase}			\
 		       ${_CHECK_FILES_POST.varbase}; then		\
 		${DO_NADA};						\
@@ -371,7 +371,7 @@ ${_CHECK_FILES_ERRMSG.varbase}:						\
 .PHONY: check-files-clean
 check-clean: check-files-clean
 check-files-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${RM} -f ${_CHECK_FILES_ERRMSGS}				\
 		${_CHECK_FILES_PRE} ${_CHECK_FILES_POST}		\
 		${_CHECK_FILES_DIFF} ${_CHECK_FILES_ADDED}		\

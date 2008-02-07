@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.22 2008/01/04 01:46:26 rillig Exp $
+# $NetBSD: configure.mk,v 1.23 2008/02/07 21:36:13 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -203,7 +203,7 @@ _CONFIGURE_SCRIPT_ENV+=	${CONFIGURE_ENV}
 .PHONY: do-configure-script
 do-configure-script:
 .for _dir_ in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${_CONFIGURE_SCRIPT_ENV}				\
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
@@ -222,7 +222,7 @@ _CONFIGURE_IMAKE_ENV+=	${SCRIPTS_ENV}
 .PHONY: do-configure-imake
 do-configure-imake:
 .for _dir_ in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${_CONFIGURE_IMAKE_ENV} ${XMKMF}
 .endfor
@@ -240,7 +240,7 @@ _CONFIGURE_CMAKE_ENV+=	${CONFIGURE_ENV}
 .PHONY: do-configure-cmake
 do-configure-cmake:
 .for _dir_ in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${_CONFIGURE_CMAKE_ENV}				\
 		cmake ${CMAKE_ARGS} ${CMAKE_ARG_PATH}

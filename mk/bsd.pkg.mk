@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1935 2008/01/16 01:01:26 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1936 2008/02/07 21:36:13 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -805,14 +805,14 @@ PKG_ERROR_HANDLER.${_class_}?=	{					\
 #
 .for _phase_ in ${_ALL_PHASES}
 ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
+	${RUN}${RM} -f ${.TARGET}.tmp
 .  for _var_ in ${MAKEVARS:O:u}
 .    if defined(${_var_})
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${ECHO} ${_var_}"=	"${${_var_}:Q} >> ${.TARGET}.tmp
 .    endif
 .  endfor
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if ${TEST} -f ${.TARGET}.tmp; then				\
 		( ${ECHO} ".if !defined(_MAKEVARS_MK)";			\
 		  ${ECHO} "_MAKEVARS_MK=	defined";		\
@@ -823,7 +823,7 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 		) > ${.TARGET};						\
 		${RM} -f ${.TARGET}.tmp;				\
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+	${RUN}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
 
 .if make(pbulk-index) || make(pbulk-index-item) || make(pbulk-save-wrkdir)

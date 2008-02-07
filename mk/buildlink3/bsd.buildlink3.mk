@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.199 2007/12/05 21:36:43 tron Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.200 2008/02/07 21:36:13 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -497,14 +497,14 @@ LIBS+=		${_flag_}
 .PHONY: buildlink-directories
 do-buildlink: buildlink-directories
 buildlink-directories:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_BINDIR}
+	${RUN}${MKDIR} ${BUILDLINK_DIR}
+	${RUN}${MKDIR} ${BUILDLINK_BINDIR}
 .if defined(USE_X11) && ${X11_TYPE} != "modular"
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
+	${RUN}${RM} -f ${BUILDLINK_X11_DIR}
+	${RUN}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib${LIBABISUFFIX}
+	${RUN}${MKDIR} ${BUILDLINK_DIR}/include
+	${RUN}${MKDIR} ${BUILDLINK_DIR}/lib${LIBABISUFFIX}
 
 # The following variables are all optionally defined and control which
 # package files are symlinked into ${BUILDLINK_DIR} and how their names
@@ -546,12 +546,12 @@ buildlink-${_pkg_}: ${_BLNK_TARGETS.${_pkg_}}
 
 .PHONY: buildlink-${_pkg_}-message
 buildlink-${_pkg_}-message:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${ECHO_BUILDLINK_MSG} "=> Linking ${_pkg_} files into ${BUILDLINK_DIR}."
 
 .PHONY: buildlink-${_pkg_}-cookie
 buildlink-${_pkg_}-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	${TOUCH} ${TOUCH_FLAGS} ${_BLNK_COOKIE.${_pkg_}}
 
 .  if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&			\
@@ -581,7 +581,7 @@ _BLNK_FILES_CMD.${_pkg_}+=	)
 _BLNK_FILES_CMD.${_pkg_}+=	| ${SORT} -u
 
 ${_BLNK_COOKIE.${_pkg_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	*not_found)							\
 		${ERROR_MSG} "${_pkg_} is not installed; can't buildlink files."; \
@@ -1059,8 +1059,8 @@ _WRAP_EXTRA_ARGS.LIBTOOL+=	${_BLNK_LDFLAGS}
 _WRAP_EXTRA_ARGS.SHLIBTOOL+=	${_BLNK_LDFLAGS}
 
 ${WRAPPER_TMPDIR}/libtool-fix-la: ${BUILDLINK_SRCDIR}/libtool-fix-la
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC}			\
 		| ${SED} -e "s|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|"${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}"|g" \
 			 -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
 			 -e "s|@DEPOTBASE@|${DEPOTBASE}|g"		\
@@ -1075,32 +1075,32 @@ ${WRAPPER_TMPDIR}/libtool-fix-la: ${BUILDLINK_SRCDIR}/libtool-fix-la
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/buildcmd-libtool: ${BUILDLINK_SRCDIR}/buildcmd-libtool
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/cleanup-libtool:					\
 		${BUILDLINK_SRCDIR}/cleanup-libtool			\
 		${_BLNK_LIBTOOL_FIX_LA}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	${CAT} ${BUILDLINK_SRCDIR}/cleanup-libtool			\
 		| ${SED} -e "s|@_BLNK_LIBTOOL_FIX_LA@|"${_BLNK_LIBTOOL_FIX_LA:Q}"|g" \
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/cmd-sink-libtool: ${BUILDLINK_SRCDIR}/cmd-sink-libtool
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/scan-libtool: ${BUILDLINK_SRCDIR}/scan-libtool
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/transform-libtool: ${BUILDLINK_SRCDIR}/transform-libtool
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${CAT} ${.ALLSRC}			\
 		| ${SED} -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
 			 -e "s|@WRKSRC@|${WRKSRC}|g"			\
 			 -e "s|@BASENAME@|"${BASENAME:Q}"|g"		\

@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.64 2007/10/17 10:43:37 rillig Exp $
+# $NetBSD: compiler.mk,v 1.65 2008/02/07 21:36:13 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -173,8 +173,8 @@ ${_FAIL_WRAPPER.FC}: fail-wrapper
 
 .PHONY: fail-wrapper
 fail-wrapper: .USE
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	exec 1>${.TARGET};						\
 	${ECHO} '#!'${TOOLS_SHELL:Q};					\
 	${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
@@ -185,7 +185,7 @@ fail-wrapper: .USE
 	${ECHO} '${ECHO} "ERROR: To use this compiler, you have to add $$lang to" 1>&2'; \
 	${ECHO} '${ECHO} "ERROR: USE_LANGUAGES in the package Makefile." 1>&2'; \
 	${ECHO} 'exit 1'
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 
 .if empty(USE_LANGUAGES:Mc) && empty(USE_LANGUAGES:Mobjc)
 PKG_CC:=		${_FAIL_WRAPPER.CC}
