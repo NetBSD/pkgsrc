@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.6 2008/02/07 17:27:40 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.7 2008/02/07 17:47:12 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -65,7 +65,6 @@
 #include <sys/socket.h>
 
 #include <ctype.h>
-#include <err.h>
 #include <errno.h>
 #include <locale.h>
 #include <netdb.h>
@@ -1201,7 +1200,7 @@ fetchGetHTTP(struct url *URL, const char *flags)
 FILE *
 fetchPutHTTP(struct url *URL, const char *flags)
 {
-	warnx("fetchPutHTTP(): not implemented");
+	fprintf(stderr, "fetchPutHTTP(): not implemented\n");
 	return (NULL);
 }
 
@@ -1226,6 +1225,6 @@ fetchStatHTTP(struct url *URL, struct url_stat *us, const char *flags)
 struct url_ent *
 fetchListHTTP(struct url *url, const char *flags)
 {
-	warnx("fetchListHTTP(): not implemented");
+	fprintf(stderr, "fetchListHTTP(): not implemented\n");
 	return (NULL);
 }

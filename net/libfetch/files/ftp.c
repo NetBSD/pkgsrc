@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.7 2008/02/07 17:42:14 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.8 2008/02/07 17:47:12 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -61,7 +61,6 @@
 #include <netinet/in.h>
 
 #include <ctype.h>
-#include <err.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <netdb.h>
@@ -908,7 +907,7 @@ ouch:
 static int
 ftp_authenticate(conn_t *conn, struct url *url, struct url *purl)
 {
-	const char *user, *pwd, *logname;
+	const char *user, *pwd, *login_name;
 	char pbuf[URL_USERLEN + 1 + URL_HOSTLEN + 1];
 	int e, len;
 
@@ -935,9 +934,9 @@ ftp_authenticate(conn_t *conn, struct url *url, struct url *purl)
 		if (*pwd == '\0')
 			pwd = getenv("FTP_PASSWORD");
 		if (pwd == NULL || *pwd == '\0') {
-			if ((logname = getlogin()) == 0)
-				logname = FTP_ANONYMOUS_USER;
-			if ((len = snprintf(pbuf, URL_USERLEN + 2, "%s@", logname)) < 0)
+			if ((login_name = getlogin()) == 0)
+				login_name = FTP_ANONYMOUS_USER;
+			if ((len = snprintf(pbuf, URL_USERLEN + 2, "%s@", login_name)) < 0)
 				len = 0;
 			else if (len > URL_USERLEN + 1)
 				len = URL_USERLEN + 1;
@@ -1202,6 +1201,6 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 struct url_ent *
 fetchListFTP(struct url *url, const char *flags)
 {
-	warnx("fetchListFTP(): not implemented");
+	fprintf(stderr, "fetchListFTP(): not implemented\n");
 	return (NULL);
 }
