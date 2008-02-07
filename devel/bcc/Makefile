@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/06/30 18:24:51 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/02/07 13:24:36 tnn Exp $
 
 DISTNAME=		bcc
 PKGNAME=		bcc-95.3.12
@@ -11,6 +11,7 @@ NOT_FOR_PLATFORM=	*-*-alpha *-*-x86_64	# Severe LP64 problems
 NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 INSTALLATION_DIRS=	bin lib/bcc ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 

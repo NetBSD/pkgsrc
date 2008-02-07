@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/19 09:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/02/07 13:24:36 tnn Exp $
 
 DISTNAME=	bonnie
 PKGNAME=	bonnie-2.06
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 
-USE_TOOLS+=		expr
+USE_TOOLS+=		expr groff nroff
 USE_BSD_MAKEFILE=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 
