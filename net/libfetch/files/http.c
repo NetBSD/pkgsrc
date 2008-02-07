@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.7 2008/02/07 17:47:12 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.8 2008/02/07 18:02:01 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -923,7 +923,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		if ((p = getenv("HTTP_USER_AGENT")) != NULL && *p != '\0')
 			http_cmd(conn, "User-Agent: %s", p);
 		else
-			http_cmd(conn, "User-Agent: %s " _LIBFETCH_VER, getprogname());
+			http_cmd(conn, "User-Agent: %s ", _LIBFETCH_VER);
 		if (url->offset > 0)
 			http_cmd(conn, "Range: bytes=%lld-", (long long)url->offset);
 		http_cmd(conn, "Connection: close");
