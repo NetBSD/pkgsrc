@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.5 2008/02/07 17:23:37 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.6 2008/02/07 17:27:40 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -1199,7 +1199,7 @@ fetchGetHTTP(struct url *URL, const char *flags)
  * Store a file by HTTP
  */
 FILE *
-fetchPutHTTP(struct url *URL __unused, const char *flags)
+fetchPutHTTP(struct url *URL, const char *flags)
 {
 	warnx("fetchPutHTTP(): not implemented");
 	return (NULL);
@@ -1224,7 +1224,7 @@ fetchStatHTTP(struct url *URL, struct url_stat *us, const char *flags)
  * List a directory
  */
 struct url_ent *
-fetchListHTTP(struct url *url __unused, const char *flags)
+fetchListHTTP(struct url *url, const char *flags)
 {
 	warnx("fetchListHTTP(): not implemented");
 	return (NULL);
