@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/09/10 06:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/02/07 21:28:29 heinz Exp $
 #
 
 DISTNAME=	Parse-RecDescent-1.94
@@ -11,11 +11,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Parse-RecDescent/
 COMMENT=	Perl5 module to generate recursive-descent parsers
 
-DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
-
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PERL5_PACKLIST=		auto/Parse/RecDescent/.packlist
+DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
+
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST=	auto/Parse/RecDescent/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
