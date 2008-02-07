@@ -1,4 +1,4 @@
-# $NetBSD: ido.mk,v 1.5 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: ido.mk,v 1.6 2008/02/07 20:59:05 rillig Exp $
 #
 # This is the compiler definition for the SGI IRIS Development Option
 # cc (IRIX 5).
@@ -66,14 +66,14 @@ PREPEND_PATH+=	${_IDO_DIR}/bin
 .  if !target(${_IDO_${_var_}})
 override-tools: ${_IDO_${_var_}}
 ${_IDO_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${${_var_}PATH} "$$@"';			\
 	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -f ${.TARGET} ${_alias_};				\
 	fi
