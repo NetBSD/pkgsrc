@@ -1,4 +1,4 @@
-/*	$NetBSD: tables.c,v 1.7 2007/03/08 17:18:18 rillig Exp $	*/
+/*	$NetBSD: tables.c,v 1.8 2008/02/07 22:27:53 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)tables.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: tables.c,v 1.7 2007/03/08 17:18:18 rillig Exp $");
+__RCSID("$NetBSD: tables.c,v 1.8 2008/02/07 22:27:53 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -982,7 +982,7 @@ atdir_end(void)
 		 * not read by pax. Read time reset is controlled by -t.
 		 */
 		for (; pt != NULL; pt = pt->fow)
-			set_ftime(pt->name, pt->mtime, pt->atime, 1);
+			set_ftime(pt->name, pt->mtime, pt->atime, 1, 0);
 	}
 }
 
@@ -1280,7 +1280,7 @@ proc_dir(void)
 		if (pmode || dblk.frc_mode)
 			set_pmode(name, dblk.mode);
 		if (patime || pmtime)
-			set_ftime(name, dblk.mtime, dblk.atime, 0);
+			set_ftime(name, dblk.mtime, dblk.atime, 0, 0);
 		if (pfflags)
 			set_chflags(name, dblk.fflags);
 	}
@@ -1304,7 +1304,7 @@ proc_dir(void)
 		if (pmode || dblk->frc_mode)
 			set_pmode(dblk->name, dblk->mode);
 		if (patime || pmtime)
-			set_ftime(dblk->name, dblk->mtime, dblk->atime, 0);
+			set_ftime(dblk->name, dblk->mtime, dblk->atime, 0, 0);
 		if (pfflags)
 			set_chflags(dblk->name, dblk->fflags);
 
