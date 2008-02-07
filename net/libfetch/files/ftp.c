@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.3 2008/02/07 17:12:12 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.4 2008/02/07 17:19:50 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -120,14 +120,14 @@ static void
 unmappedaddr(struct sockaddr_in6 *sin6)
 {
 	struct sockaddr_in *sin4;
-	u_int32_t addr;
+	uint32_t addr;
 	int port;
 
 	if (sin6->sin6_family != AF_INET6 ||
 	    !IN6_IS_ADDR_V4MAPPED(&sin6->sin6_addr))
 		return;
 	sin4 = (struct sockaddr_in *)sin6;
-	addr = *(u_int32_t *)&sin6->sin6_addr.s6_addr[12];
+	addr = *(uint32_t *)&sin6->sin6_addr.s6_addr[12];
 	port = sin6->sin6_port;
 	memset(sin4, 0, sizeof(struct sockaddr_in));
 	sin4->sin_addr.s_addr = addr;
@@ -662,7 +662,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 	}
 
 	if (pasv) {
-		u_char addr[64];
+		unsigned char addr[64];
 		char *ln, *p;
 		unsigned int i;
 		int port;
@@ -731,7 +731,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 
 		/* seek to required offset */
 		if (offset)
-			if (ftp_cmd(conn, "REST %lu", (u_long)offset) != FTP_FILE_OK)
+			if (ftp_cmd(conn, "REST %lu", (unsigned long)offset) != FTP_FILE_OK)
 				goto sysouch;
 
 		/* construct sockaddr for data socket */
@@ -782,8 +782,8 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 			goto ouch;
 
 	} else {
-		u_int32_t a;
-		u_short p;
+		uint32_t a;
+		uint16_t p;
 		int arg, d;
 		char *ap;
 		char hname[INET6_ADDRSTRLEN];
