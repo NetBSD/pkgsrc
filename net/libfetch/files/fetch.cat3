@@ -175,7 +175,7 @@ DDEESSCCRRIIPPTTIIOONN
      <_f_e_t_c_h_._h>:
 
      struct url_ent {
-         char         name[MAXPATHLEN];
+         char         name[PATH_MAX];
          struct url_stat stat;
      };
 
