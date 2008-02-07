@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.38 2007/03/07 01:37:18 rillig Exp $
+# $NetBSD: mipspro.mk,v 1.39 2008/02/07 20:59:05 rillig Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -90,14 +90,14 @@ PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
 .  if !target(${_MIPSPRO_${_var_}})
 override-tools: ${_MIPSPRO_${_var_}}
 ${_MIPSPRO_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -f ${.TARGET} ${_alias_};				\
 	fi

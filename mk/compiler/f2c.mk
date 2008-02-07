@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.9 2007/01/16 17:16:20 dmcmahill Exp $
+# $NetBSD: f2c.mk,v 1.10 2008/02/07 20:59:05 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -109,11 +109,11 @@ PKGSRC_MAKE_ENV+=	F2C_DIR=${F2C_DIR:Q}
 .    if !target(${_F2C_${_var_}})
 override-tools: ${_F2C_${_var_}}
 ${_F2C_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${_alias_};		\
 	fi

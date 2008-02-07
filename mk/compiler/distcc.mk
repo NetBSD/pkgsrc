@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.29 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: distcc.mk,v 1.30 2008/02/07 20:59:05 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -110,11 +110,11 @@ PKGSRC_MAKE_ENV+=	DISTCC_VERBOSE=${DISTCC_VERBOSE:Q}
 .    if !target(${_DISTCC_${_var_}})
 override-tools: ${_DISTCC_${_var_}}
 ${_DISTCC_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	${LN} -fs ${_DISTCCBASE}/bin/distcc ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -fs ${_DISTCCBASE}/bin/distcc ${_alias_};		\
 	fi

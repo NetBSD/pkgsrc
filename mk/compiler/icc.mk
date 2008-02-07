@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.4 2006/12/15 12:46:24 martti Exp $
+# $NetBSD: icc.mk,v 1.5 2008/02/07 20:59:05 rillig Exp $
 #
 # This is the compiler definition for the Intel compilers.
 #
@@ -80,14 +80,14 @@ CONFIGURE_ENV+=		ac_cv___attribute__=yes
 .  if !target(${_ICC_${_var_}})
 override-tools: ${_ICC_${_var_}}
 ${_ICC_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${ICCBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -f ${.TARGET} ${_alias_};				\
 	fi
