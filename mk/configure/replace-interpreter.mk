@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.8 2007/11/28 08:48:11 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.9 2008/02/07 21:36:13 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -87,7 +87,7 @@ replace-interpreter:
 .for _lang_ in ${REPLACE_INTERPRETER}
 .  if defined(REPLACE_FILES.${_lang_}) && !empty(REPLACE_FILES.${_lang_}:M*)
 	@${STEP_MSG} "Replacing ${_lang_:S/^sys-//} interpreter in "${REPLACE_FILES.${_lang_}:M*:Q}"."
-	${_PKG_SILENT}${_PKG_DEBUG} set -eu;				\
+	${RUN} set -u; \
 	cd ${WRKSRC};							\
 	for f in ${REPLACE_FILES.${_lang_}}; do				\
 		if [ -f "$${f}" ]; then					\
