@@ -1,0 +1,11 @@
+libfetch provides a high-level interface for retreiving and uploading
+files using Uniform Resource Locators (URLs).
+
+The library implements:
+
+    * local file access (file://)
+    * FTP
+    * HTTP
+    * HTTPS (optional, using OpenSSL)
+
+FTP and HTTP proxies can be used.
