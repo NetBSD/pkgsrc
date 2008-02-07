@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/08 03:20:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/07 13:24:36 tnn Exp $
 #
 
 DISTNAME=	cnxtutil-0.00-alpha
@@ -14,6 +14,7 @@ COMMENT=	Creative WEBCAM Notebook Utility Programs
 NOT_FOR_PLATFORM=	SunOS-*-*	# needs <err.h> and <dev/usb/usb.h>
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 MAKE_ENV+=	NOGCCERROR=
 
 .include "../../graphics/imlib/buildlink3.mk"

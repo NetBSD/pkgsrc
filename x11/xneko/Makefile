@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/18 00:37:26 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/02/07 13:24:36 tnn Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
@@ -17,6 +17,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/cat6 ${PKGMANDIR}/man6
 

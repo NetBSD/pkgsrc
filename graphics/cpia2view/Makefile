@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/08 03:19:01 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/07 13:24:36 tnn Exp $
 #
 
 DISTNAME=	cpia2_driver-1.0
@@ -17,6 +17,7 @@ HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#cpia2
 COMMENT=	USB cameras based CPiA2 Utility Programs
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/28 12:27:20 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/07 13:24:36 tnn Exp $
 
 DISTNAME=	qident-1.2
 CATEGORIES=	security net
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.hairylemon.org/~ad/software/qident/
 COMMENT=	Small program to query an ident protocol server (rfc1413)
 
 USE_BSD_MAKEFILE=	YES
+USE_TOOLS+=		groff nroff
 
 MANCOMPRESSED_IF_MANZ=	YES
 
