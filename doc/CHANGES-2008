@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.235 2008/02/06 23:28:10 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.236 2008/02/07 01:59:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -404,3 +404,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/graphviz to 2.16.1 [adam 2008-02-06]
 	Updated textproc/p5-PDF-API2 to 0.69 [heinz 2008-02-06]
 	Updated net/GeoIP to 1.4.4 [heinz 2008-02-06]
+	Updated pkgtools/pkg_tarup to 1.7 [joerg 2008-02-06]
+	Added net/libfetch version 2.0 [joerg 2008-02-07]
