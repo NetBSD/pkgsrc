@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.237 2008/02/07 06:32:10 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.238 2008/02/07 06:41:02 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -407,3 +407,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_tarup to 1.7 [joerg 2008-02-06]
 	Added net/libfetch version 2.0 [joerg 2008-02-07]
 	Updated x11/xkeyboard-config to 1.2 [bjs 2008-02-07]
+	Updated x11/pixman to 0.9.6nb4 [bjs 2008-02-07]
