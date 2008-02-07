@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.2 2007/12/18 10:18:39 markd Exp $
+# $NetBSD: cmake.mk,v 1.3 2008/02/07 21:36:13 rillig Exp $
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
@@ -26,9 +26,7 @@ do-configure-pre-hook: cmake-copy-module-tree
 
 .PHONY: cmake-copy-module-tree
 cmake-copy-module-tree:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-        cd ${PKGSRCDIR}/mk; ${CP} -R cmake-Modules ${_CMAKE_DIR}
-	
+	${RUN} cd ${PKGSRCDIR}/mk; ${CP} -R cmake-Modules ${_CMAKE_DIR}
 
 ######################################################################
 ### cmake-dependencies-rewrite (PRIVATE)
@@ -47,7 +45,7 @@ do-configure-post-hook: cmake-dependencies-rewrite
 cmake-dependencies-rewrite:
 	@${STEP_MSG} "Rewrite cmake Dependencies files"
 .if defined(CMAKE_DEPENDENCIES_REWRITE) && !empty(CMAKE_DEPENDENCIES_REWRITE)
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	cd ${WRKSRC};							\
 	for file in ${CMAKE_DEPENDENCIES_REWRITE}; do			\
 		${TEST} -f "$$file" || continue;			\
