@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/12/31 03:09:31 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/07 13:24:36 tnn Exp $
 
 DISTNAME=	lambd-20010719
 PKGREVISION=	1
@@ -17,6 +17,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
