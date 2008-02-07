@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/10 13:44:28 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/07 20:27:23 heinz Exp $
 #
 
 DISTNAME=		Crypt-Blowfish-2.10
@@ -11,11 +11,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-Blowfish/
 COMMENT=		Perl5 Blowfish implementation
 
-BUILD_DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
-
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+BUILD_DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
+
 CRYPTO=			YES
+USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Crypt/Blowfish/.packlist
 
 .include "../../lang/perl5/module.mk"
