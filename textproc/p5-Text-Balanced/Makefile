@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/05/18 20:31:59 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/07 21:13:57 heinz Exp $
 #
 
 DISTNAME=	Text-Balanced-v2.0.0
@@ -16,7 +16,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 
-PERL5_PACKLIST=		auto/Text/Balanced/.packlist
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST=	auto/Text/Balanced/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
