@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.92 2007/08/11 17:31:22 joerg Exp $
+# $NetBSD: gcc.mk,v 1.93 2008/02/07 20:59:05 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -433,19 +433,19 @@ GCC_USE_SYMLINKS?=	no
 .  if !target(${_GCC_${_var_}})
 override-tools: ${_GCC_${_var_}}
 ${_GCC_${_var_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${RUN}${MKDIR} ${.TARGET:H}
 .    if !empty(GCC_USE_SYMLINKS:Myes)
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${LN} -s ${_GCCBINDIR}/${.TARGET:T} ${.TARGET}
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}${LN} -s ${_GCCBINDIR}/${.TARGET:T} ${.TARGET}
 .    else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${_GCCBINDIR}/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
-	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 .    endif
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
 		${LN} -f -s ${.TARGET:T} ${_alias_};			\
 	fi
