@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.6 2008/02/07 17:27:40 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.7 2008/02/07 17:42:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -117,7 +117,7 @@ static conn_t	*cached_connection;
  * Translate IPv4 mapped IPv6 address to IPv4 address
  */
 static void
-unmappedaddr(struct sockaddr_in6 *sin6)
+unmappedaddr(struct sockaddr_in6 *sin6, socklen_t *len)
 {
 	struct sockaddr_in *sin4;
 	uint32_t addr;
@@ -133,8 +133,8 @@ unmappedaddr(struct sockaddr_in6 *sin6)
 	sin4->sin_addr.s_addr = addr;
 	sin4->sin_port = port;
 	sin4->sin_family = AF_INET;
-#if !defined(__sun) && !defined(__hpux) && !defined(__INTERIX) && \
-    !defined(__digital__) && !defined(__linux)
+	*len = sizeof(struct sockaddr_in);
+#ifdef HAVE_SA_LEN
 	sin4->sin_len = sizeof(struct sockaddr_in);
 #endif
 }
@@ -656,7 +656,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 	if (getsockname(conn->sd, (struct sockaddr *)&sa, &l) == -1)
 		goto sysouch;
 	if (sa.ss_family == AF_INET6)
-		unmappedaddr((struct sockaddr_in6 *)&sa);
+		unmappedaddr((struct sockaddr_in6 *)&sa, &l);
 
 	/* open data socket */
 	if ((sd = socket(sa.ss_family, SOCK_STREAM, IPPROTO_TCP)) == -1) {
@@ -742,7 +742,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 		if (getpeername(conn->sd, (struct sockaddr *)&sa, &l) == -1)
 			goto sysouch;
 		if (sa.ss_family == AF_INET6)
-			unmappedaddr((struct sockaddr_in6 *)&sa);
+			unmappedaddr((struct sockaddr_in6 *)&sa, &l);
 		switch (sa.ss_family) {
 		case AF_INET6:
 			sin6 = (struct sockaddr_in6 *)&sa;
@@ -774,7 +774,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 		if (bindaddr != NULL && *bindaddr != '\0' &&
 		    fetch_bind(sd, sa.ss_family, bindaddr) != 0)
 			goto sysouch;
-		if (connect(sd, (struct sockaddr *)&sa, sa.ss_len) == -1)
+		if (connect(sd, (struct sockaddr *)&sa, l) == -1)
 			goto sysouch;
 
 		/* make the server initiate the transfer */
@@ -803,15 +803,17 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 			break;
 		case AF_INET:
 			((struct sockaddr_in *)&sa)->sin_port = 0;
+#ifdef IP_PORTRANGE
 			arg = low ? IP_PORTRANGE_DEFAULT : IP_PORTRANGE_HIGH;
 			if (setsockopt(sd, IPPROTO_IP, IP_PORTRANGE,
 				(char *)&arg, sizeof(arg)) == -1)
 				goto sysouch;
+#endif
 			break;
 		}
 		if (verbose)
 			fetch_info("binding data socket");
-		if (bind(sd, (struct sockaddr *)&sa, sa.ss_len) == -1)
+		if (bind(sd, (struct sockaddr *)&sa, l) == -1)
 			goto sysouch;
 		if (listen(sd, 1) == -1)
 			goto sysouch;
@@ -834,7 +836,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 			e = -1;
 			sin6 = (struct sockaddr_in6 *)&sa;
 			sin6->sin6_scope_id = 0;
-			if (getnameinfo((struct sockaddr *)&sa, sa.ss_len,
+			if (getnameinfo((struct sockaddr *)&sa, l,
 				hname, sizeof(hname),
 				NULL, 0, NI_NUMERICHOST) == 0) {
 				e = ftp_cmd(conn, "EPRT |%d|%s|%d|", 2, hname,
