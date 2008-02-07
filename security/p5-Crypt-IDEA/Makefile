@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/10/31 12:29:34 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/07 20:34:47 heinz Exp $
 #
 
 DISTNAME=		Crypt-IDEA-1.08
@@ -13,8 +13,10 @@ COMMENT=		Perl5 module for the IDEA symmetric key algorithm
 # IDEA's license
 LICENSE=		fee-based-commercial-use
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
+USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Crypt/IDEA/.packlist
 
 .include "../../lang/perl5/module.mk"
