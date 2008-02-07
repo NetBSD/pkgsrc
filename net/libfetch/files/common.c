@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.3 2008/02/07 16:24:01 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.4 2008/02/07 16:30:49 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -384,7 +384,7 @@ fetch_ssl(conn_t *conn, int verbose)
 ssize_t
 fetch_read(conn_t *conn, char *buf, size_t len)
 {
-	struct timeval now, timeout, wait;
+	struct timeval now, timeout, waittv;
 	fd_set readfds;
 	ssize_t rlen, total;
 	int r;
@@ -400,19 +400,19 @@ fetch_read(conn_t *conn, char *buf, size_t len)
 		while (fetchTimeout && !FD_ISSET(conn->sd, &readfds)) {
 			FD_SET(conn->sd, &readfds);
 			gettimeofday(&now, NULL);
-			wait.tv_sec = timeout.tv_sec - now.tv_sec;
-			wait.tv_usec = timeout.tv_usec - now.tv_usec;
-			if (wait.tv_usec < 0) {
-				wait.tv_usec += 1000000;
-				wait.tv_sec--;
+			waittv.tv_sec = timeout.tv_sec - now.tv_sec;
+			waittv.tv_usec = timeout.tv_usec - now.tv_usec;
+			if (waittv.tv_usec < 0) {
+				waittv.tv_usec += 1000000;
+				waittv.tv_sec--;
 			}
-			if (wait.tv_sec < 0) {
+			if (waittv.tv_sec < 0) {
 				errno = ETIMEDOUT;
 				fetch_syserr();
 				return (-1);
 			}
 			errno = 0;
-			r = select(conn->sd + 1, &readfds, NULL, NULL, &wait);
+			r = select(conn->sd + 1, &readfds, NULL, NULL, &waittv);
 			if (r == -1) {
 				if (errno == EINTR && fetchRestartCalls)
 					continue;
@@ -510,7 +510,7 @@ fetch_write(conn_t *conn, const char *buf, size_t len)
 ssize_t
 fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
 {
-	struct timeval now, timeout, wait;
+	struct timeval now, timeout, waittv;
 	fd_set writefds;
 	ssize_t wlen, total;
 	int r;
@@ -526,19 +526,19 @@ fetch_writev(conn_t *conn, struct iovec *iov, int iovcnt)
 		while (fetchTimeout && !FD_ISSET(conn->sd, &writefds)) {
 			FD_SET(conn->sd, &writefds);
 			gettimeofday(&now, NULL);
-			wait.tv_sec = timeout.tv_sec - now.tv_sec;
-			wait.tv_usec = timeout.tv_usec - now.tv_usec;
-			if (wait.tv_usec < 0) {
-				wait.tv_usec += 1000000;
-				wait.tv_sec--;
+			waittv.tv_sec = timeout.tv_sec - now.tv_sec;
+			waittv.tv_usec = timeout.tv_usec - now.tv_usec;
+			if (waittv.tv_usec < 0) {
+				waittv.tv_usec += 1000000;
+				waittv.tv_sec--;
 			}
-			if (wait.tv_sec < 0) {
+			if (waittv.tv_sec < 0) {
 				errno = ETIMEDOUT;
 				fetch_syserr();
 				return (-1);
 			}
 			errno = 0;
-			r = select(conn->sd + 1, NULL, &writefds, NULL, &wait);
+			r = select(conn->sd + 1, NULL, &writefds, NULL, &waittv);
 			if (r == -1) {
 				if (errno == EINTR && fetchRestartCalls)
 					continue;
