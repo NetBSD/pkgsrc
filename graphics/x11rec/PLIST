@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/05 20:03:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/08 15:19:42 obache Exp $
 bin/x11rec
-share/doc/html/x11rec/index.html.en
-share/doc/html/x11rec/index.html.ja
-@dirrm share/doc/html/x11rec
+share/doc/x11rec/index.html.en
+share/doc/x11rec/index.html.ja
+@dirrm share/doc/x11rec
