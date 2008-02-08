@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2008/01/28 05:38:20 bjs Exp $
+$NetBSD: distinfo,v 1.14 2008/02/08 03:50:07 bjs Exp $
 
 SHA1 (nasm-2.01.tar.bz2) = e532443eb5a984c9711062d329d4ec07ec154250
 RMD160 (nasm-2.01.tar.bz2) = 9589f146fb242fa8ebc0ce2b53e6a8629022e8ca
 Size (nasm-2.01.tar.bz2) = 722479 bytes
-SHA1 (patch-aa) = 8514d241d017f0396e7ee8bfe0008d99ca29683c
-SHA1 (patch-ab) = f59ec4b8b342af6c0986cb0fb6be604675523c42
+SHA1 (patch-aa) = 3f05734250b81898f15fc4323d95ec5606c91cb1
+SHA1 (patch-ab) = 126868a02cb51e284cc172def061757cbf3742aa
 SHA1 (patch-ac) = 35b69553570023019193c9de915913b1994dcd5b
