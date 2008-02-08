@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.240 2008/02/07 20:54:25 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.241 2008/02/08 03:51:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/p5-Parse-Syslog to 1.10 [heinz 2008-02-07]
 	Updated security/p5-Crypt-CBC to 2.24 [heinz 2008-02-07]
 	Updated graphics/p5-SVG to 2.36 [heinz 2008-02-07]
+	Updated devel/nasm to 2.01nb1 [bjs 2008-02-08]
