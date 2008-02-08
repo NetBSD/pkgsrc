@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.244 2008/02/08 15:20:00 obache Exp $
+$NetBSD: CHANGES-2008,v 1.245 2008/02/08 18:05:43 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -422,3 +422,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-Writer to 0.603 [rhaen 2008-02-08]
 	Updated textproc/p5-XML-Encoding to 2.01 [rhaen 2008-02-08]
 	Updated graphics/x11rec to 0.3nb6 [obache 2008-02-08]
+	Updated www/seamonkey to 1.1.8 [ghen 2008-02-08]
+	Updated www/seamonkey-bin to 1.1.8 [ghen 2008-02-08]
+	Updated www/seamonkey-gtk1 to 1.1.8 [ghen 2008-02-08]
