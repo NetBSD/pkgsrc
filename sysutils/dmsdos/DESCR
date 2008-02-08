@@ -1,0 +1,7 @@
+DMSDOS reads and writes compressed DOS filesystems (CVF-FAT).
+The following configurations are supported:
+ DoubleSpace / DriveSpace (MS-DOS 6.x)
+ DoubleSpace / DriveSpace (Windows 95)
+ DriveSpace 3 (Windows 95 with Plus! pack)
+ Stacker 3
+ Stacker 4
