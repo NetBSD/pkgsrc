@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/01/05 08:34:40 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/08 15:19:42 obache Exp $
 #
 
 DISTNAME=	x11rec-0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://0xcc.net/x11rec/
 
@@ -17,14 +17,14 @@ DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
 NO_BUILD=	yes
 REPLACE_RUBY=	x11rec
 
-INSTALLATION_DIRS=	bin share/doc/html/x11rec
+INSTALLATION_DIRS=	bin share/doc/x11rec
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/x11rec ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/x11rec-en.html \
-		${DESTDIR}${PREFIX}/share/doc/html/x11rec/index.html.en
+		${DESTDIR}${PREFIX}/share/doc/x11rec/index.html.en
 	${INSTALL_DATA} ${WRKSRC}/x11rec-ja.html \
-		${DESTDIR}${PREFIX}/share/doc/html/x11rec/index.html.ja
+		${DESTDIR}${PREFIX}/share/doc/x11rec/index.html.ja
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
