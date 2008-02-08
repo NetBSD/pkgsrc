@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2007/08/23 20:27:19 heinz Exp $
+# $NetBSD: Makefile.common,v 1.24 2008/02/08 10:34:19 tnn Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -117,7 +117,7 @@ SCRIPTS_ENV+=		MOZ_INSTALL_LIB=${INSTALL_PROGRAM:Q}
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
+.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKEFLAGS+=		NS_USE_GCC=YES
 .endif
 
