@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2008/02/08 12:33:31 drochner Exp $
+
+--- IMG_lbm.c.orig	2007-07-20 06:36:32.000000000 +0200
++++ IMG_lbm.c
+@@ -28,6 +28,7 @@
+    EHB and HAM (specific Amiga graphic chip modes) support added by Marc Le Douarain
+    (http://www.multimania.com/mavati) in December 2003.
+    Stencil and colorkey fixes by David Raulo (david.raulo AT free DOT fr) in February 2004.
++   Buffer overflow fix in RLE decompression by David Raulo in January 2008.
+ */
+ 
+ #include <stdio.h>
+@@ -328,7 +329,7 @@ SDL_Surface *IMG_LoadLBM_RW( SDL_RWops *
+ 						count ^= 0xFF;
+ 						count += 2; /* now it */
+ 
+-						if ( !SDL_RWread( src, &color, 1, 1 ) )
++						if ( ( count > remainingbytes ) || !SDL_RWread( src, &color, 1, 1 ) )
+ 						{
+ 						   error="error reading BODY chunk";
+ 							goto done;
+@@ -339,7 +340,7 @@ SDL_Surface *IMG_LoadLBM_RW( SDL_RWops *
+ 					{
+ 						++count;
+ 
+-						if ( !SDL_RWread( src, ptr, count, 1 ) )
++						if ( ( count > remainingbytes ) || !SDL_RWread( src, ptr, count, 1 ) )
+ 						{
+ 						   error="error reading BODY chunk";
+ 							goto done;
