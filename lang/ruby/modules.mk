@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.17 2006/05/03 02:11:00 minskim Exp $
+# $NetBSD: modules.mk,v 1.18 2008/02/08 15:10:41 obache Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -105,10 +105,15 @@ ruby-setup-build:
 .if !target(do-install)
 do-install:	ruby-setup-install
 
+_RUBY_SETUP_INSTALLARGS=   ${INSTALL_TARGET}
+.if ${_USE_DESTDIR} != "no"
+_RUBY_SETUP_INSTALLARGS+=   --prefix=${DESTDIR:Q}
+.endif
+
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
-	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${INSTALL_TARGET}
+	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${_RUBY_SETUP_INSTALLARGS}
 .endif
 
 #
