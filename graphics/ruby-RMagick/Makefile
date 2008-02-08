@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/01/31 06:18:24 obache Exp $
+# $NetBSD: Makefile,v 1.46 2008/02/08 15:11:47 obache Exp $
 
 DISTNAME=	RMagick-2.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,12 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_SETUP=		yes
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${_USE_DESTDIR} != "no"
-INSTALL_TARGET=		install --prefix=${DESTDIR}
-.endif
 
 CONFIGURE_ARGS+=	--doc-dir=${DESTDIR}${RUBY_DOCDIR}/RMagick
 USE_TOOLS+=	gs
