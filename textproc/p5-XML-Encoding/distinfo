@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2008/02/08 14:51:25 rhaen Exp $
 
-SHA1 (XML-Encoding-1.01.tar.gz) = a923c1fe14b1a16b0f0f9138183633555bb5f312
-RMD160 (XML-Encoding-1.01.tar.gz) = 48b4d272c119d7838f5dc1314e5655a35384030f
-Size (XML-Encoding-1.01.tar.gz) = 189564 bytes
+SHA1 (XML-Encoding-2.01.tar.gz) = 74d6a06546eba539c3c23dcb70c83d3366d959e9
+RMD160 (XML-Encoding-2.01.tar.gz) = 2e14c252c43a974567d72881179598096a207c5f
+Size (XML-Encoding-2.01.tar.gz) = 191467 bytes
