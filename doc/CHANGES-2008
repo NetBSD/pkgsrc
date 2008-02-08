@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.241 2008/02/08 03:51:20 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.242 2008/02/08 11:29:32 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -415,3 +415,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Crypt-CBC to 2.24 [heinz 2008-02-07]
 	Updated graphics/p5-SVG to 2.36 [heinz 2008-02-07]
 	Updated devel/nasm to 2.01nb1 [bjs 2008-02-08]
+	Updated www/firefox to 2.0.0.12 [ghen 2008-02-08]
+	Updated www/firefox-bin to 2.0.0.12 [ghen 2008-02-08]
+	Updated www/firefox-gtk1 to 2.0.0.12 [ghen 2008-02-08]
