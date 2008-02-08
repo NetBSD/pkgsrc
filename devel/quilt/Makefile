@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/08 08:28:58 apb Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/08 19:29:25 bjs Exp $
 #
 
 DISTNAME=	quilt-0.46
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--with-date=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}date
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
 CONFIGURE_ARGS+=	--with-sed=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sed
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
+CONFIGURE_ARGS+=	--without-rpmbuild
 CONFIGURE_ARGS+=	--without-getopt
 
 INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/quilt
