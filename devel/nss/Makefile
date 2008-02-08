@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/12/22 07:22:08 obache Exp $
+# $NetBSD: Makefile,v 1.27 2008/02/08 10:34:19 tnn Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -31,7 +31,7 @@ SO_SUFFIX=		so.1.0
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
-.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "gcc"
+.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKEFLAGS+=	NS_USE_GCC=YES
 .endif
 

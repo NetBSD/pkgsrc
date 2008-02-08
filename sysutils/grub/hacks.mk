@@ -1,8 +1,8 @@
-# $NetBSD: hacks.mk,v 1.1 2006/05/09 18:52:35 joerg Exp $
+# $NetBSD: hacks.mk,v 1.2 2008/02/08 10:34:20 tnn Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "DragonFly" && ${PKGSRC_COMPILER} == "gcc"
+.if ${OPSYS} == "DragonFly" && !empty(PKGSRC_COMPILER:Mgcc)
 #
 # The standalone modules doesn't support propolice.
 #

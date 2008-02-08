@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2007/10/16 23:48:59 tnn Exp $
+# $NetBSD: hacks.mk,v 1.7 2008/02/08 10:34:19 tnn Exp $
 
 .if !defined(NETPBM_HACKS_MK)
 NETPBM_HACKS_MK=	# defined
@@ -38,7 +38,7 @@ post-wrapper:
 ### work around bug in Apple's gcc-4.0.0
 ### that shows up when compiling frame.c
 ###
-.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "gcc"
+.if ${OPSYS} == "Darwin" && !empty(PKGSRC_COMPILER:Mgcc)
 _BAD_GCC_BUILD!=	${CC} --version | (${GREP} -c '^powerpc-apple-darwin8-gcc-4\.0\.0.*build\ 4061' || ${TRUE})
 . if ${_BAD_GCC_BUILD} == "1"
 PKG_HACKS+=		apple-gcc-4-bug
