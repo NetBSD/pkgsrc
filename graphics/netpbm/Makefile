@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2007/09/08 21:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.156 2008/02/08 10:34:19 tnn Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -63,7 +63,7 @@ MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="sl"
 MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 .endif
 
-.if ${PKGSRC_COMPILER} == "ido"
+.if !empty(PKGSRC_COMPILER:Mido)
 CPPFLAGS+=	-DSGI_IDO_CC
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/16 15:22:38 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/08 10:34:19 tnn Exp $
 
 DISTNAME=	geany-0.12
 CATEGORIES=	devel
@@ -23,7 +23,7 @@ MAKE_FLAGS+=		CCLD=${CXX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "sunpro"
+.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Msunpro)
 CONFIGURE_ARGS+=	CC=sunpro
 BUILDLINK_TRANSFORM+=	rm:-lstdc++
 .else
