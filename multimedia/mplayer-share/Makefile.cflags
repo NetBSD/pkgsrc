@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.cflags,v 1.4 2007/09/06 18:31:00 abs Exp $
+# $NetBSD: Makefile.cflags,v 1.5 2008/02/08 10:17:26 tnn Exp $
 
 # This must be included after everything else to truly clear ${CFLAGS}
 # in the non-runtime-cpu-detection case. If ${CFLAGS} is non-empty, the
 # configure script refuses to add any optimizations at all.
 
 .if !empty(PKG_OPTIONS:Mmplayer-default-cflags)
-.  if ${MACHINE_ARCH} == i386
+.  if ${MACHINE_ARCH} == "i386" && !empty(PKGSRC_COMPILER:Mgcc)
 # Schedule for the typical machine fast enough to run mplayer. This
 # is nearly optimal for K6-2 as well. Anything slower will still run
 # (but would probably benefit greatly from turning off the run-time
