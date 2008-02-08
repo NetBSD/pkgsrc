@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.246 2008/02/08 19:30:17 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.247 2008/02/08 23:16:05 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-bin to 1.1.8 [ghen 2008-02-08]
 	Updated www/seamonkey-gtk1 to 1.1.8 [ghen 2008-02-08]
 	Updated devel/quilt to 0.46nb1 [bjs 2008-02-08]
+	Updated sysutils/dbus to 1.0.2nb4 [bjs 2008-02-08]
