@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.61 2008/02/05 02:10:38 rillig Exp $
+$NetBSD: TODO,v 1.62 2008/02/08 22:43:27 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -28,3 +28,5 @@ include the name of an example package where a warning should occur.
 * Check for license files that are completely unused.
 * If a dependency depends on an option (in options.mk), it should also
   depend on the same option in the buildlink3.mk file.
+* Complain about ${PKGSRC_COMPILER} == "sunpro", which should be
+  !empty(PKGSRC_COMPILER:Msunpro).
