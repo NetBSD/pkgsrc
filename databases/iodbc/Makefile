@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2007/01/12 17:27:20 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/02/09 07:26:57 adam Exp $
 
-DISTNAME=	libiodbc-3.52.5
+DISTNAME=	libiodbc-3.52.6
 PKGNAME=	${DISTNAME:S/^lib//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.iodbc.org/downloads/iODBC/
