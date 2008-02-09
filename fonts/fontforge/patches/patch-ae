@@ -1,7 +1,58 @@
-$NetBSD: patch-ae,v 1.9 2008/01/26 11:27:02 adam Exp $
+$NetBSD: patch-ae,v 1.10 2008/02/09 13:11:07 taca Exp $
 
---- configure.orig	2008-01-05 18:58:52.000000000 +0100
+--- configure.orig	2008-01-06 02:58:52.000000000 +0900
 +++ configure
+@@ -22052,7 +22052,7 @@ fi
+ 
+ # Standard set of common directories for X headers.
+ # Check X11 before X11Rn because it is often a symlink to the current release.
+-ac_x_header_dirs='
++ac_x_header_dirs="
+ /usr/X11/include
+ /usr/X11R6/include
+ /usr/X11R5/include
+@@ -22063,29 +22063,29 @@ ac_x_header_dirs='
+ /usr/include/X11R5
+ /usr/include/X11R4
+ 
+-/usr/local/X11/include
+-/usr/local/X11R6/include
+-/usr/local/X11R5/include
+-/usr/local/X11R4/include
+-
+-/usr/local/include/X11
+-/usr/local/include/X11R6
+-/usr/local/include/X11R5
+-/usr/local/include/X11R4
++${prefix}/X11/include
++${prefix}/X11R6/include
++${prefix}/X11R5/include
++${prefix}/X11R4/include
++
++${prefix}/include/X11
++${prefix}/include/X11R6
++${prefix}/include/X11R5
++${prefix}/include/X11R4
+ 
+ /usr/X386/include
+ /usr/x386/include
+ /usr/XFree86/include/X11
+ 
+ /usr/include
+-/usr/local/include
++${prefix}/include
+ /usr/unsupported/include
+ /usr/athena/include
+-/usr/local/x11r5/include
++${prefix}/x11r5/include
+ /usr/lpp/Xamples/include
+ 
+ /usr/openwin/include
+-/usr/openwin/share/include'
++/usr/openwin/share/include"
+ 
+ if test "$ac_x_includes" = no; then
+   # Guess where to find include files, by looking for Intrinsic.h.
 @@ -25013,7 +25013,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
