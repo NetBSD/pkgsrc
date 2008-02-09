@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2008/02/09 06:23:29 minskim Exp $
+
+--- lib/action_controller.rb.orig	2008-02-08 21:54:06.000000000 -0800
++++ lib/action_controller.rb
+@@ -26,11 +26,7 @@ $:.unshift(File.dirname(__FILE__)) unles
+ 
+ unless defined?(ActiveSupport)
+   begin
+-    $:.unshift "#{File.dirname(__FILE__)}/../../activesupport/lib"
+     require 'active_support'
+-  rescue LoadError
+-    require 'rubygems'
+-    gem 'activesupport'
+   end
+ end
+ 
