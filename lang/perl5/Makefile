@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2008/01/08 16:43:31 apb Exp $
+# $NetBSD: Makefile,v 1.135 2008/02/09 13:58:46 tnn Exp $
 
 DISTNAME=	perl-5.8.8
 PKGREVISION=	7
@@ -153,6 +153,7 @@ USE_TOOLS+=		hostname ln sed test
 CONFIGURE_ARGS+=	-Daphostname=${TOOLS_HOSTNAME_CMD:Q}
 CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
 CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
+TOOLS_ALIASES.sed+=	${TOOLS_SED:T}
 CONFIGURE_ARGS+=	-Dsh=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
 CONFIGURE_ARGS+=	-Dperl5=${FALSE}
