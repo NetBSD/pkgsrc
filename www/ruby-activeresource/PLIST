@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/09 06:27:48 minskim Exp $
+${RUBY_SITELIBDIR}/active_resource.rb
+${RUBY_SITELIBDIR}/active_resource/base.rb
+${RUBY_SITELIBDIR}/active_resource/connection.rb
+${RUBY_SITELIBDIR}/active_resource/custom_methods.rb
+${RUBY_SITELIBDIR}/active_resource/formats.rb
+${RUBY_SITELIBDIR}/active_resource/formats/json_format.rb
+${RUBY_SITELIBDIR}/active_resource/formats/xml_format.rb
+${RUBY_SITELIBDIR}/active_resource/http_mock.rb
+${RUBY_SITELIBDIR}/active_resource/validations.rb
+${RUBY_SITELIBDIR}/active_resource/version.rb
+${RUBY_SITELIBDIR}/activeresource.rb
+${RUBY_DOCDIR}/active_resource/CHANGELOG
+${RUBY_DOCDIR}/active_resource/README
+@dirrm ${RUBY_DOCDIR}/active_resource
+@dirrm ${RUBY_SITELIBDIR}/active_resource/formats
+@dirrm ${RUBY_SITELIBDIR}/active_resource

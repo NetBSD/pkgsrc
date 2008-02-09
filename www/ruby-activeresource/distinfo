@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/09 06:27:48 minskim Exp $
+
+SHA1 (activeresource-2.0.2.tgz) = b1cd283796bf4155d7a43ca7370ae527f5b9cf9e
+RMD160 (activeresource-2.0.2.tgz) = e0de85091b4d5f4ada6fcc9e3b3edfd909761a1c
+Size (activeresource-2.0.2.tgz) = 30733 bytes
+SHA1 (patch-aa) = 2c622cb6fcfdbe8294cd461f7f4eec35ca047656
