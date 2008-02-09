@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/01/31 21:06:22 is Exp $
+# $NetBSD: Makefile,v 1.52 2008/02/09 23:49:27 tnn Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
+
+USE_TOOLS+=	m4
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		PVM_SSH
