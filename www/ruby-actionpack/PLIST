@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2007/10/16 03:17:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/02/09 06:23:29 minskim Exp $
 ${RUBY_SITELIBDIR}/action_controller.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions.rb
-${RUBY_SITELIBDIR}/action_controller/assertions/deprecated_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/dom_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/model_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/assertions/response_assertions.rb
@@ -11,122 +10,107 @@ ${RUBY_SITELIBDIR}/action_controller/assertions/tag_assertions.rb
 ${RUBY_SITELIBDIR}/action_controller/base.rb
 ${RUBY_SITELIBDIR}/action_controller/benchmarking.rb
 ${RUBY_SITELIBDIR}/action_controller/caching.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_ext.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/cgi_methods.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/cookie_performance_fix.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/pstore_performance_fix.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/raw_post_data_fix.rb
-${RUBY_SITELIBDIR}/action_controller/cgi_ext/session_performance_fix.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/cookie.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/query_extension.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/session.rb
+${RUBY_SITELIBDIR}/action_controller/cgi_ext/stdinput.rb
 ${RUBY_SITELIBDIR}/action_controller/cgi_process.rb
 ${RUBY_SITELIBDIR}/action_controller/components.rb
 ${RUBY_SITELIBDIR}/action_controller/cookies.rb
-${RUBY_SITELIBDIR}/action_controller/deprecated_dependencies.rb
-${RUBY_SITELIBDIR}/action_controller/deprecated_redirects.rb
-${RUBY_SITELIBDIR}/action_controller/deprecated_request_methods.rb
+${RUBY_SITELIBDIR}/action_controller/dispatcher.rb
 ${RUBY_SITELIBDIR}/action_controller/filters.rb
 ${RUBY_SITELIBDIR}/action_controller/flash.rb
 ${RUBY_SITELIBDIR}/action_controller/helpers.rb
+${RUBY_SITELIBDIR}/action_controller/http_authentication.rb
 ${RUBY_SITELIBDIR}/action_controller/integration.rb
 ${RUBY_SITELIBDIR}/action_controller/layout.rb
-${RUBY_SITELIBDIR}/action_controller/macros/auto_complete.rb
-${RUBY_SITELIBDIR}/action_controller/macros/in_place_editing.rb
 ${RUBY_SITELIBDIR}/action_controller/mime_responds.rb
 ${RUBY_SITELIBDIR}/action_controller/mime_type.rb
-${RUBY_SITELIBDIR}/action_controller/pagination.rb
+${RUBY_SITELIBDIR}/action_controller/mime_types.rb
+${RUBY_SITELIBDIR}/action_controller/polymorphic_routes.rb
+${RUBY_SITELIBDIR}/action_controller/record_identifier.rb
 ${RUBY_SITELIBDIR}/action_controller/request.rb
+${RUBY_SITELIBDIR}/action_controller/request_forgery_protection.rb
+${RUBY_SITELIBDIR}/action_controller/request_profiler.rb
 ${RUBY_SITELIBDIR}/action_controller/rescue.rb
 ${RUBY_SITELIBDIR}/action_controller/resources.rb
 ${RUBY_SITELIBDIR}/action_controller/response.rb
 ${RUBY_SITELIBDIR}/action_controller/routing.rb
-${RUBY_SITELIBDIR}/action_controller/scaffolding.rb
+${RUBY_SITELIBDIR}/action_controller/routing_optimisation.rb
 ${RUBY_SITELIBDIR}/action_controller/session/active_record_store.rb
+${RUBY_SITELIBDIR}/action_controller/session/cookie_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session/drb_server.rb
 ${RUBY_SITELIBDIR}/action_controller/session/drb_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session/mem_cache_store.rb
 ${RUBY_SITELIBDIR}/action_controller/session_management.rb
 ${RUBY_SITELIBDIR}/action_controller/status_codes.rb
 ${RUBY_SITELIBDIR}/action_controller/streaming.rb
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/_request_and_response.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/_trace.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/diagnostics.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/layout.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/missing_template.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/routing_error.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/template_error.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/rescues/unknown_action.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/edit.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/layout.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/list.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/new.rhtml
-${RUBY_SITELIBDIR}/action_controller/templates/scaffolds/show.rhtml
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/_request_and_response.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/_trace.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/diagnostics.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/layout.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/missing_template.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/routing_error.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/template_error.erb
+${RUBY_SITELIBDIR}/action_controller/templates/rescues/unknown_action.erb
+${RUBY_SITELIBDIR}/action_controller/test_case.rb
 ${RUBY_SITELIBDIR}/action_controller/test_process.rb
 ${RUBY_SITELIBDIR}/action_controller/url_rewriter.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/document.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/node.rb
+${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/sanitizer.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/selector.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/tokenizer.rb
 ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html/version.rb
-${RUBY_SITELIBDIR}/action_controller/vendor/xml_node.rb
 ${RUBY_SITELIBDIR}/action_controller/verification.rb
 ${RUBY_SITELIBDIR}/action_view.rb
 ${RUBY_SITELIBDIR}/action_view/base.rb
 ${RUBY_SITELIBDIR}/action_view/compiled_templates.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/active_record_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/asset_tag_helper.rb
+${RUBY_SITELIBDIR}/action_view/helpers/atom_feed_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/benchmark_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/cache_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/capture_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/date_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/debug_helper.rb
-${RUBY_SITELIBDIR}/action_view/helpers/deprecated_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_options_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/form_tag_helper.rb
-${RUBY_SITELIBDIR}/action_view/helpers/java_script_macros_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/javascript_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/javascripts/controls.js
 ${RUBY_SITELIBDIR}/action_view/helpers/javascripts/dragdrop.js
 ${RUBY_SITELIBDIR}/action_view/helpers/javascripts/effects.js
 ${RUBY_SITELIBDIR}/action_view/helpers/javascripts/prototype.js
 ${RUBY_SITELIBDIR}/action_view/helpers/number_helper.rb
-${RUBY_SITELIBDIR}/action_view/helpers/pagination_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/prototype_helper.rb
+${RUBY_SITELIBDIR}/action_view/helpers/record_identification_helper.rb
+${RUBY_SITELIBDIR}/action_view/helpers/record_tag_helper.rb
+${RUBY_SITELIBDIR}/action_view/helpers/sanitize_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/scriptaculous_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/tag_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/text_helper.rb
 ${RUBY_SITELIBDIR}/action_view/helpers/url_helper.rb
 ${RUBY_SITELIBDIR}/action_view/partials.rb
 ${RUBY_SITELIBDIR}/action_view/template_error.rb
+${RUBY_SITELIBDIR}/action_view/template_handler.rb
+${RUBY_SITELIBDIR}/action_view/template_handlers/builder.rb
+${RUBY_SITELIBDIR}/action_view/template_handlers/erb.rb
+${RUBY_SITELIBDIR}/action_view/template_handlers/rjs.rb
 ${RUBY_DOCDIR}/actionpack/CHANGELOG
 ${RUBY_DOCDIR}/actionpack/README
-${RUBY_EXAMPLESDIR}/actionpack/address_book/index.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/address_book/layout.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.cgi
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.fcgi
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rb
-${RUBY_EXAMPLESDIR}/actionpack/address_book_controller.rbx
-${RUBY_EXAMPLESDIR}/actionpack/benchmark.rb
-${RUBY_EXAMPLESDIR}/actionpack/benchmark_with_ar.fcgi
-${RUBY_EXAMPLESDIR}/actionpack/blog_controller.cgi
-${RUBY_EXAMPLESDIR}/actionpack/debate/index.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/debate/new_topic.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/debate/topic.rhtml
-${RUBY_EXAMPLESDIR}/actionpack/debate_controller.cgi
-@dirrm ${RUBY_EXAMPLESDIR}/actionpack/debate
-@dirrm ${RUBY_EXAMPLESDIR}/actionpack/address_book
-@dirrm ${RUBY_EXAMPLESDIR}/actionpack
 @dirrm ${RUBY_DOCDIR}/actionpack
+@dirrm ${RUBY_SITELIBDIR}/action_view/template_handlers
 @dirrm ${RUBY_SITELIBDIR}/action_view/helpers/javascripts
 @dirrm ${RUBY_SITELIBDIR}/action_view/helpers
 @dirrm ${RUBY_SITELIBDIR}/action_view
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner/html
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor/html-scanner
 @dirrm ${RUBY_SITELIBDIR}/action_controller/vendor
-@dirrm ${RUBY_SITELIBDIR}/action_controller/templates/scaffolds
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates/rescues
 @dirrm ${RUBY_SITELIBDIR}/action_controller/templates
 @dirrm ${RUBY_SITELIBDIR}/action_controller/session
-@dirrm ${RUBY_SITELIBDIR}/action_controller/macros
 @dirrm ${RUBY_SITELIBDIR}/action_controller/cgi_ext
 @dirrm ${RUBY_SITELIBDIR}/action_controller/assertions
 @dirrm ${RUBY_SITELIBDIR}/action_controller

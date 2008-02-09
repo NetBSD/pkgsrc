@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2007/12/10 05:47:03 minskim Exp $
+$NetBSD: distinfo,v 1.12 2008/02/09 06:23:29 minskim Exp $
 
-SHA1 (actionpack-1.13.6.tgz) = 1ef33772dd6a560fdccec70972cad3d30189e4e2
-RMD160 (actionpack-1.13.6.tgz) = 855386e7a843c9245e42dcf3eeae81ce2986340e
-Size (actionpack-1.13.6.tgz) = 614571 bytes
+SHA1 (actionpack-2.0.2.tgz) = 4c0826f0800a31d85570c2e15f5f0ee51cc61975
+RMD160 (actionpack-2.0.2.tgz) = 7b21059840936da297421327766b5e2ee5b9d46d
+Size (actionpack-2.0.2.tgz) = 707629 bytes
 SHA1 (patch-ab) = bfba841b0af9d503a71745cc8d992e9d09d94191
+SHA1 (patch-ac) = 772c013b7a1544d3b53687960b63d6b94c70767d
