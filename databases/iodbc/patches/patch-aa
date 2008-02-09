@@ -1,21 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2007/01/12 17:27:20 obache Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/09 07:26:57 adam Exp $
 
-Rip out a completely non-standard and hokey way to determine if wchar_t
-is a valid type.
-
---- include/sqltypes.h.orig	2006-01-26 09:50:59.000000000 +0000
+--- include/sqltypes.h.orig	2007-10-07 15:44:49.000000000 +0200
 +++ include/sqltypes.h
-@@ -393,17 +393,7 @@ SQLGUID;
- typedef unsigned short SQLWCHAR;
+@@ -394,18 +394,7 @@ typedef unsigned short SQLWCHAR;
  #else
  #  include <stdlib.h>
--
+ 
 -#  if defined(__cplusplus)		|| \
 -      defined(_WCHAR_T)			|| \
 -      defined(_WCHAR_T_DEFINED)		|| \
--      defined(_WCHAR_T_DECLARED)        || \
--      defined(_BSD_WCHAR_T_DEFINED_)    || \
--      defined(_BSD_WCHAR_T_)
+-      defined(_WCHAR_T_DEFINED_)	|| \
+-      defined(_WCHAR_T_DECLARED)	|| \
+-      defined(_BSD_WCHAR_T_DEFINED_)	|| \
+-      defined(_BSD_WCHAR_T_)		|| \
+-      defined(_BSD_CT_RUNE_T_)
  typedef wchar_t SQLWCHAR;
 -#  else
 -#    error Please make sure your system supports the wchar_t type
