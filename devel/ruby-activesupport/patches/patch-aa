@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.3 2008/02/09 06:18:27 minskim Exp $
+
+--- lib/active_support/vendor.rb.orig	2008-02-08 21:27:15.000000000 -0800
++++ lib/active_support/vendor.rb
+@@ -1,14 +1,7 @@
+-# Prefer gems to the bundled libs.
+-require 'rubygems'
+-
+ begin
+-  gem 'builder', '~> 2.1.2'
+-rescue Gem::LoadError
+   $:.unshift "#{File.dirname(__FILE__)}/vendor/builder-2.1.2"
+ end
+ 
+ begin
+-  gem 'xml-simple', '~> 1.0.11'
+-rescue Gem::LoadError
+   $:.unshift "#{File.dirname(__FILE__)}/vendor/xml-simple-1.0.11"
+ end
