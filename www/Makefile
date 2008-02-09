@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2008/01/25 02:32:30 heinz Exp $
+# $NetBSD: Makefile,v 1.535 2008/02/09 06:29:42 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -318,6 +318,7 @@ SUBDIR+=	raggle
 SUBDIR+=	rails
 SUBDIR+=	ruby-actionpack
 SUBDIR+=	ruby-actionwebservice
+SUBDIR+=	ruby-activeresource
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-fcgi
