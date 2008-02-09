@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/03/04 21:29:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2008/02/09 07:06:33 adam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -12,13 +12,12 @@ HOMEPAGE?=	http://www.unixodbc.org/
 # ODBC_DIST_VERS	version number on the php distfile
 # ODBC_BASE_VERS	pkgsrc-mangled version number (convert pl -> .)
 #
-ODBC_DIST_VERS=		2.2.11
+ODBC_DIST_VERS=		2.2.12
 ODBC_BASE_VERS=		${ODBC_DIST_VERS}
 
 USE_LIBTOOL=		YES
-
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-threads
 PTHREAD_OPTS+=		require
 
@@ -36,22 +35,22 @@ UNIXODBC_DRIVERS_DIR=	lib/unixodbc
 post-patch: fix-ltdl-and-lexlib
 
 fix-driver-installation:
-	cd ${WRKSRC};							\
+	cd ${WRKSRC};						\
 	files=`${FIND} ODBCConfig DRVConfig Drivers -name Makefile.in -print`;\
-	for file in $${files}; do					\
-		${SED}  -e "s|^\(libdir =\).*|\1 ${PREFIX}/${UNIXODBC_DRIVERS_DIR}|g" \
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
+	for file in $${files}; do				\
+		sed -e "s|^\(libdir =\).*|\1 ${PREFIX}/${UNIXODBC_DRIVERS_DIR}|g" \
+			$${file} >> $${file}.fixed;		\
+		mv -f $${file}.fixed $${file};			\
 	done
 
 fix-ltdl-and-lexlib:
-	cd ${WRKSRC};							\
-	files=`${FIND} . -name Makefile.in -print`;			\
-	for file in $${files}; do					\
-		${SED}	-e "/DEPENDENCIES/s|\$$(LIBLTDL)||g"		\
-			-e "/LIBADD/s|@LEXLIB@|\$$(LEXLIB)|g"		\
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
+	cd ${WRKSRC};						\
+	files=`${FIND} . -name Makefile.in -print`;		\
+	for file in $${files}; do				\
+		sed	-e "/DEPENDENCIES/s|\$$(LIBLTDL)||g"	\
+			-e "/LIBADD/s|@LEXLIB@|\$$(LEXLIB)|g"	\
+			$${file} >> $${file}.fixed;		\
+		mv -f $${file}.fixed $${file};			\
 	done
 
 .include "../../devel/libltdl/buildlink3.mk"

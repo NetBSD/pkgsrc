@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/23 20:50:47 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/02/09 07:06:33 adam Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -11,6 +11,7 @@ include/sql.h
 include/sqlext.h
 include/sqltypes.h
 include/sqlucode.h
+include/uodbc_extras.h
 include/uodbc_stats.h
 lib/libboundparam.la
 lib/libgtrtst.la
@@ -26,8 +27,6 @@ ${UNIXODBC_DRIVERS_DIR}/libodbcminiS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcmyS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcnnS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbcpsql.la
-${UNIXODBC_DRIVERS_DIR}/libodbcpsql.so.1
-${UNIXODBC_DRIVERS_DIR}/libodbcpsql.so.1.0.0
 ${UNIXODBC_DRIVERS_DIR}/libodbcpsqlS.la
 ${UNIXODBC_DRIVERS_DIR}/libodbctxt.la
 ${UNIXODBC_DRIVERS_DIR}/libodbctxtS.la
