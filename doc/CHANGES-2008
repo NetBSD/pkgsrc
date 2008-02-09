@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.251 2008/02/09 15:39:01 obache Exp $
+$NetBSD: CHANGES-2008,v 1.252 2008/02/09 22:40:10 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -437,3 +437,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/iodbc to 3.52.6 [adam 2008-02-09]
 	Updated lang/pcc to 0.9.9 [reed 2008-02-09]
 	Updated mail/dbmail to 2.2.9 [obache 2008-02-09]
+	Updated math/p5-Math-Pari to 2.010709 [adrianp 2008-02-09]
