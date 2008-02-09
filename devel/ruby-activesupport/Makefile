@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/10/16 02:56:02 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/09 06:18:27 minskim Exp $
 
-DISTNAME=	activesupport-1.4.4
+DISTNAME=	activesupport-2.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/26548/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/29345/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -16,7 +16,7 @@ NO_CONFIGURE=	yes
 .include "../../lang/ruby/modules.mk"
 
 pre-install:
-	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name \*.orig -exec ${RM} -f {} \;
 
 do-install:
 	${CP} -R ${WRKSRC}/lib/* ${RUBY_SITELIBDIR}
