@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/10/12 08:36:22 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/09 06:31:59 minskim Exp $
 
---- bin/rails.orig	2006-08-10 10:34:33.000000000 -0700
+--- bin/rails.orig	2007-12-16 17:05:17.000000000 -0800
 +++ bin/rails
 @@ -1,7 +1,8 @@
 -require File.dirname(__FILE__) + '/../lib/ruby_version_check'
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/12 08:36:22 minskim Exp $
  if %w(--version -v).include? ARGV.first
    puts "Rails #{Rails::VERSION::STRING}"
    exit(0)
-@@ -10,7 +11,7 @@ end
+@@ -10,10 +11,10 @@ end
  freeze   = ARGV.any? { |option| %w(--freeze -f).include?(option) }
  app_path = ARGV.first
  
@@ -22,3 +22,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/12 08:36:22 minskim Exp $
  
  require 'rails_generator/scripts/generate'
  Rails::Generator::Base.use_application_sources!
+ Rails::Generator::Scripts::Generate.new.run(ARGV, :generator => 'app')
+ 
+-Dir.chdir(app_path) { `rake rails:freeze:gems`; puts "froze" } if freeze
+\ No newline at end of file
++Dir.chdir(app_path) { `rake rails:freeze:gems`; puts "froze" } if freeze

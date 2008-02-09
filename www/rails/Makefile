@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/01/04 15:42:53 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/09 06:31:59 minskim Exp $
 
-DISTNAME=	rails-1.2.6
+DISTNAME=	rails-2.0.2
 CATEGORIES=	www
-MASTER_SITES=	http://rubyforge.org/frs/download.php/28338/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/29360/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,11 +11,11 @@ COMMENT=	Framework for developing database-backed web applications
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=1.4.4:../../devel/ruby-activesupport
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=1.15.5:../../databases/ruby-activerecord
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.5:../../www/ruby-actionpack
-DEPENDS+=	${RUBY_PKGPREFIX}-actionmailer>=1.3.5:../../mail/ruby-actionmailer
-DEPENDS+=	${RUBY_PKGPREFIX}-actionwebservice>=1.2.5:../../www/ruby-actionwebservice
+DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=2.0.2:../../devel/ruby-activesupport
+DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=2.0.2:../../databases/ruby-activerecord
+DEPENDS+=	${RUBY_PKGPREFIX}-activeresource>=2.0.2:../../www/ruby-activeresource
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=2.0.2:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-actionmailer>=2.0.2:../../mail/ruby-actionmailer
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/rails/vendor/rails/railties

@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2008/02/09 06:31:59 minskim Exp $
+
+--- lib/rails_generator.rb.orig	2008-02-08 22:01:52.000000000 -0800
++++ lib/rails_generator.rb
+@@ -26,9 +26,6 @@ $:.unshift(File.dirname(__FILE__) + "/..
+ 
+ begin
+   require 'active_support'  
+-rescue LoadError
+-  require 'rubygems'
+-  gem 'activesupport'
+ end
+ 
+ require 'rails_generator/base'
