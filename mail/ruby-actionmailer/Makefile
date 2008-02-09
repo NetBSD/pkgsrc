@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2007/10/16 03:26:23 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/09 06:24:57 minskim Exp $
 
-DISTNAME=	actionmailer-1.3.5
+DISTNAME=	actionmailer-2.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/26557/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/29354/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/actionmailer/
 COMMENT=	Ruby framework for designing email-service layers
 
-DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=1.13.5:../../www/ruby-actionpack
-DEPENDS+=	${RUBY_PKGPREFIX}-tmail>=0.10.8:../../mail/ruby-tmail
+DEPENDS+=	${RUBY_PKGPREFIX}-actionpack>=2.0.2:../../www/ruby-actionpack
+DEPENDS+=	${RUBY_PKGPREFIX}-tmail>=1.1.0:../../mail/ruby-tmail
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
@@ -20,7 +20,7 @@ USE_RUBY_INSTALL=	yes
 .include "../../lang/ruby/modules.mk"
 
 pre-install:
-	${RM} -rf ${WRKSRC}/lib/action_mailer/vendor/tmail
+	${RM} -rf ${WRKSRC}/lib/action_mailer/vendor/tmail-1.1.0
 	${RM} -f ${WRKSRC}/lib/action_mailer/vendor/tmail.rb
 
 post-install:
