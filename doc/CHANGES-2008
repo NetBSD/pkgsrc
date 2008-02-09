@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.247 2008/02/08 23:16:05 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.248 2008/02/09 06:32:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -427,3 +427,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-gtk1 to 1.1.8 [ghen 2008-02-08]
 	Updated devel/quilt to 0.46nb1 [bjs 2008-02-08]
 	Updated sysutils/dbus to 1.0.2nb4 [bjs 2008-02-08]
+	Updated devel/ruby-activesupport to 2.0.2 [minskim 2008-02-09]
+	Updated databases/ruby-activerecord to 2.0.2 [minskim 2008-02-09]
+	Updated www/ruby-actionpack to 2.0.2 [minskim 2008-02-09]
+	Updated mail/ruby-actionmailer to 2.0.2 [minskim 2008-02-09]
+	Added www/ruby-activeresource version 2.0.2 [minskim 2008-02-09]
+	Updated www/rails to 2.0.2 [minskim 2008-02-09]
