@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2008/02/09 06:24:57 minskim Exp $
+
+--- lib/action_mailer/vendor.rb.orig	2008-02-08 21:56:50.000000000 -0800
++++ lib/action_mailer/vendor.rb
+@@ -1,14 +1,7 @@
+-# Prefer gems to the bundled libs.
+-require 'rubygems'
+-
+ begin
+-  gem 'tmail', '~> 1.1.0'
+-rescue Gem::LoadError
+   $:.unshift "#{File.dirname(__FILE__)}/vendor/tmail-1.1.0"
+ end
+ 
+ begin
+-  gem 'text-format', '>= 0.6.3'
+-rescue Gem::LoadError
+   $:.unshift "#{File.dirname(__FILE__)}/vendor/text-format-0.6.3"
+ end
