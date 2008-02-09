@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2008/02/09 06:20:25 minskim Exp $
+
+--- lib/active_record/connection_adapters/abstract/connection_specification.rb.orig	2008-02-08 21:48:27.000000000 -0800
++++ lib/active_record/connection_adapters/abstract/connection_specification.rb
+@@ -221,15 +221,7 @@ module ActiveRecord
+           unless spec.key?(:adapter) then raise AdapterNotSpecified, "database configuration does not specify adapter" end
+ 
+           begin
+-            require 'rubygems'
+-            gem "activerecord-#{spec[:adapter]}-adapter"
+             require "active_record/connection_adapters/#{spec[:adapter]}_adapter"
+-          rescue LoadError
+-            begin
+-              require "active_record/connection_adapters/#{spec[:adapter]}_adapter"
+-            rescue LoadError
+-              raise "Please install the #{spec[:adapter]} adapter: `gem install activerecord-#{spec[:adapter]}-adapter` (#{$!})"
+-            end
+           end
+ 
+           adapter_method = "#{spec[:adapter]}_connection"
