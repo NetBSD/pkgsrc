@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7042 2008/02/09 04:59:33 minskim Exp $
+$NetBSD: TODO,v 1.7043 2008/02/09 06:32:34 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ Suggested package updates
 	o qwspritefield-1.7
 	o radiance-3.7.2
 	o radmind-1.11.0
-	o rails-2.0.2 [import as rails2?]
 	o raine-0.50.6
 	o randread-0.2
 	o raptor-1.4.16
