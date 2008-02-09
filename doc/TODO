@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7041 2008/02/06 18:59:50 adam Exp $
+$NetBSD: TODO,v 1.7042 2008/02/09 04:59:33 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1541,7 +1541,7 @@ licensing framework.]
             represent this.
 
 	o The dual and multiple license situations can occur at the
-	  same time, so ideally an arbitrary grammer is in order.
+	  same time, so ideally an arbitrary grammar is in order.
 	  But this seems too complicated.
 
 	o Documentation sometimes refers to a user "accepting a
