@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/02/10 13:08:51 obache Exp $
+
+--- configure.in.orig	2003-05-28 12:18:18.000000000 +0000
++++ configure.in
+@@ -6,7 +6,6 @@ if test "$RUBY" = "no"; then
+     AC_MSG_ERROR(ruby not found)
+ fi
+ 
+-AM_PATH_LISPDIR
+ AM_PATH_RUBYDIR
+ 
+ echo -n "checking Ruby/Bsearch... "

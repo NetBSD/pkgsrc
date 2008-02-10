@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/02/10 13:08:51 obache Exp $
+
+--- Makefile.am.orig	2003-05-28 12:14:04.000000000 +0000
++++ Makefile.am
+@@ -1,6 +1,5 @@
+ SUBDIRS      = 	tests
+ bin_SCRIPTS  =  migemo migemo-grep migemo-server migemo-client
+-lisp_LISP    = 	migemo.el
+ ruby_data_    = migemo-dict.rb migemo-regex.rb\
+ 		migemo-convert.rb migemo-index.rb migemo-cache.rb 
+ ruby_DATA    =  migemo.rb $(ruby_data_)
+@@ -8,12 +7,9 @@ pkgdata_DATA = 	migemo-dict migemo-dict.
+ 		migemo-dict.cache migemo-dict.cache.idx\
+ 		user-dict.sample regex-dict.sample\
+ 		migemo.ja.rd
+-EXTRA_DIST   =	$(bin_SCRIPTS) migemo.rb.in $(ruby_data_) migemo.el.in \
++EXTRA_DIST   =	$(bin_SCRIPTS) migemo.rb.in $(ruby_data_) \
+ 		genchars.sh ngram.sh frequent-chars $(pkgdata_DATA)
+ 
+-migemo.el: migemo.el.in
+-	sed -e 's!@pkgdatadir@!$(pkgdatadir)!g' migemo.el.in > $@
+-
+ migemo-dict: # SKK-JISYO.L
+ 	ruby -I. migemo-convert.rb SKK-JISYO.L > $@
+ 
