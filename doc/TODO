@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7043 2008/02/09 06:32:34 minskim Exp $
+$NetBSD: TODO,v 1.7044 2008/02/10 13:13:13 obache Exp $
 
 Suggested new packages
 ======================
@@ -319,10 +319,6 @@ Suggested new packages
 	M+ FONTS [pkg/37614]
 	http://mplus-fonts.sourceforge.jp/
 	Small and neat Japanese bitmap fonts
-
-	Migemo [pkg/37615]
-	http://0xcc.net/migemo/
-	Japanese text search tool/library
 
 	Ruby RSS Parser [pkg/37766]
 	http://www.cozmixng.org/~rwiki/?cmd=view;name=RSS+Parser
