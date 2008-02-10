@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/02/06 07:53:31 bjs Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/02/10 19:00:27 tnn Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -21,7 +21,6 @@ GIT_VERSION=	1.5.4
 PATCHDIR=	${.CURDIR}/../scmgit-base/patches
 DISTINFO_FILE=	${.CURDIR}/../scmgit-base/distinfo
 
-MAKE_ENV+=	HOME=${PREFIX:Q}
 USE_TOOLS+=	gmake tar perl sh
 EXTRACT_USING=	gtar
 

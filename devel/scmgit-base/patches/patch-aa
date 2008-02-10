@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2008/02/06 07:53:31 bjs Exp $
+$NetBSD: patch-aa,v 1.3 2008/02/10 19:00:27 tnn Exp $
 
 NetBSD 3.0 needs -liconv, too.
 
 AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
 
---- Makefile.orig	2008-02-01 23:09:01.000000000 -0500
+--- Makefile.orig	2008-02-02 05:09:01.000000000 +0100
 +++ Makefile
-@@ -150,8 +150,6 @@ uname_P := $(shell sh -c 'uname -p 2>/de
+@@ -150,13 +150,11 @@ uname_P := $(shell sh -c 'uname -p 2>/de
  
  # CFLAGS and LDFLAGS are for the users to override from the command line.
  
@@ -15,6 +15,12 @@ AR, CC, CFLAGS, LDFLAGS and LIBS should be taken from the environment.
  ALL_CFLAGS = $(CFLAGS)
  ALL_LDFLAGS = $(LDFLAGS)
  STRIP ?= strip
+ 
+-prefix = $(HOME)
++prefix = $(PREFIX)
+ bindir = $(prefix)/bin
+ mandir = $(prefix)/share/man
+ infodir = $(prefix)/share/info
 @@ -192,12 +190,8 @@ GITWEB_SITE_FOOTER =
  
  export prefix bindir gitexecdir sharedir template_dir htmldir sysconfdir
