@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/02/10 13:08:51 obache Exp $
+#
+# used by textproc/migemo/Makefile
+# used by textproc/migemo-elisp/Makefile
+
+MIGEMO_VERSION=		0.40
+
+DISTNAME=		migemo-${MIGEMO_VERSION}
+CATEGORIES=		textproc
+MASTER_SITES=		http://0xcc.net/migemo/
+
+MAINTAINER=		yamajun@ofug.net
+HOMEPAGE=		http://0xcc.net/migemo/
