@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.252 2008/02/09 22:40:10 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.253 2008/02/10 13:13:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -438,3 +438,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/pcc to 0.9.9 [reed 2008-02-09]
 	Updated mail/dbmail to 2.2.9 [obache 2008-02-09]
 	Updated math/p5-Math-Pari to 2.010709 [adrianp 2008-02-09]
+	Added textproc/migemo version 0.40 [obache 2008-02-10]
+	Added textproc/migemo-elisp version 0.40 [obache 2008-02-10]
