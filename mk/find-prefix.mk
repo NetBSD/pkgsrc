@@ -1,4 +1,4 @@
-# $NetBSD: find-prefix.mk,v 1.5 2007/09/29 10:56:34 rillig Exp $
+# $NetBSD: find-prefix.mk,v 1.6 2008/02/10 10:12:13 rillig Exp $
 #
 # This is a "subroutine" that can be included to find the installation
 # prefix of an installed package.
@@ -23,17 +23,6 @@
 # FIND_PREFIX:=	M4DIR=gm4
 # .include "../../mk/find-prefix.mk"
 # # ${M4DIR} now contains the installation prefix for the "gm4" package.
-#
-# The input variable is FIND_PREFIX, which is a list of VARNAME=<pattern>
-# pairs, where "VARNAME" is the variable that will be set to the
-# installation prefix for the package, and <pattern> is a package
-# wildcard pattern used to match the installed package (see pkg_info(8)).
-#
-# An example use is:
-#
-# FIND_PREFIX:=	M4DIR=gm4
-# .include "../../mk/find-prefix.mk"
-# # ${M4DIR} now contains the installation prefix for the "gm4" package
 #
 
 .for _def_ in ${FIND_PREFIX}
