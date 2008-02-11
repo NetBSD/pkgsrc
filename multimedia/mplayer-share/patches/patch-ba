@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.6.2.1 2008/02/11 12:04:15 ghen Exp $
+
+--- libmpdemux/demux_audio.c.orig	2007-10-07 21:49:33.000000000 +0200
++++ libmpdemux/demux_audio.c
+@@ -229,6 +229,8 @@ get_flac_metadata (demuxer_t* demuxer)
+           ptr += 4;
+ 
+           comment = ptr;
++          if (&comment[length] < comments || &comment[length] >= &comments[blk_len])
++            return;
+           c = comment[length];
+           comment[length] = 0;
+ 
