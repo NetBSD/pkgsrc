@@ -1,5 +1,8 @@
-# $NetBSD: Makefile.common,v 1.45 2008/02/08 17:43:06 drochner Exp $
+# $NetBSD: Makefile.common,v 1.46 2008/02/11 13:58:41 gdt Exp $
 #
+
+# used by audio/xine-arts/Makefile
+# used by audio/xine-esound/Makefile
 
 DISTNAME=		xine-lib-1.1.10.1
 XINE_PKGNAME=		xine-lib-1.1.10.1
