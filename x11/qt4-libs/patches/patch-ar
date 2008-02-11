@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2008/02/11 23:06:01 hubertf Exp $
+
+--- src/corelib/global/qglobal.h.orig	2007-12-04 17:42:55.000000000 +0100
++++ src/corelib/global/qglobal.h
+@@ -89,7 +89,7 @@
+ */
+ 
+ #if defined(__APPLE__) && (defined(__GNUC__) || defined(__xlC__) || defined(__xlc__))
+-#  define Q_OS_DARWIN
++/* #  define Q_OS_DARWIN *//* Else it'll try to use MacOS, no X, stuff - HF */
+ #  define Q_OS_BSD4
+ #  ifdef __LP64__
+ #    define Q_OS_DARWIN64
