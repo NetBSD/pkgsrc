@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.258 2008/02/11 18:54:57 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.259 2008/02/11 19:55:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/cdrtools to 2.01.01.37nb1 [bjs 2008-02-11]
 	Updated pkgtools/bootstrap-mk-files to 20080211 [tnn 2008-02-11]
 	Updated fonts/t1lib to 5.1.2 [bjs 2008-02-11]
+	Updated lang/lua to 5.1.3 [adam 2008-02-11]
