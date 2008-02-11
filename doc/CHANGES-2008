@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.253 2008/02/10 13:13:13 obache Exp $
+$NetBSD: CHANGES-2008,v 1.254 2008/02/11 02:12:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -440,3 +440,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/p5-Math-Pari to 2.010709 [adrianp 2008-02-09]
 	Added textproc/migemo version 0.40 [obache 2008-02-10]
 	Added textproc/migemo-elisp version 0.40 [obache 2008-02-10]
+	Added devel/libdatrie version 0.1.3 [obache 2008-02-11]
