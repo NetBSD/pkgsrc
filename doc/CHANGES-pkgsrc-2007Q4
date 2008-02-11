@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.6 2008/01/29 14:25:14 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.7 2008/02/11 12:04:34 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
@@ -29,3 +29,5 @@ Pullup ticket 2281 - requested by drochner
 security fix for libsndfile
 Pullup ticket 2282 - requested by tron
 security update for apache22
+Pullup ticket 2287 - requested by drochner
+security fixes for mplayer and mencoder
