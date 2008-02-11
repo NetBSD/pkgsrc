@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2008/02/05 21:13:01 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2008/02/11 13:05:14 bjs Exp $
 
 DISTNAME=	cdrtools-2.01.01a37
 PKGNAME=	cdrtools-2.01.01.37
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -122,8 +123,22 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mkisofs/README* \
 		${DESTDIR}${PREFIX}/share/doc/cdrtools/mkisofs
 
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
-LDFLAGS+=	-lrt
+
+CONFIGURE_ENV+= librt=${NETBSDLIB.rt:U:Q}
+
+.if ${OPSYS} == "NetBSD"
+netbsd-posix-sched-check-cookie: netbsd-posix-sched-check
+###
+### Check for POSIX priority scheduling in NetBSD
+###
+
+.PHONY: netbsd-posix-sched-check
+netbsd-posix-sched-check:
+NETBSDLIB.rt!=\
+	if ( /sbin/sysctl -n kern.posix_sched >/dev/null 2>&1 ); then \
+	    lib=-lrt; \
+	fi || ${TRUE}; \
+	echo "$$lib"
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
