@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/30 23:03:50 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/11 20:18:56 bjs Exp $
 bin/stg
 bin/stg-cvs
 bin/stg-dispatch
@@ -191,6 +191,19 @@ ${PYSITELIB}/stgit/utils.pyo
 ${PYSITELIB}/stgit/version.py
 ${PYSITELIB}/stgit/version.pyc
 ${PYSITELIB}/stgit/version.pyo
+man/man1/stg-branch.1
+man/man1/stg-clone.1
+man/man1/stg-init.1
+man/man1/stg-new.1
+man/man1/stg-sink.1
+man/man1/stg.1
+share/doc/stgit/html/stg-branch.html
+share/doc/stgit/html/stg-clone.html
+share/doc/stgit/html/stg-init.html
+share/doc/stgit/html/stg-new.html
+share/doc/stgit/html/stg-sink.html
+share/doc/stgit/html/stg.html
+share/doc/stgit/html/tutorial.html
 share/examples/stgit/gitconfig
 share/stgit/contrib/stgbashprompt.sh
 share/stgit/contrib/stgit-completion.bash
@@ -202,7 +215,6 @@ share/stgit/templates/patchmail.tmpl
 @dirrm share/stgit/contrib
 @dirrm share/stgit
 @dirrm share/examples/stgit
-@exec ${MKDIR} %D/share/doc/stgit
 @dirrm share/doc/stgit
 @dirrm ${PYSITELIB}/stgit/lib
 @dirrm ${PYSITELIB}/stgit/commands
