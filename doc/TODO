@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7044 2008/02/10 13:13:13 obache Exp $
+$NetBSD: TODO,v 1.7045 2008/02/11 13:12:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -1315,6 +1315,7 @@ Suggested package updates
 	o sympa-5.3.4
 	o sysinfo-4.2.2
 	o systrace-1.6e
+	o t1lib-5.1.2
 	o t1utils-1.33
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
