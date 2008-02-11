@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7047 2008/02/11 18:54:28 bjs Exp $
+$NetBSD: TODO,v 1.7048 2008/02/11 19:55:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -879,7 +879,6 @@ Suggested package updates
 	o lq-sp-1.3.4.13
 	o lsh-2.0.3
 	o ltm-0.40
-	o lua-5.1.3
 	o lucy-1.19p
 	o luit-1.0.3
 	o lyx-1.5
