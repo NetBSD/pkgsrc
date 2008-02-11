@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.15 2007/06/15 17:45:37 obache Exp $
+$NetBSD: patch-aa,v 1.16 2008/02/11 19:54:55 adam Exp $
 
---- Makefile.orig	2007-03-25 14:44:39.000000000 +0000
+--- Makefile.orig	2008-01-17 18:53:37.000000000 +0100
 +++ Makefile
 @@ -12,11 +12,11 @@ PLAT= none
  # doc directory.) You may want to make these paths consistent with LUA_ROOT,
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.15 2007/06/15 17:45:37 obache Exp $
  INSTALL_LMOD= $(INSTALL_TOP)/share/lua/$V
  INSTALL_CMOD= $(INSTALL_TOP)/lib/lua/$V
  
-@@ -43,7 +43,7 @@ PLATS= aix ansi bsd freebsd generic linu
+@@ -38,7 +38,7 @@ PLATS= aix ansi bsd freebsd generic linu
  # What to install.
  TO_BIN= lua luac
  TO_INC= lua.h luaconf.h lualib.h lauxlib.h ../etc/lua.hpp
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.15 2007/06/15 17:45:37 obache Exp $
  TO_MAN= lua.1 luac.1
  
  # Lua version and release.
-@@ -59,11 +59,11 @@ test:	dummy
+@@ -54,11 +54,11 @@ test:	dummy
  	src/lua test/hello.lua
  
  install: dummy
@@ -39,6 +39,6 @@ $NetBSD: patch-aa,v 1.15 2007/06/15 17:45:37 obache Exp $
 +	cd src && $(BSD_INSTALL_DATA) $(TO_INC) ${DESTDIR}$(INSTALL_INC)
 +	cd src && $(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(TO_LIB) ${DESTDIR}$(INSTALL_LIB)
 +	cd doc && $(BSD_INSTALL_MAN) $(TO_MAN) ${DESTDIR}$(INSTALL_MAN)
- #	$(RANLIB) $(INSTALL_LIB)/$(TO_LIB)
  
  local:
+ 	$(MAKE) install INSTALL_TOP=..
