@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2007/01/14 16:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/11 23:28:45 heinz Exp $
 
-DISTNAME=		convmv-1.10
+DISTNAME=		convmv-1.12
 CATEGORIES=		converters
 MASTER_SITES=		http://www.j3e.de/linux/convmv/
 
@@ -8,41 +8,34 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://j3e.de/linux/convmv/
 COMMENT=		Converts filenames from one encoding to another
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
-BUILD_DEPENDS+=		findutils-[0-9]*:../../sysutils/findutils
-
 USE_LANGUAGES=		# empty
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		pax perl:run
 
 MANCOMPRESSED=		yes
 NO_BUILD=		yes
 
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-
-# the test script needs the GNU versions
-MAKE_ENV+=		CONVMV_LS=${GNU_PROGRAM_PREFIX}ls \
-			CONVMV_CP=${GNU_PROGRAM_PREFIX}cp \
-			CONVMV_FIND=${GNU_PROGRAM_PREFIX}find
-
-MAKEFLAGS+=		MANDIR=${PREFIX}/man \
-			INSTALL_MAN_DIR=${INSTALL_MAN_DIR:Q} \
-			INSTALL_SCRIPT_DIR=${INSTALL_SCRIPT_DIR:Q} \
-			INSTALL_MAN=${INSTALL_MAN:Q} \
-			INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+MAKEFLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKEFLAGS+=		INSTALL_MAN_DIR=${INSTALL_MAN_DIR:Q}
+MAKEFLAGS+=		INSTALL_SCRIPT_DIR=${INSTALL_SCRIPT_DIR:Q}
+MAKEFLAGS+=		INSTALL_MAN=${INSTALL_MAN:Q}
+MAKEFLAGS+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 
 REPLACE_PERL+=		${WRKSRC}/convmv
+REPLACE_SH+=		suite/dotests.sh
 
-SUBST_CLASSES+=		convmv
-SUBST_STAGE.convmv=	pre-configure
-SUBST_FILES.convmv=	suite/dotests.sh
-SUBST_SED.convmv=	-e "1s|/bin/sh|${SH}|"
+CHECK_PORTABILITY_SKIP=	suite/test-nfd/*
 
 TEST_TARGET=		test
 
+.include "../../mk/bsd.prefs.mk"
+
+.if empty(OPSYS:MDarwin)
 post-extract:
 	# use option p to get the right permissions for symlinks
-	cd ${WRKSRC} && ${TAR} -xpf testsuite.tar
+	cd ${WRKSRC} && pax -p p -rf testsuite.tar
+.endif
 
 .include "../../mk/bsd.pkg.mk"
