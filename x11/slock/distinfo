@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/11 22:48:17 reed Exp $
+
+SHA1 (slock-0.7.tar.gz) = 351355d6e09be739119e5fd6b1606c79b5b5e777
+RMD160 (slock-0.7.tar.gz) = 5765ffa0621abaf28718513e81190696df287bbe
+Size (slock-0.7.tar.gz) = 3487 bytes
