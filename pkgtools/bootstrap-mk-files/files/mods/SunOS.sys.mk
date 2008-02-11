@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.sys.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.2 2008/02/11 15:12:39 tnn Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
@@ -40,7 +40,7 @@ OBJCFLAGS?=	${CFLAGS}
 COMPILE.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
 LINK.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CPP?=		cpp
+CPP?=		${CC} -E
 .if defined(NETBSD_COMPATIBLE)
 CPPFLAGS?=	-I${BSDDIR}/include -D__EXTENSIONS__ -D_XPG4_2 -DSUNOS_5
 HOST_CPPFLAGS?=	${CPPFLAGS}
