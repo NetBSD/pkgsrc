@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/11 02:20:44 obache Exp $
+include/thai/thailib.h
+include/thai/thbrk.h
+include/thai/thcell.h
+include/thai/thcoll.h
+include/thai/thctype.h
+include/thai/thinp.h
+include/thai/thrend.h
+include/thai/thstr.h
+include/thai/thwbrk.h
+include/thai/thwchar.h
+include/thai/thwcoll.h
+include/thai/thwctype.h
+include/thai/thwinp.h
+include/thai/thwrend.h
+include/thai/thwstr.h
+include/thai/tis.h
+include/thai/wtt.h
+lib/libthai.la
+lib/pkgconfig/libthai.pc
+share/libthai/thbrk.br
+share/libthai/thbrk.sbm
+share/libthai/thbrk.tl
+@dirrm share/libthai
+@dirrm include/thai
