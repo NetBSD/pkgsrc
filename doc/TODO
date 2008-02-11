@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7048 2008/02/11 19:55:51 adam Exp $
+$NetBSD: TODO,v 1.7049 2008/02/11 23:31:55 heinz Exp $
 
 Suggested new packages
 ======================
@@ -336,7 +336,6 @@ Suggested package updates
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
-	o GeoIP-1.4.2
 	o GridSim-3.3
 	o MesaLib-7.0.2
 	o ORBit2-2.14.12
@@ -507,7 +506,6 @@ Suggested package updates
 	o cone-0.74
 	o connect-1.96
 	o control-center-2.20.1
-	o convmv-1.12
 	o cook-2.30
 	o colorize-0.3.4
 	o courier-0.58.0
