@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.911 2008/02/11 02:13:44 obache Exp $
+# $NetBSD: Makefile,v 1.912 2008/02/11 02:22:32 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -312,6 +312,7 @@ SUBDIR+=	libstroke
 SUBDIR+=	libtai
 SUBDIR+=	libtar
 SUBDIR+=	libtecla
+SUBDIR+=	libthai
 SUBDIR+=	libtool
 SUBDIR+=	libtool-base
 SUBDIR+=	libtool-info
