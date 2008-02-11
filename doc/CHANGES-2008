@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.255 2008/02/11 02:21:02 obache Exp $
+$NetBSD: CHANGES-2008,v 1.256 2008/02/11 13:05:39 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -442,3 +442,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/migemo-elisp version 0.40 [obache 2008-02-10]
 	Added devel/libdatrie version 0.1.3 [obache 2008-02-11]
 	Added devel/libthai version 0.1.9 [obache 2008-02-11]
+	Updated sysutils/cdrtools to 2.01.01.37nb1 [bjs 2008-02-11]
