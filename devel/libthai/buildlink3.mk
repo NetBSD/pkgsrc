@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/02/11 02:20:44 obache Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+LIBTHAI_BUILDLINK3_MK:=	${LIBTHAI_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	libthai
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibthai}
+BUILDLINK_PACKAGES+=	libthai
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libthai
+
+.if ${LIBTHAI_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libthai+=	libthai>=0.1.9
+BUILDLINK_PKGSRCDIR.libthai?=	../../devel/libthai
+.endif	# LIBTHAI_BUILDLINK3_MK
+
+.include "../../devel/libdatrie/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
