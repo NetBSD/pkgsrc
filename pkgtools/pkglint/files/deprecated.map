@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.59 2007/11/07 17:25:33 rillig Exp $
+# $NetBSD: deprecated.map,v 1.60 2008/02/12 07:39:09 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -144,3 +144,6 @@ LICENCE			Use LICENSE instead.
 
 # November 2007
 #USE_NCURSES		Include "../../devel/ncurses/buildlink3.mk" instead.
+
+# December 2007
+INSTALLATION_DIRS_FROM_PLIST	Use AUTO_MKDIRS instead.
