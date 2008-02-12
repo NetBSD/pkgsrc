@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/01/19 09:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2008/02/12 08:03:49 rillig Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -15,9 +15,11 @@ WRKSRC=			${WRKDIR}/xboing
 USE_IMAKE=		YES
 
 NO_INSTALL_MANPAGES=	YES
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+AUTO_MKDIRS=		yes
+MAKE_DIRS=		${VARBASE}/games
 
-MAKE_ENV+=		VARBASE=${VARBASE:Q}
+MAKE_ENV+=		VARBASE=${VARBASE}
+BUILD_DEFS+=		VARBASE GAMEMODE
 
 post-install:
 	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/xboing
