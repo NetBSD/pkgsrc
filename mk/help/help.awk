@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.21 2008/01/05 19:48:27 rillig Exp $
+# $NetBSD: help.awk,v 1.22 2008/02/12 07:16:40 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -167,7 +167,6 @@ $1 == "#" {
 }
 
 always {
-	# Note: The first "this" actually means the next line.
 	last_fname = FILENAME;
 }
 
