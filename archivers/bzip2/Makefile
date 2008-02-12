@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/08/24 02:42:50 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2008/02/12 11:25:35 tnn Exp $
 #
 
 DISTNAME=	bzip2-1.0.4
@@ -15,6 +15,7 @@ EXTRACT_ONLY=	# empty
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=		no
 NO_CHECKSUM=		yes
 USE_LIBTOOL=		yes
 
