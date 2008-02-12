@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2007/04/05 12:21:27 obache Exp $
+# $NetBSD: Makefile,v 1.25 2008/02/12 14:33:12 obache Exp $
 
 .include "Makefile.common"
 
 CATEGORIES=	japanese textproc www
 
 COMMENT=	Full-text search system for communities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
