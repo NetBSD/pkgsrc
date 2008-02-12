@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2725 2007/12/31 20:06:37 jlam Exp $
+$NetBSD: CHANGES-2007,v 1.2726 2008/02/12 23:25:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -4254,7 +4254,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated net/mldonkey-gui to 2.9.2 [wiz 2007-10-29]
 	Updated databases/p5-DBD-SQLite to 1.14 [adrianp 2007-10-29]
 	Updated security/libprelude to 0.9.16 [shannonjr 2007-10-29]
-	Updated security/prelude-manager to 0.9.16 [shannonjr 2007-10-29]
+	Updated security/prelude-manager to 0.9.10 [shannonjr 2007-10-29]
 	Updated security/py-prewikka to 0.9.13 [shannonjr 2007-10-29]
 	Updated filesystems/fuse-ntfs-3g to 1.1030 [xtraeme 2007-10-30]
 	Updated devel/gmp to 4.2.2 [bjs 2007-10-30]
