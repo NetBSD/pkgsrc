@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.265 2008/02/12 14:23:26 martti Exp $
+$NetBSD: CHANGES-2008,v 1.266 2008/02/12 15:03:40 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -453,3 +453,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/libarena version 20080211 [bjs 2008-02-12]
 	Updated pkgtools/libnbcompat to 20080212 [joerg 2008-02-12]
 	Updated mail/clamav to 0.92.1 [martti 2008-02-12]
+	Updated pkgtools/pkg_tarup to 1.7.1 [rillig 2008-02-12]
