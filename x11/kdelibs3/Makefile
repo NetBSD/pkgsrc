@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2008/01/18 05:10:06 tnn Exp $
+# $NetBSD: Makefile,v 1.134 2008/02/12 12:20:44 joerg Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -13,7 +13,7 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 CONFLICTS+=	koffice3<=1.1.1
 
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		iceauth:run perl:run pkg-config
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES+=		${PREFIX}/share/examples/kdelibs3/applications.menu \
