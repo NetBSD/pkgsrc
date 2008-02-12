@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.3 2007/07/31 13:17:34 joerg Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.4 2008/02/12 13:43:24 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -24,6 +24,9 @@
 #ifndef _NBCOMPAT_RMD160_H_
 #define _NBCOMPAT_RMD160_H_
 
+#define RMD160_DIGEST_LENGTH		20
+#define RMD160_DIGEST_STRING_LENGTH	41
+
 typedef struct {
 	u_int32_t	state[5];	/* state (ABCDE) */
 	u_int32_t	length[2];	/* number of bits */
@@ -36,11 +39,9 @@ void	RMD160Init(RMD160_CTX *);
 void	RMD160Transform(u_int32_t[5], const u_int32_t[16]);
 void	RMD160Update(RMD160_CTX *, const unsigned char *, u_int32_t);
 void	RMD160Final(unsigned char[20], RMD160_CTX *);
-#ifndef	_KERNEL
 char	*RMD160End(RMD160_CTX *, char *);
 char	*RMD160File(char *, char *);
 char	*RMD160Data(const unsigned char *, size_t, char *);
-#endif /* _KERNEL */
 __END_DECLS
 
 #endif  /* !_NBCOMPAT_RMD160_H_ */
