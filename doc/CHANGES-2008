@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.266 2008/02/12 15:03:40 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.267 2008/02/12 20:26:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -454,3 +454,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/libnbcompat to 20080212 [joerg 2008-02-12]
 	Updated mail/clamav to 0.92.1 [martti 2008-02-12]
 	Updated pkgtools/pkg_tarup to 1.7.1 [rillig 2008-02-12]
+	Added sysutils/dmsdos version 0.9.2.3pre2 [drochner 2008-02-12]
+	Updated multimedia/xine-lib to 1.1.10.1 [drochner 2008-02-12]
+	Updated print/libgnomeprintui to 2.18.2 [drochner 2008-02-12]
+	Updated graphics/libart to 2.3.20 [drochner 2008-02-12]
+	Updated x11/gtk2 to 2.12.7 [drochner 2008-02-12]
+	Updated www/liferea to 1.4.12 [drochner 2008-02-12]
+	Updated print/poppler to 0.6.4 [drochner 2008-02-12]
+	Updated databases/gramps2 to 2.2.10 [drochner 2008-02-12]
+	Updated multimedia/gst-plugins0.10-base to 0.10.17 [drochner 2008-02-12]
+	Updated multimedia/gstreamer0.10 to 0.10.17 [drochner 2008-02-12]
