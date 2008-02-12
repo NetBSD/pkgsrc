@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/15 20:32:55 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/12 07:59:04 rillig Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -25,6 +25,7 @@ CPPFLAGS+=		-DPREFIX="\"${PREFIX}\"" \
 			-DVARBASE="\"${VARBASE}\""
 
 INSTALLATION_DIRS=	bin
+MAKE_DIRS=		${VARBASE}/games
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
