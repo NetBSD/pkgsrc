@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.21 2008/02/06 22:39:43 joerg Exp $
+# $Id: pkg_tarup,v 1.22 2008/02/12 15:03:29 rillig Exp $
 #
 # Tar up installed package
 #
@@ -26,7 +26,13 @@ SU_CMD=${SU_CMD:-@SU_CMD@}
 GREP=${GREP:-@GREP@}
 XARGS=${XARGS:-@XARGS@}
 
-if [ `${ID} -u` != `${ID} -u ${ROOT_USER}` ]; then
+root_uid=`${ID} -u ${ROOT_USER} 2>/dev/null`
+if [ "$root_uid" = "" ]; then
+	echo "$0: root user \"${ROOT_USER}\" does not exist." 1>&2
+	exit 1
+fi
+
+if [ `${ID} -u` != "$root_uid" ]; then
 	${ECHO} "Becoming ${ROOT_USER}@`/bin/hostname` to create a binary package"
 	${ECHO_N} "`${ECHO} ${SU_CMD} | ${SED} -e's/[[:space:]].*//'` ";\
 	( for arg in "$@"; do echo \"${arg}\"; done ) |
