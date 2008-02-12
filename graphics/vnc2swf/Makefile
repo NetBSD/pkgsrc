@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/04/01 01:58:38 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/12 14:56:41 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
 
@@ -32,9 +34,9 @@ SUBST_SED.toolpath=	-E -e "s|^(VNC2SWF=).*|\1${PREFIX}/bin/vnc2swf|" \
 			-e "s|^(AWK=).*|\1${AWK}|" \
 			-e 's|-mouse|-localhost|'
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/Vnc2Swf.ad ${PREFIX}/lib/X11/app-defaults/Vnc2Swf
+	${INSTALL_DATA} ${WRKSRC}/Vnc2Swf.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Vnc2Swf
 	cd ${WRKSRC}/docs && \
-	${PAX} -rw -pp -pm . ${PREFIX}/share/doc/html/vnc2swf
+	${PAX} -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/html/vnc2swf
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
