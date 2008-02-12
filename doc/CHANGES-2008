@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.264 2008/02/12 13:44:06 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.265 2008/02/12 14:23:26 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -452,3 +452,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/convmv to 1.12 [heinz 2008-02-11]
 	Added devel/libarena version 20080211 [bjs 2008-02-12]
 	Updated pkgtools/libnbcompat to 20080212 [joerg 2008-02-12]
+	Updated mail/clamav to 0.92.1 [martti 2008-02-12]
