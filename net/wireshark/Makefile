@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/18 05:08:52 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2008/02/13 20:10:20 tron Exp $
 
 DISTNAME=		wireshark-0.99.7
 PKGREVISION=		1
@@ -20,10 +20,8 @@ USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	# empty
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--enable-static=no
 CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_PREFIX.gtk2}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
@@ -33,6 +31,7 @@ CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 PTHREAD_OPTS+=		require
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*-*)
 USE_BUILTIN.libpcap=	no
@@ -54,7 +53,6 @@ SUBST_SED.shell=	-e 's,@SHELL@,${SHELL},g'
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
