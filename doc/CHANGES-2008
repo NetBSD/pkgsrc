@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.273 2008/02/13 14:48:42 obache Exp $
+$NetBSD: CHANGES-2008,v 1.274 2008/02/13 19:46:37 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -471,3 +471,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mrtg to 2.16.0 [martti 2008-02-13]
 	Updated graphics/p5-Image-ExifTool to 7.15 [gdt 2008-02-13]
 	Updated graphics/ruby-RMagick to 2.2.2 [obache 2008-02-13]
+	Updated lang/mono to 1.2.6 [kefren 2008-02-13]
+	Updated graphics/libgdiplus to 1.2.6 [kefren 2008-02-13]
+	Added x11/gtksourceview-sharp version 2.0-0.10 [kefren 2008-02-13]
+	Added lang/monodoc version 1.2.6 [kefren 2008-02-13]
+	Added devel/mono-addins version 0.3 [kefren 2008-02-13]
+	Added devel/monodevelop version 0.18.1 [kefren 2008-02-13]
+	Added www/mono-xsp version 1.2.6 [kefren 2008-02-13]
