@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/11/22 20:09:38 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2008/02/13 20:04:04 drochner Exp $
 #
 
-DISTNAME=	gnome-doc-utils-0.12.0
-PKGREVISION=	1
+DISTNAME=	gnome-doc-utils-0.12.1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -47,5 +46,5 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
