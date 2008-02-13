@@ -1,0 +1,43 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/02/13 22:03:58 adrianp Exp $
+#
+# used by net/isc-dhcp4/Makefile
+# used by net/isc-dhcpd4/Makefile
+# used by net/isc-dhclient4/Makefile
+# used by net/isc-dhcrelay4/Makefile
+
+DISTNAME=		dhcp-4.0.0
+PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
+CATEGORIES=		net
+MASTER_SITES=		http://ftp.isc.org/isc/dhcp/
+
+MAINTAINER=		adrianp@NetBSD.org
+HOMEPAGE=		http://www.isc.org/sw/dhcp/dhcp4_0.php
+
+CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
+
+.include "../../mk/bsd.prefs.mk"
+
+GNU_CONFIGURE=		yes
+DHCP_HOME?=		${VARBASE}/db/isc-dhcp
+DHCP_PID?=		${VARBASE}/run/isc-dhcp
+PKG_SYSCONFSUBDIR=	dhcp
+
+FILESDIR=		${.CURDIR}/../isc-dhcp4/files
+PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
+EGDIR=			${PREFIX}/share/examples/isc-dhcp-${COMPONENT}
+BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_PID
+
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-srv-lease-file=${DHCP_HOME}/dhcpd.leases
+CONFIGURE_ARGS+=	--with-cli-lease-file=${DHCP_HOME}/dhclient.leases
+CONFIGURE_ARGS+=	--with-srv-pid-file=${DHCP_PID}/isc-dhcpd.pif
+CONFIGURE_ARGS+=	--with-cli-pid-file=${DHCP_PID}/isc-dhclient.pid
+CONFIGURE_ARGS+=	--with-relay-pid-file=${DHCP_PID}/isc-dhcrelay.pid
+
+do-install:
+.	for d in ${SUBDIR}
+		cd ${WRKSRC}/${d} && ${SETENV} ${MAKE_ENV} ${MAKE} install
+.	endfor
+
+.include "../../security/openssl/buildlink3.mk"
