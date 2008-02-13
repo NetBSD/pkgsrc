@@ -1,9 +1,13 @@
-$NetBSD: patch-ae,v 1.4 2006/10/19 06:40:54 martti Exp $
+$NetBSD: patch-ae,v 1.5 2008/02/13 12:05:26 martti Exp $
 
---- lib/mrtg2/SNMP_Session.pm.orig	2006-09-06 13:42:50.000000000 +0000
-+++ lib/mrtg2/SNMP_Session.pm	2006-10-19 08:48:09.000000000 +0000
-@@ -111,3 +111,3 @@
+--- lib/mrtg2/SNMP_Session.pm.orig	2008-02-06 16:35:49.000000000 +0200
++++ lib/mrtg2/SNMP_Session.pm	2008-02-13 13:57:53.000000000 +0200
+@@ -110,7 +110,7 @@
+ ### some agents erroneously encode the response ID as an unsigned,
+ ### which prevents this code from matching such responses to requests.
  ###
 -$SNMP_Session::default_avoid_negative_request_ids = 0;
 +$SNMP_Session::default_avoid_negative_request_ids = 1;
  
+ ### Default value for "use_16bit_request_ids".
+ ###
