@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.912 2008/02/11 02:22:32 obache Exp $
+# $NetBSD: Makefile,v 1.913 2008/02/13 19:59:26 kefren Exp $
 #
 
 COMMENT=	Development utilities
@@ -333,6 +333,8 @@ SUBDIR+=	memcached
 SUBDIR+=	mercurial
 SUBDIR+=	mk-files
 SUBDIR+=	mkcmd
+SUBDIR+=	mono-addins
+SUBDIR+=	monodevelop
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
