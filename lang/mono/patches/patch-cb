@@ -1,8 +1,7 @@
-$NetBSD: patch-cb,v 1.1 2007/11/05 11:28:51 drochner Exp $
-
---- mcs/class/corlib/Mono.Math/BigInteger.cs.orig	2007-11-05 11:48:57.000000000 +0100
-+++ mcs/class/corlib/Mono.Math/BigInteger.cs
-@@ -1574,7 +1574,7 @@ namespace Mono.Math {
+$NetBSD: patch-cb,v 1.2 2008/02/13 14:16:43 kefren Exp $
+--- mcs/class/corlib/Mono.Math/BigInteger.cs.orig	2008-02-05 14:20:27.000000000 +0200
++++ mcs/class/corlib/Mono.Math/BigInteger.cs	2008-02-05 14:20:57.000000000 +0200
+@@ -1607,7 +1607,7 @@ namespace Mono.Math {
  						uint j = 1;
  
  						// Multiply and add

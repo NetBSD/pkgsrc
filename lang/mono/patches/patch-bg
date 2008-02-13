@@ -1,0 +1,12 @@
+$NetBSD: patch-bg,v 1.1 2008/02/13 14:16:43 kefren Exp $
+--- mono/metadata/socket-io.c.orig	2008-02-07 08:37:02.000000000 +0200
++++ mono/metadata/socket-io.c	2008-02-07 08:37:17.000000000 +0200
+@@ -2751,7 +2751,7 @@
+ 	struct sockaddr_in6 saddr6;
+ 	struct addrinfo *info = NULL, hints;
+ 	gint32 family;
+-	char hostname[1024] = {0};
++	char hostname[NI_MAXHOST] = {0};
+ 	int flags = 0;
+ #else
+ 	struct in_addr inaddr;

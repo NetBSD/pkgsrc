@@ -1,0 +1,37 @@
+$NetBSD: patch-bi,v 1.1 2008/02/13 14:16:43 kefren Exp $
+--- mono/metadata/filewatcher.c.orig	2008-02-07 08:47:39.000000000 +0200
++++ mono/metadata/filewatcher.c	2008-02-07 08:52:21.000000000 +0200
+@@ -44,9 +44,6 @@
+ gint
+ ves_icall_System_IO_FSW_SupportsFSW (void)
+ {
+-#if HAVE_KQUEUE
+-	return 3;
+-#else
+ 	MonoDl *fam_module;
+ 	int lib_used = 4; /* gamin */
+ 	int inotify_instance;
+@@ -70,15 +67,22 @@
+ 	}
+ 
+ 	if (fam_module == NULL)
++#if HAVE_KQUEUE
++		return 3;
++#else
+ 		return 0;
++#endif
+ 
+ 	err = mono_dl_symbol (fam_module, "FAMNextEvent", (gpointer *) &FAMNextEvent);
+ 	g_free (err);
+ 	if (FAMNextEvent == NULL)
++#if HAVE_KQUEUE
++		return 3;
++#else
+ 		return 0;
++#endif
+ 
+ 	return lib_used;
+-#endif
+ }
+ 
+ /* Almost copied from fam.h. Weird, I know */

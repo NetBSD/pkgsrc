@@ -1,11 +1,10 @@
-$NetBSD: patch-aq,v 1.1 2006/08/03 18:15:08 drochner Exp $
-
---- data/net_1_1/Makefile.in.orig	2006-07-27 13:29:45.000000000 +0200
-+++ data/net_1_1/Makefile.in
-@@ -263,7 +263,7 @@ target_alias = @target_alias@
- target_cpu = @target_cpu@
- target_os = @target_os@
+$NetBSD: patch-aq,v 1.2 2008/02/13 14:16:43 kefren Exp $
+--- data/net_1_1/Makefile.in.orig	2008-02-05 14:07:38.000000000 +0200
++++ data/net_1_1/Makefile.in	2008-02-05 14:07:52.000000000 +0200
+@@ -214,7 +214,7 @@
  target_vendor = @target_vendor@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
 -monodir = $(sysconfdir)/mono/1.0
 +monodir = $(datadir)/examples/mono/1.0
  EXTRA_DIST = machine.config \
