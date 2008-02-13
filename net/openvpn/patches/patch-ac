@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
+$NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
 
---- tun.c.orig	2007-04-25 23:38:46.000000000 +0200
-+++ tun.c
-@@ -68,6 +68,7 @@ static const char *netsh_get_id (const c
+--- tun.c.orig	2008-01-26 06:39:13.000000000 +0200
++++ tun.c	2008-02-13 13:32:50.000000000 +0200
+@@ -68,6 +68,7 @@
  
  #ifdef TARGET_SOLARIS
  static void solaris_error_close (struct tuntap *tt, const struct env_set *es, const char *actual);
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
  #endif
  
  bool
-@@ -659,7 +660,12 @@ do_ifconfig (struct tuntap *tt,
+@@ -662,7 +663,12 @@
  			    );
  	}
        else
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
  
        msg (M_INFO, "%s", command_line);
        if (!system_check (command_line, es, 0, "Solaris ifconfig phase-2 failed"))
-@@ -945,7 +951,37 @@ open_tun_generic (const char *dev, const
+@@ -948,7 +954,37 @@
  	  if (dynamic && !has_digit((unsigned char *)dev))
  	    {
  	      int i;
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
  		{
  		  openvpn_snprintf (tunname, sizeof (tunname),
  				    "/dev/%s%d", dev, i);
-@@ -1255,13 +1291,16 @@ read_tun (struct tuntap* tt, uint8_t *bu
+@@ -1310,13 +1346,16 @@
  void
  open_tun (const char *dev, const char *dev_type, const char *dev_node, bool ipv6, struct tuntap *tt)
  {
@@ -83,7 +83,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
  
    ipv6_support (ipv6, false, tt);
  
-@@ -1282,9 +1321,10 @@ open_tun (const char *dev, const char *d
+@@ -1337,9 +1376,10 @@
      }
    else if (tt->type == DEV_TYPE_TAP)
      {
@@ -95,7 +95,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
        dev_tuntap_type = "tap";
        link_type = I_PLINK; /* was: I_LINK */
        is_tun = false;
-@@ -1311,7 +1351,11 @@ open_tun (const char *dev, const char *d
+@@ -1366,7 +1406,11 @@
      msg (M_ERR, "Can't open %s", dev_node);
  
    /* Assign a new PPA and get its unit number. */
@@ -108,7 +108,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
      msg (M_ERR, "Can't assign new interface");
  
    if ((if_fd = open (dev_node, O_RDWR, 0)) < 0)
-@@ -1320,27 +1364,81 @@ open_tun (const char *dev, const char *d
+@@ -1375,27 +1419,81 @@
    if (ioctl (if_fd, I_PUSH, "ip") < 0)
      msg (M_ERR, "Can't push IP module");
  
@@ -203,7 +203,7 @@ $NetBSD: patch-ac,v 1.5 2007/07/01 15:40:06 tnn Exp $
        msg (M_ERR, "Can't set multiplexor id");
      }
  
-@@ -1358,18 +1456,24 @@ solaris_close_tun (struct tuntap *tt)
+@@ -1413,18 +1511,24 @@
      {
        if (tt->ip_fd >= 0)
  	{
