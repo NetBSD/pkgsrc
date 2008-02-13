@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2007/12/02 12:15:45 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2008/02/13 12:05:26 martti Exp $
 
-DISTNAME=	mrtg-2.15.2
-PKGREVISION=	1
+DISTNAME=	mrtg-2.16.0
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
 		http://oss.oetiker.ch/mrtg/pub/old/
@@ -70,7 +70,7 @@ do-install:
 	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${PREFIX}/libexec; \
 	done
 	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/mrtg2/BER.pm \
+	${INSTALL_DATA} ${WRKSRC}/lib/mrtg2/BER.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_Session.pm \
 	  ${WRKSRC}/lib/mrtg2/SNMP_util.pm \
 	  ${WRKSRC}/lib/mrtg2/Net_SNMP_util.pm \
