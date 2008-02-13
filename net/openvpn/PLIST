@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/21 21:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/13 12:07:24 martti Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/doc/openvpn/management-notes.txt
@@ -19,6 +19,8 @@ share/examples/openvpn/config/tls-office.conf
 share/examples/openvpn/config/xinetd-client-config
 share/examples/openvpn/config/xinetd-server-config
 share/examples/openvpn/keys/README
+share/examples/openvpn/keys/ca.crt
+share/examples/openvpn/keys/ca.key
 share/examples/openvpn/keys/client.crt
 share/examples/openvpn/keys/client.key
 share/examples/openvpn/keys/dh1024.pem
@@ -27,8 +29,6 @@ share/examples/openvpn/keys/pass.key
 share/examples/openvpn/keys/pkcs12.p12
 share/examples/openvpn/keys/server.crt
 share/examples/openvpn/keys/server.key
-share/examples/openvpn/keys/ca.crt
-share/examples/openvpn/keys/ca.key
 share/examples/openvpn/scripts/auth-pam.pl
 share/examples/openvpn/scripts/bridge-start
 share/examples/openvpn/scripts/bridge-stop

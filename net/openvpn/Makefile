@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2008/01/18 05:08:48 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2008/02/13 12:07:24 martti Exp $
 #
 
-DISTNAME=	openvpn-2.1_rc4
-PKGNAME=	openvpn-2.1rc4
-
-PKGREVISION=	1
+DISTNAME=	openvpn-2.1_rc7
+PKGNAME=	openvpn-2.1rc7
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -12,6 +11,7 @@ MASTER_SITES=	http://openvpn.net/release/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openvpn.net/
 COMMENT=	Easy-to-use SSL VPN daemon
+#LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		grep:run
