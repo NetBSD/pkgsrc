@@ -1,0 +1,3 @@
+XSP is a standalone web server written in C# that can be used
+to run your ASP.NET applications with minimal effort. XSP works
+under both the Mono and Microsoft runtimes.
