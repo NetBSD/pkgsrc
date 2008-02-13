@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7050 2008/02/12 23:25:53 wiz Exp $
+$NetBSD: TODO,v 1.7051 2008/02/13 22:18:21 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -539,7 +539,6 @@ Suggested package updates
 	o delegate-9.7.5
 	o devIL-1.6.7
 	o devhelp-0.19
-	o dhcp-4.0.0 [DHCP6 supported.  as dhcp4?]
 	o dhid-5.3
 	o dictem-0.82
 	o dinotrace-9.3e
