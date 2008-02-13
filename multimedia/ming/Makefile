@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/13 15:53:51 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/13 11:49:44 obache Exp $
 #
 
 DISTNAME=		ming-0.3.0
@@ -9,9 +9,14 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://ming.sourceforge.net/
 COMMENT=		Create SWF (Macromedia Flash) files with this library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex
 GNU_CONFIGURE=		yes
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX:Q}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
