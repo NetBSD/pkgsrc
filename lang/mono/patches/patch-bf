@@ -1,8 +1,7 @@
-$NetBSD: patch-bf,v 1.1 2007/08/13 16:41:34 taca Exp $
-
---- support/map.c.orig	2006-04-11 07:21:37.000000000 +0900
-+++ support/map.c
-@@ -4672,15 +4672,23 @@ int Mono_Posix_ToMountFlags (guint64 x, 
+$NetBSD: patch-bf,v 1.2 2008/02/13 14:16:43 kefren Exp $
+--- support/map.c.orig	2008-02-05 14:14:43.000000000 +0200
++++ support/map.c	2008-02-05 14:16:06.000000000 +0200
+@@ -3011,13 +3011,21 @@ int Mono_Posix_ToMountFlags (guint64 x, 
  
  int Mono_Posix_FromMremapFlags (guint64 x, guint64 *r)
  {
@@ -11,18 +10,16 @@ $NetBSD: patch-bf,v 1.1 2007/08/13 16:41:34 taca Exp $
 +#else
  	*r = 0;
 +#endif
- 	if (x == 0)
- 		return 0;
  	if ((x & Mono_Posix_MremapFlags_MREMAP_MAYMOVE) == Mono_Posix_MremapFlags_MREMAP_MAYMOVE)
 +#ifdef __NetBSD__
-+		*r &= ~MAP_FIXED;
++	*r &= ~MAP_FIXED;
 +#else
  #ifdef MREMAP_MAYMOVE
  		*r |= MREMAP_MAYMOVE;
  #else /* def MREMAP_MAYMOVE */
  		{errno = EINVAL; return -1;}
  #endif /* ndef MREMAP_MAYMOVE */
-+#endif /* NetBSD */
++#endif /* __NetBSD__ */
+ 	if (x == 0)
+ 		return 0;
  	return 0;
- }
- 
