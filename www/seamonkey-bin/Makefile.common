@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2007/12/22 07:22:10 obache Exp $
+# $NetBSD: Makefile.common,v 1.12 2008/02/13 14:43:00 obache Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -41,13 +41,7 @@ MOZILLA_SHORT=		${MOZILLA}
 MOZ_DIR?=		${MOZ_VER}
 MOZ_PLATFORM?=		${LOWER_OPSYS}
 
-.if !defined(MASTER_SITES)
-_MASTER_SITES+=		${MASTER_SITE_MOZILLA:=${MOZILLA_SHORT}/releases/${MOZ_DIR}/}
-.  for _site_ in ${_MASTER_SITES}
-MASTER_SITES+=		${_site_}
-MASTER_SITES+=		${_site_}contrib/
-.  endfor
-.endif
+MASTER_SITES?=		${MASTER_SITE_MOZILLA:=${MOZILLA_SHORT}/releases/${MOZ_DIR}/}
 
 MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
 
