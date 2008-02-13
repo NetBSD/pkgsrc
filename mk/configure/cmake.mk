@@ -1,4 +1,20 @@
-# $NetBSD: cmake.mk,v 1.3 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: cmake.mk,v 1.4 2008/02/13 09:12:15 rillig Exp $
+#
+# This file handles packages that use CMake as their primary build
+# system. For more information about CMake, see http://www.cmake.org/.
+#
+# === Package-settable variables ===
+#
+# CMAKE_DEPENDENCIES_REWRITE
+#	A list of files (XXX: variable name) relative to WRKSRC in
+#	which, after configuring the package, buildlink3 dependencies
+#	are resolved to the real ones.
+#
+# CMAKE_MODULE_PATH_OVERRIDE
+#	A list of files relative to WRKSRC in which the CMAKE_MODULE_PATH
+#	variable is adjusted to include the path from the pkgsrc wrappers.
+#	The file ${WRKSRC}/CMakeLists.txt is always appended to this list.
+#
 
 _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
@@ -7,9 +23,6 @@ CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
 
 CMAKE_MODULE_PATH_OVERRIDE+=	CMakeLists.txt
 
-######################################################################
-### configure-cmake-override (PRIVATE)
-######################################################################
 ### configure-cmake-override modifies the cmake CMakeLists.txt file in
 ### ${WRKSRC} so that if CMAKE_MODULE_PATH is set we add our Module
 ### directory before any others.
@@ -22,15 +35,11 @@ SUBST_FILES.cmake=	${CMAKE_MODULE_PATH_OVERRIDE}
 SUBST_SED.cmake=	\
 	's|set *( *CMAKE_MODULE_PATH |set (CMAKE_MODULE_PATH "${_CMAKE_DIR}" |'
 
-do-configure-pre-hook: cmake-copy-module-tree
+do-configure-pre-hook: __cmake-copy-module-tree
 
-.PHONY: cmake-copy-module-tree
-cmake-copy-module-tree:
+__cmake-copy-module-tree: .PHONY
 	${RUN} cd ${PKGSRCDIR}/mk; ${CP} -R cmake-Modules ${_CMAKE_DIR}
 
-######################################################################
-### cmake-dependencies-rewrite (PRIVATE)
-######################################################################
 ### The cmake function export_library_dependencies() writes out
 ### library dependency info to a file and this may contain buildlink
 ### paths.
@@ -39,10 +48,8 @@ cmake-copy-module-tree:
 ### real dependencies
 ###
 
-do-configure-post-hook: cmake-dependencies-rewrite
-
-.PHONY: cmake-dependencies-rewrite
-cmake-dependencies-rewrite:
+do-configure-post-hook: __cmake-dependencies-rewrite
+cmake-dependencies-rewrite: .PHONY
 	@${STEP_MSG} "Rewrite cmake Dependencies files"
 .if defined(CMAKE_DEPENDENCIES_REWRITE) && !empty(CMAKE_DEPENDENCIES_REWRITE)
 	${RUN} \
