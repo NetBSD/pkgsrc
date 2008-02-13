@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2008/02/13 14:32:34 kefren Exp $
+lib/mono/gac/gtksourceview-sharp/1.0.0.2__35e10195dab3c99f/gtksourceview-sharp.dll
+lib/mono/gac/gtksourceview-sharp/1.0.0.2__35e10195dab3c99f/gtksourceview-sharp.dll.config
+lib/mono/gtksourceview-sharp-2.0/gtksourceview-sharp.dll
+lib/pkgconfig/gtksourceview-sharp-2.0.pc
+share/gapi-2.0/gtksourceview-api.xml
+share/gtksourceview-1.0/language-specs/nemerle.lang
+share/gtksourceview-1.0/language-specs/vbnet.lang
+@dirrm share/gtksourceview-1.0/language-specs
+@dirrm share/gapi-2.0
+@dirrm lib/mono/gtksourceview-sharp-2.0
+@dirrm lib/mono/gac/gtksourceview-sharp/1.0.0.2__35e10195dab3c99f
+@dirrm lib/mono/gac/gtksourceview-sharp
