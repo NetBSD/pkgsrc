@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/02/13 14:46:50 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/13 15:05:02 kefren Exp $
 
 DISTNAME=	mono-addins-0.3
 CATEGORIES=	devel
@@ -12,6 +12,6 @@ COMMENT=	Framework for creating extensible applications
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-.include "../../wip/mono/buildlink3.mk"
+.include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gtk2-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
