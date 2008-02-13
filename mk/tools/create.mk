@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.2 2006/07/10 08:13:37 rillig Exp $
+# $NetBSD: create.mk,v 1.3 2008/02/13 09:11:01 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -101,7 +101,9 @@ TOOLS_SCRIPT.${_t_}?=	exit 1
 
 .for _t_ in ${TOOLS_FAIL}
 TOOLS_CREATE+=		${_t_}
-TOOLS_SCRIPT.${_t_}?=	${DELAYED_WARNING_MSG} "Please add USE_TOOLS+=${_t_} to the package Makefile."; exit 1
+TOOLS_SCRIPT.${_t_}?=	\
+	${DELAYED_WARNING_MSG} "Please add USE_TOOLS+=${_t_} to the package Makefile."; \
+	${FAIL_MSG} "To use this tool, add USE_TOOLS+=${_t_} to the package Makefile."
 .endfor
 
 .for _t_ in ${TOOLS_GNU_MISSING}
