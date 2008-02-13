@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/01/18 05:09:53 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/02/13 19:40:13 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SERF_BUILDLINK3_MK:=	${SERF_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.serf?=	../../www/serf
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
