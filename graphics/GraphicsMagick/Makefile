@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/14 12:25:15 obache Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/13 06:31:16 obache Exp $
 #
 
 DISTNAME=	GraphicsMagick-1.1.10
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/
 COMMENT=	X application for displaying and manipulating images
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
