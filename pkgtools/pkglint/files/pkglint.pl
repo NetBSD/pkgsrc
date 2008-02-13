@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.762 2008/01/31 14:00:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.763 2008/02/13 20:14:49 reed Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7550,7 +7550,7 @@ sub checkfile_PLIST($) {
 "",
 "Another reason, common for Perl packages, is that the PLIST is",
 "automatically generated. Since there is no use of the empty PLIST file,",
-"it shouldn't be necessary.");
+"it shouldn't be necessary. Also PLIST is not needed for meta packages.");
 	}
 
 	# Get the list of all files from the PLIST.
