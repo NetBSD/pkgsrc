@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.271 2008/02/13 12:46:42 martti Exp $
+$NetBSD: CHANGES-2008,v 1.272 2008/02/13 14:03:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -469,3 +469,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/openvpn to 2.1rc7 [martti 2008-02-13]
 	Updated editors/vim-share to 7.1.248 [martti 2008-02-13]
 	Updated net/mrtg to 2.16.0 [martti 2008-02-13]
+	Updated graphics/p5-Image-ExifTool to 7.15 [gdt 2008-02-13]
