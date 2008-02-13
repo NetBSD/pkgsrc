@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.4 2008/02/13 09:12:15 rillig Exp $
+# $NetBSD: cmake.mk,v 1.5 2008/02/13 09:13:31 rillig Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -36,7 +36,6 @@ SUBST_SED.cmake=	\
 	's|set *( *CMAKE_MODULE_PATH |set (CMAKE_MODULE_PATH "${_CMAKE_DIR}" |'
 
 do-configure-pre-hook: __cmake-copy-module-tree
-
 __cmake-copy-module-tree: .PHONY
 	${RUN} cd ${PKGSRCDIR}/mk; ${CP} -R cmake-Modules ${_CMAKE_DIR}
 
@@ -49,7 +48,7 @@ __cmake-copy-module-tree: .PHONY
 ###
 
 do-configure-post-hook: __cmake-dependencies-rewrite
-cmake-dependencies-rewrite: .PHONY
+__cmake-dependencies-rewrite: .PHONY
 	@${STEP_MSG} "Rewrite cmake Dependencies files"
 .if defined(CMAKE_DEPENDENCIES_REWRITE) && !empty(CMAKE_DEPENDENCIES_REWRITE)
 	${RUN} \
