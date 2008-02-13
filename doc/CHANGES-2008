@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.268 2008/02/12 23:15:04 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.269 2008/02/13 02:49:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gst-plugins0.10-base to 0.10.17 [drochner 2008-02-12]
 	Updated multimedia/gstreamer0.10 to 0.10.17 [drochner 2008-02-12]
 	Removed security/msf version 2.6 [adrianp 2008-02-12]
+	Updated converters/p5-JSON to 2.06 [obache 2008-02-13]
