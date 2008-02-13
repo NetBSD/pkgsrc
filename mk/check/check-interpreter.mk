@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.22 2008/02/05 08:17:59 tnn Exp $
+# $NetBSD: check-interpreter.mk,v 1.23 2008/02/13 08:33:08 rillig Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -10,7 +10,7 @@
 # CHECK_INTERPRETER
 #	Whether this check should be enabled or not.
 #
-#	Default value: "no"
+#	Default value: "yes" for PKG_DEVELOPER, "no" otherwise.
 #
 # Package-settable variables:
 #
