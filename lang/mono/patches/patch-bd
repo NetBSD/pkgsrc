@@ -1,12 +1,11 @@
-$NetBSD: patch-bd,v 1.1 2007/01/04 02:38:14 rillig Exp $
-
---- mcs/build/config-default.make.orig	2006-04-11 00:22:08.000000000 +0200
-+++ mcs/build/config-default.make	2007-01-04 01:11:48.000000000 +0100
-@@ -17,6 +17,7 @@ LIBRARY_FLAGS = /noconfig
+$NetBSD: patch-bd,v 1.2 2008/02/13 14:16:43 kefren Exp $
+--- mcs/build/config-default.make.orig	2008-02-05 14:12:44.000000000 +0200
++++ mcs/build/config-default.make	2008-02-05 14:13:00.000000000 +0200
+@@ -17,6 +17,7 @@
  CFLAGS = -g -O2
  prefix = /usr/local
  exec_prefix = $(prefix)
 +mandir = $(prefix)/man
  mono_libdir = $(exec_prefix)/lib
+ sysconfdir = $(prefix)/etc
  #RUNTIME = mono
- RUNTIME = false

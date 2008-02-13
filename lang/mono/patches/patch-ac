@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.13 2006/01/03 08:03:53 recht Exp $
-
---- data/Makefile.in.orig	2005-12-22 18:35:08.000000000 +0100
-+++ data/Makefile.in
-@@ -271,7 +271,7 @@ target_cpu = @target_cpu@
- target_os = @target_os@
- target_vendor = @target_vendor@
+$NetBSD: patch-ac,v 1.14 2008/02/13 14:16:43 kefren Exp $
+--- data/Makefile.in.orig	2008-02-05 13:36:24.000000000 +0200
++++ data/Makefile.in	2008-02-05 13:36:42.000000000 +0200
+@@ -232,7 +232,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  SUBDIRS = net_1_1 net_2_0
 -monodir = $(sysconfdir)/mono
 +monodir = $(datadir)/examples/mono
- EXTRA_DIST = config.in \
- 	     browscap.ini
- 
+ EXTRA_DIST = \
+ 	config.in \
+ 	browscap.ini mono.supp README \
