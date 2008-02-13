@@ -1,0 +1,19 @@
+# $NetBSD: buildlink3.mk,v 1.1 2008/02/13 14:32:34 kefren Exp $
+
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
+GTKSOURCEVIEW_SHARP_2.0_BUILDLINK3_MK:=	${GTKSOURCEVIEW_SHARP_2.0_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	gtksourceview-sharp-2.0
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtksourceview-sharp-2.0}
+BUILDLINK_PACKAGES+=	gtksourceview-sharp-2.0
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtksourceview-sharp-2.0
+
+.if ${GTKSOURCEVIEW_SHARP_2.0_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.gtksourceview-sharp-2.0+=	gtksourceview-sharp-2.0>=0.10
+BUILDLINK_PKGSRCDIR.gtksourceview-sharp-2.0?=	../../x11/gtksourceview-sharp
+.endif	# GTKSOURCEVIEW_SHARP_2.0_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
