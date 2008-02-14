@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2008/02/14 21:42:21 tnn Exp $
+
+--- man/Makefile.in.orig	1995-06-16 08:19:24.000000000 +0200
++++ man/Makefile.in
+@@ -34,8 +34,8 @@ INSTALL_DATA = @INSTALL_DATA@
+ PIC = @PIC@
+ 
+ prefix = @prefix@
+-man1dir = $(prefix)/man/man1
+-man5dir = $(prefix)/man/man5
++man1dir = $(prefix)/$(PKGMANDIR)/man1
++man5dir = $(prefix)/$(PKGMANDIR)/man5
+ man1ext = .1
+ man5ext = .5
+ 
