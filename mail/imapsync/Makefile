@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/14 21:05:15 tv Exp $
 #
 
-DISTNAME=	imapsync-1.182
+DISTNAME=	imapsync-1.241
 CATEGORIES=	mail
 MASTER_SITES=	http://www.linux-france.org/prj/imapsync/dist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.linux-france.org/prj/imapsync/dist/
+HOMEPAGE=	http://www.linux-france.org/prj/imapsync/
 COMMENT=	Incremental recursive IMAP transfer tool
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
