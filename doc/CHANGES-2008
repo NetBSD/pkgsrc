@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.275 2008/02/13 22:18:21 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.276 2008/02/14 06:20:09 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/isc-dhclient4 version 4.0.0 [adrianp 2008-02-13]
 	Added net/isc-dhcpd4 version 4.0.0 [adrianp 2008-02-13]
 	Added net/isc-dhcrelay4 version 4.0.0 [adrianp 2008-02-13]
+	Updated devel/libmm to 1.4.2nb1 [bjs 2008-02-14]
