@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.281 2008/02/14 19:13:23 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.282 2008/02/14 21:05:59 tv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added emulators/dynamips version 0.2.7 [kefren 2008-02-14]
 	Updated databases/kmysqladmin to 0.7.2 [adam 2008-02-14]
 	Updated textproc/p5-Pod-Coverage to 0.19 [rhaen 2008-02-14]
+	Updated mail/imapsync to 1.241 [tv 2008-02-14]
