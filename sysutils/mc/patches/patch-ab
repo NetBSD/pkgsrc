@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.13 2008/02/14 12:26:56 drochner Exp $
+
+--- vfs/sfs.c.orig	2008-02-14 12:27:01.000000000 +0100
++++ vfs/sfs.c
+@@ -314,7 +314,7 @@ static int sfs_init (struct vfs_class *m
+     FILE *cfg;
+     char key[256];
+ 
+-    mc_sfsini = concat_dir_and_file (mc_home, "extfs" PATH_SEP_STR "sfs.ini");
++    mc_sfsini = concat_dir_and_file ("@PKG_SYSCONFDIR@", "sfs.ini");
+     cfg = fopen (mc_sfsini, "r");
+ 
+     if (!cfg){

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.9 2008/02/14 12:26:56 drochner Exp $
+
+--- vfs/extfs/Makefile.in.orig	2008-02-14 12:56:12.000000000 +0100
++++ vfs/extfs/Makefile.in
+@@ -226,7 +226,7 @@ target_alias = @target_alias@
+ extfsdir = $(pkgdatadir)/extfs
+ 
+ # Files to install and distribute other than extfs scripts
+-EXTFS_MISC = README extfs.ini sfs.ini
++EXTFS_MISC = README
+ 
+ # Scripts hat don't need adaptation to the local system
+ EXTFS_CONST = bpp rpm trpm
