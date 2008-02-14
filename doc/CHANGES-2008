@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.277 2008/02/14 10:52:16 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.278 2008/02/14 10:55:50 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -302,6 +302,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/sudo to 1.6.9p12nb1 [taca 2008-01-22]
 	Updated print/cups to 1.3.5 [markd 2008-01-23]
 	Updated lang/ocaml to 3.10.1 [adam 2008-01-23]
+	Added geography/cmconvert version 1.9.5 [rhaen 2008-01-23]
+	Added geography/cm2gpx version 1.0.4 [rhaen 2008-01-23]
 	Added mail/clawsker version 0.3.0 [smb 2008-01-24]
 	Updated textproc/xalan-c to 1.10 [xtraeme 2008-01-24]
 	Updated emulators/libspectrum to 0.4.0 [adam 2008-01-24]
