@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2008/02/13 10:20:56 rillig Exp $
+# $NetBSD: Makefile,v 1.72 2008/02/14 12:26:56 drochner Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	4
@@ -23,21 +23,35 @@ USE_PKGLOCALEDIR=	YES
 PLIST_SRC+=		${PKGDIR}/PLIST.cons.saver
 .endif
 
-# remove dir if no extensions were installed there
-post-install:
-	rmdir ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
-
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS+=	--without-ext2undel
 CONFIGURE_ARGS+=	--without-gpm-mouse
-
 CONFIGURE_ARGS+=	UNZIP=${TOOLS_PATH.unzip} ZIP=${TOOLS_PATH.zip}
 
 PLIST_SRC+=		${PKGDIR}/PLIST
-
 .include "options.mk"
-
 PLIST_SRC+=		${PKGDIR}/PLIST.end
+
+PKG_SYSCONFSUBDIR=	mc
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	vfs/extfs.c vfs/sfs.c
+SUBST_VARS.conf=	PKG_SYSCONFDIR
+
+.if !empty(PKG_OPTIONS:Mvfs)
+EGDIR=			${PREFIX}/share/examples/mc
+CONF_FILES+=		${EGDIR}/extfs.ini ${PKG_SYSCONFDIR}/extfs.ini
+CONF_FILES+=		${EGDIR}/sfs.ini ${PKG_SYSCONFDIR}/sfs.ini
+.endif
+
+post-install:
+# remove dir if no extensions were installed there
+	rmdir ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
+.if !empty(PKG_OPTIONS:Mvfs)
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/extfs.ini ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/sfs.ini ${EGDIR}
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.vfs,v 1.1 2005/01/15 21:15:26 wiz Exp $
+@comment $NetBSD: PLIST.vfs,v 1.2 2008/02/14 12:26:56 drochner Exp $
+share/examples/mc/extfs.ini
+share/examples/mc/sfs.ini
 share/mc/extfs/README
 share/mc/extfs/a
 share/mc/extfs/apt
@@ -8,7 +10,6 @@ share/mc/extfs/deb
 share/mc/extfs/deba
 share/mc/extfs/debd
 share/mc/extfs/dpkg
-share/mc/extfs/extfs.ini
 share/mc/extfs/hp48
 share/mc/extfs/iso9660
 share/mc/extfs/lslR
@@ -16,7 +17,6 @@ share/mc/extfs/mailfs
 share/mc/extfs/patchfs
 share/mc/extfs/rpm
 share/mc/extfs/rpms
-share/mc/extfs/sfs.ini
 share/mc/extfs/trpm
 share/mc/extfs/uar
 share/mc/extfs/uarj
@@ -26,3 +26,4 @@ share/mc/extfs/urar
 share/mc/extfs/uzip
 share/mc/extfs/uzoo
 @dirrm share/mc/extfs
+@dirrm share/examples/mc
