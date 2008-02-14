@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/26 03:49:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/02/14 18:05:24 adam Exp $
 bin/kmysqladmin
 share/doc/kde/HTML/en/kmysqladmin/Logo.png
 share/doc/kde/HTML/en/kmysqladmin/common
@@ -13,7 +13,7 @@ share/icons/hicolor/32x32/apps/kmysqladmin.png
 share/icons/hicolor/48x48/apps/kmysqladmin.png
 share/icons/locolor/16x16/apps/kmysqladmin.png
 share/icons/locolor/32x32/apps/kmysqladmin.png
-share/kde/applnk/Applications/kmysqladmin.desktop
+share/kde/applnk/Database/kmysqladmin.desktop
 share/kde/apps/kmysqladmin/kmysqladminui.rc
 share/kde/apps/kmysqladmin/toolbar/access_rights.xpm
 share/kde/apps/kmysqladmin/toolbar/altertab.xpm
