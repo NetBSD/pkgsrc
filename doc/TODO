@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7051 2008/02/13 22:18:21 adrianp Exp $
+$NetBSD: TODO,v 1.7052 2008/02/14 18:06:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -801,7 +801,6 @@ Suggested package updates
 	o kmess-1.5
 	o kmp-0.5
 	o kmymoney2-0.8.8
-	o kmysqladmin-0.7.2
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
