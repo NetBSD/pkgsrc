@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.278 2008/02/14 10:55:50 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.279 2008/02/14 11:09:59 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/isc-dhcrelay4 version 4.0.0 [adrianp 2008-02-13]
 	Updated devel/libmm to 1.4.2nb1 [bjs 2008-02-14]
 	Updated devel/p5-Log-Dispatch to 2.21 [rhaen 2008-02-14]
+	Added emulators/dynamips version 0.2.7 [kefren 2008-02-14]
