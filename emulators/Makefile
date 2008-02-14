@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2007/12/31 20:06:38 jlam Exp $
+# $NetBSD: Makefile,v 1.167 2008/02/14 11:08:27 kefren Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -43,6 +43,7 @@ SUBDIR+=	dega
 SUBDIR+=	dgen
 SUBDIR+=	dosbox
 SUBDIR+=	doscmd
+SUBDIR+=	dynamips
 SUBDIR+=	e-uae
 SUBDIR+=	fceu
 SUBDIR+=	fmsx
