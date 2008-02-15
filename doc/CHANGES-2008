@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.287 2008/02/15 16:24:07 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.288 2008/02/15 16:46:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/amanda-server to 2.5.2p1 [gdt 2008-02-15]
 	Updated sysutils/amanda-plot to 2.5.2p1 [gdt 2008-02-15]
 	Updated sysutils/amanda to 2.5.2p1 [gdt 2008-02-15]
+	Updated devel/bzr to 1.2 [gdt 2008-02-15]
