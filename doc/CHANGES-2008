@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.286 2008/02/15 15:48:18 tron Exp $
+$NetBSD: CHANGES-2008,v 1.287 2008/02/15 16:24:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -494,3 +494,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/RealPlayerGold to 10.0.9.809.20070726 [obache 2008-02-15]
 	Updated graphics/vnc2swf to 0.5.0nb2 [obache 2008-02-15]
 	Updated print/magicfilter to 1.2nb6 [tron 2008-02-15]
+	Updated sysutils/amanda-common to 2.5.2p1 [gdt 2008-02-15]
+	Updated sysutils/amanda-client to 2.5.2p1 [gdt 2008-02-15]
+	Updated sysutils/amanda-server to 2.5.2p1 [gdt 2008-02-15]
+	Updated sysutils/amanda-plot to 2.5.2p1 [gdt 2008-02-15]
+	Updated sysutils/amanda to 2.5.2p1 [gdt 2008-02-15]
