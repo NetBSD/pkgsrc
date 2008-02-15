@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.25 2007/07/04 20:54:59 jlam Exp $
-#
-# common make file fragment shared by all amanda-* pkgs.
-#
+# $NetBSD: Makefile.common,v 1.26 2008/02/15 16:23:09 gdt Exp $
 
-VERS=			2.4.4p4
+# used by sysutils/amanda-common/Makefile
+# used by sysutils/amanda-client/Makefile
+# used by sysutils/amanda-server/Makefile
+# used by sysutils/amanda-plot/Makefile
+
+VERS=			2.5.2p1
 DISTNAME?=		amanda-${VERS}
 CATEGORIES=		sysutils
 MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
@@ -26,7 +28,7 @@ AMANDA_VAR?=		${VARBASE}/amanda
 
 PKG_GROUPS_VARS+=	AMANDA_GROUP
 PKG_USERS_VARS+=	AMANDA_USER
-BUILD_DEFS+=		AMANDA_SMB AMANDA_TMP AMANDA_VAR VARBASE
+BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR VARBASE
 
 USE_LIBTOOL=		yes
 
@@ -45,3 +47,13 @@ CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
 CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
 CONFIGURE_ARGS+=	--with-dump-honor-nodump
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+BUILD_DEFS+=		AMANDA_SSH AMANDA_FQDN
+
+.if defined(AMANDA_FQDN) && !empty(AMANDA_FQDN:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-fqdn
+.endif
+
+.if defined(AMANDA_SSH) && !empty(AMANDA_SSH:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-ssh-security
+.endif

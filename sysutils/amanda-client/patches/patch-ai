@@ -1,16 +1,28 @@
-$NetBSD: patch-ai,v 1.1 2006/03/16 19:13:57 bouyer Exp $
+$NetBSD: patch-ai,v 1.2 2008/02/15 16:23:09 gdt Exp $
 
---- configure.orig	2004-10-22 15:12:36.000000000 +0200
-+++ configure	2006-02-17 18:15:31.000000000 +0100
-@@ -1094,6 +1094,7 @@
-   --with-debug-days=NN    number of days to keep debugging files default=4
-   --with-testing=suffix use alternate service names
+--- configure.orig	2007-06-06 19:22:45.000000000 -0400
++++ configure
+@@ -1119,6 +1119,7 @@ Optional Packages:
+   --with-testing[=suffix] use alternate service names
+   --with-gnuplot=PATH     use gnuplot executable at PATH in amplot
    --with-dump-honor-nodump  if dump supports -h, use it for level0s too
 +  --with-dump-use-snapshot  if dump supports -X, use it
    --with-gnu-ld           assume the C compiler uses GNU ld [default=no]
    --with-pic              try to use only PIC/non-PIC objects [default=use
                            both]
-@@ -9701,6 +9702,72 @@
+@@ -13538,7 +13539,10 @@ echo $ECHO_N "checking SSH options... $E
+     # now convert that to a comma-separated list of C strings
+     eval "set dummy ${SSH_OPTIONS}"; shift
+     SSH_OPTIONS=''
+-    for i in "${@}"; do SSH_OPTIONS="${SSH_OPTIONS}${SSH_OPTIONS:+, }\"${i/\"/\\\"}\""; done
++    for i in "${@}"; do
++	quoted="\"`echo "$i" | sed -e 's/\"/\\\"/'`\""
++	SSH_OPTIONS="${SSH_OPTIONS}${SSH_OPTIONS:+, }$quoted";
++     done
+     echo "$as_me:$LINENO: result: $SSH_OPTIONS" >&5
+ echo "${ECHO_T}$SSH_OPTIONS" >&6
+ 
+@@ -18808,6 +18812,72 @@ _ACEOF
        fi
  
  fi;
@@ -83,3 +95,12 @@ $NetBSD: patch-ai,v 1.1 2006/03/16 19:13:57 bouyer Exp $
  fi
  
  for ac_prog in xfsdump
+@@ -62491,7 +62561,7 @@ fi;
+ # Check whether --with-xsltproc-flags or --without-xsltproc-flags was given.
+ if test "${with_xsltproc_flags+set}" = set; then
+   withval="$with_xsltproc_flags"
+-   if test "x$withval" == "xno"; then
++   if test "x$withval" = "xno"; then
+ 	XSLTPROC_FLAGS=''
+     else
+ 	if test "x$withval" != "xyes"; then

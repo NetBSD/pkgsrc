@@ -1,37 +1,44 @@
-$NetBSD: patch-ai,v 1.6 2004/11/12 12:13:45 mjl Exp $
+$NetBSD: patch-ai,v 1.7 2008/02/15 16:23:09 gdt Exp $
 
---- changer-src/Makefile.in.orig	2004-10-22 15:12:38.000000000 +0200
-+++ changer-src/Makefile.in	2004-11-08 01:13:46.000000000 +0100
-@@ -73,18 +73,12 @@
- 	sense.$(OBJEXT)
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- changer-src/Makefile.in.orig	2007-06-06 19:22:51.000000000 -0400
++++ changer-src/Makefile.in
+@@ -110,20 +110,16 @@ am_chg_scsi_OBJECTS = $(am__objects_1)
  chg_scsi_OBJECTS = $(am_chg_scsi_OBJECTS)
  chg_scsi_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
 -chg_scsi_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	../server-src/libamserver.$(LIB_EXTENSION) \
--	../tape-src/libamtape.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+chg_scsi_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION)
- am_chg_scsi_chio_OBJECTS = chg-scsi-chio.$(OBJEXT) scsi-hpux.$(OBJEXT) \
++chg_scsi_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION) \
+ 	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION) \
+ 	../gnulib/libgnu.$(LIB_EXTENSION) $(am__DEPENDENCIES_1)
+ am__objects_2 = chg-scsi-chio.$(OBJEXT) scsi-hpux.$(OBJEXT) \
  	scsi-chio.$(OBJEXT)
+ am_chg_scsi_chio_OBJECTS = $(am__objects_2)
  chg_scsi_chio_OBJECTS = $(am_chg_scsi_chio_OBJECTS)
  chg_scsi_chio_LDADD = $(LDADD)
 -chg_scsi_chio_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	../server-src/libamserver.$(LIB_EXTENSION) \
--	../tape-src/libamtape.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+chg_scsi_chio_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION)
++chg_scsi_chio_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION) \
+ 	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION) \
+ 	../gnulib/libgnu.$(LIB_EXTENSION) $(am__DEPENDENCIES_1)
  libexecSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  SCRIPTS = $(libexec_SCRIPTS)
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
-@@ -316,10 +310,7 @@
+@@ -415,11 +411,10 @@ CLEANFILES = $(libexec_SCRIPTS)
  # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
 -LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	../server-src/libamserver.$(LIB_EXTENSION) \
--	../tape-src/libamtape.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION)
-+LDADD = ../server-src/libamserver.$(LIB_EXTENSION)
++LDADD = ../server-src/libamserver.$(LIB_EXTENSION) \
+ 	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)   \
+ 	../gnulib/libgnu.$(LIB_EXTENSION) \
++	-lamanda \
+ 	$(READLINE_LIBS)
  
  SUFFIXES = .pl .sh
- chg_scsi_SOURCES = chg-scsi.c libscsi.h scsi-defs.h \

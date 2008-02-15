@@ -1,0 +1,43 @@
+$NetBSD: patch-aj,v 1.1 2008/02/15 16:23:09 gdt Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+Also, install amandad executable only, since libamandad is installed by
+amanda-common.
+
+--- amandad-src/Makefile.in.orig	2007-06-06 19:22:51.000000000 -0400
++++ amandad-src/Makefile.in
+@@ -105,10 +105,7 @@ PROGRAMS = $(libexec_PROGRAMS)
+ amandad_SOURCES = amandad.c
+ amandad_OBJECTS = amandad.$(OBJEXT)
+ amandad_LDADD = $(LDADD)
+-amandad_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	libamandad.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION) \
+-	../gnulib/libgnu.$(LIB_EXTENSION)
++amandad_DEPENDENCIES = ../gnulib/libgnu.$(LIB_EXTENSION)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+ am__depfiles_maybe = depfiles
+@@ -379,7 +376,7 @@ INCLUDES = -I$(top_builddir)/common-src 
+ 
+ LINT = @AMLINT@
+ LINTFLAGS = @AMLINTFLAGS@
+-lib_LTLIBRARIES = libamandad.la
++# lib_LTLIBRARIES = libamandad.la
+ LIB_EXTENSION = la
+ @WANT_RUNTIME_PSEUDO_RELOC_TRUE@AM_LDFLAGS = -Wl,-enable-runtime-pseudo-reloc
+ libamandad_la_SOURCES = amandad_util.c
+@@ -392,10 +389,7 @@ noinst_HEADERS = amandad.h
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	libamandad.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION) \
+-	../gnulib/libgnu.$(LIB_EXTENSION)
++LDADD = ../gnulib/libgnu.$(LIB_EXTENSION) -lamanda -lamandad
+ 
+ all: all-am
+ 

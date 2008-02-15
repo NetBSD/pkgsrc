@@ -1,39 +1,42 @@
-$NetBSD: patch-af,v 1.6 2004/11/12 12:13:45 mjl Exp $
+$NetBSD: patch-af,v 1.7 2008/02/15 16:23:09 gdt Exp $
 
---- tape-src/Makefile.in.orig	2004-10-22 15:12:42.000000000 +0200
-+++ tape-src/Makefile.in	2004-11-08 01:01:43.000000000 +0100
-@@ -67,26 +67,18 @@
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- tape-src/Makefile.in.orig	2007-06-06 19:22:53.000000000 -0400
++++ tape-src/Makefile.in
+@@ -108,26 +108,18 @@ PROGRAMS = $(sbin_PROGRAMS)
  amdd_SOURCES = amdd.c
  amdd_OBJECTS = amdd.$(OBJEXT)
  amdd_LDADD = $(LDADD)
 -amdd_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
-+amdd_DEPENDENCIES = libamtape.$(LIB_EXTENSION) -lamanda
++amdd_DEPENDENCIES = libamtape.$(LIB_EXTENSION)
  ammt_SOURCES = ammt.c
  ammt_OBJECTS = ammt.$(OBJEXT)
  ammt_LDADD = $(LDADD)
 -ammt_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
-+ammt_DEPENDENCIES = libamtape.$(LIB_EXTENSION) -lamanda
++ammt_DEPENDENCIES = libamtape.$(LIB_EXTENSION)
  am_amtapeio_OBJECTS = amtapeio.test.$(OBJEXT)
  amtapeio_OBJECTS = $(am_amtapeio_OBJECTS)
 -amtapeio_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
-+amtapeio_DEPENDENCIES = libamtape.$(LIB_EXTENSION) -lamanda
++amtapeio_DEPENDENCIES = libamtape.$(LIB_EXTENSION)
  am_amtapetype_OBJECTS = tapetype.$(OBJEXT)
  amtapetype_OBJECTS = $(am_amtapetype_OBJECTS)
  amtapetype_LDADD = $(LDADD)
 -amtapetype_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	libamtape.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION)
-+amtapetype_DEPENDENCIES = libamtape.$(LIB_EXTENSION) -lamanda
++amtapetype_DEPENDENCIES = libamtape.$(LIB_EXTENSION)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
  depcomp = $(SHELL) $(top_srcdir)/config/depcomp
  am__depfiles_maybe = depfiles
-@@ -318,9 +310,7 @@
+@@ -416,9 +408,7 @@ libamtape_la_LDFLAGS = -release $(VERSIO
  # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
@@ -44,7 +47,7 @@ $NetBSD: patch-af,v 1.6 2004/11/12 12:13:45 mjl Exp $
  
  
  # used for testing only
-@@ -335,9 +325,7 @@
+@@ -433,9 +423,7 @@ noinst_HEADERS = \
  			tapeio.h
  
  amtapeio_SOURCES = amtapeio.test.c
@@ -55,30 +58,3 @@ $NetBSD: patch-af,v 1.6 2004/11/12 12:13:45 mjl Exp $
  
  all: all-am
  
-@@ -569,7 +557,7 @@
- 	done
- check-am: all-am
- check: check-am
--all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(HEADERS)
-+all-am: Makefile $(PROGRAMS) $(HEADERS)
- installdirs:
- 	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(sbindir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
-@@ -622,7 +610,7 @@
- 
- install-data-am:
- 
--install-exec-am: install-libLTLIBRARIES install-sbinPROGRAMS
-+install-exec-am: install-sbinPROGRAMS
- 	@$(NORMAL_INSTALL)
- 	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
- 
-@@ -650,7 +638,7 @@
- 
- ps-am:
- 
--uninstall-am: uninstall-info-am uninstall-libLTLIBRARIES \
-+uninstall-am: uninstall-info-am \
- 	uninstall-sbinPROGRAMS
- 
- .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \

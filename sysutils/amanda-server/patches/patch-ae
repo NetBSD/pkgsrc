@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.7 2004/10/03 09:19:16 bouyer Exp $
+$NetBSD: patch-ae,v 1.8 2008/02/15 16:23:09 gdt Exp $
 
---- changer-src/scsi-changer-driver.c.orig	Sun Jan 26 20:20:56 2003
-+++ changer-src/scsi-changer-driver.c	Sat Oct  2 20:54:52 2004
-@@ -372,6 +372,18 @@
+--- changer-src/scsi-changer-driver.c.orig	2007-05-04 07:39:04.000000000 -0400
++++ changer-src/scsi-changer-driver.c
+@@ -372,6 +372,18 @@ ChangerCMD_T ChangerIO[] = {
     NoBarCode,
     GenericSearch,
     GenericSenseHandler},
 +  {"SDLT320",
 +   "DLT Tape [SDLT320]",
-+   DoNothing,
-+   DoNothing,
-+   DoNothing,
-+   DoNothing,
++   DoNothing3,
++   DoNothing2,
++   DoNothing1,
++   DoNothing0,
 +   DLT4000Eject,
 +   GenericClean,
 +   GenericRewind,
@@ -20,10 +20,10 @@ $NetBSD: patch-ae,v 1.7 2004/10/03 09:19:16 bouyer Exp $
 +   GenericSenseHandler},
    {"DLT8000",
     "DLT Tape [DLT8000]",
-    DoNothing,
-@@ -1358,13 +1370,14 @@
+    DoNothing3,
+@@ -1488,13 +1500,14 @@ BarCode(
  {
-   int ret = 0;
+   int ret;
    extern OpenFiles_T *pDev;
 +  extern changer_t chg;         /* Needed for the infos about havebarcode */
  
@@ -33,43 +33,43 @@ $NetBSD: patch-ae,v 1.7 2004/10/03 09:19:16 bouyer Exp $
    DebugPrint(DEBUG_INFO, SECTION_BARCODE,"Ident = [%s], function = [%s]\n", pDev[fd].ident,
  	     pDev[fd].functions->ident);
 -  ret = pDev[fd].functions->function_barcode(fd);
-+  ret = (pDev[fd].functions->function_barcode(fd) | chg.havebarcode);
++  ret = (pDev[fd].functions->function_barcode(fd) | changer->havebarcode);
    DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### STOP BarCode (%d)\n",ret);
    return(ret);
  }
-@@ -3770,7 +3783,7 @@
-                                      barcode,
+@@ -4068,7 +4081,7 @@ GetElementStatus(
+                                      (u_char)barcode,
                                       V2(pEAAPage->MediumTransportElementAddress),
-                                      MTE+1,
--				     sizeof(MediumTransportElementDescriptor_T),
+                                      (MTE + (size_t)1),
+-				     SIZEOF(MediumTransportElementDescriptor_T),
 +				     0, /* let the buffer auto-size */
-                                      (char **)&DataBuffer) != 0)
+                                      &DataBuffer) != 0)
              {
-               if (DataBuffer != 0)
-@@ -3855,7 +3868,7 @@
-                                      barcode,
+               ChgExit("genericElementStatus","Can't read MTE status", FATAL);
+@@ -4153,7 +4166,7 @@ GetElementStatus(
+                                      (u_char)barcode,
                                       V2(pEAAPage->FirstStorageElementAddress),
                                       STE,
--				     sizeof(StorageElementDescriptor_T),
+-				     SIZEOF(StorageElementDescriptor_T),
 +				     0, /* let the buffer auto-size */
-                                      (char **)&DataBuffer) != 0)
+                                      &DataBuffer) != 0)
              {
-               if (DataBuffer != 0)
-@@ -3942,7 +3955,7 @@
-                                      barcode,
+               ChgExit("GetElementStatus", "Can't read STE status", FATAL);
+@@ -4239,7 +4252,7 @@ GetElementStatus(
+                                      (u_char)barcode,
                                       V2(pEAAPage->FirstImportExportElementAddress),
                                       IEE,
--				     sizeof(ImportExportElementDescriptor_T),
+-				     SIZEOF(ImportExportElementDescriptor_T),
 +				     0, /* let the buffer auto-size */
-                                      (char **)&DataBuffer) != 0)
+                                      &DataBuffer) != 0)
              {
-               if (DataBuffer != 0)
-@@ -4027,7 +4040,7 @@
-                                      barcode,
+               ChgExit("GetElementStatus", "Can't read IEE status", FATAL);
+@@ -4323,7 +4336,7 @@ GetElementStatus(
+                                      (u_char)barcode,
                                       V2(pEAAPage->FirstDataTransferElementAddress),
                                       DTE,
--				     sizeof(DataTransferElementDescriptor_T),
+-				     SIZEOF(DataTransferElementDescriptor_T),
 +				     0, /* let the buffer auto-size */
-                                      (char **)&DataBuffer) != 0)
+                                      &DataBuffer) != 0)
              {
-               if (DataBuffer != 0)
+               ChgExit("GenericElementStatus", "Can't read DTE status", FATAL);
