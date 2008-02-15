@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/12/03 21:54:31 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/15 20:34:35 bouyer Exp $
 #
 
-VERSION=		3.1.2
+VERSION=		3.1.3
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		xentools3-hvm-${VERSION}
 CATEGORIES=		sysutils
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 CONFLICTS=		xentools30-*
 
-WRKSRC=			${WRKDIR}/xen-${VERSION}-src/tools
+WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
 CHECK_PORTABILITY_SKIP+=	examples/* xm-test/ramdisk/make-release.sh
 
 EGDIR=			${PREFIX}/share/examples/xen
