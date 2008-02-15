@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/02/13 14:16:43 kefren Exp $
+# $NetBSD: Makefile,v 1.61 2008/02/15 15:57:14 kefren Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
 CATEGORIES=	lang
@@ -69,7 +69,9 @@ CONF_FILES+=	${EGDIR}/1.0/machine.config \
 CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
 		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/2.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/2.0/machine.confi
+		${PKG_SYSCONFDIR}/mono/2.0/machine.config
+CONF_FILES+=	${EGDIR}/mconfig/config.xml \
+		${PKG_SYSCONFDIR}/mono/mconfig/config.xml
 
 TEST_TARGET=	check
 
@@ -84,6 +86,12 @@ SUBST_STAGE.fix-mcs=		post-patch
 SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
 SUBST_FILES.fix-mcs=		mcs/build/config-default.make
 SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},g'
+
+SUBST_CLASSES+=			fix-cfgdir
+SUBST_STAGE.fix-cfgdir=		post-patch
+SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
+SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
+SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
