@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.285 2008/02/15 13:33:33 obache Exp $
+$NetBSD: CHANGES-2008,v 1.286 2008/02/15 15:48:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -493,3 +493,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.252 [martti 2008-02-15]
 	Updated multimedia/RealPlayerGold to 10.0.9.809.20070726 [obache 2008-02-15]
 	Updated graphics/vnc2swf to 0.5.0nb2 [obache 2008-02-15]
+	Updated print/magicfilter to 1.2nb6 [tron 2008-02-15]
