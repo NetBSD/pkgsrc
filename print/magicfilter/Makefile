@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2007/03/24 19:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2008/02/15 15:47:56 tron Exp $
 
 DISTNAME=	magicfilter-1.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
@@ -34,6 +34,12 @@ SUBST_STAGE.mf=		post-build
 SUBST_MESSAGE.mf=	Adjusting paper size in filters.
 SUBST_FILES.mf=		filters/*-filter
 SUBST_SED.mf=		-e 's/-sOutputFile=-/& -sPAPERSIZE=${LOWER_PAPERSIZE:Q:Q}/'
+
+SUBST_CLASSES+=		gs
+SUBST_STAGE.gs=		post-configure
+SUBST_MESSAGE.gs=	Adjusting ghostscript temporary directory.
+SUBST_FILES.gs=		filters/filters2.h
+SUBST_SED.gs=		-e 's,${PREFIX}/bin/gs,${SETENV} TEMP=$${TMPDIR:-/tmp} &,'
 
 INSTALLATION_DIRS+=	bin ${FILTER_DIR} ${PKGMANDIR}/man8
 
