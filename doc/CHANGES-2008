@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.282 2008/02/14 21:05:59 tv Exp $
+$NetBSD: CHANGES-2008,v 1.283 2008/02/15 06:36:25 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -490,3 +490,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/kmysqladmin to 0.7.2 [adam 2008-02-14]
 	Updated textproc/p5-Pod-Coverage to 0.19 [rhaen 2008-02-14]
 	Updated mail/imapsync to 1.241 [tv 2008-02-14]
+	Updated editors/vim-share to 7.1.252 [martti 2008-02-15]
