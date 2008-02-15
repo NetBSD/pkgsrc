@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/12 14:56:41 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/15 13:25:53 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -28,10 +28,10 @@ SUBST_SED.x11base=	-e "s|/usr/X11R6|${PREFIX}|"
 SUBST_CLASSES+=		toolpath
 SUBST_STAGE.toolpath=	pre-configure
 SUBST_FILES.toolpath=	recordwin.sh
-SUBST_SED.toolpath=	-E -e "s|^(VNC2SWF=).*|\1${PREFIX}/bin/vnc2swf|" \
-			-e "s|^(X11VNC=).*|\1${PREFIX}/bin/x11vnc|" \
-			-e "s|^(XWININFO=).*|\1${X11BASE}/bin/xwininfo|" \
-			-e "s|^(AWK=).*|\1${AWK}|" \
+SUBST_SED.toolpath=	-e "s|VNC2SWF=vnc2swf|VNC2SWF=${PREFIX}/bin/vnc2swf|" \
+			-e "s|X11VNC=x11vnc|X11VNC=${PREFIX}/bin/x11vnc|" \
+			-e "s|XWININFO=xwininfo|XWININFO=${X11BASE}/bin/xwininfo|" \
+			-e "s|AWK=awk|AWK=${AWK}|" \
 			-e 's|-mouse|-localhost|'
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Vnc2Swf.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Vnc2Swf
