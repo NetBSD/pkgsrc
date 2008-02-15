@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.1 2006/03/16 19:13:57 bouyer Exp $
+$NetBSD: patch-ah,v 1.2 2008/02/15 16:23:09 gdt Exp $
 
---- client-src/sendsize.c.orig	2006-02-17 18:09:16.000000000 +0100
-+++ client-src/sendsize.c	2006-02-17 18:09:54.000000000 +0100
-@@ -873,6 +873,9 @@
- #  ifdef HAVE_HONOR_NODUMP				/* { */
- 			     "h",
- #  endif						/* } */
+--- client-src/sendsize.c.orig	2007-05-15 14:14:58.000000000 -0400
++++ client-src/sendsize.c
+@@ -1272,6 +1272,9 @@ getsize_dump(
+ 	dumpkeys = vstralloc(level_str,
+ 			     PARAM_DUMP_ESTIMATE,
+ 			     PARAM_HONOR_NODUMP,
 +#  ifdef HAVE_DUMP_SNAPSHOT				/* { */
 +			     "X",
 +#  endif						/* } */

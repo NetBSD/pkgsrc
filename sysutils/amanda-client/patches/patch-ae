@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2006/03/16 19:13:57 bouyer Exp $
+$NetBSD: patch-ae,v 1.9 2008/02/15 16:23:09 gdt Exp $
 
---- configure.in.orig	2004-10-22 15:12:14.000000000 +0200
-+++ configure.in	2006-02-17 17:22:12.000000000 +0100
-@@ -1488,6 +1488,44 @@
+--- configure.in.orig	2007-06-06 19:22:24.000000000 -0400
++++ configure.in
+@@ -1838,6 +1838,44 @@ if test "$DUMP" -a "$RESTORE"; then
  	AC_DEFINE(HAVE_HONOR_NODUMP,1,[Define this if dump accepts -h for honoring nodump. ])
        fi
      ])

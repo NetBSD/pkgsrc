@@ -1,0 +1,35 @@
+$NetBSD: patch-ak,v 1.1 2008/02/15 16:23:09 gdt Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- oldrecover-src/Makefile.in.orig	2007-06-06 19:22:52.000000000 -0400
++++ oldrecover-src/Makefile.in
+@@ -97,9 +97,8 @@ am_amoldrecover_OBJECTS = $(am__objects_
+ amoldrecover_OBJECTS = $(am_amoldrecover_OBJECTS)
+ amoldrecover_LDADD = $(LDADD)
+ am__DEPENDENCIES_1 =
+-amoldrecover_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../client-src/libamclient.$(LIB_EXTENSION) \
+-	$(am__DEPENDENCIES_1) ../common-src/libamanda.$(LIB_EXTENSION) \
++amoldrecover_DEPENDENCIES = ../client-src/libamclient.$(LIB_EXTENSION) \
++	$(am__DEPENDENCIES_1) \
+ 	../gnulib/libgnu.$(LIB_EXTENSION)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+@@ -386,12 +385,11 @@ LIB_EXTENSION = la
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	@LEXLIB@ \
++LDADD = @LEXLIB@ \
+ 	../client-src/libamclient.$(LIB_EXTENSION) \
+ 	$(READLINE_LIBS) \
+-	../common-src/libamanda.$(LIB_EXTENSION) \
+-	../gnulib/libgnu.$(LIB_EXTENSION)
++	../gnulib/libgnu.$(LIB_EXTENSION) \
++	-lamanda
+ 
+ amoldrecover_CSRC = amrecover.c					\
+ 			display_commands.c		extract_list.c	\

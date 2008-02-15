@@ -1,12 +1,28 @@
-$NetBSD: patch-ak,v 1.3 2004/11/12 12:13:45 mjl Exp $
+$NetBSD: patch-ak,v 1.4 2008/02/15 16:23:09 gdt Exp $
 
---- man/Makefile.in.orig	2004-10-22 15:12:40.000000000 +0200
-+++ man/Makefile.in	2004-11-08 01:17:10.000000000 +0100
-@@ -281,7 +281,6 @@
- # not autoconf-generated:
- EXTRA_DIST = amplot.8 amrestore.8 amtape.8 amdd.8 ammt.8
- man_MANS = $(AMPLOT_MAN_PAGES) \
--	   $(COMMON_MAN_PAGES) \
- 	   $(SERVER_MAN_PAGES) \
- 	   $(RECOVER_MAN_PAGES) \
- 	   $(RESTORE_MAN_PAGES)
+Don't install any manpages except server-specific ones.
+
+--- man/Makefile.in.orig	2007-06-06 19:22:52.000000000 -0400
++++ man/Makefile.in
+@@ -373,18 +373,11 @@ SERVER_MAN8_PAGES = amadmin.8 \
+ #endif
+ @WANT_RECOVER_TRUE@RECOVER_MAN8_PAGES = amrecover.8
+ @WANT_RESTORE_TRUE@RESTORE_MAN8_PAGES = amrestore.8
+-man8_pages = $(COMMON_MAN8_PAGES) \
+-	    $(AMPLOT_MAN8_PAGES) \
+-	    $(SERVER_MAN8_PAGES) \
+-	    $(RECOVER_MAN8_PAGES) \
++man8_pages = $(SERVER_MAN8_PAGES) \
+ 	    $(RESTORE_MAN8_PAGES)
+ 
+-man5_pages = $(COMMON_MAN5_PAGES)
+-ALL_MAN_PAGES = $(AMPLOT_MAN8_PAGES) \
+-	   $(COMMON_MAN5_PAGES) \
+-	   $(COMMON_MAN8_PAGES) \
+-	   $(SERVER_MAN8_PAGES) \
+-	   $(RECOVER_MAN8_PAGES) \
++man5_pages =
++ALL_MAN_PAGES = $(SERVER_MAN8_PAGES) \
+ 	   $(RESTORE_MAN8_PAGES)
+ 
+ 

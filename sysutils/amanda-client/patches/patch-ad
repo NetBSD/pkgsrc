@@ -1,19 +1,22 @@
-$NetBSD: patch-ad,v 1.7 2004/11/12 12:13:44 mjl Exp $
+$NetBSD: patch-ad,v 1.8 2008/02/15 16:23:09 gdt Exp $
 
---- recover-src/Makefile.in.orig	2004-10-22 15:12:41.000000000 +0200
-+++ recover-src/Makefile.in	2004-11-08 00:44:56.000000000 +0100
-@@ -61,9 +61,7 @@
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- recover-src/Makefile.in.orig	2007-06-06 19:22:53.000000000 -0400
++++ recover-src/Makefile.in
+@@ -97,9 +97,7 @@ am_amrecover_OBJECTS = $(am__objects_1) 
  amrecover_OBJECTS = $(am_amrecover_OBJECTS)
  amrecover_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
 -amrecover_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
 -	../client-src/libamclient.$(LIB_EXTENSION) \
--	../common-src/libamanda.$(LIB_EXTENSION) $(am__DEPENDENCIES_1)
-+amrecover_DEPENDENCIES = ../client-src/libamclient.$(LIB_EXTENSION)
+-	../common-src/libamanda.$(LIB_EXTENSION) \
++amrecover_DEPENDENCIES = ../client-src/libamclient.$(LIB_EXTENSION) \
+ 	../gnulib/libgnu.$(LIB_EXTENSION) $(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/config
  depcomp = $(SHELL) $(top_srcdir)/config/depcomp
- am__depfiles_maybe = depfiles
-@@ -291,10 +289,9 @@
+@@ -386,11 +384,10 @@ LIB_EXTENSION = la
  # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
@@ -22,7 +25,8 @@ $NetBSD: patch-ad,v 1.7 2004/11/12 12:13:44 mjl Exp $
 +LDADD = @LEXLIB@ \
  	../client-src/libamclient.$(LIB_EXTENSION) \
 -	../common-src/libamanda.$(LIB_EXTENSION) \
+ 	../gnulib/libgnu.$(LIB_EXTENSION) \
 +	-lamanda \
  	$(READLINE_LIBS)
  
- amrecover_SOURCES = amrecover.c					\
+ amrecover_CSRC = amrecover.c					\
